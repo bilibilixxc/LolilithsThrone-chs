@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>750</value>
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[strap-on]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[strap-ons]]></namePlural>
-    <description><![CDATA[This [unit.size(25)] dildo is made of self-cleaning, arcane-cured silicone. It is firmly held in place at the wearer's groin by means of a comfortable leather harness. The harness's straps are cleverly positioned so as to keep the wearer's vagina and anus exposed.]]></description>
+    <determiner><![CDATA[一条]]></determiner>
+    <name><![CDATA[穿戴式假阳具]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[穿戴式假阳具]]></namePlural>
+    <description><![CDATA[一个由自清洁硅胶制成长度[unit.size(25)]的假阳具。它通过舒适的皮带牢牢固定在穿戴者的腹股沟。皮带的位置设计很巧妙，使穿戴者的阴道和肛门露在外面。]]></description>
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
     <slot>PENIS</slot>
@@ -59,27 +58,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(fit)] the strap-on around [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(fit)] the strap-on around [npc2.namePos] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(fit)] the strap-on around [npc2.namePos] waist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将穿戴式假阳具套在[npc.her]的腰上。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将穿戴式假阳具套在[npc2.namePos]的腰上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地将穿戴式假阳具套在[npc2.namePos]的腰上。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] strap-on.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] strap-on.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] impatiently [npc.verb(take)] off [npc2.namePos] strap-on.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]脱下[npc.her]的穿戴式假阳具。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]脱下[npc2.namePos]的穿戴式假阳具。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]不耐烦地脱下[npc2.namePos]的穿戴式假阳具。
+    ]]></otherRough>
   </displacementText>
 
 

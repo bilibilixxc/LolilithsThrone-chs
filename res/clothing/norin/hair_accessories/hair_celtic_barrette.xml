@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Small engraved lettering informs you that this accessory was made by 'Norin'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[小小的刻字告诉你这个装饰是由'Norin'制作的。]]></clothingAuthorTag>
 		<value>200</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[celtic barrette]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[celtic barrettes]]></namePlural> 
-		<description><![CDATA[A decorative wire hair pin with a celtic design, with a small coloured bead.]]></description> 
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[凯尔特发卡]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[凯尔特发卡]]></namePlural> 
+		<description><![CDATA[一个带有凯尔特风格的金属丝发卡，上面有一颗彩色小珠子。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity> 
 		<slot>HAIR</slot> 
@@ -45,25 +44,25 @@
 	
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(remove)] a celtic barrette from [npc.her] [npc.hairSkin+].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(remove)] a celtic barrette from [npc2.NamePos] [npc2.hairSkin+].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(rip)] a celtic barrette from [npc2.NamePos] [npc2.hairSkin+].]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]将凯尔特发卡从[npc.her][npc.hairSkin+]取下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]从[npc2.namePos][npc2.hairSkin+]中取下凯尔特发卡。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]从[npc2.namePos][npc2.hairSkin+]中扯下发夹。
+]]></otherRough>
 	</displacementText>
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(gather)] [npc.her] [npc.hairSkin+] and [npc.verb(slide)] in a celtic barrette.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(gather)] [npc2.NamePos] [npc2.hairSkin+] and [npc.verb(slide)] in a celtic barrette.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(gather)] [npc2.NamePos] [npc2.hairSkin+] and [npc.verb(force)] in a celtic barrette.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]梳理了一下[npc.her][npc.hairSkin+]，然后插入了一些凯尔特发卡来固定。
+]]></self>
+		<other><![CDATA[
+[npc.Name]梳理了一下[npc2.namePos][npc2.hairSkin+]，然后插入了一个凯尔特发卡来固定。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地整理了一下[npc2.namePos][npc2.hairSkin+]，然后强行插入了凯尔特发卡来固定。
+]]></otherRough>
 	</replacementText>
 </clothing>

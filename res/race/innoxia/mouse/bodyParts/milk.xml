@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<race>innoxia_mouse</race>
 	
-	<transformationName><![CDATA[mouse]]></transformationName>
+	<transformationName><![CDATA[鼷鼠]]></transformationName>
 	
 	<baseFluidType>MILK</baseFluidType>
 	
@@ -12,11 +12,11 @@
 	<namesFeminine/>
 	
 	<descriptorsMasculine>
-		<name><![CDATA[mouse]]></name>
+		<name><![CDATA[鼷鼠]]></name>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<name><![CDATA[mouse]]></name>
+		<name><![CDATA[鼷鼠]]></name>
 	</descriptorsFeminine>
 	
 	<defaultFluidModifiers/>

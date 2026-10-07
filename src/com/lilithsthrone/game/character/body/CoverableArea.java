@@ -26,18 +26,18 @@ public enum CoverableArea {
 	
 	// Utility value
 	NONE(false,
-			"none",
+			"无",
 			new ArrayList<>()),
 
 	HANDS(false,
-			"hands",
+			"手",
 			Util.newArrayListOfValues(
 					InventorySlot.FINGER,
 					InventorySlot.HAND,
 					InventorySlot.WRIST)),
 	
 	ASS(true,
-			"ass",
+			"屁股",
 			Util.newArrayListOfValues(
 					InventorySlot.GROIN,
 					InventorySlot.ANUS,
@@ -45,20 +45,20 @@ public enum CoverableArea {
 					InventorySlot.TAIL)),
 	
 	ANUS(true,
-			"asshole",
+			"肛门",
 			Util.newArrayListOfValues(
 					InventorySlot.GROIN,
 					InventorySlot.ANUS)),
 
 	STOMACH(false,
-			"stomach",
+			"腹",
 			Util.newArrayListOfValues(
 					InventorySlot.STOMACH,
 					InventorySlot.TORSO_UNDER,
 					InventorySlot.TORSO_OVER)),
 	
 	BACK(false,
-			"back",
+			"背部",
 			Util.newArrayListOfValues(
 					InventorySlot.TORSO_UNDER,
 					InventorySlot.TORSO_OVER,
@@ -66,7 +66,7 @@ public enum CoverableArea {
 					InventorySlot.TAIL)),
 	
 	LEGS(false,
-			"legs",
+			"腿",
 			Util.newArrayListOfValues(
 					InventorySlot.LEG,
 					InventorySlot.SOCK)) {
@@ -76,7 +76,7 @@ public enum CoverableArea {
 	},
 	
 	FEET(false,
-			"feet",
+			"足",
 			Util.newArrayListOfValues(
 					InventorySlot.FOOT,
 					InventorySlot.ANKLE,
@@ -87,7 +87,7 @@ public enum CoverableArea {
 	},
 	
 	THIGHS(false,
-			"thighs",
+			"臀部",
 			Util.newArrayListOfValues(
 					InventorySlot.LEG,
 					InventorySlot.GROIN)) {
@@ -97,7 +97,7 @@ public enum CoverableArea {
 	},
 	
 	ARMPITS(false,
-			"armpits",
+			"腋窝",
 			Util.newArrayListOfValues(
 					InventorySlot.TORSO_UNDER,
 					InventorySlot.TORSO_OVER)) {
@@ -107,7 +107,7 @@ public enum CoverableArea {
 	},
 	
 	TAIL(false,
-			"tail",
+			"尾巴",
 			Util.newArrayListOfValues(
 					InventorySlot.TAIL)) {
 		public boolean isPhysicallyAvailable(GameCharacter owner) {
@@ -116,7 +116,7 @@ public enum CoverableArea {
 	},
 	
 	VAGINA(true,
-			"pussy",
+			"小穴",
 			Util.newArrayListOfValues(
 					InventorySlot.VAGINA,
 					InventorySlot.GROIN,
@@ -127,7 +127,7 @@ public enum CoverableArea {
 	},
 	
 	MOUND(true,
-			"mound",
+			"拢胸",
 			Util.newArrayListOfValues(
 					InventorySlot.GROIN,
 					InventorySlot.LEG)) {
@@ -137,7 +137,7 @@ public enum CoverableArea {
 	},
 	
 	PENIS(true,
-			"cock",
+			"阴茎",
 			Util.newArrayListOfValues(
 					InventorySlot.PENIS,
 					InventorySlot.GROIN,
@@ -148,7 +148,7 @@ public enum CoverableArea {
 	},
 	
 	TESTICLES(true,
-			"balls",
+			"睾丸",
 			Util.newArrayListOfValues(
 					InventorySlot.GROIN,
 					InventorySlot.LEG)) {
@@ -158,7 +158,7 @@ public enum CoverableArea {
 	},
 	
 	BREASTS(true,
-			"breasts",
+			"胸部",
 			Util.newArrayListOfValues(
 					InventorySlot.CHEST,
 					InventorySlot.NIPPLE,
@@ -166,7 +166,7 @@ public enum CoverableArea {
 					InventorySlot.TORSO_OVER)),
 	
 	NIPPLES(true,
-			"nipples",
+			"乳头",
 			Util.newArrayListOfValues(
 					InventorySlot.CHEST,
 					InventorySlot.NIPPLE,
@@ -174,7 +174,7 @@ public enum CoverableArea {
 					InventorySlot.TORSO_OVER)),
 	
 	BREASTS_CROTCH(true,
-			"crotch-breasts",
+			"胯乳",
 			Util.newArrayListOfValues(
 					InventorySlot.STOMACH,
 					InventorySlot.GROIN,
@@ -196,7 +196,7 @@ public enum CoverableArea {
 	},
 	
 	NIPPLES_CROTCH(true,
-			"crotch-nipples",
+			"胯乳乳头",
 			null) {
 		public boolean isPhysicallyAvailable(GameCharacter owner) {
 			return owner.hasBreastsCrotch();
@@ -207,14 +207,14 @@ public enum CoverableArea {
 	},
 
 	HAIR(false,
-			"hair",
+			"头发",
 			Util.newArrayListOfValues(
 					InventorySlot.HAIR,
 					InventorySlot.HORNS,
 					InventorySlot.HEAD)),
 	
 	MOUTH(true,
-			"mouth",
+			"嘴巴",
 			Util.newArrayListOfValues(
 					InventorySlot.HAIR,
 					InventorySlot.HORNS,
@@ -224,7 +224,7 @@ public enum CoverableArea {
 					InventorySlot.NECK)),
 
 	EYES(true,
-			"eyes",
+			"眼睛",
 			Util.newArrayListOfValues(
 					InventorySlot.HAIR,
 					InventorySlot.HORNS,

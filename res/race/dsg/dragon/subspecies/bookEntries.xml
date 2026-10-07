@@ -1,52 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<htmlContent tag="DRAGON_BASIC" author="Xuanlong"><![CDATA[
 	<p>
-		Dragon-morphs prefer terrain that naturally isolates them via either remoteness or inhospitableness. They might be found in the desert and around the volcano in the south of Lilith's Realm, deep in the jungles to the north, or up in the Mountains of the Moon to the west. Some may even seek the Youko Forest. They rarely venture outside of these environments and almost never enter civilization. A tough, scaly exterior, flight capability, and powerful breath weapons distinguishes them from other morphs.
+		龙化形喜欢用偏僻或荒凉的地形自然地将它们与世隔绝。它们可能出现在莉莉丝王国南部的沙漠和火山周围、北部的丛林深处或西部的皎月山脉。有些甚至会出现在妖狐森林。他们很少走出这些环境，几乎从不进入文明世界。坚硬的鳞片外表、飞行能力和强大的龙息武器使它们区别于其他化形。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="DRAGON_ADVANCED" author="Xuanlong"><![CDATA[
 	<p>
-		Although all dragon-morphs differ individually, they are possibly the most solitary race to inhabit the realm and thus tend to be standoffish, even towards other dragon-morphs. Very little is known about their other traits and combined with the fact that they are also by far the least populous mortal race, it is possible for one to go their entire life without seeing one outside of a book. Most dragon-morphs are subsistence farmers, interacting with perhaps a few isolated traders for goods they cannot grow or make.
+		尽管龙化形的个体差异很大，但他们可能是世界上最孤独的种族。他们往往很冷漠，甚至对其他龙化形也是如此。人们对他们的其他特性知之甚少，再者他们也是迄今为止人口最少的凡族，人们有可能终其一生都无法在书本之外见到他们。大多数龙人都是自给自足的农民，他们也许会与少数几个孤立的商人打交道，购买他们无法种植或制造的商品。
 	</p>
 	<p>
-		Dragon-morphs have three distinct subspecies with smaller groups of subvariants between them. The base dragon-morph takes on the traditional appearance resembling that of a giant predatory reptile with leathery wings and inhabits the desert, volcanic, and mountainous regions of the realm. The ryu-morph lives among the youko in their forest and possess blunted muzzles decorated with curious whip-like antennae. They are the most social of the dragon-morph subspecies, hoarding knowledge and occasionally granting it to others. The coatl-morph lives deep in the jungle, far north of Itza'aak. Resembling winged serpents, they are the only subspecies with feathers for plumage and are practitioners of powerful air magic. Two notable subvariants of the dragon-morph are the wyvern-morph and drake-morph, which have arm wings and no wings respectively.
+		龙化形有三个不同的亚种，它们之间还有更小的亚变种群。基本龙化形的传统外表类似于巨大的掠食性爬行动物，长着皮质翅膀，栖息在王国的沙漠、火山和高山。龍化形和森林中的妖狐生活在一起，嘴部变钝，长有奇特的鞭状触须。它们是龙化形亚种中最具有社会性的，囤积知识，偶尔也授人以渔。羽蛇化形生活在伊察阿克北部的丛林深处。它们酷似长着翅膀的大蛇，是唯一长有羽毛的亚种，是强大风魔法的修炼者。龙化形的两个显著变种是翼龙变形和亚龙变形，它们分别有臂翼和无翼。
 	</p>
 	<p>
-		Like most other mythological races, dragon-morphs are more affected by arcane storms than others. In fact, even from the edges of the realm, dragon-morphs are drawn towards arcane storms and they are an integral part of the dragon-morph reproductive cycle since flying in close proximity to or high above one dramatically increases the chances of finding a mate. 
+		与大多数其他神话种族一样，龙化形比其他种族更容易受到奥术风暴的影响。事实上，即使在王国的边缘，龙化形也会被奥术风暴影响，奥术风暴是龙化形繁殖周期中不可或缺的一部分，因为在奥术风暴附近或高空飞行会大大增加找到配偶的几率。
 	</p>
 	<p>
-		Fifty years ago, when storms were rare and less powerful, only a few dragons would show up to each one, keeping the amount of competition, and thus violence, down. But as storms have become more frequent and more powerful, the number of dragons in the realm have surged as well as the number of participants in each 'storm-orgy' and the associated fights have become increasingly fierce. The year [#~~(game.getStartingDate().getYear() - 3)] saw the most powerful single storm ever recorded and the resulting aerial battles came to be known as 'The Day the Sky Burned'.
+		五十年前，风暴还很罕见且威力较小的时候，每场风暴都只有几条龙参加，从而减少了竞争，也就减少了暴力。但随着风暴越来越频繁，威力也越来越大，王国内龙的数量激增，每次“风暴淫趴”的参与者也越来越多，相关的争斗也愈加激烈。[#~~(game.getStartingDate().getYear() - 3)]年出现了有史以来最强烈的一场风暴，由此引发的空战也被称为“焚天之战”。
 	</p>
 	<p>
-		A dragon-morph's offspring will be a mixture of dragon-morphs and offspring of their partner's race. An important note: dragon-morphs with the requisite equipment lay eggs. Newborn dragon-morphs can break out on their own, but races not naturally possessing a means of breaking the shell will require assistance. It is therefore vital the mother remain present during hatching.
+		龙化形的后代将是龙化形和其伴侣种族后代的混合体。重要提示：龙化形需要必要的装备才能产卵。新生龙化形可以自行破壳而出，但一些天生不具备破壳能力的种族则需要辅助破壳。故此，在孵化过程中母亲必须在场。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DRAGON_SEKRIT" author="Xuanlong"><![CDATA[
 	<p>
-		In antiquity, dragons were the servants and tributaries of Lisophia, who had adopted her image. Under her rule, they terrorized the populace of the badlands and took what little they had for the Glistering Hoard. In return for their service, dragons were made the strongest and longest lived of all the mortal races. They were even afforded a share of the spoils to gather for their own smaller hoards. Over time, however, Lisophia could not help but notice that her sisters were actually growing wealthier than herself despite their relative disinterest in riches. Even if she could squeeze every last flame from Thinis, it would be like trying to get blood from a stone. The destitute peasants under her rule had nothing more to give.
+		在古代，龙作为莉索菲亚的奴仆和朝贡族，以她的名义行事。在莉索菲亚的统治下，龙恐吓贫瘠土地上的百姓，肆意掠夺他们微薄的财富，归为闪耀华美的宝藏。作为他们服务的回报，龙被赐予了所有凡族中最高的地位和所有种族中最长的寿命。他们甚至能获得一部分战利品，作为私人的珍藏。然而，随着时间的推移，莉索菲亚不禁注意到，她的姐妹们尽管疏于积累财富，但她们实际上却变得比她更富有。她即使可以从提尼斯夺走最后一枚火币，却也像试图从石头中榨血一样困难。在她统治下的贱民已经无法再献出更多了。
 	</p>
 	<p>	
-		The Elder Lilin then turned her eye to the accumulated riches of the dragons serving her. There finally was an untapped source of wealth, one that would propel her back to the top. Messengers were sent bearing the word: all dragons would immediately turn over their hoards. No messengers returned. The dragons, furious at the betrayal after so many centuries of loyal service, rose up against their former mistress and her daughters. It was a battle the dragons were doomed to lose from the start, for as strong as they were even the mightiest of them could only overcome the weakest of Lilin. No records of the battle survived, but it is not hard to imagine that it would have been short.
+		随后，这位莉琳长老将目光投向为她所用的龙的私人珍藏。终于发现了一处未开发的财富之源，这将使她重回巅峰。被派遣的使者传达消息：所有龙必须立刻献出宝藏。然而，没有使者生还。如此多世纪兢兢业业的龙突遭背叛，愤而反抗旧主和她的女儿们。这是一场注定失败的斗争。虽然龙很强大，但即使最强大的龙也只能战胜最弱小的莉琳。这场战争没有幸存下来的记录，但由此想见，它相当短暂。
 	</p>
 	<p>
-		Thus began the Dragonfall.
+		于是，龙的陨落开始了。
 	</p>
 	<p>	
-		Those who could not escape in time were cast down and largely stripped of their strength. Whereas they once stood proud atop all the other mortal races, they were now no stronger than other mythological beasts. Ostracised from society and unwelcome in other lands, they fled to the four corners of the realm to scratch out a living in hiding. Many dragons took their treasure with them, but with civilization so far away, gold and gemstones proved poor replacements for food or a warm place to sleep.
+		没来得及逃走的龙被打倒在地，力量大减。他们曾经傲视所有凡族，但现在并不比其他神话生物强。他们备受社会排斥，也未曾得到其他地方欢迎，只得在王国的角落四处流亡，东躲西藏，谋求生存。许多龙带着财宝奔逃，然而，远离文明的环境里，黄金和宝石无法填满饥饿的肚腹，亦无法给予温暖的庇护。
+
 	</p>
 	<p>
-		Forced to adapt to their new homes, dragons experienced a massive culture shift. Within a generation, an object's intrinsic worth was no longer of any consideration. Many pieces of fine artwork, luxurious fabrics, and exquisite weapons were exchanged for simple tools and building materials by traders who were not only daring but also unafraid to take advantage of a naive race that had only known plunder as a means of getting what one wanted. In more distant places, physiological changes would also occur as the host biome's arcane began to influence them. Dragons that managed to find shelter in youko lands became introspective and, after reflecting on what the pursuit of the purely material had wrought, became the scholarly ryu. In the jungle, out of reach of even the most hardy traders, dragons turned to air magic to protect their crops and stargazing to time their harvests, eventually becoming the coatl.
+		龙被迫适应新的家园，经历了一次巨大的文化变革。一代之间，物品的固有价值失去意义。许多精美的艺术品、奢侈的织物和精致的武器被商人们换成了简单的工具和建筑材料。这些商人不仅大胆，而且不怕被纯真的种族利用，因为他们只知道掠夺想要的东西。在更遥远的地方，宿主生态系统奥术改变了龙的生理特质。在妖狐土地获得庇护的龙变得内省，反思纯粹的物质追求所带来的后果，成为了博学的“龍”。在丛林中，即使最顽强的商人也难以抵达，龙转而利用风魔法保护庄稼，观测星象确定收成的时机，最终演变成了“羽蛇”。
 	</p>
 	<p>
-		It is not known what exactly happened to the dragons that managed to flee Lisophia's punishment, but it is known that some of the most powerful were among them and they were not subject to the Dragonfall. As history faded, stories arose of huge piles of treasure hidden in deep in the most inhospitable of places guarded by similarly huge, inhospitable, ancient dragons. These dragons, so the legend goes, slumber the decades away, conserving their strength, biding for the time when they might wreak their revenge...
+		设法逃脱莉索菲亚的惩罚的龙的境遇尚未可知，但已知最强大的龙亦在其中，且未受“龙陨”影响。随着历史淡去，出现了大量关于荒寂之地埋藏着无尽珍宝的传说，由难以靠近的巨龙把守。传说中，这些龙沉睡数十年，保存力量，静待复仇的时机……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1000</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一顶]]></determiner>
 		
-		<name><![CDATA[Witch's hat]]></name>
+		<name><![CDATA[魔女帽]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Witch's hats]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[魔女帽]]></namePlural> 
 		
-		<description><![CDATA[A witch's hat, with a pointy top and a wide brim.]]></description> 
+		<description><![CDATA[一顶女巫帽，帽尖尖尖的，帽沿宽宽的。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -58,27 +58,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] on the Witch's hat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(put)] the Witch's hat onto [npc2.namePos] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the Witch's hat onto [npc2.namePos] head.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]戴上了[npc.her]的魔女帽。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将魔女帽戴在[npc2.namePos]的头上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将魔女帽戴到[npc2.namePos]的头上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] Witch's hat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] Witch's hat off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] Witch's hat and [npc.verb(pull)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的魔女帽脱下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的魔女帽脱下。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的魔女帽并粗暴地扯下来。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

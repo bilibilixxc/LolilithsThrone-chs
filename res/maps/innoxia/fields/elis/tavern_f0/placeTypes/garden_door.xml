@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[conservatory]]></name>
-	<tooltipDescription><![CDATA[A conservatory connected to the back of 'The Red Dragon' provides access to the beer garden.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the conservatory at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[温室]]></name>
+	<tooltipDescription><![CDATA[与“红龙酒馆”后面相连的温室可通往啤酒花园。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆的温室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREEN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

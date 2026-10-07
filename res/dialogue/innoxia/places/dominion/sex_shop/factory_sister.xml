@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Succubus sister content: -->
@@ -18,8 +18,8 @@
 					<availabilityConditional><![CDATA[[#!(pc.hasStatusEffect(SE_MARKED_BY_MUSK) || pc.hasStatusEffect(SE_SMOKING) || pc.hasStatusEffect(SE_RECENTLY_SMOKED) || pc.getAlcoholLevel().isGreaterThan(ALCOHOL_LEVEL_TWO_MERRY))]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Hide]]></responseTitle>
-					<responseTooltip><![CDATA[Hide and wait for the horny succubus to leave before continuing on your way through the factory...]]></responseTooltip>
+					<responseTitle><![CDATA[躲藏]]></responseTitle>
+					<responseTooltip><![CDATA[躲起来，等发情的魅魔离开后，再继续探索工厂……]]></responseTooltip>
 					<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 					<effects><![CDATA[
 						[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_sister', 'ENCOUNTER_HIDE'))]
@@ -30,8 +30,8 @@
 					<availabilityConditional><![CDATA[[#!(pc.hasStatusEffect(SE_MARKED_BY_MUSK) || pc.hasStatusEffect(SE_SMOKING) || pc.hasStatusEffect(SE_RECENTLY_SMOKED) || pc.getAlcoholLevel().isGreaterThan(ALCOHOL_LEVEL_TWO_MERRY))]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Confront]]></responseTitle>
-					<responseTooltip><![CDATA[Confront the horny succubus!]]></responseTooltip>
+					<responseTitle><![CDATA[对峙]]></responseTitle>
+					<responseTooltip><![CDATA[直面发情的魅魔！]]></responseTooltip>
 					<colour><![CDATA[GENERIC_COMBAT]]></colour>
 					<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_sister_encounter_confrontation]]></nextDialogue>
 					<effects><![CDATA[
@@ -43,8 +43,8 @@
 					<availabilityConditional><![CDATA[[#pc.hasStatusEffect(SE_MARKED_BY_MUSK) || pc.hasStatusEffect(SE_SMOKING) || pc.hasStatusEffect(SE_RECENTLY_SMOKED) || pc.getAlcoholLevel().isGreaterThan(ALCOHOL_LEVEL_TWO_MERRY)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Discovered!]]></responseTitle>
-					<responseTooltip><![CDATA[The horny succubus has detected you!]]></responseTooltip>
+					<responseTitle><![CDATA[已发现！]]></responseTitle>
+					<responseTooltip><![CDATA[发情的魅魔注意到了你！]]></responseTooltip>
 					<colour><![CDATA[GENERIC_COMBAT]]></colour>
 					<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_sister_encounter_confrontation]]></nextDialogue>
 					<effects/>
@@ -61,9 +61,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					There's nothing for it but to fight this succubus!
+					除了与魅魔战斗以外别无选择！
 				]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -75,8 +75,8 @@
 						<enemy leader="true"><![CDATA[sister]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[With the succubus advancing on you with a desperate, lustful look in her eyes, you prepare to defend yourself!]]></combatant>
-						<combatant id="sister"><![CDATA[[sister.speech(Mistress will reward me for catching you!)] the succubus happily exclaims, [sister.speech(Submit to me!)]]]></combatant>
+						<combatant id="pc"><![CDATA[魅魔逼近了你，眼神里满是狂乱和渴求，你准备自卫！]]></combatant>
+						<combatant id="sister"><![CDATA[[sister.speech(主人会奖励我抓住你的！)]魅魔开心地欢呼着，[sister.speech(臣服于我！)]]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 				</combatVariables>
@@ -94,12 +94,12 @@
 				<availabilityConditional><![CDATA[[#saellatrix.isAnySisterPresent()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Talk]]></responseTitle>
+				<responseTitle><![CDATA[交谈]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_doll_factory_sister_talked))
-						Trying to talk to the horny succubus isn't getting you anywhere...
+						尝试与发情的魅魔交流并没有什么效果……
 					#ELSE
-						Try to talk to the horny succubus.
+						尝试与发情的魅魔交流。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -117,8 +117,8 @@
 				<availabilityConditional><![CDATA[[#saellatrix.isAnySisterPresent()]]]></availabilityConditional> <!-- Have this conditional as this response is reused in other dialogue nodes where it's required -->
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[Give this horny succubus what she wants...]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[让这发情的魅魔如愿吧……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					#IF(fia.getAffection(pc)>=-15)
@@ -157,8 +157,8 @@
 	</scene>
 	
 	<scene id="after_sex">
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, you bring an end to the sex...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你已经爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_sister">SISTER_SEX_END</content>
 		<secondsPassed><![CDATA[60]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -201,16 +201,16 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isTaur())
-						Get moving
+						保持移动
 					#ELSE
-						Crawl...
+						爬行……
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isTaur())
-						In your current state you have no choice but to carry the succubus on your back as she directs you deeper into the factory...
+						以你现在的状态，只得让魅魔骑到背上来，让她给你指引到工厂深处的道路……
 					#ELSE
-						In your current state you have no choice but to crawl after the succubus as she leads you deeper into the factory...
+						以你现在的状态，只得在魅魔身后爬行，让她带着你到工厂的深处……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_sister_travel]]></nextDialogue>
@@ -220,8 +220,8 @@
 				<availabilityConditional><![CDATA[[#game.isNonConEnabled() && (!sister.hasFetish(FETISH_ORAL_GIVING) || pc.hasPenisIgnoreDildo() || pc.hasVagina())]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[You can't summon the strength to resist this sexy succubus any longer...]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[你已经再也无力招架这性感的魅魔了……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -421,8 +421,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_sister', 'SISTER_COLLARED'))]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, the succubus brings an end to the sex...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[这魅魔已经爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_sister">SISTER_SUBMISSIVE_SEX_END</content>
 		<secondsPassed><![CDATA[60]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -433,16 +433,16 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isTaur())
-						Get moving
+						保持移动
 					#ELSE
-						Crawl...
+						爬行……
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isTaur())
-						In your current state you have no choice but to carry the succubus on your back as she directs you deeper into the factory...
+						以你现在的状态，只得让魅魔骑到背上来，让她给你指引到工厂深处的道路……
 					#ELSE
-						In your current state you have no choice but to crawl after the succubus as she leads you deeper into the factory...
+						以你现在的状态，只得在魅魔身后爬行，让她带着你到工厂的深处……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_sister_travel]]></nextDialogue>
@@ -469,8 +469,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Nightmares]]></responseTitle>
-				<responseTooltip><![CDATA[You recognise the two nightmares from having encountered them during the SWORD raid in Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[梦魇]]></responseTitle>
+				<responseTooltip><![CDATA[你认出了这两个梦魇，你在伊利斯的SWORD突袭中遭遇过他们。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_sister_travel_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -492,8 +492,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Captured]]></responseTitle>
-				<responseTooltip><![CDATA[You've been captured by Angelixx and her sons, and are now completely at their mercy...]]></responseTooltip>
+				<responseTitle><![CDATA[被抓住]]></responseTitle>
+				<responseTooltip><![CDATA[你被安吉莉克丝和她的儿子们抓住了，现在只能任由她们摆布……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start]]></nextDialogue>
 			</response>
 		</responses>

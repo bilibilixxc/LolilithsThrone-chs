@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_panther</race>
 	<colour>RACE_CAT_MORPH_LEOPARD_SNOW</colour>
@@ -37,24 +37,24 @@
 	<iconName displaySize="100">icon_leopard</iconName>
 	<backgroundName>background_snow_leopard</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Big Cats</bookName>
+	<bookName><![CDATA[大猫咪]]></bookName>
 	<basicDescriptionId>PANTHER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>PANTHER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[snow leopard-morph]]></name>
-	<namePlural><![CDATA[snow leopard-morphs]]></namePlural>
-	<singularMaleName><![CDATA[snow leopard-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[snow leopard-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[snow leopard-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[snow leopard-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic snow leopard, known as a 'snow leopard-morph' when bipedal, and a 'snow leopardtaur' when the lower body is that of a feral snow leopard. To be identified as a snow leopard-morph, a character must be a panther with fluffy, spotted fur.]]></description>
+	<name><![CDATA[雪豹化形]]></name>
+	<namePlural><![CDATA[雪豹化形]]></namePlural>
+	<singularMaleName><![CDATA[雪豹男]]></singularMaleName>
+	<singularFemaleName><![CDATA[雪豹女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[雪豹男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[雪豹女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的雪豹，当下肢为双足时称为“雪豹化形”，而下肢呈现出雪豹兽态时称为“半雪豹人”。要判定为雪豹化形，角色必须是一只拥有柔软和斑点皮毛的大型猫科生物。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[snow leopard]]></feralName>
-		<feralNamePlural><![CDATA[snow leopards]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[snow leopard]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[snow leopardess]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[snow leopards]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[snow leopardesses]]></feralPluralFemaleName>
+		<feralName><![CDATA[雪豹]]></feralName>
+		<feralNamePlural><![CDATA[雪豹]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[雪豹]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[雪豹]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[雪豹]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[雪豹]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>100</size>
@@ -67,8 +67,8 @@
 		<hairPresent>true</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] body is very strong and agile, and [npc.sheIsFull] capable of great feats of strength and stealth alike. [npc.She] also [npc.has] a very high resistance to both natural and arcane cold.
-	]]></statusEffectDescription>
+		[npc.NamePos]的身体格外强壮敏捷，[npc.she]能够轻松运用力量和隐蔽自身。还对自然和奥术寒冷有很高的抗性。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="25">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

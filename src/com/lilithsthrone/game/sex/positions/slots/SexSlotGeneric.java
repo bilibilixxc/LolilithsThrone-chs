@@ -9,9 +9,9 @@ public class SexSlotGeneric {
 
 	/**For characters not directly involved in sex.*/
 	public static final SexSlot MISC_WATCHING = new SexSlot(
-			"Watching",
-			"spectating",
-			"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax, and, while watching the lewd display before [npc.herHim], [npc.she] [npc.verb(get)] ready to orgasm.",
+			"观看",
+			"观看",
+			"[npc.Name]看着面前的淫荡表演，发出了[npc.a_moan+]，[npc.she]即将到达巅峰，准备好要高潮了。",
 			true);
 
 }

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[A tag discreetly sewn into the dress's inner lining informs you that it was made by 'Phlarx'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[裙子里缝着的标签告诉你这是由"Phlarx"制作的。]]></clothingAuthorTag>
 		<value>800</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[vintage dress]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[vintage dresses]]></namePlural> 
-		<description><![CDATA[A knee length dress that would look perfect on a pinup, or at a drive-in diner.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[复古连衣裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[复古连衣裙]]></namePlural> 
+		<description><![CDATA[一条及膝连衣裙，看起来非常适合女明星或者是汽车餐厅里的顾客。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>TORSO_UNDER</slot> 
@@ -97,48 +96,41 @@
 	
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] the concealed side zipper, before pulling [npc.her] vintage dress off over [npc.her] head.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] the concealed side zipper, before pulling [npc2.namePos] vintage dress off over [npc2.her] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] the concealed side zipper, before roughly pulling [npc2.namePos] vintage dress off over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉开[npc.her]的拉链然后将复古连衣裙从[npc.her]的头上脱下。]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]的腰带然后将复古连衣裙从[npc2.her]的头上脱下。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]解开[npc2.namePos]的腰带然后粗暴地将复古连衣裙从[npc2.her]的头上拽下。]]></otherRough>
 	</displacementText>
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the vintage dress down over [npc.her] head and torso, then [npc.verb(pull)] the concealed side zipper closed.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the vintage dress down over [npc2.namePos] head and torso, then [npc.verb(pull)] the concealed side zipper closed.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the vintage dress down over [npc2.namePos] head and torso, then [npc.verb(pull)] the concealed side zipper closed.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将复古连衣裙从头上拉下覆盖[npc.her]的身体，然后[npc.her]系上腰带。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将复古连衣裙从头上拉下覆盖[npc2.namePos]的身体，然后[npc2.her]系上腰带。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将复古连衣裙从头上拉下覆盖[npc2.namePos]的身体，然后[npc2.her]系上腰带。
+]]></otherRough>
 	</replacementText>
 
 	
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc.her] vintage dress.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc2.namePos] vintage dress.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] up the skirt of [npc2.namePos] vintage dress.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]提起[npc.her]复古连衣裙的裙子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉起[npc2.namePos]复古连衣裙的裙子的下摆。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地拉起[npc2.namePos]复古连衣裙的下摆。]]></otherRough>
 	</displacementText><replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the skirt of [npc.her] vintage dress.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the skirt of [npc2.namePos] vintage dress.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] down the skirt of [npc2.namePos] vintage dress.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉下[npc.her]复古连衣裙的裙子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]放下[npc2.namePos]的复古连衣裙的下摆。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地放下[npc2.namePos]的复古连衣裙的下摆。]]></otherRough>
 	</replacementText>
 </clothing>

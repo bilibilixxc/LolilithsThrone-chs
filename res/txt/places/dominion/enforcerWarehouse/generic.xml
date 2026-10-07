@@ -1,114 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- ENCLOSURE_TELEPORT_PADS -->
 	
 	<htmlContent tag="ENCLOSURE_TELEPORT_PADS"><![CDATA[
 	<p>
-		Lying flat on the floor in this area of the enclosure is the teleportation pad which you and Claire arrived on. Lacking the specially-shaped essence cells which the pad requires in order to function, you and Claire are unable to use it to return to the Enforcer post in Submission.
+		这个地方布设着一张传送板，你和克莱尔正是通过这个传送来到这里。你们还需要特定形状的精华电池，才能启动这个传送垫并传送回到屈城区的执法者岗哨那。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_claireEnclosureEscaped))
-			There's really nothing more that can be done here; you're going to have to escape by sneaking through the warehouse.
+			这里没有可做的事，你只能穿过仓库偷偷逃走。
 		#ELSE
-			[claire.speech(It's a shame that these things can't be powered directly by aura, or even by absorbing freed essences,)] Claire sighs as she tinkers with the control panel, [claire.speech(I really don't think I'm going to be able to get this working again...)]
+			[claire.speech(很遗憾，这些机器不能由灵气直接供能，也不接受其他精华，)]克莱尔一边叹气，一边摆弄着控制面板，[claire.speech(我实在没办法了……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCLOSURE_TELEPORT_PADS_INVESTIGATE -->
 	
 	<htmlContent tag="ENCLOSURE_TELEPORT_PADS_INVESTIGATE"><![CDATA[
 	<p>
-		Doing as Claire asks, you kneel down and start looking over the side of the teleportation pad's base. Sure enough, after just a moment spent searching for it, you spot the round hatch which Claire is after, and draw her attention to it, [pc.speech(I think I've found that 'essence port' you're looking for.)]
+		你按照克莱尔说的开始蹲下检查传送板底部，很快便注意到了一个圆形的舱口。你指着它对克莱尔说，[pc.speech(我觉得这就是你所说的精华接入口。)]
 	</p>
 	<p>
-		Rushing over to kneel down beside you, the short cat-girl lets out a deep sigh of relief, [claire.speech(Thank goodness! I always carry a couple of spare essence cells with me, so once I've inserted one, this pad should activate again and we can get out of here!)]
+		矮个子猫女连忙跑来，跪在你旁边。确认之后，她松了一口气，[claire.speech(还好有你！只要把我身上的备用精华电池插上去，我们就能离开这里了！)]
 	</p>
 	<p>
-		Opening the round hatch, your Enforcer companion then reaches into a pocket on her armoured vest. Obviously finding it empty, she lets out a little huff, before checking the pocket beside it. Finding that one empty too, she starts frantically patting down and searching every pocket and pouch on her uniform. Finding each one as empty as the last, her breathing starts getting heavier and heavier, until finally she lets out a wail of despair. Allowing her hands to drop down onto her thick thighs, she sinks down onto her large, rounded ass and cries, [claire.speech(This can't be happening! We're going to be in so much trouble! I-I might even lose my job... Or even get arrested! What if they enslave us?! I don't want to be a sex slave! These SWORD guys aren't like regular Enforcers; they're trigger-happy maniacs! This is a disaster! What'll we do?!)]
+		你的执法者同伴一边打开圆形舱口，一边把手伸进她装甲背心的口袋里。然而她愣了一下，小声埋怨着，又将手伸进另一个口袋里翻找，结果那个口袋也是空的。她开始疯狂地拍打和搜查制服上的每个口袋。发现所有口袋都是空的之后，她的呼吸开始变得越来越沉重，直到最后发出绝望的哽咽。她的双手无力地搭在自己丰满的大腿上，浑圆的肥臀颤抖着，委屈地哭了起来，[claire.speech(这种事情居然会发生在我身上？这些SWORD的人可是有枪就开的疯子！我们完蛋了！我，我可能会丢掉工作……甚至会被逮捕！如果他们想把我们变成奴隶呢？！我不想变成性奴！我为什么会在这里……我们该怎么办啊？！)]
 	</p>
 	<p>
-		Sensing that she's going to start hyper-ventilating if you don't take immediate action, you wonder what you should do to get Claire to calm down...
+		你感觉到她就要换气过度，但你不知道该怎么做才能让克莱尔冷静下来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENCLOSURE_TELEPORT_PADS_PULL_TOGETHER"><![CDATA[
 	<p>
-		Seeking to remind Claire of her usual happy, confident self, you take hold of her shoulders and sternly state, [pc.speech(Pull yourself together, Claire! We're not going to get out of here by panicking and feeling sorry for ourselves!)]
+		为了让克莱尔恢复往日的快乐和自信，你握住她的肩膀，坚定地告诉她，[pc.speech(振作起来，克莱尔！慌张和抱怨不会帮助我们离开这里！)]
 	</p>
 	<p>
-		Taking a deep breath, the cat-girl allows a smile to return to her face, and, joining you in standing up, she says, [claire.speech(You're right. Thanks, [pc.name], I don't know what came over me. I'm sure there must be some way out of here, and maybe there aren't even any SWORD guards in here. We might be able to escape without any trouble at all.)]
+		听闻你的话后，克莱尔深吸一口气，冷静下来后，往日的微笑再次回到她的脸上。她一边和你一起站起来，一边说，[claire.speech(你说得对，谢谢你，[pc.name]，我不知道我是怎么了。这里一定还有其他办法，况且不可能到处都是SWORD的人，我们还是有安全离开的机会的。)]
 	</p>
 	<p>
-		[pc.speech(That's the spirit,)] you say, [pc.speech(and if worse comes to worst, we can always climb over these crates...)]
+		[pc.speech(这就对了，)]你说，[pc.speech(就算事态恶化，我们也能躲到这些板条箱顶上……)]
 	</p>
 	<p>
-		Looking up at the towering stacks of crates all around you, you wonder if the short, top-heavy cat-girl would really be able to scale them, but before you have too much time to think about such a thing, she says, [claire.speech(I'll see if I can get this pad working somehow. Could you try to look for a gap in these crates or something?)]
+		仰望着周围高耸入云的板条箱堆，你不禁要怀疑，这个头重脚轻的小猫女是否真的能爬得过去，但在你还来不及多想的时候，她说，[claire.speech(我会试着修复把这个传送板。你去这些箱子周围找找缝隙什么的？)]
 	</p>
 	<p>
-		Replying in the affirmative, you leave Claire to tinker with the teleportation pad, before starting to take a closer look at the walls of crates surrounding you...
+		你像接受命令一样答应了。你将克莱尔待在后方摆弄传送板，然后开始仔细观察周围的箱子墙……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENCLOSURE_TELEPORT_PADS_REASSURE"><![CDATA[
 	<p>
-		Seeking to calm Claire down by reassuring her that everything's ok, you place one [pc.hand] on her shoulder and say, [pc.speech(Come on, Claire! It's not that hopeless; I'm sure we can find a way out of here, or even get that pad working again!)]
+		为了安慰克莱尔一切尚好，你将[pc.hand]手搭在她的肩膀上并说，[pc.speech(别这样，克莱尔！我们还不是看不到希望；我相信我们能够找到离开的办法，或者修好这个传送板！)]
 	</p>
 	<p>
-		Taking a deep breath, the cat-girl slowly allows a smile to return to her face, and, joining you in standing up, she says, [claire.speech(I guess... I mean, there's got to be a way out somewhere, and maybe there aren't even any SWORD guards in here. We might be able to escape without any trouble at all.)]
+		深吸一口气，猫女的脸上慢慢恢复了笑容，和你一起站起来，说，[claire.speech(我想也是……我是说，既然有来的路，那就有出去的办法，而且或许这里一个SWORD警卫都没有呢。我们还是可以安全离开的。)]
 	</p>
 	<p>
-		[pc.speech(That's the spirit,)] you say, [pc.speech(and if worse comes to worst, we can always climb over these crates...)]
+		[pc.speech(这就对了，)]你说，[pc.speech(就算事态恶化，我们也能躲到这些板条箱顶上……)]
 	</p>
 	<p>
-		Looking up at the towering stacks of crates all around you, you wonder if the short, top-heavy cat-girl would really be able to scale them, but before you have too much time to think about such a thing, she says, [claire.speech(I'll see if I can get this pad working somehow. Could you try to look for a gap in these crates or something?)]
+		仰望着周围高耸入云的板条箱堆，你不禁要怀疑，这个头重脚轻的小猫女是否真的能爬得过去，但在你还来不及多想的时候，她说，[claire.speech(我会试着修复把这个传送板。你去这些箱子周围找找缝隙什么的？)]
 	</p>
 	<p>
-		Replying in the affirmative, you leave Claire to tinker with the teleportation pad, before starting to take a closer look at the walls of crates surrounding you...
+		你回以肯定的答复，让克莱尔留在在后方摆弄传送板，你开始仔细观察周围的箱子墙……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENCLOSURE_TELEPORT_PADS_HUG"><![CDATA[
 	<p>
-		Seeking to calm Claire down, you shuffle a little closer to her and, wrapping your [pc.arms] around her, you pull her into a big hug.
+		为了让她冷静下来，你凑了上去，用[pc.arms]紧紧环抱住她，给她一个温暖的拥抱。
 	</p>
 	<p>
-		[claire.speech(H-Hey, I'm not that far gone, there's no need to hug me or anything,)] she objects, but despite her words, you can tell from the soft tone of her voice that she's not really disliking the experience. Taking a deep breath, the cat-girl waits for you to release her and back off, before joining you in standing up and saying, [claire.speech(Thanks for the support, [pc.name], but I'm not really that fragile... A-Anyway, I suppose that there's got to be a way out of here somewhere, and maybe there aren't even any SWORD guards in here. We might be able to escape without any trouble at all.)]
+		[claire.speech(嘿，我还没完全崩溃呢，犯不上拥抱什么的，)]尽管她这么说，但你能从她细柔的语气中听出来她并不讨厌你的拥抱。深吸一口气，猫娘等着你放开她后，和你一起站起来，说，[claire.speech(谢谢你鼓励我，[pc.name]，我没那么脆弱……无，无论怎么说，我想这里一定还有出去的路，SWORD的看守也不可能滴水不漏，我们还是有希望安全逃走的。)]
 	</p>
 	<p>
-		[pc.speech(Well, if worse comes to worst, we can always climb over these crates,)] you suggest.
+		[pc.speech(好吧，如果事态恶化，我们还能够躲在这些板条箱子堆上面。)]你寻思说。
 	</p>
 	<p>
-		Looking up at the towering stacks of crates all around you, you wonder if the short, top-heavy cat-girl would really be able to scale them, but before you have too much time to think about such a thing, she says, [claire.speech(I'll see if I can get this pad working somehow. Could you try to look for a gap in these crates or something?)]
+		仰望着周围高耸入云的板条箱堆，你不禁要怀疑，这个头重脚轻的小猫女是否真的能爬得过去，但在你还来不及多想的时候，她说，[claire.speech(我会试着修复把这个传送板。你去这些箱子周围找找缝隙什么的？)]
 	</p>
 	<p>
-		Replying in the affirmative, you leave Claire to tinker with the teleportation pad, before starting to take a closer look at the walls of crates surrounding you...
+		回以肯定的答复，你将克莱尔留在后方摆弄传送板，然后开始仔细观察周围的箱子墙……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCLOSURE -->
 	
 	<htmlContent tag="ENCLOSURE"><![CDATA[
 	<p>
-		Towering stacks of wooden crates surround you on all four sides, forming what is sure to present an all-but-impassable barrier to your top-heavy cat-girl companion. A closer look at these containers reveals that each one has been stamped both with a serial number and with the words <i>'SWORD: Special Weapons and Operations Response Department'</i>.
+		你四周被堆得高高的板条箱包围，这些箱子构成了一个几乎不可能让你的重心偏上的猫女伙伴通过的障碍。仔细观察这些集装箱，你发现每一个都被标上了一个序列号和<i>“SWORD: 特种武器行动反应部”</i>的字样。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_claireEnclosureEscaped))
-			You can't see any gap at all in the stacks of crates in this area. It seems as though the only way in or out of this small enclosure is via the passage you opened up by moving those shelves...
+			你在这片箱子堆里看不到任何缺口。看来进出这个小围栏的唯一方式就是通过你移动那些货架打开的通道……
 		#ELSE
-			You can't see any gap at all in the stacks of crates in this area, but surely there must be a way out somewhere nearby...
+			你在这片箱子堆里看不到任何缺口，但附近肯定有什么出路……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCLOSURE_SHELVING -->
@@ -116,911 +116,910 @@
 	<htmlContent tag="ENCLOSURE_SHELVING"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_claireEnclosureEscaped))
 		<p>
-			By pulling the wheeled shelving units back into the crate-encircled enclosure, you've managed to open up a path linking it to the warehouse proper. Although it was in this location where you were fortunate enough to find a fabled spell book containing the secrets of teleportation, these shelves really don't seem to contain anything else of value.
+			你将带轮的货架单元拉回到由集装箱环绕的围栏中，成功地打开了一条通往仓库的路径。虽然就是在这个位置你幸运地找到了一本传说中的法术书，其中包含了传送的秘密，但这些货架似乎真的没有包含其他有价值的东西。
 		</p>
 		<p>
-			[claire.speech(Come on, we've got to get out of here!)] Claire hisses, motioning with one hand for you to come and join her as she waits for you by the opening in the wall of crates.
+			[claire.speech(快点，我们得走了！)]克莱尔嘶嘶地说，用一只手示意你过去，她在箱子墙的开口处等着你。
 		</p>
 	#ELSE
 		<p>
-			Although not visible from where you initially teleported in due to the angle at which you were viewing it, there's a ceiling-high gap in the crates in this particular corner of the enclosure. Unfortunately, someone seems to have pushed several wheeled shelving units into this breach, effectively blocking off your current location from the rest of the warehouse.
+			虽然你最初传送到这里时由于你的观察角度而看不见，但围栏的这个角落中在板条箱之间有个直通天花板的缺口。不幸的是，有人似乎把几个带轮的货架推到了这个缺口里，有效地封锁了你当前位置与仓库其他部分的通道。
 		</p>
 		<p>
-			If you were to pull these shelves out, you could probably open up a way to escape...
+			如果你把这些货架拉出来，你可能可以打开逃跑的路……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCLOSURE_SHELVING_MOVE -->
 	
 	<htmlContent tag="ENCLOSURE_SHELVING_MOVE"><![CDATA[
 	<p>
-		With only these wheeled shelving units blocking what looks to be the way out, you step over towards the nearest one, and, grabbing it by the end, start to pull it out.
+		出口的路看似被几个带轮货架堵住了，于是你走向最近的那个，伸手抓住尾端，试着把它拉出来。
 		#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE)<5)
-				Despite it having wheels, you're so weak that you're completely unable to move it. Thankfully, having seen what it is you're doing, Claire quickly walks over to give you a helping hand.
+				尽管这是带轮的货架，弱小的你还是无法拉动分毫。幸运的是，克莱尔见此飞快跑来，向你伸出援手。
 			</p>
 			<p>
-				[claire.speech(That pad's definitely not going to work without the proper essence cell,)] she says, grabbing the end of the shelf, [claire.speech(So this is the way out? These things are heavier than they look I guess? Or not...)]
+				[claire.speech(没有相应的精华电池，那块传送板是绝对不会开始运转的，)]她抓着货架，[claire.speech(所以这就是出路？这些东西比看起来还要重？或者……)]
 			</p>
 			<p>
-				With absolute ease, the cat-girl gets the shelf moving, and in just a few moments she's wheeled it fully back into the enclosure, thereby opening a path from your current location into the rest of the warehouse. It not being her intention to show you up like that, she says, [claire.speech(Hey, don't worry about not being able to move it; it was pretty heavy, and I'm stronger than I look!)]
+				她毫不费力地把货架拉动，没一会就把货架组拉开，在箱墙上打开了一个通往仓库其他地方的更大的缺口。她并不是想向你炫耀，便向你解释说，[claire.speech(嘿，别想太多啦，我可比看起来厉害，那些东西其实挺重的！)]
 		#ELSE
-				Although you're able to get it moving with absolute ease, the front set of wheels suddenly catch on the side of a crate, and the whole shelving unit comes to a shuddering halt. Having seen what it is you're doing, Claire quickly walks over to give you a helping hand.
+				你能毫不费力地拉动地把货架拉开，但货架前面的轮子突然卡在板条箱上了，连带着整个货架组摇晃起来。克莱尔见状快步走来，向你伸出援手。
 			</p>
 			<p>
-				[claire.speech(That pad's definitely not going to work without the proper essence cell,)] she says, walking past you to bend down and free the shelf's wheels, before continuing, [claire.speech(So this is the way out? Let's get moving then!)]
+				[claire.speech(没有相应的精华电池，那块传送板是绝对不会开始运转的，)]她说着，走过你身边，弯下腰解开卡住的轮子，[claire.speech(所以这就是出去的路吗？我们继续吧！)]
 			</p>
 			<p>
-				Agreeing with the once-again happy cat-girl, you wheel the shelving unit fully back into the enclosure, thereby opening a path from your current location into the rest of the warehouse.
+				你把整个货架组都拉了进来，在箱墙上打开一个通往仓库其他地方的更大的缺口。
 		#ENDIF
 	</p>
 	<p>
-		Along with the other two still sitting in the gap, this shelving unit looks to be full of nothing more than dusty old accounting books. As you and Claire start to move through the opening you've just created, however, you see a book lying on the floor which is very unlike all these others. Instantly recognising it as a spell book, you bend down to pick it up, and feel your eyes widening in surprise as you see that it contains detailed instructions on how to cast the very spell which got you into this whole mess; 'teleport'.
+		相比另外两个在缺口旁的货架，这个货架组存放满了遍布灰尘的旧书。当你和克莱尔走过缺口时，你注意到地上一本截然不同的书。你认出那是一本法术书，于是弯下腰把它捡起。看着书上详细记载的施法指南，你的眼中满是惊奇，这正是把你们卷入这些麻烦的罪魁祸首，“传送法术”。
 	</p>
 	<p>
-		[claire.speech(Hey, what's that you've found? It must have fallen out of the shelf as it was moving,)] Claire says, stepping up beside you. As she sees what it is, the tone of her voice instantly changes from one of curiosity to one of alarm, and she hisses, [claire.speech(A teleport spell book?! Y-You can't take that! What are you doing?! That's a forbidden spell; only lilin or the highest-ranking Enforcers are allowed those!)]
+		[claire.speech(嘿，你找到什么了？肯定是刚刚从架子上掉下来的吧，)]克莱尔说着，走到你身边。当她看清你拿着的是什么后，瞬间警惕起来，嘶嘶地说，[claire.speech(一本传送法术书？！你——你不能拿走这个！你在干什么？！那可是禁忌法术，只有莉琳或者高级执法者才有权使用！)]
 	</p>
 	<p>
-		[pc.speech(But if I can quickly learn it, maybe I'd be able to teleport back to your Enforcer post and pick up one of those essence cells, and then come back to save you,)] you suggest.
+		你提议说，[pc.speech(但是如果我马上学会它，也许我就能传送回执法者岗哨，然后带上几个精华电池回来救你了。)]
 	</p>
 	<p>
-		Torn between her duty as an Enforcer and the prospect of escaping this whole mess the two of you are in, the little cat-girl paces back and forth for a moment before turning towards you and letting out a defeated sigh. Placing her hands on her wide hips, she pouts at you as she says, [claire.speech(Fine... Just don't you <i>ever</i> tell <i>anyone</i> that I allowed you to do this... A-And anyway, you haven't broken the law until you attempt to learn that spell, so if I don't see you doing it, then I'm not responsible for having to arrest you!)]
+		这个小猫女来回踱步思考着，最终在她作为执法者的责任和从这堆麻烦中脱身做出了选择。她无奈地叹了口气，把手放在自己的肥臀上，撅着嘴说，[claire.speech(好吧……但是你<i>绝对</i>不能告诉<i>任何人</i>是我允许你这么做的。而——而且你在试图学这个法术前都还没有违法，所以只要我没看见，就不用负责逮捕你了！)]
 	</p>
 	<p>
-		Having found a solution to her moral dilemma, Claire turns her back on you, before hissing over her shoulder for you to hurry up. Not wanting to point out the flaws in Claire's logic, you turn your attention back to the book still in your hands...
+		克莱尔转身过去，庆幸自己在道德困境里找到了合适的解决方法，接着便嘶嘶地催促着你。你并不想指出她的逻辑谬误，转身继续专心看起手中的书…… 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENCLOSURE_SHELVING_DRAG_TELEPORT_LEARNED_START"><![CDATA[
 	<p>
-		With the possibility of a SWORD guard discovering this enclosure, you skim through the spellbook as quickly as possible...
+		冒着被SWORD发现的风险，你尽你所能快速翻阅着手中的法术书……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENCLOSURE_SHELVING_DRAG_TELEPORT_LEARNED_END"><![CDATA[
 	<p>
-		Thanks to your natural affinity with the arcane, you're able to learn how to cast teleport very quickly, and once you feel confident enough to try it out, you tap Claire on the shoulder and let her know that you're ready.
+		多亏了你对奥术的天然亲和力，你很快就学会了如何施放传送法术。当你感到有足够的信心尝试，你轻轻地拍了拍克莱尔的肩膀，让她知道你已经准备好了。
 	</p>
 	<p>
-		[claire.speech(Ok, so just teleport back to the room we came from, and then go back into the adjoining office,)] Claire instructs, [claire.speech(Lucy should be on duty now, and she owes me a huge favour, so just ask her for a couple of essence cells, and say that this is in return for when I helped her with the 'alligator incident'.)]
+		[claire.speech(好，那么就传送回我们来的那个房间，然后再走回相邻的办公室，)]克莱尔指示到，[claire.speech(现在是露茜值班的时间了，她欠我一个大人情，所以就问她要几个精华电池，告诉她这是为了我帮她解决‘鳄鱼事件’的回报。)]
 	</p>
 	<p>
-		[pc.speech(Ok, here I go,)] you say. Following the book's instructions, you visualise the room back in Submission's Enforcer post, before casting the teleport spell. A flash of purple light instantly surrounds you, but instead of being instantaneously transported to your destination, you feel yourself being pulled back by some strange, powerful force. As the light fades, you discover that you're still standing in exactly the same place as you were a moment ago.
+		[pc.speech(好的，我走了，)]你说。按照书的指示，你想象回到屈城区的执法者岗哨的房间，然后施放了传送法术。一道紫色的光瞬间围绕着你，但你并没有被瞬间传送到你的目的地，而是感觉到自己被一种奇怪、强大的力量拉了回来。当光消失时，你发现自己仍然站在几秒钟前的同一个地方。
 	</p>
 	<p>
-		[claire.speech(I should have known there'd be a teleport inhibition device in here...)] Claire sighs as she sees that your spell failed. Bringing her palm up to her forehead, she whines in frustration, [claire.speech(Now not only are we in serious trouble for the unauthorised teleport and trespassing in a SWORD installation, but I've also gone and let you learn a forbidden spell for no reason!)]
+		[claire.speech(我应该知道这里会有一个传送抑制装置……)]克莱尔看到你的法术失败后叹了口气。她手捂着头，沮喪地抱怨着，[claire.speech(现在我们不仅因为未经授权的传送和擅自闯入SWORD设施而陷入了大麻烦，而且我还让你白白学了一个禁忌的法术！)]
 	</p>
 	<p>
-		[pc.speech(A teleport inhibition device? So that's what pulled me back?)] you ask, relieved to discover that it wasn't your fault that the teleport spell failed.
+		[pc.speech(一个传送抑制装置？那就是我被拉回来的原因吗？)]你问道。传送法术失败并不是你的错，这让你松了口气。
 	</p>
 	<p>
-		[claire.speech(Yeah, it's not like there are many people who can teleport, but a lot of places still have them as a security precaution. I was hoping that they'd not have bothered to put one in this old warehouse,)] Claire replies, before shaking her head free of negative thoughts and continuing, [claire.speech(Anyway, it looks like we'll just have to get out of here the old fashioned way. I'll follow you, so lead on. Oh, and watch out for SWORD guards...)]
+		[claire.speech(是的，虽然能传送的人不多，但很多地方仍然把它们作为一种安全预防措施。我本希望他们不会费心在这个旧仓库里也安装一个，)]克莱尔回答，然后摆脱了负面的想法，继续说，[claire.speech(不管怎样，看起来我们只能用老式的方式离开这里。我会跟在你后面，所以带路吧。哦，还要注意SWORD的警卫……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CORRIDOR -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		The paths leading through the warehouse are flanked on both sides by towering stacks of wooden crates. In some areas they're at such a height that they're almost touching the bright arcane lights which hang down from the corrugated steel roof high overhead. As you pass them, you notice that every single one of these crates is stamped with a serial number and accompanying text, reading <i>'SWORD: Special Weapons and Operations Response Department'</i>.
+		穿过仓库的小路两侧堆满了木制板条箱。有些甚至堆得快要碰到高高的天花板——垂泻着明亮奥术灯光的、波纹钢板制的天花板。当你经过它们时，你注意到这些板条箱中的每一个都印有序列号和附带的文字，上面写着<i>“SWORD:特种武器行动反应部”</i>。
 	</p>
 	#IF(RND.nextInt(100)<15)
 		<p>
 			#IF(claire.getLust()>75)
 				[claire.speech(
-				[style.random(I'm so horny...|Can't think... So horny...|I'm so turned on right now...|You know, you're really hot...|I need a good, hard fuck...)]
-				)] Claire [style.random(moans|sighs)].
+				[style.random(我感觉好饥渴啊……|大脑要融化了……好想要……|我现在真的已经欲火焚身了……|你知道吗，你真的很辣……|我真的很需要结结实实真刀真枪地来一发……)]
+				)]克莱尔发出[style.random(呻吟|叹息)]。
 			#ELSE
 				[claire.speech(
-				[style.random(This place is huge...|It's like a labyrinth in here...|I'm sure we'll be out of here soon...|Just watch out for those SWORD guards...|How long have we even been in here?)]
-				)] Claire [style.random(whispers|hisses)].
+				[style.random(这地方真宽敞……|这儿简直是个迷宫……|我确信我们很快就能走出去的……|我们得小心那些SWORD的守卫……|我们在这儿呆了多久了？)]
+				)]克莱尔[style.random(低语|嘘声道)]。
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_ENTRANCE_WARNING"><![CDATA[
 	<p>
 		<i>
-		The area to your north looks like this warehouse's only exit. Although you can see that it's being guarded by no less than [style.colourBad(four SWORD Enforcers)], [style.colourMinorGood(you're confident that you can move closer without alerting them)].
+		在你北面似乎是这个仓库唯一的出口。但你能看见不少于[style.colourBad(四名SWORD执法者)]正守着那儿，[style.colourMinorGood(你确信自己能在不惊动他们的情况下悄悄溜近些)]。
 		</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CLAIRE_WARNING -->
 	
 	<htmlContent tag="CLAIRE_WARNING"><![CDATA[
 	<p>
-		Almost immediately as you start moving into the warehouse, you see that the path before you forks off to the left. Wanting to make sure that the way is clear, you slowly move up to the junction and carefully peek around the corner.
+		几乎就在你进入仓库的瞬间，你看到前方的路径向左分叉。为了确保道路畅通，你慢慢地走到交汇点，并小心翼翼地探头看了看。
 	</p>
 	<p>
-		Just like the rest of the warehouse that you've seen so far, the path which you find yourself looking down is flanked on both sides by towering stacks of wooden crates. What's different about the scene before you, however, is that there's [npc.a_race] Enforcer standing guard about [unit.lSize(2000)] away from you. Thankfully, [npc.sheIs] currently preoccupied with throwing darts into the side of a nearby crate, and hasn't noticed either you or Claire, who has snuck up behind you and joined you in peeking around the corner.
+		和你迄今为止所见的仓库其余部分一样，你现在看到的路径两侧也都由高耸的板条箱堆积而成。然而，不同之处在于，距离你大约[unit.lSize(2000)]远的地方有一名[npc.a_race]执法者在站岗。幸运的是，[npc.sheIs]目前正忙于向附近一个板条箱的侧面扔飞镖，没有注意到你和克莱尔，克莱尔悄悄地跟在你后面，和你一起探头看了看。
 	</p>
 	<p>
-		[claire.speech(That's a member of SWORD, all right,)] the cat-girl whispers in your ear, [claire.speech(just look at all that gear [npc.sheIs] wearing...)]
+		[claire.speech(那绝对是SWORD的成员，)]猫女在你耳边低语，[claire.speech(看看[npc.sheIs]身上带的那些装备吧……)]
 	</p>
 	<p>
-		Sure enough, as you take another look at the [npc.race] Enforcer, you take note of the fact that [npc.sheIs] not only wearing a very militarised uniform, complete with armoured vest and helmet, but [npc.she] also has what looks to be a rifle of some sort slung over [npc.her] shoulder. Although [npc.sheIs] no threat at the moment, due to being concerned only with trying to score a bullseye on [npc.her] makeshift dartboard, you imagine that [npc.she]'d be a very dangerous opponent if you were to drawn into a fight with [npc.herHim].
+		果然，当你再次看向那名[npc.race]执法者时，你注意到[npc.sheIs]不仅穿着一身非常军事化的制服，还配有防弹背心，戴着头盔，肩膀上还挂着看起来像是步枪的东西。虽然由于[npc.sheIs]目前只关心如何在自制的飞镖靶上得个满分，所以暂时没有威胁，但你想象中，如果你和[npc.herHim]发生冲突，[npc.she]将会是非常危险的对手。
 	</p>
 	<p>
-		[claire.speech(SWORD are known for being trigger-happy maniacs at the best of times,)] Claire whispers with a sense of urgency in her voice, [claire.speech(There's no way we can sneak past [npc.herHim], and [npc.she]'ll probably just shoot us if [npc.she] sees us. Come on, let's find another way around...)]
+		[claire.speech(SWORD在最好的情况下都是一群爱开枪的疯子，)]克莱尔急迫地低语，[claire.speech(我们没有办法悄悄绕过[npc.herHim]，如果[npc.she]看到我们，[npc.she]可能会直接向我们开枪。快走，我们找另一条路绕过去……)]
 	</p>
 	<p>
-		Realising that you'll end up having to fight the [npc.race] if you move any closer to [npc.herHim], you suppose that it would be the safer option to do as Claire suggests and find another route by which the two of you can escape... 
+		你意识到如果更靠近[npc.herHim]，会不得不和[npc.race]战斗，你觉得按照克莱尔的建议寻找另一条你们可以逃脱的路线可能是更安全的选择……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CLAIRE_SEX -->
 	
 	<htmlContent tag="START_CLAIRE_SEX"><![CDATA[
 	<p>
-		Thinking that Claire's overwhelming lust really needs to be dealt with, you turn to her and say, [pc.speech(It looks like there's a place to hide behind some of these crates...)]
+		你考虑到克莱尔压倒性的欲望已经不解决不行了，于是转过去对她说，[pc.speech(这些板条箱的后面好像有点位置可以躲……)]
 	</p>
 	<p>
-		Immediately picking up on what it is you mean by that, the busty little cat-girl practically jumps with excitement as she rushes forwards and grabs you by the [pc.hand]. Pulling you over into the recess which you just mentioned, she turns towards you and squeals, [claire.speech(Yes! Please, I'm going to go crazy if I don't get some release soon!)]
+		这个玲珑腴美的猫女立刻秒懂，她冲过来一把抓住你的[pc.hand]，激动得要跳起来。她拉着你钻进那个空隙里，转身面对着你尖声说道，[claire.speech(啊！求你，再不帮我解脱我真的要疯掉了！)]
 	</p>
 	<p>
-		All too happy to help her with her problem, you step up to Claire and pull her into a deep, passionate kiss. Her huge, [claire.cupSize]-cup breasts press into your chest as the two of you thrust your tongues into each other's mouths, and, grabbing your hand, the horny cat-girl guides your [pc.fingers] down between her legs. As you start stroking her groin, she pulls back from the kiss and desperately pants, [claire.speech(Fuck... This is so naughty! Just think; we could be caught at any moment! Oh, fuck! This is turning me on so much!)]
+		你非常乐意帮助她解决问题。你走到克莱尔面前，把她拉入一个深深的激吻。当你们开始用舌头探索彼此的口腔时，她巨大的[claire.cupSize]罩杯乳房挤压着你的胸口。淫欲大发的猫女紧抓着你的手，把你的[pc.fingers]引向她的腿间。当你开始抚摸她的腹股沟时，她从亲吻中缩了回来，热切地喘息着，[claire.speech(干……我们可真下流！你想想，我们随时都有可能被逮到！天啊，操！一想到这个我就性奋得不行！)]
 	</p>
 	<p>
-		Claire's sudden passion seems to be more than just the result of being exposed to the arcane lightning globe, and you realise that this whole situation must have awoken a hidden desire for having risky sex deep within her. Leaning back against the crates in your little hiding spot, the busty cat-girl once again pulls you into her, before breathing heavily into your ear, [claire.speech(Come on, fuck me already!)]
+		克莱尔突如其来的欲火似乎不仅仅是因为暴露在奥术闪电球下，你意识到一定是现在的情形唤醒了她内心深处某种潜在的、对于危险性行为的渴望。丰满的猫女靠回你们小小藏身处的板条箱，把你拉近并对着你的耳朵重重地吐息，[claire.speech(快来，把我干个爽！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_CLAIRE_SEX"><![CDATA[
 	<p>
-		Claire leans heavily back against the crates, happily panting, [claire.speech(Fuck... I've never had sex quite like <i>that</i> before...)]
+		克莱尔死死抵靠住板条箱，愉悦地喘息，[claire.speech(干……我从没有<i>这样</i>做过爱……)]
 	</p>
 	<p>
-		Telling your partner that you enjoyed it as well, the two of you then set about getting your clothing back in order. Despite the fact that she should have got her lust back under control by now, Claire seems to be rather excited by the situation you're in, and she cheekily leans in to plant a kiss on your cheek, before saying, [claire.speech(Once we've escaped, we've got to do something like this again, ok? Perhaps when you visit me down in Submission, we could do it in an office, knowing that someone could walk in on us at any moment...)]
+		你告诉你的伴侣你同样也乐在其中，随后你们重新理好衣服。尽管此时克莱尔显然已经可以控制住自己了，但她看起来仍然对状况兴奋不已。她厚着脸皮凑上来亲你一口，说道，[claire.speech(我们逃出去以后一定得这么再干一炮，好不好？下次你来屈城区看我的时候就不错，我们可以在办公室里做，因为那儿随时都可能有人进来……)]
 	</p>
 	<p>
-		Realising that you've definitely awoken some kind of risky sex fetish in this cat-girl Enforcer, you tell her that there will be plenty of opportunities to play out her fantasies in the future, but for now, you need to focus on escaping from this place. Agreeing with your assessment, Claire falls in behind you once again as the two of you set off into the warehouse once more...
+		你意识到自己肯定让这个猫女执法者觉醒了一些不得了的性癖，于是你告诉她，往后你们还有大把多的机会来实践她的幻想，但现在的当务之急是得先想办法逃出去。克莱尔同意你的看法并跟在你身后，你们俩再次向仓库内进发……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ASK_CLAIRE_REPEAT_SEX -->
 	
 	<htmlContent tag="ASK_CLAIRE_REPEAT_SEX"><![CDATA[
 	<p>
-		Wondering if Claire is still feeling turned-on by your current dangerous situation, you ask her if she'd like to go for another round behind some nearby crates.
+		你不确定克莱尔是否仍对你们的危险处境感到性奋不已，于是你问她是否还想去附近的板条箱后面打一炮。
 	</p>
 	<p>
-		Obviously excited by the thought of doing such a thing, she bites her lip and lets out a horny little whine, but, getting a hold of herself, she shakes her head and explains, [claire.speech(I'd love to, but if we spend too long in here, people are going to start to notice that I'm missing. After we've escaped from this place, you can always visit me down in Submission. We could do it in an office down there, knowing that someone could walk in on us at any moment...)]
+		她显然对这个主意十分心动，咬着嘴唇呜呜淫吟。但她勉强控制住了自己，摇了摇头并解释道，[claire.speech(我真的很想，但如果我们在这里耽误太长时间的话，人们就会注意到我不见了。等我们逃出去了，你随时都可以去屈城区看我。我们可以在办公室里想怎么干就怎么干，而且那儿还随时都可能有人走进来呢……)]
 	</p>
 	<p>
-		Having to make do with her offer of more sex once the two of you have escaped from this place, you prepare to set off into the warehouse once again...
+		你确信逃出去后，你们俩铁定会在办公室里翻更多云覆更多雨。你们准备好再次出发……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CRATES -->
 	
 	<htmlContent tag="CRATES"><![CDATA[
 	<p>
-		This particular section of the warehouse appears to have been marked as a temporary storage bay of sorts, and alongside several lift dollies, there are a half-dozen or so crates waiting to be carted off and stacked in their proper location. While all the other crates in this warehouse are firmly sealed shut, the wooden lids on these ones have only been loosely closed, which, if you wanted to, would enable you to search through them.
+		仓库的这一特殊区域似乎被标记为了某种临时储藏室，在几辆升降车旁边，有差不多半打板条箱正等着被运走了重新摆好。仓库里的其他箱子都被牢牢封住了，但这些箱子上的木盖却只是松掩着，意味着只要你想，就大可以在里面翻翻看。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CRATE_SEARCHED"><![CDATA[
 	<p>
-		This particular section of the warehouse appears to have been marked as a temporary storage bay of sorts, and alongside several lift dollies, there are a half-dozen or so crates waiting to be carted off and stacked in their proper location. While all the other crates in this warehouse are firmly sealed shut, the wooden lids on these ones have only been loosely closed, which enabled you and Claire to search through them. Having already done this once already, there'd be no point in spending time searching though them for a second time.
+		仓库的这一特殊区域似乎被标记为了某种临时储藏室，在几辆升降车旁边，有差不多半打板条箱正等着被运走了重新摆好。仓库里的其他箱子都被牢牢封住了，但这些箱子上的木盖却只是松掩着，意味着只要你和克莱尔只要想，就大可以在里面翻翻看。但你们已经这么干过了，没必要再干一遍。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CRATES_RECESS"><![CDATA[
 	<p>
-		The way some of the crates have been stacked up in this area has created a hidden recess in which you and Claire could hide...
+		这个区域有几个板条箱摆放时形成了一个隐蔽的凹处，你和克莱尔可以躲进去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CRATES_SEARCH"><![CDATA[
 	<p>
-		Wondering what could be contained within the unsealed crates sitting before you, you step forwards and start searching through them. As you do so, Claire starts protesting, pointing out how she should be arresting you for what you're doing, but after you tell her that you might find something which could help the two of you escape from this warehouse, she reluctantly joins you in your search.
+		你想知道面前这些未封口的板条箱里装了什么，于是你走上前开始翻找。在你这么做的时候，克莱尔开始抗议，指出她应该为此逮捕你。但在你告诉她搞不好能找到一些可以帮助你们逃出去的东西后，她也不情不愿地加入了搜索的行列。
 	</p>
 	<p>
 		#IF(RND.nextInt(100)<50)
-			Unfortunately, most of the boxes turn out to contain nothing but stacks of mundane paperwork. In one of the last crates you check, however, you do find something worth taking, but you're not sure if it's going to be of any use in escaping from the warehouse...
+			不幸的是大部分的箱子里除了大摞大摞的无聊文书之外啥也没有。你在翻找的最后一个箱子里好歹发现了点能带走的东西，但你无法确定它是否能在逃出仓库时派上用场……
 		#ELSE
-			Unfortunately, most of the boxes turn out to contain nothing but stacks of mundane paperwork. In one of the last crates which your cat-girl Enforcer companion checks, however, she does find something worth taking, but as she hands it over to you, you're not sure if it's going to be of any use in escaping from the warehouse...
+			不幸的是大部分的箱子里除了大摞大摞的无聊文书之外啥也没有。你的猫女同伴在翻找的最后一个箱子里好歹发现了点能带走的东西，但当她递给你时，你也无法确定它是否能在逃出仓库时派上用场……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CRATES_ARK -->
 	
 	<htmlContent tag="CRATES_ARK"><![CDATA[
 	<p>
-		This particular section of the warehouse appears to have been marked as a temporary storage bay of sorts, and alongside several lift dollies, there are a half-dozen or so crates waiting to be carted off and stacked in their proper location. One of these wooden crates has a corner broken off of it, revealing that it contains a curious golden ark. Pushing back the lid, you see that it's covered in locks and sealed with an immeasurably-powerful arcane spell. You get the feeling that an adventurous archaeologist would insist that it belongs in a museum...
+		仓库的这个区域似乎被标记为一种临时存储区，除了几个升降车，还有六个左右的板条箱在等待被运走并堆放在适当的位置。其中一个板条箱的一角被破掉了，露出了它里面的一个神秘的金色方舟。推开盖子，你看到它被锁住，并被一种力量难以估量的奥术法术封印了。你有种感觉，一个富有冒险精神的考古学家会坚持说它应该属于博物馆……
 	</p>
 	<p>
-		While all the other crates in this warehouse are firmly sealed shut, the wooden lids on these ones have only been loosely closed, which, if you wanted to, would enable you to search through them.
+		虽然这个仓库里的其他板条箱都被牢牢封闭，但这些箱子的木盖只是松松垮垮地关着，如果你想的话，你能搜索这些箱子。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CRATES_ARK_SEARCHED"><![CDATA[
 	<p>
-		This particular section of the warehouse appears to have been marked as a temporary storage bay of sorts, and alongside several lift dollies, there are a half-dozen or so crates waiting to be carted off and stacked in their proper location. One of these wooden crates has a corner broken off of it, revealing that it contains a curious golden ark. Pushing back the lid, you see that it's covered in locks and sealed with an immeasurably-powerful arcane spell. You get the feeling that an adventurous archaeologist would insist that it belongs in a museum...
+		仓库的这个区域似乎被标记为一种临时存储区，除了几辆升降车，还有六个左右的板条箱等待被运走并堆放在适当的位置。其中一个板条箱的一角被破掉了，露出了它里面装着的一个神秘的金色方舟。推开盖子，你看到它被锁住，并被一种力量难以估量的奥术法术封印了。你有种感觉，一个富有冒险精神的考古学家会坚持说它应该属于博物馆……
 	</p>
 	<p>
-		While all the other crates in this warehouse are firmly sealed shut, the wooden lids on these ones have only been loosely closed, which enabled you and Claire to search through them. Having already done this once already, there'd be no point in spending time searching though them for a second time.
+		虽然这个仓库里的其他板条箱都被牢牢封死，但这几个箱子的木盖只是松散地关着，让你和克莱尔可以在里面搜索。因为已经搜过一遍了，没理由再花时间搜第二次了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CRATES_LUST_WEAPON -->
 	
 	<htmlContent tag="CRATES_LUST_WEAPON"><![CDATA[
 	<p>
-		Solid red lines have been marked out on the floor of this particular part of the warehouse, and within the area which they encompass, you see that the words 'Restricted Area' have been spray-painted in regular intervals. Within this specially-designated zone, you see that there's a single wooden crate waiting to be collected and carted off some other part of the warehouse. On the side of this solitary container, you see that the words 'Top Secret' have been burned into the pale brown wood.
+		仓库的这一特殊区域的地面上已经划出了红色实线，在其围住的区域内，你可以看到以一定的间隔喷涂着“禁区”的字样。在这个特别指定的区域内，你可以看到一只待运走的木箱。在这只木箱的侧面，“绝密”字样被标在淡褐色的木板上。
 	</p>
 	<p>
-		Although Claire would probably object, there's nothing really stopping you from walking up to this curious crate and taking a look inside. Perhaps it contains some sort of powerful artefact which would help the two of you to escape?
+		虽然克莱尔可能会反对，但没有什么能阻止你走到这个奇怪的箱子前，并看看里面有什么。也许里面装着某种强大的遗物呢？能帮助你们逃出生天那一种。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CRATES_LUST_WEAPON_SEARCHED"><![CDATA[
 	<p>
-		Solid red lines have been marked out on the floor of this particular part of the warehouse, and within the area which they encompass, you see that the words 'Restricted Area' have been spray-painted in regular intervals. The crate marked as 'Top Secret', which contained the arcane lightning globe, is sitting in the middle of this forbidden zone, and as you were careful to leave it exactly as you found it, you don't think that whoever carts it off into storage will discover that its contents are missing...
+		仓库的这一特殊区域的地面上已经划出了红色实线，在其包围的区域内，你可以看到以一定的间隔喷涂着“禁区”的字样。标有“绝密”字样的箱子就摆在禁区的中间，里面装着奥术闪电球。由于你谨慎地把它原封不动地留在原处，所以你认为无论谁来搬它，都不会发现里面的东西不见了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CRATES_LUST_WEAPON_SEARCH -->
 	
 	<htmlContent tag="CRATES_LUST_WEAPON_SEARCH"><![CDATA[
 	<p>
-		There's no way that you're not going to take the opportunity to search through a 'Top Secret' crate locked away in a guarded warehouse like this. Stepping forwards over the solid red line that's painted on the floor, you enter the 'Restricted Area' and head directly over to this curious container.
+		你不可能错过在这戒备森严的仓库里大翻“绝密”板条箱的机会。你踩着红线走入“禁区”，径直走到这个令人好奇的箱子面前。
 	</p>
 	<p>
-		[claire.speech(What are you doing?)] Claire hisses, before puffing up her chest, placing her hands on her hips, and continuing to scold you, [claire.speech(Can't you read?! That's a restricted area!)]
+		[claire.speech(你搞什么？)]克莱尔用气声吼道，挺胸支髋，摆好架势继续斥责你，[claire.speech(你不识字？！那儿可是禁区！)]
 	</p>
 	<p>
-		Having already expected this response, you turn to face the pouting cat-girl and explain, [pc.speech(This might just contain something that can get us out of here. You do want to escape from here, right?)]
+		她的反应在你意料之中，你转过脸来对着这个撅着嘴的猫女解释道，[pc.speech(这里面可能有能帮我们逃出去的东西。你也想逃出去，对吧？)]
 	</p>
 	<p>
-		[claire.speech(Of course I do!)] she responds, marching forwards beside you so that she can continue objecting without having to shout, [claire.speech(I also don't want to be charged with entering a restricted area and looting some top secret crate! Anyway, we don't have time to argue; just do what you've got to do and then let's get going!)]
+		[claire.speech(我当然想！)]她回答道，凑到你旁边，好在保持低音量的情况下继续向你输出，[claire.speech(但我也不想闯到禁区里来搜绝密板条箱！随便了，我们没时间吵了——干完了咱们赶紧开溜！)]
 	</p>
 	<p>
-		[pc.speech(It'll be faster if you help,)] you say, stepping up to the crate and starting to pull open the lid.
+		[pc.speech(你帮忙的话咱们就能快点，)]你说道，上前试图拉开板条箱的盖子。
 	</p>
 	<p>
-		[claire.speech(Oh, fine!)] she replies, grabbing the other end of the lid and helping you to lift it up and off the top of the crate.
+		[claire.speech(哎，行吧！)]她回答道，抓住板条箱的另一边，试着帮你一起把盖子揭起来。
 	</p>
 	<p>
-		With the container now open, the two of you step forwards and peer inside. Rather disappointingly, all you see are stacks of brown paper folders, each one stamped with 'Top Secret' in big red lettering. Your companion, however, notices something more to the crate's contents, and, pushing some of these folders out of the way, she reveals a small metal box sitting beside a dozen or so bottles of swirling arcane essence. Reaching inside, the curious cat-girl retrieves the metal box, before turning it over in her hands and making a puzzled expression.
+		板条箱现在打开了，你们俩上前去，探头往里看。令人失望的是，你们看到的只是一摞摞牛皮纸文件夹，且每个文件夹上都用红色大字印着“绝密”二字。不过，你的同伴注意到箱子里还有其他东西，她把其中一些文件夹推开，露出一个小金属盒，旁边还有差不多十几瓶奥术精华。好奇的猫女伸手进去拿起金属盒前后摇了摇，露出疑惑的表情。
 	</p>
 	<p>
-		[claire.speech(I wonder what's in here,)] she muses, her objections of a moment ago quickly forgotten as she's overcome by curiosity. Before you can say or do anything to stop her, she unfastens the box's latch, before quickly opening the hinged lid and retrieving what's stored inside. As she brings it up to her face to take a closer look, you see that the mysterious object that she's holding is a small, crystal globe, no larger than a golf ball. Suspended in the very centre of it, there's a faint ball of glowing white light, but other than that, there doesn't seem to be anything particularly spectacular or dangerous about it.
+		[claire.speech(我想知道这里面有什么，)]她喃喃自语，片刻之前的反对早已因好奇而抛之脑后。在你阻止她前，她就打开了盒子的锁扣，然后迅速翻开铰链盖，取出了里面的东西。她把内容物举到眼前细细打量，你可以看见那个神秘的物什是个水晶小球，看起来比高尔夫球大不了多少。在它的最中心悬浮着一团黯淡的白色光球，除此之外，它似乎没有其他特别惊艳或者格外危险的地方。
 	</p>
 	<p>
-		[claire.speech(Is this all there is?)] the cat-girl asks, [claire.speech(It looks like some kind of arcane Yule decoration or something. What's so top secret about- Eek!)]
+		[claire.speech(就这吗？)]猫女问道，[claire.speech(看起来像某种奥术圣诞装饰品或者其他类似的小东西。这有什么绝秘——唷！)]
 	</p>
 	<p>
-		Claire's question is interrupted as the small globe suddenly bursts into life in a spectacular fashion. One moment containing nothing but a seemingly-inert ball of arcane light, a split second later it's filled with dancing streaks of bright purple arcane lightning. While these arcing flashes look to be safely contained within the globe, their sudden appearance is nevertheless enough to make Claire jump, and in her panic, she throws it back into the wooden crate with considerable force. Unfortunately, this throw manages to directly strike the bottles of arcane essence stored within the box, and as several of them smash into pieces, a huge flash of purple-hued lightning is discharged from the little crystal globe.
+		克莱尔的问题被打断了，因为这个小圆球突然迸发出惊人的生命力。前一刻，它还只是一个看似毫无用处的奥术光球，下一瞬间，它霎时就充满了狂舞着的亮紫色奥术电光。虽然这些弧形闪光看起来被安全地控制在圆球内，但它们的突然出现还是让克莱尔吓了一跳，慌乱中她用力把圆球扔回了木箱。不幸的是，她的这一扔直接击中了箱子里的奥术精华瓶。随着其中几个瓶子摔了个粉碎，这个小小的水晶球里放出一道巨大的紫红色闪电。
 	</p>
 	<p>
-		[claire.speech(Eek!)] Claire cries, dropping down into a crouch and shielding her head from the burst of energy. Of course, such a reaction does nothing to shield the cat-girl from the arcane lightning, and, similarly, there's nothing you can do to protect yourself from it either. Like a more focused version of a naturally-occurring arcane storm, this energy discharge doesn't cause any physical harm, but instead, you feel yourself starting to get aroused.
+		[claire.speech(哎呀！)]克莱尔哭喊道，在能量爆发中蹲下来护住脑袋。当然，这于事无补，并不能保护猫女免受奥术闪电的伤害，同样地，你也无法保全自身。就像自然发生的奥术风暴的更集中版本，这种能量释放没有对你们的身体造成什么伤害，相反，你感觉自己开始性奋起来。
 	</p>
 	<p>
-		Thankfully, this lightning discharge only lasts for a moment, and it rapidly dissipates before you're affected too strongly by its effects. Claire, on the other hand, seems to have been hit by a much stronger burst, and with a horny whine, she drops one hand down into her trousers and starts touching herself...
+		谢天谢地，这只持续了片刻时间。在你受到太强烈的影响前，它就迅速地消散了。但克莱尔似乎受到了更大的冲击，她饥渴地低吟起来，一只手滑进裤子里并开始抚摸自己……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CRATES_LUST_WEAPON_OBTAINED -->
 	
 	<htmlContent tag="CRATES_LUST_WEAPON_OBTAINED"><![CDATA[
 	<p>
-		Concerned with how Claire has suddenly been affected by the arcane lightning, you step forwards and ask her if she's ok. As though woken from a dream, she seems to suddenly become aware of what she's doing, and, pulling her hand out of her trousers, she blushes and stammers, [claire.speech(Y-Yes, I-I'm fine! That lightning's just... Well... You can see how it's made me feel!)]
+		你担心克莱尔突然受到奥术闪电的影响，于是上前询问她是否还好。她好像从梦中惊醒，突然意识到自己在做什么，把手从裤子里抽出来，红着脸结结巴巴地说， [claire.speech(是的，我、我没事！那闪电只是……嗯……你可以看到它带给我的影响！)]
 	</p>
 	<p>
-		Before you can suggest a solution to her problem, she pushes herself away from the crate and takes a deep breath. Assuming her favourite pose, she places her hands on her wide hips and states, [claire.speech(I-I can control myself! Come on, we need to get out of here!)]
+		还没等你提出解决方案，她就把自己推离了箱子，深吸了一口气。她摆出自己最喜欢的姿势，双手支在自己的翘臀上说道，[claire.speech(我、我可以控制住自己的！来吧，我们得离开这儿了！)]
 	</p>
 	<p>
-		From the way she's starting hungrily at your body, combined with her blushing cheeks and the little whimpering moans she starts to make, you can tell that it's taking everything Claire's got to keep her lust under control. Satisfied that she's not going to do anything crazy that would alert the SWORD guards to your presence, you shift your attention back to the crate, and the curious globe that's sitting inside of it.
+		从她开始饥渴地盯着你的身体的样子，和她晕红遍布的脸颊以及呜呜淫吟中，你能看出克莱尔正全力压抑着自己的欲望。你确信她不会做出什么疯狂的举动来惊动SWORD卫兵，于是把注意力重新转到板条箱和里面那个让人好奇的小球上。
 	</p>
 	<p>
-		Miraculously, despite having shattered a half-dozen or so vials of arcane essence, the lightning globe doesn't seem to have even the slightest scratch upon it, and what's more, it seems to have reverted to its inactive state, and once again contains just a seemingly-inert ball of white arcane light. Reaching inside the box, you pick up the small, golf-ball-sized globe, and as you lift it up to take a closer look at it, purple flashes of arcane lightning once again start streaking out from the central core.
+		神奇的是，尽管一力击碎了差不多半打奥术精华瓶，这闪电球上似乎连一点划痕都没有，更重要的是，它又恢复了静止状态，再次变成了一个安静的白色奥术光球。你将手伸进盒子，拿起高尔夫球大小的小球，举到面前仔细观察。紫色的奥术闪电再次从中央核心处开始闪烁。
 	</p>
 	<p>
-		[claire.speech(I-Is that thing safe to touch?)] Claire asks, her voice still a little shaky as she desperately tries to keep her lust under control. 
+		[claire.speech(它、它是安全的吧，如果触摸的话？)]克莱尔问道，她的声音因为苦苦压抑着的欲火而有点颤抖。
 	</p>
 	<p>
-		[pc.speech(Yes, I don't think it's going to discharge again without having some kind of arcane energy channelled into it,)] you reply, your natural affinity for the arcane instinctively telling you that this is the case. Deciding to take this lightning globe with you, you tell your cat-girl companion, [pc.speech(Perhaps it will be useful in helping us to escape from this place.)]
+		[pc.speech(没事，如果没有新的奥术能量注入，我想它应该不会再突然发威，)]你回答道，你对奥术的天然亲和让你不费吹灰就能明白这一点。你决定带上这个闪电球，你告诉你的猫女同伴，[pc.speech(而且它搞不好能在帮我们逃出去上派上用场。)]
 	</p>
 	<p>
-		Looking back into the crate, you see that a few of the bottled essences are still intact.
+		你看回那只板条箱，留意到那里面还有一些完好的奥术精华瓶。
 		#IF(!pc.hasQuest(QUEST_LINE_SIDE_ENCHANTMENT_DISCOVERY))
-			 You get the feeling that if you were to open them, you'd be able to absorb the energy contained within, and could then channel that energy into the lightning globe in order to shoot a single bolt at a target.
+			你意识到，如果你能打开并吸取其中的能量，你或许能借助闪电球给目标一击。
 		#ELSE
-			 You get the feeling that arcane essences must be used as some sort of ammunition for this curious weapon, and that by channelling them into the lightning globe, you'd be able to shoot a single bolt at a target.
+			你意识到，奥术精华一定是作为这种奇特武器的弹药存在的，只要把它们注入闪电球，就能给你的目标来上一击。
 		#ENDIF
-		 Picking them up, you add them to your inventory, then, after firmly closing the lid of the crate, you turn back towards Claire and tell her that the two of you should continue on your way.
+		你把它们也捡起备用，然后你牢牢地重新关上板条箱的盖子，转过身告诉克莱尔你们俩该重新上路了。	</p>
+	<p>
+		[claire.speech(嗯哼！~)]她呻吟着，你注意到她一只手又伸进了裤子里，而另一只手则忙着揉捏自己的巨乳。她突然意识到自己在做什么，赶紧停止玩弄自己，虽然脸颊通红却还是坚持说，[claire.speech(我、我没事的！我可以控制住自己的！我们赶快走吧！)]
 	</p>
 	<p>
-		[claire.speech(~Mmm!~)] she whines, and you see that one of her hands has found its way back down the front of her trousers again, while the other is busily groping her huge breasts. Suddenly becoming aware of what it is she's doing, she quickly stops playing with herself, and with her cheeks flushing bright red, she insists, [claire.speech(I-I'll be fine! I can control myself! Let's just get out of here!)]
+		你相信她能控制住自己，但你也相信，说服她和你来一发大概也不需费什么口舌……
 	</p>
-	<p>
-		While you're convinced that she will indeed be able to control herself, you get the feeling that it wouldn't take much to convince her to have sex with you...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CRATES_LUST_WEAPON_OBTAINED_CONTINUE -->
 	
 	<htmlContent tag="CRATES_LUST_WEAPON_OBTAINED_CONTINUE"><![CDATA[
 	<p>
-		Trusting that Claire will be able to control herself, you step back from the 'Top Secret' crate and prepare to continue on your way...
+		确信克莱尔能够控制住自己，你们从“绝密”板条箱那儿退开，并准备继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHELVES_SPELL_BOOK -->
 	
 	<htmlContent tag="SHELVES_SPELL_BOOK"><![CDATA[
 	<p>
-		Instead of the usual wooden crates which fill the rest of the warehouse, this particular section is home to dozens of wheeled shelving units, of the same sort which were blocking your way when you first arrived here. At first glance they all seem to be filled with nothing more than miscellaneous documents and old accounting books, but perhaps if you were to take a closer look, you'd find something of value...
+		不像仓库里其他地方那样摆放的都是木箱，这个特殊区域放着成打的带轮货架，样式和刚来时拦过你路的那些一样。乍一看，这些货架上似乎堆满了杂七杂八的文件和旧账本，但如果你凑近了仔细看看的话，搞不好会发现一些有价值的东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHELVES_SPELL_BOOK_SEARCHED"><![CDATA[
 	<p>
-		Instead of the usual wooden crates which fill the rest of the warehouse, this particular section is home to dozens of wheeled shelving units, of the same sort which were blocking your way when you first arrived here. Having already searched through them all, you know that there's nothing else in this area that's of any value to you...
+		不像仓库里其他地方那样摆放的都是木箱，这个特殊区域放着成打的带轮货架，样式和刚来时拦过你路的那些一样。你已经把它们翻了个底朝天，你知道这儿没什么对你有用的东西了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CRATES_SPELL_BOOK_SEARCH -->
 	
 	<htmlContent tag="CRATES_SPELL_BOOK_SEARCH"><![CDATA[
 	<p>
-		Deciding that it would be worth your time to conduct a thorough search of this area, you move forwards between the nearest shelves and start taking a look at the documents stored here.
+		你觉得这儿值得一搜，于是你向前走到最近的架子之间并开始翻阅里面的文件。
 	</p>
 	<p>
 		#IF(claire.getLust()>75)
-			[claire.speech(~Mmm!~ I-I'll just wait here,)] Claire says, too preoccupied with trying to control her lust to object to your plans. 
+			[claire.speech(呃嗯！~我、我就在这儿等你，)]克莱尔说道，心神已被控制自己的欲望全数占据。
 		#ELSE
-			[claire.speech(This isn't a bookshop!)] Claire hisses at you, [claire.speech(You can't just go helping yourself to official Enforcer documents!)]
+			[claire.speech(这儿可不是书店！)]克莱尔低声斥责你，[claire.speech(你不能自顾自地就开始乱翻执法者的文件！)]
 			</p>
 			<p>
-				By explaining to the cat-girl that you might find something which could help the two of you to escape, you manage to convince her to let you go ahead with your planned search of the shelves. Putting her hands on her hips, she pouts at you as she concedes, [claire.speech(I suppose if there's something here which would help us to escape, you can take that... But nothing else!)]
+				你向猫女解释说，你可能会找到一些东西，来帮助你们逃出生天，于是你成功说服了她，让她同意你继续搜查架子。她双手叉腰，撅着嘴对你表示让步，[claire.speech(如果这儿真的有什么能派上用场的话，我想你拿着也不是不行……但其他的东西你可不能碰！)]
 		#ENDIF
 	</p>
 	<p>
-		While Claire keeps watch, you sweep down each row formed by the bookcases, checking each shelf for anything of value. After finding nothing but mundane documents of some form of another, you're just about to give up when you suddenly spot a rather unusual book nestled away between two stacks of papers. Pulling it out, you discover that it's a spell book containing details on how to cast 'Telepathic Communication'. Taking it with you, you head back to where your cat-girl Enforcer companion is waiting for you, and, showing it to her, you get her approval for keeping it.
+		在克莱尔的监视下，你沿着架子的每一排逐一向下扫视，检查每个搁板上是否有有用的东西。你除了各种形式的无聊文件外一无所获，正当你正准备放弃时，突然发现在两摞文件之间有一本相当不寻常的书。拿出来一看，你发现这是一本咒语书，里面详细记载了如何施展“心灵感应”。带着这本书，你回到了克莱尔等你的地方，并把这本书给她看。在得到她的同意后，你把这本书拿走备用。
 	</p>
 	<p>
 		#IF(claire.getLust()>75)
-		[claire.speech(Sure, you can take that, just please, I need to get out of here and have a good fuck!)] she whines, clearly not interested in anything but satiating her overwhelming lust.
+		[claire.speech(当然，你当然可以拿着，请便，我现在只想快点离开这儿了以后大干特干！)]她呻吟着，显然因为难以抵挡的性欲而对其他一切都漠不关心。
 		#ELSE
-		[claire.speech(Fine, I suppose you can take that,)] she says, placing her hands on her massive hips and frowning at you, [claire.speech(Maybe you could use it to trick some of these guards or something.)]
+		[claire.speech(好吧，我想你大概可以拿着，)]她说道，双手靠在丰满的髋部，皱着眉看着你，[claire.speech(或许你能靠这个糊弄一下看守什么的。)]
 		#ENDIF
 	</p>
 	<p>
-		Having got all you can from this area, you prepare to continue on your way through the warehouse...
+		这儿没什么你能拿的了，你准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_GUARD_POST -->
 	
 	<htmlContent tag="ENFORCER_GUARD_POST"><![CDATA[
 	<p>
-		Deciding that the best way to escape is by taking a direct route straight through this Enforcer post, you step forwards and start to approach [npc.name].
+		你认为最好的逃脱方式是直接从执法者岗哨前穿过去，于是迈步向前开始靠近[npc.name]。
 		#IF(claire.getLust()>75)
-			 Seeing what it is you're doing, Claire hides behind a nearby crate, and with her voice still dripping with lust, she hisses, [claire.speech(~Aah!~ D-Don't try to fight them! Stop!)]
+			克莱尔看到你打算做什么，迅速躲在旁边的板条箱后面。她用仍饱含着色欲的声音对你小声说，[claire.speech(~啊！~ 别，别去和他们打！停下！)]
 		#ELSE
-			 Seeing what it is you're doing, Claire hides behind a nearby crate, before hissing after you, [claire.speech(Don't try to fight them! Come back!)]
+			克莱尔看到你打算做什么，迅速躲在旁边的板条箱后面，随后对你小声说，[claire.speech(别去和他们打！回来！)]
 		#ENDIF
 	</p>
 	<p>
-		Knowing that this SWORD Enforcer is no match for you, you ignore Claire's words of warning and continue to stride forwards. Obviously not expecting to see an intruder, the SWORD guard only notices you out of the corner of [npc.her] eye when you're less than [unit.lSize(1000)] away. As soon as [npc.she] detects your presence, however, [npc.she] springs into action; rapidly unslinging [npc.her] [npc.mainWeapon], [npc.she] points it at you and orders, [npc.speech(Stop right there!)]
+		你知道这个SWORD执法者不是你的对手，于是忽略了克莱尔的建话，继续向前走去。SWORD的守卫明显没预料到会有人入侵，直到你来到[unit.lSize(1000)]开外才用余光看到你。但[npc.she]刚发现你的存在就开展了行动，[npc.her]快速取下了[npc.mainWeapon]并指向你，命令道，[npc.speech(站住别动！)]
 	</p>
 	<p>
-		Without even giving you time in which to obey [npc.her] command, the trigger-happy [npc.race] starts shooting at you!
+		没有给你一点时间来回应[npc.her]的命令，这名好战的[npc.race]直接开始对你射击！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_GUARD_POST_CLEARED"><![CDATA[
 	<p>
-		Having been defeated by you in combat, and then tazed into complete submission by Claire, the [npc.race] Enforcer is slumped down, unconscious, against a nearby crate in this area.
+		[npc.race]执法者在战斗中被你击败，然后被克莱尔电击至完全屈服，现在正瘫坐在这一区域附近的箱子上，失去了知觉。
 		#IF(claire.getLust()>75)
-			 Having warned you against touching [npc.name] or any of [npc.her] gear, Claire moans, [claire.speech(Come on, let's go! ~Mmm!~ I need to get out of here and masturbate or something!)]
+			克莱尔警告你不要碰H[npc.name]或者任何[npc.her]的装备，她呻吟着，[claire.speech(快点儿，我们走吧！~我等不及要离开这儿了，去自慰什么的！)]
 		#ELSE
-			 Having warned you against touching [npc.name] or any of [npc.her] gear, Claire hisses at you, [claire.speech(Come on, let's get out of here before [npc.she] wakes up!)]
+			克莱尔警告你不要碰H[npc.name]或者任何[npc.her]的装备，她冲你低吼，[claire.speech(快点，我们得赶在[npc.she]醒来前离开！)]
 		#ENDIF
 	</p>
 	<p>
-		Not wanting to give SWORD any further reason to hunt you or Claire down, you decide to do as your cat-girl companion says and move on through this area before the [npc.race] regains consciousness...
+		你不想给SWORD任何通缉你或克莱尔的理由，决定听从你的猫女同伴的话，在[npc.race]恢复意识之前抓紧通过……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_GUARD_POST_PLAYER_FIGHT_START"><![CDATA[
-	You prepare to fight the trigger-happy SWORD Enforcer.
-	]]>
-	</htmlContent>
+	你准备与好斗的SWORD执法者决一死战。
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_GUARD_POST_GUARD_FIGHT_START"><![CDATA[
-	Thankfully, [npc.name] seems more interested in testing [npc.her] mettle against you than calling for reinforcements...
-	]]>
-	</htmlContent>
+	谢天谢地，[npc.name]似乎更想试试[npc.her]在你这儿战力如何，而不是呼叫援军……
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_GUARD_COMBAT_VICTORY -->
 	
 	<htmlContent tag="AFTER_GUARD_COMBAT_VICTORY"><![CDATA[
 	<p>
-		With no energy left to continue the fight, the [npc.race] staggers back and collapses against a nearby crate. Glaring up at you, [npc.she] suddenly reaches into [npc.her] vest and pulls out a small tube, which you instantly realise is an arcane signal flare. Before you can react, [npc.she] laughs, [npc.speech(Let's see you beat the rest of- Argh!)]
+		[npc.race]再无力继续与你战斗，踉跄地后退，跌倒在一只近旁的板条箱上。[npc.she]瞪着你，突然伸手从[npc.her]的背心里摸出一只小管，你瞬间就意识到那是一个奥术信号弹。在你作出反应之前，[npc.she]狂笑起来，说道，[npc.speech(让我瞧瞧你够不够本事把其他人都给揍——哎唷！)]
 	</p>
 	<p>
-		Before [npc.she] can finish [npc.her] sentence, or set off the signal flare, a pair of wires shoot out from somewhere nearby, and, embedding themselves in the [npc.race]'s aura, they deliver a huge surge of arcane lightning. Having already been exhausted from your fight, this final attack proves to be too much for the [npc.race] to endure, and [npc.she] slumps to the floor, unconscious.
+		没等[npc.she]说完[npc.her]这句话或者引燃信号弹，一对电导线从附近某处射出，并深深嵌入[npc.race]的灵气中，放射出威力巨大的奥术闪电。[npc.race]早已在此前和你的战斗中精疲力竭，自然无法招架这最后一击，[npc.she]滑倒在地，失去意识。
 	</p>
 	#IF(claire.getLust()>75)
 		<p>
-			Looking across to where this unexpected attack came from, you see Claire still pointing her discharged taser at the SWORD guard. Glaring at you with a mixture of aroused anger in her eyes, she quickly moves forwards and deftly uses the [npc.race]'s own handcuffs to shackle [npc.herHim] to a nearby crate. Still struggling to control her lust, she whines, [claire.speech(~Mmm!~ Look what you made me do! [npc.She] almost saw me! Y-You know, you can't just assault Enforcers like that! If this were any other situation, I'd have arrested you for what you've just done!)]
+			你朝着攻击的来向望去，只见克莱尔仍然用自己的电击枪指着这个SWORD守卫。她盯着你，目光里欲火与怒火一同燃烧着。她快步上前，巧妙地用[npc.race]自己的手铐把[npc.herHim]铐在了附近的板条箱上。仍苦苦挣扎于欲海之中，她呻吟道，[claire.speech(嗯唔！~瞧你让我干出来什么事！[npc.She]几乎已经看到我了！你、你清楚的，你可不该像这样随随便便袭击执法者！若非形势所迫，我可是会为你的所作所为逮捕你的！)]
 		</p>
 		<p>
-			Pointing out that the [npc.race] was the one who shot at you first, you tell Claire that you were simply defending yourself, and, furthermore, that the [npc.race] was blocking your escape route. Subconsciously groping her breasts with one hand, Claire tuts, [claire.speech(W-Well, I don't know about that. ~Mmm!~ Let's just never speak of this again, ok? Oh, and don't even think about trying to take any of [npc.her] gear or anything. As it stands, [npc.she] probably won't even report this to [npc.her] superiors, as that'd mean [npc.herHim] losing a lot of face for being defeated like this. ~Aah!~ I-If you were to take [npc.her] gear, then it'd be a different matter entirely. You don't want SWORD after you for the rest of your life, do you?)]
+			你指出，是[npc.race]先动的手，你不过是在自卫而已，而且，[npc.race]正挡在你的逃跑路线上。克莱尔无意识地一手揉捏着自己的胸，砸吧着嘴，[claire.speech(好、好吧，这我倒是不知道。呃呜！~我们都别再提起这件事了，好吗？哦，别想着拿走[npc.her]的装备什么的。这样[npc.she]可能就不会向上级报告这件事了，毕竟[npc.herHim]被海扁成这样可糗大了不是。啊啊！~如、如果你打算拿走[npc.her]的装备，那事情的性质可就完全不一样了。你也不想余生都受到SWORD的追击，对吧？)]
 		</p>
 	#ELSE
 		<p>
-			Looking across to where this unexpected attack came from, you see Claire still pointing her discharged taser at the SWORD guard. Glaring angrily at you, she then quickly moves forwards and deftly uses the [npc.race]'s own handcuffs to shackle [npc.herHim] to a nearby crate. Letting out a little huff, she asks, [claire.speech(Look what you made me do! [npc.She] almost saw me! You know, you can't just assault Enforcers like that! If this were any other situation, I'd have arrested you for what you've just done!)]
+			你朝着攻击的来向望去，只见克莱尔仍然用自己的电击枪指着这个SWORD守卫。她盯着你，目光中有怒火在燃烧。她快步上前，巧妙地用[npc.race]自己的手铐把[npc.herHim]铐在了附近的板条箱上。随后她气哼哼地问道，[claire.speech(瞧你让我干出来什么事！[npc.She]几乎已经看到我了！你清楚的，你可不该像这样随随便便袭击执法者！若非形势所迫，我可是会为你的所作所为逮捕你的！)]
 		</p>
 		<p>
-			Pointing out that the [npc.race] was the one who shot at you first, you tell Claire that you were simply defending yourself, and, furthermore, that the [npc.race] was blocking your escape route. Placing her hands on her hips, Claire tuts, [claire.speech(Well, I don't know about that. Let's just never speak of this again, ok? Oh, and don't even think about trying to take any of [npc.her] gear or anything. As it stands, [npc.she] probably won't even report this to [npc.her] superiors, as that'd mean [npc.herHim] losing a lot of face for being defeated like this. If you were to take [npc.her] gear, then it'd be a different matter entirely. You don't want SWORD after you for the rest of your life, do you?)]
+			你指出，是[npc.race]先动的手，你不过是在自卫而已，而且，[npc.race]正挡在你的逃跑路线上。她双手支髋，砸吧着嘴， [claire.speech(好吧，这我倒是不知道。我们都别再提起这件事了，好吗？还有，别想着拿走[npc.her]的装备什么的。这样[npc.she]可能就不会向上级报告这件事了，毕竟[npc.herHim]被海扁成这样可糗大了不是。如果你打算拿走[npc.her]的装备，那事情的性质可就完全不一样了。你也不想余生都受到SWORD的追击，对吧？)]
 		</p>
 	#ENDIF
 	<p>
-		Reluctantly agreeing with Claire, you decide against taking any of [npc.namePos] equipment. Knowing that you'll probably have an opportunity to get your [pc.hands] on some of this SWORD gear another time in the future, you set off and continue onwards through the warehouse...
+		你有点儿犹豫地同意了克莱尔的要求，决定不拿走任何[npc.namePos]的装备。你相信或许之后你能找到机会搞到一些SWORD的家伙什，于是你继续出发……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_GUARD_COMBAT_DEFEAT -->
 	
 	<htmlContent tag="AFTER_GUARD_COMBAT_DEFEAT"><![CDATA[
 	<p>
-		[npc.Name] proves to be too much for you to handle, and with one last burst from [npc.her] [npc.mainWeapon] hitting you straight in the chest, you stagger back against a nearby crate and slump down to the floor, defeated.
+		事实证明，[npc.Name]对你来说可不好对付。[npc.her]的[npc.mainWeapon]用最后一击正中你的胸口，你踉跄着被打退，撞上板条箱后滑坐到地上，彻底败下阵来。
 	</p>
 	<p>
-		The next thing you know, [npc.name] is roughly putting you in handcuffs, gloating as [npc.she] does so, [npc.speech(Heh, you actually thought it was a good idea to break into this warehouse and then have the audacity to fight me? Well, you'll have the rest of your miserable life as a slave to think about what a stupid fucking mistake that was!)]
+		接下来，[npc.Name]一边粗暴地给你戴上手铐，一边幸灾乐祸道，[npc.speech(呵，你居然认为闯进这个仓库是个好主意，而且还敢挑战我？行了，用你悲惨的奴隶下半生好好想想，今天你到底翻了个多他妈蠢的错误！)]
 	</p>
 	<p>
-		Without any consideration for your comfort, the [npc.race] then starts dragging you off through the warehouse, continuing to insult and mock you as [npc.she] does so...
+		[npc.race]丝毫不顾你舒适与否，直接拖行着你穿过仓库，同时嘴上一刻不停地继续对你辱骂、嘲讽……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_GUARD_COMBAT_DEFEAT_ENTRANCE -->
 	
 	<htmlContent tag="AFTER_GUARD_COMBAT_DEFEAT_ENTRANCE"><![CDATA[
 	<p>
-		Soon enough, you and the [npc.race] reach the entrance to the warehouse, where you're confronted by four more SWORD guards. The Inspector in charge steps forwards as [npc2.she] sees the two of you approach, and asks, [npc2.speech(What's all this then? Who's that?)]
+		很快，你和[npc.race]到达了仓库的入口，遇到了另外四名SWORD卫士。[npc2.she]看到你们两个走近时，负责的督察向前走去，并问道，[npc2.speech(发生什么了？里面的是谁？)]
 	</p>
 	<p>
-		After quickly explaining to [npc.her] superior how [npc.she] was 'assaulted' by you, [npc.name] suggests, [npc.speech(We should charge [pc.herHim] with trespass and assault on an Enforcer at least, right?)]
+		在快速向[npc.her]的上级解释[npc.she]如何被你“攻击”后，[npc.name]建议道，[npc.speech(我们应该指控[pc.herHim]非法侵入和袭击执法者，对吧？)]
 	</p>
 	<p>
-		[npc2.speech(At the very least. I can think of some more stuff to throw at [pc.herHim], but I can't be bothered to fill out the paperwork right now, so just go and get [pc.herHim] locked up, and I'll deal with [npc.herHim] tomorrow,)] [npc2.name] says, [npc2.speech(We'll go and sweep the warehouse to see if the other units are ok.)]
+		[npc2.speech(我起码能想到更多的罪名安给[pc.herHim]，但我现在懒得去填写文件，所以就先把[pc.herHim]锁起来了，明天我会处理[npc.herHim]的，)][npc2.name]说，[npc2.speech(我们去检查一下仓库，看看其他单位是否还好。)]
 	</p>
 	#IF(game.isNonConEnabled())
 		<p>
-			[npc.speech(Right, I'll be back within the hour,)] [npc.name] replies, before dragging you out of the warehouse and growling, [npc.speech(Come on, get a move on! [npc2.She] didn't say exactly <i>where</i> to lock you up, so I think it'd be ok if I got some revenge...)]
+			[npc.speech(好，我一个小时内就回来，)][npc.name]回复，然后把你拖出仓库，咆哮道，[npc.speech(跟上，走快点！[npc2.She]没说清楚要把你锁在<i>哪儿</i>，所以我想报个私仇……)]
 		</p>
 		<p>
-			In your dazed, post-defeat state, you're vaguely aware of the fact that the warehouse was located just behind Dominion's main Enforcer Headquarters, but instead of leading you inside to be thrown into the cells, [npc.name] starts dragging you off down the street. As you wonder whether Claire's got caught as well, you hear the [npc.race] muttering to [npc.herself], [npc.speech(I'm going to enjoy fucking you in front of everyone...)]
+			在你失败后的茫然中，你隐约意识到仓库就位于御城区主要执法者总部的后面，但[npc.name]并没有带你过去把你扔进牢房，而是拖着你沿着街道走下去。当你担心克莱尔是否也被抓住时，你听到[npc.race]自言自语道，[npc.speech(我会享受在大家面前操你的……)]
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(Right, I'll be back in a moment,)] [npc.name] replies, before dragging you out of the warehouse and growling, [npc.speech(Come on, get a move on!)]
+			npc.speech(好，我马上回来，)][npc.name]回复，然后把你拖出仓库，咆哮道，[npc.speech(跟上，走快点！)]
 		</p>
 		<p>
-			In your dazed, post-defeat state, you're vaguely aware of the fact that the warehouse was located just behind Dominion's main Enforcer Headquarters, and after just a few minutes, you find yourself being dragged inside. As you stumble down the corridor behind the [npc.race], you realise that [npc.sheIs] leading you to the cells...
+			在你失败后的茫然中，你隐约意识到仓库就位于御城区主要执法者总部的后面，几分钟后，你发现自己被拖了进去。当你跌跌撞撞地跟着[npc.race]在走廊里走时，你意识到自己要被丢进牢房……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE -->
 	
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		After spending quite some time making your way through the labyrinthine passages of the SWORD warehouse, you and Claire finally arrive at the solitary exit. Your troubles aren't yet over, however, as before you stand four guards. From your hiding place behind a stack of wooden crates, you're able to tell that the leader of this group
+		你和克莱尔在SWORD仓库迷宫般的通道中绕了好一会，终于到达了唯一的出口。然而，麻烦还没有结束，和之前一样，那里站着四名守卫。你躲在一堆木板条箱后面，看出这个小团体的领导者
 		#IF(game.isSillyMode())
-			 of top men
+			的头头人
 		#ENDIF
-		 is [npc.a_race], while the other three look to be [npc2.a_race], [npc3.a_race], and [npc4.a_race].
+		是[npc.a_race]，其他三个看上去分别是[npc2.a_race]，[npc3.a_race]以及[npc4.a_race]。
 	</p>
 	<p>
 		#IF(claire.getLust()>75)
-			[claire.speech(~Ooh!~ H-How are we going to get past them?)] Claire lustfully pants into your ear, [claire.speech(Y-You can think of something, right?)]
+			[claire.speech(哦~我、我们该怎么摆脱他们？)]克莱尔在你耳边色迷迷地说道，[claire.speech(你、想得出法子，对吗？)]
 		#ELSE
-			[claire.speech(How are we going to get past them?)] Claire whispers into your ear, [claire.speech(You can think of something, right?)]
+			[claire.speech(我们该怎么摆脱他们？)]克莱尔在你耳边低语，[claire.speech(你想得出办法，对吗？)]
 		#ENDIF
 	</p>
 	<p>
-		Taking another look at the SWORD guards, you realise that there's no way the two of you are going to be able to sneak your way past them. Fighting them head-on also seems like an incredibly bad idea, but surely there must be another way...
+		又瞧了一眼SWORD守卫，你意识到你们俩不可能偷偷摸摸溜过去。与他们正面交锋似乎也不是个好主意，但肯定还有别的办法……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_BACK_OFF"><![CDATA[
 	<p>
-		You tell Claire that you need some time to think about how to get past these guards, and, using the stack of wooden crates to remain out of sight, the two of you carefully back off.
+		你告诉克莱尔你需要一些时间来考虑如何绕过这些守卫，同时，利用一堆板条箱保持在隐蔽，你们两个小心地后退。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_PLAYER_CHALLENGE"><![CDATA[
-	Deciding that the easiest way to get out of here is by fighting your way past these four SWORD Enforcers, you step forwards and tell them to get out of your way.
-	]]>
-	</htmlContent>
+	你自觉逃脱最简单直接的方法就是从这四个SWORD执法者面前杀出一条血路，于是上前一步，大喝一声，让他们滚开。
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_GUARD_RESPONSE_1"><![CDATA[
-	[npc.speech(Who the fuck are you?! How did you get in here?)] [npc.name] exclaims, before turning to [npc.her] subordinates and commanding, [npc.speech(Take [pc.herHim] down!)]
-	]]>
-	</htmlContent>
+	[npc.speech(你们他妈是谁？！你们怎么进来的？)][npc.name]大喊道，然后转向[npc.her]下属指挥起来，[npc.speech(拿下[pc.herHim]！)]
+	
+]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_GUARD_RESPONSE_2"><![CDATA[
-	[npc.speech(You don't know what you're in for,)] [npc.name] says, unslinging [npc.her] [npc.mainWeapon].
-	]]>
-	</htmlContent>
+	[npc.speech(你不知道你在做什么，)][npc.name]说着，解下[npc.her][npc.mainWeapon]。
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_GUARD_RESPONSE_3"><![CDATA[
-	Taking aim at you with [npc.her] [npc.mainWeapon], [npc.name] prepares to support [npc.her] comrades in subduing you.
-	]]>
-	</htmlContent>
+	[npc.name]准备支援[npc.her]的战友，拔出[npc.mainWeapon]瞄准了你。
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_GUARD_RESPONSE_4"><![CDATA[
-	[npc.speech(Finally, some action!)] [npc.name] growls.
-	]]>
-	</htmlContent>
+	[npc.speech(终于，有行动了！)][npc.name]咆哮道。
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_ENTRANCE_VICTORY -->
 	
 	<htmlContent tag="AFTER_ENTRANCE_VICTORY"><![CDATA[
 	<p>
-		As the last of the SWORD guards slumps down, defeated, Claire moves out from her hiding place and rushes forwards,
+		当最后一名SWORD卫士倒下时，克莱尔从她的藏身之处现身冲上前来，
 		#IF(claire.getLust()>75)
-			 moaning, [claire.speech(~Aah!~ Y-You actually beat them all?! Are they ok?!)]
+			呻吟着，[claire.speech(~啊啊！~你，你真的把他们都打败了？！他们还好吗？！)]
 		#ELSE
-			 hissing, [claire.speech(You actually beat them all?! Are they ok?!)]
+			嘶声说，[claire.speech(你真的把他们都打败了？！他们还好吗？！)]
 		#ENDIF
 	</p>
 	<p>
-		[pc.speech(I'm sure they'll be fine,)] you reply.
+		[pc.speech(我确信他们没啥事儿，)]你回应道。
 	</p>
 	<p>
 		#IF(claire.getLust()>75)
-			After moving between each of the dazed Enforcers to make sure that they'll be alright, Claire turns towards you. Still struggling to control her overwhelming lust, she starts subconsciously groping her breasts with one hand as she tuts, [claire.speech(W-Well, I don't know why you had to attack them like that; if this were in any other situation I'd have to arrest you for what you just did! ~Mmm!~ A-Anyway, let's just never speak of this again, ok? Oh, and don't even think about trying to take any of [npc.her] gear or anything; that'd be a sure-fire way to get SWORD chasing after you for the rest of your life! ~Aah!~ As it is right now, they might not even report this out of embarrassment at being defeated by just one person.)]
+			克莱尔在每个昏倒的执法者之间移动，确保他们没事后，转向你。她似乎仍在努力控制她压倒性的欲望，下意识地用一只手摸索她的乳房，发出啧啧的声音，[claire.speech(好，好吧，我不知道你为什么要这样攻击它们。发生这样的事情，如果不是现在的情况，我必须以你刚才的所作所为逮捕你！~嗯！~ 总，总之，我们不谈这个了，好吗？对，也别想着带走任何[npc.her]的装备什么的，那样SWORD会追缉你一辈子！~啊啊！~现在的情况，他们甚至可能因为被你一个人打败而感到尴尬而不会报告这一点！)]
 		#ELSE
-			After moving between each of the dazed Enforcers to make sure that they'll be alright, Claire turns towards you and puts her hands on her hips, before tutting, [claire.speech(Well, I don't know why you had to attack them like that; if this were in any other situation I'd have to arrest you for what you just did! Anyway, let's just never speak of this again, ok? Oh, and don't even think about trying to take any of [npc.her] gear or anything; that'd be a sure-fire way to get SWORD chasing after you for the rest of your life! As it is right now, they might not even report this out of embarrassment at being defeated by just one person.)]
+			克莱尔在每个昏倒的执法者之间移动，确保他们没事后，转向你。她把手放在臀部上，嘟哝着，[claire.speech(好吧，我不知道你为什么要这样攻击它们。发生这样的事情，如果不是现在的情况，我必须以你刚才的所作所为逮捕你！总之，我们不谈这个了，好吗？对，也别想着带走任何[npc.her]的装备什么的，那样SWORD会追缉你一辈子！现在的情况下，他们甚至可能因为被你一个人打败而感到尴尬而不会报告这一点！)]
 		#ENDIF
 	</p>
 	<p>
-		Reluctantly agreeing with Claire, you decide against taking any of [npc.namePos] equipment. Knowing that you'll probably have an opportunity to get your [pc.hands] on some of this SWORD gear another time in the future, and with Claire hot on your heels, you make your way over towards the huge warehouse doors that the SWORD Enforcers were guarding. Just beside this large industrial entranceway, there's a smaller, regular-sized door, and it's this exit which you and your cat-girl companion quickly approach. Eager to finally get out of this place, you hurriedly unlock the door, before pushing it open and making good your escape...
+		你不情愿地同意克莱尔的观点，决定不拿走任何执法者的装备。你清楚以后有机会获得一些这种SWORD装备。你朝执法者正在看守的SWORD巨大仓库门走去，克莱尔紧随其后。在这个大型工业入口旁边，有一个较小的、常规尺寸的门，你和你的猫女同伴很快就会接近这个出口。你迫不及待地想要离开这个地方，赶紧开门，成功逃脱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_ENTRANCE_VICTORY_ESCAPE -->
 	
 	<htmlContent tag="AFTER_ENTRANCE_VICTORY_ESCAPE"><![CDATA[
 	<p>
-		Looking around as you step out into the fresh air, you see that you're in a deserted back-road, with a huge concrete office-block on the opposite side to the warehouse you've just exited. Recognising where you are, Claire exclaims,
+		你走出呼吸着新鲜空气环顾四周，发现自己身处一条荒芜的小路上。你刚刚离开的仓库对面有一座巨大的混凝土办公楼，克莱尔认出它，惊呼道：
 		#IF(claire.getLust()>75)
-			 [claire.speech(~Ooh!~ That's the back of the Enforcer Headquarters! I can finally find somewhere to get some release! C-Come on, this way!)]
+			[claire.speech(~哦！~那儿是执法者总部的后面！终于可以找到地方释放一下了！来，来，走这边！)]
 		#ELSE
-			 [claire.speech(That's the back of the Enforcer Headquarters! Come on, this way!)]
+			[claire.speech(那是执行者总部的后面！来，走这边！)]
 		#ENDIF
 	</p>
 	<p>
-		Trusting in Claire's sense of direction, you follow her as she jogs off down the road, and, sure enough, after turning the corner, you find yourself stepping out onto the main street in front of Dominion's Enforcer Headquarters. Turning to face you, the little cat-girl Enforcer lets out a relieved sigh and says, [claire.speech(That was a close one... Let's never mention what we just went through to anyone else, ok? If the Enforcers discover that I allowed you to learn teleport, we'd both be in big trouble...)]
+		你相信克莱尔的方向感，跟着她沿着路慢跑，果然，在转过街角后，你们到了御城区执法者总部前面的大街上。小猫女执法者转身面向你，松了口气，说道： [claire.speech(那一下真的很险……永远不要向其他人提及我们刚刚经历的事情，好吗？如果执法者发现我教你瞬移，我们都会有大麻烦……)]
 	</p>
 	<p>
-		Agreeing to keep your warehouse experience a secret, you ask Claire if she knows the way back to her post from here.
+		你同意对仓库的经历保密，并询问克莱尔是否知道从这里返回岗位的路。
 	</p>
 	<p>
 		#IF(claire.getLust()>75)
-			[claire.speech(~Mmm!~ Y-Yeah, it's just down the road,)] she sensually replies, and, clearly desperate to find somewhere where she can masturbate, she continues, [claire.speech(I-I'd better get going right now, before anyone notices that I'm missing! ~Mmm!~ T-Thanks for getting me out of that warehouse, [pc.name]. Come and visit me down in Submission again some time!)]
+			[claire.speech(~嗯！~是，是的，就在这条路上，)]她非常渴望找到一个可以自慰的地方，色迷迷地回答，然后继续说道，[claire.speech(我，我最好现在就出发，免得有人发现我失踪了！~嗯！~ 谢，谢谢你把我从那个仓库救出来，[pc.name]。有时间再到屈城区找我玩！)]
 		#ELSE
-			[claire.speech(Oh, yeah, it's just down the road,)] she replies, [claire.speech(I'd better get going right now, before anyone notices that I'm missing. Thanks for getting me out of that warehouse, [pc.name]. Come and visit me down in Submission again some time!)]
+			[claire.speech(哦，是的，就在这条路上，)]她回答道，[claire.speech(我最好现在就出发，以免有人发现我失踪了。谢谢你把我从那个仓库救出来，[pc.name]。有时间再到屈城区找我玩！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_ENTRANCE_VICTORY_ESCAPE_END"><![CDATA[
 	<p>
-		You tell Claire that you'll see her later, and after she's thanked you once again for helping her to escape without being detected, she rushes off down the street towards the nearest entrance to Submission. With nothing more to do here, you similarly set off down the road as you continue on your way...
+		你告诉克莱尔待会儿见，她再次感谢你帮助她逃脱而避免被发现后，她沿着街道冲向最近的屈城区入口。你在这里没什么可做的，同样沿着路继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_ENTRANCE_DEFEAT -->
 	
 	<htmlContent tag="AFTER_ENTRANCE_DEFEAT"><![CDATA[
 	<p>
-		Unable to withstand the combined attacks of the four SWORD guards, you collapse back against a nearby crate, before slumping to the floor, defeated. With a sadistic smile on [npc.her] face, [npc.name] steps up in front of and says, [npc.speech(I think at the very least I can have you charged with trespass, resisting arrest, and assault on an Enforcer. You know what that means?)]
+		你无法承受四名SWORD保卫的联合攻击，战败向后倒向一个板条箱，然后倒在地上。[npc.name]脸上带着虐待狂的微笑，走到你前面说道，[npc.speech(我想我起码可以控诉你非法侵入、拒捕和袭击执法者这几项罪状。你知道这意味着什么吗？)]
 	</p>
 	#IF(game.isNonConEnabled())
 		<p>
-			Before you can offer a reply, two of [npc.her] subordinates roughly push you to the ground, before twisting your [pc.arms] behind your back and locking you in handcuffs. Squatting down in front of you, [npc.name] continues, [npc.speech(It means that this was your last day as a free citizen. You know, I can't really be bothered to fill out the paperwork right now, so how about you spend a day locked up somewhere nice and safe, and I'll come and deal with you tomorrow.)]
+			你来不及回话，两名[npc.her]下属就粗鲁地将你按倒在地，将你的[pc.arms]扭到背后，给你戴上手铐。[npc.name]蹲在你面前，继续说道，[npc.speech(这意味着今天是你作为自由公民的最后一天。我现在实在懒得去填写文件，那就把你关在安全又好的地方一整天怎么样？明天我再来对付你。)]
 		</p>
 		<p>
-			Grabbing you by the [pc.arm], [npc.name] stands back up, pulling you up onto your [pc.feet] as [npc.she] addresses [npc.her] subordinates, [npc.speech(You three go and sweep the warehouse to see if the other units are ok. I'll be back in an hour or so.)]
+			[npc.name]抓住你的[pc.arm]，站起同时把你拉起，向[npc.her]下属讲话，[npc.speech(你们三个去收拾下仓库，看看其他单位是否还好，我一个小时左右就回来。)]
 		</p>
 		<p>
-			As the other three guards rush off into the warehouse, [npc.name] drags you out through the nearby door, growling, [npc.speech(Come on, get a move on!)]
+			当其他三名守卫冲进仓库时，[npc.name]将你从附近的门里拖了出来，咆哮着，[npc.speech(跟上，走快点！)]
 		</p>
 		<p>
-			In your dazed, post-defeat state, you're vaguely aware of the fact that the warehouse was located just behind Dominion's main Enforcer Headquarters, but instead of leading you inside to be thrown into the cells, [npc.name] starts dragging you off down the street. As you wonder whether Claire's got caught as well, you hear the [npc.race] muttering to [npc.herself], [npc.speech(I'm going to enjoy fucking you in front of everyone...)]
+			在你失败后的茫然中，你隐约意识到仓库就位于御城区主要执法者总部的后面，但[npc.name]并没有带你过去把你扔进牢房，而是拖着你沿着街道走下去。当你担心克莱尔是否也被抓住时，你听到[npc.race]自言自语道，[npc.speech(我会享受在大家面前操你的……)]
 		</p>
 	#ELSE
 		<p>
-			Before you can offer a reply, two of [npc.her] subordinates roughly push you to the ground, before twisting your [pc.arms] behind your back and locking you in handcuffs. Squatting down in front of you, [npc.name] continues, [npc.speech(It means that this was your last day as a free citizen. You know, I can't really be bothered to fill out the paperwork right now, so how about you spend a day locked up somewhere nice and safe, and I'll come and deal with you tomorrow.)]
+			你来不及回话，两名[npc.her]下属就粗鲁地将你按倒在地，将你的[pc.arms]扭到背后，给你戴上手铐。[npc.name]蹲在你面前，继续说道，[npc.speech(这意味着今天是你作为自由公民的最后一天。我现在实在懒得去填写文件，那就把你关在安全又好的地方一整天怎么样？明天我再来对付你。)]
 		</p>
 		<p>
-			Grabbing you by the [pc.arm], [npc.name] stands back up, pulling you up onto your [pc.feet] as [npc.she] addresses [npc.her] subordinates, [npc.speech(You three go and sweep the warehouse to see if the other units are ok. I'll be back in an hour or so.)]
+			[npc.name]抓住你的[pc.arm]，站起同时把你拉起，向[npc.her]下属讲话，[npc.speech(你们三个去收拾下仓库，看看其他单位是否还好，我一个小时左右就回来。)]
 		</p>
 		<p>
-			As the other three guards rush off into the warehouse, [npc.name] drags you out through the nearby door, growling, [npc.speech(Come on, get a move on!)]
+			当其他三名守卫冲进仓库时，[npc.name]将你从附近的门里拖了出来，咆哮着，[npc.speech(跟上，走快点！)]
 		</p>
 		<p>
-			In your dazed, post-defeat state, you're vaguely aware of the fact that the warehouse was located just behind Dominion's main Enforcer Headquarters, and after just a few minutes, you find yourself being dragged inside. As you stumble down the corridor behind the [npc.race], you realise that [npc.sheIs] leading you to the cells...
+			在你失败后的茫然中，你隐约意识到仓库就位于御城区主要执法者总部的后面，几分钟后，你发现自己被拖了进去。当你跌跌撞撞地跟着[npc.race]在走廊里走时，你意识到自己要被丢进牢房……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE_LIGHTNING_GLOBE -->
 	
 	<htmlContent tag="ENTRANCE_LIGHTNING_GLOBE"><![CDATA[
 	<p>
-		Realising that trying to fight your way past four heavily-armed and armoured SWORD Enforcers is not a very good idea, you try to think of another way to get past them and escape from the warehouse. After a moment of all sorts of ideas running through your head, you suddenly remember the curious weapon you found earlier. Holding the small arcane lightning globe up in front of you, you wonder if you could somehow channel your aura into it in order to trigger a lightning discharge of the same sort that hit you and Claire. Perhaps if you were able to do that, and get it to hit all of the guards, they'd be so turned on that they wouldn't notice you and Claire sneaking past them... 
+		你意识到想从四名全副武装、装甲严实的SWORD执法者面前冲过去并不是个好主意，于是你考虑起其他方法绕过他们，逃离仓库。头脑中闪过各种想法后，你突然想起之前找到的那个奇怪的武器。于是把那个小型的奥术闪电球拿到面前，思索着能否想个办法将灵气注入其中，再触发一次之前击中你和克莱尔的那种闪电。如果能做到这一点，并且击中所有的守卫，他们就可能会因为兴奋过度，注意不到你和克莱尔，届时再悄悄绕过他们……
 	</p>
 	<p>
 		#IF(claire.getLust()>75)
-			With this idea in your head, you tell Claire what you're about to do. Letting out a horny little huff, she gives you her thoughts on the matter, [claire.speech(~Ooh!~ W-Well, I don't know if that's going to work, but I can't think of anything better right now...)]
+			理清思路后，你把之后的计划告诉了克莱尔。欲火焚身的克莱尔哼唧了一声，发表了自己的看法，[claire.speech(~哦！~这，这个啊，我不知道有没有用，但我也想不出什么更好的办法了……)]
 		#ELSE
-			With this idea in your head, you tell Claire what you're about to do. Letting out a little huff, she gives you her thoughts on the matter, [claire.speech(Well, I don't know if that's going to work, but I can't think of anything better...)]
+			理清思路后，你把之后的计划告诉了克莱尔。克莱尔哼唧了一声，发表了自己的看法，[claire.speech(是吗，我不知道有没有用，但我也想不出什么更好的办法了……)]
 		#ENDIF
 	</p>
 	<p>
-		Confident that your plan is sure to succeed, you turn your attention back towards the little crystal globe in your [pc.hand]. Just like before, as it's come into contact with someone, the interior of the glass sphere is now filled with jumping arcs of arcane lightning. Concentrating on channelling all of your aura into this strange weapon, you instinctively feel as though the energy contained with is getting more and more unstable. Just as you sense that it can't take any more, you peek around the corner and roll the globe towards the group of Enforcers.
+		你对计划胸有成竹，便将注意力重新集中在[pc.hand]中的小水晶球上。跟之前一样，每当与人体接触时，玻璃球内部就会充满跃动的奥术电弧。你全神贯注，准备将你浑身的灵气都注入这个奇怪的武器，过程中本能地感觉到其中包含的能量愈发不稳定。待到自认为水晶球接近极限后，你偷偷地窥探一眼，便将水晶球向着那群执法者滚去了。
 	</p>
 	<p>
-		[claire.speech(Take cover!)] Claire hisses at you, pulling you back behind the boxes. As the worried cat-girl pulls you in tight against her massive breasts, a bright purple flash of arcane lightning temporarily illuminates your surroundings, letting you know that the arcane discharge was successful.
+		[claire.speech(快躲起来！)]克莱尔朝你低声喊了一句，就把你拖回了箱子后面。那猫女很是担心你，紧紧地把你抱在怀中，那对巨乳也实实在在地顶着你，这时一道亮紫色的奥术闪电的光芒短暂照亮了周围，你们明白奥能释放成功了。
 	</p>
 	<p>
-		[npc.speech(Fuck... W-What was that?!)] you hear one of the Enforcers shout, [npc.her] voice already taking on a sensual tone.
+		[npc.speech(我操……怎，怎么回事？！)]你听见有个执法者叫了起来，[npc.her]的声音里已经带上了一抹躁动。
 	</p>
 	<p>
-		[npc2.speech(An arcane storm?)] another replies, [npc2.speech(How did it get in here? Fuck... I-I think it's getting to me...)]
+		[npc2.speech(奥术风暴吗？)]另一个反应道，[npc2.speech(奥术风暴怎么会影响到这儿？妈的……要，要来了……)]
 	</p>
 	<p>
-		[npc3.speech(Shut up and kiss me already!)] yet another calls out, followed by the muffled [npc3.moans] of [npc3.herHim] pulling one of [npc3.her] comrades into a passionate kiss.
+		[npc3.speech(别废话了，吻我！)]又一个执法者叫喊起来，[npc3.her]一把抱过战友，激吻起来，紧接着就是一篇模糊的[npc3.moans]。
 	</p>
 	<p>
-		[npc.speech(P-Pull yourself together,)] the first voice calls out again.
+		[npc.speech(你，你清醒一点，)]第一个声音再次响起。
 	</p>
 	<p>
-		[npc4.speech(Come on, boss, you're so uptight all the time,)] the fourth Enforcer replies, [npc4.speech(You can afford to relax every now and again...)]
+		[npc4.speech(得了吧，头儿，你就老是太紧张了，)]第四个执法者回应道，[npc4.speech(现在放松放松又不会死……)]
 	</p>
 	<p>
-		Peeking around the corner once again, you see that all four of the SWORD guards have started to passionately make out with one another. Abandoning their posts, they've split off into two pairs, and are far too busy kissing and groping one other to be paying attention to their surroundings. Taking this opportunity to make your move, you tell Claire to stay close, before starting to sneak over towards the warehouse doors. Thankfully, the Enforcers are so preoccupied with starting to fuck one another that they don't even glance your way, and not only are you able to approach the exit without issue, but you're also able to sneak across and pick up the lightning globe.
+		你又偷窥了一眼，只见四名SWORD守卫已经都拥吻起来。他们放弃了岗哨，分成两对，沉浸在亲吻和爱抚之中，完全没有注意周遭的环境。你抓住这个机会，开始行动，告诉克莱尔紧紧跟上，随后悄悄向仓库门口移动过去。所幸这些执法者都在专心亲热，连看都没有朝你看一眼，你不仅毫无压力地接近了出口，甚至溜到他们旁边，捡回了闪电球。
 	</p>
 	<p>
-		Eager to finally get out of this place, you quietly unlock the door, before pushing it open and making good your escape...
+		你想着终于可以逃出生天，静静地将门解锁，满心欢喜地推开，准备逃离……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- ENTRANCE_TELEPATHIC_TRICKERY -->
 	
 	<htmlContent tag="ENTRANCE_TELEPATHIC_TRICKERY"><![CDATA[
 	<p>
-		Realising that trying to fight your way past four heavily-armed and armoured SWORD Enforcers is not a very good idea, you try to think of another way to get past them and escape from the warehouse. After a moment of all sorts of ideas running through your head, you suddenly realise that you might be able to use your telepathic abilities in order to distract them. If you were to relay a message into the mind of the leader of these Enforcers, you might be able to trick them into abandoning their posts...
+		你意识到想从四名全副武装、装甲严实的SWORD执法者面前冲过去并不是个好主意，于是你考虑起其他方法绕过他们，逃离仓库。头脑中闪过各种想法后，你突然想起可以用传音的能力引开他们。如果能将信息传递进这那个领头的执法者的思维中，或许就能够诱使他们离开岗哨……
 	</p>
 	<p>
 		#IF(claire.getLust()>75)
-			With this idea in your head, you tell Claire what you're about to do. Letting out a horny little huff, she gives you her thoughts on the matter, [claire.speech(~Ooh!~ W-Well, I don't know if that's going to work, but I can't think of anything better right now...)]
+			理清思路后，你把之后的计划告诉了克莱尔。欲火焚身的克莱尔哼唧了一声，发表了自己的看法，[claire.speech(~哦！~这，这个啊，我不知道有没有用，但我也想不出什么更好的办法了……)]
 		#ELSE
-			With this idea in your head, you tell Claire what you're about to do. Letting out a little huff, she gives you her thoughts on the matter, [claire.speech(Well, I don't know if that's going to work, but I can't think of anything better...)]
+			理清思路后，你把之后的计划告诉了克莱尔。克莱尔哼唧了一声，发表了自己的看法，[claire.speech(是吗，我不知道有没有用，但我也想不出什么更好的办法了……)]
 		#ENDIF
 	</p>
 	<p>
-		Confident that your plan is sure to succeed, you peek around the corner of the crates, and, setting your sights on [npc.name], who's quite obviously the one in charge, you cast your telepathy spell and project your voice directly into [npc.her] mind, [pc.thought(~Mwhaha!~ Your other SWORD friends can't save you now! I was lucky to catch you alone!)]
+		你对计划胸有成竹，从板条箱后瞥了一眼，便将目光对准了[npc.name]，那个明显是管事的家伙，你释放了心灵低语，将自己的声音直接投射到了[npc.her]的脑中，[pc.thought(~姆哈哈~你那些SWORD同伴救不了你了！终于抓到你落单了！)]
 	</p>
 	<p>
-		[npc.speech(What, who's there?)] [npc.name] calls out, unslinging [npc.her] [npc.mainWeapon] and pointing it down the corridor into the warehouse.
+		[npc.speech(怎么回事，是谁？)][npc.name]喊了一声，把[npc.mainWeapon]从肩上退了下来，指着仓库的走廊。
 	</p>
 	<p>
-		[npc2.speech(What's wrong?)] [npc2.name] asks [npc2.her] superior, mimicking [npc.her] movements and drawing [npc2.her] own weapon.
+		[npc2.speech(怎么了？)][npc2.name]询问上级道，也模仿着拿起了武器。
 	</p>
 	<p>
-		[npc.speech(I just heard a voice in my head; it sounded as though someone was gloating over having defeated one of our other guards!)] [npc.name] explains, before ordering, [npc.speech(Come on, we need to go and help! Lock that door and then let's go!)]
+		[npc.speech(刚刚好像脑袋里听见了个声音；似乎是有个人得意洋洋地说他干掉了一名守卫！)][npc.name]解释完就命令道，[npc.speech(赶紧，我们得去帮忙！锁好门就走！)]
 	</p>
 	<p>
-		Obeying [npc.namePos] command, [npc3.name] rushes forwards to lock the main door of the warehouse, before joining [npc3.her] three comrades in rushing off into the warehouse. You and Claire press tightly against one another in your hiding place as the Enforcers rush past you, before letting out a joint sigh of relief as they disappear off into the interior of the warehouse. Knowing that it'll only be a few minutes before the Enforcers realise that they've been tricked, you tell Claire that now's the time to make your move, before rushing over towards the exit.
+		[npc3.name]听从[npc.namePos]的命令，冲上前锁上了仓库的大门，和[npc3.her]的三个同伴一起冲进了仓库。执法者从你们的身旁匆匆而过，你和克莱尔在隐蔽处紧紧地贴在一起，直到他们消失在仓库里面才一同松了口气。你知道用不了几分钟执法者们就会意识到他们被耍了，所以你告诉克莱尔现在是时候行动了，便冲向出口。
 	</p>
 	<p>
-		Eager to finally get out of this place, you quickly unlock the door, before pushing it open and making good your escape...
+		你想着终于可以逃出生天，静静地将门解锁，满心欢喜地推开，准备逃离……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT_SENT_TO_STOCKS -->
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SENT_TO_STOCKS"><![CDATA[
 	<p>
-		After about a twenty-minute walk, during which time you've received all sorts of strange looks and comments from members of the public, you and the [npc.race] Enforcer finally reach your destination, which turns out to be none other than Slaver Alley.
+		你们走了大约二十分钟，路人表情各异，指指点点。但你和[npc.race]执法者还是到了你意料之外的目的地：奴隶巷。
 		#IF(game.getDialogueFlags().hasFlag(FLAG_seanIntroduced))
-			 Leading you up to the public stocks which are prominently positioned just a short way in from the entrance, your captor calls out to [sean.name], who, as ever, is standing guard in this area, [npc.speech(Hey, Constable, I've a soon-to-be slave here. You got room for [pc.herHim] for the next twenty-four hours or so?)]
+			执法者把你带到公共颈手枷前，就在入口不远处的显眼位置，执法者叫住了一如既往在这站岗的[sean.name]，[npc.speech(嘿，警官，我这里有个囚犯，你有地方给[pc.herHim]待吗？这家伙大概要关押24小时左右。)]
 		#ELSE
-			 Leading you up to the public stocks which are prominently positioned just a short way in from the entrance, your captor calls out to the Enforcer assigned to guard duty here, [npc.speech(Hey, Constable, I've a soon-to-be slave here. You got room for [pc.herHim] for the next twenty-four hours or so?)]
+			捕获你的人把你领到离入口不远处的公共畜栏前，然后对负责看守这里的执法者喊道：[npc.speech(嘿，警官，我这里有个囚犯，你有地方给[pc.herHim]待吗？这家伙大概要关押24小时左右。)]
 		#ENDIF
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_seanIntroduced))
 		<p>
-			[sean.speech([pc.Name]?! What have you gotten yourself into?)] [sean.name] exclaims as he sees that it's you.
+			[sean.speech([pc.Name]？！你卷入什么麻烦了么？)][sean.name]在看清是你之后不禁惊呼道。
 		</p>
 		<p>
-			Before any answer can be given, the [npc.race] snaps, [npc.speech(I hope you aren't on friendly terms with this criminal, Constable! If you are, I'll have to report it!)]
+			给出任何答案之前，[npc.race]突然说道，[npc.speech(警官，我希望你与这个罪犯不是朋友！如果是的话，我就必须举报！)]
 		</p>
 		<p>
-			[sean.speech(Hey, there's no need for that!)] [sean.name] replies, before stepping forwards and starting to lead you over to a nearby set of stocks, [sean.speech(Come on, let me help you lock [pc.herHim] into this one over here.)]
+			[sean.speech(嘿，没有必要！)][sean.name]回复道，向前走着开始引导你到附近的一桩颈手枷处，[sean.speech(来吧，我帮你将[pc.herHim]锁到这里。)]
 		</p>
 		<p>
-			Clearly having no choice but to cooperate with the SWORD Enforcer, [sean.name] helps [npc.name] strip you naked, before pushing your head and [pc.arms] through the stocks' open holes. Closing the wooden device, he locks it shut with a big iron padlock, trapping you in place. Walking off back to his station, he calls out, [sean.speech(There you go, [npc.sheIs] all yours. Have fun...)]
+			[sean.name]显然别无选择只能与SWORD执法者合作，帮助[npc.name]剥光你的衣服，将你的头和[pc.arms]推入颈手枷上的开口。他合上木枷，用一把大铁挂锁锁上，将你牢牢困住。走回自己的驻地时，他喊道，[sean.speech(请随意吧，玩的开心……)]
 		</p>
 	#ELSE
 		<p>
-			[sean.speech(Sure, let me help you lock [pc.herHim] into this one,)] the Enforcer replies, before stepping forwards and leading you over to a nearby set of stocks, where both he and [npc.name] set about stripping you naked. Pushing your head and [pc.arms] through its open holes, the Enforcer then closes the wooden device, before locking it shut with a big iron padlock, trapping you in place. Walking off back to his station, he calls out, [sean.speech(There you go, [npc.sheIs] all yours. Have fun.)]
+			[sean.speech(没问题，我帮你把[pc.herHim]锁在这儿，)]执法者回答，向前走并把你拉到到附近的一组颈手枷处，和[npc.name]剥光你的衣服，将你的头和[pc.arms]推入其敞开的孔中，合上木枷，用一把大铁挂锁锁上，将你牢牢困住。走回自己的驻地时，他喊道，[sean.speech(请随意吧，玩的开心。)]
 		</p>
 	#ENDIF
 	<p>
-		[npc.speech(Oh, I intend to,)] [npc.name] replies, before leaning down to growl in your ear, [npc.speech(Time for me to get some payback!)]
+		[npc.speech(哦，正合我意，)][npc.name]回复道，然后俯身在你耳边咆哮，[npc.speech(我该得到一些回报了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_STOCKS_ENFORCER_SEX"><![CDATA[
 	<p>
-		[npc.speech(You see, this is why nobody fucks with SWORD; <i>we're</i> the ones who always end up doing the fucking!)] [npc.name] laughs, reaching down to grope your body as [npc.she] continues, [npc.speech(Once I've had my fun with you, I'll have you marked as being fully available for public use. Welcome to your new life, bitch.)]
+		[npc.speech(你瞧，这就是为什么没人敢和SWORD作对，因为<i>我们</i>最终会干翻所有人！)][npc.name]大笑起来，一边伸手猥亵你的身体，一边继续道，[npc.speech(我一旦玩腻了，就会把你标成公共厕所。迎接你的新生活吧，婊子。)]
 	</p>
 	<p>
 		#IF(npc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			With that, [npc.name] steps around behind you, reaching down to give your [pc.ass+] a rough squeeze before taunting,
+			接着，[npc.name]绕到了你的身后，狠狠地掐了一把你[pc.ass+]，然后嘲弄道，
 		#ELSE
-			With that, [npc.name] steps up in front of you, bringing [npc.her] groin right up to your [pc.face] as [npc.she] taunts,
+			接着，[npc.name]走到了你的面前，将下体对着你的脸，嘲弄道，
 		#ENDIF
-		 [npc.speech(Time to show everyone what a worthless slut you are!)]
+		[npc.speech(来让大家看看你是个多么没用的荡妇！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_STOCKS_ENFORCER_SEX -->
 	
 	<htmlContent tag="AFTER_STOCKS_ENFORCER_SEX"><![CDATA[
 	<p>
-		Letting out a deeply-satisfied growl, the [npc.race] steps back, before getting [npc.her] uniform in order again. As [npc.she] does so, you hear several members of the crowd speculating on whether you're going to be marked for public use or not.
+		[npc.race]发出一声深深满足的咆哮，后退一步，再次整理好[npc.her]的制服。同时，你听到人群中的几个人猜测你是否会被标记为公共使用。
 	</p>
 	<p>
-		After [npc.sheHas] sorted [npc.her] uniform out, the [npc.race] lets an evil grin settle on [npc.her] face, and in a voice loud enough for the crowd to hear, [npc.she] says, [npc.speech(That was a good fuck, bitch. I'll be back tomorrow to get you registered as a slave. Until then, I'll leave you marked as being fully available for public use, just like I promised.)]
+		整理好[npc.her]制服后，[npc.race]脸上露出邪恶的笑容，并用足够大声让人群听到的声音说，[npc.speech(干得好，婊子。我明天会回来把你登记为奴隶。在那之前，我会把你标记为完全可供公众使用，就像我承诺的那样。)]
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_seanIntroduced))
 		<p>
-			With one last evil laugh, [npc.she] walks over to [sean.name], and after exchanging a few brief words with him, heads off back to her post at the SWORD warehouse. As [npc.she] departs, [sean.name] walks up to you, before making some marks on your set of stocks with a white chalk. Letting out a sigh, he says, [sean.speech(I don't know exactly what it is you've done, but if I don't do as I'm told and mark you up as being free for public use, then I'll end up in the stocks as well. Sorry about this...)]
+			[npc.she]邪恶地笑着走向[sean.name]，与他简单交谈了几句后，回到了她在SWORD仓库的岗位。[npc.she]离开后，[sean.name]走到你身边，然后用白色粉笔在你的颈手枷上做了一些标记。他叹了口气，说道，[sean.speech(我不知道你到底做了什么，但如果我不按照吩咐去将你标记为免费供公众使用，那我最后也会锁在这儿。我对此感到抱歉……)]
 		</p>
 		<p>
-			With that, [sean.name] heads off back to his post, and just a few moments later, the first members of the public wanting to use you step forwards...
+			说完，[sean.name]就回到了他的岗位，几分钟后，第一批想要利使用你的人就上前了……
 		</p>
 	#ELSE
 		<p>
-			With one last evil laugh, [npc.she] walks over to the Enforcer who locked you into the stocks, and after exchanging a few brief words with him, heads off back to her post at the SWORD warehouse. As [npc.she] departs, the Enforcer on duty walks up to you, before making some marks on your set of stocks with a white chalk. Turning towards the crowd, he says, [sean.speech(Right, [pc.sheIs] all yours.)]
+			[npc.she]邪恶地笑着走向颈手枷旁的执法者，与他简单交谈了几句后，就回到了她在SWORD仓库的岗位。[npc.she]离开后，当班的执法者走到你身边，然后用白色粉笔在你的颈手枷上做了一些标记。他转向人群，说道：[sean.speech(对，随便使用。)]
 		</p>
 		<p>
-			As the Enforcer heads off back to his post, the first members of the public wanting to use you step forwards...
+			执法者一回到他的岗位，第一批想要利使用你的人就上前了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STOCKS_RANDOMS -->
 	
 	<htmlContent tag="STOCKS_RANDOMS"><![CDATA[
 	<p>
-		You look up to see two figures before you; [npc.name(a)] and [npc2.name(a)]. Obviously knowing one another quite well, [npc.name(the)] turns towards [npc.her] friend and, with a big grin on [npc.her] face, asks, [npc.speech(You want to use [pc.her] mouth then?)]
+		你抬头发现两个身影出现在你面前——[npc.name(a)]和[npc2.name(a)]。显然，他们俩是老熟人了。[npc.name(the)]转向[npc.her]的朋友，脸上堆满笑容，问道：[npc.speech(那你想用[pc.her]的嘴吗？)]
 	</p>
 	<p>
-		[npc2.speech(Yeah, you can fuck [pc.herHim], I'll use [pc.her] mouth,)] [npc2.name] replies, grinning down at you as [npc2.she] steps up in front of you.
+		[npc2.speech(嗯，你可以操[pc.herHim]，我会用[pc.her]的嘴。)][npc2.name]答道。[npc2.she]走到你面前，朝你咧嘴一笑。
 	</p>
 	<p>
-		[npc.speech(I bet I can last longer than you can,)] [npc.name] teases [npc.her] partner, stepping around behind you before reaching down to grope your [pc.ass+].
+		[npc.speech(我打赌我比你能坚持得更久，)][npc.name]与[npc.her]的同伴调笑，绕道你的身后，摸了一把你[pc.ass+]。
 	</p>
 	<p>
-		[npc2.speech(Yeah, sure,)] [npc2.name] replies, and with no regard as to what you think or want, the two of them prepare to start fucking you...
+		[npc2.speech(是的，当然。)][npc2.name]答道。他们两个毫不在乎你的想法便准备开操……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_STOCKS_RANDOM_SEX"><![CDATA[
 	<p>
-		[npc2.speech(Be a good [pc.girl] and get that tongue of yours working,)] [npc2.name] says, grinning down at you, [npc2.speech(The last slave who gave me oral was really shit at it, so I'm hoping you'll do better.)]
+		[npc2.speech(做个好[pc.girl]，让你的舌头动起来，)][npc2.name]道，向你咧嘴一笑，[npc2.speech(上一个给我口交的奴隶口技很烂，所以我希望你做得更好。)]
 	</p>
 	<p>
-		[npc.speech(You're too fussy,)] [npc.name] replies from somewhere behind you, before reaching down to give your [pc.ass+] another squeeze, followed by a light slap. [npc.speech(You know you can't expect much from the trash locked up for public use.)]
+		[npc.speech(你太挑了，)][npc.name]在你身后回应道，伸手捏了一下你[pc.ass+]，又轻拍了一下，[npc.speech(你懂的，不能对那些锁起来的公交车抱什么期望。)]
 	</p>
 	<p>
-		[npc2.speech(I guess,)] [npc2.name] replies, before looking down at you again and asking, [npc2.speech(but you'll at least try to satisfy me, won't you?)]
+		[npc2.speech(我想是的，)][npc2.name]回道，又低头看看你[npc2.speech(但至少你会试着让我满意，不是吗？)]
 	</p>
 	<p>
-		Not bothering to wait for an answer, the pair move forwards and prepare to start fucking you...
+		他们懒得等你回答，就上前一步准备开操……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_STOCKS_RANDOM_SEX -->
 	
 	<htmlContent tag="AFTER_STOCKS_RANDOM_SEX"><![CDATA[
 	<p>
-		Having had their fun with you, [npc.name] and [npc2.name] put their clothes back on, and without even a backwards glance, they walk off together, speculating on the sorts of slaves that'll be available for them to fuck tomorrow.
+		用你享乐后，[npc.name]和[npc2.name]重新穿上衣服，头也不回地猜测着明天可以使用什么样的奴隶一起走开。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_seanIntroduced))
-			Just as you're wondering what will happen next, another pair step up before you, and, to your amazement, you look up to see that it's none other than Claire and [sean.name]. With a deep sigh, your busty cat-girl friend places her hands on her hips and states, [claire.speech(Yes, that's [pc.herHim]. Please release [pc.herHim] at once.)]
+			正当你担心接下来会发生什么时，另一对人出现在你面前。你抬头一看，惊讶地发现不是别人，正是克莱尔和[sean.name]。你的巨乳猫女朋友深深地叹了口气，双手叉腰说道：[claire.speech(是的，那就是[pc.herHim]。请立即放开[pc.herHim]。)]
 		#ELSE
-			Just as you're wondering what will happen next, another pair step up before you, and, to your amazement, you look up to see that it's none other than Claire and the Enforcer overseer. With a deep sigh, your busty cat-girl friend places her hands on her hips and states, [claire.speech(Yes, that's [pc.herHim]. Please release [pc.herHim] at once.)]
+			正当你担心接下来会发生什么时，另一对人出现在你面前。你抬头一看，惊讶地发现不是别人，正是克莱尔和那个执法者。你的巨乳猫女朋友深深地叹了口气，双手叉腰说道：[claire.speech(是的，那就是[pc.herHim]。请立即放开[pc.herHim]。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STOCKS_SET_FREE -->
@@ -1028,89 +1027,89 @@
 	<htmlContent tag="STOCKS_SET_FREE"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_seanIntroduced))
 		<p>
-			Doing as he's told, [sean.name] wipes the chalk markings off your stocks, before unlocking and removing the heavy padlock. Pulling up the wooden device, he frees your head and [pc.hands], before turning to Claire and saying, [sean.speech(Right, there you go. As I said, it was SWORD who told me to do it. I'm not exactly going to say no to them.)]
+			[sean.name]照吩咐擦掉了你身上的粉笔印，解开并取下了沉重的挂锁。他拉起了木制装置，释放了你的头和[pc.hands]，然后转过头对克莱尔说：[sean.speech(搞定了。就像我说的，是SWORD让我这么干的，我没法拒绝他们。)]
 		</p>
 		<p>
-			[claire.speech(Yes, yes, I know,)] the cat-girl impatiently says, before moving forwards and helping you to your [pc.feet]. As [sean.name] walks off back to his post, Claire asks, [claire.speech(Are you ok? I'm sorry about how long it took for me to get here; I had to get your release papers signed by my boss.)] 
+			[claire.speech(是，是，我知道。)]猫女不耐烦地回道，上前将你扶起。当[sean.name]走回他的位置时，克莱尔问你：[claire.speech(你还好吗？抱歉我花了这么长时间才赶到这里，我必须等头儿在你的释放文件上签字。)] 
 		</p>
 	#ELSE
 		<p>
-			Doing as he's told, the Enforcer wipes the chalk markings off your stocks, before unlocking and removing the heavy padlock. Pulling up the wooden device, he frees your head and [pc.hands], before turning to Claire and saying, [genericMale.speech(Right, there you go. As I said, it was SWORD who told me to do it. I'm not exactly going to say no to them.)]
+			执法者照吩咐擦掉了你身上的粉笔印，解开并取下了沉重的挂锁。他拉起了木制装置，释放了你的头和[pc.hands]，然后转过头对克莱尔说：[genericMale.speech(搞定了。就像我说的，是SWORD让我这么干的，我不能拒绝他们。)]
 		</p>
 		<p>
-			[claire.speech(Yes, yes, I know,)] the cat-girl impatiently says, before moving forwards and helping you to your [pc.feet]. As the Enforcer overseer walks off, Claire asks, [claire.speech(Are you ok? I'm sorry about how long it took for me to get here; I had to get your release papers signed by my boss.)] 
+			[claire.speech(是，是，我知道。)]猫女不耐烦地回道，上前将你扶起。等执法者走开后，克莱尔问你：[claire.speech(你还好吗？抱歉我花了这么长时间才赶到这里，我必须等头儿在你的释放文件上签字。)] 
 		</p>
 
 	#ENDIF
 	<p>
 		#IF(pc.getFetishDesire(FETISH_NON_CON_SUB).isPositive())
-			After telling Claire that you actually quite enjoyed the experience, you thank her for giving you enough time to get a good fuck, before asking how she managed to escape.
+			你告诉克莱尔其实你还挺享受这次经历的，并感谢她给了你充足的时间爽上一把，然后问她是怎么逃出来的。
 		#ELSE
-			You tell Claire that despite your harrowing experience, you think that after getting cleaned up and having some rest you'll be able to recover. Thanking her for rescuing you, you then ask how she managed to escape.
+			你告诉克莱尔尽管那段经历很痛苦，但你相信在一段时间的整理与休息后就能恢复过来。你感谢她救了你，并问她是怎么逃出来的。
 		#ENDIF
 	</p>
 	<p>
-		[claire.speech(Well, after you left, the guards at the entrance ran off to go and check on the others back in the warehouse,)] Claire explains, [claire.speech(so I was able to hide behind some crates and then sneak out after they'd gone.)]
+		[claire.speech(呃，你走之后，入口的那些守卫就跑进仓库检查里面其他人了，)]克莱尔解释着，[claire.speech(所以我就藏在些板条箱后面，等他们走了，偷溜出去。)]
 	</p>
 	<p>
-		Spending the next few minutes fussing over you and making sure that you're going to be alright, Claire eventually lets out a little sigh, and, placing her hands on her hips, says, [claire.speech(I hate to leave you like this, but I really need to get back and report to my boss that everything's ok. Don't worry, I'm not giving him <i>all</i> the details of what happened in the warehouse. If he found out about you knowing teleport, we'd both be locked up here...)]
+		接下来的几分钟，克莱尔吹毛求疵地检查了你，看看你有没有事，最后她微微叹了口气，双手叉腰说道，[claire.speech(我一点也不想就这么单独放着你，但是我得回去和老板汇报一切都好。别担心，我不会把仓库里的事<i>巨细靡遗</i>地告诉他的。如果他发现你会了传送，那我们俩都得被锁在这儿……)]
 	</p>
 	<p>
-		With that, the cat-girl gives you one last smile, before turning and dashing off to get back to work. Stepping away from the stocks, you wonder what to do now...
+		说完，猫女向你露出一个微笑，然后转身冲回去工作。你从仓库旁走开，开始思考该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT_SENT_TO_CELLS -->
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SENT_TO_CELLS"><![CDATA[
 	<p>
-		Just five minutes after leaving the warehouse, you and the [npc.race] Enforcer finally reach your destination, which, as you suspected, turns out to be the cells in the Enforcer Headquarters. Leading you into a small office situated at the end of the cells' corridor, your captor calls out to the Enforcer assigned to guard duty here, [npc.speech(Hey, Constable, I've got a prisoner here. You got room for [pc.herHim] for the next twenty-four hours or so?)]
+		离开仓库仅仅五分钟后，你和[npc.race]执法者终于到达了目的地，正如你所猜测的那样，这里是执法者总部的牢房。在带你进入牢房走廊尽头的一间小办公室后，看管你的家伙向负责看守这里的执法者喊道：[npc.speech(嘿，警官，我这里有个囚犯，你有地方给[pc.herHim]住吗？这家伙大概要关押24小时左右。)]
 	</p>
 	<p>
-		[genericMale.speech(Sure, let me help you lock [pc.herHim] up,)] the Enforcer replies, before leading you over to an unoccupied cell. Pushing you inside, he then shuts and locks the iron-barred door behind you, before turning to the [npc.race] and saying, [genericMale.speech(There you go, [pc.she]'ll be safe and sound in there until you come back to process [pc.herHim].)]
+		[genericMale.speech(当然，让我来帮你把[pc.herHim]锁起来，)]执法者回答，进了间空牢房。把你推进去，随即关上并锁好铁栅栏门，然后转身对[npc.race]说：[genericMale.speech(完活了，[pc.she]现在会在里面好好待着，直到你来处置[pc.herHim]。)]
 	</p>
 	<p>
-		[npc.speech(Right, my Inspector should call in tomorrow to sort [pc.herHim] out,)] [npc.name] replies, before turning and exiting via the way the two of you arrived, leaving you alone in your cell.
+		[npc.speech(对了，我的督察明天应该会叫人来解决[pc.herHim]的问题，)][npc.name]回答完，沿着你们来时的那条路原路返回了，把你留在牢房里。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT_CELLS_WAITING -->
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_CELLS_WAITING"><![CDATA[
 	<p>
-		Once the guard has returned to his office, you attempt to teleport out of your prison, but, just as you expected, there must be another teleport inhibition device in the Enforcer Headquarters, as your spell once again doesn't work. Turning back to look at your cell, you take note of the fact that the walls, floor, and ceiling are all made of solid concrete, and with just a simple concrete platform to serve as a bed, there's nothing to do in here except for waiting to be rescued.
+		守卫回到自己的办公室后，你试图传送出监狱，但正如你所料，执法者总部一定还有另一个传送抑制装置，因为你的法术又一次失灵了。你回过头来看你的牢房，你注意到墙壁、地面和天花板都是由坚固的混凝土制成的，只有一个简单的水泥平台作为床铺，在这里除了等待救援之外，你什么也做不了。
 	</p>
 	<p>
-		Thankfully, after a tedious couple of hours waiting in your cell, you hear Claire's distinctive voice echoing down from further up the corridor, [claire.speech(Yes, I know it was SWORD that wanted [pc.herHim] locked up. Nobody's blaming you, let's just get [pc.herHim] released as soon as possible, ok?)] 
+		值得庆幸的是，在牢房里乏味地等待了几个小时后，你听到克莱尔那独特的声音从远处的走廊上回荡下来，[claire.speech(是的，我知道是SWORD想要把[pc.herHim]关起来。没人会责怪你，但让我们尽快把[pc.herHim]放出来，好吗？)] 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CELLS_SET_FREE -->
 	
 	<htmlContent tag="CELLS_SET_FREE"><![CDATA[
 	<p>
-		After just a moment more, Claire and the Enforcer guard appear outside your cell door, and after getting him to unlock it, Claire beckons you to follow her out, asking, [claire.speech(Are you ok? I'm sorry about how long it took for me to get here; I had to get your release papers signed by my boss.)] 
+		又过了一会儿，克莱尔和执法者警卫出现在你的牢房门外。克莱尔在让他打开门后示意你跟着她出去，问道，[claire.speech(你还好吗？我很抱歉花了很长时间才来这儿，我必须让我的头儿签署你的释放文件。)] 
 	</p>
 	<p>
-		After telling your saviour that you're ok, you ask her how she managed to escape from the warehouse.
+		在告诉你的救命恩人你没事后，你问她是如何逃出仓库的。
 	</p>
 	<p>
-		[claire.speech(Well, after you left, those four guards at the entrance ran off into the warehouse to check on their comrades,)] Claire explains as she leads you out of the Enforcer Headquarters, [claire.speech(so I was able to hide behind some crates and then sneak out after they'd gone.)]
+		[claire.speech(呃，你走后，门口那四个守卫就跑进仓库检查自己的战友了，)]克莱尔一边解释着，一边领着你走出执法者总部，[claire.speech(所以我能躲在板条箱后面，在它们走后偷偷溜出去。)]
 	</p>
 	<p>
-		After just a couple of minutes, you're outside and breathing fresh air once again, and after you've thanked her for rescuing you, Claire lets out a little sigh and turns towards you. Placing her hands on her hips, she says, [claire.speech(I hate to leave you like this, but I really need to get back and report to my boss that everything's ok. Don't worry, I'm not giving him <i>all</i> the details of what happened in the warehouse. If he found out about you knowing teleport, we'd both be locked up in the cells here...)]
+		几分钟后，你又到了外面。你呼吸着新鲜空气，感谢她救了你之后，克莱尔轻轻叹了口气，转向你，把手放在臀部上，说道，[claire.speech(我不想就这样离开你，但我真的需要回去并向我的头儿报告一切都很好。别担心，我不会告诉他<i>所有</i>仓库里发生事情的细节。如果他发现你会传送，我们都会被关进这里的牢房……)]
 	</p>
 	<p>
-		With that, the cat-girl gives you one last smile, before turning and dashing off to get back to work. Having regained your freedom, you wonder what to do now...
+		说完，猫女向你露出一个微笑，然后转身冲回去工作。你重获自由后，开始思考该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

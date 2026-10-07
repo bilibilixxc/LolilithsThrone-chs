@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- GENERIC -->
 	
 	<htmlContent tag="GENERIC_IMPS_DEFEATED"><![CDATA[
 	<p>
-		As you've defeated all of the imps that were in the citadel, the entire place is now completely deserted.
+		你打败了城堡里的所有小恶魔，所以现在这里已经荒废了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GENERIC_IMP_GUARDS"><![CDATA[
 	<p>
-		There are at least twenty imps and alpha-imps scattered around the courtyard. A few of them are simply loitering about, but most are engaged in simple tasks such as cleaning and mending clothes, sparring with one another, or preparing and eating food. You also notice that there are a few who are openly having sex over in one corner.
+		庭院里散布着至少二十只小恶魔和阿尔法小恶魔，其中有几只在闲逛，但大多数正忙于某些简单工作，如清洗和缝补衣物、互相切磋、备餐与进食。你还看到几只小恶魔在角落里公然做爱。
 	</p>
 	<p>
-		None of these imps seem bothered about your sudden arrival, and you assume that it's because only expected guests would be in possession of the three keys required to gain entry.
+		这些小恶魔似乎对你们的突然到来不以为意，你猜测是因为只有符合预期的访客才能获得开启大门的三把钥匙。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -26,42 +26,42 @@
 	
 	<htmlContent tag="ENTRANCE_RUINS"><![CDATA[
 	<p>
-		Although the entranceway is one of the few parts of the citadel that managed to avoid taking significant damage, there's a considerable amount of rubble and smashed rock piled up against the gates. As you weave your way past these obstacles, you're very careful not to touch any of it out of fear that you might trigger another collapse.
+		尽管城堡大门属于少数没有遭到严重破坏的部分，但仍有相当数量的瓦砾碎石堆积于此。你避开这些障碍，小心翼翼地穿行，生怕引发进一步坍塌。
 	</p>
 	<p>
-		[npc.speech(This looks pretty dangerous,)] [npc.name] points out, following in your footsteps. [npc.speech(Be careful, [pc.name].)]
+		[npc.speech(这里看起来很危险。)][npc.name]紧随你的脚步，一边点明道，[npc.speech(小心点，[pc.name]。)]
 	</p>
 	<p>
-		Looking over the cracked, rubble-strewn courtyard, you find yourself gazing at the huge, ruined archway of the main keep. One of the huge wooden doors has completely splintered into pieces, while the other looks to be straining under the weight of the crumbling masonry above. Off to your left, the citadel's well looks to have been completely crushed beneath the collapsed left-side wall of the laboratory tower. On the opposite side of the courtyard, you see rubble and smashed rock blocking the small doorway of the cell block.
+		望着满是裂缝和碎石的庭院，你一边感慨一边前进，直到你来到主城堡巨大而破败的拱门处。那扇巨大的木门已经完全四分五裂，而另一扇门则在上面崩塌的砖石的重压下苦苦支撑着。在你的左侧，城堡的水井看起来已经完全被压在实验室塔楼左侧倒塌的墙壁下。而在庭院的另一侧，你看到瓦砾和碎石堵住了牢房的小门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		Standing in the entranceway, you're close enough to take a good look at the huge blocks from which the gates and walls have been constructed. You see that they've been carved from the same dark black stone as the cavern's floor and walls, and, looking out across the inner courtyard, you see that the material has indeed been obtained locally, as a large portion of the far wall has been mined out.
+		你站在入口处，足以近距离端详大门和墙壁的材质，你发现这巨大石块与洞穴的地面及墙面同出一辙，均由一种深黑色的岩石雕琢而成。而且你从内院望出去，远处的墙壁被开采出来许多，因此证明建筑材料确实是就地取材的。
 	</p>
 	<p>
 		#IF npc.getRace()==RACE_DEMON
-		#THEN [npc.speech(Heh, we demons sure can do a lot with earth spells!)] [npc.name] remarks.
-		#ELSE [npc.speech(Wow... Demons sure can do a lot with earth spells...)] [npc.name] marvels.
+		#THEN [npc.speech(嘿，我们恶魔可真会用土系法术！)][npc.name]感叹。
+		#ELSE [npc.speech(哇哦……恶魔可真会用土系法术……)][npc.name]惊叹不已。
 		#ENDIF
 	</p>
 	<p>
-		Carved into the gaping recess, there's a huge stone archway, which houses a pair of massive, iron-reinforced wooden doors. Off to the left of the courtyard, you see a well in one corner, and beside that, there sits a squat, stone tower. On the opposite side of the courtyard to this tower, the cave's wall curves inwards, and into this, a small doorway has been carved.
+		缺口处有一个巨大的石拱，里面是一扇巨大的双开镶铁木门。庭院左侧的一角有一口井，井旁有一座不怎么高的石塔。庭院与塔正对面的墙壁向内弯曲，上面有一个小门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE_FORTRESS"><![CDATA[
 	<p>
-		Wanting to leave this place and return another time, you and [npc.name] walk up to the dark stone gateway. In its surface, you see three holes, which appear to be identical to the ones on the gates' exterior.
+		你和[npc.name]想离开这里，改天再来，于是走到了黑石门前。它表面有三个洞，似乎与大门外部的洞一模一样。
 	</p>
 	<p>
-		Repeating the same unlocking process that you went through when entering, the gates are soon opened, and you and your companion find yourselves stepping back out into the huge, dimly-lit cavern which houses the siren's citadel. As the heavy stone gates swing shut behind the two of you, you wonder where to go to next...
+		你与同伴重复进入时的解锁过程，大门很快就被打开了，再度回到塞壬堡垒所在的巨大又昏暗的洞穴中。沉重的石门在你们身后关上，思索接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -71,730 +71,730 @@
 	<p>
 		#IF pc.hasFetish(FETISH_SADIST)
 		#THEN
-			The sight of these imps, who have inevitably all partaken in muggings and worse, makes your blood boil. Walking up to the nearest one, you kick him in his side with full force, causing him to stagger back and collapse against a nearby wall. [pc.speech(I'm here to clean you all out! Get ready for a good thrashing, you scum!)]
+			看到这些小恶魔，他们无疑都参与过抢劫甚至更恶劣的行径，你感到怒火中烧。你大步走向离你最近的那个小恶魔，用尽全力朝他的侧身踢去，这一脚让他站立不稳，向后踉跄，最后瘫倒在附近的墙壁上。你怒气冲冲地对他们说：[pc.speech(我来这里是为了彻底清除你们这些败类！准备好被我暴打，你们这些渣滓！)]
 		#ELSE
-			The sight of these imps, who have inevitably all partaken in muggings and worse, fills you with anger. Turning to face the courtyard, you shout, [pc.speech(I'm here to clean you all out! Get ready for some justice!)]
+			看到这些小恶魔，他们无疑都参与过抢劫甚至更恶劣的行径，你感到满腔怒火。你转身面对庭院，大声呼喊道：[pc.speech(我来这里是为了将你们一网打尽！准备好接受正义的审判吧！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF npc.hasFetish(FETISH_SADIST)
 		#THEN
-			[npc.speech(This should be fun! These imps are going to get a real good beating!)] [npc.name] cruelly remarks.
+			[npc.speech(这应该会很有趣！这些小恶魔将会被好好打一顿！)][npc.name]残忍地评论道。
 		#ELSE
-			[npc.speech(There sure are a lot of them, but we can do this!)] [npc.name] remarks.
+			[npc.speech(他们数量确实很多，但我们能做到的！)][npc.Name]说道。
 		#ENDIF
 	</p>
 	<p>
-		A group of six imps quickly forms before the two of you, and, as you ready yourselves for the fight ahead, they rush forwards to attack!
+		你们做好战斗准备，六只小恶魔在你们面前迅速集结成一队，马上就会冲上前来发动攻击！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_CHALLENGE_CONTINUE"><![CDATA[
 	<p>
-		The six imps are no match for you and [npc.name], and you let out a triumphant laugh as the last of them falls to the floor, defeated.
+		六个小恶魔根本打不过你和[npc.name]，瘫倒在地，彻底败下阵来，你不禁得意一笑。
 	</p>
 	<p>
-		Before either of you are able to take a breather, however, another group of imps arrives from elsewhere in the citadel, and jump forwards to avenge their fallen comrades!
+		然而，你们还没来得及喘口气，又有一群小恶魔从堡垒各地赶来，跳上前为同伴报仇！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_CHALLENGE_CONTINUE_WAVE_2"><![CDATA[
 	<p>
-		[style.italicsBad(This battle is far from over!)]
+		[style.italicsBad(战斗远未结束！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_CHALLENGE_CONTINUE_WAVE_3"><![CDATA[
 	<p>
-		[style.italicsMinorBad(There are still a lot of imps remaining in the citadel!)]
+		[style.italicsMinorBad(堡垒里还有很多小恶魔！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_CHALLENGE_CONTINUE_WAVE_4"><![CDATA[
 	<p>
-		[style.italicsMinorGood(It looks like you've beaten about half of the citadel's garrison!)]
+		[style.italicsMinorGood(看来你已经击败堡垒里一半的守军了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_CHALLENGE_CONTINUE_WAVE_5"><![CDATA[
 	<p>
-		[style.italicsGood(There are almost no imp reinforcements left!)]
+		[style.italicsGood(小恶魔援军所剩无几！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_CHALLENGE_CONTINUE_WAVE_6"><![CDATA[
 	<p>
-		[style.italicsExcellent(These are the very last defenders of the citadel!)]
+		[style.italicsExcellent(这些是堡垒最后的守卫！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- IMP_FIGHT_AFTER_COMBAT_VICTORY -->
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_VICTORY_ALL_ENSLAVED"><![CDATA[
 	<p>
-		Having enslaved all of the imps, there's nothing left for you and [com.name] to do except continue on your way through the citadel...
+		在奴役了所有的小恶魔之后，你和[com.name]除了继续穿过堡垒，没有什么可做的了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_VICTORY_ENSLAVED"><![CDATA[
 	<p>
-		[npc.speech(What are you doing?!)] [npc.name] screeches in alarm, [npc.speech(You can't enslave us! Stop it!)]
+		[npc.speech(你在干什么？！)][npc.name]发出惊叫，[npc.speech(你不能奴役我们！快停下！)]
 	</p>
 	<p>
-		Grinning at the remaining imps before you, you wonder whether you should continue with your task of enslaving them, or leave them be...
+		看着眼前剩下的小恶魔，你歪嘴一笑，不知道是该继续奴役这些家伙，还是任其自生自灭……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_VICTORY_ENSLAVED_ONE"><![CDATA[
 	<p>
-		[npc.speech(Stop it!)] [npc.name] scream, [npc.speech(Don't do it! I don't want to be a slave!)]
+		[npc.speech(别这样！)][npc.name]尖叫起来，[npc.speech(不要！我不想当奴隶！)]
 	</p>
 	<p>
-		Grinning at this last defeated imp, you wonder whether you should be enslaving [npc.herHim] as well, or leave [npc.herHim] be...
+		看着这最后一个被打败的小恶魔，你咧开嘴笑了，你在想，是应该把[npc.herHim]也奴役了，还是放[npc.herHim]一马……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_VICTORY"><![CDATA[
 	<p>
-		As the very last imp collapses to the floor, you can't help but let out a jubilant, victorious cry.
+		你看到最后一个小恶魔瘫倒在地，忍不住兴高采烈地发出胜利的欢呼。
 	</p>
 	<p>
-		Scanning your surroundings to double-check that there aren't any more threats, you notice that all of the other defeated imps have already made good their escape, and have either crawled or staggered off out of the citadel's main gates. As you let out a disapproving tut at how quick the other imps were to abandon their comrades and use them as a distraction to escape, your [com.companion] states, [com.speech(It looks like it's just these four left.)].
+		你扫视了一下四周，再三确认没有其他威胁后，注意到有些落败的小恶魔迅速抛弃同伴逃之夭夭，或爬或踉踉跄跄地离开了堡垒的大门。当你对这利用同伴分散注意力逃跑的举动而不齿地发出啧啧声时，你的[com.companion]说道：[com.speech(看来只剩下这四个了。)]
 	</p>
 	<p>
-		Focusing your attention back down towards the four defeated imps at your [pc.feet], you wonder what you and [com.name] should do with them...
+		你把注意力重新集中到[pc.feet]下四个落败的小恶魔身上，思索要和[com.name]怎样处理他们……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_VICTORY_ATTRIBUTE_BOOST"><![CDATA[
 	<p style='text-align:center;'>
-		[style.italicsExcellent(You and [com.name] have defeated the citadel's entire imp garrison! You truly are masters at fighting imps, and know exactly how to beat them!)]
+		[style.italicsExcellent(你和[com.name]已打倒堡垒里的所有守卫！你熟知如何打败小恶魔，实乃对抗小恶魔的高手！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_SCARE_OFF"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			You aren't interested in doing anything more to this last defeated [npc.race], and, standing to one side, you command, [pc.speech(Go on, get out of here, and don't come back!)]
+			你对最后被打败的[npc.race]没有任何兴趣，于是站在一边命令道，[pc.speech(走吧，离开这里，别再回来了！)]
 		</p>
 		<p>
-			Groaning as [npc.she] pushes [npc.herself] to [npc.her] feet, the [npc.race] does as you say, and staggers off out of the citadel and into Submission. Turning back towards the imposing gates of the main keep, you wonder if you should go and challenge the siren straight away, or take a break first...
+			[npc.race]呻吟着，勉强撑起身，照你说的那样，踉踉跄跄地走进屈城区的更深处。你回头望向雄伟的堡垒大门，思索是应该直接去挑战塞壬，还是先休息片刻……
 		</p>
 	#ELSE
 		<p>
-			You aren't interested in doing anything more to the imps, and, standing to one side, you command, [pc.speech(Go on, get out of here, all of you! And don't come back!)]
+			你对这些小恶魔不感兴趣，于是站到一边，命令道，[pc.speech(所有家伙都给我滚开！别再回来了！)]
 		</p>
 		<p>
-			Groaning as they push themselves to their feet, the imps do as you say, and stagger off out of the citadel and into Submission. Turning back towards the imposing gates of the main keep, you wonder if you should go and challenge the siren straight away, or take a break first...
+			这些小恶魔呻吟着，勉强撑起身，照你说的那样，踉踉跄跄地走向屈城区的更深处。你回头望向雄伟的堡垒大门，思索是应该直接去挑战塞壬，还是先休息片刻……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_SEX"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			Deciding to take advantage of these imps, you turn to your [com.companion] and order, [pc.speech(Stand back and watch, [com.name]. I want this one all to myself.)]
+			你决定使用这些小恶魔，于是你对[com.companion]命令道：[pc.speech(退后看着，[com.name]。我要独享这一个。)]
 		</p>
 		<p>
-			[com.speech(Sure,)] [com.name] replies, stepping back and leaving you to have your fun.
+			[com.speech(当然。)][com.name]答道，退后让你享受乐趣。
 		</p>
 		<p>
-			Smirking down at your defeated foe, you step forwards and bend down to push [npc.herHim] into position, letting out [pc.a_moan+] as you get ready to fuck [npc.herHim]...
+			你嘲弄地看着手下败将，然后后退一步弯下腰把[npc.herHim]摆好姿势。当你准备好操[npc.herHim]时，不禁发出[pc.a_moan+]……
 		</p>
 	#ELSE
 		<p>
-			Deciding to take advantage of these imps, you turn to your [com.companion] and order, [pc.speech(Stand back and watch, [com.name]. I want these all to myself.)]
+			你决定使用这些小恶魔，于是你对[com.companion]命令道：[pc.speech(退后看着，[com.name]。我要独享他们。)]
 		</p>
 		<p>
-			[com.speech(Sure,)] [com.name] replies, stepping back and leaving you to have your fun.
+			[com.speech(当然。)][com.name]答道，退后让你享受乐趣。
 		</p>
 		<p>
-			Smirking down at your defeated foes, you step forwards and bend down to push them into position, letting out [pc.a_moan+] as you get ready to fuck them...
+			你嘲弄地看着这群手下败将，然后后退一步弯下腰把他们摆好姿势。当你准备好操他们时，不禁发出[pc.a_moan+]……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_SEX_GENTLE"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			Deciding to take advantage of these imps, you turn to your [com.companion] and order, [pc.speech(Stand back and watch, [com.name]. I want this one all to myself.)]
+			你决定使用这些小恶魔，于是你对[com.companion]命令道：[pc.speech(退后看着，[com.name]。我要独享这一个。)]
 		</p>
 		<p>
-			[com.speech(Sure,)] [com.name] replies, stepping back and leaving you to have your fun.
+			[com.speech(当然。)][com.name]答道，退后让你享受乐趣。
 		</p>
 		<p>
-			Smiling down at your defeated foe, you step forwards and bend down to gently push [npc.herHim] into position, letting out [pc.a_moan+] as you get ready to fuck [npc.herHim]...
+			你嘲弄地看着手下败将，后退一步，弯下腰轻轻把[npc.herHim]摆好姿势。你终于准备好操[npc.herHim]，不禁发出[pc.a_moan+]……
 		</p>
 	#ELSE
 		<p>
-			Deciding to take advantage of these imps, you turn to your [com.companion] and order, [pc.speech(Stand back and watch, [com.name]. I want these all to myself.)]
+			你决定使用这些小恶魔，于是你对[com.companion]命令道：[pc.speech(退后看着，[com.name]。我要独享他们。)]
 		</p>
 		<p>
-			[com.speech(Sure,)] [com.name] replies, stepping back and leaving you to have your fun.
+			[com.speech(当然。)][com.name]答道，退后让你享受乐趣。
 		</p>
 		<p>
-			Smiling down at your defeated foes, you step forwards and bend down to gently push them into position, letting out [pc.a_moan+] as you get ready to fuck them...
+			你嘲弄地看着手下败将，后退一步，弯下腰轻轻把[npc.herHim]们摆好姿势。你终于准备好开操，不禁发出[pc.a_moan+]……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_SEX_ROUGH"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			Deciding to take advantage of these imps, you turn to your [com.companion] and order, [pc.speech(Stand back and watch, [com.name]. I want this one all to myself.)]
+			你决定使用这些小恶魔，于是你对[com.companion]命令道：[pc.speech(退后看着，[com.name]。我要独享这一个。)]
 		</p>
 		<p>
-			[com.speech(Sure,)] [com.name] replies, stepping back and leaving you to have your fun.
+			[com.speech(当然。)][com.name]答道，退后让你享受乐趣。
 		</p>
 		<p>
-			Grinning evilly down at your defeated foe, you step forwards and bend down to roughly force [npc.herHim] into position, letting out [pc.a_moan+] as you get ready to give [npc.herHim] a good, hard fuck...
+			你对着手下败将邪恶地咧嘴一笑，向前迈出一步，弯下腰粗暴地将[npc.herHim]摆好姿势。你一边发出[pc.a_moan+]，一边准备狠狠干[npc.herHim]一炮……
 		</p>
 	#ELSE
 		<p>
-			Deciding to take advantage of these imps, you turn to your [com.companion] and order, [pc.speech(Stand back and watch, [com.name]. I want these all to myself.)]
+			你决定使用这些小恶魔，于是你对[com.companion]命令道：[pc.speech(退后看着，[com.name]。我要独享他们。)]
 		</p>
 		<p>
-			[com.speech(Sure,)] [com.name] replies, stepping back and leaving you to have your fun.
+			[com.speech(当然。)][com.name]答道，退后让你享受乐趣。
 		</p>
 		<p>
-			Grinning evilly down at your defeated foes, you step forwards and bend down to roughly force them into position, letting out [pc.a_moan+] as you get ready to give them a good, hard fuck...
+			你邪恶地咧嘴一笑，向前迈出一步，弯下腰粗暴地将手下败将摆好姿势。你一边发出[pc.a_moan+]，一边准备狠狠干一炮……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_SEX_SUBMIT"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			As you look down at this last defeated [npc.race], you can't help but feel sorry for [npc.herHim]. After all, [npc.sheHas] not only been abandoned by the other imps in the citadel, but [npc.sheHas] also just witnessed all of [npc.her] comrades being enslaved.
+			看着被打败的[npc.race]，你不禁为[npc.herHim]感到惋惜。毕竟，[npc.sheHas]不仅被城堡里的其他小恶魔抛弃了，而且还目睹了[npc.her]所有的同伴都被奴役。
 		</p>
 		<p>
-			[pc.speech(Stand back, [com.name], I'm sure I won't be too long,)] you tell your [com.companion].
+			[pc.speech(退后，[com.name]，我肯定不会去太久。)]你对你的[com.companion]说。
 		</p>
 		<p>
-			[com.speech(Sure...)] [com.she] hesitantly replies, before letting out a resigned sigh as [com.she] realises what it is you're planning, [com.speech(If that's what you want to do, then fine, whatever.)]
+			[com.speech(当然……)][com.she]犹豫不决，但又意识到这是你的计划，[com.speech(倘若你想这样，那好吧，都依你。)]
 		</p>
 		<p>
-			Turning away from your [com.companion] and kneeling down beside [npc.name], you offer your apologies, [pc.speech(I'm sorry, I think we went a little too far. Are you ok?)]
+			你从[com.companion]旁边转过身来，跪在[npc.name]身边道歉：[pc.speech(对不起，我想我们做得有点过火了。你还好吗？)]
 		</p>
 		<p>
-			[npc.speech(Yer a real [pc.insult], ain't yer?! Course we ain't ok!)] [npc.she] snaps, pushing [npc.herself] to [npc.her] feet and scowling angrily at you. [npc.speech(How yer gonna apologise, huh, [pc.insult]?!)]
+			[npc.speech(尼真是个[pc.insult]，不是吗？！当然不好！)][npc.she]冷笑一声，站起身来怒视你，[npc.speech(尼打算怎么赔罪，嗯，[pc.insult]？！)]
 		</p>
 		<p>
-			The commanding tone in [npc.namePos] voice makes you let out an excited little whimper as you reply, [pc.speech(Well, how about you use me however you want?!)]
+			[npc.namePos]命令的口吻让你兴奋地呜咽，你回答道：[pc.speech(好吧，你可以随意蹂躏我，怎么样？！)]
 		</p>
 		<p>
-			[npc.speech(Ya want me ta fuck ya senseless?!)] [npc.name] spits, stepping forwards and pushing you down into position. [npc.speech(I don't mind doin' that, [pc.insult]!)]
+			[npc.speech(尼想让我把尼干得毫无知觉吗？！)][npc.name]吐了口唾沫，向你逼近，把你推倒在地，[npc.speech(我不介意这么做，[pc.insult]！)]
 		</p>
 		<p>
-			Letting out a burst of cackling laughter, the [npc.race] prepares to fuck you...
+			[npc.race]嘎嘎笑着，准备操你……
 		</p>
 	#ELSE
 		<p>
-			As you look down at the defeated imps, you can't help but feel sorry for them. After all, they were just abandoned by their comrades, and even if they weren't on friendly terms with one another, that betrayal is sure to have upset them.
+			看着被打败的小恶魔，你不禁为他们感到惋惜。毕竟，小恶魔们刚刚被同伴抛弃，即使彼此之间的关系并不友好，但这种背叛肯定会让他们难过。
 		</p>
 		<p>
-			[pc.speech(Stand back, [com.name], I'm sure I won't be too long,)] you tell your [com.companion].
+			[pc.speech(退后，[com.name]，我肯定不会去太久。)]你对你的[com.companion]说。
 		</p>
 		<p>
-			[com.speech(Sure...)] [com.she] hesitantly replies, before letting out a resigned sigh as [com.she] realises what it is you're planning, [com.speech(If that's what you want to do, then fine, whatever.)]
+			[com.speech(当然……)][com.she]犹豫不决，但又意识到这是你的计划，[com.speech(倘若你想这样，那好吧，都依你。)]
 		</p>
 		<p>
-			Turning away from your [com.companion] and kneeling down beside [npc.name], you offer your apologies, [pc.speech(I'm sorry, I think we went a little too far. Are you ok?)]
+			你从[com.companion]旁边转过身来，跪在[npc.name]身边道歉：[pc.speech(对不起，我想我们做得有点过火了。你还好吗？)]
 		</p>
 		<p>
-			[npc.speech(Yer a real [pc.insult], ain't yer?! Course we ain't ok!)] [npc.she] snaps, pushing [npc.herself] to [npc.her] feet and scowling angrily at you. [npc.speech(How yer gonna apologise, huh, [pc.insult]?!)]
+			[npc.speech(尼真是个[pc.insult]，不是吗？！当然不好！)][npc.she]冷笑一声，站起身来怒视你，[npc.speech(尼打算怎么赔罪，嗯，[pc.insult]？！)]
 		</p>
 		<p>
-			The commanding tone in [npc.namePos] voice makes you let out an excited little whimper as you reply, [pc.speech(Well, how about you and your friends use me however you want?!)]
+			[npc.namePos]命令的口吻让你兴奋地呜咽，你回答道：[pc.speech(好吧，你和你的朋友们可以随意蹂躏我，怎么样？！)]
 		</p>
 		<p>
-			[npc.speech(They ain't my friends, [pc.insult], and nor are you!)] [npc.name] spits, pushing you down into position. [npc.speech(I don't mind sharin' yer with them, though. Plenty o' holes to go around!)]
+			[npc.speech(他们不是我的朋友，[pc.insult]，你也不是！)][npc.Name]啐了一口，把你推倒在地，[npc.speech(不过我不介意让他们一起教训你，毕竟你有很多洞可以捅！)]
 		</p>
 		<p>
-			Cackling laughter erupts from the rest of the imps, and they rush forwards to join in on the fun...
+			剩下的小恶魔们嘎嘎狂笑，纷纷冲上前来加入其中……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_GROUP_SEX"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			Deciding to take advantage of this final defeated [npc.race], you turn to your [com.companion] and order, [pc.speech(Come on, [com.name]. Lets fuck [npc.herHim] together!)]
+			你决定使用这个落败的[npc.race]，于是你对[com.companion]命令道：[pc.speech(来吧，[com.name]，一起来操[npc.herHim]！)]
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Sounds good, [pc.name],)] [com.name] replies with a grin on [com.her] face, [com.speech(This'll be fun!)]
+				[com.speech(不错诶，[pc.name]。)][com.name]坏笑着附和，[com.speech(会很有趣的！)]
 			#ELSE
-				[com.speech([pc.Name]... I really don't want to...)] [com.name] replies, [com.speech(But I guess I have no choice...)]
+				[com.speech([pc.Name]……我不是很想……)][com.name]回应，[com.speech(但我也没选择就是了……)]
 			#ENDIF
 		</p>
 		<p>
-			Turning back to smirk down at your defeated foe, you step forwards and, with some help from [com.name], push [npc.herHim] into position and get ready to fuck [npc.herHim]...
+			你回头嘲弄地看着手下败将，后退一步，在[com.name]的协助下把[npc.herHim]摆好姿势，准备开操……
 		</p>
 	#ELSE
 		<p>
-			Deciding to take advantage of these imps, you turn to your [com.companion] and order, [pc.speech(Come on, [com.name]. Lets fuck them together!)]
+			你决定使用这些小恶魔，于是你对[com.companion]命令道：[pc.speech(来吧，[com.name]，一起来！)]
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Sounds good, [pc.name],)] [com.name] replies with a grin on [com.her] face, [com.speech(This'll be fun!)]
+				[com.speech(不错诶，[pc.name]。)][com.name]坏笑着附和，[com.speech(会很有趣的！)]
 			#ELSE
-				[com.speech([pc.Name]... I really don't want to...)] [com.name] replies, [com.speech(But I guess I have no choice...)]
+				[com.speech([pc.Name]……我不是很想……)][com.name]回应，[com.speech(但我也没选择就是了……)]
 			#ENDIF
 		</p>
 		<p>
-			Turning back to smirk down at your defeated foes, you step forwards and, with some help from [com.name], you push them into position and get ready to fuck them...
+			你回头嘲弄地看着手下败将，后退一步，在[com.name]的协助下把他们摆好姿势，准备开操……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_GROUP_SEX_SUBMISSION"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			As you look down at this last defeated [npc.race], you can't help but feel sorry for [npc.herHim]. After all, [npc.sheHas] not only been abandoned by the other imps in the citadel, but [npc.sheHas] also just witnessed all of [npc.her] comrades being enslaved.
+			看着被打败的[npc.race]，你不禁为[npc.herHim]感到惋惜。毕竟，[npc.sheHas]不仅被城堡里的其他小恶魔抛弃了，而且还目睹了[npc.her]所有的同伴都被奴役。
 		</p>
 		<p>
-			[pc.speech(Come on, [com.name], let's apologise to [npc.herHim] together,)] you tell your [com.companion].
-		</p>
-		<p>
-			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Mmm, yeah, that sounds good to me, [pc.name],)] [com.name] happily replies, realising what it is you want [com.herHim] to do. [com.speech(This'll be fun!)]
-			#ELSE
-				[com.speech([pc.Name]?! What the hell?!)] [com.name] protests, realising what it is you want [com.herHim] to do. [com.speech(I can't believe you're making me do this...)]
-			#ENDIF
-		</p>
-		<p>
-			Getting your [com.companion] to kneel down beside you in front of [npc.name], you offer your apologies, [pc.speech(I'm sorry, I think we went a little too far. Are you ok?)]
-		</p>
-		<p>
-			[npc.speech(Yer a real pair o' [pc.insultPlural], ain't yer?! Course I ain't ok!)] [npc.she] snaps, pushing [npc.herself] to [npc.her] feet and scowling angrily at the two of you. [npc.speech(How yer gonna apologise, huh, [pc.insultPlural]?!)]
-		</p>
-		<p>
-			The commanding tone in [npc.namePos] voice makes you let out an excited little whimper as you reply, [pc.speech(Well, how about you use me and [com.name] here however you want?!)]
-		</p>
-		<p>
-			[npc.speech(Ya want me ta fuck the two o' ya senseless?!)] [npc.name] spits, stepping forwards and pushing you and [com.name] down into position. [npc.speech(I don't mind doin' that, [pc.insult]!)]
+			[pc.speech(来吧，[com.name]，一起向[npc.herHim]道歉。)]你对[com.companion]说道。
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Ooh, yes!)] [com.name] eagerly [com.moansVerb].
+				[com.speech(唔，啊，听起来不错嘛，[pc.name]。)][com.name]明白你意在何为，兴奋地回复道，[com.speech(会很有趣的！)]
 			#ELSE
-				[com.speech(I can't believe this!)] [com.name] protests, struggling against [npc.name] as [com.she] tries, in vain, to break free.
+				[com.speech([pc.Name]？！搞什么？！)][com.name]明白你意在何为，抗议道，[com.speech(不敢相信你会让我这样做……)]
 			#ENDIF
 		</p>
 		<p>
-			Letting out a burst of cackling laughter, the [npc.race] prepares to fuck you and your [com.companion]...
+			你让[com.companion]跪在[npc.name]身边，自己也道歉道：[pc.speech(对不起，我想我们做得有点过火了。你还好吗？)]
+		</p>
+		<p>
+			[npc.speech(真是两个[pc.insultPlural]，不是吗？！我当然不好！)][npc.she]冷喝一声，站起身来怒视你们，[npc.speech(尼们打算怎么赔罪，嗯，[pc.insultPlural]？！)]
+		</p>
+		<p>
+			[npc.namePos]命令的口吻让你兴奋地呜咽，你回答道：[pc.speech(好吧，你可以随意蹂躏我和[com.name]，怎么样？！)]
+		</p>
+		<p>
+			[npc.speech(尼想让我把尼们干得毫无知觉吗？！)][npc.name]吐了口唾沫，向你逼近，把你和[com.name]推倒在地，[npc.speech(我不介意这么做，[pc.insult]！)]
+		</p>
+		<p>
+			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
+				[com.speech(哦，嗯啊！)][com.name]急切地[com.moansVerb]。
+			#ELSE
+				[com.speech(不可置信！)][com.name]抗议着挣脱[npc.name]，却徒劳无功。
+			#ENDIF
+		</p>
+		<p>
+			[npc.race]嘎嘎笑着，准备操你和你的[com.companion]……
 		</p>
 	#ELSE
 		<p>
-			As you look down at the defeated imps, you can't help but feel sorry for them. After all, they were just abandoned by their comrades, and even if they weren't on friendly terms with one another, that betrayal is sure to have upset them.
+			看着被打败的小恶魔，你不禁为他们感到惋惜。毕竟，小恶魔们刚刚被同伴抛弃，即使彼此之间的关系并不友好，但这种背叛肯定会让他们难过。
 		</p>
 		<p>
-			[pc.speech(Come on, [com.name], let's apologise to these imps together,)] you tell your [com.companion].
-		</p>
-		<p>
-			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Mmm, yeah, that sounds good to me, [pc.name],)] [com.name] happily replies, realising what it is you want [com.herHim] to do. [com.speech(This'll be fun!)]
-			#ELSE
-				[com.speech([pc.Name]?! What the hell?!)] [com.name] protests, realising what it is you want [com.herHim] to do. [com.speech(I can't believe you're making me do this...)]
-			#ENDIF
-		</p>
-		<p>
-			Getting your [com.companion] to kneel down beside you in front of [npc.name], you offer your apologies, [pc.speech(I'm sorry, I think we went a little too far. Are you ok?)]
-		</p>
-		<p>
-			[npc.speech(Yer a real pair o' [pc.insultPlural], ain't yer?! Course we ain't ok!)] [npc.she] snaps, pushing [npc.herself] to [npc.her] feet and scowling angrily at the two of you. [npc.speech(How yer gonna apologise, huh, [pc.insultPlural]?!)]
-		</p>
-		<p>
-			The commanding tone in [npc.namePos] voice makes you let out an excited little whimper as you reply, [pc.speech(Well, how about you and your friends use me and [com.name] here however you want?!)]
-		</p>
-		<p>
-			[npc.speech(They ain't my friends, [pc.insult], and nor are you!)] [npc.name] spits, pushing you and your [com.companion] down into position. [npc.speech(I don't mind sharin' the two o' yer with them, though. Plenty o' holes to go around!)]
+			[pc.speech(来吧，[com.name]，一起给这些小恶魔道歉。)]你对[com.companion]说道。
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Ooh, yes!)] [com.name] eagerly [com.moansVerb].
+				[com.speech(唔，啊，听起来不错嘛，[pc.name]。)][com.name]明白你意在何为，兴奋地回复道，[com.speech(会很有趣的！)]
 			#ELSE
-				[com.speech(I can't believe this!)] [com.name] protests, struggling against [npc.name] as [com.she] tries, in vain, to break free.
+				[com.speech([pc.Name]？！搞什么？！)][com.name]明白你意在何为，抗议道，[com.speech(不敢相信你会让我这样做……)]
 			#ENDIF
 		</p>
 		<p>
-			Cackling laughter erupts from the rest of the imps, and they rush forwards to join in on the fun...
+			你让[com.companion]跪在[npc.name]身边，自己也道歉道：[pc.speech(对不起，我想我们做得有点过火了。你还好吗？)]
+		</p>
+		<p>
+			[npc.speech(真是两个[pc.insultPlural]，不是吗？！我当然不好！)][npc.she]冷喝一声，站起身来劈头盖脸地骂道，[npc.speech(尼们打算怎么赔罪，嗯，[pc.insultPlural]？！)]
+		</p>
+		<p>
+			[npc.namePos]命令的口吻让你兴奋地呜咽，你回答道：[pc.speech(好吧，你与朋友可以随意蹂躏我和[com.name]，怎么样？！)]
+		</p>
+		<p>
+			[npc.speech(他们不是我的朋友，[pc.insult]，你也不是！)][npc.Name]啐了一口，把你和[com.companion]推倒在地，[npc.speech(不过我不介意让他们一起教训你们，毕竟有很多洞可以捅！)]
+		</p>
+		<p>
+			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
+				[com.speech(哦，嗯啊！)][com.name]急切地[com.moansVerb]。
+			#ELSE
+				[com.speech(不可置信！)][com.name]抗议着挣脱[npc.name]，却徒劳无功。
+			#ENDIF
+		</p>
+		<p>
+			剩下的小恶魔们嘎嘎狂笑，纷纷冲上前来加入其中……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_GIVE_TO_COMPANION"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			Deciding that you want to watch [com.name] take advantage of this last defeated [npc.race], you turn to [com.herHim] and order, [pc.speech(Go on, [com.name]. Fuck [npc.herHim]!)]
+			你决定看[com.name]操这个手下败将，于是你对[com.herHim]命令道：[pc.speech(去吧[com.name]，操[npc.herHim]！)]
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Oh, yes! With pleasure!)] [com.name] happily replies.
+				[com.speech(嗯好！荣幸之至！)][com.name]快乐地答复。
 			#ELSE
-				[com.speech(Eugh... Well, if I have to...)] [com.name] reluctantly replies.
+				[com.speech(呃……真的要吗，好吧……)][com.name]不太情愿。
 			#ENDIF
 		</p>
 		<p>
-			Smirking down at your defeated foe, you step back and watch as your [com.companion] bends down to push [npc.herHim] into position, getting ready to fuck [npc.herHim]...
+			你嘲弄地看着手下败将，后退一步看着[com.companion]弯下腰把[npc.herHim]摆好姿势，准备开操……
 		</p>
 	#ELSE
 		<p>
-			Deciding that you want to watch [com.name] take advantage of these imps, you turn to [com.herHim], and say, [pc.speech(Go on, [com.name]. Fuck them!)]
+			你决定看[com.name]操这些手下败将，于是你对[com.herHim]命令道：[pc.speech(去吧[com.name]，去操他们！)]
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Oh, yes! With pleasure!)] [com.name] happily replies.
+				[com.speech(嗯好！荣幸之至！)][com.name]快乐地答复。
 			#ELSE
-				[com.speech(Eugh... Well, if I have to...)] [com.name] reluctantly replies.
+				[com.speech(呃……真的要吗，好吧……)][com.name]不太情愿。
 			#ENDIF
 		</p>
 		<p>
-			Smirking down at your defeated foes, you step back and watch as your [com.companion] bends down to push them into position, getting ready to fuck them...
+			你嘲弄地看着这群手下败将，后退一步看着[com.companion]弯下腰把他们全都摆好姿势，准备开操……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_COMBAT_VICTORY_OFFER_COMPANION"><![CDATA[
 	#IF(game.getNonCompanionCharactersPresent().size()==1)
 		<p>
-			Deciding that you want to watch this last [npc.race] fuck your [com.companion], you turn towards [com.name] and order, [pc.speech(Get down, [com.name], and let [npc.herHim] fuck you!)]
+			你决定看这个[npc.race]操你的[com.companion]，于是你对[com.name]命令道：[pc.speech([com.name]过来，让[npc.herHim]操你！)]
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Oh, yes! With pleasure!)] [com.name] happily replies.
+				[com.speech(嗯好！荣幸之至！)][com.name]快乐地答复。
 			#ELSE
-				[com.speech(What the hell?! I really don't want to... But I don't have any choice, do I?)] [com.name] protests.
+				[com.speech(搞什么鬼？我真的不想……但我别无选择，不是吗？)][com.name]抗议道。
 			#ENDIF
 		</p>
 		<p>
-			Smirking down at your defeated foe, you step back and watch as your [com.companion] gets down onto [com.her] knees before [npc.herHim]. Addressing [npc.name], you say, [pc.speech(Go on! You can fuck [com.name] here, there's no trick involved!)]
+			你嘲弄地看着手下败将，后退一步看着[com.companion]跪下身子背对着[npc.herHim]。你对[npc.Name]说：[pc.speech(快上，你可以在这干[com.name]！屈城人不骗屈城人！)]
 		</p>
 		<p>
-			[npc.speech(Eh, well, I could do with fuckin' some [com.insult] after all that!)] [npc.name] spits, pushing your [com.companion] down into position.
+			[npc.speech(呃，行吧，最后终于可以操些[com.insult]了！)][npc.name]吐了口唾沫，把你的[com.companion]推倒在地。
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(~Ooh!~ Yes! Come and fuck me already!)] [com.name] eagerly [com.moansVerb].
+				[com.speech(~哦！~ 好啊！来操我吧！)][com.name]急切地[com.moansVerb]。
 			#ELSE
-				[com.speech(I can't believe this!)] [com.name] protests, struggling against [npc.name] as [com.she] tries, in vain, to break free.
+				[com.speech(不可置信！)][com.name]抗议着挣脱[npc.name]，却徒劳无功。
 			#ENDIF
 		</p>
 		<p>
-			Letting out a burst of cackling laughter, the [npc.race] prepares to fuck your [com.companion]...
+			[npc.race]嘎嘎笑着，准备操你的[com.companion]……
 		</p>
 	#ELSE
 		<p>
-			Deciding that you want to watch these imps fuck your [com.companion], you turn towards [com.name] and say, [pc.speech(Get down, [com.name]. Get down and let these imps fuck you!)]
+			你决定看这些小恶魔操你的[com.companion]，于是你对[com.name]命令道：[pc.speech([com.name]过来，让这些小恶魔操你！)]
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(Oh, yes! With pleasure!)] [com.name] happily replies.
+				[com.speech(嗯好！荣幸之至！)][com.name]快乐地答复。
 			#ELSE
-				[com.speech(What the hell?! I really don't want to... But I don't have any choice, do I?)] [com.name] protests.
+				[com.speech(搞什么鬼？我真的不想……但我别无选择，不是吗？)][com.name]抗议道。
 			#ENDIF
 		</p>
 		<p>
-			Smirking down at your defeated foes, you step back and watch as your [com.companion] gets down onto [com.her] knees beside them.  Addressing the imps, you say, [pc.speech(Go on! You can fuck [com.name] here, there's no trick involved!)]
+			你嘲弄地看着这群手下败将，后退一步看着[com.companion]跪下身子背对着他们。你对小恶魔们说：[pc.speech(快上，你们可以在这干[com.name]！屈城人不骗屈城人！)]
 		</p>
 		<p>
-			[npc.speech(Eh, well, I could do with fuckin' some [com.insult] after all that!)] [npc.name] spits, pushing your [com.companion] down into position. [npc.speech(Come on, you lot, I don't mind sharin'. Plenty o' holes to go around!)]
+			[npc.speech(呃，行吧，最后终于可以操些[com.insult]了！)][npc.name]吐了口唾沫，把你的[com.companion]推倒在地，[npc.speech(来吧，你们这些家伙，我不介意分享，毕竟有很多洞可以捅！)]
 		</p>
 		<p>
 			#IF(com.isAttractedTo(npc) || !game.isNonConEnabled())
-				[com.speech(~Ooh!~ Yes! Come and fuck me already!)] [com.name] eagerly [com.moansVerb].
+				[com.speech(~哦！~ 好啊！来操我吧！)][com.name]急切地[com.moansVerb]。
 			#ELSE
-				[com.speech(I can't believe this!)] [com.name] protests, struggling against [npc.name] as [com.she] tries, in vain, to break free.
+				[com.speech(不可置信！)][com.name]抗议着挣脱[npc.name]，却徒劳无功。
 			#ENDIF
 		</p>
 		<p>
-			Cackling laughter erupts from the rest of the imps, and they rush forwards to join in on the fun...
+			剩下的小恶魔们嘎嘎狂笑，纷纷冲上前来加入其中……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!--Defeat elsewhere:-->
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_DEFEAT"><![CDATA[
 	<p>
-		The imps prove to be too much for you and [npc.name] to handle, and with an exhausted sigh, the two of you collapse to the ground, defeated.
+		事实证明，你和[npc.name]对付不了这些小恶魔，随着一声精疲力竭的叹息，你们瘫倒在地，败下阵来。
 	</p>
 	<p>
-		[npc2.speech(Hah! What was all that about?!)] [npc2.name] sneers, stepping forwards to grin hungrily down at you and your companion. [npc2.speech(I bet yer was both just hopin' we'd win, so that we'd give yer a good fucking!)]
+		[npc2.speech(哈！那是怎么回事？！)][npc2.name]讥讽着走上前来，饥渴地盯着你们咧嘴笑：[npc2.speech(我打赌尼们都希望我会赢，为了被我一顿好操！)]
 	</p>
 	<p>
-		The other imps all agree with their leader, and quickly conclude that you only started this fight in the hopes that they'd beat and fuck you. Before you can say anything to the contrary, they've convinced themselves that this must be your fetish, and agree amongst one another that they'd be more than happy to help indulge you in it. Before you know what's happening, the imps are swarming all over you and [npc.name], and as they push the two of you into position, [npc2.name] calls out, [npc2.speech(Let's give 'em what they's wantin'; a good, hard, fuckin'!)]
+		其他小恶魔也都纷纷附和，很快得出结论：你挑起战斗只是希望被打败，然后被操。你还没来得及反驳，他们就已经相信这一定是你的性癖，并相互商定，它们会非常乐意帮你沉迷于此。在你明白发生了什么之前，小恶魔们已经蜂拥而至，把你和[npc.Name]团团围住，摆好位置。[npc2.name]喊道：[npc2.speech(让我们给她们想要的东西吧，好好地、用力地爆操一顿！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_DEFEAT_NO_NON_CON"><![CDATA[
 	<p>
-		The imps prove to be too much for you and [npc.name] to handle, and with an exhausted sigh, the two of you collapse to the ground, defeated.
+		事实证明，你和[npc.name]对付不了这些小恶魔，随着一声精疲力竭的叹息，你们瘫倒在地，败下阵来。
 	</p>
 	<p>
-		[npc2.speech(Hah! What was all that about?!)] [npc2.name] laughs, stepping forwards to sneer down at you. [npc2.speech(I bet yer was both just testin' us, weren't yer?!)]
+		[npc2.speech(哈！那是怎么回事？！)][npc2.name]大笑着讥讽道，走上前来，[npc2.speech(我猜尼们俩都在试探我们，对吧？！)]
 	</p>
 	<p>
-		You let out a low groan, which the imps take as an affirmation of their assumption. Still regarding you and [npc.name] as their leader's guests, it seems as though they're reluctant to do anything more to you, and as the rest of the imps wander off, [npc2.name] reprimands the two of you, [npc2.speech(Don't yer go tryin' that again, yer hear?! We ain't got time fer yer games!)]
+		小恶魔们把你低沉的呻吟认为是对他们假设的肯定，但他们仍然把你和[npc.Name]视为他们老大的客人，似乎不愿意更进一步。当其他小恶魔走开时，[npc2.name]训斥你们两个：[npc2.speech(尼们不要再试了，听到了吗？！我们没时间陪尼们玩游戏！)]
 	</p>
 	<p>
-		Turning [npc2.her] back on you, [npc2.name] joins [npc2.her] comrades in leaving you to recover. As you push yourself back up onto your [pc.feet], you wonder what you and [npc.name] should do now...
+		[npc2.name]转身和[npc2.her]的同伴一起离开，留下你们恢复体力。你重新站起来，思索现在要和[npc.Name]干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_COMBAT_DEFEAT_SEX"><![CDATA[
 	<p>
-		Thinking that it isn't too bad a thing to just let the imps have their fun, you allow them to move you into position, and, letting out a sigh, you address [npc2.name], [pc.speech(Come on then, let's get this over with...)]
+		你认为让小恶魔们爽爽也不是太糟，于是允许他们把你摆好姿势。你叹了口气，对着[npc2.name]说道：[pc.speech(那就来吧，速战速决……)]
 	</p>
 	<p>
-		The imps let out a chorus of mocking laughter as you say this, and, eager to do as you suggest, they prepare to fuck you and [npc.name]...
+		你这么一说，小恶魔们嘲弄地哈哈大笑，急切于付诸实践，准备操你和[npc.name]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_COMBAT_DEFEAT_SEX_EAGER"><![CDATA[
 	<p>
-		Eagerly anticipating the fun that's to be had with these imps, you obediently move into the position that they demand, and, letting out an excited laugh, you address [npc2.name], [pc.speech(Come on! Fuck me already!)]
+		怀着对即将与这些小恶魔共度的欢乐时光的热切期待，你顺从地摆好姿势，兴奋地笑着对[npc2.name]说道：[pc.speech(快点！现在就干我！)]
 	</p>
 	<p>
-		The imps let out a chorus of mocking laughter as you say this, and, more than happy to do as you suggest, they prepare to fuck you and [npc.name]...
+		你这么一说，小恶魔们嘲弄地哈哈大笑，而且他们明显乐于付诸实践，准备操你和[npc.name]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_COMBAT_DEFEAT_SEX_RESIST"><![CDATA[
 	<p>
-		Wanting to let these imps know that they've made a big mistake, you address [npc2.name], [pc.speech(Wait! No! I didn't want sex with you at all! Let me go!)]
+		你想要让这些小恶魔明白他们犯了大错，于是对着[npc2.name]大喊：[pc.speech(等等！不！我根本不想和你做！放开我！)]
 	</p>
 	<p>
-		The imps let out a chorus of mocking laughter as you say this, and, ignoring your struggles, [npc2.name] sneers, [npc2.speech(Yer just playin' hard ta get! I bet this is another o' yer fetishes, ain't I right?!)]
+		当你这么说时，小恶魔们发出一阵嘲讽的笑声，无视你的挣扎，[npc2.name]冷笑着回应道：[npc2.speech(你在欲擒故纵！我敢打赌这是你另一个性癖，对吧？！)]
 	</p>
 	<p>
-		You immediately answer in the negative, and continue to struggle and kick against the imps, but despite all this, they refuse to let you go, and you realise that they're not going stop until they've had their fun...
+		你立刻否定，一边继续挣扎着踢打小恶魔，但尽管如此，他们仍然拒绝放开你，你意识到除非他们玩够了，他们不会停下来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_IMP_DEFEAT_SEX"><![CDATA[
 	<p>
-		Having had their fun, the imps all step back, leaving you to collapse down onto the floor in exhaustion. [npc2.Name] steps around in front of you as you pant for breath, and sneers, [npc2.speech(Yer ain't gonna be tryin' this again, yer hear? As fun as it is ta fuck yer, we got stuff ta do, so just stay outta our way!)]
+		小恶魔们爽够后纷纷退开，留下你疲惫不堪地倒在地上。你正气喘吁吁，[npc2.name]走到你面前，冷笑道：[npc2.speech(别再试了，听到了没有？虽然干你很爽，但我们还有事要做，所以别挡我们的路！)]
 	</p>
 	<p>
-		Turning [npc2.her] back on you, [npc2.name] joins [npc2.her] comrades in leaving you to recover. As you push yourself back up onto your [pc.feet], you wonder what you and [npc.name] should do now...
+		[npc2.name]转身和[npc2.her]的同伴一起离开，留下你们恢复体力。你重新站起来，思索现在要和[npc.Name]干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_IMP_DEFEAT_SEX_WITH_COMPANION"><![CDATA[
 	<p>
-		Having had their fun, the imps all step back, leaving you and [npc.name] to collapse down onto the floor in exhaustion. [npc2.Name] steps around in front of the two of you as you pant for breath, and sneers, [npc2.speech(Yer ain't gonna be tryin' this again, yer hear? As fun as it is ta fuck the both o' yer, we got stuff ta do, so just stay outta our way!)]
+		小恶魔们爽够后纷纷退开，留下你和[npc.name]疲惫不堪地倒在地上。在你们气喘吁吁的时候，[npc2.name]走到你们面前，冷笑道：[npc2.speech(别再试了，听到了没有？虽然干你们俩很爽，但我们还有事要做，所以别挡我们的路！)]
 	</p>
 	<p>
-		Turning [npc2.her] back on you, [npc2.name] joins [npc2.her] comrades in leaving you to recover. As you push yourself back up onto your [pc.feet], you wonder what you and [npc.name] should do now...
+		[npc2.name]转身和[npc2.her]的同伴一起离开，留下你们恢复体力。你重新站起来，思索现在要和[npc.Name]干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_SEX_VICTORY"><![CDATA[
 	<p>
-		Having had your fun, you step back from the imps, and, wanting them to leave as soon as possible, you command [pc.speech(Go on, get out of here! And don't come back!)]
+		你爽完后从小恶魔们身边退开，并且命令他们尽快离开：[pc.speech(行了，快离开这里！别再回来了！)]
 	</p>
 	<p>
-		Groaning as they push themselves to their feet, the imps do as you say, and stagger off out of the citadel and into Submission. Turning back towards the imposing gates of the main keep, you wonder if you and [npc.name] should go and challenge the siren straight away, or take a break first...
+		这些小恶魔呻吟着，勉强撑起身，照你说的那样，踉踉跄跄地走向屈城区的更深处。你回头望向雄伟的堡垒大门，思索是应该直接和[npc.Name]去挑战塞壬，还是先休息片刻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_DEFEAT_RECOVER"><![CDATA[
 	<p>
-		You and [npc.name] take a few minutes to catch your breath and discuss what you could have done differently in the fight, before continuing on your way...
+		你和[npc.Name]花了点时间来平复呼吸，讨论一会战术后继续旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_SEX_DEFEAT_RECOVER"><![CDATA[
 	<p>
-		You and [npc.name] take a few minutes to catch your breath and get your things in order, before continuing on your way...
+		你和[npc.Name]花了点时间来平复呼吸，收拾好东西后继续旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!--Defeat in lab:-->
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_DEFEAT_IN_LAB"><![CDATA[
 	<p>
-		You and [npc.name] stagger back against one of the lab's tables, and, with weak sighs, the two of you collapse to the ground, defeated. 
+		你和[npc.Name]踉踉跄跄地退到实验台边，一边虚弱地喘息，瘫倒在地，彻底败下阵来。
 	</p>
 	<p>
-		Although they were the ones to beat you, the imps immediately back off, allowing the slender figure of [npc2.name] to step forwards and taunt you and your companion, [npc2.speech(Hehehe! You two really thought you could win, didn't you?)]
+		虽然是小恶魔们打败了你们，但他们却立刻拉开距离，任由身形修长的[npc2.name]走上前来嘲弄你和同伴：[npc2.speech(呵呵呵！你们两个不会真以为自己能赢吧？)]
 	</p>
 	<p>
-		You start to reply, but the mischievous youko turns slightly to one side, before twirling her three tails to tickle and brush over your face. [npc2.speech(Hush now! It was a rhetorical question, you silly thing!)]
+		你刚要回答，调皮的妖狐却微微侧身，扭动着三条尾巴，恶作剧般挠向你的脸庞：[npc2.speech(嘘！这只是个反问句，笨蛋！)]
 	</p>
 	#IF pc.isFeminine()
 	#THEN 
 		#IF npc.isFeminine()
 		#THEN
 			<p>
-				As she withdraws her three black-furred tails, you look up to see [npc2.name] smirking down at the two of you with an evil glint in her bright [npc2.eyeColour] eyes. [npc2.speech(Watching you being beaten like that has really got me quite excited. You need to take responsibility for that, I think...)]
+				当她收回三条黑尾巴时，你抬起头，看到[npc2.name]正低头冲你坏笑，明亮的[npc2.eyeColour]眼眸里闪烁着邪恶的光芒：[npc2.speech(看着你们被打成这样，我真的好兴奋哦。我想，你们需要为此负责……)]
 			</p>
 			<p>
-				As you continue to look up, [npc2.name] unbuttons her lab coat, and, pulling up the bottom of her virgin-killer sweater, she reveals the fact that she's not wearing any underwear. Just as she said, she appears to be quite aroused, for as she uses her slender fingers to spread her [npc2.vaginaCapacity] pussy, you see that she's already wet. [npc2.speech(So, what are you waiting for? Come and put those tongues of yours to use!)]
+				你继续看着[npc2.name]解开了她的实验室外套，拉起了她那件童贞杀手，你发现她没有穿内衣。正如她所说，她似乎相当兴奋，因为她纤细的手指分开她[npc2.vaginaCapacity]的小穴时，你可以看到里面已经湿透了。[npc2.speech(你们还在等什么？快来使用你们的舌头吧！)]
 			</p>
 		#ELSE
 			<p>
-				As she withdraws her three black-furred tails, you look up to see [npc2.name] smirking down at you with an evil glint in her bright [npc2.eyeColour] eyes. [npc2.speech(Watching you being beaten like that has really got me quite excited. You need to take responsibility for that, I think...)]
+				当她收回三条黑尾巴时，你抬起头，看到[npc2.name]正低头冲你坏笑，明亮的[npc2.eyeColour]眼眸里闪烁着邪恶的光芒：[npc2.speech(看着你们被打成这样，我真的好兴奋哦。我想，你们需要为此负责……)]
 			</p>
 			<p>
-				As you continue to look up, [npc2.name] unbuttons her lab coat, and, pulling up the bottom of her virgin-killer sweater, she reveals the fact that she's not wearing any underwear. Just as she said, she appears to be quite aroused, for as she uses her slender fingers to spread her [npc2.vaginaCapacity] pussy, you see that she's already wet. [npc2.speech(So, what are you waiting for? Come and put that tongue of yours to use! Oh, and you, [npc.race], you can just stay back and watch!)]
+				你继续看着[npc2.name]解开了她的实验室外套，拉起了她那件童贞杀手，你发现她没有穿内衣。正如她所说，她似乎相当兴奋，因为她纤细的手指分开她[npc2.vaginaCapacity]的小穴时，你可以看到里面已经湿透了。[npc2.speech(你还在等什么？快来使用你的舌头吧！哦，还有你，[npc.race]，你可以就在旁边看着！)]
 			</p>
 		#ENDIF
 	#ELSE
 		#IF npc.isFeminine()
 		#THEN
 			<p>
-				As she withdraws her three black-furred tails, you look up to see [npc2.name] smirking down at [npc.name] with an evil glint in her bright [npc2.eyeColour] eyes. [npc2.speech(Watching you being beaten like that has really got me quite excited. You need to take responsibility for that, I think...)]
+				当她收回三条黑尾巴时，你抬起头，看到[npc2.name]正低头冲你和[npc.Name]坏笑，明亮的[npc2.eyeColour]眼眸里闪烁着邪恶的光芒：[npc2.speech(看着你们被打成这样，我真的好兴奋哦。我想，你们需要为此负责……)]
 			</p>
 			<p>
-				As you continue to look up, [npc2.name] unbuttons her lab coat, and, pulling up the bottom of her virgin-killer sweater, she reveals the fact that she's not wearing any underwear. Just as she said, she appears to be quite aroused, for as she uses her slender fingers to spread her [npc2.vaginaCapacity] pussy, you see that she's already wet. [npc2.speech(So, what are you waiting for, [npc.race]? Come and put that tongue of yours to use! Oh, and you, [pc.race], you can just stay back and watch!)]
+				你继续看着[npc2.name]解开了她的实验室外套，拉起了她那件童贞杀手，你发现她没有穿内衣。正如她所说，她似乎相当兴奋，因为她纤细的手指分开她[npc2.vaginaCapacity]的小穴时，你可以看到里面已经湿透了。[npc2.speech([npc.race]，你还在等什么？快来使用你的舌头吧！哦，还有你，[pc.race]，你可以就在旁边看着！)]
 			</p>
 		#ELSE
 			<p>
-				As she withdraws her three black-furred tails, you look up to see [npc2.name] smirking down at the two of you with an evil glint in her [npc2.eyeColour] eyes. [npc2.speech(You're not quite the sort of people that I'd be willing to take advantage of, but I'm afraid that the same can't be said of these imps...)]
+				当她收回三条黑尾巴时，你抬起头，看到[npc2.name]正低头冲你们坏笑，明亮的[npc2.eyeColour]眼眸里闪烁着邪恶的光芒：[npc2.speech(你们不是我的菜呢，但对这些小恶魔来说恐怕就不是了……)]
 			</p>
 			<p>
-				As [npc2.name] steps back, the imps that defeated you rush forwards, and, to the sound of the youko's cruel laughter, they start to push you and [npc.name] down into position, ready to have sex with you...
+				[npc2.name]刚走开，打败你们的小恶魔们就立刻冲上前来。在妖狐残忍的笑声中，他们开始将你和[npc.name]推倒在地，准备与你们发生性关系……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FIGHT_AFTER_COMBAT_DEFEAT_IN_LAB_NO_NON_CON"><![CDATA[
 	<p>
-		You and [npc.name] stagger back against one of the lab's tables, and, with weak sighs, the two of you collapse to the ground, defeated. 
+		你和[npc.Name]踉踉跄跄地退到实验台边，一边虚弱地喘息，瘫倒在地，彻底败下阵来。
 	</p>
 	<p>
-		Although they were the ones to beat you, the imps immediately back off, allowing the slender figure of [npc2.name] to step forwards and taunt you, [npc2.speech(Hehehe! You two really thought you could win, didn't you?)]
+		虽然是小恶魔们打败了你们，但他们却立刻拉开距离，任由身形修长的[npc2.name]走上前来嘲弄你们：[npc2.speech(呵呵呵！你们两个不会真以为自己能赢吧？)]
 	</p>
 	<p>
-		You start to reply, but the mischievous youko turns slightly to one side, before twirling her three tails to tickle and brush over your face. [npc2.speech(Hush now! It was a rhetorical question, you silly thing!)]
+		你刚要回答，调皮的妖狐却微微侧身，扭动着三条尾巴，恶作剧般挠向你的脸庞：[npc2.speech(嘘！这只是个反问句，笨蛋！)]
 	</p>
 	<p>
-		As she withdraws her three black-furred tails, you look up to see [npc2.name] smirking down at you with an evil glint in her [npc2.eyeColour] eyes. [npc2.speech(As you're carrying those three keys, I can tell that you're the siren's guests. As that's the case, I suppose I have no choice but to let you go. What a shame...)]
+		当她收回三条黑尾巴时，你抬起头，看到[npc2.name]正低头冲你坏笑，[npc2.eyeColour]的眼眸里闪烁着邪恶的光芒：[npc2.speech(看到你带着那三把钥匙，我就知道你是塞壬的客人了。既然如此，我想我只能放你们走了，真遗憾……)]
 	</p>
 	<p>
-		Turning her back on you, [npc2.name] returns to her work, leaving you and [npc.name] to recover. Pushing yourself back up onto your [pc.feet], you wonder what you should do now...
+		[npc2.name]转身回到了她的工作岗位，留下你和[npc.name]恢复体力。你重新站起来，思索现在要干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_COMBAT_DEFEAT_SEX_ARCANIST_WATCH"><![CDATA[
 	<p>
-		You have no choice but to shuffle back and watch as [npc2.name] forces [npc.namePos] lips up to her hot, wet pussy. Before your companion is able to get started, however, the youko reaches down to take hold of [npc.her] head, stopping [npc.herHim] from getting any further.
+		你别无选择，只能无奈地退后，眼睁睁看着[npc2.name]迫使[npc.name]的嘴唇贴近她那温暖湿润的蜜穴。然而，妖狐不等你的同伴开始，伸手下去抓住了[npc.her]的头，阻止[npc.herHim]进一步行动。
 	</p>
 	<p>
-		[npc2.speech(Don't forget who's the one in charge here, my little pet,)] [npc2.name] teases. [npc.speech(Oh, and I really hope you aren't expecting me to allow you to orgasm. This is about <i>my</i> pleasure, and <i>your</i> punishment. Remember that.)]
+		[npc2.speech(别忘记谁才是主导者，我的小宠物。)][npc2.name]调笑道，[npc.speech(哦，我真希望你不要指望我会让你达到高潮。这是<i>我</i>的欢愉，也是对<i>你</i>的惩罚，记住喽。)]
 	</p>
 	<p>
-		With that, she releases [npc.namePos] head, and prepares to make [npc.herHim] eat her out...
+		说罢，她松开[npc.namePos]的头，准备让[npc.herHim]开舔……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_COMBAT_DEFEAT_SEX_ARCANIST"><![CDATA[
 	<p>
-		You obediently move to do as [npc2.name] says, and, shuffling forwards, you bring your lips up to her hot, wet pussy. Before you're able to get started, however, the youko reaches down to take hold of your head, stopping you from getting any further.
+		你顺从地按照[npc2.name]的指示向前挪动，将你的嘴唇贴近她温暖湿润的蜜穴。然而，妖狐不等你开始，伸手抓住了你的头，阻止了你进一步的行动。
 	</p>
 	<p>
-		[npc2.speech(Don't forget who's the one in charge here, my little pet,)] she teases. [npc2.speech(Oh, and I really hope you aren't expecting me to allow you to orgasm. This is about <i>my</i> pleasure, and <i>your</i> punishment. Remember that.)]
+		[npc2.speech(别忘记谁才是主导者，我的小宠物。)]她调笑道，[npc2.speech(哦，我真希望你不要指望我会让你达到高潮。这是<i>我</i>的欢愉，也是对<i>你</i>的惩罚，记住喽。)]
 	</p>
 	<p>
-		With that, she releases your head, and prepares to make you eat her out...
+		说罢，她松开你的头，准备让你舔她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_COMBAT_DEFEAT_SEX_ARCANIST_EAGER"><![CDATA[
 	<p>
-		You eagerly move to do as [npc2.name] says, and, shuffling forwards, you bring your lips up to her hot, wet pussy. Before you're able to get started, however, the youko reaches down to take hold of your head, stopping you from getting any further.
+		你急切地按照[npc2.name]的指示向前挪动，将你的嘴唇贴近她温暖湿润的蜜穴。然而，妖狐不等你开始，伸手抓住了你的头，阻止了你进一步的行动。
 	</p>
 	<p>
-		[npc2.speech(Don't forget who's the one in charge here, my little pet,)] she teases. [npc2.speech(Oh, and I really hope you aren't expecting me to allow you to orgasm. This is about <i>my</i> pleasure, and <i>your</i> punishment. Remember that.)]
+		[npc2.speech(别忘记谁才是主导者，我的小宠物。)]她调笑道，[npc2.speech(哦，我真希望你不要指望我会让你达到高潮。这是<i>我</i>的欢愉，也是对<i>你</i>的惩罚，记住喽。)]
 	</p>
 	<p>
-		With that, she releases your head, and prepares to make you eat her out...
+		说罢，她松开你的头，准备让你舔她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_AFTER_COMBAT_DEFEAT_SEX_ARCANIST_RESIST"><![CDATA[
 	<p>
-		Not liking the sound of what [npc2.name] is saying, you desperately try to shuffle away from her. A mocking laugh swiftly follows you, and before you're able to get anywhere, the youko reaches down to take hold of your head, before forcing you to bring your lips up to her hot, wet pussy.
+		你不喜欢[npc2.name]所说的话，于是你拼命地试图从她身边挪开。讥笑声迅速传来，不等你逃跑，妖狐伸手抓住了你的头，迫使你将嘴唇贴向她那温暖湿润的蜜穴。
 	</p>
 	<p>
-		[npc2.speech(Don't think you have any say in this, my little pet,)] she teases. [npc2.speech(Oh, and I really hope you aren't expecting me to allow you to orgasm. This is about <i>my</i> pleasure, and <i>your</i> punishment. Remember that.)]
+		[npc2.speech(别指望你能有发言权，我的小宠物。)]她调笑道，[npc2.speech(哦，我真希望你不要指望我会让你达到高潮。这既是<i>我</i>的欢愉，也是对<i>你</i>的惩罚，记住喽。)]
 	</p>
 	<p>
-		Ignoring your struggles and protests, the cruel youko prepares to force you eat her out...
+		无情的妖狐无视你的抗议与挣扎，强迫你去舔她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_IMP_DEFEAT_ARCANIST_SEX_BOTH"><![CDATA[
 	<p>
-		Having had [npc2.her] fun, [npc2.name] steps back, leaving you and [npc.name] to sink down to the floor with frustrated whines. Smirking down at the two of you, the youko teases, [npc2.speech(Silly things! You two go on and run off now, and find some dirty imps to fuck you both to orgasm. Oh, and don't cause any more trouble in here, understand?)]
+		[npc2.name]爽完后退开了，留下你和[npc.Name]趴在地上呻吟。妖狐低头着看着你们两个，嗤笑道：[npc2.speech(蠢货！你们俩现在就跑吧，去找些下流的小恶魔把你们俩都干到高潮。哦，别再在这里惹麻烦了，明白吗？)]
 	</p>
 	<p>
-		As you let out another desperate whine, [npc2.name] dismisses the two of you with one hand and turns to continue with [npc2.her] work. Pushing yourself to your feet, you wonder what you should do now...
+		你再次发出绝望的呜咽声，[npc2.name]把你们都打发走了，转身继续工作。你艰难地站了起来，思索现在要干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_IMP_DEFEAT_ARCANIST_SEX"><![CDATA[
 	<p>
-		Having had [npc2.her] fun, [npc2.name] steps back, leaving you to sink down to the floor with a frustrated whine. Smirking down at you, the youko teases, [npc2.speech(Silly thing! You and your friend go on and run off now, and find some dirty imps to fuck you to orgasm. Oh, and don't cause any more trouble in here, understand?)]
+		[npc2.name]爽完后退开了，留下你趴在地上呻吟。妖狐低头着看着你，嗤笑道：[npc2.speech(蠢货！你现在快和朋友一起跑吧，去找些下流的小恶魔把你干到高潮。哦，别再在这里惹麻烦了，明白吗？)]
 	</p>
 	<p>
-		As you let out another desperate whine, [npc2.name] dismisses you and your companion with one hand and turns to continue with [npc2.her] work. Pushing yourself to your feet, you wonder what you should do now...
+		你再次发出绝望的呜咽声，[npc2.name]把你们都打发走了，转身继续工作。你艰难地站了起来，思索现在要干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_IMP_DEFEAT_ARCANIST_SEX_WITH_COMPANION"><![CDATA[
 	<p>
-		Having had [npc2.her] fun, [npc2.name] steps back, leaving [npc.name] to sink down to the floor with a frustrated whine. Smirking down at [npc.herHim], the youko teases, [npc2.speech(Silly thing! You and your friend go on and run off now, and find some dirty imps to fuck you to orgasm. Oh, and don't cause any more trouble in here, understand?)]
+		[npc2.name]爽完后退开了，留下[npc.Name]趴在地上呻吟。妖狐低头着看着[npc.herHim]，嗤笑道：[npc2.speech(蠢货！你现在快和朋友一起跑吧，去找些下流的小恶魔把你干到高潮。哦，别再在这里惹麻烦了，明白吗？)]
 	</p>
 	<p>
-		As your companion lets out another desperate whine, [npc2.name] dismisses the two of you with one hand and turns to continue with [npc2.her] work. Pushing yourself to your feet, you wonder what you should do now...
+		你的同伴再次发出绝望的呜咽声，[npc2.name]把你们都打发走了，转身继续工作。你站了起来，思索现在要干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -802,23 +802,23 @@
 	
 	<htmlContent tag="COURTYARD_RUINS"><![CDATA[
 	<p>
-		You find yourself standing in the rubble-strewn courtyard of [siren.namePos] ruined citadel. Large, dark cracks split the stone floor and ceiling, and you have to weave around fallen boulders and smashed craters in order to continue forwards.
+		你正置身于[siren.namePos]的堡垒废墟中，庭院瓦砾遍布，石板地面和天花板上的裂缝巨大而漆黑，你必须绕过倒下的巨石和砸碎的石坑才能继续前进。
 	</p>
 	<p>
-		Every now and then, you hear the distinctive sound of a small rock or pebble tumbling down from one of the unstable piles of rubble, reminding you to be extra careful with your movements so as not to trigger another collapse.
+		你时不时听到卵石从不稳定瓦砾堆上滚落的特有声音，提醒你格外小心自己的一举一动，避免引发又一次坍塌。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COURTYARD"><![CDATA[
 	<p>
-		The citadel's large stone courtyard has been levelled and carved to resemble smooth flagstones, and it makes a nice change to be walking over such an even surface compared to the uneven floor of the cavern.
+		城堡庭院的地面是已凿平的光滑石板，与洞窟坑坑洼洼的道路相比，这里更易于行走。
 	</p>
 	<p>
-		The huge, stone archway of the main keep overlooks this area, and you wonder if you should approach its massive wooden doors now, or come back another time.
+		主楼巨大的石拱门俯瞰着这片区域，你在思考是该现在靠近那厚重的木门，还是之后再去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 
 	
@@ -826,17 +826,17 @@
 	
 	<htmlContent tag="WELL_RUINS"><![CDATA[
 	<p>
-		The entire left-hand side of the squat tower's wall has completely collapsed, burying the citadel's well under a pile of heavy stones and smashed masonry. If you hadn't already known that there was once a well here, you'd have no idea that there was anything of note beneath this ruined wall.
+		塔楼左侧的整面墙壁已经完全坍塌，沉重的石块与碎砖将堡垒的水井掩埋。如果你不知道这里曾经有一口水井，你根本想不到在这残垣断壁下还有什么值得注意的东西。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WELL"><![CDATA[
 	<p>
-		In one corner of the courtyard, a small, stone well has been constructed, complete with wooden bucket and turn handle. It looks to be completely functional, and from the splashes of water on the floor at its base, you can tell that it sees regular use.
+		庭院一角砌了口小小的石井，并配了木桶和辘轳。石井看起来完好，井边地面被溅湿，残留水渍，你看得出它经常被使用。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -845,23 +845,23 @@
 	
 	<htmlContent tag="CELLS_RUINS"><![CDATA[
 	<p>
-		The wooden door that once was fitted to the carved-out entranceway before you now lies splintered and broken at your feet. Peering inside the cell block, you see that past the first few metres of the entranceway, the entire structure has completely caved-in. You think how it was lucky there was nobody in there at the time of collapse.
+		在你面前的雕花入口处曾经有一扇木门，现在却支离破碎地躺在你的脚下。你探头向牢房内望去，只见深处已经完全塌陷。倒塌时里面没有人，真是万幸。
 	</p>
 	<p>
-		With nothing more to be done here, you and [npc.name] turn around and prepare to head back out into the courtyard.
+		在这里已无事可做，你和[npc.name]转身向庭院走去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CELLS"><![CDATA[
 	<p>
-		A sturdy wooden door has been fitted to the carved-out entranceway before you. As it's been left open, you're able to peer inside without entering, allowing you to see that, within, a block of four cells have been carved out of the cave's black rock. The front and sides of each of these cells are covered by heavy iron bars, and, within each one, a straw bed and wooden bucket have been placed against the far wall.
+		在你前方的洞口有一道结实的木门。由于大门敞开，你无需进入就能窥视内部，你可以看到黑岩洞穴被凿出了四间牢房。每间牢房正面和侧面都有沉重的铁栅栏，内部都有一张稻草铺成的床铺，以及紧挨着墙的木桶。
 	</p>
 	<p>
-		There are no prisoners or guards in here, and you wonder if this cell block has ever seen much use, or if it's mainly for show...
+		这里既无狱卒，也无囚犯，你不禁好奇这些牢房到底有没有被使用过，还是只是当摆设……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -869,54 +869,54 @@
 	
 	<htmlContent tag="LABORATORY_RUINS"><![CDATA[
 	<p>
-		The squat tower which housed the citadel's laboratory is now in a very sorry state, with the entire of the left-hand wall having completely collapsed. Despite this, however, the entrance seems to be relatively undamaged, and you're able to venture a fair way inside before being halted by piles of rubble and debris.
+		曾经作为堡垒实验室的低矮塔楼如今已破败不堪，整个左侧的墙壁已经完全坍塌。尽管如此，入口部分似乎相对完好，使你能够进入一段距离，直到被堆积的瓦砾和碎片阻挡了去路。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_SEARCH"><![CDATA[
 	<p>
-		You decide to spend some time searching through the ruins of the laboratory, and, being careful not to disturb any of the piles of unstable rubble, you and [npc.name] manage to find some things of value...
+		你决定花些时间在实验室的废墟中搜寻，你和[npc.name]小心翼翼地避开摇摇晃晃的碎石堆，设法找到了一些有价值的东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY"><![CDATA[
 	<p>
-		A squat, one-story tower has been built over on one side of the courtyard. As you and [npc.name] approach, you find yourself thinking that it probably once served as the original keep, before the current one was carved into the cave's wall.
+		一座低矮的单层塔楼倚靠在庭院的一侧而建。当你和[npc.name]走近时，你不禁想到，它很可能曾是最初的堡垒，而后来的堡垒则是在现有洞穴的基础上进一步雕琢而成。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_IMPS_DEFEATED"><![CDATA[
 	<p>
-		The door to the tower has been left wide open, and, stepping inside, you find yourself once more in the large, round room which resembles Lilaya's laboratory. Long wooden tables have been placed around the area, and upon them, glass beakers and tubes are filled with dull-coloured, spoiled liquids. It's quite clear that this laboratory was the origin of the transformative potions being carried by Submission's imp gangs, although you wonder just how many of those potions were produced before you shut this place down.
+		塔门大开，你一踏入，便发现自己再次置身于一间宽敞的圆厅中，室内的布局颇有几分莉莱雅实验室的味道。四周摆放着长长的木桌，桌上的玻璃烧杯和试管里盛满了暗淡的变质液体。很显然，屈城区的小恶魔身上的转化药水就是从这里来的。不过你不知道在你关闭这里之前，到底生产了多少药剂。
 	</p>
 	<p>
-		There's absolutely no sign of [citadelArcanist.name], nor of any imps. Although she's been driven off, you can't help but shake the feeling that you haven't seen the last of [citadelArcanist.name]...
+		你完全找不到[citadelArcanist.name]，也不见任何小恶魔的踪迹。虽然[citadelArcanist.name]已经被赶走了，但你还是不禁惋惜自己还没有见她最后一面……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_IMPS"><![CDATA[
 	<p>
-		The door to the tower has been left wide open, and, stepping inside, you find yourself in a large, round room. The interior reminds you of Lilaya's laboratory, and, while containing less equipment, this one looks to be far more productive. Long wooden tables have been placed around the area, and upon them, glass beakers and tubes are filled with bubbling, colourful liquids. It's quite clear that this laboratory is the origin of the transformative potions which are carried by Submission's imp gangs.
+		塔门大开，你一踏入，便发现自己置身于一间宽敞的圆厅中。室内的布局颇有几分莉莱雅实验室的味道，虽然设施不多，但效率更高。周围摆放着长长的木桌，桌上的玻璃烧杯和试管里盛满了颜色各异的液体，正咕咕冒着气泡。很显然，屈城区的小恶魔身上的转化药水就是从这里来的。
 	</p>
 	<p>
-		There are several imps scattered around the place, busily watching the equipment and making sure that nothing's going wrong. Overseeing them, over on the far side of the room, you see what appears at first to be a lesser-fox-girl. She appears to be busily working on enchanting various items of food and drink into transformative potions, and, although you think she must have noticed your entry, she doesn't seem to be at all bothered by your presence.
+		一群小恶魔正忙碌着穿梭于各个仪器之间，确保设备正常运行。在房间的另一侧，你看到了一个亚狐女，她似乎正忙着给各种食物和饮料附魔。虽然你认为她一定注意到了你的到来，但她却毫不在意。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_IMPS_ARCANIST_MET"><![CDATA[
 	<p>
-		The door to the tower has been left wide open, and, stepping inside, you find yourself in a large, round room. The interior reminds you of Lilaya's laboratory, and, while containing less equipment, this one looks to be far more productive. Long wooden tables have been placed around the area, and upon them, glass beakers and tubes are filled with bubbling, colourful liquids. It's quite clear that this laboratory is the origin of the transformative potions which are carried by Submission's imp gangs.
+		塔门大开，你一踏入，便发现自己置身于一间宽敞的圆厅中。室内的布局颇有几分莉莱雅实验室的味道，虽然设施不多，但效率更高。周围摆放着长长的木桌，桌上的玻璃烧杯和试管里盛满了颜色各异的液体，正咕咕冒着气泡。很显然，屈城区的小恶魔身上的转化药水就是从这里来的。
 	</p>
 	<p>
-		There are several imps scattered around the place, busily watching the equipment and making sure that nothing's going wrong. Overseeing them, over on the far side of the room, you once again see [citadelArcanist.name], the lesser-youko-girl. She appears to be busily working on enchanting various items of food and drink into transformative potions, and, although you think she must have noticed your entry, she doesn't seem to be at all bothered by your presence.
+		一群小恶魔正忙碌着穿梭于各个仪器之间，确保设备正常运行。在房间的另一侧，你再次看到了亚妖狐女[citadelArcanist.name]，她似乎正在忙着给各种食物和饮料附魔。虽然你认为她一定注意到了你的到来，但她却毫不在意。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -926,229 +926,229 @@
 	
 	<htmlContent tag="LABORATORY_ARCANIST"><![CDATA[
 	<p>
-		Wanting to talk to the fox-girl overseer, you head over towards the other side of the lab. From afar, you could see that she was wearing a lab coat and goggles, but as you get closer, you're able to take a better look at her, and note how her fox-like ears and tail are black, just like her long, straight hair. Her skin is very pale, and she has a slender body, with modestly-sized C-cup breasts. As she notices your approach, she turns towards you, and you see that her eyes are a beautiful shade of light blue.
+		你想和这位狐女监督员谈谈，于是朝实验室的另一侧走去。远远望去，你可以看到她穿着实验室外套，戴着护目镜。一走近，你才看清她那对狐耳和尾巴都是黑色，就像她那又长又直的头发一样。她皮肤苍白，身材苗条，胸部是标准的C罩杯。她察觉到你的靠近，转过身来，你注意到她那双浅蓝色的眼眸格外美丽。
 	</p>
 	<p>
-		[citadelArcanist.speech(Well, I don't think I've seen <i>you</i> two here before,)] she says, with a hint of amusement in her voice. [citadelArcanist.speech(You may address me as [citadelArcanist.name]. Who are you?)] 
+		[citadelArcanist.speech(诶，我不曾见过<i>你们</i>。)]她声音里带着一丝愉悦，[citadelArcanist.speech(你们可以称我为[citadelArcanist.name]，你们是谁？)] 
 	</p>
 	#IF pc.hasTraitActivated(PERK_OBSERVANT)
 	#THEN
 		<p>
-			[pc.speech(I'm [pc.name], and this is [npc.name],)] you respond. As you take another glance at [citadelArcanist.namePos] tail, you notice that she's actually got three, and is merely pretending to have only one by pushing them all together. [pc.speech(I didn't expect to see a three-tailed fox-girl in here.)]
+			[pc.speech(我是[pc.name]，这位是[npc.name]。)]你回答，又瞥向[citadelArcanist.namePos]的尾巴，注意到她其实有三条尾巴，只是挤作一团，假装只有一条，[pc.speech(我没想到会在这里看到一个三尾狐女。)]
 		</p>
 		<p>
-			[citadelArcanist.speech(Hehehe!)] [citadelArcanist.name] giggles, raising one of her slender hands to cover her mouth as she laughs at your assumption. [citadelArcanist.speech(A fox-girl?! Silly thing!)]
+			[citadelArcanist.speech(呵呵呵！)][citadelArcanist.name]她被你的假设逗得咯咯直笑，举起一只纤纤玉手捂住嘴巴，[citadelArcanist.speech(狐女？！傻瓜！)]
 		</p>
 		<p>
-			Before you're able to respond, [citadelArcanist.name] stops trying to pretend that she only has one tail, and, wrapping all three of them around her lower body, she coyly asks, [citadelArcanist.speech(What's the matter? You've never met a youko before? Well, I shouldn't be too surprised, you <i>do</i> look rather ignorant and dim-witted.)]
+			你还没来得及回答，[citadelArcanist.name]就不再假装自己只有一条尾巴了，她的三条尾巴都环绕在下半身，腼腆地问：[citadelArcanist.speech(怎么了？你以前从未见过妖狐？好吧，我不应该太惊讶，你看起来<i>确实</i>无知又愚蠢呢。)]
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(I'm [pc.name], and this is [npc.name],)] you respond. [pc.speech(I didn't expect to see a fox-girl in here.)]
+			[pc.speech(我是[pc.name]，这位是[npc.name]。)]你回答，[pc.speech(我没想到会在这里看到一个狐女。)]
 		</p>
 		<p>
-			[citadelArcanist.speech(Hehehe!)] [citadelArcanist.name] giggles, raising one of her slender hands to cover her mouth as she laughs at your assumption. [citadelArcanist.speech(A fox-girl?! Silly thing!)]
+			[citadelArcanist.speech(呵呵呵！)][citadelArcanist.name]她被你的假设逗得咯咯直笑，举起一只纤纤玉手捂住嘴巴，[citadelArcanist.speech(狐女？！傻瓜！)]
 		</p>
 		<p>
-			Before you're able to respond, you see [citadelArcanist.namePos] tail suddenly split into three, and she wraps them around her lower body as she coyly asks, [citadelArcanist.speech(What's the matter? You've never met a youko before? Well, I shouldn't be too surprised, you <i>do</i> look rather ignorant and dim-witted.)]
+			你还没来得及回答，[citadelArcanist.name]的尾巴突然化为三条，环绕在她的下半身，她腼腆地问：[citadelArcanist.speech(怎么了？你以前从未见过妖狐？好吧，我不应该太惊讶，你看起来<i>确实</i>无知又愚蠢呢。)]
 		</p>
 	#ENDIF
 	<p>
-		[pc.speech(Excuse me?)] you say, annoyed by this youko's rude behaviour.
+		[pc.speech(你说什么？)]你对妖狐的粗鲁行为感到恼火。
 	</p>
 	<p>
-		[citadelArcanist.speech(Oh, do settle down,)] [citadelArcanist.name] dismissively states with a wave of her hand.
+		[citadelArcanist.speech(哦，淡定点，)][citadelArcanist.name]轻蔑地说着，还一边挥着手，
 		#IF pc.getRace()==RACE_FOX_MORPH
 		#THEN
 			#IF npc.getRace()==RACE_FOX_MORPH
 			#THEN
-				 [citadelArcanist.speech(You know, it's a real shame that you're both already foxes. I've crafted a potion that would have turned you both into cute fox-girls, but I don't want to waste it on people who are already foxes...)]
+				[citadelArcanist.speech(你们俩都是狐狸真是可惜了，我制作了一种魔药，可以把你们都变成可爱的狐女，但你们都已经是狐狸了，我可不想浪费……)]
 				#IF pc.isFeminine()
 				#THEN
 					#IF npc.isFeminine()
-					#THEN Before you can reply, she continues, [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes, such as yourselves, quite irresistible... Why don't you both come over here and get down on your knees, and I'll graciously let you lick my pussy...)]
-					#ELSE Before you can reply, she addresses [npc.name], [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes quite irresistible... Why don't you come over here and get down on your knees, and I'll graciously let you lick my pussy... Oh, and you can watch, [pc.race]...)]
+					#THEN不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒像你们这样迷人的狐女……你们为什么不过来跪下呢？我会大发慈悲让你们舔我的小穴的……)]
+					#ELSE不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒迷人的狐女……你为什么不过来跪下呢？我会大发慈悲让你舔我的小穴的……哦，你可以看着，[npc.race]……)]
 					#ENDIF
 				#ELSE
 					#IF npc.isFeminine()
-					#THEN Before you can reply, she addresses [npc.name], [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes quite irresistible... Why don't you come over here and get down on your knees, and I'll graciously let you lick my pussy... Oh, and you can watch, [pc.race]...)]
-					#ELSE Before you can reply, she continues, [citadelArcanist.speech(Anyway, I must confess, I'm not too fond of masculinity... If you were to come back and visit after feminising yourselves, I'll graciously let you both lick my pussy...)]
+					#THEN不等你回应，她就对[npc.name]说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒迷人的狐女……你为什么不过来跪下呢？我会大发慈悲让你舔我的小穴的……哦，你可以看着，[pc.race]……)]
+					#ELSE不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实不太喜欢阳刚的……如果你们变女性化之后再来拜访，我会大发慈悲让你们舔我的小穴的……)]
 					#ENDIF
 				#ENDIF
 			#ELSE
-				 [citadelArcanist.speech(You know, it's a real shame that you're already a fox. I've crafted a potion that would have turned you into a cute fox-girl, but I don't want to waste it on someone who's already a fox...)] Before you can reply, she continues, [citadelArcanist.speech(Your little friend here, however, [npc.she] looks like the sort of submissive little toy that would be delighted to help me test my creations. You want to help me test it, don't you, [npc.race]?)]
+				[citadelArcanist.speech(你是狐狸真是可惜了，我制作了一种魔药，可以把你变成可爱的狐女，但你都已经是狐狸了，我可不想浪费……)]不等你回应，她就继续说道，[citadelArcanist.speech(不过，你的这位小伙伴看起来就像那种顺从的小玩具，一看就知道[npc.she]很乐意帮我测试产品。你想帮我测试对吧，[npc.race]？)]
 			#ENDIF
 		#ELSE
 			#IF npc.getRace()==RACE_FOX_MORPH
 			#THEN
-				 [citadelArcanist.speech(You know, you look like the sort of submissive little toy that would be delighted to help me test my creations. You see, I've crafted a potion that should turn the drinker into a cute fox-girl. Your friend is already a fox, so it would be wasted on [npc.herHim], but you want to help me test it, don't you?)]
+				[citadelArcanist.speech(你看起来就像那种顺从的小玩具，一看就知道你很乐意帮我测试产品。你看，我制作了一种魔药，可以让喝药的人变成可爱的狐女，你的朋友已经是狐狸了，用在[npc.herHim]身上也是浪费，但你想帮我测试一下对吧？)]
 			#ELSE
-				 [citadelArcanist.speech(You know, you look like the sort of submissive little toys that would be delighted to help me test my creations. You see, I've crafted a potion that should turn the drinker into a cute fox-girl. You two want to help me test it, don't you?)]
+				[citadelArcanist.speech(你们看起来就像那种顺从的小玩具，一看就知道很乐意帮我测试产品。看，我制作了一种魔药，可以让喝药的人变成可爱的狐女，你们想帮我测试一下对吧？)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_REPEAT"><![CDATA[
 	<p>
-		Wanting to talk to [citadelArcanist.name] again, you and [npc.name] head over towards the other side of the lab. As the pale-skinned lesser-youko notices your approach, she turns towards you, locking her beautiful lilac eyes onto yours. [citadelArcanist.speech(Oh, it's <i>you</i> again; the annoying little [pc.race] who won't leave me alone, and [pc.her] little pet [npc.race].)]
+		你和[npc.name]想再与[citadelArcanist.name]交谈，于是向实验室的另一侧走去。当皮肤苍白的亚妖狐注意到你们的靠近时，她转过身来，那双美丽的淡紫色眼睛紧紧地盯着你们。[citadelArcanist.speech(哦，又是<i>你</i>。烦人的[pc.race]总是来扰我清净，还有[pc.her]的[npc.race]小宠物。)]
 	</p>
 	<p>
-		[pc.speech(There's no need for that,)] you say, annoyed by this youko's rude greeting.
+		[pc.speech(没必要那么说吧。)]你被妖狐粗鲁的问候给惹恼了。
 	</p>
 	<p>
-		[citadelArcanist.speech(Oh, do be quiet, you silly little thing,)] [citadelArcanist.name] dismissively states with a wave of her hand.
+		[citadelArcanist.speech(哦，安静点，小傻瓜。)][citadelArcanist.name]轻蔑地说着，还一边挥着手。
 		#IF pc.getRace()==RACE_FOX_MORPH
 		#THEN
 			#IF npc.getRace()==RACE_FOX_MORPH
 			#THEN
-				 [citadelArcanist.speech(Hmm, I still don't want to waste my potion on people who are already foxes...)]
+				[citadelArcanist.speech(唔，你都已经是狐狸了，我可不想浪费我的魔药……)]
 				#IF pc.isFeminine()
 				#THEN
 					#IF npc.isFeminine()
-					#THEN Before you can reply, she continues, [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes, such as yourselves, quite irresistible... Why don't you both come over here and get down on your knees, and I'll graciously let you lick my pussy...)]
-					#ELSE Before you can reply, she addresses [npc.name], [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes quite irresistible... Why don't you come over here and get down on your knees, and I'll graciously let you lick my pussy... Oh, and you can watch, [pc.race]...)]
+					#THEN不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒像你们这样迷人的狐女……你们为什么不过来跪下呢？我会大发慈悲让你们舔我的小穴的……)]
+					#ELSE不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒迷人的狐女……你为什么不过来跪下呢？我会大发慈悲让你舔我的小穴的……哦，你可以看着，[npc.race]……)]
 					#ENDIF
 				#ELSE
 					#IF npc.isFeminine()
-					#THEN Before you can reply, she addresses [npc.name], [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes quite irresistible... Why don't you come over here and get down on your knees, and I'll graciously let you lick my pussy... Oh, and you can watch, [pc.race]...)]
-					#ELSE Before you can reply, she continues, [citadelArcanist.speech(Anyway, I must confess, I'm not too fond of masculinity... If you were to come back and visit after feminising yourselves, I'll graciously let you both lick my pussy...)]
+					#THEN不等你回应，她就对[npc.name]说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒迷人的狐女……你为什么不过来跪下呢？我会大发慈悲让你舔我的小穴的……哦，你可以看着，[pc.race]……)]
+					#ELSE不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实不太喜欢阳刚的……如果你们变女性化之后再来拜访，我会大发慈悲让你们舔我的小穴的……)]
 					#ENDIF
 				#ENDIF
 			#ELSE
-				 [citadelArcanist.speech(Has your little friend come to accept that [npc.sheIs] just a subby little toy, who should help me test my creations? This potion should turn [npc.herHim] into a cute fox-girl. You'd both like that to happen, wouldn't you?)]
+				[citadelArcanist.speech(你的小伙伴已经接受了[npc.sheIs]只是一个帮我测试产品的小玩具吗？这个魔药应该能把[npc.herHim]变成一个可爱的狐女，你喜欢这样对吧？)]
 			#ENDIF
 		#ELSE
 			#IF npc.getRace()==RACE_FOX_MORPH
 			#THEN
-				 [citadelArcanist.speech(Have you come to accept that you're just a subby little toy, who should help me test my creations? This potion should turn you into a cute fox-girl. You'd like that, wouldn't you?)]
+				[citadelArcanist.speech(你已经接受自己只是一个帮我测试产品的小玩具吗？这个魔药应该能把你变成一个可爱的狐女，你喜欢这样对吧？)]
 			#ELSE
-				 [citadelArcanist.speech(Have you come to accept that you're just subby little toys, who should help me test my creations? This potion should turn you both into cute fox-girls. You'd like that, wouldn't you?)]
+				[citadelArcanist.speech(你们已经接受自己只是帮我测试产品的小玩具吗？这个魔药应该能把你们都变成可爱的狐女，你们喜欢这样对吧？)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_REPEAT_NO_TF"><![CDATA[
 	<p>
-		Wanting to talk to [citadelArcanist.name] again, you and [npc.name] head over towards the other side of the lab. As the pale-skinned lesser-youko notices your approach, she turns towards you, locking her beautiful lilac eyes onto yours. [citadelArcanist.speech(Oh, it's <i>you</i> again; the annoying little [pc.race] who won't leave me alone, and [pc.her] little pet [npc.race].)]
+		你和[npc.name]想再与[citadelArcanist.name]交谈，于是向实验室的另一侧走去。当皮肤苍白的亚妖狐注意到你们的靠近时，她转过身来，那双美丽的淡紫色眼睛紧紧地盯着你们。[citadelArcanist.speech(哦，又是<i>你</i>。烦人的[pc.race]总是来扰我清净，还有[pc.her]的[npc.race]小宠物。)]
 	</p>
 	<p>
-		[pc.speech(There's no need for that,)] you say, annoyed by this youko's rude greeting.
+		[pc.speech(没必要那么说吧。)]你被妖狐粗鲁的问候给惹恼了。
 	</p>
 	<p>
-		[citadelArcanist.speech(Oh, do be quiet, you silly little thing,)] [citadelArcanist.name] dismissively states with a wave of her hand.
+		[citadelArcanist.speech(哦，安静点，小傻瓜。)][citadelArcanist.name]轻蔑地说着，还一边挥着手。
 		#IF pc.isFeminine()
 		#THEN
 			#IF npc.isFeminine()
-			#THEN Before you can reply, she continues, [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes, such as yourselves, quite irresistible... Why don't you both come over here and get down on your knees, and I'll graciously let you lick my pussy...)]
-			#ELSE Before you can reply, she addresses [npc.name], [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes quite irresistible... Why don't you come over here and get down on your knees, and I'll graciously let you lick my pussy... Oh, and you can watch, [pc.race]...)]
+			#THEN不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒像你们这样迷人的狐女……你们为什么不过来跪下呢？我会大发慈悲让你们舔我的小穴的……)]
+			#ELSE不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒迷人的狐女……你为什么不过来跪下呢？我会大发慈悲让你舔我的小穴的……哦，你可以看着，[npc.race]……)]
 			#ENDIF
 		#ELSE
 			#IF npc.isFeminine()
-			#THEN Before you can reply, she addresses [npc.name], [citadelArcanist.speech(Anyway, I must confess, I do find feminine foxes quite irresistible... Why don't you come over here and get down on your knees, and I'll graciously let you lick my pussy... Oh, and you can watch, [pc.race]...)]
-			#ELSE Before you can reply, she continues, [citadelArcanist.speech(Anyway, I must confess, I'm not too fond of masculinity... If you were to come back and visit after feminising yourselves, I'll graciously let you both lick my pussy...)]
+			#THEN不等你回应，她就对[npc.name]说道：[citadelArcanist.speech(不管怎么说，我承认我确实无法抗拒迷人的狐女……你为什么不过来跪下呢？我会大发慈悲让你舔我的小穴的……哦，你可以看着，[pc.race]……)]
+			#ELSE不等你回应，她就继续说道：[citadelArcanist.speech(不管怎么说，我承认我确实不太喜欢阳刚的……如果你们变女性化之后再来拜访，我会大发慈悲让你们舔我的小穴的……)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Responses: -->
 	
 	<htmlContent tag="LABORATORY_ARCANIST_DECLINE"><![CDATA[
 	<p>
-		[pc.speech(I don't like the sound of that,)] you say. [pc.speech(No thanks.)]
+		[pc.speech(我不喜欢这样，)]你说，[pc.speech(谢谢，但不用了。)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Suit yourself,)] [citadelArcanist.name] replies. [citadelArcanist.speech(Now shoo. I've got work to do.)]
+		[citadelArcanist.speech(爱咋咋地。)][citadelArcanist.name]回敬你，[citadelArcanist.speech(哦嘘哦嘘！我要干活儿了！)]
 	</p>
 	<p>
-		Rolling your [pc.eyes] at this youko's rude, dismissive behaviour, you step away from her, and wonder what to do next...
+		妖狐粗鲁轻蔑的行径令你翻了翻白眼。从她身边走开后，你接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARCANIST_SOLO_START_SEX"><![CDATA[
 	<p>
-		[pc.speech(Oh, yes, of course!)] you eagerly reply, dropping down onto your knees in front of [citadelArcanist.name].
+		[pc.speech(哦好，当然！)]你急切地在[citadelArcanist.name]身前跪下。
 	</p>
 	<p>
-		[citadelArcanist.speech(Good little toy,)] she says, smirking down at you. [citadelArcanist.speech(Now, remember, this is about <i>my</i> pleasure, not yours. I'm the only one who's going to get to orgasm here, understand?)]
+		[citadelArcanist.speech(可爱的小玩具，)][citadelArcanist.name]坏笑着看着你说，[citadelArcanist.speech(现在记好了，享受的是<i>我</i>，不是你。只有我才能高潮，明白吗？)]
 	</p>
 	<p>
-		[pc.speech(Wait, wha-)] you start, but [citadelArcanist.name] curls her tails around to smother your face and cut you off.
+		[pc.speech(等下，什——)]你刚开口，[citadelArcanist.name]的尾巴就蒙住你的嘴，硬生生打断你的话。
 	</p>
 	<p>
-		[citadelArcanist.speech(Hush now,)] she giggles. [citadelArcanist.speech(Just do as you're told!)]
+		[citadelArcanist.speech(嘘，)]她咯咯地笑，[citadelArcanist.speech(只要乖乖照做就好了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARCANIST_COMPANION_START_SEX"><![CDATA[
 	<p>
-		[pc.speech(Go on, [npc.name], do as she says,)] you tell your companion.
+		[pc.speech(来吧，[npc.name]，照做吧。)]你对同伴说。
 	</p>
 	<p>
 		#IFnpc.isAttractedTo(citadelArcanist) || !game.isNonConEnabled()
-		#THEN[npc.speech(With pleasure!)] [npc.name] enthusiastically replies. [npc.speech(Please, [citadelArcanist.name], let me taste your pussy!)]
-		#ELSE[npc.speech([pc.Name]... I-I really don't want to...)] [npc.name] replies. [npc.speech(B-But I guess I have no choice...)]
+		#THEN[npc.speech(我很乐意！)][npc.name]热切回应，[npc.speech([citadelArcanist.name]请让我尝尝你的小穴吧！)]
+		#ELSE[npc.speech([pc.Name]……我、我真的不想……)][npc.name]回应道，[npc.speech(但、但我也别无选择就是了……)]
 		#ENDIF
 	</p>
 	<p>
-		Doing as you command, [npc.name] obediently drops to [npc.her] knees before the grinning youko, and you step back to watch.
+		[npc.Name]听从命令，乖乖跪在咧嘴笑的妖狐前，而你移步观看。
 	</p>
 	<p>
-		[citadelArcanist.speech(Good little toy,)] [citadelArcanist.name] says, smirking down at [npc.name]. [citadelArcanist.speech(Now, remember, this is about <i>my</i> pleasure, not yours. I'm the only one who's going to get to orgasm here, understand?)]
+		[citadelArcanist.speech(可爱的小玩具，)][citadelArcanist.name]坏笑着看着[npc.Name]说，[citadelArcanist.speech(现在记好了，享受的是<i>我</i>，不是你。只有我才能高潮，明白吗？)]
 	</p>
 	<p>
-		[npc.speech(Wait, wha-)] [npc.name] starts, but [citadelArcanist.name] curls her tails around to smother [npc.her] face and cut [npc.herHim] off.
+		[npc.speech(等下，什——)][npc.name]刚开口，[citadelArcanist.name]的尾巴就蒙住[npc.her]的嘴，硬生生打断[npc.herHim]的话。
 	</p>
 	<p>
-		[citadelArcanist.speech(Hush now,)] she giggles. [citadelArcanist.speech(Just do as you're told!)]
+		[citadelArcanist.speech(嘘，)]她咯咯地笑，[citadelArcanist.speech(只要乖乖照做就好了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARCANIST_BOTH_START_SEX"><![CDATA[
 	<p>
-		[pc.speech(Come on, [npc.name], let's do as she says,)] you tell your companion.
+		[pc.speech(来吧，[npc.name]，照做吧。)]你对同伴说。
 	</p>
 	<p>
 		#IFnpc.isAttractedTo(citadelArcanist) || !game.isNonConEnabled()
-		#THEN[npc.speech(With pleasure!)] [npc.name] enthusiastically replies. [npc.speech(Please, [citadelArcanist.name], let me taste your pussy!)]
-		#ELSE[npc.speech([pc.Name]... I-I really don't want to...)] [npc.name] replies. [npc.speech(B-But I guess I have no choice...)]
+		#THEN[npc.speech(我很乐意！)][npc.name]热切回应，[npc.speech([citadelArcanist.name]请让我尝尝你的小穴吧！)]
+		#ELSE[npc.speech([pc.Name]……我、我真的不想……)][npc.name]回应道，[npc.speech(但、但我也别无选择就是了……)]
 		#ENDIF
 	</p>
 	<p>
-		Doing as you command, [npc.name] obediently drops to [npc.her] knees beside you, and the two of you look up at the grinning youko.
+		[npc.Name]听从命令，乖乖挨着你跪下，你们两个抬头看着咧嘴笑的妖狐。
 	</p>
 	<p>
-		[citadelArcanist.speech(Good little toys,)] [citadelArcanist.name] says, smirking down at you and your companion. [citadelArcanist.speech(Now, remember, this is about <i>my</i> pleasure, not yours. I'm the only one who's going to get to orgasm here, understand?)]
+		[citadelArcanist.speech(可爱的小玩具，)][citadelArcanist.name]坏笑着看着你们说，[citadelArcanist.speech(现在记好了，享受的是<i>我</i>，不是你们。只有我才能高潮，明白吗？)]
 	</p>
 	<p>
-		[pc.speech(Wait, wha-)] you start, but [citadelArcanist.name] curls her tails around to smother your face and cut you off.
+		[pc.speech(等下，什——)]你刚开口，[citadelArcanist.name]的尾巴就蒙住你的嘴，硬生生打断你的话。
 	</p>
 	<p>
-		[citadelArcanist.speech(Hush now,)] she giggles. [citadelArcanist.speech(Just do as you're told!)]
+		[citadelArcanist.speech(嘘，)]她咯咯地笑，[citadelArcanist.speech(只要乖乖照做就好了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARCANIST_FIGHT_START"><![CDATA[
 	<p>
-		You don't like the way [citadelArcanist.name] is talking to you, and you certainly don't like the idea of letting her continue to manufacture these transformative potions. Stepping forwards in an aggressive manner, you state, [pc.speech(I think you need to be taught a lesson!)]
+		你不喜欢[citadelArcanist.name]与你说话的方式，也完全不愿意让她继续制造这些转化药水。你以一种咄咄逼人的姿态向前迈出一步，断然说道：[pc.speech(我看你需要被好好教训一番！)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Hehehe!)] she giggles. [citadelArcanist.speech(What a silly little thing you are!)]
+		[citadelArcanist.speech(呵呵呵！)]她咯咯笑，[citadelArcanist.speech(真是个小傻瓜！)]
 	</p>
 	<p>
-		Before you can react, a huge cloud of smoke and sparks bursts forth around the youko, and, although it quickly clears, you see that [citadelArcanist.name] has completely vanished! The commotion alerts the imps in the laboratory, and, as they rush forwards to fight you, they call for reinforcement from elsewhere in the citadel...
+		还没等你反应过来，只见妖狐身边火花迸溅，浓烟四起，虽然烟雾很快就消散了，但你却发现完全不见[citadelArcanist.name]的身影！这场骚乱惊动了实验室里的小恶魔，他们一边向你发起攻击，一边请求堡垒其他区域的增援……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1158,226 +1158,226 @@
 	
 	<htmlContent tag="LABORATORY_ARCANIST_SOLO_TF"><![CDATA[
 	<p>
-		[pc.speech(Ok, I'll drink it,)] you say. [pc.speech(Being a fox-girl sounds kind of hot...)]
+		[pc.speech(行，我喝，)]你说，[pc.speech(变成狐女听起来好色哦……)]
 	</p>
 	<p>
-		[citadelArcanist.speech(I knew you'd do it,)] [citadelArcanist.name] giggles. [citadelArcanist.speech(Now, open wide!)]
+		[citadelArcanist.speech(我知道你喜欢，)][citadelArcanist.name]咯咯笑，[citadelArcanist.speech(现在，张大嘴巴！)]
 	</p>
 	<p>
-		As the youko produces a bottle of glowing pink liquid, you do as she says, and open your mouth. Taking out the stopper, she brings the potion up to your waiting lips, and, tilting your head back a little, you obediently gulp down the cool, sweet concoction.
+		妖狐拿出一瓶闪着粉光的液体，你乖乖张开嘴。[citadelArcanist.name]拔开瓶塞，把药水送到你嘴边，你稍微仰起头，顺从地喝下整瓶冰凉甜美的调配物。
 	</p>
 	<p>
-		Immediately, a warm, tingling feeling starts to spread throughout your body, and you gasp as you feel yourself staring to transform...
+		一股暖流立刻袭来，你感到一股奇特的刺痛感传遍了全身，转化让你不由得倒吸了一口气……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_SOLO_TF_OFFER_SEX"><![CDATA[
 	<p>
-		[citadelArcanist.speech(Ooh, it all worked perfectly!)] [citadelArcanist.name] exclaims in delight. [citadelArcanist.speech(What a sexy little fox you've turned into!)]
+		[citadelArcanist.speech(哦，一切都很完美！)][citadelArcanist.name]欣喜若狂，[citadelArcanist.speech(瞧你变成了多性感的小狐狸啊！)]
 	</p>
 	<p>
-		Panting and gasping, you try to catch your breath and recover from the alarming process that your body has just been through. [pc.speech(I... Feel so... Different...)]
+		你喘着粗气，试图尽快平复呼吸，适应刚刚转变的身体，[pc.speech(我……感觉很……不一样……)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Silly thing, of course you do!)] [citadelArcanist.name] giggles. [citadelArcanist.speech(Mmm, you're a lot hotter than I thought you'd be... Hey, you're keen to have some fun with that new body of yours, right? Get down on your knees, and I'll let you lick my pussy!)]
+		[citadelArcanist.speech(废话，当然会喽！)][citadelArcanist.name]咯咯笑，[citadelArcanist.speech(嗯，你都比我想象中性感多了……嘿，你想用新身体找点乐子吧？跪下来，来舔我的小穴吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_SOLO_TF_SEX_DECLINED"><![CDATA[
 	<p>
-		[pc.speech(Oh... Well, I don't know...)] you pant. [pc.speech(I don't want to do that.)]
+		[pc.speech(哦……好吧，我不知道……)]你喘着粗气，[pc.speech(我不想这样。)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Eugh, fine, whatever,)] [citadelArcanist.name] replies. [citadelArcanist.speech(Now shoo. I've got more work to do.)]
+		[citadelArcanist.speech(呃，好吧，管他呢，)][citadelArcanist.name]回敬你，[citadelArcanist.speech(去去去，我还有事要干。)]
 	</p>
 	<p>
-		Rolling your [pc.eyes] at this youko's rude, dismissive behaviour, you step away from her, and wonder what to do with your new body...
+		妖狐粗鲁轻蔑的行径令你翻了翻白眼，你从她身边走开，思索接下来要用新身体做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_SOLO_TF_SEX_ACCEPTED"><![CDATA[
 	<p>
-		Already feeling turned on by your new, foxy body, you eagerly agree to [citadelArcanist.namePos] suggestion, and drop to your knees in front of her.
+		你崭新的狐身让你一阵性奋，于是急切地同意了[citadelArcanist.namePos]的建议，跪在她面前。
 	</p>
 	<p>
-		[citadelArcanist.speech(Good little toy,)] she says, smirking down at you. [citadelArcanist.speech(Now, remember, this is about <i>my</i> pleasure, not yours. I'm the only one who's going to get to orgasm here, understand?)]
+		[citadelArcanist.speech(可爱的小玩具，)][citadelArcanist.name]坏笑着看着你说，[citadelArcanist.speech(现在记好了，享受的是<i>我</i>，不是你。只有我才能高潮，明白吗？)]
 	</p>
 	<p>
-		[pc.speech(Wait, wha-)] you start, but [citadelArcanist.name] curls her tails around to smother your face and cut you off.
+		[pc.speech(等下，什——)]你刚开口，[citadelArcanist.name]的尾巴就蒙住你的嘴，硬生生打断你的话。
 	</p>
 	<p>
-		[citadelArcanist.speech(Hush now,)] she giggles. [citadelArcanist.speech(Just do as you're told!)]
+		[citadelArcanist.speech(嘘，)]她咯咯地笑，[citadelArcanist.speech(只要乖乖照做就好了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LABORATORY_ARCANIST_COMPANION_TF -->
 	
 	<htmlContent tag="LABORATORY_ARCANIST_COMPANION_TF"><![CDATA[
 	<p>
-		[pc.speech(Go on, [npc.name], drink it,)] you say. [pc.speech(Seeing you turned into a fox-girl sounds kind of hot...)]
+		[pc.speech(来吧，[npc.name]，喝吧，)]你说，[pc.speech(变成狐女听起来好色哦……)]
 	</p>
 	<p>
 		#IF !npc.getFetishDesire(FETISH_TRANSFORMATION_RECEIVING).isPositive()
-		#THEN [npc.speech(I-I really don't want to be a fox-girl!)] [npc.name] complains, but, realising that [npc.sheHasFull] no choice in the matter, [npc.she] reluctantly continues, [npc.speech(Fine... I'll drink it...)]
-		#ELSE [npc.speech(Ooh, being a fox-girl sounds like fun!)] [npc.name] happily replies. [npc.speech(Come on, give me the potion!)]
+		#THEN [npc.speech(我、我不想变成狐女！)][npc.name]抱怨道，但[npc.she]发现自己别无选择，只得不情不愿地说：[npc.speech(好吧……我会喝……)]
+		#ELSE [npc.speech(噢，变成狐女听起来好有趣！)][npc.name]开心回应道，[npc.speech(来吧，把魔药给我！)]
 		#ENDIF
 	</p>
 	<p>
-		[citadelArcanist.speech(I knew you'd do it,)] [citadelArcanist.name] giggles. [citadelArcanist.speech(Now, open wide!)]
+		[citadelArcanist.speech(我知道你喜欢，)][citadelArcanist.name]咯咯笑，[citadelArcanist.speech(现在，张大嘴巴！)]
 	</p>
 	<p>
-		As the youko produces a bottle of glowing pink liquid, [npc.name] does as she says, and opens [npc.her] mouth. Taking out the stopper, [citadelArcanist.name] brings the potion up to your companion's waiting lips, and, tilting [npc.her] head back a little, [npc.name] obediently gulps down the cool, sweet concoction.
+		妖狐拿出一瓶闪着粉光的液体，[npc.Name]乖乖张开嘴。[citadelArcanist.name]拔开瓶塞，把药水送到[npc.Name]嘴边，[npc.her]稍微仰起头，顺从地喝下冰凉甜美的调配物。
 	</p>
 	<p>
-		Immediately, a warm, tingling feeling starts to spread throughout [npc.her] body, and [npc.she] gasps as [npc.she] feels [npc.herself] starting to transform...
+		一股暖流立刻袭向[npc.her]，接着是一股奇特的刺痛感传遍全身，转化让[npc.she]不由得倒吸了一口气……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_COMPANION_TF_OFFER_SEX"><![CDATA[
 	<p>
-		[citadelArcanist.speech(Ooh, it all worked perfectly!)] [citadelArcanist.name] exclaims in delight. [citadelArcanist.speech(What a sexy little fox you've turned into!)]
+		[citadelArcanist.speech(哦，一切都很完美！)][citadelArcanist.name]欣喜若狂，[citadelArcanist.speech(瞧你变成了多性感的小狐狸啊！)]
 	</p>
 	<p>
-		Panting and gasping, [npc.name] tries to catch [npc.her] breath and recover from the alarming process that [npc.her] body has just been through. [npc.speech(I... Feel so... Different...)]
+		[npc.Name]喘着粗气，试图尽快平复呼吸，适应刚刚转变的身体，[npc.speech(我……感觉很……不一样……)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Silly thing, of course you do!)] [citadelArcanist.name] giggles. [citadelArcanist.speech(Mmm, you're a lot hotter than I thought you'd be... Hey, you're keen to have some fun with that new body of yours, right? Get down on your knees, and I'll let you lick my pussy!)]
+		[citadelArcanist.speech(废话，当然会喽！)][citadelArcanist.name]咯咯笑，[citadelArcanist.speech(嗯，你都比我想象中性感多了……嘿，你想用新身体找点乐子吧？跪下来，来舔我的小穴吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_COMPANION_TF_SEX_DECLINED"><![CDATA[
 	<p>
-		[pc.speech(Hey, I don't want you going that far!)] you object. [pc.speech(Come on, [npc.name], you've done enough.)]
+		[pc.speech(嘿，我可不想更进一步！)]你提出异议，[pc.speech(回来吧，[npc.name]，已经够了。)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Eugh, fine, whatever,)] [citadelArcanist.name] replies. [citadelArcanist.speech(Now shoo. I've got more work to do.)]
+		[citadelArcanist.speech(呃，好吧，管他呢，)][citadelArcanist.name]回敬你，[citadelArcanist.speech(去去去，我还有事要干。)]
 	</p>
 	<p>
-		Rolling your [pc.eyes] at this youko's rude, dismissive behaviour, you and [npc.name] step away from her, and as you let her continue with her work, you can't help but gaze in awe at your companion's new body...
+		妖狐粗鲁轻蔑的行径令你翻了翻白眼，你和[npc.Name]从她身边走开，让她继续工作。你不由得赞叹着凝视起同伴的新身体……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_COMPANION_TF_SEX_ACCEPTED"><![CDATA[
 	<p>
-		Already feeling turned on by [npc.namePos] new, foxy body, you eagerly agree to [citadelArcanist.namePos] suggestion, and tell your companion to drop to [npc.her] knees.
+		你已经被[npc.namePos]崭新的狐身所吸引，于是急切地同意了[citadelArcanist.namePos]的建议，让你的同伴跪下。
 	</p>
 	<p>
 		#IFnpc.isAttractedTo(citadelArcanist) || !game.isNonConEnabled()
-		#THEN[npc.speech(With pleasure!)] [npc.name] enthusiastically replies. [npc.speech(Please, [citadelArcanist.name], let me taste your pussy!)]
-		#ELSE[npc.speech([pc.Name]... I-I really don't want to...)] [npc.name] replies. [npc.speech(B-But I guess I have no choice...)]
+		#THEN[npc.speech(我很乐意！)][npc.name]热切回应，[npc.speech([citadelArcanist.name]请让我尝尝你的小穴吧！)]
+		#ELSE[npc.speech([pc.Name]……我、我真的不想……)][npc.name]回应道，[npc.speech(但、但我也别无选择就是了……)]
 		#ENDIF
 	</p>
 	<p>
-		Doing as you command, [npc.name] obediently drops to [npc.her] knees before the grinning youko, and you step back to watch.
+		[npc.Name]听从命令，乖乖跪在咧嘴笑的妖狐前，而你移步观看。
 	</p>
 	<p>
-		[citadelArcanist.speech(Good little toy,)] [citadelArcanist.name] says, smirking down at [npc.name]. [citadelArcanist.speech(Now, remember, this is about <i>my</i> pleasure, not yours. I'm the only one who's going to get to orgasm here, understand?)]
+		[citadelArcanist.speech(可爱的小玩具，)][citadelArcanist.name]坏笑着看着[npc.Name]说，[citadelArcanist.speech(现在记好了，享受的是<i>我</i>，不是你。只有我才能高潮，明白吗？)]
 	</p>
 	<p>
-		[npc.speech(Wait, wha-)] [npc.name] starts, but [citadelArcanist.name] curls her tails around to smother [npc.her] face and cut [npc.herHim] off.
+		[npc.speech(等下，什——)][npc.name]刚开口，[citadelArcanist.name]的尾巴就蒙住[npc.her]的嘴，硬生生打断[npc.herHim]的话。
 	</p>
 	<p>
-		[citadelArcanist.speech(Hush now,)] she giggles. [citadelArcanist.speech(Just do as you're told!)]
+		[citadelArcanist.speech(嘘，)]她咯咯地笑，[citadelArcanist.speech(只要乖乖照做就好了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LABORATORY_ARCANIST_BOTH_TF -->
 	
 	<htmlContent tag="LABORATORY_ARCANIST_BOTH_TF"><![CDATA[
 	<p>
-		[pc.speech(Come on, [npc.name], let's drink it,)] you say. [pc.speech(Getting turned into fox-girls sounds kind of hot...)]
+		[pc.speech(来吧，[npc.name]，喝吧，)]你说，[pc.speech(变成狐女听起来好色哦……)]
 	</p>
 	<p>
 		#IF !npc.getFetishDesire(FETISH_TRANSFORMATION_RECEIVING).isPositive()
-		#THEN [npc.speech(I-I really don't want to be a fox-girl!)] [npc.name] complains, but, realising that [npc.sheHasFull] no choice in the matter, [npc.she] reluctantly continues, [npc.speech(Fine... I'll drink it as well...)]
-		#ELSE [npc.speech(Ooh, being a fox-girl sounds like fun!)] [npc.name] happily replies. [npc.speech(Come on, give me the potion!)]
+		#THEN [npc.speech(我、我不想变成狐女！)][npc.name]抱怨道，但[npc.she]发现自己别无选择，只得不情不愿地说：[npc.speech(好吧……我会喝……)]
+		#ELSE [npc.speech(噢，变成狐女听起来好有趣！)][npc.name]开心回应道，[npc.speech(来吧，把魔药给我！)]
 		#ENDIF
 	</p>
 	<p>
-		[citadelArcanist.speech(I knew you'd both do it,)] [citadelArcanist.name] giggles. [citadelArcanist.speech(Now, open wide, you two!)]
+		[citadelArcanist.speech(我知道你们喜欢，)][citadelArcanist.name]咯咯笑，[citadelArcanist.speech(两位，张大嘴巴！)]
 	</p>
 	<p>
-		As the youko produces a bottle of glowing pink liquid, you and [npc.name] do as she says, and you each open your mouths. Taking out the stopper, [citadelArcanist.name] brings the potion up to your waiting lips, and, tilting your head back a little, you obediently gulp down half of the cool, sweet concoction.
+		妖狐拿出一瓶闪着粉光的液体，你和[npc.Name]都乖乖张开嘴。[citadelArcanist.name]拔开瓶塞，把药水送到你嘴边，你稍微仰起头，顺从地喝下半瓶冰凉甜美的调配物。
 	</p>
 	<p>
-		Immediately, a warm, tingling feeling starts to spread throughout your body, and you gasp as you feel yourself starting to transform...
+		一股暖流立刻袭来，你感到一股奇特的刺痛感传遍了全身，转化让你不由得倒吸了一口气……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARCANIST_BOTH_TF"><![CDATA[
 	<p>
-		[citadelArcanist.speech(Now it's your turn,)] [citadelArcanist.name] says to [npc.name]. [citadelArcanist.speech(Swallow it all down, now!)]
+		[citadelArcanist.speech(现在轮到你了。)][citadelArcanist.name]对[npc.name]说，[citadelArcanist.speech(现在都吞了！)]
 	</p>
 	<p>
-		[citadelArcanist.Name] then brings the potion up to your companion's waiting lips, and, tilting [npc.her] head back a little, [npc.name] obediently gulps down the rest of the cool, sweet concoction.
+		[citadelArcanist.Name]把剩下的药水递到你同伴的唇边，[npc.Name]轻轻仰起头，顺从地将清凉甘甜的混合物一饮而尽。
 	</p>
 	<p>
-		Immediately, a warm, tingling feeling starts to spread throughout [npc.her] body, and [npc.she] gasps as [npc.she] feels [npc.herself] starting to transform...
+		一股暖流立刻袭向[npc.her]，接着是一股奇特的刺痛感传遍全身，转化让[npc.she]不由得倒吸了一口气……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_BOTH_TF_OFFER_SEX"><![CDATA[
 	<p>
-		[citadelArcanist.speech(Ooh, it all worked perfectly!)] [citadelArcanist.name] exclaims in delight. [citadelArcanist.speech(What sexy little foxes you've turned into!)]
+		[citadelArcanist.speech(哦，一切都很完美！)][citadelArcanist.name]欣喜若狂，[citadelArcanist.speech(瞧你们变成了多性感的小狐狸啊！)]
 	</p>
 	<p>
-		Panting and gasping, you and [npc.name] try to catch your breath and recover from the alarming changes that your bodies have just experienced. [pc.speech(I... Feel so... Different...)]
+		你和[npc.Name]喘着粗气，试图尽快平复呼吸，适应刚刚转变的身体，[pc.speech(我……感觉很……不一样……)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Silly thing, of course you do!)] [citadelArcanist.name] giggles. [citadelArcanist.speech(Mmm, you're both a lot hotter than I thought you'd be... Hey, you're keen to have some fun with those new bodies of yours, right? Get down on your knees, and I'll let you both lick my pussy!)]
+		[citadelArcanist.speech(废话，当然会喽！)][citadelArcanist.name]咯咯笑，[citadelArcanist.speech(嗯，你们俩都比我想象中性感多了……嘿，你们想用新身体找点乐子吧？跪下来，来舔我的小穴吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_BOTH_TF_SEX_DECLINED"><![CDATA[
 	<p>
-		[pc.speech(Oh... Well, I don't know...)] you pant. [pc.speech(I don't want to do that.)]
+		[pc.speech(哦……好吧，我不知道……)]你喘着粗气，[pc.speech(我不想这样。)]
 	</p>
 	<p>
-		[citadelArcanist.speech(Eugh, fine, whatever,)] [citadelArcanist.name] replies. [citadelArcanist.speech(Now shoo. I've got more work to do.)]
+		[citadelArcanist.speech(呃，好吧，管他呢，)][citadelArcanist.name]回敬你，[citadelArcanist.speech(去去去，我还有事要干。)]
 	</p>
 	<p>
-		Rolling your [pc.eyes] at this youko's rude, dismissive behaviour, you step away from her, and wonder what to do with your new body...
+		妖狐粗鲁轻蔑的行径令你翻了翻白眼，你从她身边走开，思索接下来要用新身体做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_BOTH_TF_SEX_ACCEPTED"><![CDATA[
 	<p>
-		[pc.speech(Come on, [npc.name], let's do as she says,)] you tell your companion.
+		[pc.speech(来吧，[npc.name]，照做吧。)]你对同伴说。
 	</p>
 	<p>
 		#IFnpc.isAttractedTo(citadelArcanist) || !game.isNonConEnabled()
-		#THEN[npc.speech(With pleasure!)] [npc.name] enthusiastically replies. [npc.speech(Please, [citadelArcanist.name], let me taste your pussy!)]
-		#ELSE[npc.speech([pc.Name]... I-I really don't want to...)] [npc.name] replies. [npc.speech(B-But I guess I have no choice...)]
+		#THEN[npc.speech(我很乐意！)][npc.name]热切回应，[npc.speech([citadelArcanist.name]请让我尝尝你的小穴吧！)]
+		#ELSE[npc.speech([pc.Name]……我、我真的不想……)][npc.name]回应道，[npc.speech(但、但我也别无选择就是了……)]
 		#ENDIF
 	</p>
 	<p>
-		Doing as you command, [npc.name] obediently drops to [npc.her] knees beside you, and the two of you look up at the grinning youko.
+		[npc.Name]听从命令，乖乖挨着你跪下，你们两个抬头看着咧嘴笑的妖狐。
 	</p>
 	<p>
-		[citadelArcanist.speech(Good little toys,)] [citadelArcanist.name] says, smirking down at you and your companion. [citadelArcanist.speech(Now, remember, this is about <i>my</i> pleasure, not yours. I'm the only one who's going to get to orgasm here, understand?)]
+		[citadelArcanist.speech(可爱的小玩具，)][citadelArcanist.name]坏笑着看着你们说，[citadelArcanist.speech(现在记好了，享受的是<i>我</i>，不是你们。只有我才能高潮，明白吗？)]
 	</p>
 	<p>
-		[pc.speech(Wait, wha-)] you start, but [citadelArcanist.name] curls her tails around to smother your face and cut you off.
+		[pc.speech(等下，什——)]你刚开口，[citadelArcanist.name]的尾巴就蒙住你的嘴，硬生生打断你的话。
 	</p>
 	<p>
-		[citadelArcanist.speech(Hush now,)] she giggles. [citadelArcanist.speech(Just do as you're told!)]
+		[citadelArcanist.speech(嘘，)]她咯咯地笑，[citadelArcanist.speech(只要乖乖照做就好了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1387,36 +1387,36 @@
 	
 	<htmlContent tag="LABORATORY_ARCANIST_POST_SEX_SOLO"><![CDATA[
 	<p>
-		Having had her fun, [citadelArcanist.name] steps back and pushes you away from her, before taunting, [citadelArcanist.speech(Hehe! That sure was fun... For <i>me</i>, that is. You'll just have to go and find some dirty imp to finish you off!)]
+		[citadelArcanist.name]爽完后就把你推开，奚落道：[citadelArcanist.speech(呵呵，真有趣……对<i>我</i>来说是这样的。你就去外面找点肮脏的小恶魔来帮你完事吧！)]
 	</p>
 	<p>
-		You let out a frustrated whine as you realise that the cruel youko isn't at all interested in bringing you to orgasm. Letting out another giggle, she continues, [citadelArcanist.speech(Now, go on, shoo! I've got more work to do.)]
+		你意识到残忍的妖狐根本不想让你达到高潮，不由得发出了沮丧的呜咽。她又咯咯笑起来，继续说道：[citadelArcanist.speech(现在走吧，去去去！我还有事要干。)]
 	</p>
 	<p>
-		Letting out a sigh in response to [citadelArcanist.namePos] rude, dismissive behaviour, you step away from her, and wonder what to do next...
+		妖狐粗鲁轻蔑的行径令你叹了口气。你从她身边走开，思索接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_POST_SEX_COMPANION"><![CDATA[
 	<p>
-		[npc2.Name] pushes [npc.name] away from her, before taunting [npc.her] by asking if [npc.she] was expecting to be allowed to orgasm.
+		[npc2.Name]把[npc.name]从她身边推开，嘲讽地问[npc.she]是不是期待被允许高潮。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LABORATORY_ARCANIST_POST_SEX_BOTH"><![CDATA[
 	<p>
-		Having had her fun, [citadelArcanist.name] steps back and pushes you ad [npc.name] away from her, before taunting, [citadelArcanist.speech(Hehe! That sure was fun... For <i>me</i>, that is. You two'll just have to go and find some dirty imps to finish you off!)]
+		[citadelArcanist.name]爽完后就把你和[npc.name]推开，奚落道：[citadelArcanist.speech(呵呵，真有趣……对<i>我</i>来说是这样的。你们就去外面找点肮脏的小恶魔来帮忙完事吧！)]
 	</p>
 	<p>
-		You let out a frustrated whine as you realise that the cruel youko isn't at all interested in bringing you or your companion to orgasm. Letting out another giggle, she continues, [citadelArcanist.speech(Now, go on, shoo! I've got more work to do.)]
+		你意识到残忍的妖狐根本不想让你们达到高潮，不由得发出了沮丧的呜咽。她又咯咯笑起来，继续说道：[citadelArcanist.speech(现在走吧，去去去！我还有事要干。)]
 	</p>
 	<p>
-		Letting out a sigh in response to [citadelArcanist.namePos] rude, dismissive behaviour, you step away from her, and wonder what to do next...
+		妖狐粗鲁轻蔑的行径令你叹了口气。你从她身边走开，思索接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1425,39 +1425,39 @@
 	
 	<htmlContent tag="TREASURY_NOT_SEARCHED"><![CDATA[
 	<p>
-		Behind the siren's smashed throne, there's a small doorway, which has miraculously managed to avoid taking any damage from the citadel's collapse. Heading through this doorway, you find yourself entering a large room, which, just like the rest of the keep, has been carved out from the cavern's rock wall.
+		在塞壬支离破碎碎的宝座后面，有一个小门，竟奇迹般地幸免于难。你穿过这个门洞，进入了一个大房间，正如堡垒的其他地方，这个房间也是在洞穴的岩壁上开凿出来的。
 	</p>
 	<p>
-		Unlike the doorway, this room has suffered significant damage. Huge piles of rubble make navigation an arduous task, and the vaulted ceiling is visibly buckling in several places.
+		不同于门口，房间内部遭受了严重的破坏：巨大的瓦砾堆使得行动变得异常艰难，而拱形的天花板上明显有好几个坑。
 	</p>
 	<p>
-		It looks like this room was used for storage, and, despite the dangerous conditions, it would still be worth carefully searching amongst the rubble to see if you could find anything of value...
+		这看起来是个储物间，尽管环境充满了潜在风险，但在碎石与尘埃之间仔细探寻，或许能发掘出一些有价值的东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TREASURY_SEARCHED"><![CDATA[
 	<p>
-		You've already found everything of value that was hidden amongst the rubble, and, with the room having completely collapsed, there's nothing more that can be done in this area...
+		你已经找完了所有隐藏在瓦砾中的值钱玩意，而且房间已经完全坍塌，你在这片区域已经无事可做了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TREASURY_SEARCH"><![CDATA[
 	<p>
-		You and [npc.name] spend a short while carefully searching through the rubble, making sure not to disturb any of the debris that looks to be particularly unstable. It doesn't take long before your companion finds a small chest, containing a considerable amount of flames.
+		你和[npc.name]小心翼翼地在废墟中仔细搜寻了一段时间，确保不会惊动那些摇摇欲坠的残骸。没过多久，你的同伴就找到了一个小箱子，里面装着相当多的火币。
 	</p>
 	<p>
-		Encouraged by this early success, the two of you continue searching, but, after ten more minutes, you've explored the entire room and haven't found anything else of value. Just as you're about to give up, you notice a door-shaped indentation in one of the few sections of wall left undamaged by the collapse. Pressing your [pc.hand] against it, you inadvertently trigger an internal mechanism of some kind, and the stone wall sinks into the floor to reveal a huge, undamaged wardrobe.
+		旗开得胜，你们干劲满满地继续搜索，但又过了十分钟，你们翻遍了整个房间却一无所获。你们正欲放弃，却注意到倒塌的墙壁上有一个门形凹痕。你伸[pc.hand]按去，无意中触发了某种内部机制，石墙陷进了地板，露出了一个完好的巨大衣柜。
 	</p>
 	<p>
-		Unfortunately, this movement seems to set off a minor tremor in the unstable structure, and you and [npc.name] quickly grab everything out of the wardrobe, before rushing off back to the entrance. Running as fast as you can, the two of you dash out of the door and back into the throne room just as the entire ceiling collapses behind you!
+		不幸的是，本就摇摇欲坠的建筑开始轻微震动，你赶忙和[npc.name]拿出衣柜里的所有东西，接着以最快的速度冲出大门，回到宫殿，就在这时，身后的整个天花板坍塌了！
 	</p>
 	<p>
-		Letting out a relieved sigh, you grin as you look down at what you and [npc.name] managed to retrieve...
+		你长舒一口气，朝你和[npc.name]取得的东西露齿一笑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1466,27 +1466,27 @@
 	
 	<htmlContent tag="KEEP_DEFEATED"><![CDATA[
 	<p>
-		The siren's throne room is almost completely caved-in, and you find yourself thinking that it was a miracle how everyone was able to escape unharmed. The dais upon which her throne once stood is now buried under a mound of rubble and rock, but despite the ruinous state of this room, it looks like you'll be able to make your way around the piles of debris to reach the far side.
+		塞壬的宫殿几乎完全塌陷，刚刚大家都能安然无恙地逃出来真是个奇迹。宝座曾经矗立的台子现在已经埋藏在瓦砾和岩石堆下，尽管房间破败不堪，但你似乎可以绕过瓦砾堆到达远处。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP"><![CDATA[
 	<p>
-		You and [npc.name] find yourselves standing before a huge, mined-out recess in the cavern's wall, which you assume to have been the source of all the stone blocks that were used in the construction of the citadel's walls, gateway, and inner tower. The floor has been smoothed right up to the far side of this cavity, where a gigantic stone archway, no less than twenty feet in height, houses a pair of massive, iron-reinforced wooden gates.
+		你和[npc.Name]站在洞窟的一个巨大凹槽前，看来建造堡垒墙壁、正门和内塔所用的石块都是从这里开采出来的。地面一路被压平，直到远处高度不下20英尺的巨大石拱门，其中嵌着一扇巨大的铁加固木门。
 	</p>
 	<p>
-		Knowing that this is where the dark siren resides, you wonder if you should push open the gates and make your entry now, or come back at another time...
+		这里就是暗夜塞壬的居所，你思考现在要不要推门进去，还是下次再来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_BACK_OFF"><![CDATA[
 	<p>
-		Thinking that you're not quite ready to confront [siren.name], you take a step back, and return to wandering around the citadel's stone courtyard...
+		你认为自己还没准备好与[siren.name]正面交锋，于是退后一步，继续在堡垒的石头庭院里闲逛……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1496,84 +1496,84 @@
 	
 	<htmlContent tag="KEEP_ENTRY"><![CDATA[
 	<p>
-		You decide that the time has come to face this 'dark siren', and so, steeling yourself for the worst, you step forwards and push on the heavy wooden gates.
+		你认为现在是时候去面对“暗夜塞壬”了，于是，你做好了最坏的打算，迈步向前，推开了沉重的木门。
 		#IF pc.hasStatusEffect(SE_PHYSIQUE_PERK_0)
-		#THEN As you're so weak, you have to enlist the help of [npc.name] in order to get them to swing open before you, allowing you and your companion to step forwards into the keep.
-		#ELSE Thankfully, they're both unlocked and quite well balanced, and they readily swing open before you and [npc.name], allowing the two of you to step forwards into the keep.
+		#THEN你的力气太小，只好与你的同伴[npc.name]合力推开，共同向主楼迈进。
+		#ELSE幸运的是，门没锁，而且相当稳定，很容易就被推开了，你与[npc.Name]共同向主楼迈进。
 		#ENDIF
 	</p>
 	<p>
-		You find yourself entering a great stone hall, which is bathed in the light of what must be close to a hundred arcane lanterns hanging from the high, vaulted ceiling. Around the edge of this hall, huge stone pillars have been carved from the dark black rock, and underfoot, the same obsidian stone has been cleverly worked into large slabs, the edges of which have been decorated with angular patterns.
+		你进入了一个巨大的石厅，穹顶上悬挂着近百盏奥术灯笼，灯光将大厅照得通明。大厅四周的巨大石柱由深黑色的岩石雕刻而成，脚下同样是黑曜石精心打磨成的大石板，石板的边缘装饰着棱角分明的花纹。
 	</p>
 	<p>
-		The impressive architecture doesn't hold your attention for too long, however, as waiting right there in front of you are the three demons from the imp fortresses. [impMalesLeader.Name] appears to be the most senior of them, as he's standing at the head, with [impAlphaLeader.name] to his right, and [impFemalesLeader.name] to his left. As the huge wooden gates swing shut behind you, he smirks and asks, [impMalesLeader.speech(What? You didn't expect us to let you walk right up to the dark siren, did you?)]
+		不过，这些令人印象深刻的建筑并没有吸引你太长时间，因为三个恶魔手下正等在你面前。[impMalesLeader.Name]看起来是他们当中资历最老的一个，站在最前面，[impFemalesLeader.name]和[impAlphaLeader.name]分站在他左右两侧。你身后的巨大木门轰然关闭，他冷笑着问：[impMalesLeader.speech(什么？你不会以为我们会让你直接走到暗夜塞壬面前吧？)]
 	</p>
 	<p>
-		Looking past these demons, you see a raised dais, and upon the top, there sits a dark stone throne. Sitting upon this seat of power is the citadel's leader, the dark siren herself. Although the rest of this huge hall is well lit by the arcane lanterns, the figure sitting upon the throne itself is curiously shrouded in shadow.
+		你看向恶魔身后的一座高台，一张黑石宝座独居高位，而端坐其中的便是堡垒的主人——暗夜塞壬本人。尽管奥术灯笼将大殿照得一片通明，但宝座上的身影却诡异地笼罩在阴影之中。
 		#IF pc.hasTraitActivated(PERK_CHUUNI)
-		#THEN Wanting this reclusive leader of the imp gangs to reveal herself, you call out your challenge, [pc.speech(So you're the one who presumes to call herself the 'dark siren', are you?! It's time for you to meet your end!)]
-		#ELSE Wanting this reclusive leader of the imp gangs to reveal herself, you call out, [pc.speech(So you're the one who's responsible for the imp gangs terrorising the tunnels of Submission! I've come to put a stop to all that, siren!)]
+		#THEN你想让这位隐居的小恶魔帮派首领现身，大喊着发起挑战：[pc.speech(原来你便是那位自诩为‘暗夜塞壬’的狂妄之徒吗？！准备迎接你的末日吧！)]
+		#ELSE你想让这位隐居的小恶魔帮派首领现身，大喊道：[pc.speech(就是你指使小恶魔帮派在屈城区隧道里胡作非为吧！我是来结束这一切的，塞壬！)]
 		#ENDIF
 		
 	</p>
 	<p>
-		[siren.speech(Siren?)] a surprisingly small and high-pitched voice calls out from the shadows. [siren.speech(Do you not know whom you address? I, the unraveller of fates, destroyer of worlds, recognised daughter of Lyssieth herself! My name strikes fear into the hearts of demon and human alike! Cower in terror, you mere mortals, as I prepare to reveal my true identity!)]
+		[siren.speech(塞壬？)]出人意料的细小而高亢的声音从阴影中传出，[siren.speech(汝可知在对谁说话吗？竟敢对吾，命运的揭示者，世界的毁灭者，莉西丝之女出言不逊！吾之名足以令恶魔和人类闻风丧胆！颤抖吧，凡人！现在，就让我揭示我的真实身份，让你们见识一下真正的力量！)]
 	</p>
 	<p>
 		#IF pc.hasTraitActivated(PERK_CHUUNI)
-		#THEN You can't help but notice [npc.name] flinching at the siren's impressive introduction, but, as intimidating as she may be, you know that she's no match for your ultimate power!
-		#ELSE You can't help but notice [npc.name] flinching at the siren's cringe-worthy introduction, and, as she describes herself as the 'destroyer of worlds', you find yourself letting out a low groan as you share in the second-hand embarrassment.
+		#THEN你无意中发现塞壬令人印象深刻的开场白让[npc.Name]退却了，但那又如何，她怎敌得过你的究极力量！
+		#ELSE你无意中发现塞壬令人脚趾扣地的开场白让[npc.Name]退却了，在她自称是“世界毁灭者”时，你也被尬到绷不住了。
 		#ENDIF
-		 Looking up at the raised dais, you see the leader of these demons standing up, and as she steps forwards into the light, you find yourself looking upon a rather surprising figure.
+		你抬头仰望高台，眼看恶魔们的老大站了起来，待她走到光亮处，你不由得大吃一惊。
 	</p>
 	<p>
-		Not only is the siren a half-demon, just like Lilaya, she's also surprisingly small and fresh-faced. From her appearance, she definitely looks to be no older than eighteen or nineteen, and stands at a rather diminutive [units.size(152)] in height. Unlike all the other succubi you've seen, she's completely lacking any curvaceous, womanly parts, as not only is she almost completely flat-chested, but she also has a small ass and only slightly girly hips.
+		塞壬不仅和莉莱雅一样是半恶魔，她的身材也非常娇小。她面容青涩，看起来绝对不会超过十八九岁，身高也只有[units.size(152)]。跟别的魅魔不一样，她身上没有一丝女性特有的曲线，不但胸部近乎平坦，而且屁股也很小，就连臀部都只有一点点女人味。
 	</p>
 	<p>
-		As well as her diminutive physical qualities, the siren's choice of outfit is also not quite what you'd expected. She's wearing a Witch's dress, boots, and wide-brimmed hat, with a black, purple-trimmed cape to finish it off. An impressive pentagram-themed amulet is hanging around her neck, and, most curiously of all, she's got a square, white eyepatch over her right eye.
+		塞壬除了身材矮小，穿衣品味也不尽如人意。她身着魔女裙与魔女靴，头戴宽边魔女帽，还披了一件黑色的紫边斗篷。她的脖子上挂着一个吸睛的五角星护身符，最奇怪的是，她右眼上还戴着一个方形的白色眼罩。
 	</p>
 	<p>
-		Far more alarming than anything else, however, is the huge, arcane-bladed scythe that she's holding in her right hand. Although it's taller than the siren by a good foot or so, and, besides the green, ethereal blade, appears to be made out of heavy metal, the small succubus shows no sign of struggling to wield it. Smirking down at you as she sees what it is you're looking at, the siren calls out, [siren.speech(Foolish mortals! Know now who it is who will deliver unto you the humiliation of crushing defeat! I, the dark siren, shatterer of dimensions, am none other than [siren.name], Lyssieth's favoured child! If you foolishly wish to face me in battle, then first you must vanquish my demon lieutenants! ~Mwhaha!~)]
+		然而，更震憾的是她右手那把巨大的奥术镰刀。虽然这把镰刀比塞壬高了一个头，而且镰刀除了绿色的奥术刀刃外，通体由重金属制成，但这身材娇小的魅魔却能毫不费力地挥舞它。塞壬居高临下地看着你，嘴角勾起一抹笑，大叫道：[siren.speech(无知庸才！瞧好等下是谁会把你们打得落花流水！吾乃暗夜塞壬，次元粉碎者，莉西丝的宠儿，正是我[siren.name]！若你异想天开想与吾对决，先战胜吾之扈从吧！~哇哈哈！~)]
 	</p>
 	<p>
-		As she says this, the three demons start to move forwards, and you realise that you and [npc.name] only have a moment in which to react before they attack the two of you!
+		她如此说着，三个恶魔也逐渐逼近。你意识到在他们攻击前，你和[npc.Name]只有片刻的反应时间！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_RETURN"><![CDATA[
 	<p>
-		Once again, you decide to try and confront and defeat [siren.name], and so, steeling yourself for the fight to come, you step forwards and push on the heavy wooden gates.
+		你再次决定与[siren.name]对战，于是，在做好迎战准备后，你迈步向前，推开了沉重的木门。
 		#IF pc.hasStatusEffect(SE_PHYSIQUE_PERK_0)
-		#THEN As you're so weak, you have to enlist the help of [npc.name] in order to get them to swing open before you, allowing you and your companion to step forwards into the keep.
-		#ELSE Thankfully, they're both unlocked and quite well balanced, and they readily swing open before you and [npc.name], allowing the two of you to step forwards into the keep.
+		#THEN你的力气太小，只好与你的同伴[npc.name]合力推开，共同向主楼迈进。
+		#ELSE幸运的是，门没锁，而且相当稳定，很容易就被推开了，你与[npc.Name]共同向主楼迈进。
 		#ENDIF
 	</p>
 	<p>
-		The great stone hall looks exactly as it did the last time you were here, and is still illuminated by what must be close to a hundred arcane lanterns hanging from the high, vaulted ceiling. Around the edge of the hall, huge stone pillars have been carved from the dark black rock, and underfoot, the same obsidian stone has been cleverly worked into large slabs, the edges of which have been decorated with angular patterns.
+		巨大的石厅看起来和你上次来时一模一样，穹顶上悬挂着近百盏奥术灯笼，依然灯火通明。大厅四周的巨大石柱由深黑色的岩石雕刻而成，脚下同样是黑曜石精心打磨成的大石板，石板的边缘装饰着棱角分明的花纹。
 	</p>
 	<p>
-		Just as before, the three demon lieutenants are waiting right there in front of you. [impMalesLeader.Name] appears to be the most senior of them, as he's standing at the head, with [impAlphaLeader.name] to his right, and [impFemalesLeader.name] to his left. As the huge wooden gates swing shut behind you, he smirks and asks, [impMalesLeader.speech(Back again, [pc.race]? Didn't you and friend learn your lesson the last time?)]
+		一如往常，三个恶魔手下在等着你。[impMalesLeader.Name]看起来是他们当中资历最老的一个，站在最前面，[impFemalesLeader.name]和[impAlphaLeader.name]分站在他左右两侧。你身后的巨大木门轰然关闭，他冷笑着问：[impMalesLeader.speech(又回来了，[pc.race]？你和你的朋友还没吸取上次教训吗？)]
 	</p>
 	<p>
 		#IF pc.hasTraitActivated(PERK_CHUUNI)
-		#THEN Before you can answer, [siren.name] herself stands up from her throne, and delivers yet another impressive speech,
-		#ELSE Before you can answer, [siren.name] herself stands up from her throne, and delivers yet another cringe-worthy speech,
+		#THEN不等你回答，[siren.name]从宝座上站了起来，再次作了一番激动人心的演说：
+		#ELSE不等你回答，[siren.name]从宝座上站了起来，再次作了一番令人脚趾扣地的演说：
 		#ENDIF
-		 [siren.speech(You would dare to return to the hall of the most feared arcane user the world has ever witnessed? You foolish mortals! Prepare to be vanquished!)]
+		[siren.speech(尔等岂敢再度踏足惊世骇俗的奥术使用者的殿堂？无知庸才！准备被击垮吧！)]
 	</p>
 	<p>
-		As the small half-succubus says this, the three demons start to move forwards, and you realise that you only have a moment in which to react before they attack you!
+		半魅魔如此说着，三个恶魔也逐渐逼近。你意识到在他们攻击你之前，你只有片刻的反应时间！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_RING"><![CDATA[
 	<p>
-		<i>Telling the Siren about Lyssieth's ring would undoubtedly raise her suspicions. You could probably find an opportunity to trick her into wearing it after you've dealt with these demons.</i>
+		<i>现在提起莉西丝的戒指无疑会引起塞壬的怀疑。等你解决了这些恶魔，也许可以找个机会骗她戴上戒指。</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1581,19 +1581,19 @@
 	
 	<htmlContent tag="KEEP_DEMONS_DEFEATED"><![CDATA[
 	<p>
-		[impMalesLeader.speech(Mistress, w-we've failed you!)] [impMalesLeader.name] cries out, before collapsing to the floor beside [impAlphaLeader.name] and [impFemalesLeader.name].
+		[impMalesLeader.speech(主人，我、我们失败了！)][impMalesLeader.name]大叫道，与[impAlphaLeader.name]和[impFemalesLeader.name]倒在地上。
 	</p>
 	<p>
-		Looking over at the siren's throne, you see [siren.name] stepping down from the raised dais as she laughs, [siren.speech(Fools! Now you both shall witness my vast astronomical powers! The very fabric of space and time bends to my will!)]
+		你望着塞壬的宝座，看[siren.name]从高台上走下来，她笑着说：[siren.speech(蠢货！现在，见证吾之伟力吧！时空都将臣服于吾之意愿！)]
 	</p>
 	<p>
-		Thrusting one foot forwards, [siren.name] strikes a heroic pose, and, lifting her huge scythe above her head with one arm, she effortlessly twirls it around in an impressive display of strength and finesse. Reaching up to grab the shaft with her other hand, she then swings it around into a low-ready position, before letting out another #IFpc.hasTraitActivated(PERK_CHUUNI)#THENspirited#ELSEridiculous#ENDIF laugh, [siren.speech(~Mwhaha!~ Prepare for your obliteration!)]
+		[siren.name]单脚向前一蹬，摆出英雄一般的姿势，单臂将巨大的镰刀举过头顶，毫不费力地旋转起来，展示出惊人的力量和技巧。随即她又伸出另一只手抓住镰刀柄，将镰刀转到准备的低位，接着又发出一阵#IFpc.hasTraitActivated(PERK_CHUUNI)#THEN勇猛的#ELSE可笑的#ENDIF笑声：[siren.speech(~哇哈哈！~准备好迎接你的毁灭了吗！)]
 	</p>
 	<p>
-		You don't have any time in which to recover from your fight against the demons, as [siren.name] prepares to immediately fight the two of you!
+		你还来不及从刚刚与恶魔的战斗中恢复过来，[siren.name]就立马向你们发起挑战！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1601,35 +1601,35 @@
 	
 	<htmlContent tag="KEEP_CHALLENGE"><![CDATA[
 	<p>
-		As impressive as [siren.namePos] speech was, you know that she's no match for your indomitable might. As it would be a waste of your precious time to be swatting these pathetic demons out of your way, you simply smirk at the half-succubus and call out, [pc.speech(Big words, from someone too terrified to fight me one-on-one! I honestly expected more from someone calling herself the 'dark siren', but I see that you're just another poser, hiding behind her minions!)]
+		虽然[siren.namePos]的演说令人印象深刻，但你知道你百折不回的力量不是她能比的。赶走这些可悲的恶魔喽喽不过是在浪费你的宝贵时间，所以你只是冲着半魅魔嗤笑一声，嘲讽起来： [pc.speech(说这么多大话，还不是害怕跟我一对一单挑！老实说，我对所谓「暗夜塞壬」抱有更高的期望，但我看你好像只会装腔作势，躲在爪牙后面！)]
 	</p>
 	<p>
-		[siren.speech(You dare speak to me in such a manner?! Have you no understanding of the arcane powers that I wield? You are nothing to me!)] [siren.name] replies, stepping down from her dais. While this forwards movement was undoubtedly intended to intimidate you, the loss of the extra height afforded to her by her raised platform causes her to end up being hidden behind her demon lieutenants. In a flustered attempt to resolve this issue, she calls out, [siren.speech(S-Stand aside, minions!)]
+		[siren.speech(你竟敢这样跟我讲话？！你对我的奥术之力一无所知吗？你不过是蝼蚁罢了！)][siren.name]回答，走下高台。虽然她这一举动只不过是为了吓唬你，但没有了高台的抬举，她只能躲在恶魔副手身后，为了解决问题慌张大喊，[siren.speech(站，站边上去，爪牙！)]
 	</p>
 	<p>
-		As the demons do as they're commanded, you respond to the siren's last threat, [pc.speech(You think that I, [pc.master] of the arcane, vanquisher of demons, and future ruler of all Dominion, would consider one as weak as you to be a threat?! Foolish succubus! I'll give you one chance to surrender, as a symbol of my supreme mercy!)]
+		当恶魔们听命行事时，你对塞壬最后的威胁回应道：[pc.speech(你以为我，奥术的[pc.master]，恶魔的征服者，未来整个御城区的统治者，会把你这个蝼蚁放在眼里吗？愚蠢的魅魔！我大发慈悲，给你一次投降的机会！)]
 	</p>
 	<p>
-		[siren.Name] uses her telekinetic arcane power to swish her cape out behind her as she replies, [siren.speech(What an ignorant fool! The very heavens themselves shall bear witness as I unleash my cataclysmic powers upon you!)]
+		[siren.Name]使出念力将披风向身后一甩，回答道：[siren.speech(愚蠢之辈！苍穹为证，吾将降下毁灭之力于汝等！)]
 	</p>
 	<p>
-		[pc.speech(I laugh at your idle threats! The cosmic forces of the universe itself obey my every command, and I need but a fraction of my immense power to defeat one such as you!)]
+		[pc.speech(浅薄的挑衅，可笑！宇宙之力皆为吾所用，只需冰山一角就足以令尔等灰飞烟灭！)]
 	</p>
 	<p>
-		The three demon lieutenants flinch and groan as you and [siren.name] continue to hurl increasingly-outrageous challenges at one another. Knowing that there's surely no possibility of their reactions being from embarrassment, you realise that just the mere threat of unleashing your true power is terrifying them. Not wanting them to suffer too much, you tell [npc.name] to stand back, before smirking at [siren.name] as you deliver your ultimatum, [pc.speech(So, siren, dare you face me one-on-one and put your words to the test? Or are you just another poser, like the countless thousands that I've already vanquished?)]
+		随着你和[siren.name]的叫嚣越来越离谱，三个恶魔手下缩在一旁哼哼。你知道他们绝对不是在尴尬，肯定仅仅是因为你要释放真正的力量就感到恐惧。你不想让他们吃太多苦头，于是让[npc.Name]退后，冷笑着对[siren.name]发出最后通牒：[pc.speech(那么，塞壬，汝是否有胆量与吾对决，让吾见识汝之实力？抑或汝只是在装腔作势，正如曾经被吾摧毁的无数蝼蚁一样？)]
 	</p>
 	<p>
-		[siren.speech(You'll pay dearly for your insults! Of course I'll face you one-on-one!)] [siren.name] shouts. [siren.speech(Stand back, you three, and don't you dare interfere in our duel!)]
+		[siren.speech(竟敢侮辱吾，其罪当诛！吾当然会接受汝的挑战！)][siren.name]大喊。[siren.speech(尔等退下，别插手我们的较量！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_CHALLENGE_RING"><![CDATA[
 	<p>
-		<i>Now would be the perfect time to try and trick [siren.name] into wearing Lyssieth's ring!</i>
+		<i>现在是尝试诱骗[siren.name]戴上莉西丝的戒指的最佳时机！</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1637,98 +1637,98 @@
 	
 	<htmlContent tag="KEEP_CHALLENGE_POST_FIGHT_RING_TRICK"><![CDATA[
 	<p>
-		[pc.speech(That was easier than I expected,)] you say, [pc.speech(It really is pointless for you to try and best me. After all, I have the blessing of Lyssieth herself! That's right, your mother has lent me her power in order to defeat you!)]
+		[pc.speech(这比我想象的要轻松得多，)]你说，[pc.speech(想超越我是徒劳的。毕竟，我得到了莉西丝本人的祝福！没错，为了打败你，你母亲把她的力量借给了我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_CHALLENGE_DUEL_RING_TRICK"><![CDATA[
 	<p>
-		[pc.speech(I knew you wouldn't back down from the challenge,)] you say, [pc.speech(but it really is pointless for you to try and best me. After all, I have the blessing of Lyssieth herself! That's right, your mother has lent me her power in order to defeat you!)]
+		[pc.speech(我就知道你不会退缩，)]你说，[pc.speech(但想超越我是徒劳的。毕竟，我得到了莉西丝本人的祝福！没错，为了打败你，你母亲把她的力量借给了我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_CHALLENGE_RING_TRICK"><![CDATA[
 	<p>
-		Producing the signet ring that Elizabeth, the captain of Lyssieth's guard, gave to you, you hold it up to the light to show to [siren.name]. As she sees what it is you're holding, her defiant expression suddenly breaks, and it almost looks and sounds as though she's about to burst into tears as she screams, [siren.speech(Give that back! M-Mother would never give that to someone like you! Y-You've stolen it! <i>Give it back!</i>)]
+		你拿出莉西丝卫队长伊丽莎白给你的指环，对着光亮向[siren.name]展示。她一看到你手上的东西，脸上的蔑视骤变为崩溃，声音听起来快要哭了，她尖叫着：[siren.speech(还给我！妈、妈妈才不会把它给你这种人！是你、你偷了它！<i>还给我！</i>)]
 	</p>
 	<p>
-		You shake your head in refusal, and, putting on your most antagonising smirk, you continue to hold the ring up in such a way that it would be easy to have it knocked from your [pc.hand]. Your provocative display causes [siren.namePos] emotions to get the better of her, and, not thinking clearly, she falls for your trick. Screaming once more to hand over her mother's ring, [npc.name] suddenly casts a weak version of the spell, 'slam', which you allow to hit your outstretched [pc.arm] and, causing you to drop the ring to the floor.
+		你摇头拒绝，并摆出一副最像反派的坏笑脸，你的[pc.hand]继续举着戒指，以便让它能被轻松打落。你的挑衅让[siren.namePos]情绪失控，她迷迷糊糊就上了你的当。[npc.name]又尖叫着要你交出她母亲的戒指，突然施放了一个弱化版的“重击术”，你故意让它击中你伸长的[pc.arm]，把戒指打落到地上。
 	</p>
 	<p>
-		Immediately, [siren.name] uses her telekinetic arcane power to pull the ring into her outstretched palm, and, letting out a triumphant laugh, she instantly puts it on. [siren.speech(~Mwhaha!~ Oh, you'll pay <i>dearly</i> for stealing mother's ring! Why, I'll... W-Wait... What is this?!)]
+		随即，[siren.name]使出念力，将戒指拉到她伸出的手掌中，她发出胜利的笑声，立马戴上了戒指。[siren.speech(~哇哈哈！~哦，你会为偷了妈妈的戒指付出<i>惨痛</i>代价的！怎么，我会……等、等等……这是什么？！)]
 	</p>
 	<p>
-		The arcane enchantment woven into the ring suddenly takes effect, cutting [siren.namePos] gloating short as bright red letters appear in the air before her;
+		戒指上的奥术附魔突然生效，当鲜红的字母浮现在空中时，[siren.namePos]洋洋得意的表情戛然而止；
 	</p>
 	<p style='text-align:center;'>
-		<i>Slave identification: [style.boldArcane([siren.name])]</i><br/>
-		<i>Lilin owner detected; [style.boldArcane(Lyssieth)]</i><br/>
-		<i>Bypass slave administration - Slave teleportation diverted to Lyssieth's Palace</i>
+		<i>奴隶身份验证：[style.boldArcane([siren.name])]</i><br/>
+		<i>检测到主人莉琳：[style.boldArcane(莉西丝)]</i><br/>
+		<i>绕过奴隶行政管理——将奴隶传送转移到莉西丝宫殿</i>
 	</p>
 	<p>
-		[siren.speech(No!)] [siren.name] screeches, and, just before she disappears from sight, she swings her scythe around over her head, before slamming the base of the shaft onto the stone floor. Lifting up her eyepatch, she reveals that her irises are heterochromatic, and, while her left eye is green, the one that she's just revealed is glowing purple. With a maniacal laugh, she calls out, [siren.speech(Siren's call, obliterate them both! I'll get my reven-)]
+		[siren.speech(不要！)][siren.name]尖叫。就在她消失在视线之前，她把镰刀举过头顶，把柄狠狠地砸在石板地上。她掀开眼罩，这居然是异色虹膜，左眼是绿色的，而刚刚露出来的眼睛则是紫色的。她狂笑着喊道：[siren.speech(塞壬的呼唤，摧毁他们！我会回来报——)]
 	</p>
 	<p>
-		As [siren.name] suddenly vanishes mid-sentence, the arcane spell which she just unleashed takes effect, and a loud, piercing screech echoes out around the huge throne room. You, [npc.name], and the three demon lieutenants all cover your ears, flinching as the reverberating wail causes the ground to rumble and shake. Thankfully, this loud noise quickly fades away, but as it does, the huge stone slabs beneath your feet start to crack and break apart. From these fissures in the floor, arcane poison starts to spew forth, and, as you start to step back towards the exit, the resonating vibrations from this powerful spell cause a huge chunk of rock to suddenly split from the ceiling, which then falls to crash directly onto the siren's vacated throne.
+		[siren.name]话音未落便已经消散，但她刚刚释放的奥术却生效了，震耳欲聋的尖叫响彻整个大殿。回荡的哀嚎声让震得大地都在颤抖，你，[npc.Name]，还有三个恶魔手下都捂着耳朵后退。好在这巨响声音来得快去得也快，但几乎是在它消散的瞬间，你脚下的巨大石板层层开裂、分崩离析，奥术毒素从这些裂缝中喷涌而出。你向出口退去时，这个强大法术产生的共鸣使得屋顶上的一大片石头突然碎裂，并轰然落下，正好砸在塞壬空荡荡的宝座上。
 	</p>
 	<p>
-		[impMalesLeader.speech(Get out of here!)] [impMalesLeader.name] shouts, grabbing [impAlphaLeader.name] and [impFemalesLeader.name] by the arms and running towards the exit.
+		[impMalesLeader.speech(快离开这里！)][impMalesLeader.name]大喊，抓着[impAlphaLeader.name]和[impFemalesLeader.name]的手臂跑向出口。
 	</p>
 	<p>
-		The siren's spell appears to have inadvertently caused the entire underground citadel to start to collapse, and, as you and your companion hurry to follow the three demons, yet more chunks of the ceiling start to break apart and fall to the floor with resounding crashes.
+		塞壬的法术似乎无意中导致了整个地下堡垒的坍塌，当你和同伴匆忙追赶三个恶魔时，越来越多的天花板开始碎裂，掉落在地板上，发出响亮的撞击声。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_CHALLENGE_RING_TRICK_ESCAPE"><![CDATA[
 	<p>
-		You and [npc.name] rush out of the throne room's huge stone archway to discover that the siren's spell is causing the entire citadel to collapse. Huge sections of the cavern's ceiling are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+		你和[npc.Name]冲出宫殿的巨石拱门，发现塞壬的法术正在摧毁城堡。庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响。岩石和碎石散落在雕刻的石板上。
 	</p>
 	<p>
-		Thankfully, it looks as though the rest of the citadel's residents immediately started evacuating at the first sign of danger, and, over on the far side of the courtyard, the last group of imps are rushing out of the main gateway. With your heart pounding in your chest,
+		值得庆幸的是，看起来堡垒里的其他居民一有危险迹象就立即撤离了，在庭院的远处，最后一群小恶魔正冲出大门。你的心怦怦直跳，
 		#IF pc.isAbleToFly()
-		#THEN you make good use of your ability to fly, and swiftly dart through the air alongside your companion, dodging falling boulders and collapsing masonry before following the three demons out through the main gates into Submission's cavern.
+		#THEN将自己的飞行技巧发挥到了极致，和你的同伴在空中快速穿梭，躲避着落下的巨石与砖块，跟随着三个恶魔穿过大门，进入屈城区洞窟。
 		#ELSE
 			#IF pc.getRace()==RACE_SQUIRREL_MORPH || pc.getRace()==RACE_CAT_MORPH
-			#THEN you make good use of your body's agility to dodge falling boulders and collapsing masonry as you and your companion rush across the courtyard and follow the three demons out into Submission's cavern.
-			#ELSE you somehow manage to dodge all of the falling boulders and collapsing masonry as you and your companion rush across the courtyard and follow the three demons out into Submission's cavern.
+			#THEN将身体的灵活性发挥到了极致，躲避掉落的巨石和坍塌的砖石，和你的同伴冲过庭院，跟随三个恶魔来到屈城区洞窟。
+			#ELSE你不知怎么躲过了所有掉落的巨石和倒塌的砖石，和你的同伴冲过庭院，跟随三个恶魔来到屈城区洞窟。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Miraculously, you see that everyone within the citadel managed to make it out without serious injury, but, while that's a relief for everybody involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard, who are busy taking all of the escaping imps into custody. Several of them are also talking to [siren.namePos] lieutenants, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+		这简直就是个奇迹，你看到堡垒里的每个人都没有大碍地成功出逃。虽然这让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐卫兵包围了大门，他们手持奥术滑膛枪，正忙着把所有逃跑的小恶魔抓起来。其中几人还在和[siren.namePos]的手下们谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 	</p>
 	<p>
-		There's no hope of any escape from this situation, and as you wonder what to do next, the half-succubus officer in charge points at you and [npc.name] and orders, [genericFemale.speech(Stop! You there, [pc.race], explain to me what's going on, right this instant!)]
+		看起来现在逃跑是没希望了，你思索接下来该怎么办，这时负责的半魅魔警官指着你和[npc.Name]命令道：[genericFemale.speech(站在那别动，[pc.race]，给我解释一下这是怎么回事，立刻、马上！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_CHALLENGE_RING_TRICK_ESCAPE_NO_IMPS"><![CDATA[
 	<p>
-		You and [npc.name] rush out of the throne room's huge stone archway to discover that the siren's spell is causing the entire citadel to collapse. Huge sections of the cavern's ceiling are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+		你和[npc.Name]冲出宫殿的巨石拱门，发现塞壬的法术正在摧毁城堡。庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响。岩石和碎石散落在雕刻的石板上。
 	</p>
 	<p>
-		Thankfully, you've already defeated and driven out all of the residents of the citadel, so, other than you, [npc.name], and the demon lieutenants, nobody is in any danger. With your heart pounding in your chest,
+		值得庆幸的是，你先前已经把堡垒里的其他居民全都打跑了，所以除了你、[npc.Name]和恶魔手下之外，没有人有危险。你的心怦怦直跳，
 		#IF pc.isAbleToFly()
-		#THEN you make good use of your ability to fly, and swiftly dart through the air alongside your companion, dodging falling boulders and collapsing masonry before following the three demons out through the main gates into Submission's cavern.
+		#THEN将自己的飞行技巧发挥到了极致，和你的同伴在空中快速穿梭，躲避着落下的巨石与砖块，跟随着三个恶魔穿过大门，进入屈城区洞窟。
 		#ELSE
 			#IF pc.getRace()==RACE_SQUIRREL_MORPH || pc.getRace()==RACE_CAT_MORPH
-			#THEN you make good use of your body's agility to dodge falling boulders and collapsing masonry as you and your companion rush across the courtyard and follow the three demons out into Submission's cavern.
-			#ELSE you somehow manage to dodge all of the falling boulders and collapsing masonry as you and your companion rush across the courtyard and follow the three demons out into Submission's cavern.
+			#THEN将身体的灵活性发挥到了极致，躲避掉落的巨石和坍塌的砖石，和你的同伴冲过庭院，跟随三个恶魔来到屈城区洞窟。
+			#ELSE你不知怎么躲过了所有掉落的巨石和倒塌的砖石，和你的同伴冲过庭院，跟随三个恶魔来到屈城区洞窟。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Miraculously, you see that the four of you managed to make it out without injury, but, while that's a relief for everybody involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard. Several of them are talking to [siren.namePos] lieutenants, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+		这简直就是个奇迹，你们四人都毫发无损地逃了出来。虽然这让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐卫兵包围了大门，他们手持奥术滑膛枪严阵以待。其中几人还在和[siren.namePos]的手下们谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 	</p>
 	<p>
-		There's no hope of any escape from this situation, and as you wonder what to do next, the half-succubus officer in charge points at you and [npc.name] and orders, [genericFemale.speech(Stop! You there, [pc.race], explain to me what's going on, right this instant!)]
+		看起来现在逃跑是没希望了，你思索接下来该怎么办，这时负责的半魅魔警官指着你和[npc.Name]命令道：[genericFemale.speech(站在那别动，[pc.race]，给我解释一下这是怎么回事，立刻、马上！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- KEEP_COLLAPSE_ESCAPE -->
@@ -1736,69 +1736,69 @@
 	<!--Escape after enslaving dark siren with ring:-->
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_GUARDS_ENSLAVE"><![CDATA[
 	<p>
-		With little choice but to do as you're told, you explain to the officer that you were instructed by Elizabeth to apprehend [siren.name]. Recounting how you were able to trick her into wearing the enslavement ring, you describe how she was able to cast one final spell before vanishing, which caused the citadel to collapse.
+		没办法，你只能老老实实向警官解释，是伊丽莎白指示你来逮捕[siren.name]。你讲述了如何诱骗她戴上奴役戒指，她又是如何在消失前施下最后一个咒语使城堡坍塌。
 	</p>
 	<p>
-		[genericFemale.speech(I see,)] the officer says, before turning to one of her subordinates. [genericFemale.speech(Elrinia, did Elizabeth mention any of this to you?)]
+		[genericFemale.speech(我了解了。)]警官说完，转向她的一名下属。[genericFemale.speech(埃尔里尼亚，伊丽莎白有没有跟你说过这些？)]
 	</p>
 	<p>
-		The half-succubus which the officer is addressing quickly replies, [style.speechFeminineStrong(Yes, Ma'am, it's as the [pc.race] says. The captain did ask [pc.herHim] to help with subduing [siren.name], who is now safely being escorted back to Lyssieth.)]
+		半魅魔警官简短地回复道：[style.speechFeminineStrong(是的长官，正如这[pc.race]所说的。队长确实请求[pc.herHim]协助抓捕[siren.name]，并安全护送回莉西丝殿下处。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!--Escape with dark siren:-->
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_GUARDS_EXPLAIN"><![CDATA[
 	<p>
-		With little choice but to do as you're told, you explain to the officer that you were instructed by Elizabeth to apprehend [siren.name]. Recounting the fight you had with the siren, you describe how she was able to cast one final spell before being defeated, which is what caused the citadel to collapse.
+		没办法，你只能老老实实向警官解释，是伊丽莎白指示你来逮捕[siren.name]。你讲述了如何在战斗中将她击败，她又是如何在被击败前使出咒语让城堡崩塌。
 	</p>
 	<p>
-		[genericFemale.speech(I see,)] the officer says, before turning to one of her subordinates. [genericFemale.speech(Elrinia, did Elizabeth mention any of this to you?)]
+		[genericFemale.speech(我了解了。)]警官说完，转向她的一名下属。[genericFemale.speech(埃尔里尼亚，伊丽莎白有没有跟你说过这些？)]
 	</p>
 	<p>
-		The half-succubus which the officer is addressing quickly replies, [style.speechFeminineStrong(Yes, Ma'am, it's as the [pc.race] says. The captain did ask [pc.herHim] to help with subduing [siren.name].)]
+		半魅魔警官简短地回复道：[style.speechFeminineStrong(是的长官，队长确实请求[pc.herHim]协助将[siren.name]缉拿归案。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_GUARDS_EXPLAIN_PRE_QUEST"><![CDATA[
 	<p>
-		With little choice but to do as you're told, you explain to the officer that you were trying to put an end to the imp gangs by confronting [siren.name]. Recounting the fight you had with the siren, you describe how she was able to cast one final spell before being defeated, which is what caused the citadel to collapse.
+		没办法，你只能老老实实向警官解释，你试图铲除贼首[siren.name]来击溃小恶魔帮派。你讲述了如何在战斗中将她击败，她又是如何在被击败前使出咒语让城堡崩塌。
 	</p>
 	<p>
-		[genericFemale.speech(I see,)] the officer says, before turning to one of her subordinates. [genericFemale.speech(Elrinia, did Elizabeth mention anything about what to do with any third parties who assisted us?)]
+		[genericFemale.speech(我了解了。)]警官说完，转向她的一名下属。[genericFemale.speech(埃尔里尼亚，伊丽莎白有没有跟你说过要如何处理协助我们的第三方？)]
 	</p>
 	<p>
-		The half-succubus which the officer is addressing quickly replies, [style.speechFeminineStrong(Yes, Ma'am, the captain thought of everything. She stated that anyone who helped in our mission should be offered our gratitude.)]
+		半魅魔警官简短地回复道：[style.speechFeminineStrong(是的长官，队长已经考虑好一切。她说，我们应该感谢任何帮助我们执行任务的人。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_GUARDS_IMPS"><![CDATA[
 	<p>
-		[genericFemale.speech(Well, in that case, you have our sincere thanks,)] the officer says to you. [genericFemale.speech(I've lost count of how many days we've been camped out, watching the gates of that citadel. Lyssieth has been wanting to have her daughter reigned in for quite some time, but [siren.name] obviously knew this, and didn't dare leave her fortress. Anyway, thanks to you, this whole ordeal is now over. These imps are responsible for countless muggings and assaults, so we'll get them handed over to the Enforcers, who I'm sure will take great pleasure in having them all enslaved.)]
+		[genericFemale.speech(好吧，这样的话，我们衷心感谢您的帮助，)]警官对你说，[genericFemale.speech(我已经记不清我们在堡垒门口蹲守几天了。莉西丝早就想管教她的女儿了，但[siren.name]显然知道这一点，所以不敢离开她的要塞。总之，多亏了你，这一切都结束了。这些小恶魔该为先前的无数抢劫和袭击事件负责，所以我们会把他们移交给执法者，我相信执法者会非常乐意把他们都变成奴隶。)]
 	</p>
 	<p>
-		With that, the officer turns around and orders her subordinates to round up the imps. As they're about to march off to the nearest Enforcer post, she turns around and calls out, [genericFemale.speech(Thank you again for your assistance!)]
+		说罢，警官转身命令下属围捕小恶魔。当他们正准备前往最近的执法者岗哨时，她转过身来喊道： [genericFemale.speech(再次感谢你的帮助！)]
 	</p>
 	<p>
-		As Lyssieth's guards head off into Submission's tunnels, you and [npc.name] turn back towards the citadel. It looks like the collapse has come to a complete halt, and you wonder if the two of you should head back through the gates and explore the ruins...
+		当莉西丝的卫兵向屈城区的地道走去时，你和[npc.Name]回头看了看堡垒。看起来坍塌已经完全结束了，你思索要不要穿过大门，去探索废墟一番……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_GUARDS_NO_IMPS"><![CDATA[
 	<p>
-		[genericFemale.speech(Well, in that case, you have our sincere thanks,)] the officer says to you. [genericFemale.speech(I've lost count of how many days we've been camped out, watching the gates of that citadel. Lyssieth has been wanting to have her daughter reigned in for quite some time, but [siren.name] obviously knew this, and didn't dare leave her fortress. Anyway, thanks to you, this whole ordeal is now over. We'll be on our way.)]
+		[genericFemale.speech(好吧，这样的话，我们衷心感谢您的帮助，)]警官对你说，[genericFemale.speech(我已经记不清我们在堡垒门口蹲守几天了。莉西丝早就想管教她的女儿了，但[siren.name]显然知道这一点，所以不敢离开她的要塞。总之，多亏了你，这一切都结束了。我们这就走。)]
 	</p>
 	<p>
-		With that, the officer turns around and orders her subordinates to form up. As they're about to march off back to Lyssieth's palace, she turns around and calls out, [genericFemale.speech(Thank you again for your assistance!)]
+		说罢，警官转身命令下属列队集结。当他们正准备返回莉西丝的宫殿时，她转过身来喊道： [genericFemale.speech(再次感谢你的帮助！)]
 	</p>
 	<p>
-		As the demon guards head off into Submission's tunnels, you and [npc.name] turn back towards the citadel. It looks like the collapse has come to a complete halt, and you wonder if the two of you should head back through the gates and explore the ruins...
+		当莉西丝的卫兵向屈城区的地道走去时，你和[npc.Name]回头看了看堡垒。看起来坍塌已经完全结束了，你思索要不要穿过大门，去探索废墟一番……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1806,181 +1806,181 @@
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_VICTORY"><![CDATA[
 	<p>
-		[siren.speech(I-Impossible!)] [siren.name] weakly cries out, stumbling backwards and panting for breath. Summoning the last of her strength, she lifts her scythe up above her head, before slamming the base of the shaft down onto the stone floor. Lifting up her eyepatch, she reveals that her irises are heterochromatic, and, while her left eye is green, the one that she's just revealed is glowing purple. With a maniacal laugh, she calls out, [siren.speech(Siren's call, obliterate them! I'll get my revenge...)]
+		[siren.speech(不……不可能！)][siren.name]她虚弱地喊道，踉跄后退，气喘吁吁。她用尽最后的力气，将镰刀举过头顶，然后将镰刀的柄狠狠地砸在石板地上。她掀开眼罩，这居然是异色虹膜，左眼是绿色的，而刚刚露出来的眼睛则是紫色的。她狂笑着喊道：[siren.speech(塞壬的呼唤，摧毁他们！我会回来报仇的……)]
 	</p>
 	<p>
-		With the very last of her aura's power drained by the spell she's just unleashed, the siren weakly collapses down onto the floor in front of you and your companion. Before you're able to take any further action, a loud, piercing screech suddenly echoes out around the huge throne room. You, [npc.name], and the three demon lieutenants all cover your ears, flinching as the reverberating wail causes the ground to rumble and shake. Thankfully, this loud noise quickly fades away, but as it does, the huge stone slabs beneath your feet start to crack and break apart. From these fissures in the floor, arcane poison starts to spew forth, and, as you leap out of the way of this, the resonating vibrations from [siren.namePos] powerful spell cause a huge chunk of rock to suddenly split from the ceiling, which then falls to crash directly onto the siren's vacated throne.
+		塞壬耗尽了最后一丝灵气释放出这个法术，随后便无力地瘫倒在地上。你还来不及采取任何行动，震耳欲聋的尖叫便响彻整个大殿。回荡的哀嚎声让震得大地都在颤抖，你，[npc.Name]，还有三个恶魔手下都捂着耳朵后退。好在这巨响声音来得快去得也快，但几乎是在它消散的瞬间，你脚下的巨大石板层层开裂、分崩离析，奥术毒素从这些裂缝中喷涌而出。你跳着躲避时，这个强大法术产生的共鸣使得屋顶上的一大片石头突然碎裂，并轰然落下，正好砸在塞壬空荡荡的宝座上。
 	</p>
 	<p>
-		[impMalesLeader.speech(We have to get out of here!)] [impMalesLeader.name] shouts, grabbing [impAlphaLeader.name] and [impFemalesLeader.name] by the arms and pushing them towards the exit. [impMalesLeader.speech(Run!)]
+		[impMalesLeader.speech(我们得离开这里！)][impMalesLeader.name]大喊，扯着[impAlphaLeader.name]和[impFemalesLeader.name]的手臂推向出口。[impMalesLeader.speech(跑起来！)]
 	</p>
 	<p>
-		The siren's spell appears to have inadvertently caused the entire underground citadel to start to collapse, and, as the three demons move to make their escape, yet more chunks of the ceiling start to break apart and fall to the floor with resounding crashes.
+		塞壬的法术似乎无意中导致了整个地下堡垒的坍塌，当三个恶魔准备逃跑时，越来越多的天花板开始碎裂，掉落在地板上，发出响亮的撞击声。
 	</p>
 	<p>
-		[npc.speech(H-Help!)] [siren.name] weakly cries out, clearly too exhausted to escape this terrible danger without your assistance...
+		[npc.speech(救……救命！)][siren.name]有气无力地呼喊着，显然已经筋疲力尽，没有你的帮助，她无法逃脱这可怕的险境……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_COMBAT_HERO"><![CDATA[
 	#IF pc.getHeightValue()>siren.getHeightValue()
 	#THEN
 		<p>
-			Even though she was your enemy just a moment ago, there's no way you're going to leave [siren.name] behind! Turning towards your companion, you command [npc.herHim], [pc.speech(Get out of here, [npc.name]! I'm going to help [siren.name]!)]
+			即使[siren.name]刚才还是你的敌人，你也不可能丢下她不管！你转身告知你的同伴：[pc.speech([npc.name]，你先离开这里！我要去救[siren.name]！)]
 		</p>
 		<p>
-			Placing [npc.her] trust in you, your companion does as you say, and runs to safety. Dodging a falling chunk of the ceiling, you rush over to where [siren.name] is lying on the floor, and, scooping her up in your [pc.arms], you turn and rush out of the throne room's huge stone archway, only to discover that her spell is causing the entire citadel to collapse. Huge sections of the cavern's roof are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+			你的同伴信任你，听话跑到了安全的地方。你躲开掉下来的大块天花板，冲到躺在地上的[siren.name]身边，用[pc.arms]将她撑起，转身冲出宫殿的巨石拱门。塞壬的法术正在摧毁城堡，庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响。岩石和碎石散落在雕刻的石板上。
 		</p>
 		<p>
-			Thankfully, it looks as though the rest of the citadel's residents immediately started evacuating at the first sign of danger, and, over on the far side of the courtyard, the last group of imps are rushing out of the main gateway. With your heart pounding in your chest, and the small siren cowering in your [pc.arms], you somehow manage to dodge all of the falling boulders and collapsing masonry as you rush across the courtyard and follow the three demons out into Submission's cavern.
+			值得庆幸的是，看起来堡垒里的其他居民一有危险迹象就立即撤离了，在庭院的远处，最后一群小恶魔正冲出大门。你的心怦怦直跳，小塞壬蜷缩在你怀里，你不知怎么躲过了所有掉落的巨石和倒塌的砖石，跟随三个恶魔来到屈城区洞窟。
 		</p>
 		<p>
-			Miraculously, you see that everyone within the citadel, including your companion, managed to make it out without serious injury, but, while that's a relief for everybody involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard, who are busy taking all of the escaping imps into custody. Several of them are also talking to [siren.namePos] lieutenants, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+			这简直就是个奇迹，你看到堡垒里的每个人，包括你的同伴，都没有大碍地成功出逃。虽然这让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐守卫包围了大门，他们手持奥术滑膛枪，正忙着把所有逃跑的小恶魔抓起来。其中几人还在和[siren.namePos]的手下们谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 		</p>
 		<p>
-			There's no hope of any escape from this situation, and as you wonder what to do next, the half-succubus officer in charge points at you and orders, [genericFemale.speech(Stop! You there, [pc.race], release [siren.name], right this instant!)]
+			看起来现在逃跑是没希望了，你思索接下来该怎么办，这时负责的半魅魔警官指着你命令道：[genericFemale.speech(站在那别动，[pc.race]！放开[siren.name]，立刻、马上！)]
 		</p>
 		<p>
-			Realising what you've just done, and that she's about to be taken away, [siren.name] blushes as she looks up into your eyes. [siren.speech(Y-You saved me... If it wasn't for you, w-well... Thank you!)]
+			[siren.name]意识到你刚刚做了什么，在被带走之际，她红着脸抬头与你对视。[siren.speech(你、你救了我……如果不是你，我……谢谢！)]
 		</p>
 	#ELSE
 		<p>
-			Even though she was your enemy just a moment ago, there's no way you're going to leave [siren.name] behind! Turning towards your companion, you command [npc.herHim], [pc.speech(Get out of here, [npc.name]! I'm going to help [siren.name]!)]
+			即使[siren.name]刚才还是你的敌人，你也不可能丢下她不管！你转身告知你的同伴：[pc.speech([npc.name]，你先离开这里！我要去救[siren.name]！)]
 		</p>
 		<p>
-			Placing [npc.her] trust in you, your companion does as you say, and runs to safety. Dodging a falling chunk of the ceiling, you rush over to where [siren.name] is lying on the floor, and, helping her up onto her feet, you loop one of her arms around your shoulders. Half-carrying, half-supporting the exhausted siren, you hurry as fast as you can out of the throne room's huge stone archway, only to discover that her spell is causing the entire citadel to collapse. Huge sections of the cavern's roof are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+			你的同伴信任你，听话跑到了安全的地方。你躲开掉下来的大块天花板，冲到躺在地上的[siren.name]身边，把她的一只胳膊环在自己肩上，扶她站起来。你半扛半扶着筋疲力尽的塞壬，以最快的速度冲出宫殿的巨石拱门。塞壬的法术正在摧毁城堡，庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响。岩石和碎石散落在雕刻的石板上。
 		</p>
 		<p>
-			Thankfully, it looks as though the rest of the citadel's residents immediately started evacuating at the first sign of danger, and, over on the far side of the courtyard, the last group of imps are rushing out of the main gateway. With your heart pounding in your chest, and the small siren cowering against your chest, you somehow manage to dodge all of the falling boulders and collapsing masonry as you rush across the courtyard and follow the three demons out into Submission's cavern.
+			值得庆幸的是，看起来堡垒里的其他居民一有危险迹象就立即撤离了，在庭院的远处，最后一群小恶魔正冲出大门。你的心怦怦直跳，小塞壬蜷缩在你胸前，你不知怎么躲过了所有掉落的巨石和倒塌的砖石，跟随三个恶魔来到屈城区洞窟。
 		</p>
 		<p>
-			Miraculously, you see that everyone within the citadel, including your companion, managed to make it out without serious injury, but, while that's a relief for everybody involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard, who are busy taking all of the escaping imps into custody. Several of them are talking to [siren.namePos] lieutenants, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+			这简直就是个奇迹，你看到堡垒里的每个人，包括你的同伴，都没有大碍地成功出逃。虽然这让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐守卫包围了大门，他们手持奥术滑膛枪，正忙着把所有逃跑的小恶魔抓起来。其中几人还在和[siren.namePos]的手下们谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 		</p>
 		<p>
-			There's no hope of any escape from this situation, and as you wonder what to do next, the half-succubus officer in charge points at you and orders, [genericFemale.speech(Stop! You there, [pc.race], release [siren.name], right this instant!)]
+			看起来现在逃跑是没希望了，你思索接下来该怎么办，这时负责的半魅魔警官指着你命令道：[genericFemale.speech(站在那别动，[pc.race]！放开[siren.name]，立刻、马上！)]
 		</p>
 		<p>
-			Realising what you've just done, and that she's about to be taken away, [siren.name] blushes as she looks up into your eyes. [siren.speech(Y-You saved me... If it wasn't for you, w-well... Thank you!)]
+			[siren.name]意识到你刚刚做了什么，在被带走之际，她红着脸抬头与你对视。[siren.speech(你、你救了我……如果不是你，我……谢谢！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_COMBAT_HERO_NO_IMPS"><![CDATA[
 	#IF pc.getHeightValue()>siren.getHeightValue()
 	#THEN
 		<p>
-			Even though she was your enemy just a moment ago, there's no way you're going to leave [siren.name] behind! Turning towards your companion, you command [npc.herHim], [pc.speech(Get out of here, [npc.name]! I'm going to help [siren.name]!)]
+			即使[siren.name]刚才还是你的敌人，你也不可能丢下她不管！你转身告知你的同伴：[pc.speech([npc.name]，你先离开这里！我要去救[siren.name]！)]
 		</p>
 		<p>
-			Placing [npc.her] trust in you, your companion does as you say, and runs to safety. Dodging a falling chunk of the ceiling, you rush over to where [siren.name] is lying on the floor, and, scooping her up in your [pc.arms], you turn and rush out of the throne room's huge stone archway, only to discover that her spell is causing the entire citadel to collapse. Huge sections of the cavern's roof are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+			你的同伴信任你，听话跑到了安全的地方。你躲开掉下来的大块天花板，冲到躺在地上的[siren.name]身边，用[pc.arms]将她撑起，转身冲出宫殿的巨石拱门。塞壬的法术正在摧毁堡垒，庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响，岩石和碎石散落在雕刻的石板上。
 		</p>
 		<p>
-			You've already defeated and driven out all of the residents of the citadel, so, other than you, [npc.name], [siren.name], and the demon lieutenants, nobody is in any danger. With your heart pounding in your chest, and the small siren cowering in your [pc.arms], you somehow manage to dodge all of the falling boulders and collapsing masonry as you rush across the courtyard and follow the three demons out into Submission's cavern.
+			你先前已经把堡垒里的其他居民全都打跑了，所以除了你、[npc.Name]、[siren.name]和恶魔手下之外，没有人有危险。你的心怦怦直跳，小塞壬蜷缩在你的怀里，你不知怎么躲过了所有掉落的巨石和倒塌的砖石，跟随三个恶魔来到屈城区洞窟。
 		</p>
 		<p>
-			Miraculously, all six of you manage to make it out without injury, but, while that's a relief for everybody involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard. Several of them are talking to [siren.namePos] lieutenants, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+			这简直就是个奇迹，你们六人都毫发无损地逃了出来。虽然这让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐卫兵包围了大门，他们手持奥术滑膛枪严阵以待。其中几人还在和[siren.namePos]的手下们谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 		</p>
 		<p>
-			There's no hope of any escape from this situation, and as you wonder what to do next, the half-succubus officer in charge points at you and orders, [genericFemale.speech(Stop! You there, [pc.race], release [siren.name], right this instant!)]
+			看起来现在逃跑是没希望了，你思索接下来该怎么办，这时负责的半魅魔警官指着你命令道：[genericFemale.speech(站在那别动，[pc.race]！放开[siren.name]，立刻、马上！)]
 		</p>
 		<p>
-			Realising what you've just done, and that she's about to be taken away, [siren.name] blushes as she looks up into your eyes. [siren.speech(Y-You saved me... If it wasn't for you, w-well... Thank you!)]
+			[siren.name]意识到你刚刚做了什么，在被带走之际，她红着脸抬头与你对视。[siren.speech(你、你救了我……如果不是你，我……谢谢！)]
 		</p>
 	#ELSE
 		<p>
-			Even though she was your enemy just a moment ago, there's no way you're going to leave [siren.name] behind! Turning towards your companion, you command [npc.herHim], [pc.speech(Get out of here, [npc.name]! I'm going to help [siren.name]!)]
+			即使[siren.name]刚才还是你的敌人，你也不可能丢下她不管！你转身告知你的同伴：[pc.speech([npc.name]，你先离开这里！我要去救[siren.name]！)]
 		</p>
 		<p>
-			Placing [npc.her] trust in you, your companion does as you say, and runs to safety. Dodging a falling chunk of the ceiling, you rush over to where [siren.name] is lying on the floor, and, helping her up onto her feet, you loop one of her arms around your shoulders. Half-carrying, half-supporting the exhausted siren, you hurry as fast as you can out of the throne room's huge stone archway, only to discover that her spell is causing the entire citadel to collapse. Huge sections of the cavern's roof are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+			你的同伴信任你，听话跑到了安全的地方。你躲开掉下来的大块天花板，冲到躺在地上的[siren.name]身边，把她的一只胳膊环在自己肩上，扶她站起来。你半扛半扶着筋疲力尽的塞壬，以最快的速度冲出宫殿的巨石拱门。塞壬的法术正在摧毁城堡，庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响。岩石和碎石散落在雕刻的石板上。
 		</p>
 		<p>
-			You've already defeated and driven out all of the residents of the citadel, so, other than you, [npc.name], [siren.name], and the demon lieutenants, nobody is in any danger. With your heart pounding in your chest, and the small siren cowering against your chest, you somehow manage to dodge all of the falling boulders and collapsing masonry as you rush across the courtyard and follow the three demons out into Submission's cavern.
+			你先前已经把堡垒里的其他居民全都打跑了，所以除了你、[npc.Name]、[siren.name]和恶魔手下之外，没有人有危险。你的心怦怦直跳，小塞壬蜷缩在你胸前，你不知怎么躲过了所有掉落的巨石和倒塌的砖石，跟随三个恶魔来到屈城区洞窟。
 		</p>
 		<p>
-			Miraculously, all six of you manage to make it out without injury, but, while that's a relief for everybody involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard. Several of them are talking to [siren.namePos] lieutenants, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+			这简直就是个奇迹，你们六人都毫发无损地逃了出来。虽然这让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐卫兵包围了大门，他们手持奥术滑膛枪严阵以待。其中几人还在和[siren.namePos]的手下们谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 		</p>
 		<p>
-			There's no hope of any escape from this situation, and as you wonder what to do next, the half-succubus officer in charge points at you and orders, [genericFemale.speech(Stop! You there, [pc.race], release [siren.name], right this instant!)]
+			看起来现在逃跑是没希望了，你思索接下来该怎么办，这时负责的半魅魔警官指着你命令道：[genericFemale.speech(站在那别动，[pc.race]！放开[siren.name]，立刻、马上！)]
 		</p>
 		<p>
-			Realising what you've just done, and that she's about to be taken away, [siren.name] blushes as she looks up into your eyes. [siren.speech(Y-You saved me... If it wasn't for you, w-well... Thank you!)]
+			[siren.name]意识到你刚刚做了什么，在被带走之际，她红着脸抬头与你对视。[siren.speech(你、你救了我……如果不是你，我……谢谢！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_COMBAT_HERO_END"><![CDATA[
 	<p>
-		Realising that you have no choice but to do as the officer says, you carefully let [siren.name] down to stand on her own two feet. Immediately, four of Lyssieth's guards step forwards, and, looping their arms under [siren.namePos], they march off in the direction of her mother's palace.
+		你别无选择，只能按照警官说的去做，于是你小心翼翼地把[siren.name]放下站好。随即，四名莉西丝的卫兵走上前来，搀扶着[siren.namePos]向她母亲宫殿的方向走去。
 	</p>
 	<p>
-		[genericFemale.speech(Now, you can explain to us exactly what's going on!)] the officer says, impatiently tapping her foot as she waits for your response.
+		[genericFemale.speech(现在给我们解释清楚这是怎么回事！)]这个警官说，不耐烦地跺着脚，等待你的回应。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_COMBAT"><![CDATA[
 	<p>
-		There's no way that you're going to risk your life to save [siren.name]! Turning your back on her, you rush out of the throne room's huge stone archway, only to discover that her spell is causing the entire citadel to collapse. Huge sections of the cavern's ceiling are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+		你不可能冒着生命危险去救[siren.name]！你转身冲出宫殿的巨石拱门。塞壬的法术正在摧毁堡垒，庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响，岩石和碎石散落在雕刻的石板上。
 	</p>
 	<p>
-		Seeing that you and [npc.name] have exited the throne room without [siren.name], [impMaleLeader.name] runs back towards you, before rushing past and heroically charging into the collapsing keep.
+		[impMaleLeader.name]看到你和[npc.Name]跑出大厅，却独独未见[siren.name]的身影。他朝你跑来，又擦肩而过，英勇地冲进了倒塌的主楼。
 	</p>
 	<p>
-		Thankfully, it looks as though the rest of the citadel's residents immediately started evacuating at the first sign of danger, and, over on the far side of the courtyard, the last group of imps are rushing out of the main gateway. With your heart pounding in your chest,
+		值得庆幸的是，看起来堡垒里的其他居民一有危险迹象就立即撤离了，在庭院的远处，最后一群小恶魔正冲出大门。你的心怦怦直跳，
 		#IF pc.isAbleToFly()
-		#THEN you make good use of your ability to fly, and swiftly dart through the air, dodging falling boulders and collapsing masonry before following the two demons out through the main gates into Submission's cavern.
+		#THEN将自己的飞行技巧发挥到了极致，在空中快速穿梭，躲避着落下的巨石与砖块，跟随着两个恶魔穿过大门，进入屈城区洞窟。
 		#ELSE
 			#IF pc.getRace()==RACE_SQUIRREL_MORPH || pc.getRace()==RACE_CAT_MORPH
-			#THEN you make good use of your body's agility to dodge falling boulders and collapsing masonry as you rush across the courtyard and follow the two demons out into Submission's cavern.
-			#ELSE you somehow manage to dodge all of the falling boulders and collapsing masonry as you rush across the courtyard and follow the two demons out into Submission's cavern.
+			#THEN将身体的灵活性发挥到了极致，躲避掉落的巨石和坍塌的砖石，冲过庭院，跟随两个恶魔来到屈城区洞窟。
+			#ELSE你不知怎么躲过了所有掉落的巨石和倒塌的砖石，冲过庭院，跟随两个恶魔来到屈城区洞窟。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Miraculously, you see that everyone within the citadel, including your companion, managed to make it out without serious injury, but, while that's a relief for everybody involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard, who are busy taking all of the escaping imps into custody. Several of them are talking to [siren.namePos] lieutenants, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+		这简直就是个奇迹，你看到堡垒里的每个人，包括你的同伴，都没有大碍地成功出逃。虽然这让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐守卫包围了大门，他们手持奥术滑膛枪，正忙着把所有逃跑的小恶魔抓起来。其中几人正在和[siren.namePos]的手下们谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 	</p>
 	<p>
-		There's no hope of any escape from this situation, and as you wonder what to do next, the half-succubus officer in charge points at you and orders, [genericFemale.speech(Stop! You there, [pc.race], explain to me what's going on, right this instant!)]
+		看起来现在逃跑是没希望了，你思索接下来该怎么办，这时负责的半魅魔警官指着你命令道：[genericFemale.speech(站在那别动，[pc.race]，给我解释一下这是怎么回事，立刻、马上！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_COMBAT_NO_IMPS"><![CDATA[
 	<p>
-		There's no way that you're going to risk your life to save [siren.name]! Turning your back on her, you rush out of the throne room's huge stone archway, only to discover that her spell is causing the entire citadel to collapse. Huge sections of the cavern's ceiling are giving way and collapsing to the floor, causing the ground to shake and rumble underfoot as rocks and debris are sent scattering over the carved flagstones.
+		你不可能冒着生命危险去救[siren.name]！你转身冲出宫殿的巨石拱门。塞壬的法术正在摧毁堡垒，庞大的洞顶开始崩塌，崩落到地上，引起了大地的震颤，脚下隆隆作响，岩石和碎石散落在雕刻的石板上。
 	</p>
 	<p>
-		Seeing that you and [npc.name] have exited the throne room without [siren.name], [impMaleLeader.name] runs back towards you, before rushing past and heroically charging into the collapsing keep.
+		[impMaleLeader.name]看到你和[npc.Name]跑出大厅，却独独未见[siren.name]的身影。他朝你跑来，又擦肩而过，英勇地冲进了倒塌的主楼。
 	</p>
 	<p>
-		Thankfully, you've already defeated and driven out all of the residents of the citadel, so, other than you, [npc.name], [siren.name], and the demon lieutenants, nobody is in any danger. With your heart pounding in your chest,
+		值得庆幸的是，你先前已经把堡垒里的其他居民全都打跑了，所以除了你、[npc.Name]、[siren.name]和恶魔手下之外，没有人有危险。你的心怦怦直跳，
 		#IF pc.isAbleToFly()
-		#THEN you make good use of your ability to fly, and swiftly dart through the air beside your companion, dodging falling boulders and collapsing masonry before following the two demons out through the main gates into Submission's cavern.
+		#THEN将自己的飞行技巧发挥到了极致，和你的同伴在空中快速穿梭，躲避着落下的巨石与砖块，跟随着两个恶魔穿过大门，进入屈城区洞窟。
 		#ELSE
 			#IF pc.getRace()==RACE_SQUIRREL_MORPH || pc.getRace()==RACE_CAT_MORPH
-			#THEN you make good use of your body's agility to dodge falling boulders and collapsing masonry as you and your companion rush across the courtyard and follow the two demons out into Submission's cavern.
-			#ELSE you somehow manage to dodge all of the falling boulders and collapsing masonry as you and your companion rush across the courtyard and follow the two demons out into Submission's cavern.
+			#THEN将身体的灵活性发挥到了极致，躲避掉落的巨石和坍塌的砖石，和你的同伴冲过庭院，跟随两个恶魔来到屈城区洞窟。
+			#ELSE你不知怎么躲过了所有掉落的巨石和倒塌的砖石，和你的同伴冲过庭院，跟随两个恶魔来到屈城区洞窟。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Miraculously, the four of you manage to make it out without injury, and, just a few seconds afterwards, [impMaleLeader.name] staggers out with [siren.name] in his arms. While everybody's safe escape is a relief for all involved, your troubles aren't over yet. Surrounding the main gates, and with arcane muskets at the ready, there are at least thirty of Lyssieth's elite guard. Several of them pull [siren.namePos] lieutenants to one side, but, due to their demon status, it looks like they're going to be released without anything happening to them.
+		这简直就是个奇迹，你们四人都毫发无损地逃了出来。就在几秒钟后，[impMaleLeader.name]抱着[siren.name]踉踉跄跄地走了出来。虽然安全脱险让每个人都松了一口气，但你的麻烦还没有结束。至少有三十名莉西丝的精锐卫兵包围了大门，他们手持奥术滑膛枪严阵以待。其中几人把[siren.namePos]的手下们拉到一边谈话，但碍于他们的恶魔身份，他们可能一点事没有就会被释放了。
 	</p>
 	<p>
-		[siren.speech(I can't believe you were going to leave me to die in there!)] [siren.name] shouts at you as four of the guards start dragging her away in the direction of her mother's palace. [siren.speech(I hate you!)]
+		[siren.speech(我不敢相信你居然会把我丢在那里等死！)][siren.name]冲你喊道，这时四个卫兵正拖着她往她母亲宫殿的方向走去，[siren.speech(我讨厌你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COLLAPSE_ESCAPE_COMBAT_END"><![CDATA[
 	<p>
-		[genericFemale.speech(Now, you can explain to us exactly what's going on!)] the half-succubus officer in charge says, impatiently tapping her foot as she waits for your response.
+		[genericFemale.speech(现在给我解释清楚这是怎么回事！)]负责的半魅魔警官说，不耐烦地跺着脚，等待你的回应。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1988,61 +1988,61 @@
 	
 	<htmlContent tag="KEEP_CHALLENGE_LEADER_DEFEAT"><![CDATA[
 	<p>
-		You and [npc.name] are unable to continue fighting the three demons, and, staggering back, you both collapse to the floor, defeated.
+		你和[npc.Name]无力再与三个恶魔战斗，踉踉跄跄地后退，双双瘫倒在地，彻底败下阵来。
 	</p>
 	<p>
-		[siren.speech(~Mwhaha!~)] [siren.name] laughs. [siren.speech(You weren't even a match for my lieutenants! Count yourselves lucky that I wasn't forced to unleash my vast arcane power upon you! Now... I think the two of you need to be punished!)]
+		[siren.speech(~哇哈哈！~)][siren.name]大笑，[siren.speech(连吾之扈从都无法战胜！庆幸吧，看来吾无需释放浩瀚伟力！现在……接受吾赐予的惩罚吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_CHALLENGE_BOSS_DEFEAT"><![CDATA[
 	<p>
-		You and [npc.name] are unable to continue fighting, and, staggering back, you both collapse to the floor, defeated.
+		你和[npc.Name]无力再战，踉踉跄跄地后退，双双瘫倒在地，彻底败下阵来。
 	</p>
 	<p>
-		[siren.speech(~Mwhaha!~)] [siren.name] laughs. [siren.speech(You were no match for my colossal power, just as I expected! Count yourselves lucky that I chose to hold back; if I'd have unleashed my full power, who knows what'd have happened to you! Now... I think the two of you need to be punished!)]
+		[siren.speech(~哇哈哈！~)][siren.name]大笑，[siren.speech(正如吾所料，尔等根本无法与吾之伟力匹敌！吾选择克制，实属尔等万幸！若吾全力以赴，迎接尔等的将是难以想象的噩梦！现在……接受吾赐予的惩罚吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SIREN_VOYEUR"><![CDATA[
 	<p>
-		You look up to see a delighted grin on the siren's face, and as you let out a heavy sigh, she commands her lieutenants, [siren.speech(You three! Restrain them both! I want to watch you fuck them!)]
+		你抬起头就看到塞壬露出欣喜的坏笑，在你发出沉重的悲鸣时，她向手下们下达了命令：[siren.speech(你们三个！控制住她们！你们快在我面前发生关系！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_NO_NON_CON"><![CDATA[
 	<p>
-		You look up to see a delighted grin on the siren's face, and as you let out a heavy sigh, she commands her lieutenants, [siren.speech(You three! Throw them out of my citadel!)]
+		你抬起头就看到塞壬露出欣喜的坏笑，在你发出沉重的悲鸣时，她向手下们下达了命令：[siren.speech(你们三个！把他们扔出我的堡垒！)]
 	</p>
 	<p>
-		As the demons grab you and [npc.name] and lift you up, [siren.name] shouts, [siren.speech(If you dare to return, I'll be more than happy to destroy you both all over again!)]
+		三个恶魔把你和[npc.Name]都抬起，[siren.name]喊道：[siren.speech(若尔等胆敢归来，吾很乐意再摧毁尔等！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX"><![CDATA[
 	<p>
-		You don't mind the sound of that, and, as [siren.name] sits back on her throne to watch, you allow the three demons to move you and your companion into position, ready to fuck the two of you...
+		你对此毫不在意。[siren.name]坐在她的宝座上观看，你让三个恶魔把你和同伴摆好位置，准备好和你们两个做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX_EAGER"><![CDATA[
 	<p>
-		You like the sound of that, and, as [siren.name] sits back on her throne to watch, you eagerly allow the three demons to move you and your companion into position, ready to fuck the two of you...
+		你很乐意听到这个。[siren.name]坐在她的宝座上观看，你急切地让三个恶魔把你和同伴摆好位置，准备好和你们两个做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX_RESIST"><![CDATA[
 	<p>
-		You don't like the sound of that, and, as [siren.name] sits back on her throne to watch, you desperately struggle against the three demons as they force you and your companion into position, ready to fuck the two of you...
+		你不想听到这个。[siren.name]坐在她的宝座上观看，你绝望地反抗三个恶魔摆好你和同伴，准备好和你们两个做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -2050,13 +2050,13 @@
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_POST_SEX"><![CDATA[
 	<p>
-		The three demons step back, grinning down at you and [npc.name] as you both collapse to the floor of the siren's throne room. As you let out an exhausted sigh, [siren.name] shouts out, [siren.speech(That was fun to watch! Now, throw them out of my citadel!)]
+		三个恶魔纷纷退后，坏笑着看着瘫倒在地的你和[npc.Name]。在你发出沉重的悲鸣时，她大喊道：[siren.speech(有趣的闹剧！现在把人扔出我的堡垒吧！)]
 	</p>
 	<p>
-		As the demons grab you and [npc.name] and lift you up, [siren.name] shouts, [siren.speech(If you dare to return, I'll be more than happy to destroy you both all over again!)]
+		三个恶魔把你和[npc.Name]都抬起，[siren.name]喊道：[siren.speech(若尔等胆敢归来，吾很乐意再摧毁尔等！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -2064,23 +2064,23 @@
 	
 	<htmlContent tag="THROWN_OUT"><![CDATA[
 	<p>
-		The three demons drag you and your companion out of the throne room's archway and out into the courtyard. As they take you over to the entranceway, all of the imps throughout the citadel start pointing and laughing. With your cheeks burning from shame, the demons unceremoniously hurl you and [npc.name] out of the front gates, and [impMaleLeader.name] shouts after you, [impMaleLeader.speech(And stay out!)]
+		三个恶魔将你和同伴一起拖出宫殿的拱门，带到了庭院中，途中所有的小恶魔都对你指指点点，哈哈大笑。你的脸颊因羞耻而火热，恶魔们毫不客气地将你和[npc.name]从正门扔了出去，而[impMaleLeader.name]在你身后大喊：[impMaleLeader.speech(还有，别回来了！)]
 	</p>
 	<p>
-		Letting out a deep sigh, you push yourself up onto your [pc.feet], and after brushing yourself off, you wonder what to do next...
+		你长吁一口气，这才站起来。你擦了擦身子，思索接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="THROWN_OUT_NO_IMPS"><![CDATA[
 	<p>
-		The three demons drag you and your companion out of the throne room's archway and out into the courtyard. As they take you over to the entranceway, [impAlphaLeader.name] takes the opportunity to insult you and tell you how pathetic you are. With your cheeks burning from shame, the demons unceremoniously hurl you and [npc.name] out of the front gates, and [impMaleLeader.name] shouts after you, [impMaleLeader.speech(And stay out!)]
+		三个恶魔将你和同伴一起拖出宫殿的拱门，带到了庭院中，途中[impAlphaLeader.name]还趁机侮辱你有多么可悲。你的脸颊因羞耻而火热，恶魔们毫不客气地将你和[npc.name]从正门扔了出去，而[impMaleLeader.name]在你身后大喊：[impMaleLeader.speech(还有，别回来了！)]
 	</p>
 	<p>
-		Letting out a deep sigh, you push yourself up onto your [pc.feet], and after brushing yourself off, you wonder what to do next...
+		你长吁一口气，这才站起来。你擦了擦身子，思索接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

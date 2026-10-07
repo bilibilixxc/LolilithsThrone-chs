@@ -56,7 +56,7 @@ public class Eisek extends NPC {
     }
     
     public Eisek(boolean isImported) {
-		super(isImported, new NameTriplet("Eisek","Emio","Eylean"), "Seawings",
+		super(isImported, new NameTriplet("艾瑟克","伊莫","伊莱恩"), "海翼",
 			"",
 			25, Month.FEBRUARY, 9,
 			20,
@@ -228,17 +228,17 @@ public class Eisek extends NPC {
     @Override
     public String getDescription() {
 	    if(this.isPlayerKnowsName() == false && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_banished"))) {
-		    return "You found this dragon-boy being harassed by a mob while manning a stall at The Farmer's Market in Elis.";
+		    return "你在伊利斯的农贸市场上发现了这个龙男，他在经营摊位的时候被一群暴徒骚扰。";
 		    
 	    } else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_banished"))) {
-		    return "You found this dragon-boy being harassed by a mob while manning a stall at The Farmer's Market in Elis. Intentionally or not, you sided with the mob and drove him off.";
+		    return "你在伊利斯的农贸市场上发现了这个龙男，他在经营摊位的时候被一群暴徒骚扰。无论有意无意，你站在了暴徒一方，赶走了他。";
 		    
 	    } else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_asked_himself"))) {
-		    return "Eisek is a produce merchant at The Farmer's Market in Elis. As a dragon, [npc.he] is often unwelcome in civilised areas, a fact that he is well aware of."
-		    		+ " He spends most of his time tending to his crops high up in the mountains and only visits Elis three days out of the month.";
+		    return "艾瑟克是伊利斯的农贸市场上的一位农产品商贩。作为龙族，[npc.he]在文明地区经常受到冷落，这一点他非常清楚。"
+		    		+ "他大部分时间都在山上照料作物，每个月只有三天会来到伊利斯的市场。";
 		    
 	    } else {
-		    return "Eisek runs a produce stall in the Elis Farmer's Market. As a dragon, [npc.he] is often unwelcome in civilised areas, a fact that he is well aware of.";
+		    return "艾瑟克在伊利斯农贸市场经营着一个农产品摊位。作为龙族，[npc.he]在文明地区经常受到冷遇，这一点他非常清楚。";
 	    }
     }
     
@@ -269,7 +269,7 @@ public class Eisek extends NPC {
     @Override
     public void applyItemTransactionEffects(AbstractCoreItem itemSold, int quantity, int individualPrice, boolean soldToPlayer) {
 		if(soldToPlayer) {
-		    Main.game.appendToTextEndStringBuilder(UtilText.parse(this, "<p>[eisek.speech([game.random(Thank you for your patronage.|I hope you enjoy it.|A handy snack, is it not?)])]</p>"));
+		    Main.game.appendToTextEndStringBuilder(UtilText.parse(this, "<p>[eisek.speech([game.random(谢谢惠顾。|希望你喜欢。|手制点心，是吧？)])]</p>"));
 		    if(this.getAffection(Main.game.getPlayer()) < 15 && !Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_EISEK_MOB)) {
 		    	if(this.getAffection(Main.game.getPlayer()) + (quantity * 3) > 15) {
 			    	Main.game.appendToTextEndStringBuilder(this.setAffection(Main.game.getPlayer(), 15));

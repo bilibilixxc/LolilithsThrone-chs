@@ -115,7 +115,7 @@ public class CharacterCreation {
 		return SpellSchool.FIRE;
 	}
 
-	public static final DialogueNode CHARACTER_CREATION_START = new DialogueNode("Disclaimer", "", true) {
+	public static final DialogueNode CHARACTER_CREATION_START = new DialogueNode("免责声明", "", true) {
 
 		@Override
 		public String getContent() {
@@ -125,7 +125,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Agree", "You agree that you are the legal age to view pornographic material, and consent to being exposed to graphic content.", ALPHA_MESSAGE);
+				return new Response("同意", "你保证自己到了查看色情内容的合法年龄，表示同意接触可能包含色情、血腥、暴力、成人或其他令人不适的内容或图片。", ALPHA_MESSAGE);
 			} else {
 				return null;
 			}
@@ -136,7 +136,7 @@ public class CharacterCreation {
 		
 		@Override
 		public String getLabel() {
-			return "Version " + Main.VERSION_NUMBER + " | <b style='color:" + PresetColour.BASE_YELLOW_LIGHT.toWebHexString() + ";'>"+Main.VERSION_DESCRIPTION+"</b>";
+			return "版本" + Main.VERSION_NUMBER + " |<b style='color:" + PresetColour.BASE_YELLOW_LIGHT.toWebHexString() + ";'>"+Main.VERSION_DESCRIPTION+"</b>";
 		}
 		
 		@Override
@@ -147,7 +147,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Start", "Proceed to character creation.", CHOOSE_APPEARANCE){
+				return new Response("开始", "继续进行角色创建。", CHOOSE_APPEARANCE){
 					@Override
 					public void effects() {
 						Main.game.clearTextStartStringBuilder();
@@ -162,14 +162,14 @@ public class CharacterCreation {
 						resetBodyAppearance();
 						
 						Main.game.setRenderAttributesSection(true);
-						Main.game.getPlayer().setName(new NameTriplet("Unknown", "Unknown", "Unknown"));
+						Main.game.getPlayer().setName(new NameTriplet("某人", "某人", "某人"));
 						Main.game.getPlayer().setSurname("");
 						BodyChanging.setTarget(Main.game.getPlayer());
 					}
 				};
 				
 			} else if (index == 2) {
-				return new Response("Start (Import)", "Import a character from a previous version to use on game start.", IMPORT_CHOOSE) {
+				return new Response("开始(导入)", "从旧版本导入角色并开始新游戏。", IMPORT_CHOOSE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayerCell().resetInventory();
@@ -603,7 +603,7 @@ public class CharacterCreation {
 //		}
 	}
 	
-	public static final DialogueNode CHOOSE_APPEARANCE = new DialogueNode("A Night Out", "", true) {
+	public static final DialogueNode CHOOSE_APPEARANCE = new DialogueNode("一场夜生活", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
@@ -613,14 +613,14 @@ public class CharacterCreation {
 				Logger.logTime("Time Until Choose Appearance", System.nanoTime() - Library.T_T);
 			}
 			return "<p>"
-						+ "By the time the taxi finally pulls up to the British Museum, you're already almost five minutes late."
-						+ " The whole reason you're visiting London is to attend your aunt Lily's opening evening for her new exhibition,"
-							+ " and as you hurriedly pay the driver his fare and step out of the car, you hope that she hasn't started her speech yet."
+						+ "你搭着出租车来到了大英博物馆门口。"
+						+ "你此次来到伦敦，就是为了参加莉莉姨妈新艺术展的开幕晚会。<br>不过——你已经迟到将近五分钟了。"
+							+ "你急急忙忙把小费塞给司机，冲出车门，祈祷着她的演讲还没有开始。"
 					+ "</p>"
 					+ "<p>"
-						+ "The street lights flicker into life as you rush over to the entrance, illuminating your surroundings with a dull orange glow."
-						+ " It only takes a moment before you're standing at the museum's front doors, where, much to your dismay, you see that a small queue has formed."
-						+ " Having no choice but to step in line and wait your turn, you briefly glance over at the large glass windows of the building's modern facade to see your blurry reflection in the glass..."
+						+ "你奔入博物馆的大门，四周的路灯明暗交替，让附近染上一片暗淡的橙黄色光芒。"
+						+ "只花了一小会儿，你就来到了博物馆的正厅门前。但让人糟心的是，你看到那里排起了一条队伍，人们都排着队等待入场。"
+						+ "你别无选择，只能排进队伍等待入场。等待期间，你短暂地瞥了一眼博物馆外面立着的现代风格巨大玻璃窗，看见自己在玻璃中的模糊倒影……"
 					+ "</p>"
 					+ "<br/>"
 					
@@ -633,9 +633,9 @@ public class CharacterCreation {
 						+ CharacterModificationUtils.getFemininityChoiceDiv()
 						
 						+ "<div class='container-full-width' style='text-align:center;'>"
-							+ "You will be referred to as <span style='color:"+Main.game.getPlayer().getGender().getColour().toWebHexString()+";'>"
-								+UtilText.generateSingularDeterminer(Main.game.getPlayer().getGender().getName())+ " " + Main.game.getPlayer().getGender().getName()+"</span>.<br/>"
-							+ "<i>You can change all gender names in the options menu.</i>"
+							+ "你将被看作是<span style='color:"+Main.game.getPlayer().getGender().getColour().toWebHexString()+";'>"
+								+ Main.game.getPlayer().getGender().getName()+"</span>。<br/>"
+							+ "<i>你可以在选项菜单中修改所有性别称呼</i>"
 						+ "</div>"
 
 						+ CharacterModificationUtils.getBirthdayChoiceDiv()
@@ -655,7 +655,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Wait your turn, and hope that the event hasn't started yet.", CHOOSE_NAME) {
+				return new Response("继续", "等待轮到你，祈祷晚会还没开始。", CHOOSE_NAME) {
 					@Override
 					public int getSecondsPassed() {
 						return TIME_TO_NAME;
@@ -680,42 +680,42 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_NAME = new DialogueNode("A Night Out", "", true) {
+	public static final DialogueNode CHOOSE_NAME = new DialogueNode("一场夜生活", "", true) {
 
 		boolean unsuitableName = false, unsuitableSurname = false;
 		
 		@Override
 		public String getHeaderContent() {
 			return "<p>"
-						+ "[npcMale.speech("+(Main.game.getPlayer().isFeminine()?"Miss":"Sir")+",)]"
-						+ " the doorman calls out to you, evidently having finished with the other people in the queue,"
-						+ " [npcMale.speech(do you have an invitation?)]"
+						+ "[npcMale.speech("+(Main.game.getPlayer().isFeminine()?"小姐":"先生")+"，)]"
+						+ "门卫的叫声打断了你的思考——排在你前面的人都已经入场了，"
+						+ "[npcMale.speech(你有邀请函吗？)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You turn away from the glass and step forwards, smiling."
-						+ " [pc.speech(Yes, I have it right here... erm... hold on...)]"
+						+ "你回过神来，把注意力从玻璃窗上移开，微笑着走了过去。"
+						+ "[pc.speech(是的，我把它揣在这儿了……呃……稍等……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Reaching into your "+(Main.game.getPlayer().isFeminine()?"purse":"pocket")+", you feel your heart start to race as you discover that the invitation isn't in there."
-						+ " [pc.speech(No, no, no! I must have left it in the taxi!)]"
+						+ "你伸进"+(Main.game.getPlayer().isFeminine()?"手提包":"口袋")+"里摸索起来，发现里面并没有邀请函，心跳顿时加速。"
+						+ "<br>[pc.speech(不不不！我一定是把邀请函落在出租车里了！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "[npcMale.speech(Well, don't worry,)]"
-						+ " the man replies,"
-						+ " [npcMale.speech(if you give me your name, I can check to make sure that you're on the list.)]"
+						+ "[npcMale.speech(好吧，别担心，)]"
+						+ "门卫附和着，"
+						+ "[npcMale.speech(如果你说一下名字，我可以帮你看看你在不在参会名单上。)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Breathing a sigh of relief, you tell the man your name..."
+						+ "你舒了一口气，告诉门卫你的名字是……"
 					+ "</p>"
 					+"<br/>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
 						+ "<div style='position:relative; display:inline-block; padding-bottom:0; margin 0 auto; vertical-align:middle; width:100%; text-align:center;'>"
 							+ "<i>"
-								+ "Your first name can be set as three values; your masculine name, androgynous name, and feminine name."
-								+ " Your name will automatically switch to the one which corresponds to your body femininity."
+								+ "你的名字可以设置三种差分：男性名，中性名和女性名。"
+								+ "你的名字会与你身体的女性化程度自动关联。"
 							+ "</i>"
 							+ "<br/>"
-							+ "<p style='display:inline-block; padding:0; margin:0; height:32px; line-height:32px; width:100px;'>First name: </p>"
+							+ "<p style='display:inline-block; padding:0; margin:0; height:25px; line-height:25px; width:100px;'>名：</p>"
 							+ "</form style='display:inline-block; padding:0; margin:0; text-align:center;'>"
 									+ "<input type='text' id='nameMasculineInput' style=' color:"+PresetColour.MASCULINE.toWebHexString()+";' value='"+ UtilText.parseForHTMLDisplay(Main.game.getPlayer().getNameTriplet().getMasculine())+ "'>"
 									
@@ -726,13 +726,13 @@ public class CharacterCreation {
 								+ "<input type='text' id='nameFeminineInput' style=' color:"+PresetColour.FEMININE.toWebHexString()+";' value='"+ UtilText.parseForHTMLDisplay(Main.game.getPlayer().getNameTriplet().getFeminine())+ "'>"
 							
 							+ "<br/>"
-							+ "<p style='display:inline-block; padding:0; margin:0; height:32px; line-height:32px; width:100px;'>Surname: </p>"
+							+ "<p style='display:inline-block; padding:0; margin:0; height:25px; line-height:25px; width:100px;'>姓：</p>"
 							+ "<form style='display:inline-block; padding:0; margin:0; text-align:center;'><input type='text' id='surnameInput' value='"+ UtilText.parseForHTMLDisplay(Main.game.getPlayer().getSurname())+ "'></form>"
 						+ "</div>"
 						+ "<br/>"
-						+ "<i>Your name must be between 2 and 32 characters long. You cannot use the square bracket characters or full stops. (Surname may be left blank.)</i>"
-						+ (unsuitableName ? "<p style='text-align:center;padding-top:0;'><b style=' color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Invalid name.</b></p>" : "")
-						+ (unsuitableSurname ? "<p style='text-align:center;padding-top:0;'><b style=' color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Invalid Surname.</b></p>" : "")
+						+ "<i>你的姓名长度必须在 2 到 32 个字符之间。不能使用方括号或句号。(姓氏可留空。)</i>"
+						+ (unsuitableName ? "<p style='text-align:center;padding-top:0;'><b style=' color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>无效的名字</b></p>" : "")
+						+ (unsuitableSurname ? "<p style='text-align:center;padding-top:0;'><b style=' color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>无效的姓氏</b></p>" : "")
 					+ "</div>"
 					
 					+ "<p id='hiddenFieldName' style='display:none;'></p>"
@@ -747,7 +747,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Continue", "Use this name and continue to the next stage of the character creation screen."){
+				return new ResponseEffectsOnly("继续", "使用这个姓名进入角色创建界面。"){
 					@Override
 					public int getSecondsPassed() {
 						if (unsuitableName || unsuitableSurname)  {
@@ -762,7 +762,7 @@ public class CharacterCreation {
 						for(String s : fieldsList) {
 							Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenFieldName').innerHTML=document.getElementById('"+s+"').value;");
 							if(Main.mainController.getWebEngine().getDocument()!=null) {
-								if (Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() < 2
+								if (Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() < 1
 										|| Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() > 32
 										|| !Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().matches("[^\\[\\]\\.]+")) {
 									unsuitableName = true;
@@ -798,7 +798,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Random", "Generate a random name based on your gender.", CHOOSE_NAME){
+				return new Response("随机名", "根据性别随机生成名字。", CHOOSE_NAME){
 					@Override
 					public void effects() {
 						Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenFieldSurname').innerHTML=document.getElementById('surnameInput').value;");
@@ -820,7 +820,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 3) {
-				return new Response("Random Surname", "Generate a random surname.", CHOOSE_NAME){
+				return new Response("随机姓", "随机生成姓氏。", CHOOSE_NAME){
 					@Override
 					public void effects() {
 						List<String> fieldsList = Util.newArrayListOfValues("nameMasculineInput", "nameAndrogynousInput", "nameFeminineInput");
@@ -828,7 +828,7 @@ public class CharacterCreation {
 						for(String s : fieldsList) {
 							Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenFieldName').innerHTML=document.getElementById('"+s+"').value;");
 							if(Main.mainController.getWebEngine().getDocument()!=null) {
-								if (Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() < 2
+								if (Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() < 1
 										|| Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() > 16
 										|| !Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().matches("[^\\[\\]\\.]+"))
 									unsuitableName = true;
@@ -847,7 +847,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to gender selection.", CHOOSE_APPEARANCE) {
+				return new Response("返回", "回到性别选择界面。", CHOOSE_APPEARANCE) {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_NAME;
@@ -860,40 +860,40 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE = new DialogueNode("In the Museum", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE = new DialogueNode("博物馆内", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			Main.game.setPlayer(Conversions.applyAgeEffects(Main.game.getPlayer()));
 			return "<p>"
-						+ "[pc.speech(It's "+(Main.game.getPlayer().getSurname().length()!=0?"[pc.surname], [pc.name] [pc.surname]":"[pc.name]")+",)]"
-						+ " you say, impatiently looking down at the man's clipboard as he scans through his list."
+						+ "[pc.speech(我叫"+(Main.game.getPlayer().getSurname().length()!=0?"[pc.surname]，[pc.name]·[pc.surname]":"[pc.name]")+"。)]"
+						+ "你焦躁地回答道，那名男子闻言开始浏览起手上的参会名单来。"
 					+ "</p>"
 					+ "<p>"
-						+ "Finally, you see his finger trace over your name, and with a smile, he steps to one side and beckons you forwards."
-						+ " [npcMale.speech(Have a good evening, "+(Main.game.getPlayer().getSurname().length()!=0
-								?(Main.game.getPlayer().isFeminine()?"Miss":"Mr.")+" [pc.surname]"
-								:(Main.game.getPlayer().isFeminine()?"Miss":"Sir"))+".)]"
+						+ "看到他的手指划过你的名字时，你才终于松了口气。他微笑着让到一旁，做出了请进的手势。"
+						+ "[npcMale.speech(祝您有个愉快的夜晚，"+(Main.game.getPlayer().getSurname().length()!=0
+								?"[pc.surname]"+(Main.game.getPlayer().isFeminine()?"小姐":"先生")
+								:(Main.game.getPlayer().isFeminine()?"小姐":"先生"))+"。)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Thanking him, you hurry through the entranceway, and within moments, find yourself stepping into the museum's enormous central lobby."
-						+ " Large banners have been hung from the upper floor's balconies; their bold font proudly declaring this to be the 'Akkadian Empire Exhibit: Opening Evening'."
-						+ " On the far side of the grand hall, you see throngs of people surrounding a large stage, and you breathe a sigh of relief as you notice that it's currently empty."
+						+ "你匆匆回了一个礼，就急忙穿过门廊，来到了博物馆巨大的中央大厅。"
+						+ "夹层的阳台上悬挂着巨大的横幅，横幅上配着硕大的黑体字标语“阿卡德帝国展览：开幕晚会”。"
+						+ "在大礼堂的另一端有一个大舞台，观众们大都已经聚拢到了那边。不过看起来主持还没有上台，这让你不禁松了一口气。"
 					+ "</p>"
 					+ "<p>"
-						+ "[pc.thought(Phew... I made it in time after all...)]"
+						+ "[pc.thought(呼……好歹是赶上了……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "As Lily's opening speech seems to be running just as late as you are, you decide to step over to a nearby mirror to make sure that you're looking presentable..."
+						+ "莉莉似乎也跟你一样迟到了，看来她的开场演讲也得往后推推了。于是你决定在附近找块镜子，趁着还没开场再整理整理着装……"
 					+ "</p>"
 					+ "<br/>"
 					+ "<div class='container-full-width'>"
-						+ "<h5 style='text-align:center;'>Appearance</h5>"
+						+ "<h5 style='text-align:center;'>外表</h5>"
 						+ Main.game.getPlayer().getBodyDescription()
 					+ "</div>"
 					+ "<br/>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>You can modify your appearance by entering each of the sub-menus below.</i>"
+						+ "<i>你可以调整下面的选项来修改外观。</i>"
 					+ "</div>";
 		}
 		
@@ -970,17 +970,17 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_CORE = new DialogueNode("Core Body Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_CORE = new DialogueNode("核心身体设置", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>所有选项都会影响游戏的后续发展。</i>"
 					+ "</div>"
 						
 					+ CharacterModificationUtils.getHeightChoiceDiv(true)
 					
-					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.HUMAN, BodyCoveringType.HUMAN, "Skin Colour", "The colour of the skin that's covering your body.", true, false, false)
+					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.HUMAN, BodyCoveringType.HUMAN, "皮肤颜色", "覆盖你躯体的皮肤颜色。", true, false, false)
 					
 					+ "<div class='cosmetics-container' style='background:transparent;'>"
 					
@@ -989,7 +989,7 @@ public class CharacterCreation {
 						+ CharacterModificationUtils.getMuscleChoiceDiv()
 						
 						+ "<div class='container-full-width' style='text-align:center;'>"
-							+ "Your muscle and body size values result in your appearance being:<br/>"
+							+ "你的肌肉量和体型会影响你的外观:<br/>"
 							+ "<b style='color:"+Main.game.getPlayer().getBodyShape().toWebHexStringColour()+";'>"+Util.capitaliseSentence(Main.game.getPlayer().getBodyShape().getName(false))+"</b>"
 						+ "</div>"
 					
@@ -1007,19 +1007,19 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_FACE = new DialogueNode("Face Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_FACE = new DialogueNode("面容", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>所有选项都会影响游戏的后续发展。</i>"
 					+ "</div>"
 
 					+ CharacterModificationUtils.getLipSizeDiv()
 					
 					+ CharacterModificationUtils.getLipPuffynessDiv()
 
-					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getEyeType().getRace(), BodyCoveringType.EYE_HUMAN, "Iris Colour", "The colour of your eye's irises.", true, false, false);
+					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getEyeType().getRace(), BodyCoveringType.EYE_HUMAN, "虹膜颜色", "你虹膜的颜色", true, false, false);
 		}
 		
 		@Override
@@ -1030,26 +1030,26 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_ADVANCED_APPEARANCE);
+				return new Response("返回", "返回外观菜单确定你的选择。", CHOOSE_ADVANCED_APPEARANCE);
 				
 			}
 			else return CharCreationMenu.getBodyOptions(index);
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_HAIR = new DialogueNode("Hair Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_HAIR = new DialogueNode("发型", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>所有选项都会影响游戏的后续发展。</i>"
 					+ "</div>"
 
-					+ CharacterModificationUtils.getKatesDivHairLengths(false, "Hair Length", "Choose how long your hair is.")
+					+ CharacterModificationUtils.getKatesDivHairLengths(false, "头发长度", "选择你头发的长度。")
 					
-					+ CharacterModificationUtils.getKatesDivHairStyles(false, "Hair Style", "Choose your hair style. Certain hair styles are unavailable at shorter hair lengths.")
+					+ CharacterModificationUtils.getKatesDivHairStyles(false, "发型", "选择你的发型，短发可能无法选择某些特殊发型。")
 
-					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getHairType().getRace(), BodyCoveringType.HAIR_HUMAN, "Hair Colour", "The colour of your hair.", true, false);
+					+ CharacterModificationUtils.getKatesDivCoveringsNew(false, Main.game.getPlayer().getHairType().getRace(), BodyCoveringType.HAIR_HUMAN, "发色", "你头发的颜色。", true, false);
 		}
 		
 		@Override
@@ -1063,12 +1063,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BREASTS = new DialogueNode("Breasts Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BREASTS = new DialogueNode("胸部外观", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>所有选项都会影响游戏的后续发展。</i>"
 					+ "</div>"
 						
 					+ CharacterModificationUtils.getBreastSizeDiv()
@@ -1095,12 +1095,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_ASS = new DialogueNode("Ass Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_ASS = new DialogueNode("臀部外观", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>所有选项都会影响游戏的后续发展。</i>"
 					+ "</div>"
 						
 					+ CharacterModificationUtils.getAssSizeDiv()
@@ -1121,14 +1121,14 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_GENITALS = new DialogueNode("Genitals Appearance", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_GENITALS = new DialogueNode("生殖器外观", "", true) {
 		
 		@Override
 		public String getLabel() {
 			if(Main.game.getPlayer().hasPenis()) {
-				return "Penis Appearance";
+				return "阴茎外观";
 			} else {
-				return "Vagina Appearance";
+				return "阴部外观";
 			}
 		}
 		
@@ -1136,7 +1136,7 @@ public class CharacterCreation {
 		public String getHeaderContent() {
 			if(Main.game.getPlayer().hasPenis()) {
 				return "<div class='container-full-width' style='text-align:center;'>"
-							+ "<i>All of these options can be influenced later on in the game.</i>"
+							+ "<i>所有选项都会影响游戏的后续发展。</i>"
 						+ "</div>"
 							
 							+ CharacterModificationUtils.getPenisSizeDiv()
@@ -1147,7 +1147,7 @@ public class CharacterCreation {
 				
 			} else {
 				return "<div class='container-full-width' style='text-align:center;'>"
-							+ "<i>All of these options can be influenced later on in the game.</i>"
+							+ "<i>所有选项都会影响游戏的后续发展。</i>"
 						+ "</div>"
 	
 							+ CharacterModificationUtils.getVaginaCapacityDiv()
@@ -1170,12 +1170,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_PIERCINGS = new DialogueNode("Piercings", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_PIERCINGS = new DialogueNode("穿孔", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>所有选项都会影响游戏的后续发展。</i>"
 					+ "</div>"
 						
 					+CharacterModificationUtils.getKatesDivPiercings(true);
@@ -1192,12 +1192,12 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS = new DialogueNode("Tattoos", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS = new DialogueNode("纹身", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>Later on in the game, you can get enchanted and glowing tattoos. For now, however, your tattoo choices are limited to more mundane options.</i>"
+						+ "<i>在游戏后期，你可以选择附魔纹身和发光纹身，不过目前你暂时只能选择普通纹身。</i>"
 					+ "</div>"
 					+CharacterModificationUtils.getKatesDivTattoos();
 		}
@@ -1213,11 +1213,11 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS_ADD = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_TATTOOS_ADD = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getLabel() {
-			return "Add Tattoo: "+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getTattooSlotName());
+			return "增加纹身："+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getTattooSlotName());
 		}
 		
 		@Override
@@ -1231,11 +1231,11 @@ public class CharacterCreation {
 				if(CharacterModificationUtils.tattoo.getType().equals(TattooType.getTattooTypeFromId("innoxia_misc_none"))
 						&& CharacterModificationUtils.tattoo.getWriting().getText().isEmpty()
 						&& CharacterModificationUtils.tattoo.getCounter().getType()==TattooCounterType.NONE) {
-					return new Response("Apply", "You need to select a tattoo type, add some writing, or add a counter in order to make a tattoo!", null);
+					return new Response("应用", "你需要选择纹身类型，添加一些文字或计数指示才能形成完整的纹身！", null);
 					
 				} else {
-					return new Response("Apply", 
-							UtilText.parse(BodyChanging.getTarget(), "Add this tattoo."), CHOOSE_ADVANCED_APPEARANCE_TATTOOS) {
+					return new Response("应用", 
+							UtilText.parse(BodyChanging.getTarget(), "添加这个纹身。"), CHOOSE_ADVANCED_APPEARANCE_TATTOOS) {
 						@Override
 						public void effects() {
 							Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('tattoo_name').value;");
@@ -1247,7 +1247,7 @@ public class CharacterCreation {
 				}
 			
 			} else if(index==2) {
-				return new Response("Save/Load", "Save/Load tattoo presets.", CosmeticsDialogue.TATTOO_SAVE_LOAD) {
+				return new Response("保存/加载", "保存/加载纹身预设。", CosmeticsDialogue.TATTOO_SAVE_LOAD) {
 					@Override
 					public void effects() {
 						CosmeticsDialogue.initTattooSaveLoadDialogue(CHOOSE_ADVANCED_APPEARANCE_TATTOOS_ADD);
@@ -1255,7 +1255,7 @@ public class CharacterCreation {
 				};
 			
 			} else if(index==0) {
-				return new Response("Back", "Decide not to get this tattoo and return to the main selection screen.", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
+				return new Response("返回", "取消纹身并回到选择菜单。", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
 			}
 			
 			return null;
@@ -1267,31 +1267,31 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_COSMETICS = new DialogueNode("Cosmetics", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_COSMETICS = new DialogueNode("化妆品", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			return "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>All of these options can be influenced later on in the game.</i>"
+						+ "<i>所有选项都会影响游戏的后续发展。</i>"
 					+ "</div>"
 							
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "腮红", "腮红(也叫胭脂)被用来粉饰脸颊，以显得更加年轻或凸显颧骨。", true, false)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "口红", "口红被用来为嘴唇提供色彩、质地或保护。", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "眼线", "眼线用于眼廓周围，有助于修饰眼型或突出不同的特征。", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "眼影", "眼影用来让使用者的眼睛更加凸显迷人。", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on your [pc.hands].", true, false)
+							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "指甲油", "指甲油用于给[pc.hands]添加色彩或提供保护。", true, false)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on your [pc.feet].", true, false);
+							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "脚趾甲油", "脚趾甲油用于给[pc.feet]添加色彩或提供保护。", true, false);
 		}
 		
 		@Override
@@ -1305,60 +1305,60 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR = new DialogueNode("Body Hair", "", true) {
+	public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR = new DialogueNode("体毛", "", true) {
 		
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-												+ "<i>All of these options can be influenced later on in the game.</i>"
+												+ "<i>所有选项都会影响游戏的后续发展。</i>"
 											+ "</div>");
 			
 			if(Main.game.isPubicHairEnabled() || Main.game.isFacialHairEnabled() || Main.game.isBodyHairEnabled()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(
-						false, Race.NONE, Main.game.getPlayer().getBodyHairCoveringType(), "Body hair", "This is the hair that covers all areas other than the head.", false, false, false));
+						false, Race.NONE, Main.game.getPlayer().getBodyHairCoveringType(), "体毛", "覆盖头部以外任何地方的毛发。", false, false, false));
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Body hair", "This is the hair that covers all areas other than the head.", "All extra body hair options are disabled. You will not see any extra hair content."));
+						"体毛", "覆盖头部以外任何地方的毛发。", "所有体毛附加选项都将不可用。你不会看见任何关于体毛的内容。"));
 				
 				return UtilText.nodeContentSB.toString();
 			}
 			
 			if(Main.game.isFacialHairEnabled()) {
 				if (Main.game.isFemaleFacialHairEnabled()) {
-					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "Facial hair", "The body hair found on your face."));
+					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "胡须", "面部的体毛。"));
 				} else {
-					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "Facial hair", "The body hair found on your face. Feminine characters cannot grow facial hair."));
+					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "胡须", "面部的体毛。女性化角色无法长出面部毛发。"));
 				}
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Facial hair", "The body hair found on your face. Feminine characters cannot grow facial hair.", "Facial hair is currently disabled in the options. You will not see any facial hair content while it is disabled."));
+						"胡须", "面部的体毛。女性化角色无法长出面部毛发。", "胡须选项目前不可用，你将不会看见任何胡须相关的内容。"));
 			}
 			
 			if(Main.game.isPubicHairEnabled()) {
-				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "Pubic hair", "The body hair found in the genital area; located on and around your sex organs and crotch."));
+				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "阴毛", "你下体附近的体毛，在你的生殖器和腹股沟附近。"));
 				
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Pubic hair", "The body hair found in the genital area; located on and around your sex organs and crotch.", "Pubic hair is currently disabled in the options. You will not see any pubic hair content while it is disabled."));
+						"阴毛", "你下体附近的体毛，在你的生殖器和腹股沟附近。", "阴毛选项目前不可用，你将不会看见任何阴毛相关内容。"));
 			}
 			
 			if(Main.game.isBodyHairEnabled()) {
 				UtilText.nodeContentSB.append(
-						CharacterModificationUtils.getKatesDivUnderarmHair(false, "Underarm hair", "The body hair found in your armpits."));
+						CharacterModificationUtils.getKatesDivUnderarmHair(false, "腋毛", "腋窝处的体毛。"));
 				
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Underarm hair", "The hair found in your armpits.", "Underarm hair is currently disabled in the options. You will not see any underarm hair content while it is disabled."));
+						"腋毛", "腋窝处的体毛。", "腋毛选项目前不可用，你将不会看见任何腋毛相关的内容。"));
 			}
 			
 			if(Main.game.isAssHairEnabled()) {
-				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivAssHair(false, "Ass hair", "The body hair found around your asshole."));
+				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivAssHair(false, "肛毛", "肛门附近的体毛。"));
 				
 			} else {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivGenericBodyHairDisabled(
-						"Ass hair", "The body hair found around your asshole.", "Ass hair is currently disabled in the options. You will not see any ass hair content while it is disabled."));
+						"肛毛", "你肛门附近的体毛。", "肛毛选项目前不可用，你将不会看见任何肛毛相关的内容。"));
 			}
 			
 			return UtilText.nodeContentSB.toString();
@@ -1381,24 +1381,24 @@ public class CharacterCreation {
 		File dir = new File("res/");
 		if(!dir.exists()) {
 			sb.append("<p style='text-align:center;'>"
-						+ "[style.italicsBad(The game cannot read the 'res' folder, and as such, vital items of clothing will be missing! Please refer to the 'MISSING FOLDERS' section of the README.txt before continuing!)]"
+						+ "[style.italicsBad(游戏无法读取 'res' 文件夹，因此将缺失重要的服装贴图！在继续游戏之前，请查阅 README.txt 中的 'MISSING FOLDERS' 部分！)]"
 					+ "</p>");
 		}
 		
 		sb.append("<div class='container-full-width' style='background:transparent;'>"
 					+ "<p>"
-						+ "There doesn't seem to be any sign of activity on the main stage, so, afforded a few more minutes, you decide to smarten up your clothes a little."
-						+ " After all, this is a big evening for Lily, and you want her to see that you've put some effort into your appearance."
+						+ "主舞台上还是没动静，看来离开场还有几分钟时间，你决定再打扮一下自己。"
+						+ "毕竟，这是莉莉的盛大晚宴，你想让她看看你为了打扮花费了多少功夫。"
 					+ "</p>"
 					+ "<p>"
-						+ "Turning this way and that to get a better look at yourself in the mirror, you begin to notice just how "+(Main.game.getPlayer().isFeminine()?"hot":"handsome")+" you're looking tonight..."
+						+ "你走得更近，更清楚地凝视着镜中的自己，你注意到你今晚看起来很"+(Main.game.getPlayer().isFeminine()?"火辣":"英俊")+"……"
 					+ "</p>"
 					+ "<p>"
-						+ "[pc.thought(Why am I feeling so horny all of a sudden?)]"
+						+ "[pc.thought(我为什么突然这么饥渴？)]"
 					+ "</p>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
-						+ "<i>Choose what you decided to wear to the museum.</i><br/>"
-						+ "<i>You'll need to be wearing some kind of footwear, as well as clothing that conceals your genitals and chest, before being able to proceed.</i>"
+						+ "<i>选择你穿什么去博物馆。</i><br/>"
+						+ "<i>你需要穿上鞋子，还有遮盖生殖器和胸部的衣物，才能继续进行。</i>"
 					+ "</div>"
 				+ "</div>");
 		
@@ -1424,95 +1424,95 @@ public class CharacterCreation {
 		return Main.game.getPlayer().getSexualOrientation()==SexualOrientation.GYNEPHILIC || (Main.game.getPlayer().getSexualOrientation()==SexualOrientation.AMBIPHILIC && Main.game.getPlayer().hasPenis());
 	}
 	
-	public static final DialogueNode CHOOSE_BACKGROUND = new DialogueNode("In the Museum", "-", true) {
+	public static final DialogueNode CHOOSE_BACKGROUND = new DialogueNode("博物馆中", "-", true) {
 		
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append("<p>"
-						+ "Satisfied with your appearance, you turn away from the mirror and begin to walk towards the main stage."
-						+ " With each step you take, you inexplicably find yourself getting more and more turned on, and by the time you've barely covered half the distance to the bustling crowd of visitors,"
+						+ "打理好外表后，你转身离开镜子，向主舞台走去。"
+						+ "你每踏出一步，便莫名其妙地觉得自己愈加兴奋，走到一半，已经没入了熙熙攘攘的人群中间，"
 							+(Main.game.getPlayer().hasPenis()
-									?" you're struggling to keep yourself from getting an erection."
-									:" you can feel your pussy getting wet from arousal.")
+									?"你拼尽全力避免自己在大庭广众下搭起帐篷。"
+									:"你感觉小穴已经由于欲望被润湿了。")
 					+ "</p>"
 					+ "<p>"
-						+ "Ducking behind a nearby pillar, you shake your head to try and dislodge the dirty thoughts that are starting to seep into your mind."
-						+ " As you lean back against the cold stone and take a deep breath, a voice suddenly interrupts your thoughts,");
+						+ "你立刻躲藏到附近的立柱后面，你摇摇头，试图摆脱那些开始渗入你脑海的淫念。"
+						+ "你背靠着冰冷的石柱，深呼吸着，这时一个声音忽然打断了你的思绪，");
 			
 			if(!femalePrologueNPC()) {
-				UtilText.nodeContentSB.append(" [prologueMale.speech(Taking a break from the crowds as well?)]"
+				UtilText.nodeContentSB.append("[prologueMale.speech(你也是从人群里逃出来休息的吗！？)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Turning around, you see a tall, handsome-looking man, who must be only a couple of years older than you, giving you the most charming smile you've ever seen."
-							+ " Before you know what you're doing, your eyes are travelling up and down every [unit.size] of his manly, muscular body, and you only just manage to stop yourself from letting out a desperate little whine."
+							+ "你转过身，只见一位身材高挑的英俊男性，比你大不过一两岁，脸上挂着你从未见过的迷人微笑。"
+							+ "在你还没有反应过来的时候，你便对着他充满男人味、肌肉分明的身体上下打量了一遍又一遍，要不是尽力憋住，不然可能就呻吟了出来。"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.thought(Focus, [pc.name], focus!)] you think, trying to act as casual as possible as you smile back at the stranger before you."
+							+ "[pc.thought(要专心，[pc.name]，专心！)]你一边想着，一边摆出自然的表情，对着面前的陌生人也微笑了一下。"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Actually,)] you say, [pc.speech(I've only just arrived. I thought I was going to be late, but it looks like nothing's started yet.)]"
+							+ "[pc.speech(其实，)]你说道，[pc.speech(我才刚到。我还以为自己迟到了，没想到还没开始。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueMale.speech(Ah, you must have just missed the announcement,)] he replies, [prologueMale.speech(the opening speech is being delayed by half an hour."
-								+ " I tried hanging around in that crowd back there, but I'm no historian, and most of the conversation is pretty dry...)]"
+							+ "[prologueMale.speech(啊，你大概错过了刚才的通知，)]他回复道，[prologueMale.speech(开幕演讲被推迟了半个小时。"
+								+ "我本想在人群里逛一逛，但我也不是历史学家，他们的对话都太无聊了……)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Haha,)]"
-							+ " you laugh, desperately trying not to imagine how he looks naked,"
-							+ " [pc.speech(I know <i>exactly</i> what you mean. My aunt is the lady giving the opening speech, and every time I meet her friends from the museum, I can never follow their conversations."
-									+ " Well, apart from Arthur that is. He's closer to our age, and is really easy-going and fun to talk to.)]"
+							+ "[pc.speech(哈哈，)]"
+							+ "你笑了笑，但还是竭尽全力没有去想他赤身裸体的样子，"
+							+ "[pc.speech(我可<i>太明白</i>你的意思了。我的姨妈就是马上要去做开幕演讲的那位，我每次见到她博物馆的朋友都完全搭上话。"
+									+ "当然，除了那个亚瑟。他跟我们年纪更近些，而且为人随和，很愿意跟别人聊天。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueMale.speech(Hah! You know Arthur? I'm here by his invitation. He and I go way back,)]"
-							+ " the man cheerily replies, his smile causing your heart to race."
-							+ " [prologueMale.speech(I'm [prologueMale.name] by the way, pleased to meet you "+(Main.game.getPlayer().isFeminine()?"Ms. ...?":"Mr. ...?")+")]"
+							+ "[prologueMale.speech(哈！你认识亚瑟吗？我就是他邀请来的。我们是老相识了，)]"
+							+ "那个男人看上去很开心，他的微笑让你心跳加速。"
+							+ "[prologueMale.speech(对了，我叫[prologueMale.name]，很高兴见到你……？)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Likewise,)] you respond, shaking his offered hand while trying not to think of how powerful and dominant his grip is. [pc.speech(I'm [pc.Name].)]"
+							+ "[pc.speech(我也是，)]你握了握他伸出的手，脑海里却不断闪过他的大手会如何强硬有力。[pc.speech(我叫[pc.Name]。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "You and [prologueMale.name] continue talking with one another as you wait for the presentation to start."
-							+ " Before long, the subject shifts to work, and you find out that he's an airline pilot, based out of the airport on the city's outskirts."
-							+ " Conversation then moves on to what it is you do, and you end up talking about that for a little while..."
+							+ "你和[prologueMale.name]继续聊着天，等待演讲开始。"
+							+ "没过多久，话题便转向了工作，你得知他是航空公司的一名飞行员，工作地点在市郊的机场。"
+							+ "接着他问及了你的工作，你便跟他又聊了一会儿……"
 						+ "</p>");
 				
 			} else {
-				UtilText.nodeContentSB.append(" [prologueFemale.speech(Taking a break from the crowds as well?)]"
+				UtilText.nodeContentSB.append("[prologueFemale.speech(你也是从人群里逃出来休息的吗！？)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Turning around, you see a beautiful woman, who looks to be about the same age as you, giving you the most stunning smile you've ever seen."
-							+ " Before you know what you're doing, your eyes are travelling up and down every [unit.size] of her curvy, womanly body, and you only just manage to stop yourself from letting out a hungry groan."
+							+ "你转过身，只见一位美貌的女性，年龄与你相仿，脸上挂着你从未见过的动人微笑。"
+							+ "在你还没有反应过来的时候，你便对着她充满女人味、前凸后翘的身体上下打量了一遍又一遍，要不是尽力憋住，不然可能就发出了饥渴的低吼。"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.thought(Focus [pc.name], focus!)] you think, trying to act as casual as possible as you smile back at the stranger before you."
+							+ "[pc.thought(要专心，[pc.name]，专心！)]你一边想着，一边摆出自然的表情，对着面前的陌生人也微笑了一下。"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Actually,)] you say, [pc.speech(I've only just arrived. I thought I was going to be late, but it looks like nothing's started yet.)]"
+							+ "[pc.speech(其实，)]你说道，[pc.speech(我才刚到。我还以为自己迟到了，没想到还没开始。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueFemale.speech(Ah, you must have just missed the announcement,)] she replies, [prologueFemale.speech(the opening speech is being delayed by half an hour."
-								+ " I tried hanging around in that crowd back there, but I'm no historian, and most of the conversation is pretty dry...)]"
+							+ "[prologueFemale.speech(啊，你大概错过了刚才的通知，)]她回复道，[prologueFemale.speech(开幕演讲被推迟了半个小时。"
+								+ "我本想在人群里逛一逛，但我也不是历史学家，他们的对话都太无聊了……)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Haha,)]"
-							+ " you laugh, desperately trying not to imagine how she looks naked,"
-							+ " [pc.speech(I know <i>exactly</i> what you mean. My aunt is the lady giving the opening speech, and every time I meet her friends from the museum, I can never follow their conversations."
-									+ " Well, apart from Arthur that is. He's closer to our age, and is really easy-going and fun to talk to.)]"
+							+ "[pc.speech(哈哈，)]"
+							+ "你笑了笑，但还是竭尽全力没有去想她赤身裸体的样子，"
+							+ "[pc.speech(我可<i>太明白</i>你的意思了。我的姨妈就是马上要去做开幕演讲的那位，我每次见到她博物馆的朋友都完全搭上话。"
+									+ "当然，除了那个亚瑟。他跟我们年纪更近些，而且为人随和，很愿意跟别人聊天。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[prologueFemale.speech(Oh! You know Arthur? I'm here by his invitation, actually. He and I go way back,)]"
-							+ " the woman cheerily replies, her smile causing your heart to race."
-							+ " [prologueFemale.speech(I'm [prologueFemale.name] by the way, pleased to meet you "+(Main.game.getPlayer().isFeminine()?"Ms. ...?":"Mr. ...?")+")]"
+							+ "[prologueFemale.speech(哈！你认识亚瑟吗？我就是他邀请来的。我们是老相识了，)]"
+							+ "那个女人看上去很开心，她的微笑让你心跳加速。"
+							+ "[prologueFemale.speech(对了，我叫[prologueFemale.Name]，很高兴见到你……？)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Likewise,)] you respond, shaking her offered hand while trying not to think of how soft and delicate her skin is. [pc.speech(I'm [pc.Name].)]"
+							+ "[pc.speech(我也是，)]你回应道，握住她伸出的手，同时尽量不去想她的皮肤多么柔软和娇嫩。[pc.speech(我是[pc.Name]。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "You and [prologueFemale.name] continue talking with one another as you wait for the presentation to start."
-							+ " Before long, the subject shifts to work, and you find out that she's training to become a doctor, and is studying here at the city's university."
-							+ " Conversation then moves on to what it is you do, and you end up talking about that for a little while..."
+							+ "你和[prologueFemale.Name]继续聊着天，等待演讲开始。"
+							+ "没过多久，话题转向了工作，你发现她正在接受医生培训，在这座城市的大学学习。"
+							+ "接着她问及了你的工作，你便跟他又聊了一会儿……"
 						+ "</p>");
 			}
 			
@@ -1522,7 +1522,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new ResponseEffectsOnly("Back", "Return to clothing selection.") {
+				return new ResponseEffectsOnly("返回", "返回衣物选择。") {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_BACKGROUND;
@@ -1538,7 +1538,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 1) {
-				return new Response("Select Job", "Proceed to the job selection screen.", BACKGROUND_SELECTION_MENU) {
+				return new Response("选择职业", "进入职业选择界面。", BACKGROUND_SELECTION_MENU) {
 					@Override
 					public int getSecondsPassed() {
 						return TIME_TO_JOB;
@@ -1551,15 +1551,15 @@ public class CharacterCreation {
 		}
 	};
 	
-	public static final DialogueNode BACKGROUND_SELECTION_MENU = new DialogueNode("In the Museum", "-", true) {
+	public static final DialogueNode BACKGROUND_SELECTION_MENU = new DialogueNode("博物馆中", "-", true) {
 		
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append("<div class='container-full-width'>"
-									+ "<h6 style='text-align:center'>Job Selection</h6>"
-									+ "<p style='text-align:center'>Click on the icon next to the job that you'd like, and then choose 'Continue'.</p>"
+									+ "<h6 style='text-align:center'>职业选择</h6>"
+									+ "<p style='text-align:center'>点击你期望的职业旁的图标，然后点击“继续”。</p>"
 								+ "</div>");
 
 			UtilText.nodeContentSB.append("<div class='container-full-width'>");
@@ -1593,7 +1593,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the previous screen.", CHOOSE_BACKGROUND) {
+				return new Response("返回", "回到上一界面。", CHOOSE_BACKGROUND) {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_JOB;
@@ -1602,9 +1602,9 @@ public class CharacterCreation {
 				
 			} else if (index == 1) {
 				if(Main.game.getPlayer().getHistory().getAssociatedPerk()==null) {
-					return new Response("Continue", "You need to select a job before continuing!", null);
+					return new Response("继续", "你需要先选择一个职业！", null);
 				} else {
-					return new Response("Continue", femalePrologueNPC()?"Tell [prologueFemale.name] what it is you do for a living.":"Tell [prologueMale.name] what it is you do for a living.", CHOOSE_SEX_EXPERIENCE) {
+					return new Response("继续", femalePrologueNPC()?"告诉[prologueFemale.name]你现在靠什么谋生。":"告诉[prologueMale.name]你现在靠什么谋生。", CHOOSE_SEX_EXPERIENCE) {
 						@Override
 						public int getSecondsPassed() {
 							return TIME_TO_SEX_EXPERIENCE;
@@ -1627,7 +1627,7 @@ public class CharacterCreation {
 	};
 	
 	
-	public static final DialogueNode CHOOSE_SEX_EXPERIENCE = new DialogueNode("Start", "", true) {
+	public static final DialogueNode CHOOSE_SEX_EXPERIENCE = new DialogueNode("开始", "", true) {
 		
 		@Override
 		public String getContent() {
@@ -1637,86 +1637,86 @@ public class CharacterCreation {
             switch (Main.game.getPlayer().getHistory()) {
                 case ATHLETE:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm a professional athlete,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(and I spend most of my time training for and attending competitions.)]");
+                            "[pc.speech(我是一名职业运动员，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(我大多数事件都在训练和参加比赛。)]");
                     break;
                 case BUTLER:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I work as the butler for a highly influential family here in the city,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(but I took tonight off so I could attend Lily's presentation.)]");
+                            "[pc.speech(我在城里一个很有影响力的家族做管家，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(不过今天请了个假，才来参加莉莉的演讲。)]");
                     break;
                 case CHEF:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm the head chef at a restaurant just around the corner from here,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(but I took tonight off so I could attend Lily's presentation.)]");
+                            "[pc.speech(这边拐个弯就到的餐厅，我在那里做主厨，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(不过今天请了个假，才来参加莉莉的演讲。)]");
                     break;
                 case CONSTRUCTION_WORKER:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm a construction worker,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(and I'm currently managing a large project on the outskirts of the city.)]");
+                            "[pc.speech(我是个建筑工人，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(我正在负责市郊一个大工程。)]");
                     break;
                 case MAID:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I work as the head maid for a highly influential family here in the city,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(but I took tonight off so I could attend Lily's presentation.)]");
+                            "[pc.speech(我在城里一个很有影响力的家族做女仆长，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(不过今天请了个假，才来参加莉莉的演讲。)]");
                     break;
                 case MUSICIAN:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm a member of the city orchestra,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(and I also do private music tutoring.)]");
+                            "[pc.speech(我是城市交响乐团的一员，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(我也提供私人音乐辅导。)]");
                     break;
                 case BAND:
                     UtilText.nodeContentSB.append(
                             "[pc.speech(I'm a member of a band,)]"
-                                    + " you explain,"
+                                    + "你解释道，"
                                     + " [pc.speech(and I also enjoy art.)]");
                     break;
                 case OFFICE_WORKER:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I work in one of the corporate offices in the centre of the city,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(mostly doing admin and paper work.)]");
+                            "[pc.speech(我在市中心的一家公司坐办公室，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(通常都是做管理和文书工作。)]");
                     break;
                 case OJISAN:
                     UtilText.nodeContentSB.append(
                             "[pc.speech(I work in one of the corporate offices in the centre of the city,)]"
-                                    + " you explain,"
+                                    + "你解释道，"
                                     + " [pc.speech(I am here looking for something.)]");
                     break;
                 case STUDENT_COUNCIL:
                     UtilText.nodeContentSB.append(
                             "[pc.speech(I am in the student council of my school,)]"
-                                    + " you explain,"
+                                    + "你解释道，"
                                     + " [pc.speech(mostly doing admin and paper work.)]");
                     break;
                 case SOLDIER:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm in the army,)]"
-                                    + " you explain,"
-                                    + " [pc.speech(I'm on leave for the rest of the week, and then it's back to the barracks for me.)]");
+                            "[pc.speech(我在军队服役，)]"
+                                    + "你解释道，"
+                                    + "[pc.speech(这周剩下的时间我都在休假，然后就得回军营了。)]");
                     break;
                 case JROTC:
                     UtilText.nodeContentSB.append(
                             "[pc.speech(I'm in the JROTC,)]"
-                                    + " you explain,"
+                                    + "你解释道，"
                                     + " [pc.speech(I'm on vacation for the rest of the week, and then it's back to school and training for me.)]");
                     break;
                 case GSTUDENT:
                     UtilText.nodeContentSB.append(
                             "[pc.speech(I'm a student at the city grade school,)]"
-                                    + " you explain,"
+                                    + "你解释道，"
                                     + " [pc.speech(I am here to look at all the cool art.)]");
                     break;
                 case MSTUDENT:
                     UtilText.nodeContentSB.append(
                             "[pc.speech(I'm a student at the city middle school,)]"
-                                    + " you explain,"
+                                    + "你解释道，"
                                     + " [pc.speech(I really enjoy art so I am here to take a look at all the cool pieces.)]");
                     break;
                 case HSTUDENT:
@@ -1727,21 +1727,21 @@ public class CharacterCreation {
                     break;
                 case STUDENT:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm a student at the city uni,)]"
+                            "[pc.speech(我是大学的学生，)]"
                                     + " you explain,"
-                                    + " [pc.speech(although I haven't quite decided what to take as my major yet.)]");
+                                    + "[pc.speech(不过还没决定好专业。)]");
                     break;
                 case TEACHER:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm a teacher at a local secondary school,)]"
+                            "[pc.speech(我是当地中学的一名老师，)]"
                                     + " you explain,"
-                                    + " [pc.speech(but seeing as it's half-term, I get to take it easy this week.)]");
+                                    + "[pc.speech(但由于是半学期，我这周可以休息一下。)]");
                     break;
                 case UNEMPLOYED:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm in-between jobs at the moment,)]"
+                            "[pc.speech(我还在找工作，)]"
                                     + " you explain,"
-                                    + " [pc.speech(I've actually been thinking about applying to work here at the museum.)]");
+                                    + "[pc.speech(我其实想过要不要申请这座博物馆的工作。)]");
                     break;
                 case NO_JOB_YET:
                     UtilText.nodeContentSB.append(
@@ -1755,21 +1755,21 @@ public class CharacterCreation {
                     break;
                 case WRITER:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm a professional author,)]" // I write erotic novels...
+                            "[pc.speech(我是一名职业作家，)]" // I write erotic novels……
                                     + " you explain,"
-                                    + " [pc.speech(and I'm currently waiting to hear back from my publisher about my latest novel.)]");
+                                    + "[pc.speech(我正在等待出版商给我上一部小说的回复。)]");
                     break;
                 case ARISTOCRAT:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I don't need to concern myself with working,)]"
+                            "[pc.speech(我不需要担心工作，)]"
                                     + " you explain,"
-                                    + " [pc.speech(My family estate provides all the income I need, so I spend my time travelling and enjoying life.)]");
+                                    + "[pc.speech(我的家族资产就足以提供我需要的收入，所以我整天都在旅游和享受生活。)]");
                     break;
                 case TOURIST:
                     UtilText.nodeContentSB.append(
-                            "[pc.speech(I'm here on vacation,)]"
+                            "[pc.speech(我是来这里度假的，)]"
                                     + " you explain,"
-                                    + " [pc.speech(While I'm here in the UK, I don't want to be thinking about work.)]");
+                                    + "[pc.speech(既然到了英国，我就不想再考虑工作了。)]");
                     break;
                 default:
                     break;
@@ -1779,38 +1779,38 @@ public class CharacterCreation {
 			if(femalePrologueNPC()) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "As the two of you continue to talk, first about work, and then about more general subjects, you find yourself getting more and more turned on."
-							+ " What's more, you begin to notice that [prologueFemale.namePos] cheeks are starting to flush red, and she keeps on glancing hungrily down at your body when she thinks that you aren't looking."
+							+ "你们两个继续聊着天，先是聊工作，接着又是些琐事；聊着聊着，你意识到自己越来越兴奋了。"
+							+ "更奇怪的是，你注意到[prologueFemale.namePos]的脸颊也开始潮红，还在时不时地趁着你没注意的时候饥渴地偷瞄你的身体。"
 						+ "</p>"
 						+ "<p>"
-							+ "As final evidence that she's getting just as turned on as you are, she starts openly talking about her sex life."
-							+ " To begin with, you're a little taken aback at her openness, but the more she talks, the more comfortable you find yourself with talking to this relative stranger about sex."
+							+ "她忽然开始公开谈论她的性生活，这终于证明了她和你同样兴奋。"
+							+ "一开始你对她奔放的态度有些吃惊，但随着她越说越多，你意识到自己跟这位陌生人谈论起性的时候，也没有那样尴尬了。"
 						+ "</p>"
 						+ "<p>"
-							+ "And so, after talking with [prologueFemale.name] for no longer than ten minutes, you're telling her every little detail about your sexual experiences..."
+							+ "因而，跟[prologueFemale.name]谈了没有十分钟，你便开始事无巨细地向她讲述起自己的性经历……"
 						+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "As the two of you continue to talk, first about work, and then about more general subjects, you find yourself getting more and more turned on."
-							+ " What's more, you begin to notice that [prologueMale.namePos] cheeks are starting to flush red, and he keeps on glancing hungrily down at your body when he thinks that you aren't looking."
+							+ "你们两个继续聊着天，先是聊工作，接着又是些琐事；聊着聊着，你意识到自己越来越兴奋了。"
+							+ "更奇怪的是，你注意到[prologueMale.namePos]的脸颊也开始潮红，还在时不时地趁着你没注意的时候饥渴地偷瞄你的身体。"
 						+ "</p>"
 						+ "<p>"
-							+ "As final evidence that he's getting just as turned on as you are, he starts openly talking about his sex life."
-							+ " To begin with, you're a little taken aback at his openness, but the more he talks, the more comfortable you find yourself with talking to this relative stranger about sex."
+							+ "他忽然开始公开谈论他的性生活，这终于证明了他和你同样兴奋。"
+							+ "一开始你对他奔放的态度有些吃惊，但随着他越说越多，你意识到自己跟这位陌生人谈论起性的时候，也没有那样尴尬了。"
 						+ "</p>"
 						+ "<p>"
-							+ "And so, after talking with [prologueMale.name] for no longer than ten minutes, you're telling him every little detail about your sexual experiences..."
+							+ "因而，跟[prologueMale.Name]谈了没有十分钟，你便开始事无巨细地向她讲述起自己的性经历……"
 						+ "</p>");
 			}
 			
 			UtilText.nodeContentSB.append(
 						"<div class='container-full-width' style='text-align:center;'>"
-							+ "<i>More sexual experience will result in gaining more corruption. (You can see your corruption, along with your other attributes, in the character panel to the left of the screen.)"
+							+ "<i>性经历越丰富，堕落就越高。(你可以在左侧的角色栏中看到自己的堕落值，包括其他属性)"
 							+ "<br/>"
-							+ "Selecting '<span style='color:"+FetishDesire.FOUR_LOVE.getColour().toWebHexString()+";'>"+FetishDesire.FOUR_LOVE.getName()+"</span>'"
-								+ " for any fetish desire will result in your character starting the game with that fetish, while the other four desires simply determine your character's attitude towards that fetish.</i>"
+							+ "对性癖选择“<span style='color:"+FetishDesire.FOUR_LOVE.getColour().toWebHexString()+";'>"+FetishDesire.FOUR_LOVE.getName()+"</span>”"
+								+ "等级会使你在游戏开始时获得该性癖，而其他等级只会决定你对于那项性癖的态度。</i>"
 						+ "</div>"
 						+CharacterModificationUtils.getSexualExperienceDiv()
 						+CharacterModificationUtils.getFetishChoiceDiv());
@@ -1821,7 +1821,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Once you're happy with your sexual experience, proceed to the final part of the character creation.", FINAL_CHECK) {
+				return new Response("继续", "对于性经历满意后，就可以前往角色创建的最后阶段了。", FINAL_CHECK) {
 					@Override
 					public int getSecondsPassed() {
 						return TIME_TO_FINAL_CHECK;
@@ -1851,7 +1851,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to background selection.", BACKGROUND_SELECTION_MENU) {
+				return new Response("返回", "返回背景选择。", BACKGROUND_SELECTION_MENU) {
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_SEX_EXPERIENCE;
@@ -1901,19 +1901,19 @@ public class CharacterCreation {
 		moveNPCOutOfPlayerTile();
 	}
 	
-	public static final DialogueNode FINAL_CHECK = new DialogueNode("Start", "", true) {
+	public static final DialogueNode FINAL_CHECK = new DialogueNode("开始", "", true) {
 		
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 			UtilText.nodeContentSB.append(
 				"<div class='container-full-width' style='text-align:center;'>"
-					+ "<i>Once you're happy with your appearance, press the 'Start Game' button to begin!<br/>"
-					+ "[style.colourGood(This is the end of character creation, so only proceed once you're happy with your choices!)]</i>"
+					+ "<i>对于外表满意后，点击“开始游戏”来开始！<br/>"
+					+ "[style.colourGood(这就是角色创建的最后阶段，对于所有选择满意后就可以继续了！)]</i>"
 				+ "</div>"
 				+ "<br/>"
 				+ "<div class='container-full-width'>"
-					+ "<h5 style='text-align:center;'>Final Appearance</h5>"
+					+ "<h5 style='text-align:center;'>最终外表</h5>"
 					+ Main.game.getPlayer().getBodyDescription()
 				+ "</div>");
 			
@@ -1923,7 +1923,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Start Game", "Use this character and start the game at the very beginning, with trying to find Arthur in the museum.", PrologueDialogue.INTRO){
+				return new Response("开始游戏", "使用这个角色从游戏的最开头开始，在博物馆中寻找亚瑟。", PrologueDialogue.INTRO){
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().startQuest(QuestLine.MAIN));
@@ -1933,7 +1933,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Skip prologue", "Start the game and skip the prologue.<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Not recommended for first time playing!</i>"){
+				return new ResponseEffectsOnly("跳过序章", "开始游戏并跳过序章。<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>初次游玩不推荐！</i>"){
 					@Override
 					public int getSecondsPassed() {
 						return 60*60;
@@ -2002,7 +2002,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to background selection.", CHOOSE_SEX_EXPERIENCE){
+				return new Response("返回", "返回背景选择。", CHOOSE_SEX_EXPERIENCE){
 					@Override
 					public int getSecondsPassed() {
 						return -TIME_TO_FINAL_CHECK;
@@ -2022,26 +2022,26 @@ public class CharacterCreation {
 	
 	
 	private static StringBuilder importSB;
-	public static final DialogueNode IMPORT_CHOOSE = new DialogueNode("Import", "", true) {
+	public static final DialogueNode IMPORT_CHOOSE = new DialogueNode("导入", "", true) {
 		
 		@Override
 		public String getContent(){
 			importSB = new StringBuilder();
 
 			importSB.append("<p style='text-align:center;'>"
-					+ "These characters are being read from the 'data/characters' folder."
-					+ " If you want to import a character from a previous version, follow these steps:<br/><br/>"
-					+ "<b>1.</b> Open up the old game version, and export your old character (menu -> options -> export).<br/>"
-					+ "<b>2.</b> Copy the exported .xml file (in the old version's <i>data/characters</i> folder).<br/>"
-					+ "<b>3.</b> Paste it into this version's <i>data/characters</i> folder.<br/>"
-					+ "<b>4.</b> Press 'Refresh', and your old character file should show up in the list below!<br/><br/>"
+					+ "这些角色是从'data/characters'文件夹中读取的。"
+					+ "如果你想导入一个过去版本的角色，请依照以下步骤：<br/><br/>"
+					+ "<b>1.</b>打开旧版游戏，导出你之前的角色(菜单=>选项=>导出)。<br/>"
+					+ "<b>2.</b>复制导出的.xml文件(在老版本的<i>data/characters</i>文件夹)。<br/>"
+					+ "<b>3.</b>黏贴进入当前版本的<i>data/characters</i>文件夹。<br/>"
+					+ "<b>4.</b>点击“刷新”，你之前的角色文件将会出现在列表中！<br/><br/>"
 //					+ "(If it doesn't work, please let me know as a comment on my blog, and I'll get it fixed ASAP!)"
 					+ "</p>"
 					+ "<p>"
 					+ "<table align='center'>"
 					+ "<tr>"
 					+ "<th></th>"
-					+ "<th>Name</th>"
+					+ "<th>名称</th>"
 					+ "<th></th>"
 					+ "</tr>");
 			
@@ -2061,7 +2061,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Refresh", "Refresh this page.", IMPORT_CHOOSE);
+				return new Response("刷新", "刷新此页面。", IMPORT_CHOOSE);
 				
 			} else if (index == 0) {
 				return new Response("Back", "Return to main menu.", MenuOverrides.MENU);
@@ -2083,32 +2083,32 @@ public class CharacterCreation {
 					+ baseName
 				+ "</td>"
 				+ "<td>"
-					+ "<div class='saveLoadButton' id='IMPORT_CHARACTER_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Load</div>"
+					+ "<div class='saveLoadButton' id='IMPORT_CHARACTER_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>读取</div>"
 				+ "</td>"
 				+ "</tr>";
 	}
 
 	private static boolean resetImportedCharacter = false;
 
-	public static final DialogueNode START_GAME_WITH_IMPORT = new DialogueNode("Start game", "", true) {
+	public static final DialogueNode START_GAME_WITH_IMPORT = new DialogueNode("开始游戏", "", true) {
 		
 		@Override
 		public String getLabel() {
-			return "Imported Character";
+			return "导入的角色";
 		}
 		
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "<b>TODO:</b> I will enable the ability to go through the full character creation with imported characters at some point!"
+						+ "<b>TODO:</b>今后我会尝试对导入角色支持全套的角色创建流程！"
 					+ "</p>"
 					+ "<br/>"
 					+"<details>"
-						+ "<summary class='quest-title' style='color:" + QuestType.MAIN.getColour().toWebHexString() + ";'>Import Log</summary>"
+						+ "<summary class='quest-title' style='color:" + QuestType.MAIN.getColour().toWebHexString() + ";'>导入日志</summary>"
 						+ Main.game.getCharacterUtils().getCharacterImportLog()
 					+ "</details>"
 					+ "<div class='container-full-width'>"
-						+ "<h5 style='text-align:center;'>Appearance</h5>"
+						+ "<h5 style='text-align:center;'>外观</h5>"
 						+ Main.game.getPlayer().getBodyDescription()
 					+ "</div>";
 		}
@@ -2116,7 +2116,7 @@ public class CharacterCreation {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Start", "Use this character and start the game at the very beginning.", INTRO_2_FROM_IMPORT){
+				return new Response("开始", "使用这个角色从游戏的最开头开始。", INTRO_2_FROM_IMPORT){
 					@Override
 					public void effects() {
 						if(resetImportedCharacter){
@@ -2130,7 +2130,7 @@ public class CharacterCreation {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Skip prologue", "Start the game and skip the prologue.<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Not recommended for first time playing!</i>"){
+				return new ResponseEffectsOnly("跳过序章", "开始游戏并跳过序章。<br/><br/><i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>初次游玩不推荐！</i>"){
 					@Override
 					public void effects() {
 						Main.game.setRenderMap(true);
@@ -2185,10 +2185,10 @@ public class CharacterCreation {
 
 			} else if (index == 5) {
 				return new ResponseEffectsOnly(resetImportedCharacter
-						?"Reset Character: <span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>ON</span>"
-						:"Reset Character: <span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>OFF</span>",
-						"Resets experience and flames to 0 and clears your entire inventory, except equipped clothing and weapons. " +
-								"Spells and spell perks are removed as well."){
+						?"重置角色：<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>开启</span>"
+						:"重置角色：<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>关闭</span>",
+						"重置经验和火币为0，并清空物品栏，除了装备的衣物和武器。" +
+								"法术和法术天赋同样也会被去除。"){
 					@Override
 					public void effects(){
 						resetImportedCharacter = !resetImportedCharacter;
@@ -2217,7 +2217,7 @@ public class CharacterCreation {
 		player.resetPerksMap(false);
 	}
 
-	public static final DialogueNode INTRO_2_FROM_IMPORT = new DialogueNode("In the Museum", "", true) {
+	public static final DialogueNode INTRO_2_FROM_IMPORT = new DialogueNode("博物馆中", "", true) {
 
 		@Override
 		public int getSecondsPassed() {

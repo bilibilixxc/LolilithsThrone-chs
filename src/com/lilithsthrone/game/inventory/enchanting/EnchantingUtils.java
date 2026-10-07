@@ -161,19 +161,19 @@ public class EnchantingUtils {
 		
 		if(((AbstractItem)ingredient).getItemType().getId().equals(ItemType.ORIENTATION_HYPNO_WATCH.getId())) {
 			if(effects.isEmpty() || effects.get(0).getPrimaryModifier()==TFModifier.REMOVAL) {
-				return "Hypno-Watch";
+				return "催眠怀表";
 			}
 			if(effects.get(0).getPrimaryModifier()==TFModifier.ORIENTATION_GYNEPHILIC) {
-				return "Gynephilic Hypno-Watch";
+				return "女性恋催眠怀表";
 				
 			} else if(effects.get(0).getPrimaryModifier()==TFModifier.ORIENTATION_AMBIPHILIC) {
-				return "Ambiphilic Hypno-Watch";
+				return "双性恋催眠怀表";
 				
 			} else if(effects.get(0).getPrimaryModifier()==TFModifier.ORIENTATION_ANDROPHILIC) {
-				return "Androphilic Hypno-Watch";
+				return "男性恋催眠怀表";
 				
 			} else {
-				return "Speech-modifying Hypno-Watch";
+				return "言语修改催眠怀表";
 			}
 		}
 		
@@ -194,7 +194,7 @@ public class EnchantingUtils {
 			}
 		}
 		
-		String finalPotionName = ((potionDescriptor==null || potionDescriptor.isEmpty())?"":Util.capitaliseSentence(potionDescriptor)+" ") + potionName;
+		String finalPotionName = ((potionDescriptor==null || potionDescriptor.isEmpty())?"":Util.capitaliseSentence(potionDescriptor)+"") + potionName;
 		
 		for(ItemEffect ie : effects) {
 			if(ie.getPrimaryModifier() != null && ie.getPrimaryModifier() != TFModifier.NONE) {
@@ -202,7 +202,7 @@ public class EnchantingUtils {
 				
 				if(ie.getSecondaryModifier() != TFModifier.NONE) {
 					if(ie.getSecondaryModifier()==TFModifier.ARCANE_BOOST && ie.getPotency().isNegative()) {
-						potionPreSuffix = "drained";
+						potionPreSuffix = "喝光的";
 					} else {
 						potionPreSuffix = ie.getSecondaryModifier().getDescriptor();
 					}
@@ -211,11 +211,11 @@ public class EnchantingUtils {
 				if(potionSuffix!="") {
 					if(potionPreSuffix!="") {
 						if(ie.getSecondaryModifier().isSoloDescriptor())
-							finalPotionName += " of "+potionPreSuffix;
+							finalPotionName += potionPreSuffix+"的";
 						else
-							finalPotionName += " of "+potionPreSuffix+" "+potionSuffix;
+							finalPotionName += potionPreSuffix+"的"+potionSuffix;
 					} else {
-						finalPotionName += " of "+potionSuffix;
+						finalPotionName += "的"+potionSuffix;
 					}
 				}
 				

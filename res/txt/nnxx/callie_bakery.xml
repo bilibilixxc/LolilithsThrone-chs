@@ -1,58 +1,58 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Trade & misc. dialogues: -->
 	
 	<htmlContent tag="TRANSACTION_START"><![CDATA[
 	<p>
-		[callie.speech(Let me know which doughnut you like the look of,)] Callie says as she gestures to the doughnuts behind the counter's glass.
+		[callie.speech(告诉我你喜欢哪个甜甜圈，)]卡丽一边说着一边指向柜台玻璃后面的甜甜圈。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRANSACTION_COMPLETE"><![CDATA[
 	<p>
-		Taking your flames in exchange for the [#SPECIAL_PARSE_0], Callie says, [callie.speech(Thanks for your business, [pc.name]. I hope that you enjoy your doughnut.)]
+		卡丽拿走你买[#SPECIAL_PARSE_0]用的火币，说道：[callie.speech(谢谢光临，[pc.name]。希望你喜欢甜甜圈。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DONATION_PROGRESS"><![CDATA[
 	<p style='text-align:center;'>
 		#IF(flags.getSavedLong('nnxx_callie_total_donated')<100000)
-			You have donated a total of [style.moneyFormat([#flags.getSavedLong('nnxx_callie_total_donated')], b)] to Callie!
+			你总共给卡丽捐献了[style.moneyFormat([#flags.getSavedLong('nnxx_callie_total_donated')], b)]！
 			<br/>
 		#ENDIF
 		#IF(flags.getSavedLong('nnxx_callie_total_donated')>=100000)
 			#IF(flags.hasFlag(FLAG_nnxx_callie_upgrade_3))
-				[style.italicsExcellent(You've donated so much that Callie is giving you a 20% discount, stocking more doughnuts, and providing free sex!)]
+				[style.italicsExcellent(你捐赠了这么多，卡丽会为你提供八折优惠，储存更多的甜甜圈，并且提供免费的性爱！)]
 			#ELSE
-				[style.italicsExcellent(You've donated so much that, starting from tomorrow, Callie will give you a 20% discount, stock more doughnuts, and provide free sex!)]
+				[style.italicsExcellent(你捐赠了这么多，所以从明天开始，卡丽会为你提供八折优惠，储存更多的甜甜圈，并且提供免费的性爱！)]
 			#ENDIF
-			<br/>[style.italics(This is the maximum donation level.)]
+			<br/>[style.italics(已达到最高捐赠级别。)]
 		#ELSEIF(flags.getSavedLong('nnxx_callie_total_donated')>=50000)
 			#IF(flags.hasFlag(FLAG_nnxx_callie_upgrade_2))
-				[style.italicsGood(You've donated enough for Callie to give you a 20% discount and stock more doughnuts!)]
-				<br/>[style.italics(The next donation level is 100,000 flames...)]
+				[style.italicsGood(你捐的钱已足够让卡丽给你打八折并储存更多的甜甜圈！)]
+				<br/>[style.italics(下一捐赠级别需要100,000火币……)]
 			#ELSE
-				[style.italicsGood(You've donated enough for Callie to give you a 20% discount and stock more doughnuts, starting from tomorrow!)]
-				<br/>[style.italics(The next donation level will be 100,000 flames...)]
+				[style.italicsGood(你捐的钱已足够让卡丽给你打八折并储存更多的甜甜圈，从明天开始算起！)]
+				<br/>[style.italics(下一捐赠级别需要100,000火币……)]
 			#ENDIF
 		#ELSEIF(flags.getSavedLong('nnxx_callie_total_donated')>=3000)
 			#IF(flags.hasFlag(FLAG_nnxx_callie_upgrade_1))
-				[style.italicsMinorGood(You've donated enough for Callie to start stocking more doughnuts!)]
-				<br/>[style.italics(The next donation level is 50,000 flames...)]
+				[style.italicsMinorGood(你捐的钱已足够让卡丽开始储备更多的甜甜圈！)]
+				<br/>[style.italics(下一捐赠级别需要50,000火币……)]
 			#ELSE
-				[style.italicsMinorGood(You've donated enough for Callie to start stocking more doughnuts by tomorrow!)]
-				<br/>[style.italics(The next donation level will be 50,000 flames...)]
+				[style.italicsMinorGood(你捐的钱已足够让卡丽开始储备更多的甜甜圈，从明天开始算起！)]
+				<br/>[style.italics(下一捐赠级别需要50,000火币……)]
 			#ENDIF
 		#ELSE
-			[style.italics(You haven't yet donated enough for Callie to make any changes to her store...)]
-			<br/>[style.italics(The next donation level is 3,000 flames...)]
+			[style.italics(你目前的捐赠还不够让卡丽装修商店……)]
+			<br/>[style.italics(下一捐赠级别需要3,000火币……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Callie dialogues: -->
@@ -60,48 +60,48 @@
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_nnxx_callie_upgrade_2))
 		<p>
-			Situated on the intersection of the road and a nearby alleyway stands what appears at first to be a plain looking boutique, but upon closer inspection it bears several signs of being in a state of disrepair. Pausing to take note of the peeling paintwork and the door's rusty hinges, you wonder what kind of owner would care so little for their business. Glancing through the nearest window, which is cracked and adjacent to one that's been completely broken and boarded up, you see a bored-looking horse-girl wearily polishing her nails behind the store's counter.
+			位于道路和附近小巷的交叉口矗立着一家初看起来很普通的精品店，但仔细看的话就会看到上面有几处年久失修的痕迹，尤其是那些剥落的油漆和锈迹斑斑的门铰链实在是太显眼了，你不禁要问，什么样的店主会如此不爱惜自己的生意。你透过最近的一扇窗户(窗户已经破裂，旁边的一扇窗户已经完全破损并用木板封了起来)窥视了一下，只见一个面容乏味的女服务员正在店里的柜台后面疲惫地擦着指甲。
 		</p>
 		<p>
-			Above the door shyly stands an old wooden sign with 'The Creamy Bakey' written on it in the most simple way possible. Resting against the window beside the front door is a sign which indicates that the shop is open from 
+			门上方矗立着一块古旧味十足的木牌，上面用最简单的方式写着“奶油烘焙店”几个大字。而在门边靠窗的地方则挂着写有营业时间的牌子，上面写着: 
 			#IF(game.isWorkTime())
-				[style.colourMinorGood([unit.time(9)] to [unit.time(15)])]
+				[style.colourMinorGood(从[unit.time(9)]到[unit.time(15)])]
 			#ELSE
-				[style.colourMinorBad([unit.time(9)] to [unit.time(15)])]
+				[style.colourMinorBad(从[unit.time(9)]到[unit.time(15)])]
 			#ENDIF
-			 from
+			营业日期
 			#IF(game.getDayOfWeek()==DOW_SUNDAY)
-				 [style.colourMinorBad(Monday to Saturday)].
+				[style.colourMinorBad(周一到周六)]。
 			#ELSE
-				 [style.colourMinorGood(Monday to Saturday)].
+				[style.colourMinorGood(周一到周六)]。
 			#ENDIF
 			#IF(game.getDayOfWeek()==DOW_SUNDAY || !game.isWorkTime())
-				 As the store is currently [style.colourBad(closed)], you'll have to come back later if you wanted to go inside...
+				这家店已经[style.colourBad(歇业)]了，如果你想进去，最好等到营业时间再来……
 			#ELSE
-				 As the store is currently [style.colourGood(open)], you wonder if you should head inside...
+				这家店正在[style.colourGood(营业)]，你在想是否该进去看看……
 			#ENDIF
 		</p>
 	#ELSE
 		 <p>
-			Situated on the intersection of the road and a nearby alleyway stands Callie's bakery. Far from how it was the first time you saw it, this once-shabby establishment now looks like a proper shop. In place of the old wooden one, a hand-crafted oak sign has been  painted in candy pink to proudly bear the name 'The Creamy Bakey'. The door frame has been replaced and sculpted to look like candy cane, while the door itself has been painted so as to look like it's made of marzipan. Through the clean new windows, you can see that the interior has been completely refurbished; new tables and chairs offer comfortable places for the establishment's modest clientèle to sit and eat, while the bakery's glass counter holds a variety of bakery and sweets.  
-		 </p>
+			凯丽的奶油烘焙店位于道路和附近小巷的交叉口。这家店相比于刚见到它的时候简直是大变身，那个曾经破旧不堪的烘焙店现在看起来更像一家正规的店铺了。手工制作的橡木招牌取代了原来的木质招牌，而且还被漆成了糖果粉色，上面骄傲地印着“奶油烘焙店”的名字。而不仅门框被换成了糖果手杖的样子，连门本身也被漆成了酥脆饼干的样子。透过干净整洁的新窗户，你可以看到内部已经完全翻新。新桌椅为店里不多的顾客提供了舒适的就餐场所，在店里的玻璃柜台上摆放着各种各样的面包和糖果。
+		</p>
 		 <p>
-			Resting against the window beside the front door is a sign which indicates that the shop is open from 
+			在门边靠窗的地方则挂着写有营业时间的牌子，上面写着: 
 			#IF(game.isWorkTime())
-				[style.colourMinorGood([unit.time(7)] to [unit.time(17)])]
+				[style.colourMinorGood(从[unit.time(7)]到[unit.time(17)])]
 			#ELSE
-				[style.colourMinorBad([unit.time(7)] to [unit.time(17)])]
+				[style.colourMinorBad(从[unit.time(7)]到[unit.time(17)])]
 			#ENDIF
-			 from
+			营业日期
 			#IF(game.getDayOfWeek()==DOW_SUNDAY)
-				 [style.colourMinorBad(Monday to Saturday)].
+				[style.colourMinorBad(周一到周六)]。
 			#ELSE
-				 [style.colourMinorGood(Monday to Saturday)].
+				[style.colourMinorGood(周一到周六)]。
 			#ENDIF
 			#IF(game.getDayOfWeek()==DOW_SUNDAY || !game.isWorkTime())
-				 As the store is currently [style.colourBad(closed)], you'll have to come back later if you wanted to go inside...
+				这家店已经[style.colourBad(歇业)]了，如果你想进去，最好等到营业时间再来……
 			#ELSE
-				 As the store is currently [style.colourGood(open)], you wonder if you should head inside...
+				这家店正在[style.colourGood(营业)]，你在想要不要进去看看……
 			#ENDIF
 		</p>
 	#ENDIF
@@ -109,146 +109,145 @@
 
 	<htmlContent tag="ENTRY_FIRST_TIME"><![CDATA[
 	<p>
-		Deciding to pay a visit to 'The Creamy Bakey', you push open the shop's front door and [pc.step] inside. Looking around, you see that the interior is decorated with fake candies and baked goods of every sort. On the counter before you stands a scented candle giving off an aroma of vanilla which tenderly mixes with the scent of a dozen doughnuts that are displayed behind the counter's glass top. Sitting right next to this candle is a tip jar which looks to be as empty as the shop itself.
+		你决定去拜访一下“奶油烘焙店”。你推开店门[pc.step]进去。环顾四周，发现店内装饰着各种假糖果和烘焙食品。你面前的柜台上摆放着一支散发着香草芬芳香味的蜡烛，它与柜台玻璃顶后面摆放的一打甜甜圈的香味温柔地混合在一起。在蜡烛旁边则放着一个小费罐，它看起来和商店本身一样空空如也。
 	</p>
 	<p>
-		[callie.speech(Hello and welcome to 'The Creamy Bakey',)] the horse-girl behind the counter calls out as she sees you enter, before scoffing, [callie.speech(I'm Callie, the owner of this shop, and as you can see, this place is bustling with people so be careful not to get lost in the crowd.)]
+		[callie.speech(你好，欢迎来到‘奶油烘焙店’，)]柜台后的马女服务员看到你进来，先是无所谓地哼了一下，然后叫道，[callie.speech(我是这家店的店主卡丽，如你所见，这里生意兴隆且人来人往的，所以小心别在人群中迷路了。)]
 	</p>
 	<p>
-		With that, the horse-girl turns her attention back to her nail polishing, allowing you to pause and take a good look at her. Although mostly human in appearance, you can see that Callie has a pair of horse-ears and a horse-tail, which are as pitch-black as her long, wavy hair. The dark-red, short-sleeved shirt which she's wearing has had its top few buttons left undone, granting you a plunging view of her light-skinned, [callie.cupSize]-cup bust. As the counter is partially open on the bottom, you're able to see that she's wearing a pair of simple, off-white jeans, and after moving your gaze up from her pair of horse-like hoofs, you see that there's quite the bulge in her crotch. Noticing that you haven't left after her introduction, the horse-girl looks at you once again, before sighing, [callie.speech(Sorry about that; I tend to become sarcastic when I'm bored. So what will it be champ, want a doughnut? That's all I have to be honest.)]
+		马女说完，又把注意力转移到了她的指甲油上，这让你可以停下来好好地观察一下她。虽然卡丽外表的大部分都是人类，但你注意到她有着很明显的一对马耳朵和一条马尾巴，这些部位和她的波浪长发一样黑且顺滑。她穿着的深红色短袖衬衫的最上面的几颗扣子没有扣上，这让你可以看到她那浅色的皮肤和[callie.cupSize]罩杯的胸部。由于柜台的底部有着大面积的空隙，这让你可以看到她穿着的简洁米白色牛仔裤，你的视线从她的一双马蹄上移开，发现她两胯之间有个十分显眼的隆起。在注意到你在她介绍完之后还没有离开后，她再次看了你一眼，然后叹了口气说，[callie.speech(抱歉，我一无聊就想挖苦人。所以想买点甜甜圈吃么？虽然我这也只有甜甜圈了。)]
 	</p>
 	<p>
-		Clearly feeling a little self-conscious about the fact that her bakery only sells doughnuts, Callie doesn't wait for you to respond and quickly goes on to explain, [callie.speech(I barely make any money at all from this dump, and so I only have enough to make doughnuts. That's what sells the best out of what I've tried. So, do you want to try one...)]
+		似乎卡丽对于自己的烘焙店只卖甜甜圈这一事实显得有些不好意思，于是她不等你回答便赶紧解释了起来，[callie.speech(我在这个垃圾地方几乎赚不到什么钱，所以只够做甜甜圈。这是所有我做过的口味里卖得最好的那款。所以你想尝尝吗？)]
 	</p>
 	<p>
-		Callie allows her question to trail off in a manner to suggest that she's asking for your name. Picking up on the hint, you give the horse-girl your name, after which she repeats her question by asking, [callie.speech(So, do you want to buy a doughnut, [pc.name]?)]
+		卡丽的问题有些拖沓，不过其中明里暗里的都在暗示她正在询问你的名字。你抓住这个机会，告诉了卡丽你的名字，然后她又重复了一遍她的问题，[callie.speech(所以，你想买个甜甜圈么？[pc.name]？)]
 	</p>
 	]]></htmlContent>
 
 	<htmlContent tag="ENTRY_REPEAT"><![CDATA[
 	#IF(flags.hasFlag(FLAG_nnxx_callie_upgrade_3))
 		<p>
-			Deciding to pay a visit to 'The Creamy Bakey', you push open the shop's front door and [pc.step] inside. Looking around, you see that the interior looks like a real paradise for any sweet lover; a pink carpet leads you to the various shelves containing dozens of various types of sweets, while the glass-topped counter holds a huge variety of pastries, including most prominently several types of doughnuts. The entire store is brightly lit via a chandelier that's made to look like a wedding cake, while the whole room is enveloped with a soothing aroma of freshly baked bread.
+			你决定去拜访一下“奶油烘焙店”。你推开店门[pc.step]进去。环顾四周，发现店内简直就是甜食爱好者的天堂。粉红色的地毯将你引向各种货架，货架上摆放着几十种各式各样的甜食，而玻璃顶的柜台上则摆放着种类繁多的糕点，其中最引人注目的是那几种甜甜圈。整个店面被一盏做成婚礼蛋糕样式的吊灯照得通亮，整个房间都弥漫着新鲜出炉的面包的香气，令人不禁心旷神怡。
 		</p>
 		#IF(flags.hasFlag(FLAG_nnxx_callie_upgrade_reaction_pending))
 			<p>
-				Upon seeing you enter her shop, Callie immediately rushes out from behind her counter to give you a warm hug, exclaiming as she does so, [callie.speech(Oh, [pc.name]! You can't even start to comprehend how much all of this means to me! It's all thanks to you; I'll never be able to thank you enough or to repay your kindness!)]
+			卡丽一看到你进店，马上从柜台后面冲出来。她热情地抱住你，高兴地说：[callie.speech(哦，[pc.name]！你无法理解这一切对我意味着什么！这一切都要感谢你，我永远都会感谢你，而且也无法报答你的恩情！)]
 			</p>
 			<p>
 				#IF(callie.isAttractedTo(pc))
-					Squeezing you into her [callie.cupSize]-cup breasts, the horse-girl slowly slides a hand around to grope your [pc.ass] and teases, [callie.speech(If you want to fuck again, then it'll be totally free of any donation... Just say the word...)]
+					她将你埋在了她那[callie.cupSize]罩杯的乳房里，然后慢慢地滑动一只手，摸索你的[pc.ass]，挑逗地说：[callie.speech(如果你想再来一次的话，只要说一声就好……这次完全免费哦……)]
 				#ELSE
-					After giving you a big hug, the horse-girl steps back and says, [callie.speech(If you transform back to being feminine, then I'd be more than happy to fuck you again, and this time there'll be no need for any donation!)]
+					卡丽给了你一个大大的拥抱，退后一步，说：[callie.speech(如果你能变回女性，我很乐意再干你一次，而这次是完全免费的哦！)]
 				#ENDIF
 			</p>
 			<p>
-				Smiling at Callie as she then skips back to her side of the counter, you wonder what to ask of her...
+				你微笑着看向卡丽，然后走到柜台边，却不知道该问她什么……
 			</p>
 		#ELSE
 			#IF(callie.isAttractedTo(pc))
 				<p>
-					[callie.speech(If it isn't my favourite customer! Hello, [pc.name], are you here to buy something?)] Callie calls out to you as she sees you enter her shop.
+					[callie.speech(这不是我最喜欢的顾客吗？你好啊，[pc.name]，请问你是来买东西的吗？)]卡丽看见你进店，开口询问道。
 					#IF(flags.hasFlag(FLAG_nnxx_callie_daily_fucked))
-						 Before you can respond, she gives you a wink and teases, [callie.speech(I'm still tired from the fun we had earlier, but if you come back tomorrow then I'd be happy to give you a taste of my doughnut or baguette again...)]
+						还没等你反应过来，她就向你眨了眨眼睛，并调侃：[callie.speech(我还没从刚才的欢愉中回过神来呢，但如果你明天再来的话，我很乐意再让你尝尝我的甜甜圈或法棍……)]
 					#ELSE
-						 Before you can respond, she drops one of her hands down to start stroking the bulge between her legs, and after giving you a wink, she teases, [callie.speech(Or perhaps you'd like a taste of my doughnut or baguette again? After all you've done, there's no need for any donation...)]
+						还没等你反应过来，她就放下一只手，开始抚摸自己两腿间的凸起，然后对你使了个眼色，挑逗地说：[callie.speech(或者你还想再尝尝我的甜甜圈或法棍？你做了这么多，我想你不需要再捐赠了……)]
 					#ENDIF
 				</p>
 			#ELSE
 				<p>
-					Upon seeing you enter her shop, Callie gives you a warm smile and happily calls out, [callie.speech(If it isn't my favourite customer! Hello, [pc.name], what can I do for you today?)]
+					卡丽看到你走进她的商店，给了你一个温柔的微笑，高兴地说：[callie.speech(这不是我最喜欢的顾客吗？你好啊，[pc.name]，我能为你做些什么吗？)]
 				</p>
 			#ENDIF
 			<p>
-				Smiling at Callie as she leans forwards over her counter, you wonder what to ask of her...
+				你微笑着看向卡丽，然后走到柜台边，却不知道该问她什么……
 			</p>
 		#ENDIF
 	#ELSEIF(flags.hasFlag(FLAG_nnxx_callie_upgrade_2))
 		<p>
-			Deciding to pay a visit to 'The Creamy Bakey', you push open the shop's front door and [pc.step] inside. Looking around, you see that the interior looks like a real paradise for any sweet lover; a pink carpet leads you to the various shelves containing dozens of various types of sweets, while the glass-topped counter holds a huge variety of pastries, including most prominently several types of doughnuts. The entire store is brightly lit via a chandelier that's made to look like a wedding cake, while the whole room is enveloped with a soothing aroma of freshly baked bread.
+			你决定去拜访一下“奶油烘焙店”。你推开店门[pc.step]进去。环顾四周，发现店内简直就是甜食爱好者的天堂。粉红色的地毯将你引向各种货架，货架上摆放着几十种各式各样的甜食，而玻璃顶的柜台上则摆放着种类繁多的糕点，其中最引人注目的是那几种甜甜圈。整个店面被一盏做成婚礼蛋糕样式的吊灯照得通亮，整个房间都弥漫着新鲜出炉的面包的香气，令人不禁心旷神怡。
 		</p>
 		#IF(flags.hasFlag(FLAG_nnxx_callie_upgrade_reaction_pending))
 			<p>
-				Upon seeing you enter her shop, Callie immediately rushes out from behind her counter to give you a warm hug, exclaiming as she does so, [callie.speech([pc.Name]! Look! Thanks to you, I was finally able to get my shop redecorated to make it look like how I always wanted it to! As thanks, I'll give you a 20% discount! Oh, and I've decided to open my shop for longer, so I'll be open from seven to five from now on.)]
+			卡丽一看到你进店，马上从柜台后面冲出来，她热情地抱住你，高兴地说：[callie.speech([pc.name]，你快看啊！多亏了你，我终于可以把我的商店重新装修一下，让它看起来像我一直想要的样子！为了感谢你，我给你打八折！对了，我还决定延长营业时间，从现在开始，我的营业时间改为早上七点到晚上五点。)]
 			</p>
 			<p>
 				#IF(callie.isAttractedTo(pc))
-					Squeezing you into her [callie.cupSize]-cup breasts, the horse-girl slowly slides a hand around to grope your [pc.ass], before grinding the bulge between her legs into you and teasing, [callie.speech(Now then, you'd like another taste of my 'doughnut' or 'baguette', wouldn't you?)]
+					她将你埋在了她那[callie.cupSize]罩杯的乳房里，然后慢慢地滑动一只手，摸索你的[pc.ass]，挑逗地说：[callie.speech(如果你想再来一次的话，只要说一声就好了……这次完全免费哦……)]
 				#ELSE
-					After giving you a big hug, the horse-girl steps back and says, [callie.speech(If you transform back to being feminine, then I'd be more than happy to give you another taste of my 'doughnut' or 'baguette'...)]
+					卡丽给了你一个大大的拥抱，退后一步说：[callie.speech(如果你能变回女性，我很乐意再干你一次，而这次是完全免费的哦！)]
 				#ENDIF
 			</p>
 			<p>
-				Smiling at Callie as she then skips back to her side of the counter, you wonder what to ask of her...
+				你微笑着看向卡丽，然后走到柜台边，却不知道该问她什么……
 			</p>
 		#ELSE
 			#IF(callie.isAttractedTo(pc))
 				<p>
-					[callie.speech(If it isn't my favourite customer! Hello, [pc.name], are you here to buy something?)] Callie calls out to you as she sees you enter her shop.
+					[callie.speech(这不是我最喜欢的顾客吗？你好啊，[pc.name]，请问你是来买东西的吗？)]卡丽看见你进店，开口询问。
 					#IF(flags.hasFlag(FLAG_nnxx_callie_daily_fucked))
-						 Before you can respond, she gives you a wink and teases, [callie.speech(I'm still tired from the 'donation' you gave to me earlier, but if you come back tomorrow then I'd be happy to give you a taste of my doughnut or baguette again...)]
+						还没等你反应过来，她就向你眨了眨眼睛，调侃道：[callie.speech(你之前给我的‘捐赠’还让我很疲惫呢，但如果你明天再来的话，我很乐意再让你尝尝我的甜甜圈或法棍……)]
 					#ELSE
-						 Before you can respond, she drops one of her hands down to start stroking the bulge between her legs, and after giving you a wink, she teases, [callie.speech(Or perhaps you'd like to make another donation?)]
+						还没等你反应过来，她就放下一只手，开始抚摸自己两腿间的凸起，然后对你使了个眼色。挑逗地说：[callie.speech(还是说你想再捐赠一笔么？)]
 					#ENDIF
 				</p>
 			#ELSE
 				<p>
-					Upon seeing you enter her shop, Callie gives you a warm smile and happily calls out, [callie.speech(If it isn't my favourite customer! Hello, [pc.name], what can I do for you today?)]
+					卡丽看到你走进她的商店，给了你一个温柔的微笑，高兴地说：[callie.speech(这不是我最喜欢的顾客吗？你好啊，[pc.name]，我能为你做些什么吗？)]
 				</p>
 			#ENDIF
 			<p>
-				Smiling at Callie as she leans forwards over her counter, you wonder what to ask of her...
+				你微笑着看向卡丽，然后走到柜台边，却不知道该问她什么……
 			</p>
 		#ENDIF
 	#ELSEIF(flags.hasFlag(FLAG_nnxx_callie_upgrade_1))
 		<p>
-			Deciding to pay another visit to 'The Creamy Bakey', you push open the shop's front door and [pc.step] inside. Looking around, you see that the interior of the shop is almost the same as it was the first time you were here, with the most noticeable change being that everything looks to have been tidied up and cleaned. Callie seems to have been encouraged from your various donations to start to take care of her business, and you see that apart from giving everything a good clean, she's made a few adjustments to make the place more presentable, including decorating the room with a few extra scented candles.
+			你决定再次拜访“奶油烘焙店”。你推开店门[pc.step]进去，环顾四周，发现店内几乎和你第一次来时一样，不过最明显的变化是所有东西看起来都被整理和打扫过了。卡丽似乎从你的各种捐赠中得到了鼓励，开始打理她的生意，你看到她除了把所有东西都打扫得干干净净外，还做出了一些调整来让这里更有品位，其中就包括在房间里装饰一些额外的香味蜡烛。
 		</p>
 		#IF(flags.hasFlag(FLAG_nnxx_callie_upgrade_reaction_pending))
 			<p>
-				Upon seeing you enter her shop, Callie smiles and calls out a warm welcome, [callie.speech(Greetings, [pc.name]! I hope you like the few adjustments I made! Your generous donations have given me the kick I needed to start to turn this shack into a proper establishment! I've even started to stock iced doughnuts. Would you like to buy one?)]
+				看到你走进她的商店，卡丽微笑并热情地欢迎道：[callie.speech(你好，[pc.name]！希望你喜欢我做的一些调整！你的慷慨捐赠给了我足够的动力，让我开始把这间小屋改造成一个像样的店面！我甚至已经开始备货新口味的甜甜圈了，你想买一个吗？)]
 			</p>
 			#IF(callie.isAttractedTo(pc))
 				<p>
-					Before you can respond, the horse-girl drops one of her hands down to start stroking the bulge between her legs, and after giving you a wink, she teases, [callie.speech(Or perhaps you'd like to make another donation?)]
+					还没等你反应过来，她就放下一只手，开始抚摸自己两腿间的凸起，然后对你使了个眼色，挑逗地说：[callie.speech(还是说你想再捐赠一笔么？)]
 				</p>
 			#ELSE
 				<p>
-					Smiling at Callie as she leans forwards over her counter, you wonder what to ask of her...
-				</p>
+					你微笑着看向倚靠在柜台的卡丽，但不知道该说些什么……				</p>
 			#ENDIF
 		#ELSE
 			#IF(callie.isAttractedTo(pc))
 				<p>
-					[callie.speech(Greetings, [pc.name]! Would you like to buy something?)] Callie calls out to you as she sees you enter her shop.
+					[callie.speech(你好，[pc.name]，请问你是来买东西的吗？)]卡丽见你进店，开口询问。
 					#IF(flags.hasFlag(FLAG_nnxx_callie_daily_fucked))
-						 Before you can respond, she gives you a wink and teases, [callie.speech(I'm still tired from the 'donation' you gave to me earlier, but if you come back tomorrow then I'd be happy to give you a taste of my doughnut or baguette again...)]
+						还没等你反应过来，她就向你眨了眨眼睛，并调侃道：[callie.speech(你之前给我的‘捐赠’还让我很疲惫呢，但如果你明天再来的话，我很乐意再让你尝尝我的甜甜圈或法棍……)]
 					#ELSE
-						 Before you can respond, she drops one of her hands down to start stroking the bulge between her legs, and after giving you a wink, she teases, [callie.speech(Or perhaps you'd like to make another donation?)]
+						还没等你反应过来，她就放下一只手，开始抚摸自己两腿间的凸起，然后对你使了个眼色并挑逗道：[callie.speech(还是说你想再捐赠一笔么？)]
 					#ENDIF
 				</p>
 			#ELSE
 				<p>
-					Upon seeing you enter her shop, Callie smiles and calls out a warm welcome, [callie.speech(Greetings, [pc.name]! Would you like to buy something?)]
+					卡丽看到你进店，给了你一个温柔的微笑，然后说：[callie.speech(你好啊，[pc.name]，想买点什么吗？)]
 				</p>
 			#ENDIF
 			<p>
-				Smiling at Callie as she leans forwards over her counter, you wonder what to ask of her...
+				你微笑着看向卡丽，然后走到柜台边，却不知道该问她什么……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Deciding to pay another visit to 'The Creamy Bakey', you push open the shop's front door and [pc.step] inside. Looking around, you see that the interior is decorated with fake candies and baked goods of every sort. On the counter before you stands a scented candle giving off an aroma of vanilla which tenderly mixes with the scent of a dozen doughnuts that are displayed behind the counter's glass top. Sitting right next to this candle is a tip jar which looks to be as empty as the shop itself.
+			你决定再次拜访“奶油烘焙店”。你推开店门[pc.step]进去，环顾四周，发现店内装饰着各种假糖果和烘焙食品。你面前的柜台上摆放着一支散发着香草芬芳香味的蜡烛，它与柜台玻璃顶后面摆放的一打甜甜圈的香味温柔地混合在一起。在蜡烛旁边则放着一个小费罐，它看起来和商店本身一样空空如也。
 		</p>
 		<p>
-			Upon glancing up and seeing you enter, Callie lifts her head and offers a greeting, [callie.speech(Oh, [pc.name], it's you again. Welcome, do you want to buy something, or did you come to chat?)]
+			卡丽抬头看到你进来，打起招呼：[callie.speech(哦，[pc.name]，又是你啊。欢迎光临，你是要买东西，还是来闲聊的？)]
 		</p>
 	#ENDIF
 	]]></htmlContent>
 
 	<htmlContent tag="COUNTER"><![CDATA[
 	<p>
-		[pc.Stepping] back over to where Callie is standing behind her counter, you pause to take a look down at what baked goods are on display. Looking up from polishing her nails, the horse-girl asks, [callie.speech(Can I get you anything, [pc.name]?)]
+		你[pc.Stepping]到卡丽站的柜台后面，停下低头看了看陈列的烘焙食品。卡丽擦完指甲油，抬起头问：[callie.speech(需要点什么吗，[pc.name]？)]
 	</p>
 	]]></htmlContent>
 
@@ -258,21 +257,21 @@
 	<htmlContent tag="PROPOSE_ANILINGUS"><![CDATA[
 	#IF(callie.isAttractedTo(pc))
 		<p>
-			Smiling at Callie, you tell her that you'd like to taste another kind of doughnut, one that is unfortunately not displayed on the counter, to which she raises an eyebrow, smiles, and teases, [callie.speech(Oh do you now? Hmm, let me think...)]
+			你微笑着告诉卡丽，想品尝另一种甜甜圈，可惜柜台上没有摆放这种甜甜圈，卡丽挑了挑眉，然后微笑着揶揄：[callie.speech(哦，你现在想吃吗？嗯，让我想想……)]
 		</p>
 		<p>
 			#IF(flags.hasFlag(FLAG_nnxx_callie_sex_is_free))
-				After playfully pausing for a few seconds, the horse-girl bites her lip and moans, [callie.speech(I suppose that if you ask nicely, I could let you have a taste of my doughnut.)]
+				可爱的马女俏皮地停顿了几秒钟，咬着嘴唇呻吟： [callie.speech(我想，如果你好好求我，那可以让你尝尝我的甜甜圈。)]
 			#ELSE
-				After pausing for a few seconds, the horse-girl taps on the nearby tip jar with her finger, before stating, [callie.speech(I'm fine with giving you what you want, but given my current situation I can't afford to lose a potential customer walking in while you're at it. So, in exchange for, let's say... a thousand flames, I'll let you get a taste of my doughnut.)]
+				卡丽停顿了几秒钟，用手指敲了敲旁边的小费罐，然后说：[callie.speech(你要什么我都可以给你，但鉴于我现在的处境，我不能因为和你玩而失去哪怕一个潜在顾客。所以作为交换，嗯……一千火币，我就让你尝尝我的甜甜圈。)]
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Moving towards Callie, you tell her that you'd like to taste another kind of doughnut, one that is unfortunately not displayed on the counter.
+			你走向卡丽，告诉她你想尝尝另一种甜甜圈，可惜柜台上没有摆放这种甜甜圈。
 		</p>
 		<p>
-			[callie.speech(Ehm, sorry but you're not really my type. I prefer my partners to be a bit more... Y'know, feminine...)] she apologises as she looks away, slightly embarrassed about the atmosphere that's now set in. Trying to change the subject, she quickly goes on to ask, [callie.speech(Anyway, would you like something else? Like, I don't know... A doughnut?)]
+			[callie.speech(对不起，你不是我喜欢的类型。我喜欢我的伴侣更……有女人味一点……)]她一边道歉一边转过头去，似乎不知道怎么应对现在尴尬的气氛。为了转移话题，她赶紧接着问：[callie.speech(总之，你想吃点别的吗？比如，嗯……甜甜圈？)]
 		</p>
 	#ENDIF
 	]]></htmlContent>
@@ -280,17 +279,17 @@
 	<htmlContent tag="ANILINGUS_START"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_nnxx_callie_sex_is_free))
-			Playing along with the horse-girl, you ask her if you could please get a taste of her delicious, puffy doughnut.
+			你告诉卡丽，能不能让你尝尝她那美味且肉感的甜甜圈。
 		#ELSE
-			Not breaking eye contact with the horse-girl, you drop a thousand flames in the tip jar and start [pc.stepping] towards the back of the counter.
+			你没有中断与卡丽的目光接触。你在小费罐里放了一千块钱，[pc.stepping]向柜台后。
 		#ENDIF
-		 With a big smirk on her face, Callie steps over to the store's front door, before locking it and flipping the sign to show that her establishment is closed. After dropping the blinds to give you some privacy, Callie returns to stand beside her counter, before pulling down her jeans and revealing both her huge horse-cock and puffy asshole. Turning around to present you with her exposed ass, she moans, [callie.speech(You've no idea how much I need this... You're not leaving until I'm satisfied, understand?)]
+		凯丽满脸堆笑地走到店门口，然后锁上门翻过招牌，来表明她的店已经关门了。凯丽放下百叶窗，给你保留一些隐私，回到柜台旁站定，然后拉下牛仔裤，露出巨大的马鸡巴和肉感十足的屁眼。她转过身来展示裸露的屁股，并呻吟道：[callie.speech(你不知道我有多需要这个……如果我不满意的话你就别想走了，明白吗？)]
 	</p>
 	<p>
-		Agreeing to Callie's terms, you take your place and drop down behind the horse-girl. Reaching up to spread her ass cheeks, you find yourself staring directly at her ebony, horse-like asshole. Leaning in, you give her hot asshole a quick kiss, which causes her to bend forwards, grip the edge of her counter with both hands, and erotically moan, [callie.speech(That's it... ~Mmm!~ Now eat my doughnut...)]
+		你同意了卡丽的条件，坐到她身后。伸手掰开她的屁股，看着她那肉感十足的黑色屁眼。你凑上去快速地亲吻那性感的屁眼，这迫使她向前弓腰并紧抓住柜台边缘，她情不自禁地呻吟：[callie.speech(没错！就这样……~就这样吃我的甜甜圈……)]
 	</p>
 	<p>
-		More than happy to do as she says, you press your [pc.lips+] against Callie's ass and slide your [pc.tongue+] over her puffy, doughnut-like asshole, giving it the love it deserves...
+		你非常乐意按照她说的去做。你那[pc.lips+]抵住凯丽的屁股，同时那[pc.tongue+]滑过她那丰厚如甜甜圈的屁眼，并给予它应有的爱……
 	</p>
 	]]></htmlContent>
 
@@ -298,38 +297,38 @@
 	<p>
 		#IF(callie.isAttractedTo(pc))
 			#IF(flags.hasFlag(FLAG_nnxx_callie_sex_is_free))
-				Having second thoughts about this, you tell Callie that you've changed your mind about getting a taste of her ass.
+				你稍加考虑，改变了主意，告诉卡丽你不想尝她屁股的味道。
 			#ELSE
-				Finding the asking price of a thousand flames to be too steep, you tell Callie that you've changed your mind about paying for a taste of her ass.
+				你觉得一千美元的要价太贵了，于是告诉卡丽你改变主意了，不打算花钱尝她的屁股。
 			#ENDIF
-			 Upon hearing this, the horse-girl drops her head and sighs, [callie.speech(Well, I can't say I'm not disappointed. Alright then, do you want something else?)]
+			卡丽听了这话，垂下头叹了口气：[callie.speech(好吧，我不能说我不失望。所以，你还想要点别的吗？)]
 		#ELSE
-			As Callie isn't attracted to you, there's no way that you're going to be able to have sex with her. Letting out a disappointed sigh, you wonder what to do next...
+			既然卡丽认为你没有吸引力，那你就不可能和她发生关系。你失望地叹了口气，不知道接下来该怎么办……
 		#ENDIF
 	</p>
 	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX_ANILINGUS"><![CDATA[
 	<p>
-		Having had her fun, and with her puffy doughnut now nicely glazed from your saliva, Callie sighs, [callie.speech(One more kiss, then I think you've had enough.)]
+		卡丽玩够了，她肉感的甜甜圈也被你的口水舔得亮晶晶的。卡丽叹了口气：[callie.speech(再来个吻，然后就让我们结束吧。)]
 	</p>
 	<p>
-		As the horse-girl pushes her puffy, ebony doughnut back towards your face, you find yourself unable to resist doing as she says, and lean in to give it one last kiss...
+		卡丽把她那肉感十足的黑色甜甜圈靠近你的脸庞，你根本无法抗拒，俯身给了它最后一吻……
 	</p>
 	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX_ANILINGUS_CONTINUE"><![CDATA[
 	<p>
-		Leaning forwards, you press your [pc.lips+] against Callie's hot asshole, before delivering one last big, wet kiss to it. Smiling to yourself as you hear the horse-girl let out a satisfied moan, you lean back, allowing her to pull up her jeans as she sighs, [callie.speech(You're good at eating horse-ass...)]
+		你向前倾身，那[pc.lips+]抵住卡丽那火热的屁眼，送上最后一记湿吻。你听到她发出满足的呻吟，微笑着向后起身。她叹息着提起牛仔裤，[callie.speech(你真的很会玩弄马肛……)]
 	</p>
 	<p>
-		As Callie moves over to pull up the blinds and unlock the front door,
+		卡丽走过去拉上百叶窗，打开前门的锁，
 		#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-			 you point to the choker around your neck, before telling Callie that you've been well trained as one of Natalya's [style.mules], and that performing anilingus on horse-asses is one of your favourite parts of the job.
+			你指了指脖子上的颈圈，然后告诉卡丽，作为娜塔莉亚的[style.mules]之一，你受过良好的训练，给马吻肛是你最喜欢的工作之一。
 		#ELSE
-			 you tell Callie that it was easy to satisfy her thanks to how delicious her perfect, puffy asshole is.
+			你告诉卡丽，要满足她很容易，这多亏了她那完美且肉感的美味屁眼。
 		#ENDIF
-		 Smiling as she hears you say this, the horse-girl returns to the other side of the counter and offers, [callie.speech(Well, seeing as you love it so much, you can come back and get another taste of my doughnut tomorrow... Now, is there anything else I can get you today? A real doughnut, perhaps?)]
+			卡丽听到你这么说，笑着回答，[callie.speech(好吧，既然你这么喜欢，明天你可以再来吃我的甜甜圈……今天还需要点什么吗？一个真正的甜甜圈么？)]
 	</p>
 	]]></htmlContent>
 	
@@ -340,19 +339,19 @@
 	#IF(callie.isAttractedTo(pc))
 		#IF(flags.hasFlag(FLAG_nnxx_callie_sex_is_free))
 			<p>
-				Winking at Callie, you say that you'd like to place an order for her big, fat baguette. Smirking and looking you up and down, the horse-girl laughs and exclaims, [callie.speech(My, my, how direct! How could I say no to such a lovely [pc.race]... Now, which hole were your hoping to have my 'baguette' stuffed into, I wonder?)] 
+				你对凯丽眨眨眼睛，说你想订购她那又大又肥的法棍。她笑着上下打量你，感叹道：[callie.speech(我，哦，我，这，多直接啊！我怎么能拒绝这么可爱的[pc.race]呢……但我想知道，你想把‘法棍’塞在哪个洞里呢？)] 
 			</p>
 		#ELSE
 			<p>
-				Winking at Callie, you say that you'd like to place an order for her big, fat baguette. Smirking and looking you up and down, the horse-girl laughs and exclaims, [callie.speech(My, my, how direct! How could I say no to such a lovely [pc.race]... But there is the small matter of my shop having to be temporarily closed because of this. If you were to drop, let's say, ten thousand flames in the tip jar, I suppose that would cover the potential loss of business...)] 
+				你对凯丽眨眨眼睛，说你想订购她那又大又肥的法棍。她笑着上下打量你，然后惊叹道：[callie.speech(我，哦，我，这，多么直接啊！我怎么能拒绝这么可爱的[pc.race]呢……但还有个小问题，那就是我的商店必须因此暂时关闭。但是呢，如果你在小费罐里扔下一万火币的话，我想这就能弥补可能的生意损失了……)] 
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Winking at Callie, you say that you'd like to place an order for her big, fat baguette.
+			你对凯丽眨眨眼睛，说你想订购她那又大又肥的法棍。
 		</p>
 		<p>
-			[callie.speech(Ehm, sorry but you're not really my type. I prefer my partners to be a bit more... Y'know, feminine...)] she apologises as she looks away, slightly embarrassed about the atmosphere that's now set in. Trying to change the subject, she quickly goes on to ask, [callie.speech(Anyway, would you like something else? Like, I don't know... A doughnut?)]
+			[callie.speech(对不起，你不是我喜欢的类型。我喜欢我的伴侣更……有女人味一点……)]她一边道歉一边转过头去，似乎不知道怎么应对现在尴尬的气氛。为了转移话题，她赶紧接着问道：[callie.speech(总之，你想吃点别的吗？比如，嗯……甜甜圈？)]
 		</p>
 	#ENDIF
 	]]></htmlContent>
@@ -360,97 +359,97 @@
 	<htmlContent tag="SEX_START"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_nnxx_callie_sex_is_free))
-			Letting out a horny moan, you tell the horse-girl that you want her to stuff her fat baguette deep into your hot cunt.
+			发出一声淫荡的呻吟，你告诉马女你要她把“法棍”深深捅进你温热的小穴里。
 		#ELSE
-			Telling Callie that she's definitely worth it, you drop the ten thousand flames which she's asked for into her tip jar.
+			告诉卡丽她绝对值得，你将她要求的一万火币放进她的小费罐。
 		#ENDIF
-		 With a big smirk on her face, Callie steps over to the store's front door, before locking it and flipping the sign to show that her establishment is closed. After dropping the blinds to give you some privacy, Callie returns to stand beside her counter, before pulling down her jeans and revealing both her huge horse-cock and puffy asshole. Teasing her fingers over her rapidly-hardening, ebony shaft, she commands with a moan, [callie.speech(~Mmm!~ Go on then, bend over the counter and show me your pussy.)]
+		卡丽开心地笑着，走向商店的前门，随后锁上门并挂上了“暂停营业”的标志牌。为了给你保留隐私，她放下了百叶窗，随后卡丽回来站在柜台旁边，脱下她的牛仔裤，解放出她巨大的马屌和肿胀的屁眼。她用手指逗弄着她快速变硬的乌黑色的柱身，呻吟着命令道，[callie.speech(~唔！~ 那就来吧，趴在柜台上，把你的小穴露出来。)]
 	</p>
 	<p>
-		Doing as you're told, you bend down over the counter in front of Callie, presenting her with your [pc.pussy+]. Immediately, the horny horse-girl steps forwards and presses the flared head of her animalistic cock up against your [pc.labia+]. Playfully rubbing her throbbing dick up and down over your hungry cunt, she teases, [callie.speech(We're not stopping until I'm satisfied... Now go on, beg for it...)]
+		按照她说的做，你弯腰趴在卡丽面前的柜台上，将你[pc.pussy+]展示给她。色欲上涌的马女立即上前，将她那野兽般肉棒外扩的顶端顶在你[pc.labia+]上。漫不经心地将她悸动的肉棒在你饥渴的阴部上下磨蹭，她调笑着说，[callie.speech(在我满意之前我是不会停的……现在，乞求那早点到来吧……)]
 	</p>
 	<p>
-		Failing to suppress a horny squeal, you push your [pc.hips+] back and desperately beg for Callie to start fucking you. Half-way through your frantic plea, the horse-girl suddenly gives you what you want, and you find yourself moaning in ecstasy as Callie thrusts forwards and sinks her fat, hot horse-cock into your pussy, before starting to buck her hips and fuck you over her counter...
+		无法抑制地发出一声色情的尖叫，你将你[pc.hips+]向后顶去，不顾一切地乞求卡丽开始操你。在你疯狂的恳求中，马女很快给了你你想要的，卡丽向前猛顶，将她肥硕巨大的马屌捣进你的小穴，随后开始扭动臀部，隔着柜台开始操你，而你沉浸在狂喜的呻吟之中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SEX_ANAL_START"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_nnxx_callie_sex_is_free))
-			Letting out a horny moan, you tell the horse-girl that you want her to stuff her fat baguette deep into your hot asshole.
+			发出一声淫荡的呻吟，你告诉马女你要她把“法棍”深深捅进你温热的屁穴里。
 		#ELSE
-			Telling Callie that she's definitely worth it, you drop the ten thousand flames which she's asked for into her tip jar.
+			告诉卡丽她绝对值得，你将她要求的一万火币放进她的小费罐。
 		#ENDIF
-		 With a big smirk on her face, Callie steps over to the store's front door, before locking it and flipping the sign to show that her establishment is closed. After dropping the blinds to give you some privacy, Callie returns to stand beside her counter, before pulling down her jeans and revealing both her huge horse-cock and puffy asshole. Teasing her fingers over her rapidly-hardening, ebony shaft, she commands with a moan, [callie.speech(~Mmm!~ Go on then, bend over the counter and show me your ass.)]
+		卡丽开心地笑着，走向商店的前门，随后锁上门并挂上了“暂停营业”的标志牌。为了给你保留隐私，她放下了百叶窗，随后卡丽回来站在柜台旁边，脱下她的牛仔裤，解放出她巨大的马屌和肿胀的屁眼。她用手指逗弄着她快速变硬的乌黑色的柱身，呻吟着命令道，[callie.speech(~唔！~ 那就来吧，趴在柜台上，把你的屁穴露出来。)]
 	</p>
 	<p>
-		Doing as you're told, you bend down over the counter in front of Callie, presenting her with your [pc.ass+]. Immediately, the horny horse-girl steps forwards and presses the flared head of her animalistic cock up against your [pc.asshole+]. Playfully rubbing her throbbing dick up and down over your hungry hole, she teases, [callie.speech(We're not stopping until I'm satisfied... Now go on, beg for it...)]
+		按照她说的做，你弯腰趴在卡丽面前的柜台上，将你[pc.asshole+]展示给她。色欲上涌的马女立即上前，将她那野兽般肉棒外扩的顶端顶在你[pc.asshole+]上。漫不经心地将她悸动的肉棒在你饥渴的屁穴外上下磨蹭，她调笑着说，[callie.speech(在我满意之前我是不会停的……现在，乞求那早点到来吧……)]
 	</p>
 	<p>
-		Failing to suppress a horny squeal, you push your [pc.hips+] back and desperately beg for Callie to start fucking your ass. Half-way through your frantic plea, the horse-girl suddenly gives you what you want, and you find yourself moaning in ecstasy as Callie thrusts forwards and sinks her fat, hot horse-cock into your asshole, before starting to buck her hips and fuck you over her counter...
+		无法抑制地发出一声色情的尖叫，你将你[pc.hips+]向后顶去，不顾一切地乞求卡丽开始操你的屁穴。在你疯狂的恳求中，马女很快给了你你想要的，卡丽向前猛顶，将她肥硕巨大的马屌捣进你的屁穴，随后开始扭动臀部，隔着柜台开始操你，而你沉浸在狂喜的呻吟之中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SEX_BACK_OUT"><![CDATA[
 	<p>
 		#IF(callie.isAttractedTo(pc))
 			#IF(flags.hasFlag(FLAG_nnxx_callie_sex_is_free))
-				Having second thoughts about this, you tell Callie that you've changed your mind about getting stuffed with her baguette.
+				多加考虑之后，你告诉卡丽你不想付钱让她用“法棍”把你填满了。
 			#ELSE
-				Finding the asking price of ten thousand flames to be too steep, you tell Callie that you've changed your mind about paying to get stuffed with her baguette.
+				感觉到一万火币的要价似乎有点太高，你告诉卡丽你不想付钱让她用“法棍”把你填满了。
 			#ENDIF
-			 Upon hearing this, the horse-girl lets out a disappointed huff and sighs, [callie.speech(Aww, that's a pity... I was already starting to get all hot and bothered from the idea of turning you into my personal cock-sleeve... I guess it will have to wait.)]
+			听到这个，马女发出一声失望的嘶鸣和叹息， [callie.speech(啊……这就太可惜了，我已经开始浑身发热，沉浸于把你改造成我的专属鸡巴套的想法了……我想我还得等一阵。)]
 		#ELSE
-			As Callie isn't attracted to you, there's no way that you're going to be able to have sex with her. Letting out a disappointed sigh, you wonder what to do next...
+			由于卡丽对你没有足够吸引力，你不会有可能和她做爱。发出一声失望的叹息，你考虑这接下来该做什么……
 		#ENDIF
 	</p>
 	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
-		Having had her fun, and with her fat horse-cock starting to soften, Callie steps back and sighs, [callie.speech(I think you've had enough for today...)]
+		卡丽玩够了，肥大的马屌开始变软。她退后一步，叹了口气说，[callie.speech(我想你今天已经差不多了……)]
 	</p>
 	<p>
-		As the horse-girl pulls up her jeans, you let out a deep sigh and prepare to get your things back in order...
+		她提上牛仔裤，你深深地叹了一口气，然后开始拾掇自己……
 	</p>
 	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX_CONTINUE"><![CDATA[
 	<p>
-		As you quickly get your things back in order, Callie moves over to pull up the blinds and unlock the front door. Turning to face you after performing this task, she smiles and states, [callie.speech(You're good at taking horse-cock...)]
+		你快速整理好自己的东西，卡丽走过去卷起百叶窗并打开前门的锁。她忙完，转过身和你面对面，微笑着说：[callie.speech(你真的很擅长马杀鸡呢……)]
 	</p>
 	<p>
-		As the horse-girl then walks over to return to her side of the counter,
+		马女随后走过去，回到柜台旁，
 		#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-			 you point to the choker around your neck, before telling Callie that you've been well trained as one of Natalya's [style.mules], and that getting fucked by big horse-cocks is one of your favourite parts of the job.
+			你指了指脖子上的颈圈，然后告诉卡丽：作为娜塔莉亚的[style.mules]之一，你受过良好的训练，被大马的鸡巴操是你最喜欢的工作之一。
 		#ELSE
-			 you tell Callie that it was easy to satisfy her thanks to how perfect her big, throbbing horse-cock is.
+			你告诉卡丽，因为她勃起的大鸡巴太完美了，所以你很容易就能够满足她。
 		#ENDIF
-		 Smiling as she hears you say this, the horse-girl offers, [callie.speech(Well, seeing as you love it so much, you can come back and get stuffed by my baguette again tomorrow... Now, is there anything else I can get you today? A doughnut, perhaps?)]
+		卡丽听到你这么说，笑着回答：[callie.speech(好吧，既然你这么喜欢，明天你可以再来吃我的法棍……今天还需要点什么吗？要点甜甜圈么？)]
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="DONATION"><![CDATA[
 	<p>
-		Wanting to help Callie out and give her some financial support, you ask her how big of a tip she'd need before being able to improve her store.
+		你想帮卡丽一把，给她一些经济支持，于是问她需要多少小费才能改善她的店铺。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_nnxx_callie_daily_fucked))
-			[callie.speech(Hey, I already said you've had enough for today,)] she laughs as she misinterprets your question as a request for more sex. Quickly clarifying that all you're interested in this time is topping up her tip jar, you ask her again how much she'd need, to which the horse-girl replies, [callie.speech(Oh, well I guess [style.intToString([#callie.getFlamesToNextUpgrade()])] is what I'd need. I can't count on you coming back every day and paying for sex, though, so I don't expect to get that any time soon.)]
+			[callie.speech(嘿，我说你今天享受的已经够多了吧，)]她笑着说，她误解了你的问题，以为你是在请求更多的性行为。你迅速解释这次只是想给她的小费罐里加点钱，你再次问她需要多少，马女回答道，[callie.speech(哦，我想我需要[style.intToString([#callie.getFlamesToNextUpgrade()])]。我不指望你每天都过来和我付钱做爱，所以我没想着很快就能得到这些。)]
 		#ELSE
-			[callie.speech(Well, I guess [style.intToString([#callie.getFlamesToNextUpgrade()])] is what I'd need. I can't count on you coming back every day and paying for sex, though, so I don't expect to get that any time soon,)] she replies.
+			[callie.speech(好吧，我想我需要[style.intToString([#callie.getFlamesToNextUpgrade()])]。我不指望你每天都过来和我付钱做爱，所以我没想着很快就能得到这些，)]她回答道。
 		#ENDIF
 	</p>
 	<p>
-		Producing [style.intToString([#callie.getFlamesToNextUpgrade()])] flames, you place the money in Callie's tip jar and tell her that you're happy to help her improve her business.
+		拿出[style.intToString([#callie.getFlamesToNextUpgrade()])]火币，放入卡丽的小费罐，并告诉她你很高兴能帮助她改善生意。
 	</p>
 	<p>
-		[callie.speech(Are you serious?)] the horse-girl asks, wide-eyed, as she watches you fill her tip jar. After you've confirmed that the money is for her, she happily beams at you and gleefully declares, [callie.speech(That's such a great help, thank you so much, [pc.name]! You should see an improvement in here as soon as tomorrow!)]
+		[callie.speech(你是认真的吗？)]半人马女问道，她睁大了眼睛，看着你往她的小费罐里放钱。在你确认这些钱是给她的后，她开心地朝你微笑，兴奋地说道，[callie.speech(这真是太有帮助了，非常感谢你，[pc.name]！你明天应该就能看到这里的改善！)]
 	</p>
 	<p>
-		Taking the tip jar off the counter, Callie safely locks it away beneath the counter, before leaning forwards and flashing you her cleavage as she asks, [callie.speech(So, can I get you a doughnut?)]
+		卡丽把小费罐从柜台上拿下来，把它安全地锁在柜台下面，然后向前倾身，露出她的乳沟，问道，[callie.speech(那么，需要我给你拿个甜甜圈吗？)]
 	</p>
 	]]></htmlContent>
 	
@@ -458,10 +457,10 @@
 	
 	<htmlContent tag="SEATING"><![CDATA[
 	<p>
-		Although Callie's bakery is quite small, there's still enough room in this seating area to hold several tables and chairs. There's nobody making use of them, however, as all of the customers you've seen so far choose to order their doughnuts as takeouts.
+		虽然卡丽的烘焙店很小，但这个座位区还是有足够的空间摆放几张桌子和椅子。不过目前还没有人使用这些桌椅，因为你目前所看到的所有顾客都选择外带甜甜圈。
 	</p>
 	<p>
-		There's really not much for you to do here except turn around and head back over to Callie's counter...
+		你在这里也没什么可做的，只能转身回到卡丽的柜台……
 	</p>
 	]]></htmlContent>
 	
@@ -472,103 +471,103 @@
 	<htmlContent tag="NATALYA_ENTRY"><![CDATA[
 	
 	<p>
-		Deciding that you'd like to visit Callie's shop once again, you push open the door to 'The Creamy Bakey' and [pc.step] inside. Thanks to the upgrades to her store, there are normally several customers present at this time of day, but it seems like you've arrived during an unusual lull in business. A couple of customers depart as you enter, leaving the interior deserted save for two people.
+		你决定再次造访卡丽的店铺，推开“奶油烘焙店”的门[pc.step]了进去。得益于店铺的升级改造，这个时段通常会有不少顾客，但今天似乎正好赶上了生意清淡的时候。你进入的时候，最后几位顾客正巧离开，店内只剩下两个人。
 	</p>
 	<p>
-		One of these people is, of course, the owner of this business. Callie looks over to you from behind the counter and gives you a smile and a wave. The other person, who's standing in front of the horse-girl, is none other than Mistress Natalya. Turning to see who it is that Callie is waving to, the centauress looks over her shoulder, and upon recognising you, she flashes you a grin.
+		其中一人自然是这家店的老板。柜台后的卡丽朝你望来，微笑着挥了挥手。而站在马女面前的另一人，正是主人娜塔莉亚。半人马转头看向卡丽挥手的方向，而认出是你后，嘴角扬起一抹笑意。
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_START"><![CDATA[
 	<p>
-		Heading over to the counter, you say hello to Callie and Mistress Natalya.
+		你走向柜台，你向卡丽和主人娜塔莉亚打了个招呼。
 	</p>
 	#IF(!flags.hasFlag(FLAG_innoxia_callie_natalya_encountered))
 		<p>
-			[callie.speech(This is the [pc.race] who I was just telling you about,)] Callie says to your Mistress. Not knowing about the relationship between the two of you, she continues, [callie.speech([pc.Name] here really helped me to turn my business around. Without [pc.herHim], I may even have closed this place down by now!)]
+			[callie.speech(这就是我刚才跟你提到过的[pc.race]，)]卡丽对主人说道。她并不知晓你们之间的关系，继续说，[callie.speech(这位[pc.Name]真的帮我扭转了生意。要不是[pc.herHim]，我这会儿可能都已经关门大吉了！)]
 		</p>
 		<p>
-			[natalya.speech(Oh, I know this [style.mule] very well indeed,)] Mistress Natalya states, before smirking and teasing, [natalya.speech([pc.SheIs] normally eating a different type of doughnut to the ones you sell here. [pc.She] really is quite good with that [pc.tongue] of [pc.hers]...)]
+			[natalya.speech(哦，我确实很了解这[style.mule]，)]主人娜塔莉亚说完，又得意地坏笑着挑逗道，[natalya.speech([pc.SheIs]平时吃的甜甜圈可不是你这里卖的品种。[pc.She]口上功夫技巧确实相当不错呢……)]
 		</p>
 		<p>
-			[callie.speech(I've already experienced that first-hand!)] Callie laughs. Smiling at the centauress, she asks, [callie.speech(I guess I've got you to thank for training [pc.herHim] to be so good at eating ass? Hey! I've got an idea! Have you ever had your 'doughnut' iced before?)]
+			[callie.speech(我已经亲身体验过了！)]卡丽笑着说，向半人马露出微笑，问道，[callie.speech(我想我得感谢你把[pc.herHim]训练得这么会吃屁股？嘿！我有个主意！你以前有给“甜甜圈”上过糖霜吗？)]
 		</p>
 		<p>
-			[natalya.speech(I can't say that I have...)] Mistress Natalya replies, before checking the time on her watch and saying, [natalya.speech(If that's an offer, then I have an hour or so to kill.)]
+			[natalya.speech(应该没有吧……)]主人娜塔莉亚回答道，然后看了看手表，[natalya.speech(如果你邀请了，那我大概有一个小时可以打发。)]
 		</p>
 		<p>
-			[callie.speech(Well, it looks like I don't have any other customers, so how about we have some fun?)] Callie replies, before looking over at you and saying, [callie.speech(Lock the front door, [pc.name]. It's your lucky day; you'll get two doughnuts to ice and eat!)]
+			[callie.speech(看来现在没别的客人呢，不如我们找点乐子？)]卡丽随后看着你说，[callie.speech(去把前门锁上，[pc.name]。你今天走运了，可以给两个甜甜圈上糖霜然后吃掉！)]
 		</p>
 	#ELSE
 		<p>
-			[natalya.speech(I was hoping to see you here again, [style.mule],)] Mistress Natalya says to you, before turning back to Callie and asking, [natalya.speech(Is your offer of having my doughnut iced still on? I have an hour or so to kill...)]
+			[natalya.speech(希望还能再在这里见到你，[style.mule]，)]娜塔莉亚主人对你说道，然后又问卡丽，[natalya.speech(你之前说给我的甜甜圈加糖霜的建议还做吗？我还有一个小时可以打发……)]
 		</p>
 		<p>
-			[callie.speech(Well, it looks like I don't have any other customers, and I'm in the mood for some anal action, so let's do it!)] Callie eagerly replies, before looking over at you and saying, [callie.speech(Lock the front door, [pc.name]. It's your lucky day; you'll get two doughnuts to ice and eat!)]
+			[callie.speech(看来没其他客人了，我正好想玩玩后面，咱们开始吧！)]卡丽饥渴地答道，然后看着你说，[callie.speech(去把前门锁上，[pc.name]。你今天走运了，可以给两个甜甜圈上糖霜然后吃掉！)]
 		</p>
 	#ENDIF
 	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ESCAPE"><![CDATA[
 	<p>
-		Although you've been happy to perform anilingus on Callie and Mistress Natalya in the past, you really aren't in the mood for it right now. As such, you quickly make an excuse to leave, and before either of them can say anything to stop you, you're souting out a rushed apology and darting out of the front door.
+		虽然你过去很乐意为卡丽和主人娜塔莉亚做吻肛服务，但现在实在没这个心情。于是你迅速找了个借口离开，还没等她们开口挽留，你就匆忙道了声歉，冲出了正门。
 	</p>
 	<p>
-		Quickly hurrying a short way down the street, you duck into the end of a dark alleyway and peek back around the corner. A couple of minutes pass, and then you see Mistress Natalya leaving the shop. Carrying a brown paper bag that's stuffed full of doughnuts, she trots off down the street and quickly vanishes from your sight.
+		你快步沿着街道走了一小段路，闪身躲进一条幽暗小巷的尽头，从拐角处偷偷张望。几分钟后，你看见主人娜塔莉亚拎着塞满甜甜圈的牛皮纸袋走出店铺，迈着轻快的步伐沿街离去，很快消失在视线中。
 	</p>
 	<p>
-		If you still wanted to, you could always return to 'The Creamy Bakey' and pay Callie a visit, knowing that this time she's sure to be alone...
+		如果你还有兴趣，随时可以回到“奶油烘焙店”拜访卡丽，这次她肯定是一个人在店里……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ANILINGUS_START"><![CDATA[
 	<p>
-		Doing as you're told, you quickly lock the front door and flip the sign over to show 'closed'. Turning back to face the shop, you see that Callie has already stepped around to the other side of the counter, and is holding a couple of piping bags and three pots of sprinkles in her hands.
+		你依指示迅速锁上大门，将门牌翻到“停止营业”那面。转身看时，卡丽已绕到柜台内侧，手里握着裱花袋和三罐糖针。
 	</p>
 	<p>
-		[callie.speech(Take these, [pc.name],)] she says as you [pc.step] over to her. Taking the icing supplies from the smiling horse-girl, you listen as she instructs, [callie.speech(One bag's got white icing, the other's pink. There should be enough left in each of them to cover one doughnut. After that, choose some sprinkles to finish us off, then you can get to eating!)]
+		[callie.speech(拿着这些，[pc.name]，)]你向她[pc.step]去时她说道。你从笑容满面的马女手中接过糖霜材料，听着她的指示，[callie.speech(一袋是白色糖霜，另一袋是粉色的。每袋剩下的量都足够覆盖一个甜甜圈。之后选些糖针做最后装饰，就可以开吃啦！)]
 	</p>
 	<p>
-		With that, she turns around and bends over to lean down against the counter-top. Stepping over to get closer to the horse-girl, Mistress Natalya positions her big ass so that it's next to Callie's. Looking back over her shoulder, she sharply commands, [natalya.speech(Lift my skirt, [style.mule], and get Callie's trousers pulled down! You know the drill. Kiss our assholes to demonstrate your subservience, then you can get on with icing them.)]
+		说罢，她转过身去，俯身靠在柜台边。主人娜塔莉亚走近马女，调整姿势让自己肥硕的臀部也紧挨着卡丽的翘臀。她扭头回望，厉声命令道，[natalya.speech(掀开我的裙子，[style.mule]，把卡丽的裤子也扒下来！你明白规矩，亲吻我们的屁股来表示你的顺从，然后你就可以去舔它们了。)]
 	</p>
 	<p>
-		Obediently carrying out your Mistress's instructions, you flip up her skirt to reveal her hindquarters. Her big, puffy, ebony asshole is nestled between her hindquarters, and beneath that her feral, equine cock and pair of huge, heavy balls sway slightly as she pushes her ass back out towards you. Doing what's expected of you, you drop down behind your Mistress and lean forwards to plant a big, wet kiss on her musky anus, before shuffling over to Callie.
+		你顺从地执行主人的命令，掀开她的裙子露出臀部。她肉感饱满的乌黑菊穴夹在屁股之间，下方那根狂野的马鞭和一对沉甸甸的睾丸随着撅臀的动作轻轻晃动。你按照主人的要求，跪在她身后俯身向前，在她散发着浓郁气味的菊穴上留下一个湿漉漉的深吻，随后转身爬向卡丽。
 	</p>
 	<p>
-		[callie.speech(You've done this a lot, huh?)] the horse-girl giggles as you pull down her trousers. Her own puffy, ebony doughnut is similar in appearance to Mistress Natalya's, although as it's positioned on an anthro's body instead of a feral, it's a little smaller. Her horse-like cock and balls are also the same colour and shape as Mistress Natalya's genitals, but again they're smaller than the centauress's counterparts. As you lean forwards to plant a passionate kiss on Callie's hot asshole, she moans, [callie.speech(~Mmm!~ That's it... Now get our doughnuts iced you tease...)]
+		[callie.speech(看来你经常做这种事嘛？)]马女咯咯笑着，任你褪下她的裤子。她那饱满的乌黑菊穴与主人娜塔莉亚的颇为相似，只是由于长在人形躯体而非兽态马身上，尺寸要娇小些。她的马屌与睾丸虽然颜色形状都与主人如出一辙，但比起半人马还是小了一圈。你俯身热情亲吻了一下卡丽发烫的菊穴，她发出了甜腻的呻吟，[callie.speech(~嗯啊！~就是这样……现在给我们的小甜甜圈抹奶油吧……)]
 	</p>
 	<p>
-		Looking down at the two piping bags in your [pc.hands], you wonder which asshole should be painted white and which one should be pink...
+		你低头看着[pc.hands]中的两个裱花袋，思考着该把哪个肛门涂成白色，哪个涂成粉色……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_AFTER_ANILINGUS"><![CDATA[
 	<p>
-		With both Callie and Mistress Natalya having cum hard just from the feeling of your [pc.tongue] in their ass, they let out satisfied sighs and exchange a nod with one another. Looking back over her shoulder, your Mistress commands, [natalya.speech(Give us each one more kiss, [style.mule], then we're done here.)] 
+		卡丽和娜塔莉亚主人感受着你的[pc.tongue]在她们屁眼里的触感，都达到了猛烈的高潮，她们发出满足的叹息并互相点了点头。你的主人回头命令道，[natalya.speech(再给我们每人一个吻，[style.mule]，然后我们就结束了。)]
 	</p>
 	<p>
-		Doing as you're told, you plant one last wet kiss on both of the puffy, ebony doughnuts before you, after which you stand up and pull Mistress Natalya's skirt back down to cover her rear end. As Callie pulls up her trousers, she smirks at you and asks, [callie.speech(Did you enjoy eating our iced doughnuts, [pc.name]?)]
+		你听从指令，对面前两个肉感的乌黑甜甜圈最后亲吻了一下，然后站起身来，把娜塔莉亚主人的裙子拉回去，遮住了她的下体。卡丽拉起她的裤子，得意地看着你问道，[callie.speech(你喜欢吃我们的糖霜甜甜圈吗，[pc.name]？)]
 	</p>
 	<p>
-		You eagerly reply in the affirmative, after which Mistress Natalya lets out a short laugh and states, [natalya.speech(Of course [pc.she] enjoyed it. All of my [style.mules] have been trained to love eating horse ass. Now, I'll take a dozen of your doughnuts, then I must be on my way.)]
+		你饥渴地做出了肯定的回答，娜塔莉亚主人轻笑一声说道，[natalya.speech([pc.she]当然喜欢。我的这些[style.mules]都经过训练，爱舔马屁股。现在给我来一打你的甜甜圈，我得继续我的行程了。)]
 	</p>
 	<p>
-		Callie quickly packs twelve doughnuts into a paper bag, before taking payment from your Mistress and wishing her a good evening. Turning to face you, the centauress smiles and says, [natalya.speech(That was a good performance, [style.mule]. I expect to see you at the warehouse again soon. There are plenty of centaur slaves who need servicing, after all.)]
+		卡丽迅速将十二个甜甜圈装进纸袋，收下你主人的付款，并祝她有个美妙的夜晚。半人马转向你，微笑着说，[natalya.speech(表现得很好，[style.mule]。我期待不久后在仓库再见到你。毕竟，还有许多半人马奴隶需要服务呢。)]
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_AFTER_ANILINGUS_CONTINUE"><![CDATA[
 	<p>
-		Before she unlocks the door and leaves, you manage to call out a brief goodbye to Mistress Natalya. As the centauress trots off down the street, you turn back towards Callie, and see that she's carrying a mop and bucket. As she quickly cleans up the cummy mess which she and your Mistress made all over the floor, she asks, [callie.speech(Would you mind re-opening my shop? I might still get a few customers today.)]
+		在娜塔莉亚主人开门离开之前，你勉强向她进行了简短的道别。半人马沿着街道走远后，你转过身来面向卡丽，看到她拿来了拖把和桶。她迅速清理着她和你主人在地上留下的杂乱，她问道，[callie.speech(你可以帮我重新开店吗？今天我可能还会有几个顾客上门。)]
 	</p>
 	<p>
-		Doing as the horse-girl asks, you flip over the sign in the door so that it displays 'open' to members of the public. Returning to the counter as Callie finishes cleaning up, you look down at the iced doughnuts on display and get a flashback to how Callie's and Natalya's iced assholes looked. Seeing what it is you're looking at, Callie laughs and teases, [callie.speech(Wishing you had our doughnuts to eat all over again? Don't worry, I'm sure Natalya will be back at some point. Give it a few days, and you'll probably find her here again.)]
+		你按照马女的要求，将门上的标志翻转，使其显示“营业中”，以便公众可以看到。卡丽结束清理工作后回到了柜台，你正低头看着展柜上的糖霜甜甜圈，不禁回想起了卡丽和娜塔莉亚的糖霜菊穴是什么样子。卡丽看到你注视的东西后，笑着挑逗道，[callie.speech(想再吃一遍我们的甜甜圈吗？别担心，我相信娜塔莉亚会在某个时候回来的。等过上几天，你大概就能再次在这里找到她了。)]
 	</p>
 	<p>
-		Nodding in agreement, you ask Callie if she had fun. Happily smiling at you, she replies, [callie.speech(I sure did! You were great back there, [pc.name]. Now, I've got no more time for sex today, but if you wanted a real doughnut, perhaps you'd like to select one?)]
+		你点头表示同意，询问卡丽她玩得是否开心。卡丽开心地对你微笑，回答道，[callie.speech(我当然开心了！你表现得很棒，[pc.name]。今天我没有空余时间再做爱了，但如果你想要一个真正的甜甜圈，也许你可以挑一个？)]
 	</p>
 	<p>
-		Looking down at the goods on offer, you wonder what to do next...
+		你俯视着眼前的商品，思考着接下来该做什么……
 	</p>
 	]]></htmlContent>
 	

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Storage Area]]></name>
-	<tooltipDescription><![CDATA[While most of this large room is filled by huge vats of milk, there's enough space to fit several desks, behind which the farm's workers fill out paperwork.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the storage area at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[仓库区]]></name>
+	<tooltipDescription><![CDATA[这个大房间里装满了大桶牛奶，但仍预留出了放置几张桌子的空间供工人进行文书工作。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的仓库区里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_TAN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

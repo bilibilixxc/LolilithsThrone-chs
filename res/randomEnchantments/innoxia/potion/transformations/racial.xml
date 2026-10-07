@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -32,7 +32,7 @@
 		#ENDIF
 	]]></conditionalPreParsing>
 	
-	<name defaultPrepend="true"><![CDATA[[#flags.getObject('potionRaceStage').getName()] [#flags.getString('potionRaceName')]]]></name>
+	<name defaultPrepend="true"><![CDATA[[#flags.getObject('potionRaceStage').getName()][#flags.getString('potionRaceName')]]]></name>
 	
 	<applicationSpeechStart replaceAll="false"><![CDATA[
 		It's time for you to get a new look! How about... Hmm... Oh, I know! Being
@@ -58,7 +58,7 @@
 		]]></conditional>
 		<effect><![CDATA[
 			<p style='text-align:center;'>
-				[style.italicsDisabled(Nothing happens, as [npc.namePos] race is unable to be transformed...)]
+				[style.italicsDisabled(什么也没有发生，因为[npc.namePos]的种族无法被转化……)]
 			</p>
 		]]></effect>
 	</potionEffects>

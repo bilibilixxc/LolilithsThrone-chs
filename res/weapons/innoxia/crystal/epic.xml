@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>8000</value> 
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[misty demonstone]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[misty demonstones]]></namePlural> 
-		<description><![CDATA[A powerful demonstone, the power of which can be absorbed into a person's aura in order to enhance their unarmed strikes with extra elemental damage. Demonstones, such as this one, are rumoured to be crystallised essences of a Lilin's orgasm.]]></description> 
+		<name><![CDATA[迷雾魔石]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[迷雾魔石]]></namePlural> 
+		<description><![CDATA[一块强大的魔石，它的力量可以被吸收进使用者的灵气里来增强元素伤害。据说，像这样的魔石是莉琳高潮的精华结晶。]]></description> 
 		
-		<attackDescriptor>crystal strike</attackDescriptor>
-		<attackTooltipDescription>Strike at [npc.name] in melee, using your crystal's power to inflict extra damage!</attackTooltipDescription>
+		<attackDescriptor><![CDATA[晶击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[近战攻击[npc.Name]，你利用水晶的力量造成额外伤害。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(focus)] on the energy in the demonstone. As [npc.she] [npc.does] so, it dissolves and flows into [npc.her] aura, granting [npc.herHim] the ability to perform arcane-imbued unarmed attacks.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(focus)] on extracting the absorbed arcane energy inside of [npc.her] aura. As [npc.she] [npc.does] so, it reforms back into a powerful demonstone.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]将能量汇集于魔石后，魔石便溶解流入了[npc.her]的灵气中，使其能够进行灌注了奥术的徒手攻击。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]专注于将被吸收入灵气中的奥术能量抽取出来，能量重新化形为了迷雾魔石。]]></unequipText>
 		
 		<imageName>epic.svg</imageName> 
 		
@@ -64,38 +64,38 @@
 	<hitDescriptions>
 		<hitText><![CDATA[
 		#IF(npc.isFeral())
-			Darting forwards, [npc.name] [npc.verb(rear)] up [npc.verb(deliver)] a solid kick to [npc2.namePos] torso.
+			[npc.name]立马冲上前去，扬起后躯对着[npc2.namePos]的躯干猛踹了一下。
 		#ELSE
-			Darting forwards, [npc.name] [npc.verb(deliver)] a solid punch to [npc2.namePos] [npc2.arm].
+			[npc.name]立马冲上前去，一拳打在了[npc2.namePos]的[npc2.arm]上。
 		#ENDIF
-		]]></hitText>
+]]></hitText>
 		<hitText><![CDATA[
 		#IF(npc.isFeral())
-			Striking out at [npc2.name], [npc.name] [npc.verb(manage)] to land a solid kick on [npc2.her] [npc2.leg]!
+			[npc.name]向[npc2.name]袭去，结实地踢在了[npc2.her]的[npc2.leg]上！
 		#ELSE
-			Striking out at [npc2.name], [npc.name] [npc.verb(manage)] to land a solid punch on [npc2.her] [npc2.arm]!
+			[npc.name]向[npc2.name]袭去，结实地打在了[npc2.her]的[npc2.arm]上！
 		#ENDIF
-		]]></hitText>
+]]></hitText>
 		<hitText><![CDATA[
 		#IF(npc.isFeral())
-			[npc.Name] [npc.verb(strike)] out at [npc2.name] in unarmed combat, and [npc.verb(manage)] to land a solid kick on [npc2.her] torso.
+			[npc.Name]徒手向[npc2.name]袭去，结实地踢在了[npc2.her]的躯干上。
 		#ELSE
-			[npc.Name] [npc.verb(strike)] out at [npc2.name] in unarmed combat, and [npc.verb(manage)] to land a solid hit on [npc2.her] torso.
+			[npc.Name]徒手向[npc2.name]袭去，结实地打在了[npc2.her]的躯干上。
 		#ENDIF
-		]]></hitText>
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		Darting forwards, [npc.name] [npc.verb(try)] to deliver a punch to [npc2.namePos] [npc2.arm], but [npc2.she] [npc2.verb(manage)] to step out of the way in time.
-		]]></missText>
+		[npc.name]立马冲上前去，向着[npc2.namePos]的[npc2.arm]挥出一拳，但被及时躲开了。
+]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(throw)] a punch at [npc2.name], but fails to make contact with any part of [npc2.her] body.
-		]]></missText>
+		[npc.Name]向[npc2.name]挥出一拳，但却没能击中[npc2.her]身体的任何一处。
+]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(strike)] out at [npc2.name] in unarmed combat, but [npc.she] [npc.verb(end)] up missing.
-		]]></missText>
+		[npc.Name]徒手向[npc2.name]袭去，却没能击中。
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

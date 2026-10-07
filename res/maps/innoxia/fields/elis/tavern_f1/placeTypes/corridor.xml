@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[corridor]]></name>
-	<tooltipDescription><![CDATA[This first floor corridor connects the rooms which are available to rent.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the upstairs corridor at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[走廊]]></name>
+	<tooltipDescription><![CDATA[一楼的走廊连接着可供出租的房间。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆楼上的走廊里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

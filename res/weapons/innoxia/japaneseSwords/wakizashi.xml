@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -10,23 +10,23 @@
 		
 		<determiner><![CDATA[]]></determiner>
 		
-		<name><![CDATA[wakizashi]]></name>
+		<name><![CDATA[胁差]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[wakizashis]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[胁差]]></namePlural> 
 		
-		<description><![CDATA[A sword of Japanese origin, with a curved, slender, single-edged arcane blade. Typically worn along with a katana, it is mainly used as a backup sword, or for close quarters fighting.]]></description> 
+		<description><![CDATA[一把起源于日本的刀，刀刃细长且有一定的弧度，单面开刃并被奥术附魔。通常与太刀一起佩戴，主要用作备用刀或在近身格斗中使用。]]></description> 
 		
-		<attackDescriptor>cut</attackDescriptor>
+		<attackDescriptor><![CDATA[斩]]></attackDescriptor>
 		
-		<attackTooltipDescription>Slash [npc2.name] with your wakizashi.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用胁差劈[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity>
 		
 		<weaponSet>WEAPON_DAISHO</weaponSet> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(position)] [npc.her] wakizashi at [npc.her] hip, so that [npc.she] may draw it at a moment's notice.]]></equipText>
+		<equipText><![CDATA[[npc.Name]将胁差放在[npc.her]的腰间，以便[npc.she]拔刀。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(sheath)] [npc.her] wakizashi, before putting it away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将胁差插回刀鞘，然后收好。]]></unequipText>
 		
 		<imageName>wakizashi_sheathed.svg</imageName> 
 		
@@ -85,27 +85,27 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(slash)] [npc.her] wakizashi at [npc2.name], grinning as the ethereal arcane blade travels through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]用胁差斩向[npc2.name]，虚幻的奥术刀刃穿过了[npc2.her]的身体，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		Slashing out at [npc2.name] with [npc.her] wakizashi, [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(see)] the ethereal blade travel straight through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]挥舞胁差斩向[npc2.name]，[npc.she]看到虚幻的奥术刀刃直接穿过了[npc2.namePos]的身体，不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(slash)] at [npc2.name] with [npc.her] wakizashi, causing [npc2.herHim] to stagger back as the ethereal blade passes right through [npc2.her] chest!
-		]]></hitText>
+		[npc.Name]用胁差斩向[npc2.name]，虚幻的刀刃穿过了[npc2.her]的胸膛，使得[npc2.herHim]向后踉跄！
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(slash)] [npc.her] wakizashi at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+[npc.Name]用胁差斩向[npc2.name]，但最终没有击中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Slashing out at [npc2.name] with [npc.her] wakizashi, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+[npc.Name]挥舞胁差砍向[npc2.name]，但最终没有击中[npc2.herHim]，[npc.her]发出一声沮丧的呼喊！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(slash)] at [npc2.name] with [npc.her] wakizashi, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用胁差猛地斩向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

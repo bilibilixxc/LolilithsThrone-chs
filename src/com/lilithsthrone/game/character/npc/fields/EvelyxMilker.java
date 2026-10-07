@@ -73,7 +73,7 @@ public class EvelyxMilker extends NPC {
 
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
-			this.setGenericName("milker");
+			this.setGenericName("产奶工");
 			
 			// Set random level from 1 to 20:
 			setLevel(1 + Util.random.nextInt(20));
@@ -204,20 +204,20 @@ public class EvelyxMilker extends NPC {
 	public void initMilkerLevel(int level) {
 		// Set name:
 		if(level==0) {
-			this.setGenericName("trainee");
+			this.setGenericName("学徒");
 			this.setDescription(UtilText.parse(this,
-					"This [npc.race] is an employee of Evelyx's Dairy, and is currently classed at the lowest promotional level, 'trainee'."
-					+ " She will only be eligible for promotion after she's met certain milk production requirements, at which time she'll have the option to get fucked by a member of the public and be elevated to the position of 'heifer'."));
+					"这个[npc.race]是艾弗利克斯乳业的员工，目前的级别是最低的“学徒”。"
+					+ "只有在达到一定的产奶量要求后，它才有资格晋升，届时它可以选择被当众被操，晋升为“小母牛”。"));
 		} else if(level==1) {
-			this.setGenericName("heifer");
+			this.setGenericName("小母牛");
 			this.setDescription(UtilText.parse(this,
-					"This [npc.race] is an employee of Evelyx's Dairy, and is currently classed at the middle promotional level, 'heifer'."
-					+ " She will only be eligible for promotion after she's been impregnated at least once and met certain milk production requirements, after which she will be elevated to the position of 'cow'."));
+					"这个[npc.race]是艾弗利克斯乳业的员工，目前属于中级等级的“小母牛”。"
+					+ "只有在至少受孕一次并达到一定的产奶量要求后，她才有资格晋升，之后她将升为“奶牛”。"));
 		} else {
-			this.setGenericName("cow");
+			this.setGenericName("母牛");
 			this.setDescription(UtilText.parse(this,
-					"This [npc.race] is an employee of Evelyx's Dairy, and is currently classed at the highest promotional level, 'cow'."
-					+ " Although cows are offered a special promotion after meeting certain milk production requirements, most choose to remain at this level for the remainder of their careers."));
+					"这个[npc.race]是艾弗利克斯乳业的员工，目前属于最高级别“奶牛”。"
+					+ "尽管奶牛们在达到一定的产奶量要求后可获得特殊的晋升机会，但大多数奶牛还是选择在剩余的职业生涯中保持这一级别。"));
 		}
 		
 		// Add vagina and set race to cow-girl where appropriate:

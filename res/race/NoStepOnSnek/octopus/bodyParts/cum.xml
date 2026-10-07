@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<race>NoStepOnSnek_octopus</race>
-	<transformationName><![CDATA[octopus]]></transformationName>
+	<transformationName><![CDATA[章鱼]]></transformationName>
 	<baseFluidType>CUM</baseFluidType>
 	<flavour>CUM</flavour>
 	<namesMasculine>
-		<name><![CDATA[octopus-]]></name>
+		<name><![CDATA[章鱼]]></name>
 	</namesMasculine>
 	<namesFeminine>
-		<name><![CDATA[octopus-]]></name>
+		<name><![CDATA[章鱼]]></name>
 	</namesFeminine>
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>

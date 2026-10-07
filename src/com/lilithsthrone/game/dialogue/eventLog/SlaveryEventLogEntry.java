@@ -283,7 +283,7 @@ public class SlaveryEventLogEntry implements XMLSaving {
 		
 		} catch (Exception e) {
 			Util.logGetNpcByIdError("SlaveryEventLogEntry.getSlaveName()", slaveID);
-			return "<b>Slave</b>";
+			return "<b>奴隶</b>";
 		}
 	}
 	

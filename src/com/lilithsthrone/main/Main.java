@@ -227,10 +227,10 @@ public class Main extends Application {
 		File dir = new File("data/");
 		if(!dir.exists()) {
 			Alert a = new Alert(AlertType.ERROR,
-					"Unable to find the 'data' folder ("+dir.getAbsolutePath()+"). Saving and error logging is disabled."
-							+ "\nMake sure that you've extracted the game from the zip file, and that the file has write permissions."
-							+ "\n(Please read section 'MISSING FOLDERS' in the README.txt file.)"
-							+ "\nContinue?",
+					"找不到“data”文件夹("+dir.getAbsolutePath()+")。错误日志存储功能已被禁用。"
+							+ "\n请确保游戏已被完整解压，且用户具有写入权限。"
+							+ "\n(详情请参阅 README.txt 中的“MISSING FOLDERS(文件丢失)”部分。)"
+							+ "\n是否继续？",
 					ButtonType.YES, ButtonType.NO);
 			System.err.println("Unable to find the 'data' folder ("+dir.getAbsolutePath()+").");
 			a.showAndWait().ifPresent(response -> {
@@ -245,11 +245,11 @@ public class Main extends Application {
 		File dir = new File("res/");
 		if(!dir.exists()) {
 			Alert a = new Alert(AlertType.WARNING,
-					"Could not find the 'res' folder ("+dir.getAbsolutePath()+"). This WILL cause errors and present sections of missing text."
-							+ "\nMake sure that you've extracted the game from the zip file, and that the file has write permissions."
-							+ "\nIf you use the command line or a batch/script file to start the game, please try starting it in the game folder to prevent this error."
-							+ "\n(Please read section 'MISSING FOLDERS' in the README.txt file.)"
-							+ "\nContinue?",
+					"找不到“res”文件夹("+dir.getAbsolutePath()+")。该文件丢失将导致游戏缺少文本且导致错误。"
+							+ "\n请确保游戏已被完整解压，且用户具有写入权限。"
+							+ "\n如果您正在使用命令行或批处理/脚本启动游戏，请尝试在游戏文件夹中启动以防止出现此错误。"
+							+ "\n(详情请参阅 README.txt 中的“MISSING FOLDERS(文件丢失)”部分。)"
+							+ "\n是否继续？",
 					ButtonType.YES, ButtonType.NO);
 			System.err.println("Unable to find the 'res' folder ("+dir.getAbsolutePath()+").");
 			a.showAndWait().ifPresent(response -> {
@@ -267,6 +267,12 @@ public class Main extends Application {
 	 * Do not call Font.getFamilies() prior to this as additional fonts must be loaded before the list is cached.
 	 */
 	protected void loadFonts() {
+		if (Font.loadFont(toUri("res/fonts/Source Han/SourceHanSansCN-Regular.otf"), 12) != null) {
+			Font.loadFont(toUri("res/fonts/Source Han/SourceHanSansCN-Bold.otf"), 12);
+		} else {
+			System.err.println("Source Han Sans font could not be loaded.");
+		}
+
 		// Load fallback for Calibri
 		if (Font.loadFont(toUri("res/fonts/Carlito/Carlito-Regular.ttf"), 11) != null) {
 			// Load variants
@@ -520,7 +526,7 @@ public class Main extends Application {
 		return (Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :"Lilith's Throne")
 				+ " " + VERSION_NUMBER + Library.VERSION
 				+ " " + VERSION_DESCRIPTION
-				+ (DEBUG?" (Debug Mode)":"")
+				+ (DEBUG?" (Debug模式)":"")
 				+ (Configurations.EXPERIMENTAL ? " EXPERIMENTAL" : "")
 				+ (Configurations.DEVELOPER_MODE ? " DEVELOPER" : "")
 				+ (displayingTurnTimer
@@ -551,19 +557,19 @@ public class Main extends Application {
 	
 	public static String getQuickSaveUnavailabilityDescription() {
 		if (!Main.game.isInNewWorld()) {
-			return "You cannot save the game during the character creation process or prologue!";
+			return "你无法在创建角色期间和序章内保存游戏！";
 			
 		} else if (Main.game.isInCombat()) {
-			return "You cannot save the game while in combat!";
+			return "你无法在战斗中保存游戏！";
 			
 		} else if (Main.game.isInSex()) {
-			return "You cannot save the game while in a sex scene!";
+			return "你无法在性行为场景中保存游戏！";
 			
 		} else if (Main.game.getCurrentDialogueNode().getDialogueNodeType()!=DialogueNodeType.NORMAL) {
-			return "You cannot save the game unless you are in a neutral scene!";
+			return "你无法在非中立场景中保存游戏！";
 			
 		} else if (!Main.game.isStarted() || !Main.game.isInNeutralDialogue()) {
-			return "You cannot save the game unless you are in a neutral scene!";
+			return "你无法在非中立场景中保存游戏！";
 		}
 		
 		return "";
@@ -572,9 +578,9 @@ public class Main extends Application {
 	public static String getQuickSaveName() {
 		String name;
 		if(!Main.game.isStarted()) {
-			name = "QuickSave_intro";
+			name = "快速保存_序章";
 		} else {
-			name = "QuickSave_"+Main.game.getPlayer().getName(false);
+			name = "快速保存_"+Main.game.getPlayer().getName(false);
 		}
 		return Main.checkFileName(name);
 	}
@@ -643,13 +649,13 @@ public class Main extends Application {
 	}
 
 	public static String checkFileName(String name) {
-		name = name.replace(" ", "_").replaceAll("[^\\w]+", "");
+		name = name.replace(" ", "_").replaceAll("[/\\\\:\\*\\?\"<>\\|]+", "");
 		if (name.length()==0) {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "Name too short!");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "名称过短！");
 			return "";
 		}
 		if (name.length() > 64) {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "Name too long!");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "名称过长！");
 			return "";
 		}
 		return name;
@@ -686,7 +692,7 @@ public class Main extends Application {
 			}
 
 		} else {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "File not found...");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "未找到文件……");
 		}
 	}
 
@@ -702,7 +708,7 @@ public class Main extends Application {
 			}
 
 		} else {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "File not found...");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "未找到文件……");
 		}
 	}
 
@@ -718,7 +724,7 @@ public class Main extends Application {
 			}
 			
 		} else {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "File not found...");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "未找到文件……");
 		}
 	}
 	

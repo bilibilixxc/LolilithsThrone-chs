@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <colour>
 	<metallic>false</metallic>
 	
-	<name><![CDATA[dark grey]]></name>
+	<name><![CDATA[暗灰色]]></name>
 	
 	<colour>777777</colour>
 	<lightColour>777777</lightColour>

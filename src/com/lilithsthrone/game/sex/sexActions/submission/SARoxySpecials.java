@@ -33,12 +33,12 @@ public class SARoxySpecials {
 		
 		@Override
 		public String getActionTitle() {
-			return "Orgasm";
+			return "高潮";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer.";
+			return "你已经到达了快感的极限，再无法阻止高潮的到来。";
 		}
 
 		@Override
@@ -89,7 +89,7 @@ public class SARoxySpecials {
 		
 		@Override
 		public String getActionTitle() {
-			return "Smoke";
+			return "吸烟";
 		}
 
 		@Override
@@ -123,7 +123,7 @@ public class SARoxySpecials {
 		
 		@Override
 		public String getActionTitle() {
-			return "Face-sitting tease";
+			return "坐脸挑逗";
 		}
 
 		@Override
@@ -170,7 +170,7 @@ public class SARoxySpecials {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Customer interruption";
+			return "客人的打扰";
 		}
 		@Override
 		public String getActionDescription() {

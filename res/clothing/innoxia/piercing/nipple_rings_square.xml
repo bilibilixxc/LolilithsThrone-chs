@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>350</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[square nipple ring]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[square nipple rings]]></namePlural>
-		<description><![CDATA[A pair of metal nipple rings, which are fashioned into a square instead of a more typical circle. To wear them, the bar at the top is removed and slid through a nipple piercing, then the U-shaped part is snapped back into place.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[方形乳环]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[方形乳环]]></namePlural>
+		<description><![CDATA[一对金属乳环，拥有方形设计，而不是常见的圆形。要佩戴它们，需要先取下上方的杆，将其穿入乳头穿孔，然后将U形部分扣回原位。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -43,27 +42,27 @@
 	</coreAttributes>
 
 	<replacementText slot="PIERCING_NIPPLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(detach)] the topmost bar from the square nipple rings, before sliding them through [npc.her] nipple piercings and then clipping the U-shaped parts back into place.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(detach)] the topmost bar from the square nipple rings, before sliding them through [npc2.namePos] nipple piercings and then clipping the U-shaped parts back into place.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(detach)] the topmost bar from the square nipple rings, before sliding them through [npc2.namePos] nipple piercings and then clipping the U-shaped parts back into place.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将方形乳环最上方的横杆拆下，然后将其插入[npc.her]的乳头穿孔，再将U形部分夹回了原位。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将方形乳环最上方的横杆拆下，然后将其插入[npc2.namePos]的乳头穿孔，再将U形部分夹回了原位。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将方形乳环最上方的横杆拆下，然后将其插入[npc2.namePos]的乳头穿孔，再将U形部分夹回了原位。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText slot="PIERCING_NIPPLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unclip)] the U-shaped parts of [npc.her] square nipple rings, before sliding the bars out of [npc.her] nipple piercings and then reassembling the two parts.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unclip)] the U-shaped parts of [npc2.namePos] square nipple rings, before sliding the bars out of [npc2.her] nipple piercings and then reassembling the two parts.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(unclip)] the U-shaped parts of [npc2.namePos] square nipple rings, before yanking the bars out of [npc2.her] nipple piercings and then reassembling the two parts.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]取下自己方形乳环的U形部分，然后将[npc.her]乳头穿孔中的横杆拉出，再将两个部分重新组装了起来。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]取下[npc2.namePos]方形乳环的U形部分，然后将[npc2.her]乳头穿孔中的横杆拉出，再将两个部分重新组装了起来。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地取下[npc2.namePos]方形乳环的U形部分，然后将[npc2.her]乳头穿孔中的横杆拔出，再将两个部分重新组装了起来。
+		]]></otherRough>
 	</displacementText>
   
   

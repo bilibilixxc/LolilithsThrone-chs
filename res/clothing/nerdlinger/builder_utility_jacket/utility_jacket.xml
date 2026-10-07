@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>400</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[utility jacket]]></name>
+		<name><![CDATA[实用夹克]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[utility jackets]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[实用夹克]]></namePlural> 
 		
-		<description><![CDATA[A sleeveless jacket made from a thick, wear-resistant fabric. It's lined with multiple pockets, making it any handyman's favourite.]]></description> 
+		<description><![CDATA[一件由耐磨厚实面料制成的无袖夹克。它内衬有多个口袋，是所有工人的最爱。]]></description> 
 		
 		<physicalResistance>0.5</physicalResistance> 
 		

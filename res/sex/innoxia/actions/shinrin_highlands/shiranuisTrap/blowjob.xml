@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -30,9 +30,10 @@
 	<applyEndEffects/>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Blowjob]]></title>
+	<title><![CDATA[口交]]></title>
 	<tooltip><![CDATA[
-		Service Shiranui's cock with your mouth.
+		用你的嘴来服侍不知火。
+
 	]]></tooltip>
 	<descriptions>
 		<!-- No oral fetish: -->
@@ -41,13 +42,13 @@
 				[#!npc.hasFetish(FETISH_ORAL_GIVING)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				As Shiranui's [shiranui.cock+] is pushed into [npc.namePos] mouth, [npc.she] [npc.verb(wrap)] [npc.her] [npc.lips+] around the youko's throbbing shaft and [npc.verb(give)] her a blowjob.
+				不知火[shiranui.cock+]顶入[npc.namePos]嘴里，[npc.she]用[npc.lips+]裹住妖狐搏动的阴茎，为她口交。
 			]]></text>
 			<text><![CDATA[
-				Although the ribbons are preventing [npc.name] from moving, [npc.she] still [npc.verb(try)] to bob [npc.her] head back and forth as [npc.she] [npc.verb(give)] Shiranui a sloppy blowjob.
+				尽管缎带束缚着[npc.name]的动作，[npc.she]依然努力前后耸动着脑袋，给不知火献上一场口水淋漓的口交。
 			]]></text>
 			<text><![CDATA[
-				[npc.Name] [npc.verb(let)] out a series of gargling [npc.moans] as Shiranui pushes her [shiranui.cock+] down [npc.her] throat, and [npc.verb(wrap)] [npc.her] [npc.lips+] around the youko's shaft as [npc.she] [npc.verb(give)] her a blowjob.
+				不知火将[shiranui.cock+]顶入[npc.her]喉咙，[npc.Name]发出一连串咕噜作响的[npc.moans]，用[npc.lips+]裹住妖狐的阴茎，为她口交。
 			]]></text>
 		</description>
 		<!-- (oral fetish) -->
@@ -56,14 +57,13 @@
 				[#npc.hasFetish(FETISH_ORAL_GIVING)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				As Shiranui's [shiranui.cock+] is pushed into [npc.namePos] mouth, [npc.she] eagerly [npc.verb(wrap)] [npc.her] [npc.lips+] around the youko's throbbing shaft and [npc.verb(give)] her an enthusiastic blowjob.
+				当不知火[shiranui.cock+]塞进[npc.namePos]嘴里，[npc.she]就急切地用[npc.lips+]包裹住妖狐搏动的阴茎，热情地为她口交。
 			]]></text>
 			<text><![CDATA[
-				Although the ribbons are preventing [npc.name] from moving, [npc.she] still [npc.verb(try)] to bob [npc.her] head back and forth as [npc.she] [npc.verb(give)] Shiranui a very enthusiastic, sloppy blowjob.
+				尽管缎带束缚着[npc.name]的动作，[npc.she]依然努力前后耸动脑袋，热情地为不知火献上一场口水淋漓的口交。
 			]]></text>
 			<text><![CDATA[
-				[npc.Name] [npc.verb(let)] out a series of horny, gargling [npc.moans] as Shiranui pushes her [shiranui.cock+] down [npc.her] throat, and [npc.verb(wrap)] [npc.her] [npc.lips+] around the youko's shaft as [npc.she] enthusiastically [npc.verb(give)] her a blowjob.
-			]]></text>
+				不知火将[shiranui.cock+]顶入[npc.her]喉咙，[npc.Name]发出一连串淫荡的、咕噜作响的[npc.moans]，用[npc.lips+]裹住妖狐的阴茎，亢奋地为她口交。]]></text>
 		</description>
 	</descriptions>
 </sexAction>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <enchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	<applyDefaultSeal><![CDATA[true]]></applyDefaultSeal>
@@ -11,7 +11,7 @@
 		#ENDIF
 	]]></spawnWeighting>
 	
-	<namePrefix><![CDATA[Foot fiend's]]></namePrefix>
+	<namePrefix><![CDATA[恋足的]]></namePrefix>
 	<namePostfix/>
 	<nameOverride/>
 	

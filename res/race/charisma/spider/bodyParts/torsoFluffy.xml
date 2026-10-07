@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <torso>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[furred spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛(覆毛)]]></transformationName>
 	<coveringType>charisma_spider_chitinFluffy</coveringType>
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with furry, spider-like chitin. [npc.Her] new chitin is surprisingly pliable around [npc.her] erogenous zones.
-		<br/>[npc.Name] now [npc.has] [style.boldSpider(spider-like)], [npc.skinFullDescription].
+		没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被蜘蛛般的多毛几丁质覆盖。[npc.Her]新生的几丁质在性感带附近出奇得柔韧。
+		<br/>[npc.Name]现在拥有[style.boldSpider(蜘蛛般)][npc.skinFullDescription]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].
+		[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。
 	]]></bodyDescription>
 </torso>

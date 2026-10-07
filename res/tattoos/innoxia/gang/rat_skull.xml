@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
-		<name><![CDATA[rat skull]]></name>
-		<description><![CDATA[A rat's skull, with a pair of crossed bones sitting behind it.]]></description>
-		<bodyOverviewDescription><![CDATA[a tattoo depicting a rat's skull, with a pair of crossed bones sitting behind it]]></bodyOverviewDescription> 
+		<name><![CDATA[老鼠头骨]]></name>
+		<description><![CDATA[一只老鼠的头骨，下方有一对交叉的骨头。]]></description>
+		<bodyOverviewDescription><![CDATA[一个纹身，画着一只老鼠的头骨，头骨下方有一对交叉的骨头]]></bodyOverviewDescription> 
 		<availabilityRequirements unique="true"><![CDATA[!npc.isPlayer() || pc.isQuestCompleted(QUEST_LINE_SIDE_VENGAR)]]></availabilityRequirements>
 		<imageName>rat_skull.svg</imageName> 
 		<slotAvailability/> 

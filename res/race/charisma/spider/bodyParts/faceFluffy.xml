@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <face>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[furred spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛(覆毛)]]></transformationName>
 	<coveringType>charisma_spider_chitinFluffy</coveringType>
 	<mouthType>charisma_spider_mouth</mouthType>
 	<tags>
@@ -11,24 +11,24 @@
 	<names/>
 	<namesPlural/> 
 	<descriptorsMasculine>
-		<descriptor>spider-like</descriptor>
-		<descriptor>chelicerae-equipped</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[配备螯肢]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>spider-like</descriptor>
-		<descriptor>chelicerae-equipped</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[配备螯肢]]></descriptor>
 	</descriptorsFeminine>
-	<noseName><![CDATA[nose]]></noseName>
+	<noseName><![CDATA[鼻子]]></noseName>
 	<noseNamePlural><![CDATA[noses]]></noseNamePlural>
 	<noseDescriptorsMasculine/>
 	<noseDescriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		[npc.Her] face burns as large chitinous chelicerae emerge from the sides of [npc.her] face and surround [npc.her] [npc.mouth]. [npc.She] also [npc.verb(feel)] a burning in [npc.her] cheeks as venom glands start to form that feed into them. As the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.
-		<br/>[npc.Name] now [npc.has] an anthropomorphic [style.boldSpider(spider-like face)], [npc.materialDescriptor] [npc.skinFullDescription], complete with large fang-like chelicerae, which are [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)]. Within [npc.her] [npc.mouth], [npc.she] [npc.has] a humanoid tongue.
-	]]></transformationDescription>
+		[npc.her]脸颊两侧出现了巨大的几丁质螯肢并围住了[npc.mouth]， 脸部感觉像烧起来一样。当毒液腺生成并进入脸颊时[npc.she]又有了一阵灼烧感。转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。
+		<br/>[npc.Name]现在拥有人形的[style.boldSpider(蜘蛛般的脸)]，[npc.materialDescriptor][npc.skinFullDescription]。配有巨大的尖牙状螯肢，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]。在[npc.her][npc.mouth]里，有一根类似人的舌头。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.a_feminineDescriptor(true)], spider-like face [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)] and complete with large fang-like chelicerae, which are [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)].
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的蜘蛛般面庞，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。配有巨大的尖牙状螯肢，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]。
+]]></bodyDescription>
 	<bodyDescriptionFeral><![CDATA[
 		[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with large fang-like chelicerae.
 	]]></bodyDescriptionFeral>

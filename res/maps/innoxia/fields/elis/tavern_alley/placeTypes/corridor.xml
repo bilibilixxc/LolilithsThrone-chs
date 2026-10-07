@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[corridor]]></name>
-	<tooltipDescription><![CDATA[A narrow corridor links the VIP room to the main floor of 'The Crossed Blades' tavern.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor at 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[入口]]></name>
+	<tooltipDescription><![CDATA[一条狭窄的走廊将VIP室与十字利刃的主楼连接起来。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在十字利刃的走廊里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

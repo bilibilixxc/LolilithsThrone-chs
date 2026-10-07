@@ -85,27 +85,27 @@ public class GloryHole {
 		
 		@Override
 		public String getActionTitle() {
-			return "Kneel";
+			return "跪下";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getTotalParticipantCount(false)==3) {
-				return "Kneel down on the floor, ready to service the glory holes with your mouth.";
+				return "跪在地上，准备用你的嘴为寻欢洞服务。";
 			} else {
-				return "Kneel down on the floor, ready to service the glory hole with your mouth.";
+				return "跪在地上，准备用嘴为寻欢洞服务。";
 			}
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.sex.getTotalParticipantCount(false)==3) {
-				return "Pulling away from the glory holes, [npc.name] [npc.verb(take)] a step back, before kneeling down on the floor between them."
-						+ " Looking back and forth at the genitals on display, [npc.she] [npc.verb(let)] out [npc.a_moan+], before getting ready to use [npc.her] mouth.";
+				return "[npc.name]拉开与寻欢洞的距离，后退了一步并跪在了地上。"
+						+ "[npc.she]来回看着暴露的生殖器，发出一声[npc.a_moan+]并准备用[npc.her]的嘴口交。";
 				
 			} else {
-				return "Pulling away from the glory hole, [npc.name] [npc.verb(take)] a step back, before kneeling down on the floor before it."
-						+ " Grinning hungrily at the genitals on display, [npc.she] [npc.verb(let)] out [npc.a_moan+], before leaning forwards and getting ready to use [npc.her] mouth.";
+				return "[npc.name]拉开与寻欢洞的距离，后退了一步并跪在寻欢洞前的地上。"
+						+ "[npc.she]看着暴露的生殖器，露出了饥渴的笑容。[npc.she]发出了一声[npc.a_moan+]并前倾身体，准备使用[npc.her]的嘴。";
 			}
 		}
 
@@ -153,36 +153,36 @@ public class GloryHole {
 		
 		@Override
 		public String getActionTitle() {
-			return "Present asshole";
+			return "呈现屁眼";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Push your [npc.ass+] up against [npc2.namePos] glory hole, ready for [npc2.herHim] to use your [npc.asshole+].";
+			return "你把[npc.ass+]顶到[npc2.namePos]的寻欢洞口，准备让[npc2.herHim]使用你[npc.asshole+]。";
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.sex.getTotalParticipantCount(false)==3) {
 				if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction())==SexSlotUnique.GLORY_HOLE_KNEELING) {
-					return "Standing up, [npc.name] #IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF over towards [npc2.name], before bending down and pushing [npc.her] [npc.ass+] up against the glory hole."
-							+ " Leaning forwards, [npc.she] [npc.verb(position)] [npc.herself] so that [npc.her] mouth is just [unit.sizes] away from the hole on the opposite side of the stall,"
-								+ " and, letting out [npc.a_moan+], [npc.she] [npc.verb(prepare)] to have [npc.her] [npc.asshole+] and mouth used at the same time.";
+					return "[npc.name]站起来朝[npc2.name]走去，然后弯下腰，将[npc.her][npc.ass+]抵住寻欢洞。"
+							+ "[npc.she]身体前倾，摆好位置，让[npc.her]的嘴与隔间对面的洞口只有[unit.sizes]的距离，"
+								+ "然后[npc.she]发出[npc.a_moan+]，准备让[npc.her][npc.asshole+]和嘴同时被使用。";
 					
 				} else {
-					return "Pulling away from the glory holes, [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] bending down and pushing [npc.her] [npc.ass+] up against [npc2.namePos] glory hole."
-							+ " Leaning forwards, [npc.she] [npc.verb(position)] [npc.herself] so that [npc.her] mouth is just [unit.sizes] away from the hole on the opposite side of the stall,"
-								+ " and, letting out [npc.a_moan+], [npc.she] [npc.verb(prepare)] to have [npc.her] [npc.asshole+] and mouth used at the same time.";
+					return "[npc.name]拉开与寻欢洞的距离，调整位置，弯下腰，将[npc.her][npc.ass+]抵住[npc2.namePos]的寻欢洞。"
+							+ "[npc.she]身体前倾，摆好位置，让[npc.her]的嘴与隔间对面的洞口只有[unit.sizes]的距离，"
+								+ "然后[npc.she]发出[npc.a_moan+]，准备让[npc.her][npc.asshole+]和嘴同时被使用。";
 				}
 				
 			} else {
 				if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction())==SexSlotUnique.GLORY_HOLE_KNEELING) {
-					return "Standing up, [npc.name] #IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF over towards [npc2.name], before bending down and pushing [npc.her] [npc.ass+] up against the glory hole."
-							+ " Letting out [npc.a_moan+], [npc.she] [npc.verb(press)] back against the wall, preparing to have [npc.her] [npc.asshole+] used.";
+					return "[npc.name]站起来朝[npc2.name]走去，然后弯下腰，将[npc.her][npc.ass+]抵住寻欢洞。"
+							+ "[npc.she]发出[npc.a_moan+]，背靠着墙，准备让[npc.her][npc.asshole+]被使用。";
 					
 				} else {
-					return "Pulling away from the glory holes, [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] bending down and pushing [npc.her] [npc.ass+] up against the glory hole."
-							+ " Letting out [npc.a_moan+], [npc.she] [npc.verb(press)] back against the wall, preparing to have [npc.her] [npc.asshole+] used.";
+					return "[npc.name]从寻欢洞中抽身出来，重新摆好[npc.herself]的姿势并弯下腰，将[npc.her][npc.asshole+]抵住寻欢洞。"
+							+ "[npc.she]发出[npc.a_moan+]，背靠着墙，准备让[npc.her][npc.asshole+]被使用。";
 				}
 			}
 		}
@@ -236,36 +236,36 @@ public class GloryHole {
 		
 		@Override
 		public String getActionTitle() {
-			return "Present pussy";
+			return "露出小穴";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Push your [npc.ass+] up against [npc2.namePos] glory hole, ready for [npc2.herHim] to use your [npc.pussy+].";
+			return "你将[npc.ass+]抵住[npc2.namePos]的寻欢洞，准备让[npc2.herHim]使用你[npc.pussy+]。";
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.sex.getTotalParticipantCount(false)==3) {
 				if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction())==SexSlotUnique.GLORY_HOLE_KNEELING) {
-					return "Standing up, [npc.name] #IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF over towards [npc2.name], before bending down and pushing [npc.her] [npc.ass+] up against the glory hole."
-							+ " Leaning forwards, [npc.she] [npc.verb(position)] [npc.herself] so that [npc.her] mouth is just [unit.sizes] away from the hole on the opposite side of the stall,"
-								+ " and, letting out [npc.a_moan+], [npc.she] [npc.verb(prepare)] to have [npc.her] [npc.pussy+] and mouth used at the same time.";
+					return "[npc.name]站起来朝[npc2.name]走去，然后弯下腰，将[npc.her][npc.ass+]抵住寻欢洞。"
+							+ "[npc.she]身体前倾，摆好位置，让[npc.her]的嘴与隔间对面的洞口只有[unit.sizes]的距离，"
+								+ "然后[npc.she]发出一阵[npc.a_moan+]，准备让[npc.her][npc.pussy+]和嘴同时被使用。";
 					
 				} else {
-					return "Pulling away from the glory holes, [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] bending down and pushing [npc.her] [npc.ass+] up against [npc2.namePos] glory hole."
-							+ " Leaning forwards, [npc.she] [npc.verb(position)] [npc.herself] so that [npc.her] mouth is just [unit.sizes] away from the hole on the opposite side of the stall,"
-								+ " and, letting out [npc.a_moan+], [npc.she] [npc.verb(prepare)] to have [npc.her] [npc.pussy+] and mouth used at the same time.";
+					return "[npc.name]拉开与寻欢洞的距离，调整位置，弯下腰，将[npc.her][npc.ass+]抵住[npc2.namePos]的寻欢洞。"
+							+ "[npc.she]身体前倾，摆好位置，让[npc.her]的嘴与隔间对面的洞口只有[unit.sizes]的距离，"
+								+ "然后[npc.she]发出一阵[npc.a_moan+]，准备让[npc.her][npc.pussy+]和嘴同时被使用。";
 				}
 				
 			} else {
 				if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction())==SexSlotUnique.GLORY_HOLE_KNEELING) {
-					return "Standing up, [npc.name] #IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF over towards [npc2.name], before bending down and pushing [npc.her] [npc.ass+] up against the glory hole."
-							+ " Letting out [npc.a_moan+], [npc.she] [npc.verb(press)] back against the wall, preparing to have [npc.her] [npc.pussy+] used.";
+					return "[npc.name]站起来朝[npc2.name]走去，然后弯下腰，将[npc.her][npc.ass+]抵住寻欢洞。"
+							+ "[npc.she]发出一阵[npc.a_moan+]，背靠着墙，准备让[npc.her][npc.pussy+]被使用。";
 					
 				} else {
-					return "Pulling away from the glory holes, [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] bending down and pushing [npc.her] [npc.ass+] up against the glory hole."
-							+ " Letting out [npc.a_moan+], [npc.she] [npc.verb(press)] back against the wall, preparing to have [npc.her] [npc.pussy+] used.";
+					return "[npc.name]从寻欢洞中抽身出来，重新摆好的姿势，弯下腰，将[npc.her][npc.asshole+]抵住寻欢洞。"
+							+ "[npc.she]发出一阵[npc.a_moan+]，背靠着墙，准备让[npc.her][npc.pussy+]被使用。";
 				}
 			}
 		}
@@ -320,15 +320,15 @@ public class GloryHole {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Fuck pussy (R)";
+			return "操小穴(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Ask [npc2.name] to push [npc2.her] pussy up against the glory hole so that you can fuck it.";
+			return "你让[npc2.name]把[npc2.her]的小穴对准寻欢洞，这样你就能操它了。";
 		}
 		@Override
 		public String getDescription() {
-			return "Wanting to fuck [npc2.namePos] pussy, you call out loud enough for [npc2.herHim] to hear, [npc.speech(Push your pussy up against the hole! I want to fuck you!)]";
+			return "你想操[npc2.namePos]的小穴，于是大声叫喊，让[npc2.herHim]听到：[npc.speech(把你的小穴对准洞口！我想操你！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -369,15 +369,15 @@ public class GloryHole {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Fuck ass (R)";
+			return "操屁股(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Ask [npc2.name] to push [npc2.her] ass up against the glory hole so that you can fuck it.";
+			return "你让[npc2.name]把[npc2.her]的屁股对准寻欢洞，这样你就能操它了";
 		}
 		@Override
 		public String getDescription() {
-			return "Wanting to fuck [npc2.namePos] ass, you call out loud enough for [npc2.herHim] to hear, [npc.speech(Push your butt up against the hole! I want to fuck your ass!)]";
+			return "你想操[npc2.namePos]的屁股，就大声叫喊，让[npc2.herHim]听到：[npc.speech(把屁股对准洞口！我想操你的屁股！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -415,15 +415,15 @@ public class GloryHole {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Oral (R)";
+			return "口交(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Ask [npc2.name] to kneel down in front of the glory hole so that [npc2.she] can perform oral.";
+			return "你要求[npc2.name]跪在寻欢洞前并让[npc2.she]口交。";
 		}
 		@Override
 		public String getDescription() {
-			return "Wanting [npc2.name] to perform oral, you call out loud enough for [npc2.herHim] to hear, [npc.speech(Kneel down and put your mouth to use!)]";
+			return "你想让[npc2.name]口交，于是大声叫喊，让[npc2.herHim]听到：[npc.speech(跪下，让我用你的嘴！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -468,29 +468,29 @@ public class GloryHole {
 		public String getDescription() {
 			if(Main.sex.getPositionRequest().getPerformerSlots().get(0)==SexSlotUnique.GLORY_HOLE_FUCKED) {
 				if(!Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_VAGINAL_RECEIVING).isNegative()) {
-					return "Standing up and moving back so as to push [npc.her] [npc.pussy+] against the glory hole, [npc.name] [npc.moansVerb],"
-							+ " [npc.speech(Come on then, fuck my pussy!)]";
+					return "[npc.Name]站起来并向后移动，将[npc.her][npc.pussy+]抵住寻欢洞并[npc.moansVerb]，"
+							+ "[npc.speech(来吧！操我的小穴！)]";
 					
 				} else {
-					return "Staying in [npc.her] current position, [npc.name] angrily calls out, "
-							+ "[npc.speech(I'm not going to let you fuck my pussy! Just be happy with what you've got!)]";
+					return "[npc.name]停留在[npc.her]当前的位置，生气地叫喊道："
+							+ "[npc.speech(我才不会让你操我的小穴！差不多得了！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPerformerSlots().get(0)==SexSlotUnique.GLORY_HOLE_ANALLY_FUCKED) {
 				if(!Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_ANAL_RECEIVING).isNegative()) {
-					return "Standing up and moving back so as to push [npc.her] [npc.asshole+] against the glory hole, [npc.name] [npc.moansVerb],"
-							+ " [npc.speech(Come on then, fuck my ass!)]";
+					return "[npc.name]站起来并向后移动，以便将[npc.her][npc.asshole+]抵住寻欢洞并[npc.moansVerb]，"
+							+ "[npc.speech(来吧，干我的屁股！)]";
 					
 				} else {
-					return "Staying in [npc.her] current position, [npc.name] angrily calls out, "
-							+ "[npc.speech(I'm not going to let you fuck my pussy! Just be happy with what you've got!)]";
+					return "[npc.name]停留在[npc.her]当前的位置，生气地叫喊道："
+							+ "[npc.speech(我才不会让你操我的小穴！差不多得了！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPerformerSlots().get(0)==SexSlotUnique.GLORY_HOLE_KNEELING) {
-				return "Dropping down onto [npc.her] knees, [npc.name] [npc.moansVerb],"
+				return "[npc.name]跪倒在地并[npc.moansVerb]，"
 							+ (Main.game.getPlayer().hasPenis()
-								?" [npc.speech(Let me suck your cock!)]"
-								:" [npc.speech(Let me use my mouth!)]");
+								?"[npc.speech(让我嗦你鸡巴！)]"
+								:"[npc.speech(让我口！)]");
 			}
 			
 			return "";

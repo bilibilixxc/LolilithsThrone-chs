@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription printed on the packaging reads 'Packed by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[包装上印着细小的字迹，写着“DSG食品材料有限公司打包”。]]></authorTag>
 		
 		<value>350</value> 
-		<determiner><![CDATA[a package of]]></determiner>
-		<name><![CDATA[Pâté and Crackers]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Tuna Sashimi]]></namePlural>
-		<description><![CDATA[A small tin of meat pâté and crackers wrapped in a wax paper package. The label on package is a cartoony depiction a smiling gryphon-boy with crumbs all around his beak.]]></description> 
+		<determiner><![CDATA[一包]]></determiner>
+		<name><![CDATA[肉酱酥脆饼干]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[金枪鱼刺身]]></namePlural>
+		<description><![CDATA[一个小罐肉酱和包在蜡纸包装中的饼干。包装上的标签描绘了一个面带微笑的卡通狮鹫男，嘴巴周围都是饼干屑。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -24,16 +24,16 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[gryphon]]></potionDescriptor>
+		<potionDescriptor><![CDATA[狮鹫]]></potionDescriptor>
 		<associatedRace>dsg_gryphon</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 20% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Restores)] 20% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]20%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -41,7 +41,7 @@
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/5)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel stronger and more alert...
+				[npc.Name]开始感到更加强壮和警觉……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_ARCANE, 1)]
@@ -57,25 +57,25 @@
 	<useDescriptions>
 		<selfUse><![CDATA[
 		#IF(game.isSillyModeEnabled())
-		 [npc.speech(Okay, let's get this out of the packaging,)] [npc.name] [npc.verb(say)] to an unseen audience before unpacking the crackers and opening the tin. The tin makes a slight hiss as air rushes in. [npc.speech(Nice hiss,)] [npc.she] [npc.verb(comment)].
+		[npc.speech(好的，让我们把这个从包装中拿出来，)][npc.name]说给一个看不见的观众，然后打开饼干和罐头。当空气涌入时，听到罐头发出轻微的嘶嘶声。[npc.speech(不错的嘶嘶声，)][npc.she]评价道。
 		#ELSE
-		 [npc.Name] [npc.verb(unpack)] the crackers and [npc.verb(open)] the tin.
+		[npc.Name]拆开了饼干的包装并打开了罐头。
 		#ENDIF 
-		 [npc.She] [npc.verb(breathe)] in the hearty scent of crackers just out of the oven and freshly cooked meat. Unable to resist the delicious looking meal, [npc.she] quickly [npc.verb(devour)] it all, leaving only an empty tin and torn wax paper behind.
+		[npc.She]深深吸入了刚出炉的饼干和新鲜烹制的肉的浓郁香气。无法抗拒这诱人的美食，[npc.she]迅速将它全部吞咽下去，只留下了一个空罐头盒和撕破的蜡纸。
 		]]></selfUse>
 		<otherUse><![CDATA[
 		#IF(game.isSillyModeEnabled())
-		 [npc.speech(Okay, let's get this out of the packaging.)] [npc.Name] says before unpacking
+		[npc.speech(好的，让我们把它从包装中取出。)][npc.Name]在打开之前说道。
 		#ELSE
-		 [npc.Name] [npc.verb(unpack)]
+		[npc.Name]打开
 		#END IF
-		 the crackers and [npc.verb(open)] the tin
+		饼干的包装并打开罐头
 		#IF(game.isSillyModeEnabled())
-		. The tin makes a slight hiss as air rushes in. [npc.speech(Nice hiss.)] [npc.she] [npc.verb(say)] while laying out
+		。听到锡罐发出轻微的嘶嘶声，[npc.speech(嘶嘶声不错。)][npc.she]说的同时撕开盖子
 		#ELSE
-		, laying out
+		，倒出
 		#ENDIF
-		 the meal before [npc2.name]. [npc2.She] [npc2.verb(breathe)] in the hearty scent of crackers just out of the oven and freshly cooked meat. Unable to resist, [npc2.she] quickly [npc2.verb(devour)] it all, leaving only an empty tin and torn wax paper behind.
+		食物放在[npc2.name]面前。[npc2.she]深深吸入了刚出炉的饼干和新鲜烹制的肉的浓郁香气。[npc2.she]无法抗拒地迅速将它全部吞咽下去，只留下了一个空罐头盒和撕破的蜡纸。
 		]]></otherUse>
 	</useDescriptions>
 

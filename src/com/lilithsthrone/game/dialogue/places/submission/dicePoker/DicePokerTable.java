@@ -10,9 +10,9 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum DicePokerTable {
 	
-	COPPER("copper", 500, 250, PresetColour.CLOTHING_COPPER),
-	SILVER("silver", 2500, 1000, PresetColour.CLOTHING_SILVER),
-	GOLD("gold", 10000, 5000, PresetColour.CLOTHING_GOLD);
+	COPPER("铜桌", 500, 250, PresetColour.CLOTHING_COPPER),
+	SILVER("银桌", 2500, 1000, PresetColour.CLOTHING_SILVER),
+	GOLD("金桌", 10000, 5000, PresetColour.CLOTHING_GOLD);
 	
 	private String name;
 	private Colour colour;

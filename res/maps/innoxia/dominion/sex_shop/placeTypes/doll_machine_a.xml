@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[assembly line A]]></name>
-	<tooltipDescription><![CDATA[At the start of the doll assembly line, arcane-infused silicone is cast into the shape of limbs, torsos, and heads.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the back of Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[生产线A]]></name>
+	<tooltipDescription><![CDATA[在玩偶生产线的起始阶段，注魔硅胶被浇铸成四肢、躯干和头部的形状。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店后面]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_INDIGO</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

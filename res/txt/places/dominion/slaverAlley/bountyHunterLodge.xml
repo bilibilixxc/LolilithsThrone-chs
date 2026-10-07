@@ -1,76 +1,76 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- EXTERIOR -->
 	
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		On the opposite side of the street to the Slavery Administration building, there's a timber-framed tavern which bears the name 'The Rusty Collar'. An old sign, every bit as weathered as the old wooden door onto which it's nailed, declares this establishment to be open twenty-four hours a day, seven days of the week. A peeling poster stuck to the wall beside it proudly declares this tavern to be the best place in all of Dominion in which to find and hire experienced bounty hunters. Near to the bottom of the poster, there's an image of a mean-looking wolf-boy, and a speech bubble coming from his mouth reads: 'We'll return your runaway slaves within two days, or your money back!'
+		在奴隶管理局大楼对面的街道上，有一家木结构酒馆，名为“锈项圈酒馆”。招牌和钉在上面的旧木门一样饱经风霜，上面写着“一周七天，一天二十四小时营业”。旁边的墙上贴着一张几近剥落的海报，上面骄傲地宣称这家酒馆是整个御城区内，寻找和雇佣经验丰富的赏金猎人的最佳场所。海报下方画着一个长相凶恶的狼男，从他嘴里吐出的气泡写着：“我们将在两天内将逃跑的奴隶原样奉还，否则就指定退款！”
 	</p>
 	<p>
-		Although the crooked old windows are barely translucent, they are letting out a decent amount of light, which, combined with the loud sounds of merriment coming from within, informs you that there are a multitude of people currently inside the tavern. If you wanted to, you could push open the front door and take a look inside...
+		虽然歪斜的老旧窗户几乎无法透光，但还是有些亮光洒出，加之里面传出的喧闹声，你知道酒馆里现在一定人很多。如果愿意的话。可以推开大门进去看看……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 
 	<!-- ENTRANCE_INITITAL -->
 	
 	<htmlContent tag="ENTRANCE_INITITAL"><![CDATA[
 	<p>
-		Deciding to take a look inside the tavern, you [pc.step] up to the front door and push it open, before heading inside and taking stock of your surroundings.
-	</p>
+	你决定到酒馆里看一看，于是[pc.step]走到门前，推门进去，同时打量着周围的环境。
+</p>
 	<p>
-		The first thing which strikes you upon your entry is both the high level of background noise and the thick, smoky atmosphere. Despite the many arcane-enchanted candles which illuminate the interior, the high, timber-framed ceiling is practically hidden from view by the cloud of second-hand smoke.
-	</p>
+	一进门，率先迎接上来的是嘈杂的音乐和浓烟缭绕的空气。尽管室内点着许多奥术附魔的蜡烛，但高高的木结构天花板却还是几乎被二手烟烟雾遮蔽住了。
+</p>
 	<p>
-		Looking straight ahead, you see that the majority of the ground floor is filled with dozens of tables, around which bounty hunters and all sorts of unsavoury-looking individuals are seated. Opposite the door through which you've just entered, a large, wooden bar runs along part of the far wall, and is currently surrounded by patrons either demanding or consuming alcoholic drinks of all sorts. Looking over to your left, you see that there's a large wooden bounty board fixed to the wall, onto which dozens of pieces of paper have been tacked.
-	</p>
+	你看向正前方，发现一楼绝大部分地方都摆满了桌子，大概有几十张，赏金猎人和各种面色不善的家伙就坐在桌子周围。而刚进来的那扇门对面，就是一个木制的大吧台，一直延伸到远处的墙壁。吧台周围围满了顾客，他们对着琳琅满目的酒品，要不就是在点，要不就是在喝。你向左看去，只见墙上固定着一块巨大的木制悬赏板，上面贴着几十张纸。
+</p>
 	<p>
-		None of the tavern's many occupants seem to pay any attention to your arrival, and you wonder whether you should take a closer look around, or turn around and head back out into Slaver Alley...
-	</p>
-	]]>
-	</htmlContent>
+	酒馆里大多人似乎都没有注意到你的到来，你不知道是应该再仔细看看周围，还是转身回到奴隶巷去……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE -->
 	
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		Finding yourself back at the entrance to the tavern, you wonder whether you should take your leave and head back out into Slaver Alley...
+		你又回到了酒馆的入口，思索着是否应该离开，回到奴隶巷……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_LEAVE"><![CDATA[
 	<p>
-		Deciding that you've had enough of the tavern's noise and smoky atmosphere, you exit in the same way you entered, and soon find yourself standing back outside in Slaver Alley... 
+		你已经受够了酒馆的喧闹和烟雾缭绕，便决定从原路离开，很快回到了奴隶巷外……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FLOOR -->
 	
 	<htmlContent tag="FLOOR"><![CDATA[
 	<p>
-		Crossing the tavern's main floor, you have to weave your way around dozens of tables, most of which have rough-looking bounty hunters and other such unsavoury individuals seated around them.
+		要穿过酒馆的主层，你必须绕过数十张桌子，大多数桌旁要不坐着长相凶悍的赏金猎人，要不是诸如此类的怪人。
 		#IF(pc.getRace()==RACE_DEMON)
-			 The ones who see that you're a demon obligingly scoot their chairs forwards to give you room to pass, while those who shout curses before then taking a look at you are soon uttering apologies and offering you their seat.
+			那些看出你恶魔身份的人会亲切地把椅子往前挪挪，为你让出通过的空间。而那些连眼都没抬就张口大骂的人，也很快道歉，把座位让给了你。
 		#ELSE
-			 Growls and grumbles fill the air as you squeeze past the chairs and tables, with a couple of particularly rowdy individuals shouting curses as you pass.
+			你从桌椅间挤过，背景充斥着咆哮与抱怨，有几个特别能吵的人在你经过时破口大骂。
 		#ENDIF
 	</p>
 	<p>
-		Ignoring these characters, you do your best to endure the thick, smoky atmosphere and the booming, inebriated shouts and laughter coming from the tavern's patrons.
+		你忽略了这些无名小卒，尽量忍受着浓重的烟雾和酒馆主顾们醉醺醺的大喊与哄笑声。
 		#IF(game.getCharactersPresent().contains(wolfgang))
-			 Continuing on your way to the other side of the room, you notice the familiar figures of the two dobermann-boys who were terrorising [kay.namePos] business. Sitting at one of the nearby tables, [wolfgang.name] and [karl.name] haven't noticed your presence, and you wonder whether you should leave them be or go and say hello...
+			选择继续向房间的另一侧走去。你注意到两只杜宾男的熟悉身影，它们曾在[kay.namePos]的办公室里恐吓过[kay.namePos]。[wolfgang.name]和[karl.name]坐在附近的一张桌旁，并没有注意到你的存在，你不知道是该让他们自个儿呆着还是去打声招呼……
 		#ELSE
-			 As you don't have any business with any of the people in this area, there's not much else to do but continue on your way to the other side of the room...
+			你跟这里的人都没打过交道，除了继续前往房间的另一侧外，也没有别的事情可做了……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DOBERMANNS -->
@@ -78,197 +78,197 @@
 	<htmlContent tag="DOBERMANNS"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_dobermannDefeatSeduced))
 		<p>
-			Wanting to talk to [wolfgang.name] and [karl.name] again, you [pc.walk] over to the table at which they're sitting and say hello. Looking up from their mugs of beer, the dobermann-boy bounty hunters flash you a pair of lustful grins as they see that you've returned to them.
+			你想跟[wolfgang.name]和[karl.name]再多聊聊，便走到他们的桌旁打招呼。这对杜宾赏金猎人抬起头，在看到你的重新归来后，向你露出一对充满欲求的笑容。
 		</p>
 		<p>
-			[wolfgang.speech(Hungry for our fat dog-cocks again, are you?)] [wolfgang.name] grunts.
+			[wolfgang.speech(又想要我们的大狗屌了？)][wolfgang.name]哼道。
 		</p>
 		<p>
-			[karl.speech(I've been dreaming about stuffing you full of cum since our last fuck!)] [karl.name] adds, before downing his beer and asking, [karl.speech(So, you gonna come up to our room, or what?)]
+			[karl.speech(自从上次做过后，我做梦都想把你再射的满满当当的！)][karl.name]补充着，放下啤酒杯问道，[karl.speech(那你还会再来我们的房间吗，还是有别的事？)]
 		</p>
 		<p>
-			Leaning back in their chairs and expectantly gazing up at you, the two horny dobermann-boys await your reply...
+			这两只欲火中烧的杜宾靠回椅背，满怀期待地仰望着你，等待着答复……
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to [wolfgang.name] and [karl.name] again, you [pc.walk] over to the table at which they're sitting and say hello. Looking up from their mugs of beer, the dobermann-boy bounty hunters recognise you from before, and flash you a pair of angry scowls.
+			你想跟[wolfgang.name]和[karl.name]再多聊聊，便走到他们的桌旁打招呼。这对杜宾赏金猎人抬起头，终于认出了你，纷纷向你怒目而视。
 		</p>
 		<p>
-			[wolfgang.speech(What the fuck do you want?)] [wolfgang.name] grunts.
+			[wolfgang.speech(你想他妈的干啥？)][wolfgang.name]哼道。
 		</p>
 		<p>
-			[karl.speech(If you're not here to offer us anything, then we're not interested,)] [karl.name] adds, before downing his beer and demanding, [karl.speech(Come on then, tell us what you want!)]
+			[karl.speech(你如果不是带着好处来的，那我们对你不感兴趣，)][karl.name]补充着，放下啤酒杯问道，[karl.speech(说吧，你到底是来做什么的！)]
 		</p>
 		<p>
-			With the two angry dobermann-boys clearly not being interested in engaging in you in conversation, you wonder what to do now...
+			两只愤怒的杜宾显然没什么兴趣与你交谈，你在想接下来该怎么做……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_SEDUCE"><![CDATA[
 	<p>
-		Deciding that it'd be a lot of fun to seduce and fuck this hot pair of bounty hunters, you put on your most alluring look and lean down over their table.
+		你觉得要是能勾引上这对热辣的赏金猎人，跟他们狠狠地做爱，一定会很有意思，于是你摆出你最为最诱人的姿势，俯身趴在他们的桌上。
 		#IF(pc.hasAnyEnforcerStatusEffect())
-			 Noticing their glances at your uniform, you reassure the two dobermann-boys that you're off-duty for the rest of today, before suggestively teasing them by saying that Enforcers like to let themselves go just as much as anybody else.
+			你注意到它们瞧了你的制服一眼，便向两只杜宾保证道今日剩下的时间内你都不当班，随后暗示性地挑逗着它们，说执法者和其他人一样喜欢放纵自己。
 		#ELSEIF(pc.getRace()==RACE_DEMON)
-			 Reassuring the two dobermann-boys that you're not going to make use of your demonic status to get them in trouble, you suggestively tease them by saying how your demonic body is always horny and hungry for a good fuck.
+			你向两只杜宾保证，你不会利用你的恶魔身份给它们惹麻烦，且暗示性地挑逗着它们，说你的恶魔之躯总是饥渴难耐，渴望着好好跟人干上一炮。
 		#ELSE
-			 Reassuring the two dobermann-boys that you've finished your business with Kay and have nothing to say about that subject, you start to suggestively tease and flirt with them.
+			你向两只杜宾保证，你已经完成了与凯的交易，没别的打算了，随后开始暗示性地挑逗着它们。
 		#ENDIF
-		 After suspiciously looking you up and down for a moment, Wolfgang lets out a deep grunt and motions for you to come and sit down next to him. Pleased to discover that even these brutes quickly let their guard down at the slightest suggestion of getting laid, you happily sit down in Wolfgang's lap, causing him to let out another deep, amused grunt and declare, [wolfgang.speech(Fuck! You're eager, aren't you?)]
+		沃尔夫冈狐疑地上下打量着你，随即低哼了一声，示意着你坐到他身边。你很高兴地发现，即使是这些畜生，只要一提到上床，也会很快放松警惕，你便高兴地坐到了沃尔夫冈的腿上，引得他又发出一声低沉且有趣的哼声，对你下了断言：[wolfgang.speech(操！你很饥渴啊，是不是？)]
 	</p>
 	<p>
-		Leaning into Wolfgang's large, muscular torso, you respond by saying how any [pc.girl] would be just as eager as you are, were they in your position. Playfully biting your [pc.lip], you continue to flirt with them by saying how everyone romanticises bounty hunters, and then suggesting that the two of them must never struggle to find a willing partner to fuck.
+		你靠在沃尔夫冈高大且肌肉发达的躯干上，回应道：如果有哪个[pc.girl]像你一样处在这个位置上，都会这么饥渴。你俏皮地咬唇，继续跟他们调情，说每个人都对赏金猎人充满着浪漫的幻想，还提道他们俩肯定不难找愿意上床的伴侣。
 	</p>
 	<p>
-		[karl.speech(Yeah, that part's true enough,)] Karl grunts.
+		[karl.speech(确实，这说法很真。)]卡尔低哼道。
 	</p>
 	<p>
-		[wolfgang.speech(So, you were wondering what it's like to get fucked by two fat dog-cocks, were you?)] Wolfgang asks, before slipping his paw-like hand down
+		[wolfgang.speech(那么，你很想知道被两根大狗屌一起操是什么感觉吗？)]沃尔夫冈问道，他爪似的双手滑入
 		#IF(pc.hasLegs())
-			 between your legs
+			你的腿间
 		#ELSE
-			 to your groin
+			腹股沟上
 		#ENDIF
-		 and giving you a good grope. Smirking as you let out an erotic gasp, he suggests to his companion, [wolfgang.speech(How about we get this eager slut upstairs and give [pc.herHim] a good, hard fuck?)]
+		，爽捏了一把。你发出色情的喘息声，沃尔夫冈得意地笑着，向同伴提议道，[wolfgang.speech(我们把这个饥渴的骚货带上楼去，好好地暴操[pc.herHim]一顿怎样？)]
 	</p>
 	<p>
-		[karl.speech(Sounds good to me,)] Karl replies, before standing up and moving over to dominantly give your [pc.breasts+] a rough squeeze.
+		[karl.speech(我觉得不错。)]卡尔回道，随后站起身，挪到主导位上，粗暴地捏了把你[pc.breasts+]。
 	</p>
 	<p>
-		Feeling just as turned-on as these two dobermann-boys clearly are, you tell them that you don't want to wait a moment longer. Encouraged by your enthusiasm, the two dobermann-boys stand up and lead you over to the staircase on the other side of the tavern. Reaching down to roughly grope your [pc.ass+], [wolfgang.name] reveals, [wolfgang.speech(We're renting a room up here. Come on, slut, it's the perfect place for you to get fucked.)]
+		你和这两只杜宾一样欲火中烧，告诉它们你一刻也不想等了。受到你热情的鼓舞，两只杜宾站起身，带着你走上酒馆另一侧的楼梯。[wolfgang.name]伸手粗暴地摸索着你[pc.ass+]，解释道，[wolfgang.speech(我们在上面租了一个房间。跟过来，骚货，这是操你的最好地方。)]
 	</p>
 	<p>
-		Letting out an eager [pc.moan], you allow the dobermann-boys to accompany you up the stairs and down the corridor to their room. Being led inside, you see that the interior is just what anybody would expect. Apart from a couple of beds and chests of drawers, there's nothing else in here that draws your attention, and so as the door swings shut behind you, you turn back to face [wolfgang.name] and [karl.name] and wonder how to take things from here...
+		你毫不克制自己饥渴的呻吟声，让这对杜宾领着你上楼，去往他们的房间。进了门，你对里面的布置不感意外，除了一对床和衣柜，没什么吸引人注意的存在。门在你的身后关上，你回头面对着[wolfgang.name]和[karl.name]，期待着接下来的行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_SEDUCE_REPEAT"><![CDATA[
 	<p>
-		Happily sitting down in Wolfgang's lap, you lean into his large, muscular torso and tell both him and [karl.name] that you were hoping to have some fun with them again. Letting out a deep, amused grunt, [karl.name] declares from the other side of the table, [karl.speech(You're such a horny slut!)]
+		你兴高采烈地坐到沃尔夫冈的大腿上，靠向他高大、肌肉发达的躯干，告诉他和[karl.name]，你希望能和他们再找点乐子。低沉且被逗乐的咕哝声在[karl.name]喉间滚动着，他忍不住在桌的另一侧说道：[karl.speech(你真是个好色的荡妇！)]
 	</p>
 	<p>
-		[wolfgang.speech(Hungry for another taste of our fat dog-cocks, are you?)] Wolfgang asks, before slipping his paw-like hand down
+		[wolfgang.speech(是不是又想尝尝我们的大狗屌了？)]沃尔夫冈问着你，而他那爪似的手已经滑入了
 		#IF(pc.hasLegs())
-			 between your legs
+			你的腿间
 		#ELSE
-			 to your groin
+			你的腹股沟
 		#ENDIF
-		 and giving you a good grope. Smirking as you let out an erotic gasp, he declares to his companion, [wolfgang.speech(Let's get this slut upstairs and give [pc.herHim] another good, hard fuck!)]
+		，爽捏了你一把。你发出色情的喘息声，沃尔夫冈得意地笑着，向同伴宣布道：[wolfgang.speech(我们把这个骚货带上楼去，再好好地暴操[pc.herHim]一顿！)]
 	</p>
 	<p>
-		[karl.speech(Sounds good to me,)] [karl.name] replies, before standing up and moving over to dominantly give your [pc.breasts+] a rough squeeze.
+		[karl.speech(我觉得不错。)]卡尔回应着站起身，挪到主导位上，粗暴地捏了把你[pc.breasts+]。
 	</p>
 	<p>
-		Feeling just as turned-on as these two dobermann-boys clearly are, you tell them that you don't want to wait a moment longer. Encouraged by your enthusiasm, the two dobermann-boys stand up and lead you over to the staircase on the other side of the tavern. Reaching down to roughly grope your [pc.ass+], [wolfgang.name] grunts, [wolfgang.speech(Come on, slut, let's get you up to the room we're renting. It's the perfect place for you to get fucked!)]
+		你和这两只杜宾一样欲火中烧，告诉它们你一刻也不想等了。受到你热情的鼓舞，两只杜宾站起身，带着你走上酒馆另一侧的楼梯。[wolfgang.name]伸手粗暴地摸索着你[pc.ass+]，解释道，[wolfgang.speech(快点，骚货，去我们租的房间。那是操你的最好地方！)]
 	</p>
 	<p>
-		Letting out an eager [pc.moan], you allow the dobermann-boys to accompany you up the stairs and down the corridor to their room. Being led inside, you see that the interior is just what anybody would expect. Apart from a couple of beds and chests of drawers, there's nothing else in here that draws your attention, and so as the door swings shut behind you, you turn back to face [wolfgang.name] and [karl.name] and wonder how to take things from here...
+		你毫不克制自己饥渴的呻吟声，让这对杜宾领着你上楼，去往他们的房间。进了门，你对里面的布置不感意外，除了一对床和衣柜，没什么吸引人注意的存在。门在你的身后关上，你回头面对着[wolfgang.name]和[karl.name]，期待着他们接下来的行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_LEAVE"><![CDATA[
 	<p>
-		Telling the bounty hunters that you've changed your mind and have other business to attend to, you [pc.step] back and move away from their table...
+		你跟赏金猎人说你改变了主意，有别的事情得去处理，便直接从他们的桌旁走开了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DOBERMANNS_UPSTAIRS -->
 	
 	<htmlContent tag="DOBERMANNS_UPSTAIRS_FUCK_THEM"><![CDATA[
 	<p>
-		Despite the nature of your teasing, you don't want to submit to these two dobermann-boys, and so you switch to a more confident, dominant tone and tell them to get down on all fours and present themselves to you.
+		尽管你挑逗得很自然，但你并不愿屈服于这两只杜宾身下。因此，你换成一种更自信、更具统治力的语气，要他们四肢着地，向你展示自己。
 	</p>
 	<p>
-		Both Wolfgang and Karl let out a menacing growl as you say this, but despite their reaction, their horniness gets the better of them and they reluctantly do as you say. Dropping down onto all fours, the two dobermann-boys shuffle around to present their asses towards you.
+		你的话刚说出口，沃尔夫冈和卡尔都发出了威胁似的咆哮声。尽管他们反应如此，但欲望还是令他们不情愿地按你说的做。两只杜宾四肢着地，争先恐后地把屁股对向你。
 	</p>
 	<p>
-		Dropping down onto your knees behind them, you reach forwards and give each of their behinds a dominant grope, grinning to yourself as they respond by letting out desperate grunts. Shuffling forwards, you can't help but let out an excited [pc.moan] as you prepare to fuck these bounty hunters...
+		你跪在他们身后，强势地伸手捏了两人一把。他们发出极度渴望的哼声，你则露出得意的笑容。当你准备狠操这些赏金猎人时，你情不自禁地呻吟出声……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_SEX_OFFER_ORAL"><![CDATA[
 	<p>
-		Deciding that you'd enjoy using your mouth, you inform the dobermann-boys that you were really hoping to get a good taste of their cocks. This desire of yours proves to be warmly received by the two bounty hunters, who, after getting you to drop down onto your knees, both pull out their huge, throbbing dog-cocks and sit down of the edge of the bed in front of you.
+		你决定享受用嘴的乐趣，便告诉这两只杜宾男，你非常渴望能好好尝尝他们的鸡巴。他们用热情回应来实现你的愿望，在你跪下后，他们都掏出了自己硕大且还在跳动的狗屌，坐在你面前的床沿上。
 	</p>
 	<p>
-		[wolfgang.speech(Got a taste for dog-cum, have you, slut?)] Wolfgang asks, before suddenly grabbing the back of your head and pulling you down into his groin. Opening wide, you take his scarlet-skinned cock into your mouth, and with a muffled, spluttering [pc.moan], you start passionately kissing and sucking on his hot shaft. Grunting in pleasure, the dobermann-boy growls, [wolfgang.speech(Don't forget about Karl! Get started on giving him a handjob, bitch!)]
+		[wolfgang.speech(骚货，你会好好尝尝狗是什么味道的吧？)]沃尔夫冈刚问完，就突然抓住了你的后脑勺，将你拉向了他的腹股沟处。你张大嘴，将他那猩红色的阴茎纳入口中，随着一声低沉、嘶哑的呻吟声，你开始热情地亲吻和吮吸他热烫的阴茎。杜宾男快乐地哼哼着，喉间流露出咆哮声，[wolfgang.speech(别把卡尔忘了！婊子，给他打个飞机吧！)]
 	</p>
 	<p>
-		Doing as you're told, you reach over and start jerking off Karl's huge, knotted dog-cock. Having got exactly what you wanted, you focus on getting these two dobermann-boys to cum for you...
+		你按他说的做，伸手摸到卡尔那硕大带结的狗屌，开始上下撸动。如你期望的那样，你专心投入着，打算让两只杜宾男为你射精……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_SEX_OFFER_SPITROAST"><![CDATA[
 	<p>
-		Deciding that you'd enjoy being penetrated at both ends, you inform the dobermann-boys that you were really hoping to get spit-roasted by them. This desire of yours proves to be warmly received by the two bounty hunters, who quickly push you down onto all fours and pull out their huge, throbbing dog-cocks. Wolfgang then immediately steps around to drop down onto his knees behind you, while Karl similarly sinks down onto the ground in front of your face.
-	</p>
+	你决定体验一番两头同时被插入的感觉，于是你告诉杜宾兄弟，你想跟他们玩玩“串肉串”。这两个赏金猎人一听立刻起了兴致，一下子把你按倒在地，掏出了他们激动地颤抖着的巨大狗屌。沃尔夫冈立刻绕过你身旁，在你身后跪了下来，而卡尔则跪在你面前。
+</p>
 	<p>
-		[wolfgang.speech(Want a good double-stuffing of dog-cum, do you, slut?)] Wolfgang asks, before quickly gaining access to your
-		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 [pc.pussy+] and impatiently spreading your [pc.labia+] with both hands. Grunting in approval at what he sees, the dominant dobermann-boy wastes no further time and immediately thrusts forwards, slamming his hot dog-cock deep into your [pc.pussy+].
-		#ELSE
-			 [pc.asshole+] and impatiently spreading your [pc.assSize] ass cheeks with both hands. Grunting in approval at what he sees, the dominant dobermann-boy wastes no further time and immediately thrusts forwards, slamming his hot dog-cock deep into your [pc.asshole+].
-		#ENDIF
-	</p>
+	[wolfgang.speech(让狗精填满两边，你觉得很爽是不是，骚货？)]沃尔夫冈问完，就立刻摆弄起你
+	#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
+		[pc.pussy+]，迫不及待地用两只手掰开[pc.labia+]。你哼唧一声，也算是同意了，那盛气凌人的杜宾男一秒都没有浪费，挺腰向前，滚烫的狗屌直直顶入了你[pc.pussy+]中。
+	#ELSE
+		[pc.asshole+]，迫不及待地用两只手掰开你[pc.assSize]的屁股。你哼唧一声，也算是同意了，那盛气凌人的杜宾男一秒都没有浪费，挺腰向前，滚烫的狗屌直直顶入了你[pc.asshole+]中。
+	#ENDIF
+</p>
 	<p>
-		The sensation of suddenly being penetrated in such a forceful manner causes you to let out [pc.a_moan+], and as you do so, Karl takes full advantage of your open mouth by shuffling forwards and shoving his own huge dog-cock past your [pc.lips+]. Taking his scarlet-skinned cock into your mouth, you continue to let out a series of muffled, spluttering [pc.moans] as you start passionately kissing and sucking on his hot shaft. Grunting in pleasure, he growls, [karl.speech(That's right, take it deep!)]
-	</p>
+	被如此粗暴插入的感觉让你不禁发出[pc.a_moan+]，卡尔趁你张开嘴巴，向前一挺身子，将巨大的狗屌塞进你[pc.lips+]。你含住他鲜红色的肉棒，口中又是含糊不清的几声[pc.moans]，便开始热切地对着这温热的物体亲吻吮吸起来。他感到后愉悦地低哼了一声，说道，[karl.speech(这就对了，再吃深一点！)]
+</p>
 	<p>
-		Having got exactly what you wanted, you focus on the pleasure of being spit-roasted by these two dobermann-boys, eagerly anticipating the part where they fill each of your ends with their hot dog-cum...
-	</p>
-	]]>
-	</htmlContent>
+	这正是你所想要的，你细细体会着被这两个杜宾“串肉串”的快感，迫切期待着他们用滚烫的狗精液填满你前后各处……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_SEX_OFFER_RIDE"><![CDATA[
 	<p>
-		Deciding that you'd enjoy getting stuffed with their cocks, you inform the dobermann-boys that you were really hoping to ride them. This desire of yours proves to be warmly received by the two bounty hunters, who quickly pull out their huge, throbbing dog-cocks. Wolfgang then immediately lies down on his bed, pulling you down on top of him into the cowgirl position, while Karl sinks down behind you.
-	</p>
+	你很享受被他们的鸡巴塞满的感觉，于是告诉两个杜宾男说你想玩玩骑乘。这两个赏金猎人一听立刻起了兴致，连忙掏出了他们激动地颤抖着的巨大狗屌。沃尔夫冈率先躺到了床上，随后把你拖过去，让你以骑乘位坐了上去，而卡尔则去到了你的背后。
+</p>
 	<p>
-		[wolfgang.speech(Want a good double-stuffing of dog-cum, do you, slut?)] Wolfgang asks, before quickly gaining access to your
-		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 [pc.pussy+] and impatiently spreading your [pc.labia+] with both hands. Grunting in approval at what he sees, the dominant dobermann-boy wastes no further time, and after grabbing hold of your [pc.hips+], forcefully pulls you down and sinks his hot dog-cock deep into your [pc.pussy+].
-		#ELSE
-			 [pc.asshole+] and impatiently spreading your [pc.assSize] ass cheeks with both hands. Grunting in approval, the dominant dobermann-boy wastes no further time, and after grabbing hold of your [pc.hips+], forcefully pulls you down and sinks his hot dog-cock deep into your [pc.asshole+].
-		#ENDIF
-	</p>
+	[wolfgang.speech(让狗精填满两边，你觉得很爽是不是，骚货？)]沃尔夫冈问完，就立刻摆弄起你
+	#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
+		[pc.pussy+]，迫不及待地用两只手掰开[pc.labia+]。你哼唧一声，也算是同意了，盛气凌人的杜宾男一秒都没有浪费，紧紧抓住你[pc.hips+]，用力将你拉坐下来，滚烫的狗屌深深潜入了你[pc.pussy+]中。
+	#ELSE
+	[pc.asshole+]，迫不及待地用两只手掰开你[pc.assSize]的屁股。你哼唧一声，也算是同意了，盛气凌人的杜宾男一秒都没有浪费，紧紧抓住你[pc.hips+]，用力将你拉坐下来，滚烫的狗屌深深潜入了你[pc.asshole+]中。
+	#ENDIF
+</p>
 	<p>
-		#IF(!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			Not wanting to miss out on the fun, Karl shuffles up close behind you, and after giving your [pc.ass+] a good grope, he pushes his cock up against Wolfgang's, and on his companion's next thrust, forces his cock into your asshole. The sensation of having your back-door stuffed full of two huge dog-cocks causes you to let out [pc.a_moan+], which is met by a synchronised pair of deep, amused grunts from the two dobermann-boys. Leaning into your back, Karl dominantly growls, [karl.speech(That's right, bitch, keep moaning like a whore!)]
-		#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			Not wanting to miss out on the fun, Karl shuffles up close behind you, and after giving your [pc.ass+] a good grope, he pushes his cock up against Wolfgang's, and on his companion's next thrust, forces his cock into your [pc.pussy+]. The sensation of having your cunt stuffed full of two huge dog-cocks causes you to let out [pc.a_moan+], which is met by a synchronised pair of deep, amused grunts from the two dobermann-boys. Leaning into your back, Karl dominantly growls, [karl.speech(That's right, bitch, keep moaning like a whore!)]
-		#ELSE
-			Not wanting to miss out on the fun, Karl shuffles up close behind you, and after giving your [pc.ass+] a good grope, he pushes the [karl.cockHead+] of his cock up against your [pc.asshole+]. On his companion's next thrust, he suddenly forces his cock into your asshole, causing you to let out [pc.a_moan+]. Leaning into your back, Karl dominantly growls, [karl.speech(That's right, bitch, keep moaning like a whore!)]
-		#ENDIF
-	</p>
+	#IF(!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
+		卡尔也不愿错过这场好戏，在你身后挪近一点，好好地摸了一把你[pc.ass+]，这才把肉棒拱到沃尔夫冈那根旁边，趁着好兄弟用力捅进的空隙，也把自己的硬塞进了你的屁眼里。后门被两根巨大的狗屌塞满，这无可比拟的感觉让你不禁漏出[pc.a_moan+]，而两个杜宾低沉愉悦的哼声也伴声而起。你爽得向后瘫下去，卡尔顺势恶狠狠地叫起来，[karl.speech(这就对了，母狗，继续浪叫吧，跟个妓女一样！)]
+	#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_ANUS, true))
+		卡尔也不愿错过这场好戏，在你身后挪近一点，给你[pc.ass+]好好地摸了一把，这才把肉棒拱到沃尔夫冈那根旁边，趁着好兄弟用力捅进的空隙，也把自己的硬塞进了你[pc.pussy+]里。蜜穴被两根巨大的狗屌塞满，这无可比拟的感觉让你不禁漏出[pc.a_moan+]，而两个杜宾低沉愉悦的哼声也伴声而起。你爽得向后瘫下去，卡尔顺势恶狠狠地叫起来，[karl.speech(这就对了，母狗，继续浪叫吧，跟个妓女一样！)]
+	#ELSE
+	卡尔也不愿错过这场好戏，在你身后挪近一点，给你[pc.ass+]好好地摸了一把，用[karl.cockHead+]顶住了你[pc.asshole+]。趁着好兄弟用力捅进的空隙，也把自己的硬塞进了你的屁眼里，害得你不禁漏出[pc.a_moan+]。你爽得向后瘫下去，卡尔顺势恶狠狠地叫起来，[karl.speech(这就对了，母狗，继续浪叫吧，跟个妓女一样！)]
+	#ENDIF
+</p>
 	<p>
-		Having got exactly what you wanted, you focus on the pleasure of taking both of the two dobermann-boys' cocks at once, eagerly anticipating the part where they fill you with their hot dog-cum...
-	</p>
-	]]>
-	</htmlContent>
+	这正是你所想要的，你细细体会着被这两个杜宾肉棒同时插入的快感，迫切期待着他们用滚烫的狗精液填满你……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_SEX_OFFER_NIPPLES"><![CDATA[
 	<p>
-		Deciding that you'd like to give the dobermann-boys something a little different, you tell them that you were really hoping to have them fuck your nipples. Glancing at one another for a moment, Wolfgang muses, [wolfgang.speech(I've never fucked someone's nipples before... Sure, why not?)]
-	</p>
+	你想给杜宾兄弟一点不一样的，于是说你很想让他们干你的奶头。两人面面相觑了一会儿，沃尔夫冈思索着开了口，[wolfgang.speech(我之前还没干过别人的奶子呢……不过，有何不可？)]
+</p>
 	<p>
-		Excited to be given the chance to show off what you can do, you quickly slide off the sofa and drop down onto your knees. Pulling out their huge, throbbing dog-cocks, the two dobermann-boys stand up in front of you and hungrily stare at your chest as you expose your [pc.nipples+] and lift your [pc.breasts+] towards them.
-	</p>
+	你顿时来了劲，想好好展示一下你的厉害，于是迅速躺去了沙发上，跪坐下来。两只杜宾男也了激动地颤抖着的巨大狗屌，站到你的面前，饥渴地盯着你的胸部。你将自己[pc.nipples+]露了出来，然后将[pc.breasts+]抬起来对准了他们。
+</p>
 	<p>
-		[wolfgang.speech(Want to get your tits stuffed full of dog-cum then, slut?)] Wolfgang asks, before suddenly grabbing your left breast with both hands and pulling it up towards his groin. Thrusting out your chest, you can't help but let out an excited [pc.moan] as the [wolfgang.cockHead+] of his scarlet-skinned cock teases over your [pc.nipple+]. Grunting in amusement at the noise you've just made, Wolfgang suddenly thrusts forwards, slamming his [wolfgang.cock+] deep into your [pc.breast+(true)].
-	</p>
+	[wolfgang.speech(你个骚货，准备好让奶头被狗精填满了吗？)]沃尔夫冈问完，就突然用双手抓住你左边的乳房，引向自己的下体。你也挺起胸，这时沃尔夫冈用猩红色肉棒[wolfgang.cockHead+]挑逗着你[pc.nipple+]，惹得你不禁兴奋地[pc.moan]起来。沃尔夫冈听到你刚才的娇喘，戏谑地咕哝了一声，便猛地一顶腰，将[wolfgang.cock+]深深撞入了你[pc.breast+(true)]里。
+</p>
 	<p>
-		Following his companion's lead, Karl grabs your right breast, and after taking a moment to experimentally push his paw-like fingers into your fuckable nipple, he lines his cock up to it and thrusts forwards. [pc.Moaning] in delight as the two dobermann-boys fuck your tits, you once again push out your chest and try to focus on getting them to cum for you...
-	</p>
-	]]>
-	</htmlContent>
+	卡尔有了好兄弟带头，便也揪住你右边的奶子，先是用脚爪样子的手指伸进你足以插入的乳头里试探了一下，这才把鸡巴抵在上面，挺身进入了。两个杜宾同时操着你的奶子，你愉悦地[pc.Moaning]着，又一次也挺胸向前，期待着二人在里面射出来……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DOBERMANNS_AFTER_SEX -->
@@ -276,225 +276,225 @@
 	<htmlContent tag="DOBERMANNS_AFTER_SEX"><![CDATA[
 	#IF(sex.isDom(pc))
 		<p>
-			Having had your fun, you disentangle yourself from your two partners and [pc.step] back, allowing [wolfgang.name] and [karl.name] to crawl away and collapse onto their respective beds. Grinning at the dobermann-boys, you get your things in order and thank them for the good time.
+			你爽过之后，从两个性伴侣旁抽身出来，[wolfgang.name]和[karl.name]爬回各自的床上躺下。你对着杜宾兄弟笑了笑，拿好自己的东西，感谢他们能给你这么享受的时光。
 		</p>
 		<p>
-			Each letting out a deep groan, the bounty hunters lie back and catch their breath. As you turn around and head towards the door, you hear [wolfgang.name] pant to [karl.name], [wolfgang.speech(I need a little while to rest after that...)]
+			这两个赏金猎人都只是低哼一声，边躺着喘起气来。你转过身朝着门过去，却听到[wolfgang.name]气喘吁吁地对[karl.name]说，[wolfgang.speech(这段时间我得先休息一下……)]
 		</p>
 	#ELSE
 		<p>
-			Having had his fun, [wolfgang.name] steps back and lights up a cigarette, before grunting, [wolfgang.speech(You're a good fuck, slut!)]
+			[wolfgang.name]爽过之后，走向一旁点起根雪茄，接着咕哝道，[wolfgang.speech(干得太舒服了，骚货！)]
 		</p>
 		<p>
-			[karl.name] likewise steps away from you, and after grabbing a bottle of Canine Crush from under his bed, he takes a big swig of it and then exclaims, [karl.speech(Damn, that was great!)]
+			[karl.name]同样也从你身边挪开，从床下抓起瓶“犬根宝”，咕嘟咕嘟喝了一大口，喊道，[karl.speech(真他妈爽！)]
 		</p>
 		<p>
-			After flashing the dobermann-boys a smile and expressing your own satisfaction in how things turned out, you tell them that you'd better be on your way. Satisfied from the good, hard fuck you've just given them, they sit down on their respective beds, and as you head towards the door, [wolfgang.name] pant to [karl.name], [wolfgang.speech(I need a little while to rest after that...)]
+			你向杜宾兄弟微微一笑，也表达了一下自己同样满足，便说该走了。他们两个也都舒舒服服地跟你做了场爱，分别坐在床上，看着你朝门走去，[wolfgang.name]稍喘着对[karl.name]说，[wolfgang.speech(这段时间我得先休息一下……)]
 		</p>
 	#ENDIF
 	<p>
-		Exiting their room, you let out one last satisfied sigh before heading down the corridor towards the stairs...
+		你离开了他们的房间，最后又是一声满足的叹息，便向着通往楼梯的走廊走去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOBERMANNS_AFTER_SEX_DOWNSTAIRS"><![CDATA[
 	<p>
-		You head back down the narrow staircase to the tavern's ground floor, before wondering what to do next...
+		你走下狭窄的楼梯，回到了酒馆的一楼，思索着接下来该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SEATING -->
 	
 	<htmlContent tag="SEATING"><![CDATA[
 	<p>
-		Around the edge of the tavern there are several recessed seating areas, all of which are currently occupied by groups of rough-looking bounty hunters.
-		#IF(game.getCharactersPresent().contains(silence))
-			 In this particular area, however, you see that one of the recessed seating areas is occupied by the lone, familiar figure of Silence, the albino rat-girl whom you first met serving as one of Vengar's bodyguards. There's no sign of her companion, Shadow, although you're certain that she must be lurking somewhere nearby. You could always head over and say something to the mute rat-girl, or instead simply turn around and head back into the main section of the tavern...
-		#ELSE
-			 As you don't have any business with any of them, there's not much else you can do here but turn around and head back into the main section of the tavern...
-		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+	酒馆的边缘有着几个嵌入式的座位区，目前都被一群面容粗犷的赏金猎人占据着。
+	#IF(game.getCharactersPresent().contains(silence))
+		然而就在这个区域，你注意到某个嵌入座位上坐着一个孤独而熟悉的身影，正是“默”，你第一次见到她时，她还是文加的一名保镖。你敢肯定她的同伴“影”一定潜伏在附近的某个地方，但确实不见踪迹。你可以过去对那个哑巴鼠女说几句话，或者干脆掉头回到酒馆的主区……
+	#ELSE
+		你跟他们没什么关系，也无事可做，还是掉头回到酒馆的主区吧……
+	#ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STAIRS -->
 	
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		At the back of the tavern, a narrow, twisting staircase leads up to the first floor. A wooden sign reading 'Rooms for hire. Ask at bar.' has been fixed to the wall beside this staircase. Unfortunately for anyone looking for accommodation to rent, a paper note has been nailed to the bottom of this sign, which declares there to be 'No vacancies.'
-	</p>
+	在酒馆的深处，有一条狭窄曲折的楼梯通往二楼。楼梯旁的墙上挂着一块木牌，上面写着“房间出租。请向吧台询问”。但对于想要租房的人还有个不幸的消息，这块牌子的下方钉着一张纸条，上面写着“暂无空房”。
+</p>
 	<p>
-		Although you have no business up there, there's nothing to stop you from heading up the stairs and having a look around the first floor of the tavern...
-	</p>
-	]]>
-	</htmlContent>
+	虽然你在这里没什么事可做，但这不影响你走上楼梯看看酒馆二楼有什么……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS_UPSTAIRS"><![CDATA[
 	<p>
-		Deciding that you want to take a look at the tavern's first floor, you travel up the narrow staircase and prepare to explore...
+		你决定上酒馆的二楼瞧一瞧，于是走上了狭窄的楼梯，准备继续探索……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BOUNTY_BOARD -->
 	
 	<htmlContent tag="BOUNTY_BOARD"><![CDATA[
 	<p>
-		Positioned near to the tavern's entrance, a large wooden bounty board has been fixed to the wall, onto which dozens of pieces of paper have been tacked. Standing before this board, you see that most of the bounties have had the seals of one or more groups of bounty hunters imprinted onto them, signalling that there are already people out hunting for the requested fugitive.
-	</p>
+	在酒馆入口附近的墙上，固定着一块巨大的木制悬赏板，上面贴着几十张纸。站在悬赏板前，发现大多数悬赏都印有一个或多个赏金猎人小组的印章，这表明已经有人在追捕要求的逃犯了。
+</p>
 	<p>
-		Looking over the entire board, you see that there are some bounties which haven't yet been claimed. A promising poster fixed to the wall beside this bounty board declares that anyone is able to register as an official bounty hunter at the bar, and you wonder whether that sort of work is something you'd be interested in... 
-	</p>
-	]]>
-	</htmlContent>
+	看遍了整个悬赏板，你发现还有几个悬赏未被领取。悬赏板旁的墙上贴着一张看上去就自感前途无量的海报，上面写着任何人都可以在酒吧注册成为正式的赏金猎人，你思索着自己是否会对这种工作感兴趣……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BAR -->
 	
 	<htmlContent tag="BAR"><![CDATA[
 	<p>
-		The tavern's focal point takes the form of a long, wooden bar, behind which several barmaids and barmen are fulfilling the never-ending orders from the many patrons desperate for another drink. From their slurred, drunken speech and seemingly-unquenchable thirst, you can safely assume that most of the bounty hunters here end up spending a significant portion of their income on alcohol.
-	</p>
+	酒馆的焦点是那个长长的木制吧台，几名男女酒保正在吧台后面，满足着一众满嘴再来一杯的顾客那永无止境的需求。看他们口齿不清、醉酒胡言，却又永远无法止渴的样子，你有把握可以推测，这里大多数的赏金猎人最终都把收入里很大一部分花在了酒上。
+</p>
 	<p>
-		#IF(pc.getRace()==RACE_DEMON)
-			Noticing that you're a demon, the crowd parts to let you [pc.step] up to the bar.
-		#ELSE
-			Although it's not easy, you manage to push your way through the crowd and [pc.step] up to the bar.
-		#ENDIF
-		 While the menu hung up on the wall lists several different types of alcoholic beverage, the only item of food on offer is a bag of bar nuts. As you wonder whether to order something or not, you can't help but notice the fact that there's a rusty old slave collar hung up on the wall behind the bar, which you assume must be the tavern's namesake.
-	</p>
+	#IF(pc.getRace()==RACE_DEMON)
+		人群注意到来者是个恶魔，顿时让到两边，让你可以直接去到吧台。
+	#ELSE
+		虽然很不容易，但你还是推挤过人群，到了吧台边。
+	#ENDIF
+	虽然挂在墙上的菜单上列出了几种不同的酒精饮料，但唯一提供的食物只有一袋下酒坚果。就在你犹豫要不要点些什么的时候，忽然注意到吧台后面的墙上挂着一个锈迹斑斑的旧奴隶项圈，你猜想这一定就是酒馆名字的来源
+</p>
 	<p>
-		Noticing you standing there, a rabbit-boy barman steps forwards and asks, [style.speechMasculine(So, what can I get for you?)]
-	</p>
-	]]>
-	</htmlContent>
+	一个兔男酒保看到你来了，于是上前问道，[style.speechMasculine(能为你做什么吗？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_NUTS"><![CDATA[
 	<p>
-		Placing an order for one bag of bar nuts, you hand over the [#SPECIAL_PARSE_0] flames asked of you, before receiving the small bag of [#SPECIAL_PARSE_1]. Opening the pack, you quickly munch down the contents, before wondering whether or not to order a drink to help wash them down...
+		你点了一包下酒的坚果，然后递出了要付的[#SPECIAL_PARSE_0]火币，然后就拿到了那一小袋[#SPECIAL_PARSE_1]。你打开包装，丢进嘴里嚼了起来，心想是否要点个饮料送一送……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_BEER"><![CDATA[
 	<p>
-		Placing an order for a bottle of beer, you hand over the [#SPECIAL_PARSE_0] flames asked of you, before receiving the bottle of [#SPECIAL_PARSE_1]. After the barman's popped off the cap and placed it down on the bar, you quickly lift the bottle to your waiting [pc.lips], before tilting your head back and drinking all of its delicious contents...
+		你点了一瓶啤酒，然后递出了要付的[#SPECIAL_PARSE_0]火币，然后就拿到了那瓶[#SPECIAL_PARSE_1]。酒保起开瓶盖后便放在了吧台上，你迅速把酒端到等待许久的[pc.lips]边，仰起头饮尽了其中的美酒……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_CIDER"><![CDATA[
 	<p>
-		Placing an order for a bottle of cider, you hand over the [#SPECIAL_PARSE_0] flames asked of you, before receiving the bottle of [#SPECIAL_PARSE_1]. After the barman's popped off the cap and placed it down on the bar, you quickly lift the bottle to your waiting [pc.lips], before tilting your head back and drinking all of its delicious contents...
+		你点了一瓶苹果酒，然后递出了要付的[#SPECIAL_PARSE_0]火币，然后就拿到了那瓶[#SPECIAL_PARSE_1]。酒保起开瓶盖后便放在了吧台上，你迅速把酒端到等待许久的[pc.lips]边，仰起头饮尽了其中的美酒……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_VODKA"><![CDATA[
 	<p>
-		Placing an order for a glass of vodka, you hand over the [#SPECIAL_PARSE_0] flames asked of you. After the barman's placed a glass down on the bar and filled it with [#SPECIAL_PARSE_1], you quickly lift your drink to your waiting [pc.lips], before tilting your head back and downing it in one large gulp...
+		你点了杯伏特加，然后递出了要付的[#SPECIAL_PARSE_0]火币。酒保把杯子放在吧台上，倒满[#SPECIAL_PARSE_1]后，你迅速把酒端到等待许久的唇边，仰起头大口地喝了下去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_WHISKEY"><![CDATA[
 	<p>
-		Placing an order for a glass of whiskey, you hand over the [#SPECIAL_PARSE_0] flames asked of you. After the barman's placed a glass down on the bar and filled it with [#SPECIAL_PARSE_1], you quickly lift your drink to your waiting [pc.lips], before tilting your head back and downing it in one large gulp...
+		你点了杯威士忌，然后递出了要付的[#SPECIAL_PARSE_0]火币。酒保把杯子放在吧台上，倒满[#SPECIAL_PARSE_1]后，你迅速把酒端到等待许久的唇边，仰起头大口地喝了下去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_RUM"><![CDATA[
 	<p>
-		Placing an order for a glass of rum, you hand over the [#SPECIAL_PARSE_0] flames asked of you. After the barman's placed a glass down on the bar and filled it with [#SPECIAL_PARSE_1], you quickly lift your drink to your waiting [pc.lips], before tilting your head back and downing it in one large gulp...
+		你点了杯朗姆酒，然后递出了要付的[#SPECIAL_PARSE_0]火币。酒保把杯子放在吧台上，倒满[#SPECIAL_PARSE_1]后，你迅速把酒端到等待许久的唇边，仰起头大口地喝了下去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- UPSTAIRS_CORRIDOR -->
 	
 	<htmlContent tag="UPSTAIRS_CORRIDOR"><![CDATA[
 	<p>
-		Old, wooden floorboards creak underfoot as you [pc.walk] down the narrow, twisting corridor which links the rooms of the tavern's first floor. Although there are numerous arcane candles attached to the walls, their flickering light does little to illuminate the dark, wooden wall panels, giving this passageway a gloomy, creepy atmosphere.
+		你走在狭窄曲折的走廊里，脚下的旧木地板发出咯吱咯吱的响声，这处走廊连接着酒馆一层各个房间。虽然墙上挂着许多奥术蜡烛，但它们闪烁的光亮却难以照亮漆黑的木质墙板，只给这条走廊增添了阴森恐怖的氛围。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- UPSTAIRS_STAIRS -->
 	
 	<htmlContent tag="UPSTAIRS_STAIRS"><![CDATA[
 	<p>
-		Finding yourself at the top of the narrow, twisting staircase, you wonder whether you should make use of it and travel back down to the ground floor, or instead set out to explore the tavern's first floor...
+		你站在狭窄曲折的楼梯顶端，不知道是该顺着楼梯回底层，还是开始探索酒馆的一层……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="UPSTAIRS_STAIRS_DOWNSTAIRS"><![CDATA[
 	<p>
-		Wanting to head back down to the tavern's ground floor, you descend the narrow staircase...
+		你想要回到酒馆的一楼，便沿着狭窄的楼梯下了楼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- UPSTAIRS_ROOM -->
 	
 	<htmlContent tag="UPSTAIRS_ROOM"><![CDATA[
 	<p>
-		The wooden door before you, like all of the others up here on the tavern's first floor, has sign on it which declares the room to be occupied. With no reason to disturb the occupants, there's nothing for you to do here except turn around and head back down the corridor...
+		你面前的这扇木门和酒馆一楼的其他木门一样，上面都挂着房间已占用的牌子。没理由打扰住户，在这也无事可做，你只能沿着走廊往回走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- UPSTAIRS_ROOM_ANGELIXX -->
 	
 	<htmlContent tag="UPSTAIRS_ROOM_ANGELIXX"><![CDATA[
 	<p>
-		The wooden door before you, like all of the others up here on the tavern's first floor, has sign on it which declares the room to be occupied. At this bottom of this sign, the name 'Angelixx' has been written in pink marker pen, and around it the succubus has drawn a series of hearts and kisses.
+		你面前的这扇木门，跟酒馆二楼的其他门一样，挂着块牌子，标明该已被占用。牌子底下用粉色马克笔写着‘安吉莉克丝’这名字，周围还画了一堆爱心和飞吻，一看就知道是这个魅魔的手笔。
 	</p>
 	<p>
 		#IF(game.getCharactersPresent().contains(angelixx))
-			At this time of day, Angelixx should be in her room, so if you wanted to talk to her, all you'd need to do is knock on her door...
+			每天的这个时候，安吉莉克丝应该在她的房间里，所以只要你想和她说话，你只需要敲她的门……
 		#ELSE
-			At this time, Angelixx and her sons are out somewhere in Dominion, either partying or hunting for people to turn into new dolls. As such, if you wanted to talk to her, you'll have to come back here at another time...
+			这个时候，安吉莉克丝和她的儿子应该在御城区，要么参加派对，要么抓人变成新的玩偶。因此，如果你想和她说话，你得另找时间再来……
 		#ENDIF
 	</p>
 	#IF(!game.getCharactersPresent().contains(angelixx))
 		<p style='text-align:center;'>
-			[style.italicsMinorBad(Angelixx is present here between [units.time(16)]-[units.time(8)])]
+			[style.italicsMinorBad(安吉莉克丝只有在[units.time(16)]-[units.time(8)]间才会在这里)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- UPSTAIRS_ROOM_SLEIP_NIR -->
 	
 	<htmlContent tag="UPSTAIRS_ROOM_SLEIP_NIR"><![CDATA[
 	<p>
-		The wooden door before you, like all of the others up here on the tavern's first floor, has sign on it which declares the room to be occupied. At this bottom of this sign, the initials 'S & N', which you know refers to 'Sleip & Nir', have been printed in black marker pen, and beneath this the words 'Fuck off' have been scrawled.
+		你面前的这扇木门，和酒馆二楼的其他门一样，挂着块牌子，标明该已被占用。牌子底部用黑色记号笔写着‘S & N’，你知道这是‘斯雷普和尼尔’的缩写。在名字缩写下面，潦草地写着“滚开”两个字。
 	</p>
 	<p>
 		#IF(game.getCharactersPresent().contains(sleip))
-			At this time of day, the nightmares should be in their room, so if you wanted to talk to them, all you'd need to do is knock on their door...
+			每天的这个时候，梦魇们应该在房间里，所以只要你想和他们说话，你只需要敲敲门……
 		#ELSE
-			At this time, the nightmares and their mother are out somewhere in Dominion, either partying or hunting for people to turn into new dolls. As such, if you wanted to talk to them, you'll have to come back here at another time...
+			这个时候，梦魇和他们的母亲应该在御城区，要么参加派对，要么抓人变成新的玩偶。因此，如果你想和他们说话，你得另找时间再来……
 		#ENDIF
 	</p>
 	#IF(!game.getCharactersPresent().contains(sleip))
 		<p style='text-align:center;'>
-			[style.italicsMinorBad(Sleip and Nir are present here between [units.time(16)]-[units.time(8)])]
+			[style.italicsMinorBad(斯雷普和尼尔只有在[units.time(16)]-[units.time(8)]间才会在这里)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

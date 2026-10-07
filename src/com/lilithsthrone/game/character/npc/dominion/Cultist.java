@@ -111,8 +111,8 @@ public class Cultist extends NPC {
 			
 			setName(Name.getRandomTriplet(Subspecies.DEMON));
 			this.setPlayerKnowsName(true);
-			setDescription("As a high-ranking member of the 'Cult of Lilith', it's obvious to anyone that this demon is extremely powerful."
-					+ " You aren't exactly 'anyone', however, and as you get close to her, you can almost physically feel the power of her arcane aura as it comes into contact with yours...");
+			setDescription("“莉莉丝异教”的高阶成员，正常人都看得出来这是个强大的恶魔。"
+					+ "但你可不是“正常人”，你靠近她之后，几乎能用身体感受到其奥术灵气的力量，正在与你的灵气纠缠在一起……");
 			
 			// Set random inventory & weapons:
 			resetInventory(true);
@@ -321,7 +321,7 @@ public class Cultist extends NPC {
 	
 	@Override
 	public String getLostVirginityDescriptor() {
-		return "in her chapel";
+		return "于她的小教堂中";
 	}
 
 	@Override
@@ -333,18 +333,18 @@ public class Cultist extends NPC {
 					return new Value<>(true,
 							"<p>"
 								+ UtilText.parse(user, target,
-									"Holding out a '[#ITEM_innoxia_pills_sterility.getName(false)]' to [npc2.name], you tell [npc2.herHim] to swallow it so that you don't have to worry about any unexpected pregnancies."
-									+ " [npc2.She] lets out an angry huff, but as [npc2.sheIs] in no position to refuse, [npc2.she] reluctantly does as you ask,"
-									+ " [npc2.speech(This is an insult to Lilith herself...)]")
+									"你拿出一片“[#ITEM_innoxia_pills_sterility.getName(false)]”给[npc2.name]，告诉[npc2.herHim]吃下去之后就不用担心意外怀孕了。"
+									+ "[npc2.She]气呼呼地哼了一声，但又无法拒绝，只得不情愿地照做了，"
+									+ "[npc2.speech(这简直是对莉莉丝本人的侮辱……)]")
 							+ "</p>");
 				} else {
 					itemOwner.removeItemByType(ItemType.getItemTypeFromId("innoxia_pills_sterility"));
 					return new Value<>(true,
 							"<p>"
 								+ UtilText.parse(user, target,
-									"Holding out a '[#ITEM_innoxia_pills_sterility.getName(false)]' to [npc2.name], you ask [npc2.herHim] to swallow it so that you don't have to worry about any unexpected pregnancies."
-									+ " With an angry huff, [npc2.she] slaps the pill out of your hand,"
-									+ " [npc2.speech(How dare you! Lilith demands that her followers' seed remain strong!)]")
+									"你拿出一片“[#ITEM_innoxia_pills_sterility.getName(false)]”给[npc2.name]，让[npc2.herHim]吃下去，之后就不用担心意外怀孕了。"
+									+ "[npc2.she]气呼呼地哼了一声，一把拍掉了你手上的药片，"
+									+ "[npc2.speech(你真是大胆！莉莉丝要求其追随者子种精壮！)]")
 							+ "</p>");
 				}
 					
@@ -354,18 +354,18 @@ public class Cultist extends NPC {
 					return new Value<>(true,
 							"<p>"
 								+ UtilText.parse(user, target,
-									"Holding out a "+item.getName(false, false)+" to [npc2.name], you tell [npc2.herHim] to swallow it."
-									+ " [npc2.She] lets out a delighted cry, and eagerly swallows the little "+item.getColour(0).getName()+" pill,"
-									+ " [npc2.speech(Thank you! Being as fertile as possible is one of the best ways in which to worship Lilith!)]")
+									"你拿出"+item.getName(false, false)+"给[npc2.name]，告诉[npc2.herHim]吃下去。"
+									+ "[npc2.She]乐得大叫起来，连忙吃下了那小小的"+item.getColour(0).getName()+"药片，"
+									+ "[npc2.speech(太感谢了！让生育力旺盛可以说是敬奉莉莉丝最好的一种办法！)]")
 							+ "</p>");
 					
 				} else {
 					return new Value<>(true,
 							"<p>"
 								+ UtilText.parse(user, target,
-									"Holding out a "+item.getName(false, false)+" to [npc2.name], you ask [npc2.herHim] to swallow it."
-									+ " [npc2.She] lets out a delighted cry, and eagerly swallows the little "+item.getColour(0).getName()+" pill,"
-									+ " [npc2.speech(Good toy! Being as fertile as possible is one of the best ways in which to worship Lilith!)]")
+									"你拿出"+item.getName(false, false)+"给[npc2.name]，让[npc2.herHim]吃下去。"
+									+ "[npc2.She]乐得大叫起来，连忙吃下了那小小的"+item.getColour(0).getName()+"药片，"
+									+ "[npc2.speech(多好的玩具！让生育力旺盛可以说是敬奉莉莉丝最好的一种办法！)]")
 							+ "</p>");
 				}
 			}
@@ -377,9 +377,9 @@ public class Cultist extends NPC {
 		return "<p>"
 				+UtilText.parse(this,
 					UtilText.returnStringAtRandom(
-							"[npc.Name] swirls her broomstick around in a mesmerising pattern, before thrusting it at you and casting a spell!",
-							"[npc.Name] places her broomstick between her legs, and, thrusting her hips forwards, she lets out an incredibly lewd moan as she casts a spell!",
-							"[npc.Name] thrusts her broomstick out into mid-air five times, before letting out a desperate moan and casting a spell!"))
+							"[npc.Name]以一种迷人的方式挥舞着扫帚，随后向你捅过来，同时释放了一道魔法！",
+							"[npc.Name]将扫帚放到两腿之间，随后一挺腰，一段格外下流的呻吟便从口中发出，同时法术也释放了出来！",
+							"[npc.Name]连续五次将扫帚刺向半空中，随后发出一声渴望的呻吟，释放了法术！"))
 			+"</p>";
 	}
 	
@@ -387,9 +387,9 @@ public class Cultist extends NPC {
 		return "<p>"
 				+UtilText.parse(this,
 					UtilText.returnStringAtRandom(
-							"[npc.Name] puts on a smouldering look, and as her eyes meet yours, you hear an extremely lewd moan echoing around in your head, [npc.thought(~Aaah!~ You're making me so wet!)]",
-							"[npc.Name] locks her big, innocent-looking eyes with yours, and as she pouts, you hear an echoing moan deep within your mind, [npc.thought(~Mmm!~ Fuck me! ~Aaa!~ My pussy's wet and ready for you!)]",
-							"[npc.Name] pouts innocently at you, before blowing you a wet kiss. As she straightens back up, you feel a ghostly pair of wet lips press against your cheek."))
+							"[npc.Name]露出一副积欲已久的表情，当你们四目相对时，你听见一声格外淫荡的呻吟，在脑内回响，[npc.thought(~啊啊啊！~你让我都湿透了！)]",
+							"[npc.Name]嘟起嘴，用无辜的大眼睛紧盯着你看，你忽然感到意识深处响起回荡的呻吟声，[npc.thought(~姆嗯！~来干我啊！~啊啊！~我下面都湿好了，就等你来！)]",
+							"[npc.Name]无辜地向你嘟起了嘴，接着便远远地送上了一记湿吻。随后她挺直身子，你却感到一对湿润的嘴唇的感觉鬼使神差地贴在了脸颊上。"))
 				+"</p>";
 	}
 
@@ -456,9 +456,9 @@ public class Cultist extends NPC {
 				}
 				return UtilText.parse(target,
 						"<p>"
-							+ "Holding out a condom to [npc.name], you force [npc.herHim] to take it and put it on."
-							+ " Quickly ripping it out of its little foil wrapper, [npc.she] rolls it down the length of [npc.her] [npc.cock+] as [npc.she] whines at you,"
-							+ " [npc.speech(This is an insult to Lilith...)]"
+							+ "你递给[npc.name]一个避孕套，必须要[npc.herHim]戴上。"
+							+ "[npc.she]迅速撕开了铝箔包装，卷着将避孕套完整地戴在了[npc.cock+]上，随后向你呜咽道，"
+							+ "[npc.speech(这简直是对莉莉丝的侮辱……)]"
 						+ "</p>");
 			} else if (!target.isPlayer()){
 				AbstractClothing clothing = target.getClothingInSlot(InventorySlot.PENIS);
@@ -468,13 +468,13 @@ public class Cultist extends NPC {
 				}
 				if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 					return UtilText.parse(equipper, target,
-							"[npc.Name] [npc.verb(direct)] [npc.her] spinneret at [npc2.namePos] [npc2.cock], but, sensing what [npc.sheIs] about to do, [npc2.name] [npc2.verb(slap)] it away and [npc2.verb(growl)],"
-							+ " [npc2.speech(I don't think so! You're going to take my seed, and you're going to love it!)]");
+							"[npc.Name]将[npc.her]的丝囊对准了[npc2.namePos]的[npc2.cock]，但当[npc2.name]意识到[npc.sheIs]的意图后，立刻将其拍开，低声吼叫着，"
+							+ "[npc2.speech(我可不想这么玩！收下我的种子，你肯定会喜欢的！)]");
 				}
 				return UtilText.parse(target,
 						"<p>"
-							+ "You pull out a condom and try to give it to [npc.name], but she simply laughs in your face as [npc.she] grabs the little foil packet and tears it in two,"
-							+ " [npc.speech(I don't think so! You're going to take my seed, and you're going to love it!)]"
+							+ "你拿出一个避孕套想交给[npc.name]，但[npc.she]却只轻笑一声，便把那铝箔包装袋抢了过来，撕成了两半，"
+							+ "[npc.speech(我可不想这么玩！收下我的种子，你肯定会喜欢的！)]"
 						+ "</p>");
 			}
 		}

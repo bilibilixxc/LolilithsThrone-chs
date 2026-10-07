@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>60</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Equine Cider]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Equine Ciders]]></namePlural>
-		<description><![CDATA[The thick glass bottle of 'Equine Cider' appears to contain, much as its name would suggest, a generous helping of some sort of alcoholic cider. On the label, there's an incredibly lewd illustration of a horse-boy slamming his massive cock deep into a girl's eager pussy.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[马果酒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[马果酒]]></namePlural>
+		<description><![CDATA[厚厚的玻璃瓶装的 "马果酒 "，看起来就像它的名字一样，里面装着大量的果酒。在标签上，有一幅令人难以置信的淫秽插图，画的是一个马男将他那硕大的鸡巴深深地插入一个女孩渴望的阴道。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 8% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]8%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 			[#npc.incrementAlcoholLevel(0.08)]
@@ -55,10 +55,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the cap off the bottle of Equine Cider, before tilting [npc.her] head back and gulping down the golden liquid. Quickly finishing off the entire bottle, [npc.name] [npc.verb(notice)] a faint, musky dryness permeating through the sweet liquid, which lingers for some time as a slightly unpleasant aftertaste.
+		[npc.Name]起开了马果酒瓶的瓶盖，然后把头仰得很高，开始喝下那金黄色的液体，并且很快就把整瓶酒喝完了，[npc.name]注意到一股微弱的浓厚的干燥感弥漫在甜美的液体中，而且作为稍微不愉快的余味，这种感觉在口中停留了一段时间。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the cap off the bottle of Equine Cider, before bringing it up to [npc2.namePos] [npc2.lips] and making [npc2.herHim] gulp down the golden liquid. Quickly finishing off the entire bottle, [npc2.name] [npc2.verb(notice)] a faint, musky dryness permeating through the sweet liquid, which lingers for some time as a slightly unpleasant aftertaste.
+		[npc.Name]起开了马果酒瓶的瓶盖，然后把它递到[npc2.namePos][npc2.lips]前，让[npc2.herHim]喝那金黄色的液体。很快就把整瓶酒喝完，[npc2.name]注意到一股微弱的浓重的干燥感弥漫在甜美的液体中，而且作为稍微不愉快的余味，这种感觉在口中停留了一段时间。
 		]]></otherUse>
 	</useDescriptions>
 

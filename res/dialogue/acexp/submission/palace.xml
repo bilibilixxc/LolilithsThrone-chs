@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
     <!-- Elizabeth encounter: -->
 
-    <scene id ="elizabeth">
+    <scene id="elizabeth">
         <author><![CDATA[AceXp]]></author>
         <content folderPath="txt/acexp/submission/elizabeth">INTRO</content>
         <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -12,12 +12,12 @@
             <response>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Enter room]]></responseTitle>
+                <responseTitle><![CDATA[进入房间]]></responseTitle>
                 <responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_acexp_elizabeth_introduced))
-						Approach Elizabeth and greet her.
+						靠近伊丽莎白并向她致意。
 					#ELSE
-						Enter the room and find out who's playing the piano.
+						进入房间看看是谁在弹钢琴。
 					#ENDIF
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[acexp_submission_palace_music]]></nextDialogue>
@@ -29,9 +29,9 @@
                 <availabilityConditional/>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[0]]></index>
-                <responseTitle><![CDATA[Continue]]></responseTitle>
+                <responseTitle><![CDATA[继续]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Decide against entering the room and instead continue on your way through the palace.
+					决定不进入房间，而是继续穿过宫殿。
                 ]]></responseTooltip>
                 <nextDialogue defaultPlaceType="LYSSIETH_PALACE_CORRIDOR"/>
                 <effects><![CDATA[
@@ -46,7 +46,7 @@
         </responses>
     </scene>
 
-    <scene id ="music">
+    <scene id="music">
         <author><![CDATA[AceXp]]></author>
         <preParsingEffects><![CDATA[
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/acexp/submission/elizabeth', 'MUSIC'))]
@@ -65,22 +65,22 @@
                 <availabilityConditional/>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Talk]]></responseTitle>
+                <responseTitle><![CDATA[交谈]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Talk with Elizabeth about her role as a palace guard for a while.
-					<br/><i>Elizabeth will be impressed if you have
+                    和伊丽莎白聊一会她担任王宫守卫的经历。
+					<br/><i>如果你有
 					#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE)>=50)
-						 [style.italicsGood(a high physique)]
+						[style.italicsGood(一副好身体)]
 					#ELSE
-						 [style.italicsBad(a high physique)]
+						[style.italicsBad(一副好身体)]
 					#ENDIF
-					 or if you were
+					或者在之前的世界里是
 					#IF(pc.hasTraitActivated(PERK_JOB_SOLDIER))
-						 [style.italicsGood(a soldier)]
+						[style.italicsGood(一名士兵)]
 					#ELSE
-						 [style.italicsBad(a soldier)]
+						[style.italicsBad((一名士兵)]
 					#ENDIF
-					 in your old world.</i>
+					的话你会给伊丽莎白留下深刻的印象。</i>
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[acexp_submission_palace_interact]]></nextDialogue>
                 <effects><![CDATA[
@@ -99,22 +99,22 @@
                 <availabilityConditional/>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[2]]></index>
-                <responseTitle><![CDATA[Compliment]]></responseTitle>
+                <responseTitle><![CDATA[赞美]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Compliment Elizabeth on her proficiency at playing the piano.
-					<br/><i>Elizabeth will be impressed if you are
+                    称赞伊丽莎白的钢琴技艺。
+					<br/><i>如果你
 					#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_ARCANE)>=50)
-						 [style.italicsGood(proficient with the arcane)]
+						[style.italicsGood(精通奥术)]
 					#ELSE
-						 [style.italicsBad(proficient with the arcane)]
+						[style.italicsBad(精通奥术)]
 					#ENDIF
-					 or if you were
+					或者在之前的世界里是
 					#IF(pc.hasTraitActivated(PERK_JOB_MUSICIAN))
-						 [style.italicsGood(a musician)]
+						[style.italicsGood(一位钢琴家)]
 					#ELSE
-						 [style.italicsBad(a musician)]
+						[style.italicsBad(一位钢琴家)]
 					#ENDIF
-					 in your old world.</i>
+					的话你会给伊丽莎白留下深刻的印象。</i>
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[acexp_submission_palace_interact]]></nextDialogue>
                 <effects><![CDATA[
@@ -133,22 +133,22 @@
                 <availabilityConditional/>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[3]]></index>
-                <responseTitle><![CDATA[Flirt]]></responseTitle>
+                <responseTitle><![CDATA[调情]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Flirt with Elizabeth.
-					<br/><i>Elizabeth will be impressed if you have
+                    与伊丽莎白调情。
+					<br/><i>如果你
 					#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_CORRUPTION)>=50)
-						 [style.italicsGood(a high corruption)]
+						[style.italicsGood(高度堕落)]
 					#ELSE
-						 [style.italicsBad(a high corruption)]
+						[style.italicsBad(高度堕落)]
 					#ENDIF
-					 or if you were
+					或者在之前的世界里是
 					#IF(pc.hasTraitActivated(PERK_JOB_ARISTOCRAT))
-						 [style.italicsGood(an aristocrat)]
+						[style.italicsGood(一位贵族)]
 					#ELSE
-						 [style.italicsBad(an aristocrat)]
+						[style.italicsBad(一位贵族)]
 					#ENDIF
-					 in your old world.</i>
+					的话你会给伊丽莎白留下深刻的印象。</i>
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[acexp_submission_palace_interact]]></nextDialogue>
                 <effects><![CDATA[
@@ -167,21 +167,21 @@
                 <availabilityConditional/>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[0]]></index>
-                <responseTitle><![CDATA[Leave]]></responseTitle>
+                <responseTitle><![CDATA[离开]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Tell Elizabeth that you'd better be going.
+                    告诉伊丽莎白你得走了。
                 ]]></responseTooltip>
                 <nextDialogue defaultPlaceType="LYSSIETH_PALACE_CORRIDOR"/>
                 <effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/acexp/submission/elizabeth', 'MUSIC_EXIT'))]
                    	[#pc.setNearestLocation(PLACE_TYPE_LYSSIETH_PALACE_CORRIDOR)]
-		        	[#elizabeth.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
+			[#elizabeth.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
 				]]></effects>
             </response>
         </responses>
     </scene>
 
-    <scene id ="interact">
+    <scene id="interact">
         <author><![CDATA[AceXp]]></author>
         <content/>
         <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -195,9 +195,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Sex]]></responseTitle>
+                <responseTitle><![CDATA[做爱]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Take Elizabeth up on her offer.
+                    接受伊丽莎白的提议。
                 ]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
@@ -239,9 +239,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Sex]]></responseTitle>
+                <responseTitle><![CDATA[做爱]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Take Elizabeth up on her offer.
+                    接受伊丽莎白的提议。
                 ]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
@@ -283,9 +283,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Sex]]></responseTitle>
+                <responseTitle><![CDATA[做爱]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Take Elizabeth up on her offer.
+                    接受伊丽莎白的提议。
                 ]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
@@ -328,9 +328,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Sex]]></responseTitle>
+                <responseTitle><![CDATA[做爱]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    You're going to have to do better than that to get Elizabeth to want to have sex with you...
+                    要挑起伊丽莎白与你做爱的兴趣，你需要做得比这更好……
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[null]]></nextDialogue>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
@@ -340,24 +340,24 @@
                 <availabilityConditional/>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[2]]></index>
-                <responseTitle><![CDATA[Leave]]></responseTitle>
+                <responseTitle><![CDATA[离开]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Say goodbye to Elizabeth and take your leave.
+                    与伊丽莎白说再见并离开。
                 ]]></responseTooltip>
                 <nextDialogue defaultPlaceType="LYSSIETH_PALACE_CORRIDOR"/>
                 <effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/acexp/submission/elizabeth', 'INTERACTION_EXIT'))]
                    	[#pc.setNearestLocation(PLACE_TYPE_LYSSIETH_PALACE_CORRIDOR)]
-		        	[#elizabeth.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
+			[#elizabeth.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
 				]]></effects>
             </response>
         </responses>
     </scene>
 
-    <scene id ="after_sex">
+    <scene id="after_sex">
         <author><![CDATA[AceXp]]></author>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Say goodbye and prepare to move on...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[说再见并准备离开……]]></tooltip>
         <content folderPath="txt/acexp/submission/elizabeth">AFTER_SEX</content>
         <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
         <continuesDialogue>false</continuesDialogue>
@@ -367,16 +367,16 @@
                 <availabilityConditional/>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Leave]]></responseTitle>
+                <responseTitle><![CDATA[离开]]></responseTitle>
                 <responseTooltip><![CDATA[
-                    Say goodbye to Elizabeth and take your leave.
+                    与伊丽莎白说再见并离开。
                 ]]></responseTooltip>
                 <nextDialogue defaultPlaceType="LYSSIETH_PALACE_CORRIDOR"/>
                 <effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/acexp/submission/elizabeth', 'AFTER_SEX_EXIT'))]
 					[#elizabeth.applyWash(true, true, null, 0)]
                    	[#pc.setNearestLocation(PLACE_TYPE_LYSSIETH_PALACE_CORRIDOR)]
-		        	[#elizabeth.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
+			[#elizabeth.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
 				]]></effects>
             </response>
         </responses>

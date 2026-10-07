@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[true]]></actionConditional>
@@ -31,9 +31,9 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Cock worshipped]]></title>
+	<title><![CDATA[被阴茎侍奉]]></title>
 	<tooltip><![CDATA[
-		Make [pc.name] and Meraxis worship your [shiranui.cock+].
+		让[pc.name]和梅拉克西丝侍奉你的[shiranui.cock+]。
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -41,13 +41,13 @@
 				[#flags.hasFlag(FLAG_innoxia_shiranui_sex_cock_worship)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Shiranui continues to slide her [shiranui.cock+] forwards and back between your and Meraxis's lips, moaning in delight as the two of you worship her throbbing shaft.
+				不知火继续在你和梅拉克西丝唇间前后抽送[shiranui.cock+]。你们两人侍奉着那根阵阵搏动的阴茎，惹得[shiranui.she]欢愉地呻吟出声。
 			]]></text>
 			<text><![CDATA[
-				Shiranui lets out [shiranui.a_moan+] as you and Meraxis continue to kiss and orally worship the sides of her [shiranui.cock+].
+				你和梅拉克西丝继续亲吻、吮弄着不知火[shiranui.cock+]两侧，引得不知火发出[shiranui.a_moan+]。
 			]]></text>
 			<text><![CDATA[
-				With [shiranui.a_moan+], Shiranui slides her [shiranui.cock+] forwards and back between your and Meraxis's lips.
+				不知火[shiranui.a_moan+]，将[shiranui.cock+]在你和梅拉克西丝的双唇间来回抽送。
 			]]></text>
 		</description>
 		<description>
@@ -55,32 +55,30 @@
 				[#flags.hasFlag(FLAG_innoxia_shiranui_sex_kissing)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				[shiranui.speech(Enough kissing, sluts!)] Shiranui giggles, before pushing her [shiranui.cock+] forwards between your and Meraxis's lips.
+				[shiranui.speech(亲够了吧，小骚货们！)]不知火吃吃娇笑起来，把[shiranui.cock+]往前一送，顶入你和梅拉克西丝相贴的双唇之间。
 			]]></text>
 			<text><![CDATA[
-				Deciding that you've spent long enough kissing one another, Shiranui pushes her [shiranui.cock+] in between your and Meraxis's lips, forcing the two of you to kiss and orally worship the sides of her shaft.
-			]]></text>
+				不知火觉得你们俩亲得够久了，便把[shiranui.cock+]挤进你和梅拉克西丝的双唇之间，逼你们俩亲吻并口舌侍奉她阴茎的两侧。]]></text>
 		</description>
 		<description>
 			<descriptionConditional><![CDATA[
 				[#!flags.hasFlag(FLAG_innoxia_shiranui_sex_cock_worship) && sex.getPrimaryOngoingActionPerformer(shiranui, PENETRATION_PENIS).isPlayer()]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				[shiranui.speech(I think that Meraxis wants to play too,)] Shiranui giggles, before pulling her [shiranui.cock+] out of your mouth with a wet pop. The bindings turn your head to one side so that you and Meraxis are kissing one another again, and then Shiranui pushes her [shiranui.cock+] between the two of you, forcing you to both kiss and orally worship the sides of her shaft.
-			]]></text>
+				[shiranui.speech(我想梅拉克西丝也想来玩玩，)]不知火咯咯笑着，噗的一声从你嘴里抽出[shiranui.cock+]。皮革绑带把你的头扭向一边，让你和梅拉克西丝又吻在一处，接着不知火把[shiranui.cock+]挤进你俩中间，逼得你们一边接吻，一边用嘴侍奉她阴茎的两侧。
+				]]></text>
 			<text><![CDATA[
-				[shiranui.speech(Meraxis can join in on the fun,)] Shiranui giggles, before pulling her [shiranui.cock+] out of your mouth with a wet pop. The bindings turn your head to one side so that you and Meraxis are kissing one another again, and then Shiranui pushes her [shiranui.cock+] between the two of you, forcing you to both kiss and orally worship the sides of her shaft.
-			]]></text>
+				[shiranui.speech(梅拉克西丝也来一起玩吧，)]不知火咯咯一笑，随后从你嘴里抽出她的[shiranui.cock+]，发出湿漉漉的“啵”一声。绑带将你的头扭向一侧，让你和梅拉克西丝再次吻在一起。接着，不知火把她[shiranui.cock+]挤到你们两人中间，逼得你们一边接吻，一边用嘴侍奉她阴茎的两侧。]]></text>
 		</description>
 		<description>
 			<descriptionConditional><![CDATA[
 				[#!flags.hasFlag(FLAG_innoxia_shiranui_sex_cock_worship) && !sex.getPrimaryOngoingActionPerformer(shiranui, PENETRATION_PENIS).isPlayer()]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				[shiranui.speech(I think that [pc.name] wants to play too,)] Shiranui giggles, before pulling her [shiranui.cock+] out of Meraxis's mouth with a wet pop. The bindings turn Meraxis's head to one side so that the two of you are kissing one another again, and then Shiranui pushes her [shiranui.cock+] between your joined lips, forcing you to both kiss and orally worship the sides of her shaft.
-			]]></text>
+				[shiranui.speech(我看[pc.name]也想来玩玩，)]不知火咯咯笑着，随即啵的一声湿响，将她[shiranui.cock+]从梅拉克西丝嘴里抽出。绑带把梅拉克西丝的头扳向一侧，让你们俩再次吻在一起，接着不知火将她[shiranui.cock+]挤进你俩相贴的双唇之间，逼得你们一边接吻，一边用嘴侍奉她阴茎的两侧。
+				]]></text>
 			<text><![CDATA[
-				[shiranui.speech([pc.Name] can join in on the fun,)] Shiranui giggles, before pulling her [shiranui.cock+] out of Meraxis's mouth with a wet pop. The bindings turn Meraxis's head to one side so that the two of you are kissing one another again, and then Shiranui pushes her [shiranui.cock+] between your joined lips, forcing you to both kiss and orally worship the sides of her shaft.
+				[shiranui.speech([pc.Name]也可以一起来快活嘛，)]不知火咯咯娇笑，伴随着一声湿润的脆响，将[shiranui.cock+]从梅拉克西丝口中拔了出来。身上的束缚将梅拉克西丝的头部拽向一旁，让你们两人再度吻在一起。随后不知火把[shiranui.cock+]硬挤进你们紧贴的唇缝之间，逼得你们一边接吻，一边用唇舌侍奉阴茎的两侧。
 			]]></text>
 		</description>
 	</descriptions>

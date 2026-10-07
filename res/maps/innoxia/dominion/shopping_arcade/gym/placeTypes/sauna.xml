@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[saunas]]></name>
-	<tooltipDescription><![CDATA[A couple of saunas are located near to the pool.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the sauna at the gym, 'Pix's Playground']]></virginityLossDescription>
+	<name><![CDATA[桑拿房]]></name>
+	<tooltipDescription><![CDATA[一间在游泳池附近的桑拿房。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“皮克斯操练场”健身房的桑拿房内]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

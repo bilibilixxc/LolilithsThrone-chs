@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[crates]]></deskName>
-	<wallName><![CDATA[crates]]></wallName>
+	<deskName><![CDATA[板条箱]]></deskName>
+	<wallName><![CDATA[板条箱]]></wallName>
 	<title/>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>

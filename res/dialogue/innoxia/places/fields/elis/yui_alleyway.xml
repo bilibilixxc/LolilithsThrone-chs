@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="meeting">
@@ -14,18 +14,18 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Submit to Yui and allow her to tie you up so that you can be fucked by strangers all night long...
-					<br/>[style.italicsSex(This will involve submissive, masochistic sex with numerous strangers!)]
+					屈服于唯，让她把你绑起来，这样你就可以整晚被陌生人玩弄……
+					<br/>[style.italicsSex(这将涉及与众多陌生人进行的服从、受虐式性行为！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_start]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Yui that you're not interested in her offer.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉唯，你对她的提议不感兴趣。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_refused]]></nextDialogue>
 			</response>
 		</responses>
@@ -44,8 +44,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You wonder where to go to next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你在思索接下来该去哪里……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 			</response>
@@ -66,8 +66,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Tied up]]></responseTitle>
-				<responseTooltip><![CDATA[Yui ties you up in the alleyway...]]></responseTooltip>
+				<responseTitle><![CDATA[被捆绑]]></responseTitle>
+				<responseTooltip><![CDATA[唯把你绑在了小巷里……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_tied_up]]></nextDialogue>
 			</response>
 		</responses>
@@ -89,8 +89,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Completely immobilised and unable to communicate, all you can do is wait...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[你完全无法动弹，也无法交流，所能做的只是等待……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_core]]></nextDialogue>
 			</response>
 		</responses>
@@ -110,8 +110,8 @@
 				<availabilityConditional><![CDATA[[#!client.hasFetish(FETISH_ORAL_GIVING) && client.hasFetish(FETISH_VAGINAL_GIVING)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[[client.Name] chooses to fuck your pussy...]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[[client.Name]要操你的小穴……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#client.setExtraBlockedParts(null)]
@@ -158,8 +158,8 @@
 				<availabilityConditional><![CDATA[[#!client.hasFetish(FETISH_ORAL_GIVING) && client.hasFetish(FETISH_ANAL_GIVING)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Anal]]></responseTitle>
-				<responseTooltip><![CDATA[[client.Name] chooses to fuck your ass...]]></responseTooltip>
+				<responseTitle><![CDATA[肛交]]></responseTitle>
+				<responseTooltip><![CDATA[[client.Name]准备操你的屁眼……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#client.setExtraBlockedParts(null)]
@@ -206,8 +206,8 @@
 				<availabilityConditional><![CDATA[[#client.hasFetish(FETISH_ORAL_GIVING) && !client.hasFetish(FETISH_ANAL_GIVING)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Pussy licked]]></responseTitle>
-				<responseTooltip><![CDATA[[client.Name] is forced to lick your pussy clean...]]></responseTooltip>
+				<responseTitle><![CDATA[被舔小穴]]></responseTitle>
+				<responseTooltip><![CDATA[[client.Name]被迫舔干净你的小穴……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#client.setExtraBlockedParts(null)]
@@ -246,8 +246,8 @@
 				<availabilityConditional><![CDATA[[#client.hasFetish(FETISH_ORAL_GIVING) && client.hasFetish(FETISH_ANAL_GIVING)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Ass licked]]></responseTitle>
-				<responseTooltip><![CDATA[[client.Name] is forced to perform anilingus on you...]]></responseTooltip>
+				<responseTitle><![CDATA[被舔后穴]]></responseTitle>
+				<responseTooltip><![CDATA[[client.Name]被迫给你舔肛……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#client.setExtraBlockedParts(null)]
@@ -302,8 +302,8 @@
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/yui_alleyway', 'POST_SEX'))]
 			[#game.banishNPC(client)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[The [client.name] has had enough...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[[client.name]已经爽够了……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -314,8 +314,8 @@
 				<availabilityConditional><![CDATA[[#game.isHourBetween(5, 12)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Gang leaves]]></responseTitle>
-				<responseTooltip><![CDATA[The gang has had enough and leaves without giving you a second thought...]]></responseTooltip>
+				<responseTitle><![CDATA[帮派离开]]></responseTitle>
+				<responseTooltip><![CDATA[帮派成员已经享受够了，头也不回地离开了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_gang_leaves]]></nextDialogue>
 			</response>
 			<!-- More sex scenes -->
@@ -323,11 +323,11 @@
 				<availabilityConditional><![CDATA[[#game.isHourBetween(12, 5)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Recover]]></responseTitle>
+				<responseTitle><![CDATA[恢复]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You have a few moments in which to recover before another stranger finds you...
+					你只有片刻喘息时间，很快又会有陌生人找上来……
 					#IF(flags.hasFlag(FLAG_innoxia_yui_alleyway_gang_present))
-						<br/>[style.italicsSex(Keep on experiencing sex scenes as you're repeatedly fucked by gang members.)]
+						<br/>[style.italicsSex(继续体验被帮派成员轮番侵犯的性爱场景。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_core_repeat]]></nextDialogue>
@@ -337,10 +337,10 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_yui_alleyway_gang_present) && flags.hasFlag(FLAG_innoxia_yui_alleyway_gang_victim_cleaned) && game.isHourBetween(12, 5)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Gang's cock-sleeve]]></responseTitle>
+				<responseTitle><![CDATA[帮派的鸡巴套]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You're repeatedly fucked by members of the gang throughout the rest of the night...
-					<br/>[style.italicsMinorBad(This will skip through the rest of the night until Yui arrives to release you.)]
+					整晚你都在被帮派成员们轮番玩弄……
+					<br/>[style.italicsMinorBad(这将跳过当晚剩余时间，直到唯来释放你。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_night_of_sex]]></nextDialogue>
 			</response>
@@ -366,8 +366,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Released]]></responseTitle>
-				<responseTooltip><![CDATA[Yui has returned to release you...]]></responseTooltip>
+				<responseTitle><![CDATA[被释放]]></responseTitle>
+				<responseTooltip><![CDATA[唯回来将你释放了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -388,8 +388,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Released]]></responseTitle>
-				<responseTooltip><![CDATA[Yui has returned to release you...]]></responseTooltip>
+				<responseTitle><![CDATA[被释放]]></responseTitle>
+				<responseTooltip><![CDATA[唯回来将你释放了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_alleyway_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -409,8 +409,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Finish getting dressed and continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[穿好衣服，继续旅程……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[

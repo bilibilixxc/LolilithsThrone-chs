@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[circlet]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[circlets]]></namePlural>
-		<description><![CDATA[A decorative accessory, this thin band of metal sits atop the wearer's head.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[头冠]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[头冠]]></namePlural>
+		<description><![CDATA[一种装饰配饰，这条细金属带箍在佩戴者的头上。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -43,27 +42,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the circlet onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the circlet onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the circlet onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将头冠戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将头冠戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将头冠戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] circlet.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] circlet.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] circlet.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]摘下[npc.her]的头冠。
+]]></self>
+    <other><![CDATA[
+[npc.Name]摘下[npc2.namePos]的头冠。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的头冠。
+]]></otherRough>
   </displacementText>
   
 </clothing>

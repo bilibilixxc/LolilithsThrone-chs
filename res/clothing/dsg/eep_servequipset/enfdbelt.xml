@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[Embossed into the leather are the words "Official Enforcer Issue, MFD by DSG Threadworks"]]></authorTag>
+		<authorTag><![CDATA[皮革上压印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>200</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's dress belt]]></name>
+		<name><![CDATA[执法者礼仪腰带]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's dress belts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者的礼仪腰带]]></namePlural> 
 
-		<description><![CDATA[A thick leather stomach belt supported by a thinner shoulder strap. Although it once served as a sword belt, its role is now largely ceremonial.]]></description> 
+		<description><![CDATA[一条由较薄的肩带支撑的厚皮腰带。尽管它曾经是一条剑挂，但现在它的主要作用是仪仗用的。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -71,27 +70,21 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the dress belt around [npc.her] waist and [npc.verb(thread)] excess through the buckle frame before inserting the double prongs through the closest adjustment hole. [npc.she] then [npc.verb(adjust)] the shoulder strap and [npc.verb(secure)] it in a similar fashion.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the dress belt around [npc2.namePos] waist and [npc.verb(thread)] excess through the buckle frame before inserting the double prongs through the closest adjustment hole. [npc.she] the [npc.verb(adjust)] the shoulder strap and [npc.verb(secure)] it in a similar fashion.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the dress belt around [npc2.namePos] waist as much as possible and hastily [npc.verb(thread)] excess through the buckle frame before inserting the double prongs through the closest adjustment hole. [npc.she] then [npc.verb(does)] much the same with the shoulder strap.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]系紧[npc.her]腰部的腰带，并将多余的部分穿过带扣环，然后将双尖头插入最近的调节孔。最后[npc.she]调整肩带并用相似的方式进行固定。]]></self>
+		<other><![CDATA[
+[npc.Name]帮[npc2.namePos]系紧腰部的腰带，并将多余的部分穿过带扣环，然后将双尖头插入最近的调节孔。最后[npc.she]调整肩带并用相似的方式进行固定。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]尽可能拉紧[npc2.namePos]的腰带，并在将双叉插入最近的调节孔里，并匆忙将多余部分穿过带扣环。[npc.she]在肩带上也做了同样的动作。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] dress belt and its shoulder strap before taking it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] dress belt and its shoulder strap before taking it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(unbuckle)] [npc2.namePos] dress belt and its shoulder strap before tearing the whole thing away from [npc2.namePos] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的礼仪腰带和肩带，然后将腰带取下。]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]的礼仪腰带和肩带，然后将腰带取下。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙解开[npc2.namePos]的腰带和肩带，然后将整个礼仪腰带从[npc2.Name Pos]腰部拽走。]]></otherRough>
 	</displacementText>
 	
 </clothing>

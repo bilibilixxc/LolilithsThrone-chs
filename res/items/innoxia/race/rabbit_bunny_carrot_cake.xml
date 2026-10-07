@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>40</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Bunny Carrot-Cake]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Bunny Carrot-Cakes]]></namePlural>
-		<description><![CDATA[An individually-wrapped slice of frosted carrot cake, complete with a decorative icing carrot on the top. On the wrapper, there's a very lewd image of a rabbit-girl being bred by a muscular rabbit-boy.]]></description> 
+		<determiner><![CDATA[一块]]></determiner>
+		<name><![CDATA[兔兔萝卜蛋糕]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[兔兔萝卜蛋糕]]></namePlural>
+		<description><![CDATA[一片独立包装的糖霜胡萝卜蛋糕，顶部还有一个装饰性的糖霜胡萝卜。在包装纸上，有一个非常淫荡的图像，一个兔子女正在被一个肌肉发达的兔子男配种。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/rabbit/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/rabbit/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">rabbit_bunny_carrot_cake.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,23 +25,23 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[rabbit]]></potionDescriptor>
+		<potionDescriptor><![CDATA[兔子]]></potionDescriptor>
 		<associatedRace>RABBIT_MORPH</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_FERTILITY.getFormattedValue(15)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_VIRILITY.getFormattedValue(15)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_LUST.getFormattedValue(-25)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_FERTILITY.getFormattedValue(15)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_VIRILITY.getFormattedValue(15)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_LUST.getFormattedValue(-25)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel like [npc.she] [npc.verb(need)] to breed...
+				[npc.Name]开始[npc.she]感到需要交配……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_FERTILITY, 15)]
 			[#npc.addPotionEffect(ATTRIBUTE_VIRILITY, 15)]
@@ -59,10 +59,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Tearing off the Bunny Carrot-Cake's plastic wrapper, [npc.name] [npc.verb(pop)] the small slice of cake into [npc.her] mouth. It turns out to be absolutely delicious, and after [npc.sheHas] swallowed down the sweet mess, a delightful carroty aftertaste lingers on [npc.her] [npc.tongue].
+		[npc.name]撕掉兔兔萝卜蛋糕的塑料包装，把一小块蛋糕送进[npc.her]的嘴里。蛋糕很明显非常美味，在[npc.she]吞下甜蜜的蛋糕后，一股令人愉悦的胡萝卜余味停留在[npc.tongue]上。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Tearing off the Bunny Carrot-Cake's plastic wrapper, [npc.name] [npc.verb(pop)] the small slice of cake into [npc2.namePos] mouth. It turns out to be absolutely delicious, and after [npc2.sheHas] swallowed down the sweet mess, a delightful carroty aftertaste lingers on [npc2.namePos] [npc2.tongue].
+		[npc.name]撕掉兔兔萝卜蛋糕的塑料包装，把一小块蛋糕送进[npc2.namePos]的嘴里。蛋糕很明显非常美味，在[npc2.name]吞下甜蜜的蛋糕后，一股令人愉悦的胡萝卜余味停留在[npc2.she]的[npc2.tongue]上。
 		]]></otherUse>
 	</useDescriptions>
 

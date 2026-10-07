@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
-	<scene id ="stall">
+	<scene id="stall">
 		<author><![CDATA[DSG]]></author>			
 		<title/>
 		<tooltip/>				
@@ -18,8 +18,8 @@
 				<availabilityConditional><![CDATA[[#eisek.getLocationPlaceType() == PLACE_TYPE_dsg_fields_elis_market_produce]]]></availabilityConditional>	
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Approach]]></responseTitle>
-				<responseTooltip><![CDATA[Approach the stall.]]></responseTooltip>
+				<responseTitle><![CDATA[接近]]></responseTitle>
+				<responseTooltip><![CDATA[靠近摊位。]]></responseTooltip>
 				<colour/>
 				<nextDialogue stripContent="false"><![CDATA[dsg_characters_eisek_stall_talk_menu]]></nextDialogue>
 				<secondsPassed/>

@@ -1,65 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="SHINRIN_HIGHLANDS"><![CDATA[
 	<p>
-		Lying to the west of the Foloi Fields, the area known as the Shinrin Highlands is the home of the elusive youko. Many parts of this land are densely forested, with species of cypress, maple, cedar, pine, and cherry being the most common types of trees which you see. As if navigating around and through these forests wasn't challenging enough, the entire region consists of undulating terrain, which is sometimes punctuated by long, flat valleys.
+		心林高地位于弗洛伊田野以西，是行踪不定的妖狐的家园。这片土地的许多地方都覆盖着茂密的森林，你所见到的最常见树种包括柏树、枫树、雪松、松树和樱树。仿佛在这些森林周围及林间穿行还不够有挑战性似的，整个地区都由起伏不平的地形构成，其间偶尔点缀着狭长平坦的山谷。
 	</p>
 	<p>
-		Now and again, you manage to pick up a path, but these trails inevitably lead to dead-ends or simply disappear into the forest. Other than these tracks, you come across several other signs of habitation, the most common of which are rice fields surrounding the occasional Japanese-style farmhouse. Curiously enough, you never see anyone working in these fields or walking around near the farmhouses, and a chill sometimes runs down your spine as you look at these seemingly-deserted houses from afar.
+		你偶尔能找到一条小径，但这些小路总是通向死路，或干脆消失在森林中。除了这些路径之外，你还会遇到其他几处有人居住的迹象，最常见的是零星日式农舍周围的稻田。说来奇怪，你从未见过有人在田里劳作，或在农舍附近走动；当你从远处望着这些看似荒废的房屋时，有时会感到一阵寒意顺着脊背而下。
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
 		<p>
-			The entire landscape is currently cloaked in a blanket of fresh, white snow,
-			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				 and large snowflakes are currently drifting down from the clouds up above.
-			#ELSE
-				 which crunches beneath your [pc.feet] as you [pc.walk] over hills and through silent woodland.
-			#ENDIF
-		</p>
+整片景色如今覆盖着一层洁白的新雪，
+#IF(game.getCurrentWeather()==WEATHER_SNOW)
+大片雪花正从头顶的云层中飘落。
+#ELSE
+当你[pc.walk]翻过山丘、穿过寂静的林地时，积雪在你[pc.feet]下嘎吱作响。
+#ENDIF
+</p>
 	#ENDIF
 	
 	<p style='text-align:center;'>
-		[style.italicsMinorBad(Youko encounters in the Shinrin Highlands will be added in the next update.)]
-	</p>
-	]]>
-	</htmlContent>
+[style.italicsMinorBad(心林高地中的妖狐遭遇将在下次更新中加入。)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RIVER"><![CDATA[
 	<p>
-		Originating somewhere deep within the western Mountains of the Moon, the river Hubur cuts its path eastwards, passing through the Shinrin Highlands, the Foloi Fields, and Dominion itself before flowing out to sea. Although there's a well-maintained road which runs alongside the river through the Foloi Fields, this path degrades into little more than a dirt track when it reaches the Shinrin Highlands.
+		胡布尔河发源于西部皎月山脉深处的某处，一路向东流淌，穿过心林高地、弗洛伊田野和御城区，最后汇入大海。虽然有一条维护良好的道路沿着河流穿过弗洛伊田野，但这条路一到心林高地就退化成一条土路。
 		#IF(pc.hasStatusEffect(SE_AQUATIC_POSITIVE))
-			 This doesn't bother you much, as you prefer to shun the path and swim in the river instead.
+			这倒不太让你困扰，因为你更喜欢避开道路，直接在河里游泳。
 		#ELSE
-			 It's down this poorly-maintained track which you currently find yourself travelling.
+			眼下你正走在这条缺乏维护的小径上。
 		#ENDIF
 	</p>
 	<p>
-		The youko of the Shinrin Highlands are known to attack travellers and use illusion spells to mislead them, so you make sure to keep an eye out for any sign of suspicious activity as you continue on your way. As it stands, however, the river and the surrounding banks are completely deserted. None of the boats and barges which travel between Elis, Dominion, and Lyonesse venture this far up the river, and as such you find yourself completely alone.
+		心林高地的妖狐以袭击旅人、用幻术迷惑他们而闻名，所以你继续赶路时，务必留意任何可疑活动的迹象。然而就目前而言，河流与周围河岸都空无一人。往返于伊利斯、御城区和莱昂内斯之间的船只与驳船都不会冒险深入河流上游这么远，因此你完全孤身一人。
 	</p>
 	<p>
-		Constructed and maintained by the elusive youko, there are many wooden bridges which cross the river,
+		这些横跨河流的木桥由行踪不定的妖狐建造并维护，
 		#IF(pc.hasStatusEffect(SE_AQUATIC_POSITIVE))
-			 but as you can simply swim across at any time you like, this doesn't really concern you.
+			但既然你随时都能直接游过去，这其实并不怎么让你在意。
 		#ELSE
-			 so you never have to go far in order to cross over it to the other bank.
+			所以你从来不用走多远，就能过河到对岸。
 		#ENDIF
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
 		<p>
-			Thanks to the snow which
-			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				 has not only covered the land, but which is also currently falling in big flurries,
-			#ELSE
-				 has covered the land,
-			#ENDIF
-			 the very edges of the river are currently frozen over in thick sheets of ice, although most of the centre is still running freely.
-		</p>
+    由于
+    #IF(game.getCurrentWeather()==WEATHER_SNOW)
+        冬风凛冽，天空中飘洒着大片的雪花，大地被厚厚的积雪覆盖，
+    #ELSE
+        大地被厚厚的积雪覆盖，
+    #ENDIF
+    目前，河岸上覆盖着厚厚的冰层，但河流的中心尚未完全封冻，水流畅行无阻。
+</p>
 	#ENDIF
 	<p style='text-align:center;'>
-		[style.italicsMinorBad(Youko encounters in the Shinrin Highlands will be added in the next update.)]
+		[style.italicsMinorBad(心林高地的妖狐遭遇事件将在下一次更新中加入。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

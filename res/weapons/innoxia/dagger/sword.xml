@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -10,23 +10,23 @@
 		
 		<determiner><![CDATA[]]></determiner>
 		
-		<name><![CDATA[SWORD dagger]]></name>
+		<name><![CDATA[SWORD匕首]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[SWORD daggers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[SWORD匕首]]></namePlural> 
 		
-		<description><![CDATA[A double-edged fighting knife with a foil grip, issued to SWORD Enforcers. Its tapered, sharply pointed blade is made for thrusting and stabbing attacks. This particular dagger is a rare first pattern example, issued from 1976-1977.]]></description> 
+		<description><![CDATA[一把双刃格斗刀，配有箔片握把，配发给SWORD执法者。它的刀刃呈锥形，尖锐锋利，适合戳刺。这把匕首是1976-1977年发行的第一版，十分罕见。]]></description> 
 		
-		<attackDescriptor>stab</attackDescriptor>
+		<attackDescriptor><![CDATA[捅]]></attackDescriptor>
 		
-		<attackTooltipDescription>Stab [npc2.name] with your dagger.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用你的匕首捅[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity>
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(position)] [npc.her] dagger at [npc.her] hip and releases the snap fastener on the retaining strap so that [npc.she] may draw it at a moment's notice.]]></equipText>
+		<equipText><![CDATA[[npc.Name]将匕首放在[npc.her]的腰间，以便[npc.she]拔出。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(sheath)] [npc.her] dagger, before putting it away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将匕首插回鞘内，然后收好。]]></unequipText>
 		
 		<imageName>sword_sheathed.svg</imageName> 
 		
@@ -71,27 +71,27 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(thrust)] [npc.her] dagger at [npc2.name], grinning as the ethereal arcane blade pierces [npc2.her] body!
-		]]></hitText>
+		[npc.Name]用匕首刺向[npc2.name]，虚幻的奥术刀刃穿过了[npc2.her]的身体，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] dagger, [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(see)] the ethereal blade travel straight into [npc2.her] body!
-		]]></hitText>
+		[npc.Name]刺出匕首，狠狠地捅入[npc2.name]的胸膛；其虚幻的奥术利刃穿过了[npc2.her]的躯体，汲取其能量！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(thrust)] at [npc2.name] with [npc.her] dagger, causing [npc2.herHim] to stagger back as the ethereal blade stabs right into [npc2.her] chest!
-		]]></hitText>
+		[npc.Name]向着[npc2.name]捅出匕首，用虚幻的奥术利刃砍到了[npc2.her]的[npc2.arm]，汲取其能量！
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(thrust)] [npc.her] dagger at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.name]用匕首捅向[npc2.name]的胸部，但最后没有成功命中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] dagger, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]向着[npc2.name]捅出匕首，却没能命中目标，让[npc.she]恼火地大喊一声！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(thrust)] at [npc2.name] with [npc.her] dagger, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用匕首猛地捅向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

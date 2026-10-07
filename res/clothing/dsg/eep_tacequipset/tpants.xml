@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 		
-		<authorTag><![CDATA[A small tag sewn into the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[腰部有一个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>300</value> 
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's tactical trousers]]></name>
+		<name><![CDATA[执法者战术长裤]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's tactical trousers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者战术长裤]]></namePlural> 
 
-		<description><![CDATA[A pair of boot-cut cargo trousers made from breathable cotton rip-stop and reinforced knees and seat. The drawstrings around the ankles allow the legs to be easily bloused into a pair of boots.]]></description> 
+		<description><![CDATA[一条宽腿工装裤，采用透气棉和尼龙面料制成。膝盖部位经过加固处理。脚踝处的抽绳设计可以方便地将裤腿套进靴子里。]]></description> 
 
 		<physicalResistance>1</physicalResistance> 
 
@@ -111,84 +110,67 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the tactical trousers and [npc.verb(pull)] them up to [npc.her] waist before buttoning up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the tactical trousers up around [npc2.namePos] legs up to [npc2.her] waist before buttoning up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] 
+		<self><![CDATA[
+[npc.Name]穿上战术长裤，把裤子提到[npc.her]的腰部，然后扣上前面的扣子。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.her]的裤子拉到[npc2.namePos]的腰部，并扣好了前面的扣子。]]></other>
+		<otherRough><![CDATA[
+		[npc.Name] 
 					#IF game.isSillyModeEnabled()
-					#THEN practically [npc.verb(give)] [npc2.namePos] a wedgie as [npc2.her]
+					#THEN 熟练地把内裤拽到[npc2.her]的屁股缝里。
 					#ENDIF
-					[npc.verb(yank)] the tactical trousers up around [npc2.namePos] legs up to [npc2.her] waist before roughly buttoning up the front.]]>
-		</otherRough>
+					粗暴地把战术长裤从[npc2.namePos]的腿部提到[npc2.her]的腰部，系上扣子。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] tactical trousers and [npc.verb(pull)] them down before kicking them from [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(pull)] them down before sliding them from [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(yank)] them off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的战术长裤的扣子，把裤子拉下来，然后把它从[npc.her]的[npc.feet]上踢开。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.name]的战术长裤并把它拉了下来，然后把它从[npc2.her]的[npc2.feet]上踢开。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行解开[npc2.name]的战术长裤的扣子，然后把它们扯了下来。]]></otherRough>
 	</displacementText>	
 
 	<replacementText type="UNZIPS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up the fly of [npc.her] tactical trousers.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up the front of [npc2.namePos] tactical trousers.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(zip)] up the front of [npc2.namePos] tactical trousers
+		<self><![CDATA[
+[npc.Name]拉上了战术长裤的拉链。]]></self>
+		<other><![CDATA[
+[npc.Name]拉上了[npc2.namePos]战术长裤前面的拉链。]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地拉上了[npc2.namePos]的战术长裤前拉链。
 					#IF game.isSillyModeEnabled() && npc2.hasPenis()
-					#THEN without much regard for what might be in the way, resulting in a close call!
+					#THEN 没考虑肉棒的阻碍，差点夹到！
 					#ELSE .
 					#ENDIF
-					]]>
-		</otherRough>
+					
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="UNZIPS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc.her] tactical trousers.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc2.namePos] tactical trousers.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(unzip)] the fly of [npc2.namePos] tactical trousers.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉开了战术长裤的拉链。]]></self>
+		<other><![CDATA[
+[npc.Name]拉开了[npc2.namePos]战术长裤的拉链。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行拉开了[npc2.namePos]战术长裤上的拉链。]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] tactical trousers up to [npc.her] waist and [npc.verb(button)] up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] tactical trousers up to [npc2.her] waist and [npc.verb(button)] up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(pull)] [npc2.namePos] tactical trousers up to [npc2.her] waist and roughly [npc.verb(button)] up the front.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的战术裤子拉到[npc.her]的腰部，并扣好了前面的扣子。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的战术长裤拉到腰上并扣好前面的扣子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将[npc2.namePos]的战术长裤拉至[npc2.her]的腰部，并粗糙地扣起来。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] tactical trousers and [npc.verb(pull)] them down.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(pull)] them down.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(yank)] down around [npc2.her] legs.]]>
-		</otherRough>
+		<self><![CDATA[[npc.Name]解开了[npc.her]的战术裤并把它拉了下来。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.name]的战术长裤并把它脱了下来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行解开[npc2.name]的战术长裤的扣子，然后把它们扯到了腿上。]]></otherRough>
 	</displacementText>	
 	
 </clothing>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Nightclub Office]]></name>
-	<tooltipDescription><![CDATA[You're kept in your Master's office where he fucks both you and his new employees.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in your Master's office]]></virginityLossDescription>
+	<name><![CDATA[夜店办公室]]></name>
+	<tooltipDescription><![CDATA[你被关在主人的办公室里，在那里，他和你以及他的新员工做爱。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在你主人的办公室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

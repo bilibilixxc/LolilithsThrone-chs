@@ -286,8 +286,8 @@ public class GenericActions {
 						"<p style='text-align:center;'>"
 //							+ "<b>[style.boldSexDom([npc.Name])] dominantly "+(Main.sex.isConsensual()?"having sex with":"fucking")+" [style.boldSexSub([npc2.name])]</b>"
 							+ "<b><b style='color:"+dom.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b>"
-								+ " dominantly "+(Main.sex.isConsensual()?"having sex with ":"fucking ")
-								+"<b style='color:"+sub.getFemininity().getColour().toWebHexString()+";'>[npc2.name]</b></b>"
+								+ "以支配的姿态"+(Main.sex.isConsensual()?"与":"强奸了")
+								+"<b style='color:"+sub.getFemininity().getColour().toWebHexString()+";'>[npc2.name]</b>"+(Main.sex.isConsensual()?"做爱":"")+"</b>"
 						+ "</p>"));
 				
 				boolean preventCreampie = false;
@@ -328,7 +328,7 @@ public class GenericActions {
 					preference = getForeplayPreference(dom, sub);
 					preventCreampie = preventCreampie(preference, dom, sub);
 					sb.append("<p style='margin:0; padding:0; text-align:center;'>");
-					sb.append("[style.boldPurpleLight(Foreplay)] ([style.colourSexDom("+Util.capitaliseSentence(preference.getPerformingSexArea().getName(dom, true))+")]-[style.colourSexSub("+preference.getTargetedSexArea().getName(sub, true)+")]): ");
+					sb.append("[style.boldPurpleLight(前戏)] ([style.colourSexDom("+Util.capitaliseSentence(preference.getPerformingSexArea().getName(dom, true))+")]-[style.colourSexSub("+preference.getTargetedSexArea().getName(sub, true)+")]): ");
 					sb.append(dom.calculateGenericSexEffects(true, false, sub, preference, GenericSexFlag.EXTENDED_DESCRIPTION_NEEDED, (preventCreampie?GenericSexFlag.PREVENT_CREAMPIE:null)));
 					sb.append("</p>");
 				}
@@ -377,7 +377,7 @@ public class GenericActions {
 						}
 					}
 					sb.append("<p style='margin:0; padding:0; text-align:center;'>");
-					sb.append("[style.boldPurple(Sex)] ([style.colourSexDom("+Util.capitaliseSentence(preference.getPerformingSexArea().getName(dom, true))+")]-[style.colourSexSub("+preference.getTargetedSexArea().getName(sub, true)+")]): ");
+					sb.append("[style.boldPurple(性爱)]([style.colourSexDom("+Util.capitaliseSentence(preference.getPerformingSexArea().getName(dom, true))+")]-[style.colourSexSub("+preference.getTargetedSexArea().getName(sub, true)+")]): ");
 					sb.append("</p>");
 					sb.append(dom.calculateGenericSexEffects(true, true, sub, preference, GenericSexFlag.EXTENDED_DESCRIPTION_NEEDED, (preventCreampie?GenericSexFlag.PREVENT_CREAMPIE:null))); // This increments orgasms
 //					if(sub.hasPenisIgnoreDildo() && !dom.hasFetish(Fetish.FETISH_DENIAL) && Main.sex.getSexPace(sub)!=SexPace.SUB_RESISTING) {
@@ -420,11 +420,11 @@ public class GenericActions {
 				equippedClothingSB.append("<br/>");
 			}
 			GameCharacter equipper = equippedMapEntry.getKey();
-			equippedClothingSB.append(UtilText.parse(equipper, "<b><span style='color:"+(equipper.getFemininity().getColour().toWebHexString())+"'>[npc.Name]</span> equipped the following clothing during sex:</b>"));
+			equippedClothingSB.append(UtilText.parse(equipper, "<b><span style='color:"+(equipper.getFemininity().getColour().toWebHexString())+"'>[npc.Name]</span>在性爱过程中装备了以下衣物:</b>"));
 			for(Entry<GameCharacter, List<AbstractClothing>> characterEntry : equippedMapEntry.getValue().entrySet()) {
 				GameCharacter target = characterEntry.getKey();
 				for(AbstractClothing clothing : characterEntry.getValue()) {
-					equippedClothingSB.append(UtilText.parse(target, "<br/>"+clothing.getDisplayName(true)+" onto <span style='color:"+(target.getFemininity().getColour().toWebHexString())+"'>[npc.name]</span>"));
+					equippedClothingSB.append(UtilText.parse(target, "<br/>"+clothing.getDisplayName(true)+"于<span style='color:"+(target.getFemininity().getColour().toWebHexString())+"'>[npc.name]</span>身上"));
 				}
 			}
 		}
@@ -465,7 +465,7 @@ public class GenericActions {
 		String hipGrindText = "";
 		String selfTargetText = "[npc2.namePos]";
 		if(characterOrgasming==target) {
-			selfTargetText = "[npc2.her] own";
+			selfTargetText = "[npc2.her]自己";
 		}
 		switch(orificeTargeted) {
 			case ARMPITS:
@@ -479,45 +479,45 @@ public class GenericActions {
 				break;
 			case ANUS:
 				if(penetratingArea==SexAreaPenetration.TAIL) {
-					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.assCloaca]";
+					hipGrindText = "将[npc.tail+]送入了"+selfTargetText+"的[npc2.assCloaca]";
 				} else {
-					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.assCloaca]";
+					hipGrindText = "将[npc.hips]塞进了"+selfTargetText+"的[npc2.assCloaca]";
 				}
 				break;
 			case MOUTH:
 				if(penetratingArea==SexAreaPenetration.TAIL) {
-					hipGrindText = "thrusting [npc.her] [npc.tail+] down "+selfTargetText+" throat";
+					hipGrindText = "将[npc.tail+]深入"+selfTargetText+"的喉咙";
 				} else {
-					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.face]";
+					hipGrindText = "将[npc.hips]塞入了"+selfTargetText+"的嘴巴";
 				}
 				break;
 			case NIPPLE:
 				if(penetratingArea==SexAreaPenetration.TAIL) {
-					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.nipple+(true)]";
+					hipGrindText = "将[npc.tail+]插入了"+selfTargetText+"[npc2.nipple+(true)]";
 				} else {
-					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.breasts]";
+					hipGrindText = "将[npc.hips]塞进了"+selfTargetText+"的[npc2.breasts]";
 				}
 				break;
 			case NIPPLE_CROTCH:
 				if(penetratingArea==SexAreaPenetration.TAIL) {
-					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.nippleCrotch+(true)]";
+					hipGrindText = "将[npc.tail+]插入了"+selfTargetText+"[npc2.nippleCrotch+(true)]";
 				} else {
-					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.crotchBreasts]";
+					hipGrindText = "将[npc.hips]塞进了"+selfTargetText+"的[npc2.crotchBreasts]";
 				}
 				break;
 			case VAGINA:
 				if(penetratingArea==SexAreaPenetration.TAIL) {
-					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.pussy+]";
+					hipGrindText = "将[npc.tail+]送入了"+selfTargetText+"[npc2.pussy+]";
 				} else {
-					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" groin";
+					hipGrindText = "将[npc.hips]压向了"+selfTargetText+"的下体";
 				}
 				break;
 		}
 
 		if(characterOrgasming==target) {
-			sb.append("Wanting to deposit [npc.her] egg");
+			sb.append("[npc.name]想要将卵产在");
 			if(eggCount!=1) {
-				sb.append("s");
+				sb.append("");
 			}
 			switch(orificeTargeted) {
 				case ARMPITS:
@@ -530,83 +530,83 @@ public class GenericActions {
 				case URETHRA_VAGINA:
 					break;
 				case ANUS:
-					sb.append(" in [npc2.her] own ass, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.asshole].");
-					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("[npc2.her]自己的屁股里，于是竭尽所能，将"+penetrationAreaPlusText+"推入[npc2.asshole]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+					sb.append("[npc.she]急切地"+hipGrindText+"，做好产卵准备后，兴奋得连连[npc.moansVerb]。");
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]肚子的深处，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.her] own [npc2.asshole+]"
-								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+						sb.append("卵还没有排空，[npc.name]继续将"+penetrationAreaPlusText+"深深埋在[npc2.her]自己[npc2.asshole+]内，"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的肚子打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
-					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen belly and sighing,");
-					sb.append(" [npc.speech(That's better!)]");
+					sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.her]鼓起的小腹，感叹道，");
+					sb.append("[npc.speech(舒服多了！)]");
 					break;
 				case MOUTH:
-					sb.append(" in [npc2.her] own stomach, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible down [npc2.her] throat.");
-					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("[npc2.her]自己的肚子里，于是竭尽所能，将"+penetrationAreaPlusText+"推入喉咙的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+					sb.append("[npc.she]急切地"+hipGrindText+"，做好产卵准备后，兴奋得连连[npc.moansVerb]。");
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed, muffled [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]肚子的深处，[npc2.she]不禁惊讶得发出了模糊的[npc2.moan]声。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep down [npc2.her] own throat"
-								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+						sb.append("卵还没有排空，[npc.name]继续将"+penetrationAreaPlusText+"深深埋在[npc2.her]自己的喉咙内，"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的肚子打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
-					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen belly and sighing,");
-					sb.append(" [npc.speech(That's better!)]");
+					sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.her]鼓起的小腹，感叹道，");
+					sb.append("[npc.speech(舒服多了！)]");
 					break;
 				case NIPPLE:
-					sb.append(" in [npc2.her] own breasts, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nipple(true)].");
-					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("[npc2.her]自己的胸部，于是竭尽所能，将"+penetrationAreaPlusText+"推入[npc2.nipple(true)]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+					sb.append("[npc.she]急切地"+hipGrindText+"，做好产卵准备后，兴奋得连连[npc.moansVerb]。");
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
-							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable breast.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"
+							+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]足以插入的乳房内，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.her] other [npc2.nipple(true)]."
-								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.her] [npc2.breasts] into egg-incubation chambers.");
+						sb.append("卵还没有排空，[npc.name]便拔了出来，又立刻插入了另外的[npc2.nipple(true)]里。"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的乳房打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
-					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen [npc2.breasts] and sighing,");
-					sb.append(" [npc.speech(That's better!)]");
+					sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.her]鼓起的[npc2.breasts]，感叹道，");
+					sb.append("[npc.speech(舒服多了！)]");
 					break;
 				case NIPPLE_CROTCH:
-					sb.append(" in [npc2.her] own [npc2.crotchBoobs], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nippleCrotch(true)].");
-					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("[npc2.her]自己的[npc2.crotchBoobs]，于是竭尽所能，将"+penetrationAreaPlusText+"推入[npc2.nippleCrotch(true)]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+					sb.append("[npc.she]急切地"+hipGrindText+"，做好产卵准备后，兴奋得连连[npc.moansVerb]。");
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
-							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable [npc2.crotchBoobs].");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"
+							+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]足以插入的[npc2.crotchBoobs]内，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.her] other [npc2.nippleCrotch(true)]."
-								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.her] [npc2.crotchBoobs] into egg-incubation chambers.");
+						sb.append("卵还没有排空，[npc.name]便拔了出来，又立刻插入了另外的[npc2.nippleCrotch(true)]里。"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的[npc2.crotchBoobs]打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
-					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen [npc2.crotchBoobs] and sighing,");
-					sb.append(" [npc.speech(That's better!)]");
+					sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.her]鼓起的[npc2.crotchBoobs]，感叹道，");
+					sb.append("[npc.speech(舒服多了！)]");
 					break;
 				case VAGINA:
-					sb.append(" in [npc2.her] own womb, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.pussy].");
-					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("[npc2.her]自己的子宫里，于是竭尽所能，将"+penetrationAreaPlusText+"推入[npc2.pussy]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+					sb.append("[npc.she]急切地"+hipGrindText+"，做好产卵准备后，兴奋得连连[npc.moansVerb]。");
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] womb.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]子宫的深处，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.her] own [npc2.pussy+]"
-								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] womb into an egg-incubation chamber.");
+						sb.append("卵还没有排空，[npc.name]继续将"+penetrationAreaPlusText+"深深埋在[npc2.her]自己[npc2.pussy+]内，"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的子宫打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
-					sb.append("Finally, with one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen belly and sighing,");
-					sb.append(" [npc.speech(That's better!)]");
+					sb.append("伴随着最后一声[npc.moan]的消散，[npc.name]从其中抽出，宠爱地抚摸着[npc2.her]鼓起的小腹，感叹道，");
+					sb.append("[npc.speech(舒服多了！)]");
 					break;
 			}
 			
 		} else {
-			sb.append("Wanting to deposit [npc.her] egg");
+			sb.append("[npc.name]想要将卵产在");
 			if(eggCount!=1) {
-				sb.append("s");
+				sb.append("");
 			}
 			switch(orificeTargeted) {
 				case ARMPITS:
@@ -621,202 +621,202 @@ public class GenericActions {
 				case ANUS:
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.asshole].");
-							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"顶入[npc2.her]的[npc2.asshole]足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]粗暴地"+hipGrindText+"，嘴角露出一抹哂笑，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+								sb.append("[npc.speech(准备好接下我的蛋吧，[npc2.bitch]！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满，[npc2.bitch]！)]");
 							}
 							break;
 						default:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.asshole].");
-							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							sb.append("[npc2.name]体内，将"+penetrationAreaPlusText+"推入[npc.her]的[npc2.asshole]足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]急切地"+hipGrindText+"，兴奋地高喊出来，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+								sb.append("[npc.speech(我要把蛋产在你身体里了！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满！)]");
 							}
 							break;
 					}
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]肚子的深处，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.namePos] [npc2.asshole+]"
-								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+						sb.append("卵还没有排空，[npc.name]继续将"+penetrationAreaPlusText+"深深埋在[npc2.namePos][npc2.asshole+]内，"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的肚子打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and growling,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]粗鲁地从其中抽出，高高在上一般揉搓着[npc2.her]鼓起的小腹，低声道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子，[npc2.bitch]！)]");
 							break;
 						default:
-							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and sighing,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.namePos]鼓起的小腹，感叹道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子！)]");
 							break;
 					}
 					break;
 				case MOUTH:
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible down [npc2.her] throat.");
-							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"顶入[npc2.her]喉咙的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]粗暴地"+hipGrindText+"，嘴角露出一抹哂笑，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+								sb.append("[npc.speech(准备好接下我的蛋吧，[npc2.bitch]！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满，[npc2.bitch]！)]");
 							}
 							break;
 						default:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible down [npc2.her] throat.");
-							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"推入[npc2.her]喉咙的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]急切地"+hipGrindText+"，兴奋地高喊出来，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+								sb.append("[npc.speech(我要把蛋产在你身体里了！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满！)]");
 							}
 							break;
 					}
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed, muffled [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]肚子的深处，[npc2.she]不禁惊讶得发出了模糊的[npc2.moan]声。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep down [npc2.namePos] throat"
-								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+						sb.append("卵还没有排空，[npc.name]继续将"+penetrationAreaPlusText+"深深埋在[npc2.namePos]的喉咙内，"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的肚子打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and growling,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]粗鲁地从其中抽出，高高在上一般揉搓着[npc2.her]鼓起的小腹，低声道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子，[npc2.bitch]！)]");
 							break;
 						default:
-							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and sighing,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.namePos]鼓起的小腹，感叹道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子！)]");
 							break;
 					}
 					break;
 				case NIPPLE:
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nipple(true)].");
-							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"顶入[npc2.her][npc2.nipple(true)]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]粗暴地"+hipGrindText+"，嘴角露出一抹哂笑，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+								sb.append("[npc.speech(准备好接下我的蛋吧，[npc2.bitch]！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满，[npc2.bitch]！)]");
 							}
 							break;
 						default:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nipple(true)].");
-							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"推入[npc2.her][npc2.nipple(true)]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]急切地"+hipGrindText+"，兴奋地高喊出来，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+								sb.append("[npc.speech(我要把蛋产在你身体里了！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满！)]");
 							}
 							break;
 					}
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
-							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable breast.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"
+							+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]足以插入的乳房内，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.namePos] other [npc2.nipple(true)]."
-								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.namePos] [npc2.breasts] into egg-incubation chambers.");
+						sb.append("卵还没有排空，[npc.name]便拔了出来，又立刻插入了[npc2.namePos]另外的[npc2.nipple(true)]里。"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.namePos]的乳房打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.breasts] and growling,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]粗鲁地从其中抽出，高高在上似的揉搓着[npc2.namePos]鼓起的[npc2.breasts]，低声道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子，[npc2.bitch]！)]");
 							break;
 						default:
-							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.breasts] and sighing,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.namePos]鼓起的[npc2.breasts]，感叹道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子！)]");
 							break;
 					}
 					break;
 				case NIPPLE_CROTCH:
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nippleCrotch(true)].");
-							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"顶入[npc2.her][npc2.nippleCrotch(true)]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]粗暴地"+hipGrindText+"，嘴角露出一抹哂笑，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+								sb.append("[npc.speech(准备好接下我的蛋吧，[npc2.bitch]！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满，[npc2.bitch]！)]");
 							}
 							break;
 						default:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nippleCrotch(true)].");
-							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"推入[npc2.her][npc2.nippleCrotch(true)]的足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]急切地"+hipGrindText+"，兴奋地高喊出来，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+								sb.append("[npc.speech(我要把蛋产在你身体里了！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满！)]");
 							}
 							break;
 					}
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
-							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable [npc2.crotchBoobs].");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"
+							+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]足以插入的[npc2.crotchBoobs]内，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.namePos] other [npc2.nippleCrotch(true)]."
-								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.namePos] [npc2.crotchBoobs] into egg-incubation chambers.");
+						sb.append("卵还没有排空，[npc.name]便拔了出来，又立刻插入了[npc2.namePos]另外的[npc2.nippleCrotch(true)]里。"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.namePos]的[npc2.crotchBoobs]打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.crotchBoobs] and growling,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]粗鲁地从其中抽出，高高在上一般揉搓着[npc2.her]鼓起的[npc2.crotchBoobs]，低声道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子，[npc2.bitch]！)]");
 							break;
 						default:
-							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.crotchBoobs] and sighing,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							sb.append("当最后一声[npc.moan]消散后，[npc.name]从其中抽出，宠爱地抚摸着[npc2.namePos]鼓起的[npc2.crotchBoobs]，感叹道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子！)]");
 							break;
 					}
 					break;
 				case VAGINA:
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.pussy].");
-							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							sb.append("[npc2.name]体内，于是竭尽所能，将"+penetrationAreaPlusText+"顶入[npc2.her]的[npc2.pussy]足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]粗暴地"+hipGrindText+"，嘴角露出一抹哂笑，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+								sb.append("[npc.speech(准备好接下我的蛋吧，[npc2.bitch]！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满，[npc2.bitch]！)]");
 							}
 							break;
 						default:
-							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.pussy].");
-							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							sb.append("[npc2.name]体内，将"+penetrationAreaPlusText+"推入[npc.her]的[npc2.pussy]足够深处，却禁不住爆发出一阵[npc.a_moan+]。");
+							sb.append("[npc.she]急切地"+hipGrindText+"，兴奋地高喊出来，");
 							if(eggCount==1) {
-								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+								sb.append("[npc.speech(我要把蛋产在你身体里了！)]");
 							} else {
-								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+								sb.append("[npc.speech(看我用蛋把你给塞满！)]");
 							}
 							break;
 					}
 					sb.append("</br>");
-					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
-							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] womb.");
+					sb.append("随后[npc2.name]确切无疑地感觉到一枚圆滚滚的卵沿着[npc.namePos]的"+penetrationAreaText+"被送了进来，"
+							+ "当卵从末端挤出"+(condomBreaks?"，同时还撑破了[npc.namePos]的避孕套，":"，")+"安安稳稳地安置在了[npc2.her]子宫的深处，[npc2.she]不禁惊讶得[npc2.moan]了起来。");
 					if(eggCount>1) {
-						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.namePos] [npc2.pussy+]"
-								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] womb into an egg-incubation chamber.");
+						sb.append("卵还没有排空，[npc.name]继续将"+penetrationAreaPlusText+"深深埋在[npc2.namePos][npc2.pussy+]内，"
+								+ "在一连串满足的[npc.moans]声后，便将[npc2.her]的子宫打造成了孵卵的温床。");
 					}
 					sb.append("</br>");
 					switch(Main.sex.getSexPace(characterOrgasming)) {
 						case DOM_ROUGH:
-							sb.append("Finally, with one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and growling,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							sb.append("伴随着最后一声[npc.moan]的消散，[npc.name]粗鲁的从其中抽出，高高在上一般揉搓着[npc2.namePos]鼓起的小腹，感叹道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子，[npc2.bitch]！)]");
 							break;
 						default:
-							sb.append("Finally, with one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and sighing,");
-							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							sb.append("伴随着最后一声[npc.moan]的消散，[npc.name]从其中抽出，宠爱地抚摸着[npc2.namePos]鼓起的小腹，感叹道，");
+							sb.append("[npc.speech(别忘了照顾好我的孩子！)]");
 							break;
 					}
 					break;
@@ -865,12 +865,12 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Quick sex";
+			return "快速性爱";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Skips this sex scene, but still [style.boldSex(applies all applicable effects)] as though the scene had taken place, based on your partner's preferences."
-					+ " A description of the resulting sex scene will be displayed before the scene ends.";
+			return "跳过该性爱场景，但仍会根据对方的喜好[style.boldSex(应用所有适用影响)]，就像该场景已经发生过一样。"
+					+ "在场景结束前，会显示该性爱场景的总结。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -919,12 +919,12 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Resist";
+			return "抗拒";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Resist having sex with [npc2.name].";
+			return "抗拒和[npc2.name]做爱。";
 		}
 
 		@Override
@@ -932,66 +932,66 @@ public class GenericActions {
 			
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.BACK_TO_WALL)) {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(slap)], [npc.verb(hit)], and [npc.verb(kick)] [npc2.name] as [npc.she] desperately [npc.verb(try)] to struggle out of [npc2.her] grip,"
-								+ " but [npc.her] efforts prove to be in vain as [npc2.she] easily [npc2.verb(keep)] [npc.herHim] pinned back against the wall.",
+						"[npc.Name]对着[npc2.name]拳打脚踢扇巴掌，拼命想挣脱，"
+								+ "但完全是白费力气，[npc2.she]轻而易举地把[npc.herHim]顶到了墙上。",
 						
-						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out of [npc2.her] grasp,"
-								+ " but [npc2.her] grip is too strong for [npc.herHim], and [npc2.name] easily [npc2.verb(keep)] [npc.herHim] pushed back against the wall.",
+						"[npc.name][npc.sob+]着，无力地挣扎，想摆脱[npc2.name]的控制，"
+								+ "但[npc2.her]的力量比[npc.herHim]大太多了，轻而易举地把[npc.herHim]推回了墙上。",
 						
-						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
-								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(push)] [npc.herHim] back against the wall.");
+						"[npc.name]并拼命挣扎反抗[npc2.name]，乞求[npc2.herHim]放过[npc.herHim]。"
+								+ "[npc2.she]不由分说地把[npc.herHim]推回墙边，[npc.she][npc.sobbing]。");
 				
 			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.ALL_FOURS)) {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] [npc.verb(try)] to crawl away from [npc2.name],"
-								+ " but [npc.her] efforts prove to be in vain as [npc2.name] [npc2.verb(grab)] [npc.her] [npc.hips] and [npc2.verb(pull)] [npc.her] [npc.ass] back into [npc2.her] groin.",
+						"[npc.Name]一边[npc.sob+]，一边从[npc2.name]身边爬走，"
+								+ "但完全是白费力气，[npc2.name]一把抓住[npc.her][npc.hips]，把[npc.herHim]的[npc.ass]拉回[npc2.her]胯下。",
 						
-						"Trying to crawl away from [npc2.name] on all fours, [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc2.she] [npc2.verb(grasp)] [npc.her] [npc.hips], before pulling [npc.herHim] back into position.",
+						"[npc.name]试图从[npc2.name]身边逃走，像狗一样手脚并用地爬。[npc2.name]不顾[npc.name]的挣扎和[npc.sob+]，抓住[npc.her][npc.hips]，把[npc.herHim]又拖了回来。",
 						
-						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(try)] to crawl away from [npc2.herHim],"
-								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(take)] hold of [npc.her] [npc.hips] and [npc2.verb(pull)] [npc.herHim] back into [npc2.herHim].");
+						"[npc.name]发了疯一样想从[npc2.name]身边爬走，并乞求[npc2.name]放过[npc.herHim]，"
+								+ "[npc2.name]一把抓住[npc.her][npc.hips]，把[npc.herHim]又拖了回来。[npc.name]发出了绝望的[npc.sobbing]。");
 				
 			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.FACE_TO_WALL)) {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(slap)], [npc.verb(hit)], and [npc.verb(kick)] [npc2.name] as [npc.she] desperately [npc.verb(try)] to struggle out of [npc2.her] grip,"
-								+ " but [npc.her] efforts prove to be in vain as [npc2.name] easily [npc2.verb(keep)] [npc.herHim] pinned up against the wall.",
+						"[npc.Name]对着[npc2.name]拳打脚踢扇巴掌，拼命想挣脱，"
+								+ "但完全是白费力气，[npc2.name]轻而易举地把[npc.herHim]按在了墙上。",
 						
-						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out of [npc2.her] grasp,"
-								+ " but [npc2.her] grip is too strong for [npc.herHim], and [npc2.she] easily [npc2.verb(keep)] [npc.herHim] pushed up against the wall.",
+						"[npc.name][npc.sob+]着，无力地挣扎，想摆脱[npc2.name]的控制，"
+								+ "但[npc2.her]的力量比[npc.herHim]强太多了，轻而易举地就把[npc.herHim]摁回墙上。",
 						
-						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
-								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(push)] [npc.herHim] up against the wall.");
+						"[npc.name]并拼命挣扎反抗[npc2.name]，乞求[npc2.herHim]放过[npc.herHim]。"
+								+ "[npc2.she]不由分说地把[npc.herHim]顶到墙上，[npc.she][npc.sobbing]。");
 				
 			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.PERFORMING_ORAL)) {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(try)] to push [npc2.namePos] groin away from [npc.her] [npc.face],"
-								+ " but [npc.her] efforts prove to be in vain as [npc2.name] [npc2.verb(grab)] hold of [npc.her] head and [npc2.verb(pull)] [npc.herHim] back into [npc2.her] crotch.",
+						"[npc.Name]试着把[npc2.namePos]胯部从[npc.her][npc.face]上挪走，"
+								+ "但完全是白费力气，[npc2.name]抓着[npc.her]的脑袋，强行扭回[npc2.her]胯下。",
 						
-						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to pull [npc.her] [npc.face] away from [npc2.her] groin,"
-								+ " but [npc2.namePos] grasp on [npc.her] head is too strong, and [npc2.she] quickly [npc2.verb(force)] [npc.herHim] back into position.",
+						"[npc.name][npc.sob+]着，弱弱地挣扎，想把脸从[npc2.name]胯下抽走，"
+								+ "但[npc2.name]紧紧钳着[npc.her]的头不放，一下就把[npc.herHim]脑袋摆正。",
 								
-						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
-								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(pull)] [npc.her] [npc.face] back into [npc2.her] groin.");
+						"[npc.name]并拼命挣扎反抗[npc2.name]，乞求[npc2.herHim]放过[npc.herHim]。"
+								+ "[npc2.name]无视了绝望的[npc.sobbing]，不依不饶地把[npc.her]的[npc.face]掰回[npc2.her]的胯下。");
 				
 			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.LYING_DOWN)) {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(try)] to push [npc2.name] off of [npc.herHim] as [npc.she] desperately [npc.verb(try)] to wriggle out from under [npc2.herHim],"
-								+ " but [npc.her] efforts prove to be in vain as [npc2.name] easily [npc2.verb(pin)] [npc.herHim] to the floor.",
+						"[npc.Name]拼命想从[npc2.name]身下挣脱，试图把[npc2.herHim]从[npc.herHim]身上推开，"
+								+ "但完全是白费力气，[npc2.name]轻而易举地把[npc.herHim]摁死在地上。",
 						
-						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out from under [npc2.herHim],"
-								+ " but [npc2.name] [npc2.verb(press)] [npc2.her] body down onto [npc.hers], preventing [npc.herHim] from getting away.",
+						"[npc.name][npc.sob+]着，无力地挣扎，想从[npc2.name]身下爬出来，"
+								+ "但[npc2.name]将身体紧紧扣在[npc.hers]身上，不让[npc.herHim]逃脱。",
 						
-						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
-								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(use)] [npc2.her] body to pin [npc.herHim] to the floor.");
+						"[npc.name]并拼命挣扎反抗[npc2.name]，乞求[npc2.herHim]放过[npc.herHim]。"
+								+ "然而[npc2.she]无视了痛苦的[npc.sobbing]，用身子将[npc.herHim]紧紧压着。");
 				
 			} else {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(slap)], [npc.verb(hit)], and [npc.verb(kick)] [npc2.name] as [npc.she] desperately [npc.verb(try)] to struggle out of [npc2.her] grip,"
-								+ " but [npc.her] efforts prove to be in vain as [npc2.she] easily [npc2.verb(continue)] restraining [npc.herHim].",
+						"[npc.Name]对着[npc2.name]拳打脚踢扇巴掌，拼命想挣脱，"
+								+ "但被[npc2.name]轻松制服，徒劳无功。",
 								
-						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out of [npc2.her] grasp.",
+						"[npc.name][npc.sob+]着，无力地扭动，想摆脱[npc2.name]的控制。",
 						
-						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim], [npc.sobbing] in distress as [npc2.she] easily [npc2.verb(hold)] [npc.herHim] in place.");
+						"[npc.Name]拼命挣扎着反抗[npc2.name]，乞求[npc2.name]放[npc.herHim]走。[npc2.name]轻而易举地把[npc.Name]摁在原地，[npc.Name]不禁绝望地[npc.sobbing]。");
 			}
 		}
 		
@@ -1015,12 +1015,12 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Grow cock (self)";
+			return "长出鸡巴(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Use your transformative powers to grow a cock for yourself. <b>You will automatically transform the grown cock away when sex ends.</b>";
+			return "用你的转化能力长出一条鸡巴。<b>性爱结束后，你会自动变走长出来的鸡巴。</b>";
 		}
 
 		@Override
@@ -1033,14 +1033,14 @@ public class GenericActions {
 		@Override
 		public String getDescription() {//TODO resisting variations
 			if(Main.game.getPlayer().getSubspeciesOverrideRace()==Race.DEMON) {
-				return "Deciding to use your transformative powers to give yourself a thick demonic cock, you start grinning as you [npc.moanVerb],"
-						+ " [npc.speech(You're going to love this!)]";
+				return "你决定使用转化能力给自己变个粗大的恶魔鸡巴，接着面露出笑容，[npc.moanVerb]道，"
+						+ "[npc.speech(你会喜欢这个的！)]";
 			} else if (Main.game.getPlayer().isYouko()){
-				return "Deciding to use your transformative powers to give yourself a thick knotted fox cock, you start grinning as you [npc.moanVerb],"
-						+ " [npc.speech(You're going to love this!)]";
+				return "你决定用转化能力给自己一根有肥大锁结的狐狸肉棒，你笑了笑，转而[npc.moanVerb]，"
+						+ "[npc.speech(你会喜欢这个的！)]";
 			} else {
-				return "Deciding to use your transformative powers to give yourself a thick slimy cock, you start grinning as you [npc.moanVerb],"
-						+ " [npc.speech(You're going to love this!)]";
+				return "你决定使用史莱姆转化能力，给自己长一根粗大的史莱姆肉棒，你边笑边[npc.moanVerb]，"
+						+ "[npc.speech(你一定会喜欢这个的！)]";
 			}
 		}
 
@@ -1098,18 +1098,18 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Grow cock";
+			return "长出鸡巴";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).getSubspeciesOverrideRace()==Race.DEMON
 					|| Main.sex.getCharacterTargetedForSexAction(this).isElemental()) {
-				return "Get [npc2.name] to use [npc2.her] demonic self-transformative powers to grow [npc2.herself] a demonic cock.";
+				return "让[npc2.name]使用恶魔自我转化能力，给自己长一根恶魔肉棒。";
 			} else if(Main.sex.getCharacterTargetedForSexAction(this).isYouko()) {
-				return "Get [npc2.name] to use [npc2.her] innate self-transformative powers to grow [npc2.herself] a fox cock.";
+				return "让[npc2.name]使用与生俱来的自我转化能力，给自己长一根狐狸肉棒。";
 			} else {
-				return "Get [npc2.name] to use [npc2.her] slimy body's self-transformative powers to grow [npc2.herself] a slimy cock.";
+				return "让[npc2.name]使用史莱姆身体自我转化能力，给自己长一根史莱姆肉棒。";
 			}
 		}
 
@@ -1130,35 +1130,35 @@ public class GenericActions {
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).getSubspeciesOverrideRace()==Race.DEMON
 					|| Main.sex.getCharacterTargetedForSexAction(this).isElemental()) {
-				return "Grinning down at [npc2.name], you tease, [npc.speech(How about you use your transformative powers to grow a nice thick demonic cock, so that we can have even more fun!)]"
+				return "对[npc2.name]咧嘴笑着，你戏谑地说，[npc.speech(不如你用你的变形能力长个又粗又大的恶魔鸡巴，这样我们就能玩更多Play了！)]"
 						+ "<br/><br/>"
 						+(Main.sex.getCharacterTargetedForSexAction(this).isCoverableAreaExposed(CoverableArea.PENIS)
-							?"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] naked groin, you see a large bump start to form beneath [npc2.her] [npc2.skin]."
-									+ " Before you have any time to change your mind, it quickly grows out into a fat demonic cock, and as you stare down at the little wriggling bumps that press out all along its shaft,"
-									+ " a bead of precum seeps out and drips from the tip."
-							:"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] groin, you see a huge bulge quickly forming in [npc2.her] "
-									+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"."
-									+ " Before you have any time to change your mind, [npc2.she] lets out [npc2.a_moan+], and you realise that [npc2.sheHas] now got a huge demonic cock hiding beneath [npc2.her] clothing.");
+							?"[npc2.name]咯咯地笑了笑，当你往下看[npc2.her]裸露的腹股沟时，发现一个巨大的肿块正在[npc2.her][npc2.skin]下形成。"
+									+ "你还没来得及改变主意，它很快就长成了一个肥硕的恶魔阴茎，当你盯着它时，你能看到许多的小突起，沿着棒棒长出来，"
+									+ "尖端渗出一小滴先走液"
+							:"[npc2.name]咯咯地笑着，当你看向[npc2.her]的腹股沟时，你会看到一个庞大的肿块正在[npc2.her]"
+									+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"下形成。"
+									+ "你还没来得及改变主意，[npc2.she]就发出[npc2.a_moan+]，你发现[npc2.her]的衣服被巨大恶魔肉棒顶起个包。");
 				
 			} else if(Main.sex.getCharacterTargetedForSexAction(this).isYouko()) {
-				return "Grinning down at [npc2.name], you tease, [npc.speech(How about you use your transformative powers to grow a nice thick fox cock, so that we can have even more fun!)]"
+				return "对[npc2.name]咧嘴笑着，你戏谑地说，[npc.speech(不如你用你的变形能力长个又粗又大的狐狸肉棒，这样我们就能玩更多Play了！)]"
 						+ "<br/><br/>"
 						+(Main.sex.getCharacterTargetedForSexAction(this).isCoverableAreaExposed(CoverableArea.PENIS)
-						?"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] naked groin, you see a large bump start to form beneath [npc2.her] [npc2.skin]."
-						+ " Before you have any time to change your mind, it quickly grows out into a fox cock, and as you stare down at its throbbing length,"
-						+ " a bead of precum seeps out and drips from the tip."
-						:"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] groin, you see a huge bulge quickly forming in [npc2.her] "
-						+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"."
-						+ " Before you have any time to change your mind, [npc2.she] lets out [npc2.a_moan+], and you realise that [npc2.sheHas] now got a huge fox cock hiding beneath [npc2.her] clothing.");
+						?"[npc2.name]咯咯地笑了笑，你往下看[npc2.her]裸露的腹股沟，发现一个巨大的肿块正在[npc2.her][npc2.skin]下形成。"
+						+ "你还没来得及改变主意，它很快就长成了一根狐狸肉棒，当你盯着它时，你能看到它整根抽动着，"
+						+ "尖端渗出一小滴先走液"
+						:"[npc2.name]咯咯地笑着，当你看向[npc2.her]的腹股沟时，你会看到一个庞大的肿块正在[npc2.her]"
+						+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"下形成。"
+						+ "你还没来得及改变主意，[npc2.she]就发出[npc2.a_moan+]，你发现[npc2.her]的衣服被巨大狐狸肉棒顶起个包。");
 			} else {
-				return "Grinning down at [npc2.name], you tease, [npc.speech(How about you use your transformative powers to grow a nice thick slimy cock, so that we can have even more fun!)]"
+				return "对[npc2.name]咧嘴笑着，你戏谑地说，[npc.speech(不如你用你的变形能力长个又粗又大的史莱姆阴茎，这样我们就能玩更多Play了！)]"
 						+ "<br/><br/>"
 						+(Main.sex.getCharacterTargetedForSexAction(this).isCoverableAreaExposed(CoverableArea.PENIS)
-							?"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] naked groin, you see a large bump start to form beneath [npc2.her] [npc2.skin]."
-									+ " Before you have any time to change your mind, it quickly grows out into a fat slimy cock, and as you stare down at its throbbing length, a bead of precum seeps out and drips from the tip."
-							:"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] groin, you see a huge bulge quickly forming in [npc2.her] "
-									+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"."
-									+ " Before you have any time to change your mind, [npc2.she] lets out [npc2.a_moan+], and you realise that [npc2.sheHas] now got a huge slimy cock hiding beneath [npc2.her] clothing.");
+							?"[npc2.name]咯咯地笑了笑，当你往下看[npc2.her]裸露的腹股沟时，发现一个巨大的肿块正在[npc2.her][npc2.skin]下形成。"
+									+ "你还没来得及改变主意，它很快就长成了一个肥大的史莱姆阴茎，当你盯着它时，你能看到它的长度悸动着，一滴先走液从它尖端渗出并滴下。"
+							:"[npc2.name]咯咯地笑着，当你看向[npc2.her]的腹股沟时，你会看到一个庞大的肿块正在[npc2.her]"
+									+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"下形成。"
+									+ "你还没来得及改变主意，[npc2.she]就发出[npc2.a_moan+]，你发现[npc2.her]的衣服被巨大史莱姆肉棒顶起个包。");
 			}
 		}
 		
@@ -1237,11 +1237,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Calming suggestion";
+			return "冷静的建议";
 		}
 		@Override
 		public String getActionDescription() {
-			return "[npc2.Name] is under the effect of a psychoactive substance. Use this to your advantage and hypnotically suggest that [npc2.she] doesn't like having sex with you.";
+			return "[npc2.Name]现在陷入了幻觉之中，你可以利用这一点，催眠暗示[npc2.she]讨厌和你做爱的感觉。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -1255,30 +1255,30 @@ public class GenericActions {
 		public String getDescription() {
 			StringBuilder sb = new StringBuilder();
 			sb.append("<p>"
-					+ "Wanting to take advantage of the fact that [npc2.nameIsFull] under the strong effect of a psychoactive substance, [npc.name] [npc.verb(lean)] towards [npc2.herHim] and [npc.moansVerb],"
-						+ " [npc.speech(You aren't really interested in having sex with me, are you?)]"
+					+ "尝试着利用[npc2.nameIsFull]的头脑受到强烈的致幻性物质影响这一事实，[npc.Name]俯身面向[npc2.herHim]并[npc.moansVerb]，"
+						+ "[npc.speech(你真的不喜欢和我做爱，是吗？)]"
 					+ "</p>"
 					+ "<p>"
-						+ "[npc2.Name] can't help but agree with what [npc.sheIs] saying, and [npc2.name] haltingly [npc2.verb(answer)],"
-						+ " [npc2.speech(Yes... I... I don't know why I'm having sex with you...)]"
+						+ "[npc2.Name]情不自禁地同意了[npc.sheIs]的话，并吞吞吐吐地回答,"
+						+ "[npc2.speech(是啊……我……我真的不知道为什么我正在和你做爱……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Pushing a little further,"+(!Main.sex.getCharacterPerformingAction().isPlayer()?" and driven on by [npc.her] fetish for having non-consensual sex,":"")+" [npc.name] [npc.verb(continue)],"
-						+ " [npc.speech(You'd rather I wasn't fucking you right now, isn't that right?)]"
+						+(!Main.sex.getCharacterPerformingAction().isPlayer()?"被[npc.her]的非自愿性癖所驱使，":"")+"[npc.name]又深入一分，继续道，"
+						+ "[npc.speech(你宁愿我现在不操你，不是么？)]"
 					+ "</p>");
 			
 			sb.append("<p>");
 				if(Main.sex.isDom(Main.sex.getCharacterTargetedForSexAction(this))) {
-					sb.append("As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] [npc2.verb(let)] out a disappointed sigh,"
-							+ " [npc2.speech(This isn't really all that fun...)]");
+					sb.append("当催眠的暗示进入[npc2.namePos]的头脑时，[npc2.she]失望地叹了口气，"
+							+ "[npc2.speech(这并不是很有趣……)]");
 					
 				} else {
 					if(LustLevel.getLustLevelFromValue(Main.sex.getCharacterTargetedForSexAction(this).getLust()-50).getSexPaceSubmissive()==SexPace.SUB_RESISTING) {
-						sb.append("As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] [npc2.verb(let)] out a distressed cry,"
-								+ " [npc2.speech(Wait, w-why is this happening?! Please, stop it! Get away from me!)]");
+						sb.append("催眠的暗示进入[npc2.namePos]的头脑，[npc2.she]发出迷乱的哀叫，"
+								+ "[npc2.speech(等等，怎——什么情况？求你了，快停下！从我里面出去！)]");
 					} else {
-						sb.append("As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] [npc2.verb(let)] out a disappointed sigh,"
-								+ " [npc2.speech(This isn't really all that fun...)]");
+						sb.append("当催眠的暗示进入[npc2.namePos]的头脑时，[npc2.she]失望地叹了口气，"
+								+ "[npc2.speech(这并不是很有趣……)]");
 					}
 				}
 			sb.append("</p>");
@@ -1304,11 +1304,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lustful suggestion";
+			return "下流的建议";
 		}
 		@Override
 		public String getActionDescription() {
-			return "[npc2.Name] is under the effect of a psychoactive substance. Use this to your advantage and hypnotically suggest that [npc2.she] loves to have sex with you.";
+			return "[npc2.Name]现在陷入了幻觉之中，你可以利用这一点，催眠暗示[npc2.she]爱上和你做爱的感觉。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -1322,41 +1322,41 @@ public class GenericActions {
 		public String getDescription() {
 			StringBuilder sb = new StringBuilder();
 			
-			sb.append("Wanting to take advantage of the fact that [npc2.nameIsFull] under the mind-altering effects of a psychoactive substance, [npc.name] [npc.verb(lean)] in towards [npc2.herHim] and [npc.moanVerb],"
-						+ " [npc.speech(You love having sex with me, don't you?)]"
+			sb.append("尝试着利用[npc2.nameIsFull]的头脑受到致幻性物质的影响后易于催眠暗示这一事实，[npc.Name]俯身面向[npc2.herHim]并[npc.moanVerb]，"
+						+ "[npc.speech(你喜欢和我做爱，不是吗？)]"
 					+ "</p>");
 			
 			if(Main.sex.getCharacterTargetedForSexAction(this).isPlayer()) {
 				sb.append("<p>"
-							+ "As [npc.name] says this, you suddenly feel a fuzzy warmth clouding your mind, and you're vaguely aware of your [npc2.eyes] glazing over as you answer,"
-							+ " [npc2.speech(Yes... I... I love having sex with you...)]"
+							+ "当[npc.Name]说这句话时，你突然感到一股稀里糊涂的温暖笼罩着你的头脑，当你回答时，你迷糊地意识到你的[npc2.eyes]变得呆滞起来，"
+							+ "[npc2.speech(嗯……我……我真的好喜欢和你做爱……)]"
 						+ "</p>");
 			} else {
 				sb.append("<p>"
-						+ "[npc2.NamePos] [npc2.eyes] glaze over a little as [npc2.she] answers,"
-						+ " [npc2.speech(Yes... I... I love having sex with you...)]"
+						+ "[npc2.she]回答时眼神有些呆滞，"
+						+ "[npc2.speech(是啊……我……我真的好爱和你做爱……)]"
 					+ "</p>");
 			}
 			
 			sb.append( "<p>"
-						+ "Pushing a little further, [npc.name] [npc.verb(continue)],"
-						+ " [npc.speech(You love begging for me to fuck you, isn't that right?)]"
+						+ "[npc.Name]进一步暗示道，"
+						+ "[npc.speech(你喜欢求我操你，难道不是吗？)]"
 					+ "</p>");
 
 			if(Main.sex.getCharacterTargetedForSexAction(this).isPlayer()) {
 				sb.append("<p>"
-							+ "As your mind well and truly gives in to the hypnotic suggestion, you find yourself wanting nothing more than to be fucked by [npc.name], and you eagerly [npc2.moansVerb],"
-							+ " [npc2.speech(Yes... Yes! Please, fuck me! I <i>need</i> you to fuck me!)]"
+							+ "你的神智完全沉溺于催眠中。你发现自己满脑子只剩下被[npc.Name]操这件事。你渴欲且[npc2.moansVerb]，"
+							+ "[npc2.speech(好……好的！请，请操我！我<i>想要</i>你操我！)]"
 						+ "</p>");
 			} else {
 				sb.append("<p>"
-						+ "As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] starts to sound a lot more eager, and [npc2.moansVerb],"
-						+ " [npc2.speech(Yes... Yes, [npc.name]! Please, fuck me! I <i>need</i> you to fuck me!)]"
+						+ "在那催眠暗示深入到[npc2.namePos]的神智之后，[npc2.she]听起来更加地欲求不满，[npc2.moansVerb]，"
+						+ "[npc2.speech(好……好的，[npc.Name]！请，操我！我<i>希望</i>你来操死我！)]"
 					+ "</p>");
 			}
 			
 			sb.append( "<p>"
-						+ "[npc.speech(That's a good [npc2.girl],)] [npc.name] [npc.verb(say)], pleased to hear that [npc2.namePos] mind is [npc.hers] to twist as [npc.she] [npc.verb(see)] fit. [npc.speech(I'll give you what you want!)]"
+						+ "[npc.speech(真是个好[npc2.girl]，)][npc.Name]说，很高兴听到[npc2.namePos]的想法已经被[npc.hers]扭曲成[npc.she]想要的样子了。[npc.speech(我将赐予你任何你想要的！)]"
 					+ "</p>");
 			
 			return sb.toString();
@@ -1377,12 +1377,12 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Deny";
+			return "制止";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Force [npc2.name] to stay perfectly still, holding them in position until they've lost a good portion of their arousal.";
+			return "强迫[npc2.name]保持完全静止，控制住，让他们没那么性奋。";
 		}
 
 		@Override
@@ -1415,47 +1415,47 @@ public class GenericActions {
 					if(!Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
 					UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-							"Taking a gentle, yet firm, grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] quite still, softly [npc.moaning] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, ",
-							"Firmly gripping [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] in place, letting out [npc.a_moan+] as [npc.she] [npc.verb(force)] [npc2.herHim] to calm down, ",
-							"Softly [npc.moaning] as [npc.she] [npc.verb(take)] a firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(tease)] [npc2.name] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, "));
+							"温柔而坚定地拽住[npc2.namePos][npc2.arms]，[npc.Name]静静地抱住[npc2.herHim]，一边轻声[npc.moaning]，一边等待[npc2.herHim]冷静下来 ，",
+							"[npc.Name]牢牢抓住[npc2.namePos]的[npc2.arms]，把住[npc2.herHim]，发出[npc.a_moan+]，强行让[npc2.herHim]冷静下来，",
+							"[npc.Name]轻柔地[npc.moaning]，牢牢抓住[npc2.namePos]的[npc2.arms]，调戏着[npc2.name]，等待[npc2.namePos]平静下来，"));
 						UtilText.nodeContentSB.append(
 								UtilText.returnStringAtRandom(
-									"[npc.speech(That's a good [npc2.girl]... We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"just yet")+" now, would we?)]",
-									"[npc.speech(Be a good [npc2.girl] now, and take a moment to calm down. You didn't think you'd get to orgasm "+(alreadyOrgasmed?"again":"")+" so soon with me, did you?)]",
-									"[npc.speech(Good [npc2.girl]... You just take a moment to calm down. We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"so soon")+" now, would we?)]"));
+									"[npc.speech(这才是乖[npc2.girl]……我们现在都不想让你"+(alreadyOrgasmed?"再高潮一次":"就这样高潮")+"，对吧？)]",
+									"[npc.speech(现在该做个乖[npc2.girl]了。平静一会。你也不想很快就和我"+(alreadyOrgasmed?"再高潮一次":"达到高潮")+"吧，对不对？)]",
+									"[npc.speech(乖乖[npc2.girl]……只需要一小会，平静一下。我们现在都不想你"+(alreadyOrgasmed?"就这样再高潮一次":"太快高潮")+"呢，是不是？)]"));
 					} else {
 						UtilText.nodeContentSB.append(
 								UtilText.returnStringAtRandom(
-									"Pulling back from [npc2.name], [npc.name] [npc.verb(leave)] [npc2.herHim] without stimulation for a few moments, softly [npc.moaning] to [npc.herself] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down.",
-									"Breaking off from having physical contact with [npc2.name], [npc.name] [npc.verb(stop)] stimulating [npc2.herHim] and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down.",
-									"Pausing for a moment, [npc.name] [npc.verb(stop)] stimulating [npc2.name] and quietly [npc.verbMoans] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down."));
+									"[npc.Name]从[npc2.name]身边退开，不再继续玩弄[npc2.herHim]，[npc.Name]轻柔地[npc.moaning]着，等待[npc2.herHim]平静下来。",
+									"[npc.Name]中止了与[npc2.name]的肉体接触，不再继续玩弄[npc2.herHim]，[npc.Name]发出一声[npc.a_moan+]，等待着[npc2.herHim]冷静下来。",
+									"[npc.Name]暂停了一会，不再继续玩弄[npc2.name]，[npc.Name]轻柔地[npc.verbMoans]着，等待[npc2.herHim]平静下来。"));
 					}
 					break;
 				case DOM_NORMAL:
 					UtilText.nodeContentSB.append(
 							UtilText.returnStringAtRandom(
-								"Taking a firm, grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] quite still, [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, ",
-								"Firmly gripping [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] in place, letting out [npc.a_moan+] as [npc.she] [npc.verb(force)] [npc2.herHim] to calm down, ",
-								"[npc.Moaning+] as [npc.she] [npc.verb(take)] a firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(tease)] [npc2.name] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, "));
+								"坚定地拽住[npc2.namePos][npc2.arms]，[npc.Name]静静地抱住[npc2.herHim]，一边发出[npc.moaning+]，一边等待[npc2.herHim]冷静下来 ，",
+								"[npc.Name]牢牢抓住[npc2.namePos]的[npc2.arms]，把住[npc2.herHim]，发出[npc.a_moan+]，强行让[npc2.herHim]冷静下来，",
+								"[npc.Name]发出[npc.Moaning+]，牢牢抓住[npc2.namePos]的[npc2.arms]，调戏着[npc2.name]，等待[npc2.namePos]平静下来，"));
 
 						UtilText.nodeContentSB.append(
 							UtilText.returnStringAtRandom(
-								"[npc.speech(That's a good [npc2.girl]! We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"just yet")+" now, would we?!)]",
-								"[npc.speech(Be a good [npc2.girl] now, and take a moment to calm down. You didn't think you'd get to orgasm "+(alreadyOrgasmed?"again":"")+" so soon with me, did you?!)]",
-								"[npc.speech(Good [npc2.girl]! You just take a moment to calm down! We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"so soon")+" now, would we?!)]"));
+								"[npc.speech(这才是乖[npc2.girl]！我们现在都不想让你"+(alreadyOrgasmed?"再高潮一次":"就这样高潮")+"，对吧？！)]",
+								"[npc.speech(现在该做个乖[npc2.girl]了。平静一会。你也不想很快就和我"+(alreadyOrgasmed?"再高潮一次":"达到高潮")+"吧，对不对？)]",
+								"[npc.speech(乖乖[npc2.girl]！只需要一小会，平静一下。我们现在都不想你"+(alreadyOrgasmed?"就这样再高潮一次":"太快高潮")+"呢，是不是？！)]"));
 						break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(
 							UtilText.returnStringAtRandom(
-								"Taking a rough, firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(force)] [npc2.herHim] to remain quite still, growling in a threatening manner as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, ",
-								"Roughly gripping [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(force)] [npc2.herHim] to remain in place, letting out a threatening growl as [npc.she] [npc.verb(make)] [npc2.herHim] calm down, ",
-								"Letting out a menacing growl as [npc.she] [npc.verb(take)] a firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(threaten)] [npc.her] partner as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, "));
+								"粗鲁地紧拽住[npc2.namePos][npc2.arms]，[npc.Name]强制[npc2.herHim]保持不动，一边威胁地咆哮，一边等待[npc2.herHim]冷静下来 ，",
+								"[npc.Name]粗暴地抓住[npc2.namePos]的[npc2.arms]，强迫[npc2.herHim]原地不动，还发出威胁的咆哮让[npc2.herHim]平静下来，",
+								"[npc.Name]气势汹汹地咆哮着，牢牢抓住[npc2.namePos]的[npc2.arms]，威胁[npc.her]的对象，等[npc2.herHim]平静下来，"));
 
 						UtilText.nodeContentSB.append(
 							UtilText.returnStringAtRandom(
-								"[npc.speech(Stay still, you dumb [npc2.bitch]! You're not getting to climax "+(alreadyOrgasmed?"again already":"just yet")+" with me, understood?!)]",
-								"[npc.speech(Stay still, [npc2.bitch], and calm down! You didn't think you'd get to orgasm "+(alreadyOrgasmed?"again":"")+" so soon with me, did you?!)]",
-								"[npc.speech(That's it, [npc2.bitch]! You stay still and calm down! We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"so soon")+" now, would we?!)]"));
+								"[npc.speech(别乱动，你个笨[npc2.bitch]！你可不能和我"+(alreadyOrgasmed?"再高潮一次":"就这么高潮")+"，懂了吗？！)]",
+								"[npc.speech(别乱动，[npc2.bitch]，能不能平静点！你不会以为自己"+(alreadyOrgasmed?"还能这么快和我高潮":"能这么快就和我高潮")+"吧！)]",
+								"[npc.speech(就这样，[npc2.bitch]！别动，平静下来！我们现在都不想你"+(alreadyOrgasmed?"再这么高潮":"这么快高潮")+"，对吧？)]"));
 						break;
 				default:
 					break;
@@ -1467,30 +1467,30 @@ public class GenericActions {
 					case SUB_EAGER:
 						UtilText.nodeContentSB.append(
 							UtilText.returnStringAtRandom(
-									"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name],":"No...")+")] [npc2.name] [npc2.verb(reply)], trying to contain the excitement in [npc2.her] voice, [npc2.speechNoExtraEffects(I'll try to endure...)]",
-									"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name],":"No...")+")] [npc2.name] [npc2.moansVerb], failing to subdue the intense arousal in [npc2.her] voice, [npc2.speechNoExtraEffects(I'll do my best to hold back...)]",
-									"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.verb(answer)], before trying to stifle a desperate [npc2.moan], [npc2.speechNoExtraEffects(~Mmm!~ I'll try to hold back!)]"));
+									"[npc2.speechNoExtraEffects("+(nameKnown?"不行，[npc.name]，":"不要……")+")][npc2.name]回答，努力抑制声音里的兴奋，[npc2.speechNoExtraEffects(我会忍住的……)]",
+									"[npc2.speechNoExtraEffects("+(nameKnown?"不行，[npc.name]，":"不要……")+")][npc2.name][npc2.moansVerb]，声音中强烈的快感失去控制，冲撞而出，[npc2.speechNoExtraEffects(我会尽量憋回去的……)]",
+									"[npc2.speechNoExtraEffects("+(nameKnown?"不行，[npc.name]，":"不要……")+")][npc2.name]回答，然后努力扼住狂乱的[npc2.moan]，[npc2.speechNoExtraEffects(~嗯唔！~ 我会努力憋住的！)]"));
 						break;
 					case SUB_NORMAL:
 						UtilText.nodeContentSB.append(
 								UtilText.returnStringAtRandom(
-										"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.verb(reply)], [npc2.speechNoExtraEffects(I'll try to endure...)]",
-										"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.moansVerb], [npc2.speechNoExtraEffects(I'll do my best to hold back...)]",
-										"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.verb(answer)], [npc2.speechNoExtraEffects(I'll try to hold back!)]"));
+										"[npc2.speechNoExtraEffects("+(nameKnown?"不要，[npc.name]……":"不行……")+")][npc2.name]回答，[npc2.speechNoExtraEffects(我会努力忍住的……)]",
+										"[npc2.speechNoExtraEffects("+(nameKnown?"不要，[npc.name]……":"不行……")+")][npc2.name][npc2.moansVerb]，[npc2.speechNoExtraEffects(我会努力憋住的……)]",
+										"[npc2.speechNoExtraEffects("+(nameKnown?"不要，[npc.name]……":"不行……")+")][npc2.name]回答，[npc2.speechNoExtraEffects(我会努力憋住的！)]"));
 						break;
 					case SUB_RESISTING:
 						UtilText.nodeContentSB.append(
 								UtilText.returnStringAtRandom(
-										"[npc2.speechNoExtraEffects(Just get away from me!)] [npc2.name] frantically [npc2.sobsVerb], [npc2.speechNoExtraEffects(I hate this!)]",
-										"[npc2.speechNoExtraEffects(Let go of me!)] [npc2.name] desperately [npc2.sobsVerb], trying to pull [npc2.herself] out of [npc.namePos] grasp, [npc2.speechNoExtraEffects(Stop it! Get away from me!)]",
-										"[npc2.speechNoExtraEffects(Why won't you just let me go?!)] [npc2.name] [npc2.sobsVerb] as [npc2.she] weakly [npc2.verb(try)] to pull away from [npc2.name], [npc2.speechNoExtraEffects(I don't want this!)]"));
+										"[npc2.speechNoExtraEffects(只要你快走！)][npc2.name]悲伤地[npc2.sobsVerb]，[npc2.speechNoExtraEffects(我讨厌这样！)]",
+										"[npc2.speechNoExtraEffects(放开我！)][npc2.name]狂乱地[npc2.sobsVerb]，努力挣脱[npc.namePos]的控制，[npc2.speechNoExtraEffects(快停下！求求你快走！)]",
+										"[npc2.speechNoExtraEffects(为什么你就是不放我走呢？！)][npc2.name][npc2.sobsVerb]，随即试图虚弱无力地拽开[npc2.name]，[npc2.speechNoExtraEffects(我不想这样！)]"));
 						break;
 					default:
 						break;
 				}
 			}
 			UtilText.nodeContentSB.append("<br/><br/>");
-			UtilText.nodeContentSB.append("Once it's clear that [npc2.nameHasFull] calmed down, [npc.name] [npc.verb(loosen)] [npc.her] grip, before continuing as [npc.she] [npc.was] before...");
+			UtilText.nodeContentSB.append("[npc2.nameHasFull]一旦明显平静下来，[npc.name]就放松控制，然后继续之前的动作……");
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -1515,12 +1515,12 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Stop penetrations";
+			return "停止插入";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stop all ongoing penetrative actions that [npc2.name] is involved with.";
+			return "停止所有[npc2.name]参与的现行插入动作。";
 		}
 
 		@Override
@@ -1541,131 +1541,131 @@ public class GenericActions {
 						case ANUS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.asshole+]."));
+										"<br/>[npc.name]从[npc2.name][npc2.asshole+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.asshole+]."));
+										"<br/>[npc.name]从[npc2.name][npc2.asshole+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case ASS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] using [npc2.her] [npc2.ass+]."));
+										"<br/>[npc.Name]停止使用[npc2.name][npc2.ass+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] using [npc2.her] [npc2.ass+]."));
+										"<br/>[npc.Name]停止使用[npc2.name][npc2.ass+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case ARMPITS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] fucking [npc2.her] [npc2.armpit+]."));
+										"<br/>[npc.Name]停止操[npc2.name][npc2.armpit+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] fucking [npc2.her] [npc2.armpit+]."));
+										"<br/>[npc.Name]停止操[npc2.name][npc2.armpit+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case BREAST:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.breasts+]."));
+										"<br/>[npc.Name]停止玩弄[npc2.name][npc2.breasts+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.breasts+]."));
+										"<br/>[npc.Name]停止玩弄[npc2.name][npc2.breasts+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case BREAST_CROTCH:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.crotchBoobs+]."));
+										"<br/>[npc.Name]停止玩弄[npc2.name][npc2.crotchBoobs+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.crotchBoobs+]."));
+										"<br/>[npc.Name]停止玩弄[npc2.name][npc2.crotchBoobs+]后，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case MOUTH:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] mouth."));
+										"<br/>[npc.Name]从[npc2.name]嘴里拔出来，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] mouth."));
+										"<br/>[npc.Name]从[npc2.name]嘴里拔出来，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case NIPPLE:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.nipple+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.nipple+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.nipple+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.nipple+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case NIPPLE_CROTCH:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.crotchNipple+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.crotchNipple+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.crotchNipple+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.crotchNipple+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case URETHRA_PENIS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.penisUrethra+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.penisUrethra+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.penisUrethra+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.penisUrethra+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case URETHRA_VAGINA:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.vaginaUrethra+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.vaginaUrethra+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.vaginaUrethra+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.vaginaUrethra+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case VAGINA:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.pussy+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.pussy+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.pussy+]."));
+										"<br/>[npc.Name]从[npc2.name][npc2.pussy+]里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case THIGHS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out from between [npc2.her] thighs."));
+										"<br/>[npc.Name]从[npc2.name]腿缝间拔出来，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out from between [npc2.her] thighs."));
+										"<br/>[npc.Name]从[npc2.name]腿缝间拔出来，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 						case SPINNERET:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
 								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] spinneret."));
+										"<br/>[npc.Name]从[npc2.name]丝囊里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
-										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] spinneret."));
+										"<br/>[npc.Name]从[npc2.name]丝囊里拔出去了，[npc2.name]发出[npc2.a_moan+]。"));
 							}
 							break;
 					}
@@ -1695,12 +1695,12 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Stop penetrations (self)";
+			return "停止插入(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stop all ongoing penetrative actions that you are involved with.";
+			return "停止所有你参与的现行插入动作。";
 		}
 
 		@Override
@@ -1721,106 +1721,106 @@ public class GenericActions {
 					switch(ot) {
 						case ANUS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.asshole+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.asshole+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.asshole+].");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name][npc2.asshole+]里拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							break;
 						case ASS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop using [npc2.her] [npc2.ass+].");
+								UtilText.nodeContentSB.append("<br/>你停止使用[npc2.name][npc2.ass+]，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.ass+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.ass+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case ARMPITS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop fucking [npc2.her] [npc2.armpit+].");
+								UtilText.nodeContentSB.append("<br/>你不再操[npc2.name][npc2.armpit+]后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.armpits+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.armpits+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case BREAST:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop playing with [npc2.her] [npc2.breasts+].");
+								UtilText.nodeContentSB.append("<br/>你不再玩弄[npc2.name][npc2.breasts+]后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.breasts+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.breasts+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case BREAST_CROTCH:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop playing with [npc2.her] [npc2.crotchBoobs+].");
+								UtilText.nodeContentSB.append("<br/>你不再玩弄[npc2.name][npc2.crotchBoobs+]后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.crotchBoobs+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.crotchBoobs+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case MOUTH:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] mouth.");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name]嘴里拔出来，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you pull out of your mouth.");
+								UtilText.nodeContentSB.append("<br/>你从自己嘴里拔出来后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case NIPPLE:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.nipple+].");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name][npc2.nipple+]里拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.nipple+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.nipple+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case NIPPLE_CROTCH:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.crotchNipple+].");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name][npc2.crotchNipple+]里拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.crotchNipple+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.crotchNipple+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case URETHRA_PENIS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.penisUrethra+].");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name][npc2.penisUrethra+]里拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.penisUrethra+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.penisUrethra+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case URETHRA_VAGINA:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.vaginaUrethra+].");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name][npc2.vaginaUrethra+]里拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.vaginaUrethra+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.vaginaUrethra+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case VAGINA:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.pussy+].");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name][npc2.pussy+]里拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.pussy+].");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己[npc.pussy+]后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case THIGHS:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out from between [npc2.her] thighs.");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name]腿缝间拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop playing with your thighs.");
+								UtilText.nodeContentSB.append("<br/>你停止玩弄自己的大腿后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 						case SPINNERET:
 							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] spinneret.");
+								UtilText.nodeContentSB.append("<br/>你从[npc2.name]的丝囊里拔出来后，[npc2.her]发出[npc2.a_moan+]。");
 							}
 							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
-								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your spinneret.");
+								UtilText.nodeContentSB.append("<br/>你停止刺激自己的丝囊后，[npc.lips+]间飘出[npc.a_moan+]。");
 							}
 							break;
 					}
@@ -1849,11 +1849,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Forbid self actions";
+			return "禁止自我行为";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Forbid [npc2.name] from performing all self-penetrative actions.";
+			return "禁止[npc2.name]所有自插行为。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -1877,7 +1877,7 @@ public class GenericActions {
 			
 			if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA)!=null) {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
-					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.pussy+].");
+					UtilText.nodeContentSB.append("[npc2.Name]发出失望的[npc.moan]，因为你强行阻止了[npc2.herHim]继续刺激自己[npc2.pussy+]。");
 				}
 			}
 			
@@ -1885,7 +1885,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("As you put an end to [npc2.namePos] self-stimulation of [npc2.her] [npc2.asshole], [npc2.she] lets out a pathetic whine.");
+					UtilText.nodeContentSB.append("因为你终止了[npc2.namePos]刺激自己的[npc2.asshole]，[npc2.she]发出悲惨的呜叫。");
 				}
 			}
 			
@@ -1893,7 +1893,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("[npc2.Name] pouts at you as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.nipples+].");
+					UtilText.nodeContentSB.append("[npc2.name]冲着你噘了噘嘴，因为你强行阻止了[npc2.herHim]继续刺激自己[npc2.nipples+]。");
 				}
 			}
 			
@@ -1901,7 +1901,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop using [npc2.her] mouth.");
+					UtilText.nodeContentSB.append("[npc2.Name]发出了失望的[npc.moan]，因为你强行阻止[npc2.herHim]使用自己的嘴。");
 				}
 			}
 			
@@ -1909,8 +1909,8 @@ public class GenericActions {
 				UtilText.nodeContentSB.append("<br/><br/>");
 			}
 			
-			UtilText.nodeContentSB.append("[npc.speech(I don't want to see you trying to get yourself off,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will no longer use any self-penetrative actions.</i>");
+			UtilText.nodeContentSB.append("[npc.speech(我可不想看见你尝试放开自己，)]你冲着[npc2.name][npc.moanVerb]。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]不能再使用自插行为了。</i>");
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -1931,11 +1931,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Permit self actions";
+			return "允许自慰";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Permit [npc2.name] to perform all self-penetrative actions.";
+			return "允许[npc2.name]所有自插行为。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -1955,8 +1955,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "[npc.speech(You can touch yourself all you want,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to use any self-penetrative actions.</i>";
+			return "[npc.speech(你可以随心意触碰自己，)]你对着[npc2.name][npc.moanVerb]。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]现在能使用任意自插行为了。</i>";
 		}
 		@Override
 		public void applyEffects() {
@@ -1973,11 +1973,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Restrict control";
+			return "严格限制动作";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Restrict [npc2.namePos] level of control, preventing [npc2.herHim] from initiating any non-self penetrative actions.";
+			return "限制[npc2.namePos]的控制等级，阻止[npc2.herHim]所有非自插的插入行为。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -1999,8 +1999,8 @@ public class GenericActions {
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("[npc.speech(You're not to do anything without being told,)] you order [npc2.name].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] now has a restricted level of control, and cannot initiate any non-self penetrative actions.</i>");
+			UtilText.nodeContentSB.append("[npc.speech(没得到允许，你什么都不许做，)]你命令[npc2.name]说。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]的控制等级被限制了，不能做非自插的插入行为。</i>");
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -2020,11 +2020,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Unrestrict control";
+			return "减弱动作限制";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Unrestrict [npc2.namePos] level of control, allowing [npc2.herHim] to initiate non-self penetrative actions.";
+			return "取消[npc2.namePos]的控制等级限制，允许[npc2.herHim]做非自插的插入行为。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2046,8 +2046,8 @@ public class GenericActions {
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("[npc.speech(You can do what you like,)] you say to [npc2.name], freeing [npc2.herHim] to do as [npc2.she] pleases.<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] now has an unrestricted level of control, and can initiate non-self penetrative actions at will.</i>");
+			UtilText.nodeContentSB.append("[npc.speech(你可以随心做事了，)]你对[npc2.name]说，让[npc2.she]按喜好去做。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]的控制等级不受限了，可以按意愿做非自插的插入行为。</i>");
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -2072,11 +2072,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Forbid positioning";
+			return "禁止姿势切换";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Forbid [npc2.name] from using any positioning actions.";
+			return "禁止[npc2.name]使用姿势切换动作。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2099,8 +2099,8 @@ public class GenericActions {
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("[npc.speech(I don't want to see you attempting to switch positions,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will no longer use any positioning actions.</i>");
+			UtilText.nodeContentSB.append("[npc.speech(我不想看见你试图换位置，)]你冲着[npc2.name][npc.moanVerb]。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]将不能再使用姿势切换动作。</i>");
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -2121,11 +2121,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Permit positioning";
+			return "允许姿势切换";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Permit [npc2.name] to use positioning actions.";
+			return "允许[npc2.name]使用姿势切换动作。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2146,8 +2146,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "[npc.speech(If you'd like, you can switch to whatever position you're most comfortable with,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to use positioning actions.</i>";
+			return "[npc.speech(如果你想，可以换成任何你觉得舒服的姿势，)]你冲着[npc2.name][npc.moanVerb]。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]现在能使用姿势切换动作了。</i>";
 		}
 		@Override
 		public void applyEffects() {
@@ -2170,11 +2170,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Forbid clothing";
+			return "禁止着装他人";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Forbid [npc2.name] from managing any of your clothing.";
+			return "禁止[npc2.name]管理你的衣物。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2194,8 +2194,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "[npc.speech(Don't you <i>dare</i> try and touch any of my clothes!)] you growl at [npc2.name].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will not attempt to remove or displace any of your clothes.</i>";
+			return "[npc.speech(你<i>敢</i>碰我的衣服试试！)]你冲着[npc2.name]咆哮。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]不会再尝试脱下或者替换你的衣物。</i>";
 		}
 		@Override
 		public void applyEffects() {
@@ -2212,11 +2212,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Permit clothing";
+			return "允许着装他人";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Permit [npc2.name] to take off and displace your clothing.";
+			return "允许[npc2.name]脱下并替换你的衣物。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2236,8 +2236,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "[npc.speech(How about you help me take off some of these clothes?)] you [npc.moan].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to manage your clothing.</i>";
+			return "[npc.speech(你帮我脱些衣服吧？)]你[npc.moan]道。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]能够管理你的衣物了。</i>";
 		}
 		@Override
 		public void applyEffects() {
@@ -2254,11 +2254,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Forbid self clothing";
+			return "禁止自我着装";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Forbid [npc2.name] from managing any of [npc2.her] clothing.";
+			return "禁止[npc2.name]管理自己的衣物。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2278,8 +2278,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "[npc.speech(Don't you <i>dare</i> try and touch your clothes!)] you growl at [npc2.name].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will not attempt to remove or displace any of [npc2.her] clothes.</i>";
+			return "[npc.speech(你<i>敢</i>碰自己的衣服试试！)]你冲着[npc2.name]咆哮。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]不会再尝试移除或替换自己的衣物。</i>";
 		}
 		@Override
 		public void applyEffects() {
@@ -2296,11 +2296,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Permit self clothing";
+			return "允许自我着装";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Permit [npc2.name] to take off and displace [npc2.her] clothing.";
+			return "允许[npc2.name]脱下并替换自己的衣物。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2320,8 +2320,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "[npc.speech(How about you start taking off some of your clothes?)] you [npc.moan].<br/><br/>"
-					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to manage [npc2.her] clothing.</i>";
+			return "[npc.speech(不如你脱些衣服吧？)]你[npc.moan]道。<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name]现在能管理[npc2.her]的衣物了。</i>";
 		}
 		@Override
 		public void applyEffects() {
@@ -2340,12 +2340,12 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Stop partner";
+			return "停止对象动作";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stop [npc2.name] from performing all self-penetrative actions.";
+			return "停止[npc2.name]所有自插行为。";
 		}
 
 		@Override
@@ -2362,7 +2362,7 @@ public class GenericActions {
 			
 			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA)!=null) {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
-					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.pussy+].");
+					UtilText.nodeContentSB.append("[npc2.Name]发出失望的[npc.moan]，因为你强行阻止了[npc2.herHim]继续刺激自己[npc2.pussy+]。");
 				}
 			}
 			
@@ -2370,7 +2370,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("As you put an end to [npc2.namePos] self-stimulation of [npc2.her] [npc2.asshole], [npc2.she] lets out a pathetic whine.");
+					UtilText.nodeContentSB.append("因为你终止了[npc2.namePos]刺激自己的[npc2.asshole]，[npc2.she]发出悲惨的呜叫。");
 				}
 			}
 			
@@ -2378,7 +2378,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("[npc2.Name] pouts at you as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.nipples+].");
+					UtilText.nodeContentSB.append("[npc2.name]冲着你噘了噘嘴，因为你强行阻止了[npc2.herHim]继续刺激自己[npc2.nipples+]。");
 				}
 			}
 			
@@ -2386,7 +2386,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop using [npc2.her] mouth.");
+					UtilText.nodeContentSB.append("[npc2.Name]发出了失望的[npc.moan]，因为你强行阻止[npc2.herHim]使用自己的嘴。");
 				}
 			}
 			
@@ -2409,7 +2409,7 @@ public class GenericActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Stop player";
+			return "停止玩家动作";
 		}
 
 		@Override
@@ -2431,7 +2431,7 @@ public class GenericActions {
 			
 			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA)!=null) {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
-					UtilText.nodeContentSB.append("[npc.Name] lets out an angry growl as [npc.she] forces [npc2.name] to stop stimulating [npc2.her] [npc2.pussy+].");
+					UtilText.nodeContentSB.append("[npc.Name]发出愤怒的咆哮，强迫[npc2.name]停止刺激[npc2.her][npc2.pussy+]。");
 				}
 			}
 			
@@ -2439,7 +2439,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("As [npc.name] puts an end to [npc2.namePos] self-stimulation of [npc2.her] [npc2.asshole], [npc.she] growls menacingly at [npc2.herHim].");
+					UtilText.nodeContentSB.append("[npc.name]终止了[npc2.namePos]刺激自己的[npc2.asshole]，还冲着[npc2.herHim]威胁地咆哮。");
 				}
 			}
 			
@@ -2447,7 +2447,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("[npc.Name] frowns at [npc2.name] as [npc.she] forces [npc2.herHim] to stop stimulating [npc2.her] [npc2.nipples+].");
+					UtilText.nodeContentSB.append("[npc.Name]冲着[npc2.name]皱眉，强迫[npc2.herHim]停止刺激[npc2.nipples+]。");
 				}
 			}
 			
@@ -2455,7 +2455,7 @@ public class GenericActions {
 				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(UtilText.nodeContentSB.length()!=0)
 						UtilText.nodeContentSB.append("<br/>");
-					UtilText.nodeContentSB.append("[npc.Name] makes a disapproving clicking noise with [npc.her] [npc.tongue] as [npc.she] forces [npc2.name] to stop using [npc2.her] mouth.");
+					UtilText.nodeContentSB.append("[npc.Name]用[npc.tongue]发出不赞同的哒哒声，强迫[npc2.name]停止使用[npc2.her]的嘴。");
 				}
 			}
 			
@@ -2485,7 +2485,7 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "End sex";
+			return "结束性爱";
 		}
 
 		@Override
@@ -2510,8 +2510,8 @@ public class GenericActions {
 		
 		@Override
 		public String getDescription() {
-			return "With an annoyed sigh, [npc.name] disentangles [npc.herself] from [npc2.namePos] clutches,"
-					+ " [npc.speechNoExtraEffects(Eugh... I'm not really feeling this right now, ok?)]";
+			return "[npc.Name]恼火地叹了口气，挣开了[npc2.namePos]的爪子，"
+					+ "[npc.speechNoExtraEffects(呃啊……我现在真的没感觉到好吗？)]";
 		}
 		
 		@Override
@@ -2531,8 +2531,8 @@ public class GenericActions {
 		@Override
 		public String getActionTitle() {
 			return Main.sex.isMasturbation()
-					?"Stop masturbating"
-					:"Stop sex";
+					?"停止自慰"
+					:"停止性爱";
 		}
 
 		@Override
@@ -2579,21 +2579,21 @@ public class GenericActions {
 		@Override
 		public String getActionTitle() {
 			if(Main.sex.isSpectator(Main.game.getPlayer()) && Main.sex.getInitialSexManager().isHidden(Main.game.getPlayer())) {
-				return "Stop watching";
+				return "停止观看";
 			}
 			return Main.sex.isMasturbation()
-					?"Stop masturbating"
-					:"Stop sex";
+					?"停止自慰"
+					:"停止性爱";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.isSpectator(Main.game.getPlayer()) && Main.sex.getInitialSexManager().isHidden(Main.game.getPlayer())) {
-				return "Back out and stop watching the sex scene unfold before you."
-						+ "<br/>This will still [style.boldSex(apply all applicable effects)] to the other sex participants as though the sex scene had fully taken place.";
+				return "你离开了，不再观看面前上演的性爱场景。"
+						+ "<br/>由于该场景已经正式发生，仍会对所有参与者[style.boldSex(施加所有应施加的效果)]。";
 			}
 			return Main.sex.isMasturbation()
-					?"Put an end to your masturbation session."
-					:"Stop having sex with [npc2.name].";
+					?"结束自慰。"
+					:"停止与[npc2.name]做爱。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2603,10 +2603,10 @@ public class GenericActions {
 		@Override
 		public String getDescription() {
 			return Main.sex.isSpectator(Main.game.getPlayer())
-					?"Having had enough of the show, you turn away and stop watching the sex scene unfold before you..."
+					?"你看够表演了，转身离开，停止观看面前上演的性爱场景……"
 					:(Main.sex.isMasturbation()
-						?"Having had enough, you stop masturbating..."
-						:"Having had enough, you [pc.step] back and stop having sex...");
+						?"你已经满足了，停止了自慰……"
+						:"你感觉足够了，结束了性爱……");
 		}
 		@Override
 		public SexParticipantType getParticipantType() {
@@ -2645,11 +2645,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Bound!)]";
+			return "[style.boldBad(被缚！)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "The ropes tied around your body are preventing you from making a move!";
+			return "绳索绑住了你的身体，你不能动了！";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2659,7 +2659,7 @@ public class GenericActions {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(try)] to make a move, but the ropes binding [npc.herHim] in place are too strong, and [npc.she] [npc.verb(collapse)] back down, stunned.");
+					"[npc.Name]努力扭动起来。但[npc.her]被绳索牢牢绑住身体，只得仰倒在地，一阵眩晕。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -2687,11 +2687,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Bound!)]";
+			return "[style.boldBad(被缚！)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "The chains tied around your body are preventing you from making a move!";
+			return "锁链绑住了你的身体，你不能动了！";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2701,7 +2701,7 @@ public class GenericActions {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(try)] to make a move, but the chains binding [npc.herHim] in place are too strong, and [npc.she] [npc.verb(collapse)] back down, stunned.");
+					"[npc.Name]努力扭动起来。但[npc.her]被链子牢牢绑住身体，只得仰倒在地，一阵眩晕。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -2729,11 +2729,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Bound!)]";
+			return "[style.boldBad(被缚！)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Having been locked into a set of stocks, [npc.nameIsFull] prevented from making a move!";
+			return "[npc.nameIsFull]被锁在一套颈手枷中，无法做出任何行动！";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2743,7 +2743,7 @@ public class GenericActions {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(try)] to make a move, but the set of stocks into which [npc.sheIs] locked are too strong, and so [npc.she] [npc.verb(remain)] completely immobilised.");
+					"[npc.Name]努力扭动起来，但[npc.sheIs]被颈手枷牢牢锁住，完全动弹不得。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -2769,11 +2769,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Spin condom (self)";
+			return "纺织避孕套(自己)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your spinneret to wrap your [npc.penis] in a condom-like binding of webbing.";
+			return "使用你的丝囊，将你的[npc.penis]裹在避孕套般的网罩中。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2812,11 +2812,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Spin condom";
+			return "纺织避孕套";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your spinneret to wrap [npc2.namePos] [npc2.penis] in a condom-like binding of webbing.";
+			return "使用你的丝囊，将[npc2.namePos]的[npc2.penis]裹在避孕套般的网罩中。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -2855,11 +2855,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Spin pussy-seal";
+			return "纺织小穴封印";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.pussy].";
+			return "使用你的丝囊，将[npc2.namePos]的[npc2.pussy]用一层厚网罩住。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
@@ -2905,11 +2905,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Spin ass-seal";
+			return "纺织屁股封印";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.asshole].";
+			return "使用你的丝囊，将[npc2.namePos]的[npc2.asshole]用一层厚网罩住。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
@@ -2955,11 +2955,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Spin nipple-seal";
+			return "纺织乳头封印";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.nipples].";
+			return "使用你的丝囊，将[npc2.namePos]的[npc2.nipples]用一层厚网罩住。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
@@ -3005,11 +3005,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Spin mouth-seal";
+			return "纺织嘴部封印";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.mouth].";
+			return "使用你的丝囊，将[npc2.namePos]的[npc2.mouth]用一层厚网罩住。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
@@ -3065,11 +3065,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Cocoon [npc2.herHim]";
+			return "茧刑[npc2.herHim]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your spinneret to wrap [npc2.name] up in a cocoon.";
+			return "使用你的丝囊把[npc2.name]裹成茧。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3079,10 +3079,10 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(point)] [npc.her] spinneret at [npc2.herHim], before starting to shoot out a continuous strand of thick, sticky webbing."
-					+ " Before [npc2.she] [npc2.verb(know)] what's happening, [npc2.namePos] [npc2.arms] and [npc2.legs] are completely restrained by the strong binding,"
-						+ " and after just a few moments more, [npc.name] [npc.has] completely wrapped [npc2.herHim] up in a cocoon."
-					+ " Smirking at [npc.her] handiwork, [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+			return "[npc.Name]不想让[npc2.name]自己动，便将丝囊对准[npc2.herHim]，然后开始喷射出一缕缕连续不断的粘稠网状物。"
+					+ "[npc2.namePos]还没明白过来发生了什么，[npc2.arms]和[npc2.legs]就全被强力束缚住了，"
+						+ "只不过几秒钟，[npc.Name]就把[npc2.herHim]全包到了茧里。"
+					+ "[npc.Name]对自己的成品得意地坏笑着，准备好好利用[style.boldBad([npc2.name]现在不能动)]的现状。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3116,11 +3116,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Remove webbing";
+			return "移除蛛网";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Tear off the webbing that's binding [npc2.name] into [npc2.her] cocoon.";
+			return "撕开裹着[npc2.name]的茧。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3130,8 +3130,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc2.name] [npc2.has] had enough of being restrained, [npc.name] [npc.verb(set)] about tearing off the webbing that's binding [npc2.herHim] into [npc2.her] cocoon. "
-					+ " After just a few moments, [npc.name] [npc.has] managed to destroy all of the webbing, and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+			return "[npc.Name]决定束缚够了[npc2.name]，便撕开了裹着[npc2.her]的茧。"
+					+ "不过片刻，[npc.Name]就成功毁掉了所有网，结果是，[style.boldGood([npc2.name]又能自由行动了)]。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3156,11 +3156,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Cocooned!)]";
+			return "[style.boldBad(被茧缚！)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "The cocoon of thick spider-webbing is preventing you from making a move!";
+			return "厚厚的蜘蛛网茧阻止了你的行动！";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3170,7 +3170,7 @@ public class GenericActions {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(try)] to make a move, but the cocoon binding [npc.herHim] in place is too strong, and [npc.she] [npc.verb(collapse)] back down, stunned.");
+					"[npc.Name]努力扭动起来。但[npc.her]被茧牢牢缚住身体，只得仰倒在地，一阵眩晕。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -3204,11 +3204,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Tentacle restraint";
+			return "触手限制";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Use your tentacles to hold [npc2.name] still and prevent [npc2.herHim] from moving.";
+			return "用你的触手抓住[npc2.name]，阻止[npc2.herHim]移动。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3218,9 +3218,9 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(grab)] [npc2.herHim] with [npc.her] [npc.tentacles] and [npc.verb(hold)] [npc2.herHim] firmly in place."
-					+ "  Smirking as [npc2.name] [npc2.verb(make)] a few futile attempts to struggle against [npc.her] tight embrace,"
-						+ " [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+			return "[npc.Name]不想让[npc2.name]自己动，便用[npc.tentacles]抓住[npc2.herHim]，将其牢牢定在原地。"
+					+ "[npc2.name]咯咯笑，尝试着与紧缚斗争了几下，但徒劳无获，"
+						+ "[npc.name]准备好好利用[style.boldBad([npc2.name]现在不能动)]的现状。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3254,11 +3254,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Release tentacles";
+			return "释放触手";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Release your grip on [npc2.name] and allow [npc2.herHim] to freely move again.";
+			return "放开对[npc2.name]的束缚，让[npc2.herHim]能再次自由行动。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3268,9 +3268,9 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc2.name] [npc2.has] had enough of being restrained, [npc.name] [npc.verb(begin)] to relax the grip of [npc.her] [npc.tentacles]. "
-					+ " Smirking in amusement at the relieved look on [npc2.namePos] face, [npc.name] completely [npc.verb(release)] [npc2.herHim] from [npc.her] tentacles' embrace,"
-						+ " and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+			return "[npc.Name]觉得[npc2.name]受够了束缚，便准备松开[npc.tentacles]的束握。"
+					+ "[npc.name]完全放开了对[npc2.namePos]的触手束缚，得意地坏笑着，愉悦地欣赏着[npc2.herHim]脸上解脱的表情。"
+						+ "结果是，[style.boldGood([npc2.name]现在能自由行动了)]。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3292,11 +3292,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Tentacle-squeeze";
+			return "触手挤压";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tentacles to firmly squeeze and constrict [npc2.her] body.";
+			return "趁[npc2.name]完全被你的触手束缚，又挤又捆[npc2.her]的身体。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3308,27 +3308,27 @@ public class GenericActions {
 			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
 			StringBuilder sb = new StringBuilder();
 			sb.append(UtilText.returnStringAtRandom(
-					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tentacles, [npc.name] [npc.verb(squeeze)] down and firmly [npc.verb(constrict)] [npc2.her] body,"
-							+ " causing [npc2.herHim] to let out a pathetic, choking gasp.",
-					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.her] body,"
-							+ " which results in [npc2.herHim] making a series of progressively weaker and more desperate gasping noises.",
-					"In a display of complete dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.namePos] body,"
-							+ " delighting in the desperate, frantic gasps and struggles that [npc.sheIs] able to elicit from "+(targetPlayer?"you.":"[npc.her] partner."),
-					"Greatly enjoying [npc.her] position of dominance, [npc.name] slowly increases the strength of [npc.her] tentacles' grip around [npc2.namePos] body, until "+(targetPlayer?"you're":"[npc.her] partner is")
-						+" able to do nothing but weakly struggle and desperately gasp for breath.",
-					"Firmly tightening [npc.her] tentacles' grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing the breath out of "+(targetPlayer?"your":"[npc.her] partner's")
-						+" lungs, and can't help but let out a dominant [npc.moan] as [npc.she] [npc.verb(feel)] [npc2.name] weakly struggling to break free."));
+					"[npc.Name]趁[npc2.name]完全被触手束缚，又箍弄又限制[npc2.her]的身体，"
+							+ "让[npc2.herHim]发出悲哀的、被窒息的喘气声。",
+					"[npc.Name]想让[npc2.name]知道，[npc2.sheIs]完全受自己的摆布，便用触手牢牢箍紧[npc2.her]的身体，"
+							+ "引得[npc2.herHim]喘息逐渐微弱下来，最后只能迷乱地发出些呼气的杂音。",
+					"[npc.name]处于完全的掌控地位，用触手牢牢箍住[npc2.namePos]，"
+							+ "从狂乱迷醉的喘息挣扎中取乐，欣赏着自己引导而出的、"+(targetPlayer?"你的窘态。":"[npc.her]对象的窘态。"),
+					"[npc.Name]相当享受自己的支配地位，缓慢增加着触手捆[npc2.namePos]的紧度，直到"+(targetPlayer?"你":"[npc.her]的对象")
+						+"什么都不能做，只能微弱挣扎着，拼命喘着气。",
+					"[npc.Name]用触手牢牢箍住[npc2.namePos]，愉悦地挤压着"+(targetPlayer?"你":"[npc.her]对象")
+						+"肺里的空气，[npc.she]忍不住发出支配的[npc.moan]，感受着[npc2.name]寻求自由的、轻微的颤动挣扎。"));
 
 			sb.append(UtilText.returnStringAtRandom(
-					" Only once [npc2.nameIsFull] starting to go limp [npc.do] [npc.name] finally relent, and by relaxing [npc.her] tentacles somewhat,"
-							+ " [npc.she] [npc.verb(allow)] [npc2.herHim] to catch [npc2.her] breath and come back to [npc2.her] senses.",
-					" Not wanting to go so far as to make [npc2.name] lose consciousness, [npc.name] only [npc.verb(choose)] to relax [npc.her] tentacles at the last moment,"
-							+ " allowing [npc2.name] to take a deep breath and come back from the brink of fainting.",
-					" After some time constricting [npc2.name] in this manner, [npc.name] [npc.verb(feel)] as though [npc.sheHas] pushed [npc2.herHim] far enough, and so after one final, tight squeeze,"
-							+ " [npc.she] [npc.verb(relax)] [npc.her] tentacles and [npc.verb(allow)] [npc2.name] to breathe freely once again.",
-					" Waiting until [npc.she] [npc.verb(sense)] that [npc2.nameIsFull] about to faint, [npc.name] [npc.verb(let)] out an amused [npc.moan],"
-							+ " before relaxing [npc.her] tentacles and granting [npc2.name] the ability to fill [npc2.her] lungs with oxygen.",
-					" Waiting until [npc2.nameIsFull] about to pass out, [npc.name] [npc.verb(let)] out an amused [npc.moan], before relaxing [npc.her] tentacles and allowing [npc2.name] to take a deep breath and recover from [npc2.her] asphyxiation."));
+					"直到[npc2.nameIsFull]变得虚弱无力，[npc.Name]最终才放松下来，松开触手，"
+							+ "[npc.she]允许[npc2.herHim]回复呼吸，并且意识回来了一些。",
+					"[npc.Name]目前还不想让[npc2.name]失去意识，便在最后一刻把触手放松下来，"
+							+ "允许[npc2.name]吸了一大口气，在晕倒边缘缓和过来。",
+					"[npc.Name]这样限制了一会[npc2.name]，感觉已经压够了，便最后又紧紧地箍了一下，"
+							+ "[npc.she]放松了触手，让[npc2.name]能够再次自由呼吸。",
+					"一直等到[npc2.nameIsFull]意识模糊、快晕过去了，[npc.Name]才发出被取悦的[npc.moan]，"
+							+ "然后放松触手，[npc2.name]又能把自己的肺灌满氧气。",
+					"一直等到[npc2.nameIsFull]快晕过去了，[npc.name]才发出被取悦的[npc.moan]，然后放松触手，允许[npc2.name]深吸一口气，从窒息中缓和出来。"));
 			
 			return sb.toString();
 		}
@@ -3352,11 +3352,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Tentacle-massage";
+			return "触手按摩";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tentacles to squeeze and massage [npc2.her] body.";
+			return "趁[npc2.name]完全被你的触手束缚，又揉又捏[npc2.her]的身体。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3368,22 +3368,22 @@ public class GenericActions {
 			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
 			StringBuilder sb = new StringBuilder();
 			sb.append(UtilText.returnStringAtRandom(
-					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tentacles, [npc.name] [npc.verb(squeeze)] down and [npc.verb(massage)] [npc2.her] body.",
-					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.her] body and [npc.verb(start)] massaging [npc2.herHim].",
-					"In a display of dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.namePos] body, using [npc.her] grip to massage "+(targetPlayer?"your":"[npc.her] partner's")+" body.",
-					"Greatly enjoying [npc.her] position of dominance, [npc.name] [npc.verb(make)] full use of [npc.her] tentacles' grip around [npc2.namePos] body by squeezing down and massaging [npc2.herHim].",
-					"Firmly tightening [npc.her] tentacles' grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing and massaging [npc2.herHim]."));
+					"[npc.Name]趁[npc2.name]完全被触手束缚，又箍弄又揉按[npc2.her]的身体。",
+					"[npc.Name]想让[npc2.name]知道，[npc2.sheIs]完全受自己的摆布，便用触手箍紧[npc2.her]的身体，开始按摩。",
+					"[npc.Name]处于支配地位，用触手牢牢箍住[npc2.namePos]，还挤握按摩着"+(targetPlayer?"你的":"[npc.her]对象的")+"身体。",
+					"[npc.Name]相当享受自己的支配地位，完全触手捆住[npc2.namePos]的身体，又挤又揉。",
+					"[npc.Name]结实又牢固地触手捆住[npc2.namePos]的身体，愉悦地挤弄按摩着[npc2.herHim]。"));
 			
 			if(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))==SexPace.SUB_RESISTING) {
 				sb.append(UtilText.returnStringAtRandom(
-						" Although it's a complete impossibility, [npc2.name] [npc2.verb(continue)] to try and struggle free from [npc.namePos] grip, letting out a distressed cry as [npc2.she] [npc2.verb(realise)] that it's futile.",
-						" [npc2.Name] [npc2.verb(let)] out a frantic cry in response, before trying, and failing, to struggle free from [npc.namePos] embrace.",
-						" Refusing to accept [npc2.her] fate, [npc2.name] [npc2.verb(try)] to pull free from [npc.namePos] tight embrace, but [npc2.her] efforts prove to be in vain."));
+						"虽然完全不可能，但[npc2.name]还是继续在[npc.namePos]掌控下挣扎着，[npc2.she]意识到这不过是徒劳无用，不禁发出苦闷的哭号。",
+						"[npc2.Name]疯狂地哭喊着作为回应，失败了，失败了，又失败了，无法挣开[npc.namePos]的环抱。",
+						"[npc2.name]拒绝接受自己的命运，努力挣脱[npc.namePos]紧窄的禁锢，但[npc2.her]的努力被证明是徒劳的。"));
 			} else {
 				sb.append(UtilText.returnStringAtRandom(
-						" Letting out [npc2.a_moan+], [npc2.name] [npc2.verb(relax)] and [npc2.verb(enjoy)] the sensual feeling of [npc.namePos] [npc.tentacles+] sliding over and pressing down against [npc.her] body.",
-						" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] in response, making it very clear that [npc2.sheIs] enjoying the feeling of being wrapped up in [npc.namePos] [npc.tentacles+].",
-						" Relaxing and enjoying the feeling of being wrapped up in [npc.namePos] [npc.tentacles+], [npc2.name] [npc2.verb(let)] [npc2.a_moan+] and [npc2.verb(encourage)] [npc.herHim] to continue the massage."));
+						"[npc2.name]发出[npc2.a_moan+]，放松地享受着[npc.namePos][npc.tentacles+]滑过身体，又揉按着身体的触感。",
+						"[npc2.Name]发出[npc2.a_moan+]回应着，显而易见，[npc2.sheIs]正享受着被[npc.namePos][npc.tentacles+]环住的感觉。",
+						"[npc2.name]放松下来，享受着被[npc.namePos][npc.tentacles+]环绕的感觉，发出[npc2.a_moan+]，鼓励[npc.herHim]继续按摩。"));
 			}
 			
 			return sb.toString();
@@ -3416,12 +3416,12 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Tentacle-bound!)]";
+			return "[style.boldBad(被触手束缚！)]";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TENTACLE_RESTRICTION);
-			return UtilText.parse(applier, "[npc.NameIsFull] using [npc.her] tentacles to hold you in place, and as a result, you are unable to make a move!");
+			return UtilText.parse(applier, "[npc.NameIsFull]用[npc.her]触手固定住你，你不能行动了！");
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3432,7 +3432,7 @@ public class GenericActions {
 		public String getDescription() {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TENTACLE_RESTRICTION);
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), applier,
-					"[npc.Name] [npc.verb(try)] to make a move, but [npc2.namePos] tentacle embrace is far too strong, and all [npc.she] can manage is to make a few pathetic squirming motions.");
+					"[npc.Name]努力扭动起来，但[npc2.namePos]的触手太过有力，[npc.she]尽全力也只可悲地蠕动了几下。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -3462,11 +3462,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Cast '"+Spell.WITCH_SEAL.getName()+"'";
+			return "释放“"+Spell.WITCH_SEAL.getName()+"”";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Cast the spell '"+Spell.WITCH_SEAL.getName()+"' on [npc2.name] to immobilise [npc2.herHim] and completely prevent [npc2.herHim] from moving.";
+			return "对[npc2.name]施放法术“"+Spell.WITCH_SEAL.getName()+"”，固定[npc2.herHim]，完全阻止[npc2.herHim]行动。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3477,9 +3477,9 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(prepare)] to cast the spell '"+Spell.WITCH_SEAL.getName()+"' on [npc2.herHim]."
-					+ " Concentrating on the arcane power within [npc.her] broomstick, [npc.name] [npc.verb(summon)] forth a powerful seal, which traps [npc2.name] in place!"
-						+ " Having successfully cast [npc.her] spell, [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+			return "[npc.Name]不想让[npc2.name]自己动，便准备对[npc2.herHim]施放法术“"+Spell.WITCH_SEAL.getName()+"”。"
+					+ "[npc.Name]将奥术之力集中在扫把上，召唤出一道强大的封印，把[npc2.name]控制在原地！"
+						+ "[npc.Name]成功施放了法术，准备好好利用[style.boldBad([npc2.name]现在不能动)]的现状。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3513,12 +3513,12 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Sealed!)]";
+			return "[style.boldBad(封印！)]";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.WITCH_SEAL);
-			return UtilText.parse(applier, "The Witch's Seal that [npc.name] cast on you is preventing you from making a move!");
+			return UtilText.parse(applier, "[npc.name]施放了魔女封锁术，你不能动了！");
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3529,21 +3529,21 @@ public class GenericActions {
 		public String getDescription() {
 			if(Main.sex.getInitialSexManager() instanceof SMAltarMissionarySealed) {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(try)] to make a move, but the Witch's Seal is too strong, and [npc.she] [npc.verb(collapse)] back onto the altar, stunned.",
-						"The purple glow of a pentagram materialises beneath [npc.namePos] body as [npc.she] [npc.verb(try)] to make a move; proof that the Witch's Seal is still keeping [npc.herHim] bound in place.",
-						"[npc.Name] [npc.verb(try)] to sit up on the altar, but [npc.sheIs] only able to squirm about a little under the immobilising effects of the Witch's Seal.",
-						"The soft purple glow of the Witch's Seal can be seen all around [npc.name] as [npc.she] [npc.verb(struggle)] to make a move.",
-						"[npc.speech(~Mmm!~)] [npc.name] [npc.verb(moan)], struggling in vain against the Witch's Seal.",
-						"[npc.speech(~Aah!~)] [npc.name] [npc.verb(whimper)], squirming about on the altar as the Witch's Seal keeps [npc.herHim] locked in place.");
+						"[npc.Name]努力扭动起来。但魔女封锁术太过强力，[npc.she]只得仰在祭坛上，一阵眩晕。",
+						"五角星形的紫色光芒如同实质般压住了[npc.namePos]的身体，阻止了[npc.she]的挣扎，这证明魔女封锁术还在发挥束缚作用。",
+						"[npc.Name]努力在祭坛上坐起来，但受制于魔女封锁术的束缚效果，[npc.sheIs]只能蠕来蠕去。",
+						"[npc.Name]挣扎扭动时，看到周围魔女封锁术柔和的紫色光芒。",
+						"[npc.speech(~嗯唔！~)][npc.name]呻吟着，徒劳地挣扎抵抗着魔女封锁术。",
+						"[npc.speech(~啊哈啊！~)][npc.name]呜咽着，在祭坛上蠕动着，却被魔女封锁术锁在原地。");
 				
 			} else {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(try)] to make a move, but the Witch's Seal is too strong, and [npc.she] [npc.verb(collapse)] back into position, stunned.",
-						"The purple glow of a pentagram materialises beneath [npc.namePos] body as [npc.she] [npc.verb(try)] to make a move; proof that the Witch's Seal is still keeping [npc.herHim] bound in place.",
-						"[npc.Name] [npc.verb(try)] to move, but [npc.sheIs] only able to squirm about a little under the immobilising effects of the Witch's Seal.",
-						"The soft purple glow of the Witch's Seal can be seen all around [npc.name] as [npc.she] [npc.verb(struggle)] to make a move.",
-						"[npc.speech(~Mmm!~)] [npc.name] [npc.verb(moan)], struggling in vain against the Witch's Seal.",
-						"[npc.speech(~Aah!~)] [npc.name] [npc.verb(whimper)], squirming about as the Witch's Seal keeps [npc.herHim] locked in place.");
+						"[npc.Name]努力扭动起来，但魔女封锁术太过强大，[npc.she]摔倒在地，一阵眩晕。",
+						"五角星形的紫色光芒如同实质般压住了[npc.namePos]的身体，阻止了[npc.she]的挣扎，这证明魔女封锁术还在发挥束缚作用。",
+						"[npc.Name]努力移动，但受制于魔女封锁术的束缚效果，[npc.sheIs]只能蠕来蠕去。",
+						"[npc.Name]挣扎扭动时，看到周围魔女封锁术柔和的紫色光芒。",
+						"[npc.speech(~嗯唔！~)][npc.name]呻吟着，徒劳地挣扎抵抗着魔女封锁术。",
+						"[npc.speech(~啊哈啊！~)][npc.name]呜咽着，蠕动着，却被魔女封锁术锁在原地。");
 			}
 		}
 		@Override
@@ -3572,11 +3572,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Dispel '"+Spell.WITCH_SEAL.getName()+"'";
+			return "驱散“"+Spell.WITCH_SEAL.getName()+"”";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Cancel the spell '"+Spell.WITCH_SEAL.getName()+"' that you've cast on [npc2.name], allowing [npc2.herHim] to freely move again.";
+			return "取消你对[npc2.name]施放的法术“"+Spell.WITCH_SEAL.getName()+"”，让[npc2.herHim]能再次自由行动。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3586,8 +3586,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc2.name] [npc2.has] had enough of being immobilised, [npc.name] [npc.verb(prepare)] to dispel the effect of the spell, '"+Spell.WITCH_SEAL.getName()+"'. "
-					+ " Taking a deep breath and concentrating on [npc.her] arcane power, [npc.name] [npc.verb(break)] the spell, and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+			return "[npc.Name]觉得束缚够了[npc2.name]，便准备驱散法术“"+Spell.WITCH_SEAL.getName()+"”的效果。"
+					+ "[npc.Name]深吸一口气，专注于控制奥术力量，打破了法术，结果是，[style.boldGood([npc2.name]现在又能自由行动了)]。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3618,11 +3618,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Constrict";
+			return "收缩";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Wrap your long tail around [npc2.name] and constrict [npc2.herHim] in order to prevent [npc2.herHim] from moving.";
+			return "用你的长尾巴卷住[npc2.name]，限制[npc2.herHim]，阻止[npc2.herHim]行动。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3637,9 +3637,9 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(wrap)] [npc.her] long tail around [npc2.herHim] and [npc.verb(squeeze)] tight, locking [npc2.herHim] firmly in place."
-					+ "  Smirking as [npc2.name] [npc2.verb(make)] a few futile attempts to struggle against [npc.her] constricting coils,"
-						+ " [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+			return "[npc.Name]不想让[npc2.name]自己动，便用长尾巴抓住[npc2.herHim]，将其牢牢定在原地。"
+					+ "[npc2.name]咯咯笑，尝试着与收缩的环缚斗争了几下，但徒劳无获，"
+						+ "[npc.name]准备好好利用[style.boldBad([npc2.name]现在不能动)]的现状。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3673,11 +3673,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Release constriction";
+			return "解开束缚";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Release your grip on [npc2.name] and allow [npc2.herHim] to freely move again.";
+			return "放开对[npc2.name]的束缚，让[npc2.herHim]能再次自由行动。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3687,9 +3687,9 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc2.name] [npc2.has] had enough of being restrained, [npc.name] [npc.verb(begin)] to relax the tight coils of [npc.her] long tail. "
-					+ " Smirking in amusement at the relieved look on [npc2.namePos] face, [npc.name] completely [npc.verb(release)] [npc2.herHim] from [npc.her] embrace,"
-						+ " and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+			return "[npc.Name]觉得[npc2.name]受够了束缚，便准备松开长尾巴的环箍。"
+					+ "[npc.name]完全放开了对[npc2.namePos]的束缚，得意地坏笑着，愉悦地欣赏着[npc2.herHim]脸上解脱的表情。"
+						+ "结果是，[style.boldGood([npc2.name]现在能自由行动了)]。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3711,11 +3711,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Tail-squeeze";
+			return "尾巴挤压";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tail to firmly squeeze and constrict [npc2.her] body.";
+			return "趁[npc2.name]完全被你的尾巴束缚，又挤又捆[npc2.her]的身体。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3727,27 +3727,27 @@ public class GenericActions {
 			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
 			StringBuilder sb = new StringBuilder();
 			sb.append(UtilText.returnStringAtRandom(
-					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tail, [npc.name] [npc.verb(squeeze)] down and firmly [npc.verb(constrict)] [npc2.her] body,"
-							+ " causing [npc2.herHim] to let out a pathetic, choking gasp.",
-					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tail down around [npc2.her] body,"
-							+ " which results in [npc2.herHim] making a series of progressively weaker and more desperate gasping noises.",
-					"In a display of complete dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tail down around [npc2.namePos] body,"
-							+ " delighting in the desperate, frantic gasps and struggles that [npc.sheIs] able to elicit from "+(targetPlayer?"you.":"[npc.her] partner."),
-					"Greatly enjoying [npc.her] position of dominance, [npc.name] slowly increases the strength of [npc.her] tail's grip around [npc2.namePos] body, until "+(targetPlayer?"you're":"[npc.her] partner is")
-						+" able to do nothing but weakly struggle and desperately gasp for breath.",
-					"Firmly tightening [npc.her] tail's grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing the breath out of "+(targetPlayer?"your":"[npc.her] partner's")
-						+" lungs, and can't help but let out a dominant [npc.moan] as [npc.she] [npc.verb(feel)] [npc2.name] weakly struggling to break free."));
+					"[npc.Name]趁[npc2.name]完全被尾巴束缚，又箍弄又限制[npc2.her]的身体，"
+							+ "让[npc2.herHim]发出悲哀的、被窒息的喘气声。",
+					"[npc.Name]想让[npc2.name]知道，[npc2.sheIs]完全受自己的摆布，便用尾巴牢牢箍紧[npc2.her]的身体，"
+							+ "引得[npc2.herHim]喘息逐渐微弱下来，最后只能迷乱地发出些呼气的杂音。",
+					"[npc.name]处于完全的掌控地位，用尾巴牢牢箍住[npc2.namePos]，"
+							+ "从狂乱迷醉的喘息挣扎中取乐，欣赏着自己引导而出的、"+(targetPlayer?"你的窘态。":"[npc.her]对象的窘态。"),
+					"[npc.Name]相当享受自己的支配地位，缓慢增加着尾捆[npc2.namePos]的紧度，直到"+(targetPlayer?"你":"[npc.her]的对象")
+						+"什么都不能做，只能微弱挣扎着，拼命喘着气。",
+					"[npc.Name]用尾巴牢牢箍住[npc2.namePos]，愉悦地挤压着"+(targetPlayer?"你":"[npc.her]对象")
+						+"肺里的空气，[npc.she]忍不住发出支配的[npc.moan]，感受着[npc2.name]寻求自由的、轻微的颤动挣扎。"));
 			
 			sb.append(UtilText.returnStringAtRandom(
-					" Only once [npc2.nameIsFull] starting to go limp [npc.do] [npc.name] finally relent, and by relaxing [npc.her] tail somewhat,"
-							+ " [npc.she] [npc.verb(allow)] [npc2.herHim] to catch [npc2.her] breath and come back to [npc2.her] senses.",
-					" Not wanting to go so far as to make [npc2.name] lose consciousness, [npc.name] only [npc.verb(choose)] to relax [npc.her] tail at the last moment,"
-							+ " allowing [npc2.name] to take a deep breath and come back from the brink of fainting.",
-					" After some time constricting [npc2.name] in this manner, [npc.name] [npc.verb(feel)] as though [npc.sheHas] pushed [npc2.herHim] far enough, and so after one final, tight squeeze,"
-							+ " [npc.she] [npc.verb(relax)] [npc.her] tail and [npc.verb(allow)] [npc2.name] to breathe freely once again.",
-					" Waiting until [npc.she] [npc.verb(sense)] that [npc2.nameIsFull] about to faint, [npc.name] [npc.verb(let)] out an amused [npc.moan],"
-							+ " before relaxing [npc.her] tail and granting [npc2.name] the ability to fill [npc2.her] lungs with oxygen.",
-					" Waiting until [npc2.nameIsFull] about to pass out, [npc.name] [npc.verb(let)] out an amused [npc.moan], before relaxing [npc.her] tail and allowing [npc2.name] to take a deep breath and recover from [npc2.her] asphyxiation."));
+					"直到[npc2.nameIsFull]变得虚弱无力，[npc.Name]最终才放松下来，松开尾巴，"
+							+ "[npc.she]允许[npc2.herHim]回复呼吸，并且意识回来了一些。",
+					"[npc.Name]目前还不想让[npc2.name]失去意识，便在最后一刻把尾巴放松下来，"
+							+ "允许[npc2.name]吸了一大口气，在晕倒边缘缓和过来。",
+					"[npc.Name]这样限制了一会[npc2.name]，感觉已经压够了，便最后又紧紧地箍了一下，"
+							+ "便放松了尾巴，让[npc2.name]能再次自由地呼吸。",
+					"一直等到[npc2.nameIsFull]意识模糊、快晕过去了，[npc.Name]才发出被取悦的[npc.moan]，"
+							+ "然后放松尾巴，[npc2.name]又能把自己的肺灌满氧气。",
+					"一直等到[npc2.nameIsFull]快晕过去了，[npc.name]才发出被取悦的[npc.moan]，然后放松尾巴，允许[npc2.name]深吸一口气，从窒息中缓和出来。"));
 			
 			return sb.toString();
 		}
@@ -3771,11 +3771,11 @@ public class GenericActions {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Tail-massage";
+			return "尾巴按摩";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tail to squeeze and massage [npc2.her] body.";
+			return "趁[npc2.name]完全被你的尾巴束缚，又揉又捏[npc2.her]的身体。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3787,22 +3787,22 @@ public class GenericActions {
 			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
 			StringBuilder sb = new StringBuilder();
 			sb.append(UtilText.returnStringAtRandom(
-					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tail, [npc.name] [npc.verb(squeeze)] down and [npc.verb(massage)] [npc2.her] body.",
-					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] [npc.verb(squeeze)] [npc.her] tail down around [npc2.her] body and [npc.verb(start)] massaging [npc2.herHim].",
-					"In a display of dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tail down around [npc2.namePos] body, using [npc.her] grip to massage "+(targetPlayer?"your":"[npc.her] partner's")+" body.",
-					"Greatly enjoying [npc.her] position of dominance, [npc.name] [npc.verb(make)] full use of [npc.her] tail' grip around [npc2.namePos] body by squeezing down and massaging [npc2.herHim].",
-					"Firmly tightening [npc.her] tail' grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing and massaging [npc2.herHim]."));
+					"[npc.Name]趁[npc2.name]完全被尾巴束缚，又箍弄又揉按[npc2.her]的身体。",
+					"[npc.Name]想让[npc2.name]知道，[npc2.sheIs]完全受自己的摆布，便用尾巴箍紧[npc2.her]的身体，开始按摩。",
+					"[npc.Name]处于支配地位，用尾巴牢牢箍住[npc2.namePos]，还挤握按摩着"+(targetPlayer?"你的":"[npc.her]对象的")+"身体。",
+					"[npc.Name]相当享受自己的支配地位，完全尾捆住[npc2.namePos]的身体，又挤又揉。",
+					"[npc.Name]结实又牢固地尾捆住[npc2.namePos]的身体，愉悦地挤弄按摩着[npc2.herHim]。"));
 			
 			if(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))==SexPace.SUB_RESISTING) {
 				sb.append(UtilText.returnStringAtRandom(
-						" Although it's a complete impossibility, [npc2.name] [npc2.verb(continue)] to try and struggle free from [npc.namePos] grip, letting out a distressed cry as [npc2.she] [npc2.verb(realise)] that it's futile.",
-						" [npc2.Name] [npc2.verb(let)] out a frantic cry in response, before trying, and failing, to struggle free from [npc.namePos] embrace.",
-						" Refusing to accept [npc2.her] fate, [npc2.name] [npc2.verb(try)] to pull free from [npc.namePos] tight embrace, but [npc2.her] efforts prove to be in vain."));
+						"虽然完全不可能，但[npc2.name]还是继续在[npc.namePos]掌控下挣扎着，[npc2.she]意识到这不过是徒劳无用，不禁发出苦闷的哭号。",
+						"[npc2.Name]疯狂地哭喊着作为回应，失败了，失败了，又失败了，无法挣开[npc.namePos]的环抱。",
+						"[npc2.name]拒绝接受自己的命运，努力挣脱[npc.namePos]紧窄的禁锢，但[npc2.her]的努力被证明是徒劳的。"));
 			} else {
 				sb.append(UtilText.returnStringAtRandom(
-						" Letting out [npc2.a_moan+], [npc2.name] [npc2.verb(relax)] and [npc2.verb(enjoy)] the sensual feeling of [npc.namePos] tail sliding over and pressing down against [npc.her] body.",
-						" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] in response, making it very clear that [npc2.sheIs] enjoying the feeling of being wrapped up in [npc.namePos] tail.",
-						" Relaxing and enjoying the feeling of being wrapped up in [npc.namePos] tail, [npc2.name] [npc2.verb(let)] [npc2.a_moan+] and [npc2.verb(encourage)] [npc.herHim] to continue the massage."));
+						"[npc2.name]发出[npc2.a_moan+]，放松地享受着[npc.namePos]的尾巴滑过身体，又揉按着身体的触感。",
+						"[npc2.Name]发出[npc2.a_moan+]回应着，显而易见，[npc2.sheIs]正享受着被[npc.namePos]的尾巴环住的感觉。",
+						"[npc2.name]放松下来，享受着被[npc.namePos]的尾巴环绕的感觉，发出[npc2.a_moan+]，鼓励[npc.herHim]继续按摩。"));
 			}
 			
 			return sb.toString();
@@ -3835,12 +3835,12 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Constricted!)]";
+			return "[style.boldBad(束缚！)]";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TAIL_CONSTRICTION);
-			return UtilText.parse(applier, "[npc.Name] is using [npc.her] long tail to hold you in place, and as a result, you are unable to make a move!");
+			return UtilText.parse(applier, "[npc.Name]用[npc.her]的长尾巴固定住你，你不能行动了！");
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3851,7 +3851,7 @@ public class GenericActions {
 		public String getDescription() {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TAIL_CONSTRICTION);
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), applier,
-					"[npc.Name] [npc.verb(try)] to make a move, but [npc2.namePos] constricting tail is far too strong, and all [npc.she] can manage is to make a few pathetic squirming motions.");
+					"[npc.Name]努力扭动起来。但[npc2.namePos]的限制太过强大，[npc.she]的所有努力只不过是一些可悲的蠕动。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -3889,11 +3889,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Sex toy";
+			return "变成性爱玩具";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Command [npc2.name] to remain completely and utterly motionless, allowing you to fuck [npc2.herHim] as an immobile, silent sex toy.";
+			return "命令[npc2.name]保持完全静止，这样你就能把[npc2.herHim]当成一个无法活动且沉默的性爱玩具操干了。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3904,9 +3904,9 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Wanting [npc2.name] to act like an inanimate sex toy, [npc.name] [npc.verb(order)] [npc2.herHim] to stop moving."
-						+ " Obediently carrying out [npc.namePos] command, [npc2.name] [npc2.verb(freeze)] in place."
-						+ " Smiling to [npc.herself], [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] now completely immobile)].";
+			return "[npc.name]想让[npc2.name]扮演一个无生命的性爱玩具，便命令[npc2.herHim]停止活动。"
+						+ "[npc2.name]顺从地执行了[npc.namePos]的命令，静止在原地。"
+						+ "[npc.name]对自己笑了笑，准备好好利用[style.boldBad([npc2.name]现在完全无法移动)]的现状。";
 		}
 		@Override
 		public void applyEffects() {
@@ -3940,12 +3940,12 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Sex toy!)]";
+			return "[style.boldBad(变成性爱玩具！)]";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.COMMAND);
-			return UtilText.parse(applier, "Having been commanded by [npc.name] to remain motionless, you obediently remain immobile!");
+			return UtilText.parse(applier, "[npc.name]命令你保持静止，你顺从地不再移动了！");
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -3955,12 +3955,12 @@ public class GenericActions {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] obediently [npc.verb(remain)] completely motionless, acting like an inanimate sex doll.",
-					"Having been commanded to do so, [npc.name] [npc.verb(remain)] totally immobile.",
-					"Staying completely and utterly motionless, [npc.name] [npc.verb(allow)] [npc.herself] to be used like a worthless sex toy.",
-					"[npc.Name] [npc.verb(remain)] totally immobile and [npc.do]n't react to anything that's done to [npc.herHim].",
-					"Being an obedient sex doll, [npc.name] [npc.do] as [npc.sheIs] told and [npc.verb(stay)] completely motionless.",
-					"[npc.Name] [npc.do] a perfect impression of an inanimate sex doll and [npc.verb(remain)] completely and utterly motionless.");
+					"[npc.Name]顺从地保持完全静止，就像是一个无生命的性爱玩偶。",
+					"被这样命令之后，[npc.name]保持着完全的静止。",
+					"[npc.name]保持着完全的静止，允许自己被当做一个毫无价值的性爱玩具来使用。",
+					"[npc.Name]保持着完全的静止，对[npc.herHim]做任何事情[npc.herHim]都不再作出反应。",
+					"[npc.name]是一个顺从的性爱玩偶，[npc.she]听从命令，保持着完全的静止。",
+					"[npc.Name]表现得像个完美的无生命性爱玩偶，继续一动不动。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -3988,11 +3988,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Animate";
+			return "允许活动";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Tell [npc2.name] that [npc2.she] no longer needs to remain immobile, allowing [npc2.herHim] to freely move and talk again.";
+			return "告诉[npc2.name]不需要再保持静止了，允许[npc2.herHim]自由活动和交流。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -4002,8 +4002,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Having had enough of [npc2.namePos] immobile behaviour, [npc.name] [npc.verb(tell)] [npc2.herHim] that [npc.sheIs] free to move once again."
-					+ " With a horny moan and seductive glance, it's revealed that [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+			return "[npc.name]受够了[npc2.namePos]无法移动的状态，于是告诉[npc2.herHim]可以再次自由活动了。"
+					+ "[npc2.name]带着诱人的目光发出了饥渴的呻吟声，这意味着[style.boldGood([npc2.name]现在又能自由行动了)]。";
 		}
 		@Override
 		public void applyEffects() {
@@ -4030,11 +4030,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "[style.boldBad(Sleeping...)]";
+			return "[style.boldBad(睡眠中……)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "You remain deeply asleep...";
+			return "你保持着熟睡……";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -4043,12 +4043,12 @@ public class GenericActions {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(remain)] deeply asleep and [npc.verb(show)] no sign of being close to waking up.",
-					"Despite letting out the occasional "+(Main.sex.getCharacterPerformingAction().isFeminine()?"moan":"groan")+", [npc.name] [npc.verb(remain)] deeply asleep.",
-					"Continuing to sleep, [npc.name] [npc.verb(remain)] totally unaware that [npc.sheIs] being fucked.",
-					"[npc.Name] [npc.verb(remain)] deeply asleep and barely [npc.verb(react)] to anything that's done to [npc.herHim].",
-					"Being an incredibly heavy sleeper, [npc.name] [npc.verb(remain)] in a deep slumber even while [npc.sheIs] being fucked.",
-					"[npc.Name] [npc.do]n't show any sign of waking up as [npc.sheIs] fucked in [npc.her] sleep.");
+					"[npc.Name]仍在沉睡中，没有表现出即将醒来的迹象。",
+					"尽管偶尔会发出"+(Main.sex.getCharacterPerformingAction().isFeminine()?"呻吟":"哼唧")+"声，但[npc.name]依旧保持着熟睡。",
+					"[npc.name]保持着熟睡，完全没有察觉自己正在被操。",
+					"[npc.Name]继续沉睡着，无论对[npc.herHim]做什么，几乎都没反应。",
+					"[npc.Name]简直是个超级重度沉睡者，边挨操边继续沉睡着。",
+					"[npc.Name]毫无醒来的迹象，接着在睡梦中被操。");
 		}
 		@Override
 		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
@@ -4076,11 +4076,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Wake [npc2.herHim]";
+			return "叫醒[npc2.herHim]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Shake [npc2.name] until [npc2.she] wakes up.";
+			return "摇晃[npc2.name]直到[npc2.she]醒来。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -4090,8 +4090,8 @@ public class GenericActions {
 		}
 		@Override
 		public String getDescription() {
-			return "Having had enough of fucking [npc2.name] while [npc2.sheIs] asleep, [npc.name] roughly [npc.verb(shake)] [npc2.herHim] in an attempt to wake [npc2.herHim] up."
-					+ " Reluctantly opening [npc2.her] [npc2.eyes], [npc2.name] [npc.verb(let)] out a yawn and [style.boldGood([npc2.verb(wake)] up)].";
+			return "[npc.name]操够了睡着的[npc2.name]，便粗暴地摇晃[npc2.herHim]，想把[npc2.herHim]叫醒。"
+					+ "[npc2.name]不情愿地睁开眼睛，惊声大叫着[style.boldGood(醒来)]。";
 		}
 		@Override
 		public void applyEffects() {
@@ -4128,11 +4128,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Woken up";
+			return "醒来";
 		}
 		@Override
 		public String getActionDescription() {
-			return "You wake up to find that you're being fucked!";
+			return "你醒来发现自己正在被操！";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -4148,28 +4148,28 @@ public class GenericActions {
 				SexAreaPenetration pen = Main.sex.getFirstOngoingSexAreaPenetration(Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH);
 				GameCharacter characterPenetrating = Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH, pen).iterator().next();
 				sb.append(UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrating,
-						"Although [npc.sheIs] a deep sleeper, the suffocating feeling of having [npc2.namePos] "+pen.getName(characterPenetrating)+" thrust down [npc.her] throat causes [npc.name] to jolt awake."));
+						"虽然[npc.sheIs]是深度睡眠者，但被[npc2.namePos]的"+pen.getName(characterPenetrating)+"深深插进喉咙，窒息感把[npc.Name]弄醒了。"));
 				
 			} else {
 				GameCharacter dom = Main.sex.getDominantParticipants(false).keySet().iterator().next();
 				sb.append(UtilText.parse(Main.sex.getCharacterPerformingAction(), dom,
-						"Although [npc.sheIs] a deep sleeper, [npc2.namePos] movements are forceful enough to rouse [npc.herHim] from [npc.her] slumber."));
+						"虽然[npc.sheIs]是深度睡眠者，但[npc2.namePos]的行动足够有力，将[npc.herHim]从沉睡中唤醒了。"));
 			}
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case SUB_EAGER:
 					if(Main.sex.getCharacterPerformingAction().isMute()) {
-						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out an excited [npc.moan] and happily [npc.verb(submit)] to being fucked.");
+						sb.append("[npc.Name]睁开眼睛，看看发生了什么，而后兴奋[npc.moan]，继续开心地挨操。");
 					} else {
-						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out an excited [npc.moan] and happily [npc.verb(exclaim)], [npc.speech(Yes! Fuck me!)]");
+						sb.append("[npc.Name]睁开眼睛，看看发生了什么，而后兴奋[npc.moan]，继续开心地说，[npc.speech(太棒了！操我吧！)]");
 					}
 					break;
 				case SUB_RESISTING:
 					if(Main.sex.getCharacterPerformingAction().isMute()) {
-						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a mortified gasp and desperately [npc.verb(try)] to resist.");
+						sb.append("[npc.Name]睁开眼睛，看看发生了什么，而后羞愤呼气，急切抵抗起来。");
 					} else {
-						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a mortified gasp and [npc.verb("+(Main.sex.getCharacterPerformingAction().isFeminine()?"scream":"shout")+")] in horror,");
-						sb.append(" [npc.speechNoExtraEffects(What the fuck?! No! Get away from me!)]");
+						sb.append("[npc.Name]睁开眼睛，看看发生了什么，而后羞愤呼气，恐惧地"+(Main.sex.getCharacterPerformingAction().isFeminine()?"尖叫":"大喊")+"着，");
+						sb.append("[npc.speechNoExtraEffects(干你娘的？！不要啊！从我里面出去！)]");
 					}
 					break;
 				case SUB_NORMAL:
@@ -4178,9 +4178,9 @@ public class GenericActions {
 				case DOM_ROUGH:
 				default:
 					if(Main.sex.getCharacterPerformingAction().isMute()) {
-						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a [npc.moan] and quickly [npc.verb(submit)] to being fucked.");
+						sb.append("[npc.Name]睁开眼睛，看看发生了什么，而后[npc.moan]，迅速顺服地挨操。");
 					} else {
-						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a [npc.moan] and [npc.verb(exclaim)], [npc.speech(Yes! Fuck me!)]");
+						sb.append("[npc.Name]睁开眼睛，看看发生了什么，而后发出[npc.moan]，叫道，[npc.speech(太棒了！操我吧！)]");
 					}
 					break;
 			}
@@ -4396,15 +4396,15 @@ public class GenericActions {
 			try {
 				switch((SexAreaOrifice)getAreaToBeEgged()) {
 					case ANUS:
-						return "Lay eggs (anal)";
+						return "产卵(肛门)";
 					case MOUTH:
-						return "Lay eggs (stomach)";
+						return "产卵(腹部)";
 					case NIPPLE: case NIPPLE_CROTCH:
-						return "Lay eggs (breasts)";
+						return "产卵(乳房)";
 					case VAGINA:
-						return "Lay eggs (womb)";
+						return "产卵(子宫)";
 					case SPINNERET:
-						return "Lay eggs (spinneret)";
+						return "产卵(丝囊)";
 					case ARMPITS:
 					case BREAST:
 					case ASS:
@@ -4417,31 +4417,31 @@ public class GenericActions {
 			} catch(Exception ex) {
 				System.err.println("OVIPOSITOR_PENIS_EGG_LAYING getActionTitle() error - Area not found!");
 			}
-			return "Lay eggs";
+			return "产卵";
 		}
 		@Override
 		public String getActionDescription() {
-			String returnString = "Decide to lay your eggs in [npc2.name].";
+			String returnString = "决定在[npc2.name]体内产卵。";
 			GameCharacter characterPenetrated = getCharacterToBeEgged();
 			SexAreaInterface areaContacted = getAreaToBeEgged();
 			switch((SexAreaOrifice)areaContacted) {
 				case ANUS:
-					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.asshole], before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					returnString = "将鸡巴尽可能深地插入[npc2.namePos]的[npc2.asshole]，用产卵器在[npc2.her]的肚子里产卵。";
 					break;
 				case MOUTH:
-					returnString = "Ram your cock as deep as possible down [npc2.namePos] throat, before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					returnString = "将鸡巴尽可能深地插入[npc2.namePos]的喉咙，用产卵器在[npc2.her]的肚子里产卵。";
 					break;
 				case NIPPLE:
-					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.nipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.breasts].";
+					returnString = "将鸡巴尽可能深地插入[npc2.namePos][npc2.nipple+]，用产卵器在[npc2.her]的[npc2.breasts]里产卵。";
 					break;
 				case NIPPLE_CROTCH:
-					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.crotchBoobs].";
+					returnString = "将鸡巴尽可能深地插入[npc2.namePos][npc2.crotchNipple+]，用产卵器在[npc2.her]的[npc2.crotchBoobs]里产卵。";
 					break;
 				case VAGINA:
-					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.pussy+], before using its ovipositor ability to lay your eggs in [npc2.her] womb.";
+					returnString = "将鸡巴尽可能深地插入[npc2.namePos][npc2.pussy+]，用产卵器在[npc2.her]的子宫里产卵。";
 					break;
 				case SPINNERET:
-					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.spinneret], before using its ovipositor ability to lay your eggs inside of [npc2.herHim].";
+					returnString = "将鸡巴尽可能深地插入[npc2.namePos]的[npc2.spinneret]，用产卵器在[npc2.her]体内产卵。";
 					break;
 				case ARMPITS:
 				case ASS:
@@ -4468,7 +4468,7 @@ public class GenericActions {
 			StringBuilder sb = new StringBuilder();
 			if(Main.sex.getCharacterPerformingAction().isWearingCondom()) {//TODO test appending
 				sb.append(UtilText.parse(Main.sex.getCharacterPerformingAction(),
-						"<p style='text-align:center;'>[style.boldTerrible([npc.NamePos] condom broke as [npc.she] [npc.was] laying [npc.her] eggs!)]</p>"));
+						"<p style='text-align:center;'>[style.boldTerrible([npc.NamePos]的避孕套在产卵时破了！)]</p>"));
 				Main.sex.getCharacterPerformingAction().getClothingInSlot(InventorySlot.PENIS).setSealed(false);
 				Main.sex.getCharacterPerformingAction().unequipClothingIntoVoid(Main.sex.getCharacterPerformingAction().getClothingInSlot(InventorySlot.PENIS), true, Main.sex.getCharacterPerformingAction());
 			}
@@ -4483,7 +4483,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] "+areaEgged+"!)]")
+									"[style.italicsYellowLight([npc.Name]在"+areaEgged+"内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
@@ -4698,15 +4698,15 @@ public class GenericActions {
 			try {
 				switch((SexAreaOrifice)getAreaToBeEgged()) {
 					case ANUS:
-						return "Lay eggs (clit-anal)";
+						return "产卵(阴蒂-肛门)";
 					case MOUTH:
-						return "Lay eggs (clit-stomach)";
+						return "产卵(阴蒂-腹部)";
 					case NIPPLE: case NIPPLE_CROTCH:
-						return "Lay eggs (clit-breasts)";
+						return "产卵(阴蒂-乳房)";
 					case VAGINA:
-						return "Lay eggs (clit-womb)";
+						return "产卵(阴蒂-子宫)";
 					case SPINNERET:
-						return "Lay eggs (clit-spinneret)";
+						return "产卵(阴蒂-丝囊)";
 					case ARMPITS:
 					case BREAST:
 					case ASS:
@@ -4719,31 +4719,31 @@ public class GenericActions {
 			} catch(Exception ex) {
 				System.err.println("OVIPOSITOR_CLIT_EGG_LAYING getActionTitle() error - Area not found!");
 			}
-			return "Lay eggs (clit)";
+			return "产卵(阴蒂)";
 		}
 		@Override
 		public String getActionDescription() {
-			String returnString = "Decide to lay your eggs in [npc2.name].";
+			String returnString = "决定在[npc2.name]体内产卵。";
 			GameCharacter characterPenetrated = getCharacterToBeEgged();
 			SexAreaInterface areaContacted = getAreaToBeEgged();
 			switch((SexAreaOrifice)areaContacted) {
 				case ANUS:
-					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.asshole], before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					returnString = "将阴蒂尽可能深地插入[npc2.namePos]的[npc2.asshole]，用产卵器在[npc2.her]肚子里产卵。";
 					break;
 				case MOUTH:
-					returnString = "Ram your clit as deep as possible down [npc2.namePos] throat, before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					returnString = "将阴蒂尽可能深地插入[npc2.namePos]的喉咙，用产卵器在[npc2.her]肚子里产卵。";
 					break;
 				case NIPPLE:
-					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.nipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.breasts].";
+					returnString = "将阴蒂尽可能深地插入[npc2.namePos][npc2.nipple+]，用产卵器在[npc2.her]的[npc2.breasts]里产卵。";
 					break;
 				case NIPPLE_CROTCH:
-					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.crotchBoobs].";
+					returnString = "将阴蒂尽可能深地插入[npc2.namePos][npc2.crotchNipple+]，用产卵器在[npc2.her]的[npc2.crotchBoobs]里产卵。";
 					break;
 				case VAGINA:
-					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.pussy+], before using its ovipositor ability to lay your eggs in [npc2.her] womb.";
+					returnString = "将阴蒂尽可能深地插入[npc2.namePos][npc2.pussy+]，用产卵器在[npc2.her]的子宫里产卵。";
 					break;
 				case SPINNERET:
-					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.spinneret], before using its ovipositor ability to lay your eggs inside of [npc2.herHim].";
+					returnString = "将阴蒂尽可能深地插入[npc2.namePos]的[npc2.spinneret]，用产卵器在[npc2.herHim]体内产卵。";
 					break;
 				case ARMPITS:
 				case ASS:
@@ -4778,7 +4778,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] "+areaEgged+"!)]")
+									"[style.italicsYellowLight([npc.Name]在"+areaEgged+"内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
@@ -4855,13 +4855,13 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (tail-womb)";
+			return "产卵(尾巴-子宫)";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter characterPenetrated = getCharacterToBeEgged();
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
-					"Ram your tail as deep as possible into [npc2.namePos] [npc2.pussy+], before using its ovipositor ability to lay your eggs in [npc2.her] womb.");
+					"将尾巴尽可能深地插入[npc2.namePos][npc2.pussy+]，用产卵器在[npc2.her]的子宫里产卵。");
 		}
 		@Override
 		public String getDescription() {
@@ -4879,7 +4879,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] womb!)]")
+									"[style.italicsYellowLight([npc.Name]在[npc.her]的子宫内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
 			return sb.toString();
@@ -4953,13 +4953,13 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (tail-anal)";
+			return "产卵(尾巴-肛门)";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter characterPenetrated = getCharacterToBeEgged();
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
-					"Ram your tail as deep as possible into [npc2.namePos] [npc2.asshole], before using its ovipositor ability to lay your eggs in [npc2.her] stomach.");
+					"将尾巴尽可能深地插入[npc2.namePos]的[npc2.asshole]，然后使用产卵能力将卵产在[npc2.her]的腹部中。");
 		}
 		@Override
 		public String getDescription() {
@@ -4977,7 +4977,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+									"[style.italicsYellowLight([npc.Name]在肚子里产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
 			return sb.toString();
@@ -5051,13 +5051,13 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (tail-oral)";
+			return "产卵(尾口)";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter characterPenetrated = getCharacterToBeEgged();
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
-					"Ram your tail as deep as possible down [npc2.namePos] throat, before using its ovipositor ability to lay your eggs in [npc2.her] stomach.");
+					"将尾巴尽可能深地插入[npc2.namePos]的喉咙，用产卵器在[npc2.her]肚子里产卵。");
 		}
 		@Override
 		public String getDescription() {
@@ -5075,7 +5075,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+									"[style.italicsYellowLight([npc.Name]在肚子里产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
 			return sb.toString();
@@ -5149,13 +5149,13 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (tail-nipple)";
+			return "产卵(尾乳)";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter characterPenetrated = getCharacterToBeEgged();
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
-					"Ram your tail as deep as possible into [npc2.namePos] [npc2.nipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.breasts].");
+					"将尾巴尽可能深地插入[npc2.namePos][npc2.nipple+]，用产卵器在[npc2.her]的[npc2.breasts]里产卵。");
 		}
 		@Override
 		public String getDescription() {
@@ -5173,7 +5173,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.breasts+]!)]")
+									"[style.italicsYellowLight([npc.Name]在[npc.her][npc.breasts+]内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
 			return sb.toString();
@@ -5247,13 +5247,13 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (tail-crotch-nipple)";
+			return "产卵(尾胯乳)";
 		}
 		@Override
 		public String getActionDescription() {
 			GameCharacter characterPenetrated = getCharacterToBeEgged();
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
-					"Ram your tail as deep as possible into [npc2.namePos] [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.crotchBoobs].");
+					"将尾巴尽可能深地插入[npc2.namePos][npc2.crotchNipple+]，用产卵器在[npc2.her]的[npc2.crotchBoobs]里产卵。");
 		}
 		@Override
 		public String getDescription() {
@@ -5271,7 +5271,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.crotchBoobs+]!)]")
+									"[style.italicsYellowLight([npc.Name]在[npc.her][npc.crotchBoobs+]内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
 			return sb.toString();
@@ -5540,11 +5540,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (self tail-womb)";
+			return "产卵(尾巴-子宫)(自己)";
 		}
 		@Override
 		public String getActionDescription() {
-			String returnString = "Ram your tail as deep as possible into your own [npc.pussy+], before using its ovipositor ability to lay your eggs in your womb.";
+			String returnString = "将尾巴尽可能深地插入自己[npc.pussy+]，用产卵器在子宫里产卵。";
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
 		}
 		@Override
@@ -5563,7 +5563,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] womb!)]")
+									"[style.italicsYellowLight([npc.Name]在[npc.her]的子宫内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
@@ -5638,11 +5638,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (self tail-anus)";
+			return "产卵(尾肛)(自己)";
 		}
 		@Override
 		public String getActionDescription() {
-			String returnString = "Ram your tail as deep as possible into your own [npc.asshole], before using its ovipositor ability to lay your eggs in your stomach.";
+			String returnString = "将尾巴尽可能深地插入自己的[npc.asshole]，用产卵器在肚子里产卵。";
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
 		}
 		@Override
@@ -5661,7 +5661,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+									"[style.italicsYellowLight([npc.Name]在肚子里产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
@@ -5736,11 +5736,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (self tail-oral)";
+			return "产卵(尾口)(自己)";
 		}
 		@Override
 		public String getActionDescription() {
-			String returnString = "Ram your tail as deep as possible down your own throat, before using its ovipositor ability to lay your eggs in your stomach.";
+			String returnString = "将尾巴尽可能深地插入自己的喉咙，用产卵器在肚子里产卵。";
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
 		}
 		@Override
@@ -5759,7 +5759,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+									"[style.italicsYellowLight([npc.Name]在肚子里产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
@@ -5834,11 +5834,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (self tail-nipple)";
+			return "产卵(尾乳)(自己)";
 		}
 		@Override
 		public String getActionDescription() {
-			String returnString = "Ram your tail as deep as possible into your own [npc.nipple+], before using its ovipositor ability to lay your eggs in your [npc.breasts].";
+			String returnString = "将尾巴尽可能深地插入自己[npc.nipple+]，用产卵器在[npc.breasts]里产卵。";
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
 		}
 		@Override
@@ -5857,7 +5857,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.breasts+]!)]")
+									"[style.italicsYellowLight([npc.Name]在[npc.her][npc.breasts+]内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
@@ -5932,11 +5932,11 @@ public class GenericActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Lay eggs (self tail-crotch-nipple)";
+			return "产卵(尾胯乳)(自己)";
 		}
 		@Override
 		public String getActionDescription() {
-			String returnString = "Ram your tail as deep as possible into your own [npc.crotchNipple+], before using its ovipositor ability to lay your eggs in your [npc.crotchBoobs].";
+			String returnString = "将尾巴尽可能深地插入自己[npc.crotchNipple+]，用产卵器在[npc.crotchBoobs]里产卵。";
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
 		}
 		@Override
@@ -5955,7 +5955,7 @@ public class GenericActions {
 			sb.append(
 					"<p style='text-align:center;'>"
 							+ UtilText.parse(getCharacterToBeEgged(),
-									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.crotchBoobs+]!)]")
+									"[style.italicsYellowLight([npc.Name]在[npc.her][npc.crotchBoobs+]内产下了"+Util.intToString(eggCount)+"枚卵！)]")
 					+ "</p>");
 			
 			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());

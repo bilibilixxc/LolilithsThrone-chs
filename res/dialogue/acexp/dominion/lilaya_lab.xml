@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
-    <scene id ="voyeurism">
+    <scene id="voyeurism">
         <author><![CDATA[AceXp]]></author>
         <content folderPath="txt/acexp/dominion/lilaya_lab">INTRO</content>
         <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -13,9 +13,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Spy on them]]></responseTitle>
+                <responseTitle><![CDATA[偷窥]]></responseTitle>
                 <responseTooltip><![CDATA[
-					You've already spied on Lilaya and Rose today, and doing so for a second time would undoubtedly be pushing your luck too far. It would be best to return here tomorrow if you wanted to watch them have sex again.
+					你今天已经偷窥过莉莱雅和萝丝，再来第二次恐怕你的好运就到头了。如果还想看她们做爱，最好还是明天再来。
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[null]]></nextDialogue>
                 <effects/>
@@ -26,9 +26,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Spy on them]]></responseTitle>
+                <responseTitle><![CDATA[偷窥]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Spying on your [lilaya.relation(pc)] and her maid? That idea gets you so excited, you just have to do this, whatever may happen next...
+					偷窥你的[lilaya.relation(pc)]和她的女仆？这个主意让你性欲大发，不管天崩地裂，你必须得看上一看……
                 ]]></responseTooltip>
                 <colour><![CDATA[TEXT]]></colour>
                 <nextDialogue/>
@@ -84,10 +84,10 @@
         </responses>
     </scene>
 
-    <scene id ="after_sex">
+    <scene id="after_sex">
         <author><![CDATA[AceXp]]></author>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[That was interesting, now quickly make your exit...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[真有趣，是时候速速离开了……]]></tooltip>
         <preParsingEffects><![CDATA[
 			[#pc.setNearestLocation(PLACE_TYPE_LILAYA_HOME_CORRIDOR)]
 		]]></preParsingEffects>
@@ -100,8 +100,8 @@
                 <availabilityConditional><![CDATA[true]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Continue]]></responseTitle>
-                <responseTooltip><![CDATA[Continue on your way.]]></responseTooltip>
+                <responseTitle><![CDATA[继续]]></responseTitle>
+                <responseTooltip><![CDATA[继续下去。]]></responseTooltip>
                 <nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
                 <effects/>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Breath Weapon]]></name>
+	<name><![CDATA[龙息喷吐]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] natural breath weapon on [npc.her] target, dealing formattedDamageInflicted damage. Deals either [style.boldFire(fire)], [style.boldIce(ice)], or [style.boldPoison(poison)] damage based on [npc.her] strengths.
+		使用[npc.her]的自然吐息攻击向[npc.her]的目标发起进攻，造成了formattedDamageInflicted伤害。根据[npc.her]的强项，造成[style.boldFire(火)]、[style.boldIce(冰)]、[style.boldPoison(毒)]三种伤害之一。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -117,7 +117,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to dragon characters.
+		仅适用于龙角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -148,7 +148,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Attacker's lust is more than [style.boldMagenta(50%)].
+		发起者的性欲需高于[style.boldMagenta(50%)]。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -160,17 +160,17 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] natural breath weapon on [npc2.name], dealing formattedDamageInflicted damage. Deals either [style.boldFire(fire)], [style.boldIce(ice)], or [style.boldPoison(poison)] damage based on [npc.her] strengths.
+		[npc.her]对[npc2.name]使用自然吐息攻击，造成了formattedDamageInflicted伤害。根据[npc.her]的强项，造成[style.boldFire(火焰)]、[style.boldIce(冰冻)]、[style.boldPoison(毒素)]三种伤害之一。
 		#IF(npc.isSpeechMuffled())
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] mouth is muffled!)]
+			[style.italicsTerrible(由于[npc.her]的嘴被堵住，伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] natural breath weapon on [npc.her] target, dealing formattedDamageInflicted damage. Deals either [style.boldFire(fire)], [style.boldIce(ice)], or [style.boldPoison(poison)] damage based on [npc.her] strengths.
+		[npc.her]对目标使用自然吐息攻击，造成了formattedDamageInflicted伤害。根据[npc.her]的强项，造成[style.boldFire(火焰)]、[style.boldIce(冰冻)]、[style.boldPoison(毒素)]三种伤害之一。
 		#IF(npc.isSpeechMuffled())
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] mouth is muffled!)]
+			[style.italicsTerrible(由于[npc.her]的嘴被堵住，伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionNoTarget>
 	
@@ -186,25 +186,25 @@
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
 			#IF(npc.isSpeechMuffled())
-				As [npc.her] mouth is muffled, [npc.name] [npc.verb(fail)] to hit [npc2.name], and [npc.verb(end)] up doing no damage at all...
+				由于[npc.her]的嘴被堵住，[npc.name]没能击中[npc2.name]，没能造成伤害……
 			#ELSE
-				[npc.Name] [npc.verb(open)] [npc.her] mouth and [npc.verb(let)] out a mighty 
+				[npc.Name]张开嘴，射出一股强大的
 				#IF(npc.getAttributeValue(ATTRIBUTE_DAMAGE_FIRE) >= npc.getAttributeValue(ATTRIBUTE_DAMAGE_ICE) && npc.getAttributeValue(ATTRIBUTE_DAMAGE_FIRE) >= npc.getAttributeValue(ATTRIBUTE_DAMAGE_POISON))
-					jet of fire
+					火焰喷射
 				#ELSEIF(npc.getAttributeValue(ATTRIBUTE_DAMAGE_ICE) >= npc.getAttributeValue(ATTRIBUTE_DAMAGE_FIRE) && npc.getAttributeValue(ATTRIBUTE_DAMAGE_ICE) >= npc.getAttributeValue(ATTRIBUTE_DAMAGE_POISON))
-					stream of ice shards
+					冰锥之流
 				#ELSE
-					gust of poisonous fumes
+					毒烟气流
 				#ENDIF
-				 at [npc2.name] that engulfs [npc2.her] aura!
+				，将[npc2.name]完全包在中间！
 			#ENDIF
 			formattedHealthDamage
 		]]></execute>
 		<critDescription><![CDATA[
-			In [npc.her] lusty desperation, [npc.namePos] makes an extremely effective strike!
+			[npc.namePos]在[npc.her]的性欲加成下造成了极其有效的打击！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.NamePos] head is spinning!
+			[npc2.NamePos]头晕目眩！
 		]]></critEffectDescription>
 	</performMove>
 	

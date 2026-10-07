@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Reception]]></name>
-	<tooltipDescription><![CDATA[The reception area in the Enforcer station holds a front desk and two worn seats for visitors to use while waiting.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the reception area in the Enforcer station in Elis]]></virginityLossDescription>
+	<name><![CDATA[接待处]]></name>
+	<tooltipDescription><![CDATA[执法局的接待区有一个前台，还有两把磨损的椅子供来访者等待。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯执法局的接待区]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

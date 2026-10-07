@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>300</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[anklet]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[anklets]]></namePlural>
-		<description><![CDATA[A delicate, feminine ankle bracelet. It consists of a series of metallic orbs threaded onto a fine metal wire.]]></description>
+		<determiner><![CDATA[一串]]></determiner>
+		<name><![CDATA[脚链]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[脚链]]></namePlural>
+		<description><![CDATA[一串精致的女性脚链。它由一堆金属球穿在一条金属线上组成。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>ANKLE</slot> 
@@ -40,27 +40,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the anklet around [npc.her] ankle.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the anklet around [npc2.namePos] ankle.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(fasten)] the anklet around [npc2.namePos] ankle.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将脚链系在[npc.her]的脚踝上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将脚链系在[npc2.namePos]的脚踝上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]匆忙地将脚链系在[npc2.namePos]的脚踝上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] anklet, before taking it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] anklet, before taking it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] quickly [npc.verb(unfasten)] [npc2.namePos] anklet, before roughly snatching it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解下[npc.her]的脚链然后将其取下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解下[npc2.namePos]的脚链然后将其取下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]迅速解开[npc2.namePos]的脚链并粗暴地将其扯下。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

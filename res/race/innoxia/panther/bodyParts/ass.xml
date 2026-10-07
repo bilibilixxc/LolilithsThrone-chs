@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>innoxia_panther</race>
 	
-	<transformationName><![CDATA[panther]]></transformationName>
+	<transformationName><![CDATA[豹]]></transformationName>
 	
 	<coveringType>innoxia_panther_fur</coveringType>
 	
@@ -15,10 +15,10 @@
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldPanther(panther-like)], [npc.assholeFullDescription].
+		[npc.She]现在拥有了[style.boldPanther(豹般的)][npc.assholeFullDescription]。
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] a panther-like, [npc.anusFullDescription(true)]
-	]]></bodyDescription>
+		拥有豹般[npc.anusFullDescription(true)]
+]]></bodyDescription>
 </ass>

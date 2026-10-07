@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -23,45 +23,45 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Enjoy anilingus]]></title>
+	<title><![CDATA[享受吻肛]]></title>
 	<tooltip><![CDATA[
-		Enjoy the feeling of having your ass eaten by [pc.name].
+		享受被[pc.name]舔弄屁股的感觉。
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
 				#IF(npc==natalya)
-					[natalya.speech(That's it, [style.mule], keep eating my ass!)] Mistress Natalya moans.
+					[natalya.speech(就这样，[style.mule]，继续舔我的屁股！)]主人娜塔莉亚呻吟道。
 				#ELSE
-					[callie.speech(Don't stop!)] Callie happily squeals as you continue eating her ass.
+					[callie.speech(别停！)]卡丽开心地尖叫着，任你继续舔舐她的屁股。
 				#ENDIF
 			]]></text>
 			<text><![CDATA[
 				#IF(npc==natalya)
-					Mistress Natalya lets out a series of [natalya.moans+] as you continue to perform anilingus on her.
+					你继续为主人娜塔莉亚吻肛，惹得她发出一连串[natalya.moans+]。
 				#ELSE
-					Callie lustfully pants and moans as you kiss and lick her puffy, ebony asshole.
+					你亲吻舔舐着卡丽肉感十足，颜色乌黑的屁穴，惹得她情欲高涨地喘息呻吟起来。
 				#ENDIF
 			]]></text>
 			<text><![CDATA[
 				#IF(npc==natalya)
-					Mistress Natalya pushes her ass back against your face and lets out [natalya.a_moan+] as you kiss her hot, puffy doughnut.
+					主人娜塔莉亚将肉臀朝你的脸上压过来，在你亲吻她温热饱满的菊蕾时发出[natalya.a_moan+]。
 				#ELSE
-					Callie [callie.moansVerb+] and reaches back to spread her ass cheeks as you slide your [pc.tongue+] over her [callie.asshole+].
+					卡丽[callie.moansVerb+]，伸手掰开自己的肉臀，任你[pc.tongue+]滑过她[callie.asshole+]。
 				#ENDIF
 			]]></text>
 			<text><![CDATA[
 				#IF(npc==natalya)
-					The flared head of Mistress Natalya's huge, ebony horse-cock engorges and her shaft twitches and throbs as she lets out a series of [natalya.moans+].
+					主人娜塔莉亚那乌黑色马屌的龟头胀大起来，整根肉茎抽动着，随着一连串[natalya.moans+]而不断搏动。
 				#ELSE
-					Rock-hard and constantly twitching, the state of Callie's huge, ebony horse-cock makes it clear that she's loving every moment of this.
+					卡丽那乌黑色马屌坚硬如石，不停抽动着，显然她非常享受当下的感觉。
 				#ENDIF
 			]]></text>
 			<text><![CDATA[
 				#IF(npc==natalya)
-					Mistress Natalya lets out [natalya.a_moan+] and eagerly bucks her feral hindquarters back into your face as you perform oral on her [natalya.asshole+].
+					主人娜塔莉亚发出[natalya.a_moan+]，饥渴地将兽态的后半身往你脸上顶，任你舔舐她[natalya.asshole+]。
 				#ELSE
-					[callie.A_moan+] bursts out from between Callie's lips as you continue to perform oral on her [callie.asshole+].
+					卡丽唇间迸出[callie.A_moan+]，任你继续舔舐她[callie.asshole+]。
 				#ENDIF
 			]]></text>
 		</description>

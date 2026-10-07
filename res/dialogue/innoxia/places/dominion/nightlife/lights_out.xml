@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 	
 	<!-- Place type id: innoxia_dominion_nightlife_lights_out_exit -->
@@ -11,8 +11,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit the bar and head back into the district of Dominion known as 'Nightlife'.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开酒吧，回到御城区那片叫“夜生活”的地方。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="DOMINION_NIGHTLIFE_DISTRICT"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -55,19 +55,19 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Toilet]]></responseTitle>
-				<responseTooltip><![CDATA[Use the toilet.]]></responseTooltip>
+				<responseTitle><![CDATA[盥洗室]]></responseTitle>
+				<responseTooltip><![CDATA[使用厕所。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_nightlife_lights_out_toilets_use]]></nextDialogue>
 				<effects/>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wash]]></responseTitle>
+				<responseTitle><![CDATA[清洗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the sinks to wash your hands and face.
-					<br/>[style.italicsGood(This will clean your head, eyes, mouth, neck, hair, fingers, hands, and wrists, as well as any clothing worn in these slots.)]
-				]]></responseTooltip>
+					用水槽洗脸洗手。
+					<br/>[style.italicsGood(这会清理你的头部、眼睛、嘴巴、脖子、头发、手指、手掌和手腕，以及在这些栏位穿着的衣物。)]
+]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_nightlife_lights_out_toilets_wash]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.applyLimitedWash(IS_HEAD, IS_EYES, IS_MOUTH, IS_NECK, IS_HAIR, IS_FINGER, IS_HAND, IS_WRIST)]
@@ -102,19 +102,19 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Sit down]]></responseTitle>
-				<responseTooltip><![CDATA[Head over to an empty seat and sit down at the bar.]]></responseTooltip>
+				<responseTitle><![CDATA[坐下]]></responseTitle>
+				<responseTooltip><![CDATA[在酒吧找个空位坐下。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_nightlife_lights_out_bar_sit]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Hannah]]></responseTitle>
+				<responseTitle><![CDATA[汉娜]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(hannah))
-						Sit down next to Hannah and say hello.
+						坐在汉娜旁边和她打招呼。
 					#ELSE
-						Hannah isn't here at the moment. She said that she'd be here between [units.time(21)]-[units.time(00)]...
+						汉娜不在这，她说她只有[units.time(21)]-[units.time(00)]在……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -152,8 +152,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Stand up and leave the bar.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开酒吧。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_dominion_nightlife_lights_out_bar]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -164,20 +164,20 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Relax]]></responseTitle>
-				<responseTooltip><![CDATA[Relax and enjoy your time at the bar.]]></responseTooltip>
+				<responseTitle><![CDATA[放松]]></responseTitle>
+				<responseTooltip><![CDATA[在酒吧放松身心。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_nightlife_lights_out_bar_sit_relax]]></nextDialogue>
 			</response>
 			<!-- Drink: -->
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Vodka (#IF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100) Order a shot of vodka. #ELSE You can't afford a shot of vodka... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[伏特加 (#IF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100)点一小杯伏特加。#ELSE你付不起伏特加……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=100)innoxia_places_dominion_nightlife_lights_out_bar_sit#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('vodka', true)]
+					[#game.addSpecialParsingString('伏特加', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_SIT_DRINK'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-100))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('dsg_race_bear_vodka').applyEffect(pc, pc))]
@@ -186,12 +186,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Rum (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) Order a shot of rum. #ELSE You can't afford a shot of rum... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[朗姆酒 (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120)点一小杯朗姆酒。#ELSE你付不起朗姆酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=120)innoxia_places_dominion_nightlife_lights_out_bar_sit#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('rum', true)]
+					[#game.addSpecialParsingString('朗姆酒', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_SIT_DRINK'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-120))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('innoxia_race_rat_black_rats_rum').applyEffect(pc, pc))]
@@ -200,12 +200,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Whiskey (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) Order a shot of whiskey. #ELSE You can't afford a shot of whiskey... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[威士忌 (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120)点一小杯威士忌。#ELSE你付不起威士忌……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=120)innoxia_places_dominion_nightlife_lights_out_bar_sit#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('whiskey', true)]
+					[#game.addSpecialParsingString('威士忌', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_SIT_DRINK'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-120))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('innoxia_race_wolf_wolf_whiskey').applyEffect(pc, pc))]
@@ -214,12 +214,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Arrack (#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180) Order a shot of arrack. #ELSE You can't afford a shot of whiskey... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[亚力酒(#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180)点一小杯亚力酒#ELSE你付不起亚力酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=180)innoxia_places_dominion_nightlife_lights_out_bar_sit#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('arrack', true)]
+					[#game.addSpecialParsingString('亚拉克', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_SIT_DRINK'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-180))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('innoxia_race_panther_deep_roar').applyEffect(pc, pc))]
@@ -228,12 +228,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Grog (#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180) Order a shot of grog. #ELSE You can't afford a shot of grog... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[格罗格酒(#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180)点一小杯格罗格酒。#ELSE你付不起格罗格酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=180)innoxia_places_dominion_nightlife_lights_out_bar_sit#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('grog', true)]
+					[#game.addSpecialParsingString('格罗格酒', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_SIT_DRINK'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-180))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('dsg_race_shark_grog').applyEffect(pc, pc))]
@@ -265,10 +265,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Reject]]></responseTitle>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell [partner.name] that you're not interested.
-					<br/>[style.italicsMinorBad(This will remove [partner.name] from the game.)]
+					告诉[partner.name]你没兴趣。
+					<br/>[style.italicsMinorBad([partner.name]将永远移出游戏。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_dominion_nightlife_lights_out_bar_sit]]></nextDialogue>
 				<effects><![CDATA[
@@ -279,8 +279,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Flirt]]></responseTitle>
-				<responseTooltip><![CDATA[Flirt back with [partner.name].]]></responseTooltip>
+				<responseTitle><![CDATA[调情]]></responseTitle>
+				<responseTooltip><![CDATA[与[partner.name]调情。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_nightlife_lights_out_bar_sit_relax_flirt]]></nextDialogue>
 			</response>
 		</responses>
@@ -295,10 +295,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Reject]]></responseTitle>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell [partner.name] that you're not interested in a one night stand.
-					<br/>[style.italicsMinorBad(This will remove [partner.name] from the game.)]
+					告诉[partner.name]你对一夜情不感兴趣。
+					<br/>[style.italicsMinorBad([partner.name]将永久移出游戏。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_dominion_nightlife_lights_out_bar_sit]]></nextDialogue>
 				<effects><![CDATA[
@@ -309,8 +309,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex (alleyway)]]></responseTitle>
-				<responseTooltip><![CDATA[Leave the bar with [partner.name] and have sex down a nearby alleyway.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(小巷)]]></responseTitle>
+				<responseTooltip><![CDATA[和[partner.name]离开酒吧，在附近找条小巷做爱。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -338,8 +338,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Sex (bedroom)]]></responseTitle>
-				<responseTooltip><![CDATA[Leave the bar with [partner.name] and take [partner.herHim] back home, before having sex with [partner.herHim] in your bedroom.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(卧室)]]></responseTitle>
+				<responseTooltip><![CDATA[和[partner.name]离开酒吧，带[partner.name]回家，在卧室里和[partner.herHim]做爱。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[30]]></secondsPassed>
 				<effects><![CDATA[
@@ -366,9 +366,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="one_night_stand_after_sex_alleyway">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[partner.name] has had [partner.her] fun and brings an end to the sex...]]></tooltip>
+	<scene id="one_night_stand_after_sex_alleyway">
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[partner.name]已经爽够了，结束了性爱……]]></tooltip>
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'ONE_NIGHT_STAND_AFTER_SEX_ALLEYWAY'))]
 			[#game.banishNPC(partner)]
@@ -381,16 +381,16 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[As your partner has now left, you wonder what to do next...]]></responseTooltip>
-				<nextDialogue ><![CDATA[default]]></nextDialogue>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你的对象走了，下一步要做什么……]]></responseTooltip>
+				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 
-	<scene id ="one_night_stand_after_sex_bedroom">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[partner.name] has had [partner.her] fun and brings an end to the sex...]]></tooltip>
+	<scene id="one_night_stand_after_sex_bedroom">
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[partner.name]已经爽够了，结束了性爱……]]></tooltip>
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'ONE_NIGHT_STAND_AFTER_SEX_BEDROOM'))]
 			[#game.banishNPC(partner)]
@@ -403,9 +403,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[As your partner has now left, you wonder what to do next...]]></responseTooltip>
-				<nextDialogue ><![CDATA[default]]></nextDialogue>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你的对象走了，下一步要做什么……]]></responseTooltip>
+				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
@@ -422,8 +422,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Hannah that you've got to be going now.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告诉汉娜，你得走了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_dominion_nightlife_lights_out_bar]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -436,12 +436,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Talk]]></responseTitle>
+				<responseTitle><![CDATA[交谈]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_talk))
-						You've already spent some time talking with Hannah, and it seems like now she's only interested in other things... 
+						你已经和汉娜聊过了，看起来她此时正忙于别的事……
 					#ELSE
-						Talk with Hannah for a while.
+						和汉娜聊一会。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -463,14 +463,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Flirt]]></responseTitle>
+				<responseTitle><![CDATA[调情]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_flirt))
-						You've already flirted with Hannah, and now she's only interested in physical contact... 
+						你和汉娜调过情了，她现在只想身体接触……
 					#ELSEIF(!flags.hasFlag(FLAG_innoxia_lights_out_hannah_talk))
-						You can tell from the stoic look on her face that Hannah won't be receptive to flirting at the moment...
+						你从她脸上拘谨的表情看得出，汉娜现在不会接受调情……
 					#ELSE
-						Flirt back with Hannah, letting her know that you like her.
+						和汉娜调情，让她知道你喜欢她。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -491,14 +491,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Kiss]]></responseTitle>
+				<responseTitle><![CDATA[接吻]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_kiss))
-						You've already kissed Hannah, and now she wants nothing less than sex... 
+						你已经吻过汉娜了。现在她只想做爱……
 					#ELSEIF(!flags.hasFlag(FLAG_innoxia_lights_out_hannah_flirt))
-						It's clear from Hannah's body language that she'd reject any attempt to kiss her...
+						汉娜的肢体语言拒绝你亲她……
 					#ELSE
-						Lean into Hannah and give her a kiss.
+						靠近汉娜，吻她。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -520,8 +520,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_lights_out_hannah_kiss)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex (alleyway)]]></responseTitle>
-				<responseTooltip><![CDATA[Leave the bar with Hannah and have sex down a nearby alleyway.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(小巷)]]></responseTitle>
+				<responseTooltip><![CDATA[和汉娜离开酒吧，在附近找条小巷做爱。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -551,8 +551,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_lights_out_hannah_kiss)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Sex (bedroom)]]></responseTitle>
-				<responseTooltip><![CDATA[Leave the bar with Hannah and take her back home, before having sex with her in your bedroom.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(卧室)]]></responseTitle>
+				<responseTooltip><![CDATA[和汉娜离开酒吧，带她回家，在卧室里和她做爱。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[30]]></secondsPassed>
 				<effects><![CDATA[
@@ -581,8 +581,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Vodka (#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))Free#ELSEIF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink)) Order a shot of vodka. #ELSE You can't afford a shot of vodka... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[伏特加 (#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))免费#ELSEIF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink))点一小杯伏特加。#ELSE你付不起伏特加……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_alcohol_warning))
 						innoxia_places_dominion_nightlife_lights_out_bar_hannah_wasted
@@ -594,7 +594,7 @@
 				]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('vodka', true)]
+					[#game.addSpecialParsingString('伏特加', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_HANNAH_DRINK'))]
 					#IF(!flags.hasFlag(FLAG_innoxia_lights_out_free_drink))
 						[#game.appendToTextStartStringBuilder(pc.incrementMoney(-100))]
@@ -611,8 +611,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Rum (#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))Free#ELSEIF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink)) Order a shot of rum. #ELSE You can't afford a shot of rum... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[朗姆酒 (#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))免费#ELSEIF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink))点一小杯朗姆酒。#ELSE你付不起朗姆酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_alcohol_warning))
 						innoxia_places_dominion_nightlife_lights_out_bar_hannah_wasted
@@ -624,7 +624,7 @@
 				]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('rum', true)]
+					[#game.addSpecialParsingString('朗姆酒', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_HANNAH_DRINK'))]
 					#IF(!flags.hasFlag(FLAG_innoxia_lights_out_free_drink))
 						[#game.appendToTextStartStringBuilder(pc.incrementMoney(-120))]
@@ -641,8 +641,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Whiskey (#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))Free#ELSEIF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink)) Order a shot of whiskey. #ELSE You can't afford a shot of whiskey... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[威士忌(#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))免费#ELSEIF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink))点一小杯威士忌。#ELSE你付不起威士忌……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_alcohol_warning))
 						innoxia_places_dominion_nightlife_lights_out_bar_hannah_wasted
@@ -654,7 +654,7 @@
 				]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('whiskey', true)]
+					[#game.addSpecialParsingString('威士忌', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_HANNAH_DRINK'))]
 					#IF(!flags.hasFlag(FLAG_innoxia_lights_out_free_drink))
 						[#game.appendToTextStartStringBuilder(pc.incrementMoney(-120))]
@@ -671,8 +671,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Arrack (#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))Free#ELSEIF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink)) Order a shot of arrack. #ELSE You can't afford a shot of arrack... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[亚力酒(#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))免费#ELSEIF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink))点一小杯亚力酒#ELSE你付不起亚力酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_alcohol_warning))
 						innoxia_places_dominion_nightlife_lights_out_bar_hannah_wasted
@@ -684,7 +684,7 @@
 				]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('arrack', true)]
+					[#game.addSpecialParsingString('亚拉克', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_HANNAH_DRINK'))]
 					#IF(!flags.hasFlag(FLAG_innoxia_lights_out_free_drink))
 						[#game.appendToTextStartStringBuilder(pc.incrementMoney(-180))]
@@ -701,8 +701,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Grog (#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))Free#ELSEIF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink)) Order a shot of grog. #ELSE You can't afford a shot of grog... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[格罗格酒(#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))免费#ELSEIF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180 || flags.hasFlag(FLAG_innoxia_lights_out_free_drink))点一小杯格罗格酒。#ELSE你付不起格罗格酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_alcohol_warning))
 						innoxia_places_dominion_nightlife_lights_out_bar_hannah_wasted
@@ -714,7 +714,7 @@
 				]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('grog', true)]
+					[#game.addSpecialParsingString('格罗格酒', true)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'BAR_HANNAH_DRINK'))]
 					#IF(!flags.hasFlag(FLAG_innoxia_lights_out_free_drink))
 						[#game.appendToTextStartStringBuilder(pc.incrementMoney(-180))]
@@ -749,8 +749,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[Let Hannah fuck you right here in the alleyway.]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[让汉娜在小巷里操你。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -776,9 +776,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Push Hannah away and tell her that you need to go.]]></responseTooltip>
-				<nextDialogue ><![CDATA[default]]></nextDialogue>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[推开汉娜，告诉她你得走了。]]></responseTooltip>
+				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_lights_out_hannah_left, true)]
@@ -789,9 +789,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="after_sex_alleyway">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Hannah has had her fun and brings an end to the sex...]]></tooltip>
+	<scene id="after_sex_alleyway">
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[汉娜爽够了，结束了性爱……]]></tooltip>
 		<preParsingEffects><![CDATA[
 			[#hannah.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL)]
 		]]></preParsingEffects>
@@ -803,9 +803,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[As Hannah has now left, you wonder what to do next...]]></responseTooltip>
-				<nextDialogue ><![CDATA[default]]></nextDialogue>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[汉娜走了，下一步要做什么……]]></responseTooltip>
+				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'AFTER_SEX_ALLEYWAY_CONTINUE'))]
 					[#hannah.setAlcoholLevel(0)]
@@ -815,9 +815,9 @@
 		</responses>
 	</scene>
 
-	<scene id ="after_sex_bedroom">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Hannah has had her fun and brings an end to the sex...]]></tooltip>
+	<scene id="after_sex_bedroom">
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[汉娜爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/dominion/nightlife/lights_out">AFTER_SEX_BEDROOM</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -826,9 +826,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Sleep]]></responseTitle>
-				<responseTooltip><![CDATA[With Hannah tightly hugging you, it seems like you're going to have to spend the night with her, whether you want to or not...]]></responseTooltip>
-				<nextDialogue ><![CDATA[innoxia_places_dominion_nightlife_lights_out_after_sex_bedroom_morning]]></nextDialogue>
+				<responseTitle><![CDATA[睡觉]]></responseTitle>
+				<responseTooltip><![CDATA[汉娜紧紧的拥抱你，看起来无论你愿不愿意，你都要和她共度良宵了……]]></responseTooltip>
+				<nextDialogue><![CDATA[innoxia_places_dominion_nightlife_lights_out_after_sex_bedroom_morning]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
 					[#~~(game.getMinutesUntilNextMorningOrEvening() + 5)]
 				]]></secondsPassed>
@@ -843,7 +843,7 @@
 		</responses>
 	</scene>
 	
-	<scene id ="after_sex_bedroom_morning">
+	<scene id="after_sex_bedroom_morning">
 		<content folderPath="txt/places/dominion/nightlife/lights_out">AFTER_SEX_BEDROOM_MORNING</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>true</continuesDialogue>
@@ -852,9 +852,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[As Hannah has now left, you wonder what to do next...]]></responseTooltip>
-				<nextDialogue ><![CDATA[default]]></nextDialogue>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[汉娜走了，下一步要做什么……]]></responseTooltip>
+				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/nightlife/lights_out', 'AFTER_SEX_BEDROOM_MORNING_CONTINUE'))]
 				]]></effects>

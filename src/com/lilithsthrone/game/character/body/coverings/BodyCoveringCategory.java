@@ -8,41 +8,41 @@ package com.lilithsthrone.game.character.body.coverings;
 public enum BodyCoveringCategory {
 
 	// Main covering types
-	MAIN_SKIN("skin"),
-	MAIN_HAIR("hair"),
-	MAIN_FUR("fur"),
-	MAIN_SCALES("scales"),
-	MAIN_FEATHER("feathers"),
-	MAIN_CHITIN("chitin"),
+	MAIN_SKIN("皮肤"),
+	MAIN_HAIR("毛发"),
+	MAIN_FUR("皮毛"),
+	MAIN_SCALES("鳞片"),
+	MAIN_FEATHER("羽毛"),
+	MAIN_CHITIN("几丁质外壳"),
 	
 	// Eyes
-	EYE_IRIS("irises"),
-	EYE_PUPIL("pupils"),
-	EYE_SCLERA("sclerae"),
+	EYE_IRIS("虹膜"),
+	EYE_PUPIL("瞳孔"),
+	EYE_SCLERA("巩膜"),
 
 	// Head
-	ANTENNAE("antennae"),
-	HORN("horns"),
-	ANTLER("antlers"),
-	HAIR("hair"),
+	ANTENNAE("触须"),
+	HORN("角"),
+	ANTLER("鹿角"),
+	HAIR("头发"),
 
 	// Orifices
-	ANUS("anus"),
-	MOUTH("mouth"),
-	TONGUE("tongue"),
-	NIPPLE("nipples"),
-	NIPPLE_CROTCH("crotch-nipples"),
-	VAGINA("vagina"),
-	PENIS("penis"),
-	SPINNERET("spinneret"),
+	ANUS("肛门"),
+	MOUTH("嘴巴"),
+	TONGUE("舌头"),
+	NIPPLE("乳头"),
+	NIPPLE_CROTCH("胯乳乳头"),
+	VAGINA("阴道"),
+	PENIS("阴茎"),
+	SPINNERET("丝囊"),
 
 	// Other
-	BODY_HAIR("body hair"),
+	BODY_HAIR("体毛"),
 	
 	// Specials
-	ARTIFICIAL("dildo") { public boolean isInfluencedByMaterialType() { return false; } },
-	FLUID("fluid") { public boolean isInfluencedByMaterialType() { return false; } },
-	MAKEUP("makeup") { public boolean isInfluencedByMaterialType() { return false; } };
+	ARTIFICIAL("假屌") { public boolean isInfluencedByMaterialType() { return false; } },
+	FLUID("液体") { public boolean isInfluencedByMaterialType() { return false; } },
+	MAKEUP("妆容") { public boolean isInfluencedByMaterialType() { return false; } };
 	
 	private String name;
 

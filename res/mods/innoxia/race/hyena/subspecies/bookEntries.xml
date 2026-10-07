@@ -1,57 +1,57 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<!-- You can define an author name to be shown in-game by setting the 'author' attribute.
 		I advise using a lore-friendly name so as to not break immersion, although of course you're free to use whatever name you like in your mod. -->
 	<htmlContent tag="HYENA_BASIC" author="Professor Webster"><![CDATA[
 	<p>
-		Hyena-morphs are almost exclusively found in the savannah and desert in the south of Lilith's Realm, although the odd individual may sometimes be seen wandering the streets of Dominion. Rounded ears, predatory eyes, and their distinctive spotted or striped fur is usually enough to identify a person as a hyena-morph.
+		鬣狗化形几乎只在莉莉丝王国南部的稀树草原和沙漠中现身，但也偶有零星个体在御城区的街道上游荡。圆形的耳朵、散发掠夺性的眼睛以及独特的斑点或条纹皮毛，这就足以让人认出他们是鬣狗化形。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HYENA_ADVANCED" author="Professor Webster"><![CDATA[
 	<p style='text-align:center;'>
-		[style.boldHyena(Spotted Hyenas)]
+		[style.boldHyena(斑鬣狗)]
 	</p>
 	<p>
-		Spotted hyena-morphs are nomadic dwellers of the savannah and desert. While it's not unheard of to see one make a living in the city of Dominion, they for the most part tend to stick to their tribal encampments. Occasionally armed bands may venture beyond their usual homes in the wastes in search of travellers or undefended villages to raid.
+		斑鬣狗化形是稀树草原和沙漠里的游牧民。虽然他们在御城区谋生的情况并非闻所未闻，但大多数人都倾向于坚守自己的部落营地。有时他们会组织起袭击小队，冒险离开荒地中的家园，寻找旅行者或不设防的村庄进行袭击。
 	</p>
 	<p>
-		Often of larger build and height, females have the unusual physical feature of an enlarged clitoris that they use as a pseudo penis. Male spotted hyenas in comparison are often shorter and less physically imposing than the females of their species, though are still slightly taller than the average human.
+		该种族的女性通常具有较大较高的体型，她们的阴蒂特别粗大，可以当做假阴茎来使用，这一点十分不寻常。相比之下，男性斑鬣狗化形要比女性更矮，体形也更小，但仍然比普通人类略高。
 	</p>
 	<p>
-		Spotted hyena society is one based on strength, and due to their biology, often matriarchal. The strongest warrior rules each tribe, advised by a shaman gifted in the arcane. Customarily a chieftain is a woman, however it is not unheard of for a male to lead a tribe, though this is a rare occurrence. The stronger, often female, warrior class treats the weaker, usually male, members of the tribe as a servant class. These weaker tribal members in turn lord over the captives of the tribe, be they slaves or an individual held for ransom. Unless a warrior or shaman takes personal guardianship over one of these captives, they can expect to be used as an outlet for the sexual frustration of the tribe's lessers. 
+		斑鬣狗社会崇尚力量，基于其生物学特性，通常表现为母系社会。每个部落由最强大的战士统治，并由一位具有奥术天赋的萨满辅佐。通常来说酋长是女性，但男性领导部落的情况也并非闻所未闻，当然，这种情况很少出现。较强的战士(通常是女性)会将部落中较弱的成员(通常是男性)视为仆人。这些较弱的部落成员又反过来管理着部落的俘虏，包括奴隶和勒索赎金用的人质。这些俘虏如果不被战士或萨满亲自管理，就可能被当作部落下等人发泄性饥渴的渠道。
 	</p>
 	<p>
-		Like most morphs, arcane storms inspire a deep rut in hyenas, and they will aggressively seek out a partner to dominate. Thankfully most hyenas live far from the storms' epicentre in Dominion, and as such one rarely has to worry about falling victim to one of these affected individuals.
+		和大多数种族一样，奥术风暴会使鬣狗剧烈发情，他们会积极地寻找一个可供支配的对象。值得庆幸的是，大多数鬣狗生活的地方距离御城区风暴中心很远，因此不必太担心自己会成为这些受影响个体的受害者。
 	</p>
 	<p>
-		Like most morphs, a spotted hyena's offspring will be a mix of the hyena and the partner's race. Children gifted in the arcane are especially prized in hyena society and because of this, raiding parties are always on the lookout for morphs who are gifted in the arcane travelling through their territory. While raiding parties dare not to accost full demons for fear of retribution, there have been some reports of half-demons, youkos, and others gifted in the arcane being approached by raiding parties with an amicable offer of protection or trade given in exchange for fathering or mothering children. More often than not however, hyena raiding parties will attempt to take what they want by force, including mates.
+		和大多数种族一样，斑鬣狗的后代将是鬣狗和伴侣种族的混血儿。具有奥术天赋的孩子在鬣狗社会中尤其受到重视，也正因为如此，袭击小队时刻在关注穿过领地的那些具有奥术天赋的旅行者。袭击小队因为害怕报复而不敢与恶魔搭讪，但有一些报告称，半恶魔、妖狐和其他具有奥术天赋的人会被突袭小队友好地提供保护或交易，以换取生育孩子的机会。然而，通常情况下，鬣狗袭击团体会试图用武力夺取他们想要的东西，包括配偶。
 	</p>
 	<br/>
 	<p style='text-align:center;'>
-		[style.boldHyena(Striped Hyenas)]
+		[style.boldHyena(条纹鬣狗)]
 	</p>
 	<p>
-		Striped hyena-morphs are a settled people among the wastes, who make their living through subsistence farming and herding. Their kind values the laws and proper behaviour of a civilized society so they are a far more common sight in Dominion than their spotted cousins. Unfortunately, their nature as homebodies means it is still rare that one will actually make the trek to the city. Although they are for the most part an independent people who value their privacy, they group up in large numbers to travel the wastes, due to the threat posed by their rival subspecies, spotted hyena-morphs.
+		条纹鬣狗化形是荒原中的定居民，他们靠自给自足的农业和畜牧业为生。他们重视文明社会的法律和得体行为，因此在御城区中，他们比他们的斑鬣狗表亲更常见。不幸的是，他们的居家天性使得很少有人长途跋涉到城市去。尽管他们在很大程度上是独立的个体，重视个人的隐私，但由于死对头斑鬣狗化形的威胁，他们还是会成群结队地在荒野中旅行。
 	</p>
 	<p>
-		Male and female striped hyenas tend to be of the same height as one another. Unlike spotted hyenas, they do not have any major deviations in genital arrangement and both are equally physically adept, that is to say, very. The pride of a striped hyena can easily be said to be their long, luxurious mohawks. Both males and females sport them and much personal pride is put into their appearance. Jewellery is not an uncommon feature among more affluent members of the race but the most common embellishment among them is to simply dye it in colours which are important to the individual.
+		男性和女性条纹鬣狗往往具有相同的身高。与斑鬣狗不同，他们的生殖器布局没有任何特殊差异，而且二者的身体素质都同样出色，或者说，非常出色。条纹鬣狗长而奢华的莫霍克发型可以说是他们的骄傲，男性和女性都拥有这种发型，并且会在此基础上加入许多个人想法。珠宝在较富裕的种族成员中并不罕见，但最常见的装饰方法只是将其简单地染成个人喜欢的颜色。
 	</p>
 	<p>
-		Being a society based on independence, their desire for privacy means they will often make their homes in the various rural communities that dot the savannah and desert. While not as physically intimidating as their spotted cousins, physical achievement is still highly prized in striped hyena society, and thus contact sports form the usual pastime in their communities. Their desire to cement their individuality often times expresses itself via an intense competitive spirit. Due to this, the striped hyenas within Dominion can often times can be found near a gym, especially the boxing ring.
+		作为一个基于独立性的社会，他们渴望拥有隐私，这意味着他们经常会在遍布稀树草原和沙漠的各个乡间村落安家。虽然肉体上不像他们的斑鬣狗表亲那样令人生畏，但在条纹鬣狗社会中，肉体上的成就仍然受到高度重视，因此运动成为了他们社会中常见的消遣活动。他们常常以强烈的竞争精神来表达自己对巩固个性的愿望。因此，御城区内的条纹鬣狗经常出现在健身房里，尤其是拳击场附近。
 	</p>
 	<p>
-		Striped hyenas' competitive nature also manifests in their relationship with their spotted cousins. Despite their penchant for independence, groups of striped hyenas regularly patrol between towns in the wastes for the chance of happening on a patrol of spotted raiders to best in combat. For a price, merchants and other travellers seeking to navigate the wastes can usually enlist the aid of striped hyenas, or bargain their way into being allowed to accompany one of these vigilante groups.
+		条纹鬣狗的竞争天性也体现在他们与斑鬣狗的关系上。尽管他们倾向于独立，但成群的条纹鬣狗仍然定期在荒野的城镇之间巡逻，寻找机会与游荡的斑鬣狗袭击者进行战斗。只要付出一定的代价，想在荒野中旅行的商人和其他旅行者往往能获得条纹鬣狗的帮助，抑或是准许与这些治安维护团体同行的合约。
 	</p>
 	<p>
-		Arcane storms inspire a deep rut in striped hyenas, though unlike spotted hyenas, they aren't nearly as aggressive and are just as likely to submit to a willing partner as force themselves on an unwilling one. 
+		奥术风暴会让条纹鬣狗剧烈发情，但与斑鬣狗不同的是，他们的攻击性并不强，可能会顺从于那些自愿的对象，也可能会强迫那些不情愿的对象服从。
 	</p>
 	<p>
-		Like most morphs, a striped hyena's offspring will be a mix of the hyena and the partner's race. Striped hyenas have a family structure that consists only of themselves and their romantic partner. Children are expected to work towards acquiring their own home as soon as possible though their parents will usually lend what aid they can. After the child acquires a home they will tend to look for a mate. Striped hyenas are usually monogamous though more urbanized individuals will usually be more promiscuous than the rural members of their kind.
+		和大多数种族一样，条纹鬣狗的后代将是鬣狗和伴侣种族的混血儿。条纹鬣狗的家庭结构仅由自己和伴侣组成。尽管父母通常会提供力所能及的帮助，但孩子们还是会尽快努力拥有自己的家。孩子有了家之后，就会开始寻找伴侣。条纹鬣狗通常是一夫一妻制，但城市化程度较高的个体往往会比乡村同类更加淫乱。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>250</value>
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendDamageName="false"><![CDATA[flashlight]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[flashlights]]></namePlural>
-		<description><![CDATA[An arcane-powered flashlight. As well as being able to illuminate even the darkest of areas, this sturdy torch could also be used as an impromptu baton...]]></description>
-		<attackDescriptor>whack</attackDescriptor>
-		<attackTooltipDescription>Whack [npc2.name] with your flashlight.</attackTooltipDescription>
+		<determiner><![CDATA[一个]]></determiner>
+		<name appendDamageName="false"><![CDATA[手电筒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[手电筒]]></namePlural>
+		<description><![CDATA[一个以奥术供能的手电筒。除了能够照亮最黑暗的地方外，这种结实的手电筒还可以用作即兴指挥棒……]]></description>
+		<attackDescriptor><![CDATA[捶打]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的手电筒捶打[npc2.name]。]]></attackTooltipDescription>
 		<rarity>COMMON</rarity>
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] flashlight and [npc.verb(prepare)] to use it to illuminate any dark areas [npc.she] [npc.verb(encounter)].]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] flashlight away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]握好[npc.her]的手电筒，准备拿它来照亮[npc.she]遇到的黑暗区域。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]把[npc.her]的手电筒收了起来。]]></unequipText>
 		
 		<imageName>flashlight.svg</imageName> 
 		<imageEquippedName>flashlight.svg</imageEquippedName>
@@ -46,25 +46,25 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Swinging [npc.her] flashlight, [npc.name] [npc.verb(manage)] to whack [npc2.name] on the [npc2.arm], which causes [npc2.herHim] to let out a surprised yelp!
+		[npc.name]挥舞着手电筒，成功击中了[npc2.name]的[npc2.arm]，让[npc2.herHim]发出一声惊叫！
 		]]></hitText>
 		<hitText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] flashlight, [npc.name] [npc.verb(manage)] to land a solid hit on [npc2.her] [npc2.arm]!
+		[npc.name]用手电筒猛击[npc2.name]，结结实实地击中了[npc2.her]的[npc2.arm]！
 		]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] flashlight, whacking the heavy end against [npc2.her] shoulder!
+		[npc.name]快步上前，拿着手电筒朝[npc2.name]扑去，用手电筒的重端砸在了[npc2.her]的肩上！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] flashlight, [npc.name] [npc.verb(attempt)] to whack [npc2.name] on the [npc2.arm], but [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.name]刺出[npc.her]的手电筒，朝[npc2.name]的[npc2.arm]砸去，却没打中[npc2.herHim]！
 		]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] flashlight, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]用[npc.her]的手电筒向[npc2.name]击去，随后因为没打中[npc.her]的目标而沮丧地叫出了声！
 		]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] flashlight, but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]快步上前，拿着手电筒朝[npc2.name]扑去，但[npc.she]没打中[npc.her]的目标！
 		]]></missText>
 	</missDescriptions>
 	

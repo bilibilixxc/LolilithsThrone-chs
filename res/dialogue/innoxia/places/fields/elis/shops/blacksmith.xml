@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_shops_blacksmith -->
@@ -9,16 +9,16 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Approach]]></responseTitle>
+				<responseTitle><![CDATA[接近]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getHourOfDay()>=7 && game.getHourOfDay()<20)
 						#IF(game.getDialogueFlags().hasFlag(FLAG_innoxia_elis_blacksmith_visited))
-							Approach Imsu and Hale and get their attention.
+							接近因苏和黑尔，引起他们的注意。
 						#ELSE
-							Approach the baphomets and get their attention.
+							走近巴风特，引起它们的注意。
 						#ENDIF
 					#ELSE
-						As the forge is currently closed, you'll have to come back at another time...
+						由于铁匠铺目前关闭，你只能下次再来……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -48,8 +48,8 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Trade (Imsu)]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what Imsu has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[交易(因苏)]]></responseTitle>
+					<responseTooltip><![CDATA[看看因苏有哪些产品要出售……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[imsu]]></tradePartner>
@@ -58,8 +58,8 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Trade (Hale)]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what Hale has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[交易(黑尔)]]></responseTitle>
+					<responseTooltip><![CDATA[看看黑尔有哪些产品要出售……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[hale]]></tradePartner>
@@ -69,12 +69,12 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[History]]></responseTitle>
+					<responseTitle><![CDATA[历史]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_blacksmith_talk_history))
-							You've already asked Imsu and Hale about their background today...
+							你今天已经问了因苏和黑尔的背景了……
 						#ELSE
-							Ask Imsu and Hale how the two of them came to set up a forge together.
+							问问因苏和黑尔他们俩是如何一起建立铁匠铺的。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -98,12 +98,12 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[The Ninth Strike]]></responseTitle>
+					<responseTitle><![CDATA[九炼]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_blacksmith_talk_name))
-							You've already asked Imsu and Hale about the story behind their forge's name today...
+							你今天已经问过因苏和黑尔他们工房背后的故事了……
 						#ELSE
-							Ask Imsu and Hale for the story behind their forge's name, 'The Ninth Strike'.
+							询问因苏和黑尔他们的铁匠铺名字“九炼”背后的故事。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -129,10 +129,10 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_blacksmith_side_quest_available)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Youko contact]]></responseTitle>
+					<responseTitle><![CDATA[接触妖狐]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Tell the baphomets that you'll keep their goal in mind when you're in the Shinrin Highlands, and if the opportunity arises, you'll try to convince a nine-tailed youko to help them.
-						<br/>[style.italicsMinorBad(This will be added soon!)]
+						告诉巴风特你会在心林高地记住他们的目标。如果有机会，你会努力说服一只九尾妖狐来帮他们。
+						<br/>[style.italicsMinorBad(这部分会很快添加！)]
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 					<effects/>
@@ -142,9 +142,9 @@
 					<availabilityConditional><![CDATA[[#pc.hasQuest(QUEST_LINE_SIDE_EISEK_STALL) && pc.getQuest(QUEST_LINE_SIDE_EISEK_STALL) == QUEST_EISEK_STALL_QUEST_STAGE_TWO]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[10]]></index>
-					<responseTitle><![CDATA[Awning poles]]></responseTitle>
+					<responseTitle><![CDATA[遮阳篷杆]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Ask the baphomets if maybe they could help you make some poles for an awning.
+						询问巴风特他们能不能帮你做些遮阳篷杆。
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_blacksmith_ask_awning_pole]]></nextDialogue>
 					<effects><![CDATA[
@@ -156,8 +156,8 @@
 					<availabilityConditional><![CDATA[[#flags.getSavedLong("elis_eisek_hale_order_date") + 1 > game.getDayNumber() && pc.getQuest(QUEST_LINE_SIDE_EISEK_STALL) == QUEST_EISEK_STALL_QUEST_STAGE_THREE]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[10]]></index>
-					<responseTitle><![CDATA[Awning poles]]></responseTitle>
-					<responseTooltip><![CDATA[It hasn't been a day since you placed your order with Hale yet...]]></responseTooltip>
+					<responseTitle><![CDATA[遮阳篷杆]]></responseTitle>
+					<responseTooltip><![CDATA[你找黑尔下单才过了不到一天……]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 					<effects/>
 				</response>
@@ -167,16 +167,16 @@
 					<index><![CDATA[10]]></index>
 					<responseTitle><![CDATA[
 						#IF(pc.getMoney() < 550)
-							Pick up order ([style.moneyFormatUncoloured(550, span)])
+							自取([style.moneyFormatUncoloured(550, span)])
 						#ELSE
-							Pick up order ([style.moneyFormat(550, span)])
+							自取([style.moneyFormat(550, span)])
 						#ENDIF
 					]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(pc.getMoney() < 550)
-							You need five hundred and fifty flames to pay for your order, and you don't have that much money!
+							你需要550火币才能付账，你没有那么多钱！
 						#ELSE
-							Pick up your order from Hale.
+							从黑尔那儿领取订单。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -198,8 +198,8 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[0]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Say goodbye to the baphomets and exit their forge.]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[和巴风特道别，离开他们的铁匠铺。]]></responseTooltip>
 					<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_shops_street"/>
 					<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 					<effects><![CDATA[

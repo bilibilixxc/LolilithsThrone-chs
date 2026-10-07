@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- Journey from Elis to Themiscyra -->
@@ -6,373 +6,373 @@
 	<htmlContent tag="JOURNEY_START"><![CDATA[
 	#IF(pc.hasTraitActivated(PERK_CHUUNI))
 		<p>
-			Ready to embark upon your epic quest alongside your worthy rival, you strike a suitably impressive pose and declare to Meraxis that it's time to leave for Themiscyra. Jumping up to match your pose with one of her own, the Dark Siren dramatically declares, [meraxis.speech(The dark powers which have woven our fates together compel us to leave at once! Prepare yourself, my worthy rival, for I shall allow you to cross through space and time with me!)]
+			你已经准备好与你值得尊敬的对手一起踏上史诗般的征程，你摆出一个令人印象深刻的姿势，向梅拉克西丝宣布是时候出发去特弥斯库拉了。暗夜塞壬跳起来，用她自己的姿势配合着你，中二地说，[meraxis.speech(我们的命运交织在一起，此时，黑暗力量迫使我们立刻离开！准备好吧，我值得尊敬的对手，我将允许你和我一起穿越时空！)]
 		</p>
 		<p>
-			Realising that this means that Meraxis intends to teleport the two of you to the town, you prepare yourself and tell the [meraxis.race] in a suitably poetic manner that you're ready whenever she is. Turning to face the group of succubi who have attached themselves to her in the hopes of being able to bask in a fraction of her universe-shattering powers, Meraxis commands, [meraxis.speech(Remain here, my loyal minions! [pc.Name] and I must face our destiny alone, after which I shall return to regale you with tales of my magnificent victories!)]
+			你听懂了梅拉克西斯意思是打算将你们两人传送到小镇上，于是你做好了准备，并用一种恰到好处的中二表达告诉梅拉克西斯，只要她准备好了，你随时可以出发。梅拉克西丝转过身来，面对着那群黏在她周围，希望能沐浴到她那震撼宇宙的力量的魅魔，命令道，[meraxis.speech(留在这里，我忠诚的仆从们！我和[pc.name]必须独自面对我们的命运，之后我会回来向你们讲述我辉煌的胜利！)]
 		</p>
 		<p>
-			With expressions of awe on their faces, these succubi look on in adoration as Meraxis casts the teleportation spell. A second later, and you find yourself momentarily blinded by a flash of pinkish-purple light...
+			当梅拉克西丝施展传送法术时，这些魅魔脸上露出敬畏的表情，一脸崇拜地看着梅拉克西丝。一秒钟后，你发现自己被一道粉紫色的闪光瞬间闪瞎了狗眼……
 		</p>
 	#ELSE
 		<p>
-			Ready to set off on your quest to find out if Themiscyra is being threatened by Lunette's raiders, you tell Meraxis that you're ready to set out. Jumping up to strike a ridiculous pose, the chuuni [meraxis.race] dramatically declares, [meraxis.speech(The dark powers which have woven our fates together compel us to leave at once! Prepare yourself, my worthy rival, for I shall allow you to cross through space and time with me!)]
+			你准备出发去探查特弥斯库拉是否受到了露内特劫掠者的威胁，你告诉梅拉克西斯你已经准备好出发了。她跳起来摆出一个可笑的姿势，中二病发的[meraxis.race]气势汹汹地宣布，[meraxis.speech(将我们的命运交织在一起的黑暗力量，此时迫使我们立刻离开！准备好吧，我值得尊敬的对手，我将允许你和我一起穿越时空！)]
 		</p>
 		<p>
-			Realising that this means that Meraxis intends to teleport the two of you to the town, you try to ignore the giggles coming from the group of nearby succubi as you say that you're ready to go. Nodding in approval, Meraxis then turns to face these succubi, who have attached themselves to her in the hopes of being able to climb the social hierarchy by being associated with an elder lilin's recognised daughter, and commands, [meraxis.speech(Remain here, my loyal minions! [pc.Name] and I must face our destiny alone, after which I shall return to regale you with tales of my magnificent victories!)]
+			你听懂了梅拉克西丝的意思是打算把你们两个传送到镇上，于是你尽量不去理会附近那群魅魔发出的笑声，你说你已经准备好出发了。梅拉克西丝点点头表示同意，然后转过身来面对这些魅魔，命令道，[meraxis.speech(留在这里，我忠诚的仆从们！我和[pc.name]必须独自面对我们的命运，之后我会回来向你们讲述我辉煌的胜利！)]
 		</p>
 		<p>
-			Trying not to smirk and giggle too much, these succubi sit back and watch as Meraxis casts the teleportation spell. A second later, and you find yourself momentarily blinded by a flash of pinkish-purple light...
+			这些魅魔受过专业的训练，一般不会笑，除非忍不住，她们坐在一旁看着梅拉克西丝施放传送咒。一秒钟后，你发现自己瞬间被一道粉紫色的闪光闪瞎了狗眼……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JOURNEY_TELEPORTED"><![CDATA[
 	<p>
-		Opening your eyes, you see that you're now standing beside a curved section of a paved road, which is cutting through thick woodland. Standing beside you is Meraxis, and as she turns to face you, she lets out a laugh and boasts, [meraxis.speech(Mwhahaha! Behold my ultimate powers! In but a moment, I have transported us to the town of Themiscyra, home of the Amazons!)]
+		睁开眼睛，你发现自己正站在一条弯曲的小路旁，小路穿过茂密的树林。站在你身边的是梅拉克西丝，当她转过身来面对你时，她放声大笑，夸夸其谈，[meraxis.speech(哇哈哈哈哈，看，我的终极能力片刻之间，就把我们带到了特弥斯库拉，亚马逊人的故乡！)]
 	</p>
 	<p>
-		Looking around, you see no sign of this town, and so state this fact to the chuuni [meraxis.race]. Letting out an annoyed tut, she places her hands on her hips and retorts, [meraxis.speech(You'll be able to see the town as soon as we're around this bend. As much as I'd love to demonstrate my awesome arcane abilities to the Amazons, they take the security of Themiscyra very seriously, and if the two of us appeared out of thin air then we'd have a lot of explaining to do, which would ruinously detract from the spectacle of seeing how amazing I am.)]
+		环顾四周，你没有看到哪里有镇子，于是你向中二的[meraxis.race]说明了这一事实。她恼怒地啧啧两声，双手叉腰，反驳道，[meraxis.speech(等我们过了这个弯，你就能看到小镇了！虽然我很想向亚马逊人展示我超凡的魔法能力，但他们对特弥斯库拉的安全非常重视，如果我们两个凭空出现，那我们就得解释一番了，这将会破坏我的精彩表演。)]
 	</p>
 	#IF(pc.hasTraitActivated(PERK_CHUUNI))
 		<p>
-			With this level of caution being somewhat uncharacteristic for your rival, the Dark Siren, you strike a dramatic pose and demand to know why she's trying to be so careful around the Amazons. Not wanting to show weakness, the [meraxis.race] matches your pose with one of her own, before rhetorically asking, [meraxis.speech(You really don't know anything, do you? Well, I suppose that can't be helped, the Amazons do try to keep to themselves, after all. As you seem to know nothing about them, then the two main things to note are that they're a feminine-only community, and that they have a well-deserved reputation as being fearsome warriors. Of course, they stand no chance against my galaxy-shattering spells, but I do respect their prowess in combat, and so I'd rather avoid getting into a situation where I have to fight them.)]
+			你的对手暗夜塞壬的这种谨慎程度有些反常，你摆出了一个中二的姿势，要求知道她为什么要在亚马逊人面前如此小心。不甘示弱的[meraxis.race]也摆出了自己的姿势，然后反驳道，[meraxis.speech(你真的什么都不知道吗？好吧，我想这也是没办法的事，毕竟亚马逊人都是独来独往的。既然你似乎对她们一无所知，那么有两件事值得注意，其一，她们是女性专属的族群，其二，她们都是当之无愧的可怕战士。当然，她们不可能抵挡得了我的银河系毁灭法术，但我确实敬佩她们的战斗力，所以我宁愿避免陷入必须与她们战斗的境地。)]
 		</p>
 		<p>
-			Wanting to regain the initiative, you state that it'd be best to get moving, before asking Meraxis which way it is to the town. Still in her dramatic pose, she points down the road and declares, [meraxis.speech(This way, my rival! Follow me!)]
+			你希望重新获得主动权，因此在询问梅拉克西丝通往小镇的路途之前，你说最好还是快走吧。她依然摆出一副夸张的姿态，指着路说，[meraxis.speech(这边，我的宿敌，跟我来！)]
 		</p>
 		<p>
-			Setting off in the indicated direction alongside Meraxis, you soon turn the corner in the road, and as you do so, you start to notice that there's the faint smell of burning in the air. A moment later, you see plumes of smoke rising up into the sky above the treetops in the distance. Noticing this at the same time as you, the grin drops from Meraxis's face, and she gasps, [meraxis.speech(We're too late! Come on, [pc.name]! Hurry!)]
+			你沿着梅拉克西丝的指示方向出发，很快就转过了道路的拐角，这时你开始注意到空气中弥漫着淡淡的焦糊味。过了一会儿，你看到远处的树梢上有一股股浓烟直冲云霄。梅拉克西丝与你同时注意到这一点，她脸上的笑容消失了，她喘着粗气，[meraxis.speech(我们来晚了，快点，[pc.name]！快点！)]
 		</p>
 	#ELSE
 		<p>
-			With this level of caution being somewhat uncharacteristic for Meraxis, you ask her why she's trying to be so careful around the Amazons. Letting out a sigh and crossing her arms, she rhetorically asks, [meraxis.speech(You really don't know anything, do you? Well, I suppose that can't be helped, the Amazons do try to keep to themselves, after all. As you seem to know nothing about them, then the two main things to note are that they're a feminine-only community, and that they have a well-deserved reputation as being fearsome warriors. Of course, they stand no chance against my galaxy-shattering spells, but I do respect their prowess in combat, and so I'd rather avoid getting into a situation where I have to fight them.)]
+			你问她为什么在亚马逊人面前要如此小心谨慎，她的谨慎程度与平时狂傲的梅拉克西丝有些格格不入。她叹了口气，双手交叉，反驳道，[meraxis.speech(你真的什么都不知道吗？好吧，我想这也是没办法的事，毕竟亚马逊人都是独来独往的。既然你似乎对她们一无所知，那么有两件事值得注意，其一，她们是女性专属的族群，其二，她们都是当之无愧的可怕战士。当然，她们不可能抵挡得了我的银河系毁灭法术，但我确实敬佩她们的战斗力，所以我宁愿避免陷入必须与她们战斗的境地。)]
 		</p>
 		<p>
-			Thinking that it'd be best to get moving, you ask Meraxis which way it is to the town. Striking another of her dramatic poses, she points down the road and declares, [meraxis.speech(This way, my rival! Follow me!)]
+			你认为最好还是快走，于是询问梅拉克西丝去小镇的路怎么走。她又摆出了一个夸张的姿势，指着路说，[meraxis.speech(这边，我的对手，跟我来！)]
 		</p>
 		<p>
-			Setting off in the indicated direction alongside the chuuni [meraxis.race], you soon turn the corner in the road, and as you do so, you start to notice that there's the faint smell of burning in the air. A moment later, you see plumes of smoke rising up into the sky above the treetops in the distance. Noticing this at the same time as you, the grin drops from Meraxis's face, and she gasps, [meraxis.speech(We're too late! Come on, [pc.name]! Hurry!)]
+			你沿着中二[meraxis.race]的指示方向出发，很快就转过了道路的拐角，这时你开始注意到空气中弥漫着淡淡的焦糊味。片刻之后，你看到远处的树梢上有一股股浓烟直冲云霄。梅拉克西丝与你同时注意到这一点，她脸上的笑容消失了，喘着粗气说，[meraxis.speech(我们来晚了，快点，[pc.name]！快点！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JOURNEY_HURRY"><![CDATA[
 	<p>
-		The prospect of finding Themiscyra under attack and in need of assistance serves to drive you and Meraxis on as you hurry as fast as you can down the road. Turning one last corner, you exit the forest and find yourself standing upon a small hill, the elevation of which grants you a good view over the town of Themiscyra and its surrounding landscape.
+		发现特弥斯库拉现在遭到了攻击，你们认为那里需要援助，于是你和梅拉克西丝继续赶路，你们以最快的速度沿着公路前进。转过最后一个弯道，你走出了森林，发现自己正站在一座小山丘上。
 	</p>
 	<p>
-		Momentarily pausing to assess the situation, you see that the main road upon which you're travelling gently snakes its way through dozens of fields, before going beneath a huge triumphal arch which sits at the town's main entrance. The fields which lie between you and the town have been thoroughly trampled, scorched, and blasted full of smoking craters, leading you to assume that this was the recent site of a large battle. Surprisingly, given the scale of the destruction, you don't see any casualties, nor for that matter any sign of people at all. Casting your gaze over this battleground, you look at the town itself, which appears to be almost as large as Elis, although with buildings constructed in a classical Greek style instead of medieval European architecture. On the far side of the town, you see a large, rocky outcropping, with a classical palace perched upon the top.
+		你稍稍停顿了一下，评估了一下形势，发现你所走的主干道蜿蜒曲折，穿过数十块田地，然后从镇子正门的巨大凯旋门下穿过。在你和小镇之间的田野已经被彻底践踏、烧焦，并被炸出了一个个冒烟的弹坑，因此你可以推测这里最近曾发生过一场大规模的战斗。令人惊讶的是，和破坏的规模不相称的是，你没有看到任何伤亡，也没有看到任何人的踪迹。将目光投向这片战场，你会发现这座城镇本身似乎和伊利斯一样大，不过这里的建筑是古希腊城邦风格，而不是中世纪的欧洲建筑风格。在城镇的远处，你看到了一块巨大的岩石，岩石顶上有一座古典时期的宫殿。
 	</p>
 	<p>
-		[meraxis.speech(Where is everybody?)] Meraxis asks, having also noticed that there's nobody to be seen anywhere. Pointing at the plumes of smoke rising from within the town, she concludes, [meraxis.speech(The fighting must be going on in there! Come on, [pc.name], maybe we can help!)]
+		[meraxis.speech(人都哪去了？)]梅拉克西丝问道，她也注意到到处都看不到人影。她指着从镇内升起的烟雾，猜测着说，[meraxis.speech(战斗一定是在那边进行的！来吧，[pc.name]，也许我们能帮上忙！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JOURNEY_CENTAURS"><![CDATA[
 	<p>
-		As the two of you hurry towards the town, you realise that you're not hearing any sounds of conflict within. Worried by this, Meraxis laments, [meraxis.speech(It sounds like we're too late...)]
+		当你们两人匆匆赶往小镇时，你们发现没有听到任何冲突的声音。对此，梅拉克西丝忧心忡忡地感叹道，[meraxis.speech(我觉得我们可能来晚了……)]
 	</p>
 	<p>
-		Managing to cross the fields in good time, within a few minutes the two of you are approaching the triumphal entrance arch. As you draw near, you see your first sign of life since arriving, which not only reveals what's happened to Themiscyra, but causes you and Meraxis to come to a halt and prepare yourselves for a fight. Loudly laughing and boasting, this worrying sign of life takes the form of at least a dozen huge, muscular, demonic centauresses, who come trotting out from the town carrying bags of loot over their shoulders or upon their backs. Caught up in their conversation, they don't notice you at first, but as they draw a little nearer, the leader at the front sees you and shouts out a warning cry, which causes the group to heft their axes, swords, and spears, and then begin to charge right at you.
+		你们及时穿过了田野，几分钟后就接近了凯旋门。当你们走近时，你们看到了抵达此地后的第一个生命迹象，这不仅揭示了特弥斯库拉发生了什么事，还让你和梅拉克西丝停了下来，做好了战斗准备。这些不详的身影是至少十几个身材高大、肌肉发达的恶魔半人马，他们肩上或背上背着大包小包的战利品，从镇子里小跑出来。他们沉浸在自己的谈话中，一开始并没有注意到你，但当他们走近一点时，走在最前面的首领看到了你，并大声喊出了警告的口号，这使得这群人举起了他们的斧头、剑和长矛，然后开始向你们冲来。
 	</p>
 	<p>
-		Not at all intimidated or scared at the prospect of being trampled by these centauresses, Meraxis allows a mischievous smirk to settle on her face as she steps forwards and holds her hand up into the air. With a flash of light, her huge, green-bladed scythe appears in her outstretched hand, after which she spins completely around in a theatrical manner to assume a dramatic pose. With her free hand she then lifts up her eyepatch, revealing her glowing, heterochromatic purple eye as she declares, [meraxis.speech(Behold! My potential unchained! Now you shall know true power!)]
+		梅拉克西丝丝毫没有被这些半人马践踏的前景吓倒或害怕，她的脸上挂着顽皮的笑容，向前迈出一步，把手举向空中。随着一道光芒闪过，她巨大的绿刃镰刀出现在她伸出的手中，随后她以一种夸张的方式完全旋转起来，摆出了一个中二的姿势。然后，她用空闲的手掀起眼罩，露出她那双闪着异色光芒的紫色眼睛，说，[meraxis.speech(看！我的潜能已经得到了释放！现在，你们将了解真正的力量！)]
 	</p>
 	<p>
-		Without asking for your permission, or even telling you what she's planning, the chuuni [meraxis.race] teleports the two of you to beneath the triumphal arch, right behind the group of charging centauresses. Skidding to a halt, the demons let out angry, confused shouts as they see the two of you vanish into thin air. With deception clearly not playing a critical part in her plan, Meraxis lets the group know where she is by slamming the base of her scythe against the floor and loudly shouting, [meraxis.speech(Powers beneath the earth, obey your Mistress's command! Rend unto the end of time a chasm of darkness, from which the suffocating miasma of toxic dimensions may pour forth!)]
+		没有征求你的同意，甚至没有告诉你她的计划，中二[meraxis.race]就把你们两个传送到了凯旋门下面，就在那群冲锋的半人马后面。看到你们两个凭空消失，恶魔们发出了愤怒而困惑的叫声。显然，她并不是打算闪现到这些人背后进行偷袭，梅拉克西丝用镰刀的底部猛击地面，大声喊道，让这群恶魔知道她在哪里，[meraxis.speech(地底的力量，听从你们主人的命令！在时间的尽头开辟一条黑暗的鸿沟，让令人窒息的有毒瘴气从中涌出！)]
 	</p>
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			Recognising that Meraxis is casting the same spell which she used back in her citadel, you smirk to yourself as you realise that you're once again going to be able to witness your rival's awesome power.
+			你发现梅拉克西丝正在施放她在城堡里使用过的咒语，你不禁暗自窃笑，因为你意识到自己将再次见证你对手的强大力量。
 		#ELSE
-			Recognising that Meraxis is casting the same spell which she used back in her citadel, you try to tell her to tone it down this time, but your warning comes too late.
+			你意识到梅拉克西丝正在施放她在城堡里使用过的咒语，你试图告诉她这次出招可以不用那么大声地把招式名喊出来，但你的警告来得太晚了。
 		#ENDIF
-		 The ground starts to violently shake beneath your [pc.feet], which causes several of the centauresses to trip and fall, before fissures begin to open up and spew forth choking, arcane-draining gasses. Looking up, you see that the arch, already weakened due to a large chunk of masonry having been blown out of the rear side of it, has several deep and highly-worrying cracks spreading across its surface. As you shout out a warning to the chuuni [meraxis.race], you see the arch begin to collapse from the seismic forces, causing you to push Meraxis forwards to safety and then dive back to avoid being crushed!
+		你脚下的地面开始剧烈晃动，导致几个半人马绊倒，然后裂缝开始打开，喷出呛人的奥术气体。抬头一看，你发现拱门后侧的一大块砖石已经被炸掉，拱门已经变得脆弱不堪，表面上还出现了几道深深的裂缝，令人十分担忧。当你向中二的[meraxis.race]发出警告时，你看到拱门开始在地震的作用下倒塌，这让你不得不把梅拉克西丝推到安全的地方，然后向后俯冲以避免被压扁！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JOURNEY_SEPARATED"><![CDATA[
 	<p>
-		Thanks to your warning, Meraxis sees the danger at the same time as you, and with your push giving her the boost she needed, she manages to dash forwards and dodge the falling masonry. Falling back the opposite way, your retreat takes you into Themiscyra, splitting you up from Meraxis in the process. Over the ear-splitting noise of the arch's collapse, you think that you hear the [meraxis.race] shouting for you to make your way to the palace, before a flash of light lets you know that she's safely teleported out of there.
+		由于你的警告，梅拉克西丝和你同时看到了危险，你的推力给了她所需的加速度，她成功地向前冲去，躲开了掉落的砖石。你同时获得了反向的加速度，你的后退让你进入了特弥斯库拉，在此过程中你与梅拉克西丝分开了。在拱门倒塌的刺耳声中，你好像听到了[meraxis.race]喊叫着让你赶往宫殿，然后一道闪光让你知道她已经安全地传送出去了。
 	</p>
 	<p>
-		With the angry centauresses now cut off from your position by a mountain of hazardous rubble, you turn your back on the collapsed arch and prepare to set off on your way to the palace. Knowing that Meraxis is more than capable of looking after herself, you decide not to rush, and look out for any more aggressive demons who might have been attracted by the noise as you prepare to enter the town. Thankfully, although several nearby buildings are on fire, and there are more signs of fighting and destruction everywhere you look, no more demonic centauresses can be seen.
+		愤怒的半人马现在被堆积如山的危险瓦砾阻隔在外，你背对着倒塌的拱门，准备踏上前往王宫的路。你知道梅拉克西丝有足够的能力照顾好自己，所以决定不着急，在准备进城的时候，你要小心那些可能被噪音吸引过来的更具攻击性的恶魔。值得庆幸的是，虽然附近有几栋建筑着火了，到处都是战斗和破坏的痕迹，但再也看不到半人马恶魔了。
 	</p>
 	<p>
-		[aurokaris.speech(Halt and identify yourself!)] a strong, feminine voice suddenly shouts out off to your side. Turning to face the source of this voice, you see a muscular, greater cow-girl, who stands at [aurokaris.heightValue] and who looks to be around twenty, aggressively pointing a spear in your direction. Her hazel eyes are narrowed as she tries to figure out whether you're friend or foe, and from the stance she's taking, you can tell that she knows how to fight.
+		[aurokaris.speech(停下，表明身份！)]一个有力的女声突然在你身旁喊道。转过身来，面对着声音的来源，你看到一个肌肉发达、身高[aurokaris.heightValue]，看起来大约二十岁的牛女正用长矛咄咄逼人地指向你。她的淡褐色眼睛眯成一条缝，正试图分辨出你是敌是友。
 	</p>
 	<p>
-		Realising that this cow-girl is an Amazon, you see no harm in doing as she asks, and so stop to give her your name. After you've spoken, the Amazon takes a moment to decide whether or not to trust your word, during which time you're able to take a better look at her. The shaggy fur covering her body is a uniform brown,
+		你意识到这位牛女是亚马逊人，觉得照她说的做也无妨，于是停下来告诉她你的名字。你说完之后，亚马逊人花了一点时间来决定是否相信你的话，在这段时间里，你可以更好地观察她。她身上蓬松的皮毛是统一的棕色，
 		#IF(game.isFurryHairEnabled())
-			 her long, braided hair is the same colour but a darker shade, and
+			她编成辫子的长发也是同样的颜色，但颜色更深，而且
 		#ELSE
-			 while
+			
 		#ENDIF
-		 the long, curved horns growing out of her forehead are white. Her upper legs and torso, including her huge, [aurokaris.cupSize]-cup breasts, are covered by a peplos, an ancient-Greek style dress, which is worn in combination with several pieces of silver jewellery.
+		她额头上长出的弯弯曲曲的长角是白色的。她的上肢和躯体，包括巨大的[aurokaris.cupSize]罩杯乳房，都被古希腊风格的女式长衣所覆盖，连衣裙上还佩戴着几件银饰。
 	</p>
 	<p>
-		[aurokaris.speech(You don't act like Lunette's daughters,)] the cow-girl says as she lifts her spear. Although she has a kind-looking face, she continues to keep her eyes narrowed in suspicion as she asks, [aurokaris.speech(Before I can trust you, I need to know why you're here.)]
+		[aurokaris.speech(你不像露内特的女儿们，)]牛姑娘边说边举起了长矛。虽然她面容和善，但在问话时仍然眯着眼睛，满脸狐疑，[aurokaris.speech(在我信任你之前，我需要知道你为什么在这里。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JOURNEY_AUROCHSIA"><![CDATA[
 	<p>
-		Telling the Amazon the truth, you explain how you arrived here with Meraxis, and that the two of you were sent by Minotallys to see if Themiscyra was being threatened by Lunette. Leaving out the part where it was your companion's fault, you say that the arch collapsed during your fight with a dozen demonic centauresses, and that during that demolition the two of you have become separated.
+		告诉亚马逊人真相，你解释了你和梅拉克西丝是如何来到这里的，你们俩是被米诺塔莉丝派来查看特弥斯库拉是否受到了露内特的威胁。撇开同伴的过错不谈，你说拱门是在你和十几个半人马恶魔战斗时倒塌的，在战斗中，你们两个走散了。
 	</p>
 	<p>
-		[aurokaris.speech(So Minotallys finally decided to do something,)] the Amazon sighs, before gesturing around at the burning and destroyed buildings and continuing, [aurokaris.speech(As you can see, it's too little, too late. We've been fending off raids from Lunette's daughters for months. Although every Amazon is a warrior, we've been constantly losing ground due to their strength and numbers. Now it looks like all is lost...)]
+		[aurokaris.speech(米诺塔莉丝终于决定做点什么了。)]亚马逊人叹了口气，然后指了指周围被烧毁的建筑，继续说道，[aurokaris.speech(如你所见，这太少了，也太晚了。几个月来，我们一直在抵挡露内特女儿们的突袭。虽然每个亚马逊人都是战士，但由于她们的力量和数量都远胜于我们，我们一直在节节败退。现在看来，一切都完了……)]
 	</p>
 	<p>
-		Seeing in this Amazon a potential ally, you tell the cow-girl that you'll be able to convince Minotallys to help, and that the town can surely be rebuilt.
+		你认为亚马逊人是一个潜在的盟友，于是你告诉牛女，你一定能说服米诺塔莉丝帮忙，小镇一定能重建起来。
 	</p>
 	<p>
-		[aurokaris.speech(You're right, there's no reason to lose hope just yet,)] she replies in a determined tone. Stepping forwards, the muscular cow-girl finally introduces herself, [aurokaris.speech(My name is Aurokaris. Although I'm one of the younger Amazons, our queen, Ursa, has put her faith in me. I've been tasked to make sure that the town had been fully evacuated while she holds back the main force of Lunette's army. She's fighting alongside our best warriors in front of the palace as we speak. I couldn't find any Amazons left behind, so I'm ready to head back to the palace now. If you join me and assist our queen, then she'll be able to speak of what's happened here and help you to convince Minotallys of Lunette's threat. It'll be safer to travel together.)]
+		[aurokaris.speech(你说得对，不能仅仅受到这些挫折就放弃希望，)]她用坚定的语气回答道。这位肌肉发达的牛女走上前来，终于介绍起了自己：[aurokaris.speech(我叫奥罗卡利斯，虽然我是最年轻的亚马逊人之一，但我们的女王乌萨信任我。我的使命是确保全镇的人都撤离，而她则负责抵挡露内特大军的进攻。就在我们说话的时候，她正和我们最优秀的战士在宫殿前并肩作战。我找不到还留在这里的亚马逊人了，所以现在正准备回王宫。如果你和我一起协助我们的女王，她会告诉你这里为什么变成了这样，也会帮你说服米诺塔莉丝相信露内特的威胁。我觉得我们一起走会更安全。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JOURNEY_AUROCHSIA_END"><![CDATA[
 	<p>
-		Agreeing with Aurokaris's statement, you tell her that you'd be glad to have her come with you as you travel through the town. Saying that Meraxis is also to be found at the palace, you tell the cow-girl that you were planning on heading over there anyway, even before you knew that Ursa was still fighting there.
+		你同意奥罗卡利斯的说法，并告诉她，你很乐意让她和你一起穿过小镇。你说在宫殿里也能找到梅拉克西丝，并告诉牛女，在知道乌萨还在那里战斗之前，你就已经打算去那里了。
 	</p>
 	<p>
-		[aurokaris.speech(I saw some of Lunette's daughters as I made my way back here,)] Aurokaris warns, [aurokaris.speech(If we encounter any, then it should be easy enough to evade them, but if you'd like to fight, then I'll be at your side. Come on, there's no time to waste. Let's get going!)]
+		[aurokaris.speech(我在回来的路上看到了露内特的几个女儿，)]奥罗卡利斯提醒你，[aurokaris.speech(如果我们遇到了，躲开他们应该很容易，但如果你想战斗，我会和你一起。来吧，没时间浪费了。我们走吧！)]
 	</p>
 	<p>
-		Agreeing that speed is of the essence, you set off into Themiscyra with the cow-girl Amazon at your side...
+		你同意现在应该分秒必争，于是你在牛女的陪伴下出发前往特弥斯库拉……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Exterior dialogue for world map tile -->
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		A short distance away from your current position lies the home of the Amazons; the town of Themiscyra. Having been attacked and mostly destroyed by the army commanded by Lunexis, the settlement now lies in a state of ruin. You're currently standing upon a small, wooded hill which overlooks the town, and from this elevated vantage point you're able to get a good view over the surrounding landscape.
+		距你现在所在的位置不远处，就是亚马逊人的家园——特弥斯库拉镇。此地遭到露内克西丝所率军队的攻打，大部分已被摧毁，如今只剩一片废墟。你正站在一座林木茂密的小山丘上，俯瞰着这座城镇；从这个高处，你可以将周围的景色尽收眼底。
 	</p>
 	<p>
-		A paved road snakes its way around the hill which you're currently on and then cuts through dozens of fields, before ending at the huge pile of rubble which was once a triumphal arch that spanned the town's main entrance. The fields which lie between you and the town have been scarred by Lunexis's attack, and are thoroughly trampled, scorched, and blasted full of smoking craters. Casting your gaze over this battleground, you look at the town itself, which appears to be almost as large as Elis, although with buildings constructed in a classical Greek style instead of medieval European architecture. On the far side of the town, you see a large, rocky outcropping, with a classical palace perched upon the top. Almost all of the buildings have been significantly damaged, either by fire or from the blasts of arcane spells.
+		一条铺砌的道路绕着你现在所在的山丘蜿蜒而过，然后穿过数十片田野，最终止步于一大堆瓦砾前——那里曾是横跨城镇正门的凯旋门。你与城镇之间的田野已被露内克西丝的进攻摧残得满目疮痍，到处被践踏、烧焦，布满了冒烟的弹坑。你扫视这片战场，又将目光投向城镇本身；它看起来几乎和伊利斯一样大，只不过建筑是古典希腊风格，而非中世纪欧洲建筑。在城镇的另一端，你看见一处巨大的岩层，顶端坐落着一座古典宫殿。几乎所有建筑都严重受损，不是被火焰烧毁，就是被奥术法术的爆炸波及。
 	</p>
 	<p>
-		Dozens of wispy smoke trails rise from the ruins of Themiscyra, letting you know that Lunexis's forces must have remained within the town. Now and again, groups of demonic centauresses trot out from the ruins, or appear from the surrounding countryside to make their way back into what is now their base of operations. They sometimes cast their gaze over their surroundings, and although you're fully concealed behind the foliage which covers this hill, you still feel a chill running down your spine as you imagine what would happen if you were spotted.
+		数十缕袅袅烟雾从特弥斯库拉的废墟中升起，这表明露内克西丝的部队一定还留在城里。不时有一队队恶魔半人马从废墟中小跑而出，或从周围乡野出现，返回如今已成为她们行动基地的地方。她们有时会环顾四周；尽管你完全藏在这座山的枝叶之后，一想到若被发现会有什么下场，你仍不禁脊背发凉。
 	</p>
 	<p>
-		Thinking that it would be best not to linger in this place for too long, you take one last look at the ruins of Themiscyra, before turning away and sneaking back down the far side of the hill...
+		你觉得最好别在此地久留，于是最后看了一眼特弥斯库拉的废墟，便转过身，悄悄从山的另一侧溜了下去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Aurokaris talking dialogues -->
 
 	<htmlContent tag="AUROCHSIA"><![CDATA[
 	<p>
-		Wanting to know more about this town and the situation you find yourself in, you stop and say to Aurokaris that you'd like to ask her some questions.
+		你想更多地了解这个小镇和你所处的环境，于是停下脚步，对奥罗卡利斯说你想问她一些问题。
 	</p>
 	<p>
-		[aurokaris.speech(We don't have time for this,)] she impatiently replies, but then after letting out a deep sigh, she relents and says, [aurokaris.speech(I suppose information might help us in the fights to come. Very well, ask away, but please do try to be quick.)]
+		[aurokaris.speech(我们没时间了。)]她不耐烦地回答道，但在深深叹了一口气后，她又缓和下来，说道，[aurokaris.speech(我想这些信息可能会对我们接下来的战斗有所帮助。好吧，尽管问吧，但请尽量快点。)]
 	</p>
 	<p>
-		With the cow-girl scanning your surroundings to make sure that two of you aren't taken by surprise, you wonder what to ask her first...
+		牛女在扫视你们周围的环境，以确保你们两个不会遭遇措手不及的伏击，你在想先问她些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_CONTINUE"><![CDATA[
 	<p>
-		Not having any more questions to ask, you tell Aurokaris that you're ready to continue on your way.
+		你没有问题要问了，就告诉奥罗卡利斯你准备继续上路了。
 	</p>
 	<p>
-		[aurokaris.speech(Great,)] the muscular Amazon replies as she hefts her dory, [aurokaris.speech(We need to find Ursa as quickly as possible. Let's get going!)]
+		[aurokaris.speech(好，)]肌肉发达的亚马逊人一边回答，一边拿起她的希腊长矛，[aurokaris.speech(我们得尽快找到乌萨，走吧。)]
 	</p>
 	<p>
-		Not wanting to delay your progress any further, you do as the cow-girl suggests and set off on your way through Themiscyra...
+		你不想再耽误行程，就按照牛女的建议，踏上了穿越特弥斯库拉的旅途……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_TOWN"><![CDATA[
 	<p>
-		Wanting to know more about this town, you ask Aurokaris what she knows about Themiscyra and how it came into being.
+		你想更多地了解这个小镇，便向奥罗卡利斯询问她对特弥斯库拉的了解以及它是如何形成的。
 	</p>
 	<p>
-		[aurokaris.speech(We really don't have time for a history lesson here, but if it somehow helps in the fight, then I can give you a quick summary,)] the cow-girl replies in frustration. After glancing about to make sure that you're safe, she starts, [aurokaris.speech(This town was founded many generations ago by a pair of bear-girl sisters, who wanted to create a community in which only feminine people were allowed. It's known that the reason for this is that the sisters wanted to please Lilith, as they assumed that Lilith only approves of the feminine form. This part of Themiscyra's history has been getting more controversial recently, seeing as how it's one of Lilith's daughters who's been responsible for our woes.)]
+		[aurokaris.speech(我们实在没有时间在这里上历史课，但如果这对战斗有帮助的话，我可以给你做一个简单的总结，)]牛女沮丧地回答。她扫视了一下四周，以确保你们的安全，然后她开始说，[aurokaris.speech(这个小镇是由一对熊女姐妹在几代人之前建立的，她们希望建立一个只允许女性居住的社区。众所周知，这样做的原因是这对姐妹想取悦莉莉丝，因为她们认为莉莉丝只认可女性的形态。特弥斯库拉的这段历史最近引起了越来越多的争议，因为是莉莉丝的一个女儿造成了我们的困境。)]
 	</p>
 	<p>
-		Wanting to know more, you ask Aurokaris if Lilith had anything directly to do with creating this town.
+		你想知道更多，于是询问奥罗卡利斯，莉莉丝是否与创建这个小镇有直接关系。
 	</p>
 	<p>
-		[aurokaris.speech(No, there's no recorded history of Lilith or any of the lilin having anything to do with our town. Well, until recently that is,)] she replies with a sad gesture to the ruined buildings around you. Wanting to disassociate her home from Lilith, she hastily explains, [aurokaris.speech(Themiscyra has grown and changed over the past few hundred years, and so while we Amazons still honour the founding law of only allowing feminine citizens, we scrapped mandatory Lilith worshipping and voluntary tributes to Dominion a long time ago. After Lunette's daughters started harassing us and raiding our lands, public opinion has rapidly shifted to view our founding sisters in a very negative light.)]
+		[aurokaris.speech(不，没有任何关于莉莉丝或任何莉琳与我们小镇有关的历史记录。直到最近，)]她悲伤地指着周围的废墟建筑回答道。你听出她不想让自己的家园和莉莉丝扯上关系，她匆忙解释道，[aurokaris.speech(在过去的几百年里，特弥斯库拉不断发展和变化，虽然我们亚马逊人仍然遵守只允许女性公民的建国律法，但我们很久以前就取消了对莉莉丝的强制性崇拜和对统治者的贡品。在露内特的女儿们开始骚扰我们、掠夺我们的土地之后，公众舆论迅速转变，对我们城邦的创始人产生了非常负面的看法。)]
 	</p>
 	<p>
-		Glancing around once again, Aurokaris hefts her spear and impatiently asks, [aurokaris.speech(Is that all? Can we please get going now? Ursa may need our help!)] 
+		奥罗卡利斯再次环顾四周，掂起长矛，不耐烦地问道，[aurokaris.speech(就这些。我们可以走了吗？乌萨可能需要我们的帮助。)] 
 	</p>
 	<p>
-		With the cow-girl clearly desperate to get moving again, you wonder whether to bring your questioning to an end, or to ask something else first...
+		牛女显然急于重新开始行动，你不知道是该结束你的提问，还是再问一些别的问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_AMAZONS"><![CDATA[
 	<p>
-		Curious about the topic of the Amazons themselves, you ask Aurokaris what she can tell you about the habits and customs of her people.
+		你对亚马逊人本身的话题很好奇，于是向奥罗卡利斯询问她能告诉你哪些关于她的族人的习惯和风俗。
 	</p>
 	<p>
-		[aurokaris.speech(Well, as is commonly known, we're a community of all-feminine warriors,)] she replies, [aurokaris.speech(Anyone can present themselves to us and ask to join, but they must be feminine in appearance, and willing to undergo rigorous physical and martial training. Every Amazon is required to attend combat training, the purpose of which is to keep ourselves fit and able to fend off attacks by raiders, bandits, and... well... Lunette's daughters.)]
+		[aurokaris.speech(众所周知，我们是一个由全体女性战士组成的社区，)]她回复，[aurokaris.speech(任何人都可以向我们自荐并要求加入，但他们必须外表女性化，并愿意接受严格的体能和武术训练。每个亚马逊人都必须参加格斗训练，目的是让我们保持强健的体魄，能够抵御突袭者、强盗和……嗯……露内特的女儿们的攻击。)]
 	</p>
 	<p>
-		Pausing for a moment, Aurokaris allows a sad expression to settle on her face, before shaking it off and brusquely stating, [aurokaris.speech(There's no time for this. Let's get going!)]
+		停顿片刻，奥罗卡利斯脸上浮现出悲伤的表情，随后她甩甩头，粗暴地说道，[aurokaris.speech(没时间了，我们走吧！)]
 	</p>
 	<p>
-		The cow-girl is obviously keen to be on her way, but you think that you could get away with asking another question or two...
+		牛女显然很想上路，但你觉得可以再问一两个问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_URSA"><![CDATA[
 	<p>
-		Needing to know more about the person who you're on the way to find, you ask Aurokaris what she can tell you about Ursa, the queen of the Amazons.
+		你想更多地了解你要找的人，于是你向奥罗卡利斯打听亚马逊女王乌萨的情况。
 	</p>
 	<p>
-		[aurokaris.speech(Ursa? She's kind, brave, just, intelligent, and the best warrior in all of Themiscyra!)] Aurokaris gushes, before forcing herself to take on a more serious tone and continue, [aurokaris.speech(That is to say, she's in the running for the best queen the Amazons have ever had. Under her reign, all aspects of life have been improving, and we Amazons have never been fitter or more ready for combat. Even so, it clearly wasn't enough...)]
+		[aurokaris.speech(乌萨？她善良、勇敢、正义、聪明，是整个特弥斯库拉最优秀的战士！)]奥罗卡利斯先是滔滔不绝，然后又强迫自己用更严肃的语气继续说下去，[aurokaris.speech(也就是说，她是亚马逊人有史以来最出色的女王。在她的统治下，生活的方方面面都得到了改善，我们亚马逊人从未像现在这样健康，也从未像现在这样随时准备战斗。即便如此，这显然还不够……)]
 	</p>
 	<p>
-		For a moment, you see a despondent, melancholy look in the cow-girl's eyes, but before you can say anything to try to shake her out of it, she recovers and finishes by revealing, [aurokaris.speech(Ursa is a descendant of the two sisters who founded Themiscyra hundreds of years ago. There's no hereditary monarchy here, and instead the queen is chosen every two years by tests of strength, martial prowess, intelligence, and leadership abilities. Ursa has won the past ten contests, and we Amazons love her so much that there's never any serious objection to her continued rule.)]
+		有那么一瞬间，你从牛女的眼神中看到了绝望和忧郁，但还没等你说什么来试图让她振作起来，她就恢复了精神，最后透露了一些信息，[aurokaris.speech(乌萨是几百年前建立特弥斯库拉的两姐妹的后裔。这里没有世袭君主制，而是每两年通过力量、武艺、智力和领导能力的测试选出女王。乌萨已经赢得了过去十届比赛的冠军，我们亚马逊人都非常喜欢她，所以从来没有人反对她继续统治。)]
 	</p>
 	<p>
-		Having come to the end of her speech, Aurokaris suddenly seems to recall the situation you're in, and impatiently asks, [aurokaris.speech(Is that all? Can we please get going again now?)]
+		话音刚落，奥罗卡利斯似乎突然想起了你们现在的处境，不耐烦地问道，[aurokaris.speech(就这些。我们现在可以继续了吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_RAIDERS"><![CDATA[
 	<p>
-		Wanting to find out how this current situation unfolded, you ask Aurokaris how Lunette launched this attack, and how all of Themiscyra came to be evacuated.
+		你想知道目前的局势是如何发展的，于是你问奥罗卡里斯，露内特是如何发动这次袭击的，以及整个特弥斯库拉是如何被疏散的。
 	</p>
 	<p>
-		[aurokaris.speech(We were taken by surprise,)] Aurokaris reveals through gritted teeth, [aurokaris.speech(Our scouts have always been able to warn of incoming attacks in the past, but this time was different. It happened about eight or so hours ago now; there was a huge purple flash, then suddenly hundreds of demonic centauresses were charging across the fields and fighting their way into the town. We had no time to raise the alarm or prepare for the assault. The Amazons on guard duty put up a valiant resistance, but they couldn't hold so many demons back, and so we were quickly overrun.)]
+		[aurokaris.speech(我们遭受了无耻的偷袭，)]奥罗卡利斯咬牙切齿地说道，[aurokaris.speech(过去，我们的斥候总能在来袭时发出警告，但这次不同。事情发生在大约 8 个小时之前；当时有一道巨大的紫色闪光，然后突然有数百个半人马恶魔冲过田野，一路打进了小镇。我们根本来不及拉响警报，也来不及为攻击做准备。守卫的亚马逊人奋勇抵抗，但他们挡不住这么多恶魔，所以我们很快就被攻破了。)]
 	</p>
 	<p>
-		Gesturing to the deserted street and surrounding buildings, you ask what happened to all of the residents.
+		你指着荒芜的街道和周围的建筑，问所有的居民都发生了什么事。
 	</p>
 	<p>
-		[aurokaris.speech(Thankfully, Ursa was quick to call for a complete evacuation,)] the cow-girl replies, [aurokaris.speech(If it wasn't for that decisive action, then I'm sure many Amazons would be bound in chains right about now. Most Amazons fled into the surrounding Foloi Forest, but many others, myself included, rushed to the palace to defend our queen.)]
+		[aurokaris.speech(幸好，乌萨迅速下令全面撤离。)]牛女回答，[aurokaris.speech(如果没有那次果断的行动，我相信现在很多亚马逊人都会被锁链捆绑着。大多数亚马逊人都逃进了周围的弗洛伊田野森林，但也有很多人，包括我自己，冲进了王宫，保卫我们的女王。)]
 	</p>
 	<p>
-		Noting that there's a conspicuous lack of demonic centauresses, you ask where Lunette's army has gone.
+		你注意到这里明显缺少恶魔半人马，于是询问露内特的军队去了哪里。
 	</p>
 	<p>
-		[aurokaris.speech(I saw several small groups break off from their main force to start looting and torching the town, but the vast majority of Lunette's army has gone to the palace to find and defeat my queen,)] she answers, [aurokaris.speech(I was fighting alongside her and several dozen Amazons in the plaza before the palace, but Ursa realised that against such overwhelming numbers we couldn't hold forever. That's why my queen commanded me to go and check that the town had been evacuated so that we could retreat without leaving anyone behind. Having done that, I need to return to the palace as quickly as possible!)]
+		[aurokaris.speech(我看到有几支小队脱离了他们的主力部队，开始抢劫和焚烧小镇，但露内特的绝大多数军队都去了皇宫，企图去寻找和打败我们的女王。)]她回答道，[aurokaris.speech(我和她以及几十个亚马逊人在宫殿前的广场上并肩作战，但乌萨意识到，面对如此压倒性的人数，我们不可能永远坚守下去。这就是为什么我的女王命令我去检查全城是否已经疏散，以便我们能在不留下任何人的情况下撤退。完成任务后，我必须尽快返回王宫！)]
 	</p>
 	<p>
-		Impatiently hefting her dory, the cow-girl is clearly eager to be on her way to assist her queen, but she could probably endure being asked another question or two...
+		牛女不耐烦地掂了掂她的长矛，她显然急于上路去帮助她的女王，但她也许可以忍受别人再问她一两个问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_LOCATION_ARCH"><![CDATA[
 	<p>
-		Gesturing towards the huge pile of rubble, you ask Aurokaris what she knows about the triumphal arch which now lies in ruins.
+		你指着一大堆瓦砾，问奥罗卡利斯她对现在已成废墟的凯旋门了解多少。
 	</p>
 	<p>
-		[aurokaris.speech(It was built long before my time,)] she replies, [aurokaris.speech(but I do know that it was erected in honour of the athletes we sent to a prestigious sports contest. We Amazons won the most gold medals, and so this arch was built in recognition of that. I didn't see how it was destroyed, but hopefully once all of this is over, we can rebuild it...)]
+		[aurokaris.speech(它建成于很久之前，那时我可还没出生。)]她回答道，[aurokaris.speech(但我知道，它是为了纪念我们派去参加一次著名体育比赛的运动员而建的。我们亚马逊人赢得了最多的金牌，所以这座拱门就是为了表彰她们而建的。我不知道它是怎么被毁的，但希望这一切结束后，我们能重建它……)]
 	</p>
 	<p>
-		Thinking that now is probably not the best time to mention how exactly the arch came to be reduced to a pile of rubble, you wonder whether to continue on your way to the palace, or ask Aurokaris another question first...
+		你想，现在可能不是细说拱门被毁的原因的最佳时机，你不知道是该继续前往宫殿，还是先向奥罗卡利斯询问另一个问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_LOCATION_BARRICADE"><![CDATA[
 	<p>
-		Thinking that Aurokaris might know something about how these barricades came into being, you ask her if she had anything to do with their construction.
+		你认为奥罗卡利斯可能知道这些路障是如何形成的，便问她是否与路障的建造有关。
 	</p>
 	<p>
-		[aurokaris.speech(I didn't have time to stop and help, but I saw other Amazons throwing them up under the directions of Ursa soon after the warning bell was sounded,)] she replies, [aurokaris.speech(It looks like some of our arcane-proficient Amazons set them on fire after they were built. I guess they'll keep on burning for hours...)]
+		[aurokaris.speech(我来不及停下来帮忙，但我看到其他亚马逊人在乌萨的指挥下，在警钟响起后不久就把它们布置好了，)]她回答道，[aurokaris.speech(看来是我们一些精通魔法的亚马逊人，在它们建成后点燃了它们，我猜它们会持续燃烧几个小时……)]
 	</p>
 	<p>
-		Thanking the cow-girl for the information, you wonder what to do next...
+		你向告诉了你这些的牛女表达感谢，思考下一步该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_LOCATION_LOOTING"><![CDATA[
 	<p>
-		With you and Aurokaris having defeated a couple of demonic centauresses in this area, you ask the cow-girl what she thinks they were looking for in this area to loot.
+		你和奥罗卡利斯在这一区域击败了几个恶魔半人马，你问牛女，她认为他们在这一区域寻找的是什么战利品。
 	</p>
 	<p>
-		[aurokaris.speech(I suppose they wanted flames, weapons, or anything of value. They wouldn't have found much though, I'm sure. We Amazons are rather spartan, and don't allow ourselves many luxuries or comforts,)] she replies, before motioning towards the jewellery she's wearing and the dory she's carrying and explaining, [aurokaris.speech(We carry most of the wealth we own in the form of jewellery and weapons, and so there's not much to steal from our homes. Anyway, we don't have time talk right now, we need to get to Ursa.)]
+		[aurokaris.speech(我猜他们想要火币、武器或任何有价值的东西。不过我敢肯定，他们不会找到什么。我们亚马逊人都很简朴，不会允许自己贪图物质上的奢侈享受。)]她回答说，然后指了指她佩戴的首饰和携带的希腊长矛，解释道，[aurokaris.speech(我们拥有的大部分财富都是以珠宝和武器的形式存在的，所以我们家里没什么可偷的。总之，我们现在没时间聊天，我们得去找乌萨。)]
 	</p>
 	<p>
-		Thanking Aurokaris for the information, you wonder whether to do as the cow-girl suggests and continue on your way to find Ursa, or to ask her another question first...
+		感谢奥罗卡利斯提供的信息之后，你不知道是按照牛女的建议继续寻找乌萨，还是再问她另一个问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_LOCATION_SMITHIES"><![CDATA[
 	<p>
-		Wondering if Aurokaris can tell you anything interesting about these smithies, you ask her if she ever came here to purchase anything.
+		你想知道奥罗卡利斯能否告诉你有关这些铁匠铺的有趣信息，于是问她是否曾来这里购买过东西。
 	</p>
 	<p>
-		[aurokaris.speech(This is where all the Amazons came to buy their weapons and armour,)] she replies, before holding up her spear and pointing to a nearby building. [aurokaris.speech(I bought this very dory from that weaponsmith right there. I got my armour from the place next door to it, but I didn't have time to go home and get it on. I suppose it's been stolen by now...)]
+		[aurokaris.speech(所有亚马逊人都来这里购买武器和盔甲，)]她回答道，然后举起长矛指向附近的一座建筑，[aurokaris.speech(我就在那边的武器匠那里买的这个。我的盔甲是在它隔壁的地方买的，但我没时间回家穿上它，我猜它现在已经被偷了……)]
 	</p>
 	<p>
-		With your curiosity satisfied, you wonder what to ask the cow-girl next...
+		好奇心得到满足后，你想知道接下来该问牛女些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_LOCATION_WINE"><![CDATA[
 	<p>
-		Wanting to know more about these warehouses, you ask Aurokaris why there are so many wine merchants in Themiscyra.
+		你想更多地了解这些仓库，便向奥罗卡利斯询问为什么特弥斯库拉有这么多葡萄酒商铺。
 	</p>
 	<p>
-		[aurokaris.speech(There are many unspoken rules and customs among the Amazons,)] she begins, [aurokaris.speech(and one of them is that indulging oneself in luxurious food and drink is a sign of weakness. The only drinks which are considered suitable for Amazonian warriors are water and wine. As such, there's a huge demand for wine, so there needed to be a large industry to meet that demand.)]
+		[aurokaris.speech(亚马逊人社会有许多不成文的规则和习俗，)]她开始说，[aurokaris.speech(其中之一就是，沉迷于奢华的食物和饮料是软弱的表现。适合亚马逊战士饮用的饮料只有水和葡萄酒。因此，我们对葡萄酒的需求量非常大，所以需要有一个庞大的产业来满足这种需求。)]
 	</p>
 	<p>
-		Thanking the cow-girl for the information, and with the nearby burning buildings making this a slightly uncomfortable place in which to stop and talk, you decide against asking any further wine-related questions and wonder what to do next... 
+		你感谢牛女提供的信息。附近正在燃烧的建筑物使这不太适合停下聊天，你决定不再问与葡萄酒有关的问题，并在想下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_LOCATION_JEWELLERS"><![CDATA[
 	<p>
-		Wanting to know more about these workshops, you ask Aurokaris if she ever purchased anything from here.
+		你想更多地了解这些作坊，便询问奥罗卡利斯是否曾在这里购买过任何东西。
 	</p>
 	<p>
-		[aurokaris.speech(Of course,)] she replies, before gesturing to her earrings, bangle, ring, and barrette, all of which are silver. Having shown off her jewellery, she says, [aurokaris.speech(I purchased all of these from the workshops here. This was the place everyone would go to buy their jewellery.)]
+		[aurokaris.speech(当然，)]她回答说，然后指了指自己的耳环、手镯、戒指和发夹，这些东西都是银制的。在展示了她的首饰后，她说，[aurokaris.speech(这些都是我在这里的作坊买的。每个亚马逊人都会来这里购买珠宝。)]
 	</p>
 	<p>
-		Curious to know if all Amazons share Aurokaris's fondness for jewellery, you ask the cow-girl if this was a particularly busy part of the town.
+		你很想知道是否所有亚马逊人都和奥罗卡利斯一样喜欢珠宝，于是你问牛女这里是否是镇上特别热闹的地方。
 	</p>
 	<p>
-		[aurokaris.speech(Oh, yes,)] she replies in a positive tone, [aurokaris.speech(Fashionable dresses and fancy outfits are considered to be a sign of weakness by the Amazons, so instead of buying lots of clothes, we collect jewellery. We don't place much value on the material, and instead we're always on the lookout for exceptional examples of craftsmanship. Jewellery is one of only two luxuries which are tolerated in Themiscyra, the other being wine, so this courtyard was always busy.)]
+		[aurokaris.speech(哦，确实是，)]她肯定了你，[aurokaris.speech(亚马逊人认为时髦的服饰和华丽的打扮是软弱的象征，因此我们不买大量的衣服，而是收集珠宝。我们并不太看重珠宝的材质，相反，我们总是在寻找制作工艺精湛的珠宝。珠宝是特弥斯库拉仅有的两种奢侈品之一，另一种是葡萄酒，因此这个地方总是很热闹。)]
 	</p>
 	<p>
-		Thanking her for the information, you wonder whether to ask anything else of Aurokaris, or to instead continue on your way...
+		你感谢她提供的信息，在想是该向奥罗卡利斯询问其他事情，还是继续赶路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AUROCHSIA_TALK_LOCATION_STREETS"><![CDATA[
 	<p>
-		Looking around at your ruined and vandalised surroundings, which all begin to look the same after a while, you ask Aurokaris if she knows this area well.
+		环顾四周被毁坏，顷刻间被烧为白地的环境，你问奥罗卡利斯是否熟悉这片区域。
 	</p>
 	<p>
-		[aurokaris.speech(Yes, I know all of Themiscyra very well,)] she replies with a distinct note of sadness in her voice. Looking over at a nearby building that's now nothing more than a pile of rubble, she sighs, [aurokaris.speech(I used to pass by this place multiple times a day when I was on guard duty. I never imagined that this could happen...)]
+		[aurokaris.speech(当然，我对特弥斯库拉的每个角落都了如指掌，)]她的回答明显带着一丝悲伤。她望着附近的一栋已经只剩下一堆瓦砾的建筑，叹了口气，[aurokaris.speech(我以前站岗时，每天都要经过这里好几次。那时的我从未想到，有朝一日这里会成为一片废墟……)]
 	</p>
 	<p>
-		Not wanting to keep the cow-girl dwelling on depressing thoughts about the present situation, you refrain from asking anything else about your current location and wonder what to do next...
+		你不想让牛女继续沉浸在对目前状况的郁闷思考中，所以你没有再问任何关于周围环境的问题，而是在想下一步该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Place dialogues -->
@@ -381,168 +381,167 @@
 
 	<htmlContent tag="ARCH"><![CDATA[
 	<p>
-		A huge pile of dangerously unstable rubble is all that's left of the gigantic triumphal arch which once stood at the main entrance to Themiscyra. The buildings to either side of where you're standing haven't entirely escaped the effects of Meraxis's spell either, for you see worryingly-large cracks running through their stone frontages.
+		巨大的凯旋门曾经矗立在特弥斯库拉的主入口处，如今只剩下一大堆危险而不稳定的瓦砾。你所站位置两侧的建筑也没能完全逃脱梅拉克西丝法术的影响，因为你看到它们的石料正面都出现了令人担忧的巨大裂缝。
 	</p>
 	<p>
-		[aurokaris.speech(We shouldn't linger here for long,)] Aurokaris comments, [aurokaris.speech(Those buildings look like they might collapse at any moment.)]
+		[aurokaris.speech(我们不应该在这里逗留太久，)]奥罗卡利斯说，[aurokaris.speech(这些建筑物看起来随时都可能倒塌。)]
 	</p>
 	<p>
-		Seeing the wisdom in the cow-girl's words, you take one last look at the sorry mountain of rubble, before preparing to set off into the town...
+		牛女的话很有道理，你最后看了一眼满目疮痍的废墟，然后准备向镇子出发……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- STREET -->
 
 	<htmlContent tag="STREET"><![CDATA[
 	<p>
-		The streets of Themiscyra are strikingly similar to renditions you remember seeing of the city states of ancient Greece. Classical architecture is the theme of every building you pass, and there seems to be no shortage of green spaces and marble plazas. The paved roads are flanked by trees, arcane-powered lights, and simple stone benches. Were you visiting at any other time, you're sure that Themiscyra would have been a wonderful place to be, but as it is, the place looks well on its way to being reduced to rubble.
+		特弥斯库拉的街道与你记忆中的古希腊城邦非常相似。这里的所有建筑都是古典时期的风格，这里似乎不乏绿地和大理石广场。铺设好的道路两旁绿树成荫，灯火通明，还有简单的石凳。如果你是在其他任何时候来到这里，你肯定会觉得特弥斯库拉是一个非常棒的地方，但你清楚，这里现在正在沦为一片废墟。
 	</p>
 	<p>
-		Many of the buildings which you pass look to have been blasted by arcane spells, as they either have large holes punched through them, or have been partially torn down. Every now and then, you have to hurry past a building that's on fire, and you and Aurokaris try to hold your breath as you rush through the thick smoke which billows forth from these burning structures. Chunks of masonry, splintered wood, and shattered roof tiles are strewn across every street, while many of the trees, lampposts, and benches which you pass have been vandalised in one way or another.
+		你经过的许多建筑看起来都被奥术轰击过，因为它们不是被打出大洞，就是被部分拆毁。你和奥罗卡利斯不得不屏住呼吸，冲过这些燃烧着的建筑物冒出的浓烟。大块的砖石、碎裂的木头和破碎的屋顶瓦片散落在每条街道上，而你经过的许多树木、灯柱和长凳都遭到了这样或那样的破坏。
 	</p>
 	<p>
-		Every now and then you hear the faint sound of shouting and jeering coming from somewhere to the north, and you realise that you're hearing Lunette's army as it cheers on whatever combat is taking place at the palace.
+		时不时地，你会听到北面某处传来微弱的喊叫声和嘲笑声，你意识到自己听到的是露内特的军队在为宫殿里发生的战斗欢呼。
 		#IF(RND.nextInt(100)<50)
-			 [style.random(
-				Quickening her pace as she hears this, Aurokaris pleads, [aurokaris.speech(Come on, [pc.name], we need to hurry!)]
+			[style.random(
+				听到这些，奥罗卡利斯加快了脚步，恳求道，[aurokaris.speech(快点，[pc.name]，我们得快点！)]
 				|
-				Hurrying forwards as she hears this, Aurokaris impatiently declares, [aurokaris.speech(We're taking too long!)]
+				听到这里，奥罗卡利斯急不可耐地向前走去，[aurokaris.speech(我们花的时间太长了！)]
 				|
-				Rushing forwards as she hears this, Aurokaris looks at you and asks, [aurokaris.speech(Can't we go a little faster?)]
+				奥罗卡利斯听到后急忙上前，看着你，问道，[aurokaris.speech(我们还能再快点吗？)]
 				|
-				Quickening her pace as she hears this, Aurokaris states, [aurokaris.speech(We'll be too late to help if we don't hurry!)]
+				听到这里，奥罗卡利斯加快了脚步，[aurokaris.speech(如果我们不快点，就来不及帮忙了！)]
 				|
-				Quickening her pace as she hears this, Aurokaris motions towards the source of the noise and states, [aurokaris.speech(The palace is that way. Let's go!)]
+				听到这里，奥罗卡利斯加快了脚步，朝声音的来源跑去，并说道，[aurokaris.speech(宫殿就在这边，咱们快走！)]
 			)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SMITHIES -->
 
 	<htmlContent tag="SMITHIES"><![CDATA[
 	<p>
-		You and Aurokaris find yourselves in one of the industrial districts of Themiscyra. Every building in this area bears the name or sign of a blacksmith, weaponsmith, or armoursmith. Clearly having been a prime target for Lunette's daughters, these smithies look to have been thoroughly ransacked. For good measure, the looters have set a couple of these buildings on fire, and although most of the resulting smoke is rising into the sky, the area is nonetheless filled with the smell of burning timbers.
+		你和奥罗卡利斯发现自己身处特弥斯库拉的一个工业区。这里的每栋建筑都有铁匠、武器匠或盔甲匠的名字或标志。这些铁匠铺显然是露内特女儿们的主要目标，看起来已经被彻底洗劫一空。为了方便起见，劫掠者还点燃了其中的几栋建筑，虽然大部分浓烟都升上了天空，但该地区还是弥漫着木材燃烧的气味。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_smithies_looted))
-			Having already searched through the smithies, you know that there's nothing more to be found here...
+			你已经找遍了铁匠铺，知道这里再也找不到什么了……
 		#ELSE
-			Although the centauresses seem to have taken everything of value from all of the smithies, you might be able to find something useful if you took the time to search...
+			虽然半人马似乎拿走了所有铁匠铺里值钱的东西，但如果你花点时间搜索一下，也许能找到一些有用的东西……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SMITHIES_LOOTING"><![CDATA[
 	<p>
-		Telling Aurokaris that there might be something here to aid you in your fight against Lunette's army, you begin to perform a quick search through the abandoned smithies. Agreeing to help, the cow-girl assists you in finding several weapons and pieces of armour, however all of them are destroyed or significantly damaged to the point of being useless.
+		你告诉奥罗卡利斯，这里可能有些东西可以帮助你对抗露内特的军队，于是你开始在废弃的铁匠铺里快速搜寻。牛女同意帮忙，她协助你找到了几件武器和盔甲，但所有这些武器和盔甲都已毁坏或严重损坏，几乎毫无用处。
 	</p>
 	<p>
-		Just as you're about to give up, the nearby fire is reflected by something that's mostly buried beneath a smashed table. Pushing aside the splintered timbers, you find:
+		就在你准备放弃的时候，你看到被埋在一张被砸坏的桌子下面的东西反射出了附近的火光。推开四分五裂的木板，你发现：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WINE -->
 
 	<htmlContent tag="WINE"><![CDATA[
 	<p>
-		Although the majority of buildings in Themiscyra are constructed out of white stone, the large warehouses that are found in this area are made out of wood. Due to this, the attacking force of demonic centauresses have succeeded in setting every single building on fire, and so you find yourself looking back and forth between blazing infernos and still-smouldering ruins. The ash-covered street is wide enough for you to remain at a safe distance from the structures which are still burning, and so you're able to gain access to the charred, skeletal remains of some of the destroyed warehouses.
+		虽然特弥斯库拉的大部分建筑都是用白色石头建造的，但这一地区的大型仓库却是用木头建造的。因此，半人马恶魔的攻击部队成功地点燃了这里的每一栋建筑，你发现自己正在熊熊燃烧的地狱和仍在燃烧的废墟之间来回穿梭。灰烬覆盖的街道足够宽敞，你可以与仍在燃烧的建筑保持安全距离，因此你可以接近一些被毁仓库的焦黑残骸。
 	</p>
 	<p>
-		[aurokaris.speech(Most of these were wine merchants,)] Aurokaris comments, and, sure enough, you see several splintered signs and smashed amphorae which confirm this to be true. Looking up at the ruins, she sighs, [aurokaris.speech(So much destroyed so quickly...)]
+		[aurokaris.speech(其中大部分是葡萄酒商铺，)]奥罗卡利斯评论道，果然，你看到了几块四分五裂的牌子和被砸碎的酒瓶，这证实了她的说法是正确的。仰望着废墟，她叹了口气，[aurokaris.speech(这么快，这么多，一下子，全没了……)]
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_wine_looted))
-			Having already searched through the ruins of the warehouses, you know that there's nothing more to be found here...
-		#ELSE
-			Although the centauresses seem to have done a thorough job of looting and destroying all of the warehouses, you might be able to find something if you took the time to search...
+			你已经在仓库废墟中搜寻过，知道这里再也找不到什么了……		#ELSE
+			虽然半人马似乎已经彻底洗劫并摧毁了所有的仓库，但如果你花点时间搜索一下，也许还能找到些什么……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WINE_LOOTING"><![CDATA[
 	<p>
-		Telling Aurokaris that the demons might have missed something, and that you need all the help you can get in your fight to reach Ursa, you start to search through the ruins of a nearby warehouse. Agreeing to assist, Aurokaris joins you in your search, and so the two of you set about lifting timbers and digging through piles of rubble in your attempt to find anything left behind by Lunette's army.
+		你告诉奥罗卡利斯，恶魔们可能遗漏了什么，你需要做些准备才能去协助乌萨，于是你开始在附近仓库的废墟中搜寻。奥罗卡利斯同意协助你，并加入了你的搜寻行列，于是你们俩开始抬起木头、挖开瓦砾堆，试图找到露内特军队遗留下的任何东西。
 	</p>
 	<p>
-		Unfortunately, your search only uncovers smashed amphorae, shattered bottles, and splintered planks. As you decide that any further search isn't worth your time, Aurokaris suddenly lets out a triumphal cry, and you look over to see her pulling a small crate out from beneath a broken timber. After helping her to pull this crate free, you prise it open to find:
+		不幸的是，你的搜索只发现了被打碎的酒瓶、破碎的瓶子和四分五裂的木板。就在你觉得这里不值得再花时间搜寻时，奥罗卡利斯突然发出一声胜利的欢呼，你转头一看，只见她从一根断木下拉出一个小箱子。帮她把箱子拉出来后，你打开箱子发现，里面是：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- JEWELLERY -->
 
 	<htmlContent tag="JEWELLERY"><![CDATA[
 	<p>
-		Following a narrow passage which twists its way a short distance away from the main street, you and Aurokaris find yourselves entering a small courtyard. Despite its relative seclusion, the artisan workshops which are to be found here haven't managed to escape the looting army of demonic centauresses. Upturned tables, splintered wood, and broken signs are scattered throughout the area, the latter revealing to you that these workshops were all jewellers.
+		沿着一条狭窄的通道蜿蜒前行，离主街道不远，你和奥罗卡利斯发现自己进入了一个小庭院。尽管相对隐蔽，但这里的工匠作坊还是没能逃过半人马恶魔大军的劫掠。翻倒的桌子、碎裂的木头和破损的招牌散落一地，后者向你们揭示了这些作坊都是珠宝店。
 	</p>
 	<p>
-		[aurokaris.speech(Of course this'd be the first place they went for,)] Aurokaris comments, [aurokaris.speech(The rings produced here were some of the finest in all of the Realm.)]
+		[aurokaris.speech(毫无疑问，恶魔们劫掠时，这里首当其冲。)]奥罗卡利斯评论道，[aurokaris.speech(这里出产的戒指是整个王国最精美的。)]
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_jewellers_looted))
-			Having already searched through the workshops, you know that there's nothing more to be found here...
+			你已经在这些工坊里找过了，知道这里再也找不到什么了……
 		#ELSE
-			Although every workshop looks to have been thoroughly ransacked, you might be able to find something if you took the time to search...
+			虽然每个工坊看起来都被彻底洗劫一空，但如果你花点时间搜索一下，还是有可能找到一些东西的……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JEWELLERY_LOOTING"><![CDATA[
 	<p>
-		Telling Aurokaris that it would be a good omen to be able to save at least one item from the clutches of Lunette's army, you begin to search through the workshops for anything of value. Agreeing with your reasoning, Aurokaris doesn't interfere, and instead keeps watch at the entrance to the courtyard to make sure that the two of you won't be ambushed.
+		你告诉奥罗卡利斯，如果能从露内特军队的魔掌中至少保住一件东西，那至少是一个好的兆头，于是你开始在工坊里寻找任何有价值的东西。奥罗卡利斯同意你的推论，但她并没有插手，而是守在庭院的入口处，确保你们两个不会中埋伏。
 	</p>
 	<p>
-		After a while, you begin to think that everything of value must have been taken by the centauresses, but as you decide to call off the search, you see a glimmer of light beneath a smashed tabletop. Pushing aside the splintered wood, you find:
+		过了一会儿，你什么都没找到，你开始觉得所有值钱的东西都被半人马拿走了，但就在你决定放弃搜索时，你看到被砸碎的桌面下有一丝光亮。推开碎裂的木头，你发现了：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LOOTING -->
 
 	<htmlContent tag="LOOTING_FINISHED"><![CDATA[
 	<p>
-		With your search having proved to be far more successful than you could have hoped, all that's left for you to do now is to continue on your way...
+		事实证明，你的搜索比你所期望的要成功得多，现在你所要做的就是继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BARRICADE -->
 
 	<htmlContent tag="BARRICADE"><![CDATA[
 	<p>
-		You find your passage blocked as you encounter a huge pile of masonry, furniture, and miscellaneous debris which has been piled up to form an impassable barricade across the street. As if this wasn't enough, it's been set alight by what must be some manner of arcane fire spell, for it's burning with an intense ferocity that both looks and feels unnatural.
+		你发现面前的通道被堵住了，你们遇到了一大堆砖石、家具和杂物，这些东西堆在一起，在街道对面形成了一道无法通行的路障。这还不够，它还被某种奥术火系法术点燃了，因为它燃烧得非常猛烈，看起来和感觉都很不自然。
 	</p>
 	<p>
-		[aurokaris.speech(We're not getting through here,)] Aurokaris accurately observes. Taking another look at the barricade, you judge that there's absolutely no way that anyone could get past it,
+		[aurokaris.speech(我们不能从这走，)]奥罗卡利斯观察准确。你又看了一眼路障，判断绝对没有人能通过它，
 		#IF(pc.isAbleToFly())
-			 and although you'd ordinarily be able to fly over it, you don't want to leave Aurokaris behind. 
+			虽然你可以飞越它，但你不想把奥罗卡利斯留在后面。
 		#ELSE
-			 even with the help of spells.
+			即使有法术的帮助。
 		#ENDIF
-		 It looks like you'll have to go back the way you came and find another way around...
+		看来你们只能原路返回，另寻他路了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="BARRICADE_BACK"><![CDATA[
 	<p>
-		With no way to get past the burning barricade, you [pc.step] back and look for another route to take. With Aurokaris at your side, you set off down the streets of Themiscyra once again...
+		由于无法越过燃烧的路障，你[pc.step]后退并寻找其他路线。在奥罗卡利斯的陪伴下，你再次回到了特弥斯库拉的街道……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PALACE -->
@@ -550,803 +549,803 @@
 	<!-- TODO -->
 	<htmlContent tag="PALACE"><![CDATA[
 	<p>
-		The seat of Themiscyra's government, this huge palace sits upon a rocky outcrop and has the same classical, Greek style as the rest of the town.
+		这座巨大的宫殿是特弥斯库拉的行政中心，坐落在一块岩石上，与小镇的其他建筑一样具有古典时期希腊建筑风格。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLAZA -->
 
 	<htmlContent tag="PLAZA"><![CDATA[
 	<p>
-		As you approach the end of the street, you hear a cacophony of cheering, shouting, and jeering getting louder and louder. Realising that you're hearing the main force of Lunette's army, you and Aurokaris proceed with caution, for being spotted by any of the demonic centauresses will lead to a fight that you surely can't win. Using the fallen masonry from half-destroyed buildings as cover, you reach the end of the street and look out on the alarming scene before you.
+		你走近街道尽头，听到越来越大的欢呼声、叫喊声和嘲笑声。你和奥罗卡利斯意识到自己听到了露内特军队主力的声音，于是小心翼翼地前进，因为被任何一个恶魔半人马发现都会导致一场你们肯定赢不了的战斗。你们利用半毁建筑上倒下的砖石作为掩护，走到街道尽头，眺望眼前令人震惊的景象。
 	</p>
 	<p>
-		Perched upon a rocky outcropping, Themiscyra's palace is separated from where you're standing by a huge plaza. Filling this gigantic space, you see what must be at least a few hundred demonic centauresses, all of whom are wilding cheering, laughing, or hurling insults at whatever scene is taking place on the plaza's far side. While most of the demons are still standing, you see that there are dozens who have been defeated, and they lie scattered across the plaza, panting for breath.
+		特弥斯库拉的宫殿坐落在一块岩石上，与你站立的地方隔着巨大的广场。在这个巨大的空间里，你可以看到至少有几百个半人马恶魔，他们都在疯狂地欢呼、大笑或辱骂广场远处正在发生的一切。虽然大部分恶魔还站在原地，但你看到有几十个恶魔已经被打败，他们散落在广场上，气喘吁吁。
 	</p>
 	<p>
-		Getting your attention by tapping you on the shoulder, Aurokaris hisses, [aurokaris.speech(Ursa must still be fighting over there! Come on, follow me, I know a way around the plaza that we can take to reach her without being seen.)]
+		奥罗卡利斯为了引起你的注意，拍了拍你的肩膀，嘶哑地说道，[aurokaris.speech(乌萨一定还在那边战斗，来吧，跟我来，我知道一条绕过广场的路，我们可以在不被发现的情况下找到她。)]
 	</p>
 	<p>
-		Knowing that doing what Aurokaris says will mean the end of your journey through Themiscyra, you wonder whether to set off for where Ursa is fighting, or to instead head back and finish any business you still have in the town...
+		你知道，按照奥罗卡利斯说的去做，就意味着你在特弥斯库拉的旅程结束了，你不知道是该现在动身前往乌萨战斗的地方，还是返回去完成你在镇上可能还没完成的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_BACK"><![CDATA[
 	<p>
-		Needing to head back into the town and finish some business, you tell Aurokaris that there's still some things for the two of you to do in the rest of Themiscyra. With a look of intense exasperation upon her face, she hisses, [aurokaris.speech(That had better be for a good reason! Ursa can hold on a little longer, I'm sure, but we really need to help her as soon as we can!)]
+		你告诉奥罗卡利斯，在特弥斯库拉的其他地方还有一些事情等着你去做。她一脸气愤，嘶哑着嗓子说道，[aurokaris.speech(你最好是有正当理由，我相信乌萨还能再坚持一会儿，但我们真的需要尽快帮助她！)]
 	</p>
 	<p>
-		Promising Aurokaris that this won't take long, you head back the way you came and set off into the streets of Themiscyra once again...
+		你向奥罗卡利斯保证不会耽搁太久，便原路返回，再次踏上特弥斯库拉的街道……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_FOLLOW"><![CDATA[
 	<p>
-		Seeing no reason to delay, you tell Aurokaris to lead the way, before setting off after her. Taking you across the street, she leads you through half-collapsed buildings and down narrow, debris-strewn alleyways. Thanks to Aurokaris's guidance, you remain concealed from Lunette's army the entire way, and after passing through one last building, you come out into the plaza just behind where the battle is taking place.
+		你认为没有理由再耽搁下去了，便让奥罗卡利斯带路，然后跟着她出发了。她带着你穿过街道，穿过半坍塌的建筑，走过布满碎石的狭窄小巷。多亏了奥罗卡利斯的指引，你一路上都没有被露内特的军队发现。穿过最后一栋建筑后，你来到了广场，就在战斗前线的后面。
 	</p>
 	<p>
-		Thankfully, you see that Meraxis is already here, and she's expertly using her scythe to fight alongside a huge, muscular bear-girl. As you [pc.step] out into the plaza, the two of them send several centauresses crashing to the ground, and so before any more demons move up to take their place, you're able to take a moment in which to assess the situation.
+		幸运的是，你看到梅拉克西丝已经在这里了，她正熟练地使用镰刀与一个身材魁梧、肌肉发达的熊女并肩作战。当你走到广场上时，她们两人将几个半人马打得倒在地上，在更多恶魔上前和她们车轮战之前，你可以花点时间评估一下局势。
 	</p>
 	<p>
-		The bear-girl fighting alongside Meraxis is undoubtedly Ursa, queen of the Amazons. Standing at [ursa.heightValue], her huge muscles flex beneath her brown fur as she swings her dory around to meet the next challenger. Like Aurokaris, she's dressed in a white peplos, and is wearing several pieces of jewellery. Upon her head is perched a silver circlet, which is the only outward indication that she's the queen of the Amazons. As she brushes one of her huge, paw-like hands
+		与梅拉克西斯并肩作战的熊女无疑是亚马逊女王乌萨。她身高[ursa.heightValue]，棕色皮毛下的巨大肌肉一展无遗，她挥舞着长矛迎战下一个挑战者。和奥罗卡利斯一样，她也身着白色披风，佩戴着几件首饰。她头上戴着一个银色的圆环，这是她有别于其他亚马逊人的唯一标志。当她用一只巨大的、像爪子一样的手
 		#IF(game.isFurryHairEnabled())
-			 through her shoulder-length, wavy hair,
+			穿过她齐肩的波浪长发，
 		#ELSE
-			 over her head,
+			摸了摸头顶，
 		#ENDIF
-		 you see that she's breathing quite heavily, causing her [ursa.cupSize]-cup breasts to rise and fall in a rhythmic manner.
+		你会看到她的呼吸相当粗重，导致她[ursa.cupSize]罩杯的乳房有节奏地起伏。
 	</p>
 	<p>
-		[aurokaris.speech(The town has been evacuated!)] Aurokaris reports as she rushes forwards to stand at Ursa's side. As you move to join her, a booming laugh, loud enough to be clearly heard over the sound of the rest of the army, causes all four of you to stop.
+		[aurokaris.speech(镇子已经得到了疏散！)]奥罗卡利斯一边报告，一边冲到乌萨身边。就在你们准备加入她的行列时，一阵洪亮的笑声响起，足以盖过整支军队的声音，让你们四个都停下了脚步。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PLAZA_LUNEXIS_ENTRY"><![CDATA[
 	<p>
-		[lunexis.speech(I tire of these games!)] the voice calls out, and you watch as a gigantic centauress shoves the others aside to step forwards in front of Ursa. While all of the centauresses are large, this particular one stands at a staggering [lunexis.heightValue], and looks to be every bit as muscular as the Amazons' queen. Her skin is a bright shade of scarlet, while the hair on her head and that which covers her horse's body is black. Throwing open her red fur cloak, she reveals her [lunexis.breastRows] [lunexis.cupSize]-cup breasts, and you see that her dark red nipples are connected to one other by means of gold rings and chains. Her huge horns are similarly connected by gold chains, while perched upon her head is a gold circlet that's similar to Ursa's silver one. Several more pieces of gold jewellery glitter and glisten in the light of the fires ringing the plaza, and as her golden eyes flick between you, Meraxis, Aurokaris, and Ursa, she lifts up her four arms, showing off the four menacing-looking morning stars which she's using as weapons, and proclaims in a voice like thunder, [lunexis.speech(Let all here know that it is Lunexis, recognised daughter of Lunette herself, commander of her army, undefeated champion of the iron-hoof games, who is to have the pleasure of defeating Ursa, so-called queen of the Amazons!)]
+		[lunexis.speech(够了！)]你看着一个巨大的半人马把其他人推到一边，走到乌萨面前。虽然所有的半人马都很高大，但这只半人马的身高达到了惊人的[lunexis.heightValue]，看起来和亚马逊女王一样肌肉发达。她的皮肤是鲜艳的猩红色，而头上和马身上的毛发则是黑色的。她掀开红色的毛皮斗篷，露出了她的[lunexis.breastRows][lunexis.cupSize]杯乳房，你可以看到每个乳房上暗红色的乳头都用金环和金链相连。她巨大的犄角同样由金链连接，头上戴着一个金色的圆环，与厄萨的银色圆环相似。当她的金色眼睛在你、梅拉克西丝、奥罗卡利斯和乌萨之间闪烁时，她举起四只手臂，展示着她用作武器的四颗气势汹汹的钉头锤，并用雷鸣般的声音大喊，[lunexis.speech(让这里的所有人都知道，露内特的女儿露内克西丝，她的军队统帅，铁蹄竞技的不败冠军，将打败所谓的亚马逊女王乌萨！)]
 	</p>
 	<p>
-		As Lunexis finishes this boast, her army lets out a deafening cheer, which causes a wicked smirk to settle on the demon's face. For the first time, you then hear Ursa speak, whose voice is loud enough to quieten down the centauresses while also having a gentle, melodic quality to it, [ursa.speech(You may defeat me, wretched daughter of a despicable lilin, but so long as one Amazon still remains free, you will not have defeated us.)]
+		当露内克西丝夸下海口时，她的军队发出了震耳欲聋的欢呼声，这让恶魔的脸上露出了邪恶的冷笑。然后，你第一次听到了乌萨的声音，她的声音足够洪亮，足以让半人马安静下来，同时还带着一丝温柔，[ursa.speech(你可能会打败我，卑鄙小人的女儿，但只要还有一名亚马逊战士不放弃抵抗，你就没有打败我们亚马逊人。)]
 	</p>
 	<p>
-		Rearing up and then slamming her front hoofs down with enough power to smash the paving stones, Lunexis furiously bellows, [lunexis.speech(You'll pay for those words, you whore! Submit to me and apologise, and I'll allow you to become one of my cock-sleeves!)]
+		露内克西丝愤怒地吼叫着，猛地抬起前蹄，力量足以踏碎铺路的石板，[lunexis.speech(你会为这些话付出代价的，你这个婊子，向我屈服并道歉，我可以饶你不死，让你有幸成为我的鸡巴套之一！)]
 	</p>
 	<p>
-		Letting out a deep, rumbling laugh, the huge centauress turns slightly to the side so that she can show off her gigantic, sheathed horse-cock and four massive, heavy balls. Bucking her hips, and causing her huge, animalistic genitals to ponderously sway in the process, she licks her lips and shouts out to her army, [lunexis.speech(Keep the others occupied! I'm going to pummel this so-called queen, then pump her full of my cum!)]
+		巨大的半人马发出低沉而隆隆的笑声，微微侧身，以便展示她巨大的、带着护鞘的马鸡巴和四个巨大而沉重的睾丸。她舔舔嘴唇，向她的军队大声喊道，[lunexis.speech(别让其他人插上手，我要和这个所谓的女王单挑，然后把我的精液灌进她的肚子里！)]
 	</p>
 	<p>
-		Hurrying to obey, the other centauresses rush forwards and engage Aurokaris and Meraxis in combat. As the two of them are now unable to assist Ursa, it looks like it's fallen to you to help the queen of Themiscyra...
+		其他半人马赶紧服从命令，冲上前去与奥罗卡利斯和梅拉克西丝交战。由于她们两人现在无法帮助乌萨，看来帮助特弥斯库拉女王的重任就落在你身上了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PLAZA_SHIELDING"><![CDATA[
 	<p>
-		Wanting to assist Meraxis and the two Amazons, but not wanting to get in harm's way, you decide to use your ability to create a protective shield to help your allies. Using every last ounce of your remaining strength, you put everything you've got into summoning forth an arcane barrier around the three combatants. Your intervention comes at the perfect time, for a moment after shield has crackled into life around Ursa, Lunexis brings her four morning stars crashing down on the Amazon queen. Such is the power of her attack that your protective barrier is completely shattered, although you see with satisfaction that it was enough to protect Ursa.
+		你想帮助梅拉克西丝和两个亚马逊人，但又不想受到伤害，于是你决定用你的能力制造一个保护罩来帮助你的盟友。你用尽最后一丝余力，在三位战斗者周围召唤出一道奥术屏障。你的介入恰逢其时，因为就在护盾在乌萨周围噼啪作响后的一瞬间，露内克西丝就用她的四个钉头锤向亚马逊女王砸去。她的攻击威力巨大，你的保护屏障被完全击碎，尽管你满意地看到它确实保护到了乌萨。
 	</p>
 	<p>
-		[ursa.speech(Begone from my town!)] the bear-girl bellows as she takes this opportunity to counter-attack. Despite clearly being an accomplished fighter, Lunexis is caught off-guard by the effectiveness of your shield, and is made to look like a complete amateur as the Amazon queen repeatedly strikes her over and over again with her dory. Staggering back and flailing wildly at her opponent, the centauress only manges to hit thin air as she's pierced by the dory's arcane blade over a dozen times in the span of just a few seconds.
+		[ursa.speech(滚出我的地盘！)]熊女一边大叫，一边趁机反击。尽管露内克西丝显然是一名出色的战士，但你的盾牌的介入让她措手不及，亚马逊女王用长矛一次又一次地攻击她，让她看起来像个完全的外行。半人马踉踉跄跄地后退并疯狂地向对手挥舞着钉头锤，但全部打空，而她自己在短短几秒钟的时间里，被希腊长矛的奥术之刃刺中了十几次。
 	</p>
 	<p>
-		[lunexis.speech(No... Impossible...)] Lunexis pants as she takes one final half-hearted swing at Ursa. Completely and utterly exhausted and defeated, she staggers from side to side for a moment, before her legs give up and she crashes to the ground, panting for breath. Her morning stars fall from her hands, and as they roll across the shattered paving stones, she breathlessly curses, [lunexis.speech(You two... I'll make you pay...)]
+		[lunexis.speech(不，这不可能！)]露内克西丝一边喘着粗气，一边向乌萨挥出最后一击。她完全筋疲力尽，败下阵来，踉踉跄跄地左右摇摆了一会儿，然后双腿一软，摔倒在地，气喘吁吁。她手中的钉头锤掉了下来，滚落在破碎的铺路石上，她气喘吁吁地咒骂着，[lunexis.speech(你们两个……我要让你们付出代价！)]
 	</p>
 	<p>
-		Instead of breaking and fleeing as you might have hoped, the hundreds of demonic centauresses, seeing an opportunity to assert dominance and win glory, begin to advance towards you and Ursa. Having defeated their opponents, Meraxis and Aurokaris fall back to regroup with the two of you. Looking across to the cow-girl Amazon, Ursa says, [ursa.speech(You've fought bravely, Aurokaris. I knew I could rely on you. Now let us fight to the end.)]
+		数百名恶魔半人马并没有像你希望的那样逃跑，而是看到了立下战功和赢得荣誉的机会，开始向你和乌萨前进。击败对手后，梅拉克西丝和奥罗卡利斯后退，与你们两人重新集结。看着对面的亚马逊牛女，乌萨说，[ursa.speech(你作战勇敢，奥罗卡利斯。我知道我可以依靠你。现在，让我们战斗到底。)]
 	</p>
 	<p>
-		Upon hearing this, one of the nearby centauresses grins and shouts out, [style.speechFeminineStrong(They're almost done! I'll bet whoever beats the queen will be recognised by Lunette!)]
+		听到这个消息，附近的一个半人马咧嘴一笑，大声喊道，[style.speechFeminineStrong(他们快完了，我敢打赌，谁能打败女王，露内特就会将谁提拔成受承认的女儿！)]
 	</p>
 	<p>
-		These words are all the army needs to hear, and as one they start to charge forwards. With no other option, you ready yourself to meet the hundreds of charging demons. As there's clearly no way that you can win, Meraxis quickly excuses herself by shouting, [meraxis.speech(I wouldn't do this if I was at full strength! This doesn't count as a defeat!)]
+		这些话正是军队所需要听到的，他们开始齐心协力向前冲锋。在别无选择的情况下，你做好了迎战数百名冲锋恶魔的准备。由于你显然不可能获胜，梅拉克西丝赶紧大声为自己开脱，[meraxis.speech(如果我全力以赴，区区几百恶魔不在话下！所以，我可没输，只是暂时没赢罢了！)]
 	</p>
 	<p>
-		With that, the [meraxis.race] summons the last of her energy and begins casting the teleportation spell. Just at the exact moment as the demonic centauresses are about to crash into you, you're enveloped by a flash of pinkish purple light...
+		就这样，[meraxis.race]用尽她最后的能量，开始施放传送法术。就在恶魔半人马即将撞上你的那一刻，你被一阵粉紫色的光芒笼罩……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PLAZA_WATCH"><![CDATA[
 	<p>
 		#IF(pc.isCowardly())
-			Absolutely terrified as the prospect of having to fight such a fearsome opponent,
+			你面对如此可怕的对手，害怕极了，
 		#ELSE
-			Deciding that you'd only get in Ursa's way,
+			你觉得自己只会妨碍乌萨的动作，
 		#ENDIF
-		 you remain where you are and choose to simply watch as Ursa battles Lunexis. Dodging one another, locking weapons, and trading blows which would fell an ordinary person, the two titans put on an incredible display of strength and combat ability, while Aurokaris and Meraxis do their best to hold back the tide of centauresses. Inevitably, under the weight of numbers, the cow-girl and [meraxis.race] are soon defeated, and forced by the laughing demons to watch as the queen and recognised daughter finish their battle.
+		继续留在原地，旁观乌萨与露内克西丝战斗。两个巨人互相躲闪，锁定对方的武器，进行着足以让普通人倒下的攻击，展示着惊人的力量和战斗能力，而奥罗卡利斯和梅拉克西斯则竭尽全力抵挡着半人马的攻势。不可避免的是，在数量的重压下，牛女和[meraxis.race]很快就败下阵来，被迫在恶魔们的嘲笑声中看着女王和被露内特承认的女儿结束战斗。
 	</p>
 	<p>
-		To begin with, it looks like Ursa is going to pull it off. Repeatedly thrusting the arcane blade of her spear into Lunexis's flank, she causes the demon to stagger and let out a frantic wail. Encouraged by this, the bear-girl goes all-in for a final blow, but the demon's weakness turns out to be a feint, and at the last moment she grabs Ursa's spear and uses her momentum against her. Slamming the queen into the floor, she delivers a knock-out blow with all four of her morning stars, before triumphantly throwing her weapons to the ground, rearing up, and shouting, [lunexis.speech(Themiscyra is mine! Rejoice, my sisters, for next we shall take Elis, where there are slaves enough for all!)]
+		一开始，乌萨似乎要成功了。她用长矛的弧形刃反复刺向露内克西丝的侧翼，恶魔踉跄并发出疯狂的哀嚎。受到鼓舞的熊女全力以赴进行最后一击，但恶魔的弱点被证明是佯攻，在最后关头她抓住了乌萨的长矛，并利用她的惯性来对付她。她将女王重重地摔在地上，用四颗钉头锤给了她致命一击，然后胜利地将武器扔在地上，仰天长啸，[lunexis.speech(特弥斯库拉是我的了！欢呼吧，我的姐妹们，接下来我们将攻占伊利斯，那里有足够的奴隶供所有人使用！)]
 	</p>
 	<p>
-		Although for a moment all seems lost, you suddenly notice that Meraxis hasn't wasted the time she's been forced to lie still and watch the fight. Pulling her arms free, she makes a familiar gesture, before summoning what little energy she has left and casting the teleportation spell. Although the nearby centauresses see what she's doing, they're too late to stop her, and as they reach down to grab the [meraxis.race], you're enveloped by a flash of pinkish-purple light...
+		虽然有那么一瞬间，一切似乎都失去了意义，但你突然注意到，梅拉克西丝并没有浪费她被迫静静躺着观战的时间。她挣脱双臂，做了一个熟悉的手势，然后发动起所剩无几的能量，施放了传送咒。虽然附近的半人马看到了她在做什么，但他们已经来不及阻止她了，当他们伸手去抓[meraxis.race]的时候，你被一阵粉紫色的光芒所笼罩……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_COMBAT_WON"><![CDATA[
 	<p>
-		Completely and utterly exhausted and defeated, Lunexis staggers from side to side for a moment, before her legs give up and she crashes to the ground, panting for breath. Her morning stars fall from her hands, and as they roll across the shattered paving stones, she breathlessly curses, [lunexis.speech(You two... I'll make you pay...)]
+		露内克西丝完全筋疲力尽，败下阵来，她踉踉跄跄地左右摇摆了一会儿，然后双腿一软，摔倒在地，气喘吁吁。她手中的钉头锤掉了下来，滚落在破碎的铺路石上，她气喘吁吁地咒骂着，[lunexis.speech(你们两个……我要让你们付出代价！)]
 	</p>
 	#IF(pc.hasTraitActivated(PERK_CHUUNI))
 		<p>
-			[pc.speech(~Mwhahaha!~)] you laugh, before striking a victorious pose and boasting to the defeated demon, [pc.speech(You stood no chance against my galaxy-shattering powers! Consider yourself lucky that I didn't banish you to the edge of the universe!)]
+			[pc.speech(呜哈哈哈哈哈哈哈！)]你大笑起来，然后摆出胜利者的姿势，向被打败的恶魔夸耀，[pc.speech(你根本没有机会对抗我那粉碎星辰的力量，我没有把你放逐到宇宙的边缘，你就该感到幸运了！)]
 		</p>
 	#ENDIF
 	<p>
-		Instead of breaking and fleeing as you might have hoped, the hundreds of demonic centauresses, seeing an opportunity to assert dominance and win glory, begin to advance towards you and Ursa. Having defeated their opponents, Meraxis and Aurokaris fall back to regroup with the two of you. Looking across to the cow-girl Amazon, Ursa says, [ursa.speech(You've fought bravely, Aurokaris. I knew I could rely on you. Now let us fight to the end.)]
+		数百名恶魔半人马并没有像你希望的那样逃跑，而是看到了建立战功和赢得荣誉的机会，开始向你和乌萨前进。击败对手后，梅拉克西丝和奥罗卡利斯后退，与你们两人重新集结。看着对面的亚马逊牛女，乌萨说，[ursa.speech(你作战勇敢，奥罗卡利斯。我知道我可以依靠你，现在让我们战斗到底！)]
 	</p>
 	<p>
-		Upon hearing this, one of the nearby centauresses grins and shouts out, [style.speechFeminineStrong(They're almost done! I'll bet whoever beats the queen will be recognised by Lunette!)]
+		附近一匹半人马听到这个消息，咧嘴一笑，大声喊道，[style.speechFeminineStrong(他们快完了！我敢打赌，谁能打败女王，谁就能成为被露内特承认的女儿！)]
 	</p>
 	<p>
-		These words are all the army needs to hear, and as one they start to charge forwards, bringing certain doom to the four of you...
+		军队听到这些话，重新团结起来。你感觉到不详的灾厄军团正自前方奔来，朝你们四个发起冲锋……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_COMBAT_WON_PREPARE"><![CDATA[
 	<p>
-		With no other option, you ready yourself to meet the hundreds of charging centauresses. As there's clearly no way that you can win, Meraxis quickly excuses herself by shouting, [meraxis.speech(I wouldn't do this if I was at full strength! This doesn't count as a defeat!)]
+		在别无选择的情况下，你做好了迎接数百名半人马冲锋的准备。由于你显然不可能获胜，梅拉克西丝赶紧大喊大叫，为自己开脱，[meraxis.speech(我只是没准备好释放我全部的力量罢了，否则，区区数百半人马，我一击灭之！)]
 	</p>
 	<p>
-		With that, the [meraxis.race] summons the last of her energy and begins casting the teleportation spell. Just at the exact moment as the demonic centauresses are about to crash into you, you're enveloped by a flash of pinkish purple light...
+		就这样，[meraxis.race]释放出她最后的能量，开始吟唱传送法术。就在恶魔半人马即将撞上你的那一刻，你被一阵粉紫色的光芒笼罩……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_COMBAT_LOST"><![CDATA[
 	<p>
-		Unable to continue fighting, you collapse down next to Ursa, panting for breath. Trying her best to continue the fight, the bear-girl weakly stabs at Lunexis, but the centauress easily dodges, grabs Ursa's spear, and uses her momentum against her. Slamming the queen into the floor, she delivers a knock-out blow with all four of her morning stars, before rearing up and shouting, [lunexis.speech(Themiscyra is mine! Rejoice, my sisters, for next we shall take Elis, where there are slaves enough for all!)]
+		你无法继续战斗，倒在了乌萨身边，气喘吁吁。熊女竭尽全力继续战斗，她虚弱地向露内克西丝刺去，但半人马轻而易举地躲开了，抓住了乌萨的长矛，并利用惯性来对付她。她将女王重重地摔在地上，用四颗钉头锤给了她致命一击，然后仰天长啸，[lunexis.speech(特弥斯库拉已经被我们征服！欢呼吧，我的姐妹们，接下来我们将攻占伊利斯，那里有足够的奴隶供所有人使用！)]
 	</p>
 	#IF(game.isNonConEnabled())
 		<p>
-			Looking across, you see Meraxis and Aurokaris have also just fallen to their opponents, and the centauresses who delivered the final blows are quick to shout out their claims on your companion's bodies. Summoning the last of her strength, Meraxis tries to cast teleport, but the centauress who's claimed her quickly clasps an iron collar around her neck, which drains the [meraxis.race]'s arcane energy and interrupts her casting. Tearing off Meraxis's clothes, this muscular, purple-skinned brute of a centauress pushes her down onto all fours, before quickly mounting her and ramming her fat, horse-like cock deep into Meraxis's [meraxis.pussy+].
+			你放眼望去，发现梅拉克西丝和奥罗卡利斯也刚刚倒在了对手的脚下，而那些发动最后一击的半人马则迅速霸占了她们的身体。梅拉克西丝用尽最后一丝力气，试图施放传送术，但夺走她的半人马迅速在她脖子上套上了一个铁项圈，这耗尽了[meraxis.race]的奥术能量，打断了她的施法。肌肉发达、皮肤呈紫色的半兽人撕开梅拉克西丝的衣服，将她按倒在地，然后迅速骑在她身上，将她肥大如马的阴茎深深插入梅拉克西丝那[meraxis.pussy+]。
 		</p>
 		<p>
 			#IF(aurokaris.isVaginaVirgin())
-				The similar fate awaits Aurokaris, and you look across to see a surprisingly-small, blue-skinned centauress announcing to her comrades that the cow-girl is still a virgin. To the amused cheers and jeers of the other demons, this weak-looking centauress rears up and mounts Aurokaris, before gleefully taking her virginity and then frantically starting to rut her. 
+				等待奥罗卡利斯的也是同样的命运，你向对面望去，只见一个身材矮小、皮肤湛蓝的半人马正在向她的同伴们宣布，这个牛女还是个处女。在其他恶魔兴高采烈的欢呼和嘲笑声中，这个看起来弱不禁风的半兽人猛地爬起来，骑在了奥罗卡利斯身上，然后兴高采烈地夺走了她的贞操，疯狂地和她交媾。
 			#ELSE
-				The similar fate awaits Aurokaris, and you look across to see a surprisingly-small, blue-skinned centauress announcing to her comrades that the cow-girl is her first slave. To the amused cheers and jeers of the other demons, this weak-looking centauress rears up and mounts Aurokaris, before gleefully ramming her fat horse-cock into the cow-girl's cunt and then frantically starting to rut her. 
+				等待奥罗卡利斯的也是同样的命运，你向对面望去，只见一个身材矮小、皮肤湛蓝的半人马正在向她的同伴们宣布，牛女是她的第一个奴隶。在其他恶魔的欢呼和嘲笑声中，这个看起来弱不禁风的半身人面兽猛地爬起来，骑到奥罗卡利斯身上，然后兴高采烈地把她肥大的马鸡巴插进牛女的阴户，疯狂地开始交媾。
 			#ENDIF
 		</p>
 		<p>
 			#IF(aurokaris.isVaginaVirgin())
-				Seeing that all of the nearby centauresses, including Lunexis, have been distracted by the spectacle of Aurokaris losing her virginity,
+				你看到附近所有的半人马，包括露内克西丝，都被奥罗卡利斯失身的壮观场面所吸引，
 			#ELSE
-				Seeing that all of the nearby centauresses, including Lunexis, have been distracted by the spectacle of Aurokaris being broken in by her new owner's cock,
+				你看到附近所有的半人马，包括露内克西丝，都被奥罗卡利斯被新主人的鸡巴猛烈抽插的景象所吸引，
 			#ENDIF
-			 Ursa somehow manages to summon enough energy to pick up her spear and lunge at the demon leader. Caught completely by surprise, although Lunexis sees the attack coming, she doesn't have time to evade. Your hopes of a sudden reversal of fate are quickly dashed, however, as an ebony-skinned centauress manages to dart forwards and deliver a truly crushing blow to the Amazon queen. Having been the one to fell Ursa, this centauress boldly claims out loud, [style.speechFeminineStrong(I was the one to deliver the final blow! As is custom, I lay claim to this bitch!)]
+			乌萨不知怎么鼓足了力气，拿起她的长矛向恶魔首领刺去。虽然露内克西丝完全措手不及，她来不及躲避。然而，你对命运突然逆转的希望很快就破灭了，因为一个皮肤乌黑的半人马成功地向前冲去，给了亚马逊女王致命一击。这只半人马是击败乌萨的歹徒，它大胆地声称，[style.speechFeminineStrong(是我给了她最后一击！按照惯例，这婊子归我了！)]
 		</p>
 		<p>
-			Furiously pawing at the ground with her huge hoofs, Lunexis growls and snaps, [lunexis.speech(Such is Lunette's law. I grant you your right, but know that Ursa's cunt should have been mine!)]
+			露内克西丝愤怒地用巨大的蹄子拍打着地面，发出咆哮和怒吼，[lunexis.speech(这是露内特的法律，我承认你的权利，但你要知道，乌萨的屄本该是我的！)]
 		</p>
 		<p>
-			Having lost her prize, Lunexis turns her attention to you, and after roughly stripping you and clasping an iron collar around your neck, she grunts in disappointment, [lunexis.speech(All I get is this? Well, better than nothing, I suppose. You may yet turn out to be a good cock-sleeve.)]
+			露内克西丝失去了她的战利品，把注意力转向了你。她粗暴地剥光你的衣服并在你脖子上套上铁项圈，失望地哼了一声，[lunexis.speech(我只得到了这个？总比什么都没有强吧。你也许会成为一个好的鸡巴套。)]
 		</p>
 	#ELSE
 		<p>
-			Looking across, you see Meraxis and Aurokaris have also just fallen to their opponents, and the centauresses who delivered the final blows are quick to shout out their claims on your companion's bodies. Although for a moment all seems lost, you suddenly notice that Meraxis is trying to concentrate and recover her energy, most likely so that she can cast teleport and get you all out of here. With Aurokaris and Ursa completely and utterly exhausted, it's up to you to distract Lunexis and so buy more time for Meraxis to recover...
+			放眼望去，你发现梅拉克西丝和奥罗卡利斯也刚刚倒在了他们的对手面前，而那些发动最后一击的半人马也很快就喊出了他们对霸占你同伴的要求。虽然一时间一切似乎都失去了意义，但你突然注意到梅拉克西丝正在努力集中精力恢复体力，很可能是为了施展传送术带你们离开这里。奥罗卡利斯和乌萨已经完全筋疲力尽了，你必须分散露内克西丝的注意力，为梅拉克西丝争取更多的恢复时间……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_COMBAT_LOST_RAPE_START"><![CDATA[
 	<p>
-		Using one of her huge hoofs, Lunexis roughly kicks you down, and as her gigantic horse-cock pushes out of its sheath and begins to harden, she growls, [lunexis.speech(Get on all fours, you worthless cunt, unless you'd rather act as a punching bag for my sisters!)]
+		露内克西丝用一只巨大的马蹄粗暴地将你踢倒在地，当她把巨大的马鸡巴从鞘中抽出并开始让它勃起时，她发出了一声咆哮，[lunexis.speech(趴下，你这个没用的荡妇，除非你想给我的姐妹们当沙袋！)]
 	</p>
 	<p>
-		With nobody coming to your rescue, and not for a moment doubting the sincerity of Lunexis's threat, you reluctantly do as you're told and drop down onto all fours before the demonic centauress. Wasting no time, she
+		没有人来救你，你也丝毫不怀疑露内克西丝威胁的可信性，只好不情愿地听命行事，在恶魔半人马面前趴下。
 		#IF(pc.hasVagina() || game.isAnalContentEnabled())
-			 quickly steps forwards and mounts you, before ramming her monstrous, fully-erect cock as deep as possible into your exposed
+			她快步上前，骑在你身上，然后将她那硕大无比、完全勃起的阴茎尽可能深地插入你的
 			#IF(pc.hasVagina())
-				 [pc.pussy].
+				[pc.pussy]。
 			#ELSE
-				 [pc.asshole].
+				[pc.asshole]。
 			#ENDIF
 		#ELSE
-			 quickly steps around and mounts your face, before ramming her monstrous, fully-erect cock as deep as possible down your throat.
+			她迅速转过身来，骑在你的脸上，然后将她那硕大无比、完全勃起的阴茎尽可能深地插入你的喉咙。
 		#ENDIF
-		 Keeping her fat, throbbing shaft hilted deep inside of you, she ignores your squirming and the shocked, gasping noises that you're making, and calls over a few nearby centauresses. Acting as though you don't exist, she spends the next few minutes ordering her subordinates to clear out the palace, do another sweep through the town to look for any Amazons who might have stayed behind, and to send a report to Lunette. Only after this business has been sorted out does Lunexis return her attention to you, and after bucking her hips into you a few times, she muses to herself, [lunexis.speech(There does seem to be potential for this slut... I suppose I'll have [pc.herHim] trained.)]
+		她无视你的扭动和你发出的震惊、喘息声，把她那肥大、悸动的阴茎深深地插进你的体内，并叫来了附近的几个半人马。在接下来的几分钟里，她假装你不存在一样，命令她的下属清空宫殿，再次清查全镇，寻找可能留下来的亚马逊人，并向露内特发送报告。处理完这些事情后，露内克西丝才把注意力重新放在你身上，在你身上扭动了几下臀部后，她喃喃自语道，[lunexis.speech(这个荡妇似乎很有潜力……我想我会让[pc.herHim]接受训练的。)]
 	</p>
 	<p>
-		Having come to a decision on what to do with you, Lunexis pulls her hips back, allowing her throbbing, hot horse-cock to slide mostly out of your
+		在决定了要对你做什么之后，露内克西丝将臀部向后一收，让她那悸动、火热的马鸡巴从你
 		#IF(pc.hasVagina())
-			 [pc.pussy],
+			[pc.pussy]滑出，
 		#ELSEIF(game.isAnalContentEnabled())
-			 [pc.asshole],
+			[pc.asshole]滑出，
 		#ELSE
-			 mouth,
+			口中滑出，
 		#ENDIF
-		 before ruthlessly thrusting forwards and forcing it deep inside of you once again. Beginning to repeat this process, she addresses you by grunting, [lunexis.speech(Forget whatever life you had, cunt. You're my cock-sleeve now, and you're going to be trained to love it!)]
+		然后再狠狠地向前一挺，再次将它插入你的身体深处。开始重复这一过程时，她向你发出哼声，[lunexis.speech(忘掉你曾经的生活吧，你会接受训练，变成爱上我这根巨屌的鸡巴套子！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_COMBAT_LOST_SEX_START"><![CDATA[
 	<p>
-		Deciding that the best way to distract Lunexis is to allow her to fuck you, you kneel down and submit to her in front of all of the other centauresses, before offering her the use of your body.
+		你觉得分散露内克西丝注意力的最好办法就是让她和你做爱，于是你跪下来，当着所有其他半人马的面臣服于她，然后向她献上你的身体。
 	</p>
 	<p>
-		Allowing a wicked grin to settle on her face, the demonic centauress loudly shouts, [lunexis.speech(Witness this, sisters! The last defenders of Themiscyra submit willingly to their conquerors! Now watch as I turn this slut into my cock-sleeve!)]
+		恶魔半人马脸上露出邪恶的笑容，大声喊道，[lunexis.speech(姐妹们，请见证这一刻！特弥斯库拉最后的守卫者，心甘情愿地臣服于她们的征服者！现在看我把这个荡妇变成我的鸡巴套子！)]
 	</p>
 	<p>
-		Not wanting to disobey their leader, the demons who've laid claim on Meraxis, Aurokaris, and Ursa refrain from fucking them, and instead make do with keeping their prizes retrained as they watch Lunexis use you. Satisfied that her sisters are giving her the attention she's asked for, Lunexis uses one of her huge hoofs to roughly kick you down, and as her gigantic horse-cock pushes out of its sheath and begins to harden, she growls, [lunexis.speech(Get on all fours, you worthless cunt!)]
+		梅拉克西丝、奥罗卡利斯和乌萨的恶魔们不想违抗它们的首领，所以没有和她们做爱，而是一边看着卢恩克西斯使用你，一边训练它们的战利品。露内克西丝很满意她的姐妹们对她的关注，她用一只巨大的蹄子粗暴地把你踢倒在地，当她巨大的马鸡巴从护鞘中拔出并开始变硬时，她发出了咆哮，[lunexis.speech(趴下，你这个一无是处的骚逼！)]
 	</p>
 	<p>
-		Obediently doing as you're told, you drop down onto all fours before the demonic centauress. Wasting no time, she
+		你乖乖地听话，四肢着地趴在恶魔半人马面前。她没有浪费时间，
 		#IF((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)))
-			 quickly steps forwards and mounts you, before ramming her monstrous, fully-erect cock as deep as possible into your exposed
+			快步上前，骑在你身上，然后将她那硕大无比、完全勃起的阴茎尽可能深地插入你的
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 [pc.pussy].
+				[pc.pussy]。
 			#ELSE
-				 [pc.asshole].
+				[pc.asshole]。
 			#ENDIF
 		#ELSE
-			 quickly steps around and mounts your face, before ramming her monstrous, fully-erect cock as deep as possible down your throat.
+			迅速转过身来，骑在你的脸上，然后将她那硕大无比、完全勃起的阴茎尽可能深地插入你的喉咙。
 		#ENDIF
-		 Keeping her fat, throbbing shaft hilted deep inside of you, she ignores your squirming and the shocked, gasping noises that you're making, and calls over a few nearby centauresses. Acting as though you don't exist, she spends the next few minutes ordering her subordinates to clear out the palace, do another sweep through the town to look for any Amazons who might have stayed behind, and to send a report to Lunette. Only after this business has been sorted out does Lunexis return her attention to you, and after bucking her hips into you a few times, she grunts, [lunexis.speech(You've got potential, slut! I think I'll have you trained into being one of my cock-sleeves!)]
+		她无视你的扭动和你发出的震惊的喘息声，把她那肥大、悸动的阴茎深深地插在你的体内，并叫来了附近的几个半人马。在接下来的几分钟里，她假装你不存在一样，命令她的下属清空宫殿，再次清查全镇，寻找可能留下来的亚马逊人，并向露内特发送报告。处理完这些事情后，露内克西丝才把注意力转移到你身上，在你身上扭动了几下臀部后，她哼了一声，[lunexis.speech(你很有潜力，荡妇！我想我会把你训练成我专属的鸡巴套子！)]
 	</p>
 	<p>
-		Pulling her hips back, Lunexis allows her throbbing, hot horse-cock to slide mostly out of your
+		露内克西丝将臀部向后拉，让她悸动、火热的马鸡巴从你
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 [pc.pussy],
+			[pc.pussy]内滑出大半，
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 [pc.asshole],
+			[pc.asshole]内滑出大半，
 		#ELSE
-			 mouth,
+			口中内滑出大半，
 		#ENDIF
-		 before ruthlessly thrusting forwards and forcing it deep inside of you once again. Beginning to repeat this process, she deeply moans, [lunexis.speech(Forget whatever life you had, cunt. ~Mmm!~ You're my cock-sleeve now, and you're going to be trained to love it!)]
+		然后狠狠地向前一挺，再次将它插入你的身体深处。重复这一过程时，她发出了高亢的呻吟声，[lunexis.speech(忘掉你曾经的生活吧，婊子~你现在是我的鸡巴套子了！你会被训练到爱上这种感觉的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_COMBAT_LOST_AFTER_SEX"><![CDATA[
 	#IF(game.isNonConEnabled())
 		<p>
-			Satisfied both with the sex and with the humiliation she's subjected you to, Lunexis slides her fat horse-cock free from your well-fucked orifice, before kicking you to the floor and loudly declaring once again, [lunexis.speech(We are victorious! Following custom, all Amazons are the property of whoever defeats and captures them! Spread out into the forest and hunt them down!)]
+			露内克西丝的性欲和征服欲在和你的性爱中被完全释放，她把肥大的马屌从你被干得酣畅淋漓的口中抽出，然后一脚把你踢倒在地，再次大声宣布，[lunexis.speech(我们胜利了！按照惯例，所有亚马逊人都是我们的奴隶！谁打败并抓住他们，那就是谁的财产！到森林里去追捕她们！)]
 		</p>
 		<p>
-			As the centauress army gallops off to hunt down and capture as many Amazons as possible, Lunexis turns her attention back to you, and with an evil smirk on her face, she teases, [lunexis.speech(You're going to love being my obedient cock-sleeve!)]
+			当半人马大军飞奔去追捕尽可能多的亚马逊人时，露内克西丝又把目光转向了你，脸上露出邪恶的笑意，挑逗着你，[lunexis.speech(你会变成我听话的无脑鸡巴套子的！)]
 		</p>
 	#ELSE
 		<p>
-			Satisfied both with the sex and with the humiliation she's subjected you to, Lunexis slides her fat horse-cock free from your well-fucked orifice, before kicking you to the floor and loudly declaring once again, [lunexis.speech(We are victorious!)]
+			露内克西丝既满足了性欲，也满足了对你的羞辱，她把肥大的马屌从你被干得酣畅淋漓的口中抽出，然后一脚把你踢倒在地，再次大声宣布，[lunexis.speech(我们大获全胜！)]
 		</p>
 		<p>
-			As they loudly cheer their leader's words, the centauresses don't hear or notice Meraxis as she summons the last of her energy to cast teleport. Pulling her arms free from the grip of the demon who's restraining her, she makes a familiar gesture, before starting to cast the teleportation spell. Although the nearby centauresses see what she's doing, they're too late to stop her, and as they reach down to grab the [meraxis.race], you're enveloped by a flash of pinkish-purple light...
+			半人马们大声欢呼着重复他们领袖的话语，却没有听到或注意到梅拉克西丝正在调集最后的能量施放传送术。她将手臂从束缚她的恶魔手中抽出，做了一个熟悉的手势，然后开始施放传送咒。虽然附近的半人马看到了她在做什么，但他们已经来不及阻止她了，当他们伸手去抓[meraxis.race]的时候，你被一阵粉紫色的光芒所笼罩……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_COMBAT_LOST_BUY_TIME"><![CDATA[
 	<p>
-		Seeking to buy time for Meraxis, you try to distract Lunexis by shouting that she'll never get away with this. Calling upon the name of Minotallys, you say that she's sure to be defeated, and then she'll face justice for all that she's done.
+		为了给梅拉克西丝争取时间，你试图转移露内克西丝的注意力，大喊她绝对逃不掉。你呼唤米诺塔莉丝的名字，说她一定会被米诺塔莉丝打败，然后她就会为她所做的一切接受正义的审判。
 	</p>
 	<p>
-		With a furious bellow, the centauress kicks you down, before shouting, [lunexis.speech(How dare you speak when not spoken to! You think that Minotallys can defeat me?! All that's prevented me from burning Elis to the ground and taking that slut as another of my cock-sleeves is those walls she cowers behind!)]
+		半人马愤怒地吼了一声，一脚把你踢倒在地，然后大声喊道，[lunexis.speech(不会说话就闭上你的贱嘴！你以为米诺塔莉丝能打败我？阻止我把伊利斯烧成灰烬，把那个荡妇变成我的另一个鸡巴套子的，就是她龟缩其后的那面围墙！)]
 	</p>
 	<p>
-		Seeing that Lunexis is easy to provoke, and that Meraxis needs more time, you tell the demonic centauress that a real warrior wouldn't be stopped by walls.
+		看到露内克西丝很容易被激怒，而梅拉克西丝需要更多时间，你告诉恶魔半人马，真正的勇士不会被一堵墙难住，她只不过是无能罢了。
 	</p>
 	<p>
-		[lunexis.speech(You insolent bitch!)] she bellows, before stomping her hoofs on the ground and cracking the paving stones in the process. With a wild fury in her golden eyes, she declares, [lunexis.speech(I'll break down those walls, and I'll have that lilin slut moaning beneath me! As soon as I'm given the order from mother, then Elis will be taken, its citizens enslaved, and its valuables taken! None can stand against Lunette's daughters!)]
+		[lunexis.speech(你这个天杀的婊子！)]她大吼一声，然后用蹄子猛踩地面，把铺路石都踩裂了。她金色的眼睛里闪烁着狂野的怒火，她说，[lunexis.speech(我会打破那些墙壁，让那个荡妇在我身下呻吟！只要我得到母亲的命令，伊利斯就会被攻占，它的人民会被奴役，它的财宝会被抢走，没有人能对抗露内特的女儿们！)]
 	</p>
 	<p>
-		With that, the surrounding centauresses let out a loud cheer, and as they call for the taking of Elis, they don't hear or notice Meraxis as she summons the last of her energy to cast teleport. Pulling her arms free from the grip of the demon who's restraining her, she makes a familiar gesture, before starting to cast the teleportation spell. Although the nearby centauresses see what she's doing, they're too late to stop her, and as they reach down to grab the [meraxis.race], you're enveloped by a flash of pinkish-purple light...
+		就这样，周围的半兽人们发出了热烈的欢呼声，当他们呼喊着带走伊利斯时，却没有听到或注意到梅拉克西丝正在调集最后的能量施放传送术。她将手臂从束缚她的恶魔手中抽出，做了一个熟悉的手势，然后开始吟唱传送咒。虽然附近的半人马看到了她在做什么，但他们已经来不及阻止她了，当他们伸手去抓[meraxis.race]的时候，你被一阵粉紫色的光芒所笼罩……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PLAZA_TELEPORTED"><![CDATA[
 	<p>
-		As the flash of light disappears, you breathe a sigh of relief as you see that Meraxis has teleported you directly into Minotallys's office. Completely exhausted from casting this spell, the [meraxis.race], who's appeared right in front of you, collapses into your [pc.arms]. As you gently lower Meraxis down so that she's sitting on the floor, you finally get a moment in which to look around and take stock of your situation.
+		当闪光消失时，你松了一口气，因为你看到梅拉克西丝已经把你直接传送到了米诺塔莉丝的办公室。因为施法而完全精疲力竭的[meraxis.race]出现在你面前，她倒在了你的[pc.arms]中。你轻轻地把梅拉克西丝放下来，让她坐在地上，你终于有时间环顾四周，审视一下自己的处境。
 	</p>
 	<p>
-		Sitting behind her desk, you see the familiar figure of Minotallys, while to her side is her ever-present assistant, Arion. To your right you see Aurokaris, while to your left, you see Ursa dropping down into a combat stance and readying her dory. The reason for this behaviour is that alongside yourself, Aurokaris, and Ursa, Meraxis has also brought Lunexis along.
+		坐在她办公桌后面的是米诺塔莉丝熟悉的身影，在她身旁的是她永远的助手阿里昂。在你的右边是奥罗卡利斯，而在你的左边，你看到的是乌萨正俯下身子，摆出战斗姿势，准备好她的希腊长矛。之所以会有这样的举动，是因为除了你自己、奥罗卡利斯和乌萨之外，梅拉克西丝居然还带着露内克西丝一起来了。
 	</p>
 	<p>
-		[lunexis.speech(Where am I?!)] the centauress booms, before suddenly catching sight of Ursa. Seeing in the bear-girl a dangerous enemy who needs to be decisively defeated, Lunexis gets a sudden spurt of energy. Letting out a ferocious cry, she starts to rush towards the Amazonian queen.
+		[lunexis.speech(我？！我在哪？！啊？！)]半人马懵逼地坐起来，然后突然看到了乌萨。看到熊女之后，露内克西丝跳了起来。她发出一声凶猛的呐喊，开始冲向亚马逊女王。
 	</p>
 	<p>
-		[minotallys.speech(We'll have none of that in here,)] Minotallys coldly states, and with an effortless brush of her hand, she demonstrates the power of a lilin by using telekinesis to throw Lunexis aside. After crashing into the wall with a mighty boom, and leaving a huge indent in the plasterwork in the process, the demonic centauress spins around to turn her attention to the mayor of Elis.
+		[minotallys.speech(你睡迷糊了吧？)]米诺塔利丝冷冷地说，她毫不费力地一挥手，就用念动力把露内克西丝扔到了一边，展示了莉琳的力量。恶魔半人马在一声巨大的轰鸣声中撞上墙壁，并在墙上留下一个巨大的凹痕，她转过头来，将注意力转向了伊利斯市长。
 	</p>
 	<p>
-		Seeing an opening, Ursa lunges forwards in an attempt to deliver a decisive strike to Lunexis. Before her attack hits, however, Minotallys commands, [minotallys.speech(Stop right there! Everyone is to [style.glowArcane(stand back)] and cease this violent behaviour right this instant!)]
+		看到空当，乌萨猛地向前冲去，试图给露内克西丝致命一击。然而，在她的攻击命中之前，米诺塔利斯发出了指令，[minotallys.speech(先别动她，所有人[style.glowArcane(退后)]， 别动用武力。)]
 	</p>
 	<p>
-		Minotallys's cold, commanding voice is nothing like how you remember it, and what's more, the words 'stand back' have a deep, rumbling echo behind them. Recalling where you've heard a voice similar to this before, you get the distinct feeling that she's using the spell 'Lilith's Command', which Lyssieth subjected you to the first time you met her. Thanks to the elder lilin's essence, you're immune to this spell, and so you don't feel compelled to obey Minotallys's command. Even so, as Ursa and Aurokaris fall back, you think that it's best to go along with it and watch what the cow-girl lilin has in mind.
+		米诺塔莉丝冷酷的命令声音与你记忆中的完全不同，更重要的是，“退后”这两个字的背后有着深沉而隆隆的回声。你回想起以前在哪里听到过类似的声音，发觉她在使用“莉莉丝之律令”法术，这是你第一次见到莉西丝时她对你使用的咒语。多亏了莉琳长老的精华，你对这个咒语免疫，所以你并不觉得必须服从米诺塔利丝的命令。尽管如此，当乌萨和奥罗卡利斯后退时，你认为最好还是顺从它，看看牛女莉琳在想什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- RAIDERS -->
 
 	<htmlContent tag="RAIDERS"><![CDATA[
 	<p>
-		Up ahead, rummaging through the debris that's spilling out from a half-destroyed building, you see a pair of muscular, demonic centauresses. Spotting them at the same time as you, Aurokaris ducks behind a nearby wall and hisses, [aurokaris.speech(They haven't seen us yet. Should we fight them, or find another way around?)]
+		在前方，你在一幢半毁的建筑中翻找着散落的废墟，看到了一对肌肉发达的恶魔半人马。奥罗卡利斯和你同时发现了他们，她躲在附近的一堵墙后面，小声说，[aurokaris.speech(他们没看见我们，绕过去，还是干掉他们？)]
 	</p>
 	<p>
-		Looking back at the two demons, you see that Aurokaris is right; they're so focused on trying to find something worth stealing that they haven't noticed your approach. As such, you could easily choose to head back the way you came and try to find an alternative route around. Then again, you could always continue forwards and confront them, which will undoubtedly lead into having to fight them...
+		你回头看了看那两个恶魔，发现奥罗卡利斯说得没错，他们正专注于寻找值得偷的东西，根本没注意到你的靠近。因此，你可以很容易地选择原路返回，并尝试换条路绕过去。不过，你也可以继续前进，与他们对峙，这无疑会导致你不得不与他们战斗……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_BACK"><![CDATA[
 	<p>
-		Deciding that it'd be best to avoid a confrontation with these demonic centauresses, you signal for Aurokaris to follow you, before turning around and heading back the way you came...
+		你觉得最好避免与这些恶魔半人马发生冲突，于是示意奥罗卡利斯跟上你，然后转身从原路返回……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_COMBAT_WON"><![CDATA[
 	<p>
-		Collapsing down next to her companion, [attacker.name] lets out a horny moan and pants, [attacker.speech(You're so strong... Come on, take what's yours by right of strength! Fuck us!)]
+		[attacker.name]倒在同伴身边，发出淫荡的呻吟声，裤子也弄湿了：[attacker.speech(你好强……来吧，凭实力夺走属于你的东西！操我们！)]
 	</p>
 	<p>
-		Summoning the energy to turn her horse's body around to present you with her rear-end, [attacker2.name] flicks her tail to one side and begs, [attacker2.speech(That's right, come and fuck my hot horse-pussy!)]
+		[attacker2.name]鼓足勇气将马身转过来，让你看到她的后臀，她将尾巴甩向一边，哀求道，[attacker2.speech(没错，快来操我火辣的马穴吧！)]
 	</p>
 	<p>
-		[aurokaris.speech(How despicable!)] Aurokaris snaps in disgust. Turning to look at you, she states, [aurokaris.speech(Ignore these monsters, [pc.name]. We need to get moving!)]
+		[aurokaris.speech(卑鄙！)]奥罗卡利斯厌恶地冷哼一声。她转过身看着你，[aurokaris.speech(别理这些怪物，[pc.name]。我们得快走！)]
 	</p>
 	<p>
-		With the two centauresses continuing to beg to be fucked, you wonder whether to give them what they want, take their belongings, or simply send them on their way and continue on your quest to find Ursa...
+		这两个半人马不断乞求被操，你不知道是该满足他们的要求并拿走他们的财物，还是干脆送他们上路，继续寻找乌萨……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_COMBAT_WON_END"><![CDATA[
 	<p>
-		Not wanting anything to do with these demons, and unwilling to leave them here to recover their energy and potentially bring reinforcements to hunt you down, you tell them in no uncertain terms that they're to leave Themiscyra right now. Although there's a flash of defiance in their eyes, the two demons realise that they're not going to be able to beat you in combat, and so they take your command seriously and gallop off into the distance.
+		你不想和这些恶魔有任何瓜葛，也不愿让她们在这里恢复体力然后召集援军追捕你，所以你明确地命令她们马上离开特弥斯库拉。两只恶魔眼中闪过一丝不屑，但也心知自己打不过你，于是听从你的命令，飞奔而去。
 	</p>
 	<p>
-		[aurokaris.speech(I don't think they'll be back for a while,)] Aurokaris muses out loud, before giving the reasoning for this claim by saying, [aurokaris.speech(They'll be too worried about having to admit their defeat to their sisters.)]
+		[aurokaris.speech(我觉得她们暂时不会回来了，)]奥罗卡利斯若有所思地开口，并给出理由，[aurokaris.speech(她们现在更担心要向姐妹们承认自己的失败。)]
 	</p>
 	<p>
-		Regardless of whether or not they'll be returning to Themiscyra soon, all that you can do is continue on your way, and so you say to Aurokaris that the two of you had better get moving. Nodding her head in agreement, the cow-girl returns to your side as you set off once again to find Ursa...
+		不论她们是否会很快返回特弥斯库拉，你都得继续赶路，所以你向奥罗卡利斯提议赶紧动身。牛女点头赞成，回到你身边，和你再次出发寻找乌萨……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_COMBAT_WON_SEX"><![CDATA[
 	<p>
-		Turned on at the sight of these two panting, horny centauresses lying before you and flashing you their feral horse-pussies, you tell them that you'll give them what they want.
+		看到这两个气喘吁吁、饥渴难耐的半人马躺在你面前，向你展示她们兽态的马逼，你兴奋不已，你告诉她们，你会给她们想要的东西。
 	</p>
 	<p>
-		[attacker.speech(Yes! Come and claim me!)] [attacker.name] moans.
+		[attacker.speech(就这样！来操我啊！)][attacker.name]呻吟道。
 	</p>
 	<p>
-		[attacker2.speech(I'm getting wet already!)] the other one breathlessly pants.
+		[attacker2.speech(我已经湿透了！)]另一个上气不接下气的喘息着。
 	</p>
 	<p>
-		[aurokaris.speech(I'll have no part in this!)] Aurokaris declares. Furiously blushing, she averts her gaze away from the two demons, and after tutting at you in disapproval, she marches off out of sight, calling back after her as she goes, [aurokaris.speech(Shout me once you're done!)]
+		[aurokaris.speech(我才不加入这种事呢！)]奥罗卡利斯愤然说道。她满脸通红，扭过头不去看那两个恶魔，并对你报以不满的啧声，随后她大步离开视线之外，一边走一边回头喊，[aurokaris.speech(做完了再叫我！)]
 	</p>
 	<p>
-		Left alone with the two defeated demons, you advance on them and prepare to have some fun...
+		你独自面对两个身为手下败将的恶魔，你迈步向前，准备找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_AFTER_SEX_DOM"><![CDATA[
 	<p>
-		Having had your fun, you [pc.step] back from the two centauresses and start getting your things back in order. Once you're ready, you call out for Aurokaris, and a moment later the cow-girl reappears from around a nearby building.
+		你玩了个爽，从两个半人马身边退开，开始整理自己的东西。整理完毕，你大声呼唤奥罗卡利斯，片刻后，牛女从附近的一栋建筑旁边冒了出来。
 	</p>
 	<p>
-		[aurokaris.speech(I really don't approve of this,)] the Amazon tuts as she looks back and forth between you and the panting, softly-moaning centauresses.
+		[aurokaris.speech(我真的不赞成这样，)]这个亚马逊人一边发出啧啧声，一边在你和喘息呻吟着的半人马间来回打量。
 	</p>
 	<p>
-		Telling Aurokaris not to worry about it, you look over at the two demons and wonder what to do with them now...
+		你告诉奥罗卡利斯不用担心，看向那两个恶魔，思考该怎么对付他们……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_AFTER_SEX_DOM_END"><![CDATA[
 	<p>
-		Not wanting these two demons to hang around and recover their strength, you decide that the best course of action is to scare them off and drive them out of the town. With this thought in mind, you strike an intimidating pose and tell them to get out of here.
+		你不想让这两个恶魔在这里逗留并恢复体力，那么，最好的办法就是吓跑他们，把他们赶出小镇。于是，你摆出恐吓的姿势，勒令他们滚出去。
 	</p>
 	<p>
-		[aurokaris.speech(I could knock them out if it's easier,)] Aurokaris offers, before hefting her dory and taking a step forwards.
+		[aurokaris.speech(要是击倒他们更方便的话，我可以试试，)]奥罗卡利斯提议道，然后拎起她的希腊长矛，向前迈了一步。
 	</p>
 	<p>
-		Having been defeated by the two of you already, and clearly not wanting to be on the receiving end of the Amazon's spear once again, the centauresses briefly look at one another, before hurrying to stand up. Encouraged to get a move on by another threat from your cow-girl companion, the two centauresses run off down the street, before turning a corner and disappearing from sight.
+		半人马被你们两个打败了，他们互相看了一眼，然后匆忙站了起来，显然是不想再次成为亚马逊长矛的攻击对象。你的牛女同伴又一次发出威胁，这两个半人马受到惊吓，向街上跑去，然后转过一个街角，消失在你的视线中。
 	</p>
 	<p>
-		[aurokaris.speech(I doubt that they've left the town,)] Aurokaris sighs, [aurokaris.speech(but at least they shouldn't bother us again. Now come on, let's get moving!)]
+		[aurokaris.speech(不知道他们会不会离开镇子，)]奥罗卡利斯叹了口气，[aurokaris.speech(但至少他们现在不会再来烦我们了。现在，我们该走了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_COMBAT_WON_TALK"><![CDATA[
 	<p>
-		Wanting to extract some information from these two demons, you ask them why they're attacking Themiscyra, how many of them are there, and what their plan is for the town.
+		你想从这两个恶魔口中套出一些信息，就问他们为什么要攻击特弥斯库拉，那里有多少恶魔，他们对这个小镇有什么计划。
 	</p>
 	<p>
-		[attacker.speech(I was promised prime Amazon pussy!)] [attacker.name] declares, [attacker.speech(I just wanted to rut some hot bitch's cunt, so that's why I joined in with the attack.)]
+		[attacker.speech(我被许诺了亚马逊人的小穴！)][attacker.name]声称道，[attacker.speech(我只是想舔舔某个骚货的逼，所以才加入了进攻队伍。)]
 	</p>
 	<p>
-		[attacker2.speech(I just like having a good fight,)] [attacker2.name] states, [attacker2.speech(but I prefer it when I win...)]
+		[attacker2.speech(我就想酣畅淋漓地打一场。)][attacker2.name]说，[attacker2.speech(但我更喜欢打赢的时候……)]
 	</p>
 	<p>
-		Your follow-up questions don't get you much further than this, and after realising that these two demons aren't going to offer you any useful information at all, you decide to give up on your questioning and do something else...
+		你继续盘问，但也没能问出更多。你意识到这两个恶魔压根不会向你提供有用的情报，决定放弃套话，做些其他的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_COMBAT_LOST"><![CDATA[
 	<p>
-		Unable to continue fighting, you find yourself completely and utterly defeated by the two centauresses, and as your [pc.legs] give out from under you, you find yourself collapsing down next to Aurokaris.
+		你彻底被这两个半人马打败了，无力抵抗，双腿一软，倒了下来。奥罗卡利斯也倒在了你身边。
 	</p>
 	<p>
-		[attacker.speech(That was easy!)] [attacker.name] boasts, and as
+		[attacker.speech(太轻松了！)][attacker.name]夸耀道，
 		#IF(!attacker.hasPenis())
-			 she quickly transforms to give herself a massive, sheathed horse-cock,
+			她迅速自我转化，长出了一条宏伟的带鞘马屌，
 		#ELSE
-			 her massive horse-cock starts to push out of its sheath,
+			她宏伟的马屌开始从鞘里推出，
 		#ENDIF
-		 she lustfully exclaims, [attacker.speech(Now for the fun part! Which one of you should I fuck?)]
+		她淫荡地叫道：[attacker.speech(现在来做有趣的事情！我该操哪个好呢？)]
 	</p>
 	<p>
-		[attacker2.speech(I did most of the work, so I'll choose who I want, and you can get the other one,)] [attacker2.name] grunts,
+		[attacker2.speech(这次主要是我出力吧？所以我先选，另一个就给你玩。)][attacker2.name]咕哝着，
 		#IF(!attacker2.hasPenis())
-			 before turning to the side and showing off the huge, animalistic shaft that she's just transformed to give herself.
+			然后转过身去，炫耀着她刚刚长出的兽屌。
 		#ELSE
-			 before turning to the side and showing off the huge, animalistic shaft that's pushed out of her sheath and risen to full erection.
+			然后转过身去，炫耀着从她的鞘中挤出并完全勃起的巨大、充满兽性的阴茎。
 		#ENDIF
 	</p>
 	#IF(!game.isNonConEnabled())
 		<p>
-			With that, the two centauresses quickly start arguing between themselves over which one of them should fuck you and which should fuck Aurokaris. As their argument begins to heat up, your cow-girl companion manages to slightly recover her strength, and hisses to you, [aurokaris.speech(We should try to escape while they argue...)]
+			就这样，两个半人马很快就开始争论谁该操你，谁该操奥罗卡利斯。当她们的争吵开始白热化时，你的女牛仔同伴好不容易稍稍恢复了一点力气，她嘶哑着嗓子对你说：[aurokaris.speech(我们趁现在快逃吧……)]
 		</p>
 	#ELSE
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_raider_sex_player_targeted_by_leader))
 			<p>
-				[attacker.speech(Well I want to fuck the [pc.race],)] [attacker.name] states.
+				[attacker.speech(好吧，我想干这个[pc.race]。)][attacker.name]表态。
 			</p>
 			<p>
-				[attacker2.speech(That suits me,)] [attacker2.name] replies, [attacker2.speech(I wanted to get my fat cock balls-deep in that cow-slut's cunt. Let's get started already.)]
+				[attacker2.speech(这家伙挺适合做我的鸡巴套。)][attacker2.name]答道，[attacker2.speech(我的大鸡巴已经忍不住要撞进那多汁的洞里一探究竟了，快开始吧！)]
 			</p>
 		#ELSE
 			<p>
-				[attacker.speech(Well I want to get my fat cock balls-deep in that cow-slut's cunt,)] [attacker.name] states.
+				[attacker.speech(好吧，我的大鸡巴已经忍不住要撞进那多汁的洞里一探究竟了。)][attacker.name]说道。
 			</p>
 			<p>
-				[attacker2.speech(That suits me,)] [attacker2.name] replies, [attacker2.speech(I wanted to rut the [pc.race]. Let's get started already.)]
+				[attacker2.speech(正合我意，)][attacker2.name]回答道，[attacker2.speech(我想看这[pc.race]摇尾渴求的样子。现在就开干吧！)]
 			</p>
 		#ENDIF
 		<p>
-			With that, the two centauresses advance on you and Aurokaris with a lustful gleam in their eyes...
+			于是，两个半人马眼中闪烁着淫邪的光芒，向你和奥罗卡利斯逼近……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RAIDERS_COMBAT_LOST_RAPE_START"><![CDATA[
 	#IF((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)))
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_raider_sex_player_targeted_by_leader))
 			<p>
-				Trotting up to you, [attacker.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker.speech(You're mine now, slut! Get ready to take my cock!)]
+				[attacker.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and mounts you. As her fat, feral horse-cock starts prodding at your rear end, you look across to see that Aurokaris has been mounted in much the same way by [attacker2.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴开始摩擦你的后穴时，你看到对面的奥罗卡利斯也被[attacker2.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ELSE
 			<p>
-				Trotting up to you, [attacker2.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker2.speech(You're mine now, slut! Get ready to take my cock!)]
+				[attacker2.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and mounts you. As her fat, feral horse-cock starts prodding at your rear end, you look across to see that Aurokaris has been mounted in much the same way by [attacker.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴开始摩擦你的后穴时，你看到对面的奥罗卡利斯也被[attacker.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_raider_sex_player_targeted_by_leader))
 			<p>
-				Trotting up to you, [attacker.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker.speech(You're mine now, slut! Get ready to taste my cock!)]
+				[attacker.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and shoves her fat, feral horse-cock into your face. As the flared head starts repeatedly prodding at your [pc.lips+], you glance across to see that Aurokaris has been mounted by [attacker2.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴撬开你[pc.lips+]时，你看到对面的奥罗卡利斯也被[attacker2.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ELSE
 			<p>
-				Trotting up to you, [attacker2.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker2.speech(You're mine now, slut! Get ready to taste my cock!)]
+				[attacker2.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and shoves her fat, feral horse-cock into your face. As the flared head starts repeatedly prodding at your [pc.lips+], you glance across to see that Aurokaris has been mounted by [attacker.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴撬开你[pc.lips+]时，你看到对面的奥罗卡利斯也被[attacker.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_COMBAT_LOST_ESCAPE"><![CDATA[
 	<p>
-		Not wanting to hang around and get fucked by these demons, you motion for Aurokaris to start to fall back from the arguing centauresses. Nodding in acknowledgement, the cow-girl slowly crawls away alongside you as you make your way over to a nearby gap between two buildings. The centauresses are so caught up in their argument that they don't see you as you and Aurokaris slip down the narrow alleyway and make good your escape.
+		你不想留在这被这些恶魔当成肉便器，于是示意奥罗卡利斯开始从争吵的半人马身边退开。牛女点点头表示认可，然后慢慢地爬到你身边，你则向附近两座建筑之间的空隙走去。当你和奥罗卡利斯溜进狭窄的小巷并顺利逃脱时，半人马们正沉浸在他们的争吵中，根本没注意到你。
 	</p>
 	<p>
-		[aurokaris.speech(That was close...)] the cow-girl sighs as you turn a corner and make your way back the way you came. Shaking her head, she admonishes herself by stating, [aurokaris.speech(I should have fought better... We'll win next time!)]
+		你转过一个弯，回到原来的地方，牛女叹了口气：[aurokaris.speech(好险……)]。她摇摇头，告诫自己说：[aurokaris.speech(我应该打得更好……我们下次会赢的！)]
 	</p>
 	<p>
-		Agreeing with the Amazon's confident remark, you look around and wonder where to go next...
+		你同意亚马逊人自信满满的宣言，但你环顾四周，不知道下一步该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RAIDERS_COMBAT_LOST_SEX_START"><![CDATA[
 	<p>
-		Not wanted this to end by being on the receiving end of yet another beating, you tell Aurokaris that it's far too risky to try and escape. Sure enough, just a few seconds later the centauresses finish arguing and turn their attention back to you.
+		你不想再挨一顿打，于是告诉奥罗卡利斯逃跑太危险了。果然，几秒钟后，半人马就结束了争吵，把注意力转移到了你身上。
 	</p>
 	#IF((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)))
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_raider_sex_player_targeted_by_leader))
 			<p>
-				Trotting up to you, [attacker.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker.speech(You're mine now, slut! Get ready to take my cock!)]
+				[attacker.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and mounts you. As her fat, feral horse-cock starts prodding at your rear end, you look across to see that Aurokaris has been mounted in much the same way by [attacker2.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴开始摩擦你的后穴时，你看到对面的奥罗卡利斯也被[attacker2.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ELSE
 			<p>
-				Trotting up to you, [attacker2.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker2.speech(You're mine now, slut! Get ready to take my cock!)]
+				[attacker2.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and mounts you. As her fat, feral horse-cock starts prodding at your rear end, you look across to see that Aurokaris has been mounted in much the same way by [attacker.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴开始摩擦你的后穴时，你看到对面的奥罗卡利斯也被[attacker.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(flags.hasFlag(FLAG_innoxia_themiscyra_raider_sex_player_targeted_by_leader))
 			<p>
-				Trotting up to you, [attacker.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker.speech(You're mine now, slut! Get ready to taste my cock!)]
+				[attacker.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and shoves her fat, feral horse-cock into your face. As the flared head starts repeatedly prodding at your [pc.lips+], you glance across to see that Aurokaris has been mounted by [attacker2.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴撬开你[pc.lips+]时，你看到对面的奥罗卡利斯也被[attacker2.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ELSE
 			<p>
-				Trotting up to you, [attacker2.name] roughly pushes you down onto all fours before her, and with an arrogant smirk on her face, declares, [attacker2.speech(You're mine now, slut! Get ready to taste my cock!)]
+				[attacker2.name]马蹄踩在你旁边，粗暴地把你按倒，然后一脸傲慢地坏笑：[attacker.speech(你现在是我的了，荡妇！准备吞噬我的鸡巴吧！)]
 			</p>
 			<p>
-				Not giving you a moment in which to react, the centauress steps forwards and shoves her fat, feral horse-cock into your face. As the flared head starts repeatedly prodding at your [pc.lips+], you glance across to see that Aurokaris has been mounted by [attacker.name], and you can't help but let out a defeated [pc.moan] as you realise that the two of you are about to get fucked...
+				没有给你反应的时间，半人马向前走了一步，骑在了你的身上。当她那又肥又野的马鸡巴撬开你[pc.lips+]时，你看到对面的奥罗卡利斯也被[attacker.name]以同样的方式骑了上去。你知道你们两个在操难逃，不禁发出一声绝望的[pc.moan]……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_AFTER_SEX_SUB"><![CDATA[
 	<p>
-		Satisfied, the demonic centauresses step back from you and Aurokaris, before looking down at the two of you and letting out smug, arrogant laughs. As you and the Amazon gather your things, [attacker.name] declares, [attacker.speech(I'd take you as my slaves, but I already have too many.)]
+		恶魔半人马满意地从你和奥罗卡利斯身边退开，低头看着你们两个，发出得意而傲慢的笑声。你和亚马逊人收拾东西，[attacker.name]说道，[attacker.speech(我是想收你们为奴的，但我已经有太多奴隶了。)]
 	</p>
 	<p>
-		[attacker2.speech(I'm sure that our sisters will enjoy fucking you,)] [attacker2.name] sneers, before commanding, [attacker2.speech(Get out of here! The first centauresses you see, you're to submit to them and let them rut you. Understand?)]
+		[attacker2.speech(我相信我们的姐妹会很享受和你做爱的，)][attacker2.name]冷笑着命令道，[attacker2.speech(滚出这里！你一见到半人马，就得臣服，让对方操你。懂了吗？)]
 	</p>
 	<p>
-		Not wanting to anger the demons and risk being beaten up and fucked all over again, you tell the centauress that you'll do as she says, before joining Aurokaris in hurrying back the way you came. Leaving the two demons to their looting, you continue moving until they're out of sight, as which point your Amazon companion groans, [aurokaris.speech(That was so humiliating... At least we're still free to make our way to Ursa... Come on, [pc.name], we need to hurry!)]
+		你不想冒着被打得满地找牙的危险激怒恶魔，你告诉半人马们你会按她说的做，然后就和奥罗卡利斯一起原路返回。留下两个恶魔继续抢劫，你继续前进，直到他们消失在视线中，这时你的亚马逊同伴才抱怨起来，[aurokaris.speech(太丢人了……至少我们还能自由地前往尔萨……快点，[pc.name]，我们得快点！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_PERK_APPLICATION"><![CDATA[
 	<p>
-		Not wanting these two demons to hang around and recover their strength, you decide that the best course of action is to scare them off and drive them out of the town. With this thought in mind, you strike an intimidating pose and tell them to get out of here.
+		你不想让这两个恶魔在这里逗留并恢复体力，那么，最好的办法就是吓跑他们，把他们赶出小镇。于是，你摆出恐吓的姿势，勒令他们滚出去。
 	</p>
 	<p>
-		[aurokaris.speech(I could knock them out if it's easier,)] Aurokaris offers, before hefting her dory and taking a step forwards.
+		[aurokaris.speech(要是击倒他们更方便的话，我可以试试，)]奥罗卡利斯提议道，然后拎起她的希腊长矛，向前迈了一步。
 	</p>
 	<p>
-		Having been defeated by the two of you already, and clearly not wanting to be on the receiving end of the Amazon's spear once again, the centauresses briefly look at one another, before hurrying to stand up. Encouraged to get a move on by another threat from your cow-girl companion, the two centauresses run off down the street, before turning a corner and disappearing from sight.
+		半人马被你们两个打败了，他们互相看了一眼，然后匆忙站了起来，显然是不想再次成为亚马逊长矛的攻击对象。你的牛女同伴又一次发出威胁，这两个半人马受到惊吓，向街上跑去，然后转过一个街角，消失在你的视线中。
 	</p>
 	<p>
-		With the demons dealt with, the two of you begin to set off on your way through the town, but as you do so, Aurokaris suddenly declares, [aurokaris.speech(You know, [pc.name], we've been almost everywhere in Themiscyra now, and wherever we found demons, we defeated them... I think you and I have actually managed to clear all of the looters out from the town!)]
+		你们俩解决了恶魔，开始穿过小镇。但就在这时，奥罗卡利斯突然开口，[aurokaris.speech(你知道吗，[pc.name]，我们现在几乎走遍了特弥斯库拉的每个角落，无论何处发现恶魔，我们都打败了他们……我想你和我已经成功把所有抢劫者都赶出镇子了！)]
 	</p>
 	<p>
-		As she says this, you instinctively feel that she's correct. Having defeated well over a dozen demonic centauresses in Themiscyra, you've not only managed to clear the town, but have also gained invaluable experience at fighting with demons and centaurs. Not only that, but Aurokaris is starting to look at you in a new way, and before you can say anything, she happily declares, [aurokaris.speech(Once word gets out of what you've done here, all the Amazons are sure to call you the [pc.hero] of Themiscyra!)]
+		你本能地觉得她的话是对的。在特弥斯库拉，你已经击败了十几个恶魔半人马，不仅成功肃清了这个小镇，还在与恶魔和半人马的战斗中获得了宝贵的经验。不仅如此，奥罗卡利斯也对你刮目相看。还没等你开口，她就高兴地宣告道：[aurokaris.speech(一旦你的事迹传开，所有亚马逊人定会称你为特弥斯库拉的[pc.hero]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RAIDERS_PERK_APPLICATION_END"><![CDATA[
 	<p>
-		Not given a moment in which to celebrate your feat, Aurokaris hurries you on by declaring, [aurokaris.speech(Come on, [pc.name]! We've defeated all the looters, but there's still the main force that's advanced towards the palace. We need to get there and help Ursa as soon as we can!)]
+		奥罗卡利斯无暇庆功，只催促你继续前进，[aurokaris.speech(走吧，[pc.name]！我们击退了所有劫掠者，但敌人主力还在向宫殿进军。我们得尽快赶到那里支援乌萨！)]
 	</p>
 	<p>
-		Understanding her sense of urgency, you agree with what the cow-girl is saying and hurry onwards towards the palace...
+		你理解牛女紧迫的心情，同意她的话，继续向宫殿前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Raiders cleared tile: -->
 
 	<htmlContent tag="RAIDERS_CLEARED"><![CDATA[
 	<p>
-		Having defeated and sent the two demons who were looting this area packing, you and Aurokaris are able to travel down this street without issue. Looking across at the place where the centauresses fell, Aurokaris muses, [aurokaris.speech(It wasn't too hard to beat two of them, but there are plenty more than two at the palace.)]
+		你和奥罗卡利斯打败并赶走了在这片区域劫掠的两个恶魔，这条街道现在畅通无阻。奥罗卡利斯望着半人马倒下的地方喃喃自语，[aurokaris.speech(打败两个不算难，但宫殿里可远远不止两个。)]
 	</p>
 	<p>
-		Telling Aurokaris that you'll be able to deal with all of the centauresses with the help of Ursa and Meraxis, you continue on your way to the palace...
+		你告诉奥罗卡利斯，你有乌萨以及梅拉克西丝协力，一定能击溃所有半人马。你们继续向宫殿前进……
 	</p>
 	<p style='text-align:center;'>
 		<i>[#lunexis.getRaidersClearedString()]</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- For use in dialogue immediately after defeating raiders. -->
 	<htmlContent tag="RAIDERS_CLEARED_PERK_PROGRESS"><![CDATA[
 	<p style='text-align:center;'>
 		<i>[#lunexis.getRaidersClearedString()]</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Teleported back to Elis: -->
 	
 	<htmlContent tag="ELIS_FIGHT"><![CDATA[
 	<p>
-		Trusting that Minotallys knows what she's doing, you [pc.step] back alongside Ursa and Aurokaris, and after making sure that Meraxis is going to be ok, you watch the scene unfold before you.
+		你相信米诺塔莉丝知道自己在做什么，于是[pc.step]退到乌萨和奥罗卡利斯身边，在确认梅拉克西丝不会有事后，你静静看着眼前的好戏。
 	</p>
 	<p>
-		[minotallys.speech(You're a daughter of Lunette, I presume?)] the lilin asks of the demonic centauress.
+		[minotallys.speech(你是露内特的女儿吧，我猜？)]莉琳审问着恶魔半人马。
 	</p>
 	<p>
-		[lunexis.speech(Not just any daughter! I'm Lunexis, you dumb cow!)] Lunexis angrily shouts.
+		[lunexis.speech(我可不是一般的女儿，我是露内克西丝！你这蠢牛！)]露内克西丝生气地大叫起来。
 	</p>
 	<p>
-		Choosing to ignore the insult, Minotallys narrows her eyes and reveals, [minotallys.speech(A short while ago, Amazon refugees started arriving from the north of Elis. They speak of an army of Lunette's daughters, who have brought terror and destruction to Themiscyra. Arion and I were discussing what to do about all of this when the five of you suddenly teleported into my office.)]
+		米诺塔莉丝选择无视这种侮辱，她眯起眼睛，露出了笑容，[minotallys.speech(不久前，亚马逊难民开始从伊利斯北部赶来。他们说露内特的女儿们组成的军队，给特弥斯库拉带来了恐怖和毁灭。阿里昂和我正在讨论如何应对这一切的时候，你们五个突然传送到了我的办公室里。)]
 	</p>
 	<p>
-		[lunexis.speech(You'd better choose your next words carefully, cow,)] Lunexis sneers, [lunexis.speech(I'm a recognised daughter, and so I speak with the authority of Lunette herself! You're to help me beat these Amazons, cow, or else mother will have you enslaved!)]
+		[lunexis.speech(你最好在说话之前动动脑子，母牛！)]露内克西丝嘲讽着，[lunexis.speech(我是被认可的女儿，所以我有露内特的权威！你要帮我打败这些亚马逊人，母牛，否则妈妈会把你变成奴隶的！)]
 	</p>
 	<p>
-		[minotallys.speech(I owe my loyalty to Lilith, not Lunette,)] Minotallys sharply replies, [minotallys.speech(For bringing ruin and chaos to her Realm, I must place you under arrest.)]
+		[minotallys.speech(我忠于莉莉丝，但是不会忠于露内特。)]米诺塔莉丝冷冷地反驳，[minotallys.speech(以在莉莉丝王国境内劫掠和破坏安定的罪名，你被捕了。)]
 	</p>
 	<p>
 		#IF(game.isSillyMode())
-			[lunexis.speech(It's treason then,)] Lunexis states in a sinister voice, before jumping forwards in a wild, spinning attack.
+			[lunexis.speech(这是叛国！)]露内克西丝用阴险的声音说道，然后向前跳起，边做空中转体边对四面八方展开袭击。
 		#ELSE
-			[lunexis.speech(You dare to stand against Lunette?! You'll pay for this!)] Lunexis bellows, before rushing forwards to attack.
+			[lunexis.speech(你胆敢忤逆露内特？你会为此付出代价！)]露内克西丝大吼一声，扑向米诺塔莉丝。
 		#ENDIF
 	</p>
 	<p>
-		Making it seem like the easiest thing in the world, Minotallys demonstrates the power of a lilin by once again using telekinesis to swat Lunexis aside. Using this spell to keep the centauress pinned to the floor, the cow-girl lilin sighs, [minotallys.speech(I had hoped that this was all one big misunderstanding. It seems like I'll have to confront Lunette after all...)]
+		米诺塔莉丝冷眼看着露内克西丝的疯狂举动，施展念动力，轻而易举地将恶魔半人马钉到了墙上。牛女莉琳叹了口气，[minotallys.speech(我以前天真地以为这一切不过是误会，现在看来，我不得不面对露内特了……)]
 	</p>
 	<p>
-		Although quite clearly outmatched and defeated, Lunexis refuses to give up without at least promising to get her revenge, and so with an angry growl, she starts to monologue about what's going to happen to Minotallys and her precious town...
+		虽然明显不是莉琳的对手，但至少精神可嘉的露内克西丝拒绝放弃，即使被钉在墙上，嘴也没软下来，依然嚷嚷着什么要报仇之类的话，她越骂越激动，最后甚至就如何毁掉米诺塔莉丝珍视的小镇发表了一篇长篇大论……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELIS_LISTEN"><![CDATA[
 	<p>
-		Still being held in position by Minotallys's spell, Lunexis grits her teeth and spits, [lunexis.speech(I'll have you as my cock-sleeve once mother finishes with you, cow! Now that we've taken Themiscyra, Elis is next on our list! Mother has been busy helping Lilith with something in a far away land, but she'll return soon, and once she finds out where I am, then she'll lay waste to this pathetic town of yours!)]
+		露内克西丝仍然被米诺塔利丝的咒语固定在原地，她咬紧牙关，吐了一口唾沫，[lunexis.speech(等妈妈处理完你，我就把你当成我的鸡巴套子，母牛！既然我们已经拿下了特弥斯库拉，那伊利斯是我们的下一个目标！母亲一直忙着帮莉莉丝处理远方的事情，但她很快就会回来，一旦她发现我在哪里，她就会毁了你们这个可怜的小镇！)]
 	</p>
 	<p>
-		[minotallys.speech(Lilith would never allow that,)] Minotallys replies, but you can hear from the tone of her voice that she isn't fully confident in her words.
+		[minotallys.speech(莉莉丝不会允许这种事发生。)]米诺塔利丝回答道，但从她的语气中可以听出，她对自己的话并不完全自信。
 	</p>
 	<p>
-		[lunexis.speech(Hahaha! Is that what you think?!)] Lunexis evilly laughs, [lunexis.speech(Mother told me that it was Lilith herself who gave her permission to start laying waste to the Foloi Fields! So long as the population is kept under control, she doesn't give a shit about what happens out here!)]
+		[lunexis.speech(哈哈哈！你还抱有希望？)]露内克西丝邪恶地大笑起来，[lunexis.speech(妈妈告诉我，是莉莉丝亲自允许她开始在弗洛伊田野大肆破坏的！只要能控制住人口，她才不管这里发生了什么呢！)]
 	</p>
 	<p>
-		Upon hearing this, Minotallys, who up until now had done a good job of staying calm, shouts, [minotallys.speech(Lilith would never do that! You're to [style.glowArcane(tell the truth)], you wicked creature!)]
+		听到这个消息，之前一直表现得很镇定的米诺塔利丝大声喊道，[minotallys.speech(莉莉丝绝不会这样做！你最好[style.glowArcane(如实招来)]，卑鄙的家伙！)]
 	</p>
 	<p>
-		Although she's a recognised daughter of Lunette, Lunexis doesn't possess the ability to resist the effects of the 'Lilith's Command' spell. With an evil grin still on her face, Lunexis truthfully reveals, [lunexis.speech(All I've said is true, you stupid cow! Lunette will burn this town to the ground, and Lilith won't lift a finger to stop it!)] 
+		虽然她是受认可的露内特之女，但露内克西丝并不具备抵御“莉莉丝之律令”法术效果的能力。露内克西丝脸上依然挂着邪恶的笑容，如实地说道，[lunexis.speech(我说的都是真的，你这头蠢母牛！就算露内特把这个镇子烧成灰，莉莉丝也不会阻止的！)] 
 	</p>
 	<p>
-		Upon hearing these words, Minotallys's shoulders drop, and she sinks down into her chair with a look of despair on her face. With this, the lilin stops using telekinesis to restrain Lunexis, but thankfully Ursa and Aurokaris dash forwards to tackle the centauress and keep her restrained. Dropping her head into her hands, the lilin mayor sighs, [minotallys.speech(It's all hopeless then... Lilith never cared about me or this town... There's no point in any of this...)]
+		听到这些话，米诺塔莉丝的肩膀垂了下来，一脸绝望地瘫倒在椅子上。就这样，莉琳停止了使用念动力来束缚露内克西丝，幸好乌萨和奥罗卡利斯冲上前去，抓住了半人马，并继续束缚着她。莉琳镇长垂头丧气地喃喃自语，[minotallys.speech(那，没有希望了……莉莉丝从没关心过我和这个小镇……我所做的一切都毫无意义……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELIS_REASSURE"><![CDATA[
 	<p>
-		Sensing that you might be about to lose a powerful ally to aid you in your inevitable fight against Lunette, you [pc.step] forwards and try to think of the right words to snap Minotallys out of her depression. However, before you can say anything, Arion, who up until now had been silently standing behind Minotallys, steps up to the lilin and asks in a firm voice, [arion.speech(So you didn't want to be mayor to help make this town better? You were just doing it for Lilith?)]
+		你感觉到自己可能会失去一个强大的盟友，来帮助你对抗露内特，于是你[pc.step]向前走去，试着想出合适的话来让米诺塔莉丝从沮丧中振作起来。然而，还没等你开口，一直默默站在米诺塔莉丝身后的阿里昂走到她面前，用坚定的声音问道，[arion.speech(所以你当镇长，并不是为了改善这个小镇？你只是为了效忠于莉莉丝吗？)]
 	</p>
 	<p>
-		[minotallys.speech(What?)] Minotallys replies in a shocked tone, [minotallys.speech(No, you know that I love Elis. I was just-)]
+		[minotallys.speech(什么？)]米诺塔莉丝震惊地说，[minotallys.speech(当然不是，我爱伊利斯镇，我只是——)]
 	</p>
 	<p>
-		[arion.speech(You're just going to give up and let your home be destroyed?)] the unicorn-boy interrupts.
+		[arion.speech(你只是打算放弃，然后让我们的小镇被焚烧成一片废墟？)]天角兽男打断了她的反驳。
 	</p>
 	<p>
-		[minotallys.speech(That's not what I meant!)] the lilin retorts as she sits up in her chair. Turning to face her assistant, she frowns and continues, [minotallys.speech(You know how much Lilith means to me. I just can't believe that she'd let Lunette do this...)]
+		[minotallys.speech(我不是那个意思！)]她从椅子上坐起来，反驳道。她转过身面对助手，皱着眉头继续说道，[minotallys.speech(你知道莉莉丝对我有多重要，我真不敢相信，她会让露内特这么做……)]
 	</p>
 	<p>
-		[ursa.speech(Well, she has!)] Ursa declares from the other side of the room. After pausing for a moment as Aurokaris cuts in to formally introduce the queen of the Amazons to Minotallys, the bear-girl pragmatically states, [ursa.speech(You can decide what to think about Lilith another time. The fact is that Lunette will be coming here. When she arrives, you need to be ready for her, or else this town will suffer the same fate as my dear Themiscyra. Don't let our sacrifice be in vain. You have some time. Use it wisely.)]
+		[ursa.speech(她已经做过了。)]乌萨在房间的另一侧说着。奥罗卡利斯插话向米诺塔利丝正式介绍亚马逊女王，熊女停顿了片刻，然后实事求是地说道，[ursa.speech(你可以下次再决定怎么看待莉莉丝。事实是，露内特会来到这里。她来的时候，你们要做好准备，否则这个镇子就会遭受和我亲爱的特弥斯库拉一样的命运……前车之覆，后车之鉴，亚马逊人已经失去了家园，而你们还有时间。)]
 	</p>
 	<p>
-		Snapped out of her melancholy by Arion's and Ursa's words, Minotallys takes a deep breath, before letting out a long sigh and then stating, [minotallys.speech(I'll do my best, but I'm going to need some help...)]
+		听了阿里昂和乌萨的话，米诺塔莉丝被从惆怅中惊醒，她深吸一口气，长叹一声，[minotallys.speech(我将尽我所能，但我还需要帮助……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELIS_HELP"><![CDATA[
 	<p>
-		Realising that it's once again going to fall to you to get things done, you tell Minotallys that you'll help in any way you can. Having only partially recovered from teleporting five people at once, Meraxis wearily calls out from the other side of the room, [meraxis.speech(I'll help too...)]
+		你意识到你又该接新任务了，于是告诉米诺塔利丝你会尽力帮忙。房间的另一边，被传送五个人的法术榨干的梅拉克西丝瘫在地上，用半死不活的声音说着，[meraxis.speech(我也会帮忙的……)]
 	</p>
 	<p>
-		[ursa.speech(I'll do what I can when the time is right, but my responsibilities as queen of the Amazons come first,)] Ursa states in her deep voice, while continuing to keep Lunexis restrained along with Aurokaris.
+		[ursa.speech(时机成熟时我会尽力而为，但我作为亚马逊女王的责任是第一位的。)]乌萨用低沉的嗓音说道，同时继续和奥罗卡利斯一起按住露内克西丝。
 	</p>
 	<p>
-		[arion.speech(The refugees from Themiscyra are still arriving,)] Arion says to the queen, before apologising, [arion.speech(I'm sorry, but there's no more room within Elis's walls to house you all. Minotallys granted permission for the first arrivals to set up a camp outside the walls, and so you'll find your people a short distance to the west of the town.)]
+		[arion.speech(来自特弥斯库拉的难民还在陆续抵达，)]阿里昂对女王说完之后，向她道歉，[arion.speech(很抱歉，伊利斯城墙内已经没有地方容纳你们了。米诺塔利丝允许第一批抵达者在城墙外扎营，所以你们会在城镇西面不远处找到你们的族人。)]
 	</p>
 	<p>
-		[lunexis.speech(This is pathetic!)] Lunexis shouts, [lunexis.speech(You stand no chance against an elder lilin! Surrender now, and I'll allow you all to become my cock-sleeves! Trust me, that'll be a lot better than what mother will have in store for you!)]
+		[lunexis.speech(可怜虫！)]露内克西丝大叫着，[lunexis.speech(你们根本不可能战胜一个莉琳长老，现在投降，仁慈的我就让你们都成为我的鸡巴套子！相信我，等到妈妈来收拾你们的时候，你们可就没这么好运了！)]
 	</p>
 	<p>
-		[ursa.speech(I've heard enough,)] Ursa growls at the centauress, before addressing Minotallys by offering, [ursa.speech(I can keep this one gagged and chained in our camp, so that you don't have to endure any more of her ranting.)]
+		[ursa.speech(你来回就这么几句，大家都听烦了。)]乌萨对着半人马咆哮，然后向米诺塔利丝发出邀请，[ursa.speech(我可以把她的嘴堵上，拴在我们的营地里，这样你就不用听这家伙乱叫了。)]
 	</p>
 	<p>
-		[arion.speech(That might be for the best,)] Arion advises, [arion.speech(The Amazons' camp will be the most secure place for Lunexis to be held, and we want as few people to know of Lunexis's location as possible. Keeping her within the town would inevitably result in word getting out of her whereabouts, and I'm sure that Lunette would prematurely end her business and come running if she were to learn that her recognised daughter is being held captive.)]
+		[arion.speech(那再好不过，)]阿里昂附和着，[arion.speech(亚马逊人的营地将是关押露内克西丝最安全的地方，我们希望这家伙的下落尽可能不被人知道。如果把她关在镇子里，她的行踪就会不可避免地泄露出去，而且我敢肯定，如果露内特知道她承认的女儿被俘虏了，她一定会提前结束她手头的其他事情，然后跑过来折腾我们。)]
 	</p>
 	<p>
-		Nodding in agreement, Minotallys presses a button on the underside of her desk, which causes a section of wall to quietly slide aside, revealing the top of a narrow, spiral staircase. Gesturing to this secret passage, the lilin says, [minotallys.speech(Arion is right; we don't want anybody to know that Lunexis is in captivity here at Elis, so you can use this route to leave the town without being seen. You'll come out on the other side of the wall to the north, so you'll have to find your way from there to your camp.)]
+		米诺塔莉丝点了点头表示同意，她按下了桌子下面的一个按钮，这使得一段墙壁悄无声息地滑到了一边，露出了一个狭窄的螺旋楼梯。指着这条秘密通道，莉琳说道，[minotallys.speech(阿里昂说得没错，我们不想让任何人知道露内克西丝被囚禁在伊利斯，所以你可以走这条路离开小镇，这样就能不被人发现。你们会从北面城墙的另一边出来，所以你们必须找到从那里到营地的路。)]
 	</p>
 	<p>
-		[lunexis.speech(Do you really think that I'll fit through there?!)] Lunexis objects as she sees how narrow the passageway is.
+		[lunexis.speech(进不去，怎么想都进不去吧！)]露内克西丝看着这狭窄的楼梯口，拼命摇着头。
 	</p>
 	<p>
-		Slapping Lunexis's flank, Ursa growls, [ursa.speech(Don't you worry about it, we'll get you to fit.)]
+		乌萨从侧面拍了拍露内克西丝，然后低声咆哮道，[ursa.speech(轮不上你来担心这个，我们会把你弄进去的。)]
 	</p>
 	<p>
-		With that, the two Amazons show off their strength by manhandling the huge centauress into the passage with surprising ease. Ignoring the demon's insults and threats of retribution, they begin their descent, but not before Ursa has turned to look at you and say, [ursa.speech(You have my thanks for your timely arrival back in the plaza. Come and see me at our camp if ever you need anything.)]
+		就这样，两个亚马逊人展示了她们的力量，以惊人的速度将巨大的半人马拖进了通道。她们无视恶魔的辱骂和报复威胁，开始下楼梯，但在此之前，乌萨转过身来看着你说，[ursa.speech(感谢你及时到广场，祝亚马逊人一臂之力。如果你还需要什么，就来我们的营地找我。)]
 	</p>
 	<p>
-		With that, Lunexis, Ursa, and Aurokaris disappear down the spiral staircase, leaving you, Meraxis, Minotallys, and Arion to take care of the planning for Lunette's arrival...
+		就这样，露内克西丝，乌萨和奥罗卡利斯从旋转楼梯上消失了，屋里只剩下你、梅拉克西丝、米诺塔利丝和阿里昂，你们研究起该如何为露内特的到来做好防备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELIS_PREPARATIONS"><![CDATA[
 	<p>
-		Now that the issue of what to do with Lunexis has been dealt with, you ask Minotallys and Arion what kind of preparations could be made to get Elis as ready as possible for the battle against Lunette.
+		既然已经解决了如何处置露内克西丝的问题，你便问米诺塔利丝和阿里昂可以做哪些准备工作，让伊利斯尽可能做好与露内特战斗的准备。
 	</p>
 	<p>
-		Clearly not having the head for this kind of thing, Minotallys looks up at Arion for guidance. Taking a moment in which to think, the unicorn-boy suggests, [arion.speech(We should probably get help from some professionals. We just so happen to have some extremely experienced Enforcers here in Elis who'll know a thing or two about fighting and, if it gets to that stage, about being under siege.)]
+		米诺塔利丝显然还没什么主意，她抬头看向阿里昂。天角兽男想了一会儿，建议说，[arion.speech(我们应该找专业人士帮忙，伊利斯正好有一些经验丰富的执法者，他们对战斗和围城战都很有经验。)]
 	</p>
 	<p>
-		Catching on to what Arion means, the cow-girl lilin asks, [minotallys.speech(Oh, do you mean that SWORD unit which was sent here about five years ago?)]
+		牛女莉琳意会到了天角兽男的所指，问道，[minotallys.speech(你是想说那支SWORD吗？五年前被送到这里的那支队伍？)]
 	</p>
 	<p>
-		[arion.speech(That's right,)] Arion replies, before explaining to you, [arion.speech(The Enforcers we're talking about saw a lot of action during the Fifth Human Rebellion back in the late eighties. Yes, before you ask, that does mean that they're at retirement age, but as far as I know there's nobody else in town with anywhere near as much real combat experience. Also, from what I remember when I read their records, they've gone up against high-ranking demons and even lilin in the past. We can trust them.)]
+		[arion.speech(没错。)]阿里昂点头，然后转过头和你解释，[arion.speech(我们所说的执法者在八十年代末的第五次人类叛乱中参加过很多行动。是的，我知道你想问什么，这确实意味着他们已经到了退休年龄，但据我所知，镇上没有其他人有如此丰富的实战经验。而且，我看过他们的记录，他们过去曾对抗过高级恶魔，甚至是莉琳。我们可以信任他们。)]
 	</p>
 	<p>
-		[meraxis.speech(If they're so good, why aren't they working in Dominion? That's where all the top Enforcers end up,)] Meraxis asks in a weak voice.
+		[meraxis.speech(如果他们这么厉害，为什么不在御城区工作？那里是所有顶尖执法者的归宿。)]梅拉克西丝虚弱地问道。
 	</p>
 	<p>
-		[minotallys.speech(Politics,)] Minotallys explains in a single word. Waving her hand in a gesture to imply that she finds such things tiresome, she goes on to reveal, [minotallys.speech(They got on the wrong side of an elder lilin, and as they couldn't be dealt with by other means without a terrible scandal, they were demoted and assigned here to Elis.)]
+		[minotallys.speech(政治，)]米诺塔莉丝用一个词解释道。她摆摆手，示意自己觉得这类事情很烦人，接着透露道：[minotallys.speech(他们得罪了一位年长的莉莉姆，可要用别的手段处置他们，又免不了闹出骇人的丑闻，于是他们被降职，调派到了伊利斯这里。)]
 	</p>
 	<p>
-		[meraxis.speech(So we need to get the help of these Enforcers, then they can advise us on how to defend this town against Lunette?)] Meraxis asks.
+		[meraxis.speech(所以我们需要得到这些执法者的帮助，然后他们就能建议我们如何抵御露内特？)]梅拉克西丝问。
 	</p>
 	<p>
-		[arion.speech(I think that's our best bet,)] Arion replies. Looking at you, he asks, [arion.speech(Can we ask you to do this, [pc.name]? Minotallys and I have much to do for the Amazons. They need water, food, and medical assistance, and we've got to get all of that organised as quickly as possible. I'd ask Meraxis to help too, but it looks like she's about to faint.)]
+		[arion.speech(我认为这是最佳选项。)]阿里昂回答，他看了看你，问道，[arion.speech(我们能请你做这件事吗，[pc.name]？米诺塔利丝和我要为亚马逊难民们做很多事。他们需要水、食物和医疗援助，我们必须尽快组织起来。我也想请梅拉克西丝帮忙，但她好像快晕倒了。)]
 	</p>
 	<p>
-		Looking over at the [meraxis.race], you see that Arion is right. Her skin is looking alarmingly pale, her eyelids keep drooping, and she's swaying from side to side as she tries her best to remain standing. After quickly agreeing to take on the task of heading over to Elis's Enforcer station and recruiting the assistance of these Enforcer veterans, you tell Meraxis that she needs to head back to The Red Dragon and get some rest.
+		你看了看[meraxis.race]，发现阿里昂说的没错。她的皮肤看起来苍白得令人吃惊，眼皮不停地下垂，身体左右摇摆，竭力保持站立。你很快就同意承担前往伊利斯执法局的任务，并请求这些执法者老兵的协助，然后你告诉梅拉克西丝，她需要回红龙酒馆休息一下。
 	</p>
 	<p>
-		[meraxis.speech(I'm the most powerful demon ever to exist,)] she mumbles, [meraxis.speech(but I have no energy... Don't take this as a sign of weakness, my rival, but can you please help me down the stairs?)]
+		[meraxis.speech(我是这世上最强大的恶魔！)]她嘟囔着，[meraxis.speech(我只是现在没力气了……别以为我在示弱，我的对手！还有，扶我下楼好吗？谢谢你……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELIS_PREPARATIONS_END"><![CDATA[
 	<p>
-		Needing Meraxis back at full strength as quickly as possible, you tell Minotallys and Arion that you'll get the Enforcer's help as quickly as possible, before helping the chuuni [meraxis.race] out of the office and down the stairs.
+		你告诉米诺塔利丝和阿里昂，你会尽快得到执行者的帮助，然后扶着这个中二病[meraxis.race]走出办公室，走下楼梯。
 	</p>
 	<p>
-		[meraxis.speech(I command you to forget about this,)] Meraxis weakly orders as you continue to support her all the way to the town hall's exit. Accepting your help in the relative privacy of the town hall was one thing, but as you [pc.step] out into the streets of Elis, Meraxis blushes and weakly pushes you away, before mumbling, [meraxis.speech(This repays your debt to me for saving you back there in Themiscyra... I can make it back to the tavern by myself now... I'll catch up with you later...)]
+		[meraxis.speech(回去就把这个忘掉，忘掉，忘掉！)]你一路把梅拉克西丝搀扶到市镇议会的出口，她虚弱地念叨着些什么东西。在相对私密的市镇议会厅里接受你的帮助时她还比较自在，但当你[pc.step]走到伊利斯的街道上时，梅拉克西丝脸红了，她无力地试图推开你，然后喃喃自语，[meraxis.speech(这抵了我在特弥斯库拉救你一命的人情……我自己能回旅店的……过后再去找你算账……)]
 	</p>
 	<p>
-		Knowing that her pride won't allow her to accept any more of your assistance, you watch Meraxis walk off in the direction of The Red Dragon, before wondering what to do next...
+		你知道她的自尊心不允许她再接受你的协助，于是你看着梅拉克西丝向红龙酒馆的方向走去，然后思考下一步该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

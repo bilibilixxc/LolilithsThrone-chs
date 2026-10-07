@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>100000000</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Innoxia's Gift]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Innoxia's Gifts]]></namePlural>
-		<description><![CDATA[Once thought to be lost forever, this bottle of bubbling pink liquid has made a surprise return, and can turn anyone who drinks it into a demon!<br/>[style.italicsMinorGood(While this is a debug-only item, it should be safe to use anywhere.)]]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[Innoxia的赠礼]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[Innoxia的赠礼]]></namePlural>
+		<description><![CDATA[这个瓶子起初被认为永远失踪了，但现在以意外的方式回来了，能够将任何喝下它的人变成恶魔！<br/>[style.italicsMinorGood(虽然这只是一个调试用的物品，但它应该可以在任何地方安全使用。)]]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>LEGENDARY</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/demon/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/demon/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="-15" imageSize="80">demon_innoxias_gift.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,30 +25,30 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[demonic]]></potionDescriptor>
+		<potionDescriptor><![CDATA[恶魔]]></potionDescriptor>
 		<associatedRace>DEMON</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldBad(Does not affect unique characters or dolls)]]]></line>
-			<line><![CDATA[[style.boldTfGeneric(Transforms)] non-demons into [style.boldDemon(half-demons)]]]></line>
-			<line><![CDATA[[style.boldTfGeneric(Transforms)] half-demons into [style.boldDemon(demons)]]]></line>
+			<line><![CDATA[[style.boldBad(无法影响特殊角色或玩偶)]]]></line>
+			<line><![CDATA[将非恶魔[style.boldTfGeneric(转化)]为[style.boldDemon(半恶魔)]]]></line>
+			<line><![CDATA[将半恶魔[style.boldTfGeneric(转化)]为[style.boldDemon(恶魔)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p style='text-align:center'>
 			#IF(npc.isDoll())
-				[style.italicsDisabled(This item does not work on dolls...)]
+				[style.italicsDisabled(此物品对玩偶来说不起作用……)]
 			#ELSEIF(!npc.isPlayer() && npc.isUnique() && (!npc.isSlave() || npc.getOwner().isPlayer()))
-				[style.italicsDisabled(This item does not work on non-slave unique characters...)]
+				[style.italicsDisabled(此物品不适用于非奴隶的特定角色……)]
 			#ELSEIF(npc.getSubspeciesOverride()==SUBSPECIES_HALF_DEMON)
 				[##npc.setBody(npc.getGender(), SUBSPECIES_DEMON, RACE_STAGE_GREATER, false)]
 				[##npc.setSubspeciesOverride(SUBSPECIES_DEMON)]
-				[style.italicsDemon([npc.NameIsFull] now [npc.a_race]!)]
+				[style.italicsDemon([npc.NameIsFull]现在是[npc.a_race]！)]
 			#ELSE
 				[##npc.setBody(game.getCharacterUtils().generateHalfDemonBody(npc, npc.getGender(), npc.getBody().getFleshSubspecies(), true), false)]
-				[style.italicsDemon([npc.NameIsFull] now [npc.a_race]!)]
+				[style.italicsDemon([npc.NameIsFull]现在是[npc.a_race]！)]
 			#ENDIF
 		</p>
 		]]></applyEffects>
@@ -61,10 +61,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		The moment [npc.name] [npc.verb(pull)] the stopper out from the bottle of Innoxia's Gift, [npc.sheIs] filled with a desperate need to drink the bubbling pink liquid contained within. Instantly, [npc.she] [npc.verb(bring)] the bottle to [npc.her] [npc.lips] and [npc.verb(gulp)] it all down, suppressing [npc.her] gag reflex as [npc.her] senses are overwhelmed by how sickeningly sweet it is.
+		当[npc.name]拔掉Innoxia的赠礼瓶子的塞子时，[npc.sheIs]充满了迫切需要喝掉其中的冒泡粉红色液体的欲望。瞬间，[npc.she]将瓶子送到[npc.her][npc.lips]前，将其全部灌下并压制住了呕吐反射，因为[npc.her]的感官被那刺激的甜味所淹没。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Pulling out the stopper from the bottle of Innoxia's Gift, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips]. Instantly, [npc2.she] [npc2.verb(gulp)] it all down, suppressing [npc2.her] gag reflex as [npc2.her] senses are overwhelmed by how sickeningly sweet it is.
+		拔出Innoxia的礼物瓶子的塞子后，[npc.name]将它送到[npc2.namePos]等待[npc2.lips]前。瞬间，[npc2.she]将其全部灌下并压制住了呕吐反射，因为[npc2.her]的感官被那刺激的甜味所淹没。
 		]]></otherUse>
 	</useDescriptions>
 

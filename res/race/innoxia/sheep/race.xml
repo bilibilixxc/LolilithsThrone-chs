@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_sheep</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[sheep-morph]]></name>
-	<namePlural><![CDATA[sheep-morphs]]></namePlural>
+	<name><![CDATA[绵羊化形]]></name>
+	<namePlural><![CDATA[绵羊化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[sheep]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[绵羊]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[sheep]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[绵羊]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[sheep]]></defaultTransformName>
+	<defaultTransformName><![CDATA[绵羊]]></defaultTransformName>
 	
 	<colour>innoxia_sheep</colour>
 	

@@ -14,15 +14,15 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Femininity {
 	
-	MASCULINE_STRONG(Util.newArrayListOfValues("very masculine", "manly"), 0, 19, PresetColour.MASCULINE_PLUS, PresetColour.MASCULINE_PLUS_NPC),
+	MASCULINE_STRONG(Util.newArrayListOfValues("尽显男性风度", "十分阳刚"), 0, 19, PresetColour.MASCULINE_PLUS, PresetColour.MASCULINE_PLUS_NPC),
 	
-	MASCULINE(Util.newArrayListOfValues("masculine", "boyish"), 20, 39, PresetColour.MASCULINE, PresetColour.MASCULINE_NPC),
+	MASCULINE(Util.newArrayListOfValues("略带男性风度", "充满男子气"), 20, 39, PresetColour.MASCULINE, PresetColour.MASCULINE_NPC),
 	
-	ANDROGYNOUS(Util.newArrayListOfValues("androgynous"), 40, 59, PresetColour.ANDROGYNOUS, PresetColour.ANDROGYNOUS_NPC),
+	ANDROGYNOUS(Util.newArrayListOfValues("十分中性"), 40, 59, PresetColour.ANDROGYNOUS, PresetColour.ANDROGYNOUS_NPC),
 	
-	FEMININE(Util.newArrayListOfValues("feminine", "girly"), 60, 79, PresetColour.FEMININE, PresetColour.FEMININE_NPC),
+	FEMININE(Util.newArrayListOfValues("略有女性韵味", "充满女子气"), 60, 79, PresetColour.FEMININE, PresetColour.FEMININE_NPC),
 	
-	FEMININE_STRONG(Util.newArrayListOfValues("very feminine", "womanly"), 80, 100, PresetColour.FEMININE_PLUS, PresetColour.FEMININE_PLUS_NPC);
+	FEMININE_STRONG(Util.newArrayListOfValues("充满女性韵味", "十分阴柔"), 80, 100, PresetColour.FEMININE_PLUS, PresetColour.FEMININE_PLUS_NPC);
 
 	private List<String> names;
 	private int minimumFemininity;
@@ -42,7 +42,7 @@ public enum Femininity {
 		String name = Util.randomItemFrom(names);
 		
 		if(withDeterminer) {
-			return UtilText.generateSingularDeterminer(name)+" "+name;
+			return UtilText.generateSingularDeterminer(name)+name;
 		} else {
 			return name;
 		}

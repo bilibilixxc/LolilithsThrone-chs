@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Look in the mods folder for a commented version of this. -->
 <outfit>
 	<coreAttributes>
-		<name><![CDATA[generic clubber (masculine)]]></name>
+		<name><![CDATA[一般夜店成员(男性化)]]></name>
 		
-		<description><![CDATA[Masculine clubbing clothing.]]></description>
+		<description><![CDATA[男式泡吧衣物]]></description>
 		
 		<femininity>MASCULINE</femininity>
 		

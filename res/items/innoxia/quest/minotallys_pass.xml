@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>1000</value> 
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[Elis Town Hall Pass]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Elis Town Hall Passes]]></namePlural>
-		<description><![CDATA[A plastic card which grants the holder access to the tower of Elis's town hall.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[伊利斯市镇议会通行证]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[伊利斯市镇议会通行证]]></namePlural>
+		<description><![CDATA[一张塑料制的卡片，用于进入伊利斯的市镇议会。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,12 +23,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.colourGood(Grants access)] to Elis's town hall's tower]]></line>
+			<line><![CDATA[[style.colourGood(授予访问权限)]到伊利斯市镇议会]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			Signed by Minotally's personal assistant, Arion, this pass carries a 'gold' level clearance, which, due to the fact that it grants you unrestricted access to Minotallys herself, you assume to be the highest level of clearance there is.
+			这张通行证由米诺塔利丝的私人助理阿里昂签署，具有“金色”级别的通行权限。由于这让你能无限制地接近米诺塔利丝本人，因此你假定它拥有着最高级别的通行权限。
 		</p>
 		]]></applyEffects>
 		
@@ -38,11 +38,11 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the pass...
+		[npc.Name]仔细观察这份通行证……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off [npc.her] pass to [npc2.name], who is duly impressed by [npc.her] possession of it...
-		]]></otherUse>
+		[npc.Name]向[npc2.name]炫耀着她的通行证，而[npc2.name]对[npc.her]的证件感到印象深刻……
+	]]></otherUse>
 	</useDescriptions>
 
 	

@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- All of these are linked to the 'dialogue/innoxia/places/fields/elis/town_hall_f1.xml' dialogue nodes. -->
 	
 	<htmlContent tag="ASSISTANT_ROOM"><![CDATA[
 	<p>
-		Needing to be available for Minotallys at all times of the day or night, Arion has had his living quarters relocated to the room next to hers. A sign on the door informs you of this fact, as it simply reads: 'Arion; Minotallys's Assistant - Private!'
+		为了可以随时为米诺塔莉丝服务，阿里昂搬到了她隔壁。门牌上面简单地写着：“阿里昂；米诺塔莉丝私人助手！”
 	</p>
 	<p>
 		#IF(game.getCharactersPresent().contains(arion))
-			With Minotallys's office being closed at this time of day, you're sure that Arion must be inside his room. Without any serious reason to do so, you don't think that it'd be a good idea to disturb his rest...
+			米诺塔莉丝办公室已经关门了，你肯定阿里昂一定在他的房间里。在没有任何正当理由的情况下，你认为打扰他休息不是个好主意……
 		#ELSE
-			With Minotallys's office being open at this time of day, you know that Arion isn't inside his room at the moment. If you wanted to speak with him, you should [pc.step] over to Minotallys's office...
+			米诺塔莉丝的办公室开放中，现在阿里昂不在他的房间里。如果你想和他说话，你应该[pc.step]到米诺塔莉丝的办公室……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		This landing surrounds the tower's central staircase, and separates it from the rooms which are located on all four sides. The slightly-uneven wooden floorboards, along with the exposed wooden beams which hold up the high ceiling, give the impression that this is a very old structure. Hanging from the walls, there are large, painted portraits of Minotallys, who takes the form of a greater cow-girl. What draws your attention to these portraits is that her white, cow-like fur has differently-coloured spots in each of them, ranging from the typical black and brown to exotic shades of pink, green, yellow, purple, and blue.
+		这个平台环绕在中央楼梯，将塔楼与四周的房间隔开。粗糙的木地板，加上支撑天花板的裸露木梁，这建筑透露出沧桑古老。墙壁上悬挂米诺塔莉丝的巨幅彩绘肖像，她是一个身材高大的女牛仔。这画像最吸引人的地方，在于她像牛一样的白皮毛上有不同颜色的斑点，黑色交杂棕色，还有粉红色、绿色、黄色、紫色和蓝色等奇异的颜色。
 	</p>
 	<p>
-		The two demonic Enforcers standing guard at the top of the stairs keep a close eye on you as you [pc.walk] around this landing...
+		当你[pc.walk]过这个平台时，守卫在楼梯顶端的两名恶魔执法者密切地监视着你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Office, with entry and talking: -->
@@ -33,197 +33,197 @@
 	<htmlContent tag="MINOTALLYS_OFFICE"><![CDATA[
 	#IF(game.getCharactersPresent().contains(minotallys))
 		<p>
-			The door before you leads into Minotallys's office, and thanks to the fact that it's been propped open, you can look inside and see that the lilin is sitting at her desk. Busily reading over a mountain of paperwork, she hasn't noticed you standing at the entrance to her office, although this isn't the case for her ever-present assistant, Arion, who looks over at you with a questioning expression on his face.
+			你面前这扇门通向米诺塔莉丝的办公室，向内看去可以看到莉琳正坐在她的办公桌前，忙着阅读堆积如山的文件，并没有注意到你站在门口。不过她的助手阿里昂不同，他正一脸疑问地看向你。
 		</p>
 		<p>
-			If you wanted to get Minotallys's attention, you could knock on the door and ask for a moment of her time...
+			如果你想引起米诺塔莉丝的注意，你可以敲敲门，占用她一点时间……
 		</p>
 	#ELSE
 		<p>
-			Having finished work for the day, both Minotallys and Arion have retired to their respective rooms, leaving the door to the office before you securely closed and locked.
+			结束了一天的工作后，米诺塔莉丝和阿里昂都回到了各自的房间，你面前的办公室门也被牢牢锁上了。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_OFFICE_START"><![CDATA[
 	<p>
-		Wanting to spend some time talking with Minotallys, you knock on the door to her office, which causes the lilin to look up from her paperwork. Flashing you a smile, she leans back in her chair and calls out, [minotallys.speech([pc.Name]! Please, come on in!)]
+		你想和米诺塔莉丝多聊一会儿，于是敲了敲她办公室的门，她这才从文件中抬起头来，靠在椅子上向你微笑，并喊道，[minotallys.speech([pc.Name]！请进！)]
 	</p>
 	<p>
-		Doing as you're instructed, you [pc.step] forwards and take a quick look around at your surroundings. Underfoot, a lush, cream-coloured rug covers most of the polished, mahogany floorboards, while on all four sides of the room, a series of colourful, abstract paintings have been hung on the smooth, white walls. Overhead, brushed-steel lights hang down between the ceiling's high beams to cast a natural shade of light over the interior. Several mahogany bookshelves have been placed on either side of the room, and have been stacked full of rare and exotic-looking tomes, trinkets, and pieces of artwork.
+		按她所说，你[pc.step]向前，快速环顾了下房间。脚下的乳白色毛毯覆盖了大部分光亮的桃花心木地板，一系列色彩鲜艳的抽象画，挂在四周平滑的白色墙壁上。而在头顶上，刷过色的钢制灯悬挂在天花板的高横梁之间，为室内投下一道自然的光影。几排桃花心木书架分别放在房间的两边，上面堆满了稀有和充满异国情调的书籍、小饰品和艺术品。
 	</p>
 	<p>
-		Sitting behind her large, mahogany desk, which is almost completely covered in piles of paperwork, the cow-girl lilin has her back to the wide window that overlooks the streets of Elis. Appearing almost exactly as she did in her series of portraits, Minotallys has taken the appearance of a greater cow-girl, and is covered in white fur with [minotallys.skinColourSecondary(true)] spots. Her hair, which is styled into a bobcut, is of a similar shade of [minotallys.skinColourSecondary] as her spots, while growing out from the sides of her forehead she has a pair of small, white horns. As you approach her desk, the lilin locks her golden eyes onto yours and asks in a husky tone, [minotallys.speech(Are you here for some milk? It's [minotallys.milkFlavour]-flavoured today...)]
+		牛女莉琳正坐在她堆满了文件的桃花心木书桌后，背对着那扇可透过其俯瞰伊利斯街道的宽阔窗户。米诺塔莉丝的外貌几乎与她在系列肖像画中的一模一样，她看上去比一般牛女体型更大，全身覆盖着带有[minotallys.skinColourSecondary(true)]斑点的白色皮毛。她梳着波波头，发色类似其斑点的颜色，额头两侧长有一对白色的小角。当你走近办公桌时，她那金色的眼睛盯着你，语调沙哑地问道：[minotallys.speech(你想来些牛奶吗？今天是[minotallys.milkFlavour]味的……)]
 	</p>
 	<p>
-		Knowing that this milk will have been squeezed fresh from the lilin's breasts, you wonder whether to accept her offer or to change the subject to something else...
+		你知道这些牛奶是从莉琳的乳房里挤出来的，因此你不清楚是该接受她的提议，还是换个话题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_OFFICE_TALK_HISTORY"><![CDATA[
 	<p>
-		Wanting to find out how Minotallys came to be the mayor of Elis, you ask her about her history and what led to her being in charge of this town.
+		你想知道米诺塔莉丝是如何成为伊利斯的镇长的，于是你向她询问她的过去，以及她掌管这的原因。
 	</p>
 	<p>
-		[minotallys.speech(Oh, well, I've been here since almost the very start of Elis's existence,)] she replies, [minotallys.speech(Of course, I wasn't a lilin back then, all those years ago...)]
+		[minotallys.speech(哦，好吧，我几乎从伊利斯诞生之初就在这了，)]她回答道，[minotallys.speech(当年，我还不是莉琳……)]
 	</p>
 	<p>
-		Sensing that Minotallys is starting to drift off into thoughts of her own, Arion adds, [arion.speech(Minotallys was transformed into a lilin by Lilith herself, which makes her the most eligible candidate to act as the town's mayor.)]
+		察觉到米诺塔莉丝开始沉浸在自己的思绪中，阿里昂接过话，[arion.speech(是莉莉丝亲手将米诺塔莉丝变为莉琳的，因此她是最有资格担任镇长的人。)]
 	</p>
 	<p>
-		[minotallys.speech(That's right,)] Minotallys says, having been snapped out of her daydreaming by the mention of Lilith's name. Holding her head up, she proudly states, [minotallys.speech(I'd worked hard to help set up trade with the Youko, and thanks to my efforts, Elis was soon on the map as an important trading hub. This attracted the attention of some rebels, who sought to attack Elis as a way of striking at Lilith's power. I rallied the citizens and managed to hold the rebels off for several days, after which Lilith herself recognised my loyalty and transformed me into a lilin. I also got to keep a lot of the rebels who were enslaved after that, and I had them work to help build this very town hall!)]
+		[minotallys.speech(是这样。)]米诺塔莉丝说，莉莉丝的名字让她从思绪中清醒过来。她抬起头自豪地说道，[minotallys.speech(我致力于与妖狐建立贸易往来，在我的努力下，伊利斯很快成为了一个重要的贸易枢纽。这引起了一些叛军的注意，他们试图进攻伊利斯，以此来打击莉莉丝的势力。我召集了市民，成功地阻挡了叛军数日，之后莉莉丝承认了我的忠诚，并将我变为莉琳。在那之后，我还留住了许多被奴役的叛军，让他们帮助建造了这座市镇议会！)]
 	</p>
 	<p>
-		[arion.speech(Minotallys is very popular among the citizens,)] Arion adds, [arion.speech(We hold elections here every four years, and she always gets over ninety-five percent of the vote.)]
+		[arion.speech(米诺塔莉丝很得民心，)]阿里昂补充道，[arion.speech(我们这里每四年举行一次选举，她的得票率总是超过百分之九十五。)]
 	</p>
 	<p>
-		[minotallys.speech(There was one time when the opposing candidate got almost twenty percent,)] Minotallys corrects her assistant, before smiling at you and revealing in a happy tone, [minotallys.speech(Of course, after that, we found out that he was a member of a banned organisation, so I had him enslaved and sent to Lilith as a gift!)]
+		[minotallys.speech(有一次，对方候选人的得票率接近百分之二十，)]米诺塔莉丝纠正了她的助手，然后笑着对你用开心的语气说道，[minotallys.speech(当然，在那之后，我们发现他是一个被禁止的组织的成员，所以我将他奴役，作为礼物送给了莉莉丝！)]
 	</p>
 	<p>
-		Having got the general gist of Minotallys's history and how she came to be the mayor, you wonder what to ask next...
+		在大致了解了米诺塔莉丝的过去以及她是如何成为镇长之后，你思考着接下来该问些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_OFFICE_TALK_ARION"><![CDATA[
 	<p>
-		Wanting to know more about Arion, you ask Minotallys how he came to be her personal assistant.
+		你想更多的了解阿里昂，于是问米诺塔莉丝他是如何成为她的个人助理的。
 	</p>
 	<p>
-		[minotallys.speech(Oh, well, I'd never needed a personal assistant before,)] Minotallys explains, [minotallys.speech(However, over the past few decades, my workload started getting bigger and bigger. Eventually I realised that I needed some help, so I went walking around town looking for someone who'd be suitable.)]
+		[minotallys.speech(哦，好吧，我以前从不需要个人助理，)]米诺塔莉丝解释道，[minotallys.speech(不过，在过去的几十年里，工作量越来越大。最后，我意识到我需要一些帮助，于是就在镇里四处寻找合适的人选。)]
 	</p>
 	<p>
-		[arion.speech(Minotallys found me as I was on my way to apply for a job at the town bank,)] Arion picks up where his superior left off, [arion.speech(I'd graduated from the arcane university at the top of my class, and thought that it would be best for my personal development to work in finance for a while.)]
+		[arion.speech(米诺塔莉丝找到我时，我正在去镇上银行应聘的路上，)]阿里昂继续他上司的话题，[arion.speech(我以班上第一名的成绩从奥术大学毕业，并认为在金融业工作一段时间对我的个人发展最有利。)]
 	</p>
 	<p>
-		[minotallys.speech(I detected how strong his aura was the moment I set eyes on him,)] Minotallys says, before turning in her chair to flash Arion a sly smile and tease, [minotallys.speech(I knew he'd be the one for me right from that moment. He's not only excellent at dealing with paperwork, but thanks to my lilin form I get really horny every night, and I love riding his huge horse-coc-)]
+		[minotallys.speech(当我看到他的那一刻，我就察觉到了他的灵气有多强，)]米诺塔莉丝说，然后转过椅子，向阿里昂露出一个狡猾的微笑，并调侃道，[minotallys.speech(从那时起，我就知道他是我的真命天子。他不仅在处理文件方面很出色，每个由于我的莉琳形态欲火焚身的夜晚，我都喜欢骑在他巨大的马D—)]
 	</p>
 	<p>
-		[arion.speech(~Ahem!~)] Arion loudly clears his throat to interrupt Minotallys, before straightening his tie and bringing an end to the topic by stating, [arion.speech(We compliment one another very well, and that's all there is to it.)]
+		[arion.speech(~啊嗯！~)]阿里昂大声的清了下嗓子，打断了米诺塔莉丝的话，然后拉直领带，结束了这个话题，[arion.speech(我们相性很好，仅此而已。)]
 	</p>
 	<p>
-		Having found out that Minotallys and Arion have somewhat more than just a purely professional relationship, you wonder what to ask next...
+		你发现米诺塔莉丝和阿里昂的关系不仅仅是纯粹的职业关系，思考着接下来该问些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_OFFICE_TALK_WORK"><![CDATA[
 	<p>
-		Interested in finding out what sort of work is involved in being Elis's mayor, you ask Minotallys what her average day is like.
+		你对伊利斯镇长的工作内容产生了兴趣，开始询问米诺塔莉丝她每天的工作情况。
 	</p>
 	<p>
-		[minotallys.speech(Hmm, well, it's certainly not as glamorous as most people probably think,)] she replies with a smile on her face. Leaning back in her chair, she reveals, [minotallys.speech(Most of what I do is administrative paperwork, such as signing off on business permits or organising residential and commercial zoning.)]
+		[minotallys.speech(呣，好吧，不如大多数人所想那样有趣，)]她微笑着靠在椅子上，透露道，[minotallys.speech(我做的大部分都是行政文书类工作，比如签署商业许可证或组织住宅和商业分区。)]
 	</p>
 	<p>
-		[arion.speech(Recently we've been dealing with housing refugees from the Fields as well,)] Arion states, giving Minotallys a piercing look as he does so.
+		[arion.speech(我们最近还在处理来自田野的难民的住房问题。)]阿里昂一边说着，一边用刺眼的眼神看了米诺塔莉丝一眼。
 	</p>
 	<p>
-		Ignoring her subordinate's comment, the lilin continues, [minotallys.speech(Oh, and although the local Enforcers deal with almost all of the law enforcement, I sometimes get direct orders from Dominion bearing the authority of Lilith herself, so I have to carry those tasks out personally.)]
+		莉琳没有理会下属的评论，继续说道，[minotallys.speech(哦，虽然本地的执法者几乎处理了所有的执法事务，但我有时会接到来自御城区的直接命令，这些命令带有莉莉丝本人的权威性，所以我必须亲自执行。)]
 	</p>
 	<p>
-		Wondering what sort of orders those could be, you ask Minotallys what Lilith asks of her. Giving you a happy smile, she reveals, [minotallys.speech(Oh, you know, things like having to shut down businesses which are harming the public good, or arresting particularly dangerous criminals. The other week I got an order to shut down an unlicensed newspaper distribution cell. You should have seen the looks on their faces when I found them! Trust me, they were singing Lilith's praises by the time I'd finished with them...)]
+		你想知道这些命令会是什么样的，于是你问米诺塔莉丝莉莉丝对她都有过什么命令。她开心地笑了笑，说，[minotallys.speech(哦，你知道的，比如必须关闭危害公共利益的企业，或者逮捕特别危险的罪犯。前几个星期，我接到命令，要求关闭一个无照经营的报纸发行点。你真该看看我找到他们时他们脸上的表情！相信我，当我处理完他们时，他们已经在歌颂莉莉丝了……)]
 	</p>
 	<p>
-		As Minotallys says this, Arion give you a strong glare, which you interpret as a warning to not ask further questions on this matter. Deciding that it would be for the best not to pry any further into her business affairs, you wonder what to ask Minotallys next...
+		米诺塔莉丝这么说的时候，阿里昂给了你一个带有明显意味的眼神，你将其理解为警告你不要再就此事提问。你决定最好不要再打听她的公事，思考着接下来要问米诺塔莉丝什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_OFFICE_TALK_LILITH"><![CDATA[
 	<p>
-		Wanting to hear Minotallys's opinion of Lilith, you ask her what she thinks of the queen of all demons.
+		你想听听米诺塔莉丝对莉莉丝的看法，于是询问她对恶魔女王有什么想法。
 	</p>
 	<p>
-		[minotallys.speech(What do you mean?)] she rhetorically asks in response, before quickly continuing, [minotallys.speech(I'd do absolutely anything Lilith asked of me. She's the greatest ruler this realm could ever ask for! Honestly, if anyone has any other opinion of Lilith than unquestioning loyalty, I think that they should be enslaved for life. It's high treason to question her will, after all. Don't you agree, Arion?)]
+		[minotallys.speech(你什么意思？)]她反问了一句，并很快继续道，[minotallys.speech(我愿为莉莉丝做任何事。她是这个王国最伟大的统治者，老实说，如果有人对莉莉丝有毫不动摇地忠诚外的那些想法，我认为他们应该被终身奴役。毕竟质疑她的意志是叛国罪。你同意吗，阿里昂？)]
 	</p>
 	<p>
-		[arion.speech(Unfortunately, the citizens don't see things quite the same way that you do,)] Arion replies, clearly confident in his ability to question Minotallys's opinions. Matching the lilin's angry gaze with one of his own, he states, [arion.speech(We already use the anti-dissenter legislation to administer short periods of forced labour as a punishment for badmouthing Lilith. I fear that any more than that would cause serious unrest among the population.)]
+		[arion.speech(不幸的是，民众们的看法和你不太一样，)]阿里昂回答，显然他对自己质疑米诺塔莉丝观点的能力很有信心。他直直对上米诺塔莉丝愤怒的目光，然后说道，[arion.speech(我们已经利用反驱逐法对说莉莉丝坏话的人实施了短期强制劳动惩罚。我担心再这样下去会引起民众们的严重骚乱。)]
 	</p>
 	<p>
-		Not being able to hold Arion's gaze, Minotallys looks away and crosses her arms, before pouting and muttering, [minotallys.speech(People are so ungrateful... They don't know how good they've got it with Lilith as their queen...)]
+		米诺塔莉丝无法承受阿里昂的注视，她别过脸去，双手叉腰，撅着嘴嘟囔道，[minotallys.speech(人们太忘恩负义了……他们不知道有莉莉丝作为女王是件多好的事……)]
 	</p>
 	<p>
-		Realising that there's some tension between Arion and Minotallys over the matter of Lilith, you decide against pursuing this line of conversation any further, and wonder what to ask instead...
+		你意识到阿里昂和米诺塔莉丝之间在莉莉丝的问题上有些紧张，因此决定不再继续这个话题，而是思考接下来该问什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_OFFICE_TALK_MILK"><![CDATA[
 	<p>
-		Deciding to take Minotallys up on her offer, you tell her that you'd like to have a drink of milk. Letting out a quiet moan as you say this, the lilin eagerly bends down to open the fridge which she has beneath her desk, before straightening up to place a glass of chilled milk on the desk in front of you. Absent-mindedly reaching up to rub her huge, [minotallys.cupSize]-cup breasts, she pants, [minotallys.speech(Go on then, drink up... It's <i>very</i> fresh, I can assure you of that...)]
+		你决定接受米诺塔莉丝的邀请，告诉她你想喝杯牛奶。莉琳听到你的话，伴随着轻声呻吟，她急切地弯下腰去打开桌下的冰箱，然后挺直身子，在你面前放了一杯冰牛奶。她心不在焉地伸手去揉她的[minotallys.cupSize]杯巨乳，喘息着道，[minotallys.speech(快喝吧……我可以向你保证，它<i>非常</i>新鲜……)]
 	</p>
 	<p>
-		Looking down at what is quite obviously Minotallys's breast milk, you pick up the glass and gulp it down. With the cow-girl lilin watching you with a look of utter delight on her face, you find yourself enjoying the creamiest, most delicious milk that you've ever tasted. While there's an underlying flavour of [minotallys.milkFlavour], it's very subtle, allowing you to fully enjoy the creamy goodness of the dairy beverage.
+		你低头看向明显来自米诺塔莉丝的母乳，拿起杯子大口大口地喝了起来。牛女莉琳一脸欣喜地看着你，你发现自己正在享受从未品尝过的最香浓、最美味的牛奶。尽管它潜藏着[minotallys.milkFlavour]的味道，但这种感觉依旧非常微妙，让你充分享受到乳制品的奶香。
 	</p>
 	<p>
-		As you quickly finish off the milk and put the empty glass back down on the desk, Minotallys gropes her huge breasts and says in a husky voice, [minotallys.speech(Come back tomorrow if you want to try a different flavour...)]
+		当你快速喝完牛奶，把空杯子放回桌子上时，米诺塔莉丝摸着自己的巨乳，用沙哑的声音说道，[minotallys.speech(如果你想尝尝不同的口味，记得明天再来……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_OFFICE_EXIT"><![CDATA[
 	<p>
-		Having concluded your business, you thank Minotallys and Arion for their time and take your leave. Giving you a little wave, the lilin calls out, [minotallys.speech(Come back at any time, [pc.name]! Bye!)]
+		你办完事后，向米诺塔莉丝和阿里昂表达谢意，然后告辞。莉琳向你挥了挥手，喊道，[minotallys.speech(随时欢迎，[pc.name]！再见！)]
 	</p>
 	<p>
-		Returning her farewell, you [pc.step] out of her office and wonder what to do next...
+		你向她道别后，[pc.step]出她的办公室，思考着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Minotallys's room: -->
 	
 	<htmlContent tag="MINOTALLYS_ROOM"><![CDATA[
 	<p>
-		Due to her overwhelming workload, Minotallys has had her living quarters relocated to one of the rooms previously used as an archive. A sign on the door before you lets you know that this is the lilin's room, as it reads: 'Minotallys - Private!'
+		由于工作量太大，米诺塔莉丝把她的住处搬到了以前用作档案室的一个房间。你面前门上挂着的牌子上写着：“米诺塔莉丝—私人！”，让你知道这就是莉琳的房间。
 	</p>
 	#IF(game.getCharactersPresent().contains(minotallys) && game.getCharactersPresent().contains(arion))
 		<p>
-			As you stand before the door to Minotallys's room, you hear the unmistakable sound of high-pitched, passionate moaning coming from within. These moans are interspersed with deep grunts, and you realise that Arion must be having sex with his lilin superior. Almost as if to confirm this thought, you hear the voice of Minotallys crying out Arion's name, which is followed by a series of lewd, wet slapping noises.
+		当你站在米诺塔莉丝房门前时，你会听到房间里传出高亢、激情的呻吟声。这些呻吟声中夹杂着低沉的咕哝声，你意识到阿里昂一定是在和他的女上司做爱。似乎是为了证实这个想法，你听到米诺塔莉丝的声音在呼喊阿里昂的名字，紧接着是一连串淫荡、潮湿的拍打声。
 		</p>
 		<p>
-			With the two Enforcers on duty giving you a questioning glance, you think that it would be best to [pc.step] away from Minotallys's room and give the two lovers within some privacy...
+		两名值班的执法者向你投来询问的目光，你认为最好远离米诺塔莉丝的房间，给这对恋人一些私人空间……
 		</p>
 	#ELSE
 		<p>
 			#IF(game.getCharactersPresent().contains(minotallys))
-				With her office being closed at this time of day, you're sure that Minotallys must be inside her room. As you don't have a serious reason to interrupt her rest, you think that it would be best to leave her in peace...
+				由于她的办公室在这个时间是关闭的，你肯定米诺塔莉丝一定在她的房间里。而你并没有打断她休息的正当理由，所以你最好让她安静地休息……
 			#ELSE
-				With Minotallys's office being open at this time of day, you know that she isn't inside her room at the moment. If you wanted to speak with the lilin, you should [pc.step] over to her office...
+				米诺塔莉丝的办公室在这个时间是开放的，你知道她现在不在房间里。如果你想和她说话，你应该去她的办公室……
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECORDS"><![CDATA[
 	<p>
-		The wooden door before you is propped open, allowing you to look inside. The entire room is filled with rows of tall shelves, with each one of them being stacked full of old papers and books. A sign on the door informs you that this room is home to records on the administrative history of Elis.
+		你面前的木门敞开，让你可以看向里面。整个房间摆满了一排排高高的书架，每一个书架上都堆满了旧文件和书籍。门上的标牌告诉你，这间屋子存放的是伊利斯的行政历史记录。
 	</p>
 	<p>
-		Having no need for any of the information stored within these archives, you prepare to [pc.step] away from the door and return to the landing...
+		你并不需要这些档案中的任何信息，便远离了这扇门，回到外面……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		You find yourself at the top of the tower's staircase, with a pair of elite succubi Enforcers standing very close by. Carrying rifles and looking like they're itching to use them, these Enforcers seem prepared to defend the town's mayor from any unsolicited visitors.
+		你发现自己正站在塔楼楼梯的顶端，旁边站着一对精英魅魔执法者。这些执法者手持步枪，看起来似乎迫不及待地想要使用它们，以保护镇长不受任何不速之客侵犯。
 	</p>
 	<p>
-		Having been given permission to come and go as you please, you have nothing to fear from these guards, and from here you could either head down the stairs or [pc.walk] on over to Minotallys's office...
+		你已经获得了来去自由的许可，所以不用害怕这些守卫，你可以从这里下楼，或者[pc.walk]去米诺塔莉丝的办公室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS_DOWN"><![CDATA[
 	<p>
-		Having finished your business, you head back down the stairs and quickly find yourself back down on the ground floor of Elis's town hall...
+		你办完事情后便下了楼梯，很快回到了伊利斯市镇议会的一楼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

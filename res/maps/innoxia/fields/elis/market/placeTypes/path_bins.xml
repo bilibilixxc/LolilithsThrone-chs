@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Farmer's Market]]></name>
-	<tooltipDescription><![CDATA[The surrounding stalls divide up the large cobblestone square, forming paths which the crowds of shoppers amble down.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Elis's Farmer's Market]]></virginityLossDescription>
+	<name><![CDATA[农贸市场]]></name>
+	<tooltipDescription><![CDATA[周围的摊位将鹅卵石铺成的大广场分割开来，形成一条条小路，购物的人群在小路上漫步。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

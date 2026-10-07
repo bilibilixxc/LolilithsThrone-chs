@@ -103,7 +103,7 @@ public class EnchantmentEventListener implements EventListener {
 				EnchantmentDialogue.setLimit(EnchantmentDialogue.getIngredient().getEnchantmentEffect().getLimits(EnchantmentDialogue.getPrimaryMod(), EnchantmentDialogue.getSecondaryMod()));
 			}
 			
-			Main.game.setContent(new Response("Enchanting", "Start enchanting.", EnchantmentDialogue.ENCHANTMENT_MENU));
+			Main.game.setContent(new Response("附魔", "开始附魔。", EnchantmentDialogue.ENCHANTMENT_MENU));
 		}
 	}
 

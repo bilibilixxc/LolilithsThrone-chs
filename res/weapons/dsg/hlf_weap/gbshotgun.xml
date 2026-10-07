@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA[Underneath the receiver, a small engraving reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[机匣上刻着细小的字迹，写着“执法者官方分配，DSG铸造厂生产。”]]></authorTag>
 		<value>5000</value>
 		<melee>false</melee>
 		<twoHanded>true</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendDamageName="true"><![CDATA[teargas shotgun]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[teargas shotgun]]></namePlural>
-		<description><![CDATA[A huge 4-gauge shotgun loaded with teargas grenades. Although it bears Enforcer markings, they have been scratched out and replaced with insignia you don't recognize.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Shoot [npc2.name] with your shotgun.]]></attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name appendDamageName="true"><![CDATA[催泪弹霰弹枪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[催泪弹霰弹枪]]></namePlural>
+		<description><![CDATA[一把装满催泪弹的四号口径霰弹枪，上面的执法者标记已被刮掉，取而代之的是你不认识的标记。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的霰弹枪射向[npc2.name]。]]></attackTooltipDescription>
 		<rarity>RARE</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] out the shotgun, [npc.verb(load)] it, [npc.verb(move)] the fore end forward with an intimidating clack before disengaging the safety.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(move)] the foreend back and [npc.verb(check)] to see that the chamber is empty before putting the shotgun away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出霰弹枪，装填子弹，向前移动前端，发出一声恐吓性的咔嗒声，然后松开保险。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]收回前护把，确认弹膛已空，才将霰弹枪收起。]]></unequipText>
 		<imageName>gbshotgun_uneq.svg</imageName>
 		<imageEquippedName>gbshotgun.svg</imageEquippedName>
 		<physicalResistance>0</physicalResistance>
@@ -34,7 +34,7 @@
 		
 		<extraEffects>
 			<effect><![CDATA[
-				[style.boldPoison(Poison Vapours)] for 2 turns on hit.
+				[style.boldPoison(毒云术)]命中后持续两个回合。
 			]]></effect>
 		</extraEffects>
 		
@@ -46,7 +46,7 @@
 		
 		<onCriticalHitEffect><![CDATA[
 			#IF (!npc2.hasStatusEffect(SE_POISON_VAPOURS_CHOKING_HAZE))
-				[##npc2.addStatusEffect(SE_POISON_VAPOURS_CHOKING_HAZE , 4)] There is now a [style.boldPoison(very thick haze of teargas)] around [npc2.name].
+				[##npc2.addStatusEffect(SE_POISON_VAPOURS_CHOKING_HAZE , 4)][npc2.name]的周围弥漫着一团[style.boldPoison(极其浓厚的催泪瓦斯)]。
 			#ENDIF
 		]]></onCriticalHitEffect>
 		
@@ -67,14 +67,14 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(pull)] the trigger at [npc2.name]. The grenade flies in a gracefull arc and lands by [npc2.namePos] [npc2.feet], [style.boldPoison(releasing a choking cloud of tear gas.)]
+		[npc.Name]瞄准[npc2.name]扣下了扳机。榴弹在空中划出一道优美的弧线，落在[npc2.namePos][npc2.feet]边，[style.boldPoison(释放出了一团呛人的催泪瓦斯。)]
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(pull)] the trigger at [npc2.name]. The grenade misses [npc2.herHim] completely and lands in the distance.
-		]]></missText>
+		[npc.Name]用瞄准镜对准[npc2.name]，扣动了扳机。催泪弹完全没击中[npc2.herHim]，无用地落到远处。
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

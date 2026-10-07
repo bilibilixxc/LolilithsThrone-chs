@@ -15,12 +15,12 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum TFPotency {
 	
-	MAJOR_DRAIN("Major Drain", PresetColour.GENERIC_TERRIBLE, 8, -3, true),
-	DRAIN("Drain", PresetColour.GENERIC_BAD, 4, -2, true),
-	MINOR_DRAIN("Minor Drain", PresetColour.GENERIC_MINOR_BAD, 1, -1, true),
-	MINOR_BOOST("Minor Boost", PresetColour.GENERIC_MINOR_GOOD, 1, 1, true),
-	BOOST("Boost", PresetColour.GENERIC_GOOD, 4, 2, true),
-	MAJOR_BOOST("Major Boost", PresetColour.GENERIC_EXCELLENT, 8, 3, true),
+	MAJOR_DRAIN("严重削弱", PresetColour.GENERIC_TERRIBLE, 8, -3, true),
+	DRAIN("削弱", PresetColour.GENERIC_BAD, 4, -2, true),
+	MINOR_DRAIN("轻微削弱", PresetColour.GENERIC_MINOR_BAD, 1, -1, true),
+	MINOR_BOOST("轻微增益", PresetColour.GENERIC_MINOR_GOOD, 1, 1, true),
+	BOOST("增益", PresetColour.GENERIC_GOOD, 4, 2, true),
+	MAJOR_BOOST("强力增益", PresetColour.GENERIC_EXCELLENT, 8, 3, true),
 
 	/**
 	 *  SPECIAL is used for item effects which require a special effect; this TFPotency is not available to the player and is only used in modded or specially-defined clothing.
@@ -34,7 +34,7 @@ public enum TFPotency {
 	 *  <br/>- So there are many ways the clothing can be safely unsealed and removed by using code, but the player will not have access to any way to unseal the clothing outside of triggering special scenes in which the clothing is forcibly removed
 	 *   (such as when submitting to Natalya, in many bad ends, when locked into the stocks in slaver alley, etc. etc.).
 	 */
-	SPECIAL("Special", PresetColour.ATTRIBUTE_CORRUPTION, 8, 3, false);
+	SPECIAL("特殊", PresetColour.ATTRIBUTE_CORRUPTION, 8, 3, false);
 	
 	private static List<TFPotency> allPotencies = new ArrayList<>();
 

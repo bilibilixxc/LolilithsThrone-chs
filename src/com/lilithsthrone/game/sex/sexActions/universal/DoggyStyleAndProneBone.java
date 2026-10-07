@@ -84,12 +84,12 @@ public class DoggyStyleAndProneBone {
 		
 		@Override
 		public String getActionTitle() {
-			return "Pull hair";
+			return "扯头发";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Grab [npc2.namePos] hair and pull [npc2.her] head back.";
+			return "抓住[npc2.namePos]的头发，把头向后拉。";
 		}
 		
 		@Override
@@ -156,56 +156,56 @@ public class DoggyStyleAndProneBone {
 				case DOM_GENTLE:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.hair(true)], and, while continuing to rhythmically slide [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] slowly [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.hair(true)] in one [npc.hand], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while burying [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly giggling":" smirking")+" to [npc.herself] as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to slowly sink [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.hair(true)],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸手温柔地握住[npc2.namePos]的[npc2.hair(true)]，继续在[npc2.her][npc2."+tag+"+]间有节奏地抽送着[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]一只[npc.hand]温柔地握住[npc2.namePos]的[npc2.hair(true)]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻声地咯咯笑着":"得意地坏笑着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.namePos][npc.cock+]继续缓缓探进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.she]温柔地抓住[npc2.her]的[npc2.hair(true)]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.hair(true)], before slowly pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.hair(true)] in one [npc.hand], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly [npc.verb(giggle)]":" [npc.verb(smirk)]")
-									+" to [npc.herself] as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.hair(true)],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸手温柔地握住[npc2.namePos]的[npc2.hair(true)]。[npc2.namePos]缓慢后仰，发出[npc2.a_moan+]。",
+								"[npc.name]一只[npc.hand]温柔地握住[npc2.namePos]的[npc2.hair(true)]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻笑着":"坏笑着")
+									+"，[npc.she]向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]沿着[npc2.namePos]的背轻轻滑动，又温柔地拉住[npc2.her]的[npc2.hair(true)]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				case DOM_ROUGH:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] a handful of [npc2.namePos] [npc2.hair(true)], and, while continuing to forcefully slam [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] sharply [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing a fistful of [npc2.namePos] [npc2.hair(true)], [npc.name] simultaneously [npc.verb(yank)] [npc2.her] head back while slamming [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally giggling":" deeply grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to roughly slam [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards and [npc.verb(grab)] a fistful of [npc2.her] [npc2.hair(true)],"
-										+ " before violently yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]粗暴地一把薅住[npc2.namePos]的头发，继续强力地把[npc.her]的[npc.cock]操进[npc2.her][npc2."+tag+"+]，塞进拔出，"
+										+ "[npc.she]突然向后猛拉[npc2.her]的头，[npc2.herHim]发出[npc2.a_moan+]。",
+								"[npc.name]紧紧抓住一把[npc2.namePos]的[npc2.hair(true)]，一边向后猛拉[npc2.her]的头，一边用[npc.cock+]又深又重地顶撞[npc2.her][npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"愉悦地狂笑不止":"愉悦地低声哼叫")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续狂野地让[npc.cock+]没入[npc2.namePos][npc2."+tag+"+]，一把薅住[npc2.her]的[npc2.hair(true)]，"
+										+ "肆意猛力地向后拽[npc2.her]的头，让[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] a handful of [npc2.namePos] [npc2.hair(true)], before sharply yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing a fistful of [npc2.namePos] [npc2.hair(true)], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally [npc.verb(giggle)]":" deeply [npc.verb(grunt)]")
-									+" as [npc.she] violently [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Groping and pawing [npc.her] way up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards and [npc.verb(grab)] a fistful of [npc2.her] [npc2.hair(true)],"
-										+ " before roughly tugging [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸手狂乱地拽住一把[npc2.namePos]的[npc2.hair(true)]。[npc2.her]猛向后仰，发出[npc2.a_moan+]。",
+								"[npc.name]抓着一把[npc2.namePos]的[npc2.hair(true)]，"+(Main.sex.getCharacterPerformingAction().isFeminine()?"疯子般地咯咯笑":"深沉地低吼")
+									+ "[npc.she]粗鲁地向后猛拉[npc2.her]的头，使得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.name]轻抚并拍了拍[npc2.namePos]的背，伸手拽住[npc2.her]的[npc2.hair(true)]，"
+										+ "然后粗暴地将[npc2.her]的头向后拽，使得[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				default: // For dom normal, sub normal, and sub eager:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.hair(true)], and, while continuing to rhythmically pump [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] steadily [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.hair(true)] in one [npc.hand], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while thrusting [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily giggling":" grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to energetically thrust [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards and [npc.verb(take)] a firm hold of [npc2.her] [npc2.hair(true)],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸手牢牢地握住[npc2.namePos]的[npc2.hair(true)]，继续在[npc2.her][npc2."+tag+"+]里有节奏地抽送着[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]一只[npc.hand]牢牢攥住[npc2.namePos]的[npc2.hair(true)]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"快乐地狂笑着":"低声哼叫着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续将[npc.cock+]大力操进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.her]伸手牢牢攥住[npc2.her]的[npc2.hair(true)]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.hair(true)], before steadily pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.hair(true)] in one [npc.hand], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily [npc.verb(giggle)]":" [npc.verb(chuckle)]")
-									+" in pleasure as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards and [npc.verb(take)] a firm hold of [npc2.her] [npc2.hair(true)],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸手牢牢攥住[npc2.namePos]的[npc2.hair(true)]。[npc2.namePos]逐渐后仰，发出[npc2.a_moan+]。",
+								"[npc.name]一只[npc.hand]牢牢攥住[npc2.namePos]的[npc2.hair(true)]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"咯咯笑着":"轻笑着")
+									+"，[npc.she]愉悦地向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]沿着[npc2.namePos]的背轻轻滑动，[npc.she]伸手牢牢拽住[npc2.her]的[npc2.hair(true)]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 			}
 		}
@@ -222,12 +222,12 @@ public class DoggyStyleAndProneBone {
 		
 		@Override
 		public String getActionTitle() {
-			return "Pull ears";
+			return "扯耳朵";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Grab [npc2.namePos] [npc2.ears+] and pull [npc2.her] head back.";
+			return "抓住[npc2.namePos][npc2.ears+]，把头向后拉。";
 		}
 		
 		@Override
@@ -292,56 +292,56 @@ public class DoggyStyleAndProneBone {
 				case DOM_GENTLE:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.ears+] in each [npc.hand], and, while continuing to rhythmically slide [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] slowly [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.ears+] with both [npc.hands], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while burying [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly giggling":" smirking")+" to [npc.herself] as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to slowly sink [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.ears+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]温柔地揪住[npc2.namePos][npc2.ears+]，继续在[npc2.her][npc2."+tag+"+]间有节奏地抽送着[npc.her]的[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]温柔地握住[npc2.namePos][npc2.ears+]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻声地咯咯笑着":"得意地坏笑着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.namePos][npc.cock+]继续缓缓探进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.she]双[npc.hands]温柔地抓住[npc2.her][npc2.ears+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.ears+] in each [npc.hand], before slowly pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.ears+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly [npc.verb(giggle)]":" [npc.verb(smirk)]")
-									+" to [npc.herself] as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.ears+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]温柔地拽住[npc2.namePos][npc2.ears+]。[npc2.namePos]缓慢后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]温柔地拽住[npc2.namePos][npc2.ears+]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻笑着":"坏笑着")
+									+"，[npc.she]向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]沿着[npc2.namePos]的背轻抚，双[npc.hands]温柔地拉住[npc2.her][npc2.ears+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				case DOM_ROUGH:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] hold of [npc2.namePos] [npc2.ears+], and, while continuing to forcefully slam [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] sharply [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing [npc2.namePos] [npc2.ears+] with both [npc.hands], [npc.name] simultaneously [npc.verb(yank)] [npc2.her] head back while slamming [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally giggling":" deeply grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to roughly slam [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(grab)] [npc2.her] [npc2.ears+],"
-										+ " before violently yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]粗暴地一把薅住[npc2.namePos][npc2.ears+]，继续强力地把[npc.her]的[npc.cock]操进[npc2.her][npc2."+tag+"+]，塞进拔出，"
+										+ "[npc.she]突然向后猛拉[npc2.her]的头，[npc2.herHim]发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]抓住[npc2.namePos][npc2.ears+]，一边向后猛拉[npc2.her]的头，一边用[npc.cock+]又深又重地顶撞[npc2.her][npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"愉悦地狂笑不止":"愉悦地低声哼叫")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续粗暴地让[npc.cock+]没入[npc2.namePos][npc2."+tag+"+]，双[npc.hands]揪住[npc2.her][npc2.ears+]，"
+										+ "肆意猛力地向后拽[npc2.her]的头，让[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] hold of [npc2.namePos] [npc2.ears+] in each [npc.hand], before sharply yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing [npc2.namePos] [npc2.ears+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally [npc.verb(giggle)]":" deeply [npc.verb(grunt)]")
-									+" as [npc.she] violently [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Groping and pawing [npc.her] way up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(grab)] [npc2.her] [npc2.ears+],"
-										+ " before roughly tugging [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]粗暴地拽住[npc2.namePos][npc2.ears+]。[npc2.her]猛向后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]揪住[npc2.namePos][npc2.ears+]，"+(Main.sex.getCharacterPerformingAction().isFeminine()?"疯子般地咯咯笑":"深沉地低吼")
+									+ "[npc.she]粗鲁地向后猛拉[npc2.her]的头，使得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.name]轻抚并拍了拍[npc2.namePos]的背，双[npc.hands]揪住[npc2.her][npc2.ears+]，"
+										+ "然后粗暴地将[npc2.her]的头向后拽，使得[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				default: // For dom normal, sub normal, and sub eager:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.ears+] in each [npc.hand], and, while continuing to rhythmically pump [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] steadily [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.ears+] with both [npc.hands], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while thrusting [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily giggling":" grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to energetically thrust [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a firm hold of [npc2.her] [npc2.ears+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]牢牢地揪住[npc2.namePos][npc2.ears+]，继续在[npc2.her][npc2."+tag+"+]间有节奏地抽送着[npc.her]的[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hand]牢牢地握住[npc2.namePos][npc2.ears+]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"快乐地狂笑着":"低声哼叫着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续将[npc.cock+]大力操进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.her]双[npc.hands]牢牢攥住[npc2.her][npc2.ears+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.ears+] in each [npc.hand], before steadily pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.ears+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily [npc.verb(giggle)]":" [npc.verb(chuckle)]")
-									+" in pleasure as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a firm hold of [npc2.her] [npc2.ears+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]牢牢攥住[npc2.namePos][npc2.ears+]。[npc2.namePos]逐渐后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hand]牢牢攥住[npc2.namePos][npc2.ears+]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"咯咯笑着":"轻笑着")
+									+"，[npc.she]愉悦地向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]沿着[npc2.namePos]的背轻抚，双[npc.hands]牢牢地拉住[npc2.her][npc2.ears+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 			}
 		}
@@ -357,12 +357,12 @@ public class DoggyStyleAndProneBone {
 		
 		@Override
 		public String getActionTitle() {
-			return "Grab [npc2.horns]";
+			return "抓住[npc2.horns]";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Grab [npc2.namePos] [npc2.horns+] and pull [npc2.her] head back.";
+			return "抓住[npc2.namePos][npc2.horns+]，把头向后拉。";
 		}
 		
 		@Override
@@ -427,56 +427,56 @@ public class DoggyStyleAndProneBone {
 				case DOM_GENTLE:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.horns+] in each [npc.hand], and, while continuing to rhythmically slide [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] slowly [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.horns+] with both [npc.hands], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while burying [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly giggling":" smirking")+" to [npc.herself] as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to slowly sink [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.horns+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]温柔地揪住[npc2.namePos][npc2.horns+]，继续在[npc2.her][npc2."+tag+"+]间有节奏地抽送着[npc.her]的[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hand]温柔地拽住[npc2.namePos][npc2.horns+]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻声地咯咯笑着":"得意地坏笑着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.namePos][npc.cock+]继续缓缓探进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.she]双[npc.hands]温柔地抓住[npc2.her][npc2.horns+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.horns+] in each [npc.hand], before slowly pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.horns+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly [npc.verb(giggle)]":" [npc.verb(smirk)]")
-									+" to [npc.herself] as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.horns+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]温柔地拽住[npc2.namePos][npc2.horns+]。[npc2.namePos]缓慢后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]温柔地拽住[npc2.namePos][npc2.horns+]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻笑着":"坏笑着")
+									+"，[npc.she]向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]沿着[npc2.namePos]的背轻抚，双[npc.hands]温柔地把住[npc2.her][npc2.horns+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				case DOM_ROUGH:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] hold of [npc2.namePos] [npc2.horns+], and, while continuing to forcefully slam [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] sharply [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing [npc2.namePos] [npc2.horns+] with both [npc.hands], [npc.name] simultaneously [npc.verb(yank)] [npc2.her] head back while slamming [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally giggling":" deeply grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to roughly slam [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(grab)] [npc2.her] [npc2.horns+],"
-										+ " before violently yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]粗暴地把住[npc2.namePos][npc2.horns+]，继续强力地把[npc.her]的[npc.cock]操进[npc2.her][npc2."+tag+"+]，塞进拔出，"
+										+ "[npc.she]突然向后猛拉[npc2.her]的头，[npc2.herHim]发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]把住[npc2.namePos][npc2.horns+]，一边向后猛拉[npc2.her]的头，一边用[npc.cock+]又深又重地顶撞[npc2.her][npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"愉悦地狂笑不止":"愉悦地低声哼叫")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续粗暴地让[npc.cock+]没入[npc2.namePos][npc2."+tag+"+]，双[npc.hands]攥住[npc2.her][npc2.horns+]，"
+										+ "肆意猛力地向后拽[npc2.her]的头，让[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] hold of [npc2.namePos] [npc2.horns+] in each [npc.hand], before sharply yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing [npc2.namePos] [npc2.horns+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally [npc.verb(giggle)]":" deeply [npc.verb(grunt)]")
-									+" as [npc.she] violently [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Groping and pawing [npc.her] way up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(grab)] [npc2.her] [npc2.horns+],"
-										+ " before roughly tugging [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]粗暴地把住[npc2.namePos][npc2.horns+]。[npc2.her]猛向后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]把住[npc2.namePos][npc2.horns+]，"+(Main.sex.getCharacterPerformingAction().isFeminine()?"疯子般地咯咯笑":"深沉地低吼")
+									+ "[npc.she]粗鲁地向后猛拉[npc2.her]的头，使得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.name]轻抚并拍了拍[npc2.namePos]的背，双[npc.hands]把住[npc2.her][npc2.horns+]，"
+										+ "然后粗暴地将[npc2.her]的头向后拽，使得[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				default: // For dom normal, sub normal, and sub eager:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.horns+] in each [npc.hand], and, while continuing to rhythmically pump [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] steadily [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.horns+] with both [npc.hands], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while thrusting [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily giggling":" grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to energetically thrust [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a firm hold of [npc2.her] [npc2.horns+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]牢牢地把住[npc2.namePos][npc2.horns+]，继续在[npc2.her][npc2."+tag+"+]间有节奏地抽送着[npc.her]的[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hand]牢牢把住[npc2.namePos][npc2.horns+]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"快乐地狂笑着":"低声哼叫着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续将[npc.cock+]大力操进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.her]双[npc.hands]牢牢把住[npc2.her][npc2.horns+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.horns+] in each [npc.hand], before steadily pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.horns+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily [npc.verb(giggle)]":" [npc.verb(chuckle)]")
-									+" in pleasure as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a firm hold of [npc2.her] [npc2.horns+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]牢牢攥住[npc2.namePos][npc2.horns+]。[npc2.namePos]逐渐后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]牢牢攥住[npc2.namePos][npc2.horns+]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"咯咯笑着":"轻笑着")
+									+"，[npc.she]愉悦地向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]沿着[npc2.namePos]的背轻抚，双[npc.hands]牢牢把住[npc2.her][npc2.horns+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 			}
 		}
@@ -494,12 +494,12 @@ public class DoggyStyleAndProneBone {
 		
 		@Override
 		public String getActionTitle() {
-			return "Grab [npc2.antennae]";
+			return "抓住[npc2.antennae]";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Grab [npc2.namePos] [npc2.antennae+] and pull [npc2.her] head back.";
+			return "抓住[npc2.namePos][npc2.antennae+]，把头向后拉。";
 		}
 		
 		@Override
@@ -564,56 +564,56 @@ public class DoggyStyleAndProneBone {
 				case DOM_GENTLE:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.antennae+] in each [npc.hand], and, while continuing to rhythmically slide [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] slowly [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.antennae+] with both [npc.hands], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while burying [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly giggling":" smirking")+" to [npc.herself] as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to slowly sink [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.antennae+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]温柔地揪住[npc2.namePos][npc2.antennae+]，继续在[npc2.her][npc2."+tag+"+]间有节奏地抽送着[npc.her]的[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]温柔地拽住[npc2.namePos][npc2.antennae+]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻声地咯咯笑着":"得意地坏笑着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.namePos][npc.cock+]继续缓缓探进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.she]双[npc.hands]温柔地抓住[npc2.her][npc2.antennae+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] gently [npc.verb(take)] hold of [npc2.namePos] [npc2.antennae+] in each [npc.hand], before slowly pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a gentle hold of [npc2.namePos] [npc2.antennae+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" softly [npc.verb(giggle)]":" [npc.verb(smirk)]")
-									+" to [npc.herself] as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a gentle hold of [npc2.her] [npc2.antennae+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]温柔地拽住[npc2.namePos][npc2.antennae+]。[npc2.namePos]缓慢后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]温柔地拽住[npc2.namePos][npc2.antennae+]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"轻笑着":"笑了笑")
+									+"，[npc.she]向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]沿着[npc2.namePos]的背轻抚，双[npc.hands]温柔地拽住[npc2.her][npc2.antennae+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				case DOM_ROUGH:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] hold of [npc2.namePos] [npc2.antennae+], and, while continuing to forcefully slam [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] sharply [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing [npc2.namePos] [npc2.antennae+] with both [npc.hands], [npc.name] simultaneously [npc.verb(yank)] [npc2.her] head back while slamming [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally giggling":" deeply grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to roughly slam [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(grab)] [npc2.her] [npc2.antennae+],"
-										+ " before violently yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]粗暴地一把薅住[npc2.namePos][npc2.antennae+]，继续强力地把[npc.her]的[npc.cock]操进[npc2.her][npc2."+tag+"+]，塞进拔出，"
+										+ "[npc.she]突然向后猛拉[npc2.her]的头，[npc2.herHim]发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]拽住[npc2.namePos][npc2.antennae+]，一边向后猛拉[npc2.her]的头，一边用[npc.cock+]又深又重地顶撞[npc2.her][npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"愉悦地狂笑不止":"愉悦地低声哼叫")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续粗暴地让[npc.cock+]没入[npc2.namePos][npc2."+tag+"+]，双[npc.hands]薅住[npc2.her][npc2.antennae+]，"
+										+ "肆意猛力地向后拽[npc2.her]的头，让[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] roughly [npc.verb(grab)] hold of [npc2.namePos] [npc2.antennae+] in each [npc.hand], before sharply yanking [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Grabbing [npc2.namePos] [npc2.antennae+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" maniacally [npc.verb(giggle)]":" deeply [npc.verb(grunt)]")
-									+" as [npc.she] violently [npc.verb(yank)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Groping and pawing [npc.her] way up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(grab)] [npc2.her] [npc2.antennae+],"
-										+ " before roughly tugging [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]粗暴地拽住[npc2.namePos][npc2.antennae+]。[npc2.her]猛向后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]揪着[npc2.namePos][npc2.antennae+]，"+(Main.sex.getCharacterPerformingAction().isFeminine()?"疯子般地咯咯笑":"深沉地低吼")
+									+ "[npc.she]粗鲁地向后猛拉[npc2.her]的头，使得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.name]轻抚并拍了拍[npc2.namePos]的背，双[npc.hands]拽住[npc2.her][npc2.antennae+]，"
+										+ "然后粗暴地将[npc2.her]的头向后拽，使得[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 				default: // For dom normal, sub normal, and sub eager:
 					if(vaginalSex || analSex) {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.antennae+] in each [npc.hand], and, while continuing to rhythmically pump [npc.her] [npc.cock] in and out of [npc2.her] [npc2."+tag+"+],"
-										+ " [npc.she] steadily [npc.verb(pull)] back, causing [npc2.name] to lift [npc2.her] head and let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.antennae+] with both [npc.hands], [npc.name] simultaneously [npc.verb(pull)] [npc2.her] head back while thrusting [npc.her] [npc.cock+] deep into [npc2.her] [npc2."+tag+"],"
-										+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily giggling":" grunting")+" in pleasure as [npc2.name] [npc2.verb(let)] out [npc2.moan+].",
-								"Continuing to energetically thrust [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2."+tag+"+], [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a firm hold of [npc2.her] [npc2.antennae+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]牢牢揪住[npc2.namePos][npc2.antennae+]，继续在[npc2.her][npc2."+tag+"+]间有节奏地抽送着[npc.her]的[npc.cock]，"
+										+ "[npc.she]缓缓抽出，引得[npc2.name]昂起头，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hands]牢牢拽住[npc2.namePos][npc2.antennae+]，边向后拉[npc2.her]的头，边把[npc.cock+]尽根深埋进[npc2."+tag+"]，"
+										+(Main.sex.getCharacterPerformingAction().isFeminine()?"快乐地狂笑着":"低声哼叫着")+"，[npc2.name]发出[npc2.moan+]。",
+								"[npc.name]继续将[npc.cock+]大力操进[npc2.namePos][npc2."+tag+"+]，插进拔出。[npc.her]双[npc.hands]牢牢攥住[npc2.her][npc2.antennae+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 						
 					} else {
 						return UtilText.returnStringAtRandom(
-								"Reaching forwards, [npc.name] firmly [npc.verb(take)] hold of [npc2.namePos] [npc2.antennae+] in each [npc.hand], before steadily pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].",
-								"Taking a firm hold of [npc2.namePos] [npc2.antennae+] with both [npc.hands], [npc.name] "+(Main.sex.getCharacterPerformingAction().isFeminine()?" happily [npc.verb(giggle)]":" [npc.verb(chuckle)]")
-									+" in pleasure as [npc.she] [npc.verb(pull)] [npc2.her] head back, causing [npc2.herHim] to let out [npc2.moan+].",
-								"Tracing [npc.her] [npc.fingers+] up the length of [npc2.namePos] back, [npc.name] [npc.verb(reach)] forwards with two [npc.hands] and [npc.verb(take)] a firm hold of [npc2.her] [npc2.antennae+],"
-										+ " before pulling [npc2.her] head back and causing [npc2.herHim] to let out [npc2.a_moan+].");
+								"[npc.name]伸[npc.hand]牢牢攥住[npc2.namePos][npc2.antennae+]。[npc2.namePos]逐渐后仰，发出[npc2.a_moan+]。",
+								"[npc.name]双[npc.hand]牢牢攥住[npc2.namePos][npc2.antennae+]，[npc.name]"+(Main.sex.getCharacterPerformingAction().isFeminine()?"愉悦地笑着":"轻笑着")
+									+"，[npc.she]愉悦地向后拉[npc2.her]的头，引得[npc2.herHim]发出[npc2.moan+]。",
+								"[npc.namePos][npc.fingers+]抚上[npc2.namePos]的背，双[npc.hands]牢牢地拉住[npc2.her][npc2.antennae+]，"
+										+ "然后将[npc2.her]的头向回拉，使[npc2.herHim]发出[npc2.a_moan+]。");
 					}
 			}
 		}
@@ -641,11 +641,11 @@ public class DoggyStyleAndProneBone {
 		
 		@Override
 		public String getActionTitle() {
-			return "Seductive look";
+			return "抛媚眼";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Turn your head back and give [npc2.name] a seductive look.";
+			return "你转过头，摄人心魄地看向[npc2.name]。";
 		}
 		
 		@Override
@@ -658,21 +658,21 @@ public class DoggyStyleAndProneBone {
 			if(Main.sex.getCharacterPerformingAction().getSubspecies()==Subspecies.getSubspeciesFromId("innoxia_raptor_subspecies_owl")
 					&& Main.sex.getCharacterPerformingAction().getFaceType().getRace()==Race.getRaceFromId("innoxia_raptor")) {
 				return UtilText.returnStringAtRandom(
-						"In a rather creepy and alarming move, [npc.name] [npc.verb(use)] the mobility of [npc.her] owl-like neck to twist [npc.her] head a full one hundred and eighty degrees,"
-								+ " before looking up at [npc2.name] and putting on [npc.her] most seductive look as [npc.she] [npc.verb(entice)] [npc2.herHim] to use [npc.herHim].",
-						"Fully twisting [npc.her] owl-like neck around, [npc.name] [npc.verb(end)] up looking straight up at [npc2.name] as [npc2.she] [npc2.verb(tower)] over [npc.her] [npc.ass+]."
-								+ " Hoping that this alarming and slightly creepy move won't prove to be a turn-off, [npc.name] [npc.verb(put)] on a seductive look,"
-								+ " [npc.moaning] in delight as [npc.she] [npc.verb(entice)] [npc2.name] into using [npc.her] body.",
-						"Making use of the large range of movement which [npc.her] owl-like neck grants [npc.herHim], [npc.name] [npc.verb(turn)] [npc.her] head fully around so that [npc.sheIs] facing [npc2.name] without moving [npc.her] body,"
-								+ " before doing [npc.her] best to look as seductive as possible.");
+						"[npc.Name]利用[npc.her]鸮一般的脖子的柔韧性，以一种令人毛骨悚然又惊恐万分的方式，把头完整地向后转了180度，"
+								+ "[npc.she]抬头看着[npc2.name]，摆出最诱人的样子，引诱[npc2.herHim]使用自己。",
+						"[npc.name]扭了一整圈[npc.her]鸮般的脖子，最终抬头直直地看向[npc2.name]。后者正压住[npc.her][npc.ass+]。"
+								+ "[npc.Name]希望这个令人毛骨悚然又惊恐万分的举动不会让对方偃旗息鼓，又投射出摄人心魄的眼神，"
+								+ "[npc.she]愉悦地[npc.moaning]，引诱[npc2.name]使用[npc.her]的身体。",
+						"[npc.Name]利用鸮一般的脖子赋予[npc.herHim]的大范围移动能力，将头完全转过来，不动身体就可以与[npc2.name]面对面，"
+								+ "[npc.her]尽量使自己看起来迷人。");
 				
 			} else {
 				return UtilText.returnStringAtRandom(
-						"Turning [npc.her] head back, [npc.name] [npc.verb(look)] up at [npc2.name] and [npc.verb(bite)] [npc.her] [npc.lip], putting on [npc.her] most seductive look as [npc.she] [npc.verb(entice)] [npc2.herHim] to use [npc.herHim].",
-						"Looking back at [npc2.name] as [npc2.she] [npc2.verb(tower)] over [npc.her] [npc.ass+], [npc.name] [npc.verb(put)] on a seductive look,"
-								+ " [npc.moaning] in delight as [npc.she] [npc.verb(entice)] [npc2.herHim] into using [npc.her] body.",
-						"[npc.Name] [npc.verb(turn)] [npc.her] head and [npc.verb(bite)] [npc.her] [npc.lip] at [npc2.name], doing [npc.her] best to look as seductive as possible.",
-						"Looking back, [npc.name] [npc.verb(put)] on a seductive look for [npc2.name], feeling extremely pleased with [npc.herself] as [npc.she] [npc.verb(see)] [npc2.herHim] gazing hungrily down at [npc.herHim] in return.");
+						"[npc.name]转过头看向[npc2.name]，咬了咬[npc.lip]，投射出最摄人心魄的眼神，引诱[npc2.herHim]来使用[npc.herHim]。",
+						"[npc2.name]俯视着[npc.her][npc.ass+]，[npc.name]回过头，露出诱人的表情，"
+								+ "[npc.she]愉悦地[npc.moaning]，引诱[npc2.name]使用[npc.her]的身体。",
+						"[npc.name]转过头，对着[npc2.name]咬了咬[npc.lip]，尽力投射出摄人心魄的眼神。",
+						"[npc.name]转过头，对[npc2.name]投射出摄人心魄的眼神。[npc.she]看到[npc2.herHim]饥渴地回望着自己，心中极为满意。");
 			}
 		}
 	};
@@ -715,14 +715,14 @@ public class DoggyStyleAndProneBone {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Ass-to-mouth";
+			return "先肛后嘴";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isWearingCondom()) {
-				return "Roughly fuck [npc2.name] into the floor before filling your condom with your cum. Then slide it off and use [npc2.her] mouth to clean yourself off.";
+				return "你粗暴地操到[npc2.name]伏在地上，在避孕套里射满精液，摘下它，让[npc2.her]给你舔干净。";
 			}
-			return "Roughly fuck [npc2.name] into the floor before filling [npc2.her] [npc2.ass] with your cum. Then use [npc2.her] mouth to clean yourself off.";
+			return "你粗暴地操到[npc2.name]伏在地上，射在[npc2.ass]里，抽出肉棒，让[npc2.her]给你舔干净。";
 		}
 		@Override
 		public String getDescription() {
@@ -731,115 +731,115 @@ public class DoggyStyleAndProneBone {
 
 			StringBuilder sb = new StringBuilder();
 			
-			sb.append("As [npc.name] [npc.verb(feel)] [npc2.namePos] [npc2.asshole+] squeezing down around [npc.her] [npc.cock+], [npc.she] [npc.verb(decide)] to show [npc2.herHim] how"
+			sb.append("[npc.name]感觉[npc2.namePos][npc2.asshole+]箍弄着[npc.her][npc.cock+]，便决定让[npc2.herHim]看看"
 						+ (Main.sex.getCharacterPerformingAction().getRace()==Race.WOLF_MORPH || Main.sex.getCharacterPerformingAction().getRace()==Race.DOG_MORPH
-							?" an alpha treats their submissive little beta. "
-							:" a real dom treats their submissive bitch. "));
+							?"阿尔法对待他们驯服的小贝塔。"
+							:"真正的支配者对待他们顺从的婊子。"));
 			
 			if(immobileSleep) {
-				sb.append("Letting out [npc.a_moan+], [npc.name] [npc.verb(slam)] [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.ass+], grinning devilishly as [npc2.she] [npc2.verb(wake)] up and [npc2.verb(let)] out [npc2.a_moan+].");
+				sb.append("[npc.Name]发出[npc.a_moan+]，将[npc.cock+]尽根没入[npc2.namePos][npc2.ass+]，邪魅地咧嘴笑着，看着[npc2.she]醒来后发出[npc2.a_moan+]。");
 			} else if(immobile) {
-				sb.append("Letting out [npc.a_moan+], [npc.name] [npc.verb(slam)] [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.ass+], grinning devilishly as [npc2.she] [npc2.verb(continue)] acting like an inanimate sex doll.");
+				sb.append("[npc.name]发出[npc.a_moan+]，将[npc.cock+]尽根没入[npc2.namePos][npc2.ass+]，邪魅地咧嘴笑着，而[npc2.she]继续像无生命的性爱玩偶一样一动不动。");
 			} else {
-				sb.append("Letting out [npc.a_moan+], [npc.name] [npc.verb(slam)] [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.ass+], grinning devilishly as [npc2.she] [npc2.verb(let)] out [npc2.a_moan+].");
+				sb.append("[npc.name]发出[npc.a_moan+]，将[npc.cock+]尽根没入[npc2.namePos][npc2.ass+]，邪魅地咧嘴笑着，[npc2.name]发出[npc2.a_moan+]。");
 			}
 			
 			sb.append("<br/><br/>");
 
 			boolean isDoggyStyle = Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.BEHIND_ALL_FOURS);
 			if(immobile) {
-				sb.append("Reaching down, [npc.she] then [npc.verb(grab)] [npc2.namePos] shoulders, before pushing [npc.her] weight down onto [npc2.her] back as [npc.she] roughly [npc.verb(mount)] [npc2.herHim]."
-						+ " With [npc.namePos] weight now on top of [npc2.herHim], [npc2.name]"
+				sb.append("[npc.she]向下探身，抓住[npc2.namePos]的肩膀，整个身子的重量压在[npc2.her]背上。[npc.she]粗暴地伏在[npc2.herHim]身上。"
+						+ "随着[npc.namePos]的重量压在[npc2.herHim]身上，[npc2.name]"
 						+ (isDoggyStyle
-								?" [npc2.verb(collapse)] down onto [npc2.her] front"
-								:" is squished beneath [npc.herHim]")
-						+ " and [npc2.verb(remain)] silent and unmoving as [npc2.sheIs] put in such a submissive position."
-						+ " Bending down, and with [npc.her] throbbing [npc.cock] still hilted in [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(growl)] menacingly in [npc2.her] [npc2.ear], "
-								+ "[npc.speech(You dumb doll! All you're good for is being my sex toy cock-sleeve!)]");
+								?"被迫俯卧在地，"
+								:"被压在[npc.herHim]下面，")
+						+ "保持着沉默和静止，处于完全顺从的姿态。"
+						+ "[npc.name]弯下身，悸动的[npc.cock]仍操在[npc2.namePos][npc2.asshole+]里，[npc.she]冲着[npc2.her]的[npc2.ear]压制性地咆哮，"
+								+ "[npc.speech(你这个蠢玩偶！你只配做我的性玩具鸡巴套子！)]");
 			} else {
-				sb.append("Reaching down, [npc.she] then [npc.verb(grab)] [npc2.namePos] shoulders, before pushing [npc.her] weight down onto [npc2.her] back as [npc.she] roughly [npc.verb(mount)] [npc2.herHim]."
-						+ " With [npc.namePos] weight now on top of [npc2.herHim], [npc2.name]"
+				sb.append("[npc.she]向下探身，抓住[npc2.namePos]的肩膀，整个身子的重量压在[npc2.her]背上。[npc.she]粗暴地伏在[npc2.herHim]身上。"
+						+ "随着[npc.namePos]的重量压在[npc2.herHim]身上，[npc2.name]"
 						+ (isDoggyStyle
-								?" [npc2.verb(collapse)] down onto [npc2.her] front with [npc2.a_moan+]."
-								:" is squished beneath [npc.herHim] and [npc2.verb(let)] out [npc2.a_moan+].")
-						+ " Bending down, and with [npc.her] throbbing [npc.cock] still hilted in [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(growl)] menacingly in [npc2.her] [npc2.ear], "
-								+ "[npc.speech(You little bitch! All you're good for is being my slutty cock-sleeve!)]");
+								?"发出[npc2.a_moan+]，被迫俯卧在地。"
+								:"发出[npc2.a_moan+]，被压在[npc.herHim]下面。")
+						+ "[npc.name]弯下身，悸动的[npc.cock]仍操在[npc2.namePos][npc2.asshole+]里，[npc.she]冲着[npc2.her]的[npc2.ear]压制性地咆哮，"
+								+ "[npc.speech(你这个小婊子！你只能乖乖做我的鸡巴套哦！)]");
 			}
 			
 			sb.append("<br/><br/>");
 
 			if(immobile) {
-				sb.append("Even these degrading words aren't enough to break [npc2.namePos] performance, and [npc2.she] remains totally immobile as [npc.namePos] orgasm crashes over [npc.herHim].");
+				sb.append("即使是这些有辱人格的话语也不能打断[npc2.namePos]，[npc2.she]仍然完全一动不动，[npc.namePos]承受着高潮的冲刷。");
 			} else {
-				sb.append("Upon hearing those degrading words, [npc2.Name] [npc2.verb(let)] out another [npc2.moan+], which is enough to send [npc.name] over the edge.");
+				sb.append("[npc2.name]听到这些侮辱之语，发出[npc2.moan+]，却更使[npc.Name]快要去了。" );
 			}
-			sb.append(" As [npc.she] [npc.verb(grind)] [npc2.namePos] [npc2.face+] into the floor, [npc.name] [npc.verb(reach)] [npc.her] climax, and as [npc.her] [npc.balls+] tense up");
+			sb.append("[npc.name]把[npc2.namePos][npc2.face+]按在地上蹭，达到了高潮，[npc.balls+]骤然缩紧");
 			
 			switch (Main.sex.getCharacterPerformingAction().getPenisOrgasmCumQuantity()) {
 				case ZERO_NONE:
-					sb.append(", [npc.she] [npc.verb(realise)] that [npc.she] [npc.is]n't able to produce even one drop of cum, somewhat lessening the impact of [npc.her] dominant display.");
+					sb.append("，[npc.she]发现自己甚至连一滴都射不出来，[npc.her]的支配性减弱了。");
 					break;
 				case ONE_TRICKLE:
-					sb.append(", a small trickle of [npc.cum+] squirts");
+					sb.append("，射出几滴[npc.cum+]");
 					break;
 				case TWO_SMALL_AMOUNT:
-					sb.append(", a small amount of [npc.cum+] squirts");
+					sb.append("，喷出少量[npc.cum+]");
 					break;
 				case THREE_AVERAGE:
-					sb.append(", [npc.her] [npc.cum+] shoots");
+					sb.append("，射出[npc.cum+]");
 					break;
 				case FOUR_LARGE:
-					sb.append(", [npc.her] [npc.cum+] shoots");
+					sb.append("，射出[npc.cum+]");
 					break;
 				case FIVE_HUGE:
-					sb.append(", [npc.her] huge load of [npc.cum+] blasts out");
+					sb.append("，大量[npc.cum+]尽数射出");
 					break;
 				case SIX_EXTREME:
-					sb.append(", [npc.her] massive load of [npc.cum+] blasts out");
+					sb.append("，巨量[npc.cum+]尽数射出");
 					break;
 				case SEVEN_MONSTROUS:
-					sb.append(", [npc.her] enormous load of [npc.cum+] explodes out");
+					sb.append("，极巨量[npc.cum+]尽数射出");
 					break;
 			}
 			
 			if(Main.sex.getCharacterPerformingAction().getPenisOrgasmCumQuantity()!=CumProduction.ZERO_NONE) {
 				if(Main.sex.getCharacterPerformingAction().isWearingCondom()) {
-					sb.append(" into the condom that [npc.sheIs] wearing.");
+					sb.append("，落在了避孕套里。");
 				} else {
-					sb.append(" deep into [npc2.namePos] [npc2.asshole+].");
+					sb.append("，灌进[npc2.namePos][npc2.asshole+]。");
 				}
 			}
 
 			if (Main.sex.getCharacterPerformingAction().getVaginaType() != VaginaType.NONE) {
 				sb.append("<br/><br/>");
-				sb.append("As [npc.name] [npc.verb(slide)] [npc.her] still-throbbing shaft out from [npc2.namePos] well-used [npc2.ass], [npc.she] [npc.verb(feel)] a second orgasm building deep in [npc.her] groin."
-						+ " Grabbing [npc2.namePos] hips to brace [npc.herself], [npc.name] [npc.verb(clench)] [npc.her] thighs together as [npc.her] [npc.pussy+] shudders and quivers."
-						+ " A mind-splitting orgasm washes through [npc.herHim], and [npc.name] [npc.moanVerb] in delight as [npc.her] feminine sex joins in on the fun.");
+				sb.append("[npc.Name]将仍在悸动的肉棒从[npc2.namePos]被操透的[npc2.ass]里抽出，感到第二次高潮的预兆在下体翻涌。"
+						+ "[npc.Name]抓住[npc2.namePos]的屁股，撑起自己，[npc.her]夹紧大腿，[npc.pussy+]一缩一缩。"
+						+ "经久不绝的高潮冲刷着[npc.Name]，[npc.herHim]愉悦地[npc.moanVerb]，完全沉浸在雌性器的欢愉中。");
 				
 			} else {
 				sb.append("<br/><br/>");
-				sb.append("As [npc.name] [npc.verb(slide)] [npc.her] still-throbbing shaft out from [npc2.namePos] well-used [npc2.ass], [npc.she] [npc.verb(grin)] down at the mess [npc.sheHas] made of [npc2.herHim].");
+				sb.append("[npc.Name]将仍在悸动的肉棒从[npc2.namePos]被操透的[npc2.ass]里抽出，[npc.she]向下看，发现[npc2.herHim]被操得乱七八糟。");
 			}
 
 			sb.append("<br/><br/>");
 			
-			sb.append("Panting heavily, [npc.name] suddenly [npc.verb(remember)] what [npc.she] had planned, and [npc.verb(shuffle)] around to where [npc2.namePos] face is still collapsed down against the floor."
+			sb.append("[npc.Name]呼哧呼哧喘着气，突然想起自己的计划，便又绕到与地相亲着的[npc2.namePos]身旁。" 
 					+ (Main.sex.getCharacterTargetedForSexAction(this).hasHair()
-							?" Reaching down, [npc.she] roughly [npc.verb(grab)] a fistful of [npc2.namePos] [npc2.hair+],"
-							:" Reaching down, [npc.she] roughly [npc.verb(grab)] [npc2.namePos] neck,")
-					+(immobile?" and ":" and before [npc2.she] [npc2.has] a chance to react, [npc.she]")
-					+" [npc.verb(shove)] [npc2.her] [npc2.face+] down onto [npc.her] [npc.cock+].");
+							?"[npc.she]向下探身，粗暴地攥住一把[npc2.namePos][npc2.hair+]，"
+							:"[npc.she]向下探身，粗暴地抓住[npc2.namePos]的脖子，")
+					+(immobile?"":"[npc2.name]还没来得及反应，[npc.she]就")
+					+"将[npc2.her][npc2.face+]压到[npc.her][npc.cock+]上。");
 			
 			if(immobile) {
-				sb.append(" [npc2.Name] [npc2.do]n't react in any way at all as "+(Main.sex.getCharacterPerformingAction().isPlayer()?"you":"[npc2.her] dominant partner")+" [npc.verb(give)] [npc2.herHim] a taste of [npc2.her] own [npc2.ass],"
-							+ " and, holding [npc2.herHim] tightly in position, [npc.she] [npc.moansVerb+] as [npc.she] [npc.verb(use)] [npc2.namePos] mouth to clean [npc.herself] off."
+				sb.append("[npc2.Name]毫无反应，"+(Main.sex.getCharacterPerformingAction().isPlayer()?"你":"[npc2.her]的支配伴侣")+"让[npc2.herHim]尝了尝自己[npc2.ass]的味道，"
+							+ "[npc.she]牢牢将[npc2.herHim]按在原处，[npc.moansVerb+]着，让[npc2.namePos]用嘴给[npc.herHim]清理干净。"
 						+ "<br/><br/>"
-						+ "After a minute of using [npc2.name] in this manner, [npc.name] finally [npc.verb(release)] [npc2.herHim], before smirking down at [npc2.herHim] and wondering what to do to [npc2.herHim] next...");
+						+ "[npc.Name]这样用了一会[npc2.name]，然后放开了[npc2.herHim]，对[npc2.herHim]笑了笑，想着接下来做什么……");
 			} else {
-				sb.append(" [npc2.Name] [npc2.moansVerb] and [npc2.verb(squirm)] as "+(Main.sex.getCharacterPerformingAction().isPlayer()?"you":"[npc2.her] dominant partner")+" [npc.verb(give)] [npc2.herHim] a taste of [npc2.her] own [npc2.ass],"
-							+ " and, holding [npc2.herHim] tightly in position, [npc.she] [npc.moansVerb+] as [npc2.her] frantic [npc2.tongue] cleans [npc.herHim] off."
+				sb.append("[npc2.Name]边[npc2.moansVerb]边来回扭动，"+(Main.sex.getCharacterPerformingAction().isPlayer()?"你":"[npc2.her]的支配伴侣")+"让[npc2.her]尝了尝自己[npc2.ass]的味道，" 
+							+ "[npc.she]牢牢将[npc2.herHim]按在原处，[npc.moansVerb+]着，让[npc2.name]用灵巧的[npc2.tongue]给[npc.herHim]清理干净。"
 						+ "<br/><br/>"
-						+ "After a minute of using [npc2.name] in this manner, [npc.name] finally [npc.verb(release)] [npc2.herHim], and with a deep gasp, [npc2.she] [npc2.verb(collapse)] to the floor, completely exhausted from the dominant treatment.");
+						+ "[npc.Name]这样用了一会[npc2.name]，最终放开了[npc2.herHim]。[npc2.she]长出了一口气，瘫倒在地，完全被强硬的对待玩坏了。");
 			}
 
 			return sb.toString();
@@ -895,14 +895,14 @@ public class DoggyStyleAndProneBone {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Pussy-to-mouth";
+			return "先穴后嘴";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isWearingCondom()) {
-				return "Roughly fuck [npc2.name] into the floor before filling your condom with your cum. Then slide it off and use [npc2.her] mouth to clean yourself off.";
+				return "你粗暴地操到[npc2.name]伏在地上，在避孕套里射满精液，摘下它，让[npc2.her]给你舔干净。";
 			}
-			return "Roughly fuck [npc2.name] into the floor before filling [npc2.her] [npc2.pussy] with your cum. Then use [npc2.her] mouth to clean yourself off.";
+			return "你粗暴地操到[npc2.name]伏在地上，射在[npc2.pussy]里，抽出肉棒，让[npc2.her]给你舔干净。";
 		}
 		@Override
 		public String getDescription() {
@@ -911,115 +911,115 @@ public class DoggyStyleAndProneBone {
 
 			StringBuilder sb = new StringBuilder();
 			
-			sb.append("As [npc.name] [npc.verb(feel)] [npc2.namePos] [npc2.pussy+] squeezing down around [npc.her] [npc.cock+], [npc.she] [npc.verb(decide)] to show [npc2.herHim] how"
+			sb.append("[npc.Name]感觉[npc2.namePos][npc2.pussy+]箍住[npc.her][npc.cock+]，便决定让[npc2.herHim]看看" 
 						+ (Main.sex.getCharacterPerformingAction().getRace()==Race.WOLF_MORPH || Main.sex.getCharacterPerformingAction().getRace()==Race.DOG_MORPH
-							?" an alpha treats their submissive little beta. "
-							:" a real dom treats their submissive bitch. "));
+							?"阿尔法对待他们驯服的小贝塔。"
+							:"真正的支配者对待他们顺从的婊子。"));
 			
 			if(immobileSleep) {
-				sb.append("Letting out [npc.a_moan+], [npc.name] [npc.verb(slam)] [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.pussy+], grinning devilishly as [npc2.she] [npc2.verb(wake)] up and [npc2.verb(let)] out [npc2.a_moan+].");
+				sb.append("[npc.Name]发出[npc.a_moan+]，将[npc.cock+]尽根没入[npc2.namePos][npc2.pussy+]，邪魅地咧嘴笑着，看着[npc2.she]醒来后发出[npc2.a_moan+]。");
 			} else if(immobile) {
-				sb.append("Letting out [npc.a_moan+], [npc.name] [npc.verb(slam)] [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.pussy+], grinning devilishly as [npc2.she] [npc2.verb(continue)] acting like an inanimate sex doll.");
+				sb.append("[npc.name]发出[npc.a_moan+]，将[npc.cock+]尽根没入[npc2.namePos][npc2.pussy+]，邪魅地咧嘴笑着，而[npc2.she]继续像无生命的性爱玩偶一样一动不动。");
 			} else {
-				sb.append("Letting out [npc.a_moan+], [npc.name] [npc.verb(slam)] [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.pussy+], grinning devilishly as [npc2.she] [npc2.verb(let)] out [npc2.a_moan+].");
+				sb.append("[npc.Name]发出[npc.a_moan+]，将[npc.cock+]尽根没入[npc2.namePos][npc2.pussy+]，邪魅地咧嘴笑着，[npc2.name]发出[npc2.a_moan+]。" );
 			}
 			
 			sb.append("<br/><br/>");
 
 			boolean isDoggyStyle = Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.BEHIND_ALL_FOURS);
 			if(immobile) {
-				sb.append("Reaching down, [npc.she] then [npc.verb(grab)] [npc2.namePos] shoulders, before pushing [npc.her] weight down onto [npc2.her] back as [npc.she] roughly [npc.verb(mount)] [npc2.herHim]."
-						+ " With [npc.namePos] weight now on top of [npc2.herHim], [npc2.name]"
+				sb.append("[npc.she]向下探身，抓住[npc2.namePos]的肩膀，整个身子的重量压在[npc2.her]背上。[npc.she]粗暴地伏在[npc2.herHim]身上。"
+						+ "随着[npc.namePos]的重量压在[npc2.herHim]身上，[npc2.name]"
 						+ (isDoggyStyle
-								?" [npc2.verb(collapse)] down onto [npc2.her] front"
-								:" is squished beneath [npc.herHim]")
-						+" and [npc2.verb(remain)] silent and unmoving as [npc2.sheIs] put in such a submissive position."
-						+ " Bending down, and with [npc.her] throbbing [npc.cock] still hilted in [npc2.namePos] [npc2.pussy+], [npc.name] [npc.verb(growl)] menacingly in [npc2.her] [npc2.ear], "
-								+ "[npc.speech(You dumb doll! All you're good for is being my sex toy cock-sleeve!)]");
+								?"被迫俯卧在地，"
+								:"被压在[npc.herHim]下面，")
+						+"保持着沉默和静止，处于完全顺从的姿态。"
+						+ "[npc.Name]俯下身，悸动的[npc.cock]仍然被[npc2.namePos][npc2.pussy+]含住，[npc.her]在[npc2.her][npc2.ear]边耀武扬威，"
+								+ "[npc.speech(你这个蠢玩偶！你只配做我的性玩具鸡巴套子！)]");
 			} else {
-				sb.append("Reaching down, [npc.she] then [npc.verb(grab)] [npc2.namePos] shoulders, before pushing [npc.her] weight down onto [npc2.her] back as [npc.she] roughly [npc.verb(mount)] [npc2.herHim]."
-						+ " With [npc.namePos] weight now on top of [npc2.herHim], [npc2.name] "
+				sb.append("[npc.she]向下探身，抓住[npc2.namePos]的肩膀，整个身子的重量压在[npc2.her]背上。[npc.she]粗暴地伏在[npc2.herHim]身上。"
+						+ "随着[npc.namePos]的重量压在[npc2.herHim]身上，[npc2.name]"
 						+ (isDoggyStyle
-								?" [npc2.verb(collapse)] down onto [npc2.her] front with [npc2.a_moan+]."
-								:" is squished beneath [npc.herHim] and [npc2.verb(let)] out [npc2.a_moan+].")
-						+ " Bending down, and with [npc.her] throbbing [npc.cock] still hilted in [npc2.namePos] [npc2.pussy+], [npc.name] [npc.verb(growl)] menacingly in [npc2.her] [npc2.ear], "
-								+ "[npc.speech(You little bitch! All you're good for is being my slutty cock-sleeve!)]");
+								?"发出[npc2.a_moan+]，被迫俯卧在地。"
+								:"发出[npc2.a_moan+]，被压在[npc.herHim]下面。")
+						+ "[npc.Name]俯下身，悸动的[npc.cock]仍然被[npc2.namePos][npc2.pussy+]含住，[npc.her]在[npc2.her][npc2.ear]边耀武扬威，"
+								+ "[npc.speech(你这个小婊子！你只能乖乖做我的鸡巴套哦！)]");
 			}
 			
 			sb.append("<br/><br/>");
 
 			if(immobile) {
-				sb.append("Even these degrading words aren't enough to break [npc2.namePos] performance, and [npc2.she] remains totally immobile as [npc.namePos] orgasm crashes over [npc.herHim].");
+				sb.append("即使是这些有辱人格的话语也不能打断[npc2.namePos]，[npc2.she]仍然完全一动不动，[npc.namePos]承受着高潮的冲刷。");
 			} else {
-				sb.append("Upon hearing those degrading words, [npc2.Name] [npc2.verb(let)] out another [npc2.moan+], which is enough to send [npc.name] over the edge.");
+				sb.append("[npc2.name]听到这些侮辱之语，发出[npc2.moan+]，却更使[npc.Name]快要去了。" );
 			}
-			sb.append(" As [npc.she] [npc.verb(grind)] [npc2.namePos] [npc2.face+] into the floor, [npc.name] [npc.verb(reach)] [npc.her] climax, and as [npc.her] [npc.balls+] tense up");
+			sb.append("[npc.name]把[npc2.namePos][npc2.face+]按在地上蹭，达到了高潮，[npc.balls+]骤然缩紧");
 			
 			switch (Main.sex.getCharacterPerformingAction().getPenisOrgasmCumQuantity()) {
 				case ZERO_NONE:
-					sb.append(", [npc.she] [npc.verb(realise)] that [npc.she] [npc.is]n't able to produce even one drop of cum, somewhat lessening the impact of [npc.her] dominant display.");
+					sb.append("，[npc.she]发现自己甚至连一滴都射不出来，[npc.her]的支配性减弱了。");
 					break;
 				case ONE_TRICKLE:
-					sb.append(", a small trickle of [npc.cum+] squirts");
+					sb.append("，射出几滴[npc.cum+]");
 					break;
 				case TWO_SMALL_AMOUNT:
-					sb.append(", a small amount of [npc.cum+] squirts");
+					sb.append("，喷出少量[npc.cum+]");
 					break;
 				case THREE_AVERAGE:
-					sb.append(", [npc.her] [npc.cum+] shoots");
+					sb.append("，射出[npc.cum+]");
 					break;
 				case FOUR_LARGE:
-					sb.append(", [npc.her] [npc.cum+] shoots");
+					sb.append("，射出[npc.cum+]");
 					break;
 				case FIVE_HUGE:
-					sb.append(", [npc.her] huge load of [npc.cum+] blasts out");
+					sb.append("，大量[npc.cum+]尽数射出");
 					break;
 				case SIX_EXTREME:
-					sb.append(", [npc.her] massive load of [npc.cum+] blasts out");
+					sb.append("，巨量[npc.cum+]尽数射出");
 					break;
 				case SEVEN_MONSTROUS:
-					sb.append(", [npc.her] enormous load of [npc.cum+] explodes out");
+					sb.append("，极巨量[npc.cum+]尽数射出");
 					break;
 			}
 			
 			if(Main.sex.getCharacterPerformingAction().getPenisOrgasmCumQuantity()!=CumProduction.ZERO_NONE) {
 				if(Main.sex.getCharacterPerformingAction().isWearingCondom()) {
-					sb.append(" into the condom that [npc.sheIs] wearing.");
+					sb.append("，落在了避孕套里。");
 				} else {
-					sb.append(" deep into [npc2.namePos] [npc2.pussy+].");
+					sb.append("，灌进[npc2.namePos][npc2.pussy+]。");
 				}
 			}
 
 			if (Main.sex.getCharacterPerformingAction().getVaginaType() != VaginaType.NONE) {
 				sb.append("<br/><br/>");
-				sb.append("As [npc.name] [npc.verb(slide)] [npc.her] still-throbbing shaft out from [npc2.namePos] well-used [npc2.pussy], [npc.she] [npc.verb(feel)] a second orgasm building deep in [npc.her] groin."
-						+ " Grabbing [npc2.namePos] hips to brace [npc.herself], [npc.name] [npc.verb(clench)] [npc.her] thighs together as [npc.her] [npc.pussy+] shudders and quivers."
-						+ " A mind-splitting orgasm washes through [npc.herHim], and [npc.name] [npc.moanVerb] in delight as [npc.her] feminine sex joins in on the fun.");
+				sb.append( "[npc.Name]将仍在悸动的肉棒从[npc2.namePos]被操透的[npc2.pussy]中抽出，[npc.she]感到第二波高潮涌上下体。"
+						+ "[npc.Name]抓住[npc2.namePos]的屁股，撑起自己，[npc.her]夹紧大腿，[npc.pussy+]一缩一缩。"
+						+ "经久不绝的高潮冲刷着[npc.Name]，[npc.herHim]愉悦地[npc.moanVerb]，完全沉浸在雌性器的欢愉中。");
 				
 			} else {
 				sb.append("<br/><br/>");
-				sb.append("As [npc.name] [npc.verb(slide)] [npc.her] still-throbbing shaft out from [npc2.namePos] well-used [npc2.pussy], [npc.she] [npc.verb(grin)] down at the mess [npc.sheHas] made of [npc2.herHim].");
+				sb.append("[npc.Name]将仍在悸动的肉棒从[npc2.namePos]被操透的[npc2.pussy]里抽出，[npc.she]向下看，发现[npc2.herHim]被操得乱七八糟。");
 			}
 
 			sb.append("<br/><br/>");
 			
-			sb.append("Panting heavily, [npc.name] suddenly [npc.verb(remember)] what [npc.she] had planned, and [npc.verb(shuffle)] around to where [npc2.namePos] face is still collapsed down against the floor."
+			sb.append("[npc.Name]呼哧呼哧喘着气，突然想起自己的计划，便又绕到与地相亲着的[npc2.namePos]身旁。" 
 					+ (Main.sex.getCharacterTargetedForSexAction(this).hasHair()
-							?" Reaching down, [npc.she] roughly [npc.verb(grab)] a fistful of [npc2.namePos] [npc2.hair+],"
-							:" Reaching down, [npc.she] roughly [npc.verb(grab)] [npc2.namePos] neck,")
-					+(immobile?" and ":" and before [npc2.she] [npc2.has] a chance to react, [npc.she]")
-					+" [npc.verb(shove)] [npc2.her] [npc2.face+] down onto [npc.her] [npc.cock+].");
+							?"[npc.she]向下探身，粗暴地攥住一把[npc2.namePos][npc2.hair+]，"
+							:"[npc.she]向下探身，粗暴地抓住[npc2.namePos]的脖子，")
+					+(immobile?"":"[npc2.name]还没来得及反应，[npc.she]就")
+					+"将[npc2.her][npc2.face+]压到[npc.her][npc.cock+]上。");
 			
 			if(immobile) {
-				sb.append(" [npc2.Name] [npc2.do]n't react in any way at all as "+(Main.sex.getCharacterPerformingAction().isPlayer()?"you":"[npc2.her] dominant partner")+" [npc.verb(give)] [npc2.herHim] a taste of [npc2.her] own [npc2.pussy],"
-							+ " and, holding [npc2.herHim] tightly in position, [npc.she] [npc.moansVerb+] as [npc.she] [npc.verb(use)] [npc2.namePos] mouth to clean [npc.herself] off."
+				sb.append("[npc2.Name]毫无反应，"+(Main.sex.getCharacterPerformingAction().isPlayer()?"你":"[npc2.her]的支配伴侣")+"让[npc2.herHim]尝了尝自己[npc2.pussy]的味道，"
+							+ "[npc.she]牢牢将[npc2.herHim]按在原处，[npc.moansVerb+]着，让[npc2.namePos]用嘴给[npc.herHim]清理干净。"
 						+ "<br/><br/>"
-						+ "After a minute of using [npc2.name] in this manner, [npc.name] finally [npc.verb(release)] [npc2.herHim], before smirking down at [npc2.herHim] and wondering what to do to [npc2.herHim] next...");
+						+ "[npc.Name]这样用了一会[npc2.name]，然后放开了[npc2.herHim]，对[npc2.herHim]笑了笑，想着接下来做什么……");
 			} else {
-				sb.append(" [npc2.Name] [npc2.moansVerb] and [npc2.verb(squirm)] as "+(Main.sex.getCharacterPerformingAction().isPlayer()?"you":"[npc2.her] dominant partner")+" [npc.verb(give)] [npc2.herHim] a taste of [npc2.her] own [npc2.pussy],"
-							+ " and, holding [npc2.herHim] tightly in position, [npc.she] [npc.moansVerb+] as [npc2.her] frantic [npc2.tongue] cleans [npc.herHim] off."
+				sb.append("[npc2.Name]边[npc2.moansVerb]边来回扭动，"+(Main.sex.getCharacterPerformingAction().isPlayer()?"你":"[npc2.her]的支配伴侣")+"让[npc2.herHim]尝了尝自己[npc2.pussy]的味道，"
+							+ "[npc.she]牢牢将[npc2.herHim]按在原处，[npc.moansVerb+]着，让[npc2.name]用灵巧的[npc2.tongue]给[npc.herHim]清理干净。"
 						+ "<br/><br/>"
-						+ "After a minute of using [npc2.name] in this manner, [npc.name] finally [npc.verb(release)] [npc2.herHim], and with a deep gasp, [npc2.she] [npc2.verb(collapse)] to the floor, completely exhausted from the dominant treatment.");
+						+ "[npc.Name]这样用了一会[npc2.name]，最终放开了[npc2.herHim]。[npc2.she]长出了一口气，瘫倒在地，完全被强硬的对待玩坏了。");
 			}
 			
 			return sb.toString();

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>150</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[fullcup bra]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[fullcup bras]]></namePlural>
-		<description><![CDATA[A fullcup bra, it conceals a large portion of the wearer's breasts.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[全杯胸罩]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[全杯胸罩]]></namePlural>
+		<description><![CDATA[一种全杯胸罩，它能遮住佩戴者乳房的大部分面积。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -57,27 +57,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the bra over [npc.her] chest before fastening the straps at [npc.her] back.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the bra over [npc2.namePos] chest before fastening the straps at [npc2.her] back.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(place)] the bra over [npc2.namePos] chest before fastening the straps at [npc2.her] back.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将胸罩贴在[npc.her]的胸部上并将背带系在[npc.her]的后背上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将胸罩贴在[npc2.namePos]的胸部上并将背带系在[npc2.her]的后背上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将胸罩贴在[npc2.namePos]的胸部上并将背带系在[npc2.her]的后背上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unclasp)] [npc.her] bra and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unclasp)] [npc2.namePos] bra and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unclasp)] [npc2.namePos] bra and [npc.verb(yank)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]的胸罩并将其摘下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的胸罩并将其摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地解下了[npc2.namePos]的胸罩并将其扯下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

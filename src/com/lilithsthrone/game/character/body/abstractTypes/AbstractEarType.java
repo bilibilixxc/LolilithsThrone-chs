@@ -155,7 +155,7 @@ public abstract class AbstractEarType implements BodyPartTypeInterface {
 
 	@Override
 	public String getDeterminer(GameCharacter gc) {
-		return "a pair of";
+		return "一对";
 	}
 
 	@Override

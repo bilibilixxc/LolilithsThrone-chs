@@ -88,39 +88,39 @@ public class Properties {
 
 	public String badEndTitle = "";
 	
-	public int fontSize = 18;
+	public int fontSize = 15;
 	public int level = 1;
 	public long money = 0;
 	public int arcaneEssences = 0;
 	
 	// Taur furry options:
 	public static final String[] taurFurryLevelName = new String[] {
-			"Untouched",
-			"Human",
-			"Minimum",
-			"Lesser",
-			"Greater",
-			"Maximum"};
+			"不修改",
+			"人类",
+			"最低",
+			"较低",
+			"较多",
+			"完全"};
 	public static final String[] taurFurryLevelDescription = new String[] {
-			"If an NPC is generated as a taur, their upper body's furriness will be based on your furry preferences for their race.",
-			"If an NPC is generated as a taur, their upper body will always be completely human.",
-			"If an NPC is generated as a taur, they will always have the upper-body of a partial morph (so eyes, ears, horns, and antenna will be non-human).",
-			"If an NPC is generated as a taur, they will always have the upper-body of a partial morph (so eyes, ears, horns, and antenna will be non-human). They also have the chance to spawn with furry breasts and arms.",
-			"If an NPC is generated as a taur, they will always have the upper-body of a partial morph (so eyes, ears, horns, and antenna will be non-human). They also have the chance to spawn with furry breasts, arms, skin/fur, and faces.",
-			"If an NPC is generated as a taur, they will always have the upper-body of a greater morph, spawning in with furry ears, eyes, horns, antenna, breasts, arms, skin/fur, and face."};
+			"若NPC生成时为半兽身人，那么其上半身的福瑞程度会基于该种族的福瑞程度偏好。",
+			"若NPC生成时为半兽身人，那么其上半身的将会为完全的人类。",
+			"若NPC生成时为半兽身人，那么其上半身将总会是似化形(眼睛、耳朵、角和触须为非人类)。",
+			"若NPC生成时为半兽身人，那么其上半身将总会是似化形(眼睛、耳朵、角和触须为非人类)。还有可能拥有福瑞胸部和手臂。",
+			"若NPC生成时为半兽身人，那么其上半身将总会是似化形(眼睛、耳朵、角和触须为非人类)。还有可能拥有福瑞胸部、手臂、皮肤/皮毛和面部。",
+			"若NPC生成时为半兽身人，那么其上半身将总会是纯化形，拥有福瑞的眼睛、耳朵、角、触须、胸部、手臂、皮肤/皮毛和面部。"};
 	public int taurFurryLevel = 2;
 
 	// Offspring gender options:
 	public static final String[] offspringGenderName = new String[] {
-			"No offspring",
-			"Self-offspring",
-			"NPC-offspring",
-			"All offspring"};
+			"没有后代",
+			"玩家生育的后代",
+			"NPC生育的后代",
+			"所有后代"};
 	public static final String[] offspringGenderDescription = new String[] {
-			"The gender of all offspring birthed throughout the game by both NPCs and the player will use gender ratios which are derived from their race.",
-			"The gender of offspring birthed by the player will use the gender preferences that you've defined on this page. Offspring birthed by NPCs will use gender ratios which are derived from the offspring's race.",
-			"The gender of offspring birthed by NPCs will use the gender preferences that you've defined on this page. Offspring birthed by the player will use gender ratios which are derived from the offspring's race.",
-			"The gender of all offspring birthed throughout the game by both NPCs and the player will use the gender preferences that you've defined on this page."};
+			"游戏中由NPC或玩家生育的所有后代的性别都将依据其种族的原生性别比例来决定。",
+			"玩家所生育的后代性别将根据此页面上定义的性别偏好来决定。NPC所生育的后代性别将根据后代种族的原生性别比例来决定。",
+			"NPC所生育的后代性别将根据此页面上定义的性别偏好来决定。玩家所生育的后代性别将根据后代种族的原生性别比例来决定。",
+			"游戏中由NPC或玩家生育的所有后代的性别都将根据此页面上定义的性别偏好来决定。"};
 	public int offspringGenderLevel = 0;
 	
 	public int humanSpawnRate = 5;
@@ -128,51 +128,51 @@ public class Properties {
 	public int halfDemonSpawnRate = 5;
 	
 	public int multiBreasts = 1;
-	public static String[] multiBreastsLabels = new String[] {"Never", "Off", "Furry-only", "On"};
+	public static String[] multiBreastsLabels = new String[] {"永不", "关闭", "仅限福瑞", "开启"};
 	public static String[] multiBreastsDescriptions = new String[] {
-			"Randomly-generated NPCs will never have multiple rows of breasts, and most unique NPCs will no longer have multi-boobs."
-				+"<br/><i>Characters will no longer gain additional breasts via transformations.</i>",
+			"随机产生的NPC永远不会拥有多对乳房，且特殊NPC也不再拥有多对乳房。"
+				+"<br/><i>角色无法再通过转化添加乳房。</i>",
 				
-			"Randomly-generated NPCs will never have multiple rows of breasts."
-				+"<br/><i>Characters can always gain additional breasts via transformations after they've spawned.</i>",
+			"随机生成的NPC永远不会拥有多对乳房。"
+				+"<br/><i>但角色生成后依然可以通过转化获得额外的乳房。</i>",
 				
-			"Randomly-generated NPCs will only have multiple rows of breasts if they have furry skin. (Default setting.)"
-				+"<br/><i>Characters can always gain additional breasts via transformations after they've spawned.</i>",
+			"随机生成的NPC只有在拥有福瑞皮肤时才可能拥有多对乳房。(默认设置)"
+				+"<br/><i>但角色生成后依然可以通过转化获得额外的乳房。</i>",
 				
-			"Randomly-generated NPCs will have multiple rows of breasts if their breast type is furry (starts at 'Minor morph' level)."
-				+"<br/><i>Characters can always gain additional breasts via transformations after they've spawned.</i>"};
+			"随机生成的NPC若乳房类型为福瑞则会拥有多对乳房。(“轻微化形”以上时生效)"
+				+"<br/><i>角色生成后依然可以通过转化获得额外的乳房。</i>"};
 	
 	/** 0=off, 1=taur-only, 2=on*/
 	public int udders = 1;
-	public static String[] uddersLabels = new String[] {"Off", "Taur-only", "On"};
+	public static String[] uddersLabels = new String[] {"关闭", "仅限半兽身人", "开启"};
 	public static String[] uddersDescriptions = new String[] {
-			"Neither randomly-generated taurs nor anthro-morphs will ever have udders or crotch-boobs.",
-			"Randomly-generated NPCs will only have udders or crotch-boobs if they have a non-bipedal body. (Default setting.)",
-			"Randomly-generated greater-anthro-morphs, as well as taurs, will have udders and crotch boobs."};
+			"无论随机生成的半兽身人还是拟人化形都不会拥有腹乳和胯乳。",
+			"只有下半身为非双足配置时，随机生成的NPC才有可能拥有腹乳或胯乳。(默认设置)",
+			"随机生成的greater拟人化形(包括半兽身人)，都会拥有腹乳和胯乳。"};
 
 	/** 0=off, 1=weekly, 2=daily, 3=hourly*/
 	public int hairGrowth = 1;
 	
 	public int autoSaveFrequency = 0;
-	public static String[] autoSaveLabels = new String[] {"Always", "Daily", "Weekly"};
+	public static String[] autoSaveLabels = new String[] {"总是", "每日", "每周"};
 	public static String[] autoSaveDescriptions = new String[] {
-			"The game will autosave every time you transition to a new map.",
-			"The game will autosave when you transition to a new map, at a maximum rate of once per in-game day.",
-			"The game will autosave when you transition to a new map, at a maximum rate of once per in-game week."};
+			"每当你移动至新地图时，游戏都会自动存档。",
+			"当你移动至新地图时，游戏都会自动存档，每天仅限一次。",
+			"当你移动至新地图时，游戏都会自动存档，每周仅限一次。"};
 
 	public int bypassSexActions = 2;
-	public static String[] bypassSexActionsLabels = new String[] {"None", "Limited", "Full"};
+	public static String[] bypassSexActionsLabels = new String[] {"无", "有限", "完全"};
 	public static String[] getBypassSexActionsDescriptions = new String[] {
-			"There will be no options to bypass sex action corruption requirements, you are limited in your actions based on your corruption and fetishes.",
-			"Sex action corruption requirements may be bypassed if your corruption level is one level below the required corruption level of the action, but you will gain corruption if you do so.",
-			"All sex action corruption requirements may be bypassed, but you will gain corruption if you do so."};
+			"无法够绕过性动作的堕落需求，你会被限制使用当前堕落和性癖允许的动作。",
+			"如果你的堕落等级只比性动作需求的等级低一级，那就可以绕过限制，但使用该动作会导致你获得堕落。",
+			"所有性动作的堕落需求都可以被绕过，但使用该动作会导致你获得堕落。"};
 
 	public int fullExposureDescriptions = 2;
-	public static String[] fullExposureDescriptionsLabels = new String[] {"Never", "Once", "Always"};
+	public static String[] fullExposureDescriptionsLabels = new String[] {"从不", "第一次", "总是"};
 	public static String[] getFullExposureDescriptionsDescriptions = new String[] {
-			"Full descriptions for revealed body parts will never be shown during sex.",
-			"Full descriptions for revealed body parts will only be shown during sex if it's your first time seeing them.",
-			"Full descriptions for revealed body parts will always be shown during sex."};
+			"在性爱过程中，永远不会显示裸露身体部位的完整描述。",
+			"只在第一次看到时，才会在性爱过程中显示裸露身体部位的完整描述。",
+			"在性爱过程中永远显示裸露身体部位的完整描述。"};
 	
 	public int pregnancyDuration = 1;
 	
@@ -202,12 +202,12 @@ public class Properties {
 	
 	public int clothingFemininityLevel = 3;
 	public Colour[] clothingFemininityColours = new Colour[] {PresetColour.GENERIC_BAD, PresetColour.MASCULINE, PresetColour.FEMININE, PresetColour.GENERIC_GOOD};
-	public String[] clothingFemininityTitles = new String[] {"None", "Masculine", "Feminine", "All"};
+	public String[] clothingFemininityTitles = new String[] {"无", "男性衣物", "女性衣物", "全部"};
 	public String[] clothingFemininityDescriptions = new String[] {
-			"No clothing will have a femininity value associated with it, allowing clothing of all types to be worn by any character without penalty.",
-			"Only clothing which is marked as 'masculine' will retain its femininty value, resulting in masculine characters being able to wear any clothing without penalty.",
-			"Only clothing which is marked as 'feminine' will retain its femininty value, resulting in feminine characters being able to wear any clothing without penalty.",
-			"All clothing will have their intended femininity values, resulting in a negative status effect for characters who wear clothing that's either too masculine or too feminine for them."};
+			"所有衣物都不会拥有女性化程度值，允许所有角色不受惩罚地穿着任何衣物。",
+			"只有被标记为“男性化”的衣物会保留其女性化程度值，这会导致只有男性角色可以不受惩罚地穿着所有衣物。",
+			"只有被标记为“女性化”的衣物会保留其女性化程度值，这会导致只有女性角色可以不受惩罚地穿着所有衣物。",
+			"所有衣物都会拥有预设的女性化程度值，会导致角色穿着的衣物如果对于他们来说过于男性化或女性化，则会获得负面的状态效果。"};
 	
 	public Set<PropertyValue> values = new HashSet<>();
 
@@ -1682,7 +1682,7 @@ public class Properties {
 		boolean playerDiscovered = Main.game.getPlayer().addAdvancedRaceKnowledge(subspecies);
 		if(subspeciesAdvancedKnowledge.add(subspecies) || (!this.hasValue(PropertyValue.sharedEncyclopedia) && playerDiscovered)) {
 			if(withEvent) {
-				Main.game.addEvent(new EventLogEntryEncyclopediaUnlock(subspecies.getName(null)+" (Advanced)", subspecies.getColour(null)), true);
+				Main.game.addEvent(new EventLogEntryEncyclopediaUnlock(subspecies.getName(null)+"(进阶知识)", subspecies.getColour(null)), true);
 			}
 			return true;
 		}

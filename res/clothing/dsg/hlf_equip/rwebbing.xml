@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<authorTag><![CDATA['MFD by DSG Threadworks' has been printed onto the inside of the webbing's backing.]]></authorTag>
+		<authorTag><![CDATA[“DSG织厂生产”被印在弹挂背带内侧。]]></authorTag>
 		<value>500</value>
-		<determiner><![CDATA[a set of]]></determiner>
-		<name appendColourName="true"><![CDATA[canvas webbing]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[canvas webbing]]></namePlural>
-		<description><![CDATA[Consisting of a belt, suspenders, and two generously sized pouches, this piece of equipment allows the wearer to carry and quickly access loads that would be otherwise too awkward or heavy.]]></description>
+		<determiner><![CDATA[一套]]></determiner>
+		<name appendColourName="true"><![CDATA[帆布弹挂]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[帆布弹挂]]></namePlural>
+		<description><![CDATA[这件装备由一条腰带、吊带和两个宽大的袋子组成，穿着者可以携带并快速取出原本太笨重的物品。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -51,27 +50,27 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the webbing and securely [npc.verb(buckle)] the belt around [npc.her] waist.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(put)] the webbing onto [npc2.name] and [npc.verb(buckle)] the belt around [npc2.her] waist.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the webbing onto [npc2.name] and roughly [npc.verb(buckle)] the belt around [npc2.her] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿上弹挂并紧紧的将腰带系在腰上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将弹挂挂在[npc2.name]的身上并收紧了腰带。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将弹挂挂在[npc2.name]的身上并用力收紧了腰带。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unbuckle)] the belt and [npc.verb(take)] off the webbing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unbuckle)] the belt from around [npc2.namePos] waist and [npc.verb(take)] off the webbing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(unbuckle)] the belt from around [npc2.namePos] waist and [npc.verb(tears)] the webbing from [npc2.namePos] torso.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开[npc.her]的腰带并将弹挂取下。
+	]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]腰带并将弹挂摘了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将[npc2.namePos]的腰带解开，并将[npc2.namePos]身上的弹挂扯下来
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

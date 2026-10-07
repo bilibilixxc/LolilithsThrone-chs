@@ -27,35 +27,35 @@ public enum AgeCategory {
 	TEENS_MIDDLE("mid-teens", 14, 17, PresetColour.AGE_TEENS, ContentPreferenceValue.FOUR_HIGH),
 	TEENS_LATE("late teens", 17, 20, PresetColour.AGE_LATE_TEENS, ContentPreferenceValue.THREE_AVERAGE),
 
-	TWENTIES_EARLY("early twenties", 20, 23, PresetColour.AGE_TWENTIES, ContentPreferenceValue.FIVE_ABUNDANT),
+	TWENTIES_EARLY("二十出头", 20, 23, PresetColour.AGE_TWENTIES, ContentPreferenceValue.FIVE_ABUNDANT),
 	
-	TWENTIES_MIDDLE("mid-twenties", 23, 27, PresetColour.AGE_TWENTIES, ContentPreferenceValue.FIVE_ABUNDANT),
+	TWENTIES_MIDDLE("二十五六", 23, 27, PresetColour.AGE_TWENTIES, ContentPreferenceValue.FIVE_ABUNDANT),
 	
-	TWENTIES_LATE("late twenties", 27, 30, PresetColour.AGE_TWENTIES, ContentPreferenceValue.FOUR_HIGH),
+	TWENTIES_LATE("不到三十", 27, 30, PresetColour.AGE_TWENTIES, ContentPreferenceValue.FOUR_HIGH),
 	
-	THIRTIES_EARLY("early thirties", 30, 33, PresetColour.AGE_THIRTIES, ContentPreferenceValue.THREE_AVERAGE),
+	THIRTIES_EARLY("三十出头", 30, 33, PresetColour.AGE_THIRTIES, ContentPreferenceValue.THREE_AVERAGE),
 	
-	THIRTIES_MIDDLE("mid-thirties", 33, 37, PresetColour.AGE_THIRTIES, ContentPreferenceValue.THREE_AVERAGE),
+	THIRTIES_MIDDLE("三十五六", 33, 37, PresetColour.AGE_THIRTIES, ContentPreferenceValue.THREE_AVERAGE),
 	
-	THIRTIES_LATE("late thirties", 37, 40, PresetColour.AGE_THIRTIES, ContentPreferenceValue.TWO_LOW),
+	THIRTIES_LATE("不到四十", 37, 40, PresetColour.AGE_THIRTIES, ContentPreferenceValue.TWO_LOW),
 	
-	FORTIES_EARLY("early forties", 40, 43, PresetColour.AGE_FORTIES, ContentPreferenceValue.TWO_LOW),
+	FORTIES_EARLY("四十出头", 40, 43, PresetColour.AGE_FORTIES, ContentPreferenceValue.TWO_LOW),
 	
-	FORTIES_MIDDLE("mid-forties", 43, 47, PresetColour.AGE_FORTIES, ContentPreferenceValue.ONE_MINIMAL),
+	FORTIES_MIDDLE("四十五六", 43, 47, PresetColour.AGE_FORTIES, ContentPreferenceValue.ONE_MINIMAL),
 	
-	FORTIES_LATE("late forties", 47, 50, PresetColour.AGE_FORTIES, ContentPreferenceValue.ONE_MINIMAL),
+	FORTIES_LATE("不到五十", 47, 50, PresetColour.AGE_FORTIES, ContentPreferenceValue.ONE_MINIMAL),
 	
-	FIFTIES_EARLY("early fifties", 50, 53, PresetColour.AGE_FIFTIES, ContentPreferenceValue.ONE_MINIMAL),
+	FIFTIES_EARLY("五十出头", 50, 53, PresetColour.AGE_FIFTIES, ContentPreferenceValue.ONE_MINIMAL),
 	
-	FIFTIES_MIDDLE("mid-fifties", 53, 57, PresetColour.AGE_FIFTIES, ContentPreferenceValue.ZERO_NONE),
+	FIFTIES_MIDDLE("五十五六", 53, 57, PresetColour.AGE_FIFTIES, ContentPreferenceValue.ZERO_NONE),
 	
-	FIFTIES_LATE("late fifties", 57, 60, PresetColour.AGE_FIFTIES, ContentPreferenceValue.ZERO_NONE),
+	FIFTIES_LATE("不到六十", 57, 60, PresetColour.AGE_FIFTIES, ContentPreferenceValue.ZERO_NONE),
 	
-	SIXTIES_EARLY("early sixties", 60, 63, PresetColour.AGE_SIXTIES, ContentPreferenceValue.ZERO_NONE),
+	SIXTIES_EARLY("六十出头", 60, 63, PresetColour.AGE_SIXTIES, ContentPreferenceValue.ZERO_NONE),
 	
-	SIXTIES_MIDDLE("mid-sixties", 63, 67, PresetColour.AGE_SIXTIES, ContentPreferenceValue.ZERO_NONE),
+	SIXTIES_MIDDLE("六十五六", 63, 67, PresetColour.AGE_SIXTIES, ContentPreferenceValue.ZERO_NONE),
 	
-	SIXTIES_LATE("late sixties", 67, 70, PresetColour.AGE_SIXTIES, ContentPreferenceValue.ZERO_NONE),
+	SIXTIES_LATE("不到七十", 67, 70, PresetColour.AGE_SIXTIES, ContentPreferenceValue.ZERO_NONE),
 
 	SIXTIES_PLUS("past seventy", 70, 900, PresetColour.AGE_HUNDREDS, ContentPreferenceValue.ZERO_NONE);
 

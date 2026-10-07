@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>30</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Rudolph's Egg nog]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Rudolph's Egg nogs]]></namePlural>
-		<description><![CDATA[The label on the front of this carton declares it to be 'Rudolph's Egg Nog'. The drink's namesake, a buff, stark-naked reindeer-boy, is shown on the label to be drinking a glass of egg nog while receiving oral sex from three enraptured reindeer-girls.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[鲁道夫蛋奶酒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[鲁道夫蛋奶酒]]></namePlural>
+		<description><![CDATA[纸盒正面的标签宣称这是“鲁道夫蛋奶酒”。该饮料的标签画的是一个光着上身的驯鹿男，他一边喝着蛋奶酒，一边接受着三个心醉神迷的驯鹿女的口交。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A soothing wave of arcane energy washes over [npc.name]...
+				一股丝滑的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -51,10 +51,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Opening the carton of Rudolph's Egg Nog, [npc.name] [npc.verb(bring)] it up to [npc.her] [npc.lips] and [npc.verb(start)] drinking. Although there's nothing out of the ordinary about its creamy, sweet taste, [npc.name] soon [npc.verb(discover)] that the egg nog leaves a strange, slightly salty aftertaste lingering on [npc.her] [npc.tongue].
+		打开鲁道夫蛋奶酒盒，[npc.name]把它送到[npc.her]的嘴边并开始喝。尽管它的奶油味道又甜又浓郁，但不久后，[npc.name]意识到蛋奶酒在[npc.tongue]上留下了一种奇怪的、略带咸味的余味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Opening the carton of Rudolph's Egg Nog, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] [npc2.lips] and [npc.verb(get)] [npc2.herHim] to drink it. Although there's nothing out of the ordinary about its creamy, sweet taste, [npc2.name] soon [npc2.verb(discover)] that the egg nog leaves a strange, slightly salty aftertaste lingering on [npc2.her] [npc2.tongue].
+		打开鲁道夫的蛋奶酒盒，[npc.name]把它送到[npc2.namePos][npc2.lips]前，让[npc2.herHim]喝。尽管它的奶油味道又甜又浓郁，但不久后，[npc2.name]意识到蛋酒在[npc2.her]的[npc2.tongue]上留下了一种奇怪的、略带咸味的余味。
 		]]></otherUse>
 	</useDescriptions>
 

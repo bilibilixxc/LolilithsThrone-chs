@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>15</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[mince pie]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[mince pies]]></namePlural>
-		<description><![CDATA[A sweet pie, filled with a mixture of dried fruits and spices. Curiously, the pie seems to remain permanently warm to the touch, revealing that an enchantment of some sort must have been placed on it.]]></description> 
+		<determiner><![CDATA[一块]]></determiner>
+		<name><![CDATA[甜馅饼]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[甜馅饼]]></namePlural>
+		<description><![CDATA[一个甜馅饼，馅料是干果和香料的混合物。奇怪的是，馅饼的触感似乎始终保持温热，这说明馅饼上一定被施了某种魔法。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_SEXUAL</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_DAMAGE_LUST.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_DAMAGE_FIRE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_DAMAGE_LUST.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_DAMAGE_FIRE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A warm wave of arcane energy washes over [npc.name]...
+				一股温暖的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_DAMAGE_LUST, 1)]
 			[#npc.addPotionEffect(ATTRIBUTE_DAMAGE_FIRE, 1)]
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(bring)] the enchanted mince pie up to [npc.her] mouth, before taking an experimental bite. The warm, spiced fruit filling is absolutely delicious, leading [npc.herHim] to greedily wolf down the entire pie.
+		[npc.Name]将魔法甜馅饼送到[npc.her]的嘴边，然后小心翼翼地咬了一口。温暖的、香料调味的水果馅料实在太美味了，让[npc.herHim]贪婪地狼吞虎咽地吃下整个馅饼。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(bring)] the enchanted mince pie up to [npc2.namePos] mouth, before encouraging [npc2.herHim] to take an experimental bite. The warm, spiced fruit filling turns out to be absolutely delicious, leading [npc2.name] to eagerly wolf down the entire pie.
+		[npc.Name]将魔法甜馅饼送到[npc2.namePos]的嘴边，然后鼓励[npc2.herHim]尝试一口。温暖的、香料调味的水果馅料原来非常美味，让[npc2.name]急切地狼吞虎咽地吃下了整个馅饼。
 		]]></otherUse>
 	</useDescriptions>
 

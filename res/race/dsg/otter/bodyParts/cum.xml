@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -6,18 +6,18 @@
 	
 	<race>dsg_otter</race>
 	
-	<transformationName><![CDATA[otter]]></transformationName>
+	<transformationName><![CDATA[水獭]]></transformationName>
 	
 	<baseFluidType>CUM</baseFluidType>
 	
 	<flavour>CUM</flavour>
 	
 	<namesMasculine>
-		<name><![CDATA[otter-]]></name>
+		<name><![CDATA[水獭]]></name>
 	</namesMasculine>
 	
 	<namesFeminine>
-		<name><![CDATA[otter-]]></name>
+		<name><![CDATA[水獭]]></name>
 	</namesFeminine>
 	
 	<descriptorsMasculine/>

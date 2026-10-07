@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
     <!-- Place type id: innoxia_fields_elis_bank_foyer -->
@@ -20,8 +20,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit the bank and head back out into the streets of Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[走出银行，回到伊利斯的街道上。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_bank"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -44,10 +44,10 @@
 				<availabilityConditional><![CDATA[[#pc.hasItemType(ITEM_innoxia_quest_bank_card)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take out loan]]></responseTitle>
+				<responseTitle><![CDATA[贷款]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Approach one of the bank clerks and ask her about taking out a loan.
-					<br/>[style.italicsMinorBad(This will be added when the bounty hunter lodge content is added!)]
+					找到一位银行职员，询问关于贷款。
+					<br/>[style.italicsMinorBad(和赏金猎人小屋内容一同开放！)]
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 				<effects/>
@@ -66,8 +66,8 @@
 				<availabilityConditional><![CDATA[[#!pc.hasItemType(ITEM_innoxia_quest_bank_card)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[As you don't have permission to access the bank's deposit boxes, you're not allowed through the door...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[你没有获得银行存款箱的权限，不能进入大门……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_bank_foyer</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/bank', 'VIP_DOOR_STEP_BACK'))]
@@ -89,11 +89,11 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
-					Interest ([style.moneyFormatUncoloured(0, span)])
+					利息([style.moneyFormatUncoloured(0, span)])
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You do not have any interest to collect...
-					<br/>Interest is calculated on your savings at 12% APR, and is added up every midnight.
+					你没有利息要收取……
+					<br/>存款利息按12%的年利率计算，每个午夜累加一次。
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 				<effects/>
@@ -103,11 +103,11 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
-					Interest ([style.moneyFormat([#game.getDialogueFlags().getSavedLong('bank_interest')], span)])
+					利息([style.moneyFormat([#game.getDialogueFlags().getSavedLong('bank_interest')], span)])
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Collect the interest which has accumulated on your savings...
-					<br/>Interest is calculated on your savings at 12% APR, and is added up every midnight.
+					收取你存款的利息……
+					<br/>存款利息按 12% 的年利率计算，每午夜累加一次。
 				]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_bank_deposit_box_interest_collected</nextDialogue>
 				<effects><![CDATA[

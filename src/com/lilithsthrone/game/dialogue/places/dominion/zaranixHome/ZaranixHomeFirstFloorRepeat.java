@@ -40,7 +40,7 @@ public class ZaranixHomeFirstFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Staircase";
+			return "楼梯";
 		}
 
 		@Override
@@ -70,10 +70,10 @@ public class ZaranixHomeFirstFloorRepeat {
 			if(Main.game.getCharactersPresent().contains(Main.game.getNpc(ZaranixMaidKelly.class))) {
 				if (index == 1) {
 					if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kellyRepeatEncountered)) {
-						return new Response("Downstairs", "You need to respond to Kelly first!", null);
+						return new Response("下楼", "你得先回复凯丽！", null);
 						
 					} else {
-						return new Response("Downstairs", "Head downstairs to the ground floor of Zaranix's house.", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
+						return new Response("下楼", "前往扎拉尼克斯家一楼。", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
 							@Override
 							public void effects() {
 								Main.game.getPlayer().setLocation(WorldType.ZARANIX_HOUSE_GROUND_FLOOR, PlaceType.ZARANIX_GF_STAIRS, false);
@@ -83,7 +83,7 @@ public class ZaranixHomeFirstFloorRepeat {
 	
 				} else if(Main.game.getCharactersPresent().contains(Main.game.getNpc(ZaranixMaidKelly.class))) {
 					if(index==2) {
-						return new ResponseSex("Sex", "Have some fun with Kelly.",
+						return new ResponseSex("做爱", "跟凯丽云雨一番。",
 								true, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -97,8 +97,8 @@ public class ZaranixHomeFirstFloorRepeat {
 						};
 						
 					} else if(index==3) {
-						return new ResponseSex("Submit",
-								"You can't bring yourself to take the dominant role, but you <i>do</i> want to have sex with Kelly. Perhaps if you submitted, [kelly.she]'d be willing to fuck you?",
+						return new ResponseSex("顺从",
+								"你没法接受自己占据主导，但又<i>超级想</i>跟凯莉做爱。或许你表示屈服的话，[kelly.she]也愿意来干你？",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 								true, false,
 								new SMGeneric(
@@ -113,8 +113,8 @@ public class ZaranixHomeFirstFloorRepeat {
 						};
 						
 					} else if (index == 4) {
-						return new Response("Transformations",
-								"Get Kelly to use [kelly.her] demonic powers to transform [kelly.herself]...",
+						return new Response("转化",
+								"让凯丽使用[kelly.her]的恶魔能力来自我转化……",
 								BodyChanging.BODY_CHANGING_CORE){
 							@Override
 							public void effects() {
@@ -124,8 +124,8 @@ public class ZaranixHomeFirstFloorRepeat {
 						};
 						
 					} else if(index == 5 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kellyRepeatEncountered)) {
-						return new Response("Decline",
-								"Say no to the horny demon and continue on your way.",
+						return new Response("拒绝",
+								"拒绝那个饥渴的恶魔，继续前进。",
 								STAIRS){
 							@Override
 							public void effects() {
@@ -142,7 +142,7 @@ public class ZaranixHomeFirstFloorRepeat {
 				}
 			} else {
 				if(index == 1) {
-					return new Response("Downstairs", "Head downstairs to the ground floor of Zaranix's house.", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
+					return new Response("下楼", "前往扎拉尼克斯家一楼。", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.ZARANIX_HOUSE_GROUND_FLOOR, PlaceType.ZARANIX_GF_STAIRS, false);
@@ -164,7 +164,7 @@ public class ZaranixHomeFirstFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Corridor";
+			return "走廊";
 		}
 
 		@Override
@@ -193,7 +193,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getCharactersPresent().contains(Main.game.getNpc(ZaranixMaidKelly.class))) {
 				if(index==1) {
-					return new ResponseSex("Sex", "Have some fun with Kelly.",
+					return new ResponseSex("做爱", "跟凯丽云雨一番。",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -207,8 +207,8 @@ public class ZaranixHomeFirstFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new ResponseSex("Submit",
-							"You can't bring yourself to take the dominant role, but you <i>do</i> want to have sex with Kelly. Perhaps if you submitted, [kelly.she]'d be willing to fuck you?",
+					return new ResponseSex("顺从",
+							"你没法接受自己占据主导，但又<i>超级想</i>跟凯莉做爱。或许你表示屈服的话，[kelly.she]也愿意来干你？",
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 							true, false,
 							new SMGeneric(
@@ -223,8 +223,8 @@ public class ZaranixHomeFirstFloorRepeat {
 					};
 					
 				} else if (index == 3) {
-					return new Response("Transformations",
-							"Get Kelly to use [kelly.her] demonic powers to transform [kelly.herself]...",
+					return new Response("转化",
+							"让凯丽使用[kelly.her]的恶魔能力来自我转化……",
 							BodyChanging.BODY_CHANGING_CORE){
 						@Override
 						public void effects() {
@@ -234,8 +234,8 @@ public class ZaranixHomeFirstFloorRepeat {
 					};
 					
 				} else if(index == 4 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kellyRepeatEncountered)) {
-					return new Response("Decline",
-							"Say no to the horny demon and continue on your way.",
+					return new Response("拒绝",
+							"拒绝那个饥渴的恶魔，继续前进。",
 							KELLY_DECLINE){
 						@Override
 						public void effects() {
@@ -268,7 +268,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.ZARANIX_FF_STAIRS)) {
 				if(index==1) {
-					return new Response("Downstairs", "Head downstairs to the ground floor of Zaranix's house.", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
+					return new Response("下楼", "前往扎拉尼克斯家一楼。", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.ZARANIX_HOUSE_GROUND_FLOOR, PlaceType.ZARANIX_GF_STAIRS, false);
@@ -280,11 +280,11 @@ public class ZaranixHomeFirstFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode AFTER_KELLY_SEX = new DialogueNode("", "Kelly lets out a deep sigh as she steps back.", false) {
+	public static final DialogueNode AFTER_KELLY_SEX = new DialogueNode("", "凯丽粗重地喘息，后退几步。", false) {
 
 		@Override
 		public String getLabel() {
-			return "Finished";
+			return "完成";
 		}
 
 		@Override
@@ -304,7 +304,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.ZARANIX_FF_STAIRS)) {
 				if(index==1) {
-					return new Response("Downstairs", "Head downstairs to the ground floor of Zaranix's house.", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
+					return new Response("下楼", "前往扎拉尼克斯家一楼。", PlaceType.ZARANIX_GF_STAIRS.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.ZARANIX_HOUSE_GROUND_FLOOR, PlaceType.ZARANIX_GF_STAIRS, false);
@@ -325,7 +325,7 @@ public class ZaranixHomeFirstFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Room";
+			return "房间";
 		}
 
 		@Override
@@ -348,7 +348,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Enter", "Knock on Zaranix's door and step inside.", ZARANIX_ROOM_ENTER);
+				return new Response("进入", "敲敲扎拉尼克斯的门并进去。", ZARANIX_ROOM_ENTER);
 			} else {
 				return null;
 			}
@@ -364,7 +364,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Enter", "Knock on Zaranix's door and step inside.", ZARANIX_ROOM_ENTER);
+				return new Response("进入", "敲敲扎拉尼克斯的门并进去。", ZARANIX_ROOM_ENTER);
 			} else {
 				return null;
 			}
@@ -384,7 +384,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 0) {
-				return new Response("Leave", "Say goodbye and step outside into the first-floor corridor once again.", ZARANIX_ROOM_EXIT) {
+				return new Response("离开", "道别后再次回到二楼的走廊。", ZARANIX_ROOM_EXIT) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.zaranixRepeatEncountered, true);
@@ -392,7 +392,7 @@ public class ZaranixHomeFirstFloorRepeat {
 				};
 				
 			} else if(index == 1) {
-				return new Response("Maids", "Ask Zaranix about his maids.", ZARANIX_ROOM_MAIDS) {
+				return new Response("女仆", "向扎拉尼克斯打听他的女仆。", ZARANIX_ROOM_MAIDS) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.zaranixRepeatEncountered, true);
@@ -400,7 +400,7 @@ public class ZaranixHomeFirstFloorRepeat {
 				};
 				
 			} else if(index == 2) {
-				return new Response("Experiments", "Ask Zaranix about the experiments he's running, and what he was having Arthur work on.", ZARANIX_ROOM_EXPERIMENTS) {
+				return new Response("实验", "询问扎拉尼克斯正在进行什么实验，又准备让亚瑟做什么。", ZARANIX_ROOM_EXPERIMENTS) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.zaranixRepeatEncountered, true);
@@ -408,7 +408,7 @@ public class ZaranixHomeFirstFloorRepeat {
 				};
 				
 			} else if(index == 3) {
-				return new Response("Incubus form", "Ask Zaranix about his incubus form. After all, most demons that you've seen choose to stay as females.", ZARANIX_ROOM_INCUBUS_FORM) {
+				return new Response("淫梦魔形态", "询问扎拉尼克斯其淫梦魔形态的事情。毕竟大多数恶魔都会选择保持女性外表。", ZARANIX_ROOM_INCUBUS_FORM) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.zaranixRepeatEncountered, true);
@@ -417,9 +417,9 @@ public class ZaranixHomeFirstFloorRepeat {
 				
 			} else if(index == 4) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Blowjob", "As you are unable to get access to your mouth, you cannot offer to suck Zaranix's cock!", null);
+					return new Response("口交", "你无法使用自己的嘴巴，所以不能给扎拉尼克斯舔鸡巴！", null);
 				}
-				return new ResponseSex("Blowjob", "Ask Zaranix if he'd like a blowjob...",
+				return new ResponseSex("口交", "询问扎拉尼克斯他愿不愿意被口……",
 						true, true,
 						new SMZaranixCockSucking(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Zaranix.class), SexSlotSitting.SITTING)),
@@ -437,9 +437,9 @@ public class ZaranixHomeFirstFloorRepeat {
 				
 			} else if(index == 5) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Blowjob (succubus)", "As you are unable to get access to your mouth, you cannot offer to suck Zaranix's cock!", null);
+					return new Response("口交(魅魔)", "你无法使用自己的嘴巴，所以不能给扎拉尼克斯舔鸡巴！", null);
 				}
-				return new Response("Blowjob (succubus)", "Tell Zaranix that if he transforms into his succubus form then you'd be happy to give 'her' a blowjob...", ZARANIX_ROOM_BLOWJOB_TF) {
+				return new Response("口交(魅魔)", "告诉扎拉尼克斯，如果他愿意转化成魅魔形态，你就很乐意给“她”来段口交了……", ZARANIX_ROOM_BLOWJOB_TF) {
 					@Override
 					public boolean isSexHighlight() {
 						return true;
@@ -461,7 +461,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Maids", "You're already asking Zaranix about his maids!", null);
+				return new Response("女仆", "你已经问过扎拉尼克斯那些女仆的事情了！", null);
 			} else {
 				return ZARANIX_ROOM_ENTER.getResponse(responseTab, index);
 			}
@@ -477,7 +477,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 2) {
-				return new Response("Experiments", "You're already asking Zaranix about his experiments!", null);
+				return new Response("实验", "你已经问过扎拉尼克斯实验的事情了！", null);
 			} else {
 				return ZARANIX_ROOM_ENTER.getResponse(responseTab, index);
 			}
@@ -493,7 +493,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 3) {
-				return new Response("Incubus form", "You're already asking Zaranix about his incubus form!", null);
+				return new Response("淫梦魔形态", "你已经问过扎拉尼克斯为何选择淫梦魔形态了！", null);
 			} else {
 				return ZARANIX_ROOM_ENTER.getResponse(responseTab, index);
 			}
@@ -514,7 +514,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new ResponseSex("Suck cock", "Get started on sucking Zaranix's cock...",
+				return new ResponseSex("舔鸡巴", "开始侍奉扎拉尼克斯的肉棒……",
 						true, true,
 						new SMZaranixCockSucking(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Zaranix.class), SexSlotSitting.SITTING)),
@@ -534,10 +534,10 @@ public class ZaranixHomeFirstFloorRepeat {
 		}
 	};
 
-	public static final DialogueNode AFTER_SEX_ZARANIX_BLOWJOB = new DialogueNode("Finished", "Zaranix has had enough of experiencing your cock-sucking skills for now...", true) {
+	public static final DialogueNode AFTER_SEX_ZARANIX_BLOWJOB = new DialogueNode("结束", "扎拉尼克斯体验够了你的口技……", true) {
 		@Override
 		public String getLabel() {
-			return "Finished";
+			return "完成";
 		}
 		@Override
 		public String getContent() {
@@ -546,7 +546,7 @@ public class ZaranixHomeFirstFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Continue on your way through Zaranix's mansion...", CORRIDOR) {
+				return new Response("继续", "继续穿过扎拉尼克斯府邸……", CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.ZARANIX_HOUSE_FIRST_FLOOR, PlaceType.ZARANIX_FF_CORRIDOR);

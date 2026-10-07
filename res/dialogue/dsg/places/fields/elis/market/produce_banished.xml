@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
-	<scene id ="stall">
+	<scene id="stall">
 		<author><![CDATA[DSG]]></author>			
-		<title><![CDATA[An empty lot]]></title>
+		<title><![CDATA[一片空地]]></title>
 		<tooltip/>				
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/market/produce_banished">STALL</content>		

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Woolly Heaven]]></name>
-	<tooltipDescription><![CDATA[This massage parlour is staffed exclusively by sheep and goat girls, who promise to work out all of the stress from their clients.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the 'Woolly Heaven' massage parlour]]></virginityLossDescription>
+	<name><![CDATA[绵绵天堂]]></name>
+	<tooltipDescription><![CDATA[这家按摩店的员工完全由绵羊和山羊女构成，她们承诺为顾客消除全部疲劳。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在绵绵天堂按摩店的店面里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_AQUA</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

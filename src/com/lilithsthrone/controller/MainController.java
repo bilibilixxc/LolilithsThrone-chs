@@ -470,8 +470,8 @@ public class MainController implements Initializable {
 			}
 
 			private void printAlreadyExistingBinding(String primarySecondary, String actionName, String eventCodeName) {
-				Main.game.getTextStartStringBuilder().append("<p style='text-align:center;'>" + "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>The key '" + eventCodeName
-						+ "' is already the " + primarySecondary + " bind for the action '" + actionName + "'!</b>" + "</p>");
+				Main.game.getTextStartStringBuilder().append("<p style='text-align:center;'>" + "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>按键'" + eventCodeName
+						+ "'已是" + primarySecondary + "，绑定至'" + actionName + "'！</b>" + "</p>");
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}
 
@@ -871,14 +871,14 @@ public class MainController implements Initializable {
 										}
 
 										if (!unsuitableName) {
-											Main.game.setContent(new Response("Rename Room", "Rename this room to whatever you've entered in the text box.", Main.game.getCurrentDialogueNode()){
+											Main.game.setContent(new Response("重命名房间", "将该房间重命名为你输入在文本栏的名字。", Main.game.getCurrentDialogueNode()){
 												@Override
 												public void effects() {
 													Main.game.getPlayerCell().getPlace().setName(Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
 												}
 											});
 										} else {
-											Main.game.setContent(new Response("Rename Room", "", Main.game.getCurrentDialogueNode()));
+											Main.game.setContent(new Response("重命名房间", "", Main.game.getCurrentDialogueNode()));
 										}
 									}
 								}
@@ -893,7 +893,7 @@ public class MainController implements Initializable {
 									if(Main.isSaveGameAvailable()) {
 										Main.saveGame(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false, false);
 									}
-									Main.game.setContent(new Response("Save", "", Main.game.getCurrentDialogueNode()));
+									Main.game.setContent(new Response("保存", "", Main.game.getCurrentDialogueNode()));
 								}
 							}
 						}
@@ -915,7 +915,7 @@ public class MainController implements Initializable {
 									enterConsumed = true;
 									Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('new_save_name').value;");
 									EnchantmentDialogue.saveEnchant(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false, EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD);
-									Main.game.setContent(new Response("Save", "", Main.game.getCurrentDialogueNode()));
+									Main.game.setContent(new Response("保存", "", Main.game.getCurrentDialogueNode()));
 								}
 							}
 						}
@@ -926,7 +926,7 @@ public class MainController implements Initializable {
 									enterConsumed = true;
 									Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('new_save_name').value;");
 									BodyChanging.saveBody(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false);
-									Main.game.setContent(new Response("Save", "", Main.game.getCurrentDialogueNode()));
+									Main.game.setContent(new Response("保存", "", Main.game.getCurrentDialogueNode()));
 								}
 							}
 						}
@@ -937,7 +937,7 @@ public class MainController implements Initializable {
 									enterConsumed = true;
 									Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('new_save_name').value;");
 									EnchantmentDialogue.saveEnchant(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false, CosmeticsDialogue.TATTOO_SAVE_LOAD);
-									Main.game.setContent(new Response("Save", "", Main.game.getCurrentDialogueNode()));
+									Main.game.setContent(new Response("保存", "", Main.game.getCurrentDialogueNode()));
 								}
 							}
 						}
@@ -984,14 +984,14 @@ public class MainController implements Initializable {
 										}
 
 										if(!unsuitableName) {
-											Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()){
+											Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()){
 												@Override
 												public void effects() {
 													slaveFinal.setPetName(Main.game.getPlayer(), Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
 												}
 											});
 										} else {
-											Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()));
+											Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()));
 										}
 
 									}
@@ -1011,14 +1011,14 @@ public class MainController implements Initializable {
 										}
 
 										if (!unsuitableName) {
-											Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()){
+											Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()){
 												@Override
 												public void effects() {
 													slaveFinal.setName(new NameTriplet(Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent()));
 												}
 											});
 										} else {
-											Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()));
+											Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()));
 										}
 									}
 								}
@@ -1037,14 +1037,14 @@ public class MainController implements Initializable {
 										}
 
 										if (!unsuitableName) {
-											Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()){
+											Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()){
 												@Override
 												public void effects() {
 													slaveFinal.setSurname(Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
 												}
 											});
 										} else {
-											Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()));
+											Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()));
 										}
 									}
 								}
@@ -1061,7 +1061,7 @@ public class MainController implements Initializable {
 									if((boolean) Main.mainController.getWebEngine().executeScript("document.getElementById('feminine_" + gp + "') === document.activeElement")
 											|| (boolean) Main.mainController.getWebEngine().executeScript("document.getElementById('masculine_" + gp + "') === document.activeElement")) {
 										Main.game.setContent(
-												new Response("Save", "Save all the pronouns that are currently displayed.", OptionsDialogue.OPTIONS_PRONOUNS) {
+												new Response("保存", "保存当前显示的所有人称。", OptionsDialogue.OPTIONS_PRONOUNS) {
 													@Override
 													public void effects() {
 														OptionsDialogue.OPTIONS_PRONOUNS.getResponse(0, 1).effects();
@@ -1077,7 +1077,7 @@ public class MainController implements Initializable {
 												|| (boolean) Main.mainController.getWebEngine().executeScript("document.getElementById('GENDER_NAME_ANDROGYNOUS_" + genderName + "') === document.activeElement")
 												|| (boolean) Main.mainController.getWebEngine().executeScript("document.getElementById('GENDER_NAME_FEMININE_" + genderName + "') === document.activeElement")) {
 											Main.game.setContent(
-													new Response("Save", "Save all the pronouns that are currently displayed.", OptionsDialogue.OPTIONS_PRONOUNS) {
+													new Response("保存", "保存当前显示的所有人称。", OptionsDialogue.OPTIONS_PRONOUNS) {
 														@Override
 														public void effects() {
 															OptionsDialogue.OPTIONS_PRONOUNS.getResponse(0, 1).effects();
@@ -1098,7 +1098,7 @@ public class MainController implements Initializable {
 
 									Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenFieldName').innerHTML=document.getElementById('offspringPetNameInput').value;");
 									if(Main.mainController.getWebEngine().getDocument()!=null) {
-										if (Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() < 2
+										if (Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() < 1
 												|| Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length() > 32)
 											unsuitableName = true;
 										else {
@@ -1107,14 +1107,14 @@ public class MainController implements Initializable {
 									}
 
 									if (!unsuitableName) {
-										Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()){
+										Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()){
 											@Override
 											public void effects() {
 												Main.game.getActiveNPC().setPetName(Main.game.getPlayer(), Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
 											}
 										});
 									} else {
-										Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()));
+										Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()));
 									}
 
 								}
@@ -1128,7 +1128,7 @@ public class MainController implements Initializable {
 									enterConsumed = true;
 									Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('outfit_name').value;");
 									LilayaDressingRoomDialogue.setOutfitName(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent());
-									Main.game.setContent(new Response("Outfit editor", "", Main.game.getCurrentDialogueNode()));
+									Main.game.setContent(new Response("套装编辑器", "", Main.game.getCurrentDialogueNode()));
 								}
 							}
 						}
@@ -1478,8 +1478,8 @@ public class MainController implements Initializable {
 						}
 					}, false);
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"Mark for reroll",
-							DicePoker.isAbleToSelectReroll()?"":"[style.italicsBad(You cannot mark your dice for reroll in this scene!)]"));
+							"标记为重投",
+							DicePoker.isAbleToSelectReroll()?"":"[style.italicsBad(在该场景无法将骰子标记为重投！)]"));
 				}
 			}
 		}
@@ -1980,7 +1980,7 @@ public class MainController implements Initializable {
 			if(i==5) {
 				MainController.addEventListener(MainController.document, id, "mousemove", MainController.moveTooltipListener, false);
 				MainController.addEventListener(MainController.document, id, "mouseleave", MainController.hideTooltipListener, false);
-				TooltipInformationEventListener el2 =  new TooltipInformationEventListener().setInformation("Unique Items", "");
+				TooltipInformationEventListener el2 =  new TooltipInformationEventListener().setInformation("独特物品", "");
 				MainController.addEventListener(MainController.document, id, "mouseenter", el2, false);
 			}
 		}
@@ -2001,7 +2001,7 @@ public class MainController implements Initializable {
 			if(i==5) {
 				MainController.addEventListener(MainController.document, id, "mousemove", MainController.moveTooltipListener, false);
 				MainController.addEventListener(MainController.document, id, "mouseleave", MainController.hideTooltipListener, false);
-				TooltipInformationEventListener el2 =  new TooltipInformationEventListener().setInformation("Unique Items", "");
+				TooltipInformationEventListener el2 =  new TooltipInformationEventListener().setInformation("独特物品", "");
 				MainController.addEventListener(MainController.document, id, "mouseenter", el2, false);
 			}
 		}
@@ -2017,35 +2017,35 @@ public class MainController implements Initializable {
 			MainController.addEventListener(documentButtonsLeft, "mainMenu", "mousemove", MainController.moveTooltipListener, false);
 			MainController.addEventListener(documentButtonsLeft, "mainMenu", "mouseleave", MainController.hideTooltipListener, false);
 			hotKey = Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.MENU);
-			MainController.addEventListener(documentButtonsLeft, "mainMenu", "mouseenter", new TooltipInformationEventListener().setInformation("Main Menu"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
+			MainController.addEventListener(documentButtonsLeft, "mainMenu", "mouseenter", new TooltipInformationEventListener().setInformation("主菜单"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
 		}
 		if(((EventTarget) documentButtonsLeft.getElementById("inventory"))!=null) {
 			addEventListener(documentButtonsLeft, "inventory", "click", inventoryButtonListener, true);
 			MainController.addEventListener(documentButtonsLeft, "inventory", "mousemove", MainController.moveTooltipListener, false);
 			MainController.addEventListener(documentButtonsLeft, "inventory", "mouseleave", MainController.hideTooltipListener, false);
 			hotKey = Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.INVENTORY);
-			MainController.addEventListener(documentButtonsLeft, "inventory", "mouseenter", new TooltipInformationEventListener().setInformation("Inventory"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
+			MainController.addEventListener(documentButtonsLeft, "inventory", "mouseenter", new TooltipInformationEventListener().setInformation("物品栏"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
 		}
 		if(((EventTarget) documentButtonsLeft.getElementById("journal"))!=null) {
 			addEventListener(documentButtonsLeft, "journal", "click", journalButtonListener, true);
 			MainController.addEventListener(documentButtonsLeft, "journal", "mousemove", MainController.moveTooltipListener, false);
 			MainController.addEventListener(documentButtonsLeft, "journal", "mouseleave", MainController.hideTooltipListener, false);
 			hotKey = Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.JOURNAL);
-			MainController.addEventListener(documentButtonsLeft, "journal", "mouseenter", new TooltipInformationEventListener().setInformation("Phone"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
+			MainController.addEventListener(documentButtonsLeft, "journal", "mouseenter", new TooltipInformationEventListener().setInformation("手机"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
 		}
 		if(((EventTarget) documentButtonsLeft.getElementById("charactersPresent"))!=null) {
 			addEventListener(documentButtonsLeft, "charactersPresent", "click", charactersPresentButtonListener, true);
 			MainController.addEventListener(documentButtonsLeft, "charactersPresent", "mousemove", MainController.moveTooltipListener, false);
 			MainController.addEventListener(documentButtonsLeft, "charactersPresent", "mouseleave", MainController.hideTooltipListener, false);
 			hotKey = Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.CHARACTERS);
-			MainController.addEventListener(documentButtonsLeft, "charactersPresent", "mouseenter", new TooltipInformationEventListener().setInformation("Characters Present"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
+			MainController.addEventListener(documentButtonsLeft, "charactersPresent", "mouseenter", new TooltipInformationEventListener().setInformation("在场角色"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
 		}
 		if(((EventTarget) documentButtonsLeft.getElementById("mapZoom"))!=null) {
 			addEventListener(documentButtonsLeft, "mapZoom", "click", zoomButtonListener, true);
 			MainController.addEventListener(documentButtonsLeft, "mapZoom", "mousemove", MainController.moveTooltipListener, false);
 			MainController.addEventListener(documentButtonsLeft, "mapZoom", "mouseleave", MainController.hideTooltipListener, false);
 			hotKey = Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.ZOOM);
-			MainController.addEventListener(documentButtonsLeft, "mapZoom", "mouseenter", new TooltipInformationEventListener().setInformation("Minimap Zoom"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
+			MainController.addEventListener(documentButtonsLeft, "mapZoom", "mouseenter", new TooltipInformationEventListener().setInformation("小地图缩放"+(hotKey==null?"":" ("+hotKey.getFullName()+")"), ""), false);
 		}
 	}
 
@@ -2067,14 +2067,14 @@ public class MainController implements Initializable {
 			hotKey = Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.QUICKSAVE);
 			MainController.addEventListener(documentButtonsRight, "quickSave", "mouseenter", new TooltipInformationEventListener().setInformation(
 							quickSaveAvailable
-									?"[style.colourGood(Quick Save"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]"
-									:"[style.colourBad(Quick Save"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]",
-							"Either creates or "+(quickLoadAvailable?"[style.italicsBad(overrides)]":"")+" the save file with the name '"+Main.getQuickSaveName()+"'."
+									?"[style.colourGood(快速保存"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]"
+									:"[style.colourBad(快速保存"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]",
+							"创建新的"+(quickLoadAvailable?"[style.italicsBad(或覆盖)]":"")+"名为'"+Main.getQuickSaveName()+"'的存档。"
 									+ (hotKey==null
-									?"<br/>There is no keyboard shortcut currently bound to this action."
-									:"<br/>You can also quick save by pressing the '"+hotKey.getFullName()+"' key.")
+									?"<br/>该行为目前无热键绑定。"
+									:"<br/>你也可以按'"+hotKey.getFullName()+"'键来快速保存")
 									+ (quickSaveAvailable
-									?"<br/>[style.italicsGood(You can save the game in this scene!)]"
+									?"<br/>[style.italicsGood(你可以在这个场景保存游戏！)]"
 									:"<br/>[style.italicsBad("+Main.getQuickSaveUnavailabilityDescription()+")]")),
 					false);
 		}
@@ -2089,15 +2089,15 @@ public class MainController implements Initializable {
 			hotKey = Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.QUICKLOAD);
 			MainController.addEventListener(documentButtonsRight, "quickLoad", "mouseenter", new TooltipInformationEventListener().setInformation(
 							quickLoadAvailable
-									?"[style.colourGood(Quick Load"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]"
-									:"[style.colourBad(Quick Load"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]",
-							"Loads the game file with the name '"+Main.getQuickSaveName()+"'."
+									?"[style.colourGood(快速加载"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]"
+									:"[style.colourBad(快速加载"+(hotKey==null?"":" ("+hotKey.getFullName()+")")+")]",
+							"载入存档名为'"+Main.getQuickSaveName()+"'的存档。"
 									+(hotKey==null
-									?"<br/>There is no keyboard shortcut currently bound to this action."
-									:"<br/>You can also quick load by pressing the '"+hotKey.getFullName()+"' key.")
+									?"<br/>该行为目前无热键绑定。"
+									:"<br/>你可以通过按下'"+hotKey.getFullName()+"'键来快速加载。")
 									+(quickLoadAvailable
-									?"<br/>[style.italicsGood(Quick save file is detected for this character!)]"
-									:"<br/>[style.italicsBad(No quick save file detected for this character!)]")),
+									?"<br/>[style.italicsGood(该角色的快速存档已删除！)]"
+									:"<br/>[style.italicsBad(该角色未检测到快速存档！)]")),
 					false);
 		}
 
@@ -2110,8 +2110,8 @@ public class MainController implements Initializable {
 
 			MainController.addEventListener(documentButtonsRight, id, "mouseenter", new TooltipInformationEventListener().setInformation(
 					Main.game.getCurrentDialogueNode().getLabel() == "" || Main.game.getCurrentDialogueNode().getLabel() == null ? "-" : Main.game.getCurrentDialogueNode().getLabel(),
-					"Click to copy the currently displayed dialogue to your clipboard. You can then paste the output into a text editor, save it as a <i>.html</i> file, then open that file in a browser to retain the game's formatting.<br/>"
-							+ "This scene was written by: <b>"+Main.game.getCurrentDialogueNode().getAuthor()+"</b>",
+					"点击后赋值当前显示的对话文本至剪贴板。你可以将其黏贴到文本编辑器中，保存为<i>.html</i>文件，在浏览器中打开后仍能保持游戏排版。<br/>"
+							+ "该场景的编写者为：<b>"+Main.game.getCurrentDialogueNode().getAuthor()+"</b>",
 					80), false);
 
 		}
@@ -2132,17 +2132,17 @@ public class MainController implements Initializable {
 				String name = "<span style='color:"+exportCharacter.getFemininity().getColour().toWebHexString()+";'>"+exportCharacter.getName(false)+"</span>";
 				MainController.addEventListener(documentButtonsRight, id, "click", e -> {
 					Game.exportCharacter(exportCharacter);
-					Main.game.flashMessage(PresetColour.GENERIC_EXCELLENT, "Character Exported!");
+					Main.game.flashMessage(PresetColour.GENERIC_EXCELLENT, "角色已导出！");
 				}, false);
 				MainController.addEventListener(documentButtonsRight, id, "mouseenter", new TooltipInformationEventListener().setInformation(
-						"Export Character",
-						"Export "+name+" to the 'data/characters' folder. Exported characters can be imported at the auction block in Slaver Alley.",
+						"导出角色",
+						"将"+name+"导出到'data/characters'文件夹中。导出的角色可以导入至奴隶巷的拍卖台。",
 						48), false);
 
 			} else {
 				MainController.addEventListener(documentButtonsRight, id, "mouseenter", new TooltipInformationEventListener().setInformation(
-						"Export Character",
-						"To export any character, including your own, you need to be viewing them in your phone's 'Characters Present' screen.",
+						"导出角色",
+						"为导入任意角色(包括你自身的)，你需要通过你手机上的“在场角色”界面浏览其页面。",
 						48), false);
 			}
 		}
@@ -2204,8 +2204,8 @@ public class MainController implements Initializable {
 			addEventListener(documentAttributes, id, "mouseleave", hideTooltipListener, false);
 			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation(
 					!RenderingEngine.ENGINE.isRenderingTattoosLeft()
-							?"Switch to tattoos"
-							:"Switch to clothing",
+							?"切换至纹身"
+							:"切换至衣物",
 					"");
 			addEventListener(documentAttributes, id, "mouseenter", el2, false);
 		}
@@ -2216,8 +2216,8 @@ public class MainController implements Initializable {
 			addEventListener(documentAttributes, id, "mouseleave", hideTooltipListener, false);
 			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation(
 					Util.capitaliseSentence(Attribute.ENCHANTMENT_LIMIT.getName()),
-					"The total amount of weapon, clothing, and tattoo attribute enchantments you're able to handle without incurring massive penalties."
-							+" Your limit is calculated from: <i>10 + (level) + (perk gains)</i>");
+					"在不遭受惩罚的前提下，你能够驾驭的武器、衣物、纹身的属性附魔上限。"
+							+"你的上限公式为:<i>10 + (等级) + (天赋获得)</i>");
 			addEventListener(documentAttributes, id, "mouseenter", el2, false);
 		}
 
@@ -2235,22 +2235,22 @@ public class MainController implements Initializable {
 
 			addEventListener(documentAttributes, id, "mousemove", moveTooltipListener, false);
 			addEventListener(documentAttributes, id, "mouseleave", hideTooltipListener, false);
-			String day = Main.game.getDateNow().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+			String day = Main.game.getDateNow().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.CHINESE);
 			StringBuilder dateSB = new StringBuilder();
 			if(Main.game.isBadEnd()) {
-				dateSB.append("[style.italicsBad(Given your current situation, you've lost track of what day it is...)]");
+				dateSB.append("[style.italicsBad(鉴于你目前的情况，你已经不知道现在的日期了……)]");
 			} else {
 				if(!dateKnown) {
-					dateSB.append("[style.italicsMinorBad(Look at the calendar in your room to reveal the date!)]");
+					dateSB.append("[style.italicsMinorBad(查看你房间里的日历以确认日期！)]");
 				} else {
-					dateSB.append("The current date is: [style.colourGood("+ Main.game.getDisplayDate(true)+")]");
+					dateSB.append("现在的日期是：[style.colourGood("+ Main.game.getDisplayDate(true)+")]");
 				}
 				dateSB.append("<br/>");
-				dateSB.append("It is currently "+UtilText.generateSingularDeterminer(day)+" [style.colourBlueLight("+day+")].<br/>"
-						+ "You've been in this new world for: [style.colourExcellent("+Main.game.getDayNumber()+" day"+(Main.game.getDayNumber()>1?"s":"")+")]");
-				dateSB.append("<br/><i>Click to toggle between a date and day count.</i>");
+				dateSB.append("今天[style.colourBlueLight("+day+")]。<br/>"
+						+ "你来到这个新世界已经：[style.colourExcellent("+Main.game.getDayNumber()+" 天了)]");
+				dateSB.append("<br/><i>单击以在当前日期和日期计数之间转换</i>");
 			}
-			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation("Toggle Calendar Display",
+			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation("切换日历显示",
 					dateSB.toString());
 			addEventListener(documentAttributes, id, "mouseenter", el2, false);
 		}
@@ -2275,15 +2275,15 @@ public class MainController implements Initializable {
 			addEventListener(documentAttributes, id, "mouseleave", hideTooltipListener, false);
 			StringBuilder timeSB = new StringBuilder();
 			if(Main.game.isBadEnd()) {
-				timeSB.append("[style.italicsBad(Given your current situation, you've lost track of what time it is...)]");
+				timeSB.append("[style.italicsBad(鉴于你目前的情况，你已经不知道现在的时间了……)]");
 			} else {
-				timeSB.append("Current time: "+Units.time(Main.game.getDateNow())+" (<span style='color:"+dp.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(dp.getName())+"</span>)<br/>"
-						+ "Sunrise: "+(!dateKnown?"[style.colourMinorBad(??/??/??)] [style.colourYellow("+Units.time(ldt[0]):"[style.colourYellow("+Units.dateTime(ldt[0]))+")]<br/>"
-						+ "Sunset: "+(!dateKnown?"[style.colourMinorBad(??/??/??)] [style.colourOrange("+Units.time(ldt[1]):"[style.colourOrange("+Units.dateTime(ldt[1]))+")]<br/>"
-						+ "<i>Click to toggle the time display between a 24-hour and 12-hour clock.</i>");
+				timeSB.append("当前时间："+Units.time(Main.game.getDateNow())+" (<span style='color:"+dp.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(dp.getName())+"</span>)<br/>"
+						+ "日出时间："+(!dateKnown?"[style.colourMinorBad(??/??/??)][style.colourYellow("+Units.time(ldt[0]):"[style.colourYellow("+Units.dateTime(ldt[0]))+")]<br/>"
+						+ "日落时间："+(!dateKnown?"[style.colourMinorBad(??/??/??)][style.colourOrange("+Units.time(ldt[1]):"[style.colourOrange("+Units.dateTime(ldt[1]))+")]<br/>"
+						+ "<i>单击以切换12小时制与24小时制</i>");
 			}
 			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation(
-					(Main.game.isDayTime()?"Day-time":"Night-time"),
+					(Main.game.isDayTime()?"白天":"晚上"),
 					timeSB.toString());
 			addEventListener(documentAttributes, id, "mouseenter", el2, false);
 		}
@@ -2293,7 +2293,7 @@ public class MainController implements Initializable {
 			addEventListener(documentAttributes, id, "mousemove", moveTooltipListener, false);
 			addEventListener(documentAttributes, id, "mouseleave", hideTooltipListener, false);
 
-			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation("[style.boldArcane(Arcane Essences)]", "");
+			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation("[style.boldArcane(奥术精华)]", "");
 			addEventListener(documentAttributes, id, "mouseenter", el2, false);
 		}
 
@@ -2621,8 +2621,8 @@ public class MainController implements Initializable {
 			addEventListener(documentRight, id, "mouseleave", hideTooltipListener, false);
 			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation(
 					!RenderingEngine.ENGINE.isRenderingTattoosRight()
-							?"Switch to tattoos"
-							:"Switch to clothing",
+							?"切换至纹身"
+							:"切换至衣物",
 					"");
 			addEventListener(documentRight, id, "mouseenter", el2, false);
 		}
@@ -2634,8 +2634,8 @@ public class MainController implements Initializable {
 			TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation(
 					Util.capitaliseSentence(Attribute.ENCHANTMENT_LIMIT.getName()),
 					UtilText.parse(RenderingEngine.getCharacterToRender(),
-							"The total amount of weapon, clothing, and tattoo attribute enchantments [npc.nameIsFull] able to handle without incurring massive penalties."
-									+" [npc.Her] maximum is calculated from: <i>10 + (level) + (perk gains)</i>"));
+							"在不遭受严重惩罚的前提下，[npc.nameIsFull]能够驾驭的武器、衣物、纹身属性附魔的总量。"
+									+"[npc.Her]的上限公式为：<i>10 + (等级) + (天赋获得)</i>"));
 			addEventListener(documentRight, id, "mouseenter", el2, false);
 		}
 
@@ -2740,11 +2740,11 @@ public class MainController implements Initializable {
 						subspecies.addAll(pop.getSpecies().keySet());
 						TooltipInformationEventListener el;
 						if(subspecies.isEmpty()) {
-							el = new TooltipInformationEventListener().setInformation("Races Present", "[style.colourDisabled(Unknown)]");
+							el = new TooltipInformationEventListener().setInformation("现有种族", "[style.colourDisabled(未知)]");
 						} else {
 							el = new TooltipInformationEventListener().setInformation(
-									"Races Present",
-									Util.subspeciesToStringList(subspecies, true)+".",
+									"现有种族",
+									Util.subspeciesToStringList(subspecies, true)+"。",
 									16 + ((subspecies.size()/3)*16));
 						}
 						addEventListener(documentRight, id, "mouseenter", el, false);
@@ -3063,7 +3063,7 @@ public class MainController implements Initializable {
 					Main.game.saveDialogueNode();
 					Main.game.setContent(new Response("", "", DebugDialogue.DEBUG_MENU));
 				} else {
-					Main.game.flashMessage(PresetColour.GENERIC_BAD, "Unavailable in prologue!");
+					Main.game.flashMessage(PresetColour.GENERIC_BAD, "序章时不可用！");
 				}
 			}
 		}
@@ -3117,7 +3117,7 @@ public class MainController implements Initializable {
 					Main.combat.endCombat(true);
 //					Main.game.setContent(new Response("", "", Main.game.getDefaultDialogue(false)));
 					Main.game.setContent(new ResponseSex(
-							"Dominate",
+							"支配",
 							"",
 							false,
 							false,
@@ -3176,7 +3176,7 @@ public class MainController implements Initializable {
 					});
 
 				} else {
-					Main.game.flashMessage(PresetColour.GENERIC_BAD, "Cannot dominate!");
+					Main.game.flashMessage(PresetColour.GENERIC_BAD, "无法支配对方！");
 				}
 			}
 		}
@@ -3196,7 +3196,7 @@ public class MainController implements Initializable {
 					Main.combat.endCombat(false);
 //					Main.game.setContent(new Response("", "", Main.game.getDefaultDialogue(false)));
 					Main.game.setContent(new ResponseSex(
-							"Dominated",
+							"被支配",
 							"",
 							false,
 							false,
@@ -3262,7 +3262,7 @@ public class MainController implements Initializable {
 					});
 
 				} else {
-					Main.game.flashMessage(PresetColour.GENERIC_BAD, "Cannot dominate!");
+					Main.game.flashMessage(PresetColour.GENERIC_BAD, "无法支配对方！");
 				}
 			}
 		}
@@ -3317,7 +3317,7 @@ public class MainController implements Initializable {
 
 			if(!placeTypeTarget.getPlace().getPlaceType().equals(PlaceType.GENERIC_IMPASSABLE)) {
 				if(Main.game.isInGlobalMap() && placeTypeTarget.getDialogue(false)==null) {
-					Main.game.flashMessage(PresetColour.GENERIC_BAD, "Cannot travel here!");
+					Main.game.flashMessage(PresetColour.GENERIC_BAD, "无法旅行至此！");
 
 				} else {
 					if(Main.game.isInGlobalMap()) {

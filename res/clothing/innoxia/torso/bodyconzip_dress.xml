@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>500</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[frontal-zip dress]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[frontal-zip dresses]]></namePlural>
-		<description><![CDATA[A tight fitting bodycon dress with a zip that runs the entire way up the front.]]></description>
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[前拉链连衣裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[前拉链连衣裙]]></namePlural>
+		<description><![CDATA[一条紧身连衣裙，前胸从上到下由一条拉链贯穿，很修身。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot> 
@@ -81,75 +81,67 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the dress and zip [npc.herself] up.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(guide)] [npc2.name] into the frontal-zip dress and [npc.verb(zip)] [npc2.herHim] up.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.name] into the frontal-zip dress and [npc.verb(zip)] [npc2.herHim] up.]]>
-	  </otherRough>
+		<self><![CDATA[[npc.Name]穿上前拉链连衣裙并拉上拉链。]]></self>
+		<other><![CDATA[
+			[npc.Name]引导[npc2.name]穿上前拉链连衣裙，并帮[npc2.herHim]拉上拉链。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.name]塞进前拉链连衣裙里，然后帮[npc2.herHim]拉上拉链。
+	]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] fully [npc.verb(unzip)] [npc.her] frontal-zip dress and [npc.verb(shrug)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] fully [npc.verb(unzip)] [npc2.namePos] frontal-zip dress and [npc.verb(pull)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] hastily [npc.verb(unzip)] [npc2.namePos] frontal-zip dress and roughly [npc.verb(pull)] it off.]]>
-		</otherRough>
+		<self><![CDATA[[npc.Name]完全拉开[npc.her]的前拉链连衣裙并脱下它。]]></self>
+		<other><![CDATA[
+			[npc.Name]完全拉开[npc2.namePos]的前拉链连衣裙并将其脱下。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]匆忙拉开[npc2.namePos]前拉链连衣裙并粗暴地将其拽下。
+		]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the bottom of [npc.her] frontal-zip dress back down into the proper position.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the bottom of [npc2.namePos] frontal-zip dress back down into the proper position.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the bottom of [npc2.namePos] frontal-zip dress back down into the proper position.]]>
-	  </otherRough>
+		<self><![CDATA[
+			[npc.Name]将前拉链连衣裙的下摆拉回正确的位置。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将[npc2.namePos]前拉链连衣裙的下摆拉回正确的位置。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos]前拉链连衣裙的下摆拉回正确位置。
+	]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] up the bottom of [npc.her] frontal-zip dress.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] up the bottom of [npc2.namePos] frontal-zip dress.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] hold of the bottom of [npc2.namePos] frontal-zip dress, before roughly pulling it up.]]>
-		</otherRough>
+		<self><![CDATA[[npc.Name]拉起[npc.her]前拉链连衣裙的下摆。]]></self>
+		<other><![CDATA[
+			[npc.Name]拉起[npc2.namePos]前拉链连衣裙的下摆。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]前拉链连衣裙的下摆，粗暴地拉了起来。
+]]></otherRough>
 	</displacementText>
 
 	<displacementText type="UNZIPS">
-		<self>
-			<![CDATA[[npc.Name] fully [npc.verb(unzip)] the front of [npc.her] dress.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] fully [npc.verb(unzip)] the front of [npc2.namePos] dress.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(unzip)] the front of [npc2.namePos] dress.]]>
-	  </otherRough>
+		<self><![CDATA[[npc.Name]完全拉下[npc.her]裙子胸前的拉链。]]></self>
+		<other><![CDATA[
+			[npc.Name]完全拉开[npc2.namePos]连衣裙胸前的拉链。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地拉开[npc2.namePos]连衣裙胸前的拉链。
+	]]></otherRough>
 	</displacementText>
 
 	<replacementText type="UNZIPS">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(zip)] up the front of [npc.her] dress.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(zip)] up the front of [npc2.namePos] dress.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(zip)] up the front of [npc2.namePos] dress.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]拉上了连衣裙前面的拉链。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]拉上了[npc2.namePos]连衣裙前面的拉链。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地拉上了[npc2.namePos]连衣裙前面的拉链。
+]]></otherRough>
 	</replacementText>
 	
 </clothing>

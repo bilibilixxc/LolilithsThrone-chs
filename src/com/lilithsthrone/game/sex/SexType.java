@@ -62,7 +62,7 @@ public class SexType implements XMLSaving {
 	
 	@Override
 	public String toString() {
-		return "Participant: "+asParticipant.toString()+"  Performing/Target: "+(performingSexArea==null?"null":performingSexArea.toString())+"/"+(targetedSexArea==null?"null":targetedSexArea.toString());
+		return "参与者: "+asParticipant.toString()+"  执行者/目标: "+(performingSexArea==null?"null":performingSexArea.toString())+"/"+(targetedSexArea==null?"null":targetedSexArea.toString());
 	}
 	
 	@Override
@@ -132,19 +132,19 @@ public class SexType implements XMLSaving {
 		if(areaPerforming.isPenetration()) {
 			if(areaTargeted.isPenetration()) {
 				return UtilText.parse(performer, target,
-						"[npc.Name] rubbed [npc.her] "+areaPerforming.getName(performer)+" against [npc2.namePos] "+areaTargeted.getName(target)+".");
+						"[npc.Name]隔着[npc2.namePos]的"+areaTargeted.getName(target)+"揉了揉自己的"+areaPerforming.getName(performer)+"。");
 			} else {
 				return UtilText.parse(performer, target,
-						"[npc.Name] used [npc.her] "+areaPerforming.getName(performer)+" "+(((SexAreaPenetration)areaPerforming).isTakesVirginity()?"to fuck":"on")+" [npc2.namePos] "+areaTargeted.getName(target)+".");
+						"[npc.Name]用[npc.her]的"+areaPerforming.getName(performer)+(((SexAreaPenetration)areaPerforming).isTakesVirginity()?"操进了":"进入了")+"[npc2.namePos]的"+areaTargeted.getName(target)+"。");
 			}
 			
 		} else {
 			if(areaTargeted.isPenetration()) {
 				return UtilText.parse(performer, target,
-						"[npc.Name] had [npc.her] "+areaPerforming.getName(performer)+" "+(((SexAreaPenetration)areaTargeted).isTakesVirginity()?"fucked by":"used by")+" [npc2.namePos] "+areaTargeted.getName(target)+".");
+						"[npc.Name]让自己的"+areaPerforming.getName(performer)+"被"+"[npc2.namePos]的"+areaTargeted.getName(target)+(((SexAreaPenetration)areaTargeted).isTakesVirginity()?"干了进去":"享用了")+"。");
 			} else {
 				return UtilText.parse(performer, target,
-						"[npc.Name] rubbed [npc.her] "+areaPerforming.getName(performer)+" against [npc2.namePos] "+areaTargeted.getName(target)+".");
+						"[npc.Name]隔着[npc2.namePos]的"+areaTargeted.getName(target)+"揉了揉自己的"+areaPerforming.getName(performer)+"。");
 			}
 		}
 	}

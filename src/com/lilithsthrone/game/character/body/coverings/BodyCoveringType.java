@@ -54,10 +54,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType FOX_FUR = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_FUR,
-			"a layer of",
+			"一层",
 			false,
-			"fur",
-			"fur",
+			"皮毛",
+			"皮毛",
 			Util.newArrayListOfValues(
 					CoveringModifier.FLUFFY,
 					CoveringModifier.SMOOTH),
@@ -84,10 +84,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType ANGEL_FEATHER = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_FEATHER,
-			"a layer of",
+			"一层",
 			true,
-			"feathers",
-			"feather",
+			"羽毛",
+			"羽毛",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -107,10 +107,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType DEMON_FEATHER = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_FEATHER,
-			"a layer of",
+			"一层",
 			true,
-			"feathers",
-			"feather",
+			"羽毛",
+			"羽毛",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -210,10 +210,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType HORSE_HAIR = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_HAIR,
-			"a layer of",
+			"一层",
 			false,
-			"hair",
-			"hair",
+			"鬃毛",
+			"鬃毛",
 			Util.newArrayListOfValues(CoveringModifier.SHORT),
 			null,
 			Util.newHashMapOfValues(
@@ -253,10 +253,10 @@ public class BodyCoveringType {
 	/** Used for their leg covering */
 	public static AbstractBodyCoveringType HARPY_SKIN = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_SKIN,
-			"a layer of", // This colour is set in GameCharacter's getCovering method, based on the colour of the dildo equipped.
+			"一层", // This colour is set in GameCharacter's getCovering method, based on the colour of the dildo equipped.
 			false,
-			"skin",
-			"skin",
+			"皮肤",
+			"皮肤",
 			Util.newArrayListOfValues(CoveringModifier.LEATHERY),
 			null,
 			null,
@@ -274,10 +274,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType DILDO = new AbstractBodyCoveringType(
 			BodyCoveringCategory.ARTIFICIAL,
-			"a layer of", // This colour is set in GameCharacter's getCovering method, based on the colour of the dildo equipped.
+			"一层", // This colour is set in GameCharacter's getCovering method, based on the colour of the dildo equipped.
 			false,
-			"silicone",
-			"silicone",
+			"硅胶",
+			"硅胶",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			null,
@@ -326,10 +326,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType ALLIGATOR_SCALES = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_SCALES,
-			"a layer of",
+			"一层",
 			true,
-			"scales",
-			"scale",
+			"鳞片",
+			"鳞片",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -342,10 +342,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType SNAKE_SCALES = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_SCALES,
-			"a layer of",
+			"一层",
 			true,
-			"scales",
-			"scale",
+			"鳞片",
+			"鳞片",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -358,10 +358,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType SPIDER_CHITIN = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_CHITIN,
-			"a layer of",
+			"一层",
 			false,
-			"chitin",
-			"chitin",
+			"几丁质外壳",
+			"几丁质外壳",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -374,10 +374,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType OCTOPUS_SKIN = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_SKIN,
-			"a layer of",
+			"一层",
 			false,
-			"skin",
-			"skin",
+			"皮肤",
+			"皮肤",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -392,10 +392,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType FISH_SCALES = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_SCALES,
-			"a layer of",
+			"一层",
 			true,
-			"scales",
-			"scale",
+			"鳞片",
+			"鳞片",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -410,10 +410,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType ANTENNA = new AbstractBodyCoveringType(
 			BodyCoveringCategory.ANTENNAE,
-			"a layer of",
+			"一层",
 			false,
-			"chitin",
-			"chitin",
+			"几丁质外壳",
+			"几丁质外壳",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			null,
@@ -426,10 +426,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType HORN = new AbstractBodyCoveringType(
 			BodyCoveringCategory.HORN,
-			"a layer of",
+			"一层",
 			false,
-			"keratin",
-			"keratin",
+			"角质",
+			"角质",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			null,
@@ -442,10 +442,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType ANTLER = new AbstractBodyCoveringType(
 			BodyCoveringCategory.ANTLER,
-			"a layer of",
+			"一层",
 			false,
-			"velvet",
-			"velvet",
+			"鹿茸",
+			"鹿茸",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			null,
@@ -458,10 +458,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType TONGUE = new AbstractBodyCoveringType(
 			BodyCoveringCategory.TONGUE,
-			"a layer of",
+			"一层",
 			false,
-			"skin",
-			"skin",
+			"皮肤",
+			"皮肤",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			null,
@@ -480,10 +480,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType FEATHERS = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_FEATHER,
-			"a layer of",
+			"一层",
 			true,
-			"feathers",
-			"feather",
+			"羽毛",
+			"羽毛",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(
@@ -501,10 +501,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType WING_LEATHER = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_SKIN,
-			"a layer of",
+			"一层",
 			false,
-			"skin",
-			"skin",
+			"皮肤",
+			"皮肤",
 			Util.newArrayListOfValues(CoveringModifier.LEATHERY),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -517,10 +517,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType WING_CHITIN = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAIN_CHITIN,
-			"a layer of",
+			"一层",
 			false,
-			"chitin",
-			"chitin",
+			"几丁质外壳",
+			"几丁质外壳",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -543,10 +543,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType HAIR_FOX_FUR = new AbstractBodyCoveringType(
 			BodyCoveringCategory.HAIR,
-			"a layer of",
+			"一层",
 			false,
-			"hair",
-			"hair",
+			"毛发",
+			"毛发",
 			Util.newArrayListOfValues(
 					CoveringModifier.FURRY),
 			null,
@@ -604,10 +604,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType HAIR_HARPY = new AbstractBodyCoveringType(
 			BodyCoveringCategory.HAIR,
-			"a plume of",
+			"一簇",
 			true,
-			"feathers",
-			"feather",
+			"羽毛",
+			"羽毛",
 			Util.newArrayListOfValues(CoveringModifier.SMOOTH),
 			null,
 			CoveringPattern.allHairCoveringPatterns,
@@ -683,10 +683,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType BODY_HAIR_HARPY = new AbstractBodyCoveringType(
 			BodyCoveringCategory.BODY_HAIR,
-			"a patch of",
+			"一簇",
 			true,
-			"feathers",
-			"feather",
+			"羽毛",
+			"羽毛",
 			Util.newArrayListOfValues(CoveringModifier.FLUFFY),
 			null,
 			null,
@@ -731,10 +731,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType EYE_FOX_MORPH = new AbstractBodyCoveringType(
 			BodyCoveringCategory.EYE_IRIS,
-			"a pair of",
+			"一对",
 			true,
-			"eyes",
-			"eye",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(
 					CoveringModifier.EYE),
 			null,
@@ -790,10 +790,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType EYE_PUPILS = new AbstractBodyCoveringType(
 			BodyCoveringCategory.EYE_PUPIL,
-			"a pair of",
+			"一对",
 			true,
-			"pupils",
-			"pupil",
+			"瞳孔",
+			"瞳孔",
 			Util.newArrayListOfValues(CoveringModifier.EYE),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.EYE_PUPILS, 1)),
@@ -806,10 +806,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType EYE_SCLERA = new AbstractBodyCoveringType(
 			BodyCoveringCategory.EYE_SCLERA,
-			"a pair of",
+			"一对",
 			true,
-			"sclerae",
-			"sclera",
+			"巩膜",
+			"巩膜",
 			Util.newArrayListOfValues(CoveringModifier.EYE),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.EYE_SCLERA, 1)),
@@ -827,8 +827,8 @@ public class BodyCoveringType {
 			BodyCoveringCategory.FLUID,
 			"",
 			false,
-			"cum",
-			"cum",
+			"精液",
+			"精液",
 			Util.newArrayListOfValues(CoveringModifier.FLUID),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.FLUID, 1)),
@@ -843,8 +843,8 @@ public class BodyCoveringType {
 			BodyCoveringCategory.FLUID,
 			"",
 			false,
-			"girlcum",
-			"girlcum",
+			"爱液",
+			"爱液",
 			Util.newArrayListOfValues(CoveringModifier.FLUID),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.FLUID, 1)),
@@ -859,8 +859,8 @@ public class BodyCoveringType {
 			BodyCoveringCategory.FLUID,
 			"",
 			false,
-			"milk",
-			"milk",
+			"乳汁",
+			"乳汁",
 			Util.newArrayListOfValues(CoveringModifier.FLUID),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.FLUID, 1)),
@@ -876,10 +876,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType MAKEUP_BLUSHER = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAKEUP,
-			"a layer of",
+			"一层",
 			false,
-			"blusher",
-			"blusher",
+			"腮红",
+			"腮红",
 			Util.newArrayListOfValues(CoveringModifier.MAKEUP),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -892,10 +892,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType MAKEUP_EYE_LINER = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAKEUP,
-			"a layer of",
+			"一层",
 			false,
-			"eye liner",
-			"eye liner",
+			"眼线",
+			"眼线",
 			Util.newArrayListOfValues(CoveringModifier.MAKEUP),
 			null,
 			Util.newHashMapOfValues(new Value<>(CoveringPattern.NONE, 1)),
@@ -908,10 +908,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType MAKEUP_EYE_SHADOW = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAKEUP,
-			"a layer of",
+			"一层",
 			false,
-			"eye shadow",
-			"eye shadow",
+			"眼影",
+			"眼影",
 			Util.newArrayListOfValues(
 					CoveringModifier.MATTE,
 					CoveringModifier.SPARKLY,
@@ -927,10 +927,10 @@ public class BodyCoveringType {
 
 	public static AbstractBodyCoveringType MAKEUP_LIPSTICK = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAKEUP,
-			"a layer of",
+			"一层",
 			false,
-			"lipstick",
-			"lipstick",
+			"口红",
+			"口红",
 			Util.newArrayListOfValues(
 					CoveringModifier.GLOSSY,
 					CoveringModifier.MATTE,
@@ -949,10 +949,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType MAKEUP_NAIL_POLISH_HANDS = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAKEUP,
-			"a layer of",
+			"一层",
 			false,
-			"nail polish",
-			"nail polish",
+			"指甲油",
+			"指甲油",
 			Util.newArrayListOfValues(
 					CoveringModifier.SMOOTH,
 					CoveringModifier.SPARKLY,
@@ -970,10 +970,10 @@ public class BodyCoveringType {
 	
 	public static AbstractBodyCoveringType MAKEUP_NAIL_POLISH_FEET = new AbstractBodyCoveringType(
 			BodyCoveringCategory.MAKEUP,
-			"a layer of",
+			"一层",
 			false,
-			"nail polish",
-			"nail polish",
+			"指甲油",
+			"指甲油",
 			Util.newArrayListOfValues(
 					CoveringModifier.SMOOTH,
 					CoveringModifier.SPARKLY,
@@ -1287,21 +1287,21 @@ public class BodyCoveringType {
 						case SILICONE:
 							break;
 						case AIR:
-							name = "vapours";
+							name = "蒸汽";
 							modifier = CoveringModifier.SWIRLING;
 							naturalColours.add(PresetColour.COVERING_BLUE_LIGHT);
 							naturalColours.add(PresetColour.COVERING_GREY);
 							naturalColours.add(PresetColour.COVERING_WHITE);
 							break;
 						case ARCANE:
-							name = "energy";
+							name = "能量";
 							modifier = CoveringModifier.SWIRLING;
 							naturalColours.add(PresetColour.COVERING_PINK);
 							naturalColours.add(PresetColour.COVERING_PINK_DARK);
 							naturalColours.add(PresetColour.COVERING_PINK_LIGHT);
 							break;
 						case FIRE:
-							name = "flames";
+							name = "烈焰";
 							modifier = CoveringModifier.BLAZING;
 							naturalColours.add(PresetColour.COVERING_RED);
 							naturalColours.add(PresetColour.COVERING_ORANGE);
@@ -1309,24 +1309,24 @@ public class BodyCoveringType {
 							naturalColours.add(PresetColour.COVERING_BLUE_LIGHT);
 							break;
 						case ICE:
-							name = "ice";
+							name = "寒冰";
 							modifier = CoveringModifier.GLITTERING;
 							naturalColours.add(PresetColour.COVERING_BLUE_LIGHT);
 							naturalColours.add(PresetColour.COVERING_WHITE);
 							break;
 						case RUBBER:
-							name = "rubber";
+							name = "橡胶";
 							modifier = CoveringModifier.GLOSSY;
 							naturalColours.add(PresetColour.COVERING_BLACK);
 							break;
 						case STONE:
-							name = "stone";
+							name = "岩石";
 							modifier = CoveringModifier.MATTE;
 							naturalColours.add(PresetColour.COVERING_GREY);
 							naturalColours.add(PresetColour.COVERING_BLACK);
 							break;
 						case WATER:
-							name = "water";
+							name = "水";
 							modifier = CoveringModifier.SHIMMERING;
 							naturalColours.add(PresetColour.COVERING_BLUE);
 							naturalColours.add(PresetColour.COVERING_BLUE_LIGHT);

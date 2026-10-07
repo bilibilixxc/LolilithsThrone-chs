@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1250</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[muzzle]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[muzzles]]></namePlural> 
-		<description><![CDATA[A wire cage basket muzzle, originally made for dogs and other such muzzled animals to prevent them from biting. Its design is such that it can be strapped around anyone's head, even if they don't have a muzzle.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[嘴套]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[嘴套]]></namePlural> 
+		<description><![CDATA[铁丝笼筐嘴套，最初是为狗和其他需要戴嘴套的动物制作的，以防止它们咬人。它的设计使其可以绑在任何人的头上，即使他们并不需要戴。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -50,26 +50,26 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the muzzle's cage over [npc.her] mouth, before reaching back and fastening the buckles to keep it in place.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the muzzle's cage over [npc2.namePos] mouth, before reaching back and fastening the buckles to keep it in place.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(force)] the muzzle's cage over [npc2.namePos] mouth, before reaching back and tightly fastening the buckles to keep it in place.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将嘴套笼撞在了自己的嘴巴上，用扣带扣紧在脑后并固定好。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将嘴套笼撞在了[npc2.namePos]的嘴巴上，用扣带扣紧在脑后并固定好。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地把嘴套扣在[npc2.namePos]的嘴上，然后再伸手紧紧扣住扣子，使其固定到位。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the muzzle's straps and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the muzzle's straps and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] impatiently [npc.verb(unfasten)] the muzzle's straps and [npc.verb(yank)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开了嘴套的扣子并将其取下。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]解开了嘴套的扣子并将其取下。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]匆忙地解开了嘴套的扣子并把它拽了下来。
+		]]></otherRough>
 	</displacementText>
 </clothing>

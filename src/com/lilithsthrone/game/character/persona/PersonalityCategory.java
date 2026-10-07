@@ -10,13 +10,13 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum PersonalityCategory {
 
-	CORE("core", PresetColour.GENERIC_EXCELLENT),
+	CORE("核心", PresetColour.GENERIC_EXCELLENT),
 	
-	COMBAT("combat", PresetColour.GENERIC_COMBAT),
+	COMBAT("战斗", PresetColour.GENERIC_COMBAT),
 	
-	SEX("sex", PresetColour.GENERIC_SEX),
+	SEX("性", PresetColour.GENERIC_SEX),
 	
-	SPEECH("speech", PresetColour.BASE_PURPLE_LIGHT);
+	SPEECH("对话", PresetColour.BASE_PURPLE_LIGHT);
 
 	private String name;
 	private Colour colour;

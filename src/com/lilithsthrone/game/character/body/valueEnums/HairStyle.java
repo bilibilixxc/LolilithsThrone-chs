@@ -19,49 +19,49 @@ public enum HairStyle {
 //	- shaved (different from bald)
 //	- punk (hair draped over face)
 	
-	NONE("natural", Femininity.ANDROGYNOUS, HairLength.ZERO_BALD) {
+	NONE("自然", Femininity.ANDROGYNOUS, HairLength.ZERO_BALD) {
 		@Override
 		public String getName(Body body) {
 			if(body!=null && body.isFeral()) {
 				if(body.getLegConfiguration()==LegConfiguration.AVIAN) {
-					return "plumed";
+					return "羽状";
 				} else {
-					return "maned";
+					return "鬃毛状";
 				}
 			}
 			return super.getName(body);
 		}
 	},
-	MESSY("messy", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	LOOSE("loose", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	CURLY("curly", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	STRAIGHT("straight", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	SLICKED_BACK("slicked-back", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
-	SIDE_PARTED("side-parted", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	MESSY("凌乱", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	LOOSE("松散", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	CURLY("卷发", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	STRAIGHT("直发", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	SLICKED_BACK("大背头", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
+	SIDE_PARTED("侧剃", Femininity.ANDROGYNOUS, HairLength.ONE_VERY_SHORT),
 	
-	SIDECUT("sidecut", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
-	MOHAWK("mohawk", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
-	DREADLOCKS("dreadlocks", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
+	SIDECUT("侧剃", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
+	MOHAWK("莫霍克", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
+	DREADLOCKS("脏辫", Femininity.ANDROGYNOUS, HairLength.TWO_SHORT),
 	
-	AFRO("afro", Femininity.MASCULINE, HairLength.ONE_VERY_SHORT),
-	TOPKNOT("topknot", Femininity.MASCULINE, HairLength.THREE_SHOULDER_LENGTH),
+	AFRO("爆炸头", Femininity.MASCULINE, HairLength.ONE_VERY_SHORT),
+	TOPKNOT("髻发", Femininity.MASCULINE, HairLength.THREE_SHOULDER_LENGTH),
 	
-	PIXIE("pixie-cut", Femininity.FEMININE, HairLength.TWO_SHORT),
-	BUN("bun", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	BOB_CUT("bob-cut", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	CHONMAGE("chonmage", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	WAVY("wavy", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	PONYTAIL("ponytail", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	LOW_PONYTAIL("low ponytail", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	TWIN_TAILS("twintails", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	SIDE_BRAIDS("side braids", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
-	CHIGNON("chignon", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	BRAIDED("braided", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	TWIN_BRAIDS("twin braids", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	CROWN_BRAID("crown braid", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	DRILLS("ojou ringlets", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	HIME_CUT("hime-cut", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
-	BIRD_CAGE("bird cage", Femininity.FEMININE, HairLength.SEVEN_TO_FLOOR);
+	PIXIE("精灵短发", Femininity.FEMININE, HairLength.TWO_SHORT),
+	BUN("丸子头", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	BOB_CUT("波波头", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	CHONMAGE("月代头", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	WAVY("波浪长发", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	PONYTAIL("马尾辫", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	LOW_PONYTAIL("低马尾", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	TWIN_TAILS("双马尾", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	SIDE_BRAIDS("侧麻花辫", Femininity.FEMININE, HairLength.THREE_SHOULDER_LENGTH),
+	CHIGNON("低髻", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	BRAIDED("麻花辫", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	TWIN_BRAIDS("双麻花辫", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	CROWN_BRAID("冠辫发", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	DRILLS("公主卷发", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	HIME_CUT("姬发", Femininity.FEMININE, HairLength.FOUR_MID_BACK),
+	BIRD_CAGE("鸟笼发", Femininity.FEMININE, HairLength.SEVEN_TO_FLOOR);
 	
 	private String descriptor;
 	private Femininity femininity;

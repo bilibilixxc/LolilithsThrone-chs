@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[A logo subtly printed along the inside of the temples informs you that it was designed by 'Phlarx'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[鬓角边巧妙地印着的标志告诉你这是由"Phlarx"设计的。]]></clothingAuthorTag>
 		<value>750</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[heart sunglasses]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[heart sunglasses]]></namePlural>
-		<description><![CDATA[A pair of novelty heart-shaped sunglasses.]]></description>
+		<determiner><![CDATA[一副]]></determiner>
+		<name><![CDATA[心形太阳镜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[心形太阳镜]]></namePlural>
+		<description><![CDATA[一副新颖的心形太阳镜。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>
@@ -47,25 +47,25 @@
 		</itemTags>
 	</coreAttributes>
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(remove)] [npc.her] sunglasses.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(remove)] [npc2.namePos] sunglasses.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] aggressively [npc.verb(remove)] [npc2.namePos] sunglasses.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]摘下[npc.her]的太阳镜。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]摘下[npc2.namePos]的太阳镜。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]像挑衅般摘下[npc2.namePos]的太阳镜。
+]]></otherRough>
 	</displacementText>
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on [npc.her] sunglasses.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(put)] on [npc2.namePos] sunglasses.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] aggressively [npc.verb(put)] on [npc2.namePos] sunglasses.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]戴上[npc.her]的太阳镜。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]给[npc2.namePos]戴上太阳镜。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]像挑衅般给[npc2.namePos]戴上太阳镜。
+]]></otherRough>
 	</replacementText>
 </clothing>

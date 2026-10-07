@@ -1,925 +1,925 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		A short way down the western road which connects Elis to the far-off Shinrin Highlands, a large, natural clearing in the woods has been expanded, reshaped, and levelled into a huge, flat rectangle. Surrounding this space, a perimeter ditch has been dug, and as an extra layer of protection, the trees which were chopped down to expand the clearing have been used to construct a chest-high wall. The creators of this fortification, and the people who are now occupying the hundreds of tents that have been set up inside it, are the Amazon refugees from Themiscyra.
-	</p>
+		沿着伊利斯西边通往心林高地的小路行走一段距离后，森林中一大片自然空地被扩展、重塑并平整成一个巨大的扁平矩形。周围挖出了一条长沟，作为额外的防御工事，为了扩大空地面积，周围的树木都被砍倒，并且围成了齐胸高的围墙。建造这个防御工事，以及营地帐篷中的数百个居民，都是来自特弥斯库拉的亚马逊难民。
+ </p>
 	<p>
-		Posted at each of the entrances to this fortified camp, a pair of Amazon warriors are standing guard. As you approach, they cross their dories to signal that your entry is forbidden. Clearly having mistaken you for a stranger, these sentinels will surely lower their guard and grant you entry to their camp if you were to tell them who you are...
-	</p>
-	]]>
-	</htmlContent>
+		营地的每个入口都有一对亚马逊哨兵站岗。你慢慢靠近营地，他们立刻交叉希腊长矛阻拦，示意你不准进入。显然，这些哨兵把你当成了陌生人，但如果你公开身份，或许他们就不会这么警惕，让你进入营地……
+ </p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Initial entry: -->
 	
 	<htmlContent tag="INITIAL_ENTRY"><![CDATA[
 	<p>
-		Wanting to head into the Amazons' camp and take a look around, you approach the two warriors who are standing guard at its entrance. Keeping their dories crossed to bar your passage, the guards glare at you in a menacing fashion as the more senior of the two declares, [style.speechFeminineStrong(Halt! You're no Amazon; you can't come in here!)]
+		你打算进亚马逊人的营地逛逛，靠近了在入口站岗的两名哨兵。他们立刻交叉希腊长矛阻拦，对你虎视眈眈。看起来资历较老的那名哨兵警告道，[style.speechFeminineStrong(停下，外来者！这地方只有亚马逊人能进来！)]
 	</p>
 	<p>
-		Fortunately, at that moment you spot the familiar figure of Aurokaris walking through the camp a short distance up ahead. Thinking that it's going to help to have this Amazon vouch for you, you call out to the cow-girl and manage to get her attention. Walking over to the guards, she gestures towards you and declares,
+		幸好，在你们对峙的时候，你看到了奥罗卡利斯熟悉的身影。她先你一步，正要进营地。你暗自思忖，有了亚马逊人担保，或许能进去。于是叫住了牛女，吸引她的注意。她走过来指着你说，
 		#IF(pc.hasPerkAnywhereInTree(PERK_HERO_OF_THEMISCYRA))
-			 [aurokaris.speech(This is the Hero#IF(pc.isFeminine())ine#ENDIF who defeated dozens of Lunette's daughters Themiscyra, before helping to saving our queen! [pc.She] may not be one of us, but [pc.sheHas] earned the right to enter our camp!)]
+			[aurokaris.speech(这位英雄在特弥斯库拉解决了露内特，还救下了我们的女王！尽管[pc.She]不是我们的一员，但理应拥有进入营地的权利！)]
 		#ELSE
-			 [aurokaris.speech(This is the [pc.race] who helped to save our queen in Themiscyra! [pc.She] may not be one of us, but [pc.sheHas] earned the right to enter our camp!)]
+			[aurokaris.speech(这位是[pc.race]，在特弥斯库拉帮我们救下了女王！尽管[pc.She]不是我们的一员，但理应拥有进入营地的权利！)]
 		#ENDIF
 	</p>
 	<p>
-		Clearly knowing Aurokaris and respecting her authority, the sentries uncross their dories, before the leader states, [style.speechFeminineStrong(Very well, you may enter. We'll make sure that the other guards are informed of who you are, so you shouldn't have any trouble entering our camp again.)]
+		两名哨兵认出了奥罗卡利斯。得益于她德高望重，他们没有继续阻拦你。领头那个说，[style.speechFeminineStrong(好吧，你可以进营地，我会告诉其他哨兵，让他们也认识认识你，这样下次就不会有人找你麻烦了。)]
 	</p>
 	<p>
-		As you [pc.step] forwards to greet Aurokaris, the other guard menacingly warns,
+		你朝奥罗卡利斯[pc.step]去，另一个哨兵威胁地警告道，
 		#IF(!pc.isFeminine())
-			 [style.speechFeminine(We'll be keeping an eye on you. Considering how masculine you are, you're very fortunate to be allowed into our camp. Behave yourself, or else you'll have us to answer to...)]
+			[style.speechFeminine(我们会盯紧你。你这么男性化，还能获许进入营地，算你运气好。放规矩点，否则你不得不好好交代……)]
 		#ELSE
-			 [style.speechFeminine(We'll be keeping an eye on you. Behave yourself, or else you'll have us to answer to...)]
+			[style.speechFeminine(我们会盯紧你。放规矩点，否则你不得不好好交代……)]
 		#ENDIF
 	</p>
 	<p>
-		[aurokaris.speech([pc.She] won't cause any trouble,)] Aurokaris reassures the guard, before motioning you to follow her and happily saying, [aurokaris.speech(Come on, [pc.name], I'll show you around.)]
+		[aurokaris.speech([pc.She]可不会搞出麻烦，)]奥罗卡利斯向哨兵保证，随后示意你跟上她，看得出来她很高兴，[aurokaris.speech(来吧，[pc.name]，我带你在营地里逛逛。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_ENTRY_FOLLOW"><![CDATA[
 	<p>
-		[pc.Walking] forwards and entering the Amazons' camp, you follow Aurokaris as she leads you down a relatively wide pathway which is flanked by dozens of tents of all colours, shapes, and sizes. While some are smaller than others, all are of a considerable size, with even the very smallest that you see looking like it'd be able to comfortably house two or three people. Gesturing around her, the cow-girl reveals, [aurokaris.speech(We managed to bring quite a few tents with us as we evacuated Themiscyra, but a lot of these were made after we arrived at Elis. I think we must have bought every last scrap of cloth in the town...)]
+		你[pc.Walking]进亚马逊人的营地，跟着奥罗卡利斯走在一条宽阔的小道上，小道两旁是几十个各种颜色、形状和大小的帐篷。虽然有些帐篷比其他帐篷小，但所有帐篷都有相当大的面积，即使是你看到的最小的帐篷，看起来也能容纳两三个人。牛女指了指周围说，[aurokaris.speech(在撤离特弥斯库拉时，我们带走了不少帐篷，但还有很多是在抵达伊利斯后制作的。我想我们大概买下了镇上所有的布料……)]
 	</p>
 	<p>
-		Seeing more than one forlorn look on the faces of the many Amazons who you pass, you ask Aurokaris how they're managing after losing their hometown to Lunexis's army. Putting on a brave face, the muscular cow-girl cheerily replies, [aurokaris.speech(We'll be fine, don't you worry about us! We've got all the essentials here, and it's only a matter of time before we take our town back. Speaking of essentials, look, here's where we've set up our marketplace.)]
+		看到路过的许多亚马逊人脸上都流露出惆怅的神情，你问奥罗卡利斯，在家乡被露内克西丝的军队夺走后，他们过得怎么样。这位肌肉发达的牛女无畏地回答， [aurokaris.speech(我们会没事的，不用担心我们！我们已经准备好了所有必需品。我们夺回城镇只是时间问题，说到必需品，看，这是我们的集市。)]
 	</p>
 	<p>
-		Having reached a T-junction at the end of the path you've been travelling on, you look left to where Aurokaris is gesturing. The Amazons' marketplace appears to consist of about a dozen tents, each one of which is much larger than those being used as accommodation, and within each one you see that food, drink, clothing, and other miscellaneous goods have been stacked upon wooden tables and shelves. Pointing to the one that's closest to where you're currently standing, Aurokaris reveals, [aurokaris.speech(I work in that tent during the day, so you can come and visit me from eight in the morning to six at night if you ever want to buy anything. I wouldn't try to trade with anyone else if I were you; most Amazons are distrustful of strangers, and after what happened back at Themiscyra tensions are running pretty high...)]
+		你走到小路尽头的丁字路口，看向左边，奥罗卡利斯正在向你打手势。亚马逊人的集市似乎由十几个帐篷组成，每个帐篷都比住宿的帐篷大得多，每个帐篷里的木桌和架子上都堆放着食物、饮料、衣服和其他杂物。奥罗卡利斯指着离你现在所站位置最近的一个帐篷说，[aurokaris.speech(我白天在帐篷里工作，如果你想买东西，可以早上八点到晚上六点来找我。还有如果我是你，就不会尝试和其他人交易；大多数亚马逊人都不信任陌生人，自从在特弥斯库拉发生事情之后，局势非常紧张……)]
 	</p>
 	<p>
-		Thanking your companion for the warning, you move to continue following her as she turns away from the marketplace and declares, [aurokaris.speech(Come on, I'll take you past Ursa's tent and show you the sparring field.)]
+		你感谢她的警告并继续跟着她，她在转身离开集市时说，[aurokaris.speech(走吧，我带你去乌萨的帐篷看看搏击场。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_ENTRY_FOLLOW_END"><![CDATA[
 	<p>
-		Continuing to follow Aurokaris, you set off down another pathway, and are soon lead past Ursa's tent. As is to be expected of the tent which houses the queen of the Amazons, it's far bigger than any other you've seen so far, and actually looks to consist of several large tents which have been joined together. Motioning towards the two bear-girl guards at the tent's entrance, Aurokaris states, [aurokaris.speech(If you want to see Ursa, just tell the guards who you are. Our queen is very busy at all times of the day and night, but I'm sure that she'll make time to see you after what you did for her back in Themiscyra.)]
+		你继续跟着奥罗卡利斯，走上另一条小路，很快就经过了乌萨的帐篷。不出所料，亚马逊女王的帐篷比你到现在看到的任何帐篷都要大得多，而且看起来是由几个大帐篷连在一起的。奥罗卡利斯向帐篷入口处的两个熊女守卫示意，[aurokaris.speech(如果你要找乌萨，只需告诉守卫你的身份就行。我们的女王从早忙到晚，但我相信她会抽出时间见你的，毕竟你在特弥斯库拉为她做了那么多。)]
 	</p>
 	<p>
-		Continuing past the queen's tent, Aurokaris leads you to the edge of a large, sandy square. Scattered throughout this open space, pairs of Amazons are wrestling and sparring with one another, while on the far side an archery range has been set up for warriors who want to practice with a bow. Turning to face you, your cow-girl guide explains, [aurokaris.speech(All Amazons are required to practice their combat skills at least three times a week. Now more than ever we need to keep our skills sharp, as one day soon we'll be marching off to retake Themiscyra. While it should be fine for you to watch, you'd better not try to get involved; things could easily get out of hand and then you'd have a real fight on your hands.)]
+		穿过女王的帐篷，奥罗卡利斯带你来到一个宽阔的沙地广场边缘。在这片开阔地上，一对对亚马逊人正在互相摔跤和比武，而在远处，则为想要练习弓箭的战士们设立了一个射箭场。你的女向导转身为你解释，[aurokaris.speech(所有亚马逊人都必须每周至少练习三次战斗技能。现在我们比以往任何时候都更需要保持我们的技能，很快有一天我们就要出征去夺回特弥斯库拉。你在旁边看应该没问题，但最好别掺和进来；事情很容易失控，到时候你可就真要动手了。)]
 	</p>
 	<p>
-		Turning to point out a relatively small, pale blue tent that's tucked into a corner on the far side of the sparring field, she reveals, [aurokaris.speech(That's my tent over there if you need me in an emergency. I'd rather you didn't disturb me while I'm in there, though, as I always need a good night's rest. Anyway, that's pretty much all of the interesting parts of our camp.
+		她转过身来，指着搏击场远处角落里一个较小的淡蓝色帐篷说，[aurokaris.speech(如果你有急事需要我，我的帐篷就在那边。不过我希望我在里面的时候不要来打扰我，我总要好好休息一晚。总之，这就是我们营地所有有趣的地方了。
 		#IF(game.isHourBetween(8, 18))
-			 I need to go and get back to work at the marketplace now. Remember, I work there between eight in the morning to six in the evening, so if you want me then come and find me there.
+			我现在得回去集市工作了。记住，我的工作时间是早上八点到傍晚六点，如果你想找我，就去那里找我。
 		#ELSE
-			 Speaking of a good night's rest, I really should be getting to bed now. Remember, I work at the marketplace between eight in the morning to six in the evening, so if you want me then come and find me there.
+			说到好好休息，我真的该上床睡觉了。记住，我早上八点到晚上六点在市场工作，如果你想找我，就去那里找我。
 		#ENDIF
-		 Bye, [pc.name], oh and thanks again for all of your help back in Themiscyra!)]
+		再见，[pc.name]，哦，再次感谢你在特弥斯库拉时的帮助！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_ENTRY_FOLLOW_END_LEAVE"><![CDATA[
 	<p>
-		After you've said goodbye to her, Aurokaris gives you once last wave and runs off, leaving you to explore the Amazon camp in your own time...
+		你和她道别后，奥罗卡利斯向你最后挥了挥手就跑开了，留下你自己慢慢探索亚马逊人营地……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Standard place scenes: -->
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		You find yourself standing at the main entrance to the Amazons' camp. A pair of warriors, equipped with dories, are standing guard on either side of the path.
+		你站在亚马逊人营地的正门口。一对手持希腊长矛的勇士正站在小路两侧守卫。
 	</p>
 	<p>
-		[style.feminineSpeech(You'd better be on your best behaviour in there,)] one of these guards warns you, before the two of them flash you suspicious looks. 
+		[style.feminineSpeech(你在里面最好表现好点，)]其中一名卫兵警告你，然后他们两人向你投来怀疑的目光。
 	</p>
 	<p>
-		Having saved their queen from Themiscyra, and with Aurokaris having vouched for your good character, you have nothing to fear from these Amazons, no matter how many hostile glares they throw your way. Still, you decide that it would be best not to do anything that would give them an excuse to harass you, and so you turn away from them and wonder where to go to form here...
+		你在特弥斯库拉救下了她们的女王，而且奥罗卡利斯也为你的良好品格做了担保，所以无论她们向你投来多少敌意的目光，你都不用害怕这些亚马逊人。尽管如此，你还是最好不要做任何会让他们有借口骚扰你的事，于是你转身离开了他们，想着该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Having concluded your business in here, you pass the sentinels and head back out into the cleared area of woodland which surrounds the Amazons' camp...
+		你结束了这里的工作后，穿过哨兵回到亚马逊人营地周围的林地里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PATHWAY"><![CDATA[
 	<p>
-		Compacted gravel forms the relatively wide pathway which serves as the main route through the Amazons' camp. Travelling down this road, you end up passing dozens of tents of all colours, shapes, and sizes. Here and there, wooden crates are stacked up in between these tents, and you assume that they contain whatever belongings were able to be taken with the Amazons during their retreat from Themiscyra.
+		压实的碎石铺成了一条宽阔的小路，是穿过亚马逊人营地的主要通道。你沿着这条路前行路过几十个各种颜色、形状和大小的帐篷。在这些帐篷之间，时不时会堆放一些木箱，你想着这些木箱里装有亚马逊人从特弥斯库拉撤退时能够带走的任何财物。
 	</p>
 	<p>
-		As you pass the feminine warriors who call this temporary accommodation home, you can't help but notice that they're giving you suspicious glances, with some even going so far as to glare at you in a hostile manner. Not wanting to do anything that would justify these Amazons' distrust of strangers, you ignore their menacing looks and continue on your way down the path...
+		当你经过那些把这个临时住所当成家的女战士时，你注意到她们正向你投来怀疑的目光，有些人甚至用充满敌意的目光瞪着你。你不想做任何事情来证明这些亚马逊人对陌生人的不信任，所以没有理会她们气势汹汹的眼神，继续沿着小路前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TENTS"><![CDATA[
 	<p>
-		As you pass them by, you see that no two of the tents which have been erected within the Amazons' camp are alike. Varying not only in size and shape, these canvas dwellings are found in a dazzling array of colours, from sky blue to dark red and everything in-between. While some are smaller than others, all are of a considerable size, with even the very smallest that you see looking like it'd be able to comfortably house two or three people.
+		当你经过这些帐篷时，你发现亚马逊人营地里搭建的帐篷没有一个是相同的。这些帆布帐篷不仅大小不一，形状各异，颜色也是五颜六色，从天蓝色到深红色，应有尽有。虽然有的比其他帐篷小，但所有的帐篷都相当大，即使是你看到的最小的帐篷，看起来也能让两三个人住得舒舒服服。
 	</p>
 	<p>
-		The Amazons who are found here don't seem to appreciate your proximity to their homes, and glare at you in a hostile manner as you pass. Although your presence seems to be grudgingly tolerated, you decide that it's probably best not to linger here for too long, and so swiftly continue on your way...
+		这里的亚马逊人似乎并不喜欢你靠近他们的家园，当你经过时，他们用充满敌意的目光瞪着你。虽然你的出现似乎被勉强容忍，但你还是决定最好不要在这里逗留太久，于是迅速继续赶路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SPARRING_FIELD"><![CDATA[
 	<p>
-		Serving both as a meeting place and the area in which the Amazons' combat skills are practised, the large, sandy square before you is currently in use by at least two dozen female warriors. Wrestling, crossing dories, or competing with bows to hit distant archery targets, these Amazons are so focused on their sparring that they either don't notice you or decide not to pay you any attention.
+		你面前的这个沙质大广场既是亚马逊人的聚会场所，也是她们练习战斗技巧的地方，目前至少有二十多名女战士正在使用这个广场。这些亚马逊人或摔跤、或挥舞希腊长矛、或比试用弓箭射中远处的箭靶，她们都在专心致志地比武，要么没有注意到你，要么不理会你。
 	</p>
 	<p>
-		At regular intervals around the square, you see that weapon racks are stocked with spare dories and bows. Deciding that it would be a very bad idea to try and take one of these weapons, and soon having had enough of watching the Amazons spar with one another, you decide to continue on your way through the camp...
+		你看到广场上每隔一段距离就有一个武器架，上面摆放着备用的希腊长矛和弓。你认为试图拿走这些武器是个非常糟糕的主意，而且你很快就看够了亚马逊人之间的搏斗，于是你决定继续穿过营地……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Aurokaris at trading tents: -->
 	
 	<htmlContent tag="TRADER"><![CDATA[
 	<p>
-		Looking around, you see that the Amazons' marketplace consists of about a dozen tents, each one of which is much larger than those being used as accommodation.
+		你环顾四周，发现亚马逊人的集市由十几个帐篷组成，每个帐篷都比住宿的帐篷大得多。
 		#IF(game.isHourBetween(8, 18))
-			 Within each one you see that food, drink, clothing, and other miscellaneous goods have been stacked upon wooden tables and shelves. A nearby sign reminds shoppers that the tents are only open between [style.colourMinorGood([units.time(8)]-[units.time(18)])], and so as you can see from the fact that there are many Amazons passing to and fro between each stall, the marketplace is currently [style.colourGood(open)].
+			你在每个帐篷里都能看到木桌和架子上堆放着食物、饮料、衣服和其他杂物。附近的告示牌提醒购物者，帐篷只在[style.colorMinorGood([units.time(8)]-[units.time(18)])]开放，从每个摊位之间都有许多亚马逊人来来往往可以看出，市场目前[style.colorGood(营业)]。
 		#ELSE
-			 A nearby sign reminds shoppers that the tents are only open between [style.colourMinorBad([units.time(8)]-[units.time(18)])], and so as you can see from the fact that this area is currently deserted, the marketplace is currently [style.colourBad(closed)].
+			附近的告示牌提醒购物者，帐篷只在[style.colorMinorBad([units.time(8)]-[units.time(18)])]开放，从这一区域目前没有一个人可以看出，市场目前[style.colourBad(休息)]。
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getCharactersPresent().contains(aurokaris))
-			Although the goods on offer in all of the tents look interesting, you remember Aurokaris's warning about Amazons being distrustful of strangers and so not to bother them. Looking over to the cow-girl's stall, you see her standing behind a table with a bored expression on her face. If you wanted to buy something, you could head over to her stall and see what she's got for sale...
+			虽然所有帐篷里出售的商品看起来都很有趣，但你还记得奥罗卡利斯的警告，亚马逊人不信任陌生人，所以不要去打扰他们。你向牛女的摊位望去，看到她站在桌子后面，脸上带着无聊的表情。如果你想买东西，可以去她的摊位看看她有什么东西卖……
 		#ELSE
-			As all of the tents are tied up and closed for the day, you'll have to leave and return during opening hours if you wanted to buy something...
+			由于所有帐篷都已收摊并捆了起来，你现在只能离开，如果你想买东西，就在开放时间回来……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS"><![CDATA[
 	#IF(aurokaris.isVisiblyPregnant())
 		<p>
-			Deciding that you'd like to pay Aurokaris another visit while she's at work, you head over to her stall. As usual, although most of the other tents are busy with customers, the cow-girl's community store doesn't seem to be attracting any shoppers at all, thanks to the high prices of all the goods on offer.
+			你决定趁奥罗卡利斯还在工作的时候去拜访她，于是来到了她的摊位前。和往常一样，虽然其他大部分帐篷都顾客盈门，但牛女的社区商店由于所有商品的价格都很高，似乎根本没有吸引到任何顾客。
 		</p>
 		<p>
-			[aurokaris.speech(Oh, hi, [pc.name]!)] the cow-girl calls out as she sees you approaching. Standing upright, she gestures down to her stomach, and you see that
+			[aurokaris.speech(哦，嗨，[pc.name]！)]牛女看到你走近便这样喊道。她站得笔直，向下指了指自己的肚子，你看到了
 			#IF(!aurokaris.isCharacterReactedToPregnancy(pc))
-				 she's sporting a [style.colourSex(pregnant belly)]. Blushing as she smiles at you, she reveals, [aurokaris.speech(I haven't been with anyone else, so it was you who got me pregnant... Oh, don't worry about having to do anything to help; I can manage it just fine!)]
+				她正挺着[style.colorSex(孕肚)]。她一边对你微笑，一边红着脸说，[aurokaris.speech(我没有和别人在一起过，所以肯定是你让我怀孕的……哦，不用担心你得帮我做什么，我自己就能搞定！)]
 			#ELSE
-				 she's still sporting a [style.colourSex(pregnant belly)]. Blushing as she smiles at you, she reveals, [aurokaris.speech(I've been coping with it just fine! There's really no need for any help with anything!)]
+				她依然挺着[style.colorSex(孕肚)]。她一边对你微笑，一边红着脸说，[aurokaris.speech(我一直过得很好！真的不需要任何帮助！)]
 			#ENDIF
 		</p>
 		<p>
-			Gesturing you forwards, the cow-girl takes hold of your [pc.hand] and guides it down to her belly, letting out a soft gasp as she gets you to feel her pregnant bump. As you run your [pc.fingers+] over her distended belly, the cow-girl gently sighs and says, [aurokaris.speech(I think it would be best to avoid sparring while I'm like this. After I've given birth we can do it again if you'd like... Anyway, did you want to buy anything? Sorry about the high prices; there's nothing I can do about them.)]
+			牛女示意你向前走，她握住你的[pc.hand]并将它引向她的腹部，当你用[pc.fingers+]抚摸她胀鼓鼓的肚子时，牛女轻轻地叹了口气说，[aurokaris.speech(我觉得在我这个样子的时候还是不要再切磋比较好。等我生完孩子，如果你愿意，我们可以再来一次……你想买点什么吗？抱歉，价格太高了，我也没办法。)]
 		</p>
 	#ELSE
 		<p>
-			Deciding that you'd like to pay Aurokaris a visit while she's at work, you head over to her stall. Although most of the other tents are busy with customers, the cow-girl doesn't seem to be attracting any shoppers at all. The reason for this is soon made clear, for as you approach, you see that the prices on display appear to be quite steep.
+			你决定趁奥罗卡利斯还在工作的时候去拜访她，于是来到了她的摊位前。虽然其他大部分摊位都顾客盈门，但牛女似乎没有吸引到任何顾客。原因很快就清楚了，当你靠近她的摊位时，你发现摊位上摆放的商品价格相当昂贵。
 		</p>
 		<p>
-			[aurokaris.speech(Oh, hi, [pc.name]!)] the cow-girl calls out as she sees you approaching. Noticing that you're taking a look at the goods which are on offer, she explains, [aurokaris.speech(This is a community store, so I don't get to set the prices. I'm just the one who's got stuck running this place...)]
+			[aurokaris.speech(哦，嗨，[pc.name]！)]牛女看到你走近便这样喊道。她注意到你正在看商品，于是解释着，[aurokaris.speech(这是一家社区商店，所以价格不是我定的。我只是一个被困在这里的人……)]
 		</p>
 		<p>
 			#IF(!flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred))
-				Letting out a sigh to indicate how bored she is, the cow-girl complains, [aurokaris.speech(I can't even do anything productive during my break. All of my regular sparring partners have ended up being assigned similar community services, and trying to coordinate times to go and have a sparring session has turned out to be impossible... Anyway, did you want to buy anything? Sorry about the high prices; there's nothing I can do about them.)]
+				牛女无聊地叹了一口气，抱怨着，[aurokaris.speech(我甚至无法在休息时间做任何有意义的事情。我所有的固定搏击伙伴都被分配到了类似的社区服务机构，想协调时间去搏击都不可能……总之，你想买什么东西吗？抱歉，价格太高了，我也没办法。)]
 			#ELSE
-				Changing her tone, the cow-girl flashes you a big smile and happily says, [aurokaris.speech(Thanks for the sparring session earlier, by the way. I hope that you'll come back and do it again with me another day... Anyway, did you want to buy anything? Sorry about the high prices; there's nothing I can do about them.)]
+				牛女话锋一转，向你绽放出灿烂的笑容，开心地说， [aurokaris.speech(顺便说一句，谢谢你刚才的切磋。希望改天你还能来和我切磋切磋……总之，你想买什么吗？抱歉，价格太高了，我也没办法。)]
 			#ENDIF
 		</p>
 	#ENDIF
 	#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_visited))
 		<p>
-			Before you can answer, the muscular Amazon lets out a little moan, and as she starts to blush, she says,
+			还没等你回答，这位肌肉发达的亚马逊人就发出了一声轻微的呻吟，她脸红着说，
 			#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_had_sex))
-				 [aurokaris.speech(I had a lot of fun with you last night... Perhaps we could have some fun again this evening? You know where my tent is if you want to do it again...)]
+				[aurokaris.speech(昨晚我和你玩得很开心……也许今晚我们还能再来一次？如果你想再来一次，你知道我的帐篷在哪里……)]
 			#ELSE
-				 [aurokaris.speech(Thanks for visiting me last night, but... Well, perhaps we could actually do something together tonight? You know where my tent is if you want to try it...)]
+				[aurokaris.speech(谢谢你昨晚来看我，但是……也许我们今晚也可以一起做点什么？如果你想试试的话，你知道我的帐篷在哪儿……)]
 			#ENDIF
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_had_sex))
 		<p>
-			Before you can answer, the muscular Amazon lets out a little moan, and as she starts to blush, she asks, [aurokaris.speech(Are we going to have some fun tonight? You know where my tent is...)] 
+			还没等你回答，这位肌肉发达的亚马逊人就发出了一声轻微的呻吟，她脸红着问，[aurokaris.speech(我们今晚要玩玩吗？你知道我的帐篷在哪里……)] 
 		</p>
 		#IF(aurokaris.isAttractedTo(pc) && !flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_ambrosia_tasting) && pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
 			<p>
-				Returning the Amazon's smile, you tell her that you'll stop by again if you have the time. Clearly not wanting to wait until then to get some action, she leans forwards over the counter and playfully suggests, [aurokaris.speech(I've got something naughty in mind... How about you join me for some ambrosia tasting? I've got some samples from the latest batch which haven't been enchanted yet, so you can drink it without having any of the usual effects.)]
+				你对亚马逊人的微笑，告诉她如果有时间，你会再来拜访。她显然不想等到那个时候再行动，于是向前靠了靠柜台，俏皮地建议，[aurokaris.speech(我有个下流的想法……和我一起品尝仙肴一品怎么样？我有一批最新的样品，还没被施过魔法，所以你喝了不会有任何通常的效果。)]
 			</p>
 			<p>
-				Telling Aurokaris that this doesn't exactly sound very 'naughty', you make the cow-girl blush and awkwardly reveal, [aurokaris.speech(Well, I was thinking that... I mean... I was going to let you lick it off of me... So if you've got time, and if you want to, come into the tent and we can have some fun...)] 
+				你和奥罗卡利斯说这听起来并不是很“下流”，牛女脸红了，她尴尬地说，[aurokaris.speech(呃，我在想……我是说……我打算让你从我身上舔下去……如果你有时间，如果你愿意，到帐篷里来，我们可以玩玩……)] 
 			</p>
 		#ENDIF
 	#ELSEIF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_invite_received))
 		<p>
-			Before you can answer, the muscular Amazon lets out a little moan, and as she starts to blush, she awkwardly reminds you, [aurokaris.speech(You know, I was serious about you visiting my tent at night... I mean, if you wanted to, we could have some fun in there... I really kind of like you...)]
+			还没等你回答，这位肌肉发达的亚马逊人就发出了一声轻微的呻吟，她开始脸红，尴尬地提醒你， [aurokaris.speech(你知道的，我非常希望你晚上来我的帐篷，我是认真的……我是说，如果你愿意，我们可以在里面找点乐子……我真的有点喜欢你……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_LEAVE"><![CDATA[
 	<p>
-		Having concluded your business with Aurokaris, you tell her that you need to leave now. Saying goodbye, the cow-girl waves to you as you [pc.step] away from her tent and head off into the camp, wondering what to do next...
+		结束了与奥罗卡利斯的谈话后，你告诉她你现在需要离开了。告别时，牛女向你挥手，你[pc.step]离她的帐篷，向营地走去，想着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TRANSACTION_START"><![CDATA[
 	<p>
-		As you take a look at what Aurokaris has for sale, she states, [aurokaris.speech(The sort of food and drink I've got here varies from day to day, as it's just whatever can be bought from Elis for a good price that morning. The potions, clothing, and weapons that we Amazons make should always be available, though.)]
+		当你看了看奥罗卡利斯出售的商品时，她表示，[aurokaris.speech(我这里的食物和饮料每天都不一样，因为都是当天早上能从伊利斯买到的物美价廉的东西。不过，我们亚马逊人制造的药水、衣物和武器应该总是有的。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Aurokaris sparring: -->
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING"><![CDATA[
 	<p>
-		Picking up on what Aurokaris said, you ask her if she'd like you to act as her sparring partner today. Clapping her hands together in joy, she enthusiastically replies, [aurokaris.speech(Really? You'd do that for me? Thanks, [pc.name]!)]
+		你接着奥罗卡利斯的话，问她今天是否愿意让你做她的陪练。她高兴地拍着手，热情地回答，[aurokaris.speech(真的？你愿意和我做这个？谢谢，[pc.name]！)]
 	</p>
 	<p>
-		Not giving you a chance to change your mind, the cow-girl quickly closes her tent and places a sign in front of it declaring that she's on her lunch break. Grabbing hold of your [pc.hand], she happily leads you through the camp to the sparring field, before gesturing to one of the nearby weapon racks and asking, [aurokaris.speech(Would you like to use a dory or a bow? Or perhaps we should leave the weapons behind and wrestle instead?)]
+		不给你改变主意的机会，牛女很快就关上了帐篷，并在帐篷前放了一块牌子，宣布她正在午休。然后抓住你的[pc.hand]，高兴地领着你穿过营地来到比武场，指着附近的一个武器架问，[aurokaris.speech(你想用长矛还是弓？或者我们不用武器来摔跤？)]
 	</p>
 	<p>
-		[style.speechFeminine(Hey, Aurokaris, you're not seriously going to let an outsider spar with you, are you?)] a nearby Amazon shouts out in a disapproving tone.
+		[style.speechFeminine(嘿，奥罗卡利斯，你不会真想和一个外人比武吧？)]附近的一个亚马逊人不赞同地大声喊道。
 	</p>
 	<p>
-		Turning to face the warrior who just spoke, Aurokaris silences her by loudly declaring for all to hear,
+		奥罗卡利斯转过身面对刚才说话的战士，大声让她闭嘴，
 		#IF(pc.hasPerkAnywhereInTree(PERK_HERO_OF_THEMISCYRA))
-			 [aurokaris.speech(This is the Hero#IF(pc.isFeminine())ine#ENDIF of Themiscyra! [pc.She] saved our queen, so [pc.sheHas] earned the right to be here!)]
+			[aurokaris.speech(这就是特弥斯库拉的#IF(pc.isFeminine())女#ENDIF英雄！[pc.She]拯救了我们的女王，所以[pc.sheHas]有资格来到这里！)]
 		#ELSE
-			 [aurokaris.speech(This is the [pc.race] who fought alongside me in Themiscyra! [pc.She] helped to save our queen, so [pc.sheHas] earned the right to be here!)]
+			[aurokaris.speech(这就是在特弥斯库拉与我并肩作战的[pc.race]！[pc.She]帮助拯救了我们的女王，所以她有资格来到这里！)]
 		#ENDIF
 	</p>
 	<p>
-		With that, the cow-girl turns back to you and once again asks, [aurokaris.speech(So, what'll it be, [pc.name]? A dory, some archery practice, or wrestling?)]
+		说完，牛女又转过身来，再次向你问，[aurokaris.speech(所以，你想要做什么，[pc.name]？长矛，射箭还是摔跤？)]
 	</p>
 	#IF(!flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred_unarmed) || !flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred_ranged) || !flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred_melee))
 		<p style='text-align:center;'><i>
 			#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred_unarmed))
-				You've previously chosen to [style.colourMinorBad(wrestle)] with Aurokaris without using a weapon, so perhaps you should try something else this time.
+				你之前与奥罗卡利斯赤手空拳地[style.colourMinorBad(摔跤)]过，也许这次你应该试试别的。
 			#ELSE
-				You haven't yet sparred with Aurokaris without using a weapon, so choosing to [style.colourMinorGood(wrestle)] with her might be a good option.
+				你还没有赤手空拳与奥罗卡利斯比试过，与她[style.colourMinorGood(摔跤)]可能是个不错的选择。
 			#ENDIF
 		</i></p>
 		<p style='text-align:center;'><i>
 			#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred_melee))
-				You've already learned a thing or two about using a [style.colourMinorBad(dory)], so maybe you should choose something else this time.
+				你已经学到了如何使用[style.colourMinorBad(希腊长矛)]，也许你该试试其他的。
 			#ELSE
-				You haven't yet tried using Aurokaris's favourite weapon, the [style.colourMinorGood(dory)], so maybe you should choose that.
+				你还没有试过使用奥罗卡利斯最喜欢的武器——[style.colorMinorGood(希腊长矛)]，也许你应该选择它。
 			#ENDIF
 		</i></p>
 		<p style='text-align:center;'><i>
 			#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred_ranged))
-				Your last competition with Aurokaris using a [style.colourMinorBad(bow)] went well, but there's not much more to be learned by doing it again.
+				你上次用[style.colorMinorBad(弓)]和奥罗卡利斯的比赛进行得很顺利，但再来一次就没什么可学的了。
 			#ELSE
-				Perhaps using the [style.colourMinorGood(bow)] would be a good way to learn something new from Aurokaris.
+				也许用[style.colorMinorGood(弓)]和奥罗卡利斯比赛能学到些新东西。
 			#ENDIF
 		</i></p>
 	#ELSE
 		<p style='text-align:center;'><i>
-			You've already sparred with Aurokaris in every way imaginable, so there's not really anything else to be gained from this other than having fun. As such, any weapon choice would be much the same as another.
+			你已经用各种方式和奥罗卡利斯切磋过了，所以除了找点乐子也没什么别的收获。因此，选择任何武器都是一样的。
 		</i></p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_START_UNARMED"><![CDATA[
 	<p>
-		Not wanting to use a weapon, you tell Aurokaris that you'd like to wrestle with her. Happily nodding at your choice, the cow-girl leads you onto the sandy ground of the sparring field, before instructing you on how to assume the correct wrestling stance and what sort of moves you'll be practising against one another. Once she's happy with your position, she makes the signal to start, and so there begins an hour of exertion in which the two of you wrestle and grapple with one another in a multitude of different ways.
+		你不想使用武器，就告诉奥罗卡利斯想和她摔跤。牛女高兴地点点头，带你来到比武场的沙地上，然后指导你摆出正确的摔跤姿势，以及你们要互相练习的动作。一旦她对你的姿势感到满意，她就会发出开始的信号，于是你们开始了长达一个小时的互相摔跤和擒拿搏斗。
 	</p>
 	<p>
-		Your time wrestling with the cow-girl flies by, and as the hour comes to an end, you find yourself panting for breath and
+		你与牛女搏斗的时间过得飞快。随着时间的流逝，你气喘吁吁，而且
 		#IF(pc.isAttractedTo(aurokaris))
-			 feeling a little turned on from having spent so much time in contact with Aurokaris's muscular, sweaty body.
+			长时间接触奥罗卡利斯的肌肉发达，汗流浃背的身体，感觉有点兴奋。
 		#ELSE
-			 feeling quite worn out from having spent so much time trying to counter Aurokaris's powerful moves.
+			为了对付奥罗卡利斯的强大招式花了很多时间，感觉非常疲惫。
 		#ENDIF
-		 Smiling at you,
+		牛女一边笑着一边
 		#IF(aurokaris.isAttractedTo(pc))
-			 and blushing a little as she glances down at your body,
+			脸红地瞥向你的身体，
 		#ENDIF
-		 the cow-girl asks, [aurokaris.speech(How did you find that, [pc.name]? You did really well!)]
+		问，[aurokaris.speech(你怎么做到的，[pc.name]？你做得真的非常好！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_START_MELEE"><![CDATA[
 	<p>
-		Deciding that you'd like to use a melee weapon, you tell Aurokaris that sparring with dories would suit you. Happily nodding at your choice, the cow-girl grabs a couple of long spears from a nearby weapon rack, and after throwing one your way, she leads you onto the sandy ground of the sparring field. Instructing you on how to assume the correct stances and what sort of moves you'll be practising against one another, she makes sure that she's happy with your position before giving the signal to start. With that, an hour of exertion begins, in which the two of you use your weapons to thrust, strike, and lunge at one another in a multitude of different ways.
+		你决定使用近战武器，于是告诉奥罗卡利斯想要用长矛切磋。牛女高兴地点点头，从旁边的武器架上拿起两支长矛并扔给了你一支，就带你来到比武场的沙地上。她指导你摆出正确的架势和你们要相互练习的动作。她对你的架势觉得满意，便发出开始的信号。于是你们两人使用武器从各种角度互相刺击、攻击和猛扑长达一个小时。
 	</p>
 	<p>
-		Your time sparring with the cow-girl flies by, and as the hour comes to an end, you find yourself panting for breath and
+		你与牛女切磋的时间过得飞快，随着时间的流逝，你气喘吁吁，而且
 		#IF(pc.isAttractedTo(aurokaris))
-			 feeling a little turned on from having spent so much time watching Aurokaris's muscular, sweaty body jump and bounce around.
+			看着奥罗卡利斯肌肉发达、汗流浃背的身体四处蹦跶，感觉有点兴奋。
 		#ELSE
-			 feeling quite worn out from having spent so much time trying to counter Aurokaris's powerful moves.
+			为了对付奥罗卡利斯的强大招式花了很多时间，感觉非常疲惫。
 		#ENDIF
-		 Smiling at you,
+		牛女一边笑着一边
 		#IF(aurokaris.isAttractedTo(pc))
-			 and blushing a little as she glances down at your body,
+			脸红地瞥向你的身体，
 		#ENDIF
-		 the cow-girl asks, [aurokaris.speech(How did you find that, [pc.name]? You did really well!)]
+		问，[aurokaris.speech(你怎么做到的，[pc.name]？你做的真的非常好！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_START_RANGED"><![CDATA[
 	<p>
-		Deciding that you'd like to use a ranged weapon, you tell Aurokaris that spending some time on the archery range would suit you. Happily nodding at your choice, the cow-girl grabs a couple of recurve bows from a nearby weapon rack, and after throwing one your way, she leads you onto the sandy ground of the sparring field. Instructing you on how to assume the correct stances and how your shots will be scored, she makes sure that she's happy with your position before giving the signal to start. With that, an hour of exertion begins, in which the two of you use your weapons to compete against one another to score the most bullseyes on the distant archery targets.
+		你决定使用远程武器，于是告诉奥罗卡利斯你想要在射箭场上与她切磋。牛女高兴地点点头，从附近的武器架上拿起一对反曲弓并扔给了你一把，之后带你来到比武场的沙地上。她指导你摆出正确的姿势，并告诉你射箭如何计分。她对你的姿势感到满意，便发出了开始的信号。于是你们开始了长达一个小时的切磋，看谁能更多地射中远处目标的靶心。
 	</p>
 	<p>
-		Your time practising archery with the cow-girl flies by, and as the hour comes to an end, you find yourself panting for breath and
+		你与牛女练习射箭的时间过得飞快，随着时间的流逝，你气喘吁吁，而且
 		#IF(pc.isAttractedTo(aurokaris))
-			 feeling a little turned on from having spent so much time in close proximity to Aurokaris's muscular, sweaty body.
+			因为长时间与奥罗卡利斯肌肉发达、汗流浃背的身体贴在一起，感觉有些兴奋。
 		#ELSE
-			 feeling quite worn out from having spent so much time competing against Aurokaris.
+			因为和奥罗卡利斯比了很长时间，感觉非常疲惫。
 		#ENDIF
-		 Smiling at you,
+		牛女一边笑着一边
 		#IF(aurokaris.isAttractedTo(pc))
-			 and blushing a little as she glances down at your body,
+			脸红地瞥向你的身体，
 		#ENDIF
-		 the cow-girl asks, [aurokaris.speech(How did you find that, [pc.name]? You did really well!)]
+		问，[aurokaris.speech(你怎么做到的，[pc.name]？你做的真的非常好！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_START_END"><![CDATA[
 	<p>
-		As you stretch and shake off the soreness in your muscles, you truthfully tell your Amazon sparring partner that you enjoyed your session with her. Smiling at you, she says, [aurokaris.speech(Thanks for doing this with me, [pc.name]. I was bored out of my mind back at the marketplace, but now I'm really feeling alive!)]
+		当你开始拉伸，甩掉肌肉上的酸痛时，你诚实地告诉你的亚马逊人陪练，你很享受与她的切磋。她微笑着对你说，[aurokaris.speech(谢谢你和我一起做这个，[pc.name]。在集市上我无聊透了，但现在我才感觉自己真的活着！)]
 	</p>
 	<p>
-		Before you can reply to this, a mischievous grin flashes across the cow-girl's face. Retrieving her personal dory which she'd left in the weapon rack during your sparring session, she asks, [aurokaris.speech(How about we have a full-contact duel to finish things off? We can use Amazon tournament rules, so everything's permitted with the only real rule being that you have to stop fighting when your opponent submits.)]
+		你还没来得及回答，牛女的脸上就闪过一丝顽皮的笑容。她拿起在你们比武时放在武器架上的长矛，问，[aurokaris.speech(我们来场全面决斗如何？我们使用亚马逊比赛的规则，所以干什么都可以，唯一的规则是当你的对手屈服时，就必须停止决斗。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_PERK_UNLOCK"><![CDATA[
 	<p style='text-align:center;'>
-		[style.italicsExcellent(You feel like Aurokaris has nothing more to teach you, and that you've really learned a lot from sparring with her in so many different ways!)]
+		[style.italicsExcellent(你觉得奥罗卡利斯已经没有什么可以教你的，和她在这么多不同的方面切磋，你学到了很多！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_PRACTICE_WON"><![CDATA[
 	<p>
-		Taking a few steps back, Aurokaris holds up her hands in a clear sign of submission and pants, [aurokaris.speech(No more... You win...)]
+		奥罗卡利斯后退几步，举起双手投降，喘着粗气说，[aurokaris.speech(停下……你赢了……)]
 	</p>
 	<p>
-		With that, the cow-girl collapses down onto the sandy ground of the sparring field, panting for breath. [pc.Walking] forwards, you offer your partner your [pc.hand], and with a happy grin on her face, Aurokaris takes it and allows you to help her back up onto her feet. Still smiling as she brushes herself off, she happily exclaims, [aurokaris.speech(It's great to finally have a worthy sparring partner again! I always beat my usual partners, but you give me a real challenge, [pc.name]!)]
+		就这样，牛女气喘吁吁地倒在比武场的沙地上。你[pc.Walking]向伙伴并伸出[pc.hand]，奥罗卡利斯脸上露出开心的笑容，抓住你的[pc.hand]重新站起来。她一边擦去身上的泥土，一边开心地笑着喊道，[aurokaris.speech(很高兴终于又有一个值得一战的对手！我总是能打败我的老搭档，但你给了我一个真正的挑战，[pc.name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_PRACTICE_TENT_INVITE"><![CDATA[
 	<p>
-		Telling Aurokaris that you enjoyed your duel, you say that perhaps you'll stop by her tent another time so that you can do this again.
+		你对奥罗卡利斯说，你很享受你们之间的决斗，也许下次还会去她的帐篷，这样就可以再来一次。
 		#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_invite_received))
-			 As she happily nods her head as you suggest this, the cow-girl suddenly starts to blush, and after fidgeting around on the spot for a moment, she nervously confesses, [aurokaris.speech(You know, [pc.name], I really do kind of like you... Remember that you're welcome to... Well... You know... You can come and see me in my tent after work...)]
+			在你提出这个建议时，牛女高兴地点点头，然后突然开始脸红，在原地支吾了一会儿后，她紧张地承认，[aurokaris.speech(你知道的，[pc.name]，我真的有点喜欢你…别忘了，这里随时欢迎你…嗯…你知道…你可以我下班后来我帐篷找我……)]
 		#ELSE
-			 As she happily nods her head as you suggest this, the cow-girl suddenly starts to blush, and after fidgeting around on the spot for a moment, she nervously confesses, [aurokaris.speech(You know, [pc.name], I really do kind of like you... I'd be happy if you would... Well... I mean... You can come and see me in my tent after work if you'd like... Perhaps we could... You know...)]
+			在你提出这个建议时，牛女高兴地点点头，然后突然开始脸红，在原地支吾了一会儿后，她紧张地承认，[aurokaris.speech(你知道的，[pc.name]，我真的有点喜欢你…如果你愿意，我会很高兴…嗯…我是说…如果你愿意下班后可以来我的帐篷找我……也许我们可以…你知道的……)]
 		#ENDIF
 	</p>
 	<p>
-		Despite being one of the strongest and most confident of the Amazon warriors, Aurokaris doesn't seem to know quite how to fully express her feelings. Thoroughly embarrassed at her confession, she doesn't give you time to respond, and after giving you a quick wave goodbye, she runs off in the direction of the marketplace, leaving you to think about her invitation and continue on your way...
+		尽管奥罗卡利斯是亚马逊战士中最强壮、最自信的一个，但她似乎不知道如何表达自己的感情。她的表白让你十分尴尬，她没有给你回应的时间便匆匆挥手告别，向集市的方向跑去，留下你一个人在赶路时思考她的邀请……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_PRACTICE_END"><![CDATA[
 	<p>
-		Telling Aurokaris that you enjoyed your duel, you say that perhaps you'll stop by her tent another time so that you can do this again. Happily nodding her head as you suggest this, the cow-girl replies, [aurokaris.speech(That'd be great! I should really be getting back to work now though, so I'm going to have to dash. See you later, [pc.name]!)]
+		你告诉奥罗卡利斯你很喜欢决斗，也许下次你还会去她的帐篷，这样你们就可以再来一次。听了你的建议，牛女高兴地点了点头， [aurokaris.speech(那太好了！不过我现在真的要回去工作了，我得先走了。再见，[pc.name]！)]
 	</p>
 	<p>
-		With that, the cow-girl Amazon gives you one last wave, before running off in the direction of the marketplace, leaving you to brush yourself off and continue on your way...
+		亚马逊牛女最后向你挥了挥手，然后朝市场的方向跑去，留下你一个人自娱自乐地继续赶路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_PRACTICE_LOST"><![CDATA[
 	<p>
-		Taking a few steps back, you hold up your [pc.hands] in a clear sign of submission and tell Aurokaris that she's got the better of you. Unable to remain standing, you collapse down onto the sandy floor of the sparring field, panting for breath.
+		你后退了几步，举起[pc.hands]表示屈服，并告诉奥罗卡利斯她比你强。由于体力不支，你气喘吁吁地倒在了比武场的沙地上。
 	</p>
 	<p>
-		Walking forwards, your partner offers you her hand, and with a happy grin on her face, Aurokaris helps you back up onto your feet. Still smiling as she waits for you to brush yourself off, she happily exclaims, [aurokaris.speech(It's great to finally have a worthy sparring partner again! I always easily beat my usual partners, but you give me a real challenge, [pc.name]!)]
+		你的伙伴走上前向你伸出手，奥罗卡利斯露出开心的笑容，帮你重新站了起来。在等待你整理完毕时，她仍然面带微笑，开心地赞叹，[aurokaris.speech(很高兴终于又有一个值得一战的对手！我总是能打败我的老搭档，但你给了我一个真正的挑战，[pc.name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_AUROKARIS_SPARRING_END"><![CDATA[
 	<p>
-		Saying that you don't think an all-out duel is a good idea, you tell Aurokaris that you've had enough for now.
+		你说自己不认为全面决斗是个好主意，并告诉奥罗卡利斯你觉得这一切已经足够了。
 	</p>
 	<p>
-		[aurokaris.speech(Oh, ok,)] Aurokaris replies with a disappointed sigh, [aurokaris.speech(I suppose that I should really be getting back to work anyway. Thanks for sparring with me, [pc.name], and I'll see you later!)]
+		[aurokaris.speech(噢，好吧，)]奥罗卡利斯失望地叹了口气，[aurokaris.speech(我想我真的该回去工作了。谢谢你和我切磋，[pc.name]，回头见！)]
 	</p>
 	<p>
-		With that, the cow-girl Amazon gives you one last wave, before running off in the direction of the marketplace, leaving you to brush yourself off and continue on your way...
+		亚马逊牛女最后向你挥了挥手，然后朝市场的方向跑去，留下你一个人自娱自乐地继续赶路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Aurokaris ambrosia tasting: -->
 	
 	<htmlContent tag="AUROKARIS_TASTING_SEX"><![CDATA[
 	<p>
-		Liking the sound of what Aurokaris is suggesting, you tell her that you'd like to help her taste the newest batch of ambrosia. Playfully biting her lip, the cow-girl glances around to make sure that there are no incoming customers, and once she's satisfied that the coast is clear, she gestures you forwards and says, [aurokaris.speech(Come on, [pc.name], I'll close the tent after you.)]
+		你很喜欢奥罗卡利斯的建议，于是告诉她，你想帮她品尝最新的一批的仙肴。牛女俏皮地咬了咬嘴唇，扫视了一下四周，确保没有客人光临后便示意你向前走，并说，[aurokaris.speech(快来，[pc.name]，你走后我来关帐篷。)]
 	</p>
 	<p>
-		[pc.Stepping] around the table which separates you from Aurokaris, you head into the rear of the large tent as the muscular Amazon ties the canvas flaps shut. Turning to face you, she blushes as she shrugs off her peplos and allows it to drop to the floor, exposing her naked body to you in the process. Skipping over to grab a nearby bottle of ambrosia, and causing her [aurokaris.cupSize]-cup breasts to bounce in a hypnotic manner in the process, the cow-girl bats her eyelashes at you and excitedly pants, [aurokaris.speech(Which part of me did you want to lick it off of?)]
+		你[pc.stepping]过隔开你和奥罗卡利斯的桌子，在肌肉发达的亚马逊人把帆布挡板系上时，你走向大帐篷的后面。她转过身来面对你，羞红了脸，然后一把扯下身上的长袍，将赤裸的身体暴露在你面前。牛女跳过去拿起附近的一瓶仙肴，她[aurokaris.cupSize]罩杯的乳房跳动着，吸引着你的目光，她向你眨着眼，兴奋地喘着粗气， [aurokaris.speech(你想从我哪个部位开始舔？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TASTING_SEX_PUSSY"><![CDATA[
 	<p>
-		[pc.Stepping] forwards, you tease your [pc.fingers+] down over the Amazon's [aurokaris.labia+], which causes her to let out a soft, horny moan. Telling her that you'd like to service her pussy, you say that she should pour the ambrosia over her cunt so that you can eat her out while tasting it.
+		你[pc.Stepping]向奥罗卡利斯，[pc.fingers+]抚玩着她[aurokaris.labia+]，使她发出了一声很轻的淫叫。你告诉她你会服务她的小穴，让她把那仙肴珍馐倒在蜜穴上，这样舔阴的同时也可以品尝到。
 	</p>
 	<p>
-		[aurokaris.speech(~Ooh!~ Yes, I like the sound of that,)] the cow-girl giggles, before quickly stepping over to a nearby chair and sitting down on it. Leaning back, she spreads her muscular legs, before tipping the small bottle up and allowing the ambrosia within to pour out all over her [aurokaris.pussy+]. Using her fingers to spread her glistening pussy lips, she moans, [aurokaris.speech(Come on, [pc.name]... I'm ready for you...)]
+		[aurokaris.speech(~噢！~好，舔阴听起来不错。)]这位牛女咯咯笑着，走近了附近的椅子坐下。她往后仰，叉开肌肉紧致的双腿，将小瓶子里的仙肴珍馐倒在了她[aurokaris.pussy+]上。她两指掰开自己闪着光的阴唇，呻吟道：[aurokaris.speech(来吧，[pc.name]……我准备好了……)]
 	</p>
 	<p>
-		Not needing to be told twice, you drop down between the cow-girl's legs. Burying your face between her powerful thighs, you eagerly lick, kiss, and suck on her hot, wet labia and clit, getting a good taste of the sweet, delicious ambrosia in the process. Grabbing the back of your head, the cow-girl lets out a desperately lewd moan, which encourages you to dart your [pc.tongue+] into her [aurokaris.pussy+] and start to eat her out...
+		无需再说第二遍，你跪下身，便将头埋到这牛女的双腿之间。你急切地舔舐、亲吻、吮吸着她滚烫水润的阴唇与阴蒂，在这个过程中品尝着仙肴珍馐之美味。奥罗卡利斯摁着你的脑袋，发出一声饥渴又色情的呻吟，鼓舞着你将[pc.tongue+]伸入她[aurokaris.pussy+]，将其吃干抹净……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TASTING_SEX_BREASTS"><![CDATA[
 	<p>
-		[pc.Stepping] forwards, you tease your [pc.fingers+] over the Amazon's [aurokaris.breasts+], which causes her to let out a soft, horny moan. Telling her what perfect tits she has, you say that she should pour the ambrosia over her nipples so that you can suck on them while tasting it.
+		你[pc.Stepping]到奥罗卡利斯面前，[pc.fingers+]抚玩着她[aurokaris.breasts+]，使她发出了一声很轻的淫叫。你说她的乳房有多么完美，说她应该把伏特加倒在她的乳头上，这样你就可以一边吮吸一边品酒了。
 	</p>
 	<p>
-		[aurokaris.speech(~Ooh!~ Yes, I like the sound of that,)] the cow-girl giggles, before leaning back against a nearby stack of crates. Reaching up to her chest, she tips the small bottle up and allows the ambrosia within to pour out all over her [aurokaris.breasts+]. Using her fingers to tease her [aurokaris.nipples+], she moans, [aurokaris.speech(Come on, [pc.name]... I'm ready for you...)]
+		[aurokaris.speech(~噢！~好，听起来不错。)]牛女咯咯地笑着，然后靠在附近的一堆箱子上。她把手伸到胸前，拔起瓶盖，将小瓶子里的仙肴珍馐倒在了她[aurokaris.breast+]上。她用手指挑逗自己[aurokaris.nipples+]，呻吟道：[aurokaris.speech(来吧，[pc.name]……我准备好了……)]
 	</p>
 	<p>
-		Not needing to be told twice, you [pc.step] forwards so that you're standing right in front of the blushing cow-girl. Dropping your face down to her [aurokaris.breasts+], you start eagerly licking and kissing her pillowy mounds, getting a good taste of the sweet, delicious ambrosia in the process. Grabbing the back of your head, the cow-girl lets out a desperately lewd moan, which encourages you to move on and start to kiss and suck on her [aurokaris.nipples+]...
+		无需再说第二遍，你向前[pc.step]出一步，站在脸色绯红的牛女面前。你把脸俯向她[aurokaris.breasts+]，开始迫不及待地舔吻她的柔软乳丘，品尝甜美可口的美酒。奥罗卡利斯摁住你的后脑勺，急切地发出淫荡的呻吟，这鼓励你更进一步，开始亲吻和吸吮她[aurokaris.nipples+]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TASTING_SEX_ASS"><![CDATA[
 	<p>
-		[pc.Stepping] forwards, you reach around behind Aurokaris and tease your [pc.fingers+] over the Amazon's [aurokaris.ass+], which causes her to let out a soft, horny moan. Telling her that you'd like to service her ass, you say that she should pour the ambrosia over her asshole so that you can give her a rimjob while tasting it.
+		你[pc.Stepping]到奥罗卡利斯身后，[pc.fingers+]抚玩着她[aurokaris.ass+]，使她发出了一声很轻的淫叫。你告诉她你会服务她的屁股，让她把那仙肴珍馐倒在肛门上，这样舔肛的同时也可以品尝到。
 	</p>
 	<p>
-		[aurokaris.speech(~Ooh!~ Yes, I like the sound of that,)] the cow-girl giggles, before quickly stepping over to a couple of nearby crates and bending down over the top of them. Looking back over her shoulder, she spreads her muscular legs, before tipping the small bottle up and allowing the ambrosia within to pour out all over her [aurokaris.ass+]. Using her hands to spread her ass cheeks, she moans, [aurokaris.speech(Come on, [pc.name]... I'm ready for you...)]
+		[aurokaris.speech(~噢！~好，舔肛听起来不错。)]这位牛女咯咯笑着，走近了附近的板条箱，弯腰趴在了上面。她转过头，肌肉紧致的双腿叉开后，将小瓶子里的仙肴珍馐倒在了她[aurokaris.ass+]上。她两手掰着自己的臀瓣，呻吟道，[aurokaris.speech(来吧，[pc.name]……我准备好了……)]
 	</p>
 	<p>
-		Not needing to be told twice, you drop down between the cow-girl's legs. Burying your face in her [aurokaris.ass+], you eagerly lick, kiss, and tongue her [aurokaris.asshole+], getting a good taste of the sweet, delicious ambrosia in the process. Pushing her [aurokaris.hips+] back, the cow-girl lets out a desperately lewd moan, which encourages you to dart your [pc.tongue+] into her [aurokaris.asshole+] and start to give her a rimjob...
+		无需再说第二遍，你便将头埋到这牛女的双腿之间，将你的脸贴近她[aurokaris.ass+]。你急切地舔舐，亲吻着她[aurokaris.asshole+]，在这个过程中品尝着仙肴珍馐之美味并往后推她[aurokaris.hips+]，让这牛女发出一声饥渴又色情的呻吟，鼓舞着你将[pc.tongue+]伸入[aurokaris.asshole+]并舔舐她的肛门……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TASTING_AFTER_SEX"><![CDATA[
 	<p>
-		Having had her fun, Aurokaris breathlessly pants, [aurokaris.speech(That's enough, [pc.name]... I need to get back to work now...)]
+		奥罗卡利斯已经玩够了，她气喘吁吁地喘息，[aurokaris.speech(这足够了，[pc.name]……我必须要回去工作了……)]
 	</p>
 	<p>
-		After giving the muscular cow-girl one last kiss, and making her blush again in the process, you start to get your things back in order. Pulling on her peplos to cover herself up, Aurokaris smiles at you and moves to reopen the tent. As she unties the cords, she calls back, [aurokaris.speech(So, did you enjoy the ambrosia, [pc.name]?)]
+		你给了这位肌肉发达的牛女最后一吻，并让她再次脸红之后，开始整理自己的东西。奥罗卡利斯拉上她的长袍遮住自己，对你笑了笑，然后去打开帐篷。她在解开绳索时，她又提了一嘴， [aurokaris.speech(所以，仙肴味道怎么样，[pc.name]？)]
 	</p>
 	<p>
-		Replying that you found it to be absolutely delicious, you cause the Amazon to let out a happy giggle. As she pulls the tent's flaps open, she motions for you to head on back around to the other side of the table.
+		你回答这绝对是仙肴珍馐，让这个亚马逊人发出了开心的咯咯笑声。她拉开帐篷的挡板，示意你回到桌子的另一边。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TASTING_AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Doing as Aurokaris instructs, you head on out of her tent and return to the other side of the table. As you leave, a couple of nearby Amazons, who must have heard what you and Aurokaris were up to, give the cow-girl a knowing grin and call out, [style.speechFeminine(Having fun today, Aurokaris? It sounded like you were really enjoying your break.)]
+		你按照奥罗卡利斯的指示走出她的帐篷，回到桌子的另一边。在你离开时，附近的几个亚马逊人听到了你和奥罗卡利斯的谈话，他们对牛女露出了会心的微笑，并叫了起来， [style.speechFeminine(今天玩得开心吗，奥罗卡利斯？听起来你很享受你的休息时间。)]
 	</p>
 	<p>
-		Furiously blushing, the muscular Amazon hesitantly calls out, [aurokaris.speech(Hello... Yes, well... You know, I was, well, I was just...)]
+		肌肉发达的亚马逊人羞红了脸，迟疑地说着，[aurokaris.speech(你好……对，嗯…你知道，我只是，嗯，我真的只是……)]
 	</p>
 	<p>
-		Unable to handle the situation, Aurokaris darts off back into the tent and disappears behind a stack of crates. Calling out from her hiding place, she shouts, [aurokaris.speech(I need to sort some things out! Come back later if you need to buy anything, [pc.name]!)]
+		奥罗卡利斯无法应付这种情况，她飞快地跑回帐篷，消失在一堆箱子后面。她在藏身之处大声喊道，[aurokaris.speech(我要整理一些东西！如果你需要买什么东西，之后再来吧，[pc.name]！)]
 	</p>
 	<p>
-		Not wanting to prolong Aurokaris's embarrassment, you [pc.walk] past the couple of giggling Amazons and head off into the camp, wondering where to go next...
+		你不想再让奥罗卡利斯尴尬，于是[pc.walk]过那几个坏笑的亚马逊人，向营地走去，想着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Aurokaris tent: -->
 	
 	<htmlContent tag="AUROKARIS_TENT"><![CDATA[
 	<p>
-		This area of the Amazons' camp looks very much like the rest; colourful tents of all shapes and sizes are to be seen, while the occasional Amazon shoots you a suspicious look. What sets it apart from the rest of the camp, however, is the fact that Aurokaris's tent is found here, which can easily be identified by both its colour as well as the stack of crates which seem to permanently sit to one side of its entrance. A soft shade of blue, the cow-girl's canvas dwelling is of a similar, considerable size to those around it, and while only Aurokaris lives within it, it looks to be able to easily house at least four people.
+		亚马逊人营地这里看起来与其他地方很相似，到处都是五颜六色、各式各样的帐篷，偶尔还会有亚马逊人向你投来怀疑的目光。不过，与营地其他地方不同的是，奥罗卡利斯的帐篷就在这里，从帆布帐篷柔和的蓝色和门口一侧似乎永远摆放着的一摞箱子就能轻易辨认出牛女的帆布帐篷。与周围的帐篷大小相仿，虽然只有奥罗卡利斯一个人住在里面，但看起来至少可以容纳四个人。
 	</p>
 	<p>
 		#IF(game.getCharactersPresent().contains(aurokaris))
 			#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_visited))
-				 As you've already visited Aurokaris tonight, you should leave her to get some rest. If you wanted to pay her another visit, you could always come back tomorrow...
+				你今晚已经拜访了奥罗卡利斯，你应该让她好好休息一下。如果你想再去拜访她，可以明天再来……
 			#ELSEIF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_invite_received))
-				 As Aurokaris has invited you to pay her a visit, you could always [pc.step] up to the entrance to her tent and call out to her to see if she's
+				既然奥罗卡利斯邀请了你，你可以[pc.step]到她的帐篷门口，喊她一声，看看她是否
 				#IF(!aurokaris.isAttractedTo(pc))
-					  awake. As you've transformed since last seeing her, you imagine that Aurokaris will want you to transform back into a more feminine form before getting intimate with you...
+					醒着。由于上次见面后你已经转化了，你想着奥罗卡利斯会希望你变回更女性化的形态，然后再与你亲密接触……
 				#ELSE
-					 awake...
+					醒着……
 				#ENDIF
 			#ELSE
-				 As she's warned you against disturbing her rest, there's very little for you to do here...
+				她警告过你不要打扰她休息，所以你在这里无事可做……
 			#ENDIF
 		#ELSE
-			Due to the current time of day, you know that Aurokaris will be working, and so won't be in her tent at the moment.
+			你看了下目前的时间，知道奥罗卡利斯在工作，所以现在应该不在她的帐篷里。
 			#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_invite_received))
-				 As she's invited you to pay her a visit, you could always come back here to do so after she's finished work...
+				既然她邀请你去拜访她，可以在她下班后再来拜访她……
 			#ELSE
-				 As she's warned you against disturbing her rest, you suppose that it really makes no difference whether she's here or not...
+				她警告过你不要打扰她休息，你想着她在不在也没什么区别吧……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_ENTRY"><![CDATA[
 	<p>
-		Wanting to see Aurokaris, you approach the entrance to her tent and call out to her. A few moments later, you hear sounds of movement within, before the canvas flap is hastily untied and opened before you.
+		你想见奥罗卡利斯，便走近她的帐篷门口，向她喊了一声。过了一会儿，你听到里面有动静，然后帆布被匆忙解开，帐篷在你面前打开。
 	</p>
 	<p>
-		[aurokaris.speech([pc.Name]! Please, come on in,)] the Amazon happily exclaims. [pc.Stepping] forwards into the tent, you look around to see that it's surprisingly spacious inside, granting both you and Aurokaris plenty of room in which to move around. Turning to face the cow-girl after she's tied the entrance flap back into place, you see that 
+		[aurokaris.speech([pc.Name]！快进来，)]亚马逊人高兴地叫着，你[pc.Stepping]进帐篷环顾四周，发现里面出奇地宽敞，你和奥罗卡利斯都有足够的活动空间。在牛女将入口处的挡布系好后，你转过身看到
 		#IF(aurokaris.isVisiblyPregnant())
 			#IF(!aurokaris.isCharacterReactedToPregnancy(pc))
-				 she's sporting a [style.colourSex(pregnant belly)]. Blushing as she smiles at you, she reveals, [aurokaris.speech(I haven't been with anyone else, so it was you who got me pregnant... Oh, don't worry about having to do anything to help; I can manage it just fine!)]
+				她正挺着[style.colourSex(孕肚)]。她一边对你微笑，一边红着脸说，[aurokaris.speech(我没有和别人在一起过，所以肯定是你让我怀孕的……哦，不用担心我要你帮什么忙，我自己能行！)]
 			#ELSE
-				 she's still sporting a [style.colourSex(pregnant belly)]. Blushing as she smiles at you, she reveals, [aurokaris.speech(I've been coping with it just fine! There's really no need for any help with anything!)]
+				她依然挺着[style.colourSex(孕肚)]。她一边对你微笑，一边红着脸说， [aurokaris.speech(我一直过得很好！真的不需要任何帮助！)]
 			#ENDIF
 		#ELSE
-			 she's blushing as she smiles at you and reveals, [aurokaris.speech(I was really hoping that you'd come tonight...)]
+			她红着脸笑着对你透露，[aurokaris.speech(我真的很希望你今晚过来……)]
 		#ENDIF
 	</p>
 	<p>
-		Before you can answer, the excited cow-girl quickly steps forwards so that she's standing right in front of you. Looking you up and down, she
+		你还没来得及回答，兴奋的牛女就快步走了过来，站在你面前。她上下打量着你，
 		#IF(!aurokaris.isAttractedTo(pc))
-			 sighs and declares, [aurokaris.speech(You've transformed since I invited you here... Sorry, [pc.name], but I just can't do this with how you're currently looking... If you wanted to, well, you know... Then I've got a potion that will make you feminine again...)]
+			叹息道，[aurokaris.speech(在我邀请你之后，你进行过了转化……对不起，[pc.name]，你现在这个样子，我实在做不到……如果你想……那我有一种药水，能让你变回女性……)]
 		#ELSE
-			 lets out a horny moan and leans into you, sighing as she does so, [aurokaris.speech(You know, I <i>really</i> like you, [pc.name]... You like me too, don't you?)]
+			发出淫荡的呻吟，靠在你身上喘息着，[aurokaris.speech(你知道吗，我<i>真的很</i>喜欢你，[pc.name]……你也喜欢我，不是吗？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_ENTRY_POTION_DECLINED"><![CDATA[
 	<p>
-		Not wanting to be transformed, you tell Aurokaris that you don't want to drink the transformative potion she's offering. Pouting at you, the cow-girl takes a step back before sighing, [aurokaris.speech(I understand... But I really can't get in the mood while you're looking like that... I guess it'd be best if you left now...)]
+		你不想被转化，你告诉奥罗卡利斯你不想喝她提供的转化魔药。牛女对你撇了下嘴，后退了一步，然后叹了口气，[aurokaris.speech(我明白…但你这个样子我真的没心情……我想你现在就离开最好……)]
 	</p>
 	<p>
-		Not wanting to damage your relationship with the muscular Amazon, you do as she says and move back over to the tent's entrance. Untying the cord which keeps the canvas flap in place, you say goodbye to Aurokaris and [pc.step] back out into the camp. Calling out after you, Aurokaris asks, [aurokaris.speech(You'll come and visit me at the marketplace again, right? I'd still like to spar with you now and again...)]
+		你不想破坏与这位肌肉发达的亚马逊人之间的关系，于是照她说的做，回到帐篷门帘处。解开固定帐篷的绳子，你向奥罗卡利斯道别，[pc.step]回营地。奥罗卡利斯在你身后说，[aurokaris.speech(你还会来集市看我的吧？我还是想和你切磋切磋……)]
 	</p>
 	<p>
-		Telling the cow-girl that you'll visit her there again when you have the time, you say goodbye and set off into the camp, wondering what to do next...
+		你对牛女说有时间的话会再去那里看她的，然后道别，返回营地，想着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_ENTRY_SEX_AS_DOM"><![CDATA[
 	<p>
-		Returning Aurokaris's declaration of affection, you take charge and pull the muscular cow-girl forwards into a passionate kiss. Happy to submit to you, she melts into your [pc.arms], moaning and sighing as she happily thrusts her tongue into your mouth.
+		你回应了奥罗卡利斯的爱意宣言，并主动上前拉住这位肌肉发达的牛女热情拥吻。她高兴地顺从你，瘫软在你的[pc.arms]中，一边呻吟叹息，一边高兴地将舌头伸进你的嘴里。
 	</p>
 	#IF(aurokaris.isVaginaVirgin())
 		<p>
-			After a few moments of making out with one another in this manner, you pull back, before moving to start having dominant sex with Aurokaris. Before you can really get started, however, the cow-girl bites her lip and softly moans, [aurokaris.speech(I'm happy to go all the way with you, [pc.name], but please just be aware... I mean... I've been with other Amazons before, but I've never... Well, I guess I'm technically still a virgin, ok?)]
+			你们如此缠绵了一会，你抽开身，要开始与奥罗卡利斯进行支配型性爱。然而，在你真正开始之前，牛女咬着嘴唇，轻声呻吟道：[aurokaris.speech(我很乐意和你一直做下去，[pc.name]，但请注意……我是说，我以前和其他亚马逊人在一起过，但我从来没有……嗯，我想严格来说我还是处女，明白吗？)]
 		</p>
 		<p>
-			Telling Aurokaris that you'll take good care of her, you plant another passionate kiss on her [aurokaris.lips+], before moving to get started...
+			你告诉奥罗卡利斯你会好好照顾她并吻上她[aurokaris.lips+]，然后开始行动……
 		</p>
 	#ELSE
 		<p>
-			After a few moments of making out with one another in this manner, you pull back, before moving to start having dominant sex with Aurokaris...
+			你们如此缠绵了一会，你抽开身，要开始与奥罗卡利斯进行支配型性爱……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_ENTRY_SEX_AS_SUB"><![CDATA[
 	<p>
-		Returning Aurokaris's declaration of affection, you allow the muscular cow-girl to take charge and pull you forwards into a passionate kiss. Happy to submit to her, you melt into her arms, moaning and sighing as she happily thrusts her tongue into your mouth.
+		你回应了奥罗卡利斯的爱意宣言，让这位肌肉发达的牛女掌握一切，并将你拉向热情的吻中。你乐于顺从她，融化在她的怀抱中，她一边呻吟娇喘，一边高兴地将舌头伸进你的嘴里。
 	</p>
 	#IF(aurokaris.isVaginaVirgin())
 		<p>
-			After a few moments of making out with one another in this manner, Aurokaris pulls back, before moving to start having dominant sex with you. Before she really gets started, however, the cow-girl bites her lip and softly moans, [aurokaris.speech(I'm happy to go all the way with you, [pc.name], but please just be aware... I mean... I've been with other Amazons before, but I've never... Well, I guess I'm technically still a virgin, ok?)]
+			你们如此缠绵了一会，奥罗卡利斯抽开身，要开始与你进行支配型性爱。然而，在她真正开始之前，牛女咬着嘴唇，轻声呻吟道：[aurokaris.speech(我很乐意和你一直做下去，[pc.name]，但请注意……我是说，我以前和其他亚马逊人在一起过，但我从来没有……嗯，我想严格来说我还是处女，明白吗？)]
 		</p>
 		<p>
-			Telling Aurokaris she can take things at her own pace, you plant another passionate kiss on her [aurokaris.lips+], before submissively allowing the cow-girl to take the lead and get started...
+			你告诉奥罗卡利斯可以按照自己的节奏来，又在她[aurokaris.lips+]上留下了一个热情的吻，然后顺从地让她率先开始……
 		</p>
 	#ELSE
 		<p>
-			After a few moments of making out with one another in this manner, Aurokaris pulls back, before moving to start having dominant sex with you...
+			你们如此缠绵了一会，奥罗卡利斯抽开身，要开始与你进行支配型性爱……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_ENTRY_SEX_DECLINED"><![CDATA[
 	<p>
-		Not wanting to get intimate with her, you tell Aurokaris that while you like her, you don't want to take things any further tonight. Pouting at you, the cow-girl takes a step back before sighing, [aurokaris.speech(I understand... Well, I should sleep now... I guess it'd be best if you left...)]
+		你不想和奥罗卡利斯亲热，便说自己虽然喜欢她，但今晚不想进一步发展。牛女噘着嘴看着你，后退了一步，然后叹了口气：[aurokaris.speech(我明白……好了，我该睡觉了……我想你最好还是离开吧……)]
 	</p>
 	<p>
-		Not wanting to damage your relationship with the muscular Amazon, you do as she says and move back over to the tent's entrance. Untying the cord which keeps the canvas flap in place, you say goodbye to Aurokaris and [pc.step] back out into the camp. Calling out after you, Aurokaris asks, [aurokaris.speech(You'll come and visit me at the marketplace again, right? I'd still like to spar with you now and again...)]
+		你不想破坏与这位肌肉发达的亚马逊人之间的关系，于是照她说的做，回到帐篷门帘处。解开固定帐篷的绳子，你向奥罗卡利斯道别，[pc.step]回营地。奥罗卡利斯在你身后说，[aurokaris.speech(你还会来集市看我的吧？我还是想和你切磋切磋……)]
 	</p>
 	<p>
-		Telling the cow-girl that you'll visit her there again when you have the time, you say goodbye and set off into the camp, wondering what to do next...
+		你对牛女说有时间的话会再去那里看她的，然后道别，返回营地，想着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_TRANSFORMED"><![CDATA[
 	<p>
-		Wanting to make Aurokaris happy, you tell her that you'll drink the transformative potion which she's offering. Happily clapping her hands together, the excited cow-girl hastily retrieves a small bottle from out of a nearby crate, and as she hands it over to you she explains, [aurokaris.speech(This is a standard feminising potion we Amazons make. It should give you the sort of body that'd fit in with our society...)]
+		你为了让奥罗卡利斯高兴，你告诉她你会喝下她提供的转化魔药。兴奋的女牛仔高兴地拍起手来，急忙从旁边的板条箱里拿出一个小瓶子，一边递给你一边解释着， [aurokaris.speech(这是我们亚马逊人制作的标准女性化魔药 它能让你的身体符合我们的社会风俗……)]
 	</p>
 	<p>
-		Committing to your decision to drink the potion, you take the lid off and bring it up to your waiting lips. Tilting your head back, you quickly swallow down every last drop of the sweet liquid contained within, then wait to see what sort of effects it's going to have on your body...
+		你下定决心喝下药水，拧开盖子，把它凑到嘴边。你仰起头，迅速地吞下里面的甜美液体，然后等待着看它会对你的身体产生什么样的影响……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_TRANSFORMED_END"><![CDATA[
 	<p>
-		Clearly being very pleased with how you've turned out, Aurokaris steps forwards and moans, [aurokaris.speech(That's better... You want to take things further with me now, right? You know, I <i>really</i> like you, [pc.name]... You like me too, don't you?)]
+		奥罗卡利斯显然对你的表现非常满意，她走上前呻吟着，[aurokaris.speech(这样好多了……你现在想和我更进一步，对吧？你知道的，我<i>真的很</i>喜欢你，[pc.name]……你也喜欢我，不是吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_AFTER_SEX"><![CDATA[
 	<p>
-		Satisfied, Aurokaris lets out a deep sigh and collapses down onto her bed. Unfortunately, there doesn't appear to be enough room on it for two, and so as she catches her breath, she sighs, [aurokaris.speech(That was great... Sorry, [pc.name], but my tent's a little small...)]
+		满意之余，奥罗卡利斯深深地叹了一口气，然后倒在了床上。不幸的是，床上似乎没有足够的空间容纳两个人，所以她喘着气叹息道：[aurokaris.speech(刚刚好爽……抱歉，[pc.name]，我的帐篷有点小……)]
 	</p>
 	<p>
-		Telling Aurokaris that you needed to be heading off anyway, you give her one last passionate kiss, before moving to get your things in order. Smiling as she looks on, the cow-girl blushes and reveals, [aurokaris.speech(I really do like you a lot, [pc.name]... I need to get some sleep now, but you'll come back another night so we can do this again, right?)]
+		你给了她一个热情的吻并告诉奥罗卡利斯你都得走了，然后开始收拾你的东西。牛女红着脸微笑着注视着你说道，[aurokaris.speech(我真的很喜欢你，[pc.name]……我现在得睡觉了，但你会改天再来和我再做一次的，对吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUROKARIS_TENT_AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Telling the muscular cow-girl that you'll visit again when you have the time, you say goodbye and leave her tent, before setting off into the camp and wondering what to do next...
+		你对这位肌肉发达的牛女道别说，等有空再来看她。然后离开了她的帐篷，向着营地[pc.step]去，想着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Ursa scenes: -->
 	
 	<htmlContent tag="QUEEN"><![CDATA[
 	<p>
-		You find yourself standing before the huge, purple tent which houses Ursa, the queen of the Amazons. As is to be expected of royalty, Ursa's tent is far bigger than any other in the camp, and actually appears to consist of several large tents which have been joined together. At the entrance, two huge, bear-girl Amazons are standing guard, each of whom are equipped with the Amazons' favourite weapon; the dory.
+		你站在巨大的紫色营帐前，这里住着亚马逊女王乌萨。乌萨的住处与女王应有的规格相称，看起来是由几个大帐篷合并搭建而成，比其他营帐都大得多。入口处，两名高大的亚马逊熊女正在站岗，手持亚马逊人最钟爱的武器——希腊长矛。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_daily_interaction))
-			Ursa has already seen you today, and she made it quite clear to you that she has no more time to spare. If you wanted to pay her another visit, then you'll have to come back tomorrow. Then again, if it was Lunexis who you're after, you could head right on through to the tent where she's being kept...
+			乌萨今天已经见过你了，她明确地表示今天无法再抽出时间见面，还想拜访就得明天再来。不过，你如果想找露内克西丝，可以直接前往关押她的营帐……
 		#ELSE
 			#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_met))
-				As the guards have been informed by Ursa that you've been granted permission to enter her tent, you should have no trouble getting past the two burly bear-girls if you wanted to pay the queen a visit. Then again, if it was Lunexis who you're after, you could head right on through to the tent where she's being kept...
+				乌萨已对护卫下令，允许你进入她的营帐，如果你想拜访女王，这两位魁梧的熊女不会阻拦。不过，你如果想找露内克西丝，可以直接前往关押她的营帐……
 			#ELSE
-				Although the two burly bear-girls might give you some trouble, you're sure that you'll be able to gain access to Ursa's tent once they're informed of who you are. As such, if you wanted to pay the queen a visit, you could [pc.walk] up to them and introduce yourself...
+				两位魁梧的熊女可能会拦住你，不过你确信，她们只要得知你是谁，就会允许你进入乌萨的营帐。因此，你如果想拜访女王，可以[pc.walk]上前自我介绍……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_BACK"><![CDATA[
 	<p>
-		Deciding that you don't have any business here after all, you turn away from Ursa's tent and head back into the Amazons' camp...
+		这里没什么事情可做，你决定不在这里多待了，于是转身离开了乌萨的帐篷，回到了亚马逊人营地……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_INITIAL_ENTRY"><![CDATA[
 	<p>
-		Wanting to visit Ursa and check up on the situation with Lunexis, you approach the entrance to the grand, purple tent. Fixing their gaze onto you, the two burly bear-girl guards step forwards to block your passage, with the larger of the two growling in a deep, threatening tone, [style.speechFeminineStrong(Outsiders shouldn't even be in our camp. You're going no further.)]
+		你想拜访乌萨，了解一下露内克西丝的情况，于是靠近豪华紫色营帐的入口。两位壮硕的熊女护卫盯住你，上前拦阻。其中个子更大的那位声音沉沉，气势汹汹，[style.speechFeminineStrong(允许外来者进入我们的营地已经是破例了。你不能入内。)]
 	</p>
 	<p>
-		Just like with your initial entry to the camp, you have a stroke of good luck, for at that moment the tent's entrance flap is pulled back and a small group of senior-looking Amazons emerge from within. Ignoring your presence, they head off into the camp, leaving just Ursa herself standing at the entrance to the tent. Looking over at you, the huge, muscular queen of the Amazons allows a big smile to break out on her face. Addressing her guards, she explains, [ursa.speech(This one's the [pc.race] who fought alongside me back in Themiscyra. Remember [pc.her] face, for [pc.sheIs] always welcome in my tent.)]
+		就像你进入营地时遇到奥罗卡利斯一样，幸运再次眷顾了你。营帐入口的帷幕被掀开，一群看起来地位很高的亚马逊人走了出来。她们忽视你的存在，直奔营地，仅留下乌萨一人站在入口处。高大强壮的女王望向你，脸上绽放出灿烂的笑容，随后向护卫解释道：[ursa.speech(这是在特弥斯库拉与我并肩作战的那位[pc.race]。记住[pc.her]相貌，对[pc.sheIs]我永远扫榻以迎。)]
 	</p>
 	<p>
-		Standing aside, the two guards reply in unison, [style.speechFeminineStrong(Yes, your majesty.)]
+		两名护卫退到一旁，异口同声地回答，[style.speechFeminineStrong(遵命，陛下。)]
 	</p>
 	<p>
-		[ursa.speech(Well don't just stand there, come on in!)] Ursa booms in a friendly tone, before stepping back into her tent. Doing as she says, you [pc.step] past the guards and enter the queen's temporary home.
+		[ursa.speech(别就这么站着，快进来吧！)]乌萨的声音洪亮而友好，接着她便走回帐篷。你照她说的，穿过护卫，进入女王的临时住所。
 	</p>
 	<p>
-		The tent's interior is absolutely gigantic, and is well lit by a series of arcane lanterns which hang down from the wooden poles that support the high canvas ceiling. To your left and right, separate wings have been formed out of adjoining tents, and while there are canvas screens for privacy, you can see that one is the queen's bedroom, while the other looks to be a well-equipped armoury. In the middle of the huge central room in which you're currently standing, a massive wooden table holds a map of Themiscyra and the surrounding countryside. Gesturing to this map, Ursa explains, [ursa.speech(We've been busy planning the recapture of our hometown, but there are so many pressing issues to deal with that it's going to take us a while to truly prepare for it.)]
+		内部空间极大的营帐被奥术灯笼照得通明，挂着灯笼的木杆将顶端帆布高高撑起。你左右的侧室由帐篷相连而成，虽有遮挡隐私的帷幕，但你能看出一边是女王的卧室，另一边是齐备的军械室。营帐的中间，也就是你现在所处的区域，一张特弥斯库拉及周边村落的地图正摆在大型木桌上。乌萨指着地图解释，[ursa.speech(我们一直在谋划夺回家乡，但眼下要处理的紧急事务实在太多，还需要不少时间才能真正做好准备。)]
 	</p>
 	<p>
-		Not seeing any sign of the demonic centauress, you ask the bear-girl queen where Lunexis is being held. Flashing you a toothy grin, she gestures for you to follow her and strides off to the far side of the tent.
+		你没看到半人马恶魔的踪迹，于是询问女王，露内克西丝被关押在哪。女王粲然一笑，示意你跟着她，然后大步走向营帐另一侧。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_INITIAL_ENTRY_LUNEXIS"><![CDATA[
 	<p>
-		[ursa.speech(Apart from those of us who were present in Minotallys's office, only my personal bodyguards know of Lunexis's whereabouts. The less people know about this, the better,)] Ursa explains as she strides towards a flap in the rear of the tent. Pulling aside the canvas, she leads you out of the back of the tent and into a small, grassy compound. A tall, wooden wall separates this space from the rest of the camp, and positioned right in the middle there's a large, pale-red tent. Another bear-girl guard is standing beside the entrance, while another is slowly patrolling around the tent in a wide circle.
+		[ursa.speech(除了我们几个当时在米诺塔莉丝办公室的，就只有我的贴身护卫知道露内克西丝的下落。知道这件事的人越少越好。)]乌萨大步迈向帐篷后方，解释道。她拉开帘幕，带你走出营帐，来到一个长满草的小院子。高高的木墙将这里和营地的其他地方隔开，一个浅红色的营帐搭在院中央。一名熊女护卫正守在帐篷入口处，另一名则在周围绕着大圈慢慢巡逻。
 	</p>
 	<p>
-		[ursa.speech([pc.Name] here is to be granted access to this tent at any time of the day or night,)] Ursa informs the guards without breaking her step. Continuing forwards, she strides through the tent's entrance, leaving you to catch up and follow her inside.
+		[ursa.speech([pc.Name]随时可以进入这里，不论日夜。)]乌萨对护卫下令，她没有停步，继续向前跨进营帐。你匆忙赶上，跟随她步入帐内。
 	</p>
 	<p>
-		Ducking through the canvas parting, you find yourself in yet another large tent, with a ceiling high enough for the [ursa.heightValue] figure of Ursa to easily stand fully upright. It's not the impressive size of the interior which catches your attention, however, but the fact that the naked form of Lunexis is standing just a short way in front of you. Attached to four huge stakes which have been driven into the ground, a series of heavy, steel chains have been locked to a metal collar that's fastened around the demon's neck. Surprisingly, her four arms and legs are free, allowing her to stomp and shake her fists at you and Ursa as she screams, [lunexis.speech(You'll pay for this, you fucking cunts! Once I'm free, I'll have the two of you as my cock-sleeves! Set me free!)]
+		你钻过拉开的帷幕，发现这里极为宽敞，顶部高得足以让[ursa.heightValue]的乌萨站直身子。不过最引人注目的不是帐内宽敞的空间，而是露内克西丝正赤裸裸地站在你不远处。她的脖子上套着金属项圈，项圈被粗重钢链锁在四根钉入地面的木桩上。出乎意料的是，她的四条手臂和腿没有被束缚，这给了她冲你和乌萨边跺脚挥拳边嚷嚷的机会，[lunexis.speech(该死的贱人，你们会付出代价的！等我脱困，就把你们两个都变成我的鸡巴套！放开我！)]
 	</p>
 	<p>
-		Ignoring the demon's ranting, Ursa turns to face you and explains, [ursa.speech(We only had enough chains to attach to her collar, and as it turns out she's unable to break them even with her arms and legs free.)]
+		乌萨无视恶魔的叫嚣，转身向你解释，[ursa.speech(我们的钢链只够拴住项圈，而事实证明她就算手脚自由也无法挣脱。)]
 	</p>
 	<p>
-		[lunexis.speech(When Lunette gets a hold of you, you'll wish you'd have surrendered to me!)] Lunexis roars, [lunexis.speech(Set me free and I'll allow you to serve as my slave!)]
+		[lunexis.speech(等你们被露内特抓住，就会后悔没向我投降了！)]露内克西丝吼道，[lunexis.speech(放了我，我就允许你们当我的奴隶侍奉我！)]
 	</p>
 	<p>
-		[ursa.speech(You can wail and cry all you want,)] Ursa growls, [ursa.speech(This tent has been enchanted so that not a single noise can pass through its walls. Nobody can hear you, and nobody's coming to set you free. You'll answer for your crimes once your mother has been dealt with.)]
+		[ursa.speech(随你怎么哭嚎，)]乌萨低吼，[ursa.speech(这个帐篷已经附了魔，任何声音都传不出去。没有人能听到，也没有人会来救你。你母亲被解决之后，就轮到你被问罪了。)]
 	</p>
 	<p>
-		This remark sets off another bout of cursing, screeching and shouting, which proves to be of an annoyance to Ursa, who gestures for you to follow her back out of the tent.
+		这番话激起了另一阵咒骂、尖叫与嘶喊，乌萨很是厌烦，打了个手势示意你跟她离开。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_INITIAL_ENTRY_END"><![CDATA[
 	<p>
-		Following the bear-girl back out into the walled compound, you're amazed to discover that the moment you [pc.step] over the entrance's boundary, Lunexis's loud, obnoxious cursing is completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		你跟着熊女回到小院，惊讶地发觉在你[pc.step]出营帐边界的那瞬间，露内克西丝那刺耳可憎的谩骂完全消失了。你回望敞开的帷幕，发现她的嘴唇仍在一张一合，但帐篷的附魔隔绝了里面一切动静。
 	</p>
 	<p>
-		[ursa.speech(The enchantment was Aurokaris's idea,)] Ursa reveals as she turns to face you. With an amused grin on her face, she recalls, [ursa.speech(Lunexis was screeching and shouting all the way as we went down that escape passage from Minotallys's office. Aurokaris ended up having to gag her, and pointed out that the entire of Elis would soon know of Lunexis's whereabouts if we didn't find a way to keep her silent.)]
+		[ursa.speech(附魔是奥罗卡利斯的主意。)]乌萨转身面向你，透露道。她带着愉快的笑容回忆，[ursa.speech(我们从米诺塔莉丝办公室的逃生暗道离开那会儿，露内克西丝一路都在鬼哭狼嚎。奥罗卡利斯不得不堵住她的嘴，并指出如果我们不想办法让她安静，要不了多久整个伊利斯都会知道露内克西丝在我们这里。)]
 	</p>
 	<p>
-		Remarking on how effective the silencing enchantment is, you ask Ursa what she's planning on doing with her prisoner. Gesturing for you to follow her back into her grand, purple tent, she speaks over her shoulder as walks, [ursa.speech(We're going to keep her here for now, then after Lunette is dealt with we'll decide what to do with her. We've tried interrogating her to get some more information about her mother, but she's far too stubborn to reveal anything to us. You can come back and try at any time, but I doubt you'll succeed in finding anything out.)]
+		你夸了著有成效的消音附魔，接着问乌萨打算怎么处置这一囚犯。乌萨领着你返回她豪华的紫色营帐，边走边回头说：[ursa.speech(目前先把她关在这，等对付完露内特再决定如何处置她。我们也试过审问，为了获取更多关于她母亲的情报，但她油盐不进，拒绝透露任何东西。你随时可以过来审审，但我估计你也问不出什么。)]
 	</p>
 	<p>
-		At this moment, you realise that Ursa has led you through the tent's huge, central room, past the canvas screenings, and into one of the two wings that project out on opposite sides. Looking around, you see that there are several wardrobes and cabinets in here, as well as a huge bed, covered in furs, that's placed right in the middle of the room. As you start to ask what you're doing in her bedroom, the Amazon queen simply shrugs off her peplos, before quickly stripping out of her underwear. Before you know it, the huge, muscular bear-girl is standing completely naked before you.
+		就在这时，你意识到乌萨已经带着你穿过营帐中央房间和帷幕，来到了其中一间侧室。你打量了一圈，发现房间内有几个衣柜和橱柜，正中间是一张铺着毛皮的大床。你问亚马逊女王来卧室做什么，她褪下佩普罗斯长袍，飞快脱去内衣。说时迟，那时快，你还没反应过来，强壮的熊女就已一丝不挂地站在你面前了。
 	</p>
 	<p>
-		[ursa.speech(I am indebted to both you and Meraxis for your assistance in Themiscyra,)] she states in her deep, rumbling voice, [ursa.speech(Aurokaris has already received her reward, and Meraxis will get hers when next we meet. As for you, you shall be given your reward now. Submit to me, and let the queen of the Amazons show you how grateful she is.)]
+		[ursa.speech(我很感激你和梅拉克西丝在特弥斯库拉的援助。)]她用那低沉的嗓音说，[ursa.speech(奥罗卡利斯已经得到嘉奖了，梅拉克西丝也会在我下次见她时拿到她的那份。至于你，现在就该奖励你了。屈服吧，亚马逊女王会让你体会她的谢意有多深。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_ENTRY"><![CDATA[
 	<p>
-		Wanting to visit Ursa again, you approach the entrance to her tent, and as you do so the two bear-girl guards on duty move to block your passage. Recognising you from your previous visit, the larger of the two states in a deep, rumbling voice, [style.speechFeminineStrong(You can go on in, but make sure that you're on your best behaviour when in the presence of our queen.)]
+		你想再次拜访乌萨，靠近豪华紫色营帐的入口，与此同时，两名当值的熊女护卫挡住你的去路。更壮的那位认出了你，用低沉的嗓音说道：[style.speechFeminineStrong(你可以入内，但在我们女王面前举止必须得体。)]
 	</p>
 	<p>
-		[pc.Walking] forwards between the guards, you open the canvas flap and enter the huge, purple tent. The interior is absolutely gigantic, and is well lit by a series of arcane lanterns which hang down from the wooden poles that support the high canvas ceiling. To your left and right, separate wings have been formed out of adjoining tents, and while there are canvas screens for privacy, you know very well that one is the queen's bedroom, while the other looks to be a well-equipped armoury. In the middle of the huge central room in which you're currently standing, a massive wooden table holds a map of Themiscyra and the surrounding countryside.
+		你[pc.Walking]过护卫，撩开帷幕，进入豪华的紫色营帐。内部空间极大的营帐被奥术灯笼照得通明，挂着灯笼的木杆将顶端帆布高高撑起。你左右的侧室由帐篷相连而成，虽有遮挡隐私的帷幕，但你很清楚一边是女王的卧室，另一边是齐备的军械室。营帐的中间，也就是你现在所处的区域，一张特弥斯库拉及周边村落的地图正摆在大型木桌上。
 	</p>
 	<p>
-		[ursa.speech(Back again, [pc.name]?)] Ursa calls out from behind the table as she sees you entering her tent.
+		[ursa.speech(又来了，[pc.name]？)]乌萨看到你走进她的帐篷，从桌子后面喊道。
 		#IF(ursa.isVisiblyPregnant())
 			#IF(!ursa.isCharacterReactedToPregnancy(pc))
-				 Running her hands over her stomach, the queen draws your attention to the fact that she has a [style.colourSex(pregnant belly)], and she grins as she reveals, [ursa.speech(Yes, you're the one who got me pregnant, and no, I don't need or want any help, before you offer it. Now come over here and submit to me.)]
+				女王用手抚摸自己的肚子，让你注意到她有一个[style.colorSex(孕肚)]，她咧嘴一笑，露出了肚子，[ursa.speech(是的，是你让我怀孕的，不，在你提供帮助之前，我不需要也不想要任何帮助。现在过来臣服于我。)]
 			#ELSE
-				 Running her hands over her stomach, the queen draws your attention to the fact that she still has a [style.colourSex(pregnant belly)], and she grins as she states, [ursa.speech(Yes, I'm still pregnant, thanks to you, and no, I don't need or want any help, before you offer it. Now come over here and submit to me.)]
+				女王用手抚摸自己的肚子，让你注意到她有一个[style.colorSex(孕肚)]，她咧嘴笑着说，[ursa.speech(是的，我还在怀孕，多亏了你，不，在你提供帮助之前，我不需要也不想要任何帮助。现在过来，臣服于我。)]
 			#ENDIF
 		#ELSE
-			 Placing her hands on her [ursa.hips+], the bear-girl flashes you a grin and orders, [ursa.speech(Come over here and submit to me.)]
+			熊女把手放在其[ursa.hips+]上，咧嘴一笑，命令道，[ursa.speech(过来，臣服于我。)]
 		#ENDIF
 	</p>
 	<p>
-		Not wanting to risk the ire of the queen of the Amazons, you do as she says and [pc.walk] over to where she's standing. Confidently grabbing hold of your [pc.hand], the muscular bear-girl wastes no time in dragging you after her as she leads you once again into her sleeping quarters. Looking around, you see that there are several wardrobes and cabinets in here, as well as a huge bed, covered in furs, that's placed right in the middle of the room. Just like last time, the Amazon queen shrugs off her peplos, before quickly stripping out of her underwear. Before you know it, Ursa is standing completely naked before you.
+		你不想冒惹怒女王的风险，依言[pc.walk]向她站的地方。强壮的熊女自信地抓住你的[pc.hand]，毫不犹豫地拽着你再次进入她的卧室。你打量了一圈，房间内有几个衣柜和橱柜，正中间是一张铺着毛皮的大床。恰如彼时彼刻，亚马逊女王褪下佩普罗斯长袍，飞快脱去内衣。你还没反应过来，乌萨就已一丝不挂地站在你面前了。
 	</p>
 	<p>
-		[ursa.speech(You didn't think that I'd finished giving you your reward, did you?)] she asks in her deep, rumbling voice, [ursa.speech(Now submit to me, and let the queen of the Amazons show you how grateful she is for your assistance in Themiscyra.)]
+		[ursa.speech(你不会以为我给你的奖励就那么结束了吧？)]乌萨的嗓音如雷鸣般低沉，[ursa.speech(向我屈服，对于你在特弥斯库拉的援助，亚马逊女王会让你体会她的谢意有多深。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_ENTRY_SEX"><![CDATA[
 	<p>
-		Doing as you're told, you tell Ursa that you'll submit to her and let her give you your reward. Considering her size and strength, the bear-girl is surprisingly gentle as she steps forwards and pulls you into a loving embrace. Letting out a soft, affectionate growl, she teases, [ursa.speech(That's a good [pc.girl]... Now hold still for me...)]
+		你乖乖照做，告诉乌萨你会臣服于她，让她给你奖赏。考虑到她的体型和力量，熊女出奇地温柔，她向前走了一步，把你拉进一个充满爱意的怀抱。她轻柔又亲昵地挑逗道：[ursa.speech(真是个乖[pc.girl]……现在别动……)]
 	</p>
 	<p>
-		Once again obeying the queen, you don't resist as she pulls you forwards and presses her lips against your mouth. Darting out her tongue, she gives you a soft, tender kiss, before drawing back and happily sighing, [ursa.speech(I'll do my best to make this good for you...)]
+		你又一次服从了女王，当她把你向前拉并把嘴唇贴在你的嘴上时，你没有反抗。她伸出舌头，给了你一个温柔的吻，然后抽开身，高兴地叹息道：[ursa.speech(我会尽我所能让你舒服的……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_ENTRY_SEX_DECLINED"><![CDATA[
 	<p>
-		Not really liking the sound of what Ursa has to offer, you tell her that you're flattered but not interested in doing anything sexual with her. Flashing you a big, toothy grin, the queen responds to your rejection by growling, [ursa.speech(Playing hard to get, are we? I don't recall giving you the option of refusing. Now submit to me...)]
+		乌萨的奖励在你听来并不诱人，你坦承自己受宠若惊，但对和她做爱不感兴趣。女王冲你灿烂一笑，回应你的拒绝，[ursa.speech(欲擒故纵，嗯？我不记得给过你拒绝的选项。现在，屈服于我……)]
 	</p>
 	<p>
-		Despite her words, and the fact that she takes a dominant steps forwards, you get the impression from the soft look on her face that she isn't really serious about forcing you into anything. If you really didn't want to do this, you could just repeat your answer. Then again, perhaps you could change your mind and choose to submit to her after all...
+		女王虽然这么说着，且颇有压迫感地向前一步，但她神情依然柔和，你感觉她并不是真的想强迫你做什么。如果你确实不想要，可以再次拒绝。不过，你要是改了主意，也可以选择答应她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_ENTRY_SEX_OBEY"><![CDATA[
 	<p>
-		Deciding to relent and obey the queen of the Amazons, you tell Ursa that you'll submit to her and let her give you your reward. Considering her size and strength, the bear-girl is surprisingly gentle as she steps forwards and pulls you into a loving embrace. Letting out a soft, affectionate growl, she teases, [ursa.speech(That's a good [pc.girl]... Now hold still for me...)]
+		你决定顺从亚马逊女王，便告诉乌萨你会臣服于她，让她给你奖赏。考虑到她的体型和力量，熊女出奇地温柔，她向前走了一步，把你拉进一个充满爱意的怀抱。她轻柔又亲昵地挑逗道：[ursa.speech(真是个乖[pc.girl]……现在别动……)]
 	</p>
 	<p>
-		Once again obeying the queen, you don't resist as she pulls you forwards and presses her lips against your mouth. Darting out her tongue, she gives you a soft, tender kiss, before drawing back and happily sighing, [ursa.speech(I'll do my best to make this good for you...)]
+		你又一次服从了女王，当她把你向前拉并把嘴唇贴在你的嘴上时，你没有反抗。她伸出舌头，给了你一个温柔的吻，然后抽开身，高兴地叹息道：[ursa.speech(我会尽我所能让你舒服的……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_ENTRY_AFTER_SEX"><![CDATA[
 	<p>
-		Having had enough, Ursa moves away from you and gently, yet firmly, states, [ursa.speech(You've had enough of a reward for one day.)]
+		忍无可忍的乌萨从你身边移开，温和而坚定地说道，[ursa.speech(今天的奖励已经够多了。)]
 	</p>
 	<p>
-		Planting one last gentle kiss on your [pc.lips], she moves over to clean herself off and retrieve her clothing. As you similarly get your things back in order, she sighs, [ursa.speech(Ordinarily I'd have kept you in my bedchamber all day and night, but considering the current situation we Amazons are in, I have far more pressing matters to attend to.)]
+		乌萨在你的[pc.lips]上留下最后一个温柔的吻，走过去清理自己，拿回她的衣服。你快整理好自己的东西时，她叹了口气道：[ursa.speech(通常我会让你在我的卧室里待上一天一夜，但考虑到我们亚马逊人目前的处境，我有更紧迫的事情要处理。)]
 	</p>
 	<p>
-		As you finish getting your things together, the bear-girl smiles at you and teases, [ursa.speech(That doesn't mean that I don't want to see you again, by the way. Come back tomorrow and I'll give you more of your reward.)]
+		当你收拾好自己的东西时，熊女对你微笑着调侃道：[ursa.speech(顺便说一句，这并不意味着我不想再见到你。明天再来，我会给你更多的奖励。)]
 	</p>
 	<p>
-		As Ursa pulls her peplos back on, you wonder whether to leave her tent straight away, or to ask her some questions before you depart...
+		乌萨重新穿上佩普罗斯长袍，你思索是直接离开她的帐篷，还是在离开之前问她一些问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_ENTRY_SEX_DECLINED_END"><![CDATA[
 	<p>
-		Really not wanting to have sex with her, you tell Ursa once again that you're not interested in her idea of a reward. Although she huffs and crosses her arms in annoyance, the bear-girl doesn't persist, and instead relents with a sigh, [ursa.speech(Fine... I suppose that I must respect you for having the guts to turn me down. Well, seeing as we're not going to be having any fun, is there anything else you wanted, or should I get back to my work now?)]
+		你实在不想和乌萨做爱，再次表示你无意受这样的赏。熊女哼了一声，不快地交叉双臂，但没有继续纠缠，只是叹息道，[ursa.speech(好吧……我想必须尊重你拒绝我的勇气。鉴于欢愉时光是不会有了，你还有什么其他需要吗？还是说我该去处理公事了？)]
 	</p>
 	<p>
-		As the bear-girl uncrosses her arms and waits to hear your answer, you wonder whether to leave her tent straight away, or to ask her some questions before you depart...
+		熊女放下手臂，等待你的回答。你在思索是立刻离开营帐，还是问几个问题再走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_TALK_AMAZONS"><![CDATA[
 	<p>
-		Wanting to know more about the Amazons, you ask Ursa if she can tell you anything about their history and customs.
+		你想更加了解亚马逊人，于是问乌萨能不能讲一些亚马逊人的历史和习俗。
 	</p>
 	<p>
-		[ursa.speech(There's really not much about us that isn't common knowledge. We're a community of all-feminine warriors, and up until now, we've always kept to ourselves in Themiscyra,)] she replies, [ursa.speech(Under normal circumstances, anyone could present themselves to us and ask to join, but they had to be feminine in appearance, and willing to undergo rigorous physical and martial training. After what's recently happened, however, we're not accepting any new members into our community.)]
+		[ursa.speech(我们没什么是不为人知的。所有亚马逊人都是女战士，至今为止，我们通常都待在特弥斯库拉，不与外界来往。)]乌萨答道，[ursa.speech(一般来说，外表为女性且愿意接受严格体能训练、军事训练的人，都可以申请加入我们。不过由于最近发生的事情，我们现在不再接受新成员。)]
 	</p>
 	<p>
-		Thanking Ursa for the information, you ask her if there are any characteristics in particular which are prized amongst the Amazons.
+		你对乌萨的回答表示感谢，然后问她亚马逊人是否特别珍视某些特质。
 	</p>
 	<p>
-		[ursa.speech(Being strong and a formidable warrior will earn you respect,)] Ursa replies, [ursa.speech(but every Amazon is required to attend combat training, so it's unusual for any of us to be anything other than a powerful, competent warrior. As such, it's Amazons who are kind, caring, and willing to help out others who end up being the most popular.)]
+		[ursa.speech(强大出众的战士能赢得尊重，)]乌萨解释道，[ursa.speech(但每个亚马逊人都需要参加战斗训练，如果有人不是出色能干的战士，那才稀奇。因此，善良、体贴、乐于助人的亚马逊人才是最受欢迎的。)]
 	</p>
 	<p>
-		With your questions about the Amazons now answered, you wonder what to ask Ursa next...
+		你对亚马逊人的疑问得到了解答，你开始思索下一个该问什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_TALK_QUEEN"><![CDATA[
 	<p>
-		Feeling like it'd be nice to know more about Ursa herself, you ask the bear-girl how she came to be queen of the Amazons.
+		你觉得能更了解乌萨也挺好，于是问熊女她是如何成为亚马逊女王的。
 	</p>
 	<p>
-		[ursa.speech(Well, it helped that I can trace my ancestry back to the two sisters who founded Themiscyra hundreds of years ago,)] she replies, [ursa.speech(We Amazons don't believe in having a hereditary monarchy, but there's a certain amount of respect that's given to those of us who are descended from our founders. This helps during the royal tournament, as one of the events is winning the approval of the tribe's elders.)]
+		[ursa.speech(唔，我的先祖可以追溯到几百年前最初创建特弥斯库拉的两姐妹，这对我有所帮助。)]乌萨答道，[ursa.speech(我们亚马逊人不实行世袭君主制，但会给予始祖的后裔一定程度的尊重。选举的其中一项内容是赢得部族长老的认可，所以我的血统在女王锦标赛中是件有利的事。)]
 	</p>
 	<p>
-		Wanting to hear more about this 'royal tournament', you ask Ursa what that entails, and how it's related to her becoming the queen.
+		你想多听些这个“女王锦标赛”的事情，便问乌萨锦标赛包括什么内容，与她成为女王又有什么关系。
 	</p>
 	<p>
-		[ursa.speech(The tournament is how we decide who's going to rule us,)] Ursa reveals, [ursa.speech(it's held every two years, and involves tests of strength, martial prowess, intelligence, and leadership abilities. I've won the past ten contests, and in doing so have earned the Amazons' respect, love, and devotion. Anyone can enter the tournament to try and unseat the ruling queen, but there haven't been any serious entrants for the past four times it's been held. Of course, after what's happened to our home town, I'm sure that there will be many who'll want to try and remove me from power at the next tournament...)]
+		[ursa.speech(比赛就是我们决定谁来统治我们的方式，)]乌萨回应道，[ursa.speech(每两年举行一次，包括力量、武艺、智力和领导能力的测试。在过去的十届比赛中，我都取得了胜利，赢得了亚马逊人的尊敬、爱戴和奉献。任何人都可以参加比赛，尝试推翻女王的统治，但在过去的四届比赛中，一个认真参赛的人都没有。当然，在我们的家乡发生了这样的事之后，我相信会有很多人想在下一届比赛中把我赶下台……)]
 	</p>
 	<p>
-		Feeling as though this conversation is going to a dark place that Ursa would rather avoid, you wonder how to change the topic...
+		你察觉对话似乎正朝着乌萨不愿意谈及的阴暗方向发展，开始思考如何切换话题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_TALK_LUNETTE"><![CDATA[
 	<p>
-		Thinking that it would be a good idea to keep up to speed on what Lunette might be planning, you ask Ursa if she's heard anything about what the elder lilin's next move might be.
+		你认为了解露内特的计划是个好主意，便问乌萨是否听说过莉琳长老的下一步行动。
 	</p>
 	<p>
-		[ursa.speech(You know as much as I do, if not more,)] the bear-girl replies, [ursa.speech(We don't have any spies in her forces, nor have we managed to extract any information from our prisoner. Speaking of which, it's only a matter of time before Lunette hears about what's happened to her recognised daughter, and although she's got a reputation as being more brawn than brains, I don't think it's going to take too long for her to guess where Lunexis has been taken to.)]
+		[ursa.speech(你可能知道的还比我更多。)]熊女回答道，[ursa.speech(我们在她的部队中没有任何间谍，也没有从我们的囚犯那里套出任何信息。说到这里，露内特迟早会听说她的女儿发生了什么事，虽然她以肌肉比脑子发达而闻名，但我想她用不了多久就会猜到露内克西丝被带到哪里去了。)]
 	</p>
 	<p>
-		Saying that you're working with Minotallys to try and get Elis prepared for the elder lilin's inevitable arrival, you ask Ursa if you're going to be able to count on the aid of the Amazons when the time comes.
+		你说你正在和米诺塔莉丝一起努力，使伊利斯为莉琳长老必然的到来做好准备，你问乌萨，到时候你是否能指望亚马逊人的援助。
 	</p>
 	<p>
-		[ursa.speech(Of course, we'll be there to fight,)] she confidently replies, [ursa.speech(but even an army of Amazons aren't going to be able to stop an elder lilin. We'll help to deal with her daughters, but we'll be leaving Lunette to you, Meraxis, and Minotallys. Don't count on our aid before then, though; we're busy trying to recover our strength and preparing for when we go to retake Themiscyra.)]
+		[ursa.speech(当然，我们会去那里战斗。)]乌萨自信满满地答道，[ursa.speech(但即使是亚马逊大军，也无法阻止一个莉琳长老。我们会帮忙对付她的女儿们，但露内特就交给你、梅拉克西丝和米诺塔莉丝了。不过在那之前别指望我们的援助，我们正忙于恢复体力，为夺回特弥斯库拉做准备。)]
 	</p>
 	<p>
-		Thanking Ursa for her commitment, you wonder what to ask next...
+		你谢过乌萨的承诺，思索接下来该问什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_TALK_AUROKARIS"><![CDATA[
 	<p>
-		Curious to find out what Ursa thinks of your mutual friend, you ask her how well she knows Aurokaris, and what she thinks of her.
+		你很好奇乌萨怎么看待你们的共同好友，于是问她对奥罗卡利斯了解多少，有什么看法。
 	</p>
 	<p>
-		[ursa.speech(Oh, I know her <i>very</i> well by now,)] Ursa replies, allowing a slight smile to settle on her face as she says this. Gesturing towards her bed, she reveals, [ursa.speech(I already knew of Aurokaris thanks to her incredible talents in combat, but after rewarding her for her service in Themiscyra, I really got to know just how eager she is to <i>please</i> her queen.)]
+		[ursa.speech(哦，我现在已经<i>非常</i>了解她了。)]乌萨回答时带了一丝轻笑。她指向自己的床，透露道：[ursa.speech(我先前就知道奥罗卡利斯在战斗中天赋异禀，但嘉奖她在特弥斯库拉的表现之后，我才真切地感受到她有多渴望<i>取悦</i>她的女王。)]
 	</p>
 	<p>
-		Wanting to hear more, you tell Ursa to continue, but she simply smirks and protests, [ursa.speech(Oh, I shouldn't be talking about any more of that; she gets quite embarrassed about these sorts of things, you know, and wouldn't like it if I were to talk about how skilled she is with her tongue... Anyway, Aurokaris is one of our most promising warriors, and if she keeps training then perhaps one day she'll be queen.)]
+		你还想听，让乌萨细说，但她只是狡黠一笑，不肯再提，[ursa.speech(啊，我不能再多说了；奥罗卡利斯在这类事情上相当害羞，你懂的，她肯定不喜欢我继续描述她娴熟的舌技……总之，奥罗卡利斯是我们最有潜力的战士之一，如果她继续训练，或许有一天能成为女王。)]
 	</p>
 	<p>
-		Having revealed all that she's willing to about Aurokaris, Ursa stops talking, leaving you wondering what to ask next...
+		关于奥罗卡利斯的一切，乌萨愿意透露的所有内容都说完了，她不再开口，你琢磨着接下来问什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUEEN_ENTRY_FINAL_LEAVE"><![CDATA[
 	<p>
-		Telling Ursa that you need to get going now as well, you make a move towards the exit. Following after you, the bear-girl states, [ursa.speech(I won't have any more time to spare today, but come back tomorrow if you want to see me again. Oh, and do feel free to pass on though if you wanted to try interrogating Lunexis. I doubt you'll get far with her, though.)]
+		你告诉乌萨你也该离开了，朝门口[pc.Walking]去。熊女跟在你身后，补充道：[ursa.speech(我今天已经腾不出更多时间了，还想见我就明天再来吧。哦，还有，想试着审问露内克西丝的话请便，但我觉得多半不会有什么进展。)]
 	</p>
 	<p>
-		Responding by saying you very well might do that, you bid farewell to the Amazon queen and exit her tent, before looking around and wondering where to go next...
+		你回答说你很可能会那么做，然后向亚马逊女王告别，离开她的营帐。你环顾四周，思忖接下来去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Lunexis scenes: -->
@@ -927,638 +927,638 @@
 	<htmlContent tag="LUNEXIS"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_surrendered))
-			Wanting to see your Mistress again, you approach the entrance to Ursa's tent and briefly inform the guards that you're here to interrogate Lunexis.
+			你想再次见到你的主人，于是来到乌萨营帐的入口，简单告知护卫你是来审问露内克西丝的。
 		#ELSE
-			Wanting to see Lunexis again, you approach the entrance to Ursa's tent and briefly inform the guards that you're here to interrogate the demonic centauress.
+			你想再次见到露内克西丝，于是来到乌萨营帐的入口，简单告知护卫你是来审问恶魔半人马的。
 		#ENDIF
-		 As you've been given permission to come and go as you please, the bear-girl sentinels stand aside to grant you access, allowing you to [pc.step] past them and enter the grand, purple tent.
+		由于你已获得随意出入的许可，熊女护卫让到一边，使你得以[pc.step]过她们，进入豪华的紫色帐篷。
 	</p>
 	<p>
-		Once inside, you see that Ursa, along with several senior-looking Amazons, is standing before the central table, and looks to be busy discussing plans on how to retake Themiscyra. Although she's acknowledging your presence with a curt nod, the bear-girl doesn't have any time for you right now, and so you're able to pass her by and head on out into the small, walled compound without being delayed. [pc.Walking] straight on over to the large, pale-red tent which is positioned in the centre of this grassy area, you pass by the bear-girl guard who's on duty and open the entrance flap.
+		你一进帐篷就看到乌萨和几个看起来地位很高的亚马逊人，她们站在中间的桌子旁，似乎正忙着讨论夺回特弥斯库拉的计划。熊女虽然略一点头向你示意，但她现在无暇顾及你，因此你毫不迟疑地绕过她，直接进入那个有围墙的小院落。你径直[pc.Walking]向草地中央的浅红营帐，路过当值的熊女守卫，撩起入口帷幕。
 	</p>
 	<p>
-		Ducking through the canvas parting, you find yourself in yet another large tent, with a ceiling high enough for the [ursa.heightValue] figure of Ursa to easily stand fully upright. It's not the impressive size of the interior which catches your attention, however, but the fact that the naked form of Lunexis is standing just a short way in front of you. Attached to four huge stakes which have been driven into the ground, a series of heavy, steel chains have been locked to a metal collar that's fastened around the demon's neck.
+		你钻过拉开的帷幕，发现这里极为宽敞，顶部高得足以让[ursa.heightValue]的乌萨站直身子。不过最引人注目的不是帐内宽敞的空间，而是露内克西丝正赤裸裸地站在你不远处。她的脖子上套着金属项圈，项圈被粗重钢链锁在四根钉入地面的木桩上。
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_surrendered))
 		<p>
-			As her four arms and legs are free, she's able to stomp and shake her fists at you as she angrily demands,
+			当她的四肢获得自由时，她一边怒气冲冲地向你跺脚、挥舞拳头，一边命令道：
 			#IF((!lunexis.isVisiblyPregnant() || !lunexis.getPregnantLitter().isFatherId(pc.getId())) && !pc.isVisiblyPregnant())
-				 [lunexis.speech(Why isn't Meraxis with you?! You useless cunt! Get over here and submit to me, then tell me what an obedient slave you are!)]
+				[lunexis.speech(为什么梅拉克西丝没有跟你来？！没用的贱货！现在服从我，亲口告诉我你是怎样顺服的奴隶！)]
 			#ELSE
-				 [lunexis.speech(Why isn't Meraxis with you?! You useless cunt! You'll be punished for this!)]
+				[lunexis.speech(为什么梅拉克西丝没有跟你来？！没用的贱货！你得受惩罚！)]
 			#ENDIF
 		</p>
 		#IF(lunexis.isVisiblyPregnant() && lunexis.getPregnantLitter().isFatherId(pc.getId()))
 			<p>
 				#IF(!lunexis.isCharacterReactedToPregnancy(pc))
-					As you start to explain that you're still working on a way to trick the chuuni [meraxis.race] into setting her free, you notice that your Mistress's lower, equine body has a visibly swollen, [style.colourSex(pregnant belly)]. Grunting in annoyance as she notices what it is you're looking at, the centauress snaps, [lunexis.speech(Yes, you got me pregnant! I've already got more bastards than I can count, so what's a few more to me? Now, submit to me and tell me what an obedient cunt you are!)]
+					当你开始解释你还在想办法骗中二[meraxis.race]放了她的时候，你注意到主人的下半身挺着明显肿胀的[style.colorSex(孕肚)]。当她注意到你在看什么时，半人马恼怒地哼了一声，[lunexis.speech(是的，你让我怀孕了！我已经有数不清的混蛋杂种子女了，再多几个又算得了什么？现在，臣服于我，告诉我，你是个多么顺从淫贱的荡妇！)]
 				#ELSE
-					As you start to explain that you're still working on a way to trick the chuuni [meraxis.race] into setting her free, you notice that your Mistress's lower, equine body still has a visibly swollen, [style.colourSex(pregnant belly)]. Grunting in annoyance as she notices what it is you're looking at, the centauress snaps, [lunexis.speech(Yes, I'm still pregnant, thanks to you! I've already got more bastards than I can count, so what's a few more to me? Now, submit to me and tell me what an obedient cunt you are!)]
+					当你开始解释你还在想办法骗中二[meraxis.race]放了她的时候，你注意到主人的下半身仍然挺着明显肿胀的[style.colorSex(孕肚)]。当她注意到你在看什么时，半人马恼怒地哼了一声，[lunexis.speech(是的，我还在怀孕！我已经有数不清的混蛋杂种子女了，再多几个又算得了什么？现在，臣服于我，告诉我，你是个多么顺从淫贱的荡妇！)]
 				#ENDIF
 			</p>
 		#ENDIF
 		#IF(pc.isVisiblyPregnant())
 			<p>
-				Looking down at your pregnant bump, Lunexis sneers and taunts,
+				露内克西丝低头看了眼你的孕肚，讥笑道，
 				#IF(!pc.isCharacterReactedToPregnancy(lunexis))
 					#IF(pc.getPregnantLitter().isFatherId(lunexis.getId()))
-						[lunexis.speech(Hah! Looks like you're carrying some of my bastards around! Now submit to me and tell me what an obedient cunt you are!)]
+						[lunexis.speech(哈！看起来你正怀着谁的野种！现在服从我，亲口告诉我你是怎样下贱的骚货！)]
 					#ELSE
-						[lunexis.speech(Hah! Looks like someone else likes using you as a cock-sleeve! Now submit to me and tell me what an obedient cunt you are!)]
+						[lunexis.speech(哈！看起来你被别人当作鸡巴套子了！现在服从我，亲口告诉我你是怎样下贱的骚货！)]
 					#ENDIF
 				#ELSE
-					[lunexis.speech(Hah! Looks like you're still pregnant, huh, you fucking slut? Now submit to me and tell me what an obedient cunt you are!)]
+					[lunexis.speech(哈！看起来你还怀孕呢，嗯，你这该死的贱货！现在服从我，亲口告诉我你是怎样下贱的婊子！)]
 				#ENDIF
 			</p>
 		#ENDIF
 		<p>
-			Hurrying to obey, you rush forwards and drop down before your Mistress, before telling her that you're her good, obedient cock-sleeve. Snorting and stomping at the ground with her huge hoofs, the demon turns to one side and presents you with her flaccid, sheathed horse-cock, before angrily commanding,
+			你急忙服从命令，冲上前在主人面前跪下，然后告诉她，你是她听话的好鸡巴套子。恶魔打着响鼻，用巨大的蹄子跺着地面，然后转向一边，向你展示她松弛的、带鞘的马鸡巴，然后愤怒地命令道，
 			#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-				 [lunexis.speech(Open wide, bitch! Get me hard with your mouth so that I can give you a good, rough hate-fucking!)]
+				[lunexis.speech(张大嘴，婊子！用你的嘴让我硬起来，这样我就能狠狠地操死你了！)]
 			#ELSE
-				 [lunexis.speech(Put your [pc.hands] to use, bitch! Get me hard so that I can give you a good, rough hate-fucking!)]
+				[lunexis.speech(把你的[pc.hands]用起来，婊子！让我硬起来，这样我就能操死你了！)]
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			As her four arms and legs are free, she's able to stomp and shake her fists at you as she angrily screams, [lunexis.speech(You fucking cunt! Set me free and I might allow you to be my cock-sleeve!)]
+			当她的四肢获得自由时，她一边尖叫，一边怒气冲冲地向你跺脚、挥舞拳头，[lunexis.speech(你这该死的婊子！把我放了，我就允许你做我的鸡巴套子！)]
 		</p>
 		#IF(lunexis.isVisiblyPregnant() && lunexis.getPregnantLitter().isFatherId(pc.getId()))
 			<p>
 				#IF(!lunexis.isCharacterReactedToPregnancy(pc))
-					As you take a look at the raging demon, you notice that her lower, equine body has a visibly swollen, [style.colourSex(pregnant belly)]. Furiously growling as she notices what it is you're looking at, the centauress snaps, [lunexis.speech(Yes, you got me pregnant, you fucking bitch! I've already got more bastards than I can count, so what's a few more to me?!)]
+					当你打量这个狂暴的恶魔时，你注意到她下半身的马身已经明显肿胀的[style.colourSex(孕肚)]。当她注意到你在看什么时，半人马愤怒地咆哮起来，[lunexis.speech(是的，是你让我怀孕的，你这个臭婊子！我已经有数不清的杂种了，再多几个又算得了什么？)]
 				#ELSE
-					As you take a look at the raging demon, you notice that her lower, equine body still has a visibly swollen, [style.colourSex(pregnant belly)]. Furiously growling as she notices what it is you're looking at, the centauress snaps, [lunexis.speech(Yes, I'm still pregnant, you fucking bitch! I've already got more bastards than I can count, so what's a few more to me?)]
+					当你打量这个狂暴的恶魔时，你注意到她下半身的马身已经明显肿胀的[style.colourSex(孕肚)]。当她注意到你在看什么时，半人马愤怒地咆哮起来，[lunexis.speech(是的，我还在怀孕，你这该死的婊子！我已经有数不清的杂种了，再多几个又算得了什么？)]
 				#ENDIF
 			</p>
 		#ENDIF
 		#IF(pc.isVisiblyPregnant())
 			<p>
-				Looking down at your pregnant bump, Lunexis sneers and taunts,
+				低头看着你怀孕的肚子，露内克西丝冷笑着嘲讽道，
 				#IF(!pc.isCharacterReactedToPregnancy(lunexis))
 					#IF(pc.getPregnantLitter().isFatherId(lunexis.getId()))
-						[lunexis.speech(Hah! Looks like you're carrying some of my bastards around! Now submit to me and let me hate-fuck you, you fucking cunt!)]
+						[lunexis.speech(哈，看来你带着我的种到处跑啊，现在臣服于我，让我操死你，你个臭婊子！)]
 					#ELSE
-						[lunexis.speech(Hah! Looks like someone else likes using you as a cock-sleeve! Now submit to me and let me hate-fuck you, you fucking cunt!)]
+						[lunexis.speech(哈，看来还有人喜欢把你当鸡巴套子用啊，现在臣服于我，让我操死你吧，你个臭婊子！)]
 					#ENDIF
 				#ELSE
-					[lunexis.speech(Hah! Looks like you're still pregnant, huh, you fucking slut? Now submit to me and let me hate-fuck you, you fucking cunt!)]
+					[lunexis.speech(哈，看来你还是怀孕了，是吧，你个荡妇？现在臣服于我，让我操死你吧，你个臭婊子！)]
 				#ENDIF
 			</p>
 		#ENDIF
 		<p>
-			Ignoring the centauress's foul mouthed ranting, you wonder how best to try and interrogate her...
+			你无视半人马的污言秽语，思索如何审问才是最有效的……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_LEAVE"><![CDATA[
 	<p>
-		Seeing no reason to continue wasting your time with this uncooperative demon, you turn your back on Lunexis and [pc.walk] out of the tent to the sounds of angry curses and threats. The moment that you [pc.step] over the entrance's boundary, Lunexis's loud, obnoxious shouting is completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		你认为没有理由继续在这个拒不合作的恶魔身上浪费时间，于是背对着露内克西丝，在愤怒的咒骂声和威胁声中[pc.walk]出了帐篷。当你[pc.step]出入口结界的那一刻，露内克西丝响亮而讨厌的叫喊声骤然消失。你透过打开的挡板往后看，发现她的嘴唇还在动，但帐篷的附魔阻止了任何声音从内部传出。
 	</p>
 	<p>
-		Crossing the small, grassy compound, you pass back through Ursa's tent, where the queen is still busy with the group of senior Amazons, and head back out into the camp. Looking around, you wonder to go to next...
+		穿过长满青草的小院，你进入了乌萨的帐篷，女王还在和一群年长的亚马逊人忙碌着，然后你又回到了营地。你环顾四周，思索接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_QUESTION"><![CDATA[
 	<p>
-		Deciding to try the obvious, you start by simply asking Lunexis what she knows of Lunette's plans. Predictably, the demon offers you nothing but angry curses and threats of violence. Although you persist in your questioning for a short while, the most useful piece of information you get is when the centauress declares, [lunexis.speech(Once mother finds out who's responsible for my abduction, she's going to march on Elis and raze this wretched town to the ground! You'll be begging to be my cock-sleeve before she's done with you!)]
+		你决定从最显而易见的地方入手，首先询问露内克西丝对露内特的计划了解多少。不出所料，这个恶魔除了愤怒的诅咒和暴力威胁之外什么也没说。虽然你坚持询问了一小会儿，但你得到的最有用的信息不过是这个半人马的威胁宣告，[lunexis.speech(一旦母亲发现是谁绑架了我，她就会向伊利斯进军，把这个破镇夷为平地！等到她准备解决你的时候，你就会求着做我的鸡巴套子了！)]
 	</p>
 	<p>
-		Not giving up just yet, you try several different tactics in trying to get Lunexis to reveal what she knows to you. As stubborn as she is loud, the centauress doesn't give you any useful information, and you soon begin to suspect that she may actually not know much at all. With this impression being reinforced by several idiotic comments that the demon makes, you finally realise that Lunexis is all brawn and no brains, and that any further attempts at questioning her are completely pointless.
+		你还没有放弃，又尝试了几种不同的策略，试图让露内克西丝向你透露她所知的信息。露内克西丝很固执，压根没有给你任何有用的信息，你很快就开始怀疑她可能根本就不知道多少。随着这种印象被恶魔的一些蠢话所强化，你终于意识到露内克西丝四肢发达、头脑简单，再怎么问她都毫无意义。
 	</p>
 	<p>
-		As the furious demon continues to shout, stomp, and screech, you wonder what to do with her now...
+		愤怒的恶魔继续嘶吼、跺脚又尖叫，你不知道现在该拿她怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_HUMILIATION"><![CDATA[
 	<p>
-		Thinking that it might be worth trying something completely different in your attempt to interrogate Lunexis, you decide to attempt to humiliate her into revealing important information. With this thought in mind, you [pc.walk] around to the side of her horse's body, before placing your [pc.hand] on her flank and giving her a little pat.
+		你觉得用些完全不同的手段可能会有收获，决定试试羞辱露内克西丝，迫使她透露重要情报。怀着这一想法，你[pc.walk]到她的马身一侧，轻拍她的腹部。
 	</p>
 	<p>
-		[lunexis.speech(What the fuck do you think you're doing?!)] she furiously bellows, before trying to step away from your touch. Thanks to the chains which are attached to her collar, she's not able to manoeuvre very much, and so is unable to prevent you from continuing to pat her. Overflowing with indignant rage, the red skin of her cheeks flushes an even deeper shade of scarlet as she yells, [lunexis.speech(Stop that! Stop it right this instant, you fucking cunt!)]
+		[lunexis.speech(你他妈以为你在干什么？！)]露内克西丝暴跳如雷，试图躲开你的触碰，但由于锁在颈圈上的钢链，她行动受限，无法阻止你的动作。她本就是赤色的脸颊愈发猩红，怒不可遏地咆哮，[lunexis.speech(停下！立刻停下，你个欠操的贱人！)]
 	</p>
 	<p>
-		Ignoring her words, you move on to start stroking the black fur of her horse's body. Telling her that she's a good horsie, you combine this stroking with the occasional pat, before moving your touch down to give her
+		你忽略露内克西丝的话，转而抚摸马身的黑色皮毛。你夸她是只好马儿，又摸又拍，还在她
 		#IF(lunexis.isVisiblyPregnant())
-			 pregnant
+			怀孕
 		#ENDIF
-		 belly a good rubbing. Embarrassed and fuming, the centauress impotently stomps her powerful hoofs on the ground and orders, [lunexis.speech(Stop it! Stop it right now! I can't be treated like this! I'm a recognised daughter of Lunette! Get your filthy [pc.hands] off of me!)]
+		的肚皮上一顿揉搓。半人马气得快冒烟了，徒劳地跺着有力的马蹄，对你发号施令，[lunexis.speech(停下！现在就停下！你不能这样对我！我是露内特承认的女儿！把你的脏[pc.hands]拿开！)]
 	</p>
 	<p>
-		Ignoring her demands, you continue rubbing, patting, and stroking her for some time, calling her a 'good horsie' now and then to cause her some additional embarrassment. Eventually, this treatment proves to be too much for Lunexis to bear, and she frantically declares, [lunexis.speech(I don't know anything! Lunette's going to attack to save me, but other than that I don't know! Now stop this! You'll pay for this! Cease!)]
+		你不搭理她的命令，继续揉搓、拍打、抚摸，还时不时唤一句“好马儿”，好增强她的受辱感。这样的对待最终让露内克西丝忍无可忍，发狂似地吼叫，[lunexis.speech(我什么都不知道！露内特会进攻这里来救我，除此之外我什么都不知道！马上停下！你会付出代价的！住手！)]
 	</p>
 	<p>
-		Sensing some sincerity in Lunexis's admission that she knows nothing, you decide to bring this treatment to an end, and so after giving her belly one last good rub, you pat her flank and [pc.step] back, wondering what to do with her next...
+		你能感觉到露内克西丝说的都是实话，她的确一无所知。你决定停止羞辱，于是最后一次摸了摸她肚皮、拍了拍马腹，随即退后并琢磨接下来要对她做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL"><![CDATA[
 	<p>
-		Thinking that the best way to try and make Lunexis talk is by getting her uncontrollably turned on, you [pc.step] up beside her and say how horny she must be after being kept in here all alone. Angrily stomping at the ground with her hoofs, she snaps, [lunexis.speech(I'll get my fill of fucking once I'm free! You're top of my list of cunts that I'm going to turn into cock-sleeves!)]
+		你觉得让露内克西丝开口的最好方式就是挑逗她，让她在性欲中丧失理智，你走到她旁边，告诉她你知道她一定积攒了很多性欲，因为她已经独自一人被关在这里很长时间。她用蹄子焦躁地拍打地面，咒骂着，[lunexis.speech(妈的，等到我自由之后，我要狠狠地大操特操！到时候，包括你在内，你们都会变成我的鸡巴套子！)]
 	</p>
 	<p>
-		Running your [pc.hand] over the flank of the angry demon's lower horse body, and causing her to let out a furious growl in the process, you wonder how best to get her aroused...
+		你的[pc.hand]抚摸着愤怒的恶魔下半身的侧翼，让她发出愤怒的咆哮，你想知道怎样才能让她兴奋起来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL_NIPPLES"><![CDATA[
 	<p>
-		Although she's been stripped of her clothing, Lunexis has been allowed to keep her jewellery, and so you find your gaze being drawn to the golden chains that dangle between her thick nipple rings. Tempted by the sight of her six, huge breasts, you approach Lunexis from the front and reach up to give her soft mounds of flesh a good grope. Letting out an angry growl, the demon uses her four arms to try and push you away from her, but the enchantment on her collar appears to be sapping her strength, for she only barely manges to weakly bat her fists against you.
+		虽然露内克西丝的衣服被扒光了，但她的首饰却被允许保留，因此你发现自己的目光被她粗大的乳环间垂下的金链吸引住了。你被她六只巨大的乳房所诱惑，从面前靠近露内克西丝，伸手在她柔软的肉丘上好好摸了一把。恶魔发出愤怒的咆哮，用她的四只手臂试图将你推开，但她项圈上的附魔似乎正在削弱她的力量，因为她只能勉强用拳头无力地击打你。
 	</p>
 	<p>
-		[lunexis.speech(What do you think you're doing?!)] she hisses through gritted teeth, [lunexis.speech(How dare you touch me in such a manner?!)]
+		[lunexis.speech(你知道自己在干什么吗？！)]她咬牙切齿道，[lunexis.speech(你怎么敢这么对我？！)]
 	</p>
 	<p>
-		Ignoring her words, you lean forwards and wrap your [pc.lips] around one of her big, dark-red nipples. Burying your face into her round breasts, you suck and lick her thick teat, before moving over to the one next to it. Instead of continuing to try and push you away, the angry demon grabs hold of you and pulls you into her, growling as she does so, [lunexis.speech(Fuck... Fine... I'll allow you to do this, but know that I'm the one in charge here, cunt!)]
+		你毫不理会，向前倾身，用[pc.lips]包住她的一个深红色的大乳头。你把脸埋进她浑圆的乳房里，吮吸并舔舐她粗大的乳头，又移到旁边的乳头上。愤怒的恶魔没有继续试图推开你，而是一把抓住你，把你拉进她的身体，一边拉一边咆哮：[lunexis.speech(操……好啊……我准许你这么做，但你要知道，我才是主导者，贱货！)]
 	</p>
 	<p>
-		By groping, kissing, and squeezing the demonic centauress's tits and nipples, you soon manage to make her let out the first of many moans. Biting her lip, she's soon breathlessly panting and begging, [lunexis.speech(Yes! Come on, give me more of that! You like my tits, huh? Show me how much you love them!)]
+		你摸索、亲吻又揉捏恶魔半人马的乳房和乳头，很快就让她呻吟出声。她咬着嘴唇，很快就气喘吁吁地哀求道：[lunexis.speech(嗯~！来呀，给我更多！你喜欢我的乳头，是吧？让我看看你有多爱它们！)]
 	</p>
 	<p>
-		Encouraged by Lunexis's words, and enjoying the fact that you've managed to reduce the angry centauress to a panting, moaning slut, you continue having your fun with her six, [lunexis.breastSize] breasts for some time, before eventually [pc.stepping] back and asking her what she knows about Lunette's plans.
+		露内克西丝的话让你备受鼓舞，你也很高兴自己成功地把这个愤怒的半人马变成了一个气喘吁吁、呻吟不止的荡妇，你继续在她的六个[lunexis.breastSize]的乳房上玩乐了一段时间，最后[pc.stepping]回来问她对露内特的计划了解多少。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL_PUSSY"><![CDATA[
 	<p>
-		Deciding to go straight for her most intimate area, you [pc.step] around behind Lunexis and take hold of her black horse tail. Lifting it up so as to expose her animalistic genitalia, you use your other [pc.hand] to playfully run your [pc.fingers] over her [lunexis.labia+]. Gasping in shock, the demon tries to step away, but the enchantment on her collar appears to be sapping her strength, for she only barely manges to weakly move her ass from side to side.
+		你决定直奔露内克西丝最私密的地方，便绕到她身后，抓住她的黑色马尾。你抬起尾巴，露出她兽态的生殖器，然后用另一只手的[pc.fingers]在她[lunexis.labia+]上逗弄。恶魔惊恐地喘息着，试图挣脱，但她项圈上的附魔似乎正在削弱她的力量，她勉强只能将屁股无力地左右扭动几下。
 	</p>
 	<p>
-		[lunexis.speech(What do you think you're doing?!)] she hisses through gritted teeth, [lunexis.speech(How dare you touch me in such a manner?!)]
+		[lunexis.speech(你知道自己在干什么吗？！)]她咬牙切齿道，[lunexis.speech(你怎么敢这么对我？！)]
 	</p>
 	<p>
-		Ignoring her words, you slide your [pc.fingers] over her clit, before starting to playfully stroke and gently rub her sensitive, horse-like button. Failing to suppress an erotic moan, Lunexis pushes her [lunexis.hips+] back against you as hot, demonic girlcum starts dripping out of her lewd equine pussy. Breathlessly panting and moaning, she begs, [lunexis.speech(Yes! Come on, give me more of that! You like my pussy, huh? Show me how much you love it!)]
+		你对此置若罔闻，[pc.fingers]滑过阴蒂，接着又嬉皮笑脸地轻轻揉搓她那敏感的豆豆。露内克西丝未能压抑住情欲的呻吟，将她[lunexis.hips+]向后推向你，滚烫的恶魔爱液开始从她淫荡的马穴滴出。她上气不接下气地呻吟着，哀求道：[lunexis.speech(嗯！来吧，给我更多！你喜欢我的小穴，嗯？让我看看你有多爱它！)]
 	</p>
 	<p>
-		Encouraged by Lunexis's words, you push your [pc.fingers] into her sopping-wet cunt and start to finger her. Enjoying the fact that you've managed to reduce the angry centauress to a quivering, moaning slut, you continue having your fun with her pussy for some time, before eventually [pc.stepping] back and asking her what she knows about Lunette's plans.
+		在露内克西丝的鼓励下，你将[pc.fingers]滑向她湿漉漉的阴户，开始指交。你享受于把愤怒的半人马变成一个颤抖呻吟的荡妇，你继续玩弄了她的小穴一段时间，最后[pc.stepping]回来问她对露内特的计划了解多少。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL_COCK"><![CDATA[
 	<p>
-		Deciding to go straight for her most intimate area, you [pc.step] up beside Lunexis and reach down to stroke and play with the thick, ebony sheath between her legs. Sliding your [pc.hand] over her hot folds of skin, you're quickly rewarded for your efforts as you feel the demon's massive horse-cock pushing out and stiffening into a giant erection. Gasping in shock, Lunexis tries to step away, but the enchantment on her collar appears to be sapping her strength, for she only barely manges to weakly move her hips against you.
+		你决定直奔露内克西丝最私密的地方，便走到她身边，伸手抚摸和玩弄她双腿间厚实的黑鞘。你的[pc.hand]在她火热的皮肤褶皱上滑动，很快便起了效果，因为你感觉到恶魔巨大的马屌挺了出来，坚硬地勃起。露内克西丝惊恐地喘息着，试图挣脱，但她项圈上的附魔似乎正在削弱她的力量，她只能勉强微弱地扭动臀部抵住你。
 	</p>
 	<p>
-		[lunexis.speech(What do you think you're doing?!)] she hisses through gritted teeth, [lunexis.speech(How dare you touch me in such a manner?!)]
+		[lunexis.speech(你知道自己在干什么吗？！)]她咬牙切齿道，[lunexis.speech(你怎么敢这么对我？！)]
 	</p>
 	<p>
 		#IF(game.isFutanariTesticlesEnabled())
-			Ignoring her words, you slide your [pc.hand] down over her two pairs of huge, heavy balls, before starting to playfully stroke and cup them.
+			你对此置若罔闻，把[pc.hand]滑向她那两对巨大而沉重的睾丸，接着又嬉皮笑脸地抚摸和包裹它们。
 		#ELSE
-			Ignoring her words, you slide your [pc.hand] up and down around her stiffening cock, before starting to playfully stroke it.
+			你对此置若罔闻，用[pc.hand]包裹着她坚挺的阴茎上下滑动，接着又嬉皮笑脸地抚摸它。
 		#ENDIF
-		 Failing to suppress an erotic moan, Lunexis bucks her [lunexis.hips+] forwards, thrusting her cock into your [pc.hand] as hot, demonic precum starts dripping out of the end of her massive, throbbing shaft. Breathlessly panting and moaning, she begs, [lunexis.speech(Yes! Come on, give me more of that! You like my cock, huh? Show me how much you love it!)]
+		露内克西丝未能压抑住情欲的呻吟，她[lunexis.hips+]向前挺动，将她的阴茎插入你的[pc.hand]，滚烫的恶魔先走液开始从她颤动的巨大阴茎尖端滴出。她上气不接下气地呻吟着，哀求道：[lunexis.speech(嗯！来吧，给我更多！你喜欢我的鸡巴，嗯？让我看看你有多爱它！)]
 	</p>
 	<p>
-		Encouraged by Lunexis's words, you tease your [pc.fingers] up to the wide, flared head of her horse-like shaft, before giving the full length of her thick, animalistic dick a few quick strokes. Enjoying the fact that you've managed to reduce the angry centauress to a quivering, moaning slut, you continue having your fun with her cock for some time, before eventually [pc.stepping] back and asking her what she knows about Lunette's plans.
+		在露内克西丝的鼓励下，你用[pc.fingers]挑逗其宽大扁平的龟头，又飞快地沿着整根粗壮的兽态屌抚弄。你享受于把愤怒的半人马变成一个颤抖呻吟的荡妇，你继续玩弄了一会她的鸡巴，最后[pc.stepping]回来问她对露内特的计划了解多少。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL_ASS"><![CDATA[
 	<p>
-		Deciding to go straight for her most intimate area, you [pc.step] around behind Lunexis and take hold of her black horse tail. Lifting it up so as to expose her animalistic genitalia, you use your other [pc.hand] to playfully run your [pc.fingers] over her puffy, horse-like asshole. Gasping in shock, the demon tries to step away, but the enchantment on her collar appears to be sapping her strength, for she only barely manges to weakly move her ass from side to side.
+		你决定直奔露内克西丝最私密的地方，便绕到她身后，抓住她的黑色马尾。你抬起尾巴，露出她兽态的生殖器，然后用另一只手的[pc.fingers]在她肿胀的马肛上逗弄。恶魔惊恐地喘息着，试图挣脱，但她项圈上的附魔似乎正在削弱她的力量，她勉强只能将屁股无力地左右扭动几下。
 	</p>
 	<p>
-		[lunexis.speech(What do you think you're doing?!)] she hisses through gritted teeth, [lunexis.speech(How dare you touch me in such a manner?!)]
+		[lunexis.speech(你知道自己在干什么吗？！)]她咬牙切齿道，[lunexis.speech(你怎么敢这么对我？！)]
 	</p>
 	<p>
-		Ignoring her words, you give her ass a quick slap, before starting to playfully stroke and gently rub her puffy, horse-like doughnut. Failing to suppress an erotic moan, Lunexis pushes her [lunexis.hips+] back against you as hot, demonic girlcum starts dripping out of her lewd equine pussy. Breathlessly panting and moaning, she begs, [lunexis.speech(Yes! Come on, give me more of that! You like my ass, huh? Show me how much you love it!)]
+		你对此置若罔闻，迅速扇了一下她的屁股，接着又嬉皮笑脸地轻轻抚摸和揉搓她那肿胀的“甜甜圈”。露内克西丝未能压抑住情欲的呻吟，将她[lunexis.hips+]向后推向你，滚烫的恶魔爱液开始从她淫荡的马穴滴出。她上气不接下气地呻吟着，哀求道：[lunexis.speech(嗯！来吧，给我更多！你喜欢我的屁股，嗯？让我看看你有多爱它！)]
 	</p>
 	<p>
-		Encouraged by Lunexis's words, you slide your [pc.hand] down to her sopping-wet cunt, and after lubricating your [pc.fingers] with her girlcum, move back up to resume playing with her hot, puffy asshole. Enjoying the fact that you've managed to reduce the angry centauress to a quivering, moaning slut, you continue having your fun with her ass for some time, before eventually [pc.stepping] back and asking her what she knows about Lunette's plans.
+		在露内克西丝的鼓励下，你将[pc.hand]滑向她湿漉漉的阴户，用她的爱液润滑了你的[pc.fingers]，又移回上面继续玩弄她火热的肉感肛门。你享受于把愤怒的半人马变成一个颤抖呻吟的荡妇，你继续玩弄她的屁眼一段时间，最后[pc.stepping]回来问她对露内特的计划了解多少。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL_LEAVE"><![CDATA[
 	<p>
-		Deciding that you don't want to try anything sexual with Lunexis after all, you turn away from her and [pc.walk] out of the tent to the sounds of angry curses and threats. The moment that you [pc.step] over the entrance's boundary, Lunexis's loud, obnoxious shouting is completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		你决定不再与露内克西丝发生做爱，于是转身离开她，在愤怒的咒骂和威胁声中走出帐篷。你跨过入口的边界，露内克西丝的大声、令人讨厌的叫喊声完全消失了。透过打开的挡板往后看，你会发现她的嘴唇还在动，但帐篷的附魔阻止了任何声音从内部传出。
 	</p>
 	<p>
-		Crossing the small, grassy compound, you pass back through Ursa's tent, where the queen is still busy with the group of senior Amazons, and head back out into the camp. Looking around, you wonder to go to next...
+		穿过长满青草的小院，你进入了乌萨的帐篷，女王还在和一群年长的亚马逊人忙碌着，然后你又回到了营地。你环顾四周，思索接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL_END"><![CDATA[
 	<p>
-		Desperately turned on, the centauress quickly responds by moaning, [lunexis.speech(I don't know anything, you dumb cunt! Why did you stop?! Come on, you started this, so finish it, you coward! Fuck me!)]
+		半人马被刺激得欲火焚身，很快就发出了呻吟声，[lunexis.speech(我什么都不知道，你个蠢货婊子！你为什么停下来？！快点，是你先开始挑逗我的，你得负责，你个胆小鬼！快操我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SEXUAL_END_LEAVE"><![CDATA[
 	<p>
-		Hearing the sincerity in Lunexis's voice, you realise that she really must not know anything about her mother's plans. With your work here finished, you turn away from the centauress and [pc.walk] out of the tent to the sounds of frustrated moans and curses. The moment that you [pc.step] over the entrance's boundary, Lunexis's lewd noises are completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		听着露内克西丝真诚的声音，你意识到她一定对母亲的计划一无所知。你完成了这里的工作，转身离开半人马，在沮丧的呻吟声和咒骂声中走出帐篷。你跨过入口的结界，露内克西丝的嘈杂声被完全压制住了。透过打开的挡板往后看，你发现她的嘴唇还在动，但帐篷的附魔阻止了任何声音从内部传出。
 	</p>
 	<p>
-		Crossing the small, grassy compound, you pass back through Ursa's tent, where the queen is still busy with the group of senior Amazons, and head back out into the camp. Looking around, you wonder to go to next...
+		穿过长满青草的小院，你进入了乌萨的帐篷，女王还在和一群年长的亚马逊人忙碌着，然后你又回到了营地。你环顾四周，思索接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_DOMINANT_SEX"><![CDATA[
 	<p>
-		Feeling more than a little aroused yourself, you decide to give Lunexis what she wants. [pc.Stepping] up to the demonic centauress, you run your [pc.hand] over her flank, causing her to let out a deep moan and impatiently snap, [lunexis.speech(No more foreplay! Let's fuck already!)]
+		你觉得自己也有点兴奋了，于是决定让露内克西丝如愿以偿。你走到恶魔半人马面前，用[pc.hand]抚摸她的侧腹，引得她发出低沉的呻吟，她不耐烦地喝道：[lunexis.speech(不要再做前戏了！赶快开始做爱！)]
 	</p>
 	<p>
-		Pleased to hear how eager she is for it, you move to start fucking the angry demon...
+		听到她如此渴望，你很高兴，便开始操这个愤怒的恶魔……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_DOMINANT_SEX_PUSSY_ORAL"><![CDATA[
 	<p>
-		Feeling turned on and wanting to get a taste of Lunexis's pussy, you decide to give the demon what she wants. [pc.Stepping] around behind her, you grin as she flicks her tail to one side to expose her [lunexis.pussy+]. Sliding your [pc.fingers+] over her dripping-wet horse-cunt, you cause the centauress to let out a deep moan and impatiently snap, [lunexis.speech(No more teasing! Fuck my cunt already!)]
+		你觉得很兴奋，想尝尝露内克西丝小穴的滋味，于是决定让这个恶魔如愿以偿。你绕到她身后，露内克西丝把尾巴甩到一边，露出[lunexis.pussy+]。你咧嘴一笑，[pc.fingers+]滑过她滴水的马穴，让半人马发出低沉的呻吟，她不耐烦地喝道：[lunexis.speech(别再挑逗我了！赶快操我的逼！)]
 	</p>
 	<p>
-		Giving her what she wants, you move forwards and plant a passionate kiss on her [lunexis.labia+], before burying your face in her pussy, thrusting your tongue into her wet horse-cunt, and starting to greedily eat her out...
+		你如她所愿，前进到她[lunexis.labia+]上留下几个热情的吻，然后把脸埋在她的小穴间，把舌头伸进她湿漉漉的马穴，贪婪地将其吃干抹净……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_DOMINANT_SEX_PUSSY"><![CDATA[
 	<p>
-		Feeling turned on and wanting to fuck Lunexis's pussy, you decide to give the demon what she wants. [pc.Stepping] around behind her, you grin as she flicks her tail to one side to expose her [lunexis.pussy+]. Sliding your [pc.fingers+] over her dripping-wet horse-cunt, you cause the centauress to let out a deep moan and impatiently snap, [lunexis.speech(No more teasing! Fuck my cunt already!)]
+		你觉得很兴奋，想操露内克西丝的小穴，于是决定让这个恶魔如愿以偿。你绕到她身后，露内克西丝把尾巴甩到一边，露出[lunexis.pussy+]。你咧嘴一笑，[pc.fingers+]滑过她滴水的马穴，让半人马发出低沉的呻吟，她不耐烦地喝道：[lunexis.speech(别再挑逗我了！赶快操我的逼！)]
 	</p>
 	<p>
-		More than happy to do as she says, you
+		你欣然照做，
 		#IF(pc.isTaur())
-			 rear up and mount the centauress, and as you feel your rapidly-hardening cock prodding at her [lunexis.labia+], you tell her that you're going to make her your mare.
+			你骑上半人马， 感觉到自己迅速勃起的阴茎在她[lunexis.labia+]上捅来捅去，你告诉她，你要让她成为你的母马。
 		#ELSE
-			 move right up behind the centauress, and as you push your rapidly-hardening cock against her [lunexis.labia+], you tell her that you're going to make her your mare.
+			你移到半人马身后，一边用你快速勃起的鸡巴顶着她[lunexis.labia+]，一边告诉她，你要让她成为你的母马。
 		#ENDIF
-		 Letting out an impatient moan, Lunexis begs, [lunexis.speech(Yes! Give it to me!)]
+		露内克西丝急不可耐地呻吟着，乞求道：[lunexis.speech(是！把它给我！)]
 	</p>
 	<p>
-		Encouraged by her words, you thrust forwards, sinking your [pc.cock+] into the demon's dripping horse-cunt and causing her to let out an exceptionally lewd squeal. Pulling back, you thrust forwards once again, letting out [pc.a_moan] of your own as you start to eagerly fuck Lunexis...
+		在她的鼓励下，你向前一挺，将[pc.cock+]插入了恶魔的滴水马穴，引得她发出一声异常淫荡的浪叫。你抽出后再次向前挺进，一边发出[pc.a_moan]，一边饥渴地干露内克西丝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_DOMINANT_SEX_ASS_ORAL"><![CDATA[
 	<p>
-		Feeling turned on and wanting to get a taste of Lunexis's ass, you decide to give the demon what she wants. [pc.Stepping] around behind her, you grin as she flicks her tail to one side to expose her [lunexis.asshole+]. Sliding your [pc.fingers+] over her puffy doughnut, you cause the centauress to let out a deep moan and impatiently snap, [lunexis.speech(No more teasing! Fuck my ass already!)]
+		你觉得很兴奋，想尝尝露内克西丝屁股的滋味，于是决定让这个恶魔如愿以偿。你绕到她身后，露内克西丝把尾巴甩到一边，露出[lunexis.asshole+]。你咧嘴一笑，[pc.fingers+]滑过她肿胀的肉感“甜甜圈”，让半人马发出低沉的呻吟，并不耐烦地喝道：[lunexis.speech(别再挑逗我了！赶快操我的屁股！)]
 	</p>
 	<p>
-		Giving her what she wants, you move forwards and plant several passionate kisses on her [lunexis.ass+], before burying your face between her cheeks and thrusting your tongue into her asshole.
+		你如她所愿，前进到她[lunexis.ass+]上留下几个热情的吻，然后把脸埋在她的臀颊之间，把舌头伸进她的屁眼里。
 		#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-			 Thanks to your training as one of Natalya's [style.mules], your skills quickly cause the centauress to let out a series of incredibly lewd moans, before panting, [lunexis.speech(Fuck... ~Mmm!~ Oh, fuck! You're so good at this! Oh yeah... Tongue my asshole, you dirty slut!)]
+			得益于娜塔莉亚的[style.mules]训练，你的技巧似乎取悦了半人马，她无比淫荡地连连呻吟，喘息道：[lunexis.speech(操……~唔嗯！~你真擅长这个！嗯啊……你个肮脏荡妇，用舌头伺候我的肛门！)]
 		#ELSE
-			 Letting out a desperate moan, she demands, [lunexis.speech(Oh yeah, keep going! Tongue my asshole, you dirty slut!)]
+			露内克西丝迷乱地呻吟着，命令道：[lunexis.speech(嗯啊，继续！你个肮脏荡妇，用舌头伺候我的肛门！)]
 		#ENDIF
 	</p>
 	<p>
-		More than happy to do as she says, you continue giving Lunexis a rimjob...
+		你自然是恭敬不如从命，便继续给露内克西丝舔肛……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_DOMINANT_SEX_ASS"><![CDATA[
 	<p>
-		Feeling turned on and wanting to fuck Lunexis's ass, you decide to give the demon what she wants. [pc.Stepping] around behind her, you grin as she flicks her tail to one side to expose her [lunexis.asshole+]. Sliding your [pc.fingers+] over her puffy doughnut, you cause the centauress to let out a deep moan and impatiently snap, [lunexis.speech(No more teasing! Fuck my ass already!)]
+		你觉得很兴奋，想操露内克西丝的屁股，于是决定让这个恶魔如愿以偿。你绕到她身后，露内克西丝把尾巴甩到一边，露出[lunexis.asshole+]。你咧嘴一笑，[pc.fingers+]滑过她肿胀的肉感“甜甜圈”，让半人马发出低沉的呻吟，她不耐烦地喝道：[lunexis.speech(别再挑逗我了！赶快操我的屁股！)]
 	</p>
 	<p>
-		More than happy to do as she says, you
+		你欣然照做，
 		#IF(pc.isTaur())
-			 rear up and mount the centauress, and as you feel your rapidly-hardening cock prodding at her [lunexis.asshole+], you tell her that you're going to make her your mare.
+			你骑上半人马， 感觉到自己迅速勃起的阴茎在她[lunexis.asshole+]上捅来捅去，你告诉她，你要让她成为你的母马。
 		#ELSE
-			 move right up behind the centauress, and as you push your rapidly-hardening cock against her [lunexis.asshole+], you tell her that you're going to make her your mare.
+			你移到半人马身后，一边用你快速勃起的鸡巴顶着她[lunexis.asshole+]，一边告诉她，你要让她成为你的母马。
 		#ENDIF
-		 Letting out an impatient moan, Lunexis begs, [lunexis.speech(Yes! Give it to me!)]
+		露内克西丝急不可耐地呻吟着，乞求道：[lunexis.speech(是！把它给我！)]
 	</p>
 	<p>
-		Encouraged by her words, you thrust forwards, sinking your [pc.cock+] into the demon's puffy asshole and causing her to let out an exceptionally lewd squeal. Pulling back, you thrust forwards once again, letting out [pc.a_moan] of your own as you start to eagerly fuck Lunexis...
+		在她的鼓励下，你向前一挺，将[pc.cock+]插入了恶魔的肉感菊穴，引得她发出一声异常淫荡的浪叫。你抽出后再次向前挺进，一边发出[pc.a_moan]，一边饥渴地干露内克西丝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMISSIVE_SEX"><![CDATA[
 	<p>
-		Feeling more than a little aroused yourself, and wanting nothing more than to be put in your place by such a strong, dominant demon, you decide to give Lunexis what she wants. [pc.Stepping] up to her, you submissively state that you're willing to let her dominate you.
+		你觉得自己已经有点兴奋起来了，此时你只想被这样一个强壮、霸道的恶魔征服，于是你决定满足露内克西丝的要求，走到她面前，表明自己同意被她支配。
 	</p>
 	<p>
-		[lunexis.speech(Of course you are, you pathetic cunt!)] Lunexis triumphantly growls. Immediately seizing upon your display of weakness, she grabs hold of you and pulls you into her six breasts. With an evil smirk on her face, she growls, [lunexis.speech(I'm going to put you in your place, bitch!)]
+		[lunexis.speech(你当然愿意，你这下贱肮脏的小骚货！)]露内克西丝得意洋洋地大吼，她迅速抓住你服软的机会，把你拉到她那六对乳房之间。她露出得意的坏笑，大声喊，[lunexis.speech(我要让你明白自己的地位，贱婊子！)]
 	</p>
 	<p>
-		Madly turned on by her dominant behaviour, you willingly submit to Lunexis and allow her to fuck you any way she wants...
+		露内克西丝粗暴的举动彻底征服了你，你很快便因此欲火焚身，心甘情愿地臣服于她，允许她以任何方式随心所欲地操你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMISSIVE_SEX_BLOWJOB"><![CDATA[
 	<p>
-		Feeling more than a little aroused yourself, and wanting nothing more than to be put in your place by such a strong, dominant demon, you decide to give Lunexis what she wants. Dropping down beside her, you submissively lean forwards and plant a kiss on her thick, ebony sheath, before stating that you're willing to let her fuck your face.
+		你觉得自己已经有点兴奋起来了，此时你只想被这样一个强壮、霸道的恶魔征服，于是你决定满足露内克西丝的要求，在她面前俯下身，顺从地靠向她的下体，在她深黑色的鸡巴鞘上留下一吻，然后表示你愿意让她尽情地操你的口穴。
 	</p>
 	<p>
-		[lunexis.speech(Hah! Can't resist the sight of my cock, huh?!)] Lunexis triumphantly growls. Immediately seizing upon your display of weakness, she steps forwards and shoves her rapidly-hardening cock into your face. As her massive horse-cock rises to attention, she growls, [lunexis.speech(I'm going to put you in your place, bitch! Now open wide!)]
+		[lunexis.speech(哈！一想到我的鸡巴，你就忍不住发情了，哈啊？！)]露内克西丝胜利地咆哮着。在你表现出服软的迹象之后，她抓住机会上前一步，然后将她那很快勃起的巨根插进你的口腔。当她硕大的马鸡巴勃起时，她发出了咆哮，[lunexis.speech(我要让你明白自己的地位，你这下贱婊子！嘴张大点！)]
 	</p>
 	<p>
-		Madly turned on by her dominant behaviour, you willingly submit to Lunexis and part your [pc.lips+]. Not wasting a single moment, the demonic centauress thrusts her hips forwards, ramming her hot, fat cock down your throat in the process. Letting out a deep, satisfied grunt, she starts forcefully pistoning her hips back and forth as she roughly fucks your face...
+		露内克西丝放肆的行径使你迅速躁动起来，你心甘情愿地屈服，在她面前分开你[pc.lips+]。恶魔半人马毫不犹豫地向前顶胯，将她炽热的粗壮鸡巴深深插进你的喉咙里。她发出满足的低吟声，激烈地摆动胯部做活塞运动，毫不留情地享受着你的深喉口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMISSIVE_SEX_PUSSY"><![CDATA[
 	<p>
-		Feeling more than a little aroused yourself, and wanting nothing more than to be put in your place by such a strong, dominant demon, you decide to give Lunexis what she wants. Dropping down in front of her, you submissively expose your pussy, before stating that you're willing to let her fuck your cunt as hard and for as long as she wants.
+		你觉得自己已经有点兴奋起来了，此时你只想被这样一个强壮、霸道的恶魔征服，于是你决定满足露内克西丝的要求，在她面前俯下身子，顺从地暴露出自己的小穴，然后表示你愿意让她尽情地操你的淫穴，想操多久就操多久。
 	</p>
 	<p>
-		[lunexis.speech(Hah! Can't resist the thought of my cock being rammed deep into your slutty cunt, huh?!)] Lunexis triumphantly growls. Immediately seizing upon your display of weakness, she steps forwards and mounts you, before shoving the wide, flared head of her rapidly-hardening cock up against your [pc.labia+]. As her massive horse-cock rises to attention, she growls, [lunexis.speech(I'm going to put you in your place, bitch!)]
+		[lunexis.speech(哈！一想到我的鸡巴狠狠撞进你那骚穴的样子，你就忍不住了，哈啊？！)]露内克西丝胜利地咆哮着。在你表现出服软的迹象之后，她抓住机会上前一步骑在你身上，然后将她那很快勃起的膨大鸡巴头对准你[pc.labia+]。当她硕大的马鸡巴勃起时，她发出了咆哮，[lunexis.speech(我要让你明白自己的地位，你这下贱婊子！)]
 	</p>
 	<p>
-		Madly turned on by her dominant behaviour, you willingly submit to Lunexis and lift your [pc.hips+] for her. Not wasting a single moment, the demonic centauress thrusts her hips forwards, ramming her hot, fat cock deep into your [pc.pussy+] in the process. Letting out a deep, satisfied grunt, she starts forcefully pistoning her hips back and forth as she roughly fucks your cunt...
+		露内克西丝放肆的行径使你迅速躁动起来，你心甘情愿地屈服，向她撅起你[pc.hips+]。恶魔半人马毫不犹豫地向前顶胯，将她炽热的粗壮鸡巴深深插进你[pc.pussy+]里。她发出满足的低吟声，激烈地摆动胯部做活塞运动，毫不留情地操你的淫穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMISSIVE_SEX_ASS"><![CDATA[
 	<p>
-		Feeling more than a little aroused yourself, and wanting nothing more than to be put in your place by such a strong, dominant demon, you decide to give Lunexis what she wants. Dropping down in front of her, you submissively expose your ass, before stating that you're willing to let her fuck your butt as hard and for as long as she wants.
+		你觉得自己已经有点兴奋起来了，此时你只想被这样一个强壮、霸道的恶魔征服，于是你决定满足露内克西丝的要求，在她面前俯下身子，顺从地暴露出自己的屁股，然后表示你愿意让她尽情地操你的屁股，想操多久就操多久。
 	</p>
 	<p>
-		[lunexis.speech(Hah! Can't resist the thought of my cock being rammed deep into your slutty asshole, huh?!)] Lunexis triumphantly growls. Immediately seizing upon your display of weakness, she steps forwards and mounts you, before shoving the wide, flared head of her rapidly-hardening cock up against your [pc.asshole+]. As her massive horse-cock rises to attention, she growls, [lunexis.speech(I'm going to put you in your place, bitch!)]
+		[lunexis.speech(哈！一想到我的鸡巴狠狠撞进你那婊子屁眼的样子，你就忍不住了，哈啊？！)]露内克西丝胜利地咆哮着。在你表现出服软的迹象之后，她抓住机会上前一步骑在你身上，然后将她那很快勃起的膨大鸡巴头对准你[pc.asshole+]。当她硕大的马鸡巴勃起时，她发出了咆哮，[lunexis.speech(我要让你明白自己的地位，你这下贱婊子！)]
 	</p>
 	<p>
-		Madly turned on by her dominant behaviour, you willingly submit to Lunexis and lift your [pc.hips+] for her. Not wasting a single moment, the demonic centauress thrusts her hips forwards, ramming her hot, fat cock deep into your [pc.asshole+] in the process. Letting out a deep, satisfied grunt, she starts forcefully pistoning her hips back and forth as she roughly fucks your ass...
+		露内克西丝放肆的行径使你迅速躁动起来，你心甘情愿地屈服，向她撅起你[pc.hips+]。恶魔半人马毫不犹豫地向前顶胯，将她炽热的粗壮鸡巴深深插进你[pc.asshole+]里。她发出满足的低吟声，激烈地摆动胯部做活塞运动，毫不留情地操你的屁股……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX"><![CDATA[
 	<p>
-		Having had your fun, you tell Lunexis that you've had enough before [pc.stepping] away from her and moving to get your things back in order.
+		你告诉露内克西丝你已经玩够了，然后离开她，去收拾你的东西。
 	</p>
 	<p>
 		#IF(lunexis.isSatisfiedFromLastSex())
-			[lunexis.speech(Fuck you...)] the centauress pants, but despite her hostile words you can tell from the tone in her voice that you've thoroughly satisfied her. To confirm this, as you finish getting yourself sorted out, she snaps, [lunexis.speech(You'd better come back and do this with me again, or else!)]
+			[lunexis.speech(我操……)]尽管露内克西丝言辞不善，但你还是能从她的语气中听出，你已经彻底满足了她。像是证实这一点，当你整理好东西时，她冷声道，[lunexis.speech(你最好回来再和我做一次，不然的话！)]
 		#ELSE
-			[lunexis.speech(You couldn't even satisfy me, you worthless cunt...)] the centauress pants. Despite her words, she soon betrays her desire for another round of this, for as you finish getting yourself sorted out, she snaps, [lunexis.speech(You'd better come back again and do it properly next time, or else!)]
+			[lunexis.speech(连满足我都做不到，真是一文不值的臭逼……)]露内克西丝喘息道。尽管她嘴上这么说，但很快就暴露了她想再来一轮的愿望，因为当你整理好东西后，她冷声道，[lunexis.speech(你最好下次再来好好做，不然的话！)]
 		#ENDIF
 	</p>
 	<p>
-		Smirking at her demand, you head over towards the tent's exit and prepare to take your leave...
+		你对她的命令报以坏笑，然后朝帐篷出口走去，准备离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Leaving Lunexis panting and moaning, you turn away from the centauress and [pc.walk] out of the tent. The moment that you [pc.step] over the entrance's boundary, Lunexis's lewd noises are completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		你转身离开气喘吁吁、呻吟不止的露内克西丝，[pc.step]出了帐篷。你[pc.step]过入口的结界时，露内克西丝淫荡的声音完全消失了。透过打开的门帘回头看，你发现她的嘴唇还在动，但帐篷的附魔隔绝了从内部传出的任何声音。
 	</p>
 	<p>
-		Happy to know that the guards have heard nothing of what happened within, you cross the small, grassy compound and enter Ursa's tent once again. The queen is still busy with the group of senior Amazons, and so you're able to head back out into the camp without being stalled. Looking around, you wonder to go to next...
+		你很高兴守卫们对里面发生的事情一无所知，穿过长满草的小院，再次进入乌萨的帐篷。女王还在忙着和那群亚马逊人长老打交道，所以你回营地不会受到阻拦。你环顾四周，想着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_SUBMITTED"><![CDATA[
 	<p>
-		Having had her fun, Lunexis lets out a satisfied grunt, before kicking you away from her and growling, [lunexis.speech(That's enough, slut!)]
+		玩够了之后，露内克西丝发出一声满足的咕哝，然后一脚把你踢开，并发出一声咆哮，[lunexis.speech(够了，骚货！)]
 	</p>
 	#IF(game.isBadEndsEnabled())
 		<p>
-			Before you can recover from this brutal treatment, the centauress steps over the top of you and shoves her semi-hard cock into your face. Letting out another deep grunt, she commands,
+			不等你从这残酷的待遇中恢复，半人马就走到你的身上，把她半硬的鸡巴甩到你的脸上。她又发出一声低沉的哼声，命令道：
 			#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-				 [lunexis.speech(Clean me off with your tongue, bitch! I need to think about what to do with you...)]
+				[lunexis.speech(用你的舌头给我舔干净，婊子！我得想想怎么处置你……)]
 			#ELSE
-				 [lunexis.speech(Jerk me off, bitch! I need to think about what to do with you...)]
+				[lunexis.speech(给我打飞机，婊子！我得想想怎么处置你……)]
 			#ENDIF
 		</p>
 		<p>
-			Slapping her huge, flaccid cock against your face, the centauress makes it clear that she expects you to obey. You could always do as she commands, or stand up and tell her that you've had enough... 
+			半人马用她疲软的鸡巴拍打你的脸，表示她希望你服从。你可以听从她的命令，或者站起来告诉她你已经受够了……
 		</p>
 	#ELSE
 		<p>
-			Flashing you a triumphant sneer, she commands, [lunexis.speech(Get out of my sight! Oh, and come back again later; I'll need to empty my balls again soon.)]
+			她发出得意洋洋的嘲笑声，命令道：[lunexis.speech(滚出去。哦，等下记得回来，我很快又会想清空蛋蛋。)]
 		</p>
 		<p>
-			Submissively hurrying to obey, you gather your things and head over towards the tent's exit...
+			你赶紧顺从地服从命令，收拾好东西，朝帐篷外[pc.step]去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_SUBMITTED_LEAVE"><![CDATA[
 	#IF(game.isBadEndsEnabled())
 		<p>
-			Ignoring Lunexis's order, and the curses and shouts which she starts to make as you turn away from her, you [pc.walk] out of the tent. The moment that you [pc.step] over the entrance's boundary, Lunexis's screams and bellows are completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+			你无视露内克西丝的命令和她在你离开时的咒骂和叫喊，[pc.step]出了帐篷。你[pc.step]过入口的结界，露内克西丝的叫喊声和呼吸声完全消失了。你透过打开的门帘回头看，发现她的嘴唇还在动，但帐篷的附魔隔绝了从内部传出的任何声音。
 		</p>
 	#ELSE
 		<p>
-			Having helped Lunexis get some satisfaction, you turn away from the panting centauress and [pc.walk] out of the tent. The moment that you [pc.step] over the entrance's boundary, Lunexis's lewd noises are completely silenced. Looking back through the open flap, you see that she's moving about, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+			你稍微满足了露内克西丝后，便转身离开了气喘吁吁的半人马，[pc.step]出了帐篷。你[pc.step]过入口的结界时，露内克西丝淫荡的声音完全消失了。透过打开的门帘，你发现她正在走动，但帐篷的附魔隔绝了从内部传出的任何声音。
 		</p>
 	#ENDIF
 	<p>
-		Happy to know that the guards have heard nothing of what happened within, you cross the small, grassy compound and enter Ursa's tent once again. The queen is still busy with the group of senior Amazons, and so you're able to head back out into the camp without being stalled. Looking around, you wonder to go to next...
+		你很高兴守卫们对里面发生的事情一无所知，穿过长满草的小院，再次进入乌萨的帐篷。女王还在忙着和那群亚马逊人长老打交道，所以你回营地不会受到阻拦。你环顾四周，想着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_SUBMITTED_OBEYED"><![CDATA[
 	<p>
-		Doing as you're told once more, you 
+		你再一次服从命令， 
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 lean forwards and part your [pc.lips], before eagerly starting to lick the centauress's massive, flaccid horse-cock clean.
+			向前倾身，张开你的[pc.lips]然后迫不及待地开始把人马巨大而疲软的马鸡巴舔干净。
 		#ELSE
-			 lean forwards and take hold of the centauress's massive, flaccid horse-cock, before starting to stroke it and get it hard once again.
+			向前倾身，握住人马疲软的大鸡巴，然后开始撸动它，让它再次坚挺起来。
 		#ENDIF
-		 Grunting and letting out short, deep moans, Lunexis starts playing with her nipples as she ponders out loud, [lunexis.speech(What to do with you... Keep you as my fuck toy until I'm set free? Hmm... Or perhaps something more...)]
+		露内克西丝发出短促而低沉的呻吟声，她开始一边玩弄自己的乳头，一边大声说出想着的事，[lunexis.speech(我该怎么处置你…把你当成我的性玩具直到我重获自由？嗯……或者做更多……)]
 	</p>
 	<p>
-		After a few of minutes of this,
+		就这样过了几分钟，
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 during which time you've moved on to start giving the demonic centauress a full-on blowjob,
+			你已经开始给恶魔人马热情地口交了，
 		#ELSE
-			 during which time you've managed to get her cock rock-hard once again,
+			你成功地让她的鸡巴再次坚硬如石，
 		#ENDIF
-		 Lunexis suddenly lets out a decisive grunt, before declaring, [lunexis.speech(I've decided what to do with you! You seem like a good, obedient bitch, so I'll take you as one of my personal cock-sleeves. Now surrender yourself fully to me and pledge to forever be my loyal slave!)]
+		露内克西丝突然干脆地哼了一声，然后宣布，[lunexis.speech(我决定该怎么处置你了！你看起来是个听话的好婊子，我要把你收为我的私人鸡巴套之一。现在把献上你的身心并保证永远做我忠诚的奴隶！)]
 	</p>
 	<p>
-		Roughly thrusting her throbbing horse-cock into your face and letting out an annoyed grunt, the centauress makes it clear that she's not going to patiently await your answer. You'd better respond quickly if you wanted to avoid angering her...
+		半人马粗暴地将她跳动的马鸡巴顶到你的脸上，发出恼怒的哼声，很明显，她不会耐心等待你的回答。如果你不想激怒她，最好快点做出反应……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_SUBMITTED_OBEYED_LEAVE"><![CDATA[
 	<p>
-		Deciding that this has gone far enough, you flatly refuse to obey Lunexis's order, and ignore her wild curses and yells as you stand up and [pc.walk] out of the tent. The moment that you [pc.step] over the entrance's boundary, Lunexis's screams and bellows are completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		你认为这已经够过分了，于是断然拒绝服从露内克西丝的命令，也不理会她的疯狂咒骂和吼叫，站起身[pc.walk]出了帐篷。你[pc.step]跨过入口的结界时，露内克西丝的叫喊声和呼吸声完全沉寂了。透过打开的门帘，你发现她的嘴唇还在动，但帐篷的附魔隔绝了从内部传出的任何声音。
 	</p>
 	<p>
-		Happy to know that the guards have heard nothing of what happened within, you cross the small, grassy compound and enter Ursa's tent once again. The queen is still busy with the group of senior Amazons, and so you're able to head back out into the camp without being stalled. Looking around, you wonder to go to next...
+		你很高兴守卫们对里面发生的事情一无所知，穿过长满草的小院，再次进入乌萨的帐篷。女王还在忙着和那群亚马逊人长老打交道，所以你回营地不会受到阻拦。你环顾四周，想着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_SUBMITTED_OBEYED_SURRENDER"><![CDATA[
 	#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
 		<p>
-			Unable to resist, you plant a big, wet kiss on the flared head of Lunexis's cock, before completely surrendering to her and promising to always act as her good, obedient slave. Letting out a triumphant laugh as she hears this, your new Mistress commands, [lunexis.speech(Take my cock deep down your throat! You'd better start acting like a good cock-sleeve, or else I'll have to discipline you!)]
+			你无法抗拒，完全臣服于她并承诺永远做她听话的好奴隶，你在露内克西丝的龟头上留下了吻痕。听到这里，你的新主人洋洋得意地笑着并下令，[lunexis.speech(把我的鸡巴塞进你的喉咙！你最好表现得像个好鸡巴套，否则我就要惩罚你了！)]
 		</p>
 		<p>
-			Hurrying to obey, you open wide and push your head forwards, forcing your Mistress's massive, throbbing cock deep down your throat. Grunting in amusement, she taunts, [lunexis.speech(How pathetic you are! ~Mmm!~ Keep it deep down your throat like the dumb cock-sleeve you are and listen to my plan!)]
+			你努力顺从，张大嘴巴，把头往前顶，把主人巨大、跳动着的阴茎深深地塞进喉咙。主人愉悦地哼哼着，嘲弄道，[lunexis.speech(你真可悲！~嗯！~像个愚蠢的鸡巴套一样把它塞进你的喉咙里，并听我的计划！)]
 		</p>
 	#ELSE
 		<p>
-			Unable to resist, you lovingly stroke Lunexis's thick cock as you completely surrender to her and promise to always act as her good, obedient slave. Letting out a triumphant laugh as she hears this, your new Mistress commands, [lunexis.speech(Keep stroking my cock! You'd better start acting like a good cock-sleeve, or else I'll have to discipline you!)]
+			你无法抗拒，满怀爱意地撸动着露内克西丝粗大的阴茎，承诺完全臣服于她，永远做她听话的好奴隶。听到这里，你的新主人得意地笑着命令，[lunexis.speech(继续撸我的鸡巴！你最好做个好鸡巴套，不然我就要惩罚你了！)]
 		</p>
 		<p>
-			Hurrying to obey, you step up the pace and start eagerly running your [pc.hands] up and down the considerable length of your Mistress's massive, throbbing cock. Grunting in amusement, she taunts, [lunexis.speech(How pathetic you are! ~Mmm!~ Keep it up, you dumb cock-sleeve, and listen to my plan!)]
+			你赶紧顺从，加快动作，迫不及待地用[pc.hands]上下套弄主人硕大、跳动的阴茎。她愉悦地哼哼并嘲弄你，[lunexis.speech(你真可悲！~嗯！~继续撸，你这个愚蠢的鸡巴套，并听我的计划！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_SUBMITTED_OBEYED_SURRENDER_END"><![CDATA[
 	#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
 		<p>
-			Once more obeying your Mistress, you continue to keep her massive, animalistic shaft hilted deep down your throat as she prepares to reveal her plan. After letting out a lewd moan, she explains, [lunexis.speech(You're going to set me free, and what's more, you're going to help me get my revenge on that daughter of Lyssieth who teleported us into Minotallys's office. You're going to trick her into setting me free and teleporting the three of us back to Themiscyra. I don't care how you do it, just get that
+			你再一次服从主人。她准备揭示自己的复仇计划。你继续让她巨大的兽态阴茎深深地插入喉咙。她发出一声淫荡的呻吟，开始解释，[lunexis.speech(你要帮我重获自由，更重要的是，你要帮我向那个把我们传送到米诺塔莉丝办公室的莉西丝女儿复仇。你要骗她放了我，然后把我们三个传送回特弥斯库拉。我不管你用什么方法，只要让那个
 			#IF(meraxis.getRaceStage()!=RACE_STAGE_GREATER)
-				 imp-breeder bitch
+				生小恶魔的婊子
 			#ELSE
-				 dumb whore
+				愚蠢妓女
 			#ENDIF
-			 to teleport us there, and my army will deal with the rest!)]
+			把我们传送过去就行，剩下的就交给我的军队！)]
 		</p>
 		<p>
-			Excited at the prospect of being set free and getting her revenge on Meraxis, your Mistress roughly thrusts her hips forwards several times, ramming her fat cock deep down your throat in the process. Managing to reach her climax from the feeling of fucking your face, she quickly orders, [lunexis.speech(Take it on your face, you dumb cock-sleeve cunt!)]
+			获得自由并向梅拉克西丝复仇的想法让你的主人兴奋不已，她粗暴地挺腰，将她那肥大的阴茎深深地插入你的喉咙。在操你的脸时，她达到了高潮，她很快命令道，[lunexis.speech(用你的脸接受吧，你这个傻屄鸡巴套！)]
 		</p>
 		<p>
-			Hurrying to obey, you allow your Mistress's shaft to slide fully out of your throat, before grabbing hold of it and pointing it at your face. A second later, and a huge jet of thick, slimy cum shoots out all over you. Passionately moaning as she gives you a facial, your Mistress teases, [lunexis.speech(~Aah!~ Serve me well, slut, and there'll be plenty more of this sort of treatment for you once you've helped me escape! ~Mmm!~ I'll take you as one of my personal cock-sleeves as your reward!)]
+			你赶紧服从，让主人的阴茎从你的喉咙完全抽出，然后抓住阴茎对准你的脸。一秒钟后，一股巨量的粘稠精液喷射而出，射得你满脸都是。主人一边给你颜射，一边激情地呻吟着，取笑着你，[lunexis.speech(~啊！~好好伺候我，荡妇，等你帮我逃出生天，我还会给你更多这样的待遇！~嗯！~我会把你当做我的私人鸡巴套，作为对你的奖励！)]
 		</p>
 		<p>
-			Spurting out one last load of demonic cum, the centauress's cock starts to soften, and as she steps away from you, she grins down at the mess she's made of your face and demands, [lunexis.speech(Tell me that you'll obey!)]
+			半人马把恶魔精液射了个干净，阴茎软下来。她从你身边走开，低头看着你一塌糊涂的脸，笑道，[lunexis.speech(向我宣誓服从吧！)]
 		</p>
 	#ELSE
 		<p>
-			Once more obeying your Mistress, you continue to stroke her massive, animalistic shaft as she prepares to reveal her plan. After letting out a lewd moan, she explains, [lunexis.speech(You're going to set me free, and what's more, you're going to help me get my revenge on that daughter of Lyssieth who teleported us into Minotallys's office. You're going to trick her into setting me free and teleporting the three of us back to Themiscyra. I don't care how you do it, just get that
+			你再一次服从主人，继续抚摸她那巨大的兽态阴茎，她正准备透露她的计划。在发出一声淫荡的呻吟后，她解释着，[lunexis.speech(你要帮我重获自由，更重要的是，你要帮我向那个把我们传送到米诺塔莉丝办公室的莉西丝女儿复仇。你要骗她放了我。然后把我们三个传送回特弥斯库拉 我不管你用什么方法，只要让那个
 			#IF(meraxis.getRaceStage()!=RACE_STAGE_GREATER)
-				 imp-breeder bitch
+				生小恶魔的婊子
 			#ELSE
-				 dumb whore
+				愚蠢妓女
 			#ENDIF
-			 to teleport us there, and my army will deal with the rest!)]
+			把我们传送过去就行，剩下的就交给我的军队！)]
 		</p>
 		<p>
-			Excited at the prospect of being set free and getting her revenge on Meraxis, your Mistress roughly thrusts her hips forwards several times, ramming her fat cock up against your face in the process. Managing to reach her climax from your handjob, she quickly orders, [lunexis.speech(Take it on your face, you dumb cock-sleeve cunt!)]
+			获得自由并向梅拉克西丝复仇的想法让你的主人兴奋不已，她粗暴地挺腰，将她那肥大的阴茎狠狠地顶在你的脸前。在操你的手时，她达到了高潮，她很快命令道，[lunexis.speech(用你的脸接受吧，你这个傻屄鸡巴套！)]
 		</p>
 		<p>
-			Hurrying to obey, you take hold of your Mistress's shaft and point it directly at your face. A second later, and a huge jet of thick, slimy cum shoots out all over you. Passionately moaning as she gives you a facial, your Mistress teases, [lunexis.speech(~Aah!~ Serve me well, slut, and there'll be plenty more of this sort of treatment for you once you've helped me escape! ~Mmm!~ I'll take you as one of my personal cock-sleeves as your reward!)]
+			你赶紧顺从，握住主人的阴茎对准你自己的脸。一秒钟后，一股巨量的粘稠精液喷射而出，射得你满脸都是。主人一边给你颜射，一边激情地呻吟着，取笑着你，[lunexis.speech(~啊！~好好伺候我，荡妇，等你帮我逃出生天，我还会给你更多这样的待遇！~嗯！~我会把你当做我的私人鸡巴套，作为对你的奖励！)]
 		</p>
 		<p>
-			Spurting out one last load of demonic cum, the centauress's cock starts to soften, and as she steps away from you, she grins down at the mess she's made of your face and demands, [lunexis.speech(Tell me that you'll obey!)]
+			半人马把恶魔精液射了个干净，阴茎软下来。她从你身边走开，低头看着你一塌糊涂的脸，笑道，[lunexis.speech(向我宣誓服从吧！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_AFTER_SEX_SUBMITTED_OBEYED_SURRENDER_END_LEAVE"><![CDATA[
 	<p>
-		Eager to please, you happily tell your Mistress that you'll serve her and see that she's set free. With a triumphant grin on her face, Lunexis happily stomps her hoofs on the ground, before snapping, [lunexis.speech(Go on then, get to it! Bring that
+		你渴望取悦主人。你高兴地告诉主人，你会服侍她并确保她自由。露内克西丝脸上洋溢着胜利的笑容，高兴地跺了跺蹄子，然后突然发火，[lunexis.speech(走吧，开始吧，把那个
 		#IF(meraxis.getRaceStage()!=RACE_STAGE_GREATER)
-			 imp-fucker
+			操小恶魔的
 		#ELSE
-			 cunt of a succubus
+			魅魔婊子
 		#ENDIF
-		 here and get her to teleport us to Themiscyra!)]
+		带来，让她把我们传送到特弥斯库拉！)]
 	</p>
 	<p>
-		Telling your Mistress that it will be done, you stand up and hurry out of the tent. The moment that you [pc.step] over the entrance's boundary, Lunexis's triumphant laughter is completely silenced. Looking back through the open flap, you see that her lips are still moving, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		你对主人说就这么办，然后站起身匆匆走出帐篷。你[pc.step]过入口的结界时，露内克西丝得意的笑声完全消失了。你透过打开的门帘，发现她的嘴唇还在动，但帐篷的附魔隔绝了从内部传出的任何声音。
 	</p>
 	<p>
-		Happy to know that the guards have heard nothing of what happened within, you cross the small, grassy compound and enter Ursa's tent once again. The queen is still busy with the group of senior Amazons, and so you're able to head back out into the camp without being stalled. Looking around, you wonder to go to next...
+		你很高兴守卫们对里面发生的事情一无所知，穿过长满草的小院，再次进入乌萨的帐篷。女王还在忙着和那群亚马逊人长老打交道，所以你回营地不会受到阻拦。你环顾四周，想着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMITTED_START"><![CDATA[
 	<p>
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			Hurrying to obey your Mistress, you drop down beside her and lean forwards between her legs. Parting your [pc.lips], you deliver a loving kiss to her thick, ebony sheath, which causes her massive, demonic horse-cock to push out and rapidly harden into a full erection. Delivering a long, slow lick up the hot, throbbing length of her shaft, you let out a submissive whine and ask Lunexis how she'd like to fuck you today.
+			你急于向你的主人谄媚，于是钻到她身下，靠在她的两条后退之间。你张开嘴，深情地吻着她那乌黑厚实的鞘，让她那巨大的恶魔马屌挺了出来，并迅速勃起变硬。你沿着她火热而颤动的阴茎慢慢地舔了很久，然后发出顺从的低吟，问露内克西丝今天想怎么操你。
 		#ELSE
-			Hurrying to obey your Mistress, you drop down beside her and lean forwards between her legs. Reaching up, you stroke and cup her thick, ebony sheath, which causes her massive, demonic horse-cock to push out and rapidly harden into a full erection. Delivering a series of long, slow strokes up the full length of her hot, throbbing shaft, you let out a submissive whine and ask Lunexis how she'd like to fuck you today.
+			你急于向你的主人谄媚，于是钻到她身下，靠在她的两条后退之间。你伸手抚摸她那乌黑厚实的鞘，使她那巨大的恶魔马屌挺了出来，并迅速勃起变硬。你在她火热而颤动的阴茎上缓慢地抚摸了几下，然后发出顺从的低吟，问露内克西丝今天想怎么操你。
 		#ENDIF
 	</p>
 	#IF(flags.getSavedLong('lunexis_sex_choice')==2)
 		<p>
-			[lunexis.speech(I'm going to wreck your cunt!)] she bellows, before looking down at you and ordering, [lunexis.speech(Present yourself to me, cock-sleeve!)]
+			[lunexis.speech(我要操烂你的骚穴！)]她俯视着你，怒吼着发出命令，[lunexis.speech(准备好让我操死你，你这鸡巴套子！)]
 		</p>
 	#ELSEIF(flags.getSavedLong('lunexis_sex_choice')==3)
 		<p>
-			[lunexis.speech(I'm going to wreck your ass!)] she bellows, before looking down at you and ordering, [lunexis.speech(Present yourself to me, cock-sleeve!)]
+			[lunexis.speech(我要操烂你的屁股！)]她俯视着你，怒吼着发出命令，[lunexis.speech(准备好让我操死你，你这鸡巴套子！)]
 		</p>
 	#ELSEIF(flags.getSavedLong('lunexis_sex_choice')==4)
 		<p>
-			[lunexis.speech(I'm going to wreck your throat!)] she bellows, before looking down at you and ordering, [lunexis.speech(Open wide, cock-sleeve!)]
+			[lunexis.speech(我要操烂你的喉咙！)]她俯视着你，怒吼着发出命令，[lunexis.speech(把嘴巴张大，你这鸡巴套子！)]
 		</p>
 	#ELSE
 		<p>
-			[lunexis.speech(I'll decide on that in a minute!)] she bellows, before looking down at you and ordering, [lunexis.speech(Stand up so that I can get a good look at you, cock-sleeve!)]
+			[lunexis.speech(我要花一分钟做决定！)]她俯视着你，怒吼着发出命令，[lunexis.speech(站起来，你这鸡巴套子，让我看看！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMITTED_START_SEX"><![CDATA[
 	<p>
-		Doing as you're told, you stand up before Lunexis, who grabs hold of you and pulls you into her six breasts. Flashing you a sadistic grin, she muses, [lunexis.speech(Now, how best to fuck you?)]
+		你听话地站到露内克西丝面前，她抓住你的手，把你拉到她身下，按在她的六个乳房里。她向你露出虐待狂特有的狰狞笑容，并喃喃自语道：[lunexis.speech(现在，该怎么操你好呢？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMITTED_START_SEX_BLOWJOB"><![CDATA[
 	<p>
-		Doing as you're told, you obediently submit to your Mistress and open your mouth wide for her. Letting out a deep grunt, she wastes no time in thrusting her hips forwards and ramming her fat horse-cock as deep as possible down your throat. Letting out a series of gargled choking noises, you try to please your Mistress as she roughly fucks your face and taunts, [lunexis.speech(That's it, cock-sleeve! ~Mmm!~ Take it deep!)]
+		你听话地顺从主人，张开嘴巴。主人发出一声低沉的哼声，她毫不犹豫地向前挺动胯部，将她肥大的马鸡巴尽可能深地插入你的喉咙里。你发出一连串含糊不清的吞咽声，尽可能取悦你的主人，而她则继续粗暴地操你的喉咙，同时不忘继续奚落你，[lunexis.speech(真听话，小鸡巴套子！~嗯啊！~我要继续插到里面！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMITTED_START_SEX_PUSSY"><![CDATA[
 	<p>
-		Doing as you're told, you obediently submit to your Mistress and get down on all fours to present your pussy to her. Letting out a deep grunt, she wastes no time in mounting you, before thrusting her hips forwards and ramming her fat horse-cock as deep as possible into your [pc.pussy+]. Letting out a series of [pc.moans+], you push your [pc.hips+] back in an attempt to please your Mistress as she roughly fucks you and taunts, [lunexis.speech(That's it, cock-sleeve! ~Mmm!~ Take it deep!)]
+		你听话地顺从主人，四肢着地，把小穴朝向她。主人发出一声低沉的哼声，她毫不犹豫地骑到你身上，然后向前挺动胯部，将她肥大的马鸡巴尽可能深地插入你[pc.pussy+]。你发出一连串[pc.moan+]，将[pc.hips+]向后推，试图取悦你的主人，而她则继续粗暴地操着你，同时不忘继续奚落你，[lunexis.speech(真听话，小鸡巴套子！~嗯啊！~我要继续插到里面！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMITTED_START_SEX_ASS"><![CDATA[
 	<p>
-		Doing as you're told, you obediently submit to your Mistress and get down on all fours to present your ass to her. Letting out a deep grunt, she wastes no time in mounting you, before thrusting her hips forwards and ramming her fat horse-cock as deep as possible into your [pc.asshole+]. Letting out a series of [pc.moans+], you push your [pc.hips+] back in an attempt to please your Mistress as she roughly fucks you and taunts, [lunexis.speech(That's it, cock-sleeve! ~Mmm!~ Take it deep!)]
+		你听话地顺从主人，四肢着地，把屁股朝向她。主人发出一声低沉的哼声，她毫不犹豫地骑到你身上，然后向前挺动胯部，将她肥大的马鸡巴尽可能深地插入你[pc.asshole+]。你发出一连串[pc.moan+]，将[pc.hips+]向后推，试图取悦你的主人，而她则继续粗暴地操着你，同时不忘继续奚落你，[lunexis.speech(真听话，小鸡巴套子！~嗯啊！~我要继续插到里面！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMITTED_START_AFTER_SEX"><![CDATA[
 	<p>
-		Having had her fun, Lunexis lets out a satisfied grunt, before kicking you away from her and growling, [lunexis.speech(That's enough, cock-sleeve!)]
+		玩够了之后，露内克西丝发出满足的咕哝声，然后一脚把你踢开，并发出咆哮，[lunexis.speech(我玩够了，滚吧，你这鸡巴套子！)]
 	</p>
 	<p>
-		Flashing you a triumphant sneer, she commands, [lunexis.speech(Get out of my sight, and bring that bitch of a daughter of Lyssieth with you next time!)]
+		她迅速发出得意洋洋的嘲笑声，命令道，[lunexis.speech(滚出去，下次把莉西丝的那个婊子女儿给我带过来！)]
 	</p>
 	<p>
-		Submissively hurrying to obey, you gather your things and head over towards the tent's exit...
-	</p>
-	]]>
-	</htmlContent>
+			你服从主人的命令，匆匆收拾好东西，走向帐篷的出口……
+		</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_SUBMITTED_START_AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Having successfully satisfied your Mistress, you turn away from her and [pc.walk] out of the tent. The moment that you [pc.step] over the entrance's boundary, Lunexis's panting as she regains her breath is completely silenced. Looking back through the open flap, you see that she's moving about, but the tent's enchantment prevents any noise whatsoever from escaping the interior.
+		在成功满足主人之后，你转身离开她，[pc.walk]出帐篷。当你[pc.step]过入口的边界时，露内克西丝恢复呼吸时的喘息声完全消失了。透过打开的门帘，你发现她正在走动，但帐篷的附魔隔绝了从内部传出的任何声音。
 	</p>
 	<p>
-		Happy to know that the guards have heard nothing of what happened within, you cross the small, grassy compound and enter Ursa's tent once again. The queen is still busy with the group of senior Amazons, and so you're able to head back out into the camp without being stalled. Looking around, you wonder to go to next...
+		你很高兴守卫们对里面发生的事情一无所知，穿过长满草的小院，再次进入乌萨的帐篷。女王还在忙着和那群亚马逊人长老打交道，所以你回营地不会受到阻拦。你环顾四周，想着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

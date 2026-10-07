@@ -40,7 +40,7 @@ public class CityHall {
 					+ baseName
 				+ "</td>"
 				+ "<td>"
-					+ "<div class='saveLoadButton' id='IMPORT_LODGER_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Import</div>"
+					+ "<div class='saveLoadButton' id='IMPORT_LODGER_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>导出</div>"
 				+ "</td>"
 				+ "</tr>";
 	}
@@ -50,7 +50,7 @@ public class CityHall {
 		Main.game.setActiveNPC(lodger);
 	}
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("City Hall", "-", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("门厅", "，", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -66,7 +66,7 @@ public class CityHall {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getHourOfDay()>=9 && Main.game.getHourOfDay()<=16) {
-					return new Response("Enter", "Dominion's city hall is currently open to the public, so you could head inside if you wanted to.", CITY_HALL_FOYER) {
+					return new Response("进入", "御城区市政厅对公众开放，所以你可以随意进出。", CITY_HALL_FOYER) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.CITY_HALL, PlaceType.CITY_HALL_ENTRANCE, false);
@@ -76,7 +76,7 @@ public class CityHall {
 					};
 					
 				} else {
-					return new Response("Enter", "Dominion's city hall is currently closed to the public, so if you had any business to conduct, you'll have to return between the hours of nine in the morning, and four in the afternoon.", null);
+					return new Response("进入","御城区市政厅现在不对公众开放， 所以如果你需要办理任何事务， 请在早上九点到下午四点之间再来。", null);
 				}
 				
 			}
@@ -84,7 +84,7 @@ public class CityHall {
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_FOYER = new DialogueNode("Foyer", "-", false) {
+	public static final DialogueNode CITY_HALL_FOYER = new DialogueNode("前厅", "-", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -99,7 +99,7 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Exit", "Head out through the revolving glass doors back into Dominion.", OUTSIDE) {
+				return new Response("离开", "穿过旋转玻璃门，回到御城区。", OUTSIDE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_CITY_HALL, false);
@@ -110,7 +110,7 @@ public class CityHall {
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_INFORMATION_DESK = new DialogueNode("Information Desk", "-", false) {
+	public static final DialogueNode CITY_HALL_INFORMATION_DESK = new DialogueNode("咨询台", "-", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -125,10 +125,10 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Name change", "Ask one of the receptionists about changing your name.", CITY_HALL_INFORMATION_DESK_NAME_CHANGE);
+				return new Response("修改姓名", "询问其中一个接待能不能修改自己的姓名。", CITY_HALL_INFORMATION_DESK_NAME_CHANGE);
 				
 			} else if(index == 2) {
-				return new Response("Property", "Ask one of the receptionists about buying or renting property in Dominion.", CITY_HALL_INFORMATION_DESK_PROPERTY);
+				return new Response("地产", "询问其中一个接待，能否在御城区买房或者租房。", CITY_HALL_INFORMATION_DESK_PROPERTY);
 				
 			} else {
 				return null;
@@ -136,7 +136,7 @@ public class CityHall {
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_INFORMATION_DESK_NAME_CHANGE = new DialogueNode("Information Desk", "-", false) {
+	public static final DialogueNode CITY_HALL_INFORMATION_DESK_NAME_CHANGE = new DialogueNode("咨询台", "-", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -151,10 +151,10 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Name change", "You've just asked about changing your name.", null);
+				return new Response("修改姓名", "你已经问过改名的事了。", null);
 				
 			} else if(index == 2) {
-				return new Response("Property", "Ask one of the receptionists about buying or renting property in Dominion.", CITY_HALL_INFORMATION_DESK_PROPERTY);
+				return new Response("地产", "询问其中一个接待，能否在御城区买房或者租房。", CITY_HALL_INFORMATION_DESK_PROPERTY);
 				
 			} else {
 				return null;
@@ -162,7 +162,7 @@ public class CityHall {
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_INFORMATION_DESK_PROPERTY = new DialogueNode("Information Desk", "-", false) {
+	public static final DialogueNode CITY_HALL_INFORMATION_DESK_PROPERTY = new DialogueNode("咨询台", "-", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -177,10 +177,10 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Name change", "Ask one of the receptionists about changing your name.", CITY_HALL_INFORMATION_DESK_NAME_CHANGE);
+				return new Response("修改姓名", "询问其中一个接待能不能修改自己的姓名。", CITY_HALL_INFORMATION_DESK_NAME_CHANGE);
 				
 			} else if(index == 2) {
-				return new Response("Property", "You've just asked about buying or renting property in Dominion.", null);
+				return new Response("地产", "你已经问过在御城区买房、租房的事情了。", null);
 				
 			} else {
 				return null;
@@ -188,7 +188,7 @@ public class CityHall {
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_CORRIDOR = new DialogueNode("Corridor", "-", false) {
+	public static final DialogueNode CITY_HALL_CORRIDOR = new DialogueNode("走廊", "-", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -206,7 +206,7 @@ public class CityHall {
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_WAITING_AREA = new DialogueNode("Waiting Room", "", false) {
+	public static final DialogueNode CITY_HALL_WAITING_AREA = new DialogueNode("等待室", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_ACCOMMODATION)) {
@@ -236,12 +236,12 @@ public class CityHall {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ACCOMMODATION)) {
-					return new Response("Lodgers", "You don't have Lilaya's permission to house guests in her mansion, so there's no point in looking at the notice board.", null);
+					return new Response("房客", "莉莱雅还没有允许你在她的宅邸里接待房客，现在去看告示板也没有意义。", null);
 				}
 				if(!OccupancyUtil.isFreeRoomAvailableForOccupant()) {
-					return new Response("Lodgers", "You don't have a vacant guest room in which a lodger could stay, so there's no point in looking at the notice board.", null);
+					return new Response("房客", "没有房客能够入住的空房间，现在去看告示板也没有意义。", null);
 				}
-				return new Response("Lodgers", "Take a look at the notice board and see if there are any lodgers you'd like to offer a guest room to.", CITY_HALL_WAITING_AREA_LODGER_LIST);
+				return new Response("房客", "仔细瞧瞧告示牌，有没有正在寻求住处的房客。", CITY_HALL_WAITING_AREA_LODGER_LIST);
 			}
 			return null;
 		}
@@ -258,19 +258,19 @@ public class CityHall {
 						//+ "<b>Seeking Lodging</b>"
 						+ "<div class='container-full-width' style='margin-bottom:0; text-align:center;'>"
 							+ "<div style='width:40%; float:left; font-weight:bold; margin:0; padding:0;'>"
-								+ "Name"
+								+ "名字"
 							+ "</div>"
 							+ "<div style='float:left; width:17%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Gender</b>"
+								+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>性别</b>"
 							+"</div>"
 							+ "<div style='float:left; width:17%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "<b style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>Race</b>"
+								+ "<b style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>种族</b>"
 							+"</div>"
 							+ "<div style='float:left; width:17%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "<b style='color:"+PresetColour.BASE_BROWN.toWebHexString()+";'>Job</b>"
+								+ "<b style='color:"+PresetColour.BASE_BROWN.toWebHexString()+";'>工作</b>"
 							+"</div>"
 							+ "<div style='float:left; width:9%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "Approach"
+								+ "接近"
 							+ "</div>"
 						+ "</div>");
 			
@@ -282,7 +282,7 @@ public class CityHall {
 			if(charactersPresent.isEmpty()) {
 				UtilText.nodeContentSB.append(
 						"<div class='container-full-width' style='margin-bottom:0; text-align:center;'>"
-								+ "<b>There are no lodgers available...</b>"
+								+ "<b>找不到任何房客……</b>"
 						+ "</div>");
 				
 			} else {
@@ -320,10 +320,10 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Import", "View the character import screen.", LODGER_IMPORT);
+				return new Response("导入", "查看导入界面的角色。", LODGER_IMPORT);
 				
 			} else if(index==0) {
-				return new Response("Back", "[pc.Step] away from the notice board.", CITY_HALL_WAITING_AREA);
+				return new Response("返回", "从告示牌边退开。", CITY_HALL_WAITING_AREA);
 			}
 			return null;
 		}
@@ -358,7 +358,7 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Back", "Return to the previous screen.", CITY_HALL_WAITING_AREA_LODGER_LIST);
+				return new Response("返回", "回到上一界面。", CITY_HALL_WAITING_AREA_LODGER_LIST);
 			}
 			return null;
 		}
@@ -376,8 +376,8 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Offer room",
-						"Tell [npc.name] that you'd like to offer [npc.herHim] a place to stay.",
+				return new Response("提供房间",
+						"告诉[npc.name]你想给[npc.herHim]提供一个住的地方。",
 						LODGER_GIVEN_ROOM) {
 					@Override
 					public void effects() {
@@ -390,8 +390,8 @@ public class CityHall {
 				};
 				
 			} else if(index == 2) {
-				return new Response("Leave",
-						"Not liking your first impression of [npc.name], you decide against offering [npc.herHim] a place to stay...",
+				return new Response("离开",
+						"你对[npc.name]的第一印象不太妙，决定还是不给[npc.herHim]提供住处了……",
 						LODGER_DENIED);
 			}
 			return null;
@@ -415,7 +415,7 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Having left [npc.name] to get settled into [npc.her] new room, you continue with your plans for the day...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "你让[npc.name]住进了新房间，便继续今天的其他计划了……", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
@@ -433,13 +433,13 @@ public class CityHall {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Having left [npc.name] to get settled into [npc.her] new room, you continue with your plans for the day...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "你让[npc.name]住进了新房间，便继续今天的其他计划了……", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_OFFICE = new DialogueNode("Private Office", "-", false) {
+	public static final DialogueNode CITY_HALL_OFFICE = new DialogueNode("私人办公室", "-", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -457,7 +457,7 @@ public class CityHall {
 		}
 	};
 	
-	public static final DialogueNode CITY_HALL_STAIRS = new DialogueNode("Staircase", "-", false) {
+	public static final DialogueNode CITY_HALL_STAIRS = new DialogueNode("楼梯", "-", false) {
 
 		@Override
 		public int getSecondsPassed() {

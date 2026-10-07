@@ -70,18 +70,18 @@ public class ToiletStall {
 		
 		@Override
 		public String getActionTitle() {
-			return "Swap with [npc2.name]";
+			return "和[npc2.name]交换";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Swap position with [npc2.name].";
+			return "和[npc2.name]交换位置。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.name], you move [npc2.herHim] around and swap position with [npc2.herHim], before [npc.moaning],"
-					+ " [npc.speech(It'll be more fun like this!)]";
+			return "你控制住[npc2.name]，跟[npc2.herHim]换了个位置，便[npc.moaning]道，"
+					+ "[npc.speech(这样会更爽哦！)]";
 		}
 
 		@Override
@@ -109,17 +109,17 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Face-to-wall";
+			return "面对墙面";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] up against a nearby wall.";
+			return "让[npc2.name]面朝附近的墙面。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] up against the wall of the toilet stall."
-					+ " Grinding [npc.her] body up against [npc2.her] back, [npc.she] [npc.moansVerb] into [npc2.her] [npc2.ear],"
-					+ " [npc.speech(Good [npc2.girl]! Now hold still while I fuck you!)]";
+			return "[npc.Name]抓住[npc2.namePos]的肩膀，推着[npc2.herHim]面向厕所隔间的墙面。"
+					+ "随后用整个身子压在[npc2.her]的背上，在[npc2.ear]边[npc.moansVerb]着，"
+					+ "[npc.speech(真乖！操你的时候别乱动！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -146,16 +146,16 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Face-to-wall";
+			return "面对墙面";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and move into a position so that you're facing a wall of the toilet stall.";
+			return "尝试调整姿势，让自己面对厕所隔间的墙面。";
 		}
 		@Override
 		public String getDescription() {
-			return "Before [npc2.name] can react, you quickly move up against one wall of the toilet stall."
-					+ " Placing your hands up against the graffiti-covered surface that's now in front of you, you push your [npc.ass+] out, shaking it at [npc2.name] as you try to encourage [npc2.herHim] to fuck you like this.";
+			return "[npc2.name]还没来得及反应，你就面对着厕所隔间的墙面站着了。"
+					+ "你按住面前涂满了涂鸦的墙面，把[npc.ass+]向后一探，对着[npc2.name]晃动起来，希望[npc2.herHim]能直接这样上了你。";
 		}
 		@Override
 		public void applyEffects() {
@@ -182,17 +182,17 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Back-to-wall";
+			return "背靠墙面";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] back against one of the toilet stall's walls.";
+			return "让[npc2.name]背靠厕所隔间的墙面。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] back against one of the toilet stall's walls."
-					+ " Grinding [npc.her] body up against [npc2.hers], [npc.she] [npc.moansVerb] into [npc2.her] [npc2.ear], "
-					+ "[npc.speech(Good [npc2.girl]! Now hold still while I fuck you!)]";
+			return "[npc.Name]抓住[npc2.namePos]肩膀，把[npc2.herHim]推到厕所的墙壁上。"
+					+ "随后用整个身子压了过去，在[npc2.ear]边[npc.moansVerb]着，"
+					+ "[npc.speech(乖乖的，在我操你的时候不要乱动！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -219,16 +219,16 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Back-to-wall";
+			return "背靠墙面";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and move into a position so that your back is up against one of the toilet stall's walls.";
+			return "试着换个姿势，把后背靠在厕所隔间墙上。";
 		}
 		@Override
 		public String getDescription() {
-			return "Before [npc2.name] can react, you quickly move up against the wall of the toilet stall."
-					+ " Leaning back against the graffiti-covered surface that's now behind you, you give [npc2.name] your most seductive look, trying to encourage [npc2.herHim] to fuck you like this.";
+			return "趁[npc2.name]没反应过来，你就靠在了厕所隔间的墙上。"
+					+ "你背靠着涂满了涂鸦的表面，向[npc2.name]投出一阵格外撩人的眼神，希望[npc2.herHim]能直接这样上了你。";
 		}
 		@Override
 		public void applyEffects() {
@@ -255,17 +255,17 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Kneel (receive oral)";
+			return "跪下(接受口交)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Force [npc2.name] to [npc2.her] knees.";
+			return "强迫[npc2.name]下跪。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] quickly [npc.verb(force)] [npc2.herHim] to [npc2.her] knees before [npc.herHim]."
-					+ " Looking up, [npc2.name] [npc2.verb(see)] [npc.herHim] grinning down at [npc2.her] submissive form, and with a little laugh, [npc.name] [npc.moansVerb],"
-					+ " [npc.speech(Time to put your mouth to use!)]";
+			return "[npc.Name]抓住[npc2.namePos]的肩膀，迅速向下按，强迫[npc2.herHim]跪在[npc.herHim]身前。"
+					+ "[npc2.name]抬起头，对方正对着自己屈服的样子喜笑颜开，[npc.name]轻笑一声，[npc.moansVerb]道，"
+					+ "[npc.speech(该是时候动动嘴了！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -292,15 +292,15 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Kneel";
+			return "跪下";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Drop down onto your knees in the hope that [npc2.name] wants you to perform oral on [npc2.herHim].";
+			return "跪在地上，希望[npc2.name]会让你给[npc2.herHim]口交。";
 		}
 		@Override
 		public String getDescription() {
-			return "You quickly drop down to your knees in front of [npc2.name], shuffling forwards a little to bring your face closer to [npc2.her] groin.";
+			return "你迅速冲着[npc2.name]跪下，膝行向前，脸离着[npc2.her]的下体更近了。";
 		}
 		@Override
 		public void applyEffects() {
@@ -327,17 +327,17 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Kneel (give oral)";
+			return "跪下(给予口交)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Get on your knees before [npc2.name], ready to service [npc2.herHim] with your mouth or [npc.hands].";
+			return "跪在[npc2.name]身前，准备用你的嘴或者[npc.hands]服侍[npc2.herHim]。";
 		}
 		@Override
 		public String getDescription() {
-			return "Running [npc.her] [npc.hands] down [npc2.namePos] body, [npc.name] [npc.verb(drop)] to [npc.her] knees before [npc2.herHim], before looking up and flashing [npc2.herHim] a seductive smile."
-					+ " With a little laugh, [npc.she] then [npc.moansVerb],"
-					+ " [npc.speech(Stay still and enjoy this!)]";
+			return "[npc.name]用[npc.hands]在[npc2.namePos]的身体上游走着，随后便跪在[npc2.herHim]面前，抬头向[npc2.herHim]抛出了一抹魅惑的微笑。"
+					+ "[npc.she]轻笑一声，[npc.moansVerb]道，"
+					+ "[npc.speech(那就乖乖尝尝这个吧！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -364,15 +364,15 @@ public class ToiletStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Receive kneeling oral";
+			return "接受跪姿口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and push [npc2.name] down onto [npc2.her] knees so that [npc2.she]'ll perform oral on you.";
+			return "尝试让[npc2.name]跪下来，这样[npc2.she]就能给你口交了。";
 		}
 		@Override
 		public String getDescription() {
-			return "Lifting your [npc.arms], you take hold of [npc2.namePos] shoulders, and, with a little pressure, try to get [npc2.herHim] to kneel before you.";
+			return "你抬起[npc.arms]，抓住了[npc2.namePos]的肩膀，然后轻轻一按，示意[npc2.herHim]在你面前跪下。";
 		}
 		@Override
 		public void applyEffects() {
@@ -421,69 +421,69 @@ public class ToiletStall {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Much to your delight, you feel [npc.name] reach down and roughly grab your hips, and, grinding [npc.herself] into your back, [npc.she] growls into your ear, "
-									+ "[npc.speech(I love fucking bitches like you from behind! Now <i>stay still</i> like a good slut!)]";
+							return "让你喜出望外的是，[npc.name]一把抓住了你的腰，整个身子就对着你的背贴了上来，在你耳边低哼道，"
+									+ "[npc.speech(我就喜欢从后面干你这种婊子！够骚就<i>站好了别动</i>！)]";
 						default:
-							return "Much to your delight, you feel [npc.name] reach down to take hold of your hips, and as [npc.she] leans in over your shoulder, [npc.she] [npc.moans] into your ear, "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "让你喜出望外的是，[npc.name]直接揽住了你的屁股，靠了上来，越过你的肩头在耳边[npc.moans]道，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 				} else {
-					return "Grabbing you by the shoulders, [npc.name] pulls you away from the wall, pushing you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]抓住了你的肩膀，把你从墙边拉了回来，让你变回原来的姿势，怒斥道，"
+							+ "[npc.speech(你以为你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotAgainstWall.STANDING_WALL) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "[npc.Name] grins as you try to entice [npc.herHim] to come over and fuck you against the wall."
-									+ " Moving up to roughly grind [npc.her] body against yours, [npc.she] leans in over your shoulder and growls into your ear, "
-									+ "[npc.speech(Good slut! Now <i>stay still</i> so I can give you a proper fucking!)]";
+							return "[npc.Name]看到你奋力引诱着[npc.herHim]抵着墙上了你的样子，不禁面露笑意。"
+									+ "[npc.she]毫不在乎地把身子黏了上来，越过你的肩头在耳边低吼道，"
+									+ "[npc.speech(好个小骚货！给我<i>站好了</i>，我可要狠狠地操你一顿！)]";
 						default:
-							return "[npc.Name] grins as you try to entice [npc.herHim] to come over and fuck you against the wall."
-									+ " Moving up to press [npc.her] body against yours, [npc.she] leans in over your shoulder and [npc.moans] into your ear, "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]看到你奋力引诱着[npc.herHim]抵着墙上了你的样子，不禁面露笑意。"
+									+ "[npc.she]把身子压了上来，越过你的肩头在耳边[npc.moans]道，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Grabbing you by the shoulders, [npc.name] pulls you away from the wall, pushing you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]抓住了你的肩膀，把你从墙边拉了回来，让你变回原来的姿势，怒斥道，"
+							+ "[npc.speech(你以为你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotStanding.STANDING_DOMINANT) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "[npc.Name] grins down at your submissive, kneeling form."
-									+ " With a little laugh, [npc.she] grabs hold of your head with one [npc.hand], yanking you forwards into [npc.her] crotch as [npc.she] growls down at you, "
-									+ "[npc.speech(You'd better be good at this, bitch! Now <i>stay still</i> while I use your mouth!)]";
+							return "[npc.Name]看到你屈服的跪姿，不禁嘴角上扬。"
+									+ "[npc.she]轻笑一声，用一只[npc.hand]按住了你的脑袋，猛地把你拉到[npc.her]的胯前，低头对你低吼道，"
+									+ "[npc.speech(你最好口活好一点，婊子！操你嘴的时候给我<i>安稳点</i>！)]";
 						default:
-							return "[npc.Name] grins down at your submissive, kneeling form."
-									+ " With [npc.a_moan+], [npc.she] takes hold of your head with one [npc.hand], pulling you forwards into [npc.her] crotch as [npc.she] [npc.moansVerb] down at you, "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]看到你屈服的跪姿，不禁嘴角上扬。"
+									+ "伴随着一声[npc.a_moan+]，[npc.she]用一只[npc.hand]按住了你的脑袋，把你拉到了[npc.her]的胯前，低头对你[npc.moansVerb]道，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Reaching down to grab you by the [pc.arm], [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]攥住你的[pc.arm]，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(你以为你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotStanding.PERFORMING_ORAL) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Reaching up and throwing your [pc.arms] off of [npc.her], [npc.name] lets out an angry snarl."
-									+ " Surprisingly, [npc.she] then suddenly drops to [npc.her] knees, and you look down to see [npc.herHim] grinning up at you,"
-									+ " [npc.speech(Luckily for you, this is what I planning all along! Now stay still bitch, you'd better appreciate this!)]";
+							return "[npc.Name]一把拍开了你的[pc.arms]，怒吼了一声。"
+									+ "没想到[npc.she]却突然跪了下来，你低头看向[npc.herHim]，[npc.she]还正抬头对着你笑，"
+									+ "[npc.speech(你太走运了，我就是这么想的！现在别乱动，婊子，这是给你脸了！)]";
 						default:
-							return "Reaching up to take hold of your [pc.arms], [npc.name] lets out a little laugh as [npc.she] allows you to push [npc.herHim] down onto [npc.her] knees."
-									+ " Looking down, you see [npc.herHim] grinning up at you,"
-									+ " [npc.speech(This is your lucky day! I love giving oral! You'd better appreciate this!)]";
+							return "[npc.name]伸出手抓住你的[pc.arms]，发出一声轻笑，[npc.she]等你压住[npc.herHim]，让[npc.her]跪下。"
+									+ "你低头看向[npc.herHim]，[npc.she]正抬头对着你笑，"
+									+ "[npc.speech(今天真是你的幸运日啊！我最喜欢用嘴了！给我好好珍惜！)]";
 					}
 					
 				} else {
-					return "Reaching up and throwing your [pc.arms] off of [npc.her], [npc.name] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Do you really expect me to go down on you?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.name]把你的[pc.arms]从[npc.her]肩上打落，愤怒地斥责着你，"
+							+ "[npc.speech(你以为你在干什么？！你真觉得我会给你跪下吗？！你<i>再</i>这样可就别怪我了！)]";
 				}
 				
 			} 

@@ -108,9 +108,9 @@ public class Nyan extends NPC {
 	}
 	
 	public Nyan(boolean isImported) {
-		super(isImported, new NameTriplet("Nyan"), "Rey",
-				"Nyan is the owner of the store 'Nyan's Clothing Emporium', found in Dominion's shopping arcade."
-						+ " She's extremely shy, and gets very nervous when having to talk to people.",
+		super(isImported, new NameTriplet("妮安"), "雷伊",
+				"妮安是“妮安服装店”的店主，服装店在御城区购物中心内。"
+						+ "她惊人地害羞，和人交谈时会紧张焦虑。",
 				21, Month.APRIL, 12,
 				10, Gender.F_V_B_FEMALE, Subspecies.CAT_MORPH, RaceStage.LESSER,
 				new CharacterInventory(false, 10), WorldType.NYANS_APARTMENT, PlaceType.NYAN_APARTMENT_NYAN_BEDROOM, true);
@@ -796,13 +796,13 @@ public class Nyan extends NPC {
 	public String getTraderDescription() {
 		if(Main.game.getCharactersPresent().contains(this)) {
 			return "<p>"
-						+ "Nyan nervously leafs through her little notebook, before guiding you over to some shelves that stock what you're looking for, "
-						+ "[nyan.speechNoEffects(E-erm, j-just remember, I get new stock in every day! S-so if you don't like what I've got today, y-you can come back again tomorrow! I-if you want to, that is...)]"
+						+ "妮安紧张地翻阅着她的小笔记本，然后领你到摆放着你要买的物品的货架旁，"
+						+ "[nyan.speechNoEffects(呃，呃唔，只要记，记住，我每天都会上新货！所，所以如果你不喜欢今天的，你，你可以明天来！如，如果你想，那就……)]"
 					+ "</p>";
 		} else {
 			return "<p>"
-						+ "Having been given both Nyan's key and permission, you head into the shop's stockroom, where you soon find her little notebook listing all the items she has for sale."
-						+ " Not wanting to betray your girlfriend's trust, you prepare to do as she asked and leave the money for any items you take on the shelf where you found her notebook..."
+						+ "你获得了妮安的允许，拿着钥匙进了商店库房，你很快找到了她列出所有出售物品的小笔记本。"
+						+ "你不想辜负女友的信任，准备照她的要求做。你把该付的钱留在放着她笔记本的货架上……"
 					+ "</p>";
 		}
 	}

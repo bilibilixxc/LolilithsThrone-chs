@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	<additionalPlaceTypeTriggers>
 		<placeType>dsg_fields_elis_market_produce</placeType>
@@ -6,7 +6,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[Another Mob??]]></name>
+			<name><![CDATA[还有暴徒？？]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(game.isSillyMode()
 					&& !flags.hasFlag(FLAG_dsg_elis_eisek_sillymode_mob_dispersed)

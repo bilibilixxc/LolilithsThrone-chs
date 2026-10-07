@@ -16,10 +16,10 @@ public class XMLLoadException extends Exception {
 	 * @param cause Actual exception that was thrown, for example SAXException or XMLMissingTagException.
 	 */
 	public XMLLoadException(Throwable cause){	
-		super("XML file failed to load. Cause: " + cause.getMessage(), cause);
+		super("XML文件加载失败，成因：" + cause.getMessage(), cause);
 	}
 
 	public XMLLoadException(Throwable cause, File causedByFile){
-		super("XML file ("+causedByFile.getParentFile().getName()+"/"+causedByFile.getName()+") failed to load. Cause: " + cause.getMessage(), cause);
+		super("XML文件("+causedByFile.getParentFile().getName()+"/"+causedByFile.getName()+")加载失败，成因：" + cause.getMessage(), cause);
 	}
 }

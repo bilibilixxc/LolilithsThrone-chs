@@ -1,203 +1,203 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="TRANSACTION_START"><![CDATA[
 	<p>
-		As you start to show an interest in buying something, Ceridwen breaks her silence to state, [ceridwen.speech(There's no need for you to queue up at the counter, [pc.name]. For you, I can handle all transactions personally.)]
+		你表现出买东西的兴趣，凯丽德温打破沉默，说道，[ceridwen.speech([pc.name]，你不必在柜台前排队。我可以亲自为你处理所有的交易。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="BUY_TRANSACTION_COMPLETE"><![CDATA[
 	<p>
-		After taking your flames in exchange for the [#SPECIAL_PARSE_0], and not letting her gaze drop from your face the entire time, Ceridwen says in her friendly, Welsh accent, [ceridwen.speech(Thank you for your business, [pc.name]. Let me know if there's anything else that you'd like to buy.)]
+		凯丽德温接过你的火币并递出[#SPECIAL_PARSE_0]，目光始终没有从你的脸上移开，她用亲切的威尔士口音说道，[ceridwen.speech(感谢你的光顾，[pc.name]。如果你还有什么想买的，请告诉我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_TRANSACTION_COMPLETE"><![CDATA[
 	<p>
-		After agreeing to buy your [#SPECIAL_PARSE_0] in exchange for [#SPECIAL_PARSE_1] flames, Ceridwen says in her friendly, Welsh accent, [ceridwen.speech(Thank you for your business, [pc.name]. Let me know if there's anything else that you'd like to sell to me.)]
+		凯丽德温同意以[#SPECIAL_PARSE_1]火币购买你的[#SPECIAL_PARSE_0]，并用她友好的威尔士口音说道，[ceridwen.speech(谢谢你的光顾，[pc.name]。如果你还有什么想卖的，请告诉我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 
 	<!-- All of these are linked to the 'dialogue/innoxia/places/fields/elis/shops/convenience.xml' dialogue nodes. -->
 	
 	<htmlContent tag="CONVENIENCE"><![CDATA[
 	<p>
-		A large convenience store is situated in one corner of the shopping precinct,
+		购物区的一角有一家大型便利店，
 		#IF(game.isHourBetween(7, 21))
-			 and from the near-constant stream of shoppers which you witness entering and leaving via its sliding glass doors, you can safely assume that this is the busiest shop in all of Wall's End. The sign above the store's entrance declares it to be called 'The Barn', although there's nothing about the building's glass frontage to give it the appearance of such.
+			以你眼中购物者络绎不绝的进出玻璃推拉门的情况来看，你有把握认为这是整个墙之尽头最繁忙的商店。商店入口上方的招牌标示它名为“随时粮仓”，尽管建筑物的玻璃外层并没能给人这种感觉。
 		#ELSE
-			 and even despite the current hour it still seems to be relatively busy, with at least one shopper entering or leaving via its sliding glass doors every few minutes or so. The back-lit sign above the store's entrance declares it to be called 'The Barn', although there's nothing about the building's glass frontage to give it the appearance of such.
+			尽管现在为一般商店下班时间，店里依旧比较繁忙，每隔几分钟就会有至少一位顾客从玻璃推拉门进出。商店入口上方的背光招牌上写着“随时粮仓”，但建筑的玻璃外层却没有任何与“随时粮仓”相似的地方。
 		#ENDIF
-		 Looking across to the entrance, you see that the opening times have been written on a piece of paper and stuck to the inside of the glass doors, and are displayed as a simple: '[style.colourMinorGood(Open 24/7)]'
+		向入口处望去，你会发现一张贴在玻璃门内侧的纸上写有营业时间，其简单地标示着：“[style.colourMinorGood(24/7开放)]”。
 	</p>
 	<p>
-		Taking a look through the floor-to-ceiling glass windows which cover almost all of the ground floor, you see that the interior has a clean, modern look to it. Bathed in the unnaturally-bright light given out by its ceiling-mounted arcane fluorescent lamps, the store's interior is taken up by about a dozen rows of shelving. Most of these look to be filled with items of food and drink, although a couple appear instead to be stocked full of miscellaneous household items.
+		你透过几乎覆盖了整个一楼的玻璃落地窗，看到装饰的简洁而现代的内部。天花板上安装的弧形荧光灯不自然的亮光，照射着店内摆放着的十几排货架。看上去大多数货架都摆满了食品和饮料，不过也有几个货架摆满了杂七杂八的生活用品。
 	</p>
 	<p>
-		Behind the store's long counter you see
+		在商店长长的柜台后面，你看到
 		#IF(game.isHourBetween(7, 21))
-			 several members of staff, every one of which is a mouse-morph, busily serving the customers.
+			几名鼷鼠化形的工作人员，正忙着为顾客服务。
 		#ELSE
-			 a couple of mouse-morph cashiers who are waiting to serve the few customers they get at this hour.
+			一对鼷鼠化形的收银员，正等着为这个时间段为数不多的顾客服务。
 		#ENDIF
 		#IF(game.getDialogueFlags().hasFlag(FLAG_innoxia_elis_convenience_visited))
-			 The familiar figure of the white-feathered greater owl-girl owner, Ceridwen, is sitting behind her raised section of the counter, 
+			白色羽毛覆盖的鸮女老板凯丽德温那熟悉的身影正坐在凸起的柜台后，
 		#ELSE
-			 A white-feathered greater owl-girl is sitting behind a raised section of the counter, 
+			白色羽毛覆盖的鸮女正坐在凸起的柜台后，
 		#ENDIF
 		#IF(game.isHourBetween(9, 17))
-			 although due to the time of day her eyes are closed and she looks to be sleeping.
+			不过由于时间关系，她闭着眼睛，看起来像是在睡觉。
 		#ELSE
-			 and you notice that she's looking very alert and attentive to her surroundings as she swivels her head to look around the store.
+			你注意到她看起来非常警觉，转动着头环顾商店，查看周围的环境。
 		#ELSE
 			
 		#ENDIF
-		 Pausing for a moment, you wonder whether to head inside and buy something or instead continue on your way through Wall's End...
+		停顿片刻，你思考着是进去买点东西，还是继续穿行于墙之尽头……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENTER"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_elis_convenience_visited))
 		<p>
-			Deciding to enter this convenience store and see what sort of goods are on sale, you pass through the sliding glass doors and enter the brightly-lit interior. Stopping to take in your surroundings, you glance around at the rows of shelving which together form about a dozen aisles, before looking over at the long counter positioned near to where you're standing.
+			你决定进入这家便利店，看看在售商品，于是穿过玻璃门，进到明亮的店内。你停下脚步打量了一下周围的环境，环顾一排排货架，这些货架组成了大约十几条过道，然后又看向临近的长柜台。
 			#IF(game.isHourBetween(7, 21))
-				 A few mouse-morph cashiers are busily serving a never-ending queue of customers,
+				几名鼷鼠化形的收银员正忙着为永远排不完的顾客服务，
 			#ELSE
-				 A couple of mouse-morph cashiers are serving the few customers that are about at this hour,
+				一对鼷鼠化形的收银员正在为这个时间段为数不多顾客服务，
 			#ENDIF
-			 while the white-feathered greater owl-girl
+			而白羽鸮女
 			#IF(game.isHourBetween(9, 17))
-				 is sitting motionless behind her raised section of the counter with both eyes seemingly closed.
+				正一动不动地坐在凸起的柜台后，两只眼睛似乎都闭着。
 			#ELSE
-				 is sitting behind her raised section of the counter and watching over everyone within the store.
+				正坐在她那凸起的柜台后，注视着店里的每一个人。
 			#ENDIF
-			 Just like the mouse-morphs, she's wearing a rather plain uniform which consists of a blue-grey shirt, a grey mini skirt, and a conspicuous lack of any sort of jewellery or other accessory.
+			和鼷鼠化形店员一样，她也穿着一套相当朴素的制服，包括一件蓝灰色衬衫和一条灰色迷你裙，没有任何首饰或配件。
 		</p>
 		<p>
-			Turning away from this owl-girl, you set off and [pc.walk] down the nearest aisle, scanning over the everyday food items that have been stacked up on the shelves. As you reach the end of this aisle, you suddenly feel a strong breeze blow against your back. Turning your head to see what the cause of this gust of wind could be, you can't help but instinctively jump back and you see that the white-feathered owl-girl is standing right behind you, silently staring at you with her big, yellow eyes. Her anthropomorphic, owl-like face is completely expressionless, which contributes a great deal to the alarming nature of her behaviour.
+			你从这个鸮女身上移开视线，开始沿着最近的过道[pc.walk]动，扫视货架上堆放的日常食品。当你走到过道尽头时，突然感到一阵强风吹拂着你的后背，扭头去看这阵风的成因，却不禁本能地往后一跳。只见白羽鸮女站在你身后，用她那双黄色的大眼睛静静地盯着你。她那类人的、鸮般的脸上没有任何表情，这大大地增加了她行为的恐怖性。
 		</p>
 		<p>
-			[ceridwen.speech(Good [style.morning],)] she says in an alarmingly friendly, Welsh accent. Her warm tone of voice is completely at odds with the way that she's creepily staring at you, and without blinking or taking her large eyes off of you for a second, she continues, [ceridwen.speech(I'm Ceridwen, the owner of this store. I haven't seen you here before, so I thought I'd fly on over and say hello.)]
+			[ceridwen.speech([style.morning]好，)]她用令人震惊的威尔士口音亲切地说道。那温暖的语调与令人毛骨悚然地盯着你的样子完全不符，她眼睛一眨不眨地盯着你，从不在你身上移开一秒，她继续说，[ceridwen.speech(我是凯丽德温，这家店的老板。我以前没有在这见过你，所以我想我应该飞过来和你打个招呼。)]
 		</p>
 		<p>
-			Before you can reply, Ceridwen flaps her huge, white wings in order to silently hop a little closer to you. Continuing to gaze at you with a piercing intensity, she waits for you to introduce yourself to her...
+			在你回答之前，凯丽德温扇动她巨大的白色翅膀，悄悄地跳到你身边，并继续以刺眼的目光注视着你，等待你向她介绍自己……
 		</p>
 	#ELSE
 		<p>
-			Deciding to enter this convenience store once again and see what sort of goods are on sale, you pass through the sliding glass doors and enter the brightly-lit interior. Stopping to take in your surroundings, you glance around at the rows of shelving which together form about a dozen aisles, before looking over at the long counter positioned near to where you're standing.
+			你决定再次进入这家便利店，看看在售商品，于是穿过玻璃门，进到明亮的店内。你停下脚步打量了一下周围的环境，环顾一排排货架，这些货架组成了大约十几条过道，然后又看向临近的长柜台。
 			#IF(game.isHourBetween(7, 21))
-				 A few mouse-morph cashiers are busily serving a never-ending queue of customers,
+				几名鼷鼠化形的收银员正忙着为永远排不完的顾客服务，
 			#ELSE
-				 A couple of mouse-morph cashiers are serving the few customers that are about at this hour,
+				一对鼷鼠化形的收银员正在为这个时间段为数不多顾客服务，
 			#ENDIF
-			 while the white-feathered greater owl-girl, Ceridwen,
+			而白羽鸮女凯丽德温
 			#IF(game.isHourBetween(9, 17))
-				 is sitting motionless behind her raised section of the counter with both eyes seemingly closed.
+				正一动不动地坐在凸起的柜台后，两只眼睛似乎都闭着。
 			#ELSE
-				 is sitting behind her raised section of the counter and watching over everyone within the store.
+				正坐在她那凸起的柜台后，注视着店里的每一个人。
 			#ENDIF
-			 Just like the mouse-morphs, she's wearing a rather plain uniform which consists of a blue-grey shirt, a grey mini skirt, and a conspicuous lack of any sort of jewellery or other accessory.
+			和鼷鼠化形店员一样，她也穿着一套相当朴素的制服，包括一件蓝灰色衬衫和一条灰色迷你裙，没有任何首饰或配件。
 		</p>
 		<p>
-			Knowing that she's likely to be the one to come to you, you turn away from the owl-girl and set off down the nearest aisle, scanning over the everyday food items that have been stacked up on the shelves. Just as you'd expected, as you reach the end of this aisle, you suddenly feel a familiar, strong breeze blowing against your back. Despite knowing that she's there, you can't help but instinctively jump a little as you turn to see that Ceridwen is standing right behind you, silently staring at you with her big, yellow eyes. Her anthropomorphic, owl-like face is completely expressionless, which contributes a great deal to the alarming nature of her behaviour.
+			你知道她很可能会来主动找你，于是你从鸮女身上移开视线，开始沿着最近的过道移动，扫视货架上堆放的日常食品。正如你所料，当你走到过道尽头时，一阵熟悉的强风突然吹拂向你的后背，尽管知道在那里的是谁，你依旧本能地往后一跳。因为你转头便见凯丽德温站在你的身后，用她那双黄色的大眼睛静静地盯着你。她那类人的、鸮般的脸上没有任何表情，这大大地增加了她行为的恐怖性。
 		</p>
 		<p>
-			[ceridwen.speech(Good [style.morning], [pc.name],)] she says in her friendly, Welsh accent. You can't help but think to yourself once again how the warm tone of her voice is completely at odds with her creepy behaviour, and without blinking or taking her large eyes off of you for a second, she continues, [ceridwen.speech(You know, I can tell that there's something really special about you, [pc.name]. Please let me know if you need anything...)]
+			[ceridwen.speech([style.morning]好，[pc.name]，)]她用亲切的威尔士口音说道。你不禁再次想到，她温暖的语调与那令人毛骨悚然的行为完全不符。她没有眨眼，也没有将她那大眼睛从你身上移开一秒，继续道，[ceridwen.speech(你知道，[pc.name]，对我来说你是特别的。如果你有任何需要，请告诉我……)]
 		</p>
 		<p>
-			As you thank Ceridwen for her offer, she flaps her huge, white wings and silently hops a little closer to you. As she continues to gaze at you with a piercing intensity, you realise that she intends to closely follow you as you [pc.walk] throughout her store...
+			当你感谢凯丽德温的好意时，她扇动巨大的白色翅膀，静静地跳到离你更近的地方。在她刺眼的目光注视下，你意识到她打算在你穿过她的商店时紧紧跟着……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TALK_NAME"><![CDATA[
 	<p>
-		Tired of Ceridwen's silence as she continues to stalk you throughout her store, you decide to stop and engage her in conversation. Turning to face the white-feathered owl-girl, you ask her why she decided to name this store 'The Barn', even though it doesn't look anything like one.
+		当凯丽德温继续在她的商店里跟踪你时，你厌倦了她的沉默，于是决定停下来与她交谈。你转过身来面对这位白羽鸮女，问她为什么要把这家店命名为“随时粮仓”，尽管它看起来一点也不像。
 	</p>
 	<p>
-		[ceridwen.speech(Oh, that's because I wanted to name it after my old home,)] she replies in her usual friendly voice, before taking on a rather sad tone as she continues, [ceridwen.speech(I used to live in a large barn out in the Foloi Fields, but it was burnt down by Lunette's daughters... Thankfully, my sisters and I managed to escape, and after working for a while to deliver post between Dominion and Elis, we set up this convenience store.)]
+		[ceridwen.speech(哦，那是因为我想以我的旧居来命名它，)]她以一贯友善的声音回答道，随后语气变得有些悲伤，继续说道，[ceridwen.speech(我以前住在弗洛伊田野的一座大谷仓里，但那里被露内特的女儿们烧毁了……幸好我和姐妹们成功逃了出来，在御城区和伊利斯之间送了一段时间信后，我们便开了这家便利店。)]
 	</p>
 	<p>
-		Stating that you haven't seen any other owl-girls around, you ask Ceridwen if her sisters work here. Nodding her head as she continues to stare at you with her big, yellow eyes, the owl-girl replies, [ceridwen.speech(Yes, they work here, but they're fully occupied with transporting deliveries from Dominion. They aren't as sociable as I am, so you won't ever see them in the store.)]
+		你说你没有在附近见过其他鸮女，问凯丽德温她的姐妹们是否在这工作。鸮女点点头，继续用她黄色的大眼睛盯着你，回答道，[ceridwen.speech(是的，她们在这工作，但是她们忙着从御城区运送货物。她们不像我那么善于交际，所以你不会在店里见到她们。)]
 	</p>
 	<p>
-		Although the emotionless expression on her anthropomorphic, owl-like face doesn't change, you can tell from a slight shift in the tone of Ceridwen's voice that she's pleased to have been given the opportunity to talk with you about something. With her interest in you not showing any signs of lessening, she continues to silently follow you as you continue on your way through her store... 
+		虽然她那类人形的鸮般的脸上没有任何表情变化，但你可以从凯丽德温稍微变化的语气中听出，她很高兴有机会与你谈论一些事情。对你的兴趣没有丝毫减弱的迹象，她继续默默跟着你穿过商店……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TALK_SOURCES"><![CDATA[
 	<p>
-		As you [pc.walk] past shelves stocked full of all manner of food and drink, you find yourself wondering where it all comes from. Coming to a halt, you turn to face the ever-present figure of Ceridwen, who seems to be convinced that her current duty is to act as your shadow, before asking her where she gets all of this produce from. 
+		当你[pc.walk]过摆满各种食物饮料的货架时，你发现自己很好奇这些东西都是从哪来的。你停下脚步，转身面对凯丽德温，她似乎认为自己现在的职责就是充当你的影子，回答你例如这些东西都是从哪来的问题。
 	</p>
 	<p>
-		[ceridwen.speech(The majority of it comes from Dominion, although the baked goods and dairy produce is all sourced locally,)] she replies. Once again you can't help but be struck by the manner in which the owl-girl's friendly voice is completely at odds with her anthropomorphic face's emotionless expression. Continuing to stare at you with her big, yellow eyes, she explains, [ceridwen.speech(The produce that's from Dominion is transported here by my sisters. Thanks to being able to fly, the journey isn't particularly long for them, and they're able to avoid being attacked by Lunette's daughters. Unfortunately, they can't really carry a large amount at any one time, so it's a never-ending back-and-forth between Elis and Dominion to keep these shelves stocked.)] 
+		[ceridwen.speech(大部分货品来自御城区，不过烘焙食品和乳制品都是本地采购的，)]她回答道。你再次不禁注意到，这只鸮女友善的声音与她人形面孔上毫无表情的神情完全不符。她用那双黄色的大眼睛继续盯着你，解释道，[ceridwen.speech(来自御城区的货物由我的姐妹们运到这里。多亏她们会飞，这段路程对她们来说不算特别长，也能避开露内特的女儿们的袭击。可惜她们一次不能携带太多，所以为了填满这些货架，她们只能在伊利斯和御城区之间不停地来回奔波。)]
 	</p>
 	<p>
-		Thanking the owl-girl for the information, you continue on your way down the aisle. Without making a sound, Ceridwen flaps her huge, white-feathered wings and hops along after you, acting as though her life depends on remaining as close to you as possible...
+		感谢鸮女提供的信息，你继续沿着过道前行。凯丽德温拍打着她巨大的白羽翅，一声不吭地跟在你身后，仿佛她的生命取决于是否能尽可能近地跟紧你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TALK_MICE"><![CDATA[
 	<p>
-		As you reach the end of one of the aisles, you find yourself within sight of the store's counter. Stopping to gesture at it, you ask Ceridwen why all of her employees are mouse-morphs.
+		当你走到其中一条过道的尽头时，发现位于视野中的商店柜台。于是你停下脚步，指着柜台问凯丽德温为什么她的员工都是鼷鼠化形。
 	</p>
 	<p>
-		[ceridwen.speech(Well, that's because they're all part of the same big family, and they were my friends from the farm,)] she says in her usual friendly tone. Quickly realising that she's going to need to explain a little more than that, she continues, [ceridwen.speech(You see, my sisters and I used to live in a large barn on the outskirts of this family's farm. When Lunette's daughters attacked, both our barn and their farmhouse were burnt to the ground...)]
+		[ceridwen.speech(嗯，那是因为它们都属于同一个大家庭，而且它们是我在农场时的朋友，)]她以一贯友善的语气说道。她很快意识到光这样说还不够，需要再多解释一些，于是继续说道，[ceridwen.speech(你看，我和姐妹们以前住在这个家族农场外围的一座大谷仓里。露内特的女儿们来袭时，我们的谷仓和他们的农舍都被烧成了灰烬……)]
 	</p>
 	<p>
-		In a rare display of facial emotion, Ceridwen sorrowfully casts her eyes down to the ground for a moment, before quickly looking back up to gaze into your eyes and continue, [ceridwen.speech(After my sisters and I had earned enough money to set up this store, we asked the mouse-morph family if they'd like to come and work with us. They'd been struggling a lot more than we had, and so they were more than happy to come and work here. They're the best workers I could ask for while I'm around to watch over them, but if I'm not here then they start to panic and can't work...)]
+		凯丽德温罕见地表现出了面部情绪，她悲伤地将目光投向地面，片刻后迅速抬头，凝视着你的眼睛，继续说道，[ceridwen.speech(在我和姐妹们赚够了开店的钱后，我们问鼷鼠化形家族是否愿意来和我们一起工作。他们比我们更要挣扎求生，所以非常乐意来工作。我在的时候，他们是我能找到的最好的工人，但如果我不在，他们就会开始恐慌，无法工作……)]
 	</p>
 	<p>
-		Curious to find out more about this state of affairs, you ask the owl-girl how she manages to overcome this issue.
+		你很想更多地了解这种状况，于是你问鸮女是如何解决这个问题的。
 	</p>
 	<p>
-		[ceridwen.speech(Well, the only way to keep the mouse-morphs calm is for someone strong that they trust to be present at all times,)] she replies. [ceridwen.speech(My sisters are too busy working to transport goods here from Dominion, and the only security guard that I could find who was able to make the mouse-morphs happy completely disappeared without a word a short while ago. So all that's left is for me to stay here twenty-four-seven. I really would like to go home and rest each day, but that's just not possible at the moment...)]
+		[ceridwen.speech(好吧，唯一能让鼷鼠化形冷静的方法是让他们足够信任的强大对象时刻陪在他们身边，)]她回答道，[ceridwen.speech(我的姐妹们都忙着从御城区运货过来，而我能找到的唯一一个能让鼷鼠化形开心的保安不久前也不声不响地消失了。所以我只能二十四小时呆在这里。我真的很想每天都回家休息，但目前这是不可能的……)]
 	</p>
 	<p>
-		With your initial question answered, you wonder what to do next. You could simply continue your shopping, or perhaps you could offer Ceridwen your assistance in finding this missing security guard...
+		问题得到解答后，你思考着接下来该做什么。你可以继续购物，或者向凯丽德温提供帮助，寻找这位失踪的保安……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="LEAVE"><![CDATA[
 	<p>
-		Having finished your business in Ceridwen's store, you set off towards the exit. The owl-girl continues to follow you all the way to the sliding glass doors, where you turn towards her and say goodbye. Raising her wing-like arm, she gives you a little wave and says in her warm, Welsh accent, [ceridwen.speech(Goodbye, [pc.name]. Please do come back soon; you really are a very interesting person...)]
+		在凯丽德温的店里办完事后，你朝出口走去。鸮女跟着你一直走到玻璃推拉门前，你转身向她道别，她举起像翅膀一样的手臂，轻轻挥了挥，然后用她温暖的威尔士口音说，[ceridwen.speech(再见，[pc.name]。请尽快回来；你真是一个非常有趣的人……)]
 	</p>
 	<p>
-		Leaving this slightly-creepy owl-girl behind, you [pc.step] out of her convenience store and head back out into Wall's End, wondering where to go to next...
+		离开这位略显怪异的鸮女，你[pc.step]出她的便利店，回到了墙之尽头，思考着接下来该去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRODUCTION"><![CDATA[
 	<p>
-		Feeling like you've been trapped by this white-feathered owl-girl, you decide that the easiest way out of this awkward situation is to give her what she so clearly wants and introduce yourself to her. Giving Ceridwen your name, you tell her that you've come here to Elis from Dominion on some confidential business, and that you were hoping to buy some supplies from her store.
+		你感觉自己被这个白羽鸮女困住了，并决定摆脱这种尴尬局面的最简方法便是满足她如此明确的要求，向她介绍自己。你告诉凯丽德温你的名字，你从御城区来到伊利斯是为了一些机密事务，并希望从她的商店里购买一些补给品。
 	</p>
 	<p>
-		[ceridwen.speech(Oh, you mean your confidential business with Meraxis?)] Ceridwen casually asks. Anticipating your next question, she hastens to explain, [ceridwen.speech(One of my sisters saw you meeting with Meraxis outside of Dominion. We owl-morphs have excellent eyesight, and she saw the two of you as she flew past at quite some height. Although it's been more than a few years since my sisters and I had the pleasure of meeting Lyssieth's daughter, she's quite a distinctive character, and so was easily recognised.)]
+		[ceridwen.speech(哦，你是说你和梅拉克西丝的机密事务？)]凯丽德温问道。预计到你的下一个问题，她急忙解释，[ceridwen.speech(我的一个姐妹看到你在御城区外与梅拉克西丝会面。我们鸮化形的视力很好，她从很高的地方飞过时看到了你们两个。虽然我和我的姐妹们已经有好几年没能幸运地见过莉西丝的女儿了，但她是个很有特点的人，所以很容易就认出来了。)]
 	</p>
 	<p>
-		Finding it hard not to be impressed by Ceridwen's knowledge of your affairs, you ask her if your association with Meraxis is why she's chosen to approach you.
+		你发现凯丽德温对你的事情了如指掌，这让你很难不对她刮目相看。于是你问她，你与梅拉克西丝的关系是否是她接近你的原因。
 	</p>
 	<p>
-		[ceridwen.speech(That's right,)] she replies, [ceridwen.speech(Someone who secretly meets with a recognised daughter of an elder lilin is someone who's worth watching. Even if it wasn't for that, I believe that I'd still be interested in you, [pc.name]. I can tell that there's something special about you... I hope you don't mind, but I'm going to be keeping a very close eye on you.)]
+		[ceridwen.speech(是这样的，)]她回答道，[ceridwen.speech(一个与莉琳长老之女秘密见面的人值得关注。不过即使不是因为这个，我还是会对你感兴趣，[pc.name]。我能感觉到你是特别的……我会继续密切关注你，希望你不要介意。)]
 	</p>
 	<p>
-		With your introduction now at an end, you soon find out that Ceridwen's words seem to have been spoken in a very literal sense. As you [pc.step] forwards and continue on your way down the aisle, the owl-girl silently flaps her wings and hops along after you, staring at you with her big, yellow eyes the entire time. While the warm tone of her voice has given you confidence in the belief that she's a kind, friendly person, her emotionless, owl-like face, combined with her obsessive desire to stalk you throughout her store, is nothing short of being extremely creepy.
+		随着介绍结束，你很快发现凯丽德温的话似乎是字面意义上的。当你继续沿着过道[pc.step]向前时，鸮女默默地扇动翅膀，跟在你后面跳来跳去，一直用她那双黄色的大眼睛盯着你。虽然她温暖的语调让你相信她是一个善良、友好的人，但她那张毫无表情的鸮般的脸，再加上她跟踪你过整个商店的痴迷欲望，简直让人毛骨悚然。
 	</p>
 	<p>
-		[ceridwen.speech(Just pretend that I'm not here,)] Ceridwen suggests, revealing that she's clearly aware of how her behaviour might be giving you some worry. Doing your best to follow her advice, you try not to think about the two large, yellow eyes that are constantly staring at you as you [pc.walk] through the owl-girl's store...
+		[ceridwen.speech(就当我不存在，)]凯丽德温建议，她显然知道自己的行为会让你有些担心。你尽力听从她的建议，在穿过鸮女的商店时，尽量不去想那对一直盯着你看的黄色大眼睛……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

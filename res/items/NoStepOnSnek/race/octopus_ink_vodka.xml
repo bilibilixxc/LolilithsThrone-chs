@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>200</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Ink Vodka]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Ink Vodkas]]></namePlural>
-		<description><![CDATA[A glass bottle in a minimalistic and entirely black design. The label reads 'Ink Vodka' and depicts a large splotch of the liquid this drink was named after.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[墨汁伏特加]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[墨汁伏特加]]></namePlural>
+		<description><![CDATA[玻璃瓶采用简约的全黑设计。标签上写着 "墨汁伏特加"，并在标签上画了一大块墨水的图案。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 15% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_ICE.getFormattedValue(3)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 25% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]15%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_ICE.getFormattedValue(3)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]25%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM) * 0.15)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_RESISTANCE_ICE, 3)]
 			[#npc.incrementAlcoholLevel(0.25)]
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Ink Vodka, before tilting [npc.her] head back and bringing it up to [npc.her] waiting [npc.lips]. With a gulp, [npc.name] [npc.verb(start)] downing the liquid, discovering that despite its novelty colouration, it's almost completely tasteless.
+		[npc.Name]拧开墨汁伏特加瓶上的瓶盖，然后仰起头将瓶端到[npc.her]等待[npc.lips]前。大口喝下液体后，[npc.name]发现尽管它的颜色新奇，但几乎没有味道。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Ink Vodka, before bringing it up to [npc2.namePos] waiting [npc2.lips]. With a gulp, [npc2.name] [npc2.verb(start)] downing the liquid, discovering that despite its novelty colouration, it's almost completely tasteless.
+		[npc.Name]拧开了墨汁伏特加瓶的盖子，然后将它端到[npc2.namePos]等待[npc2.lips]前。大口喝下液体后，[npc2.name]发现尽管它的颜色新奇但几乎没有味道。
 		]]></otherUse>
 	</useDescriptions>
 

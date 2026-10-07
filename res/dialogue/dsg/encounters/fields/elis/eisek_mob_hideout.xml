@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
-	<scene id ="poster">
+	<scene id="poster">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[A Dragon Poster...]]></title>
+		<title><![CDATA[一张龙的海报……]]></title>
 		<tooltip/>	
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_mob_hideout">POSTER</content>		
@@ -17,17 +17,17 @@
 			<response>	
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Confront mob]]></responseTitle>
+				<responseTitle><![CDATA[对峙暴徒]]></responseTitle>
 				<!-- TODO Add seduction route conditional check: && !pc.isSpellSchoolSpecialAbilityUnlocked(SPELL_SCHOOL_ARCANE) -->
 				<responseTooltip><![CDATA[
-					Follow the directions on the poster and confront the mob that has been harassing Eisek.
+					按照海报上的指引，与骚扰艾瑟克的暴徒对峙。
 					#IF(flags.getSavedLong("elis_eisek_talk_score") >= 4)
-						<br/>[style.colourGood(As you've spent some time getting to know Eisek, you think you'll have a shot at persuading the mob to leave him alone.)]
+						<br/>[style.colourGood(你花了一些时间了解艾瑟克，你认为有机会说服暴徒放过他。)]
 					#ELSE
-						<br/>[style.colourBad(You don't know Eisek that well, so you'll likely have to use force. He may not appreciate the outcome as much.)]
+						<br/>[style.colourBad(你和艾瑟克并不熟，可能要动用武力。他可能不会喜欢这样的结果。)]
 						#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE) < 30
 							&& pc.getAttributeValue(ATTRIBUTE_MAJOR_ARCANE) < 30)
-							<br/>[style.colourTerrible(You probably won't fare very well in your current state...)]
+							<br/>[style.colourTerrible(你目前的状态可能应付不了……)]
 						#ENDIF
 					#ENDIF
 				]]></responseTooltip>
@@ -41,8 +41,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Discard poster]]></responseTitle>
-				<responseTooltip><![CDATA[You don't want to confront the mob right now, but you can do a public service and rip the poster off the wall.]]></responseTooltip>
+				<responseTitle><![CDATA[丢弃海报]]></responseTitle>
+				<responseTooltip><![CDATA[你现在不想与暴徒对峙，但你可以把墙上的海报撕下来。]]></responseTooltip>
 				<nextDialogue><![CDATA[dsg_encounters_fields_elis_eisek_mob_hideout_discard_poster]]></nextDialogue>
 				<secondsPassed/>
 				<effects/>
@@ -50,9 +50,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="discard_poster">
+	<scene id="discard_poster">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Remove poster]]></title>
+		<title><![CDATA[撤下海报]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_mob_hideout">DISCARD_POSTER</content>		
@@ -66,8 +66,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Be on your way.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[上路吧。]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
 				<secondsPassed/>
@@ -76,9 +76,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="confront">
+	<scene id="confront">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Confront the mob]]></title>
+		<title><![CDATA[对峙暴徒]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_mob_hideout">CONFRONT</content>		
@@ -92,12 +92,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Persuade]]></responseTitle>
+				<responseTitle><![CDATA[说服]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getSavedLong("elis_eisek_talk_score") >= 4)
-						You know Eisek. There is no danger to start with.<br/>[style.colourGood(Eisek would probably appreciate you solving this non-violently.)]
+						你了解艾瑟克，没有任何危险。<br/>[style.colourGood(艾瑟克可能会很感激你以非暴力的方式解决。)]
 					#ELSE
-						You don't know Eisek well enough to offer a convincing argument as to why he should be left alone.
+						你和艾瑟克不熟，提不出令人信服的理由让他一个人呆着。
 					#ENDIF
 				]]></responseTooltip>
 				<colour><![CDATA[
@@ -124,12 +124,12 @@
 			<response>	
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Intimidate]]></responseTitle>
+				<responseTitle><![CDATA[恐吓]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE) >= 30)
-						They will leave Eisek alone, or else.
+						他们会放过艾瑟克，否则的话。
 					#ELSE
-						You lack the physique to be able to pull this off...
+						你的体格不足以完成这项任务……
 					#ENDIF
 				]]></responseTooltip>
 				<colour><![CDATA[
@@ -155,12 +155,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Intimidate (Arcane)]]></responseTitle>
+				<responseTitle><![CDATA[恐吓(奥术)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_ARCANE) >= 30)
-						They will get a taste of your arcane prowess if they do not leave Eisek alone.
+						如果他们不放过艾瑟克，就会尝尝你的奥术技艺。
 					#ELSE
-						You don't have enough arcane power to be able to do this...
+						你没有足够的奥术能量来做到这一点……
 					#ENDIF
 				]]></responseTooltip>
 				<colour><![CDATA[
@@ -223,8 +223,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Intimidate?]]></responseTitle>
-				<responseTooltip><![CDATA[They will leave Eisek alone, or uh...]]></responseTooltip>
+				<responseTitle><![CDATA[恐吓？]]></responseTitle>
+				<responseTooltip><![CDATA[他们会放过艾瑟克，或者……]]></responseTooltip>
 				<colour><![CDATA[GENERIC_BAD]]></colour>
 				<nextDialogue><![CDATA[dsg_encounters_fields_elis_eisek_mob_hideout_intimidate_fail]]></nextDialogue>
 				<secondsPassed/>
@@ -235,9 +235,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="persuade">
+	<scene id="persuade">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Persuade the mob]]></title>
+		<title><![CDATA[说服暴徒]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_mob_hideout">PERSUADE</content>		
@@ -251,8 +251,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Your work here is done. Head back out onto the street.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你这里的工作结束了。回到街上去吧。]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
 				<secondsPassed/>
@@ -261,9 +261,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="intimidate">
+	<scene id="intimidate">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Intimidate the mob]]></title>
+		<title><![CDATA[恐吓暴徒]]></title>
 		<tooltip/>
 		<preParsingEffects><![CDATA[
 			[#game.addNPC('fields.ElisAlleywayAttacker', 'dsg_muscle')]
@@ -283,8 +283,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Looks like you're going to have to prove your point!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[看来你得证明你的观点了！]]></responseTooltip>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -297,7 +297,7 @@
 						<enemy leader="true"><![CDATA[dsg_muscle]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="dsg_muscle"><![CDATA[[dsg_muscle.speech(Let's see if you're as strong as you think you are!)] [dsg_muscle.name] shouts.]]></combatant>
+						<combatant id="dsg_muscle"><![CDATA[[dsg_muscle.speech(让我看看你是否像自己想象的那样坚强！)][dsg_muscle.name]喊道。]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 				</combatVariables>
@@ -305,9 +305,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="intimidate_arcane">
+	<scene id="intimidate_arcane">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Intimidate the mob]]></title>
+		<title><![CDATA[恐吓暴徒]]></title>
 		<tooltip/>
 		<preParsingEffects><![CDATA[
 			[#game.addNPC('fields.ElisAlleywayAttacker', 'dsg_muscle')]
@@ -327,8 +327,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Looks like you're going to have to prove your point!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[看来你得证明你的观点了！]]></responseTooltip>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
 				<nextDialogue/>
 				<secondsPassed/>
@@ -341,7 +341,7 @@
 						<enemy leader="true"><![CDATA[dsg_muscle]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="dsg_muscle"><![CDATA[[dsg_muscle.speech(Spell this, spell that. You won't even be able to spell your own name after I'm done with you!) [dsg_muscle.name] shouts.]]]></combatant>
+						<combatant id="dsg_muscle"><![CDATA[[dsg_muscle.speech(讲讲这个，讲讲那个。看我打的你连自己是谁都不知道！)][dsg_muscle.name]叫喊道。]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 				</combatVariables>
@@ -349,9 +349,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="intimidate_won">
+	<scene id="intimidate_won">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Intimidation successful]]></title>
+		<title><![CDATA[恐吓成功]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_mob_hideout">INTIMIDATE_WON</content>		
@@ -365,8 +365,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Your work here is done. Head back out onto the street.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你这里的工作结束了。回到街上去吧。]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
 				<secondsPassed/>
@@ -378,9 +378,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="intimidate_lost">
+	<scene id="intimidate_lost">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Lost the fight]]></title>
+		<title><![CDATA[战斗失败]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_mob_hideout">INTIMIDATE_LOST</content>		
@@ -394,8 +394,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Your did what you could. Head back out onto the street.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你尽力了。回到街上去吧。]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
 				<secondsPassed/>
@@ -407,9 +407,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="intimidate_fail">
+	<scene id="intimidate_fail">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Too weak...]]></title>
+		<title><![CDATA[太弱了……]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_mob_hideout">INTIMIDATE_FAIL</content>		
@@ -423,8 +423,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[You did what you could. Head back out onto the street.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你尽力了。回到街上去吧]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
 				<secondsPassed/>

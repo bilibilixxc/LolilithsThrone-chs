@@ -1,243 +1,242 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
     <!-- Dungeon under Lilaya's mansion: -->
 	
     <htmlContent tag="DUNGEON_ENTRY"><![CDATA[
    	<p>
-        [pc.Stepping] forwards, you enter the secret passageway and make your way down the spiral staircase. The flickering light cast by the wall-mounted arcane torches creates dancing shadows underfoot, and so you're forced to slowly and cautiously descend so as to avoid slipping and taking a tumble. Thankfully, the staircase doesn't go on for too long, and within a few moments you find yourself at the bottom.
+        [pc.Stepping]向前，你进入了秘密过道并沿着螺旋楼梯一路向下。墙上安装的奥术火炬投射出的闪烁光线在脚下形成了舞动的阴影，因此你不得不缓慢而谨慎地走下楼梯，以免滑倒或摔倒。值得庆幸的是，台阶并没有多到离谱，几分钟后你就到达了楼下。
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="STAIRS_UP"><![CDATA[
    	<p>
-		Standing at the bottom of the spiral staircase which leads up to the library, you take a look around at your surroundings. Arcane torches slotted into metal, wall-mounted sconces illuminate not only the stone staircase, but also the narrow passage which leads off into the rest of the dungeon. The walls, floor, and ceiling are all constructed out of the same type of rough-hewn, grey stone blocks, giving the subterranean structure a gloomy, oppressive atmosphere.
+		站在通往图书馆的螺旋楼梯底部，你环顾四周。插在金属烛台上的奥术火把不仅照亮了石楼梯，还照亮了通向地牢其他部分的狭窄通道。墙壁、地面和天花板都是用同一种粗糙的灰色石块建造而成，给这个地下结构带来了阴沉、压抑的氛围。
 	</p>
 	<p>
-        From here you could either head up the spiral staircase to return to the mansion's library, or set off down the passageway and head further into the dungeon...
+        从这里，你可以选择沿着螺旋楼梯返回到庄园的图书馆，或者沿着走廊继续向地牢深处前进……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="STAIRS_UP_EXIT"><![CDATA[
    	<p>
-		Deciding that you've had enough of Lilaya's dungeon, you set off up the spiral staircase to return to the mansion. The wall-mounted arcane torches blow themselves out as you pass, and so by the time that you've reached the top and pushed open the bookcase, all that's left behind you is a gloomy, black abyss.
+		决定不再呆在莉莱雅的地牢里，你沿着螺旋楼梯上楼返回到豪宅。当你经过时，墙上的奥术火炬自动熄灭，所以当你到达顶部并推开书架时，你身后只剩下一片黑暗的深渊。
 	</p>
 	<p>
-		[pc.Stepping] out into the library, you watch as the bookcase swings shut behind you, before wondering what to do next...
+		[pc.Stepping]进入图书馆后，你看着书架在你身后关上，然后想着接下来该做什么……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="STAIRS_UP_GARDEN"><![CDATA[
    	<p>
-		Standing at the bottom of the second spiral staircase that's to be found in Lilaya's dungeon, you take a look around at your surroundings. Arcane torches slotted into metal, wall-mounted sconces illuminate not only the stone staircase, but also the narrow passage which leads off into the rest of the dungeon. The walls, floor, and ceiling are all constructed out of the same type of rough-hewn, grey stone blocks, giving the subterranean structure a gloomy, oppressive atmosphere.
+		站在莉莱雅地牢中的第二个螺旋楼梯底部，你环顾四周。插在金属烛台上的奥术火把不仅照亮了石楼梯，还照亮了通向地牢其他部分的狭窄通道。墙壁、地面和天花板都是用同一种粗糙的灰色石块建造而成，给这个地下结构带来了阴沉、压抑的氛围。
 	</p>
 	<p>
-        A small, bronze plaque fixed to the nearby wall simply states that this staircase provides 'Garden Access'.
+        附近墙壁上固定着一块小小的青铜牌匾，上面简单地写着这个楼梯通往“花园入口”。
 		#IF(flags.hasFlag(FLAG_acexp_dungeon_garden_access_found))
-			 From here you could either head up the spiral staircase to once again exit out into the mansion's garden, or set off down the passageway and head further into the dungeon...
+			从这里，你可以选择走上螺旋楼梯，再次走出庄园的花园，或者沿着走廊继续向地牢深处前进……
 		#ELSE
-			 From here you could either head up the spiral staircase to discover the secret dungeon passage that must be located somewhere in the mansion's garden, or set off down the passageway and head further into the dungeon...
+			从这里，你可以选择沿着螺旋楼梯向上走，去发现位于庄园花园某处的秘密地牢通道，或者沿着走廊继续向地牢深处前进……
 		#ENDIF
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="STAIRS_UP_GARDEN_EXIT"><![CDATA[
    	#IF(flags.hasFlag(FLAG_acexp_dungeon_garden_access_found))
 		<p>
-			Deciding that you've had enough of Lilaya's dungeon, you set off up the spiral staircase to return to the mansion's garden. The wall-mounted arcane torches blow themselves out as you pass, and so by the time that you've reached the top and activated the nearby lever, all that's left behind you is a gloomy, black abyss.
+			你已经厌倦了莉莱雅的地牢，于是你开始沿着螺旋楼梯返回到庄园的花园。当你经过时，墙上的奥术火炬自动熄灭，所以当你到达顶部并激活附近的杠杆时，你身后只剩下一片阴暗的黑深渊。
 		</p>
 		<p>
-			After waiting for a moment while the stone slab slides to one side, you travel up the final few steps to once again find yourself beside the garden's central fountain. Turning around, you watch as the slab slides shut behind you, before looking around and wondering what to do next...
+			在等待片刻后，石板滑向一侧，你走上最后几步，再次发现自己站在花园中央的喷泉旁边。转过身来，你看着石板在你身后滑动关闭，然后四处张望，思考接下来该做什么……
 		</p>
 	#ELSE
 		<p>
-			Deciding that you've had enough of Lilaya's dungeon, you set off up the spiral staircase to discover where exactly this secret passage connects to the mansion's garden. The wall-mounted arcane torches blow themselves out as you pass, and so by the time that you've reached the top and seen the exit is sealed off by means of a large, stone slab, all that's left behind you is a gloomy, black abyss. Thankfully, the final arcane torch beside you remains lit, allowing you to quickly locate a prominent lever that's attached to the wall just in front of you.
+			决定不再呆在莉莱雅的地牢里，你沿着螺旋楼梯上去，想要发现这个秘密通道究竟通向庄园的花园的哪里。当你经过时，墙上的魔法火炬自动熄灭了，所以当你到达顶部并看到出口被一个大石板封住时，你身后只剩下一片阴暗的黑深深的深渊。幸运的是，你身旁的最后一个魔法火炬仍然亮着，让你迅速找到了一个显眼的杠杆，它附在你面前的墙上。
 		</p>
 		<p>
-			Seeing no other means by which this exit could be unsealed, you pull on the lever. Immediately, the stone slab above you starts to rumble and slide to one side, allowing
+			当你看到没有其他方法可以解封这个出口时，你拉动了杠杆。立刻，你上方的石板开始隆隆作响并滑向一侧，让出一条通道。
 			#IF(game.isDayTime())
-				 daylight to stream down into the stairwell.
+				白天的阳光照射进楼梯井。
 			#ELSE
-				 you to look up into the night sky.
+				你抬头望向夜空。
 			#ENDIF
-			 Travelling up the final few steps, you find yourself [pc.stepping] out into the mansion's garden, right beside the central fountain. Turning around, you see that the slab which was blocking your exit forms part of the stone path which surrounds the base of the fountain, and you watch as it automatically slides shut behind you.
+			穿过最后几个台阶，你发现自己[pc.stepping]出庄园的花园，就在中央喷泉旁边。转过身来，你看到阻挡你出口的石板是喷泉底座周围的石板路径的一部分，你看着它自动滑门在你身后关闭。
 		</p>
 		<p>
-			Taking a closer look at the area beside this slab, you find a button that's been cunningly disguised as part of the fountain's decorative stonework. Experimentally pressing this button, you smile in satisfaction as you watch the slab grind open to once again reveal the secret staircase. After you've waited for a moment to make sure that it automatically slides shut, you wonder what to do next...
-		</p>
+			仔细观察这块石板旁边的区域，你发现一个巧妙地伪装成喷泉装饰石工的按钮。试验性地按下这个按钮，当你看到石板磨开，再次露出秘密楼梯时，你满意地微笑着。在等待片刻以确保它自动关闭后，你想知道接下来该怎么做……		</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-	    As you [pc.walk] down the dungeon's narrow passageways, you look around to see that the walls, floor, and ceiling are all constructed out of the same type of rough-hewn, grey stone blocks, giving the subterranean structure a gloomy, oppressive atmosphere. At regular intervals, torches are fitted into wall-mounted, metal sconces. As you approach each one of these torches, some sort of arcane enchantment causes them to splutter and spring to life. Their flickering flames cast dancing shadows down the passageway before you, adding to the dungeon's dingy ambience.
+	当你[pc.walk]沿着地牢狭窄的通道，你四处张望，发现墙壁、地面和天花板都是由同一种粗糙的灰色石块构成的，给这个地下结构带来了阴沉、压抑的氛围。每隔一段距离，就有火把被安装在墙上的金属烛台上。当你靠近一支火把时，某种奥术附魔就会使它们噼啪作响，燃起生命之火。它们摇曳的火焰在你面前的通道上投下跳动的阴影，增添了地牢的昏暗氛围。
 	</p>
 	<p>
-	    Although not as immaculately spotless as the mansion proper, you were told by Rose that she cleans this dungeon on a regular basis, and as such there are none of the cobwebs and dust that you'd otherwise be likely to find.
+	虽然不像庄园那样一尘不染，但是萝丝告诉你她定期清洁这个地牢，因此你不太可能找到蜘蛛网和灰尘。
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="CORRIDOR_NOISE"><![CDATA[
 	<p><i>
 		[style.random(
-		You suddenly hear a little giggle behind you...|
-		A vague moaning sound can be heard coming from somewhere ahead...|
-		The flapping of wings can be heard coming from somewhere behind you...|
-		You can just make out little squeaks and a scratching sound up ahead...|
-		You can hear the sound of dripping water somewhere off in the distance...|
-		The torches seem to grow dim and splutter for a bit, before returning to normal...|
-		All of a sudden, there is a gust of wind and the torches flare brightly for a moment...|
-		The faint, mechanical sounds of cogs and wheels whirring and clanking suddenly echoes through the corridor...
+		你突然听到你身后传来一小阵笑声……|
+		从前方某处传来模糊的呻吟声……|
+		从你身后传来了翅膀拍打的声音……|
+		你只能听到前方传来的细微的吱吱声和刮擦声……|
+		你可以听到远处有滴水的声音……|
+		火炬似乎变得昏暗而闪烁了一会儿，然后恢复正常……|
+		突然间，一阵风吹过，火炬瞬间燃亮……|
+		走廊里突然回荡着微弱的机械声，齿轮和轮子的嗡嗡声和铿锵声……
 		)]
 	</i></p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="ROOM"><![CDATA[
 	<p>
-		At the end of the passageway before you stands a solid wooden door, which unlike the ones leading into the dungeon's cells, lacks a barred window, preventing you from peeking in from the outside. Taking hold of the handle and giving it a tentative turn, you discover that it's unlocked, and so proceed to slowly push it open and venture into the room beyond.
+		在你面前的通道尽头，有一扇坚固的木门。与通向地牢牢房的门不同的是，这扇门没有铁栏窗，无法从外面窥视。你握住门把手，试探性地转动，发现门没有锁，于是慢慢推开门，进入了里面的房间。
 	</p>
 	<p>
-		Once inside, you're able to see that this room is remarkably different from the dungeon's cells. Red velvet drapes, which have been elegantly decorated with intricate floral patterns, cover most of the walls and ceiling. The floor is likewise mostly covered by a luxuriant burgundy rug, although around its edges you can see that the flagstones have been carved and polished to a smooth finish. A large, four-poster bed stands in the centre of the room, which is covered in red satin sheets and half a dozen pillows. Overhead, a circular metal chandelier holds a dozen arcane candles, the light from which is surprisingly enough to illuminate the entire room.
+		你刚刚进入，就看出这个房间与地牢的牢房截然不同。红色天鹅绒窗帘上精美地装饰着复杂的花纹，覆盖了大部分的墙壁和天花板。地板同样被一块奢华的酒红色地毯覆盖，尽管在边缘处可以看到石板已经被雕刻和抛光成光滑的表面。房间中央有一张大号的四柱床，铺着红色的缎子床单，上面还摆放着半打枕头。在上方，一个圆形的金属吊灯悬挂着十二支奥术蜡烛，其光线足以照亮整个房间。
     </p>
 	<p>
-		Turning to look into each corner of the room, you quickly discover that this is no ordinary bedroom. To your left stands a black metal cage, which looks to be just about large enough to fit a person. In the opposite corner, a wooden pillory has been constructed, and behind that a series of whips, ropes, and leather bindings are hanging from a wall-mounted rack.
+		转身看向房间的每个角落，你很快发现这不是一个普通的卧室。在你的左边有一个黑色金属笼子，看起来足以容纳一个人。在对角的角落，有一个木制的颈手枷，后面挂着一系列鞭子、绳子和皮革绑带，都挂在墙上的一个架子上。
 	</p>
     <p>
         #IF(pc.isLewd())
-            There's no doubt about it. This looks like just the place where all kinds of depraved and unspeakable acts are carried out, and your mind starts racing at the endless possibilities. You're sure that your aunt Lily never had anything like this, and you can't help but let out an amused moan as you think about how much kinkier Lilaya is.
+            毫无疑问。这看起来就是各种堕落和难以言喻的行为发生的地方，你的思绪开始飞速奔涌，想象着无尽的可能性。你确定你的莉莉姨妈从来没有做过这样的事情，你不禁发出一声欢笑，想着莉莱雅有多么淫荡。
         #ELSEIF(pc.isInnocent())
-            To your innocent mind, you can't quite imagine what this place is used for. Thinking that it looks like some kind of exhibition of medieval artefacts, you decide that it must be a private museum of some sort. After all, your aunt Lily <i>was</i> a museum curator, and so surely this reality's version of her would also have the same sort of interests.
+            你很天真，无法想象这个地方是用来做什么的。你认为它看起来像中世纪文物的展览，于是你决定它一定是某种私人博物馆。毕竟，你的莉莉姨妈<i>是</i>一个博物馆馆长，所以可以肯定这个世界的她也会有相同的兴趣。
         #ELSE
-            There's no doubt about it. This definitely looks like a sex dungeon. You couldn't quite imagine that Lilaya would have something as depraved as this, but with the evidence right before your eyes, you think that it might be time to reassess how kinky she is.
+            毫无疑问。这绝对看起来像一个性奴隶地牢。你无法想象莉莱雅会有这样堕落的东西，但是有着眼前的证据，你觉得也许是时候重新评估她的变态程度了。
         #ENDIF
 	</p>
 	<p>
-		Over in one of the far corners of the room, you see a familiar-looking bell-pull. Knowing that pulling on it is sure to summon Rose, you wonder whether to call for the cat-girl maid or instead take your leave...
+		在房间的一个角落，你看到一个看起来很熟悉的拉铃。知道拉动它肯定会召唤萝丝，你在思考是召唤这只猫女仆还是离开……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="ROOM_ROSE"><![CDATA[
   	<p>
- 	    Deciding that you'd like to summon Rose to this room, you [pc.step] over to the bell-pull and give it a tug. Although no ringing noise can be heard from where you're standing, the bell-pull is quite clearly working correctly, as after just a couple of minutes Lilaya's cat-girl maid rushes into the room. Performing a little curtsy, she asks, [rose.speech(Do you require my services, [pc.name]?)]
+ 	你决定将萝丝召唤到这个房间里，[pc.step]过去拽住铃索，拉了一下。虽然你站的地方听不到任何铃声，但铃索显然是正常工作的，因为只过了几分钟，莉莱雅的猫女仆就冲进了房间。她微微行了一个屈膝礼，问道：[rose.speech(你需要我的服务吗，[pc.name]？)]
     </p>
 	<p>
 		#IF(!flags.hasFlag(FLAG_acexp_dungeon_sex_revealed))
-			Before you can reply, she gestures towards the nearby pillory, and with a sinister smirk on her face, she asks,
+			在你回答之前，她朝附近的颈手枷示意，并露出邪恶的笑容问道，
 			#IF(pc.hasFetish(FETISH_MASOCHIST)||pc.hasFetish(FETISH_SUBMISSIVE)||pc.hasFetish(FETISH_BONDAGE_VICTIM))
-				 [rose.speech(Perhaps you'd like me to show you a good time? I think I know just the thing for you. You'd really like me to dominate you by putting you in those stocks, wouldn't you?)]
+				[rose.speech(也许你想让我给你带来快乐？我想我知道适合你的事情。你真的很想让我把你放进那些枷锁来支配你，对吗？)]
 			#ELSE
-				 [rose.speech(Perhaps you'd like me to show you a good time? I have something in mind, but I think that you might not like it... How would you feel if I were to put you in those stocks and dominate you?)]
+				[rose.speech(也许你想让我给你带来快乐？我有个主意，但我觉得你可能不喜欢……如果我把你放在那些枷锁里支配你，你会有什么感觉？)]
 			#ENDIF
 		#ELSEIF(!flags.hasFlag(FLAG_acexp_dungeon_sex))
-			Before you can reply, she gestures towards the nearby pillory, and with a sinister smirk on her face, she asks, [rose.speech(Perhaps you'd like me to dominate you in those stocks again?)]
+			在你回答之前，她朝附近的颈手枷示意，并露出邪恶的笑容，问道，[rose.speech(也许你想让我用这些枷锁再支配你一次？)]
 		#ELSE
-			Before you can reply, she warns, [rose.speech(I don't have time to play with you again today. If you want another session in the stocks, it'll have to wait until tomorrow.)]
+			你还没来得及回答，她警告道，[rose.speech(我今天没有时间再和你玩了。如果你想再谈谈这些枷锁的话，就得等到明天。)]
 		#ENDIF
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="TALK_DUNGEON"><![CDATA[
 	<p>
-	    Wanting to know a bit more about this dungeon, you ask Rose for more information about it, noting that it seems quite different from the rest of the mansion, almost as if it was built as an afterthought.
+	你注意到这个地牢和宅邸中的其他部分大不相同，就像是后来才建造的。你想要了解更多关于地牢的事情，便向萝丝询问关于它的其他信息。
     </p>
     <p>
-        [rose.speech(There isn't too much to tell about it,)] Rose answers, before revealing, [rose.speech(Lilaya had this dungeon constructed more or less on a whim, while she was in the middle of an experimental phase. It was all about the atmosphere you see. She wanted a place where she could really get in the mood for... Well, I'll let you use your imagination for that...)]
+        [rose.speech(没什么可说的，)]萝丝先回应，然后才透露道，[rose.speech(莉莱雅或多或少是一时兴起建立的地牢，当时她正处于试验阶段。这就是你所见到的氛围。她想要一个她可以真正进入状态的地方……唔，你可以发挥一下想象力……)]
     </p>
     <p>
-		Pointing out that the many cells and long passageways seem to be a little excessive for a place that was to be used for just Lilaya and Rose, you ask the cat-girl maid if your [lilaya.relation(pc)] ever kept any slaves down here.
+		你指出，对于一个仅供莉莱雅和萝丝使用的地方而言，这些房间和长廊似乎有些过多了。你问猫女仆，你的[lilaya.relation(pc)]是不是曾经在下面养过奴隶。
     </p>
     <p>
-        [rose.speech(The cells were added with the intention of using them to house unruly slaves, yes, although Lilaya never got around to purchasing any slaves,)] Rose explains, before adding, [rose.speech(Oh, and if you hear any strange noises while travelling through the passageways, then there's no need to worry; there are several minor enchantments in place which create those sounds.)]
+        [rose.speech(这些房间是为了关押那些不服管教的奴隶而加建的，没错，尽管莉莱雅从来没有买过任何奴隶。)]萝丝解释道，随后继续说，[rose.speech(对了，如果你在经过这些走廊的时候听见了任何奇怪的声音，不用担心；这些发出响声的地方布有一些小型的魔法。)]
 	</p>
   	<p>
-		Telling Rose that
+		告诉萝丝
 		#IF(flags.hasFlag(FLAG_acexp_dungeon_sounds_heard))
-			 you've heard the noises which she's referring to,
+			你听过她说的响声，
 		#ELSE
-			 you haven't yet heard the noises which she's referring to,
+			你还没听过她指的响声是什么，
 		#ENDIF
-	     you thank her for the information. Politely nodding her head, the cat-girl maid asks, [rose.speech(So, is there anything else I can do for you, [pc.name]?)]
+	你感谢她提供了信息。猫女仆礼貌地点了点头，问道：[rose.speech(所以，我还有什么可以帮你的吗，[pc.name]？)]
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="TALK_ROOM"><![CDATA[
 	#IF(pc.isLewd())
 		<p>
-			Wanting to know everything about the room you currently find yourself standing in, you ask Rose what she can tell you about it, insisting that she reveal all of its lewd and kinky secrets.
+			想要知道关于你现在所处的房间的一切，你问了萝丝她可以告诉你什么，坚持要求她揭露这个房间的所有淫荡又变态的秘密。
 		</p>
 		<p>
-			Although she blushes profusely as she hears you say this, Rose can't help but smirk a little as she answers, [rose.speech(Maybe you should really ask Mistress Lilaya about that... I am not at liberty to discuss such intimate matters.)]
+			听到你这么说，萝丝虽然通红了脸，但还是忍不住笑了笑并回答道：[rose.speech(也许你真的应该问一下莉莱雅主人……我没有讨论这样私密的事情的自由。)]
 		</p>
 		<p>
-			Despite saying this, after pausing to think for a moment, she continues, [rose.speech(I suppose you can easily guess what Mistress Lilaya did in here while she was in her experimental phase. She had quite the desire to play around with bondage, and being locked in those stocks was one of her favourite things...)]
+			尽管这样说，停下来思考一会后，她继续说道，[rose.speech(我认为你可以很容易就猜得出莉莱雅主人在试验阶段在这里做什么。她极度渴望被拘禁着玩弄，把自己锁在这些枷锁里是她最爱之一……)]
 		</p>
 	#ELSEIF(pc.isInnocent())
 		<p>
-			Wanting to know everything about the room you currently find yourself standing in, you ask Rose what she can tell you about it. Thanks to your innocent mind, you can't quite comprehend what the stocks and cage in here are for, and so you ask the cat-girl maid why Lilaya has them in a bedroom.
+			想要知道关于你现在所处的房间的一切，你问了萝丝她可以告诉你什么。由于你天真的想法，你不是很理解这里的枷锁和牢笼是用来做什么的，所以你问了猫女仆为什么莉莱雅在卧室里面放置这些玩意。
 		</p>
 		<p>
-			Taken aback by your innocence, Rose raises her eyebrows and replies, [rose.speech(You can't imagine what we did in here? Well, if that's the case, it's not my place to say... You should really ask Mistress Lilaya about it.)]
+			被你的纯洁惊了一下，萝丝挑了挑眉，回应道，[rose.speech(你意识不到我们在这里做什么？好吧，如果是这种情况，那就不是我该说的了……你真应该问问莉莱雅主人。)]
 		</p>
 		<p>
-			Unsatisfied by Rose's answer, you insist that she tell you, and so after letting out a sigh, she reveals, much to your embarrassment, [rose.speech(Mistress Lilaya liked to be locked in the stocks and punished in an erotic manner. She had quite the desire to play around with bondage while she was in her experimental phase.)]
+			不满于萝丝的回答，你坚持让她告诉你，所以在一声长叹之后，她说出了让你非常尴尬的话，[rose.speech(莉莱雅主人喜欢被锁在枷锁里，然后被很色情地惩罚。在她的试验阶段，她非常喜欢被拘禁起来玩弄。)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to know everything about the room you currently find yourself standing in, you ask Rose why there's a sex dungeon under Lilaya's mansion.
+			想要知道关于你现在所处的房间的一切，你问了萝丝为什么在莉莱雅的府邸下面有这样的淫欲地牢。
 		</p>
 		<p>
-			Although she blushes profusely as she hears you say this, Rose can't help but smirk a little as she answers, [rose.speech(Maybe you should really ask Mistress Lilaya about that... I am not at liberty to discuss such intimate matters.)]
+			听到你这么说，萝丝虽然通红了脸，但还是忍不住笑了笑并回答道：[rose.speech(也许你真的应该问一下莉莱雅主人……我没有讨论这样私密的事情的自由。)]
 		</p>
 		<p>
-			Despite saying this, after pausing to think for a moment, she continues, [rose.speech(I suppose you can easily guess what Mistress Lilaya did in here while she was in her experimental phase. She had quite the desire to play around with bondage, and being locked in those stocks was one of her favourite things...)]
+			尽管这样说，停下来思考一会后，她继续说道，[rose.speech(我认为你可以很容易就猜得出莉莱雅主人在试验阶段在这里做什么。她极度渴望被拘禁着玩弄，把自己锁在这些枷锁里是她最爱之一……)]
 		</p>
 	#ENDIF
     <p>
-        With that being said, Rose lets out a wistful sigh and continues, [rose.speech(Sadly, Mistress Lilaya's interest in this room has waned. She spends all of her time on arcane research these days, to the exclusion of most other activities.)]
+        随着这个事情说出来，萝丝伤感的叹了口气，继续说道，[rose.speech(遗憾的是，莉莱雅主人对这个房间的兴趣已经减退了。这些天她把所有的时间都花在了奥术上，其他活动基本都不参与了。)]
     </p>
   	<p>
-	    Performing a polite curtsy, the cat-girl maid concludes your conversation by asking, [rose.speech(Is there anything else I can do for you, [pc.name]?)]
+	猫女仆礼貌地行了个屈膝礼，用询问结束了你的对话，[rose.speech(还需要我为你做什么吗，[pc.name]？)]
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="SEX_START"><![CDATA[
 	<p>
-		Knowing that Rose has a dominant, sadistic streak, you tell her that the thought of being at her mercy down here in this dungeon is turning you on. A wicked smirk quickly settles on the cat-girl's face as she hears you say this, and in a stern tone very much unlike her usual voice, she demands, [rose.speech(Tell me more, [pc.name]. What dirty thoughts are you having about me?)]
+		了解到萝丝是一个控制狂和虐待狂之后，你告诉了她，自己一想到可以在地牢里面被她随意玩弄就性欲大发的事情。当听见你说这个，一丝邪恶的笑容迅速挂在了猫女仆的脸上，然后她用和平常很不一样的严厉语气对你命令道，[rose.speech(再说一点，[pc.name]。你对我还有什么下流想法？)]
 	</p>
 	<p>
-		Rose's reaction serves to make you even more aroused, and so you quickly tell her that you were imagining how hot it would be for her to dominate you and use you as her submissive fuck-toy. A predatory gleam appears in the cat-girl's [rose.eyeColour] eyes as you say this, and in a harsh tone she dominantly orders, [rose.speech(You are to strip naked and kneel before me! Be quick about it, I don't have all day!)]
+		萝丝的反应让你变得更为兴奋，然后你光速地告诉她，你正在想象她控制了你并且把你当作她的下贱的肉便器的景象。当你说出这句话的时候，猫女仆[rose.eyeColour]的眼睛里划过一道侵略性的目光，并且用极其严厉的支配语气命令你道，[rose.speech(给我脱干净跪下！快点，我可没那么多时间！)]
 	</p>
 	<p>
-   	    Finding yourself unable to refuse the cat-girl's command, you hastily do as she says and remove all your clothing, before dropping down onto the floor before her. Strutting over to the nearby stocks, Rose snaps her fingers and points to it, ordering, [rose.speech(Crawl over here and place your head and [pc.hands] through the holes. Do it quickly!)]
+   	发现自己难以拒绝猫女仆的命令，你连忙按照她的要求去做，脱掉了自己所有的衣服，在她面前匍匐下来。阔步走向附近的枷锁，萝丝打了个响指然后指着它命令道，[rose.speech(爬过去，把头和[pc.hands]伸进去。给我快点！)]
 	</p>
 	<p>
-	    Hurrying to obey, you crawl over to the stocks and willingly slide your head and [pc.arms] through the holes. Dropping the device's upper board shut, Rose slides a large lock into position and snaps it closed, locking you in place. She then proceeds to take off her maid's dress, panties, and bra, before grabbing a large pink strap-on from a nearby chest and fastening it in place with well-trained motions. Stepping around in front of the stocks, she evilly grins down at you and teases, [rose.speech(This position suits you, [pc.name]. Completely at my mercy... I wonder how I'll use you...)]
+	连声诺诺，你爬向了枷锁，欣然地把自己的头和[pc.arms]滑进洞里。把枷锁合上之后，萝丝放好大锁并且扣上了它，把你锁好了。她随后开始脱掉自己的女仆裙、胖次和奶罩，之后从附近的箱子里掏出一个巨大的粉色皮带，用十分熟练的动作把它拴好。绕着枷锁走来走去，她对你邪恶地露齿而笑，然后挑逗到，[rose.speech(这个姿势很适合你，[pc.name]。完全任我摆布……我要想想该怎么好好地玩你……)]
 	</p>
 	<p>
-		Strutting around behind you, the sadistic cat-girl delivers a ruthlessly-harsh slap to your exposed rear-end, causing you to let out a shocked cry. Laughing in amusement at your response, Rose slaps her pink strap-on against your ass and moans, [rose.speech(I'm going to enjoy this, you submissive little slut!)]
+		在你面前粗犷地走来走去，这个性虐猫女突然给你屁股一记狠狠的巴掌，让你发出了惊叫。愉悦地嘲笑着你的反应，萝丝用她的粉色皮带对着你的屁股就是一顿抽，爽道，[rose.speech(我要爱上这个了，你这下贱的母狗！)]
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="AFTER_SEX"><![CDATA[
    	<p>
-		Having had her fun, Rose quickly gets her clothing back in order, and after unlocking the stocks, she smirks at you and teases, [rose.speech(I hope you had as much fun as I did, [pc.name]. We can do this again if you'd like, but not today; I have far too much housekeeping work to be getting on with.)]
+		在玩尽兴之后，萝丝快速穿好自己的衣服，然后解开了枷锁，她对你笑了笑，挑逗道，[rose.speech(我希望你玩的和我一样开心，[pc.name]。如果你想的话，我们可以再来一次，不过今天就算了；我还有很多家务活没做呢。)]
 	</p>
 	<p>
-		With that, Rose struts out of the room, leaving you to recover on your own. Gathering all of your belongings, you spend a moment in which to recover from Rose's treatment, before standing up and preparing to continue on your way...
+		说完这个，萝丝走出了房间，让你自己恢复去了。收好了所有的东西，你花了点时间从萝丝的虐待中恢复了过来，然后站起来准备继续走下去了……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
 </dialogue>

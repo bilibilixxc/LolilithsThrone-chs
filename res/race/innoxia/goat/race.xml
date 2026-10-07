@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_goat</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[goat-morph]]></name>
-	<namePlural><![CDATA[goat-morphs]]></namePlural>
+	<name><![CDATA[山羊化形]]></name>
+	<namePlural><![CDATA[山羊化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[goat]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[山羊]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[goats]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[山羊]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[goat]]></defaultTransformName>
+	<defaultTransformName><![CDATA[山羊]]></defaultTransformName>
 	
 	<colour>innoxia_goat</colour>
 	

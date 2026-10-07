@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>25</value>
@@ -9,17 +9,17 @@
 		<oneShotWeaponChanceToRecoverAfterTurn>75</oneShotWeaponChanceToRecoverAfterTurn>
 		<oneShotWeaponChanceToRecoverAfterCombat>100</oneShotWeaponChanceToRecoverAfterCombat>
 		
-		<determiner><![CDATA[a]]></determiner>
-		<name appendDamageName="false"><![CDATA[tennis ball]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[tennis balls]]></namePlural>
-		<description><![CDATA[An air-filled ball made out of tough rubber that's designed for use in the sport of tennis. It's covered in a fibrous felt, and has a white band running around it in an oval, curvilinear fashion.]]></description>
-		<attackDescriptor>throw</attackDescriptor>
+		<determiner><![CDATA[一颗]]></determiner>
+		<name appendDamageName="false"><![CDATA[网球]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[网球]]></namePlural>
+		<description><![CDATA[一种由坚韧橡胶制成的充气球，专为网球运动而设计。它被纤维毡覆盖，周围有一条白色的带子，呈椭圆曲线状。]]></description>
+		<attackDescriptor><![CDATA[扔]]></attackDescriptor>
 		<attackDescriptionPrefix>throw tennis ball at</attackDescriptionPrefix>
-		<attackTooltipDescription>Throw the tennis ball at [npc2.name].</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[向[npc2.name]扔网球。]]></attackTooltipDescription>
 		<rarity>COMMON</rarity>
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] tennis ball and [npc.verb(prepare)] to throw it.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] tennis ball away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]抓起[npc.her]手里的网球并准备扔出去。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]将[npc.her]的网球收起来。]]></unequipText>
 		
 		<imageName>tennis_ball.svg</imageName> 
 		<imageEquippedName/>
@@ -39,7 +39,7 @@
 		
 		<effects/>
 		<extraEffects>
-			<effect><![CDATA[[style.colourExcellent(Subdues)] [style.colourTfGreater(greater)] [style.colourDog(dog-morphs)]]]></effect>
+			<effect><![CDATA[[style.colourExcellent(压制)][style.colourTfGreater(变大)][style.colourDog(犬化形)]]]></effect>
 		</extraEffects>
 		
 		<onHitEffect><![CDATA[
@@ -79,25 +79,25 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Hurling [npc.her] tennis ball at [npc2.name], [npc.name] [npc.verb(manage)] to hit [npc2.herHim] square in the chest!
+		[npc.Name]向着[npc2.name]丢出了网球，击中了[npc2.herHim]的胸口正中！
 		]]></hitText>
 		<hitText><![CDATA[
-		Throwing [npc.her] tennis ball at [npc2.name], [npc.name] [npc.verb(manage)] to strike [npc2.herHim] on the [npc.arm(true)]!
+		[npc.Name]把网球向着[npc2.name]丢出去，击中了[npc2.herHim]的[npc.arm(true)]！
 		]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(launch)] [npc.her] tennis ball at [npc2.name] and [npc.verb(succeed)] in hitting [npc2.herHim]!
+		[npc.Name]快步上前，用网球投向[npc2.name]，成功击中了[npc2.herHim]！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Hurling [npc.her] tennis ball at [npc2.name], [npc.name] [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.Name]向着[npc2.name]丢出了网球，但没能命中！
 		]]></missText>
 		<missText><![CDATA[
-		Throwing [npc.her] tennis ball at [npc2.name], [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]把网球向着[npc2.name]丢出去，却没能命中目标，懊恼地叫了一声！
 		]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(launch)] [npc.her] tennis ball at [npc2.name], but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]快步上前，用网球投向[npc2.name]，但却丢歪了！
 		]]></missText>
 	</missDescriptions>
 	

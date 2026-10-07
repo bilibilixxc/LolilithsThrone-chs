@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- COURTYARD -->
 	
 	<htmlContent tag="COURTYARD"><![CDATA[
 	<p>
-		Separating the gateway from the fortress's wooden keep, there's a deserted courtyard, which has a very militarised feel to it. Numerous straw dummies are lined up in front of the far-side wall, with all but one missing a limb or two. 
+		在大门和要塞的木制主楼之间，有一个废弃庭院，给人一种军事化的感觉。在远处的墙前面，许多稻草假人排成一排，除了一个例外，他们都缺失了部分肢干。
 		#IF pc.hasTraitActivated(PERK_OBSERVANT)
 		#THEN
-		 Thanks to your observant nature, you're able to pick up on the fact that the damage they've sustained looks to have been caused by a bladed weapon, and, lacking any obvious burn, freeze, or corrosive marks, you deduce that the one practising their sword-work has a blade that deals physical damage.
+		凭借敏锐的观察力，你发现这些稻草人受到的伤害似乎是由有刀刃的武器造成的。而且，你推断这些稻草假人只是被用来练习普通的物理剑术，因为没有明显的烧伤、冻结或腐蚀的痕迹。
 		#ELSE
-		 You assume that the one who set up, and subsequently destroyed, these dummies must be the leader of this keep, who obviously is in possession of a bladed weapon.
+		你认为使用这些假人练习剑术的人就是这个要塞的首领，显然，他拥有一把带刃的武器。
 		#ENDIF
 	</p>
 	<p>
-		Over in one corner of the courtyard, a row of archery targets have been set up; their bright rings add a splash of colour to the otherwise drab and grey surroundings. Although there are no stray arrows in sight, the conspicuous burn marks scarring their surface inform you that they must, at one time, have seen regular use as a focal point for arcane archery practice.
+		院子的一角架着一排靶子，其明亮的光环为原本单调的灰色环境增添了一抹色彩。虽然看不到流箭，但那表面上明显的烧伤痕迹则告诉你，这些靶子经常被用作奥术弓箭练习的目标。
 	</p>
 	<p>
-		In the opposite corner to these targets, sits the main keep. Being of significantly better construction than the perimeter wall, you find yourself thinking that the leader of this fortress must have put all of their construction efforts into making this structure as presentable as possible. With the framework made primarily out of dark wooden boards, and the areas in-between covered with very oriental-looking paper sheeting, this solitary building strongly reminds you of Japanese architecture. 
+		主楼坐落在靶子对面的角落。它的结构比周边的城墙要好得多，你在想要塞的主人一定是把所有的努力都投入到建造以及美化这座主楼。这座孤独的建筑，框架主要由深色木板制成，中间的区域覆盖着富有东方色彩的纸张，有浓厚的日式建筑风格。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_FORTRESS_FLY_EXIT"><![CDATA[
 	<p>
-		While the perimeter wall's hazardous construction prohibits anyone from climbing over it, there's nothing stopping you from utilising your ability to fly in order to get to the other side. Breaking out into a short sprint, you quickly launch yourself into the air, before flying over the defensive barrier and swooping back down to land on the floor of the cavern beyond.
+		尽管外围墙的危房制止了有人产生翻越的想法，但这可没法阻止你飞过去。你短暂冲刺，迅速滞空，然后飞越防御障碍物，再俯冲着降落在远处洞窟的地面上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -35,44 +35,44 @@
 	
 	<htmlContent tag="KEEP"><![CDATA[
 	<p>
-		Thanks to the builders' liberal use of translucent paper in place of solid walls, the keep's arcane lighting is able to shine out to cast a pale golden glow on the floor and walls of the fortress's courtyard.
+		多亏了建造者使用半透明的纸来代替坚固的墙壁，主楼的奥术灯光能够在要塞庭院的地面和墙壁上映出淡金色的光芒。
 	</p>
 	<p>
-		Illumination isn't the only thing that's escaping through the building's thin walls, for as you approach the sliding doors before you, gasps and short rounds of applause can be heard coming from within the keep. Although these voices are higher-pitched and clearly belonging to imps, a fourth, deep [npc.masculine] voice occasionally cuts their praise short, and you find yourself thinking that [npc.she] sounds a lot more ominous than [npc.her] companions.
+		通过这半透明的薄纸透出来出来的不仅仅是光线，当你走近面前的滑动门时，可以听到从主楼里传来的喘息声和短暂的掌声。你清楚地听到了小恶魔尖细的声音，但一个低沉的[npc.masculine]嗓音偶尔会打断他们的阿谀奉承。听[npc.she]的语调，你觉得[npc.she]比其他人更加棘手。
 	</p>
 	<p>
-		If you were to enter this keep, the occupants would undoubtedly notice you almost immediately. You should be prepared for the worst, and expect to not only have to fight three imps, but also the leader of the gangs which roam the surrounding tunnels...
+		如果你进入主楼，毫无疑问，把守者会立刻发现你。你得做好最坏的打算，不止要打过这三只小恶魔，还要打过在附近隧道里游荡的帮派头头……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_DEFEATED"><![CDATA[
 	<p>
-		Having defeated [impMaleLeader.name], the [impMaleLeader.race] who led the imp gangs roaming the surrounding tunnels, [impMaleLeader.her] keep is now completely deserted. The sliding doors before you have been left wide open, and, taking a cursory glance inside, you see that there's absolutely nothing within that would be of interest to you. There's nothing more to do here except turn around and go back the way you came...
+		你击败了[impMaleLeader.name]。那个带领小恶魔们在周围隧道里游荡的[impMaleLeader.race]，[impMaleLeader.her]现在仓皇而逃。你面前的滑动门是大开着的，你匆匆瞥了一眼里面，发现里面完全没有你感兴趣的东西。在这里没有什么可做的了，你转身往回走……
 	</p>
 	<p>
 		#IF pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_2_B_SIRENS_CALL)
 		#THEN
-			[style.italicsMinorBad(You get the feeling that [impMaleLeader.name] will return to reclaim [impMaleLeader.her] fortress sooner or later!)]
+			[style.italicsMinorBad(你会觉得[impMaleLeader.name]迟早会回来夺回[impMaleLeader.her]的要塞！)]
 		#ELSE
-			[style.italicsBad(You get the feeling that [impMaleLeader.name] will not be back until you've dealt with the Dark Siren!)]
+			[style.italicsBad(你会觉得[impMaleLeader.name]在你解决暗夜塞壬之前，都不会再回来了！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_PACIFIED"><![CDATA[
 	<p>
-		Thanks to the builders' liberal use of translucent paper in place of solid walls, the keep's arcane lighting is able to shine out to cast a pale golden glow on the floor and walls of the fortress's courtyard.
+		多亏了建造者使用半透明的纸来代替坚固的墙壁，主楼的奥术灯光能够在要塞庭院的地面和墙壁上映出淡金色的光芒。
 	</p>
 	<p>
-		Illumination isn't the only thing that's escaping through the building's thin walls, for as you approach the sliding doors before you, gasps and short rounds of applause can be heard coming from within the keep. You can hear the distinctive, deep voice of [impMaleLeader.name] as [impMaleLeader.she] occasionally cuts [impMaleLeader.her] three alpha-imp guards' praise short.
+		这半透明的薄纸透出来的不仅仅是光线，当你走近面前的滑动门时，可以听到从主楼里传来的喘息声和短暂的掌声。你可以听到[impMaleLeader.name]独特而低沉的声音，因为[impMaleLeader.she]偶尔会打断[impMaleLeader.her]的三名阿尔法小恶魔护卫的讨好奉承。
 	</p>
 	<p>
-		As [impMaleLeader.name] no longer considers you a threat, you could enter the keep without risking a fight...
+		[impMaleLeader.name]现在不再认为你有威胁，你可以不用冒着战斗的风险进入主楼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -80,136 +80,136 @@
 	
 	<htmlContent tag="KEEP_ENTRY"><![CDATA[
 	<p>
-		Stepping up to the keep's paper doors, you're pleased to discover that there's no way to lock them, and, sliding them aside, you step forwards into the building. You see that the interior of the structure is one big open hall, with the polished, perfectly-level wooden flooring broken only by a series of dark, carved wooden beams which run around the edge of the room and hold up the ceiling. Numerous arcane-powered lanterns are fixed to these pillars, which cast a light golden glow over the curious display in the middle of the room.
+		走到主楼的纸门前，你高兴地发现纸门是无法被上锁的。你把它们推到一边，径直走进建筑。可以看到，建筑的内部是一个铺着光滑木地板的开放大厅，精心雕琢的深色木梁鳞次栉比，这些木梁环绕着开阔的大厅边缘，支撑着天花板。大厅的柱子上固定着许多奥术驱动的灯笼，淡薄的金色光芒洒落在房间中央奇怪的展品上。
 	</p>
 	<p>
-		In the very centre of the hall, the four occupants of this fortress are gathered around a series of thick, upright bamboo poles, several of which have been sliced to pieces. While the three masculine alpha-imps are much the same as the guards at the gate, their leader is a muscular red-skinned incubus, who, apart from the white cloth wrapping around his hands and torso, is clad only in very oriental-looking, black, skirt-like leggings. Two red horns point out from his forehead, and as he turns to see who's entered his home, you see that his messy, black, shoulder-length hair is framing a very rugged, handsome face. As his yellow eyes lock on to yours, he swipes the dangerous-looking arcane katana in his hands to one side, before sheathing it in the decorative scabbard at his waist. Placing his hands on his hips, the incubus's huge pecs rise and fall as he booms, [npc.speech(What have we here, hmm?! A new challenger come to test [npc.namePos] mettle?!)]
+		在大厅的正中央，要塞的四名居住者聚集在一排壮硕挺拔的竹竿周围，其中有几根已经被砍成了碎片。三个男性阿尔法小恶魔和门口的守卫差不多，而他们的首领则是一个肌肉发达的红皮淫梦魔，除了双手和躯干上缠着白布外，身上只穿着极具东方特色的黑色剑道袴。他的额头上长着两根红角，当他转过身来看看是谁闯入时，你看见他凌乱的黑色齐肩长发衬托出一张粗犷英俊的脸。他那双黄色的眼睛紧紧盯着你，把手中那把看起来很危险的奥术武士刀往向外一撇，然后收入腰间带有装饰的刀鞘里。他背着手，巨大的胸肌随着他的吼声起伏：[npc.speech(这是谁，嗯？又有一个新的挑战者来测试我[npc.namePos]的实力？！)]
 	</p>
 	<p>
-		As the incubus, who you now know is called [npc.name], says this, you notice that he has an additional, smaller sword fastened at his waist, and you realise that the sounds you heard while outside the keep were of this swordsman testing the power of his two blades on the unfortunate poles of bamboo standing behind him. Impatient to hear who you might be, [npc.name] doesn't give you enough time to answer, and quickly continues, [npc.speech(None who enter my dojo uninvited may be permitted to leave without being duly punished. Fifteen years have I spent training with the youko of the Shinrin Highlands. You stand no chance against my katana and I. Submit to me!)]
+		那个自称[npc.name]的淫梦魔这么说的时候，你注意到他的腰上还有一把胁差，明白了主楼外面听到的声音是因为这个剑客在用他身后的竹竿试刀。[npc.name]没有耐心去询问你的身份，不给你回答时间便迅速补充道：[npc.speech(我的道场可不会让不请自来的闯入者安全脱身的！我花了整整十五年的时间和心林高地的妖狐一起训练，你是敌不过我和我的武士刀的。束手就擒吧！)]
 	</p>
 	<p>
-		As he says this, the incubus places one hand on the grip of the larger of his two swords, and readies himself for a fight. The three alpha-imps rush to back their leader up, and you realise that you only have a moment in which to either defuse the situation, or ready yourself for combat...
+		话音刚落，淫梦魔紧握两把刀中的太刀，严阵以待。三个阿尔法小恶魔紧随首领身后支援。抉择时间紧迫，你要么缓和局势，要么准备战斗……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_RETURN"><![CDATA[
 	<p>
-		Once again sliding the keep's paper doors aside, you step forwards into the building. The hall beyond appears much as it did the last time you were here, with the many pillar-mounted arcane lanterns casting a soft golden glow over both the polished, perfectly-level wooden flooring, as well as the bamboo 'test cutting' setup in the middle of the room.
+		你再次推开主楼的纸门，进入建筑。远处的大厅看起来和你上次来这里时差不多，柱子上的奥术灯笼在光滑的木地板和房间中央的试斩台上投下柔和的金色光芒。
 	</p>
 	<p>
-		In the very centre of the hall, you spot the familiar occupants of [npc.namePos] dojo gathered around the bamboo poles. The [npc.race] [npc.himself] is the first to notice your arrival, and, sheathing his sword and placing his hands on his hips, he booms, [npc.speech(Back again, hmm?! You stand no chance against me!)]
+		在大厅的正中央，你可以看到熟悉的[npc.namePos]道场成员聚集在竹竿周围。[npc.race]首先注意到你的到来，他收刀入鞘，双手叉腰，大声喊道：[npc2.speech(又回来了，嗯？你毫无胜算！)]
 	</p>
 	<p>
-		As he says this, the [npc.race] places one hand on the grip of the larger of his two swords, and readies himself for a fight. The three alpha-imps rush to back their leader up, and you realise that you only have a moment in which to either defuse the situation, or ready yourself for combat...
+		话音刚落，[npc.race]握住两把刀中较大的那把刀，严阵以待。三个阿尔法小恶魔紧随首领身后支援。抉择时间紧迫，你要么缓和局势，要么准备战斗……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_PACIFIED"><![CDATA[
 	<p>
-		Once again sliding the keep's paper doors aside, you step forwards into the building. The hall beyond appears much as it did the last time you were here, with the many pillar-mounted arcane lanterns casting a soft golden glow over both the polished, perfectly-level wooden flooring, as well as the familiar bamboo setup in the middle of the room.
+		再次推开主楼的纸门，你向前迈进了建筑。外面的大厅和你上次来时一样，许多安装在柱子上的奥术灯在光洁平整的木地上和房间中央熟悉的竹制摆设上投射出柔和的金色光芒。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_PACIFIED_DEMAND_BREEDING"><![CDATA[
 	<p>
-		In the very centre of the hall, you spot the familiar occupants of [npc.namePos] dojo gathered around the bamboo poles. The [npc.race] [npc.himself] is the first to notice your arrival, and, sheathing his sword and placing his hands on his hips, he booms, [npc.speech(Back again, hmm?! And with a flat stomach?! Good! I was just thinking that I need a break, so come over here and let me put some imps in that belly of yours!)]
+		在大厅的正中央，你可以看到熟悉的[npc.namePos]的道场成员聚集在竹竿周围。[npc.race]首先注意到你的到来，他收刀入鞘，双手叉腰，向你大声喊道：[npc.speech(又回来了，嗯？！你的肚子怎么这么平？！那来的正好，我刚才还在想是不是要休息一下，现在过来吧，我来让你怀上一堆小恶魔，搞大你的肚子！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_PACIFIED_DEMAND_IMPS"><![CDATA[
 	<p>
-		In the very centre of the hall, you spot the familiar occupants of [npc.namePos] dojo gathered around the bamboo poles. The [npc.race] [npc.himself] is the first to notice your arrival, and, sheathing his sword and placing his hands on his hips, he booms, [npc.speech(Back again, hmm?! But it looks like you're not one to be bred... Damn! Well, I was just thinking that I need a break anyway, so come over here and entertain my imps while I rest!)]
+		在大厅的正中央，你可以看到熟悉的[npc.namePos]道场成员聚集在竹竿周围。[npc.race]首先注意到你的到来，他收刀入鞘，双手叉腰，大声喊道：[npc.speech(又回来了，嗯？但你的肚子看起来已经塞的鼓鼓的了……该死！也好，反正我也需要休息一下。在我休息的时候，过来款待一下我的小恶魔们吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_PACIFIED_LEAVE"><![CDATA[
 	<p>
-		Not wanting to have sex right now, you quickly blurt out, [pc.speech(Ah, sorry, [npc.name], I was just checking everything was ok. I've got to go now!)]
+		你暂时不想做爱，马上推辞道，[pc.speech(啊，对不起，[npc.name]，我只是看下情况如何，没事就先走了！)]
 	</p>
 	<p>
-		Ignoring the booming admonishment that's shouted after you in response, you quickly turn your back on [npc.name] and [npc.her] imps, and make haste as you exit [npc.her] dojo...
+		无视[npc.name]和[npc.her]的小恶魔们的不满的大声警告，你迅速离开道馆……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_PACIFIED_REPEAT_SEX"><![CDATA[
 	<p>
-		Obediently doing as you're told, you hurry over to where [npc.name] is standing, and drop down onto your knees before [npc.herHim]. Smirking down at you, the [npc.race] raises [npc.her] voice so that [npc.she] can be heard over the gleeful chatter coming from [npc.her] imp guards, and commands, [npc.speech(So, you know your place! Good! Now, on your back. Let's get you bred.)]
+		你乖乖地按照命令去做，快步走到[npc2.name]站的地方，跪在[npc2.herHim]的面前。[npc2.race]朝你坏笑，[npc2.her]的小恶魔守卫正在愉快地聊天。为了确保你能听清，[npc2.her]提高了声音，命令道：[npc2.speech(很好，你很清楚你该做什么！现在，乖乖躺好，我要把你干到怀孕。)]
 	</p>
 	<p>
-		Wanting to please [npc.name], you once more do as you're commanded, and, lying back, you #IF(pc.hasLegs())spread your [pc.legs]#ELSEpresent yourself#ENDIF and beg, [pc.speech(Please, give me your strong seed!)]
+		为了取悦[npc.name]，你再一次按照命令去做。你后仰#IF(pc.hasLegs())张开[pc.legs]#ELSE展示着自己#ENDIF，乞求着：[pc.speech(求求你，把种子射进来！)]
 	</p>
 	<p>
-		Kneeling down #IF(pc.hasLegs())between your [pc.legs]#ELSEbefore you#ENDIF, the [npc.race] shuffles forwards to bump the rapidly-hardening bulge in [npc.her] crotch against your groin, and bellows, [npc.speech(Oh, you'll be getting it alright!)]
+		[npc.race]跪在你的#IF(pc.hasLegs()) [pc.legs]中间#ELSE面前#ENDIF，缓慢地移向你，[npc.her]迅速勃起的胯部抵在你的腹股沟上，大声说道：[npc.speech(别担心，你马上就会得到它的！)]
 	</p>
 	<p>
-		Letting out a happy [pc.moan], you prepare to get bred by [npc.namePos] [npc.cockSize] cock...
+		你发出愉悦的[pc.moan]，你已经迫不及待去容纳[npc.namePos][npc.cockSize]的肉棒了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_PACIFIED_REPEAT_SEX_IMPS"><![CDATA[
 	<p>
-		Obediently doing as you're told, you hurry over to where [npc.name] is standing, and drop down onto your knees before [npc.herHim]. Smirking down at you, the [npc.race] raises [npc.her] voice so that [npc.she] can be heard over the gleeful chatter coming from [npc.her] imp guards, and commands, [npc.speech(So, you know your place! Good! Now, on your back, and do your best to satisfy my guards.)]
+		你听从命令，快步走到[npc.name]身前跪下。[npc2.race]朝你坏笑，[npc2.her]的小恶魔守卫正在愉快地聊天。为了确保你能听清，[npc2.her]提高了声音，命令道：[npc2.speech(很好，你很清楚你该做什么！现在，乖乖躺好，努力取悦我的小恶魔们。)]
 	</p>
 	<p>
-		Wanting to please [npc.name], you once more do as you're commanded, and, lying back to present yourself to the imps, you look over at them and whine, [pc.speech(Come on, fuck me!)]
+		为了取悦[npc.name]，你继续听从命令。你后仰#IF(pc.hasLegs())张开[pc.legs]#ELSE展示着自己#ENDIF，乞求着：[pc.speech(快来上我吧！)]
 	</p>
 	<p>
-		Quickly moving forwards to surround you, the three alpha-imps start groping and squeezing your body, with the one#IF(pc.hasLegs()) between your [pc.legs]#ELSEat your groin#ENDIF sneering, [npc2.speech(Mmm, yeah, you're gonna love my cock!)]
+		三个阿尔法小恶魔迅速上前将你团团围住，开始对着你的身体上下其手，各种揉捏。其中一只爬到#IF(pc.hasLegs())你的[pc.legs]中间#ELSE你的腹股沟#ENDIF笑着说，[npc2.speech(嗯，好啊，你马上就会爱上我的鸡巴！)]
 	</p>
 	<p>
-		Making a submissive noise in agreement, you prepare to get fucked by [npc.namePos] guards...
+		你发出了顺从的声音，做好了被[npc.namePos]的守卫操一顿的准备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_OFFER_SEX"><![CDATA[
 	<p>
-		The prospect of having to fight such a fearsome opponent is too much for you to handle, and you hold up your [pc.hands] as you cry out, [pc.speech(W-Wait! There's no need for violence!)]
+		你认为自己不是这个可怕敌人的对手，因此你举起[pc.hands]大喊，[pc.speech(等等，先别动手！)]
 	</p>
 	<p>
-		[npc.Name] releases [npc.her] grip on [npc.her] katana as [npc.she] realises that you're not willing to face [npc.herHim] in combat. Striding forwards and coming to a halt right in front of you, [npc.she] reaches out to grab you by the shoulders, and, before you can react, [npc.she] pushes you down onto your knees, before booming, [npc.speech(How dishonourable! The only way you're getting out of here now is by surrendering your womb to me!)]
+		[npc.Name]意识到你不想在战斗中面对[npc.herHim]，便松开了武士刀，以你反应不及的速度大步走到你身前，按住你的肩膀让你跪下，大笑着说，[npc.speech(真是可耻！那你就只能打开子宫迎接我的种子了！)]
 	</p>
 	<p>
-		As you're now in such a submissive position, all you can do is look up into the [npc.race]'s [npc.eyeColour] eyes, before stuttering, [pc.speech(M-My womb?)]
+		在这种服从的姿势下，你只能抬头看着[npc.race]的[npc.eyeColour]眼睛，结结巴巴地开口，[pc.speech(我，我的子宫？)]
 	</p>
 	<p>
-		[npc.speech(That's right!)] [npc.Name] bellows, before dropping to [npc.her] knees before you and firmly pushing you down onto your back. [npc.speech(For one such as you, the only suitable punishment is having your belly filled with imps!)]
+		[npc.speech(没错！)][npc.Name]怒吼着，随后[npc.her]跪了下来，用力把你扑倒在地。[npc.speech(要惩罚像你这样的家伙，最合适的惩罚就是让你怀上一窝小恶魔！)]
 	</p>
 	<p>
-		Taking hold of your [pc.legs]#IF(pc.hasLegs()), [npc.name] starts to push them apart, getting#ELSE[npc.name] gets#ENDIF ready to fuck you in the missionary position...  
+		[npc.name]抓住你的[pc.legs]，#IF(pc.hasLegs())把它们张开，#ELSE然后#ENDIF准备以传教士体位和你做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_ENTRY_OFFER_SEX_IMPS"><![CDATA[
 	<p>
-		The prospect of having to fight such a fearsome opponent is too much for you to handle, and you hold up your [pc.hands] as you cry out, [pc.speech(W-Wait! There's no need for violence!)]
+		你认为自己不是这个可怕敌人的对手，因此你举起[pc.hands]大喊，[pc.speech(等等，先别动手！)]
 	</p>
 	<p>
-		[npc.Name] releases [npc.her] grip on [npc.her] katana as [npc.she] realises that you're not willing to face [npc.herHim] in combat. Striding forwards and coming to a halt right in front of you, [npc.she] reaches out to grab you by the shoulders, and, before you can react, [npc.she] pushes you down onto your knees, before booming, [npc.speech(How dishonourable! The only way you're getting out of here now is by using your body to satisfy my guards!)]
+		[npc.Name]意识到你不想在战斗中面对[npc.herHim]，便松开了武士刀，以你反应不及的速度大步走到你身前，按住你的肩膀让你跪下，大笑着说，[npc.speech(真是可耻！那你就只能用身体来取悦我的小恶魔们了！)]
 	</p>
 	<p>
-		As you're now in such a submissive position, all you can do is look up into the [npc.race]'s [npc.eyeColour] eyes, before stuttering, [pc.speech(W-What?)]
+		在这种服从的姿势下，你只能抬头看着[npc.race]的[npc.eyeColour]眼睛，结结巴巴地开口，[pc.speech(什，什么？)]
 	</p>
 	<p>
-		[npc.speech(That's right!)] [npc.Name] bellows, before beckoning [npc.her] imps forwards. [npc.speech(I prefer to breed insolent trespassers, but as that's not possible with you, I'll just let my guards have some fun!)]
+			[npc.speech(没错！)][npc.Name]大声说，接着下令小恶魔上前。[npc.speech(我本来想把你干到怀孕，可惜你怀不了，那只能让我的小恶魔们爽一下了！)]
+		</p>
+	<p>
+		听懂[npc.she]的意思，三个阿尔法小恶魔迅速上前将你团团围住，开始对着你的身体上下其手，各种揉捏。[npc.Name]响亮地笑出声，退后等着看欲火中烧的小恶魔们会怎么对付你。其中两个在你作出反应之前把你按倒在地，第三只顺势爬#IF(pc.hasLegs())到你的[pc.legs]中间#ELSE你的腹股沟#ENDIF笑着说，[npc2.speech(嗯，好啊，你马上就会爱上我的鸡巴！)]
 	</p>
 	<p>
-		As [npc.she] says this, the three alpha-imps quickly surround you, before starting to grope and squeeze your body. [npc.Name] lets out a booming laugh, before stepping back and making sure that [npc.her] horny imps are enough to handle you. Before you can react to what's going on, two of the imps suddenly push you down onto your back, with the third stepping up #IF(pc.hasLegs())between your [pc.legs]#ELSEto your groin#ENDIF and chuckling, [npc2.speech(Mmm, yeah, you're gonna love my cock!)]
+		你发出了顺从的声音，做好了被[npc.namePos]的守卫操一顿的准备……
 	</p>
-	<p>
-		Making a submissive noise in agreement, you prepare to get fucked by [npc.namePos] guards...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -220,101 +220,101 @@
 	
 	<htmlContent tag="KEEP_MALES_TAMESHIGIRI_MAIN"><![CDATA[
 	<p>
-		Sensing an opportunity to intimidate this [npc.race] into submission, you grip your weapon as you step forwards and issue your challenge, [pc.speech(Your blades are no match for my [#SPECIAL_PARSE_0], and it would be a disgrace for me to have to fight someone with such puny swords. Stand aside, and I'll demonstrate this on those bamboo poles for you.)]
+		你觉得可以正面挑战这位[npc.race]解决问题，于是上前挑衅道，[pc.speech(你的刀看上去不太行，就算战胜你也胜之不武。不信的话，你站开一点，我用这些竹竿给你看看我的[#SPECIAL_PARSE_0]有多锋利。)]
+	</p>	
+	<p>
+		[npc.speech(多么可笑！我这把武士刀天下第一！)][npc.name]的声音十分洪亮。[npc.she]给你让出位置，不过还是说，[npc.speech(你不会觉得自己是試し斬り达人吧？哦，用你们的话来说，就是试斩。)]
 	</p>
 	<p>
-		[npc.speech(Hah! How ridiculous! None can match my katana!)] [npc.name] booms, but, despite [npc.her] words, [npc.she] stands aside. [npc.speech(So, you consider yourself a competent practitioner of tameshigiri, do you? Oh, that'd be 'test cutting' to someone not familiar with the youko's tongue.)]
+		[pc.speech(没这么厉害，不过你的刀能斩，我的[#SPECIAL_PARSE_0]就能斩得更好。)]你走向竹竿，回问，[pc.speech(哪一根最硬？)]
 	</p>
 	<p>
-		[pc.speech(Not particularly, but anything you and your flimsy swords can do, my [#SPECIAL_PARSE_0] can do better,)] you reply, stepping up to the bamboo poles. [pc.speech(Which one's the hardest?)]
+		[npc.name]指向道场深处一根黝黑的竹竿，它两侧的斩痕与[npc.her]的武士刀吻合，记录着无数次失败的劈斩。[npc.speech(你可要小心[#SPECIAL_PARSE_0]别碎了，这根竹竿接受过八尾妖狐的针对刀刃的附魔。你要是能在上面留下斩痕，我都会刮目相看！不过你还是要接受惩罚！哈哈！)]
 	</p>
 	<p>
-		The [npc.race] points to a blackened bamboo pole at the far end of the dojo. Its sides have been scored with countless cuts and gashes, and you realise that [npc.name] has repeatedly tried, and failed, to slice through it with [npc.her] katana. [npc.speech(Your pathetic [#SPECIAL_PARSE_0] is likely to shatter if you try cutting it! One of the eight-tailed youko themselves enchanted it to be resistant to bladed weapons! If you even manage to make a mark, I'd be impressed! Not that it'd be enough to escape without a punishment! Hah!)]
+		你朝竹竿走去，看到它的表面确实流淌着附魔留下的紫色光泽。不过你充满自信，静气凝神，使出全力，举起[#SPECIAL_PARSE_0]砍了过去， [pc.speech(哈！)]
 	</p>
 	<p>
-		Walking up to the enchanted target, you notice a faint purple shimmer rippling across the blackened surface. Determined to show this [npc.race] how powerful you are, you raise your [#SPECIAL_PARSE_0] and slice it down with full force into the bamboo pole. [pc.speech(Hyah!)]
+		你的斩击十分顺利，甚至没有感觉的阻碍。[npc.name]还以为你失手没有斩中目标，嘲笑声如雷轰鸣。但是很快，竹竿上出现一道裂痕，而上半部分应声滑落，[npc.Her]的笑声戛然而止。
 	</p>
-	<p>
-		At first, [npc.name] seems to think that you've missed the target completely, for [npc.she] starts to let out a booming laugh as [npc.she] sees that your blade seemed to encounter no resistance, and is now on the other side of the pole. [npc.Her] mocking roar is suddenly cut short, however, as the top half of the blackened pole slides to one side, before falling to the floor with a heavy thud.
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_MALES_TAMESHIGIRI_KEY"><![CDATA[
 	<p>
-		[npc.speech(I-Impossible...)] [npc.name] stutters, [npc.her] voice lowering to the volume of a regular person for the first time since you entered [npc.her] dojo. Shaking [npc.her] head, [npc.she] clears [npc.her] throat and scowls angrily at you, before shouting, [npc.speech(That was some kind of trick! It won't work on my blade, fool!)]
+		[npc.speech(不……不可能……)][npc.name]结结巴巴，自你进入[npc.her]的道场，这是第一次听到[npc.her]的声音低到与普通人一致，[npc.speech(这一定有什么阴谋！这对我的刀不可能有用！)]
 	</p>
 	<p>
-		With a furious shout, [npc.she] draws [npc.her] sword and slashes it directly at your body. Raising your weapon to block [npc.her] strike, you see the [npc.race]'s eyes open wide in shock as your enchanted arcane blade causes [npc.her] katana to visibly bend at the point of impact. Jumping back, [npc.she] holds [npc.her] weapon in trembling [npc.hand] and starts to wearily back away from you. [npc.speech(That's not possible! W-Who are you?!)]
+		[npc.she]大喝一声，拔刀出鞘，你格挡应对。兵刃交错间，你的奥术魔刃占得上风！[npc.she]怒目圆睁，很有气势的后跳拉开身位。但[npc.she]持刀的手些微颤抖，暴露出因爱刀弯折的心痛和震惊。[npc.she]怒喝出声，[npc.speech(不可能，你怎么做到的？！)]
 	</p>
 	<p>
-		[pc.speech(That doesn't matter. Suffice it to say that you'd be no challenge for one as powerful as I am. Now, tell me why your imp gangs are attacking people in Submission.)]
+		[pc.speech(这不重要，反正你赢不了我。那么，为什么你的小恶魔团伙在攻击屈城区居民？)]
 	</p>
 	<p>
-		[npc.speech(S-She told us to...)] [npc.name] stammers, before trying to regain some of [npc.her] lost confidence. [npc.speech(Our leader, the Dark Siren, that is. She told the other two leaders and I to assert our dominance, so that's what we do. I'm sure you've probably already seen it, seeing as you're here, but she's the one who occupies that citadel in the middle of Submission's tunnels.)]
+		[npc.speech(她……她命令我们……)][npc.name]结结巴巴，[npc.speech(我们的首领，就是那个，暗夜塞壬……她说我们得维护统治地位……我们只能照做……你既然在这，那么也许已经看到了……屈城区隧道正中央的城堡……对，她就在那。)]
 	</p>
 	<p>
-		[pc.speech(I see. So you're just following orders, huh?)] you ask, the tone of your voice making it clear that you don't approve of such an excuse.
+		[pc.speech(我懂了。也就是说你也只是按命令行事，是吗？)]你问到，你的语气表明着你并不满意这样的借口。
 	</p>
 	<p>
-		[npc.speech(Well, I was, until now. If I give you one of the keys needed to get inside that place, you'll agree to let me leave with my honour intact. Deal?)] [npc.name] offers, reaching into a hidden pocket of [npc.her] hakama and producing a thick steel key, which, despite its considerable girth, is no more than five inches in length. Throwing it to you, [npc.name] continues, [npc.speech(There's no need for us to fight. You've already proven you're a foe beyond my level.)]
+		[npc.speech(那么……其实……我们做个交易，我给你进入那个地方的钥匙之一，你放我走，也不能把这发生的事说出去，怎么样？)][npc.name]说着，把手伸进[npc.her]袍子的暗袋，拿出一把厚厚的钢钥匙，把它丢给你，[npc.speech(我们也没必要再打了，我确实不是你的对手。)]
 	</p>
 	<p>
-		You don't believe for one moment that [npc.name] intends to leave and never return, but you're also sure that beating [npc.herHim] in combat wouldn't achieve anything...
+		你一点也不相信[npc.name]会再也不回来，你感觉在战斗中击败[npc.herHim]毫无作用……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_MALES_TAMESHIGIRI_DEFEATED"><![CDATA[
 	<p>
-		Having once again proven yourself to [npc.name], you ask [npc.herHim], [pc.speech(Why did you come back? I told you to stay away from here!)]
+		你再次向[npc.Name]证明了自己，问道：[pc.speech(你为什么回来？我告诉过你离这远点！)]
 	</p>
 	<p>
-		[npc.speech(The Dark Siren... )] [npc.name] stutters, [npc.her] voice lowering to the volume of a regular person for the first time since you entered [npc.her] dojo. [npc.speech(She said I had to...)]
+		[npc.speech(暗夜塞壬……)][npc.name]结结巴巴，自你进入[npc.her]的道场，这是第一次听到[npc.her]的声音低到与普通人一致，[npc.speech(她叫我……)]
 	</p>
 	<p>
-		[pc.speech(Still blindly following her orders, huh?)] you ask, the tone of your voice making it clear that you don't approve of such an excuse.
+		[pc.speech(还在盲目地遵从她的命令是吗？)]你问，语气表明着你并不满意这样的借口。
 	</p>
 	<p>
-		[npc.speech(Yes,)] [npc.name] agrees, [npc.speech(but this is the last time. I won't come back here again. Just let me go, and we can avoid a fight.)]
+		[npc.speech(是。)][npc.name]承认道，[npc.speech(但这是最后一次，我不会再回来了。放我走吧，我们不必战斗。)]
 	</p>
 	<p>
-		You don't believe for one moment that [npc.name] intends to leave and never return, and you doubt that even beating [npc.herHim] in combat would change that...
+		你一点也不相信[npc.name]会再也不回来，你感觉在战斗中击败[npc.herHim]会改变这一点……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_MALES_TAMESHIGIRI_DEFEATED_DS_DEALT_WITH"><![CDATA[
 	<p>
-		Having once again proven yourself to [npc.name], you ask [npc.herHim], [pc.speech(Why did you come back? I've already dealt with your leader, and I told you to stay away from here!)]
+		你再次向[npc.Name]证明了自己，问道：[pc.speech(你为什么回来？我好像已经解决了你们首领然后告诉过你们离这远点！)]
 	</p>
 	<p>
-		[npc.speech(The Dark Siren will return... )] [npc.name] stutters, [npc.her] voice lowering to the volume of a regular person for the first time since you entered [npc.her] dojo. [npc.speech(S-So I need to carry out her last orders!)]
+		[npc.speech(暗夜塞壬终将回归……)][npc.name]结结巴巴地说，自你进入[npc2.her]的道场，这是第一次听到[npc.her]的声音低到与普通人一致，[npc.speech(所，所以我得执行她最后的命令！)]
 	</p>
 	<p>
-		[pc.speech(You do realise that she's under lock and key in Lyssieth's palace, right?)] you ask.
+		[pc.speech(你明确知道她被关在莉西丝的宫殿里了，对吧？)]你问。
 	</p>
 	<p>
-		[npc.speech(That doesn't matter. She'll find a way to escape,)] [npc.name] says. [npc.speech(But until [siren.she] does, I'll leave this place. Just let me go, and we can avoid a fight.)]
+		[npc.speech(没关系，她会想办法逃走的。)][npc2.name]说，[npc2.speech(但在此之前，我会离开这里。放我走吧，我们不必战斗。)]
 	</p>
 	<p>
-		You don't believe for one moment that [npc.name] intends to wait until [npc.her] leader is released before returning, and you doubt that even beating [npc.herHim] in combat would change that...
+		你一点也不相信[npc.name]会等到[npc.her]的老大被释放后才回来，你感觉在战斗中击败[npc.herHim]会改变这一点……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_MALES_TAMESHIGIRI_ALLOW_TO_LEAVE"><![CDATA[
 	<p>
-		Seeing no reason to fight [npc.name], you lower your weapon and command, [pc.speech(Go on then, get out of here! And don't come back!)]
+		你找不到继续战斗的理由，于是放下武器命令道，[pc.speech(那么就离开这里！别再回来了！)]
 	</p>
 	<p>
-		Letting out a dismissive grunt, [npc.name] beckons for [npc.her] imps to follow [npc.herHim] as [npc.she] retreats out through the sliding doors and disappears off into Submission.
+		[npc.name]轻蔑地哼出声，举手示意小恶魔们跟着她走出滑动门，消失在屈城区。
 	</p>
 	<p>
-		Despite its impressive construction, you quickly realise that [npc.namePos] dojo has absolutely nothing of value in it, so, with nothing more to do, you prepare to move off and continue on your way...
+		尽管道场令人印象深刻，但你很快发现里面完全没有任何有价值的东西，无事可做，你准备离开这里，继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -322,83 +322,83 @@
 	
 	<htmlContent tag="KEEP_AUDIENCE"><![CDATA[
 	<p>
-		[pc.speech(Wait, there's no need for violence,)] you say, holding up your [pc.hands]. [pc.speech(I just have some questions about the demon calling herself 'The Dark Siren'.)]
+		[pc.speech(等等，先别动手，)]你举起手说，[pc.speech(我只是想问些问题，关于那个自称「暗夜塞壬」的恶魔。)]
 	</p>
 	<p>
-		That name causes [npc.name] to halt in [npc.her] tracks, and [npc.she] narrows [npc.her] [npc.eyes] as [npc.she] asks, still at maximum volume, [npc.speech(Oh, you want to know something about our leader?!)]
+		这个名字让[npc.name]停下了脚步，[npc.she]眯起了[npc.her]的[npc.eyes]，还是用最大音量问道：[npc.speech(哦，你想知道关于我们头儿的什么？)]
 	</p>
 	<p>
-		[pc.speech(Well, I was hoping to get an opportunity to meet with her,)] you explain, [pc.speech(and was wondering if you could help me with that.)]
+		[pc.speech(我正希望能有个机会见见她呢，)]你解释道，[pc.speech(不知道你能不能帮帮我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AUDIENCE_BREEDING"><![CDATA[
 	<p>
-		A grin breaks out across [npc.namePos] face as [npc.she] hears what it is you're after. With [npc.her] gaze hungrily roaming up and down over your body, [npc.she] offers [npc.her] terms, [npc.speech(Well, I haven't had the opportunity to breed [pc.a_race] as fine as you in a good long while, so you let me knock you up, and then I'll give you my help in getting to meet with our boss.)]
+		当[npc2.namePos]听到你的要求时，[npc2.she]的脸上露出坏笑，目光饥渴地在你的身上游走，提出了条件：[npc2.speech(但是，我已经很久没有给像你这样优秀的[pc.a_race]播种过了，所以你先让我把你肚子搞大，我就会帮你们去见我们的老大。)]
 	</p>
 	<p>
-		Rubbing the bulge in [npc.her] hakama, [npc.she] continues, [npc.speech(Of course, you can say no, but then I'll be forced to punish you for barging in here uninvited. So, either way, I'm going to be painting the insides of your womb with my cum, so you might as well get something out of it, right?)]
+		[npc.she]揉了揉长袴的鼓包，继续说道：[npc.speech(当然，你也可以拒绝，但那样我就不得不惩罚你的不请自来了。所以，不管怎么说，我都要把精液注进你的子宫里，所以你也不妨从中得到点什么，对吧？)]
 	</p>
 	<p>
-		The three alpha-imps laugh at you as their leader says this, and you wonder whether to do this the easy way, or the hard way...
+		当他们的首领说出这句话时，三个阿尔法小恶魔对你讥笑出声，你又该如何抉择……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AUDIENCE_IMPS"><![CDATA[
 	<p>
-		A grin breaks out across [npc.namePos] face as [npc.she] hears what it is you're after. Dismissively tutting as [npc.she] sizes you up, [npc.she] offers [npc.her] terms, [npc.speech(Well, I would have liked to have fathered more imps with you, but as that's not possible, I think surrendering your body to satisfy my guards would be a suitable offer. You let them fuck you, and I'll give you my help in getting to meet with our boss.)]
+		当[npc2.namePos]听到你的要求时，[npc2.she]的脸上露出坏笑，一边打量你，一边发出不屑的啧啧声，[npc2.she]提出了条件：[npc2.speech(好吧，我本来想和你生更多的小恶魔，但既然不可能，我觉得让你们用身体来满足我的守卫倒挺不错。你先让他们干，我就会帮你去见我们的老大。)]
 	</p>
 	<p>
-		Gripping [npc.her] katana, [npc.she] continues, [npc.speech(Of course, you can say no, but then I'll be forced to punish you for barging in here uninvited. So, either way, you're going to be servicing imp cock, so you might as well get something out of it, right?)]
+		[npc.she]握了握武士刀，继续说道：[npc.speech(当然，你也可以拒绝，但那样我就不得不惩罚你的不请自来了。所以，不管怎么说，你都要享受小恶魔的鸡巴，所以你也不妨从中得到点什么，对吧？)]
 	</p>
 	<p>
-		The three alpha-imps laugh at you as their leader says this, and you wonder whether to do this the easy way, or the hard way...
+		当他们的首领说出这句话时，三个阿尔法小恶魔对你讥笑出声，你又该如何抉择……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AUDIENCE_SEX"><![CDATA[
 	<p>
-		Deciding to do as [npc.name] asks, you sigh, [pc.speech(Ok, I'll do it.)]
+		你叹了口气，决定顺从[npc.name]的要求，[pc.speech(好吧，我照做。)]
 	</p>
 	<p>
-		[npc.Name] releases [npc.her] grip on [npc.her] katana as [npc.she] hears your reply. Striding forwards and coming to a halt right in front of you, [npc.she] reaches out to grab you by the shoulders, and, before you can react, [npc.she] pushes you down onto your knees, before booming, [npc.speech(Excellent! Now surrender your womb to me!)]
+		[npc.Name]听到你的回复后，松开了武士刀，以你反应不及的速度大步走到你身前，按住你的肩膀让你跪下，大笑着说，[npc.speech(很好！现在打开你的子宫迎接我的种子！)]
 	</p>
 	<p>
-		As you're now in such a submissive position, all you can do is look up into the [npc.race]'s [npc.eyeColour] eyes, before answering, [pc.speech(Yes... Make me a mother...)]
+		在这种服从的姿势下，你只能抬头看着[npc.race]的[npc.eyeColour]眼睛，回答道，[pc.speech(好的……我会成为您孩子的母亲……)]
 	</p>
 	<p>
-		[npc.speech(That's what I like to hear!)] [npc.Name] bellows, before dropping to [npc.her] knees before you and firmly pushing you down onto your back. [npc.speech(Now, let's get started!)]
-	</p>
+			[npc.speech(我可太想听到这个了！)][npc.Name]大声说，跪在你面前，用力把你按倒在地。[npc.speech(让我们开始！)]
+		</p>
 	<p>
-		Taking hold of your [pc.legs]#IF(pc.hasLegs()), [npc.name] starts to push them apart, getting#ELSE[npc.name] gets#ENDIF ready to fuck you in the missionary position...  
+		[npc.name]抓住你的[pc.legs]，#IF(pc.hasLegs())把它们张开，#ELSE然后#ENDIF准备以传教士体位和你做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AUDIENCE_SEX_IMPS"><![CDATA[
 	<p>
-		Deciding to do as [npc.name] asks, you sigh, [pc.speech(Ok, I'll do it.)]
+		你叹了口气，决定顺从[npc.name]的要求，[pc.speech(好吧，我照做。)]
 	</p>
 	<p>
-		[npc.Name] releases [npc.her] grip on [npc.her] katana as [npc.she] hears your reply. Striding forwards and coming to a halt right in front of you, [npc.she] reaches out to grab you by the shoulders, and, before you can react, [npc.she] pushes you down onto your knees, before booming, [npc.speech(Excellent! Now make sure to satisfy all three of them!)]
+		[npc.Name]听到你的回复后，松开了武士刀，以你反应不及的速度大步走到你身前，按住你的肩膀让你跪下，大笑着说，[npc.speech(很好！你可以开始取悦他们了！)]
 	</p>
 	<p>
-		As you're now in such a submissive position, all you can do is look up into the [npc.race]'s [npc.eyeColour] eyes, before sighing, [pc.speech(I will...)]
+		在这种服从的姿势下，你只能抬头看着[npc.race]的[npc.eyeColour]眼睛，叹气，开口，[pc.speech(好的……)]
 	</p>
 	<p>
-		[npc.speech(That's what I like to hear!)] [npc.Name] bellows, before beckoning [npc.her] imps forwards. [npc.speech(Come on, it's not every day I let you three have fun like this!)]
+			[npc.speech(我可太想听到这个了！)][npc.Name]大声说，接着下令小恶魔上前。[npc.speech(快去，不是每次都能让你们三个过瘾！)]
+		</p>
+	<p>
+		三个阿尔法小恶魔迅速听令上前将你团团围住，开始对着你的身体上下其手，各种揉捏。其中两个在你作出反应之前把你按倒在地，第三只顺势爬到#IF(pc.hasLegs())你的[pc.legs]中间#ELSE你的腹股沟#ENDIF笑着说，[npc2.speech(嗯，好啊，你马上就会爱上我的鸡巴！)]
 	</p>
 	<p>
-		Doing as their leader commands, the three alpha-imps quickly surround you, before starting to grope and squeeze your body. Before you can react to what's going on, two of the imps suddenly push you down onto your back, with the third stepping up #IF(pc.hasLegs())between your [pc.legs]#ELSEto your groin#ENDIF and chuckling, [npc2.speech(Mmm, yeah, you're gonna love my cock!)]
+		你发出了顺从的声音，做好了被[npc.namePos]的守卫操一顿的准备……
 	</p>
-	<p>
-		Making a submissive noise in agreement, you prepare to get fucked by [npc.namePos] guards...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -406,16 +406,16 @@
 	
 	<htmlContent tag="KEEP_AFTER_SEX_AUDIENCE"><![CDATA[
 	<p>
-		[npc.speech(Good enough, I suppose,)] [npc.name] says, smirking down at you as you pant and sigh on the floor. [npc.speech(A deal's a deal, and I'm sure our boss won't mind meeting someone as submissive as you.)]
+		[npc.speech(我想，这足够了。)][npc.name]看向倒在地上气喘吁吁的你，坏笑道，[npc.speech(一言既出，驷马难追，我相信我们的老大不会介意见见像你这样温顺的人。)]
 	</p>
 	<p>
-		Pushing yourself back up onto your [pc.feet], you start to get your things in order as [npc.name] continues, [npc.speech(This key is one of three that you need in order to gain access to the stone citadel in the middle of Submission's tunnels. That's where our 'Dark Siren' rules from, if you hadn't already figured it out. The other keys you should be able to get from our other fortresses. Oh, and pay her the proper respect when you meet her. She's a recognised daughter of Lyssieth herself, and if you step out of line, she'll have you locked up and being fucked by her imps before you know what's happening.)]
+		你站起来整理好自己的衣物，[npc.name]继续说，[npc.speech(打开屈城区中央石制城堡的大门需要三把钥匙，这就是其中一把。那里是‘暗夜塞壬’的领地。如果你没有集齐剩下的两把钥匙的话，你得去其他要塞找。噢，对了，记得要对她尊重些，她是被莉西丝本人承认的女儿。你要是惹恼了她，她会立刻把你锁起来，放任她手下的小恶魔操你。)]
 	</p>
 	<p>
-		Having finally got your belongings sorted out, you look up to see [npc.name] holding out a thick steel key, which, despite its considerable girth, is no more than five inches in length.
+		你终于整理好自己，抬头看到[npc.name]拿着一把长度不超过五英寸的短粗金钥匙。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -423,13 +423,13 @@
 	
 	<htmlContent tag="KEEP_AFTER_SEX_AUDIENCE_KEY"><![CDATA[
 	<p>
-		Taking the key, you thank [npc.name] and turn to leave. As you're heading towards the sliding doors, the [npc.race] calls after you, [npc.speech(Come back when you're ready to be knocked up!)]
+		你接过钥匙，向[npc.Name]道谢后转身准备离开。当你走到推拉门前时，[npc.race]在你身后喊道，[npc.speech(要是你准备好被我们搞大肚子的话，你可以随时回来！)]
 	</p>
 	<p>
-		To the sounds of impish laughter and lewd taunts, you step out of [npc.namePos] dojo and into the courtyard beyond. Clutching the small key in your hand, you wonder where you should head to next...
+		在小恶魔的嘲笑和奚落声中，你走出了[npc.namePos]的道馆。站在庭院里，你攥紧了手中的小钥匙，思考着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -441,156 +441,156 @@
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_VICTORY_KEY"><![CDATA[
 	<p>
-		You let out a relieved sigh as [npc.name] and [npc.her] guards slump down onto the floor before you, defeated. Stepping forwards, you look down at the [npc.race] and ask, [pc.speech(Why do you do this? Getting all those imps to attack people in Submission, I mean.)]
+		[npc.name]和[npc.her]的守卫们被打倒在地，你长舒了一口气。你走向前，低头质问[npc.race]：[pc.speech(你为什么要这样做？我是说让这些小恶魔攻击屈城区中的人。)]
 	</p>
 	<p>
-		[npc.speech(She told us to...)] [npc.name] pants. [npc.speech(Our leader, the Dark Siren... She said we need to assert dominance... You've probably already seen it, seeing as you're here... That citadel in the middle of Submission's tunnels. That's where she is...)]
+		[npc.speech(她命令我们……)][npc.name]喘息道，[npc.speech(我们的首领，暗夜塞壬……她说我们得维护统治地位……你既然在这，那么也许已经看到了……她就在屈城区隧道正中央的城堡里。)]
 	</p>
 	<p>
-		[pc.speech(I see. So you're just following orders, huh?)] you ask, the tone of your voice making it clear that you don't approve of such an excuse.
+		[pc.speech(我懂了。也就是说你也只是按命令行事，是吗？)]你问到，你的语气表明着你并不满意这样的借口。
 	</p>
 	<p>
-		[npc.speech(Yes... Just... Please, let me go... I-I can give you one of the keys needed to get inside that place in exchange,)] [npc.name] offers, reaching into a hidden pocket of [npc.her] hakama and producing a thick steel key, which, despite its considerable girth, is no more than five inches in length. Giving it to you, [npc.name] continues, still panting, [npc.speech(You'll need keys from the other two gang leaders if you want to confront her... Now just... Please let me go!)]
+		[npc.speech(好的……请……请让我走……我可以给你一把进入那个地方的钥匙)][npc.name]说着，把手伸进[npc.her]袍子的暗袋，拿出一把厚厚的钢钥匙。把它交给你后，[npc.name]继续气喘吁吁地说道：[npc.speech(如果你想和她对峙，就需要另外两个帮派头头的钥匙……现在请……请放了我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_VICTORY"><![CDATA[
 	<p>
-		You let out a relieved sigh as [npc.name] and [npc.her] guards slump down onto the floor before you, defeated. Stepping forwards, you look down at the [npc.race] and ask, [pc.speech(Why did you come back? I told you to stay away from here!)]
+		当[npc.name]和[npc.her]的守卫们被打败而倒在地上后，你长舒了一口气。你走向前，低头质问[npc.race]：[pc.speech(你为什么回来？我不是告诉过你离这远点吗！)]
 	</p>
 	<p>
-		[npc.speech(The Dark Siren... )] [npc.name] pants. [npc.speech(She said I had to...)]
+		[npc.speech(暗夜塞壬……)][npc.name]喘着粗气。[npc.speech(她告诉过我，必须……)]
 	</p>
 	<p>
-		[pc.speech(Still blindly following her orders, huh?)] you ask, the tone of your voice making it clear that you don't approve of such an excuse.
+		[pc.speech(还在盲目地遵从她的命令是吗？)]你问，语气表明着你并不满意这样的借口。
 	</p>
 	<p>
-		[npc.speech(Yes... Just... Please, let me go...)] [npc.name] begs. [npc.speech(I won't cause any more trouble!)]
+		[npc.speech(好的……那……求你了，放我走吧……)][npc.name]乞求着，[npc.speech(我不会再惹麻烦了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_VICTORY_DS_DEFEATED"><![CDATA[
 	<p>
-		You let out a relieved sigh as [npc.name] and [npc.her] guards slump down onto the floor before you, defeated. Stepping forwards, you look down at the [npc.race] and ask, [pc.speech(Why did you come back? I told you to stay away from here!)]
+		当[npc.name]和[npc.her]的守卫们被打败而倒在地上后，你长舒了一口气。你走向前，低头质问[npc.race]：[pc.speech(你为什么回来？我不是告诉过你离这远点吗！)]
 	</p>
 	<p>
-		[npc.speech(The Dark Siren will return... )] [npc.name] pants. [npc.speech(So I need to carry out her last orders...)]
+		[npc.speech(暗夜塞壬一定会重返此地……)][npc.name]喘息着，[npc.speech(所以我会忠诚地执行她最后给我下达的命令……)]
 	</p>
 	<p>
-		[pc.speech(You do realise that she's under lock and key in Lyssieth's palace, right?)] you ask.
+		[pc.speech(你明确知道她被关在莉西丝的宫殿里了，对吧？)]你问。
 	</p>
 	<p>
-		[npc.speech(That doesn't matter... She'll find a way to escape... Now please, let me go...)] [npc.name] begs. [npc.speech(I won't cause any more trouble!)]
+		[npc.speech(那不重要……她一定会找到办法逃出来……现在，求你了，让我走吧……)][npc.name]乞求道，[npc.speech(我不会再惹是生非了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_VICTORY_SCARE_OFF"><![CDATA[
 	<p>
-		Having dealt with [npc.name], and not wanting to go any further, you stand before [npc.herHim] and [npc.her] imps and declare, [pc.speech(Go on then, get out of here, all of you! And don't come back!)]
+		解决[npc.name]之后你不想再继续了，你站在[npc.herHim]和[npc.her]的小恶魔们面前下达命令：[pc.speech(离开这里！不要回来！)]
 	</p>
 	<p>
-		[npc.speech(W-We won't!)] [npc.name] stutters as [npc.she] stands up. Not even giving you another backwards glance, [npc.she] runs off down the length of the dojo, with [npc.her] imp guards close behind. Dashing out through the open doors, the gang disappear off into Submission, leaving you alone in the now-empty room.
+		[npc.speech(不、不会的！)][npc.name]结结巴巴地说，[npc.she]站了起来，甚至没有再向后看你一眼，就沿着道馆跑开了。小恶魔卫兵们紧随其后，从敞开的大门冲出去，这帮人就这样消失在屈城区，只留下你一个人在已经空无一人的城堡里。
 	</p>
 	<p>
-		Looking around, you see that there's absolutely nothing of value in here, so, with nothing more to do, you prepare to move off and continue on your way...
+		环顾四周，你发现这个要塞完全没有任何有价值的东西，因为无事可做，你准备离开这里，继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COMBAT_VICTORY_SEX"><![CDATA[
 	<p>
-		Wanting to have a little fun with [npc.name] and [npc.her] imps before you let them go, you reach down and start moving them into position. As you do this, the [npc.race] lets out a surprisingly erotic groan, before thrusting [npc.her] [npc.hips] towards you. [npc.speech(Come on then, ride my cock!)]
+		在放开她们之前你还想再和[npc.name]与[npc.her]的小恶魔们找点乐子，你伸手把她们摆好位置。你一这么做，[npc.race]就发出淫荡的呻吟，将[npc.her]的[npc.hips]推向你。[npc.speech(来！坐到我的鸡巴上来！)]
 	</p>
 	<p>
-		[pc.speech(I'll do whatever I feel like,)] you respond, giving [npc.her] [npc.ass] a quick smack to remind [npc.herHim] who's in charge.
+		[pc.speech(我想怎么做就怎么做。)]你回答，并在[npc.her][npc.ass]上快速地打一巴掌，提醒[npc.herHim]谁说了算。
 	</p>
 	<p>
-		Your disciplinary action causes [npc.name] to let out a frustrated cry, and you smirk as you reflect upon how proud [npc.she] was when you first entered [npc.her] dojo...
+		你的惩罚让[npc.name]又发出欲求不满的哭声，回想起初见时[npc.she]的高傲，你笑了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COMBAT_VICTORY_SEX_GENTLE"><![CDATA[
 	<p>
-		Wanting to have a little fun with [npc.name] and [npc.her] imps before you let them go, you reach down and start gently moving them into position. As you do this, the [npc.race] lets out a surprisingly erotic groan, before thrusting [npc.her] [npc.hips] towards you. [npc.speech(Come on then, ride my cock!)]
+		在放开她们之前你还想再和[npc.name]与[npc.her]的小恶魔们找点乐子，你温柔地伸手把她们摆好位置。你一这么做，[npc.race]就惊喜地发出淫荡呻吟，将[npc.her]的[npc.hips]推向你。[npc.speech(哦！来啊！骑在我的鸡巴上！)]
 	</p>
 	<p>
-		[pc.speech(I'll do as I please,)] you respond, giving [npc.her] [npc.ass] a soft smack to remind [npc.herHim] who's in charge.
+		[pc.speech(我想怎么做就怎么做。)]你回答，并在[npc.her][npc.ass]上轻轻地地打一巴掌，提醒[npc.herHim]谁说了算。
 	</p>
 	<p>
-		Your disciplinary action causes [npc.name] to let out a frustrated cry, and you smirk as you reflect upon how proud [npc.she] was when you first entered [npc.her] dojo...
+		你的惩罚让[npc.name]又发出欲求不满的哭声，回想起初见时[npc.she]的高傲，你笑了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COMBAT_VICTORY_SEX_ROUGH"><![CDATA[
 	<p>
-		Wanting to have a little fun with [npc.name] and [npc.her] imps before you let them go, you reach down and start roughly forcing them into position. As you do this, the [npc.race] lets out a surprisingly erotic groan, before thrusting [npc.her] [npc.hips] towards you. [npc.speech(Come on then, ride my cock!)]
+		在放开她们之前你还想再和[npc.name]与[npc.her]的小恶魔们找点乐子，你粗暴地把她们摆好位置。你一这么做，[npc.race]就意外地发出淫荡的呻吟，将[npc.her]的[npc.hips]推向你。[npc.speech(来！坐到我的鸡巴上来！)]
 	</p>
 	<p>
-		[pc.speech(Don't you <i>dare</i> try and tell me what to do!)] you angrily respond, giving [npc.her] [npc.ass] a sharp slap to remind [npc.herHim] who's in charge.
+		[pc.speech(<i>用不着</i>你告诉我怎么做！)]你愤怒地回答，并在[npc.her][npc.ass]上狠狠地打一巴掌，提醒[npc.herHim]谁说了算。
 	</p>
 	<p>
-		Your disciplinary action causes [npc.name] to let out a frustrated cry, and you smirk as you reflect upon how proud [npc.she] was when you first entered [npc.her] dojo...
+		你的惩罚让[npc.name]又发出欲求不满的哭声，回想起初见时[npc.she]的高傲，你笑了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COMBAT_VICTORY_SEX_SUBMIT"><![CDATA[
 	<p>
-		Feeling sorry for [npc.name] and [npc.her] imps, you bend down next to [npc.herHim] and ask, [pc.speech(Are you ok? Sorry, I think I went a little too far...)]
+		你为[npc.name]和[npc.her]的小恶魔感到抱歉，在[npc.herHim]身边弯下腰问：[pc.speech(你还好吗？抱歉，我好像做得太过分了……)]
 	</p>
 	<p>
-		[npc.NamePos] defeated expression quickly shifts into a hungry grin as [npc.she] realises that you're going to be easy to take advantage of. Grabbing hold of your wrists, [npc.she] booms, [npc.speech(No, I'm not ok! Now help me up!)]
+		[npc.she]意识到你很容易被利用，于是，[npc.NamePos]战败的不爽很快变成了淫荡的笑容。[npc.she]抓住你的手腕，厉声说，[npc.speech(不！我一点不好！扶我起来！就现在！)]
 	</p>
 	<p>
-		Submissively doing as you're told, you assist [npc.name] as [npc.she] pushes [npc.herself] to [npc.her] feet. Refusing to let go of your wrists, [npc.she] suddenly yanks you forwards, pressing you tightly against [npc.herHim] as [npc.she] growls, [npc.speech(So, how are you going to apologise for what you did?!)]
+		你顺从地按照指示去做，帮助[npc.name]站起来。[npc.she]没有松开你的手腕，反而突然把你拉过去，将你紧紧地压在[npc.herHim]身上，[npc.she]喊着，[npc.speech(那么，你打算如何为你的所作所为道歉？！)]
 	</p>
 	<p>
-		Being held so close to [npc.her] body, you're able to suddenly feel something hard pressing against your [pc.leg], and you glance down to see the distinctive bulge of a fat cock pressing out against the folds of [npc.namePos] hakama. Gulping at the sight of it, you look back up into the [npc.race]'s [npc.eyeColour] eyes, before offering, [pc.speech(I-I could take care of that for you...)]
+		被拉过去的时候，你感觉到什么东西顶着你的[pc.leg]。你低头一看，[npc.her]的粗大鸡巴在袴上撑起了帐篷。你咽了咽口水，看着[npc.race]的[npc.eyeColour]眼睛，说，[pc.speech(我……我能帮你处理一下……)]
 	</p>
 	<p>
-		[npc.speech(Now that's what I like to hear!)] [npc.Name] bellows, before reaching out to grab you by the shoulders. Before you can react, [npc.she] pushes you down onto your knees, before booming, [npc.speech(The only way to earn my forgiveness is by surrendering your womb to me!)]
+		[npc.speech(我可太想听到这个了！)][npc.Name]声音洪亮，以你反应不及的速度大步走到你身前，按住你的肩膀让你跪下，大笑说，[npc.speech(想让我原谅你，就打开你的子宫迎接我的种子！)]
 	</p>
 	<p>
-		As you're now in such a submissive position, all you can do is look up into the [npc.race]'s [npc.eyeColour] eyes, before stuttering, [pc.speech(M-My womb?)]
+		在这种服从的姿势下，你只能抬头看着[npc.race]的[npc.eyeColour]眼睛，结结巴巴地开口，[pc.speech(我，我的子宫？)]
 	</p>
 	<p>
-		[npc.speech(That's right!)] [npc.Name] bellows, before dropping to [npc.her] knees before you and firmly pushing you down onto your back. [npc.speech(For one such as you, the only suitable punishment for what you've done is to have your belly filled with imps!)]
+		[npc.speech(没错！)][npc.Name]怒吼着，随后[npc.her]跪了下来，用力把你扑倒在地。[npc.speech(要惩罚像你这样的家伙，最合适的办法就是让你怀上一窝小恶魔！)]
 	</p>
 	<p>
-		Taking hold of your [pc.legs]#IF(pc.hasLegs()), [npc.name] starts to push them apart, getting#ELSE[npc.name] gets#ENDIF ready to fuck you in the missionary position...  
+		[npc.name]抓住你的[pc.legs]，#IF(pc.hasLegs())把它们张开，#ELSE然后#ENDIF准备以传教士体位和你做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_COMBAT_VICTORY_SEX_SUBMIT_IMPS"><![CDATA[
 	<p>
-		Feeling sorry for [npc.name] and [npc.her] imps, you bend down next to [npc.herHim] and ask, [pc.speech(Are you ok? Sorry, I think I went a little too far...)]
+		你为[npc.name]和[npc.her]的小恶魔感到抱歉，在[npc.herHim]身边弯下腰问：[pc.speech(你还好吗？抱歉，我好像做得太过分了……)]
 	</p>
 	<p>
-		[npc.NamePos] defeated expression quickly shifts into a hungry grin as [npc.she] realises that you're going to be easy to take advantage of. Grabbing hold of your wrists, [npc.she] booms, [npc.speech(No, I'm not ok! Now help me up!)]
+		[npc.she]意识到你很容易被利用，于是，[npc.NamePos]战败的不爽很快变成了淫荡的笑容。[npc.she]抓住你的手腕，厉声说，[npc.speech(不！我一点不好！扶我起来！就现在！)]
 	</p>
 	<p>
-		Submissively doing as you're told, you assist [npc.name] as [npc.she] pushes [npc.herself] to [npc.her] feet. Refusing to let go of your wrists, [npc.she] suddenly yanks you forwards, pressing you tightly against [npc.herHim] as [npc.she] growls, [npc.speech(So, how are you going to apologise for what you did?!)]
+		你顺从地按照指示去做，帮助[npc.name]站起来。[npc.she]没有松开你的手腕，反而突然把你拉过去，将你紧紧地压在[npc.herHim]身上，[npc.she]喊着，[npc.speech(那么，你打算如何为你的所作所为道歉？！)]
 	</p>
 	<p>
-		Being held so close to [npc.her] body, you're able to suddenly feel something hard pressing against your [pc.leg], and you glance down to see the distinctive bulge of a fat cock pressing out against the folds of [npc.namePos] hakama. Gulping at the sight of it, you look back up into the [npc.race]'s [npc.eyeColour] eyes, before offering, [pc.speech(I-I could take care of that for you...)]
+		被拉过去的时候，你感觉到什么东西顶着你的[pc.leg]。你低头一看，[npc.her]的粗大鸡巴在袴上撑起了帐篷。你咽了咽口水，看着[npc.race]的[npc.eyeColour]眼睛，说，[pc.speech(我……我能帮你处理一下……)]
 	</p>
 	<p>
-		[npc.speech(I'm only interested in those I can impregnate!)] [npc.Name] bellows, before roughly shoving you down onto your back in front of [npc.herHim]. [npc.speech(No, if I can't breed you, then I'm not interested. My guards, on the other hand...)]
+			[npc.speech(我只想把你干到怀孕！)][npc.Name]大声说，用力把你按倒在地。[npc.speech(你又怀不了，那就算了。不过，我的小恶魔们……)]
+		</p>
+	<p>
+		听懂[npc.she]的意思，三个阿尔法小恶魔迅速上前将你团团围住，开始对着你的身体上下其手，各种揉捏。[npc.Name]响亮地笑出声，退后等着看欲火中烧的小恶魔们会怎么对付你。其中两个在你作出反应之前把你按倒在地，第三只顺势爬#IF(pc.hasLegs())到你的[pc.legs]中间#ELSE你的腹股沟#ENDIF笑着说，[npc2.speech(嗯，好啊，你马上就会爱上我的鸡巴！)]
 	</p>
 	<p>
-		As [npc.she] says this, the three alpha-imps quickly surround you, before starting to grope and squeeze your body. [npc.Name] lets out a booming laugh, before stepping back and making sure that [npc.her] horny imps are enough to handle you. Before you can react to what's going on, two of the imps suddenly push you down onto your back, with the third stepping up #IF(pc.hasLegs())between your [pc.legs]#ELSEto your groin#ENDIF and chuckling, [npc2.speech(Mmm, yeah, you're gonna love my cock!)]
+		你发出了顺从的声音，做好了被[npc.namePos]的守卫操一顿的准备……
 	</p>
-	<p>
-		Making a submissive noise in agreement, you prepare to get fucked by [npc.namePos] guards...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -600,101 +600,101 @@
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_BREEDING"><![CDATA[
 	<p>
-		[npc2.Name] lets out a triumphant bellow as [npc2.she] watches you fall to the floor, defeated. With a hungry tone in [npc.her] voice, [npc.she] steps forwards and booms, [npc.speech(I think it's time for your punishment!)]
+		[npc2.Name]看着你被打败倒在地上时，[npc2.she]发出了胜利的吼声。[npc.her]的声音里充满了渴望，[npc.she]向前迈步并大喊道，[npc.speech(我想是时候惩罚你了！)]
 	</p>
 	<p>
-		Looking up and letting out a startled groan, you see the [npc.race] rubbing the thick bulge in [npc.her] hakama. As your eyes open wide, [npc.she] drops to [npc.her] knees before you and firmly pushes you down onto your back. [npc.speech(I'll make you a mother soon enough!)]
+		你抬头看见[npc.race]正隔着和服袴摩擦着那块明显的凸起，发出一声含糊的呻吟。[npc.she]看你瞪大了眼睛，跪倒在你面前，坚定地把你推倒在地。[npc.speech(我很快就会让你成为母亲！)]
 	</p>
 	<p>
-		Taking hold of your [pc.legs]#IF(pc.hasLegs()), [npc.name] starts to push them apart, getting#ELSE[npc.name] gets#ENDIF ready to breed you in the missionary position...  
+		[npc.name]抓住你的[pc.legs]，#IF(pc.hasLegs())把它们张开，#ELSE然后#ENDIF准备以传教士体位和你做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_IMPS"><![CDATA[
 	<p>
-		[npc.Name] lets out a triumphant bellow as [npc.she] watches you fall to the floor, defeated. [npc.Her] attitude soon changes, however, and [npc.she] dismissively tuts as [npc.she] sizes you up, before sighing, [npc.speech(Well, I would have liked to have fathered more imps with you as your punishment, but that's not possible. I think having my guards use your body is a suitable substitute. So go on, you three, have your fun with [pc.herHim]!)]
+		[npc2.Name]看着你被打败倒在地上时，[npc2.she]发出了胜利的吼声。不过，[npc.Her]的态度很快就变了，[npc.she]一边打量你，一边发出不屑的啧啧声，然后叹了口气， [npc.speech(好吧，我本来想和你生更多的小恶魔，但既然不可能，我觉得让你用身体来满足我的守卫倒挺不错。去吧，你们三个，和[pc.herHim]找点乐子！)]
 	</p>
 	<p>
-		Looking up and letting out a groan, you see the three imps rushing forwards to take advantage of you...
+		你抬起头闷哼一声，只见三只小恶魔冲上前来占你的便宜……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX"><![CDATA[
 	<p>
-		Submissively allowing [npc.name] to #IF(pc.hasLegs())spread your [pc.legs]#ELSEtake hold of your hips#ENDIF, you can't help but let out a small [pc.moan] as you realise that you're about to be bred by this strong, dominant [npc.race].
+		你向[npc.name]顺从地 #IF(pc.hasLegs())张开[pc.legs]#ELSE提起屁股#ENDIF。意识到自己马上会被这位强势而有力的[npc.race]占有，你情不自禁呻吟出声[pc.speech(来，就是这样！让我怀孕！)]
 	</p>
 	<p>
-		[npc.speech(Eager to get knocked up, are you?)] [npc.name] laughs, before shuffling forwards and bumping [npc.her] bulge against your groin. [npc.speech(I'll have you know that my seed's extra virile, so you're all but guaranteed to get pregnant from this!)]
+		[npc.speech(这么饥渴？想要怀孕？)][npc.name]笑着，用[npc.her]的帐篷顶了顶你的腹股沟。[npc.speech(正好，我的种可厉害了，你不想怀孕都难了！)]
 	</p>
 	<p>
-		Letting out yet another [pc.moan] as you hear [npc.herHim] say that, you prepare to be made into a mother by [npc.name]...  
+		听了[npc.herHim]的话，你继续[pc.moan]，准备让[npc.name]帮你成为准妈妈……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX_EAGER"><![CDATA[
 	<p>
-		Submissively #IF(pc.hasLegs())spreading your [pc.legs] for [npc.name]#ELSEpresenting yourself to [npc.name]#ENDIF, you can't help but let out a desperate [pc.moan] as you realise that you're about to be bred by this strong, dominant [npc.race]. [pc.speech(Oh, yes! Come on, breed me!)]
+		你向[npc.name]顺从地 #IF(pc.hasLegs())张开[pc.legs]#ELSE展示自己#ENDIF。意识到自己马上会被这位强势而有力的[npc.race]占有，你情不自禁呻吟出声[pc.speech(来，就是这样！让我怀孕！)]
 	</p>
 	<p>
-		[npc.speech(My, my, so eager to get knocked up!)] [npc.name] laughs, before shuffling forwards and bumping [npc.her] bulge against your groin. [npc.speech(In that case, I'm sure you'll be pleased to hear that my seed's extra virile, so you're all but guaranteed to get pregnant from this!)]
+		[npc.speech(这么饥渴？想要怀孕？)][npc.name]笑着，用[npc.her]的帐篷顶了顶你的腹股沟。[npc.speech(正好，我的种可厉害了，保证让你怀上，包你满意！)]
 	</p>
 	<p>
-		Letting out yet another lustful [pc.moan] as you hear [npc.herHim] say that, you eagerly anticipate being made into a mother by [npc.name]...  
+		听了[npc.herHim]的话，你[pc.moan]得更加淫荡。迫不及待让[npc.name]帮你成为准妈妈……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX_RESIST"><![CDATA[
 	<p>
-		You frantically try to
-		 #IF(pc.hasLegs())
-		 	 close your [pc.legs], but [npc.name] is far too strong, and easily manages to force them open.
-		 #ELSE
-		 	 pull away, but [npc.name] is far too strong, and easily holds you in position.
-		 #ENDIF
-		  Realising that you're about to be bred by this strong, dominant [npc.race], you let out a frantic scream, before trying to shuffle away from [npc.herHim].
+		你拼命
+		#IF(pc.hasLegs())
+			闭紧[pc.legs]，但[npc2.name]的巨力让你完全无从抗拒，一下就强行撑开了双腿。
+		#ELSE
+			逃开，但[npc2.name]的巨力让你完全无从抗拒，轻易就将你禁锢在原地。
+		#ENDIF
+		意识到自己即将成为这个强横、专治的[npc2.race]的肉便器，你不由得发出歇斯底里的尖叫，慌乱地试图逃离[npc2.herHim]。
 	</p>
 	<p>
-		[npc.speech(Not liking the idea of being knocked up, eh?)] [npc.name] laughs, before shuffling forwards and bumping [npc.her] bulge against your groin. [npc.speech(Well, you should have thought about that before barging in here uninvited! I'll have you know that my seed's extra virile, so you're all but guaranteed to get pregnant from this!)]
+		[npc.speech(不想怀孕？嗯？)][npc.name]笑着，用[npc.her]的帐篷顶了顶你的腹股沟。[npc.speech(可惜，现在后悔已经晚了，我的种可厉害了，你不想怀孕都难了！)]
 	</p>
 	<p>
-		Letting out yet another desperate wail as you hear [npc.herHim] say that, you do your best to resist being made into a mother by [npc.name]...  
+		听了[npc.herHim]的话，你哀嚎得更加绝望，竭力阻止[npc.name]让你成为准妈妈……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX_IMPS"><![CDATA[
 	<p>
-		The three alpha-imps move forwards, before quickly surrounding you and starting to grope and squeeze your body. [npc.Name] lets out a booming laugh, before stepping back and making sure that [npc.her] horny imps are enough to handle you. Before you can react to what's going on, two of the imps suddenly push you down onto your back, with the third stepping up #IF(pc.hasLegs())between your [pc.legs]#ELSEto your groin#ENDIF and chuckling, [npc2.speech(Mmm, yeah, you're gonna love my cock!)]
+		三个阿尔法小恶魔迅速上前将你团团围住，开始对着你的身体上下其手，各种揉捏。[npc.Name]响亮地笑出声，退后等着看欲火中烧的小恶魔们会怎么对付你。其中两个在你作出反应之前把你按倒在地，第三只顺势爬#IF(pc.hasLegs())到你的[pc.legs]中间#ELSE你的腹股沟#ENDIF笑着说，[npc2.speech(嗯，好啊，你马上就会爱上我的鸡巴！)]
 	</p>
 	<p>
-		Making a submissive noise in agreement, you prepare to get fucked by [npc.namePos] guards...
+		你发出了顺从的声音，做好了被[npc.namePos]的守卫操一顿的准备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX_IMPS_EAGER"><![CDATA[
 	<p>
-		The three alpha-imps move forwards, before quickly surrounding you and starting to grope and squeeze your body. [npc.Name] lets out a booming laugh, before stepping back and making sure that [npc.her] horny imps are enough to handle you. Before you can react to what's going on, two of the imps suddenly push you down onto your back, with the third stepping up #IF(pc.hasLegs())between your [pc.legs]#ELSEto your groin#ENDIF and chuckling, [npc2.speech(Mmm, yeah, you're gonna love my cock!)]
+		三个阿尔法小恶魔迅速上前将你团团围住，开始对着你的身体上下其手，各种揉捏。[npc.Name]响亮地笑出声，退后等着看欲火中烧的小恶魔们会怎么对付你。其中两个在你作出反应之前把你按倒在地，第三只顺势爬#IF(pc.hasLegs())到你的[pc.legs]中间#ELSE你的腹股沟#ENDIF笑着说，[npc2.speech(嗯，好啊，你马上就会爱上我的鸡巴！)]
 	</p>
 	<p>
-		Making a submissive noise in agreement, you eagerly prepare to get fucked by [npc.namePos] guards...
+		你发出了顺从的声音，急忙做好被[npc.namePos]的守卫操一顿的准备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_COMBAT_DEFEAT_SEX_IMPS_RESIST"><![CDATA[
 	<p>
-		The three alpha-imps move forwards, before quickly surrounding you and starting to grope and squeeze your body. [npc.Name] lets out a booming laugh, before stepping back and making sure that [npc.her] horny imps are enough to handle you. Before you can react to what's going on, two of the imps suddenly push you down onto your back, with the third stepping up #IF(pc.hasLegs())between your [pc.legs]#ELSEto your groin#ENDIF and chuckling, [npc2.speech(Mmm, yeah, you're gonna love my cock!)]
+		三个阿尔法小恶魔迅速上前将你团团围住，开始对着你的身体上下其手，各种揉捏。[npc.Name]响亮地笑出声，退后等着看欲火中烧的小恶魔们会怎么对付你。其中两个在你作出反应之前把你按倒在地，第三只顺势爬#IF(pc.hasLegs())到你的[pc.legs]中间#ELSE你的腹股沟#ENDIF笑着说，[npc2.speech(嗯，好啊，你马上就会爱上我的鸡巴！)]
 	</p>
 	<p>
-		Letting out a frantic scream, you do your best to resist as [npc.namePos] guards prepare to fuck you...
+		你疯狂发出尖叫，竭力避免被[npc.namePos]的守卫操一顿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -703,16 +703,16 @@
 	
 	<htmlContent tag="KEEP_AFTER_SEX_PACIFIED"><![CDATA[
 	<p>
-		You collapse to the floor, and with a satisfied [pc.moan], you look up to see [npc.name] smiling down at you.
+		你满意地发出[pc.moan]，瘫倒在地上，抬头看到[npc.name]正朝你微笑。
 	</p>
 	<p>
-		[npc.speech(Not bad,)] [npc.she] says. [npc.speech(You can come back any time, if this is what you're after! For now though, I need to get back to my work. Come back when you're ready to be knocked up!)]
+		[npc.speech(不错，)][npc.she]说。[npc.speech(之后你要是想怀孕了，随时欢迎你来，可惜现在我要回去做点事。)]
 	</p>
 	<p>
-		To the sound of [npc.namePos] impatient foot tapping on the polished wooden floor, you set about getting your things in order. Once done, you let out one last submissive whine, before heading over to the dojo's doors and preparing to take your leave...
+		你整理好衣服，[npc.namePos]则不耐烦地点着抛光过的木地板。整理完毕后，你最后发出一声顺从的呜咽，走向道馆的大门，准备离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -721,26 +721,26 @@
 	
 	<htmlContent tag="KEEP_AFTER_SEX_VICTORY"><![CDATA[
 	<p>
-		[npc.Name] and [npc.her] imps collapse to the floor, utterly exhausted. Quickly getting your things in order, you can't help but smile as you hear the [npc.race] panting, [npc.speech(Oh... Fuck...)]
+		[npc.Name]和[npc.her]的小恶魔精疲力竭地倒在地上。你利落地整理好衣服，听到[npc.race]喘息着说：[npc.speech(哦……该死……)]。之后你忍不住露出了笑容。
 	</p>	
 	<p>
-		Grinning down at the worn out gang, you wonder if you should tell them to get out of here right away, or perhaps you could first take this opportunity to confiscate their belongs...
+		你笑看着这群疲惫不堪的家伙，想着是让她们赶紧离开这里，还是趁这个机会收走她们的财物……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KEEP_AFTER_SEX_VICTORY_SCARE_OFF"><![CDATA[
 	<p>
-		[pc.speech(Get out of here, all of you! And don't come back!)] you order, smirking down at the gang.
+		[pc.speech(你们所有人！离开这里！不准回来！)]你低头笑着对她们命令到。
 	</p>
 	<p>
-		[npc.speech(W-We won't!)] [npc.name] stutters as [npc.she] stands up. Not even giving you another backwards glance, [npc.she] runs off down the length of the dojo, with [npc.her] imp guards close behind. Dashing out through the open doors, the gang disappear off into Submission, leaving you alone in the now-empty room.
+		[npc.speech(不、不会的！)][npc.name]结结巴巴地说，[npc.she]站了起来，甚至没有再向后看你一眼，就沿着道馆跑开了。小恶魔卫兵们紧随其后，从敞开的大门冲出去，这帮人就这样消失在屈城区，只留下你一个人在已经空无一人的城堡里。
 	</p>
 	<p>
-		Looking around, you see that there's absolutely nothing of value in here, so, with nothing more to do, you prepare to move off and continue on your way...
+		环顾四周，你发现这个要塞完全没有任何有价值的东西，因为无事可做，你准备离开这里，继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -750,67 +750,67 @@
 	#IF impMaleLeader.isAbleToEquipDildo(pc)
 	#THEN
 		<p>
-			You lie back on the floor of [npc.namePos] dojo, and with an exhausted [pc.moan], you close your eyes and feel the [npc.race]'s huge amount of cum drooling out of your pussy. Suddenly, something hard rubs against your [pc.labia+], and you open your eyes and look down just in time to see the potential father of your imp offspring thrust an insertable dildo all the way into your well-used cunt. Although the demonic cum acts as ample lubrication for the sudden insertion, it still takes you by surprise, and you cry out, [pc.speech(Aaah! What are you doing?!)]
+			你仰躺在[npc.namePos]道馆的地上，精疲力竭地喘息，闭上眼感受[npc.race]灌进的巨量精液从穴口滴出。突然间，你感觉到有粗糙的东西在磨蹭你[pc.labia+]，睁开眼正好看见可能是肚里小恶魔崽父亲的人正拿着个插入式假阳具往你被过度开发的阴道里塞。虽然恶魔精液为这突然间的插入做了充分的润滑，但你还是被吓了一跳，惊声尖叫道，[pc.speech(啊啊啊！你在干什么啊？！)]
 		</p>
 		<p>
-			[npc.speech(Well, we wouldn't want all my seed leaking out and going to waste now, would we?)] [npc.name] replies, letting out a laugh as [npc.she] firmly presses [npc.her] palm up against the dildo's flat end to make sure that it's in as far as it will go. [npc.speech(It's not that I don't trust you, but it's got a sealing enchantment on it as well, so my seed will have had ample time to take root in your womb before you can get it washed out.)]
+			[npc.speech(喂喂，我们都不想看着我的种子流出去，白白浪费掉吧？)][npc.name]大笑着回答。[npc.she]将掌心紧压在假阳具根部，尽可能地顶到最深处。[npc.speech(可不是我不相信你，只是这样能保证封得严实点。我的种有充裕的时间在你子宫里扎根，你洗不掉的。)]
 		</p>
 		#IF impMaleLeader.isAbleToEquipThong(pc)
 		#THEN
 			<p>
-				You start to let out a protesting whine, but before you can offer any real objection to [npc.namePos] treatment of you, [npc.she] quickly produces a dark red crotchless thong, before firmly forcing it first over your [pc.feet], and then up your thighs. [pc.speech(Hey! W-What's this?)]
+				你发出意欲自保的哀鸣。但还没来得及做出什么遭受[npc.namePos]如此这般对待的实际反抗，[npc.she]迅速掏出一条暗红色的无裆丁字裤，生拉硬拽上你的[pc.feet]，又给你提到大腿上。[pc.speech(喂！这，这是干嘛？)]
 			</p>
 			<p>
-				Sliding the thong all the way up to rest in place around your [pc.hips+], the [npc.race] lets out a delighted laugh as [npc.she] then steps back to admire [npc.her] handiwork. [npc.speech(So, how does that feel? Are you desperately wishing to get pregnant from my seed yet?)]
+				[npc.race]把丁字裤提到它该在的位置，护住你[pc.hips+]。[npc.race]暗笑一声，后退几步欣赏[npc.her]的杰作。[npc.speech(好了，这下感觉怎么样？是不是迫不及待要怀上我的种啦？)]
 			</p>
 			<p>
-				As [npc.name] says this, you can't help but let out a frantic moan at the thought of new life being born in your womb. Reaching down#IF(pc.hasLegs()) between your [pc.legs]#ENDIF, you make sure that the dildo is securely in place, letting out a relieved sigh as you feel that it's firmly plugging your vagina and keeping all that precious cum locked deep inside your uterus.
+				你听了[npc.name]的话，禁不住幻想起子宫中孕育的新生命，发出了狂乱的呻吟。你#IF(pc.hasLegs())摸到两[pc.legs]之间#ELSE向下摸#ENDIF，确认假阳具好好地插在那里。你安心地感受着假阳具紧紧堵住你的阴道，将每一滴珍贵的精液锁在子宫深处。你发出如释重负的叹息。
 			</p>
 			<p>
-				[npc.speech(Hah! I see the enchantment's having an effect already!)] [npc.she] laughs. [npc.speech(It'll also make sure your hips are nice and wide to help you carry, and later birth, our demonic offspring. Oh, and yes, before you ask, it's sealed too, although with a stronger enchantment than the dildo. You won't be taking it off any time soon!)]
+				[npc.speech(哈！看来附魔已经有效果了！)][npc.she]大笑。[npc.speech(这还会让你的大屁股又肥又翘，保证你怀住我们的恶魔后代，顺利生产。哦对，顺便说一句，这条内裤也被封印了，而且封印比假阳具还要强力哦。你再也别想脱下去啦！)]
 			</p>
 			<p>
-				You feel your cheeks flush as [npc.name] talks about the imps that you might be pregnant with, and you find yourself desperately wishing that you're soon going to be showing signs of being a mother.
+				你听[npc.name]对你肚子里的小恶魔夸夸其谈，感到热流直冲头顶，脸涨得通红。你不由自主地迫切期待自己尽快显露出怀孕的迹象。
 			</p>
 			<p>
-				Having finally finished with you, [npc.name] stands up, before dismissively shooing you away with one hand. [npc.speech(Come back once your pregnancy is over, and I'll knock you up all over again. That special thong you're wearing will make sure you stay eager to be knocked up, so I'm sure I'll see you again.)]
+				[npc.name]终于处理好你，轻蔑地起身，伸出一只手推开你。[npc.speech(等孕期结束回来，我接着把你肚子搞大。这条特制丁字裤会让你持续渴望被播种，所以我肯定会再见到你的。)]
 			</p>
 		#ELSE
 			<p>
-				Having finished with you, [npc.name] then stands up, before dismissively shooing you away with one hand. [npc.speech(Come back once your pregnancy is over, and I'll knock you up all over again. Don't get that dildo removed too soon, ok?!)]
+				[npc.name]终于处理好你，轻蔑地起身，伸出一只手推开你。[npc.speech(等孕期结束回来，我接着把你肚子搞大。记得多插一会假阳具，可以吧？)]
 			</p>
 		#ENDIF
 	#ELSE
 		#IF impMaleLeader.isAbleToEquipThong(pc)
 		#THEN
 			<p>
-				You lie back on the floor of [npc.namePos] dojo, and with an exhausted [pc.moan], you close your eyes and feel the [npc.race]'s huge amount of cum drooling out of your pussy. Suddenly, something soft rubs over your [pc.feet+], and you open your eyes and look down just in time to see the potential father of your imp offspring sliding a dark red crotchless thong up your thighs. [pc.speech(Hey! W-What's this?)]
+				你仰躺在[npc.namePos]道馆的地上，精疲力竭地喘息，闭上眼感受[npc.race]灌进的巨量精液从穴口滴出。突然间，你感觉到有柔软的东西在磨蹭你[pc.feet+]，睁开眼正好看见可能是肚里小恶魔崽父亲的人正拿着条暗红色的无裆丁字裤往你大腿上提。[pc.speech(喂！这，这是干嘛？)]
 			</p>
 			<p>
-				Sliding the thong all the way up to rest in place around your [pc.hips+], the [npc.race] lets out a delighted laugh as [npc.she] then steps back to admire [npc.her] handiwork. [npc.speech(So, how does that feel? Are you desperately wishing to get pregnant from my seed yet?)]
+				[npc.race]把丁字裤提到它该在的位置，护住你[pc.hips+]。[npc.race]暗笑一声，后退几步欣赏[npc.her]的杰作。[npc.speech(好了，这下感觉怎么样？是不是迫不及待要怀上我的种啦？)]
 			</p>
 			<p>
-				As [npc.name] says this, you can't help but let out a frantic moan at the thought of new life being born in your womb. Reaching down#IF(pc.hasLegs()) between your [pc.legs]#ENDIF, you push your [pc.fingers] into your cum-stuffed cunt, before desperately trying to push as much of the precious seed deep into your uterus as you possibly can.
+                    你听了[npc.name]的话，禁不住幻想起子宫中孕育的新生命，发出了狂乱的呻吟。你#IF(pc.hasLegs())摸到两[pc.legs]之间#ELSE向下摸#ENDIF，用[pc.fingers]深入啜满浓精的阴部，拼命将珍贵的精液尽可能推入子宫深处。
 			</p>
 			<p>
-				[npc.speech(Hah! I see the enchantment's having an effect already!)] [npc.she] laughs. [npc.speech(It'll also make sure your hips are nice and wide to help you carry, and later birth, our demonic offspring. Oh, and yes, before you ask, it's got a strong sealing enchantment on it. You won't be taking it off any time soon!)]
+				[npc.speech(哈！看来附魔已经有效果了！)][npc.she]大笑。[npc.speech(这还会让你的大屁股又肥又翘，保证你怀住我们的恶魔后代，顺利生产。哦对，顺便说一句，这条内裤上有强力封印哦。你再也别想脱下去啦！)]
 			</p>
 			<p>
-				You feel your cheeks flush as [npc.name] talks about the imps that you might be pregnant with, and you find yourself desperately wishing that you're soon going to be showing signs of being a mother.
+				你听[npc.name]对你肚子里的小恶魔夸夸其谈，感到热流直冲头顶，脸涨得通红。你不由自主地迫切期待自己尽快显露出怀孕的迹象。
 			</p>
 			<p>
-				Having finally finished with you, [npc.name] stands up, before dismissively shooing you away with one hand. [npc.speech(Come back once your pregnancy is over, and I'll knock you up all over again. That special thong you're wearing will make sure you stay eager to be knocked up, so I'm sure I'll see you again.)]
+				[npc.name]终于处理好你，轻蔑地起身，伸出一只手推开你。[npc.speech(等孕期结束回来，我接着把你肚子搞大。这条特制丁字裤会让你持续渴望被播种，所以我肯定会再见到你的。)]
 			</p>
 		#ELSE
 			<p>
-				You collapse to the floor, and with an exhausted [pc.moan], you look up to see [npc.name] grinning down at you. [npc.speech(Come back when you're desperate to become a mother, and I'll get you knocked up!)]
+				你瘫倒在地上，精疲力竭地喘息。你仰起头，看见[npc.name]朝你微笑。[npc.speech(想当妈妈了就随时回来，我会把你操怀孕的！)]
 			</p>
 		#ENDIF
 	#ENDIF
 	<p>
-		To the sound of their cackling laughter, the imps then unceremoniously drag you out of the dojo and through the fortress's front gate. Before you know it, you've been dragged far away from [npc.namePos] base, and are being carelessly hurled to the floor. Threatening you never to return, the imps head back the way they came, leaving you alone to catch your breath...
+		小恶魔们咯咯笑着，毫不客气地把你拖出道馆，扔出要塞门。不知不觉间，你已经离[npc.namePos]的基地很远了。小恶魔们漫不经心地把你扔在地上，威胁你别再回来，随后转身离去。你孤零零地在地上喘着粗气……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

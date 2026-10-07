@@ -204,12 +204,12 @@ public class DominionSuccubusAttacker extends NPC {
 		}
 		if(isSlave()) {
 			return UtilText.parse(this,
-					"Having lost [npc.herself] to [npc.her] powerful libido, [npc.name] ended up stalking the alleyways of Dominion in search of innocent citizens to force [npc.herself] on."
-					+ " Being unlucky enough to have been placed on the Enforcer's wanted list, and then to have encountered you, [npc.she] soon ended up being enslaved and owned by you.");
+					"[npc.name]终于屈服于其汹涌的性欲，便在御城区的巷子里潜行，寻找无辜的过路者强暴。"
+					+ "很不幸，[npc.she]上了执法者的通缉单，还遇上了你，最终受到奴役，为你所有了。");
 		}
 		return UtilText.parse(this,
-				"Although all demons have an extremely powerful libido, some suffer from it far more than others."
-				+ " While most are able to control their sexual desires, others, such as this [npc.race], struggle to think of anything but how to secure their next sexual conquest.");
+				"虽然所有恶魔都有极强的性欲，但有些恶魔的性欲比其他恶魔更甚。"
+				+ "这其中又有许多能够控制住其渴望，但另外的，例如这个[npc.race]，脑内除了如何征服下一个受害者，已经别无他物。");
 	}
 
 	@Override
@@ -248,15 +248,15 @@ public class DominionSuccubusAttacker extends NPC {
 			if(this.isFeminine()) {
 				return UtilText.parse(this, target,
 						UtilText.returnStringAtRandom(
-								"[npc.Name] looks annoyed that [npc2.nameIs] trying to put up a fight, and leaps forwards to deliver a stinging slap across [npc2.her] face.",
-								"With an angry little click of her tongue, [npc.Name] slaps [npc2.name] across the face.",
-								"With a frustrated whine, [npc.Name] kicks out at [npc2.namePos] shins."));
+								"[npc.Name]见到[npc2.nameIs]想要反抗，顿时感觉有些恼火，纵身一跃朝着[npc2.her]的脸上打去。",
+								"[npc.Name]怒而咋舌，朝着[npc2.name]的脸上就扇了过去。",
+								"[npc.Name]发出一声沮丧的呜咽，一脚踢向[npc2.namePos]的小腿。"));
 			} else {
 				return UtilText.parse(this, target,
 						UtilText.returnStringAtRandom(
-								"[npc.Name] looks annoyed that [npc2.nameIs] trying to put up a fight, and leaps forwards to deliver a solid punch to [npc2.her] [npc2.arm].",
-								"With an angry shout, [npc.Name] darts forwards and punches [npc2.name] right in the chest!",
-								"With a frustrated cry, [npc.Name] kicks out at [npc2.namePos] shins."));
+								"[npc.Name]见到[npc2.nameIs]想要反抗，顿时感觉有些恼火，纵身一跃朝着[npc2.her]的[npc2.arm]上打去。",
+								"[npc.Name]一声怒喝，飞身向前，一拳正中[npc2.name]的胸口！",
+								"[npc.Name]懊恼地喝了一声，朝着[npc2.namePos]的小腿就踢了过去。"));
 			}
 		}
 		return super.getMainAttackDescription(armRow, target, isHit, critical);
@@ -283,9 +283,9 @@ public class DominionSuccubusAttacker extends NPC {
 				}
 				return UtilText.parse(equipper, target,
 						"<p>"
-							+ "Holding out a condom to [npc2.name], [npc.name] [npc.verb(force)] [npc2.herHim] to take it and put it on."
-							+ " Quickly ripping it out of its little foil wrapper, [npc2.she] [npc2.verb(roll)] it down the length of [npc2.her] [npc2.cock+] as [npc2.she] [npc2.verb(whine)],"
-							+ " [npc2.speech(Do I really have to? It feels so much better without one...)]"
+							+ "[npc.Name]递给[npc2.name]一个避孕套，必须要[npc2.herHim]戴上。"
+							+ "[npc2.she]迅速撕开了铝箔包装，卷着将避孕套完整地戴在了[npc2.cock+]上，随后呜咽道，"
+							+ "[npc2.speech(一定要这样吗？不戴着可舒服多了……)]"
 						+ "</p>");
 				
 			} else if (!target.isPlayer()) {
@@ -296,14 +296,14 @@ public class DominionSuccubusAttacker extends NPC {
 				}
 				if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 					return UtilText.parse(equipper, target,
-							"[npc.Name] [npc.verb(direct)] [npc.her] spinneret at [npc2.namePos] [npc2.cock], but, sensing what [npc.sheIs] about to do, [npc2.name] [npc2.verb(slap)] it away and [npc2.verb(sneer)],"
-							+ " [npc2.speech(Hah! I don't think so!)]");
+							"[npc.Name]将[npc.her]的丝囊对准了[npc2.namePos]的[npc2.cock]，但当[npc2.name]意识到[npc.sheIs]的意图后，立刻将其拍开，冷笑道，"
+							+ "[npc2.speech(哈！我可没这个打算！)]");
 				}
 				return UtilText.parse(equipper, target,
 						"<p>"
-							+ "[npc.Name] [npc.verb(pull)] out a condom and [npc.verb(try)] to give it to [npc2.name], but [npc2.she] simply laughs in [npc.her] face before grabbing the little foil packet and tearing it in two."
-							+ " Mocking [npc.namePos] attempt at trying to get [npc2.herHim] to wear a rubber, [npc2.she] [npc2.verb(sneer)],"
-							+ " [npc2.speech(Hah! I don't think so!)]"
+							+ "[npc.Name]拿出一个避孕套想交给[npc2.name]，但[npc2.she]却只轻笑一声，便把那铝箔包装袋抢了过来，撕成了两半。"
+							+ "[npc2.she]嘲笑着[npc.namePos]让[npc2.herHim]套上套那异想天开的想法，冷冷地说道，"
+							+ "[npc2.speech(哈！我可没这个打算！)]"
 						+ "</p>");
 			}
 		}
@@ -320,84 +320,84 @@ public class DominionSuccubusAttacker extends NPC {
 		
 		if(Main.game.getPlayer().hasHymen()) {
 			sb.append("<p>"
-							+ "As the dominant [npc.race] drives [npc.her] [npc.cock+] deep into your [pc.pussy+], your vision explodes in stars, and a painful, high-pitched shriek escapes from between your lips."
-							+ " Due to the fact that you're still a virgin, the sudden, violent penetration is like nothing you've ever felt before,"
-								+ " and your shriek turns into a shuddering cry as you find yourself overwhelmed by the agony of your first penetration."
+							+ "那个高高在上的[npc.race]将[npc.her][npc.cock+]深深塞进了你[pc.pussy+]，你顿时感到眼冒金星，一阵痛苦的尖叫从唇间挤了出来。"
+							+ "由于你还是个处女，这突然的暴力插入带来的疼痛是前所未有的，"
+								+ "你的尖叫化作了颤抖的哀嚎，躯体也因初次插入带来的剧痛而扭来扭去。"
 						+ "</p>"
 						+ (Main.game.getPlayer().hasFetish(Fetish.FETISH_MASOCHIST)
 								?"<p>"
-									+ "Due to being an extreme masochist, you find your painful cries being interspersed with lewd moans of pleasure."
-									+ " The agony between your legs is pure bliss, and you focus on the pain as you squeal and moan in a delightful haze of overwhelming ecstasy."
+									+ "由于你是个极端的受虐狂，你意识到自己痛苦的哭喊掺杂了欢愉而淫荡的呻吟。"
+									+ "股间的剧痛反而带来纯粹的愉悦，你专注于这份痛感，在狂喜之中尖叫呻吟着。"
 								+ "</p>"
 								:"")
 						+"<p>"
-							+ "Glancing down, you see a small trickle of blood flowing out of your now-broken-in pussy, and you realise that your hymen has been completely torn."
-							+ " As you let out a desperate sigh, you hear the [npc.race] giggling at your reaction."
+							+ "你低头一瞥，只见一小股鲜血从你被刺入的小穴中淌出来，你明白自己的处女膜已经完全被撕裂了。"
+							+ "你绝望地哀叹着，却听到那[npc.race]对着你的反应欣喜地笑了起来。"
 						+ "</p>"
 						+"<p>"
-							+ "Looking up at [npc.herHim], you see a wild, crazed look in [npc.her] eyes."
-							+ " Another jolt of pain shoots up between your legs as [npc.she] drives [npc.her] [npc.cock+] even deeper into your [pc.pussy+]."
-							+ " Leaning into you, [npc.she] pulls you into a sloppy kiss, and with a final, violent thrust into your groin, you feel the base of [npc.her] cock grind up against your [pc.labia+]."
+							+ "你抬头看向[npc.herHim]，那眼中竟满是疯狂。"
+							+ "[npc.she]将[npc.cock+]又送入你[pc.pussy+]的更深处，另一阵剧痛从股间传来。"
+							+ "[npc.she]俯身靠近你，将你拖入了一场湿吻，随后又是一次猛力的突刺，你感觉得到[npc.her]的肉棒根部已经紧紧挤压在了你[pc.labia+]上。"
 						+ "</p>"
 						+ "<p>"
-							+ "Still keeping [npc.her] [npc.cock] fully hilted in your [pc.pussy], [npc.she] breaks off the kiss, raising [npc.her] hand to cover your mouth as [npc.she] muffles your painful cries."
-							+ " Playfully biting [npc.her] lip, [npc.she] starts taunting you, clearly getting incredibly excited about being the one to take your virginity."
+							+ "[npc.she]依然将[npc.cock]整根塞进着你的[pc.pussy]，与你从深吻中分开，举起[npc.hand]又捂住了你的嘴巴，哭喊声变得含混不清。"
+							+ "[npc.she]饶有兴致地轻咬下唇，因为夺取了你的处女而大为兴奋，朝着你嘲讽起来。"
 						+ "</p>"
 						+ "<p>"
-							+ "[npc.speechNoEffects(~Mmm!~ Doesn't that feel good?! Aww, I wonder if you were saving yourself for someone?)]"
-							+ " [npc.She] pauses for a moment to let out a mocking laugh, before continuing,"
-							+ " [npc.speechNoEffects(Well, I guess you were saving yourself for me in the end! Which is a shame, really, because you're just another easy fuck to me.)]"
+							+ "[npc.speechNoEffects(~姆嗯！~是不是感觉很爽？！噢……我猜你应该是为了某个人特意留下的吧？)]"
+							+ "[npc.She]停下来发出一段尖锐的嘲笑声，接着又说道，"
+							+ "[npc.speechNoEffects(哎呀，看样子你是专门为我留的了！唉，真是可惜，因为你不过是我用来发泄的玩具罢了。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "You let out a protesting moan, but the [npc.race] just presses [npc.her] hand down even tighter over your mouth as [npc.she] continues, "
-							+ "[npc.speechNoEffects(What's that? You want me to do it again?!)]"
+							+ "你反对地哼唧了几声，但那[npc.race]却只是把那只[npc.hand]捂得更紧了，继续说着，"
+							+ "[npc.speechNoEffects(又怎么了？你还想让我再来一次吗？！)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Letting out a manic laugh, the [npc.race] suddenly drops [npc.her] hips, allowing [npc.her] [npc.cock+] to slide fully out of your [pc.pussy+]."
-							+ " Lining [npc.herself] up once more, [npc.she] wastes no time before violently thrusting up into you for a second time."
-							+ " Although still uncomfortable enough to cause you to cry out into the palm of [npc.her] hand, it's nothing like the agony you experienced on the first thrust,"
-								+ " and as you feel [npc.her] throbbing length filling you up once more, you find yourself letting out a desperate little moan."
+							+ "那[npc.race]狂笑着，突然一缩腰身，将[npc.her][npc.cock+]整根都从你[pc.pussy+]中抽了出来。"
+							+ "[npc.she]再次调整好位置，紧接着又用力向前，第二次刺入你的体内。"
+							+ "尽管依然十分难受，喊叫声不免得又一次在[npc.her]的掌心中回响，但至少没有第一次插入时那般痛苦了，"
+								+ "你感受到[npc.her]颤动的肉棒再次填满了你的身体，绝望的呻吟脱口而出。"
 						+ "</p>"
 						+ "<p>"
-							+ "The [npc.race] looks delighted at your reaction, and leans in as [npc.she] continues teasing you,"
-							+ " [npc.speechNoEffects(~Ooh!~ So, you're a slut for demon dick? Can you feel it, pushing <i>deep</i>, claiming your precious little virginity?!)]"
+							+ "那[npc.race]欣赏着你的反应，格外愉悦，将身体凑近过来，继续调戏道，"
+							+ "[npc.speechNoEffects(~哦哦！~你是我这恶魔大屌的小骚货了吗？你感觉到了吗，那<i>深深</i>刺入体内，夺取了你珍贵的处女的玩意？！)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Dropping [npc.her] hips a little, [npc.she] starts rapidly thrusting in and out of your [pc.pussy], taking [npc.her] hand away from your mouth as you find yourself letting out a series of lewd moans."
-							+ " Moving [npc.her] hands down to take hold of your waist, [npc.she] carries on taunting you, repeating that you'll always remember this moment as the time you discovered that you're just a slut for big, thick demon cock."
-							+ " As the pain between your legs fades away into a dull ache, you find yourself letting out moan after desperate moan, and you start to worry that the [npc.race] might be right..."
+							+ "[npc.she]继续压低着身子，随后在你的[pc.pussy]之中快速抽插起来，同时把[npc.hand]从你的嘴巴上移了开来，你却发现自己的口中竟不断地发出淫荡的呻吟。"
+							+ "[npc.she]转而把住了你的腰部，口中的嘲讽一刻不断，重复地说着，你将会永远记住这一刻——意识到自己只不过是粗大的恶魔鸡巴的俘虏罢了。"
+							+ "股间的疼痛逐渐只剩下微微的隐痛，口中的呻吟却一声接着一声，你有些担心起来，那[npc.race]说的可能没错……"
 						+ "</p>");
 			
 		} else {
 			sb.append(
 					"<p>"
-						+ "As the dominant [npc.race] drives [npc.her] [npc.cock+] deep into your [pc.pussy+], you can't stop a desperate, high-pitched wail from bursting out of your mouth."
-						+ " Due to the fact that you're still a virgin, the sudden, violent penetration is like nothing you've ever felt before, and your wail turns into a shuddering cry as you find yourself overwhelmed byt this new sensation."
+						+ "那个高高在上的[npc.race]将[npc.her][npc.cock+]深深塞进了你[pc.pussy+]，你脱口而出一声绝望的哀嚎。"
+						+ "由于你还是个处女，这突然的暴力插入带来的疼痛是前所未有的，哀嚎逐渐化作颤抖的哭喊，这种从未体验过的感受淹没了你。"
 					+ "</p>"
 					+"<p>"
-						+ "As your hymen has been previously torn, the penetration isn't painful, but from your surprised reaction, [npc.name] is still able to realise that [npc.sheHas] just taken your virginity."
-						+ " With a wild, crazed look in [npc.her] eyes, [npc.name] violently thrusts into your groin, driving [npc.her] [npc.cock+] as deep as [npc.she] possibly can into your [pc.pussy+]."
-						+ " Keeping [npc.her] throbbing demonic cock driven as deep as possible into your [pc.pussy+], [npc.name] playfully licks [npc.her] [npc.lips], before starting to taunt you."
+						+ "由于处女膜此前已经破裂，插入并没有那么痛，但令你意想不到的是，[npc.name]仍旧知道[npc.sheHas]夺取了你的处女。"
+						+ "[npc.name]的眼中满是疯狂，[npc.she]暴力地向你的下体刺去，将[npc.cock+]一直插到入了你[pc.pussy+]，直到不能再深。"
+						+ "[npc.Name]让[npc.her]颤抖的恶魔肉棒保持在你[pc.pussy+]深处，饶有兴致地舔了舔[npc.lips]，向你嘲讽起来。"
 					+ "</p>"
 					+ "<p>"
-						+ "[npc.speechNoEffects(~Mmm!~ Having a big demonic cock stuffed into your pussy feels good, doesn't it?! ~Ooh!~ I wonder if you were saving your first time for a special someone in your life?)]"
-						+ " [npc.she] asks, before pausing to let out a mocking laugh. Clearly getting incredibly excited about being the one to take your virginity, [npc.she] impatiently continues,"
-						+ " [npc.speechNoEffects(It looks like you were saving yourself for me in the end! Which is a shame, really, because you're just another easy fuck to me.)]"
+						+ "[npc.speechNoEffects(~姆嗯！~让恶魔的大屌塞满小穴的感觉是不是很爽？！~哦哦！~我猜你的第一次是不是给某个特别的人保留的？)]"
+						+ "[npc.she]问过后就停了下来，发出一段尖锐的嘲笑声。[npc.she]显然是因为夺取了你的处女而大为兴奋，急忙继续道，"
+						+ "[npc.speechNoEffects(看样子到头来是让我占了先！唉，真是可惜，因为我只不过是随便操你一顿罢了。)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You can't help but let out [pc.a_moan+] as you feel [npc.namePos] [npc.cock+] throbbing deep within your cunt, which causes [npc.herHim] to let out another mocking laugh and ask,"
-						+ " [npc.speechNoEffects(What's that? You want me to do it again?!)]"
+						+ "你感受到[npc.namePos][npc.cock+]在你的蜜穴中颤动着，按捺不住发出一声[pc.a_moan+]，这反而让[npc.herHim]又奸笑起来，恶心地问道，"
+						+ "[npc.speechNoEffects(又怎么了？你还想让我再来一次吗？！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Not waiting to hear your response, the [npc.race] suddenly pulls [npc.her] hips back, allowing [npc.her] [npc.cock+] to slide fully out of your [pc.pussy+]."
-						+ " Lining [npc.herself] up once more, [npc.she] immediately thrusts into you for a second time, and as you feel [npc.her] hot cock filling you up once more, you find yourself letting out a desperate [pc.moan]."
-						+ " [npc.Name] looks delighted at your reaction, and pushes [npc.her] demonic cock in a little deeper as [npc.she] teases,"
-						+ " [npc.speechNoEffects(~Ooh!~ So, you're a dirty slut for demon dick, are you? You like that feeling? ~Mmm!~ Having my cock push <i>deep</i> into your horny little pussy, claiming your precious virginity?!)]"
+						+ "那[npc.race]来不及听你的恢复，便猛地一抽身，让[npc.cock+]从你[pc.pussy+]中完全抽离了出来。"
+						+ "[npc.she]再次调整好位置，紧接着又用力向前，第二次刺入你的体内，你感受到[npc.her]温热的肉棒再次填满了你的身体，绝望的[pc.moan]脱口而出。"
+						+ "[npc.Name]欣赏着你的反应，格外愉悦，将那恶魔肉棒压得更深，继续调戏道，"
+						+ "[npc.speechNoEffects(~哦哦！~你是我这恶魔大屌的小骚货了吗？你喜欢这感觉吗？~姆嗯！~我的鸡巴<i>深深</i>刺入体内，夺取了你珍贵的处女的感觉？！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Pulling back a little, [npc.she] starts thrusting in and out of your [pc.pussy+], grinning in delight as [npc.she] hears you let out a series of lewd [pc.moans]."
-						+ " As [npc.her] cock continues to pound your cunt, [npc.name] carries on taunting you, repeating that you'll always remember this moment as the time you discovered that you're just a slut for demonic cock."
-						+ " As [npc.she] says this, you find yourself letting out moan after desperate moan, and you start to worry that the [npc.race] might be right..."
+						+ "[npc.she]稍稍收了收腰，随后在你[pc.pussy+]中快速抽插起来，听到你发出一连串下流的[pc.moans]后，脸上布满了愉悦的笑意。"
+						+ "[npc.her]的阴茎继续在你的细缝中进出着，[npc.name]口中的嘲讽一刻不断，重复地说着，你将会永远记住这一刻——意识到自己只不过是粗大的恶魔鸡巴的俘虏罢了。"
+						+ "[npc.she]说着说着，你也意识到自己口中的呻吟却一声接着一声，便有些担心起来，那[npc.race]说的可能没错……"
 					+ "</p>");
 		}
 		
@@ -407,28 +407,28 @@ public class DominionSuccubusAttacker extends NPC {
 	@Override
 	public String getSpecialPlayerPureVirginityLoss(GameCharacter penetratingCharacter, SexAreaPenetration penetrating) {
 		return "<p style='text-align:center;'>"
-						+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Broken Virgin</b>"
+						+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>失格处女</b>"
 					+ "</p>"
 					+ "<p>"
-						+ "As the [npc.race] carries on pounding away between your legs, the sudden realisation of what's just happened hits you like a sledgehammer."
+						+ "那[npc.race]在你的股间不断抽送着，刚刚发生的一切，犹如一记重锤砸在你的心上。"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ UtilText.parsePlayerThought("I-I've lost my virginity?!<br/>"
-								+ "To... <b>her</b>?!")
+						+ UtilText.parsePlayerThought("我，我就这样失贞了？！<br/>"
+								+ "给了……<b>这家伙</b>？！")
 					+ "</p>"
 					+ "<p>"
-						+ "You don't know what's worse, losing the virginity that you prized so highly, or the fact that you're actually enjoying it."
-						+ " As your labia spread lewdly around the hot, thick demon-dick, you find yourself starting to agree with what the [npc.race] is telling you."
+						+ "你不知道哪个更糟糕；是失去了这样看重的第一次，还是自己反而乐在其中。"
+						+ "你那阴唇被那滚烫粗壮的恶魔鸡巴淫靡地撑开着，你不免有些认同那[npc.race]的话了。"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-					+ UtilText.parsePlayerThought("If I'm not a virgin, that makes me a slut...<br/>"
-							+ "Just a slut for demon cock...<br/>"
-							+ "She's right, I'm just another easy fuck for someone like her...")
+					+ UtilText.parsePlayerThought("如果我不再是处女，那我就是个骚货了……<br/>"
+							+ "只是个被恶魔肉棒征服的骚货……<br/>"
+							+ "她说得对，我只不过是她这种人随便打一炮的家伙罢了……")
 					+ "</p>"
 					+ "<p>"
-						+ "You're vaguely aware of the [npc.race]'s taunts fading away as [npc.she] starts to focus [npc.her] concentration on fucking you."
-						+ " With a desperate moan, you start bucking your hips back against [npc.herHim], resigning yourself to the fact that now you're nothing more than a"
-						+ " <b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>broken virgin</b>..."
+						+ "你隐约感觉到那[npc.race]似乎不再那么频繁地嘲弄你，[npc.she]将精力逐渐集中到了性交上。"
+						+ "你迫不及待地呻吟着，自己也主动晃动起腰身，接受了这个事实，你不过只是个"
+						+ "<b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>失格处女</b>……"
 					+ "</p>";
 	}
 	
@@ -443,15 +443,15 @@ public class DominionSuccubusAttacker extends NPC {
 		List<String> speech = new ArrayList<>();
 		
 		if(isPlayerDom && Main.sex.getSexPace(this)!=SexPace.SUB_RESISTING){
-			speech.add("Come on, fuck me already!");
-			speech.add("Come on! What's taking so long?!");
-			speech.add("Fuck me already!");
-			speech.add("Let's get started! Come on!");
+			speech.add("来吧，操我吧！");
+			speech.add("来吧！怎么磨蹭这么久？！");
+			speech.add("操我吧！");
+			speech.add("开始吧！快来！");
 		} else if(!isPlayerDom) {
-			speech.add("I'm gonna turn you into a slut for demon cock!");
-			speech.add("You ever been fucked by a demon?");
-			speech.add("You're going to be begging for my cum before the end!");
-			speech.add("You're going to be a good little bitch!");
+			speech.add("我要把你变成被恶魔肉棒征服的荡妇！");
+			speech.add("你被恶魔操过吗？");
+			speech.add("在结束之前，你就会求着要我的精液！");
+			speech.add("你就要变成一个乖乖小婊子了！");
 		} else {
 			return super.getDirtyTalkNoPenetration(target, isPlayerDom);
 		}

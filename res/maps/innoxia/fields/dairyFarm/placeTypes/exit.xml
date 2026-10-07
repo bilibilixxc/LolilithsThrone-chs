@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Waiting Area]]></name>
-	<tooltipDescription><![CDATA[The entrance to the dairy farm takes the form of a pair of modern, glass doors, and leads directly into a large waiting area.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the waiting area at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[等候区]]></name>
+	<tooltipDescription><![CDATA[作为乳业农场入口的这扇现代玻璃双开门通向宽敞的等待区。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的等待区里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

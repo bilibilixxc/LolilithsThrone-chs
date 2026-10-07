@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>0</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[key-chain necklace]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[key-chain necklaces]]></namePlural>
-		<description><![CDATA[A necklace made out of the three keys you acquired from the imp fortresses in Submission.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[钥匙串项链]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[钥匙串项链]]></namePlural>
+		<description><![CDATA[一条用你从屈城区里的小恶魔要塞获得的三个钥匙做的项链。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
     <equipSlots>
@@ -63,48 +62,45 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(drape)] the key-chain around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(drape)] the key-chain around [npc2.namePos] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before draping the key-chain around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把钥匙串项链系在[npc.her]的脖子。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把钥匙串项链系在[npc2.namePos]的脖子。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]，然后把钥匙串项链紧紧系在[npc2.her]的脖子上。
+]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] key-chain, before lifting it up and over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of the key-chain, before lifting it up and over [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(grab)] the key-chain, before yanking it up and over [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]抓住[npc.her]的钥匙串的链子，然后把它举过[npc.her]的头顶。]]></self>
+    <other><![CDATA[
+[npc.Name][npc.Name]抓住[npc.her]的钥匙串的链子，然后把它举过[npc2.namePos]的头顶。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴的抓住了钥匙串的链子，猛地把它从[npc2.namePos]的头上拉下来。]]></otherRough>
   </displacementText>
 	
   <replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] key-chain, before wrapping it around [npc.her] wrist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of the key-chain, before wrapping it around [npc2.namePos] wrist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.namePos] wrist, wrapping the key-chain tightly around it.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把钥匙串项链系在[npc.her]手腕上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把钥匙串项链系在[npc2.namePos]的手腕上并固定好。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把钥匙串项链紧紧系在[npc2.namePos]的手腕上并固定好。
+]]></otherRough>
   </replacementText>
   <displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] key-chain, unwrapping it from around [npc.her] wrist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of [npc2.namePos] key-chain, unwrapping it from around [npc2.her] wrist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(grab)] [npc2.namePos] key-chain, ripping it from [npc2.her] wrist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的钥匙串项链，然后从[npc.her]的手腕上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的钥匙串项链，然后从[npc2.her]的手腕上取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地解开[npc2.namePos]的钥匙串项链，然后从[npc2.her]的手腕抢下。
+]]></otherRough>
   </displacementText>
 </clothing>

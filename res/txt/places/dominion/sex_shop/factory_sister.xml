@@ -1,604 +1,604 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Saellatrix's succubus sister content: -->
 
 	<htmlContent tag="ENCOUNTER"><![CDATA[
 	<p>
-		As you and Fia continue on your way through the factory, you suddenly get the feeling that something's not quite right. Sure enough, a [sister.skinColour]-skinned succubus suddenly steps out from behind a machine just a short way in front of you. A riding crop is clutched in one of her hands, and a sadistic smirk flashes across her pretty face as she violently swats the nearest doll's ass.
+		你和菲亚在工厂中继续前行时，突然感到事情似乎有些不对劲。果然，一个肤色[sister.skinColour]的魅魔突然从你面前不远处的一台机器后面走了出来。她的手中握着一根马鞭，脸上闪过一抹施虐的微笑，随即她用力抽打了最近的一只玩偶的屁股。
 	</p>
 	<p>
-		For a moment the succubus has her back to you, and thanks to her skimpy fishnet outfit you can see that she's sporting a series of tattoos on her back. The topmost one between her shoulder blades is that of a gold pentagram, and beneath it the words 'Property of Saellatrix' make it clear that she's a slave. Beneath that, running down her lower back, golden writing lists her supposed 'Crimes', which consist of 'Scheming against Saellatrix', 'Attempting to gain Lovienne's recognition', and
+		有那么一瞬间，魅魔背对着你，由于她穿着渔网服，你可以看到她的背上有许多纹身。肩胛骨之间最上面的是一个金色五角星，下面的“赛拉特里克斯的财产”字样清楚地表明她是一名奴隶。在下方，金色的文字列出了她所谓的“罪行”，包括“密谋反对赛拉特里克斯”、“企图获得洛维耶纳的承认”和
 		#IF(sister.hasFetish(FETISH_ANAL_RECEIVING))
-			 'Telling Saellatrix to kiss my ass'.
+			“叫赛拉特里克斯去亲我的屁股”。
 		#ELSEIF(sister.hasFetish(FETISH_PURE_VIRGIN))
-			 'Boasting about my pretty, virgin pussy'. As she turns to the side, you see that she's sporting a huge number of tattooed tally marks all around her groin, and above them you manage to make out the pink text, '&#8595; Free Fuck &#8595;'.
+			“夸耀我漂亮的童贞小穴”。等她转过身来，你能看到她的腹股沟周围有大量的纹身标记，在这些标记的上方，你可以看到粉红色的文字“↓ 免费操 ↓”。
 		#ELSEIF(sister.hasFetish(FETISH_ORAL_GIVING))
-			 'Refused to suck Saellatrix's cock'. As she turns to the side, you see that she's sporting a huge number of tattooed tally marks all over her breasts, and above them you manage to make out the pink text, '&#8593; Fuck Hole &#8593;'.
+			“拒绝为赛拉特里克斯唆鸡巴”。等她转过身来，你能看到她的乳房上有大量的纹身标记，在这些标记的上方，你还能看到粉红色的文字“↑该洞可操↑”。
 		#ELSEIF(sister.hasFetish(FETISH_BREASTS_SELF))
-			 'Called Saellatrix a dumb tit cow'. As she turns to the side, you see that she's sporting a huge number of tattooed tally marks all over her huge breasts, and above them you manage to make out the pink text, 'Tit Cow'.
+			“把赛拉特里克斯叫做无脑乳牛”。等她转过身来，你能看到她硕大的乳房上有大量的纹身标记，在这些标记的上方，你还能看到粉红色的文字“乳头奶牛”。
 		#ELSEIF(sister.hasFetish(FETISH_PENIS_GIVING))
-			 'Called Saellatrix's cock disgusting'. As she turns to the side, you see that she's sporting a huge number of tattooed tally marks all around her groin, and above them you manage to make out the pink text, 'Get knotted, bitch!'.
+			“说赛拉特里克斯的鸡巴很恶心”。等她转过身来，你能看到她的腹股沟周围有大量的纹身标记，在这些标记的上方，你还能看到粉红色的文字：“锁结吧，婊子！”。
 		#ENDIF
 	</p>
 	<p>
-		[fia.speech(Hide!)] Fia hisses at you, before darting behind a nearby stack of crates and disappearing from sight.
+		[fia.speech(藏起来！)]菲亚向你嘶吼，闪到附近的一堆箱子后面，消失在人们的视线中。
 	</p>
 	#IF(pc.hasStatusEffect(SE_MARKED_BY_MUSK))
 		<p>
-			Before you have the chance to do so, the succubus sniffs the air and exclaims, [sister.speech(What's that musky scent?! Someone's here!)]
+			你还没来得及这么做，魅魔就嗅到了空气中的味道，并发出了惊叹，[sister.speech(那是什么味？有人在这！)]
 		</p>
 	#ELSEIF(pc.hasStatusEffect(SE_SMOKING) || pc.hasStatusEffect(SE_RECENTLY_SMOKED))
 		<p>
-			Before you have the chance to do so, the succubus sniffs the air and exclaims, [sister.speech(What's that smell of smoke?! Someone's here!)]
-		</p>
+			你还没来得及这么做，魅魔就嗅到了空气中的味道，并发出了惊叹，[sister.speech(那是什么烟味？有人在这！)]	
+	</p>
 	#ELSEIF(pc.getAlcoholLevel().isGreaterThan(ALCOHOL_LEVEL_TWO_MERRY))
 		<p>
-			As you try to follow Fia's lead, you drunkenly stumble into a nearby crate, causing a loud crash in the process. The succubus spins towards you and shouts, [sister.speech(What's that noise?! Someone's here!)]
+			当你试图跟随菲亚的指引时，你醉醺醺跌跌撞撞地撞上了附近的一个箱子，在此过程中造成了巨大的撞击声。魅魔转向你这边喊道，[sister.speech(什么声音？有人在那？！)]
 		</p>
 	#ELSE
 		<p>
-			The succubus doesn't seem to have detected your presence, and so you have the opportunity to hide with Fia and wait until she leaves. Instead, if you wanted to fight, you could confront her...
+			那只魅魔似乎没有发现你的存在，所以你有机会和菲亚一起躲起来，等她离开。相反，如果你想战斗，你可以和她对峙……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>	
+	
+	]]></htmlContent>	
 	
 	<htmlContent tag="ENCOUNTER_HIDE"><![CDATA[
 	<p>
-		Deciding that it's best to follow Fia's lead, you duck out of sight behind the nearest sex toy machine. The succubus pauses for a moment, but after glancing around, she continues on her way and quickly disappears from sight.
+		你决定最好跟着菲亚的脚步走，于是躲到了最近的性玩具机器后面。那只魅魔停顿了片刻，但扫了一眼四周后，她继续往前走，很快就消失在人们的视线中。
 	</p>
 	<p>
-		[fia.speech(Phew... That was close,)] Fia sighs as she leaves her hiding place. Motioning for you to lead the way, she says, [fia.speech(Come on, let's keep moving.)]
+		[fia.speech(呼……好险，)]菲亚一边叹气，一边离开了藏身之处。她示意你带路：[fia.speech(来吧，继续前进。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENCOUNTER_CONFRONTATION"><![CDATA[
 	<p>
-		Not wanting to hide from just one succubus, you instead [pc.step] forwards into her line of sight and prepare for a confrontation.
+		你不想只为了一个魅魔躲藏，而是走到她的视线前，准备与她对峙。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Intro description: -->
 	
 	<htmlContent tag="SISTER_INTRO"><![CDATA[
 	<p>
-		[sister.speech(What have we here?)] the succubus asks as she steps towards you. A sadistic smirk quickly settles on her beautiful face, and with a wild, desperate gleam in her [sister.eyeColour] eyes, she maniacally giggles, [sister.speech(A new toy, just for me?! ~Ooh!~ I'm going to have so much fun with you!)]
+		[sister.speech(这是什么？)]魅魔边问边向你走来。她美丽的脸庞上很快浮现出一抹残忍的冷笑，[sister.eyeColour]眼睛里闪烁着狂野而饥渴的光芒，疯狂地咯咯笑着，[sister.speech(我的新玩具~哦！~我会和你玩得很开心的！)]
 	</p>
 	#IF(sister.hasFetish(FETISH_ANAL_RECEIVING))
 		<p>
-			As she slowly struts forwards, you're able to get a good look at the purple-skinned succubus. To really show off the fact that she's a slave, she's wearing what appears to be an enchanted choker, and has had her head shaved and her horns shrunk down to little nubs. Wearing skimpy, black fishnet clothing and a microskirt too short to keep anything hidden, she may as well be naked, allowing you to see that she's got an 'anal-only' pastie stuck over her pussy.
+			当她缓缓向前迈步时，你可以清楚地看到这个紫色皮肤的魅魔。为了更好地展示她是奴隶的事实，她戴着一个似乎是施了魔法的吊环，剃了光头，犄角也缩成了小疙瘩。她穿着超短的黑色鱼网服装和超短裙，裙子太短，无法遮挡任何东西，她就像裸体一样，让你可以看到她的阴部贴着“仅限肛门”的贴纸。
 		</p>
 		<p>
-			Making it clear that this item isn't just for show, she spins around and bends over, before reaching back and pulling her ass cheeks apart. Her puffy, ebony-rimmed asshole looks more like a lewd sexual orifice than most pussies, and you watch as a slick stream of natural lubrication drools out of it to drip down her thighs.
+			她转过身，弯下腰，然后伸手拉开自己的屁股。与大多数阴道相比，她那肉感、乌黑的屁眼看起来更像是一个淫荡的性器官，你会看到一股滑溜溜的天然润滑液从屁眼流出，滴落在她的大腿上。
 		</p>
 		<p>
-			[sister.speech(Come on, babe, just give up and submit to my ass,)] she playfully teases. As she spreads her glistening doughnut with her slender fingers, you see that the words 'Butt Slut' are inked on her ass, along with a huge number of tally marks to show how many people have fucked her juicy#IF(game.isGapeContentEnabled()), gaping#ENDIF asshole. Standing up and turning to face you, the succubus moans, [sister.speech(Oh, you want to do this hard way, do you? It'll end the same way; with me sitting on your face and your tongue in my ass!)]
+			[sister.speech(来吧，宝贝，放弃吧，臣服于我的屁股吧，)]她俏皮地挑逗道。当她用纤细的手指拨开晶莹剔透的“甜甜圈”时，你会看到她的屁股上印着“屁穴荡妇”的字样，还有大量的记号，显示有多少人上过她多汁的，#IF(game.isGapeContentEnabled())敞开的#ENDIF屁穴。她站起来，转过身面对你，发出呻吟，[sister.speech(哦，你想来硬的，是吗？结局还是一样，我坐在你的脸上，而你的舌头会伸进我的屁眼里！)]
 		</p>
 	#ELSEIF(sister.hasFetish(FETISH_PURE_VIRGIN))
 		<p>
-			As she slowly struts forwards, you're able to get a good look at the pale-skinned succubus. To really show off the fact that she's a slave, she's wearing what appears to be an enchanted choker, and has had her head shaved and her horns shrunk down to little nubs. Wearing skimpy, hot pink fishnet clothing and a microskirt too short to keep anything hidden, she may as well be naked, but it's not her body that draws your attention, as instead you find yourself looking at a face almost identical to that of Angelixx.
+			她缓缓向前迈步时，你清楚地看到了这个皮肤苍白的魅魔。为了更好地展示她是奴隶的事实，她戴着一个似乎是施了魔法的项圈，剃了光头，犄角也缩成了小疙瘩。她穿着超短的骚粉色渔网衣和一条短得无法遮挡任何东西的超短裙，就像赤身裸体一样，但吸引你注意力的不是她的身体，而是她那张与安吉莉克丝几乎一模一样的脸。
 		</p>
 		<p>
-			[sister.speech(Oh, you recognise me?)] she giggles, [sister.speech(Or, rather, you've seen my twin, Angelixx? Well, I promise you, babe, my cute, tight little pussy's far better than hers. Take a look for yourself!)]
+			[sister.speech(哦，你认得我吗？)]她咯咯地笑起来，[sister.speech(或者说，你见过我的双胞胎，安吉莉克丝？我向你保证，宝贝，我可爱紧致的小穴比她的好多了，你自己看看吧！)]
 		</p>
 		<p>
-			With that, she pulls up the front of her microskirt and drops one hand down between her legs, before using her fingers to spread her juicy, dripping cunt. Despite her promise, the succubus's pussy looks far from cute and tight, for her big, dark labia part to reveal a #IF(game.isGapeContentEnabled())gaping#ELSEloose#ENDIF orifice, which from the multitude of tally marks around her groin looks to have been fucked hundreds of times.
+			说着，她拉起微裙子的前襟，将一只手垂到两腿之间，然后用手指分开多汁滴水的小穴。尽管她承诺过，但魅魔的阴部看起来远非可爱和紧致，因为她那又大又黑的阴唇分开，露出了一个#IF(game.isGapeContentEnabled())敞开的#ELSE松垮的#ENDIF腔穴，从她腹股沟周围的众多标记来看，她已经被操过上百次了。
 		</p>
 		<p>
-			Dropping her skirt, she moans, [sister.speech(Not interested, huh? Well, it's not like you have any choice in the matter! You'll be #IF(pc.hasPenisIgnoreDildo())fucking#ELSEeating#ENDIF my pussy soon enough!)]
+			她脱下裙子，呻吟着说：[sister.speech(不感兴趣，是吧？好吧，你也别无选择！你很快就要#IF(pc.hasPenisIgnoreDildo())操#ELSE口#ENDIF我的小穴了！)]
 		</p>
 	#ELSEIF(sister.hasFetish(FETISH_ORAL_GIVING))
 		<p>
-			As she slowly struts forwards, you're able to get a good look at the blue-skinned succubus. To really show off the fact that she's a slave, she's wearing what appears to be an enchanted choker, and has had her head shaved and her horns shrunk down to little nubs. Wearing skimpy, white fishnet clothing and a microskirt too short to keep anything hidden, she may as well be naked, but it's not her sexy body that you find yourself staring at.
+			随着她缓缓向前迈步，你可以仔细观察这个蓝皮肤的魅魔。为了更好地展示她是奴隶的事实，她戴着一个似乎是施了魔法的项圈，剃了光头，犄角也缩成了小疙瘩。她穿着超短的白色渔网衣和短得无法遮挡任何东西的超短裙，就像赤身裸体一样，但你盯着看的并不是她性感的身体。
 		</p>
 		<p>
-			After licking her [sister.lips+], the succubus slowly allows her tongue to slide out of her mouth. Bifurcated at the end, and covered in squirming little tentacles, more and more of her tongue slithers down towards her [sister.breasts+]. Long enough to seductively lick her own nipples, the demon flicks her tongue left and right, before suddenly pulling it back up into her mouth. Giggling at the surprised look on your face, she moans, [sister.speech(~Mmm!~ I promise I don't bite... Come here and let me get a taste of you...)]
+			舔了舔[sister.lips+]，魅魔慢慢地让舌头滑出嘴外。她的舌头末端分叉，上面布满了蠕动的小触手，越来越多的舌头滑向她的[sister.breasts+]。恶魔舌头长到足以诱惑性地舔自己的乳头，她的舌头左右摆动，然后突然把舌头拉回嘴里。看着你惊讶的表情，她咯咯笑着，呻吟着，[sister.speech(~嗯！~我保证我不咬人……过来，让我尝尝你的味道……)]
 		</p>
 		<p>
-			Around the succubus's neck, you see that she's sporting a huge number of tattooed tally marks, and just above her choker you see that the words '&#8593; Fuck Hole &#8593;' have been inked into her skin. It's clear that these marks represent the number of sexual partners she's had, which must be at least three hundred. Seeing that you haven't yet submitted to her, the demon impatiently sighs, [sister.speech(If you're not going to submit, then I'll have to do this the hard way! You'll be mine soon enough...)]
+			在这个魅魔的脖子上，你可以看到她身上有大量的纹身标记，而就在她的项圈上方，你可以看到“↑操这↑”的字样已经被墨水印在了她的皮肤上。很明显，这些标记代表了她的性伴侣数量，至少有三百个。看到你还没有向她屈服，恶魔不耐烦地叹了口气，[sister.speech(如果你不屈服，那我就只能硬着头皮上了。你很快就是我的了……)]
 		</p>
 	#ELSEIF(sister.hasFetish(FETISH_BREASTS_SELF))
 		<p>
-			As she slowly struts forwards, you're able to get a good look at the ivory-skinned succubus. To really show off the fact that she's a slave, she's wearing what appears to be an enchanted choker, and has had her head shaved and her horns shrunk down to little nubs. Wearing skimpy, dark-purple fishnet clothing and a microskirt too short to keep anything hidden, she may as well be naked.
+			当她缓缓向前迈步时，你可以清楚地看到这个象牙色皮肤的魅魔。为了更好地展示她是奴隶的事实，她戴着一个似乎是施了魔法的项圈，剃了光头，犄角也缩成了小疙瘩。她穿着超短的深紫色渔网衣和一条超短裙，裙子太短，无法遮挡任何东西，就像一丝不挂一样。
 		</p>
 		<p>
-			It's impossible not to stare at the succubus's chest as she slowly struts towards you. Sporting three pairs of massive, [sister.cupSize]-cup tits, her fishnet clothing leaves them fully on display. Her fat, puffy nipples are ebony in colour, making a stark contrast to the ivory skin which covers her gigantic breasts. Reaching up to playfully tug on the delicate steel chains which connect the rings pierced through each of her thick teats, the succubus reveals that she's somewhat of a bimbo by moaning, [sister.speechNoEffects(Heya! You're here to, like, submit and worship my tits, right? ~Mmm!~ Like, it'd feel sooo good! Go on, babe, just give up!)]
+			魅魔慢慢向你走来，你不由自主地看向她的胸部。她有三对[sister.cupSize]罩杯的巨乳，她的渔网装让它们一览无余。她丰满的乳头呈乌黑色，与覆盖在巨乳上的象牙色皮肤形成鲜明对比。魅魔伸手玩弄着穿过她每个丰满乳头的乳环的精致钢链，像荡妇一样呻吟着，[sister.speech(嘿呀！你是来，臣服然后侍奉我的奶子的，对吧？~嗯！~感觉真好！来吧，宝贝，投降吧！)]
 		</p>
 		<p>
-			With your gaze continuing to be drawn to her chest, you see that the words 'Tit Cow' have been tattooed onto her breasts, along with hundreds of tally marks keeping count of how many sexual partners she's had.
+			随着你的视线继续被她的胸部吸引，你看到“奶牛”的字样被纹在了她的乳房上，还有数以百计的记号记录着她有过多少个性伴侣。
 			#IF(pc.hasPenisIgnoreDildo() && game.isNipplePenEnabled())
-				 Sinking her slender fingers into her nipples, she spreads them wide, showing off the fact that they've been transformed into fuckable orifices. Moaning as she fingers her tits,
+				她将纤细的手指伸进乳头，将乳头张开，炫耀着乳头已经变成了可以被操的孔道。她一边呻吟，一边用手指抚摸自己的乳房，
 			#ELSEIF(game.isLactationContentEnabled())
-				 Squeezing her slender fingers around her nipples, she causes a stream of thick, musky milk to ooze forth. Moaning as she milks herself,
+				她用纤细的手指挤压乳头，一股浓稠的、味道浓重的乳汁喷涌而出。她一边挤奶一边呻吟，
 			#ELSE
-				 With one hand, she squeezes her slender fingers around her nipples, while with the other she reaches down to play with her wet pussy. Moaning as she touches herself,
+				她用一只手用纤细的手指捏着自己的乳头，另一只手则伸到下面玩弄自己湿润的阴部。她一边抚摸自己一边呻吟，
 			#ENDIF
-			 the succubus impatiently huffs, [sister.speechNoEffects(This is, like, taking too long! You're gonna submit to me, and, like, do what I say and stuff!)]
+			魅魔不耐烦地哼了一声，[sister.speechNoEffects(这真是，太麻烦了！你必须臣服于我，并且，照我说的做！)]
 		</p>
 	#ELSEIF(sister.hasFetish(FETISH_PENIS_GIVING))
 		<p>
-			As she slowly struts forwards, you're able to get a good look at the brown-skinned succubus. To really show off the fact that she's a slave, she's wearing what appears to be an enchanted choker, and has had her head shaved and her horns shrunk down to little nubs. Wearing skimpy, black fishnet clothing and a microskirt too short to keep anything hidden, she may as well be naked, allowing you to see that she's got a gigantic, [sister.penisLengthValue] cock between her legs.
+			当她缓缓向前迈步时，你可以清楚地看到这个棕色皮肤的魅魔。为了更好地展示她是奴隶的事实，她戴着一个似乎是附魔了的项圈，剃了光头，犄角也缩成了小疙瘩。她穿着超短的黑色渔网衣和短得无法遮挡任何东西的超短裙，就像一丝不挂一样，让你可以看到她的两腿之间有一根巨大的[sister.penisLengthValue]阴茎。
 		</p>
 		<p>
-			Pushing out of its sheath, her massive dick is bright red, and as it swells to its full, erect size, you see that its tapered head and fat knot at the base make it look like a demonic version of a dog cock. A stream of slimy precum eagerly drools from the tip, which runs down over her gold cock piercing to drip messily to the floor. Sliding her slender fingers down the length of her throbbing shaft, the succubus moans, [sister.speech(~Mmm!~ You look like a bitch who needs to be knotted...)]
+			当它膨胀到完全勃起的尺寸时，你发现它的锥形头部和底部肥大的结节让它看起来就像恶魔版的狗鸡巴。一股粘稠的先走液急切地从顶端流出，顺着她金色的阴茎环流下，凌乱地滴在地板上。魅魔纤细的手指滑过悸动的阴茎，她呻吟着，[sister.speech(~嗯！~你看起来就像一个需要被锁结的婊子……)]
 		</p>
 		<p>
-			Beneath her massive, twitching cock, you see that the succubus's balls are truly huge. Heavy with seed, they ponderously swing back and forth as the succubus struts forwards. Above her cock, you see that the words 'Get knotted, bitch!' have been tattooed in bright red ink into her skin, along with hundreds of tally marks keeping count of the number of people she's fucked. Excitedly tweaking her erect nipples, she teases, [sister.speech(I'm going to break you, bitch! This is going to be such fun!)]
+			在她抽动的巨大阴茎下面，你可以看到魅魔的睾丸非常巨大。睾丸里装满了种子，随着魅魔向前迈步，睾丸沉重地前后摆动。在她的鸡巴上方，你会看到鲜红的墨水在她的皮肤上刺上了“锁节吧，婊子！”的字样，还有数以百计的记号，记录着她干过的人的数量。她兴奋地扭动着勃起的乳头，挑逗着，[sister.speech(我要干烂你，婊子！一定会很好玩的！)]
 		</p>
 	#ENDIF
 	<p>
-		It looks like you're going to have fight this crazy succubus!
+		看来你得和这个疯狂的魅魔战斗了！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_DEFEATED"><![CDATA[
 	#IF(saellatrix.isAnySisterPresent())
 		<p>
-			The succubus who you fought and defeated is still in this area. Having fallen into a trance-like state of total submission after being beaten in combat, the [sister.skinColour]-skinned demon confuses you for a minion of Saellatrix and averts her eyes as you approach, moaning, [sister.speech(I'm being a good pet for Mistress! Thank you for showing me my true place!)]
+			被你打败的魅魔还在这片区域。在战斗中被击败后，[sister.skinColour]皮肤的恶魔陷入了完全臣服的恍惚状态，她把你当成了赛拉特里克斯的爪牙，当你走近时，她移开了目光，呻吟着说：[sister.speech(我是主人的好宠物！谢谢你让我明白自己的地位！)]
 		</p>
 		#IF(sister.hasFetish(FETISH_ANAL_RECEIVING))
 			<p>
-				Down on all fours, the anal-obsessed succubus has lowered her torso to the floor while sticking her hips up in the air. With her [sister.ass+] on full display, she's reaching back to pump her entire fist in and out of her puffy, #IF(game.isGapeContentEnabled())gaping#ELSEloose#ENDIF asshole. A stream of natural lubricant drips from her ebony-rimmed rear entrance to add to the growing pool of sexual fluids between her knees.
+				痴迷于肛交的魅魔四肢着地，将躯干降至地面，同时将臀部高高翘起。她[sister.ass+]一览无余，伸手将整个拳头进进出出在她肉感的、#IF(game.isGapeContentEnabled())敞开的、#ELSE松垮的、#ENDIF屁穴。一股天然润滑剂从她乌黑的后庭滴落，使她膝盖间的性液池越来越大。
 			</p>
 			<p>
-				[sister.speech(Yes! ~Ooh!~ I'm a dirty little buttslut, unworthy of mother's name!)] she instinctively recites as she reaches her climax. The glistening, doughnut-like rim of her asshole squeezes down around her forearm, and her legs shake as she orgasms from anal stimulation alone. Sticking her ass up in the air as high as she can, she squeals, [sister.speech(~Aah!~ Fuck! ~Ooh!~ Use my ass! Fuck my butt! ~Mmm!~ I love being Mistress's buttslut slave! I'm unworthy of mother's name!)]
+				[sister.speech(嗯!~哦！~我是肮脏的屁穴小荡妇，配不上母亲之名！)]她因高潮本能地念叨着。她的菊穴晶莹剔透，边缘形似甜甜圈，此刻正包裹着她的前臂。仅靠肛门刺激就使她达到高潮，令她的双腿颤抖。她把屁股尽量翘得高高的，浪叫道：[sister.speech(~啊哈！~操！~噢！~用我的屁股！操我的菊穴！~唔嗯！~我喜欢当主人的屁穴荡妇小奴隶！我配不上母亲之名！)]
 			</p>
 		#ELSEIF(sister.hasFetish(FETISH_PURE_VIRGIN))
 			<p>
-				Lying back on the ground, the promiscuous succubus has spread her legs wide to grant an unobstructed view of her genitals. With light skin and blue eyes, she bears a striking resemblance to Angelixx, and even having been shaved bald and with her horns transformed into pathetic little nubs, her pretty, youthful features would be enough to beguile any admirer.
+				淫荡的魅魔仰躺在地上，双腿大张，令她的生殖器一览无余。她有着浅色的皮肤和蓝色的眼睛，与安吉莉克丝十分相像，即使被剃成了光头，犄角也变成了可怜的小疙瘩，她年轻漂亮的五官依旧足以迷倒任何一个仰慕者。
 			</p>
 			<p>
-				It's not her similarity to Angelixx which causes you to stop and stare, however, but the fact that the slender, delicate fingers of her right hand are buried knuckle-deep in her #IF(game.isGapeContentEnabled())gaping#ELSEloose#ENDIF, dark-lipped pussy. Slick, musky juices drool out around her frantically-pumping digits to run over her dark, meaty labia and splatter messily over the floor.
+				然而，让你驻足凝视的并不是她与安吉莉克丝的相似之处，而是她右手纤细修长的手指深埋在她的#IF(game.isGapeContentEnabled())敞开的#ELSE松垮的#ENDIF，有黑色阴唇的小穴。粘稠的味道浓郁的汁液从她疯狂抽动的手指周围流出，流过她黝黑多肉的阴唇，凌乱地溅在地板上。
 				#IF(game.isPubicHairEnabled())
-					 A wild bush of black pubes and a large, thick clit finish
+					狂野的黑色阴毛丛和又大又厚的阴蒂
 				#ELSE
-					 A large, thick clit finishes
+					又大又厚的阴蒂
 				#ENDIF
-				 off the look which Saellatrix must have been going for, leaving her sister's tired, ugly pussy looking remarkably out-of-place in contrast to her youthful, pretty body.
+				一定是赛拉特里克斯想要的效果，让妹妹疲惫丑陋的阴部与她年轻漂亮的身体形成鲜明对比，显得格格不入。
 			</p>
 			<p>
-				[sister.speech(Yes! ~Ooh!~ I'm a filthy slut, unworthy of mother's name!)] she instinctively recites as she reaches her climax. Continuing to furiously masturbate through her orgasm, she squeals in delight as several big squirts of girlcum spray out onto the floor between her legs. Allowing her tongue to loll out of her mouth and rolling her eyes back in ecstasy, she moans, [sister.speech(~Aah!~ Fuck! ~Ooh!~ Fuck my pussy! Anyone can use it! ~Mmm!~ I love being Mistress's public cocksleeve slave! I'm unworthy of mother's name!)]
+				[sister.speech(啊！~哦！~我是个肮脏的荡妇，配不上母亲的名字！)]当她达到高潮时，她本能地念道。她在高潮中继续狂热地自慰，几股爱液喷射到她两腿之间的地板上，她高兴地尖叫起来。她把舌头伸出嘴外，陶醉地翻着白眼，发出呻吟声，[sister.speech(~啊！~草！~哦！~操死我！谁都行！~嗯！~我喜欢当主人公开的鸡巴奴隶，我配不上母亲的名字！)]
 			</p>
 		#ELSEIF(sister.hasFetish(FETISH_ORAL_GIVING))
 			<p>
-				Sitting on the floor with her hoofed feet flat on the ground and her knees pointing up in the air, the succubus demonstrates an extraordinary level of flexibility by bending down far enough to bring her head to her groin. Pressing her huge lips against her wet cunt, she eagerly thrusts her lengthy tongue deep inside her demonic pussy and squeals in delight as she performs autocunnilingus.
+				魅魔坐在地板上，双蹄平踏地面，双膝朝天，展现出非凡的柔韧性，她弯下腰，将头伸向腹股沟。她将巨大的嘴唇贴在湿润的阴户上，迫不及待地将长舌伸入她恶魔的小穴深处，发出愉悦的尖叫声。
 			</p>
 			<p>
-				[sister.speech(Yes! ~Ooh!~ I'm a hungry little bitch, unworthy of mother's name!)] she instinctively recites as she reaches her climax. Gripping her ankles to steady herself, her legs shake and her quivering pussy squirts all over her face as she moans, [sister.speech(~Aah!~ Fuck! ~Ooh!~ I'll eat pussy! I'll suck cock! ~Mmm!~ I love being Mistress's oral slave! I'm unworthy of mother's name!)]
+				[sister.speech(啊！~哦！~我是个饥渴的骚货，配不上母亲的名字！)]当她达到高潮时，她本能地背诵着这句话。她抓着脚踝稳住自己，双腿颤抖，颤抖的阴部随着她的呻吟喷得她满脸都是，[sister.speech(~啊！~操！~哦！~我会口小穴！我会口鸡巴！~嗯！~ 我喜欢做主人的口奴！我配不上母亲的名字！)]
 			</p>
 		#ELSEIF(sister.hasFetish(FETISH_BREASTS_SELF))
 			<p>
-				Leaning back against a nearby wall, the succubus runs her slender fingers over her six colossal tits, letting out a soft moan as she hefts each one. With your attention drawn to her massive mammaries, you find yourself thinking how at-odds they look compared to the rest of her body. Her striking jade-green eyes, flawless ivory skin, and beautiful face all suggest that her tits should be nothing less than perfect. The reality is quite different, however, for the nipples that are perched upon the pointy tips of each of her gigantic breasts are quite jarring in appearance.
+				她背靠着附近的墙壁，用纤细的手指抚摸着自己的六只巨乳，每抚摸一下都发出一声轻柔的呻吟。随着你的注意力被她巨大的乳房吸引，你注意到，与她身体的其他部分相比，这些乳房看起来是多么的不协调。她迷人的玉绿色眼睛、完美无瑕的象牙色皮肤和美丽的脸庞都表明，她的乳房应该是完美无瑕的。然而，现实却与之大相径庭，因为她每对巨乳的尖乳头的外观都相当不和谐。
 			</p>
 			<p>
-				Puffed up into huge, thick teats, her nipples have darkened into a deep shade of [sister.nippleColour], and are surrounding by huge, similarly-coloured areolae. Juxtaposed against her smooth, ivory skin, the succubus's puffy, blackened nipples look like they should be on someone at least twice her age. She doesn't seem at all bothered by their unsightly appearance, however, for she continues drawing your attention to them by shamelessly pinching and tweaking each of them in turn, and each time she does so her moans increase in intensity.
+				她的乳头肿胀成巨大而厚实的乳头，颜色已经变深，变成了深色的[sister.nippleColour]，周围环绕着巨大而颜色相似的乳晕。与她光滑的象牙色皮肤相映成趣的是，这个魅魔肉感、乌黑的乳头看起来应该是她年龄至少两倍的人的乳头。不过，她似乎一点也不在意自己难看的外表，继续无耻地依次捏弄乳头，吸引你的注意力，而且每次捏弄时，她的呻吟声都会更加强烈。
 			</p>
 			#IF(game.isLactationContentEnabled())
 				<p>
-					With each eager squeeze between her soft fingertips, the demon's thick nipples excrete a spurt of milk, which dribbles down over her massive, pointy tits.
+					随着恶魔柔软指尖的每一次饥渴挤压，她粗大的乳头就喷出一股乳汁，滴在她巨大而尖挺的乳房上。
 					#IF(game.isNipplePenEnabled())
-						 Rubbing her milk over one of her nipples, she suddenly plunges her fingers inside of it, before spreading it open to show off he fact that it serves as a #IF(game.isGapeContentEnabled())gaping,#ELSEloose,#ENDIF fuckable orifice. Repeating this move with another one of her huge teats, and then another, she makes it clear that all of her nipples can be penetrated.
+						她将乳汁涂抹在自己的乳头上，突然将手指伸入其中，张开乳头，炫耀自己的乳头可以作为#IF(game.isGapeContentEnabled())敞开的，#ELSE松垮的，#ENDIF可操腔穴。她在另一个巨大的乳头上重复这一动作，然后又是另一个，以此清楚地表明，她所有的乳头都可以被插入。
 					#ENDIF
 				</p>
 			#ELSEIF(game.isNipplePenEnabled())
 				<p>
-					Focusing her attention on one of her nipples, she suddenly plunges her fingers inside of it, before spreading it open to show off he fact that it serves as a #IF(game.isGapeContentEnabled())gaping,#ELSEloose,#ENDIF fuckable orifice. Repeating this move with another one of her huge teats, and then another, she makes it clear that all of her nipples can be penetrated.
+					她把注意力集中在她的一个乳头上，突然将手指伸入其中，张开乳头，炫耀自己的乳头可以作为#IF(game.isGapeContentEnabled())敞开的，#ELSE松垮的，#ENDIF可操腔穴。她在另一个巨大的乳头上重复这一动作，然后又是另一个，以此清楚地表明，她所有的乳头都可以被插入。
 				</p>
 			#ENDIF
 			<p>
-				[sister.speechNoEffects(Yes! ~Ooh!~ I'm, like, totally a worthless whore, unworthy of mother's name!)] she instinctively recites as she reaches her climax. Orgasming from simply stimulating her breasts, she squeals, [sister.speechNoEffects(~Aah!~ Fuck! ~Ooh!~ I'm a dumb slut! Fuck my tits! ~Mmm!~ I, like, super love being Mistress's tit cow slave! I'm so unworthy of mother's name!)]
+				[sister.speechNoEffects(嗯！~哦！~我就是，一文不值的，妓女，配不上母亲之名！)]她仅仅是刺激着胸部就达到了高潮，她因高潮本能地尖叫着，[sister.speechNoEffects(~啊哈！~操！~噢！~我就是个贱荡妇！操我的乳头！~唔嗯！~我，超级喜欢，当主人的乳头奶畜！我配不上母亲之名！)]
 			</p>
 		#ELSEIF(sister.hasFetish(FETISH_PENIS_GIVING))
 			<p>
-				Kneeling on the floor with her knees spread wide, the succubus's massive balls are comfortably resting on the floor while she frantically slides both of her hands up and down around her gigantic, demonic cock. The most striking feature of her huge, [sister.penisLengthValue] cock, other than its size, is the fact that it looks like a demonic version of a dog's cock. Knotted, tapered at the end, and with a thick sheath at its base, her animalistic member is also clearly demonic in design, for it's lined with hard, fleshy ribs, while a series of little squirming tentacles coat its surface.
+				魅魔跪在地板上，双膝张开，她巨大的睾丸自然垂落在地板上，双手则疯狂地包裹着她那巨大的恶魔阴茎上下滑动。除了她那[sister.penisLengthValue]的巨大尺寸之外，最引人注目的特征就是其形似恶魔狗屌。它的龟头呈锥形，末端有结节，底部则有一个厚厚的鞘。其野兽元素也明显是恶魔设计的，因为它的内衬是坚硬的肉肋，而表面则覆盖着一堆蠕动的小触手。
 			</p>
 			<p>
-				[sister.speech(Yes! ~Ooh!~ I'm a bad dog, unworthy of mother's name!)] she instinctively recites as her fat knot suddenly swells up. Leaning back and using one hand to steady herself against the ground, she thrusts her hips up in the air as a massive blast of musky, slimy cum shoots out to messily splatter all over the floor in front of her. Uncontrollably bucking her hips as she orgasms, her legs shake and her canine cock continues to blast ropes of hot, sticky cum into the air as she groans, [sister.speech(~Aah!~ Fuck! ~Ooh!~ Let me stick my nasty dog-dick in someone! ~Mmm!~ I love being Mistress's doggy slave! I'm unworthy of mother's name!)]
+				[sister.speech(嗯!~哦！~我是坏狗狗，配不上母亲之名！)]她本能地念叨着，肥大的结节突然膨胀起来。她向后一仰，用一只手稳稳地抵住地面，将臀部猛地向上一顶，一股雄味浓重的粘稠精液喷射而出，凌乱地溅满了面前的地板。随着高潮的到来，她无法控制地扭动臀部，双腿颤抖。随着她的呻吟，狗屌不断向空中喷射出一串串滚烫粘稠的精液，[sister.speech(~啊哈！~操！~噢！~让我的烂狗屌捅点什么吧！~唔嗯！~我喜欢当主人的狗奴才！我配不上母亲之名！)]
 			</p>
 		#ENDIF
 		<p>
-			[fia.speech(I feel kind of sorry for her,)] Fia says as she witnesses the succubus's self-deprecating behaviour. Shaking her head, she mutters, [fia.speech(I know Sae has a sadistic streak, but she must have really taken it to the next level to break her sister like this... Come on, [pc.name], I can't watch any more...)]
+			[fia.speech(我感觉有点对不起她。)]菲亚目睹了魅魔的自嘲，如此说道。她摇了摇头，喃喃道，[fia.speech(我知道赛拉有施虐倾向，但她一定是真的更上一层楼了，才会这样摧残她的姐妹……拜托，[pc.name]，我看不下去了……)]
 		</p>
 		<p>
-			As your companion turns her back on the succubus, you wonder whether to follow her example, or to instead tell her to wait for you up ahead while you have some fun with this submissive slut...
+			当你的同伴背对着魅魔时，你思索是该与菲亚一起走，还是让她在前面等你，自己去和这个顺从的荡妇玩玩……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_TALK"><![CDATA[
 	<p>
-		Thinking that you might be able to get some information from this moaning succubus, you ask her where the kidnapped refugees are.
+		你想也许能从这个呻吟的魅魔这里得到一些信息，便问她被绑架的难民在哪里。
 	</p>
 	<p>
-		[sister.speech(I'm a good pet for Mistress!)] she answers, before whining, [sister.speech(Please fuck me! ~Mmm!~ Fuck me good and hard!)]
+		[sister.speech(我是主人的乖宠物！)]她如此回答，又继续呜咽道，[sister.speech(请操我！~唔嗯~！狠狠操我！)]
 	</p>
 	<p>
-		Trying a different question, you ask the demon if she's seen Angelixx recently. Again, the response you get is nothing but horny pleas to be fucked.
+		你换了一个问题，问这个恶魔最近有没有见过安吉莉克丝。回答依旧不变，仍是饥渴地请求挨操。
 	</p>
 	<p>
-		[fia.speech(This isn't getting us anywhere,)] Fia sighs, [fia.speech(We should find the evidence we need and get out of here before she recovers...)]
+		[fia.speech(这压根没用啊。)]菲亚叹了口气，[fia.speech(我们应该找些证据，趁她没恢复之前离开这里……)]
 	</p>
 	<p>
-		It really doesn't look like she's going to recover any time soon, but you agree with the reporter's assessment that asking questions is a waste of time. You could continue on your way, or spend some time giving this succubus what she wants...
+		看起来她一时半会恢复不了，但你同意记者的看法，问问题不过是浪费时间。你可以继续走你的路，或者花点时间让这个魅魔得偿所愿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_COMBAT_WON"><![CDATA[
 	<p>
-		Unable to continue fighting any longer, the succubus staggers back and sinks to the floor.
+		魅魔无力再战，踉跄后退，跌倒在地。
 	</p>
 	<p>
-		[sister.speech(You... Mistress sent you, didn't she?!)] the defeated demon frantically asks. Before you can answer, she prostrates herself before you and pants, [sister.speech(Please... Punish me for my insolence! I... I'm a worthless slave!)]
+		[sister.speech(你……是主人派你来的，是不是？！)]战败的恶魔疯狂地问道。你还没来得及回答，她就“噗通”一声跪了下来，喘着气说道：[sister.speech(请……惩罚我的无礼！我……我是个没用的奴隶！)]
 	</p>
 	<p>
-		Rolling over and starting to lewdly touch herself, your opponent seems to be completely convinced that you're a pawn of Saellatrix. Lost in her fantasy, she desperately moans, [sister.speech(I'll be a good girl! ~Ooh!~ Yes, fuck me! I'll show you how good I am! Please tell Mistress that I'm good!)]
+		你的对手似乎对你是赛拉特里克斯的爪牙这一点深信不疑，她翻身开始猥亵地抚摸自己。她沉浸在幻想中，迷乱地呻吟着：[sister.speech(我要做一个好女孩！~噢！~对，操我！我要让你看看我有多棒！请告诉主人我很乖！)]
 	</p>
 	<p>
-		[fia.speech(Poor thing,)] Fia tuts as she reappears from her hiding place. Turning to face you, she says, [fia.speech(Come on, [pc.name], she's not going to be any threat for a while. Let's carry on...)]
+		[fia.speech(可怜的家伙。)]菲亚从她的藏身之处再次出现，发出啧啧声。她转身面对你，说道，[fia.speech(走吧，[pc.name]，她暂时不会有什么威胁的。让我们继续前进……)]
 	</p>
 	<p>
-		Looking back down at the masturbating succubus, you wonder whether to leave her behind, or to instead have some fun with her first...
+		你低头看着自慰中的魅魔，不知是该丢下她离开，还是先和她找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_SEX_START"><![CDATA[
 	<p>
-		Wanting to fuck this horny succubus, you [pc.step] forwards and tell her of your intentions. Letting out an excited squeal, she pants, [sister.speech(~Ooh!~ Yes! Fuck me!)]
+		你想操这个淫荡的魅魔，于是走上前告诉她你的意图。她发出一声兴奋的尖叫，喘息着，[sister.speech(~哦！~来操我！)]
 	</p>
 	<p>
-		[fia.speech(We don't have time for this!)] Fia exclaims in a frustrated tone. Shaking her head, she turns her back on you and walks off, muttering, [fia.speech(I'm not getting involved. Come find me once you're done...)]
+		[fia.speech(我们没时间了！)]菲亚沮丧地说道。她摇摇头，背对着你，嘟囔着走开了，[fia.speech(我不参与，等你忙完了再来找我……)]
 	</p>
 	<p>
-		With that, you're left alone with the horny, eager succubus. Pushing herself up onto her knees, she shuffles forwards and moans, [sister.speech(Come on! Fuck me!)]
+		就这样，你们丢下色情又饥渴的魅魔。她双腿跪地，挪动着向你靠近，一边呻吟着：[sister.speech(快来啊！操我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_SEX_END"><![CDATA[
 	<p>
-		Having had your fun, you [pc.step] back from the succubus and bring an end to the sex.
+		玩得尽兴之后，你从魅魔身边退开，结束了这场性爱。
 		#IF(sister.isSatisfiedFromLastSex())
-			 Letting out a satisfied moan, your partner sighs, [sister.speech(~Ooh!~ That was so good... ~Mmm!~ I want more!)]
+			你的伴侣发出一声满足的呻吟，叹了口气，[sister.speech(~哦！~太爽了……~嗯！~多来点！)]
 		#ELSE
-			 Letting out a frustrated groan, your partner tuts, [sister.speech(~Aah!~ You didn't even satisfy me... ~Mmm!~ Let's do it again!)]
+			你的伴侣发出一声沮丧的呻吟，然后嘟囔道，[sister.speech(~啊！~你甚至没满足我……~嗯！~再来一次嘛！)]
 		#ENDIF
 	</p>
 	<p>
-		At that moment Fia reappears, and with a disapproving shake of her head, she crosses her arms and asks,
+		这时，菲亚又出现了，她不以为然地摇摇头，双手叉腰问道，
 		#IF(pc.isQuestProgressGreaterThan(QUEST_LINE_SIDE_DOLL_FACTORY, QUEST_DOLL_FACTORY_4))
-			 [fia.speech(Happy now? Can we please get out of this place already?)]
+			[fia.speech(玩嗨了吧？我们能离开这个地方了吗？)]
 		#ELSE
-			 [fia.speech(Happy now? Can we please carry on?)]
+			[fia.speech(玩嗨了吧？我们能继续吗？)]
 		#ENDIF
 	</p>
 	<p>
-		After quickly getting your things back in order, you look over at the succubus to see that she's already masturbating once again. It looks like she'll be happy to go for another round of sex at any time, but perhaps you should do as Fia suggests and continue on your way instead... 
+		快速整理好自己的东西后，你看了看这个魅魔，发现她已经在再次自慰了。看起来她很乐意随时再来一轮性爱，但也许你应该听从菲亚的建议，继续赶路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="SISTER_COMBAT_LOST"><![CDATA[
 	<p>
-		Unable to continue fighting the succubus any longer, you stagger back and crash into one of the sex toy machines, utterly defeated.
+		你无法继续与“魅魔”战斗，踉踉跄跄地后退，撞上了其中一台性玩具机器，彻底败下阵来。
 	</p>
 	<p>
-		[sister.speech(There we go, it's easier to just submit, isn't it?)] your opponent giggles, before skipping forwards and grabbing hold of you. Pressing her [sister.lips+] against your mouth, she gives you a deep, passionate kiss, before breaking off and moaning, [sister.speech(~Mmm!~ Now let's make you a little more comfortable...)]
+		[sister.speech(就这样，屈服更容易，不是吗？)]你的对手咯咯地笑着，然后向前一跳，一把抱住了你。她把她[sister.lips+]贴在你的嘴上，给了你一个深情的吻，然后断断续续地呻吟着，[sister.speech(~嗯！~现在让我们让你更舒服一点……)]
 	</p>
 	<p>
-		With that, the succubus quickly starts stripping you naked, continuing to moan and giggle to herself as she works.
+		就这样，魅魔迅速开始脱光你的衣服，一边工作一边继续呻吟和傻笑。
 		#IF(pc.isAnyEquippedClothingSealed())
-			 Coming across your sealed clothing, she tuts a couple of times, before channelling her essences and breaking the enchantment.
+			在遇到你的封印衣物时，她先是啧啧几声，然后又用她的精华打破了附魔。
 		#ENDIF
-		 With skilled movements suggesting that she's done this countless times before, the demon only takes a minute to get rid of all of your clothes, and then takes the opportunity to lustfully grope your naked body.
+		娴熟的动作表明她以前做过无数次这样的事，恶魔只用了一分钟就脱光了你的衣服，然后趁机淫荡地摸索你赤裸的身体。
 	</p>
 	#IF(!game.isNonConEnabled())
 		<p>
-			[sister.speech(I want to fuck you so badly,)] the succubus whines, [sister.speech(but Mistress said she'd punish me if I had sex without her permission... I'll just have to take you directly to Angelixx...)]
+			[sister.speech(我好想操你，)]魅魔抱怨道，[sister.speech(但主人说如果我未经她允许就做爱，她会惩罚我……我只好直接带你去找安吉莉克丝了……)]
 		</p>
 	#ELSE
 		#IF(sister.hasFetish(FETISH_ANAL_RECEIVING))
 			#IF(pc.hasPenisIgnoreDildo())
 				<p>
-					[sister.speech(Now let's get that yummy cock of yours up my ass!)] she excitedly exclaims, before pushing you down onto your back. Dropping down on top of you, she positions her juicy, puffy asshole over your shaft and moans, [sister.speech(~Mmm!~ This'll be so much fun!)]
+					[sister.speech(现在让你那美味的鸡巴插进我的屁眼吧！)]她兴奋地叫道，然后把你推倒在地。她趴在你的身上，将她湿润、肉感的屁眼对准你的阴茎，并发出呻吟，[sister.speech(~嗯！~这会很有趣的！)]
 				</p>
 			#ELSE
 				<p>
-					[sister.speech(Now let's get your tongue in my ass!)] she excitedly exclaims, before pushing you down onto your back. Dropping down on top your face, she positions her juicy, puffy asshole over your face and moans, [sister.speech(~Mmm!~ This'll be so much fun!)]
+					[sister.speech(现在把你的舌头伸进我的屁眼里吧！)]她兴奋地叫道，然后把你推倒在地。她俯身趴在你的脸上，将湿润、肉感的屁眼对准你的脸，并发出呻吟，[sister.speech(~嗯！~这会很有趣的！)]
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_PURE_VIRGIN))
 			#IF(pc.hasPenisIgnoreDildo())
 				<p>
-					[sister.speech(Now let's get that yummy cock of yours in my hot, wet pussy!)] she excitedly exclaims, before pushing you down onto your back. Dropping down on top of you, she positions her [sister.pussy+] over your shaft and moans, [sister.speech(~Mmm!~ This'll be so much fun!)]
+					[sister.speech(现在就把你那美味的鸡巴插进我湿热的小穴吧！)]她兴奋地叫道，然后把你推倒在地。她趴在你身上，把她[sister.pussy+]放在你的阴茎上，呻吟着，[sister.speech(~嗯！~这会很有趣的！)]
 				</p>
 			#ELSE
 				<p>
-					[sister.speech(Now let's get your tongue in my hot, wet pussy!)] she excitedly exclaims, before pushing you down onto your back. Dropping down on top your face, she positions her [sister.pussy+] over your face and moans, [sister.speech(~Mmm!~ This'll be so much fun!)]
+					[sister.speech(现在让你的舌头伸进我湿热的小穴吧！)]她兴奋地叫道，然后把你推倒在地。她俯身趴在你的脸上，把她[sister.pussy+]放在你的脸上，呻吟着，[sister.speech(~嗯！~这会很有趣的！)]
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_ORAL_GIVING))
 			#IF(pc.hasPenisIgnoreDildo())
 				<p>
-					[sister.speech(I'm going to suck that yummy cock of yours dry!)] she excitedly exclaims, before pushing you down onto your back. Dropping down on top of you in the sixty-nine position, she hovers her [sister.pussy+] over your face as she lowers her [sister.lips+] towards your cock and moans, [sister.speech(~Mmm!~ This'll be so much fun!)]
+					[sister.speech(我要吸干你那美味的鸡巴！)]她兴奋地叫道，然后把你推倒在地。她以六九式趴在你身上，将她[sister.pussy+]悬在你的脸上，同时将她[sister.lips+]低向你的阴茎，并发出呻吟声，[sister.speech(~嗯！~这会很有趣的！)]
 				</p>
 			#ELSEIF(pc.hasVagina())
 				<p>
-					[sister.speech(I'm going to get my tongue deep inside that yummy little pussy of yours!)] she excitedly exclaims, before pushing you down onto your back. Dropping down on top of you in the sixty-nine position, she hovers her [sister.pussy+] over your face as she lowers her [sister.lips+] towards your cunt and moans, [sister.speech(~Mmm!~ This'll be so much fun!)]
+					[sister.speech(我要把我的舌头伸到你那可爱的小嫩穴里面去！)]她兴奋地喊道，然后把你推倒在地，自己则以六九式的姿势落在你身上。她[sister.pussy+]悬在你的脸上方，[sister.lips+]则对着你的小穴呻吟道，[sister.speech(~唔嗯！~会非常有趣的！)]
 				</p>
 			#ELSE
 				<p>
-					[sister.speech(Eugh... You don't have a pussy or a cock, so what am I meant to do?!)] the succubus whines, [sister.speech(I'll just have to take you directly to Angelixx...)]
+					[sister.speech(呃……你既没小穴也没鸡巴，这我咋办？！)]魅魔抱怨道，[sister.speech(我只能直接把你带到安吉莉克丝那里去了……)]
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_BREASTS_SELF))
 			#IF(pc.hasPenisIgnoreDildo() && game.isNipplePenEnabled())
 				<p>
-					[sister.speechNoEffects(I'm, like, gonna milk your balls into my tits!)] she excitedly exclaims, before pinning you against a stack of crates and kneeling down before you. Lifting her huge tits up towards your cock, she presses her fuckable nipple against your [pc.cockHead+] and moans, [sister.speechNoEffects(~Mmm!~ This'll be, like, super fun!)]
+					[sister.speechNoEffects(我，要用我的奶子，榨干你的蛋蛋！)]她兴奋地叫道，然后把你按在一堆板条箱上，跪在你面前。她用大奶子裹向你的鸡巴，把乳头压向你[pc.cockHead+]，呻吟道，[sister.speechspeechNoEffects(~嗯！~这会，非常，有趣的！)]
 				</p>
 			#ELSEIF(game.isLactationContentEnabled())
 				<p>
-					[sister.speechNoEffects(My tits feel, like, so super full of milk today! You're gonna be a good [pc.girl] and suck me dry, ok?!)] she excitedly exclaims, before pushing you down onto your back. Kneeling down beside your face, she pulls your head onto her thighs and looks down at you over her massive tits as she moans, [sister.speechNoEffects(~Mmm!~ This'll be, like, super fun!)]
+					[sister.speechNoEffects(我的奶子，今天感觉，充满了奶水！你要做个好[pc.girl]，把我吸干，听到没有？！)]她兴奋地叫道，然后把你推倒在地，跪在你的脸旁，把你的头拉到她的大腿上，一边呻吟一边越过巨大乳头俯视你，[sister.speechNoEffects(~嗯！~这会，非常，有趣的！)]
 				</p>
 			#ELSE
 				<p>
-					[sister.speechNoEffects(Now, like, let's get your tongue in my super hot, wet pussy!)] she excitedly exclaims, before pushing you down onto your back. Dropping down on top your face, she positions her [sister.pussy+] over your face and moans, [sister.speechNoEffects(~Mmm!~ This'll be, like, super fun!)]
+					[sister.speechNoEffects(现在，把你的舌头，伸进我湿热的，小穴吧！)]她兴奋地叫道，然后把你推倒在地。她俯身趴在你的脸上，把她[sister.pussy+]压在你的脸上，呻吟着，[sister.speechNoEffects(~嗯！~这会，非常，有趣的！)]
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_PENIS_GIVING))
 			<p>
-				[sister.speech(You're my bitch now, so you'd better start acting like one!)] she snarls, before roughly pushing you to the floor and forcing you onto all fours. Producing a small bottle of bright pink liquid, she reveals, [sister.speech(I want to get my fat knot inside you, and this little potion'll help with that!)]
+				[sister.speech(你现在是我的婊子了，所以你最好表现得像一点！)]她咆哮着，然后粗暴地把你推倒在地，强迫你四肢着地。她拿出一小瓶亮粉色的液体，并向你展示：[sister.speech(我想把我的肥鸡巴放进你的身体里，这个小魔药会帮我的忙！)]
 			</p>
 			<p>
-				Pulling out the cork and tossing it to one side, the succubus roughly forces the neck the bottle into your mouth. Roughly pinching your nose, she holds you still and forces you to swallow every last drop of the potion.
+				魅魔拔出瓶塞，将它扔到一边，粗暴地将瓶颈塞进你的嘴里。她粗暴地捏住你的鼻子，让你一动不动，强迫你吞下最后一滴魔药。
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_COMBAT_LOST_COCK_END"><![CDATA[
 	<p>
-		Your orifices continue to tingle as your transformations come to an end, and you can't help but [pc.moan] as you feel your holes stretching deeper and deeper inside of you. Slapping your ass hard, the succubus eagerly exclaims, [sister.speech(That's it, moan for me you bitch! ~Mmm!~ I can't wait to ram my fat knot inside you!)]
+		当你的转化结束时，你的腔穴继续刺痛，你感觉到你的腔穴在你体内越伸越深时，情不自禁地[pc.moan]。魅魔急切地拍打着你的屁股，急切地喊道，[sister.speech(就是这样，为我呻吟吧，你这婊子~我等不及要把我的肥屌插进你的身体了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_SUBMISSIVE_SEX_START"><![CDATA[
 		#IF(sister.hasFetish(FETISH_ANAL_RECEIVING))
 			#IF(pc.hasPenisIgnoreDildo())
 				<p>
-					Before you can do or say anything, the succubus drops down onto your cock, forcing it into her [sister.asshole+]. The little tentacles which line her orifice start massaging your shaft as you're forced to penetrate her, causing you to let out an involuntary [pc.moan].
+					你还没来得及做什么，也没来得及说什么，魅魔就把你的鸡巴压在了她[sister.asshole+]上，强行插了进去。她屁眼里的小触手开始按摩你的阴茎，让你不由自主地发出[pc.moan]。
 				</p>
 				<p>
-					[sister.speech(~Mmm!~ Feels good, doesn't it?)] your partner giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speech(I'll milk your balls into my ass, then once I've had my fun I'll deliver you to Angelixx!)]
+					[sister.speech(~嗯！~感觉不错，对吧？)]你的伴侣咯咯地笑起来。她的俏脸上露出一丝邪恶的笑意，并宣布道，[sister.speech(我会用屁眼榨干你的蛋蛋，等我玩够了，就把你交给安吉莉克丝！)]
 				</p>
 			#ELSE
 				<p>
-					Before you can do or say anything, the succubus drops down onto your face, smothering your mouth with her [sister.asshole+]. Bucking her hips back and forth, she grinds her [sister.ass+] up and down over your face, causing your [pc.moans+] to come out as muffled whimpers.
+					你还没来得及做什么或说什么，魅魔就扑到了你的脸上，用她[sister.asshole+]闷住了你的嘴。她前后扭动臀部，在你的脸上来回磨擦，使你[pc.moans+]变成低沉的呜咽声。
 				</p>
 				<p>
-					[sister.speech(~Mmm!~ Tastes good, doesn't it?)] your partner giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speech(I'll have you worship my ass for a while, then once I've had my fun I'll deliver you to Angelixx!)]
+					[sister.speech(~嗯！~味道不错，对吧？)]你的同伴咯咯地笑起来。她的俏脸上露出一丝邪恶的笑意，并宣布道，[sister.speech(我会让你侍奉我的屁股一会儿，等我玩够了，就把你交给安吉莉克丝！)]
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_PURE_VIRGIN))
 			#IF(pc.hasPenisIgnoreDildo())
 				<p>
-					Before you can do or say anything, the succubus drops down onto your cock, forcing it into her [sister.pussy+]. The little tentacles which line her orifice start massaging your shaft as you're forced to penetrate her, causing you to let out an involuntary [pc.moan].
+					你还没来得及说什么，魅魔就把你的鸡巴压在了她[sister.pussy+]上，强行插了进来。她阴道里的小触手开始按摩你的鸡巴，让你不由自主地发出[pc.moan]。
 				</p>
 				<p>
-					[sister.speech(~Mmm!~ Feels good, doesn't it?)] your partner giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speech(I'll milk your balls into my pussy, then once I've had my fun I'll deliver you to Angelixx!)]
+					[sister.speech(~嗯！~感觉不错，对吧？)]你的伴侣咯咯地笑起来。她的俏脸上露出一丝邪恶的笑意，并宣布道，[sister.speech(我会用淫穴榨干你的蛋蛋，等我玩够了，就把你交给安吉莉克丝！)]
 				</p>
 			#ELSE
 				<p>
-					Before you can do or say anything, the succubus drops down onto your face, smothering your mouth with her [sister.pussy+]. Bucking her hips back and forth, she grinds her [sister.labia+] up and down over your face, causing your [pc.moans+] to come out as muffled whimpers.
+					你还没来得及做什么或说什么，魅魔就扑到了你的脸上，用她[sister.pussy+]闷住了你的嘴。她前后扭动，在你的脸上来回磨擦，使你[pc.moans+]变成低沉的呜咽声。
 				</p>
 				<p>
-					[sister.speech(~Mmm!~ Tastes good, doesn't it?)] your partner giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speech(I'll have you eat me out for a while, then once I've had my fun I'll deliver you to Angelixx!)]
+					[sister.speech(~嗯！~味道不错，对吧？)]你的同伴咯咯地笑起来。她的俏脸上露出一丝邪恶的笑意，并宣布道，[sister.speech(我会让你口一会儿，等我玩够了，就把你交给安吉莉克丝！)]
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_ORAL_GIVING))
 			#IF(pc.hasPenisIgnoreDildo())
 				<p>
-					Before you can do or say anything, the succubus allows her absurdly long tongue to loll out of her mouth and starts slowly licking your [pc.cock+]. Her slimy saliva soon coats your throbbing shaft, and as she swirls the bifurcated tip of her tongue around the [pc.cockHead+] of your erect dick, you can't help but let out [pc.a_moan+].
+					在你还没来得及说什么，魅魔就伸出了她长的离谱的舌头，开始慢慢地舔你[pc.cock+]。她黏糊糊的唾液很快就沾满了你勃起的鸡巴，她分叉的舌尖在你[pc.cockHead+]上打转，你情不自禁地发出[pc.a_moan+]。
 				</p>
 				<p>
-					[sister.speech(~Mmm!~ You like that?)] your partner giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speech(I'll milk your balls dry, then once I've had my fun I'll deliver you to Angelixx! Feel free to eat me out, but I don't care if you don't want to; all I need is a taste of your cock and I'll be squirting over your face soon enough...)]
+					[sister.speech(~嗯！~喜欢吗？)]你的同伴咯咯地笑起来。她的俏脸上露出一丝邪恶的笑意，并宣布道，[sister.speech(我会把你榨干，等我玩够了，就把你交给安吉莉克丝！你可以随意口我，但如果你不想，我也不在乎；我只需要尝尝你的鸡巴，很快就会喷在你的脸上……)]
 				</p>
 				<p>
-					With that, she parts her [sister.lips+] and takes your [pc.cock+] into her mouth, before bobbing her head up and down as she starts to give you a sloppy blowjob...
+					说着，她分开[sister.lips+]，将你[pc.cock+]含入口中，然后上下晃动头部，开始为你口交……
 				</p>
 			#ELSEIF(pc.hasVagina())
 				<p>
-					Before you can do or say anything, the succubus allows her absurdly long tongue to loll out of her mouth and starts slowly licking your [pc.pussy+]. Her slimy saliva soon coats your [pc.labia+], and as she swirls the bifurcated tip of her tongue around your [pc.clit+], you can't help but let out [pc.a_moan+].
+					你还没来得及说什么，魅魔就伸出了她长的离谱的舌头，开始慢慢地舔你[pc.pussy+]。她黏糊糊的唾液很快就沾满了你[pc.labia+]，分叉的舌尖在你[pc.clit+]上打转，你情不自禁地发出[pc.a_moan+]。
 				</p>
 				<p>
-					[sister.speech(~Mmm!~ You like that?)] your partner giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speech(I'll make you cum from this, then once I've had my fun I'll deliver you to Angelixx! Feel free to eat me out, but I don't care if you don't want to; all I need is a taste of your pussy and I'll be squirting over your face soon enough...)]
+					[sister.speech(~嗯！~喜欢吗？)]你的同伴咯咯地笑起来。她的俏脸上露出一丝邪恶的笑意，并宣布道，[sister.speech(我会让你高潮的，等我玩够了，就把你交给安吉莉克丝！你可以随意口我，但如果你不想，我也不在乎；我只需要尝尝你的阴部，很快就会喷在你的脸上……)]
 				</p>
 				<p>
-					With that, she presses her [sister.lips+] against your [pc.labia+] and thrusts her [sister.tongue+] into your [pc.pussy+], before starting to greedily eat you out...
+					她用她[sister.lips+]抵住你[pc.labia+]，把[sister.tongue+]伸进你[pc.pussy+]，然后开始贪婪地口你……
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_BREASTS_SELF))
 			#IF(pc.hasPenisIgnoreDildo() && game.isNipplePenEnabled())
 				<p>
-					Before you can do or say anything, the succubus grabs your cock, and after jerking it a few times to make sure you're rock hard, she leans forwards and presses it against one of her puffy nipples. Her [sister.nipple+] readily parts as your [pc.cockHead+] pushes into it, and with a little thrust of her chest, your partner forces your shaft into her fuckable orifice.
+					还没等你说些或者做些什么，魅魔就抓住了你的阴茎，然后撸动了几次，以确保你硬得像石头一样，之后她向前倾身，将阴茎压在了她肉感的乳头上。你[pc.cockHead+]被轻而易举地推入了她[sister.nipple+]，然后你的伴侣用胸部轻轻一推，就将你的整根阴茎强行塞入了她可操的腔穴。
 				</p>
 				<p>
-					[sister.speechNoEffects(~Mmm!~ You like that?)] she giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speechNoEffects(I'll, like, milk your balls into my tits, then once I've had my fun with you I'm gonna deliver you to Angelixx!)]
+					[sister.speechNoEffects(~嗯！~ 你喜欢吗？)]她咯咯地笑着。她的俏脸上露出一丝邪恶的笑容，说道，[sister.speechNoEffects(我会，用奶子榨干你的蛋蛋，然后等我玩够了，就把你交给安吉莉克丝！)]
 				</p>
 			#ELSEIF(game.isLactationContentEnabled())
 				<p>
-					With your head in her lap, you look up at the succubus as she guides one of her thick, puffy nipples towards your mouth. Letting out a little giggle, she reveals, [sister.speechNoEffects(Mistress said, like, my milk is super worthless and only good for the lowest of slaves, and I guess that now includes you! So go on, drink up, bitch!)]
+					你的头枕在魅魔的腿上，你仰面看着她，她将其中一个厚实肉感的乳头靠向你的嘴。她咯咯地笑着说道，[sister.speechNoEffects(主人说，我的奶水毫无价值，只配得上最低级的奴隶，我想现在也包括你了！所以说，喝吧，贱人！)]
 				</p>
 				<p>
-					As she squeezes a trickle of thick, musky liquid from her puffy, ebony teat, you realise what the succubus means, but before you can complain she quickly forces her nipple into your mouth. Forcefully breastfeeding you, she moans, [sister.speechNoEffects(~Mmm!~ Good bitch... That's it, like, drink my worthless milk, and once I've had my fun with you I'm gonna deliver you to Angelixx!)]
+					她从那肉感的乌木色乳头上挤出了一股浓稠的腥味液体，你意识到了魅魔想要做什么，但还没等你反对，她就迅速地将乳头塞进你的嘴里。她强行给你喂奶，呻吟着，[sister.speechNoEffects(~嗯！~好婊子……就是这样，喝下我毫无价值的奶水，等我玩够了，就把你交给安吉莉克丝！)]
 				</p>
 			#ELSE
 				<p>
-					Before you can do or say anything, the succubus drops down onto your face, smothering your mouth with her [sister.pussy+]. Bucking her hips back and forth, she grinds her [sister.labia+] up and down over your face, causing your [pc.moans+] to come out as muffled whimpers.
+					你还没来得及做什么或说什么，魅魔就扑到了你的脸上，用她[sister.pussy+]闷住了你的嘴。她前后扭动，在你的脸上来回磨擦，使你[pc.moans+]变成低沉的呜咽声。
 				</p>
 				<p>
-					[sister.speechNoEffects(~Mmm!~ Tastes super good, doesn't it?)] your partner giggles. Allowing a wicked smirk to settle on her pretty face, she declares, [sister.speechNoEffects(I'll, like, have you eat me out for a while, y'know? Once I've had my fun with you I'll, like, deliver you to Angelixx!)]
+					[sister.speechNoEffects(~嗯！~ 味道超好，对不对？)]你的伴侣咯咯地笑着。她的俏脸上露出一丝邪恶的笑容，说道，[sister.speechNoEffects(我会，让你口一会儿，你明白吗？等我玩够了，我就，把你交给安吉莉克丝！)]
 				</p>
 			#ENDIF
 		#ELSEIF(sister.hasFetish(FETISH_PENIS_GIVING))
 			#IF(pc.hasVagina())
 				<p>
-					Before you can do or say anything, the succubus drops down behind you and presses her massive, dog-like dick against your pussy. Sliding the pointed tip of her canine cock over your [pc.labia+], she grabs your [pc.hips] and giggles, [sister.speech(Mistress says I'm a bad dog whenever I hump bitches like you... ~Mmm!~ But Mistress isn't here!)]
+					还没等你说些或者做些什么，魅魔就趴在你身后，将她那巨大的、狗一样的阴茎压在你的阴户上。她用那犬科阴茎的尖端滑过你[pc.labia+]，她抓住你的[pc.hips]，咯咯地笑着，[sister.speech(每当我和你这样的婊子做爱时，主人都会说我是一条坏狗……~嗯！~但主人不在这里！)]
 				</p>
 				<p>
-					With that, she thrusts forwards and rams her throbbing cock deep into your [pc.pussy+]. Roughly gripping your hips, she starts rapidly humping you, moaning in ecstasy as she fucks you hard and fast...
+					说完，她便向前猛冲，将她那跳动的阴茎深深地插入你[pc.pussy+]。她粗暴地抓住你的臀部，开始快速地撞击你，她发出狂喜的呻吟声，用力地狠狠操你……
 				</p>
 			#ELSEIF(game.isAnalContentEnabled())
 				<p>
-					Before you can do or say anything, the succubus drops down behind you and rubs her massive, dog-like dick against your [pc.ass+]. Sliding the pointed tip of her canine cock over your [pc.asshole+], she grabs your [pc.hips] and giggles, [sister.speech(Mistress says I'm a bad dog whenever I hump bitches like you... ~Mmm!~ But Mistress isn't here!)]
+					还没等你说些或者做些什么，魅魔就趴在你身后，将她那巨大的、狗一样的阴茎压向你[pc.ass+]。她用那犬科阴茎的尖端滑过你[pc.asshole+]，她抓住你的[pc.hips]，咯咯地笑着，[sister.speech(每当我和你这样的婊子做爱时，主人都会说我是一条坏狗……~嗯！~但主人不在这里！)]
 				</p>
 				<p>
-					With that, she thrusts forwards and rams her throbbing cock deep into your [pc.asshole+]. Roughly gripping your hips, she starts rapidly humping you, moaning in ecstasy as she fucks you hard and fast...
+					说完，她便向前猛冲，将她那跳动的阴茎深深地插入你[pc.asshole+]。她粗暴地抓住你的臀部，开始快速地撞击你，她发出狂喜的呻吟声，用力地狠狠操你……
 				</p>
 			#ELSE
 				<p>
-					[sister.speech(Typical...)] the succubus tuts in annoyance, [sister.speech(Mistress hasn't given me a slave to fuck for over a week, and now that I have a bitch to hump [pc.she] doesn't even have a pussy!)]
+					[sister.speech(不出所料……)]魅魔恼怒地啧了啧嘴，[sister.speech(主人已经一个多星期没有给我奴隶操了，而现在我可以操的这个婊子甚至没有阴部！)]
 				</p>
 				<p>
-					Dropping down in front of you, she presses her massive, dog-like dick against against your [pc.lips+] and giggles, [sister.speech(Mistress says I'm a bad dog whenever I fuck bitches like you... ~Mmm!~ But Mistress isn't here!)]
+					她跪在你面前，将她那巨大的、狗一样的阴茎压向你[pc.lips+]，她咯咯地笑着，[sister.speech(每当我和你这样的婊子做爱时，主人都会说我是一条坏狗……~嗯！~但主人不在这里！)]
 				</p>
 				<p>
-					With that, she thrusts forwards and rams her throbbing cock into your mouth. Roughly grabbing your head in both hands, she starts rapidly fucking your face, moaning in ecstasy as she slams her canine cock down your throat...
+					说完，她便向前猛冲，将她那跳动的阴茎猛地塞进你的嘴里。她粗暴地用双手抓住你的头，开始快速地操你的脸，她发出狂喜的呻吟声，将犬科阴茎猛地塞进你的喉咙……
 				</p>
 			#ENDIF
 		#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_SUBMISSIVE_SEX_END"><![CDATA[
 	<p>
-		Having had her fun, the succubus pushes you to the floor and energetically jumps to her hoofed feet. While she seems to have gained a lot of energy from her dominant performance, you feel completely worn out, and all you can do is lie there, panting for breath.
+		玩够了之后，魅魔把你推倒在地，然后竭力地跳起她的蹄子。虽然她似乎从她的霸道表演中获得了大量的能量，但你却感到疲惫不堪，只能躺在那里，气喘吁吁。
 	</p>
 	<p>
-		[sister.speech(I bet that was the best sex of your life, wasn't it? Look, here you are,)] she teases as she points to a newly tattooed tally mark that's appeared on her skin. Seeing the hundreds of other tally marks beside yours, you realise that you're just another number to the succubus, and she confirms this by smirking down at you and saying, [sister.speech(As far as I'm concerned, you're just another forgettable fuck. Don't bother telling me your name; I'm not going to remember it.)]
+		[sister.speech(我敢打赌，这是你一生中最美好的性爱，对不对？看，你在这里，)]她一边指着自己皮肤上更新的纹身计数标记，一边取笑道。你看到代表你的标记旁边还有其他数百个计数标记，你意识到你对于这个魅魔来说只是又一个数字罢了，而她也证实了这一点，她低头笑着对你说，[sister.speech(在我看来，你不过是另一个被遗忘的混蛋。不用告诉我你的名字，我不会记住的。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_COLLARED"><![CDATA[
 	#IF(pc.isTaur())
 		<p>
-			Not having the energy to reply or try to escape, you're left powerless as the succubus steps over to a nearby crate and rips off the lid. Rummaging around for a moment, she lets out a happy cry as she finds what she was looking for, and turns to face you with a bright pink collar in her hands. Within seconds she's tightly fastened the collar around your neck, and then she jumps onto your back and swings her riding crop down hard on your [pc.ass+]. In a sharp tone, she commands, [sister.speech(Giddy up, bitch!)]
+			你没有力气回答，也没有力气逃跑，只能眼睁睁地看着魅魔走到旁边的板条箱前，掀开盖子。她翻找了一会儿，发现了她要找的东西，高兴地叫了一声，然后转过身来面对你，她手里拿着一个亮粉色的项圈。没用多长时间，她就把项圈紧紧地套在了你的脖子上，然后她跳到你的背上，使劲用马鞭抽你[pc.ass+]。她用尖锐的语气命令道，[sister.speech(驾，婊子，驾！)]
 		</p>
 		#IF(game.isNonConEnabled() && (pc.hasVagina() || game.isAnalContentEnabled()))
 			<p>
-				Not having much say in the matter, you stand up with the succubus on your back and start [pc.walking] forwards. Giggling as you carry her on your back, your passenger snakes her tail down behind you, and you gasp as you feel the spaded tip
+				你对此没有任何发言权，只好背着魅魔站起来，开始向前[pc.walking]。你的乘客在你背上咯咯笑着，她的尾巴像条蛇一样垂在你身后，你感受到那桃心尖
 				#IF(pc.hasVagina())
-					 press against your [pc.labia+]. After giving your flank another stinging whack with her riding crop, the succubus rams her tail into your [pc.pussy+], ignoring your shuddering gasp as she declares, [sister.speech(Forwards, slut!)]
+					压在你[pc.labia+]上，不禁倒吸了一口凉气。魅魔再次用马鞭狠狠地抽打你的侧腹，将尾巴撞入你[pc.pussy+]，她无视了你颤抖的喘息，继续喊道，[sister.speech(前进，荡妇！)]
 				#ELSE
-					 slide down over your [pc.ass+]. After giving your flank another stinging whack with her riding crop, the succubus rams her tail into your [pc.asshole+], ignoring your shuddering gasp as she declares, [sister.speech(Forwards, buttslut!)]
+					滑过你[pc.ass+]，不禁倒吸了一口凉气。魅魔再次用马鞭狠狠地抽打你的侧腹，将尾巴撞入你[pc.asshole+]，她无视了你颤抖的喘息，继续喊道，[sister.speech(前进，屁穴荡妇！)]
 				#ENDIF
 			</p>
 			<p>
-				Feeling completely drained of energy, you're powerless to resist, and so you're forced to obediently trot forwards with the succubus on your back. With each step she plunges her tail in and out of your
+				你感觉自己已经精疲力竭，完全无力抵抗，所以只能乖乖地背着魅魔向前小跑。每走一步，她都会用尾巴在你
 				#IF(pc.hasVagina())
-					 [pc.pussy+],
+					[pc.pussy+]
 				#ELSE
-					 [pc.asshole+],
+					[pc.asshole+]
 				#ENDIF
-				 making you let out involuntary [pc.moans] and whimpers. Her mocking sneers and triumphant giggles add to your burning shame, as does the occasional swat of her riding crop, and you try not to think about what's going to happen to you as you carry your tormentor deeper into the factory...
+				里进进出出，让你不由自主地呜咽[pc.moans]着。她带有嘲弄意味的得意笑声让你更加羞愧，她随意地用马鞭抽打着你，你只能试着不去想象当你带着她深入工厂后会发生什么……
 			</p>
 		#ELSE
 			<p>
-				Feeling completely drained of energy, you're powerless to resist, and so you're forced to obediently trot forwards with the succubus on your back. Her mocking sneers and triumphant giggles add to your burning shame, as does the occasional swat of her riding crop, and you try not to think about what's going to happen to you as you carry your tormentor deeper into the factory...
+				你感觉自己已经精疲力竭，完全无力抵抗，所以只能乖乖地背着魅魔向前小跑。她带有嘲弄意味的得意笑声让你更加羞愧难当，她随意地用马鞭抽打着你，你只能试着不去想象当你带着她深入工厂后会发生什么……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Not having the energy to reply or try to escape, you're left powerless as the succubus steps over to a nearby crate and rips off the lid. Rummaging around for a moment, she lets out a happy cry as she finds what she was looking for, and turns to face you with a bright pink collar and matching leash in her hands. Within seconds she's tightly fastened the collar around your neck, and after connecting it to the leash, she gives it a tug and giggles, [sister.speech(Heel, bitch!)]
+			你没有力气回答，也没有力气逃跑，只能眼睁睁地看着魅魔走到旁边的板条箱前，掀开盖子。她翻找了一会儿，发现了她要找的东西，高兴地叫了一声，然后转过身来面对你，她手里拿着一个亮粉色的项圈和配套的束带。没用多长时间，她就把项圈紧紧地套在了你的脖子上，然后她把束带接上项圈，用力地拉了一下，咯咯地笑着，[sister.speech(快走，婊子！)]
 		</p>
 		<p>
-			You try to stand up, but the succubus swings her riding crop down hard on your [pc.ass+], before pushing you down and snapping, [sister.speech(Bitches don't stand up! Crawl like the dog you are!)]
+			你试图站起来，但魅魔用马鞭狠狠地抽打你[pc.ass+]，然后把你推倒在地，厉声说，[sister.speech(不许站起来，婊子！像狗一样爬着！)]
 		</p>
 		#IF(game.isNonConEnabled() && (pc.hasVagina() || game.isAnalContentEnabled()))
 			<p>
-				Not having much say in the matter, you resign yourself to having to do as the succubus says and begin to crawl forwards. Giggling as you act like an animal, your tormentor snakes her tail down behind you, and you gasp as you feel the spaded tip
+				你对此没有任何发言权，只好听从魅魔的命令，开始向前爬行。折磨者看到你像只动物一样，不禁发出了咯咯的笑声，她的尾巴像条蛇一样垂在你身后，你感受到那桃心尖
 				#IF(pc.hasVagina())
-					 press against your [pc.labia+]. After giving your leash another sharp tug, the succubus rams her tail into your [pc.pussy+],
+					压在你[pc.labia+]上，不禁倒吸了一口凉气。魅魔再次用力拉了一下束带，将尾巴撞入你[pc.pussy+]，
 				#ELSE
-					 slide down over your [pc.ass+]. After giving your leash another sharp tug, the succubus rams her tail into your [pc.asshole+],
+					滑过你[pc.ass+]，不禁倒吸了一口凉气。魅魔再次用力拉了一下束带，将尾巴撞入你[pc.asshole+]，
 				#ENDIF
-				 ignoring your shuddering gasp as she commands, [sister.speech(Heel, bitch!)]
+				她无视了你颤抖的喘息，继续喊道，[sister.speech(快走，荡妇！)]
 			</p>
 			<p>
-				Feeling completely drained of energy, you're powerless to resist, and so you're forced to obediently crawl alongside the succubus. With each step she plunges her tail in and out of your
+				你感觉自己已经精疲力竭，完全无力抵抗，所以只能乖乖地在魅魔身边爬行。每走一步，她都会用尾巴在你
 				#IF(pc.hasVagina())
-					 [pc.pussy+],
+					[pc.pussy+]
 				#ELSE
-					 [pc.asshole+],
+					[pc.asshole+]
 				#ENDIF
-				 making you let out involuntary [pc.moans] and whimpers. Her mocking sneers and triumphant giggles add to your burning shame, as does the occasional swat of her riding crop, and you try not to think about what's going to happen to you as you're led deeper into the factory...
+				里进进出出，让你不由自主地呜咽[pc.moans]着。她带有嘲弄意味的得意笑声让你更加羞愧，她随意地用马鞭抽打着你，你只能试着不去想象当你被她带到工厂深处后会发生什么……
 			</p>
 		#ELSE
 			<p>
-				Feeling completely drained of energy, you're powerless to resist, and so you're forced to obediently crawl alongside the succubus. Her mocking sneers and triumphant giggles add to your burning shame, as does the occasional swat of her riding crop, and you try not to think about what's going to happen to you as you're led deeper into the factory...
+				你感觉自己已经精疲力竭，完全无力抵抗，所以只能乖乖地在魅魔身边爬行。她带有嘲弄意味的得意笑声让你更加羞愧难当，她随意地用马鞭抽打着你，你只能试着不去想象当你被她带到工厂深处后会发生什么……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_TRAVEL"><![CDATA[
 	#IF(game.isNonConEnabled() && (pc.hasVagina() || game.isAnalContentEnabled()))
 		<p>
-			The next few minutes are a humiliating blur of forced exhibitionism as the succubus
+			接下来的几分钟你经历了一段耻辱的强迫暴露，魅魔
 			#IF(pc.isTaur())
-				 on your back makes you trot
+				让你背着她在工厂里小跑。
 			#ELSE
-				 makes you crawl by her side
+				让你在她身边爬过工厂。
 			#ENDIF
-			 around the factory. Seeking out her sisters who work down here alongside her, your tormentor shows you off to them, drawing their attention to her tail as it pumps in and out of your
+			折磨者找到了和她一起在这里工作的姐妹们，向她们炫耀你，她们的注意力全都被吸引到了她的尾巴上，尾巴在你
 			#IF(pc.hasVagina())
-				[pc.pussy+].
+				[pc.pussy+]
 			#ELSE
-				[pc.asshole+].
+				[pc.asshole+]
 			#ENDIF
-			 Enviously gazing at your naked body with lustful gleams in their predatory eyes, the other succubi snarl and spit insults at your conqueror as she denies their requests to fuck you.
+			中进出抽插。其余魅魔用掠食性的目光羡慕地盯着你赤裸的身体，眼神中闪烁着淫荡的光芒，而你的征服者拒绝了她们操你的要求，使得魅魔们对她咆哮辱骂着。
 		</p>
 		#IF(!flags.hasFlag(FLAG_innoxia_doll_factory_slimes_discovered))
 			<p>
-				Leaving her sisters behind, the succubus steers you through a door on the far side of the factory and into a long room, which like the other areas of the factory has rough rock walls and a smooth concrete floor. Fluorescent arcane lights hang down at regular intervals from the high ceiling, which bathe the cavernous space in a bright white glow. A dazzling array of twisting metal pipes run down the entire length of the right-hand wall, but it's what's on the left that causes you to stare in shock.
+				魅魔抛下她的姐妹们，带你穿过工厂另一边的一扇门，进入一个长长的房间。这个房间和工厂的其他区域一样，墙壁是粗糙的岩石，地面是光滑的混凝土。高高的天花板上每隔一段距离就悬挂着一盏奥术荧光灯，明亮的白光洒满了整个洞穴。一排令人眼花缭乱的扭曲金属管道沿着右侧墙壁一直延伸下来，但左侧的东西让你震惊不已。
 			</p>
 			<p>
-				Dozens of huge, futanari slime-girls, with the shortest looking to be over [units.size(250)] tall, are lined up near the wall. Each of the slimes has been restrained via metal chains which span from the wall to the collars and cuffs around their necks, wrists, and ankles. Each one of these captives is made of clear slime, allowing you to see the dazzling array of colourful sex toys that have been inserted into their orifices. Enchanted to constantly vibrate, these toys are causing the slimes to repeatedly orgasm, and each time they do a huge amount of sexual fluids squirt from their spasming cunts, while thick, clear slime oozes like milk from their massive, puffy nipples. Sporting gigantic cocks with huge, heavy balls, the slimes shoot an absurd amount of sticky cum all over the floor every time they reach their climax. These fluids combine to run down the sloped floor into a grate, which is then linked to a pipe that sucks the mixture up and away into massive metal storage vats.
-			</p>
+			几十个巨大的雌性史莱姆在墙边一字排开，最矮的看起来也有[units.size(250)]左右高。每个史莱姆都被金属链束缚着，这些金属链从墙壁一直延伸到脖子、手腕和脚踝上的项圈和手铐。每个俘虏都是透明的史莱姆，让你可以看到她们的腔穴上插着五颜六色的性玩具，令人眼花缭乱。这些玩具被施以附魔，不断振动，使这些俘虏反复达到高潮，每次高潮都会从她们痉挛的阴道中喷出大量性液，而从她们巨大、浮肿的乳头中渗出的浓稠透明粘液就像乳汁一样。这些史莱姆拥有巨大的阴茎和又大又重的睾丸，每次达到高潮时都会将大量粘稠的精液射得满地都是。这些液体汇聚在一起，顺着倾斜的地板流到一个栅栏里，然后栅栏又与一个管道相连，管道会把这些混合物吸上来，再吸进巨大的金属储藏桶里。
+		</p>
 			<p>
 				#IF(pc.isTaur())
-					As you trot
+					你小跑着
 				#ELSE
-					As you crawl
+					你爬行着
 				#ENDIF
-				 past the orgasming slimes, your tormentor giggles, [sister.speech(I bet you wish you were one of them, don't you, #IF(pc.isTaur())slut#ELSEbitch#ENDIF? Well, I think Angelixx has enough slimes, so it's a different fate for you!)]
+				从那些高潮的史莱姆身边经过，而折磨你的人则咯咯地笑着，[sister.speech(我猜你很想成为她们中的一员吧，对不对，#IF(pc.isTaur())母狗#ELSE婊子#ENDIF？不过，我觉得安吉莉克丝已经有足够多的史莱姆了，所以你的命运会有所不同！)]
 			</p>
 		#ELSE
 			<p>
-				Leaving her sisters behind, the succubus steers you through a door on the far side of the factory and into the slime milking room.
+				魅魔抛下她的姐妹们，带你穿过工厂另一边的一扇门，进入史莱姆挤奶室。
 				#IF(flags.hasFlag(FLAG_innoxia_doll_factory_sleip_nir_defeated))
-					 There's no sign of Sleip or Nir in here, and you realise that someone must have come along and freed them from their chains.
+					斯雷普和尼尔都不在这里，你意识到一定是有人来过并把他们从束缚中解放出来了。
 				#ELSEIF(flags.hasFlag(FLAG_innoxia_doll_factory_sleip_nir_seen))
-					 There's no sign of Sleip or Nir in here, and you realise that they must have finished fucking the slimes and left.
+					斯雷普和尼尔都不在这里，你意识到他们一定是操完史莱姆后就离开了。
 				#ENDIF
 				#IF(pc.isTaur())
-					 As you trot
+					你小跑着
 				#ELSE
-					 As you crawl
+					你爬行着
 				#ENDIF
-				 past the orgasming slimes, your tormentor giggles, [sister.speech(I bet you wish you were one of them, don't you, #IF(pc.isTaur())slut#ELSEbitch#ENDIF? Well, I think Angelixx has enough slimes, so it's a different fate for you!)]
+				从那些高潮的史莱姆身边经过，而折磨你的人则咯咯地笑着，[sister.speech(你很想成为她们中的一员吧，对不对，#IF(pc.isTaur())母狗#ELSE婊子#ENDIF？不过，我觉得安吉莉克丝已经有足够多的史莱姆了，所以你的命运会有所不同！)]
 			</p>
 		#ENDIF
 		</p>
@@ -624,68 +624,68 @@
 		</p>
 		<p>
 			#IF(pc.isTaur())
-				[sister.speech(Cum for your new Mistress, slut!)] the succubus on your back giggles.
+				[sister.speech(为你的新主人高潮吧，母狗！)]魅魔在你背上咯咯地笑着。
 			#ELSE
-				[sister.speech(Cum for your new Mistress, bitch!)] the succubus giggles.
+				[sister.speech(为你的新主人高潮吧，婊子！)]魅魔咯咯地笑着。
 			#ENDIF
-			 Slamming her tail deep into your
+			她将尾巴深深撞入你
 			#IF(pc.hasVagina())
-				 dripping [pc.pussy+], she reaches #IF(pc.isTaur())around#ELSEdown#ENDIF to playfully pinch your [pc.nipples+].
+				湿淋淋的[pc.pussy+]，然后伸手去玩弄你[pc.nipples+]。
 			#ELSE
-				 [pc.asshole+], she reaches #IF(pc.isTaur())around#ELSEdown#ENDIF to playfully pinch your [pc.nipples+].
+				[pc.asshole+]，然后伸手去玩弄你[pc.nipples+]。
 			#ENDIF
-			 Pushed to the edge by this intense stimulation, you shamefully climax in front of Angelixx, whose mocking laughter causes your cheeks to burn red from humiliation.
+			在这种强烈的刺激下，你被推到了高潮边缘，然后在安吉莉克丝面前羞愧地达到了高潮，她的嘲讽的笑声让你的脸颊因羞辱而涨得通红。
 		</p>
 		<p>
 			#IF(pc.isTaur())
-				[sister.speech(Enjoy your new life, slut,)] the succubus sneers as she slides off your back.
+				[sister.speech(享受你的新生活吧，母狗，)]魅魔冷笑着，从你的背上滑下来。
 			#ELSE
-				[sister.speech(Enjoy your new life, bitch,)] the succubus sneers as she passes your leash over to Angelixx.
+				[sister.speech(享受你的新生活吧，婊子，)]魅魔冷笑着，将你的束带递给安吉莉克丝。
 			#ENDIF
-			 Giving your ass one final swat with her riding crop, she struts off back to the factory. As she leaves, you hear her saying, [sister.speech(Hello, boys. Your mother has a new slave...)]
+			她最后用马鞭抽了一下你的屁股，然后大摇大摆地走回了工厂。你听到她在离开时说，[sister.speech(你们好呀，男孩们。你们的妈妈有了一个新奴隶……)]
 		</p>
 		<p>
-			Turning your head, you see two very familiar nightmares walking towards you...
+			转过头，你看到两个非常熟悉的梦魇向你走来……
 		</p>
 	#ELSE
 		<p>
-			The next few minutes are a humiliating blur of forced exhibitionism as the succubus
+			接下来的几分钟你经历了一段耻辱的强迫暴露，魅魔
 			#IF(pc.isTaur())
-				 on your back makes you trot
+				让你背着她在工厂里小跑。
 			#ELSE
-				 makes you crawl by her side
+				让你在她身边爬过工厂。
 			#ENDIF
-			 around the factory. Seeking out her sisters who work down here alongside her, your tormentor shows you off to them while making degrading remarks about your situation. Enviously gazing at your naked body with lustful gleams in their predatory eyes, the other succubi snarl and spit insults at your conqueror as she denies their requests to fuck you.
+			折磨者找到了和她一起在这里工作的姐妹们，向她们炫耀你，贬低着你的现状。其余魅魔用掠食性的目光羡慕地盯着你赤裸的身体，眼神中闪烁着淫荡的光芒，而你的征服者拒绝了她们操你的要求，使得魅魔们对她咆哮辱骂着。
 		</p>
 		#IF(!flags.hasFlag(FLAG_innoxia_doll_factory_slimes_discovered))
 			<p>
-				Leaving her sisters behind, the succubus steers you through a door on the far side of the factory and into a long room, which like the other areas of the factory has rough rock walls and a smooth concrete floor. Fluorescent arcane lights hang down at regular intervals from the high ceiling, which bathe the cavernous space in a bright white glow. A dazzling array of twisting metal pipes run down the entire length of the right-hand wall, but it's what's on the left that causes you to stare in shock.
+				魅魔抛下她的姐妹们，带你穿过工厂另一边的一扇门，进入一个长长的房间。这个房间和工厂的其他区域一样，墙壁是粗糙的岩石，地面是光滑的混凝土。高高的天花板上每隔一段距离就悬挂着一盏奥术荧光灯，明亮的白光洒满了整个洞穴。一排令人眼花缭乱的扭曲金属管道沿着右侧墙壁一直延伸下来，但左侧的东西让你震惊不已。
 			</p>
 			<p>
-				Dozens of huge, futanari slime-girls, with the shortest looking to be over [units.size(250)] tall, are lined up near the wall. Each of the slimes has been restrained via metal chains which span from the wall to the collars and cuffs around their necks, wrists, and ankles. Each one of these captives is made of clear slime, allowing you to see the dazzling array of colourful sex toys that have been inserted into their orifices. Enchanted to constantly vibrate, these toys are causing the slimes to repeatedly orgasm, and each time they do a huge amount of sexual fluids squirt from their spasming cunts, while thick, clear slime oozes like milk from their massive, puffy nipples. Sporting gigantic cocks with huge, heavy balls, the slimes shoot an absurd amount of sticky cum all over the floor every time they reach their climax. These fluids combine to run down the sloped floor into a grate, which is then linked to a pipe that sucks the mixture up and away into massive metal storage vats.
-			</p>
+			几十个巨大的雌性史莱姆在墙边一字排开，最矮的看起来也有[units.size(250)]左右高。每个史莱姆都被金属链束缚着，这些金属链从墙壁一直延伸到脖子、手腕和脚踝上的项圈和手铐。每个俘虏都是透明的史莱姆，让你可以看到她们的腔穴上插着五颜六色的性玩具，令人眼花缭乱。这些玩具被施以附魔，不断振动，使这些俘虏反复达到高潮，每次高潮都会从她们痉挛的阴道中喷出大量性液，而从她们巨大、浮肿的乳头中渗出的浓稠透明粘液就像乳汁一样。这些史莱姆拥有巨大的阴茎和又大又重的睾丸，每次达到高潮时都会将大量粘稠的精液射得满地都是。这些液体汇聚在一起，顺着倾斜的地板流到一个栅栏里，然后栅栏又与一个管道相连，管道会把这些混合物吸上来，再吸进巨大的金属储藏桶里。
+		</p>
 			<p>
 				#IF(pc.isTaur())
-					As you trot
+					你小跑着
 				#ELSE
-					As you crawl
+					你爬行着
 				#ENDIF
-				 past the orgasming slimes, your tormentor giggles, [sister.speech(I bet you wish you were one of them, don't you, #IF(pc.isTaur())slut#ELSEbitch#ENDIF? Well, I think Angelixx has enough slimes, so it's a different fate for you!)]
+				从那些高潮的史莱姆身边经过，而折磨你的人则咯咯地笑着，[sister.speech(我猜你很想成为她们中的一员吧，对不对，#IF(pc.isTaur())母狗#ELSE婊子#ENDIF？不过，我觉得安吉莉克丝已经有足够多的史莱姆了，所以你的命运会有所不同！)]
 			</p>
 		#ELSE
 			<p>
-				Leaving her sisters behind, the succubus steers you through a door on the far side of the factory and into the slime milking room.
+				魅魔抛下她的姐妹们，带你穿过工厂另一边的一扇门，进入史莱姆挤奶室。
 				#IF(flags.hasFlag(FLAG_innoxia_doll_factory_sleip_nir_defeated))
-					 There's no sign of Sleip or Nir in here, and you realise that someone must have come along and freed them from their chains.
+					斯雷普和尼尔都不在这里，你意识到一定是有人来过并把他们从束缚中解放出来了。
 				#ELSEIF(flags.hasFlag(FLAG_innoxia_doll_factory_sleip_nir_seen))
-					 There's no sign of Sleip or Nir in here, and you realise that they must have finished fucking the slimes and left.
+					斯雷普和尼尔都不在这里，你意识到他们一定是操完史莱姆后就离开了。
 				#ENDIF
 				#IF(pc.isTaur())
-					 As you trot
+					你小跑着
 				#ELSE
-					 As you crawl
+					你爬行着
 				#ENDIF
-				 past the orgasming slimes, your tormentor giggles, [sister.speech(I bet you wish you were one of them, don't you, #IF(pc.isTaur())slut#ELSEbitch#ENDIF? Well, I think Angelixx has enough slimes, so it's a different fate for you!)]
+				从那些高潮的史莱姆身边经过，而折磨你的人则咯咯地笑着，[sister.speech(你很想成为她们中的一员吧，对不对，#IF(pc.isTaur())母狗#ELSE婊子#ENDIF？不过，我觉得安吉莉克丝已经有足够多的史莱姆了，所以你的命运会有所不同！)]
 			</p>
 		#ENDIF
 		</p>
@@ -699,42 +699,42 @@
 		</p>
 		<p>
 			#IF(pc.isTaur())
-				[sister.speech(Enjoy your new life, slut,)] the succubus sneers as she slides off your back.
+				[sister.speech(享受你的新生活吧，母狗，)]魅魔冷笑着，从你的背上滑下来。
 			#ELSE
-				[sister.speech(Enjoy your new life, bitch,)] the succubus sneers as she passes your leash over to Angelixx.
+				[sister.speech(享受你的新生活吧，婊子，)]魅魔冷笑着，将你的束带递给安吉莉克丝。
 			#ENDIF
-			 Giving your ass one final swat with her riding crop, she struts off back to the factory. As she leaves, you hear her saying, [sister.speech(Hello, boys. Your mother has a new slave...)]
+			她最后用马鞭抽了一下你的屁股，然后大摇大摆地走回了工厂。你听到她在离开时说，[sister.speech(你们好呀，男孩们。你们的妈妈有了一个新奴隶……)]
 		</p>
 		<p>
-			Turning your head, you see two very familiar nightmares walking towards you...
+			转过头，你看到两个非常熟悉的梦魇向你走来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SISTER_TRAVEL_END"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_doll_factory_sleip_nir_defeated))
 		<p>
-			Looking back over your shoulder, you see the two familiar nightmares, who appear to have recovered from their ordeal at your hands, confidently striding towards you. Looking at her sons, Angelixx says in her sweet, innocent-sounding voice, [angelixx.speech(Feeling better now, boys? Look what good timing you have! A new slave was just delivered to me, and look who it is!)]
+			回头一看，你看到两个熟悉的梦魇，他们似乎已经从你手中的磨难中恢复过来，自信地向你走来。安吉莉克丝看着她的儿子们，用她甜美无邪的声音说道：[angelixx.speech(孩子们，现在感觉好点了吗？看看时机多好！我这刚收了一个新奴隶，瞧这是谁！)]
 		</p>
 		<p>
-			[sleip.speech(Hey, Nir, would you look at that,)] the brutish nightmare grunts to his brown-haired brother, [sleip.speech(We won't have to go searching for that cunt after all.)]
+			[sleip.speech(嘿，尼尔，看到了吗，)]可怕的梦魇向他棕色毛发的兄弟咕噜着，[sleip.speech(我们没必要去找那个贱货了。)]
 		</p>
 	#ELSE
 		<p>
-			Looking back over your shoulder, you see the two familiar nightmares, who you first encountered during the SWORD raid in Elis, confidently striding towards you. Looking at the black-haired one, Angelixx says in her sweet, innocent-sounding voice, [angelixx.speech(Sleip! You found your brother at last, and look what good timing you have! A new slave was just delivered to me, and look who it is! You remember this slut from Elis?)]
+			回头一看，你看到两个熟悉的梦魇，第一次遇到他们是在伊利斯的SWORD突袭行动，而他们现在正自信地向你走来。安吉莉克丝看着黑毛的那个梦魇，用她甜美无邪的声音说道：[angelixx.speech(斯雷普！你终于找到你弟弟了，看你来的时机多好！我这刚收了一个新奴隶，瞧这是谁！你还记得伊利斯里的那个荡妇吗？)]
 		</p>
 		<p>
-			[sleip.speech(Hey, Nir, would you look at that,)] the brutish nightmare grunts to his brown-haired brother, [sleip.speech(It's that bitch who was there with that wolf-boy and otter slut back in Elis. Not so tough without your friends, are you, cunt?)]
+			[sleip.speech(嘿，尼尔，看到了吗，)]可怕的梦魇向他棕色毛发的兄弟咕噜着，[sleip.speech(是伊利斯那个跟那个狼仔还有水獭荡妇在一起的婊子。没了朋友就没那么厉害了吧，小贱货？)]
 		</p>
 	#ENDIF
 	<p>
-		Stepping forwards to either side of you, the nightmares get a quick spot of revenge by both leaning down to violently slap your exposed ass. Laughing at your pained gasps, Nir grunts, [nir.speech(We're going to break you for what you did to us.)]
+		梦魇自两边走来，他们立马就对你展开报复，俯下身来猛烈地拍打你裸露的屁股。尼尔看着你因痛苦而吸着凉气，哈哈大笑道：[nir.speech(我们要让你为对我们做的事付出代价。)]
 	</p>
 	<p>
-		[angelixx.speech(Let's not be hasty,)] Angelixx giggles, [angelixx.speech(You boys can punish her all you want during the dollification process. You hear that, you stupid little bitch? We're going to turn you into a dumb, obedient sex doll!)]
+		[angelixx.speech(别这么心急，)]安吉莉克丝咯咯笑着，[angelixx.speech(你们这些男孩在玩偶化过程中想怎么惩罚她都行。你听到了吗，你这个蠢婊子？我们要把你变成一个又笨又听话的性爱玩偶！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 </dialogue>

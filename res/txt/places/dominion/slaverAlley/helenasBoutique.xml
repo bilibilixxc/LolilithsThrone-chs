@@ -1,287 +1,287 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- ROMANCE_SHOP_CORE -->
 	
 	<htmlContent tag="ROMANCE_SHOP_CORE"><![CDATA[
 	<p>
-		Once again, you find yourself pushing open the door to Helena's Boutique and stepping inside. Taking a quick look around, you see that most of the designer sofas which are scattered around the main shop floor are currently occupied by clients discussing business with Helena's harpy assistants.
+		你又一次推开海伦娜精品店的大门，走了进去。你环顾四周，发现散落在主店面的大多数名牌沙发上都坐着客人，他们正在与海伦娜的哈比助手们洽谈生意。
 	</p>
 	<p>
 		#IF(helena.isSlutty())
 			#IF(!game.getDialogueFlags().hasFlag(FLAG_helenaSlutSeen))
-					Before you're able to advance further into the store, the beautiful harpy matriarch herself quickly strides forwards to greet you. As she approaches, you find yourself almost not believing what you're seeing, as instead of her usual elegant white plunge dress,
+					还没等你进一步走进店里，美丽的哈比族长就快步迎了上来。当她走近时，你会发现自己几乎不敢相信眼前的一切，因为她穿的不再是她惯常穿的优雅的白色羽绒裙，
 					#IF(helena.isVisiblyPregnant())
-						 Helena is now wearing an incredibly slutty outfit, and what's more, she's also very clearly pregnant.
+						海伦娜现在穿着一身无比淫荡的衣服，更重要的是，她还很明显地怀有身孕。
 					#ELSE
-						 Helena is now wearing an incredibly slutty outfit.
+						海伦娜现在穿着一套无比淫荡的衣服。
 					#ENDIF
-					 Both her talons and the nails on the end of her feathered fingers are painted bright pink, which matches the colour of the glossy lipstick she's wearing. Her previously-unblemished white head feathers have been dyed with bleach-blonde highlights, and you notice too that she's taken to wearing thick black eyeliner and a noticeable amount of dark purple eye shadow.
+					她的爪子和长着羽毛的手指末端的指甲都涂成了亮粉色，这与她涂着的光亮口红的颜色相得益彰。她原本洁白无瑕的头部羽毛被染成了漂白的金色，你还注意到，她已经习惯画上浓黑的眼线，并涂上了明显的深紫色眼影。
 				</p>
 				<p>
-					Her big nipples are quite clearly visible as they push out against the tight white fabric of the tube top that's covering her large breasts, while her white micro skirt is so short that she shamelessly flashes her lacy black thong to anyone who peers down below her waistline. Instead of her usual fashionable dangle earrings, she's now wearing an assortment of trashy gold jewellery, which takes the form of hoop earrings, a nose ring, and a navel barbell. Around her neck, she's wearing a tight black velvet choker, and as she comes to a halt in front of you, she peers over the top of her gold aviator sunglasses
+					她硕大的乳头在白色紧身上衣的衬托下清晰可见，而她的白色超短裙则短得让人无法直视她腰部以下的蕾丝黑色丁字裤。她的耳环不再是往常时髦的吊坠式耳环，而是戴上了各种让她显得廉价的金饰，包括环形耳环、鼻环和肚脐吊坠。她的脖子上戴着一条黑色天鹅绒紧身吊坠，她走到你面前停下，透过金色飞行员太阳镜窥视着你。
 			#ELSE
 				#IF(helena.isVisiblyPregnant())
-					Before you're able to advance further into the store, the beautiful harpy matriarch herself elegantly strides forwards to greet you. Her regal posturing is somewhat at odds with the slutty micro skirt and tube top combo that she's taken a habit of wearing, but it's not her choice of outfit that draws your attention the most, for as she comes to a halt in front of you, you find yourself staring at her clearly-pregnant belly. Flashing you a smile as she sees what it is you're staring at, Helena peers over the top of her gold aviator sunglasses
+					还没等你继续往店里走，美丽的哈比就优雅地走上前来迎接你。她高贵的姿态与她习惯穿的放荡的超短裙和抹胸上衣有些格格不入，但最吸引你注意的并不是她选择的服装，因为当她在你面前停下时，你发现自己正盯着她明显怀孕的肚子看。看到你盯着她看，海伦娜向你绽放出一个微笑，然后透过金色飞行员太阳镜窥视着你。
 				#ELSE
-					Before you're able to advance further into the store, the beautiful harpy matriarch herself elegantly strides forwards to greet you. Her regal posturing is somewhat at odds with the slutty micro skirt and tube top combo that she's taken a habit of wearing, and as she comes to a halt in front of you, she peers over the top of her gold aviator sunglasses
+					还没等你进一步走进店里，这位美丽的女哈比就优雅地向前走去迎接你。她的高贵姿态与她习惯穿着的放荡超短裙和抹胸上衣组合有些格格不入，她在你面前停下，透过金色飞行员太阳镜窥视着你。
 				#ENDIF
 			#ENDIF
 			#IF(helena.isVisiblyPregnant())
 				#IF(!helena.isCharacterReactedToPregnancy(pc))
 					#IF(helena.getPregnantLitter().isFatherId(pc.getId()))
-						 and seductively teases, [helena.speech(You know, [pc.name], by giving me that lovely big creampie, you've ended up fertilising my eggs...)]
+						她调戏着你，诱惑的声线让你心神荡漾，[helena.speech(你知道吗，[pc.name]，你上次把我射得满满的，所以我的身体里现在怀了许多蛋……)]
 					#ELSE
-						 and playfully teases, [helena.speech(Thanks to you, [pc.name], my dear Scarlett's managed to fertilise my eggs...)]
+						她开玩笑地调戏着你，[helena.speech(多亏了你，[pc.name]，斯嘉丽终于让我怀上了她的蛋……)]
 					#ENDIF
 				#ELSE
 					#IF(helena.getPregnantLitter().isFatherId(pc.getId()))
-						 and seductively teases, [helena.speech(Yes, [pc.name], I'm still carrying around the eggs you've fertilised...)]
+						她调戏着你，诱惑的声线让你心神荡漾，[helena.speech(对，[pc.name]，我还怀着你上次给我播种的蛋呢……)]
 					#ELSE
-						 and playfully teases, [helena.speech(Yes, [pc.name], I'm still carrying around the eggs which my dear Scarlett's fertilised...)]
+						她开玩笑地调戏着你，[helena.speech(对，[pc.name]，我还怀着斯嘉丽的蛋呢……)]
 					#ENDIF
 				#ENDIF
 				</p>
 				<p>
-					Stepping forwards, the horny harpy grabs your [pc.hands] and guides them down to rub her clearly-swollen belly. Caught a little off-guard by Helena's audacious move, you're not able to offer much of a response before she seductively licks her lips and leans forwards to tease,
+					海伦娜上前一步，抓住你的[pc.hands]并引导你的手去揉搓她明显肿胀的腹部。海伦娜大胆的举动让你有点措手不及，你还没来得及做出什么反应，她就诱人地舔了舔嘴唇，并向前倾身挑逗，
 			#ELSE
 				#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-					 and seductively teases,
+					用迷人的声线挑逗你，
 				#ELSE
-					 and seductively teases,
+					用迷人的声线挑逗你，
 				#ENDIF
 			#ENDIF
 			#IF(game.getDayOfWeek()==DOW_FRIDAY)
 				#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-					 [helena.speech(That little romp in the back room wasn't nearly enough to satisfy me. I'm expecting you to take me out on a date tonight, and then we can go back to my place for a good hard fuck in my room...)]
+					[helena.speech(在密室里的小狂欢还远远不能满足我，我希望你今晚能带我出去约会，然后我们可以回到我的住处，在我的房间里狠狠地干一场……)]
 				#ELSE
-					 [helena.speech(I'm expecting you to take me out on a date tonight, [pc.name], and then we can go back to my place for a good hard fuck in my room...)]
+					[helena.speech(我期待你今晚带我出去约会，[pc.name]，然后我们可以回到我的住处，在我的房间里狠狠地干一场……)]
 				#ENDIF
 			#ELSE
 				#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-					 [helena.speech(You know, if you were to visit my nest this evening, I'm sure I could be persuaded to give you a very personal tour of my bedroom again...)]
+					[helena.speech(你知道吗，如果你今晚来我的小窝，我肯定能说服你，让你再一次亲自参观我的卧室……)]
 				#ELSE
-					 [helena.speech(If you'd like, I could give you a very personal tour of the back room...)]
+					[helena.speech(如果你愿意，我可以带你亲自参观一下里屋……)]
 				#ENDIF
 			#ENDIF
 		#ELSE
 			#IF(game.getDayOfWeek()==DOW_FRIDAY)
-				Before you're able to advance further into the store, the beautiful harpy matriarch herself quickly strides forwards to greet you. After flashing you a delightful smile, she softly says, [helena.speech(Welcome back, [pc.name]. Just so you know, I am expecting you to take me out on a date this evening. Now, with that out of the way, what brings you here today?)]
+				还没等你进一步走进店里，美丽的哈比族长就快步迎了上来。在向你绽放一个愉悦的微笑后，她轻声说道，[helena.speech(欢迎回来，[pc.name]。你今晚会带我出去约会吗？啊，今天是什么风把你吹来了？)]
 			#ELSE
 				#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopTalkedTo))
-					Before you're able to advance further into the store, the beautiful harpy matriarch herself quickly strides forwards to greet you. After flashing you a delightful smile, she softly says, [helena.speech(Welcome back, [pc.name]. Unfortunately, I have no more time today in which to participate in idle conversation with you, but if you're here on matters of business, then of course I would be delighted to help you.)]
+					还没等你进一步走进店里，美丽的哈比族长就快步迎了上来。在向你绽放一个愉悦的微笑后，她轻声说道，[helena.speech(欢迎回来，[pc.name]。很遗憾，今天我没有更多的时间与你闲聊，但如果你是来谈生意的，我当然很乐意为你效劳。)]
 				#ELSE
-					Before you're able to advance further into the store, the beautiful harpy matriarch herself quickly strides forwards to greet you. After flashing you a delightful smile, she softly says, [helena.speech(Welcome back, [pc.name]. What brings you here today?)]
+					还没等你进一步走进店里，美丽的哈比族长就快步迎了上来。在向你绽放一个愉悦的微笑后，她轻声说道，[helena.speech(欢迎回来，[pc.name]。今天什么风把你吹来了？)]
 				#ENDIF
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(scarlett.isVisiblyPregnant())
-			Before you're able to reply, the familiar figure of Scarlett, wearing her light pink dress and black choker, suddenly appears from the back room. Catching sight of you and Helena, she walks over to where you're standing, and as she approaches, you can't help but glance down at her swollen, pregnant belly.
+			你还没来得及回答，斯嘉丽熟悉的身影突然从里屋出现了，她穿着浅粉色的连衣裙，戴着黑色的领结。她看到了你和海伦娜，便走到你们站的地方，当她走近时，你不禁低头看了一眼她肿起的大肚子。
 			#IF(helena.isVisiblyPregnant())
-				 Coming to a halt beside her matriarch in such a position that both of their pregnant bellies are side-by-side, the raven-harpy absently-mindedly strokes one of her wing-like arms over her rounded tummy
+				渡鸦哈比停在族长身边，两个孕妇的肚子并排在一起，她心不在焉地用一只像翅膀一样的手臂抚摸着自己圆滚滚的肚子
 			#ELSE
-				 Coming to a halt beside her matriarch, the raven-harpy absently-mindedly strokes one of her wing-like arms over her rounded tummy
+				渡鸦哈比走到族长身边停了下来，用翅膀般的手臂轻轻抚摸着自己圆滚滚的小腹，一副心不在焉的样子
 			#ENDIF
 			#IF(!scarlett.isCharacterReactedToPregnancy(pc))
 				#IF(scarlett.getPregnantLitter().isFatherId(pc.getId()))
 					#IF(scarlett.isLikesPlayer())
-						 and sheepishly reveals, [scarlett.speech(Look what you did, [pc.name]... You got me pregnant...)]
+						，羞怯地说，[scarlett.speech(看看你做了什么，[pc.name]……你把我肚子搞大了……)]
 					#ELSE
-						 and snaps, [scarlett.speech(Look what you fucking did, [pc.name]! You got me pregnant! Do you know how fucking annoying this is?!)]
+						，愤怒地说，[scarlett.speech(看看你他妈干了点什么，[pc.name]！你把我肚子搞大了！你知道这他妈的有多烦人吗？！)]
 					#ENDIF
 				#ELSE
 					#IF(scarlett.isLikesPlayer())
-						 and sheepishly reveals, [scarlett.speech(One of my harpy friends got me pregnant...)]
+						，羞怯地告诉你，[scarlett.speech(我的一个哈比朋友把我肚子搞大了……)]
 					#ELSE
-						 and snaps, [scarlett.speech(Not that it's any of your business, but just to let you know, it was one of my harpy friends who got me pregnant...)]
+						，愤怒地说，[scarlett.speech(和你没什么关系，不过和你说一声，我的一个哈比朋友把我肚子搞大了……)]
 					#ENDIF
 				#ENDIF
 			#ELSE
 				#IF(scarlett.getPregnantLitter().isFatherId(pc.getId()))
 					#IF(scarlett.isLikesPlayer())
-						 and sheepishly greets you by saying, [scarlett.speech(Hey, [pc.name], I'm still pregnant with our kids...)]
+						，羞怯地欢迎你的到来，[scarlett.speech(嘿，[pc.name]，我还怀着我们的孩子……)]
 					#ELSE
-						 and snaps, [scarlett.speech(Yes, [pc.name], before you ask, I'm still pregnant with our kids, and it's fucking annoying!)]
+						，愤怒地说，[scarlett.speech(对，[pc.name]，不用问了，我还怀着你的孩子呢，真他妈烦人！)]
 					#ENDIF
 				#ELSE
 					#IF(scarlett.isLikesPlayer())
-						 and sheepishly greets you by stating the obvious, [scarlett.speech(Hey, [pc.name]... I'm still pregnant, if you were wondering...)]
+						，并羞怯地向你打招呼，陈述着显而易见的事实，[scarlett.speech(嘿，[pc.name]……我还在怀孕，如果你想知道的话……)]
 					#ELSE
-						 and snaps, [scarlett.speech(Not that it's any of your business, but yes, I'm still pregnant!)]
+						，然后愤怒地说，[scarlett.speech(和你没什么关系，但是，我在怀孕，我好他妈烦！)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
 		#ELSE
-			Before you're able to reply, the familiar figure of Scarlett, wearing her light pink dress and black choker, suddenly appears from the back room. Catching sight of you and Helena, she walks over to where you're standing, and after quickly approaching and coming to a halt beside her matriarch, she
+			你还没来得及回答，斯嘉丽熟悉的身影突然从里屋出现了，她穿着浅粉色的连衣裙，戴着黑色的项圈。她看到了你和海伦娜，便向你们站的地方走来，迅速走到族长身边停下后，她
 			#IF(scarlett.isLikesPlayer())
-				 greets you by asking, [scarlett.speech(Hey, [pc.name], is there anything I can do to help?)]
+				问候你，[scarlett.speech(嘿，[pc.name]，我能帮上什么忙吗？)]
 			#ELSE
-				 snaps, [scarlett.speech(You're back, huh?!)]
+				没好气地说，[scarlett.speech(你回来了，哈？！)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROMANCE_SHOP_CORE_END_DATE"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
 			#IF(!game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(So, [pc.name], are you here to take me out on a date? Or perhaps before we get to that, you'd like to spend some time in the back room with me?)]
+				让斯嘉丽回去之后，海伦娜再次挑逗道，[helena.speech(所以，[pc.name]你来这是要带我出去约会吗？还是说我们在那之前先去后室消磨一下时间？你懂的。)]
 			#ELSE
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(So, [pc.name], are you here to take me out on a date?)]
+				让斯嘉丽回去之后，海伦娜再次挑逗道，[helena.speech(所以，[pc.name]，你是过来带我出去约会的吗？)]
 			#ENDIF
 		#ELSE
 			#IF(scarlett.isLikesPlayer())
-				Letting another gentle smile settle on her beautiful face, Helena gently asks again,
+				海伦娜美丽的脸上又露出了柔和的微笑，她温柔地问道，
 			#ELSE
-				[helena.speech(Scarlett! Behave yourself!)] Helena icily warns her companion, before letting another gentle smile settle on her beautiful face and asking,
+				[helena.speech(斯嘉丽！注意举止！)]海伦娜冰冷地警告她的同伴，旋即又在她美丽的脸庞上露出温柔的微笑，转过头问道，
 			#ENDIF
-			 [helena.speech(So, [pc.name], are you here to take me out on a date?)]
+			[helena.speech(所以，[pc.name]，你是来带我出去约会的吗？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROMANCE_SHOP_CORE_END_CUSTOM_SLAVE_PROGRESS"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaScarlettThreesome) && !game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				Brushing one of her flawless wings up against Scarlett's body, Helena once again teases, [helena.speech(Just to remind you, [pc.name], it will be another [#SPECIAL_PARSE_0] days until your slave is ready for collection, which will be on [#SPECIAL_PARSE_1]. Perhaps you're not here about that though? Maybe you're here to spend some time in the back room with the two of us, hmm?)]
+				海伦娜用她完美无瑕的翅膀扫过斯嘉丽的身躯，又一次调笑道，[helena.speech(只是提醒一句，[pc.name]，你的奴隶还有[#SPECIAL_PARSE_0]天才可以准备好，也就是[#SPECIAL_PARSE_1]。又或者，你并不是为此而来？那你大概是想去到里屋，跟我们两个共度一段时光了，嗯？)]
 			#ELSEIF(!game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(Just to remind you, [pc.name], it will be another [#SPECIAL_PARSE_0] days until your slave is ready for collection, which will be on [#SPECIAL_PARSE_1]. Perhaps you're not here about that though? Maybe you're here to spend some time in the back room with me, hmm?)]
+				海伦娜让斯嘉丽退开，又一次调笑道，[helena.speech(只是提醒一句，[pc.name]，你的奴隶还有[#SPECIAL_PARSE_0]天才可以准备好，也就是[#SPECIAL_PARSE_1]。又或者，你并不是为此而来？那你大概是想去到里屋，跟我共度一段时光了，嗯？)]
 			#ELSE
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(Just to remind you, [pc.name], it will be another [#SPECIAL_PARSE_0] days until your slave is ready for collection, which will be on [#SPECIAL_PARSE_1]. So, what can I do for you?)]
+				海伦娜让斯嘉丽退开，又一次调笑道，[helena.speech(只是提醒一句，[pc.name]，你的奴隶还有[#SPECIAL_PARSE_0]天才可以准备好，也就是[#SPECIAL_PARSE_1]。所以说，你有何贵干？)]
 			#ENDIF
 		#ELSE
 			#IF(scarlett.isLikesPlayer())
-				Letting another gentle smile settle on her beautiful face, Helena gently states,
+				海伦娜的脸上又露出一抹迷人的微笑，轻声说道，
 			#ELSE
-				[helena.speech(Scarlett! Behave yourself!)] Helena icily warns her companion, before letting another gentle smile settle on her beautiful face and stating,
+				[helena.speech(斯嘉丽！注意举止！)]海伦娜冰冷地警告她的同伴，旋即又在她美丽的脸庞上露出温柔的微笑，转过头问道，
 			#ENDIF
-			 [helena.speech(Just to remind you, [pc.name], it will be another [#SPECIAL_PARSE_0] days until your slave is ready for collection, which will be on [#SPECIAL_PARSE_1]. So, what can I do for you?)]
+			[helena.speech(只是提醒一句，[pc.name]，你的奴隶还有[#SPECIAL_PARSE_0]天才可以准备好，也就是[#SPECIAL_PARSE_1]。所以说，你有何贵干？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROMANCE_SHOP_CORE_END_CUSTOM_SLAVE_READY"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaScarlettThreesome) && !game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				Brushing one of her flawless wings up against Scarlett's body, Helena once again teases, [helena.speech(So, [pc.name], are you here to collect your slave? Or perhaps you'd like to spend some time in the back room with the two of us?)]
+				海伦娜一边用她完美无瑕的翅膀轻拂挑逗斯嘉丽的身体，一边再次挑逗你说，[helena.speech(那么，[pc.name]，来挑新奴隶吗？或者只是想和我们去里屋爽一下？)]
 			#ELSEIF(!game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(So, [pc.name], are you here to collect your slave? Or perhaps you'd like to spend some time in the back room with me?)]
+				海伦娜一边让斯嘉丽先回去，一边再次挑逗你说，[helena.speech(那么，[pc.name]，来挑新奴隶吗？或者只是想和我去里屋爽一下？)]
 			#ELSE
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(So, [pc.name], are you here to collect your slave?)]
+				海伦娜一边让斯嘉丽先回去，一边再次挑逗你说，[helena.speech(那么，[pc.name]，来挑新奴隶吗？)]
 			#ENDIF
 		#ELSE
 			#IF(scarlett.isLikesPlayer())
-				Letting another gentle smile settle on her beautiful face, Helena gently asks again,
+				海伦娜扬起嘴角温柔地笑问你，
 			#ELSE
-				[helena.speech(Scarlett! Behave yourself!)] Helena icily warns her companion, before letting another gentle smile settle on her beautiful face and asking,
+				[helena.speech(斯嘉丽！注意形象！)]你听到海伦娜严厉地训诫声。她扬起嘴角温柔地笑问你，
 			#ENDIF
-			 [helena.speech(So, [pc.name], are you here to collect your slave?)]
+			[helena.speech(那么，[pc.name]，来挑新奴隶吗？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROMANCE_SHOP_CORE_END"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaScarlettThreesome) && !game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				Brushing one of her flawless wings up against Scarlett's body, Helena once again teases, [helena.speech(So, [pc.name], is it business that you're here for? Or perhaps you'd like to spend some time in the back room with the two of us?)]
+				海伦娜一边用她完美无瑕的翅膀轻拂挑逗斯嘉丽的身体，一边再次挑逗你说，[helena.speech(那么，[pc.name]，来谈生意吗？或者只是找我们去里屋爽一下？)]
 			#ELSEIF(!game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(So, [pc.name], is it business that you're here for? Or perhaps you'd like to spend some time in the back room with me?)]
+				海伦娜让斯嘉丽先回避，然后再次挑逗你说，[helena.speech(那么，[pc.name]，来谈生意吗？或者只是想和我去里屋爽一下？)]
 			#ELSE
-				Telling Scarlett to step back, Helena once again teases, [helena.speech(So, [pc.name], what business is it you wish to discuss?)]
+				海伦娜让斯嘉丽先回避，然后再次挑逗你说，[helena.speech(那么，[pc.name]，谈笔什么生意？)]
 			#ENDIF
 		#ELSE
 			#IF(scarlett.isLikesPlayer())
-				Letting another gentle smile settle on her beautiful face, Helena gently asks again,
+				海伦娜扬起嘴角温柔地笑问你，
 			#ELSE
-				[helena.speech(Scarlett! Behave yourself!)] Helena icily warns her companion, before letting another gentle smile settle on her beautiful face and asking,
+				[helena.speech(斯嘉丽！注意形象！)]你听到海伦娜严厉地训诫声。她扬起嘴角温柔地笑问你，
 			#ENDIF
-			 [helena.speech(So, [pc.name], what can we do for you?)]
+			[helena.speech(那么，[pc.name]，你需要什么？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_START -->
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_START"><![CDATA[
 	<p>
-		After informing Helena that you're interested in ordering a custom slave, she turns to Scarlett and commands, [helena.speech(Run along and fetch the customisation forms from behind the counter.)]
+		在告知海伦娜你有兴趣定制奴隶后，她转向斯嘉丽命令道，[helena.speech(快去柜台后面拿定制表格。)]
 	</p>
 	<p>
-		As the raven-harpy hurries off to carry out her matriarch's order, Helena guides you over to a couple of nearby empty sofas.
+		渡鸦哈比匆匆忙忙地去执行族长的命令，海伦娜把你带到附近的几张空沙发上。
 		#IF(helena.hasFetish(FETISH_DOMINANT))
-			 Sitting down on the one opposite to you, she flashes you a devious grin as she spreads her legs and gives you a clear view of the lacy black thong that she's wearing beneath her microskirt. Biting her lip, she teases, [helena.speech(Maybe after we're done with business, I'll take you into the back room and give you a taste of my dirty little pussy...)]
+			她坐在你对面的座位上，一边向你露出狡黠的笑容，一边张开双腿，让你清楚地看到她微裙下穿着的黑色蕾丝丁字裤。她咬着嘴唇，挑逗着你，[helena.speech(也许等我们办完事后，我会带你到里屋，让你尝尝我的淫荡小穴……)]
 		#ELSEIF(helena.hasFetish(FETISH_SUBMISSIVE))
-			 Sitting down on the one opposite to you, she submissively bats her eyelids as she spreads her legs and gives you a clear view of the lacy black thong that she's wearing beneath her microskirt. Biting her lip, she teases, [helena.speech(Maybe after we're done with business, you could take me into the back room and fuck my dirty little pussy...)]
+			她坐在你对面的座位上，顺从地眨巴着眼皮，张开双腿，让你清楚地看到她微裙下穿着的黑色蕾丝丁字裤。她咬着嘴唇，挑逗着你，[helena.speech(也许我们办完事后，你可以把我带到里屋，操我的小骚逼……)]
 		#ELSE
-			 Sitting down on the one opposite to you, she throws you a subtle smile and gently says, [helena.speech(I am more than happy to personally assist you with your slave customisation, [pc.name].)]
+			她坐在你对面的座位上，向你微微一笑，轻轻地说，[helena.speech(我非常乐意亲自协助您定制奴隶，[pc.name]。)]
 		#ENDIF
 	</p>
 	<p>
-		Before you can reply, Scarlett returns and places two stacks of forms down on the coffee table in front of you, before saying, [scarlett.speech(I didn't know which template you wanted, so I got both the male and female ones.)]
+		还没等你回答，斯嘉丽就回来了，她把两叠表格放在你面前的茶几上，然后说道，[scarlett.speech(我不知道你想要哪个性别的，所以我把男性和女性的表格都拿来了。)]
 	</p>
 	<p>
-		[helena.speech(Thank you, Scarlett,)]
+		[helena.speech(谢谢你，斯嘉丽，)]
 		#IF(helena.hasFetish(FETISH_DOMINANT) || helena.hasFetish(FETISH_SUBMISSIVE))
-			 Helena replies, crossing her legs and blocking off your view of her slutty underwear. Gesturing towards the shop's counter, she continues, [helena.speech(Please wait for me over there.)]
+			海伦娜回答说，她翘起二郎腿，挡住了你看她内裤的视线。她指了指店里的柜台，继续说道，[helena.speech(请在那边等我。)]
 		#ELSE
-			 Helena replies, before gesturing towards the shop's counter and continuing, [helena.speech(Please wait for me over there.)]
+			海伦娜回答道，然后指了指店里的柜台，继续说道，[helena.speech(请在那边等我。)]
 		#ENDIF
 	</p>
 	<p>
-		As the raven-harpy walks off, Helena turns back towards and you and explains the process ahead, [helena.speech(First of all, we'll start with either a female or male template, and then customise them from there. Your available options are not limited by your template choice; you could always customise the female template into a male slave, and vice versa, but that would just be an unnecessary waste of time. Anyway, let's begin!)]
+		渡鸦哈比走后，海伦娜回头向你解释了接下来的过程，[helena.speech(首先，我们将从女性或男性模板开始，然后对其进行定制。您的可选项并不受限于您的模板选择；您可以将女性模板定制为男性奴隶，反之亦然，但这样做只会浪费不必要的时间。总之，让我们开始吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_DECLINED -->
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_DECLINED"><![CDATA[
 	<p>
-		Having changed your mind about all of this, you thank Helena for her help, but say that you don't want to order a custom slave after all.
+		你改变主意了，于是谢过海伦娜的好意，但还是说你不想定制奴隶。
 	</p>
 	<p>
-		Standing up from her sofa and calling over Scarlett to take the forms away,
+		她从沙发上站起来，叫斯嘉丽把表格拿走，
 		#IF(helena.hasFetish(FETISH_DOMINANT))
-			 the slutty matriarch steps close to lewdly whisper in your [pc.ear], [helena.speech(How about I take you into the back room and give you a good, hard fuck?)]
+			淫荡的族长走近你，在你的[pc.ear]边淫荡地低语，[helena.speech(让我把你带到里屋，狠狠地操你怎么样？)]
 		#ELSEIF(helena.hasFetish(FETISH_SUBMISSIVE))
-			 the slutty matriarch steps close to lewdly whisper in your [pc.ear], [helena.speech(How about you take me into the back room and give me a good, hard fuck?)]
+			淫荡的族长走近你，在你的[pc.ear]边淫荡地低语，[helena.speech(把我带到里屋，狠狠地操我怎么样？)]
 		#ELSE
-			 the regal matriarch lets out a small sigh and says, [helena.speech(That's no problem, [pc.name]. Is there anything else I can do for you today?)]
+			高贵的族长微微叹了口气说，[helena.speech(没问题，[pc.name]。我今天还能为你做什么吗？)]
 		#ENDIF
 	</p>
 	<p>
-		With Helena waiting to hear your reply, you wonder what to do next...
+		海伦娜静候你的答复，你思索接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY -->
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY"><![CDATA[
 	<p>
-		One of the forms is in a slightly different format to all of the rest, and as you take a look at it, Helena helpfully reveals, [helena.speech(We'll source a slave of whatever age you desire and start from there. Scarlett's sister is responsible for all of the other customisation options on this page. She'll put your slave through five days of intensive personality training to shape them into whatever you want them to be.)]
+		其中一张表格的格式与其他所有表格略有不同，海伦娜看了一眼后，帮你揭开了谜底，[helena.speech(我们会根据你的要求寻找年龄合适的奴隶，然后从这里开始。斯嘉丽的姐姐负责本页上的所有其他定制选项。她将对你的奴隶进行为期五天的强化个性训练，将他们塑造成你想要的任何样子。)]
 	</p>
 	#IF(helena.isSlutty())
 		<p>
-			Looking down at the bottom of the form, the slutty matriarch licks her lips and adds, [helena.speech(We can make them love whatever dirty fetishes you want...)]
+			看着表格的下方，这位放荡的族长舔了舔嘴唇，补充道，[helena.speech(我们可以让他们拥有任何你想要的淫秽癖好……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_CORE -->
@@ -289,23 +289,23 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_CORE"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Body Type', and as you start reading through it, Helena bites her lip and teases, [helena.speech(Show me what sort of body you'd like your slave to have...)]
+			你面前表格的标题是“转化：身体类型”。当你开始阅读时，海伦娜咬着嘴唇调侃道，[helena.speech(让我看看你希望你的奴隶拥有什么样的身体……)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Body Type', and as you start reading through it, Helena helpfully adds, [helena.speech(You can specify whatever type of body you'd like for your slave.)]
+			你面前表格的标题是“转化：身体类型”。当你开始阅读时，海伦娜补充了一句，[helena.speech(你可以为你的奴隶指定任何类型的身体。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_EYES -->
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_EYES"><![CDATA[
 	<p>
-		The form in front of you is titled 'Transformation: Eyes', and as you start reading through it, Helena says, [helena.speech(You can choose whatever colour combinations you'd like.)]
+		你面前表格的标题是“转化：眼部”，当你开始阅读时，海伦娜说，[helena.speech(你可以选择自己喜欢的任何颜色组合。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_HAIR -->
@@ -313,13 +313,13 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_HAIR"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Hair', and as you start reading through it, Helena lewdly adds, [helena.speech(You could give your slave long hair and pigtails, so that you've got something to hold onto while they're performing oral on you...)]
+			你面前表格的标题是“转化：头发”，当你开始阅读时，海伦娜淫荡地补充道，[helena.speech(你可以给你的奴隶留长发，扎辫子，这样当他们为你口交时，你就有东西可以抓住……)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Hair', and as you start reading through it, Helena says, [helena.speech(Please take your time in choosing the length, colour, and style of your slave's hair.)]
+			你面前表格的标题是“转化：头发”，当你开始阅读时，海伦娜说，[helena.speech(请慢慢选择奴隶头发的长度、颜色和样式。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_HEAD -->
@@ -327,13 +327,13 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_HEAD"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Head & Face', and as you start reading through it, Helena lewdly adds, [helena.speech(With all these mouth and tongue options, I bet you could make a slave that's great at performing oral...)]
+			你面前的表格标题是“转化：头和面部”。当你开始阅读时，海伦娜淫荡地补充道，[helena.speech(有了这些口腔和舌头选项，我敢打赌，你一定能调教出一个擅长口交的奴隶……)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Head & Face', and as you start reading through it, Helena says, [helena.speech(There really are quite a lot of options on this form. Please do take your time; there's no rush.)]
+			你面前的表格标题是“转化：头和面部”。当你开始阅读时，海伦娜说，[helena.speech(这张表格上确实有很多选项。请不要着急，慢慢来。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_ASS -->
@@ -341,18 +341,18 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_ASS"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Ass & Hips', and as you start reading through it, Helena flashes you a cheeky grin and reveals,
+			你面前的表格标题是“转化：臀部”，当你开始阅读时，海伦娜向你露出了腼腆的笑容，
 			#IF(game.isAnalContentEnabled())
-				 [helena.speech(You know, a lot of clients give their slaves at least some natural anal lubrication. Makes it easier to fuck their ass, I guess...)]
+				[helena.speech(你知道吗，很多客户都会给他们的奴隶的肛门加些粘液分泌，作为天然的润滑剂，我想，这样更容易干他们的屁股……)]
 			#ELSE
-				 [helena.speech(You know, it's easy to tell which clients are planning on breeding their slaves, as they give them really wide hips...)]
+				[helena.speech(你知道，很容易看出哪些客户打算繁殖奴隶，因为他们会给奴隶非常宽的臀部……)]
 			#ENDIF
 		#ELSE
-			The form in front of you is titled 'Transformation: Ass & Hips', and as you start reading through it, Helena says, [helena.speech(Please, don't hold back from any of the more extreme options on my account...)]
+			你面前的表格标题是“转变：臀部”，当你开始阅读时，海伦娜说，[helena.speech(请别被上面写的一些东西吓到了，那些极端的转化只是很少一部分人会喜欢……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS -->
@@ -360,13 +360,13 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Breasts', and as you start reading through it, Helena giggles and says, [helena.speech(Remember, if you want to fuck their boobs, make sure you increase their capacity!)]
+			你面前的表格标题是 “转化：胸部”，当你开始阅读时，海伦娜咯咯笑着说，[helena.speech(记住，如果你想操他们的奶子，记得要选大号的！)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Breasts', and as you start reading through it, Helena reveals, [helena.speech(Quite a few of our clients ask for their slaves to be heavily lactating. Apparently, the milking industry is most lucrative...)]
+			你面前的表格标题是“转化：胸部”，当你开始阅读时，海伦娜提示说，[helena.speech(我们有不少客户要求他们的奴隶大量泌乳。显然，乳业确实很赚钱……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_VAGINA -->
@@ -374,13 +374,13 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_VAGINA"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Vagina', and as you start reading through it, Helena's eyes light up and she speculates, [helena.speech(Are you going to give them a hot little vice-like pussy? Or perhaps a loose, dripping-wet one with big fat labia? So many possibilities...)]
+			你面前的表格标题是“转化：阴部”，当你开始阅读时，海伦娜的眼睛亮了起来，她猜测着，[helena.speech(你是要给他们一个热辣辣的小阴道？或者是一个松弛的、湿漉漉的、有大阴唇的？有很多组合可选……)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Vagina', and as you start reading through it, Helena says, [helena.speech(You can specify whatever kind of genitalia you desire...)]
+			你面前的表格标题是“转化：阴部”，当你开始阅读时，海伦娜说，[helena.speech(你可以指定你想要的任何类型的生殖器……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_PENIS -->
@@ -388,13 +388,13 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_PENIS"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Penis', and as you start reading through it, Helena hungrily asks, [helena.speech(Are you going to give them a big, fat cock? If you do, then consider giving them a nice big pair of cum-filled balls...)]
+			你面前的表格标题是“转化：阴茎”，当你开始阅读时，海伦娜饥渴地问道，[helena.speech(你要给他们一根又大又粗的鸡巴吗？如果是，那再考虑给他们一对充满精液的大蛋蛋吧……)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Penis', and as you start reading through it, Helena says, [helena.speech(Please take your time in designing whatever sort of genitalia you'd like your slave to have...)]
+			你面前的表格标题是“转化：阴茎”，当你开始阅读时，海伦娜说，[helena.speech(请慢慢决定你希望你奴隶拥有的生殖器……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_SPINNERET -->
@@ -402,13 +402,13 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_SPINNERET"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Spinneret', and as you start reading through it, Helena's flashes you a dirty grin and teases, [helena.speech(I've heard that some spider-girls prefer to have their spinneret used even more than their pussy...)]
+			你面前的表格标题是“转化：丝囊”，当你开始阅读的时候，海伦娜的脸上露出了猥琐的笑容，并挑逗着你，[helena.speech(我听说有些蜘蛛女喜欢用她们的丝囊来做，甚至比用她们的阴部更多……)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Spinneret', and as you start reading through it, Helena says, [helena.speech(We'll have your slave's spinneret altered to fit whatever form you desire...)]
+			你面前的表格标题是“转化：丝囊”，当你开始阅读时，海伦娜说，[helena.speech(我们会把你奴隶的丝囊改造成你想要的形状……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS_CROTCH -->
@@ -416,13 +416,13 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS_CROTCH"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Transformation: Crotch-boobs/Udders', and as you start reading through it, Helena grins and says, [helena.speech(You know, if you choose five pairs of boobs, five pairs of crotch-boobs, and four nipples per breast, you can give your slave forty nipples...)]
+			你面前的表格标题是“转化：腹乳”，当你开始阅读时，海伦娜笑着说，[helena.speech(冷知识，如果你选择五对乳房、五对胯乳，每个乳房四个乳头，你就可以给你的奴隶四十个乳头……)]
 		#ELSE
-			The form in front of you is titled 'Transformation: Crotch-boobs/Udders', and as you start reading through it, Helena says, [helena.speech(Most of these options are identical to those found on the main 'Transformation: Breasts' form.)]
+			你面前的表格标题是“转化：腹乳”，当你开始阅读时，海伦娜说，[helena.speech(这些选项大多与胸部转化表单中的选项相同。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP -->
@@ -430,752 +430,752 @@
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP"><![CDATA[
 	<p>
 		#IF(helena.isSlutty())
-			The form in front of you is titled 'Miscellaneous: Cosmetics', and as you start reading through it, Helena excitedly asks, [helena.speech(Are you going to doll your slave up to look like some cheap whore? That'd be hot...)]
+			你面前的表格标题是“杂项：化妆”，当你开始阅读时，海伦娜兴奋地问道，[helena.speech(你要把你的奴隶打扮得像街边那些廉价的放荡妓女吗？那一定很性感……)]
 		#ELSE
-			The form in front of you is titled 'Miscellaneous: Cosmetics', and as you start reading through it, Helena says, [helena.speech(We can apply whatever sort of makeup you'd like.)]
+			你面前的表格标题是“杂项：化妆”，当你开始阅读时，海伦娜说，[helena.speech(我们可以为你的奴隶化任何你喜欢的妆容。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_BODY_PIERCINGS -->
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_BODY_PIERCINGS"><![CDATA[
 	<p>
-		The form in front of you is titled 'Miscellaneous: Piercings', and as you start reading through it, Helena says, [helena.speech(Mark down all the parts of your slave that you want us to pierce for you.)]
+		你面前的表格标题是“杂项：穿孔”，当你开始阅读时，海伦娜说，[helena.speech(在这里记下，你希望我们为你的奴隶穿孔的部位。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_FINISH -->
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_FINISH"><![CDATA[
 	<p>
-		Having finished customising your slave, you stack the forms back up on top of one another and hand them over to Helena. Smiling as she takes them from you, she slightly nods her head and says,
+		完成了奴隶的定制工作后，你把表格叠在一起交给了海伦娜。海伦娜微笑着接过你递过来的表格，微微点头说，
 		#IF(helena.isSlutty())
-		 [helena.speech(Thank you, [pc.name]. I shall now quickly calculate the cost of your slave. In the meantime, please decide upon whether you want your slave delivered as a virgin, or whether they should get a good fucking before delivery. These choices are free of charge.)]
+		[helena.speech(谢谢，[pc.name]。现在我将快速计算您的奴隶的费用。在此期间，请决定您是想让您的奴隶以处女之身交付，还是想让他们在交付之前被狠狠地操上一回。这些选择都是免费的。)]
 		#ELSE
-		 [helena.speech(Thank you, [pc.name]. I shall now quickly calculate the cost of your slave. In the meantime, please decide upon whether you want your slave delivered as a virgin, or whether they should be broken in before delivery. These choices are free of charge.)]
+		[helena.speech(谢谢，[pc.name]。我现在要快速计算一下您的奴隶的费用。在此期间，请决定您是希望您的奴隶以处女之身交付，还是在交付之前对他们进行调教。这些选择都是免费的。)]
 		#ENDIF
 	</p>
 	<p>
-		Handing you a small form titled 'Sex Experience Preferences', Helena leaves you to look over it as she tallies up the cost of the slave you've ordered. Before you've had time to read over it, however, the harpy matriarch quietly clears her throat to get your attention and reveals, [helena.speech(The cost for this slave will be [#SPECIAL_PARSE_0] flames. We also offer a 'Slime special' option, where your slave will be transformed into a slime after undergoing all other transformations.)]
+		海伦娜递给你一张名为“性体验偏好”的小表格，让你一边看一边计算你订购奴隶的费用。然而，你还没来得及看完，这位哈比族长就悄悄地清了清嗓子，引起了你的注意，并透露了一些信息，[helena.speech(该奴隶的费用为[#SPECIAL_PARSE_0]火币。我们还提供‘史莱姆特征’选项，您的奴隶在经过所有其他转化后将变成粘液。)]
 	</p>
 	<p>
-		[pc.speech(How much is that?)] you ask.
+		[pc.speech(这个多少钱？)]你问到。
 	</p>
 	<p>
-		[helena.speech(The slime transformation is an extra five thousand flames,)] Helena replies, [helena.speech(Oh, and before you ask, there have already been several suggestions for us to transform slaves into a slime, get them to self-transform, and then transform them back into a solid form in order to save costs on transformation potions. The issue with doing that is that the slave might end up not fully accepting their new form. By transforming them over the course of a week, combined with their intensive training, we can guarantee that your slave will be happy with the form you've specified for them.)]
+		[helena.speech(史莱姆转化需要额外的五千火币，)]海伦娜回答道，[helena.speech(哦，在您问之前，已经有人建议我们把奴隶变成史莱姆，让他们自我变形，然后再把他们变回实体，以节省转化药水的成本。这样做的问题是，奴隶最终可能无法完全接受他们的新形态。通过一周的改造，再加上强化训练，我们可以保证您的奴隶对您为他们指定的形态感到满意。)]
 	</p>
 	<p>
-		Seeing that you've not filled in the sexual experience form yet, she sits back a little and says, [helena.speech(Please let me know when you've finished with that, or if there's anything you'd like to go back and change.)]
+		看到你还没有填写性偏好表，她稍稍往后坐了坐，然后说、 [helena.speech(完成后请告诉我，或者有什么需要修改的地方。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_ORDER"><![CDATA[
 	<p>
-		Telling Helena that you've finished filling out the sexual experience form, you hand both it and the [#SPECIAL_PARSE_0] flames over to her. Smiling happily as she receives the payment from you, the beautiful matriarch says, [helena.speech(It will take a full week to train and transform your slave, so you'll be able to return here and collect them next [#SPECIAL_PARSE_1] at the earliest. As we have such a high demand for our custom slave service, you won't be able to order another slave until this one has been delivered.)]
+		你告诉海伦娜您已经填好了性偏好表，然后把表格和[#SPECIAL_PARSE_0]火币都交给她。美丽的族长开心地笑着接过你的酬劳，说：[helena.speech(训练和改造您的奴隶需要整整一周的时间，所以您最早可以在下[#SPECIAL_PARSE_1]后回到这里领取他们。由于我们的定制奴隶服务需求量非常大，在这一个奴隶交付之前，您将无法再订购另一个奴隶。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_ORDER_SLIME"><![CDATA[
 	<p>
-		Telling Helena that you've finished filling out the sexual experience form, and that you'd like to order the 'slime special', you hand both the piece of paper and the [#SPECIAL_PARSE_0] flames over to her. Smiling happily as she receives the payment from you, the beautiful matriarch says, [helena.speech(It will take a full week to train and transform your slave, so you'll be able to return here and collect them next [#SPECIAL_PARSE_1] at the earliest. As we have such a high demand for our custom slave service, you won't be able to order another slave until this one has been delivered.)]
+		你告诉海伦娜你已经填好了性偏好表，并想订购“史莱姆特征”，然后把纸和[#SPECIAL_PARSE_0]火币都交给她。接过你的付款，美丽的族长开心地笑着说，[helena.speech(训练和改造您的奴隶需要整整一周的时间，所以您最早可以在下[#SPECIAL_PARSE_1]后回到这里领取他们。由于我们的定制奴隶服务需求量非常大，在这一个奴隶交付之前，您将无法再订购另一个奴隶。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_ORDER_END"><![CDATA[
 	<p>
-		Seeing that you and Helena have concluded your business, Scarlett walks over from where she was waiting and impudently asks, [scarlett.speech(So, you two are done? Helena, I'm hungry. I'm going to go and get something to eat, ok?)]
+		斯嘉丽看到你和海伦娜已经结束了你们的谈话，便从她等待的地方走了过来，色情地问道，[scarlett.speech(所以，你们俩完事了？海伦娜，我饿了。我去找点吃的，好吗？)]
 	</p>
 	<p>
 		#IF(helena.isSlutty() && !game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-			Spreading her legs to give you an unobstructed view of her lacy black thong, Helena bites her lips and says, [helena.speech(You know, I'm hungry too... How about you come into the back room with me, [pc.name], so you can help me satisfy this craving I've got...)]
+			海伦娜张开双腿，让你一览无余地看到她的黑色蕾丝丁字裤，她咬着嘴唇说，[helena.speech(你知道，我也饿了……你和我一起去里屋怎么样，[pc.name]，这样你能帮我满足我的渴望……)]
 		#ELSE
-			Letting out an exasperated sigh, Helena turns to the raven-harpy and says, [helena.speech(You can take a break later. For now, [pc.name] might have something more to discuss...)]
+			海伦娜气呼呼地叹了口气，转过头对渡鸦哈比说、 [helena.speech(你可以稍后再休息。现在，[pc.name]可能有更多的事情要讨论……)]
 		#ENDIF
 	</p>
 	<p>
-		As the two harpies turn to look expectantly at you, you wonder what to do next...
+		两个哈比转过身来期待地看着你，你思考着下一步该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY -->
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY"><![CDATA[
 	<p>
-		After you've told Helena that you'd like to take delivery of [npc.name], the regal matriarch turns to Scarlett and orders, [helena.speech(Scarlett, please fetch [pc.namePos] slave and bring [npc.herHim] out here.)]
+		在你告诉海伦娜你想要接[npc.name]后，这位威严的族长转向斯嘉丽并命令道：[helena.speech(斯嘉丽，请去把[pc.namePos]的奴隶带到这儿来。)]
 	</p>
 	<p>
-		Doing as she's told, Scarlet hurries off into the back room, and just moments later returns with the [npc.fullRace(true)] trailing along behind her. As you look at your new slave, who's wearing nothing but a steel slave collar, you see that [npc.sheIs] exactly as you ordered, and as [npc.she] comes to a halt in front of you, [npc.she]
+		斯嘉丽按照吩咐匆匆跑进了里屋，片刻之后就带着[npc.fullRace(true)]回来了。你看着你只戴着一个钢制的奴隶项圈的新奴隶，你看到[npc.sheIs]完全按照你的命令行事，[npc.she]在你面前停下，[npc.she]
 		#IF(npc.getObedienceBasic()==OBEDIENCE_BASIC_DISOBEDIENT)
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 scowls at you and disobediently mutters, [npc.speech(Eugh... So I'm going to be owned by <i>you</i>?)]
+				对你皱眉头，不情愿地嘟囔着，[npc.speech(呃……所以，我要被<i>你</i>拥有了？)]
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 sighs and disobediently comments, [npc.speech(So, I guess I'm going to be owned by you now, huh?)]
+				叹了口气，不情愿地说道，[npc.speech(所以，我想我现在要被你拥有了，嗯？)]
 			#ELSE
-				 smiles and disobediently exclaims, [npc.speech(Is this really it at last? I get to be owned by you?)]
+				微笑着，不情愿地感叹道，[npc.speech(这就是最终的结果吗？我被你占有了？)]
 			#ENDIF
 		#ELSEIF(npc.getObedienceBasic()==OBEDIENCE_BASIC_NEUTRAL)
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 sighs and mutters, [npc.speech(Am I to your satisfaction?)]
+				叹了口气，嘟囔道，[npc.speech(我让你满意吗？)]
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 asks, [npc.speech(Am I to your satisfaction?)]
+				问道[npc.speech(我让你满意吗？)]
 			#ELSE
-				 smiles and asks, [npc.speech(Am I to your satisfaction?)]
+				微笑着问道，[npc.speech(我让你满意吗？)]
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 obediently bows [npc.her] head, completely concealing [npc.her] dislike of you as [npc.she] asks, [npc.speech(Am I to your satisfaction, [pc.name]?)]
+				顺从地低下[npc.her]的头，完全掩饰着[npc.her]对你的厌恶，[npc.speech(我让您满意吗，[pc.name]？)]
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 obediently bows [npc.her] head, before asking, [npc.speech(Am I to your satisfaction, [pc.name]?)]
+				顺从地低下[npc.her]的头，然后问道，[npc.speech(我让您满意吗，[pc.name]？)]
 			#ELSE
-				 obediently bows [npc.her] head, completely concealing [npc.her] affection towards you as [npc.she] asks, [npc.speech(Am I to your satisfaction, [pc.name]?)]
+				顺从地低下[npc.her]的头，完全掩饰着[npc.her]对你的好感，[npc.speech(我让您满意吗，[pc.name]？)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY_END"><![CDATA[
 	<p>
-		After you've replied in the positive, Helena motions for Scarlett to take [npc.name] away, before turning to you and explaining, [helena.speech(As per regulation, [npc.name] will be processed and held at the Slavery Administration building. You can collect [npc.herHim] from there at any time.)]
+		在你做出肯定回答后，海伦娜示意斯嘉丽带走[npc.name]，然后转向你解释道：[helena.speech(根据规定，[npc.name]被处理后会关押在奴隶管理局，你可以随时去那里取[npc.herHim]。)]
 	</p>
 	<p>
-		Obviously not wanting to be bothered with the task Helena had in mind for her, you see Scarlett hand your slave over to another of the harpies who work here. As they turn and lead your slave out of the shop, Scarlett quickly returns to hover nearby and join her matriarch in waiting to see if there's anything else you wanted of them...
+		斯嘉丽显然不想被海伦娜的任务打扰，于是把这个奴隶交给了另一个在这里工作的哈比。待目送奴隶被领出店门，斯嘉丽迅速返回，和族长一起等着看你还有什么要她们做的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_TALK -->
 	
 	<htmlContent tag="HELENAS_SHOP_TALK"><![CDATA[
 	<p>
-		Wanting to spend some time talking with Helena, you ask her how her day's been so far. Clearly happy to be using your question as an excuse to take a break from work, the beautiful harpy flashes you a smile as she launches into describing today's customers and events.
+		你想花点时间和海伦娜聊聊天，问她今天过得怎么样。显然，她很高兴能以你的问题为借口摸一会儿鱼，一边向你微笑，一边开始介绍今天的顾客和活动。
 	</p>
 	#IF(helena.isSlutty())
 		<p>
 			#IF(helena.isVisiblyPregnant())
-				After a short while of talking about business, she starts making several graphic comments about how she keeps on thinking back to the evening in which
+				谈了一小会儿生意后，她开始绘声绘色地说起在他的记忆里，那晚
 				#IF(helena.getPregnantLitter().isFatherId(pc.getId()))
-					 you impregnated her. Stepping forwards, she grabs your [pc.hands] and makes you stroke her pregnant belly as she teases,
+					你是怎么搞大她肚子的。她走上前，抓住你的[pc.hands]放到她的孕肚上，调笑着说
 					#IF(helena.hasFetish(FETISH_DOMINANT))
-						 [helena.speech(Once I've laid these eggs, maybe I'll ride your cock and get you to knock me up all over again...)]
+						[helena.speech(等我把他们孵出来，就坐到你的鸡巴上，看看能不能再怀一胎……)]
 					#ELSE
-						 [helena.speech(Once I've laid these eggs, maybe you'll want to hump me and knock me up all over again...)]
+						[helena.speech(等我把他们孵出来，看看你能不能再插进来让我怀一胎……)]
 					#ENDIF
 				#ELSE
-					 Scarlett impregnated her. Stepping forwards, she grabs your [pc.hands] and makes you stroke her pregnant belly as she teases,
+					斯嘉丽是怎么搞大她肚子的。她走上前，抓住你的[pc.hands]放到她的孕肚上，调笑着说
 					#IF(helena.hasFetish(FETISH_DOMINANT))
-						 [helena.speech(Once I've laid these eggs, maybe I'll get Scarlett to hump me and knock me up all over again...)]
+						[helena.speech(等我把他们孵出来，就坐到斯嘉丽的鸡巴上，看看能不能再怀一胎……)]
 					#ELSE
-						 [helena.speech(Once I've laid these eggs, I wonder if Scarlett will want to hump me and knock me up all over again...)]
+						[helena.speech((我把他们孵出来，看看斯嘉丽能不能再插进来让我怀一胎……)]
 					#ENDIF
 				#ENDIF
 			#ELSE
-				After a short while of talking about business, 
+				谈了一小会儿生意后，
 				#IF(helena.hasFetish(FETISH_DOMINANT))
-					 she dominantly steps forwards and starts making several graphic comments about how she keeps on getting wet at the thought of 
+					她气场十足地走上前，开始绘声绘色地讲述在那些让她欲火焚身的性幻想中，
 				#ELSE
-					 she steps forwards and starts making several graphic comments about how she keeps on getting wet at the thought of 
+					她走上前，开始绘声绘色地讲述在那些让她欲火焚身的性幻想中，
 				#ENDIF
 				#IF(helena.hasFetish(FETISH_ANAL_RECEIVING))
 					#IF(!helena.isVaginaVirgin())
-						 her horny little pussy and ass being filled with your cock.
+						你的鸡巴是怎么干烂她的小骚比和屁眼的。
 					#ELSE
-						 her slutty ass being filled with your cock.
+						你的鸡巴是干烂她的屁眼的。
 					#ENDIF
 					#IF(!game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-						 Biting her lip, she lowers her voice and coyly asks, [helena.speech(How about the two of step into the back room? I could do with some oral right about now...)]
+						说着说着，她咬住嘴唇，压低声音，扭捏问道，[helena.speech(你要是想操我的嘴，要不要去里屋？)]
 					#ELSE
-						 Biting her lip, she lowers her voice and coyly remarks, [helena.speech(I'm looking forward to our next date together. I wonder if you're going to want to fuck my butt or my tight, wet cunt?)]
+						说着说着，她咬住嘴唇，压低声音，扭捏问道，[helena.speech(你要是还想操我的屁股或者流水小骚逼，什么时候再约一次？)]
 					#ENDIF
 				#ELSE
-					 her horny little pussy being filled with your cock.
+					你的鸡巴是怎么干烂她的小骚比的。
 					#IF(!game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-						 Biting her lip, she lowers her voice and coyly asks, [helena.speech(How about the two of step into the back room? I could do with some oral right about now...)]
+						说着说着，她咬住嘴唇，压低声音，扭捏问道，[helena.speech(你要是想操我的嘴，要不要去里屋？)]
 					#ELSE
-						 Biting her lip, she lowers her voice and coyly remarks, [helena.speech(I'm looking forward to our next date together. I can't wait to feel you using my tight, wet cunt again...)]
+						说着说着，她咬住嘴唇，压低声音，扭捏问道，[helena.speech(你要是还想操我的流水小骚逼，什么时候再约一次？)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
 		</p>
 		<p>
 			#IF(!game.getDialogueFlags().hasFlag(FLAG_helenaShopFucked))
-				After a few more minutes of teasing and making all sorts of lewd remarks, the regal matriarch pointedly asks, [helena.speech(So, [pc.name], do you want me to give you a very <i>personal</i> tour of the back room, or should I get back to work?)]
+				你们相互调情，说着各种各样的骚话。过了一会儿，这位地位尊贵的族长直入主题，[helena.speech(那么，[pc.name]，接下来我是回去工作呢，还是带你参观里屋的<i>私密空间</i>呢？)]
 			#ELSE
-				After a few more minutes of teasing and making all sorts of lewd remarks, the regal matriarch spots one of her harpy workers beckoning for her attention, and so steps back and declares, [helena.speech(I'd love to continue talking with you, [pc.name], but I need to get back on with work now.)]
+				你们相互调情，说着各种各样的骚话。过了一会儿，这位地位尊贵的族长发现一位哈比员工在向她招手，退步向你告别，[helena.speech(我还想继续和你聊天，[pc.name]，但我得回去工作了。)]
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			After ten or so minutes of this sort of conversation, the regal matriarch spots one of her harpy workers beckoning for her attention, and so steps back and declares, [helena.speech(I'd love to continue talking with you, [pc.name], but I need to get back on with work now.)]
+			你们继续进行着类似的对话。过了一会儿，这位地位尊贵的族长发现一位哈比员工在向她招手，退步向你告别，[helena.speech(我还想继续和你聊天，[pc.name]，但我得回去工作了。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_BACK_ROOM -->
 	
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM"><![CDATA[
 	<p>
-		Deciding to give the horny harpy matriarch what she wants, you tell Helena that you'd like to spend some time with her in the back room. As she hears what it is you're saying, the beautiful harpy's eyes light up, and with a sly wink and lick of her lips she seductively replies,
+		你决定让这个淫荡的哈比族长如愿以偿，于是你告诉海伦娜，你想和她在里屋待一会儿。在听到你说的内容后，美丽的哈比眼睛一亮，狡黠地眨了眨眼睛，舔了舔嘴唇，诱惑地回答道：
 		#IF(pc.hasCompanions())
-			 [helena.speech(Why, I'd love to give you a tour of the back room, [pc.name], but your friend will have to wait out here. Please follow me...)]
+			[helena.speech(唔，我很乐意带你参观一下后面的房间，[pc.name]，不过你的朋友得在外面等着。请跟我来……)]
 		#ELSE
-			 [helena.speech(Why, I'd love to give you a tour of the back room, [pc.name]. Please follow me...)]
+			[helena.speech(唔，我很乐意带你参观一下后面的房间，[pc.name]。请跟我来……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasCompanions())
-			Telling [com.name] to wait here for your return, you follow Helena over to the door on the far side of the room. Flashing you a smile, the beautiful harpy opens it and ushers you forwards before promptly following you inside and locking the door behind her.
+			你让[com.name]在这里等你回来，然后跟着海伦娜来到房间远处的门前。美丽的哈比向你报以微笑，然后打开门，招呼你进去，然后迅速跟进去，在身后锁上了门。
 		#ELSE
-			Quickly leading you over to the door on the far side of the room, Helena opens it and ushers you forwards, before promptly following you inside and locking the door behind her.
+			海伦娜带着你迅速走到房间最里面的门前，打开门把你迎了进去，然后迅速跟了进去，并在身后锁上了门。
 		#ENDIF
-		 While the staff room you're now standing in appears to be unoccupied, there are some sounds of movement coming from behind the room dividers, letting you know that there are several slaves chained up in the storage area awaiting collection.
+		你现在所处的员工休息室似乎没人，但房间隔板后面传来了一些动静，让你知道储藏室里有几个奴隶被铁链锁着，等待着被领走。
 	</p>
 	<p>
-		Seemingly not at all bothered by the fact that these slaves are able to overhear the two of you, Helena steps forwards and lifts her micro skirt, before hooking her feathered thumbs into the band of her lacy black thong and sliding it down the length of her flawless bird-like legs.
+		海伦娜似乎一点也不在意这些奴隶能偷听到你们的谈话，她向前走了一步，撩起她的超短裙，然后用羽毛般的拇指勾住蕾丝黑色丁字裤的带子，顺着她鸟一样完美无瑕的双腿滑了下去。
 		#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-			 With her cloaca now fully on display, the slutty harpy uses her fingers to spread it and present her pussy to you, before
+			现在，她的泄殖腔完全展现在你面前，这个淫荡的哈比用手指分开泄殖腔，将她的阴部呈现在你面前，然后
 		#ELSE
-			 With her groin now fully on display, the slutty harpy uses her fingers to spread her pussy and present it to you, before
+			现在，她的下体完全展现在你面前，这个放荡的哈比用手指分开她的阴部，把它呈现在你面前，然后
 		#ENDIF
 		#IF(helena.hasFetish(FETISH_DOMINANT))
-			 dominantly teasing, [helena.speech(How should I use you today, I wonder?)]
+			霸道地挑逗，[helena.speech(我在想，今天我该怎么用用你呢？)]
 		#ELSE
-			 submissively teasing, [helena.speech(How would you like to use me, [pc.name]?)]
+			支配地挑逗，[helena.speech(你想怎么使用我呢？[pc.name]？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Cunnilingus -->
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_PERFORM_CUNNILINGUS"><![CDATA[
 	<p>
-		Wanting to perform oral on Helena, you drop down onto your knees in front of her, before leaning forwards to plant a kiss on her exposed pussy. Letting out a playful giggle, the beautiful harpy takes a step to one side, before leaning back against the wall that's now behind her. Presenting her pussy to you once again, she teases, [helena.speechNoEffects(Come on then! Get a taste of my horny little pussy!)]
+		你想给海伦娜用一下嘴巴，于是在她面前跪了下来，向着那展露无遗的蜜穴献上了一吻。那曼妙的哈比嬉笑一声，就横跨一步，依靠在了身后的墙面上。她一面将小穴向你脸上送来，一面调戏道，[helena.speechNoEffects(那就来吧！尝尝我小穴可口的味道吧！)]
 	</p>
 	<p>
-		Doing as you're told, you eagerly shuffle forwards and press your [pc.lips+] against Helena's hungry pussy. Overcome with lust, the horny harpy drops her flawless white wings down to push your head further forwards between her legs. As you push your tongue in between her [helena.labia+], Helena squeals, [helena.speechNoEffects(~Ooh!~ Yes! Keep going, [pc.name]! ~Mmm!~ Yes, just like that!)]
+		你自然照做了，迫不及待地往前挪了几步，把[pc.lips+]贴近了海伦娜饥渴的蜜穴。这淫荡的哈比顿时性欲大发，用洁净无瑕的翼手按住了你的脑袋，更用力地往双腿之间按压。你用舌头在她[helena.labia+]之间游走，给海伦娜吓了一跳，[helena.speechNoEffects(~哦哦！~好爽！不要停，[pc.name]！~姆嗯！~对，就是这样！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Anilingus -->
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_PERFORM_ANILINGUS"><![CDATA[
 	#IF(!helena.getFetishDesire(FETISH_ANAL_RECEIVING).isPositive())
 		<p>
-			Wanting to perform a different type of oral on Helena, you suggest
+			你忽然想给海伦娜展示另一种口活，于是建议说
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 that you could probe your tongue a little lower down within her cloaca and perform anilingus on her.
+				你可以让舌头舔过泄殖腔偏下的那里，替她舔肛。
 			#ELSE
-				 that she could present her ass to you so that you can perform anilingus on her.
+				让她把屁股扭过来，你来给她吻肛。
 			#ENDIF		
-			 Although by now accustomed to doing lewd things you, the regal harpy is still visibly shocked by your suggestion, and hesitantly asks, [helena.speechNoEffects(You mean... You want to lick my asshole?!)]
+			虽然这个高贵的哈比早已经习惯了跟你做各类淫事，但听到你的建议还是面露震惊，有些犹豫地问道，[helena.speechNoEffects(你的意思是……你想舔我屁股？！)]
 		</p>
 		<p>
-			Confirming that that's what you want, you can't help but smile as Helena blushes and turns around, before stepping over to lean against a nearby wall and pushing her [helena.assSize] ass out towards you. Looking back over her shoulder, she lifts her beautiful white tail feathers to present you with
+			你确认自己正是此意，看到海伦娜刷得红了脸，连忙扭过头去，挪到了附近的墙边，把她[helena.assSize]的屁股朝着你微微撅了起来，你还是忍不住露出了微笑。她回头望过来，那束美丽的洁白尾羽此刻也翘起，展露在你面前的
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 the cloaca between her legs, and as you drop down behind her and press your [pc.lips+] against the lower part of her bird-like slit, she stammers, [helena.speechNoEffects(T-This had better feel good!)]
+				正是股间的泄殖腔，你立刻跪在她身后，用[pc.lips+]贴在了她鸟一样细缝的偏下位置，她顿时结巴起来，[helena.speechNoEffects(可，可不准给我弄难受了！)]
 			#ELSE
-				 her butt, and as you drop down behind her and press your [pc.lips+] against her virgin asshole, she stammers, [helena.speechNoEffects(T-This had better feel good!)]
+				正是她的屁股，你立刻跪在她身后，用[pc.lips+]贴在了她贞洁仍存的菊穴上，她顿时结巴起来，[helena.speechNoEffects(可，可不准给我弄难受了！)]
 			#ENDIF
 		</p>
 		<p>
-			Wanting to make sure that Helena's first anal experience is a good one, you make sure to spend some time lovingly kissing and licking her rear entrance. Sure enough, after just a few minutes of this, the beautiful harpy's nervous sighs have turned into heavy moans, and she eagerly pushes her saliva-coated asshole out against your face as she breathlessly pants, [helena.speechNoEffects(~Ooh!~ Go on, [pc.name]! Eat my ass!)]
+			你可不想让海伦娜初次后庭经历就不太愉快，于是花了好一阵子，对着她的菊穴又亲又舔。足足过了几分钟，那漂亮的哈比口中原本紧张的喘息早已化作沉重的娇喘，她有些接不上气来，[helena.speechNoEffects(~哦哦！~不要停，[pc.name]！继续舔！)]
 		</p>
 		<p>
-			More than happy to do as she asks, you tightly press your [pc.lips] over Helena's asshole and start passionately making out with her virgin hole. From the lewd moans and desperate panting noises drifting down from above, you can tell that she's going to be eager to do a lot more anal play with you in the future...
+			你喜出望外，立刻把[pc.lips]严丝合缝地贴在了海伦娜的屁穴之上，对着那尚未经人事的嫩穴热情地玩弄起来。听到前面时不时传出的淫靡的呻吟、不住的喘息，想必今后她肯定很乐意跟你玩玩后门了……
 		</p>
 	#ELSE
 		<p>
-			Wanting to get a taste of Helena's ass, you suggest that you could perform anilingus on her again. Hearing what it is you want, the regal harpy bites her lips and playfully teases, [helena.speechNoEffects(Oh, my pussy isn't good enough for you, is it? You want to stick your tongue up my ass instead?)]
+			你想尝尝海伦娜屁股的滋味，于是建议说自己可以再给她吻肛。那哈比富婆听了马上轻咬住嘴唇，调戏道，[helena.speechNoEffects(哦，我的小穴不能满足你吗？非要把舌头伸进我的屁股里才舒服吗？)]
 		</p>
 		<p>
-			Confirming that that's what you want, you can't help but smile as Helena giggles and turns around, before stepping over to lean against a nearby wall and pushing her [helena.assSize] ass out towards you. Looking back over her shoulder, she lifts her beautiful white tail feathers to present you with
+			你确认自己正是此意，看到海伦娜嬉笑着扭过头去，挪到了附近的墙边，把她[helena.assSize]的屁股朝着你微微撅了起来，你还是忍不住露出了微笑。她回头望过来，那束美丽的洁白尾羽此刻也翘起，展露在你面前的
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 the cloaca between her legs, and as you drop down behind her and press your [pc.lips+] against the lower part of her bird-like slit, she moans,
+				正是股间的泄殖腔，你立刻跪在她身后，用[pc.lips+]贴在了她鸟一样细缝的偏下位置，她便呻吟道，
 			#ELSE
-				 her butt, and as you drop down behind her and press your [pc.lips+] against her exposed asshole, she moans,
+				正是她的屁股，你立刻跪在她身后，用[pc.lips+]贴在了她一览无余的菊穴上，她便呻吟起来，
 			#ENDIF
-			 [helena.speechNoEffects(~Mmm!~ That's it! ~Ooh!~ Eat my ass!)]
+			[helena.speechNoEffects(~姆嗯！~没错！~哦哦 ！~好好尝尝吧！)]
 		</p>
 		<p>
-			More than happy to do as she asks, you tightly press your [pc.lips] over Helena's asshole and start passionately licking and kissing her rear entrance. From the lewd moans and desperate panting noises which start drifting down from above, you can tell that she's as happy as ever to receive this kind of oral attention from you...
+			你喜出望外，立刻把[pc.lips]严丝合缝地贴在了海伦娜的屁穴之上，对着后庭热烈的亲吻、舔弄起来。听到前面时不时传出的淫靡的呻吟、不住的喘息，想必她对你的口技可满意极了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Blowjob -->
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_RECEIVE_BLOWJOB_FIRST_TIME"><![CDATA[
 	<p>
-		Thinking that you should give Helena her first experience of what it's like to suck cock, you tell her that you want her to drop to her knees and give you a blowjob. Although she's eager to engage in other lewd acts, the thought of having a cock in her mouth causes the harpy matriarch to nervously ask, [helena.speechNoEffects(Y-You really want me to... Suck your cock?)]
+		你觉得应该让海伦娜初次体验一下舔鸡巴的感觉了，于是告诉她你想让她跪下来给你口交。虽然她面对其他淫行兴致很高，但一想到肉棒要进到自己嘴巴里，哈比族长还是有些不安地问道，[helena.speechNoEffects(你，你真的想让我……舔你的肉棒吗？)]
 	</p>
 	<p>
-		After replying in the affirmative, you give the hesitant harpy a helping hand by pushing her down onto her knees in front of you.
+		做过肯定的答复之后，你看这哈比还是犹豫不决，于是准备帮她一把，按着她跪在了你的面前。
 		#IF(pc.isTaur())
-			 Reassuring her that she'll be able to handle your feral [pc.cockRace] cock, you step forwards so that Helena is kneeling beneath your lower [pc.legRace] body.
+			你再三保证你兽态的[pc.cockRace]鸡巴她肯定应付得来，随后就向前几步，让海伦娜跪在你[pc.legRace]的下半身之下。
 		#ELSE
-			 Reassuring her that she'll be fine, you lean back against a nearby wall and present Helena with your [pc.cockSize] cock.
+			你再三保证不会有问题的，随后就依靠在身后的墙面上，把[pc.cockSize]的肉棒露了出来。
 		#ENDIF
-		 Letting out a nervous sigh, she shuffles forwards until her mouth is hovering right in front of your rapidly-hardening shaft, before stuttering, [helena.speechNoEffects(G-Give me a moment...)]
+		她有些担心地叹了一声，便向前挪了一点，直到让嘴巴就正好落在你迅速勃起的肉茎前，她舔了舔嘴唇，接着结结巴巴地说，[helena.speechNoEffects(让，让我准备一下……)]
 	</p>
 	<p>
-		Letting her do this at her own pace, you wait while Helena hesitantly leans forwards to plant a gentle kiss on the tip of your cock. Encouraged by the appreciative [pc.moan] that you let out, the harpy matriarch shuffles a little closer, before sticking out her tongue and giving your [pc.cockGirth] shaft a long, wet lick. Clearly enraptured by this new experience, Helena quickly steps up the pace, and after giving your cock another few licks, she presses her [helena.lipSize], juicy lips against the [pc.cockHead+] of your cock and gives it another wet kiss. As you start to let out [pc.a_moan+], the horny harpy giggles in excitement, before opening wide and taking you into her mouth.
+		你想让她按照自己的节奏来，所以你就静静地等待着，海伦娜在片刻的迟疑后向前倾身，在你那[pc.cockGirth]肉棒的顶端轻轻一吻。随后在你赞赏的鼓励下，这位哈比族长又靠近了一些，然后伸出舌头，在你那[pc.cockGirth]肉棒上舔来舔去。海伦娜显然被这种新体验迷住了，她很快加快了节奏，在又舔了你的鸡巴几下后，她把她那[helena.lipSize]的嘴唇贴在你的[pc.cockHead+]上，这就给它了一个湿吻。当你开始发出[pc.a_moan+]声时，这个淫荡的哈比兴奋地咯咯直笑，然后张大嘴巴把它彻底含进嘴里。
 	</p>
 	<p>
-		From the hungry, squelching moans which she starts making as she takes your throbbing shaft down her throat, you can tell that Helena's very much enjoying the experience of sucking cock...
+		当她把你那跳动的阴茎塞进她的喉咙时，你真切的听到她发出了饥渴的呻吟声，而且你可以看出海伦娜非常享受口交的体验……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_RECEIVE_BLOWJOB_EXPERIENCED"><![CDATA[
 	<p>
-		Thinking that it would be good to get Helena to suck your cock again, you tell her that you want her to drop to her knees and give you a blowjob. Flashing you a cheeky smile as you say this, the lewd harpy matriarch blows you a wet kiss and teases, [helena.speechNoEffects(You want these lips wrapped around your cock again, hmm?)]
+		你觉得让海伦娜再给你舔一回鸡巴肯定不错，于是告诉她你想她跪下来给你口交。这淫荡的哈比族长听你说完就朝你抛了个微笑，狠狠地亲了你一口，调笑道，[helena.speechNoEffects(又想让我这双嘴唇裹住你的肉棒了吗，嗯？)]
 	</p>
 	<p>
-		After you've replied in the affirmative, Helena quickly drops down onto her knees in front of you,
+		听到你肯定的答复，海伦娜立刻在你面前跪了下来，
 		#IF(pc.isTaur())
-			 before impatiently shuffling forwards beneath your lower [pc.legRace] body.
+			连忙挪到了你[pc.legRace]的兽态下半身之下。
 		#ELSE
-			 and as you lean back against a nearby wall and present her with your [pc.cockSize] cock, she lets out a hungry moan and impatiently shuffles forwards.
+			你依靠在身后的墙面上，把[pc.cockSize]的肉棒露了出来，一声饥渴的呻吟立刻从她唇间冒出，她连忙挪上前来。
 		#ENDIF
-		 With her mouth now hovering right in front of your rapidly-hardening shaft, she licks her lips and exclaims, [helena.speechNoEffects(~Mmm!~ That's right, get nice and hard for me!)]
+		她的嘴巴就正好落在你迅速勃起的肉茎前，她舔了舔嘴唇，喊道，[helena.speechNoEffects(~姆嗯！~这就对了，给我快点硬起来吧！)]
 	</p>
 	<p>
-		Only having to wait another couple of seconds until you're completely erect, Helena lets out a hungry moan as she leans forwards to plant a big wet kiss on the tip of your cock. Encouraged by the appreciative [pc.moan] that you let out, the harpy matriarch slides her tongue out to give your [pc.cockGirth] shaft a series of long, wet licks. Not able to hold back any longer, she giggles in excitement, before opening wide and greedily taking your hot cock into her mouth.
+		片刻后你便完全勃起，海伦娜发出饥渴的呻吟，她倾身向前，给你的阴茎顶端一个绵长的湿吻。这位哈比族长受到你[pc.moan]声的鼓励，伸出舌头，把你的[pc.cockGirth]阴茎舔湿一大片。她再也忍不住了，兴奋得咯咯直笑，贪婪地张大嘴巴，把你火热的肉棒含进嘴里。
 	</p>
 	<p>
-		From the hungry, squelching moans which she starts making as she takes your throbbing shaft down her throat, you can tell that Helena's very much enjoying the opportunity to suck your cock again...
+		海伦娜将你颤动的阴茎深入喉咙后，开始发出饥渴而沉闷的呻吟，相比海伦娜非常享受给你口交的机会……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Cunnilingus (Helena performing) -->
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_RECEIVE_CUNNILINGUS_FIRST_TIME"><![CDATA[
 	<p>
-		Thinking that you should give Helena her first experience of what it's like to perform cunnilingus, you tell her that you want her to drop to her knees and eat you out. Although she's eager to engage in other lewd acts, the thought of performing oral causes the harpy matriarch to nervously ask, [helena.speechNoEffects(Y-You really want me to do that?)]
+		你觉得应该让海伦娜初次体验一下舔阴的感觉了，于是告诉她你想让她跪下来给你口交。虽然她面对其他淫行兴致很高，但一想到要给别人口交，哈比族长还是有些不安地问道，[helena.speechNoEffects(你，你真的想让我那么做吗？)]
 	</p>
 	<p>
-		After replying in the affirmative, you give the hesitant harpy a helping hand by pushing her down onto her knees in front of you.
-		#IF(pc.isTaur())
-			 Reassuring her that she'll be able to handle your feral [pc.pussyRace] pussy, you turn around and step back so that Helena is kneeling behind your lower [pc.legRace] body.
-		#ELSE
-			 Reassuring her that she'll be fine, you lean back against a nearby wall and present Helena with your [pc.pussy+].
-		#ENDIF
-		 Letting out a nervous sigh, she shuffles forwards until her mouth is hovering right in front of your hot cunt, before stuttering, [helena.speechNoEffects(G-Give me a moment...)]
-	</p>
+	在给出肯定的回答后，你帮这位犹豫不决的哈比女王跪在了你的面前。
+	#IF(pc.isTaur())
+		在向她保证能应对你那野性十足的[pc.pussyRace]阴道后，你转身并向后退几步，让海伦娜跪在你[pc.legRace]下身的后方。
+	#ELSE
+		在向她保证一切都会顺利后，你倚靠在附近的墙上，把你[pc.pussy+]展示给海伦娜。
+	#ENDIF
+	海伦娜紧张地叹了口气，小心翼翼地向前挪动，直到她的嘴几乎贴在你炙热的蜜穴前，才结巴地说道：[helena.speechNoEffects(请再给我一点时间……)]
+</p>
 	<p>
-		Letting her do this at her own pace, you wait while Helena hesitantly leans forwards to plant a gentle kiss on your [pc.labia+]. Encouraged by the appreciative [pc.moan] that you let out, the harpy matriarch shuffles a little closer, before sticking out her tongue and giving your [pc.clit+] a short, wet lick. Discovering that she likes this new experience, Helena quickly steps up the pace, and after giving your clit another few licks, she presses her [helena.lipSize], juicy lips against your feminine sex and starts passionately kissing your [pc.labia+]. As you let out [pc.a_moan+], the horny harpy greedily pushes her tongue into your [pc.pussy+] and starts enthusiastically eating you out.
-	</p>
+	你允许她按自己的节奏前进，海伦娜犹豫地向前倾身，然后在你[pc.labia+]上印下一个温柔的吻。在受到你那表达赞赏的[pc.moan]后，这位哈比族长微微挪近一些，随后伸出舌头，轻轻地舔了舔你[pc.clit+]。你能明确感受她到对这种新鲜体验的喜爱，海伦娜加快了速度，继而又在你[pc.clit+]上舔了几下后，将她那[helena.lipSize]的双唇紧贴在你的女性生殖器官上，开始深情地亲吻你[pc.labia+]。当你发出[pc.a_moan+]时，这位欲火中烧的哈比贪婪地将舌头探入你[pc.pussy+]并热情的为你提供口交服务。
+</p>
 	<p>
-		From the hungry, wet moans which she immediately starts making, you can tell that Helena's very much enjoying the experience of performing oral on you...
+		海伦娜即刻发出饥渴又淫靡的呻吟声，想必她非常享受给你口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_RECEIVE_CUNNILINGUS_EXPERIENCED"><![CDATA[
 	<p>
-		Thinking that it would be good to get Helena to perform cunnilingus on you again, you tell her that you want her to drop to her knees and eat you out. Flashing you a cheeky smile as you say this, the lewd harpy matriarch blows you a wet kiss and teases, [helena.speechNoEffects(You want to feel my tongue thrusting deep into your pussy again, hmm?)]
+		你认为让海伦娜再次为你舔阴是件好事，于是你告诉她，你想让她跪下来给你口。话刚说完，这位淫荡的哈比族长向你露出了一个淫邪笑容，在给了你一个湿吻挑逗着说道：[helena.speechNoEffects(你想再次感受我的舌头深入你的阴道吗？)]
 	</p>
 	<p>
-		After you've quickly replied in the affirmative, Helena drops down onto her knees in front of you,
+		在你迅速做出肯定回答后，海伦娜跪在你面前，
 		#IF(pc.isTaur())
-			 before impatiently shuffling around behind your lower [pc.legRace] body.
+			然后急切地挪向你[pc.legRace]下半身的后面。
 		#ELSE
-			 and as you lean back against a nearby wall and present her with your [pc.pussy+], she lets out a hungry moan and impatiently shuffles forwards.
+			你背靠着附近的墙壁，向她展示你[pc.pussy+]，她也饥渴地呻吟了起来，急切地向前挪动着。
 		#ENDIF
-		 With her mouth now hovering right in front of your hot cunt, she licks her lips and exclaims, [helena.speechNoEffects(~Mmm!~ That's right, let me get a taste of your pussy!)]
+		现在，她的嘴就在你火热的阴户前徘徊，她舔了舔嘴唇，惊呼道：[helena.speechNoEffects(~嗯！~ 让我来尝尝你的小穴！！)]
 	</p>
 	<p>
-		Clearly eager to get started, Helena lets out a hungry moan as she leans forwards to plant a big wet kiss on your [pc.labia+]. Encouraged by the appreciative [pc.moan] that you let out, the harpy matriarch sticks out her tongue and gives your [pc.clit+] a series of short, wet licks. Not able to hold back any longer, she presses her [helena.lipSize], juicy lips against your feminine sex, and after taking a few moments to passionately kiss your [pc.labia+], she greedily pushes her tongue into your [pc.pussy+] and starts enthusiastically eating you out.
+		海伦娜显然有些迫不及待了，她饥渴的呻吟着，同时向前倾身，对着你[pc.labia+]狠狠地吻了下去。随后在你赞赏的鼓励下，这位哈比族长又靠近了一些，然后伸出舌头，在上下舔弄起你那[pc.clit+]。随后将她那[helena.lipSize]的嘴唇贴在了你的阴户上，在热情地亲吻了你[pc.labia+]片刻后，她贪婪地将舌头伸进你[pc.pussy+]，开始热情地享受了起来。
 	</p>
 	<p>
-		From the hungry, wet moans which she immediately starts making, you can tell that Helena's very much enjoying the opportunity to eat you out again...
+		海伦娜发出饥渴而沉闷的呻吟，相信她非常享受能再次给你口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Sex -->
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_RIDDEN"><![CDATA[
 	<p>
-		Wanting to make the most of this opportunity, you tell Helena that you want to fuck her again. Hearing what it is you're saying, the dominant harpy grins at you as she runs her feathered fingers down over her pussy, before lewdly teasing, [helena.speechNoEffects(You want to pound my [helena.pussyCapacity], wet pussy again, hmm?)]
-	</p>
+		为了充分利用这次机会，你告诉海伦娜你想再次与她交媾。听到你的话，这只支配性的哈比一边用她覆羽的手指划过自己的小穴，一边挑逗地笑道：[helena.speechNoEffects(你想再次狠狠地撞击我那湿漉漉的[helena.pussyCapacity]蜜穴，对吧？)]
+</p>
 	<p>
-		After you've quickly replied in the affirmative, Helena smirks at you and sharply orders, [helena.speechNoEffects(In that case, get down on your back and present me with your cock. I'm going to be the one on top.)]
+			在你迅速做出肯定回答后，海伦娜冲你笑了笑，然后尖声命令道：[helena.speechNoEffects(既然如此，那就赶紧给我趴下，把你的鸡巴给我！让我来骑着你！)]
 	</p>
 	#IF(pc.isTaur())
 		<p>
-			As you have the lower body of [pc.a_legRace], lying down and rolling over onto your back is a somewhat awkward manoeuvre, but with the promise of getting to sink your [pc.cock+] into Helena's royal pussy, you're more than happy to put up with the minor discomfort. Checking to make sure that you aren't going to crash into a table or some other piece of furniture, you kneel down onto all fours, before rolling over and presenting Helena with both your vulnerable underbelly and rapidly-hardening cock.
+			由于你拥有[pc.a_legRace]的下半身，躺下后翻身是一个有些笨拙的动作，但只要保证能将你[pc.cock+]插入海伦娜的皇家小穴，你就非常乐意忍受轻微的不适。确认自己不会撞到桌子或其他家具后，你四肢着地跪在地上，然后翻过身来，将自己敏感的下体和迅速勃起的阴茎呈现在海伦娜面前。
 		</p>
 		<p>
-			Licking her lips in anticipation of what's to come, the harpy matriarch grabs hold of your rear legs, before stepping forwards and sinking down to perch on your stomach. Lifting her hips, she lets out an eager moan as she starts rubbing her wet pussy up and down the length of your hard shaft. Displaying the dominant streak which you awoke inside of her, she lets out a little laugh as she commands, [helena.speechNoEffects(Go on, [pc.name], beg for my pussy!)]
+			舔了舔嘴唇，期待着即将发生的一切，哈比族长抓住你的后腿，然后向前跨出一步，俯身趴在你的肚子上。她抬起臀部，发出急切的呻吟，开始用湿润的阴部上下摩擦你坚硬的阴茎。你唤醒了她内心的支配欲，她一边发出轻微的笑声，一边发出命令，[helena.speechNoEffects(来吧，[pc.name]，求我的小穴！)]
 		</p>
 	#ELSE
 		<p>
-			Deciding that it's best to do as you're asked, you lie down on a nearby rug, presenting Helena with your rapidly-hardening cock. Licking her lips in anticipation of what's to come, the harpy matriarch steps forwards and sinks down to perch on your stomach. Lifting her hips, she lets out an eager moan as she moves back and starts rubbing her wet pussy up and down the length of your hard shaft. Displaying the dominant streak which you awoke inside of her, she lets out a little laugh as she commands, [helena.speechNoEffects(Go on, [pc.name], beg for my pussy!)]
+			你决定最好照做，于是躺在附近的地毯上，向海伦娜展示自己迅速勃起的阴茎。海伦娜舔了舔嘴唇，期待着即将发生的一切，她向前走了几步，俯身趴在你的肚子上。抬起臀部，一边发出急切的呻吟，一边向后移动，开始用她湿润的阴部上下摩擦你坚硬的阴茎。你唤醒了她内心的支配欲，她一边发出轻微的笑声，一边发出命令，[helena.speechNoEffects(来吧，[pc.name]，渴求我的小穴吧！)]
 		</p>
 	#ENDIF
 	<p>
-		Feeling extremely turned on and desperate to feel your cock slip inside Helena's hot cunt, you obediently [pc.moan], [pc.speech(Please, Helena! I want your pussy! Fuck me already!)]
+		你感到异常兴奋迷乱，急切地想要自己的鸡巴插入海伦娜火热的小穴，于是你顺从地[pc.moan]起来，[pc.speech(求你了，海伦娜！我想要你的小穴！快来操我！)]
 	</p>
 	<p>
-		Satisfied by your response, the regal harpy slides her hips forwards, before reaching down to position the [pc.cockHead+] of your cock up against her [helena.labia+]. Flashing you one last cheeky grin, she sinks down, spearing her [helena.pussy+] on your [pc.cock+] and causing you to let out [pc.a_moan+]. Joining her own horny [helena.moans] with yours, Helena starts dominantly sliding up and down on your cock, giving you exactly what it is you wanted...
+		对你的反应感到满意后，这位高贵的哈比向前滑弄臀部，然后伸手将你的阴茎[pc.cockHead+]顶在她[helena.labia+]上，并向你露出最后一个淫荡的笑容，身体下沉，将她[helena.pussy+]顶在你[pc.cock+]上，引得你发出[pc.a_moan+]声。海伦娜将自己饥渴的[helena.moans]与你呻吟结合在一起，开始霸道地在你的鸡巴上上下滑动，给你你想要的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_RIDDEN_ANAL"><![CDATA[
 	<p>
-		Wanting to make the most of this opportunity, you tell Helena that you want to fuck her ass again. Hearing what it is you're saying, the dominant harpy grins at you and teases, [helena.speechNoEffects(You mean you're not interested in my hot little pussy, hmm?)]
+		出于充分利用这次机会的想法，你告诉海伦娜你想再走一次旱道。听你这么说，那显赫的哈比咧嘴调笑道，[helena.speechNoEffects(你的意思是你对我性感的小穴完全不感兴趣吗，嗯？)]
 	</p>
 	<p>
-		Before you can reply, Helena smirks at you and sharply orders, [helena.speechNoEffects(If it's my ass you want, then you're to get down on your back and present me with your cock. I'm going to be the one on top.)]
+		你没来得及回答，海伦娜便嗤笑着严令道，[helena.speechNoEffects(如果你想玩我的屁眼子，那你得躺下来奉上你的肉棒。而我，这次得在上面。)]
 	</p>
 	#IF(pc.isTaur())
 		<p>
-			As you have the lower body of [pc.a_legRace], lying down and rolling over onto your back is a somewhat awkward manoeuvre, but with the promise of getting to sink your [pc.cock+] into Helena's royal butt, you're more than happy to put up with the minor discomfort. Checking to make sure that you aren't going to crash into a table or some other piece of furniture, you kneel down onto all fours, before rolling over and presenting Helena with both your vulnerable underbelly and rapidly-hardening cock.
+		鉴于你拥有着[pc.a_legRace]的下半身，所以对你而言，躺下后翻身是一个有点笨拙的动作，但只要想到能把你[pc.cock+]插入海伦娜那高贵的贵族屁股，你会非常乐意忍受任何不适。在确认自己不会撞到桌子或其他家具后，你四肢着地跪在地上，然后翻过身，将自己脆弱的下体和迅速勃起的阴茎呈现在了海伦娜的面前。
 		</p>
 		<p>
-			Instead of positioning herself over your groin, however, the dominant harpy moves forwards to stand over your head, before sinking down onto her knees and planting her
-			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 cloaca
-			#ELSE
-				 [helena.ass+]
-			#ENDIF
-			 firmly down over your face. Letting out a soft moan, she orders, [helena.speechNoEffects(Go on, [pc.name]! Eat my ass like you did before!)]
-		</p>
+    然而，这只处于支配地位的哈比并未停留在你的裆部上方，而是前进至你的头部正上方，接着屈膝跪下，使她的
+    #IFDEF(helena.getGenitalArrangement()==GENITALS_CLOACA)
+      泄殖腔
+    #ELSE
+        [helena.ass+]
+    #ENDIF
+    坚定地压在你的脸上。随着发出一声轻柔的呻吟后，她下令说：[helena.speechNoEffects(来吧，[pc.name]！像之前那样好好享用我的屁股吧！)]
+</p>
 	#ELSE
 		<p>
-			Deciding that it's best to do as you're asked, you lie down on a nearby rug, presenting Helena with your rapidly-hardening cock. Instead of positioning herself over your groin, however, the dominant harpy moves forwards to stand over your head, before sinking down onto her knees and planting her
-			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 cloaca
-			#ELSE
-				 [helena.ass+]
-			#ENDIF
-			 firmly down over your face. Letting out a soft moan, she orders, [helena.speechNoEffects(Go on, [pc.name]! Eat my ass!)]
-		</p>
+   你决定顺从对方的指示，在附近的地毯上躺下并将逐渐坚硬的阴茎展露在海伦娜面前。然而这只处于支配地位的哈比并未停留在你的裆部上方，而是前进至你的头部正上方，接着屈膝跪下，使她的
+    #IFDEF(helena.getGenitalArrangement()==GENITALS_CLOACA)
+      泄殖腔
+    #ELSE
+        [helena.ass+]
+    #ENDIF
+    坚定地压在你的脸上。随着发出一声轻柔的呻吟后，她下令说：[helena.speechNoEffects(来吧，[pc.name]！像之前那样好好享用我的屁股吧！)]
+</p>
 	#ENDIF
 	<p>
-		With little choice but to do as you're told, you start eagerly kissing and licking Helena's asshole, causing her to let out a series of deep, passionate moans. Once her rear entrance is nicely lubricated by your saliva, she stands up, leaving you gasping for air as she moves down to straddle your stomach. After taking a moment to slide her
+		在几乎别无他选的情况下，你只能听从指令，开始热切地亲吻和舔舐海伦娜的肛门，这一举动引得她释放出一连串深沉而充满激情的呻吟声。一旦她的后庭入口在你的唾液润滑之下变得足够湿滑，她便起身离开，当你气喘吁吁之时，她向下移动跨坐到你的腹部上。在稍作停顿后，她将自己那
 		#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-			 slimy cloaca
+			滑腻的泄殖腔
 		#ELSE
-			 slimy asshole 
+			滑腻的肛门
 		#ENDIF
-		 up and down over your hard shaft, the regal harpy reaches down to position the [pc.cockHead+] of your cock up against her rear entrance. Flashing you one last cheeky grin, she sinks down, spearing her [helena.asshole+] on your [pc.cock+] and causing you to let out [pc.a_moan+]. Joining her own horny [helena.moans] with yours, Helena starts dominantly sliding up and down on your cock, giving you exactly what it is you wanted...
+		在你坚挺的阴茎处上下滑动。随后向下伸手，将你[pc.cockHead+]对准她的后庭入口。在给你留下最后一个俏皮的笑容后，她慢慢下沉，将你[pc.cock+]插入她[helena.asshole+]，突如其来的刺激感让你不禁发出淫荡的呻吟声。她的[helena.moans]与你的呻吟声混在一起，随她开始以其主导的方式在你的阴茎上来回滑动，以此来给予你心中所渴望的一切……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_FUCK_HER"><![CDATA[
 	<p>
-		Wanting to make the most of this opportunity, you [pc.step] forwards and tell Helena that you're going to fuck her again. Hearing what it is you're saying, the submissive harpy bites her lip and steps over to a nearby table,
+		你绝不愿浪费这绝佳的机会，立刻上前告诉海伦娜，你还想干她一次。那顺从的哈比听了，轻咬下唇，便走到附近一张桌旁，
 		#IF(helena.isVisiblyPregnant())
-			 before lying back on it and presenting you with her pussy. Rubbing her beautiful wings over her swollen, pregnant belly, she spreads her bird-like legs and teases,
+			躺下身子，将她的蜜穴展露出来。她用优美的翅膀拂过已经隆起的孕肚，张开了鸟似的双腿，调情道，
 		#ELSE
-			 before bending forwards over it and presenting you with her pussy. Looking back over her shoulder, she teases,
+			趴在上面，小穴一览无余。她回头望向你，调情道，
 		#ENDIF
-		 [helena.speechNoEffects(Come on then, [pc.name], pound my [helena.pussyCapacity], wet pussy!)]
+		[helena.speechNoEffects(那就来吧，[pc.name]！把这湿哒哒的[helena.pussyCapacity]小穴塞满吧！)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			More than happy to do as she asks, you rear up on the hind legs and swiftly move forwards to mount her. With your lower [pc.a_legRace]'s body now positioned over the top of the horny harpy, you buck your hips forwards until you feel the [pc.cockHead+] of your cock pushing against her
+		你喜出望外，立刻扬起前肢，后肢点地，迅速骑上了她。你[pc.a_legRace]的下半身已经完完全全盖住了那饥渴难耐的哈比，随后一挺身，便能感到[pc.cockHead+]跟她
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 cloaca. Encouraged by the feel of Helena's soft, delicate wings guiding your throbbing shaft to prod at her [helena.labia+], you buck forwards, sinking your hard cock into her [helena.pussy+] and causing her to let out a desperate moan,
+				湿滑的泄殖腔抵在了一起。海伦娜柔嫩细腻的翅膀不断引导着你颤动的阴茎在她[helena.labia+]便摩擦，在此等感觉的鼓舞下，你猛地一冲，坚硬的肉棒便攻入了她[helena.pussy+]，令她不禁爆发出一阵呻吟，
 			#ELSE
-				 [helena.labia+]. Not wanting to wait another moment, you immediately buck forwards, sinking your hard cock into her [helena.pussy+] and causing her to let out a desperate moan,
+				[helena.labia+]抵在了一起。你迫不及待地立刻猛地一冲，便将坚硬的肉棒便攻入了她[helena.pussy+]，令她不禁爆发出一阵呻吟，
 			#ENDIF
 		#ELSE
-			More than happy to do as she asks, you [pc.step] forwards and press the [pc.cockHead+] of your cock against her
+			你喜出望外，稍稍前移，就将[pc.cockHead+]抵在了她
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 cloaca.
+				湿滑的泄殖腔上。
 			#ELSE
-				 [helena.labia+].
+				[helena.labia+]上。
 			#ENDIF
-			 Not wanting to wait another moment, you immediately buck forwards, sinking your hard cock into her [helena.pussy+] and causing her to let out a desperate moan,
+			你迫不及待地立刻猛地一冲，便将坚硬的肉棒便攻入了她[helena.pussy+]，令她不禁爆发出一阵呻吟，
 		#ENDIF
-		 [helena.speechNoEffects(~Ooh!~ Yes! Fuck me!)]
+		[helena.speechNoEffects(~哦哦！~好爽！继续操啊！)]
 	</p>
 	<p>
-		Doing as the regal harpy says, you pull back and thrust forwards again, filling her [helena.pussy+] with your [pc.cock+] and letting out [pc.a_moan+]. Continuing to move your hips back and forth, you settle into a steady rhythm as you fuck Helena over the table... 
+		你立刻按着这哈比小富婆的话做了，稍稍收身后再次前冲，用你[pc.cock+]填满了她[helena.pussy+]，一声[pc.a_moan+]不禁从口中冒出。你继续接连不断地摆动着腰身，在伏在桌上的海伦娜体内抽插着，还颇有一些节奏…… 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_FUCK_HER_ANAL"><![CDATA[
 	<p>
-		Wanting to make the most of this opportunity, you [pc.step] forwards and tell Helena that you're going to fuck her ass again. Hearing what it is you're saying, the submissive harpy bites her lip and steps over to a nearby table,
+		你绝不愿浪费这绝佳的机会，立刻上前告诉海伦娜，你还想干她的屁股。那顺从的哈比听了，轻咬下唇，便走到附近一张桌旁，
 		#IF(helena.isVisiblyPregnant())
-			 before lying back on it and presenting you with her
+			躺下身子，将她的
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 cloaca.
+				泄殖腔
 			#ELSE
-				 ass.
+				屁股
 			#ENDIF
-			 Rubbing her beautiful wings over her swollen, pregnant belly, she spreads her bird-like legs and teases,
+			展露在你面前。她用优美的翅膀拂过已经隆起的孕肚，张开了鸟似的双腿，调情道，
 		#ELSE
-			 before bending forwards over it and presenting you with her
+			趴在上面，将她的
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 cloaca.
+				泄殖腔
 			#ELSE
-				 ass.
+				屁股
 			#ENDIF
-			 Looking back over her shoulder, she teases,
+			展露在你面前。她回头望向你，调情道，
 		#ENDIF
-		 [helena.speechNoEffects(Come on, [pc.name]! Eat my ass and get me all nice and wet!)]
+		[helena.speechNoEffects(那就来吧，[pc.name]！好好享用我的屁股，让我湿透了吧！)]
 	</p>
 	<p>
-		More than happy to do as she asks, you kneel down and start eagerly kissing and licking Helena's asshole, causing her to let out a series of deep, passionate moans. Once her rear entrance is nicely lubricated by your saliva,
+		你喜出望外，立刻跪下来，饥渴地对着海伦娜的菊穴又亲又舔，惹得她发出一连串绵长躁动的呻吟声。待到后庭用口水润滑完毕后，
 		#IF(pc.isTaur())
-			 you rear up on the hind legs and swiftly move forwards to mount her. With your lower [pc.a_legRace]'s body now positioned over the top of the horny harpy, you buck your hips forwards until you feel the [pc.cockHead+] of your cock pushing against her
+			你便扬起前肢，后肢点地，慢慢地骑上了她。你[pc.a_legRace]的下半身已经完完全全盖住了那饥渴难耐的哈比，随后一挺身，便能感到[pc.cockHead+]跟她
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 slimy cloaca. Encouraged by the feel of Helena's soft, delicate wings guiding your throbbing shaft to prod at her asshole, you buck forwards, sinking your hard cock into her rear entrance and causing her to let out a desperate moan,
+				湿滑的泄殖腔抵在了一起。海伦娜柔嫩细腻的翅膀不断引导着你颤动的阴茎向她的后穴刺入，在此等感觉的鼓舞下，你猛地一冲，坚硬的肉棒便攻入了她的后庭，令她不禁爆发出一阵呻吟，
 			#ELSE
-				 slimy rear entrance. Not wanting to wait another moment, you immediately buck forwards, sinking your hard cock into her asshole and causing her to let out a desperate moan,
+				湿滑的菊穴抵在了一起。你迫不及待地立刻猛地一冲，便将坚硬的肉棒便攻入了她的屁穴，令她不禁爆发出一阵呻吟，
 			#ENDIF
 		#ELSE
-			 you stand up, move forwards and press the [pc.cockHead+] of your cock against her
+			你便站起身，稍稍前移，就将[pc.cockHead+]抵在了她
 			#IF(helena.getGenitalArrangement()==GENITALS_CLOACA)
-				 slimy cloaca.
+				湿滑的泄殖腔上。
 			#ELSE
-				 slimy rear entrance.
+				湿滑的菊穴上。
 			#ENDIF
-			 Not wanting to wait another moment, you immediately buck forwards, sinking your hard cock into her asshole and causing her to let out a desperate moan,
+			你迫不及待地立刻猛地一冲，便将坚硬的肉棒便攻入了她的屁穴，令她不禁爆发出一阵呻吟，
 		#ENDIF
-		 [helena.speechNoEffects(~Ooh!~ Yes! Fuck me!)]
+		[helena.speechNoEffects(~哦哦！~好爽！继续操啊！)]
 	</p>
 	<p>
-		Doing as the regal harpy says, you pull back and thrust forwards again, filling her wet asshole with your [pc.cock+] and letting out [pc.a_moan+]. Continuing to move your hips back and forth, you settle into a steady rhythm as you fuck Helena over the table... 
+		你立刻按着这哈比小富婆的话做了，稍稍收身后再次前冲，用你[pc.cock+]填满了她湿润的屁穴，一声[pc.a_moan+]不禁从口中冒出。你继续接连不断地摆动着腰身，在伏在桌上的海伦娜体内抽插着，还颇有一些节奏…… 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_BACK_ROOM_AFTER_SEX -->
 	
 	<htmlContent tag="HELENAS_SHOP_BACK_ROOM_AFTER_SEX"><![CDATA[
 	<p>
-		With a deep, contented moan, Helena stands up and moves over to retrieve her discarded thong, before pulling it back on and playfully teasing, [helena.speech(~Mmm!~ You sure know how to satisfy me, [pc.name]...)]
+		海伦娜发出一声深沉而满足的呻吟，起身取回了丢在一旁的内裤，穿上之后就开始戏弄道，[helena.speech(~姆嗯！~你是懂怎么满足我的，[pc.name]……)]
 	</p>
 	<p>
-		Getting your own things in order, you join the regal harpy as she steps over to unlock the door to the back room. Turning to plant one last wet kiss on your cheek, she bats her long eyelashes at you and says,
+		你也穿戴整齐，随着这个哈比小富婆走向了里屋的门。她忽然扭过身子，在你脸颊上留下了一个湿哒哒的吻，眨动着长长的睫毛，说道，
 		#IF(game.getDayOfWeek()==DOW_FRIDAY)
-			 [helena.speech(I won't be able to take any more time off work until later this evening, when I'm expecting you to come and collect me so that we can go on a date together...)]
+			[helena.speech(今晚之前我可不能再翘班了，到时候我希望你能带上我，一起来场约会……)]
 		#ELSE
-			 [helena.speech(I won't be able to take any more time off work today, but if you come up to my nest this evening, we could always have some more fun in my bedroom...)]
+			[helena.speech(今天我不能再浪费工作时间了，但今晚你可以来我的巢穴，我们去卧室里好好玩一玩……)]
 		#ENDIF
 	</p>
 	<p>
-		Not giving you any time in which to reply, the beautiful harpy opens the door and swiftly strides back out into the shop. Following in her wake, you see Scarlett step forwards to once again stand by her matriarch's side, and you wonder what you should do now...
+		那身材曼妙的哈比还不等你回应，就三步并作两步，开门回到了店里。你也随她而去，只见斯嘉丽也上前来，站到族长身旁，你思索起来接下来应该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT"><![CDATA[
 	<p>
-		Wanting to spend some time with Scarlett, you ask Helena if the raven-harpy could be given a short break from work.
+		你想陪斯嘉丽一段时间，于是询问海伦娜能否让渡鸦哈比暂时离开工作岗位。
 		#IF(helena.isSlutty())
-			 Pouting at you in response, the beautiful harpy matriarch whines, [helena.speech(Fine, but you'd better give me some extra attention later...)]
+			海伦娜撅着嘴回答道，[helena.speech(当然可以，不过最好也抽空陪陪我……)]
 		#ELSE
-			 Letting out a short sigh, the beautiful harpy matriarch agrees by saying, [helena.speech(I suppose that would be acceptable, but please don't keep her from her work for too long.)]
+			海伦娜叹了口气，同意了，[helena.speech(当然可以，不过不要让她离开太久。)]
 		#ENDIF
 	</p>
 	<p>
-		As Helena walks off to leave the two of you alone together, Scarlett
+		海伦娜起身离开，让你们单独相处，斯嘉丽
 		#IF(scarlett.isLikesPlayer())
-			 flashes you a rare smile and asks,
+			少见地笑了一下，问道
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettCounterOral))
 				#IF(scarlett.hasPenis())
-					 [scarlett.speech(So, what did you want, [pc.name]? I don't have time for you to suck my cock under the counter again...)]
+					[scarlett.speech(那么，你想干啥，[pc.name]?我可没时间再找个角落给你尝我的鸡巴……)]
 				#ELSE
-					 [scarlett.speech(So, what did you want, [pc.name]? I don't have time for you to eat me out under the counter again...)]
+					[scarlett.speech(那么，你想干啥，[pc.name]?我可没时间再找个角落给你舔我的小穴……)]
 				#ENDIF
 			#ELSE
 				#IF(scarlett.hasPenis())
-					 [scarlett.speech(So, what did you want, [pc.name]?
+					[scarlett.speech(那么，你想干啥，[pc.name]？
 					#IF(scarlett.isAttractedTo(pc))
-						 You know, I haven't had my cock sucked all day; how about you help me change that?
+						嗯，我的鸡巴已经闲置一整天了，要不你来尝尝？
 					#ENDIF
 					)]
 				#ELSE
-					 [scarlett.speech(So, what did you want, [pc.name]?
+					[scarlett.speech(那么，你想干啥，[pc.name]?
 					#IF(scarlett.isAttractedTo(pc))
-						 You know, I haven't been eaten out yet today; how about you help me change that?
+						嗯，我的小穴已经闲置一整天了，要不你来舔舔？
 					#ENDIF
 					)]
 				#ENDIF
 			#ENDIF
 		#ELSE
-			 scowls at you and rudely asks,
+			轻蔑地问，
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettCounterOral))
 				#IF(scarlett.hasPenis())
-					 [scarlett.speech(What the fuck do you want now, [pc.name]? I don't have time to fuck your face under the counter again.)]
+					[scarlett.speech(你他妈要干嘛，[pc.name]？我他妈没时间再找个角落操你的嘴。)]
 				#ELSE
-					 [scarlett.speech(What the fuck do you want now, [pc.name]? I don't have time for you to lick my cunt again.)]
+					[scarlett.speech(你他妈要干嘛，[pc.name]？我他妈没时间再找个角落给你舔逼。)]
 				#ENDIF
 			#ELSE
 				#IF(scarlett.hasPenis())
-					 [scarlett.speech(What the fuck do you want now, [pc.name]?
+					[scarlett.speech(你他妈要干嘛，[pc.name]？
 					#IF(scarlett.isAttractedTo(pc))
-						 If you're not here to suck my cock, then you can fuck off.
+						你如果不是来吃鸡巴的，可以滚了。
 					#ENDIF
 					)]
 				#ELSE
-					 [scarlett.speech(What the fuck do you want now, [pc.name]?
+					[scarlett.speech(你他妈要干嘛，[pc.name]？
 					#IF(scarlett.isAttractedTo(pc))
-						 If you're not here to lick my cunt, then you can fuck off.
+						你如果不是来舔逼的，可以滚了。
 					#ENDIF
 					)]
 				#ENDIF
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_END"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettTalkedTo))
-			Not having anything more to discuss with Scarlett, you tell her that you'd better let her get back on with work.
+			你和斯嘉丽聊的差不多了，就告诉她最好继续工作。
 			#IF(scarlett.isLikesPlayer())
-				 Failing to hide the disappointment in her voice, she replies, [scarlett.speech(Oh, ok... I'll call Helena back over.)]
+				她的回答没有成功掩藏住她的失望，[scarlett.speech(嗯，好吧……我会叫海伦娜过来。)]
 			#ELSE
-				 Failing to hide the relief in her voice, she replies, [scarlett.speech(Fucking finally... I'll call Helena back over.)]
+				她的回答没有成功掩藏住她的轻松，[scarlett.speech(终于结束了……我这就叫海伦娜过来。)]
 			#ENDIF
 		#ELSE
-			Not having anything more to discuss with Scarlett, 
+			你和斯嘉丽聊的差不多了，
 		#ENDIF
 	</p>
 	<p>
-		Waving one of her black feathered wings, Scarlett shouts out to Helena that you've finished talking with her. The beautiful matriarch quickly strides over to where you're standing, before scolding her subordinate, [helena.speech(Scarlett! I've told you this a hundred times; don't shout like that in front of the customers!)]
+		斯嘉丽挥舞着她的一只黑色羽翼，对海伦娜喊道，你已经和她谈完了。这位美丽的族长快步走过来斥责她的下属， [helena.speech(斯嘉丽！我说了多少次不要在顾客面前这么大叫！)]
 	</p>
 	<p>
-		Shuffling about on her bird-like talons, the raven-harpy mutters an apology to Helena. Letting out a short sigh, the matriarch turns towards you and sweetly asks, [helena.speech(Is there anything else I can help you with today, [pc.name]?)]
+		斯嘉丽晃动她鸟一样的爪子表示歉意。海伦娜短促的叹了口气，转过身来面对你，问道，[helena.speech(那么，[pc.name]，有什么需要我效劳的吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_TALK -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_TALK"><![CDATA[
 	<p>
-		Taking advantage of the fact that the two of you now have some time alone together, you try to engage Scarlett in conversation by asking her how her day is going.
+		趁着你们俩现在有时间单独相处，你试着与斯嘉丽交谈，问她今天过得怎么样。
 		#IF(scarlett.isLikesPlayer())
-			 Blushing a little as she hears that you're interested in finding out how she is, the raven-harpy hesitantly replies, [scarlett.speech(Oh, well, you know, I guess it's just the same as ever...)]
+			斯嘉丽脸上一红，犹豫着说，[scarlett.speech(哦，好吧，你知道，就还是老样子……)]
 		#ELSE
-			 Rolling her eyes as she hears your question, the rude harpy snaps, [scarlett.speech(Why the fuck do you care? It's not like you actually give a shit.)]
+			斯嘉丽翻了个白眼，粗鲁地说，[scarlett.speech(他妈的关你屁事？别装的好像很关心我。)]
 		#ENDIF
 	</p>
 	<p>
-		Not satisfied with Scarlett's answer, you press her on the point and again ask her how her day has been so far. Convinced by your persistent questioning that you must actually care about her, the raven-harpy
+		你不满意她地回答，再一次提出相同的问题。她在你坚持的问询下感受到了你的关心，
 		#IF(scarlett.isLikesPlayer())
-			 continues to blush as she says, [scarlett.speech(If you really want to know, then I guess I can tell you about my day.)]
+			脸更红了，[scarlett.speech(你要真的想知道话，也可以和你说说我的一天。)]
 		#ELSE
-			 lets out an annoyed sigh and says, [scarlett.speech(Fine, if it's what it's going to take to get you to fuck off, then I'll tell you about my day.)]
+			厌烦地叹了口气，[scarlett.speech(算了，我就跟你说说我的一天，不过听完你就得滚。)]
 		#ENDIF
 	</p>
 	<p>
-		Leaning back against the nearby counter, Scarlett starts to recount everything that's happened to her today. To start with, she explains how she had to wake up early so as to be ready to assist her matriarch with anything she might require of her. After that, she moves on to tell you how that after eating breakfast, she accompanied Helena to work, and from then on she's had a mostly uneventful day.
+		斯嘉丽背靠着旁边的柜台，开始讲述今天发生在她身上的一切。首先，她解释了自己是如何早早起床，以便随时协助族长处理任何可能需要她做的事情。之后，她又告诉你，吃完早餐后，她是如何陪着海伦娜去上班的，从那以后，她的一天基本上都很平淡。
 	</p>
 	<p>
-		Although at first she was hesitant to recount all of this to you, by the time she's finished speaking, Scarlett looks and sounds as though she's a lot happier. Letting a brief smile flash across her face,
+		虽然一开始她还犹豫着要不要向你讲述这一切，但当她说完之后，斯嘉丽看起来和听起来都好像开心了许多。她的脸上闪过一丝微笑，
 		#IF(scarlett.isLikesPlayer())
-			 she crosses her wing-like arms and sighs, [scarlett.speech(So, is there anything else you wanted?)]
+			她交叉着双翼感叹，[scarlett.speech(那么，你还有什么想做的吗？)]
 		#ELSE
-			 she crosses her wing-like arms and sighs, [scarlett.speech(Now that that's fucking over, is there anything else you wanted?)]
+			她交叉着双翼感叹，[scarlett.speech(讲完了，你他妈的还有什么事吗？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_COUNTER_ORAL -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_COUNTER_ORAL"><![CDATA[
 	<p>
-		Wanting to take up Scarlett's offer of performing oral on her, you tell the raven-harpy that you'd be willing to
+		你告诉斯嘉丽，你很乐意接受邀请，用嘴服务她的
 		#IF(scarlett.hasPenis())
-			 suck her cock.
+			鸡巴。
 		#ELSE
-			 eat her out.
+			小穴。
 		#ENDIF
-		 Flashing you a devious grin as she hears what it is you're saying, Scarlett briefly glances around to make sure that nobody's paying the two of you any attention, before grabbing you by the [pc.hand] and quickly leading you over behind the shop's counter. Once again checking to make sure that you're not being watched by anyone, Scarlett roughly pushes you down so that you can't be seen by anyone but her.
+		斯嘉丽听到后露出了狡黠的笑容，她短暂地扫视了一下四周，确保没有人注意到你们俩，然后抓住你的[pc.hand]迅速把你带到商店柜台后面。再次确认没有被其他人看到后，粗暴地把你压在地上。这样除了她之外，其他人就看不到你们了。
 		#IF(pc.isTaur())
-			 Since you have the lower body of [pc.a_legRace], you find the space under the shop's counter to be a very tight squeeze, but with a little shuffling about, you manage to get into a somewhat comfortable position. 
+			你发现店里柜台下面的空间非常狭窄，很难容下你[pc.a_legRace]的下半身，不过经过一番折腾，你们还是找到了一个稍微舒服的位置。
 		#ELSEIF(pc.getHeightValue()>=200)
-			 Since you're quite tall, you find the space under the shop's counter to be a very tight squeeze, but with a little shuffling about, you manage to get into a somewhat comfortable position. 
+			由于你的个子比较高，你发现店里柜台下面的空间非常狭窄，但经过一番折腾，你还是找到了一个稍微舒适的位置。
 		#ENDIF
 	</p>
 	<p>
-		Grinning down at you, Scarlett lifts the bottom of her dress to reveal that she's wearing a pair of black boyshorts. Stepping a little closer, she hisses, [scarlett.speechNoEffects(What are you waiting for? Pull them down for me!)]
+		斯嘉丽朝你咧嘴一笑，撩起裙子的下摆，露出里面穿着的黑色平角裤。她走近一点，嘶声说， [scarlett.speechNoEffects(还在等什么？把它脱下来！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_COUNTER_ORAL_START"><![CDATA[
 	<p>
-		Doing as you're told, you pull down Scarlett's underwear to reveal
+		服从指令，你拉下斯嘉丽的内裤，看到
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 her bird-like cloaca.
+			她
 			#IF(scarlett.hasPenis())
-				 Her rapidly-hardening cock is already pushing out from between her folds, and as she bucks her hips forwards to push the [scarlett.cockHead+] against your [pc.lips+], she again hisses,
+				的阴茎迅速勃起，并从泄殖腔中弹了出来。然后她向前一顶，把[scarlett.cockHead+]怼到你[pc.lips+]边，继续嘶声道，
 			#ELSE
-				 Reaching down with one of her black-feathered wings, she spreads her folds to present you with her [scarlett.pussy+]. Bucking her hips forwards, she again hisses,
+				用黑翼将泄殖腔打开。然后她向前一顶，让你能清楚看到她[scarlett.pussy+]，继续嘶声道，
 			#ENDIF 
 		#ELSE
 			#IF(scarlett.hasPenis())
-				 her rapidly-hardening cock. Bucking her hips forwards to push the [scarlett.cockHead+] against your [pc.lips+], she again hisses,
+				的阴茎迅速勃起。然后她向前一顶，把[scarlett.cockHead+]怼到你[pc.lips+]边，继续嘶声道，
 			#ELSE
-				 her [scarlett.pussy+]. Bucking her hips forwards, she again hisses,
+				她[scarlett.pussy+]，继续嘶声道，
 			#ENDIF
 		#ENDIF
-		 [scarlett.speechNoEffects(Come on! Get started already!)]
+		[scarlett.speechNoEffects(来，开干！)]
 	</p>
 	<p>
-		Once again doing as you're told, you lean forwards
+		你听从新的指令，俯身
 		#IF(scarlett.hasPenis())
-			 and open your mouth to deliver a long, wet lick up the length of Scarlett's [scarlett.cock+]. Lapping up the salty bead of precum that's leaking out of the tip of her [scarlett.cock+], you part your [pc.lips+] and take her fully into your mouth. As you start giving her a blowjob, you hear her warning,
+			张开嘴，慢慢地服侍起斯嘉丽[scarlett.cock+]，把它完全润湿了。用舌尖勾走顶端渗出咸咸的先走液后，你将上下两唇张开，把整个柱体完全含进嘴里。当你开始为她口交时，你听到了她的警告，
 		#ELSE
-			 and open your mouth to deliver a long, wet lick up the length of Scarlett's [scarlett.labia+]. Planting a series of wet kisses on her feminine sex, you bury your face between her legs and slide your tongue into her hot, wet cunt. As you start enthusiastically eating her out, you hear her warning,
+			张开嘴，慢慢地服侍起斯嘉丽[scarlett.labia+]，把它完全润湿了。你在她漂亮的秘穴上留下一连串湿吻，然后埋下头把舌头伸进她湿热的阴户。当你开始热情的品尝时，你听到了她的警告，
 		#ENDIF
-		 [scarlett.speechNoEffects(Stay quiet under there! We can't let anyone find out what's going on, or else we'll both be in for it!)]
+		[scarlett.speechNoEffects(小声点！要是让其他人听到了，我们就惹上麻烦了！)]
 	</p>
 	<p>
-		Knowing that what Scarlett is saying is important, you realise that you'd better nor risk making any noise while doing this, or else both you and Scarlett will end up suffering Helena's wrath...
+		你知道斯嘉丽说的话很重要，这时候最好不要发出任何声音，否则你和斯嘉丽都会遭受海伦娜的怒火……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_AFTER_COUNTER_ORAL -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_AFTER_COUNTER_ORAL"><![CDATA[
 	<p>
-		Satisfied with your performance, Scarlett steps back, before pulling up her boyshorts and flattening down her skirt. Realising that the danger of being discovered still isn't past, you wait under the counter until the raven-harpy hisses, [scarlett.speech(Nobody's looking, get up!)]
+		斯嘉丽对你的表现很满意，她退后一步，然后拉起短裤，褪下裙子。你意识到被发现的危险还没有过去，就在柜台下等着，直到渡鸦哈比发出嘘声，[scarlett.speech(没人在看，快起来！)]
 	</p>
 	<p>
-		Shuffling forwards and rising to your [pc.feet], you manage to quickly [pc.step] around to the other side of the counter before anyone notices what's going on. Before you and Scarlett can exchange any more words with one another, Helena suddenly catches sight of you, and swiftly glides over from the other side of the store to greet you, [helena.speech(Hello again, [pc.name]. My dear Scarlett here informed me earlier that you'd left the store, but I see that you've now returned. Is there anything that I can help you with?)]
+		你清洗完毕，站起身来，在别人注意到发生了什么事之前，迅速[pc.step]绕到柜台的另一边。你和斯嘉丽还没来得及多说几句话，海伦娜突然发现了你，并迅速从店的另一边滑翔过来，向你打招呼，[helena.speech(你好，[pc.name]。我亲爱的斯嘉丽之前告诉我你离开了商店，但我看到你现在又回来了。有什么需要我帮忙的吗？)]
 	</p>
 	<p>
-		Moving around to stand just behind her matriarch, Scarlett flashes you a cheeky grin as she joins Helena in waiting to hear what it is you're after next... 
+		斯嘉丽转过身来，站在她的族长身后，向你露出一个腼腆的笑容，和海伦娜一起等着听你的下一个目标是什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_CAFE -->
@@ -1183,302 +1183,302 @@
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettCafeRevealed))
 		<p>
-			Wanting to spend more than just a few minutes talking with Scarlett, you ask her if she'd like to spend her lunch break with you again.
+			你想和斯嘉丽多聊几分钟，于是问她是否愿意再和你共度午休时间。
 			#IF(scarlett.isLikesPlayer())
-				 Blushing a little as she hears your suggestion, the raven-harpy replies, [scarlett.speech(I was thinking of going back to the cafe we went to last time, so I guess you could tag along if you want...)]
+				听到你的建议，渡鸦哈比脸红了一下，回答道，[scarlett.speech(我想再去我们上次去的那家咖啡馆，如果你愿意的话，我想你可以跟我一起去……)]
 			#ELSE
-				 Letting a look of absolute disgust quickly settle on her face, the rude harpy sneers, [scarlett.speech(Pay for my lunch again, cunt, and I'll consider letting you tag along.)]
+				脸上迅速浮现出绝对厌恶的表情，粗鲁的哈比嗤之以鼻道，[scarlett.speech(再给我付一次午餐费，骚货，我就考虑让你跟来。)]
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Wanting to spend more than just a few minutes talking with Scarlett, you ask her if she'd like to spend her lunch break with you.
+			你想和斯嘉丽多聊一会儿，于是问她是否愿意和你共度午休时间。
 			#IF(scarlett.isLikesPlayer())
-				 Blushing a little as she hears your suggestion, the raven-harpy replies, [scarlett.speech(I usually go and eat at a nearby cafe, so I guess you could tag along if you want...)]
+				受到你的邀请让她微微脸红，[scarlett.speech(我经常去一家附近的咖啡馆，你如果有兴趣我们可以一起去……)]
 			#ELSE
-				 Letting a look of absolute disgust quickly settle on her face, the rude harpy sneers, [scarlett.speech(You think I'd willingly spend my free time with a cunt like you? Perhaps if you pay for my lunch, I'll consider it.)]
+				她摆出一副很厌恶的脸，嫌弃道，[scarlett.speech(自由时间还要和你这个傻逼呆在一起？你要是买单，也不是不能考虑。)]
 			#ENDIF
 		</p>
 	#ENDIF
 	<p>
 		#IF(scarlett.isLikesPlayer())
-			Telling Scarlett that you'd love to accompany her to the cafe, you patiently wait as she darts off to get Helena's permission to take her lunch break. Quickly securing her matriarch's blessing, the raven-harpy returns to you and excitedly says, [scarlett.speech(Ok, I've got an hour for lunch, so let's go!)]
+			你告诉斯嘉丽你很乐意陪她去咖啡馆，然后就等她去找海伦娜申请午休。得到族长的许可后，斯嘉丽激动地飞奔回来，[scarlett.speech(好！我们有一个小时！走！)]
 		#ELSE
-			Crossing her black wing-like arms, Scarlett continues to sneer at you as she waits to hear what it is you'll say in response to her demand. If you want to accompany her on her lunch break, then it looks like you'll have to pay up...
+			斯嘉丽交叉着她黑色翅膀一样的手臂，继续对你冷嘲热讽，等着听你怎么回答她的要求。如果你想陪她午休，看来你得为她买单了……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_PAY"><![CDATA[
 	<p>
-		Deciding that it's an acceptable price to pay in exchange for having lunch with Scarlett, you hold out a hundred and fifty flames to the raven-harpy. Rudely snatching them out of your [pc.hand], she sneers, [scarlett.speech(That's a good bitch. Now stay here while I go tell Helena where we're going.)]
+		你觉得和斯嘉丽共进午餐花点钱没什么，于是拿出150火币递向斯嘉丽。她狠狠地从你手里抢了过去，坏笑道，[scarlett.speech(婊子，干的不错！乖乖待在这，我去跟海伦娜打个招呼。)]
 	</p>
 	<p>
-		Doing as you're asked, you patiently wait as the raven-harpy darts off to get Helena's permission to take her lunch break. Quickly securing her matriarch's blessing, Scarlett returns to you and snaps, [scarlett.speech(Ok, I've got an hour for lunch. Come on, bitch, you can tag along.)]
+		你听从要求，等在原地。斯嘉丽飞快地找到海伦娜申请和你一起去吃午餐，并取得了许可。她回来找到你，说：[scarlett.speech(走吧，婊子，跟着，就一个小时。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_CORE"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettCafeRevealed))
-			Letting Scarlett lead the way, you accompany her out of Helena's Boutique and down the busy street to the same cafe which the two of you visited last time.
+			走出海伦娜精品店，你让斯嘉丽带路，和她一起沿着繁华的街道来到上次你们去的那家小餐馆。
 		#ELSE
-			Letting Scarlett lead the way, you accompany her out of Helena's Boutique and down the busy street to a nearby cafe.
+			走出海伦娜精品店，你让斯嘉丽带路，和她一起沿着繁华的街道来到街边一家小餐馆。
 		#ENDIF
 		#IF(pc.hasCompanions())
-			 Before reaching the entrance, you let Scarlett get a little way ahead of you, before turning to [com.name] and telling [com.herHim] that [com.she]'d better wait outside. Happy enough to be avoiding the prospect of having Scarlett relentlessly insult [com.herHim], your companion readily agrees, and as the raven-harpy pushes open the cafe's front door, [com.she] hangs back and waits outside.
+			在进门之前，你放慢脚步，建议[com.name]在外面随便逛逛。你的同伴很高兴能有机会避开斯嘉丽的无情辱骂，便欣然表示自己不进去了，在斯嘉丽推开小餐馆的前门时，[com.she]和你们暂别。
 		#ELSE
-			 Eager to arrive at her destination, Scarlett doesn't even attempt to strike up a conversation with you, and rudely shoves her way past anyone who dares get in her way as she single-mindedly strides forwards and pushes open the cafe's front door.
+			斯嘉丽看起来已经很饿了，一言不发急匆匆地大步走了过去，粗鲁地挤开了挡路的人，直直向前，推开了咖啡馆的前门。
 		#ENDIF
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettCafeRevealed))
 		<p>
-			Following Scarlett's lead, you enter the busy cafe and join her in sitting down at one of the few empty tables. Having noticed your arrival, the same energetic rabbit-girl waitress from before bounces forwards and asks if she can take your orders. Returning her greeting with the usual angry scowl, Scarlett snaps, [scarlett.speech(Fucking hell, Beth, we've only just sat down!)]
+			你紧随其后，小餐馆生意很好，只剩几张空桌，你们挑了一张坐下。之前那个精力充沛的兔女服务员注意到你们的到来，蹦蹦跳跳地跑过来询问是否可以点餐。斯嘉丽一如既往地怒目而视，冷冷地说，[scarlett.speech(你瞎了吗，贝丝，看不到我们才坐下！)]
 		</p>
 		<p>
-			Placing her hands on her hips, the rabbit-girl pouts at Scarlett and whines,
+			兔女双手叉腰，朝斯嘉丽撅起嘴，抱怨道，
 			#IF(scarlett.hasPenis())
-				 [style.speechFeminine(Stop being so mean, Scarlett! If you keep on acting like this to me, I'll stop letting you hump my ass after work!)]
+				[style.speechFeminine(斯嘉丽，你就不能对我温柔点！你再这样下班也不准碰我的屁股！)]
 			#ELSE
-				 [style.speechFeminine(Stop being so mean, Scarlett! If you keep on acting like this to me, I'll stop going down on you after work!)]
+				[style.speechFeminine(斯嘉丽，你就不能对我温柔点！你再这样我下班也不会帮你口了！)]
 			#ENDIF
 		</p>
 		<p>
-			[scarlett.speech(As if you'd ever say no to me!)] your companion sneers, before throwing a glance over at you and saying, [scarlett.speech(I'm going to get the sandwiches again. What are you ordering, [pc.name]?)]
+			[scarlett.speech(说的好像你能拒绝我一样！)]斯嘉丽嗤之以鼻，然后看着你问道，[scarlett.speech(我还是老样子，三明治，你要什么？[pc.name]？)]
 		</p>
 	#ELSE
 		<p>
-			Following Scarlett's lead, you enter the busy cafe and join her in sitting down at one of the few empty tables. Having noticed your arrival, an energetic rabbit-girl waitress bounces forwards and asks if she can take your orders. Flashing her an angry scowl, Scarlett snaps, [scarlett.speech(Give me a fucking minute, Beth, I've only just sat down.)]
+			你紧随其后，小餐馆生意很好，只剩几张空桌，你们挑了一张坐下。一位精力充沛的兔女服务员注意到你们的到来，蹦蹦跳跳地跑过来询问是否可以点餐。斯嘉丽扫了她一眼，冷冷地说，[scarlett.speech(你急个屁，贝丝，看不到我才坐下！)]
 		</p>
 		<p>
-			Clearly being on familiar terms with one another, the rabbit-girl places her hands on her hips and pouts at Scarlett, before whining,
+			她们两人看上去关系很好。兔女双手叉腰，朝斯嘉丽撅起嘴，抱怨道，
 			#IF(scarlett.hasPenis())
-				 [style.speechFeminine(You're always so mean to me, Scarlett! How many times does a girl have to let you hump their ass before you start acting nicely to them?)]
+				[style.speechFeminine(斯嘉丽，你很过分！你到底要操我的屁股多少次才会对我好一点？)]
 			#ELSE
-				 [style.speechFeminine(You're always so mean to me, Scarlett! How many times does a girl have to go down on you before you start acting nicely to them?)]
+				[style.speechFeminine(斯嘉丽，你很过分！你到底要让我帮你口多少次才会对我好一点？)]
 			#ENDIF
 		</p>
 		<p>
-			[scarlett.speech(Eugh! You're so annoying! I guess I'll just have the usual sandwich selection,)] your companion snaps, before throwing a glance over at you and asking, [scarlett.speech(What are you getting, [pc.name]?)]
+			[scarlett.speech(噗！有人生气了！还是之前的三明治，)]斯嘉丽不以为意，然后看着你问道，[scarlett.speech(你要什么，[pc.name]？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_CAFE_REFUSE_TO_PAY -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_REFUSE_TO_PAY"><![CDATA[
 	<p>
-		Unwilling to hand over any money to the rude harpy, you tell Scarlett that you're not going to pay for her lunch. With an angry scowl on her face, she responds to your refusal by cursing at you, [scarlett.speech(Fucking cunt! Don't fucking ask me about lunch again unless you're willing to pay!)]
+		你对为一位无礼的哈比吃饭买单毫无兴趣，告诉斯嘉丽你不会掏钱的。她满脸怒容，破口大骂，[scarlett.speech(操你妈臭傻逼！钱都不付就别他妈叫我和你一起吃午饭！)]
 	</p>
 	<p>
-		With the rude harpy continuing to scowl and sneer at you, you wonder what you should say to her next...
+		这个粗鲁的哈比继续对你冷嘲热讽，你在想接下来该对她说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_CAFE_ARRIVE -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_ARRIVE_EATING_LUNCH"><![CDATA[
 	<p>
-		With not much on the menu that grabs your interest, you decide to play it safe and order the same sandwich selection which Scarlett has gone for. After telling the waitress what you've chosen and handing over the one hundred and fifty flames she asks for, you and Scarlett are left alone while she hurries off to fetch your food.
+		你没什么特别想吃的，稳妥起见，点了和斯嘉丽一样的三明治。女服务员在你下单时索要了150火币的小费，得到后她有眼力地退下备菜，留下你和斯嘉丽独处。
 	#IF(scarlett.isLikesPlayer())
-			 Clearly liking you more than most other people she knows, Scarlett flashes you a slight smile, before slouching down in the chair opposite to yours and asking, [scarlett.speech(So, [pc.name], why did you want to spend lunch with me?)]
+			斯嘉丽对你的好感超过了一般朋友。她对你微微一笑，懒散着坐在你的对面，开口道，[scarlett.speech(那么，[pc.name]，你为什么想和我一起吃午饭？)]
 		</p>
 		<p>
-			Knowing that she's still likely to lose her temper if you don't handle this correctly, you tell Scarlett that you simply wanted to spend some time with her in order to get to know her better. Upon hearing this, the rude harpy's cheeks flush red, and after crossing her wing-like arms, she huffs, [scarlett.speech(Well, I don't mind that, I guess...)] 
+			你知道如果处理不当，她还是会发脾气，于是你告诉斯嘉丽，你只是想和她相处一段时间，以便更好地了解她。听了这话，粗鲁的哈比脸颊变得绯红，交叉着翅膀般的手臂，哼了一声，[scarlett.speech(好吧，我不介意，大概吧……)] 
 		</p>
 	#ELSE
-			 Despite the fact that you've paid for her lunch, Scarlett still doesn't show any sign of liking you, and as you wait for the waitress to return, she slouches down in the chair opposite to yours and asks,
+			尽管你已经为她付了午餐费，斯嘉丽仍然没有表现出任何喜欢你的迹象，当你等待服务员回来时，她懒洋洋地坐在你对面的椅子上问道，
 			#IF(scarlett.hasPenis())
-				 [scarlett.speech(So go on then, cunt, tell me why the fuck you wanted to ruin my lunch break. Were you hoping to suck my cock or something?)]
+				[scarlett.speech(那就说吧，骚货，告诉我你他妈为什么要毁了我的午休时间 。你是想嗦我牛子还是怎么的？)]
 			#ELSE
-				 [scarlett.speech(So go on then, bitch, tell me why the fuck you wanted to ruin my lunch break. Were you hoping to get a taste of my cunt or something?)]
+				[scarlett.speech(说吧，婊子，告诉我你为什么要破坏我的午休时间。你是想尝尝我的穴还是什么？)]
 			#ENDIF
 		</p>
 		<p>
-			Knowing that she's likely to lose her temper if you don't handle this correctly, you tell Scarlett that you simply wanted to spend some time with her in order to get to know her better. Upon hearing this, the rude harpy's cheeks flush red, and after crossing her wing-like arms, she huffs, [scarlett.speech(I don't even fucking care... Just don't do anything to piss me off!)] 
+			你知道回答不当的话会让她生气，于是你告诉斯嘉丽，你只是想和她相处一段时间，以便更好地了解她。听了这话，粗鲁的哈比脸颊变得绯红，交叉着翅膀般的手臂，哼了一声，[scarlett.speech(只要别打扰到我，你要做什么我才不……不关心呢！)] 
 		</p>
 	#ENDIF
 	<p>
-		At that moment, the rabbit-girl waitress bounces back over to your table, and after placing the sandwiches down in front of the two of you, she cheerily asks, [style.speechFeminine(Is there anything else I can get you?)]
+		这时，兔女服务员又蹦蹦跳跳地来到你们桌前，把三明治放在你们俩面前，她兴高采烈地问：[style.speechFeminine(还需要点什么吗？)]
 	</p>
 	<p>
-		[scarlett.speech(No, Beth, just fucking leave us alone already!)] Scarlett rudely replies, causing the rabbit-girl to playfully pout at her before turning around and skipping off. Turning her attention to the collection of sandwiches in front of her, Scarlett starts greedily wolfing them down. Following her lead, you get tucked into your own plate of food, and spend the next several minutes working your way through the impressive selection of sandwiches.
+		[scarlett.speech(不要了，贝丝，别在这碍着我眼了！)]斯嘉丽毫不客气地回答。兔女服务员俏皮地噘了噘嘴，然后转身蹦蹦跳跳离开了。斯嘉丽把注意力转移到她面前的三明治上，开始贪婪地狼吞虎咽起来。你也学着她的样子，夹起自己盘子里的食物，用几分钟的时间吃完了这些精心挑选的三明治。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_ARRIVE_NO_LUNCH"><![CDATA[
 	<p>
-		With not much on the menu that grabs your interest, you decide not to order anything. After telling the waitress that it's just Scarlett who's ordering food, the two of you are left alone while she hurries off to fetch your companion's food.
+		你没什么特别想吃的，于是让斯嘉丽点单。点完单后，女服务员就有眼力地退下备菜，留下你和斯嘉丽独处。
 	#IF(scarlett.isLikesPlayer())
-			 Clearly liking you more than most other people she knows, Scarlett flashes you a slight smile, before slouching down in the chair opposite to yours and asking, [scarlett.speech(So, [pc.name], why did you want to spend lunch with me?)]
+			斯嘉丽对你的好感超过了一般朋友。她对你微微一笑，懒散着坐在你的对面，开口道，[scarlett.speech(那么，[pc.name]，你为什么想和我一起吃午饭？)]
 		</p>
 		<p>
-			Knowing that she's still likely to lose her temper if you don't handle this correctly, you tell Scarlett that you simply wanted to spend some time with her in order to get to know her better. Upon hearing this, the rude harpy's cheeks flush red, and after crossing her wing-like arms, she huffs, [scarlett.speech(Well, I don't mind that, I guess...)] 
+			你知道如果处理不当，她还是会发脾气，于是你告诉斯嘉丽，你只是想和她相处一段时间，以便更好地了解她。听了这话，粗鲁的哈比脸颊变得绯红，交叉着翅膀般的手臂，哼了一声，[scarlett.speech(好吧，我不介意，大概吧……)] 
 		</p>
 	#ELSE
-			 Despite the fact that you've paid for her lunch, Scarlett still doesn't show any sign of liking you, and as you wait for the waitress to return, she slouches down in the chair opposite to yours and asks,
+			尽管你已经为她付了午餐费，斯嘉丽仍然没有表现出任何喜欢你的迹象，当你等待服务员回来时，她懒洋洋地坐在你对面的椅子上问道，
 			#IF(scarlett.hasPenis())
-				 [scarlett.speech(So go on then, cunt, tell me why the fuck you wanted to ruin my lunch break. Were you hoping to suck my cock or something?)]
+				[scarlett.speech(那就说吧，骚货，告诉我你他妈为什么要毁了我的午休时间 。你是想嗦我牛子还是怎么的？)]
 			#ELSE
-				 [scarlett.speech(So go on then, bitch, tell me why the fuck you wanted to ruin my lunch break. Were you hoping to get a taste of my cunt or something?)]
+				[scarlett.speech(说吧，婊子，告诉我你为什么要破坏我的午休时间。你是想尝尝我的穴还是什么？)]
 			#ENDIF
 		</p>
 		<p>
-			Knowing that she's likely to lose her temper if you don't handle this correctly, you tell Scarlett that you simply wanted to spend some time with her in order to get to know her better. Upon hearing this, the rude harpy's cheeks flush red, and after crossing her wing-like arms, she huffs, [scarlett.speech(I don't even fucking care... Just don't do anything to piss me off!)] 
+			你知道回答不当的话会让她生气，于是你告诉斯嘉丽，你只是想和她相处一段时间，以便更好地了解她。听了这话，粗鲁的哈比脸颊变得绯红，交叉着翅膀般的手臂，哼了一声，[scarlett.speech(只要别打扰到我，你要做什么我才不……不关心呢！)] 
 		</p>
 	#ENDIF
 	<p>
-		At that moment, the rabbit-girl waitress bounces back over to your table, and after placing the sandwiches down in front of Scarlett, she cheerily asks, [style.speechFeminine(Is there anything else I can get you?)]
+		这时，兔女服务员又蹦蹦跳跳地来到你们桌前，把三明治放在斯嘉丽面前，她兴高采烈地问：[style.speechFeminine(还需要点什么吗？)]
 	</p>
 	<p>
-		[scarlett.speech(No, Beth, just fucking leave us alone already!)] Scarlett rudely replies, causing the rabbit-girl to playfully pout at her before turning around and skipping off. Turning her attention to the collection of sandwiches in front of her, Scarlett starts greedily wolfing them down, leaving you to spend the next several minutes with little to do other than watch the hungry harpy work her way through her lunch.
+		[scarlett.speech(不要了，贝丝，别在这碍着我眼了！)]斯嘉丽毫不客气地回答。兔女服务员俏皮地噘了噘嘴，然后转身蹦蹦跳跳离开了。斯嘉丽把注意力转移到她面前的三明治上，开始贪婪地狼吞虎咽起来。你只是看着她大快朵颐地样子，就十分满足了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMATION_DISCUSSION"><![CDATA[
 	<p>
-		Soon enough, Scarlett's completely cleared her plate, and after leaning back in her chair and letting out a huge burp, she comments, [scarlett.speech(You know, [pc.name], I actually wanted to ask your opinion on something...)]
+		不一会儿，斯嘉丽就把盘子里的东西吃得干干净净，她靠在椅子上打了个大大的饱嗝，然后咧嘴笑着对你说，[scarlett.speech(话说，[pc.name]，帮我出个主意……)]
 	</p>
 	<p>
-		Wondering what that could be, you watch as the raven-harpy produces a small bottle of what looks like a transformative potion, and after she's placed it down on the table in front of her, you listen attentively as she explains,
+		你有点好奇，她拿出一小瓶看起来像转化药水的东西放在面前的桌子上，向你解释，
 		#IF(scarlett.hasPenis())
-			 [scarlett.speech(Helena gave this to me for 'being a good girl', and said that it'd make my cock bigger. Pretty much all female harpies prefer their partners' cocks to be as small and feminine as possible, but seeing as all the nest knows that I'm Helena's personal assistant, they won't care if I'm bigger than they normally like. After all, they'll be closer to Helena by association if they get fucked by me, so it's not like having a bigger cock will make me unfuckable. I guess having a bigger cock would be nice, but I'm still not sure whether I should drink this or not...)]
+			[scarlett.speech(这是海伦娜为了表扬我‘是个好女孩’送给我的，听说它能让我的鸡巴变大。几乎所有的哈比都喜欢自己伴侣的鸡巴越小越好，越有女人味越好，但因为全巢穴的人都知道我是海伦娜的私人助理，所以她们不会在意我的鸡巴是否比她们平时喜欢的大。毕竟，如果他们被我干了，他们就会和海伦娜更亲近，所以鸡巴大一点也不会影响我平时和她们做。我想有个更大的鸡巴也不错，但我还是不确定该不该喝这个……)]
 		#ELSE
-			 [scarlett.speech(Helena gave this to me for 'being a good girl', and said that it'd make me even more feminine, as well as make my tits grow bigger. It's actually really annoying to have big tits when you're trying to fly around and show off to the other harpies, but seeing as all the nest knows that I'm Helena's personal assistant, there's no real need for me to perform any aerobatics. After all, I already have over a dozen harpies willing to do literally anything I ask them just so that they'll be closer to Helena by association. I guess being more attractive would be nice, but I'm still not sure whether I should drink this or not...)]
+			[scarlett.speech(海伦娜为了表扬我‘是个好女孩’，把这个送给了我，还说它能让我的奶子变大。其实，其实，当你想飞来飞去向其他哈比炫耀求偶时，一对大奶子就会很碍事，但既然全巢穴的人都知道我是海伦娜的私人助理，我也就没必要再表演什么特技飞行了。毕竟，我已经有十几个哈比愿意为我做任何事了，这样她们就能和海伦娜走得更近。我想奶子变大点变得更有魅力也不错，但我还是不确定该不该喝这个……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(scarlett.isLikesPlayer())
-			As she trails off and falls silent, you realise that Scarlett is wanting to hear your input on this manner. As you consider whether or not to encourage her to drink the potion, she blushes a little and asks, [scarlett.speech(So, what do you think?)]
+			你从她的沉默中感到了她的动摇，斯嘉丽很有可能听取你的建议。她红着脸问你：[scarlett.speech(那么，你怎么看？)]
 		#ELSE
-			As she trails off and falls silent, you realise that Scarlett is wanting to hear your input on this manner. As you consider whether or not to encourage her to drink the potion, she lets out a frustrated sigh and asks, [scarlett.speech(Come on, what do you think?)]
+			你从她的沉默中感到了她的动摇，斯嘉丽很有可能听取你的建议。她纠结地叹了口气，问：[scarlett.speech(那么，你怎么看？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMATION_DISCUSSION_REPEAT"><![CDATA[
 	<p>
-		Soon enough, Scarlett's completely cleared her plate, and after leaning back in her chair and letting out a huge burp, she comments, [scarlett.speech(You know, [pc.name], I've still got that potion Helena gave to me...)]
+		不一会儿，斯嘉丽就把盘子里的东西吃得干干净净，她靠在椅子上打了个大大的饱嗝，然后咧嘴笑着对你说，[scarlett.speech(你还记得吗，[pc.name]，我还留着海伦娜给我的魔药……)]
 	</p>
 	<p>
-		Before you can offer a reply, the harpy produces the same small bottle of transformative potion that she showed you before, and after she's placed it down on the table in front of her, she asks,
+		还没等你回答，哈比就拿出了之前给你看的那一小瓶转化药水，把它放在面前的桌子上后，她问道，
 		#IF(scarlett.hasPenis())
-			 [scarlett.speech(Do you think I should drink it now? Having a bigger cock wouldn't be so bad...)]
+			[scarlett.speech(你说我到底要不要喝呢？有个大鸡巴好像也不错……)]
 		#ELSE
-			 [scarlett.speech(Do you think I should drink it now? Having bigger boobs wouldn't be so bad...)]
+			[scarlett.speech(你说我到底要不要喝呢？有对大奶子好像也不错……)]
 		#ENDIF
 	</p>
 	<p>
-		As she trails off and falls silent, you realise that you've got another chance in which to encourage her to transform herself. Then again, if you're still of the same mind as last time, you could always tell her not to go ahead with drinking it...
+		你从她的沉默中感到了她的动摇，如果你改变主意想转化她，这将是个好机会。话又说回来，如果你还是那个想法，也可以继续让她不要喝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMATION_APPLIED"><![CDATA[
 	<p>
-		Soon enough, Scarlett's completely cleared her plate, and after leaning back in her chair and letting out a huge burp, she flashes you a cheeky grin and comments,
+		不一会儿，斯嘉丽就把盘子里的东西吃得干干净净，她靠在椅子上打了个大大的饱嗝，然后咧嘴笑着对你说，
 		#IF(scarlett.hasPenis())
-			 [scarlett.speech(You know, [pc.name], ever since you convinced me to take that potion, my big cock's always desperate for attention. How about you take responsibility for getting me to transform myself and give me a quick handjob?)]
+			[scarlett.speech(你知道吗，[pc.name]，自从你说服我吃了那药水之后，我的大鸡巴总是饥渴难耐。不如你负个责，用手帮我解决下？)]
 		#ELSE
-			 [scarlett.speech(You know, [pc.name], ever since you convinced me to take that potion, my horny little cunt's always wet and hungry for attention. How about you take responsibility for getting me to transform myself and give me a quick fingering?)]
+			[scarlett.speech(你知道吗，[pc.name]，自从你说服我吃了那药水之后，我的小穴总是饥渴难耐。不如你负个责，用手帮我解决下？)]
 		#ENDIF
 	</p>
 	<p>
-		Pushing her chair back a little, Scarlett spreads her legs and gestures for you to come and sit down beside her. As there's a large cloth draped over the table, you're sure that nobody would be able to see you
+		斯嘉丽把椅子往后推了一下，张开双腿，示意你到她身边坐下。你确认了一下，桌子上铺着的大布能让你悄悄地
 		#IF(scarlett.hasPenis())
-			 jerking the horny harpy off
+			用手让这只哈比荡妇射出来
 		#ELSE
-			 fingering the horny harpy
+			用手指让这只哈比荡妇高潮
 		#ENDIF
-		, but if you'd rather not risk it, you could always just say no...
+		，不过你也有一点担心，想要拒绝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_NO_TRANSFORMATION"><![CDATA[
 	<p>
-		Not wanting Scarlett to be transformed, you tell her that she shouldn't drink the potion, as she might not be happy with what happens to her. Letting out an annoyed huff and rolling her eyes, the harpy nevertheless listens to what you have to say, and after putting the potion away, she mutters, [scarlett.speech(I'll hold on to it in case I decide to drink it at another time...)]
+		你不想让斯嘉丽喝下药水转化，劝她说喝下之后可能会后悔。斯嘉丽听了你的话将药水收好，但还是翻了个白眼，嘟嘟囔囔，[scarlett.speech(那我还是留着，下次想喝了就喝……)]
 	</p>
 	<p>
-		With still plenty of time left until her lunch break is over, Scarlett sinks down in her chair and lets out a relaxed sigh.
+		你们吃的很快，午休还剩了一段时间。斯嘉丽放松身体懒散地靠着椅子上，发出了满足的叹息。
 		#IF(scarlett.isLikesPlayer())
-			 Taking this opportunity to get to know her a little better, you strike up a conversation with the raven-harpy, and much to your delight, she readily starts talking with you about the recent mundane events both in her life and in Dominion as whole.
+			抓住这个机会，你抛出话题想了解她更多。她开始主动分享生活中的琐事和御城区的八卦，这让你很开心。
 		#ELSE
-			 Taking this opportunity to get to know her a little better, you strike up a conversation with the raven-harpy, and much to your delight, she actually proves willing to talk with you about the recent mundane events both in her life and in Dominion as whole.
+			抓住这个机会，你抛出话题想了解她更多。她也不反对谈及一些生活中的琐事和御城区的八卦，这让你很开心。
 		#ENDIF
 	</p>
 	<p>
-		After a good while spent talking with one another in this manner, Scarlett suddenly pushes her chair back and stands up. With a huge stretch of her black-feathered wing-like arms, she declares, [scarlett.speech(It's time for me to get back to work. Helena'll be pissed off if I'm late...)]
+		就这样互相交谈了好一会儿，斯嘉丽突然把椅子往后一推，站了起来。她伸展了一下黑羽毛翅膀般的手臂，宣布道： [scarlett.speech(我要回去工作了，太晚的话海伦娜又会逼逼了……)]
 	</p>
 	<p>
-		Following Scarlett's lead, you stand up and follow her out of the cafe.
+		你起身，跟着她一起走出了咖啡馆。
 		#IF(pc.hasCompanions())
-			 Meeting up with [com.name] again, the three of you set off on your way back to Helena's Boutique...
+			你们与[com.name]会合，然后三人踏上了返回海伦娜精品店的路……
 		#ELSE
-			 [pc.Stepping] back out into the streets of Slaver Alley, the two of you set off on your way back to Helena's Boutique...
+			你们俩回到奴隶巷的街道上，踏上了回海伦娜精品店的路……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMED"><![CDATA[
 	<p>
 		#IF(scarlett.hasPenis())
-			Thinking that it would be good for Scarlett to have a larger cock, you tell her that she should drink the transformation potion.
+			你认为斯嘉丽的阴茎再大一些就好了，因此建议她应该喝下转化魔药。
 		#ELSE
-			Thinking that it would be good for Scarlett to have larger breasts and more feminine features, you tell her that she should drink the transformation potion.
+			你认为斯嘉丽能更女性化一点，奶子能更大一些就好了，因此建议她应该喝下转化魔药。
 		#ENDIF
-		 Not needing any more convincing than that, the raven-harpy pulls out the bottle's stopper, and after throwing one last glance your way to make sure that you're not tricking her, she brings the vessel up to her waiting lips and quickly downs all of the liquid contained within.
+		她没有让你进一步解释，只是看了你一眼确保你没有开玩笑，就迫不及待打开瓶塞，一饮而尽。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMED_EXTRA"><![CDATA[
 	<p>
 		#IF(scarlett.hasPenis())
-			Thinking that it would be good for Scarlett to have a much larger cock, you tell her that you could spend some of your arcane essences to boost the effects of her transformative potion.
+			你认为斯嘉丽的鸡巴能更大一些更好，因此告诉她，你可以用一些奥术精华来增强她的转化魔药的效果。
 		#ELSE
-			Thinking that it would be good for Scarlett to have much larger breasts and far more feminine features, you tell her that you could spend some of your arcane essences to boost the effects of her transformative potion.
+			你认为斯嘉丽能更女性化一点，奶子能更大一些更好，因此告诉她，你可以用一些奥术精华来增强她的转化魔药的效果。
 		#ENDIF
-		 Throwing you a sly smirk, the raven-harpy slides the potion across the table, before saying, [scarlett.speech(Go on then, make it more powerful!)]
+		斯嘉丽发出坏笑，把魔药从桌子上滑向你，说，[scarlett.speech(那就来，让变化来得更猛烈吧！)]
 	</p>
 	<p>
-		By channelling ten of your arcane essences into the potion, you're able to boost the potency of its transformative effects. Satisfied with the result of your enchantment, you pass the bottle back to Scarlett, who immediately pulls out the stopper and brings the vessel up to her waiting lips. Flashing you one last smirk, she quickly downs all of the liquid contained within, before slamming the now-empty bottle back down onto the table and letting out a small burp.
+		你将10奥术精华注入魔药中，增强了药水的转化效果。你对魔法的效果感到满意，把瓶子递还给斯嘉丽，她迫不及待地拔出瓶塞，把魔药倒入嘴里，喝光了瓶中的液体，然后把空瓶子重重地摔在桌子上，最后朝你露出坏笑，打了个小小的饱嗝。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMED_CORE"><![CDATA[
 	<p>
 		#IF(scarlett.hasPenis())
-			[scarlett.speech(~Ooh!~ I feel hot...)] Scarlett half-pants, half-moans, before pushing back on her chair a little and looking down between her legs. Showing no shame, she lifts up the skirt of her dress and pulls her boyshorts to one side, which results in her rapidly-hardening cock to being completely exposed to you. Letting out a devious chuckle, the raven-harpy runs her feathered fingers up and down over the length of her erect shaft, and as she does so, you see it growing in both length and girth. Within moments, it's expanded from being both slender and [style.sizes(8)] in length to being [scarlett.a_cockGirth] and [scarlett.cockLengthValue]. With a delighted grin on her face, the raven-harpy looks up at you and moans, [scarlett.speech(Come and take responsibility for what you've made me do! I want you jerking my big cock off until I cum all over your [pc.hands]!)]
+			[scarlett.speech(哦~好热……)]斯嘉丽发出了夹杂着喘息的呻吟。她推开椅子，色气地拉起裙子并把平角裤挪开，露出整个迅速勃起的鸡巴。她意乱神迷，开始用覆有羽毛地手指握住茎体上下撸动。而伴随着她淫邪地笑声，她的鸡巴肉眼可见地膨胀起来，在短短地时间内，从纤细的[style.sizes(8)]小鸡巴变成了[scarlett.cockLengthValue]的[scarlett.a_cockGirth]鸡巴。斯嘉丽笑了出来，开心地看着你说，[scarlett.speech(过来，为你的建议负责！我要用这根大鸡巴射的你满[pc.hands]都是！)]
 		#ELSE
-				[scarlett.speech(~Ooh!~ I feel hot...)] Scarlett half-pants, half-moans, before lifting her feathered hands up to her chest and shamelessly groping her small, B-cup breasts. As she feels herself up, you can't help but stare as you see her tits quickly expand and grow into what must be [scarlett.cupSize]-cups. While not large by Dominion standards, they certainly are for a harpy, and Scarlett can't help but coo in delight as she realises that she's now one of the bustiest harpies in all of Helena's flock. While making these happy little noises, her face softens and subtly shifts into being a distinctly more beautiful version of how she looked just a few moments ago.
+			[scarlett.speech(哦~好热……)]斯嘉丽发出了夹杂着喘息的呻吟。她色气地开始用覆有羽毛地双手刺激她的奶子。随着她的不停抚摸，她的胸部迅速地变大，从B罩杯膨胀到了[scarlett.cupSize]罩杯。这个大小在御城区不算什么，但在海伦娜部族中足以称霸。她脸部线条也变得更加柔和，衬托得她更加美丽动人。一想到在短短时间内提升了这么多魅力，她兴奋地咕咕直叫。
 			</p>
 			<p>
-				As these changes come to an end, Scarlett suddenly gasps and drops one of her feathered hands down between her bird-like legs. Biting her lip and shuffling about on her chair, she whines, [scarlett.speech(Fuck! I'm so wet down here! Come and take responsibility for what you've made me do! I want you fingering my hot little cunt until I'm squirting all over your [pc.hands]!)]
+				转变结束，斯嘉丽咬着嘴唇，把长满羽毛的手垂下，放在两条鸟一般的腿间。她不停在椅子上晃来晃去，抱怨道，[scarlett.speech(操！湿透了！过来，为你的建议负责！把手指放到我的小穴里来，我要把爱液弄得你满[pc.hands]都是！)]
 		#ENDIF
 	</p>
 	<p>
-		Pulling her chair forwards again, Scarlett spreads her legs and gestures for you to come and sit down beside her. As there's a large cloth draped over the table, you're sure that nobody would be able to see you
+		斯嘉丽把椅子拉回来，张开双腿，示意你到她身边坐下。你确认了一下，桌子上铺着的大布能让你悄悄地
 		#IF(scarlett.hasPenis())
-			 jerking the horny harpy off
+			用手让这只哈比荡妇射出来
 		#ELSE
-			 fingering the horny harpy
+			用手指让这只哈比荡妇高潮
 		#ENDIF
-		, but if you'd rather not risk it, you could always just say no...
+		，不过你也有一点担心，想要拒绝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1486,47 +1486,47 @@
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMED_NO_SEX"><![CDATA[
 	<p>
-		Not wanting to
+		你不想在公共场合
 		#IF(scarlett.hasPenis())
-			 give Scarlett a handjob
+			帮斯嘉丽撸
 		#ELSE
-			 finger Scarlett
+			指交斯嘉丽
 		#ENDIF
-		 in such a public setting, you tell her that she'll have to make do with masturbating if she's really that horny. Letting out an annoyed huff, the raven-harpy
+		，就和她说如果她真的那么饥渴的话最好自己解决。斯嘉丽哼了一声，
 		#IF(scarlett.isLikesPlayer())
-			 whines, [scarlett.speech(Fine... I'll just do it myself later...)]
+			抱怨道，[scarlett.speech(好吧……我等会儿自己解决……)]
 		#ELSE
-			 snaps, [scarlett.speech(It's not like I actually expected a fucking cunt like you to help me out. I'll just do it myself later...)]
+			怒喊道，[scarlett.speech(我才没真的指望你这个傻逼……我等会儿就自己解决……)]
 		#ENDIF
 	</p>
 	<p>
-		Before you have a chance to respond, Scarlett suddenly pushes her chair back and stands up. With a huge stretch of her black-feathered wing-like arms, she declares, [scarlett.speech(It's time for me to get back to work. Helena'll be pissed off if I'm late...)]
+		你还在想再说点什么，斯嘉丽就把椅子往后一推，站了起来。她伸展了一下黑羽毛翅膀般的手臂，宣布道： [scarlett.speech(我回去工作了，免得海伦娜又要逼逼……)]
 	</p>
 	<p>
-		Following Scarlett's lead, you stand up and follow her out of the cafe.
+		你起身，跟着她一起走出了咖啡馆。
 		#IF(pc.hasCompanions())
-			 Meeting up with [com.name] again, the three of you set off on your way back to Helena's Boutique...
+			你们与[com.name]会合，然后三人踏上了返回海伦娜精品店的路……
 		#ELSE
-			 [pc.Stepping] back out into the streets of Slaver Alley, the two of you set off on your way back to Helena's Boutique...
+			你们俩回到奴隶巷的街道上，踏上了回海伦娜精品店的路……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_MASTURBATION_START"><![CDATA[
 	<p>
-		Not wanting to disappoint your feathered friend, you move around to the other side of the table and sit down next to her, before sliding one of your [pc.hands] down under the table to stroke her smooth, bird-like leg. Shuffling a little closer to you, Scarlett reaches down to grab your [pc.hand], before impatiently guiding up between her legs and hissing, [scarlett.speechNoEffects(Come on, get to work!)]
+		你不想让你的哈比朋友失望，于是你走到桌子的另一边，在她身边坐下，把你的一只[pc.hands]滑到桌子下面，抚摸她光滑的鸟一般的腿。斯嘉丽不耐烦地靠过来，伸手抓住你的[pc.hand]，引向她的两腿之间，并嘶嘶地叫道：[scarlett.speechNoEffects(快点，动起来！)]
 	</p>
 	<p>
-		Doing as you're told,
+		如她所说，
 		#IF(scarlett.hasPenis())
-			 you wrap your [pc.fingers+] around the raven-harpy's erect cock and start jerking her off under the table. Letting out a quiet sigh, Scarlett leans back in her chair and grins as you continue to give her a handjob...
+			你用[pc.fingers+]握住斯嘉丽勃起的阴茎，在桌子下帮她撸了起来。她轻轻地娇喘着，靠在椅子上，淫笑着鼓励你继续……
 		#ELSE
-			 you slide your [pc.fingers+] up and down over the raven-harpy's [scarlett.labia+], before pushing them into her wet pussy and starting to finger her under the table. Letting out a quiet sigh, Scarlett leans back in her chair and grins as you continue to stimulate her horny cunt...
+			你用[pc.fingers+]在斯嘉丽[scarlett.labia+]上滑动，然后探进她湿润的小穴，开始在桌子下指交她。斯嘉丽轻轻地娇喘着，靠在椅子上，淫笑着鼓励你继续……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_CAFE_AFTER_ORAL -->
@@ -1534,50 +1534,50 @@
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_AFTER_SEX"><![CDATA[
 	<p>
 		#IF(scarlett.hasPenis())
-			Having had enough of the handjob you've been giving her, Scarlett pushes your [pc.hand] away from her softening cock
+			斯嘉丽满足了你的手交，将你的[pc.hand]从她变软的鸡巴上拿开
 		#ELSE
-			Having had enough of being fingered, Scarlett pushes your [pc.hand] away from her sopping-wet pussy
+			斯嘉丽满足了你的手交，将你的[pc.hand]从她湿漉漉的小穴拿开
 		#ENDIF
-		 and declares, [scarlett.speech(Good job, [pc.name], that was fun... Now it's time for me to get back to work. Helena'll be pissed off if I'm late...)]
+		并说，[scarlett.speech(干得好，[pc.name]，很有趣……现在我该回去工作了，如果我迟到了，海伦娜会生气的……)]
 	</p>
 	<p>
-		Before you have a chance to do anything, Scarlett pulls her boyshorts and dress back into their proper position, before pushing her chair back and standing up. With a huge stretch of her black-feathered wing-like arms, she turns around and sets off towards the cafe's exit. Following her lead, you stand up and follow Scarlett out of the cafe.
+		还没等你有机会做点其他的，斯嘉丽就整理好了衣服，然后推开椅子站了起来。她伸展了一下覆有黑羽的翅膀般的手臂，转身走向咖啡馆的出口。你起身，跟着她一起走出了咖啡馆。
 		#IF(pc.hasCompanions())
-			 Meeting up with [com.name] again, the three of you set off on your way back to Helena's Boutique...
+			你们与[com.name]会合，然后三人踏上了返回海伦娜精品店的路……
 		#ELSE
-			 [pc.Stepping] back out into the streets of Slaver Alley, the two of you set off on your way back to Helena's Boutique...
+			你们俩回到奴隶巷的街道上，踏上了回海伦娜精品店的路……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_CAFE_RETURNED -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_CAFE_RETURNED"><![CDATA[
 	<p>
-		After just a few more minutes, you and Scarlett find yourselves once again stepping inside Helena's Boutique. Almost immediately, the beautiful harpy matriarch notices your return and sweeps across the shop floor to softly greet you, [helena.speech(Hello again, [pc.name]. I trust that you and my dear Scarlett had a pleasant time together?)]
+		仅仅在几分钟后，你和斯嘉丽再次踏进海伦娜精品店。就在你踏进门口的一刹那，美丽的哈比注意到了你们的归来，她穿过店面，轻轻地向你们打招呼，[helena.speech(又见面了，[pc.name]。我相信你和我亲爱的斯嘉丽相处得很愉快吧？)]
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettExtraTransformationApplied) && scarlett.hasVagina() && !game.getDialogueFlags().hasFlag(FLAG_helenaShopScarlettExtraTransformationHelenaReacted))
 		<p>
-			After you've answered in the affirmative, Helena flashes you a smile and turns towards the raven-harpy standing beside you. Obviously having noticed her subordinate's beautiful face and large bust, she says, [helena.speech(Good, I see that you've taken the transformation potion which I gave you. I was concerned that people might think you not attractive enough to be so close to me, but now that I've had you improved, that will no longer be an issue.)]
+			在你做出肯定回答后，海伦娜向你微笑示意，并转向站在你身旁的渡鸦哈比。她显然注意到了她的下属美丽的脸庞和丰满的胸部，她说，[helena.speech(很好，看来你已经喝下了我给你的转化药水。我本来还担心你会觉得自己不够迷人以至于不敢离我这么近，但现在我让你得到了改善，这就不再是个问题了。)]
 		</p>
 		<p>
-			Awkwardly shuffling around on her talons, Scarlett mutters, [scarlett.speech(Thank you, Helena...)]
+			斯嘉丽尴尬地用爪子晃来晃去，嘴里嘟囔着，[scarlett.speech(谢谢你，海伦娜……)]
 		</p>
 	#ELSE
 		<p>
-			After you've answered in the affirmative, Helena flashes you a smile and turns towards the raven-harpy standing beside you. Narrowing her eyes a little, she says, [helena.speech(I hope that you treated [pc.name] with respect, my dear.)]
+			在你做出肯定回答后，海伦娜向你微笑示意，然后面向站在你身边的鸦哈比。她微微眯起眼睛，说道，[helena.speech(我希望你有好好尊重我们的[pc.name]，亲爱的。)]
 		</p>
 		<p>
-			Awkwardly shuffling around on her talons, Scarlett mutters, [scarlett.speech(Yes, Helena...)]
+			斯嘉丽尴尬地用爪子晃来晃去，嘴里嘟囔着，[scarlett.speech(是的，海伦娜……)]
 		</p>
 	#ENDIF
 	<p>
-		Turning back to face you, the beautiful harpy matriarch asks, [helena.speech(So, [pc.name], is there anything I can help you with?)]
+		转过身来面对你，美丽的哈比族长问道，[helena.speech(那么，[pc.name]，有什么需要我效劳的吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	

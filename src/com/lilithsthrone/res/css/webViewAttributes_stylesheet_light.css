@@ -1,7 +1,7 @@
 html {
 	background: #fcfcfc;
-	font-family: Calibri, Carlito, sans-serif;
-	font-size:11pt;
+	font-family:"Source Han Sans CN", Calibri, Carlito, sans-serif;
+	font-size:9pt;
 	font-size:7vw; /*font-size:2vw;*/
 	color: #262626;
 	overflow:hidden;
@@ -225,7 +225,7 @@ h6{
 }
 
 .item-count{
-	font-size:14px;
+	font-size:12px;
 	line-height:14px;
 	position:absolute;
 	text-align: right;
@@ -258,8 +258,8 @@ h6{
 	box-sizing:border-box;
 	border-radius: 5px;
 	background: #ddd;
-	font-family: Calibri, Carlito, sans-serif;
-	font-size:11pt;
+	font-family:"Source Han Sans CN", Calibri, Carlito, sans-serif;
+	font-size:9pt;
 	width:100%;
 	overflow-y: scroll;
 	-webkit-flex: 1;
@@ -399,7 +399,7 @@ h6{
 	height:100%;
 	right:2px;
 	top:2px;
-	font-size:10px;
+	font-size:9px;
 	line-height:12px;
 	pointer-events: none;
 	-webkit-user-select: none;

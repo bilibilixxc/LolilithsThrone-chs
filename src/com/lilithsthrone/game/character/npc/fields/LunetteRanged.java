@@ -64,8 +64,8 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class LunetteRanged extends NPC {
 
-	private static List<String> defaultNamePrefixes = Util.newArrayListOfValues("malevolent", "malicious", "spiteful");
-	private static String defaultName = "raider";
+	private static List<String> defaultNamePrefixes = Util.newArrayListOfValues("恶毒的", "残忍的", "狠毒的");
+	private static String defaultName = "劫掠者";
 	
 	public LunetteRanged() {
 		this(defaultNamePrefixes, defaultName, false);
@@ -91,9 +91,9 @@ public class LunetteRanged extends NPC {
 			// RACE & NAME:
 			this.setStartingBody(true);
 			
-			this.setGenericName(Util.randomItemFrom(namePrefixes)+" "+name);
+			this.setGenericName(Util.randomItemFrom(namePrefixes)+""+name);
 			setName(Name.getRandomTriplet(this.getSubspecies()));
-			this.setSurname("Lunettemartu");
+			this.setSurname("露内特马尔图");
 			this.setPlayerKnowsName(false);
 			
 			// INVENTORY:
@@ -254,7 +254,7 @@ public class LunetteRanged extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return UtilText.parse(this, "This demonic centaur is a member of the faction 'The Hundred Paces', and delights in playing wicked games with [npc.her] enemies.");
+		return UtilText.parse(this, "这个恶魔半人马是“露内特掠夺者”派系的一员，总是跟敌人玩一些残忍的游戏，以此取乐。");
 	}
 	
 	@Override

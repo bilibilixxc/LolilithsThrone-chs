@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Shop]]></name>
-	<tooltipDescription><![CDATA[One of several generic shops in the 'Wall's End' shopping precinct, this store doesn't have sell anything which would be of interest to you.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in one of the shops at the 'Wall's End' shopping precinct]]></virginityLossDescription>
+	<name><![CDATA[店铺]]></name>
+	<tooltipDescription><![CDATA[这是 "Wall's End "购物区的普通商店之一，你不会对这家店感兴趣的。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在墙之尽头购物区里的一家商店内]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

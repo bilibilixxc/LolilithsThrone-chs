@@ -245,19 +245,19 @@ public class EnforcerPatrol extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return UtilText.parse(this, "A member of the Enforcers' Frontline Patrol division, [npc.name] is expected to carry out a wide variety of day-to-day policing duties."); 
+		return UtilText.parse(this, "作为执法者前线巡逻队的一员，[npc.name]需要执行各种日常警务。"); 
 	}
 	
 	@Override
 	public String getGenericName() {
 		if(this.getHistory()==Occupation.NPC_ENFORCER_PATROL_CONSTABLE) {
-			return UtilText.parse(this, "Constable [npc.surname]");
+			return UtilText.parse(this, "[npc.surname]警员");
 		} else if(this.getHistory()==Occupation.NPC_ENFORCER_PATROL_SERGEANT) {
-			return UtilText.parse(this, "Sergeant [npc.surname]");
+			return UtilText.parse(this, "[npc.surname]警长");
 		} else if(this.getHistory()==Occupation.NPC_ENFORCER_PATROL_INSPECTOR) {
-			return UtilText.parse(this, "Inspector [npc.surname]");
+			return UtilText.parse(this, "[npc.surname]督察");
 		}
-		return UtilText.parse(this, "Enforcer");
+		return UtilText.parse(this, "执法者");
 	}
 	
 	@Override

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Dialogue used for bitch content: -->
@@ -23,22 +23,22 @@
 					]]></index>
 					<responseTitle><![CDATA[
 						#IF(npc.getPlayerSurrenderCount()>=4)
-							Rebel
+							反抗
 						#ELSEIF(npc.getPlayerSurrenderCount()==3)
-							Refuse
+							拒绝
 						#ELSE
-							Fight
+							战斗
 						#ENDIF
-					]]></responseTitle>
+]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(npc.getPlayerSurrenderCount()>=4)
-							Refuse to play along as [npc.namePos] bitch any longer and prepare to fight for your freedom!
+							拒绝再做[npc.namePos]的婊子，为自由而战！
 						#ELSEIF(npc.getPlayerSurrenderCount()==3)
-							Refuse to become [npc.namePos] bitch and prepare to defend yourself!
+							拒绝再做[npc.namePos]的婊子，准备自卫！
 						#ELSE
-							Refuse to pay [npc.name] and prepare to defend yourself!
+							拒绝付钱给[npc.name]，准备自卫！
 						#ENDIF
-					]]></responseTooltip>
+]]></responseTooltip>
 					<nextDialogue/>
 					<effects><![CDATA[
 						[#npc.applyPlayerPregnancyReactions()]
@@ -54,20 +54,20 @@
 						<openingDescriptions>
 							<combatant id="pc"><![CDATA[
 								#IF(npc.getPlayerSurrenderCount()>=4)
-									Telling [npc.name] that you're not going to be [npc.her] bitch any longer, you prepare to fight for your freedom.
+									告诉[npc.name]你不再是[npc.her]的婊子了，你准备为了你的自由而战斗。
 								#ELSEIF(npc.getPlayerSurrenderCount()==3)
-									Telling [npc.name] that you're never going to be [npc.her] bitch, you prepare to defend yourself.
+									告诉[npc.name]你永远不会成为[npc.her]的婊子，你做好了自卫的准备。
 								#ELSE
-									Refusing to hand over your money, you tell [npc.name] that [npc.sheIs] making a mistake as you prepare to defend yourself.
+									你拒绝交出你的钱，并告诉[npc.name]说[npc.sheIs]犯了一个错误，同时做好了自卫的准备。
 								#ENDIF
 							]]></combatant>
 							<combatant id="npc"><![CDATA[
 								#IF(npc.getPlayerSurrenderCount()>=4)
-									Flashing you a wicked smirk, [npc.name] sneers, [npc.speech(You forget your place! I'll remind you of where you belong!)]
+									[npc.name]向你露出邪恶的冷笑，[npc.speech(你忘记了自己的地位！我会提醒你，你属于哪里！)]
 								#ELSEIF(npc.getPlayerSurrenderCount()==3)
-									Flashing you a wicked smirk, [npc.name] sneers, [npc.speech(I'll make you my bitch, one way or another!)]
+									[npc.name]向你露出邪恶的冷笑，[npc.speech(无论如何，我都会让你变成我的婊子！)]
 								#ELSE
-									Flashing you a wicked smirk, [npc.name] sneers, [npc.speech(I'll make you pay, one way or another!)]
+									[npc.name]向你露出邪恶的冷笑，[npc.speech(无论如何，我都会让你付出代价！)]
 								#ENDIF
 							]]></combatant>
 						</openingDescriptions>
@@ -85,13 +85,13 @@
 						<fetish><![CDATA[FETISH_FOOT_RECEIVING]]></fetish>
 					</requiredFetishes>
 					<corruptionLevel><![CDATA[FIVE_CORRUPT]]></corruptionLevel>
-					<responseTitle><![CDATA[Kiss [npc.feet]]]></responseTitle>
+					<responseTitle><![CDATA[亲吻[npc.feet]]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Show [npc.name] that you're [npc.her] bitch by doing as [npc.she] commands and bending down to submissively kiss [npc.her] [npc.feet].
+						按照[npc.name]的命令，弯下腰顺从地亲吻[npc.her]的[npc.feet]，让[npc.name]知道你是[npc.her]的婊子。
 						#IF(npc.isApplyingPostCombatTransformations())
-							<br/>[style.italicsTfGeneric(This will result in [npc.name] trying to get you to drink a transformation potion, before possibly choosing to fuck you!)]
+							<br/>[style.italicsTfGeneric(这会让[npc.name]尝试灌你转化药水，然后上你！)]
 						#ENDIF
-						<br/>[style.italicsSex(Becoming [npc.namePos] bitch will change your available options when encountering [npc.herHim] again in the future.)]
+						<br/>[style.italicsSex(成为[npc.namePos]的狗后，下次再遇见[npc.herHim]，你的选择会发生改变。)]
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted]]></nextDialogue>
 					<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -109,13 +109,13 @@
 						<fetish><![CDATA[FETISH_MASOCHIST]]></fetish>
 					</requiredFetishes>
 					<corruptionLevel><![CDATA[FIVE_CORRUPT]]></corruptionLevel>
-					<responseTitle><![CDATA[Get spanked]]></responseTitle>
+					<responseTitle><![CDATA[开始被打屁股]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Show [npc.name] that you're [npc.her] bitch by doing as [npc.she] commands and presenting [npc.herHim] with your ass so that [npc.she] can give you a rough spanking.
+						按照[npc.name]的命令，向[npc.her]展示你的屁股以便[npc.her]能抽打，让[npc.name]知道你是[npc.her]的婊子。
 						#IF(npc.isApplyingPostCombatTransformations())
-							<br/>[style.italicsTfGeneric(This will result in [npc.name] trying to get you to drink a transformation potion, before possibly choosing to fuck you!)]
+							<br/>[style.italicsTfGeneric(这会让[npc.name]尝试灌你转化药水，然后上你！)]
 						#ENDIF
-						<br/>[style.italicsSex(Becoming [npc.namePos] bitch will change your available options when encountering [npc.herHim] again in the future.)]
+						<br/>[style.italicsSex(成为[npc.namePos]的狗后，下次再遇见[npc.herHim]，你的选择会发生改变。)]
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted]]></nextDialogue>
 					<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -134,14 +134,14 @@
 						<fetish><![CDATA[FETISH_MASOCHIST]]></fetish>
 					</requiredFetishes>
 					<corruptionLevel><![CDATA[FIVE_CORRUPT]]></corruptionLevel>
-					<responseTitle><![CDATA[Bow down]]></responseTitle>
+					<responseTitle><![CDATA[跪拜]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Show [npc.name] that you're [npc.her] bitch by doing as [npc.she] commands and bowing down to [npc.herHim].
+						按照[npc.name]的命令，向[npc.her]弯腰屈膝，让[npc.name]知道你是[npc.her]的婊子。
 						#IF(npc.isApplyingPostCombatTransformations())
-							<br/>[style.italicsTfGeneric(This will result in [npc.name] trying to get you to drink a transformation potion, before possibly choosing to fuck you!)]
+							<br/>[style.italicsTfGeneric(这会让[npc.name]尝试灌你转化药水，然后上你！)]
 						#ENDIF
-						<br/>[style.italicsSex(Becoming [npc.namePos] bitch will change your available options when encountering [npc.herHim] again in the future.)]
-					]]></responseTooltip>
+						<br/>[style.italicsSex(成为[npc.namePos]的狗后，下次再遇见[npc.herHim]，你的选择会发生改变。)]
+]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted]]></nextDialogue>
 					<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 					<effects><![CDATA[
@@ -155,10 +155,10 @@
 						<availabilityConditional><![CDATA[[#npc.getPlayerSurrenderCount()>=4 && npc.isApplyingPostCombatTransformations()]]]></availabilityConditional>
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[1]]></index>
-						<responseTitle><![CDATA[Swallow]]></responseTitle>
+						<responseTitle><![CDATA[吞咽]]></responseTitle>
 						<responseTooltip><![CDATA[
-							Do as [npc.name] says and swallow the transformative fluid!
-						]]></responseTooltip>
+							按[npc.name]说的做，喝下转换药水！
+]]></responseTooltip>
 						<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted_transformation]]></nextDialogue>
 						<effects><![CDATA[
 							[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/encounters/submission/tunnelAttack', 'SUBMITTED_TRANSFORMATION'))]
@@ -171,8 +171,8 @@
 						<availabilityConditional><![CDATA[[#npc.getPlayerSurrenderCount()>=4 && !npc.isApplyingPostCombatTransformations() && flags.getSavedLong('randomResponseIndex')<=3]]]></availabilityConditional>
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[1]]></index>
-						<responseTitle><![CDATA[Pay up ([style.moneyFormat([#flags.getMuggerDemand3()], span)])]]></responseTitle>
-						<responseTooltip><![CDATA[Do as [npc.name] commands and give [npc.herHim] [style.intToString([#flags.getMuggerDemand3()])] flames.]]></responseTooltip>
+						<responseTitle><![CDATA[付清([style.moneyFormat([#flags.getMuggerDemand3()], span)])]]></responseTitle>
+						<responseTooltip><![CDATA[听从[npc.name]的命令把[style.intToString([#flags.getMuggerDemand3()])]火币给[npc.herHim]。]]></responseTooltip>
 						<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted_repeat_pay_up]]></nextDialogue>
 						<effects><![CDATA[
 							[#npc.applyPlayerPregnancyReactions()]
@@ -183,8 +183,8 @@
 						<availabilityConditional><![CDATA[[#npc.getPlayerSurrenderCount()>=4 && !npc.isApplyingPostCombatTransformations() && flags.getSavedLong('randomResponseIndex')<=3]]]></availabilityConditional>
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[1]]></index>
-						<responseTitle><![CDATA[Pay up ([style.moneyFormatUncoloured([#flags.getMuggerDemand3()], span)])]]></responseTitle>
-						<responseTooltip><![CDATA[[npc.Name] isn't demanding money from you this time...]]></responseTooltip>
+						<responseTitle><![CDATA[付清([style.moneyFormat([#flags.getMuggerDemand3()], span)])]]></responseTitle>
+						<responseTooltip><![CDATA[[npc.Name]这次不是找你要钱……]]></responseTooltip>
 						<nextDialogue><![CDATA[null]]></nextDialogue>
 						<effects/>
 					</response>
@@ -194,8 +194,8 @@
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[2]]></index>
 						<colour><![CDATA[GENERIC_COMBAT]]></colour>
-						<responseTitle><![CDATA[Partner in crime]]></responseTitle>
-						<responseTooltip><![CDATA[Obediently follow [npc.name] and assist [npc.herHim] in mugging the first innocent traveller you find.]]></responseTooltip>
+						<responseTitle><![CDATA[犯罪同伙]]></responseTitle>
+						<responseTooltip><![CDATA[顺从地跟随[npc.Name]并帮[npc.herHim]抢劫遇到的第一个无辜游客。]]></responseTooltip>
 						<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted_repeat_mugging]]></nextDialogue>
 						<effects><![CDATA[
 							[#npc.applyPlayerPregnancyReactions()]
@@ -208,8 +208,8 @@
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[3]]></index>
 						<colour><![CDATA[GENERIC_SEX]]></colour>
-						<responseTitle><![CDATA[Pimped out]]></responseTitle>
-						<responseTooltip><![CDATA[Submissively follow [npc.name] and allow [npc.herHim] to pimp you out to a 'friend' of [npc.hers].]]></responseTooltip>
+						<responseTitle><![CDATA[拉皮条]]></responseTitle>
+						<responseTooltip><![CDATA[顺从地跟随[npc.Name]，让[npc.herHim]把你“介绍”给[npc.hers]的皮条客。]]></responseTooltip>
 						<requiredFetishes>
 							<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 						</requiredFetishes>
@@ -225,8 +225,8 @@
 						<availabilityConditional><![CDATA[[#npc.getPlayerSurrenderCount()>=4 && !npc.isApplyingPostCombatTransformations() && flags.getSavedLong('randomResponseIndex')==4]]]></availabilityConditional>
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[1]]></index>
-						<responseTitle><![CDATA[Fucked]]></responseTitle>
-						<responseTooltip><![CDATA[Be a good bitch and let [npc.name] dominantly fuck you in whatever way [npc.she] desires.]]></responseTooltip>
+						<responseTitle><![CDATA[挨操]]></responseTitle>
+						<responseTooltip><![CDATA[做一个好婊子，让[npc.Name]以任何想要的方式操你。]]></responseTooltip>
 						<requiredFetishes>
 							<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 						</requiredFetishes>
@@ -258,8 +258,8 @@
 						<availabilityConditional><![CDATA[[#npc.getPlayerSurrenderCount()>=4 && !npc.isApplyingPostCombatTransformations() && flags.getSavedLong('randomResponseIndex')==5]]]></availabilityConditional>
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[1]]></index>
-						<responseTitle><![CDATA[Walkies]]></responseTitle>
-						<responseTooltip><![CDATA[Crawl alongside [npc.name] as [npc.she] travels to a nearby shop to buy some food.]]></responseTooltip>
+						<responseTitle><![CDATA[遛狗]]></responseTitle>
+						<responseTooltip><![CDATA[在[npc.Name]去附近超市的时候，在[npc.she]身边爬行。]]></responseTooltip>
 						<requiredFetishes>
 							<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 						</requiredFetishes>
@@ -276,11 +276,11 @@
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[1]]></index>
 						<colour><![CDATA[GENERIC_SEX]]></colour>
-						<responseTitle><![CDATA[Tattooed]]></responseTitle>
+						<responseTitle><![CDATA[纹身]]></responseTitle>
 						<responseTooltip><![CDATA[
-							Follow [npc.name] to find [npc.her] friend, who's going to tattoo you with a declaration of ownership.
-							<br/>[style.italicsSex(After being tattooed, you're going to be fucked by [npc.namePos] friend!)]
-						]]></responseTooltip>
+							跟着[npc.name]并找到[npc.her]的朋友，[npc.her]会给你纹上一个主人声明。
+							<br/>[style.italicsSex(纹身后你会被[npc.namePos]的朋友操！)]
+]]></responseTooltip>
 						<requiredFetishes>
 							<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 						</requiredFetishes>
@@ -304,25 +304,25 @@
 			
 			#IF(RND.nextInt(100)<66)
 				#IF(RND.nextInt(100)<50)
-					[#npc.setPetName(pc, 'Bitch')]
+					[#npc.setPetName(pc, '母狗')]
 				#ELSE
-					[#npc.setPetName(pc, 'Pet')]
+					[#npc.setPetName(pc, '宠物')]
 				#ENDIF
 			#ELSE
-				[#npc.setPetName(pc, 'Slave')]
+				[#npc.setPetName(pc, '奴隶')]
 			#ENDIF
 			
 			[#npc.setPlayerKnowsName(true)]
 			#IF(RND.nextInt(100)<66)
 				#IF(RND.nextInt(100)<50)
-					[#pc.setPetName(npc, 'Mistress')]
+					[#pc.setPetName(npc, '主人')]
 				#ELSE
-					[#pc.setPetName(npc, "Ma'am")]
+					[#pc.setPetName(npc, "女士")]
 				#ENDIF
 			#ELSE
-				[#pc.setPetName(npc, 'Miss '+npc.getSurname())]
+				[#pc.setPetName(npc, npc.getSurname()+'小姐')]
 			#ENDIF
-		]]></preParsingEffects>
+]]></preParsingEffects>
 		<content folderPath="txt/encounters/submission/tunnelAttack">SUBMITTED_END</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -334,9 +334,9 @@
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_alleyway_transformations_applied) && npc.isApplyingPostCombatTransformations()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Spit]]></responseTitle>
+					<responseTitle><![CDATA[吐]]></responseTitle>
 					<responseTooltip><![CDATA[
-						As you've only just accepted being [npc.namePos] bitch, you can't bring yourself to disobey [npc.her] order to drink the potion!
+						你刚刚接受了成为[npc.namePos]婊子的事实，你不能抗拒[npc.her]喝下药水的命令！
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 					<effects/>
@@ -346,10 +346,10 @@
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_alleyway_transformations_applied) && npc.isApplyingPostCombatTransformations()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Swallow]]></responseTitle>
+					<responseTitle><![CDATA[吞咽]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Do as [npc.name] says and swallow the transformative fluid!
-					]]></responseTooltip>
+						按[npc.name]说的做，喝下转换药水！
+]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted_transformation]]></nextDialogue>
 					<effects><![CDATA[
 						[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/encounters/submission/tunnelAttack', 'SUBMITTED_TRANSFORMATION'))]
@@ -364,8 +364,8 @@
 					<availabilityConditional><![CDATA[[#(flags.hasFlag(FLAG_innoxia_alleyway_transformations_applied) || !npc.isApplyingPostCombatTransformations()) && npc.isAttractedTo(pc) && npc.isWillingToRape()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Fucked]]></responseTitle>
-					<responseTooltip><![CDATA[You're unable to stop [npc.name] from dominantly fucking you...]]></responseTooltip>
+					<responseTitle><![CDATA[挨操]]></responseTitle>
+					<responseTooltip><![CDATA[你无法阻止[npc.Name]支配性地操你……]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariables enabled="true">
@@ -390,12 +390,12 @@
 					<availabilityConditional><![CDATA[[#(flags.hasFlag(FLAG_innoxia_alleyway_transformations_applied) || !npc.isApplyingPostCombatTransformations()) && (!npc.isWillingToRape() || !npc.isAttractedTo(pc))]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
+					<responseTitle><![CDATA[离开]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(npc.isAttractedTo(pc))
-							Refuse to let [npc.name] fuck you and wait for [npc.herHim] to leave before continuing on your way...
+							拒绝了[npc.name]想草你的请求，等[npc.herHim]离开后你继续行走……
 						#ELSE
-							Wait for [npc.name] to leave before continuing on your way...
+							等[npc.name]离开后你继续行走……
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
@@ -408,9 +408,9 @@
 					<availabilityConditional><![CDATA[[#(flags.hasFlag(FLAG_innoxia_alleyway_transformations_applied) || !npc.isApplyingPostCombatTransformations()) && npc.isAttractedTo(pc) && !npc.isWillingToRape()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Submit]]></responseTitle>
+					<responseTitle><![CDATA[顺从]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Do as [npc.name] says and submit to [npc.herHim], allowing [npc.herHim] to dominantly fuck you...
+						你按照[npc.name]所说的那样服从[npc.herHim]，允许[npc.herHim]支配你的一切……
 					]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
@@ -443,8 +443,8 @@
 	</scene>
 	
 	<scene id="submitted_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[npc.Name] has had [npc.her] fun with you, and with a satisfied sigh [npc.she] [npc.steps] back and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[npc.name]已经和你爽够了，随着[npc.she]满意的呻吟结束了性爱……]]></tooltip>
 		<content folderPath="txt/encounters/submission/tunnelAttack">SUBMITTED_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -453,8 +453,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[As [npc.name] has left, there's nothing else for you to do except continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[当[npc.name]离开，你除了继续赶路无事可做……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects/>
@@ -481,8 +481,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[As [npc.name] has left, there's nothing else for you to do except continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[当[npc.name]离开，你除了继续赶路无事可做……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects/>
@@ -509,8 +509,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Join [npc.name] in fighting [victim.name]!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[加入[npc.Name]与[victim.name]战斗！]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -524,15 +524,15 @@
 						<enemy leader="true"><![CDATA[victim]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[Obediently doing as [npc.name] commands, you prepare to assist [npc.herHim] in subduing [victim.name].]]></combatant>
+						<combatant id="pc"><![CDATA[服从[npc.name]的命令，协助[npc.herHim]制服[victim.name]。]]></combatant>
 						<combatant id="npc"><![CDATA[
 							#IF(npc.isMute())
-								With a wicked smirk on [npc.her] face, [npc.name] motions for you to attack [victim.name].
+								[npc.Name]露出邪恶的冷笑，示意你攻击[victim.name]。
 							#ELSE
-								Letting out a mocking laugh, [npc.name] taunts [victim.name], [npc.speech(You've got no chance against the two of us!)]
+								[npc.name]嘲弄地大笑：[npc.speech(二打一，你输定了！)]
 							#ENDIF
 						]]></combatant>
-						<combatant id="victim"><![CDATA[Taking on a defensive stance, [victim.name] desperately shouts, [victim.speech(Leave me alone!)]]]></combatant>
+						<combatant id="victim"><![CDATA[[victim.name]采取防御姿态，拼命喊叫：[victim.speech(滚开！)]]]></combatant>
 					</openingDescriptions>
 				</combatVariables>
 			</response>
@@ -550,14 +550,14 @@
 					<availabilityConditional><![CDATA[[#npc.isAttractedTo(victim) && !npc.hasStatusEffect(SE_RECOVERING_AURA) && (npc.isWillingToRape(victim) || victim.isAttractedTo(npc))]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Watch]]></responseTitle>
+					<responseTitle><![CDATA[旁观]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(!victim.isAttractedTo(npc))
-							Watch as [npc.name] rapes [victim.name]...
+							看着[npc.name]强奸[victim.name]……
 						#ELSE
-							Watch as [victim.name] submits to [npc.name] and allows [npc.herHim] to fuck [victim.herHim]...
+							看着[victim.name]屈服于[npc.name]并允许[npc.herHim]操[victim.herHim]……
 						#ENDIF
-					]]></responseTooltip>
+]]></responseTooltip>
 					<nextDialogue/>
 					<sexVariables enabled="true">
 						<consensual><![CDATA[[#victim.isAttractedTo(npc)]]]></consensual>
@@ -582,8 +582,8 @@
 					<availabilityConditional><![CDATA[[#npc.isAttractedTo(victim) && !npc.hasStatusEffect(SE_RECOVERING_AURA) && (npc.isWillingToRape(victim) || victim.isAttractedTo(npc))]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Not wanting to watch [npc.name] having sex with [victim.name], you leave [npc.herHim] to it and continue on your way...]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[你不想看[npc.name]与[victim.name]做爱，离开他们继续赶路……]]></responseTooltip>
 					<nextDialogue><![CDATA[default]]></nextDialogue>
 					<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 					<effects><![CDATA[
@@ -598,16 +598,16 @@
 					<index><![CDATA[1]]></index>
 					<responseTitle><![CDATA[
 						#IF(!victim.isAttractedTo(pc))
-							Rape [victim.herHim]
+							强奸[victim.herHim]
 						#ELSE
-							Fuck [victim.herHim]
+							操[victim.herHim]
 						#ENDIF
-					]]></responseTitle>
+]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(!victim.isAttractedTo(pc))
-							Do as [npc.name] commands and rape [victim.name] in front of [npc.herHim].
+							按照[npc.name]的命令，在[npc.herHim]面前强奸[victim.name]。
 						#ELSE
-							Do as [npc.name] commands and fuck [victim.name] in front of [npc.herHim].
+							按照[npc.name]的命令，在[npc.herHim]面前操[victim.name]。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue/>
@@ -634,8 +634,8 @@
 					<availabilityConditional><![CDATA[[#((!npc.isAttractedTo(victim) || npc.hasStatusEffect(SE_RECOVERING_AURA)) || !npc.isWillingToRape(victim)) && (game.isNonConEnabled() || victim.isAttractedTo(pc))]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Refuse]]></responseTitle>
-					<responseTooltip><![CDATA[Not wanting to fuck [victim.name] in front of [npc.name], you tell [npc.herHim] that you can't do it...]]></responseTooltip>
+					<responseTitle><![CDATA[拒绝]]></responseTitle>
+					<responseTooltip><![CDATA[你不想在[npc.name]面前操[victim.name]，你告诉[npc.herHim]你不能这么做……]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted_repeat_mugging_refuse_sex]]></nextDialogue>
 					<effects/>
 				</response>
@@ -644,8 +644,8 @@
 				<availabilityConditional><![CDATA[[#((!npc.isAttractedTo(victim) || npc.hasStatusEffect(SE_RECOVERING_AURA)) || !npc.isWillingToRape(victim)) && (!game.isNonConEnabled() && !victim.isAttractedTo(pc))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Not wanting to stick around and get caught by the Enforcers, you decide to quickly take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你不想待在这被执法者抓住，决定快点离开……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -657,8 +657,8 @@
 	</scene>
 	
 	<scene id="submitted_repeat_mugging_after_spectating_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[npc.Name] has had [npc.her] fun with [victim.name], and with a satisfied sigh [npc.she] [npc.steps] back and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[npc.Name]已经和[victim.name]爽够了，随着[npc.she]满意的呻吟结束了性爱……]]></tooltip>
 		<content folderPath="txt/encounters/submission/tunnelAttack">SUBMITTED_REPEAT_MUGGING_SPECTATE_SEX_END</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -667,8 +667,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Not wanting to stick around and get caught by the Enforcers, you decide to quickly take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你不想待在这被执法者抓住，决定快点离开……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -680,8 +680,8 @@
 	</scene>
 	
 	<scene id="submitted_repeat_mugging_after_fuck_victim">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had your fun with [victim.name], and with a satisfied sigh you [pc.step] back and bring an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你已经和[victim.name]爽够了，随着你满意地呻吟结束了性爱……]]></tooltip>
 		<content folderPath="txt/encounters/submission/tunnelAttack">SUBMITTED_REPEAT_MUGGING_FUCK_VICTIM_END</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -690,8 +690,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Not wanting to stick around and get caught by the Enforcers, you decide to quickly take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你不想待在这被执法者抓住，决定快点离开……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -714,8 +714,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Not wanting to stick around and get caught by the Enforcers, you decide to quickly take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你不想待在这被执法者抓住，决定快点离开……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -739,8 +739,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Escape]]></responseTitle>
-				<responseTooltip><![CDATA[Quickly escape before the Enforcers arrive!]]></responseTooltip>
+				<responseTitle><![CDATA[逃跑]]></responseTitle>
+				<responseTooltip><![CDATA[在执法者到来之前迅速逃离！]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -815,9 +815,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Present ass]]></responseTitle>
+                <responseTitle><![CDATA[露出屁股]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Present your [pc.ass+] to [friend.name] so that [friend.she] can fuck your [pc.asshole+]...
+					向[friend.name]展示你[pc.ass+]以便[friend.she]能操你[pc.asshole+]……
                 ]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -867,9 +867,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Present pussy]]></responseTitle>
+                <responseTitle><![CDATA[露出小穴]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Present your [pc.pussy+] to [friend.name] so that [friend.she] can fuck you...
+					向[friend.name]展示你[pc.pussy+]以便[friend.she]能操你……
                 ]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -925,10 +925,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Open wide]]></responseTitle>
+                <responseTitle><![CDATA[张得更开]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Open wide and present your mouth to [friend.name] so that [friend.she] can fuck your throat...
-                ]]></responseTooltip>
+					向[friend.name]张大嘴巴以便[friend.she]能操你的喉咙……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -977,10 +977,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Present cock]]></responseTitle>
+                <responseTitle><![CDATA[露出肉棒]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Present your [pc.cock+] to [friend.name] so that [friend.she] can use [friend.her] [friend.asshole+] to ride it...
-                ]]></responseTooltip>
+					向[friend.name]展示你[pc.cock+]以便[friend.she]能用[friend.her][friend.asshole+]骑上去……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1029,10 +1029,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Present cock]]></responseTitle>
+                <responseTitle><![CDATA[露出肉棒]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Present your [pc.cock+] to [friend.name] so that [friend.she] can use [friend.her] [friend.pussy+] to ride it...
-                ]]></responseTooltip>
+					向[friend.name]展示你[pc.cock+]以便[friend.she]能用[friend.her][friend.pussy+]骑上去……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1081,10 +1081,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Submit]]></responseTitle>
+                <responseTitle><![CDATA[顺从]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Submit to [friend.name] so that [friend.she] can fuck you...
-                ]]></responseTooltip>
+					屈服于[friend.name]以便[friend.she]能操你……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1122,8 +1122,8 @@
 	</scene>
 	
 	<scene id="submitted_repeat_pimped_out_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[friend.Name] has had [friend.her] fun with you, and brings the sex to an end...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[friend.Name]已经和你爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/encounters/submission/tunnelAttack">SUBMITTED_REPEAT_PIMPED_OUT_SEX_END</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1132,8 +1132,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having been told to get out of here by [npc.name], you decide to quickly take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[[npc.name]让你滚开，你决定快点离开……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1193,8 +1193,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Remain still]]></responseTitle>
-				<responseTooltip><![CDATA[Ignore the stranger and remain seated outside the bistro until [stranger.she] loses interest and leaves.]]></responseTooltip>
+				<responseTitle><![CDATA[保持不动]]></responseTitle>
+				<responseTooltip><![CDATA[不理会陌生人，继续坐在小酒馆门口直到[stranger.she]失去兴趣离开。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted_repeat_walkies_ignore]]></nextDialogue>
 				<effects/>
 			</response>
@@ -1206,12 +1206,12 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Lick cock]]></responseTitle>
+				<responseTitle><![CDATA[舔舐肉棒]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!stranger.hasFetish(FETISH_ORAL_RECEIVING))
-						You're unable to access your mouth, so cannot lick the [stranger.race]'s cock!
+						你的嘴被限制，没办法舔[stranger.race]的鸡巴！
 					#ELSE
-						The [stranger.race] doesn't have a cock for you to lick!
+						[stranger.race]没有鸡巴给你舔！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1223,10 +1223,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[2]]></index>
-                <responseTitle><![CDATA[Lick cock]]></responseTitle>
+                <responseTitle><![CDATA[舔舐肉棒]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Lean over to [stranger.namePos] groin and give [stranger.her] [stranger.cock+] a lick, before taking it into your mouth and giving [stranger.herHim] a blowjob...
-                ]]></responseTooltip>
+					伏在[stranger.namePos]的腹股沟上，舔[stranger.her][stranger.cock+]，在放进嘴里千给[stranger.herHim]口交……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1272,14 +1272,14 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Kiss pussy]]></responseTitle>
+				<responseTitle><![CDATA[亲吻小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!stranger.hasFetish(FETISH_ORAL_RECEIVING))
-						You're unable to access your mouth, so cannot kiss the [stranger.race]'s pussy!
+						你的嘴被限制，没办法亲吻[stranger.race]的小穴！
 					#ELSE
-						The [stranger.race] doesn't have a pussy for you to kiss!
+						[stranger.race]没有小穴给你亲！
 					#ENDIF
-				]]></responseTooltip>
+]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 				<effects/>
 			</response>
@@ -1289,10 +1289,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[3]]></index>
-                <responseTitle><![CDATA[Kiss pussy]]></responseTitle>
+                <responseTitle><![CDATA[亲吻小穴]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Lean over to [stranger.namePos] groin and give [stranger.her] [stranger.pussy+] a kiss, before eagerly eating [stranger.herHim] out...
-                ]]></responseTooltip>
+					伏在[stranger.namePos]的腹股沟上，在吃掉之前，给[stranger.her][stranger.pussy+]一吻……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1338,14 +1338,14 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Present pussy]]></responseTitle>
+				<responseTitle><![CDATA[露出小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!stranger.hasFetish(FETISH_VAGINAL_GIVING))
-						You don't have a pussy, so cannot get fucked by the [stranger.race]!
+						你没有小穴，没法被[stranger.race]操！
 					#ELSE
-						The [stranger.race] doesn't have a cock, so [stranger.she] can't fuck your pussy!
+						[stranger.race]没有鸡巴，[stranger.she]不能操你的小穴！
 					#ENDIF
-				]]></responseTooltip>
+]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 				<effects/>
 			</response>
@@ -1355,10 +1355,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[4]]></index>
-                <responseTitle><![CDATA[Present pussy]]></responseTitle>
+                <responseTitle><![CDATA[露出小穴]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Drop down onto all fours and shuffle around to present your [pc.pussy+] to [stranger.name] so that [stranger.she] can fuck you...
-                ]]></responseTooltip>
+					四肢着地，左右晃动，向[stranger.name]献出你[pc.pussy+]以便[stranger.she]能操你……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1404,16 +1404,16 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Present ass]]></responseTitle>
+				<responseTitle><![CDATA[露出屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-						You can't access your asshole, so cannot get anally fucked by the [stranger.race]!
+						你的屁股被限制，没法和[stranger.race]肛交！
 					#ELSEIF(!stranger.hasFetish(FETISH_ANAL_GIVING))
-						The [stranger.race] doesn't seem to be interested in wanting to fuck your ass...
+						[stranger.race]对你的屁眼不感兴趣……
 					#ELSE
-						The [stranger.race] doesn't have a cock, so [stranger.she] can't fuck your ass!
+						[stranger.race]没有鸡巴，[stranger.she]没法操你的屁眼！
 					#ENDIF
-				]]></responseTooltip>
+]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 				<effects/>
 			</response>
@@ -1423,10 +1423,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[5]]></index>
-                <responseTitle><![CDATA[Present ass]]></responseTitle>
+                <responseTitle><![CDATA[露出屁股]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Drop down onto all fours and shuffle around to present your [pc.asshole+] to [stranger.name] so that [stranger.she] can fuck your ass...
-                ]]></responseTooltip>
+					四肢着地，左右晃动，向[stranger.name]献出你[pc.asshole+]以便[stranger.she]能操你……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1481,8 +1481,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[As [npc.name] has left, there's nothing else for you to do except continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[当[npc.name]离开，你除了继续赶路无事可做……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1497,8 +1497,8 @@
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/encounters/submission/tunnelAttack', 'SUBMITTED_REPEAT_WALKIES_SEX_END'))]
 			[#game.banishNPC(stranger)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[stranger.Name] has had [stranger.her] fun with you, and brings the sex to an end...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[stranger.Name]已经和你爽够了，结束了性爱……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1507,8 +1507,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having been told to get out of here by [npc.name], you decide to quickly take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[[npc.name]让你滚开，你决定快点离开……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1549,8 +1549,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Lie down on the table and allow [tattooist.name] to tattoo you...]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[躺在桌子上让[tattooist.name]给你纹身……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_encounters_submission_tunnels_submitted_repeat_tattooed_finished]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1584,10 +1584,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Spread [pc.legs]]]></responseTitle>
+                <responseTitle><![CDATA[张开[pc.legs]]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Spread your [pc.legs] so [tattooist.name] can get [tattooist.her] payment by fucking your cunt.
-                ]]></responseTooltip>
+					张开你的[pc.legs]，让[tattooist.name]操你的小穴获得报酬。
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1640,10 +1640,10 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Raise ass]]></responseTitle>
+                <responseTitle><![CDATA[撅起屁股]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Present your [pc.asshole+] to [tattooist.name] so that [tattooist.she] can fuck your ass...
-                ]]></responseTooltip>
+					向[tattooist.name]展示你[pc.asshole+]让[tattooist.she]来操你的屁眼……
+]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
                 <effects/>
@@ -1688,8 +1688,8 @@
 	</scene>
 	
 	<scene id="submitted_repeat_tattooed_finished_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[tattooist.Name] has had [tattooist.her] fun with you, and brings the sex to an end...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[tattooist.Name]已经和你爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/encounters/submission/tunnelAttack">SUBMITTED_REPEAT_TATTOOED_SEX_END</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1698,8 +1698,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having been told to get out of here by [npc.name], you decide to quickly take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[[npc.name]让你滚开，你决定快点离开……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[

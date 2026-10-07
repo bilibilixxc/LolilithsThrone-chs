@@ -10,14 +10,14 @@ import java.util.List;
  */
 public enum BreastShape {
 
-	UDDERS(true, "udders", "animalistic"),
+	UDDERS(true, "腹乳", "似兽"),
 	
-	ROUND(false, "round", "round"),
-	POINTY(false, "pointy", "pointy"),
-	PERKY(false, "perky", "perky"),
-	SIDE_SET(false, "side-set", "side-set"),
-	WIDE(false, "wide", "wide"),
-	NARROW(false, "narrow", "narrow");
+	ROUND(false, "圆润", "圆润"),
+	POINTY(false, "尖挺", "尖挺"),
+	PERKY(false, "上翘", "上翘"),
+	SIDE_SET(false, "分向两侧", "分向两侧"),
+	WIDE(false, "宽阔", "宽阔"),
+	NARROW(false, "狭窄", "狭窄");
 	
 	private boolean restrictedToCrotchBoobs;
 	private String transformName;

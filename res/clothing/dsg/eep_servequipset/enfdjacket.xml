@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small tag sewn into the side seam reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[侧缝上有个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>850</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[coat]]></name>
+		<name><![CDATA[礼服]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[coats]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[礼服]]></namePlural> 
 
-		<description><![CDATA[A dress uniform coat with four pockets.]]></description> 
+		<description><![CDATA[一件拥有四个口袋的军礼服。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -35,8 +34,8 @@
 			<category id="collar" priority="1"> 
 				<categoryName><![CDATA[Collar Tabs]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[Enforcer]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix>
+					<stickerName><![CDATA[执法者]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
 					<imageName/>
@@ -46,10 +45,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="tab_pc" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 
-					<stickerName><![CDATA[Police Constable]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer Constable ]]></namePrefix> 
+					<stickerName><![CDATA[警员]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者警员]]></namePrefix> 
 					<namePostfix/> 
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> It has the insignia of a Police Constable attached to it.</i>]]></descriptionModification> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有警员的徽章。</i>]]></descriptionModification> 
 					<imageName>enfdjacket_st_tab_pc.svg</imageName> 
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -69,10 +68,10 @@
 					</availabilityText> 
 				</sticker>
 				<sticker id="tab_sg" priority="2" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 
-					<stickerName><![CDATA[Sergeant]]></stickerName>
-					<namePrefix priority="2"><![CDATA[Enforcer Sergeant ]]></namePrefix>
+					<stickerName><![CDATA[警长]]></stickerName>
+					<namePrefix priority="2"><![CDATA[执法者警长]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> It has the insignia of a Sergeant attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有警长的徽章。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_tab_sg.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -92,10 +91,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_ip" priority="3" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Inspector]]></stickerName>
-					<namePrefix priority="2"><![CDATA[Enforcer Inspector ]]></namePrefix>
+					<stickerName><![CDATA[督察]]></stickerName>
+					<namePrefix priority="2"><![CDATA[执法者督察]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> It has the insignia of an Inspector attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有督察的徽章。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_tab_ip.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -115,10 +114,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_ci" priority="4" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Chief Inspector]]></stickerName>
-					<namePrefix priority="2"><![CDATA[Enforcer Chief Inspector ]]></namePrefix>
+					<stickerName><![CDATA[总督察]]></stickerName>
+					<namePrefix priority="2"><![CDATA[执法者总督察]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> It has the insignia of a Chief Inspector attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有总督察的徽章。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_tab_ci.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -136,10 +135,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_su" priority="4" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Superintendent]]></stickerName>
-					<namePrefix priority="2"><![CDATA[Enforcer Superintendent ]]></namePrefix>
+					<stickerName><![CDATA[警司]]></stickerName>
+					<namePrefix priority="2"><![CDATA[执法者警司]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> It has the insignia of a Superintendent attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有警司的徽章。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_tab_su.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -157,10 +156,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_cs" priority="5" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Chief Superintendent]]></stickerName>
-					<namePrefix priority="2"><![CDATA[Enforcer Chief Superintendent ]]></namePrefix>
+					<stickerName><![CDATA[总警司]]></stickerName>
+					<namePrefix priority="2"><![CDATA[执法者总警司]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> It has the insignia of a Chief Superintendent attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有总警司的徽章。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_tab_cs.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -178,10 +177,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_cm" priority="5" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Commissioner]]></stickerName>
-					<namePrefix priority="2"><![CDATA[Enforcer Commissioner ]]></namePrefix>
+					<stickerName><![CDATA[专员]]></stickerName>
+					<namePrefix priority="2"><![CDATA[执法者专员]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> It has the insignia of the Commissioner attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有专员的徽章。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_tab_cm.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -202,7 +201,7 @@
 			<category id="name" priority="2"> 
 				<categoryName><![CDATA[Name Plate]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="2" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -213,7 +212,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="name_pc" priority="2" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Police Constable]]></stickerName>
+					<stickerName><![CDATA[警局警员]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -232,7 +231,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_sg" priority="2" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Sergeant]]></stickerName>
+					<stickerName><![CDATA[警长]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -251,7 +250,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_ip" priority="3" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Inspector]]></stickerName>
+					<stickerName><![CDATA[督察]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -270,7 +269,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_su" priority="4" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Superintendent]]></stickerName>
+					<stickerName><![CDATA[警司]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -287,7 +286,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_cs" priority="5" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Chief Superintendent]]></stickerName>
+					<stickerName><![CDATA[总警司]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -304,10 +303,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_brax" priority="6" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="ADB4FF">
-					<stickerName><![CDATA[Brax]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Brax's ]]></namePrefix>
+					<stickerName><![CDATA[布拉克斯]]></stickerName>
+					<namePrefix priority="1"><![CDATA[布拉克斯的]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i> This one in particular belongs to Brax.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>这独属于布拉克斯。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_name_brax.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -321,10 +320,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_candi" priority="7" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="FEMININE_PLUS">
-					<stickerName><![CDATA[Candi]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Candi's ]]></namePrefix>
+					<stickerName><![CDATA[坎迪]]></stickerName>
+					<namePrefix priority="1"><![CDATA[坎迪的]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i> This one in particular belongs to Candi.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>这独属于坎迪。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_name_candi.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -338,10 +337,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_claire" priority="8" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="FEMININE">
-					<stickerName><![CDATA[Claire]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Claire's ]]></namePrefix>
+					<stickerName><![CDATA[克莱尔]]></stickerName>
+					<namePrefix priority="1"><![CDATA[克莱尔的]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i> This one in particular belongs to Claire.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>这独属于克莱尔。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_name_claire.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -355,10 +354,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_elle" priority="9" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="d69423">
-					<stickerName><![CDATA[Elle]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Elle's ]]></namePrefix>
+					<stickerName><![CDATA[埃勒]]></stickerName>
+					<namePrefix priority="1"><![CDATA[埃勒的]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i> This one in particular belongs to Elle.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>这独属于埃勒。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_name_elle.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -372,10 +371,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_wesley" priority="10" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="d6c19c">
-					<stickerName><![CDATA[Wes]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Wes' ]]></namePrefix>
+					<stickerName><![CDATA[韦斯]]></stickerName>
+					<namePrefix priority="1"><![CDATA[韦斯的]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i> This one in particular belongs to Wes.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>这独属于韦斯。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_name_wesley.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -389,10 +388,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_nysa" priority="11" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_ORANGE">
-					<stickerName><![CDATA[Nysa]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Nysa's ]]></namePrefix>
+					<stickerName><![CDATA[尼萨]]></stickerName>
+					<namePrefix priority="1"><![CDATA[尼萨的]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i> This one in particular belongs to Nysa.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>这独属于尼萨。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_name_nysa.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -406,10 +405,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_sterope" priority="12" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BROWN">
-					<stickerName><![CDATA[Sterope]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Sterope's ]]></namePrefix>
+					<stickerName><![CDATA[斯特罗普]]></stickerName>
+					<namePrefix priority="1"><![CDATA[斯特罗普的]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i> This one in particular belongs to Sterope.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>这独属于斯特罗普。</i>]]></descriptionModification>
 					<imageName>enfdjacket_st_name_sterope.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -436,7 +435,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="ribbon_brax" priority="1" defaultSticker="false" zLayer="3" colourDisabled="TEXT_GREY" colourSelected="ADB4FF">
-					<stickerName><![CDATA[Brax]]></stickerName>
+					<stickerName><![CDATA[布拉克斯]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -453,7 +452,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="ribbon_candi" priority="2" defaultSticker="false" zLayer="3" colourDisabled="TEXT_GREY" colourSelected="FEMININE_PLUS">
-					<stickerName><![CDATA[Candi]]></stickerName>
+					<stickerName><![CDATA[坎迪]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -470,7 +469,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="ribbon_claire" priority="3" defaultSticker="false" zLayer="3" colourDisabled="TEXT_GREY" colourSelected="FEMININE">
-					<stickerName><![CDATA[Claire]]></stickerName>
+					<stickerName><![CDATA[克莱尔]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -487,7 +486,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="ribbon_elle" priority="4" defaultSticker="false" zLayer="3" colourDisabled="TEXT_GREY" colourSelected="d69423">
-					<stickerName><![CDATA[Elle]]></stickerName>
+					<stickerName><![CDATA[埃勒]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -504,7 +503,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="ribbon_wes" priority="5" defaultSticker="false" zLayer="3" colourDisabled="TEXT_GREY" colourSelected="d6c19c">
-					<stickerName><![CDATA[Wes]]></stickerName>
+					<stickerName><![CDATA[韦斯]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -521,7 +520,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="ribbon_nysa" priority="6" defaultSticker="false" zLayer="3" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_ORANGE">
-					<stickerName><![CDATA[Nysa]]></stickerName>
+					<stickerName><![CDATA[尼萨]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -538,7 +537,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="ribbon_sterope" priority="7" defaultSticker="false" zLayer="3" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BROWN">
-					<stickerName><![CDATA[Sterope]]></stickerName>
+					<stickerName><![CDATA[斯特罗普]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -558,7 +557,7 @@
 			<category id="qual" priority="4">
 				<categoryName><![CDATA[Qualification Badge]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="4" colourSelected="TEXT_GREY">
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -569,7 +568,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="qual_flyer" priority="0" defaultSticker="false" zLayer="4" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_PURPLE_LIGHT">
-					<stickerName><![CDATA[Combat Flyer]]></stickerName>
+					<stickerName><![CDATA[战术飞行员]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -586,7 +585,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="qual_diver" priority="0" defaultSticker="false" zLayer="4" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE_GREY">
-					<stickerName><![CDATA[Combat Diver]]></stickerName>
+					<stickerName><![CDATA[战术驾驶员]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -606,7 +605,7 @@
 			<category id="aig" priority="5">
 				<categoryName><![CDATA[Aiguillette]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="5" colourSelected="TEXT_GREY">
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -617,7 +616,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="aig_cm" priority="1" defaultSticker="false" zLayer="5" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Commissioner]]></stickerName>
+					<stickerName><![CDATA[专员]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -715,51 +714,40 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] [npc.her] arms through the coat's sleeves and [npc.verb(button)] up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] [npc2.verb(put)] [npc2.her] arms through the coat's sleeves and [npc.verb(button)] up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] arms through the coat's sleeves and hastily [npc.verb(button)] up the front.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的手臂伸进礼服的袖子并扣上前面的扣子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]帮[npc2.name]将[npc2.her]的胳膊伸进礼服的袖子并扣好扣子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]迫使[npc2.namePos]的手臂穿过礼服的袖子并匆忙的扣好扣子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc.her] coat and [npc.verb(pull)] [npc.her] arms out of the sleeves.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc2.namePos] coat and [npc.verb(help)] [npc2.her] [npc2.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on the front of [npc2.namePos] coat and roughly [npc.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]大衣的扣子并将[npc.her]的胳膊从袖子里拽了出来。]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]礼服前部的扣子，帮[npc2.her]将[npc2.her]的手臂从袖子中抽出。]]></other>
+		<otherRough><![CDATA[
+[npc2.Name]拽开[npc2.namePos]礼服正面的纽扣，粗暴地将[npc2.her]的手臂从袖子中拽出。]]></otherRough>
 	</displacementText>
 
 	<replacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc.namePos] coat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc2.namePos] coat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(button)] up the front of [npc2.namePos] coat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]扣上[npc.namePos]礼服的正面的扣子。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]前面的扣子扣了起来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙扣上[npc2.namePos]礼服的正面的扣子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] coat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.namePos] coat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on [npc2.namePos] coat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的礼服。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的礼服。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]崩开了[npc2.namePos]礼服上的扣子。]]></otherRough>
 	</displacementText>
 	
 </clothing>

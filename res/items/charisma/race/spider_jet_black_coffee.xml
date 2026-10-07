@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>25</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Jet Black Coffee]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Jet Black Coffees]]></namePlural>
-		<description><![CDATA[A plastic bottle of cold-brew coffee, advertised as having an extremely high caffeine content. At the bottom of the bottle's label there's a picture of a spider-girl who's passed out drunk, and beneath her, the cautionary words: <i>'Warning! Extremely alcoholic to spiders!'</i>]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[捷特黑咖啡]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[捷特黑咖啡]]></namePlural>
+		<description><![CDATA[一瓶冷萃咖啡，宣传描述其中的咖啡因含量极高。瓶子标签的底部有一张蜘蛛女的照片，她醉醺醺地昏倒了，下面写着警告语：<i>“警告！会使蜘蛛陷入严重的醉酒状态！”</i>]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,18 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
-		<applyEffects><![CDATA[
-			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
+		<applyEffects><![CDATA[[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
-			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
-		]]></applyEffects>
+			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]]]></applyEffects>
 		
 		<itemTags>
 			<tag>DRINK</tag>
@@ -51,11 +49,9 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After first unscrewing the cap, [npc.name] [npc.verb(bring)] the bottle of coffee up to [npc.her] [npc.mouth]. A strong smell of espresso assaults [npc.her] nostrils, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the cool liquid, [npc.she] [npc.verb(feel)] a surge of alertness.
-		]]></selfUse>
+拧下盖子后，[npc.name]把那瓶咖啡递到[npc.her]的[npc.mouth]边。一股强烈的浓咖啡味袭击了[npc.her]的鼻孔，当[npc.she]把头向后仰，开始喝这种凉爽的液体时，[npc.she]感到警觉起来。]]></selfUse>
 		<otherUse><![CDATA[
-		After first unscrewing the cap, [npc.name] [npc.verb(bring)] the bottle of coffee up to [npc2.namePos] waiting [npc2.lips]. A strong smell of espresso assaults [npc2.her] nostrils, and as [npc2.she] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the cool liquid, [npc2.she] [npc2.verb(feel)] a surge of alertness.
-		]]></otherUse>
+拧下盖子后，[npc.name]把那瓶咖啡递到[npc2.namePos][npc2.lips]边。一股强烈的浓咖啡味袭击了[npc2.her]的鼻孔，当[npc2.she]把头向后仰，开始喝这种凉爽的液体时，[npc2.she]感到警觉起来。]]></otherUse>
 	</useDescriptions>
 
 	

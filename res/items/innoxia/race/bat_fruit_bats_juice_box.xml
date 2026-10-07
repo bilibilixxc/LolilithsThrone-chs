@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>20</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Fruit Bat's Juice Box]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Fruit Bat's Juice Boxes]]></namePlural>
-		<description><![CDATA[A small cardboard carton, labelled as 'Fruit Bat's Juice Box'. On one side of the carton, there's an image of a scantily-clad bat-girl squeezing the juice from all sorts of fruit over her breasts.]]></description> 
+		<determiner><![CDATA[一盒]]></determiner>
+		<name><![CDATA[果蝠果汁]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[果蝠果汁]]></namePlural>
+		<description><![CDATA[一个小纸板盒，标签上写着“果蝠果汁”。在盒子的一侧，有一个半裸的蝙蝠女的图像，她正在把各种水果的果汁挤在她的胸部上。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A cool wave of arcane energy washes over [npc.name]...
+				一股清爽的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_ARCANE, 1)]
 		]]></applyEffects>
@@ -51,10 +51,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Tearing the attached straw from the front of the Fruit Bat's Juice Box, [npc.name] [npc.verb(use)] it to pierce the foil circle on the top, before wrapping [npc.her] [npc.lips] around it and quickly drinking all of the tropical-fruits-flavoured liquid contained within.
+		[npc.name]拆下果蝠果汁的盒前附着的吸管，用它穿破顶部的铝箔圆圈，然后将[npc.her][npc.lips]紧紧包裹在上面，迅速喝掉盒子内包含的所有热带水果味液体。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Tearing the attached straw from the front of the Fruit Bat's Juice Box, [npc.name] [npc.verb(use)] it to pierce the foil circle on the top, before getting [npc2.name] to wrap [npc2.her] [npc2.lips] around it and drink all of the tropical-fruits-flavoured liquid contained within.
+		[npc.name]拆下果蝠果汁的盒前面附着的吸管，用它穿破顶部的铝箔圆圈，然后让[npc2.name]将[npc2.her][npc2.lips]紧紧包裹在吸管上，喝掉盒子内包含的所有热带水果味液体。
 		]]></otherUse>
 	</useDescriptions>
 

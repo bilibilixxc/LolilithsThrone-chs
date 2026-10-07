@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>50</value> 
 		<melee>false</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[suspicious dog whistle]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[suspicious dog whistles]]></namePlural>
-		<description><![CDATA[Although it looks like an ordinary dog-whistle, you can't help but get the feeling that it's been enchanted, and is likely to have a devastating effect on greater dog-morphs...]]></description>
-		<attackDescriptor>blow</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Blow the whistle at [npc.name]!]]></attackTooltipDescription>
+		<name><![CDATA[可疑的狗哨]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[可疑的狗哨]]></namePlural>
+		<description><![CDATA[虽然看起来和普通的狗哨别无二致，但你总隐隐约约察觉到它被附魔了，它能对纯兽狗化形产生强有力的效果……]]></description>
+		<attackDescriptor><![CDATA[吹]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[朝着[npc.name]吹哨！]]></attackTooltipDescription>
 		<rarity>LEGENDARY</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] suspicious dog whistle.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] suspicious dog whistle away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]准备吹响[npc.her]的可疑的狗哨。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]收起来了[npc.her]的可疑的狗哨。]]></unequipText>
 		<imageName>doggo_whistle.svg</imageName> 
 		<imageEquippedName/> 
 		<damage>0</damage> 
@@ -27,7 +27,7 @@
 		
 		<effects/>
 		<extraEffects>
-			<effect><![CDATA[[style.colourExcellent(Subdues)] [style.colourTfGreater(greater)] [style.colourDog(dog-morphs)]]]></effect>
+			<effect><![CDATA[[style.colourExcellent(压制)][style.colourTfGreater(变大)][style.colourDog(犬化形)]]]></effect>
 		</extraEffects>
 		
 		<onHitEffect><![CDATA[
@@ -55,15 +55,13 @@
 	</coreAttributes>
 	
 	<hitDescriptions>
-		<hitText><![CDATA[
-		Bringing the dog whistle up to [npc.her] [npc.lips], [npc.name] [npc.verb(give)] it a short, sharp blow. There's a faint, unnatural shrill within the high-pitched noise that's produced...
-		]]></hitText>
+		<hitText><![CDATA[将狗哨举到[npc.her][npc.lips]边，[npc.name]短促而尖利地吹响了它。刺耳的狗哨声中夹杂着微弱而不自然的尖叫声……
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
-		<missText><![CDATA[
-		Bringing the dog whistle up to [npc.her] [npc.lips], [npc.name] [npc.verb(give)] it a short, sharp blow. There's a faint, unnatural shrill within the high-pitched noise that's produced...
-		]]></missText>
+		<missText><![CDATA[将狗哨举到[npc.her][npc.lips]边，[npc.name]短促而尖利地吹响了它。刺耳的狗哨声中夹杂着微弱而不自然的尖叫声……
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

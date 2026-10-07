@@ -133,7 +133,7 @@ public class VengarCaptiveDialogue {
 			Main.game.addNPC(rat, false);
 			rat.setLevel(4+Util.random.nextInt(5));
 			rat.setLocation(Main.game.getPlayer(), true);
-			String[] names = new String[] {"thug", "gangster", "gang-member", "mobster"};
+			String[] names = new String[] {"恶棍", "匪徒", "帮派成员", "黑手党成员"};
 			Main.game.getCharacterUtils().setGenericName(rat, Util.randomItemFrom(names), null);
 			return rat;
 
@@ -291,7 +291,7 @@ public class VengarCaptiveDialogue {
 	
 	private static void applyTattoo(GameCharacter target, String text) {
 		Tattoo tattoo = new Tattoo("innoxia_misc_none", PresetColour.CLOTHING_GREY, null, null, false, new TattooWriting(text, PresetColour.BASE_PINK, false), null);
-		tattoo.setName("'"+text+"' tattoo");
+		tattoo.setName("“"+text+"”纹身");
 		target.addTattoo(InventorySlot.GROIN, tattoo);
 	}
 	
@@ -308,8 +308,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new Response(
-						"Swallow",
-						"With Shadow pinching your nose and holding your mouth closed, you can't do anything other than swallow the liquid that's in your mouth...",
+						"吞下",
+						"影捏住你的鼻子，捂住你的嘴，你毫无办法，只能吞下口中的液体……",
 						FINAL_COMBAT_DEFEAT_FETISH_APPLICATION) {
 					@Override
 					public void effects() {
@@ -341,8 +341,8 @@ public class VengarCaptiveDialogue {
 				List<AbstractFetish> applicableFetishes = Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING);
 				CorruptionLevel applicableCorruptionLevel = Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel();
 				return new Response(
-						"Obey",
-						"Due to the potion you were just forced to drink, you're now so desperate to submit and be transformed that you can't bring yourself to do anything other than exactly what Shadow commands...",
+						"服从",
+						"由于你刚刚被逼着喝下了药水，所以满脑子都是渴求屈服和被转化，失去了自我控制，只能按照影的命令行事……",
 						START_VENGAR_PUBLIC_FUCK,
 						applicableFetishes,
 						applicableCorruptionLevel,
@@ -399,8 +399,8 @@ public class VengarCaptiveDialogue {
 			if(!isCompanionDialogue()) {
 				if(index==1) {
 					return new ResponseSex(
-							"Present yourself",
-							"Shuffle around and raise your ass towards Vengar, presenting yourself to be fucked by him in front of everyone in the hall.",
+							"展示自己",
+							"当着主厅所有人的面，转过身，向文加撅起屁股，求他操你。",
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -424,9 +424,9 @@ public class VengarCaptiveDialogue {
 				
 			} else {
 				if(index==1) {
-					return new ResponseSex("Fucked first",
-							"Push your [pc.hips] back against Vengar, signalling to him that you want him to fuck you first."
-									+ " This will result in you getting fucked by Vengar while eating out Shadow, while [npc.name] eats out Silence.",
+					return new ResponseSex("第一个挨操",
+							"用你的[pc.hips]顶顶文加，示意他先操你。"
+									+ "这会让你边给影舔下体，边挨文加操。[npc.Name]会给默口交。",
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -460,10 +460,10 @@ public class VengarCaptiveDialogue {
 					};
 					
 				} else if(index==2) {
-					return new ResponseSex("Fucked second",
+					return new ResponseSex("第二个挨操",
 							UtilText.parse(getMainCompanion(), 
-								"Shuffle away from Vengar a little, signalling to him that you want him to fuck [npc.name] first."
-										+ " This will result in you eating out Silence while [npc.name] gets used by both Vengar and Shadow."),
+								"挪动，挪动，离文加远一点，示意你想让他先操[npc.Name]。"
+										+ "这会导致你给默舔下体，[npc.Name]同时被文加和影使用。"),
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -519,8 +519,8 @@ public class VengarCaptiveDialogue {
 			
 			if(index==1) {
 				if(Main.sex.getSexPositionSlot(Main.game.getPlayer())!=SexSlotAllFours.ALL_FOURS) {
-					return new ResponseSex("Fucked",
-							UtilText.parse(getMainCompanion(), "Crawl around and start eating the cum out of [npc.namePos] pussy as you prepare to get fucked by Vengar next."),
+					return new ResponseSex("挨操",
+							UtilText.parse(getMainCompanion(), "爬过去舔食[npc.namePos]小穴中流出的精液，准备下一个挨文加操。"),
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -560,8 +560,8 @@ public class VengarCaptiveDialogue {
 					
 				} else {
 					return new ResponseSex(
-							"Oral cleanup",
-							UtilText.parse(getMainCompanion(), "Get [npc.name] to start eating the cum out of your pussy as Vengar fucks [npc.herHim] next."),
+							"口交清洁",
+							UtilText.parse(getMainCompanion(), "让[npc.name]舔食你小穴里流出的精液，文加接下来准备操[npc.herHim]。"),
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -609,8 +609,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait",
-						"Wait for Silence to return.",
+				return new Response("等待",
+						"等待默回来。",
 						START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED);
 			}
 			return null;
@@ -628,12 +628,12 @@ public class VengarCaptiveDialogue {
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
-			List<String> tattooNames = Util.newArrayListOfValues("Public cum dump", "Public cock sleeve", "Free fuck", "Free use");
+			List<String> tattooNames = Util.newArrayListOfValues("公用精液袋", "公用鸡巴套", "免费操", "免费用");
 			
 			if(index==1) {
-				return new Response("Stay quiet",
-						"Stay quiet and let Vengar choose for you..."
-						+ "<br/><i>This will choose one of the other four options at random.</i>",
+				return new Response("保持安静",
+						"保持安静，等文加选你……"
+						+ "<br/><i>这将随机选择其他四个选项中的一个。</i>",
 						START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED_END) {
 					@Override
 					public void effects() {
@@ -656,7 +656,7 @@ public class VengarCaptiveDialogue {
 			} else if(index>0 && index-2<tattooNames.size()) {
 				String name = tattooNames.get(index-2);
 				return new Response(name,
-						"Tell Vengar that you'd like your tattoo to read '"+name+"'...",
+						"告诉文加你想要个写着“"+name+"”的纹身……",
 						START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED_END) {
 					@Override
 					public void effects() {
@@ -692,8 +692,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"You're left free to wander between the hall and Vengar's bedroom.",
+				return new Response("继续",
+						"你可以在大厅和文加的卧室之间自由漫步。",
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 					@Override
 					public void effects() {
@@ -717,7 +717,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Loiter around in the hall, waiting to see is something will be asked of you.", Main.game.getDefaultDialogue(true, true)) {
+				return new Response("等待", "在大厅里闲逛，等着看是否会有人找你。", Main.game.getDefaultDialogue(true, true)) {
 					@Override
 					public int getSecondsPassed() {
 						return 30*60;
@@ -725,10 +725,10 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Serve", "Start serving food and drink to the rats gathered in the hall.", VENGARS_HALL_CHOOSE_SERVE);
+				return new Response("服侍", "开始为聚集在大厅里的老鼠提供食物和饮料。", VENGARS_HALL_CHOOSE_SERVE);
 				
 			} else if(index==3) {
-				return new Response("Flirt (Rat-boy)", "Approach one of the rat-boys in the hall and start flirting with him.", VENGARS_HALL_CHOOSE_FLIRT) {
+				return new Response("调情(鼠男)", "接近走廊里其中一个老鼠男并与她调情。", VENGARS_HALL_CHOOSE_FLIRT) {
 					@Override
 					public void effects() {
 						generateRat(Gender.getGenderFromUserPreferences(Femininity.MASCULINE));
@@ -736,7 +736,7 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==4) {
-				return new Response("Flirt (Rat-girl)", "Approach one of the rat-girls in the hall and start flirting with her.", VENGARS_HALL_CHOOSE_FLIRT) {
+				return new Response("调情(鼠女)", "接近走廊里其中一个老鼠女并与她调情。", VENGARS_HALL_CHOOSE_FLIRT) {
 					@Override
 					public void effects() {
 						generateRat(Gender.getGenderFromUserPreferences(Femininity.FEMININE));
@@ -744,7 +744,7 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==5) {
-				return new Response("Flirt (Group)", "Approach a group of rats in the hall and start flirting with them.", VENGARS_HALL_CHOOSE_FLIRT) {
+				return new Response("调情(群体)", "接近走廊里的那群老鼠并与他们调情。", VENGARS_HALL_CHOOSE_FLIRT) {
 					@Override
 					public void effects() {
 						generateRat(Gender.getGenderFromUserPreferences(false, true));
@@ -756,16 +756,16 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==6) {
-				return new Response("Vengar", "Decide to stay close to Vengar for a while.", VENGARS_HALL_CHOOSE_VENGAR);
+				return new Response("文加", "决定暂时留在文加附近。", VENGARS_HALL_CHOOSE_VENGAR);
 				
 			} else if(index==7) {
-				return new Response("Shadow", "Decide to stay close to Shadow for a while.", VENGARS_HALL_CHOOSE_SHADOW);
+				return new Response("影", "决定暂时留在影身边。", VENGARS_HALL_CHOOSE_SHADOW);
 				
 			} else if(index==8) {
-				return new Response("Silence", "Decide to stay close to Silence for a while.", VENGARS_HALL_CHOOSE_SILENCE);
+				return new Response("默", "决定暂时留在默身边。", VENGARS_HALL_CHOOSE_SILENCE);
 				
 			}  else if(index==9 && isCompanionDialogue()) {
-				return new Response(UtilText.parse(getMainCompanion(), "[npc.Name]"), UtilText.parse(getMainCompanion(), "Decide to seek out your companion, [npc.name], and see what [npc.she] is up to."), VENGARS_HALL_CHOOSE_COMPANION) {
+				return new Response(UtilText.parse(getMainCompanion(), "[npc.Name]"), UtilText.parse(getMainCompanion(), "决定寻找你的同伴[npc.Name]，看看[npc.she]在做什么。"), VENGARS_HALL_CHOOSE_COMPANION) {
 					@Override
 					public void effects() {
 						currentCompanionBehaviour = Util.getRandomObjectFromWeightedFloatMap(dailyCompanionBehaviours);
@@ -855,7 +855,7 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarCaptiveVengarSatisfied)) {
 				if(index==1) {
-					return new Response("Obey", "Drop down onto your knees before Vengar and get his cock out.", VENGARS_HALL_CHOOSE_VENGAR_HANDJOB) {
+					return new Response("顺从", "跪在文加面前，把他的鸡巴掏出来。", VENGARS_HALL_CHOOSE_VENGAR_HANDJOB) {
 						@Override
 						public boolean isSexHighlight() {
 							return true;
@@ -870,7 +870,7 @@ public class VengarCaptiveDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Kneel", "Do as Vengar commands and submissively kneel down beside him.", VENGARS_HALL_CHOOSE_VENGAR_KNEEL);
+					return new Response("下跪", "按照文加的命令，顺从地跪在他身边。", VENGARS_HALL_CHOOSE_VENGAR_KNEEL);
 				}
 			}
 			return null;
@@ -890,8 +890,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Sit",
-						"Do as Vengar commands and sit in his lap.",
+						"坐",
+						"听从文加的命令，坐在他的腿上。",
 						true,
 						false,
 						new SMVengarDominantSex(
@@ -914,7 +914,7 @@ public class VengarCaptiveDialogue {
 		}
 	};
 
-	public static final DialogueNode VENGARS_HALL_VENGAR_FUCK_AFTER_SEX = new DialogueNode("Finished", "Vengar has finished with you for now.", true) {
+	public static final DialogueNode VENGARS_HALL_VENGAR_FUCK_AFTER_SEX = new DialogueNode("结束", "文加暂时和你做够了。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -926,8 +926,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Dismissed",
-						"Do as Vengar commands and head back down into the hall.",
+				return new Response("被解雇",
+						"听从文加的命令，回到大厅。",
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
@@ -946,7 +946,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Footrest", "Do as Vengar commands and get down on all fours before him so that he may use you as his footrest.", VENGARS_HALL_CHOOSE_VENGAR_FOOTREST);
+				return new Response("脚垫", "按照文加的命令，四肢着地趴在他面前，让他把你当成他的脚垫。", VENGARS_HALL_CHOOSE_VENGAR_FOOTREST);
 			}
 			return null;
 		}
@@ -964,7 +964,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Do as Vengar commands and head back down into the hall.", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+				return new Response("继续", "听从文加的命令，回到大厅。", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
 		}
@@ -986,7 +986,7 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarCaptiveShadowSatisfied)) {
 				if(index==1) {
-					return new Response("Raise ass", "You have little choice but to do as Shadow commands...", VENGARS_HALL_CHOOSE_SHADOW_SPANKING) {
+					return new Response("翘起屁股", "你别无选择，只能听从影的命令……", VENGARS_HALL_CHOOSE_SHADOW_SPANKING) {
 						@Override
 						public boolean isSexHighlight() {
 							return true;
@@ -1001,7 +1001,7 @@ public class VengarCaptiveDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Continue", "Do as Shadow commands and leave her alone, heading back into the hall instead.", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+					return new Response("继续", "按照影的吩咐，让她一个人待着，自己回到大厅。", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 				}
 			}
 			return null;
@@ -1021,8 +1021,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Eaten out",
-						"Shadow starts desperately eating you out.",
+						"被舔阴",
+						"影开始拼命舔舐你的下体。",
 						true,
 						false,
 						new SMEatenOut(
@@ -1057,7 +1057,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Do as Shadow commands and head back down into the hall.", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+				return new Response("继续", "听从影的命令，返回大厅。", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
 		}
@@ -1080,8 +1080,8 @@ public class VengarCaptiveDialogue {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarCaptiveSilenceSatisfied)) {
 				if(index==1) {
 					return new ResponseSex(
-							"Cunnilingus",
-							"Kneel down in front of Silence and start eating her out...",
+							"舔阴",
+							"跪在默面前开始拼命舔舐她的下体……",
 							true,
 							false,
 							new SMEatingOut(
@@ -1101,13 +1101,13 @@ public class VengarCaptiveDialogue {
 					};
 				
 				} else if(index==2) {
-					return new Response("Leave", "Decide against performing oral on Silence and head back into the hall instead.", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+					return new Response("离开", "决定不给默口交，而是回到大厅。", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 					
 				}
 				
 			} else {
 				if(index==1) {
-					return new Response("Continue", "As Silence seems unwilling to react to your presence, there's nothing left to do except head back into the hall.", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+					return new Response("继续", "由于默似乎不愿意对你的出现做出反应，所以除了返回大厅别无他法。", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 				}
 			}
 			return null;
@@ -1126,7 +1126,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Silence seems unwilling to do anything else with you at the moment, so you have little option but to head back into the hall.", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+				return new Response("继续", "默现在似乎不愿意和你做任何其他事情，所以你别无选择，只能回到大厅。", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
 		}
@@ -1174,48 +1174,48 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", UtilText.parse(getMainCompanion(), "Leave [npc.name] to it and head back into the hall."), Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+				return new Response("离开", UtilText.parse(getMainCompanion(), "不再打扰[npc.name]，你回到了大厅。"), Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			switch(currentCompanionBehaviour) {
 				case FLIRTING:
 					if(index==2) {
-						return new Response("Join",
-								UtilText.parse(getCharactersPresent(true), "Join [npc.name] in flirting with [npc2.name]."),
+						return new Response("加入",
+								UtilText.parse(getCharactersPresent(true), "加入[npc.name]，与[npc2.name]调情。"),
 								VENGARS_HALL_CHOOSE_COMPANION_FLIRTING);
 					}
 					break;
 				case FUCKING:
 					if(index==2) {
-						return new Response("Approach",
-								UtilText.parse(getCharactersPresent(true), "Approach [npc.name] and take a closer look at [npc.herHim] as [npc.sheIs] fucked by [npc2.name]."),
+						return new Response("接近",
+								UtilText.parse(getCharactersPresent(true), "接近[npc.name]并贴近着看[npc.herHim]被[npc2.name]操弄着。"),
 								VENGARS_HALL_CHOOSE_COMPANION_FUCKING); //TODO need companion to get creampied if NPC has penis
 					}
 					break;
 				case GROUP_SEX:
 					if(index==2) {
-						return new Response("Get closer",
-								UtilText.parse(getCharactersPresent(true), "Approach [npc.name] and take a closer look at [npc.herHim] as [npc.sheIs] fucked by the group of rats."),
+						return new Response("靠近",
+								UtilText.parse(getCharactersPresent(true), "接近[npc.name]并贴近看着[npc.herHim]被一群老鼠操弄着。"),
 								VENGARS_HALL_CHOOSE_COMPANION_GROUP_SEX);
 					}
 					break;
 				case SERVING:
 					if(index==2) {
-						return new Response("Help",
-								UtilText.parse(getMainCompanion(), "Help [npc.name] in serving food and drink to tables around the hall."),
+						return new Response("帮忙",
+								UtilText.parse(getMainCompanion(), "帮助[npc.name]把食物和饮料摆放到大厅周围的桌子上。"),
 								VENGARS_HALL_CHOOSE_COMPANION_SERVING);
 					}
 					break;
 				case SHADOW:
 					if(index==2) {
-						return new Response("Object",
-								UtilText.parse(getMainCompanion(), "Object to Shadow's harsh treatment of [npc.name]."),
+						return new Response("反对",
+								UtilText.parse(getMainCompanion(), "反对影对[npc.name]粗暴地对待。"),
 								VENGARS_HALL_CHOOSE_COMPANION_SHADOW);
 					}
 					break;
 				case SILENCE:
 					if(index==2) {
-						return new Response("Watch",
-								UtilText.parse(getMainCompanion(), "Join [npc.name] in watching Silence dominantly ride the rat-boy."),
+						return new Response("旁观",
+								UtilText.parse(getMainCompanion(), "和[npc.name]一起看默骑在鼠男身上。"),
 								VENGARS_HALL_CHOOSE_COMPANION_SILENCE) {
 							@Override
 							public void effects() {
@@ -1229,8 +1229,8 @@ public class VengarCaptiveDialogue {
 					break;
 				case VENGAR:
 					if(index==2) {
-						return new Response("Linger",
-								UtilText.parse(getMainCompanion(), "Linger around near to Vengar to see if [npc.name] is going to be released anytime soon."),
+						return new Response("徘徊",
+								UtilText.parse(getMainCompanion(), "在文加身边逗留，看着[npc.name]是不是马上要被释放了。"),
 								VENGARS_HALL_CHOOSE_COMPANION_VENGAR);
 					}
 					break;
@@ -1252,13 +1252,13 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Groped",
-						UtilText.parse(getCharactersPresent(true), "Just let [npc2.name] grope you and [npc.name] without letting [npc2.herHim] take it any further."),
+				return new Response("被摸",
+						UtilText.parse(getCharactersPresent(true), "只让[npc2.name]摸你和[npc.name]的身体，但不许[npc2.herHim]更进一步。"),
 						VENGARS_HALL_CHOOSE_COMPANION_FLIRTING_FINISH);
 				
 			} else if(index==2 && (getCharactersPresent(true).get(1).hasPenis() || getCharactersPresent(true).get(1).hasVagina())) {
-				return new ResponseSex("Go further",
-						UtilText.parse(getCharactersPresent(true), "Get [npc.name] to join you in performing oral on [npc2.name]."),
+				return new ResponseSex("更进一步",
+						UtilText.parse(getCharactersPresent(true), "让[npc.name]跟你一起用嘴巴侍奉[npc2.name]。"),
 						true,
 						false,
 						new SMSitting(
@@ -1311,10 +1311,10 @@ public class VengarCaptiveDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_COMPANION_FLIRTING_ORAL = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_COMPANION_FLIRTING_ORAL = new DialogueNode("结束", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCharactersPresent(true), "[npc2.Name] is finished with you and [npc.name]."); 
+			return UtilText.parse(getCharactersPresent(true), "[npc2.Name]跟你和[npc.name]爽过了。"); 
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -1327,8 +1327,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(true), "Having had [npc2.her] fun, [npc2.name] leaves you and [npc.name] to get on with other duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(true), "心满意足后，[npc2.name]就把你和[npc.name]丢下，让你们继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 					@Override
 					public void effects() {
@@ -1352,8 +1352,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(true), "Having had [npc2.her] fun, [npc2.name] leaves you and [npc.name] to get on with other duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(true), "心满意足后，[npc2.name]就把你和[npc.name]丢下，让你们继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())){
 					@Override
 					public void effects() {
@@ -1381,13 +1381,13 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getCharactersPresent(true).get(1).hasPenis()) {
 				if(index==1) {
-					return new Response("Leave",
-							UtilText.parse(getCharactersPresent(true), "Decide against getting involved with [npc.name] and [npc2.name]..."),
+					return new Response("离开",
+							UtilText.parse(getCharactersPresent(true), "决定还是不跟[npc.name]和[npc2.name]扯上关系了……"),
 							Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 					
 				} else if(index==2) {
-					return new ResponseSex("Take place",
-							UtilText.parse(getCharactersPresent(true), "Wait until [npc2.sheIs] finished, and then take [npc.namePos] place and get fucked."),
+					return new ResponseSex("代替",
+							UtilText.parse(getCharactersPresent(true), "等到[npc2.sheIs]结束，然后代替[npc.namePos]继续挨操。"),
 							true,
 							false,
 							new SMLyingDown(
@@ -1464,13 +1464,13 @@ public class VengarCaptiveDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Leave",
-							UtilText.parse(getCharactersPresent(true), "Decide against getting involved with [npc.name] and [npc2.name]..."),
+					return new Response("离开",
+							UtilText.parse(getCharactersPresent(true), "决定还是不跟[npc.name]和[npc2.name]扯上关系了……"),
 							Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 					
 				} else if(index==2) {
-					return new ResponseSex("Take place",
-							UtilText.parse(getCharactersPresent(true), "Take [npc.namePos] place in eating [npc2.name] out."),
+					return new ResponseSex("代替",
+							UtilText.parse(getCharactersPresent(true), "代替[npc.namePos]给[npc2.name]舔阴。"),
 							true,
 							false,
 							new SMLyingDown(
@@ -1533,8 +1533,8 @@ public class VengarCaptiveDialogue {
 					};
 					
 				} else if(index==3 && Main.game.isAnalContentEnabled()) {
-					return new ResponseSex("Anilingus",
-							UtilText.parse(getCharactersPresent(true), "Drop down behind [npc2.name] and start performing anilingus on [npc2.herHim] while [npc.name] continues to service [npc2.her] pussy."),
+					return new ResponseSex("吻肛",
+							UtilText.parse(getCharactersPresent(true), "跪在[npc2.name]身后，开始给[npc2.herHim]吻肛，而[npc.name]则继续侍奉着[npc2.her]的小穴。"),
 							true,
 							false,
 							new SMStanding(
@@ -1601,10 +1601,10 @@ public class VengarCaptiveDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_COMPANION_FUCKING = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_COMPANION_FUCKING = new DialogueNode("结束", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCharactersPresent(true), "[npc2.Name] is finished with you and [npc.name]."); 
+			return UtilText.parse(getCharactersPresent(true), "[npc2.Name]跟你和[npc.name]爽过了。"); 
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -1617,8 +1617,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(true), "Having had [npc2.her] fun, [npc2.name] leaves you and [npc.name] to get on with other duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(true), "心满意足后，[npc2.name]就把你和[npc.name]丢下，让你们继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 					@Override
 					public void effects() {
@@ -1642,13 +1642,13 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						UtilText.parse(getCharactersPresent(true), "Decide against getting involved with [npc.name] and the group of rats..."),
+				return new Response("离开",
+						UtilText.parse(getCharactersPresent(true), "决定还是不跟[npc.name]和那群老鼠一起了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 				
 			} else if(index==2) {
-				return new ResponseSex("Join in",
-						UtilText.parse(getCharactersPresent(true), "Join in and get fucked alongside [npc.name]."),
+				return new ResponseSex("加入",
+						UtilText.parse(getCharactersPresent(true), "跟一起[npc.name]挨操。"),
 						true,
 						false,
 						new SMLyingDown(
@@ -1775,7 +1775,7 @@ public class VengarCaptiveDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_COMPANION_GROUP_SEX = new DialogueNode("Finished", "The rats are finished with the two of you...", true) {
+	public static final DialogueNode AFTER_COMPANION_GROUP_SEX = new DialogueNode("结束", "老鼠和你们两个做够了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -1787,8 +1787,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(true), "Having had their fun, the rats leave you and [npc.name] to get on with other duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(true), "那群老鼠心满意足后，就把你和[npc.name]丢下，让你们继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 					@Override
 					public void effects() {
@@ -1818,8 +1818,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Finished",
-						UtilText.parse(getMainCompanion(), "After hours of having to serve food and drink to the rats in the hall, you and [npc.name] are finally finished."),
+				return new Response("结束",
+						UtilText.parse(getMainCompanion(), "你和[npc.Name]花了好几个小时给大厅里的老鼠递上食物和饮品，现在终于结束了。"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
@@ -1838,8 +1838,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Spanked",
-						UtilText.parse(getMainCompanion(), "Shadow starts ruthlessly spanking you and [npc.name]..."),
+				return new Response("被打屁股",
+						UtilText.parse(getMainCompanion(), "影开始狠力地拍打你和[npc.name]的屁股……"),
 						VENGARS_HALL_CHOOSE_COMPANION_SHADOW_SPANKED);
 			}
 			return null;
@@ -1859,8 +1859,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Eaten out",
-						"Now it's your turn to be eaten out by the dominant rat-girl.",
+						"被舔阴",
+						"现在轮到你让这个高高在上的鼠女给你舔阴了。",
 						true,
 						false,
 						new SMEatenOut(
@@ -1900,7 +1900,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Do as Shadow commands and head back down into the hall.", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
+				return new Response("继续", "听从影的命令，返回大厅。", Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
 		}
@@ -1919,8 +1919,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Clean her",
-						"Kneel down in front of Silence and start eating the cum out of her freshly-creampied pussy.",
+						"帮她清理",
+						"跪在默的面前，帮她舔干净刚刚射进蜜穴中的精液。",
 						true,
 						false,
 						new SMEatingOut(
@@ -1941,8 +1941,8 @@ public class VengarCaptiveDialogue {
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						"Watch",
-						UtilText.parse(getMainCompanion(), "Watch [npc.name] eating the cum out of Silence's freshly-creampied pussy..."),
+						"旁观",
+						UtilText.parse(getMainCompanion(), "看着[npc.name]舔干净了刚刚射进默那蜜穴中的精液……"),
 						true,
 						false,
 						new SMEatingOut(
@@ -1962,8 +1962,8 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==3) {
-				return new Response("Leave",
-						UtilText.parse(getCharactersPresent(true), "Leave [npc.name] to eat the cum out of Silence's freshly-creampied pussy and get on with other duties in the hall..."),
+				return new Response("离开",
+						UtilText.parse(getCharactersPresent(true), "让[npc.name]去舔干净刚刚射进默那蜜穴中的精液，自己继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 					@Override
 					public void effects() {
@@ -1988,8 +1988,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Footrest",
-						UtilText.parse(getMainCompanion(), "You have little choice but to join [npc.name] in acting as a footrest for Vengar..."),
+				return new Response("脚垫",
+						UtilText.parse(getMainCompanion(), "你别无选择，只能同[npc.name]一起当了文加的脚垫……"),
 						VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST);
 			}
 			return null;
@@ -2008,8 +2008,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Present yourself",
-						UtilText.parse(getMainCompanion(), "Do as Vengar commands and try to do a better job of presenting yourself to him than [npc.name]."),
+				return new Response("展示自己",
+						UtilText.parse(getMainCompanion(), "按照文加的命令，比[npc.Name]更努力地向文加展示自己。"),
 						VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_PRESENT) {
 					@Override
 					public void effects() {
@@ -2018,8 +2018,8 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Hold back",
-						UtilText.parse(getMainCompanion(), "Hold back in presenting yourself to Vengar, ensuring that [npc.name] will be chosen to be fucked by him..."),
+				return new Response("克制",
+						UtilText.parse(getMainCompanion(), "在向文加展示自己的时候更加克制一些，保证被他选中的会是[npc.name]……"),
 						VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_HOLD_BACK) {
 					@Override
 					public void effects() {
@@ -2043,8 +2043,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Vengar's cock-sleeve",
-						UtilText.parse(getMainCompanion(), "Tell Vengar that you're his submissive cock-sleeve."),
+				return new ResponseSex("文加的鸡巴套",
+						UtilText.parse(getMainCompanion(), "告诉文加你是他顺服的鸡巴套。"),
 						true,
 						false,
 						new SMVengarDominantSex(
@@ -2091,8 +2091,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Public cum-dump",
-						UtilText.parse(getCharactersPresent(true).get(1), "Do as [npc.name] says and admit that you're a public cum-dump for any rat who wants to use you."),
+				return new ResponseSex("公用肉便器",
+						UtilText.parse(getCharactersPresent(true).get(1), "听从[npc.name]的要求，承认无论哪只老鼠想使用你，你都可以做他公用的便器。"),
 						true,
 						false,
 						new SMVengarDominantSex(
@@ -2127,10 +2127,10 @@ public class VengarCaptiveDialogue {
 		}
 	};
 	
-	public static final DialogueNode VENGARS_HALL_CHOOSE_COMPANION_VENGAR_AFTER_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode VENGARS_HALL_CHOOSE_COMPANION_VENGAR_AFTER_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCharactersPresent(true), "Vengar and [npc2.Name] are finished with you and [npc.name]."); 
+			return UtilText.parse(getCharactersPresent(true), "文加和[npc2.Name]跟你和[npc.name]做完了。"); 
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -2143,8 +2143,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(true), "Having had his fun, Vengar orders you and [npc.name] to get on with other duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(true), "文加心满意足后，就把你和[npc.name]丢下，让你们继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 					@Override
 					public void effects() {
@@ -2172,8 +2172,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().hasStatusEffect(StatusEffect.PREGNANT_3)) {
 				if(index==1) {
-					return new Response("Bedroom",
-							"Follow Shadow and Silence into the bedroom.",
+					return new Response("卧室",
+							"跟随影和默到卧室。",
 							VENGARS_HALL_DELIVERY_BIRTHING) {
 						@Override
 						public void effects() {
@@ -2186,8 +2186,8 @@ public class VengarCaptiveDialogue {
 					
 			} else {
 				if(index==1) {
-					return new Response("Continue",
-							UtilText.parse(getMainCompanion(), "From the gentle way in which Silence is treating [npc.name], you're able to continue with your duties in the hall without having to worry about [npc.herHim]."),
+					return new Response("继续",
+							UtilText.parse(getMainCompanion(), "看到默对[npc.name]这么体贴，你可以不用担心[npc.herHim]，继续在大厅里完成任务了。"),
 							Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 						@Override
 						public void effects() {
@@ -2225,7 +2225,7 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().isVaginaEggLayer()) {
-					return new Response("Protect the eggs!", "You spend some time recovering from your ordeal...", VENGARS_HALL_DELIVERY_BIRTHING_EGG_PROTECTION) {
+					return new Response("保住那些蛋！", "保住你的蛋，别让老鼠抢走了！", VENGARS_HALL_DELIVERY_BIRTHING_EGG_PROTECTION) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Silence.class).setLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_VENGARS_HALL);
@@ -2233,7 +2233,7 @@ public class VengarCaptiveDialogue {
 						}
 					};
 				} else {
-					return new Response("Rest", "You spend some time recovering from your ordeal...", VENGARS_HALL_DELIVERY_BIRTHING_FINISHED) {
+					return new Response("休息", "历经折磨后，你需要休息一会儿……", VENGARS_HALL_DELIVERY_BIRTHING_FINISHED) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Silence.class).setLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_VENGARS_HALL);
@@ -2259,8 +2259,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(true), "It's time for you to return to your duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(true), "是时候继续在大厅里的任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
@@ -2279,8 +2279,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(true), "It's time for you to return to your duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(true), "是时候继续在大厅里的任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
@@ -2299,7 +2299,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Loiter around in the bed-chambers in an attempt to pass the time without having to work in the hall...", Main.game.getDefaultDialogue(true, true)) {
+				return new Response("等待", "在卧室逗留，经过一段不需要在大厅工作的时光……", Main.game.getDefaultDialogue(true, true)) {
 					@Override
 					public int getSecondsPassed() {
 						return 30*60;
@@ -2311,7 +2311,7 @@ public class VengarCaptiveDialogue {
 		}
 	};
 	
-	public static final DialogueNode CORRIDOR = new DialogueNode("Twisting Passageway", "", true) {
+	public static final DialogueNode CORRIDOR = new DialogueNode("曲折通道", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -2323,7 +2323,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Move back", "You have little choice but to do as the guard says and move back into the hall...", VENGARS_HALL) {
+				return new Response("折回", "你别无选择，只能听从守卫的要求，回到大厅……", VENGARS_HALL) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_VENGARS_HALL);
@@ -2373,7 +2373,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Shadow", "Shadow leads you into the private bed-chambers...", VENGARS_HALL_NIGHT_TIME_ESCORTED) {
+				return new Response("影", "影带着你去到了私人卧室……", VENGARS_HALL_NIGHT_TIME_ESCORTED) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Shadow.class).setLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_PRIVATE_BEDCHAMBERS);
@@ -2415,8 +2415,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue serving",
-						"It looks like you aren't going to be allowed to stop serving food and drink for quite some time...",
+				return new Response("继续上菜",
+						"看来你还没有获得准许，要继续上菜上一会儿……",
 						VENGARS_HALL_SERVING);
 			}
 			return null;
@@ -2441,8 +2441,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Finished",
-						"After hours of having to serve food and drink to the rats in the hall, you are finally finished.",
+				return new Response("结束",
+						"你花了好几个小时给大厅里的老鼠递上食物和饮品，现在终于结束了。",
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
@@ -2466,13 +2466,13 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getCharactersPresent(false).size()>1) {
 				if(index==1) {
-					return new Response("Groped",
-							"Just let the rats grope you without letting them take it any further.",
+					return new Response("被摸",
+							"任由这群老鼠对你上下其手，但避免更进一步。",
 							VENGARS_HALL_GROPED_FINISH);
 					
 				} else if(index==2) {
-					return new ResponseSex("Fucked",
-							"Lie back on the table and entice the rats to fuck you.",
+					return new ResponseSex("挨操",
+							"躺到桌子上，引诱这些老鼠来上你。",
 							true,
 							false,
 							new SMLyingDown(
@@ -2563,13 +2563,13 @@ public class VengarCaptiveDialogue {
 				
 			} else { //Solo rat:
 				if(index==1) {
-					return new Response("Groped",
-							UtilText.parse(getCharactersPresent(false), "Just let [npc.name] grope you without letting [npc.herHim] take it any further."),
+					return new Response("被摸",
+							UtilText.parse(getCharactersPresent(false), "让[npc.name]对你上下其手，但不许[npc.herHim]更进一步。"),
 							VENGARS_HALL_GROPED_FINISH);
 					
 				} else if(index==2 && (getCharactersPresent(false).get(0).hasPenis() || getCharactersPresent(false).get(0).hasVagina())) {
-					return new ResponseSex("Perform oral",
-							UtilText.parse(getCharactersPresent(false), "Perform oral on [npc.name]."),
+					return new ResponseSex("提供口交",
+							UtilText.parse(getCharactersPresent(false), "给[npc.name]口交。"),
 							true,
 							false,
 							new SMSitting(
@@ -2631,8 +2631,8 @@ public class VengarCaptiveDialogue {
 					};
 					
 				} else if(index==3 && getCharactersPresent(false).get(0).hasPenis()) {
-					return new ResponseSex("Fucked",
-							UtilText.parse(getCharactersPresent(false), "Lie back on the table and entice [npc.name] to fuck you."),
+					return new ResponseSex("挨操",
+							UtilText.parse(getCharactersPresent(false), "躺到桌子上，引诱[npc.name]来上你。"),
 							true,
 							false,
 							new SMOverDesk(
@@ -2683,10 +2683,10 @@ public class VengarCaptiveDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_GROPED_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_GROPED_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCharactersPresent(false), "[npc.Name] is finished with you."); 
+			return UtilText.parse(getCharactersPresent(false), "[npc.Name]和你做够了。"); 
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -2702,8 +2702,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(false), "Having had [npc.her] fun, [npc.name] leaves you to get on with other duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(false), "[npc.Name]心满意足后，让你继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())) {
 					@Override
 					public void effects() {
@@ -2730,10 +2730,10 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
+				return new Response("继续",
 						getCharactersPresent(false).size()>1
-							?"Having had their fun, the rats leave you to get on with other duties in the hall..."
-							:UtilText.parse(getCharactersPresent(false), "Having had [npc.her] fun, [npc.name] leaves you to get on with other duties in the hall..."),
+							?"那群老鼠心满意足后，就把你丢下，让你继续在大厅里完成任务了……"
+							:UtilText.parse(getCharactersPresent(false), "[npc.Name]心满意足后，就把你丢下，让你继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())){
 					@Override
 					public void effects() {
@@ -2780,8 +2780,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getCharactersPresent(false).get(0).hasPenis()) {
 				if(index==1) {
-					return new ResponseSex("Fucked",
-							UtilText.parse(getCharactersPresent(false), "You find yourself pushed over a table, about to be fucked by [npc.name]..."),
+					return new ResponseSex("挨操",
+							UtilText.parse(getCharactersPresent(false), "你突然被推倒在桌子上，要被[npc.name]操了……"),
 							true,
 							false,
 							new SMOverDesk(
@@ -2845,8 +2845,8 @@ public class VengarCaptiveDialogue {
 				
 			} else {
 				if(index==1) {
-					return new ResponseSex("Cunnilingus",
-							UtilText.parse(getCharactersPresent(false), "Do as [npc.name] says and start eating [npc.herHim] out."),
+					return new ResponseSex("舔阴",
+							UtilText.parse(getCharactersPresent(false), "按照[npc.name]的只是，开始给[npc.herHim]舔阴。"),
 							true,
 							false,
 							new SMAgainstWall(
@@ -2915,8 +2915,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(getCharactersPresent(false), "Having had [npc.her] fun, [npc.name] leaves you to get on with other duties in the hall..."),
+				return new Response("继续",
+						UtilText.parse(getCharactersPresent(false), "[npc.Name]心满意足后，让你继续在大厅里完成任务了……"),
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())){
 					@Override
 					public void effects() {
@@ -2951,8 +2951,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Used",
-						"The rats start groping and fondling you as they pull you into position...",
+				return new ResponseSex("被使用",
+						"这群老鼠开始对着你摸来摸去，逐渐跟你摆好了姿势……",
 						true,
 						false,
 						new SMLyingDown(
@@ -3056,8 +3056,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Having had their fun, the rats leave you to get on with other duties in the hall...",
+				return new Response("继续",
+						"那群老鼠心满意足后，就把你丢下，让你继续在大厅里完成任务了……",
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime())){
 					@Override
 					public void effects() {
@@ -3085,7 +3085,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Clean", "Do as Shadow commands and set about cleaning the bedroom.", VENGARS_BEDROOM_CLEAN_FINISH) {
+				return new Response("清理", "听从影的命令，去清理卧室。", VENGARS_BEDROOM_CLEAN_FINISH) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vengarCaptiveRoomCleaned, true);
@@ -3126,8 +3126,8 @@ public class VengarCaptiveDialogue {
 				if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarCaptiveShadowSatisfied)) {
 					if(index==1) {
 						return new ResponseSex(
-								"Raise ass",
-								"Raise your ass so that Shadow can start eating you out...",
+								"抬起屁股",
+								"抬起屁股，让影给你舔阴……",
 								true,
 								false,
 								new SMEatingOut(
@@ -3147,8 +3147,8 @@ public class VengarCaptiveDialogue {
 						};
 					
 					} else if(index==2) {
-						return new Response("Leave",
-								"Try to stand up and head back into the hall instead.<br/><i>While this may be tolerated by Silence, you think that Shadow is unlikely to let you go so easily...</i>",
+						return new Response("离开",
+								"试着站起身，还是要回到大厅。<br/><i>虽然默会容许这种行为，但影可能并不会这么简单就让你离开……</i>",
 								VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SHADOW);
 					}
 					return null;
@@ -3158,8 +3158,8 @@ public class VengarCaptiveDialogue {
 				if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarCaptiveSilenceSatisfied)) {
 					if(index==1) {
 						return new ResponseSex(
-								"Perform cunnilingus",
-								"Kneel down in front of Silence and start eating her out...",
+								"舔阴",
+								"跪在默面前开始拼命舔舐她的下体……",
 								true,
 								false,
 								new SMEatingOut(
@@ -3179,8 +3179,8 @@ public class VengarCaptiveDialogue {
 						};
 					
 					} else if(index==2) {
-						return new Response("Leave",
-								"Decide against performing oral on Silence and head back into the hall instead.",
+						return new Response("离开",
+								"决定还是不用嘴巴侍奉默了，转身回到大厅。",
 								VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SILENCE) {
 							@Override
 							public void effects() {
@@ -3194,10 +3194,10 @@ public class VengarCaptiveDialogue {
 			}
 			
 			if(index==1) {
-				return new Response("Main hall",
+				return new Response("主厅",
 						Main.game.getCharactersPresent().contains(Main.game.getNpc(Shadow.class))
-							?"Do as Shadow says and head back out into the main hall."
-							:"Do as Silence wants and head back out into the main hall.",
+							?"按照影的指示，回到主厅。"
+							:"按照默的意愿，回到主厅。",
 						PlaceType.RAT_WARRENS_VENGARS_HALL.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -3223,8 +3223,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Think about what to do in the main hall next.",
+				return new Response("继续",
+						"思索接下来要在主厅里做什么。",
 						Main.game.getDefaultDialogue(!Main.game.isExtendedWorkTime()));
 			}
 			return null;
@@ -3243,8 +3243,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Spanked",
-						"Shadow starts ruthlessly spanking you...",
+				return new Response("被打屁股",
+						"影开始狠力地拍打你的屁股……",
 						VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SHADOW_FACE_SITTING);
 				
 			}
@@ -3265,8 +3265,8 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Obey",
-						"You have little choice but to do as the dominant rat-girl commands...",
+						"服从",
+						"你别无选择，只能听从这个高高在上的鼠女的命令……",
 						true,
 						false,
 						new SMEatingOut(
@@ -3289,13 +3289,13 @@ public class VengarCaptiveDialogue {
 		}
 	};
 	
-	public static final DialogueNode VENGARS_BEDROOM_AFTER_RAT_GIRL_ORAL = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode VENGARS_BEDROOM_AFTER_RAT_GIRL_ORAL = new DialogueNode("结束", "", true) {
 		@Override
 		public String getDescription() {
 			if(Main.sex.getAllParticipants().contains(Main.game.getNpc(Shadow.class))) {
-				return "Shadow has had enough of your oral attention for now.";
+				return "你已经用嘴巴满足了影。";
 			}
-			return "Silence has had enough of your oral attention for now.";
+			return "你已经用嘴巴满足了默。";
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -3314,8 +3314,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Main hall",
-						"Head back out into the main hall.",
+				return new Response("主厅",
+						"回到主厅。",
 						PlaceType.RAT_WARRENS_VENGARS_HALL.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -3351,8 +3351,8 @@ public class VengarCaptiveDialogue {
 			if(isCompanionDialogue()) {
 				if(index==1) {
 					return new ResponseSex(
-							"Shadow",
-							"Express your desire to have the dominant rat-girl eat you out...",
+							"影",
+							"说出你心中的渴望，你想让这盛气凌人的鼠女给你舔阴……",
 							true,
 							false,
 							new SMShadowSilence(
@@ -3381,8 +3381,8 @@ public class VengarCaptiveDialogue {
 					
 				} else if(index==2) {
 					return new ResponseSex(
-							"Silence",
-							"Express your desire to eat out the white-furred rat-girl...",
+							"默",
+							"说出你心中的渴望，你想给这只白毛鼠女舔阴……",
 							true,
 							false,
 							new SMShadowSilence(
@@ -3413,8 +3413,8 @@ public class VengarCaptiveDialogue {
 			} else {
 				if(index==1) {
 					return new ResponseSex(
-							"Obey",
-							"You have little choice but to do as the dominant rat-girl commands...",
+							"服从",
+							"你别无选择，只能听从这个高高在上的鼠女的命令……",
 							true,
 							false,
 							new SMEatingOut(
@@ -3460,8 +3460,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Main hall",
-						"Do as Shadow says and head back out into the main hall.",
+				return new Response("主厅",
+						"按照影的指示，回到主厅。",
 						PlaceType.RAT_WARRENS_VENGARS_HALL.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -3494,8 +3494,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Main hall",
-						"Do as Shadow says and head back out into the main hall.",
+				return new Response("主厅",
+						"按照影的指示，回到主厅。",
 						PlaceType.RAT_WARRENS_VENGARS_HALL.getDialogue(true)) {
 					@Override
 					public void effects() {
@@ -3537,8 +3537,8 @@ public class VengarCaptiveDialogue {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarCaptiveVengarSatisfied)) {
 				if(index==1) {
 					return new ResponseSex(
-							"Present yourself",
-							"Drop down on all fours and raise your ass towards Vengar, presenting yourself to be fucked by him.",
+							"展示自己",
+							"你四肢伏地，向文加抬起屁股奋力地展示自己，想被他插入。",
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -3560,7 +3560,7 @@ public class VengarCaptiveDialogue {
 				} else if(index==2 && isCompanionDialogue()) {
 					return new ResponseSex(
 							UtilText.parse(getMainCompanion(), "[npc.Name]"),
-							UtilText.parse(getMainCompanion(), "Let [npc.name] be the one to be fucked by Vengar."),
+							UtilText.parse(getMainCompanion(), "让[npc.name]被文加干吧。"),
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -3587,7 +3587,7 @@ public class VengarCaptiveDialogue {
 		}
 	};
 	
-	public static final DialogueNode VENGARS_BEDROOM_NIGHT_TIME_AFTER_SEX = new DialogueNode("Finished", "Vengar is finished...", true) {
+	public static final DialogueNode VENGARS_BEDROOM_NIGHT_TIME_AFTER_SEX = new DialogueNode("结束", "文加做完了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -3599,7 +3599,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sleep", "Snuggle up to Vengar and fall asleep with him.", VENGARS_BEDROOM_NIGHT_TIME_SLEEP) {
+				return new Response("入睡", "依偎在文加怀中，跟他一起入睡。", VENGARS_BEDROOM_NIGHT_TIME_SLEEP) {
 					@Override
 					public void effects() {
 						if(isCompanionDialogue()) {
@@ -3611,7 +3611,7 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Pretend", "Stay away from Vengar and pretend to fall asleep, ready to sneak out once you're sure he's sleeping.", VENGARS_BEDROOM_NIGHT_TIME_PRETEND);
+				return new Response("装睡", "稍微远离文加，假装睡着了，等你确定他入睡后就可以溜走。", VENGARS_BEDROOM_NIGHT_TIME_PRETEND);
 			}
 			return null;
 		}
@@ -3629,8 +3629,8 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Main hall",
-						"Do as Shadow says and head back out into the main hall.",
+				return new Response("主厅",
+						"按照影的指示，回到主厅。",
 						PlaceType.RAT_WARRENS_VENGARS_HALL.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -3655,14 +3655,14 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Escape",
+				return new Response("逃跑",
 						isCompanionDialogue()
-							?UtilText.parse(getMainCompanion(), "Sneak out of bed and rouse [npc.name] from [npc.her] slumber, before plotting your escape together.")
-							:"Sneak out of bed and plot your escape.",
+							?UtilText.parse(getMainCompanion(), "从床上溜下来，摇醒刚刚入睡的[npc.name]，跟[npc.her]一起策划起逃跑的计划。")
+							:"从床上溜下来，策划起逃跑的计划。",
 						VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE);
 				
 			} else if(index==2) {
-				return new Response("Sleep", "Decide against trying to escape, and instead snuggle up to Vengar and go to sleep.", VENGARS_BEDROOM_NIGHT_TIME_SLEEP) {
+				return new Response("入睡", "决定还是不要逃走了，而是依偎在文加怀中入睡。", VENGARS_BEDROOM_NIGHT_TIME_SLEEP) {
 					@Override
 					public void effects() {
 						if(isCompanionDialogue()) {
@@ -3690,9 +3690,9 @@ public class VengarCaptiveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Eat her out",
-						"Take the initiative and kneel down in front of Silence, before starting to eat her out."
-							+"<br/>[style.italicsMinorGood(This will start a non-reversible escape route, bringing an end to your captivity!)]",
+						"给她舔阴",
+						"主动跪在默的面前，开始给她舔阴。"
+							+"<br/>[style.italicsMinorGood(这将会开启一段无法逆转的逃跑剧情，你的俘虏生涯将会迎来终结！)]",
 						true,
 						false,
 						new SMEatingOut(
@@ -3712,15 +3712,15 @@ public class VengarCaptiveDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Push past",
+				return new Response("挤过去",
 						(isCompanionDialogue()
-							?UtilText.parse(getMainCompanion(), "Push past Silence and retrieve both your and [npc.namePos] belongings from the chest.")
-							:"Push past Silence and retrieve your belongings from the chest.")
-								+"<br/>[style.italicsMinorGood(This will start a non-reversible escape route, bringing an end to your captivity!)]",
+							?UtilText.parse(getMainCompanion(), "从默身边挤过去，从箱子中取回你和[npc.namePos]的随身物品。")
+							:"从默身边挤过去，从箱子中取回你的随身物品。")
+								+"<br/>[style.italicsMinorGood(这将会开启一段无法逆转的逃跑剧情，你的俘虏生涯将会迎来终结！)]",
 							VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_PUSH_PAST);
 				
 			} else if(index==3) {
-				return new Response("Give up", "Give up on your escape attempt for tonight, and instead go back to bed and go to sleep.", VENGARS_BEDROOM_NIGHT_TIME_SLEEP) {
+				return new Response("放弃", "放弃今晚的逃脱计划，而是回到床上睡觉。", VENGARS_BEDROOM_NIGHT_TIME_SLEEP) {
 					@Override
 					public void effects() {
 						if(isCompanionDialogue()) {
@@ -3735,7 +3735,7 @@ public class VengarCaptiveDialogue {
 		}
 	};
 	
-	public static final DialogueNode VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_AFTER_ORAL = new DialogueNode("Finished", "Silence lets out a gentle sigh and steps back, satisfied with your performance.", true) {
+	public static final DialogueNode VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_AFTER_ORAL = new DialogueNode("结束", "默轻轻叹了口气便退开了，对你的表现很满意。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 10*60;
@@ -3747,7 +3747,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Shadow and Silence as they lead you out of the Rat Warrens.", ESCAPING) {
+				return new Response("跟随", "跟着影和默，让她们带着你离开了鼠窟。", ESCAPING) {
 					@Override
 					public void effects() {
 						RatWarrensCaptiveDialogue.restoreInventories();
@@ -3789,7 +3789,7 @@ public class VengarCaptiveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Escape", "Follow Shadow through the tunnels.", RatWarrensDialogue.POST_CAPTIVITY_SWORD_RAID) {
+				return new Response("逃跑", "跟影穿过隧道。", RatWarrensDialogue.POST_CAPTIVITY_SWORD_RAID) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SUBMISSION, PlaceType.SUBMISSION_RAT_WARREN);

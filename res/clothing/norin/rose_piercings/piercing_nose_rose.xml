@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
-    <clothingAuthorTag><![CDATA[Small engraved lettering informs you that this piercing was made by 'Norin'.]]></clothingAuthorTag>
+    <clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
     <value>450</value> <!--10 flames = £1 ~ $1.5-->
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[rose nose piercing]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[rose nose piercings]]></namePlural>
-    <description><![CDATA[A nose piercing with a rose.]]></description>
+    <determiner><![CDATA[一个]]></determiner>
+    <name><![CDATA[玫瑰花鼻钉]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[玫瑰花鼻钉]]></namePlural>
+    <description><![CDATA[一个玫瑰花鼻钉。]]></description>
     
     <physicalResistance>0</physicalResistance>
     <femininity>FEMININE</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -54,27 +53,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] a rose piercing into [npc.her] nose.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] a rose piercing into [npc2.namePos] nose.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] a rose piercing into [npc2.namePos] nose.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将玫瑰花鼻钉戴在[npc.her]的鼻子上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将玫瑰花鼻钉戴在[npc2.namePos]的鼻子上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强行将玫瑰花鼻钉戴在[npc2.namePos]的鼻子上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(remove)] a rose piercing from [npc.her] nose.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(remove)] a rose piercing from [npc2.namePos] nose.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(tug)] a rose piercing out from [npc2.namePos] nose.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把玫瑰花鼻钉从[npc.her]的鼻子上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把玫瑰花鼻钉从[npc2.namePos]的鼻子上取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]把玫瑰花鼻钉从[npc2.namePos]的鼻子上扯下。
+]]></otherRough>
   </displacementText>
   
   

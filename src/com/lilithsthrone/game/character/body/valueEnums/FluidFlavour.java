@@ -17,123 +17,123 @@ public enum FluidFlavour {
 // Keldon move out
 	NECTAR("nectar", PresetColour.BASE_YELLOW,
 			Util.newArrayListOfValues(
-					"sweet",
+					"清甜",
 					"nectar-flavoured")),
 	
-	CUM("cum", PresetColour.CUM,
+	CUM("精液", PresetColour.CUM,
 			Util.newArrayListOfValues(
-					"salty")),
+					"咸涩")),
 	
-	MILK("milk", PresetColour.MILK,
+	MILK("乳汁", PresetColour.MILK,
 			Util.newArrayListOfValues(
-					"creamy")),
+					"香醇")),
 	
-	GIRL_CUM("girlcum", PresetColour.GIRLCUM,
+	GIRL_CUM("爱液", PresetColour.GIRLCUM,
 			Util.newArrayListOfValues(
-					"sweet")),
+					"微甜")),
 	
-	FLAVOURLESS("flavourless", PresetColour.BASE_GREY,
+	FLAVOURLESS("无味", PresetColour.BASE_GREY,
 			Util.newArrayListOfValues(
-					"flavourless",
-					"tasteless")),
+					"无味",
+					"无味")),
 
-	BUBBLEGUM("bubblegum", PresetColour.BASE_PINK_LIGHT,
+	BUBBLEGUM("泡泡糖", PresetColour.BASE_PINK_LIGHT,
 			Util.newArrayListOfValues(
-					"sweet")),
+					"微甜")),
 	
-	BEER("beer", PresetColour.BASE_TAN,
+	BEER("啤酒", PresetColour.BASE_TAN,
 			Util.newArrayListOfValues(
-					"yeasty",
-					"beer-flavoured")),
+					"麦芽香",
+					"啤酒风味")),
 	
-	VANILLA("vanilla", PresetColour.BASE_YELLOW_PALE,
+	VANILLA("香草", PresetColour.BASE_YELLOW_PALE,
 			Util.newArrayListOfValues(
-					"sweet",
-					"vanilla-flavoured")),
+					"甜味",
+					"香草风味")),
 	
-	STRAWBERRY("strawberry", PresetColour.BASE_CRIMSON,
+	STRAWBERRY("草莓", PresetColour.BASE_CRIMSON,
 			Util.newArrayListOfValues(
-					"sweet",
-					"strawberry-flavoured")),
+					"甜味",
+					"草莓风味")),
 	
-	CHOCOLATE("chocolate", PresetColour.BASE_BROWN,
+	CHOCOLATE("巧克力", PresetColour.BASE_BROWN,
 			Util.newArrayListOfValues(
-					"chocolatey",
-					"chocolate-flavoured")),
+					"巧克力味",
+					"巧克力风味")),
 	
-	PINEAPPLE("pineapple", PresetColour.BASE_YELLOW_LIGHT,
+	PINEAPPLE("菠萝", PresetColour.BASE_YELLOW_LIGHT,
 			Util.newArrayListOfValues(
-					"tart",
-					"sour",
-					"tangy",
-					"pineapple-flavoured")),
+					"酸甜",
+					"酸味",
+					"咸甜",
+					"菠萝风味")),
 	
-	HONEY("honey", PresetColour.BASE_YELLOW,
+	HONEY("蜂蜜", PresetColour.BASE_YELLOW,
 			Util.newArrayListOfValues(
-					"sweet",
-					"honey-flavoured")),
+					"甜味",
+					"蜂蜜风味")),
 	
-	MINT("mint", PresetColour.BASE_GREEN_LIME,
+	MINT("薄荷", PresetColour.BASE_GREEN_LIME,
 			Util.newArrayListOfValues(
-					"minty")),
+					"薄荷味")),
 	
-	CHERRY("cherry", PresetColour.BASE_RED_DARK,
+	CHERRY("樱桃", PresetColour.BASE_RED_DARK,
 			Util.newArrayListOfValues(
-					"sweet",
-					"cherry-flavoured")),
+					"甜味",
+					"樱桃风味")),
 	
 	// ------ Icons for these made by 'Charisma is my Dump Stat': ------ //
 	
-	COFFEE("coffee", PresetColour.BASE_BROWN_DARK,
+	COFFEE("咖啡", PresetColour.BASE_BROWN_DARK,
 			Util.newArrayListOfValues(
-					"bitter",
-					"coffee-flavoured")),
+					"苦涩",
+					"咖啡风味")),
 	
-	TEA("tea", PresetColour.BASE_GREEN,
+	TEA("茶叶", PresetColour.BASE_GREEN,
 			Util.newArrayListOfValues(
-					"tea-flavoured")),
+					"茶叶风味")),
 	
-	MAPLE("maple", PresetColour.BASE_RED,
+	MAPLE("枫浆", PresetColour.BASE_RED,
 			Util.newArrayListOfValues(
 					"sweet",
-					"maple-flavoured")),
+					"枫浆风味")),
 	
-	CINNAMON("cinnamon", PresetColour.BASE_BROWN,
+	CINNAMON("肉桂", PresetColour.BASE_BROWN,
 			Util.newArrayListOfValues(
-					"cinnamon-flavoured")),
+					"肉桂风味")),
 
-	LEMON("lemon", PresetColour.BASE_YELLOW,
+	LEMON("柠檬", PresetColour.BASE_YELLOW,
 			Util.newArrayListOfValues(
-					"sour",
-					"lemon-flavoured")),
+					"酸味",
+					"柠檬风味")),
 	
 	// ------------ //
 	
 	// ------ Icons for these made by 'DSG': ------ //
 	
-	ORANGE("orange", PresetColour.BASE_ORANGE,
+	ORANGE("橙子", PresetColour.BASE_ORANGE,
 			Util.newArrayListOfValues(
-					"orange-flavoured")),
+					"橙子风味")),
 	
-	GRAPE("grape", PresetColour.BASE_PURPLE,
+	GRAPE("葡萄", PresetColour.BASE_PURPLE,
 			Util.newArrayListOfValues(
-					"grape-flavoured")),
+					"葡萄风味")),
 	
-	MELON("melon", PresetColour.BASE_GREEN_LIGHT,
+	MELON("蜜瓜", PresetColour.BASE_GREEN_LIGHT,
 			Util.newArrayListOfValues(
-					"melon-flavoured")),
+					"蜜瓜风味")),
 	
-	COCONUT("coconut", PresetColour.BASE_BROWN_DARK,
+	COCONUT("椰子", PresetColour.BASE_BROWN_DARK,
 			Util.newArrayListOfValues(
-					"coconut-flavoured")),
+					"椰子风味")),
 	
-	BLUEBERRY("blueberry", PresetColour.BASE_BLUE_DARK,
+	BLUEBERRY("蓝莓", PresetColour.BASE_BLUE_DARK,
 			Util.newArrayListOfValues(
-					"blueberry-flavoured")),
+					"蓝莓风味")),
 	
-	BANANA("banana", PresetColour.BASE_YELLOW_LIGHT,
+	BANANA("香蕉", PresetColour.BASE_YELLOW_LIGHT,
 			Util.newArrayListOfValues(
-					"banana-flavoured"))
+					"香蕉风味"))
 	
 	// ------------ //
 	

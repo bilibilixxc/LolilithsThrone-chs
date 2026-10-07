@@ -68,7 +68,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Restaurant", "Accompany Nyan to the restaurant.", SOLO_DATE_RESTAURANT_1_ARRIVED);
+				  return new Response("餐厅", "陪妮安去餐厅。", SOLO_DATE_RESTAURANT_1_ARRIVED);
 			}
 			return null;
 		}
@@ -92,10 +92,10 @@ public class NyanDateFinalRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				int cost = 350;
-				return new Response("Vulpine's Vineyard ("+UtilText.formatAsMoney(cost, "span")+")", "Order the cheapest wine on the menu, which is nevertheless still a very good vintage.", SOLO_DATE_RESTAURANT_2_WINE_ORDER) {
+				return new Response("狐狸葡萄园 (" + UtilText.formatAsMoney(cost, "span") + ")", "点餐单上最便宜的葡萄酒，尽管如此，它仍然是一款非常好的佳酿。", SOLO_DATE_RESTAURANT_2_WINE_ORDER) {
 					@Override
 					public void effects() {
-						UtilText.addSpecialParsingString("Vulpine's Vineyard", true);
+						UtilText.addSpecialParsingString("狐狸葡萄园", true);
 						UtilText.addSpecialParsingString(Util.intToString(cost), false);
 						dateBill+=cost;
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/finalRepeatDate", "SOLO_DATE_RESTAURANT_2_VULPINE"));
@@ -104,10 +104,10 @@ public class NyanDateFinalRepeat {
 				
 			} else if(index==2) {
 				int cost = 600;
-				return new Response("Alicorn's Finest ("+UtilText.formatAsMoney(cost, "span")+")", "Order one of the more expensive wines on the menu.", SOLO_DATE_RESTAURANT_2_WINE_ORDER) {
+				return new Response("天角兽精选 (" + UtilText.formatAsMoney(cost, "span") + ")", "点餐单上较贵的一款葡萄酒。", SOLO_DATE_RESTAURANT_2_WINE_ORDER) {
 					@Override
 					public void effects() {
-						UtilText.addSpecialParsingString("Alicorn's Finest", true);
+						UtilText.addSpecialParsingString("天角兽精选", true);
 						UtilText.addSpecialParsingString(Util.intToString(cost), false);
 						dateBill+=cost;
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/finalRepeatDate", "SOLO_DATE_RESTAURANT_2_ALICORN"));
@@ -117,10 +117,10 @@ public class NyanDateFinalRepeat {
 				
 			} else if(index==3) {
 				int cost = 950;
-				return new Response("Youko's Reserve ("+UtilText.formatAsMoney(cost, "span")+")", "Order the most expensive wine on the menu.", SOLO_DATE_RESTAURANT_2_WINE_ORDER) {
+				return new Response("妖狐的珍藏 (" + UtilText.formatAsMoney(cost, "span") + ")", "点餐单上最贵的一款葡萄酒。", SOLO_DATE_RESTAURANT_2_WINE_ORDER) {
 					@Override
 					public void effects() {
-						UtilText.addSpecialParsingString("Youko's Reserve", true);
+						UtilText.addSpecialParsingString("妖狐的珍藏", true);
 						UtilText.addSpecialParsingString(Util.intToString(cost), false);
 						dateBill+=cost;
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/finalRepeatDate", "SOLO_DATE_RESTAURANT_2_YOUKO"));
@@ -144,7 +144,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Share bottle", "Say that you'll share the bottle with Nyan.", SOLO_DATE_RESTAURANT_3_MAIN_DATE) {
+				return new Response("共享瓶子", "说你会和妮安一起分享这瓶酒。", SOLO_DATE_RESTAURANT_3_MAIN_DATE) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/finalRepeatDate", "SOLO_DATE_RESTAURANT_3_SHARE"));
@@ -153,7 +153,7 @@ public class NyanDateFinalRepeat {
 				};
 				
 			} else if(index==2) {
-				return new Response("Water", "Order a bottle of water for yourself.", SOLO_DATE_RESTAURANT_3_MAIN_DATE) {
+				return new Response("水", "给自己点一瓶水。", SOLO_DATE_RESTAURANT_3_MAIN_DATE) {
 					@Override
 					public void effects() {
 						dateBill+=25;
@@ -163,7 +163,7 @@ public class NyanDateFinalRepeat {
 				};
 				
 			} else if(index==3) {
-				return new Response("Beer", "Order a beer for yourself.", SOLO_DATE_RESTAURANT_3_MAIN_DATE) {
+				return new Response("啤酒", "给自己点一扎啤酒。", SOLO_DATE_RESTAURANT_3_MAIN_DATE) {
 					@Override
 					public void effects() {
 						dateBill+=50;
@@ -195,7 +195,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave ("+UtilText.formatAsMoney(dateBill, "span")+")", "Pay the bill and accompany Nyan back to her apartment building.", SOLO_DATE_END_RETURN) {
+				return new Response("离开("+UtilText.formatAsMoney(dateBill, "span")+")", "付账然后陪妮安回公寓。", SOLO_DATE_END_RETURN) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(-dateBill));
@@ -232,7 +232,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Inside", "Accept Nyan's invitation and enter her apartment.", SOLO_DATE_END_RETURN_INSIDE);
+				return new Response("进入", "接受妮安的邀请进入她的公寓。", SOLO_DATE_END_RETURN_INSIDE);
 			}
 			return null;
 		}
@@ -281,7 +281,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Restaurant", "Accompany Nyan and [nyanmum.name] to the restaurant.", DOUBLE_DATE_RESTAURANT_1_ARRIVED);
+				return new Response("餐厅", "陪妮安和[nyanmum.name]去餐厅。", DOUBLE_DATE_RESTAURANT_1_ARRIVED);
 			}
 			return null;
 		}
@@ -305,7 +305,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Share bottle", "Agree to share the bottle with Nyan and [nyanmum.name].", DOUBLE_DATE_RESTAURANT_2_MAIN_DATE) {
+				return new Response("喝同一瓶", "同意与妮安和[nyanmum.name]喝同一瓶。", DOUBLE_DATE_RESTAURANT_2_MAIN_DATE) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/finalRepeatDate", "DOUBLE_DATE_RESTAURANT_2_SHARE"));
@@ -314,7 +314,7 @@ public class NyanDateFinalRepeat {
 				};
 				
 			} else if(index==2) {
-				return new Response("Water", "Order a bottle of water for yourself.", DOUBLE_DATE_RESTAURANT_2_MAIN_DATE) {
+				return new Response("水", "给自己点一瓶水。", DOUBLE_DATE_RESTAURANT_2_MAIN_DATE) {
 					@Override
 					public void effects() {
 						dateBill+=25;
@@ -324,7 +324,7 @@ public class NyanDateFinalRepeat {
 				};
 				
 			} else if(index==3) {
-				return new Response("Beer", "Order a beer for yourself.", DOUBLE_DATE_RESTAURANT_2_MAIN_DATE) {
+				return new Response("啤酒", "给自己点一扎啤酒。", DOUBLE_DATE_RESTAURANT_2_MAIN_DATE) {
 					@Override
 					public void effects() {
 						dateBill+=50;
@@ -358,7 +358,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave ("+UtilText.formatAsMoney(dateBill, "span")+")", "Pay the bill and accompany the cat-girls back to their apartment building.", DOUBLE_DATE_END_RETURN) {
+				return new Response("离开("+UtilText.formatAsMoney(dateBill, "span")+")", "付账然后陪猫女们回公寓。", DOUBLE_DATE_END_RETURN) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(-dateBill));
@@ -398,7 +398,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lounge", "Do as [nyanmum.name] says and wait in the lounge...", POST_DOUBLE_DATE_APARTMENT_LOUNGE) {
+				return new Response("休息室", " 听[nyanmum.name]的话去休息室等待……", POST_DOUBLE_DATE_APARTMENT_LOUNGE) {
 					@Override
 					public void effects() {
 						kinky = false;
@@ -407,7 +407,7 @@ public class NyanDateFinalRepeat {
 				};
 				
 			} else if(index==2) {
-				return new Response("Lounge (kinky)", "Tell [nyanmum.name] that you like the sound of her 'kinky idea', before doing as she says and waiting in the lounge...", POST_DOUBLE_DATE_APARTMENT_LOUNGE) {
+				return new Response("休息室(调皮)", "告诉[nyanmum.name]你喜欢她的“调皮主意”，听她的话在休息室乖乖等待……", POST_DOUBLE_DATE_APARTMENT_LOUNGE) {
 					@Override
 					public void effects() {
 						kinky = true;
@@ -436,7 +436,7 @@ public class NyanDateFinalRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Bedroom", "Head into [nyanmum.namePos] bedroom...", POST_DOUBLE_DATE_APARTMENT_BEDROOM);
+				return new Response("卧室", "进入[nyanmum.namePos]的卧室……", POST_DOUBLE_DATE_APARTMENT_BEDROOM);
 			}
 			return null;
 		}

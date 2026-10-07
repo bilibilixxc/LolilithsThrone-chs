@@ -52,11 +52,11 @@ public interface SexManagerInterface {
 	}
 
 	public default String getDefaultSexTitle() {
-		return (!Main.sex.isConsensual() && Main.getProperties().hasValue(PropertyValue.nonConContent)?"Non-consensual ":"")
-				+(Main.sex.isPublicSex()?"Public ":"")
+		return (!Main.sex.isConsensual() && Main.getProperties().hasValue(PropertyValue.nonConContent)?"非自愿":"")
+				+(Main.sex.isPublicSex()?"公开":"")
 				+(getPosition().getName().isEmpty()
-						?(Main.sex.getAllParticipants(false).size()>1?"Sex":"Masturbation")
-						:(Main.sex.getAllParticipants(false).size()>1?"Sex: ":"Masturbation: ")+getPosition().getName());
+						?(Main.sex.getAllParticipants(false).size()>1?"性爱":"自慰")
+						:(Main.sex.getAllParticipants(false).size()>1?"性爱:":"自慰:")+getPosition().getName());
 	}
 	
 	public AbstractSexPosition getPosition();
@@ -551,19 +551,19 @@ public interface SexManagerInterface {
 				raceNames.add(AbstractSubspecies.getMainSubspeciesOfRace(racesPresent.get(i)).getNamePlural(null));
 			}
 			if(raceNames.size() < racesPresent.size()) {
-				raceNames.add("many other races");
+				raceNames.add("许多其他种族");
 			}
 			
 			return applyPublicSexFormatting(
 						Main.sex.isMasturbation()
-							?"A crowd of "+Util.stringsToStringList(raceNames, false)+" quickly forms around you, eager to watch your erotic display..."
-							:"A crowd of "+Util.stringsToStringList(raceNames, false)+" quickly forms around you and [npc.name], eager to watch your erotic display...");
+							?"一群"+Util.stringsToStringList(raceNames, false)+"立刻围住了你，迫不及待地想一睹你的色情演出……"
+							:"一群"+Util.stringsToStringList(raceNames, false)+"立刻围住了你和[npc.Name]，迫不及待地想一睹你们的色情演出……");
 			
 		} else {
 			return applyPublicSexFormatting(
 						Main.sex.isMasturbation()
 							?""
-							:"A crowd quickly forms around you and [npc.name], eager to watch your erotic display...");
+							:"一群人立刻围住了你和[npc.Name]，迫不及待地想一睹你们的色情演出……");
 		}
 	}
 	
@@ -578,53 +578,53 @@ public interface SexManagerInterface {
 		if(Main.sex.isMasturbation()) {
 			return applyPublicSexFormatting(
 						UtilText.returnStringAtRandom(
-							"The crowd of onlookers laugh and cheer as they look on.",
-							"You hear someone in the crowd wolf-whistling as they watch you masturbating.",
+							"围观人群一边看一边喝彩大笑着。",
+							"自慰被围观时，你听见人群中传出一声狼嚎。",
 							enforcersPresent
-								?"A pair of Enforcers shove their way through the crowd, but instead of putting a stop to your fun, they join the onlookers in laughing and commenting on your performance."
+								?"一对执法者推开人群，但并没有阻止你取乐，而是加入了围观，对着你的表演说笑评论着。"
 								:"",
-							"You hear the crowd that's gathered to watch you commenting on your performance.",
-							"Cheering and laughing, the crowd of onlookers watch as you continue masturbating.",
-							"You glance across to see several members of the crowd touching themselves as they watch you go at it.",
-							"The crowd cheers you on as you carry on masturbating in front of them.",
-							"Several members of the crowd shout and cheer as you carry on masturbating in front of them."));
+							"你听见聚集起来围观的人群中有人在评价你的表演。",
+							"围观人群欣赏着你继续自慰，欢呼大笑着。",
+							"你瞄了一眼，发现人群中有几个已经一边看一边抚摸起下体。",
+							"你继续在人群面前自慰着，四周不断响起呼和声。",
+							"你继续在人群面前自慰着，有几个家伙高喊欢呼起来。"));
 			
 		} else if(Main.sex.getAllParticipants(false).contains(Main.game.getPlayer())) {
 			return applyPublicSexFormatting(
 					UtilText.parse(Main.sex.getTargetedPartner(Main.game.getPlayer()),
 							UtilText.returnStringAtRandom(
-								"The crowd of onlookers laugh and cheer as they look on.",
-								"You hear someone in the crowd wolf-whistling as they watch you having sex.",
+								"围观人群一边看一边喝彩大笑着。",
+								"性爱被围观时，你听见人群中传出一声狼嚎。",
 								enforcersPresent
-									?"A pair of Enforcers shove their way through the crowd, but instead of putting a stop to your fun, they join the onlookers in laughing and commenting on your performance."
+									?"一对执法者推开人群，但并没有阻止你取乐，而是加入了围观，对着你的表演说笑评论着。"
 									:"",
-								"You hear the crowd that's gathered to watch you commenting on your performance.",
-								"You hear the crowd that's gathered to watch you commenting on [npc.namePos] performance.",
-								"Cheering and laughing, the crowd of onlookers watch as you continue having sex with [npc.name].",
-								"You glance across to see several members of the crowd touching themselves as they watch you and [npc.name] go at it.",
-								"The crowd cheers you on as you and [npc.name] carry on having sex in front of them.",
-								"The crowd laughs and cheers as you and [npc.name] carry on having sex in front of them.",
-								"Several members of the crowd shout and cheer as you and [npc.name] carry on having sex in front of them.",
-								"Several members of the crowd cheer you on as you and [npc.name] carry on having sex in front of them.")));
+								"你听见聚集起来围观的人群中有人在评价你的表演。",
+								"你听见聚集起来围观的人群中有人在评价[npc.namePos]的表演。",
+								"围观人群欣赏着你和[npc.Name]做爱，欢呼大笑着。",
+								"你瞄了一眼，发现人群中有几个已经一边看一边抚摸起下体。",
+								"你继续在人群面前和[npc.Name]做爱，四周不断响起呼和声。",
+								"你继续在人群面前和[npc.Name]做爱，四周不断响起呼和声。",
+								"你继续在人群面前和[npc.Name]做爱，有几个家伙高喊欢呼起来。",
+								"你继续在人群面前和[npc.Name]做爱，有几个家伙喝起彩来。")));
 			
 		} else {
 			GameCharacter target = Util.randomItemFrom(Main.sex.getDominantParticipants(false).keySet());
 			return applyPublicSexFormatting(
 					UtilText.parse(target, Main.sex.getTargetedPartner(target),
 						UtilText.returnStringAtRandom(
-							"The crowd of onlookers laugh and cheer as they look on.",
-							"You hear someone in the crowd wolf-whistling as they watch [npc.name] fucking [npc2.name].",
+							"围观人群一边看一边喝彩大笑着。",
+							"围观[npc.Name]操着[npc2.name]的时候，你听见人群中传出一声狼嚎。",
 							enforcersPresent
-								?"A pair of Enforcers shove their way through the crowd, but instead of putting a stop to the fun, they join the onlookers in laughing and commenting on your performance."
+								?"一对执法者推开人群，但并没有阻止他们取乐，而是加入了围观，对着表演说笑评论着。"
 								:"",
-							"You hear the crowd that's gathered to watch [npc.name] commenting on [npc.her] performance.",
-							"You hear the crowd that's gathered to watch [npc2.name] commenting on [npc2.her] performance.",
-							"Cheering and laughing, the crowd of onlookers watch as [npc.name] continues having sex with [npc2.name].",
-							"You glance across to see several members of the crowd touching themselves as they watch [npc.name] and [npc2.name] go at it.",
-							"The crowd cheers [npc.name] on as [npc.she] carries on having sex in front of them.",
-							"The crowd laughs and cheers as [npc.name] and [npc2.name] carry on having sex in front of them.",
-							"Several members of the crowd shout and cheer as [npc.name] and [npc2.name] carry on having sex in front of them.",
-							"Several members of the crowd cheer [npc.name] on as [npc.she] carries on fucking [npc2.name] in front of them.")));
+							"你听见聚集起来围观的人群中有人在评价[npc.Name]的表演。",
+							"你听见聚集起来围观的人群中有人在评价[npc2.name]的表演。",
+							"围观人群欣赏着[npc.Name]和[npc2.name]做爱，欢呼大笑着。",
+							"你瞄了一眼，发现人群中有几个已经一边看一边抚摸起下体。",
+							"[npc.Name]继续在人群面前做爱，四周不断响起呼和声。",
+							"[npc.Name]和[npc2.name]继续在人群面前做爱，四周不断响起呼和声。",
+							"[npc.Name]和[npc2.name]继续在人群面前做爱，有几个家伙高喊欢呼起来。",
+							"[npc.Name]和[npc2.name]继续在人群面前做爱，有几个家伙喝起彩来。")));
 		}
 	}
 

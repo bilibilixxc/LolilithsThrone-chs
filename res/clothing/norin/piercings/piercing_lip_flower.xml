@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
-    <clothingAuthorTag><![CDATA[Small engraved lettering informs you that this piercing was made by 'Norin'.]]></clothingAuthorTag>
+    <clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
     <value>450</value> <!--10 flames = £1 ~ $1.5-->
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[flower lip piercing]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[flower lip piercings]]></namePlural>
-    <description><![CDATA[A lip piercing with a gem encrusted flower.]]></description>
+    <determiner><![CDATA[一个]]></determiner>
+    <name><![CDATA[花朵唇钉]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[花朵唇钉]]></namePlural>
+    <description><![CDATA[一个有着镶嵌宝石的花朵图案唇钉。]]></description>
     
     <physicalResistance>0</physicalResistance>
     <femininity>FEMININE</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -52,27 +51,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] a flowered lip piercing into [npc.her] [npc.lips+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] a flowered lip piercing into [npc2.namePos] [npc2.lips+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] a flowered lip piercing into [npc2.namePos] [npc2.lips+].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将花朵唇钉戴在[npc.her][npc.lips+]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将花朵唇钉戴在[npc2.namePos][npc2.lips+]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强行将花朵唇钉戴在[npc2.namePos][npc2.lips+]。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(remove)] a flowered lip piercing from [npc.her] [npc.lips+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(remove)] a flowered lip piercing from [npc2.namePos] [npc2.lips+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(tug)] a flowered lip piercing out from [npc2.namePos] [npc2.lips+].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把花朵唇钉从[npc.her][npc.lips+]上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把花朵唇钉从[npc2.her][npc2.lips+]上取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]把花朵唇钉从[npc2.her][npc2.lips+]上扯下。
+]]></otherRough>
   </displacementText>
   
   

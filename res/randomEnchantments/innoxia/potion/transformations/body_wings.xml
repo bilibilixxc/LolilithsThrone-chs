@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -12,7 +12,7 @@
 	
 	<conditionalPreParsing/>
 	
-	<name defaultPrepend="true"><![CDATA[Wing-growth]]></name>
+	<name defaultPrepend="true"><![CDATA[翅膀生长]]></name>
 	
 	<applicationSpeechStart replaceAll="false"><![CDATA[
 		Ever wished you could fly?

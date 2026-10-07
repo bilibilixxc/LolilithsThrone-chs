@@ -563,7 +563,7 @@ public class ResponseSex extends Response {
 		if(sexManager!=null && sexManager.getStartingSexPaceModifier(Main.game.getPlayer())!=null) {
 			StringBuilder sb = new StringBuilder(tooltipText);
 			SexPace pace = sexManager.getStartingSexPaceModifier(Main.game.getPlayer());
-			sb.append("<br/><i>Starts sex in the '<span style='color:"+pace.getColour().toWebHexString()+";'>"+pace.getName()+"</span>' pace.</i>");
+			sb.append("<br/><i>以“<span style='color:"+pace.getColour().toWebHexString()+";'>"+pace.getName()+"</span>”状态开始性交。</i>");
 			return sb.toString();
 			
 		} else if(tags!=null) {
@@ -579,7 +579,7 @@ public class ResponseSex extends Response {
 				pace = SexPace.SUB_RESISTING;
 			}
 			if(pace!=null) {
-				sb.append("<br/><i>Starts sex in the '<span style='color:"+pace.getColour().toWebHexString()+";'>"+pace.getName()+"</span>' pace.</i>");
+				sb.append("<br/><i>以“<span style='color:"+pace.getColour().toWebHexString()+";'>"+pace.getName()+"</span>”状态开始性交。</i>");
 			}
 			return sb.toString();
 		}

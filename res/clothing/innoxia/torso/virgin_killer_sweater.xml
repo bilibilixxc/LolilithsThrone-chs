@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>800</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA['Virgin-killer' sweater]]></name>
-		<namePlural pluralByDefault="false"><![CDATA['Virgin-killer' sweaters]]></namePlural>
-		<description><![CDATA[A long, dress-like sweater, with a large portion cut out of the back.]]></description>
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[“童贞杀手”毛衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[“童贞杀手”毛衣]]></namePlural>
+		<description><![CDATA[一件长款、类似连衣裙的毛衣，背部有大块镂空。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot> 

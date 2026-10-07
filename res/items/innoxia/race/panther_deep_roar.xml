@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Deep Roar]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Deep Roars]]></namePlural>
-		<description><![CDATA[A glass bottle filled with arrack; a distilled alcoholic drink made from fermented coconut sugar. The branding on the front proudly carries the name 'Deep Roar', while a label on the back describes how a family of tiger-morphs have been distilling this beverage for twelve generations.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[深吼]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[深吼]]></namePlural>
+		<description><![CDATA[一个玻璃瓶，里面装满了用椰子糖发酵制成的蒸馏酒精饮料。瓶子正面的烙印上骄傲地写着 "深吼"，背面的标签则描述了一个虎化形家族如何十二代人都在蒸馏这种饮料。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 45% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]45%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 			[#npc.incrementAlcoholLevel(0.45)]
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Deep Roar, before tilting [npc.her] head back and bringing it up to [npc.her] waiting [npc.lips]. An extremely strong alcoholic scent rises from the opening, and with a gulp, [npc.name] [npc.verb(start)] downing the liquid, discovering that it tastes like a floral dark rum.
+		[npc.Name]拧开深吼酒瓶的瓶盖，然后仰起头，把它送到等待[npc.lips]前。从瓶口升起一股极其浓烈的酒精气味，[npc.name]开始仰头灌下酒液，发现它的味道像一种花香味的黑朗姆酒。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Deep Roar, before bringing it up to [npc2.namePos] waiting [npc2.lips]. An extremely strong alcoholic scent rises from the opening, and with a gulp, [npc2.name] [npc2.verb(start)] downing the liquid, discovering that it tastes like a floral dark rum.
+		[npc.Name]拧开深吼酒瓶的瓶盖，然后把它送到[npc2.namePos]等待[npc2.lips]前。从瓶口升起一股极其浓烈的酒精气味，[npc2.name]开始仰头灌下酒液，发现它的味道像一种花香味的黑朗姆酒。
 		]]></otherUse>
 	</useDescriptions>
 

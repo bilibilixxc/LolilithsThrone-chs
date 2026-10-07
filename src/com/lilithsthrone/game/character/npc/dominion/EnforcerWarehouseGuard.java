@@ -157,7 +157,7 @@ public class EnforcerWarehouseGuard extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return UtilText.parse(this, "One of the SWORD Enforcers tasked with guarding [npc.his] division's warehouse, [npc.name] is more than prepared to use an unreasonable amount of force to detain anyone [npc.she] catches..."); 
+		return UtilText.parse(this, "[npc.name]作为SWORD执法者之一，负责守卫[npc.his]部门的仓库，随时准备暴力拘禁落到[npc.she]手里的人……"); 
 	}
 	
 	@Override
@@ -193,7 +193,7 @@ public class EnforcerWarehouseGuard extends NPC {
 	public Response endCombat(boolean applyEffects, boolean victory) {
 		if(Main.game.getPlayer().getCell().getPlace().getPlaceType()==PlaceType.ENFORCER_WAREHOUSE_ENFORCER_GUARD_POST) {
 			if(victory) {
-				return new Response("Victory", "The Enforcer slumps to the floor before you, defeated.", EnforcerWarehouse.AFTER_GUARD_COMBAT_VICTORY) {
+				return new Response("胜利", "执法者跪倒在你面前，被击败了。", EnforcerWarehouse.AFTER_GUARD_COMBAT_VICTORY) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().warehouseDefeatedIDs.add(EnforcerWarehouseGuard.this.getId());
@@ -202,15 +202,15 @@ public class EnforcerWarehouseGuard extends NPC {
 				};
 				
 			} else {
-				return new Response ("Defeated...", "You collapse to the floor, completely defeated.", EnforcerWarehouse.AFTER_GUARD_COMBAT_DEFEAT);
+				return new Response ("失败了……", "你跪倒在地，大败而归。", EnforcerWarehouse.AFTER_GUARD_COMBAT_DEFEAT);
 			}
 			
 		} else { // Main entrance:
 			if(victory) {
-				return new Response("Victory", "The Enforcers slump to the floor before you, defeated.", EnforcerWarehouse.AFTER_ENTRANCE_VICTORY);
+				return new Response("胜利", "执法者跪倒在你面前，被击败了。", EnforcerWarehouse.AFTER_ENTRANCE_VICTORY);
 				
 			} else {
-				return new Response ("Defeated...", "You collapse to the floor, completely defeated.", EnforcerWarehouse.AFTER_ENTRANCE_DEFEAT);
+				return new Response ("失败了……", "你跪倒在地，大败而归。", EnforcerWarehouse.AFTER_ENTRANCE_DEFEAT);
 			}
 		}
 	}

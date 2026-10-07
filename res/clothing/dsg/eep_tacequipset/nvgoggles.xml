@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
-		<authorTag><![CDATA[On the underside of each lens set, a faint engraving reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[每组镜片底部刻着微小的字，写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 		<value>1000</value>
-		<determiner><![CDATA[a set of]]></determiner>
-		<name><![CDATA[Enforcer's night vision goggles]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's night vision goggles]]></namePlural>
-		<description><![CDATA[With its array of four sight enchantments, this set of panoramic night vision goggles offers twice the field of view compared to older systems. The included mount is very flexible and can be securely attached to compatible headgear.]]></description>
+		<determiner><![CDATA[一套]]></determiner>
+		<name><![CDATA[执法者夜视仪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[执法者夜视仪]]></namePlural>
+		<description><![CDATA[这套全景夜视仪有四个附魔镜组，视野是旧系统的两倍。附带的翻斗车非常柔韧，可牢固地固定在兼容的头戴设备上。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>
@@ -49,27 +48,27 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(equip)] the goggles and [npc.verb(lower)] them over [npc.her] [npc.eyes].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] equip the goggles and [npc.verb(lower)] them over [npc2.her] [npc2.eyes].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the goggles onto [npc2.namePos] [npc2.eyes].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]装上夜视仪并把镜组翻至[npc.her]的[npc.eyes]。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]帮助[npc2.name]装上夜视仪并把镜组翻至[npc2.her]的[npc2.eyes]。
+		]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将夜视仪戴在[npc2.namePos]的[npc2.eyes]。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(raise)] [npc.her] goggles from [npc.her] [npc.eyes] and [npc.verb(unequip)] them.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(raise)] [npc2.namePos] goggles from [npc2.her] [npc2.eyes] and [npc.verb(unequip)] them.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] goggles from [npc2.her] [npc2.eyes].]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]从[npc.her]的[npc.eyes]翻起镜组并拆下[npc.her]的夜视仪。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]从[npc2.her]的[npc2.eyes]翻起镜组并拆下[npc2.namePos]的夜视仪。
+		]]></other>
+		<otherRough><![CDATA[
+[npc.Name]把[npc2.namePos]的夜视仪从[npc2.namePos]的[npc2.eyes]上拽了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

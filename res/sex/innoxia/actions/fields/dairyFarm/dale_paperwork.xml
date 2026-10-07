@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -23,41 +23,41 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Continue working]]></title>
+	<title><![CDATA[继续工作]]></title>
 	<tooltip><![CDATA[
-		Think, Dale, think! This work needs to be completed! You have no time to enjoy yourself!
+		想想，戴尔，想想！这项工作必须完成！你没时间享受了！
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
-				Dale does his best to stay calm and focus on completing his paperwork, but every now and then he lets out a subdued grunt and mutters,
+				戴尔尽力保持镇定，专心致志地完成他的文书工作，但不时发出一声低沉的咕哝声，并嘟囔道：
 				[dale.speechNoEffects([style.random(
-					Keep going... ~Mmm!~ That's good...
+					继续…… ~嗯~ 爽……
 					|
-					~Ahh!~ You're good at this, [pc.name]...
+					~啊！~ 你太擅长这个了，[pc.name]……
 					|
-					Don't stop now...
+					别停……
 					|
-					That's it... ~Mmm!~ Keep going...
+					就这样……~嗯~ 继续……
 				)])]
 			]]></text>
 			<text><![CDATA[
-				Although he tries to do his best to focus on completing his paperwork, Dale can't help but buck his hips a little and groan under his breath,
+				尽管戴尔尽力集中精力完成文书工作，但他还是忍不住微微扭动臀部，口中发出呻吟：
 				[dale.speechNoEffects([style.random(
-					Keep going... ~Mmm!~ That's good...
+					继续…… ~嗯~ 爽……
 					|
-					~Ahh!~ You're good at this, [pc.name]...
+					~啊！~ 你太擅长这个了，[pc.name]……
 					|
-					Don't stop now...
+					别停……
 					|
-					That's it... ~Mmm!~ Keep going...
+					这这~嗯~ 继续……
 				)])]
 			]]></text>
 			<text><![CDATA[
-				Doing his absolute best to focus on his work, Dale continues filling out the paperwork before him, and the only hint he gives that you're sucking his [dale.cock+] beneath his desk is the occasional quiet grunt or groan.
+				戴尔竭尽全力专注于他的工作，继续填写他面前的文件，他唯一迹象就是你正在他办公桌下嗦他[dale.cock+]，他会偶尔发出的低声咕哝或呻吟声。
 			]]></text>
 			<text><![CDATA[
-				Despite gently bucking his hips or letting out the odd, quiet grunt, Dale manages to retain his composure and focus on completing his paperwork as you continue sucking his [dale.cock+].
+				尽管戴尔轻轻扭动臀部或发出奇怪的低声哼哼，但他仍能保持镇定，在你继续嗦他[dale.cock+]时，专注完成他的文书工作。
 			]]></text>
 		</description>
 	</descriptions>

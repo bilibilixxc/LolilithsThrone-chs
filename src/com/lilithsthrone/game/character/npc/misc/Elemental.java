@@ -74,7 +74,7 @@ public class Elemental extends NPC {
 			setLevel(summoner==null?1:summoner.getLevel());
 			
 			this.setSummoner(summoner);
-			this.setSurname(summoner==null?"":this.getSummoner().getNameIgnoresPlayerKnowledge()+"kamu"); // Akkadian for bind
+			this.setSurname(summoner==null?"":this.getSummoner().getNameIgnoresPlayerKnowledge()+"卡姆"); // Akkadian for bind
 			this.setStartingBody(true);
 			setPassiveForm(null);
 			if(summoner!=null) {

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>150</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Iced Tea]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Iced Tea]]></namePlural>
-		<description><![CDATA[An insulated metal bottle containing ice and mint tea. A sticker on the side claims the drink is the perfect refreshment for a hot summer day. The sticker also depicts a sweaty frost salamander-girl drinking from a similar bottle.]]></description> 
-		<useDescriptor>drink</useDescriptor>
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[冰茶]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[冰茶]]></namePlural>
+		<description><![CDATA[金属保温瓶中装有冰块和薄荷茶。瓶子侧面的贴纸声称，这种饮料是炎炎夏日的最佳清凉饮料。贴纸上还描绘了一个满头大汗的霜冻蝾螈女正在用一个类似的瓶子喝水。]]></description> 
+		<useDescriptor><![CDATA[饮品]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -27,15 +27,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_FIRE.getFormattedValue(5)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_FIRE.getFormattedValue(5)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A cold wave of arcane energy washes over [npc.name]...
+				一股冰冷的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_RESISTANCE_FIRE, 5)]
 		]]></applyEffects>
@@ -49,10 +49,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After unscrewing the cap, [npc.name] [npc.verb(bring)] the bottle of iced tea up to [npc.her] [npc.mouth]. [npc.She] [npc.is] pleased to find that the label wasn't lying about the drink being refreshing and swiftly [npc.verb(drink)] the minty beverage.
+		在拧开瓶盖后，[npc.name]将冷茶瓶端到[npc.her]的[npc.mouth]边。[npc.She]高兴地发现标签并没有夸大它的清凉，迅速地喝下了这杯薄荷饮料。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After unscrewing the cap, [npc.name] [npc.verb(bring)] the bottle of iced tea up to [npc2.namePos] waiting [npc2.lips]. [npc2.name] [npc2.is] pleased to find that the label wasn't lying about the drink being refreshing and swiftly [npc2.verb(drink)] the minty beverage.
+		在拧开瓶盖后，[npc.name]将冷茶瓶端到[npc2.namePos]等待[npc2.lips]边。[npc2.name]高兴地发现标签并没有夸大它的清凉，迅速地喝下了这杯薄荷饮料。
 		]]></otherUse>
 	</useDescriptions>
 </item>

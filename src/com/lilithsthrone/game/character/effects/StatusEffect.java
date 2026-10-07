@@ -97,7 +97,7 @@ public class StatusEffect {
 	// Strength:
 	public static AbstractStatusEffect PHYSIQUE_PERK_0 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"sissy",
+			"孱弱",
 			"attStrength0",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			PresetColour.BASE_BLACK,
@@ -107,14 +107,14 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, -15f),
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, -15f)),
 			Util.newArrayListOfValues(
-					"Base [style.colourUnarmed(unarmed damage)] equals [style.colourMinorGood(20% of physique)]")) {
+					"基础[style.colourUnarmed(徒手伤害)]等于[style.colourMinorGood(体格的20%)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(PhysiqueLevel.ZERO_WEAK.getName());
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] incredibly weak. [npc.She] [npc.verb(struggle)] to do much damage with [npc.her] wimpy little [npc.arms], and [npc.her] fragile body is particularly vulnerable to physical damage.");
+			return UtilText.parse(target, "[npc.NameIsFull]弱得令人难以置信。[npc.She]无法用[npc.her]弱小的[npc.arms]造成很大伤害，[npc.her]脆弱的身体特别容易受到物理伤害。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -128,7 +128,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect PHYSIQUE_PERK_1 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"average",
+			"如常",
 			"attStrength1",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			PresetColour.BASE_BLACK,
@@ -136,14 +136,14 @@ public class StatusEffect {
 			true,
 			null,
 			Util.newArrayListOfValues(
-					"Base [style.colourUnarmed(unarmed damage)] equals [style.colourMinorGood(20% of physique)]")) {
+					"基础[style.colourUnarmed(徒手伤害)]等于[style.colourMinorGood(体格的20%)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(PhysiqueLevel.ONE_AVERAGE.getName());
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameHasFull] an average level of physical fitness for [npc.her] body size.");
+			return UtilText.parse(target, "[npc.NameHasFull]拥有与[npc.her]体型相当的平均体能水平。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -157,7 +157,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect PHYSIQUE_PERK_2 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"strong",
+			"健壮",
 			"attStrength2",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			PresetColour.BASE_BLACK,
@@ -166,14 +166,14 @@ public class StatusEffect {
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_PHYSICAL, 5f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f)),
 			Util.newArrayListOfValues(
-					"Base [style.colourUnarmed(unarmed damage)] equals [style.colourMinorGood(20% of physique)]")) {
+					"基础[style.colourUnarmed(徒手伤害)]等于[style.colourMinorGood(体格的20%)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(PhysiqueLevel.TWO_STRONG.getName());
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] stronger and fitter than [npc.her] body size would suggest, and [npc.is] able to inflict more physical damage as a result.");
+			return UtilText.parse(target, "[npc.NameIsFull]比[npc.her]身体表现出来的更加强壮，因而也能够造成更多的物理伤害。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -187,7 +187,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect PHYSIQUE_PERK_3 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"powerful",
+			"强健",
 			"attStrength3",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			PresetColour.BASE_BLACK,
@@ -196,14 +196,14 @@ public class StatusEffect {
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_PHYSICAL, 10f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 20f)),
 			Util.newArrayListOfValues(
-					"Base [style.colourUnarmed(unarmed damage)] equals [style.colourMinorGood(20% of physique)]")) {
+					"基础[style.colourUnarmed(徒手伤害)]等于[style.colourMinorGood(体格的20%)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(PhysiqueLevel.THREE_POWERFUL.getName());
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] considerably stronger and fitter than [npc.her] body size would suggest, and [npc.is] able to inflict a significant amount of physical damage as a result.");
+			return UtilText.parse(target, "[npc.NameIsFull]比[npc.her]身体表现出来的强壮得多，因而也能够造成大量的物理伤害。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -217,7 +217,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect PHYSIQUE_PERK_4 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"mighty",
+			"威猛",
 			"attStrength4",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			PresetColour.BASE_BLACK,
@@ -226,14 +226,14 @@ public class StatusEffect {
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_PHYSICAL, 15f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 30f)),
 			Util.newArrayListOfValues(
-					"Base [style.colourUnarmed(unarmed damage)] equals [style.colourMinorGood(20% of physique)]")) {
+					"基础[style.colourUnarmed(徒手伤害)]等于[style.colourMinorGood(体格的20%)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(PhysiqueLevel.FOUR_MIGHTY.getName());
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.Name] [npc.has] an exceptional level of fitness, and there are few who could ever hope to rival [npc.her] raw physical power.");
+			return UtilText.parse(target, "[npc.Name]的体格异于常人，几乎没有人在力量上能与[npc.her]匹敌。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -247,7 +247,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect PHYSIQUE_PERK_5 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"Herculean",
+			"神力",
 			"attStrength5",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			PresetColour.BASE_BLACK,
@@ -256,14 +256,14 @@ public class StatusEffect {
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_PHYSICAL, 20f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 50f)),
 			Util.newArrayListOfValues(
-					"Base [style.colourUnarmed(unarmed damage)] equals [style.colourMinorGood(20% of physique)]")) {
+					"基础[style.colourUnarmed(徒手伤害)]等于[style.colourMinorGood(体格的20%)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(PhysiqueLevel.FIVE_HERCULEAN.getName());
 		}
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] body is the stuff of legend; mere mortals look upon [npc.herHim] in fear and awe!");
+			return UtilText.parse(owner, "[npc.NamePos]的身躯宛若神明；凡人只配俯身仰望！");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -278,7 +278,7 @@ public class StatusEffect {
 	// Intelligence:
 	public static AbstractStatusEffect INTELLIGENCE_PERK_0_OLD_WORLD = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"No Arcane Power",
+			"无奥术力量",
 			"attIntelligence0",
 			PresetColour.ATTRIBUTE_ARCANE,
 			PresetColour.BASE_BLACK,
@@ -288,7 +288,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Due to the fact that the arcane doesn't exist in this world, your ability to cast spells is non-existent.";
+			return "因为奥术在这个世界中并不存在，所以你的施法能力也不存在。";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -302,7 +302,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect INTELLIGENCE_PERK_0 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"arcane impotence",
+			"奥术才疏",
 			"attIntelligence0",
 			PresetColour.ATTRIBUTE_ARCANE,
 			PresetColour.BASE_BLACK,
@@ -310,9 +310,9 @@ public class StatusEffect {
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_SPELLS, -75f),
 					new Value<>(Attribute.SPELL_COST_MODIFIER, -75f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.GENERIC_TERRIBLE.toWebHexString() + "'>Surrender in combat at maximum lust</b>",
-					"[style.boldMana(Maximum "+Attribute.MANA_MAXIMUM.getName()+")] [style.boldBad(limited to 5)]",
-					"[style.boldBad(Vulnerable)] to [style.boldArcane(arcane storms)]")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.GENERIC_TERRIBLE.toWebHexString() + "'>战斗中性欲积蓄满则会直接投降</b>",
+					"[style.boldMana("+Attribute.MANA_MAXIMUM.getName()+"的最大值)][style.boldBad(被限制为5)]",
+					"[style.boldBad(易受)][style.boldArcane(奥术风暴)]影响")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(IntelligenceLevel.ZERO_AIRHEAD.getName());
@@ -320,9 +320,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
-				return "Despite your natural affinity with the arcane, you've somehow managed to end up losing most of your power...";
+				return "尽管你对奥术有着天生的亲和力，但你却莫名其妙地失去了大部分的力量……";
 			} else {
-				return UtilText.parse(owner, "[npc.NameIsFull] unable to harness the arcane in any significant manner. This is a typical level of arcane affinity in all the common races of this world.");
+				return UtilText.parse(owner, "[npc.NameIsFull]无法以任何主要方式驾驭奥术。这也是这个世界上所有普通种族的典型奥术亲和力水平。");
 			}
 		}
 		@Override
@@ -337,7 +337,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect INTELLIGENCE_PERK_1 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"arcane potential",
+			"奥术潜能",
 			"attIntelligence1",
 			PresetColour.ATTRIBUTE_ARCANE,
 			PresetColour.BASE_BLACK,
@@ -347,7 +347,7 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_SPELLS, 10f),
 					new Value<>(Attribute.SPELL_COST_MODIFIER, 5f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Immune)] to [style.boldArcane(arcane storms)]")) {
+					"[style.boldExcellent(免疫)][style.boldArcane(奥术风暴)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(IntelligenceLevel.ONE_AVERAGE.getName());
@@ -355,9 +355,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer()) {
-				return "You have an exceptional natural ability to harness the arcane, and as a result, you're far more powerful than the vast majority of Dominion's population.";
+				return "你拥有驾驭奥术的天赋，因此，你比御城区的绝大多数人都要强大得多。";
 			} else {
-				return UtilText.parse(target, "[npc.Name] has a respectable knowledge of how to harness the arcane; equal to that of a common race who's undergone extensive training.");
+				return UtilText.parse(target, "[npc.Name]对如何驾驭奥术有相当的了解；与接受过广泛训练的普通种族相当。");
 			}
 		}
 		@Override
@@ -372,7 +372,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect INTELLIGENCE_PERK_2 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"arcane proficiency",
+			"奥术精通",
 			"attIntelligence2",
 			PresetColour.ATTRIBUTE_ARCANE,
 			PresetColour.BASE_BLACK,
@@ -382,14 +382,14 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_SPELLS, 15f),
 					new Value<>(Attribute.SPELL_COST_MODIFIER, 10f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Immune)] to [style.boldArcane(arcane storms)]")) {
+					"[style.boldExcellent(免疫)][style.boldArcane(奥术风暴)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(IntelligenceLevel.TWO_SMART.getName());
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] proficient at harnessing the arcane, and [npc.her] spells are not only easier to cast, but also do more damage.");
+			return UtilText.parse(target, "[npc.NameIsFull]精通驾驭奥术，[npc.her]的法术不仅更容易施放，而且伤害更高。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -403,7 +403,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect INTELLIGENCE_PERK_3 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"arcane prowess",
+			"超凡奥术",
 			"attIntelligence3",
 			PresetColour.ATTRIBUTE_ARCANE,
 			PresetColour.BASE_BLACK,
@@ -415,7 +415,7 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_ICE, 5f),
 					new Value<>(Attribute.DAMAGE_POISON, 5f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Immune)] to [style.boldArcane(arcane storms)]")) {
+					"[style.boldExcellent(免疫)][style.boldArcane(奥术风暴)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(IntelligenceLevel.THREE_BRAINY.getName());
@@ -423,9 +423,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer()) {
-				return "You are highly proficient with the arcane. Your spells are easier to cast and do more damage, and you also have a small amount of elemental damage affinity.";
+				return "你非常精通奥术。你的法术更容易施放，伤害也更高。而且你还拥有少量的元素伤害亲和力。";
 			} else {
-				return UtilText.parse(target, "[npc.NameIsFull] highly proficient with the arcane. [npc.Her] spells are easier to cast and do more damage, and [npc.she] also has a small amount of elemental damage affinity.");
+				return UtilText.parse(target, "[npc.NameIsFull]高度精通奥术。[npc.Her]的法术更容易施放，伤害也更高。而且[npc.she]还有少量元素伤害亲和力。");
 			}
 		}
 		@Override
@@ -440,7 +440,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect INTELLIGENCE_PERK_4 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"arcane mastery",
+			"奥术大师",
 			"attIntelligence4",
 			PresetColour.ATTRIBUTE_ARCANE,
 			PresetColour.BASE_BLACK,
@@ -452,7 +452,7 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_ICE, 10f),
 					new Value<>(Attribute.DAMAGE_POISON, 10f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Immune)] to [style.boldArcane(arcane storms)]")) {
+					"[style.boldExcellent(免疫)][style.boldArcane(奥术风暴)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(IntelligenceLevel.FOUR_GENIUS.getName());
@@ -460,10 +460,10 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer()) {
-				return "You are extremely proficient with the arcane. Your spells are easier to cast and do more damage, and you also have a considerable amount of elemental damage affinity.";
+				return "你非常精通奥术。你的法术更容易施放，伤害也更高，而且你还拥有相当高的元素伤害亲和力。";
 			} else {
-				return UtilText.parse(target, "[npc.NameIsFull] extremely proficient with the arcane."
-						+ " [npc.Her] spells are easier to cast and do more damage, and [npc.she] also has a considerable amount of elemental damage affinity.");
+				return UtilText.parse(target, "[npc.NameIsFull]非常精通奥术。"
+						+ "[npc.her]的法术更容易施放，伤害也更高，而且[npc.she]还具有相当高的元素伤害亲和力。");
 			}
 		}
 		@Override
@@ -478,7 +478,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect INTELLIGENCE_PERK_5 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"arcane brilliance",
+			"奥术之光",
 			"attIntelligence5",
 			PresetColour.ATTRIBUTE_ARCANE,
 			PresetColour.BASE_BLACK,
@@ -490,7 +490,7 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_ICE, 15f),
 					new Value<>(Attribute.DAMAGE_POISON, 15f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Immune)] to [style.boldArcane(arcane storms)]")) {
+					"[style.boldExcellent(免疫)][style.boldArcane(奥术风暴)]")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(IntelligenceLevel.FIVE_POLYMATH.getName());
@@ -498,9 +498,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
-				return "Your ability to harness the arcane is rivalled only by Lilith herself. Casting spells comes as naturally to you as does breathing.";
+				return "你驾驭奥术的能力只有莉莉丝能与之匹敌。施法对你来说就像呼吸一样自然。";
 			} else {
-				return UtilText.parse(owner, "[npc.NamePos] arcane ability is rivalled only by Lilith herself. Casting spells comes as naturally to [npc.herHim] as does breathing.");
+				return UtilText.parse(owner, "[npc.NamePos]的奥术天赋只有莉莉丝能与之匹敌。施法对[npc.herHim]来说就像呼吸一样自然。");
 			}
 		}
 		@Override
@@ -516,7 +516,7 @@ public class StatusEffect {
 	// Corruption:
 	public static AbstractStatusEffect CORRUPTION_PERK_0 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"Pure",
+			"纯洁",
 			"attCorruption0",
 			PresetColour.CORRUPTION_STAGE_ZERO,
 			PresetColour.BASE_BLACK,
@@ -532,9 +532,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
-				return "You are completely uncorrupted, and aside from performing the most conservative of sexual acts with the person you love, you're not really interested in sex at all.";
+				return "你完全没有堕落，除了和你爱的人进行最保守的性行为外，你对性一点也不感兴趣。";
 			} else {
-				return UtilText.parse(owner, "[npc.NameIsFull] completely uncorrupted, and aside from performing the most conservative of sexual acts with the person [npc.she] loves, [npc.sheIs] not really interested in sex at all.");
+				return UtilText.parse(owner, "[npc.NameIsFull]没有丝毫堕落，除了和[npc.she]爱的人进行最保守的性行为外，[npc.sheIs]对性一点也不感兴趣。");
 			}
 		}
 		@Override
@@ -549,7 +549,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect CORRUPTION_PERK_1 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"Vanilla",
+			"寻常",
 			"attCorruption1",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			PresetColour.BASE_BLACK,
@@ -566,9 +566,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
-				return "You're open to the idea of having casual sex, but are still unwilling to perform any extreme sexual acts.";
+				return "你对随意发生性关系的想法持开放态度，但仍不愿意进行任何极端的性行为。";
 			} else {
-				return UtilText.parse(owner, "[npc.NameIsFull] open to the idea of having casual sex, but is unwilling to perform any extreme sexual acts.");
+				return UtilText.parse(owner, "[npc.NameIsFull]对随意发生性关系的想法持开放态度，但仍不愿意进行任何极端的性行为。");
 			}
 		}
 		@Override
@@ -583,7 +583,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect CORRUPTION_PERK_2 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"dirty",
+			"肮脏",
 			"attCorruption2",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			PresetColour.BASE_BLACK,
@@ -600,9 +600,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
-				return "Sexual acts that once may have made you feel uncomfortable are now the focus of your fantasies, and you can't wait to try them out on a willing partner...";
+				return "曾经让你感觉不舒服的性行为，现在却成为你幻想的焦点，你迫不及待地想在愿意的伴侣身上尝试这些行为……";
 			} else {
-				return UtilText.parse(owner, "[npc.Name] has a dirty look in [npc.her] eyes, and you often notice [npc.her] gaze lingering hungrily over your body.");
+				return UtilText.parse(owner, "[npc.Name]总是露出下流的目光，你能感到[npc.her]的视线饥渴地在你全身游走。");
 			}
 		}
 		@Override
@@ -617,7 +617,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect CORRUPTION_PERK_3 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"Lewd",
+			"放荡",
 			"attCorruption3",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			PresetColour.BASE_BLACK,
@@ -636,25 +636,25 @@ public class StatusEffect {
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
 				if (owner.hasVagina()) {
-					return "Given power by the fantasies that constantly run through your mind, the arcane is starting to have a physical effect on your body, and you feel as though it's going to be far easier to get pregnant from now on...";
+					return "借助你脑海中萦绕的幻想的力量，奥术逐渐对你的身体有了实质上的影响，你感觉自己更容易怀孕了……";
 				} else if (owner.hasPenis()) {
-					return "Given power by the fantasies that constantly run through your mind, the arcane is starting to have a physical effect on your body,"
-							+ " and you feel as though it's going to be far easier to impregnate your sexual partners from now on...";
+					return "借助你脑海中萦绕的幻想的力量，奥术逐渐对你的身体有了实质上的影响，"
+							+ "你感觉自己更容易让他人受孕了……";
 				} else {
-					return "Given power by the fantasies that constantly run through your mind, the arcane is starting to have a physical effect on your body, but because you don't have any sexual organs, there's not much that's happened...";
+					return "借助你脑海中萦绕的幻想的力量，奥术逐渐对你的身体有了实质上的影响，但由于你没有任何性器官，并没有发生什么特别的事情……";
 				}
 				
 			} else {
 				if (owner.hasVagina()) {
 					return UtilText.parse(owner,
-							"Given power by the fantasies that constantly run through [npc.her] mind, the arcane is starting to have a physical effect on [npc.namePos] body, making it far easier for [npc.herHim] to get pregnant.");
+							"借助[npc.namePos]脑海中萦绕的幻想的力量，奥术逐渐对[npc.her]的身体有了实质上的影响，[npc.her]更容易怀孕了……");
 				} else if (owner.hasPenis()) {
 					return UtilText.parse(owner,
-							"Given power by the fantasies that constantly run through [npc.her] mind, the arcane is starting to have a physical effect on [npc.namePos] body, making it far easier for [npc.herHim] to impregnate others.");
+							"借助[npc.namePos]脑海中萦绕的幻想的力量，奥术逐渐对[npc.her]的身体有了实质上的影响，[npc.her]更容易让他人受孕了……");
 				} else {
 					return UtilText.parse(owner,
-							"Given power by the fantasies that constantly run through [npc.her] mind, the arcane is starting to have a physical effect on [npc.namePos] body,"
-							+ " but because [npc.she] doesn't have any sexual organs, there's not much that's happened.");
+							"借助[npc.namePos]脑海中萦绕的幻想的力量，奥术逐渐对[npc.her]的身体有了实质上的影响，"
+							+ "但由于[npc.she]没有任何性器官，并没有发生什么特别的事情。");
 				}
 			}
 		}
@@ -670,7 +670,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect CORRUPTION_PERK_4 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"Lustful",
+			"好色",
 			"attCorruption4",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			PresetColour.BASE_BLACK,
@@ -689,29 +689,29 @@ public class StatusEffect {
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
 				if (owner.hasVagina()) {
-					return "Given a huge amount of power by the lewd fantasies that constantly run through your mind, the arcane is starting to have a physical effect on your body,"
-							+ " and you feel as though it's going to be far easier to get pregnant from now on...";
+					return "脑海中萦绕的淫靡幻想提供了巨大的能量，奥术逐渐对你的身体有了实质上的影响，"
+							+"你感觉自己更容易怀孕了……";
 				} else if (owner.hasPenis()) {
-					return "Given a huge amount of power by the lewd fantasies that constantly run through your mind, the arcane is starting to have a physical effect on your body,"
-							+ " and you feel as though it's going to be far easier to impregnate your sexual partners from now on...";
+					return "脑海中萦绕的淫靡幻想提供了巨大的能量，奥术逐渐对你的身体有了实质上的影响，"
+							+ "你感觉自己更容易让他人受孕了……";
 				} else {
-					return "Given a huge amount of power by the lewd fantasies that constantly run through your mind, the arcane is starting to have a physical effect on your body,"
-							+ " but because you don't have any sexual organs, there's not much that's happened...";
+					return "脑海中萦绕的淫靡幻想提供了巨大的能量，奥术逐渐对你的身体有了实质上的影响，"
+							+"但由于你没有任何性器官，并没有发生什么特别的事情……";
 				}
 				
 			} else {
 				if (owner.hasVagina()) {
 					return UtilText.parse(owner,
-							"Given a huge amount of power by the lewd fantasies that constantly run through [npc.her] mind, the arcane is starting to have a physical effect on [npc.namePos] body,"
-							+ " making it far easier for [npc.herHim] to get pregnant.");
+							"脑海中萦绕的淫靡幻想提供了巨大的能量，奥术逐渐对[npc.namePos]的身体有了实质上的影响，"
+							+ "[npc.her]更容易怀孕了……");
 				} else if (owner.hasPenis()) {
 					return UtilText.parse(owner,
-							"Given a huge amount of power by the lewd fantasies that constantly run through [npc.her] mind, the arcane is starting to have a physical effect on [npc.namePos] body,"
-							+ " making it far easier for [npc.herHim] to impregnate others.");
+							"脑海中萦绕的淫靡幻想提供了巨大的能量，奥术逐渐对[npc.namePos]的身体有了实质上的影响，"
+							+ "[npc.her]更容易让他人受孕了……");
 				} else {
 					return UtilText.parse(owner,
-							"Given a huge amount of power by the lewd fantasies that constantly run through [npc.her] mind, the arcane is starting to have a physical effect on [npc.namePos] body,"
-							+ " but because [npc.she] doesn't have any sexual organs, there's not much that's happened.");
+							"脑海中萦绕的淫靡幻想提供了巨大的能量，奥术逐渐对[npc.namePos]的身体有了实质上的影响，"
+							+ "但由于[npc.she]没有性器官，并没有发生什么特别的事情。");
 				}
 			}
 		}
@@ -727,7 +727,7 @@ public class StatusEffect {
 			
 	public static AbstractStatusEffect CORRUPTION_PERK_5 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"Corrupt",
+			"堕落",
 			"attCorruption5",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			PresetColour.BASE_BLACK,
@@ -737,7 +737,7 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_LUST, 50f),
 					new Value<>(Attribute.FERTILITY, 75f),
 					new Value<>(Attribute.VIRILITY, 75f)),
-			Util.newArrayListOfValues("<b style='color: "+ PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString()+ "'>Demonic mindset</b>")) {
+			Util.newArrayListOfValues("<b style='color: "+ PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString()+ "'>恶魔思维</b>")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(CorruptionLevel.FIVE_CORRUPT.getName());
@@ -745,11 +745,11 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] completely and utterly corrupted,"
+					"[npc.NameIsFull]已经彻底堕落，"
 						+ (owner.getSubspeciesOverrideRace()==Race.DEMON
-							?" as is fitting for a demon."
-							:" and desperately [npc.verb(wish)] that [npc.she] [npc.was] a demon.")
-					+ " The lewd thoughts and fantasies that continuously run through [npc.her] mind have unlocked the full power of the arcane, making [npc.her] body hyper-fertile and virile.");
+							?"这正是恶魔需要的。"
+							:"并且急切地想要成为恶魔。")
+					+ "脑海中萦绕的淫靡幻想解锁了奥术的全部力量，使得[npc.her]的身体极其适合受孕和授孕。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -764,7 +764,7 @@ public class StatusEffect {
 	// Arousal:
 	public static AbstractStatusEffect AROUSAL_PERK_0 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"none",
+			"无",
 			"attArousal0",
 			PresetColour.AROUSAL_STAGE_ZERO,
 			PresetColour.BASE_BLACK,
@@ -779,9 +779,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer())
-				return "You aren't aroused at all.";
+				return "你完全没感到快感。";
 			else
-				return UtilText.parse(target, "[npc.NameIsFull]n't aroused at all.");
+				return UtilText.parse(target, "[npc.NameIsFull]完全没感到快感。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -796,12 +796,12 @@ public class StatusEffect {
 			List<String> effects = new ArrayList<>();
 			if(Main.game.isInSex()) {
 				if(Main.sex.isInForeplay(target)) {
-					effects.add("[style.colourPinkLight(Foreplay)]");
-					effects.add("[style.colourMinorBad(-50%)] arousal gains");
+					effects.add("[style.colourPinkLight(前戏)]");
+					effects.add("[style.colourMinorBad(-50％)]快感获取");
 				} else {
-					effects.add("[style.colourPink(Main Sex)]");
-					effects.add("[style.colourMinorGood(Full)] arousal gains");
-					effects.add(UtilText.parse(target, "<i>Having already orgasmed, [npc.nameIsFull] no longer in foreplay at this arousal level</i>"));
+					effects.add("[style.colourPink(正戏)]");
+					effects.add("[style.colourMinorGood(正常)]快感获取");
+					effects.add(UtilText.parse(target, "<i>[npc.nameIsFull]已经高潮过了，因此在这个快感等级下不再需要前戏</i>"));
 				}
 			}
 			return effects;
@@ -810,7 +810,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect AROUSAL_PERK_1 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"turned on",
+			"性欲激起",
 			"attArousal1",
 			PresetColour.AROUSAL_STAGE_ONE,
 			PresetColour.BASE_BLACK,
@@ -818,8 +818,8 @@ public class StatusEffect {
 			false,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourPinkLight(Foreplay)]",
-					"[style.colourMinorBad(-50%)] arousal gains")) {
+					"[style.colourPinkLight(前戏)]",
+					"[style.colourMinorBad(-50％)]快感获取")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(ArousalLevel.ONE_TURNED_ON.getName());
@@ -827,9 +827,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer())
-				return "You're starting to get pretty turned on.";
+				return "你的性欲被激发出来了。";
 			else
-				return UtilText.parse(target, "[npc.NameIsFull] starting to get turned on.");
+				return UtilText.parse(target, "[npc.NameIsFull]的性欲被激发出来了。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -847,7 +847,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect AROUSAL_PERK_2 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"excited",
+			"非常兴奋",
 			"attArousal2",
 			PresetColour.AROUSAL_STAGE_TWO,
 			PresetColour.BASE_BLACK,
@@ -855,8 +855,8 @@ public class StatusEffect {
 			false,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourPink(Main Sex)]",
-					"[style.colourMinorGood(Full)] arousal gains")) {
+					"[style.colourPink(正戏)]",
+					"[style.colourMinorGood(正常)]快感获取")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(ArousalLevel.TWO_EXCITED.getName());
@@ -864,9 +864,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer())
-				return "You're getting quite excited, and your thoughts are now focused on your sexual desires.";
+				return "你感到十分性奋，满脑子都被欲望填满。";
 			else
-				return UtilText.parse(target, "[npc.NameIsFull] getting quite excited.");
+				return UtilText.parse(target, "[npc.NameIsFull]感到十分性奋。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -880,7 +880,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect AROUSAL_PERK_3 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"heated",
+			"欲火焚身",
 			"attArousal3",
 			PresetColour.AROUSAL_STAGE_THREE,
 			PresetColour.BASE_BLACK,
@@ -888,8 +888,8 @@ public class StatusEffect {
 			false,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourPink(Main Sex)]",
-					"[style.colourMinorGood(Full)] arousal gains")) {
+					"[style.colourPink(正戏)]",
+					"[style.colourMinorGood(正常)]快感获取")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(ArousalLevel.THREE_HEATED.getName());
@@ -897,9 +897,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer())
-				return "Things are starting to get pretty heated. You can focus on nothing but the thought of sex.";
+				return "燥热起来了。你全心全意投入到了性爱中。";
 			else
-				return UtilText.parse(target, "[npc.Name] can no longer focus on anything but sex.");
+				return UtilText.parse(target, "[npc.Name]全心全意投入到了性爱中。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -913,7 +913,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect AROUSAL_PERK_4 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"passionate",
+			"激情澎拜",
 			"attArousal4",
 			PresetColour.AROUSAL_STAGE_FOUR,
 			PresetColour.BASE_BLACK,
@@ -921,8 +921,8 @@ public class StatusEffect {
 			false,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourPink(Main Sex)]",
-					"[style.colourMinorGood(Full)] arousal gains")) {
+					"[style.colourPink(正戏)]",
+					"[style.colourMinorGood(正常)]快感获取")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(ArousalLevel.FOUR_PASSIONATE.getName());
@@ -930,9 +930,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer())
-				return "The only thing you want right now is to reach your climax.";
+				return "你现在只想赶紧高潮。";
 			else
-				return UtilText.parse(target, "[npc.NameIsFull] only concerned with reaching [npc.her] climax.");
+				return UtilText.parse(target, "[npc.NameIsFull]现在只想赶紧高潮。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -946,7 +946,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect AROUSAL_PERK_5 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"imminent orgasm",
+			"临近高潮",
 			"attArousal5",
 			PresetColour.AROUSAL_STAGE_FIVE,
 			PresetColour.BASE_BLACK,
@@ -954,8 +954,8 @@ public class StatusEffect {
 			false,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourPink(Main Sex)]",
-					"[style.colourMinorGood(Full)] arousal gains")) {
+					"[style.colourPink(正戏)]",
+					"[style.colourMinorGood(正常)]快感获取")) {
 		@Override
 		public String getName(GameCharacter target) {
 			return Util.capitaliseSentence(ArousalLevel.FIVE_ORGASM_IMMINENT.getName());
@@ -963,9 +963,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You feel your climax building. You know that it's only going to be a matter of seconds before you orgasm!";
+				return "你感觉到高潮正在来临。你明白再过几秒就要高潮了！";
 			else
-				return UtilText.parse(owner, "[npc.NameIsFull] about to reach [npc.her] climax!");
+				return UtilText.parse(owner, "[npc.NameIsFull]感觉到高潮正在来临！");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -981,7 +981,7 @@ public class StatusEffect {
 	// Lust:
 	public static AbstractStatusEffect LUST_PERK_0 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"none",
+			"无",
 			"attLust0",
 			PresetColour.LUST_STAGE_ZERO,
 			PresetColour.BASE_BLACK,
@@ -1015,7 +1015,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect LUST_PERK_1 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"turned on",
+			"性欲激起",
 			"attLust1",
 			PresetColour.LUST_STAGE_ONE,
 			PresetColour.BASE_BLACK,
@@ -1049,7 +1049,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect LUST_PERK_2 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"excited",
+			"非常兴奋",
 			"attLust2",
 			PresetColour.LUST_STAGE_TWO,
 			PresetColour.BASE_BLACK,
@@ -1083,7 +1083,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect LUST_PERK_3 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"heated",
+			"欲火焚身",
 			"attLust3",
 			PresetColour.LUST_STAGE_THREE,
 			PresetColour.BASE_BLACK,
@@ -1117,7 +1117,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect LUST_PERK_4 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"passionate",
+			"激情澎拜",
 			"attLust4",
 			PresetColour.LUST_STAGE_FOUR,
 			PresetColour.BASE_BLACK,
@@ -1151,7 +1151,7 @@ public class StatusEffect {
 	
 	public static AbstractStatusEffect LUST_PERK_5 = new AbstractStatusEffect(StatusEffectCategory.ATTRIBUTE,
 			100,
-			"passionate",
+			"激情澎拜",
 			"attLust5",
 			PresetColour.LUST_STAGE_FIVE,
 			PresetColour.BASE_BLACK,
@@ -1189,15 +1189,15 @@ public class StatusEffect {
 	// WEATHER & LOCATION EFFECTS:
 	
 	public static AbstractStatusEffect WEATHER_PROLOGUE = new AbstractStatusEffect(100,
-			"Strange Atmosphere",
+			"奇怪的天气",
 			"weatherNightStormIncoming",
 			PresetColour.CLOTHING_WHITE,
 			false,
 			null,
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>Enhanced libido</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>增强性欲</b>")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return "There's a strange atmosphere surrounding the museum this evening, and you inexplicably find yourself feeling incredibly aroused...";
+			return "今天晚上，博物馆里弥漫着一种奇怪的气氛，你莫名其妙地发现自己感到难以置信的兴奋……";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -1206,7 +1206,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_CLEAR = new AbstractStatusEffect(100,
-			"Clear skies",
+			"晴天",
 			"weatherDayClear",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -1216,14 +1216,14 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
 			if(Main.game.isDayTime()) {
-				sb.append("The sun shines down from a perfectly clear blue sky.");
+				sb.append("阳光从湛蓝的天空中洒下。");
 			} else {
-				sb.append("The moon and stars shine down from a perfectly clear night's sky.");
+				sb.append("月亮和星星在晴朗的夜空中闪耀");
 			}
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.nameIsFull] still able to absorb background arcane energy to power [npc.herself].");
+				sb.append("虽然目前没有风暴的迹象，但[npc.nameIsFull]还是能够吸收背景中的奥术能量为自己充能。");
 			} else {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.name] can still feel the effects of the arcane manifesting in the form of an increased libido.");
+				sb.append("虽然目前没有风暴的迹象，但[npc.name]仍然能感受到奥术的影响，表现为性欲增强。");
 			}
 			return UtilText.parse(target, sb.toString());
 		}
@@ -1243,12 +1243,12 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] energy from background [style.colourArcane(arcane)]");
+				exEff.add("[style.colourGood(获得)]能量，来源为[style.colourArcane(奥术)]背景");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
+				exEff.add("[style.colourArcane(增强性欲)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until next [style.colourArcane(arcane storm)]:");
+				exEff.add("距离下次[style.colourArcane(奥术风暴)]：");
 				exEff.add(Main.game.getNextStormTimeAsTimeString());
 			}
 			return exEff;
@@ -1256,7 +1256,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_CLOUD = new AbstractStatusEffect(100,
-			"Cloudy skies",
+			"阴天",
 			"weatherDayCloudy",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -1265,11 +1265,11 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("The weather seems to change at a moment's notice, and is currently overcast, with a chance of rain.");
+			sb.append("天气似乎说变就变，目前阴云密布，有可能会下雨。");
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.nameIsFull] still able to absorb background arcane energy to power [npc.herself].");
+				sb.append("虽然目前没有风暴的迹象，但[npc.nameIsFull]还是能够吸收背景中的奥术能量为自己充能。");
 			} else {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.name] can still feel the effects of the arcane manifesting in the form of an increased libido.");
+				sb.append("虽然目前没有风暴的迹象，但[npc.name]仍然能感受到奥术的影响，表现为性欲增强。");
 			}
 			return UtilText.parse(target, sb.toString());
 		}
@@ -1289,12 +1289,12 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] energy from background [style.colourArcane(arcane)]");
+				exEff.add("[style.colourGood(获得)]能量，来源为[style.colourArcane(奥术)]背景");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
+				exEff.add("[style.colourArcane(增强性欲)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until next [style.colourArcane(arcane storm)]:");
+				exEff.add("距离下次[style.colourArcane(奥术风暴)]：");
 				exEff.add(Main.game.getNextStormTimeAsTimeString());
 			}
 			return exEff;
@@ -1302,7 +1302,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_RAIN = new AbstractStatusEffect(100,
-			"Rain",
+			"雨天",
 			"weatherDayRain",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -1311,11 +1311,11 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("The heavy rain clouds overhead have finally burst, unleashing a sudden, torrential downpour.");
+			sb.append("头顶的雨云终于破裂，骤然下起了倾盆大雨。");
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.nameIsFull] still able to absorb background arcane energy to power [npc.herself].");
+				sb.append("虽然目前没有风暴的迹象，但[npc.nameIsFull]还是能够吸收背景中的奥术能量为自己充能。");
 			} else {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.name] can still feel the effects of the arcane manifesting in the form of an increased libido.");
+				sb.append("虽然目前没有风暴的迹象，但[npc.name]仍然能感受到奥术的影响，表现为性欲增强。");
 			}
 			return UtilText.parse(target, sb.toString());
 		}
@@ -1335,12 +1335,12 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] energy from background [style.colourArcane(arcane)]");
+				exEff.add("[style.colourGood(获得)]能量，来源为[style.colourArcane(奥术)]背景");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
+				exEff.add("[style.colourArcane(增强性欲)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until next [style.colourArcane(arcane storm)]:");
+				exEff.add("距离下次[style.colourArcane(奥术风暴)]：");
 				exEff.add(Main.game.getNextStormTimeAsTimeString());
 			}
 			return exEff;
@@ -1348,7 +1348,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_SNOW = new AbstractStatusEffect(100,
-			"Snow",
+			"雪天",
 			"weatherDaySnow",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -1376,25 +1376,25 @@ public class StatusEffect {
 					}
 				}
 				return "<p>"
-							+ "The oppressive, dark-grey clouds which have been hanging over Dominion for the past few hours finally burst."
-							+ " Large, fluffy snowflakes slowly drift down from above, and although the first few crystals quickly melt away upon coming into contact with the ground below,"
-								+ " it doesn't take long before a thin white dusting of powdery white has settled upon the rooftops and pathways of the capital."
+							+ "深灰色云层极具压迫感，在御城区的上空盘踞了数小时后终于爆发了。"
+							+ "松软的大片雪花缓缓从天而降，尽管最初的冰晶在接触地面后很快便融化，"
+								+ "没过多久就在房顶和首都的道路上积起了一层薄薄的白雪。"
 						+ "</p>"
 						+ "<p>"
-							+ "What looked at first to be no more than a quick flurry soon intensifies into a wild snowstorm, and in less than an hour, a thick white blanket of snow has begun to smother the streets."
-							+ " Another hour later, and the snow's built up to such a degree that all travel through the city slows to a crawl."
-							+ " A few demons try to use their arcane fire to blast a path through the freezing snowdrifts, but the snowfall is so heavy that even their powerful spells seem to have a limited impact."
+							+ "起初看上去不过是一阵小雪，但很快就变成了狂风暴雪，不到一个小时，厚重的白色积雪就逐渐把街道封锁起来。"
+							+ "又过了一个小时，白雪已经堆得很高，想在城中穿行都要慢慢悠悠的。"
+							+ "几只恶魔想要用奥术火焰融化积雪，清理出一条道路，但雪实在太大，即使是强力的法术也造不成太大影响。"
 						+ "</p>"
 						+ "<p>"
-							+ "Just as it seems as though the entire capital is about to grind to a halt, the faint jingle of bells heralds the arrival of the city's saviours."
-							+ " Travelling a great distance from their frozen tundra homeland, a host of reindeer-morphs descends upon Dominion."
-							+ " Their large, cloven hoofs allow them to traverse the snow-bound streets with incredible ease, and they quickly split up into numerous snow-shovelling groups,"
-								+ " before setting off into different areas of the city."
-							+ " Under the guidance of particularly large, muscular individuals, the reindeer-morphs quickly set about clearing a path through the snow."
+							+ "就在整个首都似乎即将陷入停顿的时候，微弱的钟声预示着城市救世主的到来。"
+							+ "一群驯鹿化形从冻寒之地远道而来，驾临了御城区。"
+							+ "分叉的巨大蹄子使得他们在积雪的道路上穿行轻而易举，他们很快就分成数个铲雪小队，"
+								+ "前往了城市的不同区域。"
+							+ "在几个虎背熊腰的领导带领下，这些驯鹿化形很快就在雪地上开辟出了一条道路。"
 						+ "</p>"
 						+ "<p>"
-							+ "Although the weather refuses to let up, it only takes a few hours for the impressive reindeer-morphs to clear all of the snow from the streets."
-							+ " Talk soon spreads about how the visitors will be staying in Dominion to work until the end of February, making sure that the city is able to function through these cold winter months."
+							+ "尽管天气没有转好，但在这些值得钦佩的驯鹿化形的努力下，只用了几个小时就清理干净了道路上的积雪。"
+							+ "消息很快便传开了，这些访客会一直在御城区待到二月，保证城市能在整个冬日里正常运转后才会离开。"
 						+ "</p>";
 			} else {
 				return "";
@@ -1403,11 +1403,11 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("The heavy clouds overhead have finally burst, unleashing a flurry of brilliant white snowflakes upon the land below.");
+			sb.append("头顶的乌云终于破裂，骤然下起了鹅毛大雪。");
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.nameIsFull] still able to absorb background arcane energy to power [npc.herself].");
+				sb.append("虽然目前没有风暴的迹象，但[npc.nameIsFull]还是能够吸收背景中的奥术能量为自己充能。");
 			} else {
-				sb.append(" Although there's no sign of a storm at the moment, [npc.name] can still feel the effects of the arcane manifesting in the form of an increased libido.");
+				sb.append("虽然目前没有风暴的迹象，但[npc.name]仍然能感受到奥术的影响，表现为性欲增强。");
 			}
 			return UtilText.parse(target, sb.toString());
 		}
@@ -1427,12 +1427,12 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] energy from background [style.colourArcane(arcane)]");
+				exEff.add("[style.colourGood(获得)]能量，来源为[style.colourArcane(奥术)]背景");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
+				exEff.add("[style.colourArcane(增强性欲)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until next [style.colourArcane(arcane storm)]:");
+				exEff.add("距离下次[style.colourArcane(奥术风暴)]：");
 				exEff.add(Main.game.getNextStormTimeAsTimeString());
 			}
 			return exEff;
@@ -1440,7 +1440,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_STORM_GATHERING = new AbstractStatusEffect(100,
-			"Gathering storm",
+			"风暴将至",
 			"weatherDayStormIncoming",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -1449,8 +1449,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"A roiling mass of thick black storm clouds hang heavy in the skies above [npc.name]."
-					+ " Flashes of pink and purple energy can be seen just beneath their surface, and [npc.she] [npc.verb(realise)] that an arcane storm is going to break out at any moment.");
+					"一大片厚重乌黑的风暴云在[npc.name]的头顶翻滚着。"
+					+ "在其表面之下偶尔可见几道粉色或紫色的能量束，[npc.she]意识到奥术风暴随时可能爆发。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -1468,12 +1468,12 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] energy from background [style.colourArcane(arcane)]");
+				exEff.add("[style.colourGood(获得)]能量，来源为[style.colourArcane(奥术)]背景");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
+				exEff.add("[style.colourArcane(增强性欲)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until next [style.colourArcane(arcane storm)]:");
+				exEff.add("距离下次[style.colourArcane(奥术风暴)]：");
 				exEff.add(Main.game.getNextStormTimeAsTimeString());
 			}
 			return exEff;
@@ -1481,7 +1481,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_STORM = new AbstractStatusEffect(100,
-			"Arcane storm",
+			"奥术风暴",
 			"weatherDayStorm",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -1498,20 +1498,20 @@ public class StatusEffect {
 				StringBuilder sb = new StringBuilder();
 				
 				sb.append("<p>"
-							+ "A bright pink flash suddenly illuminates the entire city of Dominion, causing those few residents still prowling the streets to look skywards."
-							+ " High up above them, the threatening storm clouds have finally broken, and a roiling mass of arcane energy finally crackles into life."
+							+ "一道亮粉色的光芒顿时照亮了整个御城区，让那些仍在街道上逗留的居民不禁抬头望向天。"
+							+ "在头顶的高空，威胁的暴风云终于爆发，一团沸腾的奥术能量噼啪作响。"
 						+ "</p>"
 						+ "<p>"
-							+ "Within moments, a ghostly series of lewd moans and ecstatic screams start echoing throughout the city, and as the arcane thunder penetrates into the minds of those without a strong aura,"
-							+ " they find themselves unable to think of anything but sex."
+							+ "很快，一连串无来由的淫荡呻吟和狂喜尖叫便开始在整个城市中回荡，奥术雷霆击穿了那些没有强大灵气保护的人的心灵，"
+							+ "他们发现自己满脑子只剩下性爱了。"
 						+ "</p>");
 				
 				WorldRegion region = target.getWorldLocation().getWorldRegion();
 				
 				if(region!=WorldRegion.DOMINION && region!=WorldRegion.HARPY_NESTS) {
 					sb.append("<p>"
-							+ "Although it breaks high over Dominion, the storm isn't contained to just within the city, and swiftly sweeps out across the Foloi Fields and into the surrounding forests and grassland wilderness."
-							+ " Like a chain reaction, flashes of purple lightning streak across the sky in all directions, which are quickly followed by the erotic moaning of arcane thunder."
+							+ "尽管风暴在御城区上方爆发，但并非只会影响这个城市，而是会席卷弗洛伊田野甚至周边的树林和荒野绿地。"
+							+ "紫色的闪电在天际划向四面八方，奥术雷霆带来的色情呻吟也接踵而至。"
 						+ "</p>");
 
 					if(region==WorldRegion.FIELD_CITY
@@ -1521,20 +1521,20 @@ public class StatusEffect {
 						
 						if(target.getLocationPlace().isStormImmune()) {
 							sb.append("<p>"
-										+ "Although completely immune to its effects yourself, you can feel that the storm is considerably weaker out here, far from the epicentre."
-										+ " While it's highly likely that anyone you meet in this area will be hornier than usual, you imagine that they'll be able to control themselves enough to resist the storm's arousing effects."
+										+ "虽说你能够完全免疫其影响，但你仍能感觉到外面的风暴并不强烈，远远算不上风暴中心。"
+										+ "这也意味着你在该区域遇到的人都会更加饥渴，但你认为他们能够控制住自己，抵抗风暴带来的影响。"
 									+ "</p>");
 						} else {
 							sb.append("<p>"
-										+ "Although normally vulnerable to its effects, you only feel a little hornier than usual; proof that the storm is considerably weaker out here, far from the epicentre."
-										+ " You quickly realise that anyone you meet in this area will surely be able to control themselves enough to resist the usual arousing effects, just as you can."
+										+ "虽说你会受到其影响，但也只是觉得比平常更性奋一点；这也证明这里的风暴比较弱，远远算不上风暴中心。"
+										+ "你立刻意识到在该区域遇到的人肯定会更加饥渴，但你认为他们能够控制住自己，抵抗风暴带来的影响，就和你一样。"
 									+ "</p>");
 						}
 						
 					} else {
 						sb.append("<p>"
-									+ "As the storm's epicentre is directly over Dominion, you're far enough away so that you can only hear the very faintest of arcane moans in the air."
-									+ " While it's likely that anyone you come across out here will be a little hornier than usual, you imagine that they'll easily be able to resist the storm's arousing effects."
+									+ "由于风暴中心正位于御城区，而你的距离足够远，只能听见空气中细微的奥术的呻吟。"
+									+ "这也意味着你在该区域遇到的人性欲会稍高一点，但你认为他们能够控制住自己，抵抗风暴带来的影响。"
 								+ "</p>");
 					}
 				}
@@ -1546,15 +1546,15 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Huge streaks of pink and purple lightning arc through the sky as an arcane storm rages high above Dominion.");
+			sb.append("奥术风暴在御城区上空肆虐，粉紫交加的巨型闪电撕破了苍穹。");
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				sb.append(" As an arcane-powered sex doll, [npc.nameIsFull] filled with a colossal amount of energy!");
+				sb.append("作为奥术驱动的性爱玩偶，[npc.nameIsFull]中充满了巨量能量！");
 				
 			} else {
 				if(target.getWorldLocation().getWorldRegion()!=WorldRegion.DOMINION && target.getWorldLocation().getWorldRegion()!=WorldRegion.HARPY_NESTS) {
-					sb.append(" [npc.NameIsFull] far enough away from the storm's epicentre to be rendered all but immune to its arousing effects.");
+					sb.append("[npc.NameIsFull]距离风暴的中心足够遥远，对于其催情的影响完全免疫。");
 				} else {
-					sb.append(" [npc.NamePos] affinity with the arcane has rendered [npc.herHim] almost completely immune to the arousing effects of arcane storms.");
+					sb.append("由于与奥术的亲和力，[npc.NamePos]几乎可以完全免疫奥术风暴催情的影响。");
 				}
 			}
 			return UtilText.parse(target, sb.toString());
@@ -1592,13 +1592,13 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] [style.colourExcellent(massive)] energy from [style.colourArcane(arcane storm)]");
+				exEff.add("[style.colourGood(获得)][style.colourExcellent(大量)]能量，来源为[style.colourArcane(奥术风暴)]");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
-				exEff.add("[style.boldExcellent(Double)] [style.colourArcane(essence gains)] from sex & combat");
+				exEff.add("[style.colourArcane(增强性欲)]");
+				exEff.add("[style.boldExcellent(双倍)]性爱&战斗的[style.colourArcane(精华获取)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until [style.colourArcane(storm ends)]:");
+				exEff.add("持续到[style.colourArcane(风暴结束)]:");
 				exEff.add(Main.game.getWeatherTimeRemainingAsTimeString());
 			}
 			return exEff;
@@ -1606,7 +1606,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_STORM_VULNERABLE = new AbstractStatusEffect(100,
-			"Arcane storm",
+			"奥术风暴",
 			"weatherDayStorm",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -1621,16 +1621,16 @@ public class StatusEffect {
 				}
 				
 				return "<p>"
-							+ "A bright pink flash suddenly illuminates the entire city of Dominion, causing those few residents still prowling the streets to look skywards."
-							+ " High up above them, the threatening storm clouds have finally broken, and a roiling mass of arcane energy finally crackles into life."
+							+ "一道亮粉色的光芒顿时照亮了整个御城区，让那些仍在街道上逗留的居民不禁抬头望向天。"
+							+ "在头顶的高空，威胁的暴风云终于爆发，一团沸腾的奥术能量噼啪作响。"
 						+ "</p>"
 						+ "<p>"
-							+ "Within moments, a ghostly series of lewd moans and ecstatic screams start echoing throughout the city."
-							+ " Although you entered this world with a high enough arcane affinity to be rendered immune to the storm's effects, you've ended up losing most of your power,"
-								+ " and you can't help but let out a desperate [pc.moan] as you start to feel incredibly turned on."
+							+ "很快，一连串无来由的淫荡呻吟和狂喜尖叫便开始在整个城市中回荡。"
+							+ "尽管你来到这个世界时拥有很强的奥术亲和力，足以免疫风暴的影响，但你还是失去了不少力量，"
+								+ "你感到自己欲火焚身，情不自禁地发出一声[pc.moan]。"
 						+ "</p>"
 						+ "<p>"
-							+ "As you continue on your way, you find yourself hoping that you'll run into someone willing to give you a good fuck..."
+							+ "你继续赶路，忽然觉得自己想要一头撞进某个人怀里，让他好好给你来一发……"
 						+ "</p>";
 			}
 			return "";
@@ -1638,12 +1638,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Huge streaks of pink and purple lightning arc through the sky as an arcane storm rages high above Dominion.");
+			sb.append("奥术风暴在御城区上空肆虐，粉紫交加的巨型闪电撕破了苍穹。");
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				sb.append(" As an arcane-powered sex doll, [npc.nameIsFull] filled with a colossal amount of energy!");
+				sb.append("作为奥术驱动的性爱玩偶，[npc.nameIsFull]中充满了巨量能量！");
 				
 			} else {
-				sb.append(" [npc.NameIsFull] being heavily affected by the ongoing arcane storm, and can think of nothing but sex...");
+				sb.append("[npc.NameIsFull]受到正在肆虐的奥术风暴的严重影响，满脑子只有性爱了……");
 			}
 			return UtilText.parse(target, sb.toString());
 		}
@@ -1684,14 +1684,14 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] [style.colourExcellent(massive)] energy from [style.colourArcane(arcane storm)]");
+				exEff.add("[style.colourGood(获得)][style.colourExcellent(大量)]能量，来源为[style.colourArcane(奥术风暴)]");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
-				exEff.add("[style.colourArcane(Overwhelming Lust)]");
-				exEff.add("[style.boldExcellent(Double)] [style.colourArcane(essence gains)] from sex & combat");
+				exEff.add("[style.colourArcane(增强性欲)]");
+				exEff.add("[style.colourArcane(性欲超载)]");
+				exEff.add("[style.boldExcellent(双倍)]性爱&战斗的[style.colourArcane(精华获取)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until [style.colourArcane(storm ends)]:");
+				exEff.add("持续到[style.colourArcane(风暴结束)]:");
 				exEff.add(Main.game.getWeatherTimeRemainingAsTimeString());
 			}
 			return exEff;
@@ -1699,7 +1699,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEATHER_STORM_PROTECTED = new AbstractStatusEffect(100,
-			"Arcane storm (protected)",
+			"奥术风暴(被防护)",
 			"weatherDayStorm",
 			PresetColour.GENERIC_GOOD,
 			true,
@@ -1714,12 +1714,12 @@ public class StatusEffect {
 				}
 				
 				return "<p>"
-							+ "A bright-pink flash suddenly illuminates the entire city of Dominion, causing those few residents still prowling the streets to look skywards."
-							+ " High up above them, the threatening storm clouds have finally broken, and a roiling mass of arcane energy finally crackles into life."
+							+ "一道亮粉色的光芒顿时照亮了整个御城区，让那些仍在街道上逗留的居民不禁抬头望向天。"
+							+ "在头顶的高空，威胁的暴风云终于爆发，一团沸腾的奥术能量噼啪作响。"
 						+ "</p>"
 						+ "<p>"
-							+ "Within moments, a ghostly series of lewd moans and ecstatic screams start echoing throughout the city, and as the arcane thunder penetrates into the minds of those without a strong aura,"
-							+ " they find themselves unable to think of anything but sex..."
+							+ "很快，一连串无来由的淫荡呻吟和狂喜尖叫便开始在整个城市中回荡，奥术雷霆击穿了那些没有强大灵气保护的人的心灵，"
+							+ "他们发现自己满脑子只剩下性爱了……"
 						+ "</p>";
 			} else {
 				return "";
@@ -1728,12 +1728,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Huge streaks of pink and purple lightning arc through the sky as an arcane storm rages high above Dominion.");
+			sb.append("奥术风暴在御城区上空肆虐，粉紫交加的巨型闪电撕破了苍穹。");
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				sb.append(" Although [npc.nameIsFull] protected from the storm, [npc.sheIs] still able to absorb background arcane energy to power [npc.herself].");
+				sb.append("尽管[npc.nameIsFull]得到了保护，但仍能还是能够吸收背景中的奥术能量为自己充能。");
 				
 			} else {
-				sb.append(" Although [npc.she] can still feel its effects taking the form of an increased libido, [npc.nameIsFull] currently protected from most of the storm's wrath.");
+				sb.append("尽管[npc.nameIsFull]仍能感受到风暴的影响，表现为性欲增强，但风暴的威力绝大部分都被防护住了。");
 			}
 			return UtilText.parse(target, sb.toString());
 		}
@@ -1761,12 +1761,12 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> exEff = new ArrayList<>();
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_3)) {
-				exEff.add("[style.colourGood(Gaining)] energy from background [style.colourArcane(arcane)]");
+				exEff.add("[style.colourGood(获得)]能量，来源为[style.colourArcane(奥术)]背景");
 			} else {
-				exEff.add("[style.colourArcane(Enhanced libido)]");
+				exEff.add("[style.colourArcane(增强性欲)]");
 			}
 			if(Main.game.getPlayer().isSpellSchoolSpecialAbilityUnlocked(SpellSchool.ARCANE)) {
-				exEff.add("Time until [style.colourArcane(storm ends)]:");
+				exEff.add("持续到[style.colourArcane(风暴结束)]:");
 				exEff.add(Main.game.getWeatherTimeRemainingAsTimeString());
 			}
 			return exEff;
@@ -1774,7 +1774,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect BLINDED = new AbstractStatusEffect(90,
-			"Blinded",
+			"致盲",
 			"blinded",
 			PresetColour.BASE_BLACK,
 			PresetColour.BASE_RED,
@@ -1791,7 +1791,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"[npc.NameHasFull] been effectively blinded, and as such [npc.she] [npc.is] struggling to navigate through [npc.her] surroundings. In this state [npc.she] will be extremely ineffective in combat!");
+						"[npc.NameHasFull]已经被致盲，[npc.she]努力在四周寻找正确的位置。该状态下[npc.she]将很难有效地战斗！");
 			}
 			return "";
 		}
@@ -1802,7 +1802,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect BLINDED_NEGATED = new AbstractStatusEffect(90,
-			"Blinded (Echo location)",
+			"致盲(回声定位)",
 			"blinded_negated",
 			PresetColour.BASE_BLACK,
 			PresetColour.BASE_GREEN,
@@ -1818,7 +1818,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"Although [npc.name] should be effectively blinded, [npc.she] [npc.is] able to effectively navigate through [npc.her] surroundings using [npc.her] echo location ability!");
+						"虽然[npc.name]被致盲了，但[npc.her]依然能够通过回声定位能力有效的探知周边环境！");
 			}
 			return "";
 		}
@@ -1829,7 +1829,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect DARKNESS = new AbstractStatusEffect(90,
-			"Darkness",
+			"黑暗",
 			"darkness",
 			PresetColour.BASE_BLACK,
 			PresetColour.BASE_RED,
@@ -1845,7 +1845,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"The area which [npc.name] [npc.verb(find)] [npc.herself] travelling through is very dark, and as [npc.she] [npc.verb(lack)] any means of illuminating the area, [npc.she] [npc.is] struggling to see where [npc.sheIs] going!");
+						"[npc.name]正在探索的区域非常黑，而且[npc.she]没有照明手段，[npc.she]正在努力寻找[npc.she]要去的地方！");
 			}
 			return "";
 		}
@@ -1856,7 +1856,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect DARKNESS_NEGATED = new AbstractStatusEffect(90,
-			"Darkness (Negated)",
+			"黑暗(无效)",
 			"darkness_negated",
 			PresetColour.BASE_BLACK,
 			PresetColour.BASE_GREEN,
@@ -1872,7 +1872,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"The area which [npc.name] [npc.verb(find)] [npc.herself] travelling through is very dark, but despite this, [npc.she] [npc.is] able to see [#npc.getDescriptionInDarkness()].");
+						"虽然[npc.Name]正在通过的区域十分昏暗，但[npc.she]却能够看清，[#npc.getDescriptionInDarkness()]。");
 			}
 			return "";
 		}
@@ -1884,7 +1884,7 @@ public class StatusEffect {
 
 
 	public static AbstractStatusEffect SHORT_SIGHTED = new AbstractStatusEffect(90,
-			"impaired vision",
+			"视力障碍",
 			"short_sighted",
 			PresetColour.BASE_BLACK,
 			PresetColour.GENERIC_TERRIBLE,
@@ -1899,7 +1899,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"[npc.Name] can't see very well without wearing prescription glasses...");
+						"[npc.Name]不佩戴矫正眼镜的话会看不清东西……");
 			}
 			return "";
 		}
@@ -1912,7 +1912,7 @@ public class StatusEffect {
 		}
 	};
 	public static AbstractStatusEffect ENCHANCED_VISION = new AbstractStatusEffect(90,
-			"enhanced vision",
+			"视力提高",
 			"perfect_vision",
 			PresetColour.BASE_BLACK,
 			PresetColour.GENERIC_EXCELLENT,
@@ -1927,10 +1927,10 @@ public class StatusEffect {
 			if(target!=null) {
 				if(target.hasPerkAnywhereInTree(Perk.SPECIAL_SHORT_SIGHTED)) {
 					return UtilText.parse(target,
-							"Thanks to the enchanted prescription lenses in [npc.her] glasses, not only is [npc.namePos] visual impairment no longer an issue, but [npc.she] [npc.is] also benefiting from enhanced eyesight!");
+							"多亏了[npc.namePos]眼镜上附魔的矫正镜片，不仅解决了[npc.her]的视力障碍问题，还有效提升了[npc.her]的视力！");
 				}
 				return UtilText.parse(target,
-						"Although [npc.she] [npc.do]n't suffer from any kind of visual impairment, the enchanted prescription lenses in [npc.namePos] glasses are enhancing [npc.her] eyesight!");
+						"虽然[npc.name]没有任何视力障碍，但[npc.her]眼镜上附魔的矫正镜片仍有效增强了[npc.her]的视力！");
 			}
 			return "";
 		}
@@ -1943,7 +1943,7 @@ public class StatusEffect {
 	// RACES:
 	// HUMAN:
 	public static AbstractStatusEffect PURE_HUMAN_PROLOGUE = new AbstractStatusEffect(1000,
-			"human",
+			"人类",
 			null,
 			PresetColour.CLOTHING_WHITE,
 			true,
@@ -1953,9 +1953,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer())
-				return "You're a human, just like every other person in this world.";
+				return "你是人类，就像世界上其他人一样。";
 			else
-				return "[npc.NameIsFull] a human, just like every other person in this world.";
+				return "[npc.NameIsFull]是一个人类，就像这个世界上的其他人一样。";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -1979,17 +1979,17 @@ public class StatusEffect {
 		@Override
 		public String getName(GameCharacter target) {
 			if(target.isRaceConcealed()) {
-				return "Concealed subspecies bonus";
+				return "亚种隐藏增益";
 			}
 			if(target.getSubspeciesOverride()!=null && target.getSubspeciesOverride()!=target.getSubspecies()) {
-				return target.getSubspeciesOverride().getName(null)+" ("+target.getSubspecies().getName(target.getBody())+")";
+				return target.getSubspeciesOverride().getName(null)+"("+target.getSubspecies().getName(target.getBody())+")";
 			}
-			return (target.isFeral()?"[style.colourFeral(Feral)] ":"")+target.getSubspecies().getName(target.getBody());
+			return (target.isFeral()?"[style.colourFeral(兽态)]":"")+target.getSubspecies().getName(target.getBody());
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isRaceConcealed()) {
-				return UtilText.parse(target, "Although [npc.namePos] race is concealed, they're still benefiting from the attribute modifiers...");
+				return UtilText.parse(target, "虽然[npc.name]隐藏了种族，但仍能受到属性修正的增益……");
 			}
 			if(target.getSubspeciesOverride()!=null && target.getSubspeciesOverride()!=target.getSubspecies()) {
 				return target.getSubspeciesOverride().getStatusEffectDescription(target);
@@ -2007,10 +2007,10 @@ public class StatusEffect {
 				additionalDescriptions.add(
 						new Value<>(1,
 								UtilText.parse(target,
-										"[npc.NameIsFull] "
+										"[npc.NameIsFull]"
 										+"<span style='color:"+target.getSubspeciesOverride().getColour(target).toWebHexString()+";'>"+UtilText.addDeterminer(target.getSubspeciesOverride().getName(null))+"</span>"
-										+ " but [npc.she] [npc.verb(appear)] to be "
-										+"<span style='color:"+target.getSubspecies().getColour(target).toWebHexString()+";'>"+UtilText.addDeterminer(subspeciesName)+"</span>!")));
+										+ "但[npc.she]看上去"
+										+"<span style='color:"+target.getSubspecies().getColour(target).toWebHexString()+";'>"+UtilText.addDeterminer(subspeciesName)+"</span>！")));
 			}
 
 			// Add body material modifiers:
@@ -2019,7 +2019,7 @@ public class StatusEffect {
 					|| material.getExtraEffects(target)!=null) {
 				int lineHeight = 1;
 				StringBuilder sb = new StringBuilder();
-				sb.append(UtilText.parse(target, "<i style='color:"+material.getColour().toWebHexString()+";'>[npc.NamePos] "+material.getName()+" body grants [npc.herHim]:</i>"));
+				sb.append(UtilText.parse(target, "<i style='color:"+material.getColour().toWebHexString()+";'>[npc.NamePos]的"+material.getName()+"身躯给予[npc.herHim]:</i>"));
 				if(material.getAttributeModifiers(target)!=null) {
 					for(String s : attributeModifiersToStringList(material.getAttributeModifiers(target))) {
 						sb.append("<br/>"+s);
@@ -2093,7 +2093,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect AQUATIC_TAIL_POSITIVE = new AbstractStatusEffect(90,
-			"Aquatic harmony",
+			"如鱼得水",
 			"aquatic_positive",
 			PresetColour.GENERIC_GOOD,
 			PresetColour.BASE_BLUE_LIGHT,
@@ -2104,17 +2104,17 @@ public class StatusEffect {
 					new Value<>(Attribute.CRITICAL_DAMAGE, 15f),
 					new Value<>(Attribute.ENERGY_SHIELDING, 5f)),
 			Util.newArrayListOfValues(
-					"[style.boldBlueLight(Lost legs)]")) {
+					"[style.boldBlueLight(失去腿部)]")) {
 		@Override
 		public String applyAdditionEffect(GameCharacter target) {
 			if(!target.isPlayer()) {
 				return "";
 			}
-			return "As you increase your proximity to the nearby body of water, you feel an intense tingling start to run up the length of your legs."
-					+ " Without any further warning of what's about to happen, your muscles involuntarily clench, pressing your legs together and causing you to let out a startled cry."
-					+ " Before you're able to react, your legs rapidly fuse together and transform, and within moments your lower body has assumed its true, tailed form!"
+			return "随着你越来越接近附近的水体，你感到一股强烈的刺痛，沿着腿一路向上。"
+					+ "你的肌肉没有任何征兆，便不由自主地痉挛起来，腿部逐渐并紧，令你不禁惊呼起来。"
+					+ "还没等你反应过来，你的腿便融在一起，发生了转化，转瞬之间你的下半身就变成了鱼尾的样子！"
 					+ "<p style='text-align:center;'>"
-						+ "[style.italicsMinorBad(You can no longer equip clothing in your leg and foot slots!)]"
+						+ "[style.italicsMinorBad(你不再能穿着腿和脚栏位的衣物了！)]"
 					+ "</p>"
 					+ target.postTransformationCalculation(); // To handle clothing removals
 		}
@@ -2122,7 +2122,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"As [npc.nameIsFull] [npc.a_race], and [npc.she] [npc.has] access to a nearby body of water, [npc.her] lower body has transformed into its true, tail-like form, making [npc.herHim] feel very comfortable!");
+						"由于[npc.nameIsFull]是[npc.a_race]，并且能够接触到附近的水体，[npc.her]的下半身转化为了鱼尾的样子，让[npc.herHim]觉得非常舒适！");
 			}
 			return "";
 		}
@@ -2135,7 +2135,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect AQUATIC_TAIL_NEGATIVE = new AbstractStatusEffect(90,
-			"Fish out of water",
+			"离水之鱼",
 			"aquatic_negative",
 			PresetColour.GENERIC_BAD,
 			PresetColour.BASE_TAN,
@@ -2146,17 +2146,17 @@ public class StatusEffect {
 					new Value<>(Attribute.CRITICAL_DAMAGE, -15f),
 					new Value<>(Attribute.ENERGY_SHIELDING, -5f)),
 			Util.newArrayListOfValues(
-					"[style.boldTan(Grown two legs)]")) {
+					"[style.boldTan(生出双腿)]")) {
 		@Override
 		public String applyAdditionEffect(GameCharacter target) {
 			if(!target.isPlayer()) {
 				return "";
 			}
-			return "Finding yourself in an area with no large body of water nearby, you suddenly feel your tailed lower body starting to tingle."
-					+ " Without any further warning of what's about to happen, your muscles involuntarily clench, causing you to let out a startled cry."
-					+ " Before you're able to react, your tail rapidly splits and transforms into a pair of legs, which, while granting you the ability to walk and run on land, feel very alien to you."
+			return "当你发现自己身处一个附近没有大型水体的区域时，你感觉到自己的下半身开始刺痛。"
+					+ "在对即将发生的事情没有任何预兆的情况下，你的肌肉不由自主地绷紧，导致你发出一声惊叫。"
+					+ "还没等你反应过来，你的尾巴便迅速分开，转化为一双腿，这使你能在陆地上行走和奔跑，这种感觉对你来说很陌生。"
 					+ "<p style='text-align:center;'>"
-						+ "[style.italicsMinorGood(You can now equip clothing in your leg and foot slots!)]"
+						+ "[style.italicsMinorGood(你现在可以穿着腿和脚栏位的衣物了！)]"
 					+ "</p>"
 					+ target.postTransformationCalculation(); // To handle clothing checks
 		}
@@ -2164,7 +2164,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"As [npc.nameIsFull] [npc.a_race], and there is no body of water nearby, [npc.her] lower body has transformed into a pair of legs, making [npc.herHim] [npc.verb(feel)] very uncomfortable!");
+						"由于[npc.nameIsFull]是[npc.a_race]，并且附近没有大型水体，[npc.her]的下半身转化为一双腿，这让[npc.herHim]觉得很难受！");
 			}
 			return "";
 		}
@@ -2177,7 +2177,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect AQUATIC_POSITIVE = new AbstractStatusEffect(90,
-			"Aquatic harmony",
+			"如鱼得水",
 			"aquatic_positive",
 			PresetColour.GENERIC_GOOD,
 			PresetColour.BASE_BLUE_LIGHT,
@@ -2191,7 +2191,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"As [npc.nameIsFull] [npc.a_race], and [npc.she] [npc.has] access to a nearby body of water, [npc.she] [npc.verb(feel)] very comfortable!");
+						"由于[npc.nameIsFull]是[npc.a_race]，并且能够接触到附近的水体，这让[npc.herHim]觉得非常舒适！");
 			}
 			return "";
 		}
@@ -2204,7 +2204,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect AQUATIC_NEGATIVE = new AbstractStatusEffect(90,
-			"Fish out of water",
+			"离水之鱼",
 			"aquatic_negative",
 			PresetColour.GENERIC_BAD,
 			PresetColour.BASE_TAN,
@@ -2218,7 +2218,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"As [npc.nameIsFull] [npc.a_race], and there is no body of water nearby, [npc.she] is feeling very uncomfortable!");
+						"由于[npc.nameIsFull]是[npc.a_race]，并且附近没有大型水体，这让[npc.herHim]觉得很难受！");
 			}
 			return "";
 		}
@@ -2269,17 +2269,17 @@ public class StatusEffect {
 	// SEXUAL ORIENTATIONS:
 	
 	public static AbstractStatusEffect ORIENTATION_ANDROPHILIC = new AbstractStatusEffect(90,
-			"androphilic",
+			"男性恋",
 			"orientation_androphilic",
 			PresetColour.MASCULINE,
 			true,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourGood(-50%)] [style.colourDmgLust(Lust damage)] taken from [style.colourFeminine(feminine opponents)]",
-					"[style.colourBad(-50%)] [style.colourDmgLust(Lust damage)] dealt to [style.colourFeminine(feminine opponents)]")) {
+					"从[style.colourFeminine(女性外貌对手)]受到的[style.colourDmgLust(性欲伤害)][style.colourGood(-50%)]",
+					"对[style.colourFeminine(女性外貌对手)]造成的[style.colourDmgLust(性欲伤害)][style.colourBad(-50%)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] sexually attracted to masculine individuals, and [npc.verb(find)] feminine people to be a huge turn-off.");
+			return UtilText.parse(target, "[npc.NameIsFull]在性取向上被男性化个体所吸引，对女性化个体完全没有性欲。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -2292,17 +2292,17 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ORIENTATION_GYNEPHILIC = new AbstractStatusEffect(90,
-			"gynephilic",
+			"女性恋",
 			"orientation_gynephilic",
 			PresetColour.FEMININE,
 			true,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourGood(-50%)] [style.colourDmgLust(Lust damage)] taken from [style.colourMasculine(masculine opponents)]",
-					"[style.colourBad(-50%)] [style.colourDmgLust(Lust damage)] dealt to [style.colourMasculine(masculine opponents)]")) {
+					"从[style.colourMasculine(男性外貌对手)]受到的[style.colourDmgLust(性欲伤害)][style.colourGood(-50%)]",
+					"对[style.colourMasculine(男性外貌对手)]造成的[style.colourDmgLust(性欲伤害)][style.colourBad(-50%)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] sexually attracted to feminine individuals, and [npc.verb(find)] masculine people to be a huge turn-off.");
+			return UtilText.parse(target, "[npc.NameIsFull]在性取向上被女性化个体所吸引，对男性化个体完全没有性欲。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -2314,7 +2314,7 @@ public class StatusEffect {
 		}
 	};
 	public static AbstractStatusEffect ORIENTATION_AMBIPHILIC = new AbstractStatusEffect(90,
-			"ambiphilic",
+			"双性恋",
 			"orientation_ambiphilic",
 			PresetColour.ANDROGYNOUS,
 			true,
@@ -2322,7 +2322,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] sexually attracted to both masculine and feminine individuals, and [npc.do]n't find any level of femininity to be a turn-off.");
+			return UtilText.parse(target, "[npc.NameIsFull]在性取向上对男女都来者不拒，不会被对方的女性化程度影响性欲。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -2338,7 +2338,7 @@ public class StatusEffect {
 	// CLOTHING:
 
 	public static AbstractStatusEffect CLOTHING_FEMININITY = new AbstractStatusEffect(85,
-			"clothing too feminine",
+			"衣着过于女性化",
 			"clothingFemininity",
 			PresetColour.CLOTHING_PINK_LIGHT,
 			false,
@@ -2347,8 +2347,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Some of [npc.namePos] clothes are too feminine for [npc.her] masculine figure."
-						+ " [npc.She] [npc.verb(find)] [npc.herself] incredibly embarrassed by wearing such clothing and [npc.is] struggling to think clearly.");
+					"[npc.namePos]的部分衣着对于其男性的外表来说过于女性化了。"
+						+ "[npc.She]觉得穿上这些衣物非常尴尬，头脑很不清醒。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -2367,7 +2367,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_MASCULINITY = new AbstractStatusEffect(85,
-			"clothing too masculine",
+			"衣着过于男性化",
 			"clothingMasculinity",
 			PresetColour.CLOTHING_BLUE,
 			false,
@@ -2376,8 +2376,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Some of [npc.namePos] clothes are too masculine for [npc.her] feminine figure."
-						+ " [npc.She] [npc.verb(find)] [npc.herself] incredibly embarrassed by wearing such clothing and [npc.is] struggling to think clearly.");
+					"[npc.namePos]的部分衣着对于其女性的外表来说过于男性化了。"
+						+ "[npc.She]觉得穿上这些衣物非常尴尬，头脑很不清醒。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -2396,7 +2396,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_CUM = new AbstractStatusEffect(80,
-			"dirty clothing",
+			"肮脏衣物",
 			"clothingCummedIn",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -2410,17 +2410,17 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_LUST_3)) {
 				return UtilText.parse(target,
-						"Some of [npc.namePos] clothes have been covered in cum, milk or other sexual fluids."
-							+ " Wearing such filthy clothing reinforces the fact that [npc.sheIs] nothing more than a sex toy.");
+						"[npc.namePos]的一些衣物已经被精液，乳汁或其他淫秽液体所覆盖。"
+							+ "穿着如此下流的衣物只能说明[npc.sheIs]是一个不折不扣的性玩具。");
 			}
 			return UtilText.parse(target,
-					"Some of [npc.namePos] clothes have been covered in cum, milk or other sexual fluids."
-						+ " [npc.SheIs] feeling incredibly embarrassed to be walking around in such filthy clothing.");
+					"[npc.namePos]的一些衣物已经被精液，乳汁或其他淫秽液体所覆盖。"
+						+ "[npc.SheIs]觉得穿着如此污秽的衣物走在路上非常尴尬。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your smelly clothes seem to attract trouble.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你气味浓郁的衣服似乎会召来麻烦。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -2441,7 +2441,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_CUM_MASOCHIST = new AbstractStatusEffect(80,
-			"dirty clothing",
+			"肮脏衣物",
 			"clothingCummedInMasochist",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -2454,17 +2454,17 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "Some of your clothes have been covered in cum, milk or other sexual fluids."
-						+ " You find yourself incredibly turned on to be walking around in such filthy clothing.";
+				return "你的一些衣物已经被精液，乳汁或其他淫秽液体所覆盖。"
+						+ "你穿着如此污秽的衣物走在路上，觉得非常性奋。";
 			} else {
-				return UtilText.parse(target, "Some of [npc.namePos] clothes have been covered in cum, milk or other sexual fluids."
-						+ " [npc.sheIs] feeling incredibly turned on to be walking around in such filthy clothing.");
+				return UtilText.parse(target, "[npc.namePos]的一些衣物已经被精液，乳汁或其他淫秽液体所覆盖。"
+						+ "[npc.sheIs]穿着如此污秽的衣物走在路上，觉得非常性奋。");
 			}
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your smelly clothes seem to attract trouble.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你气味浓郁的衣服似乎会召来麻烦。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -2485,7 +2485,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect BODY_CUM = new AbstractStatusEffect(80,
-			"dirty body",
+			"肮脏的身体",
 			"dirtyBody",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -2511,11 +2511,11 @@ public class StatusEffect {
 						if(sb.length()>0) {
 							sb.append("<br/>");
 						}
-						sb.append("You use your <b>"+clothing.getDisplayName(true)+"</b> to clean your "+clothing.getSlotEquippedTo().getName()
+						sb.append("你使用了<b>"+clothing.getDisplayName(true)+"</b>来清理"+clothing.getSlotEquippedTo().getName()
 								+(seals
-										?" as you equip "+(clothing.getClothingType().isPlural()?"them":"it")
-										:" as you insert "+(clothing.getClothingType().isPlural()?"them into your orifices":"it into your orifice"))
-								+".");
+										?"当你装备时"
+										:"当你将其插入腔穴时")
+								+"。");
 						
 					} else {
 						if(!clothing.isDirty()) {
@@ -2523,8 +2523,8 @@ public class StatusEffect {
 							if(sb.length()>0) {
 								sb.append("<br/>");
 							}
-							sb.append("You use your <b>"+clothing.getDisplayName(true)+"</b> to clean your "+clothing.getSlotEquippedTo().getName()
-									+", <b style='color:"+PresetColour.CUM.toWebHexString()+";'>dirtying "+(clothing.getClothingType().isPlural()?"them":"it")+" in the process</b>.");
+							sb.append("你使用了<b>"+clothing.getDisplayName(true)+"</b>来清理"+clothing.getSlotEquippedTo().getName()
+									+"，<b style='color:"+PresetColour.CUM.toWebHexString()+";'>在这过程中也弄脏了它</b>。");
 						}
 					}
 					
@@ -2537,8 +2537,8 @@ public class StatusEffect {
 								if(sb.length()>0) {
 									sb.append("<br/>");
 								}
-								sb.append("You use your <b>"+clothing.getDisplayName(true)+"</b> to clean your "+clothing.getSlotEquippedTo().getName()
-										+", <b style='color:"+PresetColour.CUM.toWebHexString()+";'>dirtying "+(clothing.getClothingType().isPlural()?"them":"it")+" in the process</b>.");
+								sb.append("你使用了<b>"+clothing.getDisplayName(true)+"</b>来清理"+clothing.getSlotEquippedTo().getName()
+										+"，<b style='color:"+PresetColour.CUM.toWebHexString()+";'>在这过程中也弄脏了它</b>。");
 							}
 						}
 					}
@@ -2558,16 +2558,16 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_LUST_3)) {
 				return UtilText.parse(target,
-						"Some parts of [npc.namePos] body have been covered in cum, milk or other sexual fluids."
-							+ " Being in such a filthy state reinforces the fact that [npc.sheIs] nothing more than a sex toy.");
+						"[npc.namePos]身体的某些部位已经被精液、乳汁或其他淫秽液体所覆盖。"
+							+ "处于如此淫秽的状态只能说明[npc.sheIs]是一个不折不扣的性玩具。");
 			}
-			return UtilText.parse(target, "Some parts of [npc.namePos] body have been covered in cum, milk or other sexual fluids."
-					+ " [npc.SheIs] feeling incredibly embarrassed to be walking around in such a filthy state.");
+			return UtilText.parse(target, "[npc.namePos]身体的某些部位被精液、乳汁或其他淫秽液体所覆盖。"
+					+ "身体如此污秽的情况下走在路上，让[npc.sheIs]觉得非常尴尬。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your smelly body seems to attract trouble.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你气味浓郁的躯体似乎会召来麻烦。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -2578,7 +2578,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect BODY_CUM_MASOCHIST = new AbstractStatusEffect(80,
-			"dirty body",
+			"肮脏的身体",
 			"dirtyBodyMasochist",
 			PresetColour.CLOTHING_WHITE,
 			false,
@@ -2591,17 +2591,17 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "Some parts of your body have been covered in cum, milk or other sexual fluids."
-						+ " You find yourself feeling incredibly turned on by walking around in such a filthy state.";
+				return "你身体的某些部位被精液、乳汁或其他淫秽液体所覆盖。"
+						+ "身体如此污秽的情况下走在路上，让你觉得非常性奋。";
 			} else {
-				return UtilText.parse(target, "Some parts of [npc.namePos] body have been covered in cum, milk or other sexual fluids."
-						+ " [npc.sheIs] feeling incredibly turned on by walking around in such a filthy state.");
+				return UtilText.parse(target, "[npc.namePos]身体的某些部位被精液、乳汁或其他淫秽液体所覆盖。"
+						+ "身体如此污秽的情况下走在路上，让[npc.sheIs]觉得非常性奋。");
 			}
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your smelly body seems to attract trouble.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你气味浓郁的躯体似乎会召来麻烦。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -2612,7 +2612,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect MARKED_BY_MUSK = new AbstractStatusEffect(80,
-			"marked by musk",
+			"被淫味标记",
 			"marked_by_musk",
 			PresetColour.BASE_YELLOW_LIGHT,
 			PresetColour.BASE_ORANGE_LIGHT,
@@ -2626,16 +2626,16 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target.getMuskMarkerCharacters().isEmpty()) {
 				return UtilText.parse(target,
-						"[npc.NameHasFull] been marked by a heady musk, and [npc.verb(find)] [npc.herself] getting turned on by the distinctive scent [npc.she] now [npc.verb(carry)].");
+						"[npc.NameHasFull]身上有种令人陶醉的浓烈气味，令[npc.herself]也遭气息煽动着，不由自主地感到性奋。");
 			} else {
 				return UtilText.parse(target,
-						"[npc.NameHasFull] been marked by the musk of "+Util.charactersToStringListOfNames(target.getMuskMarkerCharacters(), true)
-							+", and [npc.verb(find)] [npc.herself] getting turned on by the distinctive scent [npc.she] now [npc.verb(carry)].");
+						"[npc.NameHasFull]身上有着"+Util.charactersToStringListOfNames(target.getMuskMarkerCharacters(), true)
+							+"的浓烈气味，令[npc.herself]也遭气息煽动着，不由自主地感到性奋。");
 			}
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
-			return new Value<>(1, "[style.italicsAqua(Only a bath, a spa soak, or arcane wet wipes will remove this odour.)]");
+			return new Value<>(1, "[style.italicsAqua(洗个澡，做个水疗，或者用奥术清洁都能移除气味。)]");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -2648,18 +2648,18 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_ENCHANTMENT_OVER_LIMIT = new AbstractStatusEffect(80,
-			"unstable enchantments",
+			"附魔不稳定",
 			"unstable_enchantment_1",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_CORRUPTION, 25f)),
-			Util.newArrayListOfValues("[style.boldMinorBad(-10%)] [style.boldHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]",
-					"[style.boldMinorBad(-10%)] [style.boldMana(Maximum "+Attribute.MANA_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)][style.boldMinorBad(-10%)]",
+					"[style.boldMana("+Attribute.MANA_MAXIMUM.getName()+"的最大值)][style.boldMinorBad(-10%)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameIsFull] unable to handle the amount of attribute enchantments infused into [npc.her] weapons, clothing, and tattoos, and so [npc.is] suffering from some negative side-effects."
-							+ " If [npc.she] continues equipping enchanted items, this is sure to get much worse...");
+					"[npc.NameIsFull]无法驾驭被注入[npc.her]的武器、衣物、纹身上的属性附魔，正在承受部分副作用。"
+							+ "如果[npc.she]继续装备附魔物品，情况只会变得更糟……");
 		}
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
@@ -2673,18 +2673,18 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_ENCHANTMENT_OVER_LIMIT_2 = new AbstractStatusEffect(80,
-			"volatile enchantments",
+			"附魔震荡",
 			"unstable_enchantment_2",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_CORRUPTION, 50f)),
-			Util.newArrayListOfValues("[style.boldBad(-50%)] [style.boldHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]",
-					"[style.boldBad(-50%)] [style.boldMana(Maximum "+Attribute.MANA_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)][style.boldBad(-50%)]",
+					"[style.boldMana("+Attribute.MANA_MAXIMUM.getName()+"的最大值)][style.boldBad(-50%)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameIsFull] unable to handle the amount of attribute enchantments infused into [npc.her] weapons, clothing, and tattoos, and so [npc.is] suffering from some severe negative side-effects."
-							+ " If [npc.she] continues equipping enchanted items, this is sure to get much worse...");
+					"[npc.NameIsFull]无法驾驭被注入[npc.her]的武器、衣物、纹身上的属性附魔，正在承受比较严重的副作用。"
+							+ "如果[npc.she]继续装备附魔物品，情况只会变得更糟……");
 		}
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
@@ -2698,18 +2698,18 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_ENCHANTMENT_OVER_LIMIT_3 = new AbstractStatusEffect(80,
-			"shattered enchantments",
+			"附魔破碎",
 			"unstable_enchantment_3",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_CORRUPTION, 100f)),
-			Util.newArrayListOfValues("[style.boldHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")] [style.boldTerrible(set to 1)]",
-					"[style.boldMana(Maximum "+Attribute.MANA_MAXIMUM.getName()+")] [style.boldTerrible(set to 1)]",
-					"[style.boldTerrible(All shielding set to 0)]")) {
+			Util.newArrayListOfValues("[style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)][style.boldTerrible(设为1)]",
+					"[style.boldMana("+Attribute.MANA_MAXIMUM.getName()+"的最大值)][style.boldTerrible(设为1)]",
+					"[style.boldTerrible(所有护盾数值归零)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameIsFull] unable to handle the amount of attribute enchantments infused into [npc.her] weapons, clothing, and tattoos, and so [npc.is] suffering from some extremely severe negative side-effects.");
+					"[npc.NameIsFull]无法驾驭被注入[npc.her]的武器、衣物、纹身上的属性附魔，正在承受极其严重的副作用。");
 		}
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
@@ -2723,7 +2723,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_JINXED = new AbstractStatusEffect(80,
-			"sealed clothing",
+			"封印衣物",
 			"jinxed_clothing",
 			PresetColour.ATTRIBUTE_CORRUPTION,
 			false,
@@ -2732,7 +2732,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"The enchantment on [npc.namePos] sealed clothing is vampyric in nature, and [npc.she] can feel its power draining a portion of [npc.her] aura...");
+					"在[npc.namePos]被封印的衣物上的附魔天然能够吸取能量，[npc.she]感觉得到自己的灵气流失了一部分……");
 		}
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
@@ -2748,23 +2748,23 @@ public class StatusEffect {
 					}
 					if(target.isPlayer() && !((PlayerCharacter) target).isQuestCompleted(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)) {
 						return "<p>"
-									+ "As you finish fitting the "+clothing.getName()+" in place, you start to feel a strange warmth radiating from "+(clothing.getClothingType().isPlural()?"their":"its")+" surface."
-									+ " Feeling a little uneasy about the manner of arcane enchantment that "+(clothing.getClothingType().isPlural()?"they":"it")+" must contain, you immediately try to take "
-										+(clothing.getClothingType().isPlural()?"them":"it")+" off."
+									+ "在你将"+clothing.getName()+"穿戴到位后，忽然感到其表面辐射出一阵奇怪的暖流。"
+									+ "你认定这是上面的奥术附魔搞的鬼，有些许不安，于是立刻尝试"
+										+" 脱下来。"
 								+ "</p>"
 								+ "<p>"
-									+ "Taking hold of the "+clothing.getName()+", nothing seems to be wrong at first, but as you try to pull "+(clothing.getClothingType().isPlural()?"them":"it")+" off, you find out that you've made a big mistake."
-									+ " A jolt of arcane energy suddenly flashes up through your body, and as the invasive force shoots its way into your mind, you find yourself unwittingly releasing your grip."
+									+ "抓住"+clothing.getName()+"的时候，似乎没有什么不对劲，但正要脱下来的时候，你才意识到自己犯了个错误。"
+									+ "一串奥术能量顿时穿过你的身体，仿佛直接射入你的脑海，你不由自主地松开了手。"
 								+ "</p>"
 								+ "<p>"
-									+ "Gritting your teeth, you try once again to remove the offending article of clothing, only to find yourself instantly letting go as you try to pull "+(clothing.getClothingType().isPlural()?"them":"it")+" off."
-									+ " No matter how much you struggle, all you're able to do is move the "+clothing.getName()
-										+" around a little, and whenever it looks to be in danger of being removed, it moves back into its proper position with a mind of its own."
+									+ "你紧咬牙关，再次尝试除掉这件烦人的衣物，但在你想要脱下的那一刻，立刻就没了力气。"
+									+ "无论你如何努力，最多也只能将"+clothing.getName()
+										+"稍微移开一点，每当快要从身体上移除时，它都会自动返回贴身的位置。"
 								+ "</p>"
 								+ "<p>"
-									+ "Eventually giving up, you decide to go and ask Lilaya what's going on with "+(clothing.getClothingType().isPlural()?"these":"this")
-										+" <b style='color:"+PresetColour.RARITY_JINXED.toWebHexString()+";'>sealed</b> "+clothing.getName()+"."
-									+ " Maybe she'll know a way to break the seal?"
+									+ "你最终放弃了，还是去问问莉莱雅这"
+										+"<b style='color:"+PresetColour.RARITY_JINXED.toWebHexString()+";'>被封印的</b>"+clothing.getName()+"是怎么回事吧。"
+									+ "或许她知道如何打破封印？"
 								+ "</p>"
 								+(!((PlayerCharacter) target).hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
 										?((PlayerCharacter) target).startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
@@ -2772,25 +2772,25 @@ public class StatusEffect {
 					
 					} else {
 						return "<p>"
-									+ "As you finish fitting the "+clothing.getName()+" in place, you start to feel a strange warmth radiating from "+(clothing.getClothingType().isPlural()?"their":"its")+" surface."
-									+ " Feeling a little uneasy about the manner of arcane enchantment that "+(clothing.getClothingType().isPlural()?"they":"it")+" must contain, you immediately try to take "
-										+(clothing.getClothingType().isPlural()?"them":"it")+" off."
+									+ "在你将"+clothing.getName()+"穿戴到位后，忽然感到其表面辐射出一阵奇怪的暖流。"
+									+ "你认定这是上面的奥术附魔搞的鬼，有些许不安，于是立刻尝试"
+										+" 脱下来。"
 								+ "</p>"
 								+ "<p>"
-									+ "Taking hold of the "+clothing.getName()+", nothing seems to be wrong at first, but as you try to pull "+(clothing.getClothingType().isPlural()?"them":"it")+" off, you find out that you've made a big mistake."
-									+ " A jolt of arcane energy suddenly flashes up through your body, and as the invasive force shoots its way into your mind, you find yourself unwittingly releasing your grip."
+									+ "抓住"+clothing.getName()+"的时候，似乎没有什么不对劲，但正要脱下来的时候，你才意识到自己犯了个错误。"
+									+ "一串奥术能量顿时穿过你的身体，仿佛直接射入你的脑海，你不由自主地松开了手。"
 								+ "</p>"
 								+ "<p>"
-									+ "Gritting your teeth, you try once again to remove the offending article of clothing, only to find yourself instantly letting go as you try to pull "+(clothing.getClothingType().isPlural()?"them":"it")+" off."
-									+ " No matter how much you struggle, all you're able to do is move the "+clothing.getName()
-										+" around a little, and whenever it looks to be in danger of being removed, it moves back into its proper position with a mind of its own."
+									+ "你紧咬牙关，再次尝试除掉这件烦人的衣物，但在你想要脱下的那一刻，立刻就没了力气。"
+									+ "无论你如何努力，最多也只能将"+clothing.getName()
+										+"稍微移开一点，每当快要从身体上移除时，它都会自动返回贴身的位置。"
 								+ "</p>"
 								+ "<p>"
-									+ "Lilaya's warning about sealed clothing suddenly shoots to the forefront of your mind, and you let out a groan as you realise that "
-										+(clothing.getClothingType().isPlural()?"these ":"this ")+clothing.getName()
-										+(clothing.getClothingType().isPlural()?" are":" is")
-										+" <b style='color:"+PresetColour.RARITY_JINXED.toWebHexString()+";'>sealed</b>."
-									+ " Remembering what Lilaya said, you should be able to remove the seal if you focus some of your absorbed essences into it..."
+									+ "你顿时想起了莉莱雅之前警告过封印衣物的危险，你意识到"
+										+clothing.getName()
+										+""
+										+"<b style='color:"+PresetColour.RARITY_JINXED.toWebHexString()+";'>已经被封印了</b>，难受得呻吟起来。"
+									+ "还记得莉莱雅这样说，想要解除封印就需要将吸收的精华集中在其上……"
 								+ "</p>";
 					}
 					
@@ -2815,8 +2815,8 @@ public class StatusEffect {
 	// OTHER:
 
 	public static AbstractStatusEffect SLEEPING = new AbstractStatusEffect(80,
-			"sleeping",
-			"sleeping",
+			"睡眠",
+			"睡眠",
 			PresetColour.SLEEP,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ACTION_POINTS, -5f)),
@@ -2824,7 +2824,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "[npc.NameIsFull] asleep...");
+				return UtilText.parse(target, "[npc.NameIsFull]睡眠中……");
 			}
 			return "";
 		}
@@ -2843,18 +2843,18 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect SLEEPING_HEAVY = new AbstractStatusEffect(80,
-			"heavily sleeping",
+			"深度睡眠",
 			"sleeping_heavy",
 			PresetColour.SLEEP_HEAVY,
 			PresetColour.GENERIC_TERRIBLE,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ACTION_POINTS, -5f)),
-			Util.newArrayListOfValues("Will not wake during gentle sex")) {
+			Util.newArrayListOfValues("在温柔的性爱时不会醒来")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "[npc.NameIsFull] sleeping very deeply, and even shouting and physically shaking [npc.herHim] won't be enough to wake [npc.herHim] up."
-							+" [npc.SheIs] so unresponsive that a gentle partner could get away with having sex with [npc.herHim] without causing [npc.herHim] to wake...");
+				return UtilText.parse(target, "[npc.NameIsFull]正处在深度睡眠中，即便大声呼喊乃至用力摇晃，[npc.herHim]都不会醒来。"
+							+"[npc.SheIs]进入了深度睡眠的状态，以至于一个动作温和的伴侣可以与[npc.herHim]进行性行为而不至于让[npc.herHim]醒来……");
 			}
 			return "";
 		}
@@ -2877,7 +2877,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WELL_RESTED = new AbstractStatusEffect(80,
-			"well rested",
+			"充分休息",
 			"wellRested",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.ATTRIBUTE_MANA,
@@ -2888,7 +2888,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "After having a good rest, [npc.name] [npc.verb(feel)] full of energy.");
+				return UtilText.parse(target, "在充分休息之后，[npc.name]感到充满活力。");
 			} else {
 				return "";
 			}
@@ -2896,7 +2896,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WELL_RESTED_BOOSTED = new AbstractStatusEffect(80,
-			"well rested (boosted)",
+			"充分休息(增强)",
 			"wellRestedBoosted",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.ATTRIBUTE_MANA,
@@ -2908,9 +2908,9 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.hasTrait(Perk.JOB_UNEMPLOYED, true)) {
-					return UtilText.parse(target, "Thanks to using [npc.her] ability of knowing how to get the most out of a good rest, [npc.name] currently [npc.verb(feel)] full of energy and vigour.");
+					return UtilText.parse(target, "由于[npc.name]清楚地了解该如何高效利用休息时间，[npc.her]现在感觉精神饱满、神清气爽。");
 				} else {
-					return UtilText.parse(target, "Thanks to the upgraded emperor-size bed in [npc.her] room, [npc.name] [npc.has] managed to get a very comfortable rest, and now [npc.verb(feel)] full of energy and vigour.");
+					return UtilText.parse(target, "由于[npc.Name]房间内的“帝皇尺寸床”，[npc.her]休息得非常舒服，现在觉得精神饱满、神清气爽。");
 				}
 			} else {
 				return "";
@@ -2919,7 +2919,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WELL_RESTED_BOOSTED_EXTRA = new AbstractStatusEffect(80,
-			"well rested (extra boosted)",
+			"充分休息(额外增强)",
 			"wellRestedBoostedExtra",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.ATTRIBUTE_MANA,
@@ -2932,7 +2932,7 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"Thanks to the upgraded emperor-size bed in [npc.her] room, combined with [npc.her] ability of knowing how best to get a good rest, [npc.name] now [npc.verb(feel)] as though [npc.sheIs] overflowing of energy and vigour.");
+						"由于[npc.Name]房间内的“帝皇尺寸床”，加之[npc.her]清楚地了解该如何高效利用休息时间，[npc.name]现在感觉精神焕发、神采奕奕。");
 				
 			} else {
 				return "";
@@ -3005,24 +3005,24 @@ public class StatusEffect {
 //	};
 	
 	public static AbstractStatusEffect OVERWORKED_1 = new AbstractStatusEffect(80,
-			"slightly overworked",
+			"略微疲劳",
 			"overworked1",
 			PresetColour.BASE_RED,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.HEALTH_MAXIMUM, -10f),
 					new Value<>(Attribute.MANA_MAXIMUM, -10f)),
 			Util.newArrayListOfValues(
-					"[style.colourMinorBad(Less likely)] to use slave lounges",
-					"While working:",
-					"[style.boldBad(-50%)] [style.colourAffection(Affection gains)]",
-					"[style.boldBad(-0.5)] [style.colourAffection(Affection/hour)]",
-					"[style.boldBad(-25%)] [style.colourExperience(experience)] gain chance")) {
+					"[style.colourMinorBad(低概率)]会使用奴隶休息室",
+					"工作时:",
+					"[style.boldBad(-50%)][style.colourAffection(好感获取)]",
+					"[style.boldBad(-0.5)][style.colourAffection(好感/小时)]",
+					"[style.boldBad(-25%)][style.colourExperience(经验)]获取几率")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"As a result of having a little too much work to do every day, [npc.name] sometimes [npc.verb(find)] [npc.herself] feeling a little fatigued.<br/>"
-						+ " <i>(Gained from having between -1 to -9 daily stamina. Current daily stamina is [style.colourBad("+target.getDailySlaveJobStamina()+")])</i>");
+						"由于每天要做的工作有点多，[npc.name]有时会感到有点疲劳。<br/>"
+						+ "<i>(每日体力值-1至-9。当前的每日体力值为[style.colourBad("+target.getDailySlaveJobStamina()+")])</i>");
 			} else {
 				return "";
 			}
@@ -3036,24 +3036,24 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect OVERWORKED_2 = new AbstractStatusEffect(80,
-			"overworked",
+			"疲劳",
 			"overworked2",
 			PresetColour.BASE_RED,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.HEALTH_MAXIMUM, -25f),
 					new Value<>(Attribute.MANA_MAXIMUM, -25f)),
 			Util.newArrayListOfValues(
-					"[style.colourBad(Unlikely)] to use slave lounges",
-					"While working:",
-					"[style.boldBad(-80%)] [style.colourAffection(Affection gains)]",
-					"[style.boldBad(-1)] [style.colourAffection(Affection/hour)]",
-					"[style.boldBad(-50%)] [style.colourExperience(experience)] gain chance")) {
+					"[style.colourBad(不大可能)]会使用奴隶休息室",
+					"工作时:",
+					"[style.boldBad(-80%)][style.colourAffection(好感获取)]",
+					"[style.boldBad(-1)][style.colourAffection(好感/小时)]",
+					"[style.boldBad(-50%)][style.colourExperience(经验)]获取几率")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"As a result of having too much work to do every day, [npc.name] is starting to feel very fatigued.<br/>"
-						+ " <i>(Gained from having between -10 to -19 daily stamina. Current daily stamina is [style.colourBad("+target.getDailySlaveJobStamina()+")])</i>");
+						"由每天进行过多工作造成，[npc.name]逐渐觉得十分劳累。<br/>"
+						+ "<i>(每天-10至-19体力时就会获得。当前每日体力变化为[style.colourBad("+target.getDailySlaveJobStamina()+")])</i>");
 			} else {
 				return "";
 			}
@@ -3067,24 +3067,24 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect OVERWORKED_3 = new AbstractStatusEffect(80,
-			"severely overworked",
+			"极度劳累",
 			"overworked3",
 			PresetColour.BASE_RED,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -50f),
 					new Value<>(Attribute.MANA_MAXIMUM, -50f)),
 			Util.newArrayListOfValues(
-					"Will [style.colourTerrible(never)] use slave lounges",
-					"While working:",
-					"[style.boldBad(-100%)] [style.colourAffection(Affection gains)]",
-					"[style.boldBad(-2)] [style.colourAffection(Affection/hour)]",
-					"[style.boldBad(-75%)] [style.colourExperience(experience)] gain chance")) {
+					"将[style.colourTerrible(不再)]使用奴隶休息室",
+					"工作时:",
+					"[style.boldBad(-100%)][style.colourAffection(好感获取)]",
+					"[style.boldBad(-2)][style.colourAffection(好感/小时)]",
+					"[style.boldBad(-75%)][style.colourExperience(经验)]获取几率")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"As a result of having far too much work to do every day, [npc.name] is feeling incredibly fatigued.<br/>"
-						+ " <i>(Gained from having -20 or less daily stamina. Current daily stamina is [style.colourBad("+target.getDailySlaveJobStamina()+")])</i>");
+						"由每天进行过多工作造成，[npc.name]感觉十分疲乏。<br/>"
+						+ "<i>(每天-20以下体力时就会获得。当前每日体力变化为[style.colourBad("+target.getDailySlaveJobStamina()+")])</i>");
 			} else {
 				return "";
 			}
@@ -3097,7 +3097,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect GYM_FATIGUE = new AbstractStatusEffect(80,
-			"post-workout fatigue",
+			"锻炼后疲倦",
 			"gym_fatigue",
 			PresetColour.ATTRIBUTE_HEALTH,
 			false,
@@ -3108,7 +3108,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "Having recently worked out, [npc.nameIsFull] feeling very fatigued, and will be unable to do any more gym work until [npc.sheHas] recovered.");
+				return UtilText.parse(target, "[npc.nameIsFull]刚刚锻炼过，感到十分疲倦，在回复之前无法继续锻炼了。");
 			} else {
 				return "";
 			}
@@ -3116,7 +3116,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FATIGUED = new AbstractStatusEffect(80,
-			"fatigued",
+			"疲倦",
 			"fatigued",
 			PresetColour.ATTRIBUTE_HEALTH,
 			false,
@@ -3127,7 +3127,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "After a period of hard work, [npc.nameIsFull] feeling very fatigued, and will need to take some time to recover...");
+				return UtilText.parse(target, "经过一段时间努力工作，[npc.nameIsFull]觉得十分疲倦，需要一段时间来恢复……");
 			} else {
 				return "";
 			}
@@ -3136,7 +3136,7 @@ public class StatusEffect {
 	
 	// Utility status effect to display text of companions leaving:
 	public static AbstractStatusEffect COMPANIONS_LEAVING = new AbstractStatusEffect(80,
-			"Companions Leaving",
+			"同伴离开",
 			"",
 			PresetColour.BASE_MAGENTA,
 			false,
@@ -3157,105 +3157,105 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect PSYCHOACTIVE = new AbstractStatusEffect(80,
-			"Psychoactive Trip",
+			"迷幻之旅",
 			"psychoactive",
 			PresetColour.BASE_YELLOW,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -5f),
 					new Value<>(Attribute.MAJOR_ARCANE, -5f),
 					new Value<>(Attribute.RESISTANCE_LUST, -25f)),
-			Util.newArrayListOfValues("Open to <b style='color: " + PresetColour.PSYCHOACTIVE.toWebHexString() + ";'>Hypnotic Suggestion</b>")) {
+			Util.newArrayListOfValues("接受<b style='color: " + PresetColour.PSYCHOACTIVE.toWebHexString() + ";'>催眠暗示</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			if(target.isPlayer() && Math.random()<=Util.getModifiedDropoffValue((secondsPassed/60)*0.0075f, 0.5f)) {
 				
 				if(target.getPsychoactiveFluidsIngested().isEmpty()) {
 					return "<p>"
-								+ "You find yourself losing track of where you are as you struggle to overcome the psychoactive effects..."
+								+ "你意识到自己不知道现在身处何处，于是奋力与幻觉抗争着……"
 							+ "</p>"
 							+ "<p><i>"
 							+ UtilText.returnStringAtRandom(
-									"Suddenly, you find yourself back in your aunt Lily's museum."
-										+ " One of the museum's staff is holding you by the [pc.hand] and pulling you into an empty room."
-										+ " Once inside, they drop to their knees, grinning up at you as they lean forwards and plant a wet kiss on your exposed genitals...",
-									"Suddenly, you find yourself face-to-face with your aunt Lily; the two of you standing in her old apartment."
-										+ " With a giggle, she suddenly reaches down and grabs you by the [pc.hand], before pulling you into her bedroom."
-										+ " Once inside, she slips off her dressing gown and steps forwards, pressing her lips against yours...",
-									"Suddenly, you find yourself standing before a stunningly-beautiful demon."
-										+ " She steps forwards, pressing her naked breasts against your body as her tail snakes up to rub against your groin."
-										+ " Letting out a lewd moan, she presses her lips against yours...")
+									"忽然，你发现自己回到了莉莉的博物馆。"
+										+ "一名博物馆职员正用[pc.hand]抓着你，将你拖向一个空房间。"
+										+ "进到房间后，他便跪下来，对你咧嘴笑了一下，附身向前在你暴露的下体上送去了一记湿吻……",
+									"忽然，你发现自己和姨妈莉莉面对着面；站在她有些陈旧的公寓中。"
+										+ "她咯咯地笑了两声，便抓住了你的[pc.hand]，带着你进了她的卧室。"
+										+ "进到房间后，她便抖掉身上的睡袍，与你拥吻起来……",
+									"忽然，你发现自己站在一位倾城绝世的恶魔面前。"
+										+ "她向前走来，将赤裸的乳房紧紧贴住你的身体，尾巴则偷偷地潜入你的两腿之间，摩挲起来。"
+										+ "她发出一声淫靡的呻吟，便与你热吻起来……")
 							+"</i></p>"
 							+ "<p>"
-								+ "With a gasp, you suddenly snap out of the hallucination."
-								+ " Blushing, you feel a needy heat spreading throughout your groin..."
+								+ "你急促地深呼吸后，忽然从幻觉中跳出。"
+								+ "脸刷得红了一片，只感到一股热气在胯下涌动……"
 							+ "</p>"
 							+target.incrementLust(25, false);
 				} else {
 					List<AbstractFluidType> list = new ArrayList<>(target.getPsychoactiveFluidsIngested());
 					AbstractFluidType fluid = list.get(Util.random.nextInt(list.size()));
-					String npcName = UtilText.generateSingularDeterminer(fluid.getRace().getName(false))+" "+fluid.getRace().getName(false);
+					String npcName = UtilText.generateSingularDeterminer(fluid.getRace().getName(false))+""+fluid.getRace().getName(false);
 					switch(fluid.getBaseType()) {
 						case CUM:
 							return "<p>"
-										+ "You find yourself losing track of where you are as you struggle to overcome the psychoactive effects..."
+										+ "你意识到自己不知道现在身处何处，于是奋力与幻觉抗争着……"
 									+ "</p>"
 									+ "<p><i>"
 									+ UtilText.returnStringAtRandom(
-											"Suddenly, you find yourself back in your aunt Lily's museum."
-												+ " You're kneeling before one of the museum's staff, "+npcName+", as you eagerly suck their cock."
-												+ " After just a few moments, their shaft starts to twitch, and you let out a delighted moan as a thick stream of cum pours out into your mouth...",
-											"Suddenly, you find yourself beside your aunt Lily, with the two of you kneeling next to each other in the bedroom of her old apartment."
-												+ " She's grinning in delight as she watches you suck the cock of the "+fluid.getRace().getName(false)+" before you."
-												+ " As the thick shaft in your mouth starts to twitch, Lily reaches forwards and holds your head in place, making sure that the hot stream of cum spurts down your throat...",
-											"Suddenly, you find yourself kneeling before a completely naked "+fluid.getRace().getName(false)+"."
-												+ " They step forwards, reaching down to pull your head forwards as they force their hard cock into your mouth."
-												+ " With a desperate moan, they instantly start cumming, filling your mouth with hot cum...")
+											"忽然，你发现自己回到了莉莉的博物馆。"
+												+ "你跪在一名博物馆职员——"+npcName+"——的面前，热切地含着屌。"
+												+ "过了一会儿，肉棒便开始颤抖，一股浓厚的精液倾泻进你的口中，你发出一声欢愉的呻吟……",
+											"忽然，你发现自己站在姨妈莉莉身边；在她有些陈旧的公寓的卧室中，你们两个跪在对方身前。"
+												+ "她注视着你吮吸着面前"+fluid.getRace().getName(false)+"的大屌，露出了明快的笑容。"
+												+ "粗壮的肉棒在你的口中颤抖起来，莉莉伸出手，摁住了你的脑袋，为了让每一滴精液都能深深地注入你的喉咙……",
+											"忽然，你发现自己跪在一个浑身赤裸的"+fluid.getRace().getName(false)+"面前。"
+												+ "对方快步向前，抓住你的脑袋，让你生生吞下了那硬挺的鸡巴。"
+												+ "一阵难以抑制的呻吟过后，对方便突然射了出来，用滚烫的精液填满了你的嘴巴……")
 									+"</i></p>"
 									+ "<p>"
-										+ "With a gasp, you suddenly snap out of the hallucination."
-										+ " Blushing, you feel a needy heat spreading throughout your groin..."
+										+ "你急促地深呼吸后，忽然从幻觉中跳出。"
+										+ "脸刷得红了一片，只感到一股热气在胯下涌动……"
 									+ "</p>"
 									+target.incrementLust(25, false);
 						case GIRLCUM:
 							return "<p>"
-										+ "You find yourself losing track of where you are as you struggle to overcome the psychoactive effects..."
+										+ "你意识到自己不知道现在身处何处，于是奋力与幻觉抗争着……"
 									+ "</p>"
 									+ "<p><i>"
 									+ UtilText.returnStringAtRandom(
-											"Suddenly, you find yourself back in your aunt Lily's museum."
-												+ " You're kneeling before one of the museum's staff, "+npcName+", as you eagerly lick and kiss their dripping-wet pussy."
-												+ " After just a few moments, their cunt starts to spasm and twitch, and you let out a delighted moan as you lick up every drop of their delicious girlcum...",
-											"Suddenly, you find yourself beside your aunt Lily, with the two of you kneeling next to each other in the bedroom of her old apartment."
-												+ " She's grinning in delight as she watches you lick and kiss the pussy of the "+fluid.getRace().getName(false)+" before you."
-												+ " As their cunt starts to spasm and twitch, Lily reaches forwards and pushes your head forwards, making sure that you lick up every drop of their delicious girlcum...",
-											"Suddenly, you find yourself kneeling before a completely naked "+fluid.getRace().getName(false)+"."
-												+ " They step forwards, reaching down to pull your head forwards as they force their dripping-wet cunt against your [pc.lips+]."
-												+ " With a desperate moan, they instantly start cumming, roughly forcing your face into their groin as they make you lick up every drop of their delicious girlcum...")
+											"忽然，你发现自己回到了莉莉的博物馆。"
+												+ "你跪在一名博物馆职员——"+npcName+"——的面前，热切地舔弄、亲吻着湿漉漉的小穴。"
+												+ "过了一会儿，小穴开始抽搐、颤抖，你带着欢愉的呻吟，将每一滴可口的爱液都纳入口中……",
+											"忽然，你发现自己站在姨妈莉莉身边；在她有些陈旧的公寓的卧室中，你们两个跪在对方身前。"
+												+ "她注视着你舔弄着面前"+fluid.getRace().getName(false)+"的小穴，露出了明快的笑容。"
+												+ "他的小穴开始抽搐、颤抖，莉莉伸出手摁住了你的脑袋，为了让你舔干净每一滴可口的爱液……",
+											"忽然，你发现自己跪在一个浑身赤裸的"+fluid.getRace().getName(false)+"面前。"
+												+ "对方快步向前，抓住你的脑袋，强行让你[pc.lips+]贴在那湿漉漉的小穴上。"
+												+ "一阵难以抑制的呻吟过后，对方便步入了高潮，将你的脸紧紧压在胯下，让你舔干净了每一滴可口的爱液……")
 									+"</i></p>"
 									+ "<p>"
-										+ "With a gasp, you suddenly snap out of the hallucination."
-										+ " Blushing, you feel a needy heat spreading throughout your groin..."
+										+ "你急促地深呼吸后，忽然从幻觉中跳出。"
+										+ "脸刷得红了一片，只感到一股热气在胯下涌动……"
 									+ "</p>"
 									+target.incrementLust(25, false);
 						case MILK:
 							return "<p>"
-										+ "You find yourself losing track of where you are as you struggle to overcome the psychoactive effects..."
+										+ "你意识到自己不知道现在身处何处，于是奋力与幻觉抗争着……"
 									+ "</p>"
 									+ "<p><i>"
 									+ UtilText.returnStringAtRandom(
-											"Suddenly, you find yourself back in your aunt Lily's museum."
-												+ " You're sitting in the lap of one of the museum's staff, "+npcName+", as you eagerly kiss and suckle their engorged teats."
-												+ " After just a few moments, a steady stream of milk starts to flow into your mouth, and you let out a delighted moan as you gulp down the delicious liquid...",
-											"Suddenly, you find yourself in the lap of your aunt Lily; the two of you sitting on her bed in her old apartment."
-												+ " She's grinning down at you in delight as you kiss and suckle her engorged teats."
-												+ " After just a few moments, a steady stream of milk starts to flow into your mouth, and you let out a delighted moan as you gulp down the delicious liquid...",
-											"Suddenly, you find yourself sitting in the lap of a completely naked "+fluid.getRace().getName(false)+"."
-												+ " They reach down to pull your head into their huge breasts as they force one of their engorged teats against your [pc.lips+]."
-												+ " With a desperate moan, you start kissing and suckling their puffy nipples, and after just a few moments, a steady stream of milk starts to flow into your mouth...")
+											"忽然，你发现自己回到了莉莉的博物馆。"
+												+ "你坐在一名博物馆职员——"+npcName+"——的大腿上，热切地亲吻、吸吮着胀满奶的乳头。"
+												+ "过了一会儿，乳汁开始不断地流入你的口中，你发出一声欢愉的呻吟，咕嘟咕嘟地品尝着这可口的液体……",
+											"忽然，你发现自己躺在姨妈莉莉的腿上；你们俩正在她旧公寓的床上。"
+												+ "你上前去，对着她微微发胀的乳头又吸又舔，惹得她合不拢嘴。"
+												+ "过了一会儿，乳汁开始不断地流入你的口中，你发出一声欢愉的呻吟，咕嘟咕嘟地品尝着这可口的液体……",
+											"忽然，你发现自己正坐在一个全身赤裸的"+fluid.getRace().getName(false)+"的大腿上。"
+												+ "那人将你的脑袋深深地埋进巨乳之中，用胀满奶的乳头紧紧地贴着你[pc.lips+]。"
+												+ "随着一声难以抑制的呻吟，你对着柔软的乳头吮吸起来，过了一会儿，乳汁开始不断地流入你的口中……")
 									+"</i></p>"
 									+ "<p>"
-										+ "With a gasp, you suddenly snap out of the hallucination."
-										+ " Blushing, you feel a needy heat spreading throughout your groin..."
+										+ "你急促地深呼吸后，忽然从幻觉中跳出。"
+										+ "脸刷得红了一片，只感到一股热气在胯下涌动……"
 									+ "</p>"
 									+target.incrementLust(25, false);
 					}
@@ -3268,9 +3268,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "You're feeling very peculiar at the moment... Strange visions keep flashing before your [pc.eyes], and you aren't quite sure of your surroundings...";
+				return "你此刻感到非常怪异……奇妙的景象在面前不断闪过，你不知道现在身处何处……";
 			} else {
-				return UtilText.parse(target, "[npc.name] is feeling very peculiar at the moment... Strange visions keep flashing before [npc.her] [npc.eyes], and [npc.she] doesn't seem to be quite sure of [npc.her] surroundings...");
+				return UtilText.parse(target, "[npc.name]此刻感到非常怪异……奇妙的景象在面前不断闪过，[npc.she]不知道现在身处何处……");
 			}
 		}
 		@Override
@@ -3285,7 +3285,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLEANED_MASSAGED = new AbstractStatusEffect(80,
-			"Recently massaged",
+			"刚按摩过",
 			"cleaned_massage",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.GENERIC_EXCELLENT,
@@ -3298,12 +3298,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Having recently received a massage, [npc.nameIsFull] feeling extremely relaxed and limber!");
+					"刚刚接受过按摩，[npc.nameIsFull]感到身体十分放松！");
 		}
 	};
 	
 	public static AbstractStatusEffect CLEANED_SHOWER = new AbstractStatusEffect(80,
-			"Recently showered",
+			"刚洗过澡",
 			"cleaned_shower",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.BASE_AQUA,
@@ -3313,16 +3313,16 @@ public class StatusEffect {
 					new Value<>(Attribute.MANA_MAXIMUM, 5f),
 					new Value<>(Attribute.DAMAGE_LUST, 5f)),
 			Util.newArrayListOfValues(
-					"[style.boldMinorGood(Doubles)] [style.colourHealth(health)] and [style.colourMana(aura)] regeneration rate")) {
+					"[style.colourHealth(生命)]和[style.colourMana(灵气)]恢复速度提高至[style.boldMinorGood(两倍)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Having recently taken the time to have a shower, [npc.name] [npc.verb(feel)] refreshed!");
+					"刚刚花时间淋浴过，[npc.name]感觉焕然一新！");
 		}
 	};
 	
 	public static AbstractStatusEffect CLEANED_BATH = new AbstractStatusEffect(80,
-			"Recently bathed",
+			"刚泡过澡",
 			"cleaned_bath",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.BASE_AQUA,
@@ -3332,7 +3332,7 @@ public class StatusEffect {
 					new Value<>(Attribute.MANA_MAXIMUM, 10f),
 					new Value<>(Attribute.DAMAGE_LUST, 10f)),
 			Util.newArrayListOfValues(
-					"[style.boldGood(Triples)] [style.colourHealth(health)] and [style.colourMana(aura)] regeneration rate")) {
+					"[style.colourHealth(生命)]和[style.colourMana(灵气)]恢复速度提高至[style.boldGood(三倍)]")) {
 		@Override
 		public String applyAdditionEffect(GameCharacter target) {
 			target.clearMuskMarkers();
@@ -3341,12 +3341,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Having recently taken the time to relax in [npc.her] bath, [npc.name] [npc.verb(feel)] refreshed and rejuvenated.");
+					"刚刚花时间在浴缸中放松过，[npc.name]感觉焕然一新、活力充沛。");
 		}
 	};
 	
 	public static AbstractStatusEffect CLEANED_SPA = new AbstractStatusEffect(80,
-			"Spa soak",
+			"水疗浴",
 			"cleaned_spa",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.BASE_AQUA,
@@ -3357,7 +3357,7 @@ public class StatusEffect {
 					new Value<>(Attribute.MANA_MAXIMUM, 25f),
 					new Value<>(Attribute.DAMAGE_LUST, 15f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Quadruples)] [style.colourHealth(health)] and [style.colourMana(aura)] regeneration rate")) {
+					"[style.colourHealth(生命)]和[style.colourMana(灵气)]恢复速度提高至[style.boldMinorGood(四倍)]")) {
 		@Override
 		public String applyAdditionEffect(GameCharacter target) {
 			target.clearMuskMarkers();
@@ -3366,12 +3366,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Having recently taken the time to relax in the spa, [npc.name] [npc.verb(feel)] like [npc.sheHas] been born anew!");
+					"刚刚花时间在水疗中心放松过，[npc.name]感觉仿佛重获新生！");
 		}
 	};
 	
 	public static AbstractStatusEffect LOLLIPOP_SUCKING = new AbstractStatusEffect(80,
-			"sucking lollipop",
+			"舔棒棒糖",
 			"lollipop",
 			PresetColour.CLOTHING_PINK,
 			true,
@@ -3379,7 +3379,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] playfully sucking on a lollipop, and every time someone looks at [npc.herHim], [npc.she] [npc.verb(purse)] [npc.her] [npc.lips] and [npc.verb(make)] a show of kissing it.");
+			return UtilText.parse(target, "[npc.NameIsFull]玩味地舔着棒棒糖，每次有人看着的时候，[npc.she]都会把[npc.lips]贴上去，仿佛在上演一场激吻。");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -3388,7 +3388,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SMOKING = new AbstractStatusEffect(80,
-			"smoking",
+			"抽烟",
 			"smoking",
 			PresetColour.CLOTHING_ORANGE,
 			PresetColour.CLOTHING_BRASS,
@@ -3400,7 +3400,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameIsFull] currently smoking a cigarette. Every time [npc.she] [npc.verb(exhale)], a faint white cloud forms in front of [npc.her] face, causing [npc.her] immediate surroundings to smell strongly of burning plant matter.");
+					"[npc.NameIsFull]正在抽烟。每当[npc.she]呼气时，都会在面前形成以团白色烟雾，顿时让[npc.her]被烟草燃烧的浓烈味道所包围。");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -3419,7 +3419,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect RECENTLY_SMOKED = new AbstractStatusEffect(80,
-			"recently smoked",
+			"刚抽过烟",
 			"recentlySmoked",
 			PresetColour.CLOTHING_ORANGE,
 			PresetColour.CLOTHING_BRASS,
@@ -3431,12 +3431,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameHasFull] recently smoked a cigarette, which is obvious to anyone who gets too near to [npc.herHim], as [npc.she] [npc.verb(smell)] strongly of burning plant matter.");
+					"只要靠近[npc.NameHasFull]就能很清楚地知道，[npc.herHim]刚刚抽过烟，散发着一股烟草燃烧的浓烈味道。");
 		}
 	};
 
 	public static AbstractStatusEffect RECENTLY_EATEN = new AbstractStatusEffect(80,
-			"recently eaten",
+			"刚刚进食",
 			"recentlyEaten",
 			PresetColour.BASE_GREEN,
 			PresetColour.BASE_GREEN_LIGHT,
@@ -3453,12 +3453,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameHasFull] recently had something to eat. With [npc.her] hunger temporarily satisfied, [npc.sheIs] feeling contented and full of energy.");
+					"[npc.NameHasFull]刚刚吃过东西。[npc.her]的饥饿感暂时得到了满足，感觉自己充满能量。");
 		}
 	};
 
 	public static AbstractStatusEffect RECENTLY_EATEN_POOR = new AbstractStatusEffect(80,
-			"recently eaten (junk)",
+			"刚刚进食(垃圾食品)",
 			"recentlyEaten",
 			PresetColour.BASE_GREEN_LIGHT,
 			PresetColour.BASE_YELLOW_PALE,
@@ -3475,12 +3475,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameHasFull] recently had something to eat which at best would be classified as junk food. With [npc.her] hunger temporarily satisfied, [npc.sheIs] feeling a little more energetic.");
+					"[npc.NameHasFull]刚刚吃过那种会被归类为垃圾食品的东西。[npc.her]的饥饿感暂时得到了满足，感觉自己更有活力了。");
 		}
 	};
 
 	public static AbstractStatusEffect RECENTLY_EATEN_QUALITY = new AbstractStatusEffect(80,
-			"recently eaten (quality)",
+			"刚刚进食(优质)",
 			"recentlyEaten",
 			PresetColour.BASE_GREEN_DARK,
 			PresetColour.BASE_GREEN,
@@ -3497,13 +3497,13 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameHasFull] recently had something to eat which was of exceptional quality."
-					+ " With [npc.her] hunger temporarily satisfied, and with the memory of such a fine meal still fresh in [npc.her] mind, [npc.sheIs] feeling contented and full of energy.");
+					"[npc.NameHasFull]刚刚吃过十分优质的食物。"
+					+ "[npc.her]的饥饿感暂时得到了满足，美妙的餐点仿佛仍在口中，[npc.sheIs]感觉自己充满能量，十分满意。");
 		}
 	};
 
 	public static AbstractStatusEffect THIRST_QUENCHED = new AbstractStatusEffect(80,
-			"thirst quenched",
+			"解渴",
 			"recentlyDrank",
 			PresetColour.BASE_BLUE,
 			PresetColour.BASE_BLUE_LIGHT,
@@ -3520,12 +3520,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameHasFull] recently had something to drink. With [npc.her] thirst temporarily quenched, [npc.sheIs] able to focus and concentrate on the task at hand.");
+					"[npc.NameHasFull]刚刚喝过东西。[npc.her]的口渴感暂时得到了缓解，能够集中精神专注于当前事物了。");
 		}
 	};
 
 	public static AbstractStatusEffect THIRST_QUENCHED_POOR = new AbstractStatusEffect(80,
-			"thirst quenched (basic)",
+			"解渴(平淡)",
 			"recentlyDrank",
 			PresetColour.BASE_BLUE_LIGHT,
 			PresetColour.BASE_YELLOW_PALE,
@@ -3542,12 +3542,12 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameHasFull] recently quenched [npc.her] thirst with something that barely passed as drinkable. With [npc.her] thirst temporarily quenched, [npc.sheIs] able to focus a little more on the task at hand.");
+					"[npc.NameHasFull]刚刚用勉强能入嘴的东西解了渴。[npc.her]的口渴感暂时得到了缓解，感觉自己能够稍微集中精神专注于当前事物了。");
 		}
 	};
 
 	public static AbstractStatusEffect THIRST_QUENCHED_QUALITY = new AbstractStatusEffect(80,
-			"thirst quenched (quality)",
+			"解渴(优质)",
 			"recentlyDrank",
 			PresetColour.BASE_BLUE_DARK,
 			PresetColour.BASE_BLUE,
@@ -3564,13 +3564,13 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameHasFull] recently had something to drink which was of exceptional quality."
-					+ " With [npc.her] thirst temporarily quenched, and with the memory of such a fine beverage still fresh in [npc.her] mind, [npc.sheIs] able to focus and concentrate on the task at hand.");
+					"[npc.NameHasFull]刚刚喝过十分优质的饮品。"
+					+ "[npc.her]的口渴感暂时得到了缓解，可口的饮品仿佛仍在口中，能够集中精神专注于当前事物了。");
 		}
 	};
 	
 	public static AbstractStatusEffect DRUNK_1 = new AbstractStatusEffect(80,
-			"Intoxicated I - Tipsy",
+			"醉酒I - 微醺",
 			"drunk1",
 			PresetColour.BASE_YELLOW,
 			false,
@@ -3588,8 +3588,8 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "After recently drinking an alcoholic liquid, [npc.nameIsFull] feeling a little tipsy..."
-					+ "<br/>Intoxication: [style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
+			return UtilText.parse(target, "[npc.nameIsFull]刚刚喝过酒精饮品，现在觉得有些微醺……"
+					+ "<br/>醉酒度：[style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -3602,7 +3602,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect DRUNK_2 = new AbstractStatusEffect(80,
-			"Intoxicated II - Merry",
+			"醉酒II - 浅醉",
 			"drunk2",
 			PresetColour.BASE_YELLOW,
 			false,
@@ -3619,8 +3619,8 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "After recently drinking an alcoholic liquid, [npc.nameIsFull] feeling quite merry..."
-					+ "<br/>Intoxication: [style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
+			return UtilText.parse(target, "[npc.nameIsFull]刚刚喝过酒精饮品，现在觉得稍有些醉……"
+					+ "<br/>醉酒度：[style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -3633,7 +3633,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect DRUNK_3 = new AbstractStatusEffect(80,
-			"Intoxicated III - Drunk",
+			"醉酒III - 醉酒",
 			"drunk3",
 			PresetColour.BASE_YELLOW,
 			false,
@@ -3649,13 +3649,13 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "After recently drinking an alcoholic liquid, [npc.nameIsFull] feeling quite drunk..."
-					+ "<br/>Intoxication: [style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
+			return UtilText.parse(target, "[npc.nameIsFull]刚刚喝过酒精饮品，现在觉得醉得不轻……"
+					+ "<br/>沉醉：[style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(3, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>You're obviously drunk and some might think you're easy prey.");
+				return new Value<>(3, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你看起来酩酊大醉，可能会有人计划“捡尸”。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -3670,7 +3670,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect DRUNK_4 = new AbstractStatusEffect(80,
-			"Intoxicated IV - Hammered",
+			"醉酒IV - 沉醉",
 			"drunk4",
 			PresetColour.BASE_YELLOW,
 			false,
@@ -3687,13 +3687,13 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "After recently drinking an alcoholic liquid, [npc.nameIsFull] feeling absolutely hammered..."
-					+ "<br/>Intoxication: [style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
+			return UtilText.parse(target, "[npc.nameIsFull]刚刚喝过酒精饮品，现在觉得完全醉了……"
+					+ "<br/>醉酒度：[style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(3, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>You're obviously drunk and some might think you're easy prey.");
+				return new Value<>(3, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你看起来酩酊大醉，可能会有人计划“捡尸”。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -3708,7 +3708,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect DRUNK_5 = new AbstractStatusEffect(80,
-			"Intoxicated V - Wasted",
+			"醉酒V - 烂醉",
 			"drunk5",
 			PresetColour.BASE_YELLOW,
 			false,
@@ -3725,13 +3725,13 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "After recently drinking an alcoholic liquid, [npc.nameIsFull] feeling completely wasted..."
-					+ "<br/>Intoxication: [style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
+			return UtilText.parse(target, "A[npc.nameIsFull]刚刚喝过酒精饮品，现在已经烂醉如泥……"
+					+ "<br/>醉酒度：[style.colourAlcohol("+Units.round(target.getIntoxicationPercentage(), 1)+")]%");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(3, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>You're obviously drunk and some might think you're easy prey.");
+				return new Value<>(3, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你看起来酩酊大醉，可能会有人计划“捡尸”。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -3746,7 +3746,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ADDICTIONS = new AbstractStatusEffect(80,
-			"addictions",
+			"成瘾",
 			"addictions",
 			PresetColour.BASE_CRIMSON,
 			false,
@@ -3763,10 +3763,10 @@ public class StatusEffect {
 				long hoursLeft = timeLeft / 60;
 				long minutesLeft = timeLeft % 60;
 				AbstractRace fluidRace = addiction.getFluid().getRace();
-				extraEffects.add("<b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+" "+addiction.getFluid().getBaseType().getNames().get(0)+"</b>: "
+				extraEffects.add("<b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+addiction.getFluid().getBaseType().getNames().get(0)+"</b>:"
 						+ (timeLeft > 0
-								?" [style.colourGood("+hoursLeft+":"+String.format("%02d", minutesLeft)+")]"
-								:" [style.boldArcane(Withdrawal!)]"));
+								?"[style.colourGood("+hoursLeft+":"+String.format("%02d", minutesLeft)+")]"
+								:"[style.boldArcane(戒断！)]"));
 			}
 			
 			return extraEffects;
@@ -3775,14 +3775,14 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.isPlayer()) {
-					return "You are currently addicted to "+Util.intToString(target.getAddictions().size())+(target.getAddictions().size()==1?" type of fluid":" types of fluids")+"!"
-							+ " After going for more than 24 hours without getting a fix, you will start to suffer from withdrawal symptoms."
-							+ " <i>Addictions can be cleared by using '"+ItemType.ADDICTION_REMOVAL.getName(false)+"'.</i>";
+					return "你对"+Util.intToString(target.getAddictions().size())+"种液体上瘾了！"
+							+ "如果超过24小时没有缓解，将会受到戒断症状的影响。"
+							+ "<i>成瘾可以使用“"+ItemType.ADDICTION_REMOVAL.getName(false)+"”解除。</i>";
 				} else {
 					return UtilText.parse(target,
-							"[npc.NameIsFull] currently addicted to "+Util.intToString(target.getAddictions().size())+(target.getAddictions().size()==1?" type of fluid":" types of fluids")+"!"
-									+ " After going for more than 24 hours without getting a fix, [npc.she] will start to suffer from withdrawal symptoms."
-									+ " <i>Addictions can be cleared by using '"+ItemType.ADDICTION_REMOVAL.getName(false)+"'.</i>");
+							"[npc.NameIsFull]对"+Util.intToString(target.getAddictions().size())+"种液体完全上瘾了！"
+									+ "如果超过24小时没有缓解，将会受到戒断症状的影响。"
+									+ "<i>成瘾可以使用“"+ItemType.ADDICTION_REMOVAL.getName(false)+"”解除。</i>");
 				}
 			} else {
 				return "";
@@ -3799,7 +3799,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WITHDRAWAL_1 = new AbstractStatusEffect(80,
-			"Mild Withdrawal",
+			"轻度戒断",
 			"withdrawal1",
 			PresetColour.CORRUPTION_STAGE_ONE,
 			false,
@@ -3814,9 +3814,9 @@ public class StatusEffect {
 				StringBuilder sb = new StringBuilder();
 				
 				if(target.isPlayer()) {
-					sb.append("You are suffering mild withdrawal from:");
+					sb.append("你正在遭受轻度戒断:");
 				} else {
-					sb.append(UtilText.parse(target, "[npc.NameIsFull] suffering mild withdrawal from:"));
+					sb.append(UtilText.parse(target, "[npc.NameIsFull]正在遭受轻度戒断:"));
 				}
 
 				for(Addiction addiction : target.getAddictions()) {
@@ -3830,9 +3830,9 @@ public class StatusEffect {
 						long minutesLeft = timeLeft % 60;
 						AbstractRace fluidRace = addiction.getFluid().getRace();
 						sb.append("<br/>"
-								+ "[style.boldArcane(Addictive)]"
-								+ " <b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+" "+addiction.getFluid().getBaseType().getNames().get(0)+"</b>: "
-								+ " [style.boldArcane(worsens in)] "+hoursLeft+":"+String.format("%02d", minutesLeft));
+								+"[style.boldArcane(具有成瘾性的)]"
+								+ "<b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+addiction.getFluid().getBaseType().getNames().get(0)+"</b>:"
+								+ hoursLeft+":"+String.format("%02d", minutesLeft) + "后[style.boldArcane(加剧)]");
 					}
 				}
 				
@@ -3862,7 +3862,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WITHDRAWAL_2 = new AbstractStatusEffect(80,
-			"Noticeable Withdrawal",
+			"明显戒断",
 			"withdrawal2",
 			PresetColour.CORRUPTION_STAGE_TWO,
 			false,
@@ -3877,9 +3877,9 @@ public class StatusEffect {
 				StringBuilder sb = new StringBuilder();
 				
 				if(target.isPlayer()) {
-					sb.append("You are suffering noticeable withdrawal from:");
+					sb.append("你正在遭受明显戒断:");
 				} else {
-					sb.append(UtilText.parse(target, "[npc.NameIsFull] suffering noticeable withdrawal from:"));
+					sb.append(UtilText.parse(target, "[npc.NameIsFull]正在遭受明显戒断:"));
 				}
 
 				for(Addiction addiction : target.getAddictions()) {
@@ -3893,9 +3893,9 @@ public class StatusEffect {
 						long minutesLeft = timeLeft % 60;
 						AbstractRace fluidRace = addiction.getFluid().getRace();
 						sb.append("<br/>"
-								+ "[style.boldArcane(Addictive)]"
-								+ " <b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+" "+addiction.getFluid().getBaseType().getNames().get(0)+"</b>: "
-								+ " [style.boldArcane(worsens in)] "+hoursLeft+":"+String.format("%02d", minutesLeft));
+								+"[style.boldArcane(具有成瘾性的)]"
+								+ "<b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+addiction.getFluid().getBaseType().getNames().get(0)+"</b>:"
+								+ hoursLeft+":"+String.format("%02d", minutesLeft) + "后[style.boldArcane(加剧)]");
 					}
 				}
 				
@@ -3925,7 +3925,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WITHDRAWAL_3 = new AbstractStatusEffect(80,
-			"Strong Withdrawal",
+			"强力戒断",
 			"withdrawal3",
 			PresetColour.CORRUPTION_STAGE_THREE,
 			false,
@@ -3940,9 +3940,9 @@ public class StatusEffect {
 				StringBuilder sb = new StringBuilder();
 				
 				if(target.isPlayer()) {
-					sb.append("You are suffering strong withdrawal from:");
+					sb.append("你正在遭受强力戒断:");
 				} else {
-					sb.append(UtilText.parse(target, "[npc.NameIsFull] suffering strong withdrawal from:"));
+					sb.append(UtilText.parse(target, "[npc.NameIsFull]正在遭受强力戒断:"));
 				}
 
 				for(Addiction addiction : target.getAddictions()) {
@@ -3956,9 +3956,9 @@ public class StatusEffect {
 						long minutesLeft = timeLeft % 60;
 						AbstractRace fluidRace = addiction.getFluid().getRace();
 						sb.append("<br/>"
-								+ "[style.boldArcane(Addictive)]"
-								+ " <b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+" "+addiction.getFluid().getBaseType().getNames().get(0)+"</b>: "
-								+ " [style.boldArcane(worsens in)] "+hoursLeft+":"+String.format("%02d", minutesLeft));
+								+"[style.boldArcane(具有成瘾性的)]"
+								+ "<b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+addiction.getFluid().getBaseType().getNames().get(0)+"</b>:"
+								+ hoursLeft+":"+String.format("%02d", minutesLeft) + "后[style.boldArcane(加剧)]");
 					}
 				}
 				
@@ -3988,7 +3988,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WITHDRAWAL_4 = new AbstractStatusEffect(80,
-			"Severe Withdrawal",
+			"严重戒断",
 			"withdrawal4",
 			PresetColour.CORRUPTION_STAGE_FOUR,
 			false,
@@ -4003,9 +4003,9 @@ public class StatusEffect {
 				StringBuilder sb = new StringBuilder();
 				
 				if(target.isPlayer()) {
-					sb.append("You are suffering severe withdrawal from:");
+					sb.append("你正在遭受严重戒断:");
 				} else {
-					sb.append(UtilText.parse(target, "[npc.NameIsFull] suffering severe withdrawal from:"));
+					sb.append(UtilText.parse(target, "[npc.NameIsFull]正在遭受严重戒断:"));
 				}
 
 				for(Addiction addiction : target.getAddictions()) {
@@ -4019,9 +4019,9 @@ public class StatusEffect {
 						long minutesLeft = timeLeft % 60;
 						AbstractRace fluidRace = addiction.getFluid().getRace();
 						sb.append("<br/>"
-								+ "[style.boldArcane(Addictive)]"
-								+ " <b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+" "+addiction.getFluid().getBaseType().getNames().get(0)+"</b>: "
-								+ " [style.boldArcane(worsens in)] "+hoursLeft+":"+String.format("%02d", minutesLeft));
+								+"[style.boldArcane(具有成瘾性的)]"
+								+ "<b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+addiction.getFluid().getBaseType().getNames().get(0)+"</b>:"
+								+ hoursLeft+":"+String.format("%02d", minutesLeft) + "后[style.boldArcane(加剧)]");
 					}
 				}
 				
@@ -4051,7 +4051,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WITHDRAWAL_5 = new AbstractStatusEffect(80,
-			"Intense Withdrawal",
+			"剧烈戒断",
 			"withdrawal5",
 			PresetColour.CORRUPTION_STAGE_FIVE,
 			false,
@@ -4066,9 +4066,9 @@ public class StatusEffect {
 				StringBuilder sb = new StringBuilder();
 				
 				if(target.isPlayer()) {
-					sb.append("You are suffering intense withdrawal from:");
+					sb.append("你正在遭受剧烈戒断:");
 				} else {
-					sb.append(UtilText.parse(target, "[npc.NameIsFull] suffering intense withdrawal from:"));
+					sb.append(UtilText.parse(target, "[npc.NameIsFull]正在遭受剧烈戒断:"));
 				}
 
 				for(Addiction addiction : target.getAddictions()) {
@@ -4078,8 +4078,8 @@ public class StatusEffect {
 					if (fiveDaysLater <= now) {
 						AbstractRace fluidRace = addiction.getFluid().getRace();
 						sb.append("<br/>"
-								+ "[style.boldArcane(Addictive)]"
-								+ " <b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+" "+addiction.getFluid().getBaseType().getNames().get(0)+"</b>.");
+								+"[style.boldArcane(具有成瘾性的)]"
+								+ "<b style='color:"+fluidRace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fluidRace.getName(fluidRace!=Race.DEMON))+addiction.getFluid().getBaseType().getNames().get(0)+"</b>。");
 					}
 				}
 				
@@ -4108,12 +4108,12 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect MENOPAUSE = new AbstractStatusEffect(80,
-			"Menopause",
+			"绝经",
 			"menopause",
 			PresetColour.BASE_CRIMSON,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourBad(Total infertility)]")) {
+			Util.newArrayListOfValues("[style.colourBad(完全不孕)]")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			return "";
@@ -4121,7 +4121,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Due to being over fifty-two years of age, [npc.nameHasFull] undergone menopause, and as [npc.sheIsFull] not a demon, [npc.sheHasFull] been rendered completely unable to bear children.");
+					"由于年过五十二岁，[npc.nameHasFull]已经绝经，且[npc.sheIsFull]并非恶魔，完全无法再生育子女。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -4143,7 +4143,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect PREGNANT_0 = new AbstractStatusEffect(80,
-			"risk of pregnancy",
+			"怀孕风险",
 			"pregnancy0",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4153,11 +4153,11 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(Main.game.isInNewWorld()) {
 				return UtilText.parse(target,
-						"After recently having unprotected sex, there's a risk that [npc.name] will get pregnant!"
-							+ " Due to the fact that the arcane accelerates people's pregnancies, [npc.she]'ll know if [npc.sheIs] pregnant within a matter of hours...");
+						"[npc.name]最近经历过无防护性交，有可能怀孕！"
+							+ "由于奥术能够加速孕期，[npc.she]用不了几个小时就能知道自己怀没怀孕……");
 			} else {
 				return UtilText.parse(target,
-						"After recently having unprotected sex, there's a risk that [npc.name] will get pregnant!");
+						"[npc.name]最近经历过无防护性交，有可能怀孕！");
 			}
 		}
 		@Override
@@ -4172,105 +4172,105 @@ public class StatusEffect {
 				if (target.isPlayer() && !((PlayerCharacter) target).isQuestCompleted(QuestLine.SIDE_FIRST_TIME_PREGNANCY)) {
 					sb.append("<p>");
 						if(Main.game.getPlayer().isTaur()) {
-							sb.append("For the last few hours, you've been feeling a mild discomfort in your [pc.legRace]'s body, which has been accompanied by a gradual swelling in your lower half's belly."
-								+ " You tried to dismiss it as indigestion at first, but as you look back and glance down at your tauric body, you can no longer deny what you instinctively know to be the truth."
-								+ " You're pregnant.");
+							sb.append("在过去的几个小时里，你始终感觉到你的[pc.legRace]身体有些不适，同时你的下腹部也逐渐隆起。"
+								+ "你起初试图将其归咎于消化不良，但当你回过头并低头看向你的半兽身人躯体时，你再也无法否认自己凭借本能得知的真相。"
+								+ "你怀孕了。");
 						} else {
-							sb.append("For the last few hours, your belly has been gradually swelling."
-									+ " The progress was so slow that you didn't realise anything was happening at first, but as you glance down at your stomach, there's no mistaking it."
-									+ " You're pregnant."
-									+ " You experimentally start stroking your abdomen, making soft little gasps as the realisation of what's happening starts to sink in.");
+							sb.append("在过去几个小时里，你的小腹开始逐渐隆起。"
+									+ "发展十分缓慢，你起初甚至没有意识到发生了什么，直到低头看了一眼腹部才确信无疑。"
+									+ "你怀孕了。"
+									+ "你试着摸了一下小腹，终于意识到木已成舟，发出了轻轻的喘息声。");
 						}
 					sb.append("</p>");
 					if(target.hasFetish(Fetish.FETISH_PREGNANCY)) {
 						sb.append("<p>"
-								+ "[pc.thought(I-I'm pregnant?"
+								+ "[pc.thought(我，我怀孕了？"
 									+ "<br/>"
-									+ "..."
+									+ "……"
 									+ "<br/>"
-									+ "Oh my God! Yes! <b>I'm pregnant!</b>)]"
+									+ "我的天！太好了！<b>我怀孕了！</b>)]"
 							+ "</p>"
 							+ "<p>"
-								+ "The overwhelming happiness you feel at not only discovering that you're pregnant, but also that you're showing physical signs after only a few hours, washes over you like a crashing wave of pure ecstasy."
+								+ "当你意识到自己怀孕了，而且只过了几个小时就出现了身体上的反应，顿时感到无上的快乐，就像一阵阵纯粹的极乐感在冲刷着你。"
 								+ (Main.game.getPlayer().isTaur()
-									?" You feel tears of joy welling up in your eyes as you gaze down over your shoulder at what is undeniably the swollen belly of a pregnant [pc.legRace]."
-									:" You feel tears of joy welling up in your eyes as you lovingly cradle your swollen belly.")
+									?"你回头凝视着[pc.legRace]身体那鼓起的孕肚，喜悦的泪水在你的眼眶中涌动。"
+									:"你宠溺地怀抱着鼓起的小腹，喜悦的泪水从眼中汩汩而下。")
 							+ "</p>"
 							+ "<p>"
-								+ "[pc.thought(This is the best feeling ever!"
+								+ "[pc.thought(我从没感觉这么棒！"
 										+ "<br/>"
 										+ (Main.game.isPlotDiscovered()
-											?"What should I do now?!"
-											:"If only aunt Lily were here, I bet she'd be so proud!")
+											?"我现在该怎么办？！"
+											:"要是莉莉姨妈在这，她肯定会为我自豪的！")
 										+ "<br/>"
-										+ "Wait! Of course! <b>Lilaya!</b> She'll want to see this too!)]"
+										+ "等等！对啊！<b>莉莱雅！</b>她肯定也想知道！)]"
 							+ "</p>");
 						
 						sb.append("<p>");
 							if(target.getBodyMaterial()==BodyMaterial.SLIME) {
-								sb.append("Taking a closer look at your swollen, slimy stomach, you suddenly realise that you can see "
-											+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" little slime core"+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+" growing in "
+								sb.append("你仔细观察了一下自己微微隆起、粘液构成的小腹，才意识到竟然能看见"
+											+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个微小的史莱姆核心正在"
 											+ (target.hasVagina()
-												?"the place where your womb should be."
-												:"your belly.")
-										+ " You can't help but let out a delighted squeal of happiness as you see your "
-											+(target.getPregnantLitter().getTotalLitterCount()==1?"child":"children")+" growing inside of you,"
-													+ " and spend the next few minutes"
+												?"你子宫所在的位置上。"
+												:"你的孕肚内。")
+										+ "你不禁开心地尖叫起来，那种看到自己的"
+											+(target.getPregnantLitter().getTotalLitterCount()==1?"孩子":"孩子们")+"在体内成长的喜悦油然而生，"
+													+ "接下来的几分钟，"
 													+ (Main.game.getPlayer().isTaur()
-														?" reaching back to stroke and rub"
-														:" stroking and rubbing")
-													+" your wonderfully-swollen abdomen in a state of absolute bliss."
-										+ " Eventually, however, you decide that you should probably go and see Lilaya, so that she can help you figure out all the details of giving birth.");
+														?"你伸手来回轻抚揉搓着"
+														:"你磨蹭爱抚着")
+													+"你鼓起的小腹，沉浸在身为人母的至福中。"
+										+ "不过，最终你还是决定去找一下莉莱雅，或许她能帮你弄清楚分娩的所有细节。");
 							} else {
-								sb.append("After a little while of "
+								sb.append("你花了一些时间"
 										+(Main.game.getPlayer().isTaur()
-											?" reaching back to stroke and rub"
-											:" stroking and rubbing")
-										+" your wonderfully-swollen abdomen, you start to calm down a little."
-										+ " You decide that you should probably go and see Lilaya, so that she can help you figure out all the details of giving birth.");
+											?"伸手来回轻抚揉搓着"
+											:"磨蹭爱抚着")
+										+"你鼓起的小腹，你开始逐渐冷静了下来。"
+										+ "你还是决定去找一下莉莱雅，让她帮你弄清楚分娩的所有细节。");
 							}
 						sb.append("</p>");
 						
 					} else {
 						sb.append("<p>"
-									+ "[pc.thought(I-I'm pregnant?"
+									+ "[pc.thought(我，我怀孕了？"
 										+ "<br/>"
-										+ "..."
+										+ "……"
 										+ "<br/>"
-										+ "Oh my God! <b>I'm pregnant!</b>)]"
+										+ "天啊！<b>我怀孕了！</b>)]"
 								+ "</p>"
 								+ "<p>"
-									+ "The sudden shock of not only discovering that you're pregnant, but also that you're showing physical signs after only a few hours, hits you like a sledgehammer."
-									+ " Despite your best efforts, you feel yourself starting to hyperventilate as you walk around in little circles"
+									+ "这股惊讶感不仅来自于发现自己怀孕，而且还来自于仅仅过了几个小时就在身体上有反应的事实，如同一记重锤让你振聋发聩。"
+									+ "尽管你竭尽全力尝试冷静，但还是感觉到自己的呼吸急促起来，你原地打转，"
 									+ (Main.game.getPlayer().isTaur()
-											?" with your head in your [pc.hands]."
-											:", alternating between cradling your head and stomach.")
+											?"下意识地用[pc.hands]抱着头部。"
+											:"一会儿抱着头，一会儿抱着肚子。")
 								+ "</p>"
 								+ "<p>"
-									+ "[pc.thought(What do I do? What do I do? What do I do?"
+									+ "[pc.thought(我该怎么办？我该怎么办？我该怎么办？"
 											+ "<br/>"
 											+ (Main.game.isPlotDiscovered()
-												?"What should I do now?!"
-												:"If only aunt Lily were here, I bet she'd be so proud!")
+												?"我现在该怎么办？！"
+												:"要是莉莉姨妈在这，她肯定会为我自豪的！")
 											+ "<br/>"
-											+ "Wait! Of course! <b>Lilaya!</b> She'll know what to do!)]"
+											+ "等等！对啊！<b>莉莱雅！</b>她肯定知道的！)]"
 								+ "</p>");
 						
 						sb.append("<p>");
 							if(target.getBodyMaterial()==BodyMaterial.SLIME) {
-								sb.append("As you take one last look at your swollen, slimy stomach, you suddenly realise that you can see "
-												+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" little slime core"+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+" growing in "
-												+ (target.hasVagina()?"the place where your womb should be.":"your belly.")
-											+ " You can't help but let out a shocked cry as you see your "+(target.getPregnantLitter().getTotalLitterCount()==1?"child":"children")
-												+" growing inside of you, and spend the next few minutes "
+								sb.append("你最后瞧了一眼自己微微隆起、粘液构成的小腹，才意识到竟然能看见"
+												+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个微小的史莱姆核心正在"
+												+ (target.hasVagina()?"子宫的位置缓缓生长。":"你的小腹中缓缓生长。")
+											+ "你不禁震惊地喊出声来，那种看到自己的"+(target.getPregnantLitter().getTotalLitterCount()==1?"孩子":"孩子们")
+												+"在体内生长的景象让你颇为震撼，接下来的几分钟，"
 													+ (Main.game.getPlayer().isTaur()
-														?" reaching back to stroke and rub"
-														:" stroking and rubbing")
-												+" your swollen abdomen in a state of dazed panic."
-											+ " Eventually, however, you start to calm down a little, and decide that you should probably go and see Lilaya as soon as possible.");
+														?"你伸手来回轻抚揉搓着"
+														:"你磨蹭抚摸着")
+												+"你鼓起的小腹，茫然又惶恐不安。"
+											+ "不过你最终还是慢慢冷静了下来，决定还是尽快去找莉莱雅比较好。");
 							} else {
-								sb.append("You start to calm down a little as the initial shock starts to wear off."
-											+ " If anyone knows what to do, it'll be Lilaya.");
+								sb.append("最初的震惊渐渐消去后，你开始冷静下来。"
+											+ "要说谁会知道该怎么办，那一定是莉莱雅了。");
 							}
 						sb.append("</p>");
 					}
@@ -4278,59 +4278,59 @@ public class StatusEffect {
 				} else {
 					sb.append("<p>");
 						if(Main.game.getPlayer().isTaur()) {
-							sb.append("For the last few hours, you've been feeling a familiar sensation of mild discomfort in your [pc.legRace]'s body, which has been accompanied by a gradual swelling in your lower half's belly."
-								+ " You weren't completely sure what was causing this discomfort at first, but as you look back and glance down at your tauric body, you instinctively know exactly what the cause is."
-								+ " You're pregnant again.");
+							sb.append("在过去的几个小时里，你始终感觉你的[pc.legRace]身体有些熟悉的不适感，同时你的下腹部也逐渐隆起。"
+								+ "你起初并不完全确定这种不适的来源，但当你回过头并低头看向你的半兽身人躯体时，你本能地知道了究竟是什么原因。"
+								+ "你又怀孕了。");
 						} else {
-							sb.append("For the last few hours, your belly has been gradually swelling."
-									+ " The progress was so slow that you didn't realise anything was happening at first, but as you glance down at your stomach, there's no mistaking it."
-									+ " You're pregnant again."
-									+ " You experimentally start stroking your abdomen, making soft little gasps as the realisation of what's happening starts to sink in.");
+							sb.append("在过去几个小时里，你的小腹开始逐渐隆起。"
+									+ "发展十分缓慢，你起初甚至没有意识到发生了什么，直到低头看了一眼腹部才确信无疑。"
+									+ "你又怀孕了。"
+									+ "你试着摸了一下小腹，终于意识到木已成舟，发出了轻轻的喘息声。");
 						}
 					sb.append("</p>");
 					
 					if(target.getBodyMaterial()==BodyMaterial.SLIME) {
 						sb.append("<p>");
-							sb.append("Looking a little closer at your swollen, slimy stomach, you see "+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" little slime core"
-											+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+" growing in "+ (target.hasVagina()?"the place where your womb should be.":"your belly."));
+							sb.append("你仔细观察了一下自己微微隆起、粘液构成的小腹，只见有"+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个微小的史莱姆核心正在"
+											+ (target.hasVagina()?"子宫的位置缓缓生长。":"你的小腹中缓缓生长。"));
 							if(!target.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()) {
-								sb.append(" You can't help but let out a happy little sigh as you see your "+(target.getPregnantLitter().getTotalLitterCount()==1?"child":"children")
-											+" growing inside of you, and spend the next few minutes "
+								sb.append("你不禁发出一声开心的轻叹，那种看到自己的"+(target.getPregnantLitter().getTotalLitterCount()==1?"孩子":"孩子们")
+											+"在体内生长的喜悦油然而生，接下来的几分钟，"
 												+(Main.game.getPlayer().isTaur()
-													?" reaching back to stroke and rub"
-													:" stroking and rubbing")
-											+" your swollen abdomen in a state of motherly bliss.");
+													?"你伸手来回轻抚揉搓着"
+													:"你磨蹭抚摸着")
+											+"你鼓起的小腹，沉浸在身为人母的至福中。");
 							}
 						sb.append("</p>");
 					}
 					
 					if(target.hasFetish(Fetish.FETISH_PREGNANCY)) {
 						sb.append("<p>"
-								+ "[pc.thought(Haha! Yes! I got pregnant again! This is the best feeling ever...)]"
+								+ "[pc.thought(哈哈！太好了！又怀孕了！这感觉真是太棒了……)]"
 							+ "</p>"
 							+ "<p>"
-								+ "Knowing what you're in for, you let out a delighted laugh before carrying on your way."
+								+ "你已经轻车熟路，于是发出了愉快的笑声，然后继续你的旅程。"
 							+ "</p>");
 					} else if(target.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()) {
 						sb.append("<p>"
-								+ "[pc.thought(No! I can't believe that I got pregnant again... I <b>hate</b> this...)]"
+								+ "[pc.thought(不！真不敢相信我又怀孕了……我<b>讨厌</b>这样……)]"
 							+ "</p>"
 							+ "<p>"
-								+ "Knowing what you're in for, you let out an annoyed tut and curse the fact that you're pregnant, before carrying on your way."
+								+ "你已经知道将会发生什么，恼怒地嘟囔了一声，咒骂自己的怀孕，然后继续你的旅程。"
 							+ "</p>");
 					} else {
 						sb.append("<p>"
-								+ "[pc.thought(Mmm... Looks like I got pregnant again...)]"
+								+ "[pc.thought(嗯嗯……看上去我又怀孕了……)]"
 							+ "</p>"
 							+ "<p>"
-								+ "Knowing what you're in for, you let out a contented sigh and start carrying on your way."
+								+ "你已经轻车熟路，满足地叹了口气，然后继续你的旅程。"
 							+ "</p>");
 					}
 					
 				}
 				
 				sb.append( "<p style='text-align:center;'>"
-						+ "<b style='color:"+ PresetColour.GENERIC_SEX.toWebHexString() + ";'>You're pregnant!</b>"
+						+ "<b style='color:"+ PresetColour.GENERIC_SEX.toWebHexString() + ";'>你怀孕了！</b>"
 					+ "</p>");
 				
 				// Remove cum inflation:
@@ -4401,23 +4401,23 @@ public class StatusEffect {
 					sb.append("</p>");
 				}
 				sb.append("<p style='text-align:center;'>");
-					sb.append("[style.italicsMinorBad(Your pussy"+(Main.game.isUrethraEnabled()?" and its urethra":"")+" can only hold [style.fluid("+Body.MAXIMUM_CREAMPIE_WHILE_PREGNANT+")] of fluids during pregnancy!)]");
+					sb.append("[style.italicsMinorBad(你的小穴在怀孕时"+(Main.game.isUrethraEnabled()?"和尿道":"")+"只能容纳[style.fluid("+Body.MAXIMUM_CREAMPIE_WHILE_PREGNANT+")]的液体！)]");
 				sb.append("</p>");
 				
 			} else {
 				target.endPregnancy(false);
 				sb.append("<p>"
-							+ "Enough time has passed now for you to be sure that you're in the clear."
-							+ " There's no sign of any bump in your belly,"+(target.getBodyMaterial()==BodyMaterial.SLIME?" or of any slime cores growing inside of you,":"")
-								+" and you realise that despite having unprotected sex, you managed to avoid getting pregnant."
+							+ "现在已经过去了足够长的时间，你安全了。"
+							+ "你的小腹没有任何变化的迹象，"+(target.getBodyMaterial()==BodyMaterial.SLIME?"体内也没有出现史莱姆核心，":"")
+								+"你意识到自己虽然经历过无防护性交，但还是避免了怀孕。"
 						+ "</p>"
 						+ "<p>"
 							+ (target.hasFetish(Fetish.FETISH_PREGNANCY)
-								?"[pc.thought(Damn it...)]"
-								:"[pc.thought(Well, that's a relief...)]")
+								?"[pc.thought(操……)]"
+								:"[pc.thought(这下放心了……)]")
 						+ "</p>"
 						+ "<p style='text-align:center;'>"
-							+ "<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>You aren't pregnant!</b>"
+							+ "<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>你没有怀孕！</b>"
 						+ "</p>");	
 			}
 
@@ -4441,20 +4441,20 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect PREGNANT_1 = new AbstractStatusEffect(80,
-			"pregnant",
+			"妊娠初期",
 			"pregnancy1",
 			PresetColour.GENERIC_ARCANE,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, 2f)),
-			Util.newArrayListOfValues("-5% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-5%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] been impregnated!"
+						"[npc.namePos]在最近的某次性行为中受孕了！"
 							+ (target.getBodyMaterial()==BodyMaterial.SLIME
-								?" Through the [npc.skinColour] [npc.skin] that makes up [npc.her] body, you can see "+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" little slime core"
-									+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+" growing inside of [npc.herHim]."
-								:" Due to the fact that the arcane accelerates people's pregnancies, [npc.she]'ll move onto the next stage with alarming speed."));
+								?"透过组成[npc.her]身体的[npc.skinColour][npc.skin]，你能看到"+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个微小的史莱姆核心正在"
+									+"[npc.herHim]的体内生长。"
+								:"由于奥术能够加速孕期，[npc.she]很快就能进入下一阶段。"));
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -4494,48 +4494,48 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 			if (!((PlayerCharacter) target).isQuestCompleted(QuestLine.SIDE_FIRST_TIME_PREGNANCY)) {
 				sb.append("<p>"
-							+ "Even though the change has been gradual, you're suddenly hit by the realisation that your belly has swollen to a massive size."
+							+ "尽管变化比较缓慢，但当你发现小腹忽然胀得极大，还是受到了强烈的冲击。"
 							+ (target.isTaur()
-								?" You look back over your shoulder and gaze at the huge bump in your [pc.legRace]'s abdomen as you wonder just how big it's going to get."
-								:" You can't resist rubbing your hands over the huge bump in your abdomen, and you wonder just how big it's going to get.")
-							+ " As this is your first time getting pregnant, you're not quite sure what to expect, but you're reassured as you remember that Lilaya's always there to help."
+								?"你回头凝视着自己[pc.legRace]腹部那巨大的隆起，心想它究竟会长多大。"
+								:"你忍不住用手揉了揉鼓起的小腹，心想它到底会长多大。")
+							+ "由于这还是你第一次怀孕，你不太清楚接下来会发生什么，但想到莉莱雅总能及时救你于水火之中，便放下心来。"
 						+ "</p>");
 			} else {
 				sb.append("<p>"
-							+ "Even though the change has been gradual, you're suddenly hit by the familiar realisation that your belly has swollen to a massive size.");
+							+ "尽管变化比较缓慢，但你发现小腹忽然胀大的时候，还是受到了似曾相识的冲击感。");
 							if(target.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()) {
 								sb.append((target.isTaur()
-										?" You look back over your shoulder and scowl in disgust at the huge bump in your [pc.legRace]'s abdomen as you curse yourself for getting pregnant."
-										:" With an disgusted scowl on your face, you gently prod the huge bump in your abdomen and curse yourself for getting pregnant."));
+										?"你回头瞥见自己[pc.legRace]腹部那巨大的隆起，厌恶地皱起眉头，咒骂着自己怎么会怀孕。"
+										:"你厌恶地皱着眉头，轻轻戳了戳隆起的腹部，咒骂自己怎么就怀上了。"));
 							} else {
 								sb.append((target.isTaur()
-										?" You look back over your shoulder and gaze at the huge bump in your [pc.legRace]'s abdomen as you smile fondly at the comforting feeling of being pregnant."
-										:" You can't resist rubbing your hands over the huge bump in your abdomen, smiling fondly at the comforting feeling."));
+										?"你回头凝视着自己[pc.legRace]腹部那巨大的隆起，脸上浮现出怀孕带来的幸福笑容。"
+										:"你忍不住用手揉了揉鼓起的小腹，脸上挂着微笑，感受着舒服的触感。"));
 							}
-							sb.append(" Having been through all this before, you know that you've still got a way to go before you're ready to give birth."
+							sb.append("你已经经历过一次，所以很清楚距离分娩还有很长一段时间。"
 						+ "</p>");
 			}
 
 			if(target.getBodyMaterial()==BodyMaterial.SLIME) {
 				sb.append("<p>"
-						+ "Clearly visible through the translucent slime which your body is made up of, you see that the "
-						+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" slime core"+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+" growing inside of you have gotten a lot larger..."
+						+ "透过构成你身体的透明粘液，你看到"
+						+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个史莱姆核心在你的体内越长越大了……"
 				+ "</p>");
 			}
 			sb.append("<p style='text-align:center;'>"
-							+ "<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>You're now heavily pregnant!</b>"
+							+ "<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>你进入了妊娠晚期！</b>"
 						+ "</p>");
 			
 			if(breastGrowth) {
 				sb.append("<p><i>"
-							+"Your breasts have swollen and grown larger as your body prepares to start lactating."
-							+ " You now have [style.boldSex([pc.breastSize]"  + (target.getBreastRawSizeValue()>CupSize.AA.getMeasurement()?", "+target.getBreastSize().getCupSizeName()+"-cup":"") + " breasts)]!"
+							+"你的乳房也开始胀大，身体已经准备好泌乳。"
+							+ "你现在有着[style.boldSex([pc.breastSize]"  + (target.getBreastRawSizeValue()>CupSize.AA.getMeasurement()?"的"+target.getBreastSize().getCupSizeName()+"罩杯":"") + "乳房)]！"
 						+ "</i></p>");
 			}
 			if(udderGrowth) {
 				sb.append("<p><i>"
-							+"Your [pc.udders] have swollen and grown larger as your body prepares to start lactating."
-							+ " You now have [style.boldSex([pc.udderSize]"  + (target.getBreastCrotchRawSizeValue()>CupSize.AA.getMeasurement()?", "+target.getBreastCrotchSize().getCupSizeName()+"-cup":"") + " [pc.udders])]!"
+							+"你的[pc.udders]也开始胀大，身体已经准备好泌乳。"
+							+ "你现在拥有了[style.boldSex([pc.udderSize]"  + (target.getBreastCrotchRawSizeValue()>CupSize.AA.getMeasurement()?"的"+target.getBreastCrotchSize().getCupSizeName()+"罩杯":"") + "[pc.udders])]！"
 						+ "</i></p>");
 			}
 			
@@ -4548,20 +4548,20 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect PREGNANT_2 = new AbstractStatusEffect(80,
-			"heavily pregnant",
+			"妊娠晚期",
 			"pregnancy2",
 			PresetColour.GENERIC_ARCANE,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, 4f)),
-			Util.newArrayListOfValues("-10% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-10%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NamePos] stomach has swollen considerably, making it obvious that [npc.sheIs] heavily pregnant."
+						"[npc.NamePos]的肚子高高隆起，很明显[npc.sheIs]已经步入妊娠晚期。"
 							+ (target.getBodyMaterial()==BodyMaterial.SLIME
-								?" Through the [npc.skinColour] [npc.skin] that makes up [npc.her] body, you can see "+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" little slime core"
-									+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+" growing inside of [npc.herHim]..."
-								:" Due to the fact that the arcane accelerates people's pregnancies, [npc.she]'ll move onto the final stage with alarming speed."));
+								?"透过组成[npc.her]身体的[npc.skinColour][npc.skin]，你能看到"+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个微小的史莱姆核心正在"
+									+"[npc.herHim]的体内生长……"
+								:"由于奥术能够加速孕期，[npc.she]很快就能进入最后阶段。"));
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -4602,61 +4602,61 @@ public class StatusEffect {
 			boolean firstTimePregnancy = !((PlayerCharacter) target).isQuestCompleted(QuestLine.SIDE_FIRST_TIME_PREGNANCY);
 			sb.append("<p>");
 				if(target.isTaur()) {
-					sb.append("By now, your [pc.legRace]'s pregnant belly has ballooned out to a massive size, and you can really feel the extra weight in your lower half as you [pc.walk] around.");
+					sb.append("现在，你的[pc.legRace]孕肚已经鼓胀到惊人的尺寸，走动时下半身的额外重量感变得异常明显。");
 				} else {
-					sb.append("By now, your stomach has completely ballooned out in front of you, and you're having to arch your back and support yourself with one hand as you [pc.walk] around.");
+					sb.append("如今你的肚子已经像个气球一般挺在你的身前，你必须要用一只手撑着腰才能[pc.walk]。");
 				}
 				
 				if(target.getBodyMaterial()==BodyMaterial.SLIME) {
-					sb.append(" Clearly visible through the translucent slime which your body is made up of, you see that the "
-								+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" slime core"
-								+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+" growing inside of you "+(target.getPregnantLitter().getTotalLitterCount()==1?"has":"have")
-								+" grown to be just as large as your own, and you know that you're now ready to give birth.");
+					sb.append("透过构成你身体的透明粘液，你看到"
+								+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个史莱姆核心"
+								+"在你的体内"
+								+"大小已经和你自己的相当，你意识到要准备分娩了。");
 					
 				} else if(target.isVaginaEggLayer()) {
-					sb.append(" Although you can feel the hard shells of your clutch of eggs pressing out against the inner walls of your womb, you don't find the sensation to be in any way uncomfortable."
-							+ " If anything, the feeling only seems to be boosting your maternal instincts, and you often catch yourself daydreaming about laying and incubating your eggs.");
+					sb.append("虽然你能感觉到硬质的卵壳正在挤压你的子宫，但并不觉得有任何不适感。"
+							+ "如果说有什么影响的话，这种感觉似乎只会增强你的母性本能，你常常发现自己在幻想着产卵和孵卵。");
 					
 				} else {
 					if(firstTimePregnancy) {
-						sb.append(" Some time in the last couple of hours, you felt a strange rumble in your pregnant bump, and after panicking for a little while, you realised that it was your offspring kicking about in your womb."
-								+ " You keep feeling another kick every now and then, and you know that you're ready to give birth.");
+						sb.append("过去几个小时内，你感觉孕肚中有一阵奇怪的躁动感，慌乱了一会儿后，你反应过来是你的孩子在子宫中闹腾。"
+								+ "时不时还会感觉到自己又被踢了一脚，你意识到要准备分娩了。");
 					} else {
-						sb.append(" Some time in the last couple of hours, you felt a familiar rumble in your pregnant bump, and from experience, you instantly recognised that it was your offspring kicking about in your womb."
-									+ " You keep feeling another kick every now and then, and you know that you're ready to give birth.");
+						sb.append("过去几小时里，你感到孕肚中传来熟悉的胎动，经验告诉你，这是孩子在子宫里踢腾。"
+									+ "时不时还会感觉到自己又被踢了一脚，你意识到要准备分娩了。");
 					}
 				}
 			sb.append("</p>");
 			
 			sb.append("<p>");
 				if(target.hasFetish(Fetish.FETISH_PREGNANCY)) {
-					sb.append("[pc.thought(I really should go and see Lilaya... Or maybe I'll stay like this for a little while!)]");
+					sb.append("[pc.thought(我必须得去找莉莱雅了……或者再这样坚持一小会儿！)]");
 				} else if(target.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()) {
-					sb.append("[pc.thought(Finally! I can go and see Lilaya and get "+(target.getPregnantLitter().getTotalLitterCount()==1?"this brat":"these brats")+" out of me! I <b>hate</b> being pregnant!)]");
+					sb.append("[pc.thought(终于要结束了！我可以去找莉莱雅，把"+(target.getPregnantLitter().getTotalLitterCount()==1?"这个小崽子":"这些小崽子")+"从我身体里弄出来了！我<b>讨厌</b>怀孕！)]");
 				} else {
-					sb.append("[pc.thought(I really should go and see Lilaya...)]");
+					sb.append("[pc.thought(我确实该去找莉莱雅了……)]");
 				}
 			sb.append("</p>");
 			
 			if(lactationIncrease) {
 				sb.append("<p><i>");
 					if(target.isTaur()) {
-						sb.append("Your breasts have gotten noticeably heavier, and as you experimentally grope your chest, you feel droplets of [pc.milk] beading up on your engorged teats.");
+						sb.append("你的乳房明显变得更沉了，当你试探性地揉弄胸口时，能感觉到[pc.milk]的液滴在你肿胀的乳头上凝结成珠。");
 					} else {
-						sb.append("Your breasts have gotten noticeably heavier, and as you softly stroke the round bump in your belly, you feel droplets of [pc.milk] beading up on your engorged teats.");
+						sb.append("你的乳房明显变得更沉了，当你温柔地抚摸腹部圆润的隆起时，能感觉到[pc.milk]的液滴在你肿胀的乳头上凝结成珠。");
 					}
-					sb.append(" You are now able to produce [style.boldSex(" + target.getBreastMilkStorage().getDescriptor() + " [pc.milk] ("+ Units.fluid(target.getBreastRawMilkStorageValue(), Units.UnitType.LONG)+"))]!");
+					sb.append(" 你现在能够分泌[style.boldSex(" + target.getBreastMilkStorage().getDescriptor() + " [pc.milk] ("+ Units.fluid(target.getBreastRawMilkStorageValue(), Units.UnitType.LONG)+"))]!");
 				sb.append("</i></p>");
 			}
 			if(lactationUddersIncrease) {
 				sb.append("<p><i>");
-					sb.append("Your [pc.udders] have gotten noticeably heavier, and as you walk, you feel droplets of [pc.crotchMilk] beading up on your engorged teats."
-							+ " You are now able to produce [style.boldSex(" + target.getBreastMilkStorage().getDescriptor() + " [pc.crotchMilk] ("+ Units.fluid(target.getBreastRawMilkStorageValue(), Units.UnitType.LONG)+"))]!");
+					sb.append("你的[pc.udders]变得格外沉重，在你走路的时候，都能感觉到几滴[pc.crotchMilk]从微微胀起的乳头中流淌出来。"
+							+ "你现在能分泌[style.boldSex(" + target.getBreastMilkStorage().getDescriptor() + "的[pc.crotchMilk]("+ Units.fluid(target.getBreastRawMilkStorageValue(), Units.UnitType.LONG)+"))]！");
 				sb.append("</i></p>");
 			}
 			
 			sb.append("<p style='text-align:center;'>"
-						+ "<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>You're now ready to give birth!</b>" 
+						+ "<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>你已经准备好分娩了！</b>" 
 					+ "</p>");
 			
 			return sb.toString();
@@ -4667,24 +4667,24 @@ public class StatusEffect {
 		}
 	};
 	public static AbstractStatusEffect PREGNANT_3 = new AbstractStatusEffect(80,
-			"ready for birthing",
+			"临盆",
 			"pregnancy3",
 			PresetColour.GENERIC_ARCANE,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, 6f)),
-			Util.newArrayListOfValues("-15% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-15%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
 							(target.isTaur()
-								?"[npc.NamePos] belly has inflated to a colossal size, making it clear to anyone who glances [npc.her] way that [npc.sheIs] ready to give birth."
-								:"[npc.NamePos] belly has inflated to a colossal size, and [npc.sheIs] finding that [npc.sheHasFull] to support [npc.her] back with one hand as [npc.she] [npc.verb(walk)].")
+								?"[npc.NamePos]的肚子已经胀得巨大，只需要朝这边看一眼就知道[npc.sheIs]准备分娩了。"
+								:"[npc.NamePos]的肚子已经胀得巨大，[npc.sheIs]现在必须要用一只手撑着腰才能行走。")
 							+ (target.getBodyMaterial()==BodyMaterial.SLIME
-								?" Through the [npc.skinColour] [npc.skin] that makes up [npc.her] body, you can see "+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+" fully-grown slime core"
-									+(target.getPregnantLitter().getTotalLitterCount()==1?"":"s")+"."
+								?"透过组成[npc.her]身体的[npc.skinColour][npc.skin]，你能看到"+Util.intToString(target.getPregnantLitter().getTotalLitterCount())+"个成熟的史莱姆核心正在"
+									+"[npc.herHim]的体内。"
 								:"")
 							+(target.isPlayer()
-								?" It might be a good idea to visit Lilaya..."
+								?"最好还是去见一下莉莱雅……"
 								:""));
 		}
 		@Override
@@ -4705,7 +4705,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_STOMACH_1 = new AbstractStatusEffect(80,
-			"Egg Incubation (Stomach)",
+			"孵化初期(肚子)",
 			"incubation1",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4714,13 +4714,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.ANUS).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] stomach filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the next stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的腹中填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入下一孵化阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -4731,10 +4731,10 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p>"
-						+ "The weight in your stomach has gotten noticeably heavier, and you can't help but wonder how long it will be before you're ready to lay the eggs which are incubating in your belly..."
+						+ "你感到腹内的重量感明显增长，不禁开始思考还要多久才能生下肚里正在孵化的卵……"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ "[style.boldSex(The eggs in your stomach have grown in size!)]"
+						+ "[style.boldSex(你腹里的卵长大了！)]"
 					+ "</p>");
 			
 			return UtilText.parse(target, sb.toString());
@@ -4750,7 +4750,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_STOMACH_2 = new AbstractStatusEffect(80,
-			"Advanced Egg Incubation (Stomach)",
+			"孵化晚期(肚子)",
 			"incubation2",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4759,13 +4759,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.ANUS).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] stomach filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the final stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的腹中填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入孵化的最终阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -4777,12 +4777,12 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p>"
-						+ "From their significant weight, you're sure that the eggs in your stomach have by now reached full maturity, and could be laid and hatched at any time of your choosing."
+						+ "从明显的重量感来判断，你可以肯定你腹内的卵现在已经完全成熟，可以在你选定的任意时间产卵。"
 					+ "</p>");
 			
 			sb.append("<p style='text-align:center;'>"
-						+ "[style.boldSex(You're now ready to lay the eggs that have been incubating in your stomach!)]"
-						+ "<br/>(To lay your eggs, open your phone's menu and access the 'Eggs' tab.)"
+						+ "[style.boldSex(你已经准备好产下腹中的卵了！)]"
+						+ "<br/>(要产下卵，请打开手机界面，进入“卵”页面。)"
 					+ "</p>");
 			
 			if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_FIRST_TIME_INCUBATION)) {
@@ -4802,7 +4802,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_STOMACH_3 = new AbstractStatusEffect(80,
-			"Completed Egg Incubation (Stomach)",
+			"完全孵化(肚子)",
 			"incubation3",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4811,11 +4811,11 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.ANUS).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "From one of [npc.namePos] sexual encounters, [npc.sheHas] had [npc.her] stomach filled with eggs. Having reached full maturity, they're now ready to be laid and hatched.");
+			return UtilText.parse(target, "在某次性行为后，[npc.namePos]的腹内填满了卵。现在已经完全成熟，可以产下了。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -4834,7 +4834,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_NIPPLES_1 = new AbstractStatusEffect(80,
-			"Egg Incubation (Breasts)",
+			"孵化初期(乳房)",
 			"incubation1",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4843,13 +4843,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.NIPPLE).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] [npc.breasts] filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the next stage of incubation in a matter of days.");
+						"某次性行为后，[npc.namePos]的[npc.breasts]内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入下一孵化阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -4861,10 +4861,10 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "The weight in your chest has gotten noticeably heavier, and you can't help but wonder how long it will be before you're ready to lay the eggs which are incubating in them..."
+						+ "你感到胸部里的重量感明显增长，不禁开始思考还要多久才能生下正在孵化的卵……"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ "[style.boldSex(The eggs in your breasts have grown in size!)]"
+						+ "[style.boldSex(你乳房里的卵长大了！)]"
 					+ "</p>");
 			
 			return UtilText.parse(target, sb.toString());
@@ -4880,7 +4880,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_NIPPLES_2 = new AbstractStatusEffect(80,
-			"Advanced Egg Incubation (Breasts)",
+			"孵化晚期(乳房)",
 			"incubation2",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4889,13 +4889,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.NIPPLE).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] [npc.breasts] filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the final stage of incubation in a matter of days.");
+						"某次性行为后，[npc.namePos]的[npc.breasts]内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入孵化的最终阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -4907,12 +4907,12 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "From their significant weight, you're sure that the eggs in your [npc.breasts] have by now reached full maturity, and could be laid and hatched at any time of your choosing."
+						+ "从明显的重量感来判断，你可以肯定[npc.breasts]里的卵现在已经完全成熟，可以在你选定的任意时间产卵。"
 					+ "</p>");
 			
 			sb.append("<p style='text-align:center;'>"
-						+ "[style.boldSex(You're now ready to lay the eggs that have been incubating in your [npc.breasts]!)]"
-						+ "<br/>(To lay your eggs, open your phone's menu and access the 'Eggs' tab.)"
+						+ "[style.boldSex(你已经准备好产下[npc.breasts]里的卵了！)]"
+						+ "<br/>(要产下卵，请打开手机界面，进入“卵”页面。)"
 					+ "</p>");
 			
 			if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_FIRST_TIME_INCUBATION)) {
@@ -4931,7 +4931,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_NIPPLES_3 = new AbstractStatusEffect(80,
-			"Completed Egg Incubation (Breasts)",
+			"完全孵化(乳房)",
 			"incubation3",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4940,11 +4940,11 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.NIPPLE).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "From one of [npc.namePos] sexual encounters, [npc.sheHas] had [npc.her] [npc.breasts] filled with eggs. Having reached full maturity, they're now ready to be laid and hatched.");
+			return UtilText.parse(target, "在某次性行为后，[npc.namePos]的[npc.breasts]内填满了卵。现在已经完全成熟，可以产下了。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -4963,7 +4963,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_NIPPLES_CROTCH_1 = new AbstractStatusEffect(80,
-			"Egg Incubation (Crotch-boobs)",
+			"孵化初期(胯乳)",
 			"incubation1",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -4972,20 +4972,20 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.NIPPLE_CROTCH).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getName(GameCharacter target) {
 			if(target!=null && target.getBreastCrotchShape()==BreastShape.UDDERS) {
-				return "Egg Incubation (Udders)";
+				return "孵化初期 (腹乳)";
 			}
-			return "Egg Incubation (Crotch-boobs)";
+			return "孵化初期 (胯乳)";
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] [npc.crotchBoobs] filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the next stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的[npc.crotchBoobs]内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入下一孵化阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -4997,10 +4997,10 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "The weight in your [npc.crotchBoobs] has gotten noticeably heavier, and you can't help but wonder how long it will be before you're ready to lay the eggs which are incubating in there..."
+						+ "你感到[npc.crotchBoobs]里的重量感明显增长，不禁开始思考还要多久才能生下正在孵化的卵……"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ "[style.boldSex(The eggs in your [npc.crotchBoobs] have grown in size!)]"
+						+ "[style.boldSex(你[npc.crotchBoobs]里的卵长大了！)]"
 					+ "</p>");
 			
 			return UtilText.parse(target, sb.toString());
@@ -5016,7 +5016,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_NIPPLES_CROTCH_2 = new AbstractStatusEffect(80,
-			"Advanced Egg Incubation (Crotch-boobs)",
+			"孵化晚期(胯乳)",
 			"incubation2",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5025,20 +5025,20 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.NIPPLE_CROTCH).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getName(GameCharacter target) {
 			if(target!=null && target.getBreastCrotchShape()==BreastShape.UDDERS) {
-				return "Advanced Egg Incubation (Udders)";
+				return "孵化晚期 (腹乳)";
 			}
-			return "Advanced Egg Incubation (Crotch-boobs)";
+			return "孵化晚期 (胯乳)";
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] [npc.crotchBoobs] filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the final stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的[npc.crotchBoobs]内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入孵化的最终阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -5050,12 +5050,12 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "From their significant weight, you're sure that the eggs in your [npc.crotchBoobs] have by now reached full maturity, and could be laid and hatched at any time of your choosing."
+						+ "从明显的重量感来判断，你可以肯定[npc.crotchBoobs]里的卵现在已经完全成熟，可以在你选定的任意时间产卵。"
 					+ "</p>");
 			
 			sb.append("<p style='text-align:center;'>"
-						+ "[style.boldSex(You're now ready to lay the eggs that have been incubating in your [npc.crotchBoobs]!)]"
-						+ "<br/>(To lay your eggs, open your phone's menu and access the 'Eggs' tab.)"
+						+ "[style.boldSex(你已经准备好产下[npc.crotchBoobs]里的卵了！)]"
+						+ "<br/>(要产下卵，请打开手机界面，进入“卵”页面。)"
 					+ "</p>");
 			
 			if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_FIRST_TIME_INCUBATION)) {
@@ -5074,7 +5074,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_NIPPLES_CROTCH_3 = new AbstractStatusEffect(80,
-			"Completed Egg Incubation (Crotch-boobs)",
+			"完全孵化(胯乳)",
 			"incubation3",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5083,19 +5083,19 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.NIPPLE_CROTCH).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getName(GameCharacter target) {
 			if(target!=null && target.getBreastCrotchShape()==BreastShape.UDDERS) {
-				return "Completed Egg Incubation (Udders)";
+				return "完全孵化 (腹乳)";
 			}
-			return "Completed Egg Incubation (Crotch-boobs)";
+			return "完全孵化 (胯乳)";
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"From one of [npc.namePos] sexual encounters, [npc.sheHas] had [npc.her] [npc.crotchBoobs] filled with eggs. Having reached full maturity, they're now ready to be laid and hatched.");
+					"在某次性行为后，[npc.namePos]的[npc.crotchBoobs]里填满了卵。现在已经完全成熟，可以产下了。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5114,7 +5114,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect INCUBATING_EGGS_SPINNERET_1 = new AbstractStatusEffect(80,
-			"Egg Incubation (Spinneret)",
+			"孵化初期(丝囊)",
 			"incubation1",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5123,13 +5123,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.SPINNERET).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] [npc.spinneret] filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the next stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的[npc.spinneret]内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入下一孵化阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -5141,10 +5141,10 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "The weight in your [npc.spinneret] has gotten noticeably heavier, and you can't help but wonder how long it will be before you're ready to lay the eggs which are incubating in there..."
+						+ "你感到[npc.spinneret]里的重量感明显增长，不禁开始思考还要多久才能生下正在孵化的卵……"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ "[style.boldSex(The eggs in your [npc.spinneret] have grown in size!)]"
+						+ "[style.boldSex(你[npc.spinneret]里的卵长大了！)]"
 					+ "</p>");
 			
 			return UtilText.parse(target, sb.toString());
@@ -5160,7 +5160,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_SPINNERET_2 = new AbstractStatusEffect(80,
-			"Advanced Egg Incubation (Spinneret)",
+			"孵化晚期(丝囊)",
 			"incubation2",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5169,13 +5169,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.SPINNERET).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] [npc.spinneret] filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the final stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的[npc.spinneret]内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入孵化的最终阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -5187,12 +5187,12 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "From their significant weight, you're sure that the eggs in your [npc.spinneret] have by now reached full maturity, and could be laid and hatched at any time of your choosing."
+						+ "从明显的重量感来判断，你可以肯定[npc.spinneret]里的卵现在已经完全成熟，可以在你选定的任意时间产卵。"
 					+ "</p>");
 			
 			sb.append("<p style='text-align:center;'>"
-						+ "[style.boldSex(You're now ready to lay the eggs that have been incubating in your [npc.spinneret]!)]"
-						+ "<br/>(To lay your eggs, open your phone's menu and access the 'Eggs' tab.)"
+						+ "[style.boldSex(你已经准备好产下[npc.spinneret]里的卵了！)]"
+						+ "<br/>(要产下卵，请打开手机界面，进入“卵”页面。)"
 					+ "</p>");
 			
 			if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_FIRST_TIME_INCUBATION)) {
@@ -5211,7 +5211,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_SPINNERET_3 = new AbstractStatusEffect(80,
-			"Completed Egg Incubation (Spinneret)",
+			"完全孵化(丝囊)",
 			"incubation3",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5220,12 +5220,12 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.SPINNERET).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"From one of [npc.namePos] sexual encounters, [npc.sheHas] had [npc.her] [npc.spinneret] filled with eggs. Having reached full maturity, they're now ready to be laid and hatched.");
+					"在某次性行为后，[npc.namePos]的[npc.spinneret]里填满了卵。现在已经完全成熟，可以产下了。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5244,7 +5244,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect INCUBATING_EGGS_WOMB_1 = new AbstractStatusEffect(80,
-			"Egg Incubation (Womb)",
+			"孵化初期(子宫)",
 			"incubation1",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5253,13 +5253,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.VAGINA).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] womb filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the next stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的子宫内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入下一孵化阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -5271,10 +5271,10 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "The weight in your womb has gotten noticeably heavier, and you can't help but wonder how long it will be before you're ready to lay the eggs which are incubating in there..."
+						+ "你感到子宫里的重量感明显增长，不禁开始思考还要多久才能生下正在孵化的卵……"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ "[style.boldSex(The eggs in your womb have grown in size!)]"
+						+ "[style.boldSex(你穴里的卵长大了！)]"
 					+ "</p>");
 			
 			return UtilText.parse(target, sb.toString());
@@ -5290,7 +5290,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_WOMB_2 = new AbstractStatusEffect(80,
-			"Advanced Egg Incubation (Womb)",
+			"孵化晚期(子宫)",
 			"incubation2",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5299,13 +5299,13 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.VAGINA).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"From one of [npc.namePos] recent sexual encounters, [npc.sheHas] had [npc.her] womb filled with eggs!"
-							+ " Thanks to the effects of the arcane, these eggs are sure to rapidly mature and advance to the final stage of incubation in a matter of days.");
+						"在某次性行为后，[npc.namePos]的子宫内填满了卵！"
+							+ "由于奥术效果，这些卵会迅速成熟，并在几天内进入孵化的最终阶段。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -5317,12 +5317,12 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append("<p>"
-						+ "From their significant weight, you're sure that the eggs in your womb have by now reached full maturity, and could be laid and hatched at any time of your choosing."
+						+ "从明显的重量感来判断，你可以肯定子宫里的卵现在已经完全成熟，可以在你选定的任意时间产卵。"
 					+ "</p>");
 			
 			sb.append("<p style='text-align:center;'>"
-						+ "[style.boldSex(You're now ready to lay the eggs that have been incubating in your womb!)]"
-						+ "<br/>(To lay your eggs, open your phone's menu and access the 'Eggs' tab.)"
+						+ "[style.boldSex(你已经准备好产下子宫里的卵了！)]"
+						+ "<br/>(要产下卵，请打开手机界面，进入“卵”页面。)"
 					+ "</p>");
 			
 			if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_FIRST_TIME_INCUBATION)) {
@@ -5341,7 +5341,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect INCUBATING_EGGS_WOMB_3 = new AbstractStatusEffect(80,
-			"Completed Egg Incubation (Womb)",
+			"完全孵化(子宫)",
 			"incubation3",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -5350,11 +5350,11 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			int count = target.getIncubationLitter(SexAreaOrifice.VAGINA).getTotalLitterCount();
-			return Util.newArrayListOfValues("[style.colourYellowLight(Incubating)] [style.colourGood("+Util.intToString(count)+")] [style.colourYellowLight(egg"+(count>1?"s":"")+")]");
+			return Util.newArrayListOfValues("[style.colourYellowLight(正在孵化)][style.colourGood("+Util.intToString(count)+")]颗[style.colourYellowLight(卵)]");
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "From one of [npc.namePos] sexual encounters, [npc.sheHas] had [npc.her] womb filled with eggs. Having reached full maturity, they're now ready to be laid and hatched.");
+			return UtilText.parse(target, "在某次性行为后，[npc.namePos]的子宫里填满了卵。现在已经完全成熟，可以产下了。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5373,7 +5373,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect VIXENS_VIRILITY = new AbstractStatusEffect(80,
-			"pharmaceutical fertility",
+			"助孕药物",
 			"vixensVirility",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5382,7 +5382,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "After consuming a '[#ITEM_innoxia_pills_fertility.getName(false)]', [npc.namePos] fertility and virility have been temporarily boosted.");
+			return UtilText.parse(target, "在吸收了“[#ITEM_innoxia_pills_fertility.getName(false)]”后，[npc.namePos]的生育力和生殖力被暂时强化了。");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -5391,7 +5391,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect PROMISCUITY_PILL = new AbstractStatusEffect(80,
-			"pharmaceutical sterility",
+			"避孕药物",
 			"promiscuityPill",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5401,8 +5401,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "After consuming a '[#ITEM_innoxia_pills_sterility.getName(false)]', [npc.namePos] fertility and virility have been greatly reduced."
-							+ " This is a <b>preventative</b> measure, and will not alter the outcome of any unprotected sex [npc.she] had before taking the pill!");
+			return UtilText.parse(target, "在吸收了“[#ITEM_innoxia_pills_sterility.getName(false)]”后，[npc.namePos]的生育力和生殖力被暂时大幅削弱了。"
+							+ "这是一项<b>预防</b>措施，不会改变[npc.she]在服药前进行的任意无保护措施的性行为的结果！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -5411,7 +5411,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect PROMISCUITY_PILL_PROLOGUE = new AbstractStatusEffect(80,
-			"On the pill",
+			"避孕药起效",
 			"promiscuityPill",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5420,7 +5420,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] under the effects of a combined oral contraceptive pill, and so is unable to get pregnant.");
+			return UtilText.parse(target, "[npc.NameIsFull]正在服用复合口服避孕药，因此不会怀孕。");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -5429,7 +5429,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect BROODMOTHER_PILL = new AbstractStatusEffect(80,
-			"pharmaceutical hyper-fertility",
+			"超级助孕药物",
 			"broodmother_pill",
 			PresetColour.CLOTHING_PINK,
 			true,
@@ -5437,12 +5437,12 @@ public class StatusEffect {
 					new Value<>(Attribute.FERTILITY, 100f),
 					new Value<>(Attribute.VIRILITY, 100f)),
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(Doubles)] offspring conceived")) {
+					"孕育的后代数量[style.colourExcellent(翻倍)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"After consuming a '[#ITEM_innoxia_pills_broodmother.getName(false)]', [npc.namePos] fertility and virility have been temporarily boosted,"
-							+ " and if [npc.she] impregnates someone or becomes impregnated [npc.herself], [npc.she] will conceive far more offspring than usual!");
+					"在吸收了“[#ITEM_innoxia_pills_broodmother.getName(false)]”后，[npc.namePos]的生育力和生殖力被暂时强化了，"
+							+ "如果[npc.she]让别人怀孕或[npc.herself]怀孕，会怀上比平时多得多的后代！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -5451,7 +5451,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect LUBE_PILL = new AbstractStatusEffect(80,
-			"lubricated body",
+			"润滑过的身体",
 			"lube_pill",
 			PresetColour.WETNESS,
 			PresetColour.GENERIC_EXCELLENT,
@@ -5460,18 +5460,18 @@ public class StatusEffect {
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.RESTING_LUST, 5f)),
 			Util.newArrayListOfValues(
-					"[style.colourSex(During sex:)]",
-					"[style.colourWetness(Instantly lubricates)] orifices",
-					"[style.colourWetness(Instantly produces)] precum")) {
+					"[style.colourSex(在性爱中：)]",
+					"[style.colourWetness(立刻润滑)]腔穴",
+					"[style.colourWetness(立即产生)]先走液")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
 			
-			sb.append("[npc.NameHasFull] consumed a '[#ITEM_innoxia_pills_lubrication.getName(false)]', and now during sexual situations ");
+			sb.append("[npc.NameHasFull]服下了一粒“[#ITEM_innoxia_pills_lubrication.getName(false)]”，现在在性爱过程中");
 			if(target.hasPenisIgnoreDildo()) {
-				sb.append("[npc.her] cock will instantly start producing precum, while [npc.her] orifices will drip with natural lubrication.");
+				sb.append("[npc.her]的肉棒会立刻分泌出先走液，而腔穴则会渗出天然润滑液。");
 			} else {
-				sb.append("[npc.her] orifices will drip with natural lubrication.");
+				sb.append("[npc.her]的腔穴会渗出天然润滑液。");
 			}
 			
 			return UtilText.parse(target, sb.toString());
@@ -5483,7 +5483,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CUM_PRODUCTION = new AbstractStatusEffect(80,
-			"Cum Production",
+			"产生精液",
 			"cumProduction",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5498,8 +5498,8 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			float cumRegenRate = target.getCumRegenerationPerSecond()*60;
 			
-			return UtilText.parse(target, "[npc.NamePos] balls are currently producing more [npc.cum], at a rate of "+Units.fluid(cumRegenRate)+"/minute."
-					+ " They have stored "+Units.fluid(target.getPenisRawStoredCumValue())+", out of a maximum of "+Units.fluid(target.getPenisRawCumStorageValue())+".");
+			return UtilText.parse(target, "[npc.NamePos]的[npc.balls]正分泌着更多的[npc.cum]，分泌速度为"+Units.fluid(cumRegenRate)+"/分钟。"
+					+ "目前积蓄了"+Units.fluid(target.getPenisRawStoredCumValue())+"，上限为"+Units.fluid(target.getPenisRawCumStorageValue())+"。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5516,7 +5516,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect CUM_FULL = new AbstractStatusEffect(80,
-			"Full Balls",
+			"满载",
 			"cumFull",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5530,9 +5530,9 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			float cumRegenRate = target.getCumRegenerationPerSecond()*60;
 			
-			return UtilText.parse(target, "[npc.NamePos] balls are completely filled with [npc.cum] ("+Units.fluid(target.getPenisRawCumStorageValue())+"),"
-					+ " and [npc.she] can't wait until the next time [npc.sheIs] able to empty them."
-					+ " [npc.She] will ejaculate "+Units.fluid(target.getPenisRawOrgasmCumQuantity())+" upon orgasm, and will then regenerate [npc.cum] at a rate of "+Units.fluid(cumRegenRate)+"/minute.");
+			return UtilText.parse(target, "[npc.NamePos]的[npc.balls]充满了[npc.cum]("+Units.fluid(target.getPenisRawCumStorageValue())+")，"
+					+ "[npc.she]已经等不及要在下一次尽情射空了。"
+					+ "[npc.She]会在高潮时射出"+Units.fluid(target.getPenisRawOrgasmCumQuantity())+"，并以"+Units.fluid(cumRegenRate)+"/分钟的速率重新分泌[npc.cum]。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5549,7 +5549,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect MILK_PRODUCTION = new AbstractStatusEffect(80,
-			"Milk Production",
+			"分泌乳汁",
 			"milkProduction",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5565,9 +5565,9 @@ public class StatusEffect {
 			float milkRegenRate = target.getLactationRegenerationPerSecond(false) * 60;
 
 			return UtilText.parse(target,
-					"[npc.NamePos] breasts are producing [npc.milk] at an individual rate of "+Units.fluid(milkRegenRate)+"/minute,"
-							+ " totalling [style.colourGood("+Units.fluid(milkRegenRate * target.getBreastRows() * 2)+"/minute)] (as [npc.sheHasFull] [npc.totalBreasts] breasts)."
-					+ " They have stored "+Units.fluid(target.getBreastRawStoredMilkValue())+", out of a maximum of "+Units.fluid(target.getBreastRawMilkStorageValue())+".");
+					"[npc.NamePos]的乳房正在以"+Units.fluid(milkRegenRate)+"/分钟的速率分泌着[npc.milk]，"
+							+ "总量为[style.colourGood("+Units.fluid(milkRegenRate * target.getBreastRows() * 2)+"/分钟)] ([npc.sheHasFull]的[npc.totalBreasts]乳房)。"
+					+ "目前积蓄了"+Units.fluid(target.getBreastRawStoredMilkValue())+"，上限为"+Units.fluid(target.getBreastRawMilkStorageValue())+"。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5580,7 +5580,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect MILK_FULL = new AbstractStatusEffect(80,
-			"Full Breasts",
+			"乳房胀满",
 			"milkFull",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5595,9 +5595,9 @@ public class StatusEffect {
 			float milkRegenRate = target.getLactationRegenerationPerSecond(false) * 60;
 			//milkRegenRate+" |"+
 			return UtilText.parse(target,
-					"[npc.NamePos] [npc.breasts] are filled with "+Units.fluid(target.getBreastRawMilkStorageValue())+" of [npc.milk].<br/>"
-						+ "They produce more [npc.milk] at an individual rate of "+Units.fluid(milkRegenRate)+"/minute,"
-						+ " totalling [style.colourGood("+Units.fluid(milkRegenRate * target.getBreastRows() * 2)+"/minute)] (as [npc.sheHasFull] [npc.totalBreasts] breasts).");
+					"[npc.NamePos]的[npc.breasts]充满了"+Units.fluid(target.getBreastRawMilkStorageValue())+"的[npc.milk]。<br/>"
+						+ "正在以"+Units.fluid(milkRegenRate)+"/分钟的速率分泌着[npc.milk]，"
+						+ "总量为[style.colourGood("+Units.fluid(milkRegenRate * target.getBreastRows() * 2)+"/分钟)] ([npc.sheHasFull]的[npc.totalBreasts]乳房)。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5611,7 +5611,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect MILK_CROTCH_PRODUCTION = new AbstractStatusEffect(80,
-			"Crotch-boob Milk Production",
+			"分泌胯乳乳汁",
 			"milkCrotchProduction",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5622,7 +5622,7 @@ public class StatusEffect {
 			if(target==null) {
 				return super.getName(target);
 			}
-			return UtilText.parse(target, "[npc.CrotchBoob] Milk Production");
+			return UtilText.parse(target, "[npc.CrotchBoob]乳汁分泌");
 		}
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
@@ -5634,9 +5634,9 @@ public class StatusEffect {
 			float milkRegenRate = target.getCrotchLactationRegenerationPerSecond(false) * 60;
 			
 			return UtilText.parse(target,
-					"[npc.NamePos] [npc.crotchBoobs] are producing [npc.crotchMilk] at an individual rate of "+Units.fluid(milkRegenRate)+"/minute,"
-							+ " totalling [style.colourGood("+Units.fluid(milkRegenRate * Math.max(1, target.getBreastCrotchRows()*2))+"/minute)] (as [npc.sheHasFull] [npc.totalCrotchBoobs] [npc.crotchBoobs])."
-					+ " They have stored "+Units.fluid(target.getBreastCrotchRawStoredMilkValue())+", out of a maximum of "+Units.fluid(target.getBreastCrotchRawMilkStorageValue())+".");
+					"[npc.NamePos]的[npc.crotchBoobs]正在以"+Units.fluid(milkRegenRate)+"/分钟的速率分泌着[npc.crotchMilk]，"
+							+ "总量为[style.colourGood("+Units.fluid(milkRegenRate * Math.max(1, target.getBreastCrotchRows()*2))+"/分钟)] ([npc.sheHasFull]的[npc.totalCrotchBoobs][npc.crotchBoobs])。"
+					+ "目前积蓄了"+Units.fluid(target.getBreastCrotchRawStoredMilkValue())+"，上限为"+Units.fluid(target.getBreastCrotchRawMilkStorageValue())+"。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5651,7 +5651,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect MILK_CROTCH_FULL = new AbstractStatusEffect(80,
-			"Full Crotch-boobs",
+			"胯乳胀满",
 			"milkCrotchFull",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -5662,7 +5662,7 @@ public class StatusEffect {
 			if(target==null) {
 				return super.getName(target);
 			}
-			return UtilText.parse(target, "Full [npc.CrotchBoobs]");
+			return UtilText.parse(target, "装满的[npc.CrotchBoobs]");
 		}
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
@@ -5673,9 +5673,9 @@ public class StatusEffect {
 			float milkRegenRate = target.getCrotchLactationRegenerationPerSecond(false) * 60;
 		
 			return UtilText.parse(target,
-					"[npc.NamePos] [npc.crotchBoobs] are filled with "+Units.fluid(target.getBreastCrotchRawMilkStorageValue())+" of [npc.crotchMilk].<br/>"
-							+ " They produce more [npc.crotchMilk] at an individual rate of "+Units.fluid(milkRegenRate)+"/minute,"
-							+ " totalling [style.colourGood("+Units.fluid(milkRegenRate * Math.max(1, target.getBreastCrotchRows()*2))+"/minute)] (as [npc.sheHasFull] [npc.totalCrotchBoobs] [npc.crotchBoobs]).");
+					"[npc.NamePos]的[npc.crotchBoobs]充满了"+Units.fluid(target.getBreastCrotchRawMilkStorageValue())+"[npc.crotchMilk]。<br/>"
+							+ "正在以"+Units.fluid(milkRegenRate)+"/分钟的速率分泌着[npc.crotchMilk]，"
+							+ "总量为[style.colourGood("+Units.fluid(milkRegenRate * Math.max(1, target.getBreastCrotchRows()*2))+"/分钟)] ([npc.sheHasFull]的[npc.totalCrotchBoobs][npc.crotchBoobs])。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -5690,7 +5690,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect STRETCHING_ORIFICE = new AbstractStatusEffect(80,
-			"Big Toys",
+			"玩具过大",
 			"sexEffects/combinationStretching",
 			PresetColour.BASE_MAGENTA,
 			false,
@@ -5749,10 +5749,10 @@ public class StatusEffect {
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> effects = new ArrayList<>();
 			
-			Map<SexAreaOrifice, String> orifices = Util.newHashMapOfValues(new Value<>(SexAreaOrifice.VAGINA, "[style.boldVagina(Vagina)]:"),
-					new Value<>(SexAreaOrifice.ANUS, "[style.boldAsshole(Asshole)]:"),
-					new Value<>(SexAreaOrifice.MOUTH, "[style.boldMouth(Throat)]:"),
-					new Value<>(SexAreaOrifice.NIPPLE, "[style.boldNipple(Nipples)]:"));
+			Map<SexAreaOrifice, String> orifices = Util.newHashMapOfValues(new Value<>(SexAreaOrifice.VAGINA, "[style.boldVagina(阴道)]:"),
+					new Value<>(SexAreaOrifice.ANUS, "[style.boldAsshole(后穴)]:"),
+					new Value<>(SexAreaOrifice.MOUTH, "[style.boldMouth(喉咙)]:"),
+					new Value<>(SexAreaOrifice.NIPPLE, "[style.boldNipple(奶头)]:"));
 			List<SexAreaOrifice> orificesFound = new ArrayList<>();
 			for(Entry<SexAreaOrifice, String> orifice : orifices.entrySet()) {
 				if(target.getSexToyOrificeStretching().containsKey(orifice.getKey())) {
@@ -5762,14 +5762,14 @@ public class StatusEffect {
 					float diameter = Penis.getGenericDiameter(length, girth);
 					
 					effects.add(orifice.getValue());
-					effects.add("[style.boldBad(Stretching)] up to [style.boldPinkLight("+Units.size(diameter)+")]");
+					effects.add("[style.boldBad(扩张)]至[style.boldPinkLight("+Units.size(diameter)+")]");
 					orificesFound.add(orifice.getKey());
 				}
 				if(target.getSexToyOrificePreventingStretchRecovery().containsKey(orifice.getKey())) {
 					if(!orificesFound.contains(orifice.getKey())) {
 						effects.add(orifice.getValue());
 					}
-					effects.add("[style.boldMinorBad(Preventing)] [style.boldPinkLight(stretch recovery)]");
+					effects.add("[style.boldMinorBad(阻止)][style.boldPinkLight(扩张恢复)]");
 					orificesFound.add(orifice.getKey());
 				}
 				if(target.getSexToyOrificeTooDeep().containsKey(orifice.getKey())) {
@@ -5778,7 +5778,7 @@ public class StatusEffect {
 					if(!orificesFound.contains(orifice.getKey())) {
 						effects.add(orifice.getValue());
 					}
-					effects.add("[style.boldTerrible(Too deep)] at [style.boldPinkLight("+Units.size(length)+")]");
+					effects.add("[style.boldPinkLight("+Units.size(length)+")][style.boldTerrible(太深)]");
 				}
 			}
 			
@@ -5849,28 +5849,28 @@ public class StatusEffect {
 			boolean needBreak = false;
 			if(!target.getSexToyOrificeStretching().isEmpty()) {
 				boolean singular = target.getSexToyOrificeStretching().size()==1;
-				descriptionSB.append("[npc.NamePos] "+(singular?"sex toy is":"sex toys are")+" too big for [npc.herHim], and as a result, [npc.her] "
-						+Util.stringsToStringList(stretching, false)+(singular?" is":" are")+" being [style.colourBad(stretched out)]!");
+				descriptionSB.append("[npc.NamePos]的性玩具太大了，因而导致[npc.her]的"
+						+Util.stringsToStringList(stretching, false)+"正在被[style.colourBad(扩张)]！");
 				needBreak = true;
 			}
 			
 			if(!target.getSexToyOrificePreventingStretchRecovery().isEmpty()) {
 				if(needBreak) {
-					descriptionSB.append(" ");
+					descriptionSB.append("");
 				}
 				boolean singular = target.getSexToyOrificePreventingStretchRecovery().size()==1;
-				descriptionSB.append("[npc.NamePos] "+(singular?"sex toy is":"sex toys are")+" preventing [npc.her] [style.colourMinorBad(stretched)] " +Util.stringsToStringList(preventingRecovery, false)+" from recovering!");
+				descriptionSB.append("[npc.NamePos]的性玩具正在阻止[npc.her][style.colourMinorBad(被扩张的)]" +Util.stringsToStringList(preventingRecovery, false)+"恢复！");
 				needBreak = true;
 			}
 			
 			if(Main.game.isPenetrationLimitationsEnabled()) {
 				if(!target.getSexToyOrificeTooDeep().isEmpty()) {
 					if(needBreak) {
-						descriptionSB.append(" ");
+						descriptionSB.append("");
 					}
 					boolean singular = target.getSexToyOrificeTooDeep().size()==1;
-					descriptionSB.append((singular?"The sex toy":"The sex toys")+" inserted in [npc.namePos] "
-							+Util.stringsToStringList(tooDeep, false)+(singular?" is":" are")+" [style.colourTerrible(uncomfortably deep)]!");
+					descriptionSB.append("插入[npc.namePos]"
+							+Util.stringsToStringList(tooDeep, false)+"的性玩具[style.colourTerrible(太深了，造成了不适)]！");
 				}
 			}
 			
@@ -5894,7 +5894,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect RECOVERING_ORIFICE = new AbstractStatusEffect(80,
-			"Recovering Vagina",
+			"阴道恢复",
 			"recoveringOrifice",
 			PresetColour.GENERIC_SEX,
 			false,
@@ -5906,46 +5906,46 @@ public class StatusEffect {
 			StringBuilder sb = new StringBuilder();
 			
 			if(Main.game.isInSex()) {
-				sb.append("Stretched");
+				sb.append("被扩张");
 			} else {
-				sb.append("Recovering");
+				sb.append("恢复中");
 			}
 			
 			if (target.hasVagina() && target.getVaginaRawCapacityValue()!=target.getVaginaStretchedCapacity()){
-				sb.append(" Vagina");
+				sb.append("阴部");
 				i++;
 			}
 			if (target.getAssRawCapacityValue()!=target.getAssStretchedCapacity()){
-				sb.append(" Anus");
+				sb.append("肛门");
 				i++;
 			}
 			if (target.getNippleRawCapacityValue()!=target.getNippleStretchedCapacity()){
-				sb.append(" Nipples");
+				sb.append("乳头");
 				i++;
 			}
 			if (target.hasBreastsCrotch()
 					&& target.getNippleCrotchRawCapacityValue()!=target.getNippleCrotchStretchedCapacity()){
-				sb.append(" Crotch Nipples");
+				sb.append("胯乳乳头");
 				i++;
 			}
 			if (target.hasPenis() && target.getPenisRawCapacityValue()!=target.getPenisStretchedCapacity()){
-				sb.append(" Penile Urethra");
+				sb.append("阴茎尿道");
 				i++;
 			}
 			if (target.hasVagina() && target.getVaginaUrethraRawCapacityValue()!=target.getVaginaUrethraStretchedCapacity()){
-				sb.append(" Vaginal Urethra");
+				sb.append("阴道尿道");
 				i++;
 			}
 			if (target.getFaceRawCapacityValue()!=target.getFaceStretchedCapacity()){
-				sb.append(" Throat");
+				sb.append("喉咙");
 				i++;
 			}
 			
 			if(i>1) {
 				if(Main.game.isInSex()) {
-					return "Stretched Orifices";
+					return "被扩张的腔穴";
 				} else {
-					return "Recovering Orifices";
+					return "恢复中的腔穴";
 				}
 			} else {
 				return sb.toString();
@@ -6017,9 +6017,9 @@ public class StatusEffect {
 			int minutes = (int) (1/recoveryModifier)/60;
 			int hours = minutes /60;
 			
-			return "Tightens "+Units.size(1)+" every "+(hours>=1
-						?(hours)+" hour"+(hours==1?"":"s")+(minutes%60>0?" and "+(minutes%60)+" minute"+(minutes==1?"":"s"):"")
-						:(minutes )+" minute"+(minutes==1?"":"s"));
+			return "回缩"+Units.size(1)+"每"+(hours>=1
+						?(hours)+"时"+(minutes%60>0?"和"+(minutes%60)+"分":"")
+						:(minutes )+"分");
 		}
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
@@ -6028,65 +6028,65 @@ public class StatusEffect {
 			Set<SexAreaOrifice> stretchRecoveryPrevention = new HashSet<>(target.getSexToyOrificePreventingStretchRecovery().keySet());
 			stretchRecoveryPrevention.addAll(target.getSexToyOrificeStretching().keySet());
 			
-			String recoveringText = "recovering";
-			String from1 = "From";
-			String from2 = "to";
+			String recoveringText = "恢复";
+			String from1 = "自";
+			String from2 = "至";
 			
 			if(Main.game.isInSex()) {
-				recoveringText = "stretched";
-				from1 = "To";
-				from2 = "from";
+				recoveringText = "被扩张";
+				from1 = "自";
+				from2 = "至";
 			}
 			
 			if (target.hasVagina() && target.getVaginaRawCapacityValue()!=target.getVaginaStretchedCapacity()){
-				recoveringEffects.add("[style.boldVagina(Vagina "+recoveringText+":)]");
-				recoveringEffects.add(from1+" [style.boldBad("+Units.size(target.getVaginaStretchedCapacity())+")] "+from2+" [style.boldGood("+Units.size(target.getVaginaRawCapacityValue())+")]");
+				recoveringEffects.add("[style.boldVagina(阴道"+recoveringText+":)]");
+				recoveringEffects.add(from1+"[style.boldBad("+Units.size(target.getVaginaStretchedCapacity())+")]"+from2+"[style.boldGood("+Units.size(target.getVaginaRawCapacityValue())+")]");
 				if(stretchRecoveryPrevention.contains(SexAreaOrifice.VAGINA)) {
-					recoveringEffects.add("[style.boldBad(Sex toy preventing recovery!)]");
+					recoveringEffects.add("[style.boldBad(性玩具阻止了恢复！)]");
 				} else {
 					recoveringEffects.add("[style.boldPlasticity("+getRecoveryText(target.getVaginaPlasticity().getRecoveryModifier())+")]");
 				}
 			}
 			if (target.getAssRawCapacityValue()!=target.getAssStretchedCapacity()){
-				recoveringEffects.add("[style.boldAsshole(Asshole "+recoveringText+":)]");
-				recoveringEffects.add(from1+" [style.boldBad("+Units.size(target.getAssStretchedCapacity())+")] "+from2+" [style.boldGood("+Units.size(target.getAssRawCapacityValue())+")]");
+				recoveringEffects.add("[style.boldAsshole(肛门"+recoveringText+":)]");
+				recoveringEffects.add(from1+"[style.boldBad("+Units.size(target.getAssStretchedCapacity())+")]"+from2+"[style.boldGood("+Units.size(target.getAssRawCapacityValue())+")]");
 				if(stretchRecoveryPrevention.contains(SexAreaOrifice.ANUS)) {
-					recoveringEffects.add("[style.boldBad(Sex toy preventing recovery!)]");
+					recoveringEffects.add("[style.boldBad(性玩具阻止了恢复！)]");
 				} else {
 					recoveringEffects.add("[style.boldPlasticity("+getRecoveryText(target.getAssPlasticity().getRecoveryModifier())+")]");
 				}
 			}
 			if (target.getNippleRawCapacityValue()!=target.getNippleStretchedCapacity()){
-				recoveringEffects.add("[style.boldNipples(Nipples "+recoveringText+":)]");
-				recoveringEffects.add(from1+" [style.boldBad("+Units.size(target.getNippleStretchedCapacity())+")] "+from2+" [style.boldGood("+Units.size(target.getNippleRawCapacityValue())+")]");
+				recoveringEffects.add("[style.boldNipples(乳头"+recoveringText+":)]");
+				recoveringEffects.add(from1+"[style.boldBad("+Units.size(target.getNippleStretchedCapacity())+")]"+from2+"[style.boldGood("+Units.size(target.getNippleRawCapacityValue())+")]");
 				if(stretchRecoveryPrevention.contains(SexAreaOrifice.NIPPLE)) {
-					recoveringEffects.add("[style.boldBad(Sex toy preventing recovery!)]");
+					recoveringEffects.add("[style.boldBad(性玩具阻止了恢复！)]");
 				} else {
 					recoveringEffects.add("[style.boldPlasticity("+getRecoveryText(target.getNipplePlasticity().getRecoveryModifier())+")]");
 				}
 			}
 			if (target.getFaceRawCapacityValue()!=target.getFaceStretchedCapacity()){
-				recoveringEffects.add("[style.boldMouth(Throat "+recoveringText+":)]");
-				recoveringEffects.add(from1+" [style.boldBad("+Units.size(target.getFaceStretchedCapacity())+")] "+from2+" [style.boldGood("+Units.size(target.getFaceRawCapacityValue())+")]");
+				recoveringEffects.add("[style.boldMouth(喉咙"+recoveringText+":)]");
+				recoveringEffects.add(from1+"[style.boldBad("+Units.size(target.getFaceStretchedCapacity())+")]"+from2+"[style.boldGood("+Units.size(target.getFaceRawCapacityValue())+")]");
 				if(stretchRecoveryPrevention.contains(SexAreaOrifice.MOUTH)) {
-					recoveringEffects.add("[style.boldBad(Sex toy preventing recovery!)]");
+					recoveringEffects.add("[style.boldBad(性玩具阻止了恢复！)]");
 				} else {
 					recoveringEffects.add("[style.boldPlasticity("+getRecoveryText(target.getFacePlasticity().getRecoveryModifier())+")]");
 				}
 			}
 			if (target.hasBreastsCrotch() && target.hasBreastsCrotch() && target.getNippleCrotchRawCapacityValue()!=target.getNippleCrotchStretchedCapacity()){
-				recoveringEffects.add("[style.boldNipplesCrotch(Crotch nipples "+recoveringText+":)]");
-				recoveringEffects.add(from1+" [style.boldBad("+Units.size(target.getNippleCrotchStretchedCapacity())+")] "+from2+" [style.boldGood("+Units.size(target.getNippleCrotchRawCapacityValue())+")]");
+				recoveringEffects.add("[style.boldNipplesCrotch(胯乳乳头"+recoveringText+"：)]");
+				recoveringEffects.add(from1+"[style.boldBad("+Units.size(target.getNippleCrotchStretchedCapacity())+")]"+from2+"[style.boldGood("+Units.size(target.getNippleCrotchRawCapacityValue())+")]");
 				recoveringEffects.add("[style.boldPlasticity("+getRecoveryText(target.getNippleCrotchPlasticity().getRecoveryModifier())+")]");
 			}
 			if (target.hasPenis() && target.getPenisRawCapacityValue()!=target.getPenisStretchedCapacity()){
-				recoveringEffects.add("[style.boldPenisUrethra(Penile Urethra "+recoveringText+":)]");
-				recoveringEffects.add(from1+" [style.boldBad("+Units.size(target.getPenisStretchedCapacity())+")] "+from2+" [style.boldGood("+Units.size(target.getPenisRawCapacityValue())+")]");
+				recoveringEffects.add("[style.boldPenisUrethra(阴茎尿道"+recoveringText+"：)]");
+				recoveringEffects.add(from1+"[style.boldBad("+Units.size(target.getPenisStretchedCapacity())+")] "+from2+"[style.boldGood("+Units.size(target.getPenisRawCapacityValue())+")]");
 				recoveringEffects.add("[style.boldPlasticity("+getRecoveryText(target.getUrethraPlasticity().getRecoveryModifier())+")]");
 			}
 			if (target.hasVagina() && target.getVaginaUrethraRawCapacityValue()!=target.getVaginaUrethraStretchedCapacity()){
-				recoveringEffects.add("[style.boldVaginaUrethra(Vaginal Urethra "+recoveringText+":)]");
-				recoveringEffects.add(from1+" [style.boldBad("+Units.size(target.getVaginaUrethraStretchedCapacity())+")] "+from2+" [style.boldGood("+Units.size(target.getVaginaUrethraRawCapacityValue())+")]");
+				recoveringEffects.add("[style.boldVaginaUrethra(阴道尿道"+recoveringText+"：)]");
+				recoveringEffects.add(from1+"[style.boldBad("+Units.size(target.getVaginaUrethraStretchedCapacity())+")] "+from2+"[style.boldGood("+Units.size(target.getVaginaUrethraRawCapacityValue())+")]");
 				recoveringEffects.add("[style.boldPlasticity("+getRecoveryText(target.getVaginaUrethraPlasticity().getRecoveryModifier())+")]");
 			}
 			
@@ -6096,43 +6096,43 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			
-			StringBuilder descriptionSB = new StringBuilder("After being forced to accommodate");
+			StringBuilder descriptionSB = new StringBuilder("在被迫适应");
 			
 			List<String> orificesRecovering = new ArrayList<>();
 			boolean plural = false;
 			if (target.hasVagina() && target.getVaginaRawCapacityValue()!=target.getVaginaStretchedCapacity()){
-				orificesRecovering.add("[style.boldVagina(vagina)]");
+				orificesRecovering.add("[style.boldVagina(阴道)]");
 			}
 			if (target.getAssRawCapacityValue()!=target.getAssStretchedCapacity()){
-				orificesRecovering.add("[style.boldAnus(asshole)]");
+				orificesRecovering.add("[style.boldAnus(肛门)]");
 			}
 			if (target.getFaceRawCapacityValue()!=target.getFaceStretchedCapacity()){
-				orificesRecovering.add("[style.boldMouth(throat)]");
+				orificesRecovering.add("[style.boldMouth(喉咙)]");
 			}
 			if (target.getNippleRawCapacityValue()!=target.getNippleStretchedCapacity()){
-				orificesRecovering.add("[style.boldNipple(nipples)]");
+				orificesRecovering.add("[style.boldNipple(乳头)]");
 				plural = true;
 			}
 			if (target.hasBreastsCrotch() && target.getNippleCrotchRawCapacityValue()!=target.getNippleCrotchStretchedCapacity()){
-				orificesRecovering.add("[style.boldNipplesCrotch(crotch nipples)]");
+				orificesRecovering.add("[style.boldNipplesCrotch(胯乳乳头)]");
 				plural = true;
 			}
 			if (target.hasPenis() && target.getPenisRawCapacityValue()!=target.getPenisStretchedCapacity()){
-				orificesRecovering.add("[style.boldPenisUrethra(penile urethra)]");
+				orificesRecovering.add("[style.boldPenisUrethra(阴茎尿道)]");
 			}
 			if (target.hasVagina() && target.getVaginaUrethraRawCapacityValue()!=target.getVaginaUrethraStretchedCapacity()){
-				orificesRecovering.add("[style.boldVaginaUrethra(vaginal urethra)]");
+				orificesRecovering.add("[style.boldVaginaUrethra(阴道尿道)]");
 			}
 			if(orificesRecovering.size()==1) {
-				descriptionSB.append(" an object that was far too big for "+(plural?"them":"it")+", [npc.namePos] "+orificesRecovering.get(0)+" "+(plural?"have":"has")
-						+" been stretched out, and "+(plural?"need":"needs")+" some time in which to recover all of "+(plural?"their":"its")+" natural tightness.");
+				descriptionSB.append("一件远大于其的物体后，[npc.namePos]"+orificesRecovering.get(0)+"已经"
+						+"被扩张开来，需要时间来恢复至自然紧度。");
 			} else {
-				descriptionSB.append(" phallic objects that were far too big for them, [npc.namePos] "+Util.stringsToStringList(orificesRecovering, false)
-						+" have been stretched out, and need some time in which to recover all of their natural tightness.");
+				descriptionSB.append("插入物太过粗大，[npc.namePos]"+Util.stringsToStringList(orificesRecovering, false)
+						+"被扩张开来，需要时间来恢复至自然紧度。");
 			}
 
 			if(Main.game.isInSex()) {
-				descriptionSB.append(" [style.italicsBad(Orifices do not recover during sex scenes!)]");
+				descriptionSB.append("[style.italicsBad(腔穴在性交场景内不进行恢复！)]");
 			}
 			
 			return UtilText.parse(target, descriptionSB.toString());
@@ -6160,12 +6160,12 @@ public class StatusEffect {
 	
 	
 	public static AbstractStatusEffect CREAMPIE_VAGINA = new AbstractStatusEffect(80,
-			"Pussy Creampie",
+			"小穴内射",
 			"creampie",
 			PresetColour.CUM,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -1f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>Dirties clothing</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>脏衣服</b>")) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			if(isCumEffectPositive(target)) {
@@ -6190,7 +6190,7 @@ public class StatusEffect {
 				target.clearFluidsStored(SexAreaOrifice.VAGINA);
 				if(!Main.game.isInSex()) {
 					return "<p>"
-								+ "All of the cum from your creampied pussy is quickly sucked away by your "+pump.getName()+"!"
+								+ "你被内射过的小穴里的精液正在被"+pump.getName()+"迅速地吸走！"
 							+ "</p>";
 				}
 			}
@@ -6211,7 +6211,7 @@ public class StatusEffect {
 					clothingBlocking.setDirty(target, true);
 					
 					if(target.isPlayer()) {
-						Main.game.addEvent(new EventLogEntry("[style.colourCum(Creampie)]", "[style.colourDirty(Dirties)] "+clothingBlocking.getName()), false);
+						Main.game.addEvent(new EventLogEntry("[style.colourCum(内射)]", "[style.colourDirty(脏污了)]"+clothingBlocking.getName()), false);
 					}
 				}
 				dirtyArea = true;
@@ -6230,29 +6230,29 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			boolean retention = target.hasCreampieRetentionArea(SexAreaOrifice.VAGINA);
-			String pregnancyText = (target.isVisiblyPregnant()?"<br/>[style.italicsSex(Due to pregnancy, maximum storage is "+Units.fluid(Body.MAXIMUM_CREAMPIE_WHILE_PREGNANT)+".)]":"");
+			String pregnancyText = (target.isVisiblyPregnant()?"<br/>[style.italicsSex(由于已经怀孕，最大储量为"+Units.fluid(Body.MAXIMUM_CREAMPIE_WHILE_PREGNANT)+".)]":"");
 			
 			if(target.isOrificePlugged(SexAreaOrifice.VAGINA)) {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel the cum trapped within your recently-used pussy."
+					return "随着你的走动，你可以感觉到被操过的小穴正在往下流着精液。"
 							+pregnancyText
-							+ "<br/>[style.boldTerrible(Plugged Vagina:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!");
+							+ "<br/>[style.boldTerrible(阴道被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！");
 				} else {
 					return UtilText.parse(target, 
-							"[npc.NamePos] [npc.pussy] has recently been filled with cum, before being plugged."
+							"[npc.NamePos]的[npc.pussy]最近被精液填满，而且堵住了。"
 							+pregnancyText
-							+ "<br/>[style.boldTerrible(Plugged Vagina:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!"));
+							+ "<br/>[style.boldTerrible(阴道被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！"));
 				}
 				
 			} else {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel cum drooling out of your recently-used pussy."
+					return "随着你的走动，你可以感觉到被操过的小穴正在往外流着精液。"
 							+pregnancyText;
 				} else {
 					return UtilText.parse(target,
-							"[npc.NamePos] [npc.pussy] has recently been filled with cum."
+							"[npc.NamePos]的[npc.pussy]已经被精液填满了。"
 							+pregnancyText);
 				}
 			}
@@ -6266,12 +6266,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -6293,12 +6293,12 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CREAMPIE_VAGINA_URETHRA = new AbstractStatusEffect(80,
-			"Vaginal Urethra Creampie",
+			"阴道尿道内射",
 			"creampie",
 			PresetColour.CUM,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -1f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>Dirties clothing</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>脏衣服</b>")) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			if(isCumEffectPositive(target)) {
@@ -6339,7 +6339,7 @@ public class StatusEffect {
 				if(!clothingBlocking.isDirty()) {
 					clothingBlocking.setDirty(target, true);
 					if(target.isPlayer()) {
-						Main.game.addEvent(new EventLogEntry("[style.colourCum(Creampie)]", "[style.colourDirty(Dirties)] "+clothingBlocking.getName()), false);
+						Main.game.addEvent(new EventLogEntry("[style.colourCum(内射)]", "[style.colourDirty(脏污了)]"+clothingBlocking.getName()), false);
 					}
 				}
 				dirtyArea = true;
@@ -6358,29 +6358,29 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			boolean retention = target.hasCreampieRetentionArea(SexAreaOrifice.URETHRA_VAGINA);
-			String pregnancyText = (target.isVisiblyPregnant()?"<br/>[style.italicsSex(Due to pregnancy, maximum storage is "+Units.fluid(Body.MAXIMUM_CREAMPIE_WHILE_PREGNANT)+".)]":"");
+			String pregnancyText = (target.isVisiblyPregnant()?"<br/>[style.italicsSex(由于已经怀孕，最大储量为"+Units.fluid(Body.MAXIMUM_CREAMPIE_WHILE_PREGNANT)+".)]":"");
 			
 			if(target.isOrificePlugged(SexAreaOrifice.URETHRA_VAGINA)) {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel the cum trapped within your pussy's urethra."
+					return "随着你的走动，你可以感觉到被密封在阴部尿道中的精液。"
 							+pregnancyText
-							+ "<br/>[style.boldTerrible(Plugged Urethra:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!");
+							+ "<br/>[style.boldTerrible(尿道被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！");
 				} else {
 					return UtilText.parse(target, 
-							"[npc.NamePos] vaginal urethra has recently been filled with cum, before being plugged."
+							"[npc.NamePos]的阴部尿道最近被精液填满，而且堵住了。"
 							+pregnancyText
-							+ "<br/>[style.boldTerrible(Plugged Urethra:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!"));
+							+ "<br/>[style.boldTerrible(尿道被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！"));
 				}
 				
 			} else {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel cum drooling out of your pussy's urethra."
+					return "随着你的走动，你可以感觉到阴部尿道正在往外流着精液。"
 							+pregnancyText;
 				} else {
 					return UtilText.parse(target,
-							"[npc.NamePos] vaginal urethra has recently been filled with cum."
+							"[npc.NamePos]的阴道尿道已经被精液填满了。"
 							+pregnancyText);
 				}
 			}
@@ -6394,12 +6394,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -6421,12 +6421,12 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CREAMPIE_PENIS_URETHRA = new AbstractStatusEffect(80,
-			"Penis Urethra Creampie",
+			"阴茎尿道内射",
 			"creampie",
 			PresetColour.CUM,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -1f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>Dirties clothing</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>脏衣服</b>")) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			if(isCumEffectPositive(target)) {
@@ -6451,7 +6451,7 @@ public class StatusEffect {
 				target.clearFluidsStored(SexAreaOrifice.URETHRA_PENIS);
 				if(!Main.game.isInSex()) {
 					return "<p>"
-								+ "All of the cum from your cock's creampied urethra is quickly sucked away by your "+pump.getName()+"!"
+								+ "你被内射过的阴茎尿道里的精液正在被"+pump.getName()+"迅速地吸走！"
 							+ "</p>";
 				}
 			}
@@ -6468,7 +6468,7 @@ public class StatusEffect {
 				if(!clothingBlocking.isDirty()) {
 					clothingBlocking.setDirty(target, true);
 					if(target.isPlayer()) {
-						Main.game.addEvent(new EventLogEntry("[style.colourCum(Creampie)]", "[style.colourDirty(Dirties)] "+clothingBlocking.getName()), false);
+						Main.game.addEvent(new EventLogEntry("[style.colourCum(内射)]", "[style.colourDirty(脏污了)]"+clothingBlocking.getName()), false);
 					}
 				}
 			}
@@ -6487,22 +6487,22 @@ public class StatusEffect {
 			
 			if(target.isOrificePlugged(SexAreaOrifice.URETHRA_PENIS)) {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel the cum trapped within your cock's urethra."
-							+ "<br/>[style.boldTerrible(Plugged Urethra:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!");
+					return "随着你的走动，你可以感觉到被密封在阴茎尿道中的精液。"
+							+ "<br/>[style.boldTerrible(尿道被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！");
 				} else {
 					return UtilText.parse(target, 
-							"[npc.NamePos] penile urethra has recently been filled with cum, before being plugged."
-							+ "<br/>[style.boldTerrible(Plugged Urethra:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!"));
+							"[npc.NamePos]的阴茎尿道最近被精液填满，而且堵住了。"
+							+ "<br/>[style.boldTerrible(尿道被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！"));
 				}
 				
 			} else {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel cum drooling out of your cock's urethra.";
+					return "随着你的走动，你可以感觉到阴茎的尿道正在往外流着精液。";
 				} else {
 					return UtilText.parse(target,
-							"[npc.NamePos] penile urethra has recently been filled with cum.");
+							"[npc.NamePos]的阴茎尿道已经被精液填满了。");
 				}
 			}
 		}
@@ -6515,12 +6515,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -6542,12 +6542,12 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CREAMPIE_ANUS = new AbstractStatusEffect(80,
-			"Anal Creampie",
+			"肛门内射",
 			"creampie",
 			PresetColour.CUM,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -1f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>Dirties clothing</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>脏衣服</b>")) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			if(isCumEffectPositive(target)) {
@@ -6579,7 +6579,7 @@ public class StatusEffect {
 				if(!clothingBlocking.isDirty()) {
 					clothingBlocking.setDirty(target, true);
 					if(target.isPlayer()) {
-						Main.game.addEvent(new EventLogEntry("[style.colourCum(Creampie)]", "[style.colourDirty(Dirties)] "+clothingBlocking.getName()), false);
+						Main.game.addEvent(new EventLogEntry("[style.colourCum(内射)]", "[style.colourDirty(脏污了)]"+clothingBlocking.getName()), false);
 					}
 				}
 				dirtyArea = true;
@@ -6601,22 +6601,22 @@ public class StatusEffect {
 			
 			if(target.isOrificePlugged(SexAreaOrifice.ANUS)) {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel the cum trapped within your recently-used asshole."
-							+ "<br/>[style.boldTerrible(Plugged Anus:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!");
+					return "随着你的走动，你可以感觉到被操过的肛门正在往下流着精液。"
+							+ "<br/>[style.boldTerrible(肛门被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！");
 				} else {
 					return UtilText.parse(target, 
-							"[npc.NamePos] asshole has recently been filled with cum, before being plugged."
-							+ "<br/>[style.boldTerrible(Plugged Anus:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!"));
+							"[npc.NamePos]的肛门最近被精液填满，而且堵住了。"
+							+ "<br/>[style.boldTerrible(肛门被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！"));
 				}
 				
 			} else {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel cum drooling out of your recently-used asshole.";
+					return "随着你的走动，你可以感觉到被操过的肛门正在往外流着精液。";
 				} else {
 					return UtilText.parse(target,
-							"[npc.NamePos] asshole has recently been filled with cum.");
+							"[npc.NamePos]的肛门已经被精液填满了。");
 				}
 			}
 		
@@ -6630,12 +6630,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -6657,12 +6657,12 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CREAMPIE_NIPPLES = new AbstractStatusEffect(80,
-			"Nipple Creampie",
+			"乳头内射",
 			"creampie",
 			PresetColour.CUM,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -1f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>Dirties clothing</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>脏衣服</b>")) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			if(isCumEffectPositive(target)) {
@@ -6687,7 +6687,7 @@ public class StatusEffect {
 				target.clearFluidsStored(SexAreaOrifice.NIPPLE);
 				if(!Main.game.isInSex()) {
 					return "<p>"
-								+ "All of the cum from your creampied nipples is quickly sucked away by your "+pump.getName()+"!"
+								+ "你被内射过的乳头里的精液正在被"+pump.getName()+"迅速地吸走！"
 							+ "</p>";
 				}
 			}
@@ -6705,7 +6705,7 @@ public class StatusEffect {
 				if(!clothingBlocking.isDirty()) {
 					clothingBlocking.setDirty(target, true);
 					if(target.isPlayer()) {
-						Main.game.addEvent(new EventLogEntry("[style.colourCum(Creampie)]", "[style.colourDirty(Dirties)] "+clothingBlocking.getName()), false);
+						Main.game.addEvent(new EventLogEntry("[style.colourCum(内射)]", "[style.colourDirty(脏污了)]"+clothingBlocking.getName()), false);
 					}
 				}
 				dirtyArea = true;
@@ -6727,22 +6727,22 @@ public class StatusEffect {
 			
 			if(target.isOrificePlugged(SexAreaOrifice.NIPPLE)) {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel the cum trapped within your recently-used [pc.nipples]."
-							+ "<br/>[style.boldTerrible(Plugged Nipples:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!");
+					return "随着你的走动，你可以感觉到被操过的[pc.nipples]正在往下流着精液。"
+							+ "<br/>[style.boldTerrible(乳头被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！");
 				} else {
 					return UtilText.parse(target, 
-							"[npc.NamePos] [npc.nipples] have recently been filled with cum, before being plugged."
-							+ "<br/>[style.boldTerrible(Plugged Nipples:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!"));
+							"[npc.NamePos]的[npc.nipples]最近被精液填满，而且堵住了。"
+							+ "<br/>[style.boldTerrible(乳头被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！"));
 				}
 				
 			} else {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel cum drooling out of your recently-used [pc.nipples].";
+					return "随着你的走动，你可以感觉到被操过的[pc.nipples]正在往外流着精液。";
 				} else {
 					return UtilText.parse(target,
-							"[npc.NamePos] [npc.nipples] have recently been filled with cum.");
+							"[npc.NamePos]的[npc.nipples]已经被精液填满了。");
 				}
 			}
 		}
@@ -6755,12 +6755,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -6782,18 +6782,18 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect CREAMPIE_NIPPLES_CROTCH = new AbstractStatusEffect(80,
-			"Nipple Creampie",
+			"乳头内射",
 			"creampie",
 			PresetColour.CUM,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -1f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>Dirties clothing</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>脏衣服</b>")) {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner.getBreastCrotchShape()==BreastShape.UDDERS) {
-				return "Udder-nipple creampie";
+				return "腹乳乳头内射";
 			} else {
-				return "Crotch-nipple creampie";
+				return "胯乳乳头内射";
 			}
 		}
 		@Override
@@ -6820,7 +6820,7 @@ public class StatusEffect {
 				target.clearFluidsStored(SexAreaOrifice.NIPPLE_CROTCH);
 				if(!Main.game.isInSex()) {
 					return "<p>"
-								+ "All of the cum from your creampied nipples is quickly sucked away by your "+pump.getName()+"!"
+								+ "你被内射过的乳头里的精液正在被"+pump.getName()+"迅速地吸走！"
 							+ "</p>";
 				}
 			}
@@ -6837,7 +6837,7 @@ public class StatusEffect {
 				if(!clothingBlocking.isDirty()) {
 					clothingBlocking.setDirty(target, true);
 					if(target.isPlayer()) {
-						Main.game.addEvent(new EventLogEntry("[style.colourCum(Creampie)]", "[style.colourDirty(Dirties)] "+clothingBlocking.getName()), false);
+						Main.game.addEvent(new EventLogEntry("[style.colourCum(内射)]", "[style.colourDirty(脏污了)]"+clothingBlocking.getName()), false);
 					}
 				}
 			}
@@ -6856,22 +6856,22 @@ public class StatusEffect {
 			
 			if(target.isOrificePlugged(SexAreaOrifice.NIPPLE_CROTCH)) {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel the cum trapped within your recently-used [pc.crotchNipples]."
-							+ "<br/>[style.boldTerrible(Plugged Crotch-nipples:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!");
+					return "随着你的走动，你可以感觉到被操过的[pc.crotchNipples]中密封的精液。"
+							+ "<br/>[style.boldTerrible(胯乳乳头被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！");
 				} else {
 					return UtilText.parse(target, 
-							"[npc.NamePos] [npc.crotchNipples] have recently been filled with cum, before being plugged."
-							+ "<br/>[style.boldTerrible(Plugged Crotch-nipples:)] No cum is leaking out"
-							+ (retention?"!":", although it is still being absorbed!"));
+							"[npc.NamePos]的[npc.crotchNipples]最近被精液填满，而且堵住了。"
+							+ "<br/>[style.boldTerrible(胯乳乳头被堵塞:)]没有精液漏出"
+							+ (retention?"！":"，但仍旧会被吸收！"));
 				}
 				
 			} else {
 				if(target.isPlayer()) {
-					return "As you walk, you can feel cum drooling out of your recently-used [pc.crotchNipples].";
+					return "随着你的走动，你可以感觉到被操过的[pc.crotchNipples]正在往外流着精液。";
 				} else {
 					return UtilText.parse(target,
-							"[npc.NamePos] [npc.crotchNipples] have recently been filled with cum.");
+							"[npc.NamePos]的[npc.crotchNipples]已经被精液填满了。");
 				}
 			}
 		}
@@ -6884,12 +6884,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -6911,7 +6911,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CREAMPIE_MOUTH = new AbstractStatusEffect(80,
-			"Cummy Meal",
+			"精味大餐",
 			"creampie",
 			PresetColour.CUM,
 			false,
@@ -6920,8 +6920,8 @@ public class StatusEffect {
 		@Override
 		public String getName(GameCharacter target) {
 			return target.isOnlyCumInArea(SexAreaOrifice.MOUTH)
-					?"Cummy meal"
-					:"Yummy meal";
+					?"精味大餐"
+					:"好味大餐";
 		}
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
@@ -6957,8 +6957,8 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, 
 					target.isOnlyCumInArea(SexAreaOrifice.MOUTH)
-						?"[npc.NameHasFull] recently swallowed a load of cum."
-						:"[npc.NameHasFull] recently swallowed some sexual fluids.");
+						?"[npc.NameHasFull]最近咽下了精液。"
+						:"[npc.NameHasFull]最近咽下了某种性液体。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
@@ -6969,12 +6969,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -6996,12 +6996,12 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect CREAMPIE_SPINNERET = new AbstractStatusEffect(80,
-			"Spinneret Creampie",
+			"丝囊内射",
 			"creampie",
 			PresetColour.CUM,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, -1f)),
-			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>Dirties clothing</b>")) {
+			Util.newArrayListOfValues("<b style='color: " + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + "'>脏衣服</b>")) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			if(isCumEffectPositive(target)) {
@@ -7033,7 +7033,7 @@ public class StatusEffect {
 				if(!clothingBlocking.isDirty()) {
 					clothingBlocking.setDirty(target, true);
 					if(target.isPlayer()) {
-						Main.game.addEvent(new EventLogEntry("[style.colourCum(Creampie)]", "[style.colourDirty(Dirties)] "+clothingBlocking.getName()), false);
+						Main.game.addEvent(new EventLogEntry("[style.colourCum(内射)]", "[style.colourDirty(脏污了)]"+clothingBlocking.getName()), false);
 					}
 				}
 			}
@@ -7052,10 +7052,10 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "As you walk, you can feel cum drooling out of your recently-used spinneret.";
+				return "随着你的走动，你可以感觉到被操过的丝囊正在往外流着精液。";
 			} else {
 				return UtilText.parse(target, 
-						"[npc.NamePos] spinneret has recently been filled with cum.");
+						"[npc.NamePos]的丝囊已经被精液填满了。");
 			}
 		}
 		@Override
@@ -7067,12 +7067,12 @@ public class StatusEffect {
 			boolean retention = target.hasCreampieRetentionArea(area);
 			
 			return new Value<>(retention?3:2,
-					"Current creampie: [style.colourSex("+Units.fluid(cumInArea)+")]"
+					"当前灌入：[style.colourSex("+Units.fluid(cumInArea)+")]"
 					+(target.isOrificePlugged(area) && !retention
-							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/minute"
-							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/minute")
+							?"<br/>-"+Units.fluid(absorption, ValueType.PRECISE)+"/分钟"
+							:"<br/>-"+(retention?"[style.colourExcellent(":"")+Units.fluid(cumLost, ValueType.PRECISE)+(retention?")]":"")+"/分钟")
 					+(retention
-							?"<br/>[style.colourExcellent(Retaining)] creampie due to enchantment!"
+							?"<br/>由于附魔，[style.colourExcellent(维持)]了内射状态！"
 							:""));
 		}
 		@Override
@@ -7094,7 +7094,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CUM_INFLATION_1 = new AbstractStatusEffect(80,
-			"swollen belly",
+			"微肿的小腹",
 			"inflation_stomach_1",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7115,14 +7115,14 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target.isPlayer()) {
-				return "After being filled with a considerable amount of "+Util.stringsToStringList(fluidNames, false)+", your belly is now a little swollen."
-						+ " Your extra weight makes it a little more difficult to move around.";
+				return "你的腹中充满着不少的"+Util.stringsToStringList(fluidNames, false)+"，看起来微微隆起。"
+						+ "额外的重量感为你的移动造成了不便。";
 			} else {
 				return UtilText.parse(target,
-							"After being filled with a considerable amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] belly is now a little swollen.");
+							"你的腹中充满着不少的"+Util.stringsToStringList(fluidNames, false)+"，看起来微微隆起。");
 			}
 		}
 		@Override
@@ -7143,7 +7143,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CUM_INFLATION_2 = new AbstractStatusEffect(80,
-			"inflated belly",
+			"肿胀的小腹",
 			"inflation_stomach_2",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7164,15 +7164,15 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target.isPlayer()) {
-				return "After being filled with a huge amount of "+Util.stringsToStringList(fluidNames, false)+", your belly is now noticeably inflated."
-						+ " The considerable amount of extra weight in your stomach makes it more difficult to move around.";
+				return "你的腹中充满着大量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分明显。"
+						+ "你腹中充实的重量感令你更难移动。";
 			} else {
 				return UtilText.parse(target,
-							"After being filled with a huge amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] belly is now noticeably inflated."
-							+ " The considerable amount of extra weight in [npc.her] stomach is hindering [npc.her] ability to move.");
+							"你的腹中充满着大量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分明显。"
+							+ "[npc.her]腹中充实的重量感令[npc.her]更难移动。");
 			}
 		}
 		@Override
@@ -7193,7 +7193,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CUM_INFLATION_3 = new AbstractStatusEffect(80,
-			"over-inflated belly",
+			"过于肿胀的小腹",
 			"inflation_stomach_3",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7214,15 +7214,15 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target.isPlayer()) {
-				return "After being filled with a colossal amount of "+Util.stringsToStringList(fluidNames, false)+", your belly is now massively over-inflated."
-						+ " The huge amount of extra weight in your stomach is making it extremely difficult for you to move around.";
+				return "你的腹中充满着巨量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分肿胀。"
+						+ "你腹中沉重感令你几乎无法移动。";
 			} else {
 				return UtilText.parse(target,
-							"After being filled with a colossal amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] belly is now massively over-inflated."
-									+ " The huge amount of extra weight in [npc.her] stomach is making it extremely difficult for [npc.herHim] to move around.");
+							"你的腹中充满着巨量的"+Util.stringsToStringList(fluidNames, false)+"，看起来无比肿胀。"
+									+ "[npc.her]腹中沉重感令[npc.herHim]几乎无法移动。");
 			}
 		}
 		@Override
@@ -7243,7 +7243,7 @@ public class StatusEffect {
 	
 	
 	public static AbstractStatusEffect BREAST_CUM_INFLATION_1 = new AbstractStatusEffect(80,
-			"swollen breasts",
+			"微肿的乳房",
 			"inflation_breasts_1",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7258,14 +7258,14 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target.isPlayer()) {
-				return "After being filled with a considerable amount of "+Util.stringsToStringList(fluidNames, false)+", your [pc.breasts] are now a little swollen."
-						+ " Your extra weight makes it a little more difficult to move around.";
+				return "你的乳房里充满着不少的"+Util.stringsToStringList(fluidNames, false)+"，看起来微微隆起。" 
+						+ "额外的重量感为你的移动造成了不便。";
 			} else {
 				return UtilText.parse(target,
-							"After being filled with a considerable amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] [npc.breasts] are now a little swollen.");
+							"[npc.namePos]的[npc.breasts]里充满着不少的"+Util.stringsToStringList(fluidNames, false)+"，看起来微微隆起。");
 			}
 		}
 		@Override
@@ -7286,7 +7286,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect BREAST_CUM_INFLATION_2 = new AbstractStatusEffect(80,
-			"inflated breasts",
+			"肿胀的乳房",
 			"inflation_breasts_2",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7301,15 +7301,15 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target.isPlayer()) {
-				return "After being filled with a huge amount of "+Util.stringsToStringList(fluidNames, false)+", your [pc.breasts] are now noticeably inflated."
-						+ " The considerable amount of extra weight in your top-half is making it more difficult to move around.";
+				return "你的[pc.breasts]充满着大量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分明显。"
+						+ "你上半身附带的充实重量感令你更难移动。";
 			} else {
 				return UtilText.parse(target,
-							"After being filled with a huge amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] [npc.breasts] are now noticeably inflated."
-							+ " The considerable amount of extra weight in [npc.her] top-half is hindering [npc.her] ability to move.");
+							"[npc.namePos]的[npc.breasts]里充满着大量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分明显。"
+							+ "[npc.her]上半身附带的充实重量感令[npc.her]更难移动。");
 			}
 		}
 		@Override
@@ -7330,7 +7330,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect BREAST_CUM_INFLATION_3 = new AbstractStatusEffect(80,
-			"over-inflated breasts",
+			"过于肿胀的乳房",
 			"inflation_breasts_3",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7345,15 +7345,15 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target.isPlayer()) {
-				return "After being filled with a colossal amount of "+Util.stringsToStringList(fluidNames, false)+", your [pc.breasts] are now massively over-inflated."
-						+ " The huge amount of extra weight in your top-half is making it extremely difficult for you to move around.";
+				return "你的[pc.breasts]里充满着巨量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分肿胀。"
+						+ "你上半身附带的沉重感令你几乎无法移动。";
 			} else {
 				return UtilText.parse(target,
-							"After being filled with a colossal amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] [npc.breasts] are now massively over-inflated."
-									+ " The huge amount of extra weight in [npc.her] top-half is making it extremely difficult for [npc.herHim] to move around.");
+							"[npc.namePos]的[npc.breasts]里充满着巨量的"+Util.stringsToStringList(fluidNames, false)+"，看起来无比肿胀。"
+									+ "[npc.her]上半身附带的沉重感令[npc.her]几乎无法移动。");
 			}
 		}
 		@Override
@@ -7373,7 +7373,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SPINNERET_CUM_INFLATION_1 = new AbstractStatusEffect(80,
-			"swollen spinneret",
+			"微隆的丝囊",
 			"inflation_spinneret_1",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7388,17 +7388,17 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target!=null) {
 				if(target.hasTailSpinneret()) {
 					return UtilText.parse(target,
-							"After being filled with a considerable amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] [npc.tail] "+(target.getTailCount()>1?"are":"is")+"now a little swollen."
-							+ " The extra weight is making it a little difficult for [npc.herHim] to move around.");
+							"[npc.namePos]的[npc.tail]里充满着不少的"+Util.stringsToStringList(fluidNames, false)+"，看起来微微隆起。"
+							+ "额外的重量感为[npc.herHim]的移动造成了不便。");
 				} else {
 					return UtilText.parse(target,
-							"After being filled with a considerable amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] abdomen is now a little swollen."
-							+ " The extra weight is making it a little difficult for [npc.herHim] to move around.");
+							"[npc.namePos]的腹中充满着不少的"+Util.stringsToStringList(fluidNames, false)+"，看起来微微隆起。"
+							+ "额外的重量感为[npc.herHim]的移动造成了不便。");
 				}
 			}
 			return "";
@@ -7421,7 +7421,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SPINNERET_CUM_INFLATION_2 = new AbstractStatusEffect(80,
-			"inflated spinneret",
+			"肿胀的丝囊",
 			"inflation_spinneret_2",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7436,17 +7436,17 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target!=null) {
 				if(target.hasTailSpinneret()) {
 					return UtilText.parse(target,
-							"After being filled with a huge amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] [npc.tail] "+(target.getTailCount()>1?"are":"is")+"now noticeably inflated."
-							+ " The extra weight is hindering [npc.her] ability to move.");
+							"[npc.namePos]的[npc.tail]里充满着大量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分明显。"
+							+ "额外的重量感限制了[npc.her]移动的能力。");
 				} else {
 					return UtilText.parse(target,
-							"After being filled with a huge amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] abdomen is now noticeably inflated."
-							+ " The extra weight is hindering [npc.her] ability to move.");
+							"[npc.namePos]的腹中充满着大量的"+Util.stringsToStringList(fluidNames, false)+"，看起来十分明显。"
+							+ "额外的重量感限制了[npc.her]移动的能力。");
 				}
 			}
 			return "";
@@ -7469,7 +7469,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SPINNERET_CUM_INFLATION_3 = new AbstractStatusEffect(80,
-			"over-inflated spinneret",
+			"过于肿胀的丝囊",
 			"inflation_spinneret_3",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7484,17 +7484,17 @@ public class StatusEffect {
 				}
 			}
 			if(fluidNames.isEmpty()) {
-				fluidNames.add("liquid");
+				fluidNames.add("液体");
 			}
 			if(target!=null) {
 				if(target.hasTailSpinneret()) {
 					return UtilText.parse(target,
-							"After being filled with a colossal amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] [npc.tail] "+(target.getTailCount()>1?"are":"is")+"now massively over-inflated."
-							+ " The huge amount of extra weight is making it extremely difficult for [npc.herHim] to move around.");
+							"[npc.namePos]的[npc.tail]里充满着巨量的"+Util.stringsToStringList(fluidNames, false)+"，看起来无比肿胀。"
+							+ "沉重感令[npc.herHim]几乎无法移动。");
 				} else {
 					return UtilText.parse(target,
-							"After being filled with a colossal amount of "+Util.stringsToStringList(fluidNames, false)+", [npc.namePos] abdomen is now massively over-inflated."
-							+ " The huge amount of extra weight is making it extremely difficult for [npc.herHim] to move around.");
+							"[npc.namePos]的腹中充满着巨量的"+Util.stringsToStringList(fluidNames, false)+"，看起来无比肿胀。"
+							+ "沉重感令[npc.herHim]几乎无法移动。");
 				}
 			}
 			return "";
@@ -7516,7 +7516,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FRUSTRATED_NO_ORGASM = new AbstractStatusEffect(80,
-			"Frustrated",
+			"沮丧的",
 			"frustrated",
 			PresetColour.GENERIC_BAD,
 			false,
@@ -7524,8 +7524,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.Name] recently had a sexual encounter in which [npc.she] didn't manage to cum."
-					+ " As a result, [npc.sheIs] feeling extremely horny and frustrated...");
+			return UtilText.parse(target, "[npc.Name]在某次性行为中未能顺利高潮。"
+					+ "[npc.sheIs]最终感到更加的饥渴与沮丧……");
 		}
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
@@ -7545,7 +7545,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect PENT_UP_SLAVE = new AbstractStatusEffect(80,
-			"Pent-up",
+			"长期积欲",
 			"frustrated",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7554,9 +7554,9 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.hasTrait(Perk.NYMPHOMANIAC, true)) {
-				return UtilText.parse(target, "As [npc.sheIs] a nymphomaniac, [npc.name] [npc.is] feeling extremely pent-up after not having had any sexual contact for over four hours...");
+				return UtilText.parse(target, "[npc.name]由于性瘾成狂，已经超过四小时没有性接触，此刻感到极度欲求不满……");
 			}
-			return UtilText.parse(target, "[npc.Name] [npc.has]n't had any sexual relief for over a day now, and [npc.is] feeling extremely pent-up...");
+			return UtilText.parse(target, "[npc.Name]已经超过一天没能得到性满足了，此刻非常的欲求不满……");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -7581,7 +7581,7 @@ public class StatusEffect {
 	 * This status effect is automatically removed from a character when orgasming in sex.
 	 */
 	public static AbstractStatusEffect DESPERATELY_HORNY = new AbstractStatusEffect(80,
-			"Desperately horny",
+			"极度饥渴",
 			"desperately_horny",
 			PresetColour.GENERIC_SEX,
 			false,
@@ -7593,8 +7593,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameIsFull] feeling incredibly horny at the moment."
-					+ " [npc.SheIs] struggling to get [npc.her] lust under control, and so [npc.are] far more vulnerable to seduction while also being able to more easily seduce others.");
+					"[npc.NameIsFull]此刻感觉异常饥渴。"
+					+ "[npc.sheIs]努力地控制着[npc.her]的性欲，因此更容易受到魅惑，同时也得以更容易地魅惑他人。");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -7607,15 +7607,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CHASTITY_1 = new AbstractStatusEffect(80,
-			"Forced chastity (calm)",
+			"强制贞操带 (平静)",
 			"chastity1",
 			PresetColour.GENERIC_SEX,
 			false,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.colourSex(Increasing in intensity...)]")) {
+			Util.newArrayListOfValues("[style.colourSex(强度增加……)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {//TODO if one key-holder, mention them
-			return UtilText.parse(target, "[npc.Name] [npc.has] been locked in chastity, and will sooner or later start to feel frustrated at not being able to have a proper orgasm...");
+			return UtilText.parse(target, "[npc.Name]被贞操带锁住，迟早会因为没法正常高潮而感到欲求不满的……");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -7677,15 +7677,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CHASTITY_2 = new AbstractStatusEffect(80,
-			"Forced chastity (restless)",
+			"强制贞操带 (渴望)",
 			"chastity2",
 			PresetColour.GENERIC_SEX,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, -5f)),
-			Util.newArrayListOfValues("[style.colourSex(Increasing in intensity...)]")) {
+			Util.newArrayListOfValues("[style.colourSex(强度增加……)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.Name] [npc.has] been locked in chastity for some time now, and [npc.is] already starting to feel frustrated at not being able to have a proper orgasm...");
+			return UtilText.parse(target, "[npc.Name]已经被锁贞操带有一段时间，由于无法正常高潮而开始感到欲求不满……");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -7705,15 +7705,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CHASTITY_3 = new AbstractStatusEffect(80,
-			"Forced chastity (pent-up)",
+			"强制贞操带 (欲求不满)",
 			"chastity3",
 			PresetColour.GENERIC_SEX,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, -15f)),
-			Util.newArrayListOfValues("[style.colourSex(Increasing in intensity...)]")) {
+			Util.newArrayListOfValues("[style.colourSex(强度增加……)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.Name] [npc.has] been locked in chastity for a long time, and [npc.is] feeling very frustrated and pent-up at not being able to have a proper orgasm...");
+			return UtilText.parse(target, "[npc.Name]已经被锁贞操带很长时间，由于无法正常高潮而感到十分燥热难耐……");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -7729,15 +7729,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CHASTITY_4 = new AbstractStatusEffect(80,
-			"Forced chastity (desperate)",
+			"强制贞操带 (难以自抑)",
 			"chastity4",
 			PresetColour.GENERIC_SEX,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, -50f)),
-			Util.newArrayListOfValues("[style.colourSex(Maximum intensity)]")) {
+			Util.newArrayListOfValues("[style.colourSex(最高强度)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.Name] [npc.has] been locked in chastity for what feels like an eternity, and [npc.is] feeling extremely frustrated and pent-up at not being able to have a proper orgasm...");
+			return UtilText.parse(target, "[npc.Name]已经被锁贞操带不知有多久了，由于无法正常高潮而感到异常燥热难耐……");
 		}
 		@Override
 		public String extraRemovalEffects(GameCharacter target) {
@@ -7765,7 +7765,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect CHASTITY_REMOVED_2 = new AbstractStatusEffect(80,
-			"Released from chastity (restless)",
+			"贞操带解放 (渴望)",
 			"chastityRemoved2",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7773,13 +7773,13 @@ public class StatusEffect {
 					new Value<>(Attribute.RESISTANCE_LUST, -5f),
 					new Value<>(Attribute.RESTING_LUST, 5f)),
 			Util.newArrayListOfValues(
-					"[style.colourSex(Orgasming)] will remove this effect!")) {
+					"[style.colourSex(性高潮)]会移除该效果！")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Recently released from a short spell of being locked in chastity, [npc.name] [npc.is] now feeling very horny!");
+			sb.append("[npc.Name]刚从短暂的贞操锁囚期中解脱出来，现在非常的饥渴！");
 			sb.append("<br/>");
-			sb.append("[style.italicsSex(If [npc.sheIsFull] locked back into chastity while still under this effect, [npc.she] will remain in the 'restless' stage!)]");
+			sb.append("[style.italicsSex(如果[npc.sheIsFull]被锁回贞操带内，仍会受到此效应的影响，且会保持在“渴望”阶段内！)]");
 			return UtilText.parse(target, sb.toString());
 		}
 		@Override
@@ -7816,7 +7816,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CHASTITY_REMOVED_3 = new AbstractStatusEffect(80,
-			"Released from chastity (pent-up)",
+			"贞操带解放 (欲求不满)",
 			"chastityRemoved3",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7824,13 +7824,13 @@ public class StatusEffect {
 					new Value<>(Attribute.RESISTANCE_LUST, -15f),
 					new Value<>(Attribute.RESTING_LUST, 10f)),
 			Util.newArrayListOfValues(
-					"[style.colourSex(Orgasming)] will remove this effect!")) {
+					"[style.colourSex(性高潮)]会移除该效果！")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Recently released from a long spell of being locked in chastity, [npc.name] [npc.is] now feeling extremely horny!");
+			sb.append("[npc.Name]刚从长时间的贞操锁囚期中解脱出来，现在极度饥渴！");
 			sb.append("<br/>");
-			sb.append("[style.italicsSex(If [npc.sheIsFull] locked back into chastity while still under this effect, [npc.she] will remain in the 'pent-up' stage!)]");
+			sb.append("[style.italicsSex(如果[npc.sheIsFull]被锁回贞操带内，仍会受到此效应的影响，且会保持在“欲求不满”阶段内！)]");
 			return UtilText.parse(target, sb.toString());
 		}
 		@Override
@@ -7867,7 +7867,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CHASTITY_REMOVED_4 = new AbstractStatusEffect(80,
-			"Released from chastity (desperate)",
+			"贞操带解放 (难以自抑)",
 			"chastityRemoved4",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7875,13 +7875,13 @@ public class StatusEffect {
 					new Value<>(Attribute.RESISTANCE_LUST, -50f),
 					new Value<>(Attribute.RESTING_LUST, 15f)),
 			Util.newArrayListOfValues(
-					"[style.colourSex(Orgasming)] will remove this effect!")) {
+					"[style.colourSex(性高潮)]会移除该效果！")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Recently released from an excruciatingly-long spell of being locked in chastity, [npc.name] [npc.is] now feeling unbelievably horny!");
+			sb.append("[npc.Name]刚从几乎永无止境的贞操锁囚期中解脱出来，现在是感到疯魔一般的饥渴！");
 			sb.append("<br/>");
-			sb.append("[style.italicsSex(If [npc.sheIsFull] locked back into chastity while still under this effect, [npc.she] will remain in the 'desperate' stage!)]");
+			sb.append("[style.italicsSex(如果[npc.sheIsFull]被锁回贞操带内，仍会受到此效应的影响，且会保持在“难以自抑”阶段内！)]");
 			return UtilText.parse(target, sb.toString());
 		}
 		@Override
@@ -7917,7 +7917,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect RECOVERING_AURA = new AbstractStatusEffect(80,
-			"Strengthened aura",
+			"被强化的灵气",
 			"recoveringAura",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -7926,11 +7926,11 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "Due to a recent orgasm, your arcane aura has been temporarily strengthened."
-						+ " While in this state, you will no longer receive an arcane essence if you orgasm!";
+				return "由于最近的高潮，你的奥术灵气被暂时强化了。"
+						+ "处于这个状态时，即便你高潮，你也不能获得奥术精华！";
 			} else {
-				return UtilText.parse(target, "Due to a recent orgasm, [npc.namePos] arcane aura has been temporarily strengthened."
-						+ " While [npc.she] remains in this state, you will not receive an arcane essence if [npc.she] orgasms in your presence!");
+				return UtilText.parse(target, "由于最近的高潮，[npc.namePos]的奥术灵气被暂时强化了。"
+						+ "当[npc.she]处于这个状态时，即便[npc.she]在你面前高潮，你也不能从[npc.she]身上获得奥术精华！");
 			}
 		}
 		@Override
@@ -7944,7 +7944,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect EXPOSED = new AbstractStatusEffect(80,
-			"exposed",
+			"裸露",
 			"exposed",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.GENERIC_BAD,
@@ -7958,12 +7958,12 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", and [npc.she] [npc.verb(feel)] highly embarrassed to be walking around in such an exposed fashion.");
+			return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，穿着这么暴露令[npc.she]感到十分尴尬。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your exposed body parts attract all kind of lewd gazes.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你裸露的身体部位会吸引各种猥亵的目光。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -7982,7 +7982,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect EXPOSED_ANIMAL = new AbstractStatusEffect(80,
-			"exposed (feral parts)",
+			"暴露 (兽躯)",
 			"exposedFeral",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.BASE_TAN,
@@ -7996,9 +7996,9 @@ public class StatusEffect {
 				return "";
 			}
 			if(target.getLegConfiguration().isGenitalsExposed(target)) {
-				return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", but as [npc.she] [npc.has] a feral body, [npc.she] [npc.verb(feel)] as though it's natural to be so exposed.");
+				return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，但由于是兽态的躯体，[npc.she]并不认为那是暴露的。");
 			} else {
-				return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", but [npc.her] feral body is shaped in such a way that they aren't on public display.");
+				return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，但[npc.her]兽形身躯的构造使其不会展示出来。");
 			}
 		}
 		@Override
@@ -8019,7 +8019,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect EXPOSED_DOLL = new AbstractStatusEffect(80,
-			"exposed (doll)",
+			"暴露 (玩偶)",
 			"exposedDoll",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.BASE_GREY,
@@ -8032,7 +8032,7 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", but as [npc.sheIs] a doll, [npc.sheIs] incapable of feeling ashamed or embarrassed.");
+			return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，但由于[npc.sheIs]是个玩偶，[npc.sheIs]并不具备感觉羞耻或尴尬的能力。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8050,7 +8050,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect EXPOSED_BREASTS = new AbstractStatusEffect(80,
-			"exposed breasts",
+			"暴露的胸部",
 			"exposed",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.GENERIC_BAD,
@@ -8062,7 +8062,7 @@ public class StatusEffect {
 		@Override
 		public String getName(GameCharacter target) {
 			if (! target.hasBreasts()) {
-				return "exposed nipples";
+				return "暴露的乳头";
 			} else {
 				return super.getName(target);
 			}
@@ -8072,12 +8072,12 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", and [npc.she] [npc.verb(feel)] highly embarrassed to be walking around in such an exposed fashion.");
+			return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，穿着这么暴露令[npc.she]感到十分尴尬。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your exposed breasts attract all kind of lewd gazes.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你裸露的乳房吸引了各种猥亵的目光。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -8096,7 +8096,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect EXPOSED_PLUS_BREASTS = new AbstractStatusEffect(80,
-			"exposed",
+			"裸露",
 			"exposed",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.GENERIC_BAD,
@@ -8110,12 +8110,12 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", and [npc.she] [npc.verb(feel)] highly embarrassed to be walking around in such an exposed fashion.");
+			return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，穿着这么暴露令[npc.she]感到十分尴尬。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your exposed body parts attract all kind of lewd gazes.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你裸露的身体部位会吸引各种猥亵的目光。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -8134,7 +8134,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_EXHIBITIONIST = new AbstractStatusEffect(80,
-			"exhibitionist",
+			"暴露狂",
 			"exposedExhibitionist",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.BASE_PINK_DEEP,
@@ -8147,12 +8147,12 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", and [npc.she] [npc.verb(feel)] incredibly sexy and empowered to be walking around in such an exposed fashion.");
+			return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，穿着这么暴露令[npc.she]感到十分的性感与自信。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your exposed body parts attract all kind of lewd gazes.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你裸露的身体部位会吸引各种猥亵的目光。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -8169,7 +8169,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_EXHIBITIONIST_BREASTS = new AbstractStatusEffect(80,
-			"exhibitionist",
+			"暴露狂",
 			"exposedExhibitionist",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.BASE_PINK_DEEP,
@@ -8182,12 +8182,12 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", and [npc.she] [npc.verb(feel)] incredibly sexy and empowered to be walking around in such an exposed fashion.");
+			return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，穿着这么暴露令[npc.she]感到十分的性感与自信。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your exposed body parts attract all kind of lewd gazes.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你裸露的身体部位会吸引各种猥亵的目光。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -8204,7 +8204,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_EXHIBITIONIST_PLUS_BREASTS = new AbstractStatusEffect(80,
-			"exhibitionist",
+			"暴露狂",
 			"exposedExhibitionist",
 			PresetColour.BASE_PINK_LIGHT,
 			PresetColour.BASE_PINK_DEEP,
@@ -8217,12 +8217,12 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "[npc.NamePos] clothing doesn't conceal [npc.her] "+getExposedPartsNamesList(target)+", and [npc.she] [npc.verb(feel)] incredibly sexy and empowered to be walking around in such an exposed fashion.");
+			return UtilText.parse(target, "[npc.NamePos]的衣服无法盖住[npc.her]的"+getExposedPartsNamesList(target)+"，穿着这么暴露令[npc.she]感到十分的性感与自信。");
 		}
 		@Override
 		protected Value<Integer, String> getAdditionalDescription(GameCharacter target) {
 			if(Main.game.isOpportunisticAttackersEnabled() && target.isPlayer()) {
-				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>Opportunistic Attackers</b><br/>Your exposed body parts attract all kind of lewd gazes.");
+				return new Value<>(2, "<b style='color:" + PresetColour.BASE_GREY.toWebHexString() +";'>投机袭击者</b><br/>你裸露的身体部位会吸引各种猥亵的目光。");
 			}
 			return super.getAdditionalDescription(target);
 		}
@@ -8239,7 +8239,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect FETISH_PURE_VIRGIN = new AbstractStatusEffect(80,
-			"Pure Virgin",
+			"贞洁处女",
 			"virginPure",
 			PresetColour.GENERIC_EXCELLENT,
 			true,
@@ -8249,7 +8249,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.Name] [npc.verb(represent)] the perfect image of a pure, righteous being. [npc.Her] noble bearing and virtuous personality mark [npc.herHim] as a paragon of all that is angelic and good in this world.");
+					"[npc.Name]是纯洁与正义的完美代表。[npc.her]展现出的高贵气质与善良个性，正标志着[npc.herHim]是世间真善美的典范。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8266,7 +8266,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_PURE_VIRGIN_NO_HYMEN = new AbstractStatusEffect(80,
-			"'Pure' Virgin",
+			"“贞洁”处女",
 			"virginPureNoHymen",
 			PresetColour.GENERIC_GOOD,
 			true,
@@ -8276,7 +8276,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.Name] [npc.verb(act)] as though [npc.sheIs] a noble and virtuous paragon of purity, but [npc.sheIs] also suspiciously passionate about arguing that a broken hymen does not disqualify a person from being considered a pure virgin...");
+					"[npc.Name]的举止可称为是高尚贤淑的纯洁典范，却又奇特地热衷于争辩一件事——就算处女膜破了，也不代表该被排除在贞洁处女的范围外……");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8293,7 +8293,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_PURE_VIRGIN_ONLY_HYMEN = new AbstractStatusEffect(80,
-			"Pure 'Virgin'",
+			"贞洁“处女”",
 			"virginPureRepaired",
 			PresetColour.GENERIC_GOOD,
 			true,
@@ -8302,7 +8302,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.Name] [npc.verb(act)] as though [npc.sheIs] a noble and virtuous paragon of purity, but [npc.sheIs] also suspiciously passionate about arguing that having an intact hymen is enough to technically make anyone a virgin...");
+					"[npc.Name]的举止可称为是高尚贤淑的纯洁典范，却又奇特地热衷于争辩一件事——只要处女膜没破，就可算作是处女……");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8319,7 +8319,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_BROKEN_VIRGIN = new AbstractStatusEffect(80,
-			"Broken Virgin",
+			"失格处女",
 			"virginBroken",
 			PresetColour.GENERIC_TERRIBLE,
 			false,
@@ -8329,8 +8329,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Losing [npc.her] precious virginity has hit [npc.name] hard, and [npc.she] now [npc.verb(see)] [npc.herself] as nothing but a dirty slut."
-						+ " [npc.She] now often [npc.verb(fantasise)] about big, thick cocks slamming deep into [npc.her] worthless cunt, before defiling [npc.her] womb with their foul cum...");
+					"失去宝贵的贞操对[npc.Name]是一次巨大的打击，令[npc.she]自认为已经脏了。"
+						+ "[npc.She]开始常常幻想着大屌操着自己下流的小穴，被肮脏的精液玷污子宫……");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8347,7 +8347,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_LUSTY_MAIDEN = new AbstractStatusEffect(80,
-			"Lusty Maiden",
+			"色欲少女",
 			"virginLustyMaidenPure",
 			PresetColour.GENERIC_EXCELLENT,
 			true,
@@ -8357,8 +8357,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.NameIs] more than willing to use [npc.her] ass, mouth, breasts, and even the promise of [npc.her] pussy in order to please [npc.her] partners,"
-							+ " but [npc.she]'ll never let anyone actually penetrate [npc.her] feminine sex and rob [npc.herHim] of [npc.her] precious virginity!");
+					"[npc.NameIs]喜欢用[npc.her]的屁股，嘴巴，胸部——甚至愿意承诺用[npc.her]的小穴来取悦[npc.her]的对象，"
+							+ "但这承诺永远不会兑现，谁也无法进入[npc.she]的女性身体，夺走[npc.her]宝贵的贞操！");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8374,7 +8374,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_LUSTY_MAIDEN_NO_HYMEN = new AbstractStatusEffect(80,
-			"Lusty 'Maiden'",
+			"色欲“少女”",
 			"virginLustyMaidenNoHymen",
 			PresetColour.GENERIC_GOOD,
 			true,
@@ -8384,8 +8384,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.Name] [npc.verb(act)] as though [npc.her] pussy is completely unspoiled and off-limits,"
-							+ " but [npc.sheIs] also suspiciously passionate about arguing that a broken hymen does not disqualify a person from being considered a pure virgin...");
+					"[npc.Name]表现得像是[npc.her]的小穴从未遭人玷污或进入过一样，"
+							+ "但[npc.sheIs]又奇特地热衷于争辩一件事——就算处女膜破了，也不代表该被排除在贞洁处女的范围外……");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8401,7 +8401,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_LUSTY_MAIDEN_ONLY_HYMEN = new AbstractStatusEffect(80,
-			"Lusty 'Maiden'",
+			"色欲“少女”",
 			"virginLustyMaidenRepaired",
 			PresetColour.GENERIC_GOOD,
 			true,
@@ -8410,8 +8410,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"[npc.Name] [npc.verb(act)] as though [npc.her] pussy is completely unspoiled and off-limits,"
-							+ " but [npc.sheIs] also suspiciously passionate about arguing that having an intact hymen is enough to technically make anyone a virgin...");
+					"[npc.Name]表现得像是[npc.her]的小穴从未遭人玷污或进入过一样，"
+							+ "但[npc.sheIs]却又奇特地热衷于争辩一件事——只要处女膜没破，就可算作是处女……");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8427,7 +8427,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FETISH_LUSTY_MAIDEN_BROKEN = new AbstractStatusEffect(80,
-			"Broken Maiden",
+			"破处少女",
 			"virginLustyMaidenBroken",
 			PresetColour.GENERIC_TERRIBLE,
 			false,
@@ -8438,8 +8438,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Losing [npc.her] precious virginity has hit [npc.name] hard, and [npc.she] now [npc.verb(see)] [npc.herself] as nothing but a dirty slut."
-						+ " All of [npc.her] efforts to keep [npc.her] pussy pure by using [npc.her] other assets was wasted, and now all [npc.she] fantasises about is using [npc.her] worthless cunt as a public cumdump...");
+					"失去宝贵的贞操对[npc.Name]是一次巨大的打击，令[npc.she]自认为已经脏了。"
+						+ "[npc.her]为保住小穴贞洁所付出的一切努力，譬如让人用别的地方，现在都已付诸东流。这令[npc.she]只能幻想着用下贱的小穴给人作肉便器……");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8458,15 +8458,15 @@ public class StatusEffect {
 	// JOB/OCCUPATION EFFECTS:
 	
 	public static AbstractStatusEffect COMBAT_JOB_SOLDIER = new AbstractStatusEffect(10,
-			"Controlled Aggression",
+			"受控侵略",
 			"res/perks/jobs/soldier",
 			PresetColour.BASE_GREEN,
 			true,
 			null,
-			Util.newArrayListOfValues("Your damage is [style.boldExcellent(doubled)]")) {
+			Util.newArrayListOfValues("你的伤害[style.boldExcellent(翻倍)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "Thanks to [npc.her] military training, [npc.name] [npc.is] able to strike with extreme aggression at the beginning of combat.");
+				return UtilText.parse(target, "得益于军事训练，[npc.Name]能在战斗开始时以极强的攻击性打击敌人。");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -8478,7 +8478,7 @@ public class StatusEffect {
 	// CLOTHING SETS:
 	
 	public static AbstractStatusEffect SET_MAID = new AbstractStatusEffect(70,
-			"Hard-working Maid",
+			"辛勤女仆",
 			"clothingSets/maid",
 			PresetColour.CLOTHING_BLACK,
 			true,
@@ -8492,7 +8492,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing the entire Maid's outfit, [npc.nameIsFUll] filled with the energy [npc.she] [npc.verb(need)] in order to be a sexy hard-working maid.");
+				return UtilText.parse(target, "穿上整套女仆装，[npc.nameIsFull]感到自己就该是个辛勤的性感女仆！");
 					
 			} else {
 				return "";
@@ -8505,7 +8505,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_MAID_BOOSTED = new AbstractStatusEffect(70,
-			"Professional Maid",
+			"职业女仆",
 			"clothingSets/maid_boosted",
 			PresetColour.CLOTHING_BLACK,
 			PresetColour.BASE_GOLD,
@@ -8522,7 +8522,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing the entire Maid's outfit, [npc.nameIsFull] reminded of [npc.her] true profession; that of an exceptionally talented (and sexy) maid!");
+				return UtilText.parse(target, "穿上整套女仆装，[npc.nameIsFull]才会想起，[npc.her]生来便是天赋异禀的性感女仆！");
 				
 			} else {
 				return "";
@@ -8535,7 +8535,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_MILK_MAID = new AbstractStatusEffect(70,
-			"Milk Maid",
+			"泌乳女仆",
 			"clothingSets/milk_maid",
 			PresetColour.BASE_WHITE,
 			true,
@@ -8549,7 +8549,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing the entire Milk Maid's outfit, [npc.nameIsFull] filled with the energy [npc.she] [npc.verb(need)] in order to perform all of [npc.her] milk maid's duties.");
+				return UtilText.parse(target, "穿上整套泌乳女仆装，[npc.nameIsFull]感到自己就该全心全意地投入进泌乳女仆的职责中。");
 				
 			} else {
 				return "";
@@ -8562,7 +8562,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_MILK_MAID_BOOSTED = new AbstractStatusEffect(70,
-			"Professional Milk Maid",
+			"职业泌乳女仆",
 			"clothingSets/milk_maid_boosted",
 			PresetColour.BASE_WHITE,
 			PresetColour.BASE_GOLD,
@@ -8579,7 +8579,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing the entire Milk Maid's outfit, [npc.nameIsFull] reminded of [npc.her] true profession; that of an exceptionally talented (and sexy) milk maid.");
+				return UtilText.parse(target, "穿上整套泌乳女仆装，[npc.nameIsFull]才想起，[npc.her]生来便该是天赋异禀的性感泌乳女仆！");
 				
 			} else {
 				return "";
@@ -8592,7 +8592,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_BUTLER = new AbstractStatusEffect(70,
-			"Butler",
+			"管家",
 			"clothingSets/butler",
 			PresetColour.CLOTHING_WHITE,
 			true,
@@ -8606,7 +8606,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing the entire Butler's outfit, [npc.nameIsFull] filled with the energy [npc.she] [npc.verb(need)] in order to carry out [npc.her] duties as a butler.");
+				return UtilText.parse(target, "穿上整套管家服，[npc.nameIsFull]感到自己就该全心全意地投入进管家的职责中。");
 					
 			} else {
 				return "";
@@ -8619,7 +8619,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_BUTLER_BOOSTED = new AbstractStatusEffect(70,
-			"Professional Butler",
+			"职业管家",
 			"clothingSets/butler_boosted",
 			PresetColour.CLOTHING_WHITE,
 			PresetColour.BASE_GOLD,
@@ -8636,7 +8636,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing the entire Butler's outfit, [npc.nameIsFull] reminded of [npc.her] true profession; that of an exceptionally talented butler!");
+				return UtilText.parse(target, "穿上整套管家服，[npc.nameIsFull]这才想起，[npc.her]生来便该是天赋异禀的管家！");
 					
 			} else {
 				return "";
@@ -8649,7 +8649,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_WITCH = new AbstractStatusEffect(70,
-			"Arcane Witch",
+			"奥术魔女",
 			"clothingSets/witch",
 			PresetColour.CLOTHING_BLACK,
 			true,
@@ -8665,10 +8665,10 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.isPlayer()) {
-					return "By wearing the complete set of witch's clothes, you feel your arcane power growing stronger.";
+					return "穿齐魔女套装，你的奥术能量愈发强大。";
 					
 				} else {
-					return UtilText.parse(target, "By wearing the complete set of witch's clothes, [npc.namePos] arcane power has grown stronger.");
+					return UtilText.parse(target, "穿上整套魔女服，[npc.namePos]的力量愈发强大。");
 					
 				}
 			} else {
@@ -8682,7 +8682,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_SCIENTIST = new AbstractStatusEffect(70,
-			"Scientist",
+			"科学家",
 			"clothingSets/scientist",
 			PresetColour.CLOTHING_BLACK,
 			true,
@@ -8699,10 +8699,10 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.isPlayer()) {
-					return "By donning both a lab coat and safety goggles, you're confident that no chemical spill will harm you!";
+					return "你相信，只要穿好防护性能最强的白大褂，戴上护目镜，就没有什么化学品能伤害你。";
 					
 				} else {
-					return UtilText.parse(target, "By wearing both a lab coat and safety goggles, [npc.name] is well-protected against any chemical spill.");
+					return UtilText.parse(target, "穿上实验室外套，戴上安全护目镜，就能很好地防止化学品泄漏。");
 					
 				}
 			} else {
@@ -8716,7 +8716,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_SLUTTY_ENFORCER = new AbstractStatusEffect(70,
-			"Slutty Enforcer",
+			"风骚执法者",
 			"clothingSets/slutty_enforcer",
 			PresetColour.BASE_PINK,
 			true,
@@ -8730,7 +8730,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "[npc.NameIsFull] wearing a slutty fancy-dress version of an Enforcer's uniform, making [npc.herHim] feel extremely sexy.");
+				return UtilText.parse(target, "[npc.NameIsFull]穿着放荡奇装异服版的执法者制服，真叫人把持不住。");
 					
 			} else {
 				return "";
@@ -8743,7 +8743,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_RAINBOW = new AbstractStatusEffect(70,
-			"Double Rainbow",
+			"双倍彩虹",
 			"clothingSets/rainbow",
 			PresetColour.CLOTHING_RED,
 			true,
@@ -8755,7 +8755,7 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return "Double rainbow... What does it mean?!";
+			return "双倍彩虹……到底什么意思啊？！";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8764,7 +8764,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_DARK_SIREN = new AbstractStatusEffect(70,
-			"Dark Siren",
+			"暗夜塞壬",
 			"clothingSets/dark_siren",
 			PresetColour.CLOTHING_PURPLE_DARK,
 			PresetColour.CLOTHING_BLACK_STEEL,
@@ -8779,7 +8779,7 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return "<i>Darkness and chaos, let the boundaries of the eternal void be shattered! Intangible manifestation of divine will, now let my sealed power be unleashed!</i>";
+			return "<i>无光与混乱，打破永恒虚无的界限吧！无形显现的神意啊，释放出我那封存着的力量吧！</i>";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8788,7 +8788,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_LYSSIETH_GUARD = new AbstractStatusEffect(70,
-			"Lyssieth's Guard",
+			"莉西丝的护卫",
 			"clothingSets/lyssieth_guard",
 			PresetColour.CLOTHING_OLIVE,
 			PresetColour.CLOTHING_BROWN_DARK,
@@ -8803,7 +8803,7 @@ public class StatusEffect {
 		}
 		@Override
 		public String getDescription(GameCharacter target) {//British Auxiliary Territorial Service
-			return UtilText.parse(target, "While wearing the uniform of Lyssieth's guard, [npc.name] [npc.verb(feel)] as though [npc.sheIs] more easily able to keep [npc.her] composure.");
+			return UtilText.parse(target, "穿上莉西丝的护卫制服，[npc.Name]似乎更容易保持冷静了。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8812,7 +8812,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_BDSM = new AbstractStatusEffect(70,
-			"Bound Bitch",
+			"受缚婊子",
 			"clothingSets/bdsm",
 			PresetColour.CLOTHING_BLACK,
 			false,
@@ -8836,9 +8836,9 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.hasFetish(Fetish.FETISH_BONDAGE_VICTIM)) {
-					return UtilText.parse(target, "[npc.Name] [npc.has] been tied up in bondage gear and [npc.is] absolutely loving the fact that [npc.she] [npc.is] struggling to move.");
+					return UtilText.parse(target, "[npc.Name]被束缚装置捆绑着，对难以移动的现状感到无比热爱。");
 				} else {
-					return UtilText.parse(target, "[npc.Name] [npc.has] been tied up in bondage gear and [npc.is] struggling to move.");
+					return UtilText.parse(target, "[npc.Name]被束缚装置捆绑着，难以移动。");
 				}
 			}
 			return "";
@@ -8850,7 +8850,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_CATTLE = new AbstractStatusEffect(70,
-			"Cattle",
+			"牛",
 			"clothingSets/cattle",
 			PresetColour.BASE_TAN,
 			true,
@@ -8864,10 +8864,10 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.isPlayer()) {
-					return "You are wearing a set of accessories normally found on a cow or bull.";
+					return "你穿着在牛身上常见的配饰。";
 					
 				} else {
-					return UtilText.parse(target, "[npc.NameIsFull] wearing a set of accessories normally found on a cow or bull.");
+					return UtilText.parse(target, "[npc.NameIsFull]穿着在牛身上常见的配饰。");
 					
 				}
 			} else {
@@ -8881,7 +8881,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_SNOWFLAKE = new AbstractStatusEffect(70,
-			"Glacial",
+			"冰川",
 			"clothingSets/snowflake",
 			PresetColour.BASE_BLUE_LIGHT,
 			true,
@@ -8898,7 +8898,7 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "By donning the complete set of specially enchanted snowflake jewellery, both [npc.namePos] arcane power and ice attacks have become much more potent!");
+			return UtilText.parse(target, "佩戴上全套特别附魔的雪花首饰后，[npc.namePos]的奥术力量与寒冷攻击都将变得更加强大！");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8907,7 +8907,7 @@ public class StatusEffect {
 	};
 		
 	public static AbstractStatusEffect SET_SUN = new AbstractStatusEffect(70,
-			"Radiant",
+			"辉光",
 			"clothingSets/sun",
 			PresetColour.CLOTHING_COPPER,
 			PresetColour.CLOTHING_YELLOW,
@@ -8926,7 +8926,7 @@ public class StatusEffect {
 			if(target==null) {
 				return "";
 			}
-			return UtilText.parse(target, "By donning jewels that sparkle like the sun, [npc.nameIsFull] confident that [npc.her] spells and fire attacks will incinerate [npc.her] foes!");
+			return UtilText.parse(target, "在戴上像太阳一样闪耀的珠宝后，[npc.nameIsFull]信心满满，准备好[npc.her]的法术与火焰将敌人烧成灰烬！");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -8935,7 +8935,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_GEISHA = new AbstractStatusEffect(70,
-			"Geisha",
+			"艺伎",
 			"clothingSets/geisha",
 			PresetColour.BASE_ROSE,
 			true,
@@ -8948,7 +8948,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "[npc.NameIs] wearing a youko's ceremonial outfit, which closely resembles traditional Japanese clothing.");
+				return UtilText.parse(target, "[npc.NameIs]穿着一套妖狐的礼服，这身衣服与日本传统服装非常相似。");
 			} else {
 				return "";
 			}
@@ -8960,7 +8960,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_RONIN = new AbstractStatusEffect(70,
-			"Ronin",
+			"浪人",
 			"clothingSets/ronin",
 			PresetColour.BASE_ROSE,
 			true,
@@ -8975,11 +8975,11 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.isPlayer()) {
-					return "<i>You understand there is something outside yourself that has to be served. And when that need is gone, when belief has died, what are you? [pc.A_man] without a master.</i>";
+					return "<i>你明白在自身之外有什么必须被服务。当欲望满足后，信仰消亡后，你又会变成什么样子呢？一个没有主人的[pc.man]。</i>";
 					
 				} else {
 					return UtilText.parse(target,
-							"<i>[npc.Name] understands there is something outside [npc.herself] that has to be served. And when that need is gone, when belief has died, what is [npc.she]? [npc.A_man] without a master.</i>");
+							"<i>[npc.Name]明白在[npc.herself]之外有什么必须被服务。当欲望满足后，信仰消亡后，[npc.she]又会变成什么样子呢？一个没有主人的[npc.man]。</i>");
 					
 				}
 			} else {
@@ -8993,7 +8993,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_DAISHO = new AbstractStatusEffect(70,
-			"Daisho",
+			"成对武士刀",
 			"clothingSets/daisho",
 			PresetColour.BASE_ROSE,
 			true,
@@ -9008,8 +9008,8 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				return UtilText.parse(target,
-						"The Japanese term 'Daisho', meaning 'big-little', is used to describe the simultaneous wearing of a katana (the big) and wakizashi (the little)."
-						+ " Wearing both of these swords at once marks the wielder as a member of the samurai class.");
+						"日语中的“大小”意为“成对武士刀”，用来描述同时佩戴太刀和胁差的情况。"
+						+ "同时佩戴这两把剑，标志着持剑者是武士阶层的一员。");
 			}
 			return "";
 		}
@@ -9020,7 +9020,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_JOLNIR = new AbstractStatusEffect(70,
-			"J&oacute;lnir",
+			"圣诞",
 			"clothingSets/jolnir",
 			PresetColour.BASE_BLACK,
 			true,
@@ -9036,10 +9036,10 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
 				if(target.isPlayer()) {
-					return "By wearing the outfit of the 'Yule figure', both your wisdom and prowess in battle are greatly increased!";
+					return "你穿上了“圣诞套装”，大幅增强了自身的智力与作战能力！";
 					
 				} else {
-					return UtilText.parse(target, "[npc.NameIsFull] wearing the outfit of the 'Yule figure', thereby greatly increasing [npc.her] wisdom and prowess in battle.");
+					return UtilText.parse(target, "[npc.NameIsFull]穿上了“圣诞套装”，大幅增加了[npc.her]的智力与作战能力。");
 					
 				}
 			} else {
@@ -9053,7 +9053,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_KITTY = new AbstractStatusEffect(70,
-			"Playful Kitty",
+			"爱玩的猫咪",
 			"clothingSets/kitty",
 			PresetColour.CLOTHING_PINK_LIGHT,
 			PresetColour.CLOTHING_BLACK,
@@ -9067,7 +9067,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing the entire set of kitty lingerie, [npc.name] [npc.verb(find)] [npc.herself] wanting to tease everyone [npc.she] [npc.verb(meet)]!");
+				return UtilText.parse(target, "[npc.name]穿上了整套猫咪内衣，想要好好调戏下见到的每一个人！");
 			} else {
 				return "";
 			}
@@ -9079,7 +9079,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SET_STURDY_STEED = new AbstractStatusEffect(70,
-			"All Tacked Up",
+			"统统套齐",
 			"clothingSets/sturdy_steed",
 			PresetColour.CLOTHING_STEEL,
 			true,
@@ -9094,7 +9094,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "By wearing a full set of tack, [npc.name] [npc.verb(find)] [npc.herself] feeling stronger than usual, and [npc.is] filled with energy!");
+				return UtilText.parse(target, "穿上了整套马具，[npc.name]感觉自己比往常更为强壮，精力满满！");
 			} else {
 				return "";
 			}
@@ -9106,7 +9106,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOTHING_EFFECT = new AbstractStatusEffect(70,
-			"clothing effects",
+			"衣物效果",
 			"combatHidden",
 			PresetColour.TRANSFORMATION_GENERIC,
 			false,
@@ -9127,20 +9127,20 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect POTION_EFFECTS = new AbstractStatusEffect(80,
-			"potion effects",
+			"药剂效果",
 			"potionEffects",
 			PresetColour.GENERIC_ARCANE,
 			PresetColour.BASE_PINK_LIGHT,
 			null,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.italicsMinorGood(Maximum values are 25)]")) {
+			Util.newArrayListOfValues("[style.italicsMinorGood(最大值为25)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.hasTrait(Perk.JOB_CHEF, true)) {
-				return UtilText.parse(target, "Thanks to [npc.namePos] background as a chef, [npc.sheIs] able to harness the full potential of the many arcane-infused consumables found throughout this world...");
+				return UtilText.parse(target, "借助[npc.namePos]厨师的背景，对于这个世界中被注入消耗品的，[npc.sheIs]都能够完全发挥其效果……");
 			}
-			return UtilText.parse(target, "Arcane-infused consumables are very common in this world, and as [npc.nameHasFull] found out, they can have some rather curious effects...");
+			return UtilText.parse(target, "注入奥术的消耗品在这个世界非常常见，[npc.nameHasFull]会发现，他们拥有各式各样相当奇妙的作用……");
 		}
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
@@ -9154,7 +9154,7 @@ public class StatusEffect {
 			
 			if (getAttributeModifiers(target) != null) {
 				for (Entry<AbstractAttribute, Float> e : getAttributeModifiers(target).entrySet()) {
-					modifiersList.add("<b>" + (e.getValue() > 0 ? "+" : "") + e.getValue() + "</b>" + " <b style='color: " + e.getKey().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(e.getKey().getAbbreviatedName()) + "</b>");
+					modifiersList.add("<b>" + (e.getValue() > 0 ? "+" : "") + e.getValue() + "</b>" + "<b style='color: " + e.getKey().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(e.getKey().getAbbreviatedName()) + "</b>");
 				}
 			}
 					
@@ -9163,7 +9163,7 @@ public class StatusEffect {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			if(target.hasTrait(Perk.JOB_CHEF, true)) {
-				return Util.newArrayListOfValues("[style.italicsGood(Maximum values are 50)]");
+				return Util.newArrayListOfValues("[style.italicsGood(最大值为50)]");
 			}
 			return super.getExtraEffects(target);
 		}
@@ -9175,17 +9175,17 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect HAPPINESS = new AbstractStatusEffect(70,
-			"happiness",
+			"心情愉悦",
 			"happinessFox",
 			PresetColour.CLOTHING_SILVER,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.HEALTH_MAXIMUM, 5f),
 					new Value<>(Attribute.MANA_MAXIMUM, 5f)),
-			Util.newArrayListOfValues("[style.italicsGood(Happiness!)]")) {
+			Util.newArrayListOfValues("[style.italicsGood(开心！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return "The silver-furred fox, <i>Happiness</i>, is following you around wherever you go."
-					+ " Whenever you feel tired or down, the cute little animal brushes up against your [pc.legs] and sits still to have its ears scratched, which instantly fills you with happiness.";
+			return "这个银白色皮毛的狐狸“<i>欢欣</i>”跟着你到处走。"
+					+ "每当你感到疲劳或失落，这个可爱的小动物都会在你的[pc.legs]边蹭来蹭去，坐下来求你挠耳朵，能立刻让你开心起来。";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -9197,7 +9197,7 @@ public class StatusEffect {
 	// COMBAT EFFECTS:
 
 	public static AbstractStatusEffect SPECIAL_SILENCE_TRANCE = new AbstractStatusEffect(70,
-			"Silence's Trance",
+			"默之迷幻",
 			"glowingEyes",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -9208,7 +9208,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return "Upon witnessing the defeat of her beloved friend, Shadow, Silence has summoned an air elemental and entered into an intense trance, granting her improved combat abilities!";
+			return "目睹挚友“影”被击败后，默召唤出风元素，并陷入强烈的迷幻状态，战斗能力大幅提高！";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -9223,7 +9223,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect SPECIAL_SHADOW_BESERK = new AbstractStatusEffect(70,
-			"Shadow's Rage",
+			"影之狂怒",
 			"glowingEyes",
 			PresetColour.BASE_CRIMSON,
 			true,
@@ -9234,7 +9234,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return "Upon witnessing the defeat of her beloved friend, Silence, Shadow has entered into a state of frenzied beserker rage, granting her massively improved combat abilities!";
+			return "目睹挚友“默”被击败后，影陷入了野蛮狂怒，战斗能力大幅提高！";
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -9249,7 +9249,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect SPECIAL_AMERICAN_FREEDOM = new AbstractStatusEffect(70,
-			"Blinded by Freedom",
+			"被自由蒙蔽双眼",
 			"american_freedom",
 			PresetColour.BASE_RED,
 			false,
@@ -9258,7 +9258,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "[npc.NameIsFull] struggling to fight against your manifest destiny!");
+				return UtilText.parse(target, "[npc.NameIsFull]与命运抗争！");
 			}
 			return "";
 		}
@@ -9277,7 +9277,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect COMBAT_HIDDEN = new AbstractStatusEffect(70,
-			"hidden",
+			"隐藏",
 			"combatHidden",
 			PresetColour.GENERIC_BAD,
 			false,
@@ -9285,7 +9285,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return "You don't know what perks, status effects, spells, or special attacks your opponent has available. You require the "+Perk.OBSERVANT.getName(target)+" perk to reveal such information.";
+			return "你不知道对手有什么天赋、效果、法术或特殊攻击。需要"+Perk.OBSERVANT.getName(target)+"天赋才能揭示这些信息。";
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9294,7 +9294,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect DESPERATE_FOR_SEX = new AbstractStatusEffect(70,
-			"desperate for sex",
+			"渴求性爱",
 			"desperateForSex",
 			PresetColour.ATTRIBUTE_HEALTH,
 			PresetColour.ATTRIBUTE_MANA,
@@ -9302,16 +9302,16 @@ public class StatusEffect {
 			false,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Incoming damage ignores all shielding)]",
-					"Incoming [style.colourLust(Lust damage)] converted to:",
-					"[style.colourHealth(2*"+Attribute.HEALTH_MAXIMUM.getName()+" damage)] and [style.colourMana(1*"+Attribute.MANA_MAXIMUM.getName()+" damage)]")) {
+					"[style.colourTerrible(所受伤害无视所有护盾)]",
+					"即将受到的[style.colourLust(性欲伤害)]将转化为：",
+					"[style.colourHealth(2*"+Attribute.HEALTH_MAXIMUM.getName()+"伤害)]和[style.colourMana(1*"+Attribute.MANA_MAXIMUM.getName()+"伤害)])")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "You are absolutely desperate for sex, but thanks to the strength of your arcane aura, you are able to resist giving up right here on the spot!";
+				return "你求性若渴，但借助奥术灵气的力量，你能够暂时避免直接放弃抵抗！";
 			} else {
 				return UtilText.parse(target,
-						"[npc.NameIsFull] absolutely desperate for sex, but thanks to the strength of [npc.her] arcane aura, [npc.sheIs] able to resist giving up right here on the spot!");
+						"[npc.NameIsFull]求性若渴，但借助奥术灵气的力量，[npc.sheIs]能够暂时避免直接放弃抵抗！");
 			}
 		}
 		@Override
@@ -9327,7 +9327,7 @@ public class StatusEffect {
 	// From spells or combat moves (still in combat):
 	
 	public static AbstractStatusEffect ARCANE_WEAKNESS = new AbstractStatusEffect(10,
-			"arcane weakness",
+			"奥术弱点",
 			"negativeCombatEffect",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -9339,7 +9339,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NamePos] head is spinning and [npc.sheIs] struggling to stay upright...");
+			return UtilText.parse(target, "[npc.NamePos]头昏脑花，只能奋力站直……");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9348,7 +9348,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect DAZED = new AbstractStatusEffect(10,
-			"dazed",
+			"眩晕",
 			"dazed",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -9357,7 +9357,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "[npc.NamePos] head is spinning and [npc.sheIs] struggling to stay upright. [npc.SheIs] finding it incredibly difficult to land a hit or dodge any incoming attacks.");
+				return UtilText.parse(target, "[npc.NamePos]头晕脑花，只能奋力站直。[npc.SheIs]感觉无论是命中对手还是躲避攻击都变得极其困难。");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9366,7 +9366,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CRIPPLE = new AbstractStatusEffect(10,
-			"crippled",
+			"致残",
 			"negativeCombatEffect",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -9374,7 +9374,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameHasFull] been temporarily crippled, and [npc.sheIs] struggling to do as much damage with [npc.her] attacks as [npc.sheIs] usually able to.");
+			return UtilText.parse(target, "[npc.NameHasFull]被暂时致残了，造成的伤害不足平常。");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9383,7 +9383,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect VULNERABLE = new AbstractStatusEffect(10,
-			"vulnerable",
+			"脆弱",
 			"negativeCombatEffect",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -9393,7 +9393,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] feeling particularly vulnerable, and [npc.she] [npc.is]n't able to defend [npc.herself] to the best of [npc.her] ability.");
+			return UtilText.parse(target, "[npc.NameIsFull]感觉自己格外脆弱，防护能力不比平常。");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9402,21 +9402,21 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect POISONED = new AbstractStatusEffect(10,
-			"poisoned",
+			"中毒",
 			"combat_poisoned",
 			PresetColour.ATTRIBUTE_HEALTH,
 			false,
 			null,
-			Util.newArrayListOfValues("<b>15</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>15</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.POISON.damageTarget(null, target, 15);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The poison within [npc.namePos] body is taking its toll, and [npc.sheIs] steadily losing [npc.her] strength!");
+			return UtilText.parse(target, "[npc.namePos]体内的毒素正在生效，[npc.sheIs]的体力渐渐流失！");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9425,25 +9425,25 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect POISONED_LUST = new AbstractStatusEffect(10,
-			"lust-poisoned",
+			"欲毒",
 			"combat_poisoned",
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, -25f)),
 			Util.newArrayListOfValues(
-					"<b>5</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" per turn</b>",
-					"<b>10</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+" per turn</b>")) {
+					"每回合造成<b>5</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"</b>",
+					"<b>10</b>"+Attribute.DAMAGE_LUST.getColouredName("b")+"每回合</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.POISON.damageTarget(null, target, 5);
 			Value<String, Integer> lustDamageValue = DamageType.LUST.damageTarget(null, target, 10);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+"!")+damageValue.getKey()
-					 + UtilText.parse(target, "<br/>[npc.Name] additionally [npc.verb(take)] <b>" + lustDamageValue.getValue() + "</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+"!")+lustDamageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"！")+damageValue.getKey()
+					 + UtilText.parse(target, "<br/>[npc.Name]额外受到了<b>" + lustDamageValue.getValue() + "</b>点"+Attribute.DAMAGE_LUST.getColouredName("b")+"！")+lustDamageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The lust poison within [npc.namePos] body is taking its toll, and [npc.sheIs] not only steadily losing [npc.her] strength, but also getting uncontrollably turned on in the process!");
+			return UtilText.parse(target, "[npc.namePos]体内的欲毒正在生效，[npc.sheIs]不仅渐渐失去了体力，还不受控制地性奋起来！");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9452,7 +9452,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect INKY_ATTACK = new AbstractStatusEffect(10,
-			"Inky's lover",
+			"墨墨的最爱",
 			"inky_summon",
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
@@ -9460,16 +9460,16 @@ public class StatusEffect {
 					new Value<>(Attribute.ACTION_POINTS, -1f),
 					new Value<>(Attribute.RESISTANCE_LUST, -25f)),
 			Util.newArrayListOfValues(
-					"<b>15</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+" per turn</b>")) {
+					"每回合造成<b>15</b>点"+Attribute.DAMAGE_LUST.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> lustDamageValue = DamageType.LUST.damageTarget(null, target, 15);
 
-			return UtilText.parse(target, "<br/>[npc.Name] [npc.verb(take)] <b>" + lustDamageValue.getValue() + "</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+"!")+lustDamageValue.getKey();
+			return UtilText.parse(target, "<br/>[npc.Name]受到了<b>" + lustDamageValue.getValue() + "</b>点"+Attribute.DAMAGE_LUST.getColouredName("b")+"！")+lustDamageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "Inky is caressing [npc.namePos] body with its tentacles, and seems to be loving every second of it!");
+			return UtilText.parse(target, "墨墨正在用触手爱抚着[npc.namePos]的身体，享受着在其上的每一秒！");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9478,15 +9478,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WITCH_SEAL = new AbstractStatusEffect(10,
-			"Witch's Seal",
+			"魔女的封锁",
 			"combat_witch_seal",
 			PresetColour.GENERIC_ARCANE,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ACTION_POINTS, -3f)),
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot attempt to escape!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法逃跑！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "A powerful arcane seal is holding [npc.name] firmly in place, preventing [npc.herHim] from taking any action!");
+			return UtilText.parse(target, "一道强而有力的奥术封锁将[npc.name]牢牢定在原地，使[npc.herHim]无法做出任何动作！");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9502,7 +9502,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WITCH_CHARM = new AbstractStatusEffect(10,
-			"Bewitching Charm",
+			"魔女的魅惑",
 			"combat_witch_charm",
 			PresetColour.GENERIC_SEX,
 			true,
@@ -9511,27 +9511,27 @@ public class StatusEffect {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			if (target.isPlayer()) {
-				return "The <b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Bewitching Charm</b> is making you appear irresistibly attractive!";
+				return "<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>魔女的魅惑</b>让你极具吸引力，无人能挡！";
 				
 			} else {
 				return UtilText.parse(target,
-						"The <b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Bewitching Charm</b> is making [npc.name] appear irresistibly attractive!");
+						"<b style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>魔女的魅惑</b>让[npc.name]极具吸引力，无人能挡！");
 			}
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer()) {
 				if(target.isFeminine()) {
-					return "An arcane enchantment is bewitching anyone who looks upon you, causing them to view you as the most beautiful person they've ever seen.";
+					return "一种会魅惑任何一个看向你的人的奥术附魔，对方的眼中你将变成无出其右的美女。";
 				} else {
-					return "An arcane enchantment is bewitching anyone who looks upon you, causing them to view you as the most handsome person they've ever seen.";
+					return "一种会魅惑任何一个看向你的人的奥术附魔，对方的眼中你将变成无出其右的俊男。";
 				}
 				
 			} else {
 				if(target.isFeminine()) {
-					return UtilText.parse(target, "An arcane enchantment is bewitching you into viewing [npc.name] as the most beautiful person you've ever seen.");
+					return UtilText.parse(target, "一种会魅惑任何一个看向[npc.Name]的人的奥术附魔，对方的眼中[npc.her]将变成无出其右的美女。");
 				} else {
-					return UtilText.parse(target, "An arcane enchantment is bewitching you into viewing [npc.name] as the most handsome person you've ever seen.");
+					return UtilText.parse(target, "一种会魅惑任何一个看向[npc.Name]的人的奥术附魔，对方的眼中[npc.her]将变成无出其右的俊男。");
 				}
 			}
 		}
@@ -9546,15 +9546,15 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect ROPE_BOUND_SEX = new AbstractStatusEffect(10,
-			"Bound in rope",
+			"绳缚",
 			"immobilised_rope",
 			PresetColour.GENERIC_BAD,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "Strong ropes tied around [npc.namePos] body are holding [npc.herHim] firmly in place, preventing [npc.herHim] from taking any action!");
+			return UtilText.parse(target, "结实的绳子缠绕住[npc.namePos]的身体，让[npc.herHim]只得待在原地，无法做出任何动作！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -9574,15 +9574,15 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect CHAINS_BOUND_SEX = new AbstractStatusEffect(10,
-			"Bound in chains",
+			"链缚",
 			"immobilised_chains",
 			PresetColour.GENERIC_BAD,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "Strong chains tied around [npc.namePos] body are holding [npc.herHim] firmly in place, preventing [npc.herHim] from taking any action!");
+			return UtilText.parse(target, "结实的锁链缠住了[npc.namePos]的身体，让[npc.herHim]只得待在原地，无法做出任何动作！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -9602,15 +9602,15 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect STOCKS_BOUND_SEX = new AbstractStatusEffect(10,
-			"Locked in stocks",
+			"锁在颈手枷",
 			"immobilised_stocks",
 			PresetColour.CLOTHING_DESATURATED_BROWN,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.Name] [npc.has] been locked into a set of stocks, and as such [npc.sheIs] unable to take any action!");
+			return UtilText.parse(target, "[npc.Name]被锁在颈手枷中，无法做出任何行动！");
 		}
 		@Override
 		public String applyAdditionEffect(GameCharacter target) {
@@ -9645,7 +9645,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect WEBBED_1 = new AbstractStatusEffect(10,
-			"Webbed",
+			"网缚",
 			"restrain_webbed_1",
 			PresetColour.GENERIC_BAD,
 			false,
@@ -9655,8 +9655,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "Thick, sticky webbing is clinging to [npc.namePos] body, which is causing [npc.her] movements to be somewhat hindered!"
-						+ "<br/>[style.italicsMinorBad(If [npc.she] [npc.verb(get)] webbed again, this effect will become more serious!)]");
+				return UtilText.parse(target, "粘性的厚实蛛网缠在[npc.namePos]的身体上，让[npc.her]的行动受到了一些阻碍！"
+						+ "<br/>[style.italicsMinorBad(如果[npc.she]再次被网住，该效果会更加严重！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9665,7 +9665,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect WEBBED_2 = new AbstractStatusEffect(10,
-			"Seriously webbed",
+			"厚重网缚",
 			"restrain_webbed_2",
 			PresetColour.GENERIC_BAD,
 			false,
@@ -9676,8 +9676,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "A large amount of thick, sticky webbing is clinging to [npc.namePos] body, which is causing [npc.her] movements to be significantly hindered!"
-						+ "<br/>[style.italicsBad(If [npc.she] [npc.verb(get)] webbed again, this effect will become extremely serious!)]");
+				return UtilText.parse(target, "大量粘性的厚实蛛网缠在[npc.namePos]的身体上，让[npc.her]的行动受到了严重阻碍！"
+						+ "<br/>[style.italicsMinorBad(如果[npc.she]再次被网住，该效果会变得极其严重！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9692,7 +9692,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect WEBBED_3 = new AbstractStatusEffect(10,
-			"Cocooned",
+			"茧缚",
 			"restrain_webbed_3",
 			PresetColour.GENERIC_BAD,
 			false,
@@ -9700,11 +9700,11 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, -75f),
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, -15f),
 					new Value<>(Attribute.ACTION_POINTS, -2f)),
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot attempt to escape!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法逃跑！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "A huge amount of thick, sticky webbing is clinging to [npc.namePos] body, making it all but impossible for [npc.herHim] to move [npc.her] [npc.arms] and [npc.legs]!"
-						+ "<br/>[style.italicsBad(If [npc.she] [npc.verb(get)] webbed again, [npc.she] will be instantly defeated!)]");
+				return UtilText.parse(target, "大量粘性的厚实蛛网缠在[npc.namePos]的身体上，让[npc.her]的[npc.arms]和[npc.legs]都无法移动了！"
+						+ "<br/>[style.italicsBad(如果[npc.she]再次被网住，[npc.she]便会直接被击败！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9720,15 +9720,15 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect WEBBED_SEX = new AbstractStatusEffect(10,
-			"Cocooned",
+			"茧缚",
 			"immobilised_cocoon",
 			PresetColour.GENERIC_BAD,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "A huge amount of thick, sticky webbing is clinging to [npc.namePos] body, making it all but impossible for [npc.herHim] to move!");
+				return UtilText.parse(target, "大量粘性的厚实蛛网缠在[npc.namePos]的身体上，让[npc.her]无法移动了！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -9748,15 +9748,15 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect WITCH_SEAL_SEX = new AbstractStatusEffect(10,
-			"Witch's Seal",
+			"魔女的封锁",
 			"immobilised_seal",
 			PresetColour.GENERIC_ARCANE,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "A powerful arcane seal is holding [npc.name] firmly in place, preventing [npc.herHim] from taking any action!");
+			return UtilText.parse(target, "一道强而有力的奥术封锁将[npc.name]牢牢定在原地，使[npc.herHim]无法做出任何动作！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -9776,7 +9776,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect TENTACLE_RESTRAIN_1 = new AbstractStatusEffect(10,
-			"Tentacle-grabbed",
+			"被触手抓取",
 			"restrain_tentacles_1",
 			PresetColour.GENERIC_BAD,
 			PresetColour.getColourFromId("NoStepOnSnek_octopus"),
@@ -9788,8 +9788,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "Coils of strong tentacles are grabbing at [npc.namePos] body, which is causing [npc.her] movements to be somewhat hindered!"
-						+ "<br/>[style.italicsMinorBad(If [npc.she] [npc.verb(get)] tentacle-grabbed again, this effect will become more serious!)]");
+				return UtilText.parse(target, "几根粗壮的触手抓住了[npc.namePos]的身体，让[npc.her]的行动受到了一些阻碍！"
+						+ "<br/>[style.italicsMinorBad(如果[npc.she]再次被触手限制，该效果会更加严重！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9798,7 +9798,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect TENTACLE_RESTRAIN_2 = new AbstractStatusEffect(10,
-			"Tentacle-embraced",
+			"被触手缠绕",
 			"restrain_tentacles_2",
 			PresetColour.GENERIC_BAD,
 			PresetColour.getColourFromId("NoStepOnSnek_octopus"),
@@ -9811,8 +9811,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "Strong tentacles have firmly coiled themselves around [npc.namePos] [npc.arms] and [npc.legs], which is causing [npc.her] movements to be significantly hindered!"
-						+ "<br/>[style.italicsBad(If [npc.she] [npc.verb(get)] tentacle-grabbed again, this effect will become extremely serious!)]");
+			return UtilText.parse(target, "有力的触手紧紧缠绕住[npc.namePos]的[npc.arms]和[npc.legs]，让[npc.her]的行动受到了严重阻碍！"
+						+ "<br/>[style.italicsMinorBad(如果[npc.she]再次被触手限制，该效果会变得极其严重！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9827,7 +9827,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect TENTACLE_RESTRAIN_3 = new AbstractStatusEffect(10,
-			"Tentacle-constricted",
+			"被触手约束",
 			"restrain_tentacles_3",
 			PresetColour.GENERIC_BAD,
 			PresetColour.getColourFromId("NoStepOnSnek_octopus"),
@@ -9837,11 +9837,11 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, -75f),
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, -15f),
 					new Value<>(Attribute.ACTION_POINTS, -2f)),
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot attempt to escape!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法逃跑！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "Strong tentacles have constricted [npc.namePos] in a vice-like grip, making it all but impossible for [npc.herHim] to move [npc.her] [npc.arms] and [npc.legs]!"
-						+ "<br/>[style.italicsBad(If [npc.she] [npc.verb(get)] tentacle-grabbed again, [npc.she] will be instantly defeated!)]");
+				return UtilText.parse(target, "有力的触手如钳口一般紧紧束缚[npc.name]，让[npc.herHim]完全无法移动[npc.arms]和[npc.legs]了！"
+						+ "<br/>[style.italicsBad(如果[npc.she]再次被触手限制，[npc.she]便会直接被击败！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9857,19 +9857,19 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect TENTACLE_RESTRICTION_SEX = new AbstractStatusEffect(10,
-			"Tentacle-bound",
+			"被触手束缚",
 			"immobilised_tentacles",
 			PresetColour.getColourFromId("NoStepOnSnek_octopus"),
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(target).get(ImmobilisationType.TENTACLE_RESTRICTION);
 			if(applier==null) {
 				return "";
 			}
-			return UtilText.parse(target, applier, "[npc2.NameIsFull] using four of [npc2.her] [npc2.tentacles] to hold [npc.name] down and firmly prevent [npc.herHim] from moving!");
+			return UtilText.parse(target, applier, "[npc2.NameIsFull]用四根[npc2.tentacles]钳制住了[npc.name]，让[npc.herHim]一动都不能动了！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -9889,7 +9889,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect TAIL_RESTRAIN_1 = new AbstractStatusEffect(10,
-			"Tail-grabbed",
+			"被尾巴抓住",
 			"restrain_tail_1",
 			PresetColour.GENERIC_BAD,
 			PresetColour.BASE_GREEN_DARK,
@@ -9901,8 +9901,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "A strong, snake-like tail is wrapping itself around [npc.namePos] body, which is causing [npc.her] movements to be somewhat hindered!"
-						+ "<br/>[style.italicsMinorBad(If [npc.she] [npc.verb(get)] tail-constricted again, this effect will become more serious!)]");
+				return UtilText.parse(target, "一条粗壮的蛇尾环住了[npc.namePos]的身体，让[npc.her]的行动受到了一些阻碍！"
+						+ "<br/>[style.italicsMinorBad(如果[npc.she]再被锢住，该效果会更加严重！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9911,7 +9911,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect TAIL_RESTRAIN_2 = new AbstractStatusEffect(10,
-			"Tail-embraced",
+			"被尾巴紧抱",
 			"restrain_tail_2",
 			PresetColour.GENERIC_BAD,
 			PresetColour.BASE_GREEN_DARK,
@@ -9924,8 +9924,8 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "A strong, snake-like tail has firmly coiled itself around [npc.namePos] [npc.arms] and [npc.legs], which is causing [npc.her] movements to be significantly hindered!"
-						+ "<br/>[style.italicsBad(If [npc.she] [npc.verb(get)] tail-constricted again, this effect will become extremely serious!)]");
+			return UtilText.parse(target, "一条粗壮的蛇尾紧紧缠绕住[npc.namePos]的[npc.arms]和[npc.legs]，让[npc.her]的行动受到了严重阻碍！"
+						+ "<br/>[style.italicsBad(如果[npc.she]再被锢住，该效果会变得极其严重！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9940,7 +9940,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect TAIL_RESTRAIN_3 = new AbstractStatusEffect(10,
-			"Tail-constricted",
+			"被尾巴禁锢",
 			"restrain_tail_3",
 			PresetColour.GENERIC_BAD,
 			PresetColour.BASE_GREEN_DARK,
@@ -9950,11 +9950,11 @@ public class StatusEffect {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, -75f),
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, -15f),
 					new Value<>(Attribute.ACTION_POINTS, -2f)),
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot attempt to escape!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法逃跑！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-				return UtilText.parse(target, "A strong, snake-like tail has constricted [npc.namePos] in a vice-like grip, making it all but impossible for [npc.herHim] to move [npc.her] [npc.arms] and [npc.legs]!"
-						+ "<br/>[style.italicsBad(If [npc.she] [npc.verb(get)] tail-constricted again, [npc.she] will be instantly defeated!)]");
+				return UtilText.parse(target, "一条粗壮的蛇尾像钳子一样紧紧夹住了[npc.namePos]，使[npc.herHim]几乎无法移动[npc.arms]和[npc.legs]！"
+						+ "<br/>[style.italicsBad(如果[npc.she]再被锢住，[npc.she]便会直接被击败！)]");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -9970,19 +9970,19 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TAIL_CONSTRICTION_SEX = new AbstractStatusEffect(10,
-			"Constricted",
+			"约束",
 			"immobilised_tail",
 			PresetColour.BASE_GREEN_DARK,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(target).get(ImmobilisationType.TAIL_CONSTRICTION);
 			if(applier==null) {
 				return "";
 			}
-			return UtilText.parse(target, applier, "[npc2.NameIsFull] using [npc2.her] long, strong tail to constrict [npc.name] and firmly prevent [npc.herHim] from moving!");
+			return UtilText.parse(target, applier, "[npc2.NameIsFull]用[npc2.her]长而强壮的尾巴禁锢住了[npc.name]，让[npc.herHim]一动都不能动了！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -10002,21 +10002,21 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect COMMAND_IMMOBILE_SEX = new AbstractStatusEffect(10,
-			"Immobile",
+			"无法移动",
 			"immobilised_command",
 			PresetColour.BASE_WHITE,
 			PresetColour.BASE_RED,
 			PresetColour.BASE_WHITE,
 			false,
 			null,
-			Util.newArrayListOfValues("[style.colourTerrible(Cannot move!)]")) {
+			Util.newArrayListOfValues("[style.colourTerrible(无法移动！)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			GameCharacter applier = Main.sex.getImmobilisationTypes(target).get(ImmobilisationType.COMMAND);
 			if(applier==null) {
 				return "";
 			}
-			return UtilText.parse(target, applier, "[npc2.NameHasFull] commanded [npc.name] to remain completely motionless, and as such [npc.sheIsFull] totally immobile!");
+			return UtilText.parse(target, applier, "[npc2.NameHasFull]命令[npc.name]完全保持静止，而[npc.sheIsFull]确实一动不动了！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -10036,17 +10036,17 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SLEEP_SEX = new AbstractStatusEffect(10,
-			"Asleep",
+			"熟睡",
 			"immobilised_sleep",
 			PresetColour.SLEEP_HEAVY,
 			false,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Cannot move!)]",
-					"Will [style.colourBad(wake)] if partner is not in gentle pace or if mouth is penetrated")) {
+					"[style.colourTerrible(无法移动！)]",
+					"如果性爱状态不再处于温柔，或是口腔被插入，就会[style.colourBad(醒来)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "[npc.NameIsFull] deeply asleep, and as long as the sex remains gentle, [npc.she] won't wake up!");
+			return UtilText.parse(target, "[npc.NameIsFull]正处于深度睡眠中，只要性爱状态仍处于温柔，那么[npc.she]就不会醒来！");
 		}
 		@Override
 		public boolean isSexEffect() {
@@ -10066,22 +10066,22 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect BANEFUL_FISSURE = new AbstractStatusEffect(10,
-			"Fissure's Fumes",
+			"裂隙毒烟",
 			null,
 			PresetColour.DAMAGE_TYPE_POISON,
 			false,
 			null,
-			Util.newArrayListOfValues("<b>25</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.POISON.damageTarget(null, target, 25);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue()+ "</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue()+ "</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"The fissure continues to spew forth poison fumes, causing [npc.name] to cough and splutter each time [npc.she] [npc.verb(breathe)] in.");
+					"裂隙不断喷出毒气，导致[npc.herHim]每次吸气时都会咳嗽与呛咳。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10094,17 +10094,17 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect FIRE_MANA_BURN = new AbstractStatusEffect(10,
-			"Aura Burn",
+			"点燃灵气",
 			"melee_fire",
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
 			null,
-			Util.newArrayListOfValues("[style.boldFire(Fire Spells)] can be cast at a cost of "+Attribute.HEALTH_MAXIMUM.getName()+" when out of aura",
-					"[style.boldGood(Will not reduce "+Attribute.HEALTH_MAXIMUM.getName()+" below 1)]")) {
+			Util.newArrayListOfValues("[style.boldFire(火焰法术)]可在灵气耗尽时，以"+Attribute.HEALTH_MAXIMUM.getName()+"消耗释放",
+					"[style.boldGood(无法将"+Attribute.HEALTH_MAXIMUM.getName()+"降为1以下)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"Thanks to [npc.her] affinity with the school of Fire, [npc.nameIsFull] able to sacrifice a portion of [npc.her] "+Attribute.HEALTH_MAXIMUM.getName()+" in order to cast fire spells when [npc.sheIs] out of aura.");
+					"由于[npc.her]与烈火学派的亲和力，[npc.nameIsFull]能通过牺牲部分"+Attribute.HEALTH_MAXIMUM.getName()+"，在灵气耗尽时继续释放火系法术。");
 		}
 		@Override
 		public boolean isConditionsMet(GameCharacter target) {
@@ -10117,25 +10117,25 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect LINGERING_FLAMES = new AbstractStatusEffect(10,
-			"Lingering Flames",
+			"不灭烈焰",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			false,
 			null,
-			Util.newArrayListOfValues("<b>5</b> [style.boldFire(Fire Damage)] per turn</b>")) {
+			Util.newArrayListOfValues("每回合<b>5</b>点[style.boldFire(火焰伤害)]</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.FIRE.damageTarget(null, target, 5);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> [style.boldFire(fire damage)]!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>[style.boldFire(火焰伤害)]！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			if (target.isPlayer()) {
-				return "Invisible arcane flames lick at your feet, and while they don't cause you any real pain, you still end up hopping around in discomfort.";
+				return "无形的奥术火焰舔舐着你的双脚，虽然它们不会给你带来真正的痛苦，但你还是会因不适而跳来跳去。";
 			} else {
 				return UtilText.parse(target,
-						"Invisible arcane flames lick at [npc.namePos] feet, and while they don't cause [npc.herHim] any real pain, [npc.she] still ends up hopping around in discomfort.");
+						"无形的奥术火焰舔舐着[npc.namePos]的双脚，虽然它们不会给[npc.herHim]带来真正的痛苦，但[npc.she]还是会因不适而跳来跳去。");
 			}
 		}
 		@Override
@@ -10149,7 +10149,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FLASH = new AbstractStatusEffect(10,
-			"Blinded",
+			"致盲",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			false,
@@ -10158,7 +10158,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The blinding flash of light has left [npc.name] temporarily dazzled, and [npc.sheIsFull] struggling to regain control of [npc.her] senses!");
+						"刺眼的闪光让[npc.Name]暂时眩晕，[npc.sheIsFull]正在努力恢复对感官的控制！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10171,7 +10171,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect FLASH_1 = new AbstractStatusEffect(10,
-			"Blinded (Secondary Sparks)",
+			"致盲 (次生辉光)",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			false,
@@ -10180,7 +10180,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"After the initial, blinding flash of light, a series of secondary sparks are continuing to  dazzle [npc.name], making it incredibly difficult for [npc.herHim] to perform any actions!");
+						"在第一道刺眼的闪光之后，还有一连串炫目的闪光在不断眩晕[npc.name]，使[npc.herHim]难以采取任何行动！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10192,7 +10192,7 @@ public class StatusEffect {
 		}
 	};
 	public static AbstractStatusEffect CLOAK_OF_FLAMES = new AbstractStatusEffect(10,
-			"Cloak of Flames",
+			"火焰斗篷",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
@@ -10202,7 +10202,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameHasFull] been shrouded in a cloak of arcane flames which is increasing [npc.her] fire and cold resistances!");
+						"[npc.NameHasFull]被笼罩在奥术火焰制成的斗篷中，这增加了[npc.her]的火焰抗性和寒冷抗性。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10215,18 +10215,18 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOAK_OF_FLAMES_1 = new AbstractStatusEffect(10,
-			"Cloak of Flames (Incendiary)",
+			"火焰斗篷 (烈焰)",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_FIRE, 5f),
 					new Value<>(Attribute.RESISTANCE_ICE, 10f)),
-			Util.newArrayListOfValues("Unarmed attacks deal +1 damage per caster level",
-					"Unarmed attacks deal [style.boldFire(Fire Damage)]")) {
+			Util.newArrayListOfValues("施法者每有一级，徒手攻击伤害额外+1",
+					"徒手攻击造成[style.boldFire(火焰伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameHasFull] been shrouded in a cloak of arcane flames, which is not only increasing [npc.her] resistances, but is also imbuing [npc.her] unarmed attacks with fire damage!");
+						"[npc.NameHasFull]被笼罩在奥术火焰制成的斗篷中，这不仅增加了[npc.her]的抗性，还为[npc.her]的徒手攻击附加了火焰伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10239,19 +10239,19 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOAK_OF_FLAMES_2 = new AbstractStatusEffect(10,
-			"Cloak of Flames (Inferno)",
+			"火焰斗篷 (地狱烈焰)",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_FIRE, 25f),
 					new Value<>(Attribute.RESISTANCE_FIRE, 5f),
 					new Value<>(Attribute.RESISTANCE_ICE, 10f)),
-			Util.newArrayListOfValues("Unarmed attacks deal +1 damage per caster level",
-					"Unarmed attacks deal [style.boldFire(Fire Damage)]")) {
+			Util.newArrayListOfValues("施法者每有一级，徒手攻击伤害额外+1",
+					"徒手攻击造成[style.boldFire(火焰伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 				return UtilText.parse(target,
-						"[npc.NameHasFull] been shrouded in a cloak of arcane flames, which is not only increasing [npc.her] resistances and fire damage, but is also imbuing [npc.her] unarmed attacks with fire damage!");
+						"[npc.NameHasFull]被笼罩在奥术火焰制成的斗篷中，这不仅增加了[npc.her]的抗性和火系伤害，还为[npc.her]的徒手攻击附加了火焰伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10264,21 +10264,21 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLOAK_OF_FLAMES_3 = new AbstractStatusEffect(10,
-			"Cloak of Flames (Ring of Fire)",
+			"火焰斗篷 (火焰之环)",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_FIRE, 25f),
 					new Value<>(Attribute.RESISTANCE_FIRE, 10f),
 					new Value<>(Attribute.RESISTANCE_ICE, 20f)),
-			Util.newArrayListOfValues("Unarmed attacks deal +1 damage per caster level",
-					"Unarmed attacks deal [style.boldFire(Fire Damage)]",
-					"Attackers take <b>5</b> [style.colourFire(Fire Damage)]")) {
+			Util.newArrayListOfValues("施法者每有一级，徒手攻击伤害额外+1",
+					"徒手攻击造成[style.boldFire(火焰伤害)]",
+					"攻击者受到<b>5</b>点[style.colourFire(火焰伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameHasFull] been shrouded in a cloak of arcane flames, which is not only increasing [npc.her] resistances and fire damage, but is also imbuing [npc.her] unarmed attacks with fire damage!"
-						+ " Any enemies foolish enough to strike [npc.herHim] in melee are taking retaliatory fire damage!");
+						"[npc.NameHasFull]被笼罩在奥术火焰制成的斗篷中，这不仅增加了[npc.her]的抗性和火系伤害，还为[npc.her]的徒手攻击附加了火焰伤害！"
+						+ "任何蠢到用近战攻击[npc.herHim]的敌人都会受到反击的火焰伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10291,7 +10291,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_FIRE_WILDFIRE = new AbstractStatusEffect(10,
-			"Wildfire",
+			"野火",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
@@ -10299,7 +10299,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The Fire elemental in [npc.namePos] party is imbuing [npc.herHim] with the knowledge of how to get the most out of fire attacks!");
+			return UtilText.parse(target, "[npc.namePos]队中的火元素正在向[npc.herHim]灌输知识，教导[npc.herHim]该如何将火系攻击伤害最大化！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10323,7 +10323,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_FIRE_BURNING_DESIRE = new AbstractStatusEffect(10,
-			"Burning Desire",
+			"点燃欲望",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			false,
@@ -10331,7 +10331,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The Fire elemental in the enemy party is filling [npc.name] with a burning desire for sex!");
+			return UtilText.parse(target, "[npc.namePos]队中的火元素正在往[npc.Name]体内填入熊熊欲火！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10359,16 +10359,16 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_FIRE_SERVANT_OF_FIRE = new AbstractStatusEffect(10,
-			"Servant of Fire",
+			"烈焰仆佣",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			false,
 			null,
-			Util.newArrayListOfValues("-50% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-50%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-					"Having sworn [npc.her] subservience to the school of Fire, [npc.namePos] Fire elemental, [npc2.name], is now siphoning off as much of [npc.namePos] energy as [npc2.she] wants!");
+					"[npc.namePos]宣誓效忠烈火学派，[npc.her]的火元素，即[npc2.name]，正在随心所欲地汲取着[npc.namePos]的能量！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10383,15 +10383,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_FIRE_SERVANT_OF_FIRE_ELEMENTAL_BUFF = new AbstractStatusEffect(10,
-			"Energy Siphon",
+			"能量汲取",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
 			null,
-			Util.newArrayListOfValues("+100% [style.colourExcellent(Non-Seduction Damage)]")) {
+			Util.newArrayListOfValues("+100% [style.colourExcellent(非魅惑伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull] siphoning off as much of [npc2.namePos] energy as [npc.she] wants, enabling [npc.herHim] to deal a huge amount of damage!");
+			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull]随心所欲地吸取着[npc2.namePos]的能量，使其能够造成大量伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10407,7 +10407,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_FIRE_BINDING_OF_FIRE = new AbstractStatusEffect(10,
-			"Binding of Fire",
+			"烈焰束缚",
 			null,
 			PresetColour.DAMAGE_TYPE_FIRE,
 			true,
@@ -10417,7 +10417,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having bound the school of Fire to [npc.her] will, [npc.namePos] Fire elemental, [npc2.name], is forced to reveal all of [npc2.her] secrets to [npc2.her] [npc.mistress].");
+						"[npc.namePos]令烈火学派随其心意而动，[npc.her]的火元素，即[npc2.name]，被迫向[npc.mistress]揭露出[npc2.her]所有的秘密。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10432,7 +10432,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FREEZING_FOG = new AbstractStatusEffect(10,
-			"Freezing Fog",
+			"冻人寒雾",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
@@ -10441,7 +10441,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A freezing fog, left behind by the impact of the spell 'Ice Shard', is lingering around [npc.name]. The arcane cold is seeping into [npc.her] body, slowing [npc.her] movements and dulling [npc.her] mind.");
+						"法术“冰刃术”留下的寒雾萦绕在[npc.name]周围。奥术寒气正渗入着[npc.her]的身体，减缓了[npc.her]的行动，使其思维变得迟钝。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10454,7 +10454,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect FROZEN = new AbstractStatusEffect(10,
-			"Frozen",
+			"冻寒",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
@@ -10462,7 +10462,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The freezing fog lingering around [npc.name] has exploded, covering [npc.herHim] in a thin sheet of ice and slowing [npc.her] movements!");
+			return UtilText.parse(target, "萦绕在[npc.name]周围的寒雾炸开，用薄薄的冰层盖住了[npc.herHim]，减缓了[npc.her]的行动！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10475,7 +10475,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect RAIN_CLOUD = new AbstractStatusEffect(10,
-			"Rain Cloud",
+			"雨云术",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
@@ -10484,7 +10484,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A small, arcane-infused rain cloud is hovering above [npc.namePos] head. The cold rain is sapping [npc.her] ability to effectively cast spells.");
+						"一小片充满奥术的雨云正在[npc.namePos]的头顶盘旋。冻雨侵蚀了[npc.her]的施法能力。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10497,7 +10497,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect RAIN_CLOUD_DEEP_CHILL = new AbstractStatusEffect(10,
-			"Rain Cloud (Deep Chill)",
+			"雨云术 (深度寒意)",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
@@ -10507,7 +10507,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A small, arcane-infused rain cloud is hovering above [npc.namePos] head. The freezing rain is both sapping [npc.her] ability to effectively cast spells, as well as reducing [npc.her] resistance to the cold.");
+						"一小片充满奥术的雨云正在[npc.namePos]的头顶盘旋。冻雨侵蚀了[npc.her]的施法能力，也降低了[npc.her]对寒冷的抵抗力。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10520,7 +10520,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect RAIN_CLOUD_DOWNPOUR = new AbstractStatusEffect(10,
-			"Rain Cloud (Downpour)",
+			"雨云术 (倾盆大雨)",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
@@ -10531,8 +10531,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"An arcane-infused rain cloud is hovering above [npc.namePos] head."
-							+ " The freezing downpour is sapping [npc.her] ability to effectively cast spells, as well as reducing [npc.her] resistance to the cold, and making it harder to defend [npc.herself].");
+					"一片充满奥术的雨云正在[npc.namePos]的头顶盘旋。"
+							+ "冰冷的暴雨侵蚀了[npc.her]的施法能力，也降低了[npc.her]对寒冷的抵抗力，使[npc.herself]更难保护自己。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10545,7 +10545,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect RAIN_CLOUD_DOWNPOUR_FOR_CLOUDBURST = new AbstractStatusEffect(10,
-			"Rain Cloud (Downpour)",
+			"雨云术 (倾盆大雨)",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
@@ -10556,8 +10556,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"An arcane-infused rain cloud is hovering above [npc.namePos] head."
-							+ " The freezing downpour is sapping [npc.her] ability to effectively cast spells, as well as reducing [npc.her] resistance to the cold, and making it harder to defend [npc.herself].");
+					"一片充满奥术的雨云正在[npc.namePos]的头顶盘旋。"
+							+ "冰冷的暴雨侵蚀了[npc.her]的施法能力，也降低了[npc.her]对寒冷的抵抗力，使[npc.herself]更难保护自己。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10570,7 +10570,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect RAIN_CLOUD_CLOUDBURST = new AbstractStatusEffect(10,
-			"Rain Cloud (Cloudburst)",
+			"雨云 (大暴雨)",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
@@ -10581,8 +10581,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"An arcane-infused rain cloud is hovering above [npc.namePos] head."
-							+ " The torrential, freezing downpour is draining [npc.her] ability to effectively cast spells, as well as reducing [npc.her] resistance to the cold, and making it harder to defend [npc.herself].");
+					"一片充满奥术的雨云正在[npc.namePos]的头顶盘旋。"
+							+ "冰冷的倾盆大雨侵蚀了[npc.her]的施法能力，也降低了[npc.her]对寒冷的抵抗力，使[npc.herself]更难保护自己。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10595,7 +10595,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_WATER_CRASHING_WAVES = new AbstractStatusEffect(10,
-			"Crashing Waves",
+			"惊涛骇浪",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			true,
@@ -10604,7 +10604,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The Water elemental in [npc.namePos] party is imbuing [npc.herHim] with the knowledge of how to get the most out of ice attacks!");
+						"[npc.namePos]队中的水元素正在向[npc.herHim]灌输知识，教导[npc.herHim]该如何将冰系攻击伤害最大化！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10628,7 +10628,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_WATER_CALM_WATERS = new AbstractStatusEffect(10,
-			"Calm Waters",
+			"古井无波",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			true,
@@ -10636,7 +10636,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The Water elemental in [npc.namePos] party is helping to calm [npc.her] desire for sex.");
+			return UtilText.parse(target, "[npc.namePos]队中的水元素正在帮助[npc.her]平息对性的渴望。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10664,16 +10664,16 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_WATER_SERVANT_OF_WATER = new AbstractStatusEffect(10,
-			"Servant of Water",
+			"水波仆佣",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			false,
 			null,
-			Util.newArrayListOfValues("-50% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-50%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having sworn [npc.her] subservience to the school of Water, [npc.namePos] Water elemental, [npc2.name], is now siphoning off as much of [npc.namePos] energy as [npc2.she] wants!");
+						"[npc.namePos]宣誓效忠激流学派，[npc.her]的水元素，即[npc2.name]，正在随心所欲地汲取着[npc.namePos]的能量！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10688,15 +10688,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_WATER_SERVANT_OF_WATER_ELEMENTAL_BUFF = new AbstractStatusEffect(10,
-			"Energy Siphon",
+			"能量汲取",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			true,
 			null,
-			Util.newArrayListOfValues("+100% [style.colourExcellent(Non-Seduction Damage)]")) {
+			Util.newArrayListOfValues("+100% [style.colourExcellent(非魅惑伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull] siphoning off as much of [npc2.namePos] energy as [npc.she] wants, enabling [npc.herHim] to deal a huge amount of damage!");
+			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull]随心所欲地吸取着[npc2.namePos]的能量，使其能够造成大量伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10712,7 +10712,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_WATER_BINDING_OF_WATER = new AbstractStatusEffect(10,
-			"Binding of Water",
+			"水波束缚",
 			null,
 			PresetColour.DAMAGE_TYPE_COLD,
 			true,
@@ -10722,7 +10722,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having bound the school of Water to [npc.her] will, [npc.namePos] Water elemental, [npc2.name], is forced to reveal all of [npc2.her] secrets to [npc2.her] [npc.mistress].");
+						"[npc.namePos]令激流学派随其心意而动，[npc.her]的水元素，即[npc2.name]，被迫向[npc.mistress]揭露出[npc2.her]所有的秘密。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10737,21 +10737,21 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect POISON_VAPOURS = new AbstractStatusEffect(10,
-			"Poison Vapours",
+			"毒云术",
 			null,
 			PresetColour.DAMAGE_TYPE_POISON,
 			false,
 			null,
-			Util.newArrayListOfValues("<b>25</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.POISON.damageTarget(null, target, 25);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The cloud of poison vapours continues to linger around [npc.namePos] body, causing [npc.herHim] to cough and splutter each time [npc.she] [npc.verb(breathe)] in.");
+			return UtilText.parse(target, "毒气继续萦绕在[npc.namePos]的身体四周，导致[npc.herHim]每次吸气时都会咳嗽与呛咳。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10764,21 +10764,21 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect POISON_VAPOURS_CHOKING_HAZE = new AbstractStatusEffect(10,
-			"Poison Vapours (Choking Haze)",
+			"毒云术 (窒息雾霾)",
 			null,
 			PresetColour.DAMAGE_TYPE_POISON,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, -5f)),
-			Util.newArrayListOfValues("<b>25</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"</b>")) {
 				@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.POISON.damageTarget(null, target, 25);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The cloud of poison vapours continues to linger around [npc.namePos] body, causing [npc.herHim] to cough and splutter each time [npc.she] [npc.verb(breathe)] in.");
+			return UtilText.parse(target, "毒气继续萦绕在[npc.namePos]的身体四周，导致[npc.herHim]每次吸气时都会咳嗽与呛咳。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10791,13 +10791,13 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect POISON_VAPOURS_ARCANE_SICKNESS = new AbstractStatusEffect(10,
-			"Poison Vapours (Arcane Sickness)",
+			"毒云术 (奥术疾疫)",
 			null,
 			PresetColour.DAMAGE_TYPE_POISON,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, -5f)),
-			Util.newArrayListOfValues("<b>25</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" per turn</b>",
-					"<b>10</b> "+Attribute.MANA_MAXIMUM.getColouredName("b")+" [style.boldTerrible(drained)] per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"</b>",
+					"每回合<b>10</b>点"+Attribute.MANA_MAXIMUM.getColouredName("b")+"[style.boldTerrible(流失)]</b>")) {
 				@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.POISON.damageTarget(null, target, 25);
@@ -10806,12 +10806,12 @@ public class StatusEffect {
 			target.incrementMana(-lustDamage);
 			
 			return UtilText.parse(target,
-					"[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" and [npc.verb(lose)] <b>" + lustDamage + "</b> "+Attribute.MANA_MAXIMUM.getColouredName("b")+"!")
+					"[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"，并失去了<b>" + lustDamage + "</b>"+Attribute.MANA_MAXIMUM.getColouredName("b")+"！")
 					+ damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The cloud of poison vapours continues to linger around [npc.namePos] body, causing [npc.herHim] to cough and splutter each time [npc.she] [npc.verb(breathe)] in.");
+			return UtilText.parse(target, "毒云继续萦绕在[npc.namePos]的四周，导致[npc.herHim]每次吸气时都会咳嗽与呛咳。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10824,15 +10824,15 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect POISON_VAPOURS_WEAKENING_CLOUD = new AbstractStatusEffect(10,
-			"Poison Vapours (Weakening Cloud)",
+			"毒云术 (弱化之云)",
 			null,
 			PresetColour.DAMAGE_TYPE_POISON,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, -5f),
 					new Value<>(Attribute.DAMAGE_PHYSICAL, -15f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, -25f)),
-			Util.newArrayListOfValues("<b>25</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" per turn</b>",
-					"<b>10</b> "+Attribute.MANA_MAXIMUM.getColouredName("b")+" [style.boldTerrible(drained)] per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"</b>",
+					"每回合<b>10</b>点"+Attribute.MANA_MAXIMUM.getColouredName("b")+"[style.boldTerrible(流失)]</b>")) {
 				@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.POISON.damageTarget(null, target, 25);
@@ -10841,12 +10841,12 @@ public class StatusEffect {
 			target.incrementMana(-lustDamage);
 			
 			return UtilText.parse(target,
-					"[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_POISON.getColouredName("b")+" and [npc.verb(lose)] <b>" + lustDamage + "</b> "+Attribute.MANA_MAXIMUM.getColouredName("b")+"!")
+					"[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_POISON.getColouredName("b")+"，并失去了<b>" + lustDamage + "</b>"+Attribute.MANA_MAXIMUM.getColouredName("b")+"！")
 					+ damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "The cloud of poison vapours continues to linger around [npc.namePos] body, causing [npc.herHim] to cough and splutter each time [npc.she] [npc.verb(breathe)] in.");
+			return UtilText.parse(target, "毒云继续萦绕在[npc.namePos]的四周，导致[npc.herHim]每次吸气时都会咳嗽与呛咳。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10859,7 +10859,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect VACUUM = new AbstractStatusEffect(10,
-			"Vacuum",
+			"真空术",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -10867,7 +10867,7 @@ public class StatusEffect {
 			null) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, "A sustained void in the air, which shifts to remain close to [npc.namePos] body, is causing [npc.her] balance to be thrown off!");
+			return UtilText.parse(target, "空气中持续存在的虚空不断游弋，靠近[npc.namePos]的身体，使[npc.her]失去平衡！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10880,7 +10880,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect VACUUM_SECONDARY_VOIDS = new AbstractStatusEffect(10,
-			"Vacuum (Secondary Voids)",
+			"真空术 (次生虚空)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -10890,8 +10890,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A sustained void in the air, which shifts to remain close to [npc.namePos] body, is causing [npc.her] balance to be thrown off!"
-						+ " Smaller, secondary voids are also continuously being created and collapsing around [npc.herHim]!");
+						"空气中持续存在的虚空不断游弋，靠近[npc.namePos]的身体，使[npc.her]失去平衡！"
+						+ "在[npc.herHim]周围，还不断有更小的次生虚空在产生与坍塌！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10904,13 +10904,13 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect VACUUM_SUCTION = new AbstractStatusEffect(10,
-			"Vacuum (Suction)",
+			"真空术 (抽吸)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, -20f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, -25f)),
-			Util.newArrayListOfValues("<b>10%</b> chance per turn of [style.boldExcellent(stripping)] clothing")) {
+			Util.newArrayListOfValues("每回合有<b>10%</b>的概率[style.boldExcellent(脱掉)]衣物")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			if(!target.isUnique() && (Math.random()<(target.isPlayer()?0.1f:0.166f))) { // I purposefully boost the chance in secret to make the player feel better about the RNG
@@ -10925,9 +10925,9 @@ public class StatusEffect {
 					AbstractClothing clothingBlownOff = suitableClothing.get(Util.random.nextInt(suitableClothing.size()));
 					target.unequipClothingOntoFloor(clothingBlownOff, true, target);
 					if(target.isPlayer()) {
-						return "Your "+clothingBlownOff.getName()+" "+(clothingBlownOff.getClothingType().isPlural()?"are":"is")+" sucked off and blown to the floor!";
+						return "你的"+clothingBlownOff.getName()+"被吸走，并吹到了地上！";
 					} else {
-						return "[npc.NamePos] "+clothingBlownOff.getName()+" "+(clothingBlownOff.getClothingType().isPlural()?"are":"is")+" sucked off and blown to the floor!";
+						return "[npc.NamePos]"+clothingBlownOff.getName()+"被吸走，吹到了地上！";
 					}
 				}
 			}
@@ -10936,8 +10936,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A sustained, powerful void is shifting to remain close to [npc.namePos] body, and is causing [npc.her] balance to be thrown off!"
-						+ " Smaller, secondary voids are also continuously being created and collapsing around [npc.herHim]!");
+						"持续存在的强力虚空，持续靠近着[npc.namePos]的身体，使[npc.her]失去平衡！"
+						+ "在[npc.herHim]周围，还不断有更小的次生虚空在产生与坍塌！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10950,13 +10950,13 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect VACUUM_TOTAL_VOID = new AbstractStatusEffect(10,
-			"Vacuum (Total Void)",
+			"真空术 (完全真空)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, -20f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, -25f)),
-			Util.newArrayListOfValues("<b>25%</b> chance per turn of [style.boldExcellent(stripping)] clothing")) {
+			Util.newArrayListOfValues("每回合<b>25%</b>的概率[style.boldExcellent(脱掉)]衣物")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			if(!target.isUnique() && (Math.random()<(target.isPlayer()?0.25f:0.33f))) { // I purposefully boost the chance in secret to make the player feel better about the RNG
@@ -10971,9 +10971,9 @@ public class StatusEffect {
 					AbstractClothing clothingBlownOff = suitableClothing.get(Util.random.nextInt(suitableClothing.size()));
 					target.unequipClothingOntoFloor(clothingBlownOff, true, target);
 					if(target.isPlayer()) {
-						return "Your "+clothingBlownOff.getName()+" "+(clothingBlownOff.getClothingType().isPlural()?"are":"is")+" sucked off and blown to the floor!";
+						return "你的"+clothingBlownOff.getName()+"被吸走，吹到了地上！";
 					} else {
-						return "[npc.NamePos] "+clothingBlownOff.getName()+" "+(clothingBlownOff.getClothingType().isPlural()?"are":"is")+" sucked off and blown to the floor!";
+						return "[npc.NamePos]"+clothingBlownOff.getName()+"被吸走，吹到了地上！";
 					}
 				}
 			}
@@ -10982,8 +10982,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 				return UtilText.parse(target,
-						"A sustained, incredibly-powerful void is shifting to remain close to [npc.namePos] body, and is causing [npc.her] balance to be thrown off!"
-						+ " Smaller, secondary voids are also continuously being created and collapsing around [npc.herHim]!");
+						"持续存在且无比强劲的虚空，正在靠近着[npc.namePos]的身体，使[npc.her]失去平衡！"
+						+ "在[npc.herHim]周围，还不断有更小的次生虚空在产生与坍塌！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -10996,7 +10996,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect PROTECTIVE_GUSTS = new AbstractStatusEffect(10,
-			"Protective Gusts",
+			"护体之风",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11006,7 +11006,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"A benevolent wind has been summoned to protect [npc.name] from any poisonous vapours, and to help throw off any attacks directed towards [npc.herHim].");
+					"召唤了一股仁慈之风，保护[npc.name]免受有毒的蒸气，并帮助抵御针对[npc.herHim]的攻击。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11019,7 +11019,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect PROTECTIVE_GUSTS_GUIDING_WIND = new AbstractStatusEffect(10,
-			"Protective Gusts (Guiding Wind)",
+			"护体之风 (指引之风)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11030,8 +11030,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"A benevolent wind has been summoned to protect [npc.name] from any poisonous vapours, and to help throw off any attacks directed towards [npc.herHim]."
-							+ " It is also helping to guide [npc.her] attacks.");
+					"召唤了一股仁慈之风，保护[npc.name]免受有毒的蒸气，并帮助抵御针对[npc.herHim]的攻击。"
+							+ "还有助于引导[npc.her]的攻击。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11044,7 +11044,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect PROTECTIVE_GUSTS_FOCUSED_BLAST = new AbstractStatusEffect(10,
-			"Protective Gusts (Focused Blast)",
+			"护体之风 (气浪聚合)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11056,8 +11056,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"A benevolent wind has been summoned to protect [npc.name] from any poisonous vapours, and to help throw off any attacks directed towards [npc.herHim]."
-							+ " It is also helping to guide and increase the power of [npc.her] attacks.");
+					"召唤了一股仁慈之风，保护[npc.name]免受毒气之苦，并帮助抵御针对[npc.herHim]的攻击。"
+							+ "还有助于引导和增强[npc.her]的攻击。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11070,7 +11070,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_AIR_WHIRLWIND = new AbstractStatusEffect(10,
-			"Whirlwind",
+			"旋风",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -11079,7 +11079,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The Air elemental in the enemy party is surrounding [npc.name] with buffeting winds!");
+						"敌人队中的风元素化作狂风，围绕在[npc.name]的四周！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11107,7 +11107,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_AIR_VITALISING_SCENTS = new AbstractStatusEffect(10,
-			"Vitalising Scents",
+			"活力香氛",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11117,7 +11117,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The Air elemental in [npc.namePos] party is surrounding [npc.herHim] with vitalising scents, which is giving [npc.herHim] the energy to dodge attacks and land powerful blows!");
+						"[npc.namePos]队中的风元素正在向[npc.herHim]灌输知识，教导该如何躲避攻击，并回以有力的冲击！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11141,16 +11141,16 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_AIR_SERVANT_OF_AIR = new AbstractStatusEffect(10,
-			"Servant of Air",
+			"气旋仆佣",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
 			null,
-			Util.newArrayListOfValues("-50% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-50%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having sworn [npc.her] subservience to the school of Air, [npc.namePos] Air elemental, [npc2.name], is now siphoning off as much of [npc.namePos] energy as [npc2.she] wants!");
+						"[npc.namePos]宣誓效忠大气学派，[npc.her]的风元素，即[npc2.name]，正在随心所欲地汲取着[npc.namePos]的能量！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11165,15 +11165,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_AIR_SERVANT_OF_AIR_ELEMENTAL_BUFF = new AbstractStatusEffect(10,
-			"Energy Siphon",
+			"能量汲取",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
 			null,
-			Util.newArrayListOfValues("+100% [style.colourExcellent(Non-Seduction Damage)]")) {
+			Util.newArrayListOfValues("+100% [style.colourExcellent(非魅惑伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull] siphoning off as much of [npc2.namePos] energy as [npc.she] wants, enabling [npc.herHim] to deal a huge amount of damage!");
+			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull]随心所欲地吸取着[npc2.namePos]的能量，使其能够造成大量伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11189,7 +11189,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_AIR_BINDING_OF_AIR = new AbstractStatusEffect(10,
-			"Binding of Air",
+			"气旋束缚",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11199,7 +11199,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having bound the school of Air to [npc.her] will, [npc.namePos] Air elemental, [npc2.name], is forced to reveal all of [npc2.her] secrets to [npc2.her] [npc.mistress].");
+						"[npc.namePos]令大气学派随其心意而动，[npc.her]的风元素，即[npc2.name]，被迫向[npc.mistress]揭露出[npc2.her]所有的秘密。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11214,7 +11214,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SLAM_GROUND_SHAKE = new AbstractStatusEffect(10,
-			"Ground Shake",
+			"震地",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -11223,7 +11223,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The ground beneath [npc.namePos] [npc.feet] is shaking and swaying, making it very difficult for [npc.herHim] to avoid incoming blows.");
+						"[npc.namePos]脚下的地面正在摇晃，使[npc.herHim]很难躲避袭来的攻击。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11236,7 +11236,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect SLAM_AFTER_SHOCK = new AbstractStatusEffect(10,
-			"Ground Shake (After Shock)",
+			"震地 (余波)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
@@ -11245,14 +11245,14 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The ground beneath [npc.namePos] [npc.feet] is shaking and swaying, making it very difficult for [npc.herHim] to avoid incoming blows."
-						+ " [npc.She] can sense that there's an Aftershock coming, but there's little [npc.she] can do to avoid it...");
+						"[npc.namePos]脚下的地面正在摇晃，使[npc.herHim]很难躲避袭来的攻击。"
+						+ "[npc.she]能感受到有余波即将到来，但却无法回避……");
 		}
 		@Override
 		protected String extraRemovalEffects(GameCharacter target){
 			Value<String, Integer> damageValue = DamageType.PHYSICAL.damageTarget(null, target, 5);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11265,22 +11265,22 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEKENETIC_SHOWER = new AbstractStatusEffect(10,
-			"Telekinetic Shower",
+			"念力之雨",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
 			null,
-			Util.newArrayListOfValues("<b>25</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.PHYSICAL.damageTarget(null, target, 25);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameIsFull] being continuously pelted by a barrage of rocks and other small objects.");
+						"不断有石块和其他小物体砸中[npc.NameIsFull]。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11293,22 +11293,22 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEKENETIC_SHOWER_PRECISION_STRIKES = new AbstractStatusEffect(10,
-			"Telekinetic Shower (Precision Strikes)",
+			"念力之雨 (精确打击)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_PHYSICAL, -20f)),
-			Util.newArrayListOfValues("<b>25</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.PHYSICAL.damageTarget(null, target, 25);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameIsFull] being continuously pelted by a highly-accurate barrage of rocks and other small objects.");
+						"不断有石块和其他小物体精准地砸中[npc.NameIsFull]。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11321,22 +11321,22 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEKENETIC_SHOWER_UNSEEN_FORCE = new AbstractStatusEffect(10,
-			"Telekinetic Shower (Unseen Force)",
+			"念力之雨 (无形之力)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_PHYSICAL, -20f)),
-			Util.newArrayListOfValues("<b>50</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>50</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.PHYSICAL.damageTarget(null, target, 50);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameIsFull] being continuously pelted by a highly-accurate barrage of rocks and other small objects. Each impact is immediately followed up by an explosive wave of force.");
+						"不断有石块和其他小物体精准地砸中[npc.NameIsFull]。每次撞击后都会产生一波爆炸般的冲击力。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11349,7 +11349,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect STONE_SHELL = new AbstractStatusEffect(10,
-			"Stone Shell",
+			"磐石之壳",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11358,7 +11358,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A solid barrier of stone is being held up between [npc.name] and [npc.her] enemy, granting [npc.herHim] significantly improved physical defence.");
+						"[npc.Name]与敌人之间竖起了一道坚固的石质屏障，使[npc.herHim]的物理防御能力显著提高。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11371,7 +11371,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect STONE_SHELL_SHIFTING_SANDS = new AbstractStatusEffect(10,
-			"Stone Shell (Shifting Sands)",
+			"磐石之壳 (流沙)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11381,8 +11381,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A solid barrier of stone is being held up between [npc.name] and [npc.her] enemy, granting [npc.herHim] significantly improved physical defence."
-								+ " Every now and then, the stone barrier suddenly shifts and melts into sand, before reforming in a different location.");
+						"[npc.Name]与敌人之间竖起了一道坚固的石质屏障，使[npc.herHim]的物理防御能力显著提高。"
+								+ "每隔一段时间，石质屏障就会突然化作沙子，随后在其他地方重新形成。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11395,7 +11395,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect STONE_SHELL_HARDENED_CARAPACE = new AbstractStatusEffect(10,
-			"Stone Shell (Hardened Carapace)",
+			"磐石之壳 (外壳硬化)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11405,8 +11405,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A solid, hardened barrier of stone is being held up between [npc.name] and [npc.her] enemy, granting [npc.herHim] significantly improved physical defence."
-								+ " Every now and then, the stone barrier suddenly shifts and melts into sand, before reforming in a different location.");
+						"[npc.Name]与敌人之间竖起了一道硬化的石质屏障，使[npc.herHim]的物理防御能力显著提高。"
+								+ "每隔一段时间，石质屏障就会突然化作沙子，随后在其他地方重新形成。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11419,18 +11419,18 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect STONE_SHELL_EXPLOSIVE_FINISH = new AbstractStatusEffect(10,
-			"Stone Shell (Explosive Finish)",
+			"磐石之壳 (爆破终结)",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_PHYSICAL, 10f),
 					new Value<>(Attribute.ENERGY_SHIELDING, 2f)),
-			Util.newArrayListOfValues("[style.colourExcellent(All enemies)] take <b>10</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+" when Stone Shell ends")) {
+			Util.newArrayListOfValues("磐石之壳效果结束时[style.colourExcellent(所有敌人)]受到<b>10</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b"))) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A solid, hardened barrier of stone is being held up between [npc.name] and [npc.her] enemy, granting [npc.herHim] significantly improved physical defence."
-								+ " Every now and then, the stone barrier suddenly shifts and melts into sand, before reforming in a different location.");
+						"[npc.Name]与敌人之间竖起了一道硬化的石质屏障，使[npc.herHim]的物理防御能力显著提高。"
+								+ "每隔一段时间，石质屏障就会突然化作沙子，随后在其他地方重新形成。");
 		}
 		@Override
 		protected String extraRemovalEffects(GameCharacter target){
@@ -11440,7 +11440,7 @@ public class StatusEffect {
 			for(GameCharacter combatant : Main.combat.getEnemies(target)) {
 				Value<String, Integer> damageValue = DamageType.PHYSICAL.damageTarget(target, combatant, 10);
 				sb.append(UtilText.parse(combatant,
-						target, (first?"":"<br/>")+"<br/>[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> "+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+" as [npc2.namePos] Stone Shell explodes!")
+						target, (first?"":"<br/>")+"<br/>[npc2.namePos]的磐石之壳炸开，使[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点"+Attribute.DAMAGE_PHYSICAL.getColouredName("b")+"！")
 						+damageValue.getKey());
 				first=false;
 			}
@@ -11459,7 +11459,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_EARTH_ROLLING_STONE = new AbstractStatusEffect(10,
-			"Rolling Stone",
+			"滚石",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11469,7 +11469,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The Earth elemental in [npc.namePos] party is empowering [npc.her] attacks with waves of force!");
+						"[npc.namePos]队中的土元素正用着冲击波增强着[npc.her]的攻击！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11493,7 +11493,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_EARTH_HARDENING = new AbstractStatusEffect(10,
-			"Hardening",
+			"硬化",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11502,7 +11502,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The Earth elemental in [npc.namePos] party is using telekinetic powers to surround [npc.herHim] with protective fragments of rock!");
+						"[npc.namePos]队中的土元素正在使用念力控制着岩石碎片保护[npc.herHim]！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11526,16 +11526,16 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_EARTH_SERVANT_OF_EARTH = new AbstractStatusEffect(10,
-			"Servant of Earth",
+			"沙土仆佣",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			false,
 			null,
-			Util.newArrayListOfValues("-50% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-50%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having sworn [npc.her] subservience to the school of Earth, [npc.namePos] Earth elemental, [npc2.name], is now siphoning off as much of [npc.namePos] energy as [npc2.she] wants!");
+						"[npc.namePos]宣誓效忠大地学派，[npc.her]的土元素，即[npc2.name]，正在随心所欲地汲取着[npc.namePos]的能量！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11550,15 +11550,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_EARTH_SERVANT_OF_EARTH_ELEMENTAL_BUFF = new AbstractStatusEffect(10,
-			"Energy Siphon",
+			"能量汲取",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
 			null,
-			Util.newArrayListOfValues("+100% [style.colourExcellent(Non-Seduction Damage)]")) {
+			Util.newArrayListOfValues("+100% [style.colourExcellent(非魅惑伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull] siphoning off as much of [npc2.namePos] energy as [npc.she] wants, enabling [npc.herHim] to deal a huge amount of damage!");
+			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull]随心所欲地吸取着[npc2.namePos]的能量，使其能够造成大量伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11574,7 +11574,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_EARTH_BINDING_OF_EARTH = new AbstractStatusEffect(10,
-			"Binding of Earth",
+			"沙土束缚",
 			null,
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
 			true,
@@ -11584,7 +11584,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having bound the school of Earth to [npc.her] will, [npc.namePos] Earth elemental, [npc2.name], is forced to reveal all of [npc2.her] secrets to [npc2.her] [npc.mistress].");
+						"[npc.namePos]令大地学派随其心意而动，[npc.her]的土元素，即[npc2.name]，被迫向[npc.mistress]揭露出[npc2.her]所有的秘密。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11600,7 +11600,7 @@ public class StatusEffect {
 	
 
 	public static AbstractStatusEffect ARCANE_AROUSAL_LUSTFUL_DISTRACTION = new AbstractStatusEffect(10,
-			"Lustful Distraction",
+			"情迷欲乱",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
@@ -11609,7 +11609,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"Arousing images and thoughts keep on pushing their way to the front of [npc.namePos] mind, causing [npc.herHim] to lose focus on what it is [npc.sheIs] trying to hit.");
+						"令人兴奋的图像与想法不断涌入[npc.namePos]的脑海，导致[npc.herHim]无法专注于命中。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11622,7 +11622,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ARCANE_AROUSAL_DIRTY_PROMISES = new AbstractStatusEffect(10,
-			"Lustful Distraction (Dirty Promises)",
+			"情迷欲乱 (淫誓欲言)",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
@@ -11632,8 +11632,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"Arousing images keep on pushing their way into [npc.namePos] mind, causing [npc.herHim] to lose focus on what it is [npc.sheIs] trying to hit."
-								+ " [npc.She] [npc.verb(hear)] the occasional phantasmal whisper in [npc.her] [npc.ear], promising that [npc.she]'ll have a good time if [npc.she] simply submits.");
+						"令人兴奋的图像与想法不断冲入[npc.namePos]的脑海，导致[npc.herHim]无法专注于命中。"
+								+ "[npc.she]偶尔会听到幻象般的耳语，向[npc.she]许诺只要顺从，就享受一段美好的时光。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11646,7 +11646,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEPATHIC_COMMUNICATION = new AbstractStatusEffect(10,
-			"Telepathic Communication",
+			"心灵低语",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			true,
@@ -11655,7 +11655,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameIsFull] able to project [npc.her] seductive taunts and [npc.moans+] directly into a person's mind!");
+						"[npc.NameIsFull]能够将[npc.her]的下流逗弄与[npc.moans+]直接投射入他人的脑海中！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11668,7 +11668,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEPATHIC_COMMUNICATION_PROJECTED_TOUCH = new AbstractStatusEffect(10,
-			"Projected Touch",
+			"触摸投射",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			true,
@@ -11677,8 +11677,8 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameIsFull] able to project [npc.her] seductive taunts and [npc.moans+] directly into a person's mind!"
-								+ " In addition to this, [npc.she] can deliver phantasmal kisses and gropes to [npc.her] target.");
+						"[npc.NameIsFull]能够将[npc.her]的下流逗弄与[npc.moans+]直接投射入他人的脑海中！"
+								+ "此外，[npc.she]可以为目标提供如梦般妙曼的亲吻与抚摸。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11691,17 +11691,17 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION = new AbstractStatusEffect(10,
-			"Power of Suggestion",
+			"言语暗示",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_LUST, 30f)),
-			Util.newArrayListOfValues("[style.boldLust(Tease)] [style.boldExcellent(applies)] -25 "+Attribute.RESISTANCE_PHYSICAL.getColouredName("b")+" to the target for [style.boldGood(2 turns)]")) {
+			Util.newArrayListOfValues("[style.boldLust(挑逗)]对目标[style.boldExcellent(造成)]-25"+Attribute.RESISTANCE_PHYSICAL.getColouredName("b")+"，持续[style.boldGood(2回合)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameIsFull] able to project [npc.her] seductive taunts and suggestive phrases directly into a person's mind!"
-								+ " In addition to this, [npc.she] can deliver phantasmal kisses and gropes to [npc.her] target.");
+						"[npc.NameIsFull]能够将[npc.her]的下流逗弄与暗示直接投射入他人的脑海中！"
+								+ "此外，[npc.she]可以为目标提供如梦般妙曼的亲吻与抚摸。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11714,7 +11714,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION_TARGETED = new AbstractStatusEffect(10,
-			"Power of Suggestion",
+			"言语暗示",
 			"telepathic_communication_power_of_suggestion_targeted",
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
@@ -11723,7 +11723,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-					"The telepathic moans and suggestions that have been projected into [npc.namePos] mind are causing [npc.herHim] to lower [npc.her] guard!");
+					"投射入[npc.namePos]脑海中的呻吟与暗示让[npc.herHim]降低了警惕！");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -11733,7 +11733,7 @@ public class StatusEffect {
 	
 	
 	public static AbstractStatusEffect ARCANE_CLOUD = new AbstractStatusEffect(10,
-			"Arcane Cloud",
+			"奥术之云",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
@@ -11742,7 +11742,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A small arcane cloud is hovering above [npc.namePos] head. While subjected to its presence, the arousing effects of the arcane seep into [npc.her] mind.");
+						"一小团奥术云朵正在[npc.namePos]的头顶盘旋。在受其影响时，由奥术导致的欲望效应会渗入[npc.her]的脑中。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11755,22 +11755,22 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect ARCANE_CLOUD_ARCANE_LIGHTNING = new AbstractStatusEffect(10,
-			"Arcane Cloud (Arcane Lightning)",
+			"奥术之云 (奥术雷霆)",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, -25f)),
-			Util.newArrayListOfValues("<b>5</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合<b>5</b>点"+Attribute.DAMAGE_LUST.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.LUST.damageTarget(null, target, 5);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> [style.boldLust(lust damage)]!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点[style.boldLust(性欲伤害)]！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A small, lust-inducing arcane cloud is hovering above [npc.namePos] head. Every now and then, a bolt of arcane lightning flashes down towards [npc.herHim], filling [npc.her] mind with arousing thoughts.");
+						"一小团催情的奥术云朵正在[npc.namePos]的头顶盘旋。时不时会有一道奥术雷霆向[npc.herHim]降下，令[npc.her]脑内充斥着淫秽的想法。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11783,22 +11783,22 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect ARCANE_CLOUD_ARCANE_THUNDER = new AbstractStatusEffect(10,
-			"Arcane Cloud (Arcane Thunder)",
+			"奥术之云 (奥术雷鸣)",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, -25f)),
-			Util.newArrayListOfValues("<b>15</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("每回合造成<b>15</b>点"+Attribute.DAMAGE_LUST.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			Value<String, Integer> damageValue = DamageType.LUST.damageTarget(null, target, 15);
 
-			return UtilText.parse(target, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> [style.boldLust(lust damage)]!")+damageValue.getKey();
+			return UtilText.parse(target, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点[style.boldLust(性欲伤害)]！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A small, lust-inducing arcane cloud is hovering above [npc.namePos] head. Every now and then, a bolt of arcane lightning, accompanied by a small clap of arcane thunder, fills [npc.her] mind with arousing thoughts.");
+						"一小团催情的奥术云朵正在[npc.namePos]的头顶盘旋。时不时会有一道伴随着轻声雷鸣的奥术雷霆出现，令[npc.her]脑内充斥着淫秽的想法。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11811,12 +11811,12 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ARCANE_CLOUD_LOCALISED_STORM = new AbstractStatusEffect(10,
-			"Arcane Cloud (Localised Storm)",
+			"奥术之云 (地域风暴)",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, -25f)),
-			Util.newArrayListOfValues("[style.boldTerrible(All party members)] take <b>15</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+" per turn</b>")) {
+			Util.newArrayListOfValues("[style.boldTerrible(所有团队成员)]每回合承受<b>15</b>点"+Attribute.DAMAGE_LUST.getColouredName("b")+"</b>")) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			StringBuilder sb = new StringBuilder();
@@ -11828,7 +11828,7 @@ public class StatusEffect {
 			for(GameCharacter combatant : affectedCombatants) {
 				Value<String, Integer> damageValue = DamageType.LUST.damageTarget(null, combatant, 15);
 				
-				sb.append(UtilText.parse(combatant, "<br/>[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> [style.boldLust(lust damage)]!")+damageValue.getKey());
+				sb.append(UtilText.parse(combatant, "<br/>[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点[style.boldLust(性欲伤害)]！")+damageValue.getKey());
 			}
 			
 			return sb.toString();
@@ -11836,7 +11836,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A localised arcane storm is hovering above [npc.namePos] head. Every now and then, a bolt of arcane lightning, accompanied by a small clap of arcane thunder, fills [npc.her] mind with arousing thoughts.");
+						"一场局部的奥术风暴正在[npc.namePos]的头顶盘旋。时不时会有一道伴随着轻声雷鸣的奥术雷霆出现，令[npc.her]脑内充斥着淫秽的想法。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11849,7 +11849,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_ARCANE_LEWD_ENCOURAGEMENTS = new AbstractStatusEffect(10,
-			"Lewd Encouragements",
+			"淫乱激励",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			true,
@@ -11858,7 +11858,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The Arcane elemental in [npc.namePos] party is projecting lewd words of encouragement into [npc.her] mind!");
+						"[npc.namePos]队中的奥术元素正在向[npc.her]的脑海中投射淫秽的鼓励话语！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11882,7 +11882,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect ELEMENTAL_ARCANE_CARESSING_TOUCH = new AbstractStatusEffect(10,
-			"Caressing Touch",
+			"爱抚之触",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
@@ -11891,7 +11891,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"The Arcane elemental in the enemy party is projecting phantasmal tentacles to caress and grope [npc.namePos] body!");
+						"敌人队中的奥术元素正伸出幻象触手抚摸和摸索着[npc.namePos]的身体！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11919,16 +11919,16 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_ARCANE_SERVANT_OF_ARCANE = new AbstractStatusEffect(10,
-			"Servant of Arcane",
+			"奥术仆佣",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			false,
 			null,
-			Util.newArrayListOfValues("-50% [style.colourHealth(Maximum "+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			Util.newArrayListOfValues("[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+"的最大值)]-50%")) {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having sworn [npc.her] subservience to the school of Arcane, [npc.namePos] Arcane elemental, [npc2.name], is now siphoning off as much of [npc.namePos] energy as [npc2.she] wants!");
+						"[npc.namePos]宣誓效忠奥术学派，[npc.her]的奥术元素，即[npc2.name]，正在随心所欲地汲取着[npc.namePos]的能量！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11943,15 +11943,15 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_ARCANE_SERVANT_OF_ARCANE_ELEMENTAL_BUFF = new AbstractStatusEffect(10,
-			"Energy Siphon",
+			"能量汲取",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			true,
 			null,
-			Util.newArrayListOfValues("+100% [style.colourExcellent(Non-Seduction Damage)]")) {
+			Util.newArrayListOfValues("+100% [style.colourExcellent(非魅惑伤害)]")) {
 		@Override
 		public String getDescription(GameCharacter target) {
-			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull] siphoning off as much of [npc2.namePos] energy as [npc.she] wants, enabling [npc.herHim] to deal a huge amount of damage!");
+			return UtilText.parse(target, ((Elemental)target).getSummoner(), "[npc.NameIsFull]随心所欲地吸取着[npc2.namePos]的能量，使其能够造成大量伤害！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11967,7 +11967,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ELEMENTAL_ARCANE_BINDING_OF_ARCANE = new AbstractStatusEffect(10,
-			"Binding of Arcane",
+			"奥术束缚",
 			null,
 			PresetColour.DAMAGE_TYPE_LUST,
 			true,
@@ -11977,7 +11977,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target, target.getElemental(),
-						"Having bound the school of Arcane to [npc.her] will, [npc.namePos] Arcane elemental, [npc2.name], is forced to reveal all of [npc2.her] secrets to [npc2.her] [npc.mistress].");
+						"[npc.namePos]令奥术学派随其心意而动，[npc.her]的奥术元素，即[npc2.name]，被迫向[npc.mistress]揭露出[npc2.her]所有的秘密。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -11992,7 +11992,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ARCANE_DUALITY_POSITIVE = new AbstractStatusEffect(10,
-			"Arcane Duality (Defence)",
+			"奥术二元 (保护)",
 			"cleanse_positive",
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -12005,7 +12005,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A protective barrier of arcane energy has surrounded [npc.name], shielding [npc.herHim] from all types of incoming damage.");
+						"一道由奥术能量构筑的护罩环绕在[npc.name]的周围，为[npc.herHim]抵御着所有类型的伤害。");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -12014,7 +12014,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ARCANE_DUALITY_NEGATIVE = new AbstractStatusEffect(10,
-			"Arcane Duality (Weakness)",
+			"奥术二元 (弱化)",
 			"cleanse_negative",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -12027,7 +12027,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"A weakening barrier of arcane energy has surrounded [npc.name], making [npc.herHim] more vulnerable to all types of incoming damage.");
+						"一道由奥术能量构筑的弱化屏障环绕在[npc.name]的周围，使[npc.herHim]在遭遇各类伤害时更为脆弱。");
 		}
 		@Override
 		public boolean isCombatEffect() {
@@ -12036,7 +12036,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEPORT = new AbstractStatusEffect(10,
-			"Teleport",
+			"传送",
 			null,
 			PresetColour.GENERIC_ARCANE,
 			true,
@@ -12045,7 +12045,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameHasFull] teleported behind [npc.her] enemies, making it extremely unlikely that they'll be able to land a hit on [npc.herHim]!");
+						"[npc.NameHasFull]传送到敌人的身后，使其极有可能无法击中[npc.herHim]！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -12058,24 +12058,24 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect TELEPORT_ARCANE_ARRIVAL = new AbstractStatusEffect(10,
-			"Teleport (Arcane Arrival)",
+			"传送 (奥术抵达)",
 			null,
 			PresetColour.GENERIC_ARCANE,
 			true,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, 100f)),
-			Util.newArrayListOfValues("<b>5</b> "+Attribute.DAMAGE_LUST.getColouredName("b")+" per turn to a random enemy")) {
+			Util.newArrayListOfValues("每回合选定一个随机敌人，造成<b>5</b>点"+Attribute.DAMAGE_LUST.getColouredName("b"))) {
 		@Override
 		public String applyEffect(GameCharacter target, int secondsPassed, long totalSecondsPassed) {
 			GameCharacter randomEnemy = Main.combat.getEnemies(target).get(Util.random.nextInt(Main.combat.getEnemies(target).size()));
 			
 			Value<String, Integer> damageValue = DamageType.LUST.damageTarget(null, randomEnemy, 15);
 
-			return UtilText.parse(randomEnemy, "[npc.Name] [npc.verb(take)] <b>" + damageValue.getValue() + "</b> [style.boldLust(lust damage)]!")+damageValue.getKey();
+			return UtilText.parse(randomEnemy, "[npc.Name]受到了<b>" + damageValue.getValue() + "</b>点[style.boldLust(性欲伤害)]！")+damageValue.getKey();
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			return UtilText.parse(target,
-						"[npc.NameHasFull] teleported behind [npc.her] enemies, making it extremely unlikely that they'll be able to land a hit on [npc.herHim]! A burst of lust-inducing arcane energy accompanies [npc.her] arrival!");
+						"[npc.NameHasFull]传送到敌人的身后，使其极有可能无法击中[npc.herHim]！伴随着[npc.her]的抵达，一阵催情的奥术能量也随后到来！");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -12090,7 +12090,7 @@ public class StatusEffect {
 	// SEX EFFECTS:
 	
 	public static AbstractStatusEffect CONDOM_WORN = new AbstractStatusEffect(80,
-			"Wearing a condom",
+			"穿着避孕套",
 			"condom",
 			PresetColour.CLOTHING_PINK_LIGHT,
 			false,
@@ -12103,15 +12103,15 @@ public class StatusEffect {
 		@Override
 		public List<String> getModifiersAsStringList(GameCharacter target) {
 			List<String> modifiersList = new ArrayList<>();
-			modifiersList.add("-0.5% <b style='color: " + PresetColour.GENERIC_SEX.toWebHexString() + "'>arousal/turn</b>");
+			modifiersList.add("-0.5%<b style='color: " + PresetColour.GENERIC_SEX.toWebHexString() + "'>快感/回合</b>");
 			return modifiersList;
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "Because you're wearing a condom, sex doesn't feel quite as good...";
+				return "因为你正带着避孕套，所以性爱的感觉可能不是那么好……";
 			} else {
-				return "Because [npc.sheIs] wearing a condom, sex doesn't feel quite as good for [npc.name]...";
+				return "因为[npc.sheIs]正带着避孕套，所以性爱的感觉对于[npc.Name]来说可能不是那么好……";
 			}
 		}
 		@Override
@@ -12129,21 +12129,21 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect FLOWING_WATER = new AbstractStatusEffect(80,
-			"Flowing Water",
+			"流动之水",
 			"sexEffects/flowing_water",
 			PresetColour.BASE_BLUE_LIGHT,
 			PresetColour.BASE_AQUA,
 			true,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourDirty(Dirty body parts)] are [style.colourAqua(quickly cleaned)]")) {
+					"[style.colourDirty(被弄脏的身体部位)][style.colourAqua(很快就清洁干净了)]")) {
 		public EffectBenefit getBeneficialStatus() {
 			return EffectBenefit.NEUTRAL;
 		}
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target!=null) {
-				return UtilText.parse(target, "The water flowing over [npc.namePos] body is preventing [npc.herHim] from getting dirty!");
+				return UtilText.parse(target, "清水流过[npc.namePos]的身体，[npc.herHim]身上不再有脏污了！");
 			}
 			return null;
 		}
@@ -12158,7 +12158,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect DESIRES = new AbstractStatusEffect(80,
-			"Desires",
+			"欲望",
 			"desires",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -12167,7 +12167,7 @@ public class StatusEffect {
 		@Override
 		public String getDescription(GameCharacter target) {
 			if(target.isPlayer()) {
-				return "Your fetishes and desires affect how much arousal you gain from performing related sex actions. Selecting an action with an associated fetish that you own will also not increase your corruption.";
+				return "你的性癖和欲望会影响你从相关的性行为中获得的快感。选择一个与你拥有的性癖相关联的行动也不会增加你的堕落。";
 				
 //			} else if(Main.game.isInSex()) {
 //				GameCharacter targetedCharacter = Main.sex.getTargetedPartner(target);
@@ -12195,10 +12195,10 @@ public class StatusEffect {
 			} else {
 				return UtilText.parse(target,
 						(Main.game.isInNewWorld()
-								?"Due to the underlying power of your arcane aura, you can sense [npc.namePos] non-neutral preferences towards sexual actions."
-								:"Somehow, you're able to instinctively tell what [npc.namePos] non-neutral preferences towards sexual actions are.")
+								?"由于你潜在的奥术灵气，你能感知到[npc.namePos]对性动作的偏好。"
+								:"不知为什么，你天然能感知到[npc.namePos]的性偏好。")
 						+ "<br/>"
-						+ "[style.italicsSex(You can detect what areas [npc.name] wants to use when in sex.)]");
+						+ "[style.italicsSex(在性爱中，你可以探知[npc.name]想要使用什么区域)]");
 			}
 		}
 		@Override
@@ -12213,21 +12213,21 @@ public class StatusEffect {
 //				modList.add(UtilText.parse(target, "<b>[npc.NamePos] Preferences:</b>"));
 				
 				modList.add(UtilText.parse(target, targetedCharacter,
-										"[style.italics"+(Main.sex.isInForeplay(target)?"PinkLight(<b>Foreplay</b>: ":"Disabled(Foreplay: ")
+										"[style.italics"+(Main.sex.isInForeplay(target)?"PinkLight(<b>前戏</b>:":"Disabled(前戏：")
 											+ (foreplayPreference!=null
-													?"[npc.Her] "+foreplayPreference.getPerformingSexArea().getName(target, true)+" and [npc2.namePos] "+foreplayPreference.getTargetedSexArea().getName(targetedCharacter, true)+"."
-													:"[npc.She] [npc.has] no preference...")
+													?"[npc.Her]的"+foreplayPreference.getPerformingSexArea().getName(target, true)+"和[npc2.namePos]的"+foreplayPreference.getTargetedSexArea().getName(targetedCharacter, true)+"。"
+													:"[npc.She]没有偏好……")
 											+ ")]"));
 				modList.add(UtilText.parse(target, targetedCharacter,
-										"[style.italics"+(!Main.sex.isInForeplay(target)?"Pink(<b>Sex</b>: ":"Disabled(Sex: ")
+										"[style.italics"+(!Main.sex.isInForeplay(target)?"Pink(<b>正戏</b>:":"Disabled(正戏：")
 											+ (mainPreference!=null
-													?"[npc.Her] "+mainPreference.getPerformingSexArea().getName(target, true)+" and [npc2.namePos] "+mainPreference.getTargetedSexArea().getName(targetedCharacter, true)+"."
-													:"[npc.She] [npc.has] no preference...")
+													?"[npc.Her]的"+mainPreference.getPerformingSexArea().getName(target, true)+"和[npc2.namePos]的"+mainPreference.getTargetedSexArea().getName(targetedCharacter, true)+"。"
+													:"[npc.She]没有偏好……")
 											+ ")]"));
 				modList.add(UtilText.parse(target, targetedCharacter,
 										Main.sex.isCharacterObeyingTarget(target, Main.game.getPlayer())
-										?"[style.italicsMinorGood([npc.She] will listen to your requests.)]"
-										:"[style.italicsMinorBad([npc.She] will ignore all of your requests.)]"));
+										?"[style.italicsMinorGood([npc.She]会听从你的请求)]"
+										:"[style.italicsMinorBad([npc.She]会忽视你所有的请求)]"));
 			}
 			
 			return modList;
@@ -12267,7 +12267,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ORGASM_COUNTER = new AbstractStatusEffect(80,
-			"Orgasms",
+			"高潮",
 			"sexEffects/orgasms",
 			PresetColour.GENERIC_ARCANE,
 			false,
@@ -12277,13 +12277,13 @@ public class StatusEffect {
 		public String getDescription(GameCharacter target) {
 			StringBuilder sb = new StringBuilder();
 			if(target.isPlayer()) {
-				sb.append("Anyone with a strong arcane aura, such as yours, doesn't suffer from any sort of refractory period after orgasming...");
+				sb.append("任何像你这样有强大奥术灵气的人，在性高潮后都不会有任何不应期……");
 				
 			} else {
-				sb.append("Anyone in the presence of a strong arcane aura, such as yours, doesn't suffer from any sort of refractory period after orgasming...");
+				sb.append("任何像你这样处于强大奥术灵气之下的人，在性高潮后都不会有任何不应期……");
 			}
 			
-			sb.append("<br/>[npc.Name] [npc.verb(need)] to orgasm [style.boldSex(" + Util.intToCount(target.getOrgasmsBeforeSatisfied()) + ")] before [npc.sheIs] satisfied.");
+			sb.append("<br/>在[npc.sheIs]满足之前，[npc.Name]需要达到[style.boldSex(" + Util.intToCount(target.getOrgasmsBeforeSatisfied()) + ")]高潮。");
 
 			
 			return UtilText.parse(target, sb.toString());
@@ -12293,13 +12293,13 @@ public class StatusEffect {
 			List<Value<Integer, String>> additionalDescriptions = new ArrayList<>();
 			
 			if(Main.sex.getNumberOfOrgasms(target)>=target.getOrgasmsBeforeSatisfied()) {
-				additionalDescriptions.add(new Value<>(1, UtilText.parse(target, "[npc.NameIsFull] [style.colourExcellent(satisfied)].")));
+				additionalDescriptions.add(new Value<>(1, UtilText.parse(target, "[npc.NameIsFull]感到[style.colourExcellent(心满意足)]。")));
 			} else {
-				additionalDescriptions.add(new Value<>(1, UtilText.parse(target, "[npc.NameIsFull] [style.colourTerrible(not satisfied yet)]!")));
+				additionalDescriptions.add(new Value<>(1, UtilText.parse(target, "[npc.NameIsFull]还[style.colourTerrible(不够满足)]！")));
 			}
 			
 			if(!target.isAbleToOrgasm()) {
-				additionalDescriptions.add(new Value<>(1, UtilText.parse(target, "[npc.NameIsFull] [style.colourTerrible(not able to orgasm)]!")));
+				additionalDescriptions.add(new Value<>(1, UtilText.parse(target, "[npc.NameIsFull][style.colourTerrible(无法达到高潮)]！")));
 			}
 			
 			int bonus = Main.sex.getNumberOfAdditionalOrgasms(target);
@@ -12308,12 +12308,12 @@ public class StatusEffect {
 					additionalDescriptions.add(
 							new Value<>(2,
 									UtilText.parse(target,
-											"[npc.Her] desire has been [style.boldExcellent(boosted)], and so this goal is [style.boldGood(" + Util.intToString(bonus) + " orgasm" + (bonus==1?"":"s") + ")] higher than normal!")));
+											"[npc.Her]的欲望得到了[style.boldExcellent(提升)]，因此高潮目标次数比正常情况多了[style.boldGood(" + Util.intToString(bonus) + "次)]！")));
 				} else {
 					additionalDescriptions.add(
 							new Value<>(2,
 									UtilText.parse(target,
-											"[npc.Her] desire has been [style.boldTerrible(suppressed)], and so this goal is [style.boldBad(" + Util.intToString(-bonus) + " orgasm" + (bonus==-1?"":"s") + ")] lower than normal!")));
+											"[npc.Her]的欲望得到了[style.boldTerrible(抑制)]，因此高潮目标次数比正常情况少了[style.boldBad(" + Util.intToString(-bonus) + ")]次！")));
 				}
 			}
 
@@ -12329,24 +12329,24 @@ public class StatusEffect {
 				orgasmColour = RenderingEngine.orgasmColours[orgasms];
 			}
 			
-			modList.add("<b style='color:"+orgasmColour.toWebHexString()+";'>"+orgasms+"</b> Orgasm"+(orgasms==1?"":"s"));
+			modList.add("<b style='color:"+orgasmColour.toWebHexString()+";'>"+orgasms+"</b>高潮");
 
 			int essences = Main.sex.getEssenceGeneration(target);
 			if(target.hasStatusEffect(StatusEffect.RECOVERING_AURA)) {
-				modList.add("Will produce [style.boldBad(0 essences)]");
-				modList.add("Caused by [style.boldBad('"+RECOVERING_AURA.getName(target)+"')] effect");
+				modList.add("会产出[style.boldBad(0精华)]");
+				modList.add("受[style.boldBad(“"+RECOVERING_AURA.getName(target)+"”)]效果影响");
 				
 			} else {
 				if(target.hasTrait(Perk.NYMPHOMANIAC, true)) {
-					modList.add("Generates [style.boldArcane("+(essences)+" essences)] after sex");
-					modList.add("[style.boldExcellent(Doubled)] from [style.colourTrait("+Perk.NYMPHOMANIAC.getName(target)+" trait)]");
+					modList.add("性爱后生成[style.boldArcane("+(essences)+"精华)]");
+					modList.add("因[style.colourTrait("+Perk.NYMPHOMANIAC.getName(target)+"特性)]而[style.boldExcellent(双倍)]");
 					
 				} else {
-					modList.add("Will produce [style.boldArcane("+(essences)+" essences)]");
+					modList.add("会产出[style.boldArcane("+(essences)+"精华)]");
 				}
 				
 				if(orgasms>=5) {
-					modList.add("[style.boldBad(Maximum essences reached)]");
+					modList.add("[style.boldBad(达到最大精华量)]");
 				}
 			}
 			return modList;
@@ -12401,7 +12401,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect PENIS_STATUS = new AbstractStatusEffect(95,
-			"Penis status",
+			"阴茎状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -12432,51 +12432,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(stroking [npc.her] own [npc.cock])]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(抚摸自己的[npc.cock])]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] giving [npc2.name] [style.boldSex(a handjob)]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在给[npc2.name][style.boldSex(手淫)]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(frotting)] with [npc.her] two [npc.cocks(true)]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]用[npc.her]的两根[npc.cocks(true)]在[style.boldSex(击剑)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(frotting)] with [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在跟[npc2.name][style.boldSex(击剑)]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] giving [npc.herself] [style.boldSex(a tail-job)]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(尾淫)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] giving [npc2.name] [style.boldSex(a tail-job)]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在给[npc2.name][style.boldSex(尾淫)]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] giving [npc.herself] [style.boldSex(a tentacle-job)]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(触手淫)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] giving [npc2.name] [style.boldSex(a tentacle-job)]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在给[npc2.name][style.boldSex(触手淫)]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] giving [npc.herself] [style.boldSex(a blowjob)]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(口交)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] giving [npc2.name] [style.boldSex(a blowjob)]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), "[npc.NameIsFull]正在给[npc2.name][style.boldSex(口交)]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-frotting)] with [npc.her] own [npc.cock]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在用[npc.her]自己的[npc.cock]跟[style.boldSex(阴蒂击剑)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-frotting)] with [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在用[npc.her]的[npc.cock]跟[npc2.name][style.boldSex(阴蒂击剑)]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] giving [npc.herself] [style.boldSex(a foot-job)]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(足交)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] giving [npc2.name] [style.boldSex(a foot-job)]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在给[npc2.name][style.boldSex(足交)]！"));
 								}
 								break;
 						}
@@ -12485,10 +12485,10 @@ public class StatusEffect {
 			}
 			
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendPenetrationAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.NamePos] [npc.penis]"), descriptionSB);
+			appendPenetrationAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.NamePos]的[npc.penis]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -12531,7 +12531,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect CLIT_STATUS = new AbstractStatusEffect(95,
-			"Clitoris status",
+			"阴蒂状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -12562,51 +12562,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(指交)]自己！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(指交)][npc2.name]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(teasing)] [npc.her] own [npc.cock]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(挑逗)]着[npc.her]自己的[npc.cock]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(teasing)] [npc2.namePos] [npc2.cock]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(抚弄)][npc2.namePos]的[npc2.cock]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-teasing)] [npc.her] own pussy!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴挑逗着)]自己的小穴！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-teasing)] [npc2.namePos] pussy!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴挑逗着)][npc2.namePos]的小穴！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-teasing)] [npc.her] own pussy!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手挑逗着)][npc.her]自己的小穴！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-teasing)] [npc2.namePos] pussy!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手挑逗着)][npc2.namePos]的小穴！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(performing cunnilingus)] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself][style.boldSex(舔阴)] ！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(performing cunnilingus)] on [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在给[npc2.name][style.boldSex(舔阴)] ！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴户磨蹭着)][npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tribbing)] with [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在跟[npc2.name][style.boldSex(磨镜着)]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(foot-teasing)] [npc.her] own pussy!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用脚挑逗着)][npc.her]自己的小穴！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(foot-teasing)] [npc2.namePos] pussy!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用脚挑逗着)][npc2.namePos]的小穴！"));
 								}
 								break;
 						}
@@ -12616,10 +12616,10 @@ public class StatusEffect {
 			}
 			
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendPenetrationAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.NamePos] [npc.clit]"), descriptionSB);
+			appendPenetrationAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.NamePos][npc.clit]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -12662,7 +12662,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ANUS_STATUS = new AbstractStatusEffect(96,
-			"Anus status",
+			"肛门状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -12707,59 +12707,59 @@ public class StatusEffect {
 					switch(pen) {
 						case FINGER:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(指交)]着自己的[npc.asshole]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fingering)] [npc.namePos] [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(指交)][npc.namePos]的[npc.asshole]！"));
 							}
 							break;
 						case PENIS:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.asshole]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fucking)] [npc.namePos] [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(操着)][npc.namePos]的[npc.asshole]！"));
 							}
 							break;
 						case TAIL:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的[npc.asshole]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tail-fucking)] [npc.namePos] [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(用尾巴操着)][npc.namePos]的[npc.asshole]！"));
 							}
 							break;
 						case TENTACLE:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的[npc.asshole]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tentacle-fucking)] [npc.namePos] [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(触手操着)][npc.namePos]的[npc.asshole]！"));
 							}
 							break;
 						case TONGUE:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(anilingus)] [npc.herself]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(吻肛)]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" performing [style.boldSex(anilingus)] on [npc.name]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"正在给[npc.name][style.boldSex(吻肛)]！"));
 							}
 							break;
 						case CLIT:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的[npc.asshole]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(clit-fucking)] [npc.namePos] [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(用阴蒂操着)][npc.namePos]的[npc.asshole]！"));
 							}
 							break;
 						case FOOT:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc.her]自己的[npc.asshole]里！"));
 							} else {
 								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))
-										+(names.size()==1?UtilText.parse(main, " [npc.is] [style.boldSex(pushing [npc.her] [npc.toes])]"):" are [style.boldSex(pushing their toes)]")
-										+"  into [npc.namePos] [npc.asshole]!"));
+										+(names.size()==1?UtilText.parse(main, "[style.boldSex(将[npc.toes]插入)]"):"[style.boldSex(将多根脚趾插入)]")
+										+"[npc.namePos]的[npc.asshole]！"));
 							}
 							break;
 					}
@@ -12793,20 +12793,20 @@ public class StatusEffect {
 							break;
 						case MOUTH:
 							if(selfAction) {
-								descriptionSB.append("[npc.NameIsFull] performing [style.boldSex(anilingus)] on [npc.herself]!");
+								descriptionSB.append("[npc.NameIsFull]正在给自己[style.boldSex(吻肛)]！");
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" performing [style.boldSex(anilingus)] on [npc2.name]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"正在给[npc2.name][style.boldSex(吻肛)]！"));
 							}
 							break;
 						case THIGHS:
 							break;
 						case URETHRA_PENIS:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.asshole]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fucking)] [npc.namePos] [npc.asshole]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(操着)][npc.namePos]的[npc.asshole]！"));
 							}
 							break;
 						case URETHRA_VAGINA:
@@ -12822,10 +12822,10 @@ public class StatusEffect {
 			}
 			
 			if(!descriptionAdded) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.asshole]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的[npc.asshole]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -12852,7 +12852,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect ASS_STATUS = new AbstractStatusEffect(96,
-			"Ass status",
+			"屁股状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -12883,51 +12883,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.ass]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull][style.boldSex(抚弄着)][npc.her]自己的[npc.ass]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.ass]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(抚弄着)][npc2.namePos]的[npc2.ass]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(hotdogging)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(尻交)]着[npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(hotdogging)] [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(尻交)]着[npc2.name]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-hotdogging)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴尻交着)][npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-hotdogging)] [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴尻交着)][npc2.name]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-hotdogging)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手尻交着)][npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-hotdogging)] [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手尻交着)][npc2.name]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(licking)] [npc2.her] own [npc.ass]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔弄着)][npc2.her]自己的[npc.ass]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(licking)] [npc2.namePos] [npc2.ass]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(舔弄着)][npc2.namePos]的[npc2.ass]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-hotdogging)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂尻交着)][npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-hotdogging)] [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂尻交着)][npc2.name]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.ass] with [npc.her] [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在用[npc.her]的[npc.feet][style.boldSex(抚弄着)][npc.her]自己的[npc.ass]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.ass] with [npc.her] [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]用[npc.her]的[npc.feet][style.boldSex(抚弄着)][npc2.namePos]的[npc2.ass]！"));
 								}
 								break;
 						}
@@ -12944,18 +12944,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(licking)] [npc2.her] own [npc.ass]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔弄着)][npc2.her]自己的[npc.ass]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(licking)] [npc2.namePos] [npc2.ass]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(舔弄着)][npc2.namePos]的[npc2.ass]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(hotdogging)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(尻交)]着[npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(hotdogging)] [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(尻交)]着[npc2.name]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -12971,10 +12971,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.ass]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的[npc.ass]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 
@@ -13014,7 +13014,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect MOUTH_STATUS = new AbstractStatusEffect(99,
-			"Mouth status",
+			"嘴巴状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -13045,51 +13045,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(sucking)] [npc.her] own [npc.fingers]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(吮吸着)]自己的[npc.fingers]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(sucking)] [npc.namePos] [npc.fingers]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(吮吸)][npc.namePos]的[npc.fingers]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] giving [npc.herself] a [style.boldSex(blowjob)]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(口交)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] giving [npc.name] a [style.boldSex(blowjob)]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex(口交)]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(sucking)] [npc.her] own [npc.tail]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(吮吸着)]自己的[npc.tail]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(sucking)] [npc.namePos] [npc.tail]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(吮吸)][npc.namePos]的[npc.tail]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(sucking)] [npc.her] own tentacle!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(吮吸着)]自己的触手！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(sucking)] [npc.namePos] tentacle!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(吮吸)][npc.namePos]的触手！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(kissing)] [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(亲吻着)][npc.name]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(sucking)] [npc.her] own [npc.clit]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(吮吸着)]自己的[npc.clit]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(sucking)] [npc.namePos] [npc.clit]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(吮吸)][npc.namePos]的[npc.clit]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(licking)] [npc.her] own [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔弄着)][npc.her]自己的[npc.feet]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(licking)] [npc.namePos] [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(舔着)][npc.namePos]的[npc.feet]！"));
 								}
 								break;
 						}
@@ -13098,93 +13098,93 @@ public class StatusEffect {
 						switch((SexAreaOrifice)sArea) {
 							case ARMPITS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(licking)] [npc.her] own [npc.armpits]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔弄着)][npc.her]自己的[npc.armpits]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(licking)] [npc.namePos] [npc.armpits]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(舔着)][npc.namePos]的[npc.armpits]！"));
 								}
 								break;
 							case ANUS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(anilingus)] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(吻肛)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex(anilingus)] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex(舔肛)]！"));
 								}
 								break;
 							case ASS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(licking)] [npc.her] own [npc.ass]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔弄着)][npc.her]自己的[npc.ass]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(licking)] [npc.namePos] [npc.ass]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(舔舐)][npc.namePos]的[npc.ass]！"));
 								}
 								break;
 							case BREAST:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.breasts]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.breasts]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(kissing)] [npc.namePos] [npc.breasts]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(亲吻着)][npc.namePos]的[npc.breasts]！"));
 								}
 								break;
 							case NIPPLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(sucking on)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(吮吸着)]自己的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(sucking on)] [npc.namePos] [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(吮吸着)][npc.namePos]的[npc.nipples]！"));
 								}
 								break;
 							case BREAST_CROTCH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.crotchBoobs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(kissing)] [npc.namePos] [npc.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(亲吻着)][npc.namePos]的[npc.crotchBoobs]！"));
 								}
 								break;
 							case NIPPLE_CROTCH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(sucking on)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(吮吸着)]自己的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(sucking on)] [npc.namePos] [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(吮吸着)][npc.namePos]的[npc.crotchNipples]！"));
 								}
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.herself]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(kissing)] [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(亲吻着)][npc.name]！"));
 								}
 								break;
 							case THIGHS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.legs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.legs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] [style.boldSex(kissing)] [npc.namePos] [npc.legs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在[style.boldSex(亲吻着)][npc.namePos]的[npc.legs]！"));
 								}
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] giving [npc.herself] a [style.boldSex(blowjob)]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己[style.boldSex(口交)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] giving [npc.name] a [style.boldSex(blowjob)]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex(口交)]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(cunnilingus)] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔着[npc.herself]的阴部)] ！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex(cunnilingus)] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex(舔阴)]！"));
 								}
 								break;
 							case VAGINA:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(cunnilingus)] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔着[npc.herself]的阴部)] ！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex(cunnilingus)] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex(舔阴)]！"));
 								}
 								break;
 							case SPINNERET:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(oral)] on [npc.her] own spinneret!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(口交着)][npc.her]自己的丝囊！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex(oral)] on [npc.namePos] spinneret!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.namePos]的丝囊[style.boldSex(口交)]！"));
 								}
 								break;
 							case TUSSY:
@@ -13199,10 +13199,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] mouth"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的嘴"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -13228,7 +13228,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect BREAST_STATUS = new AbstractStatusEffect(98,
-			"Breast status",
+			"乳房状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -13237,9 +13237,9 @@ public class StatusEffect {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner.hasBreasts()) {
-				return "Breast status";
+				return "乳房状态";
 			} else {
-				return "Chest status";
+				return "胸部状态";
 			}
 		}
 		@Override
@@ -13267,51 +13267,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.breasts]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(抚弄着)][npc.her]自己的[npc.breasts]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.breasts]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(抚弄着)][npc2.namePos]的[npc2.breasts]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex("+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself][style.boldSex("+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex("+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex("+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(tail-"+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself][style.boldSex(尾巴"+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex(tail-"+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex(尾巴"+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(tentacle-"+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself][style.boldSex(触手"+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex(tentacle-"+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex(触手"+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.breasts]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.breasts]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.breasts]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.breasts]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex("+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.her] own [npc.clit]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己的[npc.clit][style.boldSex("+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex("+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.namePos] [npc.clit]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.namePos]的[npc.clit][style.boldSex("+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.breasts] with [npc.her] [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在用[npc.feet][style.boldSex(抚弄着)][npc.her]自己的[npc.breasts]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.breasts] with [npc.her] [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在用[npc.her]的[npc.feet][style.boldSex(抚弄)][npc2.namePos]的[npc2.breasts]！"));
 								}
 								break;
 						}
@@ -13328,18 +13328,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.breasts]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.breasts]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.breasts]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.breasts]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex("+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself][style.boldSex("+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex("+(target.isBreastFuckablePaizuri()?"paizuri":"naizuri")+")] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.Name]进行[style.boldSex("+(target.isBreastFuckablePaizuri()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -13355,10 +13355,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 			
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.breasts]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的[npc.breasts]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -13398,7 +13398,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect NIPPLE_STATUS = new AbstractStatusEffect(97,
-			"Nipple status",
+			"乳头状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -13429,51 +13429,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(揉捏)]着自己的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(揉捏着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc.her]自己的[npc.nipples]里！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc2.namePos]的[npc2.nipples]里！"));
 								}
 								break;
 						}
@@ -13490,18 +13490,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.nipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.nipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.nipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.nipples]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -13517,10 +13517,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.nipples]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的[npc.nipples]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -13550,7 +13550,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect BREAST_CROTCH_STATUS = new AbstractStatusEffect(98,
-			"Crotch-boob status",
+			"胯乳状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -13559,9 +13559,9 @@ public class StatusEffect {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner.getBreastCrotchShape()==BreastShape.UDDERS) {
-				return "Udders status";
+				return "腹乳状态";
 			} else {
-				return "Crotch-boob status";
+				return "胯乳状态";
 			}
 		}
 		@Override
@@ -13589,51 +13589,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(抚弄着)][npc.her]自己的[npc.crotchBoobs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(抚弄着)][npc2.namePos]的[npc2.crotchBoobs]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex([npc.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself][style.boldSex([npc.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex([npc2.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex([npc2.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex([npc.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.her] own [npc.tail]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself]的[npc.tail][style.boldSex([npc.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex([npc2.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.namePos] [npc.tail]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在为[npc.namePos]的[npc.tail]进行[style.boldSex([npc2.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex([npc.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.her] own [npc.tentacle]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself]的[npc.tentacle][style.boldSex([npc.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex([npc2.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.namePos] [npc.tentacle]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.namePos]的[npc.tentacle][style.boldSex([npc2.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.crotchBoobs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.crotchBoobs]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex([npc.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.her] own [npc.clit]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself]的[npc.clit][style.boldSex([npc.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex([npc.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.namePos] [npc.clit]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.namePos]的[npc.clit][style.boldSex([npc.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.crotchBoobs] with [npc.her] [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在用[npc.feet][style.boldSex(抚弄着)][npc.her]自己的[npc.crotchBoobs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.crotchBoobs] with [npc.her] [npc.feet]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在用[npc.feet][style.boldSex(抚弄着)][npc2.namePos]的[npc2.crotchBoobs]！"));
 								}
 								break;
 						}
@@ -13650,18 +13650,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.crotchBoobs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.crotchBoobs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.crotchBoobs]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex([npc.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.herself][style.boldSex([npc.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull] performing [style.boldSex([npc.crotchBoob]-"+(entry.getKey().hasBreasts()?"paizuri":"naizuri")+")] on [npc.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc2.NameIsFull]正在给[npc.name][style.boldSex([npc.crotchBoob]"+(entry.getKey().hasBreasts()?"乳交":"贫乳乳交")+")]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -13677,10 +13677,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 			
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.crotchBoobs]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的[npc.crotchBoobs]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -13723,7 +13723,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect NIPPLE_CROTCH_STATUS = new AbstractStatusEffect(97,
-			"Nipple status",
+			"乳头状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -13732,9 +13732,9 @@ public class StatusEffect {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner.getBreastCrotchShape()==BreastShape.UDDERS) {
-				return "Udders teat status";
+				return "腹乳乳头状态";
 			} else {
-				return "Crotch-boobs nipple status";
+				return "胯乳乳头状态";
 			}
 		}
 		@Override
@@ -13762,51 +13762,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(揉捏)]着自己的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(揉捏着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc.her]的[npc.crotchNipples]里！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc2.namePos]的[npc2.crotchNipples]里！"));
 								}
 								break;
 						}
@@ -13823,18 +13823,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.crotchNipples]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.crotchNipples]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.crotchNipples]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -13850,10 +13850,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.crotchNipples]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的[npc.crotchNipples]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -13883,7 +13883,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect URETHRA_PENIS_STATUS = new AbstractStatusEffect(97,
-			"Penis Urethra status",
+			"阴茎尿道状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -13914,51 +13914,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(手淫)]着自己的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(指交着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc.her]的[npc.urethraPenis]里！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc2.namePos]的[npc2.urethraPenis]里！"));
 								}
 								break;
 						}
@@ -13975,18 +13975,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.urethraPenis]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.urethraPenis]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.urethraPenis]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -14002,10 +14002,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 			
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.urethraPenis]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her][npc.urethraPenis]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -14034,7 +14034,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect URETHRA_VAGINA_STATUS = new AbstractStatusEffect(97,
-			"Vaginal Urethra status",
+			"阴道尿道状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -14065,51 +14065,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(指交)]着自己的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(指交着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc.her]的[npc.urethraVagina]里！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc2.namePos]的[npc2.urethraVagina]里！"));
 								}
 								break;
 						}
@@ -14126,18 +14126,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.urethraVagina]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] [npc2.urethraVagina]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的[npc2.urethraVagina]！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -14153,10 +14153,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 			
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] [npc.urethraVagina]"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的[npc.urethraVagina]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -14185,7 +14185,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect VAGINA_STATUS = new AbstractStatusEffect(95,
-			"Pussy status",
+			"小穴状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -14230,68 +14230,68 @@ public class StatusEffect {
 					switch(pen) {
 						case FINGER:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(指交)]着自己的[npc.pussy]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fingering)] [npc.namePos] [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(指交着)][npc.namePos]的[npc.pussy]！"));
 							}
 							break;
 						case PENIS:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.pussy]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fucking)] [npc.namePos] [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(操)][npc.namePos]的[npc.pussy]！"));
 							}
 							break;
 						case TAIL:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的[npc.pussy]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tail-fucking)] [npc.namePos] [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(用尾巴操着)][npc.namePos]的[npc.pussy]！"));
 							}
 							break;
 						case TENTACLE:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己的[npc.pussy][style.boldSex(触手交)]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tentacle-fucking)] [npc.namePos] [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(触手交)][npc.namePos]的[npc.pussy]！"));
 							}
 							break;
 						case TONGUE:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(cunnilingus)] [npc.her] own [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.her]自己的[npc.pussy][style.boldSex(舔阴)]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" performing [style.boldSex(cunnilingus)] on [npc.name]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"在[npc.Name]身上表演[style.boldSex(舔阴)]！"));
 							}
 							break;
 						case CLIT:
 							if(selfAction) {
 								if(main.isClitorisPseudoPenis()) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own [npc.pussy]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己的[npc.pussy][style.boldSex(阴蒂交)]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own [npc.pussy]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴户磨蹭着)][npc.her]自己的[npc.pussy]！"));
 								}
 							} else {
 								if(main.isClitorisPseudoPenis()) {
-									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-											+" [style.boldSex(clit-fucking)] [npc.namePos] [npc.pussy]!"));
+									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+											+"[style.boldSex(用阴蒂操着)][npc.namePos]的[npc.pussy]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-											+" [style.boldSex(tribbing)] with [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+											+"在跟[npc2.name][style.boldSex(磨镜)]！"));
 								}
 							}
 							break;
 						case FOOT:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc.her]的[npc.pussy]里！"));
 							} else {
 								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))
-										+(names.size()==1?UtilText.parse(main, " [npc.is] [style.boldSex(pushing [npc.her] [npc.toes])]"):" are [style.boldSex(pushing their toes)]")
-										+"  into [npc.namePos] [npc.pussy]!"));
+										+(names.size()==1?UtilText.parse(main, "[style.boldSex(将[npc.toes]插入)]"):"[style.boldSex(将多根脚趾插入)]")
+										+"[npc.namePos]的[npc.pussy]里！"));
 							}
 							break;
 					}
@@ -14325,37 +14325,37 @@ public class StatusEffect {
 							break;
 						case MOUTH:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(cunnilingus)] on [npc.herself]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(舔着[npc.herself]的阴部)] ！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" performing [style.boldSex(cunnilingus)] on [npc2.name]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"在给[npc2.name][style.boldSex(舔阴)]！"));
 							}
 							break;
 						case THIGHS:
 							break;
 						case URETHRA_PENIS:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的[npc.pussy]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fucking)] [npc.namePos] [npc.pussy]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(操)][npc.namePos]的[npc.pussy]！"));
 							}
 							break;
 						case URETHRA_VAGINA:
 							break;
 						case VAGINA:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own [npc.pussy]!")); //???
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴户磨蹭着)][npc.her]自己的[npc.pussy]！")); //???
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tribbing)] with [npc2.name]!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"在跟[npc2.name][style.boldSex(磨镜)]！"));
 							}
 							break;
 						case TUSSY:
 							if(selfAction) {
 								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own [npc.tussy]!")); //???
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
 										+" [npc.her] [npc.tussy] to [style.boldSex(trib)] with [npc2.name]!"));
 							}
 							break;
@@ -14366,10 +14366,10 @@ public class StatusEffect {
 			}
 			
 			if(!descriptionAdded) {
-				descriptionSB.append("[style.boldDisabled(No ongoing actions.)]");
+				descriptionSB.append("[style.boldDisabled(没有正在进行的动作。)]");
 			}
 			
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] pussy"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的小穴"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -14396,7 +14396,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect SPINNERET_STATUS = new AbstractStatusEffect(95,
-			"Spinneret status",
+			"丝囊状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -14441,68 +14441,68 @@ public class StatusEffect {
 					switch(pen) {
 						case FINGER:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]在给[npc.her]自己的丝囊[style.boldSex(指交)]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fingering)] [npc.namePos] spinneret!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(指交)][npc.namePos]的丝囊！"));
 							}
 							break;
 						case PENIS:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的丝囊！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fucking)] [npc.namePos] spinneret!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(操)][npc.namePos]的丝囊！"));
 							}
 							break;
 						case TAIL:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的丝囊！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tail-fucking)] [npc.namePos] spinneret!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(尾交)][npc.namePos]的丝囊！"));
 							}
 							break;
 						case TENTACLE:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的丝囊！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tentacle-fucking)] [npc.namePos] spinneret!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(触手交)][npc.namePos]的丝囊！"));
 							}
 							break;
 						case TONGUE:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(oral)] [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给自己的丝囊[style.boldSex(口交)]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" performing [style.boldSex(oral)] on [npc.namePos] spinneret!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"在给[npc.namePos]的丝囊[style.boldSex(口交)]！"));
 							}
 							break;
 						case CLIT:
 							if(selfAction) {
 								if(main.isClitorisPseudoPenis()) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own spinneret!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的丝囊！"));
 								} else {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own spinneret!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴户磨蹭着)][npc.her]自己的丝囊！"));
 								}
 							} else {
 								if(main.isClitorisPseudoPenis()) {
-									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-											+" [style.boldSex(clit-fucking)] [npc.namePos] spinneret!"));
+									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+											+"[style.boldSex(用阴蒂操着)][npc.namePos]的丝囊！"));
 								} else {
-									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-											+" [style.boldSex(tribbing)] with [npc2.namePos] spinneret!"));
+									descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+											+"在跟[npc2.namePos]的丝囊[style.boldSex(磨镜)]！"));
 								}
 							}
 							break;
 						case FOOT:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]将[style.boldSex([npc.toes]插入)][npc.her]自己的丝囊里！"));
 							} else {
 								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))
-										+(names.size()==1?UtilText.parse(main, " [npc.is] [style.boldSex(pushing [npc.her] [npc.toes])]"):" are [style.boldSex(pushing their toes)]")
-										+"  into [npc.namePos] spinneret!"));
+										+(names.size()==1?UtilText.parse(main, "[style.boldSex(将[npc.toes]插入)]"):"[style.boldSex(将多根脚趾插入)]")
+										+"[npc.namePos]的丝囊里！"));
 							}
 							break;
 					}
@@ -14536,30 +14536,30 @@ public class StatusEffect {
 							break;
 						case MOUTH:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(oral)] on [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在给[npc.her]自己的丝囊[style.boldSex(口交)]！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" performing [style.boldSex(oral)] on [npc2.namePos] spinneret!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"在给[npc2.namePos]的丝囊[style.boldSex(口交)]！"));
 							}
 							break;
 						case THIGHS:
 							break;
 						case URETHRA_PENIS:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own spinneret!"));
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的丝囊！"));
 							} else {
-								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(fucking)] [npc.namePos] spinneret!"));
+								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+"正"
+										+"[style.boldSex(操)][npc.namePos]的丝囊！"));
 							}
 							break;
 						case URETHRA_VAGINA:
 							break;
 						case VAGINA:
 							if(selfAction) {
-								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own spinneret!")); //???
+								descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴户磨蹭着)][npc.her]自己的丝囊！")); //???
 							} else {
 								descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-										+" [style.boldSex(tribbing)] with [npc2.namePos] spinneret!"));
+										+"在跟[npc2.namePos]的丝囊[style.boldSex(磨镜)]！"));
 							}
 							break;
 						case SPINNERET:
@@ -14571,10 +14571,10 @@ public class StatusEffect {
 			}
 			
 			if(!descriptionAdded) {
-				descriptionSB.append("[style.boldDisabled(No ongoing actions.)]");
+				descriptionSB.append("[style.boldDisabled(没有正在进行的动作。)]");
 			}
 			
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] spinneret"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的丝囊"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -14601,7 +14601,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect THIGH_STATUS = new AbstractStatusEffect(95,
-			"Thigh status",
+			"股间状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -14632,51 +14632,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.legs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(抚弄着)][npc.her]的[npc.legs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.legs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(抚弄着)][npc2.namePos]的[npc2.legs]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own thighs!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的大腿！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] thighs!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的大腿！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own thighs!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的大腿！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc2.namePos] thighs!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)][npc2.namePos]的大腿！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own thighs!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的大腿！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc2.namePos] thighs!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)][npc2.namePos]的大腿！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.legs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.legs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.legs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.legs]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own thighs!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的大腿！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc2.namePos] thighs!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc2.namePos]的大腿！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.feet])] between [npc.her] own thighs!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在将[style.boldSex([npc.feet]插入)][npc.her]自己的大腿间！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.feet])] between [npc2.namePos] thighs!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在将[style.boldSex([npc.feet]插入)][npc2.namePos]的大腿间！"));
 								}
 								break;
 						}
@@ -14693,18 +14693,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.legs]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.legs]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.legs]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.legs]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own thighs!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的大腿！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] thighs!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的大腿！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -14720,10 +14720,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] thighs"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的双股"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -14762,7 +14762,7 @@ public class StatusEffect {
 	};
 	
 	public static AbstractStatusEffect ARMPIT_STATUS = new AbstractStatusEffect(95,
-			"Armpit status",
+			"腋窝状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -14793,51 +14793,51 @@ public class StatusEffect {
 						switch((SexAreaPenetration)sArea) {
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(groping)] [npc.her] own [npc.armpits]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(抚摸)][npc.her]自己的[npc.armpits]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(groping)] [npc2.namePos] [npc2.armpits]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(抚摸)][npc2.namePos]的[npc2.armpits]！"));
 								}
 								break;
 							case PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own armpits!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的腋窝！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] armpits!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的腋窝！"));
 								}
 								break;
 							case TAIL:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own armpits!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)]自己的腋窝！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc2.namePos] armpits!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用尾巴操着)][npc2.namePos]的腋窝！"));
 								}
 								break;
 							case TENTACLE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own armpits!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)]自己的腋窝！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc2.namePos] armpits!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用触手操着)][npc2.namePos]的腋窝！"));
 								}
 								break;
 							case TONGUE:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.armpits]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.armpits]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.armpits]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.armpits]！"));
 								}
 								break;
 							case CLIT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own armpits!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc.her]自己的腋窝！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc2.namePos] armpits!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(用阴蒂操着)][npc2.namePos]的腋窝！"));
 								}
 								break;
 							case FOOT:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.feet])] between [npc.her] own armpits!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(将脚插入)][npc.her]自己的腋窝中！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.feet])] between [npc2.namePos] armpits!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在将[style.boldSex([npc.feet]插入)][npc2.namePos]的腋窝间！"));
 								}
 								break;
 						}
@@ -14854,18 +14854,18 @@ public class StatusEffect {
 								break;
 							case MOUTH:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc.her] own [npc.armpits]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc.her]的[npc.armpits]！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(kissing)] [npc2.namePos] [npc2.armpits]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(亲吻着)][npc2.namePos]的[npc2.armpits]！"));
 								}
 								break;
 							case THIGHS:
 								break;
 							case URETHRA_PENIS:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own armpits!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc.her]自己的腋窝！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc2.namePos] armpits!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(操着)][npc2.namePos]的腋窝！"));
 								}
 								break;
 							case URETHRA_VAGINA:
@@ -14878,10 +14878,10 @@ public class StatusEffect {
 				}
 			}
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] armpits"), descriptionSB);
+			appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her]的腋窝"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			
@@ -14921,7 +14921,7 @@ public class StatusEffect {
 	};
 
 	public static AbstractStatusEffect HAND_STATUS = new AbstractStatusEffect(95,
-			"Hand status",
+			"手部状态",
 			null,
 			PresetColour.GENERIC_SEX,
 			false,
@@ -14962,9 +14962,9 @@ public class StatusEffect {
 								break;
 							case FINGER:
 								if(selfAction) {
-									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(holding hands)] with [npc.herself]!"));
+									descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull]正在[style.boldSex(牵着)][npc.herself]的手！"));
 								} else {
-									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull] [style.boldSex(holding hands)] with [npc2.name]!"));
+									descriptionSB.append(UtilText.parse(entry.getKey(), target, "[npc.NameIsFull]正在[style.boldSex(牵着)][npc2.name]的手！"));
 								}
 								break;
 							case FOOT:
@@ -14976,10 +14976,10 @@ public class StatusEffect {
 			}
 			
 			if(Main.sex.getOngoingSexAreas(target, type).isEmpty()) {
-				descriptionSB.append("[style.colourDisabled(No ongoing action...)]");
+				descriptionSB.append("[style.colourDisabled(没有正在进行的动作……)]");
 			}
 
-			appendPenetrationAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.NamePos] [npc.hands]"), descriptionSB);
+			appendPenetrationAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.NamePos]的[npc.hands]"), descriptionSB);
 			
 			descriptionSB.append("</p>");
 			

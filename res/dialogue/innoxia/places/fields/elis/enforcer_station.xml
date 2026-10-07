@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
     <!-- Place type id: innoxia_fields_elis_enforcer_station_corridor -->
@@ -20,8 +20,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit the Enforcer station and head back out into the streets of Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[走出执法局，回到伊利斯的街道上。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_enforcers"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -58,12 +58,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
+				<responseTitle><![CDATA[工作]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_talk_work))
-						You're already talking to Sterope about the work that the Enforcers do here in Elis...
+						你已经在和斯特罗普谈论过执法者在伊利斯的工作了……
 					#ELSE
-						Ask Sterope about the work that the Enforcers do here in Elis.
+						问问斯特罗普执法者在伊利斯的工作。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -84,12 +84,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Career]]></responseTitle>
+				<responseTitle><![CDATA[白领]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_talk_career))
-						You're already talking to Sterope about her career in the Enforcers...
+						你已经在和斯特罗普谈论过她在执法者的职业生涯了……
 					#ELSE
-						Ask Sterope about her career in the Enforcers.
+						问问斯特罗普担任执法者的职业生涯。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -110,12 +110,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Lunette]]></responseTitle>
+				<responseTitle><![CDATA[露内特]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_talk_lunette))
-						You're already talking to Sterope about what she thinks of Lunette...
+						你已经在和斯特罗普谈论过她对露内特的看法了……
 					#ELSE
-						Ask Sterope about what she thinks of Lunette.
+						问问斯特罗普她对露内特的看法。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -137,12 +137,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_enforcers_access_granted)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[SWORD Info.]]></responseTitle>
+				<responseTitle><![CDATA[SWORD信息]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_talk_sword))
-						You're already talking to Sterope about the SWORD Enforcers who are stationed here...
+						你已经在和斯特罗普谈论驻扎在这里的SWORD执法者了……
 					#ELSE
-						Ask Sterope what she can tell you about the SWORD Enforcers who are stationed here.
+						问问斯特罗普驻扎在这里的SWORD执法者。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -164,9 +164,9 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_elis_enforcers_access_granted) && pc.getQuest(QUEST_LINE_MAIN)==QUEST_MAIN_3_F_PREPARING_ELIS]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[SWORD Enforcers]]></responseTitle>
+				<responseTitle><![CDATA[SWORD执法者]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Sterope that you've been sent here by Minotallys and that you need to speak with the group of SWORD Enforcers who are stationed here.
+					告诉斯特罗普，你是米诺塔莉丝派来的，你需要和驻扎在这里的那群SWORD执法者谈谈。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_enforcer_station_reception_sword]]></nextDialogue>
 				<effects><![CDATA[
@@ -181,8 +181,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_enforcers_talk_lunette) && !flags.hasFlag(FLAG_innoxia_sterope_unlocked)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Flirt]]></responseTitle>
-				<responseTooltip><![CDATA[Push Sterope on what she's just said and ask her if she thinks of being turned into a succutaur's cock-sleeve often.]]></responseTooltip>
+				<responseTitle><![CDATA[调情]]></responseTitle>
+				<responseTooltip><![CDATA[逼问斯特罗普刚才说了什么，问她是否经常想自己变成半魅魔人的鸡巴套。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_enforcer_station_reception_talk]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/enforcer_station', 'RECEPTION_FLIRT'))]
@@ -198,8 +198,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_elis_enforcers_access_granted)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[As you haven't been given permission to proceed any further, all you can do is [pc.step] back and return to the entrance...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[你未获得继续前进的许可，只能返回入口……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_exit</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/enforcer_station', 'RECEPTION_STEP_BACK'))]
@@ -235,8 +235,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[As the door is locked, you can't go any further...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[门是锁着的，你不能再往前走了……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_corridor</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/enforcer_station', 'LOCKED_DOOR_STEP_BACK'))]
@@ -286,8 +286,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_elis_sword_met)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explain]]></responseTitle>
-				<responseTooltip><![CDATA[Explain to the wolf-boy why you're here.]]></responseTooltip>
+				<responseTitle><![CDATA[解释]]></responseTitle>
+				<responseTooltip><![CDATA[向狼男解释你来这里的原因。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_sword_initial</nextDialogue>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_elis_sword_met, true)]
@@ -298,12 +298,12 @@
 				<availabilityConditional><![CDATA[[#pc.getQuest(QUEST_LINE_MAIN)==QUEST_MAIN_3_G_SWORD_SCAPEGOAT]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Operation]]></responseTitle>
+				<responseTitle><![CDATA[行动]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getDayOfWeek()==DOW_TUESDAY && game.isHourBetween(17, 24))
-						Tell the Enforcers that you're ready to tag along with them on their operation.
+						告诉执法者你准备好跟他们一起行动了。
 					#ELSE
-						You need to come back on a Tuesday after [units.time(17)] to start the operation.
+						你只能周二[units.time(17)]后来参与行动。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -319,12 +319,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sword_mission_reward)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take dagger]]></responseTitle>
+				<responseTitle><![CDATA[拿走匕首]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_chose_hammer))
-						Thank Hammer for the dagger and take it from him.
+						谢谢锤子的匕首并接过来。
 					#ELSE
-						Thank Ghost for the dagger and take it from her.
+						Thank Ghost 谢谢幽灵的匕首并接过来。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_enforcer_station_sword_talk]]></nextDialogue>
@@ -344,12 +344,12 @@
 				<availabilityConditional><![CDATA[[#pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_H_SWORD_MISSION) && !flags.hasFlag(FLAG_innoxia_sword_mission_reward)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Elis]]></responseTitle>
+				<responseTitle><![CDATA[伊利斯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_talk_elis))
-						You're already asking the Enforcers how they ended up here in Elis...
+						你已经问过执法者他们是怎么来到伊利斯的了……
 					#ELSE
-						Ask the Enforcers how they ended up here in Elis.
+						问问执法者他们是怎么来到伊利斯的。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -372,12 +372,12 @@
 				<availabilityConditional><![CDATA[[#pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_H_SWORD_MISSION) && !flags.hasFlag(FLAG_innoxia_sword_mission_reward)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[History]]></responseTitle>
+				<responseTitle><![CDATA[历史]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_talk_history))
-						You're already asking the Enforcers about their history and how they ended up working together...
+						你已经问过执法者他们的历史和经历了……
 					#ELSE
-						Ask the Enforcers about their history and how they ended up working together.
+						问问执法者他们的历史和经历。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -404,9 +404,9 @@
 				<responseTitle><![CDATA[ORICL]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_talk_oricl))
-						You're already asking the Enforcers what they can tell you about ORICL...
+						你已经问过执法者关于ORICL了……
 					#ELSE
-						Ask the Enforcers what they can tell you about ORICL.
+						问问执法者有关ORICL。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -429,12 +429,12 @@
 				<availabilityConditional><![CDATA[[#pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_H_SWORD_MISSION) && !flags.hasFlag(FLAG_innoxia_sword_mission_reward) && flags.hasFlag(FLAG_innoxia_sword_history_revealed)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rebellion]]></responseTitle>
+				<responseTitle><![CDATA[叛乱]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_talk_human_rebellion))
-						You're already asking the Enforcers about the Fifth Human Rebellion...
+						你已经问过执法者关于第五次人类叛乱的事情了……
 					#ELSE
-						Ask the Enforcers about the Fifth Human Rebellion.
+						问问执法者关于第五次人类叛乱的事情。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -460,9 +460,9 @@
 				<responseTitle><![CDATA[HLF]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_talk_hlf))
-						You're already asking the Enforcers about the 'Human Liberation Front'...
+						你已经问过执法者关于“人类解放阵线”了……
 					#ELSE
-						Ask the Enforcers their antagonists during the Fifth Human Rebellion; the 'Human Liberation Front'.
+						问问执法者他们在第五次人类叛乱的敌人——“人类解放阵线”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -486,8 +486,8 @@
 					<availabilityConditional><![CDATA[[#pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_H_SWORD_MISSION) && !flags.hasFlag(FLAG_innoxia_sword_mission_reward) && !pc.hasQuest(QUEST_LINE_SIDE_DOLL_FACTORY)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[6]]></index>
-					<responseTitle><![CDATA[Angelixx's diary]]></responseTitle>
-					<responseTooltip><![CDATA[Ask the Enforcers if they've discovered anything from the contents of Angelixx's diary.]]></responseTooltip>
+					<responseTitle><![CDATA[安吉莉克丝的日记]]></responseTitle>
+					<responseTooltip><![CDATA[问问执法者有没有在安吉莉克丝的日记里发现什么。]]></responseTooltip>
 					<colour><![CDATA[QUEST_SIDE]]></colour>
 					<nextDialogue><![CDATA[innoxia_places_fields_elis_enforcer_station_sword_angelixx_diary]]></nextDialogue>
 				</response>
@@ -495,8 +495,8 @@
 					<availabilityConditional><![CDATA[[#pc.isQuestCompleted(QUEST_LINE_SIDE_DOLL_FACTORY) && pc.hasQuestInLine(QUEST_LINE_SIDE_DOLL_FACTORY, QUEST_DOLL_FACTORY_7A) && !flags.hasFlag(FLAG_innoxia_sword_talk_quest_complete)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[6]]></index>
-					<responseTitle><![CDATA[Refugees' fate]]></responseTitle>
-					<responseTooltip><![CDATA[Tell the Enforcers that Angelixx and Saellatrix were transforming the kidnapped refugees into sex dolls, and that with the help of a reporter named Fiammetta you put a stop to it.]]></responseTooltip>
+					<responseTitle><![CDATA[难民的命运]]></responseTitle>
+					<responseTooltip><![CDATA[告诉执法者，安吉莉克丝和赛拉特里克斯把被绑架的难民变成了性爱玩偶，在一位名叫菲亚梅塔的记者的帮助下，你阻止了这一切。]]></responseTooltip>
 					<nextDialogue stripContent="true"><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_sword_talk_quest_complete))
 							null
@@ -541,8 +541,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take diary]]></responseTitle>
-				<responseTooltip><![CDATA[Take the diary from Ghost.]]></responseTooltip>
+				<responseTitle><![CDATA[拿走日记]]></responseTitle>
+				<responseTooltip><![CDATA[拿走幽灵的日记。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_enforcer_station_sword_angelixx_diary_take]]></nextDialogue>
 			</response>
 		</responses>
@@ -569,8 +569,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Tell truth]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the Enforcers that you're working to overthrow Lilith herself...]]></responseTooltip>
+				<responseTitle><![CDATA[说出真相]]></responseTitle>
+				<responseTooltip><![CDATA[告诉执法者，你正在努力推翻莉莉丝本人……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_sword_convince</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/enforcer_station', 'SWORD_CONVINCE_TRUTH'))]
@@ -581,8 +581,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Hold back]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the Enforcers that you want to help Elis, and that's all there is to it...]]></responseTooltip>
+				<responseTitle><![CDATA[顶住]]></responseTitle>
+				<responseTooltip><![CDATA[告诉执法者你打算帮助伊利斯，仅此而已……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_sword_convince</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/enforcer_station', 'SWORD_CONVINCE_LIE'))]
@@ -593,8 +593,8 @@
 	
 	<scene id="sword_convince">
 		<preParsingEffects><![CDATA[
-			[#hammer.setGenericName('Hammer')]
-			[#ghost.setGenericName('Ghost')]	
+			[#hammer.setGenericName('锤子')]
+			[#ghost.setGenericName('幽灵')]	
 		]]></preParsingEffects>
 		<content folderPath="txt/places/fields/elis/enforcer_station">SWORD_CONVINCE_END</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -604,8 +604,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to what it is that these Enforcers want from you.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听这些执法者想从你身上要什么。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_sword_help</nextDialogue>
 			</response>
 		</responses>
@@ -620,8 +620,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Details]]></responseTitle>
-				<responseTooltip><![CDATA[Ask the Enforcers for some details on what this operation involves.]]></responseTooltip>
+				<responseTitle><![CDATA[细节]]></responseTitle>
+				<responseTooltip><![CDATA[问问执法者这次行动的详细情况。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_sword_mission</nextDialogue>
 			</response>
 		</responses>
@@ -636,12 +636,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Refugees]]></responseTitle>
+				<responseTitle><![CDATA[难民]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_discuss_refugees))
-						You've already asked the Enforcers if they know what's happening to the refugees.
+						你已经问过执法者关于难民的遭遇。
 					#ELSE
-						Ask the Enforcers if they know what's happening to the refugees.
+						问问执法者关于难民的遭遇。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -659,12 +659,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Plan]]></responseTitle>
+				<responseTitle><![CDATA[计划]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_discuss_plan))
-						You've already asked the Enforcers what their plan is.
+						你已经问过执法者他们的计划了。
 					#ELSE
-						Ask the Enforcers what their plan is.
+						问问执法者他们的计划。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -682,12 +682,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Succubus]]></responseTitle>
+				<responseTitle><![CDATA[魅魔]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_discuss_succubus))
-						You've already asked the Enforcers about Angelixx, the succubus who's their target.
+						你已经问过执法者他们的目标——魅魔安吉莉克丝了。
 					#ELSE
-						Ask the Enforcers if they can tell you any more about Angelixx, the succubus who's their target.
+						问问执法者关于他们的目标——魅魔安吉莉克丝。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -706,8 +706,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sword_mission_discuss_refugees) && flags.hasFlag(FLAG_innoxia_sword_mission_discuss_plan) && flags.hasFlag(FLAG_innoxia_sword_mission_discuss_succubus)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Agree to help]]></responseTitle>
-				<responseTooltip><![CDATA[As you need their help for the defence of Elis, you don't seem to have much choice but to agree to help the Enforcers on their op...]]></responseTooltip>
+				<responseTitle><![CDATA[同意帮忙]]></responseTitle>
+				<responseTooltip><![CDATA[你需要他们的帮助来保卫伊利斯，你别无选择，只能同意帮助执法者执行任务……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_sword_mission_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.setQuestProgress(QUEST_LINE_MAIN, QUEST_MAIN_3_G_SWORD_SCAPEGOAT))]
@@ -734,8 +734,8 @@
 				<availabilityConditional><![CDATA[[#game.getDayOfWeek()!=DOW_TUESDAY || !game.isHourBetween(17, 24)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the Enforcers that you'll be back when you're ready to go with them on their operation.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告诉执法者，你准备好就回来。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_enforcer_station_corridor</nextDialogue>
 				<effects><![CDATA[
 					[#pc.setNearestLocation(WORLD_TYPE_innoxia_fields_elis_enforcer_station, PLACE_TYPE_innoxia_fields_elis_enforcer_station_corridor)]
@@ -746,8 +746,8 @@
 				<availabilityConditional><![CDATA[[#game.getDayOfWeek()==DOW_TUESDAY && game.isHourBetween(17, 24)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Operation]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the Enforcers that you're ready to go with them on their operation.]]></responseTooltip>
+				<responseTitle><![CDATA[行动]]></responseTitle>
+				<responseTooltip><![CDATA[告诉执法者，你准备好和他们一起行动了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_enforcer_station_sword_mission_start]]></nextDialogue>
 			</response>
 		</responses>
@@ -766,8 +766,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Tag along]]></responseTitle>
-				<responseTooltip><![CDATA[Go along with the SWORD Enforcers as they set off to the abandoned bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[与SWORD执法者一起前往废弃的面包店。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_mission_start</nextDialogue>
 				<effects><![CDATA[
 					[#game.getWorlds().get(WORLD_TYPE_innoxia_fields_elis_town).getCell(9, 12).getPlace().setPlaceType(PLACE_TYPE_innoxia_fields_elis_town_abandoned_bakery)]

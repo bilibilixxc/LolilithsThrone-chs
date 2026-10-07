@@ -30,21 +30,21 @@ public class SelfTailAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Tail-peg (self)";
+			return "尾巴肛交(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Start fucking [npc.her] own [npc.ass] with [npc.her] [npc.tail+].";
+			return "开始用[npc.tail+]操自己的[npc.ass]。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Snaking [npc.her] [npc.tail] up to [npc.her] [npc.ass], [npc.name] [npc.verb(tease)] the tip over [npc.her] [npc.asshole+], [npc.moaning] in delight before thrusting it deep inside.",
-					"[npc.Name] [npc.verb(snake)] [npc.her] [npc.tail] up to [npc.her] [npc.ass], [npc.moaning] in delight as [npc.she] [npc.verb(force)] it deep into [npc.her] inviting [npc.asshole].",
-					"Sliding the tip of [npc.her] [npc.tail+] up to [npc.her] neglected [npc.asshole], [npc.name] suddenly [npc.verb(thrust)] it deep inside, letting out [npc.a_moan+] as [npc.she] [npc.verb(start)] tail-fucking [npc.her] own [npc.ass].",
-					"[npc.Name] eagerly [npc.verb(thrust)] [npc.her] [npc.tail+] deep into [npc.her] needy [npc.asshole], letting out a series of [npc.moans+] as [npc.she] [npc.verb(start)] tail-fucking [npc.her] own [npc.ass].");
+					"[npc.Name]将[npc.tail]伸向[npc.ass]，尾巴尖挑逗着[npc.asshole+]，愉悦地[npc.moaning]着，贯入自己的身体。",
+					"[npc.Name]将[npc.tail]伸向[npc.ass]，愉悦地[npc.moaning]，强行突入[npc.her]那诱人的[npc.asshole]。",
+					"[npc.her][npc.tail+]尖尖蹭着被忽视的[npc.asshole]，突然深贯而入，[npc.name]溢出[npc.a_moan+]，开始自我尾交。",
+					"[npc.Name]急切地将[npc.tail+]深深塞进自己欲求不满的[npc.asshole]，迭声[npc.moans+]，开始自我尾交。");
 		}
 	};
 	
@@ -59,24 +59,24 @@ public class SelfTailAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Gentle tail-pegging (self)";
+			return "尾巴肛交(温柔)(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently fuck [npc.her] own [npc.ass] with [npc.her] [npc.tail+].";
+			return "温柔地用[npc.tail+]操自己的[npc.ass]。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] slowly [npc.verb(push)] [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole+].",
-					"Gently pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] slowly [npc.verb(fuck)] [npc.her] own [npc.ass].",
-					"Slowly driving [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out a little whimper as [npc.she] "
+					"[npc.namePos]把[npc.tail]深入自己[npc.asshole+]，[npc.lips+]间发出[npc.moan]。",
+					"[npc.name]用[npc.tail]在自己[npc.asshole+]里温柔地抽插，开始发出一连串愉悦的[npc.moans]，慢慢操起自己的[npc.ass]。",
+					"[npc.Name]缓缓地将[npc.tail]插入自己[npc.asshole]的深处，发出了轻微的呜咽声，[npc.she]"
 							+(Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-							? "[npc.verb(use)] it to gently start massaging [npc.her] prostate."
-							: "gently [npc.verb(fuck)] [npc.her] own [npc.ass+]."),
-					"Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] gently pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+].");
+							? "温柔地用它按摩着自己的前列腺。"
+							: "温柔地操干自己[npc.ass+]。"),
+					"[npc.name]专心取悦起[npc.her][npc.ass+]，温柔地用[npc.tail]在[npc.her][npc.asshole+]中抽插。");
 		}
 		
 	};
@@ -92,24 +92,24 @@ public class SelfTailAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Tail-pegging (self)";
+			return "尾巴肛交(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Concentrate on fucking [npc.her] own [npc.ass] with [npc.her] [npc.tail+].";
+			return "专心用[npc.tail+]操自己的[npc.ass]。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] greedily [npc.verb(push)] [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole+].",
-					"Pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(fuck)] [npc.her] own [npc.ass].",
-					"Driving [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] "
+					"[npc.namePos]把[npc.tail]贪婪地深入自己[npc.asshole+]，[npc.lips+]间发出[npc.moan]。",
+					"[npc.name]用[npc.tail]在自己[npc.asshole+]里抽插着，开始发出一连串愉悦的[npc.moans]，慢慢操起自己的[npc.ass]。",
+					"[npc.Name]将[npc.tail]深深插入自己的[npc.asshole]，不禁发出一阵[npc.a_moan]，[npc.she]"
 							+(Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-							? "[npc.verb(use)] it to start massaging [npc.her] prostate."
-							: "steadily [npc.verb(fuck)] [npc.her] own [npc.ass+]."),
-					"Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+].");
+							? "用它按摩着自己的前列腺。"
+							: "不断地操干自己[npc.ass+]。"),
+					"[npc.Name]专心取悦起[npc.her][npc.ass+]，用[npc.tail]在[npc.her][npc.asshole+]中抽插。");
 		}
 	};
 	
@@ -124,24 +124,24 @@ public class SelfTailAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Rough tail-pegging (self)";
+			return "尾巴肛交(粗暴)(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Roughly fuck [npc.her] own [npc.ass] with [npc.her] [npc.tail+].";
+			return "粗暴地用[npc.tail+]操自己的[npc.ass]。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] roughly [npc.verb(slam)] [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole+], before starting to roughly fuck [npc.her] own [npc.ass].",
-					"Roughly pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] ruthlessly [npc.verb(fuck)] [npc.her] own [npc.ass].",
-					"Forcefully driving [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] "
+					"[npc.namePos]把[npc.tail]深入那[npc.asshole+]，[npc.lips+]间发出[npc.moan]，然后粗暴地操起自己的[npc.ass]。",
+					"[npc.name]用[npc.tail]在自己[npc.asshole+]里粗暴地抽插着，开始发出一连串愉悦的[npc.moans]，无情地操起自己的[npc.ass]。",
+					"[npc.Name]激烈地将[npc.tail]深深插入自己的[npc.asshole]，不禁发出一阵[npc.a_moan]，[npc.she]"
 							+(Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-							? "[npc.verb(start)] roughly grinding it up against [npc.her] prostate."
-							: "roughly [npc.verb(fuck)] [npc.her] own [npc.ass+]."),
-					"Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] roughly slamming [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+].");
+							? "开始粗暴地用它按摩自己的前列腺。"
+							: "粗暴地操干自己[npc.ass+]。"),
+					"[npc.Name]专心取悦起[npc.her][npc.ass+]，粗暴地用[npc.tail]在[npc.her][npc.asshole+]中抽插。");
 		}
 
 	};
@@ -157,24 +157,24 @@ public class SelfTailAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Tail-pegging (self)";
+			return "尾巴肛交(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Concentrate on fucking [npc.her] own [npc.ass] with [npc.her] [npc.tail+].";
+			return "专心用[npc.tail+]操自己的[npc.ass]。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] greedily [npc.verb(push)] [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole+].",
-					"Pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(fuck)] [npc.her] own [npc.ass].",
-					"Driving [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] "
+					"[npc.namePos]把[npc.tail]贪婪地深入自己[npc.asshole+]，[npc.lips+]间发出[npc.moan]。",
+					"[npc.name]用[npc.tail]在自己[npc.asshole+]里抽插着，开始发出一连串愉悦的[npc.moans]，慢慢操起自己的[npc.ass]。",
+					"[npc.Name]将[npc.tail]深深插入自己的[npc.asshole]，不禁发出一阵[npc.a_moan]，[npc.she]"
 							+(Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-							? "[npc.verb(use)] it to start massaging [npc.her] prostate."
-							: "steadily [npc.verb(fuck)] [npc.her] own [npc.ass+]."),
-					"Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+].");
+							? "用它按摩着自己的前列腺。"
+							: "不断地操干自己[npc.ass+]。"),
+					"[npc.Name]专心取悦起[npc.her][npc.ass+]，用[npc.tail]在[npc.her][npc.asshole+]中抽插。");
 		}
 	};
 	
@@ -189,24 +189,24 @@ public class SelfTailAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Eager tail-pegging (self)";
+			return "尾巴肛交(渴求)(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Eagerly start fucking [npc.her] own [npc.ass] with [npc.her] [npc.tail+].";
+			return "开始急切地用[npc.tail+]操自己的[npc.ass]。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] eagerly [npc.verb(slam)] [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole+], before starting to desperately fuck [npc.her] own [npc.ass].",
-					"Enthusiastically pumping [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] frantically [npc.verb(fuck)] [npc.her] own [npc.ass].",
-					"Desperately driving [npc.her] [npc.tail] deep inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] "
+					"[npc.namePos]把[npc.tail]深入那[npc.asshole+]，[npc.lips+]间发出[npc.moan]，然后狂乱地操起自己的[npc.ass]。",
+					"[npc.name]用[npc.tail]在自己[npc.asshole+]里热情地抽插着，开始发出一连串愉悦的[npc.moans]，疯狂地操起自己的[npc.ass]。",
+					"[npc.Name]饥渴地将[npc.tail]深深插入自己的[npc.asshole]，不禁发出一阵[npc.a_moan]，[npc.she]"
 							+(Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-							? "[npc.verb(start)] eagerly grinding it up against [npc.her] prostate."
-							: "eagerly [npc.verb(fuck)] [npc.her] own [npc.ass+]."),
-					"Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] eagerly [npc.verb(start)] slamming [npc.her] [npc.tail] in and out of [npc.her] [npc.asshole+].");
+							? "开始急切地用它按摩自己的前列腺。"
+							: "急切地操干自己[npc.ass+]。"),
+					"[npc.Name]专心取悦起[npc.her][npc.ass+]，急切地用[npc.tail]在[npc.her][npc.asshole+]中抽插。");
 		}
 	};
 	
@@ -220,17 +220,17 @@ public class SelfTailAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Stop tail-peg (self)";
+			return "停止尾巴肛交(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stop fucking [npc.her]self with [npc.her] [npc.tail].";
+			return "停止用[npc.her]的[npc.tail]操自己。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "With [npc.a_groan+], [npc.name] [npc.verb(slide)] [npc.her] [npc.tail+] out of [npc.her] [npc.asshole+].";
+			return "[npc.name][npc.a_groan+]着，将[npc.tail+]顶进自己[npc.asshole+]。";
 		}
 	};
 }

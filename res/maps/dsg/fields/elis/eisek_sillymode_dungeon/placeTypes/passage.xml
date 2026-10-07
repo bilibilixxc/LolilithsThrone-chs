@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>	
-	<name><![CDATA[Passage]]></name>
-	<tooltipDescription><![CDATA[Insurmountable cardboard walls line this passage.]]></tooltipDescription>	
-	<virginityLossDescription><![CDATA[in a passage in a strange basement]]></virginityLossDescription>	
+	<name><![CDATA[通道]]></name>
+	<tooltipDescription><![CDATA[这条通道的两侧是无法逾越的硬纸板墙。]]></tooltipDescription>	
+	<virginityLossDescription><![CDATA[在一个奇怪地下室的通道里]]></virginityLossDescription>	
 	<sexBlockedFromCharacterPresent/>
 	<svgName/>
 	<colour>BASE_WHITE</colour>

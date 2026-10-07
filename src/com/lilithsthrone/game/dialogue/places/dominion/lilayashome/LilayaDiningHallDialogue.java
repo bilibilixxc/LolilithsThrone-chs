@@ -55,7 +55,7 @@ public class LilayaDiningHallDialogue {
 			}
 			@Override
 			public String getDeskName() {
-				return "table";
+				return "餐桌";
 			}
 		};
 	}
@@ -110,40 +110,40 @@ public class LilayaDiningHallDialogue {
 				
 			} else if (index == 1) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Manage room", "Enter the management screen for this particular room.", OccupantManagementDialogue.ROOM_UPGRADES) {
+					return new Response("管理房间", "进入该房间的管理界面。", OccupantManagementDialogue.ROOM_UPGRADES) {
 						@Override
 						public void effects() {
 							OccupantManagementDialogue.cellToInspect = Main.game.getPlayerCell();
 						}
 					};
 				} else {
-					return new Response("Manage room", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+					return new Response("管理房间", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 				}
 				
 			} else if (index == 2) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Manage people", "Enter the management screen for your slaves and friendly occupants.", OccupantManagementDialogue.getSlaveryRoomListDialogue(null, null)) {
+					return new Response("人员管理", "进入奴隶和友人住客的管理界面。", OccupantManagementDialogue.getSlaveryRoomListDialogue(null, null)) {
 						@Override
 						public void effects() {
 							CompanionManagement.initManagement(Main.game.getDefaultDialogue(), 0, null);
 						}
 					};
 				} else {
-					return new Response("Manage people", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+					return new Response("管理人员", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 				}
 				
 			} else if (index == 3) {
 				if(Main.game.getOccupancyUtil().getCharactersCurrentlyAtJob(SlaveJob.KITCHEN).isEmpty()) {
-					return new Response("Have a meal", "You need at least one slave working as a cook to be able to order a meal...",  null);
+					return new Response("用餐", "你至少需要有一名奴隶担任厨师才能点餐……",  null);
 					
 				} else if(LilayaHomeGeneric.getSlavesAndOccupantsPresent().isEmpty()) {
-					return new Response("Have a meal", "You need at least one slave working in this dining hall as a waiter to be able to order a meal...",  null);
+					return new Response("用餐", "你至少需要有一名奴隶担任餐厅服务员才能点餐……",  null);
 					
 				} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Have a meal", "You need to be able to access your mouth to be able to order a meal...",  null);
+					return new Response("用餐", "你需要能够使用嘴巴才能点餐……",  null);
 					
 				} else {
-					return new Response("Order a meal", "Sit down at the table and order a meal.", ROOM_DINING_HALL_ORDER_MEAL);
+					return new Response("点餐", "坐在餐桌旁点餐。", ROOM_DINING_HALL_ORDER_MEAL);
 				}
 				
 			}
@@ -156,10 +156,10 @@ public class LilayaDiningHallDialogue {
 					
 				} else {
 					return new Response(UtilText.parse(character, "[npc.Name]"),
-							UtilText.parse(character, "Although this is [npc.namePos] room, [npc.sheIs] "
+							UtilText.parse(character, "虽然这里是[npc.namePos]的房间，但[npc.sheIs]"
 									+(character.getLocationPlace().getPlaceUpgrades().contains(PlaceUpgrade.LILAYA_SLAVE_LOUNGE)
-											?"relaxing in a slave lounge at the moment."
-											:"out at work at the moment.")), null);
+											?"现在正在奴隶休息室休息。"
+											:"现在正在外面工作。")), null);
 				}
 			}
 			
@@ -189,7 +189,7 @@ public class LilayaDiningHallDialogue {
 			
 			if (index == 0) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Nevermind", "Change your mind and decide against having a meal after all.", ROOM_DINING_HALL);
+					return new Response("不介意", "改变主意，决定最终不吃饭。", ROOM_DINING_HALL);
 				}
 				
 			}
@@ -199,7 +199,7 @@ public class LilayaDiningHallDialogue {
 				if(charactersPresent.contains(character) || (character.getHomeCell().equals(Main.game.getPlayerCell()) && Main.game.getPlayer().getCompanions().contains(character))) {
 					return new Response(
 							UtilText.parse(character, "[npc.Name]"),
-							UtilText.parse(character, "Call over [npc.name] and tell [npc.herHim] that [npc.she]'ll be your "+(character.isFeminine()?"waitress":"waiter")+", before ordering a meal."),
+							UtilText.parse(character, "叫来[npc.name]，让[npc.herHim]来为你服务，然后点餐。"),
 							ROOM_DINING_HALL_RECEIVE_MEAL) {
 						@Override
 						public Colour getHighlightColour() {
@@ -237,18 +237,18 @@ public class LilayaDiningHallDialogue {
 			
 			if (index == 1) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Finished", "Having had your meal.", ROOM_DINING_HALL);
+					return new Response("完成", "吃完你的饭。", ROOM_DINING_HALL);
 				}
 				
 			} else if(index==2) {
 				if(!waiter.hasPenis()) {
-					return new Response("Dessert (blowjob)", UtilText.parse(waiter, "As [npc.name] doesn't have a penis, you can't enjoy it as a dessert..."), null);
+					return new Response("甜点(口交)", UtilText.parse(waiter, "因为[npc.name]没有鸡巴，你不能享用他的“甜点”……"), null);
 					
 				} else if(!waiter.isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-					return new Response("Dessert (blowjob)", UtilText.parse(waiter, "[npc.Name] isn't able to access [npc.her] cock, so you can't enjoy it as a dessert..."), null);
+					return new Response("甜点(口交)", UtilText.parse(waiter, "[npc.Name]的肉棒受到限制，所以你不能享用这道甜点……"), null);
 					
 				} else {
-					return new ResponseSex("Dessert (blowjob)", UtilText.parse(waiter, "Tell [npc.name] to go to the kitchen and have [npc.her] cock turned into a dessert, before returning here so that you can suck it."), 
+					return new ResponseSex("甜点(口交)", UtilText.parse(waiter, "让[npc.name]去厨房把自己的肉棒变成一道甜点，再回来让你舔。"), 
 							true, false,
 							getDessertSexManager(
 									waiter.isTaur()
@@ -273,13 +273,13 @@ public class LilayaDiningHallDialogue {
 				
 			} else if(index==3) {
 				if(!waiter.hasVagina()) {
-					return new Response("Dessert (cunnilingus)", UtilText.parse(waiter, "As [npc.name] doesn't have a pussy, you can't enjoy it as a dessert..."), null);
+					return new Response("甜点(舔阴)", UtilText.parse(waiter, "[npc.name]没有阴户，你无法享用这道甜点……"), null);
 					
 				} else if(!waiter.isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					return new Response("Dessert (cunnilingus)", UtilText.parse(waiter, "[npc.Name] isn't able to access [npc.her] pussy, so you can't enjoy it as a dessert..."), null);
+					return new Response("甜点(舔阴)", UtilText.parse(waiter, "[npc.Name]无法使用[npc.her]的阴户，你无法享用这道甜点……"), null);
 					
 				} else {
-					return new ResponseSex("Dessert (cunnilingus)", UtilText.parse(waiter, "Tell [npc.name] to go to the kitchen and have [npc.her] pussy turned into a dessert, before returning here so that you can eat it."), 
+					return new ResponseSex("甜点(舔阴)", UtilText.parse(waiter, "让[npc.name]去厨房把自己的小穴变成一道甜点，再回来让你舔。"), 
 							true, false,
 							getDessertSexManager(
 									waiter.isTaur()
@@ -304,10 +304,10 @@ public class LilayaDiningHallDialogue {
 				
 			} else if(index==4 && Main.game.isAnalContentEnabled()) {
 				if(!waiter.isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-					return new Response("Dessert (anilingus)", UtilText.parse(waiter, "[npc.Name] isn't able to access [npc.her] asshole, so you can't enjoy it as a dessert..."), null);
+					return new Response("甜点(舔肛)", UtilText.parse(waiter, "[npc.Name]无法使用[npc.her]的肛门，你无法享用这道甜点……"), null);
 					
 				} else {
-					return new ResponseSex("Dessert (anilingus)", UtilText.parse(waiter, "Tell [npc.name] to go to the kitchen and have [npc.her] ass turned into a dessert, before returning here so that you can eat it."), 
+					return new ResponseSex("甜点(舔肛)", UtilText.parse(waiter, "让[npc.name]去厨房把自己的菊穴变成一道甜点，再回来让你舔。"), 
 							true, false,
 							getDessertSexManager(
 									waiter.isTaur()
@@ -335,10 +335,10 @@ public class LilayaDiningHallDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("返回", "", true) {
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你已经满足了，可以离开让[npc.name]休息一下。";
 		}
 		@Override
 		public String getContent() {
@@ -347,7 +347,7 @@ public class LilayaDiningHallDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Decide what to do next.", ROOM_DINING_HALL);
+				return new Response("继续", "决定接下来做什么。", ROOM_DINING_HALL);
 				
 			} else {
 				return null;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 
 	<!-- TODO this is currently unused -->
@@ -27,16 +27,16 @@
 	<areasCummedIn/>
 	<areasCummedOn/>
 	<title><![CDATA[
-		Offer pussy
+		献上小穴
 	]]></title>
 	<tooltip><![CDATA[
-		Offer Jules your pussy for him to cum inside.
+		向朱勒斯献上你的小穴，让他射在里面。
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<descriptionConditional><![CDATA[true]]></descriptionConditional>
 			<text><![CDATA[
-				You offer your pussy.
+				你献上你的小穴。
 			]]></text>
 		</description>
 	</descriptions>

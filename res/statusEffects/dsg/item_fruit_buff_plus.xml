@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	
 	<renderingPriority>70</renderingPriority>
@@ -10,9 +10,9 @@
 	<combatEffect>false</combatEffect>
 	<sexEffect>false</sexEffect>
 	<tags/>
-	<name><![CDATA[Crag's Greater Bounty]]></name>
+	<name><![CDATA[峭壁高级恩赐]]></name>
 	<description><![CDATA[
-		An apple a day keeps the healer away!
+		一天一苹果，奶妈远离我！
 	]]></description>
 	<imageName>fruit_buff_apple.svg</imageName>
 	<colourPrimary>GENERIC_EXCELLENT</colourPrimary> 

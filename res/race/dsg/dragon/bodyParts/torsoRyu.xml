@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <torso>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_dragon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[ryu]]></transformationName>
+	<transformationName><![CDATA[龍]]></transformationName>
 	
 	<!-- The id of the material covering this torso.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -35,19 +35,19 @@
 	<!-- The description which is shown when a character transforms to obtain this torso type.
 	This description immediately follows a brief description of the torso type beginning to transform. -->
 	<transformationDescription><![CDATA[
-		After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with dragon scales.
+		片刻之后，转化结束，[npc.she]发出一声深深的叹息，瘙痒终于停止了，[npc.her]的躯干上布满了龙鳞。
 		#IF(npc.getHairRawLengthValue() > 0)
-		 A shiver runs down [npc.her] spine as a new [npc.hairColour] mane sprouts from [npc.her] back.
+		当[npc.her]的背上长出新的[npc.hairColour]鬃毛时，[npc.her]的脊背一阵颤抖。
 		#ENDIF
-		 [npc.Her] new scales are much finer around [npc.her] joints and forms a hide that is quite tough.
-		<br/>[npc.Name] now [npc.has] [style.boldDragon(dragon-like)], [npc.skinFullDescription].
+		新鳞片在[npc.her]的关节周围更加细密，并形成了相当坚硬的皮层。
+		<br/>[npc.Name]现在拥有[style.boldDragon(龙一样)][npc.skinFullDescription]。
 	]]></transformationDescription>
 	
 	<!-- How this torso is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].
+		[npc.Her]的躯干具有[npc.a_femininity(true)]的外貌，并且[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。
 		#IF(npc.getHairRawLengthValue() > 0) 
-		 [npc.HairColour(true)] hair forms a continuous mane down the length of [npc.her] back.
+		[npc.her]背部的[npc.HairColour(true)]头发形成了连绵不断的鬃毛。
 		#ENDIF
 	]]></bodyDescription>
 	

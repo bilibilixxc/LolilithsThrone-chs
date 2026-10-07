@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Vulpine's Vineyard]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Vulpine's Vineyards]]></namePlural>
-		<description><![CDATA[A sturdy glass bottle filled with red wine. A bunch of grapes is painted onto the front of the label, while on the bottom of the bottle itself, the image of a snickering fox-morph is etched into the glass.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[狐狸葡萄园酒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[狐狸葡萄园酒]]></namePlural>
+		<description><![CDATA[一瓶装满红酒的坚固玻璃瓶。标签正面画着一串葡萄，而在瓶底上，有一只咯咯笑的狐族的变种的形象被刻在玻璃上。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_CRITICAL_DAMAGE.getFormattedValue(10)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 10% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_CRITICAL_DAMAGE.getFormattedValue(10)]到“药剂效果” ]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]10%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.NamePos] senses are heightened...
+				[npc.NamePos]的感官变得更敏锐……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_CRITICAL_DAMAGE, 10)]
 			[#npc.incrementAlcoholLevel(0.1)]
@@ -55,10 +55,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Opening the bottle of Vulpine's Vineyard, [npc.name] [npc.verb(tilt)] [npc.her] head back and [npc.verb(bring)] it up to [npc.her] waiting [npc.lips]. The heady fragrance of rich red wine wafts from the neck of the newly opened bottle, which is soon joined by a rich, sweet taste that lingers on [npc.namePos] [npc.tongue] well after [npc.sheHas] had [npc.her] fill.
+		打开狐狸葡萄园酒的瓶子，[npc.name]仰起[npc.her]的头仰起，然后将它送到[npc.her]的等待[npc.lips]边。新开瓶子的瓶颈散发出丰富红酒的浓烈芳香，很快又伴随着一股浓郁的甜味，即使在[npc.namePos]喝完后仍然挥之不去，留在[npc.namePos]的[npc.tongue]上。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Opening the bottle of Vulpine's Vineyard, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips]. The heady fragrance of rich red wine wafts from the neck of the newly opened bottle, which is soon joined by a rich, sweet taste that lingers on [npc2.namePos] [npc2.tongue] well after [npc2.sheHas] had [npc2.her] fill.
+		"打开狐狸葡萄园酒的瓶子，[npc.name]将它送到[npc2.namePos]等待[npc2.lips]边。新开瓶子的瓶颈散发出丰富红酒的浓烈芳香，很快又伴随着一股浓郁的甜味，即使在[npc2.namePos]喝完后仍然挥之不去，留在[npc2.namePos]的[npc2.tongue]上。"
 		]]></otherUse>
 	</useDescriptions>
 

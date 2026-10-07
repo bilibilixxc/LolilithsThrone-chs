@@ -1,1106 +1,1105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<htmlContent tag="ENTRANCE_WITH_ELIZABETH"><![CDATA[
 	<p>
-		[pc.speech(Yes, I'd like to see Lyssieth now,)] you say to Elizabeth.
+		[pc.speech(是的，我现在想见莉西丝，)]你对伊丽莎白说。
 	</p>
 	<p>
-		[elizabeth.speech(Very well, if you'll please follow me,)] she replies, opening the small wicket set into the fortress's huge wooden gates, before stepping through the doorway into Lyssieth's palace. Doing as you're instructed, you follow in Elizabeth's footsteps, and just a moment later, find yourself standing inside a staggeringly-opulent entrance hall.
+		[elizabeth.speech(好的，请跟我来，)]她回答道，打开了通往要塞巨大木门的小门，然后穿过门口进入了莉西丝的宫殿。按照指示，你跟随伊丽莎白的脚步，不一会儿，发现自己站在一个豪华得令人难以置信的入口大厅里。
 	</p>
 	<p>
-		Gazing at the huge, high-vaulted chamber in wonder, you take note of the fact that the interior of this palace is in complete contrast to the oppressive, inhospitable appearance of the cavern's dark stone walls. The floor beneath your feet is a perfectly polished expanse of clean white marble, and is adorned with a luxuriant red runner carpet which stretches off down the three corridors that are linked to each side of the hall. The walls are covered in white, wooden panelling; their decorative, intricately-carved features are painted in bright gold. Gigantic portraits of regal-looking demons and humans hang on the walls, and up above, the high ceiling is lavishly decorated in the same white-and-gold style as the rest of your surroundings.
+		惊奇地凝视着这个巨大的、高高的拱形房间，你会注意到这样一个事实：这座宫殿的内部与这个洞穴黑色石墙令人压抑、不适宜居住的外观形成了鲜明的对比。你脚下的地面是一片光洁的白色大理石地面，地面上铺着华丽的红色地毯，地毯沿着三条走廊一直延伸到大厅的两边。墙壁上覆盖着白色的木质镶板，其装饰性的、精雕细琢的特征被涂上了明亮的金色。巨大的魔鬼和人类肖像挂在墙上，上面，高高的天花板和你周围的其他地方一样，都被奢华地装饰成同样的白色和金色的风格。
 	</p>
 	<p>
-		As Elizabeth beckons you forwards, you take note of the fact that there are a couple of half-demon and human maids standing to attention on opposite sides of the hall. As you start to follow Elizabeth further into the palace, you wonder how many staff are needed to maintain and clean all of the marble statues, ornate seats, and glass-fronted display cabinets that line the walls of the palace's corridors.
+		当伊丽莎白向你招手的时候，你注意到：在大厅的两侧，站着几个半恶魔的女仆，她们正在注视着你。当你开始跟随伊丽莎白进入宫殿时，你不知道需要多少工作人员来维护和清洁宫殿走廊墙壁上的所有大理石雕像、华丽的座椅和玻璃橱柜。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FORWARDS_1"><![CDATA[
 	<p>
-		Stepping forwards to walk in parallel with Elizabeth, you gaze in wonder at your extravagant surroundings as the two of you proceed down the corridor that leads directly forwards from the palace's front gate.
+		走上前去与伊丽莎白并行，你惊奇地注视着周遭奢华的环境，你们两个沿着从宫殿前门直接通往前方的走廊走下去。
 	</p>
 	<p>
-		[elizabeth.speech(It's not much further to go,)] Elizabeth says, [elizabeth.speech(just to the end of this corridor.)]
+		[elizabeth.speech(不远了，)]伊丽莎白说，[elizabeth.speech(就在这条走廊的尽头。)]
 	</p>
 	<p>
-		Letting out a quick response in acknowledgement of the information given to you, you continue looking around at the ornate statues, paintings, and display cabinets all around you. There seem to be quite a large number of the latter of these, and, while a lot of them are filled with china and other miscellaneous decorative articles, there are many which are filled with ancient-looking antiques.
+		你很快回答了她，然后继续环顾四周华丽的雕像、绘画和陈列柜。后者的数量似乎相当多，虽然其中大部分是瓷器和其他杂项装饰品，但也有许多充满了古色古香的古董。
 	</p>
 	<p>
-		[pc.speech(Hey, I recognise those,)] you mutter, breaking off from Elizabeth to step over towards one of the display cabinets. You're certain that the collection of ancient, broken pottery is the exact same as a display you remember seeing in Lily's museum, and you turn back towards your half-demon guide as you ask, [pc.speech(Where did Lyssieth get all these relics from?)]
+		[pc.speech(嘿，我认得这些，)]你喃喃自语，从伊丽莎白身边走开，走向一个展示柜。你肯定这些古老的破碎的陶器收藏品和你记忆里在莉莉的博物馆里看到的展品是一模一样的，然后你转向你的半恶魔向导，问道，[pc.speech(莉西丝从哪里得到这些文物的？)]
 	</p>
 	<p>
-		[elizabeth.speech(Please, [pc.name], I'm a member of the royal guard, not a tour guide. I have no knowledge of mundane business such as that. Now, please, if we can just continue,)] Elizabeth replies, trying to suppress the annoyed tone in her voice.
+		[elizabeth.speech(拜托，[pc.name]，我是皇家护卫队的成员，不是导游。我对诸如此类的琐事一窍不通。现在，拜托，如果我们可以继续的话，)]伊丽莎白回答道，试图压制住她声音中恼怒的语气。
 	</p>
 	<p>
-		Not satisfied by her answer, you turn to one of the human maids standing nearby, and repeat your question. Smiling, she performs a respectful curtsy, and says, [genericFemale.speech([pc.Sir], I believe that the articles to which you're referring are from Her Highness's personal collection of antiques. I apologise for knowing nothing more than that.)]
+		你对她的回答并不满意，转向站在附近的一个人类女仆，重复了你的问题。她微笑着行了一个恭敬的屈膝礼，然后说，[genericFemale.speech([pc.Sir]，我相信您所指的物品来自殿下的私人古董收藏。很抱歉我只知道这些。)]
 	</p>
 	<p>
-		[elizabeth.speech(Now, if we could please continue?)] Elizabeth asks.
+		[elizabeth.speech(现在，我们能继续吗？)]伊丽莎白问。
 	</p>
 	<p>
-		You do as instructed, but no sooner have you moved on past the next cabinet, do you suddenly spot something even more alarming. Right there, being displayed as though they're precious artefacts, are numerous bottles of fizzy drinks, bars of chocolate, and other assorted snacks. There's absolutely no doubt that these have all come from your old world, and you find yourself shaking your head in disbelief at the fact that Lyssieth is treating common junk food as though they're precious treasures.
+		你照着做了，但你刚走过下一个柜子，你突然发现了更令人担忧的东西。就在那里，陈列着无数瓶汽水、巧克力和其他各式各样的零食，仿佛它们是什么珍贵的工艺品。毫无疑问，这些都来自你的旧世界，你摇着头，难以置信莉西丝竟然把普通的垃圾食品当作珍宝来对待。
 	</p>
 	<p>
-		You know that neither Elizabeth nor the maids will know anything about them, so you simply continue following the captain of the royal guard as she carries on leading you forwards.
+		你知道伊丽莎白和女仆们都不会知道有关它们的事，所以你继续跟着皇家卫队的队长，她继续带领着你前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FORWARDS_2"><![CDATA[
 	<p>
-		[elizabeth.speech(I can tell that you're impressed by Her Highness's collections. Perhaps you can ask her more about them in a moment,)] Elizabeth says, turning to face you as the two of you reach the end of the corridor. Before you are a pair of large, ornately-carved wooden doors, and you assume that Lyssieth is within the room beyond.
+		[elizabeth.speech(我看得出来，殿下的收藏给你留下了深刻印象。也许你可以稍后向她详细了解一下。)]伊丽莎白道，当你们走到走廊尽头时，她转过身来面向你。你面前是两扇雕刻华丽的大木门，你猜莉西丝应该就在门外的房间里。
 	</p>
 	<p>
-		[pc.speech(Yeah, I suppose it would be interesting to find out which vending machine she must have looted,)] you reply.
+		[pc.speech(是的，我想找出她抢劫的是哪台自动售货机。)]你回答。
 	</p>
 	<p>
-		[elizabeth.speech(I hope you're not insinuating that Her Highness has stolen anything,)] Elizabeth says in an icy tone. [elizabeth.speech(Unfortunately, I need to return to my post as soon as I show you through these doors, so I can't stop you from saying something you'll regret. Just remember who it is you're being given the honour of meeting, and treat Her Highness with the utmost respect. Understand?)]
+		[elizabeth.speech(我希望你不是在暗示殿下偷了什么东西，)]伊丽莎白冷漠地回应，[elizabeth.speech(不幸的是，我一带你进门就得返回岗位，所以我不能阻止你说一些你会后悔的话。你只要记住，你有幸见到的人是谁，并以最尊敬的态度对待殿下，明白了吗？)]
 	</p>
 	<p>
-		[pc.speech(I understand,)] you say.
+		[pc.speech(我明白了。)]你回答。
 	</p>
 	<p>
-		[elizabeth.speech(Good. Now, there's something you need to know,)] Elizabeth continues, blushing a little as she awkwardly tries to explain, [elizabeth.speech(Her Highness, well, she likes to... That is, she respects humans a lot, and, erm... Well, she likes to take on the form of a human. You are absolutely not to judge her on that, nor are you to judge the manner in which she derives entertainment!)]
+		[elizabeth.speech(很好。现在，有件事你必须知道，)]伊丽莎白满脸通红，尴尬地继续解释着，[elizabeth.speech(殿下，唔，她喜欢……也就是说，她非常尊重人类，而且，嗯……呃，她喜欢化身为人类，你绝对不能因此对她评头论足，也不能对她的娱乐方式指指点点！)]
 	</p>
 	<p>
-		[pc.speech(Ok, I'm not judging,)] you reply, [pc.speech(but what do you mean, 'entertainment'?)]
+		[pc.speech(好吧，我不想显得过于冒犯，)]你回答道，[pc.speech(但你说‘娱乐’是什么意思？)]
 	</p>
 	<p>
-		Elizabeth flinches as you ask this, before replying [elizabeth.speech(Well, Her Highness likes to act out a certain fantasy, in which she's, erm... what did she call it... a 'chief executive officer'?)]
+		当你问出来时，伊丽莎白先是一愣，然后才回答道：[elizabeth.speech(殿下喜欢幻想自己是……她怎么说来着……‘首席执行官’？)]
 	</p>
 	<p>
-		[pc.speech(Wait, what? You mean she's role-playing as a businesswoman?)]
+		[pc.speech(等等，什么？你是说她在扮演什么CEO？)]
 	</p>
 	<p>
-		[elizabeth.speech(Look, I don't question it, alright? Now, do you want to meet with her or not?!)] Elizabeth quickly blurts out, clearly flustered by having to explain Lyssieth's eccentricities to you.
+		[elizabeth.speech(你看，我从不去质疑它，明白么？所以你到底想不想见她？)]伊丽莎白如蹦豆子一般说了一大堆，显然这是因为要向你解释莉西丝的古怪而感到慌乱。
 	</p>
 	<p>
-		[pc.speech(Of course,)] you reply, breathing a sigh of relief as Elizabeth quickly steps over towards the doors in front of you. Knocking on them three times in quick succession, she opens them and steps inside, beckoning you to follow her.
+		[pc.speech(当然。)]当伊丽莎白快步走向你面前的门时，你这样回答道，她接连敲了三下门，然后打开门走了进去并示意你跟她一起走。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FORWARDS_3"><![CDATA[
 	<p>
-		Following Elizabeth through the doors, you find yourself entering a room quite unlike the sort that you were expecting. Not only is Lyssieth conspicuously absent, but this area appears to be a sort of waiting room, of the same style as you might expect to see in a very prestigious office building.
+		你跟着伊丽莎白穿过门扉重重，发现自己来到了一个与料想中大相径庭的房间。不仅莉西丝显然不在，而且这儿活脱像某个正儿八经的办公大楼的等待室。
 	</p>
 	<p>
-		Instead of white marble, the flooring is dark, polished wood, and slightly off-centre, a large, cream-coloured rug is surrounded on three sides by low-backed black sofas. The cream-painted walls are home to numerous pieces of colourful, abstract art, and on the opposite side from which you entered, there's a single, mahogany door. In each corner of the room, there's a lush, potted plant, and, finally, a low coffee table sits in front of the sofas, and you see that there are several fashion magazines scattered across its surface.
+		地面没用白色大理石铺设，取而代之的是深色的抛光木板，靠房间中心的地方，是一匹被三只低背黑色接待沙发包围的巨大的乳白色地垫。同样漆成乳白的墙面上摆满了色彩鲜艳的抽象艺术品，你进门的对面有一面单扇红木门。房间的每个角落都摆了一盆长势喜人的盆栽，以及，你留意到那些待客沙发前的一只咖啡几，上面还摆着几本时尚杂志。
 	</p>
 	<p>
-		Most surprisingly of all, on the opposite side of the room to the sofas, there sits a sleek, modern-looking desk. Your eyes open wide as you see that the smartly-dressed secretary sitting behind it is none other than [siren.name] herself. While her witch's outfit has been replaced by a black pencil skirt, light-pink shirt, and black blazer, she's still wearing her white eyepatch. As she catches sight of you, she jumps to her feet
+		最令人惊讶的还数沙发对面摆着的那只流线形的现代范儿书桌。你看着那位坐在桌后穿着考究的秘书瞪大了眼睛，她不是别人，正是[siren.name]。尽管她的魔女装换成了黑色铅笔裙、浅粉衬衫和黑外套，但她仍然戴着那个白眼罩。她一看到你就跳了起来
 		#IF siren.getAffection(pc)<-90
-		#THEN and snarls, [siren.speech(At last, we meet again, my arch-nemesis! I may not have my usual attire or weaponry, but, as you're soon to find out, my power is unmatched! Now I shall obliterate y-)]
+		#THEN并咆哮，[siren.speech(终于又让我逮到你了，我的宿敌！我或许没有往常的装备和武器，但你很快就会发现我的力量依旧无法匹敌！现在我要灭了亻——)]
 		#ELSE
 			#IF siren.getAffection(pc)<0
-			#THEN and laughs, [siren.speech(At last, we meet again, my arch-nemesis! You should be thankful that we are within my mother's domain, for if it were otherwise, I would surely obliterate y-)]
-			#ELSE and laughs, [siren.speech(My arch-nemesis! Y-You may have saved me before, but I am still your sworn foe! Now, behold my power! I shall obliterate y-)]
+			#THEN并大笑，[siren.speech(终于又让我逮到你了，我的宿敌！你真该庆幸正身处我母亲的领地，否则我怎么样也会灭了亻——)]
+			#ELSE并大笑，[siren.speech(我的宿敌！你、你或许曾经救过我，但不影响我们依旧是死对头！现在，尝尝我的厉害吧！我一定要灭了亻——)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		[elizabeth.speech(My Lady, please,)] Elizabeth interrupts, referring to her sister by her royal title in acknowledgement that she is a recognised daughter of Lyssieth, while she is not, [elizabeth.speech([pc.name] is an expected guest of Her Highness, and as such, is under our protection.)]
+		[elizabeth.speech(抱歉，公主大人，)]伊丽莎白插嘴道，特意以皇室头衔称呼她的姐妹，以表示梅拉克西丝是莉西丝承认的女儿，而伊丽莎白并不是，[elizabeth.speech([pc.name]是殿下的贵客，因此也属我们的庇护之下。)]
 	</p>
 	<p>
-		Clearly annoyed by this revelation, [siren.name] crosses her arms, and, pouting, collapses back down into her swivel-chair. [siren.speech(~Hrmph!~ Well, if that is the case, then I shall do my best to contain my world-shattering powers for as long as I can. B-But just know that I could destroy the two of you with a mere snap of my fingers!)]
+		[siren.name]显然对这一事实不太满意，她交叉双臂，撅着嘴，一屁股坐回转椅里。[siren.speech(哼！～好吧，既然如此，我也只能尽量先勉强抑制住我这躁动的灭世之力了。但、但你们得知道，我动动指头可就能把你们俩都灭了！)]
 	</p>
 	<p>
-		[elizabeth.speech(Of course, My Lady,)] Elizabeth says, bowing and taking a step back. [elizabeth.speech(I will leave [pc.name] in your care. Please allow [pc.herHim] through to see Lyssieth as soon as possible.)]
+		[elizabeth.speech(当然，殿下，)]伊丽莎白回答道，躬身后退。[elizabeth.speech(我会把[pc.name]留给您照顾。请让[pc.herHim]尽快与莉西丝大人会面。)]
 	</p>
 	<p>
-		[siren.speech(Yes, yes, don't worry Lizzy, I will spare [pc.herHim] from my wrath. You can get back to your work,)] [siren.name] dismissively replies, allowing Elizabeth to turn and make her exit. As the doors close behind her, [siren.name] looks over at you, and, standing up from behind her desk, she lets out a maniacal laugh, [siren.speech(Mwhahaha! Now there's nothing to stop us from settling our feud! Deceit and trickery are tools that I never hesitate to use, and now that Lizzy is out of our way, you should prepare to meet your doom, my arch-nemesis! Now, I shall surely destroy y-)]
+		[siren.speech(好啦，好啦，别担心，丽兹，我会尽量从盛怒之下保全[pc.herHim]的。你快回去工作吧，)][siren.name]漫不经心地回答，让伊丽莎白转身离开。门刚一关上，[siren.name]就站在桌子后面开始打量你，并发出一声狂躁的大笑，[siren.speech(咩哈哈哈哈哈哈！现在没有什么能阻止我们清算新仇旧怨了！我从不吝于使用欺骗和诡计，丽兹可没法拦着我了，你就准备好接受你悲惨末路的降临吧，宿敌！现在，我一定要灭了亻——)]
 	</p>
 	<p>
-		At that moment, [siren.name] is interrupted once again, as an arcane-powered intercom sitting on her desk suddenly crackles into life, [lyssieth.speech(What on earth is all of that commotion, [siren.name]? If I have to come out there and remind you of your duties, you're going to be in serious trouble, young lady!)]
+		就在这时，[siren.name]又一次被打断了，她桌上的奥术对讲机突然噼啪一声开始工作，[lyssieth.speech(这到底是怎么一回事，[siren.name]？小姑娘，如果闹到要我来亲自提醒你你的职责这一步，你可就有大麻烦了！)]
 	</p>
 	<p>
-		Instantly, [siren.name] leans down over the desk, and replies into the speaker, [siren.speech(S-Sorry, mother! I was just, erm, w-well, anyway, I was just about to inform you that your guest has arrived.)]
+		[siren.name]立刻趴到桌子上答话，[siren.speech(抱抱抱歉妈妈！我、呃嗯……对，我刚准备通知您客人已经到了。)]
 	</p>
 	<p>
-		[lyssieth.speech(Very well, show [pc.herHim] in,)] Lyssieth replies.
+		[lyssieth.speech(很好，领[pc.herHim]进来，)]莉西丝回答道。
 	</p>
 	<p>
-		[siren.speech(Yes, mother,)] [siren.name] responds, before addressing you as she walks over to the mahogany door, [siren.speech(Right this way, [pc.name], and don't even <i>think</i> of telling on me, ok?!)]
+		[siren.speech(遵命，妈妈，)][siren.name]回答，在带你走向红木门时对你说，[siren.speech(这边走，[pc.name]，劝你<i>想都别想</i>告发我，好吗？！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE"><![CDATA[
 	<p>
-		Giving the door a quick knock, [siren.name] opens it and steps forwards into the room beyond. Following in her footsteps, you proceed inside, and finally find yourself entering Lyssieth's office.
+		[siren.name]很快敲了敲门，然后走进了莉西丝的办公室，你跟着她走了进去。
 	</p>
 	<p>
-		Just like the waiting room behind you, the floor is covered in dark, wooden boards, which are mostly concealed by a large, cream-coloured rug. The walls are covered in dark wooden panelling, and set into them are numerous book-filled shelves and ornately carved cabinets. In the very middle of the room, there sits a huge, mahogany desk, and on the side nearest to you, there are two empty seats. On the far side, standing beside a very expensive-looking leather chair, is Lyssieth.
+		和你身后的等待室一样，这里的地板上也铺着深色的木板和乳白色的地毯。墙壁上铺着深色的木镶板，镶板上摆放着许多装满书籍的书架和雕刻华丽的柜子。房间的正中央摆放着一张巨大的红木书桌，离你最近的一侧有两个空座位。在最边上，站在一张看起来非常昂贵的皮椅旁边的，就是莉西丝本人了。
 	</p>
 	<p>
-		As Elizabeth said, the elder lilin has taken on the form of a human, and appears as a stunningly-beautiful, olive-skinned woman, who looks to be in her mid-forties. Her huge, [lyssieth.cupSize]-cup breasts threaten to spill out of her blouse's plunging neckline at any moment, and, looking down, you see that her long, perfect legs are being well shown-off by her long, black, asymmetrical skirt. Tucking a loose strand of her wavy, dark-brown hair behind one ear, the elder lilin pushes her stylish half-rim glasses up onto the bridge of her nose, before glaring at her daughter and scolding her, [lyssieth.speech(If I've told you once, I've told you a thousand times, young lady, take that ridiculous eye-patch off!)]
+		正如伊丽莎白所说，莉琳长老已经变成了人类的模样，她看起来是一位四十多岁的橄榄色皮肤的绝色美女。她那[lyssieth.cupSize]罩杯的巨乳随时都有可能从上衣的领口溢出来，低头一看，你会发现她那双修长完美的腿正被她那黑色的不对称长裙展现得淋漓尽致。她把一缕松散的深棕色波浪卷发拢到耳后，把时尚的半框眼镜推到鼻梁上，然后瞪着女儿训斥道，[lyssieth.speech(小家伙，和你说了多少次了，你怎么就不能把你那个鬼畜的眼罩摘了！)]
 	</p>
 	<p>
-		[siren.speech(M-Mom,)] [siren.name] stutters, [siren.speech(it seals my dark powers away! If I take it off, then the whole universe could be destroyed!)]
+		[siren.speech(妈，妈妈……)][siren.name]变得有些结巴，[siren.speech(这里面可是封印了我的暗黑能量！如果摘掉，整个宇宙都将面临毁灭！)]
 	</p>
 	<p>
-		[lyssieth.speech([siren.Name]! You're embarrassing me in front of our guest! Now, not another word from you!)] Lyssieth says, before finally turning to face you, [lyssieth.speech(I do apologise on behalf of my troublesome daughter, and thank you so much for bringing her back to m-)]
+		[lyssieth.speech([siren.Name]！别当着客人面发癫！现在，大人说话的时候，小中二病不要插嘴！)]莉西丝说完后将头转向你，[lyssieth.speech(我代表我那麻烦鬼女儿向你道歉，多谢你能把她带回——)]
 	</p>
 	<p>
-		As Lyssieth's gaze comes to rest on your face, her eyes suddenly open wide, and you see the hand that's placed on the back of her chair suddenly clench tightly into the leather padding. Her calm, friendly voice completely changes to take on a deep, spine-chilling tone, and as she speaks, the ground beneath your feet almost seems to tremble, [lyssieth.speech(It's <i>you</i>?! <i>You're</i> the one who's been living with my dear Lilaya?!)]
+		当莉西丝的目光落在你的脸上时，她的眼睛突然睁得大大的，你看到她放在椅背上的手突然紧紧地握住了皮垫。她平静而亲切的声音完全变了，变得深沉而令人不寒而栗，她说话的时候，你脚下的地板似乎都在颤抖，[lyssieth.speech(是<i>你</i>？！<i>你就是</i>那个和我亲爱的莉莱雅住一起的那个人？！)]
 	</p>
 	<p>
-		Before you can react, the elder lilin glances behind you, and you jump a little as you hear the heavy mahogany door suddenly slam shut and lock. Fixing her gaze back onto your face, Lyssieth lets out a wild, blood-curdling laugh, before revealing that she knows exactly who you are, [lyssieth.speech(You're the one from the museum! However unwittingly, it was you who finally freed my sisters, my mother, and I from that wretched mirror! After searching for you for the past three years, you turn out to be the one who recently moved in with my precious Lilaya, and now here you are, coming to me of your own free will! Ha... Hahaha!)]
+		还没等你反应过来，这位莉琳长老就朝你身后瞥了一眼，当听到沉重的红木门突然砰地一声关上并上锁时，你不禁吓出一身冷汗。莉西丝的视线重新落在你的脸上，她发出一阵令人毛骨悚然的狂笑，似乎她对你了如指掌，[lyssieth.speech(你就是博物馆里的那个人！你的无心之举解除了封印，让我和我的姐妹们，以及我的妈妈莉莉丝从那面可恶的镜子里面逃了出来！在过去的三年里，我一直在寻找你，直到最近我才知道，你住在了我的宝贝莉莱雅家里！现在，你居然自投罗网，桀桀桀桀桀……)]
 	</p>
 	<p>
-		[siren.speech(M-Mom?)] [siren.name] asks, the nervousness in her voice telling you that she's just as worried by Lyssieth's behaviour as you are. [siren.speech(W-What's going on?)]
+		[siren.speech(妈，妈咪？)]和你一样，[siren.name]也因莉西丝诡异的言行而颤抖，[siren.speech(怎，怎么回事啊？)]
 	</p>
 	<p>
-		Ignoring her daughter, Lyssieth continues monologuing, [lyssieth.speech(After all this time, you're finally in my grasp! All I'd have to do is deliver you to mother, and, having proved my loyalty, I'd finally have my freedom returned to me! How easy it would be... To crush you right now...)]
+		莉西丝仿佛没听见女儿的问话，继续自言自语，[lyssieth.speech(过了这么久，这么久，你终于落在了我手中！我只需把你交给母亲，就能证明我的忠诚，我就能重获自由了！这对我来说，易如反掌……)]
 	</p>
 	<p>
-		As she was speaking, Lyssieth's beautiful, green eyes were slowly turning bright red, and as she comes to the end of her musings, they suddenly start glowing with a fierce, fire-like intensity. With a loud tearing, snapping noise, her grip proves too much for the poor leather chair to handle, and the back splits clean in two. Being absolutely certain that this frightful elder lilin is about to launch into an attack, you prepare to defend yourself!
+		在她说话的同时，莉西丝美丽的绿眼睛慢慢变成了殷红色，当她的独白即将结束时，你看到她的眼中闪烁着跃动的火光。随着巨大的撕裂和断裂声，那把被她紧紧抓住的可怜的皮椅不堪重负，椅背裂成了两半。显而易见，这位可怕的莉琳长老即将向你发起攻击，于是，你摆出战斗的姿势，准备好自卫！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_REACTION"><![CDATA[
 	<p>
-		You weren't expecting Lilaya's mother to give you such a hostile welcome, and, quickly dropping down into a defensive posture, you prepare to defend yourself against her incoming attack. Instead of taking any offensive action, however, Lyssieth simply laughs, and asks, [lyssieth.speech(Do you really think you stand a chance against me?! It would be but a trifle to force you to submit, and then all I'd have to do is teleport the two of us into mother's throne room, present you to her as a gift, and I'd be free!)]
+		你没想到莉莱雅的母亲会对你如此敌视，于是你弯下腰，摆出防御姿势，准备抵挡她的攻击。然而，莉西丝并没有采取任何进攻行动，只是笑着问道，[lyssieth.speech(你真的认为你有机会打败我吗？逼你就范不过是小菜一碟，我只需要把我们两个传送到母亲的王座上，把你作为礼物送给她，我就自由了！)]
 	</p>
 	<p>
-		[pc.speech(I didn't come here to fight,)] you say, [pc.speech(let's not do anything hasty.)]
+		[pc.speech(我不是来打架的，)]你说，[pc.speech(别那么急着做决定。)]
 	</p>
 	<p>
-		[lyssieth.speech(You actually think you'd be able to fight back, don't you?)] Lyssieth asks, laughing once again, [lyssieth.speech(Silly [pc.race], all I'd have to do is tell you to [style.glowArcane(kneel)]!)]
+		[lyssieth.speech(你真以为你有机会还手吗？)]莉西丝大笑起来，[lyssieth.speech(愚蠢的[pc.race]，我根本就不打算出手，我命令你[style.glowArcane(跪下)]！)]
 	</p>
 	<p>
-		The elder lilin's command seems to be infused with a powerful arcane spell, and as the word 'kneel' echoes around the office, you feel a powerful physical force beginning to push you down towards the floor. Simultaneously, a strange haziness settles over your mind, and you start to feel as though it would be the right thing to do to obey Lyssieth...
+		随着“跪下”一词在办公室里回荡，你感觉到一股强大的压力开始将你推向地面。与此同时，一种奇怪的朦胧感笼罩了你的头脑，你开始觉得服从莉西丝的命令是正确的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_REACTION_RESIST"><![CDATA[
 	<p>
-		Refusing to submit, you try to shake your head clear of the intrusive thoughts, and at the same time, you put all of your strength into resisting the crushing downwards force. From what little awareness you have left of your surroundings, you're able to make out a highly-amused smile on Lyssieth's face, and, as she steps towards you, she tuts, [lyssieth.speech(Now, now, that won't do at all. When I give people an order, they're expected to [style.glowArcane(obey)].)]
+		拒绝屈服，你试图摇头摆脱闯入型意念，同时，你把你所有的力量投入到抵抗向下压迫的力量中。从你对周围环境所剩无几的意识中，你能够在莉西丝的脸上看到一个非常有趣的笑容，当她向你走过来时，她嘟囔道，[lyssieth.speech(现在，现在，完全不行。当我给人们下命令的时候，他们应该[style.glowArcane(服从)]。)]
 	</p>
 	<p>
-		The physical force pushing down on you suddenly increases in strength, and, try as you might, it's far too powerful for you to resist. As you're finally forced down onto your knees before the elder lilin, your head starts to swim, and you feel as though you're dipping in and out of consciousness. The only words that you can seem to form in your mind are 'yes' and 'mistress', but, still refusing to capitulate, you decide to stay silent instead of using your now severely-limited vocabulary.
+		压在你身上的物理力量突然增强了，而且，尽管你可能尝试，它对你来说太强大了，无法抵抗。当你最终被迫跪在莉琳长老面前时，你的头部开始晕眩，你感觉自己好像在意识中进进出出。你脑海中似乎只能形成“是”和“主人”这两个词，但是，仍然拒绝屈服，你决定保持沉默，而不是使用你现在严重受限的词汇。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_REACTION_SUBMIT"><![CDATA[
 	<p>
-		Accepting your fate, you give in to the voices of submission in your mind, and allow yourself to be pushed down onto your knees before Lyssieth. Looking up at the elder lilin, you see a highly-amused smile on her face, and, as she steps towards you, she laughs, [lyssieth.speech(Very good. If I were to tell you to surrender yourself to Lilith, allow her to drain your arcane power, and then live out the rest of your life as her slave, would you [style.glowArcane(obey)]?)]
+		接受你的命运，你屈服于你内心的声音，允许你自己在莉西丝面前跪下。抬头看着年长的莉琳长老，你看到她脸上带着高度愉悦的微笑，她向你走来时，她笑了，[lyssieth.speech(很好。如果我让你向莉莉丝投降，让她耗尽你的奥术力量，然后作为她的奴隶度过余生，你会[style.glowArcane(服从)]吗？)]
 	</p>
 	<p>
-		As yet another forceful command is uttered, your head starts to swim, and you feel as though you're dipping in and out of consciousness. The only words that you can seem to form in your mind are 'yes' and 'mistress', and, wanting to do as you're told, you speak them out loud, [pc.speech(Yes, Mistress...)]
+		当听到又一个强而有力的命令时，你的头开始发昏，你觉得自己时而清醒时而晕眩。你脑子里唯一能想到的词就是“是”和“主人”，你想遵从命令。你大声地喊道，[pc.speech(是的，主人……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_REACTION_BETRAYAL"><![CDATA[
 	<p>
 		#IF siren.getAffection(pc)>30
-		#THEN [siren.speech(Mom! Stop it! [pc.Name] saved me, remember?!)] [siren.name] shouts, coming to your defence. [siren.speech(Let [pc.herHim] go!)]
-		#ELSE [siren.speech(Mom! What's going on?!)] [siren.name] shouts, clearly distressed by the scene that's taking place in front of her. [siren.speech(This is too much!)]
+		#THEN [siren.speech(妈妈！住手！[pc.Name]救过我，你忘了吗？！)][siren.name]冲上前，把你护在身后，[siren.speech(放了[pc.herHim]吧！)]
+		#ELSE [siren.speech(妈妈？这是怎么回事？！)][siren.name]大喊道，很显然她对眼前的事情感到困惑和不适，[siren.speech(这太过分了！)]
 		#ENDIF
 	</p>
 	<p>
-		[lyssieth.speech(Be quiet, [siren.name]! I... I have to!)] Lyssieth snaps, but, as your mind slowly starts to clear, you realise that she doesn't sound too sure of herself. [lyssieth.speech(I... I can't betray mother... I... But... All those people... No! If she were to discover my betrayal, I... I... But I couldn't...)]
+		[lyssieth.speech(别插嘴，[siren.name]！我，我必须这么做！)]莉西丝说道，但当你的头脑慢慢清醒过来时，你意识到她听起来并不太自信。[lyssieth.speech(我……我不能背叛母亲……但是，但，那些人类……不！如果她发现我背叛了她，我，我……但是，我不能……)]
 	</p>
 	<p>
-		Lyssieth suddenly turns away and paces back towards her desk, and as she turns her back on you, the haziness in your mind instantly clears. The physical force that was pushing down on you also immediately vanishes, but, having just borne the brunt of an elder lilin's power, you decide against making any sudden move, and stay down on your knees as you and [siren.name] witness Lyssieth's internal struggle.
+		莉西丝突然转过身去，走回她的办公桌前，当她背对着你时，你头脑中的朦胧感瞬间消失了，你身上的压力感也立刻消失了，但由于刚刚体会到了一位莉琳长老的强大力量，你决定静观其变，继续跪在地上，和[siren.name]一起见证莉西丝内心的挣扎。
 	</p>
 	<p>
-		[lyssieth.speech(Why don't I just do it?!)] she shouts to herself. You're relieved to hear that her deep, malevolent voice has shifted back to the soft, womanly one which she used to greet you. Pacing back and forth beside her desk, she throws you the occasional glance as she continues in an exasperated tone, [lyssieth.speech(I'd be a fool to go against her! I should just hand you over and be done with it! But... But then she'd regain her full power... And the humans... They'd suffer... No. I can't let that happen!)]
+		[lyssieth.speech(我为什么要想这么多？！)]她自言自语的声音越来越大，那低沉、恶毒的声音又变回了之前问候你时那温柔、有女人味的声线，这让你松了一口气。她在办公桌旁来回踱步，偶尔向你投来一瞥，然后继续用气急败坏的语气说道，[lyssieth.speech(我没蠢到要和她作对！我就该把你交给母亲！但是……但是这样她就会得到完全的力量……那样，人类就会……会万劫不复……不行，这样不行！)]
 	</p>
 	<p>
-		With a final, defeated sigh, she looks down at her ruined chair, and lets out a very sad chuckle, [lyssieth.speech(Now look what I've done...)]
+		最后，她失落地叹了口气，看着被自己毁坏的椅子，似笑非笑地哼了一声，神情里满是哀伤，[lyssieth.speech(看看我干了些什么……)]
 	</p>
 	<p>
-		[siren.speech(Mom? Are you ok?)] [siren.name] asks in a quivering voice, and you glance over to see that she looks to be on the verge of tears.
+		[siren.speech(妈妈？你还好吗？)][siren.name]用颤抖的声音问道，你瞥了一眼，发现她似乎快要哭出来了。
 	</p>
 	<p>
-		[lyssieth.speech(Yes, I'm sorry, my darling,)] Lyssieth sighs, smiling at her daughter, before looking back down at you. You see that the colour of her eyes has shifted back to a calm green, and, once again tucking a loose strand of her wavy dark-brown hair back behind her ear, she gives you an apologetic smile. [lyssieth.speech(And I'm especially sorry to you, [pc.name]. I should have known that this day would come, and that I must choose to betray Lilith. You should not have had to endure the consequence of my indecision. Please, do stand up.)]
+		[lyssieth.speech(还好，对不起，小可爱。)]莉西丝叹了口气，对女儿笑了笑，然后又低头看了看你。你看到她眼睛的颜色又变回了平静的绿色，她再次将一缕松散的深棕色波浪卷发拨到耳后，向你报以歉意的微笑，[lyssieth.speech(我尤其对不起你，[pc.name]。我早该知道会有这么一天的，我迟早会选择背叛莉莉丝。有错的是优柔寡断的我，而不是你，请站起来吧。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_REACTION_END"><![CDATA[
 	<p>
-		Doing as Lyssieth says, you push yourself up onto your [pc.feet]. Wanting now more than ever to get a real explanation of why you're here, and feeling the frustration of your seemingly never-ending quest to find out what's going on boiling over, you angrily state, [pc.speech(Look, I've been all over Dominion, trying to get someone to tell me why I'm in your world, and after finally finding Arthur, he tells me that you're the only one who has that information. Now, after running this way and that for goodness knows how long, I finally get to meet you, and then I get assaulted! What's more, you're talking about handing me over to Lilith, then something about humans suffering, and now you say you've decided to 'betray' your mother?!
+		按照莉西丝所说的，你站了起来。你现在比以往任何时候都更想知道你为什么会在这里，同时也感受到了似乎永无止境的探寻所带来的挫败感，你愤愤不平地说道，[pc.speech(听着，我跑遍了整个御城区，想找个人告诉我为什么我会在你们的世界里，最后终于找到了亚瑟，他告诉我只有你知道这些信息。现在，我跑来跑去，不知跑了多久，终于见到了你，却遭到了袭击！还有，你说要把我交给莉莉丝，然后又说什么人类在受苦，现在你又说什么你决定‘背叛’你母亲？
 		#IF pc.isSelfish()
 		#THEN
-			 Don't keep us in suspense, Lyssieth, this has been a complete fucking nightmare! Just tell us what the fuck is going on!
+			别卖关子，莉西丝，我他妈的造了什么孽！赶紧告诉我这他妈的都是怎么他妈的一回事？！
 		#ELSE
-			 Please, just tell me what's going on!
+			请你明明白白告诉我，这一切究竟是怎么一回事？！
 		#ENDIF)]
 	</p>
 	<p>
-		[lyssieth.speech(Don't worry, I'll tell you everything,)] [lyssieth.name] says, [lyssieth.speech(but first, let us conclude the business regarding my daughter's return. You have something to say, don't you, [siren.name]?)]
+		[lyssieth.speech(不要着急，我都会说的。)][lyssieth.name]说道，[lyssieth.speech(但首先，让我先把我女儿的事情了结掉。你有话要说，对吧？[siren.name]？)]
 	</p>
 	<p>
 		#IF(siren.getAffection(pc)>30)
-			[siren.speech(Y-Yes, I suppose...)] [siren.name] says, blushing and looking at the floor. [siren.speech(Sorry for all the trouble I caused. And thank you... F-For saving me, that is...)]
+			[siren.speech(对，对对，我，我想说……)][siren.name]红着脸看向地面，[siren.speech(对不起，给你添麻烦了。谢谢你……谢谢你救了我……)]
 		#ELSEIF(flags.hasFlag(FLAG_meraxisTrickedWithRing))
-			[siren.speech(Even though [pc.she] tricked me into putting on your ring? You're making <i>me</i> apologise?)] [siren.name] protests, but her mother just raises an eyebrow and starts tapping her foot on the floor. [siren.speech(Fine... Sorry, [pc.name], for all the trouble I caused...)]
+			[siren.speech(即使[pc.she]耍计谋让我戴上戒指，你也要让<i>我</i>道歉？)][siren.name]抗议着，但她的母亲只是挑了挑眉毛，然后用脚跺了两下地。[siren.speech(好吧……对不起，[pc.name]，给你添麻烦了……)]
 		#ELSE
-			[siren.speech(Even though [pc.she] was going to leave me to be crushed? You're making <i>me</i> apologise?)] [siren.name] protests, but her mother just raises an eyebrow and starts tapping her foot on the floor. [siren.speech(Fine... Sorry, [pc.name], for all the trouble I caused...)]
+			[siren.speech(即使[pc.she]丢下我，任我被压扁，你也要让<i>我</i>道歉？)][siren.name]抗议着，但她的母亲只是挑了挑眉毛，然后用脚跺了两下地。[siren.speech(好吧……对不起，[pc.name]，给你添麻烦了……)]
 		#ENDIF
 	</p>
 	<p>
-		[lyssieth.speech(Good girl. Now that we've got all of that out of the way, I think the three of us should pay my dear Lilaya a visit,)] Lyssieth says, [lyssieth.speech(It'll be best if I explain the situation to all of you at once.)]
+		[lyssieth.speech(好女孩，既然我们已经把这些都解决了，我想我们三个应该去拜访一下我亲爱的莉莱雅了。)]莉西丝说道，[lyssieth.speech(我想，这些事情最好和你们一起说。)]
 	</p>
 	<p>
-		[siren.speech(But getting to her place will take ages,)] [siren.name] complains.
+		[siren.speech(但是去那里很花时间的。)][siren.name]抱怨道。
 	</p>
 	<p>
-		[lyssieth.speech(Oh, we're not walking,)] [lyssieth.name] replies, [lyssieth.speech(I'll be teleporting the three of us there. I can disable mother's detection spells for a short while, so she shouldn't notice my absence. Now, come close, you two.)]
+		[lyssieth.speech(哦，我们不会走着去的。)][lyssieth.name]回答道，[lyssieth.speech(我会把我们三个传送过去，我可以在短时间内解除妈妈的侦测法术，所以她应该不会发现我不在。你们两个，靠近点。)]
 	</p>
 	<p>
-		Lyssieth spreads her arms, and beckons you and [siren.name] to approach. It doesn't look like there's any other option but to do as you're told, and so you do as the elder lilin asks.
+		莉西丝张开双臂，把你和[siren.name]拉进了她怀里。看起来你别无选择，于是你按照莉琳长老说的去做。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_TELEPORT"><![CDATA[
 	<p>
-		[pc.speech(Ok, let's go,)] you say, [pc.speech(I can't wait to get to the bottom of all this.)]
+		[pc.speech(那好，我们走，)]你说，[pc.speech(我等不及要弄清楚这一切。)]
 	</p>
 	<p>
-		Doing as you're asked, you and [siren.name] step forwards to either side of Lyssieth, who quickly reaches out and pulls each of you into a one-armed hug. As you and her daughter are pressed in against her huge breasts, the elder lilin lets out a soft laugh, [lyssieth.speech(This feels cozy! Now, let me just disable mother's spells... And... Let's go!)]
+		按照要求，你和[siren.name]向前走到莉西丝的两边，她很快伸出手，把你们分别拉进一个臂弯里。当你和她的女儿被压在她巨大的胸部上时，莉琳长老发出了一声轻笑，[lyssieth.speech(这感觉真舒服！现在，让我解除妈妈的法术……然后……我们走！)]
 	</p>
 	<p>
-		With a sudden, blinding flash of purple light, the three of you vanish from Lyssieth's office...
+		突然，一道耀眼的辉光闪过，你们三个从莉西丝的办公室消失了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_TELEPORT_ARRIVE"><![CDATA[
 	<p>
-		In an instant, you, [siren.name], and Lyssieth are all standing in Lilaya's laboratory. On the other side of the room, Lilaya and Arthur are bending down over one of the many lab tables, with Rose hovering off to one side. All three of them have their backs to you, and as Lyssieth loosens her grip on you and her daughter, you realise that the trio in front of you have not noticed your sudden appearance.
+		一瞬间，你，[siren.name]和莉西丝都站在了莉莱雅的实验室里。在房间的另一侧，莉莱雅和亚瑟弯着腰，埋头在一堆实验桌前，萝丝在一边徘徊。他们三人都背对着你，当莉西丝松开你和她的女儿时，你意识到你面前的三人并没有注意到你们的突然出现。
 	</p>
 	<p>
-		[lilaya.speech(You're absolutely hopeless, you know that, right?)] Lilaya angrily scowls at Arthur, [lilaya.speech(I simply do not understand why you've never taken the time nor effort to wield the arcane yourself! Not only do you have to rely on me to do these experiments of yours, but you have the audacity to insinuate that it was <i>my</i> fault it didn't work!)]
+		[lilaya.speech(你绝对没救了，你知道的，对吧？)]莉莱雅愤怒地瞪了亚瑟一眼，[lilaya.speech(我真不明白，你为什么从来不花时间和精力亲自施展奥术！你不仅要靠我来做你的这些实验，而且还厚颜无耻地暗示实验失败是<i>我</i>的错！)]
 	</p>
 	<p>
-		[arthur.speech(Please, Lilaya, I wasn't saying tha-)] Arthur tries to explain, but your angry aunt cuts him off.
+		[arthur.speech(别这么说，莉莱雅，我没说——)]亚瑟试图解释，但你愤怒的姨妈打断了他。
 	</p>
 	<p>
-		[lilaya.speech(And now you're lying about it! Just like you lied when you promised not to see anyone behind my back! The next thing I know, you'll be off fucking my mother again!)]
+		[lilaya.speech(现在，你又要说胡话了？谎话连篇的家伙！你上次和我保证不出去见人，转头你就又跑去操我妈了？！)]
 	</p>
 	<p>
-		[lyssieth.speech(Lilaya! Stop that!)] Lyssieth interrupts, striding forwards as the three startled occupants of the lab spin around to face her. [lyssieth.speech(You can't take your anger out on Arthur like that!)]
+		[lyssieth.speech(别说了，莉莱雅！)]莉西丝打断了他们，大步向前走去，实验室里的三个人被吓到呆在了原地。[lyssieth.speech(别对亚瑟那样发脾气！)]
 	</p>
 	<p>
-		[lilaya.speech(M-Mommy?!)] Lilaya exclaims, [lilaya.speech(What are you doing here?! And with [pc.name] and [siren.name] as well!)]
+		[lilaya.speech(妈妈？！)]莉莱雅惊叫道，[lilaya.speech(你来干什么了？！还带着[pc.name]和[siren.name]！)]
 	</p>
 	<p>
-		[siren.speech(Hi sis'!)] [siren.name] calls out, beaming fondly at Lilaya, and getting a warm smile in return.
+		[siren.speech(嗨，姐姐！)][siren.name]叫道，热情地看向莉莱雅，莉莱雅对着她笑了笑。
 	</p>
 	<p>
-		[lyssieth.speech(We have some important things to discuss,)] Lyssieth says, cutting the sisters' reunion short, [lyssieth.speech(Honestly, Lilaya, you should have immediately told me about [pc.name] and all this business about finding out what's going on. It would have saved you all a lot of trouble.)]
+		[lyssieth.speech(我们要讨论些很重要的事情。)]莉西丝显然不觉得现在是上演姐妹重逢这种戏码的好时机，[lyssieth.speech(老实说，莉莱雅，你应该马上告诉我[pc.name]的事，以及所有有助于查明真相的事情。这样你们就不会有这么多麻烦了。)]
 	</p>
 	<p>
-		[lilaya.speech(Excuse me?)] Lilaya replies in a sharp tone, [lilaya.speech(You think I'd ask for your help after what you did with Arthur? When you <i>knew</i> I was seeing him? And then you lock yourself away in Submission and refuse to even come and apologise?!)]
+		[lilaya.speech(啊？)]莉莱雅的音调提高了，[lilaya.speech(我觉得我们应该先算下上次的帐，你<i>明知道</i>我约了亚瑟出去，然后，你就和亚瑟偷偷做那种事？结果事后你还把自己锁在屈城区里，别说道歉了，来也不来，这合理吗？！)]
 	</p>
 	<p>
-		[lyssieth.speech(That wasn't out of choice,)] Lyssieth explains, [lyssieth.speech(When Lilith found out that I'd been with another human, she had me placed under house arrest. She thinks that I'm too fond of humans, and that I'll betray her and take their side. I can fool her detection spells long enough for a brief visit, such as this, but I couldn't get the time to come and apologise to you properly. You know I'm sorry for what I did...)]
+		[lyssieth.speech(那不是我自愿的，)]莉西丝辩解道，[lyssieth.speech(当莉莉丝发现我和另一个人类在一起时，她把我软禁了起来，她觉得我太喜欢人类了，会背叛她。我可以短时间内骗过她的侦测法术，偷跑出来，比如这次，我很抱歉，但是我没时间好好和你道歉了……)]
 	</p>
 	<p>
-		[lilaya.speech(Under house arrest? Nobody told me...)] Lilaya pouts, before placing her hands on her hips and continuing, [lilaya.speech(Anyway, if your time is limited, we can resolve this later. Just tell me that I'm right, and that [pc.name] came from another dimension, and then we can talk about how to get [pc.herHim] back.)]
+		[lilaya.speech(你被软禁了？没人告诉过我……)]莉莱雅噘了噘嘴，然后双手叉腰，继续说道，[lilaya.speech(总之，如果你的时间有限，我们可以稍后再解决这个问题。你只要告诉我我的观点是对的，[pc.name]来自另一个维度，那我们就能继续探究如何把[pc.herHim]送回去了。)]
 	</p>
 	<p>
-		Lyssieth's expression hardens as she hears what her daughter has to say, before turning to Rose and scowling, [lyssieth.speech(First, get that slut out of here. What I have to say doesn't concern her.)]
+		听到女儿的话后，莉西丝的表情变得凝重起来，然后转头看向萝丝，皱起了眉头，[lyssieth.speech(首先，让那个婊子出去，我们接下来要说的和她没关系。)]
 	</p>
 	<p>
-		[lilaya.speech(Don't talk about Rose like that!)] Lilaya shouts, stepping forwards to shield her maid from her mother.
+		[lilaya.speech(别那样说萝丝！)]莉莱雅上前一步挡在她的女仆和母亲之间。
 	</p>
 	<p>
-		[rose.speech(Please, Mistress, if you'll excuse me!)] Rose quickly interjects, before rushing over to the door and making her exit.
+		[rose.speech(如果你们需要讨论重要的事，那我先行告退了，主人！)]萝丝赶紧插话，然后快步走到门边，离开了。
 	</p>
 	<p>
-		[lilaya.speech(You're unbelievable... Rose never did anything to you!)] Lilaya exclaims, shaking her head at Lyssieth, before letting out a weary sigh and dismissively waving her hand. [lilaya.speech(So go on then, tell us how to send [pc.name] back, and I'd also like to know why Lilith considers humans to be a threat. I mean, why else would she be concerned about you 'betraying' her for them?)]
+		[lilaya.speech(你这人……萝丝可没惹到你！)]莉莱雅对着莉西丝摇了摇头，然后发出一声恼怒的叹息，挥了挥手。[lilaya.speech(那就继续吧，告诉我们怎么把[pc.name]送回去，我还想知道莉莉丝为什么认为人类是威胁。不然她怎么会担心你为了人类而‘背叛’她呢？)]
 	</p>
 	<p>
-		[lyssieth.speech(Very well, but first, as it was he who requested my assistance, I'd like to hear Arthur's theory,)] Lyssieth says, looking over at her one-time lover.
+		[lyssieth.speech(很好，但首先，因为亚瑟请求了我的帮助，所以我也想听听他的理论。)]莉西丝看向她那一夜情的对象。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ARTHUR_THEORY"><![CDATA[
 	<p>
-		[arthur.speech(Oh, erm, well, you see, I thought it highly unusual that Lilaya and I had such similar names and appearances as the versions of us that [pc.name] knew in [pc.her] world, so, instead of trying to investigate [pc.herHim], I decided to look a little closer at our own auras,)] Arthur starts, fidgeting a little in discomfort as you and the three succubi listen to his theory. [arthur.speech(Although I initially couldn't find anything unusual, I realised that the current methodology we have for examining auras was a little inadequate, so I devised a new method to detect any, erm, 'oddities' in a person's aura. By competitively hybridising my own aura with a reference sample of an arcane essence I had extracted from myself earlier, I was able to isolate and identify inconsistencies in auratic harmony, which, as earlier rese-)]
+		[arthur.speech(哦，嗯，你看，我觉得莉莱雅和我，我们两个的名字和外貌，与[pc.name]在[pc.her]那个世界里认识的我们如此相似，这很不寻常，所以，我决定不去调查[pc.her]，而是仔细看看我们自己的灵气。)]当你和三个魅魔开始听他讲述他的理论后，亚瑟开始有些坐立不安，[arthur.speech(起初我没有发现任何异常，但我意识到我们目前检查灵气的方法是存在些许缺陷的，因此我设计了一种新的方法来检测一个人灵气中的任何‘古怪’之处。这种方法通过将我自己的灵气与我之前从自己身上提取的一种奥术精华的参考样本进行竞争性杂交分析，这样我能够分离鉴定灵气之中特异的片段，在先前的实验——)]
 	</p>
 	<p>
-		[lilaya.speech(Arthur, just get to the point already!)] Lilaya snaps, clearly not having the patience for his long-winded explanation.
+		[lilaya.speech(亚瑟，快进到重点！)]莉莱雅显然没有耐心听他啰嗦。
 	</p>
 	<p>
-		[arthur.speech(Oh, right, yes, erm, well, that is to say, using a new method, I was able to detect a complex network of... Well, it sounds impossible, and this is why I needed to talk with Lyssieth, but this network that I discovered almost looks as though it's a shadow of past memories...)] Arthur says, stumbling over his words more than usual as he tries to explain his discovery. [arthur.speech(Now, these 'shadow memories' are far too faint and fleeting to actually decipher, but their presence alone suggests... well... that Lilaya and I were once different people... I believe that not only [pc.name] was transported to this world, but so too were Lilaya and I. Why we were transformed, and [pc.she] wasn't, however, I have no idea...)]
+		[arthur.speech(哦，对，是的，呃，就是说，通过一种新的方法，我发现了一个复杂的网状结构……这听起来不可能，这也是我需要和莉西丝交谈的原因，但我发现的这个网状结构看起来就像是过去记忆的影子……)]亚瑟在试图解释他的发现时，他的话比平时说得更磕磕绊绊，[arthur.speech(现在，这些‘记忆的影子’太微弱，转瞬即逝，我还没有办法对其进行解码和破译，但它们的存在本身就表明……嗯……莉莱雅和我曾经是不同的人，我相信，不仅[pc.name]被传送到了这个世界，莉莱雅和我也是如此。然而，为什么我们被转化了，而[pc.her]没有，我暂时还不知道……)]
 	</p>
 	<p>
-		[lilaya.speech(How absolutely absurd!)] Lilaya laughs, [lilaya.speech(It seems as though all of your nonsensical research has finally fried your brain! Although <i>I</i> may not look it, both you and I have lived in this world for over forty years. How on earth could we have been transported here along with [pc.name]?!)]
+		[lilaya.speech(真是荒谬！)]莉莱雅大笑起来，[lilaya.speech(看来，你那些无厘头的研究终于把你的脑子烧坏了！虽然<i>我</i>看起来不像，但你我都在这个世界上生活了四十多年，我们怎么可能是和[pc.name]一起被传送到这里来的呢？)]
 	</p>
 	<p>
-		Although Lilaya is quick to pour scorn on Arthur's theory, her mother lets out a soft laugh, before asking, [lyssieth.speech(So, you found a way to detect the memories of past lives? I doubt even Lilith knows how to do that...)]
+		虽然莉莱雅对亚瑟的理论嗤之以鼻，但她的母亲还是轻笑了一声，然后问道，[lyssieth.speech(你找到了检测过去记忆的方法？我怀疑连莉莉丝都不知道怎么做……)]
 	</p>
 	<p>
-		[lilaya.speech(W-What?)] Lilaya asks, turning to face her mother, [lilaya.speech(Y-You mean there's some truth to what Arthur's saying?!)]
+		[lilaya.speech(哈？什么？)]莉莱雅转过头去，[lilaya.speech(你是说亚瑟说的话不全是假的？)]
 	</p>
 	<p>
-		[lyssieth.speech(Some truth, yes,)] Lyssieth says, [lyssieth.speech(those traces of memories Arthur has discovered are indeed those of the people [pc.name] once knew. The core essence, or 'soul', inside the two of you were once those of [pc.namePos] aunt, Lily, and of her research colleague, Arthur. You weren't transported into any new world, however, and there's no way to send [pc.name] back to [pc.hers]... You see, this <i>is</i> [pc.namePos] world.)]
+		[lyssieth.speech(对的，他有一部分理论是成立的，)]莉西丝说，[lyssieth.speech(亚瑟发现的那些记忆痕迹确实是[pc.name]曾经认识的人的记忆痕迹。你们俩体内的核心本质，或者说‘灵魂’，曾经是[pc.namePos]的姨妈莉莉和她的研究同事亚瑟的。不过，你们并没有被传送到任何新世界，也没有办法把[pc.name]送回[pc.hers]的世界……你明白了吗，这<i>就是</i>[pc.namePos]的世界。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_WORLD_REVEAL"><![CDATA[
 	<p>
-		[pc.speech(That's impossible,)] you say, [pc.speech(I think I would have remembered there being a city full of demons and magic. There's absolutely no way this is my world.)]
+		[pc.speech(这不可能，)]你说，[pc.speech(我可能不会忘记一个充满恶魔和魔法的城市，但是这绝对不可能是我原来的世界。)]
 	</p>
 	<p>
-		[lilaya.speech(Exactly! It's impossible! How could you account for the fact that you gave birth to me over forty years ago, if this is [pc.namePos] world?!)] Lilaya exclaims, [lilaya.speech(I have memories of living in Dominion all my life!)]
+		[lilaya.speech(没错！这不可能！如果这是[pc.namePos]的世界，那你怎么解释40多年前生下我的事实？！)]莉莱雅大喊道，[lilaya.speech(我这辈子都生活在御城区！)]
 	</p>
 	<p>
-		[lyssieth.speech(Of course you do,)] Lyssieth says, trying to reassure her daughter with a warm smile. [lyssieth.speech(Although this is [pc.namePos] world, the reality of what it used to be was rewritten by a powerful spell which my mother cast. I need to explain from the beginning...)]
+		[lyssieth.speech(你当然知道，)]莉西丝在说着的同时试图用一个温暖的微笑来安慰她的女儿。[lyssieth.speech(虽然这是[pc.namePos]的世界，但是过去的现实被我母亲施下的强大法术改写了，也许我需要从头解释一下……)]
 	</p>
 	<p>
-		[siren.speech(Yes, please do,)] [siren.name] says, [siren.speech(I'm a little lost here.)]
+		[siren.speech(是的，拜托您了，)][siren.name]说，[siren.speech(我有点迷糊了。)]
 	</p>
 	<p>
-		[lyssieth.speech(Well, to go right back to the very start, my six sisters and I were born of Lilith and an unknown father over six thousand years ago. Along with our mother, we brought about the creation of the first human civilisations, with the intention of ruling over all of humankind as goddesses. Although we elder lilin are the only natural-born daughters of Lilith, she corrupted many, many humans into lilin as well. With their help, as well as that of their demon offspring, we easily subdued the humans,)] Lyssieth explains, [lyssieth.speech(However, after around two thousand years spent forging what would later become the Akkadian empire, the angels arrived.)]
+		[lyssieth.speech(嗯，这要从头说起，我和我的六个姐妹都是莉莉丝的孩子，她们的父亲在六千多年前就消失的无影无踪了。我们和我们的母亲一起创造了最早的人类文明，并意图以女神的身份统治全人类。虽然我们莉琳长老是莉莉丝唯一有血脉且被承认的女儿，但她也腐化了许多的人类交给我们。在人类以及他们的混血后代的帮助下，我们轻而易举地征服了剩余的人类，)]莉西丝解释道，[lyssieth.speech(然而，在花费了大约两千年的时间打造后来的阿卡德帝国之后，天使们降临到了这片大地上。)]
 	</p>
 	<p>
-		[lilaya.speech(Angels? They're real?)] Lilaya asks.
+		[lilaya.speech(天使？那是真实的吗？)]莉莱雅问道。
 	</p>
 	<p>
-		[lyssieth.speech(Yes, and they're almost exactly the same as their stereotypical depiction, being opposite to demons in almost every way. They hold the sickening belief that purity and chastity are qualities to be admired,)] Lyssieth explains, the disgust in her voice clear for all to hear, [lyssieth.speech(Anyway, one day, over four thousand years ago, the angelic equivalents to Lilith and my sisters appeared. With seven archangels in tow, a being known as Samael rudely demanded that we leave humanity alone. To cut a long story short, they vastly underestimated our power, and we soon defeated and captured all seven of the archangels.)]
+		[lyssieth.speech(是的，他们和他们刻板的描述几乎完全一样，不仅在所有方面都与恶魔相反，还持有一种令人作呕的信念，认为纯洁和童贞是值得钦佩的品质。)]莉西丝解释道，她声音中的厌恶也清晰地传达给在场的每个人，[lyssieth.speech(总之，在4000多年前的某一天，天使长带着七个大天使来到了莉莉丝和我们姐妹几个面前。那个名为萨麦尔的家伙粗鲁地要求我们放过人类。总而言之，他们大大低估了我们的力量，我们很快就击败并俘虏了七个大天使。)]
 	</p>
 	<p>
-		[pc.speech(But not Samael?)] you observe.
+		[pc.speech(但不包括萨麦尔？)]你插嘴道。
 	</p>
 	<p>
-		[lyssieth.speech(No, he eluded us for quite some time, but when we made it known that we were prepared to do terrible things to his archangel companions, he offered us his surrender,)] Lyssieth scowls as she recalls what happened next, [lyssieth.speech(He gave us an offering in exchange for the release of his friends; a great mirror, which he said was able to replicate the soul of anyone who gazed into it. Of course, he lied! So eager were we to finally capture the king of all angels, that we allowed him to trick us into gazing into the mirror. In a flash, all seven of us were transported to a sealed dimension, in which we found ourselves living in a vast, empty palace. For four thousand years, we lived in the confines of that place, but we were not alone. The seven archangels, who we'd brought along as hostages, were also transported into the mirror with us.)]
+		[lyssieth.speech(没有，他躲避了我们很长一段时间，但是当我们让他知道我们准备对他的大天使同伴做可怕的事情时，他又突然出现在了我们的面前，然后向我们表达投降的意愿。)]莉西丝回忆起接下来发生的事情，皱起了眉头，[lyssieth.speech(他给了我们一个祭品来交换他的朋友；一面大镜子，他说这面镜子可以复制任何凝视它的人的灵魂。当然，他撒谎了！由于我们是如此渴望抓住所有天使的首领，所以才导致我们被他欺骗地凝视了镜子。在那一瞬间，我们七个人都被传送到了一个封闭的维度。在那里，我们发现自己生活在一个巨大而空旷的宫殿里。四千年来，我们生活在那个地方，但我们并不孤单。我们带来的七位大天使作为人质，也和我们一起被传送到了镜子里。)]
 	</p>
 	<p>
-		[lilaya.speech(He just sacrificed his friends like that?)] Lilaya asks. [lilaya.speech(And that mirror; it's the same one [pc.name] fell into in the museum, isn't it?)]
+		[lilaya.speech(他就这样牺牲了他的朋友吗？)]莉莱雅问，[lilaya.speech(还有那面镜子，就是[pc.name]在博物馆看见的那面，对吧？)]
 	</p>
 	<p>
-		[lyssieth.speech(Yes, and yes,)] Lyssieth replies, [lyssieth.speech(Oh, how those archangels were used by my sisters and mother... The one which Lilith gave to me, Valoel, had it better than the rest, however. Although angels are disgusting creatures, I can't help but recognise how similar to humans they are, and as such, I refused to corrupt him as my mother ordered. That was the start of Lilith's suspicions about me, although she was too busy during those four thousand years to take any action against me.)]
+		[lyssieth.speech(没错，就是这样，)]莉西丝回答，[lyssieth.speech(哦，那些大天使是如何被我的姐妹和母亲使用的……莉莉丝分给我的那个，叫瓦洛埃尔的大天使比其他的都好。虽然天使是令人厌恶的生物，但我不得不承认他们和人类有多么相似，因此，我拒绝按照我母亲的命令腐化他。这就是莉莉丝开始怀疑我的原因，尽管在那四千年里她太忙了，没有时间对我采取任何行动。)]
 	</p>
 	<p>
-		[arthur.speech(That's while she was weaving the reality-change spell, I assume?)] Arthur asks, quick to realise that it would take a significant amount of time to create such a spell.
+		[arthur.speech(我猜那时她正在编织改变现实的法术吧？)]亚瑟意识到创造这样一个法术需要大量的时间，便出声询问。
 	</p>
 	<p>
-		[lyssieth.speech(That's right, and by the time [pc.name] here provided the catalyst for our release, it was powerful enough to warp the reality of the entire world,)] Lyssieth says, [lyssieth.speech(It was to reforge every living soul into a demon, so that Lilith would have no opposition in taking her place as queen of all creation. The spell, however, didn't go quite as planned...)]
+		[lyssieth.speech(没错，当[pc.name]在这里为我们的释放提供催化剂的时候，它已经足够强大到扭曲整个世界的现实，)]莉西丝说，[lyssieth.speech(这会将每一个活着的灵魂重新铸造成恶魔，这样莉莉丝就可以毫无阻碍地取代她成为万物的女王。然而，法术并没有按计划进行……)]
 	</p>
 	<p>
-		[arthur.speech(Because of [pc.name], and the power that's been infused into [pc.her] aura?)] Arthur asks again, getting into his element as the elder lilin starts talking about arcane matters.
+		[arthur.speech(因为[pc.name]，以及[pc.her]被吸收的灵气？)]亚瑟又问了一遍，当莉琳长老开始谈论奥术相关的事情时，他完全陷入了自己的世界。
 	</p>
 	<p>
-		[lyssieth.speech(Correct again. You see, angels will always lose against demons, by nature of their pathetic rules of morality. Even when Samael could have imprisoned us in that mirror and thrown away the key, he chose to make a means by which we might one day be released,)] Lyssieth laughs, [lyssieth.speech(And he did that by having the soul which was to trigger our release absorb a part of Lilith's power. A tiny, tiny piece, but not entirely insignificant. Just as a single support taken out from the bottom of a tower of cards will cause the entire structure to collapse, so too did the removal of a tiny piece of Lilith's power cause her spell to backfire.)]
+		[lyssieth.speech(又答对了。你看，天使总是会输给魔鬼，因为他们可悲的道德准则。即使萨麦尔本可以把我们囚禁在那面镜子里然后把钥匙扔掉，但他还是选择了一种总有一天会让我们重见天日的方式。)]莉西丝讥笑道，[lyssieth.speech(他通过灵魂来释放我们吸收莉莉丝的一部分力量。虽然是很小很小的一块，但这是十分重要的一部分。就像从卡片塔底部取出一个支撑物会导致整个结构崩溃一样，移除莉莉丝的一小部分力量也会导致她的法术事与愿违。)]
 	</p>
 	<p>
-		[pc.speech(It doesn't look like it backfired to me,)] you observe, [pc.speech(Dominion, demons, animal-morphs, magic; all of these things never existed.)]
+		[pc.speech(在我看来不像是事与愿违，)]你注意到，[pc.speech(统治，恶魔，兽人，魔法；所有这些东西都不存在。)]
 	</p>
 	<p>
-		[lyssieth.speech(Well, actually, demons and the other lilin have always been in your world, but yes, the spell did work, to an extent. It transformed the entire of what you knew as the British Isles into a new reality, in which demons, humans, anthropomorphic animals, and mythological creatures have lived for thousands of years. Lilith, my six sisters, and I merged with, and gained the memories of, the alternate versions of ourselves who existed in this reality,)] Lyssieth explains, [lyssieth.speech(Every single other person who was present within the spell's area had their soul reforged into a new being, including you three; Lilaya, [siren.name], and Arthur.)]
+		[lyssieth.speech(事实上，恶魔和另一只莉琳一直都在你的世界里，但是没错，某种程度上，法术确实起作用了。它把你们所知道的不列颠群岛变成了一个新的现实，在这个现实中，恶魔，人类，兽人，和神话中的生物已经生活了几千年。莉莉丝，我的六个姐妹和我融合在一起并获得了存在于这个世界的另一个版本的我们的记忆，)]莉西丝解释道，[lyssieth.speech(在法术范围内的每一个人的灵魂都被重塑成了一个新的存在包括你们三个；莉莱雅，[siren.name]和亚瑟。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_LILAYA_ANGERY"><![CDATA[
 	<p>
-		[lilaya.speech(So... I'm not really Lilaya? I'm just a transformed version of [pc.namePos] aunt, Lily?)] Lilaya asks, the colour draining from her cheeks as she faces an existential crisis.
+		[lilaya.speech(所以……我不是真正的莉莱雅？我只是一个转化版的[pc.namePos]阿姨，莉莉？)]莉莱雅问道，当她面对一个存在危机的时候，脸色变得越来越难看。
 	</p>
 	<p>
-		[lyssieth.speech(No, you are Lilaya,)] Lyssieth reassures her, [lyssieth.speech(It was in a different reality altogether that you were Lily.)]
+		[lyssieth.speech(不，你是莉莱雅，)]莉西丝安慰她，[lyssieth.speech(在完全不同的现实中，你是莉莉。)]
 	</p>
 	<p>
-		Acting as though he already knew all of this, Arthur joins in, [arthur.speech(Hmm, yes, well, I must admit that this possibility did cross my mind. Don't worry, Lilaya, the people we may once have been no longer exist. We are who we are now, you see?)]
+		亚瑟表现得好像早就知道这一切似的，他插了一嘴，[arthur.speech(额，是的，我必须承认我确实想过这种可能性。别担心，莉莱雅，曾经的我们已经不复存在了。我们就是现在的我们，你明白吗？)]
 	</p>
 	<p>
-		Unfortunately, Arthur's words seem to have the opposite effect to what he'd intended, and Lilaya's agitation quickly turns to anger, [lilaya.speech(And what if I was happy as Lily?! I didn't ask to be a half-demon! And if you knew this was a possibility, why didn't you tell me sooner, Arthur?!)]
+		不幸的是，亚瑟的话似乎起了反作用，莉莱雅的激动很快变成了愤怒！[lilaya.speech(如果我像莉莉一样快乐呢？！我没有要求成为半恶魔！如果你知道有这种可能，为什么不早点告诉我，亚瑟？！)]
 	</p>
 	<p>
-		[lyssieth.speech(Please, Lilaya, calm down,)] Lyssieth pleads, but your aunt shows no sign of doing such as thing as she rounds on her mother.
+		[lyssieth.speech(拜托，莉莱雅，冷静下来，)]莉西丝恳求道，但是你的姨妈在她的母亲面前没有表现出任何这样做的迹象。
 	</p>
 	<p>
-		[lilaya.speech(Calm down?! After I find out that I was practically killed and remade as a half-demon in this fucked up reality?! Your stupid fucking bitch mother! This is all her fault!)]
+		[lilaya.speech(冷静？！在我发现我在这个操蛋的现实世界里几乎被杀死然后被重塑成半恶魔之后？！你那愚蠢的婊子妈妈！这都是她的错！)]
 	</p>
 	<p>
-		[lyssieth.speech(W-Well,)] Lyssieth stammers, awkwardly rubbing her hands together as she tells her daughter the whole truth, [lyssieth.speech(Y-Yes, Lilith cast the spell, but the reason why you and [siren.name] are my daughters is... well... that is... I asked Lilith to make that happen...)]
+		[lyssieth.speech(好，好吧，)]莉西丝结结巴巴，尴尬地搓着双手告诉她的女儿全部的真相，[lyssieth.speech(是，是的，莉莉丝施了咒语，但是你和[siren.name]是我女儿的原因是……嗯……那是……我让莉莉丝做的……)]
 	</p>
 	<p>
-		[lilaya.speech(What?)] Lilaya flatly asks.
+		[lilaya.speech(什么？)]莉莱雅直接问。
 	</p>
 	<p>
-		[lyssieth.speech(Well, you see, we spent some time exploring the museum before Lilith cast her spell,)] Lyssieth explains, [lyssieth.speech(My sisters were, erm, taking advantage of all the humans, and I just wanted to protect the two of you! You both looked so scared... The only way I could protect you from my sisters was to ask Lilith to alter the spell such that Lily and Meranda would be my daughters...)]
+		[lyssieth.speech(是的，你瞧，在莉莉丝施法之前我们花了一些时间探索博物馆，)]莉西丝解释道，[lyssieth.speech(我的姐妹们，呃，利用了所有的人类，我只是想保护你们两个！你们看起来都很害怕……我能保护你们不受我姐妹们伤害的唯一办法就是让莉莉丝改变咒语，让莉莉和梅兰达成为我的女儿……)]
 	</p>
 	<p>
-		[lilaya.speech(I... You...)] Lilaya stumbles, caught in an awkward spot between outrage and gratitude at being spared from whatever depraved fate Lyssieth's sisters had in store for her. [lilaya.speech(Y-You hate it as well, don't you, [siren.name]?! Just think, your soul was human, before Lilith made it so that you're a half-demon!)] 
+		[lilaya.speech(我……你……)]莉莱雅跌跌撞撞，陷入愤怒和感激之间的尴尬境地，因为无论莉西丝的姐妹们为她准备了怎样堕落的命运，她们都幸免于难。[lilaya.speech(你，你也不喜欢吧！[siren.name]？！试想一下，在莉莉丝把你变成半恶魔之前，你的灵魂也是人类！)] 
 	</p>
 	<p>
-		[siren.speech(Yeah, erm, I dunno, sis',)] [siren.name] mumbles, [siren.speech(I mean, humans can't exactly summon cosmic forces of destruction like I can now! I bet when I was this 'Meranda', I couldn't even cast one spell!)]
+		[siren.speech(额，我不知道，姐姐，)][siren.name]喃喃自语，[siren.speech(我是说，人类不能像我现在这样拥有毁灭宇宙的力量！我打赌当我还是这个‘梅兰达’的时候，我连一个法术都不会施！)]
 	</p>
 	<p>
-		[lilaya.speech(You don't care at all that you were <i>violated</i> by Lilith's spell?!)] Lilaya asks, before finally turning towards you. [lilaya.speech(I'm not the same Lily you knew, am I, [pc.name]?! I bet I was a completely different person! Lilith ruined me, and now I'm stuck as a half-demon, thanks to mommy's refusal to ever turn me into a real succubus!)]
+		[lilaya.speech(你一点都不在乎你被莉莉丝的法术<i>侵犯了</i>吗？！)]莉莱雅问道，最后转向你。[lilaya.speech(我不是你认识的那个莉莉，对吧，[pc.name]？！我打赌我是一个完全不同的人！莉莉丝毁了我，现在我被困在一个半恶魔的身体里，多亏了妈妈拒绝把我变成一个真正的魅魔！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_LILAYA_CALMED_DOWN"><![CDATA[
 	<p>
-		You can tell that Lilaya's existential crisis has reached breaking point, and, realising that the simple truth will be enough to calm her down, you reassure her, [pc.speech(Yes, you're a half-demon now, Lilaya, but your personality, your mannerisms, even your looks are all the same as they were when you were Lily. You're still fundamentally the same person deep down inside, even if you can't feel it. Remember how I instantly recognised you the first time I saw you? You're still <i>you</i>, Lilaya.)]
+		你看得出来，莉莱雅正陷入一场“存在主义危机”之中。不过你知道，只要稍加提醒她一些简单的事实，就能让她冷静下来。你安抚道，[pc.speech(是的，你现在是半恶魔，莉莱雅，但你的个性、举止，甚至你的长相，都和你还是莉莉的时候一样。虽然你感觉不到，但你的内心深处根本就是同一个人。还记得我第一次见到你时一眼就认出了你吗？你还是<i>你</i>，莉莱雅。)]
 	</p>
 	<p>
-		Thankfully, your words have the desired effect, and your aunt's anger dissipates as quickly as it appeared. Collapsing down onto a nearby chair, she sighs, [lilaya.speech(I don't know... So I was really your aunt, huh? I'm just a different version of... well... myself. In a different body, in a different reality...
+		还好，你的话起到了预期的效果，姨妈的怒气很快就消散了。她倒在旁边的椅子上，叹了口气，[lilaya.speech(我不知道……这么说我真的是你姨妈？我只是另一个版本的……嗯……我自己。在不同的身体里，在不同的现实中……
 		#IF pc.getSexCount(lilaya)>0
 		#THEN
-			 And we had sex... Well, I mean, I suppose you're not <i>really</i> my [pc.niece] any more, so I guess I don't mind that...
+			结果我们还做了……我认为你不再是我<i>真正的</i>[pc.niece]了，所以我觉得我不用太在意这个……
 		#ELSE
-			 I mean, I suppose you're not <i>really</i> my [pc.niece] any more, so I guess I don't mind still offering you those tests...
+			我是说，我认为你不再是我<i>真正的</i>[pc.niece]了，所以我觉得我不用太在意这个问题，可以给你做些实验了…… 
 		#ENDIF)]
 	</p>
 	<p>
-		Taking this opportunity to ask the question at the forefront of his mind, Arthur turns to Lyssieth and says, [arthur.speech(So I'm assuming that [pc.name] is somehow special to Lilith, and, considering that you've decided to tell us all this, you're committed to hiding [pc.herHim] from her. I can only assume that, due to your, erm, fondness for humans, this all has something to do with preventing Lilith from warping the reality of the rest of the world?)]
+		趁此机会，亚瑟转过身对莉西丝问道，[arthur.speech(所以我猜测，[pc.name]对莉莉丝来说有些特别，而且，考虑到你决定告诉我们这些，你承诺向她隐瞒[pc.herHim]。我只能假设，由于你，呃，对人类的喜爱，这一切都与防止莉莉丝扭曲世界其他地方的现实有关？)]
 	</p>
 	<p>
-		[lyssieth.speech(Yes, it's as you say,)] Lyssieth confirms, [lyssieth.speech(We all assumed that [pc.name] here had vanished forever, and that the piece of Lilith's power within [pc.herHim] could never be recovered. If mother found out that [pc.she] was here, she wouldn't waste a second in teleporting here, enslaving all of us, and then extracting her power out from [pc.name], by any means necessary. With her full power restored, she might be able to harness the vast amounts of uncontrollable arcane energy which were unleashed at the moment her spell backfired, and with that, she may be able to finish the reality-changing spell. I can't let that happen... Humans should be cherished, not turned into demons!)]
+		[lyssieth.speech(你说得对，)]莉西丝承认了，[lyssieth.speech(我们都以为这里的[pc.name]已经永远消失了，而[pc.herHim]体内的莉莉丝的力量也永远找不回来了。如果母亲发现[pc.she]在这里，她会不惜一切代价传送到这里，奴役我们所有人，然后不择手段地从[pc.name]身上提取她的力量。当她的力量完全恢复后，她也许就能利用在咒语失效时释放出的大量无法控制的奥术能量，从而完成改变现实的咒语。我不能让这种事情发生……人类应该被珍惜，而不是变成恶魔！)]
 	</p>
 	<p>
-		[arthur.speech(Vast amounts of uncontrollable arcane energy... Wait, you don't mean that the energy in arcane storms is from Lilith's broken spell?)] Arthur asks.
+		[arthur.speech(大量无法控制的奥术能量……等等，你不会是想说，奥术风暴中的能量就来自于莉莉丝那被破解的法术吧？)]亚瑟追问道。
 	</p>
 	<p>
-		[lyssieth.speech(Yes, that's right,)] Lyssieth replies, [lyssieth.speech(But I'm afraid that I don't have much time before I'm discovered missing. Please, if you have any questions, ask them now, and then we can discuss what the next step should be.)]
+		[lyssieth.speech(对，就是那样，)]莉西丝回答道，[lyssieth.speech(但我恐怕没时间展开说了，拖得太久，会有人发现我失踪的。如果你有任何问题，请现在就提出来，然后我们再讨论下一步该怎么做。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_QUESTION_WORLD"><![CDATA[
 	<p>
-		[pc.speech(If it's only the British Isles that were transformed, why hasn't the rest of the world done anything in these past three years?)] you ask.
+		[pc.speech(如果只有不列颠群岛发生了转化，那世界其他地区发生了什么，在过去三年里什么都没做吗？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(Remember how I said that there were many, many lilin which Lilith created by corrupting humans? Well, both they and their countless demon offspring all disguised themselves as humans when Lilith and my sisters were imprisoned. Over the course of history, they've been infiltrating circles of power, instigating wars, sowing discontent, and keeping the world in chaos so as to prepare for our mother's return.)] Lyssieth explains, [lyssieth.speech(By the end of the twentieth century, they had de-facto control of every single major power in the world. Thanks to their vice-like grip on every government agency and all of the media, they can control everything that the world's population sees. Those who do discover what's going on are dismissed out of hand as crazed conspiracy theorists, and soon after, are never heard from again. After all, who would believe that an entire nation could have disappeared overnight?)]
+		[lyssieth.speech(还记得我说过，有很多很多莉琳，是莉莉丝通过腐蚀人类创造出来的吗？当莉莉丝和我的姐妹们被囚禁时，她们和她们无数的恶魔后代都伪装成了人类。在历史的长河中，他们潜入权力圈，煽动战争，挑起不满，让世界陷入混乱，为我们母亲的回归做准备。)]莉西丝解释道，[lyssieth.speech(到20世纪末，他们已经事实上控制着世界上的每一个大国。由于他们对政府机构和媒体的全面控制，他们能够操纵着全世界人民所看到的一切。那些发现了真相的人会被打成疯狂的阴谋论者，不久之后就会人间蒸发。毕竟，谁会相信整个国家会在一夜之间消失？太荒诞了！)]
 	</p>
 	<p>
-		[pc.speech(But what about tourists, and trade, and everyone with connections to the old reality of Britain?)] you ask.
+		[pc.speech(但是，游客、贸易，以及所有与英国过去的现实有联系的人呢？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(I believe that the official line is quarantine due to an untreatable pandemic,)] Lyssieth replies, [lyssieth.speech(Or was that just what one country was being told... The lilin out there in the rest of the world have quite an extensive subversive network. Nothing is beyond their reach.)]
+		[lyssieth.speech(官方的说法是，由于一场没有治愈手段的大流行病，这些人需要进行隔离，)]莉西丝回答，[lyssieth.speech(或者欺骗他们说，这只是一个虚构的国家，如果不承认，就把他们送去精神病院……世界上其他地方的莉琳，有着相当广泛的颠覆网络，他们无所不能。)]
 	</p>
 	<p>
-		[pc.speech(And what of the people here in this new reality? What if they leave?)] you ask, [pc.speech(Surely a sighting of a real-life cat-girl would be shared all over the world?)]
+		[pc.speech(在这个新现实中的人们怎么办？如果他们离开呢？)]你问，[pc.speech(其他地方的人要是看到世界上还有猫女，肯定会引起全世界的轰动吧。)]
 	</p>
 	<p>
-		[lyssieth.speech(I don't think you quite appreciate just how much control the lilin have over the spread of information,)] Lyssieth replies, [lyssieth.speech(Cat-girls, demons, and all the other races have been performing an exodus ever since this new reality came into being, and not a single shred of evidence has spread from the neighbouring countries which are being forced to take them all in. Didn't you ever wonder why children grow up so rapidly here? Lilith is purposefully doing it by harnessing some of the discharging energy from her broken spell. It works by half-phasing a newborn's body into a micro-dimension, in which time progresses at a rate of one year for every one of our minutes. Once their body reaches adulthood, they fully shift back into this reality. By doing this, she's creating massive overpopulation issues, and forcing tens of thousands of Dominion's residents to leave every day. It's all part of her plan.)]
+		[lyssieth.speech(我想你还不太了解莉琳对信息传播的控制力有多强，)]莉西丝继续说，[lyssieth.speech(自从这个新的现实世界出现以来，猫女、恶魔和所有其他的种族都在进行大逃亡，而邻国却没有一丝一毫的证据，它们被迫接纳了这些难民。你难道没有想过，为什么这里的孩子长得这么快吗？莉莉丝是故意这样做的，她利用了被破解的咒语中的一些泄露出来的能量，它的工作原理是将新生儿的身体半相位转换到一个微维度，在这个微维度里，一年相当于我们的一分钟，一旦他们长大成人，他们就会完全回到这个现实世界。通过这种方式，她人为制造了大规模的人口过剩，每天都有数以万计的御城区居民被迫离开。这都是她计划的一部分。)]
 	</p>
 	<p>
-		[pc.speech(A plan to force animal-morphs and demons into other countries?)] you ask.
+		[pc.speech(强迫动物化形人和恶魔进入其他国家的计划？)]你相当吃惊。
 	</p>
 	<p>
-		[lyssieth.speech(Of course! Don't you realise how much chaos it's creating? Most of the governments of neighbouring countries have already collapsed, making them easy pickings for the lilin to finally reveal their true forms and openly seize power. As Lilith's reality-changing spell failed, this is her new plan for taking over the world.)]
+		[lyssieth.speech(当然，你没意识到这造成了多大的混乱吗？大多数邻国的政府都已经垮台，这让它们很容易成为莉莉丝的猎物，最终让莉琳们有机会现出原形，公开夺取政权。莉莉丝改变现实的咒语失败了，而这就是她接管世界的新计划。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_QUESTION_BETRAYAL"><![CDATA[
 	<p>
-		[pc.speech(Why did you choose to betray Lilith, and not simply hand me over to her?)] you ask.
+		[pc.speech(你为什么要背叛莉莉丝？直接把我绑到莉莉丝面前不就好了吗？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(Because if I did that, then mother might finally be able to turn all of humanity into demons,)] Lyssieth replies, [lyssieth.speech(And I can't let that happen!)]
+		[lyssieth.speech(因为，如果我这样做了，那么母亲也许就能把全人类都变成恶魔，)]莉西丝回答道，[lyssieth.speech(我不会允许这种事情发生。)]
 	</p>
 	<p>
-		[pc.speech(Yes, but why do you care for humans so much? From what you've already said, your sisters don't seem to have any qualms about treating humans like dirt.)]
+		[pc.speech(如果你说的都是真的，那你的姐妹们似乎都视人命如草芥，而唯独你这样关心人类？为什么？)]
 	</p>
 	<p>
-		Lyssieth blushes a little as you ask that question, and replies, [lyssieth.speech(Well, I mean, there was a human, erm, I mean, m-my first experience with humans... He was... He showed me how special humans can be... Over time, I came to envy what humans have. Knowing that I could never be like them, I listened to the poisonous words of my sisters, and soon I felt nothing but frustration, then resentment, and finally hatred. I... I did something terrible, and when I realised I'd made the worst mistake of my life, it was too late, and he was gone.)]
+		你看到莉西丝的脸上出现了一抹红晕，她接着说，[lyssieth.speech(嗯，我的意思是，有一个人类， 嗯，我的意思是，他是我，我第一个认识的人，他让我知道人类是多么特别……随着时间的推移，我开始羡慕人类所拥有的一切，我知道我永远不可能像他们一样……我听信了我姐妹们的谗言，很快我就感到沮丧，然后是怨恨，最后是憎恨……我做了件可怕的事，当我意识到我犯了一生中最严重的错误时，为时已晚，他已经离开了我……)]
 	</p>
 	<p>
-		[pc.speech(I'm sorry, I didn't mean to upset you,)] you say, hearing the sad tone in Lyssieth's voice.
+		[pc.speech(对不起，我不是有意让你想起不愉快的事情，)]你听出了莉西丝语气中的悲伤。
 	</p>
 	<p>
-		[lyssieth.speech(No, it's only fair that you know of my motivation for helping you,)] the elder lilin replies, before continuing, [lyssieth.speech(Anyway, once I came to accept that I'd never get the chance to see him again, I made a promise to his memory that I'd do everything in my power to protect humans. From that day onwards, mother always suspected that my loyalties had shifted, and when I refused to corrupt the archangel she gave to me, she knew for certain that I wasn't to be trusted. After this new reality was created, she gave me one last chance to change my ways, but, ignoring her ultimatum, I continued seeing humans in secret. I just can't resist them...)]
+		[lyssieth.speech(没关系的，我觉得，你想了解我帮你的动机，这合情合理。)]莉琳长老顿了顿，接着说，[lyssieth.speech(总之，当我接受了再也没有机会见到他的事实后，我对着记忆里的他许下诺言，我会尽我所能保护人类。从那天起，母亲就一直怀疑我不再忠诚，后来，我拒绝腐蚀她交给我的天使长，她肯定就在那时确定了我已经不再值得信任。新的现实世界诞生后，她给了我最后一次改过自新的机会，但我无视她的最后通牒，继续偷偷与人类交往。我，我就是无法抗拒他们……)]
 	</p>
 	<p>
-		[lilaya.speech(And when you fucked Arthur behind my back, Lilith found out and locked you up?)] Lilaya angrily questions.
+		[lilaya.speech(所以，你背着我和亚瑟乱搞，莉莉丝发现后，就把你关起来了？)]莉莱雅愤怒地发问。
 	</p>
 	<p>
-		[lyssieth.speech(Yes... I've been under house arrest ever since, but couldn't tell you without either lying or revealing everything, neither of which I felt was the right thing to do...)]
+		[lyssieth.speech(是的……从那时起我就一直被软禁着，但不论是对你撒谎还是和盘托出，都不是那么轻松……所以我一直没说。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_QUESTION_PEOPLE"><![CDATA[
 	<p>
-		[lilaya.speech(So everyone we know, who was born over three years ago, is actually a transformed person from the old reality?)] Lilaya asks.
+		[lilaya.speech(那么，我们认识的每一个三年前出生的人，其实都是从旧现实中转变过来的？)]莉莱雅问道。
 	</p>
 	<p>
-		[lyssieth.speech(Well, not exactly,)] Lyssieth replies, [lyssieth.speech(It's just the soul which is the same. Bodies, memories, and everything else that anchored the soul into the old reality was completely changed. As Arthur seems to have discovered, there is evidence of these old memories within each person's aura, but I doubt that they could ever yield useful information about a person's past life.)]
+		[lyssieth.speech(不够准确，)]莉西丝回答道，[lyssieth.speech(不变的只是灵魂。身体、记忆和其他一切将灵魂固定在旧现实中的东西都完全改变了。正如亚瑟似乎已经发现的那样，每个人的灵气中都有这些旧记忆的证据，但我怀疑它们是否能提供关于一个人过去的有用信息。)]
 	</p>
 	<p>
-		[arthur.speech(I wonder if that has anything to do with deja vu,)] Arthur muses.
+		[arthur.speech(我想知道这是否与既视感有关。)]亚瑟低声问。
 	</p>
 	<p>
-		[lyssieth.speech(Possibly,)] Lyssieth replies, [lyssieth.speech(but it's important for you all to realise that everyone in this reality is now just as real and rooted in history as any old version of them ever was.)]
+		[lyssieth.speech(有可能，)]莉西丝说，[lyssieth.speech(但重要的是，你们都要意识到，现在这个世界中的每个人都是真实的，都扎根于历史之中，就和他们过去的身份一样。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_QUESTION_SPELL"><![CDATA[
 	<p>
-		[siren.speech(So how do I learn this reality-changing spell?)] [siren.name] asks, [siren.speech(If I were so inclined, I could already destroy all of reality, but as of yet, I cannot manipulate it!)]
+		[siren.speech(所以，我想学那个扭转现实的法术！)][siren.name]问道，[siren.speech(如果我愿意，我现在的力量已经可以摧毁现实的一切，但到目前为止，我还无法操纵它！)]
 	</p>
 	<p>
-		[lyssieth.speech(Yes you can, dear,)] Lyssieth says, patting her daughter's head, [lyssieth.speech(All spells manipulate reality, as, on a very small, localised scale, they change the physical laws of the universe. To cast a spell on the same level as the one Lilith used, however, would require you to first gain the same amount of power that she has, and then to spend about four thousand years crafting it.)]
+		[lyssieth.speech(你做的到，宝贝。)]莉西丝拍了拍她女儿的头，[lyssieth.speech(所有的咒语都能操纵现实，因为在很小的局部范围内，它们会改变物理法则。然而，要施放与莉莉丝使用的法术相同级别的法术，你首先需要获得与她匹敌的力量，然后花费大约四千年的时间来制作这个法术。)]
 	</p>
 	<p>
-		[siren.speech(Aww...)] [siren.name] pouts, [siren.speech(Well, it wasn't even that great anyway...)]
+		[siren.speech(啊……)][siren.name]嘟起嘴，[siren.speech(好吧，真麻烦……)]
 	</p>
 	<p>
-		[pc.speech([siren.Name] has a point there,)] you interject, [pc.speech(As incredible as it is, Lilith's spell doesn't seem to have changed everything. I mean, after all, we're all speaking English, people's names and relations seem to be very similar, and a lot of culture, clothing, and mannerisms are just as they've always been.)]
+		[pc.speech([siren.name]说的不无道理，)]你插了一句，[pc.speech(虽然不可思议，但莉莉丝似乎也不能操纵她的法术。我的意思是，毕竟我们都在说英语，人们的名字和关系似乎都很相似，很多文化、服饰和举止也一如既往。)]
 	</p>
 	<p>
-		[lyssieth.speech(As I merged with the Lyssieth from this new reality, I inherited all of her memories, but even with those, I cannot recall any events within this reality older than a hundred years or so. I believe that due to Lilith's spell backfiring, a lot of the planned restructuring of reality was shattered and merged with your own. A clear case of that happening is the way in which animal-morphs and mythological creatures came into being. Everyone <i>was</i> meant to be turned into demons, but as the spell broke, it somehow drew inspiration from what mother saw in that museum,)] Lyssieth says, [lyssieth.speech(So not only did legendary creatures, such as harpies, become real, but so too did anthropomorphic animals.)]
+		[lyssieth.speech(当我与这个新现实中的莉西丝融合时，我继承了她所有的记忆，但即便如此，我也无法回忆起这个现实中任何超过一百年的事件。我相信，由于莉莉丝的法术起了反作用，很多计划中的现实重组都被打破了，并与你们的现实融合在了一起。动物形态和神话生物的出现就是一个明显的例子。每个人<i>本来</i>都会变成恶魔，但随着咒语的破除，不知怎么，仿佛就像从母亲在博物馆里看到的东西中汲取了灵感一样，)]莉西丝说，[lyssieth.speech(不仅传说中的生物，诸如哈比变成了现实，拟人化的动物也出现了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_QUESTION_REVERSAL"><![CDATA[
 	<p>
-		[arthur.speech(So, there's obviously no way to send [pc.name] back to the old reality which we've been identifying as '[pc.her] world',)] Arthur observes, [arthur.speech(But surely anything that is done via the arcane can be undone via the arcane. Can we not somehow reverse this spell?)]
+		[arthur.speech(因此，显然没有办法把[pc.name]送回我们此前一直认定为‘[pc.her]的世界’的旧现实。)]亚瑟说，[arthur.speech(但任何通过奥术完成的事情都可以通过奥术解除。难道我们不能以某种方式逆转这个法术吗？)]
 	</p>
 	<p>
-		[lyssieth.speech(I'm afraid that's completely impossible,)] Lyssieth reveals, [lyssieth.speech(Even if we did have the same powers as Lilith, it would take us another four thousand years to create another reality-altering spell, and, while we lilin and demons would still be around by then, I don't know if you and [pc.name] could last that long...)]
+		[lyssieth.speech(这恐怕完全不可能。)]莉西丝判断道，[lyssieth.speech(即使我们真的拥有和莉莉丝一样的力量，我们也需要四千年的时间才能创造出另一个改变现实的咒语，虽然到那时我们莉琳和恶魔还活着，但我可不知道你和[pc.name]能不能坚持那么久……)]
 	</p>
 	<p>
-		[arthur.speech(Hmm, yes, point taken,)] Arthur replies, [arthur.speech(and even if we were demons as well, I can't imagine that we'd be able to evade Lilith's detection for that long...)]
+		[arthur.speech(确实，有道理。)]亚瑟点点头，[arthur.speech(即使我们也是恶魔，我也无法想象究竟怎样才能在四千年的时间里躲开莉莉丝的侦查……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_QUESTION_END"><![CDATA[
 	<p>
-		[lyssieth.speech(I really am almost out of time now,)] Lyssieth announces, [lyssieth.speech(We must move on to what our next step will be. I am committed to defeating Lilith and securing a future for humanity, and while I believe that the four of you will join me in this quest, I need a definitive answer from each of you.)]
+		[lyssieth.speech(时间不多了，)]莉西丝说，[lyssieth.speech(我们必须考虑下一步该怎么走。我致力于打败莉莉丝，确保人类的未来，虽然我相信你们四人会和我一起努力，但我需要你们每个人给我一个明确的答复。)]
 	</p>
 	<p>
-		[lilaya.speech(I don't know,)] Lilaya sighs, [lilaya.speech(I suppose we don't have much of a choice now, do we? If Lilith finds out that we know the truth behind this world, I imagine that our futures will consist of being her muted slaves. After all, if news of this got out, she'd have quite the dissent running through her domain... Fine, I'll help you then, mommy.)]
+		[lilaya.speech(我不知道。)]莉莱雅叹了口气，[lilaya.speech(我想我们现在别无选择了，对吧？如果莉莉丝发现我们知道这个世界的真相，我想我们迟早都会变成她噤声的奴隶，毕竟，如果这件事传出去，她的领地里肯定会有很多异议……好吧，那我就帮你，妈妈。)]
 	</p>
 	<p>
-		[siren.speech(Me too,)] [siren.name] quickly says, [siren.speech(I'm with sis'!)]
+		[siren.speech(我也一样，)][siren.name]很快接话，[siren.speech(我站在姐姐这边！)]
 	</p>
 	<p>
-		[arthur.speech(Lilaya raises a good point.)] Arthur observes, [arthur.speech(Even if we didn't want to get caught up in all of this, it's too late now. I'll help in whatever way I can.)]
+		[arthur.speech(莉莱雅说得对，)]亚瑟说，[arthur.speech(在此刻脱身已经不可能了，太迟了，我只有不遗余力地帮助你们这一条路可选。)]
 	</p>
 	<p>
-		[lyssieth.speech(And you, [pc.name]? We can't do this without the power contained within your aura. As I'm unable to leave my palace, you're the one who's going to have to execute the majority of my plan...)]
+		[lyssieth.speech(你呢，[pc.name]？没有你灵气中蕴含的力量，我们的计划便无从谈起。由于我无法离开我的宫殿，我的大部分计划将由你来施行……)]
 	</p>
 	<p>
-		With that, all four of the people in the room turn to face you, awaiting your answer.
+		他们四个看向了你，等待着你的回答……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_LIBERATE"><![CDATA[
 	<p>
-		[pc.speech(Of course I'm with you. I'll do whatever it takes to free the world from Lilith's tyranny,)] you decisively answer.
+		[pc.speech(当然，我站在你这边，不惜一切将世界从莉莉丝的暴政中解放，是我的使命。)]你果断给出了答案。
 	</p>
 	<p>
-		[lyssieth.speech(I knew I was right to place my trust in you,)] Lyssieth replies, smiling in delight.
+		[lyssieth.speech(我就知道，你这人信得过。)]莉西丝高兴地回答。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_USURP"><![CDATA[
 	<p>
-		[pc.speech(I'll join in with your plan, but when we defeat Lilith, I'll be the one to take her place as ruler of this domain,)] you decisively state.
+		[pc.speech(我可以加入你们，但是，我们打败莉莉丝之后，要由我来接替她的统治。)]你果断地说。
 	</p>
 	<p>
-		[lyssieth.speech(From one who harbours a fragment of Lilith's power in [pc.her] aura, I'm not surprised to hear that you share her same desire to rule,)] Lyssieth says, but, surprisingly, she doesn't sound at all worried by your statement, [lyssieth.speech(Very well, so long as you agree to treat humans fairly, then I will support you when we get that far.)]
+		[lyssieth.speech(你有着莉莉丝力量的碎片，所以，你像她那样渴求权力并不让人意外。)]莉西丝的语气里并不带有疑虑，这让你大为诧异，[lyssieth.speech(很好，只要你认为人类拥有和其他物种同等的权利，我便支持你统治这个世界。)]
 	</p>
 	<p>
-		[lilaya.speech(I don't see any issue with that,)] Lilaya says, [lilaya.speech(Better to be ruled by [pc.name] than by Lilith.)]
+		[lilaya.speech(我觉得，没什么问题。)]莉莱雅说，[lilaya.speech([pc.name]的统治总得比莉莉丝的暴政好吧。)]
 	</p>
 	<p>
-		[siren.speech(Of course, I'm far too powerful to be concerned with such trivial matters, so I will allow you to do as you please,)] [siren.name] states.
+		[siren.speech(当然可以，我的力量强大到超乎了你们的认知，所以，称王称帝这种鸡毛蒜皮的小事，我一点也不关心，你如果乐意的话，我当然不反对。)][siren.name]说着。
 	</p>
 	<p>
-		[arthur.speech(Yes, well, I suppose it's no big deal for you demons, but I don't know if I like the sound of replacing one dictator for another,)] Arthur sighs, [arthur.speech(But, again, I suppose I have no choice in the matter. I just hope that you're planning on being a more benevolent ruler than Lilith. We humans have it rough...)]
+		[arthur.speech(好吧，我想这对你们恶魔来说没什么大不了的，但我有点怀疑，一个独裁者换成另一个独裁者，究竟能不能解决问题……)]亚瑟叹了口气，[arthur.speech(不过，我想我也别无选择。我只能寄希望于你能比莉莉丝更加仁慈，毕竟，我们人类的处境已经过于悲惨了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_JOIN"><![CDATA[
 	<p>
-		[pc.speech(What if I were to join forces with Lilith?)] you ask, [pc.speech(Perhaps we could rule this world together, and, after all, what's the harm in having all humans turned into demons or animal-morphs?)]
+		[pc.speech(如果我加入莉莉丝一边，会怎么样呢？)]你问道，[pc.speech(也许我们可以一起统治这个世界，毕竟，让所有人类都变成恶魔或动物化形又有什么坏处呢？)]
 	</p>
 	<p>
-		[lyssieth.speech(Well, if you want to spend the next few days having your aura drained by Lilith, before being made into one of her slaves, then do please go ahead,)] Lyssieth angrily replies, [lyssieth.speech(I seriously hope that was a bad joke. After all we've discussed here, you'd be dooming us all to the same fate.)]
+		[lyssieth.speech(好吧，如果你想在接下来的几天里被莉莉丝吸干灵气，然后成为她的奴隶，那就请便吧。)]莉西丝听起来生气了，[lyssieth.speech(我真心希望你只是开了个不应景的玩笑。毕竟，我们在这里讨论了这么多，你要是跑到那边去，我们可全完了。)]
 	</p>
 	<p>
-		[lilaya.speech(Don't worry, mommy, [pc.name] wasn't being serious,)] Lilaya says.
+		[lilaya.speech(别担心，妈妈，[pc.name]只是在开玩笑罢了。)]莉莱雅说。
 	</p>
 	<p>
-		Considering the angry glares that you're suddenly getting from the occupants of this room, you decide against saying that you were, in fact, serious...
+		你瞟了一眼，这间屋子里的人似乎都有点被你所说的激怒了，想了想，你决定不说自己其实是认真的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_NOTHING"><![CDATA[
 	<p>
 		#IF pc.getHistory()==OCCUPATION_UNEMPLOYED
 		#THEN
-			[pc.speech(It's been nothing but hard work ever since that night at the museum,)] you complain, [pc.speech(I just want to go back to being a NEET, and leave the world-saving to someone else.)]
+			[pc.speech(自从那天晚上去了博物馆，被传送到这个鬼地方，我就没有一刻不在忙活，)]你抱怨着，[pc.speech(我只想回去当个对社会无害的家里蹲，拯救世界什么的，留给别人去做好了。)]
 		#ELSE
-			[pc.speech(It's been nothing but hard work ever since that night at the museum,)] you complain, [pc.speech(I just want to leave all of this to someone else, and they can run off and do all the world-saving stuff.)]
+			[pc.speech(自从那天晚上去了博物馆，被传送到这里，我就没有一刻不在忙活，)]你抱怨着，[pc.speech(拯救世界什么的，别人干不行吗？)]
 		#ENDIF
 	</p>
 	<p>
-		[lilaya.speech(Seriously?!)] Lilaya exclaims, [lilaya.speech(That's how you repay me for everything I've done, by just giving up?)]
+		[lilaya.speech(你认真的？！)]莉莱雅惊呼道，[lilaya.speech(我帮了你这么多，结果你转头就说，我撂挑子了，我不想干了？！)]
 	</p>
 	<p>
-		[lyssieth.speech(I will not allow such a lazy individual to stay in contact with my daughter!)] Lyssieth angrily joins in.
+		[lyssieth.speech(我女儿怎么勾搭上了这么个懒鬼！)]莉西丝生气地加入了谴责你的行列。
 	</p>
 	<p>
-		Sensing that your comfortable life would be ruined if you don't relent, you hold up your [pc.hands] and capitulate, [pc.speech(Ok, ok! I'll join in with your plan, just don't kick me out!)]
+		看起来，你要是今天不在这里屈服，那你的好日子怕是到头了。于是，你举起双手，摆出投降的架势，[pc.speech(好好好，我跟你们一起，别把我赶走！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING"><![CDATA[
 	<p>
-		[siren.speech(So what's going to happen now?)] [siren.name] asks.
+		[siren.speech(所以，下一步呢？)][siren.name]问。
 	</p>
 	<p>
-		[lyssieth.speech(In order to stand a chance at defeating Lilith, all of my sisters must first be dealt with,)] Lyssieth states, before turning to face you. [lyssieth.speech(As you have a fraction of Lilith's power within your aura, you should be able to absorb the essence of each lilin that you defeat. With the combined powers of all seven of the elder lilin, you'll be able to face Lilith head-on. By defeating each of my sisters, you'll not only be gaining strength, but Lilith's grip over her domain will also be weakened.)]
+		[lyssieth.speech(只有解决掉我所有的姐妹，我们才有机会打败莉莉丝。)]莉西丝说完，回头看向你，[lyssieth.speech(在你的灵气里有莉莉丝能量的碎片，这使你能吸收你击败的莉琳的精华。如果能集齐七个莉琳长老的能量，你就有了直面莉莉丝的可能。打败我的姐妹不仅可以提高你的实力，还能削弱莉莉丝对她领地的控制。)]
 	</p>
 	<p>
-		[lilaya.speech(So you want [pc.name] to fight your sisters?)] Lilaya asks in shock.
+		[lilaya.speech(所以你想让[pc.name]打倒你的姐妹们？)]莉莱雅的语气里充满了惊诧。
 	</p>
 	<p>
-		[lyssieth.speech(It's the only way Lilith's power could ever be challenged,)] Lyssieth replies, [lyssieth.speech(You'll need to start with my younger sister, Lunette, who rules with an iron fist over the surrounding farmland and fields. All lilin have a form which they prefer to take, and Lunette's is that of a huge pegataur. At the head of her herd of demonic centaurs, she terrorises the villages and farmsteads which dot the landscape. Before you can venture further afield, you'll need to defeat her.)]
+		[lyssieth.speech(除此之外，我再想不到第二种能挑战莉莉丝的办法。)]莉西丝说，[lyssieth.speech(你们得从我的妹妹露内特开始，她用铁腕统治着周围的农场和田地。所有的莉琳都有自己喜欢的化形，露内特的化形是一只巨大的半天马人。她率领着她的恶魔半人马群，劫掠着各地的村庄。在你可以到更远的地方冒险之前，你不得不先面对她。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="LAB_ENDING_MINOTALLYS"><![CDATA[
 	<p>
-		[pc.speech(There's no way that I'll stand a chance against that!)] you exclaim, [pc.speech(Not only would I have to defeat who-knows how many centaurs all at once, but I'd also have to fight an elder lilin at the same time?! All it took for you to incapacitate me was to use that arcane order. What's to stop Lunette from doing the same?)]
+		[pc.speech(我怎么赢？)]你尖叫起来，[pc.speech(我不仅要打败不知道多少半人马，还要同时对付一个莉琳长老！你只用了奥术指令就能让我失去行动能力，那露内特岂不是也能对我做一样的事？)]
 	</p>
 	<p>
-		[lyssieth.speech(Once I've granted you my essence it will render you immune to Lilith's Command spell, so Lunette will have to face you in combat,)] Lyssieth says, [lyssieth.speech(And as for her centaurs, you should be able to get some help from the lilin Minotallys; she's the mayor of the town of Elis. That's the largest settlement in the fields, and they've been having quite a hard time due to Lunette's rampaging centaurs. It might not be wise to mention to Minotallys all that we've discussed here. Despite being too kind-hearted for her own good, she's always been nothing but completely devoted and loyal to Lilith, and would doubtless betray you to her.)]
+		[lyssieth.speech(一旦我把我的精华赐予你，你就会对‘莉莉丝之律令’这一法术免疫，所以露内特将不得不和你战斗。)]莉西丝说，[lyssieth.speech(至于如何对付她的半人马，你应该可以从伊利斯镇的镇长米诺塔莉丝那里得到一些帮助。那里是田野周边最大的定居点，由于露内特的半人马群一直在那里肆虐，他们的日子一直不好过。不过，把我们的计划向米诺塔莉丝和盘托出可不是明智之举。她虽然心地善良，但对莉莉丝却一直忠心耿耿，如果暴露，她肯定会毫不犹豫地向莉莉丝出卖我们。)]
 	</p>
 	<p>
-		[siren.speech(Why would she choose to help now?)] [siren.name] chimes in, [siren.speech(I met Minotallys when I was questing to unlock the secrets of the seven scrolls of ultimate power, and she could barely even admit that the centaurs were a problem. She's a complete push-over and does whatever Lunette tells her.)]
+		[siren.speech(我们怎么能确保她会帮我们？)][siren.name]追问道，[siren.speech(我在探索七卷终极卷轴的秘密时遇到过米诺塔莉丝，她完全是在纵容那些半人马烧杀抢掠，我看她就是个根本不敢忤逆露内特的怂货。)]
 	</p>
 	<p>
-		[lyssieth.speech(Things have got worse out there since you were last in Elis,)] Lyssieth responds, [lyssieth.speech(Even Lilith herself is concerned with the prospect of an uprising due to Lunette's brutality. All Minotallys will need is a little push, and you should have a powerful ally to help you defeat the centaurs.)]
+		[lyssieth.speech(那之后，伊利斯镇的情况又恶化了。)]莉西丝答道，[lyssieth.speech(就连莉莉丝自己也开始担心露内特的暴行会引发起义。你们只需稍加鼓动米诺塔莉丝，就有机会拥有一个强大的盟友来帮助你们打败半人马群。)]
 	</p>
 	<p>
-		[lilaya.speech(Supposing [pc.name] manages to pull this off,)] Lilaya wonders out loud, [lilaya.speech(Is Lilith just going to sit in her tower and ignore the fact that an elder lilin has been defeated right under her nose?)]
+		[lilaya.speech(假设[pc.name]成功实现了这一点，)]莉莱雅大声问道，[lilaya.speech(难道莉莉丝会坐在她的高塔里，对一个莉琳长老在她眼皮底下被打败这件事视而不见吗？)]
 	</p>
 	<p>
-		[lyssieth.speech(Lilith is far too busy trying to assert control over the rest of the world,)] Lyssieth replies, [lyssieth.speech(Most of the time she's not even here, and she certainly doesn't have the time to personally deal with any problems her Realm might experience. With what little influence I have left, I'll play the game of politics so as to put Minotallys forwards as being put in control of stabilising the Foloi Fields. Lilith doesn't take too kindly to failure, so I imagine that Lunette will be rewarded by being either locked up in Lilith's tower or given some insignificant plot of land to rule over. Either way, [pc.name] shouldn't draw the wrath of Lilith. Not yet, at least...)]
+		[lyssieth.speech(莉莉丝正忙于将她的势力扩大到世界的其他地方，)]莉西丝说，[lyssieth.speech(大部分时间她都不在国内，当然也没有时间亲自处理王国可能遇到的任何问题。我将利用我所剩无几的政治影响力，把米诺塔莉丝推到台上，出面控制弗洛伊田野的稳定。莉莉丝眼里容不下失败者，所以我猜露内特要么会被关进莉莉丝之塔里，要么会被下放成管理一亩三分地的小领主。无论如何，[pc.name]都不会招致莉莉丝的愤怒，至少现在还不会……)]
 	</p>
 	<p>
-		[siren.speech(Perhaps you could get the youko to help as well?)] [siren.name] chimes in, [siren.speech(They're no match for my universe-shattering powers, but if you get a couple of nine-tails on your side then you probably wouldn't even need Minotallys.)]
+		[siren.speech(也许，你也能获得妖狐的帮助，)][siren.name]补充道，[siren.speech(虽然比我那足以摧毁宇宙的力量要弱一点，但如果有几个九尾狐朋友帮你，你可能根本不需要请求米诺塔莉丝出手。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_SIREN_HELP"><![CDATA[
 	<p>
-		[pc.speech(The youko?)] you ask.
+		[pc.speech(妖狐？)]你对这个很好奇。
 	</p>
 	<p>
-		[siren.speech(They're multi-tailed foxes who live in the forests of the Shinrin highlands, to the west of Elis,)] she explains, [siren.speech(Maybe you met my friend, [youkoGuide.name], in my citadel's lab? Normally, the youko are pretty hard to make contact with, but she could get you in touch with them!)]
+		[siren.speech(他们是有许多条尾巴的狐狸，生活在伊利斯西边，心林高地的丛林中，)]她向你解释，[siren.speech(也许你在我城堡的实验室里遇见过我的朋友，[youkoGuide.name]？一般情况下，妖狐几乎是不和外人来往的，不过她可以把你引荐给狐狸们！)]
 	</p>
 	<p>
-		[pc.speech(She's not going to be in the citadel anymore,)] you state, [pc.speech(Where could I find her?)]
+		[pc.speech(她不会再呆在城堡里了，)]你说，[pc.speech(我该再去哪里找她呢？)]
 	</p>
 	<p>
-		[siren.speech(I first met her in one of the taverns in Elis, back before I decided to conquer all of Submission. Let me see... I think it was called 'The Red Dragon'? She's probably gone back there.)]
+		[siren.speech(我第一次见到她是在伊利斯的一家酒馆，那时我还没决定征服整个屈城区，让我想想……那地方好像叫红龙酒馆？她可能回那去了。)]
 	</p>
 	<p>
-		[lyssieth.speech(Excellent idea, Meraxis! With the youko's help, Lunette's centaurs won't stand a chance,)] Lyssieth exclaims, happily clapping her hands together. Looking at you, she continues, [lyssieth.speech(Now, I need to infuse my essence into your aura in order to grant you immunity to the Lilith's Command spell. It won't diminish my own powers in any way, so I'll still be able to help when we're finally ready to confront Lilith.)]
+		[lyssieth.speech(好主意，梅拉克西丝！有了妖狐的帮助，对付露内特的半人马不成问题。)]莉西丝高兴地拍了拍手。她看着你，继续说道，[lyssieth.speech(现在，我需要把我的精华注入你的灵气中，这样你就能免疫‘莉莉丝之律令’法术了，这不会削弱我自己的力量，所以，最后面对莉莉丝的时候，我还能祝你一臂之力。)]
 	</p>
 	<p>
-		[lilaya.speech(And how exactly will you do that?)] Lilaya angrily asks, [lilaya.speech(By fucking [pc.herHim], I suppose?!)]
+		[lilaya.speech(你要怎么做？)]莉莱雅生气地问，[lilaya.speech(你要操[pc.herHim]，我猜？！)]
 	</p>
 	<p>
 		#IF(pc.getRace()==RACE_HUMAN)
-			[lyssieth.speech(Well, you know, what with the nature of the arcane being as it is, yes, I'll need to orgasm in order to fuse my essence into [pc.namePos] aura,)] Lyssieth says in a rather unconvincing manner, and you can't help but wonder if she's lying just to try and get you to have sex with her.
+			[lyssieth.speech(嗯，你知道的，基于奥术和生物的某些特性，就是这样，我需要达到高潮才能将我的精华融合到[pc.namePos]的灵气里。)]莉西丝的声音突然少了些底气，你有点怀疑她没说实话，她这么说可能只是为了骗你和她上床。
 		#ELSE
-			[lyssieth.speech(That isn't strictly necessary,)] Lyssieth says, [lyssieth.speech(but it is a rather intimate process, and, well, it would be only natural to have sex while doing it...)]
+			[lyssieth.speech(这不是必要条件，)]莉西丝说，[lyssieth.speech(但是我们可以借此机会亲近一下，而且，在做爱的时候注入精华，是很自然而然的事情……)]
 		#ENDIF
 	</p>
 	<p>
-		[lilaya.speech(You're certainly not doing that in my lab!)] Lilaya exclaims, [lilaya.speech(You can go and do it elsewhere.)]
+		[lilaya.speech(你们两个不要在我实验室里做！)]莉莱雅大声说，[lilaya.speech(去别处做去！)]
 	</p>
 	<p>
-		[lyssieth.speech(Hmm, I suppose it <i>is</i> time for me to return home, so I'll take [pc.name] with me then,)] Lyssieth says.
+		[lyssieth.speech(嗯，我觉得<i>是时候</i>回去了，那我就把[pc.name]带走吧！)]莉西丝说。
 	</p>
 	<p>
-		[siren.speech(Oh, mum, can I stay here for a while and catch up with sis'?)] [siren.name] asks.
+		[siren.speech(妈咪，我想要在这里和姐姐叙叙旧，我能留在这里吗？)][siren.name]问道。
 	</p>
 	<p>
-		[lyssieth.speech(Very well, but do not let her out of your sight, Lilaya,)] Lyssieth says, before suddenly stepping over to you and pulling you into a big hug, [lyssieth.speech(I'll be back to pick her up soon. Let's go, [pc.name].)] 
+		[lyssieth.speech(很好，莉莱雅，看住你妹妹。)]莉西丝说完，突然走到你身前，紧紧地抱住了你，[lyssieth.speech(我一会就回来接她，走吧，[pc.name]。)] 
 	</p>
 	<p>
-		Squeezing you in against her [lyssieth.breastSize], [lyssieth.cupSize]-cup breasts, Lyssieth casts her teleportation spell, and the two of you disappear in a flash of purple light...
+		你被按在了莉西丝那对[lyssieth.breastSize]，[lyssieth.cupSize]罩杯的乳房上，她施展了传送法术，你们两个消失在一道紫色的闪光之中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_RETURN"><![CDATA[
 	<p>
-		In an instant, you find yourself standing in the middle of Lyssieth's office, with the mature elder lilin still hugging you tightly into her busty chest. [lyssieth.speech(Oh, excellent, my absence hasn't been discovered,)] she says.
+		一瞬间，你发现自己站在了莉西丝办公室的中央，这位熟女莉琳长老还紧紧地把你搂在她怀里，你压在她丰满的胸脯上。[lyssieth.speech(哦，还不错，没人发现我刚才跑掉了。)]她说。
 	</p>
 	<p>
-		[pc.speech(So, I need your essence to be able to resist that commanding spell?)] you ask.
+		[pc.speech(所以，我需要你的精华来对抗那个命令法术，对吧？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(Mmm, that's right. It won't turn you into a demon or anything like that, it's just going to strengthen your aura,)] Lyssieth says, her arms still wrapped around you,
+		[lyssieth.speech(没错，它不会把你变成恶魔什么的，只是会增强你的灵气。)]莉西丝依然紧紧抱着你，
 		#IF(pc.getRace()==RACE_HUMAN)
-			 [lyssieth.speech(You need to get me to orgasm for it to work... Mmm... Yes... You humans are so sexy... Do you want to use my pussy, or would you like me to grow a nice big cock and fuck you?
+			[lyssieth.speech(你得让我达到高潮才行……嗯……你们人类可真性感……你是想用我的小穴，还是想让我长出大鸡巴来操你？
 			#IF(pc.getSexCount(lilaya)>0)
-				 You know, there aren't many humans who can say that they've fucked both an elder lilin <i>and</i> her recognised daughter!
+				你知道的，没有多少人敢说自己上过莉琳长老<i>和</i>她所承认的女儿！
 			#ENDIF)]
 		#ELSE
-			 [lyssieth.speech(Now, I can do this without having sex, but where's the fun in that?
+			[lyssieth.speech(我可以在不做的情况下给你注入精华，但是那有什么意思呢？
 			#IF(pc.getSexCount(lilaya)>0)
-				 You know, there aren't many people who can say that they've fucked both an elder lilin <i>and</i> her recognised daughter!
+				你知道的，没有多少人敢说自己上过莉琳长老<i>和</i>她认证的女儿的！
 			#ENDIF)]
 		#ENDIF
 	</p>
 	<p>
-		You wonder if you should accept Lyssieth's proposition, or tell her to get it done without having sex...
+		你不知道是应该接受莉西丝的提议，还是告诉她你想用不做爱的方式完成这件事……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_RETURN_DECLINE_SEX_HUMAN"><![CDATA[
 	<p>
 		#IF(pc.hasStatusEffect(SE_FETISH_PURE_VIRGIN))
-			There's absolutely no way that you're going to risk losing your precious virginity, and so after quickly disentangling yourself from Lyssieth's clutches, you say, [pc.speech(I'm not going to have sex, ok? I'm saving myself for someone special, so can't we do this another way?)]
+			你绝对不可能冒失去宝贵贞操的风险去做这种事，于是你挣脱莉西丝的手，说道，[pc.speech(我们不做爱，好吗？我想把自己留给一个特别的人，用其他办法不行吗？)]
 		#ELSE
-			You really don't want to have sex with Lyssieth, and so, disentangling yourself from her clutches, you say, [pc.speech(I don't want to have sex, ok? Can't we do this another way?)]
+			你不想和莉西丝做爱，于是你挣脱莉西丝的手，说道，[pc.speech(我们不做爱，好吗？用其他办法不行吗？)]
 		#ENDIF
 	</p>
 	<p>
-		[lyssieth.speech(Aww...)] Lyssieth whines, pouting at you as she steps over to sit down on the surface of her desk. [lyssieth.speech(I suppose I don't <i>really</i> need to orgasm for this to work; I just wanted to have some fun...)]
+		[lyssieth.speech(啊……)]莉西丝一边抱怨着，一边撅着嘴看着你。她走过去，坐在她的办公桌桌面上，[lyssieth.speech(也行吧，也<i>不是非做不可</i>，可是那就没什么意思了……)]
 	</p>
 	<p>
-		[pc.speech(Well, that's a relief,)] you say, happy to discover that you're not going to be forced to have sex with Lilaya's mother. [pc.speech(Shall we get this done, then?)]
+		[pc.speech(那就好，)]你发现自己不会被迫与莉莱雅的母亲发生性关系，这让你很高兴，[pc.speech(那，就用不做爱的办法吧？)]
 	</p>
 	<p>
-		[lyssieth.speech(Ok...)] Lyssieth says, still pouting for a moment, before letting out a long, deep sigh and closing her eyes. [lyssieth.speech(Sit down and relax. This will be done in a flash...)]
+		[lyssieth.speech(好吧……)]莉西丝撅着嘴，然后长叹了一口气，闭上了眼睛。[lyssieth.speech(坐下，放松，马上就好了……)]
 	</p>
 	<p>
-		Doing as instructed, you sit down on one of the chairs before Lyssieth's desk, and, closing your eyes, you try to relax. As you let out a sigh of your own, you start to feel a strange warmth pulsating all around you. Before you can react to this feeling, a huge surge of energy jolts throughout your entire body, causing you to slip out of consciousness...
+		按照指示，你在莉西丝办公桌前的椅子上坐下，闭上眼睛，试着放松。当你发出一声喘息时，你开始感觉到一种奇怪的温暖在你周围涌动。还没等你对这种感觉做出反应，一股巨大的能量涌入你的躯体，冲击着你的全身，致使你失去了意识……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENDING_RETURN_DECLINE_SEX"><![CDATA[
 	<p>
 		#IF pc.hasStatusEffect(SE_FETISH_PURE_VIRGIN)
 		#THEN
-			There's absolutely no way that you're going to risk losing your precious virginity, and, disentangling yourself from Lyssieth's clutches, you say, [pc.speech(Let's do it without sex, ok? I'm saving myself for someone special...)]
+			你绝对不可能冒失去宝贵贞操的风险去做这种事，于是你挣脱莉西丝的手，说道，[pc.speech(我们不做爱，好吗？我想把自己留给一个特别的人……)]
 		#ELSE
-			You really don't want to have sex with Lyssieth, and so, disentangling yourself from her clutches, you say, [pc.speech(Let's do it without sex, ok?)]
+			你不想和莉西丝做爱，于是你挣脱莉西丝的手，说道，[pc.speech(我们不做爱，好吗？)]
 		#ENDIF
 	</p>
 	<p>
-		[lyssieth.speech(Aww...)] Lyssieth whines, pouting at you as she steps over to sit down on the surface of her desk. [lyssieth.speech(I suppose that's fine. We don't have to have sex if you don't want to...)]
+		[lyssieth.speech(啊……)]L莉西丝一边抱怨着，一边撅着嘴看着你。她走过去，坐在她的办公桌桌面上，[lyssieth.speech(也行吧，也不是非做不可……)]
 	</p>
 	<p>
-		[pc.speech(Good,)] you say, happy to discover that you're not going to be forced to have sex with Lilaya's mother. [pc.speech(Shall we get this done, then?)]
+		[pc.speech(那就好，)]你发现自己不会被迫与莉莱雅的母亲发生性关系，这让你很高兴，[pc.speech(那，就用不做爱的办法吧？)]
 	</p>
 	<p>
-		[lyssieth.speech(Ok...)] Lyssieth says, still pouting for a moment, before letting out a long, deep sigh and closing her eyes. [lyssieth.speech(Sit down and relax. This will be done in a flash...)]
+		[lyssieth.speech(好吧……)]莉西丝撅着嘴，然后长叹了一口气，闭上了眼睛。[lyssieth.speech(坐下，放松，马上就好了……)]
 	</p>
 	<p>
-		Doing as instructed, you sit down on one of the chairs before Lyssieth's desk, and, closing your eyes, you try to relax. As you let out a sigh of your own, you start to feel a strange warmth pulsating all around you. Before you can react to this feeling, a huge surge of energy jolts throughout your entire body, causing you to slip out of consciousness...
+		按照指示，你在莉西丝办公桌前的椅子上坐下，闭上眼睛，试着放松。当你发出一声喘息时，你开始感觉到一种奇怪的温暖在你周围涌动。还没等你对这种感觉做出反应，一股巨大的能量涌入你的躯体，冲击着你的全身，致使你失去了意识……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_PUSSY"><![CDATA[
 	<p>
-		[pc.speech(I want your pussy,)] you say, not too fond of the idea of having Lyssieth grow a cock.
+		[pc.speech(我想要你的小穴。)]你不太喜欢让莉西丝变出一根鸡巴来操你，这种玩法对你多少有点刺激了。
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.getRace()==RACE_HUMAN)
-			[lyssieth.speech(Mmm, just make sure to cum inside, dear,)] Lyssieth giggles, before stepping forwards and running her hands down over your body. [lyssieth.speech(My womb's made for human seed, and I can't wait for you to give me a nice big creampie!)]
+			[lyssieth.speech(嗯，一定要射进来哦，亲爱的！)]莉西丝笑着靠近你，对你上下其手，[lyssieth.speech(我的子宫因为渴望人类的种子正在隐隐作痛，快点内射我，让我爽一爽吧！)]
 		#ELSE
-			[lyssieth.speech(Mmm, yes, I prefer using my pussy as well,)] Lyssieth giggles, before stepping forwards and running her hands down over your body. [lyssieth.speech(Now, come on, fuck me!)]
+			[lyssieth.speech(嗯，好啊，我也喜欢用小穴来做，)]莉西丝笑着靠近你，对你上下其手，[lyssieth.speech(现在上吧，我是指，上了我吧！)]
 		#ENDIF
 	</p>
 	<p>
-		With that, Lyssieth leans forwards and plants a deep, passionate kiss on your [pc.lips+]. Reaching around to grip her [lyssieth.ass+], you eagerly return her kiss, and get ready to give her the fucking she desires...
+		就这样，莉西丝向前倾身，在你[pc.lips+]上深情一吻。你伸手握住她[lyssieth.ass+]，热切地回吻她，准备好来满足她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_COCK"><![CDATA[
 	<p>
-		[pc.speech(I want your cock,)] you say, preferring to be on the receiving end.
+		[pc.speech(我想要你的肉棒。)]你更喜欢当被动的一方。
 	</p>
 	<p>
 		#IF(pc.hasVagina() && pc.getRace()==RACE_HUMAN)
-			[lyssieth.speech(Mmm, in which case, I must warn you that I prefer finishing inside, dear,)] Lyssieth giggles, before stepping forwards and running her hands down over your body. [lyssieth.speech(My seed is made for human wombs, and I can't wait to give you a nice big creampie!)]
+			[lyssieth.speech(如果是这样的话，我必须提醒你，我更喜欢射在里面，亲爱的。)]莉西丝笑着凑了上来，对你上下其手，[lyssieth.speech(我好想在人类的子宫里播撒我的种子啊，现在，让我在你的里面射个一塌糊涂吧！)]
 		#ELSE
-			[lyssieth.speech(Mmm, in which case, I must warn you that I prefer finishing inside, dear,)] Lyssieth giggles, before stepping forwards and running her hands down over your body. [lyssieth.speech(I just love the look of a nice big creampie!)]
+			[lyssieth.speech(如果是这样的话，我必须提醒你，我更喜欢射在里面，亲爱的。)]莉西丝笑着凑了上来，对你上下其手，[lyssieth.speech(那些被射得满满当当，溢出精液的小穴，看起来美极了，不是吗？)]
 		#ENDIF
 	</p>
 	<p>
-		With that, Lyssieth leans forwards and plants a deep, passionate kiss on your [pc.lips+]. Reaching around to grip her [lyssieth.ass+], you eagerly return her kiss, and get ready to receive a good, hard fucking...
+		就这样，莉西丝向前倾身，在你[pc.lips+]上留下了一个深情的吻。你伸手握住她[lyssieth.ass+]，热切地回吻她，并准备好被她狠狠地干一顿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POWER_VISION"><![CDATA[
 	<p>
-		[genericFemale.speech(Lyssieth, we have Valoel cornered in the throne room,)] your lilin sister, Orialyss, informs you. [genericFemale.speech(What shall we do with the humans?)]
+		[genericFemale.speech(莉西丝，我们把瓦洛埃尔堵在了王座大厅里。)]你的莉琳姐妹奥莉丝告诉你，[genericFemale.speech(那些人类怎么处置？)]
 	</p>
 	<p>
-		[lyssieth.speechNoEffects(Restrain them,)] you command, sweeping past the scarlet-skinned succubus as you set off down the palace's hallway. [lyssieth.speechNoEffects(Their treachery cannot go unpunished. I will see to them later.)]
+		[lyssieth.speechNoEffects(控制住他们，)]你一边命令着，一边同绯红皮肤的魅魔擦肩而过，向宫殿的走廊走去。[lyssieth.speechNoEffects(他们的背叛必将遭到惩罚。我稍后就去处理他们。)]
 	</p>
 	<p>
-		Orialyss falls in behind you, following in your footsteps as you make your way to where your other lilin subordinates have trapped your angelic foe. With Valoel soon to be captured, you'll finally be able to return to the comfort of your human harem, and, with that thought in mind, you can't help but grin as you step over the shattered remains of the throne room's doors and come face-to-face with the archangel himself.
+		奥莉丝转过身，跟随着你的脚步，向其他莉琳困住你那天使敌人的地方走去。瓦洛埃尔很快就会被抓获，你终于可以回到舒适的人类后宫了。想到这一点，当你跨过王座大厅残破的大门，与大天使长本人面对面时，你不禁笑出声来。
 	</p>
 	<p>
-		You feel your heart skip a beat as you see that he looks almost identical to a human, and an incredibly hot human at that. Light-skinned, with blonde hair and blue eyes, the archangel's masculine, handsome face turns this way and that as he prepares to defend from an attack coming from any direction. Letting your eyes wander down, you see that his tunic has been half-torn open, revealing his rippling abs and muscular chest. Pressed up against the wall behind him is the only visible mark of his angelic nature, taking the form of a pair of huge, white-feathered wings. They look a little tattered from his struggle with your sisters, and you're surprised to feel a pang of sympathy as you see the fear in his eyes.
+		他几乎就是人类的模样，而且身材格外火辣，你看向他，不由得心跳加速。天使长皮肤白嫩，金发碧眼，阳刚帅气的脸左顾右盼，准备好同时抵御来自两侧的攻击。你的视线下移，看到他的外衣已经被撕开了一半，露出了那线条起伏的腹肌和肌肉发达的胸膛。他的那对巨大的白色翅膀贴在他身后的墙上，已经在他与你们姐妹的搏斗中已经变得千疮百孔，这是他作为天使唯一的标志。他的眼神中折射出前所未有的恐惧，你不由得有点同情他。
 	</p>
 	<p>
-		Shaking your head clear of such unwanted thoughts, you take note of the fact that ten of your sisters are keeping Valoel backed into his corner of the room, and by his side, he has three of his human companions. Around twenty incapacitated humans litter the floor, and you playfully bite your lip as you imagine the fun that you'll be able to have with them later on. Stepping up alongside your sisters, you carelessly sweep your hand to one side, causing the trio of humans before you to be hurled some distance across the room, where they're instantly set upon and restrained by Orialyss.
+		你摇了摇头，把这些多余的想法抛到脑后，注意到你的十个姐妹正把瓦洛埃尔围堵在房间的角落里，而在他身边，还有三个人类同伴。大约二十个失去行动能力的人类散落在地上，你一边想象着待会儿和他们颠鸾倒凤的乐趣，一边兴奋地咬着嘴唇。你与姐妹们并肩走上前去，随意地挥了下手，你面前的三个人类便被丢出了房间，在那里，他们立刻被奥莉丝抓住绑起来。
 	</p>
 	<p>
-		[genericMale.speech(Stop it!)] Valoel weakly shouts, clutching his side in pain, [genericMale.speech(Just spare my friends, and I'll surrender!)]
+		[genericMale.speech(停下！)]瓦洛伊尔虚弱地喊道，他一手抓住自己的胸口，语气里满是痛苦，[genericMale.speech(我可以投降，前提是放了我的朋友！)]
 	</p>
 	<p>
-		[lyssieth.speechNoEffects(Ha... Hahaha!)] you can't help but burst out laughing at the foolish archangel's request, and, seeing the hilarity of a defeated foe trying to make demands of you, the ten lilin start jeering and snickering at Valoel.
+		[lyssieth.speechNoEffects(哈……哈哈哈哈！)]听到这个愚蠢的天使长的要求，你不禁大笑，十来个莉琳跟在你后面，开始嘲笑瓦洛埃尔，对这个可笑战败者的谈判嗤之以鼻。
 	</p>
 	<p>
-		[genericMale.speech(Foul creatures!)] the archangel shouts, and with surprising speed, he lunges directly at you, sword in hand.
+		[genericMale.speech(贱人！)]大天使喊道，并以惊人的速度，手持长剑直接向你扑来。
 	</p>
 	<p>
-		Although an immensely powerful being in his own right, he's no match for a natural-born daughter of Lilith herself, and you let out a patronising 'aww' as you easily sidestep his attack. Grabbing him by the neck, you use a blast of arcane force to swiftly disarm him, and, pulling him into your embrace, you tease, [lyssieth.speechNoEffects(My, my, what a spirited thing you are! My sisters and I will have a lot of fun with you...)]
+		虽然他力量强大，但并不是莉莉丝亲生女儿的对手，当你轻松躲过他的攻击时，不禁“啊”了一声表示赞叹。你掐住他的脖子，用一股奥术力量迅速解除了他的武装，然后把他拉进怀里，调戏着他，[lyssieth.speechNoEffects(天哪，你真是个活泼可爱的小家伙！我和姐妹们一定会和你玩得很开心的……)]
 	</p>
 	<p>
-		At that moment, the other lilin in the room suddenly turn to face the doorway through which you entered, and without a moment's hesitation they all drop down onto one knee. [genericFemale.speech([style.glowArcane(Most impressive, Lyssieth. As a reward, you may keep that creature as your pet.)])]
+		这时，房间里的其他所有莉琳突然转过身来，面对着大厅门口，迅速单膝跪地。[genericFemale.speech([style.glowArcane(干得不错，莉西丝，作为奖励，你可以把那家伙当宠物养着。)])]
 	</p>
 	<p>
-		Hearing the voice of your mother behind you, you turn to face her. A vague shape of a naked woman, more beautiful than any you could ever imagine, is the last thing you see before starting to come back to your senses...
+		听到母亲在身后的声音，你转过身来面对她。在你开始恢复知觉之前，你最后看到的是一个模糊的裸体女人的形状，她比你所能想象的任何女人都要美丽……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POWER_EXPLANATION"><![CDATA[
 	<p>
-		[lyssieth.speech([pc.Name]? Are you ok? [pc.Name]?)] you hear Lyssieth calling from somewhere far away. [lyssieth.speech([pc.Name]! Wake up!)]
+		[lyssieth.speech([pc.Name]？你还好吗？[pc.Name]？)]你在恍恍惚惚间听见了莉西丝的声音，[lyssieth.speech([pc.Name]！醒醒！)]
 	</p>
 	<p>
-		Her voice suddenly increases in volume, and you open your eyes to discover that you're lying on the floor, with your head resting on Lyssieth's lap. [lyssieth.speech(Thank goodness! You're alright!)] She exclaims, relieved to see that you've regained consciousness.
+		她的音量提高了，你睁开眼睛，发现自己躺在地上，头枕在莉西丝的腿上。[lyssieth.speech(谢天谢地，你看起来没事。)]看到你恢复了意识，她松了一口气。
 	</p>
 	<p>
-		[pc.speech(Ow, my head,)] you complain, reaching up to rub at your temple.
+		[pc.speech(哦，我的头……)]你抱怨着，伸手揉了揉太阳穴。
 	</p>
 	<p>
-		[lyssieth.speech(Don't worry, you didn't knock it on anything,)] Lyssieth reassures you, [lyssieth.speech(I didn't expect your aura to be able to take so much essence, and I think I may have overloaded you a little. As I shared my power with you, you suddenly fainted, but I managed to catch you in time!)]
+		[lyssieth.speech(别担心，你没有撞到任何东西，)]莉西丝让你放心，[lyssieth.speech(我没想到你的灵气能吸收这么多精华，我想，我可能有点做过头了。当我向你分享我的力量时，你突然晕倒了，好在我及时接住了你！)]
 	</p>
 	<p>
-		[pc.speech(Thanks,)] you say, breathing a sigh of relief as you feel your splitting headache quickly fading away.
+		[pc.speech(谢了，)]当你感到头痛欲裂的感觉迅速消失时，你长长地舒了一口气。
 	</p>
 	<p>
-		[lyssieth.speech(I'm sorry for not anticipating this,)] Lyssieth says, [lyssieth.speech(You just lie here on my lap until you feel better, ok?)]
+		[lyssieth.speech(我很抱歉，没有预料到这一点。)]莉西丝说，[lyssieth.speech(躺在我腿上休息会，好吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POWER_EXPLANATION_LAP"><![CDATA[
 	<p>
-		Doing as Lyssieth suggests, you continue to use her lap as a pillow while you recover. Her asymmetrical skirt has shifted to one side, leaving one of her legs completely bare, and as such, you're able to feel the soft skin of her thigh on your cheek as you lie there. Deciding to let her know about what you saw, you say, [pc.speech(I had a strange vision while I was passed out. I was seeing things from your perspective, when you and your sisters captured the archangel Valoel.)]
+		你按照莉西丝的建议，继续把枕在她的大腿上。她不对称的裙子移到了一边，使得一条腿完全裸露出来，因此，当你享受着她的膝枕时，可以感觉到她的大腿柔软的皮肤贴在你的脸颊上。你决定和她说说你所看到的一切，[pc.speech(我昏迷的时候看到了一个奇怪的幻象，我从你的视角看到了一些事情，你和你的姐妹们抓住了大天使瓦洛埃尔。)]
 	</p>
 	<p>
-		[lyssieth.speech(I certainly didn't expect you to witness my memories,)] Lyssieth sighs, [lyssieth.speech(But I have nothing to hide. As I told you earlier, my sisters and I captured all of the archangels before we were imprisoned in the mirror. The only one that got away was their leader, Samael.)]
+		[lyssieth.speech(我没料到这会让你窥探到我的记忆，)]莉西丝叹了口气，[lyssieth.speech(但我没什么好隐瞒的，就像我之前告诉你的，在我和我的姐妹们在被关进镜子之前，我们抓住了所有的天使长，唯一逃脱的是他们的首领，萨麦尔。)]
 	</p>
 	<p>
-		[pc.speech(And you still haven't found him?)] you ask.
+		[pc.speech(你们现在还没找到他吗？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(Mother is still searching, but no, he's out there somewhere, hiding,)] Lyssieth answers. [lyssieth.speech(But anyway, the essence infusion was far more successful than I imagined it could be, and now that you seem to be feeling better, I should let you know how it's changed your aura.)]
+		[lyssieth.speech(妈妈还在找，但一无所获，他躲在别的地方。)]莉西丝回答道，[lyssieth.speech(但不管怎么说，精华的注入比我想象的要成功得多，现在你似乎感觉好多了，我应该让你知道它是如何改变你的灵气的。)]
 	</p>
 	<p>
-		[pc.speech(I think I can feel it,)] you say, [pc.speech(It feels as though I have a lot more energy available to me now.)]
+		[pc.speech(我隐隐约约能感受到，)]你说，[pc.speech(我现在的精力充沛多了。)]
 	</p>
 	<p>
-		[lyssieth.speech(Yes, that was the expected effect, along with immunity to the 'Lilith's Command' spell which we lilin are able to cast,)] Lyssieth replies, [lyssieth.speech(But I felt something else changing within your aura. As I channelled my essence into it, I detected a part of it <i>unlocking</i>, in a very similar manner to how a person's aura changes when...)]
+		[lyssieth.speech(是的，这就是效果之一，同时，你还能免疫‘莉莉丝之律令’法术，而我们莉琳都会这个。)]莉西丝继续解释，[lyssieth.speech(但我感觉到你的灵气在发生变化。当我向你的灵气中注入我的精气时，我发现你灵气的一部分正在<i>解锁</i>，就像一个人的灵气在发生变化时……)]
 	</p>
 	<p>
-		Lyssieth's voice trails off mid-sentence, and, realising that something's off, you push yourself up onto your knees and turn to face her. [pc.speech(When what?)]
+		莉西丝的话音刚落，你就意识到有些不对劲，于是撑起身子跪在地上，转身面对她。[pc.speech(什么？)]
 	</p>
 	<p>
-		[lyssieth.speech(Well, when I corrupt someone into a demon,)] she replies, [lyssieth.speech(I haven't corrupted anyone like that for years now, as I hate doing it, but I remember exactly how it feels. Yours felt different, however, and my intuition is telling me that I somehow gave you a fraction of my transformative abilities.)]
+		[lyssieth.speech(嗯，就像我试图把人腐化为恶魔时的那种变化。)]她继续说，[lyssieth.speech(我已经很多年没有像这样腐化过别人了，我讨厌这样做，但我清楚地记得那种感觉。但你的感觉不一样，我的直觉告诉我，不知怎么的，我似乎给了你一小部分我的转化能力。)]
 	</p>
 	<p>
-		[pc.speech(Wait, so I can transform myself at will, like a demon?)] you ask.
+		[pc.speech(等等，所以我可以变成恶魔吗？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(No, but if you <i>were</i> a demon, I think that you'd be able to shift into a human form, exactly as I've done right now. Also, the power of the essence I've just granted you should also be significantly stronger if you were a demon. I imagine that when you gain the essences of my sisters, you'll gain more and more transformative powers, until eventually you become a fully-fledged lilin yourself. Well, if you were already a demon, that is...)]
+		[lyssieth.speech(不，但如果你<i>已经是</i>一个恶魔，我想你能变成人形，就像我现在做的一样。另外，如果你是恶魔，我刚刚赐予你的精华的力量应该也会大大增强。我想，当你获得我姐妹们的精华后，你会获得越来越多的转化能力，直到最后你自己成为一个完全成熟的莉琳。好吧，我是说，如果你已经是一个恶魔的话……)]
 	</p>
 	<p>
-		[pc.speech(But I'm not a demon, am I?)] you ask, [pc.speech(Your power definitely didn't change me like that, did it? I mean, I certainly don't feel like I've turned into a demon, but just to make sure...)]
+		[pc.speech(不过，我现在还不是，对吧？)]你问道，[pc.speech(你的力量绝对没有把我变成那样，对吧？我的意思是，我当然不觉得我变成了一个恶魔， 但只是为了确保……)]
 	</p>
 	<p>
-		[lyssieth.speech(Oh, no, trust me, you'd know if you were a demon,)] Lyssieth softly laughs, before pushing herself up onto her feet. You mimic her movement, and stand up before her as she continues, [lyssieth.speech(Please don't ask me to turn you into one, either. I... I really hate doing it, you see... And also if I were to turn you into a demon, then Lilaya would certainly never forgive me.)]
+		[lyssieth.speech(啊，别这么说，相信我，如果你变成了恶魔，你自己会很清楚。)]莉西丝轻轻一笑，然后站了起来。你和她一样，站在她面前，听她继续说下去，[lyssieth.speech(也请不要让我把你变成恶魔。我……真的很讨厌这么做，你看……如果我把你变成恶魔，莉莱雅肯定不会原谅我的。)]
 	</p>
 	<p>
-		[pc.speech(Ah, yes, she does seem to want to be a full demon,)] you recall.
+		[pc.speech(啊，是这么回事，她似乎很想变成一个完全的恶魔。)]你回忆着。
 	</p>
 	<p>
-		[lyssieth.speech(She doesn't understand. I don't want to corrupt her like that, and take away what humanity she has left,)] Lyssieth explains, [lyssieth.speech(but anyway, you seem to be fully recovered now, [pc.name]. I'm sorry for thrusting all this responsibility upon you, but you really are the only person who can stop Lilith from wiping out all of humanity. I need to return to fetch [siren.name] now, so if you could please excuse me. Oh, and please do come back at any time if you have more questions,
+		[lyssieth.speech(她不明白。我不想让她就这样堕落下去，失去她仅存的人性，)]莉西丝解释道，[lyssieth.speech(不管怎么说，你看起来好多了，[pc.name]。我很抱歉把这些责任推给你，但你确实是唯一能阻止莉莉丝毁灭全人类的人。我现在要回去接[siren.name]了，非常抱歉。如果你还有其他问题，请随时回来找我，
 		#IF pc.getSexCount(lyssieth)>0
-		#THEN or if you want to have some more sex... There'll be no blacking out next time!
-		#ELSE or if you want to have some sex...
+		#THEN或者如果你还想做爱……下次，我保证不会让你再晕倒了！
+		#ELSE或者你想做的话……
 		#ENDIF)]
 	</p>
 	<p>
-		[pc.speech(Ok, I'll be sure to return,)] you say, heading over to the door of Lyssieth's office.
+		[pc.speech(好的，我肯定会回来的。)]你说着，走向莉西丝办公室的门口。
 	</p>
 	<p>
-		[lyssieth.speech(I wish I could do more to help you, but with Lilith keeping a close watch on my movements, I can't do much,)] Lyssieth says, [lyssieth.speech(I doubt you've heard of them, as the general population is kept from owning any type of long-range communication device, but I'll give Lilaya a resonance stone. She can use it to contact me at any time, so if you want to visit me without walking all the way down here, just let Lilaya know, and I'll quickly teleport to her lab and bring you back. Anyway, goodbye for now!)]
+		[lyssieth.speech(我希望能帮你更多，但莉莉丝一直密切监视着我的行动，我也无能为力，)]莉西丝说，[lyssieth.speech(我想你应该没听说过，因为一般人无法拥有任何远程通讯设备，但我会给莉莱雅一块回声石。她可以随时用这东西来联系我，所以如果你想来看我，不用大老远跑到这里来，只要告诉莉莱雅一声，我就会迅速传送到她的实验室，然后把你带回来。总之，再见了！)]
 	</p>
 	<p>
-		With that, Lyssieth disappears in a flash of purple light. Not wanting to still be loitering around when she returns, you push open the door and step out into the adjoining waiting room...
+		就这样，莉西丝消失在紫色的闪光中。你不想一直在这里站着，于是推开门，走进旁边的等待室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POWER_EXPLANATION_STAND_UP"><![CDATA[
 	<p>
-		Not feeling comfortable about using Lyssieth's lap as a pillow, you tell her that you're feeling better, before standing up and turning to face her as she does the same. Deciding to let her know about what you saw, you say, [pc.speech(I had a strange vision while I was passed out. I was seeing things from your perspective, when you and your sisters captured the archangel Valoel.)]
+		你觉得莉西丝的大腿枕得不够舒服，于是告诉她你感觉好多了，然后站起来，转过身面对她。你决定让她知道你所看到的一切，[pc.speech(我昏迷的时候看到了一个奇怪的幻象，我从你的视角看到了一些事情，你和你的姐妹们抓住了大天使瓦洛埃尔。)]
 	</p>
 	<p>
-		[lyssieth.speech(I certainly didn't expect you to witness my memories,)] Lyssieth sighs, [lyssieth.speech(But I have nothing to hide. As I told you earlier, my sisters and I captured all of the archangels before we were imprisoned in the mirror. The only one that got away was their leader, Samael.)]
+		[lyssieth.speech(我没料到这会让你窥探到我的记忆，)]莉西丝叹了口气，[lyssieth.speech(但我没什么好隐瞒的，就像我之前告诉你的，在我和我的姐妹们在被关进镜子之前，我们抓住了所有的天使长，唯一逃脱的是他们的首领，萨麦尔。)]
 	</p>
 	<p>
-		[pc.speech(And you still haven't found him?)] you ask.
+		[pc.speech(你们现在还没找到他吗？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(Mother is still searching, but no, he's out there somewhere, hiding,)] Lyssieth answers. [lyssieth.speech(But anyway, the essence infusion was far more successful than I imagined it could be, and now that you seem to be feeling better, I should let you know how it's changed your aura.)]
+		[lyssieth.speech(妈妈还在找，但一无所获，他躲在别的地方。)]莉西丝回答道，[lyssieth.speech(但不管怎么说，精华的注入比我想象的要成功得多，现在你似乎感觉好多了，我应该让你知道它是如何改变你的灵气的。)]
 	</p>
 	<p>
-		[pc.speech(I think I can feel it,)] you say, [pc.speech(It feels as though I have a lot more energy available to me now.)]
+		[pc.speech(我隐隐约约能感受到，)]你说，[pc.speech(我现在的精力充沛多了。)]
 	</p>
 	<p>
-		[lyssieth.speech(Yes, that was the expected effect, along with immunity to the 'Lilith's Command' spell which we lilin are able to cast,)] Lyssieth replies, [lyssieth.speech(But I felt something else changing within your aura. As I channelled my essence into it, I detected a part of it <i>unlocking</i>, in a very similar manner to how a person's aura changes when...)]
+		[lyssieth.speech(是的，这就是效果之一，同时，你还能免疫‘莉莉丝之律令’法术，而我们莉琳都会这个。)]莉西丝继续解释，[lyssieth.speech(但我感觉到你的灵气在发生变化。当我向你的灵气中注入我的精气时，我发现你灵气的一部分正在<i>解锁</i>，就像一个人的灵气在发生变化时……)]
 	</p>
 	<p>
-		Lyssieth's voice trails off mid-sentence, and, realising that something's off, you ask, [pc.speech(When what?)]
+		莉西丝的话音刚落，你就意识到有些不对劲，于是追问她，[pc.speech(什么？)]
 	</p>
 	<p>
-		[lyssieth.speech(Well, when I corrupt someone into a demon,)] she replies, [lyssieth.speech(I haven't corrupted anyone like that for years now, as I hate doing it, but I remember exactly how it feels. Yours felt different, however, and my intuition is telling me that I somehow gave you a fraction of my transformative abilities.)]
+		[lyssieth.speech(嗯，就像我试图把人腐化为恶魔时的那种变化。)]她继续说，[lyssieth.speech(我已经很多年没有像这样腐化过别人了，我讨厌这样做，但我清楚地记得那种感觉。但你的感觉不一样，我的直觉告诉我，不知怎么的，我似乎给了你一小部分我的转化能力。)]
 	</p>
 	<p>
-		[pc.speech(Wait, so I can transform myself at will, like a demon?)] you ask.
+		[pc.speech(等等，所以我可以变成恶魔吗？)]你问道。
 	</p>
 	<p>
-		[lyssieth.speech(No, but if you <i>were</i> a demon, I think that you'd be able to shift into a human form, exactly as I've done right now. I imagine that when you gain the essences of my elder lilin sisters, you'll gain more and more transformative powers, until eventually you become a fully-fledged lilin yourself. Well, if you were already a demon, that is...)]
+		[lyssieth.speech(不，但如果你<i>已经是</i>一个恶魔，我想你能变成人形，就像我现在做的一样。另外，如果你是恶魔，我刚刚赐予你的精华的力量应该也会大大增强。我想，当你获得我姐妹们的精华后，你会获得越来越多的转化能力，直到最后你自己成为一个完全成熟的莉琳。好吧，我是说，如果你已经是一个恶魔的话……)]
 	</p>
 	<p>
-		[pc.speech(But I'm not a demon, am I?)] you ask, [pc.speech(Your power definitely didn't change me like that, did it? I mean, I certainly don't feel like I've turned into a demon, but just to make sure...)]
+		[pc.speech(不过，我现在还不是，对吧？)]你问道，[pc.speech(你的力量绝对没有把我变成那样，对吧？我的意思是，我当然不觉得我变成了一个恶魔， 但只是为了确保……)]
 	</p>
 	<p>
-		[lyssieth.speech(Oh, no, trust me, you'd know if you were a demon,)] Lyssieth softly laughs, [lyssieth.speech(Please don't ask me to turn you into one, either. I... I really hate doing it, you see... And also if I were to turn you into a demon, then Lilaya would certainly never forgive me.)]
+		[lyssieth.speech(啊，别这么说，相信我，如果你变成了恶魔，你自己会很清楚。)]莉西丝轻轻一笑，然后站了起来。你和她一样，站在她面前，听她继续说下去，[lyssieth.speech(也请不要让我把你变成恶魔。我……真的很讨厌这么做，你看……如果我把你变成恶魔，莉莱雅肯定不会原谅我的。)]
 	</p>
 	<p>
-		[pc.speech(Ah, yes, she does seem to want to be a full demon,)] you recall.
+		[pc.speech(啊，是这么回事，她似乎很想变成一个完全的恶魔。)]你回忆着。
 	</p>
 	<p>
-		[lyssieth.speech(She doesn't understand. I don't want to corrupt her like that, and take away what humanity she has left,)] Lyssieth explains, [lyssieth.speech(But anyway, you seem to be fully recovered now, [pc.name]. I'm sorry for thrusting all this responsibility upon you, but you really are the only person who can stop Lilith from wiping out all of humanity. I need to return to fetch [siren.name] now, so if you could please excuse me. Oh, and please do come back at any time if you have more questions,
+		[lyssieth.speech(她不明白。我不想让她就这样堕落下去，失去她仅存的人性，)]莉西丝解释道，[lyssieth.speech(不管怎么说，你看起来好多了，[pc.name]。我很抱歉把这些责任推给你，但你确实是唯一能阻止莉莉丝毁灭全人类的人。我现在要回去接[siren.name]了，非常抱歉。如果你还有其他问题，请随时回来找我，
 		#IF pc.getSexCount(lyssieth)>0
-		#THEN or if you want to have some more sex... There'll be no blacking out next time!
-		#ELSE or if you want to have some sex...
+		#THEN或者如果你还想做爱……下次，我保证不会让你再晕倒了！
+		#ELSE或者你想做的话……
 		#ENDIF)]
 	</p>
 	<p>
-		[pc.speech(Ok, I'll be sure to return,)] you say, heading over to the door of Lyssieth's office.
+		[pc.speech(好的，我肯定会回来的。)]你说着，走向莉西丝办公室的门口。
 	</p>
 	<p>
-		[lyssieth.speech(I wish I could do more to help you, but with Lilith keeping a close watch on my movements, I can't do much,)] Lyssieth says, [lyssieth.speech(I doubt you've heard of them, as the general population is kept from owning any type of long-range communication device, but I'll give Lilaya a resonance stone. She can use it to contact me at any time, so if you want to visit me without walking all the way down here, just let Lilaya know, and I'll quickly teleport to her lab and bring you back. Anyway, goodbye for now!)]
+		[lyssieth.speech(我希望能帮你更多，但莉莉丝一直密切监视着我的行动，我也无能为力，)]莉西丝说，[lyssieth.speech(我想你应该没听说过，因为一般人无法拥有任何远程通讯设备，但我会给莉莱雅一块回声石。她可以随时用这东西来联系我，所以如果你想来看我，不用大老远跑到这里来，只要告诉莉莱雅一声，我就会迅速传送到她的实验室，然后把你带回来。总之，再见了！)]
 	</p>
 	<p>
-		With that, Lyssieth disappears in a flash of purple light. Not wanting to still be loitering around when she returns, you push open the door and step out into the adjoining waiting room...
+		就这样，莉西丝消失在紫色的闪光中。你不想一直在这里站着，于是推开门，走进旁边的等待室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="END_SIREN"><![CDATA[
 	<p>
-		Finally getting a moment to yourself, the revelation that this world is in fact your own has time to sink in. Although Lilaya has the same soul, and bears resemblance to your aunt in many ways, you realise that you're never going to see Lily again. Walking over to the nearest sofa, you collapse down onto it and rest your head in your hands.
+		你终于有时间思考一下这一切了。你终于明白了，这个世界其实就是你自己的世界，虽然莉莱雅和你的姨妈拥有同一个灵魂，而且她们在很多方面都非常相似，但你意识到你的的确确再也见不到莉莉了。你走到最近的沙发前，倒在沙发上，双手抱住了头。
 	</p>
 	<p>
-		You aren't sure for how long you sit there for, thinking about things, but before you know it, you hear the door to Lyssieth's office open, before the familiar voice of [siren.name] calls out, [siren.speech(Oh, [pc.name], you're still here? Hey, are you ok?)]
+		你不知道自己在那里坐了多久，想了多久，但在你回过神之前，你听到了莉西丝办公室的门打开的声音，然后，你听到了[siren.name]那熟悉的声音，[siren.speech(哦，[pc.name]，你还在这？啊，你，你还好吧？)]
 	</p>
 	<p>
-		Sitting back upright, you reply, [pc.speech(Yeah, just a lot to think about, I suppose.)]
+		你坐了起来，[pc.speech(还好，只是在想些乱七八糟的事情。)]
 	</p>
 	<p>
 		#IF siren.getAffection(pc)<-25
 		#THEN
-			[siren.speech(You know, I still haven't forgiven you for abandoning me in my citadel like that,)] [siren.name] says, walking back over to her desk and sitting down in her chair, [siren.speech(And no matter what, you're still my arch nemesis! But... Thanks for helping mum like this... I guess you can't be too bad after all...)]
+			[siren.speech(你知道吗，我还没原谅你把我抛弃在城堡里这件事，)][siren.name]说着，走回办公桌，坐在椅子上，[siren.speech(不管怎样，你还是我的死对头，但是……谢谢你这样帮妈妈……我想你还不算太坏……)]
 		#ELSE
-			[siren.speech(You know, you're still my arch-nemesis,)] [siren.name] says, walking back over to her desk and sitting down in her chair, [siren.speech(And one day we shall duel to decide the fate of the universe! But... I just want to say... Thanks for helping mum like this...)]
+			[siren.speech(你知道的，你还是我的宿敌。)][siren.name]说着，走回办公桌，坐在椅子上，[siren.speech(我们总有一天会决斗，决定宇宙的命运。但是现在……我只想说……谢谢你这样帮助妈妈……)]
 		#ENDIF
 	</p>
 	<p>
-		[pc.speech(I just hope that I can get the help of Minotallys and your friend, [youkoGuide.name],)] you reply, turning your thoughts to Lunette and her herd of demonic centaurs. [pc.speech(You said she's probably in a tavern in Elis called 'The Red Dragon'?)]
+		[pc.speech(我希望能得到米诺塔莉丝和你的朋友[youkoGuide.name]的帮助，)]你回答道，同时将思绪转向露内特和她的恶魔半人马群。[pc.speech(你说她可能在伊利斯一家叫‘红龙’的酒馆里？)]
 	</p>
 	<p>
-		[siren.speech(Yeah, that's right. Oh, and mum said to give you this map. It's got Elis marked on it, so you won't lose your way,)] [siren.name] says, placing a folded paper map on the desk in front of her. 
+		[siren.speech(是的，没错哦，妈妈让我把这张地图给你，上面有伊利斯的标记，这样你就不会迷路了。)][siren.name]说着，把一张折叠好的羊皮纸地图放在她面前的桌子上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="END_FINAL"><![CDATA[
 	<p>
-		Standing up from the sofa, you step over to [siren.namePos] desk and take the offered map. Looking down at the parchment in your [pc.hands], you see that it depicts a large area, with each of the square edges of the map measuring
+		你从沙发上站起来，走到[siren.namePos]桌子边上，拿起地图。你低下头端详着[pc.hands]中这张正方形的羊皮纸，发现这张图刻画的区域很大，每一条边的长度对应于现实之中
 		#IF(game.isMetricSizes())
-			 150 kilometres
+			的150公里。
 		#ELSE
-			 just over 90 miles
+			至少90里。
 		#ENDIF
-		 in length. There looks to be a large amount of farmland surrounding the capital, which is bordered by an expanse of wild grassland and forests. To the north, there's a huge expanse of what's marked as jungle, while to the south, the farmland transitions first into a wide savannah, and then into a desert.
+		首都周围似乎是大片的农田，与之相连的是一望无际的稀树草原和森林。北面是一大片标注为丛林的地方，而南面的农田先是过渡到广阔的草原，然后又变成了沙漠。
 	</p>
 	<p>
-		[siren.speech(Elis is here,)] [siren.name] says, pointing to a mark west of Dominion. You look across to see that the town is just a few #IF(game.isMetricSizes())kilometres#ELSEmiles#ENDIF to the east of the area marked as the 'Shinrin highlands', and that it looks to be roughly
+		[siren.speech(伊利斯镇在这里。)][siren.name]边说，边在御城区西边做了处标记。你看到这个镇子离东边被标注为“心林高地”的地方只有几#IF(game.isMetricSizes())公里#ELSE里，#ENDIF，离御城区则差不多有
 		#IF(game.isMetricSizes())
-			 35 kilometres
+			35公里。
 		#ELSE
-			 20 miles
+			20里。
 		#ENDIF
-		 from Dominion itself.
 	</p>
 	<p>
-		[pc.speech(I don't suppose there's any transport available?)] you ask, [pc.speech(It'll take quite a few hours to walk there...)]
+		[pc.speech(我们似乎并没有交通工具，)]你问道，[pc.speech(走过去的话需要几个小时……)]
 	</p>
 	<p>
-		[siren.speech(Last time I left Dominion, there was a centaur transport service that could take you Elis. There's also a river ferry, but that's barely any faster than walking <i>and</i> the river is a couple of miles from Elis, so you have to walk when you get there,)] [siren.name] says, [siren.speech(Of course, if you can teleport like mum can, then once you've been there once, you can just return there in an instant.)]
+		[siren.speech(上次我离开御城区的时候，我看到有一家半人马运输公司可以带你到伊利斯。河上也有渡船，但几乎不比走路快，<i>而且</i>河离伊利斯还有几英里远，所以到了那里还得走路。)][siren.name]说，[siren.speech(当然，如果你能像妈妈一样瞬移，那么，一旦你去过那里一次，你就可以瞬间回到那里。)]
 	</p>
 	<p>
-		[pc.speech(Ok,)] you say, taking a picture of the map with your phone for quick reference, [pc.speech(I'm sure I'll be back soon. Bye, [siren.name].)]
+		[pc.speech(好，)]你用手机拍下地图，以便随时参考，[pc.speech(我会尽快回来的，拜拜，[siren.name]。)]
 	</p>
 	<p>
-		[siren.speech(See you later. Oh, and you're obviously free to come and go from our palace as you please, but just listen to the maids if they tell you some areas are off-limits,)] [siren.name] says, before letting out a laugh and leaning back in her chair, [siren.speech(The next time we meet, I shall surely best you in a duel!)]
+		[siren.speech(回见哦，你可以随意进出我们的宫殿，但如果女仆告诉你有些地方是禁止入内的，你要听她们的话。)][siren.name]说完后，突然靠在椅子上，放声大笑，[siren.speech(下次见面，我一定要和你一决高下！)]
 	</p>
 	<p>
-		Pushing open the door to [siren.namePos] office, you step back out into the palace corridor, and wonder what to do next... 
+		推开[siren.namePos]办公室的门，你回到宫殿走廊，思考接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>BODY_HAIR</category>
 	
-	<determiner><![CDATA[a patch of]]></determiner>
-	<name><![CDATA[feather]]></name>
-	<namePlural pluralByDefault="true"><![CDATA[feathers]]></namePlural> 
+	<determiner><![CDATA[一簇]]></determiner>
+	<name><![CDATA[羽毛]]></name>
+	<namePlural pluralByDefault="true"><![CDATA[羽毛]]></namePlural> 
 	
 	<naturalCoveringModifiers>
 		<modifier>FLUFFY</modifier>

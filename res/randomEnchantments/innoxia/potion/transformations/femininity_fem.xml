@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -14,7 +14,7 @@
 		[#flags.setInt('extremeTF', RND.nextInt(100))]
 	]]></conditionalPreParsing>
 	
-	<name defaultPrepend="true"><![CDATA[Femininity]]></name>
+	<name defaultPrepend="true"><![CDATA[女性化]]></name>
 	
 	<applicationSpeechStart replaceAll="false"><![CDATA[
 		You'd look better as a girl!

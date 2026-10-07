@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help!-->
 	
@@ -30,11 +30,11 @@
 	<sexEffect>false</sexEffect>
 	
 	<!-- The name of this set bonus. The character under the effect is passed in as the 'npc' parsing argument, so if you want to, you can include parsing elements such as [npc.name]. -->
-	<name><![CDATA[Vigilant Enforcer]]></name>
+	<name><![CDATA[警戒的执法者]]></name>
 	
 	<!-- The description of this status effect. The character under the effect is passed in as the 'npc' parsing argument, so if you want to, you can include parsing elements such as [npc.name]. -->
 	<description><![CDATA[
-		Wearing the Enforcer Patrol Uniform offers [npc.name] a degree of protection against both hazards and unwanted distractions.
+		穿上执法者巡逻制服，[npc.name]就能在一定程度上抵御危险和不必要的干扰。
 	]]></description>
 	
 	<!-- The name of the icon which should be used to represent this status effect. The icon must be an svg file, and must be placed in the same folder as this XML file. -->

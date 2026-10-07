@@ -1,189 +1,189 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="UNEXPLORED"><![CDATA[
 	<p>
-		The two dilapidated barns which together constitute the 'Centaur Carriage Depot' are near to your current location, and so you could easily head over to them and check them out if you wanted to...
+		两座破旧的谷仓共同构成了“半人马拉车站”，就在附近。如果你想去看看，倒也不费什么工夫……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-			The two dilapidated barns which together constitute the 'Centaur Carriage Depot' are near to your current location, although seeing as Astrapi informed you that she and her brother Vronti wouldn't be working for the rest of the day, there's no point in heading over to them. If you wanted to meet with one of the centaurs again then you'd better come back tomorrow...
+			两座破旧的谷仓共同构成了“半人马拉车站”，就在附近。不过既然阿斯特拉皮告诉你她和兄弟弗洛狄今天都不工作，你也就没必要去找他们了。如果还想找半人马，最好明天再来……
 		#ELSE
-			The two dilapidated barns which together constitute the 'Centaur Carriage Depot' are near to your current location, and so you could easily head over to them and try to find Astrapi or Vronti if you wanted to...
+			两座破旧的谷仓共同构成了“半人马拉车站”，就在附近。如果你想去看看阿斯特拉皮或弗洛狄在不在，倒也不费太大工夫……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE"><![CDATA[
 	<p>
 		#IF(game.isHourBetween(5.75, 15))
-			Although the barn is clearly open, you decide against heading inside after all, and instead turn around and [pc.walk] off into the Foloi Fields...
+			谷仓是开放的，但你决定不进去，转身[pc.walk]进弗洛伊田野……
 		#ELSE
-			As the barn is clearly closed, you decide against waiting for it to open, and instead turn around and [pc.walk] off into the Foloi Fields...
+			谷仓是关闭的，你决定与其傻站着等待，不如转身[pc.walk]进弗洛伊田野……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPROACH"><![CDATA[
 	<p>
-		Having been previously interrupted by Meraxis, you decide to continue with your exploration of the 'Centaur Carriage Depot'. As you approach the two dilapidated barns which sit on opposite sides of the road, you can quite clearly see that the one on your right is completely unsuitable for housing any sort of business. Not only has half of the roof fallen in, but the large doors which open out onto the road have been smashed to pieces, allowing you to see that the interior is filled with broken old carts and ransacked crates, with a hazardous mix of smashed glass and splintered wood covering the entire floor.
+		梅拉克西丝离开后，你终于可以继续探索“半人马拉车站”。道路两侧有两座破旧谷仓，右侧的谷仓已经完全废弃，屋顶坍塌了一半，而且大门也被砸得粉碎。你透过裂缝看到内部堆满了破旧的手推车和被洗劫一空的板条箱，地上都是破碎的玻璃和木渣，很是危险。
 	</p>
 	<p>
-		Turning your attention to the second of the two barns, you see that this structure is in a far better state of repair. Although its ivy-covered, wooden walls seem to be buckling in a couple of places, it doesn't seem to have suffered any critical structural damage, and what's more, the short strip of ground leading from the road to the barn's wide doors looks to have been very recently cleared of weeds and debris. Looking over this cleared ground to the doors themselves, you spot what's clearly a brand-new wooden sign that's been nailed to one of them. Carved out and painted in large white letters, you read:
+		你把注意力转到另一个谷仓上，发现这个谷仓的维修状况要好得多。原木墙被常春藤覆盖，尽管有几处出现了破陷，但似乎没有造成任何严重的结构性损坏。谷仓大门门前的草坪被仔细照料过，没有碍眼的杂物堆在上面。漫步走过这个草坪，你看到了谷仓门上钉着一块崭新的木牌。上面刻着白色大字：
 	</p>
 	<p style='text-align:center;'><i>
-		<b>Astrapi & Vronti Grigori</b>
-		<br/>offering
-		<br/><b>Centaur Carriages To Elis</b>
-		<br/>Tickets are fixed at the low price of
-		<br/><b>250 flames</b>
-		<br/>Open from: [units.time(5.75)]-[units.time(15)]
+		<b>格里戈里兄妹：弗洛狄&阿斯特拉皮</b>
+		<br/>提供以下马车服务
+		<br/><b>前往伊利斯</b>
+		<br/>车票长期优惠价
+		<br/><b>250 火币</b>
+		<br/>开放时间：[units.time(5.75)]-[units.time(15)]
 	</i></p>
 	#IF(game.isHourBetween(5.75, 15))
 		<p>
-			Even if this sign wasn't enough to inform you that there's at least one business still operating out of here, one of the barn doors have been left half-open, and from within you can hear a feminine voice occasionally calling out to someone. As the sign informs you that the business is currently [style.colourGood(open)], you could enter via this half-open door and see what's happening within...
+			身处此地，你对这么块告示牌半信半疑。谷仓的一扇门还是半开着的，从里面偶尔可以听到一个女人的声音在叫着某人的名字。既然现在是告示牌声明的[style.colorGood(营业中)]的时间，那你进去看看里面发生了什么也合情合理……
 		</p>
 	#ELSE
 		<p>
-			From this sign you can quite clearly see that there's at least one business still operating out of here, although due to the time they're currently [style.colourBad(closed)]. If you wanted to meet with this 'Astrapi' or 'Vronti' then you should come back between [units.time(5.75)]-[units.time(15)]...
+			从这个告示牌可以清楚地看到，这里至少还有一家公司在营业，不过由于时间关系，它们目前[style.colorBad(已关闭)]。如果你想与这位“阿斯特拉皮”或“弗洛狄”见面，就得在[units.time(5.75)] - [units.time(15)]时间段再来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPROACH_WAIT"><![CDATA[
 	<p>
-		Deciding to wait until the barn opens, you loiter around in the nearby area until eventually it's [units.time(5.75)]. Looking over at the barn once again, you see that one of the doors have been half opened; whoever's responsible for doing this must have approached from the rear of the barn and entered via a back door, or else you would clearly have seen them coming down the road. As you head over to the barn from where you were waiting, you hear a feminine voice coming from within.
+		你决定等待谷仓开门，于是在大门前闲逛、发呆，直到[units.time(5.75)]。你再次向谷仓望去，发现其中一扇门已经半开；不管是谁干的，他一定是从谷仓后面走后门进去的，不然你应该会遇见他。当你走向谷仓时，听到里面传来一个女人的声音。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPROACH_INSIDE"><![CDATA[
 	<p>
-		[pc.Walking] up to the barn's half-open door, you peer inside to see that most of the straw-strewn interior is empty. As you [pc.step] through the doorway and enter the barn, you take note of the fact that only about one quarter of the barn's available space is in use, and houses not only a pair of large, four-wheeled wooden carriages, but also a dozen crates and a couple of workshop benches. A large, muscular centaur and an equally-buff centauress are standing to the side of one of these carriages, both of whom have their backs to you.
+		你先走到谷仓半开的门前，探头往里看，发现里面大部分铺满稻草的地方都是空的。你继续穿过门口进入谷仓时，看到里面有两辆大型四轮木制马车，还有十几个板条箱和几张工作台。这个谷仓很大，这么多东西只占用了四分之一的空间。一个身材高大、肌肉发达的男性半人马，和另一个同样肌肉发达的女性半人马正站在其中一辆的马车旁，他们都背对着你。
 	</p>
 	<p>
-		Not having seen you enter their barn, these two centaurs continue with what they're doing, which you see is changing the wheel on the carriage they're standing next to. In a display of incredible strength, the female centaur, who has [astrapi.legColour] horse hair, [astrapi.skinColour] skin, and wavy, [astrapi.hairColour]-coloured hair, grabs hold of the side of the carriage, and with a deep grunt, she lifts it up off the floor. The male, who has [vronti.legColour] horse hair and [vronti.skinColour] skin similar in shade to the female, then moves in to slide off the wheel they've clearly just loosened, before swiftly fitting a new one and allowing his companion to lower the cart.
+		这两个半人马没有看到你进入他们的谷仓，继续做着他们手头上的事，你看到他们其实在更换这台马车的车轮。那匹女性半人马有着[astrapi.legColour]的马毛、[astrapi.skinColour]的皮肤和[astrapi.hairColour]的波浪形头发。她展示出惊人的力量，双手抓住马车侧面，随着一声低沉的咕噜声，将马车从地上抬了起来。男性半人马有着与她相似的[vronti.legColour]的马毛和[vronti.skinColour]的皮肤，他随即取下他们刚刚松开的车轮，迅速装上一个新的车轮，而女性半人马也默契地放下马车。
 	</p>
 	<p>
-		[astrapi.speech(That's all of them, then,)] the centauress says, [astrapi.speech(so once you've secured that wheel I'll take this carriage over to Elis, while you go and tell that stuck-up bitch that we quit.)]
+		[astrapi.speech(这是最后一个了，)]这位半人马女性说，[astrapi.speech(等你把车轮固定好，我就把马车拉到伊利斯。你去告诉那个自大的贱人，我们不干了。)]
 	</p>
 	<p>
-		Simply letting out an agreeable grunt in response, the centaur turns to pick up his tools from the nearby workbench, and it's at this moment that you're finally spotted. Granting you a curt nod, the centaur looks over to his companion and utters, [vronti.speech(Customer.)]
+		半人马男性只是发出了一声满意的咕哝声，无言地转身从旁边的工作台上拿起了他的工具。就在这个时候，你终于被注意到了。他向你礼貌地点了点头，然后看向他的同伴，说：[vronti.speech(是客人。)]
 	</p>
 	<p>
-		[astrapi.speech(What, already?!)] the centauress replies, before turning to look over her shoulder at you. With this seeming to be as good a time as any, you decide to start things off by introducing yourself to the two centaurs...
+		[astrapi.speech(什么，居然这么快就来了吗？)]半人马女性惊讶地说，然后转过头看着你。现在氛围合适，你决定先向这两个半人马介绍一下自己……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTRODUCTIONS"><![CDATA[
 	<p>
-		Offering the pair a greeting, you introduce yourself as [pc.name], before asking if they're the 'Astrapi' and 'Vronti' whose names were on the sign outside.
+		你向他们问好，礼貌地介绍了自己的姓名[pc.name]，然后询问他们是否就是外面招牌上的“阿斯特拉皮”和“弗洛狄”。
 	</p>
 	<p>
-		[astrapi.speech(We sure are! I'm Astrapi, pleased to meet you, and this is my older brother, Vronti,)] the centauress cheerily responds as she turns to face you. As she does so, you see that she's not wearing any sort of top or bra, leaving her huge, [astrapi.cupSize]-cup breasts completely exposed to you. In fact, the only items of clothing which she appears to be wearing are a pair of blue-grey sweat bands around her wrists, and a similar-coloured one around her head. Her brother seems to share her fondness for a lack of clothing, for he doesn't seem to be wearing anything at all.
+		[astrapi.speech(我们当然是！我叫阿斯特拉皮，很高兴见到你，这是我的哥哥，弗洛狄。)]这位半人马女性一边转过身来面对你，一边欢快地回应道。当她转过身来时，你会发现她没有穿上衣或胸罩，任由巨大的[astrapi.cupSize]罩杯胸部完全暴露在你面前。准确来说，她身上唯一的衣物就是手腕上的一对蓝灰色汗巾和头上的一个类似颜色的汗巾。她的哥哥似乎也和她一样喜欢不穿衣服，因为他也没穿。
 	</p>
 	<p>
-		[astrapi.speech(You got here at the perfect time,)] Astrapi happily declares. Her huge breasts bounce up and down in time with her trotting as she then approaches you and continues, [astrapi.speech(My brother and I were planning on re-opening our carriage business starting tomorrow, but I was just about to take this one over to Elis, so you could choose to be our first customer right now, if you'd like. If not, then no big deal; we'll be doing trips to and from Elis at six and nine in the morning, another one at midday, and a final one at three in the afternoon, so you can always catch us then.)]
+		[astrapi.speech(你来得非常巧！)]她小跑接近你，巨大的胸部上下跳动，继续说道：[astrapi.speech(我和我哥哥打算从明天开始独立经营我们的马车生意，我正准备把这辆马车拉到伊利斯去，所以你愿意的话，可以选择成为我们的第一位顾客。如果不愿意，也没什么大不了的；我们会在早上六点和九点往返伊利斯，中午还有一班，下午三点还有最后一班，你可以挑方便的时候来。)]
 	</p>
 	<p>
-		As she flashes you a big smile, you find yourself noticing just how incredibly muscular this exhibitionist centauress is. Her clearly-defined six-pack and huge shoulder, arm, and neck muscles hint at a life spent performing physical labour. Although her huge breasts, feminine voice, and clear lack of male genitalia make it extremely obvious that she's a female, Astrapi's face has an androgynous quality to it, which, combined with her shoulder-length hair, impressive physique, and height of [astrapi.heightValue], gives her a very tomboyish appearance.
+		当她向你露出灿烂的笑容时，你留意到了这个裸露身体的半人马女性的肌肉是多么惊人。她清晰的六块腹肌和壮硕的肩部、手臂和颈部肌肉暗示着她一生都在从事体力劳动。虽然她巨大的胸部、女性化的嗓音和明显缺乏男性生殖器能让人一眼就能看出她是个女性，但阿斯特拉皮的脸却有一种雌雄同体、中性的气质，再加上她齐肩的长发、令人印象深刻的体格和[astrapi.heightValue]的身高，让她看起来非常像个假小子。
 	</p>
 	<p>
-		You find yourself thinking that her cheery personality and manner of speaking also fits into this categorisation, which is further reinforced as she looks over to her brother and calls out, [astrapi.speech(Come on, Vron, you know you've got to stop being so shy! You're gonna be alone with customers every day from now on. Try introducing yourself to [pc.name] here!)]
+		你觉得她开朗的性格和说话的方式确实与假小子的形象相契合，特别是她对着自己的哥哥叫道：[astrapi.speech(别这样，弗洛，你知道你不能再这么害羞下去了！打今儿起，你每天都要和顾客独处哦。试着在这里向[pc.name]做个自我介绍吧！)]
 	</p>
 	<p>
-		Letting out a deep sigh, Vronti finishes tightening the bolts on the wheel, before standing up and turning to face you and Astrapi. Slowly walking over to where the two of you are standing, he rolls his eyes and grunts in a deep, masculine voice, [vronti.speech(I'm Vronti... Hi.)]
+		弗洛狄深深地叹了一口气，拧紧了车轮上的螺栓，然后站起身来，转身面向你和阿斯特拉皮。他慢慢地走到你们两人站立的地方，揉了揉眼睛，用低沉而男性化的声音咕哝道：[vronti.speech(我是弗洛狄……你好。)]
 	</p>
 	<p>
-		[astrapi.speech(That's the spirit,)] Astrapi laughs, before playfully punching her brother on the arm and teasing, [astrapi.speech(Hey, Vronti, you're starting to blush!)]
+		[astrapi.speech(就该这样，你迈出了第一步！)]阿斯特拉皮大笑，然后嬉皮笑脸地捶打哥哥的胳膊，调侃道：[astrapi.speech(嘿，弗洛狄，你脸红得像苹果一样哈哈！)]
 	</p>
 	<p>
-		Sure enough, the huge centaur, who stands just a little taller than his sister at [vronti.heightValue], seems to be blushing just a little. His stoic expression betrays no hint of embarrassment, however, and after enduring a little more teasing from his sister he simply turns around and walks back to the carriages. As he moves, you see that his muscles are even larger and more well-defined than his sister's, which combined with his incredible body mass makes him look absolutely titanic in comparison with a regular centaur.
+		果然，这个身高[vronti.heightValue]，只比妹妹高一点点的巨大半人马男脸红了起来。不过，他坚毅的表情丝毫没有透露出一丝尴尬，在忍受了妹妹的一番取笑后，他只是转过身，走回马车旁。在他移动的过程中，你将他身上肌肉的运动看得清清楚楚。他的肌肉比他妹妹的更大，轮廓也更加清晰，再加上他惊人的体重，与普通的半人马相比，他绝对是半人马族里的泰坦一类。
 	</p>
 	<p>
-		Turning her attention back to you, Astrapi asks, [astrapi.speech(So, are you gonna come with me on a trip to Elis? It's only two-hundred and fifty flames for a ticket! That's a real bargain, you know, especially considering that me and Vron were always the fastest centaur drivers. I'll get you there in well under three hours!)]
+		阿斯特拉皮把目光转向你，问道：[astrapi.speech(那么，你要坐我的马车一起去伊利斯吗？一张票只要250火币！我和弗洛狄一直都是最快的半人马车夫，我保证会在三个小时内把你送到那里！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE_BARN"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
 		<p>
-			Thanking Astrapi for the offer, you tell her that you weren't needing a ride to Elis right now, but that perhaps you'll make use of her and her brother's services in the future.
+			谢过阿斯特拉皮的好意，你告诉她你现在不需要搭车去伊利斯，但也许将来你会用到她和她哥哥的服务。
 		</p>
 		<p>
-			[astrapi.speech(Sure thing,)] the cheerful centauress replies. Flashing you a big smile, she reminds you, [astrapi.speech(We're not going to be running any more rides today, but we'll be setting off from here and our Elis counterpart at six and nine in the morning, again at midday, and finally at three in the afternoon, so you can always catch us then. Our Elis stop is like two minutes walk from the eastern gate; it's impossible to miss.)]
+			[astrapi.speech(没问题！那我们今天不再拉车了。)]这个开朗的半人马回答道。她向你展示了一个灿烂的微笑，并提醒说：[astrapi.speech(我们会在早上六点半从这里和我们的伊利斯对应站点出车一趟，中午一趟，最后一趟在下午三点，所以你可以挑方便的时间来。我们在伊利斯的站点就在东门步行两分钟的地方，不可能错过。)]
 		</p>
 		<p>
-			Saying farewell to the two centaurs, and receiving happy and muted responses from Astrapi and Vronti respectively, you head out of the barn and set off on your way through the fields...
+			你与两位半人马道别，阿斯特拉皮和弗洛狄都高兴地低声回应了你。你走出谷仓，踏上了穿越荒野的旅途……
 		</p>
 	#ELSEIF(game.getCharactersPresent().contains(astrapi))
 		<p>
-			Thanking Astrapi for the offer, you tell her that you weren't needing a ride to Elis right now, but that perhaps you'll make use of her or her brother's services in the future.
+			你谢过阿斯特拉皮的好意，告诉她你现在不需要搭车去伊利斯，但也许将来会用到她或她哥哥的服务。
 		</p>
 		<p>
-			[astrapi.speech(Sure thing,)] the cheerful centauress replies. Flashing you a big smile, she reminds you, [astrapi.speech(Our rides set off at six and nine in the morning, again at midday, and finally at three in the afternoon, so you can always catch us then.)]
+			[astrapi.speech(没问题！)]这个开朗的半人马回答道。她向你展示了一个灿烂的微笑，并提醒说：[astrapi.speech(我们会在早上六点半从这里和我们的伊利斯对应站点出车一趟，中午一趟，最后一趟在下午三点，所以你可以挑方便的时间来。)]
 		</p>
 		<p>
-			Saying goodbye to Astrapi, and receiving a happy farewell in return, you head out of the barn and set off on your way through the fields...
+			与阿斯特拉皮道别后，你心情愉悦地离开谷仓，踏上了穿越荒野的旅途……
 		</p>
 	#ELSEIF(game.getCharactersPresent().contains(vronti))
 		<p>
-			Thanking Vronti for the offer, you tell him that you weren't needing a ride to Elis right now, but that perhaps you'll make use of his or his sister's services in the future.
+			你谢过弗洛狄的好意，告诉他你现在不需要搭车去伊利斯，但也许将来会用到他或他妹妹的服务。
 		</p>
 		<p>
-			[vronti.speech(Right,)] the stoic centaur briefly replies, [vronti.speech(See you around.)]
+			[vronti.speech(好吧，)]这位刚毅的半人马简短地回答道，[vronti.speech(常来。)]
 		</p>
 		<p>
-			Saying goodbye to Vronti, and receiving a simple grunt in return, you head out of the barn and set off on your way through the fields...
+			你向弗洛狄道别，换来的只是一声简单的咕哝，你走出谷仓，踏上了穿越田野的路途……
 		</p>
 	#ELSE
 		<p>
-			Deciding not to wait for Astrapi or Vronti to show up, you [pc.step] away from the barn and set off on your way through the fields...
+			你决定不再等待阿斯特拉皮或弗洛狄出现，离开谷仓，进入荒野……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPROACH_REPEAT"><![CDATA[
 	<p>
-		Once again deciding to approach the 'Centaur Carriage Depot', you head over to where the two dilapidated barns are situated. Nothing seems to have changed since the last time you were here, with the ruined barn on your right appearing to be completely unsuitable for housing any sort of business. Not only has half of the roof fallen in, but the large doors which open out onto the road have been smashed to pieces, allowing you to see that the interior is filled with broken old carts and ransacked crates, with a hazardous mix of smashed glass and splintered wood covering the entire floor.
+		你决定再去“半人马拉车站”看看，走向了两座破旧谷仓所在的位置。这里还是你上次来的样子，右边的破旧谷仓依然荒废。坍塌一半的屋顶，被敲碎的半边大门，里面堆满的破旧的手推车和被洗劫一空的板条箱，以及满地的碎玻璃和碎木片，跟你的记忆一致。
 	</p>
 	<p>
-		Turning your attention to the second of the two barns, you once again take note that this structure is in a far better state of repair. Although its ivy-covered, wooden walls seem to be buckling in a couple of places, it doesn't seem to have suffered any critical structural damage, and what's more, the short strip of ground leading from the road to the barn's wide doors is being well maintained and kept clear of weeds and debris. Looking over this cleared ground to the doors themselves, you spot the familiar wooden sign that's been nailed to one of them. Carved out and painted in large white letters, you read:
+		你看向另一个谷仓。这个谷仓的维修状况要好得多，覆盖着常春藤的原木墙虽然有几处空缺，但并没有产生严重的结构性损坏，谷仓宽阔大门前面的一小块草坪得到了很好的维护，没有杂草和杂物。越过这片被清理过的草坪，你就能看到谷仓门上钉着的那块熟悉的木牌。木牌上刻着白色大字：
 	</p>
 	<p style='text-align:center;'><i>
-		<b>Astrapi & Vronti Grigori</b>
-		<br/>offering
-		<br/><b>Centaur Carriages To Elis</b>
-		<br/>Tickets are fixed at the low price of
-		<br/><b>250 flames</b>
-		<br/>Open from: [units.time(5.75)]-[units.time(15)]
+		<b>格里戈里兄妹：弗洛狄&阿斯特拉皮</b>
+		<br/>提供以下马车服务
+		<br/><b>前往伊利斯</b>
+		<br/>车票长期优惠价
+		<br/><b>250 火币</b>
+		<br/>开放时间：[units.time(5.75)]-[units.time(15)]
 	</i></p>
 	<p>
 		#IF(game.isHourBetween(5.75, 15))
-			Just like before, one of the barn doors have been left half-open, making it clear that Astrapi and Vronti's business is currently [style.colourGood(open)]. If you wanted to, you could enter via this half-open door and see if either of the centaurs are inside...
+			和之前一样，谷仓的一扇门也是半开着的，很明显，阿斯特拉比和弗洛狄他们正在[style.colorGood(营业中)]。如果你愿意，可以进去，看看他们在不在……
 		#ELSE
-			As it's currently outside of the business's opening times, it's currently [style.colourBad(closed)], with the doors to the barn are securely shut and locked. If you wanted to travel to Elis via centaur carriage then you should come back between [units.time(5.75)]-[units.time(15)]...
+			目前不在营业时间内，谷仓的大门[style.colorBad(紧闭并上锁)]。如果你想坐半人马拉车前往伊利斯，那么你应该在[units.time(5.75)]-[units.time(15)]之间再来……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPROACH_REPEAT_WAIT"><![CDATA[
 	<p>
-		Deciding to wait until the barn opens, you loiter around in the nearby area until eventually it's [units.time(5.75)]. Looking over at the barn once again, you see that one of the doors have been half opened; whoever's responsible for doing this must have approached from the rear of the barn and entered via a back door, or else you would clearly have seen them coming down the road.
+		你决定在附近闲逛到[units.time(5.75)]，等待谷仓开门。你再望向谷仓，发现那扇门已经半开了；他们一定是走后门进去的，不然你应该能在前门遇到他们。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- If time is:
 		05:45-6:00 - Astrapi waiting there
@@ -194,770 +194,770 @@
 	<htmlContent tag="APPROACH_INSIDE_REPEAT"><![CDATA[
 	#IF(game.getCharactersPresent().contains(astrapi))
 		<p>
-			[pc.Walking] up to the barn's half-open door, you peer inside to see that most of the straw-strewn interior is once again empty. As you [pc.step] through the doorway and enter the barn, you take note of the fact that less than one quarter of the barn's available space is in use, and houses not only a large, four-wheeled wooden carriage, but also a dozen crates and a couple of workshop benches.
+			你走到谷仓半开的门前，探头往里一看，发现原本应该用来铺满稻草的大部分地方都空了。走进谷仓，你注意到谷仓有一辆大型四轮木制马车，还有十几个板条箱和几张工作台，这些一共只占用了不到四分之一的空间。
 		</p>
 		<p>
-			The familiar form of the muscular centauress, Astrapi, can be seen lying down and relaxing beside her carriage. As you enter the barn she sees you and stands up, before cheerfully calling out, [astrapi.speech(Hi, [pc.name]! I'm planning on setting off for Elis in a few minutes, so if you want a ride just let me know!)]
+			你看到肌肉发达的阿斯特拉皮正卧在她的马车旁休息。当你进入谷仓时，她看到了你，并随即站了起来，向你欢快地说：[astrapi.speech(你好，[pc.name]！我打算过几分钟就出发去伊利斯，如果你想搭车，请告诉我！)]
 		</p>
 		#IF(astrapi.isVisiblyPregnant())
 			<p>
 				#IF(!astrapi.isCharacterReactedToPregnancy(pc))
-					As usual, Astrapi isn't wearing any clothing other than the sweatbands around her wrists and head, and as such her huge, [astrapi.cupSize]-cup breasts are fully on display. However, it isn't the centauress's massive tits that draw your attention, but instead the fact that her lower horse's body is sporting a [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, Astrapi absent-mindedly runs one of her hands through her [astrapi.hairColour] hair and laughs, [astrapi.speech(Hah! Yeah, you got me pregnant, but it's no big deal really. Sure, I might be a little slower on my routes and need more rest in the evenings, but I can handle it all just fine.)]
+					和往常一样，除了手腕和头上的汗巾，阿斯特拉皮没有穿任何衣服，因此，她那对[astrapi.cupSize]罩杯的巨乳完全展现在你的面前。然而，吸引你注意的并不是半人马的巨乳，而是她下半身的[style.colourSex(孕肚)]。在注意到你的视线之后，阿斯特拉皮心不在焉地用一只手捋了捋她的[astrapi.hairColour]头发，然后笑道：[astrapi.speech(哈！是啊，你让我怀孕了，不过这没什么大不了的。当然，我可能会在路上走的慢一点，晚上需要多休息一会，但我都能应付的来。)]
 				#ELSE
-					As usual, Astrapi isn't wearing any clothing other than the sweatbands around her wrists and head, and as such her huge, [astrapi.cupSize]-cup breasts are fully on display. However, it isn't the centauress's massive tits that draw your attention, but instead the fact that her lower horse's body is still sporting a [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, Astrapi absent-mindedly runs one of her hands through her [astrapi.hairColour] hair and laughs, [astrapi.speech(Hah! Yeah, I'm still carrying our kids around, but it's no big deal. Sure, I might be a little slower on my routes and need more rest in the evenings, but I can handle it all just fine.)]
+					和往常一样，除了手腕和头上的汗巾，阿斯特拉皮没有穿任何衣服，因此，她那对[astrapi.cupSize]罩杯的巨乳完全展现在你的面前。然而，吸引你注意的并不是半人马的巨乳，而是她下半身的[style.colourSex(孕肚)]。在注意到你的视线之后，阿斯特拉皮心不在焉地用一只手捋了捋她的[astrapi.hairColour]头发，然后笑道：[astrapi.speech(哈！是啊，我还得带着孩子们到处跑，但这没什么大不了的。当然，我可能会在路上走的慢一点，晚上需要多休息一会，但我都能应付的来。)]
 				#ENDIF
 			</p>
 			<p>
-				Nonchalantly waving you off as you ask her if there's anything you can do to help, the muscular centauress turns around and starts checking over her carriage to make sure that it's in working condition. Turning her head back, she flashes you a playful grin, and with a quick flick of her tail, shamelessly flashes you her [astrapi.pussyColour] horse-pussy. Turning her attention back to her cart, she shouts out, [astrapi.speech(Remember, it's only two-hundred and fifty flames for a ride! You can't pass up a bargain like that, can you?! And hey, who knows, maybe you'll get to creampie me again? After all, we don't have to worry about you knocking me up anymore!)]
+				你问她是否有什么需要帮忙时，这位肌肉发达的半人马女性挥了挥手大方地拒绝了你，便转身背对着你检查她的马车。确保一切正常后，她转过头来，向你露出一个俏皮的笑容，并将尾巴轻轻一甩，毫不保留地向你展示她[astrapi.pussyColour]的马阴，用习惯的嗓门对你说：[astrapi.speech(记住，一程只要250火币！你不会错过这样的便宜，不是吗？嘿，说不定你还能再给我一次奶油泡芙呢！反正我都怀了你的孩子了。)]
 			</p>
 		#ELSE
 			<p>
-				As usual, Astrapi isn't wearing any clothing other than the sweatbands around her wrists and head, and as such her huge, [astrapi.cupSize]-cup breasts are fully on display. Completely unconcerned about her exhibitionism, she turns around and starts checking over her carriage to make sure that it's in working condition, shamelessly flashing you her [astrapi.pussyColour] horse-pussy in the process. Turning her head back towards you, she calls out, [astrapi.speech(Remember, it's only two-hundred and fifty flames! You can't pass up a bargain like that, can you?!)] 
+				和往常一样，除了手腕和头上的汗巾，阿斯特拉皮没有穿任何衣服，[astrapi.cupSize]罩杯的巨乳完全展现在了你面前。对自己的暴露癖行为完全不在乎，她背对着你检查她的马车，确保一切正常，同时毫不保留地向你展示她[astrapi.pussyColour]的马阴。她转过头来，用习惯的嗓门对你说：[astrapi.speech(记住，一程只要250火币！你不会错过这样的便宜，不是吗？)]
 			</p>
 		#ENDIF
 	#ELSEIF(game.getCharactersPresent().contains(vronti))
 		<p>
-			[pc.Walking] up to the barn's half-open door, you peer inside to see that most of the straw-strewn interior is once again empty. As you [pc.step] through the doorway and enter the barn, you take note of the fact that less than one quarter of the barn's available space is in use, and houses not only a large, four-wheeled wooden carriage, but also a dozen crates and a couple of workshop benches.
+			你走到谷仓半开的门前，探头往里一看，发现原本应该用来铺满稻草的大部分地方都空了。走进谷仓，你注意到谷仓有一辆大型四轮木制马车，还有十几个板条箱和几张工作台，这些一共只占用了不到四分之一的空间。
 		</p>
 		<p>
-			The familiar form of the muscular centaur, Vronti, can be seen lying down and relaxing beside his carriage. As you enter the barn he sees you and stands up, before giving you a nod and grunting, [vronti.speech(Hey there...)]
+			你看到肌肉发达的半人马弗洛狄正卧在他的马车旁休息。当你走进谷仓时，他也看到了你。他站了起来，向你点点头，咕哝着说：[vronti.speech(嘿，你好……)]
 		</p>
 		<p>
-			As usual, Vronti isn't wearing any clothing at all, and as such as he stands up you're able to see not only the [vronti.cockSize] sheath of his cock but also his [vronti.ballSize] balls. Completely unconcerned about his exhibitionism, he turns around and starts checking over his carriage to make sure that it's in working condition, shamelessly flashing you his puffy, [vronti.anusColour] horse-anus in the process. Turning his head back towards you, he calls out, [vronti.speech(It's two-hundred and fifty flames for a ride. I'm leaving in a few minutes.)]
+			和往常一样，弗洛狄没有穿任何衣服，因此当他站起来时，你能一览无遗他的[vronti.cockSize]马屌鞘，还能看到他的[vronti.ballSize]的蛋蛋。他完全不在意自己的暴露，转过身来开始检查他的马车，在此过程中毫不保留地向你展示他那肉感肿胀的[vronti.anusColour]马肛。检查完成后，他把头转向你，说道：[vronti.speech(一程要250火币，我几分钟后就走。)]
 		</p>
 	#ELSE
 		<p>
-			[pc.Walking] up to the barn's half-open door, you peer inside to see that most of the straw-strewn interior is once again empty. As you [pc.step] through the doorway and enter the barn, you take note of the fact that only about one quarter of the barn's available space is in use, and houses a dozen crates and a couple of workshop benches. There's no sign of either of the two wooden carriages which you've seen here before, nor of Astrapi or Vronti.
+			你走到谷仓半开的门前，探头往里一看，发现阿斯特拉皮和弗洛狄已经离开了，马车也已经拉走了。
 		</p>
 		<p>
-			Realising that the two centaurs must be on their way to and from Elis, you wonder whether you should wait for one of them to arrive, or instead leave and travel through the fields without them.
+			想必这两位半人马一定在往返伊利斯的路上，你在考虑应该等待他们回来，还是应该离开，独自穿过荒野。
 			#IF(game.isHourBetween(6, 9) || game.isHourBetween(12, 15))
-				 Remembering what Astrapi told you before, Vronti will be the one to arrive here next.
+				你想起来阿斯特拉皮之前跟你说过，这个时间段应该会遇到弗洛狄。
 			#ELSE
-				 Remembering what Astrapi told you before, she'll be the one to arrive here next.
+				你想起来阿斯特拉皮之前跟你说过，这个时间段应该会遇到她。
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Astrapi travel: -->
 	
 	<htmlContent tag="ASTRAPI_START"><![CDATA[
 	<p>
-		Deciding to take up Astrapi's offer, you tell her that you'd like a ride to
+		你决定接受阿斯特拉皮的提议，于是表示你想搭车去
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-			 Elis,
+			伊利斯，
 		#ELSE
-			 Dominion,
+			御城区，
 		#ENDIF
-		 before paying her the two hundred and fifty flames she's asked for. Flashing you a big smile, she stores the money in a sturdy lock-box attached to her carriage, before happily exclaiming, [astrapi.speech(Right, if you'd like to climb aboard, we'll set off right now!)]
+		并付了所需的250火币。阿斯特拉皮向你露出灿烂的笑容，将钱存进马车上坚固的保险箱，愉快地喊道：[astrapi.speech(好的，如果你现在上车，我们马上出发！)]
 	</p>
 	<p>
-		Doing as you're instructed, you climb aboard the carriage and make yourself comfortable on the padded seats. Trotting over to fully open the barn's door, Astrapi
+		你按指示登车，在软垫座椅上挑了个舒适的姿势坐下。阿斯特拉皮小跑奔向谷仓大门，将其完全打开，
 		#IF(game.getCurrentWeather()==WEATHER_RAIN)
-			 sees that it's currently raining, and so swiftly erects a canvas cover over the carriage.
+			看到外面正在下雨，她麻利地支起帆布罩住车厢。
 		#ELSEIF(game.getCurrentWeather()==WEATHER_SNOW)
-			 sees that it's currently snowing, and so swiftly erects a canvas cover over the carriage.
+			看到外面正在下雪，她麻利地支起帆布罩住车厢。
 		#ELSE
-			 sees that the weather looks fine, and so securely folds up and fastens the carriage's canvas cover to its rear.
+			看到外面天气不错，她将帆布牢牢捆好，绑在车尾。
 		#ENDIF
-		 Pulling on a sports bra and strapping a recurve bow to her back, she starts strapping herself into the carriage's harness, explaining, [astrapi.speech(I don't like covering myself up like this, but my boobs bounce all over the place otherwise...)]
+		阿斯特拉皮穿上运动内衣，背上反曲弓，给自己套上马车挽具，并解释道：[astrapi.speech(我不喜欢把自己裹成这样，但不这样的话我的胸会乱蹦乱跳……)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
 		<p>
-			After the straps are securely fastened about her lower horse's body, Astrapi steps forwards, effortlessly pulling the carriage behind her as she manoeuvres towards the open door of the barn. Looking over to her brother, she calls out, [astrapi.speech(See you later, Vron! Don't forget to pick up our stuff from work after you've told queen bitch we quit!)]
+			阿斯特拉皮将绑带牢牢地系在自己的马身，随后迈步向前，毫不费力地将马车拉在身后，向敞开的谷仓大门走去。她望着自己的哥哥，喊道：[astrapi.speech(晚些见，弗洛！等你告诉婊子女王我们不干了，别忘了取走我们的东西！)]
 		</p>
 		<p>
-			Simply nodding in response, Vronti watches the two of you prepare to set off, but before departing Astrapi briefly explains, [astrapi.speech(I'm talking about our boss at the haulage company where we've been working... Anyway, let's go!)]
+			弗洛狄只是点头回应，看着你们俩准备出发。在离开之前，阿斯特拉皮简短地解释道：[astrapi.speech(我说的是我们运输公司的老板……管他呢，我们走吧！)]
 		</p>
 	#ELSE
 		<p>
-			After the straps are securely fastened about her lower horse's body, Astrapi steps forwards, effortlessly pulling the carriage behind her as she manoeuvres towards the open door of the barn. Excitedly pawing at the ground with one of her front hoofs, she exclaims, [astrapi.speech(Right, let's go!)]
+			阿斯特拉皮将绑带牢牢地系在自己的马身，随后迈步向前，毫不费力地将马车拉在身后，向敞开的谷仓大门走去。她激动地用前蹄蹬了蹬地面，喊道：[astrapi.speech(好，出发！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_JOURNEY"><![CDATA[
 	<p>
-		Pulling out from the barn, Astrapi sets off down the road at a canter, causing your carriage to be pulled along behind her at an impressive speed. Clearly possessing not only incredible strength but also an astounding level of stamina, the centauress shows no sign of slowing down even after travelling the first couple of miles, and even has the energy to call out behind her, [astrapi.speech(We're going to be getting into the territory of Lunette's centaurs pretty soon, but there's nothing to fear; I've chased off dozens of the brutes with my bow in the past, and they've learned to leave me alone by now.)]
+		阿斯特拉皮从谷仓里出来，沿着道路疾驰而去，拉着你的马车以惊人的速度前进。显然，半人马不仅拥有惊人的力量，还拥有惊人的耐力，即使走了几英里，她也丝毫没有减速的迹象，甚至还有力气对你喊话：[astrapi.speech(我们很快就要进入露内特半人马的领地了，不过没什么好怕的，我过去曾用弓箭驱赶过几十个暴徒，他们已经学会不来惹我了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JOURNEY_CORE"><![CDATA[
 	<p>
-		Taking this opportunity to view your surroundings as your carriage speeds by, you see countless fenced-off fields,
+		趁着马车飞驰而过的机会，你可以俯瞰周围的环境，看到无数被栅栏围起来的田地，
 		#IF(game.getSeason()==SEASON_SPRING)
-			 in which potatoes, rhubarb, cauliflower, and many other types of seasonal crops are currently being grown. Although not as common as these crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are filled with beautifully-blossoming trees.
+			在这些土地上，目前正在种植马铃薯、大黄、花椰菜和许多其他种类的时令作物。虽然不像这些农作物田那样常见，但也有大量土地专门用于果园种植，每年的这个时候，果园里到处都是盛开的美丽果树。
 		#ELSEIF(game.getSeason()==SEASON_SUMMER)
-			 in which corn, hops, wheat, and many other types of seasonal crops are currently being grown. Although not as common as these crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are filled with leafy green trees already showing signs of the fruit they'll bear come autumn.
+			这里目前种植着玉米、啤酒花、小麦和许多其他种类的季节性作物。虽然不像这些农作物田那么常见，但这里也有大量土地专门用于果园，每年的这个时候，果园里都是枝繁叶茂的绿树，已经显露出秋天即将结果的迹象。
 		#ELSEIF(game.getSeason()==SEASON_AUTUMN)
-			 in which beetroot, artichoke, pumpkins, and many other types of seasonal crops are currently being grown. Although not as common as these crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are either heavily-laden with fruit, or have already been picked clean of their produce.
+			在这些土地上，目前正在种植甜菜根、朝鲜蓟、南瓜和许多其他种类的时令作物。虽然不像这些农作物田那样常见，但也有大量土地专门用于种植果园，每年的这个时候，果园里要么结满了果实，要么果实已经被采摘一空。
 		#ELSE
-			 which have been ploughed and slurried in preparation for the coming year. Although not as common as these currently-barren crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are filled with leafless trees.
+			这些农田已经犁过，为来年做准备。虽然不像这些荒芜的庄稼地那么常见，但也有大量土地专门用于果园，每年的这个时候，果园里到处都是落叶的果树。
 		#ENDIF
 	</p>
 	<p>
-		Passing small patches of woodland and
+		途经一片片林地以及
 		#IF(game.getSeason()==SEASON_WINTER)
-			 frozen
+			结冰的
 		#ELSE
-			 still
+			平静的
 		#ENDIF
-		 ponds as
+		池塘，
 		#IF(game.getCharactersPresent().contains(astrapi))
-			 you and Astrapi
+			你和阿斯特拉皮
 		#ELSE
-			 you and Vronti
+			你和弗洛狄
 		#ENDIF
-		 travel down the many roads which snake around and divide these fields from one another, you can't help but notice how many of the fields' fences have been smashed to pieces. At these points of vandalism, the ground has been torn up and heavily damaged by what look to be the hoofs of hundreds of centaurs. Unfortunately for the local farmers, it's not only the areas around these broken fences which have borne the brunt of this destruction, for most of the fields which you pass look to have suffered extensive damage from the thundering hoofs of Lunette's roaming herds.
+		沿着蜿蜒曲折的道路持续行驶，一块块田地被这些道路划分开来。你很难不注意到有多少田地的栅栏被砸得稀巴烂，驶近这些被蓄意破坏的地方后可以发现，地面像是被数百只半人马的铁蹄践踏撕裂，毁坏严重。对于当地农民来说更为不幸的是，不仅只有这些破碎的栅栏周围受到了破坏的冲击，实际上你路过的大多数田地看起来都遭到了露内特手下的严重破坏，这群四处游荡的恶魔半人马将铁蹄踏向弗洛伊的田地，像雷电一般迅捷，充满破坏力。
 	</p>
 	<p>
-		Scattered here and there amongst the arable and pastoral land which comprises the vast majority of the Foloi Fields, there are numerous villages, hamlets, and farmsteads. These too seem to have suffered greatly from the demonic centaur menace, for many of the buildings which you pass look to have suffered either severe fire or structural damage. While most of the farmsteads look to still be occupied, there are more hamlets and villages than you care to count which now lie either partially or totally abandoned, and as you pass these
+		弗洛伊田野的大部分耕地和牧场中，散落着许多大村庄、小镇与农舍。这些村庄似乎也深受半人马恶魔的迫害，你所经过的诸多建筑看起来都被焚毁或破坏了。虽然大多数农舍看起来仍有人居住，但更多的村庄和小镇都或多或少遭到了废弃。
 		#IF(game.getCharactersPresent().contains(astrapi))
-			 Astrapi offers the odd comment along the lines of, [astrapi.speech(It used to be so peaceful around here...)]
+			途中，阿斯特拉皮偶尔会发表一些评论：[astrapi.speech(这里曾经很安宁……)]
 		#ELSE
-			 Vronti grunts in a clear display of anger at what's happened to this area.
+			途中，弗洛狄哼了哼，显然对这里发生的一切感到愤怒。
 		#ENDIF
 	</p>
 	<p>
-		#IF(game.isDayTime())
-			While most of the damaged fields you see are dedicated to growing crops, there are also a considerable number that have been put aside for grazing,
-			#IF(game.getSeason()==SEASON_WINTER)
-				 but due to the time of year, all livestock is currently being kept indoors. Any animal-morph overseers of these herds have similarly retreated to the relative comfort of their ransacked farmsteads for the winter, where they're no doubt performing yearly maintenance on their tools and outbuildings, hoping and praying all the while that Lunette's centaurs won't pay them another visit.
-			#ELSE
-				 and you see many herds of sheep and cows, and sometimes even spot the odd field of horses. Due to the ever-present fear of Lunette's centaurs, and the subsequent need to offer them payment in return for leaving their herds alone, you find that it's a very regular occurrence to see one type of animal-morph or another watching over these fields. Curiously enough, you note that the type of animals set out to graze are almost always the same as their overseer's morph type, and you often see sheep-morph shepherds, cattle-morph cowherds, and other similarly-matching pairs.
-			#ENDIF
-		#ELSE
-			While most of the damaged fields you see are dedicated to growing crops, there are also a considerable number that have been put aside for grazing, although due to the fact that it's currently dark, all livestock is currently being kept indoors.
-		#ENDIF
-	</p>
+    #IF(game.isDayTime())
+    尽管你看到的大多数受损的田地都用于种植农作物，但也有相当数量的田地被留作牧场，
+        #IF(game.getSeason()==SEASON_WINTER)
+            但由于季节原因，所有的牲畜都被关在室内。这些牧场的动物型守护者也相似地撤退到了被洗劫的农舍，过冬期间，他们毫无疑问正在进行工具和建筑物的年度维护，一边祈祷着露内特的半人马不会再来光顾。
+        #ELSE
+            你看到了许多绵羊和奶牛的牧群，有时甚至会看到奇怪的马匹。由于牧民们时刻恐惧着露内特的半人马以及随之而来的需求——交保护费以保持牧群的安宁，你时常看见不同种类的化形在看守这些田地。有趣的是，放牧的动物几乎总是与它们的化形种类相同，比如绵羊化形、牛化形或者其他类似的匹配组合。
+        #ENDIF
+    #ELSE
+    尽管你看到的大多数受损的田地都用于种植农作物，但也有相当数量的田地被留作牧场，不过由于现在很黑，所有的牲畜都被关在室内。
+    #ENDIF
+</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
 			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				Currently falling in large, freezing flakes, the snow which has covered
+				天空中飘洒着大片的雪花，大地被厚厚的积雪覆盖，
 			#ELSE
-				The snow which has covered
+				大地被厚厚的积雪覆盖，
 			#ENDIF
-			 the land has badly affected the roads of the Foloi Fields. Driven from their homes, there's no longer a local population willing to keep the roadway shovelled and kept free of ice, and as such
+			严重影响了弗洛里田野的道路。当地居民被赶出家园，再无人愿意铲除冰雪来保持道路通畅，所以
 			#IF(game.getCharactersPresent().contains(astrapi))
-				 Astrapi's
+				阿斯特拉皮
 			#ELSE
-				 Vronti's
+				弗洛狄
 			#ENDIF
-			 canter slows down to a pace that's clearly slower than it normally would be.
+			的速度明显慢于平日正常速度。
 		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-			The driving rain falling on the collapsed roofs and burnt-out shells of former homes only serves to add to the depressing atmosphere of these terrorised lands. Avoiding the large puddles in the poorly-maintained roads,
+			瓢泼大雨落在坍塌的屋顶和烧毁的旧房屋上，更增添了这片受恐怖袭击的土地的压抑气氛。避开维护不善的道路上的大水坑，
 			#IF(game.getCharactersPresent().contains(astrapi))
-				 Astrapi
+				阿斯特拉皮
 			#ELSE
-				 Vronti
+				弗洛狄
 			#ENDIF
-			 continues pulling you on your way.
+			继续拉着你前行。
 		#ELSE
 			#IF(game.getCharactersPresent().contains(astrapi))
-				Keeping up her canter, Astrapi continues effortlessly pulling you along in the carriage behind her, and shows no sign of getting tired or needing a break.
+				阿斯特拉皮保持着她的奔跑速度，毫不费力地拉着车，丝毫没有疲惫或需要休息的迹象。
 			#ELSE
-				Keeping up his canter, Vronti continues effortlessly pulling you along in the carriage behind him, and shows no sign of getting tired or needing a break.
+				弗洛狄保持着他的奔跑速度，毫不费力地拉着车，丝毫没有疲惫或需要休息的迹象。
 			#ENDIF
 		#ENDIF
-		 As you start to lose interest in your surroundings, you wonder whether to try and engage
+		你有点对周围的环境失去兴趣了，思考起要不要同
 		#IF(game.getCharactersPresent().contains(astrapi))
-			 Astrapi in conversation, or even to try and flirt with her...
+			阿斯特拉皮交谈，甚至试图与她调情……
 		#ELSE
-			 Vronti in conversation, or even to try and flirt with him...
+			弗洛狄交谈，甚至试图与他调情……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_QUIET_JOURNEY"><![CDATA[
 	<p>
-		Deciding against engaging Astrapi in conversation, you inform her that you're going to relax and close your eyes for a while, to which the cheerful centauress replies, [astrapi.speech(Sure thing. These carriages have got the best suspension we could buy, so hopefully the ride's smooth enough for you to get some rest.)]
+		你决定不与阿斯特拉皮多说，你告诉她你要闭上眼睛放松一段时间，快乐的半人马回答道：[astrapi.speech(当然没问题，这些车厢的悬挂系统是我们能买到的最好的，希望这能让你安稳地休息一会儿。)]
 	</p>
 	<p>
-		Bringing your attention to this fact, you tell Astrapi how smooth the carriage's ride has been so far, and thank her for providing such an excellent level of comfort. After that brief exchange, you do as you'd said and relax in the carriage, closing your eyes and allowing the time to pass in relative peace as the centauress takes you to Elis...
+		你注意到了这一事实，并告诉阿斯特拉皮，到目前为止，马车行驶得非常平稳，并感谢她提供了如此舒适的环境。简短的交流之后，你按照自己说的做，在车厢里放松下来，闭上眼睛，让时间在相对平静的氛围中流逝，半人马带你前往伊利斯……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Talking: -->
 	
 	<htmlContent tag="ASTRAPI_TALK_HISTORY"><![CDATA[
 	<p>
-		Deciding to pass the time by engaging Astrapi in conversation, you ask her about her history working as a centaur carriage driver, and if she and her brother have always worked together like this.
+		为了打发时间，你决定与阿斯特拉皮交谈，问她做半人马车夫的经历，以及她和哥哥是否一直都是这样一起工作的。
 	</p>
 	<p>
-		[astrapi.speech(Oh yeah, me and Vron have always worked together,)] she answers, [astrapi.speech(And as to how long we've been doing this? Well, ever since I entered the workplace the two of us were employed by a centaur carriage company, running the exact same route I'm taking you down now. As Lunette's centaurs started to get out of control, carriages started being attacked, and it didn't take long for all of our customers to disappear. Us and the other few companies working out of the depot were not far off going bankrupt and closing down, but we were hastened along with that when some of Lunette's goons attacked the depot itself and destroyed one of the barns. You saw the damage done to the roof?)]
+		[astrapi.speech(对啊，我和弗洛一直都一起工作。)]她回答，[astrapi.speech(至于我们干这行有多久了？自从我进入职场后，我们俩就受雇于一家半人马拉车公司，经营的路线和我现在带你走的一模一样。随着露内特半人马开始失控，马车也开始受到攻击，没过多久我们的客户就都消失了。我们和其他几家拉车公司都离破产倒闭不远了，但露内特的一些暴徒还袭击了车库，毁坏了一个谷仓，这让我们的日子更难过了。你看到屋顶的损坏了吗？)]
 	</p>
 	<p>
-		Replying in the affirmative, you ask Astrapi how exactly that happened. Shaking her head as she reminisces on these bad memories, she explains, [astrapi.speech(One of the centaurs cast a spell on it. I was told afterwards by someone who knows their stuff that it was a type of earth spell. In any case, they used the arcane to summon some kind of force and it caved the roof in. A few of my friends were caught in there, and while by some miracle they were unhurt, they ended up dazed and disoriented by it and were captured by Lunette's gang. One of the perks of having an elder lilin as your leader; you can enslave and abuse anyone you want...)]
+		你回答说是的，又询问阿斯特拉皮到底发生了什么。她一边摇头，一边回忆起这些不堪回首的往事，她解释道：[astrapi.speech(有一个半人马对它施了法术，事后一个懂行的人告诉我，那是一种土系法术。总之，他们用奥术召唤了某种力量，把屋顶压塌了。我的几个朋友被卷入其中，虽然他们奇迹般地没有受伤，但最终被震得晕头转向，被露内特的帮派抓住了。有一个莉琳长老作为首领的好处之一就是你可以奴役和虐待你们想要的任何人……)]
 	</p>
 	<p>
-		Sensing that Astrapi is getting angry at the thought of what Lunette's gang is responsible for, you shift the topic to what she and her brother ended up doing after their company shut down. Letting out a short sigh, she replies, [astrapi.speech(We did what we've always done; we pulled carriages. Only this time instead of transporting people and feeling like we were really providing a useful service, we were making some demon bitch rich by hauling furniture, crates, slaves, and all manner of other goods. There really wasn't much work going around, so we had no choice but to work for her, even though she treated us like shit and paid us half of what we were making before.)]
+		你察觉到阿斯特拉皮一想到露内特那伙人的所作所为就生气，于是把话题转移到她和哥哥在公司倒闭后的出路。她叹了一口气，回答说：[astrapi.speech(我们就做以前我们一直在干的活，我们拉马车。只是这一次，我们不再运送人，也不再觉得自己的服务真正有用，而是通过运送家具、板条箱、奴隶和其他各种货物，让某个恶魔婊子发财致富。这一片的活儿真的不多了，所以我们别无选择，只能为她工作，尽管她把我们当垃圾一样对待，付给我们的工资也只有以前的一半。)]
 	</p>
 	<p>
-		Wanting to move the conversation on to something more positive, you remark that now at least she and her brother are working for themselves and free from that old job. Turning her head and smiling at you, Astrapi replies, [astrapi.speech(That's right! We somehow saved up enough money to buy these carriages, and even if it means that we have to live out of a derelict barn, I'd rather be doing this than anything else. Vron feels the same way, but you might have noticed that he's not the talkative type; if you end up travelling with him then don't expect him to tell you even half of what I've told you!)]
+		你想把话题往更好的方面转移，于是说至少现在她和她哥哥摆脱了以前的工作，都在为自己工作。阿斯特拉皮转过头，对你微笑着回答说：[astrapi.speech(没错！不知不觉就攒够了钱，买下了这些马车，即使我们不得不住在废弃的谷仓里，我也心甘情愿。弗洛也是这么想的，不过你可能已经注意到了，他不是那种健谈的人，要是你和他一起旅行，估计他的话还没我说的一半多！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_TALK_COMPETITION"><![CDATA[
 	<p>
-		Deciding to pass the time by engaging Astrapi in conversation, you ask her about whether any other centaur carriage businesses are operating between Elis and Dominion, or if they're the only two doing this.
+		为了打发时间，你决定与阿斯特拉皮交谈，向她打听伊利斯和御城区之间是否还有其他半人马拉车生意，还是说只有他们两在做这个生意。
 	</p>
 	<p>
-		[astrapi.speech(As far as I know, we're the only ones,)] she answers, [astrapi.speech(There used to be a dozen or so different businesses doing what we do, but Lunette's centaurs brought an end to all that several years ago. They attacked carriages, destroyed the depot, and enslaved those of us who they could capture. Nobody wanted to risk travelling between Elis and Dominion after that, and who could blame them?)]
+		[astrapi.speech(据我所知，只有我们在做。)]她回答，[astrapi.speech(以前还有十几家也在做我们这生意，但露内特的半人马几年前结束了这一切。他们袭击马车，摧毁仓库，还奴役抓来的人。从那以后，再没人愿意冒险往返于伊利斯和御城区之间，但这又能怪谁呢？)]
 	</p>
 	<p>
-		Concerned that history might repeat itself, you ask Astrapi what's stopping Lunette's centaurs from attacking the two of you out here, seeing as they've done it on numerous occasions before.
+		你担心历史会重演，于是问阿斯特拉皮是什么阻止了露内特半人马在这里攻击你们两个，毕竟他们之前袭击过那么多次。
 	</p>
 	<p>
-		[astrapi.speech(These are why,)] she proudly replies, holding up her arms and flexing her massive biceps in a show of undeniable strength. Patting the bow on her back, she continues, [astrapi.speech(I've beaten Lunette's goons in the past, and I'll do it again if I have to; you've got nothing to fear when travelling with me. Those of them who don't fall to my bow soon find out that they're in way over their heads; I've never needed more than one punch to make Lunette's thugs drop to the dirt.)]
+		[astrapi.speech(这就是原因。)]她骄傲地回答道，举起双臂，弯曲着巨大的肱二头肌，展示其不容置疑的力量。她拍拍背上的弓，继续说道：[astrapi.speech(我过去打败过露内特的手下，如果有必要，我还会再打一次。和我一起旅行，你不用害怕。那些不肯拜倒在我手下的人很快就会发现他们在自不量力，我从来都只用一拳就能让露内特的打手们倒地。)]
 	</p>
 	<p>
-		Having no reason to doubt that what Astrapi says is true, you turn the topic of conversation back to her business, and ask if there's enough customer demand to make her business a viable one. Shrugging her shoulders, she replies, [astrapi.speech(Not really, I guess, but me and Vron don't need much to be content. We only need a few customers a week to get us by; food is far cheaper out here than it is in Dominion, and we've got shelter in the form of an old barn we bought from some farmers who were leaving the Realm. Maybe if Lunette ever gets dealt with, we'll turn this business of ours into a really profitable one, but for now I'm just happy to not be working in Dominion any more.)]
+		你没有理由怀疑阿斯特拉皮所言非虚，于是把话题转回到她的生意上，问顾客数量够不够让她维持生计。她耸了耸肩，回答道：[astrapi.speech(我想不一定，但我和弗洛要求不高。我们每周只需要几个顾客就能过活，这里的食物比御城区便宜得多，而且我们从一些即将离开王国的农民手中买下了一个旧谷仓，为我们提供了栖身之所。只要露内特的问题得到解决，我们就能把生意做得红红火火。但现在，不用再在御城区工作我就挺高兴了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_TALK_LUNETTE"><![CDATA[
 	<p>
-		Deciding to pass the time by engaging Astrapi in conversation, you ask her about what she knows of Lunette, and whether she's ever seen her before.
+		为了打发时间，你决定与阿斯特拉皮交谈，问她对露内特了解多少，以前有没有见过。
 	</p>
 	<p>
-		[astrapi.speech(What do I know of Lunette? That she needs to be taken down,)] she answers, [astrapi.speech(I don't care if saying that is treason; it's the truth! She's destroyed this land, and if she's not dealt with soon then the Foloi Fields are going to be completely abandoned. Who knows how that'll affect the rest of the realm, but it isn't going to be good. The brave farmers who are still working the land out here are just barely managing to produce enough food to keep the cities fed. I don't know why Lilith doesn't do something about this...)]
+		[astrapi.speech(我对露内特了解多少？她得倒台。)]她回答道，[astrapi.speech(我不在乎这么说算不算叛国，这是事实！她毁了这片土地，如果不尽快解决她，弗洛伊田野迟早彻底荒废。谁知道这会对王国的其他地方造成什么影响，但肯定不会是好事。勇敢的农民们还在这里耕作，他们只能勉强生产出足够的食物来维持城市的温饱。我不知道莉莉丝为什么不做点什么……)]
 	</p>
 	<p>
-		Repeating your question, you ask Astrapi if she's ever seen Lunette in the flesh, or if it's just her demonic centaurs which are encountered out here.
+		你重复你的问题，问阿斯特拉皮是否见过露内特的真身，还是说这里只能遇到她的恶魔半人马。
 	</p>
 	<p>
-		[astrapi.speech(I haven't heard of many people who've actually seen her, but yeah, I'm one of them...)] Astrapi replies, with her voice taking on an uncharacteristically sombre tone and trailing off into silence. Not needing to be promoted, she continues speaking just a moment later, and recounts, [astrapi.speech(It was as though she'd flipped a switch overnight; one day Lunette's centaurs were no more than petty bandits, then in the space of a week a dozen farms were destroyed, an entire village burnt down, and those who couldn't offer payment were enslaved and never seen again. Several villages banded together and tried to resist, and I just so happened to be passing nearby that day...)]
+		[astrapi.speech(我没听说有多少人真正见过她，但是呢，我是其中之一……)]阿斯特拉皮回答道，她的声音变得异常忧郁，然后渐渐沉默下来。无需提醒，过了一会儿，她继续娓娓道来：[astrapi.speech(就好像她一夜之间打开了开关，开始时露内特半人马还不过是些小强盗，但不到一个星期，十几个农场被毁，整个村庄被烧毁，付不起钱的人被奴役，再也没有出现过。几个村庄联合起来试图抵抗，那天我正好经过附近……)]
 	</p>
 	<p>
-		Once again Astrapi's voice trails off into silence, only this time she doesn't show any sign of continuing her story. Not wanting to make her dig up uncomfortable memories, you start to change the topic of conversation, but the centauress cuts you off as she suddenly continues, [astrapi.speech(You know, they actually looked like they were winning. From what I could see from a mile or so away, Lunette's centaurs started to retreat from the skirmish, but then there was a flash of purple light and this huge, black-haired pegataur appeared. It was Lunette, no doubt about it. I was far too far away to hear what was said, but she simply strode forwards and must have ordered the villagers to surrender, because every single one of them dropped their weapons and knelt down to her. Lunette's thugs then turned around and charged back in, and it was all over in a couple of minutes...)]
+		阿斯特拉皮的声音再次陷入沉默，只是这次她没有继续讲故事的迹象。你不想让她挖出不愉快的回忆，于是开始转移话题，但半人马突然打断了你，她继续说道：[astrapi.speech(你知道吗，他们看起来真的赢了。我在一英里左右的地方看到，露内特的半人马开始从纷争中撤退，但随后紫光一闪，这只巨大的黑发半天马出现了。毫无疑问，那就是露内特。我当时离得太远，听不清她说了些什么，但她大步向前走去，一定是命令村民们投降，每个村民都放下了武器，向她跪下了。露内特的打手转身又冲了进来，几分钟后一切都结束了……)]
 	</p>
 	<p>
-		Recognising that Lunette must have performed the same 'Lilith's Command' spell which her sister, Lyssieth, used on you against the villagers, you realise that they stood no chance at all against the elder lilin. As you mull this over, Astrapi shakes her head clear of the negative thoughts she's having and cheerfully proclaims, [astrapi.speech(I haven't seen her since then, and so long as she doesn't show up then I can keep you safe from her goons!)]
+		你意识到露内特一定施展了“莉莉丝之律令”法术来对付村民，就像她姐姐莉西丝对你施展的那样，这样他们根本没有机会战胜莉琳长老。在你思考这个问题的时候，阿斯特拉皮摇摇头，将消极的想法抛之脑后，兴高采烈地宣布道：[astrapi.speech(从那以后我就再也没有见过她，只要她不出现，我就能保证你的安全，不让她的手下伤害你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_TALK_END"><![CDATA[
 	<p>
-		The topic of your conversation then starts to gradually shift, until eventually the two of you are making small-talk about the weather, the lack of the maintenance done on the roads, and the state of the burnt-out farmsteads and abandoned fields which you pass by. Thanks to the excellent suspension on the carriage, your journey continues to be both smooth and comfortable, and before you even know it you're approaching your destination...
+		然后，你们的话题开始逐渐转移，直到最后，你们俩闲谈起天气、道路是如何缺乏维护，以及你们路过的被烧毁的农庄和被抛弃的田地了。得益于马车出色的悬挂系统，你们的旅途平稳而舒适，不知不觉中就接近了目的地……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Flirting: -->
 	
 	<htmlContent tag="ASTRAPI_FLIRT"><![CDATA[
 	<p>
-		You decide to pass the time by flirting with Astrapi, and begin by offering her some compliments on her impressive strength and stamina. Turning her head back and flashing you a big grin, she replies, [astrapi.speech(Me and Vron take our diet and exercise really seriously; we do a couple hours of workouts every day in addition to pulling carriages about. It's taken a while but we've built up this strength naturally; no muscle-transformation potions for us!)]
+		你决定与阿斯特拉皮调情来打发时间，首先夸奖了她令人印象深刻的力量和耐力。她回过头来，向你咧嘴一笑，[astrapi.speech(我和弗洛非常重视饮食和锻炼；除了拉车，我们每天还要做几个小时的锻炼。虽然花了一些时间，但我们的力量是自然形成的，不需要肌肉转化药剂！)]
 	</p>
 	<p>
-		Continuing to talk about Astrapi's body, you ask her if her exhibitionism has ever led into any embarrassing situations. Letting out a good-natured laugh in response, she tells you about a few occasions where customers or members of the public in Dominion couldn't stop staring at her exposed boobs. Turning to wink at you, she flicks her horse-tail to one side and flashes her [astrapi.pussyColour] horse-pussy at you, adding that she's lost count of the number of people who've stopped to stare at her exposed genitalia.
+		你继续谈论阿斯特拉皮的身体，问她有没有因为露阴癖尴尬过。她发出善意的笑声，告诉你有几次御城区的顾客或路人目不转睛地盯着她裸露的胸部。她转过身来向你眨眨眼睛，把马尾巴甩到一边，向你亮出她的[astrapi.pussyColour]马穴，并补充说她已经数不清有多少人驻足盯着她裸露的生殖器看了。
 	</p>
 	<p>
-		Coyly remarking that she could add one more to that score, you smirk at the centauress as she plays along by continually flicking her tail aside and presenting you with her animalistic pussy and puffy asshole. Seeming to be more than happy to push the boundaries of your flirting, she continues exposing herself to you while commenting on how much she likes being looked at. Soon enough, you notice that the lips of her horse-pussy start glistening a little, and you realise that Astrapi is getting seriously turned-on by your flirting. If you were to push her a little further, you think that you'd be able to get the muscular centauress horny enough to accept an offer of sex...
+		你腼腆地说她还可以再加一分，半人马就笑着配合你，不断地把尾巴甩到一边，向你展示她那充满野性的阴部和肉感的肛门。她似乎非常乐意挑战你的调情极限，继续在你面前暴露自己，同时表示她非常喜欢被人注视。不久，你注意到她的马穴开始闪闪发光，你意识到阿斯特拉皮已经被你的调情弄得非常兴奋了。如果你更进一步，说不定能让这位肌肉发达的半人马接受你的性邀约……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_FLIRT_STOP"><![CDATA[
 	<p>
-		Having had your fun, and not wanting to push Astrapi any further, you take things down a notch and shift your flirting into innocent small talk. The horny centauress seems to be more than a little frustrated at this, and tries several times to start talking about her exposed pussy again. Refusing to engage in any more flirting, you're surprised to hear the frustration in Astrapi's voice quickly change into one of an intense horniness.
+		你已经玩够了，不想再对阿斯特拉皮更进一步，于是你把气氛缓和下来，把调情转为单纯的闲聊。这个好色的半人马似乎对此很不满意，几次试图再次谈论她裸露的小穴。你拒绝了更多的调情，却惊讶地听到阿斯特拉皮的声音从沮丧迅速转变为强烈的渴求。
 	</p>
 	<p>
-		[astrapi.speech(You're so cruel,)] she whines, [astrapi.speech(You tease me like that and then stop? But you know, I've kind of got a bit of a thing for denial...)]
+		[astrapi.speech(你好残忍哦。)]她抱怨着，[astrapi.speech(你就这么挑逗我，然后又不逗了？但你知道，我有点喜欢寸止……)]
 	</p>
 	<p>
-		Proving her words to be true, the now-horny Astrapi continues making lewd comments and flashing you her pussy for quite some time. It's only after several more miles of travel that she eventually calms down, at which point you're finally able to shift the topic of conversation to small-talk about the weather, the lack of the maintenance done on the roads, and the state of the burnt-out farmsteads and abandoned fields which you pass by. In this manner the rest of your journey continues in an uneventful manner, and before you even know it you're approaching your destination...
+		事实证明她说的是真的，饥渴的阿斯特拉皮继续说着下流话，并向你展示了她的下体好一会儿。又走了几英里之后，她才最终平静下来，这时你终于可以把话题转移到天气，道路是如何缺乏维护，以及你们路过的被烧毁的农庄和被抛弃的田地了。你余下的旅程就像这样无事发生地度过了，在觉察前你就接近了目的地……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_FLIRT_PUSHED"><![CDATA[
 	<p>
-		Wanting to push Astrapi even further, you tell her that her pussy is starting to look like it's getting wet, and you ask her if she's got any pent-up sexual tension that needs to be dealt with. Although for all this time she's been pulling your carriage at an impressive rate, Astrapi hasn't once seemed to be getting out of breath, but now she pants as she responds, [astrapi.speech(You're making me like this... I can't help it... If my pussy gets wet...)]
+		你想和阿斯特拉皮更进一步，你告诉她，她的小穴看起来已经开始湿润了，你问她是否有任何压抑的性紧张需要处理。阿斯特拉皮虽然一直以惊人的速度拉着你的马车，但似乎从未气喘吁吁过，而现在她一边回答一边喘气，[astrapi.speech(你让我这样……我情不自禁……如果我的小穴湿了……)]
 	</p>
 	<p>
-		Telling the centauress that she's a bad girl for getting wet while at work seems to be the last straw, and with a desperate whine, Astrapi abruptly makes a short diversion off the road. Cantering down a gravel track, she pulls up behind a half-collapsed barn, where she swiftly throws off her harness and pulls off her sports bra.
+		你对半人马说她是个工作时都能湿掉的坏女孩，这成为了压倒她的最后一根稻草。阿斯特拉皮饥渴地哀鸣一声，断然绕道而行。她在一条碎石小路上疾驰，停在一个半坍塌的谷仓后面，迅速脱下背带，脱掉运动胸罩。
 		#IF(astrapi.isVisiblyPregnant())
-			 Gesturing towards her pregnant belly, she moans, [astrapi.speech(You've made this problem, now you fix it! Fuck me as much as you want; you've already got me pregnant, so do whatever you want with my pussy, just make me cum!)]
+			她指着孕肚，呻吟道，[astrapi.speech(你惹出了这个问题，现在你来解决它！你想怎么操就怎么操；你已经让我怀孕了，所以你想怎么弄我的小穴都行，只要让我高潮就行！)]
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_astrapi_impregnation_talk))
-			 Flashing you a horny look, she moans, [astrapi.speech(You've made this problem, now you fix it! If you want to try and get me pregnant, then that's fine... Just make me cum!)]
+			她向你投来饥渴的目光，发出呻吟，[astrapi.speech(你惹出了这个问题，现在你来解决它！如果你想让我怀孕，那也没关系……只要让我高潮就行！)]
 		#ELSE
-			 Grabbing what looks like a sterility pill out of the carriage's storage box, she swallows it and demands, [astrapi.speech(You've made this problem, now you fix it! Fuck me as much as you want; I'm not going to get pregnant after taking that pill, so do whatever you want with my pussy, just make me cum!)]
+			她从车厢的储物箱里拿起一粒像是不育药的东西，吞下后要求道，[astrapi.speech(你惹出了这个问题，现在你来解决它！你想怎么操就怎么操；吃了药我就不会怀孕了，所以你想怎么弄我的小穴都行，只要让我高潮就行！)]
 		#ENDIF
 	</p>
 	<p>
-		Presenting her rear-end to you, the horny centauress flicks her tail aside and shows you her now-dripping horse-pussy. In a distinctly animal-like behaviour, her clit is rhythmically winking at you, and as she reaches up to play with her huge, [astrapi.cupSize]-cup breasts, she whines, [astrapi.speech(Come on... You want to make my pussy happy, don't you?)]
+		淫荡的半人马向你展示她的后臀，[astrapi.she]把尾巴甩到一边，向你展示她正在滴水的马穴。她的阴蒂有节奏地向你眨着眼睛，像极了动物的行为，当她伸手玩弄她巨大的[astrapi.cupSize]罩杯乳房时，她发出了呜呜声，[astrapi.speech(来吧……你想让我的小穴快乐，对吧？)]
 	</p>
 	<p>
-		Looking at Astrapi's enticing, wet cunt, you feel like it would be very easy to respond in the positive and give this muscular centuress what she wants...
+		看着阿斯特拉皮的诱人的湿穴，你觉得自己肯定的话语似乎就要脱口而出，让这个肌肉半人马得偿所愿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_ASTRAPI_ORAL_START"><![CDATA[
 	#IF(pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
 			<p>
-				Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy. Smiling at the high-pitched moan she lets out in response, you tell her that you want her to cum from the feeling of giving you oral. Exposing your cock and pussy to her, you can't help but grin as she replies, [astrapi.speech(I'm so turned on right now... I could do that, sure...)]
+				你跳下马车，走向阿斯特拉皮并开玩笑用[pc.fingers]挑逗她性感的马穴。你对她的高调呻吟报以微笑，告诉她你想让她再给你口的时候高潮。你向她裸露你的鸡巴和小穴，不禁在她回应时咧嘴笑，[astrapi.speech(我现在太兴奋了……我能做到的，当然……)]
 			</p>
 			<p>
-				Turning round to face you, the muscular centauress obediently kneels down, before licking her lips and preparing to get started...
+				肌肉发达的半人马转过身来，顺从地跪了下来，然后舔舔嘴唇，准备开始……
 			</p>
 		#ELSE
 			<p>
-				Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy. Smiling at the high-pitched moan she lets out in response, you tell her that you want her to cum from the feeling of giving you a blowjob. Exposing your [pc.cock+] to her, you can't help but grin as she replies, [astrapi.speech(I'm so turned on right now... I could do that, sure...)]
+				你跳下马车，走向阿斯特拉皮并开玩笑用[pc.fingers]挑逗她性感的马穴。你对她的高调呻吟报以微笑，告诉她你想让她再给你口的时候高潮。你向她裸露你[pc.cock+]，不禁在她回应时咧嘴笑，[astrapi.speech(我现在太兴奋了……我能做到的，当然……)]
 			</p>
 			<p>
-				Turning round to face you, the muscular centauress obediently kneels down, before licking her lips and preparing to get started. Thrusting your [pc.hips] a little, you tell her to begin, and after letting out another horny whine, she opens her mouth and bends down to take your [pc.cock+] into her mouth. Wrapping her [astrapi.lips+] around your throbbing length, she starts eagerly bobbing her head up and down as she enthusiastically sucks your cock...
+				肌肉发达的半人马转过身来，顺从地跪了下来，然后舔舔嘴唇，准备开始。你挺了挺屁股，让她开始，再发出一阵性奋的哀鸣后，她张开嘴弯腰将你[pc.cock+]含入嘴巴。她把她[astrapi.lips+]裹在你悸动的鸡巴上，开始急切地来回山下头部，热情地嗦你的鸡巴……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy. Smiling at the high-pitched moan she lets out in response, you tell her that you want her to cum from the feeling of performing cunnilingus on you. Exposing your [pc.pussy+] to her, you can't help but grin as she replies, [astrapi.speech(I'm so turned on right now... I could do that, sure...)]
+			你跳下马车，[pc.walk]到阿斯特拉皮面前，手指在她热辣的马阴上挑逗。听到她高亢的呻吟声，你微笑着告诉她，你想她给你舔阴到喷出来。你把[pc.pussy+]挺到她面前。[astrapi.speech(我现在很性奋呢……我会做的，当然……)]听到她这样回答，你忍不住笑起来。
 		</p>
 		<p>
-			Turning round to face you, the muscular centauress obediently kneels down, before licking her lips and preparing to get started. Thrusting your [pc.hips] a little, you tell her to begin, and after letting out another horny whine, she bends down to plant a wet kiss on your [pc.labia+]. Darting her tongue out, she greedily presses her [astrapi.lips+] against your pussy, before starting to eagerly eat you out...
-		</p>
+				肌肉发达的半人马转过身来，顺从地跪了下来，然后舔舔嘴唇，准备开始。你挺了挺屁股，让她开始，再发出一阵性奋的哀鸣后，她弯腰在你[pc.labia+]种下一个湿润的吻。她伸出舌头，贪婪地把她[astrapi.lips+]压向你的小穴，开始饥渴地口你……
+			</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_ASTRAPI_TITJOB_START"><![CDATA[
 	<p>
-		Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy. Smiling at the high-pitched moan she lets out in response, you tell her that you want her to cum from the feeling of giving you a titjob. Exposing your [pc.cock+] to her, you can't help but grin as she replies, [astrapi.speech(I'm so turned on right now... I could do that, sure...)]
+		你跳下马车，走到阿斯特拉皮面前，手指在她热辣的马臀上挑逗。听到她高亢的呻吟声，你微笑着告诉她，你想让她给你乳交到射。你[pc.cock+]挺到她面前。[astrapi.speech(我现在很性奋呢……我会做的，当然……)]听到她这样回答，你忍不住笑起来。
 	</p>
 	<p>
-		Turning round to face you, the muscular centauress obediently kneels down, before reaching up and pressing her huge, [astrapi.cupSize]-cup tits together. [pc.Stepping] forwards, you thrust your [pc.hips] a little as you push your erect cock into the soft cleavage that's formed between the muscular centauress's pillowy breasts. Letting out a horny whine, Astrapi starts moving her chest up as she enthusiastically gives you the titjob you asked for...
+		肌肉紧致的半人马转过身来面对你，顺从地跪下，然后伸手将她巨大的[astrapi.cupSize]杯奶子挤在一起。你向前[pc.Stepping]，轻拱[pc.hips]，勃起的鸡巴顶进肌肉紧致的半人马枕般乳房间的柔软乳沟。阿斯特拉皮淫荡地低吟一声，挺起胸膛，按要求那样热情地为你乳交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_ASTRAPI_SERVICING_START"><![CDATA[
 	<p>
-		Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy. Smiling at the high-pitched moan she lets out in response, you tell her that you'll easily be able to get her to climax by servicing her lewd cunt. Continuing to stroke her wet labia, you can't help but grin as she breathlessly replies, [astrapi.speech(Keep on going... ~Mmm!~ Yes, like that...)]
+		你跳下马车，走到阿斯特拉皮面前，手指在她热辣的马臀上挑逗。听到她高亢的呻吟声，你微笑着告诉她，你会为她的淫穴很快带来高潮。你继续抚摸她湿润的阴唇，[astrapi.speech(继续，~嗯！~啊，就这样……)]听到她这样回答，你忍不住笑起来。
 	</p>
 	<p>
-		Doing as she asks, you carry on sliding your [pc.fingers+] over her dripping cunt, before commenting on how sexy her hot mare-pussy is. Your words prove to be enough to push her over the edge and she desperately moans, [astrapi.speech(Yes! Finger me! ~Aah!~ My dirty little pussy wants more!)]
+		你按照她的要求，继续用[pc.fingers+]在她滴水的阴户上滑动，评论她温润的马穴是多么性感。事实证明，你的话足以将她推向高潮，她急切地呻吟着，[astrapi.speech(啊！扣我！~啊！~ 我的小骚穴想要！)]
 	</p>
 	<p>
-		Happy to oblige, you push your [pc.fingers] into Astrapi's [astrapi.pussyColour] cunt, before starting to enthusiastically finger her. As your physical attention quickly reduces this cheerful, muscular centauress into your horny, moaning mare, you promise Astrapi that if she's a good girl you might even eat her out...
-	</p>
-	]]>
-	</htmlContent>
+			你欣然应允，将[pc.fingers]插入阿斯特拉皮[astrapi.pussyColour]的小穴，开始热情地用指交她。随着你对她身体的关注，这位开朗、肌肉发达的半人马很快就变成了你饥渴、呻吟的母马，你承诺她如果做个好女孩，你甚至可以口她……
+		</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_ASTRAPI_FUCK_START"><![CDATA[
 	<p>
-		Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy. Smiling at the high-pitched moan she lets out in response, you tell her that you'll easily be able to get her to climax by fucking her lewd cunt. Continuing to stroke her wet labia, you can't help but grin as she breathlessly replies, [astrapi.speech(Yes... ~Mmm!~ Come on then, fuck me...)]
+		你跳下马车，走到阿斯特拉皮身边，用你的手指在她火热的马臀上嬉戏。听着她高亢的呻吟声，你微笑着告诉她，只要操她淫荡的小穴，你就能轻松地让她达到高潮。你继续抚摸她湿润的阴唇，你不禁咧嘴笑了起来，她喘息着回答，[astrapi.speech(是……~嗯！~来吧，操我……)]
 	</p>
 	#IF(pc.isTaur())
 		<p>
-			Encouraged by Astrapi's words, you take your [pc.fingers+] away from her dripping cunt, before commenting on how her hot mare-pussy is about to get the good fucking it deserves. Your words prove to be enough to push her over the edge and she desperately moans, [astrapi.speech(Yes! Mount me! ~Aah!~ My dirty little pussy wants your cock!)]
+			在阿斯特拉皮的鼓励下，你把[pc.fingers+]从她滴水的阴户上拿开，然后评论她火热的马穴即将得到应有的鸡巴。事实证明，你的话足以将她推向高潮，她拼命地呻吟着，[astrapi.speech(啊！骑在我身上~啊！~我淫荡的小穴想要你的鸡巴！)]
 		</p>
 		<p>
-			Exposing your [pc.cock+], you move to do as Astrapi asks, and after pushing yourself up onto your hind legs, you mount the centauress. Bucking your hips forwards, you press the [pc.cockHead+] of your [pc.cock+] against her pussy, smirking as you feel how hot and wet it is. Unable to hold back for any longer, you thrust once more and sink your erect shaft into Astrapi's horse-pussy. Feeling your cock enter her, the centauress moans, [astrapi.speech(~Aah!~ Yes, fuck me like an animal! ~Mmm!~ That's it, rut me!)]
+			你暴露你[pc.cock+]，按照阿斯特拉皮的要求挪动，用后腿支撑身体，骑着半人马。你屈起屁股，将你[pc.cock+][pc.cockHead+]压向她的小穴，感到里面的温润潮湿后，你得意地坏笑。你再也忍不住了，再次用力将你竖直的阴茎浸入阿斯特拉皮的马穴里。半人马感受到你的鸡巴进入身体，发出一阵呻吟，[astrapi.speech(~啊！~啊！像动物一样操我！就是这样，操我！)]
 		</p>
 	#ELSE
 		<p>
-			Encouraged by Astrapi's words, you take your [pc.fingers+] away from her dripping cunt, before commenting on how her hot mare-pussy is about to get the good fucking it deserves. Your words prove to be enough to push her over the edge and she desperately moans, [astrapi.speech(Yes! Fuck me! ~Aah!~ My dirty little pussy wants your cock!)]
+			你被阿斯特拉皮鼓舞，将你[pc.fingers+]从她滴水的穴上移开，评论着她那性感的母马穴马上就要得到她应得操干的了。你的言辞将她推到了边缘，她急切地呻吟道，[astrapi.speech(对！操我！~啊！~我的小骚穴想要你的大屌！)]
 		</p>
 		<p>
-			Exposing your [pc.cock+], you move to do as Astrapi asks, and after [pc.stepping] up behind her, you bring your cock up to her pussy. Bucking your hips forwards, you press the [pc.cockHead+] of your [pc.cock+] against her [astrapi.labia+], smirking as you feel how hot and wet her pussy is. Unable to hold back for any longer, you thrust forwards and sink your erect shaft into Astrapi's horse-pussy. Feeling your cock enter her, the centauress moans, [astrapi.speech(~Aah!~ Yes, fuck me like an animal! ~Mmm!~ That's it, rut me!)]
+			你暴露你[pc.cock+]，按照阿斯特拉皮的要求移动到她的身后，将鸡巴抬向她的小穴。你屈起屁股，将你[pc.cock+][pc.cockHead+]压向她[astrapi.labia+]，感到里面的温润潮湿后，你得意地坏笑。你再也忍不住了，再次用力将你竖直的阴茎浸入阿斯特拉皮的马穴里。半人马感受到你的鸡巴进入身体，发出一阵呻吟，[astrapi.speech(~啊！~啊！像动物一样操我！就是这样，操我！)]
 		</p>
 	#ENDIF
 	<p>
-		More than happy to oblige, you start desperately thrusting your hips, slamming your [pc.cock+] in and out of Astrapi's mare-pussy as you fuck her like an animal...
+		你非常乐意效劳，于是拼命地扭动你的臀部，[pc.cock+]猛烈撞击阿斯特拉皮的马穴，像动物交配一般操她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_FLIRT_BACK_OUT"><![CDATA[
 	<p>
-		Things have progressed too far for your liking, so you tell Astrapi that she'll just have to deal with her sexual frustration. Although the horny centauress lets out an annoyed remark in response to this, you're surprised to hear the frustration in her voice quickly change into one of an intense horniness as she whines, [astrapi.speech(You're so cruel! You tease me like that and then stop? But you know, I've kind of got a bit of a thing for denial...)]
+		事情已经发展到你不喜欢的地步了，所以你告诉阿斯特拉皮，她只能自己平息她的欲火。虽然好色的半人马发出了恼怒的回应，但你惊讶地听到她声音中的沮丧很快变成了强烈的性欲，[astrapi.speech(你太残忍了！你这样戏弄我，然后又停下来？但是你知道，我有点喜欢寸止……)]
 	</p>
 	<p>
-		Proving her words to be true, the immensely-horny Astrapi continues making lewd comments and flashing you her pussy for several more minutes, before eventually pulling her sports bra on and strapping herself to the carriage. Pulling away from the barn, she continues to make references to how wet and hot her pussy feels, and thanks to the fact that she keeps on swishing her tail aside, you can verify for yourself that her lewd horse-pussy is practically dripping from arousal.
+		为了证明她的话是真的，淫荡无比的阿斯特拉皮继续说着淫荡的话，并向你展示了她的小穴，持续了几分钟，最后她穿上运动胸罩，把自己绑在了车厢上。拉开与随时粮仓的距离后，她继续提到她的淫穴多么湿润和火热，她不停地在一旁摆动她的尾巴，你可以亲眼目睹她淫荡的马穴因兴奋而几乎要滴出水来。
 	</p>
 	<p>
-		It's only after several more miles of travel that Astrapi eventually calms down, at which point you're able to make some small-talk about the weather, the lack of the maintenance done on the roads, and the state of the burnt-out farmsteads and abandoned fields which you pass by. In this manner the rest of your journey continues in an uneventful manner, and before you even know it you're approaching your destination...
+		过了几里路后阿斯特拉皮终于冷静了下来，这时你们能闲聊下天气，道路是如何缺乏维护，以及你们路过的被烧毁的农庄和被抛弃的田地了。你余下的旅程就像这样无事发生地度过了，在觉察前你就接近了目的地……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_IMPREGNATION_TALK"><![CDATA[
 	<p>
-		Wanting to knock Astrapi up, you ask her why she doesn't want to get pregnant. After letting out a frustrated moan as she hears that you want to talk instead of moving right on to having sex, she sighs and replies, [astrapi.speech(Well, call me strange, but I didn't want to have kids with someone I barely knew. I suppose that doesn't really apply to you any more, though, what with how well we know each other by now...)]
+		你想搞大阿斯特拉皮的肚子，就问她为什么不想怀孕。当她听到你想和她谈谈而不是直接进行做爱时，她发出了一声沮丧的呻吟，然后叹了口气回答说，[astrapi.speech(嘛，可以说我很奇怪，但我不想和一个几乎不认识的人有孩子。我想这对你已经不适用了，因为我们现在已经很熟了……)]
 	</p>
 	<p>
-		Asking her if the two of you are close enough for her to rethink her stance on getting pregnant, you can't help but smile as the horny centauress grins and continues, [astrapi.speech(You really want to knock me up, huh? Well, seeing as it's you, [pc.name], I guess I wouldn't mind... I won't take a pill next time, and if you've got a breeder pill on you then just throw me one and we can make some babies together right now...)]
+		你问她你们两个人的关系是否亲密到足以让她重新考虑怀孕的立场，好色的半人马上笑着继续说：[astrapi.speech(你真想把我肚子搞大，嗯？既然是你，[pc.name]，我想我不会介意的……下次我就不吃药了，如果你身上有繁育药，就扔给我一颗，我们现在就可以一起造小孩……)]
 	</p>
 	<p>
-		Impatiently flicking her horse tail back and forth, she doesn't give you any time to respond as she loudly moans, [astrapi.speech(Come on, [pc.name], let's just fuck already!)]
+		阿斯特拉皮急不可耐地甩动着她的马尾巴，压根不给你时间反应，就大声呻吟起来：[astrapi.speech(来吧，[pc.name]，来做吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_ASTRAPI_SERVICING_ASS_START"><![CDATA[
 	#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
 		<p>
-			Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy, before moving your touch up to her puffy anus. Smiling at the high-pitched moan she lets out in response, you tell her that you'll easily be able to get her to climax by servicing her lewd asshole. Continuing to stroke her rear entrance, you can't help but grin as she breathlessly replies, [astrapi.speech(You prefer my ass? ~Mmm!~ You're so perverted... I kind of like that...)]
+			你跳下马车，[pc.walk]到阿斯特拉皮身边，手指在她火热的马阴上嬉戏挑逗，又探向她肉感的肛门。听着她高亢的呻吟声，你微笑着告诉她，让她达到高潮轻而易举，只需为她淫荡的屁眼服务。你继续抚摸她的后庭，惹得她气喘吁吁地回答：[astrapi.speech(你更喜欢我的屁眼？~唔嗯！~你真变态……我喜欢……)]这回答令你不由坏笑起来。
 		</p>
 		<p>
-			Clearly not expecting what's coming next, the muscular centaur gasps as you quickly drop down behind her and plant a big, passionate kiss on her puffy asshole. Pulling back, you tell Astrapi that you've been well trained as one of Natalya's [style.mules], and that performing anilingus on centaurs is part of your job. Wanting to demonstrate this to her, you lean in and start planting a series of loving kisses on Astrapi's horse-anus, causing her to squeal and declare, [astrapi.speech(~Aah!~ That feels so good! ~Mmm!~ You're so good at it!)]
+			显然，她没有预料到接下来会发生什么，你迅速从她身后趴下，在她肉感的屁穴上狠狠地亲了一口时，这位肌肉发达的半人马上瞪大了眼睛。回过头来，你告诉阿斯特拉皮，作为娜塔莉亚的[style.mules]之一，你受过良好的训练，在半人马身上表演吻肛是你工作的一部分。为了向她证明这一点，你俯身开始在阿斯特拉皮的马肛上亲吻，引得她尖叫连连，[astrapi.speech(~啊！~感觉好好！~嗯！~你很擅长嘛！)]
 		</p>
 		<p>
-			Smiling at her response, you tell the muscular centauress that she hasn't experienced anything yet. Before she can respond to that statement, you eagerly bury your face into her ass, pressing your [pc.lips+] against her puffy asshole in the process. Darting your [pc.tongue+] out, you start lovingly performing anilingus on Astrapi, and from the high-pitched, enthusiastic moans you start to hear her making, you're sure that Natalya would be proud of your efforts...
+			听到她的回答，你微笑着告诉这位肌肉发达的半人马，她还什么都没体验过呢。还没等她来得及说什么，你就迫不及待地把脸埋进她的屁股里，[pc.lips+]抵向她肉感的菊穴。你伸出[pc.tongue+]，满怀爱意地给阿斯特拉皮吻肛，从她发出的高声又热切的娇喘中，你确信娜塔莉亚会为你的努力感到骄傲……
 		</p>
 	#ELSE
 		<p>
-			Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy, before moving your touch up to her puffy anus. Smiling at the high-pitched moan she lets out in response, you tell her that you'll easily be able to get her to climax by servicing her lewd asshole. Continuing to stroke her rear entrance, you can't help but grin as she breathlessly replies, [astrapi.speech(You prefer my ass? ~Mmm!~ You're so perverted... I kind of like that...)]
+			你跳下马车，[pc.walk]到阿斯特拉皮身边，手指在她火热的马阴上嬉戏挑逗，又探向她肉感的肛门。听着她高亢的呻吟声，你微笑着告诉她，让她达到高潮轻而易举，只需为她淫荡的屁眼服务。你继续抚摸她的后庭，惹得她气喘吁吁地回答：[astrapi.speech(你更喜欢我的屁眼？~唔嗯！~你真变态……我喜欢……)]这回答令你不由坏笑起来。
 		</p>
 		<p>
-			Encouraged by her words, you carry on sliding your [pc.fingers+] over Astrapi's asshole, before commenting on how sexy her butt is. Your words prove to be enough to push her over the edge and she desperately moans, [astrapi.speech(Go on then, do what you want with my ass! ~Aah!~ You can finger it if you'd like!)]
+			在她的鼓励下，你继续将你[pc.fingers+]在阿斯特拉皮的屁眼上滑动，然后评论她的屁股有多性感。事实证明，你的话足以将她推向高潮，她拼命地呻吟着，[astrapi.speech(来吧，随便你怎么玩我的屁股~啊！~如果你愿意，你可以用手指！)]
 		</p>
 		<p>
-			Happy to oblige, you push your [pc.fingers] into Astrapi's [astrapi.anusColour] asshole, before starting to enthusiastically finger her. As your physical attention quickly reduces this cheerful, muscular centauress into your horny, moaning mare, you promise Astrapi that if she's a good girl you might even perform anilingus on her...
+			你欣然应允，将[pc.fingers]插入阿斯特拉皮[astrapi.nanusColour]的屁穴，开始热情地用指交她的屁穴。随着你对她身体的关注，这位开朗、肌肉发达的半人马很快就变成了你饥渴、呻吟的母马，你承诺她如果做个好女孩，你甚至可以为她吻肛……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_ASTRAPI_FUCK_ASS_START"><![CDATA[
 	<p>
-		Jumping down off the carriage, you [pc.walk] up to Astrapi and playfully tease your [pc.fingers] over her hot horse-pussy, before moving your touch up to her puffy anus. Smiling at the high-pitched moan she lets out in response, you tell her that you'll easily be able to get her to climax by fucking her butt. Continuing to stroke her rear entrance, you can't help but grin as she breathlessly replies, [astrapi.speech(You'd prefer to do it with my ass? ~Mmm!~ You're so perverted... I kind of like that...)]
+		你跳下马车，走到阿斯特拉皮身边，俏皮地用手指在她火热的马臀上挑逗，然后将触角伸向她的肉感肛门。听着她高亢的呻吟声，你微笑着告诉她，你可以轻松地通过干她的屁股让她达到高潮。你继续抚摸她的后背，看着她气喘吁吁地回答，你不禁咧嘴笑了起来，[astrapi.speech(你更喜欢用我的屁股做？~你真变态……我好喜欢……)]
 	</p>
 	#IF(pc.isTaur())
 		<p>
-			Encouraged by Astrapi's words, you take your [pc.fingers+] away from her asshole, before commenting on how her hot ass is about to get the good fucking it deserves. Your words prove to be enough to push her over the edge and she desperately moans, [astrapi.speech(Yes! Mount me! ~Aah!~ My hot little asshole wants your cock!)]
+			在阿斯特拉皮的鼓励下，你把你[pc.fingers+]从她的屁穴上拿开，然后评论她火热的屁股即将得到应有的蹂躏。事实证明，你的话足以将她推向高潮，她拼命地呻吟着，[astrapi.speech(啊！骑在我身上~我火热的小屁穴想要你的鸡巴！)]
 		</p>
 		<p>
-			Exposing your [pc.cock+], you move to do as Astrapi asks, and after pushing yourself up onto your hind legs, you mount the centauress. Bucking your hips forwards, you press the [pc.cockHead+] of your [pc.cock+] against her asshole, smirking as you feel how hot it is. Unable to hold back for any longer, you thrust once more and sink your erect shaft into Astrapi's ass. Feeling your cock enter her, the centauress moans, [astrapi.speech(~Aah!~ Yes, fuck me like an animal! ~Mmm!~ That's it, rut my asshole!)]
+			你暴露出你[pc.cock+]，按照阿斯特拉皮的要求，将自己的后腿抬起来，骑在半人马的身上。你向前扭动臀部，将你[pc.cock+][pc.cockHead+]顶在她的屁穴上，一边感受着它的热度一边偷笑。你再也忍不住了，进一步插入，将勃起的鸡巴插入阿斯特拉皮的屁穴里。半人马感受到你的鸡巴进入她的身体，她呻吟着，[astrapi.speech(~啊~对，像动物一样干我~嗯！~就是这样，干我的屁穴！)]
 		</p>
 	#ELSE
 		<p>
-			Encouraged by Astrapi's words, you take your [pc.fingers+] away from her asshole, before commenting on how her hot ass is about to get the good fucking it deserves. Your words prove to be enough to push her over the edge and she desperately moans, [astrapi.speech(Yes! Fuck me! ~Aah!~ My hot little asshole wants your cock!)]
+			在阿斯特拉皮的鼓励下，你把你[pc.fingers+]从她的屁眼里拿开，然后评论她火热的屁穴即将得到应有的操弄。事实证明，你的话足以将她推向高潮，她拼命地呻吟着，[astrapi.speech(啊！操我~我火热的小屁眼想要你的鸡巴！)]
 		</p>
 		<p>
-			Exposing your [pc.cock+], you move to do as Astrapi asks, and after [pc.stepping] up behind her, you bring your cock up to her ass. Bucking your hips forwards, you press the [pc.cockHead+] of your [pc.cock+] against her [astrapi.asshole+], smirking as you feel how hot it is. Unable to hold back for any longer, you thrust forwards and sink your erect shaft into Astrapi's ass. Feeling your cock enter her, the centauress moans, [astrapi.speech(~Aah!~ Yes, fuck me like an animal! ~Mmm!~ That's it, rut my asshole!)]
+			你暴露出[pc.cock+]，按照阿斯特拉皮的要求，走到她身后，将你的鸡巴顶到她的屁股上。你向前扭动臀部，将你[pc.cock+][pc.cockHead+]顶在她[astrapi.asshole+]上，得意地坏笑着，因为你感觉到它有多热。你再也忍不住了，向前一挺，将勃起的阴茎插入阿斯特拉皮的屁穴。半人马感受到你的鸡巴进入她的身体，她呻吟起来，[astrapi.speech(~啊~对，像动物一样干我~嗯！~就是这样，干我的屁穴！)]
 		</p>
 	#ENDIF
 	<p>
-		More than happy to oblige, you start desperately thrusting your hips, slamming your [pc.cock+] in and out of Astrapi's puffy asshole as you fuck her like an animal...
-	</p>
-	]]>
-	</htmlContent>
+		你非常乐意，开始拼命地扭动臀部，将你[pc.cock+]在阿斯特拉皮的肉感屁眼里进进出出，像野兽一样干她……	
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_POST_SEX"><![CDATA[
 	<p>
 		#IF(astrapi.isSatisfiedFromLastSex())
-			Letting out a deeply satisfied sigh, Astrapi moans, [astrapi.speech(I really needed that... You sure know how to satisfy a centaur...)]
+			阿斯特拉皮发出一声深感满足的叹息，[astrapi.speech(我真的需要……你真会满足半人马……)]
 		#ELSE
-			Letting out an incredibly frustrated sigh, Astrapi moans, [astrapi.speech(You didn't satisfy me from that... But, you know, I kind of like being denied...)]
+			阿斯特拉皮发出一声欲求不满的叹息，[astrapi.speech(你没有满足我……但是，你知道，我有点喜欢被拒绝……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(!astrapi.getFluidsStoredInOrifice(ORIFICE_VAGINA).isEmpty())
-			As you [pc.step] away from her, Astrapi turns so as to present you with her well-fucked horse-pussy. As you look down to see your cum leaking out of her cunt, the muscular centauress turns her head back and teases, [astrapi.speech(You really gave me a good creampie there! I can feel your cum oozing out of me...)]
+			当你离开她时，阿斯特拉皮转过身来，让你看到她被操得酣畅淋漓的马穴。你低头看到你的精液从她的阴户中流出，肌肉发达的半人马转过头来，挑逗着你，[astrapi.speech(你真的给了我一个很好的内射！我能感觉到你的精液从我体内渗出……)]
 		#ELSEIF(!astrapi.getFluidsStoredInOrifice(ORIFICE_ANUS).isEmpty())
-			As you [pc.step] away from her, Astrapi turns so as to present you with her puffy horse-anus. As you look down to see your cum leaking out of her asshole, the muscular centauress turns her head back and teases, [astrapi.speech(You really gave me a good creampie there! I can feel your cum oozing out of me...)]
+			当你离开她时，阿斯特拉皮转过身来，让你看到她被操得酣畅淋漓的马肛。你低头看到你的精液从她的屁穴中流出，肌肉发达的半人马转过头来，挑逗着你，[astrapi.speech(你真的给了我一个很好的内射！我能感觉到你的精液从我体内渗出……)]
 		#ELSE
-			As you [pc.step] away from her, Astrapi turns so as to present you with her horse-pussy. As you look down to see her slick juices running down over the surface of her cunt, the muscular centauress turns her head back and teases, [astrapi.speech(Look how wet I still am! I bet my pussy looks really lewd now, doesn't it?)]
+			当你离开她时，阿斯特拉皮转过身来，让你看到她被操得酣畅淋漓的马穴。你低头看到她的小穴表面流淌着滑腻的爱液时，肌肉发达的半人马转过头来，挑逗着你，[astrapi.speech(看我还是那么湿！我的小穴现在看起来一定很淫荡，对吧？)]
 		#ENDIF
 	</p>
 	<p>
-		Playfully laughing at your brief response to this, Astrapi moves to quickly pull her sports bra back on, after which she straps herself back into the carriage's harness and tells you to climb aboard. Doing so, and feeling satisfied after having sex with Astrapi, you relax on the padded seats as the muscular centauress pulls away from the barn and sets off at a canter down the road once again...
+		阿斯特拉皮对你的简短回应嬉皮笑脸，她迅速穿上运动胸罩，然后将自己重新绑在车厢的安全带上，让你爬上车。与阿斯特拉皮做爱后，你感到很满足，于是放松地躺在软垫座位上，肌肉发达的半人马拉开了随时粮仓的距离，再次沿着公路疾驰而去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_JOURNEY_END"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
 		<p>
-			A short while of travelling later, Astrapi calls out to you, [astrapi.speech(You can see the walls of Elis from here, look!)]
+			走了一会儿，阿斯特拉皮对你叫道：[astrapi.speech(可以看到伊利斯的城墙了，快看！)]
 		</p>
 		<p>
-			Sure enough, as you look in the direction that she's pointing in, you're able to see a strip of grey on the horizon. Thanks to Astrapi's impressive speed, it only takes another couple of minutes before you're able to pick out the distinctive shape of towers embedded into the corners of the ramparts, as well as the roofs of the taller buildings within the town itself. The one which stands out the most, and the one which truly defines the town's silhouette, is the tall, highly-steepled roof of the town hall's tower.
+			果然，你顺着她指的方向看去，就看到地平线上的一条灰色条纹。得益于阿斯特拉皮惊人的速度，只用了几分钟，你就能辨认出嵌在城墙四角的塔楼的独特形状，以及城内高层建筑的屋顶。其中最引人注目的，也是真正勾勒出小镇轮廓的，是市镇议会塔楼高大而陡峭的屋顶。
 		</p>
 		<p>
-			As you get ever closer to Elis, you're able to pick out the crenellations of its walls, and can thankfully see that the gatehouse has its gates wide open.
+			当越来越接近伊利斯时，你可以远远地看到城墙上的石垛口，并值得庆幸的是，大门是敞开着的。
 			#IF(game.isDayTime())
-				 While there aren't many people leaving or entering the town via the same cobblestone road which you find yourself on, you can see through the entrance that the interior of the town looks to be quite busy.
+				虽然经由同一条鹅卵石路进出小镇的人并不多，但从入口处可以看到小镇内部看起来相当繁忙热闹。
 			#ELSE
-				 Due to the current hour, there isn't a single person leaving or entering the town via the same cobblestone road which you find yourself on, although you can see through the entrance that the interior of the town looks to be not completely deserted.
+				鉴于时间的原因，现在基本没有人从这条鹅卵石路进出小镇，不过从入口处依旧可以看出小镇内部至少是还没有完全荒废的样子。
 			#ENDIF
 		</p>
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_lunetteTerrorEnded))
-				Thanks to the close proximity of the town, the nearby fields are very well protected from raiders or bandits. Despite this, however, there doesn't appear to be a single residential building outside of the walls, giving the surrounding area a very rural feel to it.
+				由于距离城镇很近，所以附近的田野受到很好的保护，并没有受到袭击者或强盗的侵扰。同时城墙外似乎没有一栋居民楼，这让周围地区充满了乡土气息。
 			#ELSE
-				Taking a look around at the nearby fields, you notice that they don't seem to have suffered the same sort of damage from Lunette's centaurs as those out in the Foloi Fields. Despite the apparent protection from raids, however, there doesn't appear to be a single residential building outside of the walls, giving these fields a very rural feel to them.
+				你环顾了一下附近的田野，发现这些田野似乎并没有像弗洛伊田野那样遭受露内特半人马的破坏。虽然这些田地受到了良好的保护，但城墙外没有一栋居民楼，给人了一种满是乡村气息的感觉。
 			#ENDIF
 		</p>
 		<p>
-			The only building outside of the town's walls which you can see is the one which Astrapi is leading you to. Taking the form of a large, wooden barn, and positioned a short distance from the eastern gate of the town, this building appears to be Elis's counterpart to the twin barns back at Dominion. Confirming this to you, Astrapi calls back, [astrapi.speech(This is where we stop off. I can't take you into the town itself as there's a tax on centaur carriages passing through the gates, which I just can't afford.)]
+			阿斯特拉皮带你去的地方便是城墙外你唯一能看到的建筑，它是一个大型木制谷仓，离城镇东门不远。这座在伊利斯的建筑似乎与御城区的那座谷仓双生对应，阿斯特拉皮也向你证实了这一点，回头叫道：[astrapi.speech(这是我们要停的地方。半人马拉车进城门要交税，我负担不起，所以我不能带你进城。)]
 		</p>
 		<p>
-			Pulling up in front of this barn, Astrapi waits for you to dismount the carriage, before cheerfully saying, [astrapi.speech(I hope you enjoyed the ride. Please do use me or my brother again if you need to get back to Dominion in a hurry; we're a lot faster than walking!)]
+			阿斯特拉皮将车停在谷仓前，等你下了马车才欢欣雀跃地说：[astrapi.speech(希望你喜欢这趟旅程。如果你急着回御城区，请再找我或我哥哥，我们比走路快多了！)]
 		</p>
 	#ELSE
 		<p>
-			A short while of travelling later, Astrapi calls out to you, [astrapi.speech(You can see Lilith's tower from here, look!)]
+			走了一会儿，阿斯特拉皮对你叫道：[astrapi.speech(可以看到那里的莉莉丝之塔了，快看！)]
 		</p>
 		<p>
-			Sure enough, as you look in the direction that she's pointing in, you're able to see the black obelisk of Lilith's tower in the distance. Thanks to Astrapi's impressive speed, it only takes another couple of minutes before you're able to pick out the distinctive outline of Dominion's suburbs, and a further few minutes later you see the twin barns of the 'Centaur Carriage Depot' on either side of the road up ahead.
+			果然，你顺着她指的方向望去，就看到远处莉莉丝之塔的黑色方尖碑。得益于阿斯特拉皮惊人的速度，只用了几分钟，御城区郊区独特的轮廓便映入眼帘，再过几分钟，你就能看到前方道路两旁“人马车站”的两个谷仓。
 		</p>
 		<p>
-			[astrapi.speech(This is where we stop off,)] Astrapi calls back as she pulls up in front of these familiar barns. Waiting for you to dismount the carriage, she cheerfully adds, [astrapi.speech(I hope you enjoyed the ride. Please do use me or my brother again if you need to get back to Elis in a hurry; we're a lot faster than walking!)]
+			[astrapi.speech(我们就停在这里。)]阿斯特拉皮将车停在这些熟悉的谷仓前，喊道。她等你下了马车，欢欣雀跃地补充道：[astrapi.speech(希望你喜欢这趟旅程。如果你急着回御城区，请再找我或我哥哥，我们比走路快多了！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_JOURNEY_END_GOODBYE"><![CDATA[
 	<p>
-		Thanking Astrapi for the ride, and assuring her that you will use her business again in the future, you say goodbye.
+		你感谢阿斯特拉皮载你一程，向她保证以后还会再光顾她的生意，接着向她告别。
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-			 Happily waving to you, the muscular centauress opens the door to the barn, but before she pulls her carriage inside and disappears from sight she calls out after you, [astrapi.speech(Remember, my brother and I won't be offering rides for the rest of today, but starting tomorrow we'll be working every day! See you around, [pc.name]!)]
+			这位肌肉发达的半人马高兴地向你挥手，然后打开了谷仓的门，但在她把马车拉进谷仓并消失在你的视线中之前，她在你身后喊道，[astrapi.speech(记住，今天剩下的时间我和我哥哥不提供乘车服务，但从明天开始，我们每天都会工作！再见，[pc.name]！)]
 		#ELSE
-			 Happily waving to you, the muscular centauress opens the door to the barn, before pulling her carriage inside and disappearing from sight.
+			这位肌肉发达的半人马高兴地向你挥手，然后打开谷仓的门，拉着马车走了进去，消失在你的视线中。
 		#ENDIF
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-			Having now arrived at Elis, you prepare to set off into the town...
+			现在已抵达伊利斯，你准备进城……
 		#ELSE
-			Having now arrived just a short distance north of Dominion, you prepare to set off into the city...
+			现在已抵达御城区以北，你准备进城……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN"><![CDATA[
 	<p>
-		Although she doesn't show any sign of being fatigued from your journey, you suddenly notice that the human half of Astrapi's body is covered in a fine sheen of sweat. As you thank her for the ride, you also see that the hair on her horse's body is looking a little windblown and unkempt. As she opens the door to the barn and prepares to head inside, you take this fleeting opportunity to offer your assistance in helping to clean her.
+		尽管她并没有因为你的旅途表现出任何疲惫，但你突然注意到阿斯特拉皮的人类部分身体覆盖着一层细微的汗珠。当你感谢她的搭载时，你还注意到她身体马的部分的毛发看起来有些被风吹乱了且不整齐。当她打开谷仓的门准备进去时，你抓住这个短暂的机会，提出帮忙清洁她。
 	</p>
 	<p>
-		[astrapi.speech(Oh? You want to help me with that?)] Astrapi asks, before giving you a sly wink and teasing, [astrapi.speech(Or did you just want to spend some more time staring at my boobs and pussy? In either case, I'd appreciate your help, [pc.name], thank you.)]
+		[astrapi.speech(哦？你想帮我吗？)]阿斯特拉皮问道，然后向你狡黠地眨了眨眼睛，调侃道，[astrapi.speech(还是你只想多花点时间盯着我的奶子和小穴？不管是哪种情况，我都希望得到你的帮助，[pc.name]，谢谢。)]
 	</p>
 	<p>
-		Flirting back by saying that you wouldn't mind doing a little of that too, you follow Astrapi into the barn and close the door behind you. Throwing you a towel, the horny centauress flicks her tail aside to present you with her sweaty horse-pussy,
+		你一边调情，一边说着你也不介意这样做一下，然后跟着阿斯特拉皮走进随时粮仓，关上身后的门。好色的半人马把毛巾扔给你，尾巴甩到一边，向你展示她汗津津的马穴。
 		#IF(!astrapi.getFluidsStoredInOrifice(ORIFICE_VAGINA).isEmpty())
-			 and you can't help but smile as you see that your cum is still dripping from it.
+			当你看到你的精液还在滴落时，你不禁会心一笑。
 		#ELSEIF(!astrapi.getFluidsStoredInOrifice(ORIFICE_ANUS).isEmpty())
-			 and you can't help but smile as you see that your cum is still dripping from her puffy asshole.
+			当你看到你的精液还在从她肉感的屁眼里滴落时，你不禁会心一笑。
 		#ELSE
-			 and you can't help but smile as you see that she already seems to be getting wet at the prospect of being touched by you.
+			当你看到她似乎已经因为被你抚摸而湿润时，你不禁会心一笑。
 		#ENDIF
-		 Turning her head back, she half-asks, half-moans, [astrapi.speech(Could you wipe my pussy down while I brush myself?)]
+		她把头转回来，半是询问，半是呻吟，[astrapi.speech(你能在我刷牙的时候帮我擦一下小穴吗？)]
 	</p>
 	<p>
-		Happy to oblige, you set about wiping the sweat from her pussy, while she uses a special type of brush that's fixed to the wall to rub her horse hair down. After a few minutes, and a lot of moaning and panting from Astrapi, both your jobs are done, which leads into the now-horny centauress to say, [astrapi.speech(All that's left is to wipe my human half clean. You wouldn't mind getting my back for me, would you?)]
+		你欣然应允，开始为她擦拭小穴的汁水，而她则用一种固定在墙上的特殊刷子为自己擦拭马毛。几分钟后，在阿斯特拉皮的呻吟和喘息声中，你们俩的任务都完成了，[astrapi.speech(剩下的就是把我人类的那一半擦干净了。你不介意帮我把后背弄干净吧？)]
 	</p>
 	<p>
-		As she turns towards you, you see that her arousal and the relative heat of the barn has not helped with Astrapi's sweating problem, and as she uses her sweatbands to wipe the worst of it from her forehead, you see that her exposed breasts and muscular abdominal muscles are practically dripping. While you could do as Astrapi asks and simply wipe her back for her, you feel as though she'd be more than happy to accept a more lewd way of mopping up her sweat...
+		当她转身向你走来时，你发现她的情欲和谷仓里相对较高的温度无助于解决阿斯特拉皮的出汗问题，当她用汗巾擦拭额头上的大片汗水时，你发现她裸露的胸部和肌肉发达的腹部肌肉几乎在滴水。虽然你可以按照阿斯特拉皮的要求帮她擦背，但你觉得她会更乐意接受更淫荡的擦汗方式……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_WIPE"><![CDATA[
 	<p>
-		Not wanting to do any kinky stuff with Astrapi's sweaty body, you simply do as she asks and use a clean towel to wipe the sweat from her back. While you're doing this, the centauress cleans down her front, after which she whines, [astrapi.speech(My breasts feel sore from all that bouncing. My sports bra only does so much, you know. You wouldn't mind massaging them for a minute, would you, [pc.name]?)]
+		你不想对阿斯塔皮满身是汗的身体做任何变态的事情，所以只是按照她的要求，用干净的毛巾为她擦拭后背的汗水。在你擦汗的同时，半人马也在清理她的前胸，之后她抱怨道：[astrapi.speech(刚才的颠簸让我的胸又酸又痛，我的运动胸罩只能起这么点作用，你知道的。你不介意帮我按摩一下吧，[pc.name]？)]
 	</p>
 	<p>
-		Having already gone this far, you agree to Astrapi's request, and spend the next few minutes massaging her huge, [astrapi.cupSize]-cup breasts. While she's clearly getting turned on by this, Astrapi informs you that she unfortunately doesn't have time in which to have any 'real' fun with you, and so once you're done she reluctantly says goodbye.
+		事已至此，你同意了阿斯特拉皮的要求，花了几分钟按摩她巨大的[astrapi.cupSize]罩杯乳房。虽然阿斯特拉皮显然对此很兴奋，但她很遗憾没有时间和你一起找点“真”乐子了，所以你一做完，她就只好依依不舍地与你道别。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_END"><![CDATA[
 	<p>
-		Thanking Astrapi once again for the ride, and assuring her that you'll use her business again in the future, you say goodbye.
+		再次感谢阿斯特拉皮送你一程，并向她保证以后还会再光顾她的生意，你就道别了。
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-			 With a happy smile on her face, the muscular centauress opens the door to the barn to allow you to leave, and as you exit the building she calls out after you, [astrapi.speech(Thanks for your assistance, [pc.name]! Remember, my brother and I won't be offering rides for the rest of today, but starting tomorrow we'll be working every day! See you around, [pc.name]!)]
+			肌肉发达的半人马脸上洋溢着幸福的微笑，她打开了随时粮仓的门，允许你离开，[astrapi.speech(谢谢你的帮助，[pc.name]！记住，今天剩下的时间我和我哥哥不会提供搭车服务，但从明天开始我们每天都会工作！再见，[pc.name]！)]
 		#ELSE
-			  With a happy smile on her face, the muscular centauress opens the door to the barn to allow you to leave, and as you exit the building she calls out after you, [astrapi.speech(Thanks for your assistance, [pc.name]!)]
+			肌肉发达的半人马脸上洋溢着幸福的微笑，她打开随时粮仓的门，允许你离开，[astrapi.speech(谢谢你的帮助，[pc.name]！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-			Having now arrived at Elis, you prepare to set off into the town...
+			现在已抵达伊利斯，你准备进城……
 		#ELSE
-			Having now arrived just a short distance north of Dominion, you prepare to set off into the city...
+			现在已抵达御城区以北，你准备进城……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_ABS"><![CDATA[
 	<p>
-		Wanting to have a little kinky fun with Astrapi's sweaty body, you tell her that you'd like to lick the sweat from her abs. Flashing you a big smile, the horny centauress teases, [astrapi.speech(You're so perverted... You know, I kind of like that... Go on then, lick away...)]
+		你想在阿斯特拉皮汗流浃背的身体上找点变态的乐子，便告诉她你想舔她腹肌上的汗液。好色的半人马向你绽放出灿烂的笑容，挑逗道：[astrapi.speech(你好变态哦……你知道吗，我有点喜欢这样……那就舔吧……)]
 	</p>
 	<p>
-		Finding yourself drawn in by the sight of Astrapi's muscular six-pack, you [pc.step] forwards and run your [pc.fingers] over her abdomen, smiling as she reacts by letting out a little moan. Dropping your face down, you tell Astrapi how sexy her stomach is, before leaning forwards and delivering a long, slow lick over her rock-hard tummy. The salty taste of her sweat instantly hits your tongue, which spurs you on to deliver yet another long lick over her smooth skin.
+		你被阿斯特拉皮健硕的六块腹肌所吸引，于是[pc.step]上前，让自己的[pc.fingers]在她的腹部游走，微笑着看着她发出轻微的呻吟。你俯下身，告诉阿斯特拉皮她的腹部有多性感，接着向前倾身，在她硬如磐石的腹部上慢慢地舔了很久。汗液的咸味立刻窜上你的舌尖，刺激你又在她光滑的肌肤上舔了许久。
 	</p>
 	<p>
-		[astrapi.speech(You really... ~Aah!~ You really like my muscles that much?)] Astrapi asks, before tensing her stomach and grunting, [astrapi.speech(How about when I do this?)]
+		[astrapi.speech(你真的……~啊哈！~你真的很喜欢我的腹肌吗？)]阿斯特拉皮问，又绷紧腹部，哼哼道：[astrapi.speech(那我这样做怎么样？)]
 	</p>
 	<p>
-		Loving every lick of the horny centauress's muscular stomach, you give her a very enthusiastic response. Pressing your [pc.lips+] against her six-pack, you dart out your [pc.tongue+] and desperately kiss, lick, and suck on every last part of her sweaty, rock-hard tummy.
+		你喜欢舔舐这个好色的半人马肌肉发达的腹部，便给了她非常热情的回应。你将[pc.lips+]贴在她的六块腹肌上，伸出[pc.tongue+]拼命地亲吻、舔舐、吮吸她汗淋淋又硬如磐石的腹部。
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoresDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			With the two of you getting immensely turned on by this intimate physical contact, Astrapi suddenly blurts out, [astrapi.speech(I don't have much time, but I could give you a quick handjob if you'd like... You could even cum on my stomach seeing as you like it so much...)]
+			这种亲密的肢体接触让你们俩无比兴奋，阿斯特拉皮突然开口道：[astrapi.speech(时间不多了，但如果你愿意的话，我可以给你来个快速手交……你甚至可以射在我的肚子上，我知道你很喜欢的……)]
 		#ELSE
-			Although the two of you get immensely turned on by this intimate physical contact, after a few minutes have passed Astrapi suddenly blurts out, [astrapi.speech(I don't have much time, [pc.name]. ~Mmm!~ This was fun, but I've got to stop now...)]
+			虽然这种亲密的肢体接触让你们感到无比兴奋，但几分钟后，阿斯特拉皮突然说道：[astrapi.speech(我没多少时间了，[pc.name]。~呜嗯！~这很好玩，但我们必须停下来了。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_ABS_END"><![CDATA[
 	<p>
 		#IF(pc.hasPenisIgnoresDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Although the offer sounds tempting, you decide against getting a handjob from Astrapi.
+			虽然这个提议听起来很诱人，但你还是决定拒绝让阿斯特拉皮给你手交。
 		#ENDIF
-		 Thanking her once again for the ride, and assuring her that you'll use her business again in the future, you say goodbye to the muscular centauress.
+		你感谢阿斯特拉皮载你一程，向她保证以后还会再光顾她的生意，接着向她告别。
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-			 With a happy smile on her face, Astrapi opens the door to the barn to allow you to leave, and as you exit the building she calls out after you, [astrapi.speech(Thanks for your assistance, [pc.name]! Remember, my brother and I won't be offering rides for the rest of today, but starting tomorrow we'll be working every day! See you around, [pc.name]!)]
+			阿斯特拉皮笑容满面，打开谷仓的门让你离开，她在你身后喊道：[astrapi.speech(谢谢你的帮助，[pc.name]！记住，今天剩下的时间我和我哥哥不提供乘车服务，但从明天开始，我们每天都会工作！再见，[pc.name]！)]
 		#ELSE
-			  With a happy smile on her face, Astrapi opens the door to the barn to allow you to leave, and as you exit the building she calls out after you, [astrapi.speech(Thanks for your assistance, [pc.name]!)]
+			阿斯特拉皮笑容满面，打开谷仓的门让你离开，她在你身后喊道：[astrapi.speech(谢谢你的帮助，[pc.name]！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-			Having now arrived at Elis, you prepare to set off into the town...
+			现在已抵达伊利斯，你准备进城……
 		#ELSE
-			Having now arrived just a short distance north of Dominion, you prepare to set off into the city...
+			现在已抵达御城区以北，你准备进城……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_ABS_HANDJOB"><![CDATA[
 	<p>
-		Giving Astrapi's rock-hard abs one final lick, you pull back and tell her that you'd like to take her up on her offer. Exposing your [pc.cock+] to her, you let out [pc.a_moan] as the horny centauress greedily grabs hold of it and starts stroking. Letting out [astrapi.a_moan+] of her own, Astrapi pants, [astrapi.speech(That's it... Get nice and hard so that you can cum for me... Cum all over my tummy...)]
+		你最后舔了一下阿斯特拉皮硬如磐石的腹肌，抽回身，告诉她自己愿意接受她的提议。你把自己[pc.cock+]展露在她面前，这个饥渴的半人马贪婪地握住你[pc.cock+]抚摸，令你发出[pc.a_moan]。阿斯特拉皮也发出[astrapi.a_moan+]，喘息道：[astrapi.speech(就是这样……硬起来给我射精……全射在我的肚子上……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_POST_SEX_ABS"><![CDATA[
 	<p>
-		Letting out a little laugh, Astrapi bites her lip and winks and you, before teasing, [astrapi.speech(You're so perverted, [pc.name]! As if my tummy turns you on so much...)]
+		阿斯特拉皮微微一笑，咬了咬嘴唇，向你眨了眨眼睛调侃道，[astrapi.speech(你真变态，[pc.name]！好像我的肚子让你如此兴奋……)]
 	</p>
 	<p>
-		Making the muscular centauress laugh by telling her how hot her muscular abs are, you get your things back in order and prepare to continue on your way...
+		你告诉肌肉发达的半人马她的腹肌有多性感，逗得她哈哈大笑，然后你把东西收拾好，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_ARMPITS"><![CDATA[
 	<p>
-		Wanting to have a little kinky fun with Astrapi's sweaty body, you tell her that you'd like to lick the sweat from her underarms. Flashing you a big smile, the horny centauress lifts her arm,
+		你想在阿斯特拉皮汗流浃背的身体上找点变态的乐子，你告诉她你想舔她腋下的汗水。好色的半人马向你绽放出灿烂的笑容，抬起了手臂，
 		#IF(astrapi.getUnderarmHair().getValue()==0)
-			 exposing her smooth, sweaty armpit to you as she replies, [astrapi.speech(You're so perverted... You know, I kind of like that... Go on then, lick away...)]
+			她一边回答，一边把光滑、汗湿的腋窝暴露在你面前，[astrapi.speech(你真变态……你知道的，我有点喜欢……那就舔吧……)]
 		#ELSE
-			 exposing her hairy, sweaty armpit to you as she replies, [astrapi.speech(You're so perverted... Look, I stopped shaving like you asked me to... So go on then, lick away...)]
+			她一边回答，一边把毛茸茸、汗津津的腋窝暴露在你面前，[astrapi.speech(你真变态……看，我已经按照你的要求停止刮毛了……那就舔吧……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(astrapi.getUnderarmHair().getValue()==0)
-			Finding yourself drawn in by the sight of Astrapi's muscular, smoothly-shaven underarm, you [pc.step] forwards and run your [pc.fingers] down her triceps, smiling as she reacts by letting out a little moan. Dropping your face down, you tell Astrapi how sexy her pits are, before leaning forwards and delivering a long, slow lick over her underarm. The salty taste of her sweat instantly hits your tongue, which spurs you on to deliver yet another long lick over her smooth pit.
+			你被阿斯特拉皮健硕而光滑无毛的腋下所吸引，于是[pc.step]上前，让自己的[pc.fingers]在她的肱三头肌处游走，微笑着看着她轻声呻吟。你低下头，告诉阿斯特拉皮她的腋窝有多性感，接着向前倾身，慢慢地舔了很久她的腋下。汗液的咸味立刻窜上你的舌尖，刺激你又在她光滑的腋窝上舔了许久。
 		#ELSE
-			Finding yourself drawn in by the sight of Astrapi's muscular, hairy underarm, you [pc.step] forwards and run your [pc.fingers] down her triceps, smiling as she reacts by letting out a little moan. Dropping your face down, you tell Astrapi how sexy her hairy pits are, before leaning forwards and delivering a long, slow lick over her underarm. The salty taste of her sweat instantly hits your tongue, which spurs you on to deliver yet another long lick over her hairy pit.
+			你被阿斯特拉皮健硕多毛的腋下所吸引，于是[pc.step]上前，让自己的[pc.fingers]在她的肱三头肌处游走，微笑着看着她轻声呻吟。你低下头，告诉阿斯特拉皮她的腋窝有多性感，接着向前倾身，慢慢地舔了很久她的腋下。汗液的咸味立刻窜上你的舌尖，刺激你又在她多毛的腋窝上舔了许久。
 		#ENDIF
 	</p>
 	<p>
-		[astrapi.speech(You really... ~Aah!~ You really like my underarms that much?)] Astrapi asks.
+		[astrapi.speech(你真的……~啊哈！~你真的那么喜欢我的腋下吗？)]阿斯特拉皮问。
 	</p>
 	<p>
-		Loving every lick of the horny centauress's sweaty pits, you give her a very enthusiastic response. Pressing your [pc.lips+] against her
+		你喜欢舔舐这个好色的半人马汗淋淋的腋窝，便给了她非常热情的回应。你将[pc.lips+]紧贴上她
 		#IF(astrapi.getUnderarmHair().getValue()==0)
-			 smooth skin, you dart out your [pc.tongue+] and desperately kiss, lick, and suck on every last part of her sweaty, smooth underarm.
+			光滑的皮肤，伸出[pc.tongue+]拼命地亲吻、舔舐、吮吸她汗淋淋又光滑的腋下。
 		#ELSE
-			 hairy underarm, you dart out your [pc.tongue+] and desperately kiss, lick, and suck on every last part of her sweaty, hairy pit.
+			多毛的腋下，伸出[pc.tongue+]拼命地亲吻、舔舐、吮吸她汗淋淋又多毛的腋窝。
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoresDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			With the two of you getting immensely turned on by this intimate physical contact, Astrapi suddenly blurts out, [astrapi.speech(I don't have much time, but you could rub your cock against my pits if you'd like... You could even cum on them seeing as you like them so much...)]
+			这种亲密的肢体接触让你们俩无比兴奋，阿斯特拉皮突然说道：[astrapi.speech(时间不多了，但如果你愿意的话，我可以给你来个乳交……你可以射在上面，我知道你很喜欢的……)]
 		#ELSE
-			Although the two of you get immensely turned on by this intimate physical contact, after a few minutes have passed Astrapi suddenly blurts out, [astrapi.speech(I don't have much time, [pc.name]. ~Mmm!~ This was fun, but I've got to stop now...)]
+			虽然这种亲密的肢体接触让你们感到无比兴奋，但几分钟后，阿斯特拉皮突然说道：[astrapi.speech(我没多少时间了，[pc.name]。~呜嗯！~这很好玩，但我们必须停下来了。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_ARMPITS_END"><![CDATA[
 	<p>
 		#IF(pc.hasPenisIgnoresDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Although the offer sounds tempting, you decide against fucking Astrapi's armpits.
+			虽然这个提议听起来很诱人，但你还是决定拒绝操阿斯特拉皮的腋窝。
 		#ENDIF
-		 Thanking her once again for the ride, and assuring her that you'll use her business again in the future, you say goodbye to the muscular centauress.
+		你感谢阿斯特拉皮载你一程，向她保证以后还会再光顾她的生意，接着向她告别。
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-			 With a happy smile on her face, Astrapi opens the door to the barn to allow you to leave, and as you exit the building she calls out after you, [astrapi.speech(Thanks for your assistance, [pc.name]! Remember, my brother and I won't be offering rides for the rest of today, but starting tomorrow we'll be working every day! See you around, [pc.name]!)]
+			阿斯特拉皮笑容满面，打开谷仓的门让你离开，她在你身后喊道：[astrapi.speech(谢谢你的帮助，[pc.name]！记住，今天剩下的时间我和我哥哥不提供乘车服务，但从明天开始，我们每天都会工作！下次见，[pc.name]！)]
 		#ELSE
-			  With a happy smile on her face, Astrapi opens the door to the barn to allow you to leave, and as you exit the building she calls out after you, [astrapi.speech(Thanks for your assistance, [pc.name]!)]
+			阿斯特拉皮笑容满面，打开谷仓的门让你离开，她在你身后喊道：[astrapi.speech(谢谢你的帮助，[pc.name]！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-			Having now arrived at Elis, you prepare to set off into the town...
+			现在已抵达伊利斯，你准备进城……
 		#ELSE
-			Having now arrived just a short distance north of Dominion, you prepare to set off into the city...
+			现在已抵达御城区以北，你准备进城……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_CLEAN_ARMPITS_FUCK"><![CDATA[
 	<p>
 		#IF(astrapi.getUnderarmHair().getValue()==0)
-			Giving Astrapi's smooth pits one final lick, you pull back and tell her that you'd like to take her up on her offer. Exposing your [pc.cock+] to her, you let out [pc.a_moan] as the horny centauress kneels down and presents her sweaty armpit to you. Letting out [astrapi.a_moan+] as you [pc.step] forwards and start rubbing the [pc.cockHead+] of your cock over her smoothly-shaven pit, Astrapi pants, [astrapi.speech(That's it... Get nice and hard so that you can cum for me... Cum all over my underarm...)]
+			你最后舔了舔阿斯特拉皮光滑的腋窝，抽出手，告诉她你愿意接受她的提议。你把自己[pc.cock+]暴露在她面前，发出[pc.a_moan]。好色的半人马跪了下来，把她汗湿的腋窝呈现在你面前，发出[astrapi.a_moan+]。你一边向前迈步，开始用你[pc.cockHead+]鸡巴在她刮得光滑的腋窝、阿斯特拉皮喘息着，[astrapi.speech(就是这样……好好地硬起来，这样你就能射给我了……射满我的腋下……)]
 		#ELSE
-			Giving Astrapi's hairy pits one final lick, you pull back and tell her that you'd like to take her up on her offer. Exposing your [pc.cock+] to her, you let out [pc.a_moan] as the horny centauress kneels down and presents her sweaty armpit to you. Letting out [astrapi.a_moan+] as you [pc.step] forwards and start rubbing the [pc.cockHead+] of your cock over her hairy pit, Astrapi pants, [astrapi.speech(That's it... Get nice and hard so that you can cum for me... Cum all over my underarm...)]
+			你最后舔了舔阿斯特拉皮多毛的腋窝，抽出手，告诉她你愿意接受她的提议。你把自己[pc.cock+]暴露在她面前，发出[pc.a_moan]。好色的半人马跪了下来，把她汗湿的腋窝呈现在你面前，发出[astrapi.a_moan+]。你一边向前迈步，开始用你[pc.cockHead+]鸡巴在她毛茸茸的腋窝、阿斯特拉皮喘息着，[astrapi.speech(就是这样……好好地硬起来，这样你就能射给我了……射满我的腋下……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_POST_SEX_ARMPITS"><![CDATA[
 	<p>
-		Letting out a little laugh, Astrapi bites her lip and winks and you, before teasing, [astrapi.speech(You're so perverted, [pc.name]! As if my pits turns you on so much...)]
+		阿斯特拉皮微微一笑，咬了咬嘴唇，向你眨了眨眼睛，然后调侃道，[astrapi.speech(你真变态，[pc.name]！似乎我这下面让你兴奋得很啊……)]
 	</p>
 	<p>
-		Making the muscular centauress laugh by telling her how hot her
+		你对肌肉发达的半人马说她
 		#IF(astrapi.getUnderarmHair().getValue()==0)
-			 sweaty pits
+			汗津津的腋窝
 		#ELSE
-			 hairy, sweaty pits
+			毛茸茸的，汗津津的腋窝
 		#ENDIF
-		 are, you get your things back in order and prepare to continue on your way...
+		有多性感，她哈哈大笑。你把东西收拾好，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_POST_SEX_ARMPITS_SHAVING_STOP"><![CDATA[
 	<p>
-		Although you had fun with Astrapi's underarms, you tell her that you'd find them to be far sexier and more to your liking if she'd stop shaving them. Flashing you a smirk as she hears you say this, Astrapi replies, [astrapi.speech(Sure, it's kind of annoying shaving them all the time, so if you like 'em hairy, then that's fine with me! It'll take a few days for the hair to grow, though...)]
+		虽然你对阿斯特拉皮的腋下很感兴趣，但你告诉她，如果她不再刮腋毛，你会觉得腋下更性感，更符合你的口味。阿斯特拉皮听了你的话后，笑着回应了你，[astrapi.speech(当然，总是刮毛有点烦人，如果你喜欢毛茸茸的，我也没意见！不过，毛要过几天才能长出来……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ASTRAPI_POST_SEX_ARMPITS_SHAVING_START"><![CDATA[
 	<p>
-		Although you had fun with Astrapi's underarms, you tell her that you've decided that you prefer them when they're shaven smooth. Flashing you a smirk as she hears you say this, Astrapi replies, [astrapi.speech(Sure, it's kind of embarrassing having pits that're as hairy as Vron's! I'll shave them tonight...)]
+		虽然你对阿斯特拉皮的腋下很感兴趣，但你告诉她自己更喜欢光滑无毛的腋窝。阿斯特拉皮听到你这么说，笑着回应，[astrapi.speech(当然，像弗洛那样毛茸茸的有点尴尬！我今晚就把它们剃了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -965,368 +965,368 @@
 	
 	<htmlContent tag="VRONTI_START"><![CDATA[
 	<p>
-		Deciding to take up Vronti's offer, you tell him that you'd like a ride to
+		你决定接受弗洛狄的提议，告诉他你想搭车去
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-			 Elis,
+			伊利斯，
 		#ELSE
-			 Dominion,
+			御城区，
 		#ENDIF
-		 before paying him the two hundred and fifty flames he's asked for. Silently nodding to you, he stores the money in a sturdy lock-box attached to his carriage, before motioning towards it and briefly saying in his deep voice, [vronti.speech(Let's go.)]
+		接着付给他所要的250火币。他默默地向你点了点头，把钱放进了马车上一个坚固的锁盒里，他用低沉的嗓音简短地示意道：[vronti.speech(走了。)]
 	</p>
 	<p>
-		Happy to get started on your journey, you climb aboard the carriage and make yourself comfortable on the padded seats. Trotting over to fully open the barn's door, Vronti
+		你高兴地准备启程，爬上马车，在软垫座位上坐好。弗洛狄小跑着敞开谷仓的门，
 		#IF(game.getCurrentWeather()==WEATHER_RAIN)
-			 sees that it's currently raining, and so swiftly erects a canvas cover over the carriage.
+			看到现在正在下雨，于是迅速在车厢上搭起了帆布罩。
 		#ELSEIF(game.getCurrentWeather()==WEATHER_SNOW)
-			 sees that it's currently snowing, and so swiftly erects a canvas cover over the carriage.
+			看到现在正在下雪，于是迅速在车厢上搭起了帆布罩。
 		#ELSE
-			 sees that the weather looks fine, and so securely folds up and fastens the carriage's canvas cover to its rear.
+			看到天气晴朗，就把马车的帆布罩牢牢地折叠起来，系在车尾。
 		#ENDIF
-		 Grabbing a spear from where it's been resting against the wall, he straps it to his back before securing himself into the carriage's harness. After these straps are fastened about his lower horse's body, Vronti steps forwards, effortlessly pulling the carriage behind him as he manoeuvres towards the open door of the barn. With a deep grunt, he paws at the ground and mutters, [vronti.speech(Time to leave...)]
+		他从靠墙的地方拿起一根长矛，将其绑在背上，接着把马车的马具固定在自己身上。等弗洛狄把这些带子都系在马身后，他迈开步子，毫不费力地把马车拉到身后，向谷仓敞开的大门走去。随着一声低沉的咕噜声，他用蹄子蹬了蹬地面，喃喃自语道：[vronti.speech(是时候离开了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_JOURNEY"><![CDATA[
 	<p>
-		Pulling out from the barn, Vronti sets off down the road at a canter, causing your carriage to be pulled along behind him at an impressive speed. Clearly possessing not only incredible strength but also an astounding level of stamina, the centaur shows no sign of slowing down even after travelling the first couple of miles, and even has the energy to call out a very rare couple of sentences to you, [astrapi.speech(If you see one of Lunette's centaurs, don't worry. They've learned not to mess with me.)]
+		弗洛狄从谷仓里出来，沿着道路疾驰而去，拉着你的马车以惊人的速度前进。显然，半人马不仅拥有惊人的力量，还拥有惊人的耐力，即使走了几英里，他也丝毫没有减速的迹象，甚至还有力气对你喊话，居然说了难得的两句话：[vronti.speech(如果你看到露内特的半人马，也别担心。他们已经学会不来惹我了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_QUIET_JOURNEY"><![CDATA[
 	<p>
-		Deciding against trying to engage Vronti in conversation, you inform him that you're going to relax and close your eyes for a while, to which the muscular centaur briefly replies, [vronti.speech(Suits me.)]
+		你决定不与弗洛狄交谈，而是告诉他自己要放松一下，闭目养神片刻，肌肉发达的半人马简短地回答说：[vronti.speech(正合我意。)]
 	</p>
 	<p>
-		Thinking to yourself how smooth the carriage's ride has been so far, you offer silent thanks to Astrapi and Vronti for clearly sparing no expense on the suspension. Thanks to the complete absence of bumps or jolts, you're able to do as you'd said and relax in the carriage, closing your eyes and allowing the time to pass in relative peace as the centaur takes you to Elis...
+		你心想这辆马车到目前为止还算平稳，于是默默地感谢阿斯特拉皮和弗洛狄在悬架系统上的倾力付出。一路上毫不颠簸，你的确可以在车厢里放松，闭上眼睛，任凭时间在半人马带你前往伊利斯的过程中平静地流逝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Talking: -->
 	
 	<htmlContent tag="VRONTI_TALK_HISTORY"><![CDATA[
 	<p>
-		Wanting to pass the time by trying to engage Vronti in conversation, you ask him about his history working as a centaur carriage driver. Much as you expected, he answers in a very brief manner by simply stating, [vronti.speech(My sister and I have been doing this all our lives.)]
+		为了打发时间，你试图与弗洛狄攀谈，于是问起他当半人马车夫的经历。正如你所料，他的回答非常简短，只是说：[vronti.speech(我们兄妹一辈子都在干这个。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_TALK_COMPETITION"><![CDATA[
 	<p>
-		Wanting to pass the time by trying to engage Vronti in conversation, you ask him about what kind of competition he and his sister face from other centaur carriage drivers. Much as you expected, he answers in a very brief manner by simply stating, [vronti.speech(Nobody else does what we do.)]
+		为了打发时间，你试图与弗洛狄攀谈，于是问起其他半人马车夫与他们兄妹的竞争是怎样的。正如你所料，他的回答非常简短，只是说：[vronti.speech(这活只有我们在干。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_TALK_LUNETTE"><![CDATA[
 	<p>
-		Wanting to pass the time by trying to engage Vronti in conversation, you ask him what he knows about Lunette. Much as you expected, he answers in a very brief manner by simply stating, [vronti.speech(She's responsible for many crimes against the people of this land.)]
+		为了打发时间，你试图与弗洛狄攀谈，于是问起他对露内特了解多少。正如你所料，他的回答非常简短，只是说：[vronti.speech(她在这片土地上犯下了许多罪行。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_TALK_END"><![CDATA[
 	<p>
-		Wanting to know a little more than that, you ask several follow-up questions, but to each one the stoic centaur replies in the shortest manner possible. After quite a few minutes spent failing to crack Vronti's unresponsive manner, you decide to give up and spend the rest of your journey in silence. Informing the centaur that you're going to relax and close your eyes for a while, Vronti once again replies in the briefest manner possible by simply saying, [vronti.speech(Ok.)]
+		你还想知道点什么，又追问了几个问题，但这位坚忍的半人马每一次都只是言简意赅地回答。你又花了许久试图让弗洛狄不再无动于衷，无果，于是你决定放弃，打算在沉默中度过剩下的旅程。你告知弗洛狄自己要放松一下，闭目养神片刻，他简洁明了地回答道：[vronti.speech(好。)]
 	</p>
 	<p>
-		Thinking to yourself how smooth the carriage's ride has been so far, you offer silent thanks to Astrapi and Vronti for clearly sparing no expense on the suspension. Thanks to the complete absence of bumps or jolts, you're able to do as you'd said and relax in the carriage, closing your eyes and allowing the time to pass in relative peace as the centaur takes you to Elis...
+		你心想这辆马车到目前为止还算平稳，于是默默地感谢阿斯特拉皮和弗洛狄在悬架系统上的倾力付出。一路上毫不颠簸，你的确可以在车厢里放松，闭上眼睛，任凭时间在半人马带你前往伊利斯的过程中平静地流逝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Flirting: -->
 	
 	<htmlContent tag="VRONTI_FLIRT"><![CDATA[
 	<p>
-		Deciding that it would be fun to pass the time by flirting with Vronti, you start by offering him several suggestive compliments about how strong he is. Whether it's just an act or not, he seems to be completely oblivious to the fact that you're flirting with him, and responds to your flattery by simply grunting, [vronti.speech(Thanks.)]
+		你决定通过与弗洛狄调情来打发时间，于是你颇具暗示地夸奖他有多强壮。不管是不是装出来的，他似乎完全没意识到你在跟他调情，只是简单哼哼着回应你的奉承：[vronti.speech(谢谢。)]
 	</p>
 	<p>
-		Not one to be deterred by such an apathetic reply, you redouble your efforts and start offering the muscular centaur compliments of a more sexual nature. Telling him that you couldn't help but notice how large his cock is, you say that his partner must be a very lucky person indeed. This seems to finally be enough to get the centaur to react, and he lets out an embarrassed sigh before stating, [vronti.speech(I don't have a partner.)] 
+		你可不会被这样冷淡的回答吓倒，于是你加倍努力，向这位肌肉发达的半人马献上的赞美也更加露骨。你告诉他，你情不自禁地注意到他的鸡巴有多大，还说他的伴侣一定非常幸运。这似乎终于足以让半人马有所反应，他尴尬地叹了口气，接着说道：[vronti.speech(我没有伴侣。)] 
 	</p>
 	<p>
-		Seizing upon this fact, you coyly ask Vronti what kind of sexual partner he prefers, although now that he's realised what it is you're trying to do he completely buttons up and refuses to engage with your flirting. After spending several more minutes trying to get him to reciprocate to your flirting, it's clear that your efforts are having no effect. Letting out an annoyed sigh, you wonder what to do about this...
+		你抓住这一点，腼腆地问弗洛狄喜欢什么样的性伴侣，尽管他现在已然意识到了你的意图，但他完全噤若寒蝉，拒绝与你调情。你又花了几分钟试图让他回应你的调情，但显然你的努力毫无效果。你恼怒地叹了口气，思索该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_FLIRT_STOP"><![CDATA[
 	<p>
-		Not wanting to waste any more time on this emotionless centaur, you decide to give up and spend the rest of your journey in silence. Informing Vronti that you're going to relax and close your eyes for a while, he replies in the briefest manner possible by simply saying, [vronti.speech(Ok.)]
+		你不想再在这个毫无感情的半人马身上浪费时间，于是决定放弃，在沉默中度过余下的旅程。你告知弗洛狄自己要放松一下，闭目养神片刻，他简洁明了地回答道：[vronti.speech(好。)]
 	</p>
 	<p>
-		Thinking to yourself how smooth the carriage's ride has been so far, you offer silent thanks to Astrapi and Vronti for clearly sparing no expense on the suspension. Thanks to the complete absence of bumps or jolts, you're able to do as you'd said and relax in the carriage, closing your eyes and allowing the time to pass in relative peace as the centaur takes you to Elis...
+		你心想这辆马车到目前为止还算平稳，于是默默地感谢阿斯特拉皮和弗洛狄在悬架系统上的倾力付出。一路上毫不颠簸，你的确可以在车厢里放松，闭上眼睛，任凭时间在半人马带你前往伊利斯的过程中平静地流逝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_FLIRT_PUSHED"><![CDATA[
 	<p>
-		Unwilling to accept defeat, you decide to unleash every trick you know in a final attempt to get Vronti to react to your attention. After it's clear that your more subtle techniques have no effect upon the stoic centaur, you take things up a notch by starting to explicitly describe how turned on you're getting at the thought of servicing Vronti's huge cock.
+		你不甘心接受失败，决定使出浑身解数，最后一次尝试让弗洛狄对你有所反应。你清楚地知道你那些小把戏对这个禁欲的半人马不起任何作用，于是你更上一层楼，露骨地描述起自己一想到要为弗洛狄的大鸡巴服务就多么兴奋不已。
 	</p>
 	<p>
 		[style.random(
 		#IF(flags.hasFlag(FLAG_innoxia_vronti_handjob_given))
-			Taking advantage of the fact that you've been in this situation before, you remind Vronti how good it must have felt for him when you jerked him off. Graphically describing how you loved stroking his huge horse-cock, you tell him that you want to once again empty his heavy balls, and then move on to tease him about how strongly he spurts out his musky cum when he orgasms.
+			你利用和弗洛狄有过肌肤之亲的优势，提醒他你上次给他手淫时有多舒服。你生动详细地描述着自己多么喜欢爱抚他巨大的马鞭，告诉他你还想榨干他沉甸甸的睾丸，又调侃着他高潮时浓稠马精喷涌而出的壮观景象。
 		#ENDIF
 		|
 		#IF(flags.hasFlag(FLAG_innoxia_vronti_blowjob_given))
-			Taking advantage of the fact that you've been in this situation before, you remind Vronti how good it must have felt for him when you wrapped your [pc.lips+] around his fat horse-cock and gave him a blowjob. Graphically describing how you loved the sensation of his huge, hot horse-cock being shoved down your throat, you tell him that you want to once again empty his heavy balls, and then move on to tease him about how strongly he spurts out his musky cum when he orgasms.
+			你利用和弗洛狄有过肌肤之亲的优势，提醒他你用[pc.lips+]含住他粗壮马鞭时有多舒服。你生动详细地描述着自己多么享受他那滚烫巨物塞满喉咙的感觉，告诉他你还想榨干他沉甸甸的睾丸，又调侃着他高潮时浓稠马精喷涌而出的壮观景象。
 		#ENDIF
 		|
 		#IF(flags.hasFlag(FLAG_innoxia_vronti_sex_given))
-			Taking advantage of the fact that you've been in this situation before, you remind Vronti how good it must have felt for him when you presented your [pc.pussy+] to his fat horse-cock and let him rut you. Graphically describing how you loved the sensation of his huge, hot equine-dick thrusting into your cunt, you tell him that you want to once again empty his heavy balls, and then move on to tease him about how strongly he spurts out his musky cum when he orgasms.
+			你利用和弗洛狄有过肌肤之亲的优势，提醒他你将[pc.pussy+]献给他粗壮马鞭时有多舒服。你生动详细地描述着自己多么享受他那滚烫巨物在小穴里抽插的感觉，告诉他你还想榨干他沉甸甸的睾丸，又调侃着他高潮时浓稠马精喷涌而出的壮观景象。
 		#ENDIF
 		|
 		#IF(flags.hasFlag(FLAG_innoxia_vronti_anilingus_given))
-			Taking advantage of the fact that you've been in this situation before, you remind Vronti how good it must have felt for him when you serviced his puffy asshole. Graphically describing how you loved being able to pleasure his rear entrance, you tell him that you want to once again empty his heavy balls, and then move on to tease him about how strongly he spurts out his musky cum when he orgasms.
+			你利用和弗洛狄有过肌肤之亲的优势，提醒他你侍奉他丰满的菊穴时有多舒服。你生动详细地描述着自己多么喜欢取悦他后庭的感觉，告诉他你还想榨干他沉甸甸的睾丸，又调侃着他高潮时浓稠马精喷涌而出的壮观景象。
 		#ENDIF
 		|
 		#IF(flags.hasFlag(FLAG_innoxia_vronti_anal_sex_given))
-			Taking advantage of the fact that you've been in this situation before, you remind Vronti how good it must have felt for him when you presented your [pc.asshole+] to his fat horse-cock and let him rut you. Graphically describing how you loved the sensation of his huge, hot equine-dick fucking your ass, you tell him that you want to once again empty his heavy balls, and then move on to tease him about how strongly he spurts out his musky cum when he orgasms.
+			你利用和弗洛狄有过肌肤之亲的优势，提醒他你将[pc.asshole+]献给他粗壮马鞭时有多舒服。你生动详细地描述着自己多么享受他那滚烫巨物在后穴里抽插的感觉，告诉他你还想榨干他沉甸甸的睾丸，又调侃着他高潮时浓稠马精喷涌而出的壮观景象。
 		#ENDIF
 		|
 		#IF(flags.hasFlag(FLAG_innoxia_vronti_ass_fucked) && pc.hasPenis())
-			Taking advantage of the fact that you've been in this situation before, you remind Vronti how good it must have felt for him when you first pushed your [pc.cock+] into his puffy equine asshole. Graphically describing how you loved hearing his deep grunts as you pounded his ass, you tell him that you want to once again help him to empty his heavy balls, and then move on to tease him about how strongly he spurts out his musky cum when he orgasms.
+			你利用和弗洛狄有过肌肤之亲的优势，提醒他你将[pc.cock+]插入他丰满菊穴时有多舒服。你生动详细地描述着自己多么爱听抽插后庭时他发出的低沉呻吟，告诉他你还想榨干他沉甸甸的睾丸，又调侃着他高潮时浓稠马精喷涌而出的壮观景象。
 		#ENDIF
 		|
-		Taking advantage of the fact that the centaur's heavy balls are visible from where you're sitting in the carriage, you tell Vronti that you can see how his huge, heavy balls look like they're desperate for release. After spending some time continuing to graphically describe how you want to pleasure his huge, hot horse-cock, you then move on to tease him by wondering how much musky cum he spurts out when he orgasms.
+		你注意到马车里弗洛狄那对暴露在外的沉甸甸的睾丸，便告诉他你明白他那对巨蛋一定很渴望释放。你生动详细地描述了一番想如何取悦他那滚烫巨物的场景后，又畅想着他高潮时会射出如何巨量的浓稠马精，持续挑逗着他。
 		)]
 	</p>
 	<p>
-		Although he tries to shake his head and ignore you, for the first time since setting off on your journey you hear Vronti's breathing starting to get heavier. A little more teasing and he abruptly comes to a halt right in the middle of the road. Asking him what's wrong, you can't help but smile as Vronti curtly responds, [vronti.speech(You've given me an erection. I can't run like this.)]
+		虽然他试图摇头不理你，但自从踏上旅途以来，你第一次听到弗洛狄的呼吸开始变得粗重起来。你又挑逗了他一会儿，他突然停在了路中间。问他怎么了，弗洛狄简短地回答道：[vronti.speech(你让我勃起了，我不能这样跑。)]你不禁笑了。
 	</p>
 	<p>
-		Dismounting from the carriage, you move around to the side of Vronti and take a look at his groin. Just as he said, you see that the result of your focused flirting techniques is a huge, throbbing erection. Smirking at the blushing centaur, you wonder whether to take things all the way and offer to help him release his sexual tension...
+		你下了马车，绕到弗洛狄身边，看了一眼他的腹股沟。果真如他所说，你看到了自己深研的调情技巧所带来的结果——一个巨大的勃起正在颤动。你对着脸红的半人马笑了笑，思索要不要继续下去，帮助他释放性欲……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_VRONTI_HANDJOB_START"><![CDATA[
 	<p>
-		Moving up so that you're right next to the muscular centaur, you tell him that it'll be quicker to get rid of his erection by jerking him off than waiting for him to calm down. Thanks to your efforts, Vronti is unable to keep his arousal under control, and as he hears you say this he reluctantly responds, [vronti.speech(Fine... Just do it quickly...)]
+		你一步步靠近，直到紧紧挨着肌肉发达的半人马，然后在他耳边低语：[pc.speech(都硬成这样了，你真的能冷静下来吗？不如我用手帮你解决吧～♪)]多亏了你的努力，弗洛狄再也压抑不住自己的性欲了，你恶魔般的话语引诱着他，他有些不情愿，但还是回应了你：[vronti.speech(好吧……快点解决吧……)]
 	</p>
 	<p>
-		Excited to be given the opportunity to service such a huge horse-cock, you eagerly drop down beside Vronti and happily reach up to start stroking his massive, throbbing length. He lets out a shocked grunt as he feels you touching his genitalia, and as you give his heavy balls a quick fondle, he grunts, [vronti.speech(Don't tell Astrapi about this... Please...)]
+		有机会为如此巨大的马屌服务，你兴奋不已，迫不及待地走到弗洛狄身边，开心地伸手抚摸他那巨大而颤动的肉棒。弗洛狄感觉到你在抚摸他的生殖器，震惊地发出闷哼，而当你快速舔吻他沉重的睾丸时，他又发出了闷哼：[vronti.speech(别告诉阿斯特拉皮……拜托……)]
 	</p>
 	<p>
-		Promising him that this can be your little secret, you start really getting into the swing of things, and as you run your [pc.fingers] up and down the length of the centaur's massive cock, you wonder how long he'll last before you make him cum...
+		你承诺这是你们的小秘密，接着真正进入状态，用你的[pc.fingers]上下抚弄半人马的大屌，你想知道他可以坚持多久才射精……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_VRONTI_BLOWJOB_START"><![CDATA[
 	<p>
-		Moving up so that you're right next to the muscular centaur, you tell him that it'll be quicker to get rid of his erection by giving him a blowjob than waiting for him to calm down. Thanks to your efforts, Vronti is unable to keep his arousal under control, and as he hears you say this he reluctantly responds, [vronti.speech(Fine... Just do it quickly...)]
+		你一步步靠近，直到紧紧挨着肌肉发达的半人马，然后在他耳边低语：[pc.speech(都硬成这样了，你真的能冷静下来吗？不如让我来帮你口交吧～♪)]多亏了你的努力，弗洛狄再也压抑不住自己的性欲了，你恶魔般的话语引诱着他，他有些不情愿，但还是回应了你：[vronti.speech(好吧……快点解决吧……)]
 	</p>
 	<p>
-		Excited to be given the opportunity to service such a huge horse-cock, you eagerly drop down beside Vronti and happily plant a big, wet kiss on his massive, throbbing length. He lets out a shocked grunt as he feels you touching his genitalia, and as you give his heavy balls a quick lick and a kiss, he grunts, [vronti.speech(Don't tell Astrapi about this... Please...)]
+		有机会为如此巨大的马屌服务，你兴奋不已，迫不及待地走到弗洛狄身边，开心地给他巨大而颤动的肉棒一个绵长的湿吻。弗洛狄感觉到你在触碰他的生殖器，震惊地发出闷哼，而当你快速舔吻他沉重的睾丸时，他又发出了闷哼：[vronti.speech(别告诉阿斯特拉皮……拜托……)]
 	</p>
 	<p>
-		Promising him that this can be your little secret, you start really getting into the swing of things, and after running your [pc.tongue+] up and down the length of the centaur's massive cock, you take his flared head into your mouth and start giving him an eager blowjob...
+		你承诺这是你们的小秘密，接着真正进入状态，用你[pc.tongue+]上下舔弄半人马的大屌，随后你将他的勃起的龟头含入口中，热切地开始为他口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_VRONTI_FUCK_START"><![CDATA[
 	<p>
-		Moving up so that you're right next to the muscular centaur, you tell him that it'll be quicker to get rid of his erection by working out his sexual tension than waiting for him to calm down. Thanks to your efforts, Vronti is unable to keep his arousal under control, and as he hears you say this he reluctantly responds, [vronti.speech(Fine... It worked before, so just do it quickly...)]
+		你一步步靠近，直到紧紧挨着肌肉发达的半人马，然后在他耳边低语：[pc.speech(都硬成这样了，你真的能冷静下来吗？不如让我来帮你解决胯下的兴奋吧～♪)]多亏了你的努力，弗洛狄再也压抑不住自己的性欲了，你恶魔般的话语引诱着他，他有些不情愿，但还是回应了你：[vronti.speech(好吧……就像上次那样，快点解决吧……)]
 	</p>
 	<p>
-		Instead of using your hands or mouth to solve the problem, however, you [pc.walk] around in front of the centaur and expose your pussy to him, before getting down on all fours and telling him to do what he wants. Although Vronti spends a moment trying to resist, a graphic description of how hungry your cunt is for horse-cock, combined with your exposed pussy being physically presented to him, gets him to step forwards and mount you.
+		不过，你并没有用手或嘴来解决问题，而是绕到半人马面前，向他展露自己的小穴，接着还四肢着地，任君采撷。虽然弗洛狄抵抗了一会，但你绘声绘色地描述你的蜜穴是多么渴望马屌，再加上你暴露在外的蜜穴明晃晃地呈现在他面前，驱使他上前一步骑在你身上。
 	</p>
 	<p>
-		[vronti.speech(Don't tell Astrapi about this... Please...)] he grunts as he moves around until the flared head of his cock is prodding experimentally at your [pc.labia+]. Promising him that this can be your little secret, you push your hips back and press your hungry pussy back against his cock. Vronti lets out a shocked grunt as he feels this pressure on the head of his cock, and being unable to resist his natural urges, he thrusts forwards and sinks his massive horse-cock into your [pc.pussy+].
+		[vronti.speech(别告诉阿斯特拉皮……拜托……)]他一边咕哝着，一边在你身后来回移动，直到他扁平的龟头在你[pc.labia+]上试探性地戳了几下。你一边向他保证这是你们之间的小秘密，一边将臀部向后顶，用饥渴的小穴顶住他的肉棒。弗洛狄感受到龟头处的压力，发出震惊的闷哼，他按捺不住内心的冲动，猛地向前一挺，将巨大的马屌插入了你[pc.pussy+]里。
 	</p>
 	<p>
-		[vronti.speech(Fuck...)] he grunts, and after you've let out an eager moan and told him to rut you like an animal, he does as you say and begins to desperately pound your hot pussy...
+		[vronti.speech(操……)]他咕哝着。你发出[pc.a_moan+]，让他像野兽一样交尾，他照你说的做，开始饥渴地撞击你火热的小穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_FLIRT_BACK_OUT"><![CDATA[
 	<p>
-		Things have progressed too far for your liking, so instead of offering to help him with it, you tell Vronti that you don't mind waiting until he's got his sexual frustration under control. Getting back into the carriage, you wait for several minutes as his erection slowly pulls back into its sheath.
+		好像有点玩太过火了，但你不愿意帮弗洛狄解决，而是告诉他你不介意等他平息欲火。你回到车厢里等了几分钟，直到他勃起的肉棒慢慢缩回鞘中。
 	</p>
 	<p>
-		Eventually the centaur is ready to continue on his way, and as you set off down the road once more, you decide that it would be best to spend the rest of your journey in silence. Informing Vronti that you're going to relax and close your eyes for a while, he replies in the briefest manner possible by simply saying, [vronti.speech(Ok.)]
+		最终，半人马准备继续上路了。再次踏上旅途，你决定最好在剩下的路程中保持沉默。于是你告知弗洛狄自己要放松一下，闭目养神片刻，他简洁明了地回答道：[vronti.speech(好。)]
 	</p>
 	<p>
-		Thinking to yourself how smooth the carriage's ride has been so far, you offer silent thanks to Astrapi and Vronti for clearly sparing no expense on the suspension. Thanks to the complete absence of bumps or jolts, you're able to do as you'd said and relax in the carriage, closing your eyes and allowing the time to pass in relative peace as the centaur takes you to Elis...
+		你心想这辆马车到目前为止还算平稳，于是默默地感谢阿斯特拉皮和弗洛狄在悬架系统上的倾力付出。一路上毫不颠簸，你的确可以在车厢里放松，闭上眼睛，任凭时间在半人马带你前往伊利斯的过程中平静地流逝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_VRONTI_ASS_SERVICE_START"><![CDATA[
 	<p>
-		Moving up so that you're right next to the muscular centaur, you tell him that it'll be quicker to get rid of his erection by sexually servicing him than waiting for him to calm down. Thanks to your efforts, Vronti is unable to keep his arousal under control, and as he hears you say this he reluctantly responds, [vronti.speech(Fine... Just do it quickly...)]
+		你一步步靠近，直到紧紧挨着肌肉发达的半人马，然后在他耳边低语：[pc.speech(都硬成这样了，你真的能冷静下来吗？要来试试我的服务吗？性方面的～♪)]多亏了你的努力，弗洛狄再也压抑不住自己的性欲了，你恶魔般的话语引诱着他，他有些不情愿，但还是回应了你：[vronti.speech(好吧……快点解决吧……)]
 	</p>
 	#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
 		<p>
-			Clearly not expecting what's coming next, the muscular centaur gasps as you quickly drop down behind him and plant a big, passionate kiss on his puffy asshole. Pulling back, you tell Vronti that you've been well trained as one of Natalya's [style.mules], and that performing anilingus on centaurs is part of your job. Wanting to demonstrate this to him, you lean in and start planting a series of loving kisses on Vronti's horse-anus, causing him to grunt and admit, [vronti.speech(Ok... That feels fine...)]
+			肌肉发达的半人马显然没有预料到接下来会发生什么，当你迅速趴到他身后，对着他肉感的菊穴来了一个激吻时，他不禁喘息起来。抽离开来，你告诉弗洛狄，作为娜塔莉亚的[style.mules]，你受过良好的训练，为半人马吻肛是你工作的一部分。为了向他证明这一点，你俯身开始在弗洛狄的马肛上亲吻，引得他哼哼唧唧地承认：[vronti.speech(嗯……感觉不错……)]
 		</p>
 		<p>
-			Smiling at his response, you tell the muscular centaur that he hasn't experienced anything yet. Before he can respond to that statement, you eagerly bury your face into his ass, pressing your [pc.lips+] against his puffy asshole in the process. Darting your [pc.tongue+] out, you start lovingly performing anilingus on Vronti, and from the deep, satisfied grunts you start to hear him making, you're sure that Natalya would be proud of your efforts...
+			听到他的回答，你微笑着告诉这位肌肉发达的半人马，他还什么都没体验过呢。还没等他反应过来，你就迫不及待地把脸埋进他的屁股里，[pc.lips+]抵向他肉感的菊穴。你伸出[pc.tongue+]，满怀爱意地给弗洛狄吻肛，从他发出的低沉又满足的哼声中，你确信娜塔莉亚会为你的努力感到骄傲……
 		</p>
 	#ELSE
 		<p>
-			Clearly not expecting what's coming next, the muscular centaur gasps as you quickly drop down behind him and run your fingers over his puffy asshole. Continuing to tease his rear entrance in this manner, you tell Vronti to relax and enjoy the sensation of having his ass serviced. As you lovingly start to play with Vronti's horse-anus, he grunts and admit, [vronti.speech(Ok... That feels fine...)]
+			肌肉发达的半人马显然没有预料到接下来会发生什么，当你迅速走到他身后，用手指滑过他肉感的菊穴时，他不禁喘息起来。你继续用这种方式挑逗他的后庭，让弗洛狄放松享受屁眼被服务的感觉。你满怀爱意地玩弄起弗洛狄的马肛，引得他哼哼唧唧地承认：[vronti.speech(嗯……感觉不错……)]
 		</p>
 		<p>
-			Smiling at his response, you tell the muscular centaur that he hasn't experienced anything yet. Before he can respond to that statement, you eagerly bury your [pc.fingers] into his puffy asshole, before starting to finger his back-door. From the deep, satisfied grunts you start to hear him making, you're sure that Vronti is enjoying this experience...
+			听到他的回答，你微笑着告诉这位肌肉发达的半人马，他还什么都没体验过呢。还没等他来得及说什么，你就迫不及待地将[pc.fingers]抵入他肉感的菊穴，指交他的后庭。从他发出的低沉又满足的哼声中，你确信弗洛狄会非常享受此次体验……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_VRONTI_ANAL_FUCK_START"><![CDATA[
 	<p>
-		Moving up so that you're right next to the muscular centaur, you tell him that it'll be quicker to get rid of his erection by working out his sexual tension than waiting for him to calm down. Thanks to your efforts, Vronti is unable to keep his arousal under control, and as he hears you say this he reluctantly responds, [vronti.speech(Fine... It worked before, so just do it quickly...)]
+		你一步步靠近，直到紧紧挨着肌肉发达的半人马，然后在他耳边低语：[pc.speech(都硬成这样了，你真的能冷静下来吗？不如让我来帮你解决胯下的兴奋吧～♪)]多亏了你的努力，弗洛狄再也压抑不住自己的性欲了，你恶魔般的话语引诱着他，他有些不情愿，但还是回应了你：[vronti.speech(好吧……就像上次那样，快点解决吧……)]
 	</p>
 	<p>
-		Instead of using your hands or mouth to solve the problem, however, you [pc.walk] around in front of the centaur and expose your ass to him, before getting down on all fours and telling him to do what he wants. Although Vronti spends a moment trying to resist, a graphic description of how hungry your back-door is for horse-cock, combined with your exposed asshole being physically presented to him, gets him to step forwards and mount you.
+		不过，你并没有用手或嘴来解决问题，而是绕到半人马面前，向他展露自己的屁股，接着还四肢着地，任君采撷。虽然弗洛狄抵抗了一会，但你绘声绘色地描述你的后庭是多么渴望马屌，再加上你暴露在外的菊穴明晃晃地呈现在他面前，驱使他上前一步骑在你身上。
 	</p>
 	<p>
-		[vronti.speech(Don't tell Astrapi about this... Please...)] he grunts as he moves around until the flared head of his cock is prodding experimentally at your [pc.asshole+]. Promising him that this can be your little secret, you push your hips back and press your hungry butt back against his cock. Vronti lets out a shocked grunt as he feels this pressure on the head of his cock, and being unable to resist his natural urges, he thrusts forwards and sinks his massive horse-cock into your [pc.asshole+].
+		[vronti.speech(别告诉阿斯特拉皮……拜托……)]他一边咕哝着，一边在你身后来回移动，直到他扁平的龟头在你[pc.asshole+]上试探性地戳了几下。你一边向他保证这是你们之间的小秘密，一边将臀部向后顶，用饥渴的屁股顶住他的肉棒。弗洛狄感受到龟头处的压力，发出震惊的闷哼，他按捺不住内心的冲动，猛地向前一挺，将巨大的马屌插入了你[pc.asshole+]里。
 	</p>
 	<p>
-		[vronti.speech(Fuck...)] he grunts, and after you've let out [pc.a_moan+] and told him to rut you like an animal, he does as you say and begins to desperately pound your hot ass...
+		[vronti.speech(操……)]他咕哝着。你发出[pc.a_moan+]，让他像野兽一样交尾，他照你说的做，开始饥渴地撞击你火热的屁股……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_VRONTI_ASS_FUCKING_START"><![CDATA[
 	<p>
-		Moving up so that you're right next to the muscular centaur, you tell him that it'll be quicker to get rid of his erection by working out his sexual tension than waiting for him to calm down. Thanks to your efforts, Vronti is unable to keep his arousal under control, and as he hears you say this he reluctantly responds, [vronti.speech(Fine... It worked before, so just do it quickly...)]
+		你一步步靠近，直到紧紧挨着肌肉发达的半人马，然后在他耳边低语：[pc.speech(都硬成这样了，你真的能冷静下来吗？不如让我来帮你解决胯下的兴奋吧～♪)]多亏了你的努力，弗洛狄再也压抑不住自己的性欲了，你恶魔般的话语引诱着他，他有些不情愿，但还是回应了你：[vronti.speech(好吧……就像上次那样，快点解决吧……)]
 	</p>
 	#IF(vronti.isAnalVirgin())
 		<p>
-			You aren't quite sure how Vronti would respond to being asked if he wants his ass fucked, so instead of risking a firm rejection of your proposition, you decide to make sure that his mind is fogged by lust before asking to fuck him. Coyly moving around behind him and reaching down to cup and stroke his big, heavy balls, you get the muscular centaur so aroused that he starts letting out involuntary grunts and begins pawing at the ground with one of his huge, powerful hoofs. Only once you're sure that he's madly turned on do you move on to your real target, and can't help but grin as you trace your [pc.fingers+] up from his huge ballsack to run around the rim of his big, puffy equine asshole.
+			你不太清楚弗洛狄听到要被草屁股会如何回应，为了避免遭到断然拒绝，你决定先让他精虫上脑，于是绕到他身后，伸手捧住了他那对沉重饱满的睾丸轻轻揉捏，这肌肉发达的半人马也不禁发出难耐的闷哼，强壮的马蹄开始不安地刨地。直到确信他已经被挑起了性欲，你才将[pc.fingers+]从他硕大的阴囊上移开，沿着那饱满的菊缘轻轻打转，嘴角下意识扬起得逞的坏笑。
 		</p>
 		<p>
-			[vronti.speech(Fuck...)] he grunts as you use your thumbs to spread his big, [vronti.assholeColour] asshole. As you play with his ass, he bucks his hips back a little, letting you know that he's enjoying the anal stimulation. Seizing this opportunity, you tell Vronti that you can make his asshole feel even better, and as you continue to play with his butt, you tell him that you want to fuck his ass.
+			[vronti.speech(妈的……)]你用拇指撑开他硕大的[vronti.assholeColour]肛门时，他发出了低沉的呻吟。你不断玩弄着他的后庭，让他不禁扭动起腰臀，你明白他正享受着来自后穴的刺激。你抓住这个机会，告诉弗洛狄你能让他的屁穴更舒服，一面继续玩弄他的屁股，一面说想操他。
 		</p>
 		<p>
-			[vronti.speech(My ass?!)] he snorts. The tone of his voice makes it sound like he's about to reject you, but as you once again spread his puffy doughnut, he suddenly lets out a deep, rumbling groan. Flexing his huge, rippling muscles, he glances back over his shoulder at you and relents, [vronti.speech(Fine... Just... This is my first time... And don't tell Astrapi... Please...)]
+			[vronti.speech(我的屁股？！)]他哼了一声。语气听起来像是要拒绝你，但你再次掰开他丰满的菊穴后，他却突然发出一声低沉的呻吟，鼓起健硕的肌肉，回头瞥了你一眼，终于妥协道，[vronti.speech(好吧……只是……这是我第一次……别告诉阿斯特拉皮……求你了……)]
 		</p>
 		<p>
-			Smiling at the stoic centaur, you promise him that you'll make it a memorable experience as you eagerly pull out your [pc.cock+].
+			你向着这不苟言笑的半人马微微一笑，保证会给他一次难忘的体验，同时饥渴地掏出了[pc.cock+]。
 			#IF(pc.isTaur())
-				 Rearing up onto your hind legs, you step forwards and mount Vronti, and can't help but let out [pc.a_moan+] as you feel the [pc.cockHead+] of your throbbing dick pressing impatiently against the centaur's virgin hole.
+				你后腿直立，向前跨步骑上了弗洛狄。你感受到自己勃动的[pc.cockHead+]正抵着半人马饱满的菊穴，忍不住发出了[pc.a_moan+]。
 			#ELSE
-				 Moving up close behind Vronti, you can't help but let out [pc.a_moan+] as you impatiently press the [pc.cockHead+] of your throbbing dick against the centaur's virgin hole.
+				你贴到弗洛狄身后，急不可耐地将勃动的[pc.cockHead+]抵在半人马饱满的菊穴上，忍不住发出了[pc.a_moan+]。
 			#ENDIF
-			 Disappointingly, Vronti tenses up and clenches his ass as he feels that you're about to penetrate him. Wanting your lover to relax and enjoy this so that he'll be willing to do this with you again, you don't immediately thrust forwards. Instead, with gentle movements of your [pc.hips+], you use your [pc.cock+] to playfully tease his hot, puffy asshole.
+				但弗洛狄在你即将进入时却紧张地夹紧了臀部，让你格外扫兴。为了让伴侣放松享受，以便后来还能又机会，你没有立即挺入，反而轻柔地摆动着[pc.hips+]，用[pc.cock+]调皮地逗弄他那发烫的菊穴。
 		</p>
 		<p>
-			[vronti.speech(Yes...)] Vronti groans. He visibly relaxes as you continue to stimulate his equine hole, and after letting out a deep, horny sigh, he begs for you to take his virginity in his typically terse manner, [vronti.speech(Put it in already... Fuck me...)]
+			[vronti.speech(嗯……)]弗洛狄呻吟了起来。随着你继续的刺激，他明显放松下来，在发出一声低沉而饥渴的喘息后，用他惯常的简洁方式请求你夺走他的贞操，[vronti.speech(快插进来……操我……)]
 		</p>
 		<p>
-			Having been given the signal you were waiting for, you push forwards and press the [pc.cockHead+] of your [pc.cock+] into Vronti's hungry asshole. His hot, puffy doughnut stretches to accommodate your entry, and once you feel that you're inside of him, you rock your hips forwards and drive your [pc.cock+] into the centaur's tight, virgin asshole.
+			得到期待已久的信号后，你立刻向前挺进，将[pc.cock+][pc.cockHead+]顶入弗洛狄饥渴的后庭。他温热肉感的菊穴扩张着容纳你的进入，当你感觉到完全插入后，便扭动腰肢将[pc.cock+]深深送入这头半人马紧致的雏菊深处。
 		</p>
 		<p>
-			[vronti.speech(Fuck! ~Aah!~)] Vronti cries out. In a rare display of emotion, he makes a horny, moan-like noise as you enter him, and as you sink your cock into his ass and claim his anal virginity, you find yourself feeling rather proud that you were able to coax such a lewd noise out of this stoic centaur. Encouraged by his response, you start eagerly fucking Vronti's horny asshole as he grunts and groans beneath you...
+			[vronti.speech(操！~啊！~)]弗洛狄发出一声叫喊。当你插入他时，这个平日不苟言笑的半人马罕见地流露出情绪，发出了淫荡的呻吟声。随着你的肉棒深深埋入他的肛门，夺走了他的后穴贞操，你不禁为自己能让这个坚毅的半人马发出如此放浪的声音而感到自豪。受到他反应的鼓舞，你开始饥渴地抽插着弗洛狄发情的屁眼，他在你身下不断发出粗重的喘息和呻吟……
 		</p>
 	#ELSE
 		<p>
-			Wanting to fuck Vronti's ass again, you coyly move around behind the muscular centaur and start teasing your [pc.fingers+] over his big, puffy doughnut. Quickly getting aroused, he starts letting out involuntary grunts and begins pawing at the ground with one of his huge, powerful hoofs. Using your thumbs to spread his big, [vronti.assholeColour] asshole, you tell him that you want to fuck his ass again.
+			你又想操弗洛狄的屁股，故作羞怯地绕到那肌肉发达的半人马身后，用[pc.fingers+]挑逗他硕大丰满的“甜甜圈”。他很快就被撩拨得情动，不由自主地发出呻吟，强健有力的马蹄开始焦躁地刨地。你用拇指撑开他[vronti.assholeColour]色的大屁眼，说你想再干他一次。
 		</p>
 		<p>
-			[vronti.speech(Fine...)] he snorts. Flexing his huge, rippling muscles, he glances back over his shoulder at you and grunts, [vronti.speech(Just... Don't tell Astrapi about this...)]
+			[vronti.speech(好吧……)]他哼了一声，绷紧自己健硕的肌肉，回头瞥了你一眼嘟囔道，[vronti.speech(只是……别告诉阿斯特拉皮……)]
 		</p>
 		<p>
-			Smiling at the stoic centaur, you promise him that you won't tell his sister anything about this as you eagerly pull out your [pc.cock+].
+			你对着沉默的半人马微微一笑，同时又急切地掏出[pc.cock+]，承诺说不会向他姐姐透露半点风声。
 			#IF(pc.isTaur())
-				 Rearing up onto your hind legs, you step forwards and mount Vronti, and can't help but let out [pc.a_moan+] as you feel the [pc.cockHead+] of your throbbing dick pressing impatiently against the centaur's puffy hole.
+				你后腿直立，向前跨步骑上了弗洛狄。你感受到自己勃动的[pc.cockHead+]正抵着半人马饱满的菊穴，忍不住发出了[pc.a_moan+]。
 			#ELSE
-				 Moving up close behind Vronti, you can't help but let out [pc.a_moan+] as you impatiently press the [pc.cockHead+] of your throbbing dick against the centaur's puffy hole.
+				你贴到弗洛狄身后，急不可耐地将勃动的[pc.cockHead+]抵在半人马饱满的菊穴上，忍不住发出了[pc.a_moan+]。
 			#ENDIF
-			 Having experienced this before, and so knowing what's to come, Vronti relaxes his asshole as you continue to stimulate it, and after letting out a deep, horny sigh, he grunts, [vronti.speech(Put it in already... Fuck me...)]
+			早有过经验的弗洛狄知道接下来会发生什么，在你继续挑逗时放松了后庭。他发出一声饥渴的叹息，低声，[vronti.speech(直接进来吧……操我……)]
 		</p>
 		<p>
-			Having been given the signal you were waiting for, you push forwards and press the [pc.cockHead+] of your [pc.cock+] into Vronti's hungry asshole. His hot, puffy doughnut stretches to accommodate your entry, and once you feel that you're inside of him, you rock your hips forwards and drive your [pc.cock+] into the centaur's equine hole.
+			得到期待已久的信号后，你立刻向前挺进，将[pc.cock+][pc.cockHead+]顶入弗洛狄饥渴的后庭。他温热丰满的菊穴扩张起来，将你容纳进去。你觉得完全插入后，便扭动起腰肢，将[pc.cock+]深深送入这头半人马的尾穴深处。
 		</p>
 		<p>
-			[vronti.speech(Fuck! ~Aah!~)] Vronti cries out. In a rare display of emotion, he makes a horny, moan-like noise as you enter him, and as you sink your cock into his ass, you find yourself feeling rather proud that you were able to coax such a lewd noise out of this stoic centaur. Encouraged by his response, you start eagerly fucking Vronti's horny asshole as he grunts and groans beneath you...
+			[vronti.speech(操！~啊！~)]弗洛狄一下子叫出声来。你插入后，这个平日不动声色的半人马罕见地流露出情绪，发出了淫荡的呻吟。你将肉棒深深地埋入他的肛门，不由得为自己能让这个坚毅的半人马发出如此好色的声音而感到自豪。受到如此反应的鼓舞，你兽性大发，抽插着弗洛狄饥渴的屁眼，他在你身下发出了粗重的喘息和呻吟……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_POST_SEX"><![CDATA[
 	<p>
-		Satisfied from the orgasm you've given him, Vronti lets out a deep grunt, before stepping back and briefly saying, [vronti.speech(That's enough.)]
+		弗洛狄从你带来的高潮中得到满足，他发出一声低沉的哼声后退开了，一边简短地说道：[vronti.speech(已经够了。)]
 	</p>
 	<p>
-		Smiling up at him, you see that the stoic centaur is blushing, and as the arousal fades from his mind, he starts to seem incredibly embarrassed about what just happened. Nervously pawing at the ground, he looks in every direction except yours and mutters, [vronti.speech(Sorry about that...)]
+		你抬起头对他微笑，看到这个坚忍的半人马脸红了。随着性奋从他的脑海中消散，他开始对刚才发生的事情感到无比尴尬。弗洛狄紧张地用蹄子蹬着地面，朝四处各地张望，但就是不看你，他喃喃道：[vronti.speech(刚刚对不起了……)]
 	</p>
 	<p>
-		Reassuring him that there's nothing to be sorry about, you lean in and plant a kiss on his cheek, which causes him to blush even more and grunt, [vronti.speech(Let's get moving.)]
+		你向他保证没什么好抱歉的，还凑过去在他脸上亲了一下，这让他脸更红了，他咕哝道：[vronti.speech(我们走吧。)]
 	</p>
 	<p>
-		Recovering his stamina in what seems to be just a few seconds, the muscular centaur straps himself into the carriage's harness once more, and as soon as you've clambered up into the wooden vehicle, he speeds off on his way...
+		这位肌肉发达的半人马片刻后就恢复了体力，他再次将自己绑在马具上，等你爬上木制车厢后，他就加速上路了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_JOURNEY_END"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
 		<p>
-			A short while of travelling later, Vronti points off into the distance and grunts, [vronti.speech(Elis.)]
+			走了一会儿，弗洛狄指着远处咕哝了一声：[vronti.speech(伊利斯。)]
 		</p>
 		<p>
-			Sure enough, as you look in the direction that he's pointing in, you're able to see a strip of grey on the horizon. Thanks to Vronti's impressive speed, it only takes another couple of minutes before you're able to pick out the distinctive shape of towers embedded into the corners of the ramparts, as well as the roofs of the taller buildings within the town itself. The one which stands out the most, and the one which truly defines the town's silhouette, is the tall, highly-steepled roof of the town hall's tower.
+			果然，你顺着他指的方向看去，就看到地平线上的一条灰色条纹。得益于弗洛狄惊人的速度，只用了几分钟，你就能辨认出嵌在城墙四角的塔楼的独特形状，以及城内高层建筑的屋顶。其中最引人注目的，也是真正勾勒出小镇轮廓的，是市镇议会塔楼高大而陡峭的屋顶。
 		</p>
 		<p>
-			As you get ever closer to Elis, you're able to pick out the crenellations of its walls, and can thankfully see that the gatehouse has its gates wide open.
+			当越来越接近伊利斯时，你可以远远地看到城墙上的石垛口，并值得庆幸的是，大门是敞开着的。
 			#IF(game.isDayTime())
-				 While there aren't many people leaving or entering the town via the same cobblestone road which you find yourself on, you can see through the entrance that the interior of the town looks to be quite busy.
+				虽然经由同一条鹅卵石路进出小镇的人并不多，但从入口处可以看到小镇内部看起来相当繁忙热闹。
 			#ELSE
-				 Due to the current hour, there isn't a single person leaving or entering the town via the same cobblestone road which you find yourself on, although you can see through the entrance that the interior of the town looks to be not completely deserted.
+				鉴于时间的原因，现在基本没有人从这条鹅卵石路进出小镇，不过从入口处依旧可以看出小镇内部至少是还没有完全荒废的样子。
 			#ENDIF
 		</p>
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_lunetteTerrorEnded))
-				Thanks to the close proximity of the town, the nearby fields are very well protected from raiders or bandits. Despite this, however, there doesn't appear to be a single residential building outside of the walls, giving the surrounding area a very rural feel to it.
+				由于距离城镇很近，所以附近的田野受到很好的保护，并没有受到袭击者或强盗的侵扰。同时城墙外似乎没有一栋居民楼，这让周围地区充满了乡土气息。
 			#ELSE
-				Taking a look around at the nearby fields, you notice that they don't seem to have suffered the same sort of damage from Lunette's centaurs as those out in the Foloi Fields. Despite the apparent protection from raids, however, there doesn't appear to be a single residential building outside of the walls, giving these fields a very rural feel to them.
+				你环顾了一下附近的田野，发现这些田野似乎并没有像弗洛伊田野那样遭受露内特半人马的破坏。虽然这些田地受到了良好的保护，但城墙外没有一栋居民楼，给人了一种满是乡村气息的感觉。
 			#ENDIF
 		</p>
 		<p>
-			The only building outside of the town's walls which you can see is the one which Vronti is leading you to. Taking the form of a large, wooden barn, and positioned a short distance from the eastern gate of the town, this building appears to be Elis's counterpart to the twin barns back at Dominion. Confirming this to you, the centaur calls back, [vronti.speech(This is it. There's a tax on centaur carriages passing through the gates, so I can't take you into the town itself.)]
+			弗洛狄带你去的地方便是城墙外你唯一能看到的建筑，它是一个大型木制谷仓，离城镇东门不远。这座在伊利斯的建筑似乎与御城区的那座谷仓双生对应，半人马也向你证实了这一点，回头叫道：[vronti.speech(就是这里。半人马拉车进城门要交税，所以我不能带你进城。)]
 		</p>
 		<p>
-			Pulling up in front of this barn, Vronti waits for you to dismount the carriage, before saying, [vronti.speech(Thanks for the business.)]
+			弗洛狄将车停在谷仓前，等你下了马车才说：[vronti.speech(多谢惠顾。)]
 		</p>
 	#ELSE
 		<p>
-			A short while of travelling later, Vronti points off into the distance and grunts, [vronti.speech(Dominion.)]
+			走了一会儿，弗洛狄指着远处咕哝了一声：[vronti.speech(御城区。)]
 		</p>
 		<p>
-			Sure enough, as you look in the direction that he's pointing in, you're able to see the black obelisk of Lilith's tower in the distance. Thanks to Vronti's impressive speed, it only takes another couple of minutes before you're able to pick out the distinctive outline of Dominion's suburbs, and a further few minutes later you see the twin barns of the 'Centaur Carriage Depot' on either side of the road up ahead.
+			果然，你顺着他指的方向望去，就看到远处莉莉丝之塔的黑色方尖碑。得益于弗洛狄惊人的速度，只用了几分钟，御城区郊区独特的轮廓便映入眼帘，再过几分钟，你就能看到前方道路两旁“人马车站”的两个谷仓。
 		</p>
 		<p>
-			[vronti.speech(This is it,)] Vronti calls back as he pulls up in front of these familiar barns. Waiting for you to dismount the carriage, he briefly adds, [vronti.speech(Thanks for the business.)]
+			[vronti.speech(就是这里。)]弗洛狄把车停在这些熟悉的谷仓前。等你下了马车，他简短地补充道：[vronti.speech(多谢惠顾。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VRONTI_JOURNEY_END_GOODYBE"><![CDATA[
 	<p>
-		Thanking Vronti for the ride, and assuring him that you will use his business again in the future, you say goodbye. Giving you the briefest of waves, the muscular centaur opens the door to the barn, before pulling his carriage inside and disappearing from sight.
+		你谢过弗洛狄送你一程，还保证自己以后还会光顾生意，接着就告别了。肌肉发达的半人马向你挥了挥手，然后打开谷仓的门，拉着马车走了进去，消失在你的视线中。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-			Having now arrived at Elis, you prepare to set off into the town...
+			现在已抵达伊利斯，你准备进城……
 		#ELSE
-			Having now arrived just a short distance north of Dominion, you prepare to set off into the city...
+			现在已抵达御城区以北，你准备进城……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

@@ -59,7 +59,7 @@ public class Elle extends NPC {
 	}
 	
 	public Elle(boolean isImported) {
-		super(isImported, new NameTriplet("Aellasys"), "Lunettemartu",
+		super(isImported, new NameTriplet("艾拉西斯"), "露内特马尔图",
 				"",
 				44, Month.FEBRUARY, 5,
 				15,
@@ -284,13 +284,13 @@ public class Elle extends NPC {
 	@Override
 	public String getDescription() {
 		if(this.isSlave()) {
-			return "Elle is no longer the Senior Quartermaster for all of the Enforcers in Central Dominion thanks to you. Although her fall from her former office was meteoric, she doesn't seem to mind at all.";
+			return "托你的福，埃勒已经不再是御城区中心执法者的高级军需官了。尽管她从前职位上摔下得很快，本人看起来却完全不在意。";
 			
 		} else if(Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_WES)) {
-			return "With your help, Elle remains the Senior Quartermaster for all of the Enforcers in Central Dominion. Although she could fill Wes' former position with any of her subordinates, she has chosen to man the desk herself.";
+			return "在你的帮助下，埃勒仍然是御城区中心执法者的高级军需官。虽然她可以让任何一个下属来接替韦斯以前的位置，但她选择了亲力亲为。";
 			
 		} else {
-			return "Elle is the Senior Quartermaster for all of the Enforcers in Central Dominion and is Wes' commanding officer. Although her temper makes her difficult to work for, her subordinates, except for Wes, have little complaint.";
+			return "埃勒是御城区中心执法者的高级军需官并且还是韦斯的指挥官。尽管她的脾性共事有点难度，但她的下属除了韦斯之外，几乎没什么怨言。";
 		}
 	}
 	
@@ -391,17 +391,17 @@ public class Elle extends NPC {
 			if(item.isTypeOneOf("innoxia_pills_fertility", "innoxia_pills_broodmother")) {
 				return new Value<>(true,
 						"<p>"
-							+ "Producing a "+item.getName(false, false)+" from your inventory, you prepare to offer it to Elle, but before you can even get that far, the [elle.race] sees what it is you're holding and declares,"
-							+ " [elle.speechNoEffects(There's no way I'm taking that! I have absolutely zero intention of ever getting pregnant, thank you very much!)]"
+							+ "你从背包中拿出一个"+item.getName(false, false)+"准备递给埃勒，[elle.race]已经看破了你的意图并宣告，"
+							+ "[elle.speechNoEffects(我不可能会接受这个！我绝对没有怀孕的打算，非常感谢！)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Deciding that it would be a very bad idea to try and force Elle to take the pill, you put it away..."
+							+ "你觉得强迫埃勒服用这药是个坏主意，就把它收起来了……"
 						+ "</p>");
 			}
 			return new Value<>(false,
 					"<p>"
-						+ "You start to pull "+item.getItemType().getDeterminer()+" "+item.getName()+" out from your inventory, but Elle quickly says that she has absolutely no intention of letting you use it on her."
-						+ " Deciding that it would be a very bad idea to try and force Elle to change her mind, you put "+(item.getItemType().isPlural()?"them":"it")+" away..."
+						+ "你开始从背包中拿出"+item.getItemType().getDeterminer()+""+item.getName()+"，但埃勒迅速看破了你的意图并告诉你她绝对不会让你在她身上使用这个。"
+						+ "你觉得强迫埃勒改变主意是并不好，所以就把药收起来了……"
 					+ "</p>");
 		}
 		return super.getItemUseEffects(item, itemOwner, user, target);

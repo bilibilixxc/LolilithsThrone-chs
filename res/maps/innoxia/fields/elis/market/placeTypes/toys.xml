@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Yui's Toys]]></name>
-	<tooltipDescription><![CDATA[A demonic spider-girl sells all manner of sex-toys and fetish gear from out of this stall.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the Farmer's Market in Elis]]></virginityLossDescription>
+	<name><![CDATA[唯的玩具店]]></name>
+	<tooltipDescription><![CDATA[一个恶魔蜘蛛女在摊位上卖各种性玩具和情趣服饰。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>toys</svgName>
 	<colour>BASE_PINK</colour>

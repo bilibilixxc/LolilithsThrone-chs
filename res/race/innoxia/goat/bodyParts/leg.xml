@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <leg>
 	<race>innoxia_goat</race>
 	
-	<transformationName><![CDATA[goat]]></transformationName>
+	<transformationName><![CDATA[山羊]]></transformationName>
 	
 	<coveringType>innoxia_goat_fur</coveringType>
 	
@@ -21,44 +21,44 @@
 		<configuration>QUADRUPEDAL</configuration>
 	</allowedLegConfigurations>
 	
-	<name><![CDATA[leg]]></name>
-	<namePlural><![CDATA[legs]]></namePlural> 
+	<name><![CDATA[腿]]></name>
+	<namePlural><![CDATA[腿]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>masculine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>anthropomorphic, goat-like</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[男性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[山羊般拟人]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>anthropomorphic, goat-like</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[山羊般拟人]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsFeminine>
 	
 	<footDescriptorsMasculine>
-		<descriptor>goat-like</descriptor>
+		<descriptor><![CDATA[山羊般]]></descriptor>
 	</footDescriptorsMasculine>
 	<footDescriptorsFeminine>
-		<descriptor>goat-like</descriptor>
+		<descriptor><![CDATA[山羊般]]></descriptor>
 	</footDescriptorsFeminine>
 	
 	<toeDescriptorsMasculine>
-		<descriptor>goat-like</descriptor>
+		<descriptor><![CDATA[山羊般]]></descriptor>
 	</toeDescriptorsMasculine>
 	<toeDescriptorsFeminine>
-		<descriptor>goat-like</descriptor>
+		<descriptor><![CDATA[山羊般]]></descriptor>
 	</toeDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		A layer of fluffy, goat-like fur quickly grows over [npc.her] legs as they shift into a new form. As [npc.her] new fur spreads down to the ends of [npc.her] toes, they suddenly push together, and [npc.she] [npc.verb(let)] out a cry as a thick, hoof-like nail grows in their place, before quickly transforming to turn [npc.her] feet into goat-like hoofs. As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.
-		<br/>[npc.Name] now [npc.has] anthropomorphic, [style.boldGoat(goat-like legs and hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription].
-	]]></transformationDescription>
+		[npc.her]的双腿转化成了新的形式，一层松软的山羊毛迅速覆盖了上去。[npc.her]的新皮毛覆盖到了其脚趾的末端，它们突然聚在一起，[npc.her]的脚趾甲变成了厚厚的蹄形指甲，将脚完全变成山羊蹄。在转化的尾声，[npc.she]看到皮毛自然过渡成了覆盖到大腿上部的[npc.skin]。
+	<br/>[npc.Name]现在拥有似人非人的[npc.materialDescriptor][npc.legFullDescription]的[style.boldGoat(山羊一般的腿和有蹄的脚)]。
+]]></transformationDescription>
 	
 	
 	<bodyDescription><![CDATA[
-		[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic goat-like hoofs.
+		[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的山羊蹄子。
 	]]></bodyDescription>
 </leg>

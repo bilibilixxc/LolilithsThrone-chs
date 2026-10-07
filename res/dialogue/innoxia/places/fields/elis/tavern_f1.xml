@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_tavern_f1_corridor -->
@@ -40,13 +40,13 @@
 		<travelDisabled>false</travelDisabled>
 		<responseTabs>
 			<tab index="0"><![CDATA[
-				Actions
+				行动
 			]]></tab>
 			<tab index="1"><![CDATA[
-				Fast Travel
+				快速旅行
 			]]></tab>
 			<tab index="2"><![CDATA[
-				Bathroom
+				浴室
 			]]></tab>
 		</responseTabs>
 		<responses>
@@ -54,8 +54,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Rest (1 hour)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for an hour. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息 (1小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息一小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[60]]></secondsPassed>
 				<effects><![CDATA[
@@ -66,8 +66,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Rest (4 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for four hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(4小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息四小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[240]]></secondsPassed>
 				<effects><![CDATA[
@@ -78,8 +78,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Rest (8 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for eight hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(8小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息八小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[480]]></secondsPassed>
 				<effects><![CDATA[
@@ -90,8 +90,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rest (12 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for twelve hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(12小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息十二小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[720]]></secondsPassed>
 				<effects><![CDATA[
@@ -103,28 +103,28 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[
-					Rest until
+					休息直到
 					#IF(game.isDayTime())
-						 Sunset
+						日落
 					#ELSE
-						 Sunrise
+						日出
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Rest for
+					五分钟后，休息
 					#IF(game.getMinutesUntilNextMorningOrEvening() >= 60)
-						 [#~~(game.getMinutesUntilNextMorningOrEvening()/60)] hours
+						[#~~(game.getMinutesUntilNextMorningOrEvening()/60)]时
 					#ENDIF
 					#IF(game.getMinutesUntilNextMorningOrEvening() % 60 != 0)
-						 [#~~(game.getMinutesUntilNextMorningOrEvening()%60)] minutes
+						[#~~(game.getMinutesUntilNextMorningOrEvening()%60)]分
 					#ENDIF
-					 until five minutes past
+					直到
 					#IF(game.isDayTime())
-						 sunset.
+						日落。
 					#ELSE
-						 sunrise.
+						天明。
 					#ENDIF
-					 As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.
+					不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]和[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
@@ -140,8 +140,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Set alarm]]></responseTitle>
-				<responseTooltip><![CDATA[Set the alarm on your phone, so that you can wake at a specific time.]]></responseTooltip>
+				<responseTitle><![CDATA[调闹钟]]></responseTitle>
+				<responseTooltip><![CDATA[在手机上设置闹钟，这样你就能在特定时间醒来。]]></responseTooltip>
 				<nextDialogue stripContent="false"><![CDATA[ROOM_SET_ALARM]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[[#game.saveDialogueNode()]]]></effects>
@@ -151,9 +151,9 @@
 				<index><![CDATA[10]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.getSavedLong('player_phone_alarm') < 0)
-						Rest until alarm (unset)
+						睡到闹铃响起(未设置)
 					#ELSE
-						Rest until alarm ([#
+						睡到闹铃响起 ([#
 							var alarm = flags.getSavedLong('player_phone_alarm');
 							var alarmObj = game.getCustomTime(alarm/60, alarm%60, 0);
 							game.getDisplayTime(alarmObj)
@@ -162,20 +162,20 @@
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getSavedLong('player_phone_alarm') < 0)
-						[style.colourBad(Your alarm is unset!)]
+						[style.colourBad(未设定闹铃！)]
 					#ELSE
-						Rest for
+						休息
 						#IF(game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))==0)
-							 24 hours,
+							24小时
 						#ELSE
 							#IF(game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm')) >= 60)
-								 [#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) / 60)] hours,
+								[#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) / 60)]小时，
 							#ENDIF
 							#IF((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60 != 0)
-								 [#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60)] minutes,
+								[#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60)]分钟，
 							#ENDIF
 						#ENDIF
-						 until your alarm goes off. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.
+						直到闹钟响起。除了恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能使你获得“充分休息”效果。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -206,8 +206,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Entrance]]></responseTitle>
-				<responseTooltip><![CDATA[Fast travel down to the tavern's entrance.]]></responseTooltip>
+				<responseTitle><![CDATA[入口]]></responseTitle>
+				<responseTooltip><![CDATA[快速前往旅店入口。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f0_exit"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -218,8 +218,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Your room]]></responseTitle>
-				<responseTooltip><![CDATA[You are already in your room!]]></responseTooltip>
+				<responseTitle><![CDATA[你的房间]]></responseTitle>
+				<responseTooltip><![CDATA[你已经在你的房间里了！]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			
@@ -227,11 +227,11 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Quick shower]]></responseTitle>
+				<responseTitle><![CDATA[快速淋浴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use your room's ensuite bathroom to take a quick shower.
-					<br/>[style.italicsGood(Cleans <b>a maximum of [style.fluid(500)]</b> of fluids from all orifices.)]
-					<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]
+					使用卧室的独立浴室快速淋浴。
+					<br/>[style.italicsGood(只清洗腔穴内<b>最多[style.fluid(500)]</b>液体。)]
+					<br/>[style.italicsGood(这将只清洁<b>当前装备</b>的衣服。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
@@ -243,11 +243,11 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Thorough shower]]></responseTitle>
+				<responseTitle><![CDATA[全身冲淋]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use your room's en-suite to take a shower, and spend some time thoroughly cleaning yourself.
-					<br/>[style.italicsExcellent(This will clean <b>all</b> fluids out of all your orifices.)]
-					<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]
+					在套间里洗澡，花些时间彻底洗净自己。
+					<br/>[style.italicsExcellent(清洗腔穴内<b>所有</b>液体)]
+					<br/>[style.italicsGood(只清洁<b>当前装备</b>的衣服。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
@@ -259,11 +259,11 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Bath time]]></responseTitle>
+				<responseTitle><![CDATA[入浴时间]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use your room's en-suite to take a bath, and spend some time thoroughly cleaning yourself.
-					<br/>[style.italicsExcellent(This will clean <b>all</b> fluids out of all your orifices.)]
-					<br/>[style.italicsExcellent(This will clean <b>all</b> clothing in your inventory.)]
+					使用卧室的独立浴室，花一些时间仔细清洗自己。
+					<br/>[style.italicsExcellent(清洗腔穴内<b>所有</b>液体。)]
+					<br/>[style.italicsExcellent(清洗持有的<b>所有</b>衣服。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f1_room_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[30]]></secondsPassed>
@@ -299,8 +299,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Keyhole]]></responseTitle>
-				<responseTooltip><![CDATA[Look through the keyhole to see what's happening inside...]]></responseTooltip>
+				<responseTitle><![CDATA[锁眼]]></responseTitle>
+				<responseTooltip><![CDATA[透过锁眼窥探里面发生了什么……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#jess.setLust(80)]
@@ -371,8 +371,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Keyhole]]></responseTitle>
-				<responseTooltip><![CDATA[Look through the keyhole to see what's happening inside...]]></responseTooltip>
+				<responseTitle><![CDATA[锁眼]]></responseTitle>
+				<responseTooltip><![CDATA[透过锁眼窥探里面发生了什么……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#jess.setLust(80)]
@@ -419,8 +419,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Keyhole]]></responseTitle>
-				<responseTooltip><![CDATA[Look through the keyhole to see what's happening inside...]]></responseTooltip>
+				<responseTitle><![CDATA[锁眼]]></responseTitle>
+				<responseTooltip><![CDATA[透过锁眼窥探里面发生了什么……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#jess.setLust(80)]
@@ -472,8 +472,8 @@
 			[#jess.hourlyUpdate()]
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_f1', 'ROOM_SEX_PEEPING_AFTER_SEX'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[ncom.Name] and Jess have finished having sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[ncom.Name]和婕斯已经结束做爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_f1">ROOM_PLAYER</content>
 		<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -493,8 +493,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Downstairs]]></responseTitle>
-				<responseTooltip><![CDATA[Head down the staircase to the ground floor of the tavern.]]></responseTooltip>
+				<responseTitle><![CDATA[下楼]]></responseTitle>
+				<responseTooltip><![CDATA[沿楼梯下到旅店一楼。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f0_stairs"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[

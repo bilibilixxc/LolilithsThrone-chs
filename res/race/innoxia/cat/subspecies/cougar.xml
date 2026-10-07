@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>CAT_MORPH</race>
 	<colour>innoxia_cougar</colour>
@@ -33,24 +33,24 @@
 	<iconName displaySize="75">icon</iconName>
 	<backgroundName/>
 	<bookIconName>icon</bookIconName>
-	<bookName>Curious Kitties</bookName>
+	<bookName><![CDATA[好奇小猫咪]]></bookName>
 	<basicDescriptionId>CAT_MORPH_BASIC</basicDescriptionId>
 	<advancedDescriptionId>CAT_MORPH_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[cougar-morph]]></name>
-	<namePlural><![CDATA[cougar-morphs]]></namePlural>
-	<singularMaleName><![CDATA[cougar-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[cougar-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[cougar-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[cougar-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic cougar, known as a 'cougar-morph' when bipedal, and a 'cougartaur' when the lower body is that of a feral cougar. To be identified as a cougar-morph, a character must be a cat-morph with plain, tan-coloured fur, as well as muscles of at least '[#MUSCLE_THREE_MUSCULAR.getName(false)]' and a body size of least '[#BODY_SIZE_TWO_AVERAGE.getName(false)]'.]]></description>
+	<name><![CDATA[美洲狮化形]]></name>
+	<namePlural><![CDATA[美洲狮化形]]></namePlural>
+	<singularMaleName><![CDATA[美洲狮男]]></singularMaleName>
+	<singularFemaleName><![CDATA[美洲狮女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[美洲狮男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[美洲狮女]]></pluralFemaleName>
+	<description><![CDATA[作为一种拟人化的美洲狮，两足着地被称为 "美洲狮化形"，下半身是野兽形态时被称为 "美洲狮马"。如果想被认定为美洲狮化形，角色必须是棕褐色毛发的普通猫化形，肌肉至少'[#MUSCLE_THREE_MUSCULAR.getName(false)]' ，体型至少是'[#BODY_SIZE_TWO_AVERAGE.getName(false)]']]></description>
 	<feralAttributes>
-		<feralName><![CDATA[cougar]]></feralName>
-		<feralNamePlural><![CDATA[cougars]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[cougar]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[cougar]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[cougars]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[cougars]]></feralPluralFemaleName>
+		<feralName><![CDATA[美洲狮]]></feralName>
+		<feralNamePlural><![CDATA[美洲狮]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[美洲狮]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[美洲狮]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[美洲狮]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[美洲狮]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>80</size>
@@ -63,7 +63,7 @@
 		<hairPresent>true</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] body is extremely strong, and [npc.sheIsFull] capable of great feats of strength.
+		[npc.NamePos]的身材极其健壮，拥有惊人的力量。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="25">MAJOR_PHYSIQUE</attribute>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>400</value> 
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[arcane karada]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[arcane karadas]]></namePlural>
-		<description><![CDATA[A length of rope which, thanks to a special enchantment, ties itself into a tight harness that loops around the wearer's neck, around their body, and under their crotch.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[奥术龟甲缚]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[奥术龟甲缚]]></namePlural>
+		<description><![CDATA[一条绳索，感谢特别的附魔，会自动环绕穿戴者的脖子，身体和胯部并打结系紧。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>STOMACH</slot>
@@ -52,26 +52,26 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(hang)] the enchanted rope around [npc.her] neck, whereupon it instantly starts to snake and slide around [npc.her] body with a mind of its own, forming a tight karada within a matter of seconds.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(hang)] the enchanted rope around [npc2.namePos] neck, whereupon it instantly starts to snake and slide around [npc2.her] body with a mind of its own, forming a tight karada within a matter of seconds.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(loop)] the enchanted rope around [npc2.namePos] neck, whereupon it instantly starts to snake and slide around [npc2.her] body with a mind of its own, forming a tight karada within a matter of seconds.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把附魔绳索挂在[npc.her]的脖子上，绳索立刻在[npc.her]的身体上爬行蠕动，几秒钟后便形成了牢固的龟甲缚。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]把附魔绳索挂在[npc2.namePos]的脖子上，绳索立刻在[npc2.her]的身体上爬行蠕动，几秒钟后便形成了牢固的龟甲缚。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地把附魔绳索套在[npc2.namePos]的脖子上，绳索立刻在[npc2.her]的身体上爬行蠕动，几秒钟后便形成了牢固的龟甲缚。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(untie)] [npc.her] karada and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(untie)] [npc2.namePos] karada and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(untie)] [npc2.namePos] karada and [npc.verb(yank)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开[npc.her]身体上的龟甲缚并取下绳索。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]解开[npc2.namePos]身体上的龟甲缚并取下绳索。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地解开[npc2.namePos]身体上的龟甲缚并扯下绳索。
+		]]></otherRough>
 	</displacementText>
 </clothing>

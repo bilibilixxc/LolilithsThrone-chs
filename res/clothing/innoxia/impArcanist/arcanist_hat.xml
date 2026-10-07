@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>100</value> 
 		
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一顶]]></determiner>
 		
-		<name><![CDATA[imp arcanist's hat]]></name>
+		<name><![CDATA[小恶魔法师帽]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[imp arcanist's hats]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[小恶魔法师帽]]></namePlural> 
 		
-		<description><![CDATA[A hat of the sort you'd expect to see a witch or wizard wearing. Although perhaps it was of great value at one time in its life, it looks to have had countless owners since then, and is covered in signs of extensive wear and tear.]]></description> 
+		<description><![CDATA[一顶像巫师或女巫戴的帽子，尽管它在生命周期的某个时刻可能曾经有很高的价值，但从那时起，它似乎已经经历了无数的主人，上面布满了广泛磨损的痕迹。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -68,27 +68,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(place)] the arcanist's hat onto [npc.her] head.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(place)] the arcanist's hat onto [npc2.namePos] head.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(push)] the arcanist's hat onto [npc2.namePos] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将魔法师帽戴在[npc.her]头上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将魔法师帽戴在[npc2.namePos]的头上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将魔法师帽戴到[npc2.namePos]的头上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] arcanist's hat.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] arcanist's hat.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] arcanist's hat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的魔法师帽脱下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的魔法师帽脱下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的魔法师帽。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

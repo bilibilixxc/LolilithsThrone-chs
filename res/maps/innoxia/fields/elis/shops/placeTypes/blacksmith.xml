@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[The Ninth Strike]]></name>
-	<tooltipDescription><![CDATA[This arcane forge supplies most of Elis with their metalworking needs.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in 'The Ninth Strike' arcane forge]]></virginityLossDescription>
+	<name><![CDATA[九炼]]></name>
+	<tooltipDescription><![CDATA[这间奥术铁匠铺满足了伊利斯绝大部分的金属冶炼需求。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“九炼”奥术铁匠铺中]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>GENERIC_ARCANE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

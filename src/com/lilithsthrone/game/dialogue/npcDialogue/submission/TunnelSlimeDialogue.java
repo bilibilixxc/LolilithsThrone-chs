@@ -37,7 +37,7 @@ public class TunnelSlimeDialogue {
 		return Main.game.getActiveNPC();
 	}
 	
-	public static final DialogueNode ATTACK = new DialogueNode("Assaulted!", "", true) {
+	public static final DialogueNode ATTACK = new DialogueNode("敌袭！", "", true) {
 		
 		@Override
 		public String getContent() {
@@ -70,14 +70,14 @@ public class TunnelSlimeDialogue {
 			if(getSlime().hasFetish(Fetish.FETISH_TRANSFORMATION_GIVING)) {
 				if(Main.game.getPlayer().getBodyMaterial()==BodyMaterial.SLIME) {
 					if (index == 1) {
-						return new ResponseCombat("Fight",
-								"You aren't going to stand for [npc.name] transforming people into slimes. Teach [npc.herHim] a lesson!", Main.game.getActiveNPC(),
+						return new ResponseCombat("战斗",
+								"你不希望让[npc.name]将其他人转化为史莱姆。给[npc.herHim]来点教训！", Main.game.getActiveNPC(),
 								Util.newHashMapOfValues(
-										new Value<>(Main.game.getPlayer(), "[pc.speech(You aren't going to be stalking these tunnels on my watch!)] you shout, launching into an attack!"),
-										new Value<>(getSlime(), "[npc.speech(Traitor! You'll pay for this!)] [npc.Name] cries out as [npc.she] prepares to defend [npc.herself].")));
+										new Value<>(Main.game.getPlayer(), "[pc.speech(在我的眼皮底下，就别想躲在这隧道里了！)]你大喝一声，冲了上去！"),
+										new Value<>(getSlime(), "[npc.speech(叛徒！你该遭报应了！)][npc.Name]高喊着，准备展开自卫。")));
 						
 					} else if (index == 2) {
-						return new Response("Leave", "Continue on your journey.", ATTACK) {
+						return new Response("离开", "继续你的旅途。", ATTACK) {
 							@Override
 							public void effects(){
 								if(getSlime().isAttractedTo(Main.game.getPlayer())) {
@@ -94,13 +94,13 @@ public class TunnelSlimeDialogue {
 						
 					} else if (index == 3) {
 						if(!getSlime().isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Dominant Sex", "[npc.Name] isn't attracted to you!", null);
+							return new Response("支配型性爱", "[npc.Name]并没有被你吸引！", null);
 							
 						} else if(getSlime().hasFetish(Fetish.FETISH_DOMINANT) && !getSlime().hasFetish(Fetish.FETISH_SUBMISSIVE)) {
-							return new Response("Dominant Sex", "[npc.Name] isn't willing to let you be the dominant partner.", null);
+							return new Response("支配型性爱", "[npc.Name]并不愿意让你做支配方。", null);
 							
 						} else {
-							return new ResponseSex("Dominant Sex", "Take the dominant role and have sex with [npc.name].",
+							return new ResponseSex("支配型性爱", "同[npc.name]做爱，并占据支配地位。",
 									null, null, null,
 									null, null, null,
 									true, true,
@@ -113,13 +113,13 @@ public class TunnelSlimeDialogue {
 						
 					} else if (index == 4) {
 						if(!getSlime().isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Submissive Sex", "[npc.Name] isn't attracted to you!", null);
+							return new Response("服从型性爱", "[npc.Name]并没有被你吸引！", null);
 							
 						} else if(getSlime().hasFetish(Fetish.FETISH_SUBMISSIVE) && !getSlime().hasFetish(Fetish.FETISH_DOMINANT)) {
-							return new Response("Submissive Sex", "[npc.Name] isn't willing to let you be the submissive partner.", null);
+							return new Response("服从型性爱", "[npc.Name]并不愿意让你做服从方。", null);
 							
 						} else {
-							return new ResponseSex("Submissive Sex", "Take the submissive role and have sex with [npc.name].",
+							return new ResponseSex("服从型性爱", "做服从的一方，跟[npc.name]做爱。",
 									null, null, null,
 									null, null, null,
 									true, true,
@@ -136,17 +136,17 @@ public class TunnelSlimeDialogue {
 					
 				} else {
 					if (index == 1) {
-						return new ResponseCombat("Fight",
-								"Stand up for yourself and fight [npc.name]!", Main.game.getActiveNPC(),
+						return new ResponseCombat("战斗",
+								"挺身而出，与[npc.name]决一胜负！", Main.game.getActiveNPC(),
 								Util.newHashMapOfValues(
 										new Value<>(Main.game.getPlayer(), ""),
 										new Value<>(getSlime(), "")));
 						
 					} else if (index == 2) {
-						return new Response("Offer Money", "[npc.Name] isn't interested in your money! All [npc.she] wants to do is turn you into a slime!", null);
+						return new Response("献上财物", "[npc.Name]对你的钱一点也不感兴趣，[npc.she]只想把你转化成史莱姆！", null);
 						
 					} else if (index == 3) {
-						return new Response("Submit", "Allow [npc.name] to transform you into a slime!", TRANSFORMED) {
+						return new Response("屈服", "让[npc.name]把你转化成史莱姆！", TRANSFORMED) {
 							@Override
 							public Colour getHighlightColour() {
 								return PresetColour.TRANSFORMATION_GENERIC;
@@ -170,19 +170,19 @@ public class TunnelSlimeDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new ResponseCombat("Fight",
-							"Stand up for yourself and fight [npc.name]!", Main.game.getActiveNPC(),
+					return new ResponseCombat("战斗",
+							"挺身而出，与[npc.name]决一胜负！", Main.game.getActiveNPC(),
 							Util.newHashMapOfValues(
 									new Value<>(Main.game.getPlayer(), ""),
 									new Value<>(getSlime(), "")));
 				
 				} else if (index == 2) {
 					if(Main.game.getPlayer().getMoney()<Main.game.getDialogueFlags().getMuggerDemand2()) {
-						return new Response("Offer money ("+UtilText.formatAsMoney(Main.game.getDialogueFlags().getMuggerDemand2(), "span")+")",
-								"You don't have enough money to offer to pay [npc.name] off. You'll have to either fight [npc.herHim] or offer [npc.herHim] your body!", null);
+						return new Response("给钱("+UtilText.formatAsMoney(Main.game.getDialogueFlags().getMuggerDemand2(), "span")+")",
+								"你没有足够的钱给[npc.name]。你只能选择战斗，或是向[npc.herHim]献上身体！", null);
 					} else {
-						return new Response("Offer money ("+UtilText.formatAsMoney(Main.game.getDialogueFlags().getMuggerDemand2(), "span")+")",
-								"Offer to pay [npc.name] "+Util.intToString(Main.game.getDialogueFlags().getMuggerDemand2())+" flames to leave you alone.", OFFER_MONEY) {
+						return new Response("给钱("+UtilText.formatAsMoney(Main.game.getDialogueFlags().getMuggerDemand2(), "span")+")",
+								"给了[npc.name]"+Util.intToString(Main.game.getDialogueFlags().getMuggerDemand2())+"火币，你最终得以脱身。", OFFER_MONEY) {
 							@Override
 							public void effects() {
 								Main.game.getPlayer().incrementMoney(-250);
@@ -192,7 +192,7 @@ public class TunnelSlimeDialogue {
 					
 				} else if (index == 3) {
 					if(Main.game.getActiveNPC().isAttractedTo(Main.game.getPlayer())) {
-						return new ResponseSex("Offer body", "Offer your body to [npc.name] so that you can avoid a violent confrontation.",
+						return new ResponseSex("献出身体", "向[npc.name]献出身体，以避免发生暴力对抗。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
 								null, null, null,
 								true, false,
@@ -212,7 +212,7 @@ public class TunnelSlimeDialogue {
 								AFTER_SLIME_SEX_AS_SUB,
 								UtilText.parseFromXMLFile("places/submission/tunnelSlime", "OFFER_BODY"));
 					} else {
-						return new Response("Offer body", "You can tell that [npc.name] isn't at all interested in having sex with you. You'll either have to offer [npc.herHim] some money, or prepare for a fight!", null);
+						return new Response("献出身体", "你可以看出来[npc.name]对和你做爱完全不感兴趣。你只能选择给[npc.herHim]一些财物，或是做好战斗的准备！", null);
 					}
 					
 				} else {
@@ -224,7 +224,7 @@ public class TunnelSlimeDialogue {
 		}
 	};
 	
-	public static final DialogueNode ATTACK_REPEAT = new DialogueNode("Assaulted!", "", true) {
+	public static final DialogueNode ATTACK_REPEAT = new DialogueNode("敌袭！", "", true) {
 		
 		@Override
 		public String getContent() {
@@ -255,7 +255,7 @@ public class TunnelSlimeDialogue {
 		}
 	};
 	
-	public static final DialogueNode ATTACK_PREGNANCY_REVEAL = new DialogueNode("Assaulted!", "", true) {
+	public static final DialogueNode ATTACK_PREGNANCY_REVEAL = new DialogueNode("敌袭！", "", true) {
 		
 		@Override
 		public String getContent() {
@@ -287,11 +287,11 @@ public class TunnelSlimeDialogue {
 	};
 	
 	
-	public static final DialogueNode AFTER_SLIME_SEX_AS_DOM = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SLIME_SEX_AS_DOM = new DialogueNode("返回", "", true) {
 		
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你已经爽过了，离开这里让[npc.name]恢复一下吧。";
 		}
 
 		@Override
@@ -306,7 +306,7 @@ public class TunnelSlimeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", AFTER_SLIME_SEX_AS_DOM){
+				return new Response("继续", "继续你的旅程。", AFTER_SLIME_SEX_AS_DOM){
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -319,7 +319,7 @@ public class TunnelSlimeDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SLIME_SEX_AS_SUB = new DialogueNode("Used", "", true) {
+	public static final DialogueNode AFTER_SLIME_SEX_AS_SUB = new DialogueNode("被使用", "", true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -328,7 +328,7 @@ public class TunnelSlimeDialogue {
 		
 		@Override
 		public String getDescription(){
-			return "[npc.Name] has had enough fun with you for now.";
+			return "[npc.Name]已经跟你爽过了。";
 		}
 
 		@Override
@@ -343,7 +343,7 @@ public class TunnelSlimeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", AFTER_SLIME_SEX_AS_SUB){
+				return new Response("继续", "继续你的旅程。", AFTER_SLIME_SEX_AS_SUB){
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -371,7 +371,7 @@ public class TunnelSlimeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "Continue on your journey.", TRANSFORMED) {
+				return new Response("离开", "继续你的旅途。", TRANSFORMED) {
 					@Override
 					public void effects(){
 						if(getSlime().isAttractedTo(Main.game.getPlayer())) {
@@ -386,13 +386,13 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 2) {
 				if(!getSlime().isAttractedTo(Main.game.getPlayer())) {
-					return new Response("Dominant Sex", "[npc.Name] isn't attracted to you!", null);
+					return new Response("支配型性爱", "[npc.Name]并没有被你吸引！", null);
 					
 				} else if(getSlime().hasFetish(Fetish.FETISH_DOMINANT) && !getSlime().hasFetish(Fetish.FETISH_SUBMISSIVE)) {
-					return new Response("Dominant Sex", "[npc.Name] isn't willing to let you be the dominant partner.", null);
+					return new Response("支配型性爱", "[npc.Name]并不愿意让你做支配方。", null);
 					
 				} else {
-					return new ResponseSex("Dominant Sex", "Take the dominant role and have sex with [npc.name].",
+					return new ResponseSex("支配型性爱", "同[npc.name]做爱，并占据支配地位。",
 							null, null, null,
 							null, null, null,
 							true, true,
@@ -405,13 +405,13 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 3) {
 				if(!getSlime().isAttractedTo(Main.game.getPlayer())) {
-					return new Response("Submissive Sex", "[npc.Name] isn't attracted to you!", null);
+					return new Response("服从型性爱", "[npc.Name]并没有被你吸引！", null);
 					
 				} else if(getSlime().hasFetish(Fetish.FETISH_SUBMISSIVE) && !getSlime().hasFetish(Fetish.FETISH_DOMINANT)) {
-					return new Response("Submissive Sex", "[npc.Name] isn't willing to let you be the submissive partner.", null);
+					return new Response("服从型性爱", "[npc.Name]并不愿意让你做服从方。", null);
 					
 				} else {
-					return new ResponseSex("Submissive Sex", "Take the submissive role and have sex with [npc.name].",
+					return new ResponseSex("服从型性爱", "做服从的一方，跟[npc.name]做爱。",
 							null, null, null,
 							null, null, null,
 							true, true,
@@ -454,22 +454,22 @@ public class TunnelSlimeDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getActiveNPC().isAttractedTo(Main.game.getPlayer()) && Main.game.getActiveNPC().isWillingToRape() && Main.game.isNonConEnabled()) {
 				if (index == 1) {
-					return new ResponseSex("Sex",
-							"[npc.Name] forces [npc.herself] on you...",
+					return new ResponseSex("做爱",
+							"[npc.Name]强行压住了你……",
 							false, false,
 							new SMLyingDown(
 									Util.newHashMapOfValues(new Value<>(Main.game.getActiveNPC(), SexSlotLyingDown.MISSIONARY)),
 									Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN))),
 							null,
 							null, AFTER_SLIME_SEX_AS_SUB, "<p>"
-								+ "You surrender yourself to [npc.name], lying back and offering no resistance as [npc.she] tongue-fucks your throat."
-								+ " After a moment, [npc.she] sits back up, leaving a wet pool of slime all over your [pc.lips]."
-								+ " [npc.speech(Good bitch! You know your place already! Now be a good [pc.girl] and try to enjoy this...)]"
+								+ "你躺了下来，向[npc.name]表示屈服，面对着[npc.she]用舌头探进你的喉咙，你也并不反抗。"
+								+ "过了一会儿，[npc.she]就坐了起来，在你的[pc.lips]留下了一大摊粘液。"
+								+ "[npc.speech(真是个婊子！明白你是什么地位了吗！给我乖乖地享受吧……)]"
 							+ "</p>");
 					
 				} else if (index == 2) {
-					return new ResponseSex("Eager Sex",
-							"[npc.Name] forces [npc.herself] on you...",
+					return new ResponseSex("做爱(渴求)",
+							"[npc.Name]强行压住了你……",
 							false, false,
 							new SMLyingDown(
 									Util.newHashMapOfValues(new Value<>(Main.game.getActiveNPC(), SexSlotLyingDown.MISSIONARY)),
@@ -490,8 +490,8 @@ public class TunnelSlimeDialogue {
 							+ "</p>");
 					
 				} else if (index == 3 && Main.game.isNonConEnabled()) {
-					return new ResponseSex("Resist Sex",
-							"[npc.Name] forces [npc.herself] on you...",
+					return new ResponseSex("抵抗做爱",
+							"[npc.Name]强行压住了你……",
 							false, false,
 							new SMLyingDown(
 									Util.newHashMapOfValues(new Value<>(Main.game.getActiveNPC(), SexSlotLyingDown.MISSIONARY)),
@@ -517,7 +517,7 @@ public class TunnelSlimeDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new Response("Continue", "Carry on your way.", AFTER_COMBAT_PLAYER_DEFEAT){
+					return new Response("继续", "继续你的旅程。", AFTER_COMBAT_PLAYER_DEFEAT){
 						@Override
 						public DialogueNode getNextDialogue() {
 							return Main.game.getDefaultDialogue(false);
@@ -547,7 +547,7 @@ public class TunnelSlimeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", OFFER_MONEY){
+				return new Response("继续", "继续你的旅程。", OFFER_MONEY){
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -563,11 +563,11 @@ public class TunnelSlimeDialogue {
 	// Standard combat:
 	
 
-	public static final DialogueNode AFTER_COMBAT_PLAYER_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_PLAYER_VICTORY = new DialogueNode("胜利", "", true) {
 
 		@Override
 		public String getDescription() {
-			return "You have defeated [npc.name]!";
+			return "你打败了[npc.name]！";
 		}
 
 		@Override
@@ -587,10 +587,10 @@ public class TunnelSlimeDialogue {
 			boolean rapePlay = getSlime().isPostCombatRapePlay();
 		
 			if (index == 1) {
-				return new Response("Continue",
-						"Carry on your way..."
+				return new Response("继续",
+						"继续前行……"
 							+ (getSlime().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)
-									?UtilText.parse(getSlime(), "<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]")
+									?UtilText.parse(getSlime(), "<br/>[style.italicsBad([npc.Name]将会从游戏中永久移除。)]")
 									:""),
 						Main.game.getDefaultDialogue(false)){
 					@Override
@@ -610,11 +610,11 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 2) {
 				if(noSex) {
-					return new Response("Sex", "[npc.Name] has no interest in having sex with you!", null);
+					return new Response("做爱", "[npc.Name]不想和你做爱！", null);
 					
 				} else if(wantsSex) {
-					return new ResponseSex(rapePlay?"Rape-play":"Sex",
-							"Well, [npc.she] <i>is</i> asking for it!",
+					return new ResponseSex(rapePlay?"强奸play":"做爱",
+							"反正这<i>正是</i>[npc.she]想要的！",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -626,8 +626,8 @@ public class TunnelSlimeDialogue {
 					
 				} else {
 					return new ResponseSex(
-							"Rape [npc.herHim]",
-							"[npc.She] needs to be punished for attacking you like that...",
+							"强奸[npc.herHim]",
+							"[npc.she]竟敢对你发起攻击，就该受罚……",
 							Util.newArrayListOfValues(Fetish.FETISH_NON_CON_DOM), null, Fetish.FETISH_NON_CON_DOM.getAssociatedCorruptionLevel(), null, null, null,
 							false, false,
 							new SMGeneric(
@@ -641,11 +641,11 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 3) {
 				if(noSex) {
-					return new Response("Gentle Sex", "[npc.Name] has no interest in having sex with you!", null);
+					return new Response("做爱(温柔)", "[npc.Name]不想和你做爱！", null);
 					
 				} else if(wantsSex){
-					return new ResponseSex(rapePlay?"Rape-play (gentle)":"Gentle sex",
-							"Well, [npc.she] <i>is</i> asking for it!",
+					return new ResponseSex(rapePlay?"强奸play (温柔)":"做爱(温柔)",
+							"反正这<i>正是</i>[npc.she]想要的！",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -657,7 +657,7 @@ public class TunnelSlimeDialogue {
 							UtilText.parseFromXMLFile("places/submission/tunnelSlime", rapePlay?"AFTER_COMBAT_VICTORY_RAPE_GENTLE":"AFTER_COMBAT_VICTORY_SEX_GENTLE", getSlime()));
 					
 				} else {
-					return new ResponseSex("Rape [npc.herHim] (gentle)", "[npc.She] needs to be punished for attacking you like that...",
+					return new ResponseSex("强奸[npc.herHim](温柔)", "[npc.She]竟敢对你发起攻击，就该受罚……",
 							Util.newArrayListOfValues(Fetish.FETISH_NON_CON_DOM), null, Fetish.FETISH_NON_CON_DOM.getAssociatedCorruptionLevel(), null, null, null,
 							false, false,
 							new SMGeneric(
@@ -672,11 +672,11 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 4) {
 				if(noSex) {
-					return new Response("Rough Sex", "[npc.Name] has no interest in having sex with you!", null);
+					return new Response("做爱(粗暴)", "[npc.Name]对你不感兴趣！", null);
 					
 				} else if(wantsSex){
-					return new ResponseSex(rapePlay?"Rape-play (rough)":"Rough sex",
-							"Well, [npc.she] <i>is</i> asking for it!",
+					return new ResponseSex(rapePlay?"强奸play (粗暴)":"做爱(粗暴)",
+							"反正这<i>正是</i>[npc.she]想要的！",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -688,7 +688,7 @@ public class TunnelSlimeDialogue {
 							UtilText.parseFromXMLFile("places/submission/tunnelSlime", rapePlay?"AFTER_COMBAT_VICTORY_RAPE_ROUGH":"AFTER_COMBAT_VICTORY_SEX_ROUGH", getSlime()));
 					
 				} else {
-					return new ResponseSex("Rape [npc.herHim] (rough)", "[npc.She] needs to be punished for attacking you like that...",
+					return new ResponseSex("强奸[npc.herHim](粗暴)", "[npc.She]竟敢对你发起攻击，就该受罚……",
 							Util.newArrayListOfValues(Fetish.FETISH_NON_CON_DOM), null, Fetish.FETISH_NON_CON_DOM.getAssociatedCorruptionLevel(), null, null, null,
 							false, false,
 							new SMGeneric(
@@ -702,12 +702,12 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 5) {
 				if(!getSlime().isAttractedTo(Main.game.getPlayer()) || getSlime().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
-					return new Response("Submit",
-							"You can't submit to [npc.name], as [npc.sheHasFull] no interest in having sex with you!",
+					return new Response("屈服",
+							"你无法对[npc.name]表示屈服，因为[npc.sheHasFull]没兴趣跟你做爱！",
 							null);
 				} else {
-					return new ResponseSex("Submit",
-							"You're not really sure what to do now... Perhaps it would be best to let [npc.name] choose what to do next?",
+					return new ResponseSex("顺从",
+							"你不太确定现在该做什么……也许最好让[npc.name]来决定接下来做什么？",
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 							null, CorruptionLevel.THREE_DIRTY, null, null, null,
 							true, false,
@@ -721,7 +721,7 @@ public class TunnelSlimeDialogue {
 				}
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory", "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items..."){
+				return new ResponseEffectsOnly("物品栏", "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……"){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(getSlime(), InventoryInteraction.FULL_MANAGEMENT);
@@ -746,8 +746,8 @@ public class TunnelSlimeDialogue {
 //				
 //			} 
 			else if (index == 8 && getSlime().isAbleToSelfTransform()) {
-				return new Response("Transform [npc.herHim]",
-						"Take a very detailed look at what [npc.name] can transform [npc.herself] into...",
+				return new Response("转化[npc.herHim]",
+						"仔细观察[npc.name]会将自己转化成什么样……",
 						BodyChanging.BODY_CHANGING_CORE){
 					@Override
 					public void effects() {
@@ -758,9 +758,9 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 10 && !getSlime().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
 				return new Response(
-						"Remove character",
-						UtilText.parse(getSlime(), "Scare [npc.name] away."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+						"移除角色",
+						UtilText.parse(getSlime(), "赶[npc.name]走。"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 						Main.game.getDefaultDialogue(false)){
 					@Override
 					public Colour getHighlightColour() {
@@ -780,11 +780,11 @@ public class TunnelSlimeDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_COMBAT_PLAYER_DEFEAT = new DialogueNode("Defeat", "", true) {
+	public static final DialogueNode AFTER_COMBAT_PLAYER_DEFEAT = new DialogueNode("落败", "", true) {
 		
 		@Override
 		public String getDescription() {
-			return "You have been defeated by [npc.name]!";
+			return "你被[npc.name]打败了！";
 		}
 
 		@Override
@@ -812,19 +812,19 @@ public class TunnelSlimeDialogue {
 			if(getSlime().hasFetish(Fetish.FETISH_TRANSFORMATION_GIVING) && Main.game.getPlayer().getBodyMaterial()!=BodyMaterial.SLIME) {
 				if (index == 1) {
 					if(Main.game.isSpittingDisabled()) {
-						return Response.getDisallowedSpittingResponse("Resist");
+						return Response.getDisallowedSpittingResponse("抵抗");
 					}
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-						return new Response("Resist",
-								"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-									+"</b> fetish, you love being transformed so much that you can't bring yourself to resist!",
+						return new Response("抵抗",
+								"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+									+"</b>的性癖，你乐于被转化，所以无法抵抗！",
 								null);
 					} else {
-						return new Response("Resist", "Knock the strange fluid out of [npc.namePos] hands.", RESIST_TRANSFORMED);
+						return new Response("抵抗", "把[npc.namePos]手上那瓶奇怪的液体打落。", RESIST_TRANSFORMED);
 					}
 					
 				} else if (index == 2) {
-					return new Response("Submit", "Allow [npc.name] to transform you into a slime!", TRANSFORMED) {
+					return new Response("屈服", "让[npc.name]把你转化成史莱姆！", TRANSFORMED) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.TRANSFORMATION_GENERIC;
@@ -842,22 +842,22 @@ public class TunnelSlimeDialogue {
 				
 			} else if(Main.game.getActiveNPC().isAttractedTo(Main.game.getPlayer()) && Main.game.getActiveNPC().isWillingToRape() && Main.game.isNonConEnabled()) {
 				if (index == 1) {
-					return new ResponseSex("Sex",
-							"[npc.Name] forces [npc.herself] on you...",
+					return new ResponseSex("做爱",
+							"[npc.Name]强行压住了你……",
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getActiveNPC()),
 									Util.newArrayListOfValues(Main.game.getPlayer()),
 							null,
 							null), AFTER_SLIME_SEX_AS_SUB, "<p>"
-								+ "You surrender yourself to [npc.name], lying back and offering no resistance as [npc.she] tongue-fucks your throat."
-								+ " After a moment, [npc.she] sits back up, leaving a wet pool of slime all over your [pc.lips]."
-								+ " [npc.speech(Good bitch! You know your place already! Now be a good [pc.girl] and try to enjoy this...)]"
+								+ "你躺了下来，向[npc.name]表示屈服，面对着[npc.she]用舌头探进你的喉咙，你也并不反抗。"
+								+ "过了一会儿，[npc.she]就坐了起来，在你的[pc.lips]留下了一大摊粘液。"
+								+ "[npc.speech(真是个婊子！明白你是什么地位了吗！给我乖乖地享受吧……)]"
 							+ "</p>");
 					
 				} else if (index == 2) {
-					return new ResponseSex("Eager Sex",
-							"[npc.Name] forces [npc.herself] on you...",
+					return new ResponseSex("做爱(渴求)",
+							"[npc.Name]强行压住了你……",
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getActiveNPC()),
@@ -865,14 +865,14 @@ public class TunnelSlimeDialogue {
 									null,
 									null,
 									ResponseTag.START_PACE_PLAYER_SUB_EAGER), AFTER_SLIME_SEX_AS_SUB, "<p>"
-								+ "You eagerly surrender yourself to [npc.name], raising your head to help [npc.herHim] tongue-fuck your throat."
-								+ " After a moment, [npc.she] sits back up, leaving a wet pool of slime all over your [pc.lips]."
-								+ " [npc.speech(Good bitch! You know your place already! Now be a good [pc.girl] and try to enjoy this...)]"
+								+ "你急切地向[npc.name]表示了屈服，甚至仰起头来，让[npc.herHim]用舌头更顺利的探进你的喉咙。"
+								+ "过了一会儿，[npc.she]就坐了起来，在你的[pc.lips]留下了一大摊粘液。"
+								+ "[npc.speech(真是个婊子！明白你是什么地位了吗！给我乖乖地享受吧……)]"
 							+ "</p>");
 					
 				} else if (index == 3 && Main.game.isNonConEnabled()) {
-					return new ResponseSex("Resist Sex",
-							"[npc.Name] forces [npc.herself] on you...",
+					return new ResponseSex("抵抗做爱",
+							"[npc.Name]强行压住了你……",
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getActiveNPC()),
@@ -880,9 +880,9 @@ public class TunnelSlimeDialogue {
 									null,
 									null,
 									ResponseTag.START_PACE_PLAYER_SUB_RESISTING), AFTER_SLIME_SEX_AS_SUB, "<p>"
-								+ "You try to turn your face away, but [npc.name] simply reaches up to grip both sides of your head, holding you still as [npc.she] tongue-fucks your throat."
-								+ " After a moment, [npc.she] sits back up, leaving a wet pool of slime all over your [pc.lips]."
-								+ " [npc.speech(Stupid bitch! You can resist as much as you want! I'm not going to stop until I'm satisfied!)]"
+								+ "你想要把头撇开，但[npc.name]却直接紧紧钳住了你的脑袋，将舌头探进了你的喉咙。"
+								+ "过了一会儿，[npc.she]就坐了起来，在你的[pc.lips]留下了一大摊粘液。"
+								+ "[npc.speech(你这婊子蠢得可以！随你怎么反抗！我不满足是不会停的！)]"
 							+ "</p>");
 					
 				} else {
@@ -891,7 +891,7 @@ public class TunnelSlimeDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new Response("Continue", "Carry on your way.", AFTER_COMBAT_PLAYER_DEFEAT){
+					return new Response("继续", "继续你的旅程。", AFTER_COMBAT_PLAYER_DEFEAT){
 						@Override
 						public DialogueNode getNextDialogue() {
 							return Main.game.getDefaultDialogue(false);
@@ -905,11 +905,11 @@ public class TunnelSlimeDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("返回", "", true) {
 		
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你已经爽过了，离开这里让[npc.name]恢复一下吧。";
 		}
 
 		@Override
@@ -924,7 +924,7 @@ public class TunnelSlimeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", AFTER_SEX_VICTORY){
+				return new Response("继续", "继续你的旅程。", AFTER_SEX_VICTORY){
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -932,7 +932,7 @@ public class TunnelSlimeDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory", "There's nothing stopping you from helping yourself to [npc.namePos] clothing and items..."){
+				return new ResponseEffectsOnly("物品栏", "现在你可以随意拿取[npc.namePos]衣服和道具，谁也拦不了你……"){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(Main.game.getActiveNPC(), InventoryInteraction.FULL_MANAGEMENT);
@@ -941,9 +941,9 @@ public class TunnelSlimeDialogue {
 				
 			} else if (index == 10) {
 				return new Response(
-						"Remove character",
-						UtilText.parse(getSlime(), "Scare [npc.name] away."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+						"移除角色",
+						UtilText.parse(getSlime(), "赶[npc.name]走。"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 						AFTER_COMBAT_PLAYER_VICTORY){
 					@Override
 					public Colour getHighlightColour() {

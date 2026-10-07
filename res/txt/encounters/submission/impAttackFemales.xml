@@ -1,273 +1,273 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="IMP_ATTACK"><![CDATA[
 	<p>
-		The tunnels of Submission have an ominous feel to them at the best of times, but as you make your way down the dirty, deserted passageways, you're filled with a particular sense of dread, as though something terrible is about to happen.
+		即使在最宁静的时刻，屈城区的隧道也会给人一种不祥的感觉。当你沿着那肮脏、荒凉的通道前行时，心头充盈着一股特殊的惶恐，仿佛一些可怕的事情即将降临。
 	</p>
 	<p>
-		At first, the sinister silence that permeates these gloomy catacombs is broken only by the rustling of litter that you disturb underfoot, but as you travel ever onwards, you start hearing faint sounds of movement coming from somewhere far behind you. Realising that you're being followed, and not wanting to be inadvertently shepherded into a trap that might be lying up ahead, you stand your ground and turn to face the direction of your pursuers.
+		起初，只有你踩踏垃圾时发出的沙沙声打破了这阴森幽暗的地下墓穴里的诡异寂静。然而随着你不断前行，你开始听到远处传来微弱的动静，仿佛有什么东西在悄悄移动。意识到自己被跟踪，你不愿成为可能前方设下陷阱的牺牲品，于是你毅然站定，扭头面对着追赶者的方向。
 	</p>
 	<p>
-		After just a moment, you catch sight of the ones that have been following you, as from around the far corner, there appear the forms of four imps. One of these is larger than the others, and, although [npc.her] wings look large enough to sustain flight, [npc.sheIs] choosing to walk upon the ground, while the other three, smaller imps, are fluttering along in the air a short way behind.
+		片刻后，你看到跟踪你的那些家伙现了身形。四只小恶魔出现在远处拐角，其中一只体型尤其大且翅膀的尺寸足以支撑飞行，但[npc.sheIs]选择走在地上；另外三只小些的小恶魔扑闪着翅膀，飞在[npc.her]身后。
 	</p>
 	<p>
-		All four of the imps are dressed in skimpy rags, and, perhaps due to the fact that they appear more comfortable flying around than walking, you notice that the three smaller imps lack any form of footwear. Although all four of the imps have impressive busts, the alpha-imp's breasts are almost comically-huge, and [npc.she] swaggers from side-to-side as [npc.she] leads [npc.her] three companions around the corner.
+		你注意到四只小恶魔都穿得破破烂烂，其中三只体型较小的小恶魔甚至都没穿鞋袜，也许是因为飞来飞去比走来走去更舒服。虽然四只小恶魔都有壮观的胸部，但阿尔法小恶魔的胸部几乎大到滑稽的地步，[npc.she]带领三个同伴走到拐角处，自己则大摇大摆地从一边走到另一边。
 	</p>
 	<p>
-		As [npc.she] catches sight of you, the alpha-imp stops in [npc.her] tracks. Obviously being the leader of this gang, [npc.she] steps forwards and sizes you up, before declaring, in a sultry voice, [npc.speech(Ooh! Looks like we've got ourselves a new toy to play with, girls!)]
+		显然是老大的阿尔法小恶魔一看到你便停住了脚步。[npc.she]走近打量了你一番，然后用嗲声嗲气的声音宣布道：[npc.speech(哦，姑娘们！看来我们有新玩具可以玩了！)]
 	</p>
 	<p>
-		The three smaller imps flutter forwards to back their leader up, and [npc3.name] bites [npc3.her] lip as [npc3.she] sighs, [npc3.speech(~Mmm!~ I bet [pc.she] can't wait to taste my pussy!)]
+		三只较小的小恶魔扑腾扑腾地飞到前方，支援她们的领头者。[npc3.name]咬着唇叹息道：[npc3.speech(~唔~！我打赌[pc.she]等不及要尝我的小穴了！)]
 	</p>
 	<p>
-		Taking this opportunity to have [npc4.herself] heard, [npc4.name] giggles, [npc4.speech(I want [pc.herHim] to get a good grope of my tits!)]
+		[npc4.name]趁机咯咯笑道：[npc4.speech(我想让[pc.herHim]好好摸摸我的奶子！)]
 	</p>
 	<p>
-		It's quite clear that these imps are only interested in one thing, and as they start to advance, the third imp, who up until now had been quite content to simply wink and pout at you, puts any doubts as to their intentions to rest, as [npc2.she] calls out, 
+		很明显，这些小恶魔只对一件事感兴趣。随着她们开始逼进，到目前为止还只是对你眨眼噘嘴的第三个小恶魔让你确信了她们的意图，此时[npc2.she]大喊道：
 		#IF properties.getForcedTFTendency()==FORCED_TF_MASCULINE || properties.getForcedTFTendency()==FORCED_TF_MASCULINE_HEAVY
 		#THEN
-			[npc2.speech(Lucky you! I've still got one of the boss's special potions left! Ooh, I can't wait to turn you into a big manly stud, with a nice thick cock, and big balls ready to pump some yummy cum into my pussy! Oh! And a nice, long tongue for eating us out!)]
+			[npc2.speech(你真幸运！我还剩一瓶老大的特制药水！哦，我等不及要把你变成一个种马了，有粗大的鸡巴和硕大的蛋蛋，随时可以把美味的精液射进我的小穴里！哦！还有一条又长又棒的舌头，可以把我们吃得一干二净！)]
 		#ELSE
-			[npc2.speech(Lucky you! I've still got one of the boss's special potions left! Ooh, I can't wait for you to grow a nice thick cock, with big balls ready to pump some yummy cum into my pussy! Oh! And a nice, long tongue for eating us out!)]
+			[npc2.speech(你真幸运！我还剩一瓶老大的特制药水！哦，我等不及让你长出粗大的鸡巴和大蛋蛋，随时可以把美味的精液射进我的小穴里！哦！还有一条又长又棒的舌头，可以把我们吃得一干二净！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="IMP_ATTACK_OFFER_BODY"><![CDATA[
 	<p>
-		Easily seduced by the imps erotic words, you decide that the best course of action would be to just give the gang what they want. Stepping back, you hold up your [pc.hands] as you submit. [pc.speech(Please, there's no need for violence. You just want sex, right?)]
+		你很容易就被小恶魔的下流话所诱惑，你决定最好的办法就是满足这帮人的要求。你退后一步，举起[pc.hands]以示屈服：[pc.speech(拜托，没必要动粗。你们只是想要做爱，对吧？)]
 	</p>
 	<p>
-		[npc.speech(So, you know your place!)] [npc.name] laughs, before turning [npc.her] head and ordering [npc.her] subordinates to subdue you, [npc.speech(Get [pc.herHim] down, quick!)]
+		[npc.speech(看起来，你已经知道自己的位置了！)]，[npc.name]大笑着，然后扭过头命令手下制伏你，[npc.speech(快点把[pc.herHim]拿下！)]
 	</p>
 	<p>
-		Two of the smaller imps immediately dart forwards, and, flying up to each side of you, they grab your [pc.arms], before folding their wings behind their backs and using their weight to pull you down onto your knees. As you hit the floor, you look up to see [npc.name] and [npc2.name] stepping forwards, grinning in delight as they see that you're not going to put up a fight.
+		两只较小的小恶魔立刻冲了上来，分别飞到你两侧，抓住了你的[pc.arms]，然后把翅膀折叠在背后，利用重量把你压倒在地，让你跪了下来。你重重地撞在地上，抬起头，只见[npc.Name]和[npc2.name]笑容满面地迈向前，明显得意于看到你毫无反抗之意。
 	</p>
 	#IF pc.isAbleToAccessCoverableArea(CA_MOUTH, true)
 	#THEN
 		<p>
-			[npc.speech(Give me the potion,)] [npc.name] commands [npc.her] partner. Quickly producing a bottle of strange liquid, [npc2.name] hands it over to her superior, who immediately pulls the stopper out and steps forwards, before grabbing your chin and squeezing your cheeks. 
+			[npc.speech(把药水给我。)][npc.name]对[npc.her]的伙伴命令道。[npc2.name]迅速拿出一瓶奇怪的液体，将其交给头领。头领拔掉瓶塞的同时向前走来，然后抓住你的下巴，用力挤压你的脸颊。
 			#IF properties.getForcedTFTendency()==FORCED_TF_MASCULINE || properties.getForcedTFTendency()==FORCED_TF_MASCULINE_HEAVY
 			#THEN
-				[npc.speech(Open wide, hun! This'll turn you into our manly stud, with a big, thick cock! It'll also give you nice, big balls, so that you have lots of yummy cum to pump into my pussy! Oh, and I almost forgot! It'll make your tongue real nice and long, so you can get it in deep when you're eating us out!)]
+				[npc.speech(嗯，张大嘴巴！这会让你变成我们的真男人哦，鸡巴又大又粗，蛋蛋也会又大又漂亮，这样你能把很多美味的精液喷到我的小穴里了！哦，我差点忘了，它还能让你的舌头又长又棒，这样你在吃我们的时候就能深入进去了！)]
 			#ELSE
-				[npc.speech(Open wide, hun! This'll give you a big, thick cock! It'll also give you nice, big balls, so that you have lots of yummy cum to pump into my pussy! Oh, and I almost forgot! It'll make your tongue real nice and long, so you can get it in deep when you're eating us out!)]
+				[npc.speech(嗯，张大嘴巴！这会给你一个又大又粗的鸡巴，蛋蛋也会又大又漂亮，这样你能把很多美味的精液喷到我的小穴里了！哦，我差点忘了，它还能让你的舌头又长又棒，这样你在吃我们的时候就能深入进去了！)]
 			#ENDIF
 		</p>
 		<p>
-			With no further warning, and not even giving you time to do as [npc.she] commands, [npc.name] shoves the bottle past your [pc.lips], and you feel the warm, sickly-sweet liquid entering your mouth...
+			没有任何警告，甚至没有给你时间按照[npc.she]的命令去做，[npc.name]猛地将瓶子塞进你[pc.lips]，你感觉到温暖、甜腻的液体进入你的嘴里……
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(Aww... You've got your mouth blocked! If only the boss was here, she could get rid of that seal enchantment! Eugh!)] [npc.name] tuts. Turning to [npc.her] subordinate, [npc.she] sighs, [npc.speech(Save that potion for the next one we catch. Let's just see what fun we can have with this one as [pc.she] is.)]
+			[npc.speech(啊……你怎么把嘴堵住了！如果老大在这里就能解开这个封印附魔了！呃！)][npc.name]啧嘴，转向[npc.her]的下属，叹息道，[npc.speech(把药水留着下次抓人用吧！让我们先看看[pc.she]能给我们什么乐子。)]
 		</p>
 		<p>
-			With no further warning, [npc.name] reaches forwards and grabs your shoulders, before pushing you down onto your back. [npc.speech(That's right, lie back and relax! Time to be a good fuck-toy!)]
+			没有任何警告，[npc.name]伸手抓住你的肩膀，把你推倒在地：[npc.speech(没错，躺下放松！是时候成为我们的好肉便器了！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="COMBAT_DEFEAT_NO_TF"><![CDATA[
 	<p>
-		Imps do not TF you. This shouldn't be possible, and is a bug! Please report it to Innoxia with the message: 'impAttackDemon COMBAT_DEFEAT_NO_TF is being triggered.'
+		小恶魔无法转化你。这绝无可能，这是个BUG！请向Innoxia报告这条信息：'impAttackDemon COMBAT_DEFEAT_NO_TF is being triggered.'
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_DEFEAT_TF"><![CDATA[
 	<p>
-		Unable to withstand another attack, you collapse to your knees, before desperately trying to catch your breath as you plead, [pc.speech(No more... Please...)]
+		你崩溃跪倒在地，已经无法再承受下一波攻击了。你拼命地试图喘息，恳求着：[pc.speech(不要……求你了……)]
 	</p>
 	<p>
-		Not giving you a moment's respite, [npc.name] snaps [npc.her] fingers, before pointing at you and ordering [npc.her] subordinates, [npc.speech(Restrain [pc.herHim]! Go on, get [pc.herHim]!)]
+		不给你片刻喘息的机会，[npc.name]打了个响指，然后指着你，对下属命令道：[npc.speech(控制住[pc.herHim]！快点，抓住[pc.herHim]！)]
 	</p>
 	<p>
-		Immediately, two of the smaller imps rush forwards to either side of you, and, grabbing your [pc.arms], they use their body-weight to hold you still. [npc3.Name] lets out a mocking laugh as [npc3.she] reaches around to squeeze your [pc.ass], while [npc4.name] takes this opportunity to 
+		紧接着，两个身形稍小的恶魔迅速向你两边逼近，紧紧抓住你的[pc.arms]，利用自身的体重来迫使你静止不动。[npc3.Name]伸手捏起你的[pc.ass]，一边发出嘲笑，而[npc4.name]借此机会
 		#IF pc.hasBreasts()
 		#THEN
-			reach up and grope your [pc.breasts].
+			伸手揉向你的[pc.breasts]。
 		#ELSE
-			rub [npc4.her] groin up against your waist.
+			用[npc4.her]的腹股沟顶着你的腰摩擦。
 		#ENDIF
 	</p>
 	#IF pc.isAbleToAccessCoverableArea(CA_MOUTH, true)
 	#THEN
 		<p>
-			[npc.speech(Give me the potion,)] [npc.name] snaps at [npc.her] partner. Quickly producing a bottle of strange liquid, [npc2.name] hands it over to her superior, who immediately pulls the stopper out and steps forwards, before grabbing your chin and squeezing your cheeks. 
+			[npc.speech(把药水给我。)][npc.name]对[npc.her]的伙伴厉声说道。[npc2.name]迅速拿出一瓶奇怪的液体，将其交给头领。头领拔掉瓶塞的同时向前走来，然后抓住你的下巴，用力挤压你的脸颊。
 			#IF properties.getForcedTFTendency()==FORCED_TF_MASCULINE || properties.getForcedTFTendency()==FORCED_TF_MASCULINE_HEAVY
 			#THEN
-				 [npc.speech(Open wide, hun! This'll turn you into our manly stud, with a big, thick cock! It'll also give you nice, big balls, so that you have lots of yummy cum to pump into my pussy! Oh, and I almost forgot! It'll make your tongue real nice and long, so you can get it in deep when you're eating us out!)]
+				[npc.speech(嗯，张大嘴巴！这会让你变成我们的真男人哦，鸡巴又大又粗，蛋蛋也会又大又漂亮，这样你能把很多美味的精液喷到我的小穴里了！哦，我差点忘了，它还能让你的舌头又长又棒，这样你在吃我们的时候就能深入进去了！)]
 			#ELSE
-				 [npc.speech(Open wide, hun! This'll give you a big, thick cock! It'll also give you nice, big balls, so that you have lots of yummy cum to pump into my pussy! Oh, and I almost forgot! It'll make your tongue real nice and long, so you can get it in deep when you're eating us out!)]
+				[npc.speech(嗯，张大嘴巴！这会给你一个又大又粗的鸡巴，蛋蛋也会又大又漂亮，这样你能把很多美味的精液喷到我的小穴里了！哦，我差点忘了，它还能让你的舌头又长又棒，这样你在吃我们的时候就能深入进去了！)]
 			#ENDIF
 		</p>
 		<p>
-			With no further warning, and not even giving you time to do as [npc.she] commands, [npc.name] shoves the bottle past your [pc.lips], and you feel the warm, sickly-sweet liquid entering your mouth...
+			没有任何警告，甚至没有给你时间按照[npc.she]的命令去做，[npc.name]猛地将瓶子塞进你[pc.lips]，你感觉到温暖、甜腻的液体进入你的嘴里……
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(This [pc.insult]'s got [pc.her] mouth blocked! If only the boss was here, she could get rid of that seal enchantment! Eugh!)] [npc.name] tuts. Turning to [npc.her] subordinate, [npc.she] snaps, [npc.speech(Save that potion for the next one we catch! Let's just fuck [pc.herHim] already.)]
+			[npc.speech(这个[pc.insult]把[pc.her]的嘴堵住了！如果老大在这里就能解开这个封印附魔了！呃！)][npc.name]啧嘴，转向[npc.her]的下属，厉声说道，[npc.speech(把药水留着下次抓人用吧！让我们先操[pc.herHim]。)]
 		</p>
 		<p>
-			With no further warning, [npc.name] reaches forwards and grabs the back of your head, before pushing you down onto the floor. [npc.speech(Get down, [pc.insult]! Time to be a good fuck-toy for us!)]
+			没有任何警告，[npc.name]伸手抓住你的脑后，把你按在地上：[npc.speech(趴下，[pc.insult]！是时候成为我们的好肉便器了！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEX"><![CDATA[
 	<p>
-		Finding yourself down on the floor, and at the mercy of the imps' carnal desires, you decide that the best thing for you to do would be to simply go along with whatever they have in store for you. Sensing your willingness to go along with all of this, [npc.name] sneers down at you, [npc.speech(What a submissive bitch you turned out to be! You're just a horny dog who can't wait to fuck us imps, aren't you?)]
+		你发现自己跪趴在地，任由小恶魔们的肉欲摆布，你决定最好的办法就是顺从他们为你准备的一切。感觉到你的顺从，[npc.name]冷笑着俯视着你：[npc.speech(多么顺从的婊子！你其实只是一只发情母狗，等不及要被小恶魔操了，是不是？)]
 	</p>
 	<p>
-		Not wanting to cause any trouble by arguing back, you mutter, [pc.speech(Y-Yes... That's right...)]
+		为了避免引起麻烦，你小声地咕哝着：[pc.speech(对、对的……)]
 	</p>
 	<p>
-		As you agree with [npc.name], you suddenly feel [npc3.name] start to grope and squeeze your ass, before [npc3.she] calls out, [npc3.speech(I bet you've lost count of the number of us imps you've fucked!)]
+		当你同意[npc.name]的说法时，你突然感觉到[npc3.name]开始对你的屁股又摸又抓，然后[npc3.she]叫道：[npc3.speech(我打赌你已经数不清你干过我们多少小恶魔了！)]
 	</p>
 	<p>
-		[npc2.speech(I want to hear this slut beg to fuck us!)] [npc2.Name] jeers, stepping up beside [npc.name] to smirk down at your submissive form. [npc2.speech(Go on, say it. Say you're nothing more than an imp's sex-toy!)]
+		[npc2.speech(我想听听这个下贱婊子会为了操我们而做出什么样的下贱哀求！)][npc2.name]嘲笑道。那个小恶魔走到[npc.name]旁边，对着你顺从的样子冷笑：[npc2.speech(继续，说啊，亲口承认你不过是属于小恶魔的泄欲玩具！)]
 	</p>
 	<p>
-		[pc.speech(I'm nothing more than an imp's sex toy...)] You offer, knowing that your words are about to be put to the test.
+		[pc.speech(我只不过是小恶魔的肉便器……)]你说着，心知自己的话即将得到验证。
 	</p>
 	<p>
-		[npc2.speech(Louder! And <i>beg</i> for us to let you fuck us!)] [npc2.Name] snaps, clearly not satisfied with your half-hearted answer.
+		[npc2.speech(大声点！<i>求</i>我们让你操！)][npc2.Name]厉声说道，显然对你敷衍的回答并不满意。
 	</p>
 	<p>
-		Knowing that you're at the mercy of these evil imps, you decide that it'd be best to do as you're told, and cry out, [pc.speech(I'm nothing more than an imp's sex-toy! Please, I want to fuck imps! Please let me fuck you!)]
+		明白自己完全受制于这些邪恶的小恶魔，你决定最好照着吩咐去做，便大声喊出：[pc.speech(我只是小恶魔的废物肉便器！拜托了，我想操小恶魔！让我操吧！)]
 	</p>
 	<p>
-		[npc4.speech(That's what we like to hear!)] [npc4.Name] laughs from somewhere off to one side, and you can't help but let out a small [pc.moan] as the imps start moving into position, ready to do as you've just asked and start fucking you...
+		[npc4.speech(这才对我们的胃口！)][npc4.Name]在一侧大声笑着，你情不自禁地发出了一声小小的[pc.moan]。小恶魔移动位置，准备按照你刚才的要求开始干你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEX_EAGER"><![CDATA[
 	<p>
-		Finding yourself being pushed to the floor, and at the mercy of the imps' carnal desires, you feel yourself getting immensely turned-on, and can barely contain the [pc.moan+] that drifts out from between your [pc.lips]. Hearing the lewd noise that just came out of your mouth, [npc.name] sneers down at you, [npc.speech(What a submissive bitch you turned out to be! You're just a horny dog who can't wait to fuck us imps, aren't you?)]
+		你发觉自己被推倒在地，任由这些欲火焚身的小恶魔们摆布，你感到自己无可救药地性奋起来，几乎无法抑制地发出[pc.moan+]。听到你淫荡的声音后，[npc.name]以讥讽的语气挑逗你，[npc.speech(可真是个顺从的贱货！你好像一条发情的狗，已经忍不住来操我们这些小恶魔了，对吧？)]
 	</p>
 	<p>
-		Your arousal gets the better of you, and before you can think things through, you call out, [pc.speech(Yes! Please, I want to fuck you!)]
+		你的性欲占了上风，没仔细考虑，便大声喊道，[pc.speech(对！求求你了，我想操你！)]
 	</p>
 	<p>
-		As you happily respond to [npc.name], you suddenly feel [npc3.name] start to grope and squeeze your ass, before [npc3.she] calls out, [npc3.speech(I bet you've lost count of the number of us imps you've fucked!)]
+		当你高兴地回应[npc.name]时，你突然感觉到[npc3.name]开始对你的屁股又摸又抓，然后[npc3.she]叫道：[npc3.speech(我打赌，你这贱货早就数不清自己的鸡巴已经插进过多少小恶魔的小穴了！)]
 	</p>
 	<p>
-		[npc2.speech(I want to hear this slut beg to fuck us!)] [npc2.Name] jeers, stepping up beside [npc.name] to smirk down at your submissive form. [npc2.speech(Go on, say it. Say you're nothing more than an imp's sex-toy!)]
+		[npc2.speech(我想听听这个下贱婊子会为了操我们而做出什么样的下贱哀求！)][npc2.name]嘲笑道。那个小恶魔走到[npc.name]旁边，对着你顺从的样子冷笑：[npc2.speech(继续，说啊，亲口承认你不过是属于小恶魔的泄欲玩具！)]
 	</p>
 	<p>
-		[pc.speech(I'm nothing more than an imp's sex-toy! Please, I want to fuck imps! Please let me fuck you!)] You [pc.moan], biting your [pc.lip] as you look up at [npc2.name].
+		[pc.speech(我只是小恶魔的废物肉便器！求你了，我想操小恶魔，快让我操吧！)]你[pc.moan]着，咬住你的[pc.lip]，同时抬头看向[npc2.name]。
 	</p>
 	<p>
-		[npc2.speech(My, my! How eager you are!)] [npc2.Name] laughs, satisfied with your enthusiastic answer. [npc2.speech(Don't worry, you'll be getting what you crave so badly soon enough!)]
+		[npc2.speech(哎呀呀，你这么急啊！)][npc2.Name]笑着，对你热情的回答很是满意，[npc2.speech(别担心，你很快就会得到你渴望已久的东西！)]
 	</p>
 	<p>
-		[npc4.speech(I love it when they're as desperate as this one!)] [npc4.Name] laughs from somewhere off to one side, and you can't help but let out [pc.a_moan+] as the imps start moving into position, ready to give you what you're so obviously craving...
+		[npc4.speech(我就喜欢你这么迷乱的样子！)][npc4.Name]在一侧大笑着，你情不自禁地发出了[pc.a_moan+]。小恶魔们开始移动位置，准备让你如愿以偿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEX_RESIST"><![CDATA[
 	<p>
-		Finding yourself being pushed to the floor, and at the mercy of the imps' carnal desires, you start to panic, and try to stand up again as you cry out, [pc.speech(Stop this! Leave me alone!)]
+		你发现自己被推倒在地，受到小恶魔肉欲的摆布，你惊慌失措，试图再次站起来，同时大声喊道：[pc.speech(别这样！走开！)]
 	</p>
 	<p>
-		As you try to push yourself up onto your knees, however, [npc.name] steps forwards and grabs the back of your head, before roughly shoving you back down into your submissive position. [npc.speech(This is what you get for coming into our territory! Don't worry, we'll get you moaning before we're done with you!)]
+		你试图挣扎站起，此时[npc.name]却迈步走近，抓住了你的后颈，随即用力将你粗暴地推回到顺从的姿势中去：[npc.speech(这就是你闯入我们领地的下场！别担心，等不到我们做完，你就会呻吟着想要！)]
 	</p>
 	<p>
-		As you start to cry out and protest, you suddenly feel [npc3.namePos] [npc3.hands] groping and squeezing your ass. Before you're able to turn and tell [npc3.herHim] to stop, [npc3.she] calls out, [npc3.speech(I bet you've lost count of the number of us imps you've fucked!)]
+		你哭闹着抗议，突然感觉[npc3.namePos]的[npc3.hands]开始对你的屁股又摸又抓。你转身叫[npc3.herHim]停下来，但[npc3.she]吼道：[npc3.speech(我打赌你已经数不清自己被我们小恶魔干过多少次了！)]
 	</p>
 	<p>
-		[npc2.speech(This [pc.insult] needs to be shown [pc.her] place!)] [npc2.Name] jeers, stepping up beside [npc.name] to smirk down at your defeated form. [npc2.speech(You'll love being an imp's sex-toy! We'll make sure of that!)]
+		[npc2.speech(需要让这个[pc.insult]知道自己的地位！)][npc2.Name]走到[npc.name]旁边嘲笑你的失败：[npc2.speech(你会喜欢成为小恶魔的肉便器的！我们都知道！)]
 	</p>
 	<p>
-		[pc.speech(No! You can't do this!)] You cry out as you struggle against the imps.
+		[pc.speech(不！你不能这样！)]，你在与小恶魔搏斗时大声喊叫。
 	</p>
 	<p>
-		[npc2.speech(You'll be begging for it soon enough!)] [npc2.Name] snaps, clearly not having the patience for any more of your protests.
+		[npc2.speech(你很快就会求着要的！)][npc2.Name]厉声说着，显然已经没有耐心再听你的抗议。
 	</p>
 	<p>
-		[npc4.speech(It's fun getting to break in unwilling cunts like you!)] [npc4.Name] laughs from somewhere off to one side, and you can't help but let out a frantic wail as the imps start moving into position, ready to start fucking you...
+		[npc4.speech(操像你这样不情愿的婊子真是太有趣了！)][npc4.Name]的笑声从一边传来，你不禁发出疯狂的哀嚎，小恶魔们移动位置准备开始干你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_DEFEAT_TF_REFUSED"><![CDATA[
 	<p>
-		You have no intention of swallowing the imps' transformative potion, and, jerking your head back, you spit the liquid out all over the floor. Your resistance is immediately met by a sharp slap to the face, accompanied by a loud screech as [npc.name] hurls the bottle to one side. [npc.speech(Fuck! Do you know how much trouble the boss goes through to get these potions for us?! [pc.Insult]!)]
+		你毫不犹豫地拒绝了吞下小恶魔们的转化药水，突然一甩头，将液体吐到地上。你的抵抗立即遭到了一记猛烈的巴掌，伴随着[npc.name]将瓶子扔一边时发出的尖叫：[npc.speech(你这该死的[pc.insult]！见鬼！你知道boss为了给我们弄到这些药剂费了多少功夫吗？！[pc.insult]！)]
 	</p>
 	<p>
-		[npc.NamePos] insults are easy to weather, knowing what the alternative was, and you simply cast your gaze to the floor as you wait for [npc.herHim] to calm down. As you do this, however, [npc.she] suddenly reaches forwards, and, grabbing you by the back of the neck, forces you down onto the floor. [npc.speech(Get down, [pc.insult]! If you can't do something so simple as drinking a potion, all you're good for is being a fuck-toy for us to use!)]
+		[npc.NamePos]的侮辱很容易经受住，因为你知道替代方案是什么。你只需将目光投向地面，等待[npc.herHim]平静下来，然而，当你这样做时，[npc.she]突然向前伸出手，抓住你的后颈，迫使你伏在地上。[npc.speech(趴下，[pc.insult]！如果你连喝药这么简单的事情都做不到，那就只能做个供我们使用的性玩具了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_DEFEAT_TF_ACCEPTED"><![CDATA[
 	<p>
-		You gulp down the sweet, syrup-like liquid, before opening your mouth to show [npc.name] that you've done as [npc.she] commanded. Your display of submission is met by a devious grin that quickly settles on [npc.namePos] face, and [npc.she] carelessly hurls the now-empty bottle to one side as [npc.she] steps back and looks down at you. [npc.speech(Good dog. You're just a bitch for us imps to command, aren't you?)]
+		你咕咚一口将甜美如糖浆般的液体咽下，然后张开嘴巴向[npc.name]展示你已经照[npc.she]的命令做了。你顺从的表现引来了[npc.name]狡黠的笑容，随即[npc.she]漫不经心地将空瓶扔到一旁，退后一步，俯视着你。[npc.speech(好狗狗。哼，你就是个让我们小恶魔指挥得团团转的婊子，不是吗？)]
 	</p>
 	<p>
-		[pc.speech(Yes...)] You absent-mindedly reply, concentrating more on the strange feeling that's started to bubble up inside your body than whatever it is that the imp just asked of you. As you feel the curious sensation start to change into a steady warmth that permeates through your entire body, you realise that the potion's transformative effects are about to make themselves known... 
+		[pc.speech(是的……)]，你心不在焉地回应，更专注于体内开始涌现的奇异感觉，而不是小恶魔刚才问你的事情。这奇异感觉逐渐转变成一股持续的温暖弥漫全身，你意识到药水的转变效果即将显现出来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_DEFEAT_TF_APPLIED"><![CDATA[
 	<p>
-		As the potion's effects come to an end, [npc.name] suddenly steps forwards, and, grabbing you by the back of the neck, forces you down onto the floor. [npc.speech(Good bitch! Now that you're just as we want you, it's time for you to act as our fuck-toy!)]
+		当药水的效果结束时，[npc.name]突然向前一步，抓住你的后颈，迫使你伏在地上。[npc.speech(好婊子！既然你已经是我们想要的样子了，你该表现得像性玩具了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_DEFEAT_SEX"><![CDATA[
 	<p>
-		Having had their fun, the imps step back, allowing you to collapse down onto the floor as you pant from exertion.
+		小恶魔们玩得尽兴，哄散退开。你喘着粗气倒在地上。
 		#IF (pc.isCharactersCumInOrifice(ORIFICE_VAGINA, npc.getId()) || pc.isCharactersCumInOrifice(ORIFICE_VAGINA, npc2.getId()) || pc.isCharactersCumInOrifice(ORIFICE_VAGINA, npc3.getId()) || pc.isCharactersCumInOrifice(ORIFICE_VAGINA, npc4.getId()))
 		#THEN
 			#IF pc.isVisiblyPregnant()
 			#THEN
-				Suddenly, you feel [npc.name] sliding [npc.her] fingers into your freshly-creampied pussy, and you let out an exhausted moan as [npc.she] snickers, [npc.speech(Shame you're already knocked up, slut. We could have done with you pumping out some more imps to bolster our gang's numbers.)]
+				突然间，你感觉[npc.name]将手指滑入你刚被射满的阴户。你疲惫地呻吟着，而[npc.she]则嬉皮笑脸：[npc.speech(可惜你已经怀孕了，荡妇。我们本来可以让你再生一些小恶魔给我们添点人手。)]
 			#ELSE
-				Suddenly, you feel [npc.name] sliding [npc.her] fingers into your freshly-creampied pussy, and you let out an exhausted moan as [npc.she] snickers, [npc.speech(Wondering if we got you knocked up, huh slut? Well, if you do end up birthing some more imps, you just send them this way. We could always do with more gang members!)]
+				突然间，你感觉[npc.name]将手指滑入你刚被射满的阴户。你疲惫地呻吟着，而[npc.she]则嬉皮笑脸：[npc.speech(你想知道有没有被我们操怀孕吗？荡妇？好吧，如果你真的生出小恶魔，就把他们送到这边来，给我们添点人手！)]
 			#ENDIF
 			#IF pc.isAbleToAccessCoverableArea(CA_MOUTH, true)
 			#THEN
 				</p>
 				<p>
-					Before you can respond, [npc.name] steps forwards and shoves [npc.her] cum-coated fingers into your mouth. [npc.speech(Clean me off, bitch.)]
+					你根本来不及反应，[npc.name]走过来，将涂满精液的手指塞进你的嘴里：[npc.speech(清理掉，婊子。)]
 				</p>
 				<p>
-					With little choice but to do as you're told, you lick the cum from [npc.namePos] fingers
+					你别无选择，只能按照吩咐舔掉[npc.namePos]手指上的精液
 					#IF pc.isVisiblyPregnant()
-					#THEN.
-					#ELSE, and as you do so, you can't help but wonder if the imp's seed has gotten you pregnant.
+					#THEN。
+					#ELSE，你边这样做，边情不自禁地想自己会不会被小恶魔的精液授孕。
 					#ENDIF
-					 Quickly being forced to swallow down the salty goo that's now in your mouth, you look up as [npc.name] smirks down at you one last time, before gathering [npc.her] gang and disappearing off into the dark tunnels of Submission.
+					你很快被迫吞下嘴里咸咸的粘稠液体，抬头看着[npc.she]最后一次对你咧嘴一笑，和团伙一起消失在屈城区幽暗的隧道里。
 				#ELSE
 				</p>
 				<p>
-					Before you can respond, [npc.name] steps forwards and starts wiping [npc.her] cum-coated fingers all over your face. [npc.speech(Hold still, bitch. I don't want this on my hands.)]
+					你根本来不及反应，[npc.name]就向前将涂满精液的手指擦在你脸上：[npc.speech(别动，贱人！我不想让这东西留在我手上。)]
 				</p>
 				<p>
-					With little choice but to do as you're told, you hold still as [npc.name] wipes [npc.her] fingers on your face.
+					你别无选择，只能按照命令一动不动，感受着[npc.name]的手指在你脸上擦拭。
 					#IF !pc.isVisiblyPregnant()
-					#THEN As you feel the slimy spunk being spread over your cheeks, you can't help but wonder if the imp's seed has gotten you pregnant. 
+					#THEN 当你感觉到粘糊糊的精液黏在你的脸颊上时，你情不自禁地怀疑小恶魔的精液是否让你怀孕了。
 					#ENDIF
-					 Once [npc.name] is finished with you, you look up as [npc.she] smirks down at you one last time, before gathering [npc.her] gang and disappearing off into the dark tunnels of Submission.
+					[npc.name]完事儿了。你抬起头，看着[npc.she]最后一次对你咧嘴一笑，然后带着[npc.her]的团伙消失在屈城区幽暗的隧道里。
 			#ENDIF
 		#ELSE
-			 As [npc.sheIs] now finished with you, [npc.name] smirks down at your used form one last time, before gathering [npc.her] gang and disappearing off into the dark tunnels of Submission.
+			[npc.name]完事儿了，最后一次嘲笑着俯视着你疲惫不堪的身躯，和团伙一起消失在屈城区漆黑的隧道中。
 		#ENDIF
 	</p>
 	<p>
-		Left alone to gather your things and get everything in order once more, you spend some time getting your breath back before continuing on your way, making sure to keep a very close watch for any imps that might be lurking around the nearest corner...
+		你独自一人整理行装。你恢复了一些体力，继续前行，密切留意着可能隐藏在附近拐角处的小恶魔……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

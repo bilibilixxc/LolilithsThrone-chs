@@ -37,18 +37,18 @@ public class SelfFingerMouth {
 		
 		@Override
 		public String getActionTitle() {
-			return "Lubricate fingers";
+			return "润湿手指";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Lubricate your fingers with your saliva.";
+			return "你用唾液润滑手指。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lifting [npc.her] [npc.hand] up to [npc.her] mouth, [npc.name] [npc.verb(slide)] [npc.her] [npc.fingers] past [npc.her] [npc.lips+],"
-					+ " before lewdly sucking on them for a moment in order to get them well lubricated with [npc.her] saliva.";
+			return "将[npc.name]的[npc.hand]轻举至唇边，[npc.fingers]不经意间划过[npc.lips+]，"
+					+ "然后又满面淫荡地吮吸了一会儿，让[npc.her]的唾液将他们充分浸润。";
 		}
 		
 		@Override
@@ -71,17 +71,17 @@ public class SelfFingerMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Suck fingers (self)";
+			return "吮吸手指(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Put your [npc.fingers] in your [npc.mouth] and start sucking them.";
+			return "将你的[npc.fingers]放入你[npc.mouth]然后开始吮吸。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lifting [npc.her] [npc.hand] up to [npc.her] [npc.mouth], [npc.name] [npc.verb(slide)] [npc.her] [npc.fingers] past [npc.her] [npc.lips+] before starting to lewdly suck on [npc.her] intruding digits.";
+			return "将[npc.her]的[npc.hand]轻举至[npc.mouth]边，[npc.name]的[npc.fingers]不经意间划过[npc.her][npc.lips+]，[npc.her]开始淫荡地吮吸起[npc.her]侵入的手指。";
 		}
 	};
 	
@@ -95,17 +95,17 @@ public class SelfFingerMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Stop sucking fingers (self)";
+			return "停止吮吸手指(自己)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stop sucking your [npc.fingers].";
+			return "停止吮吸你的[npc.fingers]。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "With a little sigh, [npc.name] [npc.verb(slide)] [npc.her] saliva-coated [npc.fingers] out of [npc.her] [npc.mouth].";
+			return "伴随着一阵喘息，[npc.name]将沾满唾液的[npc.fingers]从[npc.her][npc.mouth]中滑出。";
 		}
 	};
 	

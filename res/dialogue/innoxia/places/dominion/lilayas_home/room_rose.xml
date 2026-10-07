@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="lilaya_kitty">
@@ -13,8 +13,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[You should give your [lilaya.relation(pc)] and her lover some privacy... Right?]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你应该给你的[lilaya.relation(pc)]和她的爱人一些私人空间……对吧？]]></responseTooltip>
                 <nextDialogue stripContent="false" defaultPlaceType="LILAYA_HOME_CORRIDOR"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -25,9 +25,9 @@
 			<response>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[2]]></index>
-                <responseTitle><![CDATA[Continue watching]]></responseTitle>
+                <responseTitle><![CDATA[继续观看]]></responseTitle>
                 <responseTooltip><![CDATA[
-					Watching your [lilaya.relation(pc)] submissively service her maid is too hot to pass up on...
+					看着你的[lilaya.relation(pc)]顺从地侍奉她的女仆，这画面实在太过香艳，你根本不想错过……
                 ]]></responseTooltip>
                 <colour><![CDATA[TEXT]]></colour>
                 <nextDialogue/>
@@ -79,12 +79,12 @@
 		</responses>
 	</scene>
 	
-	<scene id ="after_sex">
+	<scene id="after_sex">
 		<preParsingEffects><![CDATA[
 			[#rose.initKittyScene()]
 		]]></preParsingEffects>
-		<title><![CDATA[Show's over]]></title>
-		<tooltip><![CDATA[Rose has had enough of this...]]></tooltip>
+		<title><![CDATA[“表演”结束了]]></title>
+		<tooltip><![CDATA[萝丝已经玩够了……]]></tooltip>
 		<preParsingEffects/>
 		<content folderPath="txt/places/dominion/lilayasHome/room_rose">LILAYA_KITTY_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
@@ -95,8 +95,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Satisfied that you were able to witness such a hot display, you leave Rose's room behind you and continue on your way.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你对能够窥视如此火辣的演出而感到心满意足，你萝丝的房间前退开，继续踏上行程。]]></responseTooltip>
                 <nextDialogue stripContent="false" defaultPlaceType="LILAYA_HOME_CORRIDOR"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[

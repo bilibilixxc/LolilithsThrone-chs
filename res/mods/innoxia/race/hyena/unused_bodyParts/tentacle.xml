@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tentacle>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>innoxia_hyena</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[hyena]]></transformationName>
+	<transformationName><![CDATA[鬣狗]]></transformationName>
 	
 	<!-- The id of the material covering this tentacle.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -47,27 +47,27 @@
 	
 	<!-- The singular and plural name of this tentacle type.
 	These should be left as 'tentacle' and 'tentacles' for standard tentacle types, but could be something like 'tentacle feathers'/'tentacle feathers' (both as plural) for bird tentacles. -->
-	<name><![CDATA[tentacle]]></name>
-	<namePlural><![CDATA[tentacles]]></namePlural> 
+	<name><![CDATA[触手]]></name>
+	<namePlural><![CDATA[触手]]></namePlural> 
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's tentacle of this type.
 	Can be left blank. -->
 	<descriptorsMasculine>
-		<descriptor>strong</descriptor>
+		<descriptor><![CDATA[健壮]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor>strong</descriptor>
+		<descriptor><![CDATA[健壮]]></descriptor>
 	</descriptorsFeminine>
 	
 	<!-- Same naming formats as those for the tentacle type above, but these describe the tentacle's tip: -->
-	<tipName><![CDATA[tip]]></tipName>
-	<tipNamePlural><![CDATA[tips]]></tipNamePlural>
+	<tipName><![CDATA[尖端]]></tipName>
+	<tipNamePlural><![CDATA[尖端]]></tipNamePlural>
 	<tipDescriptorsMasculine>
-		<descriptor>rounded</descriptor>
+		<descriptor><![CDATA[圆润]]></descriptor>
 	</tipDescriptorsMasculine>
 	<tipDescriptorsFeminine>
-		<descriptor>rounded</descriptor>
+		<descriptor><![CDATA[圆润]]></descriptor>
 	</tipDescriptorsFeminine>
 	
 	<!-- The description which is shown when a character transforms to obtain this tentacle type.
@@ -77,7 +77,7 @@
 	
 	<!-- How this tentacle is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		In place of legs, [npc.sheHasFull] [npc.tentacleCount] [npc.tentacleColour(true)] tentacles, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects.
+		在腿的位置上，[npc.sheHasFull]长出了[npc.tentacleCount]条[npc.tentacleColour(true)]的触手。它们活动自如，能够帮助[npc.herHim]抓取并握住物体。
 	]]></bodyDescription>
 	
 </tentacle>

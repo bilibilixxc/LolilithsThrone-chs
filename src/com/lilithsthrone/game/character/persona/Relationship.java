@@ -12,22 +12,22 @@ import com.lilithsthrone.game.character.gender.PronounType;
 public enum Relationship {
 
 	/** For ovipositor egg incubation */
-    IncubatorParent("incubator-mother", "incubator-father", "incubator-parent", 0),
-    IncubatorChild("incubated-daughter", "incubated-son", "incubated-child", 0),
+    IncubatorParent("卵生母亲", "卵生父亲", "卵生父母", 0),
+    IncubatorChild("卵生女儿", "卵生儿子", "卵生孩子", 0),
     
-    Parent("mother", "father", "parent", 0),
-    GrandParent("grand-mother", "grand-father", "grand-parent", 1),
-    GrandGrandParent("grand-grand-mother", "grand-grand-father", "grand-grand-parent", 2),
-    Child("daughter", "son", "child", 0),
-    GrandChild("grand-daughter", "grand-son", "grand-child", 1),
-    GrandGrandChild("grand-grand-daughter", "grand-grand-son", "grand-grand-child", 2),
-    Sibling("sister", "brother", "sibling", 0),
-    SiblingTwin("twin-sister", "twin-brother", "twin", 0),
-    HalfSibling("half-sister", "half-brother", "half-sibling", 1.25),
-    Cousin("cousin", 2),
-    Pibling("aunt", "uncle", "pibling", 1.5),
-    GrandPibling("grand-aunt", "grand-uncle", "grand-pibling", 2.5),
-    Nibling("niece", "nephew", "nibling", 1.5);
+    Parent("母亲", "父亲", "父母", 0),
+    GrandParent("祖母", "祖父", "祖辈", 1),
+    GrandGrandParent("曾祖母", "曾祖父", "曾祖辈", 2),
+    Child("女儿", "儿子", "孩子", 0),
+    GrandChild("孙女", "孙子", "孙辈", 1),
+    GrandGrandChild("曾孙女", "曾孙子", "曾孙辈", 2),
+    Sibling("姐妹", "兄弟", "亲兄弟姐妹", 0),
+    SiblingTwin("双胞胎姐妹", "双胞胎兄弟", "双胞胎", 0),
+    HalfSibling("半亲姐妹", "半亲兄弟", "半亲", 1.25),
+    Cousin("表亲", 2),
+    Pibling("姨妈", "叔叔", "亲戚", 1.5),
+    GrandPibling("曾祖姨", "曾祖叔", "祖亲戚", 2.5),
+    Nibling("侄女", "侄子", "子侄辈", 1.5);
 
     private final String displayF;
     private final String displayM;

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[shop floor]]></name>
-	<tooltipDescription><![CDATA[Old tables and chairs have been stacked up against the walls in the area which used to serve as a cafe.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[on the shop floor in the abandoned bakery in Elis]]></virginityLossDescription>
+	<name><![CDATA[店面]]></name>
+	<tooltipDescription><![CDATA[旧桌椅被堆在曾作为咖啡店营业的区域墙边。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于伊利斯废弃面包店店面里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

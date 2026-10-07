@@ -1,61 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		You find yourself standing before the only building that can be seen standing outside of the walls of Elis, which takes the form of a large, wooden barn. It's quite clear from its shabby exterior that this structure has seen better days, and while at one point in the past the words 'Centaur Carriage Depot' were painted in large white letters across its frontage, years of weather damage have rendered this text almost illegible.
+		你发现自己正站在伊利斯城墙外唯一能看到的建筑物前，它是一个巨大的木制谷仓。从它破旧的外表可以清楚地看出，这座建筑经历了多少年的风吹雨打，在过去的某个时刻，“人马车站”这几个白色大字曾被漆在它的正面，但多年的风雨侵蚀使这几个字几乎无法辨认出来。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-			Although you know that this depot is going to be used by Astrapi and Vronti, they're not able to offer any more rides today, and so if you wanted to catch a ride to Dominion you'll have to come back during opening hours.
+			虽然你知道阿斯特拉皮和弗洛狄会使用这个车库，但他们今天无法提供更多的乘车服务，所以如果你想搭车去御城区，就必须在开放时间内再来。
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_centaur_transport_introduced))
-			Knowing that Astrapi and Vronti are now using this depot as a staging point for offering rides to Dominion, you wonder whether you should approach the barn and see if they're around.
+			你知道阿斯特拉皮和弗洛狄现在正把这个仓库作为向御城区提供乘车服务的中转站，你想知道是否应该走近谷仓来看看这两人是否在这附近。
 		#ELSE
-			With no clue as to whether or not this depot will ever see use again, you really don't see any point in approaching it, and so turn away from the structure and wonder where to go next...
+			由于不知道这个车库是否还会再被使用，而且你也实在看不出接近它有什么意义，于是你便转身离开了这个建筑，并开始思考接下来该干嘛去……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE"><![CDATA[
 	<p>
 		#IF(game.isHourBetween(5.75, 15))
-			Although the barn is clearly open, you decide against heading inside after all, and instead turn around and wonder where to go next...
+			虽然仓库大门是大开着的，但你还是决定不进去，在转身离开之后，你开始思考接下来该去哪里……
 		#ELSE
-			As the barn is clearly closed, you decide against waiting for it to open, and instead turn around and wonder where to go next...
+			仓库大门已经关闭了，所以你觉得不进去了，而在转身离开之后，你开始思考接下来该去哪里……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPROACH"><![CDATA[
 	<p>
-		Deciding to approach Elis's 'Centaur Carriage Depot', you head over to the barn. Although its shabby exterior quite clearly hasn't been maintained in many years, the short strip of ground leading from the road to the barn's wide doors is being well maintained and kept clear of weeds and debris. Looking over this cleared ground to the doors themselves, you spot an identical wooden sign to the one back at the Dominion depot. Carved out and painted in large white letters, you read:
+		你决定走近伊利斯外的“人马车站”，在走到谷仓附近后，你开始仔细打量起了这栋建筑。虽然谷仓的外表破旧不堪，但从道路通往谷仓宽阔大门前的一小块地面却保养得很好。在越过这片被清理过的土地后，你看到一个与御城区车站相同的木质标志，木牌上刻有白色大字，上面写着：
 	</p>
 	<p style='text-align:center;'><i>
-		<b>Astrapi & Vronti Grigori</b>
-		<br/>offering
-		<br/><b>Centaur Carriages To Dominion</b>
-		<br/>Tickets are fixed at the low price of
-		<br/><b>250 flames</b>
-		<br/>Open from: [units.time(5.75)]-[units.time(15)]
+		<b>格里戈里兄妹：弗洛狄&阿斯特拉皮</b>
+		<br/>提供以下马车服务
+		<br/><b>前往御城区</b>
+		<br/>车票长期优惠价
+		<br/><b>250火币</b>
+		<br/>营业时间：[units.time(5.75)]-[units.time(15)]
 	</i></p>
 	<p>
 		#IF(game.isHourBetween(5.75, 15))
-			In their usual fashion, either Astrapi or Vronti have left of the barn doors half-open, making it clear that their business is currently [style.colourGood(open)]. If you wanted to, you could enter via this half-open door and see if either of the centaurs are inside...
+			阿斯特拉皮或弗洛狄按照营业习惯来让谷仓的大门半开着，这代表着这里正在[style.colourGood(营业)]。如果你愿意的话，可以从这扇半开的门进去看看半人马是否在里面……
 		#ELSE
-			As it's currently outside of the business's opening times, it's currently [style.colourBad(closed)], with the doors to the barn are securely shut and locked. If you wanted to travel to Dominion via centaur carriage then you should come back between [units.time(5.75)]-[units.time(15)]...
+			谷仓大门正紧闭着，上面还挂着一把锁着的锁。这代表现在正处于[style.colorBad(歇业)]时间，如果你想通过半人马马车前往御城区，那么你应该在[units.time(5.75)]-[units.time(15)]之间过来……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPROACH_WAIT"><![CDATA[
 	<p>
-		Deciding to wait until the barn opens, you loiter around in the nearby area until eventually it's [units.time(5.75)]. Looking over at the barn once again, you see that one of the doors have been half opened; whoever's responsible for doing this must have approached from the rear of the barn and entered via a back door, or else you would clearly have seen them coming down the road.
+		你决定等到谷仓开门，于是开始在附近闲逛，直到[units.time(5.75)]。你再次看向谷仓，你发现其中一扇大门打开了，不管是谁干的，他一定是从谷仓后面走过来，然后从后门进入的谷仓，否则你一定会清楚地看到他从路上走过来并从前门进去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- If time is:
 		05:45-6:00 - Vronti waiting there
@@ -66,80 +66,81 @@
 	<htmlContent tag="APPROACH_INSIDE"><![CDATA[
 	#IF(game.getCharactersPresent().contains(astrapi))
 		<p>
-			[pc.Walking] up to the barn's half-open door, you peer inside to see that most of the straw-strewn interior is empty. As you [pc.step] through the doorway and enter the barn, you take note of the fact that it's a little smaller than its counterpart back at Dominion, and houses not only a large, four-wheeled wooden carriage, but also a few crates and a couple of workshop benches.
+		你[pc.Walking]到谷仓半开的门前，然后探头往里面看去，虽发现原本应该用来铺满稻草的大部分地方都空了。你随后穿过门口进入谷仓，注意到这里的谷仓比御城区的谷仓要小一些，而里面除了有一辆四轮大马车以外，还有几个板条箱和几张工作台。
 		</p>
 		<p>
-			The familiar form of the muscular centauress, Astrapi, can be seen lying down and relaxing beside her carriage. As you enter the barn she sees you and stands up, before cheerfully calling out, [astrapi.speech(Hi, [pc.name]! I'm planning on setting off for Dominion in a few minutes, so if you want a ride just let me know!)]
+			你可以看到肌肉发达的半人马阿斯特拉皮正躺在她的马车旁休息。当她看到了你进入谷仓后便站了起来，然后欢快地叫了起来：[astrapi.speech(你好，[pc.name]！我计划在几分钟之后后出发前往御城区，如果你想搭车的话就请告诉我！)]
 		</p>
 		#IF(astrapi.isVisiblyPregnant())
 			<p>
 				#IF(!astrapi.isCharacterReactedToPregnancy(pc))
-					As usual, Astrapi isn't wearing any clothing other than the sweatbands around her wrists and head, and as such her huge, [astrapi.cupSize]-cup breasts are fully on display. However, it isn't the centauress's massive tits that draw your attention, but instead the fact that her lower horse's body is sporting a [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, Astrapi absent-mindedly runs one of her hands through her [astrapi.hairColour] hair and laughs, [astrapi.speech(Hah! Yeah, you got me pregnant, but it's no big deal really. Sure, I might be a little slower on my routes and need more rest in the evenings, but I can handle it all just fine.)]
+					和往常一样，除了手腕和头上的汗巾，阿斯特拉皮没有穿任何衣服，因此，她那对[astrapi.cupSize]罩杯的巨乳完全展现在你的面前。然而，吸引你注意的并不是半人马的巨乳，而是她下半身的[style.colourSex(孕肚)]。在注意到你的视线之后，阿斯特拉皮心不在焉地用一只手捋了捋她的[astrapi.hairColour]头发，然后笑道：[astrapi.speech(哈！是啊，你让我怀孕了，不过这没什么大不了的。当然，我可能会在路上走的慢一点，晚上需要多休息一会，但我都能应付的来。)]
 				#ELSE
-					As usual, Astrapi isn't wearing any clothing other than the sweatbands around her wrists and head, and as such her huge, [astrapi.cupSize]-cup breasts are fully on display. However, it isn't the centauress's massive tits that draw your attention, but instead the fact that her lower horse's body is still sporting a [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, Astrapi absent-mindedly runs one of her hands through her [astrapi.hairColour] hair and laughs, [astrapi.speech(Hah! Yeah, I'm still carrying our kids around, but it's no big deal. Sure, I might be a little slower on my routes and need more rest in the evenings, but I can handle it all just fine.)]
+					和往常一样，除了手腕和头上的汗巾，阿斯特拉皮没有穿任何衣服，因此，她那对[astrapi.cupSize]罩杯的巨乳完全展现在你的面前。然而，吸引你注意的并不是半人马的巨乳，而是她下半身的[style.colourSex(孕肚)]。在注意到你的视线之后，阿斯特拉皮心不在焉地用一只手捋了捋她的[astrapi.hairColour]头发，然后笑道：[astrapi.speech(哈！是啊，我还得带着孩子们到处跑，但这没什么大不了的。当然，我可能会在路上走的慢一点，晚上需要多休息一会，但我都能应付的来。)]
 				#ENDIF
 			</p>
 			<p>
-				Nonchalantly waving you off as you ask her if there's anything you can do to help, the muscular centauress turns around and starts checking over her carriage to make sure that it's in working condition. Turning her head back, she flashes you a playful grin, and with a quick flick of her tail, shamelessly flashes you her [astrapi.pussyColour] horse-pussy. Turning her attention back to her cart, she shouts out, [astrapi.speech(Remember, it's only two-hundred and fifty flames for a ride! You can't pass up a bargain like that, can you?! And hey, who knows, maybe you'll get to creampie me again? After all, we don't have to worry about you knocking me up anymore!)]
+				当你问她是否有什么需要帮忙时，这位肌肉发达的半人马毫不客气地挥手让你走开，然后转过身开始检查她的马车，以确保其处于工作状态。她转过头来，在向你露出一个俏皮笑容的同时并快速甩动起了尾巴，以此无耻地向你展示她的[astrapi.pussyColour]马穴。她随之把注意力转回到她的车上，然后大声喊道：[astrapi.speech(记住，只需 250火币就能搭乘！你不会错过这样折扣价格，对吧？嘿呀，谁知道呢，说不定你还能再给我来一发呢？毕竟我们再也不用担心你把我的肚子搞大了！)]
 			</p>
 		#ELSE
 			<p>
-				As usual, Astrapi isn't wearing any clothing other than the sweatbands around her wrists and head, and as such her huge, [astrapi.cupSize]-cup breasts are fully on display. Completely unconcerned about her exhibitionism, she turns around and starts checking over her carriage to make sure it's in working condition, shamelessly flashing you her [astrapi.pussyColour] horse-pussy in the process. Turning her head back towards you, she calls out, [astrapi.speech(Remember, it's only two-hundred and fifty flames! You can't pass up a bargain like that, can you?!)] 
+				和往常一样，除了手腕和头上的汗巾，阿斯特拉皮没有穿任何衣服，因此，她那对[astrapi.cupSize]罩杯的巨乳完全展现在你的面前。不过她完全不在意自己的漏点行为，她转过身开始检查她的马车，在确保其处于工作状态的同时晃动着自己尾巴，就这样无耻地向你展示她的[astrapi.pussyColour]马穴。她转头看向你，然后说道：[astrapi.speech(记住，只需 250火币就能搭乘！你不会错过这样折扣价格，对吧？)] 
 			</p>
 		#ENDIF
 	#ELSEIF(game.getCharactersPresent().contains(vronti))
 		<p>
-			[pc.Walking] up to the barn's half-open door, you peer inside to see that most of the straw-strewn interior is once again empty. As you [pc.step] through the doorway and enter the barn, you take note of the fact that it's a little smaller than its counterpart back at Dominion, and houses not only a large, four-wheeled wooden carriage, but also a few crates and a couple of workshop benches.
+			你[pc.Walking]到谷仓半开的门前，然后探头往里面看去，发现原本应该用来铺满稻草的大部分地方都空了。你随后穿过门口进入谷仓，注意到这里的谷仓比御城区的谷仓要小一些，而里面除了有一辆四轮大马车以外，还有几个板条箱和几张工作台。
 		</p>
 		<p>
-			The familiar form of the muscular centaur, Vronti, can be seen lying down and relaxing beside his carriage. As you enter the barn he sees you and stands up, before giving you a nod and grunting, [vronti.speech(Hey there...)]
+			你看到肌肉发达的半人马弗洛狄正卧在他的马车旁休息。他一看到你进入谷仓便站了起来，接着朝你点点头，咕哝道：[vronti.speech(嘿，你好……)]
 		</p>
 		<p>
-			As usual, Vronti isn't wearing any clothing at all, and as such as he stands up you're able to see not only the [vronti.cockSize] sheath of his cock but also his [vronti.ballSize] balls. Completely unconcerned about his exhibitionism, he turns around and starts checking over his carriage to make sure it's in working condition, shamelessly flashing you his puffy, [vronti.anusColour] horse-anus in the process. Turning his head back towards you, he calls out, [vronti.speech(It's two-hundred and fifty flames for a ride. I'm leaving in a few minutes.)]
+			和往常一样，弗洛狄没有穿任何衣服，因此当他站起来时，你不仅能看到他那[vronti.cockSize]的鸡巴，还能看到他那[vronti.ballSize]的蛋蛋。不过他完全不在意自己是否暴露，他转过身开始检查他的马车，在确保其处于工作状态的同时晃动着自己尾巴，就这样不知廉耻地向你展示他的[vronti.anusColour]马肛门，随后他看向你喊道：[vronti.speech(坐车要250火币，马上就出发！)]
 		</p>
 	#ELSE
 		<p>
-			[pc.Walking] up to the barn's half-open door, you peer inside to see that most of the straw-strewn interior is once again empty. As you [pc.step] through the doorway and enter the barn, you take note of the fact that it's a little smaller than its counterpart back at Dominion, and houses a few crates and a couple of workshop benches. There's no sign of either of the two wooden carriages which you've seen before, nor of Astrapi or Vronti.
+			你[pc.Walking]到谷仓半开的门前，然后探头往里面看去，原本应该用来铺满稻草的大部分地方依旧空空如也。你随后穿过门口进入谷仓，注意到这里的谷仓比御城区的谷仓要小一些，同时还有几个板条箱和几张工作台，但你并没有看到弗洛狄或阿斯特拉皮中的任何一人或者车的痕迹。
 		</p>
 		<p>
-			Realising that the two centaurs must be on their way to and from Dominion, you wonder whether you should wait for one of them to arrive, or instead leave and travel through the fields without them.
+			你意识到这两只半人马一定是在往返御城区的路上，你不知道是应该等待其中一只到达，还是应该直接离开并选择独自穿过田野。
 			#IF(game.isHourBetween(6, 9) || game.isHourBetween(12, 15))
-				 Remembering what Astrapi told you before, she'll be the one to arrive here next.
+				记得阿斯特拉皮之前跟你说过，她将是下一个到达这里的人。
 			#ELSE
-				 Remembering what Astrapi told you before, Vronti will be the one to arrive here next.
+				记得阿斯特拉皮之前跟你说过，下一个到达这里的将是弗洛狄。
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE_BARN"><![CDATA[
 	#IF(game.getCharactersPresent().contains(astrapi))
 		<p>
-			Thanking Astrapi for the offer, you tell her that you weren't needing a ride to Dominion right now, but that perhaps you'll make use of her or her brother's services in the future.
+			在感谢阿斯特拉皮的好意后，你告诉她你现在不需要搭车去御城区，但也许将来你会用到她或她哥哥的服务。
 		</p>
 		<p>
-			[astrapi.speech(Sure thing,)] the cheerful centauress replies. Flashing you a big smile, she reminds you, [astrapi.speech(Our rides set off at six and nine in the morning, again at midday, and finally at three in the afternoon, so you can always catch us then.)]
+			[astrapi.speech(没问题，)]这只开朗的半人马回应道，随后她笑着对你提醒道：[astrapi.speech(我们会早上六点，九点还有中午，以及下午三点出发，所以你随时都能赶上我们的列车服务。)]
 		</p>
 		<p>
-			Saying goodbye to Astrapi, and receiving a happy farewell in return, you head out of the barn and wonder where to go to next...
+			在与阿斯特拉皮道别后，你便走出谷仓，不知道接下来该去哪里……
 		</p>
 	#ELSEIF(game.getCharactersPresent().contains(vronti))
 		<p>
-			Thanking Vronti for the offer, you tell him that you weren't needing a ride to Dominion right now, but that perhaps you'll make use of his or his sister's services in the future.
+			在感谢弗洛狄的好意后，你告诉他你现在不需要搭车去御城区，但也许将来你会用到他或他妹妹的服务。
+
 		</p>
 		<p>
-			[vronti.speech(Right,)] the stoic centaur briefly replies, [vronti.speech(See you around.)]
+			[vronti.speech(好，)]这只坚毅的半人马简短地答道：[vronti.speech(回头见。)]
 		</p>
 		<p>
-			Saying goodbye to Vronti, and receiving a simple grunt in return, you head out of the barn and wonder where to go to next...
+			与弗洛狄的道别只换来几声听不太清的嘟囔声，你随后走出谷仓，不知道接下来该去哪里……
 		</p>
 	#ELSE
 		<p>
-			Deciding not to wait for Astrapi or Vronti to show up, you [pc.step] away from the barn and wonder where to go to next...
+			你决定不再等待阿斯特拉皮或弗洛狄，在离开谷仓后，你开始思考接下来该去哪里……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

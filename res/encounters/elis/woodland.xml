@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<!-- Encounters will typically be defined within a place type, but if you want to add this encounter to a pre-existing place type which does not have this encounter related to it, then use this section.
@@ -16,7 +16,7 @@
 		<encounter>
 			<!-- A generic name to describe this encounter.
 			This is highly unlikely to ever be seen by the player, but is used for error handling. -->
-			<name><![CDATA[finding berries]]></name>
+			<name><![CDATA[寻找浆果]]></name>
 			<!-- The 'chanceToTrigger' element needs to return an integer or float value representing a percentage chance of the encounter being triggered when the player triggers this encounter.
 			Values should be between 0->100, representing 0%-100% chance.
 				NOTE: If you use a value of greater than 100, then all other encounters with chances of less than or equal to 100 will be discarded and only encounters with chances of over 100 will be used.
@@ -37,7 +37,7 @@
 		</encounter>
 		<!-- Another possible encounter is to find a peaceful clearing: -->
 		<encounter>
-			<name><![CDATA[peaceful clearing]]></name>
+			<name><![CDATA[安静的空地]]></name>
 			<!-- The chance to trigger this encounter is a constant 2.5% -->
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 			#IF(game.getWeather()!=WEATHER_CLEAR || pc.hasAnyWellRestedStatusEffect())

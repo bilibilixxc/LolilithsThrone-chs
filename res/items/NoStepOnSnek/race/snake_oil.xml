@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>200</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Snake Oil]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Snake Oils]]></namePlural>
-		<description><![CDATA[A clear glass bottle containing a bright blue liquid. The label on this 'Genuine Snake Oil' makes outrageous promises as to its efficacy as a panacea, and declares it as being suitable 'For both internal and external application'.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[蛇油]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[蛇油]]></namePlural>
+		<description><![CDATA[一个透明的玻璃瓶，里面装着一种亮蓝色的液体。这种 "真正的蛇油 "的标签上对其作为灵丹妙药的功效做出了令人发指的承诺，并宣称它适合 "内服和外用"。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 40% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]40%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 			[#npc.incrementAlcoholLevel(0.4)]
@@ -52,10 +52,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Snake Oil, before tilting [npc.her] head back and bringing it up to [npc.her] waiting [npc.lips]. A scent of peppermint and other assorted herbs rises from the opening, and with a gulp, [npc.name] [npc.verb(start)] downing the liquid, discovering that its taste is more or less what could be expected from the smell. While indeed feeling somewhat refreshed, [npc.name] [npc.sheIs] feeling somewhat let down by the advertising.
+		[npc.Name]拧开了蛇油瓶的盖子，然后仰起头将瓶端到[npc.her]等待[npc.lips]前。一股薄荷和其他各种草药的香气从瓶口升腾而起，然后大口喝下了液体。发现它的味道与气味所期望的差不多。虽然确实有些提神，但[npc.name]对广告的承诺产生了一些失望。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Snake Oil, bringing it up to [npc2.her] waiting [npc2.lips]. A scent of peppermint and other assorted herbs rises from the opening, and with a gulp, [npc2.name] [npc2.verb(start)] downing the liquid, discovering that its taste is more or less what could be expected from the smell. While indeed feeling somewhat refreshed, [npc2.name] [npc2.sheIs] feeling somewhat let down by the advertising.
+		[npc.Name]拧开了蛇油瓶的盖子，然后将它端到[npc2.her]等待[npc2.lips]前。一股薄荷和其他各种草药的香气从瓶口升腾而起，然后大口喝下了液体。发现它的味道与气味所期望的差不多。虽然确实有些提神，但[npc2.name]对广告的承诺产生了一些失望。
 		]]></otherUse>
 	</useDescriptions>
 

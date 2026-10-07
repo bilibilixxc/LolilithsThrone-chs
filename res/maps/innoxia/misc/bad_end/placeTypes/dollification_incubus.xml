@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Master's Mansion]]></name>
-	<tooltipDescription><![CDATA[You and nine other sex dolls act as statues in your Master's mansion.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in your Master's mansion]]></virginityLossDescription>
+	<name><![CDATA[主人的宅邸]]></name>
+	<tooltipDescription><![CDATA[你和其他九个性爱玩偶在主人的宅邸中充当雕像。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在你主人的宅邸]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

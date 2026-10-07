@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>1500</value>
@@ -17,7 +17,7 @@
 		<rarity>EPIC</rarity>
 
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/cat/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/cat/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">mangosteen.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 

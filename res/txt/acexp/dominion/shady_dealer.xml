@@ -1,64 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
     <!-- Shady dealer encounter: -->
 
     <htmlContent author="AceXP" tag="INTRO"><![CDATA[
    	<p>
-		You find yourself walking through labyrinthine alleyways, with not a soul in sight. Back-doors and steaming vents line the dark brick walls, and you often have to navigate around overflowing bins and stacks of empty crates in order to make progress.
+		你意识到自己正走在错综复杂的小巷中，目力之内悄无声息。墨色的砖墙上排列着一道道后门和一个个蒸汽阀，为了前进，你不得不绕开几乎要溢满而出的垃圾桶和堆积成山的空板条箱。
 	</p>
 	#IF(flags.hasFlag(FLAG_acexp_shady_dealer_discovered))
 		<p>
-			As you pass by a stack of crates, you suddenly hear a familiar, androgynous voice calling out from the shadows, [AceXpShadyDealer.speech(Hey, we meet again. Do you want to make a deal? Still no questions asked, of course.)]
+			当你绕过一堆板条箱时，忽然听见熟悉的中性声音从阴影中呼唤，[AceXpShadyDealer.speech(嘿，又见面了。想不想做一笔买卖？当然，依旧不许多问。)]
 		</p>
 		<p>
-			Turning to face the shady alicorn, you wonder whether to take them up on their offer, or instead simply continue on your way...
+			你转过身，面向那只鬼鬼祟祟的天角兽，盘算着是要接受对方的提议，还是赶紧赶你的路……
 		</p>
 	#ELSE
 		<p>
-			As you pass by a stack of crates, you suddenly hear an androgynous voice calling out from the shadows, [AceXpShadyDealer.speech(Psst! You, yes you! Are you up for the bargain of your life?)]
+			当你绕过一堆板条箱时，忽然听见一个中性的声音从阴影中呼唤，[AceXpShadyDealer.speech(嘶！你，就是你！准备好来一场生命的交易了吗？)]
 		</p>
 		<p>
-			Looking over towards the source of this voice, you see a shady figure lurking behind the crates. Not knowing what to make of this, you take a moment to decide whether to approach this mysterious salesperson or instead simply continue on your way...
+			你向着声音来源望去，之间有个鬼鬼祟祟的身影隐匿在板条箱后。你不清楚来龙去脉，停顿了一会儿，决定是要接近这个神秘的商人还是赶紧赶你的路……
 		</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="INTRO_LEAVE"><![CDATA[
    	<p>
-		Not interested in whatever this shady figure is trying to sell, you ignore them and continue on your way. As you leave this dodgy character behind, their androgynous voice calls out after you, [AceXpShadyDealer.speech(We'll meet again! I'll try to find you tomorrow!)]
+		你不在乎这个鬼鬼祟祟的家伙要兜售什么东西，便无视了他，继续赶路了。你离开了这个可疑的角色，而他中性的声音却又从你身后传来，[AceXpShadyDealer.speech(我们会再见面的！我明天再来找你！)]
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent author="AceXP" tag="TRADE"><![CDATA[
 	#IF(flags.hasFlag(FLAG_acexp_shady_dealer_discovered))
 		<p>
-			Carefully approaching the stack of crates, you once again find yourself face to face with the shady dealer. The single horn on their forehead, along with their horse like appearance and powerful wings, are enough to identify them as [AceXpShadyDealer.a_raceFull(true)]. You get the feeling that they are quite proficient at spell casting, but right now they don't seem to pose a threat. They're mostly clad in dark clothes, with some of their gear clearly having been illegally purloined from the Enforcers. The many pockets on their trousers, shirt, and jacket are bulging with various items that are tucked away in them.
+			你小心翼翼地接近了那堆板条箱，回过神来已经跟那个鬼鬼祟祟的商贩面对面了。[npc.she]额头上的独角，与马相似的容貌以及强而有力的翅膀，足以证明[npc.she]就是一只[AceXpShadyDealer.a_raceFull(true)]。你预感到[npc.she]精于魔法，但目前似乎并不构成威胁。[npc.she]浑身大多被深色的衣物所覆盖，有些装备显然是从执法者那里偷来的。[npc.she]的裤子、衬衫和夹克衫上的许多口袋都鼓鼓囊囊地塞满了各种各样的东西。
 		</p>
 		<p>
-			Quickly looking you up and down, this shady alicorn states, [AceXpShadyDealer.speech(You know the drill, don't ya. Only the best wares, for bargain prices! But make it quick, I don't want any more trouble with the Enforcers than I already have!)]
+			这个鬼鬼祟祟的天角兽迅速上下打量了你一番，[AceXpShadyDealer.speech(你懂规矩的，对吧？最好的货，最低的折！不过要快，我可不想再惹上更多执法者了！)]
 		</p>
 	#ELSE
 		<p>
-			Carefully approaching the stack of crates, you find yourself face to face with a shady-looking individual. The single horn on their forehead, along with their horse like appearance and powerful wings, are enough to identify them as [AceXpShadyDealer.a_raceFull(true)]. You get the feeling that they are quite proficient at spell casting, but right now they don't seem to pose a threat. They're mostly clad in dark clothes, with some of their gear clearly having been illegally purloined from the Enforcers. The many pockets on their trousers, shirt, and jacket are bulging with various items that are tucked away in them.
+			你小心翼翼地接近了那堆板条箱，回过神来已经跟那个鬼鬼祟祟的家伙面对面了。[npc.she]额头上的独角，与马相似的容貌以及强而有力的翅膀，足以证明[npc.she]就是一只[AceXpShadyDealer.a_raceFull(true)]。你预感到[npc.she]精于魔法，但目前似乎并不构成威胁。[npc.she]浑身大多被深色的衣物所覆盖，有些装备显然是从执法者那里偷来的。[npc.she]的裤子、衬衫和夹克衫上的许多口袋都鼓鼓囊囊地塞满了各种各样的东西。
 		</p>
 		<p>
-			Casting a quick glance left and right to check if anyone else is around, they start what is probably a well-rehearsed sales pitch, [AceXpShadyDealer.speech(I have only the best wares; you won't find anything like this anywhere else, I guarantee you! All for a price of course! Oh, and if you happen to have some interesting items, just show 'em! I might want to take them off your hands. Can't offer much though, you know, what with money being tight and all...)]
+			[npc.she]迅速扫视左右，确认四下无人，便开始了一段尽心排练过的推销说辞，[AceXpShadyDealer.speech(我的货有就是最好；你在别的地方可找不到这些玩意，我保证！当然是要付钱的！哦，如果你刚好带着些有趣的东西，那就拿出来吧！我会帮你从你身上拿走的。钱我给不了太多，你懂的，资金紧张，资金紧张呀……)]
 		</p>
 	#ENDIF
    	<p>
-	    You take a moment to consider if you should make a deal with this shady dealer...
+	你思考了一会儿，是否要跟这个鬼鬼祟祟的商贩做交易……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="TRADE_LEAVE"><![CDATA[
    	<p>
-		Having seen enough, you tell the alicorn that you've got to be on your way, before setting off down the alleyway. As you leave the shady figure behind, their androgynous voice calls out after you, [AceXpShadyDealer.speech(We'll meet again! I'll try to find you tomorrow!)]
+		看够了之后，你告诉天角兽你得走了，接着便沿着小巷继续走向深处。你离开了这个可疑的身影，而他中性的声音又从你身后传来，[AceXpShadyDealer.speech(我们会再见面的！我明天再来找你！)]
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
 </dialogue>

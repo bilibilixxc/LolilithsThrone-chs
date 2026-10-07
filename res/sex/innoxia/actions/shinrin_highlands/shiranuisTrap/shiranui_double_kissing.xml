@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[true]]></actionConditional>
@@ -31,17 +31,15 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Watch them kiss]]></title>
-	<tooltip><![CDATA[
-		Pull your cock back and let [pc.name] and Meraxis kiss one another.
-	]]></tooltip>
+	<title><![CDATA[看他们接吻]]></title>
+	<tooltip><![CDATA[把你的阴茎抽出来，让[pc.name]和梅拉克西丝亲吻彼此。]]></tooltip>
 	<descriptions>
 		<description>
 			<descriptionConditional><![CDATA[
 				[#!flags.hasFlag(FLAG_innoxia_shiranui_sex_kissing)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Shiranui suddenly pulls back, and with a snap of her fingers, the leather bindings move to force you and Meraxis to be kissing one another again. The youko lets out [shiranui.moan+] and strokes her saliva-coated shaft as she watches the two of you start to passionately kiss one another.
+				不知火猛然抽身后退，手指一响，皮革绑带便牵扯着你和梅拉克西丝再度唇齿相接。妖狐[shiranui.moan+]，一边抚弄着沾满唾液的阴茎，一边看着你们两人再次动情热吻。
 			]]></text>
 		</description>
 		<description>
@@ -49,13 +47,13 @@
 				[#flags.hasFlag(FLAG_innoxia_shiranui_sex_kissing)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Shiranui continues to stroke her [shiranui.cock+] and moan in delight as she watches the two of you sloppily kissing each other.
+				不知火Shiranui看着你们两人黏腻地热吻，手下继续撸弄着[shiranui.cock+]，快活地呻吟出声。
 			]]></text>
 			<text><![CDATA[
-				Moaning and stroking her saliva-coated cock, Shiranui smirks down at you and Meraxis as you continue to passionately make out with each other.
+				不知火一边呻吟着抚弄自己沾满唾液的肉棒，一边低头朝你和梅拉克西丝露出得意的坏笑，看着你们两人继续热情似火地激吻缠绵。
 			]]></text>
 			<text><![CDATA[
-				Continuing to watch you and Meraxis kiss one another, Shiranui lets out [shiranui.a_moan+] as she plays with her saliva-coated cock.
+				不知火看着你和梅拉克西丝吻在一起，手里把玩着沾满唾液的肉棒，口中溢出一声[shiranui.a_moan+]。
 			]]></text>
 		</description>
 	</descriptions>

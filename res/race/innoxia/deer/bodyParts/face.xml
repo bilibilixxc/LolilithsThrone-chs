@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <face>
 	<race>innoxia_deer</race>
 	
-	<transformationName><![CDATA[deer]]></transformationName>
+	<transformationName><![CDATA[鹿]]></transformationName>
 	
 	<coveringType>innoxia_deer_fur</coveringType>
 	
@@ -17,35 +17,35 @@
 	<namesPlural/> 
 	
 	<descriptorsMasculine>
-		<descriptor>anthropomorphic deer-like</descriptor>
-		<descriptor>deer-like</descriptor>
+		<descriptor><![CDATA[鹿般拟人]]></descriptor>
+		<descriptor><![CDATA[鹿般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>anthropomorphic deer-like</descriptor>
-		<descriptor>deer-like</descriptor>
+		<descriptor><![CDATA[鹿般拟人]]></descriptor>
+		<descriptor><![CDATA[鹿般]]></descriptor>
 	</descriptorsFeminine>
 	
-	<noseName><![CDATA[nose]]></noseName>
+	<noseName><![CDATA[鼻子]]></noseName>
 	<noseNamePlural><![CDATA[noses]]></noseNamePlural>
 	
 	<noseDescriptorsMasculine/>
 	<noseDescriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic deer-like muzzle, and [npc.her] tongue transforms into a strong, deer-like one.
-		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 A layer of very close-cropped, smooth wool quickly grows to cover [npc.her] new face, 
-		#ELSE
-			 Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+], 
-		#ENDIF
-		and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.
-		<br/>[npc.Name] now [npc.has] an anthropomorphic [style.boldGoat(deer-like face)], [npc.materialDescriptor] [npc.faceFullDescription]. Within [npc.her] [npc.mouth], [npc.she] [npc.has] a [style.boldGoat(strong, deer-like tongue)].
-	]]></transformationDescription>
+		[npc.Her]的鼻子和嘴微微抽动，随后便转化为了似人的鹿吻部，舌头也变得强壮，像鹿的一样。
+	#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
+		一层紧密光滑的绒毛迅速长出并覆盖了[npc.her]的新脸，
+	#ELSE
+		就像她身体的其它部位一样，[npc.her]的新脸[npc.materialDescriptor][npc.faceSkin+]，
+	#ENDIF
+	当转化彻底完成时，[npc.sheIs]试图喘口气，却发出了娇喘和呻吟。
+	<br/>[npc.Name]现在拥有一张似人的[style.boldGoat(类鹿脸)]，[npc.materialDescriptor][npc.faceFullDescription]。在[npc.her]嘴中有一根[style.boldGoat(强壮的鹿舌头)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, deer-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a muzzle.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的鹿面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有完整的吻部。
+]]></bodyDescription>
 	
 	<!-- Feral variant of the above. -->
 	<bodyDescriptionFeral><![CDATA[

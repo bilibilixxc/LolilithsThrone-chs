@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[assembly line C]]></name>
-	<tooltipDescription><![CDATA[At the end of the assembly line, the assembled dolls enter an arcane saturation chamber, in which they're enchanted to become autonomous.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the back of Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[生产线C]]></name>
+	<tooltipDescription><![CDATA[在流水线的尽头，组装好的玩偶会进入一个充满奥术的房间，在那里它们会被附魔，变得可以自主行动。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店后面]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <arm>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[raptor]]></transformationName>
+	<transformationName><![CDATA[猛禽]]></transformationName>
 	
 	<coveringType>innoxia_raptor_feathers</coveringType>
 	
@@ -13,49 +13,49 @@
 		<tag>ARM_WINGS_FEATHERED</tag>
 	</tags>
 	
-	<name><![CDATA[wing]]></name>
-	<namePlural><![CDATA[wings]]></namePlural> 
+	<name><![CDATA[翅膀]]></name>
+	<namePlural><![CDATA[翼]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>feathered</descriptor>
-		<descriptor>bird-like</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[鸟一般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>feathered</descriptor>
-		<descriptor>bird-like</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[鸟一般]]></descriptor>
 	</descriptorsFeminine>
 	
-	<handName><![CDATA[hand]]></handName>
-	<handNamePlural><![CDATA[hands]]></handNamePlural>
+	<handName><![CDATA[手]]></handName>
+	<handNamePlural><![CDATA[掌]]></handNamePlural>
 	<handDescriptorsMasculine>
-		<descriptor>feathered</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
 	</handDescriptorsMasculine>
 	<handDescriptorsFeminine>
-		<descriptor>feathered</descriptor>
-		<descriptor>feminine</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
 	</handDescriptorsFeminine>
 	
-	<fingerName><![CDATA[finger]]></fingerName>
-	<fingerNamePlural><![CDATA[fingers]]></fingerNamePlural>
+	<fingerName><![CDATA[指爪]]></fingerName>
+	<fingerNamePlural><![CDATA[指爪]]></fingerNamePlural>
 	<fingerDescriptorsMasculine>
-		<descriptor>feathered</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
 	</fingerDescriptorsMasculine>
 	<fingerDescriptorsFeminine>
-		<descriptor>feathered</descriptor>
-		<descriptor>feminine</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
 	</fingerDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		Within a matter of moments, a thick layer of [npc.armFullDescription] quickly sprouts out all over them, and, looking down, [npc.she] [npc.verb(see)] [npc.her] new feathers growing over the backs of [npc.her] hands as well. Just as [npc.she] thinks that the transformation has finished, [npc.she] [npc.verb(cry)] out in shock as [npc.her] bones grow and snap into a new form. Thankfully, the transformation is quickly over, leaving [npc.herHim] with a pair of huge, feathered wings in place of arms. Where [npc.her] hands once were, two of [npc.her] fingers have shrunk down into the middle-joint of [npc.her] appendages, leaving [npc.herHim] with two feathered forefingers and an opposable thumb, each of which ends in a sharp, retractable claw. Where [npc.her] new wings meet [npc.her] body at the shoulder, [npc.her] feathers smoothly cover the transition into the [npc.skin] that's covering the rest of [npc.her] torso.
-		<br/>[npc.Name] now [npc.has] huge [style.boldRaptor(raptor wings)] in place of arms, which are [npc.materialDescriptor] [npc.armFullDescription].
+		顷刻之间，一层[npc.armFullDescription]已迅速覆盖了它们，[npc.she]看着[npc.her]的新羽毛覆盖手背。当[npc.she]感觉[npc.her]的骨头断裂变成新的形态时，[npc.she]哭叫出声。万幸，转化很快结束，[npc.her]的双臂完全变成了覆羽的翅膀。在[npc.her]曾经的双手上，[npc.her]的两根手指已经缩进了[npc.her]新附属器官的中关节，有两根小食指和一根可对折的拇指，每根拇指的尖端都有一个利爪。在[npc.her]的肩膀处，[npc.her]的新翅膀与[npc.her]的肩膀相接，[npc.her]的新羽毛顺利过渡到覆盖[npc.her]的躯干其余部分的[npc.skin]。
+		<br/>转化结束后，[npc.nameIsFull]拥有的是巨大的[style.boldRaptor(猛禽翼)]手臂，并[npc.materialDescriptor][npc.armFullDescription]。
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		In place of arms and hands, [npc.she] [npc.has] [npc.armRows] huge wings, which are [npc.materialCompositionDescriptor] [npc.armFullDescription(true)].
-		#IF(!npc.isFeral())
-			 Where [npc.her] hands should be, [npc.she] [npc.has] two feathered forefingers and a thumb, each of which ends in a sharp, retractable claw. Although slightly less dexterous than a human hand, [npc.sheIs] still able to use [npc.her] digits to form a hand-like grip.
-		#ENDIF
+	代替手臂和手的是[npc.she]的[npc.has][npc.armRows]巨大的翅膀，并[npc.materialCompositionDescriptor][npc.armFullDescription(true)] 。
+	#IF(!npc.isFeral())
+	[npc.her]的手由两个食指和一个拇指组成，每个食指和拇指的尖端都有一个利爪。虽然比五个手指的手稍微不那么灵巧一些，但是[npc.sheIs]仍能用它们达成类似手掌的抓握能力。
+	#ENDIF
 	]]></bodyDescription>
 	
 </arm>

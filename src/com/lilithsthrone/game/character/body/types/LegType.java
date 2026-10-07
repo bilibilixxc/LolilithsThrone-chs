@@ -33,18 +33,18 @@ public class LegType {
 			Race.HUMAN,
 			FootStructure.PLANTIGRADE,
 			FootType.HUMANOID,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine"),
-			Util.newArrayListOfValues("feminine"),
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚"),
+			Util.newArrayListOfValues("阴柔"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"They rapidly shift into normal-looking human legs, complete with human feet.<br/>"
-				+ "[npc.She] now [npc.has] [style.boldHuman(human legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs and feet are human, and are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"迅速转化为了正常的人类腿部，还带着人类的脚。<br/>"
+				+ "[npc.She]现在有着[style.boldHuman(人类的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿和脚是人类形态，[npc.materialCompositionDescriptor][npc.legFullDescription(true)]。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL), false) {
 	};
@@ -53,20 +53,20 @@ public class LegType {
 			Race.ANGEL,
 			FootStructure.PLANTIGRADE,
 			FootType.HUMANOID,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "radiant", "angelic"),
-			Util.newArrayListOfValues("feminine", "radiant", "angelic"),
-			Util.newArrayListOfValues("angelic"),
-			Util.newArrayListOfValues("angelic"),
-			Util.newArrayListOfValues("angelic"),
-			Util.newArrayListOfValues("angelic"),
-			"They quickly shift into a pair of smooth, slender legs, and [npc.she] [npc.verb(let)] out a gasp as a layer of flawless, angelic skin rapidly grows to cover them."
-				+ " As they finish transforming, [npc.she] almost [npc.verb(lose)] [npc.her] balance as the bones in [npc.her] feet start to shift and rearrange themselves."
-				+ " After a moment, they've transformed into slender, human-like feet, ending in soft, delicate toes.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldAngel(angelic legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs and feet are human in shape, but are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "红润", "天使"),
+			Util.newArrayListOfValues("阴柔", "红润", "天使"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
+			"迅速转化为了一双光滑、纤细的腿，无暇的天使皮肤迅速覆盖其上，[npc.she]不禁惊叹一声。"
+				+ "这部分转化结束后，[npc.her]脚上的骨头也开始变形重构，害得[npc.she]差点失去平衡。"
+				+ "过了一段时间，便化成像人一样纤细的脚，脚趾柔软且细腻。<br/>"
+				+ "[npc.Name]现在拥有[style.boldAngel(天使的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿和脚形状上与人类无异，但[npc.materialCompositionDescriptor][npc.legFullDescription(true)]。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL), false) {
 	};
@@ -75,34 +75,34 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.PLANTIGRADE,
 			FootType.HUMANOID,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "demonic"),
-			Util.newArrayListOfValues("feminine", "flawless", "demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚","恶魔"),
+			Util.newArrayListOfValues("阴柔", "无暇", "恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] legs and feet are human in shape, but are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"[npc.Her]的腿和脚形状上与人类无异，但[npc.materialCompositionDescriptor][npc.legFullDescription(true)]。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL), false) {
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			if (!owner.isShortStature()) {
 				return UtilText.parse(owner,
-						" They quickly shift into a pair of smooth, slender legs, and [npc.she] [npc.verb(let)] out a gasp as a layer of flawless, demonic skin rapidly grows to cover them."
-						+ " As they finish transforming, [npc.she] almost [npc.verb(lose)] [npc.her] balance as the bones in [npc.her] feet start to shift and rearrange themselves."
-						+ " After a moment, they've transformed into slender human-like feet, ending in soft, delicate toes.<br/>"
-						+ "[npc.Name] now [npc.has] [style.boldDemon(demonic legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription]."
+						"迅速转化为了一双光滑、纤细的腿，无暇的恶魔皮肤迅速覆盖其上，[npc.she]不禁惊叹一声。"
+						+ "这部分转化结束后，[npc.her]脚上的骨头也开始变形重构，害得[npc.she]差点失去平衡。"
+						+ "过了一段时间，便化成像人一样纤细的脚，脚趾柔软且细腻。<br/>"
+						+ "[npc.Name]现在拥有[style.boldDemon(恶魔的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。"
 					+ "</p>");
 			} else {
 				return UtilText.parse(owner,
-						" They quickly shift into a pair of smooth, slender legs, and [npc.she] [npc.verb(let)] out a gasp as a layer of flawless, impish skin rapidly grows to cover them."
-						+ " As they finish transforming, [npc.she] almost [npc.verb(lose)] [npc.her] balance as the bones in [npc.her] feet start to shift and rearrange themselves."
-						+ " After a moment, they've transformed into slender human-like feet, ending in soft, delicate toes.<br/>"
-						+ "[npc.Name] now [npc.has] [style.boldImp(impish legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription]."
+						"迅速转化为了一双光滑、纤细的腿，无暇的小恶魔皮肤迅速覆盖其上，[npc.she]不禁惊叹一声。"
+						+ "这部分转化结束后，[npc.her]脚上的骨头也开始变形重构，害得[npc.she]差点失去平衡。"
+						+ "过了一段时间，便化成像人一样纤细的脚，脚趾柔软且细腻。<br/>"
+						+ "[npc.Name]现在拥有[style.boldImp(小恶魔的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。"
 					+ "</p>");
 			}
 		}
@@ -112,42 +112,42 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.UNGULIGRADE,
 			FootType.HOOFS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "demonic"),
-			Util.newArrayListOfValues("feminine", "flawless", "demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚","恶魔"),
+			Util.newArrayListOfValues("阴柔", "无暇", "恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] demonic legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into hard hoofs.",
+			"[npc.Her]恶魔的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了硬质的蹄子。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL), false) {
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			if (!owner.isShortStature()) {
 				return UtilText.parse(owner,
-							" They quickly shift into a pair of smooth, slender legs, and [npc.name] [npc.verb(let)] out a gasp as a layer of flawless, demonic skin rapidly grows to cover them."
-							+ " As [npc.her] new skin spreads down to the ends of [npc.her] toes, they suddenly push together, and [npc.she] [npc.verb(let)] out a cry as a thick, hoof-like nail grows in their place,"
-								+ " quickly transforming to turn [npc.her] feet into hard, demonic hoofs."
-							+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new skin smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-							+ "[npc.NameIsFull] left with [style.boldDemon(demonic legs and hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription]."
+							"迅速转化为了一双光滑、纤细的腿，无暇的恶魔皮肤迅速覆盖其上，[npc.she]不禁惊叹一声。"
+							+ "新生的皮肤一直延伸到脚趾，[npc.she]忽然大叫一声，原来是脚趾并在了一起，一块厚实的蹄子般的指甲在原处生长出来，"
+								+ "迅速将[npc.her]的脚转化为硬质的恶魔蹄子。"
+							+ "转化结束后，[npc.she]看到大腿处新生的皮肤自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+							+ "[npc.NameIsFull]有着[style.boldDemon(恶魔的腿和蹄状的脚)]，[npc.materialDescriptor][npc.legFullDescription]。"
 						+ "</p>");
 			} else {
 				return UtilText.parse(owner,
-						" They quickly shift into a pair of smooth, slender legs, and [npc.name] [npc.verb(let)] out a gasp as a layer of flawless, demonic skin rapidly grows to cover them."
-						+ " As [npc.her] new skin spreads down to the ends of [npc.her] toes, they suddenly push together, and [npc.she] [npc.verb(let)] out a cry as a thick, hoof-like nail grows in their place,"
-							+ " quickly transforming to turn [npc.her] feet into hard, demonic hoofs."
-						+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new skin smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-						+ "[npc.NameIsFull] left with [style.boldImp(impish legs and hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription]."
+						"迅速转化为了一双光滑、纤细的腿，无暇的小恶魔皮肤迅速覆盖其上，[npc.she]不禁惊叹一声。"
+						+ "新生的皮肤一直延伸到脚趾，[npc.she]忽然大叫一声，原来是脚趾并在了一起，一块厚实的蹄子般的指甲在原处生长出来，"
+							+ "迅速将[npc.her]的脚转化为硬质的恶魔蹄子。"
+						+ "转化结束后，[npc.she]看到大腿处新生的皮肤自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+						+ "[npc.Name]现在拥有[style.boldImp(小恶魔的腿和蹄状的脚)]，[npc.materialDescriptor][npc.legFullDescription]。"
 					+ "</p>");
 			}
 		}
 		@Override
 		public String getTransformName() {
-			return "demonic-hoofed";
+			return "恶魔蹄";
 		}
 	};
 
@@ -155,35 +155,35 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.UNGULIGRADE,
 			FootType.HOOFS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "hair-coated", "demonic-horse"),
-			Util.newArrayListOfValues("feminine", "hair-coated", "demonic-horse"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "覆盖毛发", "恶魔马般"),
+			Util.newArrayListOfValues("阴柔", "覆盖毛发", "恶魔马般"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] demonic, horse-like legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into hard hoofs.",
+			"[npc.Her]恶魔化马一般的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了硬质的蹄子。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A layer of short, horse-like hair quickly grows over [npc.her] demonic legs as they shift into a new form."
-					+ " As this hair spreads down to the ends of [npc.her] toes, they suddenly push together, and [npc.she] [npc.verb(let)] out a cry as a thick, hoof-like nail grows in their place,"
-						+ " before quickly transforming to turn [npc.her] feet into hard, demonic hoofs."
-					+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new hair smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh."
-					+ "<br/>[npc.Name] now [npc.has]"
+					"在[npc.her]的恶魔腿转变形态时，马一般的粗短毛发迅速生长于其上。"
+					+ "毛发一直延伸到脚趾，[npc.her]忽然大叫一声，原来是脚趾并在了一起，一块厚实的蹄子般的指甲在原处生长出来，"
+						+ "迅速将[npc.her]的脚转化为硬质的恶魔蹄子。"
+					+ "转化结束后，[npc.she]看到大腿处新生的毛发自然过渡成了覆盖身体其他部位的[npc.skin]。"
+					+ "<br/>[npc.Name]现在拥有"
 						+ (!owner.isShortStature()
-							?" [style.boldDemon(animalistic, demonic legs with hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription]."
-							:"[style.boldImp(animalistic, impish legs with hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription]."));
+							?"[style.boldDemon(恶魔化动物般的腿和蹄状的脚)]，[npc.materialDescriptor][npc.legFullDescription]。"
+							:"[style.boldImp(小恶魔化动物般的腿和蹄状的脚)]，[npc.materialDescriptor][npc.legFullDescription]。"));
 		}
 		@Override
 		public String getTransformName() {
-			return "demonic-horse";
+			return "恶魔马";
 		}
 	};
 
@@ -191,17 +191,17 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.NONE,
 			FootType.NONE,
-			"a",
-			"tail",
-			"tails",
-			Util.newArrayListOfValues("masculine", "scaly", "demonic-snake"),
-			Util.newArrayListOfValues("feminine", "scaly", "demonic-snake"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一条",
+			"尾巴",
+			"尾巴",
+			Util.newArrayListOfValues("阳刚", "鳞片覆盖", "恶魔蛇"),
+			Util.newArrayListOfValues("阴柔", "鳞片覆盖", "恶魔蛇"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] demonic, snake-like lower body is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"[npc.Her]恶魔化蛇一般的下肢[npc.materialCompositionDescriptor][npc.legFullDescription(true)]",
 			Util.newArrayListOfValues(
 					LegConfiguration.TAIL_LONG),
 			false) {
@@ -212,16 +212,16 @@ public class LegType {
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A layer of smooth scales quickly grow over [npc.her] demonic legs as they take on a snake-like appearance."
-					+ " Quickly coming to an end, the transformation leaves [npc.name] with [npc.her] new scales smoothly transitioning into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh."
-					+ "<br/>[npc.Name] now [npc.has]"
+					"在[npc.her]的恶魔腿转变蛇的样貌时，一层光滑的鳞片迅速生长于其上。"
+					+ "转化很快就步入尾声，[npc.Name]大腿处新生的鳞片自然过渡成了覆盖身体其他部位的[npc.skin]。"
+					+ "<br/>[npc.Name]现在拥有"
 						+ (!owner.isShortStature()
-							?" [style.boldDemon(demonic, snake-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."
-							:"[style.boldImp(impish, snake-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."));
+							?"[style.boldDemon(恶魔化蛇一般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"
+							:"[style.boldImp(小恶魔化蛇一般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"));
 		}
 		@Override
 		public String getTransformName() {
-			return "demonic-snake";
+			return "恶魔蛇";
 		}
 		@Override
 		public boolean isAvailableForSelfTransformMenu(GameCharacter gc) {
@@ -233,33 +233,33 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.DIGITIGRADE,
 			FootType.ARACHNID,
-			"a",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "arachnid", "demonic-spider"),
-			Util.newArrayListOfValues("feminine", "arachnid", "demonic-spider"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一条",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "蛛形", "恶魔蛛"),
+			Util.newArrayListOfValues("阴柔", "蛛形", "恶魔蛛"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] demonic, spider-like lower body is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"[npc.Her]恶魔化蜘蛛般的下肢[npc.materialCompositionDescriptor][npc.legFullDescription(true)]",
 			Util.newArrayListOfValues(
 					LegConfiguration.ARACHNID),
 			true) {
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A layer of smooth chitin quickly grows over [npc.her] demonic [npc.legs] as they take on a spider-like appearance."
-					+ " Quickly coming to an end, the transformation leaves [npc.name] with [npc.her] new chitin smoothly transitioning into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh."
-					+ "<br/>[npc.Name] now [npc.has]"
+					"在[npc.her]的恶魔腿转变为蜘蛛样貌时，一层光滑的几丁质外壳迅速生长于其上。"
+					+ "转化很快就步入尾声，[npc.Name]大腿处新生的光滑几丁质外壳自然过渡成了覆盖身体其他部位的[npc.skin]。"
+					+ "<br/>[npc.Name]现在拥有"
 						+ (!owner.isShortStature()
-							?" [style.boldDemon(demonic, spider-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."
-							:"[style.boldImp(impish, spider-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."));
+							?"[style.boldDemon(恶魔化蜘蛛般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"
+							:"[style.boldImp(小恶魔化蜘蛛般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"));
 		}
 		@Override
 		public String getTransformName() {
-			return "demonic-spider";
+			return "恶魔蛛";
 		}
 		@Override
 		public boolean isAvailableForSelfTransformMenu(GameCharacter gc) {
@@ -271,33 +271,33 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.TENTACLED,
 			FootType.TENTACLE,
-			"a",
-			"tentacle",
-			"tentacles",
-			Util.newArrayListOfValues("masculine", "cephalopod", "demonic-octopus"),
-			Util.newArrayListOfValues("feminine", "cephalopod", "demonic-octopus"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一根",
+			"触手",
+			"触手",
+			Util.newArrayListOfValues("阳刚", "头足类", "恶魔章鱼"),
+			Util.newArrayListOfValues("阴柔", "头足类", "恶魔章鱼"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] demonic, octopus-like lower body is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"[npc.Her]恶魔化章鱼般的下肢[npc.materialCompositionDescriptor][npc.legFullDescription(true)]。",
 			Util.newArrayListOfValues(
 					LegConfiguration.CEPHALOPOD),
 			false) {
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A layer of smooth skin quickly grows over [npc.her] demonic [npc.legs] as they alarmingly take on a tentacle-like appearance."
-					+ " Quickly coming to an end, the powerful transformation leaves [npc.name] with [npc.her] new skin smoothly transitioning into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh."
-					+ "<br/>[npc.Name] now [npc.has]"
+					"在[npc.her]的恶魔腿转变为触手状样貌时，一层光滑的皮肤迅速生长于其上。"
+					+ "转化很快就步入尾声，[npc.Name]大腿处新生的皮肤自然过渡成了覆盖身体其他部位的[npc.skin]。"
+					+ "<br/>[npc.Name]现在拥有"
 						+ (!owner.isShortStature()
-							?" [style.boldDemon(demonic, octopus-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."
-							:"[style.boldImp(impish, octopus-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."));
+							?"[style.boldDemon(恶魔化章鱼般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"
+							:"[style.boldImp(小恶魔化章鱼般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"));
 		}
 		@Override
 		public String getTransformName() {
-			return "demonic-octopus";
+			return "恶魔章鱼";
 		}
 		@Override
 		public AbstractTentacleType getTentacleType() {
@@ -316,17 +316,17 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.NONE,
 			FootType.NONE,
-			"a",
-			"tail",
-			"tails",
-			Util.newArrayListOfValues("masculine", "scaly", "demonic-fish"),
-			Util.newArrayListOfValues("feminine", "scaly", "demonic-fish"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一条",
+			"尾巴",
+			"尾巴",
+			Util.newArrayListOfValues("阳刚", "鳞片覆盖", "恶魔鱼"),
+			Util.newArrayListOfValues("阴柔", "鳞片覆盖", "恶魔鱼"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] demonic, fish-like lower body is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"[npc.Her]恶魔化鱼一般的下肢[npc.materialCompositionDescriptor][npc.legFullDescription(true)]。",
 			Util.newArrayListOfValues(
 					LegConfiguration.TAIL),
 			false) {
@@ -337,32 +337,32 @@ public class LegType {
 		@Override
 		public String getNameSingular(GameCharacter gc) {
 			if(gc.hasStatusEffect(StatusEffect.AQUATIC_NEGATIVE)) {
-				return "leg";
+				return "腿";
 			} else {
-				return "tail";
+				return "尾巴";
 			}
 		}
 		@Override
 		public String getNamePlural(GameCharacter gc) {
 			if(gc.hasStatusEffect(StatusEffect.AQUATIC_NEGATIVE)) {
-				return "legs";
+				return "腿";
 			} else {
-				return "tails";
+				return "尾巴";
 			}
 		}
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A layer of smooth scales quickly grow over [npc.her] demonic legs as they take on a fish-like appearance."
-					+ " Quickly coming to an end, the transformation leaves [npc.name] with [npc.her] new scales smoothly transitioning into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh."
-					+ "<br/>[npc.Name] now [npc.has]"
+					"在[npc.her]的恶魔腿转变为鱼的样貌时，光滑的鳞片迅速生长于其上。"
+					+ "转化很快就步入尾声，[npc.Name]大腿处新生的鳞片自然过渡成了覆盖身体其他部位的[npc.skin]。"
+					+ "<br/>[npc.Name]现在拥有"
 						+ (!owner.isShortStature()
-							?" [style.boldDemon(demonic, fish-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."
-							:"[style.boldImp(impish, fish-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."));
+							?"[style.boldDemon(恶魔化鱼一般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"
+							:"[style.boldImp(小恶魔化鱼一般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"));
 		}
 		@Override
 		public String getTransformName() {
-			return "demonic-fish";
+			return "恶魔鱼";
 		}
 		@Override
 		public boolean isAvailableForSelfTransformMenu(GameCharacter gc) {
@@ -374,33 +374,33 @@ public class LegType {
 			Race.DEMON,
 			FootStructure.DIGITIGRADE,
 			FootType.TALONS,
-			"a",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "clawed", "anthropomorphic, bird-like"),
-			Util.newArrayListOfValues("feminine", "clawed", "anthropomorphic, bird-like"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			"一条",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "带爪", "鸟一般拟人"),
+			Util.newArrayListOfValues("阴柔", "带爪", "鸟一般拟人"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			"-",
-			"[npc.Her] demonic, bird-like lower body is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].",
+			"[npc.Her]恶魔化鸟一般的下肢[npc.materialCompositionDescriptor][npc.legFullDescription(true)]。",
 			Util.newArrayListOfValues(
 					LegConfiguration.AVIAN),
 			false) {
 		@Override
 		public String getTransformationDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A layer of feathers quickly grows over [npc.her] demonic [npc.legs] as they take on a bird-like appearance."
-					+ " Quickly coming to an end, the transformation leaves [npc.name] with [npc.her] new feathers smoothly transitioning into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh."
-					+ "<br/>[npc.Name] now [npc.has]"
+					"在[npc.her]的恶魔腿转变为鸟的样貌时，一层羽毛迅速生长于其上。"
+					+ "转化很快就步入尾声，[npc.Name]大腿处新生的羽毛自然过渡成了覆盖身体其他部位的[npc.skin]。"
+					+ "<br/>[npc.Name]现在拥有"
 						+ (!owner.isShortStature()
-							?" [style.boldDemon(demonic, bird-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."
-							:"[style.boldImp(impish, bird-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription]."));
+							?"[style.boldDemon(恶魔化鸟一般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"
+							:"[style.boldImp(小恶魔化鸟一般的腿)]，[npc.materialDescriptor][npc.legFullDescription]。"));
 		}
 		@Override
 		public String getTransformName() {
-			return "demonic-eagle";
+			return "恶魔鹰";
 		}
 		@Override
 		public boolean isAvailableForSelfTransformMenu(GameCharacter gc) {
@@ -412,21 +412,21 @@ public class LegType {
 			Race.COW_MORPH,
 			FootStructure.UNGULIGRADE,
 			FootType.HOOFS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "hoofed", "furry", "fur-coated", "anthropomorphic, cow-like"),
-			Util.newArrayListOfValues("feminine", "hoofed", "furry", "fur-coated", "anthropomorphic, cow-like"),
-			Util.newArrayListOfValues("cow-like", "bovine"),
-			Util.newArrayListOfValues("cow-like", "bovine"),
-			Util.newArrayListOfValues("cow-like", "bovine"),
-			Util.newArrayListOfValues("cow-like", "bovine"),
-			"A layer of short, cow-like hair quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, they suddenly push together, and [npc.she] [npc.verb(let)] out a cry as a thick, hoof-like nail grows in their place,"
-					+ " before quickly transforming to turn [npc.her] feet into cow-like hoofs."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldCowMorph(cow-like legs and hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic cow-like hoofs.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "蹄状", "毛茸茸", "覆盖毛皮", "牛一般拟人"),
+			Util.newArrayListOfValues("阴柔", "蹄状", "毛茸茸", "覆盖毛皮", "牛一般拟人"),
+			Util.newArrayListOfValues("牛一般", "牛类"),
+			Util.newArrayListOfValues("牛一般", "牛类"),
+			Util.newArrayListOfValues("牛一般", "牛类"),
+			Util.newArrayListOfValues("牛一般", "牛类"),
+			"在[npc.her]的腿转变形态时，牛一般的粗短毛发迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，[npc.she]忽然大叫一声，原来是脚趾并在了一起，一块厚实的蹄子般的指甲在原处生长出来，"
+					+ "迅速将[npc.her]的脚转化为牛一般的硬质蹄子。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldCowMorph(牛一般的腿和蹄状的脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的牛蹄子。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -436,20 +436,20 @@ public class LegType {
 			Race.DOG_MORPH,
 			FootStructure.DIGITIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, dog-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, dog-like"),
-			Util.newArrayListOfValues("dog-like", "canine"),
-			Util.newArrayListOfValues("dog-like", "canine"),
-			Util.newArrayListOfValues("dog-like", "canine"),
-			Util.newArrayListOfValues("dog-like", "canine"),
-			"A layer of dog-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into little blunt claws, and leathery pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldDogMorph(dog-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic dog-like paws, complete with little blunt claws and leathery pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "犬一般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖毛皮", "犬一般拟人"),
+			Util.newArrayListOfValues("犬一般", "犬类"),
+			Util.newArrayListOfValues("犬一般", "犬类"),
+			Util.newArrayListOfValues("犬一般", "犬类"),
+			Util.newArrayListOfValues("犬一般", "犬类"),
+			"在[npc.her]的腿转变形态时，一层犬一般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了圆钝的小爪子，皮质的肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldDogMorph(犬一般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的犬脚爪，长着圆钝的小爪子和皮质的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -459,20 +459,20 @@ public class LegType {
 			Race.WOLF_MORPH,
 			FootStructure.DIGITIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, wolf-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, wolf-like"),
-			Util.newArrayListOfValues("wolf-like", "lupine"),
-			Util.newArrayListOfValues("wolf-like", "lupine"),
-			Util.newArrayListOfValues("wolf-like", "lupine"),
-			Util.newArrayListOfValues("wolf-like", "lupine"),
-			"A layer of wolf-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and tough leathery pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldWolfMorph(wolf-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic wolf-like paws, complete with sharp claws and tough leathery pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "狼一般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "狼一般拟人"),
+			Util.newArrayListOfValues("狼一般", "狼类"),
+			Util.newArrayListOfValues("狼一般", "狼类"),
+			Util.newArrayListOfValues("狼一般", "狼类"),
+			Util.newArrayListOfValues("狼一般", "狼类"),
+			"在[npc.her]的腿转变形态时，一层狼一般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了锋利的爪子，粗糙的皮质肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldWolfMorph(狼一般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的狼脚爪，长着锋利的爪子和皮质的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -482,20 +482,20 @@ public class LegType {
 			Race.FOX_MORPH,
 			FootStructure.DIGITIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, fox-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, fox-like"),
-			Util.newArrayListOfValues("fox-like", "vulpine"),
-			Util.newArrayListOfValues("fox-like", "vulpine"),
-			Util.newArrayListOfValues("fox-like", "vulpine"),
-			Util.newArrayListOfValues("fox-like", "vulpine"),
-			"A layer of fox-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and little pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.</br>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldFoxMorph(fox-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic fox-like paws, complete with sharp claws and tough leathery pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "狐狸般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "狐狸般拟人"),
+			Util.newArrayListOfValues("狐狸般", "狐类"),
+			Util.newArrayListOfValues("狐狸般", "狐类"),
+			Util.newArrayListOfValues("狐狸般", "狐类"),
+			Util.newArrayListOfValues("狐狸般", "狐类"),
+			"在[npc.her]的腿转变形态时，一层狐狸般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了锋利的爪子，小巧的肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。</br>"
+				+ "[npc.Name]现在拥有人形的[style.boldFoxMorph(狐狸般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的狐狸脚爪，长着锋利的爪子和小巧的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -505,20 +505,20 @@ public class LegType {
 			Race.SQUIRREL_MORPH,
 			FootStructure.PLANTIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, squirrel-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, squirrel-like"),
-			Util.newArrayListOfValues("squirrel-like"),
-			Util.newArrayListOfValues("squirrel-like"),
-			Util.newArrayListOfValues("squirrel-like"),
-			Util.newArrayListOfValues("squirrel-like"),
-			"A layer of squirrel-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and little pink pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldSquirrelMorph(squirrel-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic squirrel-like paws, complete with claws and pink pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "松鼠般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "松鼠般拟人"),
+			Util.newArrayListOfValues("松鼠般"),
+			Util.newArrayListOfValues("松鼠般"),
+			Util.newArrayListOfValues("松鼠般"),
+			Util.newArrayListOfValues("松鼠般"),
+			"在[npc.her]的腿转变形态时，一层松鼠般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了锋利的爪子，小巧的粉色肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldSquirrelMorph(松鼠般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的松鼠脚爪，长着爪子和粉色的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -528,20 +528,20 @@ public class LegType {
 			Race.RAT_MORPH,
 			FootStructure.PLANTIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, rat-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, rat-like"),
-			Util.newArrayListOfValues("rat-like"),
-			Util.newArrayListOfValues("rat-like"),
-			Util.newArrayListOfValues("rat-like"),
-			Util.newArrayListOfValues("rat-like"),
-			"A layer of rat-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and little pink pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldRatMorph(rat-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic rat-like paws, complete with claws and leathery pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "老鼠般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "老鼠般拟人"),
+			Util.newArrayListOfValues("老鼠般"),
+			Util.newArrayListOfValues("老鼠般"),
+			Util.newArrayListOfValues("老鼠般"),
+			Util.newArrayListOfValues("老鼠般"),
+			"在[npc.her]的腿转变形态时，一层老鼠般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了锋利的爪子，小巧的粉色肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldRatMorph(老鼠般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的老鼠脚爪，长着爪子和粉色的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -551,20 +551,20 @@ public class LegType {
 			Race.RABBIT_MORPH,
 			FootStructure.PLANTIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, rabbit-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, rabbit-like"),
-			Util.newArrayListOfValues("rabbit-like"),
-			Util.newArrayListOfValues("rabbit-like"),
-			Util.newArrayListOfValues("rabbit-like"),
-			Util.newArrayListOfValues("rabbit-like"),
-			"A layer of rabbit-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into blunt claws, and soft little pads grow to cover [npc.her] soles, leaving [npc.herHim] with long, paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldRabbitMorph(rabbit-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into long, anthropomorphic, rabbit-like paws, complete with blunt claws and soft pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "兔子般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "兔子般拟人"),
+			Util.newArrayListOfValues("兔子般"),
+			Util.newArrayListOfValues("兔子般"),
+			Util.newArrayListOfValues("兔子般"),
+			Util.newArrayListOfValues("兔子般"),
+			"在[npc.her]的腿转变形态时，一层兔子般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了圆钝的爪子，小巧柔软的肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldRabbitMorph(兔般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的兔子脚爪，长着圆钝的爪子和柔软的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -574,20 +574,20 @@ public class LegType {
 			Race.BAT_MORPH,
 			FootStructure.DIGITIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, bat-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, bat-like"),
-			Util.newArrayListOfValues("bat-like"),
-			Util.newArrayListOfValues("bat-like"),
-			Util.newArrayListOfValues("bat-like"),
-			Util.newArrayListOfValues("bat-like"),
-			"A layer of bat-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and little pink pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldBatMorph(bat-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic bat-like paws, complete with claws and leathery pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "蝙蝠般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "蝙蝠般拟人"),
+			Util.newArrayListOfValues("蝙蝠般"),
+			Util.newArrayListOfValues("蝙蝠般"),
+			Util.newArrayListOfValues("蝙蝠般"),
+			Util.newArrayListOfValues("蝙蝠般"),
+			"在[npc.her]的腿转变形态时，一层蝙蝠般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了锋利的爪子，小巧的粉色肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldBatMorph(蝙蝠般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的蝙蝠脚爪，长着爪子和粉色的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL), false) {
 	};
@@ -596,20 +596,20 @@ public class LegType {
 			Race.CAT_MORPH,
 			FootStructure.DIGITIGRADE,
 			FootType.PAWS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "furry", "fur-coated", "anthropomorphic, cat-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "anthropomorphic, cat-like"),
-			Util.newArrayListOfValues("cat-like", "feline"),
-			Util.newArrayListOfValues("cat-like", "feline"),
-			Util.newArrayListOfValues("cat-like", "feline"),
-			Util.newArrayListOfValues("cat-like", "feline"),
-			"A layer of cat-like fur quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp, retractable claws, and little pink pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldCatMorph(cat-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic cat-like paws, complete with retractable claws and pink pads.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "毛茸茸", "覆盖毛皮", "猫一般拟人"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "猫一般拟人"),
+			Util.newArrayListOfValues("猫一般", "猫类"),
+			Util.newArrayListOfValues("猫一般", "猫类"),
+			Util.newArrayListOfValues("猫一般", "猫类"),
+			Util.newArrayListOfValues("猫一般", "猫类"),
+			"在[npc.her]的腿转变形态时，一层猫一般的皮毛迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了可收缩的锋利爪子，小巧的粉色肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldCatMorph(猫一般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的猫脚爪，长着可收缩的爪子和粉色的肉垫。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -619,20 +619,20 @@ public class LegType {
 			Race.ALLIGATOR_MORPH,
 			FootStructure.PLANTIGRADE,
 			FootType.HUMANOID,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "scaly", "reptilian", "anthropomorphic, alligator-like"),
-			Util.newArrayListOfValues("feminine", "scaly", "reptilian", "anthropomorphic, alligator-like"),
-			Util.newArrayListOfValues("alligator-like", "scaly", "reptilian"),
-			Util.newArrayListOfValues("alligator-like", "scaly", "reptilian"),
-			Util.newArrayListOfValues("alligator-like", "scaly", "reptilian"),
-			Util.newArrayListOfValues("alligator-like", "scaly", "reptilian"),
-			"A layer of alligator-like scales quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new scales spread down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and little scales grow to cover [npc.her] soles, leaving [npc.herHim] with alligator-like feet."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new scales smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldGatorMorph(alligator-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic alligator-like feet, complete with sharp claws.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "覆盖鳞片", "爬行类", "鳄鱼般拟人"),
+			Util.newArrayListOfValues("阴柔", "覆盖鳞片", "爬行类", "鳄鱼般拟人"),
+			Util.newArrayListOfValues("鳄鱼般", "覆盖鳞片", "爬行类"),
+			Util.newArrayListOfValues("鳄鱼般", "覆盖鳞片", "爬行类"),
+			Util.newArrayListOfValues("鳄鱼般", "覆盖鳞片", "爬行类"),
+			Util.newArrayListOfValues("鳄鱼般", "覆盖鳞片", "爬行类"),
+			"在[npc.her]的腿转变形态时，一层鳄鱼般的鳞片迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，指甲增厚变成了锋利的爪子，细小的鳞片覆盖了脚掌，给[npc.herHim]留下鳄鱼般的脚。"
+				+ "转化结束后，[npc.she]看到大腿处新生的鳞片自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldGatorMorph(鳄鱼般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了鳄鱼般拟人的脚，长着锋利的爪子。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -642,21 +642,21 @@ public class LegType {
 			Race.HORSE_MORPH,
 			FootStructure.UNGULIGRADE,
 			FootType.HOOFS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "hair-coated", "anthropomorphic, horse-like"),
-			Util.newArrayListOfValues("feminine", "hair-coated", "anthropomorphic, horse-like"),
-			Util.newArrayListOfValues("horse-like", "equine"),
-			Util.newArrayListOfValues("horse-like", "equine"),
-			Util.newArrayListOfValues("horse-like", "equine"),
-			Util.newArrayListOfValues("horse-like", "equine"),
-			"A layer of short, horse-like hair quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, they suddenly push together, and [npc.she] [npc.verb(let)] out a cry as a thick, hoof-like nail grows in their place,"
-					+ " before quickly transforming to turn [npc.her] feet into horse-like hoofs."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new hair smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldHorseMorph(horse-like legs and hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic horse-like hoofs.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "覆盖毛发", "马一般拟人"),
+			Util.newArrayListOfValues("阴柔", "覆盖毛发", "马一般拟人"),
+			Util.newArrayListOfValues("马一般", "马类"),
+			Util.newArrayListOfValues("马一般", "马类"),
+			Util.newArrayListOfValues("马一般", "马类"),
+			Util.newArrayListOfValues("马一般", "马类"),
+			"在[npc.her]的腿转变形态时，马一般的粗短毛发迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，[npc.she]忽然大叫一声，原来是脚趾并在了一起，一块厚实的蹄子般的指甲在原处生长出来，"
+					+ "迅速将[npc.her]的脚转化为马一般的硬质蹄子。"
+				+ "转化结束后，[npc.she]看到大腿处新生的毛发自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldHorseMorph(马一般的腿和蹄状的脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的马蹄子。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -717,21 +717,21 @@ public class LegType {
 			Race.REINDEER_MORPH,
 			FootStructure.UNGULIGRADE,
 			FootType.HOOFS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "fur-coated", "anthropomorphic, reindeer-like"),
-			Util.newArrayListOfValues("feminine", "fur-coated", "anthropomorphic, reindeer-like"),
-			Util.newArrayListOfValues("reindeer-like"),
-			Util.newArrayListOfValues("reindeer-like"),
-			Util.newArrayListOfValues("reindeer-like"),
-			Util.newArrayListOfValues("reindeer-like"),
-			"A layer of furry, reindeer-like hair quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new fur spreads down to the ends of [npc.her] toes, they suddenly push together, and [npc.she] [npc.verb(let)] out a cry as a crescent-shaped, cloven hoof grows in their place,"
-					+ " before quickly transforming to turn [npc.her] feet into reindeer-like hoofs."
-				+ " As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldReindeerMorph(reindeer-like legs and hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic reindeer-like hoofs.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "覆盖毛皮", "驯鹿般拟人"),
+			Util.newArrayListOfValues("阴柔", "覆盖毛皮", "驯鹿般拟人"),
+			Util.newArrayListOfValues("驯鹿般"),
+			Util.newArrayListOfValues("驯鹿般"),
+			Util.newArrayListOfValues("驯鹿般"),
+			Util.newArrayListOfValues("驯鹿般"),
+			"在[npc.her]的腿转变形态时，驯鹿般毛茸茸的毛发迅速生长于其上。"
+				+ "新生的毛皮一直延伸到脚趾，[npc.she]忽然大叫一声，原来是脚趾并在了一起，一块新月形分成两瓣的蹄子在原处生长出来，"
+					+ "迅速将[npc.her]的脚转化为驯鹿般的蹄子。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮毛自然过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldReindeerMorph(驯鹿般的腿和蹄状的脚)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的驯鹿蹄子。",
 			Util.newArrayListOfValues(
 					LegConfiguration.BIPEDAL,
 					LegConfiguration.QUADRUPEDAL), false) {
@@ -741,22 +741,22 @@ public class LegType {
 			Race.HARPY,
 			FootStructure.DIGITIGRADE,
 			FootType.TALONS,
-			"a pair of",
-			"leg",
-			"legs",
-			Util.newArrayListOfValues("masculine", "clawed", "anthropomorphic, bird-like"),
-			Util.newArrayListOfValues("feminine", "clawed", "anthropomorphic, bird-like"),
-			Util.newArrayListOfValues("bird-like"),
-			Util.newArrayListOfValues("bird-like"),
-			Util.newArrayListOfValues("bird-like"),
-			Util.newArrayListOfValues("bird-like"),
-			"A layer of scaly, bird-like leather quickly grows over [npc.her] legs as they shift into a new form."
-				+ " As [npc.her] new leathery skin spreads down to the ends of [npc.her] toes, [npc.her] feet start to undergo an extreme transformation."
-				+ " [npc.Her] toes combine together and re-shape themselves into three forward-facing talons, as a fourth, thumb-like talon branches out behind them."
-				+ " As the transformation ends, this leathery skin sharply transitions into [npc.her] body's [npc.skinColour] [npc.skin] at [npc.her] upper-thigh.<br/>"
-				+ "[npc.Name] now [npc.has] anthropomorphic, [style.boldHarpy(bird-like legs and talons in place of feet)], which are [npc.materialDescriptor] [npc.legFullDescription].",
-			"[npc.Her] bird-like legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], which sharply transitions into [npc.her] body's [npc.skinColour] [npc.skin] at [npc.her] upper-thigh."
-				+ " At the end of each of [npc.her] [npc.legs], [npc.she] [npc.has] sharp, bird-like talons.",
+			"一双",
+			"腿",
+			"腿",
+			Util.newArrayListOfValues("阳刚", "带爪", "鸟一般拟人"),
+			Util.newArrayListOfValues("阴柔", "带爪", "鸟一般拟人"),
+			Util.newArrayListOfValues("鸟一般"),
+			Util.newArrayListOfValues("鸟一般"),
+			Util.newArrayListOfValues("鸟一般"),
+			Util.newArrayListOfValues("鸟一般"),
+			"在[npc.her]的腿转变形态时，鸟一般的粗糙皮肤迅速生长于其上。"
+				+ "新生的皮质皮肤延伸到脚趾，而[npc.her]的脚则正在经历巨变。"
+				+ "[npc.Her]的脚趾聚合在一起，重新化成了三根向前的鸟爪，而第四根拇指样的利爪则位于后方。"
+				+ "转化结束后，[npc.she]看到大腿处新生的皮质皮肤迅速过渡成了覆盖身体其他部位的[npc.skin]。<br/>"
+				+ "[npc.Name]现在拥有人形的[style.boldHarpy(鸟一般的腿和替代了脚的利爪)]，[npc.materialDescriptor][npc.legFullDescription]。",
+			"[npc.Her]鸟一般的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，自大腿处迅速过渡成了覆盖身体其他部位的[npc.skin]。"
+				+ "在每条[npc.legs]的末端，都有着鸟一般锋利的利爪。",
 				Util.newArrayListOfValues(
 						LegConfiguration.BIPEDAL,
 						LegConfiguration.AVIAN), false) {

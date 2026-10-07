@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[VIP deposit boxes]]></name>
-	<tooltipDescription><![CDATA[The VIP deposit boxes at the Bank of Elis utilise teleportation to make sure that clients' items are available at every branch.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the VIP deposit boxes in the Bank of Elis]]></virginityLossDescription>
+	<name><![CDATA[VIP储物柜]]></name>
+	<tooltipDescription><![CDATA[伊利斯银行的储物柜搭载有传送服务，以保证客户在任何支行都能享受存取服务。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯银行的VIP储物柜处]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GOLD</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

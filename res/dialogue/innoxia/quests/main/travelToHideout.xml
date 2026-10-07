@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="start">
@@ -19,16 +19,16 @@
                 <availabilityConditional><![CDATA[[#!meraxis.isPregnant()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[To the hideout]]></responseTitle>
-				<responseTooltip><![CDATA[Travel through the Shinrin Highlands to reach Meraxis's hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[前往藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[穿过心林高地，抵达梅拉克西丝的藏身处。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_travelToHideout_world_map]]></nextDialogue>
 			</response>
 			<response>
                 <availabilityConditional><![CDATA[[#meraxis.isPregnant()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait for Meraxis to return.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等待梅拉克西丝归来。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_travelToHideout_start_pregnancy_sorted]]></nextDialogue>
 			</response>
 		</responses>
@@ -48,8 +48,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[To the hideout]]></responseTitle>
-				<responseTooltip><![CDATA[Travel through the Shinrin Highlands to reach Meraxis's hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[前往藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[穿过心林高地，抵达梅拉克西丝的藏身处。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_travelToHideout_world_map]]></nextDialogue>
 			</response>
 		</responses>
@@ -71,8 +71,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Voice]]></responseTitle>
-				<responseTooltip><![CDATA[Tell this mysterious person to show themselves.]]></responseTooltip>
+				<responseTitle><![CDATA[声音]]></responseTitle>
+				<responseTooltip><![CDATA[让这个神秘人现身。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_travelToHideout_meeting]]></nextDialogue>
 			</response>
 		</responses>
@@ -87,8 +87,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Continue on to Meraxis's hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续前往梅拉克西丝的藏身处。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_travelToHideout_hideout]]></nextDialogue>
 			</response>
 		</responses>
@@ -108,8 +108,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Alone]]></responseTitle>
-				<responseTooltip><![CDATA[Suddenly finding yourself alone in this mist-clad landscape, you need to find the flames which Meraxis mentioned in order to break the youko's spell.]]></responseTooltip>
+				<responseTitle><![CDATA[独自一人]]></responseTitle>
+				<responseTooltip><![CDATA[你突然发现自己孤身一人身处这片雾气缭绕的地方，必须找到梅拉克西丝提到过的火币，才能破除妖狐的法术。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>

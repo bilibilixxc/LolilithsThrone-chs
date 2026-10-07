@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
-		<authorTag><![CDATA[A tag sewn to the inside of the bra reads 'Made by Blue999']]></authorTag>
+		<authorTag><![CDATA[胸罩内侧缝着一个小标签写着“Blue999制造”]]></authorTag>
 		<value>250</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[nursing bra]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[nursing bras]]></namePlural>
-		<description><![CDATA[This nursing bra provides additional support to lactating breasts, and has specially designed cups which can be opened to expose the wearer's nipples.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[哺乳胸罩]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[哺乳胸罩]]></namePlural>
+		<description><![CDATA[这款哺乳胸罩可为哺乳期的乳房提供额外的支撑，其特殊设计的罩杯可以打开，露出佩戴者的乳头。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -58,27 +58,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(clip)] the cups of [npc.her] nursing bra back up to cover [npc.her] [npc.nipples].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(clip)] the cups of [npc2.namePos] nursing bra back up to cover [npc.her] [npc.nipples].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(clip)] the cups of [npc2.namePos] nursing bra back up to cover [npc.her] [npc.nipples].]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将胸罩贴在[npc.her]的胸部上向后拉，使其盖住[npc.her]的[npc.nipples]。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将胸罩贴在[npc2.namePos]的胸部上向后拉，使其盖住[npc.her]的[npc.nipples]。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将胸罩贴在[npc2.namePos]的胸部上向后拉，使其盖住[npc.her]的[npc.nipples]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unclip)] the cups of [npc.her] nursing bra and [npc.verb(pull)] them down, exposing [npc.her] [npc.nipples+].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unclip)] the cups of [npc2.namePos] nursing bra and [npc.verb(pull)] them down, exposing [npc2.her] [npc2.nipples+].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unclip)] the cups of [npc2.namePos] nursing bra and [npc.verb(pull)] them down, exposing [npc2.her] [npc2.nipples+].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.her]解开了哺乳胸罩并把它拉了下来，露出了[npc.her][npc.nipples+]。
+]]></self>
+		<other><![CDATA[
+[npc.her]解开了[npc2.namePos]的哺乳胸罩并把它拉了下来，露出了[npc2.her][npc2.nipples+]。
+]]></other>
+		<otherRough><![CDATA[
+[npc.her]粗暴地解开了[npc2.namePos]的哺乳胸罩并把它扯了下来，露出了[npc2.her][npc2.nipples+]。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

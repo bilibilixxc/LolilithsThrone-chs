@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Unknown]]></name>
+	<name><![CDATA[未知]]></name>
 	<colour>BASE_GREY</colour>
-	<sexBlockedReason><![CDATA[[npc.Name] cannot have sex here!]]></sexBlockedReason> 
+	<sexBlockedReason><![CDATA[[npc.Name]不能在这做爱！]]></sexBlockedReason> 
 	<furniturePresent>true</furniturePresent>
 	<wallsPresent>true</wallsPresent>
 	<loiteringEnabled>false</loiteringEnabled>

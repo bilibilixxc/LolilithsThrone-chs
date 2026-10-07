@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Themiscyra]]></name>
+	<name><![CDATA[特弥斯库拉]]></name>
 	<colour>BASE_TEAL</colour>
 	<furniturePresent>false</furniturePresent>
 	<wallsPresent>true</wallsPresent>

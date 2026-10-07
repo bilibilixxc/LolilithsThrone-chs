@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Evelyx's Dairy]]></name>
+	<name><![CDATA[艾弗利克斯乳业]]></name>
 	<colour>BASE_YELLOW_LIGHT</colour>
 	<sexBlockedReason/>
 	<furniturePresent>false</furniturePresent>

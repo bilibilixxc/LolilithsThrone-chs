@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>100</value>
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[tail bandage]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[tail bandages]]></namePlural>
-    <description><![CDATA[A length of bandage, which has been enchanted so as to automatically wrap itself around someone's tail in order to protect it from damage and to keep loose hair away from machinery.]]></description>
+    <determiner><![CDATA[一卷]]></determiner>
+    <name><![CDATA[尾巴绷带]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[尾巴绷带]]></namePlural>
+    <description><![CDATA[一卷被施了魔法的绷带，可以自动缠绕在某人的尾巴上，以保护它免受损坏，并使松散的毛发远离机器。]]></description>
 
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
@@ -48,27 +47,27 @@
   </coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(move)] the bandage close to [npc.her] [npc.tail], at which point the arcane enchantment activates, and within seconds it's wrapped itself securely in place.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(move)] the bandage close to [npc2.namePos] [npc2.tail], at which point the arcane enchantment activates, and within seconds it's wrapped itself securely in place.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(move)] the bandage close to [npc2.namePos] [npc2.tail], at which point the arcane enchantment activates, and within seconds it's wrapped itself securely in place.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将绷带移到[npc.her]的[npc.tail]附近，就在此时，奥术附魔激活了，在几秒钟内它就牢牢地包裹住了[npc.her]的[npc.tail]。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将绷带移到[npc2.namePos]的[npc2.tail]附近，就在此时，奥术附魔激活了，在几秒钟内它就牢牢地包裹住了[npc2.namePos]的[npc2.tail]。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将绷带移到[npc2.namePos]的[npc2.tail]附近，就在此时，奥术附魔激活了，在几秒钟内它就牢牢地包裹住了[npc2.namePos]的[npc2.tail]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] at the bandage and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] at [npc2.namePos] bandage and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] impatiently [npc.verb(pull)] at [npc2.namePos] bandage and [npc.verb(take)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将绷带摘了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的绷带摘了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]急躁的将[npc2.namePos]的绷带拽了下来。
+]]></otherRough>
 	</displacementText>
 
 </clothing>

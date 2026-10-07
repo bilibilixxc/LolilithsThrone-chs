@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>350</value> 
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一对]]></determiner>
 		
-		<name><![CDATA[leather bracelet]]></name>
+		<name><![CDATA[皮质镣铐]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[leather bracelets]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[皮质镣铐]]></namePlural> 
 		
-		<description><![CDATA[A pair of leather restraints which lack a connecting chain. While doing nothing to impede movement, these bracelets nevertheless signify that the wearer is someone else's plaything or property.]]></description> 
+		<description><![CDATA[一对没有连接链的皮制镣铐。这些镣铐虽然不会妨碍行动，但却表示着穿戴者是某人的玩物或财产。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity>
 		
@@ -79,49 +79,49 @@
 	</coreAttributes>
 
   <replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(wrap)] the leather bracelets around [npc.her] wrists, before fastening the straps in place.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(wrap)] the leather bracelets around [npc2.namePos] wrists, before fastening the straps in place.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the leather bracelets around [npc2.namePos] wrists, before firmly fastening the straps in place.]]>
-	  </otherRough>
+		<self><![CDATA[
+		[npc.Name]把皮质镣铐套在[npc.her]手腕上，并系好皮带。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]把皮质镣铐套在[npc2.namePos]手腕上，并系好皮带。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地把皮质镣铐套在[npc2.namePos]手腕上，并系紧皮带。
+]]></otherRough>
 	</replacementText>
 	<displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unfasten)] the leather bracelets from around [npc.her] wrists, before taking them off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unfasten)] the leather bracelets from around [npc2.namePos] wrists, before taking them off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] the leather bracelets from around [npc2.namePos] wrists, before yanking them off.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]把皮质镣铐从[npc.her]手腕上解开，并把它们取下。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]把皮质镣铐从[npc2.namePos]手腕上解开，并把它们取下。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地把皮质镣铐从[npc2.namePos]手腕上解开，并把它们扯下。
+]]></otherRough>
 	</displacementText>
 
   <replacementText slot="ANKLE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the leather bracelets around [npc.her] ankles, before fastening the straps in place.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the leather bracelets around [npc2.namePos] ankles, before fastening the straps in place.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(force)] the leather bracelets around [npc2.namePos] ankles, before firmly fastening the straps in place.]]>
-    </otherRough>
+    <self><![CDATA[
+		[npc.Name]把皮质镣铐套在[npc.her]脚踝上，并系好皮带。
+]]></self>
+    <other><![CDATA[
+		[npc.Name]把皮质镣铐套在[npc2.namePos]脚踝上，并系好皮带。
+]]></other>
+    <otherRough><![CDATA[
+		[npc.Name]粗暴地把皮质镣铐套在[npc2.namePos]脚踝上，并系紧皮带。
+]]></otherRough>
   </replacementText>
   <displacementText slot="ANKLE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the leather bracelets from around [npc.her] ankles, before taking them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the leather bracelets from around [npc2.namePos] ankles, before taking them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] the leather bracelets from around [npc2.namePos] ankles, before yanking them off.]]>
-    </otherRough>
+    <self><![CDATA[
+		[npc.Name]把皮质镣铐从[npc.her]脚踝上解开，并把它们取下。
+		]]></self>
+    <other><![CDATA[
+		[npc.Name]把皮质镣铐从[npc2.namePos]脚踝上解开，并把它们取下。
+]]></other>
+    <otherRough><![CDATA[
+		[npc.Name]粗暴地把皮质镣铐从[npc2.namePos]脚踝上解开，并把它们扯下。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

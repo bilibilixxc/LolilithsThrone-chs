@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1000</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[sun necklace]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[sun necklaces]]></namePlural>
-		<description><![CDATA[A necklace consisting of a thin chain with a sun-shaped pendant threaded onto it. As an alternative to being worn around the neck, it would be possible to wrap the chain around your wrist.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[太阳项链]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[太阳项链]]></namePlural>
+		<description><![CDATA[一条项链，由一条细链和一个太阳形状的吊坠组成。虽然有点怪，但其实也可以将项链缠绕在手腕上。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
     <equipSlots>
@@ -61,48 +60,48 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the sun necklace around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the sun necklace around [npc2.namePos] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before fastening the sun necklace around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把太阳项链系在[npc.her]的脖子上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把太阳项链系在[npc2.namePos]的脖子。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]，然后把太阳项链紧紧系在[npc2.her]的脖子上。
+]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] sun necklace, before taking it off from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] sun necklace, before taking it off from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] sun necklace, before yanking it off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的太阳项链，然后从[npc.her]的脖子上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的太阳项链，然后从[npc2.her]的脖子上取下。
+]]></other>
+    <otherRough><![CDATA[
+		[npc.Name]粗暴地把太阳项链从[npc2.namePos]脖子上解开并扯下。
+]]></otherRough>
   </displacementText>
 	
   <replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] [npc.her] sun necklace around [npc.her] wrist and then [npc.verb(fasten)] it in place.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the sun necklace around [npc2.namePos] wrist and then [npc.verb(fasten)] it in place.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(wrap)] the sun necklace around [npc2.namePos] wrist and then tightly [npc.verb(fasten)] it in place.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把太阳项链系在[npc.her]手腕上并固定好。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把太阳项链系在[npc2.namePos]的手腕上并固定好。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把太阳项链紧紧系在[npc2.namePos]的手腕上并固定好。
+]]></otherRough>
   </replacementText>
   <displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] sun necklace, before unwrapping it from around [npc.her] wrist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] sun necklace, before unwrapping it from around [npc2.her] wrist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] sun necklace, before snatching it off [npc2.her] wrist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的太阳项链，然后从[npc.her]的手腕上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的太阳项链，然后从[npc2.her]的手腕上取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地解开[npc2.namePos]的太阳项链，然后从[npc2.her]的手腕抢下。
+]]></otherRough>
   </displacementText>
 </clothing>

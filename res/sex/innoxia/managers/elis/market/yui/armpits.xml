@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
 	<title/>
-	<wallName><![CDATA[wall]]></wallName>
+	<wallName><![CDATA[城墙]]></wallName>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>
 	<canSkipSex><![CDATA[true]]></canSkipSex>
@@ -15,15 +15,15 @@
 	<publicSex>
 		<isPublic><![CDATA[true]]></isPublic>
 		<startingDescription><![CDATA[
-			Several passing shoppers stop in front of Yui's stall to watch as she grinds her armpit down against your face...
+			几位路过的顾客在唯的摊位前驻足，看着她用腋下磨蹭你的脸……
 		]]></startingDescription>
 		<randomDescriptions enabled="true">
-			<description><![CDATA[One of the onlookers loudly comments on how submissive and pathetic you look.]]></description>
-			<description><![CDATA[A member of the crowd wolf-whistles.]]></description>
-			<description><![CDATA[One of the shoppers tells Yui to show you no mercy.]]></description>
-			<description><![CDATA[A few members of the public stop to point and laugh at you.]]></description>
-			<description><![CDATA[You hear jeers and cheers from several members of the public as Yui continues to push her armpit against your face.]]></description>
-			<description><![CDATA[A passer-by stops and stares at Yui's drooling pussy, before she angrily tells them to fuck off.]]></description>
+			<description><![CDATA[一个旁观者大声评论你看起来多么顺从和可怜。]]></description>
+			<description><![CDATA[人群中有人发出狼嚎。]]></description>
+			<description><![CDATA[一位顾客让唯不要对你手下留情。]]></description>
+			<description><![CDATA[一些人停下来指指点点，嘲笑你。]]></description>
+			<description><![CDATA[唯继续用腋窝压住你的脸，你听见人群传来几处讥讽和倒彩。]]></description>
+			<description><![CDATA[有个过路人驻足盯着唯流水的小穴，她恼怒地让他们滚开。]]></description>
 		</randomDescriptions>
 	</publicSex>
 	<characterInformationContainer>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Main floor]]></name>
-	<tooltipDescription><![CDATA[The majority of the floor area inside 'The Red Dragon' tavern is occupied by wooden tables and chairs, which provide places for customers to sit and drink.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the main floor area of 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[酒馆主层]]></name>
+	<tooltipDescription><![CDATA[红龙酒馆的大部分面积都摆放着木桌和木椅，供顾客坐下来喝酒。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆的主层区域]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

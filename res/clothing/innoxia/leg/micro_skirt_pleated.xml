@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[pleated microskirt]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[pleated microskirts]]></namePlural>
-		<description><![CDATA[Consisting of little more than a narrow band of pleated fabric, this microskirt is so short that it leaves its wearer's private parts completely exposed.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[超短百褶裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[超短百褶裙]]></namePlural>
+		<description><![CDATA[这条超短裙只是一条很窄的褶皱布带，短得让穿着者的私处完全暴露在外。]]></description> 
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>LEG</slot>
@@ -34,27 +34,22 @@
 	</coreAttributes>
 	
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(step)] into the pleated microskirt and [npc.verb(pull)] it up to fit around [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(get)] [npc2.name] to step into the pleated microskirt, before pulling it up around [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step into the pleated microskirt, before yanking it up around [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]穿上超短百褶裙，然后把裙子提到[npc.her]的腰部。
+    ]]></self>
+    <other><![CDATA[
+[npc.Name]让[npc2.name]踏入超短百褶裙，然后拉上以合适[npc2.her]的腰部。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强迫[npc2.name]踩进超短百褶裙，然后猛地将它们拉上围上[npc2.her]的腰部。]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc.her] pleated microskirt, before slipping it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc2.namePos] pleated microskirt, before slipping it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] pleated microskirt, before yanking it off.]]>
-    </otherRough>
+    <self><![CDATA[[npc.Name]解开超短百褶裙上的腰带，然后脱下它。
+]]></self>
+    <other><![CDATA[[npc.Name]拉下[npc2.namePos]超短百褶裙，然后脱下它。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地拉下[npc2.namePos]的超短百褶裙，随后用力将它们拽掉。]]></otherRough>
   </displacementText>
   
 </clothing>

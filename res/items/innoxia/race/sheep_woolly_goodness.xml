@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>10</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Woolly Goodness]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Woolly Goodnesses]]></namePlural>
-		<description><![CDATA[A large serving of fluffy candy floss, covered in a type of protective cellophane wrapper and skewered by a wooden stick. A label on the plastic packaging bears the brand name 'Woolly Goodness', and displays a naked sheep-girl happily presenting herself to the viewer.]]></description>
+		<determiner><![CDATA[一串]]></determiner>
+		<name><![CDATA[羊毛糖]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[羊毛糖]]></namePlural>
+		<description><![CDATA[一大份松软的棉花糖，覆盖着一种保护性的玻璃纸包装，用一根木棍串起来。塑料包装上的标签上写着“羊毛糖”的品牌名称，显示着一个赤裸的绵羊女开心地向观众展示自己的画面。]]></description>
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/sheep/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/sheep/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="-15" imageSize="85">sheep_woolly_goodness.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,24 +25,24 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[sheep]]></potionDescriptor>
+		<potionDescriptor><![CDATA[绵羊]]></potionDescriptor>
 		<associatedRace>innoxia_sheep</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId> <!-- 'RACE' is a special value, and when defined, this item will use the defined 'associatedRace' to give the player enchantment options for making a TF elixir for that race. -->
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel a lot healthier...
+				[npc.Name]开始感到更加健康……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
-		]]></applyEffects>
+	]]></applyEffects>
 		
 		<itemTags>
 			<tag>FOOD</tag>
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] the candy floss out of its protective packaging and quickly [npc.verb(devour)] it, leaving [npc.herHim] with the delicious taste of sweet, sugary goodness filling [npc.her] mouth.
+		[npc.Name]从包装中取出棉花糖，迅速吞噬它，留下美味的甜蜜口感充满[npc.her]的口腔。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(take)] the candy floss out of its protective packaging, before bringing it up to [npc2.namePos] [npc2.lips] and getting [npc2.herHim] to eat it. Quickly devouring it, [npc2.name] is left with the delicious taste of sweet, sugary goodness filling [npc2.her] mouth.
+		[npc.Name]从包装中取出棉花糖，然后送到[npc2.namePos][npc2.lips]前，让[npc2.herHim]吃下。迅速吞噬它后，[npc2.name]的口中留下美味的甜蜜口感。
 		]]></otherUse>
 	</useDescriptions>
 

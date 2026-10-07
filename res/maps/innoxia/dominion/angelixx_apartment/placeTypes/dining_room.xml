@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Dining Room]]></name>
-	<tooltipDescription><![CDATA[This open-plan dining room is joined to the kitchen, and contains several cabinets, as well as the expected table and chairs.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the dining room at Angelixx's apartment]]></virginityLossDescription>
+	<name><![CDATA[餐厅]]></name>
+	<tooltipDescription><![CDATA[这个开放式餐厅与厨房相连，里面设有几个橱柜，以及一张意料之内的餐桌和几把椅子。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在安吉莉克丝的公寓餐厅]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_STEEL</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

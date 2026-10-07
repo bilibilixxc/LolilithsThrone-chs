@@ -131,12 +131,12 @@ public class FingerMouth {
 		
 		@Override
 		public String getActionTitle() {
-			return "Assist blowjob";
+			return "辅助口交";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Assist [npc2.namePos] efforts in giving [npc3.name] a blowjob.";
+			return "帮[npc2.namePos]给[npc3.name]口交。";
 		}
 
 		@Override
@@ -144,22 +144,22 @@ public class FingerMouth {
 			if(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())==SexPace.DOM_ROUGH) {
 				return UtilText.returnStringAtRandom(
 								(Main.sex.getCharacterTargetedForSexAction(this).hasHair() && Main.sex.getCharacterTargetedForSexAction(this).getHairRawLengthValue()>HairLength.THREE_SHOULDER_LENGTH.getMaximumValue()
-									?"Reaching up and roughly taking a fistful of [npc2.namePos] [npc2.hair+], [npc.name] [npc.verb(force)] [npc2.her] head down into [npc3.namePos] groin while ordering [npc2.herHim] to choke on [npc3.her] [npc3.cock+]."
+									?"[npc.Name]向上探身，粗暴地攥住一把[npc2.namePos][npc2.hair+]，强迫[npc2.her]低头凑近[npc3.namePos]腹股沟并命令[npc2.herHim]吞没[npc3.cock+]。"
 									:""),
-								"Roughly grabbing hold of the sides of [npc2.namePos] head, [npc.name] violently [npc.verb(slam)] [npc2.namePos] head up and down, forcing [npc2.herHim] to [npc2.verb(continue)] sucking [npc3.namePos] [npc3.cock+].",
-								"Snarling a series of lewd, degrading remarks into [npc2.her] [npc2.ear], [npc.name] [npc.verb(slam)] [npc2.namePos] head into [npc3.namePos] crotch,"
-										+ " thereby forcing [npc2.herHim] to take [npc3.her] [npc3.cock+] fully into [npc2.her] mouth.");
+								"[npc.Name]粗暴地抓住[npc2.namePos]头部的一边，用猛力上下狂扇[npc2.namePos]的头，强迫[npc2.herHim]继续吮吸[npc3.namePos][npc3.cock+]。",
+								"[npc.Name]把[npc2.namePos]头部撞向[npc3.namePos]胯部，淫荡的咆哮与侮辱人的话语进入了[npc2.her][npc2.ear]，"
+										+"从而迫使[npc2.herHim]将[npc3.her][npc3.cock+]完全含入[npc2.her]口中。");
 				
 			} else {
 				return UtilText.returnStringAtRandom(
 								(Main.sex.getCharacterTargetedForSexAction(this).hasHair() && Main.sex.getCharacterTargetedForSexAction(this).getHairRawLengthValue()>HairLength.THREE_SHOULDER_LENGTH.getMaximumValue()
-									?"Reaching up and running [npc.her] [npc.fingers+] through [npc2.namePos] [npc2.hair+],"
-											+ " [npc.name] [npc.verb(gather)] it up and [npc.verb(hold)] "+(Main.sex.getCharacterTargetedForSexAction(this).getHairType().isDefaultPlural(Main.sex.getCharacterTargetedForSexAction(this))?"them":"it")
-											+" out of the way as [npc2.name] [npc2.verb(continue)] to give [npc3.name] a blowjob."
+									?"[npc.name]向上探身，用[npc.fingers+]抚过[npc2.namePos][npc2.hair+]，"
+											+ "将"+(Main.sex.getCharacterTargetedForSexAction(this).getHairType().isDefaultPlural(Main.sex.getCharacterTargetedForSexAction(this))?"它们":"它")+ "整理到一起并握住"
+											+"，留出位置让[npc2.name]继续给[npc3.name]口交。"
 									:""),
-								"Taking hold of the sides of [npc2.namePos] head, [npc.name] [npc.verb(help)] to lift and push [npc2.her] head up and down, helping [npc2.herHim] to continue sucking on [npc3.namePos] [npc3.cock+].",
-								"Giving [npc2.herHim] some lewd words of encouragement, [npc.name] [npc.verb(help)] to push [npc2.namePos] head into [npc3.namePos] crotch,"
-										+ " thereby ensuring that [npc2.she] [npc2.verb(take)] [npc3.her] [npc3.cock+] fully into [npc2.her] mouth.");
+								"[npc.Name]帮忙抓住[npc2.namePos]头部的一边，抬起并上下推动，以助[npc2.herHim]继续吮吸[npc3.namePos][npc3.cock+]。",
+								"[npc.Name]对[npc2.herHim]说了一些鼓励的下流话，帮助把[npc2.namePos]头部推向[npc3.namePos]胯部，"
+										+ "从而确保[npc2.she]将[npc3.her][npc3.cock+]完全含入[npc2.her]口中。");
 			}
 		}
 	};

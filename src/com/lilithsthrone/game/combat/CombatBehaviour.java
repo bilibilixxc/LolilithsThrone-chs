@@ -10,29 +10,29 @@ import com.lilithsthrone.game.dialogue.utils.UtilText;
  */
 public enum CombatBehaviour {
 	
-	BALANCED("balanced",
-			"Tell [npc.name] to use whatever combat moves [npc.she] feels are most appropriate.",
-			"[npc.NameIsFull] using whichever combat move [npc.she] feels is most appropriate."),
+	BALANCED("均衡",
+			"让[npc.name]使用感觉最合适的战斗动作。",
+			"[npc.NameIsFull]正在使用感觉最合适的战斗动作。"),
 	
-	ATTACK("attack",
-			"Tell [npc.name] to be more aggressive, and to favour main weapon attacks and offensive spells over any defensive abilities.",
-			"Wherever possible, [npc.name] will choose to go on the offensive, preferring to use damaging attacks over defensive abilities."),
+	ATTACK("攻击",
+			"让[npc.name]更加好斗，倾向于使用主手武器和攻击型法术，而非防御能力。",
+			"只要有可能，[npc.name]便会选择输出，倾向于使用伤害攻击而非防御能力。"),
 	
-	DEFEND("defend",
-			"Tell [npc.name] to be more defensive, and to favour abilities which prevent incoming damage.",
-			"Wherever possible, [npc.name] will choose to go on the defensive, and will favour the usage of abilities which prevent incoming damage."),
+	DEFEND("防守",
+			"让[npc.name]更注重防守，倾向于使用能够避免伤害的能力。",
+			"只要有可能，[npc.name]便会选择防守，倾向于使用各种能力避免来袭的伤害。"),
 	
-	SEDUCE("seduce",
-			"Tell [npc.name] to start seducing [npc.her] opponents instead of using damaging spells or weapon attacks.",
-			"Wherever possible, [npc.name] will focus on seducing [npc.her] opponents instead of using damaging or defensive abilities."),
+	SEDUCE("诱惑",
+			"让[npc.name]开始诱惑敌人，而非使用伤害法术或武器攻击。",
+			"只要有可能，[npc.name]便会专注于诱惑敌人，而不是使用攻击或防御能力。"),
 	
-	SPELLS("spells",
-			"Tell [npc.name] to focus on using all the spells which [npc.sheHasFull] at [npc.her] disposal.",
-			"Wherever possible, [npc.name] will focus on using spells which [npc.sheHasFull] at [npc.her] disposal."),
+	SPELLS("法术",
+			"让[npc.name]专注于随其心意使用各类法术。",
+			"只要有可能，[npc.name]便会专注于随其心意地释放法术。"),
 	
-	SUPPORT("support",
-			"Tell [npc.name] to focus on using spells or other abilities which support [npc.her] allies.",
-			"Wherever possible, [npc.name] will focus on using spells or other abilities which support [npc.her] allies.");
+	SUPPORT("支援",
+			"让[npc.name]专注于使用能够辅助盟友的法术或能力。",
+			"只要有可能，[npc.name]便会使用能够协助盟友的法术或能力。");
 
 	String name;
 	String orderDescription;

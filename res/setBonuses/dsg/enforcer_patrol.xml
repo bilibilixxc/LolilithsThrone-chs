@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help!
 	You can see another annotated example in the 'res/setBonuses/innoxia/enforcer.xml'-->
 	
 	<!-- The name of this set bonus -->
-	<name><![CDATA[Vigilant Enforcer]]></name>
+	<name><![CDATA[警戒的执法者]]></name>
 	
 	<!-- The id of the status effect which should be applied when a character is under the effect of this set bonus. -->
 	<statusEffect>dsg_set_enforcer_patrol</statusEffect>

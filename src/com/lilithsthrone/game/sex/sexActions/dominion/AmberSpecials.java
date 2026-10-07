@@ -25,7 +25,7 @@ public class AmberSpecials {
 		
 		@Override
 		public String getActionTitle() {
-			return "Finished";
+			return "完事儿了";
 		}
 
 		@Override
@@ -47,8 +47,8 @@ public class AmberSpecials {
 		
 		@Override
 		public String getDescription() {
-			return "With a satisfied sigh, [npc.name] pulls back, growling,"
-					+ " [npc.speech(Good bitch! I think you've learned your lesson!)]";
+			return "一声满意的呻吟后，[npc.name]后退并咆哮道："
+					+ "[npc.speech(好贱人！我想你已经吸取教训了！)]";
 		}
 		
 		@Override

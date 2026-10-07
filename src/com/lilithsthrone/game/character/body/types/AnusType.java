@@ -36,8 +36,8 @@ public class AnusType {
 			Race.ANGEL,
 			null,
 			null,
-			Util.newArrayListOfValues("angelic", "perfect"),
-			Util.newArrayListOfValues("angelic", "perfect"),
+			Util.newArrayListOfValues("天使", "完美"),
+			Util.newArrayListOfValues("天使", "完美"),
 			Util.newArrayListOfValues()){
 	};
 	
@@ -45,8 +45,8 @@ public class AnusType {
 			Race.DEMON,
 			null,
 			null,
-			Util.newArrayListOfValues("demonic", "irresistible"),
-			Util.newArrayListOfValues("demonic", "irresistible"),
+			Util.newArrayListOfValues("恶魔", "无可抵抗"),
+			Util.newArrayListOfValues("恶魔", "无可抵抗"),
 			Util.newArrayListOfValues(OrificeModifier.MUSCLE_CONTROL)){
 	};
 	
@@ -54,8 +54,8 @@ public class AnusType {
 			Race.COW_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("cow-like", "bovine"),
-			Util.newArrayListOfValues("cow-like", "bovine"),
+			Util.newArrayListOfValues("牛一般", "牛类"),
+			Util.newArrayListOfValues("牛一般", "牛类"),
 			Util.newArrayListOfValues(OrificeModifier.PUFFY)){
 	};
 	
@@ -135,8 +135,8 @@ public class AnusType {
 			Race.HORSE_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("horse-like", "equine"),
-			Util.newArrayListOfValues("horse-like", "equine"),
+			Util.newArrayListOfValues("马一般", "马类"),
+			Util.newArrayListOfValues("马一般", "马类"),
 			Util.newArrayListOfValues(OrificeModifier.PUFFY)){
 	};
 	

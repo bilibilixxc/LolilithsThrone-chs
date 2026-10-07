@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>2500</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[benevolent necklace]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[benevolent necklaces]]></namePlural>
-		<description><![CDATA[A necklace consisting of a thin chain with a youko pendant threaded onto it. A simple necklace given to those trusted by their kind. As an alternative to being worn around the neck, it would be possible to wrap the chain around your wrist.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[仁心项链]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[仁心项链]]></namePlural>
+		<description><![CDATA[用一根细小金属链串起来的妖狐挂坠。赠予值得信赖的善者的简易项链。可被佩戴在脖子上，也可以作为手串环绕在手腕上。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -58,48 +57,48 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the benevolent necklace around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the benevolent necklace around [npc2.namePos] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before fastening the benevolent necklace around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将仁心项链戴在[npc.her]脖子上。
+    ]]></self>
+    <other><![CDATA[
+      将仁心项链戴在[npc2.namePos]脖子上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]牢牢地抓住[npc2.name]，随后将仁心项链戴在[npc2.her]脖子上。
+    ]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] benevolent necklace, before taking it off from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] benevolent necklace, before taking it off from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] benevolent necklace, before yanking it off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]松了松仁心项链，将其从[npc.her]脖子上取下。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]松了松仁心项链，将其从[npc2.namePos]脖子上取下。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地松开仁心项链，将其从[npc2.namePos]脖子上用力扯下。
+    ]]></otherRough>
   </displacementText>
 	
   <replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] [npc.her] benevolent necklace around [npc.her] wrist and then [npc.verb(fasten)] it in place.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the benevolent necklace around [npc2.namePos] wrist and then [npc.verb(fasten)] it in place.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(wrap)] the benevolent necklace around [npc2.namePos] wrist and then tightly [npc.verb(fasten)] it in place.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将仁心项链缠在[npc.her]手腕上，在合适的位置系好。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将仁心项链缠在[npc2.namePos]手腕上，在合适的位置系好。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地将仁心项链缠在[npc2.namePos]手腕上，在合适的位置系紧。
+    ]]></otherRough>
   </replacementText>
   <displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] benevolent necklace, before unwrapping it from around [npc.her] wrist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] benevolent necklace, before unwrapping it from around [npc2.her] wrist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] benevolent necklace, before snatching it off [npc2.her] wrist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]松开仁心项链，将其从[npc.her]手腕上取下。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]松开仁心项链，将其从[npc2.namePos]手腕上解开。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地松开仁心项链，将其从[npc2.namePos]手腕上抢走。
+    ]]></otherRough>
   </displacementText>
 </clothing>

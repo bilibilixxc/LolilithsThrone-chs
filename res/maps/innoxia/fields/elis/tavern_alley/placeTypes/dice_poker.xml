@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[dice poker]]></name>
-	<tooltipDescription><![CDATA[In the middle of 'The Crossed Blades' tavern, several large tables are reserved for games of dice poker.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at a dice poker table in 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[骰子扑克]]></name>
+	<tooltipDescription><![CDATA[在十字利刃的中央，有几张大桌子专门用来玩掷骰子扑克游戏。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在十字利刃的骰子牌桌上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GOLD</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

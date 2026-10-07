@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>20</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Bubble Milk]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Bubble Milks]]></namePlural>
-		<description><![CDATA[The thick glass bottle of 'Bubble Milk' appears to contain, much as its name would suggest, a generous helping of milk. Looking through the glass, you see that there are little bubbles fizzing up in the liquid within, making this milk appear to be carbonated.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[泡泡牛奶]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[泡泡牛奶]]></namePlural>
+		<description><![CDATA[这款“泡泡牛奶”的厚玻璃瓶，就像它的名字所暗示的那样，似乎装了大量的牛奶。透过玻璃，你能看到里面的液体里有小气泡在嘶嘶作响，使这种牛奶看起来像是碳酸饮料。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
 		]]></applyEffects>
@@ -52,11 +52,11 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the top of the bottle of Bubble Milk, before tilting [npc.her] head back and quickly gulping down the creamy liquid. Despite its name and the appearance of being carbonated, the mellow taste lacks any sort of fizz, and after draining the entire bottle, a soft, pleasant aftertaste lingers in [npc.namePos] mouth.
+		[npc.Name]拧开泡泡牛奶瓶子顶部的盖子，头向后仰，迅速地吞下了奶油般的液体。尽管它的名字和外观都很像碳酸饮料，但它味道醇厚没有任何气泡，在喝光整瓶后，一种柔和，宜人的余味在[npc.namePos]口中萦绕。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the top of the bottle of Bubble Milk, before bringing it up to [npc2.namePos] [npc2.lips] and making [npc2.herHim] gulp down the creamy liquid. Despite its name and the appearance of being carbonated, the mellow taste lacks any sort of fizz, and after draining the entire bottle, a soft, pleasant aftertaste lingers in [npc2.namePos] mouth.
-		]]></otherUse>
+		[npc.Name]从泡泡牛奶瓶子顶部旋开盖子，然后将它送到[npc2.namePos][npc2.lips]边并让[npc2.herHim]喝下了浓郁的液体。尽管它的名字和看起来带有气泡，但口感温和，没有任何气泡感，喝完整瓶后，口中留有一股柔和愉悦的余味。
+	]]></otherUse>
 	</useDescriptions>
 
 	

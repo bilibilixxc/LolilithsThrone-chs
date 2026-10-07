@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Office]]></name>
-	<tooltipDescription><![CDATA[The offices in the Enforcer station are where the Enforcers plan their patrols and complete paperwork.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in an office in the Enforcer station in Elis]]></virginityLossDescription>
+	<name><![CDATA[办公室]]></name>
+	<tooltipDescription><![CDATA[执法者在办公室里指定巡逻计划，完成文书工作。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯执法局的一间办公室里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

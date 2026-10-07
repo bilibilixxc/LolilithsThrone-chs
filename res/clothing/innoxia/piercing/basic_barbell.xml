@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>60</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[basic barbell]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[basic barbells]]></namePlural>
-		<description><![CDATA[A thin cylinder of metal, with an unscrewable sphere on either end. It could be slid into place through either a pierced tongue or an 'industrial' ear piercing.]]></description>
+		<determiner><![CDATA[一根]]></determiner>
+		<name><![CDATA[基础细杆穿钉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[基础细杆穿钉]]></namePlural>
+		<description><![CDATA[一根薄的金属圆柱，两端有一个可以拧下的球体。它可以穿过舌头穿孔或“工业”耳洞。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -53,51 +53,51 @@
 	</coreAttributes>
 
   <replacementText slot="PIERCING_TONGUE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbell into [npc.her] [npc.tongue] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbell into [npc2.namePos] [npc2.tongue] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] the barbell into [npc2.namePos] [npc2.tongue] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将细杆穿钉插入[npc.tongue]穿孔。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将细杆穿钉插入[npc2.namePos]的[npc2.tongue]穿孔。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将细杆穿钉穿进[npc2.namePos]的[npc2.tongue]的穿孔。
+]]></otherRough>
   </replacementText>
 
   <displacementText slot="PIERCING_TONGUE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] barbell out of [npc.her] [npc.tongue] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] barbell out of [npc2.her] [npc2.tongue] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] barbell out of [npc2.her] [npc2.tongue] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的细杆穿钉从[npc.tongue]穿孔中摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc.her]的细杆穿钉从[npc.her]的[npc2.tongue]穿孔中摘下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的细杆穿钉从[npc2.her]的[npc2.tongue]穿孔上拔出来。
+]]></otherRough>
   </displacementText>
 
   <replacementText slot="PIERCING_EAR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbell into [npc.her] [npc.ear]'s industrial piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbell into [npc2.namePos] [npc2.ear]'s industrial piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] the barbell into [npc2.namePos] [npc2.ear]'s industrial piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将细杆穿钉插入[npc.her]的[npc.ear]穿孔。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将细杆穿钉穿进[npc2.namePos]的[npc2.ear]的工业穿孔。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将细杆穿钉插入[npc2.namePos][npc2.ear]的工业穿孔。
+]]></otherRough>
   </replacementText>
 
   <displacementText slot="PIERCING_EAR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] barbell out of [npc.her] [npc.ear]'s industrial piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] barbell out of [npc2.her] [npc2.ear]'s industrial piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] barbell out of [npc2.her] [npc2.ear]'s industrial piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的细杆穿钉从[npc.her]的[npc.ear]穿孔中摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的穿钉从[npc2.her]的[npc2.ear]的工业穿孔中取下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的穿钉从[npc2.her]的[npc2.ear]的工业穿孔中拔出。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

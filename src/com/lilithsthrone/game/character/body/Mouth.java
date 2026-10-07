@@ -130,9 +130,9 @@ public class Mouth implements BodyPartInterface {
 		
 		if(owner.getLipSizeValue() == effectiveLipSize) {
 			if(owner.isPlayer()) {
-				return "<p style='text-align:center;'>[style.colourDisabled(The size of your [pc.lips] doesn't change...)]</p>";
+				return "<p style='text-align:center;'>[style.colourDisabled(你[pc.lips]的大小并没有改变……)]</p>";
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] [npc.lips] doesn't change...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.lips]大小并无改变……)]</p>");
 			}
 		}
 		
@@ -142,14 +142,14 @@ public class Mouth implements BodyPartInterface {
 			if(owner.isPlayer()) {
 				transformation = "<p>A soothing coolness rises up into your [pc.lips], causing you to let out a surprised gasp as you feel them [style.boldShrink(shrinking)].<br/>";
 			} else {
-				transformation = UtilText.parse(owner, "<p>[npc.Name] lets out a little cry as [npc.she] feels a soothing coolness rise up into [npc.her] [npc.lips], before they suddenly [style.boldShrink(shrink)].<br/>");
+				transformation = UtilText.parse(owner, "<p>当[npc.Name]感觉到唇上升起一股舒缓的凉意时，[npc.she]忍不住轻呼一声，嘴唇紧接着突然[style.boldShrink(缩小)]。<br/>");
 			}
 			
 		} else {
 			if(owner.isPlayer()) {
 				transformation = "<p>A pulsating warmth rises up into your [pc.lips], causing you to let out a surprised gasp as you feel them [style.boldGrow(growing larger)].<br/>";
 			} else {
-				transformation = UtilText.parse(owner, "<p>[npc.Name] lets out a little cry as [npc.she] feels a pulsating warmth rise up into [npc.her] [npc.lips], before they suddenly [style.boldGrow(grow larger)].<br/>");
+				transformation = UtilText.parse(owner, "<p>当[npc.Name]感觉到唇上升起一股脉动似的暖意时，[npc.she]忍不住轻呼一声，嘴唇紧接着突然[style.boldGrow(变大)]。<br/>");
 			}
 		}
 		
@@ -157,10 +157,10 @@ public class Mouth implements BodyPartInterface {
 
 		if(owner.isPlayer()) {
 			return transformation
-				+ "You now have [style.boldSex([pc.lipSize] [pc.lips])]!</p>";
+				+ "你现在有了[style.boldSex([pc.lipSize][pc.lips])]！</p>";
 		} else {
 			return transformation
-					+ UtilText.parse(owner, "[npc.Name] now has [style.boldSex([npc.lipSize] [npc.lips])]!</p>");
+					+ UtilText.parse(owner, "[npc.Name]现在有了[style.boldSex([npc.lipSize][npc.lips])]！</p>");
 		}
 	}
 	
@@ -170,17 +170,17 @@ public class Mouth implements BodyPartInterface {
 	
 	public String setPiercedLip(GameCharacter owner, boolean piercedLip) {
 		if(owner.isPiercedLip() == piercedLip) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.piercedLip = piercedLip;
 		
 		if(piercedLip) {
 			if(owner.isPlayer()) {
-				return "<p>Your [pc.lips] are now [style.boldGrow(pierced)]!</p>";
+				return "<p>你[pc.lips]现在已[style.boldGrow(穿孔)]！</p>";
 			} else {
 				return UtilText.parse(owner,
-						"<p>[npc.NamePos] [npc.lips] are now [style.boldGrow(pierced)]!</p>");
+						"<p>[npc.NamePos][npc.lips]现在已[style.boldGrow(穿孔)]！</p>");
 			}
 			
 		} else {
@@ -193,13 +193,13 @@ public class Mouth implements BodyPartInterface {
 			
 			if(owner.isPlayer()) {
 				return "<p>"
-							+ "Your [pc.lips] are [style.boldShrink(no longer pierced)]!"
+							+ "你[pc.lips]已[style.boldShrink(不再有穿孔了)]！"
 						+ "</p>"
 						+piercingUnequip;
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.NamePos] [npc.lips] are [style.boldShrink(no longer pierced)]!"
+								+ "[npc.NamePos][npc.lips]已[style.boldShrink(不再有穿孔了)]！"
 						+ "</p>"
 						+piercingUnequip);
 			}

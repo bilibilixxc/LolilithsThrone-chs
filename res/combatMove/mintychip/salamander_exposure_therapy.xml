@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Exposure therapy]]></name>
+	<name><![CDATA[暴露疗法]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,13 +24,13 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] 
+		用[npc.her]
 		#IF(npc.getTailType() == (TAIL_TYPE_mintychip_salamander_tailFrost))
-			freezing
+			冰冷的
 		#ELSE
-			flaming
+			炽热的
 		#ENDIF
-		 salamander tail to deliver a vicious swipe to [npc.her] target, dealing formattedDamageInflicted damage.
+		蝾螈尾巴狠狠地扫向目标，造成了formattedDamageInflicted伤害。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -108,8 +108,8 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have a salamander tail.
-	]]></availabilityDescription>
+		仅适用于蝾螈面部的角色可用。
+]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
 	The standard value for weighting is 1.0.
@@ -135,7 +135,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Attacker's lust is greater than [style.boldMagenta(80%)].
+		目标的性欲高于[style.boldMagenta(80%)]。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -147,24 +147,24 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her]
+		用[npc.her]
 		#IF(npc.getTailType() == (TAIL_TYPE_mintychip_salamander_tailFrost))
-			 freezing
+			冰冷的
 		#ELSE
-			 flaming
+			炽热的
 		#ENDIF
-		 salamander tail to deliver a vicious swipe to [npc2.name], dealing formattedDamageInflicted damage.
+		蝾螈尾巴狠狠地扫向[npc2.name]，造成了formattedDamageInflicted伤害。
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her]
+		用[npc.her]
 		#IF(npc.getTailType() == (TAIL_TYPE_mintychip_salamander_tailFrost))
-			 freezing
+			冰冷的
 		#ELSE
-			 flaming
+			炽热的
 		#ENDIF
-		 salamander tail to deliver a vicious swipe to [npc.her] target, dealing formattedDamageInflicted damage.
+		蝾螈尾巴狠狠地扫向目标，造成了formattedDamageInflicted伤害。
 	]]></movePredictionDescriptionNoTarget>
 	
 	<!-- The code that's executed when this move is performed.
@@ -178,20 +178,20 @@
 		<!-- The 'execute' section should be used for the main description of the attack, as well as any extra effects you want to apply.
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
-			The tip of [npc.namePos] tail flashes brightly as [npc.she] [npc.verb(rush)] at [npc2.name] and [npc.verb(land)] a
+			[npc.namePos]的尾尖闪烁这耀眼的光芒，[npc.she]冲向[npc2.name]留下了
 			#IF(npc.getTailType() == (TAIL_TYPE_mintychip_salamander_tailFrost))
-				 freezing cold
+				冰冷的
 			#ELSE
-				 burning hot
+				炽热的
 			#ENDIF
-			 swipe with it!
+			扫击！
 			formattedHealthDamage
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc.NamePos] vicious strike was extremely effective!
+			[npc.NamePos]的狠击造成了超出预期的效果！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] been weakened by the attack!
+			[npc2.Name]已被攻击的效果削弱！
 		]]></critEffectDescription>
 	</performMove>
 	

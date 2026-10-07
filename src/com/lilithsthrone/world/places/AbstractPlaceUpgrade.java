@@ -91,7 +91,7 @@ public abstract class AbstractPlaceUpgrade {
 	 */
 	public Value<Boolean, String> getAvailability(Cell cell) {
 		if(!Main.game.getPlayer().isHasSlaverLicense() && this.isSlaverUpgrade()) {
-			return new Value<>(false, "You are unable to purchase this upgrade without a slaver license!");
+			return new Value<>(false, "你在没有贩奴许可的情况下无法购买此项升级！");
 		}
 		
 		return getExtraConditionalAvailability(cell);
@@ -103,7 +103,7 @@ public abstract class AbstractPlaceUpgrade {
 	 */
 	public Value<Boolean, String> getRemovalAvailability(Cell cell) {
 		if(this.isCoreRoomUpgrade()) {
-			return new Value<>(false, "You cannot directly remove core upgrades. Instead, you'll have to purchase a different core modification in order to remove the current one.");
+			return new Value<>(false, "你无法直接移除核心升级。作为替代，你可以购买其他的核心模块以替换现有的核心。");
 		}
 		return new Value<>(true, "");
 	}

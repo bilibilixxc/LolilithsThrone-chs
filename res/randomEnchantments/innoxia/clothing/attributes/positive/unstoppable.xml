@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <enchantment>
 	<positiveEnchantment><![CDATA[true]]></positiveEnchantment>
 	<applyDefaultSeal><![CDATA[false]]></applyDefaultSeal>
@@ -7,7 +7,7 @@
 		100
 	]]></spawnWeighting>
 	
-	<namePrefix><![CDATA[Unstoppable]]></namePrefix>
+	<namePrefix><![CDATA[势不可挡的]]></namePrefix>
 	<namePostfix/>
 	<nameOverride/>
 	

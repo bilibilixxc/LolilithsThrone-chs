@@ -13,7 +13,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum RaceStage {
 	/**No animal-morph parts whatsoever.<br/>
-	 * <i>"Not furry"</i> by any standard.*/
+	 *<i>"Not furry"</i>by any standard.*/
 	HUMAN("", PresetColour.TRANSFORMATION_HUMAN) {
 		@Override
 		public boolean isAntennaFurry() {
@@ -84,7 +84,7 @@ public enum RaceStage {
 	/**Some minor animal-morph parts.<br/>
 	 * When used in GameCharacter's setBody() method, will grant <b>only</b> hair, ears, eyes, tail, horns, antenna, and wings (no genitalia).<br/>
 	 * <i>"Not furry"</i> by most standards.*/
-	PARTIAL("partial", PresetColour.TRANSFORMATION_PARTIAL) {
+	PARTIAL("似", PresetColour.TRANSFORMATION_PARTIAL) {
 		@Override
 		public boolean isAntennaFurry() {
 			return true;
@@ -153,7 +153,7 @@ public enum RaceStage {
 
 	/**All minor animal-morph parts (including genitalia).<br/>
 	 * <i>"Borderline furry"</i> by most standards.*/
-	PARTIAL_FULL("minor", PresetColour.TRANSFORMATION_PARTIAL_FULL) {
+	PARTIAL_FULL("泛", PresetColour.TRANSFORMATION_PARTIAL_FULL) {
 		@Override
 		public boolean isAntennaFurry() {
 			return true;
@@ -222,7 +222,7 @@ public enum RaceStage {
 
 	/**All minor animal-morph parts (including genitalia), plus animal-morph arms and legs.<br/>
 	 * <i>"Low-level furry"</i> by most standards.*/
-	LESSER("lesser", PresetColour.TRANSFORMATION_LESSER) {
+	LESSER("亚", PresetColour.TRANSFORMATION_LESSER) {
 		@Override
 		public boolean isAntennaFurry() {
 			return true;
@@ -291,7 +291,7 @@ public enum RaceStage {
 
 	/**All minor animal-morph parts, animal-morph arms and legs, and animal-morph skin and face.<br/>
 	 * <i>"Furry"</i> by all standards.*/
-	GREATER("greater", PresetColour.TRANSFORMATION_GREATER) {
+	GREATER("纯", PresetColour.TRANSFORMATION_GREATER) {
 		@Override
 		public boolean isAntennaFurry() {
 			return true;
@@ -358,7 +358,7 @@ public enum RaceStage {
 		}
 	},
 	
-	FERAL("feral", PresetColour.RACE_BESTIAL) {
+	FERAL("兽态", PresetColour.RACE_BESTIAL) {
 		@Override
 		public boolean isAntennaFurry() {
 			return true;

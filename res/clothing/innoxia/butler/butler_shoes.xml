@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>800</value> 
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一双]]></determiner>
 		
-		<name><![CDATA[Butler's Shoe]]></name>
+		<name><![CDATA[管家鞋]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[Butler's Shoes]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[管家鞋]]></namePlural> 
 		
-		<description><![CDATA[A pair of very smart shoes.]]></description> 
+		<description><![CDATA[一双非常漂亮的鞋。]]></description> 
 		
 		<physicalResistance>0</physicalResistance>
 		
@@ -67,27 +67,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] [npc.her] [npc.feet] into the shoes and [npc.verb(tie)] up the laces.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] [npc2.namePos] [npc2.feet] into the shoes and [npc.verb(tie)] up the laces.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(push)] [npc2.namePos] [npc2.feet] into the shoes and [npc.verb(tie)] up the laces.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的[npc.feet]穿进鞋里并系好鞋带。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的[npc2.feet]穿进鞋里并系好鞋带。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的[npc2.feet]穿进鞋里并草草的系好鞋带。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the laces of [npc.her] shoes, before slipping them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the laces of [npc2.namePos] shoes, before slipping them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(untie)] the laces of [npc2.namePos] shoes, before tugging them off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开鞋带，然后把鞋从[npc.her][npc.feet]上脱下。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]解开了[npc2.namePos]的鞋带，然后将鞋脱下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地解开[npc2.namePos]的鞋带并将鞋拽了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

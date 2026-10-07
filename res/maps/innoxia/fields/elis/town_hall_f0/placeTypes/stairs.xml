@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[staircase]]></name>
-	<tooltipDescription><![CDATA[This staircase is guarded by a demonic enforcer; a clear sign that there's something of great importance up there.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the staircase in Elis's town hall]]></virginityLossDescription>
+	<name><![CDATA[楼梯]]></name>
+	<tooltipDescription><![CDATA[这个楼梯由恶魔执法者把守，一个显眼的标志说明上面有很重要的东西。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯市镇议会的楼梯间里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREEN_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

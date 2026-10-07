@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help!-->
 	
@@ -30,11 +30,11 @@
 	<sexEffect>false</sexEffect>
 	
 	<!-- The name of this set bonus. The character under the effect is passed in as the 'npc' parsing argument, so if you want to, you can include parsing elements such as [npc.name]. -->
-	<name><![CDATA[Methodical Enforcer]]></name>
+	<name><![CDATA[条理清晰的执法者]]></name>
 	
 	<!-- The description of this status effect. The character under the effect is passed in as the 'npc' parsing argument, so if you want to, you can include parsing elements such as [npc.name]. -->
 	<description><![CDATA[
-		The Enforcer Light Tactical Uniform gives [npc.name] a sense of both protection and agility.
+		执法者轻型战术服给[npc.Name]带来了保护感和灵活性。
 	]]></description>
 	
 	<!-- The name of the icon which should be used to represent this status effect. The icon must be an svg file, and must be placed in the same folder as this XML file. -->

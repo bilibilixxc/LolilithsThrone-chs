@@ -58,9 +58,9 @@ public class Ashley extends NPC {
 	}
 	
 	public Ashley(boolean isImported) {
-		super(isImported, new NameTriplet("Ashley"), "Minett", //TODO
-				"Ashley is the owner of the shop 'Dream Lover', and is seemingly also its only working staff."
-						+ " They are very stand-offish and loathe helping out their customers, to the point where they'd rather stare at the walls instead of offering any help.",
+		super(isImported, new NameTriplet("艾什利"), "米内特", //TODO
+				"艾什利是“梦之爱侣”商店的店主，而从表面上看，也是唯一的店员。"
+						+ "对方非常冷漠，厌恶帮助顾客，甚至宁愿盯着墙壁，也不愿提供任何帮助。",
 				200, Month.AUGUST, 14,//TODO
 				10,
 				Gender.N_P_TRAP,
@@ -227,14 +227,14 @@ public class Ashley extends NPC {
 		infoScreenSB.setLength(0);
 		
 		infoScreenSB.append(
-				"<h4>Background</h4>"
+				"<h4>背景</h4>"
 				+ "<p>"
 					+ this.getDescription()
 				+ "</p>"
 				+ "<br/>"
-				+ "<h4>Relationships</h4>"
+				+ "<h4>人物关系</h4>"
 				+ "<p>"
-					+ "[style.boldAffection(Affection:)]<br/>"
+					+ "[style.boldAffection(好感:)]<br/>"
 					+ AffectionLevel.getDescription(this, Main.game.getPlayer(), true));
 		
 		for(Entry<String, Float> entry : this.getAffectionMap().entrySet()) {
@@ -249,25 +249,25 @@ public class Ashley extends NPC {
 		}
 		
 		infoScreenSB.append("<br/><br/>"
-					+ "[style.boldObedience(Obedience:)]<br/>"
-					+ UtilText.parse(this, "[npc.Name] [style.boldGood(is not a slave)].")
+					+ "[style.boldObedience(服从：)]<br/>"
+					+ UtilText.parse(this, "[npc.Name][style.boldGood(不是奴隶)]。")
 					+ "<br/>"+ObedienceLevel.getDescription(this, ObedienceLevel.getObedienceLevelFromValue(this.getObedienceValue()), true, true)
 				+"</p>"
 				+ "<br/>"
-					+ "<h4>Appearance</h4>"
+					+ "<h4>外貌</h4>"
 				+ "<p>"
 					+ (Main.game.getPlayer().hasTraitActivated(Perk.OBSERVANT)
-							?"Despite the fact that you're highly observant, there's no giveaway whatsoever which would hint as to what Ashley's gender is."
-							:"You have no idea what Ashley's gender is.")
-					+ " Standing at full height, they measure 6'1\" (186cm)."
+							?"尽管你的观察力很敏锐，但也没找到能暗示艾什利性别的线索。"
+							:"你完全不知道艾什利是什么性别。")
+					+ "身子站直，身高测量约为6'1\" (186cm)。"
 				+ "</p>"
 				+ "<p>"
-					+ "The hood of their cloak is pulled up, completely obscuring their facial features."
-					+ " All that you can make out from the darkness of the hood is the sheen of a pair of deep blue eyes."
+					+ "斗篷的兜帽拉起，完全遮住了对方的面部特征。"
+					+ "你能确定的，只有兜帽底下那片黑暗里，隐约呈现出一对深蓝色双眼的光泽。"
 				+ "</p>"
 				+ "<p>"
-					+ "Ashley's cloak covers the entirety of their body, leaving you completely unable to see any part of their body."
-					+ " You have no idea what race they are, much less the state of their breasts and genitals."
+					+ "阿什利的斗篷遮住了整具躯体，让你完全看不到身体的任何部位。"
+					+ "你根本不知道对方的种族是什么，更别提胸部和性征的情况了。"
 				+ "</p>");
 		
 		return infoScreenSB.toString();

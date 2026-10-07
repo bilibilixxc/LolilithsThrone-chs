@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[tower]]></name>
-	<tooltipDescription><![CDATA[At several points along the wall's perimeter, tall stone towers have been constructed, from the crenellated tops of which the surrounding lands can easily be surveyed.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in one of the towers along the walls of Elis]]></virginityLossDescription>
+	<name><![CDATA[塔]]></name>
+	<tooltipDescription><![CDATA[在城墙周边建有高大的石塔，通过塔顶的城垛可以很容易地俯瞰周围的土地。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯城墙附近的一座塔上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

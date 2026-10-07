@@ -16,7 +16,7 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class RebelBase {
 	
-	public static final DialogueNode REBEL_BASE_ENTRANCE = new DialogueNode("Cave Entrance", "", false) {
+	public static final DialogueNode REBEL_BASE_ENTRANCE = new DialogueNode("洞窟入口", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -33,14 +33,14 @@ public class RebelBase {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getPlayer().isQuestProgressLessThan(QuestLine.SIDE_REBEL_BASE, Quest.REBEL_BASE_ESCAPE)) {
-					return new Response("[style.colourBad(Exit)]",
-							"This place looks seriously unstable, it could collapse at any moment. It might be best to leave whatever secrets are in here and leave while you still can."
-									+ "<br/>[style.italicsBad(You will not be able to return to this area after leaving!)]",
+					return new Response("[style.colourBad(离开)]",
+							"这个地方看起来很不稳定，随时都可能坍塌。不管这里有什么秘密，最好还是趁早离开。"
+									+ "<br/>[style.italicsBad(离开后，你将无法返回该区域！)]",
 							REBEL_BASE_COLLAPSE);
 				} else {
-					return new Response("[style.colourGood(Exit)]",
-							"You've had a look through everything that you could find. It might be best to leave while you still can."
-								+ "<br/><i>You will not be able to return to this area after leaving!</i>",
+					return new Response("[style.colourGood(离开)]",
+							"你已经看完了所有能找到的东西。最好还是趁早离开。"
+								+ "<br/><i>离开后，你将无法返回该区域！</i>",
 							REBEL_BASE_COLLAPSE);
 				}
 			}
@@ -48,7 +48,7 @@ public class RebelBase {
 		};
 	};
 	
-	public static final DialogueNode REBEL_BASE_COLLAPSE = new DialogueNode("Uh oh...", "", true) {
+	public static final DialogueNode REBEL_BASE_COLLAPSE = new DialogueNode("啊哦……", "", true) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -64,7 +64,7 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Run!", "Run for your life!", REBEL_BASE_ESCAPE) {
+				return new Response("跑！", "跑路求生！", REBEL_BASE_ESCAPE) {
 					@Override
 					public void effects() {
 						if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.SIDE_REBEL_BASE, Quest.REBEL_BASE_EXPLORATION)){
@@ -101,7 +101,7 @@ public class RebelBase {
 		};
 	};
 	
-	public static final DialogueNode REBEL_BASE_CORRIDOR = new DialogueNode("Artificial Cave", "", false) {
+	public static final DialogueNode REBEL_BASE_CORRIDOR = new DialogueNode("人工洞穴", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -120,7 +120,7 @@ public class RebelBase {
 		};
 	};
 	
-	public static final DialogueNode REBEL_BASE_SLEEPING_AREA = new DialogueNode("Abandoned Sleeping Area", "", false) {
+	public static final DialogueNode REBEL_BASE_SLEEPING_AREA = new DialogueNode("废弃休息区", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -136,7 +136,7 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Open footlockers", "Open the footlockers.", REBEL_BASE_SLEEPING_AREA_SEARCHED){
+				return new Response("打开储物箱", "打开储物箱。", REBEL_BASE_SLEEPING_AREA_SEARCHED){
 					@Override
 					public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/submission/rebelBase", "SLEEPING_AREA_CACHE_OPEN"));
@@ -151,7 +151,7 @@ public class RebelBase {
 				};
 				
 			} else if (index ==2) {
-				return new Response("Read journal", "See what the journal contains.", REBEL_BASE_SLEEPING_AREA_JOURNAL_OPEN);
+				return new Response("阅读日记", "看看日记里有什么。", REBEL_BASE_SLEEPING_AREA_JOURNAL_OPEN);
 				
 			} else {
 				return null;
@@ -159,7 +159,7 @@ public class RebelBase {
 		};
 	};
 		
-	public static final DialogueNode REBEL_BASE_SLEEPING_AREA_JOURNAL_OPEN = new DialogueNode("Crumbling Journal", "", true) {
+	public static final DialogueNode REBEL_BASE_SLEEPING_AREA_JOURNAL_OPEN = new DialogueNode("破旧的日记", "", true) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -175,7 +175,7 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1 && Main.game.getPlayerCell().getPlace().getPlaceType().equals(PlaceType.REBEL_BASE_SLEEPING_AREA)) {
-				return new Response("Close", "You've seen enough.", REBEL_BASE_SLEEPING_AREA){
+				return new Response("关闭", "你看够了。", REBEL_BASE_SLEEPING_AREA){
 						@Override
 						public void effects() {
 							if(Main.game.getPlayer().isQuestProgressLessThan(QuestLine.SIDE_REBEL_BASE, Quest.REBEL_BASE_ESCAPE)) {
@@ -186,7 +186,7 @@ public class RebelBase {
 				};
 				
 			} else if (index == 1 && Main.game.getPlayerCell().getPlace().getPlaceType().equals(PlaceType.REBEL_BASE_SLEEPING_AREA_SEARCHED)) {
-				return new Response("Close", "You've seen enough.", REBEL_BASE_SLEEPING_AREA_SEARCHED) {
+				return new Response("关闭", "你看够了。", REBEL_BASE_SLEEPING_AREA_SEARCHED) {
 						@Override
 						public void effects() {
 							if(Main.game.getPlayer().isQuestProgressLessThan(QuestLine.SIDE_REBEL_BASE, Quest.REBEL_BASE_ESCAPE)) {
@@ -201,7 +201,7 @@ public class RebelBase {
 		};
 	};
 	
-	public static final DialogueNode REBEL_BASE_SLEEPING_AREA_SEARCHED = new DialogueNode("Abandoned Sleeping Area", "", false) {
+	public static final DialogueNode REBEL_BASE_SLEEPING_AREA_SEARCHED = new DialogueNode("废弃休息区", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -217,10 +217,10 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Open footlockers", "You already opened the footlockers.", null);
+				return new Response("打开储物箱", "你已经打开了储物箱。", null);
 				
 			} else if (index ==2) {
-				return new Response("Read journal", "See what the journal contains.", REBEL_BASE_SLEEPING_AREA_JOURNAL_OPEN);
+				return new Response("阅读日记", "看看日记里有什么。", REBEL_BASE_SLEEPING_AREA_JOURNAL_OPEN);
 				
 			} else {
 				return null;
@@ -228,7 +228,7 @@ public class RebelBase {
 		};
 	};
 		
-	public static final DialogueNode REBEL_BASE_COMMON_AREA = new DialogueNode("Abandoned Common Area", "", false) {
+	public static final DialogueNode REBEL_BASE_COMMON_AREA = new DialogueNode("废弃公共区", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -244,7 +244,7 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Open cabinet", "Open the metal cabinet.", COMMON_AREA_CACHE_OPEN) {
+				return new Response("打开柜子", "打开金属柜。", COMMON_AREA_CACHE_OPEN) {
 					@Override
 					public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addClothing(Main.game.getItemGen().generateClothing("dsg_hlf_equip_rwebbing", false), 3, false, true));
@@ -261,7 +261,7 @@ public class RebelBase {
 		};
 	};
 	
-	public static final DialogueNode COMMON_AREA_CACHE_OPEN = new DialogueNode("Abandoned Common Area", "", false) {
+	public static final DialogueNode COMMON_AREA_CACHE_OPEN = new DialogueNode("废弃公共区", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -280,7 +280,7 @@ public class RebelBase {
 		};
 	};
 		
-	public static final DialogueNode REBEL_BASE_COMMON_AREA_SEARCHED = new DialogueNode("Abandoned Common Area", "", false) {
+	public static final DialogueNode REBEL_BASE_COMMON_AREA_SEARCHED = new DialogueNode("废弃公共区", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -296,14 +296,14 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Open cabinet", "You've already opened the cabinet.", null);
+				return new Response("打开柜子", "你已经打开了柜子。", null);
 			} else {
 				return null;
 			}
 		};
 	};
 		
-	public static final DialogueNode REBEL_BASE_ARMORY = new DialogueNode("Partly Caved-in Room", "", false) {
+	public static final DialogueNode REBEL_BASE_ARMORY = new DialogueNode("部分塌方的房间", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -319,7 +319,7 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Open bags", "Open the plastic bags.", ARMORY_CACHE_OPEN){
+				return new Response("打开袋子", "打开塑料袋。", ARMORY_CACHE_OPEN){
 					@Override
 					public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addWeapon(Main.game.getItemGen().generateWeapon("dsg_hlf_weap_pbsmg"), 3, false, true));
@@ -340,7 +340,7 @@ public class RebelBase {
 		};
 	};
 	
-	public static final DialogueNode ARMORY_CACHE_OPEN = new DialogueNode("Abandoned Common Area", "", false) {
+	public static final DialogueNode ARMORY_CACHE_OPEN = new DialogueNode("废弃公共区", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -359,7 +359,7 @@ public class RebelBase {
 		};
 	};
 	
-	public static final DialogueNode REBEL_BASE_ARMORY_SEARCHED = new DialogueNode("Partly Caved-in Room", "", false) {
+	public static final DialogueNode REBEL_BASE_ARMORY_SEARCHED = new DialogueNode("部分塌方的房间", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -375,14 +375,14 @@ public class RebelBase {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Open bags", "There's nothing left in this rubble worth taking.", null);
+				return new Response("打开袋子", "这片废墟中没有值得带走的东西。", null);
 			} else {
 				return null;
 			}
 		};
 	};
 	
-	public static final DialogueNode REBEL_BASE_CAVED_IN_ROOM = new DialogueNode("Caved-in Room", "", false) {
+	public static final DialogueNode REBEL_BASE_CAVED_IN_ROOM = new DialogueNode("塌方的房间", "", false) {
 		@Override
 		public String getAuthor() {
 			return "DSG";

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[toilets]]></name>
-	<tooltipDescription><![CDATA[Due to the large quantity of alcohol consumed on the premises, toilets at 'The Centaur's Sword' tavern are frequently in use.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the toilets at 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[厕所]]></name>
+	<tooltipDescription><![CDATA[由于在酒馆里饮酒的人很多，半人马之剑的厕所经常有人使用。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在半人马之剑的厕所里]]></virginityLossDescription>
 	<sexBlockedReason/>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>

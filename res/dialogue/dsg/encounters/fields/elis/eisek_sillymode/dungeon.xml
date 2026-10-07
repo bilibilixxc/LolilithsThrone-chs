@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="street">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[A Familiar Stench...]]></title>
+		<title><![CDATA[一股熟悉的臭味……]]></title>
 		<tooltip/>
 		<preParsingEffects><![CDATA[
 			[#game.getPlayerCell().getPlace().setPlaceType(PLACE_TYPE_innoxia_fields_elis_town_eisek_sillymode_dungeon_entrance)]
@@ -18,8 +18,8 @@
 			<response>				
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter basement]]></responseTitle>
-				<responseTooltip><![CDATA[It's not like any of them were armed...at least that you could tell...<br/>[style.colourBad(You will not be able to leave the basement until you reach the end.)]]]></responseTooltip>
+				<responseTitle><![CDATA[进入地下室]]></responseTitle>
+				<responseTooltip><![CDATA[他们好像都没有武器……至少你能看出来……<br/>[style.colourBad(在到达终点之前，你将无法离开地下室。)]]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[dsg_places_fields_elis_eisek_sillymode_dungeon_ambush]]></nextDialogue>
 				<secondsPassed/>
@@ -30,8 +30,8 @@
 			<response>				
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Leave it]]></responseTitle>
-				<responseTooltip><![CDATA[You're not in the mood to go into the land of the basement dwellers right now.]]></responseTooltip>
+				<responseTitle><![CDATA[离开它]]></responseTitle>
+				<responseTooltip><![CDATA[你现在没心情去地下室。]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
 				<secondsPassed/>
@@ -41,9 +41,9 @@
 	</scene>
 
 
-	<scene id ="combat">
+	<scene id="combat">
 		<author><![CDATA[DSG]]></author>			
-		<title><![CDATA[Cardboard Warrior]]></title>
+		<title><![CDATA[纸壳战士]]></title>
 		<tooltip/>				
 		<preParsingEffects><![CDATA[
 			[#game.addNPC('fields.SillyModeLARPAttacker', 'dsg_larpattacker')]
@@ -63,8 +63,8 @@
 			<response>				
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Nobody who's dressed like this is going to defeat you!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[穿成这样的人是打不过你的！]]></responseTooltip>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -77,7 +77,7 @@
 						<enemy leader="true"><![CDATA[dsg_larpattacker]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="dsg_larpattacker"><![CDATA[[dsg_larpattacker.speech(You look like a tasty source of XP!)] [dsg_larpattacker.name] shouts.]]></combatant>
+						<combatant id="dsg_larpattacker"><![CDATA[[dsg_larpattacker.speech(你真像个美味的经验包！)][dsg_larpattacker.name]叫喊道。]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 				</combatVariables>
@@ -85,9 +85,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="combat_won">
+	<scene id="combat_won">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Victory!]]></title>
+		<title><![CDATA[胜利！]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_sillymode/dungeon">COMBAT_WON</content>
 		<secondsPassed minutes="false"><![CDATA[30]]></secondsPassed>
@@ -99,9 +99,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Continue making your way through the dungeon.
+					继续穿越地牢
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					default
@@ -113,9 +113,9 @@
 		</responses>			
 	</scene>
 	
-	<scene id ="combat_lost">
+	<scene id="combat_lost">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Defeat...]]></title>
+		<title><![CDATA[战败……]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_sillymode/dungeon">COMBAT_LOST</content>
 		<secondsPassed minutes="false"><![CDATA[30]]></secondsPassed>
@@ -127,9 +127,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Well...your opponent certainly seemed happy. Continue making your way through the dungeon.
+					嗯……你的对手似乎很高兴。继续穿越地牢吧。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					default
@@ -143,7 +143,7 @@
 	
 	<scene id="boss_battle">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Boss "Battle"]]></title>
+		<title><![CDATA[Boss“战”]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_sillymode/dungeon">BOSS</content>
@@ -154,8 +154,8 @@
 			<response>				
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Prepare yourself!]]></responseTitle>
-				<responseTooltip><![CDATA[There's no telling what that orb could do!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗准备！]]></responseTitle>
+				<responseTooltip><![CDATA[完全不知道那个球能干什么！]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[dsg_encounters_fields_elis_eisek_sillymode_dungeon_boss_battle_two]]></nextDialogue>
 				<secondsPassed/>
@@ -166,7 +166,7 @@
 	
 	<scene id="boss_battle_two">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Boss "Battle"]]></title>
+		<title><![CDATA[Boss“战”]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/encounters/fields/elis/eisek_sillymode/dungeon">BOSS_TWO</content>
@@ -177,8 +177,8 @@
 			<response>				
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue...]]></responseTitle>
-				<responseTooltip><![CDATA[Some artefact this turned out to be.]]></responseTooltip>
+				<responseTitle><![CDATA[继续……]]></responseTitle>
+				<responseTooltip><![CDATA[这原来是一些遗物。]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
 				<secondsPassed/>

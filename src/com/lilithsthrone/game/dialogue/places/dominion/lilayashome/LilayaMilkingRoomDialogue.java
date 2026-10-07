@@ -33,7 +33,7 @@ public class LilayaMilkingRoomDialogue {
 		return MilkingRoom.getTargetedCharacter();
 	}
 	
-	public static final DialogueNode MILKING_ROOM = new DialogueNode("Room", "", false) {
+	public static final DialogueNode MILKING_ROOM = new DialogueNode("房间", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 10;
@@ -49,8 +49,8 @@ public class LilayaMilkingRoomDialogue {
 
 			sb.append("<p>"
 						+ "<b style='color:"+PlaceUpgrade.LILAYA_MILKING_ROOM.getColour().toWebHexString()+";'>"+PlaceUpgrade.LILAYA_MILKING_ROOM.getName()+"</b><br/>"
-						+ "This large room has been converted into a milking room, in which eight of your slaves can be milked of their various fluids."
-						+ " Four machines are set along the left-hand side of the wall, with the other four being placed on the opposite side of the room."
+						+ "这个房间已被改建成一处特殊产奶间，可以榨取八名奴隶的各种体液。"
+						+ "左手边的墙上排列着四台机器，而另一边则是另外四台。"
 					+ "</p>");
 			
 			sb.append(room.getRoomDescription());
@@ -88,26 +88,26 @@ public class LilayaMilkingRoomDialogue {
 				
 			} else if (index == 1) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Manage room", "Enter the management screen for this particular room.", OccupantManagementDialogue.ROOM_UPGRADES) {
+					return new Response("管理房间", "进入该房间的管理界面。", OccupantManagementDialogue.ROOM_UPGRADES) {
 						@Override
 						public void effects() {
 							OccupantManagementDialogue.cellToInspect = Main.game.getPlayerCell();
 						}
 					};
 				} else {
-					return new Response("Manage room", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+					return new Response("管理房间", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 				}
 				
 			}  else if (index == 2) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Manage people", "Enter the management screen for your slaves and friendly occupants.", OccupantManagementDialogue.getSlaveryRoomListDialogue(null, null)) {
+					return new Response("人员管理", "进入奴隶和友人住客的管理界面。", OccupantManagementDialogue.getSlaveryRoomListDialogue(null, null)) {
 						@Override
 						public void effects() {
 							CompanionManagement.initManagement(Main.game.getDefaultDialogue(), 0, null);
 						}
 					};
 				} else {
-					return new Response("Manage people", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+					return new Response("管理人员", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 				}
 				
 			} else if(index>=3 && index<6) {
@@ -116,20 +116,20 @@ public class LilayaMilkingRoomDialogue {
 			} else if(index==6) {
 				if(getMilkingTarget().getBreastRawStoredMilkValue()==0) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.Name]")),
-							UtilText.parse(getMilkingTarget(), "There is no milk stored in [npc.namePos] breasts, so [npc.she] can't be milked at the moment!"),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"挤奶",
+							UtilText.parse(getMilkingTarget(), "[npc.namePos]的乳房里并没有储存的奶水，所以[npc.she]现在不能挤奶！"),
 							null);
 					
 				} else if(!getMilkingTarget().isAbleToAccessCoverableArea(CoverableArea.NIPPLES, true)) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.Name]")),
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] unable to get access to [npc.her] nipples, so [npc.she] can't be milked at the moment!"),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"挤奶",
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]无法使用[npc.her]的乳头，所以[npc.she]暂时无法挤奶！"),
 							null);
 					
 				} else if(charactersPresent.size()==8) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.Name]")),
-							UtilText.parse(getMilkingTarget(), "There are no free milking machines for [npc.name] to use!"),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"挤奶",
+							UtilText.parse(getMilkingTarget(), "没有空闲的挤奶机供[npc.name]使用！"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
@@ -137,10 +137,10 @@ public class LilayaMilkingRoomDialogue {
 						&& !getMilkingTarget().isSlave()
 						&& getMilkingTarget().getAffection(Main.game.getPlayer())<AffectionLevel.POSITIVE_FOUR_LOVE.getMinimumValue()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.Name]")),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"挤奶",
 							UtilText.parse(getMilkingTarget(),
-									"As [npc.sheIs] not your slave, [npc.name] will only let you do this if [npc.she]"
-											+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span> you."),
+									"[npc.name]不是你的奴隶， [npc.sheIs]只有在"
+											+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span>你。"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
@@ -148,20 +148,20 @@ public class LilayaMilkingRoomDialogue {
 						&& !getMilkingTarget().isSlave()
 						&& (getMilkingTarget().getFetishDesire(Fetish.FETISH_LACTATION_SELF).isNegative() || getMilkingTarget().getFetishDesire(Fetish.FETISH_BREASTS_SELF).isNegative())) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]")),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"挤奶",
 							UtilText.parse(getMilkingTarget(),
 									(getMilkingTarget().getFetishDesire(Fetish.FETISH_LACTATION_SELF).isNegative()
 											?(getMilkingTarget().getFetishDesire(Fetish.FETISH_BREASTS_SELF).isNegative()
-												?"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for both the "
-													+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+" and "+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+" fetishes."
-												:"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for the "+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+" fetish.")
-											:"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for the "+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+" fetish.")),
+												?"[npc.name]不是你的奴隶，而且这两个性癖都不喜欢，所以不会让你这么做"
+													+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+"和"+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+"性癖。"
+												:"[npc.name]不是你的奴隶，而且不喜欢"+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+"这个性癖，所以不会让你这么做。")
+											:"[npc.name]不是你的奴隶，而且不喜欢"+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+"这个性癖，所以不会让你这么做。")),
 							null);
 					
 				} else {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.Name]")),
-							"Use this room's spare milking equipment to milk "+(getMilkingTarget().isPlayer()?"yourself":UtilText.parse(getMilkingTarget(), "[npc.name]"))+".",
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"挤奶",
+							"用房间的备用挤奶设备给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.name]"))+"挤奶。",
 							MILKED) {
 						@Override
 						public void effects() {
@@ -183,7 +183,7 @@ public class LilayaMilkingRoomDialogue {
 							
 							Main.game.getTextEndStringBuilder().append(
 								"<p style='text-align:center; color:"+PresetColour.MILK.toWebHexString()+";'>"
-										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), " of [npc.milk] added to this room's storage!")
+										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), "将[npc.milk]放进储藏室中！")
 								+ "</p>");
 						}
 						@Override
@@ -198,42 +198,42 @@ public class LilayaMilkingRoomDialogue {
 			} else if(index==7) {
 				if(!getMilkingTarget().hasPenisIgnoreDildo()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
-							UtilText.parse(getMilkingTarget(), "[npc.Name] [npc.do]n't have a penis, so [npc.she] can't produce any cum..."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
+							UtilText.parse(getMilkingTarget(), "[npc.Name]没有阴茎，所以[npc.she]不能产生精液……"),
 							null);
 					
 				} else if(getMilkingTarget().getPenisRawStoredCumValue()==0) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
-							UtilText.parse(getMilkingTarget(), "There isn't any cum stored in [npc.namePos] balls, so [npc.her] cock can't be milked..."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
+							UtilText.parse(getMilkingTarget(), "[npc.namePos]的睾丸中没有储存精液，因此[npc.her]的鸡巴无法榨精……"),
 							null);
 					
 				} else if(!getMilkingTarget().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] unable to get access to [npc.her] cock, so [npc.she] can't be milked at the moment..."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]无法使用[npc.her]的鸡巴，因此[npc.she]暂时无法榨精……"),
 							null);
 					
 				} else if(!getMilkingTarget().isAbleToOrgasm()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] unable to orgasm, so can't be milked of [npc.her] cum!"),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]无法达到高潮，所以无法榨出[npc.her]的精液！"),
 							null);
 					
 				} else if(charactersPresent.size()==8) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
-							UtilText.parse(getMilkingTarget(), "There are no free milking machines for [npc.name] to use!"),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
+							UtilText.parse(getMilkingTarget(), "没有空闲的挤奶机供[npc.name]使用！"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
 						&& getMilkingTarget().isAbleToRefuseSexAsCompanion() && !getMilkingTarget().isSlave()
 						&& getMilkingTarget().getAffection(Main.game.getPlayer())<AffectionLevel.POSITIVE_FOUR_LOVE.getMinimumValue()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
 							UtilText.parse(getMilkingTarget(),
-									"As [npc.sheIs] not your slave, [npc.name] will only let you do this if [npc.she]"
-											+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span> you."),
+									"[npc.name]不是你的奴隶， [npc.sheIs]只有在"
+											+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span>你。"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
@@ -241,20 +241,20 @@ public class LilayaMilkingRoomDialogue {
 						&& !getMilkingTarget().isSlave()
 						&& (getMilkingTarget().getFetishDesire(Fetish.FETISH_CUM_STUD).isNegative() || getMilkingTarget().getFetishDesire(Fetish.FETISH_PENIS_GIVING).isNegative())) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
 							UtilText.parse(getMilkingTarget(),
 									(getMilkingTarget().getFetishDesire(Fetish.FETISH_CUM_STUD).isNegative()
 											?(getMilkingTarget().getFetishDesire(Fetish.FETISH_PENIS_GIVING).isNegative()
-												?"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for both the "
-													+Fetish.FETISH_CUM_STUD.getName(getMilkingTarget())+" and "+Fetish.FETISH_PENIS_GIVING.getName(getMilkingTarget())+" fetishes."
-												:"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for the "+Fetish.FETISH_CUM_STUD.getName(getMilkingTarget())+" fetish.")
-											:"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for the "+Fetish.FETISH_PENIS_GIVING.getName(getMilkingTarget())+" fetish.")),
+												?"[npc.name]不是你的奴隶，而且这两个性癖都不喜欢，所以不会让你这么做"
+													+Fetish.FETISH_CUM_STUD.getName(getMilkingTarget())+"和"+Fetish.FETISH_PENIS_GIVING.getName(getMilkingTarget())+"性癖。"
+												:"[npc.name]不是你的奴隶，而且不喜欢"+Fetish.FETISH_CUM_STUD.getName(getMilkingTarget())+"这个性癖，所以不会让你这么做。")
+											:"[npc.name]不是你的奴隶，而且不喜欢"+Fetish.FETISH_PENIS_GIVING.getName(getMilkingTarget())+"这个性癖，所以不会让你这么做。")),
 							null);
 					
 				} else {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" cum",
-							UtilText.parse(getMilkingTarget(), "Use this room's spare milking equipment to milk [npc.namePos] cock."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨精",
+							UtilText.parse(getMilkingTarget(), "使用该房间的备用挤奶设备给[npc.namePos]的鸡巴榨精。"),
 							MILKED) {
 						@Override
 						public void effects() {
@@ -273,7 +273,7 @@ public class LilayaMilkingRoomDialogue {
 
 							Main.game.getTextEndStringBuilder().append(
 								"<p style='text-align:center; color:"+PresetColour.CUM.toWebHexString()+";'>"
-										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), " of [npc.cum] added to this room's storage!")
+										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), "将[npc.cum]放入储藏室中！")
 								+ "</p>");
 						}
 						@Override
@@ -289,32 +289,32 @@ public class LilayaMilkingRoomDialogue {
 			} else if(index==8) {
 				if(!getMilkingTarget().hasVagina()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
-							UtilText.parse(getMilkingTarget(), "[npc.Name] [npc.do]n't have a vagina, so [npc.she] can't produce any girlcum..."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
+							UtilText.parse(getMilkingTarget(), "[npc.Name]没有阴道，所以[npc.she]不能产生任何爱液……"),
 							null);
 					
 				} else if(getMilkingTarget().getVaginaWetness().getValue()==0) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
-							UtilText.parse(getMilkingTarget(), "[npc.NamePos] pussy is completely dry, and cannot produce even one drop of girlcum..."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
+							UtilText.parse(getMilkingTarget(), "[npc.NamePos]的小穴完全干涸了，连一滴爱液都分泌不出来……"),
 							null);
 					
 				} else if(!getMilkingTarget().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] unable access to [npc.her] pussy, so can't be milked of [npc.her] girlcum at the moment..."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]无法使用[npc.her]的阴部，因此目前无法榨出[npc.her]的爱液……"),
 							null);
 					
 				} else if(!getMilkingTarget().isAbleToOrgasm()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] unable to orgasm, so can't be milked of [npc.her] girlcum!"),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]无法达到高潮，所以无法榨出[npc.her]的爱液！"),
 							null);
 					
 				} else if(charactersPresent.size()==8) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
-							UtilText.parse(getMilkingTarget(), "There are no free milking machines for [npc.name] to use!"),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
+							UtilText.parse(getMilkingTarget(), "没有空闲的挤奶机供[npc.name]使用！"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
@@ -322,10 +322,10 @@ public class LilayaMilkingRoomDialogue {
 						&& !getMilkingTarget().isSlave()
 						&& getMilkingTarget().getAffection(Main.game.getPlayer())<AffectionLevel.POSITIVE_FOUR_LOVE.getMinimumValue()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
 							UtilText.parse(getMilkingTarget(),
-									"As [npc.sheIs] not your slave, [npc.name] will only let you do this if [npc.she]"
-											+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span> you."),
+									"[npc.name]不是你的奴隶， [npc.sheIs]只有在"
+											+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span>你。"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
@@ -333,14 +333,14 @@ public class LilayaMilkingRoomDialogue {
 						&& !getMilkingTarget().isSlave()
 						&& getMilkingTarget().getFetishDesire(Fetish.FETISH_VAGINAL_RECEIVING).isNegative()) {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
-							UtilText.parse(getMilkingTarget(), "As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for the "+Fetish.FETISH_VAGINAL_RECEIVING.getName(getMilkingTarget())+" fetish."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
+							UtilText.parse(getMilkingTarget(), "[npc.name]不是你的奴隶，而且不喜欢"+Fetish.FETISH_VAGINAL_RECEIVING.getName(getMilkingTarget())+"这个性癖，所以不会让你这么做。"),
 							null);
 					
 				}else {
 					return new Response(
-							"Milk "+(getMilkingTarget().isPlayer()?"self":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+" girlcum",
-							UtilText.parse(getMilkingTarget(), "Use this room's spare milking equipment to milk [npc.namePos] pussy."),
+							"给"+(getMilkingTarget().isPlayer()?"自己":UtilText.parse(getMilkingTarget(), "[npc.NamePos]"))+"榨妹汁",
+							UtilText.parse(getMilkingTarget(), "使用该房间的备用挤奶设备给[npc.namePos]的小穴榨汁。"),
 							MILKED) {
 						@Override
 						public void effects() {
@@ -359,7 +359,7 @@ public class LilayaMilkingRoomDialogue {
 
 							Main.game.getTextEndStringBuilder().append(
 									"<p style='text-align:center; color:"+PresetColour.GIRLCUM.toWebHexString()+";'>"
-										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), " of [npc.girlcum] added to this room's storage!")
+										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), "将[npc.girlcum]放入储藏室中！")
 									+ "</p>");
 						}
 						@Override
@@ -375,33 +375,33 @@ public class LilayaMilkingRoomDialogue {
 				if(!getMilkingTarget().hasBreastsCrotch()) {
 					return new Response(
 							(getMilkingTarget().isPlayer()
-									?"Milk self udders"
-									:UtilText.parse(getMilkingTarget(), "Milk [npc.NamePos] udders")),
-							UtilText.parse(getMilkingTarget(), "[npc.Name] [npc.do]n't have any udders to milk!"),
+									?"挤腹乳"
+									:UtilText.parse(getMilkingTarget(), "给[npc.NamePos]的腹乳挤奶")),
+							UtilText.parse(getMilkingTarget(), "[npc.Name]没有腹乳可以挤奶！"),
 							null);
 					
 				} else if(getMilkingTarget().getBreastCrotchRawStoredMilkValue()==0) {
 					return new Response(
 							(getMilkingTarget().isPlayer()
-									?"Milk self [pc.crotchBoobs]"
-									:UtilText.parse(getMilkingTarget(), "Milk [npc.NamePos] [npc.crotchBoobs]")),
-							UtilText.parse(getMilkingTarget(), "There is no milk stored in [npc.namePos] [npc.crotchBoobs], so [npc.she] can't be milked at the moment!"),
+									?"挤[pc.crotchBoobs]"
+									:UtilText.parse(getMilkingTarget(), "给[npc.NamePos]的[npc.crotchBoobs]挤奶")),
+							UtilText.parse(getMilkingTarget(), "[npc.namePos]的[npc.crotchBoobs]中没有牛奶，所以[npc.she]暂时无法挤奶！"),
 							null);
 					
 				} else if(!getMilkingTarget().isAbleToAccessCoverableArea(CoverableArea.NIPPLES_CROTCH, true)) {
 					return new Response(
 							(getMilkingTarget().isPlayer()
-									?"Milk self [pc.crotchBoobs]"
-									:UtilText.parse(getMilkingTarget(), "Milk [npc.NamePos] [npc.crotchBoobs]")),
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] unable access to [npc.her] [npc.crotchNipples], so can't be milked at the moment..."),
+									?"挤[pc.crotchBoobs]"
+									:UtilText.parse(getMilkingTarget(), "给[npc.NamePos]的[npc.crotchBoobs]挤奶")),
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]无法使用[npc.her]的[npc.crotchNipples]，因此暂时无法挤奶……"),
 							null);
 					
 				} else if(charactersPresent.size()==8) {
 					return new Response(
 							(getMilkingTarget().isPlayer()
-									?"Milk self [pc.crotchBoobs]"
-									:UtilText.parse(getMilkingTarget(), "Milk [npc.NamePos] [npc.crotchBoobs]")),
-							UtilText.parse(getMilkingTarget(), "There are no free milking machines for [npc.name] to use!"),
+									?"挤[pc.crotchBoobs]"
+									:UtilText.parse(getMilkingTarget(), "给[npc.NamePos]的[npc.crotchBoobs]挤奶")),
+							UtilText.parse(getMilkingTarget(), "没有空闲的挤奶机供[npc.name]使用！"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
@@ -410,11 +410,11 @@ public class LilayaMilkingRoomDialogue {
 						&& getMilkingTarget().getAffection(Main.game.getPlayer())<AffectionLevel.POSITIVE_FOUR_LOVE.getMinimumValue()) {
 					return new Response(
 							(getMilkingTarget().isPlayer()
-									?"Milk self [pc.crotchBoobs]"
-									:UtilText.parse(getMilkingTarget(), "Milk [npc.NamePos] [npc.crotchBoobs]")),
+									?"挤[pc.crotchBoobs]"
+									:UtilText.parse(getMilkingTarget(), "给[npc.NamePos]的[npc.crotchBoobs]挤奶")),
 							UtilText.parse(getMilkingTarget(),
-									"As [npc.sheIs] not your slave, [npc.name] will only let you do this if [npc.she]"
-											+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span> you."),
+									"[npc.name]不是你的奴隶， [npc.sheIs]只有在"
+											+ "<span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span>你。"),
 							null);
 					
 				} else if(!getMilkingTarget().isPlayer()
@@ -423,23 +423,23 @@ public class LilayaMilkingRoomDialogue {
 						&& (getMilkingTarget().getFetishDesire(Fetish.FETISH_LACTATION_SELF).isNegative() || getMilkingTarget().getFetishDesire(Fetish.FETISH_BREASTS_SELF).isNegative())) {
 					return new Response(
 							(getMilkingTarget().isPlayer()
-									?"Milk self [pc.crotchBoobs]"
-									:UtilText.parse(getMilkingTarget(), "Milk [npc.NamePos] [npc.crotchBoobs]")),
+									?"挤[pc.crotchBoobs]"
+									:UtilText.parse(getMilkingTarget(), "给[npc.NamePos]的[npc.crotchBoobs]挤奶")),
 							UtilText.parse(getMilkingTarget(),
 									(getMilkingTarget().getFetishDesire(Fetish.FETISH_LACTATION_SELF).isNegative()
 											?(getMilkingTarget().getFetishDesire(Fetish.FETISH_BREASTS_SELF).isNegative()
-												?"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for both the "
-													+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+" and "+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+" fetishes."
-												:"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for the "+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+" fetish.")
-											:"As [npc.sheIs] not your slave, [npc.name] not let you do this, as [npc.sheHasFull] a negative desire for the "+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+" fetish.")),
+												?"[npc.name]不是你的奴隶，而且这两个性癖都不喜欢，所以不会让你这么做"
+													+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+"和"+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+"性癖。"
+												:"[npc.name]不是你的奴隶，而且不喜欢"+Fetish.FETISH_LACTATION_SELF.getName(getMilkingTarget())+"这个性癖，所以不会让你这么做。")
+											:"[npc.name]不是你的奴隶，而且不喜欢"+Fetish.FETISH_BREASTS_SELF.getName(getMilkingTarget())+"这个性癖，所以不会让你这么做。")),
 							null);
 					
 				} else {
 					return new Response(
 							(getMilkingTarget().isPlayer()
-									?"Milk self [pc.crotchBoobs]"
-									:UtilText.parse(getMilkingTarget(), "Milk [npc.NamePos] [npc.crotchBoobs]")),
-							UtilText.parse(getMilkingTarget(), "Use this room's spare milking equipment to milk [npc.namePos] [npc.crotchBoobs]."),
+									?"挤[pc.crotchBoobs]"
+									:UtilText.parse(getMilkingTarget(), "给[npc.NamePos]的[npc.crotchBoobs]挤奶")),
+							UtilText.parse(getMilkingTarget(), "使用这个房间的备用挤奶设备给[npc.namePos]的[npc.crotchBoobs]挤奶。"),
 							MILKED) {
 						@Override
 						public void effects() {
@@ -461,7 +461,7 @@ public class LilayaMilkingRoomDialogue {
 							
 							Main.game.getTextEndStringBuilder().append(
 								"<p style='text-align:center; color:"+PresetColour.MILK.toWebHexString()+";'>"
-										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), " of [npc.crotchMilk] added to this room's storage!")
+										+ Units.fluid(milked) + UtilText.parse(getMilkingTarget(), "将[npc.crotchMilk]放入储藏室中！")
 								+ "</p>");
 						}
 						@Override
@@ -476,16 +476,16 @@ public class LilayaMilkingRoomDialogue {
 			} else if(index==10) {
 				if(Main.game.getCharactersPresent().isEmpty()) {
 					return new ResponseEffectsOnly(
-							"Target: <span style='color:"+getMilkingTarget().getFemininity().getColour().toWebHexString()+";'>"+UtilText.parse(getMilkingTarget(), "[npc.Name]")+"</span>",
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] currently targeted as the person both to be milked and to have fluids pumped inside of [npc.herHim]."
-									+ "If this room wasn't empty, you could use this button to cycle between available targets.")) {
+							"目标: <span style='color:"+getMilkingTarget().getFemininity().getColour().toWebHexString()+";'>"+UtilText.parse(getMilkingTarget(), "[npc.Name]")+"</span>",
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]目前的目标是既要挤奶又要榨取[npc.herHim]的汁液。"
+									+ "如果这个房间不是空的，你可以使用这个按钮在可用目标之间循环。")) {
 						
 					};
 					
 				} else {
 					return new Response(
-							"Target: <span style='color:"+getMilkingTarget().getFemininity().getColour().toWebHexString()+";'>"+UtilText.parse(getMilkingTarget(), "[npc.Name]")+"</span>",
-							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull] currently targeted as the person both to be milked and to have fluids pumped inside of [npc.herHim]. Activate this button to cycle between available targets."),
+							"目标: <span style='color:"+getMilkingTarget().getFemininity().getColour().toWebHexString()+";'>"+UtilText.parse(getMilkingTarget(), "[npc.Name]")+"</span>",
+							UtilText.parse(getMilkingTarget(), "[npc.NameIsFull]目前的目标是既要挤奶又要榨取[npc.herHim]的汁液。激活此按钮可在可用目标之间循环切换。"),
 							null) {
 						@Override
 						public DialogueNode getNextDialogue() {
@@ -519,7 +519,7 @@ public class LilayaMilkingRoomDialogue {
 		}
 	};
 	
-	public static final DialogueNode MILKED = new DialogueNode("Room", ".", true) {
+	public static final DialogueNode MILKED = new DialogueNode("房间", "。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60*60;
@@ -539,7 +539,7 @@ public class LilayaMilkingRoomDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Unstrap yourself from the milking machine and continue on your way.", MILKED) {
+				return new Response("继续", "把自己从挤奶机上解下来，继续上路。", MILKED) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -554,7 +554,7 @@ public class LilayaMilkingRoomDialogue {
 	/**
 	 * Used in OccupantController when a character consumes fluids.
 	 */
-	public static final DialogueNode INGEST = new DialogueNode("Room", ".", true) {
+	public static final DialogueNode INGEST = new DialogueNode("房间", "。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -574,7 +574,7 @@ public class LilayaMilkingRoomDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "You wonder what do do next...", INGEST) {
+				return new Response("继续", "你思考着接下来该做什么……", INGEST) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);

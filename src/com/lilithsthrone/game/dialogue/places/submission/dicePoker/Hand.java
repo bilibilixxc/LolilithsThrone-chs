@@ -13,15 +13,15 @@ import java.util.Map.Entry;
  */
 public enum Hand {
 	
-	ONE_FIVE_OF_A_KIND(1, "Five of a kind", "33333", "Five dice of the same value."),
-	TWO_FOUR_OF_A_KIND(2, "Four of a kind", "55551", "Four dice of the same value."),
-	THREE_HIGH_STRAIGHT(3, "High straight", "23456", "Consecutive numbers starting at two."),
-	FOUR_FULL_HOUSE(4, "Full house", "22666", "Two dice of the same value, plus three dice of a different, same value."),
-	FIVE_THREE_OF_A_KIND(5, "Three of a kind", "44415", "Three dice of the same value."),
-	SIX_LOW_STRAIGHT(6, "Low straight", "12345", "Consecutive numbers starting at one."),
-	SEVEN_TWO_PAIR(7, "Two pair", "55331", "Two dice of the same value, plus two dice of a different, same value."),
-	EIGHT_PAIR(8, "Pair", "22415", "Two dice of the same value."),
-	NINE_RUNT(9, "Runt", "13456", "All dice of different values.");
+	ONE_FIVE_OF_A_KIND(1, "五条", "33333", "五枚同点数的骰子。"),
+	TWO_FOUR_OF_A_KIND(2, "四条", "55551", "四枚同点数的骰子。"),
+	THREE_HIGH_STRAIGHT(3, "大顺子", "23456", "从二开始的连续数字。"),
+	FOUR_FULL_HOUSE(4, "葫芦", "22666", "两枚同点数的骰子，加上三枚同点数，但与之前点数相异的骰子。"),
+	FIVE_THREE_OF_A_KIND(5, "三条", "44415", "三枚同点数的骰子。"),
+	SIX_LOW_STRAIGHT(6, "小顺子", "12345", "从一开始的连续数字。"),
+	SEVEN_TWO_PAIR(7, "两对", "55331", "两枚同点数的骰子，加上两枚同点数，但与之前点数相异的骰子。"),
+	EIGHT_PAIR(8, "一对", "22415", "两枚同点数的骰子。"),
+	NINE_RUNT(9, "烂手", "13456", "所有骰子点数都不同。");
 	
 	
 	private int ranking;

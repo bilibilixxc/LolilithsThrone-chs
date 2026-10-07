@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <breast>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[raptor]]></transformationName>
+	<transformationName><![CDATA[猛禽]]></transformationName>
 	
 	<coveringType>innoxia_raptor_feathers</coveringType>
 	
@@ -19,18 +19,18 @@
 	<descriptorsFlat/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldRaptor(avian)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldRaptor(raptor milk)].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldDragon(禽鸟般)][npc.nipplesFullDescription]，[npc.she]在哺乳期内会分泌[style.boldDragon(猛禽乳汁)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] avian, [npc.nipplesFullDescription].
-	]]></bodyDescription>
+		[npc.her]每个[npc.breastSize]的[npc.breasts]上都长着[npc.nipplesPerBreast]颗禽类的[npc.nipplesFullDescription]。
+]]></bodyDescription>
 	
 	<crotchBoobsTransformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldRaptor(avian)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldRaptor(raptor milk)].
-	]]></crotchBoobsTransformationDescription>
+		[npc.She]现在拥有[style.boldFerret(禽鸟般)][npc.crotchNipplesFullDescription]，[npc.she]在哺乳期内会分泌[style.boldHyena(猛禽乳汁)]。
+]]></crotchBoobsTransformationDescription>
 	
 	<crotchBoobsBodyDescription><![CDATA[
-		On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] avian, [npc.crotchNipplesFullDescription].
-	]]></crotchBoobsBodyDescription>
+		[npc.her]每个[npc.crotchBoobSize]的[npc.crotchBoobs]上都长着[npc.crotchNipplesPerBreast]颗禽类的[npc.crotchNipplesFullDescription]。
+]]></crotchBoobsBodyDescription>
 </breast>

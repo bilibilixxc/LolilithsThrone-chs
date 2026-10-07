@@ -48,7 +48,7 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 				Main.mainController.getTooltip().setAnchorX(xPosition);
 				Main.mainController.getTooltip().setAnchorY(yPosition);
 
-				Main.mainController.setTooltipContent("<div class='title'>Next Page</div>");
+				Main.mainController.setTooltipContent("<div class='title'>下一页</div>");
 				
 				Main.mainController.getTooltip().setAnchorX(xPosition);
 				Main.mainController.getTooltip().setAnchorY(yPosition);
@@ -69,7 +69,7 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 				Main.mainController.getTooltip().setAnchorX(xPosition);
 				Main.mainController.getTooltip().setAnchorY(yPosition);
 
-				Main.mainController.setTooltipContent("<div class='title'>Previous Page</div>");
+				Main.mainController.setTooltipContent("<div class='title'>上一页</div>");
 				
 				Main.mainController.getTooltip().setAnchorX(xPosition);
 				Main.mainController.getTooltip().setAnchorY(yPosition);
@@ -99,17 +99,17 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 				if(!response.hasRequirements()) {
 					if(response instanceof ResponseSex) {
 						if(((ResponseSex)response).isMasturbation()) {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>Masturbation</span></div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>自慰</span></div>");
 						} else if(((ResponseSex)response).isPlayerInDominantSlot()) {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>Dominant Sex</span></div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>支配型性爱</span></div>");
 						} else {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Submissive Sex</span></div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>服从型性爱</span></div>");
 						}
 						boxHeight+=44;
 						tooltipSB.append("<div class='description'>" + response.getTooltipText() + "</div>");
 						
 					} else if(response.isCombatHighlight()) {
-						tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>Combat</span></div>");
+						tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>战斗</span></div>");
 						boxHeight+=44;
 						tooltipSB.append("<div class='description'>" + response.getTooltipText() + "</div>");
 						
@@ -136,7 +136,7 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 								+ "<div class='subTitle' style='width:46%; margin:2% 2% 0% 2%;'>"
 									+ "<span style='color:"+(cooldown-(coreMove?0:1)<=0?PresetColour.GENERIC_MINOR_GOOD:PresetColour.GENERIC_MINOR_BAD).toWebHexString()+";'>"
 									+(coreMove?cooldown:(cooldown-1)+"[style.colourBad(+1)]")
-									+"</span> turn"+(cooldown==1?"":"s")+" cooldown"
+									+"</span>回合冷却"
 								+ "</div>");
 						
 						boxHeight+=36;
@@ -146,8 +146,8 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 						tooltipSB.append(
 								"<div class='description-small'>"
 										+ (coreMove
-											?"<i>This is one of your [style.colourMinorGood(core moves)], so there is no extra AP cost or cooldown time for using it!</i>"
-											:"<i>This is [style.colourMinorBad(not one of your core moves)], so there is an extra cost of [style.colourBad(+1 AP)] and [style.colourBad(+1 turn cooldown)] for using it!</i>")
+											?"<i>这是你的[style.colourMinorGood(核心动作)]，所以你不需要额外的AP或冷却时间就可以使用它！</i>"
+											:"<i>这[style.colourMinorBad(不是你的核心动作)]，所以你需要额外消耗[style.colourBad(+1行动点)]以及[style.colourBad(+1冷却回合)]来使用它！</i>")
 								+"</div>");
 						boxHeight+=54;
 						
@@ -160,20 +160,20 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 					if(response.isAvailable()) {
 						if(response instanceof ResponseSex) {
 							if(((ResponseSex)response).isPlayerInDominantSlot()) {
-								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>Dominant Sex</span> (<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Available</span>)</div>");
+								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>支配性爱</span> (<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>可用</span>)</div>");
 							} else {
-								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Submissive Sex</span> (<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Available</span>)</div>");
+								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>服从型性爱</span> (<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>可用</span>)</div>");
 							}
 						} else if(response.isCombatHighlight()) {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>Combat</span> (<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Available</span>)</div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>战斗</span> (<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>可用</span>)</div>");
 						} else {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Available</span></div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>可用</span></div>");
 						}
 						boxHeight+=44;
 						
 						if(response.getSexPace()!=null) {
-							tooltipSB.append("<div class='subTitle'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Sex Pace:</span>"
-									+ " <span style='color:" + response.getSexPace().getColour().toWebHexString() + ";'>"+Util.capitaliseSentence(response.getSexPace().getName())+"</span></div>");
+							tooltipSB.append("<div class='subTitle'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>性爱状态：</span>"
+									+ "<span style='color:" + response.getSexPace().getColour().toWebHexString() + ";'>"+Util.capitaliseSentence(response.getSexPace().getName())+"</span></div>");
 							boxHeight+=44;
 						}
 						
@@ -182,22 +182,22 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 					} else if(response.isAbleToBypass()) {
 						if(response instanceof ResponseSex) {
 							if(((ResponseSex)response).isPlayerInDominantSlot()) {
-								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>Dominant Sex</span>"
-										+ " (<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>Corruptive</span>)</div>");
+								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>支配型性爱</span>"
+										+ "(<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>堕落</span>)</div>");
 							} else {
-								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Submissive Sex</span>"
-										+ " (<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>Corruptive</span>)</div>");
+								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>服从型性爱</span>"
+										+ "(<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>堕落</span>)</div>");
 							}
 						} else if(response.isCombatHighlight()) {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>Combat</span> (<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>Corruptive</span>)</div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>战斗</span>(<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>堕落</span>)</div>");
 						} else {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>Corruptive</span></div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>堕落</span></div>");
 						}
 						boxHeight+=44;
 						
 						if(response.getSexPace()!=null) {
-							tooltipSB.append("<div class='subTitle'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Sex Pace:</span>"
-									+ " <span style='color:" + response.getSexPace().getColour().toWebHexString() + ";'>"+Util.capitaliseSentence(response.getSexPace().getName())+"</span></div>");
+							tooltipSB.append("<div class='subTitle'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>性爱状态：</span>"
+									+ "<span style='color:" + response.getSexPace().getColour().toWebHexString() + ";'>"+Util.capitaliseSentence(response.getSexPace().getName())+"</span></div>");
 							boxHeight+=44;
 						}
 						
@@ -206,22 +206,22 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 					} else {
 						if(response instanceof ResponseSex) {
 							if(((ResponseSex)response).isPlayerInDominantSlot()) {
-								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>Dominant Sex</span>"
-										+ " (<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Unavailable</span>)</div>");
+								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX_AS_DOM.toWebHexString() + ";'>支配型性爱</span>"
+										+ "(<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>不可用</span>)</div>");
 							} else {
-								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Submissive Sex</span>"
-										+ " (<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Unavailable</span>)</div>");
+								tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>服从型性爱</span>"
+										+ "(<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>不可用</span>)</div>");
 							}
 						} else if(response.isCombatHighlight()) {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>Combat</span> (<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Unavailable</span>)</div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_COMBAT.toWebHexString() + ";'>战斗</span>(<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>不可用</span>)</div>");
 						} else {
-							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Unavailable</span></div>");
+							tooltipSB.append("<div class='title'><span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>不可用</span></div>");
 						}
 						boxHeight+=44;
 						
 						if(response.getSexPace()!=null) {
-							tooltipSB.append("<div class='subTitle'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>Sex Pace:</span>"
-									+ " <span style='color:" + response.getSexPace().getColour().toWebHexString() + ";'>"+Util.capitaliseSentence(response.getSexPace().getName())+"</span></div>");
+							tooltipSB.append("<div class='subTitle'><span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>性爱状态：</span>"
+									+ "<span style='color:" + response.getSexPace().getColour().toWebHexString() + ";'>"+Util.capitaliseSentence(response.getSexPace().getName())+"</span></div>");
 							boxHeight+=44;
 						}
 						
@@ -230,7 +230,7 @@ public class TooltipResponseDescriptionEventListener implements EventListener {
 					
 					tooltipSB.append(
 							"<div class='description' style='height:"+((response.lineHeight()+2)*18)+"; text-align:center;'>"
-									+ "<b>Availability:</b>"
+									+ "<b>执行要求：</b>"
 									+response.getTooltipBlockingList()+response.getTooltipRequiredList()
 							+"</div>");
 					

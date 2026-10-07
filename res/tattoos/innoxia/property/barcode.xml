@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[barcode]]></name>
+		<name><![CDATA[条形码]]></name>
 		
-		<description><![CDATA[A series of vertical lines of alternating widths which represent data in a visual, machine-readable form.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which acts as a functional barcode]]></bodyOverviewDescription> 
+		<description><![CDATA[一系列宽度交替的垂直线条，用机器可读取的视觉形式来表示数据。]]></description> 
+		<bodyOverviewDescription><![CDATA[一道看起来像是可用条形码的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>barcode.svg</imageName> 
 		

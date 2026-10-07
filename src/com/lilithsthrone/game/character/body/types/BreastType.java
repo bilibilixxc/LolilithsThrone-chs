@@ -27,9 +27,9 @@ public class BreastType {
 			Race.NONE,
 			NippleType.HUMAN,
 			FluidType.MILK_HUMAN,
-			"breast",
-			"breasts",
-			"[npc.She] no longer [npc.has] [style.boldShrink([npc.crotchBoobs])]!",
+			"乳房",
+			"乳房",
+			"[npc.She]不再拥有[style.boldShrink([npc.crotchBoobs])]！",
 			""){
 	};
 	
@@ -37,160 +37,160 @@ public class BreastType {
 			Race.HUMAN,
 			NippleType.HUMAN,
 			FluidType.MILK_HUMAN,
-			"[npc.She] now [npc.has] [style.boldHuman(human)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldHuman(human milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] human, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldHuman(human)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldHuman(human milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] human, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldHuman(人类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldHuman(人类乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗人类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldHuman(人类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldHuman(人类乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗人类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType ANGEL = new AbstractBreastType(BodyCoveringType.ANGEL,
 			Race.ANGEL,
 			NippleType.ANGEL,
 			FluidType.MILK_ANGEL,
-			"[npc.She] now [npc.has] [style.boldAngel(angelic)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldAngel(angel milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] angelic, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldAngel(angelic)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldAngel(angel milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] angelic, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldAngel(天使)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldAngel(天使乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗天使的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldAngel(天使)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldAngel(天使乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗天使的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType DEMON_COMMON = new AbstractBreastType(BodyCoveringType.DEMON_COMMON,
 			Race.DEMON,
 			NippleType.DEMON,
 			FluidType.MILK_DEMON,
-			"[npc.She] now [npc.has] [style.boldDemon(demonic)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldDemon(demon milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] demonic, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldDemon(demonic)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldDemon(demon milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] demonic, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldDemon(恶魔)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldDemon(恶魔乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗恶魔的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldDemon(恶魔)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldDemon(恶魔乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗恶魔的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType DOG_MORPH = new AbstractBreastType(BodyCoveringType.CANINE_FUR,
 			Race.DOG_MORPH,
 			NippleType.DOG_MORPH,
 			FluidType.MILK_DOG_MORPH, // Emergency backup supply. We're on the dog's milk.
-			"[npc.She] now [npc.has] [style.boldDogMorph(canine)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldDogMorph(dog milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] canine, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldDogMorph(canine)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldDogMorph(dog milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] canine, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldDogMorph(犬类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldDogMorph(犬奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗犬类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldDogMorph(犬类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldDogMorph(犬奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗犬类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType WOLF_MORPH = new AbstractBreastType(BodyCoveringType.LYCAN_FUR,
 			Race.WOLF_MORPH,
 			NippleType.WOLF_MORPH,
 			FluidType.MILK_WOLF_MORPH,
-			"[npc.She] now [npc.has] [style.boldWolfMorph(lupine)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldWolfMorph(wolf milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] lupine, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldWolfMorph(lupine)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldWolfMorph(wolf milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] lupine, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldWolfMorph(狼类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldWolfMorph(狼奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗狼类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldWolfMorph(狼类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldWolfMorph(狼奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗狼类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType FOX_MORPH = new AbstractBreastType(BodyCoveringType.FOX_FUR,
 			Race.FOX_MORPH,
 			NippleType.FOX_MORPH,
 			FluidType.MILK_FOX_MORPH,
-			"[npc.She] now [npc.has] [style.boldFoxMorph(vulpine)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldFoxMorph(fox milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] vulpine, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldFoxMorph(vulpine)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldFoxMorph(fox milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] vulpine, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldFoxMorph(狐狸般)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldFoxMorph(狐狸奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗狐狸般的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldFoxMorph(狐狸般)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldFoxMorph(狐狸奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗狐狸般的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType COW_MORPH = new AbstractBreastType(BodyCoveringType.BOVINE_FUR,
 			Race.COW_MORPH,
 			NippleType.COW_MORPH,
 			FluidType.MILK_COW_MORPH,
-			"[npc.She] now [npc.has] [style.boldCowMorph(bovine)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldCowMorph(cow milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] bovine, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldCowMorph(bovine)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldCowMorph(cow milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] bovine, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldCowMorph(牛类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldCowMorph(牛奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗牛类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldCowMorph(人类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldCowMorph(牛奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗牛类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType CAT_MORPH = new AbstractBreastType(BodyCoveringType.FELINE_FUR,
 			Race.CAT_MORPH,
 			NippleType.CAT_MORPH,
 			FluidType.MILK_CAT_MORPH,
-			"[npc.She] now [npc.has] [style.boldCatMorph(feline)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldCatMorph(cat milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] feline, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldCatMorph(feline)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldCatMorph(cat milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] feline, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldCatMorph(猫类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldCatMorph(猫奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗猫类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldCatMorph(猫类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldCatMorph(猫奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗猫类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType SQUIRREL_MORPH = new AbstractBreastType(BodyCoveringType.SQUIRREL_FUR,
 			Race.SQUIRREL_MORPH,
 			NippleType.SQUIRREL_MORPH,
 			FluidType.MILK_SQUIRREL_MORPH,
-			"[npc.She] now [npc.has] [style.boldSquirrelMorph(squirrel-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldSquirrelMorph(squirrel milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] squirrel-like, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldSquirrelMorph(squirrel-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldSquirrelMorph(squirrel milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] squirrel-like, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldSquirrelMorph(松鼠般)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldSquirrelMorph(松鼠奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗松鼠般的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldSquirrelMorph(松鼠般)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldSquirrelMorph(松鼠奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗松鼠般的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType RAT_MORPH = new AbstractBreastType(BodyCoveringType.RAT_FUR,
 			Race.RAT_MORPH,
 			NippleType.RAT_MORPH,
 			FluidType.MILK_RAT_MORPH, // Rats?! I'm outraged! You promised me dog or higher!
-			"[npc.She] now [npc.has] [style.boldRatMorph(rat-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldRatMorph(rat milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] rat-like, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldRatMorph(rat-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldRatMorph(rat milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] rat-like, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldRatMorph(老鼠般)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldRatMorph(老鼠奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗老鼠般的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldRatMorph(老鼠般)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldRatMorph(老鼠奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗老鼠般的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType RABBIT_MORPH = new AbstractBreastType(BodyCoveringType.RABBIT_FUR,
 			Race.RABBIT_MORPH,
 			NippleType.RABBIT_MORPH,
 			FluidType.MILK_RABBIT_MORPH,
-			"[npc.She] now [npc.has] [style.boldRabbitMorph(rabbit-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldRabbitMorph(rabbit milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] rabbit-like, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldRabbitMorph(rabbit-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldRabbitMorph(rabbit milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] rabbit-like, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldRabbitMorph(兔子般)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldRabbitMorph(兔奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗兔子般的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldRabbitMorph(兔子般)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldRabbitMorph(兔奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗兔子般的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType BAT_MORPH = new AbstractBreastType(BodyCoveringType.BAT_FUR,
 			Race.BAT_MORPH,
 			NippleType.BAT_MORPH,
 			FluidType.MILK_BAT_MORPH,
-			"[npc.She] now [npc.has] [style.boldBatMorph(bat-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldBatMorph(bat milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] bat-like, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldBatMorph(bat-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldBatMorph(bat milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] bat-like, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldBatMorph(蝙蝠般)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldBatMorph(蝙蝠奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗蝙蝠般的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldBatMorph(蝙蝠般)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldBatMorph(蝙蝠奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗蝙蝠般的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType ALLIGATOR_MORPH = new AbstractBreastType(BodyCoveringType.ALLIGATOR_SCALES,
 			Race.ALLIGATOR_MORPH,
 			NippleType.ALLIGATOR_MORPH,
 			FluidType.MILK_ALLIGATOR_MORPH, // Hmm
-			"[npc.She] now [npc.has] [style.boldGatorMorph(reptilian)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldGatorMorph(alligator milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] reptilian, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldGatorMorph(reptilian)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldGatorMorph(alligator milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] reptilian, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldGatorMorph(爬行类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldGatorMorph(鳄鱼奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗爬行类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldGatorMorph(爬行类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldGatorMorph(鳄鱼奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗爬行类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType HORSE_MORPH = new AbstractBreastType(BodyCoveringType.HORSE_HAIR,
 			Race.HORSE_MORPH,
 			NippleType.HORSE_MORPH,
 			FluidType.MILK_HORSE_MORPH,
-			"[npc.She] now [npc.has] [style.boldHorseMorph(equine)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldHorseMorph(horse milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] equine, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldHorseMorph(equine)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldHorseMorph(horse milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] equine, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldHorseMorph(马类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldHorseMorph(马奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗马类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldHorseMorph(马类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldHorseMorph(马奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗马类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType REINDEER_MORPH = new AbstractBreastType(BodyCoveringType.REINDEER_FUR,
 			Race.REINDEER_MORPH,
 			NippleType.REINDEER_MORPH,
 			FluidType.MILK_REINDEER_MORPH,
-			"[npc.She] now [npc.has] [style.boldReindeerMorph(reindeer-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldReindeerMorph(reindeer milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] reindeer-like, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldReindeerMorph(reindeer-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldReindeerMorph(reindeer milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] reindeer-like, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldReindeerMorph(驯鹿般)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldReindeerMorph(驯鹿奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗驯鹿般的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldReindeerMorph(驯鹿般)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldReindeerMorph(驯鹿奶)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗驯鹿般的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	public static AbstractBreastType HARPY = new AbstractBreastType(BodyCoveringType.FEATHERS,
 			Race.HARPY,
 			NippleType.HARPY,
 			FluidType.MILK_HARPY, // hmm
-			"[npc.She] now [npc.has] [style.boldHarpy(avian)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldHarpy(harpy milk)].",
-			"On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] avian, [npc.nipplesFullDescription].",
-			"[npc.She] now [npc.has] [style.boldHarpy(avian)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldHarpy(harpy milk)].",
-			"On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] avian, [npc.crotchNipplesFullDescription]."){
+			"[npc.She]现在拥有[style.boldHarpy(鸟类)]的[npc.nipplesFullDescription]，泌乳时会分泌[style.boldHarpy(哈比乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.breasts]上，都有着[npc.nipplesPerBreast]颗鸟类的[npc.nipplesFullDescription]。",
+			"[npc.She]现在拥有[style.boldHarpy(鸟类)]的[npc.crotchNipplesFullDescription]，泌乳时会分泌[style.boldHarpy(哈比乳汁)]。",
+			"[npc.her]每个[npc.breastSize]的[npc.crotchBoobs]上，都有着[npc.crotchNipplesPerBreast]颗鸟类的[npc.crotchNipplesFullDescription]。"){
 	};
 	
 	

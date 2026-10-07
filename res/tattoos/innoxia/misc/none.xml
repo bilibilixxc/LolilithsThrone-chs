@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>100</value> 
 		
-		<name><![CDATA[none]]></name>
+		<name><![CDATA[自设文字]]></name>
 		
-		<description><![CDATA[This tattoo has no particular pattern, and simply displays either writing or a counter.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which lacks any kind of image or pattern]]></bodyOverviewDescription> 
+		<description><![CDATA[这个纹身没有特定的图案，可以展示任意文字或计数指示。]]></description> 
+		<bodyOverviewDescription><![CDATA[没有图形纹样的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>none.svg</imageName> 
 		

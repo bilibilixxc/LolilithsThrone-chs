@@ -86,9 +86,9 @@ public abstract class AbstractWorldType {
 		this.discoveredOnStart = false;
 		this.revealedOnStart = false;
 		this.furniturePresent = false;
-		this.deskName = "desk";
+		this.deskName = "桌子";
 		this.wallsPresent = true; // Default to true for hard coded values, as these are all Dominion/Submission (which obviously have walls)
-		this.wallName = "wall";
+		this.wallName = "墙壁";
 		
 		this.offspringTextFilePath = "characters/offspring/dominionAlleyway";
 		
@@ -137,7 +137,7 @@ public abstract class AbstractWorldType {
 				this.usesFile = true;
 				
 				this.furniturePresent = false;
-				this.deskName = "desk";
+				this.deskName = "桌子";
 				if(coreElement.getOptionalFirstOf("furniturePresent").isPresent()) {
 					this.furniturePresent = Boolean.valueOf(coreElement.getMandatoryFirstOf("furniturePresent").getTextContent().trim());
 					if(!coreElement.getMandatoryFirstOf("furniturePresent").getAttribute("deskName").isEmpty()) {
@@ -146,7 +146,7 @@ public abstract class AbstractWorldType {
 				}
 
 				this.wallsPresent = false;
-				this.wallName = "wall";
+				this.wallName = "墙壁";
 				if(coreElement.getOptionalFirstOf("wallsPresent").isPresent()) {
 					this.wallsPresent = Boolean.valueOf(coreElement.getMandatoryFirstOf("wallsPresent").getTextContent().trim());
 					if(!coreElement.getMandatoryFirstOf("wallsPresent").getAttribute("wallName").isEmpty()) {

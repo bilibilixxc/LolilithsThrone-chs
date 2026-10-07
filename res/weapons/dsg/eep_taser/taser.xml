@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA[On the underside of the body, a small engraving reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[外壳的底部刻着细小的字迹，写着“执法者官方分配，DSG铸造厂生产。”]]></authorTag>
 		
 		<value>7500</value> 
 		
@@ -9,23 +9,23 @@
 		
 		<twoHanded>false</twoHanded>
 		
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name><![CDATA[arcane taser]]></name>
+		<name><![CDATA[奥术电击枪]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[arcane tasers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[奥术电击枪]]></namePlural> 
 		
-		<description><![CDATA[This weapon uses an air spell housed in a cartridge to propel two dart-like projectiles that are linked back to the main unit with conductive wires. After the barbs embed themselves in the target's aura, the main unit then sends a charge of arcane lightning down the wires.]]></description> 
+		<description><![CDATA[这把武器使用弹匣中的风系法术来发射带导线的飞镖弹，这些弹丸通过导电线与主机相连。在倒钩嵌入目标的灵气后，主机会顺着导线发出一道奥术闪电。]]></description> 
 		
-		<attackDescriptor>Shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your taser.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用电击枪射向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>RARE</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(unholster)] the taser, readying it for use in combat.]]></equipText>
+		<equipText><![CDATA[[npc.Name]从枪套中拔出电击枪，准备用于战斗。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(holster)] the taser, before putting it away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]把电击枪插回枪套，然后放好。]]></unequipText>
 		
 		<imageName>taser_holstered.svg</imageName> 
 		
@@ -46,14 +46,14 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.boldLust("Lustful Distraction")] on critical hit.]]></effect>
+			<effect><![CDATA[暴击附带[style.boldLust(“情迷欲乱”)]效果。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect/>
 		
 		<onCriticalHitEffect><![CDATA[
 		#IF !npc2.hasStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION)
-		#THEN [##npc2.addStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION, 4)] [npc2.Name] [npc2.is] [style.boldLust(feeling the lingering effects of the arcane lightning.)]
+		#THEN [##npc2.addStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION, 4)][npc2.Name][style.boldLust(感受到了奥术闪电的余响。)]
 		#ENDIF
 		]]></onCriticalHitEffect>
 		
@@ -71,37 +71,37 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-			Aiming [npc.her] taser at [npc2.name], [npc.she] 
+			[npc.she]用电击枪瞄准[npc2.name]，
 			#IF game.isSillyModeEnabled()
-			#THEN [npc.verb(shouts)] [npc.speech(Stop right there, criminal scum!)] before pulling the trigger. 
-			#ELSE [npc.verb(pull)] the trigger. 
+			#THEN 并喊着，[npc.speech(站住，犯罪人渣！)]然后扣下扳机。
+			#ELSE 并扣下扳机。
 			#ENDIF 
-			The metal darts embed themselves in [npc2.namePos] aura while pink and purple lightning course through the wires, draining [npc2.her] energy! The spent cartridge ejects itself and dissolves into thin air. [npc.Name] suddenly [npc.verb(find)] another cartridge in [npc.her] [npc.hand] and [npc.verb(insert)] it into the business end of the taser.
+			金属镖嵌入[npc2.namePos]灵气，粉色和紫色闪电穿过电线，消耗[npc2.her]的能量！用完的空壳自行弹出，化为乌有。[npc.name]快速从[npc.her]的[npc.hand]中拿出另一个弹匣，并将其插入电击枪中。
 		]]></hitText>
 		<hitText><![CDATA[
-			[npc.Name] [npc.verb(shoot)] [npc2.name] with [npc.her] 
+			[npc.Name]用电击枪射向[npc2.name]
 			#IF game.isSillyModeEnabled()
-			#THEN taser with a shout of [npc.speech(I am the law!)] 
-			#ELSE taser.
+			#THEN 并高喊[npc.speech(我就是法律！)] 
+			#ELSE 。
 			#ENDIF
-			There is a loud bang and then a brilliant pink and purple flash as [npc2.namePos] energy is drained! The spent cartridge pops out and [npc.name] [npc.verb(insert)] another one into the taser.
+			随着一声巨响过后，[npc2.namePos]能量耗尽，一道耀眼的粉紫色闪光闪过！用完的空壳弹出，[npc.name]将另一个弹匣插入电击枪。
 		]]></hitText>
 		<hitText><![CDATA[
-			[npc.Name] [npc.verb(fire)] [npc.her] taser. [npc2.Name] suddenly [npc2.verb(find)] metal darts embedded in [npc2.her] aura before being surrounded by pulsating streams of arcane lightning! [npc2.sheHasFull] lost some energy! The spent cartridge clatters on the ground and [npc.name] [npc.verb(insert)] another one into the taser.
+			[npc.Name]用电击枪开火。[npc2.Name]突然发现金属飞镖嵌入[npc2.her]的灵气，然后被脉动的奥术闪电流包围！[npc2.sheHasFull]失去了一些能量！用完的空壳在地上发出咔嗒声，[npc.name]将另一个弹匣插入电击枪。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-			Aiming [npc.her] taser at [npc2.name], [npc.verb(pull)] the trigger. The metal darts glance off [npc2.nameHas] aura and fall uselessly to the ground! 
+			[npc.Name]用电击枪瞄准[npc2.name]并扣下扳机，金属飞镖弹刺入[npc2.nameHas]并让其摔倒在地！
 			#IF game.isSillyModeEnabled()
-			#THEN [npc.speech(You betrayed the law!)] [npc.name] [npc.verb(shout)]. [npc2.Name] sneers and mockingly [npc.verb(shout)] back [npc2.speech(Laawwwwwww!)]
+			#THEN [npc.speech(你违反了法律！)][npc.name]大喊，[npc2.Name]冷笑一声，嘲讽地喊着[npc2.speech(法律律律律！)]
 			#ELSE
 			#ENDIF
-			With an annoyed huff, [npc.name] [npc.verb(eject)] the spent cartridge and [npc.verb(insert)] a new one into the business end of the taser.
+			[npc.name]恼怒地哼了一声，然后弹出空壳，并将一个新弹匣插入电击枪。
 		]]></missText>
 		<missText><![CDATA[
-			[npc.Name] shoot [npc2.name] with [npc.her] taser. There is a loud snapping sound but the metal darts fail to embed themselves in [npc2.namePos] aura! [npc.name] [npc.verb(insert)] another cartridge into the taser.
+			[npc.Name]用电击枪射向[npc2.name]。发出一声巨响，但金属镖未能嵌入[npc2.namePos]灵气！[npc.name]将另一个弹匣插入电击枪。
 		]]></missText>
 	</missDescriptions>
 	

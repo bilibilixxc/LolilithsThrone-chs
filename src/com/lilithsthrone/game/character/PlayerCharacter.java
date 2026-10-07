@@ -139,7 +139,7 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 
 		this.setSexualOrientation(SexualOrientation.AMBIPHILIC);
 		
-		title = "The Human";
+		title = "人类";
 		
 		karma = 0;
 		
@@ -803,9 +803,9 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 			return ""; // This isn't displayed anywhere before the game starts for real.
 		} else {
 			if(description==null || description.isEmpty()) {
-				return "Having been pulled into an enchanted mirror in your aunt Lily's museum, you woke up to find yourself in another world."
-					+ " By a stroke of good fortune, one of the first people you met was Lilaya; this world's version of your aunt."
-					+ " Having convinced her that your story is true, you're now working towards finding a way to get back to your old world.";
+				return "你被拉进了莉莉阿姨博物馆里的一面魔镜，醒来后发现自己身处另一个世界。"
+					+ "幸运的是，你遇到的第一个人是莉莱雅——你异世界版本的姨妈。"
+					+ "你让她相信了你的故事。现在你正想方设法回到原来的世界。";
 			} else {
 				return UtilText.parse(this, description);
 			}
@@ -817,12 +817,12 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		if(this.getWorldsVisited()!=null && !this.getWorldsVisited().contains(worldLocation)) {
 			this.getWorldsVisited().add(worldLocation);
 			if(Main.game.isStarted()) {
-				Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Discovered)]", Util.capitaliseSentence(worldLocation.getName())), false);
+				Main.game.addEvent(new EventLogEntry("[style.colourExcellent(已发现)]", Util.capitaliseSentence(worldLocation.getName())), false);
 			}
 		}
 		
 		if(Main.game.isStarted() && worldLocation!=this.getWorldLocation()) {
-			Main.game.addEvent(new EventLogEntry("[style.colourMinorGood(Entered)]", Util.capitaliseSentence(worldLocation.getName())), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourMinorGood(进入)]", Util.capitaliseSentence(worldLocation.getName())), false);
 		}
 
 		if(Main.game.isStarted() && Main.game.getActiveWorld().getCell(this.getLocation()).getPlace().isItemsDisappear()) {
@@ -880,9 +880,9 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 	public String getPetName(GameCharacter target) {
 		if(target instanceof Lyssieth && this.getRace()==Race.DEMON) {
 			if(this.hasFetish(Fetish.FETISH_INCEST)) {
-				return "mommy";
+				return "妈咪";
 			} else {
-				return "mother";
+				return "妈妈";
 			}
 		}
 		return super.getPetName(target);
@@ -1010,7 +1010,7 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		questsFailed.put(questLine, questFail);
 
 		return "<p style='text-align:center;'>"
-					+ "[style.boldBad(Quest Failed - " + questLine.getName() + ")]"
+					+ "[style.boldBad(任务失败：" + questLine.getName() + ")]"
 				+ "</p>";
 	}
 
@@ -1038,10 +1038,10 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		
 		quests.get(questLine).add(0, quest);
 		
-		Main.game.addEvent(new EventLogEntry("[style.colourGood(Optional Task Complete)]", quest.getName()), false);
+		Main.game.addEvent(new EventLogEntry("[style.colourGood(已完成可选任务)]", quest.getName()), false);
 		return "<p style='text-align:center;'>"
-				+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>Quest - " + questLine.getName() + "</b><br/>"
-				+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Optional Task Completed: " + quest.getName() + "</b><br/>"
+				+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>任务：" + questLine.getName() + "</b><br/>"
+				+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>已完成可选任务：" + quest.getName() + "</b><br/>"
 				+ experienceUpdate;
 	}
 	
@@ -1070,19 +1070,19 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 			quests.get(questLine).add(quest);
 			
 			if (questLine.getQuestTree().getFirstNodeWithData(quest).getChildren().isEmpty()) { // QuestLine complete (No more children in the tree)
-				Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Quest Complete)]", questLine.getName()), false);
+				Main.game.addEvent(new EventLogEntry("[style.colourExcellent(任务完成)]", questLine.getName()), false);
 				return "<p style='text-align:center;'>"
-						+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>Quest - " + questLine.getName() + "</b><br/>"
-						+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Task Completed</b><b> - "+currentQuest.getName()+"</b><br/>"
-						+ "<b>All Tasks Completed!</b></p>"
+						+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>任务：" + questLine.getName() + "</b><br/>"
+						+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>任务完成</b><b>："+currentQuest.getName()+"</b><br/>"
+						+ "<b>所有任务已完成！</b></p>"
 						+ experienceUpdate;
 				
 			} else {
-				Main.game.addEvent(new EventLogEntry("[style.colourMinorGood(New Task)]", quest.getName()), false);
+				Main.game.addEvent(new EventLogEntry("[style.colourMinorGood(新任务)]", quest.getName()), false);
 				return "<p style='text-align:center;'>"
-						+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>Quest - " + questLine.getName() + "</b><br/>"
-						+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Task Completed - "+currentQuest.getName()+"</b><br/>"
-						+ "<b>New Task - " + quest.getName() + "</b></p>"
+						+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>任务：" + questLine.getName() + "</b><br/>"
+						+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>任务完成 - "+currentQuest.getName()+"</b><br/>"
+						+ "<b>新任务 - " + quest.getName() + "</b></p>"
 						+ experienceUpdate;
 			}
 			
@@ -1090,11 +1090,11 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 			quests.put(questLine, new ArrayList<>());
 			quests.get(questLine).add(quest);
 			
-			Main.game.addEvent(new EventLogEntry("[style.colourGood(Quest Started)]", questLine.getName()), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourGood(任务开始)]", questLine.getName()), false);
 			
 			return "<p style='text-align:center;'>"
-					+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>New Quest - " + questLine.getName() + "</b><br/>"
-					+ "<b>New Task - " + quest.getName() + "</b></p>";
+					+ "<b style='color:" + questLine.getType().getColour().toWebHexString() + ";'>新任务：" + questLine.getName() + "</b><br/>"
+					+ "<b>新任务 - " + quest.getName() + "</b></p>";
 		}
 		
 	}
@@ -1414,7 +1414,7 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		return "<p>"
 				+ UtilText.parse(this,
 						UtilText.returnStringAtRandom(
-						"Concentrating on harnessing the power of your arcane aura, you thrust your [pc.arm] into mid air and cast a spell!"))
+						"集中精力利用你的奥术灵气的力量，你将[pc.arm]举到半空中，并施放了一个法术！"))
 			+ "</p>";
 	}
 
@@ -1427,46 +1427,46 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 			if(this.isFeminine()) {
 				return UtilText.parse(target,
 						UtilText.returnStringAtRandom(
-								"You put on a smouldering look, and as your [pc.eyes] meet [npc.namePos], you project an extremely lewd moan into [npc.her] head,"
-										+ " [pc.thought(~Aaah!~ "
+								"你露出一副积欲已久的表情，当与[npc.namePos]四目相对时，你发出一段格外淫荡的呻吟，投入了[npc.her]的脑内，"
+										+ "[pc.thought(~啊啊啊！~"
 											+(this.hasVagina()
-													?"You're making me so wet!"
+													?"你让我湿透了！"
 													:this.hasPenis()
-														?"You're getting me so hard!"
-														:"You're turning me on so much!")+")]",
-								"You lock your [pc.eyes] with [npc.namePos], and, putting on your most innocent look as you pout at [npc.herHim], you project an echoing moan deep into [npc.her] mind,"
-									+ " [pc.thought("+
+														?"你让我变得真的很硬！"
+														:"你让我好兴奋啊！")+")]",
+								"你与[npc.namePos]紧紧对视着，你撅起嘴，露出一副极其纯洁的表情，接着便发出了一声回荡的呻吟，投入了[npc.her]的脑内，"
+									+ "[pc.thought("+
 											(this.hasVagina()
-													?"~Mmm!~ Fuck me! ~Aaa!~ My pussy's wet and ready for you!"
+													?"~嗯嗯嗯！~操我啊！~啊啊！~我的小穴早就为你湿好了！"
 													:this.hasPenis()
-														?"~Mmm!~ I can't wait to fuck you! ~Aaa!~ You're going to love my cock!"
-														:"~Mmm!~ Fuck me! ~Aaa!~ I need you so badly!")+")]",
+														?"~唔姆！~ 我等不及要操你了！你肯定会喜欢我的肉棒的！"
+														:"~嗯嗯嗯！~操我啊！~啊啊！~我真的很想要你！")+")]",
 								(this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION)
 										|| this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_PROJECTED_TOUCH)
-										?"You pout innocently at [npc.name], before blowing [npc.herHim] a wet kiss."
-												+ " As you straighten back up, you project the feeling of a ghostly pair of wet lips pressing against [npc.her] cheek."
+										?"你纯洁地对着[npc.name]撅起嘴巴，接着送上了一记湿吻。"
+												+ "当你退回身子后，略施小计，一对湿润的嘴唇的感觉鬼使神差地贴在了[npc.her]的脸颊上。"
 										:"")));
 			} else {
 				return UtilText.parse(target,
 						UtilText.returnStringAtRandom(
-								"You put on a confident look, and as your [pc.eyes] meet [npc.namePos], you project an extremely lewd groan into [npc.her] head,"
-									+ " [pc.thought(~Mmm!~ "
+								"你露出一副自信的表情，当与[npc.namePos]四目相对时，你发出一段格外淫荡的呻吟，投入了[npc.her]的脑内，"
+									+ "[pc.thought(~嗯嗯嗯！~"
 											+(this.hasVagina()
-													?"You're making me so wet!"
+													?"你让我湿透了！"
 													:this.hasPenis()
-														?"You're getting me so hard!"
-														:"You're turning me on so much!")+")]",
-								"You lock your [pc.eyes] with [npc.namePos], and, throwing [npc.herHim] a charming smile, you project an echoing groan deep into [npc.her] mind,"
-									+ " [pc.thought("+
+														?"你让我变得真的很硬！"
+														:"你让我好兴奋啊！")+")]",
+								"你与[npc.namePos]紧紧对视着，你向[npc.herHim]送去一个迷人的微笑，接着便发出了一声回荡的呻吟，投入了[npc.her]的脑内，"
+									+ "[pc.thought("+
 											(this.hasVagina()
-													?"~Mmm!~ Fuck me! ~Aaa!~ My pussy's wet and ready for you!"
+													?"~嗯嗯嗯！~操我啊！~啊啊！~我的小穴早就为你湿好了！"
 													:this.hasPenis()
-														?"~Mmm!~ I can't wait to fuck you! You're going to love my cock!"
-														:"~Mmm!~ I can't wait to have some fun with you!")+")]",
+														?"~唔姆！~ 我等不及要操你了！你肯定会喜欢我的肉棒的！"
+														:"~嗯嗯嗯！~ 我等不及要和你爽一爽了！")+")]",
 								(this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION)
 										|| this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_PROJECTED_TOUCH)
-										?"You throw [npc.name] a charming smile, before winking at [npc.herHim] and striking a heroic pose."
-												+ " As you straighten back up, you project the feeling of a ghostly pair of arms pulling [npc.herHim] into a strong, confident embrace."
+										?"你向[npc.name]抛出迷人的微笑，又摆出个英雄的姿势，向[npc.herHim]眨了眨眼。"
+												+ "你摆正身姿后，向[npc.herHim]投射一对虚幻的臂弯，将其揽入了自信的深拥。"
 										:"")));
 			}
 		}
@@ -1474,20 +1474,20 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		if(this.isFeminine()) {
 			description = UtilText.parse(target,
 					UtilText.returnStringAtRandom(
-					"You blow a kiss at [npc.name] and wink suggestively at [npc.herHim].",
-					"Biting your lip and putting on your most smouldering look, you run your hands slowly up your inner thighs.",
-					"As you give [npc.name] your most innocent look, you blow [npc.herHim] a little kiss.",
-					"Turning around, you let out a playful giggle as you give your [pc.ass+] a slap.",
-					"You slowly run your hands up the length of your body, before pouting at [npc.name]."));
+					"你向[npc.name]送去一个飞吻，随后暗示地朝[npc.herHim]眨了眨眼。",
+					"你轻咬下唇，显露出积欲已久的表情，手渐渐地向自己的大腿内侧摸去。",
+					"你对着[npc.name]摆出了最纯洁的表情，向[npc.herHim]送去一抹浅吻。",
+					"你转过身，发出一阵玩味的笑声，对着自己[pc.ass+]拍了一下。",
+					"接着沿着身体曲线一直向上抚摸，最后向[npc.Name]嘟起了嘴巴。"));
 			
 		} else {
 			description = UtilText.parse(target,
 					UtilText.returnStringAtRandom(
-					"You blow a kiss at [npc.name] and wink suggestively at [npc.herHim].",
-					"Smiling confidently at [npc.name], you slowly run your hands up your inner thighs.",
-					"As you give [npc.name] your most seductive look, you blow [npc.herHim] a little kiss.",
-					"Turning around, you let out a playful laugh as you give your [pc.ass+] a slap.",
-					"You try to look as commanding as possible as you smirk playfully at [npc.name]."));
+					"你向[npc.name]送去一个飞吻，随后暗示地朝[npc.herHim]眨了眨眼。",
+					"你向[npc.name]自信一笑，慢慢将手摸向自己的大腿内侧。",
+					"你诱人的目光落在了[npc.Name]的身上，飞吻紧接而至。",
+					"你转过身，调皮的嬉笑声与拍自己[pc.ass+]的声音一同响起。",
+					"你用尽浑身解数，架起一副居高临下的模样，对[npc.Name]露出好玩的得意微笑。"));
 		}
 
 		return description;
@@ -1983,16 +1983,16 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		// Use simple names as parsed names with descriptors sounds awkward when NPC says it
 		switch(penetration) {
 			case CLIT:
-				penetrationName = "clit";
+				penetrationName = "阴蒂";
 				break;
 			case PENIS:
-				penetrationName = "cock";
+				penetrationName = "肉棒";
 				break;
 			case TAIL:
-				penetrationName = "tail";
+				penetrationName = "尾巴";
 				break;
 			case TENTACLE:
-				penetrationName = "tentacle";
+				penetrationName = "触手";
 				break;
 			default:
 				break;
@@ -2047,8 +2047,8 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		
 		return UtilText.parse(characterPenetrated, this,
 				(characterPenetrated.equals(this)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own penile virginity!")
-						:UtilText.formatVirginityLoss("[npc.Name] [npc.has] taken [npc2.namePos] penile virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的童贞！")
+						:UtilText.formatVirginityLoss("[npc.Name]已经夺走了[npc2.namePos]的童贞！"))
 				+getVirginityExperienceDescription(characterPenetrated));
 	}
 
@@ -2060,8 +2060,8 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own nipple virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] nipple virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的乳头贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的乳头贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 
@@ -2073,8 +2073,8 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own [npc2.crotchNipple] virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] [npc.crotchNipple] virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的[npc2.crotchNipple]贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的[npc.crotchNipple]贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 
@@ -2086,8 +2086,8 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own urethral virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] urethral virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的尿道贞洁！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的尿道贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 
@@ -2099,8 +2099,8 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own urethral virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] urethral virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的尿道贞洁！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的尿道贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 
@@ -2112,8 +2112,8 @@ public class PlayerCharacter extends GameCharacter implements XMLSaving {
 		
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] given [npc2.herself] [npc.her] first oral experience!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] given [npc.name] [npc.her] first oral experience!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]把口部贞操献给了[npc.her]自己！")
+						:UtilText.formatVirginityLoss("[npc2.Name]让[npc.name]体验到第一次用嘴了！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 

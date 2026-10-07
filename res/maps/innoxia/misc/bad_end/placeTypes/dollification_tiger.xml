@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Clothing Store]]></name>
-	<tooltipDescription><![CDATA[You're kept in your Mistress's shop and used to demonstrate outfits to potential customers.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in your Mistress's shop]]></virginityLossDescription>
+	<name><![CDATA[服装店]]></name>
+	<tooltipDescription><![CDATA[你被留在主人店里，用来向潜在顾客展示服装。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在你主人的商店]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GOLD</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>25</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[lube pill]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[lube pills]]></namePlural>
-		<description><![CDATA[A round, turquoise lozenge, individually packaged in a foil and plastic wrapper. Small text printed on the foil names it as an 'instant-effect lubrication lozenge', but it's more commonly referred to as a 'lube pill'.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[润滑药]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[润滑药]]></namePlural>
+		<description><![CDATA[一颗单独包装在铝塑药板中的绿松石色圆型药丸，铝箔上印有“速效润滑锭剂”的字样，俗称“润滑药”。]]></description> 
 		
-		<useDescriptor>swallow</useDescriptor>
+		<useDescriptor><![CDATA[吞下]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -27,17 +27,17 @@
 		</statusEffects>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.colourSex(During sex:)]]]></line>
-			<line><![CDATA[[style.colourWetness(Lubricates)] all areas]]></line>
+			<line><![CDATA[[style.colourSex(在性爱中：)]]]></line>
+			<line><![CDATA[[style.colourWetness(润滑)]所有区域]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				The round lozenge instantly dissolves in [npc.namePos] mouth, and after swallowing the resulting sugary fluid, [npc.she] [npc.verb(feel)] a wave of arcane energy pulse through [npc.her] body.
+				圆形药片瞬间在[npc.namePos]的口中溶解，[npc.she]吞下药片产生的甜腻液体，感受到一阵奥术能量在[npc.her]的身体中涌动。
 				#IF(game.isInSex())
-					 [npc.NamePos] orifices instantly get wet, and a thin layer of slippery, odourless liquid seeps out of [npc.her] [npc.skin] to coat [npc.her] entire body in a thin layer of lubricant.
+					[npc.NamePos]的腔穴瞬间变得湿润起来，一层薄薄的、滑腻无味的液体渗出[npc.her]的[npc.skin]，让[npc.her]的整个身体都覆盖上了一层润滑液。
 				#ELSE
-					 As [npc.sheIs] not currently having sex, the pill's lubricating effects don't immediately take effect...
+					由于[npc.sheIs]并未进行性交，药片的润滑效果并没有立即生效……
 				#ENDIF
 			</p>
 		]]></applyEffects>
@@ -51,10 +51,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			[npc.Name] [npc.verb(pop)] the lube pill out of its little foil wrapper, before quickly placing it in [npc.her] mouth.
+			[npc.Name]从小小的箔纸包装中取出润滑药，然后迅速地将其放入口中。
 		]]></selfUse>
 		<otherUse><![CDATA[
-			[npc.Name] [npc.verb(pop)] the lube pill out of its little foil wrapper, before bringing it up to [npc2.namePos] [npc2.lips] and forcing it into [npc2.her] mouth.
+			[npc.Name]从小小的箔纸包装中取出润滑药，然后把它送到[npc2.namePos]的[npc2.lips]处，强迫[npc2.she]吞入口中。
 		]]></otherUse>
 	</useDescriptions>
 

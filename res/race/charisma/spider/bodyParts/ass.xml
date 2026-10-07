@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛]]></transformationName>
 	<coveringType>charisma_spider_chitinSmooth</coveringType>
 	<anusType>charisma_spider_anus</anusType>
 	<names/>
@@ -9,9 +9,9 @@
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldSpider(spider-like)], [npc.assholeFullDescription].
+		[npc.She]现在拥有[style.boldSpider(蜘蛛般)][npc.assholeFullDescription]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] a spider-like, [npc.anusFullDescription(true)]
+		[npc.SheHasFull]拥有蜘蛛般[npc.anusFullDescription(true)]
 	]]></bodyDescription>
 </ass>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[shop floor]]></name>
-	<tooltipDescription><![CDATA[The shop floor of Lovienne's Luxuries houses numerous shelving units, each of which is stacked full of sex toys of all shapes and sizes.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[店面]]></name>
+	<tooltipDescription><![CDATA[洛维耶纳奢侈品店的店面里摆放着许多货架，每个货架上都堆满了各种形状和大小的性玩具。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[tribal]]></name>
+		<name><![CDATA[部落图腾]]></name>
 		
-		<description><![CDATA[A series of flowing lines and intricate patterns.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which consists of a series of flowing lines and intricate patterns]]></bodyOverviewDescription> 
+		<description><![CDATA[一系列流动的线条和复杂的图案。]]></description> 
+		<bodyOverviewDescription><![CDATA[流动的线条和复杂的图案的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>tribal.svg</imageName> 
 		

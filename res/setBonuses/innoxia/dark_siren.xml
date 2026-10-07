@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Dark Siren]]></name>
+	<name><![CDATA[暗夜塞壬]]></name>
 	
 	<statusEffect>SET_DARK_SIREN</statusEffect>
 	

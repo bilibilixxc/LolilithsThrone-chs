@@ -21,110 +21,110 @@ public enum Occupation {
 	
 	// Unique:
 	
-	ELEMENTAL(Perk.ELEMENTAL_CORE_OCCUPATION, "elemental", "[npc.NameIsFull] a construct of pure arcane energy and is a physical manifestation of [npc.her] summoner's aura.", OccupationTag.HAS_PREREQUISITES),
+	ELEMENTAL(Perk.ELEMENTAL_CORE_OCCUPATION, "元素", "[npc.NameIsFull]由纯粹的奥术能量构成，经由召唤者的灵气获得物理显现。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_ENFORCER_PATROL_INSPECTOR(Perk.JOB_NPC_ENFORCER_PATROL_INSPECTOR, "Enforcer", "[npc.NameIs] a member of the Enforcers.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_PATROL),
-	NPC_ENFORCER_PATROL_SERGEANT(Perk.JOB_NPC_ENFORCER_PATROL_SERGEANT, "Enforcer", "[npc.NameIs] a member of the Enforcers.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_PATROL),
-	NPC_ENFORCER_PATROL_CONSTABLE(Perk.JOB_NPC_ENFORCER_PATROL_CONSTABLE, "Enforcer", "[npc.NameIs] a member of the Enforcers.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_PATROL),
+	NPC_ENFORCER_PATROL_INSPECTOR(Perk.JOB_NPC_ENFORCER_PATROL_INSPECTOR, "执法者", "[npc.NameIs]是执法者中的一员。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_PATROL),
+	NPC_ENFORCER_PATROL_SERGEANT(Perk.JOB_NPC_ENFORCER_PATROL_SERGEANT, "执法者", "[npc.NameIs]是执法者中的一员。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_PATROL),
+	NPC_ENFORCER_PATROL_CONSTABLE(Perk.JOB_NPC_ENFORCER_PATROL_CONSTABLE, "执法者", "[npc.NameIs]是执法者中的一员。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_PATROL),
 
-	NPC_ENFORCER_SWORD_SUPER(Perk.JOB_NPC_ENFORCER_SWORD_SUPER, "SWORD Enforcer", "[npc.NameIs] an Enforcer, and is a member of SWORD.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
-	NPC_ENFORCER_SWORD_CHIEF_INSPECTOR(Perk.JOB_NPC_ENFORCER_SWORD_CHIEF_INSPECTOR, "SWORD Enforcer", "[npc.NameIs] an Enforcer, and is a member of SWORD.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
-	NPC_ENFORCER_SWORD_INSPECTOR(Perk.JOB_NPC_ENFORCER_SWORD_INSPECTOR, "SWORD Enforcer", "[npc.NameIs] an Enforcer, and is a member of SWORD.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
-	NPC_ENFORCER_SWORD_SERGEANT(Perk.JOB_NPC_ENFORCER_SWORD_SERGEANT, "SWORD Enforcer", "[npc.NameIs] an Enforcer, and is a member of SWORD.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
-	NPC_ENFORCER_SWORD_CONSTABLE(Perk.JOB_NPC_ENFORCER_SWORD_CONSTABLE, "SWORD Enforcer", "[npc.NameIs] an Enforcer, and is a member of SWORD.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
+	NPC_ENFORCER_SWORD_SUPER(Perk.JOB_NPC_ENFORCER_SWORD_SUPER, "SWORD执法者", "[npc.NameIs]是一名执法者，SWORD成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
+	NPC_ENFORCER_SWORD_CHIEF_INSPECTOR(Perk.JOB_NPC_ENFORCER_SWORD_CHIEF_INSPECTOR, "SWORD执法者", "[npc.NameIs]是一名执法者，SWORD成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
+	NPC_ENFORCER_SWORD_INSPECTOR(Perk.JOB_NPC_ENFORCER_SWORD_INSPECTOR, "SWORD执法者", "[npc.NameIs]是一名执法者，SWORD成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
+	NPC_ENFORCER_SWORD_SERGEANT(Perk.JOB_NPC_ENFORCER_SWORD_SERGEANT, "SWORD执法者", "[npc.NameIs]是一名执法者，SWORD成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
+	NPC_ENFORCER_SWORD_CONSTABLE(Perk.JOB_NPC_ENFORCER_SWORD_CONSTABLE, "SWORD执法者", "[npc.NameIs]是一名执法者，SWORD成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_SWORD),
 
-	NPC_ENFORCER_ORICL_INSPECTOR(Perk.JOB_NPC_ENFORCER_ORICL_INSPECTOR, "ORICL Enforcer", "[npc.NameIs] an Enforcer, and is a member of ORICL.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_ORICL),
-	NPC_ENFORCER_ORICL_SERGEANT(Perk.JOB_NPC_ENFORCER_ORICL_SERGEANT, "ORICL Enforcer", "[npc.NameIs] an Enforcer, and is a member of ORICL.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_ORICL),
-	NPC_ENFORCER_ORICL_CONSTABLE(Perk.JOB_NPC_ENFORCER_ORICL_CONSTABLE, "ORICL Enforcer", "[npc.NameIs] an Enforcer, and is a member of ORICL.", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_ORICL),
+	NPC_ENFORCER_ORICL_INSPECTOR(Perk.JOB_NPC_ENFORCER_ORICL_INSPECTOR, "ORICL执法者", "[npc.NameIs]是一名执法者，ORICL成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_ORICL),
+	NPC_ENFORCER_ORICL_SERGEANT(Perk.JOB_NPC_ENFORCER_ORICL_SERGEANT, "ORICLORICL执法者", "[npc.NameIs]是一名执法者，ORICL成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_ORICL),
+	NPC_ENFORCER_ORICL_CONSTABLE(Perk.JOB_NPC_ENFORCER_ORICL_CONSTABLE, "ORICLORICL执法者", "[npc.NameIs]是一名执法者，ORICL成员之一。", OccupationTag.HAS_PREREQUISITES, OccupationTag.ENFORCER_ORICL),
 
 	
-	NPC_HARPY_MATRIARCH(Perk.JOB_NPC_HARPY_MATRIARCH, "harpy matriarch", "[npc.NameIsFull] a matriarch of a harpy flock.", OccupationTag.HAS_PREREQUISITES),
-	NPC_HARPY_FLOCK_MEMBER(Perk.JOB_NPC_HARPY_FLOCK_MEMBER, "harpy flock member", "[npc.NameIsFull] a member of a harpy flock", OccupationTag.HAS_PREREQUISITES),
+	NPC_HARPY_MATRIARCH(Perk.JOB_NPC_HARPY_MATRIARCH, "哈比族长", "[npc.NameIsFull]是哈比部族的族长。", OccupationTag.HAS_PREREQUISITES),
+	NPC_HARPY_FLOCK_MEMBER(Perk.JOB_NPC_HARPY_FLOCK_MEMBER, "哈比部族成员", "[npc.NameIsFull]是哈比部族的一员。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_CULTIST(Perk.JOB_NPC_CULTIST, "Cultist", "[npc.NameIs] a full-time member of the 'Cult of Lilith'.", OccupationTag.HAS_PREREQUISITES),
+	NPC_CULTIST(Perk.JOB_NPC_CULTIST, "狂信者", "[npc.NameIs]是“莉莉丝异教”的全职成员。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_SLAVER_ADMIN(Perk.JOB_NPC_SLAVER_ADMIN, "slaver administration overseer", "[npc.NameIsFull] the overseer of the slaver administration.", OccupationTag.HAS_PREREQUISITES),
+	NPC_SLAVER_ADMIN(Perk.JOB_NPC_SLAVER_ADMIN, "奴隶管理局监督员", "[npc.NameIsFull]是奴隶管理局的一名监督员。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_NIGHTCLUB_OWNER(Perk.JOB_NPC_NIGHTCLUB_OWNER, "nightclub owner", "[npc.Name] [npc.verb(own)] and [npc.verb(manage)] a popular nightclub.", OccupationTag.HAS_PREREQUISITES),
-	NPC_BAR_TENDER(Perk.JOB_NPC_BARMAID, "bartender", "[npc.Name] [npc.verb(work)] as a bartender.", OccupationTag.EVENING_SHIFT),
-	NPC_BOUNCER(Perk.JOB_NPC_BOUNCER, "bouncer", "[npc.NameIsFull] a bouncer, in charge of keeping the riff-raff out of nightclubs and bars."),
+	NPC_NIGHTCLUB_OWNER(Perk.JOB_NPC_NIGHTCLUB_OWNER, "夜店老板", "[npc.Name]拥有并管理一家受欢迎的夜店。", OccupationTag.HAS_PREREQUISITES),
+	NPC_BAR_TENDER(Perk.JOB_NPC_BARMAID, "酒保", "[npc.Name]的工作是酒保。", OccupationTag.EVENING_SHIFT),
+	NPC_BOUNCER(Perk.JOB_NPC_BOUNCER, "保安", "[npc.NameIsFull]是一名保安，工作内容是让流氓们远离夜店和酒吧。"),
 
-	NPC_BEAUTICIAN(Perk.JOB_NPC_BEAUTICIAN, "beautician", "[npc.Name] [npc.verb(work)] as a beautician."),
+	NPC_BEAUTICIAN(Perk.JOB_NPC_BEAUTICIAN, "美容师", "[npc.Name]的工作是美容师。"),
 	
-	NPC_ARCANE_RESEARCHER(Perk.JOB_NPC_ARCANE_RESEARCHER, "arcane researcher", "[npc.Name] spends all of [npc.her] time researching the arcane.", OccupationTag.HAS_PREREQUISITES),
+	NPC_ARCANE_RESEARCHER(Perk.JOB_NPC_ARCANE_RESEARCHER, "奥术研究者", "[npc.Name]将[npc.her]所有的时间花在研究奥术上。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_CLOTHING_STORE_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "clothing store owner", "[npc.NameIs] the owner of a clothing store.", OccupationTag.HAS_PREREQUISITES),
-	NPC_GYM_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "gym owner", "[npc.NameIs] the owner of a gym.", OccupationTag.HAS_PREREQUISITES),
-	NPC_STORE_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "store owner", "[npc.NameIs] the owner of a shop.", OccupationTag.HAS_PREREQUISITES),
-	NPC_CASINO_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "casino owner", "[npc.NameIs] the owner of a casino.", OccupationTag.HAS_PREREQUISITES),
-	NPC_BUSINESS_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "business owner", "[npc.NameIs] the owner of their own business.", OccupationTag.HAS_PREREQUISITES),
-	NPC_TAVERN_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "tavern owner", "[npc.NameIs] the owner of a tavern.", OccupationTag.HAS_PREREQUISITES),
-	NPC_FARMER(Perk.JOB_NPC_FARMER, "farmer", "[npc.NameIs] a farmer.", OccupationTag.HAS_PREREQUISITES),
+	NPC_CLOTHING_STORE_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "服装店老板", "[npc.NameIs]拥有一家服装店。", OccupationTag.HAS_PREREQUISITES),
+	NPC_GYM_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "健身房老板", "[npc.NameIs]拥有一家健身房。", OccupationTag.HAS_PREREQUISITES),
+	NPC_STORE_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "商店老板", "[npc.NameIs]拥有一家商店。", OccupationTag.HAS_PREREQUISITES),
+	NPC_CASINO_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "赌场老板", "[npc.NameIs]拥有一家赌场。", OccupationTag.HAS_PREREQUISITES),
+	NPC_BUSINESS_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "公司老板", "[npc.NameIs]经营自己的事业。", OccupationTag.HAS_PREREQUISITES),
+	NPC_TAVERN_OWNER(Perk.JOB_NPC_SHOP_MANAGER, "旅店老板", "[npc.NameIs]拥有一家旅店。", OccupationTag.HAS_PREREQUISITES),
+	NPC_FARMER(Perk.JOB_NPC_FARMER, "农民", "[npc.NameIs]是一名农民。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_JOURNALIST(Perk.JOB_NPC_JOURNALIST, "journalist", "[npc.NameIs] a journalist.", OccupationTag.HAS_PREREQUISITES),
+	NPC_JOURNALIST(Perk.JOB_NPC_JOURNALIST, "新闻记者", "[npc.NameIs]是一位新闻记者。", OccupationTag.HAS_PREREQUISITES),
 	
-	REINDEER_OVERSEER(Perk.JOB_NPC_REINDEER_OVERSEER, "overseer", "[npc.NameIs] an overseer of one of the reindeer workgangs which migrate to Dominion during the winter.", OccupationTag.HAS_PREREQUISITES),
+	REINDEER_OVERSEER(Perk.JOB_NPC_REINDEER_OVERSEER, "监工", "[npc.NameIs]是驯鹿工团的监工，该工团会在冬季迁徙到御城区。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_SLIME_QUEEN(Perk.JOB_NPC_SLIME_QUEEN, "slime queen", "[npc.NameHas] titled herself as the 'slime queen', and is responsible for transforming a significant number of Submission's citizens into slimes.", OccupationTag.HAS_PREREQUISITES),
-	NPC_SLIME_QUEEN_GUARD(Perk.JOB_NPC_SLIME_QUEEN_GUARD, "slime queen's guard", "[npc.NameIs] one of the three slimes who guard [slimeQueen.namePos] tower.", OccupationTag.HAS_PREREQUISITES),
+	NPC_SLIME_QUEEN(Perk.JOB_NPC_SLIME_QUEEN, "史莱姆女王", "[npc.NameHas]称呼自己为“史莱姆女王”，并且对将大量屈城区市民转化成史莱姆负责。", OccupationTag.HAS_PREREQUISITES),
+	NPC_SLIME_QUEEN_GUARD(Perk.JOB_NPC_SLIME_QUEEN_GUARD, "史莱姆女王的护卫", "[npc.NameIs]是保护[slimeQueen.namePos]之塔的三只史莱姆之一。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_EPONA(Perk.JOB_EPONA, "pregnancy roulette manager", "[npc.NameIs] in charge of the game 'pregnancy roulette' in Submission's gambling den.", OccupationTag.HAS_PREREQUISITES),
+	NPC_EPONA(Perk.JOB_EPONA, "怀孕轮盘赌经理", "[npc.NameIs]在屈城区的赌场内管理“怀孕轮盘赌”项目。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_GANG_LEADER(Perk.JOB_GANG_LEADER, "gang leader", "[npc.NameIsFull] the leader of a notorious criminal gang.", OccupationTag.HAS_PREREQUISITES),
-	NPC_GANG_BODY_GUARD(Perk.JOB_GANG_BODY_GUARD, "gang body guard", "[npc.NameIsFull] a personal body guard of her gang's leader.", OccupationTag.HAS_PREREQUISITES),
-	NPC_GANG_MEMBER(Perk.JOB_GANG_MEMBER, "gang member", "[npc.NameIsFull] a member of a notorious criminal gang.", OccupationTag.HAS_PREREQUISITES),
+	NPC_GANG_LEADER(Perk.JOB_GANG_LEADER, "帮派头目", "[npc.NameIsFull]是臭名昭著的犯罪帮派头目。", OccupationTag.HAS_PREREQUISITES),
+	NPC_GANG_BODY_GUARD(Perk.JOB_GANG_BODY_GUARD, "帮派保镖", "[npc.NameIsFull]是她的帮派头目的私人保镖。", OccupationTag.HAS_PREREQUISITES),
+	NPC_GANG_MEMBER(Perk.JOB_GANG_MEMBER, "帮派成员", "[npc.NameIsFull]是臭名昭著的犯罪帮派的一员。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_STABLE_MISTRESS(Perk.JOB_NPC_STABLE_MISTRESS, "stable mistress", "[npc.NameIsFull] responsible for the training and care of a large number of centaur slaves.", OccupationTag.HAS_PREREQUISITES) {
+	NPC_STABLE_MISTRESS(Perk.JOB_NPC_STABLE_MISTRESS, "马场主人", "[npc.NameIsFull]负责训练和照顾大量半人马奴隶。", OccupationTag.HAS_PREREQUISITES) {
 		@Override
 		public String getName(GameCharacter character) {
 			if(character==null) {
-				return "stable manager";
+				return "马场经理";
 			} else if(character.isFeminine()) {
-				return "stable mistress";
+				return "马场主";
 			}
-			return "stable master";
+			return "马场男主人";
 		}
 	},
 	
-	NPC_LYSSIETH_GUARD(Perk.JOB_LYSSIETH_GUARD, "Lyssieth's guard", "[npc.NameIsFull] one of Lyssieth's unrecognised daughters, and has been assigned to guard her mother's palace.", OccupationTag.HAS_PREREQUISITES),
+	NPC_LYSSIETH_GUARD(Perk.JOB_LYSSIETH_GUARD, "莉西丝的护卫", "[npc.NameIsFull]是莉西丝不被承认的女儿其中一员，被指派与保护她母亲的住所。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_ELDER_LILIN(Perk.JOB_ELDER_LILIN, "elder lilin", "[npc.NameIsFull] one of the seven elder lilin; the recognised daughters of Lilith herself.", OccupationTag.HAS_PREREQUISITES),
+	NPC_ELDER_LILIN(Perk.JOB_ELDER_LILIN, "莉琳长老", "[npc.NameIsFull]是七位莉琳长老之一，被莉莉丝承认的女儿。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_TAUR_TRANSPORT(Perk.JOB_TAUR_TRANSPORT, "taur transporter", "[npc.Name] uses [npc.her] tauric body to its full potential by pulling carts and transporting goods.", OccupationTag.HAS_PREREQUISITES),
+	NPC_TAUR_TRANSPORT(Perk.JOB_TAUR_TRANSPORT, "半兽身人运输者", "[npc.Name]使用[npc.her]兽化身体的巨大潜力拉车和运送商品。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_ELIS_MAYOR(Perk.JOB_NPC_MAYOR, "mayor of Elis", "[npc.NameIs] the mayor of Elis, and is responsible for the wellbeing and safety of not only the town itself, but also the surrounding Foloi Fields.", OccupationTag.HAS_PREREQUISITES),
-	NPC_ASSISTANT(Perk.JOB_NPC_ASSISTANT, "personal assistant", "[npc.NameIs] a personal assistant and helps [npc.her] boss with a wide range of everyday tasks.", OccupationTag.HAS_PREREQUISITES),
+	NPC_ELIS_MAYOR(Perk.JOB_NPC_MAYOR, "伊利斯镇长", "[npc.NameIs]是伊利斯的镇长，负责城镇内部与弗洛伊田野周边的幸福与安宁。", OccupationTag.HAS_PREREQUISITES),
+	NPC_ASSISTANT(Perk.JOB_NPC_ASSISTANT, "个人助理", "[npc.NameIs]是一名协助[npc.her]的老板完成各类日程的助理。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_LUNETTE_HERD(Perk.JOB_LUNETTE_HERD, "Daughter of Lunette", "[npc.NameIsFull] one of Lunette's daughters, and inherits [npc.her] mother's love of causing mayhem and havoc.", OccupationTag.HAS_PREREQUISITES),
+	NPC_LUNETTE_HERD(Perk.JOB_LUNETTE_HERD, "露内特的女儿", "[npc.NameIsFull]露内特的女儿之一，继承了[npc.her]母亲对骚乱与浩劫的钟爱。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_MUSHROOM_FORAGER(Perk.JOB_NPC_MUSHROOM_FORAGER, "mushroom forager", "[npc.Name] [npc.verb(forage)] for and then sells psychedelic mushrooms in the bat caverns beneath Submission.", OccupationTag.HAS_PREREQUISITES),
+	NPC_MUSHROOM_FORAGER(Perk.JOB_NPC_MUSHROOM_FORAGER, "蘑菇寻觅者", "[npc.Name]在屈城区的蝙蝠洞穴内寻觅并贩卖致幻蘑菇。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_LUNETTE_RECOGNISED_DAUGHTER(Perk.JOB_LUNETTE_RECOGNISED_DAUGHTER, "recognised daughter of Lunette", "[npc.NameIsFull] a recognised daughter of Lunette herself, and as such is considerably more powerful than a regular demon.", OccupationTag.HAS_PREREQUISITES),
+	NPC_LUNETTE_RECOGNISED_DAUGHTER(Perk.JOB_LUNETTE_RECOGNISED_DAUGHTER, "露内特被承认的女儿", "[npc.NameIsFull]是被露内特承认的女儿，因此她与寻常恶魔相比极为强大。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_AMAZONIAN_QUEEN(Perk.JOB_AMAZONIAN_QUEEN, "Amazon Queen", "[npc.NameIsFull] the queen of the Amazons, and as such [npc.has] considerable strength and combat abilities.", OccupationTag.HAS_PREREQUISITES),
-	NPC_AMAZONIAN(Perk.JOB_AMAZONIAN, "Amazon", "[npc.NameIsFull] an Amazon, and as such [npc.has] spent much time training for combat.", OccupationTag.HAS_PREREQUISITES),
+	NPC_AMAZONIAN_QUEEN(Perk.JOB_AMAZONIAN_QUEEN, "亚马逊女王", "[npc.NameIsFull]是亚马逊一族的女王，因此她具有相当强大的力量与战斗能力。", OccupationTag.HAS_PREREQUISITES),
+	NPC_AMAZONIAN(Perk.JOB_AMAZONIAN, "亚马逊人", "[npc.NameIsFull]一位亚马逊人，在战斗训练中投入了很多时间。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_PUGILIST(Perk.JOB_PUGILIST, "pugilist", "[npc.NameIsFull] a professional boxer, and as such is a fearsome opponent in a fight.", OccupationTag.HAS_PREREQUISITES),
+	NPC_PUGILIST(Perk.JOB_PUGILIST, "拳击运动员", "[npc.NameIsFull]是一位职业拳击手，在战斗中将是一位可怕的对手。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_LILIN_PAWN(Perk.JOB_ELDER_LILIN_PAWN, "elder lilin's helper", "[npc.NameIsFull] carrying out orders on behalf of a lilin.", OccupationTag.HAS_PREREQUISITES),
+	NPC_LILIN_PAWN(Perk.JOB_ELDER_LILIN_PAWN, "莉琳长老的助手", "[[npc.NameIsFull]代表莉琳携带命令而来。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_SEX_DOLL(Perk.JOB_SEX_DOLL, "sex doll", "[npc.NameIsFull] a very realistic-looking sex doll.", OccupationTag.HAS_PREREQUISITES),
+	NPC_SEX_DOLL(Perk.JOB_SEX_DOLL, "性爱玩偶", "[npc.NameIsFull]是个外表十分真实的性爱玩偶。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_YOUKO(Perk.JOB_YOUKO, "youko", "[npc.NameIsFull] a youko of the Shinrin Highlands, and has spent most of [npc.her] life practicing the arcane arts.", OccupationTag.HAS_PREREQUISITES),
+	NPC_YOUKO(Perk.JOB_YOUKO, "妖狐", "[npc.NameIsFull]是一名来自心林高地的妖狐，大半辈子都在钻研奥术技巧。", OccupationTag.HAS_PREREQUISITES),
 	
 	// NPC generic histories:
 
-	NPC_UNEMPLOYED(Perk.JOB_UNEMPLOYED, "unemployed", "[npc.NameIsFull] unemployed.", OccupationTag.HAS_PREREQUISITES),
+	NPC_UNEMPLOYED(Perk.JOB_UNEMPLOYED, "无业游民", "[npc.NameIsFull]没有工作。", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_SLAVE(Perk.JOB_SLAVE, "slave", "[npc.NameIsFull] a slave, and must carry out [npc.her] owner's wishes.", OccupationTag.HAS_PREREQUISITES),
+	NPC_SLAVE(Perk.JOB_SLAVE, "奴隶", "[npc.NameIsFull]是一名奴隶，必须承载着[npc.her]主人的意志。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_CAPTIVE(Perk.JOB_CAPTIVE, "captive", "[npc.NameHasFull] been kidnapped and is being illegally held against [npc.her] will.", OccupationTag.HAS_PREREQUISITES),
+	NPC_CAPTIVE(Perk.JOB_CAPTIVE, "俘虏", "[npc.NameHasFull]被人绑架，并被非法监禁着。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_REBEL_FIGHTER(Perk.JOB_NPC_REBEL_FIGHTER, "rebel fighter", "[npc.NameIsFull] a fighter serving a rebel cause.", OccupationTag.HAS_PREREQUISITES),
+	NPC_REBEL_FIGHTER(Perk.JOB_NPC_REBEL_FIGHTER, "反抗军斗士", "[npc.NameIsFull]是一名效力于反抗军的战士。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_PROSTITUTE(Perk.JOB_PROSTITUTE, "prostitute", "[npc.NameIsFull] a prostitute, making a living by selling [npc.her] body.", OccupationTag.LOWLIFE),
+	NPC_PROSTITUTE(Perk.JOB_PROSTITUTE, "娼妓", "[npc.NameIsFull]是一名娼妓，靠出卖[npc.her]的肉体赚钱。", OccupationTag.LOWLIFE),
 	
-	NPC_STRIPPER(Perk.JOB_MISC, "stripper", "[npc.Name] [npc.verb(work)] as a stripper.", OccupationTag.EVENING_SHIFT) {
+	NPC_STRIPPER(Perk.JOB_MISC, "脱衣舞娘", "[npc.Name]是一名脱衣舞娘。", OccupationTag.EVENING_SHIFT) {
 		@Override
 		public DayOfWeek getStartDay() {
 			return DayOfWeek.TUESDAY;
@@ -135,43 +135,43 @@ public enum Occupation {
 		}
 	},
 	
-	NPC_MASSAGE_THERAPIST(Perk.JOB_MISC, "massage therapist", "[npc.Name] [npc.verb(work)] at a spa as a massage therapist."),
+	NPC_MASSAGE_THERAPIST(Perk.JOB_MISC, "按摩理疗师", "[npc.Name]在一家水疗中心里当按摩理疗师。"),
 	
-	NPC_WAITRESS(Perk.JOB_MISC, "waitress", "[npc.Name] [npc.verb(work)] as a waitress in a restaurant.") {
+	NPC_WAITRESS(Perk.JOB_MISC, "女服务员", "[npc.Name]在一家饭店里当女服务员。") {
 		@Override
 		public boolean isAvailable(GameCharacter character) {
 			return character.isFeminine();
 		}
 	},
 	
-	NPC_MUSICIAN(Perk.JOB_MISC, "musician", "[npc.Name] [npc.verb(work)] as a musician.", OccupationTag.HAS_PREREQUISITES),
+	NPC_MUSICIAN(Perk.JOB_MISC, "音乐家", "[npc.Name]是一名音乐家。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_FITNESS_INSTRUCTOR(Perk.JOB_MISC, "fitness instructor", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_FITNESS_INSTRUCTOR(Perk.JOB_MISC, "健身教练", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_MUGGER(Perk.JOB_MUGGER, "mugger", "[npc.NameIsFull] a mugger, and [npc.verb(make)] a living by stealing other people's possessions.", OccupationTag.LOWLIFE),
+	NPC_MUGGER(Perk.JOB_MUGGER, "抢劫犯", "[npc.NameIsFull]是一名抢劫犯，靠偷其他人的财物为生。", OccupationTag.LOWLIFE),
 
-	NPC_BOUNTY_HUNTER(Perk.JOB_BOUNTY_HUNTER, "bounty hunter", "[npc.NameIsFull] a bounty hunter, who earns a wage by tracking down and capturing wanted criminals.", OccupationTag.HAS_PREREQUISITES),
+	NPC_BOUNTY_HUNTER(Perk.JOB_BOUNTY_HUNTER, "赏金猎人", "[npc.NameIsFull]是一名赏金猎人，靠追踪并抓捕通缉犯获得工资。", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_CONSTRUCTION_WORKER(Perk.JOB_CONSTRUCTION_WORKER, "construction worker", "-"),
-	NPC_CONSTRUCTION_WORKER_ARCANE(Perk.JOB_CONSTRUCTION_WORKER_ARCANE, "arcane construction worker", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_CONSTRUCTION_WORKER(Perk.JOB_CONSTRUCTION_WORKER, "建筑工人", "-"),
+	NPC_CONSTRUCTION_WORKER_ARCANE(Perk.JOB_CONSTRUCTION_WORKER_ARCANE, "奥术建筑工人", "-", OccupationTag.HAS_PREREQUISITES),
 
-	NPC_MECHANIC(Perk.JOB_MISC, "mechanic", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_MECHANIC(Perk.JOB_MISC, "机械师", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_TEACHER(Perk.JOB_MISC, "teacher", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_TEACHER(Perk.JOB_MISC, "教师", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_LIBRARIAN(Perk.JOB_MISC, "librarian", "-"),
+	NPC_LIBRARIAN(Perk.JOB_MISC, "图书管理员", "-"),
 	
-	NPC_UNIVERSITY_STUDENT(Perk.JOB_MISC, "university student", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_UNIVERSITY_STUDENT(Perk.JOB_MISC, "大学生", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_WRITER(Perk.JOB_MISC, "writer", "-"),
+	NPC_WRITER(Perk.JOB_MISC, "作家", "-"),
 	
-	NPC_ENGINEER(Perk.JOB_MISC, "engineer", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_ENGINEER(Perk.JOB_MISC, "工程师", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_ARCHITECT(Perk.JOB_MISC, "architect", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_ARCHITECT(Perk.JOB_MISC, "建筑师", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_DOCTOR(Perk.JOB_MISC, "doctor", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_DOCTOR(Perk.JOB_MISC, "医生", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_MAID(Perk.JOB_MISC, "maid", "-") {
+	NPC_MAID(Perk.JOB_MISC, "女仆", "-") {
 		@Override
 		public boolean isAvailable(GameCharacter character) {
 			return character.isFeminine();
@@ -186,7 +186,7 @@ public enum Occupation {
 		}
 	},
 
-	NPC_BUTLER(Perk.JOB_MISC, "butler", "-") {
+	NPC_BUTLER(Perk.JOB_MISC, "管家", "-") {
 		@Override
 		public boolean isAvailable(GameCharacter character) {
 			return !character.isFeminine();
@@ -201,25 +201,25 @@ public enum Occupation {
 		}
 	},
 
-	NPC_OFFICE_WORKER(Perk.JOB_NPC_OFFICE_WORKER, "office worker", "[npc.Name] works for a large business, and [npc.has] manage [npc.her] subordinates, company finances, and difficult customers on a daily basis.") {
+	NPC_OFFICE_WORKER(Perk.JOB_NPC_OFFICE_WORKER, "办公室职员", "[npc.Name]为大公司工作，每天都在与[npc.her]的下属、公司财政以及难搞的客户打交道。") {
 		@Override
 		public String getName(GameCharacter character) {
 			if(character==null) {
-				return "office worker";
+				return "办公室职员";
 			} else if(character.isFeminine()) {
-				return "businesswoman";
+				return "女企业家";
 			}
-			return "businessman";
+			return "男企业家";
 		}
 	},
 	
-	NPC_RECEPTIONIST(Perk.JOB_MISC, "receptionist", "[npc.Name] works as a receptionist, and must deal with many visitors and customers every day."),
+	NPC_RECEPTIONIST(Perk.JOB_MISC, "接待员", "[npc.Name]是一名接待员，每天要与许多访客和顾客打交道。"),
 	
-	NPC_SHOP_ASSISTANT(Perk.JOB_MISC, "shop assistant", "-"),
+	NPC_SHOP_ASSISTANT(Perk.JOB_MISC, "商店店员", "-"),
 	
-	NPC_ARTIST(Perk.JOB_MISC, "artist", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_ARTIST(Perk.JOB_MISC, "艺术家", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_NURSE(Perk.JOB_MISC, "nurse", "-") {
+	NPC_NURSE(Perk.JOB_MISC, "护士", "-") {
 //		@Override
 //		public boolean isAvailable(GameCharacter character) {
 //			return character.isFeminine();
@@ -234,21 +234,21 @@ public enum Occupation {
 		}
 	},
 	
-	NPC_CHEF(Perk.JOB_MISC, "chef", "-"),
+	NPC_CHEF(Perk.JOB_MISC, "厨师", "-"),
 	
-	NPC_ATHLETE(Perk.JOB_MISC, "athlete", "-", OccupationTag.HAS_PREREQUISITES),
+	NPC_ATHLETE(Perk.JOB_MISC, "运动员", "-", OccupationTag.HAS_PREREQUISITES),
 	
-	NPC_MODEL(Perk.JOB_MISC, "model", "-"),
+	NPC_MODEL(Perk.JOB_MISC, "模特", "-"),
 
-	NPC_TRADER(Perk.JOB_NPC_SHOP_MANAGER, "trader", "[npc.Name] is a trader and makes a living by buying and selling various goods.", OccupationTag.HAS_PREREQUISITES),
+	NPC_TRADER(Perk.JOB_NPC_SHOP_MANAGER, "商人", "[npc.Name]是一名商人，以买卖各种货物为生。", OccupationTag.HAS_PREREQUISITES),
 	
 	
 	
 	// Player histories:
 
     UNEMPLOYED(Perk.JOB_UNEMPLOYED,
-            "unemployed",
-            "You've been out of work for a little while now.",
+            "无业游民",
+            "你已经失业有段时间了。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -368,8 +368,8 @@ public enum Occupation {
 //	},
 
     OFFICE_WORKER(Perk.JOB_OFFICE_WORKER,
-            "office worker",
-            "You work in a local office, handling paperwork, answering phonecalls and emails, and generally doing a little bit of everything.",
+            "办公室职员",
+            "你在当地的一栋办公楼上班，处理文书工作、应答电话与邮件，什么事都要干一点。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -399,7 +399,7 @@ public enum Occupation {
 
     STUDENT(Perk.JOB_STUDENT,
             "university student",
-            "You're a student at the city's university, but you haven't quite decided what to take as your major just yet.",
+            "你是市内的一所大学的学生，但是你还没决定好专业方向。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -438,8 +438,8 @@ public enum Occupation {
     },
 
     MUSICIAN(Perk.JOB_MUSICIAN,
-            "musician",
-            "You're a musician, and as well as being able to play a wide variety of instruments, you are also a very good singer.",
+            "音乐家",
+            "你是一名音乐家，也能弹奏许多种类的乐器，你也是一名好歌手。",
             OccupationTag.PLAYER_ONLY),
 
     BAND(Perk.JOB_BAND,
@@ -448,8 +448,8 @@ public enum Occupation {
             OccupationTag.PLAYER_ONLY),
 
     TEACHER(Perk.JOB_TEACHER,
-            "teacher",
-            "You're a teacher, and have been working at a local school for a few years.",
+            "教师",
+            "你是一名教师，在当地的学校教了几年书。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -458,13 +458,13 @@ public enum Occupation {
     },
 
     WRITER(Perk.JOB_WRITER,
-            "writer",
-            "You're a writer, and have been working on your latest novel for the last few months.",
+            "作家",
+            "你是一名作家，近几个月一直在写你的新小说。",
             OccupationTag.PLAYER_ONLY),
 
     CHEF(Perk.JOB_CHEF,
-            "chef",
-            "You're the head chef at a local restaurant.",
+            "厨师长",
+            "你是当地一家饭店的厨师长。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -473,8 +473,8 @@ public enum Occupation {
     },
 
     CONSTRUCTION_WORKER(Perk.JOB_PLAYER_CONSTRUCTION_WORKER,
-            "construction worker",
-            "You're an experienced and highly skilled construction worker.",
+            "建筑工人",
+            "你是经验深厚且技术熟练的建筑工人。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -483,8 +483,8 @@ public enum Occupation {
     },
 
     SOLDIER(Perk.JOB_SOLDIER,
-            "soldier",
-            "You're a soldier, and are currently making the most of your leave.",
+            "士兵",
+            "你是一名士兵，目前正充分享受你的假期。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -503,18 +503,18 @@ public enum Occupation {
     },
 
     ATHLETE(Perk.JOB_ATHLETE,
-            "athlete",
-            "You're an athlete, and are currently training for your next big event.",
+            "运动员",
+            "你是一名运动员，正为下次赛事而训练。",
             OccupationTag.PLAYER_ONLY),
 
     ARISTOCRAT(Perk.JOB_ARISTOCRAT,
-            "aristocrat",
-            "You've never had to work a day in your life, thanks to the fact that you're a member of an old, and exceedingly wealthy, aristocratic family.",
+            "贵族",
+            "你出身于钟鸣鼎食的世家大族，从出生到现在也没工作过一天。",
             OccupationTag.PLAYER_ONLY),
 
     BUTLER(Perk.JOB_BUTLER,
-            "butler",
-            "You're a butler, hired by a wealthy family to oversee the maids and deal with any visitors.",
+            "管家",
+            "你是一名管家，被富有的家庭雇佣来监督女仆和应对访客。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -523,8 +523,8 @@ public enum Occupation {
     },
 
     MAID(Perk.JOB_MAID,
-            "maid",
-            "You're a maid, hired by a wealthy family to keep their mansion clean.",
+            "女仆",
+            "你是一名女仆，被富有的家庭雇佣来保持他们豪宅的整洁。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {
@@ -533,8 +533,8 @@ public enum Occupation {
     },
 
     TOURIST(Perk.JOB_TOURIST,
-            "American tourist",
-            "For your vacation this year, you've decided to visit England.",
+            "美国游客",
+            "今年的假期里你准备去英国玩玩。",
             OccupationTag.PLAYER_ONLY) {
         @Override
         public boolean isAvailable(GameCharacter character) {

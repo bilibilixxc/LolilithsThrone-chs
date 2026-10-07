@@ -1,565 +1,565 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="HARPY_NEST_NYMPHO"><![CDATA[
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_nymphoEncountered))
-				Due to the ongoing arcane storm, [harpyNympho.namePos] nest is completely deserted. Her entire flock has retreated into the safety of the upper-floor of the building below, leaving you with no choice but to return at another time if you wanted to speak to her.
+				由于奥术风暴的来袭，[harpyNympho.namePos]的巢穴已经完全荒废。她的族群已经撤离到位于下方的建筑物的上层的安全地带，你只能等她回来后才能再和她交流。
 			#ELSE
-				Due to the ongoing arcane storm, this nest is completely deserted. The entire flock has retreated into the safety of the upper-floor of the building below, leaving you with no choice but to return at another time if you wanted to speak to the matriarch of this particular nest.
+				由于持续的奥术风暴，整座巢穴已经完全荒废了。所有族群都已经撤离到下方建筑上层的安全地带，你只能等这位族长回来后才能再与她交流。
 			#ENDIF
 		</p>
 	#ELSEIF(!game.isExtendedWorkTime())
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_bimboEncountered))
-				Due to the current hour, [bimboHarpy.namePos] nest is completed deserted; both she and her flock have retired to the comfort of the buildings below in order to get a good night's rest. With the entrances to their night-time residence being securely locked, you're left with no choice but to return at another time if you wanted to speak to her.
+				当前时间里[bimboHarpy.namePos]巢穴空无一人；无论是她还是她的鸟群都已经退到下面的建筑里去享受一个舒适的夜晚。通向下面建筑的入口被牢靠地锁上。你不可能和她谈上话，只能另择时间再来。
 			#ELSE
-				Due to the current hour, this nest is completed deserted; both the matriarch and her flock have retired to the comfort of the buildings below in order to get a good night's rest. With the entrances to their night-time residence being securely locked, you're left with no choice but to return at another time if you wanted to speak to her.
+				当前时间里巢穴空无一人；无论是族长还是她的鸟群都已经退到下面的建筑里去享受一个舒适的夜晚。通向下面建筑的入口被牢靠地锁上。你不可能和她谈上话，只能另择时间再来。
 			#ENDIF
 		</p>
 	#ELSE
 		#IF(game.getDialogueFlags().hasFlag(FLAG_nymphoEncountered))
 			<p>
-				You find yourself standing on the outskirts of [harpyNympho.namePos] nest; one of the most populous of all the nests in Dominion. Despite the importance of the matriarch who resides here, her nest is no bigger than any of the minor ones scattered throughout the Harpy Nests, and comprises of a single, large platform built into the rooftops of several houses below.
-				#IF(game.isDayTime())
-					 What her nest lacks in size, it more than makes up for in population, and you see what must be well over a hundred harpies loitering about on the nest's platform.
-				#ELSE
-					 What her nest lacks in size, it more than makes up for in population, and under the illumination of bright, arcane-powered lights, you see what must be well over a hundred harpies loitering about on the nest's platform.
-				#ENDIF
-			</p>
+ 你发现自己站在[harpyNympho.namePos]的巢穴边; 这也是御城区面积最大、人口最多的鸟巢之一。尽管居住于此的族长位高权重，但她的巢穴与其他巢穴大小无异，是一个建在下方数座房屋屋顶的大型平台。
+ #IF(game.isDayTime())
+ 她的巢穴虽小，却有着相当的人口。你看到百余只哈比在巢穴平台上来往不绝。
+ #ELSE
+ 她的巢穴虽小，却有着相当的人口。在明亮的奥术灯光下，你看到了百余只哈比在巢穴平台上往来不绝。
+ #ENDIF
+ </p>
 			<p>
-				Taking a closer look at the multi-coloured inhabitants of this particular nest, you notice that something's slightly off about them. While still looking very pretty, the vast majority of the flock are rather plain-looking by harpy standards. A few of the nest's members stand out as being exceptionally beautiful in comparison, and you realise that those must be the only females of this particular flock. Knowing about [harpyNympho.namePos] obsession with sex, you surmise that she's gathered a huge following of males in order to keep her craving for cock satisfied.
-			</p>
+ 仔细观察这个巢穴中的这些多色的居民后，你发觉他们有些不太对劲。尽管她们看起来也很美丽动人，但以哈比的标准来看，他们大多样貌平平。与之相对，巢穴里的一些人显得异常美丽，他们一定是这群哈比中唯一的女性。你知道[harpyNympho.namePos]沉醉于性，因此你推测这是她为了满足对鸡巴的渴望而聚集的大量男追随者。
+ </p>
 			<p>
-				Looking towards the centre of the platform, you see if you can spot the nymphomaniac matriarch herself. A flash of exceptionally bright pink feathers reveals her location, and, from her bouncing movements, you can tell that she's busy riding yet another of her flock's members. The harpies of this flock seem to be only interested in waiting for a turn with their matriarch, and would allow you to approach [harpyNympho.name] without any trouble.
-			</p>
+		朝着平台中央望去，你试图发现那位性欲旺盛的族群首领。那一片异常耀眼的粉红色羽毛揭示了她的位置，从她那上下颠簸的动作中，你能看出她正忙于与族群中的另一位成员进行交配。这个族群的哈比似乎只专注于等待轮到自己与首领交欢的机会，因此，她们会默许你无阻碍地接近这位名叫[harpyNympho.name]的首领。
+</p>
 		#ELSE
 			<p>
-				You find yourself standing on the outskirts of one of the most populous, and most important, of all the nests in Dominion. Despite the high social standing of the matriarch who resides here, her nest is no bigger than any of the minor ones scattered throughout the Harpy Nests, and comprises of a single, large platform built into the rooftops of several houses below.
+				你正站在御城区其中一个人口最多、最重要的巢穴边上。尽管居住于此的族长位高权重，但她的巢穴与其他巢穴大小无异，是一个建在下方数座房屋屋顶的大型平台。
 				#IF(game.isDayTime())
-					 What her nest lacks in size, it more than makes up for in population, and you see what must be well over a hundred harpies loitering about on the nest's platform.
+					她的巢穴虽小，却有着相当的人口。你看到百余只哈比在巢穴平台上来往不绝。
 				#ELSE
-					 What her nest lacks in size, it more than makes up for in population, and under the illumination of bright, arcane-powered lights, you see what must be well over a hundred harpies loitering about on the nest's platform.
+					她的巢穴虽小，却有着相当的人口。在明亮的奥术灯光下，你看到了百余只哈比在巢穴平台上往来不绝。
 				#ENDIF
 			</p>
 			<p>
-				Taking a closer look at the multi-coloured inhabitants of this particular nest, you notice that something's slightly off about them. While still looking very pretty, the vast majority of the flock are rather plain-looking by harpy standards. A few of the nest's members stand out as being exceptionally beautiful in comparison, and you realise that those must be the only females of this particular flock. For whatever reason, the matriarch of this particular nest has gathered a huge following of males, marking it as one of the most unusual nests in Dominion.
+				你仔细观察这个巢穴里的五颜六色的居民，发觉他们有点不对劲。尽管看起来也很美丽动人，但以哈比的标准来看，他们大多样貌平平。与之相对，巢穴里的哈比则显得异常昳丽，她们一定是这群哈比中仅存的女性。不管出于什么原因，这个巢穴的族长身边聚集了一大群雄性，使它成为御城区最不寻常的巢穴之一。
 			</p>
 			<p>
-				Looking towards the centre of the platform, you see if you can spot this nest's matriarch. A flash of exceptionally bright pink feathers reveals her location, and, from her bouncing movements, it looks like she's riding one of her flock's males. The harpies of this flock don't seem to show much interest in you, and, if you had any business with her, would allow you to approach their matriarch without any trouble.
+				你朝平台中央望去，看看能否发现巢穴的族长。一闪而过的亮粉色羽毛显露出她的位置，从她的跃动推测，她好像正骑着一只雄鸟。这群哈比似乎对你兴致缺缺，但你有要事的话，他们会允许你接近族长。
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="HARPY_NEST_NYMPHO_APPROACH"><![CDATA[
 	#IF(flags.hasFlag(FLAG_nymphoEncountered))
 		#IF(flags.hasFlag(FLAG_nymphoPacified))
 			<p>
-				Deciding to pay [harpyNympho.Name] another visit, you set off towards the flash of pink in the centre of the nest. As you make your way towards the sex-obsessed matriarch, you get a good look at the harpies that make up her flock. Just as you've seen before, the vast majority of them are rather plain-looking by harpy standards; revealing them as males.
+				你打算看望一番[harpyNympho.Name]， 便向巢穴中心的粉色闪光出发。当你向这位性欲旺盛的族长走去时，你看到了她身边又围着一群哈比。正如先前所见，以哈比的标准来看，他们绝大多数都是相貌平平的雄性。
 			</p>
 			<p>
-				As you pass the groups of loitering harpies, you overhear snippets of conversation,<br/>
-				[style.speechFeminine(...she let me unload in her three times last night...)]<br/>
-				[style.speechFeminineStrong(...I love it when she's in the mood to suck cock...)]<br/>
-				[style.speechFeminine(...and then she cleaned me off with her mouth...)]
+				你从一群游荡的哈比身边经过，无意听到些许对话，<br/>
+				[style.speechFeminine(……她昨晚让我射了三次……)]<br/>
+				[style.speechFeminineStrong(……我喜欢她唆鸡巴忘乎所以的样子……)]<br/>
+				[style.speechFeminine(……她还用嘴给我舔干净……)]
 			</p>
 			<p>
-				Smirking as you push through the crowds, you soon find yourself standing before the harpy they're all talking about. Moaning and squealing in delight, [harpyNympho.name] is once again riding her favourite boy-toy, [harpyNymphoCompanion.name]. As you come to a halt in front of them, they both suddenly let out an exceptionally loud scream, and you look down to see a slick trail of fresh cum oozing out of [harpyNympho.namePos] pussy. After taking a few moments to catch her breath, she lifts herself up, allowing the hot load to drool out of her well-used cunt, and, leaning down to deliver a passionate kiss on her partner's lips, she calls out, [harpyNympho.speech(Who's next?!)]
+				你坏笑地穿过人群，很快就来到他们刚才谈论的哈比面前。她又骑在她最喜欢的男宠[harpyNymphoCompanion.name]身上，高兴地呻吟浪叫。当你停在他们面前时，他们突然都高亢地尖叫起来，你低头一看，一股新鲜的精液正从[harpyNympho.namePos]的小穴里渗出。在喘息片刻后，她抬起身子，让滚烫的精液从穴中流出，俯身热情地吻着她伴侣的嘴唇，大叫道：[harpyNympho.speech(下一个是谁？！)]
 			</p>
 			<p>
-				Taking this opportunity to let yourself be known, you [pc.step] forwards and announce that you've returned. Upon hearing your voice, [harpyNympho.name] spins around and lets out an exited squeal, [harpyNympho.speech([pc.Mistress]! You're back! Let's have some fun!)]
+				你借此机会[pc.step]进一步，宣告你的归来。听到你的声音，[harpyNympho.name]转过身来，兴奋地尖叫道：[harpyNympho.speech([pc.Mistress]！你回来了！来找点乐子吧！)]
 			</p>
 			#IF(harpyNympho.isVisiblyPregnant())
 				<p>
 					#IF(!harpyNympho.isCharacterReactedToPregnancy(pc))
-						As she rushes towards you, you see that [harpyNympho.name] is sporting a [style.colourSex(pregnant belly)], and as she comes to a halt before you, she moans, [harpyNympho.speech(You got me pregnant, [pc.mistress]! Isn't it great?! Come on, let's recreate how you got me knocked up!)]
+						[harpyNympho.name]挺着[style.colourSex(孕肚)]，冲了过来。她停在你面前，呻吟道：[harpyNympho.speech([pc.mistress]你让我怀孕了！真棒！来吧，让我们回忆一下你是怎么把我肚子搞大的！)]
 					#ELSE
-						As she rushes towards you, you see that [harpyNympho.name] is still sporting a [style.colourSex(pregnant belly)], and as she comes to a halt before you, she moans, [harpyNympho.speech(Yeah, I'm still pregnant, [pc.mistress]! Come on, let's recreate how you got me knocked up!)]
+						[harpyNympho.name]挺着[style.colourSex(孕肚)]，冲了过来。她停在你面前，呻吟道：[harpyNympho.speech([pc.mistress]，我还怀着呢！来吧，让我们回忆一下你是怎么把我肚子搞大的！)]
 					#ENDIF
 				</p>
 			#ELSE
 				<p>
-					Rushing towards you, [harpyNympho.name] falls to her knees. Shuffling forwards, she looks up into your [pc.eyes], [harpyNympho.speech(Please! [pc.mistress]! Let's fuck!)]
+					[harpyNympho.name]冲到你面前，跪下来磨蹭你，她盯着你的[pc.eyes]，[harpyNympho.speech(求求你！[pc.mistress]！开操吧！)]
 				</p>
 			#ENDIF
 		#ELSE
 			<p>
-				Deciding to pay [harpyNympho.Name] another visit, you set off towards the flash of pink in the centre of the nest. As you make your way towards the sex-obsessed matriarch, you get a good look at the harpies that make up her flock. Just as you've seen before, the vast majority of them are rather plain-looking by harpy standards; revealing them as males.
+				你打算看望一番[harpyNympho.Name]， 便向巢穴中心的粉色闪光出发。当你向这位性欲旺盛的族长走去时，你看到了她身边又围着一群哈比。正如先前所见，以哈比的标准来看，他们绝大多数都是相貌平平的雄性。
 			</p>
 			<p>
-				As you pass the groups of loitering harpies, you overhear snippets of conversation,<br/>
-				[style.speechFeminine(...she let me unload in her three times last night...)]<br/>
-				[style.speechFeminineStrong(...I love it when she's in the mood to suck cock...)]<br/>
-				[style.speechFeminine(...and then she cleaned me off with her mouth...)]
+				你从一群游荡的哈比身边经过，无意听到些许对话，<br/>
+				[style.speechFeminine(……她昨晚让我射了三次……)]<br/>
+				[style.speechFeminineStrong(……我喜欢她唆鸡巴忘乎所以的样子……)]<br/>
+				[style.speechFeminine(……她还用嘴给我舔干净……)]
 			</p>
 			<p>
-				Pushing through the crowds, you soon find yourself standing before the harpy they're all talking about. Moaning and squealing in delight, [harpyNympho.name] is once again riding her favourite boy-toy, [harpyNymphoCompanion.name]. As you come to a halt in front of them, they both suddenly let out an exceptionally loud scream, and you look down to see a slick trail of fresh cum oozing out of [harpyNympho.namePos] pussy. After taking a few moments to catch her breath, she lifts herself up, allowing the hot load to drool out of her well-used cunt, and, leaning down to deliver a passionate kiss on her partner's lips, she calls out, [harpyNympho.speech(Who's next?!)]
+				你穿过人群，很快就来到他们刚才谈论的哈比面前。她又骑在她最喜欢的男宠[harpyNymphoCompanion.name]身上，高兴地呻吟浪叫。当你停在他们面前时，他们突然都高亢地尖叫起来，你低头一看，一股新鲜的精液正从[harpyNympho.namePos]的小穴里渗出。在喘息片刻后，她抬起身子，让滚烫的精液从穴中流出，俯身热情地吻着她伴侣的嘴唇，大叫道：[harpyNympho.speech(下一个是谁？！)]
 			</p>
 			<p>
-				Taking this opportunity to let yourself be known, you [pc.step] forwards and announce that you've returned. Upon hearing your voice, [harpyNympho.name] spins around and lets out a frustrated sigh,
+				借此机会，你[pc.step]向前方，宣布你的归来。听到你的声音，[harpyNympho.name]转过身来，发出不满的叹息：
 				#IF(pc.getFemininityValue()>FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-					 [harpyNympho.speech(Eugh! It's <i>you</i> again! You'd better not be trying to steal any of my playthings!)]
+					[harpyNympho.speech(呃！怎么又是<i>你</i>！你最好别想偷我的玩物！)]
 				#ELSE
-					 [harpyNympho.speech(Eugh! It's <i>you</i> again?! What do you want this time?!)]
+					[harpyNympho.speech(呃！怎么又是<i>你</i>！你这次要干什么？！)]
 				#ENDIF
 			</p>
 			<p>
-				Stepping forwards, [harpyNymphoCompanion.name] moves to protect her matriarch. [harpyNymphoCompanion.speech(You heard her! What do you want?!)]
-			</p>
+			[harpyNymphoCompanion.name]走上前来保护族长，[harpyNymphoCompanion.speech(你听到了吗！你想要什么？！)]
+		</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Recognising this as one of the nests that you agreed to pacify, you set off towards the flash of pink in the centre of the nest. As you make your way across the crowded platform, you get a good look at the harpies that make up this flock. Just as you saw from the outskirts, the vast majority of them are rather plain-looking by harpy standards; revealing them as males.
+			这是你同意安抚的巢穴之一，于是你向巢穴中心的粉色闪光出发了。你穿过拥挤的平台，终于看清了这群哈比的模样。正如你在外围看到的那样，以哈比的标准来看，他们中的绝大多数都是雄性，相貌平平。
 		</p>
 		<p>
-			As you pass the groups of loitering harpies, you overhear snippets of conversation,<br/>
-			[style.speechFeminine(...she let me unload in her three times last night...)]<br/>
-			[style.speechFeminineStrong(...I love it when she's in the mood to suck cock...)]<br/>
-			[style.speechFeminine(...and then she cleaned me off with her mouth...)]
+			你从一群游荡的哈比身边经过，无意听到些许对话，<br/>
+			[style.speechFeminine(……她昨晚让我射了三次……)]<br/>
+			[style.speechFeminineStrong(……我喜欢她唆鸡巴忘乎所以的样子……)]<br/>
+			[style.speechFeminine(……她还用嘴给我舔干净……)]
 		</p>
 		<p>
-			Pushing through the crowds, you soon find yourself standing before the harpy they're all talking about. Moaning and squealing in delight, you see the matriarch of this nest unashamedly riding one of her boy-toys. As you come to a halt in front of them, they both suddenly let out an exceptionally loud scream, and you look down to see a slick trail of fresh cum oozing out of the pink-feathered matriarch's pussy. After taking a few moments to catch her breath, she lifts herself up, allowing the hot load to drool out of her well-used cunt, and, leaning down to deliver a passionate kiss on her partner's lips, she moans, [harpyNympho.speech(Ah, [harpyNymphoCompanion.Name]! I love your cock most of all!)]
+			你穿过人群，很快就来到他们刚才谈论的哈比面前。你看到这个巢穴的族长正不知廉耻地骑着一个男宠，高兴地呻吟浪叫。当你停在他们面前时，他们突然都高亢地尖叫起来，你低头一看，粉色羽毛的族长的小穴里渗出了一股新鲜的精液。在喘息片刻后，她抬起身子，让滚烫的精液从穴中流出，俯下身热情地吻着她伴侣的嘴唇，呻吟道：[harpyNympho.speech(啊，[harpyNymphoCompanion.Name]！我最喜欢你的鸡巴了！)]
 		</p>
 		<p>
-			[harpyNymphoCompanion.speech(I love making you happy, [harpyNympho.Name],)] [harpyNymphoCompanion.Name] replies. [harpyNymphoCompanion.speech(Do you want to go again?)]
+			[harpyNymphoCompanion.speech(我喜欢让你开心，[harpyNympho.Name]，)][harpyNymphoCompanion.Name]回复。[harpyNymphoCompanion.speech(你还想再来一次吗？)]
 		</p>
 		<p>
-			Deciding that this is an opportune moment to make yourself known, you step forwards and clear your throat. [pc.speech(Before you do, I was hoping to talk with you for a moment.)]
+			你认为这是一个让大家认识你的好机会，于是前进一步，清了清嗓子说：[pc.speech(在你们继续前，我希望能稍微与你聊聊。)]
 		</p>
 		<p>
-			Upon hearing your voice, [harpyNympho.name] spins around, and, catching sight of you, she lets out a frustrated sigh.
+			听到你的话，[harpyNympho.name]转过来看着你，恼怒地说：
 			#IF(pc.getFemininityValue()>FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-				 [harpyNympho.speech(Who are you?! What are you doing here?! You'd better not be trying to steal any of my playthings!)]
+				[harpyNympho.speech(你是谁？！来这里干嘛？！你最好不是来偷走我的玩伴的！)]
 			#ELSE
-				 [harpyNympho.speech(Who are you?! What are you doing here?! What do you want?!)]
+				[harpyNympho.speech(你是谁？！来这里干嘛？！你想要什么？！)]
 			#ENDIF
 		</p>
 		<p>
-			Stepping forwards, [harpyNymphoCompanion.name] moves to protect her matriarch. [harpyNymphoCompanion.speech(You heard her! What do you want?!)]
+			[harpyNymphoCompanion.name]走上前来保护族长，[harpyNymphoCompanion.speech(你听到了吗！你想要什么？！)]
 		</p>
 	#ENDIF
 	#IF(!flags.hasFlag(FLAG_nymphoPacified) && game.isBadEndsEnabled() && pc.isAbleToHaveRaceTransformed())
 		<p style='text-align:center;'><i>
-			[style.italicsBadEnd(You get the feeling that you'd be in serious trouble if you were to lose a fight against these harpies...)]
+			[style.italicsBadEnd(你有预感，如果你在与这些哈比的战斗中落败，你会有很大的麻烦……)]
 		</i></p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Angry scenes: -->
 	
     <htmlContent tag="NYMPHO_LEAVE"><![CDATA[
     <p>
-        Deciding that now isn't the best time to be trying to deal with [harpyNympho.name], you turn around and head back down the stairs. You hear [harpyNympho.name] moaning to [harpyNymphoCompanion.name] as you walk away, [harpyNympho.speech(Now that [pc.sheHas] gone, you can get back to fucking me!)]
+        你决定现在不是对付[harpyNympho.name]的最好时机，于是转身下楼。你一边走，一边听到[harpyNympho.name]对[harpyNymphoCompanion.name]娇喘，[harpyNympho.speech(现在[pc.she]走了，你可以继续操我了！)]
     </p>
     <p>
-        Ignoring her words, you continue down the steps and back across the main platform, quickly finding yourself back on the outskirts of the nest.
+        你无视了她的废话，继续走下台阶，穿过平台，回到了巢穴的边缘。
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
 	<!-- Pacified scenes: -->
 	
     <htmlContent tag="PACIFIED_NYMPHO_LEAVE"><![CDATA[
     <p>
-        Deciding that you don't want to talk to [harpyNympho.name] right now, you turn around and take your leave. You hear [harpyNympho.name] sighing to [harpyNymphoCompanion.name] as you walk away, [harpyNympho.speech(Aww! Well, looks like you get to have another go!)]
+        你现在不想与[harpyNympho.name]交谈，于是转身离去。在你走远时，你听到[harpyNympho.name]对着[harpyNymphoCompanion.name]叹息道，[harpyNympho.speech(唉！看来你还可以再试一次！)]
     </p>
 	<p>
-		Ignoring her words, you continue back across the platform, quickly finding yourself on the outskirts of the nest once again.
+		你无视了她的废话，继续穿过平台，又一次回到了巢穴的边缘。
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="PACIFIED_NYMPHO_SEX_START"><![CDATA[
     <p>
-        Eager to help satisfy [harpyNympho.namePos] craving for sex, you reach down and grab her wings. Pulling her to her feet, you step forwards, before planting a deep kiss on her [harpyNympho.lips+].
+       你迫切地想要帮[harpyNympho.namePos]满足她对性爱的渴求，于是伸[pc.hand]抓住了她的翅膀，将她抱起并在她的[harpyNympho.lips+]上留下深深的一吻。
 	</p>
 	<p>
-		[harpyNympho.Name] responds to your dominant move by letting out an excited squeal, and, enthusiastically wrapping her wings around your back, she passionately starts returning your kiss...
+		[harpyNympho.Name]发出一声兴奋的尖叫，回应着你支配的举动，随后便用翅膀将你包裹住，热切地回报着你的吻……
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="NYMPHO_SEX_START_ORAL"><![CDATA[
     <p>
-        Eager to put [harpyNympho.name] and [harpyNymphoCompanion.name] in their place in front of their nest's inner-circle, you reach down and grab the nympho matriarch's wings. Pulling her to her feet, you [pc.step] forwards and plant a deep kiss on her [harpyNympho.lips+], drawing a series of lustful moans from the surrounding harpies as you do so.
+        你迫切希望能在这巢穴的小圈子里让[harpyNympho.name]和[harpyNymphoCompanion.name]重新认清自己的地位，于是伸手抓住花痴族长的翅膀，把她拽了起来。等她站稳后，你上前一步，在她[harpyNympho.lips+]上留下了深深一吻，周围的哈比们随即发出此起彼伏的淫乱喘息声。
     </p>
 	<p>
-		[harpyNympho.Name] responds to your dominant move by wrapping her wings around your back, grinding herself up against you, and passionately returning your kiss. Letting out a hungry moan, [harpyNymphoCompanion.name] eagerly asks, [harpyNymphoCompanion.speech(You're going to fuck me as well, aren't you?)]
+		[harpyNympho.Name]用翅膀环过你的腰，热情地回吻着你，在你的身上蹭来蹭去，以回应你的主动。在发出一声饥渴的娇喘后，[harpyNymphoCompanion.name]问道，[harpyNymphoCompanion.speech(你不打算连我一起操吗，来吧！)]
 	</p>
 	<p>
-		With [harpyNympho.name] continuing to desperately kiss you, you motion for [harpyNymphoCompanion.name] to step forwards and join in. As she happily rushes forwards, you pull back from [harpyNympho.namePos] lips, before swiftly grabbing [harpyNympho.namePos] head and giving her a taste of your [pc.tongue+]. As the lustful harpy leans heavily into you, more lustful moans break out amongst the surrounding nympho harpies.
+		[harpyNympho.name]还在迷醉地亲你，你示意[harpyNymphoCompanion.name]过来加入。她愉悦地前来。你推开[harpyNympho.namePos]的唇，转而抓住[harpyNympho.namePos]的头，让她尝尝你[pc.tongue+]。这只淫荡的哈比完全倚在你身上，周围的淫荡色鬼哈比们更是浪叫连连。
 	</p>
 	<p>
-		Wanting the matriarch's and her subordinate's lips to be employed elsewhere, you break off your kiss, before taking hold of both of the harpies' shoulders and pushing them to their knees before you. Realising what it is you want, they both eagerly shuffle forwards towards your groin. Looking up at you, [harpyNympho.name] hungrily moans, [harpyNympho.speech(Please, use me and [harpyNymphoCompanion.name] as much as you want!)]
-	</p>
+	为了让族长和她的随从接受命令，你在结束亲吻后抓住两位哈比的肩膀，将她们推至你的面前跪下。在意识到你的意图后，她们迫不及待地朝你的跨下挪动身体。她抬头凝视着你的眼睛，娇喘道：[harpyNympho.speech(我们会好好服侍你的……对不对，[harpyNymphoCompanion.name]？)]
+</p>
 	<p>
-		[harpyNymphoCompanion.speech(Yes! Fuck us!)] [harpyNymphoCompanion.name] squeals, and you can't help but grin as she and her matriarch eagerly prepare to perform oral on you...
+		[harpyNymphoCompanion.speech(太棒了！操我们吧！)][harpyNymphoCompanion.name]浪叫着，她和族长准备为你口交，你情不自禁地笑起来……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="NYMPHO_SEX_START_SPITROAST"><![CDATA[
     <p>
-        Eager to put [harpyNympho.name] in her place in front of her nest's inner-circle, you grab hold of her and push her down onto her hands and knees before you. Raising her ass in a clear display of submission, [harpyNympho.name] passionately moans, [harpyNympho.speech(Yes! Fuck me! Come on, give it to me!)]
+      你迫切希望能在这巢穴的小圈子里让[harpyNympho.name]重新认清自己的地位，于是抓住她的手，让她手脚并用，倒在你面前。[harpyNympho.name]顺从地撅起屁股，情欲地呻吟着，[harpyNympho.speech(太棒了！操我吧！快来，快给我！)]
     </p>
 	<p>
-		Letting out a hungry moan, the matriarch's subordinate looks at you and pleads, [harpyNymphoCompanion.speech(Please, let me join in and fuck [harpyNympho.name] too!)]
+		族长的手下发出饥渴的呻吟，看向你恳求道，[harpyNymphoCompanion.speech(求求你了，让我也来操[harpyNympho.name]吧！)]
 	</p>
 	<p>
-		Telling [harpyNymphoCompanion.name] that it was your plan to have her join in and spitroast her matriarch all along, you wonder if you should take [harpyNympho.namePos] rear, or instead [pc.step] around and use her mouth...
+		你告诉[harpyNymphoCompanion.name]，你想让她加入，和族长一起“穿肉串”。你在想是让[harpyNympho.namePos]在后面，还是[pc.step]过去使用她的嘴……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="NYMPHO_SPITROAST_BEHIND_START"><![CDATA[
     <p>
-        Deciding that you want to use [harpyNympho.namePos] pussy, you drop down behind her and give her [harpyNympho.ass+] a good grope. Moaning in delight, she raises her [harpyNympho.hips+] and begs, [harpyNympho.speech(Yes! Pound my hot little pussy!)]
+         你决定使用[harpyNympho.namePos]的小穴，便走到她身后，狠狠摸了一把她[harpyNympho.ass+]。她愉悦地呻吟，拱起[harpyNympho.hips+]恳求道，[harpyNympho.speech(太棒了！蹂躏我火热的小穴吧！)]
 	</p>
 	<p>
-       Having already been told that you want her to join in, [harpyNymphoCompanion.name] quickly drops down in front of her matriarch's mouth, and prepares to receive oral from [harpyNympho.name] while you fuck her...
+       [harpyNymphoCompanion.name]知道了你想让她加入，便迅速落在族长嘴前，准备在你操她的时候接受[harpyNympho.name]的口交……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="NYMPHO_SPITROAST_IN_FRONT_START"><![CDATA[
     <p>
-        Deciding that you want to use [harpyNympho.namePos] mouth, you [pc.step] forwards and drop down in front of her mouth. Moaning in delight, she looks up at you and begs, [harpyNympho.speech(Yes! Put my mouth to use!)]
+        你决定使用[harpyNympho.namePos]的嘴，于是[pc.step]上前，落到她嘴前。她愉悦地呻吟，抬头看着你乞求道，[harpyNympho.speech(太棒了！来用我的嘴吧！)]
 	</p>
 	<p>
-       Having already been told that you want her to join in, [harpyNymphoCompanion.name] quickly drops down behind her matriarch, and prepares to fuck [harpyNympho.name] while you receive oral from her...
+       [harpyNymphoCompanion.name]知道了你想让她加入，便迅速落在族长身后，准备在你接受[harpyNympho.name]口交的时候操她……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="NYMPHO_AFTER_SEX"><![CDATA[
 	#IF(sex.isSatisfiedFromOrgasms(harpyNympho, true))
 		<p>
-			As you [pc.step] back from [harpyNympho.name], she sinks to the floor, totally worn out from her
+			你从[harpyNympho.name]身边[pc.step]开，她瘫倒在地，
 			#IF(sex.getNumberOfOrgasms(harpyNympho)>1)
-				 orgasms.
+				高潮多次让她精疲力竭。
 			#ELSE
-				 orgasm.
+				高潮让她精疲力竭。
 			#ENDIF
-			 Biting her lip and flashing you a dirty look, she teases, [harpyNympho.speech(Fuck... I love getting fucked...)]
+			她咬着唇，下流地看着你，调逗道：[harpyNympho.speech(操……我喜欢被干……)]
 		</p>
 	#ELSE
 		<p>
-			As you [pc.step] back from [harpyNympho.name], she sinks to the floor, letting out a desperate whine as she realises that you've finished with her. Her feathered hands dart down between her legs, and she frantically starts masturbating as she seeks to finish what you started.
+			你从[harpyNympho.name]身边[pc.step]开。她倒在地上，意识到你已经结束了，不禁迷乱地哀鸣，将覆羽的手伸到腿间，疯狂地开始自慰，试图完成你开始的一切。
 		</p>
 	#ENDIF
 	#IF(sex.getAllParticipants(false).contains(harpyNymphoCompanion))
 		#IF(sex.isSatisfiedFromOrgasms(harpyNymphoCompanion, true))
 			<p>
-				Letting out a deeply satisfied sigh, [harpyNymphoCompanion.name] looks to be completely exhausted from the
+				伴着一声满足的吐气，[harpyNymphoCompanion.name]看起来完全沉醉于你给她带来的
 				#IF(sex.getNumberOfOrgasms(harpyNymphoCompanion)>1)
-					 orgasms
+					多次高潮
 				#ELSE
-					 orgasm
+					高潮
 				#ENDIF
-				 you gave her. Panting and looking up into your eyes, she moans, [harpyNymphoCompanion.speech(That was... Wow...)]
+				中，她气喘吁吁地抬起头望着你的眼睛，呻吟道，[harpyNymphoCompanion.speech(哇……那真是……)]
 			</p>
 		#ELSE
 			<p>
-				Not being satisfied from this sexual experience, [harpyNymphoCompanion.name] looks over at her matriarch, and as she watches [harpyNympho.namePos] [harpyNympho.breasts+] rise and fall, she starts shamelessly masturbating right there in front of the rest of the surrounding harpies.
+				对这场性爱仍不满足，[harpyNymphoCompanion.name]望向她的族长，观赏着[harpyNympho.namePos][harpyNympho.breasts+]上下翻涌，她就在这群围绕着自己的哈比们面前，恬不知耻地自慰起来。
 			</p>
 		#ENDIF
 	#ENDIF
 	<p>
-		[harpyNympho.NamePos] inner-circle of harpies, having watched the whole thing, kneel down in submission as you finish with their matriarch. Excitedly chattering amongst themselves, they talk about your performance and wonder aloud how long it will be before you're back for more...
+		[harpyNympho.NamePos]领地内层的哈比们在见证了族长的性交全程后，纷纷跪下来表示臣服于你。然后他们围坐一团叽叽喳喳地谈论着你的英勇的表现，兴奋地表示想知道你什么时候还会再来一次……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="NYMPHO_LEAVE_AFTER_SEX"><![CDATA[
 	#IF(sex.getAllParticipants(false).contains(harpyNymphoCompanion))
 		<p>
-			Having shown these harpies their place, you set off down the staircase, and after walking back across the lower platform, you quickly find yourself on the outskirts of [harpyNympho.namePos] nest once again.
+			你告诉他们要认清自己的地位之后，就走下了楼梯，来到更低的平台上。在快速穿过整个平台之后，你发现自己又回到了[harpyNympho.namePos]巢穴的边缘。
 		</p>
 	#ELSE
 		<p>
-			Having shown [harpyNympho.name] her place, you set off down the staircase, and after walking back across the lower platform, you quickly find yourself on the outskirts of [harpyNympho.namePos] nest once again.
+			你告诉[harpyNympho.name]要认清自己的地位之后，就走下了楼梯，来到更低的平台上。在快速穿过整个平台之后，你发现自己又回到了[harpyNympho.namePos]巢穴的边缘。
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 	
 	<!-- After losing fight: -->
 	
     <htmlContent tag="COMBAT_LOST"><![CDATA[
 	<p>
-		You fall to the floor, totally beaten. As you collapse, [harpyNymphoCompanion.name] jumps down on top of you, pinning you to the floor as she calls out to her matriarch, [harpyNymphoCompanion.speech([harpyNympho.Name]! I did it!)]
+		你精疲力竭地躺倒在地上，就在你倒下的时候，[harpyNymphoCompanion.name]跳到你身上，将你牢牢地压在地板上，并朝她的族长呼喊，[harpyNymphoCompanion.speech([harpyNympho.Name]！抓到这家伙了！)]
 	</p>
 	<p>
-		[harpyNympho.speech(Well done, [harpyNymphoCompanion.name]!)] you hear [harpyNympho.name] respond. [harpyNympho.speech(You're going to get a reward for this!)]
+		[harpyNympho.speech(干得好，[harpyNymphoCompanion.name]！)][harpyNympho.name]回道，[harpyNympho.speech(你该接受奖励！)]
 	</p>
 	<p>
-		As [harpyNymphoCompanion.name] continues holding you down, [harpyNympho.name] calls out for her flock to come and help. Rushing to obey their matriarch, several harpies dash forwards and pin your [pc.arms] and [pc.legs] to the floor.
+		当[harpyNymphoCompanion.name]持续压制着你时，[harpyNympho.name]召唤部族其他哈比前来帮忙。听命于她们的族长，数名哈比冲过来将你的[pc.arms]和[pc.legs]牢牢地按在地上。
 	</p>
 	<p>
-		[harpyNympho.speech(Keep on holding [pc.herHim] still, everyone!)] [harpyNympho.name] calls out, pulling [harpyNymphoCompanion.name] off of you. [harpyNympho.speech(I've got a fun little punishment planned!)]
+		[harpyNympho.speech(继续按住[pc.herHim]！)][harpyNympho.name]喊道。[harpyNympho.speech(我想到了一个有点意思的惩罚！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_MATRIARCH"><![CDATA[
 	<p>
-		You fall to the floor, totally beaten. As you collapse, you hear [harpyNympho.name] ordering her flock to retrain you, and, rushing to obey their matriarch, you're quickly pinned to the floor by a group of her obedient harpies.
+		你彻底落败并倒在了地上。当你倒下时，你听到[harpyNympho.name]命令她的哈比们将你抓住，为了服从她们的族长，你马上就被哈比跟班们紧紧地按在了地板上。
 	</p>
 	<p>
-		[harpyNympho.speech([nymphoHarpyCompanion.name], are you ok?!)] you hear [nymphoHarpy.name] asking her boy-toy. [harpyNympho.speech(Come on, I'll make you feel better!)]
+		[harpyNympho.speech([nymphoHarpyCompanion.name]，你还好吗？)][nymphoHarpy.name]问他的性玩具，[harpyNympho.speech(过来，我让你舒服点！)]
 	</p>
 	<p>
-		As the members of [harpyNympho.namePos] flock continue to hold you down, you hear the matriarch and her companion walking towards you. Some of the harpies start laughing as you try to wriggle free, but you're too weak from the fight to offer any real resistance.
+		在[harpyNympho.namePos]鸟巢的成员继续将你压制在地时，你听见族长及其同伴正向你走来。你试图挣脱束缚，但刚刚的战斗让你虚弱无比，无力对抗她们，只引起了她们的嘲笑。
 	</p>
 	<p>
-		[harpyNympho.speech(Keep on holding [pc.herHim] still!)] [harpyNympho.name] calls out. [harpyNympho.speech(I've got a fun little punishment planned!)]
+		[harpyNympho.speech(继续按住[pc.herHim]！)][harpyNympho.name]喊道。[harpyNympho.speech(我想到了一个有点意思的惩罚！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_END"><![CDATA[
 	#IF(game.isBadEndsEnabled())
 		<p>
-			[harpyNympho.speech([harpyNymphoCompanion.Name], strip [pc.herHim] naked and then fetch me some of our lollipops!)] [harpyNympho.name] laughs. As her subordinate hastily pulls off all of your clothing, the matriarch steps forwards to tower over you and tease, [harpyNympho.speech(I know what your problem is; you just wish you were part of my flock! Well, my special little lollipops can help with that!)]
+			[harpyNympho.speech([harpyNymphoCompanion.name]，把[pc.herHim]脱光然后给我把棒棒糖拿过来！)][harpyNympho.name]笑着向前走了一步，俯视着你。[harpyNympho.speech(我知道你的问题在哪；你只是想要变得像我一样！我的特制棒棒糖可以帮你解决这个问题！)]
 		</p>
 		<p>
-			[pc.speechNoEffects(Let me go!)] you shout, struggling against the harpies holding you down. You're too weak to shake them off, however, and they easily continue to pin your now-naked body to the floor, holding you quite still as [harpyNympho.name] stoops down next to your face.
+		[pc.speechNoEffects(放我走！)]你大叫着，挣扎着反抗哈比们。然而，你太虚弱了，无法挣脱，他们很容易就把你已无片缕的身体继续按在地上，当[harpyNympho.name]弯下腰贴着你的脸时，你已经无力挣扎。
+	</p>
+		<p>
+			[harpyNympho.speech(不要那样拼命抵抗啦！)]她兴奋地喘息着， [harpyNympho.speech(你马上就要变成我们的一员了！)]
 		</p>
 		<p>
-			[harpyNympho.speech(Don't struggle so much!)] she excitedly moans, [harpyNympho.speech(You're going to be one of us soon!)]
+			过了会儿，[harpyNymphoCompanion.name]回来了，把几根粉色的、形状像阴茎的棒棒糖递给了[harpyNympho.name]。粉色羽毛的族长脸上带着调皮的笑容，命令她的男宠张开你的嘴，然后俯身把所有的棒棒糖用力塞进了你的嘴里。
 		</p>
 		<p>
-			At that moment, [harpyNymphoCompanion.name] comes running back from her errand, and you see her hand over several pink, cock-shaped lollipops to [harpyNympho.name]. With a mischievous grin on her face, the pink-feathered matriarch orders her boy-toy to hold your mouth open, and, leaning in, [harpyNympho.name] forcefully shoves the lollipops into your mouth.
-		</p>
-		<p>
-			[harpyNympho.speech(Be a good [pc.girl]! You'll like it, I promise!)]
+			[harpyNympho.speech(做个好[pc.girl]吧！我保证你会喜欢的！)]
 		</p>
 	#ELSEIF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
 		<p>
-			[harpyNympho.speech([harpyNymphoCompanion.name], fetch me one of my lollipops!)] [harpyNympho.name] laughs, stepping forwards to tower over you. [harpyNympho.speech(I know what your problem is; you just wish you were me! Well, my special little lollipops can help with that!)]
+			[harpyNympho.speech([harpyNymphoCompanion.name]，给我拿一根棒棒糖！)][harpyNympho.name]笑着向前走了一步，俯视着你。[harpyNympho.speech(我知道你的问题在哪；你只是想要变得像我一样！我的特制棒棒糖可以帮你解决这个问题！)]
 		</p>
 		<p>
-			[pc.speechNoEffects(Let me go!)] you shout, struggling against the harpies holding you down. You're too weak to shake them off, however, and they easily continue to pin you to the floor, holding you quite still as [harpyNympho.name] stoops down next to your face.
+		[pc.speechNoEffects(放我走！)]你大叫着，挣扎着反抗哈比们。然而，你太虚弱了，无法挣脱，他们很容易就继续把你按在地上，当[harpyNympho.name]弯下腰贴着你的脸时，你已经无力挣扎。
+	</p>
+		<p>
+			[harpyNympho.speech(嘘！别挣扎啦，)]她呻吟道，[harpyNympho.speech(很快就结束了！)]
 		</p>
 		<p>
-			[harpyNympho.speech(Shh! Don't struggle so much,)] she moans, [harpyNympho.speech(this will all be over soon!)]
+			[harpyNymphoCompanion.name]回来了，把一根粉色的、形状像阴茎的棒棒糖递给了[harpyNympho.name]。粉色羽毛的族长脸上带着调皮的笑容，命令她的男宠张开你的嘴，然后俯身把所有的棒棒糖用力塞进了你的嘴里。
 		</p>
 		<p>
-			[harpyNymphoCompanion.name] comes running over, and you see her hand over a pink, cock-shaped lollipop to [harpyNympho.name]. With a mischievous grin on her face, the pink-feathered matriarch orders her boy-toy to hold your mouth open, and, leaning in, [harpyNympho.name] forcefully tries to shove the lollipop into your mouth.
-		</p>
-		<p>
-			[harpyNympho.speech(Be a good [pc.girl]! You'll like it, I promise!)]
+			[harpyNympho.speech(做个好[pc.girl]吧！我保证你会喜欢的！)]
 		</p>
 	#ELSE
 		<p>
-			[nymphoHarpy.speech(Oh... Well that's not fair...)] she suddenly whines as she sees that your mouth is inaccessible. Pouting at you, she exclaims, [nymphoHarpy.speechNoEffects(I wanted to turn you into one of us, but you can't suck on our special lollipops while your mouth's like that! Well... I guess I'll just have you thrown out of here instead!)]
+			[nymphoHarpy.speech(这可不公平……)]，她发现无法打开你的嘴，皱着眉头指着你说，[nymphoHarpy.speechNoEffects(你本来该加入我们，但是你连嘴都张不开怎么吃我们的棒棒糖！算了……还是把你扔出去吧！)]
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_MOUTH_BLOCKED"><![CDATA[
 	<p>
-		[harpyNympho.speechNoEffects(Go on, girls!)] [harpyNympho.name] exclaims, before dismissively gesturing towards you and demanding, [harpyNympho.speechNoEffects(Throw [pc.herHim] out of my nest so we can get back to fucking!)]
+		[harpyNympho.speechNoEffects(过来，姑娘们！)][harpyNympho.name]喊着，朝你做了个轻蔑的手势，[harpyNympho.speechNoEffects(把[pc.herHim]扔出去，我们继续开干！)]
 	</p>
 	<p>
-		Hurrying to carry out their matriarch's order, [harpyNymphoCompanion.name] and several other harpies pull you to your [pc.feet], before roughly marching you out of their nest and physically throwing you down onto a nearby walkway. Not wanting to stick around and give them a chance to abuse you further, you leave the harpies' mocking laughter behind and hurry away from [nymphoHarpy.namePos] nest...
+		[harpyNymphoCompanion.name]和其他哈比马上开始执行族长的命令，拉着你的[pc.feet]粗暴地把你从它们的巢穴扔到附近的人行道上。无意逗留，也不想继续被虐待，你在哈比们嘲弄的笑声中匆匆离开了[nymphoHarpy.namePos]的巢穴……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_NO_TF"><![CDATA[
 	<p>
-		With a determined yank, you finally manage to pull one of your [pc.arms] free from the harpy's clutches. Before they're able to restrain you again, you grab the lollipop out of [harpyNympho.namePos] feathered hand, before smashing it on the floor beneath you.
+		你下定决心用力一拉，终于把你的一只[pc.arms]从哈比的束缚中拽了出来。在它们再次束缚住你之前，你从[harpyNympho.namePos]长满羽毛的手里抢过棒棒糖，然后把它向地板上摔去。
 	</p>
 	<p>
-		[harpyNympho.speech(Silly [pc.girl]! That's not going to make this any easier for you!)] [harpyNympho.name] laughs, dropping down onto all fours directly over your face. [harpyNympho.speech(Come on [harpyNymphoCompanion.name]! Let's carry on from where we left off! This naughty [pc.girl] can be on cleanup duty!)]
+		[harpyNympho.speech(傻[pc.girl]！这只会让你接下来更难受！)][harpyNympho.name]笑着，骑到你脸上，[harpyNympho.speech(来吧，[harpyNymphoCompanion.name]！让我们继续下去，让这个调皮的[pc.girl]来负责打扫！)]
 	</p>
 	<p>
-		[harpyNymphoCompanion.name] lets out a little laugh, [harpyNymphoCompanion.speech(That sounds fun!)]
+		[harpyNymphoCompanion.name]轻笑了出来，[harpyNymphoCompanion.speech(有点意思！)]
 	</p>
 	<p>
-		With [harpyNympho.namePos] pussy hovering above your face, you're held in position and forced to watch as [harpyNymphoCompanion.name] lifts up her skirt and pulls down her underwear. Stepping forwards, you see her tiny little avian cock standing to attention, and with a thrust of her hips, she slides into [harpyNympho.namePos] wet cunt. Some of the cum from [harpyNympho.namePos] previous creampie oozes out around [harpyNymphoCompanion.namePos] little cock, and you flinch as the salty jizz drips down onto your face.
+		[harpyNympho.namePos]骑着你，把你压在原地，被迫看着头上的淫穴。[harpyNymphoCompanion.name]迈步向前，掀起裙子，拉下内裤漏出她那微小的鸟类鸡巴。她往前一顶，插入了[harpyNympho.namePos]湿润的淫。骚穴内之前残留着的精液从鸡巴周围溢出，滴落在你的脸上，你不由得一抖。
 	</p>
 	<p>
-		For the next few hours, you're forced to act as [harpyNympho.namePos] personal pussy-cleaner. One after another, the harpies of [harpyNympho.namePos] flock take turns fucking their sex-crazed matriarch. She insists that each one finish inside of her, and after receiving each creampie, she lowers herself down onto your face, forcing you to lick her clean before the next excited harpy's turn.
+		接下来的几个小时，你不情愿地扮演着[harpyNympho.namePos]淫穴清洁工的角色。[harpyNympho.namePos]部族的哈比们开始轮奸她们放荡的族长。她不断地接受内射，然后把淫穴压在你脸上，强迫你舔干净，然后叫来下一只哈比。
 	</p>
 	<p>
-		You eventually lose count of how many times you're forced to endure this humiliation, but, after what seems like an eternity, [harpyNympho.name] declares that she needs a break. Standing up, she orders her harpies to release you, before grinning down at your cum-coated face. [harpyNympho.speech(I think you've learnt your lesson, haven't you?! Now, get out my sight!)]
+		你记不清自己遭受了多少次这样的侮辱。过了很久之后，你终于等到[harpyNympho.name]累了停了下来。她站起来，命令哈比们放开你，然后看着你满脸的精液咧嘴笑道，[harpyNympho.speech(学到教训了吗？现在，滚出我的视线！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_TF_START"><![CDATA[
 	<p>
-		Obediently doing as you're told, you open your mouth and let the lollipop slide past your [pc.lips+]. An intense, sweet flavour hits your tongue, and you find that it's quite unlike anything you've ever tasted before. Before you know what you're doing, you're eagerly sucking and licking on the delicious candy, letting out little whining noises as you find yourself unable to stop...
+		你听话地张开嘴，让棒棒糖滑过你[pc.lip+]，进入你的口中。一股浓郁的甜味袭卷了你的舌头，这是你从未品尝过的味道。你还没反应过来自己在做什么，就已经迫不及待地吮吸和舔食起这美味的糖果，嘴里发出呜呜的声音，欲罢不能……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_TF_END"><![CDATA[
 	<p>
-		As the lollipop's transformative effects come to an end, the harpies' grip on your [pc.arms] and [pc.legs] loosens. Blinking slowly a few times, you let out a lewd moan, [pc.speech(Oh, fuck! I need to fuck something, right now!)]
+		随着棒棒糖的转化效果结束，哈比们抓住你[pc.arms]和[pc.legs]的手也松开了。你慢慢地眨了几下眼睛，发出了淫荡的呻吟，[pc.speech(噢，天哪！我好想做爱，现在，好想操，现在！)]
 	</p>
 	<p>
-		The flock of harpies bursts out into laughter, and the ones who were holding you down finally release you before backing off. Scrambling to your knees, you find yourself looking up at [harpyNympho.Name] as she continues towering over you.
+		哈比群中爆发出一阵大笑，压住你的哈比们终于松开了你，然后退了回去。你慌忙跪下，抬头看着[harpyNympho.Name]，她继续高高在上地俯视着你。
 	</p>
 	<p>
-		[harpyNympho.speech(Well, you're not taking any of <i>my</i> playthings! And anyway, before you run off and get fucked like a horny slut, I've still got some plans for you!)] [harpyNympho.name] laughs, dropping down onto all fours directly over your face and forcing you down onto your back once more. [harpyNympho.speech(Come on, [harpyNymphoCompanion.name]! Let's carry on from where we left off! This naughty [pc.girl] can be on cleanup duty!)]
+		[harpyNympho.speech(嗯，你可不能拿走我的<i>我的</i>玩具！这样，在你像个骚货一样跑出去被操之前，我有个主意！)][harpyNympho.name]笑着，强迫你躺回在地上，然后骑在你的脸上。[harpyNympho.speech(来吧，[harpyNymphoCompanion.name]！让我们继续下去，让这个调皮的[pc.girl]来负责打扫！)]
 	</p>
 	<p>
-		[harpyNymphoCompanion.name] lets out a little laugh, [harpyNymphoCompanion.speech(That sounds fun!)]
+		[harpyNymphoCompanion.name]轻笑了出来，[harpyNymphoCompanion.speech(有点意思！)]
 	</p>
 	<p>
-		With [harpyNympho.namePos] pussy hovering above your face, you're held in position and forced to watch as [harpyNymphoCompanion.name] lifts up her skirt and pulls down her underwear. Stepping forwards, you see her tiny little avian cock standing to attention, and with a thrust of her hips, she slides into [harpyNympho.namePos] wet cunt. Some of the cum from [harpyNympho.namePos] previous creampie oozes out around [harpyNymphoCompanion.namePos] little cock, and you flinch as the salty jizz drips down onto your face.
+		[harpyNympho.namePos]骑着你，把你压在原地，被迫看着头上的淫穴。[harpyNymphoCompanion.name]迈步向前，掀起裙子，拉下内裤漏出她那微小的鸟类鸡巴。她往前一顶，插入了[harpyNympho.namePos]湿润的淫。骚穴内之前残留着的精液从鸡巴周围溢出，滴落在你的脸上，你不由得一抖。
 	</p>
 	<p>
-		For the next few hours, you're forced to act as [harpyNympho.namePos] personal pussy-cleaner. One after another, the harpies of [harpyNympho.namePos] flock take turns fucking their sex-crazed matriarch. She insists that each one finish inside of her, and, after receiving each creampie, she lowers herself down onto your face, forcing you to lick her clean before the next excited harpy's turn.
+		接下来的几个小时，你不情愿地扮演着[harpyNympho.namePos]淫穴清洁工的角色。[harpyNympho.namePos]部族的哈比们开始轮奸她们放荡的族长。她不断地接受内射，然后把淫穴压在你脸上，强迫你舔干净，然后叫来下一只哈比。
 	</p>
 	<p>
-		You eventually lose count of how many times you're forced to endure this humiliation, but, after what seems like an eternity, [harpyNympho.name] declares that she needs a break. Standing up, she orders her harpies to release you, before grinning down at your cum-coated face. [harpyNympho.speech(I think you've learnt your lesson, haven't you?! Now, get out my sight!)]
+		你记不清自己遭受了多少次这样的侮辱。过了很久之后，你终于等到[harpyNympho.name]累了停了下来。她站起来，命令哈比们放开你，然后看着你满脸的精液咧嘴笑道，[harpyNympho.speech(学到教训了吗？现在，滚出我的视线！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_THROWN_OUT"><![CDATA[
 	<p>
-		Finally given an opportunity to escape, you do as [harpyNympho.name] commands. Jumping to your feet, you run away across the platform, leaving the harpies' mocking laughter behind as you quickly find yourself on the outskirts of the nest once again...
+		在获得了离开的机会后，你按照[harpyNympho.name]的命令行事。无视身后那些哈比们嘲讽的笑声，你飞快地跑了起来，不知不觉间，你发现自己又回到了巢穴的边缘地带……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 	<!-- Bad end: -->
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_TF_START"><![CDATA[
 	<p>
-		Completely overpowered by the nympho harpies and totally at their mercy, you can't do anything but obey [nymphoHarpy.namePos] command. With the matriarch still forcefully shoving several of the cock-shaped lollipops into your mouth, you reluctantly start to suck on them. An intense, sweet flavour hits your tongue, and you find that it's quite unlike anything you've ever tasted before. Before you know what you're doing, you're eagerly sucking and licking on the delicious candy, letting out little whining noises as you find yourself unable to stop.
+		你屈从于色鬼哈比们的压制，只能服从[nymphoHarpy.namePos]的命令。当族长依然强行将几根形状像阴茎的棒棒糖塞进你的嘴里时，你不情愿地开始吮吸它们。一种浓烈、甜美的味道冲击着你的舌头，你发现这与你以往尝过的任何东西都不太相同，于是迫不及待地吮着这美味的糖果。你突然意识到，伴随着小小的呜咽声，你已经无法制止自己，沉迷在了棒棒糖中。
 	</p>
 	<p>
-		[nymphoHarpy.speechNoEffects(That's it, suck on them real good!)] [nymphoHarpy.name] excitedly teases, [nymphoHarpy.speechNoEffects(Now turn into a sexy little nympho slut for me!)]
+		[nymphoHarpy.speechNoEffects(就是这样，好好吮吸它们！)][nymphoHarpy.name]兴奋地嬉笑着，[nymphoHarpy.speechNoEffects(变成我性感的小花痴婊子吧！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_TF_END"><![CDATA[
 	<p>
-		As the lollipop's transformative effects come to an end, the harpies' grip on your [pc.arms] and [pc.legs] loosens. Blinking slowly a few times, you let out a lewd moan, [pc.speech(Oh, fuck! I need to fuck something, right now!)]
+		随着棒棒糖的转化效果结束，哈比们抓住你[pc.arms]和[pc.legs]的手也松开了。你慢慢地眨了几下眼睛，发出了淫荡的呻吟，[pc.speech(噢，天哪！我好想做爱，现在，好想操，现在！)]
 	</p>
 	<p>
-		The flock of harpies bursts out into laughter, and the ones who were holding you down finally release you before backing off. Scrambling to your knees, you find yourself looking up at [harpyNympho.Name] as she continues towering over you.
+		哈比群中爆发出一阵大笑，压住你的哈比们终于松开了你，然后退了回去。你慌忙跪下，抬头看着[harpyNympho.Name]，她继续高高在上地俯视着你。
 	</p>
 	<p>
-		[harpyNympho.speech(Feeling all pent-up and wanting to show me what a horny slut you are?)] [harpyNympho.name] asks, before reaching down to spread her labia and show off the fact that she's been recently creampied. As fresh cum oozes out of her cunt to drip down one of her feathered thighs, she demands, [harpyNympho.speech(Beg for it and tell me that I'm your matriarch, and I'll let you act as my pussy cleaner!)]
+		[harpyNympho.speech(已经骚到想要告诉大家你是一个多么骚的骚货了是吗？)][harpyNympho.name]问道，然后伸手下去撩开她的阴唇，露出她刚刚被干过的淫穴。新鲜的精液从穴口满溢而出，顺着她羽毛覆盖的大腿流下。她命令道，[harpyNympho.speech(现在求我，承认我是你的族长，承认你是我的小穴清理工！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_BEG"><![CDATA[
 	<p>
-		With the effects of the lollipops still lingering in your mind, you find yourself staring at [harpyNympho.namePos] pussy and desperately moaning, [pc.speechNoEffects(You're my matriarch, [harpyNympho.name]! Please, let me clean your pussy!)]
+		棒棒糖的效果仍旧影响着你的神智，你不由自主地将目光锁定在[harpyNympho.namePos]的小穴上，急切地呻吟着，[pc.speechNoEffects(您是我的族长，[harpyNympho.name]！请允许我，让我来清理您的小穴！)]
 	</p>
 	<p>
-		[harpyNympho.Name] grins down at you, and to the background noise of dozens of giggling nympho harpies, she teases, [harpyNympho.speechNoEffects(That's a good girl! You're nothing but another one of my fuck-toys now, understand? Now lie down so I can sit on your face.)]
+		[harpyNympho.Name]对着你咧嘴一笑，在几十个花痴哈比的嬉笑声中，她挑逗着你，[harpyNympho.speechNoEffects(真是乖女孩！你和她们一样，都是我的性玩具，明白了吗？现在躺下来，我要坐在你的脸上。)]
 	</p>
 	#IF(pc.hasVagina())
 		<p>
-			Before you can move to obey, [harpyNymphoCompanion.name] whines, [harpyNymphoCompanion.speech([harpyNympho.Name]... Please can I be the first to fuck your new slut?)] 
+			不等你表示同意，[harpyNymphoCompanion.name]便发出抱怨的声音，[harpyNymphoCompanion.speech([harpyNympho.Name]……求你了，能让我第一个来操你的新婊子吗？)] 
 		</p>
 		<p>
-			[harpyNympho.speechNoEffects(Of course you can, [harpyNymphoCompanion.name]! You can do her while she's swallowing down all that yummy cum you pumped into my pussy,)] your new matriarch replies, before once again addressing you and commanding, [harpyNympho.speechNoEffects(Come on, slut, we haven't got all day! Lie down and spread your legs for [harpyNymphoCompanion.name]!)]
+			[harpyNympho.speechNoEffects(当然，[harpyNymphoCompanion.name]！当她用上面的嘴在服务我的时候会享用你的美味精液，你就去喂饱她下面的嘴！)]你的新族长回答道，然后再次对你说道并命令道， [harpyNympho.speechNoEffects(来吧，荡妇，时间不多了！躺下，把腿张开！)]
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_SEX_VAGINA_START"><![CDATA[
 	<p>
-		More than happy to obey, you quickly lie down before your matriarch, who wastes no time in stepping over your and lowering herself down onto your face. As her cum-stuffed cunt is pushed down against your [pc.lips], she moans, [harpyNympho.speechNoEffects(Get started, slut!)] 
+		你高兴地服从族长的命令，躺在她面前，而她几乎立刻跨步骑在你的脸上，当她那覆满精液的淫穴按在你的唇上时，她发出了浪叫声，[harpyNympho.speechNoEffects(快开始，贱货！)] 
 	</p>
 	<p>
-		As you thrust your tongue into [harpyNympho.namePos] cum-stuffed pussy, you feel [harpyNymphoCompanion.namePos] hands running up the inside of your thighs. Submissively spreading your legs, you let out a desperate, muffled moan as you feel the head of her cock sliding up and down over your [pc.labia+]. Desperate to get fucked, you eagerly keep your legs spread wide apart, before trying to shuffle forwards and encourage the harpy to get started. Letting out an amused giggle, [harpyNymphoCompanion.name] grabs hold of your legs and gives you want you want. Thrusting her cock into your [pc.pussy+], she starts rapidly pumping her throbbing length in and out of your cunt as your moans of pleasure are muffled in [harpyNympho.namePos] pussy...
+		当你将舌头伸入[harpyNympho.namePos]正在流出精液的淫穴时，[harpyNymphoCompanion.namePos]把双手沿着你的大腿内侧滑动。你顺从地张开双腿，发出迷乱而压抑的呻吟。她用龟头磨蹭着你[pc.labia+]，挑逗着你的情欲。你迫不及待被狠狠操干，于是将双腿张开，向前挪动，鼓励哈比开始行动。[harpyNymphoCompanion.name]发出一声嬉笑，抓住你的腿，一口气鸡巴送入你[pc.pussy+]，然后在你的穴内疯狂抽插。她粗鲁的动作引发了你的快感，让你在[harpyNympho.namePos]的小穴间呻吟不断……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_SEX_PENIS_START"><![CDATA[
 	<p>
-		More than happy to obey, you quickly lie down before your matriarch, who wastes no time in stepping over your and lowering herself down onto your face. As her cum-stuffed cunt is pushed down against your [pc.lips], she moans, [harpyNympho.speechNoEffects(Get started, slut!)] 
+		你高兴地服从族长的命令，躺在她面前，而她几乎立刻跨步骑在你的脸上，当她那覆满精液的淫穴按在你的唇上时，她发出了浪叫声，[harpyNympho.speechNoEffects(快开始，贱货！)] 
 	</p>
 	<p>
-		As you thrust your tongue into [harpyNympho.namePos] cum-stuffed pussy, you feel her bending over and lowering her face towards your groin. Bucking your hips in anticipation of what's about to happen, you let out a deep, erotic moan into your matriarch's pussy as she wraps her lips around your cock and starts giving you a blowjob...
+		当你把舌头伸进[harpyNympho.namePos]充满精液的小穴时，你感觉到她弯下腰，把脸贴向你的下体。你扭动臀部，期待着即将发生的一切，当她用嘴唇裹住你的阴茎，开始为你口交时，你对着族长的小穴发出低沉而色情的呻吟声……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_AFTER_SEX"><![CDATA[
 	#IF(pc.hasVagina())
 		<p>
-			Having had enough, your matriarch slides off of you, leaving your face thoroughly soaked in saliva and girlcum. [harpyNymphoCompanion.Name] is far from done, however, and while your matriarch struts off to another part of the nest, she keeps on thrusting her cock in and out of your well-fucked pussy. Able to look down into your eyes for the first time, [harpyNymphoCompanion.name] teases, [harpyNymphoCompanion.speechNoEffects(~Mmm!~ You like my cock, babe?)]
+			族长玩够了，从你身上滑下来。你的脸彻底浸在唾液和爱液中。[harpyNymphoCompanion.Name]却还远未满足。族长大摇大摆走向巢穴的另一端，与此同时[harpyNymphoCompanion.Name]阴茎仍在你被侵犯许久的小穴中进进出出。[harpyNymphoCompanion.name]第一次低头看向你的眼睛，调笑道，[harpyNymphoCompanion.speechNoEffects(~嗯！~宝贝，你喜欢我的鸡巴吗？)]
 		</p>
 		<p>
-			As you open your mouth to eagerly respond in the positive, you find it suddenly being filled by yet another cock-shaped lollipop. Having returned from wherever she went, you look up to see your matriarch leering over you with at least a dozen more of the transformative candies clutched in her wings. With a big smile on her face, she states, [harpyNympho.speechNoEffects(The mental effects of these lollipops wear off after a while, but if you eat loads at once, then the changes are permanent! Isn't that great?! All you need to do is eat all of these, and you'll be part of my flock forever!)]
-		</p>
+ 你激动地想要说几句来表示强烈的赞同，嘴里突然被另一个鸡巴形棒棒糖堵住了。抬起头，眼前这个不知道从哪儿出现的族长正居高临下地俯视着你，翅膀中紧紧夹着一堆同款糖果。她带着明媚的微笑说道，[harpyNympho.speechNoEffects(这些棒棒糖的精神影响会在一段时间之后消失，不过如果你一次性吃下许多，它就会变成永久的！很棒，对吧？！现在，你只需要吃下这所有的棒棒糖，然后永远地成为我族群的一员吧！)]
+ </p>
 	#ELSE
 		<p>
-			Having had enough, your matriarch slides off of you, leaving your face thoroughly soaked in saliva and girlcum. Looking over at [harpyNymphoCompanion.name], she commands, [harpyNympho.speech(Go and fetch all of the lollipops we have! I'll keep [pc.name] happy while we wait...)]
+ 族长玩够了，从你身上滑下来。你的脸彻底浸在唾液和爱液中。俯视着[harpyNymphoCompanion.name]她下令道，[harpyNympho.speech(去把所有的棒棒糖都拿来！在我们等着的这段时间里，我会让[pc.name]沉醉在快乐之中……)]
+ </p>
+		<p>
+			当[harpyNymphoCompanion.name]急匆匆地去完成族长的命令时，[harpyNympho.name]跪在你身旁，一把抓住你疲软的肉棒。她一边饥渴地撸动你的肉棒，一边调戏着你，[harpyNympho.speech(我还没和你玩够呢，宝贝儿！你还想再多射些给我，对吧？)]
 		</p>
 		<p>
-			As [harpyNymphoCompanion.name] hurries off to carry out her matriarch's orders, [harpyNympho.name] kneels down beside you and grabs hold of your softening cock. Eagerly starting to jerk you off, she teases, [harpyNympho.speech(I'm not finished with you yet, babe! You want to cum for me some more, don't you?)]
-		</p>
-		<p>
-			As you open your mouth to eagerly respond in the positive, you find it suddenly being filled by yet another cock-shaped lollipop. Having returned from wherever she went, you look up to see [harpyNymphoCompanion.name] leering over you with at least a dozen more of the transformative candies clutched in her wings. As her subordinate feeds you the transformative candies, your matriarch states, [harpyNympho.speechNoEffects(The mental effects of these lollipops wear off after a while, but if you eat loads at once, then the changes are permanent! Isn't that great?! All you need to do is eat all of these, and you'll be part of my flock forever!)]
-		</p>
+ 你激动地想要说几句来表示强烈的赞同，嘴里突然被另一个鸡巴形棒棒糖堵住了。抬起头，眼前这个不知道从哪儿出现的[harpyNymphoCompanion.name]正居高临下地俯视着你，翅膀中紧紧夹着一堆同款糖果。她的下属给你喂下转化糖果，族长说，[harpyNympho.speechNoEffects(这些棒棒糖的精神影响会在一段时间之后消失，不过如果你一次性吃下许多，它就会变成永久的！很棒，对吧？！现在，你只需要吃下这所有的棒棒糖，然后永远地成为我族群的一员吧！)]
+ </p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_FINAL"><![CDATA[
 	#IF(pc.hasVagina())
 		<p>
-			Eagerly agreeing with what your matriarch says, you slowly but surely make your way through all of the lollipops she's brought for you, all the while being fucked by [harpyNymphoCompanion.name]...
+			你急切地附和着你的族长，下定主意慢慢享用着她带给你的棒棒糖，与此同时，[harpyNymphoCompanion.name]一刻不停地操着你……
 		</p>
 		<p style='text-align:center;'>
-			...
+			……
+</p>
+		<p>
+			数月后的一天，[harpyNymphoCompanion.name]将你压在身下，以打桩机体位狠狠地抽插着你的小穴。尽管你在巢穴里属于最低等的女性，但好在巢穴里性别比例极不平衡，男性远远比女性多，即使你在女性里的啄序是最低等的，你仍然是族群最重要的一员。
 		</p>
 		<p>
-			Months later, [harpyNymphoCompanion.name] has you in the mating-press position as her cock thrusts in and out of your pussy. Although you're at the bottom of the nest's female hierarchy, the vast majority of the nest's flock are males, and so despite being at the bottom of the females' pecking order, you're still one of the most important members of the flock due to your gender.
-		</p>
-		<p>
-			Of course, you have duties befitting your importance. As [harpyNymphoCompanion.name] finishes inside of you and moves off to wait for a turn at fucking your matriarch, a couple of males step up to where you're lying. Knowing what it is that they want, you tell the males that in exchange for access to your pussy they're to act as your servants for the rest of the day. Smiling as they eagerly agree to your terms, you roll over and push yourself up on all fours, before allowing one of them to start humping you doggy-style, while the other frantically fucks your face...
+			当然，地位和责任是对等的，当[harpyNymphoCompanion.name]在你体内灌满他的精液后，他又去排队等待去操你的族长了。不等你缓一口气，一群男哈比围了上来。你知道他们想要什么，于是告诉他们，只要为你当一天仆从，就可以插进你的小穴。他们急忙答应了你的条件，露出微笑，而你翻了个白眼，四肢着地跪了下来，允许他们中的一个后入你，而其他人则饥渴地操弄着你的脸……
 		</p>
 	#ELSE
 		<p>
-			Eagerly agreeing with what your matriarch says, you slowly but surely make your way through all of the lollipops that [harpyNymphoCompanion.name] has brought for you, all the while being jerked off by [harpyNympho.name]...
+			你急切地附和着你的族长，下定主意慢慢享用着她带给你的棒棒糖，与此同时，[harpyNymphoCompanion.name]一刻不停地为你手淫……
 		</p>
 		<p style='text-align:center;'>
-			...
+			……
+</p>
+		<p>
+			数月后的一天，[harpyNympho.name]正骑在你的鸡巴上，此时的你已经成为巢穴里最底层的男性，要想操到你的族长，你往往要排在队伍的最后等待。好在你的族长是个永远欲壑难填的饥渴色情狂，你每天至少能操到她六次。
 		</p>
 		<p>
-			Months later, [harpyNympho.name] is on top of you, riding your cock. Well and truly established as a harpy at the bottom of the nest's male hierarchy, you often have to wait at the back of the line to fuck your matriarch, but thanks to her insatiable nymphomania, you're still able to rut her at least half a dozen times a day.
-		</p>
-		<p>
-			While you're treated as just another fuck-toy by your matriarch, one of the few other females in your flock has taken a particular liking to you, and so after you've finished inside of [harpyNympho.name], you're called over to submissively service this other female's pussy. As you start to eagerly eat her out, she suggests that if you do a good job then she'll allow you to
+			当你被你的族长当成性玩具玩弄时，族群里另一个女性似乎对你青睐有加，在你中出了[harpyNympho.name]之后，你被她叫过去，听话地服务她的小穴。当你热切地为她口交时，她提议道，如果你把她伺候得舒服，那她就允许你
 			#IF(game.isAnalContentEnabled())
-				 fuck her ass tonight...
+				今晚来干她的屁股……
 			#ELSE
-				 fuck her all through the night...
+				操她一整晚……
 			#ENDIF
 		</p>
 	#ENDIF
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p><i>
-		With your mind having been permanently changed by consuming so many of the transformative lollipops, you never once think of trying to escape from [harpyNympho.namePos] nest. Even if you did somehow become aware of what had happened, you enjoy your new life far too much to ever want to give it up...
+		你已经被过量的转化棒棒糖所永久性的洗脑，对[harpyNympho.namePos]巢穴之外的生活再无留恋。即使有朝一日你回忆起这一切是怎么回事，你也不会选择放弃如今的生活，而是享受它，到最后一刻……
 	</i></p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 </dialogue>

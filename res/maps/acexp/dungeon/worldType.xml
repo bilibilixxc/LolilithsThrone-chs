@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Lilaya's Dungeon]]></name>
+	<name><![CDATA[莉莱雅的地牢]]></name>
 	<colour>BASE_GREY</colour>
 	<sexBlockedReason/>
 	<furniturePresent>false</furniturePresent>

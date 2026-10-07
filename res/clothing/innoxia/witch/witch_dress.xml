@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>3000</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
-		<name><![CDATA[Witch's dress]]></name>
+		<name><![CDATA[魔女连衣裙]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Witch's dresses]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[魔女连衣裙]]></namePlural> 
 		
-		<description><![CDATA[A witch's dress, made of a thin, soft fabric. It has a flared sleeves and a short skirt. A series of ribbons connect the collar to front of the dress, and when worn, they create a pentagram pattern.]]></description> 
+		<description><![CDATA[魔女的连衣裙，由薄而柔软的织物制成。它有宽大的袖子和短裙。一系列丝带连接着领子和连衣裙的前部，在穿着时形成五角星图案。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -93,51 +93,49 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] on the Witch's dress, tidying the skirt down before moving the straps into a comfortable position on [npc.her] shoulders.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the Witch's dress over [npc2.namePos] head and down around [npc2.her] torso, tidying the skirt before moving the straps to sit comfortably on [npc2.her] shoulders.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the Witch's dress over [npc2.namePos] head and down around [npc2.her] torso, pulling down the skirt before moving the straps to sit on [npc2.her] shoulders.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]穿上魔女连衣裙，整理下裙子，然后把肩带移到舒适的位置。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将魔女连衣裙拉过[npc2.namePos]头，裹在[npc2.her]的腰间，整理下裙子，然后把肩带移到[npc2.her]舒适的位置。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将魔女连衣裙拉过[npc2.namePos]头，裹在[npc2.her]的腰间，整理下裙子，然后把肩带移到[npc2.her]舒适的位置。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] Witch's dress up over [npc.her] head and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] Witch's dress up over [npc2.her] head and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(grab)] hold of [npc2.namePos] Witch's dress, before roughly pulling it up over [npc2.her] head and taking it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将魔女连衣裙拉到[npc.her]的头上并脱了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的魔女连衣裙拉过[npc2.her]头上，然后把它脱掉。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]抓住[npc2.namePos]的魔女连衣裙并粗暴的将它从[npc2.her]的头上拽下来。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] Witch's dress back down into the proper position.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] Witch's dress back down into the proper position.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] Witch's dress back down into the proper position.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]魔女连衣裙的裙子下摆放到正确的位置。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的魔女连衣裙拉回到正确的位置。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的魔女连衣裙拉回到正确的位置。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc.her] Witch's dress.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc2.namePos] Witch's dress.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(grab)] hold of the bottom of [npc2.namePos] Witch's dress, before roughly pulling the skirt up.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉起[npc.her]魔女连衣裙的裙子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉起[npc2.namePos]的魔女连衣裙的下摆。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]抓住[npc2.namePos]魔女连衣裙的裙子，并粗暴地拉起来。]]></otherRough>
 	</displacementText>
 
 	

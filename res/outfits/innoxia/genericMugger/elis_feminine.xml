@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Look in the mods folder for a commented version of this. -->
 <outfit>
 	<coreAttributes>
-		<name><![CDATA[generic mugger (feminine)]]></name>
+		<name><![CDATA[一般劫匪(女性化)]]></name>
 		
-		<description><![CDATA[Simple clothing, with the possibility of a weapon or two...]]></description>
+		<description><![CDATA[穿着简陋的衣物，大概还会有那么一两把武器……]]></description>
 		
 		<femininity>FEMININE</femininity>
 		

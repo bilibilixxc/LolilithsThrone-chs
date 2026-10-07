@@ -167,9 +167,9 @@ public class TooltipInformationEventListener implements EventListener {
 			} else {
 				effectsSB.append("<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>");
 					if(owner.isRaceConcealed()) {
-						effectsSB.append(UtilText.parse(owner, "You don't know what [npc.namePos] race is, so can't know [npc.her] strengths and weaknesses..."));
+						effectsSB.append(UtilText.parse(owner, "你不知道[npc.namePos]的种族，所以也不知道[npc.her]的优势和弱点……"));
 					} else {
-						effectsSB.append(UtilText.parse(owner, "You don't know enough about "+owner.getSubspecies().getNamePlural(null)+" to know [npc.namePos] strengths and weaknesses..."));
+						effectsSB.append(UtilText.parse(owner, "你对"+owner.getSubspecies().getNamePlural(null)+"了解不足，无法知晓[npc.namePos]的优势和弱点……"));
 					}
 				effectsSB.append("</span>");
 				yIncrease++;
@@ -177,12 +177,12 @@ public class TooltipInformationEventListener implements EventListener {
 				effectsFound = true;
 			}
 			for (AbstractCombatMove cm : statusEffect.getCombatMoves()) {
-				effectsSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(Grants)] [style.boldCombat(Move)]: "+Util.capitaliseSentence(cm.getName(0, owner)));
+				effectsSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(授予)][style.boldCombat(动作)]："+Util.capitaliseSentence(cm.getName(0, owner)));
 				effectsFound =true;
 				yIncrease++;
 			}
 			for (Spell spell : statusEffect.getSpells()) {
-				effectsSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(Grants)] [style.boldSpell(Spell)]<b>:</b> <b style='color:"+spell.getSpellSchool().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(spell.getName())+"</b>");
+				effectsSB.append((effectsFound?"<br/>":"")+"[style.boldExcellent(授予)][style.boldSpell(法术)]<b>：</b><b style='color:"+spell.getSpellSchool().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(spell.getName())+"</b>");
 				effectsFound =true;
 				yIncrease++;
 			}
@@ -218,7 +218,7 @@ public class TooltipInformationEventListener implements EventListener {
 				StringBuilder timerSB = new StringBuilder();
 				if (owner.getStatusEffectDuration(statusEffect) != -1 || statusEffect.isCombatEffect()) {
 					if (statusEffect.isCombatEffect()) {
-						timerSB.append("Turns remaining: ");
+						timerSB.append("剩余回合：");
 						int turnsRemaining = owner.getStatusEffectDuration(statusEffect);
 						
 						Colour turnCountColour;
@@ -260,24 +260,24 @@ public class TooltipInformationEventListener implements EventListener {
 						int hours = minutes/60;
 						int days = hours/24;
 						
-						timerSB.append("Time remaining: "
+						timerSB.append("剩余时间："
 								+ "<b style='color:"+timerColour.toWebHexString()+";'>"
 								+(days>0
-									?days+" day"+(days>1?"s":"")
+									?days+" 天"
 										+(hours%24>0
-												?" "+(hours%24)+" hour"+((hours%24)>1?"s":"")
+												?" "+(hours%24)+" 时"
 														+ (minutes%60>0
-																?" "+(minutes%60)+" minute"+((minutes%60)>1?"s":"")
+																?" "+(minutes%60)+" 分"
 																		:"")
 												:(minutes%60>0
-														?" "+(minutes%60)+" minute"+((minutes%60)>1?"s":"")
+														?" "+(minutes%60)+" 分"
 																:""))
 									:(hours>0
-											?" "+(hours)+" hour"+((hours)>1?"s":"")
+											?" "+(hours)+" 时"
 													+ (minutes%60>0
-															?" "+(minutes%60)+" minute"+((minutes%60)>1?"s":"")
+															?" "+(minutes%60)+" 分"
 																	:"")
-											:(minutes)+" minute"+((minutes)>1?"s":""))));
+											:(minutes)+"分")));
 						yIncrease++;
 					}
 				}
@@ -324,17 +324,17 @@ public class TooltipInformationEventListener implements EventListener {
 								break;
 							}
 						}
-						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>'"+Util.capitaliseSentence(associatedOccupation.getName(owner))+"' Occupation Trait</span>");
+						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>'"+Util.capitaliseSentence(associatedOccupation.getName(owner))+"' 职业特性</span>");
 					} else if(activePerk.isHiddenPerk()) {
-						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Unique Trait</span>");
+						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>独特特性</span>");
 					} else {
-						tooltipSB.append("<span style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Trait</span>");
+						tooltipSB.append("<span style='color:"+PresetColour.TRAIT.toWebHexString()+";'>特性</span>");
 					}
 				} else {
 					 if(activePerk.isHiddenPerk()) {
-						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Unique Perk</span>");
+						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>独特天赋</span>");
 					} else {
-						tooltipSB.append("<span style='color:"+PresetColour.PERK.toWebHexString()+";'>Perk</span>");
+						tooltipSB.append("<span style='color:"+PresetColour.PERK.toWebHexString()+";'>天赋</span>");
 					}
 				}
 			tooltipSB.append("</div>");
@@ -378,23 +378,23 @@ public class TooltipInformationEventListener implements EventListener {
 					tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal; font-style:italic;'>");
 						if(levelUpPerk.isEquippableTrait()) {
 							if(levelUpPerk.getPerkCategory()==PerkCategory.JOB) {
-								tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Occupation traits cannot be removed.</span>");
+								tooltipSB.append("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>无法移除职业特性。</span>");
 								
 							} else {
 								if(!owner.hasPerkInTree(perkRow, levelUpPerk)) {
 									if(!PerkManager.MANAGER.isPerkAvailable(owner, perkRow, levelUpPerk)) {
-										tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Purchasing requires a connecting perk or trait.</span>");
+										tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需要一个相连的天赋或特性才能购买。</span>");
 									} else {
-										tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Click to purchase trait.</span>");
+										tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>点击以购买特性。</span>");
 									}
 								} else {
 									if(owner.getTraits().contains(levelUpPerk)) {
-										tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>Click to unequip trait.</span>");
+										tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>点击以卸下特性。</span>");
 									} else {
 										if(owner.getTraits().size()==GameCharacter.MAX_TRAITS) {
-											tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Maximum traits activated.</span>");
+											tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>已达到激活特性的上限。</span>");
 										} else {
-											tooltipSB.append("<span style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Click to equip trait.</span>");
+											tooltipSB.append("<span style='color:"+PresetColour.TRAIT.toWebHexString()+";'>点击以装备特性。</span>");
 										}
 									}
 								}
@@ -403,14 +403,14 @@ public class TooltipInformationEventListener implements EventListener {
 						} else {
 							if(!owner.hasPerkInTree(perkRow, levelUpPerk) && !levelUpPerk.isHiddenPerk()) {
 								if(!PerkManager.MANAGER.isPerkAvailable(owner, perkRow, levelUpPerk)) {
-									tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Purchasing requires a connecting perk or trait.</span>");
+									tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需要一个相连的天赋或特性才能购买。</span>");
 								} else {
-									tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Click to purchase perk.</span>");
+									tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>点击以购买天赋。</span>");
 								}
 								
 							} else {
 								tooltipSB.append("<span style='color:"+PresetColour.PERK.toWebHexString()+";'>"
-													+ UtilText.parse(owner, "[npc.Name] already [npc.verb(own)] this perk!")
+													+ UtilText.parse(owner, "[npc.Name]已拥有这项天赋！")
 												+ "</span>");
 							}
 						}
@@ -442,7 +442,7 @@ public class TooltipInformationEventListener implements EventListener {
 
 			// Core move info (half-width title):
 			tooltipSB.append("<div class='container-half-width titular' style='margin:2px 2px 0 8px; width:calc(50% - 10px);'>"
-								+ (coreMove?"[style.colourMinorGood(Core)]":"[style.colourMinorBad(Non-core)]")
+								+ (coreMove?"[style.colourMinorGood(核心)]":"[style.colourMinorBad(非核心)]")
 							+ "</div>");
 
 			// Move type (half-width title):
@@ -452,7 +452,7 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			if(currentCooldown>0) {
 				specialYIncrease += 64;
-				tooltipSB.append("<div class='subTitle'>[style.colourTerrible(On cooldown)]: "+currentCooldown+(currentCooldown==1?" turn":" turns")+"</div>");
+				tooltipSB.append("<div class='subTitle'>[style.colourTerrible(冷却中)]："+currentCooldown+"回合</div>");
 			}
 			
 			// Main description box & image:
@@ -483,7 +483,7 @@ public class TooltipInformationEventListener implements EventListener {
 							yIncrease++;
 							int aoeChance = aoe.getChance();
 							tooltipSB.append("<br/>");
-							tooltipSB.append("[style.colourAqua(AoE)] "
+							tooltipSB.append("[style.colourAqua(范围伤害)] "
 									+ "(<span style='color:"
 										+(aoeChance<=25
 											?PresetColour.GENERIC_BAD
@@ -494,7 +494,7 @@ public class TooltipInformationEventListener implements EventListener {
 													:PresetColour.GENERIC_GOOD))).toWebHexString()+";'>"
 										+aoeChance+"%</span>): "
 									+ aoe.getDamage(owner)
-									+ " "
+									+ ""
 									+ Util.capitaliseSentence(move.getDamageType(combatTurn, owner).getMultiplierAttribute().getColouredName("span")));
 						}
 					}
@@ -506,26 +506,26 @@ public class TooltipInformationEventListener implements EventListener {
 			StringBuilder effectsSB = new StringBuilder();
 			if(!coreMove) {
 				yIncrease++;
-				effectsSB.append("[style.italicsMinorBad(+1 to AP cost and cooldown for non-core moves)]<br/>");
+				effectsSB.append("[style.italicsMinorBad(非核心招式的行动点消耗与冷却时间+1)]<br/>");
 			}
 			effectsSB.append(
-					"AP cost: "
+					"行动点消耗："
 						+"<span style='color:"+(PresetColour.ACTION_POINT_COLOURS[apCost]).toWebHexString()+";'>"
 						+(coreMove
 							?apCost
 							:(apCost-1)+"[style.colourBad(+1)]")
 						+"</span>");
 			effectsSB.append(
-					"<br/>Cooldown: "
+					"<br/>冷却："
 						+ "<span style='color:"+(cooldown-(coreMove?0:1)<=0?PresetColour.GENERIC_MINOR_GOOD:PresetColour.GENERIC_MINOR_BAD).toWebHexString()+";'>"
 						+(coreMove
 							?cooldown
 							:(cooldown-1)+"[style.colourBad(+1)]")
-						+"</span> turn"+(cooldown==1?"":"s"));
+						+"</span>回合");
 			if(move.getStatusEffects(owner, owner, false)!=null) {
 				for(Entry<AbstractStatusEffect, Integer> entry : move.getStatusEffects(owner, owner, false).entrySet()) {
 					effectsSB.append("<br/>");
-					effectsSB.append("Applies: <span style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(null))+"</span> for "+entry.getValue()+(entry.getValue()==1?" turn":" turns"));
+					effectsSB.append("效果：<span style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(null))+"</span>"+entry.getValue()+"回合");
 					yIncrease++;
 				}
 			}
@@ -538,7 +538,7 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			// Crit info:
 			tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal;'>");
-				tooltipSB.append("<span style='color:"+PresetColour.CRIT.toWebHexString()+";'>Critically hits when:</span>");
+				tooltipSB.append("<span style='color:"+PresetColour.CRIT.toWebHexString()+";'>满足以下条件将暴击：</span>");
 				for(String s : critReqs) {
 					yIncrease++;
 					tooltipSB.append("<br/>"+s);
@@ -550,12 +550,12 @@ public class TooltipInformationEventListener implements EventListener {
 				yIncrease++;
 				tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal; font-style:italic;'>");
 					if(owner.getEquippedMoves().contains(move)) {
-						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>Click to unequip move.</div>");
+						tooltipSB.append("<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>点击以卸下技能。</div>");
 					} else {
 						if(owner.getEquippedMoves().size()>=GameCharacter.MAX_COMBAT_MOVES) {
-							tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Maximum core moves selected.</div>");
+							tooltipSB.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>已选择最大数量核心技能。</div>");
 						} else {
-							tooltipSB.append("<span style='color:"+PresetColour.TRAIT.toWebHexString()+";'>Click to equip move.</div>");
+							tooltipSB.append("<span style='color:"+PresetColour.TRAIT.toWebHexString()+";'>点击以装备技能。</div>");
 						}
 					}
 				tooltipSB.append("</div>");
@@ -587,8 +587,8 @@ public class TooltipInformationEventListener implements EventListener {
 								+ "</div>");
 				tooltipSB.append(fetish.getFetishDesireDescription(owner, desire));
 				if(owner.hasFetish(fetish) && desire!=FetishDesire.FOUR_LOVE) {
-					tooltipSB.append("<br/><i>Your desire is [style.boldBad(locked)] to <b style='color:"+FetishDesire.FOUR_LOVE.getColour().toWebHexString()+";'>"+FetishDesire.FOUR_LOVE.getName()+"</b>,"
-							+ " due to owning the related fetish ("+fetish.getName(owner)+").</i>");
+					tooltipSB.append("<br/><i>你的渴望值[style.boldBad(被锁定)]为<b style='color:"+FetishDesire.FOUR_LOVE.getColour().toWebHexString()+";'>"+FetishDesire.FOUR_LOVE.getName()+"</b>，"
+							+ "由于拥有相关的性癖("+fetish.getName(owner)+")。</i>");
 				}
 				tooltipSB.append("</div>");
 			tooltipSB.append("</div>");
@@ -614,11 +614,11 @@ public class TooltipInformationEventListener implements EventListener {
 			// Cost to change desire:
 			tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal; font-style:italic;'>");
 				if((owner.hasFetish(fetish) && desire!=FetishDesire.FOUR_LOVE) || owner.getBaseFetishDesire(fetish)==desire) {
-					tooltipSB.append("Cost: [style.colourDisabled(N/A)]");
+					tooltipSB.append("消耗：[style.colourDisabled(不适用)]");
 				} else {
-					tooltipSB.append("Cost: "
+					tooltipSB.append("消耗："
 							+ (FetishDesire.getCostToChange()==0
-								?"Free"
+								?"免费"
 								:UtilText.formatAsEssences(FetishDesire.getCostToChange(), "span", false)));
 				}
 			tooltipSB.append("</div>");
@@ -635,11 +635,11 @@ public class TooltipInformationEventListener implements EventListener {
 				Main.mainController.setTooltipSize(420, 156);
 				
 				tooltipSB.setLength(0);
-				tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(fetish.getName(owner)) + " fetish</div>");
+				tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(fetish.getName(owner)) + "性癖</div>");
 				FetishLevel level = FetishLevel.getFetishLevelFromValue(owner.getFetishExperience(fetish));
-				tooltipSB.append("<div class='subTitle'>Level "+level.getNumeral()+": <span style='color:"+level.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(level.getName())+"</span>"
-									+ " <span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>|</span> " + owner.getFetishExperience(fetish) +" / "+ level.getMaximumExperience() + " xp" + "</div>");
-				tooltipSB.append("<div class='description' style='height:53px'>You earn fetish experience by performing related actions in sex. Each level increases the fetish's bonuses (max level is 5).</div>");
+				tooltipSB.append("<div class='subTitle'>等级 "+level.getNumeral()+": <span style='color:"+level.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(level.getName())+"</span>"
+									+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>|</span> " + owner.getFetishExperience(fetish) +" / "+ level.getMaximumExperience() + " 经验" + "</div>");
+				tooltipSB.append("<div class='description' style='height:53px'>你在性行为中采取了相关动作，获得了性癖经验。更多性癖技能会随升级解锁(最高等级为5)。</div>");
 
 				Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
 				
@@ -658,15 +658,15 @@ public class TooltipInformationEventListener implements EventListener {
 				// Fetish level and experience:
 				FetishLevel level = FetishLevel.getFetishLevelFromValue(owner.getFetishExperience(fetish));
 				tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal;'>");
-					tooltipSB.append("Level "+level.getNumeral()+": <span style='color:"+level.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(level.getName())+"</span>"
-							+ " <span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>|</span> " + owner.getFetishExperience(fetish) +" / "+ level.getMaximumExperience() + " xp");
+					tooltipSB.append("等级"+level.getNumeral()+"：<span style='color:"+level.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(level.getName())+"</span>"
+							+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>|</span> " + owner.getFetishExperience(fetish) +" / "+ level.getMaximumExperience() + " 经验");
 	
 					String appliedFetishLevelDescription = fetish.getAppliedFetishLevelEffectDescription(owner);
-					tooltipSB.append("<br/>[style.colourFetish(Level Effects:)] ");
+					tooltipSB.append("<br/>[style.colourFetish(等级效果：)] ");
 					if(appliedFetishLevelDescription!=null && !appliedFetishLevelDescription.isEmpty()) {
 						tooltipSB.append("<i>"+appliedFetishLevelDescription+"</i>");
 					} else {
-						tooltipSB.append("[style.colourDisabled(None...)]");
+						tooltipSB.append("[style.colourDisabled(无……)]");
 					}
 				tooltipSB.append("</div>");
 				
@@ -674,13 +674,13 @@ public class TooltipInformationEventListener implements EventListener {
 				if(fetishHasUnlockRequirements) {
 					specialYIncrease += 16;
 					tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal;'>");
-						tooltipSB.append("<b>Requirements</b>");
+						tooltipSB.append("<b>要求</b>");
 						yIncrease++;
 						for(AbstractFetish f : fetish.getFetishesForAutomaticUnlock()) {
 							if(owner.hasFetish(f)) {
 								tooltipSB.append("<br/>[style.italicsGood(" + Util.capitaliseSentence(f.getName(owner))+")]");
 							} else {
-								tooltipSB.append("<br/>[style.italicsBad(" + Util.capitaliseSentence(f.getName(owner))+")]");
+								tooltipSB.append("<br/>[style.italicsBad("+ Util.capitaliseSentence(f.getName(owner))+")]");
 							}
 							yIncrease++;
 						}
@@ -730,9 +730,9 @@ public class TooltipInformationEventListener implements EventListener {
 					// Cost to take fetish:
 					tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal; font-style:italic;'>");
 						if(owner.hasBaseFetish(fetish)) {
-							tooltipSB.append("Cost: [style.colourDisabled(N/A - Already owned)]");
+							tooltipSB.append("消耗：[style.colourDisabled(不适用 - 已拥有)]");
 						} else {
-							tooltipSB.append("Cost: "+UtilText.formatAsEssences(fetish.getCost(), "span", false));
+							tooltipSB.append("消耗："+UtilText.formatAsEssences(fetish.getCost(), "span", false));
 						}
 						yIncrease++;
 					tooltipSB.append("</div>");
@@ -763,14 +763,14 @@ public class TooltipInformationEventListener implements EventListener {
 										+ spell.getSVGString()
 									+ "</div>"
 								+ "</div>");
-				tooltipSB.append((spell.isForbiddenSpell() && !owner.hasSpell(spell)?"[style.italicsArcane(This is a forbidden spell, and can only be discovered through a special quest!)]<br/>":""));
+				tooltipSB.append((spell.isForbiddenSpell() && !owner.hasSpell(spell)?"[style.italicsArcane(这是被禁止的法术，只能通过特别任务发现！)]<br/>":""));
 				tooltipSB.append(spell.getDescription(owner));
 				tooltipSB.append("</div>");
 			tooltipSB.append("</div>");
 
 			// Crit requirements:
 			tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal;'>");
-				tooltipSB.append("[style.colourExcellent(Crit requirements)]:");
+				tooltipSB.append("[style.colourExcellent(暴击要求)]：");
 				for(String s : spell.getCritRequirements(owner, null, null, null)) {
 					yIncrease++;
 					tooltipSB.append("<br/>"+s);
@@ -783,12 +783,12 @@ public class TooltipInformationEventListener implements EventListener {
 			if(spell.getDamage(Main.game.getPlayer())>0) {
 				attributesSB.append(
 						(attributesSB.length()==0?"":"<br/>")
-						+"Base "+spell.getDamage(owner)+" <span style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + " Damage</span>"
+						+"基础" + spell.getDamage(owner) + "<span style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + "伤害</span>"
 						+ "<br/>"
 						+ Attack.getMinimumSpellDamage(owner, null, spell.getDamageType(), spell.getDamage(owner), spell.getDamageVariance())
 						+ "-"
 						+ Attack.getMaximumSpellDamage(owner, null, spell.getDamageType(), spell.getDamage(owner), spell.getDamageVariance())
-						+ " <span style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + " Damage</span>");
+						+ "<span style='color:"+ spell.getDamageType().getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(spell.getDamageType().getName()) + "伤害</span>");
 				yIncrease++;
 				yIncrease++;
 			}
@@ -805,7 +805,7 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			// Aura cost: 
 			tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal;'>");
-				tooltipSB.append("<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Costs</b> <b>" + (spell.getModifiedCost(owner)) + "</b> <b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>aura</b>");
+				tooltipSB.append("<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>消耗</b><b>" + (spell.getModifiedCost(owner)) + "</b><b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>灵气</b>");
 			tooltipSB.append("</div>");
 			
 			tooltipSB.append("</body>");
@@ -858,11 +858,11 @@ public class TooltipInformationEventListener implements EventListener {
 			// Cost:
 			tooltipSB.append("<div class='container-full-width titular' style='font-weight:normal;'>");
 				if(owner.hasSpellUpgrade(spellUpgrade)) {
-					tooltipSB.append("[style.boldExcellent(Owned)] (Cost <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> Point"+(spellUpgrade.getPointCost()==1?"":"s")+")");
+					tooltipSB.append("[style.boldExcellent(已拥有)](占用<b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b>点数"+")");
 				} else if(owner.getSpellUpgradePoints(spellUpgrade.getSpellSchool()) >= spellUpgrade.getPointCost()) {
-					tooltipSB.append("Costs <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> Point"+(spellUpgrade.getPointCost()==1?"":"s")+" - [style.colourGood(Can afford!)]");
+					tooltipSB.append("占用<b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b>点数 - [style.colourGood(可承担！)]");
 				} else {
-					tooltipSB.append("Costs <b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b> Point"+(spellUpgrade.getPointCost()==1?"":"s")+" - [style.colourBad(Cannot afford!)]");
+					tooltipSB.append("占用<b style='color:"+spellUpgrade.getSpellSchool().getColour().toWebHexString()+";'>"+spellUpgrade.getPointCost()+"</b>点数 - [style.colourBad(不可承担！)]");
 				}
 			tooltipSB.append("</div>");
 			
@@ -915,17 +915,17 @@ public class TooltipInformationEventListener implements EventListener {
 				tooltipSB.setLength(0);
 				tooltipSB.append("<div class='title' style='color:" + attribute.getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(attribute.getName()) + "</div>"
 
-						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Core</b><br/>"
+						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>核心</b><br/>"
 						+ (owner.getBaseAttributeValue(attribute) > 0 ? "<span style='color: " + PresetColour.GENERIC_EXCELLENT.getShades()[1] + ";'>" : "<span>")
 							+ Units.number(owner.getBaseAttributeValue(attribute), 1, 1)
 						+ "</span>" + "</div>"
 						
-						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Bonus</b><br/>"
+						+ "<div class='subTitle-third'>" + "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>加成</b><br/>"
 						+ ((owner.getBonusAttributeValue(attribute)) > 0 ? "<span style='color: " + PresetColour.GENERIC_GOOD.getShades()[1] + ";'>"
 								: ((owner.getBonusAttributeValue(attribute)) == 0 ? "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>" : "<span style='color: " + PresetColour.GENERIC_BAD.getShades()[1] + ";'>"))
 						+ Units.number(owner.getBonusAttributeValue(attribute), 1, 1)+ "</span>" + "</div>"
 						
-						+ "<div class='subTitle-third'>" + "<b style='color:" + attribute.getColour().toWebHexString() + ";'>Total</b><br/>" + Units.number(owner.getAttributeValue(attribute), 1, 1)
+						+ "<div class='subTitle-third'>" + "<b style='color:" + attribute.getColour().toWebHexString() + ";'>总和</b><br/>" + Units.number(owner.getAttributeValue(attribute), 1, 1)
 						+ "</span>" + "</div>");
 				
 				tooltipSB.append("<div class='description-half'>" + attribute.getDescription(owner) + "</div>");
@@ -952,7 +952,7 @@ public class TooltipInformationEventListener implements EventListener {
 						i++;
 					}
 				} else {
-					tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>No bonuses</span>");
+					tooltipSB.append("<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>无特效</span>");
 				}
 				tooltipSB.append("</div>");
 			
@@ -970,58 +970,58 @@ public class TooltipInformationEventListener implements EventListener {
 				if(owner.isRaceConcealed()) {
 					tooltipSB.setLength(0);
 					tooltipSB.append("<div class='title' style='color:" + PresetColour.RACE_UNKNOWN.toWebHexString() + ";'>");
-						tooltipSB.append("Unknown Race!");
+						tooltipSB.append("未知种族！");
 					tooltipSB.append("</div>");
 
 					int knownAreas = 0;
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.ANUS, owner)) {
 						knownAreas++;
-						tooltipSB.append(getBodyPartDiv(owner, "Anus", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "肛门", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
 					}
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.BREASTS, owner)) {
 						knownAreas++;
 						if(owner.isFeral() && !owner.getFeralAttributes().isBreastsPresent()) {
-							tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("乳头(胸部)", "无"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+							tooltipSB.append(getBodyPartDiv(owner, "乳头",
 									owner.getBreastRace(),
 									owner.getBreastType().getNippleType().getBodyCoveringType(owner),
 									owner.isNippleFeral(),
-									Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"flat breasts":"pecs"))));
+									Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+"个"+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "罩杯乳房"):(owner.isFeminine()?"平胸":"平板胸部"))));
 						}
 					}
 					if(owner.hasBreastsCrotch() && Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.BREASTS_CROTCH, owner)) {
 						knownAreas++;
-						tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+						tooltipSB.append(getBodyPartDiv(owner, "乳头",
 								owner.getBreastCrotchRace(),
 								owner.getNippleCrotchCovering(),
 								owner.isNippleCrotchFeral(),
-								Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+" "
-										+(owner.getBreastRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-cup "):"flat ")
+								Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+"个"
+										+(owner.getBreastRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "罩杯"):"平坦 ")
 										+(owner.getBreastCrotchShape()==BreastShape.UDDERS
 											?(owner.getBreastCrotchRows()==0
-												?"udder"
-												:"udders")
-											:"crotch-boobs")));
+												?"腹乳"
+												:"腹乳")
+											:"胯乳")));
 					}
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.PENIS, owner)) {
 						knownAreas++;
 						if (owner.hasPenisIgnoreDildo()) {
-							tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(), "[unit.sizeShort(" + owner.getPenisRawSizeValue()+ ")]"));
+							tooltipSB.append(getBodyPartDiv(owner, "阴茎", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(), "[unit.sizeShort(" + owner.getPenisRawSizeValue()+ ")]"));
 						}
 //						else if (owner.hasPenis()) {
 //							tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(), "[unit.sizeShort(" + owner.getPenisRawSizeValue()+ ")]"));
 //						}
 						else {
-							tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("阴茎", "无"));
 						}
 					}
 					if(Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.VAGINA, owner)) {
 						knownAreas++;
 						if(owner.getVaginaType() != VaginaType.NONE) {
-							tooltipSB.append(getBodyPartDiv(owner, "Vagina", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")] clit":null));
+							tooltipSB.append(getBodyPartDiv(owner, "阴道", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")]阴蒂":null));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("阴道", "无"));
 						}
 					}
 					
@@ -1070,12 +1070,12 @@ public class TooltipInformationEventListener implements EventListener {
 					
 					tooltipSB.append("<div class='title'>" //  style='color:" + owner.getRace().getColour().toWebHexString() + ";'
 							+(owner.getRaceStage().getName()!=""
-								?"<b style='color:"+owner.getRaceStage().getColour().toWebHexString()+";'>" + Util.capitaliseSentence(owner.getRaceStage().getName())+"</b> "
+								?"<b style='color:"+owner.getRaceStage().getColour().toWebHexString()+";'>" + Util.capitaliseSentence(owner.getRaceStage().getName())+"</b>"
 								:"")
 							+ "<b style='color:"+owner.getSubspecies().getColour(owner).toWebHexString()+";'>" // Keldon Mouse-over race Icon, possibly override
 								+ (owner.isFeminine()
-										?Util.capitaliseSentence((owner.isPrependWingedToRaceName() ? "winged " : "") + owner.getSubspecies().getSingularFemaleName(owner.getBody()))
-										:Util.capitaliseSentence((owner.isPrependWingedToRaceName() ? "winged " : "") + owner.getSubspecies().getSingularMaleName(owner.getBody())))
+										?Util.capitaliseSentence((owner.isPrependWingedToRaceName() ? "有翼" : "") + owner.getSubspecies().getSingularFemaleName(owner.getBody()))
+										:Util.capitaliseSentence((owner.isPrependWingedToRaceName() ? "有翼" : "") + owner.getSubspecies().getSingularMaleName(owner.getBody())))
 							+ ((Main.game.getPlayer() == owner) || Main.game.getPlayer().hasPerkAnywhereInTree(Perk.OBSERVANT) ? " (" + Util.capitaliseSentence(owner.getGender().getName()) + ")" : "")
 							+ "</b>"
 							+(elemental
@@ -1085,11 +1085,11 @@ public class TooltipInformationEventListener implements EventListener {
 											+" | "
 									+ "<span style='color:"+ageCategory.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(ageCategory.getName())+"</span>"
 									+" | "
-									+ "<span style='color:"+bodyShape.toWebHexStringColour()+";'>"+Util.capitaliseSentence(bodyShape.getName(false))+" body</span>"
+									+ "<span style='color:"+bodyShape.toWebHexStringColour()+";'>"+Util.capitaliseSentence(bodyShape.getName(false))+"的身体</span>"
 									+" | "
 									+(feral && !owner.getFeralAttributes().isSizeHeight()
-										?"[unit.sizeShort(" + owner.getHeightValue()+ ")] long"
-										:"[unit.sizeShort(" + owner.getHeightValue() + ")] tall"
+										?"[unit.sizeShort(" + owner.getHeightValue()+ ")]长"
+										:"[unit.sizeShort(" + owner.getHeightValue() + ")]高"
 									+ "</div>"))
 							+ "</div>");
 					
@@ -1101,7 +1101,7 @@ public class TooltipInformationEventListener implements EventListener {
 						// GREATER:
 						if(owner.getCovering(owner.getFaceCovering()).getPattern()==CoveringPattern.FRECKLED_FACE) {
 							Covering c = owner.getCovering(owner.getFaceCovering());
-							tooltipSB.append(getBodyPartDiv(owner, "Face", owner.getFaceRace(),
+							tooltipSB.append(getBodyPartDiv(owner, "面部", owner.getFaceRace(),
 									new Covering(owner.getFaceCovering(),
 											CoveringPattern.FRECKLED,
 											c.getModifier(),
@@ -1113,10 +1113,10 @@ public class TooltipInformationEventListener implements EventListener {
 									null));
 							
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, "Face", owner.getFaceRace(), owner.getFaceCovering(), owner.isFaceFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, "面部", owner.getFaceRace(), owner.getFaceCovering(), owner.isFaceFeral()));
 						}
 //						BodyShape bodyShape = owner.getBodyShape();
-						tooltipSB.append(getBodyPartDiv(owner, "Torso", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral()
+						tooltipSB.append(getBodyPartDiv(owner, "躯干", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral()
 //								,
 //								"<span style='color:"+bodyShape.toWebHexStringColour()+";'>"+bodyShape.getName(false)+"</span>"
 //								+", "
@@ -1137,147 +1137,147 @@ public class TooltipInformationEventListener implements EventListener {
 						
 						// LESSER:
 						if(owner.isFeral() && !owner.getFeralAttributes().isArmsOrWingsPresent() && owner.getLegConfiguration()!=LegConfiguration.AVIAN) {
-							tooltipSB.append(getEmptyBodyPartDiv("Arms", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("手臂", "无"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getArmRows()*2))+" arms", owner.getArmRace(), owner.getArmCovering(), owner.isArmFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getArmRows()*2))+"只手臂", owner.getArmRace(), owner.getArmCovering(), owner.isArmFeral()));
 						}
 						switch(owner.getLegConfiguration()) {
 							case ARACHNID:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" arachnid legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+"条步足", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case BIPEDAL:
 							case QUADRUPEDAL:
 							case WINGED_BIPED:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" "+owner.getFootStructure().getName()+" legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+"条"+owner.getFootStructure().getName()+"腿", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case CEPHALOPOD:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" tentacle-legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+"只腕足", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case TAIL:
 								if(owner.hasStatusEffect(StatusEffect.AQUATIC_NEGATIVE)) {
-									tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" "+owner.getFootStructure().getName()+" legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+									tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+"条"+owner.getFootStructure().getName()+"腿", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								} else {
-									tooltipSB.append(getBodyPartDiv(owner, "Mer-tail", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+									tooltipSB.append(getBodyPartDiv(owner, "鱼尾", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								}
 								break;
 							case TAIL_LONG:
 //								tooltipSB.append(getBodyPartDiv(owner, "Serpent-tail"+ (feral&&!owner.getFeralAttributes().isSizeHeight()?"":" (Length: "+(Units.size(owner.getLegTailLength(false)))+")"),
 //										owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
-								tooltipSB.append(getBodyPartDiv(owner, "Serpent-tail (Length: "+(Units.size(owner.getLegTailLength(false)))+")", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, "蛇尾(长度："+(Units.size(owner.getLegTailLength(false)))+")", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 							case AVIAN:
-								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+" bird legs", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
+								tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getLegCount()))+"条鸟腿", owner.getLegRace(), owner.getLegCovering(), owner.isLegFeral()));
 								break;
 						}
 						
 						// PARTIAL:
 						if (owner.getHairRawLengthValue() == 0) {
-							tooltipSB.append(getEmptyBodyPartDiv("Hair", owner.isFaceBaldnessNatural()?"None":"Bald"));
+							tooltipSB.append(getEmptyBodyPartDiv("毛发", owner.isFaceBaldnessNatural()?"无":"秃顶"));
 						} else {
 							tooltipSB.append(getBodyPartDiv(owner,
-									Util.capitaliseSentence(owner.getHairLength().getDescriptor())+" "+owner.getHairStyle().getName(owner)+" "+owner.getHairName(), owner.getHairRace(), owner.getHairCovering(), owner.isHairFeral()));
+									owner.getHairStyle().getName(owner)+Util.capitaliseSentence(owner.getHairLength().getDescriptor())+owner.getHairName(), owner.getHairRace(), owner.getHairCovering(), owner.isHairFeral()));
 						}
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.EYES, Main.game.getPlayer())) {
-							tooltipSB.append(getEmptyBodyPartDiv("Eyes", "Unknown!"));
+							tooltipSB.append(getEmptyBodyPartDiv("眼部", "未知！"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getEyePairs()*2))+" eyes", owner.getEyeRace(), owner.getEyeCovering(), owner.isEyeFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getEyePairs()*2))+"只眼睛", owner.getEyeRace(), owner.getEyeCovering(), owner.isEyeFeral()));
 						}
-						tooltipSB.append(getBodyPartDiv(owner, "Ears", owner.getEarRace(), owner.getEarCovering(), owner.isEarFeral()));
-						tooltipSB.append(getBodyPartDiv(owner, "Tongue", owner.getTongueRace(), owner.getTongueCovering(), owner.isTongueFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "耳朵", owner.getEarRace(), owner.getEarCovering(), owner.isEarFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "舌头", owner.getTongueRace(), owner.getTongueCovering(), owner.isTongueFeral()));
 						if (owner.getHornType() != HornType.NONE) {
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getTotalHorns()))+" "+(owner.getTotalHorns()==1?owner.getHornNameSingular():owner.getHornName()),
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getTotalHorns()))+"根"+(owner.getTotalHorns()==1?owner.getHornNameSingular():owner.getHornName()),
 									owner.getHornRace(), owner.getHornCovering(), owner.isHornFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Horns", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("角", "无"));
 						}
 						if (owner.getAntennaType() != AntennaType.NONE) {
 							//TODO might need changing if made like horn count:
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getAntennaRows()*owner.getAntennaePerRow()))+" antennae", owner.getAntennaRace(), owner.getAntennaCovering(), owner.isAntennaFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(Util.intToString(owner.getAntennaRows()*owner.getAntennaePerRow()))+"根触须", owner.getAntennaRace(), owner.getAntennaCovering(), owner.isAntennaFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Antennae", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("触须", "无"));
 						}
 						if (owner.getWingType() != WingType.NONE) {
-							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(owner.getWingSize().getName())+" wings", owner.getWingRace(), owner.getWingCovering(), owner.isWingFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, Util.capitaliseSentence(owner.getWingSize().getName())+"的翅膀", owner.getWingRace(), owner.getWingCovering(), owner.isWingFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Wings", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("翅膀", "无"));
 						}
 						if (owner.getTailType() != TailType.NONE) {
 							tooltipSB.append(
 									getBodyPartDiv(owner,
-											Util.capitaliseSentence(Util.intToString(owner.getTailCount()))+" "+(owner.getTailGirthDescriptor())+" tail"+(owner.getTailCount()!=1?"s":""), owner.getTailRace(), owner.getTailCovering(), owner.isTailFeral()));
+											Util.capitaliseSentence(Util.intToString(owner.getTailCount()))+"条"+(owner.getTailGirthDescriptor())+"的尾巴", owner.getTailRace(), owner.getTailCovering(), owner.isTailFeral()));
 						} else {
-							tooltipSB.append(getEmptyBodyPartDiv("Tail", "None"));
+							tooltipSB.append(getEmptyBodyPartDiv("尾巴", "无"));
 						}
 						
 						// SEXUAL:
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.VAGINA, Main.game.getPlayer())) {
 							if (owner.getVaginaType() == VaginaType.NONE && Main.game.getPlayer().hasTrait(Perk.OBSERVANT, true)) {
-								tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("阴道", "无"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Vagina", "Unknown!"));
+								tooltipSB.append(getEmptyBodyPartDiv("阴道", "未知！"));
 							}
 						} else {
 							if (owner.getVaginaType() != VaginaType.NONE) {
 								tooltipSB.append(
-										getBodyPartDiv(owner, "Vagina", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")] clit":null));
+										getBodyPartDiv(owner, "阴道", owner.getVaginaRace(), owner.getVaginaCovering(), owner.isVaginaFeral(), owner.isClitorisPseudoPenis()?"[unit.sizeShort(" + owner.getVaginaRawClitorisSizeValue()+ ")]阴蒂":null));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("阴道", "无"));
 							}
 						}
 						
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer())) {
 							if (!owner.hasPenis() && Main.game.getPlayer().hasTrait(Perk.OBSERVANT, true)) {
-								tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("阴茎", "无"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Penis", "Unknown!"));
+								tooltipSB.append(getEmptyBodyPartDiv("阴茎", "未知！"));
 							}
 						} else {
 							if (owner.hasPenisIgnoreDildo()) {
-								tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
-										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")] long, [unit.sizeShort("+owner.getPenisDiameter()+")] diameter"));
+								tooltipSB.append(getBodyPartDiv(owner, "阴茎", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
+										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")]长，[unit.sizeShort("+owner.getPenisDiameter()+")]直径"));
 							} else if (owner.hasPenis()) {
-								tooltipSB.append(getBodyPartDiv(owner, "Penis", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
-										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")] long, [unit.sizeShort("+owner.getPenisDiameter()+")] diameter"));
+								tooltipSB.append(getBodyPartDiv(owner, "阴茎", owner.getPenisRace(), owner.getPenisCovering(), owner.isPenisFeral(),
+										"[unit.sizeShort("+owner.getPenisRawSizeValue()+")]长，[unit.sizeShort("+owner.getPenisDiameter()+")]直径"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("阴茎", "无"));
 							}
 						}
 	
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.ANUS, Main.game.getPlayer())) {
-							tooltipSB.append(getEmptyBodyPartDiv("Anus", "Unknown!"));
+							tooltipSB.append(getEmptyBodyPartDiv("肛门", "未知！"));
 						} else {
-							tooltipSB.append(getBodyPartDiv(owner, "Anus", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
+							tooltipSB.append(getBodyPartDiv(owner, "肛门", owner.getAssRace(), owner.getAssType().getAnusType().getBodyCoveringType(owner), owner.isAnusFeral()));
 						}
 						
 						if(!owner.isPlayer() && !owner.isAreaKnownByCharacter(CoverableArea.NIPPLES, Main.game.getPlayer())) {
 							if(owner.isFeral() && !owner.getFeralAttributes().isBreastsPresent()) {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("乳头(胸部)", "无"));
 							} else {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples",
-										"Unknown!",
-										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"flat breasts":"pecs"))));
+								tooltipSB.append(getEmptyBodyPartDiv("乳头",
+										"未知！",
+										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+"个"+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "罩杯乳房"):(owner.isFeminine()?"平胸":"平板胸部"))));
 							}
 						} else {
 							if(owner.isFeral() && !owner.getFeralAttributes().isBreastsPresent()) {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+								tooltipSB.append(getEmptyBodyPartDiv("乳头(胸部)", "无"));
 							} else {
-								tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+								tooltipSB.append(getBodyPartDiv(owner, "乳头",
 										owner.getBreastRace(),
 										owner.getBreastType().getNippleType().getBodyCoveringType(owner),
 										owner.isNippleFeral(),
-										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+" "+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "-cup breasts"):(owner.isFeminine()?"flat breasts":"pecs"))));
+										Util.capitaliseSentence(Util.intToString(owner.getBreastRows()*2))+"个"+(owner.getBreastRawSizeValue()>0?(owner.getBreastSize().getCupSizeName() + "罩杯乳房"):(owner.isFeminine()?"平胸":"平板胸部"))));
 							}
 						}
 						
 						if(spinneret) {
 							if(owner.hasTailSpinneret()) {
-								tooltipSB.append(getBodyPartDiv(owner, "Spinneret",
+								tooltipSB.append(getBodyPartDiv(owner, "丝囊",
 										owner.getTailRace(),
 										owner.getSpinneretCovering(),
 										owner.isTailFeral(),
 										""));
 							} else {
-								tooltipSB.append(getBodyPartDiv(owner, "Spinneret",
+								tooltipSB.append(getBodyPartDiv(owner, "丝囊",
 										owner.getLegRace(),
 										owner.getSpinneretCovering(),
 										owner.isLegFeral(),
@@ -1287,39 +1287,39 @@ public class TooltipInformationEventListener implements EventListener {
 						
 						if(crotchBreasts) {
 							if(!owner.isAreaKnownByCharacter(CoverableArea.NIPPLES_CROTCH, Main.game.getPlayer())) {
-								tooltipSB.append(getEmptyBodyPartDiv("Nipples",
-										"Unknown!",
-										Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+" "
-												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-cup "):"flat ")
+								tooltipSB.append(getEmptyBodyPartDiv("乳头",
+										"未知！",
+										Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+"个"
+												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "罩杯"):"平坦")
 												+(owner.getBreastCrotchShape()==BreastShape.UDDERS
 													?(owner.getBreastCrotchRows()==0
-														?"udder"
-														:"udders")
-													:"crotch-boobs")));
+														?"腹乳"
+														:"腹乳")
+													:"胯乳")));
 							} else {
-								tooltipSB.append(getBodyPartDiv(owner, "Nipples",
+								tooltipSB.append(getBodyPartDiv(owner, "乳头",
 										owner.getBreastCrotchRace(),
 										owner.getNippleCrotchCovering(),
 										owner.isNippleCrotchFeral(),
-										Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+" "
-												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "-cup "):"flat ")
+										Util.capitaliseSentence(Util.intToString(Math.max(1, owner.getBreastCrotchRows()*2)))+"个"
+												+(owner.getBreastCrotchRawSizeValue()>0?(owner.getBreastCrotchSize().getCupSizeName() + "罩杯"):"平坦")
 												+(owner.getBreastCrotchShape()==BreastShape.UDDERS
 													?(owner.getBreastCrotchRows()==0
-														?"udder"
-														:"udders")
-													:"crotch-boobs")));
+														?"腹乳"
+														:"腹乳")
+													:"胯乳")));
 							}
 						}
 						
 					} else {
-						tooltipSB.append(getBodyPartDiv(owner, "Passive form", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral()));
+						tooltipSB.append(getBodyPartDiv(owner, "被动形式", owner.getSkinRace(), owner.getTorsoCovering(), owner.isTorsoFeral()));
 						
 						if(((Elemental)owner).getSummoner().isPlayer()) {
 							tooltipSB.append("<div class='subTitle' style='font-weight:normal; margin-top:2px; white-space:nowrap;'>");
 								if(!Main.game.isInNeutralDialogue()) {
-									tooltipSB.append("[style.italicsBad(You cannot talk to your Elemental in this scene!)]");
+									tooltipSB.append("[style.italicsBad(在这个场景你不能和你的元素说话！)]");
 								} else {
-									tooltipSB.append("[style.italicsMinorGood(Click to start talking to your Elemental!)]");
+									tooltipSB.append("[style.italicsMinorGood(点击开始与你的元素交谈！)]");
 								}
 							tooltipSB.append("</div>");
 						}
@@ -1331,7 +1331,7 @@ public class TooltipInformationEventListener implements EventListener {
 								+ "<div style='float: left;'>"
 									+ "<img id='CHARACTER_IMAGE' style='"+(revealed?"":"-webkit-filter: brightness(0%);")
 										+" width: auto; height: auto; max-width: 380; max-height: 445; padding-top: " + imagePadding + "px;' src='" + image.getThumbnailString()+ "'/>"
-										+(revealed?"":"<p style='position:absolute; top:33%; right:0; width:"+imageWidth+"; font-weight:bold; text-align:center; color:"+PresetColour.BASE_GREY.toWebHexString()+";'>Unlocked through sex!</p>")
+										+(revealed?"":"<p style='position:absolute; top:33%; right:0; width:"+imageWidth+"; font-weight:bold; text-align:center; color:"+PresetColour.BASE_GREY.toWebHexString()+";'>通过性爱解锁！</p>")
 								+ "</div>");
 					}
 				}
@@ -1345,7 +1345,7 @@ public class TooltipInformationEventListener implements EventListener {
 						"<div class='title' style='color:" + attribute.getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(attribute.getName()) + "</div>"
 
 						+ "<div class='subTitle-third'>"
-						+ "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Core</b><br/>"
+						+ "<b style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>核心</b><br/>"
 						+ (owner.getBaseAttributeValue(attribute) > 0 ? "<span style='color: " + PresetColour.GENERIC_EXCELLENT.getShades()[1] + ";'>" : "<span>")
 							+ Units.number(owner.getBaseAttributeValue(attribute), 1, 1)
 						+ "</span>"
@@ -1353,7 +1353,7 @@ public class TooltipInformationEventListener implements EventListener {
 						+ "<div class='subTitle-third'>"
 						+ "<b style='color:"
 						+ PresetColour.TEXT_GREY.toWebHexString()
-						+ ";'>Bonus</b><br/>"
+						+ ";'>加成</b><br/>"
 						+ ((owner.getBonusAttributeValue(attribute)) > 0 ? "<span style='color: "
 								+ PresetColour.GENERIC_GOOD.getShades()[1]
 								+ ";'>"
@@ -1368,7 +1368,7 @@ public class TooltipInformationEventListener implements EventListener {
 						+ "</div>"
 						+ "<div class='subTitle-third'>"
 						+ "<b style='color:"
-						+ attribute.getColour().toWebHexString() + ";'>Total</b><br/>" + Units.number(owner.getAttributeValue(attribute), 1, 1) + "</span>"
+						+ attribute.getColour().toWebHexString() + ";'>总和</b><br/>" + Units.number(owner.getAttributeValue(attribute), 1, 1) + "</span>"
 						+ "</div>"
 
 						+ "<div class='description'>" + attribute.getDescription(owner) + "</div>"));
@@ -1391,13 +1391,13 @@ public class TooltipInformationEventListener implements EventListener {
 										?"[npc.NameFull]"
 										:"[npc.Name]"))
 							+"</span>"
-						+"<br/>Level "
+						+"<br/>等级 "
 							+ owner.getLevel()
-							+ (owner.getLevel()!=owner.getTrueLevel()?" [style.colourDisabled(("+owner.getTrueLevel()+"))]":"")
-							+ " <span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>| "
+							+ (owner.getLevel()!=owner.getTrueLevel()?"[style.colourDisabled(("+owner.getTrueLevel()+"))]":"")
+							+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>| "
 						+ (owner.isElemental()
-								?"Elementals share their summoner's level</span>"
-								:"</span>"+owner.getExperience() + " / "+ (10 * owner.getLevel()) + " xp")
+								?"元素共享其召唤者的等级</span>"
+								:"</span>"+owner.getExperience() + " / "+ (10 * owner.getLevel()) + "经验")
 							+ (" <br><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'> Appears to be </span>"+
 							"<span style='color:" + owner.getAge().getColour().toWebHexString() + ";'>"+
 							(!ModProps.isShowAgeEnabled() ? owner.getAppearsAsAge().getName() + "</span>" : owner.getAppearsAsAgeValue() + " </span>" +
@@ -1418,7 +1418,7 @@ public class TooltipInformationEventListener implements EventListener {
 								
 								+"<div class='subTitle-half' style='padding:2px; margin:2px 2% 2px 1%; width:47%;'>"
 							:"<div class='subTitle' style='margin:2px 1%; width:98%'>")
-						+ "[style.colourArcane(Essences)]"+(Main.game.isEnchantmentCapacityEnabled()?"<br/>":": ")
+						+ "[style.colourArcane(精华)]"+(Main.game.isEnchantmentCapacityEnabled()?"<br/>":": ")
 						+ owner.getEssenceCount()
 					+ "</div>");
 			
@@ -1443,21 +1443,21 @@ public class TooltipInformationEventListener implements EventListener {
 
 					// Header:
 					+ "<div class='subTitle-third combatValue' style='padding:2px; margin:2px 0 2px 2%; width:31.5%;'>"
-						+ "Type"
+						+ "类型"
 					+ "</div>"
 						+ "<div class='subTitle-third combatValue' style='padding:2px; margin:2px 0.75%; width:31.5%;'>"
-					+ "Damage"
+					+ "伤害"
 						+ "</div>"
 					+ "<div class='subTitle-third combatValue' style='padding:2px; margin:2px 2% 2px 0; width:31.5%;'>"
-						+ "Shielding"
+						+ "护盾"
 					+ "</div>"
 
 					// Values:
-					+ getAttributeTableRowDiv(owner, "Physical", Attribute.DAMAGE_PHYSICAL, Attribute.RESISTANCE_PHYSICAL)
-					+ getAttributeTableRowDiv(owner, "Fire", Attribute.DAMAGE_FIRE, Attribute.RESISTANCE_FIRE)
-					+ getAttributeTableRowDiv(owner, "Cold", Attribute.DAMAGE_ICE, Attribute.RESISTANCE_ICE)
-					+ getAttributeTableRowDiv(owner, "Poison", Attribute.DAMAGE_POISON, Attribute.RESISTANCE_POISON)
-					+ getAttributeTableRowDiv(owner, "Seduction", Attribute.DAMAGE_LUST, Attribute.RESISTANCE_LUST)
+					+ getAttributeTableRowDiv(owner, "物理", Attribute.DAMAGE_PHYSICAL, Attribute.RESISTANCE_PHYSICAL)
+					+ getAttributeTableRowDiv(owner, "火焰", Attribute.DAMAGE_FIRE, Attribute.RESISTANCE_FIRE)
+					+ getAttributeTableRowDiv(owner, "寒冷", Attribute.DAMAGE_ICE, Attribute.RESISTANCE_ICE)
+					+ getAttributeTableRowDiv(owner, "毒素", Attribute.DAMAGE_POISON, Attribute.RESISTANCE_POISON)
+					+ getAttributeTableRowDiv(owner, "魅惑", Attribute.DAMAGE_LUST, Attribute.RESISTANCE_LUST)
 					
 					+ getAttributeDiv(owner, Attribute.FERTILITY)
 					+ getAttributeDiv(owner, Attribute.VIRILITY));
@@ -1465,9 +1465,9 @@ public class TooltipInformationEventListener implements EventListener {
 				if(elemental) {
 					tooltipSB.append("<div class='subTitle' style='font-weight:normal; margin-top:2px; white-space:nowrap;'>");
 						if(!Main.game.isInNeutralDialogue()) {
-							tooltipSB.append("[style.italicsBad(You cannot talk to your Elemental in this scene!)]");
+							tooltipSB.append("[style.italicsBad(在这个场景你不能和你的元素说话！)]");
 						} else {
-							tooltipSB.append("[style.italicsMinorGood(Click to start talking to your Elemental!)]");
+							tooltipSB.append("[style.italicsMinorGood(点击开始与你的元素交谈！)]");
 						}
 					tooltipSB.append("</div>");
 				}
@@ -1487,12 +1487,12 @@ public class TooltipInformationEventListener implements EventListener {
 				+ "</div>"
 				+ "<div class='title'><b>"
 					+ (hours>0
-							?hours+" hour"+(hours>1?"s ":" ")
+							?hours+"时"
 							:"")
 					+ (minutes%60>0
-							?minutes+" minute"+(minutes>1?"s ":" ")
+							?minutes+" 分"
 							:"")
-					+"remaining"
+					+"的剩余时间"
 				+ "</b></div>");
 
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -1502,9 +1502,9 @@ public class TooltipInformationEventListener implements EventListener {
 			Main.mainController.setTooltipSize(360, 100);
 
 			tooltipSB.setLength(0);
-			tooltipSB.append("<div class='title'>Protection</div>"
+			tooltipSB.append("<div class='title'>保护</div>"
 					+ "<div class='subTitle'>"
-					+ (owner.isWearingCondom()?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Wearing Condom</span>":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>No Condom</span>")
+					+ (owner.isWearingCondom()?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>穿着避孕套</span>":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>无套</span>")
 					+"</div>");
 
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -1517,11 +1517,11 @@ public class TooltipInformationEventListener implements EventListener {
 			tooltipSB.append(
 					"<div class='subTitle'>"
 //					+(Main.game.getCurrentDialogueNode().getLabel() == "" || Main.game.getCurrentDialogueNode().getLabel() == null ? "-" : Main.game.getCurrentDialogueNode().getLabel())
-					+"Copy Scene"
+					+"场景复制"
 					+ "</div>"
 					+ "<div class='description'>"
-					+ "Click to copy the currently displayed dialogue to your clipboard.<br/><br/>"
-					+ "This scene was written by <b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>"
+					+ "单击以将当前显示的对话复制到剪贴板<br/><br/>"
+					+ "这一幕的作者是<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>"
 					+ Main.game.getCurrentDialogueNode().getAuthor()
 					+ "</b></div>");
 
@@ -1535,14 +1535,14 @@ public class TooltipInformationEventListener implements EventListener {
 			Main.mainController.setTooltipSize(360, 175);
 
 			Main.mainController.setTooltipContent(UtilText.parse(
-					"<div class='title'>"+Util.capitaliseSentence(concealedSlot.getName())+" - [style.boldBad(Concealed!)]</div>"
+					"<div class='title'>"+Util.capitaliseSentence(concealedSlot.getName())+" - [style.boldBad(已隐蔽！)]</div>"
 					+ "<div class='description'>"
 						+ UtilText.parse(RenderingEngine.getCharacterToRender(),
 							(concealedSlots.get(concealedSlot).isEmpty()
-								?"Due to [npc.namePos] position, this slot is currently hidden from view!"
+								?"[npc.namePos]由于位置看不见该栏位！"
 								:(clothingVisible.isEmpty()
-										?"This slot is currently hidden from view by items of [npc.namePos] clothing that you cannot see!"
-										:"This slot is currently hidden from view by [npc.namePos] <b>"+Util.clothesToStringList(clothingVisible, false)+"</b>.")))
+										?"[npc.namePos]的衣物遮挡了这个栏位，你现在看不见它！"
+										:"由于被[npc.namePos]的<b>"+Util.clothesToStringList(clothingVisible, false)+"</b>所遮挡，该栏位现已隐藏。")))
 					+ "</div>"));
 			
 		} else if(slaveJob!=null) {
@@ -1555,9 +1555,9 @@ public class TooltipInformationEventListener implements EventListener {
 							+ "</div>");
 
 			tooltipSB.append("<div class='description' style='min-height:28px; height:28px; text-align:center;'>"
-								+ "[style.boldStamina(Hourly Stamina Cost:)]"
+								+ "[style.boldStamina(每小时消耗耐力：)]"
 								+ (slaveJob.getHourlyStaminaDrain(owner)>0
-										?" [style.boldBad("
+										?"[style.boldBad("
 										:" [style.boldGood(")+slaveJob.getHourlyStaminaDrain(owner)+")]"
 							+ "</div>");
 			
@@ -1565,13 +1565,13 @@ public class TooltipInformationEventListener implements EventListener {
 				tooltipSB.append(slaveJob.getDescription());
 				if(slaveJob==SlaveJob.IDLE) {
 					tooltipSB.append("<br/>");
-					tooltipSB.append("The idle hours in which this slave will choose to sleep will be marked with [style.colourSleep(zzZ)].");
+					tooltipSB.append("空闲时间睡觉的奴隶将拥有[style.colourSleep(zzZ)]标记。");
 				}
 			tooltipSB.append("</div>");
 
 			for(SlaveJobFlag flag : slaveJob.getFlags()) {
 				tooltipSB.append("<div class='description' style='min-height:48px; height:48px;'>"
-									+ "<b style='color:"+flag.getColour().toWebHexString()+";'>"+flag.getName()+":</b> "+flag.getDescription()
+									+ "<b style='color:"+flag.getColour().toWebHexString()+";'>"+flag.getName()+":</b>"+flag.getDescription()
 								+ "</div>");
 				yIncrease++;
 			}
@@ -1588,9 +1588,9 @@ public class TooltipInformationEventListener implements EventListener {
 			tooltipSB.append("<div class='title'>" + Util.capitaliseSentence(loadedEnchantment.getName()) + "</div>");
 
 			if(loadedEnchantment.isSuitableItemAvailable()) {
-				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Suitable item in inventory</div>");
+				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>物品栏中合适的物品</div>");
 			} else {
-				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>No suitable item in inventory</div>");
+				tooltipSB.append("<div class='subTitle' style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>物品栏中没有合适的物品</div>");
 			}
 			
 			// Attribute modifiers:
@@ -1600,7 +1600,7 @@ public class TooltipInformationEventListener implements EventListener {
 				for(String s : ie.getEffectsDescription(Main.game.getPlayer(), Main.game.getPlayer())) {
 					tooltipSB.append((i!=0?"<br/>":"") + s);
 					yIncrease++;
-					if(UtilText.parse(s).replaceAll("<.*?>", "").length()>32) { // Yes, this is terrible...
+					if(UtilText.parse(s).replaceAll("<.*?>", "").length()>32) { // 这可太糟了……
 						yIncrease++;
 					}
 				}
@@ -1641,22 +1641,22 @@ public class TooltipInformationEventListener implements EventListener {
 						yIncrease++;
 						charactersPresentDescription.append(
 								(Main.game.getCharactersPresent(cell).contains(character)
-										?character.getName("The")
-										:"[style.colourDisabled("+character.getName("The")+")]")
-								+": "+(character.isRaceConcealed()?"[style.colourDisabled(Unknown race!)]":UtilText.parse(character, "[npc.FullRace(true)]"))
+										?character.getName()
+										:"[style.colourDisabled("+character.getName()+")]")
+								+": "+(character.isRaceConcealed()?"[style.colourDisabled(未知种族！)]":UtilText.parse(character, "[npc.FullRace(true)]"))
 								+"<br/>");
 					}
 				}
 				if(teleport) {
 					if(cell.getType().getTeleportPermissions().isIncoming() && cell.getPlace().getPlaceType().getTeleportPermissions().isIncoming()) {
-						teleportingDescription.append("It [style.colourGood(is possible)] to [style.colourArcane(teleport)] into this tile!");
+						teleportingDescription.append("[style.colourGood(可以)][style.colourArcane(传送)]进该地块！");
 					} else {
-						teleportingDescription.append("It [style.colourBad(is not possible)] to [style.colourArcane(teleport)] into this tile!");
+						teleportingDescription.append("[style.colourBad(无法)][style.colourArcane(传送)]进该地块！");
 					}
 					if(cell.getType().getTeleportPermissions().isOutgoing() && cell.getPlace().getPlaceType().getTeleportPermissions().isOutgoing()) {
-						teleportingDescription.append("<br/>It [style.colourGood(is possible)] to [style.colourArcane(teleport)] out of this tile!");
+						teleportingDescription.append("<br/>[style.colourGood(可以)][style.colourArcane(传送)]出该地块！");
 					} else {
-						teleportingDescription.append("<br/>It [style.colourBad(is not possible)] to [style.colourArcane(teleport)] out of this tile!");
+						teleportingDescription.append("<br/>[style.colourBad(无法)][style.colourArcane(传送)]出该地块！");
 					}
 				}
 			}
@@ -1673,8 +1673,8 @@ public class TooltipInformationEventListener implements EventListener {
 							?""
 							:tooltipDesc+"<br/>")
 						+(cell.getPlace().getPlaceType().isDangerous()
-							?"This is a [style.italicsBad(dangerous)] area!"
-							:"This is a [style.italicsGood(safe)] area.")
+							?"这是[style.italicsBad(危险)]区域！"
+							:"这是[style.italicsGood(安全)]区域")
 					+ "</div>"
 					+ (yIncrease>0
 							?"<div class='description' style='height:"+(24 + yIncrease * LINE_HEIGHT)+"px;'>"+charactersPresentDescription.toString()+"</div>"
@@ -1697,28 +1697,28 @@ public class TooltipInformationEventListener implements EventListener {
 			long transferAmount;
 			
 			if(this.moneyTransferPercentage==1) {
-				tooltipSB.append("<div class='title'>[style.colourMinorGood(Small Flames Transfer)]</div>");
+				tooltipSB.append("<div class='title'>[style.colourMinorGood(转移少量火币)]</div>");
 				percentageTransfer = "[style.colourMinorGood("+moneyTransferPercentage+"%)]";
 			} else if(this.moneyTransferPercentage==10) {
-				tooltipSB.append("<div class='title'>[style.colourGood(Flames Transfer)]</div>");
+				tooltipSB.append("<div class='title'>[style.colourGood(转移火币)]</div>");
 				percentageTransfer = "[style.colourGood("+moneyTransferPercentage+"%)]";
 			} else {
-				tooltipSB.append("<div class='title'>[style.colourExcellent(Total Flames Transfer)]</div>");
+				tooltipSB.append("<div class='title'>[style.colourExcellent(转移全部火币)]</div>");
 				percentageTransfer = "[style.colourExcellent("+moneyTransferPercentage+"%)]";
 			}
 			
 			if(InventoryDialogue.getNPCInventoryInteraction()!=InventoryInteraction.FULL_MANAGEMENT) {
 				tooltipSB.append("<div class='subtitle'>"
-						+ "[style.italicsBad(Flame transfer not available in this interaction!)]"
+						+ "[style.italicsBad(此处无法进行火币转移！)]"
 						+ "</div>");
 				
 			} else if(owner==null) {
 				transferAmount = (long) Math.max(1, Main.game.getPlayerCell().getInventory().getMoney()*(moneyTransferPercentage/100f));
 				tooltipSB.append("<div class='subtitle'>"
 						+ (Main.game.getPlayerCell().getInventory().getMoney()==0
-								?"[style.italicsBad(There are no flames in this area...)]"
+								?"[style.italicsBad(这个区域没有火币……)]"
 								:UtilText.parse(moneyTransferTarget,
-									"Pick up "+percentageTransfer+" of the flames in this area:<br/> ")
+									"捡起"+percentageTransfer+"该区域的火币：<br/> ")
 									+ UtilText.formatAsMoney(transferAmount, "i"))
 						+"</div>");
 				
@@ -1726,13 +1726,13 @@ public class TooltipInformationEventListener implements EventListener {
 				transferAmount = (long) Math.max(1, owner.getMoney()*(moneyTransferPercentage/100f));
 				tooltipSB.append("<div class='subtitle'>"
 						+ (owner.getMoney()==0
-								?"[style.italicsBad(You do not have any flames, so cannot transfer any money...)]"
+								?"[style.italicsBad(你没有火币，所以无法转移……)]"
 								:((moneyTransferTarget==null
 									?(Main.game.getPlayerCell().getPlace().isItemsDisappear()
-											?"[style.colourBad(Abandon)] "+percentageTransfer+" of your flames in this area:<br/> "
-											:"[style.colourGood(Safely store)] "+percentageTransfer+" of your flames in this area:<br/> ")
+											?"[style.colourBad(放弃)]"+percentageTransfer+"你在该区域的火币：<br/> "
+											:"[style.colourGood(安全存储)] "+percentageTransfer+"你在该区域的火币：<br/> ")
 									:UtilText.parse(moneyTransferTarget,
-											"Transfer "+percentageTransfer+" of your flames to [npc.name]:<br/> "))
+											"把你的火币转移给"+percentageTransfer+"[npc.name]:<br/> "))
 									+UtilText.formatAsMoney(transferAmount, "i")))
 						+"</div>");
 				
@@ -1741,8 +1741,8 @@ public class TooltipInformationEventListener implements EventListener {
 				tooltipSB.append("<div class='subtitle'>"
 						+ UtilText.parse(owner,
 								(owner.getMoney()==0
-									?"[style.italicsBad([npc.Name] does not have any flames...)]"
-									:"Take "+percentageTransfer+" of [npc.namePos] flames:<br/> "
+									?"[style.italicsBad([npc.Name]没有火币……)]"
+									:"拿走"+percentageTransfer+"[npc.namePos]的火币：<br/> "
 										+ UtilText.formatAsMoney(transferAmount, "i")))
 						+"</div>");
 			}
@@ -1766,7 +1766,7 @@ public class TooltipInformationEventListener implements EventListener {
 			tooltipSB.setLength(0);
 			tooltipSB.append("<div class='title' style='color:" + loadedBody.getRace().getColour().toWebHexString() + ";'>"
 					+(loadedBody.getRaceStage().getName()!=""
-						?"<b style='color:"+loadedBody.getRaceStage().getColour().toWebHexString()+";'>" + Util.capitaliseSentence(loadedBody.getRaceStage().getName())+"</b> "
+						?"<b style='color:"+loadedBody.getRaceStage().getColour().toWebHexString()+";'>" + Util.capitaliseSentence(loadedBody.getRaceStage().getName())+"</b>"
 						:"")
 					+ "<b style='color:"+loadedBody.getSubspecies().getColour(null).toWebHexString()+";'>"
 						+ (loadedBody.isFeminine()
@@ -1776,11 +1776,11 @@ public class TooltipInformationEventListener implements EventListener {
 					+ "<div class='subTitle' style='font-weight:normal; margin:0; padding:0; background:#00000000; width:100%;'>"
 							+ "<span style='color:"+Femininity.valueOf(loadedBody.getFemininity()).getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Femininity.valueOf(loadedBody.getFemininity()).getName(false))+"</span>"
 							+" | "
-							+ "<span style='color:"+bodyShape.toWebHexStringColour()+";'>"+Util.capitaliseSentence(bodyShape.getName(false))+" body</span>"
+							+ "<span style='color:"+bodyShape.toWebHexStringColour()+";'>"+Util.capitaliseSentence(bodyShape.getName(false))+"的身体</span>"
 							+" | "
 							+(feral && !loadedBody.getSubspecies().getFeralAttributes(loadedBody).isSizeHeight()
-								?"[unit.sizeShort(" + loadedBody.getHeightValue()+ ")] long"
-								:"[unit.sizeShort(" + loadedBody.getHeightValue() + ")] tall")
+								?"[unit.sizeShort(" + loadedBody.getHeightValue()+ ")]长"
+								:"[unit.sizeShort(" + loadedBody.getHeightValue() + ")]高")
 					+ "</div>"
 					+ "</div>");
 			
@@ -1789,7 +1789,7 @@ public class TooltipInformationEventListener implements EventListener {
 			AbstractBodyCoveringType covType = loadedBody.getFace().getBodyCoveringType(loadedBody);
 			if(loadedBody.getCovering(covType, true).getPattern()==CoveringPattern.FRECKLED_FACE) {
 				Covering c = loadedBody.getCovering(covType, true);
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Face", loadedBody.getFace(), null,
+				tooltipSB.append(getBodyPartDiv(loadedBody, "面部", loadedBody.getFace(), null,
 						new Covering(covType,
 								CoveringPattern.FRECKLED,
 								c.getModifier(),
@@ -1799,10 +1799,10 @@ public class TooltipInformationEventListener implements EventListener {
 								c.isSecondaryGlowing())));
 				
 			} else {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Face", loadedBody.getFace()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "面部", loadedBody.getFace()));
 			}
 			
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Torso", loadedBody.getTorso()
+			tooltipSB.append(getBodyPartDiv(loadedBody, "躯干", loadedBody.getTorso()
 //					,
 //					"<span style='color:"+bodyShape.toWebHexStringColour()+";'>"+bodyShape.getName(false)+"</span>"
 //					+", "
@@ -1817,109 +1817,109 @@ public class TooltipInformationEventListener implements EventListener {
 			
 			// LESSER:
 			if(feral && !loadedBody.getSubspecies().getFeralAttributes(loadedBody).isArmsOrWingsPresent() && loadedBody.getLegConfiguration()!=LegConfiguration.AVIAN) {
-				tooltipSB.append(getEmptyBodyPartDiv("Arms", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("手臂", "无"));
 			} else {
-				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getArm().getArmRows()*2))+" arms", loadedBody.getArm()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getArm().getArmRows()*2))+"条手臂", loadedBody.getArm()));
 			}
 			switch(loadedBody.getLegConfiguration()) {
 				case ARACHNID:
-					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" arachnid legs", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+"条步足", loadedBody.getLeg()));
 					break;
 				case BIPEDAL:
 				case QUADRUPEDAL:
 				case WINGED_BIPED:
 					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(
-							Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" "+loadedBody.getLeg().getFootStructure().getName()+" legs", loadedBody.getLeg()));
+							Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+"条"+loadedBody.getLeg().getFootStructure().getName()+"腿", loadedBody.getLeg()));
 					break;
 				case CEPHALOPOD:
-					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" tentacle-legs", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+"条腕足", loadedBody.getLeg()));
 					break;
 				case TAIL:
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Mer-tail", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, "鱼尾", loadedBody.getLeg()));
 					break;
 				case TAIL_LONG:
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Serpent-tail (Length: "+(Units.size(loadedBody.getLeg().getLength(loadedBody)))+")", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, "蛇尾(长度："+(Units.size(loadedBody.getLeg().getLength(loadedBody)))+")", loadedBody.getLeg()));
 					break;
 				case AVIAN:
-					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+" bird legs", loadedBody.getLeg()));
+					tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getLeg().getLegConfiguration().getNumberOfLegs()))+"条鸟腿", loadedBody.getLeg()));
 					break;
 			}
 			
 			// PARTIAL:
 			if (loadedBody.getHair().getRawLengthValue() == 0 && loadedBody.getFace().isBaldnessNatural()) {
-				tooltipSB.append(getEmptyBodyPartDiv("Hair", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("毛发", "无"));
 			} else {
 				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(
-						loadedBody.getHair().getLength().getDescriptor())+" "+loadedBody.getHair().getStyle().getName(loadedBody)+" "+loadedBody.getHair().getName(owner), loadedBody.getHair()));
+						loadedBody.getHair().getStyle().getName(loadedBody)+loadedBody.getHair().getLength().getDescriptor())+loadedBody.getHair().getName(owner), loadedBody.getHair()));
 			}
-			tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getEye().getEyePairs()*2))+" eyes", loadedBody.getEye()));
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Ears", loadedBody.getEar()));
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Tongue", loadedBody.getFace().getTongue()));
+			tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getEye().getEyePairs()*2))+"只眼睛", loadedBody.getEye()));
+			tooltipSB.append(getBodyPartDiv(loadedBody, "耳朵", loadedBody.getEar()));
+			tooltipSB.append(getBodyPartDiv(loadedBody, "舌头", loadedBody.getFace().getTongue()));
 			if (loadedBody.getHornType() != HornType.NONE) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getHorn().getTotalHorns()))+" "+loadedBody.getHorn().getName(owner),
+				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getHorn().getTotalHorns()))+"根"+loadedBody.getHorn().getName(owner),
 						loadedBody.getHorn()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Horns", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("角", "无"));
 			}
 			if (loadedBody.getAntenna().getType() != AntennaType.NONE) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getAntenna().getTotalAntennae()))+" antennae", loadedBody.getAntenna()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(Util.intToString(loadedBody.getAntenna().getTotalAntennae()))+"根触须", loadedBody.getAntenna()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Antennae", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("触须", "无"));
 			}
 			if (loadedBody.getWingType() != WingType.NONE) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(loadedBody.getWing().getSize().getName())+" wings", loadedBody.getWing()));
+				tooltipSB.append(getBodyPartDiv(loadedBody, Util.capitaliseSentence(loadedBody.getWing().getSize().getName())+"的翅膀", loadedBody.getWing()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Wings", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("翅膀", "无"));
 			}
 			if (loadedBody.getTailType() != TailType.NONE) {
 				tooltipSB.append(
 						getBodyPartDiv(loadedBody,
 								Util.capitaliseSentence(
 									Util.intToString(loadedBody.getTail().getTailCount()))
-										+" "+(loadedBody.getTail().getType().getGirthDescriptor(loadedBody))+" tail"+(loadedBody.getTail().getTailCount()!=1?"s":""), loadedBody.getTail()));
+										+"条"+(loadedBody.getTail().getType().getGirthDescriptor(loadedBody))+"的尾巴", loadedBody.getTail()));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Tail", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("尾巴", "无"));
 			}
 			
 			// SEXUAL:
 			if (loadedBody.getVaginaType() != VaginaType.NONE) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Vagina", loadedBody.getVagina(),
-								loadedBody.getVagina().getClitoris().getClitorisSize().isPseudoPenisSize()?"[unit.sizeShort(" + loadedBody.getVagina().getClitoris().getRawClitorisSizeValue()+ ")] clit":null));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "阴道", loadedBody.getVagina(),
+								loadedBody.getVagina().getClitoris().getClitorisSize().isPseudoPenisSize()?"[unit.sizeShort(" + loadedBody.getVagina().getClitoris().getRawClitorisSizeValue()+ ")]的阴蒂":null));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Vagina", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("阴道", "无"));
 			}
 			
 			if (loadedBody.hasPenisIgnoreDildo()) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Penis", loadedBody.getPenis(),
-						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")] long, [unit.sizeShort("+loadedBody.getPenis().getDiameter()+")] diameter"));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "阴茎", loadedBody.getPenis(),
+						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")]长，[unit.sizeShort("+loadedBody.getPenis().getDiameter()+")]直径"));
 			} else if (loadedBody.hasPenis()) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Penis", loadedBody.getPenis(),
-						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")] long, [unit.sizeShort("+loadedBody.getPenis().getDiameter()+")] diameter"));
+				tooltipSB.append(getBodyPartDiv(loadedBody, "阴茎", loadedBody.getPenis(),
+						"[unit.sizeShort("+loadedBody.getPenis().getRawLengthValue()+")]长，[unit.sizeShort("+loadedBody.getPenis().getDiameter()+")]直径"));
 			} else {
-				tooltipSB.append(getEmptyBodyPartDiv("Penis", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("阴茎", "无"));
 			}
 			
-			tooltipSB.append(getBodyPartDiv(loadedBody, "Anus", loadedBody.getAss().getAnus()));
+			tooltipSB.append(getBodyPartDiv(loadedBody, "肛门", loadedBody.getAss().getAnus()));
 			
 			if(feral && !loadedBody.getSubspecies().getFeralAttributes(loadedBody).isBreastsPresent()) {
-				tooltipSB.append(getEmptyBodyPartDiv("Nipples (Breasts)", "None"));
+				tooltipSB.append(getEmptyBodyPartDiv("乳头(胸部)", "无"));
 			} else {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Nipples",
+				tooltipSB.append(getBodyPartDiv(loadedBody, "乳头",
 						loadedBody.getBreast().getNipples(),
-						Util.capitaliseSentence(Util.intToString(loadedBody.getBreast().getRows()*2))+" "
+						Util.capitaliseSentence(Util.intToString(loadedBody.getBreast().getRows()*2))+"颗"
 								+(loadedBody.getBreast().getRawSizeValue()>0
-								?(loadedBody.getBreast().getSize().getCupSizeName() + "-cup breasts")
-								:(loadedBody.isFeminine()?"flat breasts":"pecs"))));
+								?(loadedBody.getBreast().getSize().getCupSizeName() + "罩杯乳房")
+								:(loadedBody.isFeminine()?"平坦的胸部":"平板胸部"))));
 			}
 			
 			if(spinneret) {
 				if(loadedBody.hasTailSpinneret()) {
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Spinneret",
+					tooltipSB.append(getBodyPartDiv(loadedBody, "丝囊",
 							loadedBody.getTail(),
 							"",
 							loadedBody.getCovering(BodyCoveringType.SPINNERET, true)));
 				} else {
-					tooltipSB.append(getBodyPartDiv(loadedBody, "Spinneret",
+					tooltipSB.append(getBodyPartDiv(loadedBody, "丝囊",
 							loadedBody.getLeg(),
 							"",
 							loadedBody.getCovering(BodyCoveringType.SPINNERET, true)));
@@ -1927,15 +1927,15 @@ public class TooltipInformationEventListener implements EventListener {
 			}
 			
 			if(crotchBreasts) {
-				tooltipSB.append(getBodyPartDiv(loadedBody, "Nipples",
+				tooltipSB.append(getBodyPartDiv(loadedBody, "乳头",
 						loadedBody.getBreastCrotch().getNipples(),
-						Util.capitaliseSentence(Util.intToString(Math.max(1, loadedBody.getBreastCrotch().getRows()*2)))+" "
-								+(loadedBody.getBreastCrotch().getRawSizeValue()>0?(loadedBody.getBreastCrotch().getSize().getCupSizeName() + "-cup "):"flat ")
+						Util.capitaliseSentence(Util.intToString(Math.max(1, loadedBody.getBreastCrotch().getRows()*2)))+"颗"
+								+(loadedBody.getBreastCrotch().getRawSizeValue()>0?(loadedBody.getBreastCrotch().getSize().getCupSizeName() + "罩杯"):"平坦")
 								+(loadedBody.getBreastCrotch().getShape()==BreastShape.UDDERS
 									?(loadedBody.getBreastCrotch().getRows()==0
-										?"udder"
-										:"udders")
-									:"crotch-boobs")));
+										?"腹乳"
+										:"腹乳")
+									:"胯乳")));
 			}
 		
 			Main.mainController.setTooltipContent(UtilText.parse(tooltipSB.toString()));
@@ -1989,8 +1989,8 @@ public class TooltipInformationEventListener implements EventListener {
 			if(elementalFeral) {
 				passiveElemental = true;
 				if(((Elemental)character).getPassiveForm()==null) {
-					coveringName = "ethereal energy";
-					raceName = ((Elemental)character).getCurrentSchool().getName()+"-wisp";
+					coveringName = "奥术能量";
+					raceName = ((Elemental)character).getCurrentSchool().getName()+"精灵";
 					elementalFeral = false;
 				} else {
 					raceName = ((Elemental)character).getPassiveForm().getFeralName(character.getBody());
@@ -2019,15 +2019,15 @@ public class TooltipInformationEventListener implements EventListener {
 							:"")
 					+ "</div>"
 					+ name +(size!=null&&!size.isEmpty()?" ("+size+"): ":": ")
-					+ (elementalFeral || (feral && race!=Race.NONE)?"[style.colourFeral(Feral )]":"")
+					+ (elementalFeral || (feral && race!=Race.NONE)?"[style.colourFeral(兽态)]":"")
 					+ (covering.getType()!=BodyCoveringType.DILDO
 						?"<span style='color:" + race.getColour().toWebHexString() + ";'>"
 							+Util.capitaliseSentence(raceName)
 						:"<span style='color:" + PresetColour.BASE_PINK_DEEP.toWebHexString() + ";'>"
-								+"Dildo")
+								+"假阳具")
 					+ "</span>"
 					+ (passiveElemental?"<br/>":" - ")
-					+ covering.getColourDescriptor(character, true, true) + " " + coveringName
+					+ covering.getColourDescriptor(character, true, true) + "" + coveringName
 				+"</div>";
 	}
 
@@ -2078,15 +2078,15 @@ public class TooltipInformationEventListener implements EventListener {
 							:"")
 					+ "</div>"
 					+ name +(size!=null&&!size.isEmpty()?" ("+size+"): ":": ")
-					+ ((feral && race!=Race.NONE)?"[style.colourFeral(Feral )]":"")
+					+ ((feral && race!=Race.NONE)?"[style.colourFeral(兽态)]":"")
 					+ (covering.getType()!=BodyCoveringType.DILDO
 						?"<span style='color:" + race.getColour().toWebHexString() + ";'>"
 							+Util.capitaliseSentence(raceName)
 						:"<span style='color:" + PresetColour.BASE_PINK_DEEP.toWebHexString() + ";'>"
-								+"Dildo")
+								+"假阳具")
 					+ "</span>"
 					+ " - "
-					+ covering.getColourDescriptor(owner, true, true) + " " + coveringName
+					+ covering.getColourDescriptor(owner, true, true) + "" + coveringName
 				+"</div>";
 	}
 	

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>80</value> 
-		<determiner><![CDATA[a package of]]></determiner>
-		<name><![CDATA[Meat and Marrow]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Meat and Marrows]]></namePlural>
-		<description><![CDATA[A package of 'Meat and Marrow', which consists of a slab of some sort of raw meat, wrapped in grease-proof paper and tied up with brown string.]]></description> 
+		<determiner><![CDATA[一包]]></determiner>
+		<name><![CDATA[连骨肉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[连骨肉]]></namePlural>
+		<description><![CDATA[一包“连骨肉”，包括一块某种生肉，用防油纸包裹，再用棕色绳子捆起来。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/wolf/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/wolf/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">wolf_meat_and_marrow.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,22 +25,22 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[wolf]]></potionDescriptor>
+		<potionDescriptor><![CDATA[狼]]></potionDescriptor>
 		<associatedRace>WOLF_MORPH</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(5)] to 'potion effects']]></line>
-			<line><![CDATA[If muscles are less than [style.colourMuscleThree('muscular')], increases muscles by 1]]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(5)]到“药剂效果”]]></line>
+			<line><![CDATA[如果肌肉等级比[style.colourMuscleThree(“肌肉紧致”)]低，则增加1级肌肉等级]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel a lot stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 5)]
 			#IF(npc.getMuscleValue()<60)
@@ -59,10 +59,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(untie)] the package's brown string, and after peeling back the grease-proof paper, [npc.verb(bring)] the now-exposed slab of Meat and Marrow up to [npc.her] mouth. A rich, bloody smell rises to fill [npc.her] nostrils, and [npc.she] [npc.verb(find)] [npc.herself] drooling at the thought of eating the raw meat. Without further thought, [npc.she] greedily [npc.verb(devour)] the dripping flesh, licking [npc.her] fingers clean after rapidly finishing [npc.her] impromptu meal.
+		[npc.Name]解开包裹的褐色绳子，剥开防油纸后，将现在暴露在外的连骨肉送到[npc.her]嘴里。一股浓烈的血腥气味扑鼻而来，[npc.she]发现[npc.herself]一想到要吃生肉就开始不停的流口水了。[npc.she]贪婪地撕咬下淌血的肉块，迅速吃完后，用舌头舔净了[npc.her]的手指。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(untie)] the package's brown string, and after peeling back the grease-proof paper, [npc.verb(bring)] the now-exposed slab of Meat and Marrow up to [npc2.namePos] mouth. A rich, bloody smell rises to fill [npc2.her] nostrils, and [npc2.she] [npc2.verb(find)] [npc2.herself] drooling at the thought of eating the raw meat. Without further thought, [npc2.she] greedily [npc2.verb(devour)] the dripping flesh, licking [npc2.her] fingers clean after rapidly finishing [npc2.her] impromptu meal.
+		[npc.Name]解开包裹的褐色绳子，剥开防油纸后，将现在暴露在外的连骨肉送到[npc2.namePos]口中。一股浓烈的血腥气味扑鼻而来，[npc2.she]发现[npc2.herself]一想到要吃生肉就不停地流口水了。[npc2.she]贪婪地撕咬下淌血的肉块，迅速吃完后，用舌头舔净了[npc2.her]手指。
 		]]></otherUse>
 	</useDescriptions>
 

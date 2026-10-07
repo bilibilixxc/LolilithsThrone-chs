@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>charisma_spider</racialBody>
 	<applyRaceChanges><![CDATA[
@@ -6,15 +6,15 @@
 			[#targetedBody.setArmRows(3)]
 		#ENDIF
 	]]></applyRaceChanges>
-	<name><![CDATA[spider-morph]]></name>
-	<namePlural><![CDATA[spider-morphs]]></namePlural>
+	<name><![CDATA[蛛化形]]></name>
+	<namePlural><![CDATA[蛛化形]]></namePlural>
 	<nameFeral>
-		<name legConfiguration="ARACHNID"><![CDATA[spider]]></name>
+		<name legConfiguration="ARACHNID"><![CDATA[蜘蛛]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="ARACHNID"><![CDATA[spiders]]></name>
+		<name legConfiguration="ARACHNID"><![CDATA[蜘蛛]]></name>
 	</nameFeralPlural>
-	<defaultTransformName><![CDATA[spider]]></defaultTransformName>
+	<defaultTransformName><![CDATA[蜘蛛]]></defaultTransformName>
 	<colour>charisma_spider_silk_white</colour>
 	<disposition>SAVAGE</disposition>
 	<racialClass>OTHER</racialClass>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Attacked by bandit: -->
@@ -6,302 +6,330 @@
 	<htmlContent tag="START"><![CDATA[
 	<p>
 		#IF(pc.getLocationPlace().getPlaceType()==PLACE_TYPE_WORLD_MAP_GRASSLANDS)
-			While most of your surroundings consist of open, natural meadows, it's impossible to keep your distance from the many hills, ponds, and valleys which are scattered throughout this grassland wilderness.​ These terrain features are almost always home to a significant amount of long grasses, scattered shrubs, and dense, bramble-packed thickets, which provide excellent spots from which a malicious foe might spring an ambush.
+			虽然你的周围大部分都是开阔的天然草地，但在这片草原荒原上散布着许多山丘、池塘和山谷，要想与它们保持距离是不可能的。这些地形上几乎总是长满了大量的草、零星的灌木和茂密的荆棘丛，这为恶意的敌人们提供了绝佳的伏击地点。
 		#ELSE
-			Although for the most part the landscape beside the road you're [pc.walking] down consists of wide open fields, you can never go far without passing some kind of small copse or thicket.​ These small clusters of trees are invariably home to many types of densely-packed shrubs and bushes, which provide excellent concealment for any potential foe that might be waiting to spring an ambush.
+			虽然在大多数情况下，你所[pc.walking]的路旁都是开阔的田野，但不过多远就会路过一些小树林或灌木丛。这些小树群中总是生长着许多灌木丛，这为伺机伏击的敌人们提供了极好的隐蔽性。
 		#ENDIF
 	</p>
 	<p>
-		Just as you feared, as you're cautiously passing a small, isolated patch of woodland, [attacker.a_fullRace(true)] suddenly launches out of the undergrowth to block your passage. With a wicked smirk on [attacker.her] face, this [attacker.race]
+		正如你担心的那样，当你小心翼翼地经过一小片孤立的林地时，[attacker.a_fullRace(true)]突然从灌木丛中冲出，挡住你的去路。[attacker.her]脸上带着邪恶的微笑，这个[attacker.race]
 		#IF(!attacker.isMute())
-			 asks, [attacker.speech(Well, well, well, what do we have here? Didn't you know that there's a toll to pass through this area? Now pay up, or else...)]
+			问，[attacker.speech(看看我们发现了什么，你不知道经过这里要交过路费吗？现在给钱，否则……)]
 		#ELSE
-			 motions for you to stop, before rubbing [attacker.her] [attacker.fingers] together in a sign that [attacker.she] wants you to hand over your money.
+			示意你停下来，然后[attacker.her]搓了搓[attacker.fingers]，暗示你[attacker.she]想要你交点钱上来。
 		#ENDIF
 	</p>
 	<p>
-		Realising that this bandit is willing to use force to get what [attacker.she] wants, you wonder whether to simply give [attacker.herHim] what [attacker.she] wants, or prepare to defend yourself...
-	</p>	]]>
-	</htmlContent>
+		意识到这个强盗会用武力得到[attacker.she]想要的，你想知道究竟是直接给[attacker.herHim]呢，还是准备保护你自己……
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SUBMIT_SEX_START"><![CDATA[
 	<p>
-		Seeing that [attacker.name] has a horny look in their [attacker.eyes], you decide to offer them an alternative to a payment in cash. [pc.Stepping] forwards, you put on your most seductive look and tease, [pc.speech(I bet you don't get much sex out here in the middle of nowhere... How about I help you change that...)]
+		看到[attacker.name]露出色迷迷的神色，你决定提供一个火币支付外的选择。你摆出一副最诱人的样子，挑逗道，[pc.speech(我打赌你在这荒郊野外肯定没怎么做爱，不如我帮你改变一下吧……)]
 	</p>
 	#IF(!attacker.isMute())
 		<p>
-			Hungrily eyeing you up, the [attacker.race] [attacker.steps] forwards and eagerly takes hold of you, before replying, [attacker.speech(Sure, I could do with a good fuck!)]
+			饥渴地盯着你，[attacker.race][attacker.steps]向前迫不及待地抱住你，然后回答道：[attacker.speech(当然，我们可以好好干上一炮！)]
 		</p>
 		<p>
-			Without giving you any time in which to change your mind, [attacker.she] lets out a horny [attacker.moan] and starts feeling you up. Leaning in to you, [attacker.she] plants a passionate kiss on your [pc.lips+], before moving into position to start to fuck you...
+			没有给你任何改变主意的时间，[attacker.she]发出一声淫荡的[attacker.moan]，开始摸索你的身体。[attacker.she]凑到你的身边，在你[pc.lips+]上热情地吻了一下，然后移动位置开始干你……
 		</p>
 	#ELSE
 		<p>
-			Hungrily eyeing you up, the [attacker.race] [attacker.steps] forwards and eagerly takes hold of you, and without giving you any time in which to change your mind, [attacker.she] lets out a horny [attacker.moan] and starts feeling you up. Leaning in to you, [attacker.she] plants a passionate kiss on your [pc.lips+], before moving into position to start to fuck you...
+			饥渴地注视着你，[attacker.race][attacker.steps]向前迫不及待地抱住你，不给你任何改变主意的时间。[attacker.she]发出一声淫荡的[attacker.moan]，开始摸索你的身体。[attacker.she]凑到你的身边，在你[pc.lips+]上热情地吻了一下，然后移动位置开始干你……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Pay off: -->
 	
-	<htmlContent tag="PAYMENT"><![CDATA[	<p>
+	<htmlContent tag="PAYMENT"><![CDATA[
+	<p>
 		#IF(pc.isCowardly())
-			Well and truly terrified at the prospect of this [attacker.race] choosing to engage you in physical combat, you hastily grab [#SPECIAL_PARSE_0] flames and offer them to [attacker.herHim]. Letting out an amused chuckle as [attacker.she] sees how scared you are, the [attacker.race] snatches the money from your trembling [pc.hands]
+			你意识到这个[attacker.race]真的要跟你打一场，顿时吓坏了，急忙抓起[#SPECIAL_PARSE_0]火币献给[attacker.herHim]。当[attacker.she]看到你惊慌失措时，[attacker.race]发出了有趣的笑声，从你颤抖的[pc.hands]中抢走了钱。
 		#ELSEIF(pc.isBrave())
-			Not wanting to waste any time on this [attacker.race], you grab [#SPECIAL_PARSE_0] flames and offer them to [attacker.herHim]. Letting out an annoyed tut as [attacker.she] sees the stoic look on your face, the [attacker.race] snatches the money from your [pc.hands]
+			你不想在这个[attacker.race]身上浪费时间，于是抓起[#SPECIAL_PARSE_0]火币递给了[attacker.herHim]。当[attacker.she]看到你脸上委曲求全的表情时，[attacker.race]一边恼怒地啧了一声，一边从你的[pc.hands]手中抢走了钱。
 		#ELSE
-			Not wanting to engage this [attacker.race] in combat, you tell [attacker.herHim] that you'll pay the toll if it means that you can avoid a fight. Grabbing [#SPECIAL_PARSE_0] flames, you remain in place as the [attacker.race] snatches the money from your [pc.hands]
+			你不想与这个[attacker.race]交战，你告诉[attacker.herHim]，只要能避免战斗，你就会支付通行费。[attacker.race]从你的[pc.hands]手中抢走[#SPECIAL_PARSE_0]火币，而你仍然留在原地。
 		#ENDIF
 		#IF(!attacker.isMute())
-			 and sneers, [attacker.speech(That's all I needed... Go on, be on your way, before I decide to change my mind and give you a beating!)]
+			讥讽道，[attacker.speech(这就是我所需要的……走吧，在我改变主意揍你一顿之前，快走吧！)]
 		#ELSE
-			 and impatiently motions for you to continue on your way past [attacker.herHim].
+			并不耐烦地示意你继续走你的路。
 		#ENDIF
 	</p>
 	<p>
-		As you continue on your way, the [attacker.race] melts back into the undergrowth from whence [attacker.she] came. Happy with your decision to hand over [#SPECIAL_PARSE_0] flames in order to avoid fighting such a character, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
-	</p>	]]>
-	</htmlContent>
+		当你继续前进时，[attacker.race]又从[attacker.she]来的地方融进了灌木丛中。你对自己为了避免与这样的角色战斗而交出[#SPECIAL_PARSE_0]火币的决定很满意，你环顾四周，确保没有其他直接危险，然后准备继续前进……
+	</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- After sub sex: -->
 	
 	<htmlContent tag="AFTER_SEX_SUB"><![CDATA[
 	<p>
-		Letting out a satisfied sigh, the [attacker.race] takes a [attacker.step] back and brings an end to the sex. As [attacker.she] starts to get [attacker.her] things back in order, [attacker.she]
+		满意地叹了一口气，[attacker.race]向后退了退结束了这场性爱。当[attacker.she]开始整理自己的东西时，[attacker.she]
 		#IF(!attacker.isMute())
-			 teases, [attacker.speech(You were a good fuck... That's just what I needed today...)]
+			又挑逗道，[attacker.speech(你干得真爽，这正是我今天需要的……)]
 		#ELSE
-			 smirks down at you and motions for you to move away from [attacker.herHim].
+			对你冷笑，并让你离[attacker.herHim]远点。
 		#ENDIF
 	</p>
 	<p>
-		Moving back, you take a moment in which to catch your breath and get your own things sorted out, during which time [attacker.name] finishes getting [attacker.her] clothing back in position. With one last triumphant sneer thrown your way, the [attacker.race] melts back into the undergrowth from whence [attacker.she] came. After taking a moment in which to recover your energy, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
+		你需要一点时间喘口气，整理一下自己的东西，在这段时间里，[attacker.name]整理好了[attacker.her]衣服。最后冲你抛出一个得意的笑，[attacker.race]从[attacker.she]来的方向钻入了灌木丛中。花了一点时间恢复体力后，你环顾四周，确保没有其他直接危险，然后准备继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Won combat: -->
 	
-	<htmlContent tag="COMBAT_WON"><![CDATA[	<p>		Staggering back, the [attacker.race] sinks down onto the ground,
+	<htmlContent tag="COMBAT_WON"><![CDATA[
+	<p>
+		[attacker.race]踉跄着后退，沉沉地倒在地上，
 		#IF(!attacker.isMute())
 			#IF(attacker.isPostCombatWantsSex())
 				#IF(attacker.isPostCombatRapePlay())
-					 before revealing [attacker.her] desire to engage in some rape-play with you by [attacker.moaning], [attacker.speech(I surrender... ~Mmm!~ You wouldn't rape me, would you? Please, anything but that... Come on, do it!)]
+					在[attacker.moaning]中暗示自己对强奸游戏的渴望：[attacker.speech(我投降……~唔！~你不会强奸我吧，是不是？拜托了，除了那个，你做什么都可以……来吧！)]
 				#ELSE
-					 before starting to touch [attacker.herself] and desperately pant, [attacker.speech(No more... I surrender... Please, just come and fuck me already!)]
+					摸着[attacker.herself]拼命喘气道：[attacker.speech(不要了……我投降……求你了，快来操我吧！)]
 				#ENDIF
 			#ELSE
-				 panting, [attacker.speech(No more... I surrender...)]
+				喘息道：[attacker.speech(不要了……我投降……)]
 			#ENDIF
 		#ELSE
 			#IF(attacker.isPostCombatWantsSex())
 				#IF(attacker.isPostCombatRapePlay())
-					 before starting to touch [attacker.herself] and let out a series of desperate, pleading whines. Putting on a show of trying to shuffle away from you, [attacker.she] makes it clear that [attacker.she] wants you to engage in some rape-play with [attacker.herHim].
+					抚摸起[attacker.herself]，一边发出渴求的哼唧声。[attacker.she]摆出一副要闪躲的样子，很明显，[attacker.she]想和你玩玩强奸游戏。
 				#ELSE
-					 before starting to touch [attacker.herself] and let out a series of desperate, pleading whines.
+					抚摸起[attacker.herself]，一边发出渴求的哼唧声。
 				#ENDIF
 			#ELSE
-				 holding up [attacker.her] [attacker.hands] in a clear sign of surrender.
+				举起[attacker.her]的[attacker.hands]，明显是摆出了投降姿势。
 			#ENDIF
-		#ENDIF	</p>
+		#ENDIF
+	</p>
 	<p>
-		Feeling encouraged by your triumph, you confidently [pc.step] forwards and wonder what to do with this defeated [attacker.race]...
-	</p>	]]>
-	</htmlContent>
+		胜利让你倍受鼓舞，你自信满满地继续，想知道该如何处理这个战败的[attacker.race]……
+	</p>
 	
-	<htmlContent tag="COMBAT_WON_END"><![CDATA[	<p>
-		Not wanting anything more to do with this [attacker.race], you turn around and [pc.walk] off.
+	]]></htmlContent>
+	
+	<htmlContent tag="COMBAT_WON_END"><![CDATA[
+	<p>
+		你不想再和这个[attacker.race]扯上任何关系，便转身离开。
 		#IF(!attacker.isMute())
 			#IF(attacker.isPostCombatWantsSex())
-				  Letting out a horny [attacker.moan] as you [pc.step] past [attacker.herHim], [attacker.name] whines, [attacker.speech(Fuck, I'm so horny! Damn it...)]
+				当你从[attacker.herHim]身边[pc.step]过时，[attacker.name]发出了一声淫荡的[attacker.moan]。[attacker.name]抱怨道：[attacker.speech(操，我太饥渴了，该死的……)]
 			#ELSE
-				  Letting out a deep sigh as you [pc.step] past [attacker.herHim], [attacker.name] taunts, [attacker.speech(You got lucky...)]
+				当你[pc.step]过时，[attacker.name]发出绵长的叹息，[attacker.herHim]嘲讽道：[attacker.speech(算你走运……)]
 			#ENDIF
 		#ELSE
 			#IF(attacker.isPostCombatWantsSex())
-				 Letting out a horny [attacker.moan] as you [pc.step] past [attacker.herHim], [attacker.name] desperately intimates that [attacker.she] wants you to fuck [attacker.herHim].
+				当你从[attacker.herHim]身边[pc.step]过时，[attacker.name]发出了一声淫荡的[attacker.moan]。[attacker.name]拼命暗示[attacker.she]想让你操[attacker.herHim]。
 			#ELSE
-				 Letting out a deep sigh as you [pc.step] past [attacker.herHim], [attacker.name] taunts you by throwing up a rude hand gesture.
+				当你[pc.step]过[attacker.herHim]时，[attacker.name]深深地叹了一口气，随即比了一个粗鲁的手势嘲弄你。
 			#ENDIF
-		#ENDIF	</p>
+		#ENDIF
+	</p>
 	<p>
-		Ignoring [attacker.her] pathetic display, you leave the bandit behind and continue on your way through the Foloi Fields...
-	</p>	]]>
-	</htmlContent>
+		你无视了强盗的可怜现状，抛下了[attacker.her]，继续穿过弗洛伊田野……
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX"><![CDATA[
 	<p>
 		#IF(attacker.isPostCombatWantsSex())
 			#IF(attacker.isPostCombatRapePlay())
-				Deciding to play along with [attacker.name] as [attacker.she] pretends to resist, you [pc.step] up to [attacker.herHim] and pull [attacker.herHim] to [attacker.her] [attacker.feet]. Ignoring [attacker.her] protests, you lean forwards to plant a dominant kiss on [attacker.her] [attacker.lips+], and can't help but let out an eager [pc.moan] as you prepare to engage in some rape-play with [attacker.herHim]...
+				[attacker.name]此刻正假意反抗，你决定配合[attacker.she]，于是[pc.step]到[attacker.herHim]面前，将[attacker.herHim]拉起来。你无视[attacker.her]的抗议，向前倾身，霸道地亲上[attacker.her][attacker.lips+]。你情不自禁地发出急切的[pc.moan]，准备与[attacker.herHim]玩玩强奸游戏……
 			#ELSE
-				More than happy to give [attacker.name] what [attacker.she] wants, you [pc.step] up to [attacker.herHim] and pull [attacker.herHim] to [attacker.her] [attacker.feet]. Leaning forwards to plant a dominant kiss on [attacker.her] [attacker.lips+], you can't help but let out an eager [pc.moan] as you prepare to fuck [attacker.herHim]...
+				你非常乐意满足[attacker.name]的要求，于是[pc.step]到[attacker.herHim]身前，将[attacker.herHim]拉起来。你向前倾身，霸道地亲上[attacker.her][attacker.lips+]。你情不自禁地发出急切的[pc.moan]，准备操[attacker.herHim]……
 			#ENDIF
 		#ELSE
-			Ignoring the fact that [attacker.name] doesn't seem at all attracted to you, you [pc.step] up to [attacker.herHim] and pull [attacker.herHim] to [attacker.her] [attacker.feet]. Ignoring [attacker.her] protests, you lean forwards to plant a dominant kiss on [attacker.her] [attacker.lips+], and can't help but let out an eager [pc.moan] as you prepare to rape [attacker.herHim]...
+			你无视[attacker.name]并没有被你吸引的事实，[pc.step]到[attacker.herHim]身前，将[attacker.herHim]拉起来。你无视[attacker.her]的抗议，向前倾身，霸道地亲上[attacker.her][attacker.lips+]。你情不自禁地发出急切的[pc.moan]，准备强奸[attacker.herHim]……
 		#ENDIF
-	</p>	]]>
-	</htmlContent>
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX_GENTLE"><![CDATA[
 	<p>
 		#IF(attacker.isPostCombatWantsSex())
 			#IF(attacker.isPostCombatRapePlay())
-				Deciding to play along with [attacker.name] as [attacker.she] pretends to resist, you [pc.step] up to [attacker.herHim] and gently, yet firmly, pull [attacker.herHim] to [attacker.her] [attacker.feet]. Ignoring [attacker.her] protests, you lean forwards to plant a soft kiss on [attacker.her] [attacker.lips+], and can't help but let out a quiet [pc.moan] as you prepare to engage in some rape-play with [attacker.herHim]...
+				[attacker.name]假装反抗，你决定配合[attacker.she]，你[pc.step]到[attacker.herHim]面前，轻轻地，但坚定地将[attacker.herHim]拉倒在地上。你无视[attacker.her]的抗议，向前倾身，轻轻地吻了一下[attacker.her][attacker.lips+]，并情不自禁地发出轻声的[pc.moan]，准备与[attacker.herHim]进行一些强奸游戏……
 			#ELSE
-				More than happy to give [attacker.name] what [attacker.she] wants, you [pc.step] up to [attacker.herHim] and gently pull [attacker.herHim] to [attacker.her] [attacker.feet]. Leaning forwards to plant a soft kiss on [attacker.her] [attacker.lips+], you can't help but let out a quiet [pc.moan] as you prepare to have sex with [attacker.herHim]...
+				你非常乐意满足[attacker.name]的要求，你[pc.step]到[attacker.she]身边，轻轻地把[attacker.herHim]拉倒在地上。你向前倾身，在[attacker.her][attacker.lips+]上轻轻一吻，你准备与[attacker.herHim]发生性关系，情不自禁地发出了轻轻的[pc.moan]……
 			#ENDIF
 		#ELSE
-			Ignoring the fact that [attacker.name] doesn't seem at all attracted to you, you [pc.step] up to [attacker.herHim] and gently, yet firmly, pull [attacker.herHim] to [attacker.her] [attacker.feet]. Ignoring [attacker.her] protests, you lean forwards to plant a soft kiss on [attacker.her] [attacker.lips+], and can't help but let out a quiet [pc.moan] as you prepare to rape [attacker.herHim]...
+			无视[attacker.name]似乎对你一点吸引力都没有的事实，你[pc.step]到[attacker.herHim]面前，轻轻地，但却坚定地将[attacker.herHim]拉倒在地上。你不顾[attacker.her]的抗议，向前倾身在[attacker.her][attacker.lips+]上轻轻一吻，并情不自禁地发出轻声的[pc.moan]，准备强奸[attacker.herHim]……
 		#ENDIF
-	</p>	]]>
-	</htmlContent>
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX_ROUGH"><![CDATA[
 	<p>
 		#IF(attacker.isPostCombatWantsSex())
 			#IF(attacker.isPostCombatRapePlay())
-				Deciding to play along with [attacker.name] as [attacker.she] pretends to resist, you [pc.step] up to [attacker.herHim] and roughly pull [attacker.herHim] to [attacker.her] [attacker.feet]. Ignoring [attacker.her] protests, you lean forwards to plant a forceful, dominant kiss on [attacker.her] [attacker.lips+], and can't help but let out an eager [pc.moan] as you prepare to engage in some rape-play with [attacker.herHim]...
+				[attacker.name]此刻正假意反抗，你决定配合[attacker.she]，于是[pc.step]到[attacker.herHim]面前，粗暴地将[attacker.herHim]拉起来。你无视[attacker.her]的抗议，向前倾身，猛烈而霸道地亲上[attacker.her][attacker.lips+]。你情不自禁地发出急切的[pc.moan]，准备与[attacker.herHim]玩玩强奸游戏……
 			#ELSE
-				More than happy to give [attacker.name] what [attacker.she] wants, you [pc.step] up to [attacker.herHim] and roughly pull [attacker.herHim] to [attacker.her] [attacker.feet]. Leaning forwards to plant a forceful, dominant kiss on [attacker.her] [attacker.lips+], you can't help but let out an eager [pc.moan] as you prepare to fuck [attacker.herHim]...
+				你非常乐意满足[attacker.name]的要求，于是[pc.step]到[attacker.herHim]身前，粗暴地将[attacker.herHim]拉起来。你向前倾身，猛烈而霸道地亲上[attacker.her][attacker.lips+]。你情不自禁地发出急切的[pc.moan]，准备操[attacker.herHim]……
 			#ENDIF
 		#ELSE
-			Ignoring the fact that [attacker.name] doesn't seem at all attracted to you, you [pc.step] up to [attacker.herHim] and roughly pull [attacker.herHim] to [attacker.her] [attacker.feet]. Ignoring [attacker.her] protests, you lean forwards to plant a forceful, dominant kiss on [attacker.her] [attacker.lips+], and can't help but let out an eager [pc.moan] as you prepare to rape [attacker.herHim]...
+			你无视[attacker.name]并没有被你吸引的事实，[pc.step]到[attacker.herHim]身前，粗暴地将[attacker.herHim]拉起来。你无视[attacker.her]的抗议，向前倾身，猛烈而霸道地亲上[attacker.her][attacker.lips+]。你情不自禁地发出急切的[pc.moan]，准备强奸[attacker.herHim]……
 		#ENDIF
-	</p>	]]>
-	</htmlContent>
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX_SUBMIT_START"><![CDATA[
 	<p>
-		Feeling bad for having given [attacker.name] such a sound beating, you drop down in front of [attacker.herHim] and apologise for your actions, before telling [attacker.herHim] that [attacker.she] can do whatever [attacker.she] likes with you. Looking at you with a mixture of disbelief and resentment, the [attacker.race] rises to [attacker.her] [attacker.feet] and
+		你为自己给了[attacker.name]这么一顿殴打而感到难过，你在[attacker.herHim]面前跪下，为自己的行为道歉，然后告诉[attacker.herHim]可以对你为所欲为。[attacker.race]又是怨恨又是不信地看着你，然后站起身来并
 		#IF(!attacker.isMute())
-			 asks, [attacker.speech(You're serious? You... You're going to submit to me?)]
+			问道，[attacker.speech(你是认真的？你……你要屈服于我？)]
 		#ELSE
-			 narrows [attacker.her] [attacker.eyes] to give you a questioning, suspicious look.
+			眯起[attacker.her]的[attacker.eyes]质疑地看着你。
 		#ENDIF
 	</p>
 	<p>
-		Confirming to [attacker.herHim] that you'll let [attacker.herHim] use you in any way [attacker.she] sees fit, you allow [attacker.name] to take hold of you and pull you into [attacker.her] body. Planting a dominant kiss on your [pc.lips+], and realising that you're truly going to submit to [attacker.herHim], the [attacker.race] lets out [attacker.a_moan+] and prepares to fuck you...
-	</p>	]]>
-	</htmlContent>
+		你对[attacker.herHim]说你会让[attacker.herHim]用[attacker.she]认为任何方式使用你。[attacker.name]抱住你，在你的允许下把你拉向[attacker.her]的身体。当[attacker.race]在你[pc.lips+]上留下一个霸道的吻，你意识到自己真的要屈服于[attacker.herHim]。[attacker.race]发出[attacker.a_moan+]并准备操你……
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_DOM"><![CDATA[
 	#IF(attacker.hasFlag(NPC_FLAG_genericNPCBetrayedByPlayer))
 		#IF(game.isNonConEnabled())
 			<p>
-				As you step back from [attacker.name], [attacker.she] sinks to the floor, letting out a pitiful wail as [attacker.she] realises that you've finished. Completely broken by the sudden betrayal and rape, [attacker.she] starts uncontrollably sobbing and crying.
+				你终于完事儿了，从[attacker.name]身边退开。[attacker.she]只能倒在地上可怜地哀嚎着。[attacker.she]被突如其来的背叛和强奸彻底击垮，开始无法控制地抽泣起来。
 			</p>
 			<p>
-				Letting out a triumphant laugh, you start gathering your things, but before taking your leave, you wonder if you should help yourself to any of [attacker.namePos] belongings...
+				你发出胜利的笑声，开始收拾自己的东西。但在离开之前，你考虑着要不要拿走[attacker.namePos]的东西……
 			</p>
 		#ELSE
 			<p>
-				As you step back from [attacker.name], [attacker.she] sinks to the floor, letting out a deep sigh as [attacker.she] realises that you've finished. Still deeply upset at the way you betrayed [attacker.her] trust, [attacker.she] quickly starts gathering [attacker.her] things, intent on leaving this place for good.
+				你终于完事儿了，从[attacker.name]身边退开。[attacker.she]只能倒在地上可怜地哀嚎着。你辜负了[attacker.she]的信任，[attacker.she]仍然深感不安，于是迅速收拾东西，打算永远离开这里。
 			</p>
 			<p>
-				Similarly getting your things back in order, you wonder if you should help yourself to any of [attacker.namePos] belongings before you move on...
+				你同样把自己的东西整理好，但在离开之前，你考虑着要不要拿走[attacker.namePos]的东西……
 			</p>
 		#ENDIF
-	#ELSE		<p>
-			Feeling satisfied from your dominant sex with the [attacker.race], you [pc.step] away from [attacker.herHim] and start to get your things back in order.
+	#ELSE
+		<p>
+			与[attacker.race]的支配型性爱让你得到了满足，你在起身离开前收拾了一下。
 			#IF(!attacker.isMute())
 				#IF(attacker.isSatisfiedFromLastSex())
-					 Feeling just as happy as you are, [attacker.name] lets out a deep sigh and moans, [attacker.speech(~Mmm!~ That was just what I needed...)]
+					[attacker.name]与你一样高兴，发出绵长的呻吟声，开口道：[attacker.speech(~唔！~我就需要刚才那个……)]
 				#ELSE
-					 Not feeling as happy as you are, [attacker.name] lets out a frustrated sigh and moans, [attacker.speech(~Aah! I'm not satisfied from that!)]
+					[attacker.name]并没有你那样高兴，而是发出了无奈的悲鸣：[attacker.speech(~啊哈！我还没满足呢！)]
 				#ENDIF
 			#ELSE
 				#IF(attacker.isSatisfiedFromLastSex())
-					 Feeling just as happy as you are, [attacker.name] lets out a deep sigh and moans in contentment to convey the fact that [attacker.sheIs] satisfied.
+					[attacker.name]与你一样高兴，，发出绵长的呻吟声，以此表达[attacker.sheIs]很满意。
 				#ELSE
-					 Not feeling as happy as you are, [attacker.name] lets out a frustrated sigh and moans in annoyance to convey the fact that [attacker.sheIs] not satisfied.
+					[attacker.name]并没有你那样高兴，而是发出了无奈的悲鸣，以此表达[attacker.sheIs]不满意。
 				#ENDIF
-			#ENDIF		</p>
-		<p>
-			Continuing to get your things back in order, you brush yourself off and wonder what to do next. You could always help yourself to any items or cash that the [attacker.race] is carrying, or instead simply set off and continue on your way...
+			#ENDIF
 		</p>
-	#ENDIF	]]>
-	</htmlContent>
+		<p>
+			你继续整理好自己的东西，琢磨着下一步该做什么。你可以取走[attacker.race]随身携带的任何物品或现金，或者直接离开，继续赶你的路……
+		</p>
+	#ENDIF
 	
-	<htmlContent tag="COMBAT_WON_TALK"><![CDATA[	<p>		Wanting to know why this [attacker.race] is attempting to rob innocent travellers of their possessions, you ask the bandit who [attacker.she] is and what led to [attacker.her] choosing a life of criminality. Clearly not wanting to discuss such personal matters with you, the [attacker.race] sneers at you for a moment, before
+	]]></htmlContent>
+	
+	<htmlContent tag="COMBAT_WON_TALK"><![CDATA[
+	<p>
+		你想知道这个[attacker.race]为什么要抢劫无辜旅客的财物，于是问强盗[attacker.she]是谁，是什么导致[attacker.she]选择了犯罪的生活。[attacker.race]对你嗤了一声，显然不想和你讨论这些私人问题，过了一会儿又
 		#IF(!attacker.isMute())
 			#IF(attacker.isAttractedTo(pc))
-				 snapping, [attacker.speech(I'm not telling you anything! Either fuck me or fuck off!)]
+				厉声道，[attacker.speech(我什么都不会说！操我或者滚！)]
 			#ELSE
-				 snapping, [attacker.speech(Fuck off and leave me alone!)]
+				厉声道，[attacker.speech(滚远点让我一个人呆着！)]
 			#ENDIF
 		#ELSE
-			 turning [attacker.her] head and refusing to look at you.
+			别过[attacker.her]的头拒绝看你。
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasFetish(FETISH_SADIST))
-			Slapping the [attacker.race] across the face, you repeat your question, but once again [attacker.she] refuses to play along.
+			你扇了[attacker.race]一个耳光，然后重复你的问题，但[attacker.she]再一次拒绝配合。
 		#ELSE
-			Trying a different approach, you promise the [attacker.race] a reward if [attacker.she] tells you what you want to know, but once again [attacker.she] refuses to play along.
+			你试着换一种方法。你答应[attacker.race]如果[attacker.she]告诉你想知道的事情，你就给[attacker.she]奖励，但[attacker.she]再次拒绝配合。
 		#ENDIF
-		 As you're clearly not going to be able to find out anything from this uncooperative [attacker.race], you give up on your line of questioning and wonder what to do with [attacker.herHim]...	</p>	]]>
-	</htmlContent>
+		你实在无法从这个不合作的[attacker.race]口中问出什么，所以你放弃了你的提问，并想知道该如何处理[attacker.herHim]……
+	</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Lost combat: -->
 	
-	<htmlContent tag="COMBAT_LOST"><![CDATA[	<p>		Unable to continue fighting any longer, you stagger back and collapse to the ground, utterly defeated.
+	<htmlContent tag="COMBAT_LOST"><![CDATA[
+	<p>
+		你再也无力继续战斗，踉跄后退，倒在地上，彻底败下阵来。
 		#IF(!attacker.isMute())
-			 [attacker.Stepping] forwards, the [attacker.race] lets out a triumphant laugh and declares, [attacker.speech(That was too easy! You really thought you stood a chance against me?!)]
+			[attacker.race]走向前，发出胜利的笑声说道，[attacker.speech(太简单了！你真以为你有机会赢我？)]
 		#ELSE
-			 [attacker.Stepping] forwards, the [attacker.race] lets out a triumphant laugh and looks down at you with a big smirk on [attacker.her] face.
-		#ENDIF	</p>
+			[attacker.race]走向前发出胜利的笑声，低头看着你，脸上露出一丝冷笑。
+		#ENDIF
+	</p>
 	#IF(attacker.isAttractedTo(pc))
 		<p>
-			Clearly finding you irresistibly attractive, [attacker.name] grabs hold of your [pc.arm] and pulls you to your [pc.feet], before grinding up against you and
+			显然你的魅力无人可挡，[attacker.name]抓住你的[pc.arm]拉你站起来，然后与你磨蹭，
 			#IF(attacker.isWillingToRape(pc))
 				#IF(!attacker.isMute())
-					 declaring, [attacker.speech(All that fighting got me turned on, and you look like a good fuck right about now!)]
+					说着，[attacker.speech(那些战斗让我兴奋起来了，你现在看上去就是我需要的小东西……)]
 				#ELSE
-					 starting to grope and fondle your body...
+					开始摸索和爱抚你的身体……
 				#ENDIF
 			#ELSE
 				#IF(!attacker.isMute())
-					 declaring, [attacker.speech(All that fighting got me turned on... You're up for a quick fuck, right?)]
+					说着，[attacker.speech(那些战斗让我兴奋起来了……你想爽一下，对吧？)]
 				#ELSE
-					 throwing you a questioning look as [attacker.she] starts to run [attacker.her] [attacker.hands] over your body...
+					[attacker.she]疑惑地看着你，开始用[attacker.her][attacker.hands]抚摸你的全身……
 				#ENDIF
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Clearly not having any interest in having sex with you, [attacker.name] turns around and prepares to leave...
+			显然，[attacker.name]对与你做爱没有任何兴趣，于是转身准备离开……
 		</p>
-	#ENDIF	]]>
-	</htmlContent>
+	#ENDIF
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_FUCKED"><![CDATA[
 	<p>
-		Giving you no say in the matter, the bandit continues to grope you, and as you open your mouth to say something, [attacker.she] leans forwards and pulls you into a dominant kiss. After grinding up against you for a few moments, [attacker.she] pulls back and prepares to fuck you...
-	</p>	]]>
-	</htmlContent>
+		强盗不给你任何说话的机会，继续抚摸着你。当你张嘴想说些什么时，[attacker.she]向前倾身，拉着你来了一个霸道的热吻。在与你磨蹭了片刻后，[attacker.she]抽回身，准备操你……
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_CONTINUE"><![CDATA[
 	#IF(attacker.isAttractedTo(pc))
 		<p>
-			Refusing to have sex with the [attacker.race], you watch as [attacker.she] melts back into the undergrowth from whence [attacker.she] came. After taking a moment in which to recover your energy, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
+			你拒绝与[attacker.race]发生性关系，眼睁睁地看着[attacker.she]又从[attacker.she]来的地方消失在灌木丛中。你花了一点时间恢复体力，环顾四周，确保没有其他明显的危险后继续前行……
 		</p>
 	#ELSE
 		<p>
-			With one last triumphant sneer thrown your way, [attacker.she] melts back into the undergrowth from whence [attacker.she] came. After taking a moment in which to recover your energy, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
+			[attacker.she]最后冲你得意地冷笑一声后，又钻进了自己来时的灌木丛中。你花了一点时间恢复体力，环顾四周，确保没有其他明显的危险后继续前行……
 		</p>
-	#ENDIF	]]>
-	</htmlContent>
+	#ENDIF
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_FUCKED_WILLING"><![CDATA[
 	<p>
-		Agreeing to have sex with [attacker.herHim], you let the bandit continue to grope you, and as you open your mouth to say something, [attacker.she] leans forwards and pulls you into a dominant kiss. After grinding up against you for a few moments, [attacker.she] pulls back and prepares to fuck you...
-	</p>	]]>
-	</htmlContent>
+		你同意与[attacker.herHim]做爱，任由强盗继续抚摸你。当你张嘴想说什么时，[attacker.she]向前倾身，将你拉入一个霸道的吻中。在与你磨蹭片刻后，[attacker.she]抽回身，准备操你……
+	</p>
+	
+	]]></htmlContent>
 	
 </dialogue>

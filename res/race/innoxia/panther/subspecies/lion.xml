@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_panther</race>
 	<colour>RACE_CAT_MORPH_LION</colour>
@@ -43,24 +43,24 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName/>
 	<bookIconName>icon</bookIconName>
-	<bookName>Big Cats</bookName>
+	<bookName><![CDATA[大猫咪]]></bookName>
 	<basicDescriptionId>PANTHER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>PANTHER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[lion-morph]]></name>
-	<namePlural><![CDATA[lion-morphs]]></namePlural>
-	<singularMaleName><![CDATA[lion-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[lion-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[lion-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[lion-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic lion, known as a 'lion-morph' when bipedal, and a 'liontaur' when the lower body is that of a feral lion. To be identified as a lion-morph, a character must be a panther without striped or spotted fur.]]></description>
+	<name><![CDATA[狮化形]]></name>
+	<namePlural><![CDATA[狮化形]]></namePlural>
+	<singularMaleName><![CDATA[狮男]]></singularMaleName>
+	<singularFemaleName><![CDATA[狮女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[狮男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[狮女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的狮子，当下肢为双足时称为“狮化形”，而下肢呈现出狮子兽态时称为“半狮人”。要判定为狮化形，角色必须是一只没有斑点或条纹的大型猫科生物。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[lion]]></feralName>
-		<feralNamePlural><![CDATA[lions]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[lion]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[lioness]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[lions]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[lionesses]]></feralPluralFemaleName>
+		<feralName><![CDATA[狮]]></feralName>
+		<feralNamePlural><![CDATA[狮]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[狮]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[狮]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[狮]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[狮]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>100</size>
@@ -73,8 +73,8 @@
 		<hairPresent>true</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] body is extremely strong, and [npc.sheIsFull] capable of great feats of strength. [npc.She] also [npc.has] a high resistance to both natural and arcane heat.
-	]]></statusEffectDescription>
+		[npc.NamePos]的身体格外强壮，[npc.she]能够轻松运用力量。还对自然和奥术火焰有很高的抗性。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="30">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

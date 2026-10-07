@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Bedroom]]></name>
-	<tooltipDescription><![CDATA[This large bedroom is used by Sleip and Nir, and thanks to its size, it's able to hold two single beds, as well as an assortment of cabinets and chests in which the nightmares store their belongings.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Sleip and Nir's bedroom]]></virginityLossDescription>
+	<name><![CDATA[卧室]]></name>
+	<tooltipDescription><![CDATA[这间宽敞的卧室由斯雷普和尼尔共同使用，得益于其宽广的空间，能够容纳两张单人床，以及各种柜子和箱子，里面存放着梦魇们的物品。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在斯雷普和尼尔的卧室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -56,9 +56,9 @@ public class Vanessa extends NPC {
 	}
 	
 	public Vanessa(boolean isImported) {
-		super(isImported, new NameTriplet("Vanessa"), "Cunningham",
-				"Ms. Cunningham, as she prefers to be called, is the sole person responsible for all of the affairs of Dominion's 'Bureau of Demographics'."
-						+ " Although getting on years, she's aged remarkably well, and has a refined, elegant beauty about her.",
+		super(isImported, new NameTriplet("凡妮莎"), "坎宁安",
+				"坎宁安女士，她喜欢被这样称呼，是唯一负责御城区“人口统计局”所有事务的人。"
+						+ "她虽然上了年纪，但被时光赋予了另一种韵味。她有着岁月沉淀下成熟优雅的美。",
 				55, Month.SEPTEMBER, 26,
 				10, Gender.F_V_B_FEMALE, Subspecies.FOX_MORPH, RaceStage.PARTIAL,
 				new CharacterInventory(false, 10), WorldType.CITY_HALL, PlaceType.CITY_HALL_ARCHIVES, true);
@@ -289,7 +289,7 @@ public class Vanessa extends NPC {
 	
 	@Override
 	public String getGenericName() {
-		return "Ms. Cunningham";
+		return "坎宁安女士";
 	}
 	
 	@Override
@@ -355,12 +355,12 @@ public class Vanessa extends NPC {
 				String useDesc = itemOwner.useItem(item, target, false, true);
 				return new Value<>(true,
 						"<p>"
-							+ "Producing a "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before offering it to [vanessa.name]."
-							+ " Flashing you a knowing look, the mature fox-girl takes the little "+item.getColour(0).getName()+" pill, before teasing, [vanessa.speechNoEffects(~Mmm!~ You really want to knock me up that badly, huh?)]"
+							+ "你从物品栏中拿出一个"+item.getName(false, false)+"，打开塑料包装后递给[vanessa.name]。"
+							+ "成熟的狐女露出会意的表情，拿起了小"+item.getColour(0).getName()+"药片，调戏地说，[vanessa.speechNoEffects(~呜姆！~ 你还真想把我肚子搞大，啊？)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Before you can reply, [vanessa.name] pops the pill into her mouth and swallows it down."
-							+ " Playfully biting her lip, she breathlessly moans, [vanessa.speechNoEffects(Come on then... Make me a mommy...)]"
+							+ "你还没来得及回应，[vanessa.name]把药放在嘴里，吞了下去。"
+							+ "她玩笑般地咬着下唇，上气不接下气地呻吟着，[vanessa.speechNoEffects(过来吧……让我当妈妈吧……)]"
 						+ "</p>"
 						+ useDesc);
 			}

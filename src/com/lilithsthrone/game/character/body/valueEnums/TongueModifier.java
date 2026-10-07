@@ -7,19 +7,19 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum TongueModifier {
 	
-	RIBBED("ribbed"),
+	RIBBED("螺纹"),
 	
-	TENTACLED("tentacled"),
+	TENTACLED("长有触手"),
 	
-	BIFURCATED("bifurcated"),
+	BIFURCATED("分叉"),
 	
-	WIDE("wide"),
+	WIDE("宽大"),
 	
-	FLAT("flat"),
+	FLAT("平直"),
 	
-	STRONG("strong"),
+	STRONG("有力"),
 	
-	TAPERED("tapered");
+	TAPERED("锥形");
 	
 	private String descriptor;
 

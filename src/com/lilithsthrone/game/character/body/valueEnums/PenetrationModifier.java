@@ -14,38 +14,38 @@ import com.lilithsthrone.utils.Util;
  */
 public enum PenetrationModifier {
 
-	SHEATHED("sheathed", "Helps to hide bulge in clothing when not erect."),
+	SHEATHED("带鞘", "在未勃起时可以完全隐藏在衣物中。"),
 	
-	RIBBED("ribbed", ""),
+	RIBBED("螺纹", ""),
 	
-	TENTACLED("tentacled", ""),
+	TENTACLED("长有触手", ""),
 	
-	KNOTTED("knotted", "Grants ability to be pushed inside an orifice at the moment of orgasm, doubling effective diameter and locking partners together. (Requires orifice to be deep enough for knotted base to be inserted.)"),
+	KNOTTED("底端有结", "允许在高潮时将整个插入腔穴中，使有效直径翻倍并与伴侣连锁在一起。(要求腔穴有足够的深度支持基部插入)"),
 	
-	BLUNT("blunt", ""),
+	BLUNT("圆头", ""),
 
-	TAPERED("tapered", "Reduces effective diameter by 5%. (Mutually exclusive with 'flared'.)") {
+	TAPERED("尖头", "降低5%有效直径。(与“平头”互斥)") {
 		@Override
 		public List<PenetrationModifier> getMutuallyExclusivePenetrationModifiers() {
 			return Util.newArrayListOfValues(FLARED);
 		}
 	},
 	
-	FLARED("flared", "Increases effective diameter by 5%. (Mutually exclusive with 'tapered'.)") {
+	FLARED("平头", "增加5%有效直径(与“尖头”互斥)") {
 		@Override
 		public List<PenetrationModifier> getMutuallyExclusivePenetrationModifiers() {
 			return Util.newArrayListOfValues(TAPERED);
 		}
 	},
 	
-	BARBED("barbed", ""),
+	BARBED("带有倒刺", ""),
 	
-	VEINY("veiny", ""),
+	VEINY("青筋暴起", ""),
 	
-	PREHENSILE("prehensile", ""),
+	PREHENSILE("灵活可控", ""),
 	
-	OVIPOSITOR("ovipositor",
-			"Grants ability to lay eggs in the currently-penetrated orifice. (Requires the eggs to already be fertilised. Eggs cannot be laid in an already-pregnant target's vagina.)",
+	OVIPOSITOR("可产卵",
+			"允许在当前插入的腔穴中产卵。(需要卵已经受精。卵无法产在已怀孕角色的阴道内。)",
 			Util.newArrayListOfValues(
 					SexAreaPenetration.PENIS,
 					SexAreaPenetration.CLIT));
@@ -88,7 +88,7 @@ public enum PenetrationModifier {
 	
 	public String getDescription() {
 		if(description.isEmpty()) {
-			return "No gameplay effect.";
+			return "没有游戏内实际效果。";
 		}
 		return description;
 	}

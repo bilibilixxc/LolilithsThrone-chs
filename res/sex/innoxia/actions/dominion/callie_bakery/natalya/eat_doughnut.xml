@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -27,63 +27,42 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Eat doughnuts]]></title>
+	<title><![CDATA[吃甜甜圈]]></title>
 	<tooltip><![CDATA[
 		#IF(npc2==natalya)
-			Do as Mistress Natalya commands and eat her iced doughnut, before moving over to Callie.
+			听从主人娜塔莉亚的命令，先吃掉她的糖霜甜甜圈，再转向卡丽。
 		#ELSE
-			Begin by eating Callie's iced doughnut, before moving over to Mistress Natalya.
+			从卡丽的糖霜甜甜圈开始享用，再转向主人娜塔莉亚。
 		#ENDIF
-	]]></tooltip>
+]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
-				#IF(npc2==natalya)
-					Moving up behind Mistress Natlaya, you find yourself in a very familiar position, although unlike the other times in which you've eaten her ass, the centauress's puffy asshole is currently looking exactly like a delicious, iced doughnut. Her horse-like tail swishes to one side as you lean forwards, and a horny moan escapes from between her full lips as you slide your [pc.tongue+] over her sugary hole.
-					
-					<br/><br/>
-					
-					[natalya.speechNoEffects(~Mmm!~ Yes... Eat my doughnut, you [style.mule] slut!)] your Mistress demands. More than happy to do as she says, you start enthusiastically licking and kissing her icing-covered anus. More and more of the sweet, sugary coating is stripped from her puffy hole as you eat her ass, and as you swallow down the icing and sprinkles which you applied less than a minute ago, her ebony anus is quickly uncovered.
-					
-					<br/><br/>
-					
-					[callie.speechNoEffects(That's it... Eat her doughnut!)] Callie encourages you as she watches you eagerly performing anilingus on the centauress.
-					
-					<br/><br/>
-					
-					Mistress Natalya's huge, feral cock rises into a raging erection as you passionately lick and suck every last sweet drop of icing off her asshole. Leaving her puffy hole covered in nothing more than your saliva, you plant one last kiss on it, before looking over to Callie's unspoilt doughnut. Letting out a deep, horny moan, your Mistress commands, [natalya.speechNoEffects(Go on, show Callie what one of my [style.mules] can do!)]
-					
-					<br/><br/>
-					
-					Shuffling over to position yourself behind Callie, you lean forwards and plant a big, sloppy kiss on her iced asshole. As the horse-girl lets out a happy little squeal, you start sliding your [pc.tongue] over her puffy anus, and just like you did with your Mistress, you quickly strip the icing from her doughnut-shaped asshole. In less than a minute, her rear entrance is coated in nothing but your slimy saliva, and after you've given it one final kiss, you pull back and admire your handiwork.
-					
-					<br/><br/>
-					
-					Having removed the icing from Callie's and Natalya's assholes, you've transformed them from nicely-decorated doughnuts into lewd-looking, saliva-glazed fuck-holes. As their huge, horse-like cocks throb with need, they both eagerly push their asses back, presenting you with their horny, equine assholes. Hungry for more, and wanting to see these two huge horse-cocks blast their loads all over the floor, you decide to keep going and make your two lovers cum from your oral attention. Moving back over to Mistress Natalya, you press your lips against her puffy asshole and start enthusiastically eating her ass...
-				
-				#ELSE
-					Moving up behind Callie, you find yourself in a familiar position, although unlike your other experiences with eating her ass, the horse-girl's puffy asshole is currently looking exactly like a delicious, iced doughnut. Her horse-like tail swishes to one side as you lean forwards, and a horny moan escapes from between her full lips as you slide your [pc.tongue+] over her sugary hole.
-					
-					<br/><br/>
-					
-					[callie.speechNoEffects(~Mmm!~ Oh! Yes... Eat my doughnut... ~Ooh!~)] Callie excitedly moans. More than happy to do as she says, you start enthusiastically licking and kissing her icing-covered anus. More and more of the sweet, sugary coating is stripped from her puffy hole as you eat her ass, and as you swallow down the icing and sprinkles which you applied less than a minute ago, her ebony anus is quickly uncovered.
-					
-					<br/><br/>
-					
-					[natalya.speechNoEffects(That's it, show Callie what one of my [style.mules] can do!)] Mistress Natalya encourages you as she watches you eagerly performing anilingus on the horse-girl beside her.
-					
-					<br/><br/>
-					
-					Callie's huge, horse-like cock rises into a raging erection as you passionately lick and suck every last sweet drop of icing off her asshole. Leaving her puffy hole covered in nothing more than your saliva, you plant one last kiss on it, before looking over to your Mistress's unspoilt doughnut. Letting out a deep, horny moan, the centauress commands, [natalya.speechNoEffects(Come on [style.mule], it's my turn! Get over here and eat my ass!)]
-					
-					<br/><br/>
-					
-					Shuffling over to position yourself behind your Mistress, you lean forwards and plant a big, sloppy kiss on her iced asshole. As the centauress lets out an approving moan, you start sliding your [pc.tongue] over her puffy anus, and just like you did with Callie, you quickly strip the icing from her doughnut-shaped asshole. In less than a minute, her rear entrance is coated in nothing but your slimy saliva, and after you've given it one final kiss, you pull back and admire your handiwork.
-					
-					<br/><br/>
-					
-					Having removed the icing from Callie's and Natalya's assholes, you've transformed them from nicely-decorated doughnuts into lewd-looking, saliva-glazed fuck-holes. As their huge, horse-like cocks throb with need, they both eagerly push their asses back, presenting you with their horny, equine assholes. Hungry for more, and wanting to see these two huge horse-cocks blast their loads all over the floor, you decide to keep going and make your two lovers cum from your oral attention. Moving back over to Callie, you press your lips against her puffy asshole and start enthusiastically eating her ass...
-				#ENDIF
+					#IF(npc2==natalya)
+	你从主人娜塔莉亚身后靠近，发现自己处于一个非常熟悉的姿势，只不过与之前舔舐她肛门的经历不同，此刻半人马女性那肉感的肛门看起来就像一只诱人的糖霜甜甜圈。当你俯身向前时，她马匹般的尾巴甩向一侧，你用[pc.tongue+]划过她沾满糖霜的穴口，一声情动的呻吟从她丰满的唇间溢出。
+	<br/><br/>
+	[natalya.speechNoEffects(~嗯！~没错……吃掉我的甜甜圈，你这骚[style.mule]！)]主人命令道。你欣然从命，开始亢奋地舔舐亲吻起她裹满糖衣的肛门。随着你不断享用她的后庭，那层甜腻的糖衣逐渐从她肉感的穴口剥离，你咽下那些不到一分钟前才涂抹上的糖霜和彩糖，她黝黑的肛门很快暴露无遗。
+	<br/><br/>
+	[callie.speechNoEffects(就是这样……吃掉她的甜甜圈！)]卡丽看着你饥渴地为半人马进行吻肛，在一旁鼓励道。
+	<br/><br/>
+	你热情地舔吮掉主人娜塔莉亚肛门上最后一滴甜腻糖霜后，她那根硕大的兽态阳具勃然怒挺。现在她丰满的穴口只剩下你的唾液覆盖，你最后亲吻了一下，然后转头看向卡丽完好无损的甜甜圈。主人发出一声低沉的情动呻吟，命令道，[natalya.speechNoEffects(继续，让卡丽看看我驯养的[style.mules]有什么能耐！)]
+	<br/><br/>
+	你挪动到卡丽身后，俯身在她糖霜覆盖的肛门上印下一个湿漉漉的吻。马女发出一阵欢愉的轻叫，你开始用[pc.tongue]滑过她肉感的肛门，就像对待主人那样迅速剥落她甜甜圈形状后庭上的糖衣。不到一分钟，她的后穴就只剩下你黏滑的唾液，最后亲吻一次后，你退后欣赏自己的杰作。
+	<br/><br/>
+	清理了卡丽和娜塔莉亚肛门上的糖霜后，便将装饰精美的甜甜圈变成了淫液淋漓的性器。她们马状的巨根因渴望而悸动，两人都饥渴地后挺臀部，向你展示发情的马肛。你的欲望还没被满足，想要看着这两根巨型马屌将精液喷射在地上，决定继续用口舌服务，让两位爱人高潮。你回到主人娜塔莉亚身后，将嘴唇贴上她肉感的肛门，开始激情地享用起她的后庭……
+#ELSE
+	你从卡丽身后靠近，发现自己处于熟悉的姿势，只不过与之前舔舐她肛门的经历不同，此刻马女那肉感的肛门看起来就像一只诱人的糖霜甜甜圈。当你俯身向前时，她马匹般的尾巴甩向一侧，你用[pc.tongue+]划过她沾满糖霜的穴口，一声情动的呻吟从她丰满的唇间溢出。
+	<br/><br/>
+	[callie.speechNoEffects(~嗯！~哦！太棒了……吃掉我的甜甜圈……~噢！~)]卡丽兴奋地呻吟着。你欣然从命，开始亢奋地舔舐亲吻起她裹满糖衣的肛门。随着你不断享用她的后庭，那层甜腻的糖衣逐渐从她肉感的穴口剥离，你咽下那些不到一分钟前才涂抹上的糖霜和彩糖，她黝黑的肛门很快暴露无遗。
+	<br/><br/>
+	[natalya.speechNoEffects(就是这样，让卡丽看看我驯养的[style.mules]有什么能耐！)]主人娜塔莉亚看着你饥渴地为身旁的马女进行吻肛，鼓励道。
+	<br/><br/>
+	你热情地舔吮掉卡丽肛门上最后一滴甜腻糖霜时，她那根硕大的马屌勃然怒挺。现在她丰满的穴口只剩下你的唾液覆盖，你最后亲吻了一下，然后转头看向主人完好无损的甜甜圈。半人马发出一声低沉的情动呻吟，命令道，[natalya.speechNoEffects(来吧[style.mule]，轮到我了！过来享用我的屁股！)]
+	<br/><br/>
+	你挪动到主人身后，俯身在她糖霜覆盖的肛门上印下一个湿漉漉的吻。随着半人马发出赞许的呻吟，你开始用[pc.tongue]滑过她肉感的肛门，就像对待卡丽那样迅速剥落她甜甜圈形状后庭上的糖衣。不到一分钟，她的后穴就只剩下你黏滑的唾液，最后亲吻一次后，你退后欣赏自己的杰作。
+	<br/><br/>
+	清除了卡丽和娜塔莉亚肛门上的糖霜后，便将装饰精美的甜甜圈变成了淫液淋漓的性器。她们马状的巨根因渴望而悸动，两人都饥渴地后挺臀部，向你展示发情的马肛。你的欲望还没被满足，想要看着这两根巨型马屌将精液喷射在地上，决定继续用口舌服务，让两位爱人高潮。你回到卡丽身后，将嘴唇贴上她肉感的肛门，开始激情地享用起她的后庭……
+#ENDIF
 			]]></text>
 		</description>
 	</descriptions>

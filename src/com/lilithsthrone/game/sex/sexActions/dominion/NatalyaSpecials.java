@@ -37,7 +37,7 @@ public class NatalyaSpecials {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Demand facial";
+			return "要求颜射";
 		}
 		@Override
 		public String getActionDescription() {
@@ -49,8 +49,8 @@ public class NatalyaSpecials {
 		}
 		@Override
 		public String getDescription() {
-			return "Natalya's breathing starts to get faster and heavier, and as her [natalya.cockGirth], bestial cock starts wildly throbbing in your [pc.hands], she desperately paws on the ground with one of her front hoofs and calls out,"
-					+ " [natalya.speechNoEffects(Yes! ~Ooh!~ I am getting close! ~Aah!~ As your reward, you are to... ~Ooh!~ ...you are to take my load all over your face! ~Mmm!~)]";
+			return "[natalya.cockGirth]且兽性十足的鸡巴开始被你的[pc.hands]疯狂撸动，娜塔莉亚的呼吸越来越急促沉重，她疯狂地用一只前蹄拍打地面并大声叫喊，"
+					+ "[natalya.speechNoEffects(啊~！~哦！~我快去了！~啊啊！~作为奖励，你就……~哦！~ ……你就用脸接下这整整一发吧！~姆嗯！~)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -77,18 +77,18 @@ public class NatalyaSpecials {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Prepare ([style.colourMinorGood(facial)])";
+			return "准备([style.colourMinorGood(颜射)])";
 		}
 		@Override
 		public String getActionDescription() {
-			return "[style.colourMinorGood(Do as Natalya commands)] and position your [pc.face] in front of her horse-like cock, thereby preparing to receive a facial from her.";
+			return "[style.colourMinorGood(听从娜塔莉亚的命令)]，将[pc.face]摆在她马肉棒的正前方，接受一场淋漓尽致的颜射。";
 		}
 		@Override
 		public String getDescription() {
-			return "Letting out a lewd moan, Natalya cries out, [natalya.speechNoEffects(Yes! I am about... ~Ooh!~ ...about to cum! Do as I command and take my load on your face!)]"
+			return "娜塔莉亚淫靡地呻吟一声，喝道，[natalya.speechNoEffects(啊~！我快要……~哦哦！~……快要射了！听我的命令，让我弄在你脸上！)]"
 					+ "<br/><br/>"
-					+ "With the [natalya.race]'s [natalya.cockGirth] cock wildly throbbing in your [pc.hands], you do as you're told and shuffle around in front of it."
-					+ " Continuing to rub your Mistress's musky precum up and down the length of her hot shaft, you point the flared head directly at your face and prepare to receive your reward...";
+					+ "那[natalya.race][natalya.cockGirth]的鸡巴在你的[pc.hands]里猛烈地颤抖着，你于是照做，挪到了肉棒前方。"
+					+ "你继续揉弄着主人那散发着淫味的滚烫肉棒，将先走液涂遍了各处，同时用面部直直地对准了那平坦的龟头，准备好接受你的奖励……";
 		}
 		@Override
 		public void applyEffects() {
@@ -119,18 +119,18 @@ public class NatalyaSpecials {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Prepare ([style.colourMinorBad(floor)])";
+			return "准备([style.colourMinorBad(地面)])";
 		}
 		@Override
 		public String getActionDescription() {
-			return "[style.colourMinorBad(Refuse to do as Natalya commands)], and instead of receiving a facial from her, aim her cock away from you, causing her to cum all over the floor.";
+			return "你[style.colourMinorBad(违抗了娜塔莉亚的命令)]，并没有接受颜射，而是把她的鸡巴歪向一旁，让她射在地上。";
 		}
 		@Override
 		public String getDescription() {
-			return "Letting out a lewd moan, Natalya cries out, [natalya.speechNoEffects(Slave! I am about... ~Ooh!~ ...about to cum! Do as I command and take my load on your face!)]"
+			return "娜塔莉亚淫靡地呻吟一声，喝道，[natalya.speechNoEffects(奴隶！我快要……~哦哦！~……快要射了！听我的命令，让我泻在你脸上！)]"
 					+ "<br/><br/>"
-					+ "With the [natalya.race]'s [natalya.cockGirth] cock wildly throbbing in your [pc.hands], you decide that you'd rather not do as you're told and instead shuffle around to the side of it."
-					+ " Continuing to rub your Mistress's musky precum up and down the length of her hot shaft, you point the flared head away from you and prepare for it to unload all over the floor...";
+					+ "那[natalya.race][natalya.cockGirth]的鸡巴在你的[pc.hands]里猛烈地颤抖着，你并不准备照做，反而躲到了一旁。"
+					+ "你继续揉弄着主人那散发着淫味的滚烫肉棒，将先走液涂遍了各处，把那平坦的龟头偏向了一旁，让她泻在地上……";
 		}
 		@Override
 		public void applyEffects() {

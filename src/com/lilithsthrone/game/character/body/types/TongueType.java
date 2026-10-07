@@ -26,44 +26,44 @@ public class TongueType {
 	public static AbstractTongueType HUMAN = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.HUMAN,
 			3,
-			"tongue",
-			"tongues",
+			"舌头",
+			"舌头",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)] [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"[npc.Her]的嘴里有一根[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues()) {
 	};
 	
 	public static AbstractTongueType ANGEL = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.ANGEL,
 			3,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("angelic"),
-			Util.newArrayListOfValues("angelic"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)] [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
+			"[npc.Her]的嘴里有一根[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues()) {
 	};
 	
 	public static AbstractTongueType DEMON_COMMON = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.DEMON,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)] [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			"[npc.Her]的嘴里有一根[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues()) {
 	};
 	
 	public static AbstractTongueType DOG_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.DOG_MORPH,
 			8,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("dog-like"),
-			Util.newArrayListOfValues("dog-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], dog-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("犬一般"),
+			Util.newArrayListOfValues("犬一般"),
+			"[npc.Her]的嘴里有一根犬一般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.WIDE,
 					TongueModifier.FLAT)) {
@@ -72,11 +72,11 @@ public class TongueType {
 	public static AbstractTongueType WOLF_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.WOLF_MORPH,
 			8,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("wolf-like"),
-			Util.newArrayListOfValues("wolf-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], wolf-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("狼一般"),
+			Util.newArrayListOfValues("狼一般"),
+			"[npc.Her]的嘴里有一根狼一般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.WIDE,
 					TongueModifier.FLAT)) {
@@ -85,11 +85,11 @@ public class TongueType {
 	public static AbstractTongueType FOX_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.FOX_MORPH,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("fox-like"),
-			Util.newArrayListOfValues("fox-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], fox-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("狐狸般"),
+			Util.newArrayListOfValues("狐狸般"),
+			"[npc.Her]的嘴里有一根狐狸般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.FLAT)) {
 	};
@@ -97,11 +97,11 @@ public class TongueType {
 	public static AbstractTongueType CAT_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.CAT_MORPH,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("cat-like"),
-			Util.newArrayListOfValues("cat-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], cat-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("猫一般"),
+			Util.newArrayListOfValues("猫一般"),
+			"[npc.Her]的嘴里有一根猫一般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.FLAT)) {
 	};
@@ -109,11 +109,11 @@ public class TongueType {
 	public static AbstractTongueType COW_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.COW_MORPH,
 			12,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("cow-like"),
-			Util.newArrayListOfValues("cow-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], cow-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("牛一般"),
+			Util.newArrayListOfValues("牛一般"),
+			"[npc.Her]的嘴里有一根牛一般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.STRONG)) {
 	};
@@ -121,11 +121,11 @@ public class TongueType {
 	public static AbstractTongueType ALLIGATOR_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.ALLIGATOR_MORPH,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("alligator-like"),
-			Util.newArrayListOfValues("alligator-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], alligator-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("鳄鱼般"),
+			Util.newArrayListOfValues("鳄鱼般"),
+			"[npc.Her]的嘴里有一根鳄鱼般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.STRONG)) {
 	};
@@ -133,11 +133,11 @@ public class TongueType {
 	public static AbstractTongueType HORSE_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.HORSE_MORPH,
 			8,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("horse-like"),
-			Util.newArrayListOfValues("horse-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], horse-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("马一般"),
+			Util.newArrayListOfValues("马一般"),
+			"[npc.Her]的嘴里有一根马一般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.STRONG)) {
 	};
@@ -145,11 +145,11 @@ public class TongueType {
 	public static AbstractTongueType REINDEER_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.REINDEER_MORPH,
 			8,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("reindeer-like"),
-			Util.newArrayListOfValues("reindeer-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], reindeer-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("驯鹿般"),
+			Util.newArrayListOfValues("驯鹿般"),
+			"[npc.Her]的嘴里有一根驯鹿般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.STRONG)) {
 	};
@@ -157,11 +157,11 @@ public class TongueType {
 	public static AbstractTongueType HARPY = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.HARPY,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("bird-like"),
-			Util.newArrayListOfValues("bird-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], bird-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("鸟一般"),
+			Util.newArrayListOfValues("鸟一般"),
+			"[npc.Her]的嘴里有一根鸟一般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues(
 					TongueModifier.FLAT)) {
 	};
@@ -169,44 +169,44 @@ public class TongueType {
 	public static AbstractTongueType SQUIRREL_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.SQUIRREL_MORPH,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("squirrel-like"),
-			Util.newArrayListOfValues("squirrel-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], squirrel-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("松鼠般"),
+			Util.newArrayListOfValues("松鼠般"),
+			"[npc.Her]的嘴里有一根松鼠般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues()) {
 	};
 	
 	public static AbstractTongueType RAT_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.RAT_MORPH,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("rat-like"),
-			Util.newArrayListOfValues("rat-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], rat-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("老鼠般"),
+			Util.newArrayListOfValues("老鼠般"),
+			"[npc.Her]的嘴里有一根老鼠般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues()) {
 	};
 	
 	public static AbstractTongueType RABBIT_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.RABBIT_MORPH,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("rabbit-like"),
-			Util.newArrayListOfValues("rabbit-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], rabbit-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("兔子般"),
+			Util.newArrayListOfValues("兔子般"),
+			"[npc.Her]的嘴里有一根兔子般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues()) {
 	};
 	
 	public static AbstractTongueType BAT_MORPH = new AbstractTongueType(BodyCoveringType.TONGUE,
 			Race.BAT_MORPH,
 			6,
-			"tongue",
-			"tongues",
-			Util.newArrayListOfValues("bat-like"),
-			Util.newArrayListOfValues("bat-like"),
-			" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], bat-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.",
+			"舌头",
+			"舌头",
+			Util.newArrayListOfValues("蝙蝠般"),
+			Util.newArrayListOfValues("蝙蝠般"),
+			"[npc.Her]的嘴里有一根蝙蝠般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。",
 			Util.newArrayListOfValues()) {
 	};
 	

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[dingy seating]]></name>
-	<tooltipDescription><![CDATA[Around the edges of 'The Crossed Blades' tavern, there are dingy seating areas, at which aggressive patrons like to sit.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in one of the dingy seating areas within 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[昏暗的座位区]]></name>
+	<tooltipDescription><![CDATA[在十字利刃的边缘，有一些喧闹的座位区，好斗的顾客喜欢坐在那里。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在十字利刃的一个喧闹座位上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

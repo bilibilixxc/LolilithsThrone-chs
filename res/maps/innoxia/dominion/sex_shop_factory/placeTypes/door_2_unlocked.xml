@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[unlocked door]]></name>
-	<tooltipDescription><![CDATA[This door links the main factory to the slime milking chamber, and has been unlocked.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside a door in the factory beneath Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[已解锁的门]]></name>
+	<tooltipDescription><![CDATA[这扇门连接着主工厂和史莱姆挤奶室，现在已经被解锁了。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[洛维耶纳奢侈品店下面工厂的门旁边]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>door</svgName>
 	<colour>BASE_GREEN_LIGHT</colour>

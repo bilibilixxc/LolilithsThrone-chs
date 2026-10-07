@@ -8,22 +8,22 @@ package com.lilithsthrone.game.character.body.valueEnums;
 public enum FootStructure {
 
 	/**no feet*/
-	NONE("none", "[npc.She] [npc.do] not have feet."),
+	NONE("无", "[npc.She]没有脚。"),
 	
 	/**walk with feet flat on the ground*/
-	PLANTIGRADE("plantigrade", "[npc.She] [npc.verb(walk)] with [npc.her] feet flat on the ground."),
+	PLANTIGRADE("跖行", "[npc.She]使用脚掌在陆地上行走。"),
 
 	/**walk on toes with the heel permanently raised*/
-	DIGITIGRADE("digitigrade", "[npc.She] [npc.verb(walk)] on [npc.her] [npc.toes], with [npc.her] heel being permanently raised."),
+	DIGITIGRADE("趾行", "[npc.She]使用[npc.toes]行走，脚跟总是高高抬起。"),
 
 	/**walk on hoof with the rest of the foot permanently raised*/
-	UNGULIGRADE("unguligrade", "[npc.She] [npc.verb(walk)] on [npc.her] [npc.toes], with the rest of [npc.her] foot being permanently raised."),
+	UNGULIGRADE("蹄行", "[npc.She]使用[npc.toes]行走，而脚的其他部分则总是高高抬起。"),
 
 	/**have segmented legs like a spider, so foot is the 'tarsus' segment.*/
-	ARACHNOID("arachnoid", "[npc.She] [npc.verb(walk)] on the ends of [npc.her] segmented arachnoid legs."),
+	ARACHNOID("蛛形", "[npc.She]使用蛛化的节肢末端行走。"),
 	
 	/**use tentacle-legs to walk around on*/
-	TENTACLED("tentacled", "[npc.She] [npc.verb(use)] the lower parts of [npc.her] tentacles to walk around on.");
+	TENTACLED("触手", "[npc.She]使用触手的下半段行走。");
 	
 	private String name;
 	private String description;

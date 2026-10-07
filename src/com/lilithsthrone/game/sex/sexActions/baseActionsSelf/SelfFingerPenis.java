@@ -29,31 +29,31 @@ public class SelfFingerPenis {
 			SexParticipantType.SELF) {
 		@Override
 		public String getActionTitle() {
-			return "Tease cock (self)";
+			return "用阴茎挑逗(自己)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Get some pleasure from stroking and teasing your [npc.cock].";
+			return "轻抚挑弄来刺激你的[npc.cock]寻求快感。";
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterPerformingAction().isCoverableAreaExposed(CoverableArea.PENIS)) {
 				return UtilText.returnStringAtRandom(
-						"Reaching down between [npc.her] [npc.legs], [npc.name] [npc.verb(slide)] [npc.her] [npc.fingers+] up and down the length of [npc.her] [npc.cock+] and [npc.verb(let)] out [npc.a_moan+].",
-						"[npc.Name] [npc.groansVerb+] as [npc.she] [npc.verb(tease)] [npc.her] [npc.fingers] over the [npc.cockHead+] of [npc.her] [npc.cock+].",
-						"Stroking and teasing [npc.her] [npc.fingers+] up and down the length of [npc.her] [npc.cock+], [npc.name] can't help but let out a series of [npc.moans+].",
-						"Sliding [npc.her] [npc.fingers] up and down over [npc.her] [npc.cock+], [npc.name] [npc.verb(let)] out a series of [npc.groans+].");
+						"将手探向[npc.her][npc.legs]之间，[npc.name][npc.fingers+]沿着[npc.her][npc.cock+]上下游走并发出[npc.a_moan+]。",
+						"当[npc.she]用[npc.fingers]在[npc.cock+][npc.cockHead+]上挑逗着的时候，[npc.Name][npc.groansVerb+]。",
+						"将[npc.her][npc.fingers+]沿着[npc.cock+]上下轻抚逗弄着，[npc.name]发出一连系列难以自抑的[npc.moans+]。",
+						"[npc.name]的[npc.fingers]沿着[npc.cock+]上下滑动着，发出了一连串的[npc.groans+]。");
 				
 			} else {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(run)] [npc.her] [npc.hand] over [npc.her] groin, before pressing [npc.her] "+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.PENIS).getName()
-							+" down against [npc.her] [npc.cock+] and letting out [npc.a_moan+].",
-						"[npc.Name] [npc.verb(slide)] [npc.her] [npc.fingers+] down between [npc.her] [npc.legs], before letting out [npc.a_moan+] as [npc.she] [npc.verb(press)] [npc.her] "
-							+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.PENIS).getName()+" down against [npc.her] [npc.cock+].",
-						"[npc.Name] [npc.verb(slide)] [npc.her] [npc.fingers] over [npc.her] "+Main.sex.getCharacterPerformingAction().getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()
-							+", before pressing down and trying to stimulate [npc.her] [npc.cock+] through [npc.her] clothing.",
-						"Pushing down between [npc.her] [npc.legs] with the palm of [npc.her] [npc.hand], [npc.name] [npc.verb(rub)] [npc.her] "+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.PENIS).getName()
-							+" down against [npc.her] concealed [npc.cock+].");
+						"[npc.Name]用[npc.her]的[npc.hand]抚摸过[npc.her]的腹股沟，然后将"+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.PENIS).getName()
+							+"向着[npc.her][npc.cock+]压下并发出[npc.a_moan+]。",
+						"[npc.Name][npc.fingers+]滑向[npc.her]的[npc.legs]之间，发出[npc.a_moan+]并按压起[npc.her]的"
+							+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.PENIS).getName()+"抵住[npc.her][npc.cock+]。",
+						"[npc.Name]将[npc.her]的[npc.fingers]滑过[npc.her]的"+Main.sex.getCharacterPerformingAction().getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()
+							+"，并向下按压，试图隔着[npc.her]的衣服刺激[npc.her][npc.cock+]。",
+						"[npc.name]用[npc.her]的手掌向下按压[npc.her]的[npc.legs]之间，用"+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.PENIS).getName()
+							+"抵住下面[npc.cock+]揉搓着。");
 			}
 		}
 		@Override
@@ -73,18 +73,18 @@ public class SelfFingerPenis {
 			SexParticipantType.SELF) {
 		@Override
 		public String getActionTitle() {
-			return "Start stroking cock";
+			return "开始撸管";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take hold of your [npc.cock+] and start jerking yourself off.";
+			return "握住你[npc.cock+]，开始打飞机。";
 		}
 		@Override
 		public String getDescription() {
 			return (UtilText.returnStringAtRandom(
-					"Reaching down between [npc.her] [npc.legs], [npc.name] [npc.verb(grab)] hold of [npc.her] [npc.cock+] and [npc.verb(start)] to masturbate.",
-					"Taking hold of [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] repeatedly stroking up and down.",
-					"Reaching down and taking hold of [npc.her] [npc.cock+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] jerking [npc.herself] off."));
+					"[npc.name]将手伸到[npc.her]的[npc.legs]之间，抓住[npc.her][npc.cock+]并开始手淫。",
+					"[npc.Name]握住并开始上下反复抚摸[npc.her][npc.cock+]。",
+					"[npc.Name]伸手握住[npc.her][npc.cock+]，发出[npc.a_moan+]，并开始给自己打手冲。"));
 		}
 	};
 	
@@ -98,19 +98,19 @@ public class SelfFingerPenis {
 			SexPace.DOM_GENTLE) {
 		@Override
 		public String getActionTitle() {
-			return "Gentle cock stroking";
+			return "温柔地抚摸鸡巴";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Focus on gently stroking your [npc.cock+].";
+			return "集中精力轻轻抚摸你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] slowly [npc.verb(slide)] [npc.her] [npc.fingers] up and down the length of [npc.her] [npc.cock+].",
-					"Gently sliding [npc.her] [npc.fingers+] up and down around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(jerk)] [npc.herself] off.",
-					"Wrapping [npc.her] [npc.fingers] around [npc.her] [npc.cock+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] gently [npc.verb(stroke)] up and down.",
-					"Focusing on the pleasure [npc.sheIs] giving to [npc.herself], [npc.name] [npc.verb(focus)] on gently stroking [npc.her] [npc.fingers] up and down around [npc.her] [npc.cock+].");
+					"[npc.name]用[npc.fingers]慢慢地上下套弄自己[npc.cock+]，[npc.lips+]间流出[npc.A_moan+]",
+					"[npc.name][npc.fingers+]在[npc.her][npc.cock+]周围上下温柔地滑动，[npc.she]开始发出一连串愉悦的[npc.moans]，有节奏地撸动自己。",
+					"[npc.name]用[npc.fingers]包裹住自己[npc.cock+]，轻轻地上下抚摸并发出[npc.a_moan+]。",
+					"[npc.Name]沉溺于自我满足的愉悦中，[npc.fingers]轻柔地上下抚弄着[npc.her][npc.cock+]。");
 		}
 	};
 	
@@ -124,19 +124,19 @@ public class SelfFingerPenis {
 			SexPace.DOM_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Cock stroking";
+			return "摸摸鸡巴";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Focus on stroking your [npc.cock+].";
+			return "专注于抚摸你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] eagerly [npc.verb(slide)] [npc.her] [npc.fingers] up and down the length of [npc.her] [npc.cock+].",
-					"Desperately sliding [npc.her] [npc.fingers+] up and down around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] letting out a series of [npc.moans+] as [npc.she] rhythmically [npc.verb(jerk)] [npc.herself] off.",
-					"Wrapping [npc.her] [npc.fingers] around [npc.her] [npc.cock+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] frantically [npc.verb(stroke)] up and down.",
-					"Focusing on the pleasure [npc.sheIs] giving to [npc.herself], [npc.name] [npc.verb(focus)] on eagerly stroking [npc.her] [npc.fingers] up and down around [npc.her] [npc.cock+].");
+					"[npc.name]用[npc.fingers]急切地上下套弄自己[npc.cock+]，[npc.lips+]间流出[npc.A_moan+]",
+					"[npc.name][npc.fingers+]在[npc.her][npc.cock+]周围上下迷乱地滑动，[npc.she]开始发出一连串愉悦的[npc.moans]，有节奏地撸动自己。",
+					"[npc.name]用[npc.fingers]包裹住自己[npc.cock+]，疯狂地撸动并发出[npc.a_moan+]。",
+					"[npc.Name]沉溺于自我满足的愉悦中，[npc.fingers]饥渴地上下抚弄着[npc.her][npc.cock+]。");
 		}
 	};
 	
@@ -150,19 +150,19 @@ public class SelfFingerPenis {
 			SexPace.DOM_ROUGH) {
 		@Override
 		public String getActionTitle() {
-			return "Rough cock stroking";
+			return "摸摸鸡巴(粗暴)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Focus on roughly stroking your [npc.cock+].";
+			return "专心粗暴地撸动你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] violently [npc.verb(jerk)] [npc.her] [npc.fingers] up and down the length of [npc.her] [npc.cock+].",
-					"Roughly pumping [npc.her] [npc.fingers+] up and down around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] letting out a series of [npc.moans+] as [npc.she] rhythmically [npc.verb(jerk)] [npc.herself] off.",
-					"Wrapping [npc.her] [npc.fingers] around [npc.her] [npc.cock+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] frantically [npc.verb(stroke)] up and down.",
-					"Focusing on the pleasure [npc.sheIs] giving to [npc.herself], [npc.name] [npc.verb(focus)] on frantically stroking [npc.her] [npc.fingers] up and down around [npc.her] [npc.cock+].");
+					"[npc.name]用[npc.fingers]粗暴地上下套弄自己[npc.cock+]，[npc.lips+]间流出[npc.A_moan+]",
+					"[npc.name][npc.fingers+]在[npc.her][npc.cock+]周围上下粗暴地滑动，[npc.she]开始发出一连串愉悦的[npc.moans]，有节奏地撸动自己。",
+					"[npc.name]用[npc.fingers]包裹住自己[npc.cock+]，疯狂地撸动并发出[npc.a_moan+]。",
+					"[npc.Name]沉溺于自我满足的愉悦中，[npc.fingers]疯狂打着环、上下抚弄着[npc.her][npc.cock+]。");
 		}
 	};
 	
@@ -176,19 +176,19 @@ public class SelfFingerPenis {
 			SexPace.SUB_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Cock stroking";
+			return "摸摸鸡巴";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Focus on gently stroking your [npc.cock+].";
+			return "集中精力轻轻抚摸你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] [npc.verb(slide)] [npc.her] [npc.fingers] up and down the length of [npc.her] [npc.cock+].",
-					"Sliding [npc.her] [npc.fingers+] up and down around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] letting out a series of [npc.moans+] as [npc.she] rhythmically [npc.verb(jerk)] [npc.herself] off.",
-					"Wrapping [npc.her] [npc.fingers] around [npc.her] [npc.cock+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(stroke)] up and down.",
-					"Focusing on the pleasure [npc.sheIs] giving to [npc.herself], [npc.name] [npc.verb(focus)] on stroking [npc.her] [npc.fingers] up and down around [npc.her] [npc.cock+].");
+					"[npc.name]用[npc.fingers]上下套弄自己[npc.cock+]，[npc.lips+]间流出[npc.A_moan+]",
+					"[npc.name][npc.fingers+]在[npc.cock+]周围上下滑动，[npc.she]开始发出一连串愉悦的[npc.moans]，有节奏地撸动自己。",
+					"[npc.name]用[npc.fingers]包裹住自己[npc.cock+]，撸动起来并发出[npc.a_moan+]。",
+					"[npc.Name]沉溺于自我满足的愉悦中，[npc.fingers]打着环上下抚弄着[npc.her][npc.cock+]。");
 		}
 		
 	};
@@ -203,19 +203,19 @@ public class SelfFingerPenis {
 			SexPace.SUB_EAGER) {
 		@Override
 		public String getActionTitle() {
-			return "Eager cock stroking";
+			return "摸摸鸡巴(渴求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Focus on eagerly stroking your [npc.cock+].";
+			return "渴求地关照你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] eagerly [npc.verb(slide)] [npc.her] [npc.fingers] up and down the length of [npc.her] [npc.cock+].",
-					"Desperately sliding [npc.her] [npc.fingers+] up and down around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] letting out a series of [npc.moans+] as [npc.she] rhythmically [npc.verb(jerk)] [npc.herself] off.",
-					"Wrapping [npc.her] [npc.fingers] around [npc.her] [npc.cock+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] frantically [npc.verb(stroke)] up and down.",
-					"Focusing on the pleasure [npc.sheIs] giving to [npc.herself], [npc.name] [npc.verb(focus)] on eagerly stroking [npc.her] [npc.fingers] up and down around [npc.her] [npc.cock+].");
+					"[npc.name]用[npc.fingers]急切地上下套弄自己[npc.cock+]，[npc.lips+]间流出[npc.A_moan+]",
+					"[npc.name][npc.fingers+]在[npc.her][npc.cock+]周围上下迷乱地滑动，[npc.she]开始发出一连串愉悦的[npc.moans]，有节奏地撸动自己。",
+					"[npc.name]用[npc.fingers]包裹住自己[npc.cock+]，疯狂地撸动并发出[npc.a_moan+]。",
+					"[npc.Name]沉溺于自我满足的愉悦中，[npc.fingers]饥渴地上下抚弄着[npc.her][npc.cock+]。");
 		}
 	};
 	
@@ -228,15 +228,15 @@ public class SelfFingerPenis {
 			SexParticipantType.SELF) {
 		@Override
 		public String getActionTitle() {
-			return "Stop cock stroking";
+			return "停止摸鸡巴";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Stop stroking your [npc.cock+].";
+			return "停止抚摸你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
-			return "With [npc.a_moan+], [npc.name] [npc.verb(take)] [npc.her] [npc.hand] away from [npc.her] [npc.cock+] and [npc.verb(stop)] jerking off.";
+			return "[npc.Name]发出[npc.a_moan+]，将[npc.hand]从[npc.her][npc.cock+]上移开，停止了手冲。";
 		}
 	};
 }

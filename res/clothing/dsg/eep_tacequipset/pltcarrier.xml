@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A tag sewn into the inside of the back reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[背部内侧有一个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>2000</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[plate carrier]]></name>
+		<name><![CDATA[插板防弹背心]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[plate carriers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[插板防弹背心]]></namePlural> 
 
-		<description><![CDATA[A three piece ballistic fibre vest with ceramic inserts that cover the wearer's vitals. The modular pouches on the front can hold a variety of ammunition.]]></description>
+		<description><![CDATA[一件由三块防弹纤维织物组成并插有陶瓷插板的背心，可覆盖穿戴者的要害部位。前部的模块弹药包可容纳各种弹药。]]></description>
 
 		<physicalResistance>20</physicalResistance> 
 
@@ -35,8 +34,8 @@
 			<category id="branchtape" priority="1"> 
 				<categoryName><![CDATA[Branchtape]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[None]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Contractor ]]></namePrefix>
+					<stickerName><![CDATA[无]]></stickerName>
+					<namePrefix priority="1"><![CDATA[承包商]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
 					<imageName/>
@@ -46,10 +45,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="Enforcer" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 			
-					<stickerName><![CDATA[Enforcer]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix> 
+					<stickerName><![CDATA[执法者]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者]]></namePrefix> 
 					<namePostfix/> 
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one is clearly labeled for Enforcer use.</i>]]></descriptionModification> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>它明确标注为执法者使用。</i>]]></descriptionModification> 
 					<imageName>pltcarrier_st_enftape.svg</imageName> 
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -133,27 +132,26 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] head through the plate carrier's neck hole and [npc.verb(secure)] the cummerbund on either side of [npc.her] torso.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] head through the plate carrier's neck hole and [npc.verb(secure)] the cummerbund on either side of [npc2.her] torso.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(shove)] [npc2.namePos] head through the plate carrier's neck hole and hastily [npc.verb(secure)] the cummerbund on either side of [npc2.her] torso.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]从[npc.her]的头部套上防弹背心并在[npc.her]的躯干固定好侧围。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]从[npc2.namePos]的头部套上防弹背心并在[npc2.her]的躯干固定好侧围。
+		]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]塞进防弹背心里，让[npc2.her]的头从背心里伸出来，并迅速的将侧围紧紧的固定债[npc2.her]的躯干的两侧。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc.her] plate carrier and [npc.verb(slide)] [npc.her] head through the neck hole.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc2.namePos] plate carrier and [npc.verb(slide)] [npc2.her] head through the neck hole.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(rip)] open the cummerbund either side of [npc2.namePos] plate carrier and [npc.verb(yank)] the rest over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开[npc.her]的防弹背心侧围并将[npc.her]的头部从背心中退出来。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]解开[npc2.namePos]的防弹背心侧围并将[npc2.her]的头部从背心中退出来。
+		]]></other>
+		<otherRough><![CDATA[
+[npc.Name]撕开[npc2.namePos]的背心两侧的侧围，然后将护甲从[npc2.her]的头顶上拽走。]]></otherRough>
 	</displacementText>
 	
 </clothing>

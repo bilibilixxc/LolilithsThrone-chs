@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Look in the mods folder for a commented version of this. -->
 <outfit>
 	<coreAttributes>
-		<name><![CDATA[generic prostitute (masculine)]]></name>
+		<name><![CDATA[一般娼妓(男性化)]]></name>
 		
-		<description><![CDATA[Revealing clothing.]]></description>
+		<description><![CDATA[裸露衣物]]></description>
 		
 		<femininity>MASCULINE</femininity>
 		

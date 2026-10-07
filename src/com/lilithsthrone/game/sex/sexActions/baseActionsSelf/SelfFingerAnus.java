@@ -32,12 +32,12 @@ public class SelfFingerAnus {
 
         @Override
         public String getActionTitle() {
-            return "Spread ass";
+            return "掰开臀瓣";
         }
 
         @Override
         public String getActionDescription() {
-            return "Use your [npc.hands] to spread your ass.";
+            return "用你的[npc.hands]掰开臀瓣。";
         }
 
         @Override
@@ -45,31 +45,31 @@ public class SelfFingerAnus {
             if (Main.sex.isMasturbation()) {
                 if (Main.sex.getSexPositionSlot(Main.game.getPlayer()).hasTag(SexSlotTag.ALL_FOURS)) {
                     return UtilText.returnStringAtRandom(
-                            "Reaching back with one [pc.hand], you grab your [pc.ass+] and pull to one side, letting out [pc.a_moan+] as you spread your [pc.asshole+].",
-                            "You reach back with one [pc.hand], moaning softly as you take hold of your [pc.ass+], before invitingly pulling to one side and spreading your [pc.asshole+].",
-                            "Sliding your fingertips over your [pc.asshole+], you let out [pc.a_moan+] as you grab one of your [pc.assSize] ass cheeks and pull to one side in order to present your [pc.asshole+].",
-                            "You eagerly slide your [pc.fingers] over your needy [pc.asshole], [pc.moaning+] as you use your [pc.hand] to pull your ass cheek to one side and present yourself for anal penetration.");
+                            "你收回[pc.hand]，抓住[pc.ass+]，把它掰到一边，边露出你[pc.asshole+]边[pc.asshole+]。",
+                            "你用一只[pc.hand]伸到后面， 一边轻声呻吟一边扒住你[pc.ass+]，然后诱人地拉向一边掰开，张开你[pc.asshole+]。",
+                            "你指尖滑过[pc.asshole+]，发出[pc.a_moan+]，同时抓住你[pc.assSize]的臀肉掰向一边，以展示[pc.asshole+]。",
+                            "你急切地用你[pc.fingers]滑过你饥渴的[pc.asshole]，[pc.moaning+]同时用你的[pc.hand]将臀肉掰向一侧，为肛门插入做好准备。");
                 } else {
                     return UtilText.returnStringAtRandom(
-                            "Reaching back with both [pc.hands], you grab your [pc.assSize] ass cheeks and pull them apart, letting out [pc.a_moan+] as you spread your [pc.asshole+].",
-                            "You reach back with both [pc.hands], moaning softly as you invitingly pull your [pc.assSize] ass cheeks apart and spread open your [pc.asshole+].",
-                            "Sliding your fingertips over your [pc.asshole+], you let out [pc.a_moan+] as you grab your [pc.assSize] ass cheeks and pull them apart in order to present your [pc.asshole+].",
-                            "You eagerly slide your [pc.fingers] over your needy [pc.asshole], [pc.moaning+] as you use your [pc.hands] to pull your ass cheeks aside and present yourself for anal penetration.");
+                            "你[pc.hands]向后伸，抓住[pc.assSize]的臀肉并将它们分开，一边发出[pc.a_moan+]一边张开你[pc.asshole+]。",
+                            "你用[pc.hands]向后伸，一边轻声呻吟，一边诱人地掰开[pc.assSize]的臀肉并张开你[pc.asshole+]。",
+                            "你将指尖滑过[pc.asshole+]，发出[pc.a_moan+]，同时掰开[pc.assSize]的两瓣臀肉，展示你[pc.asshole+]。",
+                            "你急切地用你[pc.fingers]滑过你饥渴的[pc.asshole]，[pc.moaning+]同时用你的[pc.hands]将两瓣臀肉掰开，为肛门插入做好准备。");
                 }
             } else if (Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.ALL_FOURS)) {
                 return UtilText.parse(Main.sex.getCharacterPerformingAction(), Main.sex.getTargetedPartner(Main.sex.getCharacterPerformingAction()),
                         UtilText.returnStringAtRandom(
-                                "Reaching back with one [npc.hand], [npc.name] [npc.verb(grab)] [npc.her] [npc.ass+] and [npc.verb(pull)] to one side, letting out [npc.a_moan+] as [npc.she] [npc.verb(present)] [npc.her] [npc.asshole+] to [npc2.name].",
-                                "[npc.Name] [npc.verb(reach)] back with one [npc.hand], moaning softly as [npc.she] [npc.verb(grab)] hold of [npc.her] [npc.ass+], before invitingly pulling to one side and presenting [npc.her] [npc.asshole+] to [npc2.name].",
-                                "Sliding [npc.her] fingertips over [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(grab)] one of [npc.her] [npc.assSize] ass cheeks and [npc.verb(pull)] to one side in order to present [npc.her] [npc.asshole+] to [npc2.name].",
-                                "[npc.Name] eagerly [npc.verb(slide)] [npc.her] [npc.fingers] over [npc.her] needy [npc.asshole], [npc.moaning+] as [npc.she] [npc.verb(use)] [npc.her] [npc.hand] to pull [npc.her] ass cheek to one side and [npc.verb(present)] [npc.herself] for anal penetration."));
+                                "[npc.name]将一只[npc.hand]伸到后面，抓住[npc.her][npc.ass+]并掰到一边，[npc.she]发出[npc.a_moan+]的同时，将[npc.her][npc.asshole+]呈现给[npc2.name]。",
+                                "[npc.Name]向后伸出一只[npc.hand]，轻声呻吟着抓住[npc.her][npc.ass+]，然后诱人地掰向一边，向[npc2.name]露出[npc.her][npc.asshole+]。",
+                                "[npc.name]指尖滑过[npc.her][npc.asshole+]，发出[npc.a_moan+]，[npc.she]抓住[npc.her][npc.assSize]的一瓣臀肉，掰向一边，将[npc.her][npc.asshole+]呈现给[npc2.name]。",
+                                "[npc.Name]急切地用[npc.fingers]磨蹭着欲求不满的[npc.asshole]，[npc.moaning+]着用[npc.hand]将掰开臀肉，为肛门插入做好准备。"));
             } else {
                 return UtilText.parse(Main.sex.getCharacterPerformingAction(), Main.sex.getTargetedPartner(Main.sex.getCharacterPerformingAction()),
                         UtilText.returnStringAtRandom(
-                                "Reaching back with both [npc.hands], [npc.name] [npc.verb(grab)] [npc.her] [npc.assSize] ass cheeks and [npc.verb(pull)] them apart, letting out [npc.a_moan+] as [npc.she] [npc.verb(present)] [npc.her] [npc.asshole+] to [npc2.name].",
-                                "[npc.Name] [npc.verb(reach)] back with both [npc.hands], moaning softly as [npc.she] invitingly [npc.verb(pull)] [npc.her] [npc.assSize] ass cheeks apart and [npc.verb(present)] [npc.her] [npc.asshole+] to [npc2.name].",
-                                "Sliding [npc.her] fingertips over [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(grab)] [npc.her] [npc.assSize] ass cheeks and [npc.verb(pull)] them apart in order to present [npc.her] [npc.asshole+] to [npc2.name].",
-                                "[npc.Name] eagerly [npc.verb(slide)] [npc.her] [npc.fingers] over [npc.her] needy [npc.asshole], [npc.moaning+] as [npc.she] [npc.verb(use)] [npc.her] [npc.hands] to pull [npc.her] ass cheeks aside and [npc.verb(present)] [npc.herself] for anal penetration."));
+                                "[npc.name]双[npc.hand]伸到背后，抓住并掰开[npc.assSize]的臀肉，[npc.she]发出[npc.a_moan+]的同时，将[npc.her][npc.asshole+]呈现给[npc2.name]。",
+                                "[npc.Name]双[npc.hand]伸到背后，轻声呻吟着，邀请般掰开[npc.assSize]的两瓣屁股，将[npc.her][npc.asshole+]呈现给[npc2.name]。",
+                                "[npc.name]指尖滑过[npc.her][npc.asshole+]，发出[npc.a_moan+]，[npc.she]抓住[npc.her][npc.assSize]的臀肉，掰向一边，将[npc.her][npc.asshole+]呈现给[npc2.name]。",
+                                "[npc.Name]急切地用[npc.fingers]磨蹭着欲求不满的[npc.asshole]，[npc.moaning+]着用[npc.hands]将掰开臀肉，为肛门插入做好准备。"));
             }
         }
     };
@@ -83,12 +83,12 @@ public class SelfFingerAnus {
             SexParticipantType.SELF) {
         @Override
         public String getActionTitle() {
-            return "Anal fingering (self)";
+            return "指交肛门(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Start fingering [npc.her] ass.";
+            return "开始指交[npc.her]的屁股。";
         }
 
         @Override
@@ -99,10 +99,10 @@ public class SelfFingerAnus {
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "Reaching around to [npc.her] [npc.ass], [npc.name] [npc.verb(tease)] [npc.her] fingers over the entrance to [npc.her] [npc.asshole+], before pushing them inside and letting out [npc.a_moan+].",
-                    "[npc.Name] [npc.verb(probe)] [npc.her] fingers down over [npc.her] [npc.ass], [npc.moaning+] as [npc.she] [npc.verb(push)] two of [npc.her] digits into [npc.her] inviting [npc.asshole].",
-                    "Sliding [npc.her] fingertips over [npc.her] neglected [npc.asshole], [npc.name] [npc.verb(let)] out a [npc.groan+] as [npc.she] [npc.verb(push)] [npc.her] digits inside.",
-                    "[npc.Name] eagerly [npc.verb(push)] [npc.her] fingers into [npc.her] needy [npc.asshole], [npc.moaning+] as [npc.she] [npc.verb(start)] pumping [npc.her] digits in and out of [npc.her] [npc.ass].");
+                    "[npc.name]将手伸向臀肉，手指抚弄着[npc.her][npc.asshole+]的入口并深入内部，[npc.she]发出[npc.a_moan+]。",
+                    "[npc.Name]把手指向下探入[npc.ass]间，轻轻地[npc.moaning]，并将两根手指插入[npc.her]那诱人[npc.asshole]。",
+                    "[npc.name]的指尖滑过[npc.her]那被冷落的[npc.asshole]，[npc.she]发出一阵[npc.groan+]并把手指深入内部。",
+                    "[npc.Name]急切地将手指插进自己欲求不满的[npc.asshole]，[npc.moaning+]着，用手指在[npc.ass]里进进出出。");
         }
     };
 
@@ -116,24 +116,24 @@ public class SelfFingerAnus {
             SexPace.DOM_GENTLE) {
         @Override
         public String getActionTitle() {
-            return "Gentle anal fingering (self)";
+            return "指交肛门(温柔)(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Gently finger [npc.her] [npc.asshole].";
+            return "温柔地用手指玩弄[npc.her][npc.asshole]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] slowly [npc.verb(push)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.asshole+].",
-                    "Gently pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(finger)] [npc.her] [npc.ass].",
-                    "Curling [npc.her] [npc.fingers] up inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out a little whimper as [npc.she] [npc.verb(start)] "
+                    "[npc.namePos]把[npc.fingers]深入自己[npc.asshole+]，[npc.lips+]间发出[npc.moan]。",
+                    "[npc.name]用[npc.fingers]在自己[npc.asshole+]里温柔地抽插着，开始发出一连串愉悦的[npc.moans]，有节奏地操起自己的[npc.ass]。",
+                    "[npc.fingers]在[npc.asshole]里蜷起，[npc.name]不自觉地发出呜咽声，开始"
                             + (Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-                            ? "gently stroking [npc.her] prostate."
-                            : "gently fingering [npc.her] [npc.ass+]."),
-                    "Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] gently pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+].");
+                            ? "温柔地按摩着[npc.her]前列腺。"
+                            : "温柔地玩弄[npc.her][npc.ass+]。"),
+                    "[npc.name]专心取悦起[npc.her][npc.ass+]，温柔地用[npc.fingers]在[npc.her][npc.asshole+]中抽插。");
         }
     };
 
@@ -147,24 +147,24 @@ public class SelfFingerAnus {
             SexPace.DOM_NORMAL) {
         @Override
         public String getActionTitle() {
-            return "Anal fingering (self)";
+            return "指交肛门(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Concentrate on fingering [npc.her] [npc.ass].";
+            return "全身心地投入玩弄[npc.her][npc.ass]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] greedily [npc.verb(push)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.asshole+].",
-                    "Pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(finger)] [npc.her] [npc.ass].",
-                    "Curling [npc.her] [npc.fingers] up inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] "
+                    "[npc.namePos]把[npc.fingers]贪婪地深入自己[npc.asshole+]，[npc.lips+]间发出[npc.moan]。",
+                    "[npc.name]用[npc.fingers]在自己[npc.asshole+]里抽插着，开始发出一连串愉悦的[npc.moans]，有节奏地操起自己的[npc.ass]。",
+                    "[npc.fingers]在[npc.asshole]里蜷起，[npc.name]不自觉地发出[npc.a_moan]，开始"
                             + (Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-                            ? "stroking [npc.her] prostate."
-                            : "fingering [npc.her] [npc.ass+]."),
-                    "Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+].");
+                            ? "按摩[npc.her]前列腺。"
+                            : "玩弄[npc.her][npc.ass+]。"),
+                    "[npc.name]专心取悦起[npc.her][npc.ass+]，用[npc.fingers]在[npc.her][npc.asshole+]中抽插。");
         }
     };
 
@@ -178,24 +178,24 @@ public class SelfFingerAnus {
             SexPace.DOM_ROUGH) {
         @Override
         public String getActionTitle() {
-            return "Rough anal fingering (self)";
+            return "指交肛门(粗暴)(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Roughly finger [npc.her] [npc.ass].";
+            return "粗暴地用手指玩弄[npc.her][npc.ass]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] roughly [npc.verb(slam)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.asshole+], before starting to roughly finger [npc.her] [npc.ass].",
-                    "Roughly pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] ruthlessly [npc.verb(finger)] [npc.her] own [npc.ass].",
-                    "Forcefully curling [npc.her] [npc.fingers] up inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] "
+                    "[npc.namePos]把[npc.fingers]深入那[npc.asshole+]，[npc.lips+]间发出[npc.moan]，然后粗暴地操起自己的[npc.ass]。",
+                    "[npc.name]用[npc.fingers]在自己[npc.asshole+]里粗暴地抽插着，开始发出一连串愉悦的[npc.moans]，无情地操起自己的[npc.ass]。",
+                    "[npc.fingers]在[npc.asshole]里强硬地蜷起，[npc.name]不自觉地发出[npc.a_moan]，开始"
                             + (Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-                            ? "roughly grinding [npc.her] fingertips up against [npc.her] prostate."
-                            : "roughly grinding [npc.her] digits in and out of [npc.her] [npc.ass+]."),
-                    "Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] roughly slamming [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+].");
+                            ? "粗暴地用指尖揉弄[npc.her]前列腺。"
+                            : "粗暴地用手指在[npc.her][npc.ass+]里抽插。"),
+                    "[npc.name]专心取悦起[npc.her][npc.ass+]，粗暴地用[npc.fingers]贯穿抽插[npc.her][npc.asshole+]。");
         }
     };
 
@@ -209,24 +209,24 @@ public class SelfFingerAnus {
             SexPace.SUB_NORMAL) {
         @Override
         public String getActionTitle() {
-            return "Anal fingering (self)";
+            return "指交肛门(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Concentrate on fingering [npc.her] [npc.ass].";
+            return "全身心地投入玩弄[npc.her][npc.ass]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] greedily [npc.verb(push)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.asshole+].",
-                    "Pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(finger)] [npc.her] [npc.ass].",
-                    "Curling [npc.her] [npc.fingers] up inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] "
+                    "[npc.namePos]把[npc.fingers]贪婪地深入自己[npc.asshole+]，[npc.lips+]间发出[npc.moan]。",
+                    "[npc.name]用[npc.fingers]在自己[npc.asshole+]里抽插着，开始发出一连串愉悦的[npc.moans]，有节奏地操起自己的[npc.ass]。",
+                    "[npc.fingers]在[npc.asshole]里蜷起，[npc.name]不自觉地发出[npc.a_moan]，开始"
                             + (Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-                            ? "stroking [npc.her] prostate."
-                            : "fingering [npc.her] [npc.ass+]."),
-                    "Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] [npc.verb(start)] pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+].");
+                            ? "按摩[npc.her]前列腺。"
+                            : "玩弄[npc.her][npc.ass+]。"),
+                    "[npc.name]专心取悦起[npc.her][npc.ass+]，用[npc.fingers]在[npc.her][npc.asshole+]中抽插。");
         }
     };
 
@@ -240,24 +240,24 @@ public class SelfFingerAnus {
             SexPace.SUB_EAGER) {
         @Override
         public String getActionTitle() {
-            return "Eager anal fingering (self)";
+            return "指交肛门(渴求)(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Eagerly finger [npc.her] [npc.ass].";
+            return "急切地用手指玩弄[npc.her][npc.ass]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] eagerly [npc.verb(slam)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.asshole+], before starting to desperately finger [npc.her] [npc.ass].",
-                    "Enthusiastically pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] frantically [npc.verb(finger)] [npc.her] own [npc.ass].",
-                    "Desperately curling [npc.her] [npc.fingers] up inside [npc.her] [npc.asshole], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] "
+                    "[npc.namePos]把[npc.fingers]深入那[npc.asshole+]，[npc.lips+]间发出[npc.moan]，然后迷乱地指交起自己的[npc.ass]。",
+                    "[npc.name]用[npc.fingers]在自己[npc.asshole+]里热情地抽插着，开始发出一连串愉悦的[npc.moans]，疯狂地操起自己的[npc.ass]。",
+                    "[npc.fingers]在[npc.asshole]里狂乱地蜷起，[npc.name]不自觉地发出[npc.a_moan]，开始"
                             + (Main.sex.getCharacterPerformingAction().hasPenis() && !Main.sex.getCharacterPerformingAction().hasVagina()
-                            ? "eagerly grinding [npc.her] fingertips up against [npc.her] prostate."
-                            : "eagerly grinding [npc.her] digits in and out of [npc.her] [npc.ass+]."),
-                    "Focusing on pleasuring [npc.her] [npc.ass+], [npc.name] eagerly [npc.verb(start)] slamming [npc.her] [npc.fingers] in and out of [npc.her] [npc.asshole+].");
+                            ? "急切地用指尖揉弄[npc.her]前列腺。"
+                            : "急切地用手指在[npc.her][npc.ass+]里抽插。"),
+                    "[npc.name]专心取悦起[npc.her][npc.ass+]，急切地用[npc.fingers]贯穿抽插[npc.her][npc.asshole+]。");
         }
     };
 
@@ -270,17 +270,17 @@ public class SelfFingerAnus {
             SexParticipantType.SELF) {
         @Override
         public String getActionTitle() {
-            return "Stop anal fingering (self)";
+            return "停止指交肛门(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Stop fingering [npc.her] ass.";
+            return "停止指交[npc.her]地屁穴。";
         }
 
         @Override
         public String getDescription() {
-            return "With [npc.a_groan+], [npc.name] [npc.verb(slide)] [npc.her] fingers out of [npc.her] [npc.asshole+].";
+            return "[npc.Name][npc.a_groan+]着，将手指顶进自己[npc.asshole+]。";
         }
     };
 }

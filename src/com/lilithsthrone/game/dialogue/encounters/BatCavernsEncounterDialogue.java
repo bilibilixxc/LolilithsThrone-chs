@@ -19,7 +19,7 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class BatCavernsEncounterDialogue {
 
-	public static final DialogueNode FIND_ITEM = new DialogueNode("Discarded Item", "", true) {
+	public static final DialogueNode FIND_ITEM = new DialogueNode("丢弃的物品", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -58,7 +58,7 @@ public class BatCavernsEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Take", "Add the " + AbstractEncounter.getRandomItem().getName() + " to your inventory.", Main.game.getDefaultDialogue(false)){
+				return new Response("拿走", "把" + AbstractEncounter.getRandomItem().getName() + "加入你的物品栏。", Main.game.getDefaultDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(Main.game.getPlayer().addItem((AbstractItem) AbstractEncounter.getRandomItem(), true, true));
@@ -66,7 +66,7 @@ public class BatCavernsEncounterDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Leave", "Leave the " + AbstractEncounter.getRandomItem().getName() + " on the floor.", Main.game.getDefaultDialogue(false));
+				return new Response("离开", "把" + AbstractEncounter.getRandomItem().getName() + "留在地上。", Main.game.getDefaultDialogue(false));
 				
 			} else {
 				return null;
@@ -74,7 +74,7 @@ public class BatCavernsEncounterDialogue {
 		}
 	};
 		
-	public static final DialogueNode REBEL_BASE_DISCOVERED = new DialogueNode("Strange Handle", "", true) {
+	public static final DialogueNode REBEL_BASE_DISCOVERED = new DialogueNode("奇怪的拉杆", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayerCell().getPlace().setPlaceType(PlaceType.BAT_CAVERNS_REBEL_BASE_ENTRANCE_HANDLE);
@@ -97,16 +97,16 @@ public class BatCavernsEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Pull the handle", "What could possibly go wrong?", REBEL_BASE_DOOR_NO_PASS);
+				return new Response("拉动拉杆", "能有什么问题呢？", REBEL_BASE_DOOR_NO_PASS);
 
 			} else if (index == 2) {
-				return new Response("Leave it alone", "Nothing good ever came of pulling strange handles in caves.", PlaceType.BAT_CAVERNS_REBEL_BASE_ENTRANCE_HANDLE.getDialogue(false));
+				return new Response("不拉动", "拉动洞穴中未知的拉杆从来不会发生什么好事。", PlaceType.BAT_CAVERNS_REBEL_BASE_ENTRANCE_HANDLE.getDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode REBEL_BASE_DOOR_NO_PASS = new DialogueNode("Strange Handle", "", true, true) {
+	public static final DialogueNode REBEL_BASE_DOOR_NO_PASS = new DialogueNode("奇怪的拉杆", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.SIDE_REBEL_BASE, Quest.REBEL_BASE_PASSWORD_PART_ONE));
@@ -126,16 +126,16 @@ public class BatCavernsEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Pull harder", "The handle won't budge. Looks like you really do need the password.", null);
+				return new Response("用力拉", "拉杆纹丝不动，看来你需要个密码。", null);
 					
 			} else if (index == 2) {
-				return new Response("Leave it alone", "Go look for the password instead.", PlaceType.BAT_CAVERNS_REBEL_BASE_ENTRANCE_HANDLE.getDialogue(false));
+				return new Response("不拉动", "去寻找密码吧。", PlaceType.BAT_CAVERNS_REBEL_BASE_ENTRANCE_HANDLE.getDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode REBEL_BASE_PASSWORD_ONE = new DialogueNode("Journal Fragment", "", true) {
+	public static final DialogueNode REBEL_BASE_PASSWORD_ONE = new DialogueNode("日记碎片", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.SIDE_REBEL_BASE, Quest.REBEL_BASE_PASSWORD_PART_TWO));
@@ -170,13 +170,13 @@ public class BatCavernsEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "This is only one part of the password, you need to find the other", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "这只是密码的一部分，还需要找到其他的", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode REBEL_BASE_PASSWORD_TWO = new DialogueNode("Another Journal Fragment", "", true) {
+	public static final DialogueNode REBEL_BASE_PASSWORD_TWO = new DialogueNode("另一块日记碎片", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.SIDE_REBEL_BASE, Quest.REBEL_BASE_PASSWORD_COMPLETE));
@@ -205,13 +205,13 @@ public class BatCavernsEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "You've found both parts of the password, you can head back to the mysterious handle when you're ready.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "你已经找到了两部分密码，准备好之后就可以回到那个神秘的拉杆处了。", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode REBEL_BASE_PASSWORD_SEARCH_FAILED = new DialogueNode("No Luck", "", false, true) {
+	public static final DialogueNode REBEL_BASE_PASSWORD_SEARCH_FAILED = new DialogueNode("真不幸", "", false, true) {
 		@Override
 		public String getAuthor() {
 			return "DSG";
@@ -230,7 +230,7 @@ public class BatCavernsEncounterDialogue {
 		}
 	};
 	
-	public static final DialogueNode REBEL_BASE_PASSWORD_SILLY = new DialogueNode("The Value of Time", "", false) {
+	public static final DialogueNode REBEL_BASE_PASSWORD_SILLY = new DialogueNode("时间宝贵", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.SIDE_REBEL_BASE, Quest.SIDE_UTIL_COMPLETE));
@@ -250,7 +250,7 @@ public class BatCavernsEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "You win. Hooray.", Main.game.getDefaultDialogue(false)) {
+				return new Response("继续", "你赢了。万岁。", Main.game.getDefaultDialogue(false)) {
 				    @Override
 				    public void effects() {
 						Main.game.getWorlds().get(WorldType.BAT_CAVERNS).getCell(PlaceType.BAT_CAVERNS_REBEL_BASE_ENTRANCE_HANDLE).getPlace().setPlaceType(PlaceType.BAT_CAVERNS_REBEL_BASE_ENTRANCE_EXTERIOR);

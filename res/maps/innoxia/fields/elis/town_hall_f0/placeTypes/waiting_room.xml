@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[waiting room]]></name>
-	<tooltipDescription><![CDATA[One of two waiting rooms positioned near to the town hall's entrance, this is the place where members of the public have their patience put to the test.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in one of the waiting rooms in Elis's town hall]]></virginityLossDescription>
+	<name><![CDATA[等待室]]></name>
+	<tooltipDescription><![CDATA[市镇议会两个等待室中的一间位于入口附近，这个房间为市民提供耐心等待的空间。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯市镇议会其中一间等待室里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

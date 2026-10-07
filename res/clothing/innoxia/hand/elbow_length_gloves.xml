@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>200</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[elbow-length glove]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[elbow-length gloves]]></namePlural>
-		<description><![CDATA[A pair of elegant, elbow-length gloves. They're made from a thin, soft fabric, and are silky-smooth to the touch.]]></description> 
+		<determiner><![CDATA[一副]]></determiner>
+		<name><![CDATA[及肘手套]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[及肘手套]]></namePlural>
+		<description><![CDATA[一双优雅的手肘长度手套。由薄而柔软的面料制成，触感丝滑。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>HAND</slot> 
@@ -46,27 +46,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the elbow-length gloves over [npc.her] [npc.hands], before pulling them up the length of [npc.her] [npc.arms].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the elbow-length gloves over [npc2.namePos] [npc2.hands], before pulling them up length of [npc2.her] [npc2.arms].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the elbow-length gloves onto [npc2.namePos] [npc2.hands], before yanking them up the length of [npc2.her] [npc2.arms].]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]把[npc.her]的[npc.hands]套进及肘手套，然后将它们拉到[npc.her]的[npc.arms]附近。
+]]></self>
+		<other><![CDATA[
+[npc.Name]顺着[npc2.namePos][npc2.hands]套进及肘手套，将它们沿着[npc2.her][npc2.arms]拉起。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地强行将及肘手套套在[npc2.namePos]的[npc2.hands]上，然后猛地拉上[npc2.her]的[npc2.arms]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the elbow-length gloves down [npc.her] [npc.arms], before pulling them free from [npc.her] [npc.hands].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the elbow-length gloves down [npc2.namePos] [npc2.arms], before pulling them free from [npc2.her] [npc2.hands].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] the elbow-length gloves down [npc2.namePos] [npc2.arms], before roughly pulling them free from [npc2.her] [npc2.hands].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]顺着[npc.her]的[npc.arms]滑下及肘手套，然后将它们从[npc.her]的[npc.hands]上取下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]顺着[npc2.namePos][npc2.arms]滑下及肘手套，然后将它们从[npc2.her][npc2.hands]上取下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把及肘手套从[npc2.namePos]的[npc2.arms]上扯下，然后粗暴地将它们从[npc2.her]的[npc2.hands]上拽开。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

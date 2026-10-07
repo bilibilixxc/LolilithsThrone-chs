@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[burning barricade]]></name>
-	<tooltipDescription><![CDATA[Constructed and lit by the town's defenders, this burning barricade is producing a considerable amount of heat and smoke, making it impossible for you to pass.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside a burning barricade in Themiscyra]]></virginityLossDescription>
+	<name><![CDATA[燃烧的路障]]></name>
+	<tooltipDescription><![CDATA[小镇的守护者建造并点燃了这个路障，它产生了大量的热量和浓烟，阻止你继续前进。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在特弥斯库拉的一座燃烧的街垒旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

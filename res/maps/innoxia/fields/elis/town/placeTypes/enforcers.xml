@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Enforcer station]]></name>
-	<tooltipDescription><![CDATA[The Elis Enforcers are based out of a large, heavily-fortified building.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[outside the Enforcer station in Elis]]></virginityLossDescription>
+	<name><![CDATA[伊利斯执法局]]></name>
+	<tooltipDescription><![CDATA[伊利斯执法者的总部设在一座防御森严的大型建筑内。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[离开伊利斯执法局]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>#2c5aa0</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

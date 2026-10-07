@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<htmlContent tag="CAPYBARA_BASIC"><![CDATA[
 	<p>
-		Capybara-morphs are almost exclusively found in the temperate fields and forests surrounding Dominion, although the odd individual may sometimes be seen wandering the streets of the city. Rounded ears and their distinctive, large blunt snouts are usually enough to identify a person as a capybara-morph.
+		水豚化形几乎只能在御城区周围的温带田野和森林中找到，不过有时也会在城市的街道上看到一些零星的水豚。圆圆的耳朵和独特的大钝鼻通常足以让人认出他们是水豚化形。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="CAPYBARA_ADVANCED"><![CDATA[
 	<p>
-		While the individual personalities of capybara-morphs vary greatly from one individual to another, they have a reputation for being extremely relaxed and unflappable.
+		尽管水豚化形的个性因人而异，它们却以非常放松和不慌不忙而著称。
 	</p>
 	<p>
-		Like most other races, capybara-morphs get affected by arcane storms. However, due to the fact that most of them live far away from Dominion's epicentre of such storms, they typically only experience mild effects.
+		和大多数其他种族一样，水豚化形也会受到奥术风暴的影响。不过，由于它们大多居住在远离御城区风暴中心的地方，通常只会受到轻微的影响。
 	</p>
 	<p>
-		A capybara-morph's offspring will be a mixture of capybara-morphs and offspring of their partner's race.
+		水豚化形的后代将是水豚化形与伴侣种族后代的混合体。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

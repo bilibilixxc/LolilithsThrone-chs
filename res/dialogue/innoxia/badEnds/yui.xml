@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 	
 	<scene id="sign_contract">
 		<preParsingEffects><![CDATA[
-			[#game.setBadEnd("Yui's Toy")]
+			[#game.setBadEnd("唯的玩具")]
 		]]></preParsingEffects>
 		<content folderPath="txt/badEnds/yui">SIGN_CONTRACT</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -13,8 +13,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Strip]]></responseTitle>
-				<responseTooltip><![CDATA[Strip naked and put on your latex outfit.]]></responseTooltip>
+				<responseTitle><![CDATA[脱光]]></responseTitle>
+				<responseTooltip><![CDATA[脱光衣服，穿上一套胶衣。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_yui_strip]]></nextDialogue>
 			</response>
 		</responses>
@@ -33,8 +33,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Tied up and put on display, all you can do now is wait...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[被捆绑起来展示，你现在能做的只有等待……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_yui_wait]]></nextDialogue>
 			</response>
 		</responses>
@@ -54,8 +54,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Home]]></responseTitle>
-				<responseTooltip><![CDATA[You're taken to your new home.]]></responseTooltip>
+				<responseTitle><![CDATA[家]]></responseTitle>
+				<responseTooltip><![CDATA[你被带到了你的新家。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_yui_home]]></nextDialogue>
 			</response>
 		</responses>
@@ -73,8 +73,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Broken in]]></responseTitle>
-				<responseTooltip><![CDATA[Mistress Yui's other toys break you in.]]></responseTooltip>
+				<responseTitle><![CDATA[被调教]]></responseTitle>
+				<responseTooltip><![CDATA[主人唯的其他玩具会调教你。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_yui_broken_in]]></nextDialogue>
 			</response>
 		</responses>
@@ -89,8 +89,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Clean up]]></responseTitle>
-				<responseTooltip><![CDATA[Take a shower and get ready for the clients to arrive.]]></responseTooltip>
+				<responseTitle><![CDATA[清理]]></responseTitle>
+				<responseTooltip><![CDATA[洗个澡，准备好迎接客户的到来。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_yui_after_fucked]]></nextDialogue>
 			</response>
 		</responses>
@@ -105,8 +105,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[New life]]></responseTitle>
-				<responseTooltip><![CDATA[You start your new life as Mistress Yui's toy.]]></responseTooltip>
+				<responseTitle><![CDATA[新生活]]></responseTitle>
+				<responseTooltip><![CDATA[你开始了作为主人唯玩具的全新生活。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_yui_final]]></nextDialogue>
 			</response>
 		</responses>
@@ -121,8 +121,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[The End...]]></responseTitle>
-				<responseTooltip><![CDATA[[style.italicsBadEnd(With this end to your journey, the thread of prophecy is severed. Restore a saved game to restore the weave of fate, or persist in the doomed world you have created.)]]]></responseTooltip>
+				<responseTitle><![CDATA[结局……]]></responseTitle>
+				<responseTooltip><![CDATA[[style.italicsBadEnd(你的旅程就此结束，预言之线也被斩断。是恢复已保存的游戏来重塑命运的编织，还是继续留在你所创造的注定失败的世界中？)]]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 		</responses>

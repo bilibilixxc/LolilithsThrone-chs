@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[the]]></determiner>
-		<name><![CDATA[Dark Siren's Seal]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Dark Siren's Seals]]></namePlural>
-		<description><![CDATA[A very ordinary-looking medicinal eyepatch, complete with elastic straps to hold in place. It has been enchanted with a powerful arcane-drain by the demon calling herself 'The Dark Siren', so that she can seal away her immense destructive powers...]]></description>
+		<determiner><![CDATA[​]]></determiner>
+		<name><![CDATA[暗夜塞壬的封印]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[暗夜塞壬的封印]]></namePlural>
+		<description><![CDATA[一块看起来非常普通的医用眼罩，配有一根松紧带来固定，它被一个自称为“暗夜塞壬”的恶魔附魔了，上面的附魔可以非常有效的遏制魔力，这样她就可以封存她巨大的破坏力了……]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>
@@ -57,27 +56,27 @@
 
 	
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(hook)] the eyepatch's straps around [npc.her] [npc.ears], before positioning the pad over [npc.her] [npc.eye].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(hook)] the eyepatch's straps around [npc2.namePos] [npc2.ears], before positioning the pad over [npc2.her] [npc2.eye].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(hook)] the eyepatch's straps around [npc2.namePos] [npc2.ears], before firmly positioning the pad over [npc2.her] [npc2.eye].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将眼罩的带子挂在[npc.her]的[npc.ears]上，然后将眼罩罩在[npc.her]的[npc.eye]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将眼罩的带子挂在[npc2.namePos]的[npc2.ears]，然后将眼罩罩在[npc2.her]的[npc2.eye]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴的将带子挂在[npc2.namePos]的[npc2.ears]上，然后紧紧地固定在[npc2.her]的[npc2.eye]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unloop)] the eyepatch's straps from around [npc.her] [npc.ears], before taking it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unloop)] the eyepatch's straps from around [npc2.namePos] [npc2.ears], before taking it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(tug)] the eyepatch's straps off of [npc2.namePos] [npc2.ears], before taking it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将松紧带从[npc.her]的[npc.ears]上摘下来，并把眼罩取了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将松紧带从[npc2.namePos]的[npc2.ears]上摘下来，并把眼罩取了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴的把带子从[npc2.namePos]的[npc2.ears]上拽下来并把眼罩拽走了。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

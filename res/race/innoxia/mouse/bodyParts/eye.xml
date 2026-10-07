@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <eye>
 	<race>innoxia_mouse</race>
 	
-	<transformationName><![CDATA[mouse]]></transformationName>
+	<transformationName><![CDATA[鼷鼠]]></transformationName>
 	
 	<coveringType>innoxia_mouse_eye</coveringType>
 	
@@ -14,20 +14,20 @@
 	
 	<defaultPupilShape>ROUND</defaultPupilShape>
 	
-	<name><![CDATA[eye]]></name>
-	<namePlural><![CDATA[eyes]]></namePlural>
+	<name><![CDATA[眼睛]]></name>
+	<namePlural><![CDATA[眼睛]]></namePlural>
 	
 	<descriptorsMasculine/>
 	
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into mouse-like eyes, with large irises and pupils.
-		<br/>[npc.Name] now [npc.has] [style.boldMouse(mouse-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].
-	]]></transformationDescription>
+		当[npc.she]犹豫地再次睁开双眼时，它们变成了一对大虹膜的鼷鼠眼睛。
+		<br/>[npc.Name]现在拥有[style.boldMouse(鼷鼠一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.eyePairs] mouse-like eyes, the irises and pupils of which are larger than a regular human's. They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.eyePairs]鼷鼠的眼睛，其瞳孔和虹膜都大于常人。[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。
+]]></bodyDescription>
 	
 </eye>

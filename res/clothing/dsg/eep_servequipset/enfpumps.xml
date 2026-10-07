@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[Inside the arches of each pump, a small engraving reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[高跟鞋的鞋弓内均刻有小字“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>300</value> 
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一双]]></determiner>
 
-		<name><![CDATA[Enforcer's pumps]]></name>
+		<name><![CDATA[执法者高跟鞋]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's pumps]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者高跟鞋]]></namePlural> 
 
-		<description><![CDATA[A pair of polished shoes with low-cut uppers and modest heels.]]></description> 
+		<description><![CDATA[一双擦亮的低帮鞋，鞋跟适中。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -69,27 +68,21 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the pumps.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.feet] into the pumps.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(shove)] [npc2.namePos] [npc2.feet] into the pumps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿上了高跟鞋。]]></self>
+		<other><![CDATA[
+[npc.Name]引导[npc2.namePos]的[npc2.feet]踩进高跟鞋里。]]></other>
+		<otherRough><![CDATA[[npc.Name]将[npc2.namePos]的[npc2.feet]踩进高跟鞋里。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] [npc.her] pumps off [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] [npc2.namePos] pumps off [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] pumps off [npc2.her] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]脱下了[npc.her][npc.feet]上的高跟鞋。]]></self>
+		<other><![CDATA[
+			[npc.Name]把[npc2.namePos]高跟鞋从[npc2.her]的[npc2.feet]上脱下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将高跟鞋从[npc2.namePos]的[npc2.feet]上拽了下来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

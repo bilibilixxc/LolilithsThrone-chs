@@ -1,116 +1,116 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- ENTRANCE -->
 
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		The wooden doors of the Gambling Den's front entrance are propped open, allowing you to easily make your way forwards into the establishment. As you enter, you find yourself standing in a very large entrance hall. A sign hanging from the ceiling in front of you reads 'Welcome to the Gambling Den!', and from somewhere further within the building, you hear the distinctive sounds of laughter, conversation, and then of a slot machine dispensing coins to a lucky winner. 
+		赌馆的木门大敞着，你得以轻松进入赌场。进门后，你便站在一个宽敞的门厅里，天花板上悬挂着一块牌子，上面写着“欢迎来到赌场！”。你还听到深处传来谈笑声，以及老虎机向幸运赢家吐币的声音。
 	</p>
 	<p>
-		Although there are only a few people loitering around in this entrance hall, the constant drone of chatter coming from up ahead lets you know that this place must be quite popular. As you start to walk forwards, intent on exploring the establishment, a voice suddenly calls out from your right-hand side, [axel.speech(Hello there! I haven't seen you here before!)]
+		尽管在门厅闲逛的人并不多，但是从前面不停响起的说话声就可以看出，这个地方的人气绝对不低。就在你准备继续往前探索的时候，一个声音从你的右侧传来：[axel.speech(您好！我以前没在这见过您！)]。
 	</p>
 	<p>
-		Turning towards the source of the voice, you see a tall, muscular alligator-boy grinning at you. The scales covering his body are all a brilliant white, and as he comes to a halt in front of you, his pair of bright blue eyes lock onto yours, and he continues, [axel.speech(I'm [axel.name], the owner of this place, and I like to say hello to every fresh face I see!)]
+		你转身朝声音的来源望去，只见一个身材高大、肌肉发达的鳄男正冲你微笑，周身的鳞片都是耀眼的白色。他走到你面前停下，那双明亮的蓝色眼睛紧紧地盯着你，继续向你搭话：[axel.speech(我是这里的老板[axel.name]，我总是乐于向每一个新面孔打招呼！)]
 	</p>
 	<p>
-		[pc.speech(I'm [pc.name],)] you reply, returning the alligator-boy's greeting as he happily reaches out to shake your hand.
+		[pc.speech(我是[pc.name]，)]你也向鳄男回以问候，他高兴地伸出手来和你握手。
 	</p>
 	<p>
-		[axel.speech(It's a pleasure to meet you! Now, if you're looking to have some fun, you've come to the right place. We've got dice poker straight ahead down the hall here,)] [axel.name] says, pointing one of his clawed hands forwards, before turning it to the right and continuing, [axel.speech(and the slot machines are lining the main atrium down to the right there. If you continue on down to the very end, you'll find my good friend Epona, who runs our very special 'pregnancy roulette' game! You can get all the details of that from her.)]
+		[axel.speech(很高兴见到你！如果你现在想找点乐子，那就来对地方了。我们有骰子扑克，就在大厅的正前方，)][axel.name]说着，一边用爪子向前指了指，然后他右转继续说道，[axel.speech(老虎机就在中庭的右边。如果你一直走到尽头，就会看到我的好朋友伊波娜，她经营着我们非常特别的‘怀孕轮盘赌’游戏！你可以在她那里了解具体细节。)]
 	</p>
 	<p>
-		[pc.speech(Thanks,)] you say, [pc.speech(I'll go and check it all out.)]
+		[pc.speech(谢谢，)]你说道，[pc.speech(我会去看看的。)]
 	</p>
 	<p>
-		[axel.speech(Oh, and, erm, we've also got a shop,)] [axel.name] says, the friendly tone of his voice shifting into one of discomfort. [axel.speech(Roxy's the one that runs it. Just be careful around her, ok?)]
+		[axel.speech(哦，还有还有，呃，我们这边还有个商店，)][axel.name]说道，他友好的声音突然露出一丝不和谐的尴尬。[axel.speech(那边是罗克西在管，小心别惹到她，明白吧？)]
 	</p>
 	<p>
-		[pc.speech(Ok, I'll see you around,)] you say, letting [axel.name] hurry off to one side of the hall before moving off to explore the building.
+		[pc.speech(好的，下回见，)]你说道，目送[axel.name]匆匆赶去了门厅的另一边，然后继续着你的探索。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_REPEAT"><![CDATA[
 	<p>
-		You find yourself standing in the Gambling Den's entrance hall. A sign hanging from the ceiling in front of you reads 'Welcome to the Gambling Den!', and from somewhere further within the building, you hear the distinctive sounds of laughter, conversation, and then of a slot machine dispensing coins to a lucky winner. 
+		你发现自己正站在赌场的门厅位置，面前的天花板上挂着一个牌子：“欢迎来到赌场！”，从建筑物的更深处，笑声和谈话声传来，伴随着老虎机吐出硬币的叮当声。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_axelFeminised))
-			To one side of the hall, you see the curvy, feminine figure of [axel.name], the owner of this establishment. The albino [axel.race] looks to be busy keeping a close watch over everyone who comes and goes.
+			在大厅的一侧，你可以看到赌场老板[axel.name]弧线优美的女性身影。白化[axel.race]似乎在忙于观察每一个进出的人。
 		#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_axelSissified))
-			To one side of the hall, you see the slim, androgynous figure of [axel.name], the owner of this establishment. The albino [axel.race] looks to be busy keeping a close watch over everyone who comes and goes.
+			在大厅的一侧，你可以看到赌场老板[axel.name]纤细的中性身影。白化[axel.race]似乎在忙于观察每一个进出的人。
 		#ELSE
-			To one side of the hall, you see the large, muscular figure of [axel.name], the owner of this establishment. The albino [axel.race] looks to be busy keeping a close watch over everyone who comes and goes.
+			在大厅的一侧，你可以看到赌场老板[axel.name]高大的男性身影。白化[axel.race]似乎在忙于观察每一个进出的人。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_END_VENGAR_QUEST"><![CDATA[
 	<p>
-		As you enter the gambling den, you once again spot the large, muscular figure of [axel.name] happily welcoming visitors to his establishment. Upon catching sight of you, his smile widens, and he hurries over to thank you for what you've done, [axel.speech([pc.Name]! I can't thank you enough for helping me sort out that whole Vengar situation! If I'm honest, I didn't really expect you to be able to do it, but I'm finally free of him! Well... Almost free, that is...)]
+		你进入到赌场，再次看到了[axel.name]高大结实的身影正愉快地欢迎着来客。一看到你，他就灿烂地笑了出来，快步走上前对你表达感谢，[axel.speech([pc.Name]！实在是太感谢你能帮我解决文加那件事了！说实话，我开始根本没指望你真的能做到，但这下我是真的摆脱他了！好吧……至少是某种程度上的……)]
 	</p>
 	<p>
-		Asking Axel what he means by that, and also how he found out that Vengar had been dealt with so quickly, you listen as the albino alligator-boy explains, [axel.speech(Well, I had a visit from the Enforcers, you see. Apparently, they confiscated all of Vengar's wealth as 'evidence', so they couldn't give me any of my money back. Instead, they gave me a different form of compensation...)]
+		你询问了阿克塞尔他所指的究竟是什么，还有他是如何这么快就得知文加被解决了的消息的，这位白化的鳄男解释道，[axel.speech(这个嘛，我去拜访了执法者那边，他们将文加全部的财产作为‘证据’没收了，这样一来我根本拿不回自己的一分钱。所以，他们给我提供了另一种补偿……)]
 	</p>
 	<p>
-		At that moment, you notice the familiar figure of Roxy swiftly walking over from her shop, and, not caring at all about interrupting your conversation, she shouts out, [roxy.speech('Ey! Lizard! I's got another question 'bout Vengar!)]
+		就在这时，你注意到了罗克西熟悉的身影从她的店那边快速走来，她似乎丝毫不介意打搅到你们的谈话，大声喊道：[roxy.speech(喂！蜥蜴男！我还有关于文加的问题要问你！)]
 	</p>
 	<p>
-		[axel.speech(Please, I already asked you not to call me that,)] Axel replies, turning to one side to face the rat-girl, [axel.speech(and can't you see that I'm talking to [pc.name]? You could at least say 'excuse me', you know...)]
+		[axel.speech(拜托，我都说过别这么喊我了，)]阿克塞尔叹了口气，转过头去看向这位老鼠女，[axel.speech(而且你没见我在和[pc.name]说话吗？至少你也可以说声‘抱歉打扰一下’吧……)]
 	</p>
 	<p>
-		[roxy.speech(I ain't got time fer yer shit,)] Roxy states, before pausing for a moment to stick a cigarette in her mouth and light it. Blowing out a large cloud of smoke, she continues, [roxy.speech(So, you's said I could do anythin' I wanted with Vengar, right? It ain't gonna be a problem fer me later down the line if I get 'im addicted ta me cunt or transform 'im a bit, will it?)]
+		[roxy.speech(我可没时间等你们的什么鬼谈话，)]罗克西说着，点上了一支烟。她吐出一团雾，然后继续说道，[roxy.speech(所以你的意思是我不能对文加为所欲为，对吗？这当然没问题，前提是我把他调教成我的东西，或者给他做点改造，这没问题吧？)]
 	</p>
 	<p>
-		[axel.speech(Look, I don't want you abusing people you're responsible for, even if he is your ex and he wronged you in the pas-)] Axel starts, but Roxy furrows her eyebrows and interrupts him yet again.
+		[axel.speech(我的意思是，我不希望你再去虐待你手下的人，就算是辜负过你的前任——)]阿克塞尔刚开始说话，罗克西就皱起了眉头打断了他。
 	</p>
 	<p>
-		[roxy.speech(Don't you's be gettin' involved in me private life, lizard! That fuckin' twat wants ta cheat on me, an' thinks he's off the hook cos he set me up workin' here? He can fuckin' think again!)] she shouts, before puffing on her cigarette and repeating her initial question, [roxy.speech(So can I get 'im addicted to me cunt an' transform 'im a bit or not? I don't want ya gettin' all pissy later on just cos I didn't ask or some shit like that.)]
+		[roxy.speech(你居然干涉我的私生活，蜥蜴男！那个混蛋人渣想要背叛我，他害我得在这里工作，你该不会觉得我会放过他吧？我得给他好瞧的！)]她大叫道，然后吐了口烟，回到了最早那个问题上，[roxy.speech(所以我到底可不可以拿他去调教或者给他做点改造？我可不希望我不问你就给我把这件事一直拖下去。)]
 	</p>
 	<p>
-		Some of the nearby patrons of the gambling den start to turn their heads at the scene unfolding before them, and, wanting to avoid this negative publicity, Axel gives in to Roxy's demands, [axel.speech(Yes, yes, I already said you can treat him like he's yours, so long as you prevent him from causing any damage to my business. Just... don't go too far, ok?)]
+		附近一些赌场的客人开始转过头围观这边发生的事，为了避免不好的影响，阿克塞尔对罗克西让步了，[axel.speech(好吧，好吧，我已经答应你可以处置他了，只要你能让他别来破坏我的生意就行。只不过……别太过火，好吗？)]
 	</p>
 	<p>
-		Letting a wicked grin settle on her face, Roxy turns her back on the two of you and marches back off to her shop, calling over her shoulder and addressing you as she goes, [roxy.speech(Ya want a taste o' my cunt, all yer gotta do is drop by later! See ya!)] 
+		她脸上露出了邪恶的笑容，罗克西转过身回她店里去了，路上她转过头来冲你眨眨眼，[roxy.speech(想跟我来上一发的话，随时来找我就行！拜啦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_RESOLUTION -->
 	
 	<htmlContent tag="AXEL_VENGAR_RESOLUTION"><![CDATA[
 	<p>
-		With an exasperated sigh, Axel turns back towards you and reveals what by now was obvious, [axel.speech(Yes, that 'compensation' the Enforcers gave me was a slaver license and the recently-enslaved Vengar, as well as another of his thugs; some nasty piece of work called 'Murk'. I have neither the time nor inclination for dealing with those two, so I agreed to give Vengar to Roxy, while Murk is being watched over by Epona.)]
+		阿克塞尔气呼呼地叹了口气，然后转过身来，向你说出一个显而易见的事实：[axel.speech(是的，执法者给我的‘补偿’是一张贩奴许可和刚刚被奴役的文加，以及他的另一个打手，一个叫‘默克’的讨厌鬼。我既没时间也没心思对付他们两个，所以我同意把文加交给罗克西，而默克则由伊波娜看管。)]
 	</p>
 	<p>
-		You ask Axel if he's considered selling the two of them, seeing as he doesn't have any real interest in owning slaves. Letting his shoulders slump, and releasing another heavy sigh, the alligator-boy reveals, [axel.speech(The Enforcers have placed selling restrictions on the two of them. They said they might need evidence from them later, and don't want to be chasing paper trails all over the city, so I'm stuck with them. Anyway, enough of my troubles, I need to get you a reward!)]
+		你问阿克塞尔是否考虑过把他们两个卖掉，因为他对拥有奴隶并没有真正的兴趣。鳄男耷拉着肩膀，又发出一声沉重的叹息：[axel.speech(执法者对他们俩的销售做了限制，他们说以后可能需要他们提供一些证据，又不想满城去找这两个家伙，所以我就只能留着他们了。不管怎么说，我的麻烦已经够多了，我得给你一些奖赏才行！)]
 	</p>
 	<p>
 		#IF(pc.hasCompanions())
-			Asking you to wait for a moment, Axel hurries off into his office to fetch this reward, leaving you and [npc.name] to speculate between yourselves as to what it could be.
+			在让你稍等片刻后，阿克塞尔便匆匆跑进办公室去拿奖赏了，留下你和[npc.name]猜测奖赏会是什么。
 		#ELSE
-			Asking you to wait for a moment, Axel hurries off into his office to fetch this reward, leaving you to speculate as to what it could be.
+			在让你稍等片刻后，阿克塞尔便匆匆跑进办公室去拿奖赏了，你只好开始猜测奖赏会是什么好东西。
 		#ENDIF
-		 After just a couple of minutes, he returns holding a small bag, and with a big smile on his face, pushes it into your [pc.hands]. [axel.speech(This is for all your trouble, and you also have my eternal thanks!)] he happily exclaims, before revealing, [axel.speech(There are fifty thousand flames in there.)]
+		在几分钟后，阿克塞尔满脸笑容地拿着一个小袋子走了过来，然后把它塞到了你的[pc.hands]中。[axel.speech(这是你的报酬，这份恩情我永远会牢记的！)]在笑着说完之后，他接着说道：[axel.speech(这里大概有五万火币，再次感谢你的帮助。)]
 	</p>
 	<p>
-		Opening the bag, you see that it's filled with coins, and after thanking him, you wonder what to say to Axel next...
+		你打开袋子查看，里面装满了火币，在向他道谢后，你不知道接下来该对阿克塞尔说些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE -->
 	
 	<htmlContent tag="OFFICE"><![CDATA[
 	<p>
-		To the left-hand side of the Gambling Den's main entrance, there's a sturdy wooden door bearing a brass plaque engraved with the words '[axel.name]'s Office'. At the moment, it's securely shut and locked, so there's not really much for you to do except turn around and step away from the door...
+		在赌场正门的左手边有一扇坚固的木门，门上挂着一块刻有“[axel.name]办公室”字样的铜牌。此刻，门正紧锁着，所以你无事可做，只得转身离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_AXEL -->
@@ -119,593 +119,594 @@
 	#IF(axel.isAttractedTo(pc))
 		#IF(game.getDialogueFlags().hasFlag(FLAG_axelSissified) || game.getDialogueFlags().hasFlag(FLAG_axelFeminised))
 			<p>
-				Wanting to spend some time in private with [axel.name], you ask [axel.herHim] if the two of you could step into [axel.her] office for a while. Upon hearing your suggestion, the [axel.race] smiles, and with a faint blush forming in [axel.her] cheeks, [axel.she] teases,
+				你想和[axel.name]私下待一会儿，于是询问[axel.herHim]是否可以到[axel.her]的办公室待一会儿，在听到你的建议后，[axel.race]面带红晕的微微一笑，然后调侃道：
 				#IF(pc.hasCompanions())
-					 [axel.speech(Why of course, we can discuss absolutely <i>anything</i> you'd like in there... Oh, but I can only handle you, [npc.name] here will have to wait outside...)]
+					[axel.speech(当然，我们完全可以去讨论一下<i>任何</i>你喜欢的那个……哦，但我只能应付你一个人，[npc.name]只能在外面等了……)]
 				#ELSE
-					 [axel.speech(Why of course, we can discuss absolutely <i>anything</i> you'd like in there...)]
+					[axel.speech(当然，我们可以在这里讨论你想讨论的<i>任何</i>问题……)]
 				#ENDIF
 			</p>
 			<p>
-				Rubbing up against you, [axel.name] leads you over to the door of [axel.her] office, before unlocking it and stepping inside.
+				[axel.name]在你身上蹭了蹭，然后把你带到了办公室的门前，在打开办公室门上的锁之后，[axel.her]把你领了进去.
 				#IF(pc.hasCompanions())
-					 Leaving [npc.name] to wait for your return, you closely follow on behind [axel.name], and once you're inside [axel.her] office, you quickly turn to shut the door behind you in order to afford the two of you some privacy.
+					在让[npc.name]等你回来后，你便紧跟在[axel.name]身后，一进到[axel.her]的办公室，你就迅速转身把身后的门关上，以此给你们俩留出一些私人空间。
 				#ELSE
-					 Following closely behind [axel.herHim], you quickly turn to shut the door behind you in order to afford the two of you some privacy.
+					你紧跟在[axel.herHim]身后，在进去之后你便迅速地转身关上身后的门，以此给你们俩留出一些私人空间。
 				#ENDIF
-				 As you turn back to face [axel.name], you see that [axel.sheIs] standing right in front of you, and with an expectant look in [axel.her] twinkling [axel.eyeColour] eyes, [npc.she] asks, [axel.speech(So, [pc.name], what is it you want to do to me?)]
+				当你转身面对[axel.name]时，你看到[axel.sheIs]就站在你面前，[axel.sheIs]用那闪烁着[axel.eyeColour]的眼睛看着你，[npc.she]随之用满是期待的神情问道，[axel.speech(所以，[pc.name]，你想对我做些什么呢？)]
 			</p>
 		#ELSE
 			<p>
-				Wanting to spend some time in private with [axel.name], you ask [axel.herHim] if the two of you could step into [axel.her] office for a while. Upon hearing your suggestion, the [axel.race] smiles, and with a hungry look in [axel.her] eyes, [axel.she] teases,
+			你想和[axel.name]私下待一会儿，于是询问[axel.herHim]是否可以到[axel.her]的办公室待一会儿，在听到你的建议后，[axel.race]露出那种充满渴望的表情，然后调侃道：
 				#IF(pc.hasCompanions())
-					 [axel.speech(Why of course, we can discuss absolutely <i>anything</i> you'd like in there... Oh, but I'm going to have to ask that [npc.name] here waits outside...)]
+					[axel.speech(当然，我们完全可以去讨论<i>任何</i>事情……哦，但我只能应付你一个人，所以[npc.name]只能在外面等了……)]
 				#ELSE
-					 [axel.speech(Why of course, we can discuss absolutely <i>anything</i> you'd like in there...)]
+					[axel.speech(当然，我们完全可以讨论一下<i>任何</i>你喜欢的事情……)]
 				#ENDIF
 			</p>
 			<p>
-				Reaching around to place one of his strong hands on your hips, [axel.name] guides you over to the door of [axel.her] office, before unlocking it and letting you step inside.
+			[axel.name]用力托着你的屁股，然后把你带到了办公室的门前，在打开办公室门上的锁之后，[axel.her]把你领了进去.
+.
 				#IF(pc.hasCompanions())
-					 Following closely behind you, [axel.name] quickly turns to shut the door behind you, leaving [npc.name] on the other side to wait for your return.
+					在你进去之后，[axel.name]紧跟在你身后跟了进来并迅速关上了身后的门，让[npc.name]在外面等你回来.
 				#ELSE
-					 Following closely behind you, [axel.name] quickly turns to shut the door behind you in order to afford the two of you some privacy.
+					在你进去之后，[axel.name]紧跟在你身后跟了进来并迅速关上了身后的门，以此来给你们二人留出一些私人空间。
 				#ENDIF
-				 As you turn back to face the [axel.race], you see that [axel.she] has an expectant look in [axel.her] twinkling [axel.eyeColour] eyes, and in a lustful tone, [npc.she] asks, [axel.speech(So, [pc.name], what is it you want me to do with you?)]
+				当你转身面对[axel.name]时，你看到[axel.sheIs]就站在你面前，[axel.sheIs]用那闪烁着[axel.eyeColour]的眼睛看着你，[npc.she]随之用淫气十足的语气问道，[axel.speech(所以，[pc.name]，你想要我对你做什么？)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Wanting to spend some time in private with [axel.name], you ask [axel.herHim] if the two of you could step into [axel.her] office for a while. Upon hearing your suggestion, the [axel.race] politely smiles, before replying in a neutral tone,
+			你想和[axel.name]私下待一会儿，于是询问[axel.herHim]是否可以到[axel.her]的办公室待一会儿，在听到你的建议后，[axel.race]礼貌的笑了笑，然后用正式的语气回应道：
 			#IF(pc.hasCompanions())
-				 [axel.speech(Why of course, I've always got time to listen to anything you have to say, [pc.name], but I'll have to ask that you leave [npc.name] to wait for us outside.)]
+				[axel.speech(当然，[pc.name]，我总是有时间听你说任何话，但我必须请你让[npc.name]在外面等我们才行。)]
 			#ELSE
-				 [axel.speech(Why of course, I've always got time to listen to anything you have to say, [pc.name].)]
+				[axel.speech(当然，[pc.name]我总是有时间听你说任何东西。)]
 			#ENDIF
 		</p>
 		<p>
-			Betraying no sign of attraction towards you, [axel.name] leads you over to the door of [axel.her] office, before unlocking it and stepping inside.
+			没有任何其他的额外动作，[axel.name]把你带到[axel.her]办公室的门前，然后打开锁走了进去。
 			#IF(pc.hasCompanions())
-				 Leaving [npc.name] to wait for your return, you closely follow on behind [axel.name], and once you're inside [axel.her] office, you quickly turn to shut the door behind you in order to afford the two of you some privacy.
+				在让[npc.name]等你回来后，你便紧跟在[axel.name]身后，一进到[axel.her]的办公室，你就迅速转身把身后的门关上，以此给你们俩留出一些私人空间。
 			#ELSE
-				 Following closely behind [axel.herHim], you quickly turn to shut the door behind you in order to afford the two of you some privacy.
+				你紧跟在[axel.herHim]身后，在进去之后你便迅速地转身关上身后的门，以此给你们俩留出一些私人空间。
 			#ENDIF
-			 As you turn back to face [axel.name], you see that [axel.sheHas] stepped over to stand behind [axel.her] desk, and with the same polite smile still on [axel.her] face, [npc.she] asks, [axel.speech(So, [pc.name], what is it you'd like to discuss?)]
+			当你转身面对[axel.name]时，你看到[axel.sheIs]走到了[axel.herHim]的办公桌后面，[npc.she]随随后继续用礼貌的语气问道：[axel.speech(所以，[pc.name]，你想谈些什么呢？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_LEXA_DOMINATE"><![CDATA[
 	<p>
-		Not being able to resist the submissive [axel.race] any longer, you step up to [axel.herHim] and dominantly grab hold of [axel.her] hips, before pulling [axel.herHim] in tightly against your body and pointedly asking, [pc.speech(You're going to do exactly as I say, understand?)]
+		你再也无法抗拒如此顺从的[axel.race]了，便直接走到[axel.herHim]面前，强势地抓住[axel.her]的臀部，径直让[axel.herHim]紧紧地贴向你的身体。你单刀直入地问道：[pc.speech(你要完全照我说的做，明白吗？)]
 	</p>
 	<p>
-		[axel.speech(~Mmm!~ Yes!)] [axel.Name] happily replies, leaning into you and submissively planting a kiss on your neck. [axel.speech(Please, do whatever you want to me!)]
+		[axel.speech(~唔！~ 是！)][axel.Name]靠在你身上，顺从地在你脖子上亲了一下，然后开心的回应道，[axel.speech(拜托了，请直接玩坏我吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_LEXA_SUBMIT"><![CDATA[
 	<p>
-		Not being able to resist the [axel.race] any longer, you step up to [axel.herHim] and submissively lean in against [axel.her] body, before asking, [pc.speech(Please, could you take the lead?)]
+		你再也无法抗拒[axel.race]了，便直接走到[axel.herHim]面前，顺从地靠在[axel.her]身上，问道：[pc.speech(能由你来主导吗？)]
 	</p>
 	<p>
-		[axel.speech(Oh, erm, well, I suppose,)] [axel.Name] hesitantly replies, before reaching down to grab hold of your hips. Leaning into you, [axel.she] plants a kiss on your neck, before drawing back a little and saying, [axel.speech(I don't feel as dominant as I used to before meeting you, but I'll do my best!)]
+		[axel.speech(哦，呃，嗯，大概吧。)][axel.Name]犹豫着回答着，然后伸手抓住了你的臀部。[axel.she]在你的脖子上亲吻了一下，接着稍微后退并说道：[axel.speech(遇到你之后，我感觉自己不像以前那么占主导地位了，但我会尽力而为！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_CAGE_OFF"><![CDATA[
 	<p>
-		[pc.speech(Show me that you're still wearing your cage,)] you order [axel.name].
+		[pc.speech(让我看看你是否还戴着贞操锁，)]你询问[axel.name]。
 	</p>
 	<p>
-		Quickly exposing [axel.herself] to you, the [axel.race] shows you that [axel.her] [axel.cockSize] cock is still locked up in [axel.her] light pink chastity cage. Producing the matching key, you step forwards and open the cage's lock, before sliding it off [axel.namePos] flaccid cock and handing it over to [axel.herHim].
+		[axel.race]迅速将[axel.herself]暴露在你面前，[axel.her]向你展示[axel.her]的[axel.cockSize]阴茎仍然被锁在[axel.her]的浅粉色的贞操锁中。你拿出配套的钥匙，上前打开贞操锁，贞操锁从[axel.namePos]那软弱的鸡巴上滑下来，你将贞操锁交给了[axel.herHim]。
 		#IF(axel.isAttractedTo(pc))
-			 Letting out a sigh of relief, the [axel.race] steps forwards and rubs up against you, teasing, [axel.speech(Now that I'm free down there, how about the two of us have some fun together, hmm?)]
+			[axel.race]松了一口气，然后向前靠在了你的身上，在你身上摸索求爱的同时，[axel.her]说道：[axel.speech(现在我有大把的时间了，所以你想和我一起去玩玩么？)]
 		#ELSE
-			 Letting out a sigh of relief, the [axel.race] says, [axel.speech(That feels so much better... Thank you, [pc.name]!)]
+			在松了一口气，[axel.race]开口问道：[axel.speech(感觉好多了……谢谢你，[pc.name]。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_CAGE_ON"><![CDATA[
 	<p>
-		[pc.speech(Show me that you've still got your cage,)] you order [axel.name].
+		[pc.speech(告诉我你还留着你的笼子，)]你对[axel.name]说。
 	</p>
 	<p>
-		Quickly moving over to [axel.her] desk, the [axel.race] opens a drawer and retrieves the light pink chastity cage, before returning to stand before you. Pleased to see that [axel.sheHas] kept [axel.her] cage, you order [axel.name] to expose [axel.herself] to you, and once again, [axel.she] quickly does as [axel.sheIs] told. Taking the little cage out of [axel.her] hands, you kneel down before the [axel.race] and slide it onto [axel.her] [axel.cockSize] cock, before locking it in place and pocketing the key. Standing back up, you order, [pc.speech(You're forbidden from getting this removed. Perhaps if you're a good [axel.girl], I'll think about unlocking it.)]
+		[axel.race]迅速走向[axel.her]的办公桌，打开一个抽屉，然后取出了里面的浅粉色的贞操笼，回到你面前。你看到[axel.she]还把自己关在笼子里很高兴，你命令[axel.name]暴露给你看，[axel.she]又一次迅速照做了。你从[axel.her]手中拿走小笼子，然后在[axel.race]面前跪下，将它滑到了[axel.her]的[axel.cockSize]肉棒上，然后将其锁定到位，并将钥匙放入口袋。站起身后你点了点头，[pc.speech(不准取下来，当然如果你做个好[axel.girl]，我会考虑打开它。)]
 	</p>
 	<p>
 		#IF(axel.isAttractedTo(pc))
-			 Letting out a frustrated whine, the [axel.race] steps forwards and rubs up against you, moaning, [axel.speech(Could I show you how good I am right now? I've been thinking about you a lot recently...)]
+			[axel.race]发出一声沮丧的哀鸣，[axel.she]走上前蹭着你，呻吟着，[axel.speech(我能让你看看我现在有多好吗？最近我一直在想你……)]
 		#ELSE
-			 Letting out a frustrated whine, the [axel.race] says, [axel.speech(Fine... But please, [pc.name], don't leave me locked up for too long!)]
+			[axel.race]发出沮丧的哀鸣，说道，[axel.speech(很好……但是，求你了，[pc.name]，不要把我关太久！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_AXEL_LEAVE"><![CDATA[
 	<p>
-		Deciding that you have other things to do, you tell [lexa.name] that you'll talk to [axel.herHim] some more another time, before opening the door to [axel.her] office and taking your leave.
+		你有其他事要做，告诉[lexa.name]你会再找时间和[axel.herHim]谈，然后打开[axel.her]办公室的门离开。
 		#IF(pc.hasCompanions())
-			 Joining up with [npc.name] once more, you wonder where to go to next...
+			你再次和[npc.name]结伴，考虑之后去哪……
 		#ELSE
-			 Stepping out into the Gambling Den's entrance hall, you wonder where to go to next...
+			你走出赌场的门厅，考虑之后该去哪……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_AXEL_DOMINATE"><![CDATA[
 	<p>
-		Not being able to resist the [axel.race] any longer, you step up to [axel.herHim] and dominantly grab hold of [axel.her] hips, before pulling [axel.herHim] in tightly against your body and pointedly asking, [pc.speech(You don't mind if I take the lead, right?)]
+		你再也无法抗拒[axel.race]了，便直接走到[axel.herHim]面前，强势地抓住[axel.her]的臀部，径直让[axel.herHim]紧紧地贴向你的身体，你单刀直入地问道：[pc.speech(你不介意我来主导，对吧？)]
 	</p>
 	<p>
-		[axel.speech(~Mmm!~ I usually prefer to be the one on top, but I guess I could switch things up a bit with you,)] [axel.Name] replies, before letting out a satisfied groan as you pull him into a kiss...
+		[axel.speech(~嗯！~我通常更喜欢在上面，但大概可以和你交换一下，)][axel.Name]回答道。你将他拉近，唇瓣相接，他发出了满意的呻吟……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_AXEL_SUBMIT"><![CDATA[
 	<p>
-		Not being able to resist the [axel.race] any longer, you step up to [axel.herHim] and submissively lean in against [axel.her] body, before asking, [pc.speech(Please, could you take the lead?)]
+		你再也无法抗拒[axel.race]了，便直接走到[axel.herHim]面前，顺从地靠在[axel.her]身上，问道：[pc.speech(能由你来主导吗？)]
 	</p>
 	<p>
-		[axel.speech(Of course; I prefer being the one in charge,)] [axel.Name] confidently replies, before reaching down to take a firm hold of your hips. Pulling you into him, [axel.she] plants a dominant kiss on your [pc.lips+], before drawing back a little and saying, [axel.speech(I'll make sure to satisfy you.)]
+		[axel.speech(当然，我喜欢当主导者。)][axel.Name]自信地回答道，然后俯身抓紧你的臀部，把你拉近他身边。[axel.she]在你[pc.lips+]上落下一个强势的吻，又往后退一点说，[axel.speech(我保证让你满意。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_AXEL_ORAL_PERFORMING"><![CDATA[
 	<p>
-		Stepping forwards and leaning in against Axel's wide, muscular chest, you reach down to grope the sizeable bulge between his legs, teasing, [pc.speech(Now that we're alone, I wouldn't mind getting a taste of this...)]
+		你贴向阿克塞尔肌肉发达的宽厚胸膛，又伸手摸索他两腿间的巨大凸起，挑逗道：[pc.speech(现在只有我们俩了，我不介意尝尝这个……)]
 	</p>
 	<p>
-		Letting out a deep, rumbling groan, the [axel.race] reaches up to place his hands on your shoulders, before gently, but firmly, pushing you down onto your knees before him. Reaching down, he unbuttons his trousers before pulling both them and his boxer shorts down, allowing his [axel.cockSize], flaccid cock to flop free. Looking down at you, he groans, [axel.speech(Go on, [pc.name], get me hard.)]
+		[axel.race]发出低沉的呻吟，双手搭在你的肩上，温柔但坚定地将你摁跪在他面前。他伸手解开他的裤子，接着脱下裤子和短裤，露出他软趴趴的[axel.cockSize]肉棒。他低头看向你，轻声喘息：[axel.speech(继续，[pc.name]，让我硬起来。)]
 	</p>
 	<p>
-		Reaching forwards, you take hold of [axel.namePos] [axel.cock+] and start stroking, while simultaneously leaning in and starting to plant a series of kisses on it. Almost immediately, it rises to attention, and with a delighted [pc.moan], you open wide and take the [axel.race]'s cock into your mouth...
+		你伸手抓住[axel.namePos][axel.cock+]，一边抚摸，一边俯身印上一连串的吻。它几乎立刻起了反应，你发出高兴的[pc.moan]，张开嘴，把[axel.race]的肉棒含进嘴里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_AXEL_ORAL_RECEIVING"><![CDATA[
 	#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 		<p>
-			Stepping up in front of Axel, you slide your [pc.hands] up over his muscular chest to rest them on his wide shoulders. Rubbing your groin up against his leg, you tease, [pc.speech(How about you kneel down and get a taste of my cock?)]
+			你走到阿克塞尔面前，[pc.hands]抚过他肌肉发达的胸部，放在他宽阔的肩膀上。你用腹股沟蹭着他的腿，挑逗道：[pc.speech(你跪下来尝尝我的鸡巴怎么样？)]
 		</p>
 		<p>
-			Letting out a deep, rumbling groan, the [axel.race] smiles and starts to drop down before you. Contributing a gentle but firm pressure on his shoulders, you help to push [axel.name] down onto his knees. Reaching down, you quickly expose your [pc.cockSize], flaccid cock, before [pc.moaning], [pc.speech(Go on, [axel.name], get me hard.)]
+			[axel.race]发出低沉的呻吟，微笑着在你面前跪下。你温柔但坚定地摁在他的肩膀上，将[axel.name]按跪在地。你弯下腰，迅速露出你软趴趴的[axel.cockSize]肉棒，一边[pc.moaning]道：[pc.speech(继续，[axel.name]，让我硬起来。)]
 		</p>
 		<p>
-			Reaching forwards, [axel.name] takes hold of your [pc.cock+] and starts stroking, while simultaneously leaning in and starting to plant a series of kisses on it. Almost immediately, it rises to attention, and with a delighted [axel.moan], the [axel.race] opens wide and takes your cock into his mouth...
+			[axel.name]伸手抓住你[pc.cock+]，一边抚摸，一边俯身亲吻。它几乎立刻起了反应，[axel.race]发出高兴的[axel.moan]，张开嘴，把你的肉棒含进嘴里……
 		</p>
 	#ELSE
 		<p>
-			Stepping up in front of Axel, you slide your [pc.hands] up over his muscular chest to rest them on his wide shoulders. Rubbing your groin up against his leg, you tease, [pc.speech(How about you kneel down and get a taste of my pussy?)]
+			你走到阿克塞尔面前，[pc.hands]抚过他肌肉发达的胸部，放在他宽阔的肩膀上。你用腹股沟蹭着他的腿，挑逗道：[pc.speech(你跪下来尝尝我的小穴怎么样？)]
 		</p>
 		<p>
-			Letting out a deep, rumbling groan, the [axel.race] smiles and starts to drop down before you. Contributing a gentle but firm pressure on his shoulders, you help to push [axel.name] down onto his knees. Reaching down, you quickly expose your [pc.pussy+], before [pc.moaning], [pc.speech(Go on, [axel.name], use your tongue.)]
+			[axel.race]发出低沉的呻吟，微笑着在你面前跪下。你温柔但坚定地摁在他的肩膀上，将[axel.name]按跪在地。你弯下腰，迅速露出你[pc.pussy+]，一边[pc.moaning]道：[pc.speech(继续，[axel.name]，用上舌头。)]
 		</p>
 		<p>
-			Leaning forwards, [axel.name] does as you suggest, and after planting a series of kisses on your [pc.labia+], he darts his tongue out and starts licking. With a delighted [pc.moan] you reach down to grip the back of the [axel.race]'s head, and as you pull him into your groin, you feel his tongue greedily sliding into your hungry pussy...
+			[axel.name]身体前倾，按照你说的做了，他亲了几下你[pc.labia+]，又伸出舌头开始舔。随着愉悦的[pc.moan]，你一把搂住[axel.race]的后脑勺，把他按在自己的胯下，感受着他的舌头贪婪地在你饥渴的小穴中游走……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_AXEL_ANILINGUS_PERFORMING"><![CDATA[
 	<p>
-		Stepping forwards and leaning in against Axel's wide, muscular chest, you reach down and around to grope his ass, teasing, [pc.speech(Now that we're alone, I wouldn't mind getting a taste of your ass...)]
+		你贴向阿克塞尔肌肉发达的宽厚胸膛，又弯下腰去摸索挑逗他的屁股，[pc.speech(现在只有我们俩了，我想尝尝你的屁股……)]
 	</p>
 	<p>
-		Letting out a deep, rumbling groan, the [axel.race] unbuttons his trousers before pulling both them and his boxer shorts down, exposing both his [axel.cockSize], flaccid cock as well as his [axel.asshole+]. Leaning forwards over his desk, he turns his head back and groans, [axel.speech(Come on then, [pc.name].)]
+		[axel.race]发出低沉的呻吟，解开他的裤子，接着脱下裤子和短裤，露出他软趴趴的[axel.cockSize]阴茎和[axel.asshole+]。他趴在桌上，仰起头，呻吟着：[axel.speech(来吧，[pc.name]。)]
 	</p>
 	<p>
-		Stepping forwards, you drop down onto your knees behind [axel.name], before leaning in and starting to plant a series of kisses on his [axel.ass+]. Almost immediately, his cock rises to attention, and as the [axel.race] swipes his huge tail to one side, you press your [pc.lips] against his asshole and start enthusiastically performing anilingus on him...
+		你走上前去，跪在[axel.name]身后，弯腰亲吻那[axel.ass+]。[axel.race]的肉棒几乎立刻硬起，他把巨大的尾巴甩向一边，而你把[pc.lips]紧紧贴住他的肛门，热情地舔吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_AXEL_ANILINGUS_RECEIVING"><![CDATA[
 	<p>
-		Stepping forwards and leaning in against Axel's wide, muscular chest, you guide his hands down and around to grope your ass, teasing, [pc.speech(Now that we're alone, I wouldn't mind letting you worship my ass for a while...)]
+		你贴向阿克塞尔肌肉发达的宽厚胸膛，拉着他的手向你的屁股摸去，[pc.speech(现在只有我们俩了，我不介意让你来伺候一番我的屁股……)]
 	</p>
 	<p>
-		Letting out a deep, rumbling groan, the [axel.race] hungrily watches as you step back and quickly expose yourself to him, before turning around and presenting him with your bare ass. Unable to resist, [axel.name] pushes you up against a nearby wall, before dropping down onto his knees behind you and then reaching up to spread your ass cheeks. Turning your head back and looking down at him, you [pc.moanVerb], [pc.speech(~Mmm!~ Go on then, don't be shy!)]
+		你迅速褪去衣物，接着转过身，向[axel.name]露出光屁股。[axel.race]发出一声低沉的呻吟，用一种渴望的眼神望着你后退。他情不自禁地将你摁在墙上，接着在你身后跪下，扒开你的屁股。你扭头看向他，[pc.moanVerb]道：[pc.speech(~嗯！~那就开始吧，别害羞！)]
 	</p>
 	<p>
-		Leaning forwards, [axel.name] starts by planting a series of kisses on your [pc.ass+], before holding your cheeks apart and licking your [pc.asshole+]. Letting out [pc.a_moan+], you push your ass back, encouraging the [axel.race] to press his [axel.lips] against your rear entrance and start enthusiastically performing anilingus on you...
+		[axel.name]前倾，在你[pc.ass+]上落下一个个吻，接着扒开你的臀瓣，舔起了你[pc.asshole+]。你一边发出[pc.a_moan+]，一边向后顶着屁股，鼓励[axel.race]将他的[axel.lips]压在你的后庭上，他立刻热情地舔了起来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_AXEL_SEX -->
 	
 	<htmlContent tag="AFTER_LEXA_SEX"><![CDATA[
 	<p>
-		Letting out a soft, satisfied sigh, [axel.name] disentangles [axel.herself] from you and steps back a little. Cleaning [axel.herself] up, [axel.she] starts to get [axel.her] clothing back in order while you do the same. Once [axel.sheIs] done, [axel.she] steps up to you and gently plants one last kiss on your [pc.lips], before heading over to the door and saying, [axel.speech(I'd better be getting back to work now. That sure was fun, [pc.name]...)]
+		[axel.name]发出一声轻柔而满足的叹息，从你身边挣脱开，后退了一点。在清理干净后，[axel.she]开始整理[axel.she]的衣服，你也一样。[axel.she]做完后走向你，轻轻地在你[pc.lips]上亲了最后一口，然后走向门口，[axel.speech(我最好现在回去工作了。[pc.name]，真的很有趣……)]
 	</p>
 	<p>
-		Reciprocating [axel.namePos] remark, you finish getting your things in order and walk over to [axel.herHim]. Smiling at you once last time, the [axel.race] opens the door and heads back out into the Gambling Den, with you following on right behind [axel.herHim].
+		你听到[axel.namePos]的话，整理好自己的东西，向[axel.herHim]走去。[axel.race]又对你笑了笑，打开门，回到赌场，你紧随其后。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_AXEL_SEX"><![CDATA[
 	<p>
-		Letting out a deep, satisfied groan, Axel disentangles himself from you and steps back a little. Cleaning himself up, he starts to get his clothing back in order while you do the same. Once he's done, he steps up to you and confidently plants one last kiss on your [pc.lips], before heading over to the door and saying, [axel.speech(I'd better be getting back to work now. That sure was fun, [pc.name].)]
+		阿克塞尔发出深沉而满足的呻吟，从你身上挣脱出来，向后退了几步。他把自己收拾干净，开始整理衣物，你也在做同样的事情。他完成后走到你面前，自信地在你的[pc.lips]上留下最后一吻，走到门边说：[axel.speech(我现在最好回去工作了。刚才真有意思，[pc.name]。)]
 	</p>
 	<p>
-		Reciprocating Axel's remark, you finish getting your things in order and walk over to him. Smiling at you once last time, the [axel.race] opens the door and heads back out into the Gambling Den, with you following on right behind him.
+		你听到阿克塞尔的话，整理好自己的东西，向他走去。[axel.race]又对你笑了笑，打开门，回到赌场，你紧随其后。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_AXEL_SEX_LEAVE"><![CDATA[
 	<p>
-		Walking back out into the Gambling Den's entrance hall, you say goodbye to [axel.name], leaving [axel.herHim] to lock the door to [axel.her] office.
+		你回到赌场的门厅，告别了[axel.name]，让[axel.herHim]锁上办公室的门。
 		#IF(pc.hasCompanions())
-			 Joining up with [npc.name] once more, you wonder where to go to next...
+			你再一次和[npc.Name]汇合，不知道接下来该去哪里……
 		#ELSE
-			 Looking around, you wonder where to go to next...
+			你环顾四周，不知道接下来该去哪里……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_LEXA_HYPNO -->
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_HYPNO"><![CDATA[
 	<p>
-		Wanting [axel.name] to see that there are more opportunities available to [axel.herHim] if [axel.she] were to just broaden [axel.her] horizons a little, you guide [axel.herHim] over to sit down on [axel.her] office's comfortable leather chair. Perching yourself on the edge of the adjacent desk, you lean down to place one [pc.hand] on the [axel.race]'s leg, before leaning in and seductively asking, [pc.speech(You see me as more than just a friend, right, [axel.name]?)] 
+		你想让[axel.name]多多开拓眼界，找寻更多机会，于是你拉着[axel.herHim]在办公室舒适的皮椅上坐下，而你坐在一旁的桌边上，俯下身将一只[pc.hand]放在[axel.race]的腿上，凑过去诱惑地问道：[pc.speech(你不仅仅把我看作朋友，对吧，[axel.name]？)]
 	</p>
 	<p>
-		[axel.speech(Erm, well, not really...)] [axel.name] replies, nervously fidgeting around on [axel.her] seat in a clear sign of discomfort. Trying to shuffle away form you a little, [axel.she] continues, [axel.speech(Sorry, [pc.name], but I only really like masculine people...)]
+		[axel.speech(呃，嗯，不是……)][axel.name]坐立不安，明显很不自在。[axel.she]试图稍微与你拉开距离，继续说道：[axel.speech(抱歉，[pc.name]，我只喜欢有男子气概的人……)]
 	</p>
 	<p>
-		[pc.speech(Aww, that's a shame,)] you reply, lifting up your enchanted hypno-watch and playfully twisting the metallic chain around your [pc.fingers], [pc.speech(but you know, that does present me with an opportunity to give you a gift.)]
+		[pc.speech(啊~真可惜。)]你回答说，一边举起你的催眠怀表，俏皮地把金属链在[pc.fingers]上绕啊绕，[pc.speech(但你想，这确实给了我一个送你礼物的机会。)]
 	</p>
 	<p>
-		[axel.speech(A gift?)] [axel.name] inquisitively asks, [axel.speech(What sort of gift?)]
+		[axel.speech(礼物？)][axel.name]好奇发问，[axel.speech(什么样的礼物？)]
 	</p>
 	<p>
-		[pc.speech(One that I'm sure you'll love,)] you reply, surreptitiously swinging the swirling face of the hypno-watch back and forth in a manner that you know [axel.name] won't be able to resist staring at. Sure enough, you see her eyes travelling left and right in time with the device's steady oscillation. Knowing that the [axel.race] is now in a prime state in which the hypno-watch can permanently alter [axel.her] sexual orientation, you focus on channelling the device's power into [axel.her] mind as you ask, [pc.speech(So, you like guys, [axel.name]?)]
+		[pc.speech(你一定会喜欢的那种。)]你一边回答，一边悄悄地来回摆动催眠怀表，你知道[axel.name]一定会忍不住盯着看。果然，你看到她的视线也随着怀表来回移动。你知道现在正是用催眠怀表永久改变[axel.name]性取向的最佳时刻，于是你一边集中精力将表的能量导入[axel.her]的大脑，一边问道：[pc.speech(那么，你喜欢男人吗，[axel.name]？)]
 	</p>
 	<p>
-		[axel.speech(Hmm... yes... I like guys...)] [axel.name] sluggishly replies, [axel.her] gaze still fixed on the hypno-watch.
+		[axel.speech(嗯……对……我喜欢男人……)][axel.name]缓慢地回答道，[axel.her]的目光仍然钉在催眠怀表上。
 	</p>
 	<p>
-		[pc.speech(It would be good for you if you also liked girls, wouldn't it?)] you ask, [pc.speech(You'd like to have sex with feminine people, right, [axel.name]?)]
+		[pc.speech(如果你也喜欢女孩，那该多好啊，不是吗？)]你问，[pc.speech(你喜欢和女性做爱对吧，[axel.name]？)]
 	</p>
 	<p>
-		[axel.speech(Yes... I like girls... I'd like feminine people... I'd like sex with them...)] the [axel.race] replies, letting you know that the hypno-watch has successfully reprogrammed [axel.her] mind.
+		[axel.speech(是的……我喜欢女孩……我喜欢有女人味的人……我喜欢和她们做爱……)][axel.race]回复道，看来催眠怀表已然成功重设了[axel.her]的思维了。
 	</p>
 	<p>
-		Smirking to yourself, you lean back a little and slowly allow the hypno-watch's rhythmic motion to settle down to a stop. Snatching it up in one [pc.hand], you watch as [axel.name] blinks a couple of times before shaking [axel.her] head clear. Looking up at you once more, [axel.she] asks, [axel.speech(What was that you were saying about a gift? I must have zoned out for a moment there.)]
+		你暗自发笑，稍稍向后靠了靠，慢慢地让催眠怀表停下来。你[pc.hand]提着怀表，看着[axel.name]眨了几下眼睛，又摇了摇[axel.her]自己的头。她再次抬头看着你，问道：[axel.speech(刚刚说是什么礼物？我刚才一定是走神了。)]
 	</p>
 	<p>
-		Repeating your movement from a few minutes ago, you lean down to place one [pc.hand] on the [axel.race]'s leg, before once again seductively asking, [pc.speech(I was asking whether or not you'd like this sort of gift...)]
+		你重演几分钟前的动作，俯下身将一只[pc.hand]放在[axel.race]的腿上，再次诱惑地问道：[pc.speech(我在问你喜不喜欢这样的礼物……)]
 	</p>
 	<p>
-		Running your [pc.hand] up the length of [axel.namePos] leg, you gently grope [axel.her] groin, and as the [axel.race]'s cheeks flush red, you squeeze the [axel.cockSize] bulge between [axel.her] legs. Letting out a horny moan, [axel.name] excitedly answers your question, [axel.speech(Y-Yes! I'd like that sort of gift very much...)]
+		你的[pc.hand]沿着[axel.namePos]的腿一路向上摸，轻轻摸索[axel.her]的腹股沟。你捏了捏[axel.her]两腿之间[axel.cockSize]的隆起，惹得[axel.race]双颊泛红，发出淫荡的呻吟声。[axel.name]兴奋地回答道：[axel.speech(对！我非常喜欢这样的馈赠……)]
 	</p>
 	<p>
-		[pc.speech(Well, maybe if you're lucky, you'll get it some time,)] you reply, letting out a laugh as you realise that your devious plan has been completely successful... 
+		[pc.speech(好吧，说不定你哪天运气好就有了呢。)]你放声大笑地回答道，因为你的邪恶计划已经得逞了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_LEXA_FEMINISE -->
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_FEMINISE"><![CDATA[
 	<p>
-		Thinking about fully feminising [axel.name], you ask [axel.herHim] if [axel.sheHas] still got the potions which Silence gave to [axel.herHim]. Heading over to [axel.her] desk, [axel.name] opens a drawer and produces them, before setting them down on the surface and sighing, [axel.speech(Yeah, I've got them. I've been thinking a lot about whether to drink them or not. I mean, I'm actually feeling pretty good with the way my body is now, which makes me think that maybe I'd feel even better if I went fully feminine...)]
+		你想到要让[axel.name]完全女性化，便问[axel.herHim]默给的魔药还在不在。[axel.name]走到书桌前，打开抽屉，把药水拿到桌上，叹了口气说：[axel.speech(在的，我一直在考虑要不要喝。我是说，现在的新身体感觉不错，这让我觉得，如果我完全女性化，说不定会感觉更好……)]
 	</p>
 	<p>
-		Realising that you have the opportunity to persuade [axel.name] to [style.italicsFeminine(permanently fully feminise)] [axel.herself], you wonder what you should say next...
+		你意识到你有机会说服[axel.name]变得[style.italicsFeminine(永久完全女性化)]，便思索接下来该说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_FEMINISE_APPLY_ZERO"><![CDATA[
 	<p>
-		Knowing that it would be the best thing for [axel.herHim] to do, you tell [axel.name] that [axel.she] should drink the pink potion and become fully feminine. Obviously already thinking the same thing, the [axel.race] doesn't need any further encouragement, and replies, [axel.speech(You're right, [pc.name]. I really should have done this the moment Silence gave me the potion. I'm still unsure about what to do with the supplement she gave me, though...)]
+		你知道这样做对[axel.name]来说是最佳选择，便叫[axel.herHim]喝下粉色药水，变得完全女性化。显然，[axel.race]与你想法一致，无需更多鼓励就回答说：[axel.speech(你说得对，[pc.name]，我真应该在默给我药水的那一刻就这么做。不过我还是不知道该怎么处理她给我的另一瓶药……)]
 	</p>
 	<p>
-		[pc.speech(Just forget the supplement,)] you say, [pc.speech(you want to end up feeling as feminine as possible, right? I think that'd be easier for you if you let your cock shrink down even more...)]
+		[pc.speech(直接忘了呗。)]你说，[pc.speech(你想让自己尽可能有女人味，对吧？我想，如果你能让你的鸡巴缩得更小一些，就更容易了……)]
 	</p>
 	<p>
-		Placing [axel.her] trust in your judgement, [axel.name] does as you say, and pushes the smaller, blue bottle to one side as [axel.she] grabs the pink feminisation potion. Pulling out the stopper, [axel.she] brings it up to [axel.her] lips, and without a moment's hesitation, gulps down all of the transformative liquid contained within. Dropping the now-empty bottle to the floor, [axel.name] staggers back a little, complaining, [axel.speech(Oh... I feel so hot! I need to get out of these clothes!)]
+		[axel.name]相信你的判断，照你说的把较小的蓝色瓶子推到一边，抓起粉色魔药。[axel.name]先是拔开粉色魔药的瓶塞，毫不犹豫地一饮而尽。[axel.she]把空瓶子扔到地上，一边踉踉跄跄地往回走，一边抱怨道：[axel.speech(哦……我感觉好热！我得把这些衣服脱了！)]
 	</p>
 	<p>
-		Desperately pulling [axel.her] clothes off, [axel.name] fully exposes [axel.herself] to you, allowing you to get an unobstructed view as [axel.her] body changes right before your eyes. Within seconds, she's not only lost a few [units.sizes] of height, but her body has also slimmed down and taken on a far more feminine figure than before, complete with womanly hips and a proportionally-large ass. Letting out a gasp as the wave of transformative energy flows through her, [axel.name] reaches up to her chest, and as her loose, hair-like scales grow longer, her breasts fill out and plump up into round C-cups.
+		[axel.name]死命扯开衣服，酮体完全暴露在你面前，让你一览无余地看着[axel.her]的身体发生变化。区区几秒，她不仅变矮了好几[units.sizes]，身材也变得苗条起来，臀部和大屁股的比例也比以前更有女人味了。[axel.name]在转化能量的冲击下发出一声喘息，她将手伸向胸前，随着她那像头发一样的松散鳞片变长，她的胸部也愈发丰满，变成了圆润的C罩杯。
 	</p>
 	<p>
-		[axel.speech(~Ooh!~)] the [axel.race] moans, squeezing her new mammaries. Obviously feeling the transformation then move down between her legs, [axel.name] pushes her thighs together and lets out another high-pitched moan. Looking down, you see her cock shrink down into a tiny little nub, while her balls retract into little more than a small bump between her legs. Just as suddenly as it started, the transformation ends, and with one final gasp, [axel.name] hefts her new breasts and exclaims, [axel.speech(Look! They're huge!)]
+		[axel.speech(~噢！~)][axel.race]呻吟着，揉捏着她的新乳房。[axel.name]明显感觉到双腿间的变化， 将大腿并拢，又发出一声高亢的呻吟。你低头一看，[axel.name]的阴茎缩成了一个小小的阴核，而睾丸则缩成了两腿之间的小凸起。转化来得也快去得也快，[axel.name]最后喘了一口气，拢起她的新乳房，惊呼道：[axel.speech(看！它们好巨大！)]
 	</p>
 	<p>
-		Not entirely convinced that C-cups could be regarded as being 'huge', you nevertheless compliment [axel.name] on her new appearance. Blushing as she suddenly realises that she's standing completely naked before you, the [axel.race] asks, [axel.speech(Could you do me a favour? I've bought some clothes in anticipation of this day, but now that the moment's arrived, I don't really know what to wear... Could you help me choose?)]
+		虽然你对C罩杯可以被称为“巨大”半信半疑，但还是称赞了[axel.name]的新外貌。[axel.race]突然意识到自己正一丝不挂地站在你面前，脸涨得通红，又问道：[axel.speech(能帮帮我吗？为了迎接这一天，我买了一些衣服，但真的到了这一刻，我又不知道该穿什么……你能帮我选一下吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_FEMINISE_APPLY_HALF"><![CDATA[
 	<p>
-		Knowing that it would be the best thing for [axel.herHim] to do, you tell [axel.name] that [axel.she] should drink the pink potion and become fully feminine. Obviously already thinking the same thing, the [axel.race] doesn't need any further encouragement, and replies, [axel.speech(You're right, [pc.name]. I really should have done this the moment Silence gave me the potion. I'm still unsure about what to do with the supplement she gave me, though...)]
+		你知道这样做对[axel.name]来说是最佳选择，便叫[axel.herHim]喝下粉色药水，变得完全女性化。显然，[axel.race]与你想法一致，无需更多鼓励就回答说：[axel.speech(你说得对，[pc.name]，我真应该在默给我药水的那一刻就这么做。不过我还是不知道该怎么处理她给我的另一瓶药……)]
 	</p>
 	<p>
-		[pc.speech(Why don't you just take half,)] you suggest, [pc.speech(that should keep your cock the same size it is right now. You'd be happy with that, right?)]
+		[pc.speech(喝一半怎么样？)]你建议道，[pc.speech(这样你的肉棒就能像现在一样了，你也会开心的，对吧？)]
 	</p>
 	<p>
-		Placing [axel.her] trust in your judgement, [axel.name] makes an affirmative humming noise, and grabs both the pink and blue potions. Pulling out the stoppers, [axel.she] brings the pink one up to [axel.her] lips first, and without a moment's hesitation, gulps down all of the transformative liquid contained within. Dropping the now-empty bottle to the floor, [axel.name] proceeds to drink down half of the blue potion, before staggering back a little, complaining, [axel.speech(Oh... I feel so hot! I need to get out of these clothes!)]
+		[axel.name]相信你的判断，嗯了一声，同时抓起粉色魔药和蓝色魔药。[axel.name]先是拔开粉色魔药的瓶塞，毫不犹豫地把里面的药水一口喝光。[axel.she]把空瓶子扔到地上，又把蓝色药水喝了一半，一边踉踉跄跄地往回走，一边抱怨道：[axel.speech(哦……我感觉好热！我得把这些衣服脱了！)]
 	</p>
 	<p>
-		Desperately pulling [axel.her] clothes off, [axel.name] fully exposes [axel.herself] to you, allowing you to get an unobstructed view as [axel.her] body changes right before your eyes. Within seconds, she's not only lost a few [units.sizes] of height, but her body has also slimmed down and taken on a far more feminine figure than before, complete with womanly hips and a proportionally-large ass. Letting out a gasp as the wave of transformative energy flows through her, [axel.name] reaches up to her chest, and as her loose, hair-like scales grow longer, her breasts fill out and plump up into round C-cups.
+		[axel.name]死命扯开衣服，酮体完全暴露在你面前，让你一览无余地看着[axel.her]的身体发生变化。区区几秒，她不仅变矮了好几[units.sizes]，身材也变得苗条起来，臀部和大屁股的比例也比以前更有女人味了。[axel.name]在转化能量的冲击下发出一声喘息，她将手伸向胸前，随着她那像头发一样的松散鳞片变长，她的胸部也愈发丰满，变成了圆润的C罩杯。
 	</p>
 	<p>
-		[axel.speech(~Ooh!~)] the [axel.race] moans, squeezing her new mammaries. Obviously feeling the transformation then move down between her legs, [axel.name] pushes her thighs together and lets out another high-pitched moan. Looking down, you see her cock throb a couple of times, but other than that, nothing happens down there. Just as suddenly as it started, the transformation ends, and with one final gasp, [axel.name] hefts her new breasts and exclaims, [axel.speech(Look! They're huge!)]
+		[axel.speech(~噢！~)][axel.race]呻吟着，揉捏着她的新乳房。[axel.name]明显感觉到双腿间的变化， 将大腿并拢，又发出一声高亢的呻吟。你低头一看，[axel.name]的阴茎跳动了几下，但除此之外无事发生。转化来得也快去得也快，[axel.name]最后喘了一口气，拢起她的新乳房，惊呼道：[axel.speech(看！它们好巨大！)]
 	</p>
 	<p>
-		Not entirely convinced that C-cups could be regarded as being 'huge', you nevertheless compliment [axel.name] on her new appearance. Blushing as she suddenly realises that she's standing completely naked before you, the [axel.race] asks, [axel.speech(Could you do me a favour? I've bought some clothes in anticipation of this day, but now that the moment's arrived, I don't really know what to wear... Could you help me choose?)]
+		虽然你对C罩杯可以被称为“巨大”半信半疑，但还是称赞了[axel.name]的新外貌。[axel.race]突然意识到自己正一丝不挂地站在你面前，脸涨得通红，又问道：[axel.speech(能帮帮我吗？为了迎接这一天，我买了一些衣服，但真的到了这一刻，我又不知道该穿什么……你能帮我选一下吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_FEMINISE_APPLY_FULL"><![CDATA[
 	<p>
-		Knowing that it would be the best thing for [axel.herHim] to do, you tell [axel.name] that [axel.she] should drink the pink potion and become fully feminine. Obviously already thinking the same thing, the [axel.race] doesn't need any further encouragement, and replies, [axel.speech(You're right, [pc.name]. I really should have done this the moment Silence gave me the potion. I'm still unsure about what to do with the supplement she gave me, though...)]
+		你知道这样做对[axel.name]来说是最佳选择，便叫[axel.herHim]喝下粉色药水，变得完全女性化。显然，[axel.race]与你想法一致，无需更多鼓励就回答说：[axel.speech(你说得对，[pc.name]，我真应该在默给我药水的那一刻就这么做。不过我还是不知道该怎么处理她给我的另一瓶药……)]
 	</p>
 	<p>
-		[pc.speech(Why don't you drink it all?)] you suggest, [pc.speech(That should return your cock to the size it always was. You'd be happy with that, right?)]
+		[pc.speech(为什么不都喝了？)]你建议道，[pc.speech(这样你的肉棒就能恢复到原来的大小了，你也会开心的，对吧？)]
 	</p>
 	<p>
-		Placing [axel.her] trust in your judgement, [axel.name] makes an affirmative humming noise, and grabs both the pink and blue potions. Pulling out the stoppers, [axel.she] brings the pink one up to [axel.her] lips first, and without a moment's hesitation, gulps down all of the transformative liquid contained within. Dropping the now-empty bottle to the floor, [axel.name] proceeds to drink down all of the blue potion, before staggering back a little, complaining, [axel.speech(Oh... I feel so hot! I need to get out of these clothes!)]
+		[axel.name]相信你的判断，嗯了一声，同时抓起粉色魔药和蓝色魔药。[axel.name]先是拔开粉色魔药的瓶塞，毫不犹豫地把里面的药水一口喝光。[axel.she]把空瓶子扔到地上，又喝完了蓝色药水，一边踉踉跄跄地往回走，一边抱怨道：[axel.speech(哦……我感觉好热！我得把这些衣服脱了！)]
 	</p>
 	<p>
-		Desperately pulling [axel.her] clothes off, [axel.name] fully exposes [axel.herself] to you, allowing you to get an unobstructed view as [axel.her] body changes right before your eyes. Within seconds, she's not only lost a few [units.sizes] of height, but her body has also slimmed down and taken on a far more feminine figure than before, complete with womanly hips and a proportionally-large ass. Letting out a gasp as the wave of transformative energy flows through her, [axel.name] reaches up to her chest, and as her loose, hair-like scales grow longer, her breasts fill out and plump up into round C-cups.
+		[axel.name]死命扯开衣服，酮体完全暴露在你面前，让你一览无余地看着[axel.her]的身体发生变化。区区几秒，她不仅变矮了好几[units.sizes]，身材也变得苗条起来，臀部和大屁股的比例也比以前更有女人味了。[axel.name]在转化能量的冲击下发出一声喘息，她将手伸向胸前，随着她那像头发一样的松散鳞片变长，她的胸部也愈发丰满，变成了圆润的C罩杯。
 	</p>
 	<p>
-		[axel.speech(~Ooh!~)] the [axel.race] moans, squeezing her new mammaries. Obviously feeling the transformation then move down between her legs, [axel.name] pushes her thighs together and lets out another high-pitched moan. Looking down, you see her cock throb a couple of times, before rapidly expanding to the same large size as it was when you first saw [axel.name] naked. Just as suddenly as it started, the transformation ends, and with one final gasp, [axel.name] hefts her new breasts and exclaims, [axel.speech(Look! They're huge!)]
+		[axel.speech(~噢！~)][axel.race]呻吟着，揉捏着她的新乳房。[axel.name]明显感觉到双腿间的变化， 将大腿并拢，又发出一声高亢的呻吟。你低头一看，[axel.name]的阴茎跳动了几下，立刻膨胀到和你第一次看到的一样大。转化来得也快去得也快，[axel.name]最后喘了一口气，拢起她的新乳房，惊呼道：[axel.speech(看！它们好大！)]
 	</p>
 	<p>
-		Not entirely convinced that C-cups could be regarded as being 'huge', you nevertheless compliment [axel.name] on her new appearance. Blushing as she suddenly realises that she's standing completely naked before you, the [axel.race] asks, [axel.speech(Could you do me a favour? I've bought some clothes in anticipation of this day, but now that the moment's arrived, I don't really know what to wear... Could you help me choose?)]
+		虽然你对C罩杯可以被称为“巨大”半信半疑，但还是称赞了[axel.name]的新外貌。[axel.race]突然意识到自己正一丝不挂地站在你面前，脸涨得通红，又问道：[axel.speech(能帮帮我吗？为了迎接这一天，我买了一些衣服，但真的到了这一刻，我又不知道该穿什么……你能帮我选一下吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_LEXA_FEMINISE_BACK_OUT -->
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_FEMINISE_BACK_OUT"><![CDATA[
 	<p>
-		You decide against convincing [lexa.name] to drink the feminising potions, and instead wonder if there's anything else you want from [lexa.herHim]...
+		你决定不说服[lexa.name]喝下女性化药水，而是思索起自己还有没有什么想从[lexa.herHim]那里得到的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_LEXA_FEMINISE_APPLY_CLOTHING -->
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_FEMINISE_APPLY_CLOTHING"><![CDATA[
 	<p>
-		Seeing no reason not to help [axel.name] choose what style of clothing she wears, you ask her to show you the sorts of things that she's got available. Smiling happily as she hears that you're willing to help her, although also blushing from embarrassment at being naked, [axel.name] rushes over to an internal door on the far side of the room. Although it's marked as 'Office Supplies', [axel.name] calls out as she opens the door, [axel.speech(I don't really keep many office supplies in here; since I drank that potion Vengar gave me, I've actually started using it as a dressing room...)]
+		你认为没有理由不帮[axel.name]选一套衣服来穿，于是请她向你展示都有哪些衣服。[axel.name]一听你愿意帮她，立马笑靥如花。虽然她还在因赤身裸体而尴尬脸红，但还是冲到了房内的一扇门前，门上标着“办公用品”，[axel.name]还是一边开门一边叫道：[axel.speech(其实里面没放多少办公用品，自从喝了文加给我的那瓶药水，我就开始把这里当成更衣室了……)]
 	</p>
 	<p>
-		Disappearing into this room for a moment, the [axel.race] soon reappears with her arms full of clothing. Dropping them on the top of her desk, she picks up the items on the top of the pile, which turn out to be a light pink skater dress, black heels, light pink lingerie, and some other minor accessories. Holding the dress up to cover her body and show it off to you, [axel.name] says, [axel.speech(So, this is what I was thinking of wearing, but I also have a couple of other more... erm... <i>exotic</i> choices...)]
+		[axel.race]在这个房间里消失了一会儿，很快抱着满怀的衣服出来了。她把这些衣服丢在书桌上，拎起放在最上面的东西，原来是一件浅粉色的短裙、黑色高跟鞋、浅粉色内衣和其他配饰。[axel.name]提起裙子来遮住身体，向你展示道：[axel.speech(所以，我想穿这个，但我还有一些更……呃……<i>奇特</i>的选择……)]
 	</p>
 	<p>
-		Putting the dress and other accessories to one side, [axel.name] picks up the next items of clothing. Much to your surprise, you see that she's now holding a complete set of light pink maid's clothes, complete with dress, headpiece, stockings, sleeves, and heels. Blushing as she displays them to you, [axel.name] mutters, [axel.speech(I thought this would be fun, but maybe it's too much...)]
+		[axel.name]把裙子和其他配件放到一边， 拿起了另一套衣服。令你惊讶的是，她现在拿着的是一整套浅粉色女仆装，包括连衣裙、头饰、丝袜、袖套和高跟鞋。[axel.name]满脸通红地把这些衣服展示给你看，喃喃道：[axel.speech(我以为这会很有趣，但可能太过了……)]
 	</p>
 	<p>
-		Before you can offer an opinion, [axel.name] quickly puts the set of maid's clothing to one side, before letting out an embarrassed sigh as she sees what she's left until last. Slowly picking up the remaining items of clothing, the [axel.name] turns to show you one of the sluttiest outfits that you could imagine. Consisting of fishnet gloves, stockings, and top, and with a pleated miniskirt so short that it would do nothing to conceal her lacy black thong, this outfit really doesn't leave much to the imagination. You don't see any sign of a bra, either, but as [axel.name] puts the clothing back down on top of a black leather jacket she'd left on the desk, you see that there's a roll of tape which might end up being stuck as crosses over the [axel.race]'s nipples.
+		还没等你发表意见，[axel.name]又迅速把那套女仆装放到了一边，盯着最后一套衣服尴尬地叹了口气，随后慢吞吞地拿起剩下的衣服，转身向你展示。这是一套你能想象到的放荡的装束，她身穿渔网状手套、丝袜以及上衣，下身则是一条迷你百褶裙，短得连黑色的蕾丝丁字裤都遮不住，真是令你意想不到。你没有看到任何有胸罩的痕迹，但是当[axel.name]把衣服放回桌上的黑色皮夹克上时，你发现一卷胶带，大概最后会像十字架一样贴在[axel.race]的乳头上。
 	</p>
 	<p>
-		By now furiously blushing, [axel.name] asks, [axel.speech(So, which one do you think? Y-You can pretend that you didn't see that last outfit... I-I don't think it would be a good idea for me to dress like that...)]
+		此刻，[axel.name]羞红了脸，问道：[axel.speech(那你觉得哪套好呢？你，你可以假装没看到最后那套衣服……我也觉得穿成那样不太好……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_LEXA_FEMINISE_APPLY -->
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_CLOTHING_FEMININE"><![CDATA[
 	<p>
-		Thinking that it would be best for [axel.name] to stick with the more conservative of the three choices, you tell her that she's bound to look beautiful wearing the light pink dress. Her face lights up as you say this, and with an excited squeak, she quickly retreats into what's become her dressing room, clearly eager to change into the outfit you suggested.
+		你认为[axel.name]最好还是选择最保守的那一件，于是你告诉她，这条淡粉色的连衣裙穿起来一定很好看。你这么一说，她的脸一下子亮了起来，兴奋地吱吱叫着，飞快地冲进她的更衣室，看来她是急着要穿你推荐的那一身了。
 	</p>
 	<p>
-		After a few moments, [axel.name] walks back out into the office wearing the dress, heels, and other feminine accessories. Smiling happily at you, she says, [axel.speech(Thank you so much, [pc.name]! I feel so much better like this!)]
+		几分钟后，[axel.name]身穿裙子，高跟鞋，还有其它女人味十足的饰品回来了。她笑颜如花：[axel.speech(非常感谢，[pc.name]！这样棒极了！)]
 	</p>
 	<p>
-		Pleased to see how happy the [axel.race] is, you can't help but smile as you wonder what to do next...
+		见[axel.race]如此开心，你也发自内心地笑了，一边思索着接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_CLOTHING_MAID"><![CDATA[
 	<p>
-		Thinking that it would be best for [axel.name] to wear clothes which reflect her true nature, you tell her that she'd feel most comfortable wearing the set of maid's clothes. Although she blushes as you say this, she's obviously not opposed to the idea, as she quickly retreats into what's become her dressing room, clearly eager to change into the outfit you suggested.
+		你觉得[axel.name]最好还是选择展现真我的那一件，于是你告诉她，这身女仆套装最适合她。尽管你的话让她满脸通红，但她却没有任何异议，飞快地退回到更衣室里去了，她显然是急着要穿你推荐的那一身了。
 	</p>
 	<p>
-		After a few moments, [axel.name] walks back out into the office wearing the light pink dress, heels, stockings, headdress, and sleeves. Smiling happily at you, she does a little twirl and says, [axel.speech(Thank you so much, [pc.name]! I wasn't sure how I'd feel wearing this, but it honestly feels really fun!)]
+		几分钟后，[axel.name]回来了，她穿着淡粉色的裙子，踩着高跟鞋，脚穿长袜，戴着头饰与袖套。她笑颜如花，朝你转了一圈：[axel.speech(非常感谢，[pc.name]！我不太懂具体是什么感觉，但是穿起来真的很有意思！)]
 	</p>
 	<p>
-		Pleased to see how happy the [axel.race] is, you can't help but smile as you wonder what to do next...
+		见[axel.race]如此开心，你也发自内心地笑了，一边思索着接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_CLOTHING_WHORE"><![CDATA[
 	<p>
-		Thinking that it would be best for [axel.name] to wear clothes which make her look like a slutty whore, you order her to wear the set of trashy, revealing clothing. Although she heavily blushes as you say this, she's obviously not opposed to the idea, as she quickly retreats into what's become her dressing room, clearly eager to change into the outfit you suggested.
+		你觉得[axel.name]最好还是选择像个浪妓的那一件，于是你命令她穿上这身淫荡的暴露服饰。尽管你的话让她满脸通红，但她却没有任何异议，飞快地退回到更衣室里去了，显然是急着要穿你推荐的那一身了。
 	</p>
 	<p>
-		After a few moments, [axel.name] walks back out into the office wearing the fishnets, micro skirt, thigh-high boots, and leather jacket. Striking a pose, the [axel.race] smirks and says, [axel.speech(You know, this feels really liberating! Thanks, [pc.name], I would never have worn this without your encouragement!)]
+		几分钟后，[axel.name]回来了，她身穿渔网服与超短裙，脚踏高筒靴，还披着一件皮夹克。[axel.race]摆了个造型，调笑着说：[axel.speech(你知道吗，这真的感觉好自由！谢谢你，[pc.name]，如果没有你的鼓励，我绝对不会穿成这样！)]
 	</p>
 	<p>
-		Pleased to see how happy the [axel.race] is, you can't help but smile as you wonder what to do next...
+		见[axel.race]如此开心，你也发自内心地笑了，一边思索着接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_LEXA_CLOTHING -->
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_CLOTHING"><![CDATA[
 	<p>
-		Thinking that it would be a good idea for [lexa.name] to change into a different outfit, you ask her if she's still the ones she showed you last time. Smiling as she hears you ask this, the [axel.race] replies, [axel.speech(I sure have, [pc.name]. Do you think I should change into something else then?)]
+		你认为让[lexa.name]换一身衣服是个好主意，于是问上次给你看的那套衣服还在不在。[axel.race]听后微笑着回答说：[axel.speech(当然在，[pc.name]。那你觉得我应该换套衣服吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_WITH_LEXA_CLOTHING_BACK_OUT -->
 	
 	<htmlContent tag="OFFICE_WITH_LEXA_CLOTHING_BACK_OUT"><![CDATA[
 	<p>
-		You decide against having [lexa.name] change her outfit, and instead wonder if there's anything else you want from [lexa.herHim]...
+		你决定不让[lexa.name]更换装备，你重新考虑起想要[lexa.herHim]做的事……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL -->
 	
 	<htmlContent tag="AXEL"><![CDATA[
 	<p>
-		Deciding that you'd like to talk to [axel.name], you approach the albino [axel.race] and call out a greeting to [axel.herHim].
+		你想和[axel.name]聊聊，于是走近这位白化[axel.race]并和[axel.herHim]打招呼。
 	</p>
 	<p>
-		[axel.speech(Ah, hello, [pc.name]!)] [axel.she] responds, turning to face you. Flashing you a toothy grin, [axel.she] asks, [axel.speech(What can I do for you?)]
+		[axel.speech(啊，[pc.name]，你好！)][axel.she]应了一声，转身面向你，对你绽开灿烂的笑容，[axel.speech(有什么能为你效劳吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AXEL_ROXY"><![CDATA[
 	<p>
-		[pc.speech(So what's the story with Roxy?)] you ask, [pc.speech(She seems to be a little rough with her customers.)]
+		[pc.speech(所以你知道罗克西的事迹吗？)]你问， [pc.speech(她对顾客有点粗鲁。)]
 	</p>
 	<p>
-		[axel.speech(Yeah, she's nothing but trouble.)] [axel.name] sighs, [axel.speech(If it were up to me, I'd have thrown her out a long time ago. Seeing as she's Vengar's ex, I've got no choice but to leave her alo-)]
+		[axel.speech(是啊，她就是个麻烦。)][axel.name]叹气，[axel.speech(如果我能做主，我早就把她扔出去了。可惜她是文加的前女友，我也没办法，只能把她留在这——)]
 	</p>
 	<p>
-		[axel.name] suddenly stops talking mid-sentence, and upon realising that he's said more than he meant to, starts to panic and stutter, [axel.speech(I-I mean, she's no trouble at all, ok? I never really meant to say that I want to throw her out! I was just joking, you understand?)]
+		[axel.name]的话戛然而止，意识到自己透露太多，变得惊慌失措、结结巴巴，[axel.speech(我、我是说，她根本不是什么麻烦好吧？我从没想过要把她赶出去！刚刚只是开个玩笑，你明白吗？)]
 	</p>
 	<p>
-		[pc.speech(What's the matter?)] you ask, worried about [axel.name]'s sudden shift in tone, [pc.speech(And who's Vengar?)]
+		[pc.speech(怎么了？)]你担忧[axel.name]突然转变的语气，问道，[pc.speech(文加又是谁？)]
 	</p>
 	<p>
-		[axel.name] glances around nervously, before leaning in towards you and lowering his voice, [axel.speech(You mean you're not working for him?)]
+		[axel.name]紧张地环顾四周，然后凑近你，压低声音问，[axel.speech(你没有在为他效力？)]
 	</p>
 	<p>
-		[pc.speech(I don't even know who he is,)] you reply.
+		[pc.speech(我都不知道他是谁，)]你回答道。
 	</p>
 	<p>
-		[axel.name] lets out a big sigh of relief, [axel.speech(Thank goodness. I've been getting careless recently. I really shouldn't have mentioned Vengar... Just forget what I said, ok?)]
+		[axel.name]长长地舒了口气，[axel.speech(谢天谢地，我最近真是太粗心了。我真不该提到文加……就当我没说过，好吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AXEL_ROXY_REPEAT"><![CDATA[
 	#IF(pc.hasQuest(QUEST_LINE_SIDE_VENGAR))
 		<p>
-			[pc.speech(Can you tell me anything else about Roxy?)] you ask, hoping to get some more information from [axel.name] about her.
+			[pc.speech(你能告诉我一些关于罗克西的事吗？)]你问，希望从[axel.name]嘴里得到些信息。
 		</p>
 		<p>
-			[axel.speech(Well, other than that she's Vengar's ex-girlfriend, I don't really know too much about her,)] the [axel.race] replies, [axel.speech(That is, other than the obvious fact that she's extremely rude. She treats me like dirt whenever I try talking to her, so I've never been able to find out anything about her.)]
+			[axel.speech(好吧，除了她是文加的前女友外，我对她了解不多，)][axel.race]回答道，[axel.speech(除了她极其粗鲁这一显而易见的事实之外，我就知道这个。每次我尝试和她搭话，她都把我当泥土，所以我一直无法了解她什么。)]
 		</p>
 		#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_VENGAR))
 			<p>
-				[pc.speech(And you can't get rid of her even though the situation with Vengar is all sorted out now?)] you ask.
+				[pc.speech(现在文加都被解决了，你还不能摆脱她？)]你问。
 			</p>
 			<p>
-				[axel.speech(That's right. The two of them forced me to sign a contract letting her work here indefinitely, so there's nothing that can legally be done to get rid of her now...)]
+				[axel.speech(没错。他们俩强迫我签了一份合同，同意她无限期在这里工作，所以我没有法律手段来摆脱她……)]
 			</p>
 		#ELSE
 			<p>
-				[pc.speech(And you can't get rid of her due to Vengar?)] you ask.
+				[pc.speech(那你是因为文加而无法摆脱她？)]你问。
 			</p>
 			<p>
-				[axel.speech(That's right, but even if Vengar was no longer a problem, I'd still be stuck with her. The two of them forced me to sign a contract letting her work here indefinitely, so there's nothing that can legally be done to get rid of her now...)]
+				[axel.speech(没错，即使文加不再是个问题，我还是会被她缠住。他们俩强迫我签了一份合同，同意她无限期在这里工作，所以我没有法律手段来摆脱她……)]
 			</p>
 		#ENDIF
 		<p>
-			With your questions answered, you wonder what to ask [axel.name] about next...
+			你的问题得到了解答，思考接下来该向[axel.name]问什么……
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(Can you tell me anything else about Roxy?)] you ask, hoping to get some more information from [axel.name] about her.
+			[pc.speech(你能告诉我一些关于罗克西的事吗？)]你问，希望从[axel.name]嘴里得到些信息。
 		</p>
 		<p>
-			[axel.speech(Well, that's complicated,)] [axel.name] replies, nervously shuffling his feet. [axel.speech(I mean, I don't know anything about her really, other than she's a pleasure to be around.)]
+			[axel.speech(好吧，里面很复杂，)][axel.name]回答道，紧张地挪着脚。[axel.speech(我是说，除了她很讨人喜欢，我对她一无所知。)]
 		</p>
 		<p>
-			You can tell that [axel.name] is lying, and you surmise that it's because he doesn't know you well enough to be openly talking to you about Roxy. Perhaps if you were to try and get some more information regarding this 'Vengar' person first, you'd be able to earn his trust and then ask him about Roxy again?
+			你可以看出[axel.name]在撒谎，你猜测这是因为他还不够信任你，所以才不愿公开和你谈论罗克西。也许，你可以先试着了解一下这个叫“文加”的人，赢得他的信任，然后再向他打听罗克西？
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AXEL_VENGAR"><![CDATA[
 	<p>
-		Picking up on the name which [axel.name] inadvertently let slip, you inquire as to who 'Vengar' is, and why Roxy being his ex makes it so that [axel.name] has to put up with her.
+		你注意到[axel.name]无意中透漏出的名字，询问“文加”是谁，以及为什么罗克西作为他的前女友能让[axel.name]不得不忍受她。
 	</p>
 	<p>
-		[axel.speech(You mean you don't know who Vengar is?)] [axel.name] asks, before nervously glancing around to make sure that nobody's eavesdropping on your conversation. Convinced that it's safe to talk, he steps a little closer towards you and continues, [axel.speech(I guess you'll just end up going around asking questions elsewhere if I don't explain it to you, so I'll tell you who Vengar is. He likes to keep a low profile, so please don't mention to anyone that it was me who told you about him, ok?)]
+		[axel.speech(你是说你不知道文加？)][axel.name]问道，紧张地环顾四周，确保没有人偷听你们的谈话后，他朝你走近了一些，继续说道：[axel.speech(我想如果我不向你解释，你肯定会去其他地方问，所以我告诉你文加是谁。他喜欢低调，所以请不要向任何人提起是我告诉你的，好吗？)]
 	</p>
 	<p>
-		You can tell from the tone of [axel.name]'s voice that he's scared to be talking about this 'Vengar' character, so you quickly reassure him that any information that he shares with you will remain a secret. Put at ease by your words, the albino [axel.race] lets out a small sigh, before once again glancing around to check for eavesdroppers, and then starting to explain.
+		你从[axel.name]的语气中觉察出他很害怕谈论这个“文加”，所以赶紧安慰他说你会保密。听了你的话，白化[axel.race]稍稍松了一口气，再次环顾四周，确保没人偷听后才开始解释。
 	</p>
 	<p>
-		[axel.speech(Vengar's the leader of the largest and most dangerous criminal gang down here in Submission,)] he reveals, [axel.speech(He and his rat-morph followers extort all of the business owners down here, and those who refuse to pay protection money either have their premises vandalised, or even worse, are sometimes beaten up or even go missing. Thanks to how successful my business has been, Vengar's taken a personal interest in me, and keeps on demanding more and more protection money every month. It's gotten almost to the point where I'm going to have to shut the Gambling Den down...)]
+		[axel.speech(文加是屈城区最大、最危险的犯罪帮派的头目，)]他透露说，[axel.speech(他和他的鼠化形小弟敲诈这里所有的商人，那些拒绝交保护费的人要么店铺被打砸，要么更糟，会被殴打，甚至失踪。因为我的生意很成功，文加对我产生了兴趣，每个月要交的保护费越来越多，逼得我快要关闭赌场了……)]
 	</p>
 	<p>
-		[pc.speech(Can't the Enforcers do anything?)] you ask.
+		[pc.speech(执法者不管吗？)]你问。
 	</p>
 	<p>
-		[axel.speech(I've already tried talking to them about it, but they say they don't have the manpower to guard my business, and while Vengar <i>is</i> a wanted criminal, he's proving impossible to track down and arrest,)] [axel.name] sighs, [axel.speech(So there's nothing anyone can do to help, and that's about the whole story...)]
+		[axel.speech(我已经试着和他们谈了，但他们说没有足够的人力来保护我的生意，而且文加虽然<i>是</i>通缉犯，但事实证明他不可能被逮捕，)][axel.name]叹了口气，[axel.speech(所以谁也帮不上忙，事情就是这样……)]
 	</p>
 	<p>
-		It sounds as though [axel.name] doesn't want to talk about this any more, but if you wanted to get involved, you suppose you could always offer to help track down Vengar and put a stop to his extortion of Submission's business owners...
+		听起来好像[axel.name]不想再谈这件事了，但只要你想，你随时可以帮忙追踪文加，制止他对屈城区商人的敲诈勒索……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AXEL_VENGAR_OFFER_HELP"><![CDATA[
 	<p>
-		Deciding that you want to help [axel.name], you offer,
+		你决定帮助[axel.name]，提议说：
 		#IF(pc.isCowardly())
-			 [pc.speech(I could try to find a way to get Vengar off your back, so long as I don't have to fight anyone or anything... Where exactly is he?)]
+			[pc.speech(我可以想办法帮你摆脱文加，只要我不用和人动手……他到底在哪儿？)]
 		#ELSEIF(pc.isBrave() && !pc.isShy())
-			 [pc.speech(Don't worry, I'll deal with Vengar, even if it means having to fight his entire gang! Just tell me where he is!)]
+			[pc.speech(别担心，我来对付文加，哪怕是和他的整个帮派战斗！告诉我他在哪儿！)]
 		#ELSE
-			 [pc.speech(If you tell me where he is, I'll deal with Vengar for you.)]
+			[pc.speech(只要你告诉我他在哪，我就帮你对付文加。)]
 		#ENDIF
 	</p>
 	<p>
-		[axel.speech(Really? You'd be willing to help me out like that?)] [axel.name] asks in disbelief, [axel.speech(I wouldn't want you to risk yourself on my behalf, but if you're really serious, then you might be able to find Vengar in his gang's main hideout; they call it the 'Rat Warrens', and it's down in the South-Western tunnels here in Submission. I don't know what the password to get is, but I guess if you say you're there regarding the money I owe them, they should let you in.)]
+		[axel.speech(真的吗？即使这样你也愿意帮我？)][axel.name]不可置信地问，[axel.speech(我不希望你为了我去冒险，但如果你是认真的，那你也许能在帮派的大本营‘鼠窟’里找到文加，就在屈城区的西南部隧道里。我不知道密码是什么，但我想如果你说是为了我欠他们的钱，他们应该会让你进去。)]
 	</p>
 	<p>
-		Telling [axel.name] that you'll find Vengar and bring him to justice, you get ready to set off, but before you go, the albino [axel.race] says that he has some more advice for you.
+		你告诉[axel.name]你会把文加绳之以法后准备出发，但在你出发之前，白化[axel.race]说他还有一些建议要给你。
 	</p>
 	<p>
-		[axel.speech(You could always try to get the Enforcers to help,)] he suggests, [axel.speech(They told me that they were unable to make a move on his hideout, but maybe you could convince them to give you some backup? Oh, and I should also warn you; if you're thinking of fighting Vengar, then you need to be on the lookout for his two rat-girl bodyguards. I've never seen them myself, but Vengar said that if I ever refused to pay him, then I'd be given to them as a plaything...)]
+		[axel.speech(你随时可以向执法者寻求帮助，)]他建议道，[axel.speech(他们和我说过无法对文加的藏身之处采取行动，但也许你可以说服他们给你一些支援？对了，我还得提醒你，如果你想和文加战斗，那就得提防他的两个鼠女保镖。虽说我从来没见过她们，但文加说过如果我拒绝交钱，我就会被送给她们当玩物……)]
 	</p>
 	<p>
-		[axel.name] shudders as he recalls a disturbing memory, before shaking his head and giving you a toothy smile. [axel.speech(I really appreciate your offer of help, but please don't feel obliged to put yourself in harm's way solely on my account. If you do decide to confront Vengar, just please stay safe, ok?)]
+		[axel.name]想起了一段令人不安的回忆，不禁打了个寒颤，然后摇了摇头，对你露齿一笑。[axel.speech(我真的很感谢你愿意帮我，但请不要因为我的缘故而让自己置于险境。如果你决定与文加对峙，请注意安全，好吗？)]
 	</p>
 	<p>
-		Telling [axel.name] that you'll be careful, you wonder if you should do as he suggests and ask Claire for some help from the Enforcers. Then again, you could always try to deal with Vengar without their assistance...
+		你告诉[axel.name]你会小心的，思索要不要按照他的建议，向克莱尔寻求执法者的帮助。不过，你也可以尝试在没有他们帮助的情况下对付文加……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_BUSINESS -->
@@ -713,260 +714,260 @@
 	<htmlContent tag="AXEL_BUSINESS"><![CDATA[
 	#IF(pc.hasQuest(QUEST_LINE_SIDE_VENGAR))
 		<p>
-			Curious to find out about any recent events at the Gambling Den, you ask [axel.name] how [axel.she] is and how [axel.her] business is going.
+			你想了解赌场最近发生的事情，于是问[axel.name][axel.she]近来可好，生意如何。
 		</p>
 		#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_VENGAR))
 			<p>
-				[axel.speech(I'm doing well, thank you,)] [axel.name] responds, smiling happily at you as [npc.she] continues, [axel.speech(Now that I'm not having to pay Vengar every month, I'm finally starting to turn a profit on this place. I can't thank you enough for your help in resolving that whole business...)]
+				[axel.speech(我很好，谢谢你，)][axel.name]答道，[npc.she]笑容灿烂，接着说，[axel.speech(我现在不用每月向文加交费，终于能从这地方赚点钱了。非常感谢你帮我解决这件事……)]
 			</p>
 			<p>
-				Before you can respond to this, the [axel.race] smiles at you and asks, [axel.speech(So, is there anything else I can help you with?)] 
+				还没等你回答，[axel.race]就微笑着问道：[axel.speech(那么，还有什么我可以帮助你的吗？)] 
 			</p>
 		#ELSE
 			<p>
-				[axel.speech(I'm doing well, thank you,)] [axel.name] responds, before letting out a sigh as he continues, [axel.speech(But I don't know how much longer I can keep this place open. Business is going well, but Vengar's demanding more and more protection money. I've already told him that he's going to run this place into the ground, but he just doesn't care.)]
+				[axel.speech(我很好，谢谢你，)][axel.name]答道，他随即叹了口气，接着说，[axel.speech(但我不知道我还能让这地方撑多久。赌场生意很好，但文加索要的保护费越来越高。我已经告诉过他，这样下去会把这里搞垮，但他根本不在乎。)]
 			</p>
 			<p>
-				Before you can respond to this, the alligator-boy shakes his head and smiles at you, before apologising, [axel.speech(Sorry, I don't mean to be pessimistic, and I don't want to offload my worries onto you. Is there anything else I can help you with?)] 
+				还没等你回答，鳄男就摇了摇头，对你笑笑并道歉：[axel.speech(抱歉，我不是有意悲观，我并不想把烦恼转嫁给你。还有什么我可以帮助你的吗？)] 
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Curious to find out about any recent events at the Gambling Den, you ask [axel.name] how he is and how his business is going.
+			你想了解赌场最近发生的事情，于是问[axel.name]他近来可好，生意如何。
 		</p>
 		<p>
-			[axel.speech(I'm doing well, thank you,)] [axel.name] responds, before letting out a weary sigh as he continues, [axel.speech(But if I'm being honest with you, I'm just about ready to give up on this whole business...)]
+			[axel.speech(我很好，谢谢你，)][axel.name]答道，他随即疲惫地叹了口气，接着说，[axel.speech(但说实话，我几乎准备放弃这生意了……)]
 		</p>
 		<p>
-			Before you can respond to this, the alligator-boy shakes his head and smiles at you, [axel.speech(Sorry, I don't mean to be pessimistic, and I don't want to offload my worries onto you. Please ignore what I just said; everything's fine with me, thanks for asking.)] 
+			还没等你回答，鳄男就摇了摇头，对你笑笑：[axel.speech(抱歉，我不是有意悲观，我并不想把烦恼转嫁给你。请别在意我刚才说的，我一切都好，谢谢你的关心。)] 
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_SUBMIT -->
 	
 	<htmlContent tag="AXEL_VENGAR_SUBMIT"><![CDATA[
 	<p>
-		[pc.speech(I've met with Vengar,)] you report, [pc.speech(and he said that if you go and submit to him in front of his gang, then he'll be able to stop all of his criminal activities.)]
+		[pc.speech(我见过文加了。)]你说，[pc.speech(他说只要你愿意在帮派众人面前臣服于他，他就会停止所有犯罪活动。)]
 	</p>
 	<p>
-		[axel.speech(He wants me to do what? How is that going to help?)] Axel replies, nervously clasping his hands together and furrowing his eyebrows.
+		[axel.speech(他要干什么？这有什么用？)]他烦躁地叉着腰，眉头皱成一团。
 	</p>
 	<p>
-		[pc.speech(He didn't go into details, but said that if his gang sees you submit, then he'll be able to put into motion other plans that will enable him to shut down his gang,)] you explain.
+		[pc.speech(他没有细说，但他说等帮派众看到你屈服，他就可以启动其他计划，帮派也能解散。)]你解释道。
 	</p>
 	<p>
-		Understandably quite reluctant to agree to this plan, the albino [axel.race] initially outright refuses to go ahead and meet with Vengar under such circumstances, but after you make the point that this seems to be the only way in which the extortion can come to an end, he sighs and says, [axel.speech(Well, I suppose I could do it, but only if you come with me. I'm also going to inform the Enforcers of this plan, so if Vengar tries to kidnap me or something, then they'll hopefully come to my rescue...)]
+		白化[axel.race]一开始断然拒绝在这种情况下与文加见面，但在你指出这似乎是结束勒索的唯一办法之后，他叹了口气说：[axel.speech(好吧，就这么做吧，但前提是你得跟我走。我还要先通知一下执法者，如果文加想绑架我什么的，还可以指望他们来救我……)]
 	</p>
 	<p>
-		Telling Axel that you're sure everything will be fine, you ask him when he'd be free to go. Once again nervously fidgeting at the prospect of doing something so risky, the flustered [axel.race] replies, [axel.speech(Well, I suppose I could go at any time. Just let me know whenever you're ready to go.)]
+		你安慰阿克塞尔一切都会好起来的，然后问他什么时候可以出发。面对如此冒险的事情，[axel.race]再次紧张地支支吾吾回答道：[axel.speech(好吧，我随时可以出发。只要你准备好了，就告诉我一声。)]
 	</p>
 	<p>
-		With Axel having agreed to participate in this plan, you wonder whether you should go and see Vengar right away or leave it for another time...
+		阿克塞尔已经同意参与这个计划，你思考要不要马上去见文加，还是以后再去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT"><![CDATA[
 	<p>
-		You tell Axel that it would be a good time to go and see Vengar, to which he wearily replies, [axel.speech(Fine... I suppose I've got to get this over and done with at some point. I really wish there had been an easier way to resolve this whole business...)]
+		你告诉阿克塞尔是时候去见文加了，只得到疲惫的回应：[axel.speech(好吧……我总得把这事解决了吧。真希望能有更简单的解决方法……)]
 	</p>
 	<p>
-		Accompanying the albino [axel.race], you head out of the Gambling Den, but instead of going directly to the Rat Warrens, Axel insists on first reporting your intended movements to the Enforcers. One short detour later, and you find yourself standing outside the nearest Enforcer Post, waiting for the [axel.race]'s return. Thankfully, he's not in there for too long, and a few minutes later, the two of you are on your way to the Rat Warrens.
+		你陪着阿克塞尔走出赌场，但白化[axel.race]没有直接去鼠窟，而是坚持先向执法者报告行踪。你绕了一小段路，留在最近的执法者岗哨等他回来。好在他并没有待太久，几分钟后，你们就踏上了前往鼠窟的路途。
 	</p>
 	<p>
-		[axel.speech(That was weird,)] Axel says as the two of you make your way through Submission's tunnels, [axel.speech(It was almost as though the Enforcer I spoke to already knew that I was going to see Vengar. When I started to explain it, she asked, 'Oh, you're the one who's doing it, then?'. This whole business seems really weird... Are you sure this is the only way to stop his gang?)]
+		[axel.speech(好怪。)]阿克塞尔在和你穿行于屈城区隧道时说道，[axel.speech(跟我说话的执法者就像已经知道我要去见文加一样。我刚开始解释时，她就问‘哦，你就是那个人？’这整件事都好奇怪……你确定这是阻止帮派的唯一办法吗？)]
 	</p>
 	<p>
-		Reassuring Axel that this is his best chance at stopping Vengar's criminal activities, you tell him that the rat-boy mentioned something about his plan involving a way to get the Enforcers off his back. Speculating that this might be the reason for the Enforcers already being aware of what's going on, you convince the nervous [axel.race] that everything is going to be fine. As you approach the entrance to the dark tunnels which lead to the Rat Warren's entrance, however, Axel stops in his tracks and asks, [axel.speech(Do we really have to go in there? I heard that all sorts of muggers and other bad people roam these tunnels, what if we run into one of them?)]
+		你向阿克塞尔保证，这是他阻止文加犯罪活动的最佳机会，并告诉他鼠男提到他的计划涉及一种让执法者离开他的方法，你猜测这可能就是执法者已经知道发生了什么事的原因。你安慰紧张的[axel.race]一切都会好起来的。然而，就在鼠窟的黑暗隧道入口前，阿克塞尔停下了脚步，问道：[axel.speech(我们真的要进去吗？我听说隧道里到处都是歹徒和其他坏人，万一我们碰上了怎么办？)]
 	</p>
 	<p>
-		[pc.speech(We'll be fine, don't worry,)] you say, reassuring Axel once again. After a few more encouraging comments, you manage to convince him to enter the dark tunnels with you, and, sure enough, the two of you manage to travel all the way to the Rat Warren's entrance without having a single hostile encounter.
+		[pc.speech(没事的，别担心。)]你再次安慰阿克塞尔，又说了几句鼓励的话，终于成功说服他和你一起进入黑暗的隧道。果然，一路走到鼠窟，都没有遇到敌袭。
 	</p>
 	<p>
-		Reaching up to knock on the huge wooden doors, you go through the same long-winded process of gaining entry to the Rat Warrens as the last time you were here. After a few minutes, you've convinced the guards that you and Axel are here to see Vengar on legitimate business, and after stepping through the inner pair of double doors, you're surprised to see the two rat-girl bodyguards, Shadow and Silence, waiting for you.
+		你伸手敲了敲巨大的木门，又像上次一样经历了漫长流程。几分钟后，你让守卫相信你和阿克塞尔是来找文加做正当生意的，跨进内侧的双开门。你惊讶地看到两个鼠女保镖——影和默在等着你们。
 	</p>
 	<p>
-		[shadow.speechNoEffects(So this 'ere's the 'gator we's been 'earin' so much about?)] Shadow asks, stepping forwards and quickly sliding her hand down to grope Axel's groin. As the [axel.race] recoils in shock, the black-furred rat-girl laughs, [shadow.speech(Heh-heh-heh! Yer a big 'un down there, ain't ya? 'Ow about once yer done with yer business, ya come an' 'ave some fun with me?)]
+		[shadow.speechNoEffects(所以，这就是我们一直听说的鳄鱼？)]影问道，她向前走了一步，手迅速滑向阿克塞尔的腹股沟。当[axel.race]震惊地后退时，黑毛鼠女笑了起来：[shadow.speech(呵呵呵！尼下面可真大！等尼办完事，就来找我玩吧？)]
 	</p>
 	<p>
-		Blushing profusely at Shadow's lewd suggestion, Axel replies, [axel.speech(I-I'm sorry, but I'm not interested in that sort of thing. N-No offence, but can we please just get this over with?)]
+		阿克塞尔面红耳赤地拒绝了影的邀约，回答道：[axel.speech(抱，抱歉，我对这种事不感兴趣。无，无意冒犯，我们能不能快点结束？)]
 	</p>
 	<p>
-		[shadow.speech(Suit yerself,)] Shadow shrugs, before motioning to her white-furred companion, [shadow.speech(Silence 'ere will lead the way; it's only fittin' fer the two albinos ta be together! Hah!)]
+		[shadow.speech(自便。)]影耸耸肩，向她的白毛同伴示意，[shadow.speech(这里的默会带路。两个白化病患者在一起才合适！哈！)]
 	</p>
 	<p>
-		As Axel sets off beside Silence, you follow on beside Shadow, who leans in to whisper a warning into your ear, [shadow.speech(The boss 'as got some potion he's plannin' on trickin' yer 'gator friend inta drinkin'. If ya don't want 'im turned inta some sissy 'gator slut, then ya better stop 'im from drinkin' it.)]
+		阿克塞尔跟着默走，而你跟在影身边，她凑到你耳边低声警告道：[shadow.speech(老大有一些魔药，他打算骗你的鳄鱼朋友喝下去。如果你不想让他变成娘娘腔的鳄鱼荡妇，那你最好别让他喝下去。)]
 	</p>
 	<p>
-		Asking the rat-girl why she doesn't just tell Axel this, she replies, [shadow.speech(It's more fun this way, ain't it? I wanna see what ya gonna do. Hah!)]
+		你问鼠女为什么不告诉阿克塞尔，她回答说：[shadow.speech(这样更有趣，不是吗？我想看看你会怎么做。哈！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_KNEEL -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_KNEEL"><![CDATA[
 	<p>
-		After a few minutes, your small party arrives at Vengar's hall, which is once again filled with the noise of at least fifty excitedly-chattering gang members. Upon seeing your arrival, their shouts and jeers raise significantly in volume, until Vengar eventually raises his hand to silence them. Calling out to you from atop his dais at the far end of the hall, the rat-boy shouts, [vengar.speechNoEffects(What ya waiting for? Come on, get over 'ere!)]
+		几分钟后，你们一行人来到文加的大厅，大厅里还是充斥着帮派成员叽叽喳喳的吵闹声。他们看到你们的到来，叫喊声和嘲笑声都明显拔高了音量，直到文加举手示意他们安静下来。鼠男在大厅尽头的台子上喊道：[vengar.speechNoEffects(还等什么？来吧，到这来！)]
 	</p>
 	<p>
-		Walking down the length of the hall, under the piercing gaze of the gang of rats, you, Axel, and the two rat-girls eventually come to a halt in front of Vengar's throne. Looking down at you, he exclaims, [vengar.speechNoEffects(So, ya actually came?! I weren't expectin' ya to actually do it! But, now that yer here, I's wantin' ya to show everyone in this 'all that there ain't nobody in Submission who don't submit to me! You's the largest an' most powerful of all the businesses down 'ere, ain't ya?)]
+		你、阿克塞尔和两个鼠女在帮派众人刺眼的注视下走过长长的大厅，最终在文加的宝座前停了下来。文加俯视着你们，惊叹道：[vengar.speechNoEffects(你真的来了？！真没想到！但是，既然你来了，我就想让你告诉这里的所有人，屈城区的人没有一个不是臣服于我的！你是这里最有权势的大企业家，不是吗？)]
 	</p>
 	<p>
-		[axel.speech(I suppose, yes,)] Axel replies, before nervously continuing and asking, [axel.speech(So what is it you want me to do? I've come here as you asked, and I suppose I'll say that I submit to you, if it will mean putting an en-)]
+		[axel.speech(我想是的。)]阿克塞尔回答，接着紧张地发问道，[axel.speech(那么您想让我做什么呢？我按吩咐来到这里，我想我会说‘我臣服于您’，这样是不是就能结——)]
 	</p>
 	<p>
-		[vengar.speechNoEffects('Ey! Not so fast!)] Vengar shouts, cutting him off before he can finish his sentence, [vengar.speechNoEffects(I's called ya 'ere to show yer submission, not just say it! I's wantin' ya ta strip naked an' kneel before me! That'll show ya! Ha-ha-ha!)]
+		[vengar.speechNoEffects(嘿！哪有这么快！)]文加大叫着打断，继续说道，[vengar.speechNoEffects(我让你来表示臣服，可不是嘴上说说！我要你脱光衣服跪在我面前！来啊！哈哈哈！)]
 	</p>
 	<p>
-		As the rats in the hall join in with Vengar's laughter, Shadow leans in over Axel's shoulder, and you just about hear her hissing, [shadow.speechNoEffects(Just do as he says, 'gator! If ya go through with this, the Enforcers are waitin' ta 'andle everything! Don't fuck this up fer us all right at the end!)]
+		大厅里的老鼠也哄堂大笑，影靠在阿克塞尔的肩膀上，你能隐隐约约地听到她的耳语：[shadow.speechNoEffects(乖乖照做吧，鳄鱼！做完执行者就会来收拾残局了！别在最后关头把事情搞砸了！)]
 	</p>
 	<p>
-		As the laughter in the hall dies down, Vengar reiterates his command, [vengar.speechNoEffects(So, what ya waitin' for? Strip off an' kneel before me!)]
+		大厅的笑声渐渐平息，文加再度命令道：[vengar.speechNoEffects(你还在等什么？快点脱光跪下来吧！)]
 	</p>
 	<p>
-		Although you aren't quite sure if he would have normally done this, the words which Shadow whispered to Axel seem to have convinced him to do as he's told, and with his cheeks flushing red from embarrassment, the albino [axel.race] dutifully strips naked and kneels down at the base of the dais. Holding his arms up as he addresses the hall, Vengar shouts, [vengar.speechNoEffects(See?! Ain't nobody down 'ere but me 'o could get the owner o' the Gamblin' Den ta come and do this! If any o' yous scum are thinkin' o' challenin' me leadership, remember this moment first! I's got power the likes o' which none o' yous could ever dream o' gettin'! Now, who's ya leader?!)]
+		虽然你不太确定阿克塞尔平时是否会这么做，但影的耳语似乎说服了他听命行事。白化[axel.race]因尴尬而双颊通红，乖乖脱光衣服，跪在台下。文加高举双臂，向大厅众人大声宣布道：[vengar.speechNoEffects(看到了吗？！除了我，没人能让赌场的老板这么做！如果你们这些人渣想挑战我的领导地位，先记好喽，我拥有你们做梦都得不到的权力！现在，谁是你们的老大？！)]
 	</p>
 	<p>
-		All of the rats throughout the hall start shouting the name 'Vengar', and after a few moments the entire chamber is echoing with the thunderous chant. Slamming fists, cutlery, and the hilts of weapons on the long wooden tables, the gang members produce such an immense racket that it feels as though the very earth itself is shaking. Letting his followers chant his name for a while longer, Vengar eventually silences them with yet another simple raise of his hand. Turning to grab a bottle of rum from off of a nearby table, Vengar once again addresses Axel and asks, [vengar.speechNoEffects(Won't ya 'ave a drink before I let ya go? Now that ya shown yer submission, there ain't no reason the two o' us can't be friends!)]
+		大厅里所有的老鼠都开始高喊“文加”这个名字，片刻之后，整个大厅都回荡着雷鸣般的呐喊声。帮派成员将拳头、餐具和武器狠狠地砸在长木桌上，发出巨大的声响，仿佛大地都在震动。文加让他的追随者们又念叨了一会儿他的名字，最后又举了举手，让他们安静下来。文加转身从旁边的桌子上拿起一瓶朗姆酒，再次对阿克塞尔问道：[vengar.speechNoEffects(走之前，你不喝一杯吗？既然你已经屈服了，我们就没理由做不成朋友了！)]
 	</p>
 	<p>
-		Recalling what Shadow whispered to you upon your arrival in the Rat Warrens, you know that the drink being offered to Axel is laced with some kind of feminising transformative potion. Should you wish to stop him from being irreversibly transformed, you should do something to stop him from drinking it...
+		你回想起抵达鼠窟时影对你的耳语，你知道里面中掺了某种女性化转变魔药。如果你想阻止他发生不可逆转的转变，就应该想办法阻止他喝下这杯酒……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_STOPPED -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_STOPPED"><![CDATA[
 	<p>
-		Not wanting Axel to be unwittingly transformed, you step forwards and tell him that you suspect the rum is spiked with a feminising potion. Hearing what it is you're saying, Vengar lets out a hearty laugh, before exclaiming, [vengar.speechNoEffects(Ain't nothin' gettin' by you, is there?! Yeah, I's put a little potion in the rum, but I's sure Axel wouldn't 'ave minded if he were ta become me sissy 'gator bitch, would ya?!)]
+		你不想让阿克塞尔转化得毫不知情，于是走上前告诉他，你怀疑朗姆酒里添加了女性化魔药。文加听后发出了爽朗的笑声，感叹道：[vengar.speechNoEffects(真是什么都骗不过你！是，我是在朗姆酒里加了点料，但我相信阿克塞尔不会介意变成我的娘娘腔鳄鱼婊子的，对吧？！)]
 	</p>
 	<p>
-		Standing up and quickly moving to get dressed again, Axel huffs, [axel.speech(I can't believe you were planning on doing that to me, after I agreed to come here and go through with all this! I'm leaving!)]
+		阿克塞尔站起身来，迅速穿好衣服，怒气冲冲地说：[axel.speech(真不敢相信，我都已经同意来这里做了这么多，你还打算这样对我！我要走了！)]
 	</p>
 	<p>
-		Finishing buttoning up his shirt, Axel turns on the spot and marches off down the hall. After you've hurried to catch up and fallen in beside him, the [axel.race] turns his head towards you and says, [axel.speech(I don't know how you did it, but thanks for spotting that, [pc.name]. Just to think, I've I'd have drunk that, I'd be... Eugh! Come on, let's get out of here!)]
+		阿克塞尔扣好衬衫，当场转身向大厅门口走去，你急忙追上他。[axel.race]转头对你说：[axel.speech(虽然不懂你是怎么知道的，但还是谢谢你及时发现，[pc.name]。想想看，我要是喝了那杯酒，我就……呃！来吧，我们走！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_STOPPED_RETURN"><![CDATA[
 	<p>
-		Leaving behind the laughter and jeers from the rats assembled in the great hall, you and [axel.name] quickly start making your way back to the entrance of the Rat Warrens. Before you're even half-way there, however, Shadow and Silence catch up with you. Darting around in front of you to block your way, the black-furred rat-girl grins maniacally at the two of you, before saying, [shadow.speechNoEffects(Ya did good, 'gator. Everythin's set up now fer this gang ta be disbanded; ya just gotta bear with one more surprise, an' then it'll all be over fer ya.)]
+		你带着[axel.name]迅速逃离老鼠们的嘲笑声，返回鼠窟入口。然而，你们还没走到一半，影和默就追上了你们。黑毛鼠女飞快地绕到你们前面，挡住了你们的去路，对着你们俩咧嘴狂笑说：[shadow.speechNoEffects(你干得不错，鳄鱼。现在一切都安排好了，帮派就要解散了。你只需要再挺过一个惊喜，一切就都结束了。)]
 	</p>
 	<p>
-		[axel.speech(And how is that supposed to happen?!)] Axel asks in a frustrated tone, [axel.speech(If anything, by me coming here today, your gang seems to be even more united than ever! You've made a fool of me!)]
+		[axel.speech(这怎么可能？！)]阿克塞尔沮丧地问道，[axel.speech(我只知道，今天我来到这里，你们帮派似乎更团结了！你们把我耍得团团转！)]
 	</p>
 	<p>
-		[shadow.speechNoEffects(Heh-heh-heh!)] Shadow cackles, [shadow.speechNoEffects(Yer gonna find out 'ow it all plays out soon enough! Just stay calm if anythin' <i>unexpected</i> 'appens in the tunnels...)]
+		[shadow.speechNoEffects(呵呵呵！)]影嘎嘎笑，[shadow.speechNoEffects(你们很快就会知道了！如果隧道里发生任何<i>意外</i>，请保持冷静……)]
 	</p>
 	<p>
-		With that, the two rat-girls run off in front of you, heading in the same direction that you are. Letting out an exasperated sigh, Axel continues forwards, remarking to you, [axel.speech(I certainly hope that I didn't suffer that embarrassment back there for nothing...)]
+		说罢，那两个鼠女在你面前跑开了。[axel.name]愤怒地叹了口气，继续向前，对你说道：[axel.speech(我当然希望我刚才的尴尬没有白受……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_SISSIFIED -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_SISSIFIED"><![CDATA[
 	<p>
-		Thinking that it would be unwise to call out Vengar in front of his gang, you say nothing as Axel stands up and takes the bottle offered to him. Remaining silent, you simply watch and wait as he lets out a sigh, and then brings the bottle up to his lips. Tilting his head back, he takes a long swing of the liquid contained within, and then, seemingly unable to help himself, he takes another, and another, until he's downed the entire bottle. Passing the now-empty vessel back to Vengar, Axel takes in a deep breath, and says, [axel.speech(That didn't taste like-)]
+		你认为当着文加那帮人的面公然同他作对是不明智的，于是你就默不作声，望着阿克塞尔站起身去取那瓶酒。阿克塞尔叹息一声，将酒瓶凑到唇边，随即仰起头，喝了一大口瓶中的液体，接着情不自禁地一口接一口，直到把整瓶酒都喝光。阿克塞尔把空瓶还给文加，深吸了一口气，说道：[axel.speech(这味道不像——)]
 	</p>
 	<p>
-		The voice coming out of his mouth is considerably higher-pitched than it was a moment ago, which causes Axel to stop talking mid-sentence and reach up to clasp his hands over his mouth. Before any of you can react, the alligator-boy starts to shrink before your eyes, losing a good few [units.sizes] to stand at [axel.heightValue] tall. His body, too, undergoes a rapid change, and while his torso and limbs slim down and lose muscle, his ass and hips expand, leaving him with a very androgynous figure. Letting out another gasp, Axel's hands drop down between his legs, but not before you've seen his cock rapidly shrink to a more average [axel.penisValue] in length. Finally, his chest fills out a little, leaving him with a tiny hint of breasts, while his nipples swell and grow into distinctly feminine-looking ones.
+		阿克塞尔的音调比刚才高亢了不少，这让他话说到一半就停了下来，伸手捂住了自己的嘴。你还没反应过来，鳄鱼男就开始在你们眼前缩小，身高减少了好几[units.sizes]，变得只有[axel.heightValue]高。他的身形也发生了急剧变化：躯干和四肢变得纤细，肌肉减少，但屁股和臀部却变大了，身材变得中性。阿克塞尔又一次发出喘息声，双手下垂到两腿之间，但在此之前，你已经看到他的阴茎迅速缩小到[axel.penisValue]的平均长度。最后，他的胸部稍微丰满了一点，露出了一点乳房，而他的乳头则膨胀成女性化的样子。
 	</p>
 	<p>
-		As the changes finish, the rats assembled in the hall burst out laughing, and you see Axel's cheeks burning in shame as Vengar walks down the steps of his dais to stand before [axel.herHim]. Holding up his hand to quieten his subordinates, the rat-boy sneers, [vengar.speechNoEffects(Lookin' good, 'gator! Them changes weren't all physical though, was they? Ya feelin' like a subby slut now, ain't ya? 'Ow would ya feel if I were ta command ya ta get down an' present yerself ta get fucked by me big, fat cock?!)]
+		随着转化的完成，聚集在大厅里的老鼠们哄堂大笑，你看到阿克塞尔的脸颊因羞愧而发烫。文加走下台阶，站在[axel.herHim]面前，举起手让他的下属安静下来，一边讥讽道：[vengar.speechNoEffects(看起来不错，鳄鱼！不全是身体上的变化吧？你现在觉得自己像个荡妇，对不对？如果我命令你趴下被我的大鸡巴操，你会不会有感觉？！)]
 	</p>
 	<p>
-		Casting [axel.her] gaze to the floor, Axel lets out a pathetic little whine, confirming to everyone present that [axel.sheHas] become far more submissive as a result of drinking the potion. Stepping forwards, Vengar reaches up to grope the [axel.race]'s chest, flicking [axel.her] big nipples before dropping his hands down to start fondling [axel.her] shrunken cock. As Axel lets out a surprised gasp, the rat-boy says, [vengar.speechNoEffects('Axel' ain't a suitable name fer someone as girly as ya! 'Ow about we reverse it instead? '[axel.name]'; ya'd like bein' called that, wouldn't ya?)]
+		阿克塞尔盯着地板，发出一声可怜的低吟，向在场的所有人证实，[axel.her]因为喝了药水而变得更加顺从了。文加走近一步，伸手摸索着[axel.race]的胸部，轻弹[axel.her]的大乳头，又摸向[axel.her]萎缩的阴茎，惹得阿克塞尔发出惊讶的喘息声。鼠男说道：[vengar.speechNoEffects(‘阿克塞尔’可不适合现在的你！换成‘[axel.name]’吧，你喜欢这个名字对吧？)]
 	</p>
 	<p>
-		[axel.speech(Y-Yes...)] '[axel.name]' replies, before letting out an alarmed cry as [axel.she] suddenly feels something click into place around [axel.her] cock. Looking down, both you and [axel.name] see that Vengar has just locked a light pink chastity cage onto the [axel.race], and with another sneer, he taunts, [vengar.speechNoEffects(Ain't no need fer ya cock ta be free! Y ain't gonna be doin' any more fuckin' from now on; yer just gonna get fucked instead!)]
+		[axel.speech(是的……)]“[axel.name]”回道，又突然发出了惊叫声——好像有什么东西卡着自己的肉棒。你往下看，原来文加刚刚把一个浅粉色的贞操笼锁在[axel.race]身上，还一边冷笑着嘲讽道：[vengar.speechNoEffects(这玩意也没必要自由了！毕竟从现在起它可不会再做任何事了，你只会被操！)]
 	</p>
 	<p>
-		As the hall bursts out laughing, Vengar carelessly tosses the cage's key to one side. By a stroke of luck, it ends up clattering to a halt right in front of you, and so you see no reason not to quickly pick it up for potential future use...
+		大笑再次响彻大厅，文加漫不经心地把贞操笼的钥匙扔到了一边。幸运的是，钥匙最终在你面前停下，你赶忙把它捡起来，以备不时之需……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_SISSIFIED_RETURN -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_SISSIFIED_RETURN"><![CDATA[
 	<p>
-		Not wanting this to go any further, you step forwards and tell Vengar that [axel.name] has already done enough. Hearing what it is you're saying, the rat-boy lets out a hearty laugh, before stepping back and exclaiming, [vengar.speechNoEffects(Fine! I ain't interested in fuckin' this 'gator anyways, I just wanted to show ya all 'ow submissive [axel.she] is! Hah!)]
+		你不想让事情继续发展下去，于是走上前告诉文加，[axel.name]已经做得够多了。鼠男听后发出了爽朗的笑声，然后后退了一步，感叹道：[vengar.speechNoEffects(好吧！反正我也没兴趣操这只鳄鱼，我只是想让你们看看[axel.she]是多么顺从！哈！)]
 	</p>
 	<p>
-		Stepping forwards and taking [axel.name] by the hand, you lead [axel.herHim] away from Vengar, before telling [axel.herHim] to put [axel.her] old clothes back on. Once [axel.sheIs] dressed, you quickly exit the hall, leaving the rats' laughter and jeers behind as you make your way back to the entrance of the Rat Warrens. Before you're even half-way there, however, Shadow and Silence catch up with you. Darting around in front of you to block your way, the black-furred rat-girl grins maniacally at the two of you, before saying, [shadow.speechNoEffects(Ya did good, 'gator. Everythin's set up now fer this gang ta be disbanded; ya just gotta bear with one more surprise, an' then it'll all be over fer ya.)]
+		你上前牵着[axel.name]的手，带[axel.herHim]摆脱文加，还叫[axel.herHim]把之前的旧衣服穿上。等[axel.sheIs]穿好衣服后，你就迅速离开大厅，把老鼠们的笑声和嘲笑声抛在身后，一路返回鼠窟入口。然而，你们还没走到一半，影和默就追上了你们。黑毛鼠女飞快地绕到你们前面，挡住了你们的去路，对着你们俩咧嘴狂笑说：[shadow.speechNoEffects(你干得不错，鳄鱼。现在一切都安排好了，帮派就要解散了。你只需要再挺过一个惊喜，一切就都结束了。)]
 	</p>
 	<p>
-		[axel.speech(W-Was it really necessary to do this to me?!)] [axel.name] asks, breaking [axel.her] silence, [axel.speech(A-And anyway, if anything, your gang now seems to be even more united than ever! Y-You've made a fool of me!)]
+		[axel.speech(有必要这样对我吗？！)][axel.name]突然打破平静发问，[axel.speech(无论如何，我只知道，今天我来到这里，你们帮派似乎更团结了！你们把我耍的团团转！)]
 	</p>
 	<p>
-		[shadow.speechNoEffects(Heh-heh-heh!)] Shadow cackles, [shadow.speechNoEffects(Yer gonna find out 'ow it all plays out soon enough! Just stay calm if anythin' <i>unexpected</i> 'appens in the tunnels...)]
+		[shadow.speechNoEffects(呵呵呵！)]影嘎嘎笑，[shadow.speechNoEffects(你们很快就会知道了！如果隧道里发生任何<i>意外</i>，请保持冷静……)]
 	</p>
 	<p>
-		At that moment, Silence steps forwards, and with an angry look on her face, tugs at Shadow's arm. Turning to see what it is her companion wants, Shadow asks, [shadow.speechNoEffects(What is it, love? Oh, ya want me ta give 'em them potions ya were showin' me earlier?)]
+		这时，默走上前来，一脸愤怒地拽住了影的胳膊。影转过身来，看看她的同伴想要什么，她问道：[shadow.speechNoEffects(怎么了，亲爱的？哦，你想让我把你之前给我看的药剂拿出来吗？)]
 	</p>
 	<p>
-		Nodding her head, Silence pushes two bottles into Shadow's hands; one is a bright pink in colour, while the other, smaller one is a deep blue. Stepping forwards to hand them over to [axel.name], Shadow explains, [shadow.speechNoEffects(Me love 'ere wants ya ta 'ave these; that pink 'un will make ya fully feminine, while that other 'un will make yer cock grow back ta its old size. Anyway, we's got stuff ta get sorted, real quick like, so we'll be seein' ya!)]
+		默点着头，把两个瓶子推到影手里：一个是亮粉色的，而另一个较小的是深蓝色的。影走上前去把它们交给[axel.name]，解释道：[shadow.speechNoEffects(我亲爱的让我给你，那个粉红色的会让你完全女性化，而另一个会让你的阴茎恢复到原来的大小。无论如何，我们有东西要整理，真的很快，我们很快就能看到结果！)]
 	</p>
 	<p>
-		With that, the two rat-girls run off in front of you, heading in the same direction that you are. Letting out an exasperated sigh, [axel.name] continues forwards, remarking to you, [axel.speech(I certainly wasn't expecting all this...)]
+		说罢，那两个鼠女在你面前跑开了。[axel.name]愤怒地叹了口气，继续向前，对你说道：[axel.speech(我当然没有料到这一切……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_SISSIFIED_FINISH -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_SISSIFIED_FINISH"><![CDATA[
 	<p>
-		Happy to wait and watch Vengar take it a little further, you don't object as the rat-boy commands [axel.name], [vengar.speechNoEffects(Get down on all fours an' show all me mates yer tight, fuckable ass!)]
+		你饶有兴趣地看着文加更进一步，不打算阻止他命令[axel.name]：[vengar.speechNoEffects(四肢着地，让我们大家看看你挨操的屁股！)]
 	</p>
 	<p>
-		Doing as [axel.sheIs] told, [axel.name] drops down onto [axel.her] hands and knees, before lifting [axel.her] tail and raising [axel.her] ass. Fully exposing [axel.her] [axel.asshole+] to the all of the rats in the hall, [axel.namePos] cheeks flush bright red as they start to jeer and comment on how lewd [axel.she] is. Turning to you, Vengar asks, [vengar.speech(So, ya gonna fuck that tight asshole, or am I gonna be the one ta do it?)]
+		[axel.name]按照指示，双手和膝盖着地，翘起[axel.her]的屁股，抬起尾巴，完全露出[axel.her][axel.asshole+]。厅内众鼠嘲笑起[axel.namePos]有多淫荡，惹得[axel.her]脸颊涨得通红。文加转向你问道：[vengar.speech(那个紧屁股是你去操还是我去操？)]
 	</p>
 	<p>
 		#IF(!axel.isAttractedTo(pc))
-			Looking over at [axel.name], you see [axel.herHim] shaking [axel.her] head as [axel.she] looks back at you. As the [axel.race] is clearly not attracted to someone as feminine as you are, it looks like the only options left to you are letting Vengar fuck [axel.herHim], or telling the rat-boy that [axel.name] has had enough and leaving with [axel.herHim]...
+			你发现[axel.name]显然不会被像你这样女性化的人所吸引，对着你摇头。看起来你只能让文加操[axel.herHim]，或者告诉鼠男[axel.name]受够了，然后带着[axel.herHim]一起离开……
 		#ELSE
-			Looking over at [axel.name], you see a lewd look plastered across [axel.her] face as [axel.she] looks back at you. As the [axel.race] is clearly attracted to you, you could step forwards and have public sex with [axel.herHim]. Then again, you could also let Vengar fuck [axel.herHim], or instead tell the rat-boy that [axel.name] has had enough and leave with [axel.herHim]...
+			你发现[axel.name]显然被你吸引，对你露出好色的表情，你可以上前与[axel.herHim]公开做爱。话又说回来，你也可以让文加操[axel.herHim]，或者告诉鼠男[axel.name]受够了，然后带着[axel.herHim]一起离开……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_SISSIFIED_FINISH_PLAYER_FUCK"><![CDATA[
 	<p>
-		Liking the idea of publicly fucking [axel.name], you step forwards and tell Vengar that you'll be the one dominating [axel.herHim]. With a big grin on his face, the rat-boy sneers, [vengar.speechNoEffects(Go on then, give [axel.herHim] a good fuckin'!)]  
+		你觉得让[axel.name]被公开操弄是个好主意，于是你告诉文加你要支配[axel.herHim]。鼠男咧嘴一笑，嘲讽道：[vengar.speechNoEffects(请吧，好好操操[axel.herHim]！)]  
 	</p>
 	<p>
-		Overhearing what it is you're discussing, [axel.name] looks back at you and submissively raises [axel.her] ass. Seeing how eager [axel.she] is, you drop down onto your knees behind [axel.herHim], and in front of everyone in the hall, you prepare to fuck the [axel.race]...
+		[axel.name]听到你们在讨论什么，回头看了眼你，顺从地翘起屁股。你看到[axel.name]居然这么急切，便迅速跪在[axel.herHim]身后，当着大厅里所有人的面，准备开操……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_SISSIFIED_FINISH_VENGAR_FUCK"><![CDATA[
 	<p>
-		Liking the idea of [axel.name] being publicly fucked, but not willing to do it yourself, you tell Vengar that the [axel.race] is all his. With a big grin on his face, the rat-boy sneers, [vengar.speechNoEffects(Right, time fer me ta give this slut a real good fuckin'!)]  
+		你觉得让[axel.name]被公开操弄是个好主意，但又不愿意亲自动手，于是你告诉文加[axel.race]是他的了。鼠男咧嘴一笑，嘲讽道：[vengar.speechNoEffects(行，是时候让我好好操操这个荡妇了！)]  
 	</p>
 	<p>
-		Overhearing what it is you're discussing, [axel.name] looks back at Vengar and submissively raises [axel.her] ass. Seeing how eager [axel.she] is, the rat-boy quickly drops down onto his knees behind [axel.herHim], and in front of everyone in the hall, he prepares to fuck the [axel.race]...
+		[axel.name]听到你们在讨论什么，回头看了眼文加，顺从地翘起屁股。鼠男看到[axel.name]居然这么急切，便迅速跪在[axel.herHim]身后，当着大厅里所有人的面，准备开操……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_AXEL_SISSIFIED_SEX -->
@@ -974,252 +975,252 @@
 	<htmlContent tag="AFTER_AXEL_SISSIFIED_SEX"><![CDATA[
 	#IF(sex.getDominantParticipants(false).containsKey(pc))
 		<p>
-			Satisfied that you've demonstrated [axel.namePos] submissiveness in front of Vengar's entire gang, you stand up and start getting your things back in order, while telling the [axel.race] to get dressed in [axel.her] old clothes. Once the two of you are done with that, you take hold of [axel.name] by the hand and prepare to take your leave...
+			当你在文加的全体帮派成员面前表现出对[axel.namePos]的顺从时，你感到十分满足，你站起来开始整理衣物，并告诉[axel.race]穿上[axel.her]的旧衣服。你们两人都整理完毕后，你握住[axel.name]的手，准备离开……
 		</p>
 	#ELSE
 		<p>
-			Satisfied that he's demonstrated [axel.namePos] submissiveness in front of his entire gang, Vengar stands up and starts getting his clothing back in order. Stepping forwards, you tell the [axel.race] to get dressed in [axel.her] old clothes, and once [axel.sheIs] done with that, you take hold of [axel.herHim] by the hand and prepare to take your leave...
+			文加很满意自己在整个帮派面前展示了[axel.namePos]的顺从，他站起身来整理衣服。你走上前，让[axel.race]穿上[axel.sheIs]的旧衣服，等[axel.sheIs]穿好衣服，你就拉着[axel.herHim]的手准备离开……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_AXEL_SISSIFIED_SEX_RETURN"><![CDATA[
 	<p>
-		Having finished what you came to do, you and [axel.name] quickly exit the hall, leaving the rats' laughter and jeers behind as you make your way back to the entrance of the Rat Warrens. Before you're even half-way there, however, Shadow and Silence catch up with you. Darting around in front of you to block your way, the black-furred rat-girl grins maniacally at the two of you, before saying, [shadow.speechNoEffects(Ya did good, 'gator. Everythin's set up now fer this gang ta be disbanded; ya just gotta bear with one more surprise, an' then it'll all be over fer ya.)]
+		你和[axel.name]在达成目的后，快步走过大厅走向鼠窟的门口，无视了身后老鼠们的嘲讽奚落。影和默在半路上追了上来，这位黑毛鼠女闪到面前拦住了你们，发狂似地笑了，然后说，[shadow.speechNoEffects(你们做得很好，现在万事俱备，这个帮派铁定解散；你们只需接受最后一个惊喜，这一切就结束了。)]
 	</p>
 	<p>
-		[axel.speech(W-Was it really necessary to do this to me?!)] [axel.name] asks, breaking [axel.her] silence, [axel.speech(A-And anyway, if anything, your gang now seems to be even more united than ever! Y-You've made a fool of me!)]
+		[axel.speech(有必要这样对我吗？！)][axel.name]突然打破平静发问，[axel.speech(无论如何，我只知道，今天我来到这里，你们帮派似乎更团结了！你们把我耍的团团转！)]
 	</p>
 	<p>
-		[shadow.speechNoEffects(Heh-heh-heh!)] Shadow cackles, [shadow.speechNoEffects(Yer gonna find out 'ow it all plays out soon enough! Just stay calm if anythin' <i>unexpected</i> 'appens in the tunnels...)]
+		[shadow.speechNoEffects(呵呵呵！)]影嘎嘎笑，[shadow.speechNoEffects(你们很快就会知道了！如果隧道里发生任何<i>意外</i>，请保持冷静……)]
 	</p>
 	<p>
-		At that moment, Silence steps forwards, and with an angry look on her face, tugs at Shadow's arm. Turning to see what it is her companion wants, Shadow asks, [shadow.speechNoEffects(What is it, love? Oh, ya want me ta give 'em them potions ya were showin' me earlier?)]
+		这时，默走上前来，一脸愤怒地拽住了影的胳膊。影转过身来，看看她的同伴想要什么，她问道：[shadow.speechNoEffects(怎么了，亲爱的？哦，你想让我把你之前给我看的药剂拿出来吗？)]
 	</p>
 	<p>
-		Nodding her head, Silence pushes two bottles into Shadow's hands; one is a bright pink in colour, while the other, smaller one is a deep blue. Stepping forwards to hand them over to [axel.name], Shadow explains, [shadow.speechNoEffects(Me love 'ere wants ya ta 'ave these; that pink 'un will make ya fully feminine, while that other 'un will make yer cock grow back ta its old size. Anyway, we's got stuff ta get sorted, real quick like, so we'll be seein' ya!)]
+		默点着头，把两个瓶子推到影手里：一个是亮粉色的，而另一个较小的是深蓝色的。影走上前去把它们交给[axel.name]，解释道：[shadow.speechNoEffects(我亲爱的让我给你，那个粉红色的会让你完全女性化，而另一个会让你的阴茎恢复到原来的大小。无论如何，我们有东西要整理，真的很快，我们很快就能看到结果！)]
 	</p>
 	<p>
-		With that, the two rat-girls run off in front of you, heading in the same direction that you are. Letting out an exasperated sigh, [axel.name] continues forwards, remarking to you, [axel.speech(I certainly wasn't expecting all this...)]
+		说罢，那两个鼠女在你面前跑开了。[axel.name]愤怒地叹了口气，继续向前，对你说道：[axel.speech(我当然没有料到这一切……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_RETURN_NEXT -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_RETURN_NEXT"><![CDATA[
 	<p>
-		It only takes a couple more minutes for the two of you to reach the main entrance to the Rat Warrens. Opening the doors for you and [axel.name], the rats on guard duty make a couple of derogatory comments as they let you back out into the tunnels of Submission. Once out there, [axel.name] turns to you and says, [axel.speech(I suppose we should get back as quickly as possible. I sure hope that 'Shadow' person didn't mean anything when she said something unexpected might happen...)]
+		你们只花了几分钟就到达鼠窟的主要入口。值班的老鼠们为你和[axel.name]打开大门，还一边贬损着你们。一到屈城区隧道，[axel.name]就转向你说：[axel.speech(我想我们应该尽快离去。我真希望那个叫‘影’的人说可能会发生什么意外没有什么别的意思……)]
 	</p>
 	<p>
-		Agreeing with the [axel.race], you set off on your way back to the Gambling Den, but you aren't able to get very far at all before the familiar voice of Shadow suddenly echoes out from around the next corner, [shadow.speech(Don't ya wave that fuckin' thing in me face! I's on yer side, remember?!)]
+		你深表同意，共同踏上了返回赌场的路，但你们还没走多远，影熟悉的声音突然从下一个拐角处回荡出来：[shadow.speech(别一直强调这个！我是站在你们这边的，记得吗？！)]
 	</p>
 	<p>
-		Stopping in your tracks, you and [axel.name] watch as the black-furred rat-girl appears from around the next corner. Much to your surprise and alarm, you see that she's not only accompanied by Silence, but also by a large group of heavily armed and armoured Enforcers. Immediately catching sight of you, these Enforcers raise their weapons and shout, [style.speechMasculine(This is SWORD! Show us your hands! Get down on the ground! Do it! Do it now!)]
+		你和[axel.name]停下脚步，看着黑毛鼠女从下一个拐角处出现。令你们惊讶的是，她身边不仅有默，还有一大群全副武装的执法者。这些执法者一看到你就立刻举起武器，大声喊道：[style.speechMasculine(这是SWORD！举起手来！趴在地上！快做！现在就做！)]
 	</p>
 	<p>
-		[shadow.speech(Does it fuckin' look like these two are part o' the gang?!)] Shadow interjects, before turning to a large German-shepherd-boy and snarling, [shadow.speech(Tell yer trigger-happy goons ta stand down; that [axel.race] is the one 'o's bein' extorted!)]
+		[shadow.speech(这两个人他妈看起来像是帮派成员吗？！)]影插话道，转向一个大个子德牧男咆哮道：[shadow.speech(叫这些喜欢扣扳机的家伙退下，那个[axel.race]才是被勒索的人！)]
 	</p>
 	<p>
-		Barking out an order for the SWORD Enforcers to leave you alone, the muscular leader steps forwards and scowls at Shadow, [style.speechMasculineStrong(Catching Vengar red-handed is all we needed. You've upheld your end of the bargain, so you and your girlfriend here can join these two in getting out of our way. Constable Adams! Take these four back the way we came!)]
+		肌肉发达的领队大声命令SWORD执法者们离你们远点，一边前进了一步，蔑视地看着影说：[style.speechMasculineStrong(我们只需要当场抓住文加就够了。你已经完成了你的任务，所以你和你的女朋友可以带着这两位一起离开。亚当斯警员，带这四个人原路返回！)]
 	</p>
 	<p>
-		One of the SWORD Enforcers, who you assume must be Constable Adams, hurries forwards and prepares to do as he's told. Wanting to find out what's going on, and thinking it's best not to get in the way of this group of heavily-armed Enforcers, you decide to comply and allow yourself to be escorted to the nearest Enforcer post...
+		其中一位SWORD执法者——你猜他肯定是亚当斯警员急忙上前，准备听命行事。你想弄清楚发生了什么事，又觉得最好不要妨碍这群全副武装的执法者，于是决定服从命令，让他把自己护送到最近的执法者岗哨……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_RETURN_ENFORCERS -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_RETURN_ENFORCERS"><![CDATA[
 	<p>
-		Along with [axel.name], Shadow, and Silence, you step to one side of the tunnel and allow the group of SWORD Enforcers to pass, before joining Constable Adams in travelling through the tunnels towards the nearest Enforcer post. As you set off on your way, you suddenly hear a series of loud explosions coming from the direction of the Rat Warrens, and Shadow snarkily remarks, [shadow.speech(Sounds like Vengar's about ta find out wot 'appens when ya try an' fuck me an' Silence over.)]
+		你与[axel.name]、影和默一起靠边走，让这群SWORD执法者通过，与亚当斯警员一起穿过隧道，前往最近的执法者岗哨。就在你们出发时，鼠窟的方向突然传来一串巨大的爆炸声，影冷冷地说：[shadow.speech(听起来文加就要知道操我和默的下场是什么了。)]
 	</p>
 	<p>
-		[axel.speech(So these Enforcers are here because of you?)] [axel.name] asks.
+		[axel.speech(所以这些执法者是你找来的？)][axel.name]问。
 	</p>
 	<p>
-		[shadow.speech('Course they is! Me an' Silence are gettin' a fat reward fer providin' all the juicy details on the sorts o' illegal shit Vengar an' 'is gang 'ave been gettin' up ta,)] Shadow snickers, [shadow.speech(This is wot 'e gets fer treatin' me an' Silence like trash!)]
+		[shadow.speech(当然了！我和默因为提供了文加和他的帮派所干的非法勾当的详细情况，因此得到了丰厚的奖赏。)]影冷笑道，[shadow.speech(这就是他把我和默当垃圾的报应！)]
 	</p>
 	<p>
-		Although you've now discovered the reason behind the unexpected SWORD raid, you decide that it would be best to continue letting Constable Adams escort you to the nearest Enforcer post. After all, if you were to leave now, you could end up being put on some kind of wanted list. Clearly thinking the same thing as you, [axel.name] asks, [axel.speech(We're not getting into any kind of trouble, are we?)]
+		虽然你现在已经知道了SWORD突袭的原因，但你还是决定最好继续让亚当斯警员护送你到最近的执法者岗哨。毕竟，如果你现在离开，可能会被列入什么通缉名单。显然，[axel.name]和你想法一致，问道：[axel.speech(我们不会惹上什么麻烦吧，不会吧？)]
 	</p>
 	<p>
-		[style.speechMasculine(No,)] the Enforcer sighs, [style.speechMasculine(We're only interested in the gang members. You'll be free to go after you've given a statement.)]
+		[style.speechMasculine(不会。)]执法者叹了口气，[style.speechMasculine(我们只对帮派成员感兴趣，你们做完笔录就可以走了。)]
 	</p>
 	<p>
-		After travelling a little further down the tunnels, you soon arrive at the nearest Enforcer post, where you discover that 'giving a statement' involves filling out a seemingly never-ending amount of paperwork. Thankfully, Claire is there to lend you a hand, but even with her help, it takes almost three hours before you're declared free to leave. With Shadow and Silence having received their reward and departed a long time ago, you find yourself [pc.stepping] out into Submission with just [axel.name] for company. Turning towards you and flashing you a smile, the [axel.race] says, [axel.speech(Now that that's all done with, let's head back to my place. I still need to give you your reward for helping me out with all of this.)]
+		在隧道里又走了一段路后，你们很快就来到了最近的执法者岗哨，但“做笔录”要填写的文件似乎滔滔不绝。幸好克莱尔在那里帮了你一把，但即使有了她的帮助，你也花了近三个小时才能自由离开。影和默领完了奖赏，早就离开了。你与[axel.name]相伴着走到了屈城区，[axel.race]转过身来对你笑了笑，说：[axel.speech(现在事情都解决了，来我这吧。我还需要给你奖励，感谢你帮我解决了这一切。)]
 	</p>
 	<p>
-		Deciding that it would be best to do as [axel.name] says, you prepare to set off and accompany [axel.herHim] back to the Gambling Den...
+		你觉得最好照做，陪[axel.name]一起回赌场……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_RETURN_ENFORCERS_END -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_RETURN_ENFORCERS_END"><![CDATA[
 	<p>
-		At the side of [axel.name], you make your way back through Submission and soon find yourself once again entering the Gambling Den. Your troubles aren't over quite yet, however, for as you [pc.step] inside the building, you see the German-shepherd-boy who was leading the SWORD raid waiting for you.
+		你陪着[axel.name]再次穿过屈城区，很快回到了赌场。然而，你们的麻烦还没有结束，你们一[pc.step]进赌场，就看到带领SWORD突袭的德牧男正等着你们。
 	</p>
 	<p>
-		[style.speechMasculineStrong(You took your damn time,)] he growls as he steps over to stand in front of you and [axel.name]. Thrusting a handful of papers into the [axel.race]'s hands, he declares, [style.speechMasculineStrong(As compensation for the damage caused to your business by Vengar's gang, you're being given a slaver license, as well as ownership of Vengar and one of his gang members called 'Murk'. Some horse-girl calling herself 'Epona' took charge of Murk, while the rat-girl you've got running your shop's taken charge of Vengar.)]
+		[style.speechMasculineStrong(你可真慢啊。)]他一边咆哮着，一边走近你和[axel.name]。他把手中的一沓文件塞给[axel.race]，宣布道：[style.speechMasculineStrong(作为对文加帮派给你生意造成损失的补偿，你将获得一张奴隶执照，以及文加和他的一个叫‘默克’的帮派成员的所有权。一个自称‘伊波娜’的马女说要掌管默克，而你店里的鼠女说要文加。)]
 	</p>
 	<p>
-		[axel.speech(Wait, but I don't really want-)] [axel.name] starts to object, but [axel.sheIs] swiftly cut off by the SWORD Enforcer.
+		[axel.speech(等等，我根本不想——)][axel.name]立刻提出异议，但[axel.sheIs]很快就被SWORD执法者打断了。
 	</p>
 	<p>
-		[style.speechMasculineStrong(I don't care what you want. This is what you've got. Oh, also, we've placed selling restrictions on your new slaves, as we might need evidence from them later,)] the German-shepherd-boy states, before striding over to the door and calling out after him, [style.speechMasculineStrong(This concludes our involvement with you.)]
+		[style.speechMasculineStrong(我不在乎你想要什么，这就是全部。哦，还有，我们给你的新奴隶设置了销售限制，因为我们以后可能需要他们提供证据。)]德牧男说，随后大步走到门口，一边喊道，[style.speechMasculineStrong(我们与你的合作到此结束。)]
 	</p>
 	<p>
-		As the door swings shut after the Enforcer, you turn and ask [axel.name] what [axel.sheIs] going to do with the two rat-boys, seeing as he doesn't have any real interest in owning slaves. Letting [axel.her] shoulders slump, the [axel.race] lets out a very heavy sigh, before saying, [axel.speech(Well, it sounds like I'm stuck with them, so I'll just let Roxy and Epona look after them... Anyway, let me get you your reward for all of your help!)]
+		当门在执法者身后关上时，你转过身来问[axel.name]打算怎么处理这两个鼠男，毕竟[axel.sheIs]对拥有奴隶兴致缺缺。[axel.race]耷拉着肩膀，重重叹了口气，说道：[axel.speech(好吧，听起来我好像被他们缠上了，那就让罗克西和伊波娜看管他们吧……总之，让我给你一些奖赏吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AXEL_VENGAR_VISIT_RETURN_FINISH -->
 	
 	<htmlContent tag="AXEL_VENGAR_VISIT_RETURN_FINISH"><![CDATA[
 	<p>
-		Telling [axel.name] that you'll wait here for [axel.herHim], you watch as [axel.she] hurries over to the door of [axel.her] nearby office and slips inside. Just a few moments later, [axel.she] returns, before handing over a bag of [#SPECIAL_PARSE_0] flames to you. With a huge grin on [axel.her] face, the [axel.race] says,
+		你会在这里等[axel.herHim]，然后看着[axel.she]匆匆跑进办公室。片刻之后，[axel.she]回来了，递过来一个钱袋，里面有[#SPECIAL_PARSE_0]火币。[axel.race]笑得一脸灿烂，说道：
 		#IF(game.getDialogueFlags().hasFlag(FLAG_axelSissified))
-			 [axel.speech(I can't thank you enough for all of your help, [pc.name]! I know that I ended up getting, well... this new body of mine, but the truth is, I actually really like it... I don't think I'm going to be hurrying to change back any time soon.)]
+			[axel.speech(我真的感激不尽，[pc.name]！我知道我最终变成了……这个新样子，但其实我还挺喜欢的……我应该不着急换回来。)]
 		#ELSE
-			 [axel.speech(I can't thank you enough for all of your help, [pc.name]! Not only did you finally put an end to Vengar's extortion, but you also saved me from being transformed by him!)]
+			[axel.speech(我真的感激不尽，[pc.name]！你不仅终结了文加的勒索，还救了我，让我没被改造！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(axel.isAttractedTo(pc))
-			Telling [axel.name] that you were happy to help, you prepare to set off on your way once again. Before you can leave, however, the [axel.race] steps up close to you and suggests, [axel.speech(If you ever want to get some more 'rewards' out of me, then just let me know...)]
+			你告诉[axel.name]自己很乐意帮忙，准备再次上路。不过，在你离开之前，[axel.race]走近你，建议道：[axel.speech(如果你想从我这里得到更多‘奖励’，那就告诉我……)]
 		#ELSE
-			Telling [axel.name] that you were happy to help, you prepare to set off on your way once again. Before you can leave, however, the [axel.race] smiles and says, [axel.speech(Really, thank you again, [pc.name]. You've no idea how much you've helped me out by doing all this!)]
+			你告诉[axel.name]自己很乐意帮忙，准备再次上路。不过，在你离开之前，[axel.race]对你笑着说：[axel.speech(真的，真的很谢谢你，[pc.name]。你不知道你对我的帮助有多么大！)]
 		#ENDIF
 	</p>
 	<p>
-		With your work here done, you step away from [axel.name] and wonder where to head off to next...
+		你的事都办完了，便转身离开[axel.name]，思考着接下来该去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CORRIDOR -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		The wide, spacious atrium of the Gambling Den is filled with the laughter and chatter of at least a hundred customers. Looking around, you see all manner of races, not just the usual alligator and rat-morphs which make up most of Submission's population.
+		赌场宽敞的中庭里至少有上百名顾客，充满了欢声笑语。你环顾四周，到处都是各种各样的种族，并不只有鳄鱼和老鼠这类占据了屈城区大部分人口的种族。
 	</p>
 	<p>
-		Lining the walls of this vast hall are countless slot machines, in front of which sit the vast majority of the people in this area. Down the middle of the hall, numerous tables and chairs have been set out, and it's here that the rest of the establishment's patrons are drinking and playing casual gambling games with one another.
+		这是个偌大的大厅，两边是密密麻麻的老虎机，大部分人都坐在那里。大厅中央摆放着许多桌椅，客人们正坐在那里喝着酒，玩着休闲赌博游戏。
 	</p>
 	<p>
-		Although most of the slot machines are occupied, there are still quite a few which have been left vacant, and you could easily walk up to one and have a go, if you so desired.
+		虽然大部分老虎机都有人在玩，但仍有不少老虎机是空置的，只要你愿意，你就可以找一台老虎机一试身手。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- GAMBLING -->
 	
 	<htmlContent tag="GAMBLING"><![CDATA[
 	<p>
-		In one corner of the Gambling Den's central atrium, several pairs of glass doors have been propped open to grant easy access to a huge, adjoining hall, which is dedicated solely to the immensely popular game of dice poker. At least fifty tables are scattered around the hall's floor, and although each one only seats two players, there are far more than a hundred people present, as around most of the tables, large crowds of onlookers have gathered around to watch ongoing games.
+		赌场中央大厅的一隅敞着几对玻璃门，从这能轻松进入相邻的超大大厅。该大厅是极受欢迎的骰子扑克的专门场。大厅里至少散布着五十张桌子。尽管每张桌子只能容纳两名玩家，但这里的人数远超一百。因为大多数桌子周围都聚着一大群围观的人，旁观进行中的游戏。
 	</p>
 	<p>
-		The hall is split into three sections, with each one decorated in copper, silver, or gold. The copper section is by far the largest, and from the nearby signs, you gather that these are the tables at which the betting is lowest. The silver section is roughly half the size of the copper one, and is a place where gamblers are willing to bet considerable sums of money on the outcome of their games. Finally, the gold section is the smallest of all three, and is reserved for players willing to bet huge sums of money.
+		大厅分为三个区域，粉刷成铜、银、金三色。铜区明显最大，你从附近的标志牌看出这里的牌桌下注最低。银区大概有铜区的一半大，赌徒们往往愿意冒险赌大钱。最后，金区是三者中最小的，这里的玩家愿意一掷千金。
 	</p>
 	<p>
-		Although the vast majority of tables are occupied, you can spot at least one in each section which has just one player sitting at it. If you wanted to, you could walk up to one of these tables and sit down for a game, or you could walk up to one of the nearby signs to read about the rules of dice poker.
+		虽然绝大多数桌子都被占了，但你还是在每个区域都找到至少一张有个玩家在对面等的桌子。你如果愿意，就可以走过去找张桌子坐下来开玩。或者走去细看附近的标志牌，读读骰子扑克的规则。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- GAMBLING_RULES -->
 	
 	<htmlContent tag="GAMBLING_RULES"><![CDATA[
 	<p>
-		Deciding to read the rules of dice poker before starting a game, you walk up to the nearest informative sign, and briefly scan over it...
+		决定在开始游戏前阅读骰子扑克的规则，你走到最近的提示标志前，简单浏览了一下……
 	</p>
 	<p style='text-align:center;'>
-		<b>Tournament Rules For Dice Poker</b><br/>
-		1. Both players place the buy-in amount to start a game. This is [style.moneyFormat(500, span)] for [style.colourCopper(copper)] tables, [style.moneyFormat(2500, span)] for [style.colourSilver(silver)], and [style.moneyFormat(10000, span)] for [style.colourGold(gold)].<br/>
-		2. Both players roll five dice each.<br/>
-		3. Players can choose to increase the bet (referred to as a 'raise'), or leave the bet at the buy-in amount (referred to as a 'call').<br/>
-		4. After betting is done, each player selects as many of their dice as they want to re-roll.<br/>
-		5. The players re-roll their chosen dice.<br/>
-		6. The ranking of each player's dice is compared to find the winner, who then takes all of the money in the pot.
+		<b>骰子扑克的锦标赛规则</b><br/>
+		1. 两位玩家都投入买入费开始游戏。[style.colourCopper(铜桌)]要[style.moneyFormat(500, span)]，[style.colourSilver(银桌)]要[style.moneyFormat(2500, span)]以及[style.colourGold(金桌)]要[style.moneyFormat(10000, span)]。<br/>
+		2. 两位玩家各掷五个骰子。<br/>
+		3. 玩家可以选择增加赌注(称为“加注”)，或者保持买入金额不变(称为“跟注”)。<br/>
+		4. 下注完成后，每个玩家选择他们想要重新掷骰子的数量。<br/>
+		5. 玩家重新掷出他们选择的骰子。<br/>
+		6. 比较每个玩家骰子的等级，找出赢家，赢家就能拿走底池中的所有钱。
 	</p>
 	<p style='text-align:center;'>
-		<b>Results ranking (from winning to losing)</b><br/>
-		1. Five of a kind: Five dice of the same value. (e.g. 33333)<br/>
-		2. Four of a kind: Four dice of the same value. (e.g. 55551)<br/>
-		3. High straight: Consecutive numbers starting at two. (e.g. 23456)<br/>
-		4. Full house: Two dice of the same value, plus three dice of a different, same value. (e.g. 22666)<br/>
-		5. Three of a kind: Three dice of the same value. (e.g. 44415)<br/>
-		6. Low straight: Consecutive numbers starting at one. (e.g. 12345)<br/>
-		7. Two pair: Two dice of the same value, plus two dice of a different, same value. (e.g. 55331)<br/>
-		8. Pair: Two dice of the same value. (e.g. 22415)<br/>
-		9. Runt: All dice of different values. (e.g. 13456)<br/><br/>
+		<b>结果排名(从赢到输)</b><br/>
+		1. 五条：五个相同数值的骰子。(例如33333)<br/>
+		2. 四条：四个相同数值的骰子。(例如55551)<br/>
+		3. 大顺子：从2开始的连续数字。(例如23456)<br/>
+		4. 葫芦：两个相同数值的骰子，加上另外三个相同数值的骰子。(例如22666)<br/>
+		5. 三条：三个相同数值的骰子。(例如44415)<br/>
+		6. 小顺子：从1开始的连续数字。(例如12345)<br/>
+		7. 两对：两个相同数值的骰子，加上另外两个相同数值的骰子。(例如55331)<br/>
+		8. 一对：两个相同数值的骰子。(例如22415)<br/>
+		9. 烂手：所有骰子的数值都不同。(例如13456)<br/><br/>
 		
-		If both players have the same ranking, the total value of the dice that make up their rank are compared. For example:<br/>
-		Player A: 33661<br/>
-		Player B: 22115<br/>
-		Although both players have 'Two pair', player A wins, as the total of their ranking dice is 18 (3+3+6+6), compared to player B's 6 (2+2+1+1).<br/><br/>
+		如果两个玩家的排名相同，则比较组成他们排名的骰子的合计数值。例如：<br/>
+		玩家A：33661<br/>
+		玩家B：22115<br/>
+		虽然两个玩家都有“两对”，但玩家A赢了，因为A骰子排名的合计数值是18(3+3+6+6)，而玩家B是6(2+2+1+1)。<br/><br/>
 		
-		If both players have the same ranking, and the same value, the game is a draw, and the money in the pot is returned to each player's hand.
+		如果两个玩家的排名相同，并且合计数值相同，则该游戏为平局，底池中的钱返回到每个玩家手中。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PREGNANCY_ROULETTE_MALE_STALLS -->
 	
 	<htmlContent tag="PREGNANCY_ROULETTE_MALE_STALLS"><![CDATA[
 	<p>
-		Set into the far right corner of the Gambling Den's main atrium, there's a wide, open archway, which leads into a small room. The interior of this room is concealed from public view by means of a dark blue canvas privacy screen, which bears a stylised black silhouette of a horse-boy sporting a massive erection. Beneath this icon, you read the words 'Pregnancy Roulette: Male breeder room'.
+		赌场中庭最右侧的角落里，有一个宽敞的拱门大开，通向一个小房间。房间内部用一块深蓝色的帆布隐私屏风遮挡起来，上面印有一个马男的黑色剪影，他正勃起着巨大的阴茎，图标下还写着“怀孕轮盘赌：男性播种室”。
 	</p>
 	<p>
-		Seeing as there's nobody around to stop you, you decide to step into the room and take a closer look at what lies beyond. Moving forwards, you peek around the side of the canvas screen, and find yourself looking upon a small, wooden-floored room. The only furnishings in this area are a couple of basic wooden tables and benches, which have been pushed up against the left and right-hand walls. Set into the far side of the room, you see a large mirror and solitary door, and a few [unit.lSizes] to the left of those, at about waist-height, there's a round opening in the wall.
+		见没人拦着你，你决定进去仔细瞧瞧。你贴近帆布帘子的边缘瞥了一眼，发现这是一间铺着木地板的小屋子。这里只有一些简单的木质桌椅，而且都被推靠在左右两面墙边。房间的最里面有一面大镜子和一扇门，而在镜子左边几[unit.lSizes]处，大约齐腰高的墙上有一个圆形开口。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PREGNANCY_ROULETTE_STALLS_KNOWLEDGE"><![CDATA[
 	<p>
-		You immediately recognise the padded opening, and as you take a look at it, you see the familiar leather bench positioned right on the other side. Remembering the last time you participated in 'pregnancy roulette' you know that the 'mother' lies on that bench, with her rear half exposed to the room in order to be bred.
+		你一眼就认出了那个垫着软垫的开口，还看到了另一边那熟悉的皮质长凳。回忆起上次参与“怀孕轮盘赌”的经历，你知道“母亲”就躺在这张长凳上，露出下半身来接受配种。
 	</p>
 	<p>
-		With the room currently deserted, there's not much to do in here, so you turn around and decide to go elsewhere...
+		房间目前空无一人，你在这无事可做，便转身前往他处……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PREGNANCY_ROULETTE_STALLS_NO_KNOWLEDGE"><![CDATA[
 	<p>
-		Stepping into the room to take a closer look, you see that this opening in the wall has been padded on all sides, and, looking through it, you see a leather bench positioned right on the other side. You realise that this must be where the target of 'pregnancy roulette' lies, with her rear half exposed to the room, ready to be fucked by the breeders.
+		你走进房间仔细瞧瞧，发现墙壁上开口四面都铺了软垫，还透过开口看到另一边放着一张皮质长凳。你意识到这一定就是“怀孕轮盘赌”的目标所在，被授孕者在此把下半身暴露在外，随时准备被繁育者操弄。
 	</p>
 	<p>
-		With the room currently deserted, there's not much to do in here, so you turn around and decide to go elsewhere...
+		房间目前空无一人，你在这无事可做，便转身前往他处……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PREGNANCY_ROULETTE_FUTA_STALLS -->
 	
 	<htmlContent tag="PREGNANCY_ROULETTE_FUTA_STALLS"><![CDATA[
 	<p>
-		Set into the far left corner of the Gambling Den's main atrium, there's a wide, open archway, which leads into a small room. The interior of this room is concealed from public view by means of a dark pink canvas privacy screen, which bears a stylised white silhouette of a horse-girl futa sporting a massive erection. Beneath this icon, you read the words 'Pregnancy Roulette: Futa breeder room'.
+		赌场中庭最左侧的角落里，有一个宽敞的拱门大开，通向一个小房间。房间内部用一块深粉色的帆布隐私屏风遮挡起来，上面印有一个半人马女郎的白色剪影，她正勃起着巨大的阴茎，图标下还写着“怀孕轮盘赌：扶她播种室”。
 	</p>
 	<p>
-		Seeing as there's nobody around to stop you, you decide to step into the room and take a closer look at what lies beyond. Moving forwards, you peek around the side of the canvas screen, and find yourself looking upon a small, wooden-floored room. The only furnishings in this area are a couple of elegant wooden tables and padded sofas, which have been pushed up against the left and right-hand walls. Set into the far side of the room, you see a large mirror and solitary door, and a few [unit.lSizes] to the left of those, at about waist-height, there's a round opening in the wall.
+		见没人拦着你，你决定进去仔细瞧瞧。你贴近帆布帘子的边缘瞥了一眼，发现这是一间铺着木地板的小屋子。这里只有几张雅致的木桌和软垫沙发，被分别推靠在左右两面墙边。房间的最里面有一面大镜子和一扇门，而在镜子左边几[unit.lSizes]处，大约齐腰高的墙上有一个圆形开口。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

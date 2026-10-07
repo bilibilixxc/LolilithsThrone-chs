@@ -83,7 +83,7 @@ public class Arm implements BodyPartInterface {
 		}
 		
 		if (type == getType()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.arms] of [npc.a_armRace], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经拥有了[npc.a_armRace]的[npc.arms]，所以无事发生……)]</p>");
 		}
 		
 		StringBuilder sb = new StringBuilder();
@@ -91,13 +91,13 @@ public class Arm implements BodyPartInterface {
 		if (owner.isPlayer()) {
 			sb.append(
 					"<p>"
-						+ "Your [pc.arms+] suddenly feel hot and itchy, and you gasp as you realise that they're starting to transform."
-						+ " You let out a painful cry as your upper limbs twist and transform, leaving you powerless to do anything other than look on as they reshape themselves into a new form.");
+						+ "你忽然觉得[pc.arms+]又热又痒，你意识到转变开始了，于是不禁倒吸了一口凉气。"
+						+ "你的大臂开始扭曲变形，你发出一声痛叫，却无能为力，只得眼睁睁地看着手臂转化成了新的形态。");
 		} else {
 			sb.append(
 					"<p>"
-						+ "[npc.Name] fidgets about as [npc.she] feels [npc.her] [npc.arms+] growing hot and itchy, and [npc.she] gasps as [npc.she] realises that they're starting to transform."
-						+ " [npc.She] lets out a painful cry as [npc.her] upper limbs twist and transform, leaving [npc.her] powerless to do anything other than look on as they reshape themselves into a new form.");
+						+ "[npc.Name]感到[npc.she][npc.arms+]变得又热又痒，顿时手足无措，[npc.she]意识到转变开始了，于是不禁倒吸了一口凉气。"
+						+ "[npc.her]的大臂开始扭曲变形，[npc.she]发出一声痛叫，却无能为力，只得眼睁睁地看着手臂转化成了新的形态。");
 		}
 
 		// Parse existing content before transformation:
@@ -131,7 +131,7 @@ public class Arm implements BodyPartInterface {
 		int currentArmRows = getArmRows();
 		armRows = Math.max(1, Math.min(armRows, MAXIMUM_ROWS));
 		if (armRows == currentArmRows) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		StringBuilder sb = new StringBuilder();
@@ -141,26 +141,26 @@ public class Arm implements BodyPartInterface {
 			if (owner.isPlayer()) {
 				sb.append(
 						"<p>"
-							+ "You feel a strange pressure building up around the base of "
+							+ "你感觉到一阵奇妙的压力，出现在"
 							+ (losesTwoPairs
-								? "your two extra pairs"
+								? "你额外的两对"
 								: (armRows == 2 
-									? "the lowest of your extra pairs" 
-									: "your extra pair"))
-							+ " of [pc.arms], and before you can react, they rapidly shrink away into the [pc.skin] of your torso.<br/>" 
-							+ "You now have [style.boldTfLesser(" + Util.intToString(armRows) + " pair"+ (armRows > 1 ? "s" : "") + " of [pc.arms])], [pc.materialDescriptor] [pc.armFullDescriptionColour]."
+									? "最下方的一对" 
+									: "你额外的那对"))
+							+ "[pc.arms]的基部，还没等你反应过来，这些手臂便快速潜入了你躯干的[pc.skin]之下。<br/>" 
+							+ "你现在拥有[style.boldTfLesser(" + Util.intToString(armRows) + "对[pc.arms])]，[pc.materialDescriptor][pc.armFullDescriptionColour]。"
 						+ "</p>");
 			} else {
 				sb.append(UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] glances worriedly down at "
+							+ "[npc.Name]担心地低头瞄向"
 							+ (losesTwoPairs
-								? "[npc.her] two extra pairs"
+								? "[npc.her]额外的两对"
 								: (armRows == 2 
-									? "the lowest of [npc.her] extra pairs" 
-									: "[npc.her] extra pair"))
-							+ " of [npc.arms], and before [npc.she] can react, they rapidly shrink away into the [npc.skin] of [npc.her] torso.<br/>" 
-							+ "[npc.She] now has [style.boldTfLesser(" + Util.intToString(armRows) + " pair"+ (armRows > 1 ? "s" : "") + " of [npc.arms])], [npc.materialDescriptor] [npc.armFullDescriptionColour]."
+									? "[npc.her]最下方的一对" 
+									: "[npc.her]额外的那对"))
+							+ "[npc.arms]，还没等[npc.she]反应过来，这些手臂便快速潜入了躯干的[npc.skin]之下。<br/>" 
+							+ "[npc.She]现在拥有[style.boldTfLesser(" + Util.intToString(armRows) + "对[npc.arms])]，[npc.materialDescriptor][npc.armFullDescriptionColour]。"
 						+ "</p>"));
 			}
 			
@@ -169,22 +169,22 @@ public class Arm implements BodyPartInterface {
 			if (owner.isPlayer()) {
 				sb.append(
 						"<p>"
-							+ "You feel a strange pressure building up down the sides of your torso, and before you have time to react, "
+							+ "你感觉到一阵奇妙的压力，出现在你的躯干两侧，还没等你反应过来，"
 								+ (gainsTwoPairs
-									? "two extra pairs"
-									: "an extra pair")
-							+ " of [pc.arms] rapidly grow out of the [pc.skin] of your lower torso.<br/>"
-							+ "You now have [style.boldTfLesser(" + Util.intToString(armRows) + " pair"+ (armRows > 1 ? "s" : "") + " of [pc.arms])], [pc.materialDescriptor] [pc.armFullDescriptionColour]."
+									? "额外的两对"
+									: "额外的一对")
+							+ "[pc.arms]便迅速从躯干偏下部分的[pc.skin]中生长了出来。<br/>"
+							+ "你现在拥有[style.boldTfLesser(" + Util.intToString(armRows) + "对[pc.arms])]，[pc.materialDescriptor][pc.armFullDescriptionColour]。"
 						+ "</p>");
 			} else {
 				sb.append(UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] glances worriedly down at [npc.her] torso, and before [npc.she] can react, "
+							+ "[npc.Name]担心地提都瞄向[npc.her]的躯干，还没等[npc.she]反应过来，"
 								+ (gainsTwoPairs
-									? "two extra pairs"
-									: "an extra pair")
-							+ " of [npc.arms] rapidly grow out of the [npc.skin] of [npc.her] lower torso.<br/>"
-							+ "[npc.She] now has [style.boldTfLesser(" + Util.intToString(armRows) + " pair"+ (armRows > 1 ? "s" : "") + " of [npc.arms])], [npc.materialDescriptor] [npc.armFullDescriptionColour]."
+									? "额外的两对"
+									: "额外的一对")
+							+ "[npc.arms]便迅速从躯干偏下部分的[npc.skin]中生长了出来。<br/>"
+							+ "[npc.She]现在拥有[style.boldTfLesser(" + Util.intToString(armRows) + "对[npc.arms])]，[npc.materialDescriptor][npc.armFullDescriptionColour]。"
 						+ "</p>"));
 			}
 		}
@@ -214,39 +214,39 @@ public class Arm implements BodyPartInterface {
 		}
 
 		if(!this.getType().isUnderarmHairAllowed()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(As [npc.namePos] arm type prevents [npc.herHim] from growing any underarm hair, nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.namePos]的手臂类型不允许[npc.herHim]生长任何腋下毛发，所以无事发生……)]</p>");
 		}
 		
 		if(getUnderarmHair() == underarmHair) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		StringBuilder sb = new StringBuilder();
 		
 		switch(underarmHair) {
 			case ZERO_NONE:
-				sb.append(UtilText.parse(owner, "<p>There is no longer any trace of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.her]的腋下已经没有了"+getUnderarmHairType(owner).getFullDescription(owner, true)+"的踪迹。</p>"));
 				break;
 			case ONE_STUBBLE:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] stubbly patches of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的腋下现在有一小片短茬的"+getUnderarmHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case TWO_MANICURED:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a well-manicured patch of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的腋下现在有一小片齐整的"+getUnderarmHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case THREE_TRIMMED:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] trimmed patches of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的腋下现在有一小片修剪过的"+getUnderarmHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case FOUR_NATURAL:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a natural amount of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的腋下自然生长着一片"+getUnderarmHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case FIVE_UNKEMPT:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] an unkempt mass of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的腋下现在有一片凌乱的"+getUnderarmHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case SIX_BUSHY:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] thick, bushy masses of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的腋下现在有一片厚实浓密的"+getUnderarmHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case SEVEN_WILD:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] wild, bushy masses of "+getUnderarmHairType(owner).getFullDescription(owner, true)+" in [npc.her] armpits.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的腋下现在有一大片野蛮生长的"+getUnderarmHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 		}
 		

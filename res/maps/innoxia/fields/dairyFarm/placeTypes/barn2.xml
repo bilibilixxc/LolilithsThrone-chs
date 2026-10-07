@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Heifer Barn]]></name>
-	<tooltipDescription><![CDATA[The 'heifer' barn is lined on both sides by several dozen stalls, beside each one of which there's a steadily-humming milking machine.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the heifer barn at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[小母牛棚]]></name>
+	<tooltipDescription><![CDATA[小母牛棚的两侧列有数十个牛棚，每个旁边都安装有嗡嗡作响的榨乳机器。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的小母牛棚里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>milking</svgName>
 	<colour>BASE_YELLOW</colour>

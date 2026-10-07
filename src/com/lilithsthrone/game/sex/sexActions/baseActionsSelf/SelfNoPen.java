@@ -40,32 +40,32 @@ public class SelfNoPen {
 
 		@Override
 		public String getActionTitle() {
-			return "Touch self";
+			return "抚摸自己";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Get some pleasure from touching yourself.";
+			return "抚摸自己来寻求快感。";
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterPerformingAction().isCoverableAreaExposed(CoverableArea.VAGINA)) {
 				return UtilText.returnStringAtRandom(
-						"Reaching down between [npc.her] legs, [npc.name] [npc.verb(tease)] [npc.her] fingers over the entrance to [npc.her] [npc.pussy+], letting out [npc.a_moan+] as [npc.she] [npc.verb(stimulate)] [npc.her] outer folds.",
-						"[npc.Name] [npc.verb(probe)] [npc.her] fingers down between [npc.her] legs, [npc.moaning] softly as [npc.she] [npc.verb(tease)] [npc.her] fingers over the entrance to [npc.her] inviting [npc.pussy].",
-						"Sliding [npc.her] fingertips over [npc.her] neglected [npc.pussy+], [npc.name] [npc.verb(let)] out a [npc.moan] as [npc.she] [npc.verb(stimulate)] [npc.her] outer labia.",
-						"[npc.Name] eagerly [npc.verb(slide)] [npc.her] fingers over [npc.her] needy [npc.pussy], [npc.moaning+] as [npc.she] gently [npc.verb(press)] down on [npc.her] outer labia.");
+						"[npc.name]将手伸到两腿之间，手指抚弄着[npc.her][npc.pussy+]入口，又刺激起外部的褶皱，[npc.she]发出[npc.a_moan+]。",
+						"[npc.Name]将[npc.fingers]伸到双腿之间摸索着，轻轻地[npc.moaning]并抚弄着[npc.her]诱人的[npc.pussy]口。",
+						"[npc.name]的指尖滑过[npc.her]那被冷落[npc.pussy+]，刺激着[npc.her]的外阴唇并发出[npc.moan]。",
+						"[npc.Name]急切地将[npc.fingers]滑过欲求不满的[npc.pussy]，[npc.moaning+]着并轻轻地按压[npc.her]的外阴唇。");
 			} else {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(run)] [npc.her] hand down over [npc.her] groin, pressing [npc.her] "+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
-							+" down hard against [npc.her] needy [npc.pussy] as [npc.she] [npc.verb(let)] out a little whimper.",
-						"[npc.Name] [npc.verb(push)] [npc.her] fingers down between [npc.her] legs, [npc.moaning+] as [npc.she] [npc.verb(rub)] [npc.her] "+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
-							+" against [npc.her] pussy lips.",
-						"[npc.Name] [npc.verb(slide)] [npc.her] fingertips over [npc.her] "+Main.sex.getCharacterPerformingAction().getHighestZLayerCoverableArea(CoverableArea.VAGINA).getName()
-							+", letting out [npc.a_moan+] as [npc.she] [npc.verb(press)] down and [npc.verb(try)] to stimulate [npc.her] [npc.pussy+] through [npc.her] clothing.",
-						"Pushing down between [npc.her] legs with the palm of [npc.her] hand, [npc.name] [npc.verb(squeeze)] [npc.her] thighs together as [npc.she] [npc.verb(press)] [npc.her] "
-								+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName() +" tightly against [npc.her] neglected [npc.pussy].");
+						"[npc.Name]将手伸向腹股沟，按住"+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
+							+"向下用力顶住[npc.her]欲求不满的[npc.pussy]，发出轻微的呜咽声。",
+						"[npc.Name]将手指伸入[npc.her]的双腿之间，[npc.moaning+]并揉搓[npc.her]那"+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
+							+"抵住[npc.her]的阴唇。",
+						"[npc.Name]将[npc.her]的指尖滑过[npc.her]那"+Main.sex.getCharacterPerformingAction().getHighestZLayerCoverableArea(CoverableArea.VAGINA).getName()
+							+"，[npc.she]发出[npc.a_moan+]，并试图隔着衣服按压来刺激[npc.her][npc.pussy+]。",
+						"[npc.name]将手向下，伸入自己腿间，边按压边将双股挤在一起。"
+								+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName() +"紧贴[npc.her]那被冷落的[npc.pussy]。");
 			}
 		}
 		
@@ -95,32 +95,32 @@ public class SelfNoPen {
 		
 		@Override
 		public String getActionTitle() {
-			return "Stroke mound";
+			return "爱抚下体";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Get some pleasure from touching your genderless mound.";
+			return "抚摸你的无性下体来寻求快感。";
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterPerformingAction().isCoverableAreaExposed(CoverableArea.PENIS)) {
 				return UtilText.returnStringAtRandom(
-						"Reaching down between [npc.her] [npc.legs], [npc.name] [npc.verb(run)] [npc.her] fingertips over [npc.her] doll-like mound, [npc.moaning+] as [npc.she] [npc.verb(tease)] the sensitive area.",
-						"[npc.Name] [npc.verb(tease)] [npc.her] fingers over the sensitive doll-like mound between [npc.her] legs, [npc.moaning+] as [npc.she] [npc.verb(stimulate)] [npc.herself].",
-						"With probing fingers, [npc.name] [npc.verb(reach)] down and [npc.verb(start)] to pinch and rub at [npc.her] delicate genderless crotch.",
-						"Despite lacking genitalia, [npc.namePos] crotch remains a highly sensitive erogenous zone, and [npc.she] eagerly [npc.verb(start)] rubbing and pressing down on it with greedy fingers.");
+						"[npc.name]把手探向[npc.legs]间，[npc.her]的指尖在[npc.her]那玩偶般的下体上游移，[npc.moaning+]并挑逗着敏感部位。",
+						"[npc.Name]用手指挑逗着[npc.her]两腿之间玩偶般的敏感下体，[npc.moaning+]并刺激着[npc.herself]。",
+						"[npc.name]试探着将手指伸到下面，开始揉捏和摩擦[npc.her]那娇嫩的无性别胯部。",
+						"尽管没有生殖器，[npc.namePos]的胯部仍然是一个高度敏感的性感带，[npc.she]迫不及待地开始用手指贪婪地摩擦和按压它。");
 			} else {
 				return UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(run)] [npc.her] [npc.hand] over [npc.her] groin, pressing [npc.her] "+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
-							+" down against [npc.her] doll-like mound as [npc.she] [npc.verb(let)] out a little sigh.",
-						"[npc.Name] [npc.verb(push)] [npc.her] fingers down between [npc.her] legs, [npc.moaning+] as [npc.she] [npc.verb(rub)] [npc.her] "+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
-								+" against [npc.her] genderless crotch.",
-						"[npc.Name] [npc.verb(slide)] [npc.her] fingertips over [npc.her] "+Main.sex.getCharacterPerformingAction().getHighestZLayerCoverableArea(CoverableArea.VAGINA).getName()
-								+", before pressing down and trying to stimulate [npc.her] doll-like mound through [npc.her] clothing.",
-						"Pushing down between [npc.her] [npc.legs] with the palm of [npc.her] [npc.hand], [npc.name] [npc.verb(squeeze)] [npc.her] thighs together as [npc.she] [npc.verb(press)] [npc.her] "
-								+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()+" tightly down against [npc.her] genderless mound.");
+						"[npc.Name]用[npc.her]的[npc.hand]抚摸过[npc.her]的腹股沟，按压[npc.her]那。"+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
+							+"向下顶住[npc.her]那玩偶般的下体时，[npc.she]发出一声轻叹。",
+						"[npc.Name]将手指伸入[npc.her]的双腿之间，[npc.moaning+]并揉搓[npc.her]那"+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()
+								+"抵住[npc.her]无性别的胯部。",
+						"[npc.Name]将指尖滑过[npc.her]那"+Main.sex.getCharacterPerformingAction().getHighestZLayerCoverableArea(CoverableArea.VAGINA).getName()
+								+", 按压并试图隔着衣服刺激[npc.her]那玩偶般的下体。",
+						"[npc.name]将手向下，伸入自己腿间，边按压边将双股挤在一起。"
+								+Main.sex.getCharacterPerformingAction().getLowestZLayerCoverableArea(CoverableArea.VAGINA).getName()+"紧贴[npc.her]那无性别的下体。");
 			}
 		}
 		

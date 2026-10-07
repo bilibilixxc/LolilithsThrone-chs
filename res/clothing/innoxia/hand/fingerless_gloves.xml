@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>150</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[fingerless glove]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[fingerless gloves]]></namePlural>
-		<description><![CDATA[A pair of fingerless gloves. They are the sort worn by cyclists and runners, and are made out of a thin, breathable material.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[露指手套]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[露指手套]]></namePlural>
+		<description><![CDATA[一双用于骑自行车和跑步的露指手套。它们由一种薄而透气的面料制成。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HAND</slot>
@@ -41,27 +41,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the fingerless gloves onto [npc.her] [npc.hands], before giving [npc.her] [npc.fingers] an experimental wiggle.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the fingerless gloves onto [npc2.namePos] [npc2.hands].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the fingerless gloves onto [npc2.namePos] [npc2.hands].]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将露指手套拉到[npc.her]的[npc.hands]上，然后试着活动了一下[npc.fingers]。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将露指手套戴到[npc2.namePos]的[npc2.hands]上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将露指手套强行戴在[npc2.namePos]的[npc2.hands]上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] fingerless gloves.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] fingerless gloves.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(yank)] off [npc2.namePos] fingerless gloves.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]脱下了[npc.her]的露指手套。
+]]></self>
+		<other><![CDATA[
+[npc.Name]脱下了[npc2.namePos]的露指手套。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把[npc2.namePos]的无指手套猛地拽下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

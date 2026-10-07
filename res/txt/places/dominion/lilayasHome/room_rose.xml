@@ -1,124 +1,124 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="ROOM_ROSE"><![CDATA[
 	<p>
-		Evidence of Rose's close relationship with Lilaya is apparent as you approach the cat-girl's room. Hanging on the door, there's a little home-made sign bearing her name, and underneath, in flowing handwriting which you recognise as Lilaya's, a little message reads: <i>'My loving Mistress'</i>
+		你走近猫女仆的房间，就能看出来萝丝与莉莱雅的关系确实亲密。一个小小的自制标牌挂在门上，上面刻着她的名字“萝丝”。你认出名字下面莉莱雅的手迹：<i>“我亲爱的主人”</i>
 	</p>
 	#IF(game.isExtendedWorkTime())
 		<p>
-			The door appears to be locked at the moment, and there's no sound of anyone stirring within. Rose seems to only allow herself some rest when she's sure that nobody else is around who might need her, so she's probably off in another part of the house at the moment.
+			门似乎锁着，里面寂静无声。萝丝在确定没人需要帮助时才会回来休息。所以她现在可能在房子里的其他地方。
 		</p>
 		<p>
-			You notice that there's a little bell set into the wall beside her door, and you wonder if you should try ringing it to get Rose to come up to her room.
+			你发现门边的墙上悬挂着一个小铃铛，你很好奇，如果拉响铃铛，萝丝会不会来她的房间。
 		</p>
 	#ELSE
 		<p>
-			The door appears to be locked at the moment, and you can hear the faint sound of movement coming from within. Although there's definitely someone inside, a sign has been hung beneath the little bell which is set into the wall beside her door, and this sign reads: [style.italicsBad(Please do not disturb.)]
+			门似乎锁着，你能听见房间里传来微弱的响动。尽管里面肯定有人，但门边墙上悬挂着的小铃铛下面有一张小纸条，上面写着：[style.italicsBad(请勿打扰。)]
 		</p>
 		<p>
-			It looks like you'll have to return during daylight hours if you wanted to talk to Rose about anything...
+			如果你有事找萝丝，最好白天再来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_ROSE_INITIAL_CALL"><![CDATA[
 	<p>
-		Deciding that you'd like to talk to Rose, you decide to push the little bell that's situated beside her bedroom's door, causing a faint ringing noise to echo up from somewhere else in the house. Despite the enormous size of Lilaya's home, Rose never seems to be far away, and you soon hear her walking down the corridor as she rushes to respond to your call.
+		你下定决心和萝丝谈谈，摇响了她卧室门旁的小铃铛。微弱的铃铛声在房间里回荡。尽管莉莱雅的家非常大，但萝丝似乎从未忽视铃铛声，不久你就听到她穿过走廊，匆忙赶来回应你的呼唤。
 	</p>
 	<p>
-		As she approaches, you see her cat-like tail swishing from side to side, and you notice one of her ears twitch as she sees you standing outside her bedroom waiting for her. Realising that you're obviously wanting to have a talk, she curtsies before issuing a greeting.
+		随着她的靠近，你注意到她猫般的尾巴一晃一晃，一只耳朵微微颤动。她看到你在卧室门前等待，意识到你有事找她。她先行了个优雅的屈膝礼，发出问候。
 	</p>
 	<p>
-		[rose.speech(Good [style.morning],)] she says, [rose.speech(How may I help you?)]
+		[rose.speech([style.morning]好，)]她说，[rose.speech(我能帮你做点什么？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Kitty scenes: -->
 	
 	<htmlContent tag="ROOM_ROSE_KITTY"><![CDATA[
 	<p>
-		Evidence of Rose's close relationship with Lilaya is apparent as you approach the cat-girl's room. Hanging on the door, there's a little home-made sign bearing her name, and underneath, in flowing handwriting which you recognise as Lilaya's, a little message reads: <i>'My loving Mistress'</i>
+		你走近猫女仆的房间，就能看出来萝丝与莉莱雅的关系确实亲密。一个小小的自制标牌挂在门上，上面刻着她的名字“萝丝”。你认出名字下面莉莱雅的手迹：<i>“我亲爱的主人”</i>
 	</p>
 	<p>
-		The door appears to be locked at the moment, and you can hear the faint sound of movement coming from within. Although there's definitely someone inside, a sign has been hung beneath the little bell which is set into the wall beside her door, and this sign reads: [style.italicsBad(Please do not disturb.)]
+		门似乎锁着，你能听见房间里传来微弱的响动。尽管里面肯定有人，但门边墙上悬挂着的小铃铛下面有一张小纸条，上面写着：[style.italicsBad(请勿打扰。)]
 	</p>
 	<p>
-		Wanting to respect the cat-girl maid's request, you turn away from the door to her bedroom, but as you do, a very strange, animalistic cry causes you to freeze in your tracks, [lilaya.speech(<i>Meow!</i>)]
+		你尊重猫女女仆的要求，从她卧室门前转身准备离开。但就在你转身时，一声非常奇怪的、动物般的叫声让你僵在了原地，[lilaya.speech(<i>喵！</i>)]
 	</p>
 	<p>
-		It sounded like a cat, but it was far too loud to have been made by a normal kitty. What's more, there was a rather human-like quality to it, and although you aren't quite sure where this strange noise came from, you instinctively turn back to look at the door to Rose's room.
+		听起来像是一只猫，但这叫声太大了，不可能是普通的猫咪发出的。更重要的是，它还带有一点人类的声音特质，尽管你不太确定这奇怪的声音从何而来，但你本能地回头看向萝丝的房门。
 	</p>
 	<p>
-		[lilaya.speech(<i>Meow! Meow!</i>)]
+		[lilaya.speech(<i>喵！喵！</i>)]
 	</p>
 	<p>
-		This time you're sure; the meowing is being made by a feminine voice, not an actual animal, and it's definitely coming from within Rose's room. You can't imagine that the cat-girl maid would ever embarrass herself by making that noise unless she was in serious distress. You could always try to take a look through the keyhole to make sure she's not in trouble in there...
+		这次你确定了，那喵喵声是女性发出的声音，而不是由真正的动物发出的，而且它肯定来自萝丝的房间里。你无法想象那个猫女女仆会发出那种让自己难堪的声音，除非她正处于极度困境中。你可以试着透过钥匙孔看看，确保她在里面没有遇到麻烦……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_KITTY"><![CDATA[
 	<p>
-		You don't want to be responsible for ignoring Rose's cries for help, but you also don't want to knock on the door and embarrass her if she's making those noises for some other reason. Wanting to make sure that she genuinely does require assistance before acting, you put your eye to the keyhole and manage to get a good view of what's happening on the other side of the door.
+		你不想对萝丝的求救声置之不理，但你也不想敲门让她难堪——如果她发出那些声音是出于其他原因的话。在采取行动之前，你想确认她是否真的需要帮助，于是你把眼睛凑到钥匙孔上，成功地看清了门另一侧发生的一切。
 	</p>
 	<p>
-		[lilaya.speech(<i>Meow!</i>)] the feline cry calls out as you peep into Rose's room. Instead of being made by the cat-girl as you expected, however, you're able to see that it's none other than your [lilaya.relation(pc)] who's making these embarrassing noises. Dressed up in the black-and-pink kitty lingerie which she summoned from Lyssieth's wardrobe, Lilaya is shamefully crawling around on all fours on the carpeted floor of Rose's bedroom. The maid herself is wearing nothing but a black choker, a lacy burgundy bra, and a matching crotchless thong. Sitting on a large, comfortable-looking armchair that's placed on one side of her impressively-sized and opulently-furnished bedroom, the maid is idly drinking a glass of red wine while her owner crawls around like an animal in front of her.
+		[lilaya.speech(<i>喵呜！</i>)]当你偷窥萝丝的房间时，猫咪的叫声又传了出来。然而，这声音并非如你所料是由猫女发出的，你看到发出这些尴尬声音的，正是你的[lilaya.relation(pc)]。莉莱雅身穿她从莉西丝的衣柜里召唤出的那套黑粉色猫咪内衣，正羞耻地在萝丝卧室的地毯上四肢着地爬行着。女仆自己则只戴着一条黑色项圈、穿着一件酒红色蕾丝文胸和一条配套的开裆丁字裤。女仆坐在她那尺寸惊人、装修豪华的卧室一侧的宽大舒适扶手椅上，正懒洋洋地喝着一杯红酒，而她的主人则像动物一样在她面前爬行。
 	</p>
 	<p>
-		[rose.speech(It really does amuse me to think that you expected <i>me</i> to wear that outfit,)] Rose smugly states as she watches your [lilaya.relation(pc)] humiliate herself. After taking another sip of wine, she allows her sadistic streak to be shown as she snaps, [rose.speech(I ordered you to keep meowing for me! Don't make me punish you again!)]
+		萝丝看着你的[lilaya.relation(pc)]自取其辱，得意洋洋地说道，[rose.speech(想不到你竟然期望<i>我</i>穿那身衣服，这真是让我感觉好笑。)]她又抿了一口酒后，露出了施虐的一面，厉声说道，[rose.speech(我命令你继续为我喵喵叫！别让我下次再惩罚你了！)]
 	</p>
 	<p>
-		[lilaya.speech(<i>Meow! Meow! Meow!</i>)] Lilaya frantically calls out as she continues crawling around on all fours. From the performance you're witnessing, you'd never guess that Rose is the slave and Lilaya her owner. The [lilaya.race] continues to crawl around and meow as her maid slowly finishes her wine and then places her now-empty glass on the table beside her.
+		[lilaya.speech(<i>喵！喵！喵！</i>)]莉莱雅拼命地叫喊，她继续四肢着地爬行着。从你所目睹的表演来看，你绝不会猜到萝丝是奴隶而莉莱雅是她的主人。这位[lilaya.race]继续爬来爬去并喵喵叫着，同时她的女仆慢慢地喝完了她的葡萄酒，然后把她的空酒杯放在了旁边的桌子上。
 	</p>
 	<p>
-		[rose.speech(That's my good kitty,)] Rose says with more than a hint of amusement in her voice. Leaning back in her armchair, she spreads her legs to grant both Lilaya and you a clear, unobstructed view of her tight, slick pussy. Placing her hands down on the armrests, she smirks down at Lilaya and says, [rose.speech(You can have your reward now. Get that tongue of yours in deep; I want to cum <i>hard</i> tonight.)]
+		[rose.speech(我的乖猫咪，)]萝丝说道，语气中带着明显的戏谑。她靠在扶手椅上，张开双腿，让莉莱雅和你都能清晰无阻地看到她紧致湿滑的小穴。她双手放在扶手上，低头对莉莱雅露出讥笑，[rose.speech(你现在可以得到奖励了。把你的舌头好好伸进去，我今晚想要<i>狠狠地</i>高潮。)]
 	</p>
 	<p>
-		Letting out an excited little meow, your [lilaya.relation(pc)] hastily crawls over to kneel before Rose. You could continue to watch as she performs cunnilingus on her cat-girl maid, or instead leave and give them some privacy...
+		你的[lilaya.relation(pc)]发出一小声兴奋的猫叫，匆忙爬过去跪在萝丝面前。你可以继续观看她给她的猫女女仆舔阴，或者离开来给她们一些隐私……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="LILAYA_KITTY_LEAVE"><![CDATA[
 	<p>
-		You feel a little uncomfortable watching your [lilaya.relation(pc)] and her lover like this, and so you pull back from the keyhole and stand up. Turning around, you [pc.step] away from the door and wonder what to do now...
+		你觉得看着你的[lilaya.relation(pc)]和她的爱人做这些有点不舒服，所以你从钥匙孔前退开，站了起来。你转过身[pc.step]远，思索着现在该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_KITTY_SEX_START"><![CDATA[
 	<p>
-		You're mesmerised by the show your [lilaya.relation(pc)] and her maid are unknowingly putting on for you, and continue to watch through the keyhole as things get more intimate between them.
+		你被你的[lilaya.relation(pc)]和她的女仆在毫不知情的情况下为你献上的这场表演给迷住了，并继续通过钥匙孔观看她们之间变得更加亲密。 
 	</p>
 	<p>
-		[rose.speech(That's my good kitty cat...)] Rose sighs as Lilaya leans forwards between her legs. Pressing her [lilaya.lips+] against her maid's perfect pussy, the [lilaya.race] makes lewd, wet smacking noises as she starts passionately making out with Rose's irresistible cunt. Clearly being an expert at orally pleasuring her mistress, Lilaya draws a series of increasingly-lewd moans out of her partner. Unable to maintain her composure for long, Rose gasps and grabs your [lilaya.relation(pc)] by the horns. Grinding her face into her groin, Rose cries out, [rose.speech(Yes! ~Ooh!~ Serve your Mistress! More! Give me more!)]
+		[rose.speech(我的好猫咪……)]萝丝叹息道。莉莱雅俯身到她双腿之间，这[lilaya.race]将[lilaya.lips+]压在女仆完美的小穴上，发出淫荡、湿漉漉的咂嘴声，热情地亲吻着萝丝那令人无法抗拒的小穴。莉莱雅显然是取悦主人的口交专家，她让她的伴侣发出了一系列越来越淫荡的呻吟。萝丝无法再保持镇定，她喘息着，抓住你[lilaya.relation(pc)]的角，用下体磨蹭着她的脸，萝丝喊道：[rose.speech(啊！~哦！~好好服侍你的主人！更多！给我更多！)]
 	</p>
 	<p>
-		Eager to obey and submissively service her maid, Lilaya enthusiastically eats Rose out while you continue to watch through the keyhole...
+		莉莱雅渴望服从，顺从地侍奉着她的女仆，亢奋地给萝丝口交，而你则继续通过钥匙孔观看……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_KITTY_AFTER_SEX"><![CDATA[
 	<p>
-		Satisfied, Rose slumps back into her armchair and pants, [rose.speech(That's my good pet... You've pleased your Mistress...)]
+		萝丝满意地瘫回扶手椅，喘息着，[rose.speech(我的乖宠物……你取悦了你的主人……)]
 	</p>
 	<p>
-		Pulling back from between Rose's legs, Lilaya looks up at her maid with a big, happy smile on her face. Returning this expression with an amused smirk, Rose lets out a soft little laugh and says, [rose.speech(Yes, yes, it's your turn now... And what's with those puppy-dog eyes? You're supposed to be a cat tonight, remember? Now go and hang your costume up, then present yourself on my bed. If you want to act like a dog, then I think I'll use the wolf-cock strapon on you tonight...)]
+		莉莱雅从萝丝的双腿之间退开，抬头看着她的女仆，脸上带着大大的、开心的笑容。萝丝以玩味的讥笑来回应莉莱雅的表情，她发出一声轻柔的笑声，[rose.speech(是的，是的，现在轮到你了……还有你那小狗一样的眼神是怎么回事？你今晚应该扮演猫咪，记得吗？现在去把你的戏服挂起来，然后到我的床上等着。如果你真想表现得像只狗，那我今晚就用狼屌假阳具来对付你……)]
 	</p>
 	<p>
-		Upon hearing this, Lilaya lets out a happy little cry. Leaping to her feet, she quickly strips out of her kitty lingerie and skips over right towards you! You're certain that she's about to throw open the door and discover you, but instead she hangs her outfit on a hook on the other side of the door. Her stockings fall in such a way as to cover the keyhole, and you're left with nothing to watch as you hear your [lilaya.relation(pc)] happily declaring, [lilaya.speech(The wolf's my favourite!)]
+		听到这话后，莉莱雅开心地小声叫了一声。她一跃而起，迅速脱下了她的猫咪内衣，然后蹦蹦跳跳地径直向你走来！你确信她会猛地打开门发现你，但出乎意料的是，她只是把衣服挂在了门另一侧的挂钩上。她的长筒袜垂落下来，正好遮住了钥匙孔，你什么也看不到了，只听到你的[lilaya.relation(pc)]开心地宣告道，[lilaya.speech(我最喜欢狼了！)]
 	</p>
 	<p>
-		[rose.speech(You say that about all of them, you slut...)] Rose teases. After that, there's the sound of drawers opening and closing, and then creaking springs as Rose joins Lilaya on the bed. A series of lewd moans, desperate cries, and ecstatic squeals soon start ringing out, but with nothing for you to see, you find this to be frustrating more than anything else.
+		[rose.speech(你每个都这么说，你这个荡妇……)]萝丝揶揄道。之后，传来抽屉开合的声音，接着是弹簧吱呀作响的声音，萝丝和莉莱雅一起上了床。接着，一连串色情的呻吟、饥渴的叫喊和狂喜的尖叫声很快响起，但你什么也看不到，这让你觉得与其说是享受，不如说是令人沮丧。
 	</p>
 	<p>
-		With the show now being over, you pull back from the keyhole and stand up. Turning away from the door, you wonder what to do now...
+		表演结束后，你从钥匙孔旁退开并站了起来。你转身离开门口，思考着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

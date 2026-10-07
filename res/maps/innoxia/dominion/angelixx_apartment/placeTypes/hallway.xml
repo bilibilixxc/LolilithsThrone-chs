@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Hallway]]></name>
-	<tooltipDescription><![CDATA[The narrow, carpeted hallways connect the rooms in Angelixx's apartment.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the hallway at Angelixx's apartment]]></virginityLossDescription>
+	<name><![CDATA[走廊]]></name>
+	<tooltipDescription><![CDATA[狭窄而铺有地毯的走廊连接着安吉莉克丝公寓里的各个房间。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在安吉莉克丝公寓的走廊]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

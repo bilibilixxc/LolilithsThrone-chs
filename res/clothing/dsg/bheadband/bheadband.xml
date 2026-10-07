@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
-		<clothingAuthorTag><![CDATA[Metallic embroidery on the underside of the headband reads 'MFD by DSG Costume Supply Co, Ltd'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[头带内面的金属刺绣如此写道：“由DSG服装供应股份有限公司制造”。]]></clothingAuthorTag>
 		<value>250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bunny headband]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bunny headbands]]></namePlural>
-		<description><![CDATA[A headband with stylised bunny ears attached to the top, designed to keep your hair pushed back out of your face.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[兔女郎头带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[兔女郎头带]]></namePlural>
+		<description><![CDATA[顶部带有经典兔女郎兔耳的发带，设计是用来固定头发尽量向后。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -20,7 +19,7 @@
 		<stickers>
 			<category id="Inserts" priority="1">
 				<sticker id="none" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -31,8 +30,8 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="inserts" priority="2" defaultSticker="false" zLayer="1">
-					<stickerName><![CDATA[Detailed]]></stickerName>
-					<namePrefix priority="1"><![CDATA[detailed ]]></namePrefix>
+					<stickerName><![CDATA[精致的]]></stickerName>
+					<namePrefix priority="1"><![CDATA[精致的]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
 					<imageName>bheadband_inserts.svg</imageName>

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<wallName><![CDATA[crates]]></wallName>
-	<deskName><![CDATA[crate]]></deskName>
+	<wallName><![CDATA[板条箱]]></wallName>
+	<deskName><![CDATA[板条箱]]></deskName>
 	<title/>
 	<consensual><![CDATA[false]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>
@@ -14,7 +14,7 @@
 	<publicSex>
 		<isPublic><![CDATA[[#pc.getCell().getPlaceType()!=PLACE_TYPE_innoxia_dominion_sex_shop_factory_door_1]]]></isPublic>
         <startingDescription><![CDATA[
-			The dolls which are present in this area continue working as though you and the succubus aren't even here...
+			在这里的玩偶继续工作，就好像你和魅魔根本不在这里……
 		]]></startingDescription>
         <randomDescriptions enabled="false"/>
 	</publicSex>

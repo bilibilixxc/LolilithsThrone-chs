@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Dirty talk -->
 	
-	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(Suck my cock, you [style.mule] slut!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(I love hearing you gagging on my cock!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(Take it deep, you dirty [style.mule] slut!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(You like the taste of my horse-cock?!)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(吸我的肉棒吧，你这个[style.mule]荡妇！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(我爱听你被深喉时干呕的呜呜声！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(再深一点儿，肮脏的[style.mule]荡妇！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ORAL"><![CDATA[[npc.speech(你喜欢我马肉棒的味道吗？！)]]]></htmlContent>
 	
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(Eat my ass, you dirty [style.mule] slut!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(Use your tongue some more, [style.mule]!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(Keep on kissing my ass, you filthy [style.mule] slut!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(You like the taste of my horse-ass?!)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(舔我的屁股吧，你这个肮脏的[style.mule]荡妇！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(舌头再用点儿力，[style.mule]！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(接着亲我的屁眼，你这个下贱的[style.mule]淫妇！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANILINGUS"><![CDATA[[npc.speech(你喜欢我马屁眼的味道吗？！)]]]></htmlContent>
 	
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(Fuck, I love rutting [style.mule] ass!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(Your ass was made for my cock, you dirty [style.mule] slut!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(Take it deep, you dirty [style.mule] slut!)]]]></htmlContent>
-	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(You like the feel of my horse-cock deep in your ass, you filthy [style.mule] slut?!)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(干，我爱发情的[style.mule]屁股！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(你的屁眼和我的大肉棒天造地设，你这个肮脏的[style.mule]荡妇！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(再深一点儿，肮脏的[style.mule]荡妇！)]]]></htmlContent>
+	<htmlContent tag="OFFICE_DIRTY_TALK_ANAL"><![CDATA[[npc.speech(你喜欢我的马肉棒全操进你屁眼里吧，你这个下贱的[style.mule]淫妇！)]]]></htmlContent>
 	
 	
 	<!-- INITIAL_ENCOUNTER -->
@@ -24,81 +24,81 @@
 	<htmlContent tag="INITIAL_ENCOUNTER"><![CDATA[
 	<p>
 		#IF(pc.getWorldLocation()==WORLD_TYPE_DOMINION_EXPRESS)
-			As you [pc.walk] through the warehouse, you suddenly notice that there's [npc.a_race] quickly trotting directly towards you. Turning to face [npc.herHim], you find your gaze being drawn down to the [npc.cockSize], erect horse-cock between [npc.her] feral hindquarters. Stepping forwards and pinning you up against a nearby wall, this clearly-aroused [npc.race] pants, [npc.speech([style.Mule], you need to help me get some release! I'll give you [#SPECIAL_PARSE_0] [style.mule] points, please, just [#SPECIAL_PARSE_1]!)]
+			你[pc.walk]经过仓库的时候，[npc.a_race]突然小跑着向你冲过来。当你看向[npc.herHim]时，视线不受控制地落在[npc.her]两条野性的后腿中间，看到了[npc.her]完全勃起的[npc.cockSize]马屌。[npc.race]看起来脑子里只剩做爱了，她喘息着上前一步把你按在墙上，说，[npc.speech([style.Mule]，帮我解决一下，[#SPECIAL_PARSE_0][style.mule]点数，只要你肯让我用用我就会给你，求求你了，只要[#SPECIAL_PARSE_1]！)]
 		#ELSE
 			#IF(pc.getLocationPlace().getPlaceType()==PLACE_TYPE_DOMINION_BOULEVARD)
-				As you [pc.walk] down the wide boulevard
+				你[pc.walk]走在主干道时
 			#ELSE
-				As you [pc.walk] down the street
+				你[pc.walk]走在街上时
 			#ENDIF
-			, you suddenly notice that there's [npc.a_race] quickly trotting directly towards you. Turning to face [npc.herHim], you find your gaze being drawn down to the [npc.cockSize], erect horse-cock between [npc.her] feral hindquarters. Realising that this clearly-aroused [npc.race] must be one of Dominion Express's slaves, you listen as [npc.she] pants, [npc.speech(I saw your [style.mule] choker from the other side of the street! Please, you need to help me get some release! I'll give you [#SPECIAL_PARSE_0] [style.mule] points, please, just [#SPECIAL_PARSE_1]!)]
+			，[npc.a_race]突然小跑着向你冲过来。当你看向[npc.herHim]时，视线不受控制地落在[npc.her]两条野性的后腿中间，看到了[npc.her][npc.cockSize]，完全勃起的马屌。你知道这个脑子里只剩做爱的[npc.race]肯定是御城速递的奴隶。[npc.she]喘息着说：[npc.speech(我在街对面就看到了你的[style.mule]项圈！帮我解决一下，[#SPECIAL_PARSE_0][style.mule]点数，只要你肯让我用用我就会给你，求求你了，只要[#SPECIAL_PARSE_1]！)]
 		#ENDIF
 	</p>
 	<p>
-		Stepping away from you, [npc.name] quickly turns around and flicks [npc.her] tail to one side, presenting you with [npc.her] puffy, feral horse-anus. Clearly not at all bothered by the fact that you're in such a public place, [npc.she] looks back over [npc.her] shoulder and demands, [npc.speech(Come on, [style.mule]! Kiss my ass so that we can get started!)]
+		[npc.name]后退一步，转身把屁股朝向你，迅速把[npc.her]尾巴甩到一边，露出了[npc.her]肿胀的，野性的马屁眼。[npc.she]显然不介意在公共场合做这些，[npc.she]朝[npc.her]肩后看了你一眼然后命令道：[npc.speech(别害羞了，[style.mule]！我等不及了，快亲一口我的屁股！)]
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_ENCOUNTER_REFUSED"><![CDATA[
 	<p>
-		Not wanting to service this slave right now, you tell [npc.herHim] that [npc.sheIs] going to have to find another [style.mule] to give [npc.herHim] what [npc.she] wants. Letting out a frantic, desperate whine, the [npc.race] doesn't stick around to argue, and instead canters off
+		你现在还不想给这个奴隶提供服务，你告诉[npc.herHim]，[npc.sheIs]得去找另一个[style.mule]和[npc.herHim]做爱。[npc.race]无法控制的发出了一阵失望地嘶鸣，没有继续纠缠你，
 		#IF(pc.getWorldLocation()==WORLD_TYPE_DOMINION_EXPRESS)
-			 towards the stables in search for another [style.mule].
+			朝着马厩的方向寻找其他的[style.mule]，慢跑着离开了。
 		#ELSE
 			#IF(pc.getLocationPlace().getPlaceType()==PLACE_TYPE_DOMINION_BOULEVARD)
-				 down the wide boulevard in search for another [style.mule].
+				顺着宽阔的主干道寻找其他的[style.mule]，慢跑着离开了。
 			#ELSE
-				 down the street in search for another [style.mule].
+				顺着大街寻找其他的[style.mule]，慢跑着离开了。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		After taking a moment to watch [npc.herHim] leave, you turn around and prepare to continue on your way...
+		在目送[npc.herHim]离开后，你转身离去……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_ENCOUNTER_BLOWJOB_START"><![CDATA[
 	<p>
-		Seeing no reason to refuse [npc.namePos] request, you obediently drop down behind [npc.her] feral hindquarters,
+		[npc.namePos]的请求没什么好拒绝的，你在[npc.she]马腿旁顺从的跪了下来，
 		#IF(pc.getWorldLocation()==WORLD_TYPE_DOMINION_EXPRESS)
-			 and in full view of the rest of the warehouse,
+			在仓库里其他人的注视下，
 		#ELSE
-			 and in full view of the public,
+			在众目睽睽之下，
 		#ENDIF
-		 you plant a wet, passionate kiss on [npc.her] puffy, horse-like asshole. Pulling back and smiling to yourself as you hear [npc.herHim] let out a deep [npc.moan], you quickly shuffle around beneath [npc.her] horse body, before leaning in to deliver a long, wet lick up the length of [npc.her] throbbing horse-cock.
+		你对着[npc.her]肿胀的马屁眼来了个热情的湿吻。你抬起头，听到[npc.herHim]深沉的[npc.moan]不禁歪着头微微地笑了起来，你迫不及待地在[npc.her]的马身下膝行，当你找到合适位置时你微微前倾，用你湿润的舌头沿着[npc.her]不断跳动的马屌缓慢地舔了起来。
 	</p>
 	<p>
-		[npc.speech(That's it [style.mule]! ~Mmm!~ Suck my cock!)] [npc.name] desperately calls out, and, not wanting to keep [npc.herHim] waiting, you open wide and take the flat, flared head of [npc.her] feral horse-cock into your mouth. As your partner lets out yet another desperate [npc.moan], you lewdly wrap your [pc.lips+] around [npc.her] [npc.cockGirth], hot shaft and start eagerly giving [npc.herHim] the blowjob [npc.she] was looking for...
+		[npc.speech(太棒了你这[style.mule]！~噢……噢哦~快给我口！)][npc.name]不顾一切地大喊，像是一刻也等不下去了。你张大嘴吞下[npc.her]平坦外扩的龟头。随着[npc.she]不顾一切地又一次[npc.moan]，你下流地用你[pc.lips+]包裹住[npc.her][npc.cockGirth]，你开始急切地吞吐他的马屌，就像[npc.she]期望的一样给[npc.herHim]口交……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_ENCOUNTER_RIMJOB_START"><![CDATA[
 	<p>
-		Seeing no reason to refuse [npc.namePos] request, you obediently drop down behind [npc.her] feral hindquarters,
+		[npc.namePos]的请求没什么好拒绝的，你在[npc.she]马腿旁顺从的跪了下来，
 		#IF(pc.getWorldLocation()==WORLD_TYPE_DOMINION_EXPRESS)
-			 and in full view of the rest of the warehouse,
+			在仓库里其他人的注视下，
 		#ELSE
-			 and in full view of the public,
+			在众目睽睽之下，
 		#ENDIF
-		 you plant a wet, passionate kiss on [npc.her] puffy, horse-like asshole. Pulling back and smiling to yourself as you hear [npc.herHim] let out a deep [npc.moan], you deliver a few more big, wet kisses and licks to the rim of [npc.her] [npc.asshole+], before shuffling forwards and eagerly burying your face in [npc.her] feral horse-ass.
+		你对着[npc.her]肿胀的马屁眼来了个热情的湿吻。你抬起头，听到[npc.herHim]深沉的[npc.moan]不禁歪着头微微地笑了起来，你继续深深地湿吻[npc.her][npc.asshole+]并且舔着它肮脏的边沿，你跪着向前挪动，把你的脸埋进[npc.her]兽化的马肛。
 	</p>
 	<p>
-		[npc.speech(That's it [style.mule]! ~Mmm!~ Eat my ass!)] [npc.name] desperately calls out, and, more than happy to give [npc.herHim] what [npc.she] wants, you push your [pc.tongue+] into [npc.her] ass and start passionately performing anilingus on [npc.herHim]. Encouraged to keep on going by the series of lewd, [npc.moans+] that burst out from [npc.namePos] mouth, you lewdly press your [pc.lips+] against [npc.her] puffy, feral horse-anus and continue giving [npc.herHim] the rimjob [npc.she] was looking for...
+		[npc.speech(太棒了你这[style.mule]！~噢……噢哦~接着舔我的屁眼！)][npc.name]饥渴地大叫着。你将[pc.tongue+]伸向[npc.her]的屁股，舌吻着[npc.herHim]的肛门，给了[npc.she]意外之喜。[npc.namePos]嘴里迸发出[npc.moans+]，让你更有信心做这种淫荡的事了。你下流地把[pc.lips+]抵在[npc.her]肿胀兽化的马肛门上，接着就像[npc.she]希望的那样开始舔肛……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_ENCOUNTER_MOUNTED_START"><![CDATA[
 	<p>
-		Seeing no reason to refuse [npc.namePos] request, you obediently drop down behind [npc.her] feral hindquarters,
+		[npc.namePos]的请求没什么好拒绝的，你在[npc.she]马腿旁顺从的跪了下来，
 		#IF(pc.getWorldLocation()==WORLD_TYPE_DOMINION_EXPRESS)
-			 and in full view of the rest of the warehouse,
+			在仓库里其他人的注视下，
 		#ELSE
-			 and in full view of the public,
+			在众目睽睽之下，
 		#ENDIF
-		 you plant a wet, passionate kiss on [npc.her] puffy, horse-like asshole. Pulling back and smiling to yourself as you hear [npc.herHim] let out a deep [npc.moan], you quickly shuffle around and present your [pc.asshole+] to [npc.herHim], before calling out for [npc.herHim] to mount you and get started.
+		你对着[npc.her]肿胀的马屁眼来了个热情的湿吻。你抬起头，听到[npc.herHim]深沉的[npc.moan]不禁歪着头微微地笑了起来，你迫不及待地跪行着找了个合适的位置，把你[pc.asshole+]对着[npc.herHim]漏了出来，叫嚷着让[npc.herHim]赶紧骑到你身上把他的马屌插进来。
 	</p>
 	<p>
-		[npc.speech(That's what I like to hear, [style.mule]! You're going to love my cock!)] [npc.name] excitedly calls out, before quickly mounting you and pressing the flat, flared head of [npc.her] feral horse-cock against your [pc.asshole+]. letting out a frantic, desperate [npc.moan], your partner wastes no time in thrusting forwards and ramming [npc.her] [npc.cockSize], feral horse-cock into your [pc.asshole]. Letting out [pc.a_moan+] of your own, you push your hips back, helping to sink [npc.namePos] [npc.cockGirth] cock into your ass as [npc.she] starts anally rutting you...
+		[npc.speech(我可太想听到这个了，[style.mule]！我的鸡巴一定会让你上瘾的！)][npc.name]高兴的朝你回喊道。他迫不及待地趴到你的身上，用[npc.her]兽化的马屌平坦外扩的龟头戳在你[pc.asshole+]上。随着[npc.she]不顾一切地拼命的[npc.moan]，[npc.she]毫不犹豫地把[npc.her][npc.cockSize]兽化的马屌强行插进你的[pc.asshole]。你情不自禁地发出[pc.a_moan+]，为了把[npc.namePos][npc.cockGirth]鸡巴吞进你的肚子，你向后扭动着屁股。[npc.she]开始和你肛交……
 	</p>
 	]]></htmlContent>
 	
@@ -107,32 +107,32 @@
 	
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
-		Having had [npc.her] fun, and also having put on a show for
+		你和[npc.her]爽了一场，也让
 		#IF(pc.getWorldLocation()==WORLD_TYPE_DOMINION_EXPRESS)
-			 the occasional passing centaur slave
+			偶然经过的半人马奴隶
 		#ELSE
-			 the members of the public who gathered to watch
+			聚在一起观看的路人
 		#ENDIF
-		, [npc.name] steps back, before turning to look at you and demand, [npc.speech(Come on, [style.mule]; clean my cock off and I'll give you those [style.mule] points!)]
+		大饱眼福。[npc.name]退后一步，转过身来看着你说，[npc.speech(快来吧，[style.mule]；帮我把下面舔干净，我就奖励你一些[style.mule]点数！)]
 	</p>
 	<p>
-		Doing as you're told, you shuffle forwards and lick all of the thick, salty cum off of [npc.namePos] softening horse-cock. Letting out a deeply-satisfied sigh, the [npc.race] once again steps back, before tossing [#SPECIAL_PARSE_0] small arcane beads to the floor in front of you. Before you can pick them up, the enchanted beads disintegrate into arcane energy, before swirling up and being absorbed into your [style.mule] choker.
+		你准备按照这人说的去做。你拖着脚步向前，慢慢舔掉[npc.namePos]那条已经半软阴茎上附着的又厚又咸的精液。[npc.race]心满意足地叹息，后退一步，把[#SPECIAL_PARSE_0]颗小附魔珠放在你面前。你还没捡起它们，这些附魔珠就分解成了奥术能量，然后旋转起来，被你的[style.mule]项圈吸收。
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Looking up and thanking the now-satisfied [npc.race] for the [style.mule] points, you watch as [npc.she] flashes you one last smirk, before turning and trotting off
+		你抬头感谢一脸满足的[npc.race]给你的[style.mule]点数。[npc.she]冲你笑了一下之后便转身
 		#IF(pc.getWorldLocation()==WORLD_TYPE_DOMINION_EXPRESS)
-			 into the warehouse's storage area.
+			向着仓库的存储区
 		#ELSE
 			#IF(pc.getLocationPlace().getPlaceType()==PLACE_TYPE_DOMINION_BOULEVARD)
-				 down the wide boulevard.
+				顺着宽阔的主干道
 			#ELSE
-				 down the street.
+				顺着大街
 			#ENDIF
 		#ENDIF
-		 After taking a moment to watch [npc.herHim] leave, you stand up, turn around, and prepare to continue on your way...
+		小跑着离开了。在目送[npc.herHim]离开后，你站起身来，然后转身离去……
 	</p>
 	]]></htmlContent>
 	

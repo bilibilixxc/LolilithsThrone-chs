@@ -1,165 +1,166 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- ENCOUNTER_START -->
 	
 	<htmlContent tag="ENCOUNTER_START"><![CDATA[
 	<p>
-		As you stroll through the market, you notice a small mob gathered around one of the stalls. It is composed of all sorts of plainly dressed animal morphs, and you see that a few are carrying simple wooden signs. They are angrily shouting or chanting something, but you can't quite make out what it is above the general hubbub and music around you. Those not in the mob are giving the area a wide berth, perhaps you should do the same.
-	</p>
-	]]>
-	</htmlContent>
+
+当你慢慢穿过市场时，你注意到一小群人聚集在一个摊位周围。里面有各种衣着简陋的动物们，你可以看到一些动物带着简单的木制挂牌。他们在愤怒地喊着什么，但是身处在一片嘈杂和音乐声中的你很难辨认。那些不是暴民的人对这个地区敬而远之，也许你也应该这样做。
+
+</p>
+	
+	]]></htmlContent>
 	
 	<!-- ENCOUNTER_BACK_OFF -->
 	
 	<htmlContent tag="ENCOUNTER_BACK_OFF"><![CDATA[
 	<p>
-		You decide not to get any closer to the stall or the crowd around it.
+		你决定不再靠近货摊和它周围的人群。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ENCOUNTER_APPROACH -->
 	
 	<htmlContent tag="ENCOUNTER_APPROACH"><![CDATA[
 	<p>
-		Curious to see what the mob is so angry about, you decide to approach the stall. As you get closer, the crowd's shouting becomes clearer and you can make out a few phrases.
+		你好奇的走近摊位想看看人们为什么如此愤怒。当你接近后，人群的喊叫声开始变得清晰，你可以分辨出其中的一些句子。
 	</p>
 	<p>
-		[test.speechMasculine(Get out of our town!)] shouts a portly rabbit-boy.
+		[test.speechMasculine(滚出我们的城镇！)]一个胖胖的兔子少年大叫道。
 	</p>
 	<p>
-		[test.speechFeminine(We're not here as plunder!)] bleats the sheep-girl next to him.
+		[test.speechFeminine(我们到这儿不是来掠夺的！)]挨着他的绵羊少女喊道。
 	</p>
 	<p>
-		Fortunately, they are not packed in so close together that you cannot squeeze through and after a bit of effort you are able to make your way to the front. The object of the crowd's ire is [eisek.a_raceFull(true)] [eisek.materialDescriptor] [eisek.skinFullDescription(true)] who seems to be a bit oversized for his stall.
+		幸运的是，他们并没有挤的很紧，你不需要太用力就能够挤到人群的前面。引起人们愤怒的是[eisek.a_raceFull(true)][eisek.materialDescriptor][eisek.skinFullDescription(true)]，他的摊位似乎太大了一点。
 	</p>
 	<p>
 		#IF(pc.hasTraitActivated(PERK_OBSERVANT))
-			 Save for the briefest glint of gold around one of his fingers, his
-		#ELSE
-			 His
-		#ENDIF
-		 clothing looks positively medieval and hard-worn, but the produce on display before him almost glows with health. You can tell from his expression that he's trying very hard to look unperturbed by the crowd and while he hasn't said a word so far, the puffs of steam occasionally emitting from his nostrils must surely mean he's very close to breaking point.
+除了他的一根手指上闪烁着微弱的金光，他的
+#ELSE
+他的
+#ENDIF
+衣服看上去绝对是中世纪老旧风格并且磨损严重，但摆在他面前的商品看起来很不错。你可以从他的表情中看出，他正非常努力地让自己在人群面前保持镇定，虽然他到目前为止还没有说过一句话，但从他鼻子时不时喷出的气息来看他已经濒临崩溃。
 	</p>
 	#IF(pc.getRace().equals(RACE_dsg_dragon))
-		<p>
-			He takes notice of your draconic features almost immediately, his [eisek.eyeColour(true)] eyes locking with yours. 
+		<p>他几乎立刻注意到了你的龙化特征，他的[eisek.eyeColour(true)]目光锁定了你。
 		</p>
 		<p>
-			[eisek.speech(Kin! It is not safe here, you must get away!)] he warns in a rumbling baritone.
+			[eisek.speech(kin！这里不安全，你必须离开！)]他用低沉的男中音警告道。
 		</p>
 		<p>
-			Unfortunately, this shifts the attention of the crowd from the [eisek.race] to you instead. Before you can even think of a response or an excuse, panic begins to spread.
+			不幸的是，这反而将人群的注意力从[eisek.race]身上转移到了你身上。甚至在你想出回应或借口之前，恐慌就已经开始在人群中蔓延。
 		</p>
 		<p>
 			#IF(game.isSillyMode())
-				[test.speechMasculine(This is getting out of hand! Now there are two of them!)]
-			#ELSE
-				[test.speechMasculine(I knew it! We've been invaded!)]
-			#ENDIF
-			 brays a scrawny donkey-boy. His words are soon drowned out by the screams and footfalls of the rapidly dispersing crowd.
+[test.speechMasculine(这里已经失控了！现在他们有两个人！)]
+#ELSE
+[test.speechMasculine(我早就知道！我们已经被入侵了！)]
+#ENDIF
+一个骨瘦如柴的驴少年慌乱道。他的话很快便淹没在迅速散去的人们的尖叫声和脚步声中。
 		</p>
 	#ELSE
 		<p>
-			Perhaps spurred on by your intense visual study, his [eisek.eyeColour(true)] eyes lock with yours.
+	也许是察觉到你探寻的视线，他的目光锁定了你。
 		</p>
 		<p>
-			[eisek.speech(Ah, you again! Would you like the usual?)] he asks, his rumbling baritone cutting across the din, [eisek.speech(They are all fresh in today.)] His face has brightened somewhat, but you recognise the pleading look in his eyes.
+			[eisek.speech(哈，又是你！你还是老样子吗？)]他询问道，低沉的男声穿过了人群的喧闹，[eisek.speech(他们今天都很新鲜。)]他的脸色变得明亮了一些，但你仍能认出他眼神中的恳求。
 		</p>
 		<p>
-			It's obvious he wants you to play along, but should you? Perhaps the angry mob is right. After all, you don't know anything about this [eisek.race], what if all this is just a front? With all the shouting about plunder that the crowd is doing, he could be back tonight to raze and loot the place.
+			很明显他想和你合作，但你应该选择答应吗？也许人群的愤怒是对的。毕竟你对这个[eisek.race]的一切一无所知，万一这一切只是个幌子呢？随着人们对反对掠夺者的大声疾呼，他今晚很可能会回来把这个地方夷为平地并洗劫一空。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ENCOUNTER_SIDE_WITH_MOB -->
 	
 	<htmlContent tag="ENCOUNTER_SIDE_WITH_MOB"><![CDATA[
 	<p>
 		#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_SELFISH))
-			You tell the [eisek.race] that you're neither a fool nor a friend of his. Before you can say anything else, a tough looking horse-girl interjects with a shout, [test.speechFeminine(Yeah! We're not fools and we don't want you in our town! Get out!)]
+			你告诉[eisek.race]你既不是傻瓜更不是他的朋友。你还没来得及说更多，面目狰狞的马少女大叫一声插了进来，[test.speechFeminine(是的！我们大家可不是傻瓜！我们希望你离开我们的城镇！滚出去！)]
 		#ELSEIF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_SHY))
-			You break eye contact with the [eisek.race] and simply look away, saying nothing in response. An awkward moment passes before a tough looking horse-girl breaks the silence with a shout, [test.speechFeminine(You can't fool us! We don't want you in our town! Get out!)]
+			你不再与[eisek.race]对视，转而将目光移向别处，你什么也没说。一阵尴尬的沉默后，面容狰狞的马少女大叫着打破了沉默，[test.speechFeminine(你别想愚弄我们！我们希望你离开我们的城镇！滚出去！)]
 		#ELSEIF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_CYNICAL))
-			You tell the [eisek.race] to find some other patsy. Before you can say anything else, a tough looking horse-girl interjects with a shout, [test.speechFeminine(Yeah! And find some other town while you're at it! Get out!)]
+			你告诉[eisek.race]去骗其他人。你还没来得及说更多，面容狰狞的马少女大叫一声插了进来，[test.speechFeminine(是的！你顺便去找个其他的城镇！从这里滚出去！)]
 		#ELSE
-			You hesitate, not wanting to play a part in this mass deception. Before you can say anything else, a tough looking horse-girl interjects with a shout, [test.speechFeminine(We don't want you in our town! Get out!)]
+			你犹豫了，你不想参与这场骗局。你还没来得及说什么，面容狰狞的马少女大叫一声插了进来，[test.speechFeminine(我们希望你离开这个城镇！滚出去！)]
 		#ENDIF
 	</p>
 	<p>
-		Her words are accompanied by a rotten tomato that tints part of the stall red as it splatters against the wood. The mob takes this as a cue to start throwing rotten produce at will, and when they run out, rubbish and small rocks start flying. Finally at the limit of his patience, the [eisek.race] opens his mouth and [style.boldIce(you are momentarily blinded by a bright blue flash!)]
+		她边说边扔出一个腐烂的西红柿。西红柿把被砸到的木板的一部分染成了红色。以此为号，人们开始肆意投掷各种腐烂的农产品。当农产品都扔完后，垃圾和小石子漫天飞舞。艾瑟克的耐心达到了极限，[eisek.race]张开嘴，[style.boldIce(一道明亮的蓝色辉光使你暂时失明了！)]
 	</p>
 	<p>
 		#IF(pc.isImmuneToDamageType(DAMAGE_TYPE_ICE) || pc.getAttributeValue(ATTRIBUTE_RESISTANCE_ICE) >= 300)
-			You feel a slight chill as an icy cloud envelops the immediate area. Although you are unaffected, the mob is unable to continue its bombardment as all of its members have been frozen in place from the neck down by a thin glazing of ice.
+			一片冰冷的云雾笼罩周围，你感到了微微的寒意。尽管你毫发无伤，但愤怒的暴徒们却无法继续轰炸，因为他们所有人都被薄薄的一层冰从脖子以下冻结在原地。
 		#ELSE
-			When your vision clears, you find yourself feeling very cold as an icy cloud envelops the immediate area. You want to cover yourself for warmth but when you try, you find that you're unable to do anything except shiver from the neck down.
+			当你的视野逐渐恢复清晰，你发现自己感到异常寒冷，一片冰冷的云雾笼罩了周围。你想抱住自己取取暖，但试图移动时，你发现自己脖子下方的身体在不停地颤抖，什么都做不了。
 		#ENDIF
-		 The cloud obstructs your vision but you can hear the flapping of large wings, prompting you to look up just in time to see the [eisek.race] flying off to parts unknown. After a few minutes, the ice melts and the cloud dissipates, leaving behind the empty, defenceless stall. 
+			云雾遮挡了你的视线，但你能听到巨大翅膀的拍动声，你抬起头，恰好看到[eisek.race]飞向未知的远方。几分钟后，冰雪消融，云雾弥散，只留下了个空荡荡、无人看守的摊位。
 	</p>
 	<p>
-		The mob, evidently not content with driving off the [eisek.race] and not deterred by the partial freezing, rushes forward to demolish the stall and remove all evidence of its hated occupant. By the time Enforcers show up to investigate the commotion, nothing is left except splinters of wood, shreds of fabric, and a worthless paste of ruined produce. Cheering at having achieved its goal, the mob does not resist and disperses on its own, leaving you standing alone before a sad pile of debris.
+		这群暴民显然并不满足于赶走[eisek.race]，也不畏惧冻结奥术，他们一拥而上，拆毁了摊位，清除了所有与他们深恶痛绝的摊主有关的证据。当执法者赶到打算平息骚动时，除了木头的残骸、布料的碎片，以及一堆遭殃的商品残片外，什么都不剩了。达成目标的暴民欢呼雀跃，毫无抵抗，一哄而散，独留你徘徊在断壁残垣前。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ENCOUNTER_PLAY_ALONG -->
 	
 	<htmlContent tag="ENCOUNTER_PLAY_ALONG"><![CDATA[
 	#IF(pc.getRace().equals(RACE_dsg_dragon))
 		<p>
-			With the mob now gone, the [eisek.race] bows his head slightly and lets out a long sigh of relief. [eisek.speech(Thank you, kin)] he says, [eisek.speech(Indeed, I did not expect another dragon in this place. If you had not shown up, I do not know what I might have done. Somebody could have gotten hurt. I am Eisek, of the Seawings line. How shall I address you?)]
+			暴徒离去后，[eisek.race]微微低头，长舒了一口气。[eisek.speech(感谢你，同族)]他说， [eisek.speech(我确实没想到能在这里再遇到一只龙。如果你没出现，我不知道该怎么办。有人可能会受伤。我是艾瑟克，属于海翼一脉。我该怎么称呼你？)]
 		</p>
 		<p>
-			Seeing no reason to keep your name from the [eisek.race], you introduce yourself.
+			你完全没有理由向[eisek.race]隐瞒名字，便向他介绍了自己。
 			#IF(pc.getSurname() == eisek.getSurname())
-				 He acknowledges you with a nod. [eisek.speech([pc.Name]... I will remember you. Yet I do not recall another branch in my line. From where do you hail? The dunes?)]
+				他向你点头致意。[eisek.speech([pc.Name]…… 铭记在心。但是我不记得我的家族中有其他分支。你来自哪里？沙丘吗？)]
 			#ELSE
-				 He acknowledges you with a nod. [eisek.speech([pc.Name]... I will remember you. Yet I do not recall your line. From where do you hail? The mountains? The dunes?)]
+				他向你点头致意。[eisek.speech([pc.Name]…… 铭记在心。但是我不认识你的家族。你来自哪里？山区？沙丘？)]
 			#ENDIF
 		</p>
 		<p>
-			You somewhat sheepishly explain you were not born a dragon and became one through... other means. Eisek scratches his chin in thought at your revelation. 
+			你有点不好意思地解释说你并不是生而为龙，而是通过……其他的某种方式转化为了一只龙。艾瑟克在听到你的说明后，挠着下巴陷入思索。
 		</p>
 		<p>
-			[eisek.speech(Truly? Then things must be...)] he trails off as he notices bystanders and stall owners alike staring at the two of you and whispering amongst themselves. Probably your handiwork. [eisek.speech(Ah, we should not linger. Here, a token of my appreciation.)] Eisek gives you a small pouch that jingles with the sound of flames before continuing, [eisek.speech(Now, can I interest you in some fine produce?)]
+			[eisek.speech(真的吗？那这事儿就……)]他注意到围观群众和其他摊主都在盯着你们两个并低声议论，逐渐停下了话头。这些人可能是被你的行为招来的吧。[eisek.speech(啊，我们不该一直待在这。这是我对你的谢礼。)]艾瑟克递给你一个小袋子，里面火币叮当作响，然后继续说道，[eisek.speech(现在，你想买点新鲜的农产品吗？)]
 		</p>
 	#ELSE
 		<p>
 			#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_SHY))
-				With every ounce of courage you can muster, you greet the [eisek.race]
+				你鼓气全身勇气向[eisek.race]打了个招呼
 			#ELSEIF (pc.hasPersonalityTrait(PERSONALITY_TRAIT_CONFIDENT))
-				Confidently striding forward, you greet the [eisek.race] like an old friend
+				你自信地走上前，像老友一样和[eisek.race]打了个招呼
 			#ELSE
-				You greet the [eisek.race] on familiar terms
+				你亲切地向[eisek.race]打了个招呼
 			#ENDIF
-			 and respond affirmatively to his question. To really make it look convincing, you also ask if he has a new crop in today as you close the distance with the stall and casually lean on the counter.
+			并欣然称是。为了看起来更像模像样一点，你还问他今天是否有新作物，并且慢慢走向摊位，随意地倚在柜台上。
 		</p>
 		<p>
-			It's subtle, but relief washes across the [eisek.race]'s face as he continues the charade, [eisek.speech(You have a keen eye, [pc.sir], it is indeed a new crop.)]
+			虽然有些微妙，但[eisek.race]的脸上洋溢着宽慰之情，他继续装模作样地说，[eisek.speech(非常敏锐，[pc.sir]，确实有新货。)]
 		</p>
 		<p>
-			The mob, having been stunned into silence by your friendly exchange with what by all accounts should be a violent creature of unequal greed, regains its composure.
+			你和一个从各方面来看都应该是贪婪的超规格的暴力生物友好交流着，暴徒们被震慑住了，回到了原位。
 		</p>
 		<p>
-			[test.speechMasculine(Hey! What's wrong with you?)] a scrawny donkey-boy asks indignantly, [test.speechMasculine(He's a looting, plundering animal!)]
+			[test.speechMasculine(嘿！你有毛病吧？)]一个瘦弱的骡男愤怒地问道，[test.speechMasculine(他是一头劫掠成性的野兽！)]
 		</p>
 		<p>
-			You look back towards the angry mob and, looking as disinterested in their arguments as possible, tell them that if they're here to buy they should get in line or else you are going to call in the Enforcers. You don't catch what the donkey-boy's long-winded response is, preferring to make banter about the weather with the [eisek.race] instead.
+			你回头看向愤怒的暴徒们，对他们的抗议尽量表现得不屑一顾，并且告诉他们如果他们来这里买东西，就应该排队，否则你会叫执法者来。你没有听到骡男的啰嗦回应是什么，而是更愿意与[eisek.race]谈论天气等寻常话题。
 		</p>
 		<p>
-			Finding themselves ignored in favour of the most mundane of topics, most of the mob awkwardly disperses, leaving only the still-rambling donkey-boy behind. Eventually realising he's alone, the donkey-boy points in the general direction of the stall and brays, [test.speechMasculine(This isn't over!)] before trotting off.
+			发现自己甚至比不过最平凡的天气话题，大多数暴徒尴尬地散去，只剩下依然在喋喋不休的骡男。最终，他意识到自己孤独一人，指着摊位的大致方向大声说，[test.speechMasculine(这还没完！)]然后跑开了。
 		</p>
 		<p>
-			With the mob now gone, the [eisek.race] bows his head slightly and lets out a long sigh of relief. [eisek.speech(Thank you,)] he says in the first bit of genuine conversation between the two of you, [eisek.speech(If you had not shown up, I do not know what I might have done. Somebody could have gotten hurt. Here, a token of my appreciation.)] He gives you a small pouch that jingles with the sound of flames before continuing. [eisek.speech(The name is Eisek, Eisek Seawings, by the way... I do not believe I know yours, or else I would have used it in our little subterfuge.)]
+			暴徒们离开后[eisek.race]微微低头，长舒了一口气。[eisek.speech(谢谢你，)]你们俩第一次真正的对话中，他说道， [eisek.speech(如果你没出现，我不知道该怎么办。有人可能会受伤。这是我对你的谢礼。)]艾瑟克递给你一个小袋子，里面火币叮当作响，然后继续说，[eisek.speech(我叫艾瑟克，艾瑟克·海翼，对了……我还不知道你的名字，不然我们就可以在刚刚的小伪装中用上了。)]
 		</p>
 		<p>
-			You stash away the money and, seeing no reason to keep your name from the [eisek.race], introduce yourself. He acknowledges you with a nod. [eisek.speech([pc.Name]... I will remember you. Now then, can interest I you in some fine fruits and vegetables?)]
+			你将钱收好， 完全没有理由向[eisek.race]隐瞒名字，你向他介绍了自己。他向你点头致意。[eisek.speech([pc.Name]…… 铭记在心。那么，你想买点上好的水果蔬菜吗？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

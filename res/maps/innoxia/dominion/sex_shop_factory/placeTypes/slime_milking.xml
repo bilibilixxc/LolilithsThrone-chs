@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[slime milking stalls]]></name>
-	<tooltipDescription><![CDATA[Dozens of huge slimes are locked into milking stalls in this area.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[by the slime milking stalls in the factory beneath Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[史莱姆挤奶台]]></name>
+	<tooltipDescription><![CDATA[数十只巨大的史莱姆被锁在这个区域的挤奶台上。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店下面的工厂的史莱姆挤奶台]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>RACE_SLIME</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

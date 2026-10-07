@@ -80,14 +80,14 @@ public class Daddy extends NPC {
 	}
 	
 	public Daddy(boolean isImported) {
-		super(isImported, new NameTriplet("Desryth"), "Loviennemartu",
-				"First encountered as an unwelcome guest being turned away from Lilaya's home, the demon [npc.name] has the lofty goal of winning the love and affection of none other than the elder Lilin, Lyssieth.",
+		super(isImported, new NameTriplet("德斯利斯"), "洛维耶纳马尔图",
+				"初次见面时，恶魔[npc.name]作为不速之客被莉莱雅的家禁止入内，之后德斯利斯就有了赢得非莉琳长老莉西丝不可的青睐与爱慕的高难度目标。",
 				57, Month.JANUARY, 17,
 				25, Gender.M_P_MALE, Subspecies.DEMON, RaceStage.GREATER,
 				new CharacterInventory(false, 10), WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL, true);
 		
 		if(!isImported) {
-			this.setGenericName("unwelcome incubus");
+			this.setGenericName("不受欢迎的淫梦魔");
 			
 			this.setPlayerKnowsName(false);
 		}
@@ -447,13 +447,13 @@ public class Daddy extends NPC {
 //						+ "[style.colourBad([daddy.She] will also be unavailable until tomorrow.)]"
 //					:"");
 		
-		return " [daddy.SheIsFull] only at home between the hours of "+Units.time(LocalTime.of(Daddy.getHourAvailableStart(), 00))+" and "+Units.time(LocalTime.of(Daddy.getHourAvailableEnd(), 00))
+		return "[daddy.SheIsFull]只有在"+Units.time(LocalTime.of(Daddy.getHourAvailableStart(), 00))+"和"+Units.time(LocalTime.of(Daddy.getHourAvailableEnd(), 00))+"的时间段在家"
 				+(Main.game.getSecondsPassed()<Main.game.getDialogueFlags().getSavedLong(DADDY_RESET_TIMER_ID)+(60*60*3)
-						?". [style.colourBad(Due to recently meeting [daddy.herHim], [daddy.she] will not be available again until tomorrow.)]"
-						:", and as such, [daddy.sheIs] currently "
+						?"。[style.colourBad(因为最近已经见过了[daddy.herHim]，[daddy.she]至少要到明天才能遇到。)]"
+						:"，因此，[daddy.sheIs]最近"
 							+(Daddy.isAvailable()
-									?"[style.colourGood(available)]."
-									:"[style.colourBad(not available)]."));
+									?"[style.colourGood(能遇到)]。"
+									:"[style.colourBad(遇不到)]。"));
 	}
 	
 	/**

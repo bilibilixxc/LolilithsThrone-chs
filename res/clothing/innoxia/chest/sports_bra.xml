@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>180</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[sports bra]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[sports bras]]></namePlural>
-		<description><![CDATA[An elastic sports bra that's designed to firmly support the wearer's breasts during exercise.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[运动文胸]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[运动文胸]]></namePlural>
+		<description><![CDATA[一条弹性极佳的运动内衣，设计用于在运动中牢牢支撑穿着者的胸部。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -58,27 +58,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the sports bra down over [npc.her] head, before securing it around [npc.her] chest.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the sports bra down over [npc2.namePos] head, before securing it around [npc2.her] chest.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the sports bra down over [npc2.namePos] head, before securing it around [npc2.her] chest.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将运动文胸拉下[npc.her]的头，并使得背心很好的包裹了[npc.her]的胸。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将运动文胸从[npc2.namePos]的头上套下来，并使得背心能够很好的包裹住[npc2.her]的胸部。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将运动文胸套在[npc2.namePos]的头上并使得背心包在[npc2.her]的胸部。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] sports bra off over [npc.her] head.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] sports bra off over [npc2.her] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] sports bra off over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将运动文胸拉到[npc.her]的头上并脱了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的运动文胸拉过[npc2.her]的头顶并把它脱了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的运动文胸拉到头顶并将其拽了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -16,6 +16,6 @@ public class XMLMissingTagException extends Exception {
 	 * @param fileDirectory String location of the file which has missing tag
 	 */
 	public XMLMissingTagException(String tag, String fileDirectory){
-		super(String.format("XML missing tag exception: \"%s\" tag is required, but not found in %s", tag, fileDirectory));
+		super(String.format("XML标签缺失异常: 需要标签\"%s\"，但没有发现%s",tag, fileDirectory));
 	}
 }

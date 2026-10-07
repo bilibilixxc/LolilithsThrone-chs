@@ -1,1197 +1,1196 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- Fetish Transformations -->
 	
 	<htmlContent tag="APPLY_FETISH_SUBMISSIVE"><![CDATA[
 	<p>
-		Shadow tells you that you're going to love being a submissive bitch from now on.
+		影告诉你，从现在开始，你会喜欢做一个顺从的母狗。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPLY_FETISH_TRANSFORMATION"><![CDATA[
 	<p>
 		#IF(!pc.isAbleToHaveRaceTransformed())
-			Shadow teases you about how you're going to beg her to be allowed to self-transform into a slutty cock-sleeve after this.
+			影取笑你说，在这之后，你会乞求她允许自己转化成为一个放荡的鸡巴套。
 		#ELSE
-			Shadow teases you about how you're going to love being transformed into a rat-girl slut after this.
+			影取笑你说，在这之后，你会喜欢上被转化成鼠女荡妇的。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPLY_FETISH_BEHAVIOUR_EXTRAS"><![CDATA[
 	<p>
-		Shadow tells you that you're going to love exposing your slutty cunt and getting it pumped full of rat cum.
+		影告诉你，你会喜欢暴露你的骚屄，然后爱上被老鼠精液灌满的感觉。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPLY_FETISH_HOLES"><![CDATA[
 	<p>
-		The black-furred rat-girl teases you about how you're going to love having all your holes used.
+		黑毛鼠女挑逗性的告诉你，你将会喜欢所有的洞都被填满的感觉。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPLY_FETISH_SERVICING_HOLES"><![CDATA[
 	<p>
-		Shadow laughs as she says that you're going to be permanently desperate to service all the gang's cocks and pussies.
+		影笑着告诉你，你会永远且不顾一切地为这帮家伙的鸡巴和小穴服务。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPLY_FETISH_FINISHED_NO_EFFECT"><![CDATA[
 	<p>
-		Shadow laughs as she realises that you're suffering no effects due to already having all the fetishes she wanted to inflict upon you. Tells you that the real transformations are coming next.
+		当她意识到你是因为拥有了她想施加在你身上的所有性癖所以才没有受到任何影响之后，影笑了笑，然后告诉你，接下来才是真正的转化实验。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APPLY_FETISH_FINISHED"><![CDATA[
 	<p>
-		Shadow laughs as she informs you that you're nothing but her plaything now. Tells you that the real transformations are coming next.
+		影笑着告诉你，你现在只是她的玩物，而接下来才是真正的转变。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FINAL_COMBAT_DEFEAT_STRIPPED -->
 	
 	<htmlContent tag="FINAL_COMBAT_DEFEAT_STRIPPED"><![CDATA[
 	<p>
-		Vengar orders rats to strip you (and companion). Silence removes seals if any are present. Shadow clasps collar around your neck. You get groped a lot during it.
+		文加命令老鼠们剥光你(和你的同伴)的衣服。如果上面有封印之类的东西，默会将其移除。而在影将项圈扣在你的脖子上的这段时间里你都不知道自己被摸多少次了。
 	</p>
 	<p>
-		Vengar tells Silence to get the potions she was working on.
+		文加让默去拿她正在研究的药剂。
 	</p>
 	<p>
-		Silence hurries off to obey while Shadow (egged on by rats) sadistically pins you to the floor (if you defeated her in combat, she takes some revenge now). After a minute of this, Silence returns and frowns at Shadow, who releases her grip a little. She hands the bottle(s) over to Shadow (and Vengar) who proceed to force you (and your companion) to drink them.
+		默赶忙去拿药水，而影(在老鼠的怂恿下)暴力地把你按在地上(如果你在战斗中打败过她，那她现在就会报复你)。在大概过了一分钟左右，默回来了，她皱着眉头看着影，影这才稍微松开了她的手。她把瓶子递给了影(和文加)，他们开始强迫你(和你的同伴)喝下药水。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FINAL_COMBAT_DEFEAT_FETISH_APPLICATION"><![CDATA[
 	<p>
-		Cackling in delight, Shadow releases her hold on your nose and mouth, before roughly grabbing you by the chin and leaning down to stare into your eyes. With an evil grin plastered across her face, she teases, [shadow.speech(Yer gonna get hit by some real nice mental changes now! Gotta turn yer into a droolin' subby slut wot's gonna spread yer legs whenever yer get told yer gonna get fucked by one o' us rats!)]
+		影高兴地笑着，松开了捂住你鼻子和嘴巴的手，然后捏住了你的下巴倾身直勾勾地看向你的眼睛。她阴险地咧开嘴，撩拨道，[shadow.speech(你准备好被调教到精神崩坏，调教成不论哪只老鼠想操你你都只知道流着口水张开腿把屄露出来的臭婊子了吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FINAL_COMBAT_DEFEAT_FETISH_APPLICATION_END"><![CDATA[
 	<p>
-		If companion dialogue, you look over and see companion has had same treatment.
+		你转头和同伴对话时会发现他们也遭受了这样的待遇。
 	</p>
 	<p>
-		If can self-TF, Shadow unclasps your collar and says it's time for you to make some changes to yourself. If not, she gets given another potion by Silence, and orders you to open wide.
+		如果你能主动转化，影会扒下你的衣服，告诉你该来点不一样的了。不然她会从默那儿拿瓶新药给你灌下去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FINAL_COMBAT_DEFEAT_FETISH_APPLICATION -->
 	
 	<htmlContent tag="TF_SELF_TF"><![CDATA[
 	<p>
-		[shadow.Name] sits back heavily on your stomach, causing you to sharply exhale. Letting out a wicked cackle at your reaction to her sadistic move, she then proceeds to stand up, before snarling down at you, [shadow.speechNoEffects(Listen close, yer filthy slut, and make sure yer get this right; I ain't repeatin' meself! Yer gonna use yer powers ta transform yerself inta the <i>exact</i> form I specify, got it?!)]
+		[shadow.Name]狠狠地坐在你肚子上，挤得你快把肺给吐出来了。看到你被虐待成这副狼狈的样子她忍不住地坏笑起来。随即她又龇着牙凶狠地对你说：[shadow.speechNoEffects(好好听着臭屄婊子，我不会再跟你说第二遍；给我自己变成<i>我说的</i>模样，懂吗？！)]说完后她起身离开。
 	</p>
 	<p>
-		Nodding your head, you look up into the pitch-black rat-girl's bright green eyes and prepare to do as she says. Seeing your sign of subordination, she leans down to unfasten your collar, allowing you to use your self-transformative powers as she prepares to start giving you instructions...
+		你点点头，看向眼前这个墨黑色鼠女翠绿色的眼睛，准备随时听从她的指示。看到你顺从的模样后，为了方便你按照她的指自主转化，她蹲下解开你的衣领……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TF_SWALLOW"><![CDATA[
 	<p>
-		Finding yourself desperately turned on by being treated in such a dominant manner by the pitch-black rat-girl sitting on top of you, you find yourself unwilling to do anything but obey each and every command she gives you. Upon being told to open wide, you immediately open your mouth, allowing Shadow to push the neck of this next bottle past your waiting lips. Desperate to be transformed, you can't help but let out a series of pathetic mewling noises as you crane your neck and eagerly gulp down the sweet liquid that begins to flow into your mouth.
+		漆黑鼠女支配地坐在你身上，你却因此迷乱兴奋起来。你别无他念，只想服从命令。你被命令张开嘴，便立刻张开，任凭影把瓶口贴近你等待中的嘴唇。你疯狂想被转化，不禁发出一连串可怜的喵声，伸长脖子，迫不及待地吞下流入口中的甜腻液体。
 	</p>
 	<p>
-		After just a couple of moments, you've completely emptied the bottle, and Shadow carelessly hurls the glass container to one side, showing no care at all as you hear it smash against a nearby wall. Releasing you from her pin, she stands up, before letting out an evil cackle and teasing, [shadow.speechNoEffects(I 'ope ya sayin' yer last goodbyes ta yer current body; once this potion 'as done its work, yer gonna be nothin' more than an 'orny little rat-slut who gets 'er filthy pussy filled with rat cock day afta day!)]
+		你花了几分钟把这瓶液体喝干。影随即粗鲁地甩手打飞瓶子，将其砸碎在墙上，然后松开了对你的钳制，站了起来。她阴险地咯咯笑着对你说，[shadow.speechNoEffects(跟你这幅身体告别吧！很快这瓶药水就会把你变成一个鼠窝里每天到处找老鼠肉棒塞满自己发情肉穴的淫荡婊子！)]
 	</p>
 	<p>
-		To the laughter and jeers of the surrounding rats, you feel your body start to get hot and itchy all over, and can't help but let out a horny moan as you anticipate transforming into your new form. Squatting down beside you, Shadow grins and licks her lips, before preparing to start commenting on your physical changes...
+		你在周围老鼠们的嘲笑声中感觉到了身躯的瘙痒与燥热，一边期待着全新的转变一边禁不住呻吟出声。影蹲在你身边舔着嘴唇，似乎要对你的新身体评价一番。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TF_COMPANION_SELF_TF"><![CDATA[
 	<p>
-		Looking over at your companion, you see that Vengar has made [npc.herHim] go through very much the same process as you. Using [npc.her] self-transformative powers, [npc.sheHas] morphed [npc.herself] to become very feminine, and is now about the same height as you with a bust size to match.
+		看向你的同伴，你看到文加让[npc.herHim]经历了和你几乎一样的过程。利用[npc.her]自我转化的能力，[npc.sheHas]将[npc.herself]变得非常女性化，现在和你一样高，胸围也相仿。
 	</p>
 	<p>
-		Stooping down and greedily running his hands down over [npc.her] body, Vengar grins and teases, [vengar.speech(Now yer lookin' just 'ow I like my girls! Yer tight, drippin' pussy is gonna feel real good grippin' down around my fat cock!)]
+		文加弯下腰，贪婪地用手抚摸着[npc.her]的身体，逗弄道，[vengar.speech(恁现在看起来像是俺的妹子！恁黏糊糊的小逼紧紧包住了俺的鸡巴，好恁娘地爽！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TF_COMPANION_SWALLOW"><![CDATA[
 	<p>
-		Looking over at your companion, you see that Vengar has made [npc.herHim] go through very much the same process as you. Having drunk a potion with a very similar enchantment to yours, [npc.sheHas] morphed into a short, busty rat-girl, and is blushing and panting from excitement as [npc.she] looks up into Vengar's hungry eyes.
+		你看向你的同伴，文加已经让[npc.herHim]经历了和你相似的过程。[npc.sheHas]喝下了一种和你的附魔相似的魔药，变形成了一个矮小丰满的鼠女， 并且兴奋地满脸通红喘息着看向饥渴的文加。
 	</p>
 	<p>
-		Stooping down and greedily running his hands down over [npc.her] body, Vengar grins and teases, [vengar.speech(Now yer lookin' just 'ow I like my girls! Yer tight, drippin' pussy is gonna feel real good grippin' down around my fat cock!)]
+		文加弯下腰，贪婪地用手抚摸着[npc.her]的身体，逗弄道，[vengar.speech(恁现在看起来像是俺的妹子！恁黏糊糊的小逼紧紧包住了俺的鸡巴，好恁娘地爽！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- START_VENGAR_PUBLIC_FUCK -->
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_BOTH"><![CDATA[
 	<p>
-		Shadow makes you get down on all fours and lift your ass up towards the hall. Grabbing your new tail, she hikes your ass up higher and slaps your pussy, before starting to rub your clit. You feel yourself getting wet as the rats jeer and comment on your exposed cunt.
+		影把你的头按在地上，让你的屁股向大厅翘起。她抓着你的新尾巴，提起你的屁股，对准你的阴户拍了一掌，然后顺势开始捏弄你的阴蒂。周围的老鼠对你暴露的小穴评头论足，你的身体作出反应，小穴变得湿了起来。
 	</p>
 	<p>
-		Letting you go, she does the same to your companion if applicable, before asking which one of you now wants to get fucked by Vengar first. She says the two of you can eat her and Silence out while Vengar fucks whoever is going first.
+		放开你后，她对你的跟班做了同样的事，然后问你们两个谁想当被文加后入的出头鸟。在那个人挨操的同时，她还让你们两个吃她和默的下面。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_SOLO"><![CDATA[
 	<p>
-		Shadow makes you get down on all fours and lift your ass up towards the hall. Grabbing your new tail, she hikes your ass up higher and slaps your pussy, before starting to rub your clit. You feel yourself getting wet as the rats jeer and comment on your exposed cunt.
+		影把你的头按在地上，让你的屁股向大厅翘起。她抓着你的新尾巴，提起你的屁股，对准你的阴户拍了一掌，然后顺势开始捏弄你的阴蒂。周围的老鼠对你暴露的小穴评头论足，你的身体作出反应，小穴变得湿了起来。
 	</p>
 	<p>
-		Letting you go, she says she's turned herself on by doing this. Tells you to present yourself to Vengar.
+		放开你后，她说她对你来感觉了，让你把屁股对准文加让他操你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK"><![CDATA[
 	<p>
-		You present yourself to Vengar, who starts fucking you. Silence and Shadow grab nearby rat-boys and start riding them.
+		你把屁股献给文加，随后小穴便传来肉棒插入抽送的快感。默和影把旁边一个看戏的鼠男按在地上，做起了乘骑的体位。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_FIRST"><![CDATA[
 	<p>
-		eager to be fucked, you present yourself to Vengar, who slides into your wet pussy and starts fucking you. Shadow forces you to start eating her out, while Silence does the same to your companion.
+		你满脑子都是性爱，迫不及待地把自己的身体交给文加，回应你的是下面传来的肉棒打开你湿哒哒的阴道开始抽插的快感。同时影毫不留情地把你的头按在她的胯下让你用嘴巴服侍她，一旁的默对你的跟班做着同样的事。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_SECOND"><![CDATA[
 	<p>
-		You let [npc.name] present [npc.herself] to Vengar first, who quickly slides into [npc.her] wet pussy and starts fucking [npc.herHim]. Shadow forces [npc.herHim] to start eating her out, while Silence does the same to your you.
+		你派[npc.name]去消耗文加第一炮的体力，看着[npc.her]湿润的小穴被迅速插入并啪嗒啪嗒地抽插起来。影毫不留情地把[npc.herHim]的头按在她的胯下用[npc.herHim]的嘴巴取乐，默跟着对你做着同样的事。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- START_VENGAR_PUBLIC_FUCK_AFTER_SEX_DOUBLE -->
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_DOUBLE_PLAYER_NEXT"><![CDATA[
 	<p>
-		Vengar slides out of [npc.name] and moves over behind you. Silence and Shadow grab nearby rat-boys and start riding them. Vengar tells your companion to get cleaned up by you.
+		文加滑出[npc.Name]的体内，挪到你身后。默和影一把拉过旁边的鼠男开始骑乘。文加让你的同伴去找你帮忙清理。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_DOUBLE_COMPANION_NEXT"><![CDATA[
 	<p>
-		Vengar slides out of you and moves over behind [npc.name]. Silence and Shadow grab nearby rat-boys and start riding them. Vengar tells you to get cleaned up by your companion.
+		文加滑出你的体内，挪到[npc.Name]身后。默和影一把拉过旁边的鼠男开始骑乘。文加让你去找你的同伴帮你清理。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_DOUBLE_PLAYER_START"><![CDATA[
 	<p>
-		Vengar starts fucking you. [npc.Name] pushes [npc.her] creampied pussy into your face, forcing you to eat the cum out of it.
+		文加操起了你。[npc.Name]将满是精液的小穴凑到你面前，强迫你将流出的精液吃进去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_DOUBLE_COMPANION_START"><![CDATA[
 	<p>
-		Vengar starts fucking [npc.name]. You push your creampied pussy into [npc.her] face, forcing [npc.herHim] to eat the cum out of it.
+		文加操起了[npc.Name]。你将满是精液的小穴凑到[npc.her]的面前，强迫[npc.herHim]将流出的精液吃进去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- START_VENGAR_PUBLIC_FUCK_AFTER_SEX -->
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX"><![CDATA[
 	<p>
-		You (and companion, if applicable) are well and truly fucked. Rats in hall are fucking one another.
+		你(或者还有你的同伴)真的完蛋了，大厅里的老鼠们正在开淫趴。
 	</p>
 	<p>
-		Vengar says that he enjoyed breaking you in, but it would be selfish to keep you all for himself. Tells Silence to get her equipment to get you (and companion) marked up.
+		文加说他很喜欢把你带进来，但如果把你独占就太自私了。他告诉默，让她拿设备给你(和你的同伴)做上标记。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED -->
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED"><![CDATA[
 	<p>
-		Silence soon returns, holding a small black box. Vengar gets you (and companion) to lie on your backs and spread your legs.
+		默很快就回来了，她手里拿着一个黑色的小盒子。文加让你(和同伴)张开双腿仰面躺下。
 	</p>
 	<p>
-		Silence gets a small brush out of the box. You can tell that it has a powerful arcane enchantment. Vengar says you're going to be tattooed so that everyone knows your pussy is a free hole. asks you if you have any preference as to what it says.
+		默从盒子里拿出一把小刷子，你可以看出它带有强大的魔法。文加说你会被刺上纹身，让所有人都知道你是个免费的妓女婊子。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED_STAY_QUIET"><![CDATA[
 	<p>
-		You stay quiet, but Shadow appears over Silence's shoulder and whispers something into her ear. Smiling, she starts painting on your groin, and you look down to see the words '[#SPECIAL_PARSE_0]' permanently inked just above your recently-fucked cunt.
+		你保持着沉默，但影却出现在默的肩膀旁，并在她耳边低语了几句。稍后，她就微笑着开始在你的腹股沟上作画，你低头一看，“[#SPECIAL_PARSE_0]”永久地印在了你刚刚被操过的阴户上方。
 	</p>
 	#IF(pc.hasCompanions())
 		<p>
-			Again following Shadow's instructions, Silence moves over and paints on your companion's groin, and you look over to see the words '[#SPECIAL_PARSE_1]' on [npc.her] crotch.
+			默再次按照影的指示，走过去在你同伴的腹股沟上画了起来，你转头一看，[npc.her]的胯间被写上了“[#SPECIAL_PARSE_1]”。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED_CHOOSE_TATTOO"><![CDATA[
 	<p>
-		Caught up in the moment, and feeling extremely turned on by what's happening to you, you beg for Silence to mark you as '[#SPECIAL_PARSE_0]'. Smiling, she starts painting on your groin, and you look down to see the words you requested permanently inked just above your recently-fucked cunt.
+		你沉浸在那一刻，对发生在你身上的一切感到无比兴奋，你恳求默把你标记成“[#SPECIAL_PARSE_0]”。她微笑着，开始往你的下体作画，你低头一看，你要求的字眼就这么永久地印在你刚刚被操过的阴户上方。
 	</p>
 	#IF(pc.hasCompanions())
 		<p>
-			Shadow appears over Silence's shoulder and whispers something into her ear. Following the instructions she just received, Silence moves over and paints on your companion's groin, and you look over to see the words '[#SPECIAL_PARSE_1]' on [npc.her] crotch.
+			影出现在默的肩膀旁，并在她耳边低语了几句。默按刚刚得到的指示，走过去在你同伴的腹股沟上画着什么。你定睛一看，发现[npc.her]的胯下写着“[#SPECIAL_PARSE_1]”。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED_END -->
 	
 	<htmlContent tag="START_VENGAR_PUBLIC_FUCK_AFTER_SEX_TATTOOED_END"><![CDATA[
 	<p>
-		Having been marked, and with the slave collar heavy around your neck, the rats step back and leave you to wander freely about the hall...
+		被打上标记后，一个重重的奴隶项圈被固定在了你的脖子上。之后老鼠们退潮般散去，留你在大厅里游荡……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL -->
 	
 	<htmlContent tag="VENGARS_HALL"><![CDATA[
 	<p>
-		There are many rats in the hall, eating, drinking, or just hanging out. Vengar is on his throne, but sometimes walks around or heads over to talk to a rat.
+		文加坐在他的宝座上，但有时会走来走去，或走过去和一只老鼠说话。
 	</p>
 	<p>
-		Silence and Shadow are never too far away. Sometimes one or the other is either riding a rat's cock or getting someone to eat them out.
+		默和影从未走得太远。有时，一个人或另一个人不是在骑老鼠的鸡巴，就是在找人口自己。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_SERVE -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SERVE"><![CDATA[
 	<p>
-		You decide to start serving food and drink to the rats around the hall. While there's no kitchen area, there are several open fires scattered around the hall, with meat cooking over them, and bottles of alcohol stacked up in one corner.
+		你决定开始为大厅周围的老鼠提供食物和饮料。虽然没有厨房，但大厅里散落着几堆明火，上面烧着肉，酒瓶堆在一个角落里。
 	</p>
 	<p>
-		Grabbing a tray, a bottle of rum, and some glasses, you approach the first table. The rats are thrilled that they're being waited on, and start ordering things from you...
+		拿起托盘、一瓶朗姆酒和几个杯子，你走近第一张桌子。老鼠们很高兴有人伺候他们，开始向你点东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_FLIRT -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_FLIRT"><![CDATA[
 	<p>
-		You head over to a nearby table where [npc.a_race] is sitting by [npc.herself]. Asking [npc.her] if [npc.she] wants some company, you start flirting with [npc.herHim].
+		你走向附近的一张桌子，[npc.a_race]正坐在[npc.sheers]旁边。你问[npc.she]是否想有人陪，开始和[npc.herHim]调情。
 	</p>
 	<p>
-		[npc.She] gets you to sit in [npc.her] lap, and [npc.she] starts groping you.
+		[npc.She]让你坐在[npc.her]腿上，然后[npc.she]开始摸你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_FLIRT -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_VENGAR_FUCK"><![CDATA[
 	<p>
-		You approach Vengar. He grins as he reads your tattoo, and says to get down and get his cock out.
+		你靠近文加。他看了你的纹身后咧嘴一笑，说趴下并把他的鸡巴掏出来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_VENGAR_KNEEL"><![CDATA[
 	<p>
-		You approach Vengar. He says he's not in the mood to fuck right now, so you can show your subservience by kneeling beside him.
+		你靠近文加。他说他现在没心情做爱，所以你可以跪在他身边表示服从。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_VENGAR_HANDJOB -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_VENGAR_HANDJOB"><![CDATA[
 	<p>
-		You kneel before Vengar and get his cock out. He tells you to give him a handjob.
+		你跪在文加面前，把他的鸡巴掏出来。他让你给他打手枪。
 	</p>
 	<p>
-		You obediently stroke his cock for a short while. Eventually, he tells you to stand up and sit in his lap; he's feeling like cumming in your pussy.
+		你顺从地抚摸了他的鸡巴一小会儿。最后，他让你站起来，坐在他腿上，他想在你的小穴里射精。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_VENGAR_SITTING_SEX"><![CDATA[
 	<p>
-		You do as you're told and sit in Vengar's lap, guiding his cock into your wet cunt as you do so.
+		你听话地坐在文加的大腿上，一边引导他的鸡巴进入你湿润的阴道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_VENGAR_FUCK_AFTER_SEX -->
 	
 	<htmlContent tag="VENGARS_HALL_VENGAR_FUCK_AFTER_SEX"><![CDATA[
 	<p>
-		Having had his fun, Vengar dismisses you.
+		文加玩够了，就把你打发走了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_VENGAR_KNEEL -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_VENGAR_KNEEL"><![CDATA[
 	<p>
-		In a display of submission, you kneel down beside Vengar. After fifteen minutes of this, he tells you to get down on all fours so that he can use you as a footrest.
+		为了表示服从，你跪在文加身边。十五分钟后，他让你四肢着地，这样他就可以把你当成脚垫。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_VENGAR_FOOTREST -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_VENGAR_FOOTREST"><![CDATA[
 	<p>
-		Dropping down on all fours, you allow Vengar to put his feet up on your back. You're made to stay like this for half an hour, before Vengar grows weary of your presence and tells you to go back down into the hall.
+		你四肢着地，让文加把脚放在你的背上。你就这样呆了半个小时，然后文加厌倦了你的存在，让你回到大厅里去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_SHADOW -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SHADOW_DISMISSED"><![CDATA[
 	<p>
-		You approach Shadow. She tells you that she doesn't have any more time for you today, and to get lost.
+		你走近影。她告诉你，她今天没时间陪你了，让你滚蛋。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SHADOW"><![CDATA[
 	<p>
-		You approach Shadow. She tells you that she doesn't take kindly to being bothered. Pushes you over a nearby table. Orders you to raise your ass and prepare for a spanking.
+		你接近影。她告诉你，她不喜欢被打扰。她把你推到旁边的桌子上命令你抬起屁股，准备挨打。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_SHADOW_SPANKING -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SHADOW_SPANKING"><![CDATA[
 	<p>
-		Shadow spanks you, while intermittently rubbing your pussy. Soon your cheeks are red and your pussy is dripping from excitement.
+		影一边打你的屁股，一边断断续续地揉搓你的小穴。很快，你的脸颊就变得通红，淫穴因兴奋而滴水。
 	</p>
 	<p>
-		Kneeling down behind you, Shadow spreads your labia, before giving your cunt a long, wet lick. Tells you to hold still.
+		影跪在你身后，分开你的阴唇，然后对你的阴户进行长时间的湿舔。告诉你不要动。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SHADOW_SPANKING_START_SEX"><![CDATA[
 	<p>
-		Shadow buries her face between your legs, licking and kissing your dripping cunt.
+		影把脸埋在你的两腿之间，舔吻着你滴水的淫穴。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SHADOW_ORAL -->
 	
 	<htmlContent tag="AFTER_SHADOW_ORAL"><![CDATA[
 	<p>
-		Shadow has finished. Tells you to hurry off and bother someone else.
+		影已经做完了，告诉你赶紧离开，别再打扰她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_SILENCE -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SILENCE_DISMISSED"><![CDATA[
 	<p>
-		You approach Silence. She shakes her head and makes a shooing motion with her hands. Maybe she'll want some attention tomorrow instead...
+		你走近默。她摇摇头，用手做了个嘘的动作。也许明天她会想要一些关注……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SILENCE"><![CDATA[
 	<p>
-		You approach Silence. She steps back against a nearby wall and slides her underwear off. Lifting her skirt, she beckons you to come and eat her out.
+		你接近默。她退到附近的墙边，把内衣脱掉。她撩起裙子，向你招手，让你来口她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_SILENCE_START_SEX"><![CDATA[
 	<p>
-		kneeling down before Silence, you press your lips to her pussy and start eating her out.
+		你跪在默面前，把嘴唇贴在她的小穴，开始口她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SILENCE_ORAL -->
 	
 	<htmlContent tag="AFTER_SILENCE_ORAL"><![CDATA[
 	<p>
-		Silence has finished with you, and motions for you to return to the hall.
+		默和你该做的都做了，最后示意你返回大厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START"><![CDATA[
 	<p>
-		Deciding that you want to find [npc.name] and see what [npc.sheIs] doing, you set off looking for [npc.herHim].
+		你决定要找到[npc.name]，看看[npc.sheIs]在做什么，于是你开始寻找[npc.herHim]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_FLIRTING"><![CDATA[
 	<p>
-		You soon find [npc.herHim] flirting with [npc2.name(a)].
+		你很快就会发现[npc.herHim]正在和[npc2.name(a)]调情。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_FUCKING_PENIS"><![CDATA[
 	<p>
-		You soon find [npc.herHim] pressed up against the wall being fucked by [npc2.name(a)].
+		你很快就会发现[npc.herHim]被[npc2.name(a)]按在墙上操。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_FUCKING_VAGINA"><![CDATA[
 	<p>
-		You soon find [npc.herHim] kneeling down before [npc2.name(a)], eating [npc2.herHim] out.
+		你很快就会发现[npc.herHim]正跪在[npc2.name(a)]面前口[npc2.herHim]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_GROUP_SEX"><![CDATA[
 	<p>
-		You soon find [npc.herHim] getting fucked by a group of rats.
+		你很快就会发现[npc.herHim]正在被一群老鼠操。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_SERVING"><![CDATA[
 	<p>
-		You soon find [npc.herHim] serving food and drink to the tables.
+		你很快就会发现[npc.herHim]正在为餐桌提供食物和饮料。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_SHADOW"><![CDATA[
 	<p>
-		You soon find [npc.herHim] bent over a table, getting spanked by Shadow.
+		你很快就会发现[npc.herHim]正趴在桌子上被影打屁股。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_SILENCE"><![CDATA[
 	<p>
-		You soon find [npc.herHim] watching Silence as she rides a rat-boy's cock.
-	</p>
-	]]>
-	</htmlContent>
+		你很快就会发现[npc.herHim]在看着默，因为她正在骑鼠男的鸡巴。	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_SILENCE"><![CDATA[
 	<p>
-		You soon find [npc.herHim] bent over a table, getting spanked by Shadow.
+		你很快就会发现[npc.herHim]正趴在桌子上被影打屁股。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_START_VENGAR"><![CDATA[
 	<p>
-		You soon find [npc.herHim] kneeling down beside Vengar.
+		你马上发现，[npc.herHim]正跪在文加身边。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_FLIRTING -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FLIRTING"><![CDATA[
 	<p>
-		You join [npc.name] in flirting with [npc2.name].
+		你加入了[npc.name]与[npc2.name]的调情行列。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FLIRTING_ORAL"><![CDATA[
 	<p>
-		You and [npc.name] drop down onto your knees before [npc2.name] in order to perform oral on [npc2.herHim]...
+		你和[npc.name]跪在[npc2.name]裆前，一起为[npc2.her]口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMPANION_FLIRTING_ORAL -->
 	
 	<htmlContent tag="AFTER_COMPANION_FLIRTING_ORAL"><![CDATA[
 	<p>
-		You and [npc.name] are finished performing oral on [npc2.name]. [npc2.She] tells the two of you to go bother someone else now.
+		[npc2.name]用嘴巴服务了你和[npc.name]。[npc2.She]让你们俩去找别人麻烦并且放过她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_FLIRTING_FINISH -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FLIRTING_FINISH"><![CDATA[
 	<p>
-		You and [npc.name] just flirt with [npc2.name] for a while and let [npc2.herHim] grope the two of you. [npc2.She] eventually tells you to go bother someone else now.
+		你和[npc.name]对着[npc2.name]调情了好一会，让[npc2.she]抓了你两一把。不过最后[npc2.she]还是让你们找其他人去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_FUCKING -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FUCKING_PENIS"><![CDATA[
 	<p>
-		Your companion moans as [npc2.name] starts cumming inside [npc.her] pussy. You wonder if you should leave, or perhaps wait around and hope to receive the same treatment once [npc2.name] has finished with [npc.herHim].
+		你的跟班被[npc2.name]狠狠地插到最深处灌注精液，伴随淫荡的娇喘。你纠结着要不要就此离开，还是留下来期盼[npc2.name]对你也做同样的事。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FUCKING_VAGINA"><![CDATA[
 	<p>
-		Your companion moans as [npc2.name] pulls [npc.her] face into [npc2.her] pussy. You wonder if you should leave, or perhaps join in...
+		[npc2.name]把[npc.her]的脸压向自己的小穴，你的同伴发出了呻吟。你思考着是应该离开，或者加入其中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FUCKING_GET_FUCKED"><![CDATA[
 	<p>
-		You hang around and wait for [npc2.name] to pull out of [npc.name]. Seeing you hovering nearby, [npc2.name] gets you to lie down, before positioning [npc2.herself] between your legs and starting to fuck you. [npc.Name] sits on your face, getting you to eat the cum out of [npc.her] pussy.
+		你在一旁观摩，等着[npc2.name]把肉棒从[npc.name]小穴里拔出。看到你在苦等，[npc2.name]让你卧在地上，将肉棒对准你两腿之间，开始操你。[npc.Name]把热气腾腾的屁股捂你脸上，让你吃[npc.her]小穴里溢出的新鲜精液。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FUCKING_PERFORM_CUNNILINGUS"><![CDATA[
 	<p>
-		Wanting to get in on the action, you kneel down beside [npc.name]. [npc2.Name] pushes you down onto your back, before sitting on your face. Commands [npc.name] to start eating you out.
+		你想参与其中，于是跪在了[npc.name]旁边。[npc2.name]将你推倒在地，然后坐在你的脸上。命令[npc.name]开始口你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_FUCKING_PERFORM_ANILINGUS"><![CDATA[
 	<p>
-		Wanting to get in on the action, you kneel down behind [npc.name] and start performing anilingus on [npc2.herHim] while your companion eats [npc2.herHim] out.
+		你想参与其中，于是跪在[npc.Name]后面，开始对[npc2.herHim]进行肛交，而你的同伴则开始口[npc2.herHim]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMPANION_FUCKING -->
 	
 	<htmlContent tag="AFTER_COMPANION_FUCKING"><![CDATA[
 	<p>
-		[npc2.Name] is finished with you and [npc.name], and tells you to return to your duties in the hall.
+		[npc2.Name]该做的都做了，最后强调你们应该回到大厅里恪守职责。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_GROUP_SEX -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_GROUP_SEX"><![CDATA[
 	<p>
-		You approach [npc.name], who is cowgirl-riding [npc2.name], while [npc3.name] fucks [npc.herHim] from behind. Another couple of rats are standing to either side, receiving oral from your companion.
+		你走近[npc.name]，她正骑在[npc2.name]身上，而[npc3.name]则从后面干着[npc.herHim]。另外几只老鼠站在两边，接受你的同伴的口交。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_GROUP_SEX_JOIN"><![CDATA[
 	<p>
-		Wanting to join in, you ask [npc.name] if you can lend [npc.herHim] a hand. The rats push you down onto your back beside [npc.herHim], before spreading your legs and fucking you alongside your companion. The other two rats side down on your faces, forcing you to perform oral on them. 
+		你想加入其中，于是问[npc.name]能否帮[npc.herHim]一把。老鼠们把你按倒在[npc.herHim]旁边，然后分开你的双腿，在你的同伴旁边干你。另外两只老鼠趴在你的脸上，强迫你为它们口交。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMPANION_GROUP_SEX -->
 	
 	<htmlContent tag="AFTER_COMPANION_GROUP_SEX"><![CDATA[
 	<p>
-		The rats are finished with you and [npc.name]. You're both told to get back to your other duties.
+		老鼠们用你和[npc.Name]满足自己的需求后，告诉你们可以回去执行其他任务了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_SERVING -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_SERVING"><![CDATA[
 	<p>
-		You help [npc.name] to serve food and drink to the rats in the hall for the next few hours.
+		在接下来的几个小时里，你要帮助[npc.name]为大厅里的老鼠提供食物和饮料。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_SHADOW -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_SHADOW"><![CDATA[
 	<p>
-		You tell Shadow to stop spanking [npc.name] so hard. Ruthlessly pushing you down over the table next to her, Shadow says that you're going to get it now too.
+		你告诉影不要再这么用力地打[npc.name]的屁股了。影无情地把你推倒在她旁边的桌子上，说你现在也要挨打了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_SHADOW_SPANKED -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_SHADOW_SPANKED"><![CDATA[
 	<p>
-		Shadow starts spanking you and [npc.name], while intermittently stroking your pussies and dirty-talking to you. Eventually, she says that she already tasted [npc.name] moments before you arrived, and now you can be her dessert.
+		影开始打你和[npc.Name]的屁股，同时间歇性地抚摸你们的阴部并对你们说脏话。最后，她说在你们来之前，她已经尝过[npc.name]的味道了，现在你们可以成为她的甜点。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_SHADOW_SPANKED_START_SEX"><![CDATA[
 	<p>
-		Shadow kneels down behind you and starts eating you out. She fingers [npc.name] at the same time.
+		影跪在你身后，开始吃你。同时，她还用手指着[npc.name]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SHADOW_COMPANION_ORAL -->
 	
 	<htmlContent tag="AFTER_SHADOW_COMPANION_ORAL"><![CDATA[
 	<p>
-		Shadow finishes with you and [npc.name], giving each of you one final lick before telling you to get back to your duties.
+		影用你和[npc.Name]满足自己的需求后，告诉你们可以回去执行其他任务了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_SILENCE -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_SILENCE"><![CDATA[
 	<p>
-		You join [npc.name] in watching Silence, who soon forced the rat-boy to cum inside of her. Stepping away, she notices the two of you, and points at her cum-filled pussy...
+		你和[npc.Name]一起注视着默，她很快就迫使鼠男在她体内射精。她走到一旁，注意到你们两个，指着她充满精液的淫穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_SILENCE_PLAYER_CLEANS"><![CDATA[
 	<p>
-		You drop down in front of Silence and start eating her out as [npc.name] watches...
+		你跪在默前面，在[npc.name]的注视下开始口她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_SILENCE_COMPANION_CLEANS"><![CDATA[
 	<p>
-		You watch as [npc.name] drops down in front of Silence and starts eating her out...
+		你看着[npc.name]跪在默前面，开始口她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_VENGAR -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_VENGAR"><![CDATA[
 	<p>
-		You approach Vengar, who forces you to kneel down beside [npc.name] and act as his footrest...
+		你走近文加，他强迫你跪在[npc.name]旁边，充当他的脚垫……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST"><![CDATA[
 	<p>
-		You and [npc.name] act as footrests for Vengar, facing the hall so that you can see the rats' sneers. Eventually, Vengar puts his feet down and wonders out loud which of you he should fuck. Tells you both to present your pussies to him, so that he can choose...
+		你和[npc.name]充当文加的脚凳，面向大厅，这样就能看到老鼠们的讥笑。最后，文加把脚放了下来，大声问你们谁应该被他操。他让你们俩把自己的小穴们呈现给他，让他来选择……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_PRESENT -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_PRESENT"><![CDATA[
 	<p>
-		You do your best to present your pussy to Vengar, and are rewarded when he tells you that you're his choice. Shouts out to another rat to fuck your companion so that [npc.she] doesn't miss out on the fun.
+		你竭尽全力向文加展示你的小穴，当文加向你示爱时，你得到了回报。告诉你你是他的选择。喊另一只老鼠去干你的同伴，以免[npc.she]错过乐趣。
 	</p>
 	<p>
-		Teases your pussy with his cock, and tells you to admit that you're nothing but his cock-sleeve.
+		用他的鸡巴挑逗你的小穴，让你承认你只是他的鸡巴套子。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_PRESENT_START"><![CDATA[
 	<p>
-		You tell Vengar that you're his cock-sleeve, and he penetrates you. Beside you, the other rat starts fucking your companion...
+		你告诉文加，你是他的鸡巴套，然后他就开始插你。在你身边，另一只老鼠开始操你的同伴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_HOLD_BACK -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_HOLD_BACK"><![CDATA[
 	<p>
-		You hold back, and Vengar says that [npc.name] is his choice. Shouts out to another rat to fuck you so that you doesn't miss out on the fun.
+		你忍住了，文格尔说[npc.name]是他的选择。他喊另一只老鼠来干你，以免你错过好戏。
 	</p>
 	<p>
-		The rat teases your pussy with his cock, and tells you to admit that you're nothing but a public cum-dump.
+		老鼠用他的鸡巴挑逗你的小穴，让你承认自己不过是个公共肉便器。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_VENGAR_FOOTREST_HOLD_BACK_START"><![CDATA[
 	<p>
-		You tell the rat that you're a public cum-dump, and he penetrates you. Beside you, Vengar starts fucking your companion...
+		你告诉那只老鼠你是个公共肉便器，他就插进了你的身体。在你身边，文加开始干你的同伴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_CHOOSE_COMPANION_VENGAR_AFTER_SEX -->
 	
 	<htmlContent tag="VENGARS_HALL_CHOOSE_COMPANION_VENGAR_AFTER_SEX"><![CDATA[
 	<p>
-		Having had their fun, Vengar and [npc2.name] have finished with you and [npc.name]. You're told to get on with other duties in the hall.
+		文加和[npc2.name]已经玩够了你和[npc.name]。他们让你继续在大厅里执行其他任务。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_DELIVERY -->
 	
 	<htmlContent tag="VENGARS_HALL_DELIVERY_PLAYER"><![CDATA[
 	<p>
-		Being ready to give birth, Shadow and Silence approach you, with the former telling you that Silence will use her arcane abilities to deliver your offspring. Silence very gently strokes your pregnant bump, before smiling kindly at you.
+		准备好分娩后，影和默走近你，前者告诉你默会用她的奥术能力为你接生。默轻轻抚摸你的孕肚，然后对你露出慈祥的微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_DELIVERY_COMPANION"><![CDATA[
 	<p>
-		Being ready to give birth, you see Shadow and Silence approach your companion, with the former telling [npc.herHim] that Silence will use her arcane abilities to deliver [npc.her] offspring. Silence very gently strokes [npc.namePos] pregnant bump, before leading [npc.herHim] into the privacy of the private bed-chambers.
+		你看到影和默走近你的同伴，准备分娩，影告诉[npc.herHim]默将使用她的奥术能力为[npc.her]接生。默轻轻地抚摸着[npc.namePos]怀孕的肚皮，然后带着[npc.herHim]进入私密的卧室。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_DELIVERY_BIRTHING -->
 	
 	<htmlContent tag="VENGARS_HALL_DELIVERY_BIRTHING_EGGS"><![CDATA[
 	<p>
-		Silence helps you to deliver your eggs. You get a powerful instinct to protect the eggs, and drive off Shadow and Silence. 
+		默会帮你送蛋。你会获得保护蛋的强大本能，并赶走影和默。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_DELIVERY_BIRTHING"><![CDATA[
 	<p>
-		Silence helps you to deliver. You pass out and awaken some time later. Shadow tells you that she escorted your offspring up to Dominion, and that their fate is now in their hands.
+		默帮助你分娩。你昏了过去，过了一段时间才醒来。影告诉你，她护送你的后代去了御城区，现在他们的命运掌握在自己手中。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_DELIVERY_BIRTHING_EGG_PROTECTION -->
 	
 	<htmlContent tag="VENGARS_HALL_DELIVERY_BIRTHING_EGG_PROTECTION"><![CDATA[
 	<p>
-		You spend the next twelve hours protecting your eggs, until eventually they start to hatch and you pass out from exhaustion.
+		接下来的十二个小时里，你都在保护你的蛋，直到它们开始孵化，你才精疲力竭地昏睡过去。
 	</p>
 	<p>
-		You awaken some time later. Shadow tells you that she escorted your offspring up to Dominion, and that their fate is now in their hands. Having already rested, you're ready to continue with your duties in the hall...
+		一段时间后，你醒了过来。影告诉你，她护送你的后代去了御城区，现在他们的命运掌握在自己手中。你已经休息好了，准备继续在大厅里履行职责……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_DELIVERY_BIRTHING_FINISHED -->
 	
 	<htmlContent tag="VENGARS_HALL_DELIVERY_BIRTHING_FINISHED"><![CDATA[
 	<p>
-		You spend some time resting, and then the next morning, you're ready to continue with your duties in the hall...
+		你花了一些时间休息，第二天一早，你就准备好继续在大厅里履行职责了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM -->
 	
 	<htmlContent tag="VENGARS_BEDROOM"><![CDATA[
 	<p>
-		The private bedchambers consist of two large rooms; one in which Vengar has his bedroom, and one in which Silence and Shadow sleep.
+		这个私密的卧室有两个大房间；一个是文加的，另一个是默和影的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CORRIDOR -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		You move towards the hall's exit, but one of the numerous rats standing guard makes you turn around and head back into the hall.
+		你朝着大厅的出口走去，但站岗的众多老鼠之一让你转身回到了大厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_NIGHT_TIME -->
 	
 	<htmlContent tag="VENGARS_HALL_NIGHT_TIME"><![CDATA[
 	<p>
-		It's getting late, and Shadow finds you to escort you into the private bedchambers...
+		天色已晚，影找到你，护送你进入私人寝室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_NIGHT_TIME_ESCORTED -->
 	
 	<htmlContent tag="VENGARS_HALL_NIGHT_TIME_ESCORTED_SEX"><![CDATA[
 	<p>
-		You go with Shadow as she leads you into the private bedchambers. Shows you to Vengar's bedroom, then leaves to go to her own shared bedroom with Silence.
+		你跟着影，她带你进入私人卧室。她带你到文加的卧室，然后离开，去了她和默共用的卧室。
 	</p>
 	#IF(pc.hasCompanions())
 		<p>
-			Vengar and [npc.name] are already in his bedroom. Vengar asks which of you he'll fuck tonight...
+			文加和[npc.name]已经在他的卧室里了。文加问你们谁今晚会被他操……
 		</p>
 	#ELSE
 		<p>
-			Vengar is already in his bedroom. He tells you to present yourself to be fucked...
+			文加已经在他的卧室里了他让你一丝不挂，准备被操……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_NIGHT_TIME_ESCORTED"><![CDATA[
 	<p>
-		You go with Shadow as she leads you into the private bedchambers. Shows you to Vengar's bedroom, then leaves to go to her own shared bedroom with Silence.
+		你跟着影，她带你进入私人卧室。她带你到文加的卧室，然后离开，去了她和默共用的卧室。
 	</p>
 	#IF(pc.hasCompanions())
 		<p>
-			Vengar and [npc.name] are already in his bedroom. Vengar is too tired to fuck you or [npc.name] tonight...
+			文加和[npc.name]已经在他的卧室里了。文加今晚太累了，不想和你或[npc.name]做爱……
 		</p>
 	#ELSE
 		<p>
-			Vengar is already in his bedroom. Vengar is too tired to fuck you tonight...
+			文加已经在他的卧室里了。文加今晚太累了，不能和你做爱……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_SERVE -->
 	
 	<htmlContent tag="VENGARS_HALL_SERVE"><![CDATA[
 	<p>
-		Some rats recruit you into serving food and drink for them. Others join in, piling on the orders...
+		有些老鼠招募你为他们提供食物和饮料。其他人也加入进来，为他们提供更多的服务……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_SERVING -->
 	
 	<htmlContent tag="VENGARS_HALL_SERVING"><![CDATA[
 	<p>
-		You have to continue serving rats for several hours, but eventually they're finished with you.
+		你必须继续为老鼠服务几个小时，但最终它们还是会把你干掉。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_GROPED -->
 	
 	<htmlContent tag="VENGARS_HALL_GROPED"><![CDATA[
 	<p>
-		[npc.Name(A)] grabs you as you pass [npc.her] table and starts groping and feeling you up...
+		[npc.Name(A)]在你经过[npc.her]桌子时抓住你，并开始摸索和感觉你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_GROPED_GROUP_START_SEX"><![CDATA[
 	<p>
-		Sitting on the table, you spread your legs and entice the rats to fuck you...
+		坐在桌子上，张开双腿，引诱老鼠来干你……
 	</p>
 	<p>
-		The rats move you into position, with one of them lying down and getting you to sit down into the cowgirl position, riding [npc.her] cock. If anal is enabled, another penetrates your ass. If not, the others surround you and prepare to receive oral...
+		老鼠们让你摆好姿势，其中一人躺下，让你坐成骑乘位的姿势，骑在[npc.her]的鸡巴上。如果开启了肛交功能，另一只老鼠会插入你的菊花。如果没有，其他人会围着你，准备接受口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_GROPED_START_ORAL"><![CDATA[
 	<p>
-		You drop down onto your knees and start performing oral on [npc.herHim]...
+		你跪在地上，开始为[npc.herHim]口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_GROPED_START_SEX"><![CDATA[
 	<p>
-		Sitting on the table, you spread your legs and entice [npc.name] to fuck you. Pushing you back, [npc.she] does just that, and thrusts [npc.cock+] into your slutty cunt.
+		你坐在桌子上，张开双腿，引诱[npc.name]来操你。把你往后一推，[npc.she]就这么做了，把[npc.cock+]插进了你淫荡的穴里。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_GROPED_SEX -->
 	
 	<htmlContent tag="AFTER_GROPED_ORAL"><![CDATA[
 	<p>
-		[npc.Name] says that you know how to use your mouth, before telling you to go and bother someone else...
+		[npc.Name]说你知道如何使用你的嘴，然后让你去服务别人……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_GROPED_SEX"><![CDATA[
 	<p>
-		[npc.Name] says that you're a good fuck, before telling you to go and bother someone else...
+		[npc.Name]说你干得好，然后又叫你去烦别人……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_GROPED_FINISH -->
 	
 	<htmlContent tag="VENGARS_HALL_GROPED_GROUP_FINISH"><![CDATA[
 	<p>
-		You let the rats grope and feel you up for some time, before they've finally had enough and dismiss you...
+		你让那些老鼠摸来摸去好一阵子，最后他们才忍无可忍，把你赶走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_GROPED_FINISH"><![CDATA[
 	<p>
-		You let [npc.name] grope and feel you up for some time, before [npc.sheHas] finally had enough and dismisses you...
+		你任由[npc.name]在你身上摸来摸去好一阵子，最后[npc.sheHas]终于忍无可忍，把你赶走了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_VENGAR_FUCK -->
 	
 	<htmlContent tag="VENGARS_HALL_VENGAR_FUCK"><![CDATA[
 	<p>
-		Vengar calls you over to him, and, not having much choice but to obey, you step up to where he's sitting on his throne. He tells you that he's been watching you for some time, and wants you to get his cock out and get him hard, ready to fuck you...
+		文加把你叫到他身边，你别无选择，只能服从，走到他坐在宝座上的地方。他告诉你，他已经观察你一段时间了，想让你把他的鸡巴掏出来，让他硬起来，准备操你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_RAT_FUCK -->
 	
 	<htmlContent tag="VENGARS_HALL_RAT_FUCK_PENIS"><![CDATA[
 	<p>
-		[npc.Name(A)] grabs you and pushes you over a nearby table, saying [npc.sheIs] going to fuck you...
+		[npc.Name(A)]抓住你，把你推到附近的桌子上，说[npc.sheIs]要干你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_RAT_FUCK_VAGINA"><![CDATA[
 	<p>
-		[npc.Name(A)] grabs you and pulls you over to one side of the hall, before leaning back against the wall and telling you that you're going to service [npc.her] pussy...
+		[npc.Name(A)]抓住你，把你拽到大厅一侧，然后靠在墙上，让你侍奉[npc.her]的小穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_RAT_FUCK_FUCKED"><![CDATA[
 	<p>
-		If rat has anal fetish, they fuck your ass. If not, they fuck your pussy.
+		如果老鼠有肛门性癖，他们就会操你的屁股。如果没有，他们就会操你的小穴。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_RAT_FUCK_CUNNILINGUS"><![CDATA[
 	<p>
-		You are forced to start performing cunnilingus on [npc.name]... 
+		你被迫开始对[npc.name]进行舔阴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_RAT_FUCK_AFTER_SEX -->
 	
 	<htmlContent tag="VENGARS_HALL_RAT_FUCK_AFTER_SEX"><![CDATA[
 	<p>
-		[npc.Name] is finished with you, saying you were a good fuck, before dismissing you...
+		[npc.Name]和你谈完了，说你干得不错，然后就把你解雇了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_GROUP_SEX -->
 	
 	<htmlContent tag="VENGARS_HALL_GROUP_SEX"><![CDATA[
 	<p>
-		A group of rats surrounds you, before telling you that you're going to be their toy for a while...
+		一群老鼠把你团团围住，然后告诉你，你将暂时成为它们的玩具……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_HALL_GROUP_SEX_START"><![CDATA[
 	<p>
-		The rats move you into position, with one of them lying down and getting you to sit down into the cowgirl position, riding [npc.her] cock. If anal is enabled, another penetrates your ass. If not, the others surround you and prepare to receive oral...
+		老鼠们让你摆好姿势，其中一人躺下，让你坐成骑乘位的姿势，骑在[npc.her]的鸡巴上。如果开启了肛交功能，另一只老鼠会插入你的菊花。如果没有，其他人会围着你，准备接受口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_HALL_AFTER_GROUP_SEX -->
 	
 	<htmlContent tag="VENGARS_HALL_AFTER_GROUP_SEX"><![CDATA[
 	<p>
-		The rats finish with you, leaving you panting on the floor. After some time, you recover and set out into the hall once more...
+		两个鼠女满足了，留你在地上喘息。过了一段时间，你从性爱的余韵中恢复，再次进入大厅……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_CLEAN -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN"><![CDATA[
 	<p>
-		Shadow appears behind you, saying that she finally found you. She says that seeing as you're in here, you may as well get to cleaning the place.
+		影从背后靠近你，说，既然你在这里，那就去把这个地方打扫一下吧。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_CLEAN_FINISH -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_SHADOW_ORAL"><![CDATA[
 	<p>
-		You set about cleaning the room. Shadow leaves you to it. After an hour, you're almost done. Kneeling down on all fours to sweep out under a cabinet, when suddenly someone grabs you from behind.
+		你开始打扫房间，影确认无误后离开了。一个小时后，你打扫得差不多了，正趴跪在一个柜子下方专注清理。突然，身后有人抓了你屁股一把。
 	</p>
 	<p>
-		Looking back, you see Shadow sliding down onto her knees behind you. She says your pussy looked so tasty. Tells you to raise your ass so that she can get a taste of you.
+		你回头一看，发现影正跪在你的身后。她说你的小穴看起来性感美味，想尝尝你的味道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_SHADOW_ORAL_START"><![CDATA[
 	<p>
-		You raise your ass and Shadow starts eating you out.
+		你抬起屁股，影把脸埋进去开始舔你的下面。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_SHADOW"><![CDATA[
 	<p>
-		You set about cleaning the room. Shadow leaves you to it. After an hour, you're done. Shadow reappears and tells you to get back out into the main hall.
+		你开始打扫房间，影确认无误后离开了。一个小时后，你打扫完毕。影前来检查，告诉你可以回到主厅了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_SILENCE_ORAL"><![CDATA[
 	<p>
-		You set about cleaning the room. Shadow leaves you to it. After an hour, you're done. After kneeling down on all fours to sweep out under a cabinet, you stand up and turn around to see Silence masturbating and staring at you.
+		你开始打扫房间，影确认无误后离开了。一个小时后，你差不多打扫完毕。你清理完这个柜子的底部，从趴跪的姿态站起来，一转头发现默正看着你自慰。
 	</p>
 	<p>
-		She spreads her labia and bites her lip, motioning for you to come forwards and orally service her...
+		她向你张开自己的阴唇，露出粉嫩的肉穴，面色红润，轻咬嘴唇，示意你上前为她舔舐……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_SILENCE_ORAL_START"><![CDATA[
 	<p>
-		You kneel before Silence and start eating her out.
+		你跪在默面前，舔舐起她的下体。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_SILENCE"><![CDATA[
 	<p>
-		You set about cleaning the room. Shadow leaves you to it. After an hour, you're done. Silence appears and points for you to go back out into the main hall.
+		你开始打扫房间，影确认无误后离开了。一个小时后，你打扫完毕。默前来检查，示意你可以回到主厅了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SILENCE -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SILENCE"><![CDATA[
 	<p>
-		You ignore Silence, and step past her out into the main hall. Despite her desire to have you eat her out, the albino rat-girl allows you to leave...
+		你无视这个气氛，从她身边走过，进入大厅。尽管她很想你吃她下面，但这个白化老鼠女还是放你离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SHADOW -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SHADOW"><![CDATA[
 	<p>
-		Instead of doing as you're told, you stand up and try to leave. Angry at disobeying her, Shadow grabs you and pushes you over the cabinet you were just cleaning, before delivering a stinging slap to your ass.
+		你没有服从，而是准备起身离开。影勃然大怒，伸手抓住你，把你推倒在你刚刚清理的柜子上，用另一只手狠狠地抽打你的屁股。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SHADOW_FACE_SITTING -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SHADOW_FACE_SITTING"><![CDATA[
 	<p>
-		Shadow spanks you for some time, while occasionally fingering your dripping pussy. Eventually, she pushes you to the floor, before sitting on your face and demanding you to put all your effort into eating her out.
+		影用力拍打你的屁股，时不时将手指插进你湿哒哒的阴道里拨弄。下一刻，你被她推翻在地。她用屁股跨坐在你的脸上，命令你用嘴巴不留余力地侍奉她的下面。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_CLEAN_FINISH_IGNORE_SHADOW_FACE_SITTING_START"><![CDATA[
 	<p>
-		With little choice but to do as Shadow demands, you start eating her out...
+		你别无选择，开始舔舐她的阴部。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_AFTER_RAT_GIRL_ORAL -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_AFTER_SHADOW_PERFORMING_ORAL"><![CDATA[
 	<p>
-		Having had enough of eating you out, Shadow tells you to get back into the main hall.
+		品味你的下体直到满足之后，影告诉你回到主厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_AFTER_SHADOW_RECEIVING_ORAL"><![CDATA[
 	<p>
-		Having had enough of riding your tongue, Shadow tells you to get back into the main hall.
+		肆意品味够你的舌头之后，影告诉你回到主厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_AFTER_SILENCE_ORAL"><![CDATA[
 	<p>
-		Having had enough of being eaten out, Shadow steps back and points for you to get back into the main hall.
+		影在好一番品味之后停下了她的动作，命令你回到主厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_SHADOW_SILENCE -->
@@ -1199,39 +1198,39 @@
 	<htmlContent tag="VENGARS_BEDROOM_SHADOW_SILENCE"><![CDATA[
 	#IF(pc.hasCompanions())
 		<p>
-			As you're wandering about the bed-chambers, wondering what to do, Silence and Shadow enter, leading [npc.name] along with them. Upon seeing you, Shadow's eyes light up, and she moves over to rub up against you.
+			当你在卧室里徘徊，考虑下一步计划时，默和影带着[npc.name]走进来了。一看到你，影的双眼就亮起来了，向你走来，开始蹭你。
 		</p>
 		<p>
-			Tells you that you're going to join in with their game. Asks you if you want to eat out Silence, or let her eat you out...
+			她要你加入她们的“小游戏”，让你选给默舔，还是让她给你舔……
 		</p>
 	#ELSE
 		<p>
-			As you're wandering about the bed-chambers, wondering what to do, Silence and Shadow find you. Shadow tells you that the two of them were looking to have some fun together, but now that you're here, you can join in. Tells you to lie down and spread your legs.
+			当你在卧室里徘徊，考虑下一步计划时，默和影来了。影子说她们正在找一起三人行的小伙伴，于是找到了你，让你躺好岔开双腿。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_SHADOW_SILENCE_FOURSOME_SHADOW_START"><![CDATA[
 	<p>
-		You tell Shadow that you want her to eat you out. Stand against the wall beside Silence as Shadow starts performing cunnilingus on you. [npc.Name] does the same to Silence.
+		你倚靠在墙上，让影俯下身来为你舔阴。[npc.name]并排在影旁边，给默做同样的口活。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_SHADOW_SILENCE_FOURSOME_SILENCE_START"><![CDATA[
 	<p>
-		You tell Shadow that you want to eat Silence out. Your companion stands against the wall beside Silence as Shadow starts performing cunnilingus on [npc.herHim]. You do the same to Silence.
+		你告诉影你想吃默的小穴。你的跟班靠在墙上，影抱着[npc.herHim]的大腿吃起来。你在一旁给默做同样的事。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_SHADOW_SILENCE_SOLO_START"><![CDATA[
 	<p>
-		You do as Shadow commands, and as you lie down, Silence sits on your face. Shadow kneels down as you spread your legs and starts performing oral on you.
+		你服从了影的命令，仰躺在地上。默把屁股掰开坐在你的脸上，影跪着岔开你的腿，把头埋进去舔你的下面。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_SHADOW_SILENCE_AFTER_SEX -->
@@ -1239,25 +1238,25 @@
 	<htmlContent tag="VENGARS_BEDROOM_SHADOW_SILENCE_AFTER_SEX"><![CDATA[
 	#IF(pc.hasCompanions())
 		<p>
-			Shadow and Silence have finished with you and [npc.name], and you're told to return to the main hall.
+			影和默满足了，叫你和[npc.name]回到主厅。
 		</p>
 	#ELSE
 		<p>
-			Shadow and Silence have finished with you, and you're told to return to the main hall.
+			影和默满足了，叫你回到主厅。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_BARRED -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_BARRED"><![CDATA[
 	<p>
-		Shadow finds you loitering in the bed-chambers and orders you back out into the main hall...
+		看到你在卧室里无所事事，影命令你回到主厅……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_NIGHT_TIME -->
@@ -1265,42 +1264,42 @@
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_SEX"><![CDATA[
 	#IF(pc.hasCompanions())
 		<p>
-			As it's getting late, Vengar and [npc.name] join you in the bed-chambers. Vengar asks which of you he'll fuck tonight...
+			天色已晚，文加跟着[npc.name]进入你的卧室。他扫视着你们，心想着今晚要操哪个……
 		</p>
 	#ELSE
 		<p>
-			As it's getting late, Vengar joins you in the bed-chambers. Vengar tells you to present yourself to be fucked...
+			天色已晚，文加跟着你进入了你的卧室。他直截了当地叫你准备好被操……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME"><![CDATA[
 	#IF(pc.hasCompanions())
 		<p>
-			As it's getting late, Vengar and [npc.name] join you in the bed-chambers. He's tired and not interested in sex...
+			天色已晚，文加跟着[npc.name]进入你的卧室。只不过他累了，没有心思做爱……
 		</p>
 	#ELSE
 		<p>
-			As it's getting late, Vengar joins you in the bed-chambers. He's tired and not interested in sex...
+			天色已晚，文加跟着你进入了你的卧室。只不过他累了，没有心思做爱……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_SEX_START"><![CDATA[
 	<p>
-		You get down on all fours and present yourself to Vengar. He wastes no time in penetrating you and starts fucking you...
+		你趴跪在地上，把后面朝向文加。他迅速将肉棒插入，开始操起你来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_SEX_COMPANION_START"><![CDATA[
 	<p>
-		You let [npc.name] be the one to get down on all fours and present [npc.herself] to Vengar. He wastes no time in penetrating your companion and starts fucking [npc.herHim]...
+		你命令[npc.name]趴跪在地上。文加默契地将肉棒插入，开始操你的跟班……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_NIGHT_TIME_AFTER_SEX -->
@@ -1308,93 +1307,93 @@
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_AFTER_SEX"><![CDATA[
 	#IF(pc.hasCompanions())
 		<p>
-			Vengar is finished and tells you and [npc.name] to sleep.
+			文加满足了，让你和[npc.name]去睡觉。
 		</p>
 	#ELSE
 		<p>
-			Vengar is finished and tells you to sleep.
+			文加满足了，告诉你去睡觉。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_NIGHT_TIME_SLEEP -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_SLEEP"><![CDATA[
 	<p>
-		You awake the next morning to find Shadow looming over you. She tells you to get into the main hall.
+		第二天你一睁开双眼，影就走来叫你去主厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_NIGHT_TIME_PRETEND -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_PRETEND"><![CDATA[
 	<p>
-		You pretend to be asleep, and wait until Vengar is deeply asleep before deciding upon whether to make a move or not...
+		你眯上眼装睡，决定等文加睡沉了再思考下一步行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE"><![CDATA[
 	<p>
-		You sneak out of bed and prepare to escape. Knowing that your belongings are stored in the other room, you sneak into there and search for them.
+		你从床上轻轻下来，准备逃跑。估摸着你的东西都在另一个房间里，你偷偷溜过去并寻找起来。
 	</p>
 	<p>
-		Despite being quiet, you suddenly hear movement behind you, and you turn around to see Silence staring down at you. Instead of raising the alarm, however, she simply lifts up her skirt and motions for you to eat her out...
+		一路上静悄悄的，直到你听到身后传来动静。你回头一看，发现默正盯着你。她没有拉起警报，相反拉起了自己的裙子，眼神示意你上来给她舔阴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_SILENCE_ORAL_START"><![CDATA[
 	<p>
-		Deciding that it would be a good idea to do as the albino rat-girl wants, you shuffle forwards and start eating her out.
+		想到服从这个白化鼠女会是比较明智的决定，你慢慢挪到她的双腿之间，开始给她舔阴。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_AFTER_ORAL -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_AFTER_ORAL"><![CDATA[
 	<p>
-		You finish with Silence, and she pats you on the head, before pointing behind you. You turn around to see Shadow looking down at you.
+		你们完事了。默拍了拍你的头，示意你看向背后。你回头看到影正盯着你的下面。
 	</p>
 	<p>
-		With a grin on her face, she reveals that she and Silence were playing along and helping to keep you captive only as part of a larger scheme. Everything is in place now, and your escape attempt has coincided with her decision to make her move. Tells you that your equipment is no longer stored in her, and to follow her.
+		她面带笑容，透露她和默只是俘虏你的同时找点乐子。抓住你是计划的一部分，包括你的逃跑也在计划之内，现在一切都准备好了。她还说你的装备现在不在她身上，要你跟着她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_PUSH_PAST -->
 	
 	<htmlContent tag="VENGARS_BEDROOM_NIGHT_TIME_PRETEND_ESCAPE_PUSH_PAST"><![CDATA[
 	<p>
-		You push past Silence, and she grabs you by the wrist, before pointing behind you. You turn around to see Shadow staring into your eyes.
+		你推开默，默反过来抓住你的手腕，指了指你的背后。你回头看到影正盯着你的眼。
 	</p>
 	<p>
-		Letting out a sigh, she reveals that she and Silence were playing along and helping to keep you captive only as part of a larger scheme. Everything is in place now, and your escape attempt has coincided with her decision to make her move. Tells you that your equipment is no longer stored in her, and to follow her.
+		她叹了一口气，透露她和默只是俘虏你的同时找点乐子。抓住你是计划的一部分，包括你的逃跑也在计划之内，现在一切都准备好了。她还说你的装备现在不在她身上，要你跟着她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ESCAPING -->
 	
 	<htmlContent tag="ESCAPING"><![CDATA[
 	<p>
-		Shadow leads you (and companion) out of the hall and to a hidden storage room further down the tunnel, where your equipment is being stored. Unclasping your collar, she discards it before letting you get your old gear back.
+		影带着你(和你的同伴)走出大厅，进到地道深处的隐秘储藏室里，你的装备就存放在那里。她解开你的项圈，扔掉它后，她让你拿回自己的旧装备。
 	</p>
 	<p>
-		Once you're fully equipped again, she tells you that your only hope of getting out of this place is to follow her.
+		当你重新装备齐全后，她告诉你，唯一的逃离这个地方的希望就是跟随她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

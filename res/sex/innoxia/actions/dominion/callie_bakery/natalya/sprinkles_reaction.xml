@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -23,22 +23,22 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Decorated doughnut]]></title>
+	<title><![CDATA[装饰好的甜甜圈]]></title>
 	<tooltip><![CDATA[
-		The [style.mule] slut has turned your asshole into a fancy doughnut!
-	]]></tooltip>
+		那只淫荡的[style.mule]把你的肛门变成了一个漂亮的甜甜圈！
+]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
 				#IF(npc==natalya)
-					[natalya.speechNoEffects([style.Mule]! Fetch me a mirror and show me what it looks like!)] Mistress Natalya demands. Callie helpfully points to one side of the counter, and you quickly discover and retrieve a small mirror from the place where the horse-girl motioned towards. Holding this mirror bahind your Mistress's feral equine rump, you enable her to turn her head and see the state of her asshole.
+					[natalya.speechNoEffects([style.Mule]！给我拿面镜子来让我看看！)]主人娜塔莉亚命令道。卡丽贴心地指向柜台一侧，你迅速从马女所指的地方找到一面小镜子，拿了出来，随后将镜子举到主人的马屁股后面，让她能扭头看清自己肛门的状况。
 					
 					<br/><br/>
 					
-					[natalya.speechNoEffects(Excellent job, [style.mule]!)] the centauress happily declares, before flashing you a horny grin and teasing, [natalya.speechNoEffects(Now you can eat it!)]
+					[natalya.speechNoEffects(干得好，[style.mule]！)]半人马开心地宣布，随即露出淫荡的笑容挑逗道，[natalya.speechNoEffects(现在你可以开吃了！)]
 					
 				#ELSE
-					[callie.speechNoEffects(Great job, [pc.name],)] Callie giggles, before biting her lip and moaning, [callie.speechNoEffects(Now for the best part...)]
+					[callie.speechNoEffects(太棒了，[pc.name]，)]卡丽咯咯笑着，轻咬嘴唇呻吟道，[callie.speechNoEffects(现在该享受最棒的部分了……)]
 				#ENDIF
 			]]></text>
 		</description>

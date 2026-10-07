@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	<additionalPlaceTypeTriggers>
 		<placeType>dsg_fields_elis_eisek_sillymode_dungeon_boss</placeType>
@@ -6,7 +6,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[A Boss "Battle"]]></name>
+			<name><![CDATA[一场Boss“战”]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 			#IF(!flags.hasFlag(FLAG_dsg_elis_eisek_sillymode_boss_defeated))
 				100

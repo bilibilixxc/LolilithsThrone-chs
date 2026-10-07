@@ -55,11 +55,11 @@ public class SadisticActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Spank [npc2.herHim]";
+			return "拍[npc2.herHim]的屁股";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Start playfully spanking [npc2.namePos] [npc2.ass+].";
+			return "开玩笑地拍打[npc2.namePos][npc2.ass+]。";
 		}
 		@Override
 		public String getDescription() {
@@ -67,83 +67,83 @@ public class SadisticActions {
 			
 			if (Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(SexAreaPenetration.PENIS)) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.pussy+], [npc.name] [npc.verb(reach)] down and playfully [npc.verb(grope)] [npc2.her] [npc2.ass+],"
-							+ " before starting to deliver a series of firm spanks to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.pussy+]中，又对着那[npc2.ass+]饶有兴趣地揉搓起来，"
+							+ "接着就在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				} else {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.pussy+], [npc.name] playfully [npc.verb(grab)] the base of [npc2.her] [npc2.tail+] and [npc.verb(pull)] upwards,"
-									+ " raising [npc2.her] [npc2.ass+] up high in the air before starting to deliver a series of firm spanks to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.pussy+]中，又饶有趣味地揪住[npc2.her][npc2.tail+]根，朝上提了起来，"
+									+ "让那[npc2.ass+]抬得高高抬起，接着在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				}
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.pussy+], [npc.name] [npc.moansVerb] that [npc.sheIs] going to put [npc2.name] in [npc2.her] place,"
-							+ " before starting to make good on [npc.her] threat by playfully slapping [npc2.her] exposed ass cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.pussy+]里来回抽插，嘴里还不断[npc.moansVerb]着说，要让[npc.sheIs]明白自己的地位，"
+							+ "紧接着行动起来，颇有情趣地在[npc2.her]光溜溜的屁股上拍了一下。";
 				} else {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.pussy+], [npc.name] [npc.verb(grab)] the base of [npc2.namePos] [npc2.tail+] in one [npc.hand],"
-										+ " before playfully pulling [npc2.her] [npc2.ass+] up high in the air and starting to firmly spank [npc2.her] exposed cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.pussy+]里来回抽插，同时一只[npc.hand]抓住了[npc2.namePos][npc2.tail+]根，"
+										+ "颇有情趣地把[npc2.her][npc2.ass+]高高抬起，接着就在[npc2.her]光溜溜的屁股蛋上结结实实地拍了一巴掌。";
 				}
 
 				return UtilText.returnStringAtRandom(
 							tailSpecial1,
 							tailSpecial2,
-							"Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.pussy], [npc.name] [npc.verb(use)] one [npc.hand] to hold [npc2.herHim] still,"
-									+ " while using [npc.her] other to deliver a series of firm spanks to [npc2.her] exposed ass cheeks.",
+							"[npc.Name]将[npc.cock+]深深埋入[npc2.namePos]的[npc2.pussy]中，同时一只[npc.hand]稳稳地把住[npc2.herHim]，"
+									+ "另一只则结结实实地拍打在[npc2.her]露出的屁股蛋上。",
 							isTargetedCharacterInanimate()?null
-								:"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] playfully spanking [npc2.her] [npc2.ass+] in time with [npc.her] thrusts into [npc2.her] [npc2.pussy+].",
+								:"[npc.Name]一面挺身抽插着[npc2.name][npc2.pussy+]，一面玩笑似的拍打着[npc2.ass+]，惹得[npc2.her]不断地发出[npc2.a_moan+]。",
 							isTargetedCharacterInanimate()?null
-								:"While [npc.name] [npc.verb(continue)] pounding away at [npc2.namePos] [npc2.pussy+], [npc.she] [npc.verb(reach)] down and [npc.verb(start)] to playfully slap [npc2.her] [npc2.ass+],"
-									+ " which causes [npc2.herHim] to [npc2.verb(squirm)] and [npc2.verb(squeal)] in response.");
+								:"[npc.name]继续向着[npc2.namePos][npc2.pussy+]内顶撞，同时伸出[npc.hand]来，玩笑似地拍打着[npc2.her][npc2.ass+]，"
+									+ "每来一下都会让[npc2.herHim]扭动着身子，细声呻吟一番作为回应。");
 				
 			} else if (Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(SexAreaPenetration.PENIS)) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(reach)] down and playfully [npc.verb(grope)] [npc2.her] [npc2.ass+],"
-							+ " before starting to deliver a series of firm spanks to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.asshole+]中，又对着那[npc2.ass+]饶有兴趣地揉搓起来，"
+							+ "接着就在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				} else {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.asshole+], [npc.name] playfully [npc.verb(grab)] the base of [npc2.her] [npc2.tail+] and [npc.verb(pull)] upwards,"
-									+ " raising [npc2.her] [npc2.ass+] up high in the air before starting to deliver a series of firm spanks to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.asshole+]中，又饶有趣味地揪住[npc2.her][npc2.tail+]根，朝上提了起来，"
+									+ "让那[npc2.ass+]抬得高高抬起，接着在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				}
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.asshole+], [npc.name] [npc.moansVerb] that [npc.sheIs] going to put [npc2.name] in [npc2.her] place,"
-							+ " before starting to make good on [npc.her] threat by playfully slapping [npc2.her] exposed ass cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.asshole+]里来回抽插，嘴里还不断[npc.moansVerb]着说，要让[npc.sheIs]明白自己的地位，"
+							+ "紧接着行动起来，颇有情趣地在[npc2.her]光溜溜的屁股上拍了一下。";
 				} else {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.asshole+], [npc.name] [npc.verb(grab)] the base of [npc2.namePos] [npc2.tail+] in one [npc.hand],"
-										+ " before playfully pulling [npc2.her] [npc2.ass+] up high in the air and starting to firmly spank [npc2.her] exposed cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.asshole+]里来回抽插，同时一只[npc.hand]抓住了[npc2.namePos][npc2.tail+]根，"
+										+ "颇有情趣地把[npc2.her][npc2.ass+]高高抬起，接着就在[npc2.her]光溜溜的屁股蛋上结结实实地拍了一巴掌。";
 				}
 				
 				return UtilText.returnStringAtRandom(
 							tailSpecial1,
 							tailSpecial2,
-							"Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.asshole], [npc.name] [npc.verb(use)] one [npc.hand] to hold [npc2.herHim] still,"
-								+ " while using [npc.her] other to deliver a series of firm spanks to [npc2.her] exposed ass cheeks.",
+							"[npc.Name]将[npc.cock+]深深埋入[npc2.namePos]的[npc2.asshole]中，同时一只[npc.hand]稳稳地把住[npc2.herHim]，"
+								+ "另一只则结结实实地拍打在[npc2.her]露出的屁股蛋上。",
 							isTargetedCharacterInanimate()?null
-								:"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] playfully spanking [npc2.her] [npc2.ass+] in time with [npc.her] thrusts into [npc2.her] [npc2.asshole+].",
+								:"[npc.Name]一面挺身抽插着[npc2.name][npc2.asshole+]，一面玩笑似地拍打着[npc2.ass+]，惹得[npc2.her]不断地发出[npc2.a_moan+]。",
 							isTargetedCharacterInanimate()?null
-								:"While [npc.name] [npc.verb(continue)] pounding away at [npc2.namePos] [npc2.asshole+], [npc.she] [npc.verb(reach)] down and [npc.verb(start)] to playfully slap [npc2.her] [npc2.ass+],"
-									+ " which causes [npc2.herHim] to [npc2.verb(squirm)] and [npc2.verb(squeal)] in response.");
+								:"[npc.name]继续向着[npc2.namePos][npc2.asshole+]内顶撞，同时伸出[npc.hand]来，玩笑似地拍打着[npc2.her][npc2.ass+]，"
+									+ "每来一下都会让[npc2.herHim]扭动着身子，细声呻吟一番作为回应。");
 				
 			} else {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial1 = "Letting out [npc.a_moan+], [npc.name] [npc.verb(reach)] down and [npc.verb(grab)] [npc2.namePos] waist, using one [npc.hand(true)] to hold [npc2.herHim] still,"
-										+ " while using [npc.her] other to deliver a series of firm spanks to [npc2.her] [npc2.ass+].";
+					tailSpecial1 = "[npc.Name]发出[npc.a_moan+]，用一只[npc.hand(true)]紧紧抓住[npc2.namePos]的腰肢，"
+										+ "另一只则结结实实地拍打在[npc2.her][npc2.ass+]上。";
 				} else {
-					tailSpecial1 = "Letting out [npc.a_moan+], [npc.name] playfully [npc.verb(grab)] the base of [npc2.her] [npc2.tail+] and [npc.verb(pull)] upwards,"
-								+ " raising [npc2.her] [npc2.ass+] up high in the air before starting to deliver a series of firm spanks to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]发出[npc.a_moan+]，饶有趣味地揪住[npc2.her][npc2.tail+]根，朝上提了起来，"
+								+ "让那[npc2.ass+]抬得高高抬起，接着在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				}
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial2 = "[npc.Name] [npc.verb(reach)] down and [npc.verb(grab)] [npc2.namePos] waist with one hand,"
-							+ " holding [npc2.herHim] firmly in [npc.her] grip as [npc.she] [npc.verb(start)] to playfully slap [npc2.her] exposed cheeks.";
+					tailSpecial2 = "[npc.Name]一只[npc.hand]用力紧抓住[npc2.namePos]的腰身，"
+							+ "，对着[npc2.her]光溜溜的屁股情趣地拍打起来。";
 				} else {
 					tailSpecial2 = isTargetedCharacterInanimate()?null
-									:"[npc.Name] [npc.verb(reach)] down and [npc.verb(grab)] the base of [npc2.namePos] [npc2.tail+], causing [npc2.herHim] to let out a surprised yelp as [npc.she] playfully [npc.verb(pull)] upwards,"
-											+ " forcing [npc2.herHim] to push [npc2.her] [npc2.ass+] up high in the air as [npc.name] [npc.verb(start)] to firmly spank [npc2.her] exposed cheeks.";
+									:"[npc.Name]忽然攥住[npc2.namePos][npc2.tail+]的尾巴根，吓得[npc2.herHim]惊叫一声，随后就抓着朝上提了起来，"
+											+ "强行让[npc2.herHim]把[npc2.ass+]高高抬起在空中，接着[npc.name]就在[npc2.her]光溜溜的屁股蛋上结结实实地拍了一巴掌。";
 				}
 			
 				return UtilText.returnStringAtRandom(
 							tailSpecial1,
 							tailSpecial2,
-							"[npc.Name] [npc.verb(use)] one [npc.hand] to hold [npc2.name] still, while using [npc.her] other to deliver a series of firm spanks to [npc2.her] exposed ass cheeks.",
+							"[npc.Name]一只[npc.hand]稳稳地把住[npc2.herHim]，另一只则结结实实地拍打在[npc2.her]露出的屁股蛋上。",
 							isTargetedCharacterInanimate()?null
-								:"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] playfully spanking [npc2.her] [npc2.ass+].",
+								:"[npc.Name]玩笑似的拍打着[npc2.ass+]，惹得[npc2.name]不断地发出[npc2.a_moan+]。",
 							isTargetedCharacterInanimate()?null
-								:"[npc.Name] [npc.verb(reach)] down and [npc.verb(start)] to playfully spank [npc2.her] [npc2.ass+], which causes [npc2.herHim] to [npc2.verb(squirm)] and [npc2.verb(squeal)] in response.");
+								:"[npc.name]伸出[npc.hand]来，玩笑似地拍打着[npc2.her][npc2.ass+]，每来一下都会让[npc2.herHim]扭动着身子，细声呻吟一番作为回应。");
 			}
 		}
 	};
@@ -199,12 +199,12 @@ public class SadisticActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Slap ass";
+			return "扇屁股";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Start slapping [npc2.namePos] [npc2.ass+].";
+			return "扇打[npc2.namePos][npc2.ass+]。";
 		}
 
 		@Override
@@ -213,87 +213,87 @@ public class SadisticActions {
 			
 			if (Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(SexAreaPenetration.PENIS)) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.pussy+], [npc.name] [npc.verb(reach)] down and roughly [npc.verb(grope)] [npc2.her] [npc2.ass+],"
-							+ " before starting to deliver a series of stinging slaps to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.pussy+]中，又对着那[npc2.ass+]狠力揉搓起来，"
+							+ "接着就在[npc2.her]光溜溜的屁股蛋痛打了好几巴掌。";
 				} else {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.pussy+], [npc.name] roughly [npc.verb(grab)] the base of [npc2.her] [npc2.tail+] and [npc.verb(yank)] upwards,"
-									+ " raising [npc2.her] [npc2.ass+] up high in the air before starting to deliver a series of stinging slaps to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.pussy+]中，又用力攥住[npc2.her][npc2.tail+]根，朝上一揪，"
+									+ "让[npc2.her][npc2.ass+]不免高高抬起，接着用力在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				}
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.pussy+], [npc.name] [npc.verb(growl)] down that [npc.sheIs] going to put [npc2.name] in [npc2.her] place,"
-							+ " before starting to make good on [npc.her] threat by aggressively slapping [npc2.her] exposed ass cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.pussy+]里来回抽插，嘴里还不断低吼着，要让[npc.sheIs]明白自己的地位，"
+							+ "紧接着行动起来，毫不留情地在[npc2.her]光溜溜的屁股上狠拍了几下。";
 				} else {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.pussy+], [npc.name] [npc.verb(grab)] the base of [npc2.namePos] [npc2.tail+] in one [npc.hand],"
-										+ " roughly yanking [npc2.her] [npc2.ass+] up high in the air before starting to aggressively slap [npc2.her] exposed cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.pussy+]里来回抽插，同时一只[npc.hand]抓住了[npc2.namePos][npc2.tail+]根，"
+										+ "粗暴地把[npc2.her][npc2.ass+]高高揪起来，毫不留情地往[npc2.her]光溜溜地屁股上痛打了一巴掌。";
 				}
 				
 				return UtilText.returnStringAtRandom(
 							tailSpecial1,
 							tailSpecial2,
-							"Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.pussy], [npc.name] [npc.verb(use)] one [npc.hand] to hold [npc2.herHim] still,"
-								+ " while using [npc.her] other to deliver a series of stinging slaps to [npc2.her] exposed ass cheeks.",
+							"[npc.Name]将[npc.cock+]深深埋入[npc2.namePos]的[npc2.pussy]中，同时一只[npc.hand]稳稳地把住[npc2.herHim]，"
+								+ "另一只则结结实实地痛打在[npc2.her]露出的屁股蛋上。",
 							isTargetedCharacterInanimate()?null
-								:"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] slapping [npc2.her] [npc2.ass+] in time with [npc.her] powerful thrusts into [npc2.her] [npc2.pussy+].",
+								:"[npc.Name]一面挺身用力抽插着[npc2.name][npc2.pussy+]，一面玩拍打着[npc2.ass+]，惹得[npc2.her]不断地发出[npc2.a_moan+]。",
 							isTargetedCharacterInanimate()?null
-								:"While [npc.name] [npc.verb(continue)] pounding away at [npc2.namePos] [npc2.pussy+], [npc.she] [npc.verb(reach)] down and [npc.verb(start)] to roughly slap [npc2.her] [npc2.ass+],"
-									+ " growling in glee as [npc2.she] [npc2.verb(squirm)] and [npc2.verb(squeal)] under [npc.her] stinging blows.");
+								:"[npc.name]继续向着[npc2.namePos][npc2.pussy+]内顶撞，同时伸出[npc.hand]来，狠力拍打着[npc2.her][npc2.ass+]，"
+									+ "愉悦的低哼声从口中漏出，连环的击打让[npc2.herHim]扭动着身子，细声呻吟地回应着。");
 				
 			} else if (Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(SexAreaPenetration.PENIS)) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(reach)] down and roughly [npc.verb(grope)] [npc2.her] [npc2.ass+],"
-							+ " before starting to deliver a series of stinging slaps to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.asshole+]中，又对着那[npc2.ass+]狠力揉搓起来，"
+							+ "接着就在[npc2.her]光溜溜的屁股蛋痛打了好几巴掌。";
 				} else {
-					tailSpecial1 = "Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.asshole+], [npc.name] roughly [npc.verb(grab)] the base of [npc2.her] [npc2.tail+] and [npc.verb(yank)] upwards,"
-										+ " raising [npc2.her] [npc2.ass+] up high in the air before starting to deliver a series of stinging slaps to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]将[npc.cock+]深埋入[npc2.namePos][npc2.asshole+]中，又用力攥住[npc2.her][npc2.tail+]根，朝上一揪，"
+										+ "让[npc2.her][npc2.ass+]不免高高抬起，接着用力在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				}
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.asshole+], [npc.name] [npc.verb(growl)] down that [npc.sheIs] going to put [npc2.name] in [npc2.her] place,"
-							+ " before starting to make good on [npc.her] threat by aggressively slapping [npc2.her] exposed ass cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.asshole+]里来回抽插，嘴里还不断低吼着，要让[npc.sheIs]明白自己的地位，"
+							+ "紧接着行动起来，毫不留情地在[npc2.her]光溜溜的屁股上狠拍了几下。";
 				} else {
-					tailSpecial2 = "Still ploughing away at [npc2.her] [npc2.asshole+], [npc.name] [npc.verb(grab)] the base of [npc2.namePos] [npc2.tail+] in one [npc.hand],"
-										+ " roughly yanking [npc2.her] [npc2.ass+] up high in the air before starting to aggressively slap [npc2.her] exposed cheeks.";
+					tailSpecial2 = "[npc.Name]继续在[npc2.her][npc2.asshole+]里来回抽插，同时一只[npc.hand]抓住了[npc2.namePos][npc2.tail+]根，"
+										+ "粗暴地把[npc2.her][npc2.ass+]高高揪起来，毫不留情地往[npc2.her]光溜溜地屁股上痛打了一巴掌。";
 				}
 			
 				return UtilText.returnStringAtRandom(
 							tailSpecial1,
 							tailSpecial2,
-							"Hilting [npc.her] [npc.cock+] deep inside [npc2.namePos] [npc2.asshole], [npc.name] [npc.verb(use)] one [npc.hand] to hold [npc2.herHim] still,"
-								+ " while using [npc.her] other to deliver a series of stinging slaps to [npc2.her] exposed ass cheeks.",
+							"[npc.Name]将[npc.cock+]深深埋入[npc2.namePos]的[npc2.asshole]中，同时一只[npc.hand]稳稳地把住[npc2.herHim]，"
+								+ "另一只则结结实实地痛打在[npc2.her]露出的屁股蛋上。",
 							isTargetedCharacterInanimate()?null
-								:"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] slapping [npc2.her] [npc2.ass+] in time with [npc.her] powerful thrusts into [npc2.her] [npc2.asshole+].",
+								:"[npc.Name]一面挺身用力抽插着[npc2.name][npc2.asshole+]，一面玩拍打着[npc2.ass+]，惹得[npc2.her]不断地发出[npc2.a_moan+]。",
 							isTargetedCharacterInanimate()?null
-								:"While [npc.name] [npc.verb(continue)] pounding away at [npc2.namePos] [npc2.asshole+], [npc.she] [npc.verb(reach)] down and [npc.verb(start)] to roughly slap [npc2.her] [npc2.ass+],"
-									+ " growling in glee as [npc2.she] [npc2.verb(squirm)] and [npc2.verb(squeal)] under [npc.her] stinging blows.");
+								:"[npc.name]继续向着[npc2.namePos][npc2.asshole+]内顶撞，同时伸出[npc.hand]来，狠力拍打着[npc2.her][npc2.ass+]，"
+									+ "愉悦的低哼声从口中漏出，连环的击打让[npc2.herHim]扭动着身子，细声呻吟地回应着。");
 			
 			} else {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial1 = "Growling down into [npc2.namePos] [npc2.ear+], [npc.name] [npc.verb(reach)] down and [npc.verb(grab)] [npc2.her] waist, using one hand to hold [npc2.herHim] still,"
-										+ " while using [npc.her] other to deliver a series of stinging slaps to [npc2.her] [npc2.ass+].";
+					tailSpecial1 = "[npc.Name]在[npc2.namePos][npc2.ear+]边低吼着，一只[npc.hand(true)]紧紧抓住[npc2.namePos]的腰肢，"
+										+ "另一只则结结实实地痛打在[npc2.her]露出的屁股蛋上。";
 				} else {
-					tailSpecial1 = "Growling down into [npc2.namePos] [npc2.ear], [npc.name] roughly [npc.verb(grab)] the base of [npc2.her] [npc2.tail+] and [npc.verb(yank)] upwards,"
-								+ " raising [npc2.her] [npc2.ass+] up high in the air before starting to deliver a series of stinging slaps to [npc2.her] exposed cheeks.";
+					tailSpecial1 = "[npc.Name]在[npc2.namePos][npc2.ear+]边低吼着，又用力攥住[npc2.her][npc2.tail+]根，朝上一揪，"
+								+ "让[npc2.her][npc2.ass+]不免高高抬起，接着用力在[npc2.her]光溜溜的屁股蛋上连连拍了几个巴掌。";
 				}
 				if(!Main.sex.getCharacterTargetedForSexAction(this).hasTail()) {
-					tailSpecial2 = "[npc.Name] [npc.verb(reach)] down and [npc.verb(grab)] [npc2.namePos] waist with one hand,"
-							+ " holding [npc2.herHim] firmly in [npc.her] grip as [npc.she] [npc.verb(start)] to aggressively slap [npc2.her] exposed cheeks.";
+					tailSpecial2 = "[npc.Name]一只[npc.hand]用力紧抓住[npc2.namePos]的腰身，"
+							+ "，对着[npc2.her]光溜溜的屁股毫不留情的痛打起来。";
 				} else {
 					tailSpecial2 = isTargetedCharacterInanimate()?null
-							:"[npc.Name] [npc.verb(reach)] down and [npc.verb(grab)] the base of [npc2.namePos] [npc2.tail+], causing [npc2.herHim] to let out a surprised yelp as [npc.she] roughly [npc.verb(yank)] upwards,"
-										+ " forcing [npc2.herHim] to push [npc2.her] [npc2.ass+] up high in the air as [npc.name] [npc.verb(start)] to aggressively slap [npc2.her] exposed cheeks.";
+							:"[npc.Name]忽然攥住[npc2.namePos][npc2.tail+]的尾巴根，吓得[npc2.herHim]惊叫一声，随后就揪着一把提了起来，"
+										+ "强行让[npc2.herHim]把[npc2.ass+]高高抬起在空中，接着[npc.name]便在[npc2.her]光溜溜的屁股蛋上狠狠地打了几巴掌。";
 				}
 			
 				return UtilText.returnStringAtRandom(
 							tailSpecial1,
 							tailSpecial2,
 							isTargetedCharacterInanimate()?null
-								:"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] roughly slapping [npc2.her] [npc2.ass+],"
-									+ " and [npc.name] [npc.verb(find)] [npc.herself] grinning in glee as [npc.she] [npc.verb(watch)] [npc2.herHim] squirm and cry out beneath [npc.her] stinging blows.",
+								:"[npc.Name]用力拍打着[npc2.ass+]，惹得[npc2.name]不断地发出[npc2.a_moan+]，"
+									+ "[npc.Name]注意到自己目睹着[npc2.herHim]在痛打下扭动身躯，不断哀嚎的样子时，不禁露出了喜悦的笑容。",
 							isTargetedCharacterInanimate()?null
-								:"[npc2.Name] [npc2.verb(let)] out a startled wail as [npc.name] [npc.verb(start)] to roughly slap [npc2.her] [npc2.ass+],"
-									+ " and [npc.name] quickly [npc.verb(find)] [npc.herself] grinning in glee as [npc.she] [npc.verb(watch)] [npc2.herHim] squirm and wail beneath [npc.her] relentless blows.",
+								:"[npc.Name]开始狠力拍击着[npc2.Name][npc2.ass+]，让[npc2.her]忍不住哀嚎出来，"
+									+ "[npc.Name]立刻注意到自己目睹着[npc2.herHim]在狠击下扭动身躯，不断痛哭的样子时，不禁露出了喜悦的笑容。",
 							isTargetedCharacterInanimate()?null
-								:"[npc.Name] [npc.verb(growl)] down that [npc.sheIs] going to put [npc2.name] in [npc2.her] place, before starting to aggressively slap [npc2.her] [npc2.ass+],"
-									+ " smirking down at [npc2.her] submissive form as [npc2.she] squeals and cries out beneath [npc.her] relentless blows.");
+								:"[npc.Name]从嗓子里发出深沉的吼声，迫不及待地想要将[npc2.name]羞辱一番，于是凶狠地拍打起[npc2.her][npc2.ass+]，"
+									+ "当看到[npc2.she]在狠击下扭动身躯，不断哀嚎，露出顺从的样子，[npc.name]不禁露出一抹窃笑。");
 			}
 		}
 	};
@@ -340,12 +340,12 @@ public class SadisticActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Slap face";
+			return "扇耳光";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Slap [npc2.namePos] face to put [npc2.herHim] in [npc2.her] place.";
+			return "扇[npc2.namePos]的耳光，令其屈服。";
 		}
 		
 		@Override
@@ -358,40 +358,40 @@ public class SadisticActions {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append(UtilText.returnStringAtRandom(
-					"Wanting to put [npc2.name] in [npc2.her] place, [npc.name] [npc.verb(lift)] [npc.her] [npc.hand], before swinging down to deliver a sharp, stinging slap to [npc2.her] face.",
-					"Lifting [npc.her] [npc.hand], [npc.name] [npc.verb(swing)] down, delivering a sharp slap to [npc2.namePos] face in order to put [npc2.herHim] in [npc2.her] place.",
-					"Seeking to remind [npc2.name] who's in charge, [npc.name] [npc.verb(raise)] [npc.her] [npc.hand], before swiping down and delivering a sharp slap to [npc2.her] face."));
+					"为了让[npc2.name]摆正位置，[npc.name]举起[npc.hand]便横扫过去，在[npc2.her]的脸上狠狠地打了一巴掌。",
+					"[npc.Name]抬起[npc.hand]便挥扫过去，向着[npc2.namePos]的脸送上了一击响亮的耳光，来让[npc2.her]摆正位置。",
+					"[npc.Name]为了提醒[npc2.name]谁才是主导者，抬起[npc.hand]便挥舞了过去，在[npc2.her]的脸上狠狠地打了一巴掌。"));
 			
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A clearly aroused yelp escapes from [npc2.namePos] mouth at the moment of contact, letting [npc.name] know that [npc2.sheIs] deriving masochistic pleasure from being abused in such a fashion.",
-							" The horny squeal that escapes [npc2.namePos] mouth is enough to let anyone realise that [npc2.sheIs] getting turned on from being treated in such a degrading manner.",
-							" Instead of a painful cry, [npc2.name] [npc2.verb(let)] out a horny moan, letting [npc.name] know that [npc2.sheIs] a masochist who's getting turned on by being abused like this."));
+							"肉体相接之际，[npc2.name]顿时发出一声情欲的高喊，也让[npc.name]明白了[npc2.sheIs]受到此等虐待，反而在受虐中感受到了快感。",
+							"一阵浪叫脱口而出，任谁也能明白[npc2.name]受到如此有辱人格的行为反而会格外兴奋。",
+							"[npc2.name]口中冒出的不是痛叫，反而是饥渴的呻吟，也让[npc.name]明白[npc2.sheIs]是个受虐狂，受到如此虐待反而觉得兴奋。"));
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isFeminine()) {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting yelp escapes from [npc2.namePos] mouth at the moment of contact,"
+								"肉体相接后，[npc2.namePos]口中顿时冒出一声抗拒的尖叫，"
 										+ (Main.sex.getCharacterPerformingAction().isPlayer()
-												?" which is precisely the reaction you were looking for."
-												:" and from the wicked grin that settles on [npc.namePos] face, this was just the reaction [npc.she] [npc.was] looking for."),
-								" The pained squeal which immediately escapes from [npc2.namePos] mouth is exactly what [npc.name] [npc.was] looking for, and [npc.she] can't help but grin as [npc.she] [npc.verb(see)] tears well up in"
+												?"正中了你的下怀。"
+												:"[npc.namePos]嘴角微扬，表示这正是[npc.she]期待的行为。"),
+								"痛苦的尖叫脱口而出，这正中了[npc.name]的下怀，带着阴险的笑容，注视着"
 										+ (Main.sex.getCharacterTargetedForSexAction(this).isPlayer()
-												?" your [npc2.eyes+]."
-												:" [npc.her] submissive bitch's [npc2.eyes+]."),
-								" After letting out a shocked cry, tears start to well up in [npc2.namePos] [npc2.eyes], letting [npc.name] know that [npc.her] abuse is having the exact effect [npc.she] [npc.was] looking for."));
+												?"你[npc2.eyes+]中溢出泪水。"
+												:"[npc.her]那顺服婊子[npc2.eyes+]中溢出泪水。"),
+								"[npc2.namePos]惊呼一声，泪水一下子溢了出来，[npc.name]也得知此番虐待的效果正中了[npc.her]的下怀。"));
 						
 					} else {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting shout escapes from [npc2.namePos] mouth at the moment of contact,"
+								"肉体相接后，[npc2.namePos]口中顿时冒出一声抗拒的喊叫，"
 										+ (Main.sex.getCharacterPerformingAction().isPlayer()
-												?" which is precisely the reaction you were looking for."
-												:" and from the wicked grin that settles on [npc.namePos] face, this was just the reaction [npc.she] [npc.was] looking for."),
-								" The pained exclamation which immediately escapes from [npc2.namePos] mouth is exactly what [npc.name] [npc.was] looking for, and [npc.she] can't help but grin as [npc.she] [npc.verb(see)] the shocked look in"
+												?"正中了你的下怀。"
+												:"[npc.namePos]嘴角微扬，表示这正是[npc.she]期待的行为。"),
+								"痛苦的喊叫脱口而出，这正中了[npc.name]的下怀，[npc.she]带着阴险的笑容，注视着"
 										+ (Main.sex.getCharacterTargetedForSexAction(this).isPlayer()
-												?" your [npc2.eyes+]."
-												:" [npc.her] submissive bitch's [npc2.eyes+]."),
-								" [npc2.Name] immediately [npc2.verb(let)] out a shocked cry, revealing to [npc.name] that [npc.her] abuse is having the exact effect [npc.she] [npc.was] looking for."));	
+												?"你[npc2.eyes+]中震惊的神情。"
+												:"[npc.her]那顺服婊子[npc2.eyes+]中震惊的神情。"),
+								"[npc2.Name]立刻就发出了一声尖叫，[npc.name]于是得知此番虐待的效果正中了[npc.her]的下怀"));	
 					}
 				}
 			}
@@ -444,12 +444,12 @@ public class SadisticActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Spit in face";
+			return "在脸上吐口水";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Spit in [npc2.namePos] face show [npc2.herHim] that [npc2.sheIs] worthless.";
+			return "在[npc2.namePos]的脸上吐口水，将[npc2.herHim]贬低得一文不值。";
 		}
 		
 		@Override
@@ -462,40 +462,40 @@ public class SadisticActions {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append(UtilText.returnStringAtRandom(
-					"Wanting to show [npc2.name] that [npc2.sheIs] a worthless bitch, [npc.name] [npc.verb(lean)] in towards [npc2.herHim], before spitting on [npc2.her] face.",
-					"Leaning in towards [npc2.name], [npc.name] [npc.verb(purse)] [npc.her] [npc.lips+], before spitting directly on [npc2.her] face.",
-					"Seeking to remind [npc2.name] of how worthless [npc2.sheIsFull], [npc.name] [npc.verb(lean)] in towards [npc2.herHim], before pursing [npc.her] [npc.lips+] and spitting directly on [npc2.her] face."));
+					"[npc.Name]打算让[npc2.name]知道自己不过是个一文不值的婊子，便稍稍伏下身子，在[npc2.her]的脸颊上吐了一口唾沫。",
+					"[npc.Name]倾身向着[npc2.name]，撅起[npc.lips+]，一口唾沫直接吐到了[npc2.her]脸上。",
+					"[npc.Name]为了让[npc2.name]记起自己有多么低贱，身体微微前倾，撅起[npc.lips+]朝着[npc2.her]脸上吐了一口口水。"));
 
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A clearly aroused [npc2.moan] escapes from [npc2.namePos] mouth as the ball of saliva splatters onto [npc2.her] cheek, letting [npc.name] know that [npc2.sheIs] deriving masochistic pleasure from being abused in such a fashion.",
-							" The horny squeal that escapes [npc2.namePos] mouth is enough to let anyone realise that [npc2.sheIs] getting turned on from being treated in such a degrading manner.",
-							" Instead of a disgusted cry, [npc2.name] [npc2.verb(let)] out a horny [npc2.moan], letting [npc.name] know that [npc2.sheIs] a masochist who's getting turned on by being abused like this."));
+							"那滩唾沫溅到脸颊上时，[npc2.namePos]却发出一声响亮的[npc2.moan]，让[npc.name]明白[npc2.sheIs]受到此等侮辱，反而感受到了快感。",
+							"一阵浪叫脱口而出，任谁也能明白[npc2.name]受到如此有辱人格的行为反而会格外兴奋。",
+							"[npc2.name]并没有恶心得叫出来，反而饥渴地[npc2.moan]着，也让[npc.name]明白[npc2.sheIs]是个受虐狂，受到如此侮辱反而觉得兴奋。"));
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isFeminine()) {
 						sb.append(UtilText.returnStringAtRandom(
-								" A disgusted cry escapes from [npc2.namePos] mouth as the ball of saliva splatters onto [npc2.her] cheek,"
+								"那滩唾沫砸在脸颊上时，[npc2.name]一下子恶心得叫了出来，"
 										+ (Main.sex.getCharacterPerformingAction().isPlayer()
-												?" which is precisely the reaction you were looking for."
-												:" and from the wicked grin that settles on [npc.namePos] face, this was just the reaction [npc.she] [npc.was] looking for."),
-								" The horrified protestations which [npc2.name] immediately [npc2.verb(make)] is exactly what [npc.name] [npc.was] looking for, and [npc.she] can't help but grin as [npc.she] [npc.verb(see)] tears well up in"
+												?"正中了你的下怀。"
+												:"[npc.namePos]嘴角微扬，表示这正是[npc.she]期待的行为。"),
+								"[npc2.name]恐惧地拒绝起来，而这却正是[npc.name]期待的结果，[npc.she]不禁露出一抹笑意，注视着"
 										+ (Main.sex.getCharacterTargetedForSexAction(this).isPlayer()
-												?" your [npc2.eyes+]."
-												:" [npc.her] submissive bitch's [npc2.eyes+]."),
-								" After letting out a shocked cry, tears start to well up in [npc2.namePos] [npc2.eyes], letting [npc.name] know that [npc.her] abuse is having the exact effect [npc.she] [npc.was] looking for."));
+												?"你[npc2.eyes+]中溢出泪水。"
+												:"[npc.her]那顺服婊子[npc2.eyes+]中溢出泪水。"),
+								"[npc2.namePos]惊呼一声，泪水一下子溢了出来，[npc.name]也得知此番虐待的效果正中了[npc.her]的下怀。"));
 						
 					} else {
 						sb.append(UtilText.returnStringAtRandom(
-								" A disgusted cry escapes from [npc2.namePos] mouth as the ball of saliva splatters onto [npc2.her] cheek,"
+								"那滩唾沫砸在脸颊上时，[npc2.name]一下子恶心得叫了出来，"
 										+ (Main.sex.getCharacterPerformingAction().isPlayer()
-												?" which is precisely the reaction you were looking for."
-												:" and from the wicked grin that settles on [npc.namePos] face, this was just the reaction [npc.she] [npc.was] looking for."),
-								" The horrified protestations which [npc2.name] immediately [npc2.verb(make)] is exactly what [npc.name] [npc.was] looking for, and [npc.she] can't help but grin as [npc.she] [npc.verb(see)] the shocked look in"
+												?"正中了你的下怀。"
+												:"[npc.namePos]嘴角微扬，表示这正是[npc.she]期待的行为。"),
+								"[npc2.name]恐惧地连连拒绝，而这却正是[npc.name]期待的结果，[npc.she]不禁露出一抹笑意，注视着"
 										+ (Main.sex.getCharacterTargetedForSexAction(this).isPlayer()
-												?" your [npc2.eyes+]."
-												:" [npc.her] submissive bitch's [npc2.eyes+]."),
-								" [npc2.Name] immediately [npc2.verb(let)] out a shocked cry, revealing to [npc.name] that [npc.her] abuse is having the exact effect [npc.she] [npc.was] looking for."));	
+												?"你[npc2.eyes+]中震惊的神情。"
+												:"[npc.her]那顺服婊子[npc2.eyes+]中震惊的神情。"),
+								"[npc2.Name]立刻就发出了一声尖叫，[npc.name]于是得知此番虐待的效果正中了[npc.her]的下怀"));	
 					}
 				}
 			}
@@ -543,12 +543,12 @@ public class SadisticActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Choke";
+			return "窒息";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Grab and squeeze [npc2.namePos] neck in order to choke [npc2.herHim].";
+			return "掐住[npc2.namePos]的脖子，让[npc2.herHim]窒息。";
 		}
 		
 		@Override
@@ -562,55 +562,55 @@ public class SadisticActions {
 			
 			if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS).contains(Main.sex.getCharacterPerformingAction())) {
 				sb.append(UtilText.returnStringAtRandom(
-						"Continuing to ram [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2.pussy+], [npc.name] [npc.verb(reach)] up to grab [npc2.her] neck, before squeezing down and choking [npc2.herHim].",
-						"[npc.Name] [npc.verb(reach)] up to grab [npc2.namePos] neck, and, while still forcefully pounding [npc2.her] [npc2.pussy+], [npc.she] roughly [npc.verb(squeeze)] down in order to choke [npc2.herHim].",
-						"Slamming [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.pussy+], [npc.name] [npc.verb(reach)] up and [npc.verb(grab)] [npc2.her] neck,"
-								+ " squeezing down and choking [npc2.herHim] as [npc.she] [npc.verb(pull)] back and [npc.verb(continue)] roughly fucking [npc2.herHim]."));
+						"[npc.Name]依旧不停的将[npc.cock+]轰入[npc2.namePos][npc2.pussy+]，同时又掐住了[npc2.her]的脖子，用力让[npc2.herHim]窒息起来。",
+						"[npc.Name]一把攥住了[npc2.namePos]的脖子，同时依旧暴力地向着[npc2.her][npc2.pussy+]内顶撞，再用力狠狠地掐起来，让[npc2.herHim]逐渐窒息。",
+						"[npc.Name]先是将[npc.cock+]深深顶进[npc2.namePos][npc2.pussy+]中，又掐住了[npc2.her]的脖子，"
+								+ "逐渐用力让[npc2.herHim]窒息，最后又继续粗暴地抽插起来。"));
 				
 			} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS, SexAreaPenetration.PENIS).contains(Main.sex.getCharacterPerformingAction())) {
 				sb.append(UtilText.returnStringAtRandom(
-						"Continuing to ram [npc.her] [npc.cock+] in and out of [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(reach)] up to grab [npc2.her] neck, before squeezing down and choking [npc2.herHim].",
-						"[npc.Name] [npc.verb(reach)] up to grab [npc2.namePos] neck, and, while still forcefully pounding [npc2.her] [npc2.asshole+], [npc.she] roughly [npc.verb(squeeze)] down in order to choke [npc2.herHim].",
-						"Slamming [npc.her] [npc.cock+] deep into [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(reach)] up and [npc.verb(grab)] [npc2.her] neck,"
-								+ " squeezing down and choking [npc2.herHim] as [npc.she] [npc.verb(pull)] back and [npc.verb(continue)] roughly fucking [npc2.herHim]."));
+						"[npc.Name]仍不断将[npc.cock+]在[npc2.namePos][npc2.asshole+]里猛烈抽送着，又伸出[npc.hand]掐住了[npc2.her]的脖子，逐渐让[npc2.herHim]窒息。",
+						"[npc.Name]一把攥住了[npc2.namePos]的脖子，同时依旧暴力地向着[npc2.her][npc2.asshole+]内顶撞，再用力狠狠地掐起来，让[npc2.herHim]逐渐窒息。",
+						"[npc.Name]先是将[npc.cock+]深深顶进[npc2.namePos][npc2.asshole+]中，又掐住了[npc2.her]的脖子，"
+								+ "逐渐用力让[npc2.herHim]窒息，最后又继续粗暴地抽插起来。"));
 				
 			} else {
 				sb.append(UtilText.returnStringAtRandom(
-						"With a sadistic grin on [npc.her] face, [npc.name] [npc.verb(reach)] up to grab [npc2.name] by [npc2.her] neck, before squeezing down and choking [npc2.herHim].",
-						"[npc.Name] [npc.verb(reach)] up to grab [npc2.namePos] neck, and, letting out a sadistic laugh, [npc.she] roughly [npc.verb(squeeze)] down in order to choke [npc2.herHim].",
-						"With a cruel laugh, [npc.name] [npc.verb(reach)] up and [npc.verb(grab)] [npc2.name] by [npc2.her] neck, before sadistically squeezing down and choking [npc2.herHim]."));
+						"[npc.Name]的脸上不禁浮现出一抹施虐的狠笑，伸出[npc.hand]掐住了[npc2.name]的脖子，接着逐渐用力，让[npc2.herHim]窒息起来。",
+						"[npc.Name]攥住了[npc2.namePos]的脖子，一阵凶狠的笑声从口中传出，[npc.she]随后狠狠地掐了起来，让[npc2.herHim]逐渐窒息。",
+						"伴随着一声残忍的笑声，[npc.name]掐住了[npc2.name]的脖子，越掐越兴奋，让[npc2.herHim]窒息了。"));
 			}
 
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" The gargled spluttering sounds which [npc2.name] [npc2.verb(start)] to make in response have a distinctly lewd quality to them, letting [npc.name] know that [npc2.sheIs] being turned on by this abuse.",
-							" The horny, gargled [npc2.moans] which [npc2.name] immediately [npc2.verb(start)] to produce are more than enough to let anyone realise that [npc2.sheIs] a masochist, and is getting aroused by this poor treatment.",
-							" The spluttering gasps which [npc2.name] [npc2.verb(begin)] to emit are intermingled with several horny [npc2.moans], letting [npc.name] know that [npc2.sheIs] deriving masochistic pleasure from being abused in such a fashion."));
+							"[npc2.name]发出“咕噜咕噜”声，明显淫靡地回应着动作，[npc.Name]明白[npc2.name]很享受被这般虐待。",
+							"[npc2.name]发出的、下流且咕噜噜的[npc2.moans]足够让人意识到[npc2.sheIs]是个受虐狂，正因遭受差劲的对待而性起。",
+							"[npc2.name]发出的急促喘息声与几声淫靡的[npc2.moans]混合在一起，[npc.Name]知道[npc2.sheIs]能以这种方式从受虐中获得快感。"));
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isFeminine()) {
 						sb.append(UtilText.returnStringAtRandom(
-								" A series of gargled spluttering noises escape from [npc2.namePos] mouth,"
+								"[npc2.namePos]口中传出一阵“咕噜咕噜”的水声，"
 										+ (Main.sex.getCharacterPerformingAction().isPlayer()
-												?" which is precisely the reaction you were looking for."
-												:" and from the wicked grin that settles on [npc.namePos] face, this was just the reaction [npc.she] [npc.was] looking for."),
-								" The distressed, gargled cries which [npc2.name] [npc2.verb(start)] to make are exactly what [npc.name] [npc.was] looking for, and [npc.she] can't help but grin as [npc.she] [npc.verb(see)] tears well up in"
+												?"正中了你的下怀。"
+												:"[npc.namePos]嘴角微扬，表示这正是[npc.she]期待的行为。"),
+								"[npc2.name]哽咽的哭号正是[npc.Name]想要的，[npc.she]看到"
 										+ (Main.sex.getCharacterTargetedForSexAction(this).isPlayer()
-												?" your [npc2.eyes+]."
-												:" [npc.her] submissive bitch's [npc2.eyes+]."),
-								" Letting out a series of spluttering gasps, tears quickly start to well up in [npc2.namePos] [npc2.eyes], letting [npc.name] know that [npc.her] abuse is having the exact effect [npc.she] [npc.was] looking for."));
+												?"泪水从你[npc2.eyes+]中溢出，便情不自禁地笑起来。"
+												:"泪水[npc.her]那顺服婊子[npc2.eyes+]中溢出，便情不自禁地笑起来。"),
+								"[npc2.namePos]大口大口地喘着气，泪水一下子溢了出来，[npc.name]也得知此番虐待的效果正中了[npc.her]的下怀。"));
 						
 					} else {
 						sb.append(UtilText.returnStringAtRandom(
-								" A series of gargled spluttering noises escape from [npc2.namePos] mouth,"
+								"[npc2.namePos]口中传出一阵“咕噜咕噜”的水声，"
 										+ (Main.sex.getCharacterPerformingAction().isPlayer()
-												?" which is precisely the reaction you were looking for."
-												:" and from the wicked grin that settles on [npc.namePos] face, this was just the reaction [npc.she] [npc.was] looking for."),
-								" The distressed, gargled cries which [npc2.name] immediately [npc2.verb(make)] is exactly what [npc.name] [npc.was] looking for, and [npc.she] can't help but grin as [npc.she] [npc.verb(see)] the shocked look in"
+												?"正中了你的下怀。"
+												:"[npc.namePos]嘴角微扬，表示这正是[npc.she]期待的行为。"),
+								"[npc2.name]哽咽的哭号正是[npc.Name]想要的，[npc.she]看到"
 										+ (Main.sex.getCharacterTargetedForSexAction(this).isPlayer()
-												?" your [npc2.eyes+]."
-												:" [npc.her] submissive bitch's [npc2.eyes+]."),
-								" [npc2.Name] immediately [npc2.verb(let)] out a spluttering gasp, revealing to [npc.name] that [npc.her] abuse is having the exact effect [npc.she] [npc.was] looking for."));	
+												?"你[npc2.eyes+]中震惊的神情，不禁笑起来。"
+												:"顺服婊子[npc2.eyes+]中震惊的神情，不禁笑起来。"),
+								"[npc2.Name]立刻嘶哑地喘息起来，流露出[npc.Name]的辱骂达到了[npc.she]想要的效果。"));	
 					}
 				}
 			}
@@ -659,11 +659,11 @@ public class SadisticActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Slap pussy";
+			return "扇小穴";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Give [npc2.namePos] pussy a few sharp slaps.";
+			return "对着[npc2.namePos]的小穴一阵扇打。";
 		}
 		@Override
 		public SexActionCategory getCategory() {
@@ -674,28 +674,28 @@ public class SadisticActions {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append(UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(tease)] [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.pussy+], before suddenly delivering a series of sharp, painful slaps to [npc2.her] feminine sex.",
-					"Dropping [npc.her] [npc.hand] down to [npc2.namePos] groin, [npc.name] [npc.verb(start)] roughly slapping [npc2.her] [npc2.pussy+].",
-					"Reaching down to [npc2.namePos] groin, [npc.name] forcefully [npc.verb(grope)] [npc2.herHim] for a moment, before suddenly delivering a series of sharp slaps to [npc2.her] [npc2.pussy+]."));
+					"[npc.Name]用[npc.fingers+]挑逗着[npc2.namePos][npc2.pussy+]，然后突然对着[npc2.her]的女性器来了一连串猛烈而痛苦的扇打。",
+					"[npc.Name]用[npc.hand]探向[npc2.namePos]的下体，开始粗暴地扇打[npc2.her][npc2.pussy+]。",
+					"[npc.Name]探向[npc2.namePos]的下体，激烈地揉弄了[npc2.herHim]一段时间，然后突然对着[npc2.her][npc2.pussy+]来了一连串猛烈的扇打。"));
 			
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A clearly aroused yelp escapes from [npc2.namePos] mouth at the moment of contact, letting [npc.name] know that [npc2.sheIs] deriving masochistic pleasure from having [npc2.her] [npc2.pussy] slapped.",
-							" The horny squeal that escapes [npc2.namePos] mouth is enough to let anyone realise that [npc2.sheIs] getting turned on from having [npc2.her] [npc2.pussy] abused.",
-							" Instead of a painful cry, [npc2.name] [npc2.verb(let)] out a horny moan, letting [npc.name] know that [npc2.sheIs] a masochist who's getting turned on by having [npc.her] [npc2.pussy] slapped."));
+							"肉体相接之际，[npc2.name]顿时发出一声情欲的高喊，也让[npc.name]明白了[npc2.her]的[npc2.pussy]受到此等虐待，反而在扇打中感受到了快感。",
+							"一阵浪叫脱口而出，任谁也能明白[npc2.namePos]的[npc2.pussy]受到如此虐待反而会让[npc2.sheIs]格外兴奋。",
+							"[npc2.name]口中冒出的不是痛叫，反而是饥渴的呻吟，也让[npc.name]明白[npc2.sheIs]是个受虐狂，[npc2.pussy]受到扇打反而觉得兴奋。"));
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isFeminine()) {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting yelp escapes from [npc2.namePos] mouth, and [npc2.she] [npc2.verb(squirm)] and [npc2.verb(squeal)] in discomfort as [npc2.her] [npc2.pussy] is continuously slapped.",
-								" [npc2.Name] [npc2.verb(writhe)] around under the painful blows, and [npc2.verb(let)] out a series of pained shrieks as [npc2.her] [npc2.pussy] is subjected to [npc.namePos] abuse.",
-								" After letting out a shocked cry, tears well up in [npc2.namePos] [npc2.eyes] as [npc2.she] [npc2.verb(struggle)] and [npc2.verb(cry)] for [npc.name] to stop slapping [npc2.her] [npc2.pussy]."));
+								"[npc2.namePos]的口中发出一声抗拒的尖叫，[npc2.she]不适地扭动呼喊着，但[npc2.her]的[npc2.pussy]依然被继续扇打。",
+								"[npc2.Name]在令人疼痛的打击下来回扭动着，发出一阵痛苦的尖叫，[npc2.her]的[npc2.pussy]正遭受着[npc.namePos]的虐待。",
+								"[npc2.name]惊呼一声，泪水顿时从[npc2.eyes]中溢出，[npc2.she]挣扎着乞求[npc.name]停止扇打[npc2.her]的[npc2.pussy]。"));
 						
 					} else {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting growl escapes from [npc2.namePos] mouth, and [npc2.she] [npc2.verb(squirm)] and [npc2.verb(grunt)] in discomfort as [npc2.her] [npc2.pussy] is continuously slapped.",
-								" [npc2.Name] [npc2.verb(writhe)] around under the painful blows, and [npc2.verb(let)] out a series of pained grunts as [npc2.her] [npc2.pussy] is subjected to [npc.namePos] abuse.",
-								" After letting out a shocked cry, [npc2.name] [npc2.verb(struggle)] and [npc2.verb(shout)] for [npc.name] to leave [npc2.her] [npc2.pussy] alone."));
+								"[npc2.namePos]的口中发出一声抗拒的低吼，[npc2.she]不适地扭动呜咽着，但[npc2.her]的[npc2.pussy]依然被继续扇打。",
+								"[npc2.Name]在令人疼痛的打击下来回扭动着，发出一阵痛苦的呜咽，[npc2.her]的[npc2.pussy]正遭受着[npc.namePos]的虐待。",
+								"[npc2.name]惊呼一声，[npc2.she]挣扎喊叫着，要求[npc.name]放过自己的[npc2.pussy]。"));
 					}
 				}
 			}
@@ -740,11 +740,11 @@ public class SadisticActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Pinch clit";
+			return "捏阴蒂";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Cruelly pinch [npc2.namePos] [npc.clit+].";
+			return "残暴地拧捏[npc2.namePos][npc.clit+]。";
 		}
 		@Override
 		public SexActionCategory getCategory() {
@@ -755,28 +755,28 @@ public class SadisticActions {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append(UtilText.returnStringAtRandom(
-					"[npc.NamePos] [npc.fingers+] home in on [npc2.namePos] [npc2.pussy+], and without warning [npc.she] [npc.verb(start)] to painfully pinch and cruelly flick [npc2.her] [npc2.clit+].",
-					"After dominantly pushing [npc.her] [npc.hand] into [npc2.namePos] groin, [npc.name] suddenly [npc.verb(pinch)] [npc2.her] [npc2.clit+] hard, before forcefully flicking it several times in quick succession.",
-					"Reaching down to [npc2.namePos] groin, [npc.name] [npc.verb(give)] [npc2.her] [npc2.clit+] a few rough flicks, before painfully pinching and tugging at it."));
+					"[npc.NamePos][npc.fingers+]对准了[npc2.namePos][npc2.pussy+]，然后毫无预兆地开始残忍地拧捏弹弄[npc2.her][npc2.clit+]。",
+					"[npc.Name]支配地将[npc.hand]按向[npc2.namePos]的下体，突然开始使劲拧捏[npc2.her][npc2.clit+]，然后快速地连续用力弹了几下。",
+					"[npc.Name]探向[npc2.namePos]的下体，对着[npc2.her][npc2.clit+]粗暴地弹了几下，然后残忍地拧捏拉扯着它。"));
 			
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A lewd [npc.moan] bursts out from [npc.namePos] mouth, letting [npc2.name] know that [npc.sheIs] deriving masochistic pleasure from having [npc2.her] [npc2.clit] abused.",
-							" The horny [npc.moan] which explodes from [npc2.namePos] mouth is enough to let anyone realise that [npc2.sheIs] getting turned on from having [npc2.her] [npc2.clit] punished.",
-							" Instead of a painful cry, [npc2.name] [npc2.verb(let)] out a horny moan, making it obvious that [npc2.sheIs] a masochist who's getting turned on by having [npc.her] [npc2.clit] abused."));
+							"[npc2.namePos]口中爆发出一声淫荡的[npc2.moan]，也让[npc.name]明白了[npc2.her]的[npc2.clit]受到此等虐待，反而在拧捏中感受到了快感。",
+							"一阵[npc2.moan]脱口而出，任谁也能明白[npc2.namePos]的[npc2.clit]受到如此虐待反而会让[npc2.sheIs]格外兴奋。",
+							"[npc2.name]口中冒出的不是痛叫，反而是饥渴的呻吟，很明显[npc2.sheIs]是个受虐狂，[npc2.clit]受到虐待反而觉得兴奋。"));
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isFeminine()) {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting cry bursts out from [npc2.namePos] mouth, and [npc2.she] [npc2.verb(squirm)] and [npc2.verb(squeal)] in pain as [npc2.her] [npc2.clit] is roughly abused.",
-								" [npc2.Name] [npc2.verb(writhe)] around under this painful treatment, and [npc2.verb(let)] out a series of protesting shrieks as [npc2.her] [npc2.clit] is subjected to [npc.namePos] abuse.",
-								" After letting out a shocked cry, tears well up in [npc2.namePos] [npc2.eyes] as [npc2.she] [npc2.verb(struggle)] and [npc2.verb(cry)] for [npc.name] to stop punishing [npc2.her] [npc2.clit]."));
+								"[npc2.namePos]的口中爆发出抗拒的哭号，[npc2.she]痛苦地扭动呼喊着，但[npc2.her]的[[npc2.clit]依然被粗暴虐待。",
+								"[npc2.Name]在令人疼痛的虐待下来回扭动着，发出一阵抗拒的尖叫，[npc2.her]的[npc2.clit]正遭受着[npc.namePos]的虐待。",
+								"[npc2.name]惊呼一声，泪水顿时从[npc2.eyes]中溢出，[npc2.she]挣扎着乞求[npc.name]停止惩罚[npc2.her]的[npc2.clit]。"));
 						
 					} else {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting growl escapes from [npc2.namePos] mouth, and [npc2.she] [npc2.verb(squirm)] and [npc2.verb(grunt)] in discomfort as [npc2.her] [npc2.clit] is roughly abused.",
-								" [npc2.Name] [npc2.verb(writhe)] around under this painful treatment, and [npc2.verb(let)] out a series of protesting grunts as [npc2.her] [npc2.clit] is subjected to [npc.namePos] abuse.",
-								" After letting out a shocked cry, [npc2.name] [npc2.verb(struggle)] and [npc2.verb(shout)] for [npc.name] to leave [npc2.her] [npc2.clit] alone."));
+								"[npc2.namePos]的口中发出一声抗拒的低吼，[npc2.she]不适地扭动呜咽着，但[npc2.her]的[npc2.clit]依然被粗暴虐待。",
+								"[npc2.Name]在令人疼痛的虐待下来回扭动着，发出一阵抗拒的呜咽，[npc2.her]的[npc2.clit]正遭受着[npc.namePos]的虐待。",
+								"[npc2.name]惊呼一声，[npc2.she]挣扎喊叫着，要求[npc.name]放过自己的[npc2.clit]。"));
 					}
 				}
 			}
@@ -825,11 +825,11 @@ public class SadisticActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Slap cock";
+			return "扇鸡巴";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Punish [npc2.namePos] cock by giving it several sharp slaps.";
+			return "惩罚[npc2.namePos]的鸡巴，对它一阵扇打。";
 		}
 		@Override
 		public SexActionCategory getCategory() {
@@ -841,35 +841,35 @@ public class SadisticActions {
 
 			if(Main.sex.getCharacterTargetedForSexAction(this).isInternalTesticles()) {
 				sb.append(UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(tease)] [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.cock+], before suddenly delivering a series of sharp, painful slaps to it.",
-						"Dropping [npc.her] [npc.hand] down to [npc2.namePos] groin, [npc.name] [npc.verb(start)] roughly slapping [npc2.her] [npc2.cock+].",
-						"Reaching down to [npc2.namePos] groin, [npc.name] forcefully [npc.verb(grope)] [npc2.her] [npc2.cock+] for a moment, before suddenly delivering a series of sharp slaps to it."));
+						"[npc.Name]用[npc.fingers+]挑逗着[npc2.namePos][npc2.cock+]，然后突然对着它来了一连串猛烈而痛苦的扇打。",
+						"[npc.Name]用[npc.hand]探向[npc2.namePos]的下体，开始粗暴地扇打[npc2.her][npc2.cock+]。",
+						"[npc.Name]探向[npc2.namePos]的下体，激烈地揉弄了[npc2.her][npc2.cock+]一段时间，然后突然对着它来了一连串猛烈的扇打。"));
 				
 			} else {
 				sb.append(UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(tease)] [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.balls+], before suddenly delivering a series of sharp, painful slaps to [npc2.her] [npc2.cock+].",
-						"Dropping [npc.her] [npc.hand] down to [npc2.namePos] groin, [npc.name] [npc.verb(start)] roughly slapping [npc2.her] [npc2.cock+].",
-						"Reaching down to [npc2.namePos] groin, [npc.name] forcefully [npc.verb(grope)] [npc2.her] [npc2.balls+] for a moment, before suddenly delivering a series of sharp slaps to [npc2.her] [npc2.cock+]."));
+						"[npc.Name]用[npc.fingers+]挑逗着[npc2.namePos][npc2.balls+]，然后突然对着[npc2.her][npc2.cock+]来了一连串猛烈而痛苦的扇打。",
+						"[npc.Name]用[npc.hand]探向[npc2.namePos]的下体，开始粗暴地扇打[npc2.her][npc2.cock+]。",
+						"[npc.Name]探向[npc2.namePos]的下体，激烈地揉弄了[npc2.her][npc2.balls+]一段时间，然后突然对着[npc2.her][npc2.cock+]来了一连串猛烈的扇打。"));
 			}
 			
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A clearly aroused yelp escapes from [npc2.namePos] mouth at the moment of contact, letting [npc.name] know that [npc2.sheIs] deriving masochistic pleasure from having [npc2.her] [npc2.cock] slapped.",
-							" The horny squeal that escapes [npc2.namePos] mouth is enough to let anyone realise that [npc2.sheIs] getting turned on from having [npc2.her] [npc2.cock] abused.",
-							" Instead of a painful cry, [npc2.name] [npc2.verb(let)] out a horny moan, letting [npc.name] know that [npc2.sheIs] a masochist who's getting turned on by having [npc.her] [npc2.cock] slapped."));
+							"肉体相接之际，[npc2.name]顿时发出一声情欲的高喊，也让[npc.name]明白了[npc2.her]的[npc2.cock]受到此等虐待，反而在扇打中感受到了快感。",
+							"一阵浪叫脱口而出，任谁也能明白[npc2.namePos]的[npc2.cock]受到如此虐待反而会让[npc2.sheIs]格外兴奋。",
+							"[npc2.name]口中冒出的不是痛叫，反而是饥渴的呻吟，也让[npc.name]明白[npc2.sheIs]是个受虐狂，[npc2.cock]受到扇打反而觉得兴奋。"));
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isFeminine()) {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting yelp escapes from [npc2.namePos] mouth, and [npc2.she] [npc2.verb(squirm)] and [npc2.verb(squeal)] in discomfort as [npc2.her] [npc2.cock] is continuously slapped.",
-								" [npc2.Name] [npc2.verb(writhe)] around under the painful blows, and [npc2.verb(let)] out a series of pained shrieks as [npc2.her] [npc2.cock] is subjected to [npc.namePos] abuse.",
-								" After letting out a shocked cry, tears well up in [npc2.namePos] [npc2.eyes] as [npc2.she] [npc2.verb(struggle)] and [npc2.verb(cry)] for [npc.name] to stop slapping [npc2.her] [npc2.cock]."));
+								"[npc2.namePos]的口中发出一声抗拒的尖叫，[npc2.she]不适地扭动呼喊着，但[npc2.her]的[npc2.cock]依然被继续扇打。",
+								"[npc2.Name]在令人疼痛的打击下来回扭动着，发出一阵痛苦的尖叫，[npc2.her]的[npc2.cock]正遭受着[npc.namePos]的虐待。",
+								"[npc2.name]惊呼一声，泪水顿时从[npc2.eyes]中溢出，[npc2.she]挣扎着乞求[npc.name]停止扇打[npc2.her]的[npc2.cock]。"));
 						
 					} else {
 						sb.append(UtilText.returnStringAtRandom(
-								" A protesting growl escapes from [npc2.namePos] mouth, and [npc2.she] [npc2.verb(squirm)] and [npc2.verb(grunt)] in discomfort as [npc2.her] [npc2.cock] is continuously slapped.",
-								" [npc2.Name] [npc2.verb(writhe)] around under the painful blows, and [npc2.verb(let)] out a series of pained grunts as [npc2.her] [npc2.cock] is subjected to [npc.namePos] abuse.",
-								" After letting out a shocked cry, [npc2.name] [npc2.verb(struggle)] and [npc2.verb(shout)] for [npc.name] to leave [npc2.her] [npc2.cock] alone."));
+								"[npc2.namePos]的口中发出一声抗拒的低吼，[npc2.she]不适地扭动呜咽着，但[npc2.her]的[npc2.cock]依然被继续扇打。",
+								"[npc2.Name]在令人疼痛的打击下来回扭动着，发出一阵痛苦的呜咽，[npc2.her]的[npc2.cock]正遭受着[npc.namePos]的虐待。",
+								"[npc2.name]惊呼一声，[npc2.she]挣扎喊叫着，要求[npc.name]放过自己的[npc2.cock]。"));
 					}
 				}
 			}

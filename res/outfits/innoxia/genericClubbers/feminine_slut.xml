@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Look in the mods folder for a commented version of this. -->
 <outfit>
 	<coreAttributes>
-		<name><![CDATA[slutty clubber (feminine)]]></name>
+		<name><![CDATA[妖艳夜店成员(女性化)]]></name>
 		
-		<description><![CDATA[Feminine slutty clubbing clothing.]]></description>
+		<description><![CDATA[女式妖艳泡吧衣物]]></description>
 		
 		<femininity>FEMININE</femininity>
 		

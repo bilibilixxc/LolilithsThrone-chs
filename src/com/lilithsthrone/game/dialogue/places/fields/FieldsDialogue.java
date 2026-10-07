@@ -41,9 +41,9 @@ public class FieldsDialogue {
 				if(sb.length()>0) {
 					sb.append("<br/>");
 				} else {
-					sb.append("<p style='text-align:center;'>[style.boldBad(Travel Restricted)]<br/>[style.italicsMinorBad(");
+					sb.append("<p style='text-align:center;'>[style.boldBad(旅行受限)]<br/>[style.italicsMinorBad(");
 				}
-				sb.append("You cannot currently travel <b>"+entry.getKey().getName()+"</b> into the "+entry.getValue().getPlace().getName()+"!");
+				sb.append("你现在无法从<b>"+entry.getKey().getName()+"</b>旅行到"+entry.getValue().getPlace().getName()+"！");
 				
 			}
 		}
@@ -66,7 +66,7 @@ public class FieldsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Prepare", "Prepare yourself for whatever is about to appear!", DOMINION_EXTERIOR_FIRST_TIME_LEAVING_MERAXIS);
+				return new Response("严阵以待", "为即将出现的一切做好准备！", DOMINION_EXTERIOR_FIRST_TIME_LEAVING_MERAXIS);
 			}
 			return null;
 		}
@@ -89,14 +89,14 @@ public class FieldsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Decline", "Tell Meraxis that you aren't interested in duelling her.", DOMINION_EXTERIOR_FIRST_TIME_LEAVING_MERAXIS_DECLINED);
+				return new Response("谢绝", "告诉梅拉克西丝，你没兴趣和她对决。", DOMINION_EXTERIOR_FIRST_TIME_LEAVING_MERAXIS_DECLINED);
 				
 			} else if (index == 2) {
 				//TODO chuuni variation
-				return new Response("Accept", "Agree to duel Meraxis.", null);
+				return new Response("接受", "接下与梅拉克西丝的对决。", null);
 				
 			} else if (index == 3) {//TODO need more ways to have sex with Meraxis
-				return new Response("Sex duel", "Offer Meraxis an alternative way to duel; the two of you have sex, and whoever orgasms first loses!", null);
+				return new Response("爱♥决♥斗", "向梅拉克西丝提供另一种决斗方式：两人做爱，谁先达到高潮谁就输了！", null);
 			}
 			return null;
 		}
@@ -118,13 +118,13 @@ public class FieldsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "With Meraxis having given her warning and departed, you're free to continue on your way out into the Fields.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "梅拉克西丝发出警告后就离开了，你可以继续前往田野。", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode DOMINION_EXTERIOR = new DialogueNode("Dominion", "", false) {
+	public static final DialogueNode DOMINION_EXTERIOR = new DialogueNode("御城区", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60 * 60;
@@ -136,7 +136,7 @@ public class FieldsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("City centre", "Head into the centre of Dominion.") {
+				return new ResponseEffectsOnly("市中心", "向着御城区中心进发。") {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(
@@ -154,7 +154,7 @@ public class FieldsDialogue {
 		}
 	};
 	
-	public static final DialogueNode FOLOI_FIELDS = new DialogueNode("Foloi Fields", "", false) {
+	public static final DialogueNode FOLOI_FIELDS = new DialogueNode("弗洛伊田野", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.hasSnowedThisWinter)
@@ -181,7 +181,7 @@ public class FieldsDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().getLocation().increment(0, -1).equals(Main.game.getWorlds().get(WorldType.WORLD_MAP).getCell(PlaceType.WORLD_MAP_DOMINION).getLocation())) {
 				if (index == 1) {
-					return new Response("Depot", "Approach the 'Centaur Carriage Depot' and see if any businesses are still operating out of it.", DialogueManager.getDialogueFromId("innoxia_places_fields_centaur_transport_approach")) {
+					return new Response("车站", "走近“半人马拉车站”，看看是否还有师傅在。", DialogueManager.getDialogueFromId("innoxia_places_fields_centaur_transport_approach")) {
 						@Override
 						public void effects() {
 							Main.game.getPlayerCell().getPlace().setPlaceType(PlaceType.getPlaceTypeFromId("innoxia_fields_centaur_transport"));
@@ -192,8 +192,8 @@ public class FieldsDialogue {
 			} else {
 				if (index == 1) {
 					return new ResponseEffectsOnly(
-							"Explore",
-							"Take some time to explore the fields. Although you don't think you're any more or less likely to find anything by doing this, at least you won't have to keep travelling back and forth..."){
+							"探索",
+							"花点时间探索一下田野。虽然这样应该也找不到什么东西，但至少不必来回奔波……"){
 							@Override
 							public int getSecondsPassed() {
 								return 30*60;
@@ -210,7 +210,7 @@ public class FieldsDialogue {
 		}
 	};
 	
-	public static final DialogueNode FOLOI_FOREST = new DialogueNode("Foloi Forest", "", false) {
+	public static final DialogueNode FOLOI_FOREST = new DialogueNode("弗洛伊森林", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60 * 60;
@@ -240,7 +240,7 @@ public class FieldsDialogue {
 		}
 	};
 	
-	public static final DialogueNode GRASSLAND_WILDERNESS = new DialogueNode("Grassland Wilderness", "", false) {
+	public static final DialogueNode GRASSLAND_WILDERNESS = new DialogueNode("荒野草原", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60 * 60;
@@ -259,8 +259,8 @@ public class FieldsDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				return new ResponseEffectsOnly(
-						"Explore",
-						"Explore some of the valleys and see what you can find. Although you don't think you're any more or less likely to find anything by doing this, at least you won't have to keep travelling back and forth..."){
+						"探索",
+						"花点时间探索一下山谷。虽然这样应该也找不到什么东西，但至少不必来回奔波……"){
 						@Override
 						public int getSecondsPassed() {
 							return 30*60;
@@ -278,7 +278,7 @@ public class FieldsDialogue {
 		}
 	};
 	
-	public static final DialogueNode RIVER_HUBUR = new DialogueNode("River Hubur", "", false) {
+	public static final DialogueNode RIVER_HUBUR = new DialogueNode("胡布尔河", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 30 * 60;
@@ -298,8 +298,8 @@ public class FieldsDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				return new ResponseEffectsOnly(
-						"Explore",
-						"Take some time to explore the shores of the river. Although you don't think you're any more or less likely to find anything by doing this, at least you won't have to keep travelling back and forth..."){
+						"探索",
+						"花点时间探索一下河岸。虽然这样应该也找不到什么东西，但至少不必来回奔波……"){
 						@Override
 						public int getSecondsPassed() {
 							return 30*60;
@@ -317,7 +317,7 @@ public class FieldsDialogue {
 		}
 	};
 	
-	public static final DialogueNode ELIS = new DialogueNode("Elis", "", false) {
+	public static final DialogueNode ELIS = new DialogueNode("伊利斯", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 30 * 60;
@@ -336,7 +336,7 @@ public class FieldsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Enter (main)", "Approach Elis from the East so that you can enter the town via its main gatehouse.", DialogueManager.getDialogueFromId("innoxia_places_fields_elis_generic_road_east")) {
+				return new Response("从正门而入", "从东面接近伊利斯，这样就可以通过主门楼进入小镇。", DialogueManager.getDialogueFromId("innoxia_places_fields_elis_generic_road_east")) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.getWorldTypeFromId("innoxia_fields_elis_town"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_town_entry_east"));
@@ -349,7 +349,7 @@ public class FieldsDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Enter (rear)", "Approach Elis from the West so that you can enter the town via its rear gatehouse.", DialogueManager.getDialogueFromId("innoxia_places_fields_elis_generic_road_west")) {
+				return new Response("从后门而入", "从西面接近伊利斯，这样就可以从其后门楼进入小镇。", DialogueManager.getDialogueFromId("innoxia_places_fields_elis_generic_road_west")) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.getWorldTypeFromId("innoxia_fields_elis_town"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_town_entry_west"));

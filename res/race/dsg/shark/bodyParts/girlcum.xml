@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -6,7 +6,7 @@
 	
 	<race>dsg_shark</race>
 	
-	<transformationName><![CDATA[shark]]></transformationName>
+	<transformationName><![CDATA[鲨鱼]]></transformationName>
 	
 	<baseFluidType>GIRLCUM</baseFluidType>
 	
@@ -17,11 +17,11 @@
 	<namesFeminine/>
 	
 	<descriptorsMasculine>
-		<name><![CDATA[shark]]></name>
+		<name><![CDATA[鲨鱼]]></name>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<name><![CDATA[shark]]></name>
+		<name><![CDATA[鲨鱼]]></name>
 	</descriptorsFeminine>
 	
 	<defaultFluidModifiers>

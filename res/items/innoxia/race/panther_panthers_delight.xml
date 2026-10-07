@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>500</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Panther's Delight]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Panther's Delights]]></namePlural>
-		<description><![CDATA[A large, raw tomahawk steak, with a small brown tag tied to the bone which displays the words 'Panther's Delight'. Flipping the label over, there's some information which declares the piece of meat to contain  all the minerals and nutrients a growing big cat needs.]]></description> 
+		<determiner><![CDATA[一块]]></determiner>
+		<name><![CDATA[豹之乐]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[豹之乐]]></namePlural>
+		<description><![CDATA[一大块生战斧牛排，骨头上绑着一个棕色小标签，上面写着 "豹之乐"。翻开标签，上面有一些信息，宣称这块肉含有成长中的大型猫科动物所需的所有矿物质和营养成分。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/panther/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/panther/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="65">panther_panthers_delight.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,22 +25,22 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[pantherian]]></potionDescriptor>
+		<potionDescriptor><![CDATA[豹族]]></potionDescriptor>
 		<associatedRace>innoxia_panther</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(5)] to 'potion effects']]></line>
-			<line><![CDATA[If muscles are less than [style.colourMuscleThree('muscular')], increases muscles by 1]]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(5)]到“药剂效果”]]></line>
+			<line><![CDATA[如果肌肉等级比[style.colourMuscleThree(“肌肉紧致”)]低，则增加1级肌肉等级]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel a lot stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 5)]
 			#IF(npc.getMuscleValue()<60)
@@ -57,10 +57,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Taking hold of the 'Panther's Delight', which consists of nothing more than a large, raw tomahawk steak, [npc.name] [npc.verb(bring)] it up to [npc.her] mouth. A rich, bloody smell rises to fill [npc.her] nostrils, and [npc.she] [npc.verb(find)] [npc.herself] drooling at the thought of eating the raw meat. Without further thought, [npc.she] greedily [npc.verb(devour)] the dripping flesh, licking [npc.her] fingers clean after rapidly finishing [npc.her] impromptu meal.
+		握住“豹之乐”，其中只包含一个大块的生战斧牛排，[npc.name]把它送到[npc.her]的嘴边。浓烈的、带血的气味充斥着[npc.her]的鼻孔，[npc.she]发现[npc.herself]一想到吃生肉就流口水。[npc.she]毫不犹豫地贪婪地撕咬着滴水的肉，迅速完成了临时的餐食后，把[npc.her]的手指舔得干干净净。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Taking hold of the 'Panther's Delight', which consists of nothing more than a large, raw tomahawk steak, [npc.verb(bring)] it up to [npc2.namePos] mouth. A rich, bloody smell rises to fill [npc2.her] nostrils, and [npc2.she] [npc2.verb(find)] [npc2.herself] drooling at the thought of eating the raw meat. Without further thought, [npc2.she] greedily [npc2.verb(devour)] the dripping flesh, licking [npc2.her] fingers clean after rapidly finishing [npc2.her] impromptu meal.
+		握住“豹之乐”，其中只包含一个大块的生战斧牛排，将它送到[npc2.namePos]的嘴边。浓烈的、带血的气味充斥着[npc2.her]的鼻孔，[npc2.she]发现[npc2.herself]一想到吃生肉就流口水。[npc2.she]毫不犹豫地贪婪地撕咬着滴水的肉，迅速完成了临时的餐食后，把[npc2.her]的手指舔得干干净净。
 		]]></otherUse>
 	</useDescriptions>
 

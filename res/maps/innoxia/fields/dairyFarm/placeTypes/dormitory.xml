@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Dormitory]]></name>
-	<tooltipDescription><![CDATA[This large room contains dozens of bunk beds, and an adjacent wetroom provides shower and toilet facilities to the farm's workers.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the dormitory at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[宿舍]]></name>
+	<tooltipDescription><![CDATA[大房间里容纳了数十长架子床，配套有一间浴室为工作人员提供淋浴和如厕。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的宿舍里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_AQUA</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

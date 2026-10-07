@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>150</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Hot Chocolate]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Hot Chocolates]]></namePlural>
-		<description><![CDATA[An insulated metal bottle containing hot cocoa. A sticker on the side claims the sweet drink is the perfect comfort during cold winter nights. The sticker also depicts a flame salamander-boy sipping from a similar bottle while louging near an open fire.]]></description> 
-		<useDescriptor>drink</useDescriptor>
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[热巧克力]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[热巧克力]]></namePlural>
+		<description><![CDATA[一个装有热可可的保温金属瓶。瓶子侧面的贴纸宣称，在寒冷的冬夜，这种甜美的饮料是最好的慰藉。贴纸上还描绘了一个火焰蝾螈男在露天火炉旁用类似的瓶子喝热饮的情景。]]></description> 
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -27,15 +27,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_ICE.getFormattedValue(5)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_ICE.getFormattedValue(5)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A warm wave of arcane energy washes over [npc.name]...
+				一股温暖的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_RESISTANCE_ICE, 5)]
 		]]></applyEffects>
@@ -49,10 +49,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After unscrewing the cap, [npc.name] [npc.verb(bring)] the bottle of hot chocolate up to [npc.her] [npc.mouth]. [npc.She] [npc.is] pleased to find that the label wasn't lying about the drink being sweet and swiftly [npc.verb(drink)] the chocolaty beverage.
+		打开瓶盖后，[npc.name]将热巧克力瓶端到[npc.her]的[npc.mouth]边。[npc.She]高兴地发现标签并没有夸大它的甜度，迅速地喝下了这杯巧克力饮料。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After unscrewing the cap, [npc.name] [npc.verb(bring)] the bottle of hot chocolate up to [npc2.namePos] waiting [npc2.lips]. [npc2.name] [npc2.is] pleased to find that the label wasn't lying about the drink being sweet and swiftly [npc2.verb(drink)] the chocolaty beverage.
+		在拧开瓶盖后，[npc.name]将热巧克力瓶递到[npc2.namePos]等待[npc2.lips]边。[npc2.name]高兴地发现标签并没有夸大它的甜度，迅速地喝下了这杯巧克力饮料。
 		]]></otherUse>
 	</useDescriptions>
 </item>

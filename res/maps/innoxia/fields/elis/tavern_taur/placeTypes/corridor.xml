@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[corridor]]></name>
-	<tooltipDescription><![CDATA[A narrow corridor leads off from one side of the bar.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor at 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[走廊]]></name>
+	<tooltipDescription><![CDATA[从酒吧一侧延伸出的一条狭窄走廊。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在半人马之剑的走廊上。]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

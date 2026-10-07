@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
-		<clothingAuthorTag><![CDATA[A marking discreetly engraved into the sword's handle informs you that it was made by 'C4MG1RL'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[剑柄上刻着一个小小的标记，告诉你它是由“C4MG1RL”制造的。]]></clothingAuthorTag>
 		
 		<value>40000</value> 
 		
@@ -12,23 +12,23 @@
 		
 		<determiner><![CDATA[]]></determiner>
 		
-		<name><![CDATA[Muramasa]]></name>
+		<name><![CDATA[村正]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Muramasas]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[村正]]></namePlural> 
 		
-		<description><![CDATA[One of the youko's legendary cursed swords, Muramasa has been masterfully crafted to house and channel the wielder's arcane power. It faintly crackles and hums with arcane power, even when sheathed, almost as though it can't wait to cut down its next foe...]]></description> 
+		<description><![CDATA[村正是妖狐的传奇妖刀之一，它的制作工艺精湛，能够容纳并引导持用者的奥术力量。它会发出拥有奥术力量的噼啪声和嗡嗡声，即使收刀入鞘也是如此，就好像等不及要去消灭下一个敌人……]]></description> 
 		
-		<attackDescriptor>cut</attackDescriptor>
+		<attackDescriptor><![CDATA[斩]]></attackDescriptor>
 		
-		<attackTooltipDescription>Slash [npc2.name] with your blade.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用刀劈[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>QUEST</rarity> 
 		
 		<weaponSet>c4mg1rl_trickster</weaponSet>
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(position)] [npc.her] Muramasa at [npc.her] hip, so that [npc.she] may draw it at a moment's notice.]]></equipText>
+		<equipText><![CDATA[[npc.Name]将村正放在[npc.her]的腰间，以便[npc.she]随时可以抽出来使用。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(sheath)] [npc.her] Muramasa, before putting it away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将村正插入刀鞘，然后收好。]]></unequipText>
 		
 		<imageName>muramasa_sheathed.svg</imageName> 
 		
@@ -76,27 +76,27 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(slash)] [npc.her] Muramasa at [npc2.name], grinning as the ethereal arcane blade travels through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]朝[npc2.name]挥动村正，虚幻的奥术刀刃穿过了[npc2.her]的身体，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		Slashing out at [npc2.name] with [npc.her] Muramasa, [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(see)] the ethereal blade travel straight through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]挥舞村正斩向[npc2.name]，[npc.she]看到虚幻的刀刃直接穿过了[npc2.namePos]的身体，不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(slash)] at [npc2.name] with [npc.her] Muramasa, causing [npc2.herHim] to stagger back as the ethereal blade passes right through [npc2.her] chest!
-		]]></hitText>
+		[npc.Name]用村正斩向[npc2.name]，虚幻的刀刃穿过了[npc2.her]的胸膛，使得[npc2.herHim]向后踉跄！
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(slash)] [npc.her] Muramasa at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+[npc.Name]用村正砍向[npc2.name]，但最终没有击中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Slashing out at [npc2.name] with [npc.her] Muramasa, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+[npc.Name]用村正砍向[npc2.name]，但最终没有击中[npc2.herHim]，[npc.her]发出一声沮丧的呼喊！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(slash)] at [npc2.name] with [npc.her] Muramasa, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+随着一个快速的步伐，[npc.name]用村正砍向[npc2.name]，但是[npc.her]未能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tongue>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -19,22 +19,22 @@
 	<defaultLength>8</defaultLength>
 	
 	<!-- The singular and plural names of this tongue. -->
-	<name><![CDATA[tongue]]></name>
-	<namePlural><![CDATA[tongues]]></namePlural>
+	<name><![CDATA[舌头]]></name>
+	<namePlural><![CDATA[舌头]]></namePlural>
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's tongue of this type.
 	Additional tongue descriptors are generated based on the tongue's properties (such as its modifiers, lubrication, capacity, etc.), so these descriptors should only be related to the race itself. -->
 	<descriptorsMasculine>
-		<descriptor><![CDATA[dragon-like]]></descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor><![CDATA[dragon-like]]></descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
 	</descriptorsFeminine>
 	
 	<!-- How this tongue is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], dragon-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.
+		[npc.Her]嘴里有一根[npc.a_tongueLength]、[npc.tongueColour(true)]、龙形的[npc.tongue]#IF(npc.isPiercedTongue())且已被穿孔#ENDIF。
 	]]></bodyDescription>
 	
 	<!-- The tongue modifiers which this tongue has when first created (such as when a new hyena-morph is spawned).

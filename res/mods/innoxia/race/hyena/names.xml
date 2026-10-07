@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
-
 <!-- This file allows you to set names which are used when generating random characters of your modded race.
 	The 'additional' attribute defines whether these names are used in addition to standard human names (true), or whether only these names will be used (false) when generating a random name for a character of this race.
 	This file can be omitted entirely, in which case all subspecies of this race will use standard human names. -->
@@ -13,27 +12,27 @@
 			You should define all three fields for every nameTriplet, but if you only define one or two, then your defined names will be used for the one or two which you've omitted.
 				e.g. If you only define a 'fem' name, then that 'fem' name will also be used for the 'and' and 'mas' fields, meaning that masculine and androgynous characters will potentially spawn with the 'fem' name you've defined. -->
 		<nameTriplet>
-			<fem><![CDATA[Amaka]]></fem> <!-- The 'fem' name will be used for feminine characters. -->
-			<and><![CDATA[Akuchi]]></and> <!-- The 'and' name will be used for androgynous characters. -->
-			<mas><![CDATA[Amadi]]></mas> <!-- The 'mas' name will be used for masculine characters. -->
+			<fem><![CDATA[阿玛卡]]></fem> <!-- The 'fem' name will be used for feminine characters. -->
+			<and><![CDATA[阿库奇]]></and> <!-- The 'and' name will be used for androgynous characters. -->
+			<mas><![CDATA[阿玛迪]]></mas> <!-- The 'mas' name will be used for masculine characters. -->
 		</nameTriplet>
 	</subspecies>
 	
 	<!-- These names will only be used for spotted hyenas -->
 	<subspecies id="innoxia_hyena_subspecies_spotted">
 		<nameTriplet>
-			<fem><![CDATA[Mbali]]></fem>
-			<and><![CDATA[Minenhle]]></and>
-			<mas><![CDATA[Mandla]]></mas>
+			<fem><![CDATA[姆巴莉]]></fem>
+			<and><![CDATA[米内尔]]></and>
+			<mas><![CDATA[曼德拉]]></mas>
 		</nameTriplet>
 	</subspecies>
 	
 	<!-- These names will only be used for striped hyenas -->
 	<subspecies id="innoxia_hyena_subspecies_striped">
 		<nameTriplet>
-			<fem><![CDATA[Thandi]]></fem>
-			<and><![CDATA[Thando]]></and>
-			<mas><![CDATA[Themba]]></mas>
+			<fem><![CDATA[丹迪]]></fem>
+			<and><![CDATA[丹多]]></and>
+			<mas><![CDATA[滕巴]]></mas>
 		</nameTriplet>
 	</subspecies>
 	

@@ -146,8 +146,8 @@ public class SMGloryHole extends SexManagerDefault {
 	@Override
 	public String getPublicSexStartingDescription() {
 		return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
-					+ "As you let out [pc.a_moan+], several of the people in the toilets turn around to see what's happening."
-					+ " Seeing the door to your stall left wide open, and with you about to get started on servicing the cocks before you, a few of them step up and prepare to watch..."
+					+ "你发出一声[pc.a_moan+]，引得厕所里好几个人一齐扭头，看看到底发生了什么事情。"
+					+ "见到你大开着隔间的门，而且正准备侍奉你面前的肉棒，有几个家伙连忙围了上来……"
 				+ "</p>";
 	}
 
@@ -162,19 +162,19 @@ public class SMGloryHole extends SexManagerDefault {
 			
 			return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
 						+ UtilText.returnStringAtRandom(
-							"The people who've gathered to watch your lewd display laugh and cheer as they look on.",
-							"You hear someone in the crowd wolf-whistling as they watch you servicing the glory holes.",
-							"A pair of zebra-boy bouncers shove their way through the crowd, but instead of putting a stop to your fun, they join in with the crowd in laughing and commenting on your performance.",
-							"You hear the crowd that's gathered to watch you commenting on your performance.",
-							"Cheering and laughing, the crowd of onlookers watch as you continue servicing the cocks before you.",
-							"You glance across to see several members of the crowd touching themselves as they watch you service the glory holes.",
-							"The crowd cheers you on as you carry on servicing the glory holes.",
-							"The crowd laughs and cheers as you carry on acting like a desperate slut in front of them.",
-							"Several members of the crowd shout and cheer as you carry on servicing the glory holes.",
-							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularFemaleName(null)))+" "+subspecies.getSingularFemaleName(null)+" steps forwards,"
-									+ " stroking her exposed cock as she suddenly cums all over the floor in front of you.",
-							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularMaleName(null)))+" "+subspecies.getSingularMaleName(null)+" steps forwards,"
-									+ " stroking his exposed cock as he suddenly cums all over the floor in front of you.")
+							"聚集上来观赏你淫秽表演的家伙一边看着，一边大笑欢呼起来。",
+							"人们围观你正在寻欢洞服务，起着哄，你听见人群中传来一声流氓哨。",
+							"一对斑马男推开人群，但并没有阻止你取乐，而是加入了围观，对着你的表演说笑评论着。",
+							"你听见聚集起来围观的人群中有人在评价你的表演。",
+							"几个围观群众看着你侍奉者面前的肉棒，欢呼大笑起来。",
+							"你瞥了一眼，看到几个观众一边看你在寻欢洞服务，一边自慰。",
+							"你继续在寻欢洞服务，四周不断响起呼和声。",
+							"你继续在人群面前表现得像个欲求不满的婊子，四周不断响起呼和声。",
+							"你继续在寻欢洞服务，有几个家伙高喊欢呼起来。",
+							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularFemaleName(null)))+subspecies.getSingularFemaleName(null)+"上前来，"
+									+ "撸动着暴露在外的鸡巴，一下子在你的面前射得满地都是。",
+							Util.capitaliseSentence(UtilText.generateSingularDeterminer(subspecies.getSingularMaleName(null)))+subspecies.getSingularMaleName(null)+"上前来，"
+									+ "撸动着暴露在外的鸡巴，一下子在你的面前射得满地都是。")
 					+"</p>";
 		}
 		

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>2500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[dress coat]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[dress coats]]></namePlural>
-		<description><![CDATA[A type of dress coat, this garment does absolutely nothing to conceal the wearer's groin or rear end when worn.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[连衣礼服]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[连衣礼服]]></namePlural>
+		<description><![CDATA[一件连衣礼服，这种连衣礼服外套在穿着时完全不会掩盖穿者的腰部或臀部。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_OVER</slot>
@@ -62,24 +62,24 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] on the dress coat.
+			[npc.Name]穿上了连衣礼服。
 		]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the dress coat's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></other>
+[npc.Name]将连衣礼服披在[npc2.namePos]身上并引导[npc2.namePos]的[npc2.arms]穿过连衣礼服的袖子。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the dress coat's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></otherRough>
+[npc.Name]将连衣礼服甩在[npc2.namePos]身上并迫使[npc2.namePos]的[npc2.arms]穿过连衣礼服的袖子。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc.her] dress coat.
+			[npc.Name]脱下了[npc.her]的连衣礼服。
 		]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc2.namePos] dress coat.
-		]]></other>
+[npc.Name]将[npc2.namePos]的连衣礼服脱下。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] dress coat.
+			[npc.Name]抓住[npc2.namePos]的连衣礼服并粗暴地扯下来。
 		]]></otherRough>
 	</displacementText>
 	

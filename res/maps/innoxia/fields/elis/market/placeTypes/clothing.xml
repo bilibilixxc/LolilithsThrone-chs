@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Rainbow's End]]></name>
-	<tooltipDescription><![CDATA[This stall is run by a pair of foxtauresses and sells all manner of colourful clothing.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the Farmer's Market in Elis]]></virginityLossDescription>
+	<name><![CDATA[彩虹的尽头]]></name>
+	<tooltipDescription><![CDATA[这个摊位由一对雌性半狐人经营，她们卖各种色彩斑斓的服饰。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>clothing</svgName>
 	<colour>BASE_ROSE</colour>

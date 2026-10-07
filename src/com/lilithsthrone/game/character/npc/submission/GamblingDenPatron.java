@@ -226,11 +226,11 @@ public class GamblingDenPatron extends NPC {
 	public String getDescription() {
 		switch (table) {
 			case COPPER:
-				return (UtilText.parse(this, "[npc.Name] is a relative novice at dice poker, and chooses to play in the 'copper' section of the Gambling Den's poker hall."));
+				return (UtilText.parse(this, "[npc.Name]还是个骰子扑克的新手，所以在赌场的扑克大厅里选择“铜桌”。"));
 			case SILVER:
-				return (UtilText.parse(this, "[npc.Name] has quite a lot of experience at dice poker, and chooses to play in the 'silver' section of the Gambling Den's poker hall."));
+				return (UtilText.parse(this, "[npc.Name]玩骰子扑克已经有了不少经验，所以在赌场的扑克大厅选里择“银桌”。"));
 			case GOLD:
-				return (UtilText.parse(this, "[npc.Name] is an expert at dice poker, and chooses to play in the 'gold' section of the Gambling Den's poker hall."));
+				return (UtilText.parse(this, "[npc.Name]是骰子扑克的大师，所以在赌场的扑克大厅选里择“金桌”。"));
 		}
 		return "";
 	}

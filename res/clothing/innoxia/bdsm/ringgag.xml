@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>200</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[ring gag]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[ring gags]]></namePlural> 
-		<description><![CDATA[A leather strap with a metal ring fixed into one side. When secured into position around the wearer's head, the ring is inserted into their mouth, forcing them to keep their mouth open at all times.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[口枷]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[口枷]]></namePlural> 
+		<description><![CDATA[一条固定着金属环的皮质带子。当固定在佩戴者的头部时，金属环就会塞进他们的嘴里，让他们始终张开嘴。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -48,26 +48,26 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(open)] [npc.her] mouth wide and [npc.verb(slide)] in the ring gag, before reaching back and fastening the buckles to keep it in place.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the ring gag into [npc2.namePos] mouth, before reaching back and fastening the buckles to keep it in place.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(force)] the ring gag into [npc2.namePos] mouth, before reaching back and tightly fastening the buckles to keep it in place.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]张开[npc.her]嘴部并塞进口枷，然后伸手扣上针扣并固定好。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将口枷塞进[npc2.namePos]嘴里，然后伸手扣上针扣并固定好。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地把口枷塞进[npc2.namePos]的嘴里，然后把皮带拉紧并扣上针扣固定好。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the ring gag's straps and [npc.verb(take)] it out of [npc.her] mouth.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the ring gag's straps and [npc.verb(take)] it out of [npc2.namePos] mouth.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] impatiently [npc.verb(unfasten)] the ring gag's straps and [npc.verb(yank)] it out of [npc2.namePos] mouth.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开口枷的带子并把它从[npc.her]的嘴里取出。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]解开口枷的带子并把它从[npc2.namePos]的嘴里取出。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]不耐烦地解开口枷的皮带并从[npc2.namePos]的嘴里取出。
+]]></otherRough>
 	</displacementText>
 </clothing>

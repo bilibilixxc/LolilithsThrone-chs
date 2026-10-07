@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA[On one side of the cylinder, a small engraving reads "MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在弹巢的一侧刻着细小的字迹，写着“DSG铸造厂生产。”]]></authorTag>
 		<value>1500</value>
 		<melee>false</melee>
 		<twoHanded>false</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendDamageName="true"><![CDATA[pepperball revolver]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[pepperball revolver]]></namePlural>
-		<description><![CDATA[This weapon appears to have been hand modified from something else and shows signs of having sat in pockets rather than in holsters. Stamped on the body is an insignia that you don't recognize.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Shoot [npc2.name] with your revolver.]]></attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name appendDamageName="true"><![CDATA[胡椒弹转轮手枪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[胡椒弹转轮手枪]]></namePlural>
+		<description><![CDATA[这把武器看起来像是在其他武器的基础上改造而成的，根据使用痕迹看像是长期放在口袋里而非枪套中。枪身上印有一个你不认识的标记。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的转轮手枪射向[npc2.name]。]]></attackTooltipDescription>
 		<rarity>RARE</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] out the revolver and carefully [npc.verb(load)] it before disengaging the safety.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(swing)] out the cylinder and [npc.verb(gives)] it a shake to make sure that it's empty before putting the revolver away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出转轮手枪，小心地装填子弹，然后松开保险。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]摇了摇弹巢，以确保里面是空的，然后收起转轮手枪。]]></unequipText>
 		<imageName>pbrevolver.svg</imageName>
 		<imageEquippedName>pbrevolver.svg</imageEquippedName>
 		<physicalResistance>0</physicalResistance>
@@ -49,14 +49,14 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(pull)] the trigger at [npc2.name]. The gelatin capsule bursts on impact with [npc2.namePos] aura, splattering [npc2.herHim] with stinging, burning oil.
-		]]></hitText>
+		[npc.Name]用瞄准镜对准[npc2.name]，扣动了扳机。明胶弹在与[npc2.namePos]的灵气碰撞时爆裂，溅[npc2.herHim]一身滚烫的油。
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(pull)] the trigger at [npc2.name]. The capsule misses [npc2.herHim] completely and splatters uselessly in the distance.
-		]]></missText>
+		[npc.Name]用瞄准镜对准[npc2.name]，扣动了扳机。弹药完全没击中[npc2.herHim]，无用地飞溅到远处。
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

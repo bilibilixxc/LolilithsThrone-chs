@@ -1132,10 +1132,10 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 			descriptionSB.append(getTypeDescription(characterEquippedOn));
 			descriptionSB.append("<br/>");
 			if(enchantmentKnown) {
-				descriptionSB.append((getClothingType().isPlural()?"They have":"It has")+" a value of: "+UtilText.formatAsMoney(getValue()));
+				descriptionSB.append("该物品价值为："+UtilText.formatAsMoney(getValue()));
 				if(Main.game.isEnchantmentCapacityEnabled()) {
 					descriptionSB.append("<br/>");
-					descriptionSB.append((getClothingType().isPlural()?"They have":"It has")+" "+UtilText.addDeterminer(Attribute.ENCHANTMENT_LIMIT.getName())+" of: ");
+					descriptionSB.append("该物品"+UtilText.addDeterminer(Attribute.ENCHANTMENT_LIMIT.getName())+"为：");
 					if(this.getEnchantmentCapacityCost()==0) {
 						descriptionSB.append("[style.colourDisabled("+UtilText.formatAsEnchantmentCapacityUncoloured(this.getEnchantmentCapacityCost(), "span")+")]");
 					} else {
@@ -1143,7 +1143,7 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 					}
 				}
 			} else {
-				descriptionSB.append((getClothingType().isPlural()?"They have":"It has")+" an <b>unknown value</b>!");
+				descriptionSB.append("该物品<b>价值不明</b>！");
 			}
 		descriptionSB.append("</p>");
 		
@@ -1151,14 +1151,14 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 		if(getClothingType().getPhysicalResistance()>0) {
 			descriptionSB.append("<p>"
 							+ (getClothingType().isPlural()
-									? "They are armoured, and provide "
-									: "It is armoured, and provides ")
-								+ " <b>" + getClothingType().getPhysicalResistance() + "</b> [style.colourResPhysical(" + Attribute.RESISTANCE_PHYSICAL.getName() + ")]."
+									? "带有装甲，能够提供"
+									: "带有装甲，能够提供")
+								+ "<b>" + getClothingType().getPhysicalResistance() + "</b>[style.colourResPhysical(" + Attribute.RESISTANCE_PHYSICAL.getName() + ")]。"
 							+ "</p>");
 		}
 		if(enchantmentKnown) {
 			if(!this.getEffects().isEmpty()) {
-				descriptionSB.append("<p>Effects:");
+				descriptionSB.append("<p>效果:");
 				for (ItemEffect e : this.getEffects()) {
 					if(e.getPrimaryModifier()!=TFModifier.CLOTHING_ATTRIBUTE
 							&& e.getPrimaryModifier()!=TFModifier.CLOTHING_MAJOR_ATTRIBUTE) {
@@ -1175,8 +1175,8 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 		}
 
 		if(getClothingType().getClothingSet() != null) {
-			descriptionSB.append("<p>" + (getClothingType().isPlural() ? "They are" : "It is") + " part of the <b style='color:" + PresetColour.RARITY_EPIC.toWebHexString() + ";'>"
-					+ getClothingType().getClothingSet().getName() + "</b> set." + "</p>");
+			descriptionSB.append("<p>是<b style='color:" + PresetColour.RARITY_EPIC.toWebHexString() + ";'>"
+					+ getClothingType().getClothingSet().getName() + "</b>套装的一部分。" + "</p>");
 		}
 
 		return UtilText.parse(characterEquippedOn, this, descriptionSB.toString());
@@ -1339,7 +1339,7 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 		String prefix = "";
 		for(Sticker st : orderedStickers) {
 			if(!st.getNamePrefix().isEmpty()) {
-				prefix += st.getNamePrefix() + " ";
+				prefix += st.getNamePrefix();
 			}
 		}
 		
@@ -1390,10 +1390,10 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 								getClothingType().isAppendColourName()
 									?getColourName()
 									:getName()))
-						+" "
+						+""
 					: "")
 				+ (getClothingType().isAppendColourName()
-					?getColourName()+" "
+					?getColourName()
 					:"")
 				+ getName());
 	}
@@ -1408,14 +1408,14 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 									getClothingType().isAppendColourName()
 										?getColourName()
 										:getName()))
-							+" "
+							+""
 						: "")
 					+ (getClothingType().isAppendColourName()
-							?getColourName()+" "
+							?getColourName()
 							:"")
 					+ (withRarityColour
-							? (" <span style='color: " + PresetColour.RARITY_UNKNOWN.toWebHexString() + ";'>" + getName() + "</span>")
-							: " "+getName()));
+							? ("<span style='color: " + PresetColour.RARITY_UNKNOWN.toWebHexString() + ";'>" + getName() + "</span>")
+							: getName()));
 		} else {
 			return UtilText.parse(this,
 					(withDeterminer
@@ -1425,14 +1425,14 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 									getClothingType().isAppendColourName()
 										?getColourName()
 										:getName()))
-							+" "
+							+""
 						: "")
 						+ (getClothingType().isAppendColourName()
-								?getColourName()+" "
+								?getColourName()
 								:"")
 						+ (withRarityColour
-								? (" <span style='color: " + this.getRarity().getColour().toWebHexString() + ";'>" + getName() + "</span>")
-								: " "+getName()));
+								? ("<span style='color: " + this.getRarity().getColour().toWebHexString() + ";'>" + getName() + "</span>")
+								: getName()));
 		}
 	}
 
@@ -1455,7 +1455,7 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 //			System.out.println(this.name+ " | "+this.getClothingType().getName());
 			return UtilText.parse(this,
 					(withRarityColour
-						? (" <span style='color: " + (!this.isEnchantmentKnown()?PresetColour.RARITY_UNKNOWN:this.getRarity().getColour()).toWebHexString() + ";'>" + getName() + "</span>")
+						? ("<span style='color: " + (!this.isEnchantmentKnown()?PresetColour.RARITY_UNKNOWN:this.getRarity().getColour()).toWebHexString() + ";'>" + getName() + "</span>")
 						: getName()));
 		}
 		
@@ -1467,8 +1467,8 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						:"")
 					+ (!this.getPattern().equalsIgnoreCase("none")?" "+Pattern.getPattern(this.getPattern()).getNiceName():"")
 					+ (withRarityColour
-						? (" <span style='color: " + c.toWebHexString() + "; "+(this.isVibrator()?"text-shadow: 2px 2px "+c.getShades()[0]+";":"")+"'>" + (this.isVibrator()?"vibrating ":"")+getName() + "</span>")
-						: " "+(this.isVibrator()?UtilText.applyVibration("vibrating "+getName(), c):getName()))
+						? ("<span style='color: " + c.toWebHexString() + "; "+(this.isVibrator()?"text-shadow: 2px 2px "+c.getShades()[0]+";":"")+"'>" + (this.isVibrator()?"震动的":"")+getName() + "</span>")
+						: (this.isVibrator()?UtilText.applyVibration("震动的"+getName(), c):getName()))
 					+ ((withEnchantmentPostFix
 							&& !this.getEffects().isEmpty()
 							&& this.getClothingType().isAppendEnchantmentPostfix()
@@ -1476,7 +1476,7 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 							&& this.getRarity()!=Rarity.QUEST
 							&& this.getRarity()!=Rarity.LEGENDARY
 							&& this.getRarity()!=Rarity.EPIC)
-								? " "+getEnchantmentPostfix(withRarityColour, "span")
+								? getEnchantmentPostfix(withRarityColour, "span")
 								: "")
 				));
 	}
@@ -1543,22 +1543,22 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 			
 			sb.append("<p style='text-align:center;'>");
 			
-			String formattedName = "<span style='color:"+girth.getColour().toWebHexString()+";'>"+girth.getName()+"</span>,"
-					+ " <span style='color:"+penisLength.getColour().toWebHexString()+";'>[style.sizeShort("+length+")]</span> "+this.getClothingType().getName();
+			String formattedName = "<span style='color:"+girth.getColour().toWebHexString()+";'>"+girth.getName()+"</span>，"
+					+ "<span style='color:"+penisLength.getColour().toWebHexString()+";'>[style.sizeShort("+length+")]</span>的"+this.getClothingType().getName();
 			
 			if(this.getSlotEquippedTo()==InventorySlot.VAGINA) {
 				if(clothingOwner.hasHymen()) {
 					sb.append(UtilText.parse(clothingOwner,
-							"As the "+formattedName+" "+(plural?"push":"pushes")+" inside of [npc.namePos] [npc.pussy], "+(plural?"they":"it")+" [style.colourTerrible("+(plural?"tear":"tears")+" [npc.her] hymen)]!"));
+							"在"+formattedName+"进入[npc.namePos]的[npc.pussy]时，[style.colourTerrible(撕裂了[npc.her]的处女膜)]！"));
 					
 					if(clothingOwner.hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
 						sb.append("<br/>");
 						if(clothingOwner.isVaginaVirgin()) {
 							sb.append(UtilText.parse(clothingOwner,
-									"Although [npc.her] pussy can no longer be considered completely 'pure', [npc.nameIsFull] still considered to be a virgin, as [npc.sheHasFull] never been penetrated by another person before..."));
+									"尽管[npc.name]的小穴已经不能被认为是完全“纯洁”，但[npc.her]仍被认为是处女，因为[npc.sheHasFull]还从未被其他人插入过……"));
 						} else {
 							sb.append(UtilText.parse(clothingOwner,
-									"Having already had sex with someone in the past, the loss of [npc.namePos] hymen causes [npc.herHim] to now consider [npc.herself] a [style.colourTerrible(broken virgin)]!"));
+									"由于曾经与他人性交过，[npc.namePos]撕裂的处女膜使得[npc.herHim]觉得自己是个[style.colourTerrible(失格处女)]！"));
 						}
 					}
 				}
@@ -1571,15 +1571,15 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 					}
 					if(length<=clothingOwner.getVaginaMaximumPenetrationDepthComfortable() || clothingOwner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 						sb.append(UtilText.parse(clothingOwner,
-								"The full length of the "+formattedName+" [style.colourMinorGood(comfortably fits)] inside of [npc.namePos] [npc.pussy]!"));
+								"整根"+formattedName+"都[style.colourMinorGood(舒适地塞进了)][npc.namePos]的[npc.pussy]！"));
 						
 					} else {
 						if(clothingOwner.hasFetish(Fetish.FETISH_MASOCHIST)) {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably inside of [npc.namePos] [npc.pussy], but as [npc.sheIs] a masochist, [style.colourMinorGood([npc.she] [npc.do]n't mind the discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的[npc.pussy]，但由于[npc.sheIs]是个受虐狂，[style.colourMinorGood(所以并不介意不适感)]！"));
 						} else {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably inside of [npc.namePos] [npc.pussy], and is causing [npc.herHim] [style.colourBad(discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的[npc.pussy]，导致[npc.herHim][style.colourBad(非常不适)]！"));
 						}
 					}
 				}
@@ -1589,8 +1589,8 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						sb.append("<br/>");
 					}
 					sb.append(UtilText.parse(clothingOwner,
-							(plural?"Their":"Its")+" <span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
-									+ " diameter is [style.colourMinorBad(too wide)] for [npc.namePos] [npc.pussy], and is [style.colourBad(stretching)] [npc.herHim] out!"));
+							"其<span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
+									+ "的直径对于[npc.namePos]的[npc.pussy]来说[style.colourMinorBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 				}
 				
 				clothingOwner.setHymen(false);
@@ -1601,15 +1601,15 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 				if(Main.game.isPenetrationLimitationsEnabled()) {
 					if(length<=clothingOwner.getAssMaximumPenetrationDepthComfortable() || clothingOwner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 						sb.append(UtilText.parse(clothingOwner,
-								"The full length of the "+formattedName+" [style.colourMinorGood(comfortably fits)] inside of [npc.namePos] [npc.asshole]!"));
+								"整根"+formattedName+"都[style.colourMinorGood(舒适地塞进了)][npc.namePos]的[npc.asshole]！"));
 						
 					} else {
 						if(clothingOwner.hasFetish(Fetish.FETISH_MASOCHIST)) {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably inside of [npc.namePos] [npc.asshole], but as [npc.sheIs] a masochist, [style.colourGood([npc.she] [npc.do]n't mind the discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的[npc.asshole]，但由于[npc.sheIs]是个受虐狂，[style.colourMinorGood(所以并不介意不适感)]！"));
 						} else {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably inside of [npc.namePos] [npc.asshole], and is causing [npc.herHim] [style.colourBad(discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的[npc.asshole]，导致[npc.herHim][style.colourBad(非常不适)]！"));
 						}
 					}
 				}
@@ -1619,8 +1619,8 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						sb.append("<br/>");
 					}
 					sb.append(UtilText.parse(clothingOwner,
-							(plural?"Their":"Its")+" <span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
-									+ " diameter is [style.colourMinorBad(too wide)] for [npc.namePos] [npc.asshole], and is [style.colourBad(stretching)] [npc.herHim] out!"));
+							"其<span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
+									+ "的直径对于[npc.namePos]的[npc.asshole]来说[style.colourMinorBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 				}
 				
 			} else if(this.getSlotEquippedTo()==InventorySlot.NIPPLE) {
@@ -1629,15 +1629,15 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 				if(Main.game.isPenetrationLimitationsEnabled()) {
 					if(length<=clothingOwner.getNippleMaximumPenetrationDepthComfortable() || clothingOwner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 						sb.append(UtilText.parse(clothingOwner,
-								"The full length of the "+formattedName+" [style.colourMinorGood(comfortably fits)] inside of [npc.namePos] [npc.nipple(true)]!"));
+								"整根"+formattedName+"都[style.colourMinorGood(舒适地塞进了)][npc.namePos]的[npc.nipple(true)]！"));
 						
 					} else {
 						if(clothingOwner.hasFetish(Fetish.FETISH_MASOCHIST)) {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably inside of [npc.namePos] [npc.nipple(true)], but as [npc.sheIs] a masochist, [style.colourGood([npc.she] [npc.do]n't mind the discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的[npc.nipple(true)]，但由于[npc.sheIs]是个受虐狂，[style.colourMinorGood(所以并不介意不适感)]！"));
 						} else {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably inside of [npc.namePos] [npc.nipple(true)], and is causing [npc.herHim] [style.colourBad(discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的[npc.nipple(true)]，导致[npc.herHim][style.colourBad(非常不适)]！"));
 						}
 					}
 				}
@@ -1647,8 +1647,8 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						sb.append("<br/>");
 					}
 					sb.append(UtilText.parse(clothingOwner,
-							(plural?"Their":"Its")+" <span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
-									+ " diameter is [style.colourMinorBad(too wide)] for [npc.namePos] [npc.nipple(true)], and is [style.colourBad(stretching)] [npc.herHim] out!"));
+							"其<span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
+									+ "的直径对于[npc.namePos]的[npc.nipple(true)]来说[style.colourMinorBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 				}
 				
 			} else if(this.getSlotEquippedTo()==InventorySlot.MOUTH) {
@@ -1657,15 +1657,15 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 				if(Main.game.isPenetrationLimitationsEnabled()) {
 					if(length<=clothingOwner.getFaceMaximumPenetrationDepthComfortable() || clothingOwner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 						sb.append(UtilText.parse(clothingOwner,
-								"The full length of the "+formattedName+" [style.colourMinorGood(comfortably fits)] down [npc.namePos] throat!"));
+								"整根"+formattedName+"都[style.colourMinorGood(舒适地塞进了)][npc.namePos]的喉咙！"));
 						
 					} else {
 						if(clothingOwner.hasFetish(Fetish.FETISH_MASOCHIST)) {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably down [npc.namePos] throat, but as [npc.sheIs] a masochist, [style.colourGood([npc.she] [npc.do]n't mind the discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的喉咙，但由于[npc.sheIs]是个受虐狂，[style.colourMinorGood(所以并不介意不适感)]！"));
 						} else {
 							sb.append(UtilText.parse(clothingOwner,
-									"The "+formattedName+" is [style.colourBad(too long)] to fit comfortably down [npc.namePos] throat, and is causing [npc.herHim] [style.colourBad(discomfort)]!"));
+									formattedName+"[style.colourBad(太长了)]，无法舒适地进入[npc.namePos]的喉咙，导致[npc.herHim][style.colourBad(非常不适)]！"));
 						}
 					}
 				}
@@ -1675,8 +1675,8 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						sb.append("<br/>");
 					}
 					sb.append(UtilText.parse(clothingOwner,
-							(plural?"Their":"Its")+" <span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
-									+ " diameter is [style.colourMinorBad(too wide)] for [npc.namePos] throat, and is [style.colourBad(stretching)] [npc.herHim] out!"));
+							"其<span style='color:"+girth.getColour().toWebHexString()+";'>[style.sizeShort("+diameter+")]</span>"
+									+ "的直径对于[npc.namePos]的喉咙来说[style.colourMinorBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 				}
 			}
 			
@@ -1688,8 +1688,8 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 			PenetrationGirth girth = PenetrationGirth.getGirthFromInt(this.getClothingType().getPenetrationOtherGirth());
 			sb.append("<p style='text-align:center;'>");
 				sb.append(UtilText.parse(clothingOwner,
-						"[npc.NameIsFull] now able to use [npc.her] <span style='color:"+girth.getColour().toWebHexString()+";'>"+girth.getName()+"</span>,"
-								+ " <span style='color:"+penisLength.getColour().toWebHexString()+";'>[style.sizeShort("+length+")]</span> "+this.getClothingType().getName()+" as a [style.colourSex(penetrative object during sex)]!"));
+						"[npc.NameIsFull]现在能够使用[npc.her]<span style='color:"+girth.getColour().toWebHexString()+";'>"+girth.getName()+"</span>，"
+								+ "<span style='color:"+penisLength.getColour().toWebHexString()+";'>[style.sizeShort("+length+")]</span>的"+this.getClothingType().getName()+"当作[style.colourSex(性交时的插入物)]！"));
 			sb.append("</p>");
 		}
 		
@@ -1724,20 +1724,20 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 	private static List<String> incompatibleClothing = new ArrayList<>();
 	
 	public String getDisplacementBlockingDescriptions(GameCharacter equippedToCharacter){
-		descriptionSB = new StringBuilder("<p><b>Displacement types:</b>");
+		descriptionSB = new StringBuilder("<p><b>移开类型:</b>");
 		for(BlockedParts bp : getBlockedPartsMap(equippedToCharacter, this.getSlotEquippedTo())){
-			descriptionSB.append("<br/><b>"+Util.capitaliseSentence(bp.displacementType.getDescription())+":</b> ");
+			descriptionSB.append("<br/><b>"+Util.capitaliseSentence(bp.displacementType.getDescription())+":</b>");
 			if(bp.displacementType==DisplacementType.REMOVE_OR_EQUIP) {
 				if(equippedToCharacter.isAbleToUnequip(this, false, equippedToCharacter)) {
-					descriptionSB.append("<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Available</b>");
+					descriptionSB.append("<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>可行</b>");
 				} else {
-					descriptionSB.append("<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Blocked</b> by "+equippedToCharacter.getBlockingClothing().getName()+"");
+					descriptionSB.append("被"+equippedToCharacter.getBlockingClothing().getName()+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>阻碍</b>");
 				}
 			} else {
 				if(equippedToCharacter.isAbleToBeDisplaced(this, bp.displacementType, false, false, equippedToCharacter)) {
-					descriptionSB.append("<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Available</b>");
+					descriptionSB.append("<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>可行</b>");
 				} else {
-					descriptionSB.append("<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Blocked</b> by "+equippedToCharacter.getBlockingClothing().getName()+"");
+					descriptionSB.append("被"+equippedToCharacter.getBlockingClothing().getName()+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>阻碍</b>");
 				}
 			}
 		}
@@ -1762,20 +1762,20 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 		if(slotToBeEquippedTo==null) {
 			if(this.isSealed() && enchantmentKnown) {
 				if(verbose) {
-					descriptionsList.add((plural?"They have":"It has")+" been enchanted so as to [style.boldSealed(seal "+(plural?"themselves":"itself")+")] onto the wearer!");
+					descriptionsList.add("已经被附魔，会[style.boldSealed(将自身封印)]于穿戴者身上！");
 				} else {
 					if(equippedToCharacter!=null) {
-						descriptionsList.add("[style.boldSealed(Sealed)]");
+						descriptionsList.add("[style.boldSealed(已封印)]");
 					} else {
-						descriptionsList.add("[style.boldSealed(Seals onto wearer)]");
+						descriptionsList.add("[style.boldSealed(封印于穿戴者)]");
 					}
 				}
 			}
 			if(dirty) {
 				if(verbose) {
-					descriptionsList.add((plural?"They have":"It has")+" been [style.boldDirty(dirtied)] by sexual fluids!");
+					descriptionsList.add("被性液体[style.boldDirty(脏污)]！");
 				} else {
-					descriptionsList.add("[style.boldDirty(Dirty)]");
+					descriptionsList.add("[style.boldDirty(脏污)]");
 				}
 			}
 			if(wet) {
@@ -1797,12 +1797,12 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 				}
 			}
 			if(!cummedOnInfo.isEmpty()) {
-				descriptionsList.add("[style.boldDirty(Fluids present:)]");
+				descriptionsList.add("[style.boldDirty(现存液体:)]");
 				for(Entry<GameCharacter, Integer> entry : cummedOnInfo.entrySet()) {
-					descriptionsList.add(UtilText.parse(entry.getKey(), "[style.fluid("+entry.getValue()+")] of <span style='color:"+entry.getKey().getFemininity().getColour().toWebHexString()+";'>[npc.namePos]</span> [npc.cum+]!"));
+					descriptionsList.add(UtilText.parse(entry.getKey(), "[style.fluid("+entry.getValue()+")]<span style='color:"+entry.getKey().getFemininity().getColour().toWebHexString()+";'>[npc.namePos]</span>[npc.cum+]！"));
 				}
 			} else {
-				descriptionsList.add("[style.italicsDisabled(No fluid is available...)]");
+				descriptionsList.add("[style.italicsDisabled(无液体可用……)]");
 			}
 		}
 
@@ -1828,10 +1828,10 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 				List<InventorySlot> incompSlots = getIncompatibleSlots(null, slotToBeEquippedTo);
 				if(!incompSlots.isEmpty()) {
 					if(verbose) {
-						descriptionsList.add((plural?"They [style.boldBad(block":"It [style.boldBad(blocks")+")] the "+Util.inventorySlotsToStringList(incompSlots)+" slot"+(incompSlots.size()!=1?"s":"")+"!");
+						descriptionsList.add("[style.boldBad(阻挡了)]"+Util.inventorySlotsToStringList(incompSlots)+"栏位！");
 					} else {
 						for(InventorySlot slot : incompSlots) {
-							descriptionsList.add("[style.boldBad(Blocks " + Util.capitaliseSentence(slot.getName()) + ")]");
+							descriptionsList.add("[style.boldBad(阻挡" + Util.capitaliseSentence(slot.getName()) + ")]");
 						}
 					}
 				}
@@ -1839,23 +1839,23 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 			if(slotToBeEquippedTo==null) {
 				if(getClothingType().getFemininityMaximum()<Main.game.getPlayer().getFemininityValue() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_CROSS_DRESSER)) {
 					if(verbose) {
-						descriptionsList.add((plural?"They are":"It is")+" [style.boldMasculine(too masculine)] for you to wear without feeling embarrassed!");
+						descriptionsList.add("对于你来说[style.boldMasculine(过于男性化)]，穿上会觉得尴尬！");
 					} else {
-						descriptionsList.add("[style.boldMasculine(Too masculine)]");
+						descriptionsList.add("[style.boldMasculine(过于男性化)]");
 					}
 				}
 				if(getClothingType().getFemininityMinimum()>Main.game.getPlayer().getFemininityValue() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_CROSS_DRESSER)) {
 					if(verbose) {
-						descriptionsList.add((plural?"They are":"It is")+" [style.boldFeminine(Too feminine)] for you to wear without feeling embarrassed!");
+						descriptionsList.add("对于你来说[style.boldFeminine(过于女性化)]，穿上会觉得尴尬！");
 					} else {
-						descriptionsList.add("[style.boldFeminine(Too feminine)]");
+						descriptionsList.add("[style.boldFeminine(过于女性化)]");
 					}
 				}
 				if(!incompatibleClothing.isEmpty()) {
 					if(verbose) {
-						descriptionsList.add((plural?"They are":"It is")+" [style.boldBad(incompatible with)] your "+Util.stringsToStringList(incompatibleClothing, false)+"!");
+						descriptionsList.add("与你的"+Util.stringsToStringList(incompatibleClothing, false)+"[style.boldBad(不相容)]！");
 					} else {
-						descriptionsList.add("[style.boldBad(Incompatible with:)]");
+						descriptionsList.add("[style.boldBad(不相容:)]");
 						descriptionsList.addAll(incompatibleClothing);
 					}
 				}
@@ -1865,16 +1865,16 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 			if(slotToBeEquippedTo==null) {
 				if(getClothingType().getFemininityMaximum()<equippedToCharacter.getFemininityValue() && !equippedToCharacter.hasFetish(Fetish.FETISH_CROSS_DRESSER)) {
 					if(verbose) {
-						descriptionsList.add(UtilText.parse(equippedToCharacter, (plural?"They are":"It is")+" [style.boldMasculine(too masculine)] for [npc.name] to wear without feeling embarrassed!"));
+						descriptionsList.add(UtilText.parse(equippedToCharacter, "对于[npc.name]来说[style.boldMasculine(过于男性化)]，穿上会觉得尴尬！"));
 					} else {
-						descriptionsList.add("[style.boldMasculine(Too masculine)]");
+						descriptionsList.add("[style.boldMasculine(过于男性化)]");
 					}
 				}
 				if(getClothingType().getFemininityMinimum() > equippedToCharacter.getFemininityValue() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_CROSS_DRESSER)) {
 					if(verbose) {
-						descriptionsList.add(UtilText.parse(equippedToCharacter, (plural?"They are":"It is")+" [style.boldFeminine(too feminine)] for [npc.name] to wear without feeling embarrassed!"));
+						descriptionsList.add(UtilText.parse(equippedToCharacter, "对于[npc.name]来说[style.boldFeminine(过于女性化)]，穿上会觉得尴尬！"));
 					} else {
-						descriptionsList.add("[style.boldFeminine(Too feminine)]");
+						descriptionsList.add("[style.boldFeminine(过于女性化)]");
 					}
 				}
 			}
@@ -1882,10 +1882,10 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 				List<InventorySlot> incompSlots = getIncompatibleSlots(equippedToCharacter, slotToBeEquippedTo);
 				if(!incompSlots.isEmpty()) {
 					if(verbose) {
-						descriptionsList.add((plural?"They [style.boldBad(block":"It [style.boldBad(blocks")+")] the "+Util.inventorySlotsToStringList(incompSlots)+" slot"+(incompSlots.size()!=1?"s":"")+"!");
+						descriptionsList.add("[style.boldBad(阻挡了)]"+Util.inventorySlotsToStringList(incompSlots)+"栏位！");
 					} else {
 						for(InventorySlot slot : incompSlots) {
-							descriptionsList.add("[style.boldBad(Blocks " + Util.capitaliseSentence(slot.getName()) + ")]");
+							descriptionsList.add("[style.boldBad(阻挡" + Util.capitaliseSentence(slot.getName()) + ")]");
 						}
 					}
 				}
@@ -1893,7 +1893,7 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 			if(slotToBeEquippedTo==null) {
 				if(!displacedList.isEmpty()) {
 					if(verbose) {
-						descriptionsList.add((plural?"They have":"It has")+" been [style.boldDisplaced("+Util.displacementTypesToStringList(displacedList)+")]!");
+						descriptionsList.add("被[style.boldDisplaced("+Util.displacementTypesToStringList(displacedList)+")]了！");
 					} else {
 						for(DisplacementType dt : displacedList) {
 							descriptionsList.add("[style.boldDisplaced(" + Util.capitaliseSentence(dt.getDescriptionPast()) + ")]");
@@ -1933,31 +1933,31 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						
 						if(slotToBeEquippedTo==null) {
 							descriptionsList.add(description
-									+ ": Length: <span style='color:"+pl.getColour().toWebHexString()+";'>"+Units.size(length)+"</span>"
-									+ " Diameter: <span style='color:"+cap.getColour().toWebHexString()+";'>"+Units.size(diameter)+"</span>");
+									+ ":长度:<span style='color:"+pl.getColour().toWebHexString()+";'>"+Units.size(length)+"</span>"
+									+ "直径:<span style='color:"+cap.getColour().toWebHexString()+";'>"+Units.size(diameter)+"</span>");
 						}
 						
 						boolean lubed = false;
 						if(slotToBeEquippedTo!=null) {
-							String startString = plural?"They are":"It is";
+							String startString = "";
 							if(equippedToCharacter==null) {
 								switch(slotToBeEquippedTo) {
 									case ANUS:
 										if(Main.game.isPenetrationLimitationsEnabled() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 											if(length>Main.game.getPlayer().getAssMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
-													descriptionsList.add(startString+" [style.colourBad(too long)] to be able to fit comfortably into your ass!");
+													descriptionsList.add(startString+"[style.colourBad(太长了)]，无法舒适地进入你的屁股！");
 												} else {
-													descriptionsList.add("[style.colourTerrible(Too long)] for comfortable insertion");
+													descriptionsList.add("[style.colourTerrible(太长了)]，无法舒适地插入");
 												}
 											}
 										}
 										lubed = Main.game.getPlayer().getLust() >= Main.game.getPlayer().getAssWetness().getArousalNeededToGetAssWet();
 										if(Capacity.isPenetrationDiameterTooBig(Main.game.getPlayer().getAssElasticity(), Main.game.getPlayer().getAssStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
-												descriptionsList.add(startString+" [style.colourBad(too thick)] for your [pc.assCapacity] asshole, and would stretch it out if inserted!");
+												descriptionsList.add(startString+"对于你[pc.assCapacity]的肛门来说[style.colourBad(太粗了)]，插入后会造成[style.colourBad(扩张)]！");
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], will cause [style.colourBad(stretching)]");
+												descriptionsList.add("[style.colourBad(太粗了)]，会造成[style.colourBad(扩张)]");
 											}
 										}
 										break;
@@ -1965,18 +1965,18 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 										if(Main.game.isPenetrationLimitationsEnabled() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 											if(length>Main.game.getPlayer().getFaceMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
-													descriptionsList.add(startString+" [style.colourBad(too long)] to be able to fit comfortably down your throat!");
+													descriptionsList.add(startString+"[style.colourBad(太长了)]，无法舒适地进入你的喉咙！");
 												} else {
-													descriptionsList.add("[style.colourTerrible(Too long)] for comfortable insertion");
+													descriptionsList.add("[style.colourTerrible(太长了)]，无法舒适地插入");
 												}
 											}
 										}
 										lubed = true;
 										if(Capacity.isPenetrationDiameterTooBig(Main.game.getPlayer().getFaceElasticity(), Main.game.getPlayer().getFaceStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
-												descriptionsList.add(startString+" [style.colourBad(too thick)] for your throat, and would stretch it out if inserted!");
+												descriptionsList.add(startString+"对于你的喉咙来说[style.colourBad(太粗了)]，插入后会造成[style.colourBad(扩张)]！");
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], will cause [style.colourBad(stretching)]");
+												descriptionsList.add("[style.colourBad(太粗了)]，会造成[style.colourBad(扩张)]");
 											}
 										}
 										break;
@@ -1984,42 +1984,42 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 										if(Main.game.isPenetrationLimitationsEnabled() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 											if(length>Main.game.getPlayer().getNippleMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
-													descriptionsList.add(startString+" [style.colourBad(too long)] to be able to fit comfortably into your fuckable nipples!");
+													descriptionsList.add(startString+"[style.colourBad(太长了)]，无法舒适地进入你足以插入的乳头！");
 												} else {
-													descriptionsList.add("[style.colourTerrible(Too long)] for comfortable insertion");
+													descriptionsList.add("[style.colourTerrible(太长了)]，无法舒适地插入");
 												}
 											}
 										}
 										lubed = Main.game.getPlayer().getBreastRawStoredMilkValue()>0;
 										if(Capacity.isPenetrationDiameterTooBig(Main.game.getPlayer().getNippleElasticity(), Main.game.getPlayer().getNippleStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
-												descriptionsList.add(startString+" [style.colourBad(too thick)] for your [pc.breastCapacity] nipples, and would stretch them out if inserted!");
+												descriptionsList.add(startString+"对于你[pc.assCapacity]的乳头来说[style.colourBad(太粗了)]，插入后会造成[style.colourBad(扩张)]！");
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], will cause [style.colourBad(stretching)]");
+												descriptionsList.add("[style.colourBad(太粗了)]，会造成[style.colourBad(扩张)]");
 											}
 										}
 										break;
 									case VAGINA:
 										if(verbose) {
-											descriptionsList.add((plural?"They":"It")+" will [style.colourTerrible(tear the hymen)] of any pussy "+(plural?"they are":"it is")+" inserted into!");
+											descriptionsList.add("插入后，一定会[style.colourTerrible(撕裂阴道的处女膜)]！");
 										} else {
-											descriptionsList.add("[style.colourTerrible(Tears hymen)] of virgin pussies");
+											descriptionsList.add("[style.colourTerrible(撕裂阴道处女膜)]");
 										}
 										if(Main.game.isPenetrationLimitationsEnabled() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 											if(Main.game.getPlayer().hasVagina() && length>Main.game.getPlayer().getVaginaMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
-													descriptionsList.add(startString+" [style.colourBad(too long)] to be able to fit comfortably into your pussy!");
+													descriptionsList.add(startString+"[style.colourBad(太长了)]，无法舒适地进入你的小穴！");
 												} else {
-													descriptionsList.add("[style.colourTerrible(Too long)] for comfortable insertion");
+													descriptionsList.add("[style.colourTerrible(太长了)]，无法舒适地插入");
 												}
 											}
 										}
 										lubed = Main.game.getPlayer().getLust() >= Main.game.getPlayer().getVaginaWetness().getArousalNeededToGetAssWet();
 										if(Capacity.isPenetrationDiameterTooBig(Main.game.getPlayer().getVaginaElasticity(), Main.game.getPlayer().getVaginaStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
-												descriptionsList.add(startString+" [style.colourBad(too thick)] for your [pc.pussyCapacity] pussy, and would stretch it out if inserted!");
+												descriptionsList.add(startString+"对于你[pc.pussyCapacity]的小穴来说[style.colourBad(太粗了)]，插入后会造成[style.colourBad(扩张)]！");
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], will cause [style.colourBad(stretching)]");
+												descriptionsList.add("[style.colourBad(太粗了)]，会造成[style.colourBad(扩张)]");
 											}
 										}
 										break;
@@ -2038,12 +2038,12 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 											if(length>equippedToCharacter.getAssMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
 													descriptionsList.add(UtilText.parse(equippedToCharacter,
-															startString+" [style.colourBad(too deep)] in [npc.namePos] ass, and "+(plural?"are":"is")+" causing [npc.herHim] "+discomfort+"!"));
+															startString+"对于[npc.namePos]的屁股来说[style.colourBad(太深了)]，导致[npc.herHim][style.colourBad(非常不适)]！"));
 												} else {
 													if(equippedToCharacter.hasFetish(Fetish.FETISH_MASOCHIST)) {
-														descriptionsList.add("[style.colourTerrible(Too deep)], giving [style.colourMinorGood(masochistic pleasure)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，给予[style.colourMinorGood(受虐感的愉悦)]");
 													} else {
-														descriptionsList.add("[style.colourTerrible(Too deep)], causing [style.colourBad(discomfort)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，造成[style.colourBad(不适)]");
 													}
 												}
 											}
@@ -2052,9 +2052,9 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 										if(Capacity.isPenetrationDiameterTooBig(equippedToCharacter.getAssElasticity(), equippedToCharacter.getAssStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
 												descriptionsList.add(UtilText.parse(equippedToCharacter,
-														startString+" [style.colourBad(too thick)] for [npc.namePos] [npc.assCapacity] asshole, and "+(plural?"are":"is")+" [style.colourBad(stretching)] it out!"));
+														startString+"对于[npc.namePos][npc.assCapacity]的肛门来说[style.colourBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], causing [style.colourBad(asshole to stretch)]");
+												descriptionsList.add("[style.colourBad(非常粗)]，造成[style.colourBad(肛门扩张)]");
 											}
 										}
 										break;
@@ -2063,12 +2063,12 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 											if(length>equippedToCharacter.getFaceMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
 													descriptionsList.add(UtilText.parse(equippedToCharacter,
-															startString+" [style.colourBad(too deep)] down [npc.namePos] throat, and "+(plural?"are":"is")+" causing [npc.herHim] "+discomfort+"!"));
+															startString+"对于[npc.namePos]的喉咙来说[style.colourBad(太深了)]，导致[npc.herHim][style.colourBad(非常不适)]！"));
 												} else {
 													if(equippedToCharacter.hasFetish(Fetish.FETISH_MASOCHIST)) {
-														descriptionsList.add("[style.colourTerrible(Too deep)], giving [style.colourMinorGood(masochistic pleasure)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，给予[style.colourMinorGood(受虐感的愉悦)]");
 													} else {
-														descriptionsList.add("[style.colourTerrible(Too deep)], causing [style.colourBad(discomfort)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，造成[style.colourBad(不适)]");
 													}
 												}
 											}
@@ -2077,9 +2077,9 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 										if(Capacity.isPenetrationDiameterTooBig(equippedToCharacter.getFaceElasticity(), equippedToCharacter.getFaceStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
 												descriptionsList.add(UtilText.parse(equippedToCharacter,
-														startString+" [style.colourBad(too thick)] for [npc.namePos] throat, and "+(plural?"are":"is")+" [style.colourBad(stretching)] it out!"));
+														startString+"对于[npc.namePos]的喉咙来说[style.colourBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], causing [style.colourBad(throat to stretch)]");
+												descriptionsList.add("[style.colourBad(非常粗)]，造成[style.colourBad(喉咙扩张)]");
 											}
 										}
 										break;
@@ -2088,12 +2088,12 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 											if(length>equippedToCharacter.getNippleMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
 													descriptionsList.add(UtilText.parse(equippedToCharacter,
-															startString+" [style.colourBad(too deep)] in [npc.namePos] fuckable nipples, and "+(plural?"are":"is")+" causing [npc.herHim] "+discomfort+"!"));
+															startString+"对于[npc.namePos]足以插入的乳头来说[style.colourBad(太深了)]，导致[npc.herHim][style.colourBad(非常不适)]！"));
 												} else {
 													if(equippedToCharacter.hasFetish(Fetish.FETISH_MASOCHIST)) {
-														descriptionsList.add("[style.colourTerrible(Too deep)], giving [style.colourMinorGood(masochistic pleasure)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，给予[style.colourMinorGood(受虐感的愉悦)]");
 													} else {
-														descriptionsList.add("[style.colourTerrible(Too deep)], causing [style.colourBad(discomfort)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，造成[style.colourBad(不适)]");
 													}
 												}
 											}
@@ -2102,9 +2102,9 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 										if(Capacity.isPenetrationDiameterTooBig(equippedToCharacter.getNippleElasticity(), equippedToCharacter.getNippleStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
 												descriptionsList.add(UtilText.parse(equippedToCharacter,
-														startString+" [style.colourBad(too thick)] for [npc.namePos] [npc.breastCapacity] nipples, and "+(plural?"are":"is")+" [style.colourBad(stretching)] them out!"));
+														startString+"对于[npc.namePos][npc.breastCapacity]的乳头来说[style.colourBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], causing [style.colourBad(nipples to stretch)]");
+												descriptionsList.add("[style.colourBad(非常粗)]，造成[style.colourBad(乳头扩张)]");
 											}
 										}
 										break;
@@ -2113,12 +2113,12 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 											if(equippedToCharacter.hasVagina() && length>equippedToCharacter.getVaginaMaximumPenetrationDepthComfortable()) {
 												if(verbose) {
 													descriptionsList.add(UtilText.parse(equippedToCharacter,
-															startString+" [style.colourBad(too deep)] in [npc.namePos] pussy, and "+(plural?"are":"is")+" causing [npc.herHim] "+discomfort+"!"));
+															startString+"对于[npc.namePos]的阴道来说[style.colourBad(太深了)]，导致[npc.herHim][style.colourBad(非常不适)]！"));
 												} else {
 													if(equippedToCharacter.hasFetish(Fetish.FETISH_MASOCHIST)) {
-														descriptionsList.add("[style.colourTerrible(Too deep)], giving [style.colourMinorGood(masochistic pleasure)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，给予[style.colourMinorGood(受虐感的愉悦)]");
 													} else {
-														descriptionsList.add("[style.colourTerrible(Too deep)], causing [style.colourBad(discomfort)]");
+														descriptionsList.add("[style.colourTerrible(非常深)]，造成[style.colourBad(不适)]");
 													}
 												}
 											}
@@ -2127,9 +2127,9 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 										if(Capacity.isPenetrationDiameterTooBig(equippedToCharacter.getVaginaElasticity(), equippedToCharacter.getVaginaStretchedCapacity(), diameter, lubed)) {
 											if(verbose) {
 												descriptionsList.add(UtilText.parse(equippedToCharacter,
-														startString+" [style.colourBad(too thick)] for [npc.namePos] [npc.pussyCapacity] pussy, and "+(plural?"are":"is")+" [style.colourBad(stretching)] it out!"));
+														startString+"对于[npc.namePos][npc.pussyCapacity]的阴道来说[style.colourBad(太粗了)]，正在造成[style.colourBad(扩张)]！"));
 											} else {
-												descriptionsList.add("[style.colourBad(Too thick)], causing [style.colourBad(pussy to stretch)]");
+												descriptionsList.add("[style.colourBad(非常粗)]，造成[style.colourBad(阴道扩张)]");
 											}
 										}
 										break;
@@ -2150,20 +2150,20 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						Capacity cap = Capacity.getCapacityFromValue(diameter);
 						
 						descriptionsList.add(description
-								+ ": Length: <span style='color:"+pl.getColour().toWebHexString()+";'>"+Units.size(length)+"</span>"
-								+ " Diameter: <span style='color:"+cap.getColour().toWebHexString()+";'>"+Units.size(diameter)+"</span>");
+								+ ":长度:<span style='color:"+pl.getColour().toWebHexString()+";'>"+Units.size(length)+"</span>"
+								+ "直径:<span style='color:"+cap.getColour().toWebHexString()+";'>"+Units.size(diameter)+"</span>");
 						
 					} else if(tag==ItemTag.ONAHOLE_SELF) {//TODO requires testing
 						OrificeElasticity elasticity = OrificeElasticity.getElasticityFromInt(this.getClothingType().getOrificeSelfElasticity());
 						OrificePlasticity plasticity = OrificePlasticity.getElasticityFromInt(this.getClothingType().getOrificeSelfPlasticity());
 						Wetness wetness = Wetness.valueOf(this.getClothingType().getOrificeSelfWetness());
 						descriptionsList.add(description
-								+ ": Capacity: "+Units.size(this.getClothingType().getPenetrationOtherLength())
-								+ " Depth: "+Units.size(this.getClothingType().getOrificeSelfDepth()));
+								+ ":容量:"+Units.size(this.getClothingType().getPenetrationOtherLength())
+								+ "深度:"+Units.size(this.getClothingType().getOrificeSelfDepth()));
 						descriptionsList.add(
-								"Elasticity: <span style='color:"+elasticity.getColour().toWebHexString()+";'>"+elasticity.getDescriptor()+"</span>"
-								+ " Plasticity: <span style='color:"+plasticity.getColour().toWebHexString()+";'>"+plasticity.getDescriptor()+"</span>"
-								+ " Wetness: <span style='color:"+wetness.getColour().toWebHexString()+";'>"+wetness.getDescriptor()+"</span>"
+								"弹性:<span style='color:"+elasticity.getColour().toWebHexString()+";'>"+elasticity.getDescriptor()+"</span>"
+								+ "塑性:<span style='color:"+plasticity.getColour().toWebHexString()+";'>"+plasticity.getDescriptor()+"</span>"
+								+ "湿润度:<span style='color:"+wetness.getColour().toWebHexString()+";'>"+wetness.getDescriptor()+"</span>"
 								);
 						
 					} else if(tag==ItemTag.ONAHOLE_OTHER) {//TODO requires testing
@@ -2171,12 +2171,12 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 						OrificePlasticity plasticity = OrificePlasticity.getElasticityFromInt(this.getClothingType().getOrificeOtherPlasticity());
 						Wetness wetness = Wetness.valueOf(this.getClothingType().getOrificeOtherWetness());
 						descriptionsList.add(description
-								+ ": Capacity: "+Units.size(this.getClothingType().getPenetrationOtherLength())
-								+ " Depth: "+Units.size(this.getClothingType().getOrificeOtherDepth()));
+								+ ":容量:"+Units.size(this.getClothingType().getPenetrationOtherLength())
+								+ "深度:"+Units.size(this.getClothingType().getOrificeOtherDepth()));
 						descriptionsList.add(
-								"Elasticity: <span style='color:"+elasticity.getColour().toWebHexString()+";'>"+elasticity.getDescriptor()+"</span>"
-								+ " Plasticity: <span style='color:"+plasticity.getColour().toWebHexString()+";'>"+plasticity.getDescriptor()+"</span>"
-								+ " Wetness: <span style='color:"+wetness.getColour().toWebHexString()+";'>"+wetness.getDescriptor()+"</span>"
+								"弹性:<span style='color:"+elasticity.getColour().toWebHexString()+";'>"+elasticity.getDescriptor()+"</span>"
+								+ "塑性:<span style='color:"+plasticity.getColour().toWebHexString()+";'>"+plasticity.getDescriptor()+"</span>"
+								+ "湿润度:<span style='color:"+wetness.getColour().toWebHexString()+";'>"+wetness.getDescriptor()+"</span>"
 								);
 						
 					} else {
@@ -2401,13 +2401,13 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 			if(isBadEnchantment()) {
 				sb.append(
 						"<p style='text-align:center;'>"
-								+ "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Negative Enchantment Revealed:</b><br/>"
+								+ "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>已知的负面附魔:</b><br/>"
 										+ "<b>"+Util.capitaliseSentence(getDisplayName(true))+"</b>");
 				
 			} else {
 				sb.append(
 						"<p style='text-align:center;'>"
-								+ "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Enchantment Revealed:</b><br/>"
+								+ "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>已知的附魔:</b><br/>"
 										+ "<b>"+Util.capitaliseSentence(getDisplayName(true))+"</b>");
 			}
 			
@@ -2465,32 +2465,32 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 	public String getEnchantmentPostfix(boolean coloured, String tag) {
 		if(!this.getEffects().isEmpty() && !this.isCondom(this.getClothingType().getEquipSlots().get(0))) {
 			if(this.getEffects().stream().anyMatch(ie->ie.getSecondaryModifier() == TFModifier.CLOTHING_ENSLAVEMENT)) {
-				return "of "+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_ENSLAVEMENT.getColour().toWebHexString()+";'>enslavement</"+tag+">":"enslavement");
+				return "("+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_ENSLAVEMENT.getColour().toWebHexString()+";'>奴役</"+tag+">":"奴役")+"附魔)";
 				
 			} else if(this.getEffects().stream().anyMatch(ie->ie.getSecondaryModifier() == TFModifier.CLOTHING_SERVITUDE)) {
-				return "of "+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_SERVITUDE.getColour().toWebHexString()+";'>servitude</"+tag+">":"servitude");
+				return "("+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_SERVITUDE.getColour().toWebHexString()+";'>仆役</"+tag+">":"仆役")+"附魔)";
 				
 			} else if(this.getEffects().stream().anyMatch(ie->ie.getSecondaryModifier() == TFModifier.CLOTHING_ORGASM_PREVENTION)) {
-				return "of "+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_ORGASM_PREVENTION.getColour().toWebHexString()+";'>orgasm denial</"+tag+">":"orgasm denial");
+				return "("+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_ORGASM_PREVENTION.getColour().toWebHexString()+";'>禁止高潮</"+tag+">":"禁止高潮")+"附魔)";
 				
 			} else if(this.getEffects().stream().anyMatch(ie->ie.getPrimaryModifier() == TFModifier.TF_MOD_FETISH_BEHAVIOUR || ie.getPrimaryModifier() == TFModifier.TF_MOD_FETISH_BODY_PART)) {
 				ItemEffect itemEffect = this.getEffects().stream().filter(ie->ie.getPrimaryModifier() == TFModifier.TF_MOD_FETISH_BEHAVIOUR || ie.getPrimaryModifier() == TFModifier.TF_MOD_FETISH_BODY_PART).findFirst().get();
-				return "of the "+(coloured?"<"+tag+" style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+itemEffect.getSecondaryModifier().getDescriptor()+"</"+tag+">":itemEffect.getSecondaryModifier().getDescriptor());
+				return "("+(coloured?"<"+tag+" style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+itemEffect.getSecondaryModifier().getDescriptor()+"</"+tag+">":itemEffect.getSecondaryModifier().getDescriptor())+"附魔)";
 				
 			} else if(this.getEffects().stream().anyMatch(ie->ie.getSecondaryModifier() == TFModifier.CLOTHING_SEALING)) {
-				return "of "+(coloured?"<"+tag+" style='color:"+PresetColour.SEALED.toWebHexString()+";'>sealing</"+tag+">":"sealing");
+				return "("+(coloured?"<"+tag+" style='color:"+PresetColour.SEALED.toWebHexString()+";'>封印</"+tag+">":"封印")+"附魔)";
 				
 			} else if(this.getEffects().stream().anyMatch(ie->ie.getPrimaryModifier() == TFModifier.CLOTHING_ATTRIBUTE || ie.getPrimaryModifier() == TFModifier.CLOTHING_MAJOR_ATTRIBUTE)) {
 				String name = this.isBadEnchantment() && this.getCoreEnchantment()!=Attribute.MAJOR_CORRUPTION
 						?this.getCoreEnchantment().getNegativeEnchantment()
 						:this.getCoreEnchantment().getPositiveEnchantment();
-				return "of "+(coloured?"<"+tag+" style='color:"+this.getCoreEnchantment().getColour().toWebHexString()+";'>"+name+"</"+tag+">":name);
+				return "("+(coloured?"<"+tag+" style='color:"+this.getCoreEnchantment().getColour().toWebHexString()+";'>"+name+"</"+tag+">":name)+"附魔)";
 				
 			} else if(this.getEffects().stream().anyMatch(ie->ie.getPrimaryModifier() == TFModifier.CLOTHING_CREAMPIE_RETENTION)) {
-				return "of "+(coloured?"<"+tag+" style='color:"+PresetColour.CUM.toWebHexString()+";'>plugging</"+tag+">":"plugging");
+				return "("+(coloured?"<"+tag+" style='color:"+PresetColour.CUM.toWebHexString()+";'>封堵</"+tag+">":"封堵")+"附魔)";
 				
 			} else if(this.getEffects().stream().anyMatch(ie->ie.getSecondaryModifier() != TFModifier.CLOTHING_VIBRATION)) {
-				return "of "+(coloured?"<"+tag+" style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>transformation</"+tag+">":"transformation");
+				return "("+(coloured?"<"+tag+" style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>转化</"+tag+">":"转化")+"附魔)";
 				
 			}
 		}
@@ -2525,23 +2525,23 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 	public Value<Boolean, String> isAbleToBeEquippedDuringSex(InventorySlot slotEquippedTo) {
 		if(getItemTags(slotEquippedTo).contains(ItemTag.ENABLE_SEX_EQUIP)) {
 			if(isEnslavementClothing()) {
-				return new Value<>(false, "Clothing with enslavement enchantments cannot be equipped during sex!");
+				return new Value<>(false, "拥有奴役附魔的衣物无法在性爱过程中装备！");
 			}
 			return new Value<>(true, "");
 		}
-		return new Value<>(false, "This item of clothing cannot be equipped during sex!");
+		return new Value<>(false, "该衣物无法在性爱过程中装备！");
 	}
 	
 	public Value<Boolean, String> isAbleToBeEquippedDuringSexInAnySlot() {
 		for(InventorySlot slot : this.getClothingType().getEquipSlots()) {
 			if(getItemTags(slot).contains(ItemTag.ENABLE_SEX_EQUIP)) {
 				if(isEnslavementClothing()) {
-					return new Value<>(false, "Clothing with enslavement enchantments cannot be equipped during sex!");
+					return new Value<>(false, "拥有奴役附魔的衣物无法在性爱过程中装备！");
 				}
 				return new Value<>(true, "");
 			}
 		}
-		return new Value<>(false, "This item of clothing cannot be equipped during sex!");
+		return new Value<>(false, "该衣物无法在性爱过程中装备！");
 	}
 	
 	
@@ -2738,142 +2738,142 @@ public abstract class AbstractClothing extends AbstractCoreItem implements XMLSa
 		boolean plural = this.getClothingType().isPlural();
 		
 		if(this.getClothingType().getItemTags(slot).contains(ItemTag.UNIQUE_NO_NPC_EQUIP) && !clothingOwner.isPlayer()) {
-			return new Value<>(false, UtilText.parse("[style.colourBad(Only you can equip this item of clothing!)]"));
+			return new Value<>(false, UtilText.parse("[style.colourBad(只有你能装备该衣物！)]"));
 		}
 		
 		if(!this.getClothingType().getEquipSlots().contains(slot)) {
-			return new Value<>(false, UtilText.parse("[style.colourBad(The "+this.getName()+" cannot be equipped into this slot!)]"));
+			return new Value<>(false, UtilText.parse("[style.colourBad("+this.getName()+"无法被装备至该栏位！)]"));
 		}
 		if(block!=null && Collections.disjoint(block.getRequiredTags(), tags)) {
 			return new Value<>(false, UtilText.parse("[style.colourBad(" + UtilText.parse(clothingOwner, block.getDescription()) + ")]"));
 		}
 
 		if(tags.contains(ItemTag.FITS_MUZZLES_EXCLUSIVE) && !clothingOwner.isFaceMuzzle()) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for muzzles, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于吻部，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_BEAKS_EXCLUSIVE) && !clothingOwner.isFaceBeak()) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for beaks, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于喙部，因而[npc.name]无法穿戴。"));
 		}
 		
 		
 		if(tags.contains(ItemTag.FITS_BIPEDS) && clothingOwner.getLegConfiguration()!=LegConfiguration.BIPEDAL) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for bipedal bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于双足身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_TAUR_BODY) && clothingOwner.getLegConfiguration()!=LegConfiguration.QUADRUPEDAL) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for taur bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于半兽身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_LONG_TAIL_BODY) && clothingOwner.getLegConfiguration()!=LegConfiguration.TAIL_LONG) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for long-tailed bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于长尾身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_TAIL_BODY) && clothingOwner.getLegConfiguration()!=LegConfiguration.TAIL) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for tailed bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于尾状身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_ARACHNID_BODY) && clothingOwner.getLegConfiguration()!=LegConfiguration.ARACHNID) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for arachnid bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于蛛形身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_CEPHALOPOD_BODY) && clothingOwner.getLegConfiguration()!=LegConfiguration.CEPHALOPOD) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for cephalopod bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于头足类身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_AVIAN_BODY) && clothingOwner.getLegConfiguration()!=LegConfiguration.AVIAN) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for avian bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于鸟类身躯，因而[npc.name]无法穿戴。"));
 		}
 
 		if(tags.contains(ItemTag.ONLY_FITS_FERAL_ALL_BODY) && !clothingOwner.isFeral()) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feral bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于全兽态身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.ONLY_FITS_FERAL_QUADRUPED_BODY) && (!clothingOwner.isFeral() || clothingOwner.getLegConfiguration()!=LegConfiguration.QUADRUPEDAL)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feral quadrupedal bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于全兽态四足身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.ONLY_FITS_FERAL_ARACHNID_BODY) && (!clothingOwner.isFeral() || clothingOwner.getLegConfiguration()!=LegConfiguration.ARACHNID)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feral arachnid bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于全兽态蛛形身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.ONLY_FITS_FERAL_AVIAN_BODY) && (!clothingOwner.isFeral() || clothingOwner.getLegConfiguration()!=LegConfiguration.AVIAN)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feral avian bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于全兽态鸟类身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.ONLY_FITS_FERAL_CEPHALOPOD_BODY) && (!clothingOwner.isFeral() || clothingOwner.getLegConfiguration()!=LegConfiguration.CEPHALOPOD)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feral cephalopod bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于全兽态头足类身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.ONLY_FITS_FERAL_TAIL_BODY) && (!clothingOwner.isFeral() || clothingOwner.getLegConfiguration()!=LegConfiguration.TAIL)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feral tailed bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于全兽态尾状身躯，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.ONLY_FITS_FERAL_LONG_TAIL_BODY) && (!clothingOwner.isFeral() || clothingOwner.getLegConfiguration()!=LegConfiguration.TAIL_LONG)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feral long-tailed bodies, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于全兽态长尾身躯，因而[npc.name]无法穿戴。"));
 		}
 		
 		if(tags.contains(ItemTag.FITS_ARM_WINGS_EXCLUSIVE) && !clothingOwner.getArmTypeTags().contains(BodyPartTag.ARM_WINGS)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for arm-wings, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于翼手，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_FEATHERED_ARM_WINGS_EXCLUSIVE) && !clothingOwner.getArmTypeTags().contains(BodyPartTag.ARM_WINGS_FEATHERED)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for feathered arm-wings, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于羽态翼手，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_LEATHERY_ARM_WINGS_EXCLUSIVE) && !clothingOwner.getArmTypeTags().contains(BodyPartTag.ARM_WINGS_LEATHERY)) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for leathery arm-wings, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于皮膜翼手，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_HOOFS_EXCLUSIVE) && clothingOwner.getLegType().getFootType()!=FootType.HOOFS) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for hoofs, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于蹄子，因而[npc.name]无法穿戴。"));
 		}
 		if(tags.contains(ItemTag.FITS_TALONS_EXCLUSIVE) && clothingOwner.getLegType().getFootType()!=FootType.TALONS) {
-			return new Value<>(false, UtilText.parse(clothingOwner,"The "+this.getName()+" "+(plural?"are":"is")+" only suitable for talons, and as such, [npc.name] cannot wear "+(plural?"them":"it")+"."));
+			return new Value<>(false, UtilText.parse(clothingOwner,this.getName()+"只适用于鸟爪，因而[npc.name]无法穿戴。"));
 		}
 		if(clothingOwner.hasPenisIgnoreDildo() && tags.contains(ItemTag.REQUIRES_NO_PENIS)) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull] a penis, which is blocking [npc.herHim] from wearing the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull]有阴茎，阻止了[npc.herHim]穿戴"+this.getName()+"！"));
 		}
 		if(clothingOwner.hasDildo() && tags.contains(ItemTag.REQUIRES_NO_PENIS)) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull] equipped a dildo, which is blocking [npc.herHim] from wearing the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull]装备了假屌，阻止了[npc.herHim]穿戴"+this.getName()+"！"));
 		}
 		if(!clothingOwner.hasPenisIgnoreDildo() && tags.contains(ItemTag.REQUIRES_PENIS)) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name] [npc.do]n't have a penis, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull]没有阴茎，所以无法穿戴"+this.getName()+"！"));
 		}
 		if(clothingOwner.hasVagina() && tags.contains(ItemTag.REQUIRES_NO_VAGINA)) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull] a vagina, which is blocking [npc.herHim] from wearing the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull]有阴道，阻止了[npc.herHim]穿戴"+this.getName()+"！"));
 		}
 		if(!clothingOwner.hasVagina() && tags.contains(ItemTag.REQUIRES_VAGINA)) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name] [npc.do]n't have a vagina, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NameHasFull]没有阴道，所以无法穿戴"+this.getName()+"！"));
 		}
 		if(!clothingOwner.isBreastFuckableNipplePenetration() && tags.contains(ItemTag.REQUIRES_FUCKABLE_NIPPLES)) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] nipples are not fuckable, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的乳头不能插入，所以无法穿戴"+this.getName()+"！"));
 		}
 		if(clothingOwner.getBody().getBodyMaterial().isRequiresPiercing()) {
 			if(slot==InventorySlot.PIERCING_EAR && !clothingOwner.isPiercedEar()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] ears are not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的耳朵没有穿孔，所以无法穿戴"+this.getName()+"！"));
 		
 			} else if(slot==InventorySlot.PIERCING_LIP && !clothingOwner.isPiercedLip()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] lips are not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的嘴唇没有穿孔，所以无法穿戴"+this.getName()+"！"));
 				
 			} else if(slot==InventorySlot.PIERCING_NIPPLE && !clothingOwner.isPiercedNipple()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] nipples are not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的乳头没有穿孔，所以无法穿戴"+this.getName()+"！"));
 				
 			} else if(slot==InventorySlot.PIERCING_NOSE && !clothingOwner.isPiercedNose()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] nose is not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的鼻子没有穿孔，所以无法穿戴"+this.getName()+"！"));
 				
 			} else if(slot==InventorySlot.PIERCING_PENIS && !clothingOwner.isPiercedPenis()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] penis is not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的阴茎没有穿孔，所以无法穿戴"+this.getName()+"！"));
 				
 			} else if(slot==InventorySlot.PIERCING_STOMACH && !clothingOwner.isPiercedNavel()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] navel is not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的肚脐没有穿孔，所以无法穿戴"+this.getName()+"！"));
 				
 			} else if(slot==InventorySlot.PIERCING_TONGUE && !clothingOwner.isPiercedTongue()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] tongue is not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的舌头没有穿孔，所以无法穿戴"+this.getName()+"！"));
 				
 			} else if(slot==InventorySlot.PIERCING_VAGINA && !clothingOwner.isPiercedVagina()){
-				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.NamePos] vagina is not pierced, so [npc.she] can't wear the "+this.getName()+"!"));
+				return new Value<>(false, UtilText.parse(clothingOwner, "[npc.namePos]的阴部没有穿孔，所以无法穿戴"+this.getName()+"！"));
 			}
 		}
 		if(slot==InventorySlot.PIERCING_PENIS && !clothingOwner.hasPenisIgnoreDildo()){
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name] [npc.do] not have a penis, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name]没有阴茎，所以无法穿戴"+this.getName()+"！"));
 			
 		} else if(slot==InventorySlot.PIERCING_VAGINA && !clothingOwner.hasVagina()){
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name] [npc.do] not have a vagina, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name]没有阴道，所以无法穿戴"+this.getName()+"！"));
 		}
 		
 		if (slot == InventorySlot.WINGS && clothingOwner.getWingType()==WingType.NONE) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name] [npc.do] not have any wings, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name]没有翅膀，所以无法穿戴"+this.getName()+"！"));
 		}
 		if (slot == InventorySlot.HORNS && clothingOwner.getHornType().equals(HornType.NONE)) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name] [npc.do] not have any horns, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name]没有角，所以无法穿戴"+this.getName()+"！"));
 		}
 		if (slot == InventorySlot.TAIL && clothingOwner.getTailType()==TailType.NONE) {
-			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name] [npc.do] not have a tail, so [npc.she] can't wear the "+this.getName()+"!"));
+			return new Value<>(false, UtilText.parse(clothingOwner, "[npc.Name]没有尾巴，所以无法穿戴"+this.getName()+"！"));
 		}
 		return new Value<>(true, "");
 	}

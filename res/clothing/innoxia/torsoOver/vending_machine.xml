@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>50000</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Hazmat Rat Vending Machine]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Hazmat Rat Vending Machines]]></namePlural> 
-		<description><![CDATA[This vending machine bears the words 'Hazmat Rat' in bold, green letters, while on both of its sides there are stylised images of rat-morphs wearing hazmat suits. Although it looks to have seen better days, it's still in fully-functioning condition.]]></description> 
+		<determiner><![CDATA[一台]]></determiner>
+		<name><![CDATA[“恶鼠”自动贩卖机]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[“恶鼠”自动贩卖机]]></namePlural> 
+		<description><![CDATA[这台自动售货机上有着醒目的绿色大字 "恶鼠"，两侧还有着穿着防护服的老鼠人的图案。尽管它看起来已经有些年头，但仍然可以正常运作。]]></description> 
 		<physicalResistance>50</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity> 
 		<slot>TORSO_OVER</slot> 
@@ -116,25 +115,25 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(climb)] into the vending machine.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(push)] [npc2.name] into the vending machine.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(push)] [npc2.name] into the vending machine.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]爬进自动贩卖机里。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.name]推进自动贩卖机里。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将[npc2.name]推进自动贩卖机里。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(climb)] out of the vending machine.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.name] out of the vending machine.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.name] out of the vending machine.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]爬出自动贩卖机。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.name]拉出自动贩卖机。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.name]从自动贩卖机里拽出来。
+]]></otherRough>
 	</displacementText>
 </clothing>

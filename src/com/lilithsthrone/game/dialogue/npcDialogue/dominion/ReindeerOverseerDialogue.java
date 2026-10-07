@@ -24,8 +24,8 @@ public class ReindeerOverseerDialogue {
 	
 	private static Response getDefaultResponses(int index) {
 		if(index == 1) {
-			return new ResponseTrade("Trade",
-					UtilText.parse(getReindeer(), "Ask [npc.name] what Yuletide presents [npc.sheIs] selling."),
+			return new ResponseTrade("交易",
+					UtilText.parse(getReindeer(), "问问[npc.name]都卖什么圣诞礼物。"),
 					getReindeer()) {
 				@Override
 				public void effects() {
@@ -35,12 +35,12 @@ public class ReindeerOverseerDialogue {
 			
 		} else if(index == 2) {
 			if(Main.game.getDialogueFlags().hasWorkedForReindeer(getReindeer().getId())) {
-				return new Response("Work",
-						UtilText.parse(getReindeer(), "You've already helped [npc.name] to finish all of the work [npc.she] had today, so you'll need to come back tomorrow if you wanted to work for [npc.herHim] again."),
+				return new Response("工作",
+						UtilText.parse(getReindeer(), "你今天已经帮[npc.name]完成了所有工作，如果还想帮忙就等到明天再来。"),
 						null);
 				
 			} else {
-				return new Response("Work", "Offer to work with the reindeer-morphs.", ENCOUNTER_WORK) {
+				return new Response("工作", "主动提出帮驯鹿化形工作。", ENCOUNTER_WORK) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().addReindeerEncountered(getReindeer().getId());
@@ -51,18 +51,18 @@ public class ReindeerOverseerDialogue {
 			
 		} else if(index == 3) {
 			if(!Main.game.getDialogueFlags().hasWorkedForReindeer(getReindeer().getId())) {
-				return new Response("Relieve stress",
-						UtilText.parse(getReindeer(), "[npc.Name] is far too busy to take any time off work right now. Perhaps if you helped out first, [npc.she]'d have time to have sex with you..."),
+				return new Response("缓解压力",
+						UtilText.parse(getReindeer(), "[npc.Name]忙着手头上的工作。如果你能先帮一把，[npc.she]或许就有事件跟你做了……"),
 						null);
 				
 			} else if(!getReindeer().isAttractedTo(Main.game.getPlayer())) {
-				return new Response("Relieve stress",
-						UtilText.parse(getReindeer(), "[npc.Name] is not attracted to you, and as such, [npc.sheIs] not willing to have sex with you..."),
+				return new Response("缓解压力",
+						UtilText.parse(getReindeer(), "[npc.Name]并没有被你吸引，因而[npc.sheIs]也不愿意跟你做爱……"),
 						null);
 				
 			} else {
-				return new ResponseSex("Relieve stress",
-							UtilText.parse(getReindeer(), "Ask [npc.name] if [npc.she]'d like to blow off some steam with you."),
+				return new ResponseSex("缓解压力",
+							UtilText.parse(getReindeer(), "询问[npc.name]愿不愿意跟你宣泄一番。"),
 							true, true,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -84,8 +84,8 @@ public class ReindeerOverseerDialogue {
 			}
 			
 		} else if(index==0) {
-			return new Response("Leave",
-					UtilText.parse(getReindeer(), "Tell [npc.name] that you might come back another time, before taking your leave."),
+			return new Response("离开",
+					UtilText.parse(getReindeer(), "告诉[npc.name]你可能之后再回来，然后离开。"),
 					ENCOUNTER_START){
 				@Override
 				public void effects() {
@@ -100,7 +100,7 @@ public class ReindeerOverseerDialogue {
 		return null;
 	}
 	
-	public static final DialogueNode ENCOUNTER_START = new DialogueNode("Reindeer Overseer", "", true) {
+	public static final DialogueNode ENCOUNTER_START = new DialogueNode("驯鹿监工", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -115,7 +115,7 @@ public class ReindeerOverseerDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_WORK = new DialogueNode("Reindeer Overseer", "", true) {
+	public static final DialogueNode ENCOUNTER_WORK = new DialogueNode("驯鹿监工", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -127,9 +127,9 @@ public class ReindeerOverseerDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Shovel snow",
-						UtilText.parse(getReindeer(), "Tell [npc.name] that you'll shovel snow with the rest of the workers."
-								+ "<br/>Your performance and payment will be based on your [style.italicsStrength("+Attribute.MAJOR_PHYSIQUE.getName()+")]."),
+				return new Response("铲雪",
+						UtilText.parse(getReindeer(), "告诉[npc.name]你可以跟其他工人一起铲雪。"
+								+ "<br/>表现和报酬基于你的[style.italicsStrength("+Attribute.MAJOR_PHYSIQUE.getName()+")]。"),
 						ENCOUNTER_WORK_FINISHED) {
 					@Override
 					public void effects() {
@@ -141,9 +141,9 @@ public class ReindeerOverseerDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Use heat-stave",
-						UtilText.parse(getReindeer(), "Tell [npc.name] that you'd like to use one of the heat-staves to score out lines in the snow."
-								+ "<br/>Your performance and payment will be based on your [style.italicsIntelligence("+Attribute.MAJOR_ARCANE.getName()+")]."),
+				return new Response("使用放热板",
+						UtilText.parse(getReindeer(), "告诉[npc.name]你可以拿一块放热板，一行一行地除雪。"
+								+ "<br/>表现和报酬基于你的[style.italicsIntelligence("+Attribute.MAJOR_ARCANE.getName()+")]。"),
 						ENCOUNTER_WORK_FINISHED) {
 					@Override
 					public void effects() {
@@ -155,9 +155,9 @@ public class ReindeerOverseerDialogue {
 				};
 				
 			} else if(index==3) {
-				return new Response("'Encouragement'",
-						UtilText.parse(getReindeer(), "Tell [npc.name] that you'd be best suited for delivering drinks and 'encouraging' the workers."
-								+ "<br/>Your performance and payment will be based on your [style.italicsCorruption("+Attribute.MAJOR_CORRUPTION.getName()+")]."),
+				return new Response("“激励”",
+						UtilText.parse(getReindeer(), "告诉[npc.name]你最适合递送饮料和“激励”工人。"
+								+ "<br/>表现和报酬基于你的[style.italicsCorruption("+Attribute.MAJOR_CORRUPTION.getName()+")]。"),
 						ENCOUNTER_WORK_FINISHED) {
 					@Override
 					public void effects() {
@@ -172,7 +172,7 @@ public class ReindeerOverseerDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_WORK_FINISHED = new DialogueNode("Reindeer Overseer", "", true) {
+	public static final DialogueNode ENCOUNTER_WORK_FINISHED = new DialogueNode("驯鹿监工", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60 * 4*60;
@@ -187,10 +187,10 @@ public class ReindeerOverseerDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getReindeer(), "[npc.Name] has had enough and brings an end to the sex...");
+			return UtilText.parse(getReindeer(), "[npc.Name]已经爽够了，性爱就此结束……");
 		}
 		@Override
 		public String getContent() {

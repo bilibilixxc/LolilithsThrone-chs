@@ -217,7 +217,7 @@ public class RandomEnchantment {
 		}
 		StringBuilder sb = new StringBuilder();
 		if(namePrefix!=null && !namePrefix.isEmpty()) {
-			sb.append(namePrefix+" ");
+			sb.append(namePrefix+namePostfix);
 		}
 		if(clothingType==null) {
 			sb.append("[style.colourDisabled(X)]");
@@ -225,7 +225,7 @@ public class RandomEnchantment {
 			sb.append(clothingType.getName());
 		}
 		if(namePostfix!=null && !namePostfix.isEmpty()) {
-			sb.append(" "+namePostfix);
+			sb.append("");
 		}
 		return sb.toString();
 	}

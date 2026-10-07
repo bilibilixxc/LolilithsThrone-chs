@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>120</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bikini top]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bikini tops]]></namePlural>
-		<description><![CDATA[A triangle-shaped bikini top. It uses loose strings tied around the neck and back to keep it in place.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[比基尼上装]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[比基尼上装]]></namePlural>
+		<description><![CDATA[三角形比基尼上衣。它用散开的绳子绑在脖子和背部，使其保持原位。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -58,27 +58,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the bikini top over [npc.her] chest before tying up the strings at [npc.her] back.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the bikini top over [npc2.namePos] chest before tying up the strings at [npc2.her] back.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the bikini top over [npc2.namePos] chest before roughly tying up the strings at [npc2.her] back.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将比基尼上装放在[npc.her]的胸部上，并系好[npc.her]背后的绳子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将比基尼上装放在[npc2.namePos]的胸部上，并把[npc2.her]背后的绳子系好。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将比基尼上装放在[npc2.namePos]的胸部上，并草草地把[npc2.her]背后的绳子系好。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the strings of [npc.her] bikini top and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the strings of [npc2.namePos] bikini top and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(untie)] the strings of [npc2.namePos] bikini top and [npc.verb(pull)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的比基尼上装的绳子并把它脱了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]的比基尼上装的绳子并把它脱了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地解开[npc2.namePos]的比基尼上装的绳子并把它拽了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

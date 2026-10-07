@@ -138,7 +138,7 @@ public abstract class AbstractItemType extends AbstractCoreType {
 		this.name = name;
 		this.namePlural = namePlural;
 		this.description = description;
-		this.useDescriptor = "use";
+		this.useDescriptor = "使用";
 		this.svgPathInformation = Util.newArrayListOfValues(new SvgInformation(1, pathName==null?"":pathName, 100, 0, new HashMap<>()));
 		this.authorDescription = "";
 
@@ -158,8 +158,8 @@ public abstract class AbstractItemType extends AbstractCoreType {
 		
 		this.effectTooltipLines = new ArrayList<>();
 		
-		this.useDescriptionsSelf = Util.newArrayListOfValues("[npc.Name] [npc.verb(use)] the item.");
-		this.useDescriptionsOther = Util.newArrayListOfValues("[npc.Name] [npc.verb(use)] the item on [npc2.name].");
+		this.useDescriptionsSelf = Util.newArrayListOfValues("[npc.Name]使用了该物品。");
+		this.useDescriptionsOther = Util.newArrayListOfValues("[npc.Name]对[npc2.name]使用了该物品。");
 		
 		specialEffect = "";
 		
@@ -226,7 +226,7 @@ public abstract class AbstractItemType extends AbstractCoreType {
 			if(coreAttributes.getOptionalFirstOf("authorTag").isPresent()) {
 				this.authorDescription = coreAttributes.getMandatoryFirstOf("authorTag").getTextContent();
 			} else if(!author.equalsIgnoreCase("innoxia")){
-				this.authorDescription = "A tag discreetly attached to the "+(plural?namePlural:name)+" informs you that "+(plural?"they were":"it was")+" made by a certain '"+Util.capitaliseSentence(author)+"'.";
+				this.authorDescription = "小心地贴在"+(plural?namePlural:name)+"上面的标签告诉你这是由“"+Util.capitaliseSentence(author)+"”所制作。";
 			} else {
 				this.authorDescription = "";
 			}
@@ -378,7 +378,7 @@ public abstract class AbstractItemType extends AbstractCoreType {
 						.map(o -> o.getTextContent())
 						.collect(Collectors.toList());
 				if(useDescriptionsSelf.isEmpty()) {
-					this.useDescriptionsSelf = Util.newArrayListOfValues("[npc.Name] [npc.verb(use)] the item.");
+					this.useDescriptionsSelf = Util.newArrayListOfValues("[npc.Name]使用了该物品。");
 				}
 				
 				this.useDescriptionsOther = itemElement
@@ -387,12 +387,12 @@ public abstract class AbstractItemType extends AbstractCoreType {
 						.map(o -> o.getTextContent())
 						.collect(Collectors.toList());
 				if(useDescriptionsOther.isEmpty()) {
-					this.useDescriptionsOther = Util.newArrayListOfValues("[npc.Name] [npc.verb(use)] the item on [npc2.name].");
+					this.useDescriptionsOther = Util.newArrayListOfValues("[npc.Name]对[npc2.name]使用了该物品。");
 				}
 				
 			} else {
-				this.useDescriptionsSelf = Util.newArrayListOfValues("[npc.Name] [npc.verb(use)] the item.");
-				this.useDescriptionsOther = Util.newArrayListOfValues("[npc.Name] [npc.verb(use)] the item on [npc2.name].");
+				this.useDescriptionsSelf = Util.newArrayListOfValues("[npc.Name]使用了该物品。");
+				this.useDescriptionsOther = Util.newArrayListOfValues("[npc.Name]对[npc2.name]使用了该物品。");
 			}
 			
 		}
@@ -562,17 +562,17 @@ public abstract class AbstractItemType extends AbstractCoreType {
 //				}
 				int seconds = entry.getValue().getValue();
 				int timeDisplay = seconds/60; // minutes
-				String timeDesc = "minutes";
+				String timeDesc = "分钟";
 				if(timeDisplay>120) {
 					timeDisplay = timeDisplay/60; // hours
-					timeDesc = "hours";
+					timeDesc = "小时";
 				}
 				if(timeDisplay>48) {
 					timeDisplay = timeDisplay/24; // days
-					timeDesc = "days";
+					timeDesc = "天";
 				}
 				for(Entry<AbstractAttribute, Float> attEntry : se.getAttributeModifiers(null).entrySet()) {
-					parsed.add("<i>"+attEntry.getKey().getFormattedValue(attEntry.getValue())+"</i> for [style.italicsOrange("+timeDisplay+" "+timeDesc+")]");
+					parsed.add("<i>"+attEntry.getKey().getFormattedValue(attEntry.getValue())+"</i>持续[style.italicsOrange("+timeDisplay+timeDesc+")]");
 				}
 			}
 			
@@ -586,17 +586,17 @@ public abstract class AbstractItemType extends AbstractCoreType {
 //					}
 					int seconds = entry.getValue();
 					int timeDisplay = seconds/60; // minutes
-					String timeDesc = "minutes";
+					String timeDesc = "分钟";
 					if(timeDisplay>120) {
 						timeDisplay = timeDisplay/60; // hours
-						timeDesc = "hours";
+						timeDesc = "小时";
 					}
 					if(timeDisplay>48) {
 						timeDisplay = timeDisplay/24; // days
-						timeDesc = "days";
+						timeDesc = "天";
 					}
 					for(Entry<AbstractAttribute, Float> attEntry : se.getAttributeModifiers(null).entrySet()) {
-						parsed.add("<i>"+attEntry.getKey().getFormattedValue(attEntry.getValue())+"</i> for [style.italicsOrange("+timeDisplay+" "+timeDesc+")]");
+						parsed.add("<i>"+attEntry.getKey().getFormattedValue(attEntry.getValue())+"</i>持续[style.italicsOrange("+timeDisplay+timeDesc+")]");
 					}
 				}
 			}
@@ -606,7 +606,7 @@ public abstract class AbstractItemType extends AbstractCoreType {
 
 	public String getDisplayName(boolean withRarityColour) {
 		return Util.capitaliseSentence((determiner!=null?determiner:"") + (withRarityColour
-				? (" <span style='color: " + rarity.getColour().toWebHexString() + ";'>" + (this.isPlural()?getNamePlural(false):getName(false)) + "</span>")
+				? ("<span style='color: " + rarity.getColour().toWebHexString() + ";'>" + (this.isPlural()?getNamePlural(false):getName(false)) + "</span>")
 				: (this.isPlural()?getNamePlural(false):getName(false))));
 	}
 
@@ -711,9 +711,9 @@ public abstract class AbstractItemType extends AbstractCoreType {
 	
 	public String getUseTooltipDescription(GameCharacter user, GameCharacter target) {
 		if(user==null || target==null || user.equals(target)) {
-			return Util.capitaliseSentence(getUseName()) + " the " + getName(false) + ".";
+			return Util.capitaliseSentence(getUseName())+ getName(false) + "。";
 		} else {
-			return UtilText.parse(target, "Get [npc.name] to " + getUseName() + " the " + getName(false) + ".");
+			return UtilText.parse(target, "让[npc.name]" + getUseName() + getName(false) + "。");
 		}
 	}
 	
@@ -734,7 +734,7 @@ public abstract class AbstractItemType extends AbstractCoreType {
 	}
 	
 	public String getUnableToBeUsedFromInventoryDescription() {
-		return "This item cannot be used in this way!";
+		return "该物品无法这样使用！";
 	}
 
 	public boolean isAbleToBeUsedWhileTrading() {
@@ -742,7 +742,7 @@ public abstract class AbstractItemType extends AbstractCoreType {
 	}
 	
 	public String getUnableToBeUsedWhileTradingDescription() {
-		return "You cannot use this item while trading!";
+		return "该物品无法在交易时使用！";
 	}
 	
 	
@@ -751,7 +751,7 @@ public abstract class AbstractItemType extends AbstractCoreType {
 	}
 	
 	public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
-		return "This item cannot be used in this way!";
+		return "该物品无法这样使用！";
 	}
 	
 	public boolean isAbleToBeUsedInSex() {

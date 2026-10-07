@@ -25,56 +25,56 @@ public class EarType {
 	
 	public static AbstractEarType HUMAN = new AbstractEarType(BodyCoveringType.HUMAN,
 			Race.HUMAN,
-			"human",
-			"ear",
-			"ears",
+			"人类",
+			"耳朵",
+			"耳朵",
 			Util.newArrayListOfValues(""),
-			Util.newArrayListOfValues("soft", "feminine"),
-			"The hot itching feeling passes after a few moments, leaving [npc.herHim] with normal-looking human ears.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldHuman(human ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of normal, human ears, which are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)]#IF(npc.isPiercedEar()), and which have been pierced#ENDIF.") {
+			Util.newArrayListOfValues("柔软", "阴柔"),
+			"发热的瘙痒只持续了很短的一段时间，接着给[npc.herHim]留下了一对正常人类的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldHuman(人类的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对普通的人类耳朵，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType ANGEL = new AbstractEarType(BodyCoveringType.ANGEL,
 			Race.ANGEL,
-			"angel",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("pointed", "delicate", "angelic"),
-			Util.newArrayListOfValues("soft", "feminine", "pointed", "delicate", "angelic"),
-			"The hot itching feeling passes after a few moments, leaving [npc.herHim] with delicate, humanoid ears, with long, pointed tips.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldAngel(pointed, angelic ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of pointed angelic ears, which are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)]#IF(npc.isPiercedEar()), and which have been pierced#ENDIF.") {
+			"天使",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("尖尖", "精致", "天使"),
+			Util.newArrayListOfValues("柔软", "阴柔", "尖尖", "精致", "天使"),
+			"发热的瘙痒只持续了很短的一段时间，接着给[npc.herHim]留下了一对人类样子的耳朵，但顶端却尖尖的，长长探出。<br/>"
+				+ "[npc.Name]现在拥有[style.boldAngel(尖尖的天使耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对尖尖的天使耳朵，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType DEMON_COMMON = new AbstractEarType(BodyCoveringType.DEMON_COMMON,
 			Race.DEMON,
-			"demonic",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("pointed", "demonic"),
-			Util.newArrayListOfValues("soft", "feminine", "pointed", "demonic"),
-			"The hot itching feeling passes after a few moments, leaving [npc.herHim] with delicate, humanoid ears, with long, pointed tips.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldDemon(pointed, demonic ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of pointed demonic ears, which are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)]#IF(npc.isPiercedEar()), and which have been pierced#ENDIF.") {
+			"恶魔",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("尖尖", "恶魔"),
+			Util.newArrayListOfValues("柔软", "阴柔", "尖尖", "恶魔"),
+			"发热的瘙痒只持续了很短的一段时间，接着给[npc.herHim]留下了一对人类样子的耳朵，但顶端却尖尖的，长长探出。<br/>"
+				+ "[npc.Name]现在拥有[style.boldDemon(尖尖的恶魔耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对尖尖的恶魔耳朵，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 	
 	public static AbstractEarType DOG_MORPH = new AbstractEarType(BodyCoveringType.CANINE_FUR,
 			Race.DOG_MORPH,
-			"floppy dog",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("floppy", "furry", "fur-coated", "dog-like"),
-			Util.newArrayListOfValues("feminine", "floppy", "furry", "fur-coated", "dog-like"),
-			"They quickly expand in size, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"犬(下垂)",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("下垂", "毛茸茸", "覆盖皮毛", "犬一般"),
+			Util.newArrayListOfValues("阴柔", "下垂", "毛茸茸", "覆盖皮毛", "犬一般"),
+			"[npc.ears]忽然就变得很大，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new dog-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldDog(floppy, dog-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of floppy,#IF(npc.isPiercedEar()) pierced,#ENDIF dog-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的犬一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldDog(犬一般下垂的大耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对犬一般下垂的大耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.EAR_HANDLES_IN_SEX);
@@ -83,92 +83,92 @@ public class EarType {
 
 	public static AbstractEarType DOG_MORPH_POINTED = new AbstractEarType(BodyCoveringType.CANINE_FUR,
 			Race.DOG_MORPH,
-			"pointed dog",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("pointed", "furry", "fur-coated", "dog-like"),
-			Util.newArrayListOfValues("feminine", "pointed", "furry", "fur-coated", "dog-like"),
-			"They quickly grow into upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"尖犬",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("尖尖", "毛茸茸", "覆盖皮毛", "犬一般"),
+			Util.newArrayListOfValues("阴柔", "尖尖", "毛茸茸", "覆盖皮毛", "犬一般"),
+			"[npc.ears]忽然就变得竖直上指，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new dog-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldDog(pointed, dog-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of pointed,#IF(npc.isPiercedEar()) pierced,#ENDIF dog-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的犬一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldDog(犬一般尖尖的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对犬一般尖尖的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType DOG_MORPH_FOLDED = new AbstractEarType(BodyCoveringType.CANINE_FUR,
 			Race.DOG_MORPH,
-			"folded dog",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("folded", "furry", "fur-coated", "dog-like"),
-			Util.newArrayListOfValues("feminine", "folded", "furry", "fur-coated", "dog-like"),
-			"They quickly grow into upright points, before folding over at the top and shifting to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"折犬",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("弯折", "毛茸茸", "覆盖皮毛", "犬一般"),
+			Util.newArrayListOfValues("弯折", "下垂", "毛茸茸", "覆盖皮毛", "犬一般"),
+			"[npc.ears]忽然就变得尖尖的，竖直上指，随后再中间又弯折下来，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new dog-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldDog(folded, dog-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of folded,#IF(npc.isPiercedEar()) pierced,#ENDIF dog-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的犬一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldDog(犬一般弯折的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对犬一般弯折的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType WOLF_MORPH = new AbstractEarType(BodyCoveringType.LYCAN_FUR,
 			Race.WOLF_MORPH,
-			"wolf",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("furry", "fur-coated", "wolf-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "wolf-like"),
-			"They quickly grow into large, upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"狼",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("毛茸茸", "覆盖皮毛", "狼一般"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "狼一般"),
+			"[npc.ears]忽然就变得很大，高高竖起，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new wolf-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldWolf(large, wolf-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of upright,#IF(npc.isPiercedEar()) pierced,#ENDIF wolf-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的狼一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldWolf(狼一般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对狼一般的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType FOX_MORPH = new AbstractEarType(BodyCoveringType.FOX_FUR,
 			Race.FOX_MORPH,
-			"fox",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("pointed", "furry", "fur-coated", "fox-like"),
-			Util.newArrayListOfValues("feminine", "pointed", "furry", "fur-coated", "fox-like"),
-			"They quickly grow into large, upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"狐狸",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("尖尖", "毛茸茸", "覆盖皮毛", "狐狸般"),
+			Util.newArrayListOfValues("阴柔", "尖尖", "毛茸茸", "覆盖皮毛", "狐狸般"),
+			"[npc.ears]忽然就变得很大，高高竖起，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new fox-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldFox(pointed, fox-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of pointed,#IF(npc.isPiercedEar()) pierced,#ENDIF fox-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的狐狸般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldFox(狐狸般尖尖的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对狐狸般尖尖的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType FOX_MORPH_BIG = new AbstractEarType(BodyCoveringType.FOX_FUR,
 			Race.FOX_MORPH,
-			"fennec fox",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("pointed", "furry", "fur-coated", "large", "fennec-fox-like"),
-			Util.newArrayListOfValues("feminine", "pointed", "furry", "fur-coated", "large", "fennec-fox-like"),
-			"They quickly grow into massive, upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"耳廓狐",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("尖尖", "毛茸茸", "覆盖皮毛", "格外大", "耳廓狐般"),
+			Util.newArrayListOfValues("阴柔", "尖尖", "毛茸茸", "覆盖皮毛", "格外大", "耳廓狐般"),
+			"[npc.ears]忽然就变得巨大，竖直上指，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new fox-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldFox(massive, fennec-fox-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of massive,#IF(npc.isPiercedEar()) pierced,#ENDIF fennec-fox-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的狐狸般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldFox(耳廓狐般巨大的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对耳廓狐般巨大的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.EAR_HANDLES_IN_SEX);
@@ -177,110 +177,110 @@ public class EarType {
 
 	public static AbstractEarType COW_MORPH = new AbstractEarType(BodyCoveringType.BOVINE_FUR,
 			Race.COW_MORPH,
-			"cow",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("furry", "fur-coated", "cow-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "cow-like"),
-			"They quickly take on a distinctly bovine shape by growing out and narrowing down into long, slightly-folded ovals."
+			"牛",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("毛茸茸", "覆盖皮毛", "牛一般"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "牛一般"),
+			"[npc.ears]忽然变成特别像牛的样子，向外探出，越靠近顶端越纤细，形成了稍有些内弯的椭圆形。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new cow-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldCow(cow-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of #IF(npc.isPiercedEar()) pierced,#ENDIF cow-like ears, which are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的牛一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldCow(牛一般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对#IF(npc.isPiercedEar())打过耳洞的#ENDIF牛一样的耳朵，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]。") {
 	};
 
 	public static AbstractEarType CAT_MORPH = new AbstractEarType(BodyCoveringType.FELINE_FUR,
 			Race.CAT_MORPH,
-			"cat",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("furry", "fur-coated", "cat-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "cat-like"),
-			"They quickly grow into upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"猫",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("毛茸茸", "覆盖皮毛", "猫一般"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "猫一般"),
+			"[npc.ears]忽然就变得竖直上指，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new cat-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldCat(cat-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of #IF(npc.isPiercedEar()) pierced,#ENDIF cat-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的猫一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldCat(猫一般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对猫一般的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType CAT_MORPH_TUFTED = new AbstractEarType(BodyCoveringType.FELINE_FUR,
 			Race.CAT_MORPH,
-			"tufted cat",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("tufted", "furry", "fur-coated", "cat-like"),
-			Util.newArrayListOfValues("feminine", "tufted", "furry", "fur-coated", "cat-like"),
-			"They quickly grow into upright points, which are topped off with a small patch of sensitive fur, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"猫(簇毛)",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("顶端簇状", "毛茸茸", "覆盖皮毛", "猫般"),
+			Util.newArrayListOfValues("阴柔", "顶端簇状", "毛茸茸", "覆盖皮毛", "猫般"),
+			"[npc.ears]忽然就变得尖尖的，竖直上指，顶端还长了一簇敏感的皮毛，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new cat-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldCat(tufted, cat-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of tufted,#IF(npc.isPiercedEar()) pierced,#ENDIF cat-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的猫一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldCat(猫一般的耳朵)]，顶端长了一小撮毛，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对猫一般的耳朵，位于脑袋的顶端，尖端长了一小撮毛，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType SQUIRREL_MORPH = new AbstractEarType(BodyCoveringType.SQUIRREL_FUR,
 			Race.SQUIRREL_MORPH,
-			"squirrel",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("furry", "fur-coated", "squirrel-like"),
-			Util.newArrayListOfValues("feminine", "furry", "fur-coated", "squirrel-like"),
-			"They quickly grow into small, upright ovals, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"松鼠",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("毛茸茸", "覆盖皮毛", "松鼠般"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "覆盖皮毛", "松鼠般"),
+			"[npc.ears]忽然就变得很小巧，竖直上指，呈椭圆形，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new squirrel-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldSquirrel(squirrel-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of#IF(npc.isPiercedEar()) pierced,#ENDIF squirrel-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的松鼠般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldSquirrel(松鼠般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对松鼠般的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType RAT_MORPH = new AbstractEarType(BodyCoveringType.RAT_FUR,
 			Race.RAT_MORPH,
-			"rat",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("rat-like"),
-			Util.newArrayListOfValues("feminine", "rat-like"),
-			"They quickly grow into small, upright ovals, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"老鼠",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("老鼠般"),
+			Util.newArrayListOfValues("阴柔", "老鼠般"),
+			"[npc.ears]忽然就变得很小巧，竖直上指，呈椭圆形，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new rat-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldRat(rat-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of #IF(npc.isPiercedEar()) pierced,#ENDIF rat-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的老鼠般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldRat(老鼠般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对老鼠般的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType RABBIT_MORPH = new AbstractEarType(BodyCoveringType.RABBIT_FUR,
 			Race.RABBIT_MORPH,
-			"upright rabbit",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("upright", "furry", "fur-coated", "rabbit-like"),
-			Util.newArrayListOfValues("feminine", "upright", "furry", "fur-coated", "rabbit-like"),
-			"They quickly grow into large, upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"兔(直立)",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("竖直", "毛茸茸", "覆盖皮毛", "兔子般"),
+			Util.newArrayListOfValues("阴柔", "竖直", "毛茸茸", "覆盖皮毛", "兔子般"),
+			"[npc.ears]忽然就变得很大，高高竖起，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new rabbit-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldRabbit(upright, rabbit-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of upright,#IF(npc.isPiercedEar()) pierced,#ENDIF rabbit-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的兔子般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldRabbit(兔子般上竖的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对兔子般上竖的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.EAR_HANDLES_IN_SEX);
@@ -289,20 +289,20 @@ public class EarType {
 
 	public static AbstractEarType RABBIT_MORPH_FLOPPY = new AbstractEarType(BodyCoveringType.RABBIT_FUR,
 			Race.RABBIT_MORPH,
-			"floppy rabbit",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("floppy", "furry", "fur-coated", "rabbit-like"),
-			Util.newArrayListOfValues("feminine", "floppy", "furry", "fur-coated", "rabbit-like"),
-			"They quickly grow into large, upright points, and shift to sit higher up than a normal pair of human ears would, before suddenly collapsing and flopping down on either side of [npc.her] head."
+			"兔(下垂)",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("下垂", "毛茸茸", "覆盖皮毛", "兔子般"),
+			Util.newArrayListOfValues("阴柔", "下垂", "毛茸茸", "覆盖皮毛", "兔子般"),
+			"[npc.ears]忽然就变得很大，高高竖起，并且转移到脑袋更高的部分，而非原来人类耳朵的位置，但最后又突然垂落下去，搭在了两边。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new rabbit-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldRabbit(floppy, rabbit-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of floppy,#IF(npc.isPiercedEar()) pierced,#ENDIF rabbit-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的兔子般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldRabbit(兔子般下垂的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对兔子般下垂的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.EAR_HANDLES_IN_SEX);
@@ -311,20 +311,20 @@ public class EarType {
 
 	public static AbstractEarType BAT_MORPH = new AbstractEarType(BodyCoveringType.BAT_FUR,
 			Race.BAT_MORPH,
-			"bat",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("large", "bat-like"),
-			Util.newArrayListOfValues("feminine", "large", "bat-like"),
-			"They quickly grow into large, upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"蝙蝠",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("格外大", "蝙蝠般"),
+			Util.newArrayListOfValues("阴柔", "格外大", "蝙蝠般"),
+			"[npc.ears]忽然就变得很大，高高竖起，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] [npc.verb(discover)] that [npc.she] can easily twitch [npc.her] new bat-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldBat(large, bat-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of large,#IF(npc.isPiercedEar()) pierced,#ENDIF bat-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的蝙蝠般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldBat(蝙蝠般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对蝙蝠般的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.ECHO_LOCATION);
 		}
@@ -332,94 +332,94 @@ public class EarType {
 
 	public static AbstractEarType HORSE_MORPH = new AbstractEarType(BodyCoveringType.HORSE_HAIR,
 			Race.HORSE_MORPH,
-			"horse",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("furry", "upright", "horse-like"),
-			Util.newArrayListOfValues("feminine", "furry", "upright", "horse-like"),
-			"They quickly grow into sturdy little upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"马",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("毛茸茸", "竖直", "马一般"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "竖直", "马一般"),
+			"[npc.ears]忽然就变得有些粗短，略微上指，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new horse-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldHorse(horse-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of upright,#IF(npc.isPiercedEar()) pierced,#ENDIF horse-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的马一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldHorse(马一般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对马一般的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType HORSE_MORPH_UPRIGHT = new AbstractEarType(BodyCoveringType.HORSE_HAIR,
 			Race.HORSE_MORPH,
-			"tall horse",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("furry", "tall", "upright", "horse-like"),
-			Util.newArrayListOfValues("feminine", "tall", "furry", "upright", "horse-like"),
-			"They quickly grow into tall, upright points, and shift to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"马(长直)",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("毛茸茸", "较高", "竖直", "马一般"),
+			Util.newArrayListOfValues("阴柔", "较高", "毛茸茸", "竖直", "马般"),
+			"[npc.ears]忽然就变得竖直上指，更加长一些，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new horse-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldHorse(tall, horse-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of tall, upright,#IF(npc.isPiercedEar()) pierced,#ENDIF horse-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的马一般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldHorse(马一般高高的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对马一般高而上竖的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 	
 	public static AbstractEarType REINDEER_MORPH = new AbstractEarType(BodyCoveringType.REINDEER_FUR,
 			Race.REINDEER_MORPH,
-			"reindeer",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("furry", "reindeer-like"),
-			Util.newArrayListOfValues("feminine", "furry", "reindeer-like"),
-			"They quickly take on a distinctly reindeer-like shape by growing out and narrowing down into long, slightly-folded ovals, before shifting to sit higher up on [npc.her] head than a normal pair of human ears would."
+			"驯鹿",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("毛茸茸", "驯鹿般"),
+			Util.newArrayListOfValues("阴柔", "毛茸茸", "驯鹿般"),
+			"[npc.ears]忽然变成特别像驯鹿的样子，向外探出，越靠近顶端越纤细，形成了稍有些内弯的椭圆形，并且转移到脑袋更高的部分，而非原来人类耳朵的位置。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] quickly grows to cover them,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在上面，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new reindeer-like ears back and forth.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldReindeer(reindeer-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.She] [npc.has] a pair of#IF(npc.isPiercedEar()) pierced,#ENDIF reindeer-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].") {
+				+ "转化步入尾声后，[npc.she]试着前后抖了抖刚刚获得的驯鹿般的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldReindeer(驯鹿般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.She]有一对驯鹿般的耳朵，位于脑袋的顶端，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，且已经打过耳洞#ENDIF。") {
 	};
 
 	public static AbstractEarType ALLIGATOR_MORPH = new AbstractEarType(BodyCoveringType.ALLIGATOR_SCALES,
 			Race.ALLIGATOR_MORPH,
-			"alligator",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("scaled", "scale-covered", "alligator-like"),
-			Util.newArrayListOfValues("feminine", "scaled", "scale-covered", "alligator-like"),
-			"They quickly shrink down into little nubs as most of the external cartilage shifts down into the sides of [npc.her] head."
+			"鳄鱼",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("带鳞", "覆盖鳞片", "鳄鱼般"),
+			Util.newArrayListOfValues("阴柔", "带鳞", "覆盖鳞片", "鳄鱼般"),
+			"[npc.ears]迅速收缩，只剩下了一小片，而大部分软骨组织则没入了脑袋里。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] grow to cover [npc.her] now-fully-internal ears,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在几乎完全没入体内的耳朵上，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, [npc.her] now-fully-internal ears are made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，这几乎完全没入体内的耳朵完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.sheIs] left with the ears of an alligator-morph.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldAlligator(internal, scale-covered alligator ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.Her] ears are an internal part of [npc.her] head, and are covered by a fan of [npc.earFullDescription(true)]."
-				+ "#IF(npc.isPiercedEar()) They have been cleverly pierced so as to allow [npc.herHim] to wear ear-specific jewellery.#ENDIF") {
+				+ "转化步入尾声后，[npc.she]得到了鳄鱼化形的耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldAlligator(鳞片覆盖、位于体内的鳄鱼耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.her]的耳朵现在位于脑袋内部，覆盖着一片[npc.earFullDescription(true)]。"
+				+ "#IF(npc.isPiercedEar())并且很巧妙地穿了孔，从而能够戴上为耳部设计的首饰。#ENDIF") {
 	};
 	
 	public static AbstractEarType HARPY = new AbstractEarType(BodyCoveringType.FEATHERS,
 			Race.HARPY,
-			"harpy",
-			"ear",
-			"ears",
-			Util.newArrayListOfValues("feathered", "feather-covered", "bird-like"),
-			Util.newArrayListOfValues("feminine", "feathered", "feather-covered", "bird-like"),
-			"They quickly shrink down into little nubs as most of the external cartilage shifts down into the sides of [npc.her] head."
+			"哈比",
+			"耳朵",
+			"耳朵",
+			Util.newArrayListOfValues("长有羽毛", "羽毛覆盖", "鸟一般"),
+			Util.newArrayListOfValues("阴柔", "长有羽毛", "羽毛覆盖", "鸟一般"),
+			"[npc.ears]迅速收缩，只剩下了一小片，而大部分软骨组织则没入了脑袋里。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-				+ " A layer of [npc.earFullDescriptionColour] grow to cover [npc.her] now-fully-internal ears,"
+				+ "一层[npc.earFullDescriptionColour]迅速覆盖在几乎完全没入体内的耳朵上，"
 				+ "#ELSE"
-				+ " Just like the rest of [npc.her] body, [npc.her] now-fully-internal ears are made out of [npc.earFullDescription],"
+				+ "就与身体的其他部位一样，这几乎完全没入体内的耳朵完全是由[npc.earFullDescription]构成，"
 				+ "#ENDIF"
-				+ " and as the transformation finishes, [npc.sheIs] left with a pair of beautifully-feathered harpy ears.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldHarpy(internal, feather-covered harpy ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].",
-			"[npc.Her] ears are an internal part of [npc.her] head, and are covered by a fan of [npc.earFullDescription(true)]."
-				+ "#IF(npc.isPiercedEar()) They have been cleverly pierced so as to allow [npc.herHim] to wear ear-specific jewellery.#ENDIF") {
+				+ "转化步入尾声后，[npc.she]得到了有美丽羽毛装饰的哈比耳朵。<br/>"
+				+ "[npc.Name]现在拥有[style.boldHarpy(羽毛覆盖、位于体内的哈比耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。",
+			"[npc.her]的耳朵现在位于脑袋内部，覆盖着一片[npc.earFullDescription(true)]。"
+				+ "#IF(npc.isPiercedEar())并且很巧妙地穿了孔，从而能够戴上为耳部设计的首饰。#ENDIF") {
 	};
 	
 	private static List<AbstractEarType> allEarTypes;

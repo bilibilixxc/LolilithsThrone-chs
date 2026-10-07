@@ -9,10 +9,10 @@ import java.time.Month;
  */
 public enum Season {
 	
-	SPRING("spring"),
-	SUMMER("summer"),
-	AUTUMN("autumn"),
-	WINTER("winter");
+	SPRING("春天"),
+	SUMMER("夏天"),
+	AUTUMN("秋天"),
+	WINTER("冬天");
 	
 	private String name;
 

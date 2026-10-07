@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Eastern road]]></name>
-	<tooltipDescription><![CDATA[This road leads out of the eastern gate of Elis, and after a few miles it links up with the well-maintained highway which runs alongside the river Hubur.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[on the eastern road leading out of Elis]]></virginityLossDescription>
+	<name><![CDATA[向东的路]]></name>
+	<tooltipDescription><![CDATA[这条路从东门出伊利斯，延伸数英里后与胡布尔河畔维护良好的公路相接。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯向东的路上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

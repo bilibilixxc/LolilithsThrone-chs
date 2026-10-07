@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[kitchen]]></name>
-	<tooltipDescription><![CDATA[The place in which meals are prepared and cooked for the customers at 'The Centaur's Sword'.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the kitchen in 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[厨房]]></name>
+	<tooltipDescription><![CDATA[“半人马之剑”酒馆为顾客准备和烹饪饭菜的地方。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在半人马之剑的厨房]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_TAN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

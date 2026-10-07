@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 	
 	<!-- Betrayed Lunexis: -->
@@ -12,8 +12,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Meraxis as she leads you to the Amazons' camp.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟着梅拉克西丝，她会带你去亚马逊人营地。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_failed_ursa]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_amazon_camp, PLACE_TYPE_innoxia_fields_elis_amazon_camp_queen)]
@@ -33,8 +33,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Ursa says and leave her tent.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[按乌萨说的做，离开她的帐篷。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_failed_ursa_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_amazon_camp_ursa_daily_interaction, true)]
@@ -54,8 +54,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Continue on your way through the Amazons' camp...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续穿过亚马逊人的营地……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 			</response>
 		</responses>
@@ -66,7 +66,7 @@
 	
 	<scene id="start">
 		<preParsingEffects><![CDATA[
-			[#game.setBadEnd("Lunexis's Loyal Cock-sleeve")]
+			[#game.setBadEnd("露内克西丝忠实的鸡巴套")]
 		]]></preParsingEffects>
 		<content folderPath="txt/badEnds/lunexis_escape">START</content>
 		<secondsPassed minutes="true"><![CDATA[15]]></secondsPassed>
@@ -76,8 +76,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Lunexis]]></responseTitle>
-				<responseTooltip><![CDATA[Accompany Meraxis to the Amazons' camp to see Lunexis.]]></responseTooltip>
+				<responseTitle><![CDATA[露内克西丝]]></responseTitle>
+				<responseTooltip><![CDATA[陪同梅拉克西丝前往亚马逊人营地见露内克西丝。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_amazon_camp]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_amazon_camp, PLACE_TYPE_innoxia_fields_elis_amazon_camp_lunexis)]
@@ -96,8 +96,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA['Remind her']]></responseTitle>
-				<responseTooltip><![CDATA[With Lunexis's response threatening to ruin your plan, you quickly 'remind her' of what it is she told you about a secret weapon.]]></responseTooltip>
+				<responseTitle><![CDATA[“提醒她”]]></responseTitle>
+				<responseTooltip><![CDATA[露内克西丝的回答有可能会破坏你的计划，你得赶紧“提醒”她，她告诉过你什么秘密武器。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_amazon_camp_remind_her]]></nextDialogue>
 			</response>
 		</responses>
@@ -115,8 +115,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Teleported]]></responseTitle>
-				<responseTooltip><![CDATA[With your guarantee that it's safe to teleport to Themiscyra, Meraxis casts the spell...]]></responseTooltip>
+				<responseTitle><![CDATA[传送]]></responseTitle>
+				<responseTooltip><![CDATA[只要你保证，传送到特弥斯库拉是安全的，梅拉克西丝就会施法……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_teleported]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_themiscyra, PLACE_TYPE_innoxia_fields_themiscyra_plaza)]
@@ -142,8 +142,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Obey your Mistress and get down to give her a blowjob...]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[服从主人，趴下给她口交……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_teleported_blowjob]]></nextDialogue>
 			</response>
 		</responses>
@@ -162,8 +162,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[Lunexis claims you as her cock-sleeve by fucking you in front of her army...]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[露内克西丝在她的大军面前操你，声称你是她的鸡巴套……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -221,8 +221,8 @@
 	</scene>
 	
 	<scene id="after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The centauress has had her fun with you, and with a cruel laugh she kicks you away from her...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[半人马已经玩腻了，她残忍地一笑，一脚把你踢开……]]></tooltip>
 		<content folderPath="txt/badEnds/lunexis_escape">AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -231,8 +231,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Palace]]></responseTitle>
-				<responseTooltip><![CDATA[The two of you are dragged into Themiscyra's palace...]]></responseTooltip>
+				<responseTitle><![CDATA[宫殿]]></responseTitle>
+				<responseTooltip><![CDATA[你们两个被拖进了特弥斯库拉的宫殿……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_palace]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_themiscyra, PLACE_TYPE_innoxia_fields_themiscyra_palace)]
@@ -255,8 +255,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Trained]]></responseTitle>
-				<responseTooltip><![CDATA[Over the next few months, Lunexis has you trained into becoming her obedient cock-sleeve...]]></responseTooltip>
+				<responseTitle><![CDATA[调教]]></responseTitle>
+				<responseTooltip><![CDATA[在接下来的几个月里，露内克西丝会把你训练成她听话的鸡巴套……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_palace_trained]]></nextDialogue>
 			</response>
 		</responses>
@@ -278,8 +278,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Oral whore]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the horse-girl that you love sucking her fat horse cock most of all!]]></responseTooltip>
+				<responseTitle><![CDATA[口交娼妓]]></responseTitle>
+				<responseTooltip><![CDATA[告诉马女，你最喜欢给她口交了！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_choice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/badEnds/lunexis_escape', 'TRAINED_ORAL'))]
@@ -291,16 +291,16 @@
 				<availabilityConditional><![CDATA[[#!pc.hasVagina()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Cock-sleeve]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have a pussy, so can't be trained to be a true cock-sleeve...]]></responseTooltip>
+				<responseTitle><![CDATA[鸡巴套]]></responseTitle>
+				<responseTooltip><![CDATA[你没有小穴，所以无法被训练成真正的鸡巴套……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.hasVagina()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Cock-sleeve]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the horse-girl that you love being a true cock sleeve, having her fat horse cock hilted deep into your cunt!]]></responseTooltip>
+				<responseTitle><![CDATA[鸡巴套]]></responseTitle>
+				<responseTooltip><![CDATA[告诉马女，你喜欢做一个真正的鸡巴套，让她肥大的马鸡巴深深插入你的小穴！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_choice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/badEnds/lunexis_escape', 'TRAINED_VAGINAL'))]
@@ -312,8 +312,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Butt slut]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the horse-girl that you love the feeling of having her massive cock rammed deep into your slutty ass!]]></responseTooltip>
+				<responseTitle><![CDATA[骚屁屁]]></responseTitle>
+				<responseTooltip><![CDATA[告诉马女，你喜欢她的大鸡巴深深插入你淫荡屁穴的感觉！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_choice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/badEnds/lunexis_escape', 'TRAINED_ANAL'))]
@@ -332,8 +332,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Final training]]></responseTitle>
-				<responseTooltip><![CDATA[You get trained by the horse-girl to become Lunexis's perfect cock-sleeve...]]></responseTooltip>
+				<responseTitle><![CDATA[最终调教]]></responseTitle>
+				<responseTooltip><![CDATA[你被马女训练为露内克西丝完美的鸡巴套……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_graduation]]></nextDialogue>
 				<effects><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_oral))
@@ -364,8 +364,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Party]]></responseTitle>
-				<responseTooltip><![CDATA[You're taken to the party, where you're to finally get stuffed full of Lunexis's cock!]]></responseTooltip>
+				<responseTitle><![CDATA[淫趴]]></responseTitle>
+				<responseTooltip><![CDATA[你被带到淫趴，在那里，你终于要被露内克西丝的鸡巴撑满了！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_final]]></nextDialogue>
 			</response>
 		</responses>
@@ -388,12 +388,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Meraxis]]></responseTitle>
+				<responseTitle><![CDATA[梅拉克西丝]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_spectate_meraxis))
-						You've already seen what's become of the cock-sleeve who used to be known as Meraxis.
+						你已经看到了曾经被叫做“梅拉克西丝”的鸡巴套的下场。
 					#ELSE
-						Look across and see what's being done to the cock-sleeve who used to be known as Meraxis.
+						看向对面，看看那个曾经被叫做“梅拉克西丝”的鸡巴套被干成了什么样。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -411,12 +411,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Pleasure Lunexis]]></responseTitle>
+				<responseTitle><![CDATA[取悦露内克西丝]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_spectate_self))
-						You've already pleasured Lunexis, who's momentarily satisfied and has commanded you to remain still and act as her cock-sleeve.
+						你已经取悦了露内克西丝，她一时满足，命令你保持不动，充当她的鸡巴套。
 					#ELSE
-						Focus on pleasuring your queen instead of watching what's happening to the other three cock-sleeves.
+						集中精力取悦你的女王，不要分心去看另外三个鸡巴套的境遇。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -434,12 +434,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Epilogue]]></responseTitle>
+				<responseTitle><![CDATA[尾声]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_spectate_meraxis) || !flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_spectate_self))
-						The party's only just getting started!
+						淫趴才刚刚开始！
 					#ELSE
-						After the party, you start your new life as Lunexis's favoured cock-sleeve...
+						淫趴结束后，你作为露内克西丝最爱的鸡巴套开启了新的套生……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -477,8 +477,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[The End...]]></responseTitle>
-				<responseTooltip><![CDATA[[style.italicsBadEnd(With this end to your journey, the thread of prophecy is severed. Restore a saved game to restore the weave of fate, or persist in the doomed world you have created.)]]]></responseTooltip>
+				<responseTitle><![CDATA[结局……]]></responseTitle>
+				<responseTooltip><![CDATA[[style.italicsBadEnd(你的旅程就此结束，预言之线也被斩断。是恢复已保存的游戏来重塑命运的编织，还是继续留在你所创造的注定失败的世界中？)]]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 		</responses>

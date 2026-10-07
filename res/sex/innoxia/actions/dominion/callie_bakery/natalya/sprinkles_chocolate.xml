@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -24,14 +24,14 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Chocolate]]></title>
+	<title><![CDATA[巧克力]]></title>
 	<tooltip><![CDATA[
-		Decide to finish off the two iced assholes with a helping of chocolate spinkles.
+		决定加上巧克力碎屑，品尝完这两个洒满糖霜的屁穴。
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
-				Looking between the three pots, you quickly decide that chocolate sprinkles are going to be the best. Taking a big pinch of the sugary little sticks, you liberally scatter them over the two iced doughnuts before you. The dark decoration contrasts nicely with the bright white and pink icing, and in no time at all you're left looking at a mouth-watering pair of iced-and-sprinkled doughnuts.
+				你在三个罐子之间打量一番，很快决定巧克力糖针会是最好的选择。你抓起一大把甜甜的小糖针，毫不顾忌地撒在面前的两个糖霜甜甜圈上。深色的装饰与明亮的白色和粉色糖霜形成鲜明对比，转眼间你就看到了两个令人垂涎欲滴的撒满糖针的糖霜甜甜圈。
 			]]></text>
 		</description>
 	</descriptions>

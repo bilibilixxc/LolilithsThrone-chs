@@ -7,15 +7,15 @@ package com.lilithsthrone.game.character.markings;
  */
 public enum ScarType {
 
-	CLAW_MARKS("claw mark", "claw marks", true),
+	CLAW_MARKS("爪痕", "爪痕", true),
 	
-	BURNS("burn mark", "burn marks", false),
+	BURNS("烫痕", "烫痕", false),
 	
-	STRAIGHT_SCAR("straight scar", "straight scars", false),
+	STRAIGHT_SCAR("笔直疤痕", "笔直疤痕", false),
 	
-	JAGGED_SCAR("jagged scar", "jagged scars", false),
+	JAGGED_SCAR("曲折疤痕", "曲折疤痕", false),
 
-	BRUISE("bruise", "bruises", false);
+	BRUISE("淤青", "淤青", false);
 	
 	private String name;
 	private String namePlural;

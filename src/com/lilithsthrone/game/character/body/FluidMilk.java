@@ -194,7 +194,7 @@ public class FluidMilk implements FluidInterface {
 		}
 		
 		if(this.flavour == flavour) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 
 		this.flavour = flavour;
@@ -202,21 +202,21 @@ public class FluidMilk implements FluidInterface {
 		if(this.isCrotchMilk()) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A soothing warmth spreads through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a contented little sigh.<br/>"
-						+ "[npc.NamePos] [npc.crotchMilk] "
+						+ "一股舒缓的暖流向下蔓延到[npc.namePos]的[npc.crotchBoobs]中，令[npc.herHim]不由自主地发出[npc.moan]声。<br/>"
+						+ "[npc.NamePos]的[npc.crotchMilk]"
 						+ (flavour==FluidFlavour.FLAVOURLESS
-							?"is now <b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>"
-							:"now tastes of <b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>.")
+							?"现在是<b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>"
+							:"现在尝起来像<b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>。")
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A soothing warmth spreads through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a contented little sigh.<br/>"
-						+ "[npc.NamePos] [npc.milk] "
+						+ "一股舒缓的暖流蔓延到[npc.namePos]的[npc.breasts]中，令[npc.herHim]不由自主地发出[npc.moan]声。<br/>"
+						+ "[npc.NamePos]的[npc.milk]"
 						+ (flavour==FluidFlavour.FLAVOURLESS
-							?"is now <b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>"
-							:"now tastes of <b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>.")
+							?"现在是<b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>"
+							:"现在尝起来像<b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>。")
 					+ "</p>");
 		}
 	}
@@ -227,7 +227,7 @@ public class FluidMilk implements FluidInterface {
 	
 	public String addFluidModifier(GameCharacter owner, FluidModifier fluidModifier) {
 		if(fluidModifiers.contains(fluidModifier)) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		fluidModifiers.add(fluidModifier);
@@ -241,14 +241,14 @@ public class FluidMilk implements FluidInterface {
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, pulsating heat spreads through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(addictive)]!"
+								+ "一股奇妙而躁动的热流深入了[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]下意识地发出一声[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(成瘾的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, pulsating heat spreads through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(addictive)]!"
+								+ "一股奇妙而躁动的热流深入了[npc.namePos]的[npc.breasts]，让[npc.herHim]下意识地发出一声[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(成瘾的)]！"
 							+ "</p>");
 				}
 			case ALCOHOLIC:
@@ -256,14 +256,14 @@ public class FluidMilk implements FluidInterface {
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, soothing warmth spreads up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(strongly alcoholic)]!"
+								+ "一股奇妙而舒缓的暖流沁入[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(含高度酒精的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, soothing warmth spreads up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(strongly alcoholic)]!"
+								+ "一股奇妙而舒缓的暖流沁入[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(含高度酒精的)]！"
 							+ "</p>");
 				}
 			case ALCOHOLIC_WEAK:
@@ -271,122 +271,122 @@ public class FluidMilk implements FluidInterface {
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, soothing warmth spreads up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(alcoholic)]!"
+								+ "一股奇妙而舒缓的暖流沁入[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(含酒精的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, soothing warmth spreads up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(alcoholic)]!"
+								+ "一股奇妙而舒缓的暖流沁入[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(含酒精的)]！"
 							+ "</p>");
 				}
 			case BUBBLING:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A light, bubbly feeling spreads up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(bubbly)]!"
+								+ "一股轻微的气泡感在[npc.namePos]的[npc.crotchBoobs]中出现，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(起泡的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A light, bubbly feeling spreads up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(bubbly)]!"
+								+ "一股轻微的气泡感在[npc.namePos]的[npc.breasts]中出现，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(起泡的)]！"
 							+ "</p>");
 				}
 			case HALLUCINOGENIC:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A series of strange pulses shoot up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(psychoactive)]!"
+								+ "一连串奇妙的搏动感直冲[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(致幻的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A series of strange pulses shoot up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(psychoactive)]!"
+								+ "一连串奇妙的搏动感直冲[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(致幻的)]！"
 							+ "</p>");
 				}
 			case MINERAL_OIL:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soothing warmth flows into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now imbued with [style.boldGrow(mineral oil)], and can melt condoms!"
+								+ "一股舒缓的暖流沁入[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在充满了[style.boldGrow(矿物油)]，可以融化避孕套了！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soothing warmth flows into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now imbued with [style.boldGrow(mineral oil)], and can melt condoms!"
+								+ "一股舒缓的暖流沁入[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在充满了[style.boldGrow(矿物油)]，可以融化避孕套了！"
 							+ "</p>");
 				}
 			case MUSKY:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A slow, creeping warmth rises up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(musky)]!"
+								+ "一股缓慢蠕动的暖意从[npc.namePos]的[npc.crotchBoobs]中升腾，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(麝香味的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A slow, creeping warmth rises up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(musky)]!"
+								+ "一股缓慢蠕动的暖意从[npc.namePos]的[npc.breasts]中升腾，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(麝香味的)]！"
 							+ "</p>");
 				}
 			case SLIMY:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, soothing warmth flows up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(slimy)]!"
+								+ "一股奇妙而舒缓的暖流沁入[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(粘滑的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A strange, soothing warmth flows up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(slimy)]!"
+								+ "一股奇妙而舒缓的暖流沁入[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(粘滑的)]！"
 							+ "</p>");
 				}
 			case STICKY:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A thick, sickly warmth flows up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(sticky)]!"
+								+ "一股厚重的暖流流入[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(黏糊糊的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A thick, sickly warmth flows up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(sticky)]!"
+								+ "一股厚重的暖流流入[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(黏糊糊的)]！"
 							+ "</p>");
 				}
 			case VISCOUS:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A heavy heat slowly rises up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is now [style.boldGrow(viscous)]!"
+								+ "一股强烈的热流缓缓在[npc.namePos]的[npc.crotchBoobs]中升腾，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在是[style.boldGrow(粘稠的)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A heavy heat slowly rises up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-								+ "[npc.NamePos] [npc.milk] is now [style.boldGrow(viscous)]!"
+								+ "一股强烈的热流缓缓在[npc.namePos]的[npc.breasts]中升腾，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在是[style.boldGrow(粘稠的)]！"
 							+ "</p>");
 				}
 		}
 		
-		return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+		return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 	}
 	
 	public String removeFluidModifier(GameCharacter owner, FluidModifier fluidModifier) {
 		if(!fluidModifiers.contains(fluidModifier)) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		fluidModifiers.remove(fluidModifier);
@@ -400,14 +400,14 @@ public class FluidMilk implements FluidInterface {
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft coolness spreads up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer addictive)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.crotchBoobs]中蔓延，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再有成瘾性)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft coolness spreads up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer addictive)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.breasts]中蔓延，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再有成瘾性)]！"
 							+ "</p>");
 				}
 			case ALCOHOLIC:
@@ -415,117 +415,117 @@ public class FluidMilk implements FluidInterface {
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft coolness spreads up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer alcoholic)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.crotchBoobs]中蔓延，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再含酒精)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft coolness spreads up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer alcoholic)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.breasts]中蔓延，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再含酒精)]！"
 							+ "</p>");
 				}
 			case BUBBLING:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A calm, settling feeling spreads up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer bubbly)]!"
+								+ "一股平静感在[npc.namePos]的[npc.crotchBoobs]中出现，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再起泡)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A calm, settling feeling spreads up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer bubbly)]!"
+								+ "一股平静感在[npc.namePos]的[npc.breasts]中出现，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再起泡)]！"
 							+ "</p>");
 				}
 			case HALLUCINOGENIC:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A series of soothing waves wash up through [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer psychoactive)]!"
+								+ "一连串舒缓的浪潮涌向[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再有致幻性)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A series of soothing waves wash up through [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer psychoactive)]!"
+								+ "一连串舒缓的浪潮涌上[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再有致幻性)]！"
 							+ "</p>");
 				}
 			case MUSKY:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A gentle coolness rises up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a soft sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer musky)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.crotchBoobs]中升腾，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再充满淫味)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A gentle coolness rises up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a soft sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer musky)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.breasts]中升腾，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再充满淫味)]！"
 							+ "</p>");
 				}
 			case SLIMY:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A calming coolness flows up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer slimy)]!"
+								+ "一股舒缓的凉爽感流入[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再黏滑)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A calming coolness flows up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer slimy)]!"
+								+ "一股舒缓的凉爽感流入[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再粘滑)]！"
 							+ "</p>");
 				}
 			case STICKY:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft warmth flows up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer sticky)]!"
+								+ "一股微暖沁入了[npc.namePos]的[npc.crotchBoobs]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再黏糊糊)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft warmth flows up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer sticky)]!"
+								+ "一股微暖沁入了[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再黏糊糊)]！"
 							+ "</p>");
 				}
 			case VISCOUS:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft coolness rises up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer viscous)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.crotchBoobs]中升腾，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再粘稠)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A soft coolness rises up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer viscous)]!"
+								+ "一股微凉感在[npc.namePos]的[npc.breasts]中升腾，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再粘稠)]！"
 							+ "</p>");
 				}
 			case MINERAL_OIL:
 				if(this.isCrotchMilk()) {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A short relief flows up into [npc.namePos] [npc.crotchBoobs], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.crotchMilk] is [style.boldShrink(no longer mineral oil)]!"
+								+ "一股短暂的释放感流入[npc.namePos]的[npc.crotchBoobs],，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.crotchMilk]现在[style.boldShrink(不再含矿物油)]！"
 							+ "</p>");
 				} else {
 					return UtilText.parse(owner,
 							"<p>"
-								+ "A short relief flows up into [npc.namePos] [npc.breasts], causing [npc.herHim] to let out a gentle sigh.<br/>"
-								+ "[npc.NamePos] [npc.milk] is [style.boldShrink(no longer mineral oil)]!"
+								+ "一股短暂的释放感流入[npc.namePos]的[npc.breasts]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+								+ "[npc.NamePos]的[npc.milk]现在[style.boldShrink(不再含矿物油)]！"
 							+ "</p>");
 				}
 		}
 		
-		return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+		return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 	}
 	
 	public List<ItemEffect> getTransformativeEffects() {

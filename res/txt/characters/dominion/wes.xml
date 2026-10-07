@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- WES_QUEST_START -->
@@ -6,60 +6,60 @@
 	<htmlContent tag="WES_QUEST_START"><![CDATA[
 	<p>
 		#IF(game.isDayTime())
-			Although the sun has already set this evening, there are still plenty of people out and about,
+			虽然今晚的太阳已经落山了，但各处依然有很多外出的人，
 		#ELSE
-			As you make your way down yet another of Dominion's streets, you can't help but notice how many people are out and about this evening,
+			当你走在御城区的另一条街道上时，你不由自主地注意到在今晚外出的人数量很多，
 		#ENDIF
 		#IF(pc.getRace()==RACE_DEMON)
-			 and while they hurry to get out of your way when they see that you're a demon, you still end up having to weave your way around some of the larger of the crowds.
+			而当他们看到身为恶魔的你时，他们会立刻为你让路，但你最终还是不得不绕过一些比较大的人群。
 		#ELSE
-			 and you have to adjust your path every now and again so as to weave your way around the crowds.
+			而你必须时不时地调整你的路径，以便穿行于人群之中。
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasTraitActivated(PERK_OBSERVANT))
-			 As you're passing a slow-moving group of obnoxiously-loud revellers, you suddenly notice that an orange-furred, greater fox-boy, dressed in a grey hoodie and blue jeans, keeps on glancing your way from over on the other side of the street. Although his gaze is hidden behind a pair of dark glasses, you can tell that he's got some kind of particular interest in you. As your path around the crowd brings you closer to where he's standing, you see the fox-boy suddenly begin to move towards you, and as he sees that you've noticed his approach, he smiles and asks, [wes.speech(If I'm not mistaken, then you're [pc.name], right?)]
+			当你经过一群移动缓慢又震耳欲聋的狂欢者时，你突然注意到一个体型更大的狐狸男，他有着橙色的皮毛，穿着灰色卫衣和蓝色牛仔裤，一直从街道的另一侧朝着你看。虽然他的目光掩藏在墨镜后方，但你依然能看出他对你有某种特别的兴趣。当你绕开人群时走向他的所在地时，你看到他也突然向你走来，当他看到你注意到这一点时，他微笑着问道，[wes.speech(如果我没认错的话，你就是[pc.name]吧，对吧？)]
 		#ELSE
-			 As you're passing a slow-moving group of obnoxiously-loud revellers, you suddenly see that an orange-furred, greater fox-boy, dressed in a grey hoodie and blue jeans, is rapidly moving towards you. Although his gaze is hidden behind a pair of dark glasses, you can tell that he's got some kind of particular interest in you, and before you can react to his approach, he smiles and asks, [wes.speech(If I'm not mistaken, then you're [pc.name], right?)]
+			当你经过一群移动缓慢又震耳欲聋的狂欢者时，你突然看到一个体型更大的狐男，他有着橙色的皮毛，穿着灰色卫衣和蓝色牛仔裤，正迅速朝你走来，他微笑着问道，[wes.speech(如果我没认错的话，你就是[pc.name]吧，对吧？)]
 		#ENDIF
 	</p>
 	<p>
-		The warm, friendly tone of this mysterious character's voice is not quite what you were expecting, and from his subtle country accent, you get the strong impression that he's not a native city-dweller. Despite his endearing manner of speech, you detect a sense of urgency in this middle-aged fox-boy's question, and so, seeing no harm in answering him, you quickly reply that you are indeed [pc.name].
+		这个神秘人温暖、友好的语调和声音与你的预期不太一样，从他微妙的乡村口音中，你强烈地产生了一种他并不是土生土长的城里人的印象。虽然他的说话方式很讨人喜欢，但你从这个中年狐男的问题中体会到一种紧迫感，即便如此，你认为回答这个问题也没什么坏处，所以你回答说你的确是[pc.name]。
 	</p>
 	<p>
-		Retrieving a very official-looking SWORD Enforcer badge from out of his hoodie's pocket, this stranger flashes it at you and reveals, [wes.speech(I know that you're the one who dealt with that sticky situation up in the Harpy Nests, which is why I've come to you for help. I can't talk for too long out in the streets like this, but if you want to help the Enforcers again, then-)]
+		他从他的卫衣口袋里掏出一个非常官方的SWORD执法者徽章，他把徽章亮给你看并且表明来意，[wes.speech(我知道你就是那个处理了哈比之巢里棘手问题的人，所以我是来找你帮忙的。我不能像这样在街道上说太久，但如果你想再次帮助执法者——)]
 	</p>
 	<p>
-		Suddenly getting spooked by the sight of something further down the street, the fox-boy interrupts his hasty explanation to ask, [wes.speech(Please, meet me outside the antiques shop in the Shopping Arcade between one and two in the afternoon. I'll be there every day, but it would be best if you were there tomorrow. Look, I have to go. Meet me there, ok?)]
+		狐男突然被街道深处的某种事物吓了一跳，他中断了匆忙的解释，问道，[wes.speech(拜托了，在下午一点到两点之间的时候，在购物中心的古玩店外面等我，最好明天就来。听着，我得走了，我们在那见面，好吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WES_QUEST_AGREE"><![CDATA[
 	<p>
-		Deciding to do as the fox-boy asks, you agree to meet him at the location and time he's given to you. Letting out a short sigh of relief, he flashes you a warm smile and declares, [wes.speech(I was right to seek your help. I'll see you soon!)]
+		你决定按照狐男要求的去做，所以同意在他给你的时间地点和他见面。他松了一口气，给了你一个和煦的微笑，然后说，[wes.speech(找你帮忙真是找对了。我们一会儿见！)]
 	</p>
 	<p>
-		Hastily striding over to the other side of the street, the fox-boy quickly blends in to one of the crowds that are passing by, and before you know it, you've lost track of him entirely. With nothing else to do here, you set off and continue on your way, wondering what that mysterious SWORD Enforcer could want to discuss with you...
+		那个狐男急忙大步走向街道的另一侧，迅速混入了路过的人群之中，在你反应过来之前，你就已经完全找不到他了。没有其他事情可做，你继续前进，同时思考着那个神秘的SWORD执法者究竟想和你谈论什么……
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsMinorGood(The Enforcer will be in the Shopping Arcade, outside of the antiques shop, between [units.time(13)]-[units.time(14)] every day.)]
+		[style.italicsMinorGood(在每天的[units.time(13)]-[units.time(14)]，那位执法者会出现在购物中心古玩店的外面。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WES_QUEST_QUESTION"><![CDATA[
 	<p>
-		Wanting to know more about what this fox-boy wants before agreeing to meet with him, you ask him what sort of help he's expecting you to give. Sharply exhaling in frustration, he once again glances around and declares, [wes.speech(I don't have time to explain here. Please, just meet me tomorrow and I'll explain everything. I hope to see you soon!)]
+		在同意与这个狐男见面之前，你想要对他的意图有更多的了解，于是你问他希望你提供哪种帮助。他沮丧地大呼一口气，他再次四下张望，然后说道，[wes.speech(我没有时间在这里解释。求你了，明天你来见我的时候，我会全盘托出的。我希望我能很快和你见面！)]
 	</p>
 	<p>
-		Offering you no further opportunity in which to ask him further questions, the fox-boy hastily strides over to the other side of the street, before quickly blending in to one of the crowds that are passing by. Before you know it, you've lost track of him entirely, and so with nothing else to do, you set off and continue on your way, wondering what that mysterious SWORD Enforcer could want to discuss with you...
+		那个狐男不给你继续追问的机会，就急忙大步走向街道的另一侧，迅速混入了路过的人群之中，在你反应过来之前，你就已经完全找不到他了。没有其他事情可做，你继续前进，同时思考着那个神秘的SWORD执法者究竟想和你谈论什么……
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsMinorGood(The Enforcer will be in the Shopping Arcade, outside of the antiques shop, between [units.time(13)]-[units.time(14)] every day.)]
+		[style.italicsMinorGood(在每天的[units.time(13)]-[units.time(14)]，那位执法者会出现在购物中心古玩店的外面。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_QUEST_SHOPPING_ARCADE_MEETING -->
@@ -67,318 +67,318 @@
 	<htmlContent tag="WES_QUEST_SHOPPING_ARCADE_MEETING"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_wesQuestRefused))
 		<p>
-			Wanting to talk with Wes again, you decide to wait here outside of the antiques shop in the hopes that you'll be able to meet with him. Just like the last time you did this, the fox-boy doesn't show up for a good five minutes, but eventually you see him walking towards you from the same direction as which you arrived.
+			你想再和韦斯谈谈，于是决定在古玩店外等着，希望能和他见面。就和你上次这么做时一样，狐男并没有在五分钟内出现，但你最后还是看到他从你来的方向走过来。
 		</p>
 		<p>
-			Wearing the same blue jeans and grey hoodie that he was wearing the last time you saw him, the fox-boy steps up to you and asks in a friendly tone, [wes.speech(So, you decided to come back? Have you had a change of mind about helping me?)]
+			他穿着和上次你见到他时一样的蓝色牛仔裤和灰色连帽衫，他走到你面前，友好地问道，[wes.speech(那么，你决定回到这里了？你改变主意打算帮我了吗？)]
 		</p>
 		<p>
-			Still not entirely convinced that you want to help Wes, you ask him once again what exactly it is that he wants you to do. Taking off his dark glasses to once again reveal his bright green eyes, the fox-boy explains, [wes.speech(I'm convinced that my superior officer, Elle, is doing some shady dealings during her long Wednesday lunch breaks. I need you to find out where she's going, and then to collect evidence of her illegal activities. I can't go myself as I have no time in which to follow her, and I can't report this for an internal investigation without solid evidence of Elle's wrongdoing. Please, I need your help.)]
+			韦斯还没能完全说服你帮他，所以你再次问他到底想让你做什么。狐男摘下墨镜，再次露出那双亮绿色的眼睛，他解释道：[wes.speech(我确信我的上司埃勒在她周三那冗长的午休里做了一些见不得人的交易。我需要你来找出她会去什么地方，然后收集她进行非法活动的证据。我不能自己去，因为我没时间跟踪她，而且在获得埃勒施行不法行为的确凿证据之前，我将其作为内部调查上报。拜托了，我需要你的帮助。)]
 		</p>
 		<p>
-			Having been reminded of what it is that Wes wants you to do, you wonder whether to agree to help him, or once again refuse...
+			在韦斯提醒你他想让你做什么之后，你思考着是该同意帮助他，还是再次拒绝……
 		</p>
 	#ELSE
 		<p>
-			Wanting to find out more about the mysterious Enforcer who approached you in Dominion's streets, you decide to wait here outside of the antiques shop in the hopes that you'll be able to meet with him again. Unfortunately, despite being in the correct place, at the correct time, you don't see any sign of the fox-boy, and after five minutes spent waiting for him to show up, you start to wonder whether it would be a good idea to come back and try again tomorrow.
+			你想要更多地了解那个在御城区街道上接近你的神秘执法者，于是决定在古玩店外面等着，希望能再次见到他。不幸的是，虽然处于正确的时间和地点，你却没有看到狐男的身影，在花了五分钟的时间等他现身后，你开始怀疑明天再来是不是个好主意。
 		</p>
 		<p>
-			Just as you're thinking of leaving, however, you suddenly spot the mysterious Enforcer walking towards you from the same direction as which you arrived. Wearing the same blue jeans and grey hoodie that he was wearing the last time you saw him, the fox-boy steps up to you and says in a friendly tone, [wes.speech(Thanks for meeting me here, [pc.name]. Sorry that I left you waiting for a while; I had to make sure that you weren't being followed.)]
+			正当你打算离开时，你却发现神秘的执法者从你来的方向走来。他穿着你上次见到他时的蓝色牛仔裤和灰色连帽衫，他走到你面前，友好地说，[wes.speech(谢谢你来见我，[pc.name]。抱歉让你久等了，我得确保你没被跟踪。)]
 		</p>
 		<p>
-			Taking off his dark glasses, the orange-furred fox-boy reveals a pair of bright green eyes, which, unlike the usual shiftiness foxes are stereotyped for, project a disarming, folksy naiveté which perfectly matches his soft county accent. Smiling at you, he finally reveals who he is by saying, [wes.speech(My name's Wesley Wormwood, but everyone just calls me Wes for short. As you've already seen from my badge, I'm one of SWORD's Chief Inspectors, and I work over at the main HQ as a Junior Quartermaster. Sorry for not introducing myself to you earlier, but I was a little pressed for time. The reason I wanted to meet with you is to ask for your help in the investigation of my superior officer.)]
+			这名有着橙色皮毛的狐男摘下墨镜，露出一双亮绿色的眼睛，那双眼睛并不如狐狸在人们刻板印象中的那般狡猾，反而流露出一种随和与平易近人的质朴，同他柔和的乡村口音完美匹配。他微笑着对你说，[wes.speech(我的名字叫韦斯利·沃姆伍德，但大伙都简称我为韦斯。正如你从我的徽章上所见的，我是SWORD的总督察之一，我在总部为初级军需官效力。很抱歉没能早点向你进行自我介绍，但当时实在时间紧迫。我想同你见面是因为想请求你帮我调查我的上级。)]
 		</p>
 		<p>
-			Pausing for a moment, the fox-boy gives you an opportunity in which to respond to what he's just said...
+			狐男停顿了一下，给你一个回应他的机会……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION -->
 	
 	<htmlContent tag="WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION"><![CDATA[
 	<p>
-		Wanting to know more, and thinking that it would be best to start at the beginning, you ask Wes what exactly his superior officer is doing which would warrant them being investigated. After quickly glancing around to make sure that nobody's eavesdropping, the fox-boy explains, [wes.speech(The officer I'm talking about is '[elle.name] [elle.surname]', but everyone just calls her 'Elle'; she's the Senior Quartermaster over at Enforcer HQ. Me and her are the only two who have access to the station's inventory, and I've noticed over the past few weeks that equipment has started to go missing. It started with the odd pistol or a couple of batons, but just two days ago I discovered that even several of the cryoprism guns now only exist on paper. It <i>has</i> to be her who's taking them.)]
+		你想了解更多，并且认为最好从源头问起，于是你问韦斯，他的上司究竟在做什么会招致调查的勾当。狐男快速地扫视周遭来以防隔墙有耳，然后解释道，[wes.speech(我提到的那名官员叫做‘[elle.name]·[elle.surname]’，大家简称她为“埃勒”，她是执法者总部的高级军需官。我和她是唯二有权限接触驻地库存的人，而我在最近几周发现装备开始遗失。一开始消失的只是几把手枪和几根警棍，但就在两天前，我发现就连好几把冷冻枪都只有纸上的登记信息了。拿走它们的人<i>绝对</i>是她。)]
 	</p>
 	<p>
-		[pc.speech(So you want me to find out what she's doing with them?)] you ask, picking up on where Wes is going with his explanation.
+		[pc.speech(所以你想要我来调查她拿着那些装备干什么去了？)]你问道，你已经了解韦斯的这番解释有何目的了。
 	</p>
 	<p>
-		[wes.speech(That's right. I'd try to investigate all of this myself, but the problem is that Elle teleports out of her office every Wednesday lunch time, and there's no way for me to follow her. I'm convinced that that's when she's selling these weapons to criminal gangs, but there's nothing I can do to stop her.)]
+		[wes.speech(没错。我本想亲自调查这一切，但问题是每到周三的午餐时间，埃勒都会从她的办公室传送走，我没办法跟踪她。我确信她就是在那个时候把这些武器卖给犯罪团伙的，但我却无法阻止她。)]
 	</p>
 	<p>
-		[pc.speech(Why not have this investigated internally?)] you ask, wondering why Wes has sought out your help instead of reporting this to his superiors.
+		[pc.speech(那为什么不对此进行内部调查呢？)]你问道，你想知道为什么韦斯来寻求你的帮助，而不是向他的上级报告。
 	</p>
 	<p>
-		[wes.speech(Elle's a half-demon, so internal investigations always get really messy when one of them is involved. Besides, if she were tipped off that she was being investigated, she'd no doubt set me up as the guilty party, and who do you think's going to be believed? Some fox from the sticks, or his half-demon superior officer, who, I'm told, is the child of a direct daughter of Lunette herself?)] Wes sighs, pausing for a moment to collect his thoughts before continuing, [wes.speech(After I heard of your work up in the Harpy Nests, I was hoping that I could ask for your help with all of this...)]
+		[wes.speech(埃勒是个半恶魔，所以内部调查要是牵扯到像她这样的人物就会变得非常棘手。此外，如果有人向她泄密，她肯定会把我当成有罪的一方，你觉得大家会相信谁呢？是乡下来的狐狸，还是他那个半恶魔上司，那个听说是露内特本人亲女儿的半恶魔？)]韦斯叹了口气，停下来整理了一会儿思绪，然后继续说下去，[wes.speech(在我听说了你在哈比之巢的所作所为后，我就希望能在这些事情上向你寻求帮助……)]
 	</p>
 	<p>
-		Wanting to hear exactly what it is that Wes is wanting of you before deciding whether to help him or not, you ask the fox-boy what his plan is.
+		你想知道韦斯到底想要你做什么，然后再决定帮不帮他，于是你询问狐男他有什么计划。
 	</p>
 	<p>
-		[wes.speech(I'll need you to gather incriminating evidence of Elle selling Enforcer weapons to criminals,)] he states, before producing what looks to be some kind of miniature video recorder from out of his hoodie's spacious front pocket and explaining, [wes.speech(I've requisitioned this arcane recording device, so all you need to do is find out where Elle's teleporting off to, and then to use this to record evidence of her illegal activities.)]
+		[wes.speech(我需要你去收集埃勒将执法者的武器销售给不法分子的铁证。)]他从卫衣那宽敞的前侧口袋里掏出了一个像是微型摄像机的东西，然后解释道， [wes.speech(我申请了这个奥术录像机，所以你要做的就是调查埃勒传送到了哪里，然后用这个记录下她做出非法行为的证据。)]
 	</p>
 	<p>
-		With one final question left on your mind, you ask Wes how you're supposed to find Elle. After all, if she's teleporting off to somewhere, it could be literally anywhere in all of Lilith's Realm.
+		你的脑海里还有最后一个问题，你问韦斯你该怎么找到埃勒。毕竟，她传送到的那个地方，可能是这个莉莉丝王国的任何地方。
 	</p>
 	<p>
-		[wes.speech(That's going to be the hard part in all of this,)] the fox-boy sighs, [wes.speech(All I can tell you is that she conducts this illegal business during her long lunch breaks every Wednesday, and that she takes a pair of night vision goggles with her. When she returns, her shoes are often wet and sometimes have trace amounts of some kind of glowing residue on them...)]
+		[wes.speech(那正是这次调查中棘手的部分，)]狐男叹了口气，[wes.speech(我只能告诉你，她在每周三那漫长的午休时间里从事非法交易，并且随身带一副夜视镜。当她回来的时候，她的鞋子往往是湿的，那上面有时会沾上某种发光的残留物……)]
 	</p>
 	<p>
-		Having now heard all of the information Wes has to offer you, you wonder whether you should agree to help him by tracking down Elle and collecting evidence of her criminal activities, or tell the fox-boy that you're not interested in getting tangled up in his mess. As you're wondering what to say, Wes holds out the arcane recorder and asks, [wes.speech(Please, [pc.name], can you help me with this? If all goes according to plan, I'll be able to arrange a decent reward for you.)]
+		你现在已经获取了韦斯提供给你的所有信息，你思考着自己是应该同意帮助他追踪埃勒并收集她犯罪的证据，还是告诉这个狐男你不想卷入他的烂摊子。当你在想该说些什么时，韦斯拿出那台奥术录像机问，[wes.speech(拜托了，[pc.name]，你能不能帮帮我？如果一切都按照计划进行的话，我会给你安排可观的报酬。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_QUEST_SHOPPING_ARCADE_MEETING_FAIL -->
 	
 	<htmlContent tag="WES_QUEST_SHOPPING_ARCADE_MEETING_FAIL"><![CDATA[
 	<p>
-		Although you're certain that you can trust Wes to be telling the truth about the situation with Elle's criminal activities, you really don't like the idea of getting tangled up in the Enforcer's internal affairs. Telling the fox-boy that you're unwilling to do as he asks, you [pc.step] back from him and prepare to leave.
+		尽管你很确定你能信任韦斯在埃勒的非法行为上没有说谎，但你真的不喜欢搅和进执法者内部事务的想法。你在告诉狐男自己并不想参与他要求的事后，从他身边走开并准备离去。
 	</p>
 	<p>
-		[wes.speech(Well, I don't blame you; it seems to be the common attitude in this city for everyone to look out for themselves and never stick their neck out to help anyone,)] he cynically remarks, before putting the arcane recorder back in his hoodie's pocket and letting out a deep sigh. Putting his dark glasses back on, he turns and starts to walk off into the Shopping Arcade, calling after him as he goes, [wes.speech(If you change your mind, I'll be here at the same time tomorrow...)]
+		[wes.speech(好吧，我并不怪你；这似乎是这个城市中的一种常见态度，每个人都只照顾好自己，却从不冒险去帮助他人。)]他讽刺地评论道，然后深深地叹口气，把奥术录像机塞回他的卫衣口袋。他戴上了墨镜，转身向购物中心走去，一边走一边喊道，[wes.speech(如果你回心转意了，明天的同一时间，我还会在这里……)]
 	</p>
 	<p>
-		With that, Wes walks off, leaving you with little else to do except continue on your way...
+		说完，韦斯就离开了，留下除继续前行以外无事可做的你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION_END -->
 	
 	<htmlContent tag="WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION_END"><![CDATA[
 	<p>
-		Telling Wes that you'll do as he asks, you take the arcane recorder from him and listen as he instructs you on how to operate it. The device seems simple enough to use, and after you've told the fox-boy that you're confident in your ability at using it, he smiles and says, [wes.speech(Right, once you've tracked down Elle and recorded her illegal activities, you'll need to deposit this recorder in one of our anonymous evidence drop-boxes. Just ask that bimbo at the HQ's front desk where it is, or if you're down in Submission, then all of the Enforcer posts down there have one. After handing the evidence in, wait at least one week for the internal investigation to conclude, and then go back to the HQ's front desk and ask to see me. I'll have a reward for you then.)]
+		你告诉韦斯你愿意做他要求的事，然后从他那收下了奥术录像机，并且听取了他的使用指导。这个设备似乎不难使用，你告诉狐男你对自己的能力有信心，可以使用好这个设备，他微笑着说，[wes.speech(对了，一旦你追踪到了埃勒并且录下了她的违法行为， 你就需要把这个录像机放在我们的匿名证物箱里面。你只要问问总部前台的那个无脑大胸女这东西在哪，或者如果你进入屈城区的话，那边的所有执法者岗哨都有一个。你上交完证物后，至少需要等一周才能有内部调查的结果，之后回到总部前台要求会见我。那时候我会给你奖励。)]
 	</p>
 	<p>
-		Telling Wes that you understand what to do, you watch as he puts his dark glasses back on and flashes you another of his warm smiles. Letting out a happy little chuckle, he says, [wes.speech(I guess not everyone in this city is as selfish as I thought. Thanks for agreeing to help, [pc.name]. Remember, don't come looking for me until at least a week after you've handed in the evidence. Oh, and don't mention any of this to any other Enforcers; they may mean well, but if word of this gets out, you'll be dropping me in pretty hot water...)]
+		你告诉韦斯你明白该怎么做了，你看着他戴上墨镜并朝你流露出另一个温暖的微笑。他在发出一声愉快的轻笑后，说道，[wes.speech(我猜不是这座城的每个人都和我想象的那样自私。你同意帮忙，我很感激，[pc.name]。记住，除非你上交证物后等了一周，否则别来找我。哦，而且可别把这事告诉任何其他的执法者；他们可能并没有恶意，但如果这事的风声传出去了，你简直就是在把我往火坑里推……)]
 	</p>
 	<p>
-		With that, Wes walks off, leaving you to put the arcane recording device away and wonder to yourself where Elle could be conducting her illegal business. Thinking back on what Wes told you, the main points were:
+		说完，韦斯走开了，留下你一个人，你把奥术录像机收了起来，在心里琢磨埃勒会在哪里进行她的非法交易。你回想了一下韦斯跟你说的话，要点是:
 		<i>
-		<br/>She takes [style.colourOrange(unusually long lunch breaks)].
-		<br/>She only does this on a [style.colourOrange(Wednesday)].
-		<br/>She takes a set of [style.colourOrange(night vision goggles)] with her.
-		<br/>Afterwards, her [style.colourOrange(shoes are often wet)] and sometimes have trace amounts of some kind of [style.colourOrange(glowing residue on them)].
+		<br/>她拥有[style.colourOrange(长得离谱的午休)]。
+		<br/>她只会在[style.colourOrange(周三)]做这事。
+		<br/>她随身携带一副[style.colourOrange(夜视镜)]。
+		<br/>完事之后，她的[style.colourOrange(鞋子总是湿的)]而且有时会沾上某种少量的[style.colourOrange(发光残留物)]。
 		</i>
 	</p>
 	<p>
-		Thinking back on those points, you feel confident that you can figure out where Elle is going, but if not, you realise that you could always go to Lilaya and ask for her help. With that comforting thought in mind, you set off and continue on your way...
+		你回想了一下这些要点，并有自信弄清楚埃勒的去向，哪怕不是这样，你还随时可以去找莉莱雅并寻求她的帮助。你带着这个令人安慰的想法出发了，继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELLE_SEARCH -->
 	
 	<htmlContent tag="ELLE_SEARCH"><![CDATA[
 	<p>
-		Having figured out that Elle must be conducting her illegal activities in the Bat Caverns, and with it currently being the correct day and time in which to find her down here, you start searching for any clue as to her whereabouts. With these caves being as vast and as dark as they are, you don't hold out much hope of finding Elle on your first try, but by a stroke of particular good fortune, you quickly stumble upon evidence of what appears to be the trail of heavy crates having been dragged through a patch of luminescent fungi.
+		你搞明白了埃勒一定是在蝙蝠洞窟里进行非法活动，而现在正好是能在那找到她的日子和时间，你开始寻找能证明她下落的任何线索。由于这些洞窟又大又黑，你不抱太大希望在第一次尝试中找到埃勒，但走运的是，你很快就偶然发现了一个证据，一道位于发光真菌之间的痕迹，就像是有个沉重的板条箱从这里拖过一样。
 	</p>
 	<p>
-		Following this trail down several twists and turns in the maze-like network of caves, you soon find yourself [pc.stepping] out into an underground forest of huge, bioluminescent mushrooms. The carpet of glowing fungi which covers the ground before you has been heavily trodden-down in places, allowing you to continue following the path of whoever has travelled this way before you.
+		你沿着这条小路前进，在迷宫般的洞穴网络中弯弯绕绕，很快就发现自己踏入了一个由庞大的发光蘑菇所构成的地下森林。在你面前那块发光的菌毯上，有些地方已经遭到严重践踏，这让你能继续沿着前人的踪迹走下去。
 	</p>
 	<p>
-		Following the trail for just a little further, you discover that it leads to a small cave, the entrance to which is almost completely concealed by an abnormally-thick patch of tree-like mushrooms. Concerned that Elle might already be inside, you proceed towards the entrance of this cave with caution, but thankfully, as you peer around one of the mushroom's thick trunks, you see that the interior appears to be completely deserted...
+		再往前走一点，你就会发现这些踪迹通向一个小洞穴，一大片异常厚的树状蘑菇几乎完全掩盖了洞穴的入口。你考虑到埃勒可能已经在里面了，于是小心翼翼地走向这个洞穴入口，但谢天谢地，当你从一根蘑菇粗壮的茎干后四处张望时，你发现里面似乎空无一人……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELLE_SEARCH_CAVE -->
 	
 	<htmlContent tag="ELLE_SEARCH_CAVE"><![CDATA[
 	<p>
-		Making sure to keep a sharp lookout for any sign of Elle, you squeeze your way around the huge mushrooms which conceal the cave's entrance, before [pc.stepping] inside and starting to take a look around. Immediately, you see that this is definitely the place which you're looking for, as there are numerous piles of both locked and empty crates stacked up against the cave's walls, with more than a couple of them displaying signs of crudely scraped-off SWORD insignias.
+		你擦亮眼睛来寻找埃勒的任何踪迹，在遮掩着洞口的巨大蘑菇中间挤出一条路来，然后踏入洞中四处张望。很快，你就意识到自己找对地方了，因为许多锁着或者空着的板条箱正堆积在洞穴的石壁边上，其中有几个箱子上画着粗糙且斑驳的SWORD徽记。
 	</p>
 	<p>
-		As you approach these crates to take a closer look, you suddenly hear the sound of feminine, flirty laughter coming from somewhere outside of the cave. Stopping dead in your tracks, you listen as this laughter suddenly cuts off, only to be quickly followed by a slovenly male voice asking, [style.speechMasculineHeavy('Ow much fuckin' further 'ave we gots ta go?! You's better not be settin' us up!)]
+		当你走近这些板条箱仔细观察时，突然听到从洞外某处传来轻浮的女性笑声。你停下脚步，听着笑声戛然而止，紧接着有一个模糊的男声问道，[style.speechMasculineHeavy(我们还他妈的要走多远？！你最好别是在谋害老子们！)]
 	</p>
 	<p>
-		[elle.speech(Oh, please,)] the flirty voice of the woman replies, [elle.speech(If I wanted to set you up, you'd all be under arrest by now! As it so happens, the weapons I promised you are right inside that cave. Please follow me.)]
+		[elle.speech(哦，拜托，)]那个轻浮的女声回答说，[elle.speech(如果我想谋害你们的话，你们早就已经被逮捕了啦！凑巧的是，我答应给你们的武器就在这个洞穴里。快跟我来。)]
 	</p>
 	<p>
-		Realising that these people intend to enter the cave which you're currently occupying, you quickly look around for a place in which to hide and secretly record evidence of Elle's criminal activity. Thankfully, an empty space behind a particularly large stack of empty crates provides the perfect place in which to conceal yourself, and you manage to duck down into this recess just in time before Elle and several thuggish gang members enter the cave.
+		你意识到这些人打算进入你所在的洞穴，于是立刻寻找一个隐蔽处来秘密记录埃勒的犯罪证据。幸运的是，一大堆空板条箱后面的空地为你提供了一个完美的藏身之处，你设法在埃勒和几个凶残的帮派成员进入洞穴之前及时地躲进了这个隐蔽处。
 	</p>
 	<p>
-		Peering through a slender gap in the crates, you're able to get a good look of Elle, who turns out to be a greater [elle.race] who looks to be in her early forties. As is the case for most people with demonic blood, Elle's brown-furred anthropomorphic horse-like face is stunningly beautiful, and there's an energetic, excited look in her [elle.eyeColour] demonic eyes. Her SWORD uniform conceals most of her fit body, but you can still quite clearly see that she's got a huge pair of [elle.cupSize]-cup breasts, as well as wide, womanly hips and a large ass.
+		透过板条箱之间狭窄的缝隙，你得以好好地观察埃勒，她看上去像是一个更加大型的[elle.race]，年龄在四十岁出头。就像大多数拥有恶魔血统的人那样，埃勒那张有着棕色皮毛的拟人化马脸看上去美得惊人，而且在她[elle.eyeColour]的魔化双眼中，有一种充满活力与兴奋的眼神。她的SWORD制服覆盖了她大部分的健美躯体，但你依然可以看到她有一对硕大的[elle.cupSize]罩杯乳房，以及那宽阔的、女性化的大腿上部和丰满的屁股。
 	</p>
 	<p>
-		As she turns to one side to beckon the gang members into the cave, you're able to see that Elle's horse-like tail is the same sandy blonde colour as her hair, which is tied up into a smart bun. Growing from her shoulder-blades, you see that she has a pair of large, lilac-skinned demonic wings, while a long, indigo unicorn horn grows from her upper forehead. Having taken a good look at Elle's appearance, you turn your attention to the group of rat, alligator, and dog-morph gang-members who are roughly pushing their way past the mushrooms and into the cave.
+		当她转过身去招呼同伙们进入洞穴时，你可以看到埃勒马一般的尾巴和她的头发一样是沙金色的，她的头发绑成了一个漂亮的发髻。你可以看到有一对巨大的、淡紫色的肤质恶魔翅膀长在她肩胛骨的地方，而在她的前额上则长着一个长长的、靛蓝色的独角兽角。你在仔细观察了埃勒的外表之后，把注意力转向了一群由老鼠、鳄鱼和犬化形组成的帮派成员，他们粗鲁地挤过蘑菇进入洞穴之中。
 	</p>
 	<p>
-		Taking out the arcane recorder which Wes gave to you, you point the lens through the gap in the crates and start filming the scene in front of you...
+		你把韦斯给你的奥术录像机掏了出来，把镜头对准板条箱的缝隙，开始摄录你面前的场景……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELLE_SEARCH_CAVE_RECORDING -->
 	
 	<htmlContent tag="ELLE_SEARCH_CAVE_RECORDING"><![CDATA[
 	<p>
-		With your arcane recorder capturing video and audio footage of all that's happening in the cave, you watch as the rough-looking dog-boy leader of the gang-members steps up to the nearest crate and demands, [style.speechMasculineHeavy(Show us wot ya got then! You's ain't gettin' no flames from me until I sees that you's got the goods ya promised to us!)]
+		你用奥术录像机捕捉洞穴所发生的一切的音频和视频，看到那个面貌粗野、身为团伙首领的犬男走向了最近的板条箱并命令道，[style.speechMasculineHeavy(让咱们看看你都拿了些啥！除非老子看到你拿来了约定好的货，否则你一个子也拿不着！)]
 	</p>
 	<p>
-		Teasing the dog-boy by brushing her hand over his arm, Elle laughs, [elle.speech(My, my, you are impatient, aren't you?)]
+		埃勒用手挑逗地抚过犬男的手臂，笑了起来，[elle.speech(哎呀，哎呀，你可真没耐心呀，是不是？)]
 	</p>
 	<p>
-		Grunting in amusement at the Enforcer's flirty attitude, the dog-boy hungrily watches as Elle turns her back on him and bends down at the waist to unlock the crate he pointed to. Stepping aside to let the gang-members take a look inside, Elle teases, [elle.speech(Go on then, boys, choose whatever you like! My prices are most reasonable, I can assure you.)]
+		犬男因埃勒挑逗的态度而愉快地咕噜了一声，当埃勒背对着他，弯下腰去打开他指着的那个上锁板条箱时，他饥渴地看着。埃勒向旁边走了一步，好让这些帮会成员看清箱子内部，她撩拨道，[elle.speech(继续呀，男孩们，你们喜欢什么就挑什么吧！我可以向你们保证，我的价格是最合理的。)]
 	</p>
 	<p>
-		Seeing weakness in Elle's attitude, one of the rat-boy gang-members pulls a pistol out of the crate, before brazenly waving it at the Enforcer and sneering, [style.speechMasculine('O said anythin' about us payin' fer this? Heh-heh-heh! Now we's got the guns, 'o's ta stop us from 'avin' a little fun with you!)]
+		团伙中的一名鼠男看到了埃勒态度上的软弱，他从板条箱中取出一把手枪，厚颜无耻地朝着执法者挥舞并嘲笑道，[style.speechMasculine(谁说咱们要为这玩意付钱？嘿嘿嘿！现在咱们拿到枪了，没有人能阻止咱们和你玩一玩！)]
 	</p>
 	<p>
-		Instantly, Elle drops her flirty, light-hearted act, but while her face takes on a grim expression, you can't help but notice the way her eyes light up at the prospect of trouble. Exhibiting an alarming display of speed, the Enforcer darts forwards, and after effortlessly knocking the pistol out of the rat-boy's hands, she grabs hold of him by the neck and violently slams him down onto the floor. 
+		转瞬之间，埃勒身上的轻浮与轻松一扫而空，但你在她严肃的表情中，你注意到她的眼睛因为麻烦的发生而亮了起来。执法者以一种惊人的速度向前冲去，不费吹灰之力地将手枪从鼠男的手中击落，然后抓住了他的脖子，凶狠地朝地面砸去。
 	</p>
 	<p>
-		[style.speechMasculineHeavy(Woah, woah, woah! We ain't wantin' no trouble!)] the leader of the gang nervously shouts, [style.speechMasculineHeavy('E was only jokin' 'bout not payin'! Look, I's got the flames 'ere, 'ow much do ya-)]
+		[style.speechMasculineHeavy(哇哦，哇哦，哇哦！咱们没想惹麻烦！)]团伙首领紧张地叫出声来，[style.speechMasculineHeavy(他说不想付钱只是开玩笑的！你看，咱带了钱来，你想要多——)]
 	</p>
 	<p>
-		[elle.speech(I don't give a damn about your money,)] Elle snaps, cutting the gang-member off. Advancing towards him with her wings unfurled, she reveals, [elle.speech(I'm not doing this to get rich! You scum are too soft; do you know how boring it is to be an Enforcer these days?! Oh, what I'd give to go back to the crime waves of the late 70's, or for the Fifth Human Rebellion to still be ongoing. Where's the fun in subduing pathetic, bottom-feeding losers like you lot? Perhaps if these weapons got out onto the streets, however, and a new crime wave started, then I'd get to relive the glory days...)]
+		[elle.speech(我才不关心你的钱呢，)]埃勒插嘴道，打断了帮会成员的话。她朝他走近，翅膀展开，[elle.speech(我做这事不是为了钱！你们这些渣滓太软弱了；你知道这些日子里当一个执法者有多无聊吗？！哦，我多么希望能回到70年代末的犯罪潮，又或者是第五次人类叛乱发生的时代。征服你们这些可悲又可鄙的失败者虫豸有什么乐趣？然而，要是这些武器重现街头，新的犯罪潮或许就能兴起，而我又能重现那些光辉岁月……)]
 	</p>
 	<p>
-		Sensing that they're in very real danger of being on the receiving end of Elle's wrath, the gang-members wisely choose not to interrupt her monologue. Waiting until she's calmed down and folded her wings back into place, the dog-boy leader of the gang holds out a bag of money to Elle, saying, [style.speechMasculineHeavy(A-A deal's a deal, right? We's givin' you's this cash so we can 'ave the weapons, ok? We ain't wantin' no trouble...)]
+		这群人意识到自己很有可能成为埃勒的泄愤对象，于是明智地选择不去打断她的独白。等到她冷静下来，收起翅膀，团伙首领才拿出一袋钱给埃勒，说，[style.speechMasculineHeavy(生——生意就是生意嘛，对吧？咱们会给你钱来带走这些武器？咱们没想惹麻烦……)]
 	</p>
 	<p>
-		After taking a deep breath, Elle assumes her previous, flirty demeanour, and after gently taking the bag of flames from the dog-boy, she teases, [elle.speech(That's a good boy. As I stated before, I don't care much for your money, but I suppose I could use this to fund some other gang activities... Anyway, have fun with all of the guns, and please do try to cause as much trouble as you can.)]
+		埃勒深吸了一口气，恢复了之前的轻浮的姿态，温柔地从犬男手里接过那袋火币，她调笑道，[elle.speech(那样才是个好孩子嘛。就像我之前说的，我不是很关心你的钱，但我想我可以拿这笔钱去资助其他帮派活动……不管怎么说，祝你们和这些枪玩得开心，并且请尽力制造麻烦。)]
 	</p>
 	<p>
-		With that, Elle is suddenly enveloped in a bright flash of purple arcane energy, and after you've blinked away the after-image that's been momentarily burned into your vision, you see that she's vanished. Letting out a deep sigh of relief, the gang's leader steps over to the still-prone form of the rat-boy who threatened Elle, before kicking him and grunting, [style.speechMasculineHeavy(Ya fuckin' idiot! You's almost got us all fuckin' killed there! Now grab as many o' these weapons as ya can carry, then let's get out o' 'ere before that crazy bitch returns.)]
+		就这样，埃勒突然被一股紫色的奥术能量所笼罩，一眨眼，你就看到她消失了，只留下短暂燃烧于视野中的残像。团伙头目长长地松了一口气，走到那个威胁埃勒的鼠男面前，踢了他一脚，咆哮着说，[style.speechMasculineHeavy(你这该死的傻逼！你差点就害得我们死在这里！现在给我拿上你们能拿下的所有武器，咱们得在那个疯婊子回来前离开这里。)]
 	</p>
 	<p>
-		Thankfully, the crates which you're hiding behind have all been emptied by what you assume to be Elle's previous dealings, and so none of the gang-members approach your hiding place. Continuing to film the gang as they encumber themselves with armfuls of pistols, batons, rifles, and all manner of highly-illegal Enforcer weaponry, you watch and wait until they've exited the cave, before turning the recording device off and putting it away into your inventory. Not wanting to hang around and risk the chance of Elle or the gang suddenly returning, you prepare to follow in their footsteps and head back out into the Bat Caverns...
+		幸运的是，让你躲在后面的箱子似乎已经因为埃勒曾经的交易而清空了，所以没有一个帮派成员接近你的藏身之处。你继续拍摄这伙人，他们抱着一大堆手枪、警棍、步枪和各种各样的非法武器，你看着他们离开洞穴，然后关掉记录设备，把它放进你的背包中。你可不想冒着埃勒或帮派突然回来的风险在这闲逛，于是你准备跟随他们的脚步，回到蝙蝠洞窟……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELLE_SEARCH_CAVE_LEAVE -->
 	
 	<htmlContent tag="ELLE_SEARCH_CAVE_LEAVE"><![CDATA[
 	<p>
-		With your task complete, having obtained incriminating evidence of Elle selling Enforcer weapons to a criminal gang, you swiftly exit the cave. After quickly looking around to make sure that you're not being watched, you set off into the Bat Caverns, wondering whether you should immediately do as Wes asked and go and anonymously hand in the recorder to either Claire or Candi.
+		任务完成，你取得了埃勒向犯罪团伙销售执法者武器的罪证，迅速离开了洞穴。你快速环顾四周以确保自己没有受到监视之后，走入了蝙蝠洞窟，思考着是否应该立即按照韦斯的要求，匿名把录像机交给克莱尔或坎迪。
 	</p>
 	<p>
-		As you're considering what to do next, a sudden thought enters your head, and you suppose that if you really wanted to, you could seek out Elle and betray Wes's plan to her. If you were to decide to do this, you think that you could probably locate Elle leaving work outside the Enforcer HQ between [units.time(16)]-[units.time(18)].
+		当你思考着下一步该干什么时，突然灵光一闪，你认为如果你真的想的话，你可以找到埃勒并背叛韦斯，把他的计划和盘托出。如果你决定要这么做的话，你估计你多半能在埃勒[units.time(16)]-[units.time(18)]的下班时间在执法者总部外面找到她。
 	</p>
 	<p>
-		No matter what you decide upon doing with the evidence, you certainly don't want to be discovered here by the now heavily-armed gang if they were to decide to make a sudden return. Wanting to put some distance between you and the cave, you continue on your way through the Bat Caverns, wondering where to go now...
+		无论你决定如何处理这些证据，你肯定都不想被那帮全副武装的帮派成员发现，如果他们突然决定折返的话。你想和洞穴保持一定距离，于是继续在蝙蝠洞中穿行，思考该去往何方……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CLAIRE_ELLE_EVIDENCE -->
 	
 	<htmlContent tag="CLAIRE_ELLE_EVIDENCE"><![CDATA[
 	<p>
-		Although you're sure that you can trust Claire with the incriminating evidence of Elle, you think that it would be best to follow Wes's instructions, and so you ask the busty cat-girl if there's any way for you to anonymously submit evidence of criminal activity. Raising her eyebrows and flashing you a curious look, the short cat-girl points over to a dark blue box on the other side of the room, saying, [claire.speech(You can deposit stuff like that in there. Is it anything I could help with?)]
+		虽说你觉得可以信任克莱尔并把埃勒的罪证交给她，但你认为最好还是遵从韦斯的指示，所以你去找到那个大胸猫女，问她是否有办法让你匿名提交犯罪活动的证据。矮小的猫女朝你扬起了眉毛，给了你一个好奇的眼神，然后指了指房间另一头的一个深蓝色盒子，说，[claire.speech(你可以把这种东西放在那儿。还有什么需要我帮忙的吗？)]
 	</p>
 	<p>
-		Thanking Claire for her offer, you tell her that it's nothing to worry about, before [pc.walking] over to the anonymous drop-box and depositing the arcane recorder in it. Her curiosity getting the better of her, the busty cat-girl skips over to where you're standing, before flashing you another curious glance and musing out loud, [claire.speech(I wonder what you're up to...)]
+		你感谢了克莱尔的提议，告诉她没什么好担心的，然后走到那个匿名投递箱前，将奥术录像机放了进去。大胸猫女的好奇心还是占了上风，她跳到你站的地方，然后又好奇地看了你一眼并大声说出了自己的心声，[claire.speech(我想知道你在做什么……)]
 	</p>
 	<p>
-		After you've once again told her not to worry about it, Claire flashes you a big grin and declares, [claire.speech(Oh well, I suppose I shouldn't be asking about anonymous tips anyway! So, is there anything else I can do for you, [pc.name]?)]
+		你再次告诉克莱尔不需要担心，她大大地咧开嘴朝你笑着说道，[claire.speech(哦好吧，我想我本来就不应该问你匿名提示之类的事情！所以，还有什么是我可以帮你的吗，[pc.name]？)]
 	</p>
 	<p>
-		Recalling what Wes said, you make a mental note to pay him a visit up at the Enforcer HQ after at least a week has passed. Turning your attention back towards Claire, you wonder what to do next...
+		你回想起韦斯的话，在心中暗暗记下了要在至少一周后到执法者总部与他会面。你将注意力再次转回克莱尔身上，思考接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CANDI_ELLE_EVIDENCE -->
 	
 	<htmlContent tag="CANDI_ELLE_EVIDENCE"><![CDATA[
 	<p>
-		Deciding to follow Wes's instructions regarding the handling of the arcane recorder's incriminating footage, you ask Candi if there's any way for you to anonymously submit evidence of criminal activity. Blankly staring at you for a moment, the bimbo cat-girl bats her eyelids and asks, [candi.speechNoEffects(Umm, you mean, like, using the blue box thing? Yeah, I think you can, like, submit anonymous tips using that, or something...)]
+		你决定按照韦斯的指示处理那台奥术录像机中的犯罪录像，于是问坎迪有没有办法让你匿名提交犯罪活动的证据。那个胸大无脑的猫女茫然地盯着你看了一会儿，眨眨眼睛问道，[candi.speechNoEffects(嗯，你是说，就像，用那个蓝色的盒子吗？是的，我认为你可以这么做，可能，用那种方式提供匿名提示，什么的……)]
 	</p>
 	#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_BUYING_BRAX) && game.getSecondsPassed()-game.getDialogueFlags().getSavedLong("candi_sex_timer")>60*60*12)
 		<p>
-			After pointing down at a dark blue box fixed to the front of her counter, Candi bites her lip and lets out a horny moan, before asking, [candi.speechNoEffects(Hey, like, how about you come back here and give me a different kind of anonymous tip? My pussy's, like, all wet and ready for a good fuck, y'know?)]
+			坎迪指了指一个固定在柜台前的深蓝色盒子，咬住嘴唇，发出一声色情的呻吟，然后问道：[candi.speechNoEffects(嘿，那个，你为何不过来给我提供另外一种匿名提示呢？我的小穴，现在，就像，完全湿透了并准备好被好好地操一顿那样，你知道吗？)]
 		</p>
 		<p>
-			Focusing on the task at hand, you [pc.step] over to the anonymous drop-box and deposit the arcane recorder in it. Recalling what Wes said, you make a mental note to pay him a visit here at the Enforcer HQ after at least a week has passed. Finally, you turn back to face Candi wondering whether you should give her what she wants...
+			你专心于手头的任务，走向那个匿名投递箱，把奥术录像机放了进去。你回想起韦斯的话，在心中暗暗记下了要在至少一周后到执法者总部与他会面。最后，你才转过身去面对坎迪，思考着自己是否该满足她的欲求……
 		</p>
 	#ELSE
 		<p>
-			After pointing down at a dark blue box fixed to the front of her counter, Candi instantly loses interest in you, and after producing a nail-file from somewhere beneath her desk, starts focusing all of her attention on giving herself a manicure. Leaving the narcissistic bimbo to focus on her nails, you [pc.step] over to the anonymous drop-box and deposit the arcane recorder in it. Recalling what Wes said, you make a mental note to pay him a visit here at the Enforcer HQ after at least a week has passed. Finally, you turn back to face the reception desk and wonder what to do next...
+			坎迪指了指固定在柜台前的深蓝色盒子，就立刻对你失去了兴趣，她从桌子下面的某个地方拿出一个指甲锉，把所有的注意力集中在给自己修指甲上。你任凭那个自恋的无脑大胸女关注她的指甲，走向那个匿名的投递箱，把奥术录像机放了进去。你回想起韦斯的话，在心中暗暗记下了要在至少一周后到执法者总部与他会面。最后，你转身面对前台，思考下一步该做什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- APPROACH_ELLE -->
 	
 	<htmlContent tag="APPROACH_ELLE"><![CDATA[
 	<p>
-		Deciding to betray Wes and side with Elle, you wait outside the Enforcer HQ for the [elle.race] to leave work for the day. Choosing a shaded spot on the opposite side of the street to the imposing building which serves as the Enforcer's Dominion Headquarters, you wait and watch for any sign of her.
+		你决定背叛韦斯并与埃勒站在同一边，于是你站在执法者总部的外面等着[elle.race]下班。你在街道对面的阴影处选择一个地方，对着一栋身为御城区执法者总部的宏伟建筑，等待并寻找着她的踪迹。
 	</p>
 	<p>
-		After forty-five minutes of loitering around in this manner, you start to think that you might have missed her, or that perhaps she didn't come in to work today. Just as you're starting to wonder whether or not it would be too brazen to ask to see Elle at the HQ's front desk, you suddenly catch sight of her stepping out of the front entrance at the side of a cat-boy Enforcer.
+		你这么徘徊了45分钟，开始认为自己或许已经错过了她，也有可能她今天没来上班。就在你犹豫在总部的前台要求会见埃勒会不会太厚颜无耻的时候，你突然看到她从前门走出来，走在一位猫男执法者的身边。
 	</p>
 	<p>
-		Not wanting to approach her while she's got company, you watch as Elle dominantly steps around in front of the cat-boy and starts correcting his uniform. Although the two of them are too far away to be able to hear, you can tell from their body language that Elle is heavily hitting on the cat-boy. After straightening his tie, the [elle.race] drops her hand down between the Enforcer's legs and gives his groin a firm grope.
+		你并不想在埃勒身旁有人的时候靠近她，于是你看着她强势地走到猫男面前，开始整理他的制服。虽然他俩距你太远，你听不见，但你可以从他们的肢体语言中看出，埃勒正在热烈地冲猫男献殷勤。[elle.race]捋直了他的领带后，将手落在执法者的腿间，强硬地猥亵着他的腹股沟。
 	</p>
 	<p>
-		This seems to be too much for the cat-boy to handle, as he steps back and holds up his hands to try and tell Elle that she's going too far. Clearly not being one to take no for an answer, the [elle.race] steps aside to let the cat-boy pass, but as he does so, she gives his ass a firm slap and calls out after him loud enough for you to hear, [elle.speech(You're to report to my office first thing tomorrow morning! I've got a <i>thorough</i> debriefing planned for you!)]
+		这对那个猫男来说似乎太过了，因为他一边后退一边举起手来告诉埃勒她越界了。很明显，这位[elle.race]可不会接受他人的拒绝，她走到一边让猫男通过，但当她这么做的时候，却又狠狠地扇了一下他的屁股，在他身后用连你都能听到的声音大声喊道，[elle.speech(你明天早上的第一件事就是来我办公室报到！我为你筹备了一场<i>透彻</i>的任务汇报！)]
 	</p>
 	<p>
-		As the cat-boy hurries past you with an apprehensive look on his face, Elle's attention is suddenly drawn to you.
+		当猫男带着忧虑的表情从你身边匆匆走过时，埃勒的注意力落在了你的身上。
 		#IF(pc.hasStatusEffect(SE_dsg_set_hlf_regular) || pc.hasStatusEffect(SE_dsg_set_hlf_insurgent))
-		 She glances over your salvaged gear and immediately tenses up. Her hands glow with arcane power before her gleaming pink eyes fix themselves on your face. She studies you intently for a brief moment and, apparently deciding that you're more of a curiosity than a threat, relaxes while the spell she was preparing fades. She takes a more casual stance, waiting for you to approach.
-		 [##game.getDialogueFlags().setFlag(FLAG_rebelBaseElleCostumeEncountered, true)]
+		她扫了你身上搜刮来的装备一眼就立刻紧张起来。奥术之力在她手中闪烁，她发光的粉色双眼死死盯着你的脸。她专心地研究了你一会儿，似乎认为你更令人好奇而不是具有威胁，她放松下来，取消了之前准备的法术。她摆出更加随性的姿态，等着你走近。
+		[##game.getDialogueFlags().setFlag(FLAG_rebelBaseElleCostumeEncountered, true)]
 		#ELSE
-		 Quickly recognising the fact that you're no ordinary member of the public, she fixes her gleaming pink eyes onto you and waits for you to approach.
+		她很快意识到你并不是什么等闲之辈，用那双发光的粉色双眼盯着你，等着你走近。
 		#ENDIF
-		 Realising that you're past the point of no return, you make your move and [pc.walk] over to where Elle is waiting for you.
+		你意识到自己已经没有回头路可走了，于是迈开步子，走向了等待着你的埃勒。
 	</p>
 	<p>
 		#IF(pc.hasStatusEffect(SE_dsg_set_hlf_regular) || pc.hasStatusEffect(SE_dsg_set_hlf_insurgent))
 			#IF(game.getDateNow().getMonthValue()==10)
-			[elle.speech(Nice costume,)] she says with a wry smirk on her face, [elle.speech(So, who are you?)]
+			[elle.speech(不错的打扮，)]她挂着一副扭曲的坏笑说，[elle.speech(所以，你是哪位？)]
 			#ELSE
-			[elle.speech(Nice costume,)] she says with a wry smirk on her face, [elle.speech(But it's a little early, don't you think? So, who are you?)]
+			[elle.speech(不错的打扮，)]她挂着一副扭曲的坏笑说，[elle.speech(不过现在穿这身有点早了，你觉得呢？所以，你是哪位？)]
 			#ENDIF
 		#ELSE
-		[elle.speech(So, who are you?)] she bluntly asks.
+		[elle.speech(所以，你是哪位？)]她单刀直入地问。
 		#ENDIF
-		 You can tell both from her tone of voice and from her curious gaze that she's deciding whether to treat you in a seductive or hostile manner.
+		你从她的语气和好奇的眼神中，可以看出她正在决定是用诱惑还是敌意的方式对待你。
 	</p>
 	<p>
-		After simply telling her your name, Elle displays her quick-thinking by immediately responding, [elle.speech(So <i>you're</i> [pc.name]. Yes, I know about you. I read the report on the pacification of the Harpy Nests, and, if I may say so, you did a most excellent job up there.)]
+		你简短地告诉了埃勒你的名字，敏捷的思维让她立刻回应道，[elle.speech(所以<i>你就是</i>[pc.name]。对，我听说过你。我读过平定哈比之巢的报告，要我说的话，你在那干得很出色。)]
 	</p>
 	<p>
-		Deciding that you're a suitable target to try and seduce, the horny Enforcer steps closer and flashes you a cheeky smile, before asking, [elle.speech(Perhaps you heard something about me from one of the Enforcers up there? Go on, tell me all the naughty things they said about me...)]
+		这位好色的执法者认定你是一个适合尝试和引诱的好目标，她走近你，摆出厚颜无耻的微笑，然后问，[elle.speech(或许你也从我的执法者同事那儿听说过我的事情？来嘛，和我说说他们和你讲过的那些和我有关的下流话题……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- APPROACH_ELLE_EXPLAIN -->
 	
 	<htmlContent tag="APPROACH_ELLE_EXPLAIN"><![CDATA[
 	<p>
-		Wanting to get this business with Wes finished as soon as possible, you ignore Elle's teasing and show her the arcane recorder which the fox-boy gave to you. A puzzled look flashes across the [elle.race]'s face as she sees what it is you're holding, and teases, [elle.speech(What's this? You're wanting to record us while we fuck? How kinky... Those arcane recorders aren't cheap, either...)]
+		你为了尽快完成这件和韦斯相关的交易，忽视了埃勒的调笑，拿狐男交给你的奥术录像机给她看。当[elle.race]看到你手里的东西时，脸上闪过一丝困惑，开玩笑地说，[elle.speech(这是什么？你打算在我们做爱的时候录像吗？好变态哦……另外，这种奥术录像机也不便宜……)]
 	</p>
 	<p>
-		Flipping out the screen that's built into the side of the recorder, you show Elle the footage of her selling weapons to the gang down in the cave in the Bat Caverns. Explaining to her how it was Wes that tried to get her arrested, you look up to see that there's a grim expression on Elle's face. Dropping her seductive tone as she realises how serious this is, she flatly states, [elle.speech(You've done well to bring this to my attention. How careless I was not to search the cave upon entering it... Now hand over that recorder, if you please.)]
+		你翻开内置于录像机侧面的屏幕，给埃勒看她在蝙蝠洞窟的山洞中向帮派出售武器的镜头。你向埃勒解释是韦斯想让她受到逮捕时，抬起头，看到她脸上有一种冷酷的表情。当她意识到情况有多严重时，她放下了诱惑的语气，直截了当地说，[elle.speech(你很好地用它引起了我的注意。我真是太粗心了，没有在进入洞窟前搜索一番……现在，请你把那个录像机给我。)]
 	</p>
 	<p>
-		As this was your intention all along, you do as Elle asks and give her the arcane recorder. Immediately, she throws it to the ground, and before you have a chance to say anything, she uses her arcane power to cast a spell. Projecting a wave of crushing force down upon the helpless arcane device, Elle instantly obliterates it, sending tiny fragments of metal and plastic all over the street. Ignoring the curious looks which several members of the public cast her way, the [elle.race] looks back up at you and states, [elle.speech(I need to fix this situation before that damn fox-boy reports me. Come back after a week and ask for me at the front desk, and I'll give you a handsome reward for your loyalty.)]
+		这正是你一直以来的目的，所以你照着埃勒的指示把奥术录像机交给她。你还没来得及说一句话，她就立刻把它扔向地面，用奥术之力施展了一道法术。埃勒在那毫无还手之力的奥术记录器上投下粉碎性的冲击力，瞬间摧毁了它，只剩街上散落的细碎金属和塑料残片。[elle.race]无视了几位路人投来的好奇目光，抬头看着你并声明，[elle.speech(我得在那该死的狐男举报我之前解决这个问题。一周后再来找我，我将大笔酬谢你的忠诚。)]
 	</p>
 	<p>
-		With a dark look in her eyes, Elle turns back towards the Enforcer HQ, before quickly striding across the grounds and heading inside. Finding yourself alone out in the street, you have little else to do but continue on your way, wondering what kind of reward will be given to you when you return to meet Elle next week...
+		埃勒转身走向执法者总部，然后大步踏入其中，眼中带着阴暗的神色。你留在了大街上，除了继续前进以外没什么别的事好做，不过你思考着下周见到埃勒时她会如何回报你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- RECEPTION_DESK -->
@@ -387,259 +387,259 @@
 	<p><i>
 		#IF(game.isWorkTime())
 			#IF(game.getMinutesPassed()-game.getDialogueFlags().getSavedLong("wes_completion_timer")>60*24*7)
-				As it's been more than a week since you anonymously handed in the evidence needed to arrest Elle, you could ask Candi to tell Wes that you're here to see him...
+				鉴于距离你匿名上交用于逮捕埃勒的证据已经过了一周以上，你可以让坎迪告诉韦斯你来见他了……
 			#ELSE
-				As it hasn't yet been more than a week since you anonymously handed in the evidence needed to arrest Elle, you shouldn't ask Candi about seeing Wes yet. [style.italicsMinorBad(You should return after [#SPECIAL_PARSE_0]...)]
+				鉴于距离你匿名上交用于逮捕埃勒的证据还没有超过一周，你还不能让坎迪告诉韦斯你来见他……[style.italicsMinorBad(你应该在[#SPECIAL_PARSE_0]后回到这里……)]
 			#ENDIF
 		#ELSE
 			#IF(game.getMinutesPassed()-game.getDialogueFlags().getSavedLong("wes_completion_timer")>60*24*7)
-				Although it's been more than a week since you anonymously handed in the evidence needed to arrest Elle, Candi is only at work from [style.colourMinorBad([units.time(9)]-[units.time(17)])], so you'll have to return during normal work hours  in order to meet Wes...
+				虽然距离你匿名上交用于逮捕埃勒的证据已经过了一周以上，但坎迪只会在[style.colourMinorBad([units.time(9)]-[units.time(17)])]这段时间工作，所以为了见到韦斯，你必须在正常的工作时间里再来……
 			#ELSE
-				It hasn't yet been more than a week since you anonymously handed in the evidence needed to arrest Elle, and even it had been, Candi is only at work from [style.colourMinorBad([units.time(9)]-[units.time(17)])], so you'd be unable to meet Wes regardless. [style.italicsMinorBad(You should return after [#SPECIAL_PARSE_0]...)]
+				距离你匿名上交用于逮捕埃勒的证据还没有过一周，但哪怕经过了一周，坎迪也只会在[style.colourMinorBad([units.time(9)]-[units.time(17)])]这段时间工作，所以无论如何，你还无法与韦斯见面。[style.italicsMinorBad(你应该在[#SPECIAL_PARSE_0]后回到这里……)]
 			#ENDIF
 		#ENDIF
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_DESK_ELLE"><![CDATA[
 	<p><i>
 		#IF(game.isWorkTime())
 			#IF(game.getMinutesPassed()-game.getDialogueFlags().getSavedLong("wes_completion_timer")>60*24*7)
-				As it's been more than a week since you contacted Elle, you could tell Candi that you're here to see her...
+				鉴于距离你上次与埃勒接触已经过了一周多了，你可以告诉坎迪你是来见埃勒的……
 			#ELSE
-				As it hasn't yet been more than a week since you contacted Elle, you shouldn't ask Candi about seeing her yet. [style.italicsMinorBad(You should return after [#SPECIAL_PARSE_0]...)]
+				鉴于距离你上次与埃勒接触还没有经过一周，你还不该向坎迪要求与埃勒见面。[style.italicsMinorBad(你应该在[#SPECIAL_PARSE_0]后回到这里……)]
 			#ENDIF
 		#ELSE
 			#IF(game.getMinutesPassed()-game.getDialogueFlags().getSavedLong("wes_completion_timer")>60*24*7)
-				Although it's been more than a week since you contacted Elle, Candi is only at work from [style.colourMinorBad([units.time(9)]-[units.time(17)])], so you'll have to return during normal work hours in order to meet her...
+				虽然距离你上次与埃勒接触已经过了一周多了，坎迪也只会在[style.colourMinorBad([units.time(9)]-[units.time(17)])]这段时间工作，为了与埃勒见面，你必须在正常的工作时间里再来……
 			#ELSE
-				It hasn't yet been more than a week since you contacted Elle, and even it had been, Candi is only at work from [style.colourMinorBad([units.time(9)]-[units.time(17)])], so you'd be unable to meet her regardless. [style.italicsMinorBad(You should return after [#SPECIAL_PARSE_0]...)]
+				距离你上次与埃勒接触还没有经过一周，但哪怕经过了一周， 坎迪也只会在[style.colourMinorBad([units.time(9)]-[units.time(17)])]这段时间工作，所以无论如何，你还无法与埃勒见面。[style.italicsMinorBad(你应该在[#SPECIAL_PARSE_0]后回到这里……)]
 			#ENDIF
 		#ENDIF
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_WES -->
 	
 	<htmlContent tag="INTRO_HQ_WES"><![CDATA[
 	<p>
-		As it's been more than a week since you anonymously deposited the arcane recorder in the evidence drop-box, you tell Candi that you're here to meet with a fox-boy SWORD Enforcer called Wesley Wormwood. For a moment, it seems as though the bimbo cat-girl doesn't understand what you're talking about, before suddenly remembering that it's her job to help out visitors and saying, [candi.speechNoEffects(So, you're wanting me to, like, let him know you've arrived? Umm... Hold on a moment...)]
+		鉴于距你匿名将奥术录像机放置于证物箱后已经过了一周多，你告诉坎迪你来见一位名叫韦斯的SWORD狐男执法者，全名叫做韦斯利•沃姆伍德。有那么一会儿，这个胸大无脑的猫女似乎并不理解你在说什么，然后她突然想起自己的职责是帮助访客，才说道，[candi.speechNoEffects(所以，你是想要我，那个，让他知道你来了吗？嗯……等一下哦……)]
 	</p>
 	<p>
-		Looking down at the arcane intercom that's built into the top of her desk, she hovers her index finger back and forth between several buttons, speaking out loud to herself as she does so, [candi.speechNoEffects(I know that Wes is, like, at requisitions... I think it's this button that I need...)]
+		她低头看着内置于办公桌面的奥术对讲机，然后用食指在几个按钮之间来回滑动，并大声地自言自语：[candi.speechNoEffects(我知道韦斯是在，好像，在军需处……我想应该是这个按钮……)]
 	</p>
 	<p>
-		The dim-witted cat-girl presses the button that's quite clearly marked as 'Requisitions', and after letting out a low-pitched buzzing noise, the arcane intercom's speaker crackles into life, and you hear the familiar voice of Wes asking, [wes.speech(What is it now, Candi? Don't tell me that you've lost your jacket <i>again</i>...)]
+		这个笨蛋猫女按下了那个明晃晃地标着“采购部”的按钮，奥术对讲机发出了一声低沉的嗡嗡声，然后噼里啪啦地响了起来，你听到了韦斯那熟悉的声音，[wes.speech(有什么事呀，坎迪？可别告诉我你<i>又</i>弄丢了你的夹克……)]
 	</p>
 	<p>
-		[candi.speechNoEffects(Uh, like, that's kinda rude of you to think that, y'know? I'm actually doing my job for once, thank you very much!)] Candi drawls, [candi.speech(There's, like, [pc.a_race] here at the front desk for you. Are you, like, expecting someone called '[pc.name]'?)]
+		[candi.speechNoEffects(呃，那个，你的想法有点没礼貌，知道吗？这一次我真的有在做我的工作，多谢关心！)]坎迪拖长了声音说，[candi.speech(现在，那个，有一位[pc.a_race]来前台这儿找你。你，有没有，在等一位叫‘[pc.name]’的人？)]
 	</p>
 	<p>
-		[wes.speech(Yes, I am,)] Wes replies, [wes.speech(Tell [pc.herHim] to wait right there; I'm on my way.)]
+		[wes.speech(对，我有，)]韦斯回答，[wes.speech(告诉[pc.herHim]在那等着；我马上就来。)]
 	</p>
 	<p>
-		Even though it's blatantly obvious that you were able to overhear the brief conversation, Candi feels the need to look up at you and explain, [candi.speechNoEffects(Ok, so, like, Wes was kinda rude to me just now, but he's, like, agreed to come and meet you here. You're going to have to wait for him here, y'know? You can, like, use the waiting area.)]
+		尽管很明显你能够无意中听到这段简短的对话，坎迪还是觉得自己有必要抬起头来和你解释一下，[candi.speechNoEffects(好吧，所以……那个……韦斯刚刚对我有点无礼，但是他……好像……同意来这里和你见面。你得在这等着她，知道吗？你可以……那个……待在等候区。)]
 	</p>
 	<p>
-		After pointing over to the collection of sofas on the other side of the room, Candi turns her attention towards the mirror that's sitting on her desk. Leaving the ditzy bimbo behind, you [pc.walk] over to the nearest sofa and wait for Wes arrive...
+		坎迪指了指房间另一头的沙发，然后就把注意力放在了她桌上的镜子上。你转身背对这个愚蠢的花瓶，走向最近的沙发等待韦斯到来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_WES_ARRIVE -->
 	
 	<htmlContent tag="INTRO_HQ_WES_ARRIVE"><![CDATA[
 	<p>
-		Thankfully, you aren't kept waiting long, as less than five minutes after you've entered the waiting area, the familiar figure of Wes appears from out of the guarded door on the far side of the room. Looking around and catching sight of you, he flashes you a warm smile, before calling out, [wes.speech([pc.Name]! Come on through to my office!)]
+		谢天谢地，你并没有等很久，在你进入等候区后还没经过五分钟，房间远处那扇守卫森严的门打开了，韦斯熟悉的身影中出现。他环顾四周，看到你，露出温暖的微笑，然后大喊道，[wes.speech([pc.Name]！请到我的办公室来！)]
 	</p>
 	<p>
-		Deciding to do as Wes says, you [pc.walk] over to the fox-boy and say hello, before commenting on how smart his uniform looks. Letting out a good-natured laugh, he reveals, [wes.speech(I've been promoted to Superintendent, so I have to keep my uniform in particularly good condition to set an example to the junior ranks. Follow me on through to my new office, and I'll explain all that's happened once we get there.)]
+		你决定照韦斯说的做。你走向狐男并问好，然后称赞他的制服很帅。他发出温和的笑声，坦白道，[wes.speech(我被升职为警司了，所以我必须把制服打理得特别好，才能给下级树立榜样。请随我来我的新办公室，我会在那和你解释发生了什么。)]
 	</p>
 	<p>
-		Motioning for the Enforcer who's guarding the inner door to step aside, Wes sets off into the back area of the Enforcer HQ with you at his side...
+		韦斯示意看守内门的执法者让开，然后带着你进入执法者总部的后方……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_WES_OFFICE -->
 	
 	<htmlContent tag="INTRO_HQ_WES_OFFICE"><![CDATA[
 	<p>
-		Accompanying Wes down the HQ's corridors, you wait as he unlocks an inner-door by brushing his pass over an arcane scanner mounted to the nearby wall, before following him through into the requisitions department. Leading you though a nearby door, you enter the fox-boy's office, which, while being particularly large and extravagantly furnished, seems to look a little <i>too</i> tidy, hinting at the fact that it isn't seeing much use.
+		你陪着韦斯穿过总部的走廊，等待他在附近墙上的奥术扫描仪刷过通行证，以此打开内门，然后跟随他进入军需处。狐男带着你穿过附近的一扇门，进入了办公室。虽然这个办公室特别大，布置得很奢华，但看起来有点<i>过于</i>整洁，暗示着它并没有怎么被使用。
 	</p>
 	<p>
-		Sinking down into the executive leather chair positioned behind his desk, Wes lets out a deep, happy sigh and reveals, [wes.speech(Thanks to the evidence you gathered, the internal investigation of Elle all went according to my plan. By taking an active role in the investigation, I managed to secure this promotion to Superintendent which I've been chasing for years. I've received Elle's old title of Senior Quartermaster, and, speaking of her, she ended up being enslaved and given to me as a bonus. Not that I particularly wanted to own her, mind you...)]
+		韦斯坐进办公桌后面的真皮大椅上，开心地叹了口气，感谢你收集到的证据， [wes.speech(埃勒的内部调查一切都按照我的计划进行。通过积极参与调查，我成功晋升为警司，这是我多年来一直追求的目标。我已经获得了埃勒的曾经的头衔——高级军需官，而说到她，她最终被奴役并作为奖励送给了我。随便说一句，我并不是特别想拥有她……)]
 	</p>
 	<p>
-		Congratulating Wes on his promotion, you comment on the fact that his office looks as though it hasn't seen much use yet. Letting out a short sigh and standing up from behind his desk, he continues, [wes.speech(This is actually only the third or fourth time I've used this office. In an attempt at avoiding a repeat of Elle's siphoning off of equipment, the higher-ups have ordered me to make more regular reports on the inventory's status, which means I'm having to spend all of my time doing my old job of working at the requisitions desk...)]
+		你祝贺韦斯升职，评论着他的办公室看起来好像还没怎么使用。他短促地叹了口气，从办公桌后面站起来，继续说道：[wes.speech(这实际上只是我第三次还是第四次用这个办公室。上级为了避免重蹈覆辙，防止埃勒偷卖设备类似的事情再次发生，命令我更加定期地报告库存状况。这意味着我不得不把所有的时间都花在请购台工作的老活上……)]
 	</p>
 	<p>
-		Moving over to the door of his office, the fox-boy sighs, [wes.speech(Speaking of which, I need to get back over there as soon as possible. I've got Elle stationed in there to help me do the work, but I can't trust her to be alone for too long. She might technically be my slave, but she's as free-spirited as ever...)]
+		走到办公室门口，狐男叹了口气，[wes.speech(话说回来，我得尽快赶回去了，我已经让埃勒驻扎在那里帮我做事了，但我不能相信她能独自一人待太久。虽然严格来说她算是我的奴隶，但她一如既往地自由奔放……)]
 	</p>
 	<p>
-		Opening the door and beckoning you to once again follow him, he reveals, [wes.speech(As a way of thanking you for your help, I've arranged for you to be granted a contractor's pass, so you'll not only be granted access to the requisitions area, but I'll also be able to sell you surplus Enforcer equipment. Come on, I've got the pass waiting for you over there.)]
+		他打开门并示意你再次跟随他，解释说，[wes.speech(为了感谢你的帮助，我已经帮你获得了承包许可证，所以你不仅会获得进入军需处的权限，还可以向我购买多余的执法者装备。来吧，我会在那里等着你。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_WES_REQUISITIONS -->
 	
 	<htmlContent tag="INTRO_HQ_WES_REQUISITIONS"><![CDATA[
 	<p>
-		Following Wes out of his office, you accompany him as he walks over to the other side of the corridor and strides through the pair of propped-open doors which lead into the station's requisitions area. Consisting of a large, empty room, the only points of interest in this area are the couple of bare metal tables pushed into each corner, as well as the locked door and waist-high counter set into the wall before you. Telling you to remain here, Wes opens the door, before stepping around to the other side of the counter and starting to rummage around in some of the drawers.
+		你跟着韦斯走出办公室，他带你来到走廊的另一侧，大步穿过两扇撑开的门，进入了军需处，这是个空荡荡的大房间，唯一值得注意的是每个角落都摆放着几张光秃秃的金属桌子，还有一扇上锁的门和镶嵌在你面前墙壁上齐腰高的墙柜。韦斯让你留在这里，他打开门，走到墙柜的另一侧并开始在抽屉里翻找起来。
 	</p>
 	<p>
-		[wes.speech(Elle?! What have you done with that contractor pass I told you to put in here?!)] he calls out.
+		[wes.speech(埃勒！之前我让你放在这里的承包许可证，你怎么处理的？！)]他喊道。
 	</p>
 	<p>
-		[elle.speech(Oh, I didn't realise you were back!)] the familiar voice of Elle replies from somewhere within the maze of shelving units which fill the vast storage area behind the counter. A moment later, the [elle.race] steps into view, and you see that while she looks just as she did the last time you saw her, she's now wearing a metal slave collar and slutty fancy-dress Enforcer uniform. Catching sight of you waiting behind the counter,
+		[elle.speech(哦，我不知道你回来了！)]埃勒熟悉的声音从迷宫般的货架方向传来，柜台后面是巨大的储藏区。片刻之后，[elle.race]走进了你的视线，你看到她的样子和你上次见到她时一样，但她现在戴着金属奴隶项圈，穿着奇特放荡的执法者制服。她看到了在柜台后面等待的你，
 		#IF(!game.getDialogueFlags().hasFlag(FLAG_rebelBaseElleCostumeEncountered) && (pc.hasStatusEffect(SE_dsg_set_hlf_regular) || pc.hasStatusEffect(SE_dsg_set_hlf_insurgent)))
-			 her eyes narrow for an instant as she glances over your salvaged gear and arcane power briefly flashes over her hands before she decides you're no threat after all and relaxes. [elle.speech(What's this, Wes?)] the horny slave remarks,
+			她的眼睛瞬间眯了起来，瞥了一眼你找回来的装备，奥术力量在她手上短暂闪过，然后她觉得你终究不是威胁，便放松了下来。[elle.speech(这是什么，韦斯？)]这个好色的奴隶说道，
 			#IF(game.getDateNow().getMonthValue()==10)
-			 [elle.speech(You've finally brought me someone to fuck other than you? And my, does [pc.she] have a peculiar taste in costumes.)]
+			[elle.speech(你终于给我找了个你之外能操的女人？我的天啊，[pc.she]对服装的品味可真奇特。)]
 			#ELSE
-			 [elle.speech(You've finally brought me someone to fuck other than you? And my, does [pc.she] have a peculiar sense of fashion.)]
+			[elle.speech(你终于给我找了个你以外能操的女人？我的天啊，[pc.she]的时尚感还真是奇特。)]
 			#ENDIF
 			[##game.getDialogueFlags().setFlag(FLAG_rebelBaseElleCostumeEncountered, true)]
 		#ELSE
-		  the horny slave remarks, [elle.speech(What's this, Wes? You've finally brought me someone to fuck other than you?)]
+		这位好色的奴隶说道，[elle.speech(这是什么，韦斯？你终于给我找了个你之外能操的女人？)]
 		#ENDIF
 	</p>
 	<p>
-		[wes.speech(Just tell me where the pass is, Elle,)] the fox-boy sighs in frustration.
+		[wes.speech( 埃勒，你只需要告诉我，这卡你放哪儿了。)]这个狐男无奈地叹气。
 	</p>
 	<p>
-		Leaning down and pressing her huge breasts against the back of Wes's head, Elle pulls open the top drawer and sighs, [elle.speech(I told you that I'd put it in here...)]
+		埃勒俯下身，用巨大的乳房抵住韦斯的后脑勺，拉开最上面的抽屉，叹了口气，[elle.speech(我说过我会把它放在这里……)]
 	</p>
 	<p>
-		Retrieving what looks like a plastic id card attached to a blue lanyard, Wes hands this pass over to you, saying, [wes.speech(This will unlock the doors to this area, and if you show it to an Enforcer patrol, they won't try and confiscate any of the gear you purchase from me here.)]
+		韦斯从一旁的蓝色挂绳上取下一张塑料身份卡递给你，[wes.speech(这个几乎能打开这个区域的所有大门，如果你向巡逻的执法者出示此卡，他们就不会没收你从我这里购买到的任何装备。)]
 	</p>
 	<p>
-		Noticing your curious glance as you look at Elle's fancy-dress Enforcer uniform, the fox-boy sheepishly admits, [wes.speech(I couldn't have her walking around naked, could I? It felt wrong to have her wearing a real uniform as well, and besides, having her wear that is all part of her punishment.)]
+		狐男注意到你被埃勒奇特的执法者制服吸引了，腼腆地承认，[wes.speech(我总不能让她什么都不穿，就这样到处走吧。让她穿正式的制服也不对，所以让她这样穿也是合理的惩罚。)]
 	</p>
 	<p>
-		[elle.speech(You liar,)] Elle teases, leaning into Wes's back and reaching down to stroke his groin. Ignoring the fox-boy's protestations, she looks up at you and says, [elle.speech(He makes me wear this because it turns him on, and he likes reminding me of my place while I'm choking down his yummy, fat knot.)]
+		[elle.speech(你这个小撒谎精，)]埃勒挑逗道，靠在韦斯的背上，伸手抚摸他的腹股沟。对这个狐男的抵抗不管不顾，她抬头看着你说，[elle.speech(他让我穿这个只是情趣。他可喜欢了，尤其是在我咽下美味的肥肉棒时，老是提醒我低人一等。)]
 	</p>
 	<p>
-		[wes.speech(Not now, Elle!)] Wes snaps as he tries, and fails, to push the horny half-demon off of him. Giving up and choosing to simply ignore Elle's sexual harassment, Wes turns his attention back towards you and says, [wes.speech(You can buy gear from me here at any time during my working hours, which are from nine to five. If you'd like to do me a favour again, you could try and help me to calm Elle's libido by taking her over to my office and spending some time with her.)]
+		[wes.speech(不是现在，埃勒！)]韦斯一边咆哮，一边试图把这个好色的半恶魔从他身上推开，但他失败了。韦斯放弃了，选择对埃勒的性骚扰视而不见，他把目光转向你说，[wes.speech(我的工作时间是朝九晚五，你可以随时在这里买到我的装备。如果你想再帮我一个忙，你可以把埃勒带到我的办公室，陪她一会儿，帮我平息一下她的性欲。)]
 	</p>
 	<p>
-		As Elle continues trying to get into Wes's pants, you wonder what you should do next...
+		埃勒继续尝试探进韦斯的裤子，你考虑着接下来去做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_ELLE -->
 	
 	<htmlContent tag="INTRO_HQ_ELLE"><![CDATA[
 	<p>
-		As it's been more than a week since you contacted Elle, you tell Candi that you're here to meet with [elle.a_race] SWORD Enforcer called [elle.name] [elle.surname]. For a moment, it seems as though the bimbo cat-girl doesn't understand what you're talking about, before suddenly remembering that it's her job to help out visitors and saying, [candi.speechNoEffects(So, you're wanting me to, like, let her know you've arrived? Umm... Hold on a moment...)]
+		由于你已经与埃勒联系了超过一周的时间，所以你告诉坎迪，你是来见一名[elle.a_race]，她的名字叫[elle.name]·[elle.surname]，是一名SWORD的执法者。有那么一瞬间，这个胸大无脑的猫女似乎不明白你在说什么，但貌似突然想起帮助来访者是她的职责，于是便说道：[candi.speechNoEffects(所以，你是想让我，额， 让她知道你到这了？嗯……等一下……)]
 	</p>
 	<p>
-		Looking down at the arcane intercom that's built into the top of her desk, she hovers her index finger back and forth between several buttons, speaking out loud to herself as she does so, [candi.speechNoEffects(I know that Elle is, like, at requisitions... I think it's this button that I need...)]
+		她低头看着内置于办公桌面的奥术对讲机，然后用食指在几个按钮之间来回滑动，并大声地自言自语：[candi.speechNoEffects(我知道埃勒是在，好像，在军需处……我想应该是这个按钮……)]
 	</p>
 	<p>
-		The dim-witted cat-girl presses the button that's quite clearly marked as 'Requisitions', and after letting out a low-pitched buzzing noise, the arcane intercom's speaker crackles into life, and you hear the familiar voice of Elle asking, [elle.speech(What can I help you with, Candi? Don't tell me that you've lost your jacket <i>again</i>...)]
+		这个笨蛋猫女按下了那个明晃晃地标着“采购部”的按钮，奥术对讲机发出了一声低沉的嗡嗡声，然后噼里啪啦地响了起来，你听到了埃勒那熟悉的声音，[elle.speech(有什么事呀，坎迪？可别告诉我你<i>又</i>弄丢了你的夹克……)]
 	</p>
 	<p>
-		[candi.speechNoEffects(Uh, like, that's kinda rude of you to think that, y'know? I'm actually doing my job for once, thank you very much!)] Candi drawls, [candi.speech(There's, like, [pc.a_race] here at the front desk for you. Are you, like, expecting someone called '[pc.name]'?)]
+		[candi.speechNoEffects(呃，那个，你的想法有点没礼貌，知道吗？这一次我真的有在做我的工作，多谢关心！)]坎迪拖长了声音说，[candi.speech(现在，那个，有一位[pc.a_race]来前台这儿找你。你，有没有，在等一位叫‘[pc.name]’的人？)]
 	</p>
 	<p>
-		[elle.speech(As a matter of fact, I am,)] Elle replies, [elle.speech(Be a dear and tell [pc.herHim] to wait right there; I'm on my way.)]
+		[elle.speech(事实上，我是，)]埃勒回复道，[elle.speech(亲爱的，告诉[pc.herHim]在那里等一下；我正在路上。)]
 	</p>
 	<p>
-		Even though it's blatantly obvious that you were able to overhear the brief conversation, Candi feels the need to look up at you and explain, [candi.speechNoEffects(Ok, so, like, Elle was kinda rude to me just now, but she's, like, agreed to come and meet you here. You're going to have to wait for her here, y'know? You can, like, use the waiting area.)]
-	</p>
+		尽管很明显你能够无意中听到这段简短的对话，坎迪还是觉得自己有必要抬起头来和你解释一下，[candi.speechNoEffects(好吧，所以……那个……埃勒刚才对我有点粗鲁，但她……好像……同意来这里和你见面。你得在这等着她，知道吗？你可以……那个……待在等候区。)]
+ </p> 
 	<p>
-		After pointing over to the collection of sofas on the other side of the room, Candi turns her attention towards the mirror that's sitting on her desk. Leaving the ditzy bimbo behind, you [pc.walk] over to the nearest sofa and wait for Elle arrive...
+		坎迪指着房间另一边的一系列沙发后，将注意力转向桌子上的镜子。你把那个傻乎乎的女人抛在身后，走到最近的沙发旁，等待埃勒的到来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_ELLE_ARRIVE -->
 	
 	<htmlContent tag="INTRO_HQ_ELLE_ARRIVE"><![CDATA[
 	<p>
-		Thankfully, you aren't kept waiting long, as less than five minutes after you've entered the waiting area, the familiar figure of Elle appears from out of the guarded door on the far side of the room. Looking around and catching sight of you,
+		值得庆幸的是，你并没有等太久。你进入等候区不到五分钟，埃勒熟悉的身影就从房间另一边有人把守的门里出现了。
 		#IF(!game.getDialogueFlags().hasFlag(FLAG_rebelBaseElleCostumeEncountered) && (pc.hasStatusEffect(SE_dsg_set_hlf_regular) || pc.hasStatusEffect(SE_dsg_set_hlf_insurgent)))
-			 her eyes narrow for an instant as she glances over your salvaged gear before she recognises you. She grins wryly at you, before beckoning you forwards and calling out,
+			她眯起眼睛，打量起你身上搜刮来的装备。然后用挖苦的笑容看着你，示意你向前走，大声喊道，
 			#IF(game.getDateNow().getMonthValue()==10)
-			 [elle.speech(Nice costume. Please, come right this way!)]
+			[elle.speech(品味不错。请这边走！)]
 			#ELSE
-			 [elle.speech(Nice costume, but it's a little early for that. Please, come right this way!)]
+			[elle.speech(品味不错，就是过于超前了。请这边走！)]
 			#ENDIF
 			[##game.getDialogueFlags().setFlag(FLAG_rebelBaseElleCostumeEncountered, true)]
 		#ELSE
-		 she flashes you a cheeky grin, before beckoning you forwards and calling out, [elle.speech(Please, come right this way!)]
+		她朝你无礼地咧嘴笑了笑，然后示意你向前走，大声喊道，[elle.speech(请这边走！)]
 		#ENDIF
 	</p>
 	<p>
-		Deciding to do as Elle says, you [pc.walk] over to the [elle.race] and offer her your greetings. Stepping forwards so as to playfully brush up against you, the horny Enforcer reveals, [elle.speech(I've got a lot to thank you for, [pc.name]. Please do follow me on through to my office, and I'll explain all that's happened once we get there.)]
+		你决定照埃勒说的做，于是走向那个[elle.race]并向她问好。这位淫乱的执法者贴近了你，并调皮地往你身上蹭，她坦白道，[elle.speech(我有好多要感谢你的事情，[pc.name]。请随我来我的办公室，我会在那和你解释一切。)]
 	</p>
 	<p>
-		Motioning for the Enforcer who's guarding the inner door to step aside, Elle sets off into the back area of the Enforcer HQ with you at her side...
+		埃勒示意看守内门的执法者站到一旁，然后带着你向执法者总部的后方区域前进……
 	</p>
 	
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_ELLE_OFFICE -->
 	
 	<htmlContent tag="INTRO_HQ_ELLE_OFFICE"><![CDATA[
 	<p>
-		Accompanying Elle down the HQ's corridors, you wait as she unlocks an inner-door by brushing her pass over an arcane scanner mounted to the nearby wall, before following her through into the requisitions department. Leading you though a nearby door, you enter the [elle.race]'s office, which turns out to be particularly large and extravagantly furnished.
+		你陪着埃勒穿过总部的走廊，等待她在附近墙上的奥术扫描仪刷过通行证，以此打开内门，然后跟随她进入军需处。你在她的带领下穿过旁边的门，进入[elle.race]开阔而富丽堂皇的办公室。
 	</p>
 	<p>
-		Sitting down on the executive leather chair positioned behind her desk, Elle lets out a happy little sigh and reveals, [elle.speech(Thanks to your tip-off, I took a chance on going to my superiors and placing all of the blame for the missing stock on Wes. Thankfully, everything couldn't have gone smoother, and the poor little fox-boy ended up being enslaved and given to me as a bonus. I'd always considered him to be a little odd, and so wasn't too keen on owning him, but he's turned out to be a great help.)]
+		埃勒坐在她桌后的行政皮椅上，轻叹一声说道，[elle.speech(多亏你的举报，我才找到机会去找上级汇报，把责任全部归咎于韦斯失踪的颈手枷。谢天谢地，一切顺得不能再顺了。那个可怜的狐男最终被奴役并奖励给了我。我一直觉得他有些怪，所以没太在意他，可他帮了我一个大忙。)]
 	</p>
 	<p>
-		Standing up from behind her desk, she explains, [elle.speech(In an attempt at avoiding a repeat of 'Wes's' siphoning off of equipment, the higher-ups have ordered me to make more regular reports on the inventory's status, which means I'm having to spend all of my time working at the requisitions desk. Thankfully, my little fox-boy slave knows just how to get things done in there, and what's more, he's surprisingly good at keeping me satisfied...)]
+		她从办公桌后站起身，随即解释起来，[elle.speech(为了避免‘韦斯’偷走设备的事件再次发生，上级命令我定期报告库存情况，这意味着我不得不把所有时间都花在请购台上。幸好，我的小狐狸奴隶知道如何在那里完成工作，而且他在如何让我满意这方面出奇地出色……)]
 	</p>
 	<p>
-		Moving over to the door of her office, the [elle.race] lets out a soft laugh and runs her hand over your [pc.arm], before teasing, [elle.speech(Perhaps we can talk more about the ways in which I can be satisfied later...)]
+	在走到她的办公室门口后，这个[elle.race]发出一阵轻笑，然后用手抚摸你的[pc.arm]并调侃道：[elle.speech(也许我们可以稍后再谈谈如何让我满意……)]
 	</p>
 	<p>
-		Opening the door and beckoning you to once again follow her, Elle reveals, [elle.speech(As a way of thanking you for your help, I've arranged for you to be granted a contractor's pass, so you'll not only be granted access to the requisitions area, but I'll also be able to sell you surplus Enforcer equipment. Come on, I've got the pass waiting for you over there.)]
+		埃勒打开门，再次招呼你们跟她走，[elle.speech(为了感谢你的帮助，我给你安排了一张承包商通行证，这样你不仅可以进入征用区，我还可以卖给你多余的执法者装备。来吧，通行证在那边等着你呢。)]
 	
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTRO_HQ_ELLE_REQUISITIONS -->
 	
 	<htmlContent tag="INTRO_HQ_ELLE_REQUISITIONS"><![CDATA[
 	<p>
-		Following Elle out of her office, you accompany her as she walks over to the other side of the corridor and strides through the pair of propped-open doors which lead into the station's requisitions area. Consisting of a large, empty room, the only points of interest in this area are the couple of bare metal tables pushed into each corner, as well as the locked door and waist-high counter set into the wall before you. Telling you to remain here, Elle opens the door, before stepping around to the other side of the counter and starting to rummage around in some of the drawers.
+		你跟着埃勒走出办公室，她带你来到走廊的另一侧，大步穿过两扇撑开的门，进入了军需处，这是个空荡荡的大房间，唯一值得注意的是每个角落都摆放着几张光秃秃的金属桌子，还有一扇上锁的门和镶嵌在你面前墙壁上齐腰高的墙柜。埃勒让你留在这里，她打开门，走到墙柜的另一侧并开始在抽屉里翻找起来。
 	</p>
 	<p>
-		[elle.speech(Wes, my darling? What have you done with that contractor pass I told you to put away?)] she calls out in a flirty, high-pitched tone.
+		[elle.speech(韦斯，亲爱的？你把我让你收起来的承包许可证放哪了？)]她用妩媚且高亢的语调叫道。
 	</p>
 	<p>
-		[wes.speech(I told you that I'd put it in the top drawer!)] the familiar voice of Wes calls out from somewhere within the maze of shelving units which fill the vast storage area behind the counter. A moment later, the fox-boy steps into view, and you see that while he looks just as he did the last time you saw him, he's now wearing nothing but a metal slave collar and a pair of black boxers. Catching sight of you waiting behind the counter, Wes flashes you a furious look, before angrily asking, [wes.speech(So, are you happy with what you've done? This criminal keeps her job, and I'm the one who got punished for her crimes!)]
+		[wes.speech(我跟你说过我会把它放在最上面的抽屉里！)]韦斯熟悉的声音从迷宫般的货架中传出，货架摆满了柜台后面的巨大储藏区。片刻之后，狐男出现在你的视线里，他的样子与上次别无二致，但现在只戴着一个金属奴隶项圈，身穿黑色四角裤。看到你在柜台后面等着，韦斯向你怒目而视，生气地问，[wes.speech(你对自己的所作所为满意吗？这个罪犯保住了工作，而我却因她的罪行受到了惩罚！)]
 	</p>
 	<p>
-		[elle.speech(Now, now, Wes,)] Elle tuts, before stepping over to her slave and fondly pulling him into her ample cleavage. Lovingly stroking the top of his head, she teases, [elle.speech(Being my slave isn't so bad, is it? I can't imagine that many slaves get to have their cocks sucked by their Mistresses all the time... Look, if you're really upset, I'll let you use my pussy tonight. You liked that little 'defeated Elle' roleplay we tried the other night, didn't you?)]
+		[elle.speech(好了，好了，韦斯，)]埃勒在哼了一声后走到她的奴隶身边，亲热地把他的脸埋在了自己丰满的乳沟里并爱怜地抚摸着他的头顶，她开口挑逗，[elle.speech(做我的奴隶也不是那么糟，不是吗？我无法想象有多少奴隶能一直被女主人舔鸡…… 听着，如果你真的不高兴，今晚我可以让你用我的小穴 。我们这次还玩那晚‘战败的埃勒’的角色扮演吧？)]
 	</p>
 	<p>
-		Clearly getting extremely embarrassed about Elle saying all of this right in front of you, the fox-boy pushes his owner off of him, before storming over to the counter and retrieving the contractor pass from out of the top drawer. Throwing it over to Elle, he huffs, [wes.speech(I've still got three boxes of assorted uniforms left to catalogue and store away. If there's nothing else you need from me, then I'm getting back to work.)]
+		埃勒在你面前说了这么多，狐狸男显然感到非常尴尬，他一把推开主人，然后冲到柜台前，从最上面的抽屉里拿出承包许可证。在把它扔给埃勒后，他哼了一声：[wes.speech(我还有三箱各式各样的制服要分类存放。如果你不需要我做什么的话，我就回去工作了。)]
 	</p>
 	<p>
-		[elle.speech(Once I've finished my business with [pc.name] here, I'll come and join you,)] Elle teases, before turning her attention back to you. Handing you the contractor pass, which turns out to be a plastic id card attached to a pink lanyard, Elle says, [elle.speech(This will unlock the doors to this area, and if you show it to an Enforcer patrol, they won't try and confiscate any of the gear you purchase from me here. You can buy gear from me here at any time during my working hours, which are from nine to five. Of course, if you wanted to just chat, or perhaps have a little fun in my office, then I'll always be happy to see you...)]
+		[elle.speech(等我办完[pc.name]的事就来找你，)]埃勒在调侃完之后看向你，随之递上承包许可证，就是一张挂在粉红色挂绳上的塑料身份证，[elle.speech(如果你向巡逻的执法者出示此卡，他们就不会没收你从我这里购买的任何装备。我的工作时间是早九晚五，你可以随时在这里购买装备。当然，如果你只是想和我聊聊天，或者在我的办公室里找点乐子的话，我也随时欢迎你的到来……)]
 	</p>
 	<p>
-		As Elle flashes you a seductive smile, you wonder what you should do next...
+		埃勒向你露出诱人的微笑，你开始思考接下来该干嘛……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Post-quest dialogues: -->
@@ -649,39 +649,39 @@
 	
 	<htmlContent tag="REQUISITIONS_POST_QUEST"><![CDATA[
 	<p>
-		Connected to the adjoining corridor by a pair of wide, propped-open doors, the requisitions area is the place where specialist or replacement equipment can be checked out by the HQ's Enforcers. [pc.Stepping] through the open doors into this area, you find yourself standing in a relatively small room, which, other than a couple of basic metal tables pushed up against one wall, is devoid of any furniture. The only other point of interest is the counter on the far side of the room, which currently appears to be unmanned.
-	</p>
+	军需处经过两扇一直保持撑开的大门通向邻接的走廊，这里就是总部的执法者领取专用装备或替换装备的地方。你[pc.Stepping]过洞开的门，只见自己站在一个并不算大的房间里，每个角落摆着一两张朴素的金属桌，除此之外便没有其他家具。唯一值得注意的就是房间另一侧的墙柜，目前似乎无人值守。
+</p>
 	<p>
 		#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
-			Continuing to move forwards into the room, you look past the counter to see a huge storage area filled with all sorts of weapons and protective equipment. Down at the end of one of the aisles formed by the well-stocked shelving units, you see the familiar figure of Elle pinning Wes back against the wall. She's slipped her hand down the fox-boy's boxers, and from the rapid movements of her arm, it's quite obvious that she's giving him a handjob.
+			你继续向房间里走去，越过柜台，你看到了一个巨大的储藏区，里面摆满了各种武器和防护装备。你在货架组成的过道的尽头看到了熟悉的身影：埃勒把韦斯按在墙上。她的手伸进了狐男的内裤里，从她手臂快速的动作来看，很明显她正在给他手淫。
 		#ELSE
-			Continuing to move forwards into the room, you look past the counter to see a huge storage area filled with all sorts of weapons and protective equipment. Down at the end of one of the aisles formed by the well-stocked shelving units, you see the familiar figure of Elle forcing herself on Wes and pinning him back against the wall. She's slipped her hand down the fox-boy's trousers, and from the rapid movements of her arm, it's quite obvious that she's giving him a handjob.
+			你继续向房间里走去，越过柜台，你看到了一个巨大的储藏区，里面摆满了各种武器和防护装备。你在货架组成的过道的尽头看到了熟悉的身影：埃勒正在强迫韦斯，把他按在墙上。她的手伸进了狐男的内裤里，从她手臂快速的动作来看，很明显她正在给他手淫。
 		#ENDIF
 	</p>
 	<p>
-		You wonder whether you should ring the bell on the desk's counter to get their attention, or turn around and leave them to it...
+		你考虑着，是该按办公桌台面上的铃，引起他们的注意；还是转身放任不管……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_TRADE_DIALOGUE"><![CDATA[
 	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
 		<p>
-			Telling Elle that you'd like to buy some Enforcer equipment, you wait as she rummages around in a nearby drawer for a moment, before producing a list of available equipment and placing it down on the counter-top in front of you. Leaning forwards over the counter-top and flashing you a seductive look, she reveals, [elle.speech(Here's what I can sell to you without causing any trouble...)]
+			你告诉埃勒你想买些执法者装备，她在旁边的抽屉里翻找了一会儿，拿出装备清单放在台面上。她倾身向前，靠在台面上，向你投来诱惑的目光，[elle.speech(这些是能卖给你的，不会惹上麻烦……)]
 		</p>
 		<p>
-			Looking down at the list, you wonder whether you should buy anything...
+			你看向清单，考虑着买些什么……
 		</p>
 	#ELSE
 		<p>
-			Telling Wes that you'd like to buy some Enforcer equipment, you wait as he rummages around in a nearby drawer for a moment, before producing a list of available equipment and placing it down on the counter-top in front of you. Pushing Elle off of him, he lets out a sigh and reveals, [wes.speech(Here's what I can sell to you without causing any trouble...)]
+			你告诉韦斯你想买些执法者装备，他在旁边的抽屉里翻找了一会儿，拿出装备清单放在台面上。他把埃勒推开，叹着气说，[wes.speech(这些是能卖给你的，不会惹上麻烦……)]
 		</p>
 		<p>
-			Looking down at the list while Elle continues to sexually harass Wes, you wonder whether you should buy anything...
+			你看向清单，埃勒继续性骚扰着韦斯，你考虑着该买些什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_INTERACTION -->
@@ -689,80 +689,80 @@
 	<htmlContent tag="REQUISITIONS_INTERACTION"><![CDATA[
 	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
 		<p>
-			Wanting to talk to Elle, you ring the counter's bell, causing her to look over towards the counter and see you standing there. Turning back to whisper something into Wes's ear, she slides her hand out from the fox-boy's boxers, before giving his groin a firm squeeze and then turning to walk over towards you.
+			想和埃勒聊聊，你按了下柜台上的铃，她看向柜台，发现你站在那里。埃勒转身在韦斯耳边低语了几句，将手从狐狸男的四角内裤中抽出来，用力捏了捏他的腹股沟，然后转身朝你走来。
 		</p>
 		<p>
-			Stepping up to the counter, the [elle.race] puts on her most seductive look, before teasing,
+			你走到柜台前，[elle.race]摆出最诱人的姿势，调侃道，
 			#IF(!game.getDialogueFlags().hasFlag(FLAG_rebelBaseElleCostumeEncountered) && (pc.hasStatusEffect(SE_dsg_set_hlf_regular) || pc.hasStatusEffect(SE_dsg_set_hlf_insurgent)))
-			 [elle.speech(You caught me in the middle of disciplining my slave...)] Her voice trails off as she notices your salvaged gear and her face shifts into a suspicious expression for an instant shifting right back.
+			[elle.speech(我调教奴隶被你抓到啦……)]她注意到你的打捞设备后，声音逐渐变小，露出怀疑的表情，但转瞬即逝，恢复原样。
 				#IF(game.getDateNow().getMonthValue()==10)
 					#IF(game.getDialogueFlags().getSavedLong("elle_background_progress")<5)
-					 [elle.speech(Nice costume. You really do have the kinkiest roleplaying ideas,)] she says. Before you can ask what she means by that, she changes subject with a giggle, [elle.speech(So, what can I do for you this time, [pc.name]?)]
+					[elle.speech(好衣服。你角色扮演的点子真的很变态，)]她说。不等你问她这话什么意思，她就咯咯笑着转移话题了，[elle.speech(所以，现在我能为你做什么呢，[pc.name]？)]
 					#ELSE
-					 [elle.speech(Nice costume, did you get that just for me? You really do have the kinkiest roleplaying ideas,)] she says before changing the subject with a giggle, [elle.speech(So, what can I do for you this time, [pc.name]?)] 
+					[elle.speech(好衣服，是给我买的吗？你角色扮演的点子真的很变态，)]她说着，又咯咯笑着转移话题，[elle.speech(所以，现在我能为你做什么呢，[pc.name]？)] 
 					#ENDIF 
 				#ELSE
 					#IF(game.getDialogueFlags().getSavedLong("elle_background_progress")<5)
-						 [elle.speech(Nice costume, even if it's a little early. You really do have the kinkiest roleplaying ideas,)] she says. Before you can ask what she means by that, she changes subject with a giggle, [elle.speech(So, what can I do for you this time, [pc.name]?)]
+						[elle.speech(好衣服，但还是为时过早了。你角色扮演的点子真的很变态，)]她说。不等你问她这话什么意思，她就咯咯笑着转移话题了，[elle.speech(所以，现在我能为你做什么呢，[pc.name]？)]
 					#ELSE
-						  [elle.speech(Nice costume, even if it's a little early. Did you get that just for me? You really do have the kinkiest roleplaying ideas,)] she says before changing the subject with a giggle, [elle.speech(So, what can I do for you this time, [pc.name]?)] 
+						[elle.speech(好衣服，但还是为时过早了。这是买给我的吗？你角色扮演的点子真的很变态，)]她说着，又咯咯笑着转移话题，[elle.speech(所以，现在我能为你做什么呢，[pc.name]？)] 
 					#ENDIF 
 				#ENDIF
 				[##game.getDialogueFlags().setFlag(FLAG_rebelBaseElleCostumeEncountered, true)]
 			#ELSE
-			 [elle.speech(You caught me in the middle of disciplining my slave... So, what can I do for you this time, [pc.name]?)]
+			[elle.speech(我调教奴隶被你抓到啦……所以，现在我能为你做什么呢，[pc.name]？)]
 			#ENDIF			
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Wes, you ring the counter's bell, causing both him and Elle to look over towards the counter and see you standing there. Turning back to whisper something into Wes's ear, Elle slides her hand out from the fox-boy's trousers, before giving his groin a firm squeeze and then stepping back to let Wes walk over towards you.
+			想和韦斯聊聊，你按了下柜台上的铃，他和埃勒都扭头看向柜台，发现你站在那里。埃勒转身在韦斯耳边低语了几句，她将手从狐狸男的四角内裤中抽出来，用力捏了捏他的腹股沟，然后退后一步，让韦斯走向你。
 		</p>
 		<p>
-			Clearly being a little flustered from the attention Elle was giving to him, Wes clears his throat and takes a deep breath, before flashing you a warm smile and asking, [wes.speech(What can I do for you today, [pc.name]? Sorry that you had to catch me like that, Elle was just-)]
+			韦斯显然因为埃勒对他的关注感到有些慌张，他清了清嗓子，深吸了一口气，向你露出温和的微笑，问道，[wes.speech(今天有什么我能帮你的吗，[pc.name]？抱歉让你看到我这副样子，埃勒只是——)]
 		</p>
 		<p>
-			[elle.speech(Giving you a quickie,)] the [elle.race] teases, cutting off Wes's sentence as she steps up behind him and lewdly presses her huge breasts into his back. Ignoring Wes's firm request for her to step back, Elle leans in over his shoulder and teases, [elle.speech(Don't worry, babe, I'll finish you off with my mouth once you've dealt with [pc.name].)]
+			[elle.speech(和你速战速决吧，)][elle.race]调笑着，下流地把她巨大的乳房压在韦斯背上，打断他的话。韦斯命令她走开，但埃勒直接无视，倚在他的肩膀上调戏说，[elle.speech(别担心，宝贝，你和[pc.name]完事后，我会用嘴把你吃干抹净的。)]
 		</p>
 		#IF(pc.isVisiblyPregnant())
 			#IF(!pc.isCharacterReactedToPregnancy(wes))
 				#IF(pc.getPregnantLitter().isFatherId(wes.getId()))
 					<p>
-						With his back-and-forth with Elle now at an end, Wes is able to finally take a proper look at you, and immediately notices the fact that you're now pregnant. Realising that he must be the father, the fox-boy gulps and asks, [wes.speech(Are you going to be ok, [pc.name]? Is there anything I can do for you? I mean, I know that having kids doesn't seem to be as big a deal here in the city as it is for a lot of country folk, but I'd still like to take responsibility.)]
+						韦斯不再抽插埃勒的身体，终于好好看看你了。他立刻注意到你怀着孕，还意识到自己一定是孩子的父亲。狐男咽了咽口水，问道：[wes.speech(你会没事的吧，[pc.name]？我能为你做些什么吗？我的意思是，我知道在城市里生孩子似乎不像在很对乡下地方那样那么重要，但我还是想负起责任。)]
 					</p>
 					<p>
-						Thanking Wes for his concern, you tell him that you're managing just fine, and won't require any sort of help from him. Warmly smiling at you, he says, [wes.speech(If there's anything I can help you with, [pc.name], please just let me know...)]
+						你对韦斯的关心表达了谢意，告诉他自己一切都好，不需要他提供任何帮助。他微笑着对你说，[wes.speech(如果有什么我能帮上忙的，[pc.name]，请告诉我……)]
 					</p>
 				#ELSE
 					<p>
-						With his back-and-forth with Elle now at an end, Wes is able to finally take a proper look at you, and quickly notices the fact that you're still pregnant. Warmly smiling at you, he kindly asks how you are, and after you've replied that you're feeling well, he gets down to business by once again asking, [wes.speech(So, [pc.name], what can I help you with today?)]
+						韦斯不再抽插埃勒的身体，他终于能好好看你一眼，并立刻注意到你怀着孕。他热情地对你微笑，亲切地问你近况如何，在你回答说感觉很好后，他又开始问起正事，[wes.speech(所以，[pc.name]，我能为你做什么？)]
 					</p>
 				#ENDIF
 			#ELSE
 				<p>
-					With his back-and-forth with Elle now at an end, Wes is able to finally take a proper look at you, and quickly notices the fact that you're still pregnant. Warmly smiling at you, he kindly asks how you are, and after you've replied that you're feeling well, he gets down to business by once again asking, [wes.speech(So, [pc.name], what can I help you with today?)]
+					韦斯不再抽插埃勒的身体，他终于能好好看你一眼，并立刻注意到你怀着孕。他热情地对你微笑，亲切地问你近况如何，在你回答说感觉很好后，他又开始问起正事，[wes.speech(所以，[pc.name]，我能为你做什么？)]
 				</p>
 			#ENDIF
 		#ELSE
 			<p>
-				Letting out a frustrated huff, Wes does his best to ignore Elle's hand as it creeps back down towards his groin, and once again asks, [wes.speech(So, [pc.name], what can I help you with?)]
+				韦斯强忍着不理会埃勒慢慢摸向他腹股沟的手，再次询问道：[wes.speech(所以，[pc.name]，我能为你做什么？)]
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_INTERACTION_LEAVE"><![CDATA[
 	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
 		<p>
-			Having got what you wanted from Elle, you tell her that you need to be getting on your way, before saying goodbye and heading towards the exit. As you leave the requisitions area, you take one last look back to see the horny [elle.race] rapidly advancing on Wes and reaching towards his groin...
+			你从埃勒那里得到了想要的东西，告诉她自己要离开了，向她道别并走向了出口。离开军需处时，你回头瞥了一眼，看到淫荡的[elle.race]迅速走向韦斯，并摸向他的腹股沟……
 		</p>
 	#ELSE
 		<p>
-			Having got what you wanted from Wes, you tell him that you need to be getting on your way, before saying goodbye and heading towards the exit. As you leave the requisitions area, you take one last look back to see Elle sinking down to her knees in front of the fox-boy and hungrily reaching up towards his groin...
+			你从韦斯那里得到了想要的东西，告诉他自己要离开了，向他道别并走向了出口。离开军需处时，你回头瞥了一眼，看到埃勒跪在韦斯面前，并饥渴地摸向他的腹股沟……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_BACKGROUND -->
@@ -770,635 +770,635 @@
 	<htmlContent tag="REQUISITIONS_BACKGROUND_ELLE_1"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("elle_background_progress")<5)
 		<p>
-			Wanting to get to know Elle a little better, you ask her what she did before becoming an Enforcer, and what made her decide to join Dominion's law enforcement.
+			为了更好地了解埃勒，你问她在成为执法者之前是做什么的，以及加入御城区执法部门的契机是什么。
 		</p>
 		<p>
-			Letting out a soft hum as she thinks back to the start of her career, she reveals, [elle.speech(I didn't do much of anything before signing up to become an Enforcer... I suppose that was the main reason why I joined them in the first place; I was simply bored of doing nothing.)]
+			她回忆起她职业生涯刚开始那会，她轻声说道，[elle.speech(在我成为执法者之前，我什么也没有做……我想我加他们的最主要的一个原因就是：我只是厌倦了无所事事的生活。)]
 		</p>
 		<p>
-			Pressing her on the issue a little further, you say to Elle that surely she must have been doing <i>something</i> before signing up.
+			你在这个问题上继续追问她，你说埃勒确定你在这之前一定做了<i>一些事情</i>。
 		</p>
 		<p>
-			[elle.speech(Very well, you've got me to admit it; my mother is a direct daughter of Lunette herself, and what's more, I was her favourite child. I was given absolutely anything I asked for, and so never had to even think about working for a living,)] Elle reveals, before smirking at you and teasing, [elle.speech(I couldn't live that sort of life forever, though; it's far more fun having to work at seducing your next conquest rather than having them simply given to you...)]
+			[elle.speech(很好，你让我承认了；我妈是露内特的亲女儿，而且，我是她最喜欢的孩子。她对我几乎有求必应，所以我根本不用考虑为了生计而工作，)]埃勒透露道，然后冲你坏笑着揶揄，[elle.speech(不过，我不可能永远过着这样的生活；勾引你的下一个战利品可比简单地把他们交给你要有趣得多……)]
 		</p>
 		<p>
-			Hungrily looking you up and down, she lowers her voice a little and breathlessly whispers, [elle.speech(Enough talk about my past; surely there are other things you'd like to discus...)]
+			她如饥似渴地打量着你，放低声音，喘息着低声说，[elle.speech(我的过去已经说的够多了；我相信你还有别的事情想要问……)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Elle about her past again, you ask her if she can tell you anything about her pre-Enforcer days spent living with her mother.
+			你想和埃勒多聊些她的往事，便询问她，能不能讲讲成为执法者之前，和母亲住在一起的日子。
 		</p>
 		<p>
-			[elle.speech(There's not really much to tell,)] she sighs, before suddenly flashing you a dirty look and revealing, [elle.speech(The sex was the best part about it; I got to fuck a new guy or girl almost every night, and when my mother hosted parties, I'd try to perform oral on as many different guests as I could. I think my record was twenty-seven in one night...)]
+			[elle.speech(真没什么好讲的，)]她叹了口气，然后突然坏坏地睨了你一眼，答道，[elle.speech(最棒的部分，嗯，做爱最棒了，我几乎每晚都约个新小伙或者新小姑娘做爱；母亲开派对的时候，我和能应付过来的所有来客口交。我的最高纪录是一晚二十七个呢……)]
 		</p>
 		<p>
-			Letting out a mischievous giggle, Elle bats her eyelashes at you and teases,
+			埃勒神秘地咯咯笑，朝你眨了眨眼睛，调戏道，
 			#IF(pc.hasPenis())
-				 [elle.speech(All that practice is why I'm so good at giving head...)]
+				[elle.speech(练了这么多，我现在才能擅长做头呢……)]
 			#ELSE
-				 [elle.speech(All that practice is why I'm so good with my tongue...)]
+				[elle.speech(练了这么多，我的舌技才能这么好呢……)]
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_ELLE_2"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("elle_background_progress")<5)
 		<p>
-			Having previously discovered from Elle that she joined the Enforcers out of boredom with her privileged life, you ask her what her early experiences as an officer of the law were like.
+			你之前从埃勒口中得知，她加入执法者的原因是厌倦了优越的生活，于是你问她作为一名执法者早期的经历是怎样的。
 		</p>
 		<p>
-			[elle.speech(Mmm... Well, my training at the Academy and my first year as being a member of the Patrol were both pretty boring. I'd slept with everyone worth sleeping with after the first month or so, and I quickly started to realise that being a regular Enforcer wasn't all that fun,)] she sighs, and without any further prompt from you, she quickly continues, [elle.speech(That's when I decided to apply to join SWORD. There were loads of hot guys and girls in their ranks, and I'd heard that they got loads of fun assignments.)]
+			[elle.speech(嗯……我在警校的训练和成为巡逻队成员的第一年都很无聊。第一个月左右，我就和所有值得睡的人都睡过了，我很快就开始意识到，做一名普通的执法者并不是那么有趣，)]她叹了口气，在你没有进一步提示的情况下，她很快继续说道，[elle.speech(就在那时，我决定申请加入SWORD。他们的队伍里有很多帅哥美女，而且我听说他们有很多有趣的任务。)]
 		</p>
 		<p>
-			Overhearing what it is that Elle is saying, Wes quips in from somewhere behind a nearby shelving unit, [wes.speech(Typical demon... Being allowed to apply for SWORD after just a year of service...)]
+			听到埃勒的话，韦斯从旁边的货架后面的某处插话道，[wes.speech(典型的恶魔……才服役一年就被允许申请加入特殊武器和行动反应部……)]
 		</p>
 		<p>
-			[elle.speech(My instructor said that I was one of the best he'd seen, thank you very much,)] Elle calls out in a light-hearted tone, before biting her lip and teasing, [elle.speech(Of course, that might have had something to do with the fact that I was spreading my legs for him every day in his office...)]
+			[elle.speech(我的教练说我是他见过的最好的学生之一，非常感谢，)]埃勒用轻松的语气说道，然后咬着嘴唇调侃，[elle.speech(当然，这可能与我每天在他的办公室里为他张开双腿有关……)]
 		</p>
 		<p>
-			Hearing no further comment from Wes, Elle smirks and continues, [elle.speech(Anyway, I graduated with above-average grades and then applied for the position of courier, which I was immediately granted. I'd thought that as a courier, I'd be able to have all sorts of fun fucking different people all over Lilith's Realm, but I just so happened to graduate in the July of '88, right before the Fifth Human Rebellion started...)]
+			听到韦斯没有进一步的评论，埃勒笑了笑，继续说道，[elle.speech(总之，我以高于平均水平的成绩毕业，然后申请了快递员的职位，并立即得到了批准。我本以为，作为一名快递员，我可以在莉莉丝王国各地和不同的人做爱，享受各种乐趣，但我恰好是在88年7月毕业的，就在第五次人类叛乱开始之前……)]
 		</p>
 		<p>
-			As she says this, the flirty, light-hearted look in Elle's eyes quickly fades away, and she lets out a deep, remorseful sigh. Realising that she's not comfortable talking about this right now, you tell Elle that it wasn't your intention to uncover any unpleasant memories, and perhaps it would be best to drop the subject for now.
+			说这话时，埃勒眼中轻佻的神情很快就消失了，她深深地叹了一口气，懊悔不已。你意识到她现在不太愿意谈论这件事，于是告诉埃勒，你并不想揭开任何不愉快的回忆，也许现在最好暂时搁置这个话题。
 		</p>
 		<p>
-			[elle.speech(Yeah, ask me about this again some other time,)] the [elle.race] sighs, before shaking her head and returning to her flirty attitude as she teases, [elle.speech(It's a lot more fun talking about other stuff, such as the fact that I can easily orgasm just from performing oral on someone...)]
+			[elle.speech(是啊，改天再问我吧，)][elle.race]叹了口气，然后她摇摇头，又恢复了挑逗时的妩媚姿态，[elle.speech(谈论其他事情会更有趣，比如我只是给别人口交就能轻松地达到高潮……)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Elle about her past again, you ask her if she can tell you anything about her early days in the Enforcer Academy or as a Patrol officer.
+			你想再和埃勒聊一聊她的过去，你问她是否能告诉你一些她早年在执法者学院或担任巡逻警官时的事情。
 		</p>
 		<p>
-			[elle.speech(Oh, you want to know the sorts of things I got up to back then, do you?)] she teases, before seductively biting her lip and recalling, [elle.speech(The actual training at the Academy was really boring, as you'd expect, but I had a lot of fun seducing and fucking the instructors one-by-one... The best memory I've got of my training is the night of our graduation party, when I got three of the instructors to gang-bang me, and the next morning, I woke each of them up in turn by giving them a blowjob! Fun times...)]
+			[elle.speech(哦，你想知道我那时都干了些什么吗？)]她挑逗道，然后又诱人地咬着嘴唇回想起来，[elle.speech(正如你所料，学院的实际训练非常无聊，但我在逐个引诱和操弄教官的过程中获得了很多乐趣……我在训练中最美好的回忆是毕业派对那晚，我让三个教官轮奸了我，第二天早上，我轮流给他们口交，把他们都弄醒了！美好时光啊……)]
 		</p>
 		<p>
-			Licking her lips and flashing you a dirty look, she continues, [elle.speech(My days as a Patrol officer were much of the same. It was all boring work while on duty, but getting to fuck my way through all of my superiors sure was fun! But anyway, speaking of fucking, how about we talk more about that...)]
+			她舔了舔嘴唇，色眯眯地看了你一眼，继续说道，[elle.speech(我当巡警的日子也是如此。执勤时工作枯燥乏味，但能和我所有的上司上床确实很有趣。不管怎么说，说到做爱，我们不如再谈谈这个话题……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_ELLE_3"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("elle_background_progress")<5)
 		<p>
-			Although Elle seemed to have some unpleasant memories of her early days as a SWORD Enforcer, you're sure that she's prepared to answer your questions about it by now, and so you ask her what her job was like after graduating.
+			虽然埃勒似乎对她早年作为SWORD执行者的经历有一些不愉快的回忆，但你相信她现在已经准备好回答你的问题了，所以你问她毕业后的工作是什么样的。
 		</p>
 		<p>
-			Once again, Elle's flirty demeanour vanishes as she recalls her early memories of working as a member of SWORD, but despite the troubled expression which settles on her face, she willingly answers, [elle.speech(Well, as I mentioned before, I'd graduated in the July of '88, less than a month before all the troubles of the Fifth Human Rebellion kicked off. You won't hear many people talking about it these days, but back then, it seemed like the whole world was starting to fall apart...)]
+			回忆起早年作为SWORD成员工作的往事，埃勒的妩媚风情再次消失殆尽，但尽管脸上浮现出不安的表情，但她还是心甘情愿地回答了问题，[elle.speech(我之前说过，我是88年7月毕业的，就在第五次人类叛乱爆发前不到一个月。你现在不会听到很多人谈论这件事，但在当时，似乎整个世界都开始分崩离析……)]
 		</p>
 		<p>
-			Letting out a deep sigh, she recalls, [elle.speech(I'd been given the job of courier over at SWORD's Fifth Company, which seemed like a cushy assignment for the first couple of weeks. Thanks to my wings, I could fly all over Dominion in no time at all, and if the situation called for it, I could even make the roundabout trip to Elis, Thinis, and even Itza'aak in less than a day. The main thing on my mind back then was who I'd get to seduce and fuck when I arrived at my destination, but that all changed with the violent start of the rebellion; the 'Day of Four Eights'...)]
+			她深深地叹了一口气，回忆道，[elle.speech(我在SWORD第五连担任信使一职，在最初的几个星期里，这似乎是个轻松的任务。多亏了我的翅膀，我可以在短时间内飞遍整个御城区，如果情况需要，我甚至可以在一天之内迂回到伊利斯、提尼斯，甚至伊察阿克。那时，我最关心的是到达目的地后能勾引谁，和谁上床，但这一切都随着叛乱的暴发而改变了：‘四八之日’……)]
 		</p>
 		<p>
-			[wes.speech(You've never spoken about this before,)] Wes chimes in as he peers around the corner of a nearby shelving unit.
+			[wes.speech(你以前从没说过这个，)]韦斯一边说着，一边从旁边货架的角落里探出头来。
 		</p>
 		<p>
-			[elle.speech(Nobody's ever asked before,)] Elle replies, [elle.speech(And what is there to find out? From my perspective, the rebellion was four years of chaos, uncertainty, and... a hell of a lot of fun!)]
+			[elle.speech(从来没有人问过，)]埃勒回答说，[elle.speech(有什么可发现的呢？在我看来，叛乱的四年是混乱，不确定以及……充满乐子的四年！)]
 		</p>
 		<p>
-			Letting a big smirk settle on her after saying this, Elle goes on to reveal, [elle.speech(As my job of courier got a lot more dangerous with the start of the rebellion, I was ordered to get flight combat qualified. I wasn't sure about it at first, but that's where I found my true calling! Swooping and diving... Knowing that the bastards who're after you intend to take you prisoner... The adrenaline! It gets me going just thinking about it! Oh, how I remember the looks on their faces when they realised that I'd out-manoeuvred them! Hahaha!)]
+			说完这句话，埃勒露出了一个得意地坏笑，接着又透露道，[elle.speech(随着叛乱的开始，我的信使工作变得更加危险，我奉命获得飞行战斗资格。起初我并不确定，但在那里我找到了自己真正的使命！拉升、俯冲……你知道追杀你的混蛋打算俘虏你……那肾上腺素激增的感觉！想想都让我兴奋！当他们意识到我比他们更有办法时，他们脸上的表情让我记忆犹新！哈哈哈！)]
 		</p>
 		<p>
-			Caught up in her excitement, Elle suddenly unfurls her large, demonic wings, and with an intense, maniacal look in her bright pink eyes, she gives them a powerful flap and declares, [elle.speech(I was never beaten in the skies, not once! They may have called themselves the 'Human Liberation Front', but those rebel scum had harpies, bats, even dragons attempt to intercept me, and I beat them all!)]  
+			沉浸在兴奋中的埃勒突然展开了她那对巨大的恶魔翅膀，明亮的粉红色眼睛里闪烁着强烈的癫狂神色，她用力扇动着翅膀，大声宣布道，[elle.speech(我从未在天空中被打败过，一次也没有！他们也许自称是‘人类解放阵线’，但那些叛军败类让哈比、蝙蝠甚至龙来拦截我，都被我打败了！)]  
 		</p>
 		<p>
-			Remembering that those glory days are long gone, Elle folds her wings back down behind her back, before letting out a long sigh and saying, [elle.speech(My early days at SWORD were hell, sure, but I've never felt more alive than I did during those aerial fights... Well, having a good fuck is a decent substitute I suppose, and seeing as I've gone on for long enough about my past, how about we talk more about that sort of thing...)]
+			回想起那段光辉岁月，埃勒将翅膀折回背后，然后长叹一声说，[elle.speech(我早年在SWORD的日子确实很糟糕，但我从来没有像在空中格斗时那样感到自己是如此有活力……好吧，我想做爱也是一种很好的替代方式，我已经说了很久我的过去，不如我们多谈谈这类事情吧……)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Elle about her past again, you ask her if she's got any stories to tell about her experiences during the Fifth Human Rebellion.
+			你想再和埃勒聊一聊她的过去，于是问她是否有关于第五次人类叛乱期间的经历。
 		</p>
 		<p>
-			A slight smile breaks out across Elle's face as she hears you ask this, and in a wistful tone, she recalls, [elle.speech(Well, if you want a story, then I can tell you about the one rebel who managed to get away from me... Out of all the countless scum who I fought and bested in aerial combat, he was the only one who I'd ever consider to be my equal. He was some kind of greater bird-of-prey harpy, perhaps a falcon, but despite fighting against one another over a dozen times, I could never get a good look at him; he was just too fast.)]
+			听到你这么问，埃勒脸上露出一丝微笑，用一种怀念的语气回忆道，[elle.speech(好吧，如果你想听故事，那我可以给你讲讲那个设法从我手中逃脱的叛军……在与我空战过的无数人渣中 他是唯一一个能与我平起平坐的人 他是某种更厉害的纯种哈比，也许是猎鹰，但尽管我和他交手了十几次，却始终无法看清他的样子；他实在是太快了。)]
 		</p>
 		<p>
-			Elle starts to subconsciously unfurl her wings as she remembers the fights she had with this unidentified harpy, [elle.speech(At the time when I first saw him, I'd already got more than a year's worth of experience in the skies, but despite that, he almost took me out on his first pass. It was just by mere chance that I happened to look behind me as I was flying, and I saw him just a second away from crashing into me. I was able to dodge him, but only just, and before I knew what was happening, he was on me again... I had to drop the package I was carrying, but even then, I was only barely able to keep up with his moves. He pursued me all the way back to HQ, and even had the balls to dive at the Enforcers manning the towers...)]
+			埃勒下意识地展开翅膀，因为她想起了与这只身份不明的哈比的战斗，[elle.speech(第一次见到他时，我已经有了一年多的飞行经验，但尽管如此，他第一次飞就差点把我撞飞。那只是一次偶然的机会，我在飞行过程中偶然向身后看了一眼，我看到他就差一秒钟就要撞上我了。我躲过了他，但也仅仅是躲过了而已，还没等我反应过来，他又扑了上来……我不得不放下手中的包裹，但即便如此，我也只能勉强跟上他的动作。他一路追着我回到了总部，甚至有胆量向守卫塔楼的执法者俯冲……)]
 		</p>
 		<p>
-			With your curiosity piqued, you ask Elle what happened to this rebel harpy, to which she shrugs and replies, [elle.speech(I never found out. There was nothing extraordinary about the last time we fought, and after that ended in a stalemate, I watched him fly off in the direction of the Mountains of the Moon. That was the last I ever saw of him. He was probably caught by a routine ground patrol; I couldn't imagine someone of his fervour ever abandoning his cause.)]
+			你的好奇心被激起，便问埃勒这个叛逆的哈比发生什么了，她耸耸肩回答道，[elle.speech(我也不知道。我们最后一次交手并没有什么特别之处，那次交手以僵局告终后，我看着他飞向皎月山脉的方向。那是我最后一次见到他。他可能是被例行巡逻的地面巡逻队抓住了；我无法想象像他这样狂热的人会放弃自己的事业。)]
 		</p>
 		<p>
-			Taking on a flirty tone once again, she teases, [elle.speech(I would have loved to have found out what he was like to fuck...)]
+			她再次用妩媚的语气调侃道，[elle.speech(我很想知道他操起来是什么样子……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_ELLE_4"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("elle_background_progress")<5)
 		<p>
-			Curious to hear about Elle's more recent past, you ask her what she did once the Fifth Human Rebellion had ended.
+			你很想知道埃勒更靠近现在的过去，于是问她第五次人类叛乱结束后她都做了些什么。
 		</p>
 		<p>
-			[elle.speech(I continued with my job as a courier,)] she reveals, [elle.speech(Of course, I'd been promoted by that time, so I could delegate the more tedious assignments to those serving under me. Despite taking only the most 'exciting' of assignments, however, I soon grew very bored of my once-exhilarating job. Flying just isn't the same when you don't have to worry about being attacked at any moment by a swooping rebel harpy...)]
+			[elle.speech(我继续我的快递工作，)]她透露道，[elle.speech(当然，那时我已经升职了，所以我可以把更乏味的任务交给我手下的人去做。尽管只接受最‘刺激’的任务，但我很快就对这份曾经令人兴奋的工作感到厌倦。当你不用担心随时会被俯冲而来的叛军哈比袭击时，飞行就不一样了……)]
 		</p>
 		<p>
-			Softly chuckling to herself at the thought, she continues, [elle.speech(Anyway, after several years of working my way up through the ranks, I eventually applied to be transferred to logistics here at Enforcer HQ, hoping that I'd be able to get some excitement from fucking my way through all of my superiors. Well, I did get some excitement doing that, but the higher-ups aren't exactly the best fucks I've ever had, and I soon grew bored again...)]
+			想到这里，她轻轻地笑了笑，继续说道，[elle.speech(总之，经过几年的升迁，我最终申请调到执法者总部的后勤部工作，希望能通过和所有上司上床来获得一些刺激。好吧，我确实得到了一些刺激，但那些上司并不是我曾经操过的最棒的人，我很快又觉得无聊了……)]
 		</p>
 		<p>
-			All of her talk about fucking her superiors seems to have got Elle turned on again, for she leans over the counter and suggestively teases, [elle.speech(I'm always up for a good fuck, you know...)]
+			说道和她的上司做爱，似乎又让埃勒兴奋起来，因为她俯身在柜台上，暗示性地挑逗着，[elle.speech(我总是想好好干一炮，你知道的……)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Elle about her past again, you ask her if any of her old courier colleagues transferred to logistics, just like she did.
+			你想再和埃勒聊一聊她的过去，于是问她是否有以前的快递员同事像她一样转到了后勤部门。
 		</p>
 		<p>
-			[elle.speech(No, all of the Enforcers I worked with back then have either stayed on as couriers, been promoted to some cushy desk job in other parts of the realm, or retired. I'm the only one from my old Company who's working here at the HQ,)] Elle reveals, before smirking and continuing, [elle.speech(My good little slave, Wes, is actually the one I've known here for the longest.)]
+			[elle.speech(不，当年与我共事的所有执法者要么继续当快递员，要么被提拔到王国其他地方做一些轻松的文职工作，要么退休了。我是唯一一个在总部工作的人，)]埃勒透露，然后笑着继续说道，[elle.speech(我的小乖奴隶韦斯，其实是我在这里认识最久的人。)]
 		</p>
 		<p>
-			Seductively biting her lip and leaning forwards over the counter, she teases, [elle.speech(How about we talk about something a little more fun? Like how good it must feel to fuck me...)]
+			她诱人地咬着嘴唇，身体前倾，越过柜台，挑逗道，[elle.speech(我们谈点更有趣的怎么样？比如操我的感觉一定很爽……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_ELLE_5"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("elle_background_progress")<=5)
 		<p>
-			Having found out almost everything there is to know about Elle's past, you have just one last question to ask her. Wanting to hear her reasons for siphoning off the Enforcer's weapons and selling them to criminal gangs, you ask her why she did it.
+			在了解了埃勒过去的几乎所有情况后，你只想问她最后一个问题。你想听听她为什么要把执法者的武器抽走卖给犯罪团伙，你问她为什么要这么做。
 		</p>
 		<p>
-			[elle.speech(Because I was bored!)] she exclaims, as though that's a legitimate reason for breaking the law, [elle.speech(I'm sure that you overheard me saying this to those gang-members back in the cave, but there's really nothing exciting for us Enforcers to do these days. It's all routine patrols, routine equipment checks, routine reports, routine boredom! If the criminals had access to more fire-power, then they could start a serious crime wave, and then I'd finally get to see some action again!)]
+			[elle.speech(因为我太无聊了！)]她这样说，似乎这是违法的正当理由一般，[elle.speech(我也知道，你听烦我唠叨洞窟里的那些帮派了，但是执法者整天实在没什么刺激的事儿干。例行巡逻、例行装备检查、例行报告、例行无聊透顶！如果罪犯能搞多点火力，犯个滔天大罪，那我才终于能活动活动筋骨！)]
 		</p>
 		<p>
-			[wes.speech(So much for that,)] Wes snarkily calls out from somewhere behind the shelving units.
+			[wes.speech(已经足够了，)]韦斯在连排货架后冷冷地喊。
 		</p>
 		<p>
-			[elle.speech(Mmm, yes, things didn't quite go as planned, thanks to [pc.name] here,)] Elle replies, before smirking at you and revealing, [elle.speech(Everything worked out well, though. I may not get the excitement of fighting criminals, but Wes has turned out to be surprisingly fun! I always thought he was a little odd, so I never tried to seduce him, but it turns out that he's got a seemingly-endless reserve of stamina, and is ready to fuck at any time! His cock's nice and big as well, and when he shoves his knot into my mouth... Fuck, I can cum just from that!)]
+			[elle.speech(Mmm，是的，事情没有完全按计划进行，多亏了这里的[pc.name]，)]埃勒回答道，然后对你笑了笑，并透露了一些信息，[elle.speech(不过一切都很顺利。我可能没有和罪犯搏斗的兴奋感，但韦斯却出奇地有趣！我一直觉得他有点古怪，所以从来没试过勾引他，但事实证明，他的体力似乎是无穷无尽的，随时都可以干上一炮！他的鸡巴也又大又漂亮，当他把鸡巴结塞进我嘴里的时候……操，我都能射了！)]
 		</p>
 		<p>
-			[wes.speech(It's not like I can say no!)] Wes exclaims.
+			[wes.speech(我又不能拒绝！)]韦斯感叹。
 		</p>
 		<p>
-			[elle.speech(Just to think that for all of these years, Wes was right under my nose... I could have been having so much fun with him!)] Elle softly laughs, [elle.speech(I let him sleep in my bed at night, and all I have to do is spread my legs and let out a little moan, and he's immediately on top of me, stuffing his big cock into my hungry little pussy...)]
+			[elle.speech(想想这些年来，韦斯就在我眼皮底下……我本可以和他玩得很开心的！)]埃勒轻轻地笑了起来，[elle.speech(晚上，我让他睡在我的床上，我只要张开双腿，发出一声呻吟，他就会立刻压在我身上，把他的大鸡巴塞进我饥渴的小穴里……)]
 		</p>
 		<p>
-			Getting herself worked up by all this talk of sex, Elle breathlessly pants, [elle.speech(Fuck... I'm getting wet just thinking about it...)]
+			这些关于性的话题让她兴奋不已，埃勒气喘吁吁地喘着粗气，[elle.speech(妈的……光是想想我就湿了……)]
 		</p>
 		<p>
-			Having now found out all there is to know about Elle's past, you wonder what to say to her next...
+			你如今已了解埃勒的过去，想知道接下来该对她说什么……
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Elle about her past again, you ask her what sort of things she got up to while working in logistics here at the Enforcer HQ.
+			你想再和埃勒谈谈她的过去，问她在执法者总部当后勤时都在做什么。
 		</p>
 		<p>
-			[elle.speech(There's not really much to tell about all of that,)] Elle sighs, [elle.speech(I transferred here ten years ago, and since then, I got a promotion, fucked over half of all the Enforcers who work here, and ended up gaining Wes as a slave. Other than that, nothing much happened.)]
+			[elle.speech(其实这些都没什么好说的，)]埃勒叹了口气，[elle.speech(十年前我调到这里，从那时起，我得到了晋升，操了在这里工作的一半的执法者，最后得到了韦斯这个奴隶。除此之外，什么也没发生。)]
 		</p>
 		<p>
-			Leaning forwards over the counter, she teases, [elle.speech(My little fox-boy slave is proving to be a hell of a lot of fun to fuck, but he's not the only one I've got an interest in...)]
+			她向前靠在柜台上，挑逗道，[elle.speech(我的小狐狸奴隶被证明是个非常有趣的性玩具，但我可不止对他感兴趣……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_WES_1"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("wes_background_progress")<5)
 		<p>
-			Wanting to get to know Wes a little better, you ask him about his past life and what he did before joining the Enforcers.
+			为了更好地了解韦斯，你询问了他过去的生活，以及他加入执法者之前的工作。
 		</p>
 		<p>
-			[wes.speech(Before I joined the Enforcers? Well, that would be before I came to Dominion,)] Wes recalls, and you can't help but notice how his country accent gets a lot stronger as he thinks back to his past, [wes.speech(I spent my early life working on my parents' farm, out on the fringes of the Foloi Fields. Being the youngest of my eight siblings, I realised that I didn't stand much of a chance of inheriting anything, so rather than stay there and find out what ploughing fields would be like with a back bent by age, I decided to travel to the big city.)]
+			[wes.speech(在我成为执法者之前？嗯……那是在我来御城区之前，)]韦斯回忆道，你情不自禁地注意到，他回忆的时候乡村口音更重了，[wes.speech(我早年在父母的农场工作，农场位于弗洛伊田野的边缘。作为八个兄弟姐妹中最小的一个，我意识到自己继承任何东西的机会都不大，所以我决定去大城市闯一闯，而不是留在那里，看看年纪大了背也弯了还在耕地是什么样子。)]
 		</p>
 		<p>
-			At this point in his story, the fox-boy's muzzle turns up into a wry grin, and he scoffs, [wes.speech(I was so naive and foolish back then... I didn't realise how opportunistic and self-serving the majority of city folks are. I went from job to job, always being promised steady work, only to be laid off or replaced by cheaper labour a few weeks after I'd started.)]
+			说到这里，狐狸男的嘴角露出一丝诡异的笑容，嗤之以鼻，[wes.speech(那时的我太天真太傻了……我没有意识到大多数城里人是多么的投机取巧和自私自利。我换了一份又一份工作，总是被许诺有稳定的工作，可刚开始干了几个星期就被解雇或被更便宜的劳动力取代。)]
 		</p>
 		<p>
-			[elle.speech(You poor thing,)] Elle interrupts. Sliding her hand down to rub at Wes's groin, she presses her huge breasts into the fox-boy's back and teases, [elle.speech(I can make you feel better...)]
+			[elle.speech(你这个可怜的小家伙，)]埃勒打断了他。她的手滑向韦斯的下面，把巨大的乳房压在狐狸男的背上，挑逗着他，[elle.speech(我可以让你感觉好一些……)]
 		</p>
 		<p>
-			[wes.speech(Later, Elle!)] Wes snaps, pushing his horny slave off of him and sighing, [wes.speech(Anyway, where was I... Oh yes, I'd been working odd jobs for a few months, and had finally saved up enough to rent a half-decent apartment. On my way to pay the landlord, I foolishly decided to take a shortcut through some alleyways, and ran straight into a pair of muggers...)]
+			[wes.speech(一会再说，埃勒！)]韦斯冷笑一声，把他的饥渴奴隶从身上推开，叹了口气，[wes.speech(总之，我……哦，对了，我打了几个月的零工，终于攒够了钱租了一间差不多体面的公寓。在去付房东钱的路上，我愚蠢地决定抄近路穿过一些小巷，结果直接撞上了一对歹徒……)]
 		</p>
 		<p>
-			Seemingly obsessed with her owner's cock, Elle steps forwards once again and leans heavily into Wes's back, before slipping her hand down to gently tease his groin. Interrupted once again, the fox-boy lets out a sigh and finishes his story by saying, [wes.speech(Anyway, to cut a long story short, I ended up being saved from the muggers by a passing Enforcer patrol. Being the impressionable young fool I was, I saw those kind Enforcers as being representative of all the realm's law enforcement, and quickly convinced myself that I should apply to join them...)]
+			埃勒似乎对主人的鸡巴很着迷，她再次向前走了一步，重重地靠在韦斯的背上，然后将手滑向韦斯的下面，轻轻地挑逗着他。狐狸男的故事再次被打断，他叹了一口气，接着说道， [wes.speech(总之，长话短说，我最终被路过的执法者巡逻队从歹徒手中救了下来。我是个容易受影响的小傻瓜，在我看来，那些好心的执法者代表了整个王国的执法力量，于是我很快就说服自己申请加入他们……)]
 		</p>
 		<p>
-			Unable to ignore Elle's hand as it slips down into his trousers, Wes apologises, [wes.speech(Sorry, if you're interested in hearing more, ask me about this some other time. Elle here is being particularly difficult today!)]
+			当埃勒的手伸进他的裤子时，韦斯无法忽视，只好道歉，[wes.speech(对不起，如果你想了解更多，可以改天再问我。埃勒今天特别难缠！)]
 		</p>
 		<p>
-			As you watch Wes push his horny, unruly slave off of him once again, you wonder what you should say next...
+			当你看着韦斯再次把他那淫荡的奴隶从身上推开时，你不知道自己接下来该说些什么……
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Wes about his past again, you ask him what he remembers of his life before becoming an Enforcer. 
+			你想再和韦斯谈谈他的过去，问他对成为执法者之前的生活有何印象。
 		</p>
 		<p>
-			[wes.speech(Well, my early days in Dominion were nothing but bad memories of hopping from one temporary job to another, but my life before that was pretty good,)] he recalls, falling back into his country accent as he remembers his days on his family's farm, [wes.speech(I got on well with my brothers and sisters, but I was the only one out of all of them who wanted more out of life than to be working on the farm or in the local village. The work there wasn't bad, mind you, but I just felt like I was missing out on something being stuck there...)]
+			[wes.speech(我刚来御城区的时候，除了从一个临时工作跳到另一个临时工作的糟糕回忆之外就没什么了，但是我之前的生活还算不错，)]他回忆起在自家农场的日子时，又恢复了乡村口音，[wes.speech(我和我的兄弟姐妹们相处得很好，但我是他们当中唯一一个不愿意在农场或当地村庄工作的人。你要知道，那里的工作并不差，但我就是觉得困在那里会让我失去一些东西……)]
 		</p>
 		<p>
-			[elle.speech(You mean you wanted to find some hot city girls to fuck?)] Elle teases, before leaning in to playfully nibble on Wes's ear.
+			[elle.speech(你是说你想找些城里的辣妹来操？)]埃勒挑逗道，然后凑过去俏皮地咬了一下韦斯的耳朵。
 		</p>
 		<p>
-			[wes.speech(Not everyone is motivated by sex, you know,)] Wes sharply replies, pulling away from Elle's embrace as he finishes, [wes.speech(I've been back to visit my family several times, but no matter how much time passes, nothing there ever seems to change. My siblings are all still working on the farm or in the village, and none of them have any ambition to ever leave.)]
+			[wes.speech(要知道，并不是每个人都有性冲动，)]韦斯尖锐地回答道，说完便从埃勒的怀抱中抽身而出，[wes.speech(我之前好几次回乡探亲，但无论时间如何流逝，那里的一切似乎都没有改变。我的兄弟姐妹都还在农场或村子里工作，他们都没有离开这里的想法。)]
 		</p>
 		<p>
-			Having come to the end of his tale, the fox-boy lets out a small sigh, before waiting for you to take the conversation elsewhere...
+			故事讲到这里，狐狸男微微叹了口气，然后等着你把话题引向别处……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_WES_2"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("wes_background_progress")<5)
 		<p>
-			Having previously heard about Wes's early days on his family's farm and then about his experience of being saved from muggers in Dominion, you ask him if he can tell you more of what happened after that.
+			你之前听说过韦斯早年在他家农场的生活，后来又听说过他在御城区从歹徒手中获救的经历，你问他能不能多讲些之后的事情。
 		</p>
 		<p>
-			[wes.speech(Well, as I mentioned before, I quickly convinced myself that joining the Enforcers and helping to uphold the law of the land was a just, righteous thing to do with my life,)] Wes says, his cynical tone of voice making it quite clear that he no longer believes this to be the case. Smirking to himself as he recalls his old memories, he continues, [wes.speech(My naive zeal was apparently just what the recruiters were looking for, as I was immediately accepted into the Academy. I didn't really pay it any notice at the time, but thinking back on it, I remember that all of us 'normal' folk had to do a hell of a lot of work to pass the tests, while all the demons and half-demons had to do was mention their demonic lineage to the instructors...)]
+			[wes.speech(嗯……我以前说过，我很快就说服自己，我这一生能成为执法者去维护国家法律是件正直之事，)]韦斯说着，然而他愤世嫉俗的语气却清楚表明了他已不再确信这一想法。回忆往事令他苦笑，又继续说道，[wes.speech(显然，面试官就想要我这份天真热情，所以我立即就被学会录取了。我当初浑然不觉，但回想起来，仍记得我们所有‘正常’人都必须做地狱般数量的工作才能通过测试，所有的恶魔和半恶魔都必须向导师提及他们的恶魔血统……)]
 		</p>
 		<p>
-			[elle.speech(If it was still anything like it was when I graduated, then that wasn't all we were doing to secure good grades,)] Elle flirtily teases, [elle.speech(I was on my instructor's desk spreading my legs for him practically every afternoon!)]
+			[elle.speech(如果我毕业时的情况还和现在一样，那我们就不只是为了取得好成绩，)]埃勒调侃道，[elle.speech(几乎每天下午，我都会趴在教官的桌子上，为他张开双腿！)]
 		</p>
 		<p>
-			Letting out an annoyed grunt as he pushes his horny slave away from him, Wes snaps, [wes.speech(That's exactly what I'm talking about! It's one rule for you, another for us. Anyway, despite the favouritism shown towards demons like Elle here, I ended up graduating from the Academy with better marks than most of them. For the next few years after that I worked as a regular Patrol officer, and despite there being some obvious signs of corruption, I chose to ignore them. I'd take all the unpleasant assignments given to me without complaint. Anything for justice, anything to clean up the streets, anything to uphold the pile of pleasant words I'd been fed at the Academy...)]
+			韦斯恼羞成怒地哼了一声，一把推开了他的饥渴奴隶，[wes.speech(这正是我要说的！对你们是一条规则，对我们是另一条规则。不管怎么说，尽管学院对像埃勒这样的恶魔有所偏袒，但我最终还是以比他们大多数人都高的分数从学院毕业了。在那之后的几年里，我一直是一名普通的巡警，尽管有一些明显的腐败迹象，我还是选择了视而不见。我毫无怨言地接受了所有不愉快的任务。只要能伸张正义，只要能清扫街道，只要能维护我在警校时被灌输的那堆漂亮话……)]
 		</p>
 		<p>
-			[elle.speech(What a good boy you must have been,)] Elle teases, before sliding her hands down over Wes's hips and reaching around to start stroking his groin. Leaning in over his shoulder, she breathlessly whispers, [elle.speech(Why don't I give you a reward for all of your past hard work...)]
+			[elle.speech(你肯定是个好孩子，)]埃勒挑逗道，然后双手滑过韦斯的臀部，伸到他的下面开始抚摸。她靠在他的肩膀上，喘着气低声说道 ，[elle.speech(我为什么不为你过去的辛勤工作犒劳一下你呢……)]
 		</p>
 		<p>
-			Pushing his unruly slave's hands away from his groin, Wes sighs, [wes.speech(Sorry, [pc.name], but she's getting to be too much again. Let's continue this another time.)]
+			韦斯把不听话的奴隶的手从他的下面上推开，叹了口气，[wes.speech(对不起，[pc.name]，但她又开始过分了。我们下次再继续吧。)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Wes about his past again, you ask him what it was like working as a regular Patrol officer. 
+			你想再和韦斯聊聊他的过去，问他作为一名普通巡警的工作的感受如何。
 		</p>
 		<p>
-			[wes.speech(It was all pretty much as you'd expect it to be,)] he says, [wes.speech(The more 'exciting' parts, such as catching muggers, were pretty few and far between. Most of my time was spent doing more mundane jobs, such as issuing fines, informing the public of the law, writing reports, and just walking around the streets to show criminals that we're never far away.)]
+			[wes.speech(一切都和你想象的差不多，)]他说道，[wes.speech(比较‘刺激’的工作，比如抓歹徒，很少。我的大部分时间都花在了更琐碎的工作上，比如开罚单、向公众宣传法律、写报告，以及在街上走来走去，让罪犯知道我们从未远离。)]
 		</p>
 		<p>
-			[elle.speech(What about your first arrest?)] Elle asks, seemingly just as curious as you are to hear more about Wes's early days as an Enforcer.
+			[elle.speech(你第一次追捕是怎么回事？)]埃勒问道，她似乎和你一样好奇，想知道更多关于韦斯作为执法者的早期经历。
 		</p>
 		<p>
-			[wes.speech(Looking back at it, I found it exciting at the time, sure,)] Wes admits, [wes.speech(It really wasn't anything special though. We'd got reports of a huge, aggressive wolf-boy mugging people in an alleyway close to HQ, and so I was sent with a more experienced partner to track him down and get him enslaved. We found him quickly enough, and instead of running, he actually tried to fight back.)]
+			[wes.speech(回想起来，我当初确实很兴奋，)]韦斯承认说，[wes.speech(但又真的没什么特别的。我们接到报告说，有个巨大且好斗的狼男就在总部附近的小巷里抢劫，所以派我和一个更有经验的搭档一起抓他，并将他奴役。我们很快就找到他了，他不打算逃跑，反而试图反击。)]
 		</p>
 		<p>
-			Shaking his head as he recalls the outcome, Wes sighs, [wes.speech(I didn't lose my cool, and hit him straight in the chest with my taser. You know, it really is true what they say; 'The bigger they are, the harder they fall.')]
+			韦斯一边摇头，一边回忆起结果，叹了口气，[wes.speech(但我没有失去理智，用电击枪径直击中了他的胸部。正如他们所说‘个头越大，摔得越重。’)]
 		</p>
 		<p>
-			[elle.speech(So, did you fuck him?)] Elle playfully teases.
+			[elle.speech(所以，你和他做了吗？)]埃勒玩味地揶揄着。
 		</p>
 		<p>
-			[wes.speech(What?! Of course not!)] the fox-boy angrily replies, [wes.speech(I know a lot of the other Enforcers do that sort of thing, but never on my watch! Besides, you know I don't swing that way.)]
+			[wes.speech(什么？当然没有！)]狐男羞愤地回答，[wes.speech(我知道其他执法者很多都会做这种事，但从不会在我眼皮子底下做！此外，你知道我不会那么干的。)]
 		</p>
 		<p>
-			Pushing Elle away from him, Wes turns back towards you and waits to hear what it is you'll ask next...
+			韦斯把埃勒推开，回头看向你，等着听你接下来会问什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_WES_3"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("wes_background_progress")<5)
 		<p>
-			Having heard all about Wes's early days as an Enforcer, you ask him where he went next in his career.
+			你听完了韦斯早期当执法者的所有经历，询问他今后打算干什么。
 		</p>
 		<p>
-			[wes.speech(After three years of what my superiors described as 'exceptional commitment' to the job, I was approached by a recruiter for SWORD and told that I should apply for their training program,)] Wes reveals, before letting out a deep, remorseful sigh and continuing, [wes.speech(I can't believe that I was still so naive at that point. I actually believed all the crap the recruiter told me about SWORD being the branch that makes the most difference, and how my 'natural talent as an Enforcer' was being wasted in the regular Patrol units.)]
+			[wes.speech(三年来，我的上级说我对这份工作可以称得上‘非常投入’，一位SWORD的招聘人员找上我，告诉我应该申请他们的培训项目，)]韦斯懊悔地叹了口气，继续坦言道，[wes.speech(我真不敢相信自己当时还那么天真。居然对招聘人员说的什么SWORD是最重要的分支机构啊，我作为执法者待在常规巡逻队是浪费才能啊之类的废话深信不疑。)]
 		</p>
 		<p>
-			[elle.speech(You know, it only took me a year of serving before I was asked to join SWORD,)] Elle reveals, [elle.speech(It took you three?)]
+			[elle.speech(你知道的，我只效力了一年就被邀请加入SWORD，)]埃勒坦言道，[elle.speech(你干了三年？)]
 		</p>
 		<p>
-			Elle's words clearly strike a nerve in the fox-boy, and you see his eye twitch a little as he hisses through clenched teeth, [wes.speech(That's because you're a demon! Us normal folk usually have to work for at least five years in the Patrol before being considered eligible for SWORD training.)]
+			埃勒的话显然戳到狐男的痛处，你看到他眼皮抽动着，牙齿紧咬着发出嘶嘶声，[wes.speech(那是因为你是个恶魔！我们普通人通常必须在巡逻队工作至少五年，才有资格接受SWORD培训。)]
 		</p>
 		<p>
-			[elle.speech(Well, whatever,)] the [elle.race] casually replies, before sliding her hands down to Wes's groin and teasing, [elle.speech(I can tell that you're getting worked up. How about I help you to relieve some stress...)]
+			[elle.speech(好吧，不管了，)][elle.race]随意敷衍着， 然后挑逗地把手滑向韦斯的腹股沟，[elle.speech(我看得出来你很激动，不如我帮你缓解一下压力……)]
 		</p>
 		<p>
-			[wes.speech(Not now, Elle!)] the fox-boy sharply replies, before pushing his unruly slave off of him and continuing, [wes.speech(So anyway, I signed up for SWORD, and spent the next several months having all of my naivety, trust, and respect for the Enforcers beaten out of me. To say that the training was brutal is a gross understatement, and despite the fact that you can only ever apply for SWORD once in your life, over half of my fellow recruits had dropped out after the first couple of weeks. Looking back on it, I should have done the same, but some kind of misguided sense of duty kept me going...)]
+			[wes.speech(现在不要，埃勒！)]狐男正声回答，推开他那不守规矩的奴隶，继续说，[wes.speech(但不管怎样，我还是报名参加SWORD了，在接下来的几个月里，我所有的天真、信任和对执法者的尊重都被打破了。说训练是残酷的还只是轻描淡写，虽然你一辈子只能申请SWORD一次，但与我一起的受试者在头几个星期后就退缩了。回过头看看，我本应该这样做的，但某种被误导的责任感让我坚持下去……)]
 		</p>
 		<p>
-			[elle.speech(My SWORD training wasn't like that at all,)] Elle reveals, [elle.speech(Sure, parts of it were tough, but all you had to do was ask the instructors to be a little nicer. I guess sucking their cocks helped a bit as well, but still, it really wasn't all that bad.)]
+			[elle.speech(我的SWORD可一点不像这样，)]埃勒坦言道，[elle.speech(当然，有些部分还是很难的，你该请求教官对你仁慈一点。我觉得给他们唆鸡巴能有点帮助，但这确实没那么糟糕。)]
 		</p>
 		<p>
-			Whether it's her intention or not, Elle's words seem to infuriate the fox-boy, who closes his eyes and takes a long, deep breath to calm himself down, before saying, [wes.speech(You demons have no idea what the real training was like for us normal folk... None of the demons in my class had to live in the communal dormitory, none of them were publicly punished by the instructors, none of them were threatened with dismissal from the program if they failed even one of the fitness tests...)]
+			不管她是不是故意的，埃勒的话似乎激怒了狐男，他闭上眼睛，深呼吸平复心情后说，[wes.speech(你们这些恶魔根本不知道我们普通人真正的训练是什么样的……我班上没有一个恶魔必须住公共宿舍，没有一个恶魔受到教官的公开惩罚，没有一个恶魔被威胁说只要体能测试不及格一次就会被开除……)]
 		</p>
 		<p>
-			Pushing Elle's hands away from his groin, Wes shakes his head clear of some unpleasant memories, before looking at you and saying, [wes.speech(Let's talk about something else for now. Did you want to buy any gear?)]
+			韦斯把埃勒的手从腹股沟拉开，摇头以忘却一些不美好的回忆，然后看着你说，[wes.speech(现在还是聊点别的吧。你想买些装备吗？)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to find out why Wes's SWORD training was such a bad experience, you ask him what it involved. 
+			你想知道为什么韦斯说SWORD训练是超糟糕的经历，于是问他发生了什么。
 		</p>
 		<p>
-			[wes.speech(The vast majority of it was focused on physical training and weapons proficiency,)] he reveals, [wes.speech(The instructors were absolutely merciless; if anyone fell behind during the daily runs, they'd either get physically beaten or be forced to perform pointless, humiliating tasks. The worst one I saw was when a recruit thought it was a good idea to tell one of the instructors to 'fuck off'. By the time the instructors were finished with him, he could barely stand...)]
+			[wes.speech(绝大部分时间都集中在体能训练和武器熟练程度上，)]他透露道，[wes.speech(教官们绝对是毫不留情的；如果有人在每天的跑步过程中掉队，他们要么会遭到殴打，要么会被迫执行毫无意义的羞辱性任务。我见过最糟糕的一次是，一名新兵认为让教官‘滚开’是个好主意。等教官们处理完他，他已经站都站不稳了……)]
 		</p>
 		<p>
-			[elle.speech(I told an instructor to fuck off once,)] Elle recalls, [elle.speech(All I had to do was another lap around the track.)]
+			[elle.speech(有一次，我让一位教官滚蛋，)]埃勒回忆道，[elle.speech(我所要做的只是绕着跑道再跑一圈。)]
 		</p>
 		<p>
-			[wes.speech(Lucky you,)] Wes sighs, [wes.speech(It sure must have been nice, being a demon during training. As for the rest of us, it only got worse at night, when the instructors left us alone in the communal dormitory. The ones seen to have been the weak link during the day's exercises got ganged up on, hard. My naive views on Enforcer comradeship slipped quietly into the dark with each muffled scream I heard...)]
+			[wes.speech(你真是幸运，)]韦斯叹气说，[wes.speech(感觉恶魔在训练中一定很爽。至于我们其他人，到了晚上都是被教官单独留在公共宿舍里，情况只会更糟。在白天训练中表现不好的那些人被小团体狠狠攻击了。随着我听到一声声低沉的痛呼，我对执法者同僚关系的天真想法也在黑暗中烟消云散了……)]
 		</p>
 		<p>
-			[elle.speech(Come on, don't dwell on stuff like that,)] Elle says as she starts to undo Wes's belt. [elle.speech(You'd rather be fucking my throat, right?)]
+			[elle.speech(来吧，别沉湎于那些烂事，)]埃勒一边说，一边去解韦斯的腰带。[elle.speech(你宁愿现在操我的喉咙对吧？)]
 		</p>
 		<p>
-			Pushing his horny slave's hands away from his groin, Wes sighs and asks you, [wes.speech(Is there anything else you wanted, [pc.name]?)]
+			韦斯推开那饥渴奴隶在他腹股沟处的手，叹了口气后又问你，[wes.speech(你还想知道点什么吗，[pc.name]？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_WES_4"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("wes_background_progress")<5)
 		<p>
-			Having heard about Wes's SWORD training, you ask him what he did after graduating.
+			你听完了韦斯SWORD训练时期的经历，又询问起他毕业后做了什么。
 		</p>
 		<p>
-			[wes.speech(I expected to be able to lead a fireteam,)] he says, [wes.speech(But apparently, foxes aren't considered to be a suitably martial race, and so I was told that I was being assigned to logistics. Instead of breaking down doors and putting an end to criminal gangs, I found myself sorting inventories and doing laundry for Third Company...)]
+			[wes.speech(我希望能领导一支消防队，)]他说，[wes.speech(但很显然，他们认为狐狸不适合战斗，所以我被分配到后勤部门。不是破门而入去取缔犯罪团伙，而是给三连整理库存和清洗衣服……)]
 		</p>
 		<p>
-			[elle.speech(Logistics is just as important as the flashy combat roles,)] Elle says, dropping her hands down to start rubbing at Wes's crotch. Letting out a soft giggle, she points out, [elle.speech(It's not as fun as combat, sure, but it's one of the best places to be to get loads of sex!)]
+			[elle.speech(后勤人员和惹眼的战斗角色一样重要，)]埃勒说着，双手伸下去磨蹭韦斯的胯部。她轻声笑着点明说，[elle.speech(当然，这不像战斗那么有趣，但这是做爱的最佳场所之一！)]
 		</p>
 		<p>
-			[wes.speech(That's not on my list of priorities,)] Wes flatly replies as he pushes Elle's hands away from his groin. Letting out a sigh, he continues, [wes.speech(You are right about the importance of logistics, though. Without us, all the ground-pounders running around in the city would stop functioning within a week. Telling myself this day after day, I continued to work my way up the ranks, and even with there being a slower rate of promotion for non-combat personnel, I became Chief Inspector and Junior Quartermaster at the ripe young age of thirty-four.)]
+			[wes.speech(这不重要，)]韦斯直截了当地回答，把埃勒的手从腹股沟处推开。他叹了一口气，继续说，[wes.speech(不过你说后勤很重要是对的。如果没有我们，城市里所有运行的投石器都将在一周内停止运作。我日复一日地这么告诉自己，努力晋升。尽管非战斗人员的晋升速度很慢，但我还是以34岁的低龄成为了总督察和初级军需官。)]
 		</p>
 		<p>
-			[elle.speech(That's when I first met you,)] Elle says, teasing her fingers over the fox-boy's bushy tail. [elle.speech(Right from the start, I thought that there was something a little odd about the fact that a country boy had worked his way so high up the ranks in SWORD. I thought it'd be best not to try and seduce you, but oh, was I <i>so</i> wrong not to have done so. You've got so much stamina, and your cock's nice and big as well. When you shove your knot into my mouth... Fuck, I cum every time!)]
+			[elle.speech(那是我们的初遇，)]埃勒一边说着，一边用手指挑逗狐男浓密的尾巴。[elle.speech(从一开始我就觉得有点奇怪，区区一个乡野男孩怎么会在SWORD有这么高的军衔。我原本想着最好不要去勾引你，但~哦！我没这么干真是<i>大错特错</i>了。你这么持久，鸡巴也器大活好。你把结塞进我嘴里时候……操，我每次都要去了！)]
 		</p>
 		<p>
-			Looking more and more embarrassed the longer Elle goes on, Wes suddenly snaps, [wes.speech(Elle, please! Can you try to control yourself for just five minutes?!)]
+			埃勒越说，韦斯脸上的表情就越难堪，他突然厉声说道：[wes.speech(求你了埃勒！你能试着控制自己五分钟吗？！)]
 		</p>
 		<p>
-			[elle.speech(Mmm,)] the horny [elle.race] hums, [elle.speech(I just want another taste of your cock...)]
+			[elle.speech(唔……)]好色的[elle.race]哼唧着，[elle.speech(我只是想再吃你的鸡巴……)]
 		</p>
 		<p>
-			[wes.speech(It was while working here that I finally acknowledged the corruption within the Enforcers,)] Wes continues, ignoring Elle's persistent fondling of his crotch as he reveals, [wes.speech(Half-demons and demons always get promoted over ordinary folk, even when it's obvious that they're ill-suited for the job at hand. Just look at Elle here; all she did on the job was fucking her way around the station, leaving all of the real work for me to do.)] 
+			[wes.speech(我正是在这里工作的时候，才终于意识到了执法者内部的腐败，)]韦斯无视了埃勒在他胯部持续不断的爱抚，继续说，[wes.speech(即使工作明显不对口，但恶魔和半恶魔却总是比普通人更容易晋升。就比如这里的埃勒；该她干活时就只是在站点里到处做爱，把所有该做的活都留给我做。)] 
 		</p>
 		<p>
-			[elle.speech(But fucking is so much fun,)] Elle whines, before pouting at Wes and saying, [elle.speech(You know, nobody else comes close to having your stamina and technique; I just want your big fox-cock stuffed deep into one of my holes... Fuck, I need it <i>now</i>...)]
+			[elle.speech(但是做爱真的很爽嘛，)]埃勒对着韦斯嘟嘴发牢骚说，[elle.speech(你知道的，没人有你那样好的耐力和技术；我只想让你把狐屌深插到我的洞里……操，我<i>现在</i>就想要……)]
 		</p>
 		<p>
-			Dropping down onto her knees, the horny [elle.race] shuffles underneath the counter and out of sight. By now seeming to have learned to just deal with Elle's horniness instead of repeatedly resisting it, Wes tries to keep a straight face as Elle covertly starts giving him a blowjob, and he grunts, [wes.speech(I can tell you the rest of my story tomorrow; Elle here is being particularly forceful at the moment...)]
+			饥渴的[elle.race]跪倒到柜台下，挪动着消失在视线之外。现在韦斯似乎已经学会了处理埃勒的性欲，而不是一直抗拒。当埃勒偷偷摸摸地开始给他口交时，韦斯试图板着脸，他咕哝着，[wes.speech(明天我再给你讲完剩下的故事吧；埃勒现在特别强势……)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Wes about his experiences working in SWORD logistics, you ask him what sort of duties he was expected to perform. 
+			你想和韦斯谈谈他在SWORD后勤部门工作的经历，便问他都要执行什么样的任务。
 		</p>
 		<p>
-			[wes.speech(My old job was exactly the same as what I'm having to do now,)] the fox-boy sighs, [wes.speech(Having to make more regular reports to my superiors means that I don't even get to enjoy the use of my new office.)]
+			[wes.speech(我以前的工作和现在的工作一模一样，)]狐狸男叹了口气，[wes.speech(我必须更经常地向上级汇报工作，这意味着我甚至无法享受使用新办公室的乐趣。)]
 		</p>
 		<p>
-			[elle.speech(You do when you take me in there to fuck me,)] Elle interjects, before leaning in over Wes's shoulder to playfully nibble on his fox-like ear.
+			[elle.speech(你带我进去操我的时候就是这样，)]埃勒插话道，然后凑到韦斯的肩膀上，俏皮地咬了咬他那狐狸耳朵。
 		</p>
 		<p>
-			Shaking himself free of his unruly slave's embrace, Wes sighs, [wes.speech(Sometimes it feels like the universe is out to get me. I spend all of my life working so hard to do the right thing, and then when I finally get the promotion I deserve, what do I get rewarded with? Even more work than I had to do before, only this time, with a horny half-demon interrupting me every five minutes trying to get into my pants.)]
+			从不羁的奴隶怀抱中挣脱出来，韦斯叹息道，[wes.speech(有时候，我觉得老天爷就是针对我。我一生都在努力做正确的事，而当我终于得到应得的晋升时，我得到了什么回报？比以前更多的工作。只是这次，有一个饥渴的半恶魔每隔五分钟就来打断我，试图闯进我的裤子。)]
 		</p>
 		<p>
-			[elle.speech(You know you love it really,)] Elle giggles, [elle.speech(Especially when I do the 'naughty Enforcer' roleplay for you...)]
+			[elle.speech(你知道你真的喜欢它，)]埃勒咯咯笑起来，[elle.speech(尤其是当我为你扮演‘淘气的执法者’时……)]
 		</p>
 		<p>
-			Loudly clearing his throat to interrupt Elle before she says anything else to embarrass him, Wes looks at you and states, [wes.speech(Let's change the subject. Is there anything you wanted to buy from me?)]
+			韦斯大声地清了清嗓子，在埃勒说其他难堪的话之前打断她，他看着你说，[wes.speech(让我们换个话题吧。你想从我这里买点什么吗？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_BACKGROUND_WES_5"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("wes_background_progress")<=5)
 		<p>
-			Wanting to hear the final part of Wes's story about his background, you ask him what happened after he started working here at the Enforcer HQ and saw clear evidence of demons being promoted over more competent non-demons.
+			你还想听韦斯过往历史的最后一部分，询问他在执法总部开始工作，并发现表明恶魔比更有能力的非恶魔更容易晋升的确凿证据后，发生了什么。
 		</p>
 		<p>
-			[wes.speech(What happened? Nothing,)] Wes sighs, [wes.speech(What could I do about it? The people who would end up investigating unfair promotions would likely be demons themselves, and the end result would most likely either be nothing, or, if I was unlucky, I'd be the one being disciplined for 'wasting their time'. Even when I discovered evidence of Elle siphoning off weapons to sell to gangs, I couldn't do anything about it. That is, until I happened to read a report about some kind of vigilante who managed to clear out the Harpy Nests...)]
+			[wes.speech(发生了什么？什么都没有，)]韦斯叹息说，[wes.speech(我又能做什么？终止调查不公平晋升的那些人很可能就是恶魔，最终要么是一无所获，要么运气差点，我会因为‘浪费时间’而受到惩罚。即使我发现埃勒挪用武器卖给帮派的证据了，我也无能为力。直到我偶然读到一篇关于某种义警成功清除哈比之巢的报道，这才有了转机……)]
 		</p>
 		<p>
-			[elle.speech(Well, everything worked out well thanks to that,)] Elle surprisingly remarks, before pressing her huge breasts into Wes's back and saying to you, [elle.speech(I was only doing that to try and get some more fun into my life, but being Wes's slave is far better than anything I could have asked for! I can't get enough of his cock, and, luckily for me, he loves it when I give him a blowjob or spread my legs for him in his office...)]
+			[elle.speech(确实，多亏了它，一切都很顺利，)]埃勒出人意料地说，然后把她巨大的乳房压在韦斯的背上，对你说，[elle.speech(我这么做只是为了给生活找乐子，但做韦斯的奴隶比我所求的任何事都好得多！他的鸡巴令我欲罢不能，而且幸运的是，他很喜欢我在办公室给他口交或向他岔开腿……)]
 		</p>
 		<p>
-			[wes.speech(That's enough, Elle!)] Wes snaps, but his command is ignored by his horny slave, who drops down onto her knees and once again shuffles forwards under the counter.
+			[wes.speech(够了，埃勒！)]韦斯厉声喝道，但他那饥渴的奴隶忽视了他的命令，再次跪下柜台，挪动着前进。
 		</p>
 		<p>
-			Demonstrating a legendary level of self-control, Wes keeps a straight face as Elle starts sucking his cock beneath the counter and grunts, [wes.speech(Now you know all that there is worth knowing about my past... Is there anything else I can help you with? Do you want to buy some gear, or perhaps you could help me again by taking Elle over to my office and working some of the horniness out of her system...)] 
+			当埃勒在柜台下开始吮吸鸡巴并发出咕哝声时，韦斯展现了传奇般的自制力，保持着扑克脸，[wes.speech(现在你知道了所有我值得了解的过去……还有什么我能帮你的吗？你想买一些装备吗？还是说你愿意把埃勒带到我办公室去，再帮我消消她的欲火一次……)] 
 		</p>
 	#ELSE
 		<p>
-			Wanting to talk to Wes about the corruption in the Enforcer HQ, you ask him whether Elle's arrest has made any sort of impact on the other officers. 
+			你想和韦斯聊聊执法者总部的腐败问题，你询问他逮捕埃勒是否对其他警察有影响。
 		</p>
 		<p>
-			[wes.speech(I can't say that it has,)] the fox-boy sighs, [wes.speech(I doubt that anything much is going to change as a result of Elle's enslavement. I suppose that I'll have to be satisfied with just one less corrupt Enforcer...)]
+			[wes.speech(我不能说它有，)]狐狸男叹了口气，[wes.speech(我在怀疑埃勒被奴役后会不会有什么变化。我想我只能满足于少一个腐败的执法者了……)]
 		</p>
 		<p>
-			[elle.speech(I'll make you satisfied, all right,)] Elle teases, before reaching down to grope Wes's groin and breathlessly whisper into his ear, [elle.speech(I want to be choking on your knot again tonight...)]
+			[elle.speech(我会让你满意的，好吧，)]埃勒调笑着伸手摸向韦斯的腹股沟，气喘吁吁地耳语着，[elle.speech(今晚我还想再被你的结弄到窒息……)]
 		</p>
 		<p>
-			Pushing his horny slave off of him, Wes clears his throat and asks, [wes.speech(So, [pc.name], is there anything else I can do for you?)]
+			韦斯推开他那饥渴的奴隶，清了清喉咙问道，[wes.speech(所以，[pc.name]，还有什么是我能帮你的？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_WORK -->
 	<htmlContent tag="REQUISITIONS_WORK"><![CDATA[
 	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
 		<p>
-			Deciding to try and make some small-talk with Elle, you ask her how her work is going.
+			你决定找埃勒聊会天，问她工作进展如何。
 		</p>
 	#ELSE
 		<p>
-			Deciding to try and make some small-talk with Wes, you ask him how his work is going.
+			你决定找韦斯聊会天，问他工作进展如何。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_ELLE_1"><![CDATA[
 	<p>
-		[elle.speech(Well, I was supposed to have had a report on my superior's desk this morning, but while working on it late last evening, I kind of got distracted and ended up spending all night riding Wes's cock,)] she admits with a big smirk on her face. Leaning forwards over the counter, she bites her lip and reveals, [elle.speech(I was given an extension on the report's deadline, so I've got plenty of time in which to do some more fucking...)]
+		[elle.speech(呃，我今早本应把报告放到我上级的桌子上的，但工作到深夜不由得有些心不在焉，我又整晚都在和韦斯做，)]埃勒傻笑着承认。她倚在柜台前，咬着嘴唇说，[elle.speech(但我被允许延长报告的上交期限，所以我又有大把时间去做爱啦……)]
 	</p>
 	<p>
-		Elle doesn't seem interested in talking about her work any further than that, and so you're quickly left wondering what to say to her next...
+		埃勒似乎不想再继续谈论她的工作，所以你很快就知道接下来该说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_ELLE_2"><![CDATA[
 	<p>
-		[elle.speech(It's going pretty well; I've got Wes handling most of the work, but although he does a good job, I can't help but keep on interrupting him to get more of his big cock,)] Elle giggles, before leaning forwards over the counter and suggestively teasing, [elle.speech(I just can't stop myself; I'm so horny all the time...)]
+		[elle.speech(一帆风顺；我把工作都基本丢给韦斯干了，但他认真工作的时候，我还是忍不住一直去骚扰他的鸡巴，)]埃勒咯咯笑着，身体前倾越过柜台，暗示性地调侃道，[elle.speech(我就是管不住自己；我总是那么饥渴……)]
 	</p>
 	<p>
-		Elle doesn't seem interested in talking about her work any further than that, and so you're quickly left wondering what to say to her next...
+		埃勒似乎不想再继续谈论她的工作，所以你很快就知道接下来该说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_ELLE_3"><![CDATA[
 	<p>
-		[elle.speech(I need to have a report on the inventory's status ready for tomorrow, but every time I begin work on it, I start daydreaming about Wes's big cock,)] Elle wistfully replies, [elle.speech(I hope that I can resist fucking him all night; I'll be in big trouble if I don't get this report finished on time...)]
+		[elle.speech(我明天就要赶出一份库存状况报告，但我一工作就开始幻想韦斯的大鸡巴，)]她伤感地答道，[elle.speech(我希望今天整晚都能克制自己不和他做；如果报告不能按时完成，我会有大麻烦的……)]
 	</p>
 	<p>
-		Elle doesn't seem interested in talking about her work any further than that, and so you're quickly left wondering what to say to her next...
+		埃勒似乎不想再继续谈论她的工作，所以你很快就知道接下来该说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_ELLE_4"><![CDATA[
 	<p>
-		[elle.speech(I actually don't really have too much work to do at the moment, as I've got Wes handling it all,)] Elle admits, before smirking and continuing to reveal, [elle.speech(He's not working as fast as he could be, though, as I keep on interrupting him to get another taste of his big cock...)]
+		[elle.speech(事实上，我现在没什么事干，因为我全部丢给韦斯处理了，)]埃勒承认说，坏笑着继续说，[elle.speech(但他工作没平时那么快，因为我还想再吃他的鸡巴，一直去骚扰他……)]
 	</p>
 	<p>
-		Elle doesn't seem interested in talking about her work any further than that, and so you're quickly left wondering what to say to her next...
+		埃勒似乎不想再继续谈论她的工作，所以你很快就知道接下来该说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_ELLE_5"><![CDATA[
 	<p>
-		[elle.speech(Everything's going fine; I had to give a presentation to my superiors earlier, but now that that's out of the way, I can leave the rest of the day's work to Wes,)] she replies, before playfully biting her lip and revealing, [elle.speech(You know, I couldn't stop thinking about Wes's cock during the whole of the presentation, and when I got back here, I rode him for almost an hour without any break...)]
+		[elle.speech(进展顺利；我之前不得不给上级做报告，但现在已不成问题，我能把每天剩下的工作留给韦斯干，)]她回答说，调皮地咬着嘴唇继续说，[elle.speech(在整个报告过程中，我都忍不住幻想韦斯的鸡巴，所以我回来后就没有停歇地骑了他快一个小时……)]
 	</p>
 	<p>
-		Elle doesn't seem interested in talking about her work any further than that, and so you're quickly left wondering what to say to her next...
+		埃勒似乎不想再继续谈论她的工作，所以你很快就知道接下来该说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_WES_1"><![CDATA[
 	#IF(game.getDialogueFlags().getSavedLong("wes_background_progress")<4)
 		<p>
-			[wes.speech(To tell you the truth, I'm finding the learning curve of being master of both the borough's equipment and Elle to be pretty steep,)] Wes sighs, [wes.speech(It's taking a bit of a toll on me.)]
+			[wes.speech(说实话，我觉得掌握行政区设备和埃勒都非常困难，)]韦斯叹气说，[wes.speech(这让我有点吃不消。)]
 		</p>
 		<p>
-			[elle.speech(Come on, I'm not <i>that</i> demanding, am I?)] Elle asks while continuing to forcefully press her huge breasts into Wes's back.
+			[elle.speech(拜托，我才不是<i>那种</i>要求很高的人，我是吗？)]埃勒一边问着，一边继续用力把她巨大的乳房压在韦斯背上。
 		</p>
 		<p>
-			Simply letting out a weary sigh in response, the fox-boy asks, [wes.speech(So, is there anything else I can do for you, [pc.name]?)]
+			对此，狐男只是疲惫地叹了一口气，问道，[wes.speech(所以，我还能为你做什么，[pc.name]？)]
 		</p>
 	#ELSE
 		<p>
-			[wes.speech(Everything's going better now than it was to start with,)] Wes replies, [wes.speech(It took me a while to figure out how best to handle Elle, but it seems best to just let her do her thing and then carry on with work after she's satisfied.)]
+			[wes.speech(现在一切都比刚开始要好，)]韦斯答道，[wes.speech(我花了一段时间才知道该如何处理埃勒才好，大概是先和她做到满意，再继续工作。)]
 		</p>
 		<p>
-			[elle.speech(Mmm, yeah, that works a lot better, doesn't it, babe?)] Elle teases.
+			[elle.speech(唔，对啊，效果好多了，不是吗，宝贝？)]埃勒调戏道。
 		</p>
 		<p>
-			Letting out an amused huff in response, the fox-boy asks, [wes.speech(So, is there anything else I can do for you, [pc.name]?)]
+			狐男被她的话气笑了，问道，[wes.speech(所以，我还能为你做什么，[pc.name]？)]
 		</p>
 	#ENDIF
 		
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_WES_2"><![CDATA[
 	<p>
-		[wes.speech(I've got a huge amount of inventory management work to get done by the end of today,)] the fox-boy responds, [wes.speech(Elle is mostly proving to be more of a hindrance than a help...)]
+		[wes.speech(我今天还剩下一大堆库存管理工作要做，)]狐男回复说，[wes.speech(事实证明，埃勒比起帮手，更像个绊脚石……)]
 	</p>
 	<p>
-		[elle.speech(Hey, I help by making sure that your balls are regularly emptied, don't I?)] Elle teases.
+		[elle.speech(嘿，我能确保定期帮你清空阴囊，不是吗？)]埃勒揶揄说。
 	</p>
 	<p>
-		[wes.speech(See what I mean?)] Wes sighs, before asking, [wes.speech(So, is there anything else I can do for you, [pc.name]?)]
+		[wes.speech(看，我说什么来着。)]韦斯发出叹息，问道，[wes.speech(所以，我还能为你做什么，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_WES_3"><![CDATA[
 	<p>
-		[wes.speech(Everything's going well today, thanks to Elle,)] the fox-boy responds, [wes.speech(She was able to 'convince' my superior to give me an extra few days to get a report finished. Of course, it was Elle's fault in the first place that the report wasn't done on time...)]
+		[wes.speech(多亏了埃勒，今天一帆风顺，)]狐男答道，[wes.speech(她能‘说服’我的上级再给我几天时间来完成报告。当然，本来没能按时完成报告就是埃勒的错……)]
 	</p>
 	<p>
-		[elle.speech(I told you that I'd sort it out for you,)] Elle teases, [elle.speech(All I had to do was give him a quick handjob!)]
+		[elle.speech(我说过我会帮你解决的，)]埃勒调戏说，[elle.speech(我只需要速战速决地给他一个手交！)]
 	</p>
 	<p>
-		[wes.speech(Next time, it would be better if you just let me get the report done on time to begin with,)] Wes sighs, before asking, [wes.speech(So, is there anything else I can do for you, [pc.name]?)]
+		[wes.speech(如果下次你能让我按时完成报告就更好了，)]韦斯发出叹息，又问道，[wes.speech(所以，我还能为你做什么，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_WES_4"><![CDATA[
 	<p>
-		[wes.speech(I had to give a presentation to my superiors earlier, which went far better than I could have hoped for,)] the fox-boy proudly responds, before letting out a sigh and revealing, [wes.speech(When I got back, however, Elle tricked me into going into my office, before locking the door and refusing to hand over the key until I'd let her ride my cock...)]
+		[wes.speech(我只好提前向上级做报告，但这比我所希望的要好得多，)]狐男骄傲地回应道，叹了一口气继续说，[wes.speech(但我一回来，埃勒就把我哄骗进办公室，然后锁了门。在我允许她骑在我的鸡巴上之前，都不肯交出钥匙……)]
 	</p>
 	<p>
-		[elle.speech(You make it sound like you didn't enjoy it,)] Elle complains, [elle.speech(You know you love it when I show you my dominant side!)]
+		[elle.speech(说得好像你不喜欢这样做一样，)]她抱怨着，[elle.speech(你知道你自己喜欢让我展示支配者的一面！)]
 	</p>
 	<p>
-		[wes.speech(Well, thanks to you 'showing off your dominant side', I've got no real work done all day,)] Wes replies, before looking over at you and asking, [wes.speech(So, is there anything else I can do for you, [pc.name]?)]
+		[wes.speech(好吧，多亏你‘展示你支配者的一面’，我一整天都没能真正完成工作，)]韦斯答道，又看向你，问道，[wes.speech(所以，我还能为你做什么，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_WORK_WES_5"><![CDATA[
 	<p>
-		[wes.speech(Things are going relatively well, but I'd be much further ahead with my work if Elle didn't keep on interrupting me,)] Wes reveals, [wes.speech(She's absolutely insatiable...)]
+		[wes.speech(事情进展还算顺利，但如果埃勒不一直打断我的话，我的工作还能更进一步，)]韦斯说，[wes.speech(她真是欲求不满……)]
 	</p>
 	<p>
-		[elle.speech(You know you love it,)] Elle teases in response, [elle.speech(I can't imagine how boring it would be for you if I wasn't here to suck your cock!)]
+		[elle.speech(你知道你真的喜欢它，)]埃勒调戏地回应，[elle.speech(我无法想象如果我不在这里吸你的鸡巴，你会有多无聊！)]
 	</p>
 	<p>
-		[wes.speech(I suppose I can't argue with that,)] Wes relents, before looking over at you and asking, [wes.speech(So, is there anything else I can do for you, [pc.name]?)]
+		[wes.speech(我想我无法反驳，)]韦斯服软了，他看向你，问道，[wes.speech(所以，我还能为你做什么，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_FLIRT_ELLE -->
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_ELLE"><![CDATA[
 	<p>
-		Deciding to have a little fun with Elle, you start flirting back with her, and before you know it, she's staring hungrily at your body and dropping multiple graphic hints that she wants to take you to her office and fuck you.
+		你想和埃勒找点乐子，就与她调情，不知不觉间，她饥渴地盯着你的身体，给你诸多暗示，她想带你去她的办公室做爱。
 	</p>
 	<p>
-		Not being able to control herself, she's soon unlocking the door to the storage area, before stepping out to the other side of her counter and getting physical with you. Pressing her hot body up against you, she reaches down to give your groin a firm grope, before breathlessly suggesting, [elle.speech(Come on, [pc.name], how about you let me give you a very personal tour of my office?)]
+		她不受控制地迅速打开储藏区的门，走到柜台的另一边，与你肌肤相接。她用滚烫的身体压住你，伸手用力摸索你的腹股沟，她气喘吁吁地建议说，[elle.speech(来吧，[pc.name]，让我带你参观我的办公室怎么样？)]
 	</p>
 	<p>
-		Knowing that a 'tour of Elle's office' will undoubtedly lead into having sex with the horny [elle.race], you wonder what to say in response to her suggestion...
+		知道“参观埃勒的办公室”毫无疑问会与好色的[elle.race]发生性关系，你不知道该怎么回答她的建议……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_FLIRT_ELLE_DECLINED -->
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_ELLE_DECLINED"><![CDATA[
 	<p>
-		Although you were happy enough to flirt with her, you don't really want to have sex with Elle, and so you [pc.step] back and turn down her offer.
+		尽管你很高兴和埃勒调情，但不想真的和她做。所以你[pc.step]退后，拒绝了她的提议。
 	</p>
 	<p>
-		For a brief moment, you see a furious look flash across the [elle.race]'s bright pink eyes, before she lets out an annoyed tut and declares, [elle.speech(You shouldn't lead me on if you aren't willing to go all the way!)]
+		你看到[elle.race]明亮的粉红色眼睛闪过一丝愤怒，她发出恼怒的啧啧声说道，[elle.speech(你如果不愿意做，当初就不该带我走！)]
 	</p>
 	<p>
-		With that, Elle storms over to the nearby door, and after unlocking it, quickly returns to the other side of the counter. Thankfully, the angry expression on her face fades away almost as quickly as it appeared, and after adjusting her uniform, she flashes you a mischievous smirk and light-heartedly declares, [elle.speech(I won't fall for your tricks again, [pc.name]! Not today at least... Anyway, is there anything else I can help you with?)]
+		说完，埃勒夺门而出，迅速回到柜台的另一边。好在她脸上的愤怒表情消失得几乎和出现一样快，在收拾好制服后，她调皮地坏笑，轻松地说，[elle.speech(我不会再上当你的当了，[pc.name]！至少今天不会……还有什么我能帮你的吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_FLIRT_ELLE_OFFICE -->
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_ELLE_OFFICE"><![CDATA[
 	<p>
-		Liking the sound of Elle's suggestion, you tell her that you'd love to have a tour of her office. After flashing you a dirty smirk as she hears you agree to go with her, Elle calls out over the counter, [elle.speech(Wes! I'm heading out for a while; look after the place while I'm gone!)]
+		你喜欢埃勒的建议，告诉她你很想参观一下她的办公室。在听到你同意和她一起去时，埃勒对你露出了下流的笑容，然后在柜台那边喊道，[elle.speech(韦斯！我要离开一会儿，我不在的时候照看一下这里！)]
 	</p>
 	<p>
-		Upon hearing an affirmative reply from her slave, Elle leads you out of the requisitions area and over to the door of her office. Unlocking the door, she steps forwards and beckons you inside.
+		埃勒听到奴隶肯定的回答后，便带你走出军需处，来到办公室门口。她走上前打开门，示意你进去。
 	</p>
 	<p>
-		The moment you [pc.step] into her spacious office, the horny [elle.race] immediately shuts and locks the door behind you, before rushing forwards and pulling you into a desperate, passionate kiss. Flapping her wings in excitement, and sending a pile of stacked papers flying across the room in the process, Elle pulls back from kissing you and breathlessly pants, [elle.speech(So, are you going to take the lead, or shall I?)]
+		当你走进她宽敞的办公室时，饥渴的[elle.race]立刻关好并锁上身后的门，然后冲上前拉住你，不顾一切地热吻起来。埃勒兴奋地拍打着翅膀，把一堆叠好的纸张弄得满屋子乱飞，她从亲吻中抽了出来，气喘吁吁，[elle.speech(那么，是你主导，还是我来？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_ELLE_OFFICE_SEX_START_AS_DOM"><![CDATA[
 	<p>
-		Firmly taking hold of Elle's hips, you pull her into your body, before telling her that you're going to be the one in charge. Pulling the hot [elle.race] into a dominant kiss, you reach around and give her [elle.ass+] a good grope, before pulling back and wondering how best to fuck her...
+		你紧紧抓住埃勒的臀部，把她拉近，告诉她由你来主导。你强势地亲吻着热辣的[elle.race]，温柔爱抚她[elle.ass+]，然后退回来去找操她的最佳体位……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_ELLE_OFFICE_SEX_START_AS_SUB"><![CDATA[
 	<p>
-		Letting Elle take charge, you submissively lean in against her and allow her to pull you into another dominant, forceful kiss. Reaching around to give your [pc.ass+] a good grope, the horny [elle.race] pulls back and moans, 
+		你让埃勒掌控一切，顺从地靠在她身上，让她拉着你再来一个强势而有力的吻。饥渴的[elle.race]伸手在你[pc.ass+]上好好摸了一把，然后抽回手，呻吟道，
 		#IF(elle.getTotalTimesHadSex(pc)>0)
-			 [elle.speech(Let's do this a little differently than the last time we were in here...)]
+			[elle.speech(让我们用和上次不同的方式来做吧……)]
 		#ELSE
-			 [elle.speech(I'm looking forward to adding you to my list of sexual conquests!)]
+			[elle.speech(我很期待把你加入我的性征服名单！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELLE_END_SEX -->
@@ -1406,78 +1406,78 @@
 	<htmlContent tag="ELLE_END_SEX"><![CDATA[
 	<p>
 		#IF(elle.isSatisfiedFromLastSex())
-			Letting out a deeply satisfied sigh, Elle steps over to her luxurious leather office chair and sinks down into it. Flashing you a cheeky smirk, she moans, [elle.speech(You were good, [pc.name]... <i>Real</i> good...)]
+			埃勒满意地舒了口气，走到豪华的皮办公椅旁，坐了下来。她呻吟着，朝你露出满足的笑容，[elle.speech(你很棒，[pc.name]……你<i>真的</i>很棒……)]
 		#ELSE
-			Letting out a frustrated sigh, Elle steps over to her luxurious leather office chair and sinks down into it. Pouting at you in annoyance, she whines, [elle.speech(I'm not satisfied from that, [pc.name]... It's no problem, as I'll just have Wes finish me off, but I was really hoping for more from you...)]
+			埃勒沮丧地叹了一口气，走到她豪华的皮办公椅旁，坐了下来。她向你生气地噘了噘嘴，抱怨道，[elle.speech(我对此并不满意，[pc.name]……不过没问题，因为我还有韦斯，但我真的希望你不只有这点能耐……)]
 		#ENDIF
 	</p>
 	<p>
-		After quickly getting your things back in order, you and Elle move over to the door of her office, and after she's unlocked it, you [pc.step] back out into the corridor beyond. Saying that she needs to get back to work, the [elle.race] heads back into the requisitions area, leaving you wondering what to do next...
+		你迅速整理好自己的东西，和埃勒走到她办公室门前。她打开门，让你回到走廊。[elle.race]告诉你自己需要工作，便又回到了军需处，你思考着下一步的行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_FLIRT_WES -->
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES"><![CDATA[
 	<p>
-		Deciding to have a little fun with Wes, you start flirting with him and playfully teasing him about the sorts of things he gets up to with Elle. Thanks to his slave's prior teasing and sexual harassment, the fox-boy seems to already be very horny, and after just a few minutes of being subjected to your flirty behaviour, you can tell that he's keen to fuck you.
+		你想和韦斯找点乐子，就与他调情，揶揄他和埃勒做的事。由于他奴隶先前的挑逗和性骚扰，狐男似乎已经很饥渴了，你与他调情几分钟后，就发现他很想操你。
 	</p>
 	<p>
-		Realising what's going on, Elle offers Wes her own series of flirtatious remarks in a clear attempt at getting him to fuck her instead of you. Caught between the two of you making advances upon him, Wes soon appears to be on the edge of losing his cool, and you realise that you could easily take advantage of his arousal by asking him to give you a 'personal tour' of his office...
+		埃勒察觉到发生了什么，开始用一连串挑逗的话语向韦斯示好，显然是想让韦斯和她做爱，而不是与你。在你和埃勒的双重攻势夹击之下，韦斯很快就变得难以自持。你意识到自己可以巧妙地利用他的兴奋，趁机请他“亲自带你参观”他的办公室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_FLIRT_WES_FINISH -->
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_FINISH"><![CDATA[
 	<p>
-		Deciding against taking things any further with Wes, you put an end to your flirtatious remarks and stop teasing him. Taking advantage of the fact that you've dropped out of the race, Elle brazenly slips her hand down Wes's trousers and starts giving him a handjob.
+		你决定不再和韦斯继续纠缠下去，于是你停止了调情，不再挑逗他。趁着你停下的当口，埃勒明目张胆地把手伸进韦斯的裤子，开始给他打飞机。
 	</p>
 	<p>
-		Doing his absolute best to retain his composure, the fox-boy ignores Elle's happy little moans and grunts, [wes.speech(So, [pc.name]... Can... Can I do anything else for you?)]
+		狐狸男竭力保持镇定，对埃勒快乐的呻吟和哼声置若罔闻，[wes.speech(那么，[pc.name]……我……我还能为你做什么吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_FLIRT_WES_OFFICE -->
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE"><![CDATA[
 	<p>
-		Eager to get into Wes's pants, you put on your most seductive voice and ask him if he could give you a private tour of his office.
+		你迫不及待想和韦斯上床，用你最诱人的声音去询问他能否带你去他的办公室参观一番。
 	</p>
 	<p>
-		On edge from all of the teasing that you and Elle have subjected him to, the fox-boy quickly replies, [wes.speech(I'd love to, [pc.name]! Elle, watch the place while I'm gone.)]
+		因你和埃勒对他的调戏而紧张，狐男很快答道，[wes.speech(我很乐意，[pc.name]！埃勒，我不在的时候看好这里。)]
 	</p>
 	<p>
-		Ignoring his slave's disappointed whine, Wes unlocks the door to the storage area, before stepping out to the other side of the counter and hooking one of his arms around your waist. Pressing your body up against him, you allow Wes to lead you out into the corridor and over to the door of his office. Unlocking the door, and with his arm still around your waist, he leads you inside and locks the door after him.
+		韦斯无视奴隶失望的哀鸣，打开储藏室门，走到柜台另一边，伸手搂住你的腰，使你们肌肤相接。你由着韦斯把你带到走廊，走到他的办公室门口。他搂着你的腰，打开门把你领进去，然后锁上门。
 	</p>
 	<p>
-		Knowing exactly what it is that he wants, the fox-boy steps up to you and pulls you into a passionate kiss. Holding you in his tight embrace for a moment, he pulls back, before smirking at you and asking, [wes.speech(Are you happy with me taking the lead?)]
+		狐男清楚明白他所求，向你走来，热情地吻你。他把你紧紧地抱在怀里，片刻后又松开，坏笑问道，[wes.speech(你乐意让我主导吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_SEX_START_AS_DOM"><![CDATA[
 	<p>
-		Flashing Wes a smirk of your own, you tell him that you're going to be the one in charge, to which he responds, [wes.speech(That's fine with me, [pc.name].)]
+		你对韦斯报以得意的坏笑，告诉他你将是那个负责人，韦斯说，[wes.speech(我没意见，[pc.name]。)]
 	</p>
 	<p>
-		Eagerly pulling the fox-boy into your dominant embrace, you wonder how best to fuck him...
+		你饥渴地将狐男拉入你的怀抱，你想知道如何才能最好地操他……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_SEX_START_AS_SUB"><![CDATA[
 	<p>
-		Happy to let Wes act as the dominant partner, you tell him that he can take the lead, and let out a happy little [pc.moan] as he pulls you into his embrace. After planting another passionate kiss on your [pc.lips+], the fox-boy pulls back and prepares to start fucking you...
+		你很乐意让韦斯扮演主导者的角色，你告诉他可以由他来主导，他把你拉进他的怀抱，你发出了快乐的[pc.moan]。狐狸男又在你[pc.lips+]上留下了一个热情的吻，然后抽回身，准备开始干你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_END_SEX -->
@@ -1485,86 +1485,86 @@
 	<htmlContent tag="WES_END_SEX"><![CDATA[
 	<p>
 		#IF(wes.isSatisfiedFromLastSex())
-			Letting out a deeply satisfied sigh, Wes steps over to his luxurious leather office chair and sinks down into it. Flashing you a warm smile, he sighs, [wes.speech(That was just what I needed... Thanks, [pc.name]...)]
+			韦斯满意地舒了口气，走到豪华的皮制办公椅旁坐下。他朝你露出温和的微笑，喘息着说，[wes.speech(我想要的就是这个……谢谢你，[pc.name]……)]
 		#ELSE
-			Letting out a frustrated sigh, Wes steps over to his luxurious leather office chair and sinks down into it. Still sporting a clear erection, he tuts, [wes.speech(That really wasn't enough to satisfy me, [pc.name]... I guess I'll have to let Elle finish me off...)]
+			韦斯沮丧地叹了一口气，走到他豪华的皮制办公椅旁坐下。他还明显地勃起着，啧了啧嘴，[wes.speech(这还不够让我满足呢，[pc.name]……我想该找埃勒帮我解决……)]
 		#ENDIF
 	</p>
 	<p>
-		After quickly getting your things back in order, you and Wes move over to the door of his office, and after he's unlocked it, you [pc.step] back out into the corridor beyond. Saying that he needs to get back to work, the fox-boy heads back into the requisitions area, leaving you wondering what to do next...
+		你迅速整理好自己的东西，和韦斯走到他办公室门前。他打开门，让你回到走廊。狐男告诉你自己需要工作，便又回到了军需处，你思考着下一步的行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_FLIRT_WES_OFFICE_THREESOME -->
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_THREESOME"><![CDATA[
 	<p>
-		Not wanting Elle to miss out on the fun, and knowing that Wes has by now grown accustomed to having sex with his perpetually-horny slave, you ask the fox-boy to give you and Elle a personal tour of his office.
+		你不愿让埃勒错过乐趣，也知道韦斯已经习惯和他永远欲求不满的奴隶做爱，所以你请狐男带你和埃勒去他的办公室参观一下。
 	</p>
 	<p>
-		[elle.speech(Oooh, I like the sound of that!)] the [elle.race] eagerly exclaims.
+		[elle.speech(哦哦！我喜欢听到这个！)][elle.race]热切地喊着。
 	</p>
 	<p>
-		[wes.speech(I really could do with taking a break,)] Wes states, before placing a 'be back soon' sign on the counter's surface and declaring, [wes.speech(Come on then, Elle, follow me.)]
+		[wes.speech(我确实该休息一下了，)]韦斯说着，在柜台放上“很快回来”的标志，[wes.speech(那就来吧，埃勒，跟上。)]
 	</p>
 	<p>
-		With his excited slave beside him, Wes unlocks the door to the storage area, before stepping out to the other side of the counter and hooking one of his arms around your waist. Not wanting to be left out, Elle presses herself up against Wes's free side, letting out a happy giggle as the fox-boy takes hold of her waist with his free hand.
+		在他兴奋的奴隶的陪伴下，韦斯打开了储藏室的门。他走到柜台另一边，伸手搂住你的腰。埃勒不想被落下，于是贴向韦斯的另一侧，当狐男用空闲的另一只手环住她的腰时，埃勒发出愉悦的咯咯声。
 	</p>
 	<p>
-		With you and Elle now on either side of him, Wes heads out into the corridor and over to the door of his office. Retrieving the keys from out of her owner's pocket, Elle unlocks the door, and joins you in being ushered inside by the horny fox-boy.
+		你与埃勒分站在韦斯两侧，韦斯走向走廊，到他的办公室门口。埃勒从主人的口袋里取出钥匙开了门，一起由这性奋的狐男领进门。
 	</p>
 	<p>
-		Shutting and locking the door after him, Wes lets out a surprised cry as you and Elle immediately press yourselves up against him. Jostling against one another in your haste to passionately kiss the fox-boy, you and the [elle.race] start groping Wes's body, causing him to ask, [wes.speech(Hey, hey, who's meant to be the one in charge in here?!)]
+		你和埃勒关上韦斯身后的门后就立刻扑向他，令他发出惊叫。你与[elle.race]争先恐后地亲吻韦斯，摸索他的身体，使他发问，[wes.speech(嘿，嘿，谁是这里的负责人啊？！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_DOM"><![CDATA[
 	<p>
-		Choosing this moment in which to make your intentions clear, you declare to Elle and Wes that you're the one in charge. Happy enough to let you take the dominant role, the two of them wait to see what it is you'll decide to do next...
+		你选择在这个时刻表明你的意图，你向埃勒和韦斯宣称你是主导者。他们很乐意让你发挥主导，两人拭目以待你下一步的动作……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_JOINT_DOM"><![CDATA[
 	<p>
-		Moving around behind Elle, you reach down to give her [elle.ass+] a good grope, before telling her that it only seems right that the slave should be the one to take the submissive role. Happy enough to let you and Wes take the dominant role, the [elle.race] lets out an excited moan and waits to see how the two of you will decide to use her...
+		你绕到埃勒身后，伸手在她[elle.ass+]上好好摸了一把，然后告诉她，奴隶应该扮演顺从者的角色才是正确的。她很乐意让你和韦斯扮演支配者的角色，发出兴奋的呻吟，等待着看你们俩如何使用她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_JOINT_SUB"><![CDATA[
 	<p>
-		Following Elle's lead in submissively rubbing up against Wes, you tell the fox-boy that he should take charge. Happy enough to take the dominant role, Wes orders the two of you to get down on all fours and present yourselves to him. Doing as you're told, you drop down onto the floor beside Elle, before preparing to be fucked beside her by Wes...
+		你学着埃勒的样子顺从地蹭着韦斯，告诉这个狐狸男应该由他来支配。韦斯很乐意扮演支配者的角色，他命令你们两个四肢着地，向他展示自己。你照着他说的做，趴在埃勒身边，然后准备在她身边被韦斯干……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_SUB"><![CDATA[
 	<p>
-		Wanting to be dominated by Wes and Elle, you tell them that they should take charge and fuck you.
+		你想被韦斯和埃勒支配，于是叫他们来主导操你。
 		#IF(pc.isTaur())
-			 Happy enough to do as you suggest, Elle pushes you down so that you're lying on your animalistic stomach, before moving around in front of you and preparing to use your mouth. Kneeling down behind your feral [pc.legRace]'s body, Wes joins his slave in getting ready to dominantly fuck you...
+			埃勒很乐意如你所愿地将你推倒，让你像动物一样趴在地上，然后在你面前来回踱步，准备用你的嘴。韦斯跪在你兽态的[pc.legRace]后面，准备和他的奴隶一起支配地操你。
 		#ELSE
-			 Happy enough to do as you suggest, Elle pushes you down onto the floor so that you're lying on your back, before kneeling down and planting her groin over your face.
-			 #IF(pc.hasLegs())
-				 Kneeling down between your legs, Wes joins his slave in getting ready to dominantly fuck you...
-			 #ELSE
-				 Kneeling down over your groin, Wes joins his slave in getting ready to dominantly fuck you...
-			 #ENDIF
+			埃勒很乐意如你所愿地将你推倒，让你躺在地上，然后跪下身，把腹股沟压在你脸上。
+			#IF(pc.hasLegs())
+				韦斯跪在你两腿之间，准备和他的奴隶一起支配你……
+			#ELSE
+				韦斯跪在你的腹股沟前，准备和他的奴隶一起支配你……
+			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_ELLE_REVENGE"><![CDATA[
 	<p>
-		Thinking that it would be fun for Elle to take charge, you convince Wes to join you in submitting to the horny [elle.race]. Happy to find herself being put in charge, Elle dominantly pushes you and Wes down onto your backs, before straddling you in the cowgirl position and wondering out loud how best to fuck the two of you...
+		你认为让埃勒主导会很有趣，于是说服韦斯一起顺从这好色的[elle.race]。埃勒很高兴来主导做爱，强势地把你和韦斯推倒在地，然后骑乘在你身上，思索如何做才能最好地操你们两……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_END_SEX_THREESOME -->
@@ -1572,57 +1572,57 @@
 	<htmlContent tag="WES_END_SEX_THREESOME"><![CDATA[
 	<p>
 		#IF(wes.isSatisfiedFromLastSex())
-			Letting out a deeply satisfied sigh, Wes steps over to his luxurious leather office chair and sinks down into it. Flashing you and Elle a warm smile, he sighs, [wes.speech(That was just what I needed... Thanks, you two...)]
+			韦斯满意地舒了口气，走到豪华的皮制办公椅旁，坐了下来。他喘息着，朝你和埃勒露出温和的笑容，[wes.speech(这正是我想要的……谢谢你们两个……)]
 		#ELSE
-			Letting out a frustrated sigh, Wes steps over to his luxurious leather office chair and sinks down into it. Still sporting a clear erection, he tuts, [wes.speech(That really wasn't enough to satisfy me... I guess you can finish me off back in the requisitions area, Elle...)]
+			韦斯沮丧地叹了一口气，走到他豪华的皮制办公椅旁，坐了下来。他还明显地勃起着，啧了啧嘴，[wes.speech(这还不够让我满足呢……等回到军需处之后你再帮我做完吧，埃勒……)]
 		#ENDIF
 	</p>
 	<p>
-		After quickly getting your things back in order, the three of you move over to the door of Wes's office, and after he's unlocked it, you [pc.step] back out into the corridor beyond. Saying that he needs to get back to work, the fox-boy leads Elle back into the requisitions area, leaving you wondering what to do next...
+		你迅速整理好自己的东西，三人一起走到韦斯办公室门前。他打开门，让你[pc.step]回走廊。狐男告诉你自己还得回去工作，便带着埃勒回到了军需处，你思考着下一步的行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_ELLE_OFFICE -->
 	
 	<htmlContent tag="WES_ELLE_OFFICE"><![CDATA[
 	<p>
-		Wanting to have some fun with Elle, you tell Wes that you're willing to take him up on his offer of working some of the horniness out of his slave's system. Hearing what it is that you're saying, Elle lets out an excited moan, before telling Wes that she's happy to go and spend some time with you.
+		你想和埃勒找点乐子，于是告诉韦斯你接受提议，你很乐意帮他的奴隶排解性欲。埃勒听到你说的话，兴奋地呻吟了一声，然后告诉韦斯她很乐意与你共度时光。
 	</p>
 	<p>
-		[wes.speech(Great, I should be able to get this work finished in the meantime,)] the fox-boy sighs in relief, before handing a key to his slave and instructing her, [wes.speech(Go and use my office, and come straight back here after you're done.)]
+		[wes.speech(太好了，在此期间我应该就能做完工作了，)]狐男松了一口气，把钥匙交给他的奴隶，吩咐道，[wes.speech(你们去我的办公室做，完事后就立马回来。)]
 	</p>
 	<p>
-		Taking the key from Wes, Elle unlocks the door to the storage area, before stepping out to the other side of the counter and getting physical with you. Pressing her hot body up against you, she reaches down to give your groin a firm grope, before breathlessly teasing, [elle.speech(Don't worry, [pc.name], I don't hold anything against you for helping Wes to get me arrested and enslaved... I'm just looking forward to having a good fuck!)]
+		埃勒从韦斯手中接过钥匙，打开储藏室的门，然后走到柜台的另一边，与你肌肤相接。她用滚烫的身体压住你，伸手用力摸索你的腹股沟，她气喘吁吁地挑逗说，[elle.speech(别担心，[pc.name]，我不记恨你帮韦斯逮捕和奴役我的事……我现在只想好好做爱！)]
 	</p>
 	<p>
-		As she's the one who's got the key, you let Elle take the lead as she heads out of the requisitions area and over to the door of Wes's office. Quickly unlocking it, she steps forwards and beckons you inside.
+		因为埃勒有钥匙，你便让她带你走出军需处，来到韦斯办公室的门口。她迅速走上前打开门，示意你进去。
 	</p>
 	<p>
-		The moment you [pc.step] into Wes's spacious office, the horny [elle.race] immediately shuts and locks the door behind you, before rushing forwards and pulling you into a desperate, passionate kiss. Flapping her wings in excitement, and sending a pile of stacked papers flying across the room in the process, Elle pulls back from kissing you and breathlessly pants, [elle.speech(So, are you going to take the lead, or shall I?)]
+		当你走进韦斯宽敞的办公室时，饥渴的[elle.race]立刻关好并锁上身后的门，然后冲上前拉住你，不顾一切地热吻起来。埃勒兴奋地拍打着翅膀，把一堆叠好的纸张弄得满屋子乱飞，她从亲吻中抽了出来，气喘吁吁，[elle.speech(那么，是你主导，还是我来？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WES_ELLE_OFFICE_START_AS_DOM"><![CDATA[
 	<p>
-		Firmly taking hold of Elle's hips, you pull her into your body, before telling her that you're going to be the one in charge. Pulling the hot [elle.race] into a dominant kiss, you reach around and give her [elle.ass+] a good grope, before pulling back and wondering how best to fuck her...
+		你紧紧抓住埃勒的臀部，把她拉近，告诉她由你来主导。你强势地亲吻着热辣的[elle.race]，温柔爱抚她[elle.ass+]，然后退回来去找操她的最佳体位……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WES_ELLE_OFFICE_START_AS_SUB"><![CDATA[
 	<p>
-		Letting Elle take charge, you submissively lean in against her and allow her to pull you into a dominant, forceful kiss. Reaching around to give your [pc.ass+] a good grope, the horny [elle.race] pulls back and moans, 
+		你让埃勒掌控一切，顺从地靠在她身上，让她拉着你来一个强势而有力的吻。饥渴的[elle.race]伸手在你[pc.ass+]上好好摸了一把，然后抽回手，呻吟道，
 		#IF(elle.getTotalTimesHadSex(pc)>0)
-			 [elle.speech(Let's do this a little differently than the last time we were in here...)]
+			[elle.speech(让我们用和上次不同的方式来做吧……)]
 		#ELSE
-			 [elle.speech(I'm looking forward to adding you to my list of sexual conquests!)]
+			[elle.speech(我很期待把你加入我的性征服名单！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WES_END_SEX_ELLE -->
@@ -1630,15 +1630,15 @@
 	<htmlContent tag="WES_END_SEX_ELLE"><![CDATA[
 	<p>
 		#IF(elle.isSatisfiedFromLastSex())
-			Letting out a deeply satisfied sigh, Elle steps over to Wes's luxurious leather office chair and sinks down into it. Flashing you a cheeky smirk, she moans, [elle.speech(You were good, [pc.name]... <i>Real</i> good...)]
+			埃勒满意地舒了口气，走到韦斯豪华的皮办公椅旁，坐了下来。她大大咧咧地朝你笑着，呻吟说，[elle.speech(你很棒，[pc.name]……你<i>真的</i>很棒……)]
 		#ELSE
-			Letting out a frustrated sigh, Elle steps over to Wes's luxurious leather office chair and sinks down into it. Pouting at you in annoyance, she whines, [elle.speech(I'm not satisfied from that, [pc.name]... It's no problem, as I'll just have Wes finish me off, but I was really hoping for more from you...)]
+			埃勒沮丧地叹了一口气，走到韦斯豪华的皮办公椅旁，坐了下来。她向你生气地噘了噘嘴，抱怨道，[elle.speech(我对此并不满意，[pc.name]……不过没问题，因为我还有韦斯，但我真的希望你不只有这点能耐……)]
 		#ENDIF
 	</p>
 	<p>
-		After quickly getting your things back in order, you and Elle move over to the door of Wes's office, and after she's unlocked it, you [pc.step] back out into the corridor beyond. Saying that she needs to quickly return to Wes, the [elle.race] heads back into the requisitions area, leaving you wondering what to do next...
+		你迅速整理好自己的东西，和埃勒走到她办公室门前。她打开门，让你回到走廊。[elle.race]告诉你自己需要回去找韦斯，便又回到了军需处，你思考着下一步的行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

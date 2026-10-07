@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>100</value>
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Youko's Mystery Potion]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Youko's Mystery Potions]]></namePlural>
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[妖狐的神秘药水]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[妖狐的神秘药水]]></namePlural>
 		<description><![CDATA[
-			An ornate glass bottle, filled with a considerable amount of rainbow-coloured liquid. A label attached to the neck of the bottle reads:
-			<br/>[style.italicsArcane(Please accept this gift from a friendly Youko! I promise that it'll do nothing but make you a stronger, better version of yourself!)]
+			一只华丽精致的玻璃瓶，里面盛着相当多的彩虹色液体。瓶身上贴着一张标签，上面写着：
+			<br/>[style.italicsArcane(请收下这份来自友好妖狐的礼物吧！我保证它只会让你变得更强、更优秀！)]
 		]]></description>
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -30,7 +30,7 @@
 		<statusEffects/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Applies a completely [style.colourArcane(random)] [style.colourTfGeneric(transformation)]]]></line>
+			<line><![CDATA[施加一项完全[style.colourArcane(随机)]的[style.colourTfGeneric(转化)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -46,10 +46,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			[npc.Name] [npc.verb(pull)] out the stopper from the Cultist's Mystery Potion bottle and instantly [npc.verb(recoil)] as an overwhelming myriad of sweet, sour, bitter, and pungent smells assault [npc.her] senses. Despite [npc.her] better judgement, [npc.she] [npc.verb(bring)] the bottle to [npc.her] [npc.lips+] and [npc.verb(swallow)] down every last drop of the concoction, discovering in the process that its taste is every bit as wild and varied as its aroma.
+			[npc.Name]从狂信者的神秘药水瓶上拔出瓶塞，随即猛地向后一缩——一股铺天盖地的甜、酸、苦、辣气味冲击着[npc.her]感官。尽管[npc.her]理智并不赞同这么做，[npc.she]还是把瓶子举到[npc.her][npc.lips+]前，将药剂一滴不剩地咽了下去，并在这个过程中发现，它的味道和气味一样狂野多变。
 		]]></selfUse>
 		<otherUse><![CDATA[
-			[npc.Name] [npc.verb(pull)] out the stopper from the Cultist's Mystery Potion bottle, before bringing it up to [npc2.namePos] waiting [npc2.lips]. [npc2.She] [npc2.verb(recoil)] as an overwhelming myriad of sweet, sour, bitter, and pungent smells assault [npc2.her] senses, but [npc2.she] nevertheless [npc2.verb(swallow)] down every last drop of the concoction, discovering in the process that its taste is every bit as wild and varied as its aroma.
+			[npc.Name]从狂信者的神秘药水瓶上拔出瓶塞，然后把它举到[npc2.namePos]正等着的[npc2.lips]前。[npc2.She]被一股铺天盖地的甜、酸、苦、辣气味冲击着[npc2.her]感官，不禁向后一缩，但还是把药剂一滴不剩地咽了下去，并在这个过程中发现，它的味道和气味一样狂野多变。
 		]]></otherUse>
 	</useDescriptions>
 

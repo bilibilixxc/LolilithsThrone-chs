@@ -12,17 +12,17 @@ import com.lilithsthrone.game.dialogue.utils.UtilText;
 public enum OrgasmCumTarget {
 
 	// Specials:
-	LILAYA_PANTIES("into Lilaya's panties", "panties", false) {
+	LILAYA_PANTIES("瞄准莉莱雅的内裤", "panties", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.NONE;
 		}
 	},
 	
-	WALL("up the wall", "wall", false) {
+	WALL("墙上", "wall", false) {
 		@Override
 		public String getName() {
-			return UtilText.parse("up the [pc.wall]");
+			return UtilText.parse("[pc.wall]上");
 		}
 
 		@Override
@@ -30,39 +30,39 @@ public enum OrgasmCumTarget {
 			return CoverableArea.NONE;
 		}
 	},
-	FLOOR("onto floor", "floor", false) {
+	FLOOR("地上", "地面", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.NONE;
 		}
 	},
 	
-	INSIDE("inside", "inside", true) {
+	INSIDE("体内", "体内", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.NONE;
 		}
 	},
-	INSIDE_SWITCH_DOUBLE("inside (double)", "inside", true) {
+	INSIDE_SWITCH_DOUBLE("体内(双穴)", "体内", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.NONE;
 		}
 	},
 	
-	ARMPITS("over armpit", "armpit", true) {
+	ARMPITS("腋窝上", "腋窝", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.ARMPITS;
 		}
 	},
-	ASS("over ass", "ass", true) {
+	ASS("屁股上", "屁股", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.ASS;
 		}
 	},
-	GROIN("over groin", "groin", true) {
+	GROIN("股间", "股间", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			if(owner.hasVagina()) {
@@ -73,50 +73,50 @@ public enum OrgasmCumTarget {
 			return CoverableArea.MOUND;
 		}
 	},
-	BREASTS("onto breasts", "breasts", true) {
+	BREASTS("胸上", "胸部", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.BREASTS;
 		}
 	},
-	FACE("over face", "face", true) {
+	FACE("脸上", "面部", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.MOUTH;
 		}
 	},
-	HAIR("into hair", "hair", true) {
+	HAIR("头发上", "头发", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.HAIR;
 		}
 	},
-	STOMACH("onto stomach", "stomach", true) {
+	STOMACH("肚子上", "肚子", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.STOMACH;
 		}
 	},
-	LEGS("onto legs", "legs", true) {
+	LEGS("腿上", "腿部", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.LEGS;
 		}
 	},
-	FEET("onto feet", "feet", true) {
+	FEET("脚上", "脚", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.FEET;
 		}
 	},
-	BACK("over back", "back", true) {
+	BACK("背上", "背部", true) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.BACK;
 		}
 	},
 	
-	SELF_GROIN("onto self groin", "own groin", false) {
+	SELF_GROIN("在自己胯下", "自己的胯下", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			if(owner.hasVagina()) {
@@ -127,37 +127,37 @@ public enum OrgasmCumTarget {
 			return CoverableArea.MOUND;
 		}
 	},
-	SELF_STOMACH("onto self stomach", "own stomach", false) {
+	SELF_STOMACH("在自己的肚子上", "自己的肚子", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.STOMACH;
 		}
 	},
-	SELF_LEGS("onto self legs", "own legs", false) {
+	SELF_LEGS("在自己的腿上", "自己的腿", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.LEGS;
 		}
 	},
-	SELF_FEET("onto self feet", "own feet", false) {
+	SELF_FEET("在自己的脚上", "自己的脚", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.FEET;
 		}
 	},
-	SELF_BREASTS("onto self breasts", "own breasts", false) {
+	SELF_BREASTS("在自己的胸上", "自己的胸", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.BREASTS;
 		}
 	},
-	SELF_HANDS("onto self hands", "own hands", false) {
+	SELF_HANDS("在自己的手上", "自己的手", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.HANDS;
 		}
 	},
-	SELF_FACE("onto self face", "own face", false) {
+	SELF_FACE("在自己的脸上", "自己的脸", false) {
 		@Override
 		public CoverableArea getRelatedCoverableArea(GameCharacter owner) {
 			return CoverableArea.MOUTH;

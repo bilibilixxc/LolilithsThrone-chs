@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>MAIN_FUR</category>
 	
-	<determiner><![CDATA[a layer of]]></determiner>
+	<determiner><![CDATA[一层]]></determiner>
 	
-	<name><![CDATA[fur]]></name>
+	<name><![CDATA[皮毛]]></name>
 	
-	<namePlural pluralByDefault="false"><![CDATA[fur]]></namePlural> 
+	<namePlural pluralByDefault="false"><![CDATA[皮毛]]></namePlural> 
 	
 	<naturalCoveringModifiers>
 		<modifier>SHORT</modifier>

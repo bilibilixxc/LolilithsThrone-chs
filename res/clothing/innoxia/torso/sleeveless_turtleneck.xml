@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>350</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[sleeveless turtleneck]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[sleeveless turtlenecks]]></namePlural> 
-		<description><![CDATA[A feminine sleeveless sweater, with a high turtleneck.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[无袖高领衫]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[无袖高领衫]]></namePlural> 
+		<description><![CDATA[一款女式的无袖毛衣，带有高领。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>TORSO_UNDER</slot> 

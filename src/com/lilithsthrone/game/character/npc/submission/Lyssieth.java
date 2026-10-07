@@ -119,8 +119,8 @@ public class Lyssieth extends NPC {
 	
 	public Lyssieth(boolean isImported) {
 		super(isImported,
-				new NameTriplet("Lyssieth"), "Lilithmartuilani",
-				"One of the seven elder Lilin, Lyssieth is one of the most powerful beings in existence.",
+				new NameTriplet("莉西丝"), "莉莉丝马尔图拉尼",
+				"莉西丝是最为强大的七位莉琳长老之一。",
 				7734, Month.OCTOBER, 13,
 				1000,
 				Gender.F_V_B_FEMALE, Subspecies.HUMAN, RaceStage.GREATER,
@@ -1143,33 +1143,33 @@ public class Lyssieth extends NPC {
 				switch(Main.sex.getFirstOngoingSexAreaPenetration(this, SexAreaOrifice.VAGINA)) {
 					case FINGER:
 						returnedLine = UtilText.returnStringAtRandom(
-								"Yes! Good [npc2.girl]! Keep fingering mommy!",
-								"Keep going! Mommy's pussy loves your attention!",
-								"Oh yes! Mommy loves being fingered!");
+								"真棒！乖[npc2.girl]！指交妈咪吧！",
+								"继续！妈咪的小穴很中意你的照顾哦！",
+								"真棒！妈咪喜欢被指交~");
 						break;
 					case PENIS:
 						returnedLine = UtilText.returnStringAtRandom(
-								"Yes! Fuck me! Give mommy your cock! Don't stop!",
-								"Don't stop! Harder! Keep fucking mommy! Yes, yes, yes!",
-								"Oh yes! Fuck me! Mommy loves your [npc2.cock]!");
+								"太棒了，操我吧。用你的大肉棒填满妈咪！继续~",
+								"继续！大力操我！操妈咪吧！啊……啊~太棒了！",
+								"好厉害！干我吧！妈咪喜欢你的[npc2.cock]！");
 						break;
 					case TAIL:
 						returnedLine = UtilText.returnStringAtRandom(
-								"Yes! Fuck me! Give mommy your tail! Don't stop!",
-								"Don't stop! Harder! Keep fucking mommy! Yes, yes, yes!",
-								"Oh yes! Fuck me! Mommy loves your [npc2.tail]!");
+								"太棒了~干我！用你的尾巴插进妈咪吧！继续~",
+								"继续！大力操我！操妈咪吧！啊……啊~太棒了！",
+								"好厉害！干我吧！妈咪喜欢你的[npc2.tail]！");
 						break;
 					case TONGUE:
 						returnedLine = UtilText.returnStringAtRandom(
-								"Yes! Mommy loves your [npc2.tongue]! Don't stop!",
-								"Don't stop! Get that tongue deep in mommy's pussy! Yes, yes, yes!",
-								"Oh yes! Taste mommy's pussy! Get it deeper! Good [npc2.girl]!");
+								"好棒哦！妈咪爱你的[npc2.tongue]！加油哦~",
+								"继续，舌头舔进妈咪小穴深处吧！哦……呃，啊~",
+								"真棒！尝尝妈咪的小穴哦~再深点，对，乖[npc2.girl]！");
 						break;
 					default:
 						returnedLine =  UtilText.returnStringAtRandom(
-								"Fuck!",
-								"Yeah!",
-								"Oh yeah!");
+								"妈的！",
+								"好耶！",
+								"哦，爽死了！");
 						break;
 				}
 			}
@@ -1193,33 +1193,33 @@ public class Lyssieth extends NPC {
 			switch(Main.sex.getFirstOngoingSexAreaPenetration(this, SexAreaOrifice.MOUTH)) {
 				case FINGER:
 					returnedLine = UtilText.returnStringAtRandom(
-							"Mommy loves the taste of your [npc2.fingers]! Don't stop!",
-							"Keep going! Mommy loves sucking on your [npc2.fingers]!",
-							"Oh yes! Mommy loves the taste of your [npc2.fingers]!");
+							"妈咪喜欢你[npc2.fingers]的味道！继续哦~",
+							"接着来~妈咪喜欢吸你那[npc2.fingers]！",
+							"太棒了！妈咪喜欢你[npc2.fingers]的味道！");
 					break;
 				case PENIS:
 					returnedLine = UtilText.returnStringAtRandom(
-							"Oh yes! Mommy loves your [npc2.cock]! Fuck her face like a good [npc2.girl]!",
-							"Don't stop! Harder! Fuck mommy's throat! Yes, yes, yes!",
-							"Oh yes! Mommy loves your [npc2.cock]! You taste so good!");
+							"真棒！妈咪喜欢你的[npc2.cock]！乖乖[npc2.girl]，操她的脸吧~",
+							"继续……啊啊！用力！操妈咪的喉咙~啊……呃，啊！",
+							"太棒了！妈咪爱上你的[npc2.cock]了！味道很好哦~");
 					break;
 				case TAIL:
 					returnedLine = UtilText.returnStringAtRandom(
-							"Oh yes! Mommy loves your [npc2.tail]! Fuck her face like a good [npc2.girl]!",
-							"Don't stop! Harder! Fuck mommy's throat! Yes, yes, yes!",
-							"Oh yes! Mommy loves your [npc2.tail]! You taste so good!");
+							"真棒！妈咪喜欢你的[npc2.tail]！乖乖[npc2.girl]，操她的脸吧~",
+							"继续……啊啊！用力！操妈咪的喉咙~啊……呃，啊！",
+							"太棒了！妈咪爱上你的[npc2.tail]了！味道很好哦~");
 					break;
 				case TONGUE:
 					returnedLine = UtilText.returnStringAtRandom(
-							"Good [npc2.girl]! Show mommy how much you love her!",
-							"Yes! Good [npc2.girl]!",
-							"Good [npc2.girl]! Mommy loves your [npc2.lips]!");
+							"乖乖[npc2.girl]，妈咪看看你有多爱她呀？",
+							"真棒！好[npc2.girl]！",
+							"乖[npc2.girl]~妈咪喜欢你的[npc2.lips]！");
 					break;
 				default:
 					returnedLine = UtilText.returnStringAtRandom(
-							"Fuck!",
-							"Yeah!",
-							"Oh yeah!");
+							"妈的！",
+							"好耶！",
+							"哦，爽死了！");
 					break;
 			}
 		}
@@ -1244,9 +1244,9 @@ public class Lyssieth extends NPC {
 				switch(orifice) {
 					case ANUS:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Mommy loves your ass! Take her cock like a good [npc2.girl]!",
-								"Oh yes, let mommy fuck your cute little butt! Yes, yes, yes!",
-								"Oh yes! Good [npc2.girl]! Mommy loves your ass!"));
+								"真不错，妈咪喜欢你的屁股，乖[npc2.girl]，好好含进她的肉棒吧！",
+								"真棒，让妈咪操你可爱的小屁股！哦，哦，哦！",
+								"真棒！好[npc2.girl]！妈咪喜欢你的屁股！"));
 						break;
 					case ARMPITS:
 					case ASS:
@@ -1255,21 +1255,21 @@ public class Lyssieth extends NPC {
 						break;
 					case BREAST:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Mommy loves your [npc2.breasts]! Service her cock like a good [npc2.girl]!",
-								"Oh yes, let mommy fuck your tits! Yes, yes, yes!",
-								"Oh yes! Good [npc2.girl]! Mommy loves your tits!"));
+								"好！妈咪喜欢你的[npc2.breasts]！做个好[npc2.girl]，侍奉她的鸡巴！",
+								"真棒，让妈咪操你的奶子！哦，哦，哦！",
+								"哦对！好[npc2.girl]！妈咪喜欢你的奶子！"));
 						break;
 					case MOUTH:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Keep sucking mommy's cock, like a good [npc2.girl]! Just like that!",
-								"Oh yes! Wrap those lips of yours around mommy's cock! Keep going!",
-								"Keep sucking mommy's cock! Yes! Good [npc2.girl]!"));
+								"乖！做个好[npc2.girl]，继续吃妈咪的鸡巴！就是这样！",
+								"哦就是这样！用你的嘴唇包裹住妈咪的肉棒！继续！",
+								"就这样一直吸着妈咪的肉棒！对！乖[npc2.girl]！"));
 						break;
 					case NIPPLE:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Take mommy's cock! Good [npc2.girl]!",
-								"Mommy loves fucking your tits! Take my cock like a good [npc2.girl]!",
-								"Oh yes! Take mommy's cock! Your tits feel so good to fuck!"));
+								"好！含住妈咪的肉棒！乖[npc2.girl]！",
+								"妈咪太爱操你的奶子了！做一个乖[npc2.girl]，好好对待我的肉棒吧~",
+								"对！包住妈咪的肉棒！你的奶子操起来太棒了！"));
 						break;
 					case NIPPLE_CROTCH:
 						break;
@@ -1281,15 +1281,15 @@ public class Lyssieth extends NPC {
 						break;
 					case VAGINA:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Take mommy's cock! Your pussy belongs to me!",
-								"Good [npc2.girl]! Take mommy's cock deep in your little pussy!",
-								"Oh yes! Let mommy fill your pussy with her cock! Good [npc2.girl]!"));
+								"对！含住妈咪的肉棒！你的小穴是属于我的！",
+								"真棒[npc2.girl]！用你的小穴把妈咪的肉棒吞得再深点！",
+								"真棒！让妈咪的鸡巴填满你的小穴吧！好[npc2.girl]！"));
 						break;
 					case SPINNERET:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Take mommy's cock! Your spinneret belongs to me!",
-								"Good [npc2.girl]! Take mommy's cock deep in your little spinneret!",
-								"Oh yes! Let mommy fill your spinneret with her cock! Good [npc2.girl]!"));
+								"真不错。含住妈咪的肉棒！你的丝囊要变成肉棒的形状了哦。",
+								"乖[npc2.girl]。用你的小丝囊把妈咪的肉棒吞得再深点~",
+								"真棒！让妈咪的大肉棒撑满你的丝囊吧。乖哦。"));
 						break;
 				}
 			}
@@ -1315,9 +1315,9 @@ public class Lyssieth extends NPC {
 				switch(orifice) {
 					case ANUS:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Mommy loves your ass! Feel my [npc1.tongue] pushing deep!",
-								"Oh yes! Let mommy lick your ass! Yes, yes, yes!",
-								"Oh yes! I love licking ass! Let mommy get her [npc1.tongue] nice and deep!"));
+								"好棒哦！妈咪喜欢你的屁股！好好体会我的[npc1.tongue]顶进深处吧！",
+								"真棒！让妈咪舔你的屁股！哦，哦，哦！",
+								"真棒！我喜欢舔屁股！让我把[npc1.tongue]好好深入进去！"));
 						break;
 					case ARMPITS:
 					case ASS:
@@ -1326,21 +1326,21 @@ public class Lyssieth extends NPC {
 						break;
 					case BREAST:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Mommy loves your tits! Let her suck on your nipples!",
-								"Oh yes! Let mommy suck on your nipples! Yes, yes, yes!",
-								"Oh yes! Mommy loves your tits!"));
+								"真棒哦，妈咪喜欢你的奶子！让她吸吸你的奶子吧！",
+								"哦~好舒服！妈咪吸吸你的奶子！哦，哦，哦！",
+								"真棒！妈咪喜欢你的奶子！"));
 						break;
 					case MOUTH:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Oh yes! Your lips taste so good! Mommy needs more!",
-								"Mommy loves kissing you! Yes, yes, yes!",
-								"Oh yes! Your lips taste so good!"));
+								"真棒！你的嘴尝起来真甜！妈咪还想要更多！",
+								"妈咪真喜欢亲你。嗯……唔唔……",
+								"真棒！你的嘴尝起来真甜！"));
 						break;
 					case NIPPLE:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Mommy loves your tits! Let her suck on your nipples!",
-								"Oh yes! Let mommy suck on your nipples! Yes, yes, yes!",
-								"Oh yes! Mommy loves your nipples! Let her get her [npc1.tongue] nice and deep!"));
+								"真棒哦，妈咪喜欢你的奶子！让她吸吸你的奶子吧！",
+								"哦~好舒服！妈咪吸吸你的奶子！哦，哦，哦！",
+								"太棒了！妈咪喜欢你的奶子哦。让她把[npc1.tongue]好好地插进深处吧！"));
 						break;
 					case NIPPLE_CROTCH:
 						break;
@@ -1352,15 +1352,15 @@ public class Lyssieth extends NPC {
 						break;
 					case VAGINA:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Mommy loves servicing your pussy! Good [npc2.girl]!",
-								"Oh yes! Let mommy eat you out! Yes, yes, yes!",
-								"Oh yes! Mommy loves the taste of your pussy! Feel her [npc1.tongue] getting in nice and deep!"));
+								"很好哦，妈咪喜欢侍弄你的小穴。乖[npc2.girl]~",
+								"真好，妈咪舔舔你的下面！啊……呃，好哦……",
+								"真乖。妈咪喜欢你小穴的味道哦！好好体会她的[npc1.tongue]顶进深处吧！"));
 						break;
 					case SPINNERET:
 						availableLines.add(UtilText.returnStringAtRandom(
-								"Yes! Mommy loves servicing your spinneret! Good [npc2.girl]!",
-								"Oh yes! Let mommy eat out your spinneret! Yes, yes, yes!",
-								"Oh yes! Mommy loves the taste of your spinneret! Feel her [npc1.tongue] getting in nice and deep!"));
+								"好耶！妈咪喜欢侍弄你的丝穴！乖[npc2.girl]！",
+								"真棒！妈咪舔舔你的丝穴！啊……呃，好哦……",
+								"真乖。妈咪喜欢你丝穴的味道哦！好好体会她的[npc1.tongue]顶进深处吧！"));
 						break;
 				}
 			}
@@ -1386,117 +1386,117 @@ public class Lyssieth extends NPC {
 			if(Main.game.getPlayer().hasHymen()) {
 				sb.append("<p>");
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
-						sb.append("As [npc.name] thrusts [npc.her] [npc.cock+] into your [pc.pussy+], you can't help but let out a desperate, shuddering wail."
-									+ " Being so enamoured with the idea of being a pure virgin, you can scarcely believe that you're allowing an elder lilin to take it from you,"
-										+ " but as [npc.namePos] [npc.cock+] claims your precious virginity, you don't have any time to reflect on your choice."
-									+ " The only thing that's on your mind is the agonising pain of having your hymen torn by the [npc.cockGirth] demonic-cock that's been pushed into your now-despoiled cunt.");
+						sb.append("[npc.name]把[npc.cock+]塞进你[pc.pussy+]里，你忍不住地发出渴望，颤抖的哀号。"
+									+ "你一直迷恋保持成一个贞洁处女，但你几乎不敢相信你已经默许一个莉琳长老来夺走它，"
+										+ "[npc.namePos][npc.cock+]夺走了你宝贵的童贞，你没时间反思自己的选择。"
+									+ "你的脑海中只剩下[npc.cockGirth]恶魔般大的屌撕裂你的处女膜，攻占你的阴户时带来的痛苦。");
 					} else if(Main.game.getPlayer().hasFetish(Fetish.FETISH_MASOCHIST)) {
-						sb.append("As [npc.name] thrusts [npc.her] [npc.cock+] into your [pc.pussy+] to tear your hymen and claim your virginity, you can't help but let out a lewd, masochistic scream."
-								+ " The agonising pain of having your hymen torn by [npc.namePos] [npc.cockGirth] demonic-cock completely overwhelms you, and you can't help but squeal and moan in a delightful haze of overwhelming ecstasy.");
+						sb.append("[npc.name]将[npc.cock+]捅进你[pc.pussy+]，撕裂你的处女膜并夺走你的贞洁，你不由自主地发出受虐狂般的淫叫。"
+								+ "你被[npc.namePos]的[npc.cockGirth]驴一般的巨屌撕裂处女膜带来的剧痛彻底压垮，但你仍止不住地在狂喜之中呻吟尖叫。");
 					} else {
-						sb.append("As [npc.name] thrusts [npc.her] [npc.cock+] into your [pc.pussy+] to claim your virginity, you can't help but let out a desperate, shuddering wail."
-								+ " The agonising pain of having your hymen torn by [npc.namePos] [npc.cockGirth] demonic-cock completely overwhelms you, and you squirm about in discomfort as you try to endure this painful experience.");
+						sb.append("[npc.name]将[npc.her][npc.cock+]塞入你[pc.pussy+]并夺走你的第一次，你忍不住地发出渴望，颤抖的哀号。"
+								+ "[npc.namePos]用[npc.cockGirth]的恶魔大屌将你的处女膜撕裂，那股剧痛彻底压垮了你，你难受地扭动着，试图忍耐这种痛苦。"); 
 					}
 				sb.append("</p>");
 				
 			} else {
 				sb.append("<p>");
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
-						sb.append("As [npc.name] thrusts [npc.her] [npc.cock+] into your [pc.pussy+], you can't help but let out a desperate, shuddering wail."
-								+ " Being so enamoured with the idea of being a pure virgin, you can scarcely believe that you're allowing an elder lilin to take it from you,"
-									+ " but as [npc.namePos] [npc.cock+] claims your precious virginity, you don't have any time to reflect on your choice."
-								+ " The only thing that's on your mind is the fact that you've being broken in by the [npc.cockGirth] demonic-cock that's been pushed into your now-despoiled cunt.");
+						sb.append("[npc.name]把[npc.her][npc.cock+]塞进你[pc.pussy+]里，你忍不住发出渴望，颤抖的哀号。"
+								+ "你一直迷恋保持成一个贞洁处女，但你几乎不敢相信你已经默许一个莉琳长老来夺走它，"
+									+ "[npc.namePos][npc.cock+]夺走了你宝贵的童贞，你没时间反思自己的选择。"
+								+ "你脑海中唯一剩下的只有你被[npc.cockGirth]的恶魔屌破处，小穴被糟蹋的事实。");
 					} else {
-						sb.append("As [npc.namePos] [npc.cock+] thrusts into your [pc.pussy+] to claim your virginity, you can't help but let out a desperately lewd [pc.moan]."
-								+ " [npc.NamePos] [npc.cockGirth] demonic-cock is giving you an intense pleasure unlike any you've felt before, and you can't help but continue to scream and [pc.moan] in a delightful haze of overwhelming ecstasy.");
+						sb.append("[npc.namePos][npc.cock+]插入了你[pc.pussy+]，将贞操夺去，但你却禁不住发出了一声极度淫荡的[pc.moan]。"
+								+ "[npc.namePos]的[npc.cockGirth]恶魔一般大的屌给予你一种前所未有的强烈快感，你不由自主地在狂喜之中不停尖叫和[pc.moan]。");
 					}
 				sb.append("</p>");
 			}
 			
 			if(Main.sex.getInitialSexManager() instanceof SMLyssiethDemonTF) {
 				sb.append("<p>"
-						+ "Upon hearing your ear-splitting wail, [npc.name] stops thrusting forwards, and with her hot, throbbing cock still stuffed in your quivering cunt, [npc.she] teases,"
-						+ " [npc.speechNoExtraEffects(You're a very lucky [pc.girl], [pc.name]... ~Mmm!~ Not everyone gets to lose their virginity to an elder lilin, you know, especially not while being transformed into a demon..."
-							+ " ~Ooh!~ Now beg for my cock, like a good little succubus slut, and I'll give you the rest of it.)]"
+						+ "[npc.name]听到你震耳欲聋的哀号，停止前顶，但你湿漉漉的小穴仍被她火热跳动的肉棒填满，她揶揄道，"
+						+"[npc.speechNoExtraEffects(幸运的女孩，[pc.name]……~唔！~不是所有人都有幸被莉琳长老夺取他的贞洁，尤其对非恶魔而言……"
+							+ "~哦哦！~现在像个淫荡魅魔一样跪求我的肉棒，我才会继续做下去。)]"
 					+ "</p>");
 			
 				sb.append("<p>");
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
-						sb.append("Although you can't help but shed a tear as you realise that you've lost your precious, pure virginity, you're also madly turned on.");
+						sb.append("尽管你在意识到你失去了自己宝贵，纯洁的贞操时不禁潸然落泪，与此同时你也十分性奋。");
 					} else {
-						sb.append("Although you can't help but wince as a pang of pain shoots up from your cock-filled pussy, you're also madly turned on.");
+						sb.append("尽管从你那被肉棒塞满的小穴升起的痛感让你萌生退意， 你也彻底性奋起来。");
 					}
-					sb.append(" Doing as [npc.name] says, you desperately pant, [pc.speechNoExtraEffects(Please, [npc.name]... ~Aah!~ Give me your cock and turn me into a succubus!)]");
+					sb.append("按[npc.name]说的做，喘着粗气，[pc.speechNoExtraEffects(求你了，[npc.name]…… ~啊！~给我你的肉棒，让我变成魅魔！)]");
 				sb.append("</p>");
 				
 			} else {
 				sb.append("<p>"
-							+ "Upon hearing your ear-splitting wail, [npc.name] stops thrusting forwards, and with her hot, throbbing cock still stuffed in your quivering cunt, [npc.she] teases,"
-							+ " [npc.speechNoExtraEffects(You're a very lucky [pc.girl], [pc.name]... ~Mmm!~ Not everyone gets to lose their virginity to an elder lilin, you know... Now beg for my cock, and I'll give you the rest of it.)]"
+							+ "[npc.name]听到你震耳欲聋的哀号，停止前顶，但你湿漉漉的小穴仍被她火热跳动的肉棒填满，她揶揄道，"
+							+"[npc.speechNoExtraEffects(幸运的[pc.girl]，[pc.name]……~唔！~你该知道不是所有人都有幸被莉琳长老夺取贞洁……现在，跪求我的肉棒，我才会继续做下去。)]"
 						+ "</p>");
 				
 				sb.append("<p>");
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
-						sb.append("Although you can't help but shed a tear as you realise that you've lost your precious, pure virginity, you're also madly turned on.");
+						sb.append("尽管你在意识到你失去了自己宝贵，纯洁的贞操时不禁潸然落泪，与此同时你也十分性奋。");
 					} else {
-						sb.append("Although you can't help but wince as a pang of pain shoots up from your cock-filled pussy, you're also madly turned on.");
+						sb.append("尽管从你那被肉棒塞满的小穴升起的痛感让你萌生退意， 你也彻底性奋起来。");
 					}
-					sb.append(" Doing as [npc.name] says, you desperately pant, [pc.speechNoExtraEffects(Please, [npc.name]... ~Aah!~ Give me your cock!)]");
+					sb.append("按[npc.name]说的做，喘着粗气，[pc.speechNoExtraEffects(求你了，[npc.name]…… ~啊！~给我你的肉棒！)]");
 				sb.append("</p>");
 			}
 			
 			sb.append("<p>"
-						+ "[npc.speechNoExtraEffects(That's a good [pc.girl],)] [npc.name] responds,"
-							+ " and you try to suppress your whimpers as [npc.she] resumes where [npc.she] left off and thrusts the remaining length of [npc.her] huge demonic-cock into your cunt."
-						+ " As [npc.she] fills your freshly popped cherry with [npc.her] hot, throbbing shaft, [npc.name] softly moans,"
-						+ " [npc.speechNoExtraEffects(That's it... ~Mmm!~ Take my cock nice and deep... It'll start feeling good for you soon enough...)]"
+						+ "[npc.speechNoExtraEffects(真是个好女孩，)][npc.name]回道，"
+							+ "[npc.she]从刚才的位置继续，缓缓将[npc.her]硕大恶魔屌的剩余部分顶入你的小穴，你尽力忍住了呜咽。"
+						+ "[npc.Name]用搏动的肉棒塞满你刚破处的小穴，轻声呻吟，"
+						+ "[npc.speechNoExtraEffects(就这样……~唔！~让我顶进深处……你也要开始舒服起来了……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Sure enough, after [npc.nameHas] pulled [npc.her] cock back out of your pussy, the pain starts to fade away,"
-							+ " and you find yourself letting out a lewd moan as you concentrate on the feeling of [npc.her] [npc.cockHead+] pushing its way into your broken-in pussy as [npc.she] gently thrusts forwards once again..."
+						+ "理所当然地，[npc.her]把肉棒拔出你的小穴，疼痛就开始褪去，"
+							+ "[npc.her][npc.cockHead+]一次又一次地突入你已然失守的秘缝中，你意识到自己已经沉浸在这快感里，还发出了淫荡的呻吟……"
 					+ "</p>");
 			
 		} else if(penetrated == SexAreaOrifice.ANUS) {
 			sb.append("<p>");
-				sb.append("As [npc.name] slowly pushes [npc.her] [npc.cock+] into your [pc.asshole+] to claim your virginity, you can't help but let out a desperate, shuddering wail."
-						+ " The uncomfortable sensation of having [npc.namePos] [npc.cockGirth] demonic-cock forcing its way inside of you causes you to squirm about in discomfort.");
+				sb.append("[npc.Name]缓缓将[npc.cock+]顶入你[pc.asshole+]，夺取你的童贞，你不由自主地发出一声绝望，颤抖的哀号。"
+						+ "[npc.namePos][npc.cockGirth]的恶魔屌在你的身体内缓缓打开通道的不适感使你不舒服地扭动身体。");
 			sb.append("</p>");
 			
 
 			if(Main.sex.getInitialSexManager() instanceof SMLyssiethDemonTF) {
 				sb.append("<p>"
-						+ "Upon hearing your ear-splitting wail, [npc.name] stops thrusting forwards, and with her hot, throbbing cock still stuffed in your asshole, [npc.she] teases,"
-						+ " [npc.speechNoExtraEffects(~Mmm!~ You know, no matter what they say, all succubi are horny little buttsluts... You'll be no different..."
-							+ " ~Ooh!~ Now beg for my cock, like a good little anal-loving slut, and I'll give you the rest of it.)]"
+						+ "[npc.name]听到你震耳欲聋的哀号，停止前顶，但你的肛门仍被她火热跳动的肉棒填满，她揶揄道，"
+						+ "[npc.speechNoExtraEffects(~唔！~你该知道，不管旁人说所有魅魔都是屁穴荡妇……你也和我们一样……"
+							+ "~哦哦！~现在像个肛门荡妇一样跪求我的肉棒，我才会继续做下去。)]"
 					+ "</p>");
 			
 				sb.append("<p>");
-					sb.append("Finding yourself feeling extremely horny as [npc.name] says this, you do your best to endure the discomfort and desperately moan,"
-							+ " [pc.speechNoExtraEffects(Please, [npc.name]... ~Aah!~ I'll be a good buttslut succubus! Give me your cock!)]");
+					sb.append("发现你和[npc.name]说的一样色情，你竭尽全力去忍受这让人厌恶的饥渴呻吟，"
+							+ "[pc.speechNoExtraEffects(求你了，[npc.name]…… ~啊！~我会是好的屁穴魅魔荡妇！给我你的肉棒！)]");
 				sb.append("</p>");
 				
 			} else {
 				sb.append("<p>"
-							+ "Upon hearing your ear-splitting wail, [npc.name] stops thrusting forwards, and with her hot, throbbing cock still stuffed in your asshole, [npc.she] teases,"
-							+ " [npc.speechNoExtraEffects(~Mmm!~ It's nice knowing that my cock's the first one that's been up your ass... You're going to become a horny little buttslut, I can just tell..."
-							+ " ~Ooh!~ Now beg for my cock, like a good little anal-loving slut, and I'll give you the rest of it.)]"
+							+ "[npc.name]听到你震耳欲聋的哀号，停止前顶，但你的肛门仍被她火热跳动的肉棒填满，她揶揄道，"
+							+ "[npc.speechNoExtraEffects(唔！~真开心是我的鸡巴夺取了你的屁穴纯洁……我敢说你终会成为一个色情屁穴小荡妇……"
+							+ "~哦哦！~现在像个肛门荡妇一样跪求我的肉棒，我才会继续做下去。)]"
 						+ "</p>");
 
 				sb.append("<p>");
-					sb.append("Finding yourself feeling extremely horny as [npc.name] says this, you do your best to endure the discomfort and desperately moan,"
-							+ " [pc.speechNoExtraEffects(Please, [npc.name]... ~Aah!~ Give me your cock!)]");
+					sb.append("发现你和[npc.name]说的一样色情，你竭尽全力去忍受这让人厌恶的饥渴呻吟，"
+							+ "[pc.speechNoExtraEffects(求你了，[npc.name]……~啊！~给我你的肉棒！)]");
 				sb.append("</p>");
 			}
 
 			sb.append("<p>"
-						+ "[npc.speechNoExtraEffects(That's a good [pc.girl],)] [npc.name] responds,"
-							+ " and you try to suppress your whimpers as [npc.she] resumes where [npc.she] left off and thrusts the remaining length of [npc.her] huge demonic-cock into your asshole."
-						+ " As [npc.she] fills you with [npc.her] hot, throbbing shaft, [npc.name] softly moans,"
-						+ " [npc.speechNoExtraEffects(That's it... ~Mmm!~ Take my cock nice and deep... It'll start feeling good for you soon enough...)]"
+						+ "[npc.speechNoExtraEffects(真是个好女孩，)][npc.name]回道，"
+							+ "[npc.she]从刚才的位置继续，缓缓将[npc.her]硕大恶魔屌的剩余部分顶入你的肛门，你尽力忍住了呜咽。"
+						+ "[npc.Name]用她搏动的肉棒填满你，轻声呻吟，"
+						+ "[npc.speechNoExtraEffects(就这样……~唔！~让我顶进深处……你也要开始舒服起来了……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Sure enough, after [npc.nameHas] pulled [npc.her] cock back out of your asshole, the discomfort starts to fade away,"
-							+ " and you find yourself letting out a lewd moan as you concentrate on the feeling of [npc.her] [npc.cockHead+] pushing its way into your broken-in butt as [npc.she] gently thrusts forwards once again..."
+						+ "理所当然地，[npc.her]把肉棒拔出你的肛门，疼痛就开始褪去，"
+							+ "[npc.her][npc.cockHead+]一遍又一遍地突入你已然失守的屁股中，你发出淫乱的呻吟，意识到自己沉沦在这快感里……"
 					+ "</p>");
 		}
 		
@@ -1506,32 +1506,32 @@ public class Lyssieth extends NPC {
 	@Override
 	public String getSpecialPlayerPureVirginityLoss(GameCharacter penetratingCharacter, SexAreaPenetration penetrating) {
 		return "<p style='text-align:center;'>"
-					+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Broken Virgin</b>"
+					+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>失格处女</b>"
 				+ "</p>"
 				+ "<p>"
-					+ "As [npc.name] once again begins to stuff your cunt with [npc.her] hot demonic-cock, the sudden realisation of what's just happened hits you like a sledgehammer."
+					+ "正当[npc.name]再度开始用[npc.her]灼热的恶魔屌捅插你的小穴时，突然意识到正在发生的现实一切如同重锤一般砸在你身上。"
 				+ "</p>"
 				+ "<p style='text-align:center;'>"
-					+"[pc.thought(I-I've lost my virginity?!"
-					+ "<br/>To <b>an elder lilin</b>?!)]"
+					+ "[pc.thought(我，我就这样失贞了？！"
+					+ "<br/>给<b>一位莉琳长老</b>？！)]"
 				+ "</p>"
 				+ "<p>"
-					+ "You don't know what's worse, losing the virginity that you prized so highly, or the fact that you're actually enjoying it."
-					+ " As your [pc.labia+] spread lewdly around the hot, thick [npc.cock] thrusting in and out of you, you start convincing yourself that this is all you're good for."
+					+ "你不知道哪个更糟糕；是失去了这样看重的第一次，还是自己反而乐在其中。"
+					+ "你[pc.labia+]淫靡地包裹着那又热又粗，粗暴抽插着你的[npc.cock]，你宽慰自己，这就是你所擅长的。"
 				+ "</p>"
 				+ "<p style='text-align:center;'>"
-					+ "[pc.thought(If I'm not a virgin, that makes me a slut..."
-					+ "<br/>Just a slut to be fucked and pumped full of cum..."
-					+ "<br/>I wonder if all cocks are as good as [npc.namePos]...)]"
+					+ "[pc.thought(如果我不再是处女，那我就是个骚货了……"
+					+ "<br/>只是个活该被操，被注满精液的婊子罢了……"
+					+ "<br/>我好奇是不是所有的鸡巴都像[npc.namePos]的那么给力……)]"
 				+ "</p>"
 				+ "<p>"
-					+ "You're vaguely aware of the fact that [npc.name] is telling you how good your pussy feels as [npc.she] starts to focus [npc.her] attention on filling it with her throbbing demonic shaft."
-					+ " With a desperate moan,"
+					+ "你逐渐意识到了这个事实，[npc.name]一直告诉你，你的小穴感觉起来有多棒，当[npc.she]开始把[npc.her]注意力集中在用她跳动的恶魔肉棒填满它。"
+					+ "随着一声渴求的呻吟，"
 					+ (Main.game.getPlayer().hasLegs()
-						?" you spread your legs and"
-						:" you")
-					+ " resign yourself to the fact that you're now nothing more than a"
-					+ " <b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>broken virgin</b>..."
+						?"你张开双腿并"
+						:"你")
+					+ "只能接受现实，听之任之。现在的你什么都不是，只是个"
+					+ "<b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>失格处女</b>……"
 				+ "</p>";
 	}
 }

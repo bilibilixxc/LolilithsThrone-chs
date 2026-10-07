@@ -41,15 +41,15 @@ public class VickySpecials {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto face";
+					return "用手射到脸上";
 				}
-				return "Pull out (facial)";
+				return "外射(面部)";
 			}
-			return "Facial";
+			return "面部";
 		}
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] face.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]脸上。";
 		}
 		@Override
 		public String getDescription() {

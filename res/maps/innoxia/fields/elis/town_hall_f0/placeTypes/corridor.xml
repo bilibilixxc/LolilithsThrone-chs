@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[corridor]]></name>
-	<tooltipDescription><![CDATA[A wide corridor links the offices of town hall to one another.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor of Elis's town hall]]></virginityLossDescription>
+	<name><![CDATA[走廊]]></name>
+	<tooltipDescription><![CDATA[一条将市政厅各个办公室连接起来的广阔走廊。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯市政厅的走廊里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

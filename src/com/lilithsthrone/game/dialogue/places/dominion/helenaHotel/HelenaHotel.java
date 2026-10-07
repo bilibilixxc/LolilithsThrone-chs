@@ -408,7 +408,7 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Walk", "Walk back to Helena's apartment with her.", DATE_TRAVEL) {
+				return new Response("走吧", "和海伦娜走回她的公寓。", DATE_TRAVEL) {
 					@Override
 					public int getSecondsPassed() {
 						return 30*60;
@@ -425,7 +425,7 @@ public class HelenaHotel {
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().isAbleToFly()) {
-					return new Response("Fly", "Fly back to Helena's apartment with her.", DATE_TRAVEL) {
+					return new Response("飞行", "和海伦娜飞回她的公寓。", DATE_TRAVEL) {
 						@Override
 						public int getSecondsPassed() {
 							return 5*60;
@@ -440,11 +440,11 @@ public class HelenaHotel {
 						}
 					};
 				}
-				return new Response("Fly", "You aren't able to fly...", null);
+				return new Response("飞行", "你没有飞行能力……", null);
 				
 			} else if(index==3) {
 				if(Main.game.getPlayer().isTaur()) {
-					return new Response("Offer ride", "Offer to let Helena ride on your back and carry her back to her apartment.", DATE_TRAVEL) {
+					return new Response("让她骑上来", "让海伦娜骑到你的背上，带她回到公寓。", DATE_TRAVEL) {
 						@Override
 						public int getSecondsPassed() {
 							return 10*60;
@@ -460,14 +460,14 @@ public class HelenaHotel {
 						}
 					};
 				}
-				return new Response("Offer ride", "You are not a taur, so can't offer to let Helena ride on your back...", null);
+				return new Response("让她骑上来", "你不是一个半兽身人，所以没办法让海伦娜骑到你的背上……", null);
 			}
 			
 			return null;
 		}
 	};
 	
-	public static final DialogueNode DATE_TRAVEL = new DialogueNode("The Golden Feather Hotel", "", true) {
+	public static final DialogueNode DATE_TRAVEL = new DialogueNode("金羽毛酒店", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			// Set place 2 tiles left of harpy nests as Helena's hotel:
@@ -495,7 +495,7 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) { // Scarlett interactions:
 			if(index==1) {
-				return new Response("Small talk", "Make small talk with Scarlett while you wait for Helena to return.", DATE_RESTAURANT_START) {
+				return new Response("闲聊", "在等海伦娜回来的时候，跟斯嘉丽聊聊天。", DATE_RESTAURANT_START) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_TRAVEL_SMALL_TALK"));
@@ -504,7 +504,7 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==2) {
-				return new Response("Wait", "Just wait for Helena to return.", DATE_RESTAURANT_START) {
+				return new Response("等待", "等待海伦娜回来。", DATE_RESTAURANT_START) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_TRAVEL_WAIT"));
@@ -514,13 +514,13 @@ public class HelenaHotel {
 			} else if(index==3
 					&& Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateVirginityTalk)) {// Romantic setup for taking virginity or repeat of scene:
 				if(Main.game.getPlayer().getItemCount(Main.game.getItemGen().generateItem(ItemType.GIFT_ROSE_BOUQUET))<3) {
-					return new Response("Romantic setup", "You require at least [style.boldMinorBad(three "+ItemType.GIFT_ROSE_BOUQUET.getNamePlural(false)+")] in your inventory to do this!", null);
+					return new Response("浪漫陈设", "你的物品栏至少要有[style.boldMinorBad(三个"+ItemType.GIFT_ROSE_BOUQUET.getNamePlural(false)+")]才能选择此项！", null);
 				}
 				if((!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))
 						 && (!Main.game.getPlayer().hasPenis() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true))) {
-					return new Response("Romantic setup", "You [style.colourBad(require either a penis or vagina)], and [style.colourBad(to be able to access your genitals)] for this action!", null);
+					return new Response("浪漫陈设", "你[style.colourBad(需要阴茎或阴道)]，并且[style.colourBad(能够触碰你的生殖器)]，才能选择此项！", null);
 				}
-				return new Response("Romantic setup", "Ask Scarlett to set up a romantic scene in Helena's apartment for when the two of you return from your date.", DATE_RESTAURANT_ROMANTIC_SETUP);
+				return new Response("浪漫陈设", "请斯嘉丽在海伦娜的公寓里布置浪漫的场景，等你俩约会回来后过去。", DATE_RESTAURANT_ROMANTIC_SETUP);
 				
 			}
 			return null;
@@ -544,7 +544,7 @@ public class HelenaHotel {
 		public Response getResponse(int responseTab, int index) {
 			if(((Scarlett)Main.game.getNpc(Scarlett.class)).isLikesPlayer()) {
 				if(index==1) {
-					return new Response("Thank her", "Thank Scarlett for agreeing to do as you've asked.", DATE_RESTAURANT_START) {
+					return new Response("谢谢她", "感谢斯嘉丽同意你的要求。", DATE_RESTAURANT_START) {
 						@Override
 						public int getSecondsPassed() {
 							return 5*60;
@@ -560,7 +560,7 @@ public class HelenaHotel {
 				
 			} else {
 				if(index==1) {
-					return new Response("Refuse", "Refuse to agree to Scarlett's conditions.", DATE_RESTAURANT_START) {
+					return new Response("拒绝", "拒绝斯嘉丽的条件。", DATE_RESTAURANT_START) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_ROMANTIC_SETUP_REFUSED"));
@@ -569,9 +569,9 @@ public class HelenaHotel {
 					
 				} else if(index==2) {
 					if(Main.game.getPlayer().getMoney()<1000) {
-						return new Response("Pay her ("+UtilText.formatAsMoneyUncoloured(1000, "span")+")", "You don't have enough money to pay Scarlett...", null);
+						return new Response("给她("+UtilText.formatAsMoneyUncoloured(1000, "span")+")", "你没有足够的钱付给斯嘉丽……", null);
 					}
-					return new Response("Pay her ("+UtilText.formatAsMoney(1000, "span")+")", "Pay Scarlett one thousand flames in exchange for her setting up the romantic scene in Helena's apartment.", DATE_RESTAURANT_START) {
+					return new Response("付给她("+UtilText.formatAsMoney(1000, "span")+")", "付给斯嘉丽一千火币，让她在海伦娜的公寓里布置出浪漫场景。", DATE_RESTAURANT_START) {
 						@Override
 						public int getSecondsPassed() {
 							return 5*60;
@@ -588,11 +588,11 @@ public class HelenaHotel {
 				} else if(index==3) {
 					if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Response("Suck cock", "You can't access your mouth at the moment, so can't offer to suck Scarlett's cock...", null);
+							return new Response("吮吸肉棒", "你的嘴此刻被限制，不能吸斯嘉丽的肉棒……", null);
 						}
 						return new ResponseSex(
-								"Suck cock",
-								"Do as Scarlett suggests and quickly suck her cock in exchange for her setting up the romantic scene in Helena's apartment.",
+								"吮吸肉棒",
+								"按斯嘉丽说的做，赶紧给她口交，让她在海伦娜的公寓里布置浪漫场景。",
 								true,
 								false,
 								getScarlettOralSexManager(),
@@ -612,11 +612,11 @@ public class HelenaHotel {
 						
 					} else {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Response("Cunnilingus", "You can't access your mouth at the moment, so can't offer to perform cunnilingus on Scarlett...", null);
+							return new Response("舔阴", "因为不能使用你的嘴，你不能给斯嘉丽舔阴……", null);
 						}
 						return new ResponseSex(
-								"Cunnilingus",
-								"Do as Scarlett suggests and quickly eat her out in exchange for her setting up the romantic scene in Helena's apartment.",
+								"舔阴",
+								"按斯嘉丽说的做，赶紧给她口交，让她在海伦娜的公寓里布置浪漫场景。",
 								true,
 								false,
 								getScarlettOralSexManager(),
@@ -641,7 +641,7 @@ public class HelenaHotel {
 		}
 	};
 
-	public static final DialogueNode DATE_RESTAURANT_ROMANTIC_SETUP_AFTER_ORAL = new DialogueNode("Finished", "Now that she's orgasmed, Scarlett has had enough.", true) {
+	public static final DialogueNode DATE_RESTAURANT_ROMANTIC_SETUP_AFTER_ORAL = new DialogueNode("完成", "现在斯嘉丽高潮了，她爽够了。", true) {
 		@Override
 		public void applyPreParsingEffects() { //TODO test
 			Main.game.getPlayer().removeItem(Main.game.getItemGen().generateItem(ItemType.GIFT_ROSE_BOUQUET), 3, true);
@@ -663,7 +663,7 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Wait for Helena to arrive.", DATE_RESTAURANT_START) {
+				return new Response("等待", "等待海伦娜到来。", DATE_RESTAURANT_START) {
 					@Override
 					public int getSecondsPassed() {
 						return 3*60;
@@ -691,7 +691,7 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wine", "Tell Helena and the harpy waitress that you'll also be drinking wine this evening.", DATE_RESTAURANT_TALKING) {
+				return new Response("葡萄酒", "告诉海伦娜和哈比服务生，你也打算在今晚喝葡萄酒。", DATE_RESTAURANT_TALKING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_START_WINE"));
@@ -701,7 +701,7 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==2) {
-				return new Response("Water", "Ask the harpy for a drink of water.", DATE_RESTAURANT_TALKING) {
+				return new Response("清水", "问哈比要饮用的清水。", DATE_RESTAURANT_TALKING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_START_WATER"));
@@ -710,7 +710,7 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==3) {
-				return new Response("Beer", "Ask the harpy for a beer.", DATE_RESTAURANT_TALKING) {
+				return new Response("啤酒", "问哈比要一瓶啤酒。", DATE_RESTAURANT_TALKING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_START_BEER"));
@@ -720,7 +720,7 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==4) {
-				return new Response("Whiskey", "Ask the harpy for a glass of whiskey.", DATE_RESTAURANT_TALKING) {
+				return new Response("威士忌", "问哈比要一杯威士忌酒。", DATE_RESTAURANT_TALKING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_START_WHISKEY"));
@@ -757,7 +757,7 @@ public class HelenaHotel {
 			switch(talkTopic) {
 				case SLAVES:
 					if(index==1) {
-						return new Response("Natural", "Tell Helena that you think it's perfectly natural for some people to be slaves.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("自然", "告诉海伦娜，你认为自然会有人做奴隶。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_SLAVES_NATURAL"));
@@ -766,7 +766,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==2) {
-						return new Response("Necessity", "Tell Helena that you think that slavery is an unfortunate necessity in a society like Dominion's.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("必要", "告诉海伦娜你认为奴隶制在像这样自治的社会里是必要的。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_SLAVES_NECESSITY"));
@@ -775,7 +775,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==3) {
-						return new Response("Wrong", "Tell Helena that slavery is morally wrong, and that one day it will surely be abolished.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("错误", "告诉海伦娜奴隶制在道德上是错误的，总有一天会被废除。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_SLAVES_WRONG"));
@@ -787,7 +787,7 @@ public class HelenaHotel {
 					
 				case HARPY_NESTS:
 					if(index==1) {
-						return new Response("Queen", "Tell Helena that there should be a single queen in control of all of the Harpy Nests, and that she should take that role.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("女王", "告诉海伦娜，应该有个女王统治所有的哈比巢穴，而她会是那个承重者。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_HARPY_NESTS_HELENA_TOP"));
@@ -796,7 +796,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==2) {
-						return new Response("Balance", "Tell Helena that the Harpy Nests seem to have found a somewhat stable balance, and so nothing should be changed.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("平衡", "告诉海伦娜，哈比之巢似乎已经找到了某种稳定的平衡，所以无需改变。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_HARPY_NESTS_BALANCE"));
@@ -805,7 +805,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==3) {
-						return new Response("Dismantle", "Tell Helena that the societal structure of the Harpy Nests should be dismantled and completely remade.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("拆除", "告诉海伦娜，哈比之巢的社会结构应该被拆除，再被完全重造。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_HARPY_NESTS_BAD"));
@@ -817,7 +817,7 @@ public class HelenaHotel {
 					
 				case RACES:
 					if(index==1) {
-						return new Response("Harpies", "Tell Helena that harpies are undeniably the most beautiful of all races, and that she is the most beautiful of all.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("哈比", "告诉海伦娜，毋庸置疑，哈比是最美丽的种族，而她是族里最动人的。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_RACES_HARPIES"));
@@ -826,7 +826,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==2) {
-						return new Response("Other", "Tell Helena that you have a preference for a race other than harpies.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("其他", "告诉海伦娜，你更喜欢哈比以外的种族。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_RACES_OTHER"));
@@ -835,7 +835,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==3) {
-						return new Response("Personality", "Tell Helena that you don't care about race, and that your attraction to someone depends more on their personality than their looks.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("个性", "告诉海伦娜你并不在乎种族，你更受他人的人格吸引，而非长相。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_RACES_PERSONALITY"));
@@ -847,7 +847,7 @@ public class HelenaHotel {
 					
 				case HARPIES:
 					if(index==1) {
-						return new Response("Admirable", "Tell Helena that Scarlett makes for a most admirable companion.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("淑女", "告诉海伦娜，斯嘉丽是个得体有礼的伴侣。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_HARPIES_CONTROL"));
@@ -856,7 +856,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==2) {
-						return new Response("Rude", "Tell Helena that Scarlett is very rude, but at least she behaves herself when in Helena's presence.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("粗鲁", "告诉海伦娜，斯嘉丽粗野无礼，但至少她在海伦娜面前表现得很好。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_HARPIES_RUDE"));
@@ -865,7 +865,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==3) {
-						return new Response("Bitch", "Tell Helena that Scarlett is a complete bitch.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("婊子", "告诉海伦娜，斯嘉丽完全是一个淫荡的婊子。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_HARPIES_BITCH"));
@@ -877,7 +877,7 @@ public class HelenaHotel {
 					
 				case BUSINESS:
 					if(index==1) {
-						return new Response("Flatter", "Tell Helena that only someone of her exceptional abilities could have turned that business around.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("奉承", "告诉海伦娜，只有像她这样能力出众的人才能扭转局面。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_BUSINESS_FLATTER"));
@@ -886,7 +886,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==2) {
-						return new Response("Take credit", "Tell Helena that you deserve at least some of the credit for how well things turned out.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("邀功", "告诉海伦娜，事情发展得这么顺利，至少有你的一份功劳。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_BUSINESS_CREDIT"));
@@ -895,7 +895,7 @@ public class HelenaHotel {
 						};
 						
 					} else if(index==3) {
-						return new Response("Surprised", "Tell Helena that you're surprised at how successful it is; you never would have imagined Helena's idea to actually work.", DATE_RESTAURANT_PLAYER_TOPIC) {
+						return new Response("惊讶", "告诉海伦娜，你对它的成功感到惊讶；你从未想过海伦娜的想法会真的成功。", DATE_RESTAURANT_PLAYER_TOPIC) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "RESPONSE_BUSINESS_SURPRISE"));
@@ -926,7 +926,7 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Helena", "Talk about Helena and ask her what she's got planned for the weekend.", DATE_RESTAURANT_END) {
+				return new Response("海伦娜", "和海伦娜聊天，问问她这周末的计划。", DATE_RESTAURANT_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_PLAYER_TOPIC_HELENA"));
@@ -935,7 +935,7 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==2) {
-				return new Response("Arcane", "Turn the topic of conversation to the arcane.", DATE_RESTAURANT_END) {
+				return new Response("奥术", "把话题转向奥术。", DATE_RESTAURANT_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_PLAYER_TOPIC_ARCANE"));
@@ -943,7 +943,7 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==3) {
-				return new Response("Politics", "Talk to Helena about Lilith and her rule over Dominion.", DATE_RESTAURANT_END) {
+				return new Response("政治", "和海伦娜聊聊莉莉丝和她统治御城区的条例。", DATE_RESTAURANT_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_PLAYER_TOPIC_POLITICS"));
@@ -953,12 +953,12 @@ public class HelenaHotel {
 				
 			} else if(index==4 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateSexLifeTalk)) {
 				if(Main.game.getNpc(Helena.class).getAffection(Main.game.getPlayer())<70) {
-					return new Response("Sex life",
-							"You can tell that Helena isn't ready to talk openly about her sex life with you yet..."
-									+ "<br/>[style.italicsMinorBad(Requires Helena's affection towards you to be 70 or greater. It is currently "+Main.game.getNpc(Helena.class).getAffection(Main.game.getPlayer())+".)]",
+					return new Response("性生活",
+							"你能看出海伦娜还没开放到和你聊她的性生活……"
+									+ "<br/>[style.italicsMinorBad(要求海伦娜对你的好感度达到或超过70。目前是"+Main.game.getNpc(Helena.class).getAffection(Main.game.getPlayer())+"。)]",
 							null);
 				}
-				return new Response("Sex life", "Talk to Helena about her sex life.", DATE_RESTAURANT_END_SEX_TALK) {
+				return new Response("性生活", "和海伦娜聊聊她的性生活。", DATE_RESTAURANT_END_SEX_TALK) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_PLAYER_TOPIC_SEX_LIFE"));
@@ -969,12 +969,12 @@ public class HelenaHotel {
 				
 			} else if(index==5) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaGift)) {
-					return new Response("Gift", "You've already given Helena a gift...", null);
+					return new Response("送礼", "你已经给海伦娜送过礼物了……", null);
 					
 				} else {
-					return new Response("Gift",
-							"Give Helena a gift (opens gift selection screen)."
-									+ "<br/>[style.italicsMinorGood(You will be able to return to this scene and ask her about one of the other topics after giving her a gift.)]",
+					return new Response("送礼",
+							"送海伦娜一份礼物(打开礼物选择界面)。"
+									+ "<br/>[style.italicsMinorGood(给她送礼物后，你可以回到这个场景，与她讨论其他话题。)]",
 							DATE_RESTAURANT_PLAYER_TOPIC) {
 						@Override
 						public DialogueNode getNextDialogue() {
@@ -987,7 +987,7 @@ public class HelenaHotel {
 		}
 	};
 	
-	public static final DialogueNode DATE_RESTAURANT_GIFT = new DialogueNode("Give gift", "", true, true) {
+	public static final DialogueNode DATE_RESTAURANT_GIFT = new DialogueNode("赠送礼物", "", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -1023,7 +1023,7 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Accompany", "Accompany Helena back up to her penthouse apartment.", DATE_RESTAURANT_END_HOME) {
+				return new Response("陪同", "陪同海伦娜回到她的顶层公寓。", DATE_RESTAURANT_END_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.HELENAS_APARTMENT, PlaceType.HELENA_APARTMENT_ENTRANCE);
@@ -1036,9 +1036,9 @@ public class HelenaHotel {
 				
 			} else if(index==2) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateRomanticSetup)) {
-					return new Response("Leave", "With Scarlett having set up a romantic scene for you in Helena's apartment, you don't want to leave her now!", null);
+					return new Response("离开", "斯嘉丽在海伦娜的公寓里为你布置了这么浪漫的一幕，你可不想现在离开！", null);
 				}
-				return new Response("Leave", "Say goodbye to Helena and that you hope to see her again soon.", DATE_APARTMENT_LEAVE) {
+				return new Response("离开", "跟海伦娜告别，跟她说你期望着能早日再会。", DATE_APARTMENT_LEAVE) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.helenaGoneHome, true);
@@ -1089,10 +1089,10 @@ public class HelenaHotel {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateRomanticSetup)) {
 				if(index==1) {
-					return new Response("Bedroom",
+					return new Response("卧室",
 							Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)
-								?"Helena leads you down the hallway to her bedroom."
-								:"Lead Helena down the hallway to her bedroom.",
+								?"海伦娜带你穿过走廊，来到她的卧室。"
+								:"带海伦娜穿过走廊，来到她的卧室。",
 							DATE_APARTMENT_BEDROOM) {
 						@Override
 						public void effects() {
@@ -1103,7 +1103,7 @@ public class HelenaHotel {
 				
 			} else if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 				if(index==1) {
-					return new Response("Bedroom", "Helena isn't taking no for an answer as she pulls you along towards her bedroom...", DATE_APARTMENT_BEDROOM) {
+					return new Response("卧室", "海伦娜没有拒绝，她拉着你走向卧室……", DATE_APARTMENT_BEDROOM) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_APARTMENT_BEDROOM_HELENA_DOM"));
@@ -1113,7 +1113,7 @@ public class HelenaHotel {
 				
 			} else {
 				if(index==1) {
-					return new Response("Goodbye", "Say goodbye to Helena and head back out into Dominion.", DATE_APARTMENT_LEAVE) {
+					return new Response("道别", "与海伦娜道别，返回御城区。", DATE_APARTMENT_LEAVE) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_END_HOME_GOODBYE"));
@@ -1124,7 +1124,7 @@ public class HelenaHotel {
 					};
 					
 				} else if(index==2) {
-					return new Response("Parting kiss", "Kiss Helena on the cheek and say goodbye.", DATE_APARTMENT_LEAVE) {
+					return new Response("离别吻", "亲亲海伦娜的脸颊，和她说再见。", DATE_APARTMENT_LEAVE) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_END_HOME_GOODBYE_KISS"));
@@ -1136,12 +1136,12 @@ public class HelenaHotel {
 					
 				} else if(index==3) {
 					if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateSexLifeTalk)) {
-						return new Response("Inside",
-								"You think that Helena would invite you inside if you were first able to get her to openly talk to you about her sex life..."
-										+ "<br/>[style.italicsMinorBad(Next time you go on a date with Helena, if her affection towards you is 70 or more, you should ask her about her sex life to unlock this action.)]",
+						return new Response("进入",
+								"你想，海伦娜如果能先坦诚地和你聊聊她的性生活，就会邀请你进屋了……"
+										+ "<br/>[style.italicsMinorBad(下次你和海伦娜约会时，如果她对你的好感度达到70或以上，你应该问问她的性生活情况，以解锁这一行动。)]",
 								null);
 					}
-					return new Response("Inside", "Accept Helena's invitation to come inside.", DATE_APARTMENT_START) {
+					return new Response("进入", "接受海伦娜的邀请进去。", DATE_APARTMENT_START) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.HELENAS_APARTMENT, PlaceType.HELENA_APARTMENT_LOUNGE);
@@ -1151,7 +1151,7 @@ public class HelenaHotel {
 					};
 					
 				} else if(index==4 && ((Helena)Main.game.getNpc(Helena.class)).isSlutty()) {
-					return new Response("Bedroom", "Take Helena straight into her bedroom to give her the fucking she's so obviously craving.", DATE_APARTMENT_BEDROOM) {
+					return new Response("卧室", "直接带海伦娜进卧室，让饥渴的她享受性爱。", DATE_APARTMENT_BEDROOM) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_RESTAURANT_END_HOME_BEDROOM"));
@@ -1184,7 +1184,7 @@ public class HelenaHotel {
 			
 			if(index==0) {
 				if(Main.game.getCurrentDialogueNode()==DATE_APARTMENT_COFFEE) {
-					return new Response("Leave", "Now that you've had coffee, it's time to leave...", DATE_APARTMENT_LEAVE) {
+					return new Response("离开", "既然你现在有咖啡了，是时候离开了……", DATE_APARTMENT_LEAVE) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_APARTMENT_START_LEAVE"));
@@ -1192,23 +1192,23 @@ public class HelenaHotel {
 					};
 					
 				} else {
-					return new Response("Leave", "You should at least have some coffee before you leave...", null);
+					return new Response("离开", "你在离开前至少得弄到点咖啡……", null);
 				}
 			}
 			
 			if(Main.game.getCurrentDialogueNode()==DATE_APARTMENT_KISS) {
-				responses.add(new Response("Coffee", "Helena isn't going to want to stop the fun and have coffee now.", null));
+				responses.add(new Response("咖啡", "海伦娜现在不想停下喝咖啡。", null));
 				
 			} else if(Main.game.getCurrentDialogueNode()==DATE_APARTMENT_COFFEE) {
-				responses.add(new Response("Coffee", "You're already having coffee with Helena...", null));
+				responses.add(new Response("咖啡", "你已经和海伦娜喝过咖啡了……", null));
 				
 			} else {
-				responses.add(new Response("Coffee", "Well, this is what you're here for, isn't it?", DATE_APARTMENT_COFFEE));
+				responses.add(new Response("咖啡", "好吧，你就是为这个来的，不是吗？", DATE_APARTMENT_COFFEE));
 			}
 			
 			if(!Main.game.getNpc(Helena.class).getFetishDesire(Fetish.FETISH_ORAL_RECEIVING).isPositive()) {
-				responses.add(new Response("First kiss",
-						"With how she's acting towards you, you think that you have an opportunity to give Helena her first kiss...",
+				responses.add(new Response("初吻",
+						"海伦娜如此这般对待你，你觉得有机会夺走她的初吻……",
 						DATE_APARTMENT_KISS) {
 					@Override
 					public void effects() {
@@ -1221,21 +1221,21 @@ public class HelenaHotel {
 				
 			} else {
 				if(((Helena) Main.game.getNpc(Helena.class)).isSlutty()) {
-					responses.add(new Response("Make out", "Although she definitely wants more than just a kiss, Helena is still more than happy to spend some time making out with you on the sofa.", DATE_APARTMENT_KISS));
+					responses.add(new Response("亲热", "海伦娜虽然肯定不满足于接吻，但还是很乐意和你在沙发上亲热一番。", DATE_APARTMENT_KISS));
 					
 				} else {
-					responses.add(new Response("Make out", "Now that Helena has discovered the pleasure of kissing, you know that she'd be willing to spend some time making out with you on the sofa.", DATE_APARTMENT_KISS));
+					responses.add(new Response("亲热", "既然海伦娜已经发现了接吻的乐趣，你知道她一定愿意和你在沙发上亲热一番。", DATE_APARTMENT_KISS));
 				}
 			}
 			
 			if(!Main.game.getNpc(Helena.class).getFetishDesire(Fetish.FETISH_ORAL_RECEIVING).isPositive()) {
-				responses.add(new Response("Bedroom", "Helena isn't quite ready for this yet. Perhaps if you were to take her first kiss, she'd be willing to take things into the bedroom the next time you're here.", null));
+				responses.add(new Response("卧室", "海伦娜还没准备好。也许如果你能夺走她的初吻，下次你来的时候她就会愿意和你进入卧室了。", null));
 				
 			} else {
-				responses.add(new Response("Bedroom",
+				responses.add(new Response("卧室",
 						((Helena) Main.game.getNpc(Helena.class)).isSlutty()
-							?"Give Helena what she so desperately wants and suggest that the two of you head to her bedroom."
-							:"Ask Helena if she'd like to head into her bedroom with you.",
+							?"给海伦娜她迫切想要的东西并建议你们俩去她的卧室。"
+							:"问海伦娜是否愿意和你一起去她的卧室。",
 						DATE_APARTMENT_BEDROOM) {
 					@Override
 					public void effects() {
@@ -1273,7 +1273,7 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on out into the streets of Dominion.", PlaceType.DOMINION_HELENA_HOTEL.getDialogue(false));
+				return new Response("继续", "继续前行，进入御城区的街道。", PlaceType.DOMINION_HELENA_HOTEL.getDialogue(false));
 			}
 			return null;
 		}
@@ -1315,8 +1315,8 @@ public class HelenaHotel {
 		public Response getResponse(int responseTab, int index) {
 			if(firstKissScene) {
 				if(index==1) {
-					return new Response("Leave",
-							"Completely overwhelmed with what's just happened, Helena has run off and needs time in which to recover. Perhaps the next time you take her on a date, she'll be willing to take things further with you...",
+					return new Response("离开",
+							"刚刚发生的一切让海伦娜完全不知所措，她跑掉了，需要时间来恢复。也许下次你再和她约会时，她会愿意和你进一步发展……",
 							DATE_APARTMENT_LEAVE) {
 						@Override
 						public void effects() {
@@ -1327,7 +1327,7 @@ public class HelenaHotel {
 				
 			} else {
 				if(index==0) {
-					return new Response("Leave", "Tell Helena that you need to be going now.", DATE_APARTMENT_LEAVE) {
+					return new Response("离开", "跟海伦娜说你得走了。", DATE_APARTMENT_LEAVE) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_APARTMENT_KISS_LEAVE"));
@@ -1336,7 +1336,7 @@ public class HelenaHotel {
 					};
 					
 				} else if(index==1) {
-					return new Response("Bedroom", "Go to Helena's bedroom with her.", DATE_APARTMENT_BEDROOM) {
+					return new Response("卧室", "和海伦娜去她的卧室。", DATE_APARTMENT_BEDROOM) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_APARTMENT_KISS_BEDROOM"));
@@ -1371,8 +1371,8 @@ public class HelenaHotel {
 					&& !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateRomanticSetupEatenOut)
 					&& Main.game.getNpc(Helena.class).isVaginaVirgin()) { // If romantic scene and Helena is still a virgin, you are led into giving oral:
 				responses.add(new ResponseSex(
-						"Perform cunnilingus",
-						"Push Helena onto the bed, drop your head between her legs, and start eating her out.",
+						"舔阴",
+						"将海伦娜推到床上，把你的头放在她的两腿之间，然后开始舔舐她的下体。",
 						true,
 						true,
 						getHelenaSexManager(false,
@@ -1397,8 +1397,8 @@ public class HelenaHotel {
 				
 			} else { // This is not a romantic scene, so give all options:
 				responses.add(new ResponseSex(
-						"Finger her",
-						"Finger Helena's pussy while simultaneously giving her breasts some oral attention.",
+						"指交她",
+						"手指抽插海伦娜的阴部，同时为她的乳房口交。",
 						true,
 						true,
 						getHelenaSexManager(false,
@@ -1440,15 +1440,15 @@ public class HelenaHotel {
 				
 				if(Main.game.getPlayer().hasPenis()) {
 					if(!Main.game.getNpc(Helena.class).getFetishDesire(Fetish.FETISH_BREASTS_SELF).isPositive()) {
-						responses.add(new Response("Receive paizuri", "Helena isn't ready to go this far with you yet...", null));
+						responses.add(new Response("接受乳交", "海伦娜还没准备好和你做到这步……", null));
 						
 					} else if(Main.game.getPlayer().isTaur()) {
-						responses.add(new Response("Receive paizuri", "As you are a taur, Helena can't get into a suitable position in which to give you a titjob...", null));
+						responses.add(new Response("接受乳交", "由于你是半兽身人，海伦娜无法找到合适的姿势给你做乳交……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Receive paizuri",
-								"Get Helena to push her breasts together and give you a titjob.",
+								"接受乳交",
+								"海伦娜把乳房挤在一起，给你乳交。",
 								true,
 								true,
 								getHelenaSexManager(false,
@@ -1481,12 +1481,12 @@ public class HelenaHotel {
 				}
 				
 				if(!Main.game.getNpc(Helena.class).getFetishDesire(Fetish.FETISH_BREASTS_SELF).isPositive()) {
-					responses.add(new Response("Perform cunnilingus", "Helena isn't ready to go this far with you yet...", null));
+					responses.add(new Response("进行舔阴", "海伦娜还没准备好和你走到这一步……", null));
 					
 				} else {
 					responses.add(new ResponseSex(
-							"Perform cunnilingus",
-							"Push Helena onto the bed, drop your head between her legs, and start eating her out.",
+							"舔阴",
+							"将海伦娜推到床上，把你的头放在她的两腿之间，然后开始舔舐她的下体。",
 							true,
 							true,
 							getHelenaSexManager(false,
@@ -1519,15 +1519,15 @@ public class HelenaHotel {
 	
 				if(Main.game.getPlayer().hasVagina()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						responses.add(new Response("Receive cunnilingus", "As you cannot access your vagina, Helena cannot perform oral on you...", null));
+						responses.add(new Response("接受舔阴", "由于无法接触到你的阴道，海伦娜无法为你口交……", null));
 						
 					} else if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_ORAL_RECEIVING)) {
-						responses.add(new Response("Receive cunnilingus", "Helena isn't ready to go this far with you yet...", null));
+						responses.add(new Response("被舔阴", "海伦娜还没准备好和你如此亲昵……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Receive cunnilingus",
-								"Get Helena to get down on her knees and eat you out.",
+								"接受舔阴",
+								"让海伦娜跪下，舔舐你的下体。",
 								true,
 								true,
 								getHelenaSexManager(false,
@@ -1568,15 +1568,15 @@ public class HelenaHotel {
 	
 				if(Main.game.getPlayer().hasPenis()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						responses.add(new Response("Receive blowjob", "As you cannot access your penis, Helena cannot perform oral on you...", null));
+						responses.add(new Response("被口交", "你的阴茎不可被触及，所以海伦娜没法给你口交……", null));
 						
 					} else if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_ORAL_RECEIVING)) {
-						responses.add(new Response("Receive blowjob", "Helena isn't ready to go this far with you yet...", null));
+						responses.add(new Response("接受口交", "海伦娜还没准备好和你走到这一步……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Receive blowjob",
-								"Get Helena to get down on her knees and suck your cock.",
+								"接受口交",
+								"让海伦娜跪下来为你口交。",
 								true,
 								true,
 								getHelenaSexManager(false,
@@ -1619,15 +1619,15 @@ public class HelenaHotel {
 				
 				if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_ORAL_GIVING)
 						|| !Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_ORAL_RECEIVING)) {
-					responses.add(new Response("Sixty-nine", "Helena isn't ready to do this with you just yet...", null));
+					responses.add(new Response("六九式", "海伦娜还没准备好和你走到这一步……", null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Sixty-nine", "As you are a taur, you can't get into a suitable position in which to sixty-nine with Helena...", null));
+					responses.add(new Response("六九式", "由于你是半兽身人，你无法找到合适的姿势与海伦娜进行六九式……", null));
 					
 				} else if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 					responses.add(new ResponseSex(
-							"Sixty-nine",
-							"Suggest that Helena sit on your face and bend down to mutually perform oral on one another...",
+							"六九式",
+							"提议海伦娜坐在你的脸上，弯下腰来互相为对方口交……",
 							true, true,
 							getHelenaSexManager(true,
 									SexPosition.LYING_DOWN, SexSlotLyingDown.SIXTY_NINE, SexSlotLyingDown.LYING_DOWN,
@@ -1660,8 +1660,8 @@ public class HelenaHotel {
 					
 				} else {
 					responses.add(new ResponseSex(
-							"Sixty-nine",
-							"Suggest you sit on Helena's face and bend down to mutually perform oral on one another...",
+							"六九式",
+							"提议你坐在海伦娜的脸上，弯下腰互相为对方口交……",
 							true, true,
 							getHelenaSexManager(false,
 									SexPosition.LYING_DOWN, SexSlotLyingDown.LYING_DOWN, SexSlotLyingDown.SIXTY_NINE,
@@ -1694,22 +1694,22 @@ public class HelenaHotel {
 				}
 				
 				if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_ORAL_GIVING)) {
-					responses.add(new Response("Scissoring", "Helena isn't ready to do this with you just yet...", null));
+					responses.add(new Response("剪刀式体位", "海伦娜还没准备好和你走到这一步……", null));
 					
 				} else if(!Main.game.getPlayer().hasVagina()) {
-					responses.add(new Response("Scissoring", "You do not have a vagina, so you cannot scissor with Helena...", null));
+					responses.add(new Response("剪刀式体位", "你没有阴道，所以你没法和海伦娜玩剪刀式……", null));
 
 				} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					responses.add(new Response("Scissoring", "As you cannot access your vagina, you cannot scissor with Helena...", null));
+					responses.add(new Response("剪刀式体位", "你的阴部不可被触及，所以你不能和海伦娜玩剪刀式……", null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Scissoring", "As you are a taur, you can't get into a suitable position in which to scissor with Helena...", null));
+					responses.add(new Response("剪刀式体位", "你的下肢是兽态，所以找不到跟海伦娜剪刀式的合适姿势……", null));
 					
 				} else {
 					if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 						responses.add(new ResponseSex(
-								"Scissoring",
-								"Suggest that the two of you scissor with one another...",
+								"剪刀式体位",
+								"提议你们两个互相剪刀式体位……",
 								true, true,
 								getHelenaSexManager(true,
 										SexPosition.LYING_DOWN, SexSlotLyingDown.SCISSORING, SexSlotLyingDown.LYING_DOWN,
@@ -1740,8 +1740,8 @@ public class HelenaHotel {
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Scissoring",
-								"Suggest that the two of you scissor with one another...",
+								"剪刀式体位",
+								"提议你们两个互相剪刀式体位……",
 								true, true,
 								getHelenaSexManager(false,
 										SexPosition.LYING_DOWN, SexSlotLyingDown.LYING_DOWN, SexSlotLyingDown.SCISSORING,
@@ -1775,15 +1775,15 @@ public class HelenaHotel {
 				if(!Main.game.getNpc(Helena.class).isVaginaVirgin()) {
 					if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 						if(!Main.game.getPlayer().hasPenis()) {
-							responses.add(new Response("Cowgirl", "As you don't have a penis, you can't get ridden by Helena...", null));
+							responses.add(new Response("骑乘位", "因为你没有阴茎，所以不能被海伦娜骑……", null));
 
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Cowgirl", "As you can't gain access to your penis, you can't get ridden by Helena...", null));
+							responses.add(new Response("骑乘位", "因为你无法使用你的阴茎，所以你无法被海伦娜骑……", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Cowgirl",
-									"Let Helena dominantly ride your cock.",
+									"骑乘位",
+									"让海伦娜支配你的鸡巴",
 									true, true,
 									getHelenaSexManager(true,
 											SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -1804,15 +1804,15 @@ public class HelenaHotel {
 						
 					} else { // SUBMISSIVE:
 						if(!Main.game.getPlayer().hasPenis()) {
-							responses.add(new Response("Missionary", "As you don't have a penis, you can't dominantly fuck Helena in the missionary position...", null));
+							responses.add(new Response("传教士体位", "因为你没有阴茎，所以你不能用传教士体位操海伦娜……", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Missionary", "As you can't gain access to your penis, you can't fuck Helena...", null));
+							responses.add(new Response("传教士体位", "由于你无法使用你的阴茎，你也就无法与海伦娜做爱……", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Missionary",
-									"Dominantly fuck Helena in the missionary position.",
+									"传教士体位",
+									"以传教士体位与海伦娜做爱。",
 									true, true,
 									getHelenaSexManager(false,
 											SexPosition.LYING_DOWN, SexSlotLyingDown.LYING_DOWN, SexSlotLyingDown.MISSIONARY,
@@ -1832,15 +1832,15 @@ public class HelenaHotel {
 						}
 						
 						if(!Main.game.getPlayer().hasPenis()) {
-							responses.add(new Response("Doggy-style", "As you don't have a penis, you can't dominantly fuck Helena in the doggy-style position...", null));
+							responses.add(new Response("后入式", "你没有阴茎，不能后入海伦娜……", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Doggy-style", "As you can't gain access to your penis, you can't fuck Helena...", null));
+							responses.add(new Response("后入式", "你不能使用自己的阴茎，不能后入海伦娜……", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Doggy-style",
-									"Dominantly fuck Helena in the doggy-style position.",
+									"后入式",
+									"以后入式的姿势支配性地操海伦娜。",
 									true, true,
 									getHelenaSexManager(false,
 											SexPosition.ALL_FOURS, SexSlotAllFours.ALL_FOURS, SexSlotAllFours.BEHIND,
@@ -1860,18 +1860,18 @@ public class HelenaHotel {
 						}
 						
 						if(!Main.game.getPlayer().hasPenis()) {
-							responses.add(new Response("Mating press", "As you don't have a penis, you can't dominantly breed Helena...", null));
+							responses.add(new Response("授种式", "因为你没有阴茎，所以你不能操海伦娜……", null));
 							
 						} else if(Main.game.getNpc(Helena.class).isVisiblyPregnant()) {
-							responses.add(new Response("Mating press", "As Helena already has a swollen, pregnant belly, she wouldn't want you to push her down into this position...", null));
+							responses.add(new Response("授种式", "由于海伦娜已经有了一个涨起的大肚子，她不会希望你把她按到这个位置的……", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Mating press", "As you can't gain access to your penis, you can't fuck Helena...", null));
+							responses.add(new Response("授种式", "由于你无法使用你的阴茎，你也就无法与海伦娜做爱……", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Mating press",
-									"Push Helena down onto her back and immediately start breeding her.",
+									"授种式",
+									"将海伦娜按倒在地，立即开始给她配种。",
 									true, true,
 									getHelenaSexManager(false,
 											SexPosition.LYING_DOWN, SexSlotLyingDown.LYING_DOWN, SexSlotLyingDown.MATING_PRESS,
@@ -1899,17 +1899,17 @@ public class HelenaHotel {
 					
 				} else {
 					if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_ORAL_RECEIVING)) {
-						responses.add(new Response("Virginity", "Helena isn't going to want to discuss losing her virginity until after she's received oral from you...", null));
+						responses.add(new Response("童贞", "海伦娜在接受你的口交之前是不会想讨论失去贞操的问题的……", null));
 						
 					} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateVirginityTalk)) {
 						responses.add(new Response(
-								"Virginity",
-								"Helena has already told you that she's unwilling to lose her virginity."
-									+ "<br/>[style.italicsMinorGood(Perhaps you could arrange something with Scarlett the next time you take Helena on a date...)]",
+								"贞操",
+								"海伦娜已经告诉你她不想失去贞操。"
+									+ "<br/>[style.italicsMinorGood(也许在下次和海伦娜约会时，你可以给斯嘉丽安排点事情……)]",
 								null));
 						
 					} else {
-						responses.add(new Response("Virginity", "Ask Helena if she's ready to lose her virginity to you.", DATE_APARTMENT_BEDROOM) {
+						responses.add(new Response("贞操", "询问海伦娜是否愿意把她的第一次给你。", DATE_APARTMENT_BEDROOM) {
 							@Override
 							public void effects() {
 								Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/helenaHotel/hotelDate", "DATE_APARTMENT_BEDROOM_VIRGINITY_TALK"));
@@ -1923,12 +1923,12 @@ public class HelenaHotel {
 				// Anal:
 				if(Main.game.isAnalContentEnabled()) {
 					if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_ORAL_RECEIVING)) {
-						responses.add(new Response("Perform anilingus", "Helena will not want to receive anilingus until after she's received cunnilingus from you.", null));
+						responses.add(new Response("进行舔肛", "直到你给海伦娜舔阴之前，她都不会接受舔肛。", null));
 						
 					} else if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 						responses.add(new ResponseSex(
-								"Anilingus face-sitting",
-								"Get Helena to sit on your face so that you can perform anilingus on her.",
+								"吻肛颜面骑乘",
+								"让海伦娜坐在你的脸上，然后你可以舔弄她的菊穴。",
 								true, true,
 								getHelenaSexManager(true,
 										SexPosition.LYING_DOWN, SexSlotLyingDown.FACE_SITTING_REVERSE, SexSlotLyingDown.LYING_DOWN,
@@ -1956,8 +1956,8 @@ public class HelenaHotel {
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Perform anilingus",
-								"Get Helena to present her ass to you so that you can perform anilingus on her.",
+								"进行舔肛",
+								"让海伦娜将屁股交给你，这样你就可以舔弄她的肛门。",
 								true, true,
 								getHelenaSexManager(false,
 										SexPosition.ALL_FOURS, SexSlotAllFours.ALL_FOURS, SexSlotAllFours.BEHIND_ORAL,
@@ -1989,17 +1989,17 @@ public class HelenaHotel {
 					
 					if(Main.game.getNpc(Helena.class).isAssVirgin()) {
 						if(!Main.game.getPlayer().hasPenis()) {
-							responses.add(new Response("Take anal virginity", "As you don't have a penis, you can't take Helena's anal virginity...", null));
+							responses.add(new Response("夺走肛门贞操", "由于你没有肉棒，无法夺走海伦娜肛门的贞操……", null));
 							
 						} else if(!Main.game.getNpc(Helena.class).getFetishDesire(Fetish.FETISH_ANAL_RECEIVING).isPositive()) {
-							responses.add(new Response("Take anal virginity",
-									"Helena isn't at all interested in losing her anal virginity. Perhaps if you eased her into it by performing anilingus on her first, she could be convinced otherwise...",
+							responses.add(new Response("夺走肛门贞操",
+									"海伦娜对失去肛门贞操不感兴趣。如果你先舔肛让她放松下来，她或许会同意……",
 									null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Take anal virginity",
-									"Suggest to Helena that you could take her anal virginity...",
+									"夺走肛门贞操",
+									"询问能否夺走海伦娜肛门的贞操……",
 									true, true,
 									getHelenaSexManager(false,
 											Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)
@@ -2040,11 +2040,11 @@ public class HelenaHotel {
 					} else {
 						if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 							if(!Main.game.getPlayer().hasPenis()) {
-								responses.add(new Response("Cowgirl (anal)", "As you don't have a penis, you can't get Helena to anally ride your cock...", null));
+								responses.add(new Response("骑乘位(肛门)", "由于你没有阴茎，无法让海伦娜肛门骑乘……", null));
 							} else {
 								responses.add(new ResponseSex(
-										"Cowgirl (anal)",
-										"Let Helena use her ass to dominantly ride your cock.",
+										"骑乘位(肛门)",
+										"让海伦娜的肛门支配你的肉棒。",
 										true, true,
 										getHelenaSexManager(false,
 												SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -2065,11 +2065,11 @@ public class HelenaHotel {
 							
 						} else {
 							if(!Main.game.getPlayer().hasPenis()) {
-								responses.add(new Response("Doggy-style (anal)", "As you don't have a penis, you can't dominantly fuck Helena's ass in the doggy-style position...", null));
+								responses.add(new Response("后入式(肛门)", "因为你没有阴茎，所以不能后入海伦娜的肛门……", null));
 							} else {
 								responses.add(new ResponseSex(
-										"Doggy-style (anal)",
-										"Dominantly fuck Helena's ass in the doggy-style position.",
+										"后入式(肛门)",
+										"以后入式体位支配性地突入海伦娜的肛门。",
 										true, true,
 										getHelenaSexManager(false,
 												SexPosition.ALL_FOURS, SexSlotAllFours.ALL_FOURS, SexSlotAllFours.BEHIND,
@@ -2093,12 +2093,12 @@ public class HelenaHotel {
 				
 				if(Main.game.isFootContentEnabled() && Main.game.getPlayer().hasPenis()) {
 					if(Main.game.getPlayer().isTaur()) {
-						responses.add(new Response("Talon-job", "As you are a taur, you can't get into a suitable position in which Helena could give you a talon-job...", null));
+						responses.add(new Response("爪交", "由于你是半兽身人，你无法找到合适姿势让海伦娜给你爪交……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Talon-job",
-								"Ask Helena to use her talons to jerk you off.",
+								"爪交",
+								"让海伦娜用爪子帮你手淫。",
 								true, true,
 								getHelenaSexManager(true,
 										SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -2139,7 +2139,7 @@ public class HelenaHotel {
 		}
 	};
 
-	public static final DialogueNode DATE_APARTMENT_BEDROOM_AFTER_ROMANCE_SEX = new DialogueNode("Finished", "Helena seems to have had enough and pulls away...", true) {
+	public static final DialogueNode DATE_APARTMENT_BEDROOM_AFTER_ROMANCE_SEX = new DialogueNode("结束", "海伦娜似乎做够了，脱身而去……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -2151,10 +2151,10 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave",
+				return new Response("离开",
 						Main.game.getPlayer().hasPenis()
-							?"Decide not to take Helena's virginity tonight, and after spending some time lying beside her, tell her that you need to leave."
-							:"Decide not to do anything else with Helena tonight, and after spending some time lying beside her, tell her that you need to leave.",
+							?"你决定今晚不夺走海伦娜的贞操，在她身边躺一会后，告诉她你要离开。"
+							:"你决定今晚不对海伦娜做任何事，在她身边躺一会后，告诉她你要离开。",
 						DATE_APARTMENT_LEAVE) {
 					@Override
 					public int getSecondsPassed() {
@@ -2167,18 +2167,18 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==1) {
-				return new Response("Shower & sleep",
-						"Decide not to take Helena's virginity and instead join her in the shower before going to sleep in her bed with her."
-								+ "<br/>[style.italicsGood(Cleans <b>a maximum of "+Units.fluid(500)+"</b> of fluids from all orifices.)]"
-								+ "<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]",
+				return new Response("淋浴&睡觉",
+						"你决定不夺走海伦娜的贞操，在一起淋浴后，你和她一同上床入睡。"
+								+ "<br/>[style.italicsGood(从所有腔穴中清理<b>最多"+Units.fluid(500)+"</b>液体。)]"
+								+ "<br/>[style.italicsGood(将<b>仅会</b>清理当前装备的衣物。)]",
 						DATE_APARTMENT_BEDROOM_AFTER_SEX_SLEEP);
 			}
 			
 			if(Main.game.getPlayer().hasPenis()) {
 				if(index==2) {
 					return new ResponseSex(
-							"Take virginity (as sub)",
-							"Let Helena lose her virginity at her own pace by letting her ride your cock.<br/>[style.italicsSub(This will cause Helena to permanently gain the dominant fetish!)]",
+							"夺走贞操(作为服从方)",
+							"让海伦娜骑上肉棒，夺走自己贞操。<br/>[style.italicsSub(这会让海伦娜永久获得支配者性癖！)]",
 							true, true,
 							getHelenaSexManager(true,
 									SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -2207,11 +2207,11 @@ public class HelenaHotel {
 					
 				} else if(index==3) {
 					return new ResponseSex(
-							"Take virginity (as dom)",
+							"夺走贞操(作为支配方)",
 							(Main.game.getPlayer().isTaur()
-									?"Mount Helena and take her virginity in the doggy-style position."
-									:"Take Helena's virginity in the missionary position.")
-								+ "<br/>[style.italicsSub(This will cause Helena to permanently gain the submissive fetish!)]",
+									?"骑上海伦娜，以后入式体位夺走她的贞操。" 
+									:"以传教士体位夺走海伦娜的贞操。")
+								+ "<br/>[style.italicsSub(这会让海伦娜永久获得顺从的性癖！)]",
 							true, true,
 							getHelenaSexManager(false,
 									Main.game.getPlayer().isTaur()
@@ -2248,11 +2248,11 @@ public class HelenaHotel {
 					
 				} else if(index==4) {
 					return new ResponseSex(
-							"Break her",
+							"挣脱她",
 							(Main.game.getPlayer().isTaur()
-									?"Mount Helena and sadistically take her virginity in the doggy-style position."
-									:"Sadistically take Helena's virginity in the missionary position.")
-								+ "<br/>[style.italicsSub(This will cause Helena to permanently gain the submissive and masochistic fetishes!)]",
+									?"骑上海伦娜，以后入式体位虐待性地夺走她的贞操。"
+									:"以传教士体位虐待性地夺走海伦娜的贞操。")
+								+ "<br/>[style.italicsSub(这会让海伦娜永久获得顺从和受虐狂的性癖！)]",
 							Util.newArrayListOfValues(Fetish.FETISH_SADIST),
 							null,
 							CorruptionLevel.FIVE_CORRUPT,
@@ -2302,7 +2302,7 @@ public class HelenaHotel {
 		}
 	};
 
-	public static final DialogueNode DATE_APARTMENT_BEDROOM_AFTER_SEX = new DialogueNode("Finished", "Helena seems to have had enough and pulls away...", true) {
+	public static final DialogueNode DATE_APARTMENT_BEDROOM_AFTER_SEX = new DialogueNode("结束", "海伦娜似乎做够了，脱身而去……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -2319,8 +2319,8 @@ public class HelenaHotel {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaBedroomFromNest)) { // Helena & the player have entered her bedroom directly from the nest, and so should return there:
 				if(index==1) {
-					return new Response("Leave",
-							"Do as Helena asks and exit her apartment.",
+					return new Response("离开",
+							"按照海伦娜要求去做，随后离开她的住处。",
 							DATE_APARTMENT_LEAVE) {
 						@Override
 						public void effects() {
@@ -2337,8 +2337,8 @@ public class HelenaHotel {
 				
 			} else {
 				if(index==0) {
-					return new Response("Leave",
-							"Tell Helena that you should be leaving right away...",
+					return new Response("离开",
+							"告诉海伦娜你马上就要离开……",
 							DATE_APARTMENT_LEAVE) {
 						@Override
 						public void effects() {
@@ -2348,10 +2348,10 @@ public class HelenaHotel {
 					};
 					
 				} else if(index==1) {
-					return new Response("Shower & sleep",
-							"Join Helena in the shower before going to sleep in her bed with her."
-								+ "<br/>[style.italicsGood(Cleans <b>a maximum of "+Units.fluid(500)+"</b> of fluids from all orifices.)]"
-								+ "<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]",
+					return new Response("淋浴&睡觉",
+							"和海伦娜一起淋浴，然后和她上床睡觉。"
+								+ "<br/>[style.italicsGood(从所有腔穴中清理<b>最多"+Units.fluid(500)+"</b>液体。)]"
+								+ "<br/>[style.italicsGood(将<b>仅会</b>清理当前装备的衣物。)]",
 							DATE_APARTMENT_BEDROOM_AFTER_SEX_SLEEP);
 				}
 			}
@@ -2379,8 +2379,8 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wake up",
-						"You wake up the next morning in Helena's bed...",
+				return new Response("醒来",
+						"晨间，你在海伦娜的床上醒来……",
 						DATE_APARTMENT_BEDROOM_AFTER_SEX_SLEEP_WAKE_UP);
 			} 
 			return null;
@@ -2400,8 +2400,8 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave",
-						"Tell Helena that you should be leaving right away...",
+				return new Response("离开",
+						"告诉海伦娜你马上就要离开……",
 						DATE_APARTMENT_LEAVE) {
 					@Override
 					public void effects() {
@@ -2410,8 +2410,8 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==1) {
-				return new Response("Breakfast",
-						"Take up Helena's offer of having breakfast with her before leaving.",
+				return new Response("早餐",
+						"接受海伦娜的请求和她一起享用早餐，随后便离开这。",
 						DATE_APARTMENT_BREAKFAST) {
 					@Override
 					public void effects() {
@@ -2423,8 +2423,8 @@ public class HelenaHotel {
 			} else if(index==2 && ((Helena)Main.game.getNpc(Helena.class)).isSlutty()) {
 				if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 					return new ResponseSex(
-							"Morning sex",
-							"Let Helena take charge and have sex with her.",
+							"晨间性爱",
+							"让海伦娜掌握主动权跟你做爱。",
 							true, true,
 							getHelenaSexManager(true,
 									SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -2442,8 +2442,8 @@ public class HelenaHotel {
 					
 				} else {
 					return new ResponseSex(
-							"Morning sex",
-							"Take charge and have sex with Helena.",
+							"晨间性爱",
+							"让你掌握主动权跟海伦娜做爱。",
 							true, true,
 							getHelenaSexManager(false,
 									SexPosition.LYING_DOWN, SexSlotLyingDown.LYING_DOWN, SexSlotLyingDown.MISSIONARY,
@@ -2467,7 +2467,7 @@ public class HelenaHotel {
 		}
 	};
 	
-	public static final DialogueNode DATE_APARTMENT_BEDROOM_AFTER_SEX_MORNING = new DialogueNode("Finished", "Helena seems to have had enough and pulls away...", true) {
+	public static final DialogueNode DATE_APARTMENT_BEDROOM_AFTER_SEX_MORNING = new DialogueNode("结束", "海伦娜似乎做够了，脱身而去……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().cleanAllClothing(false, false);
@@ -2486,8 +2486,8 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave",
-						"Tell Helena that you should be leaving now...",
+				return new Response("离开",
+						"告诉海伦娜你现在要离开……",
 						DATE_APARTMENT_LEAVE) {
 					@Override
 					public void effects() {
@@ -2496,8 +2496,8 @@ public class HelenaHotel {
 				};
 				
 			} else if(index==1) {
-				return new Response("Breakfast",
-						"Take up Helena's offer of having breakfast with her before leaving.",
+				return new Response("早餐",
+						"接受海伦娜的请求和她一起享用早餐，随后便离开这。",
 						DATE_APARTMENT_BREAKFAST) {
 					@Override
 					public void effects() {
@@ -2528,8 +2528,8 @@ public class HelenaHotel {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Eat",
-						"Enjoy your breakfast with Helena, before taking your leave and heading back out into Dominion.",
+				return new Response("进食",
+						"和海伦娜享用早餐后，你返回到御城区",
 						DATE_APARTMENT_LEAVE) {
 					@Override
 					public void effects() {

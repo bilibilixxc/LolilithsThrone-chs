@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tentacle>
 	<race>NoStepOnSnek_octopus</race>
-	<transformationName><![CDATA[octopus]]></transformationName>
+	<transformationName><![CDATA[章鱼]]></transformationName>
 	<coveringType>OCTOPUS_SKIN</coveringType>
 	<defaultGirth>4</defaultGirth>
 	<defaultLengthAsPercentageOfHeight>2.5</defaultLengthAsPercentageOfHeight>
@@ -13,25 +13,25 @@
 	</tags>
 	<determiner><![CDATA[]]></determiner>
 	<determinerPlural><![CDATA[]]></determinerPlural>
-	<name><![CDATA[tentacle]]></name>
-	<namePlural><![CDATA[tentacles]]></namePlural>
+	<name><![CDATA[触手]]></name>
+	<namePlural><![CDATA[触手]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor>strong</descriptor>
+		<descriptor><![CDATA[健壮]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>strong</descriptor>
+		<descriptor><![CDATA[健壮]]></descriptor>
 	</descriptorsFeminine>
-	<tipName><![CDATA[tip]]></tipName>
-	<tipNamePlural><![CDATA[tips]]></tipNamePlural>
+	<tipName><![CDATA[尖端]]></tipName>
+	<tipNamePlural><![CDATA[尖端]]></tipNamePlural>
 	<tipDescriptorsMasculine>
-		<descriptor>rounded</descriptor>
+		<descriptor><![CDATA[圆润]]></descriptor>
 	</tipDescriptorsMasculine>
 	<tipDescriptorsFeminine>
-		<descriptor>rounded</descriptor>
+		<descriptor><![CDATA[圆润]]></descriptor>
 	</tipDescriptorsFeminine>
 	<transformationDescription><![CDATA[
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		In place of legs, [npc.sheHasFull] [npc.tentacleCount] [npc.tentacleColour(true)] tentacles, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects.
+		在腿的位置上，[npc.sheHasFull]长出了[npc.tentacleCount]条[npc.tentacleColour(true)]的触手。它们活动自如，能够帮助[npc.herHim]抓取并握住物体。
 	]]></bodyDescription>
 </tentacle>

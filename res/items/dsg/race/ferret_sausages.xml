@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the plate reads 'Packed by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[盘底刻着细小的字迹，写着“DSG食品有限公司包装”。]]></authorTag>
 		
 		<value>250</value> 
-		<determiner><![CDATA[a plate of]]></determiner>
-		<name><![CDATA[Sausages]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Sausages]]></namePlural>
-		<description><![CDATA[A plate of high quality sausages accompanied by seasoned tomatoes and cucumbers all underneath a glass cover. The label on the cover depicts a nude ferret-girl straddling a similar, but comically over-sized sausage, coquettishly hiding her nipples from the viewer.]]></description> 
+		<determiner><![CDATA[一盘]]></determiner>
+		<name><![CDATA[香肠]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[香肠]]></namePlural>
+		<description><![CDATA[一盘高质量香肠，配有调味番茄和黄瓜，都被玻璃罩盖着。盖子上的标签上描绘了一只裸体的雪貂女跨坐在一根类似的，但滑稽地超大的香肠上，媚俏地遮住了她的乳头，以避免观众的视线。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -24,15 +24,15 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[ferret]]></potionDescriptor>
+		<potionDescriptor><![CDATA[貂]]></potionDescriptor>
 		<associatedRace>dsg_ferret</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -40,7 +40,7 @@
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] the glass cover and [npc.verb(breathe)] in the smoky scent of the sausage mixed with a sharp undertone of seasoning. Unable to resist the delicious looking meal, [npc.she] eagerly [npc.verb(start)] wolfing it all down and [npc.verb(empty)] the plate in moments.
-		]]></selfUse>
+		[npc.Name]把玻璃盖取下，深吸着香气，那里弥漫着烟熏香肠的味道，伴随着辛辣的调味品。[npc.she]情不自禁地开始大口吞咽这美味的餐点，不一会儿便将盘子里的食物全部吃光。
+]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] glass cover from the plate and [npc.verb(hold)] it out to [npc2.name], allowing [npc2.herHim] to [npc2.verb(breathe)] in the smoky scent of the sausage mixed with a sharp undertone of seasoning. Unable to resist the delicious-looking meal, [npc2.she] [npc2.verb(start)] wolfing it all down and [npc.verb(empty)] the plate in moments.
+		[npc.Name]取下了盘子上的玻璃盖，并将其递给[npc2.name]，让[npc2.herHim]闻着香肠的烟熏香味，其中夹杂着一抹辛辣的调味料气息。难以抗拒这美味的餐点，[npc2.she]迫不及待地开始狼吞虎咽，不多时就把盘子里的食物吃个一干二净。
 		]]></otherUse>
 	</useDescriptions>
 

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[crate]]></deskName>
+	<deskName><![CDATA[板条箱]]></deskName>
 	<title/>
 	<consensual><![CDATA[false]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>
@@ -13,7 +13,7 @@
 	<publicSex>
 		<isPublic><![CDATA[true]]></isPublic>
         <startingDescription><![CDATA[
-			The slimes which are present in this area are lost in the pleasure of being milked and so pay no attention to you as you're fucked by Sleip and Nir...
+			这里的史莱姆都沉浸在被挤奶的快感中，所以根本注意不到你正被斯雷普和尼尔干……
 		]]></startingDescription>
         <randomDescriptions enabled="false"/>
 	</publicSex>

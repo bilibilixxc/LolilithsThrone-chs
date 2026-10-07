@@ -39,7 +39,7 @@ public class CultistDialogue {
 		return Main.game.getActiveNPC();
 	}
 	
-	public static final DialogueNode ENCOUNTER_START = new DialogueNode("A Witch Appears!", "", true) {
+	public static final DialogueNode ENCOUNTER_START = new DialogueNode("魔女出现！", "", true) {
 
 		@Override
 		public String getContent() {
@@ -49,7 +49,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Make your excuses and get away from this annoying cultist.", ENCOUNTER_START){
+				return new Response("离开", "找个借口摆脱这个讨厌的异教徒。", ENCOUNTER_START) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("encounters/dominion/cultist", "ENCOUNTER_START_LEAVE", getCultist()));
@@ -61,7 +61,7 @@ public class CultistDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Chapel", "Do as the cultist asks and follow her down a nearby back-alley. What could possibly go wrong?", ENCOUNTER_CHAPEL) {
+				return new Response("小教堂", "按照狂信者的要求，跟着她走到附近的小巷子里。会出什么问题呢？", ENCOUNTER_CHAPEL) {
 					@Override
 					public void effects() {
 						// Pull up dress:
@@ -75,7 +75,7 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL = new DialogueNode("The Witch's Chapel", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL = new DialogueNode("魔女的教堂", "", true) {
 
 		@Override
 		public String getContent() {
@@ -85,12 +85,12 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Fight", "You're left with no choice but to fight!", getCultist(), Util.newHashMapOfValues(
-						new Value<>(Main.game.getPlayer(), "You tell the succubus that you're not interested, and just as you expected, she moves to attack!"),
-						new Value<>(getCultist(), "[npc.Name] readies her broomstick and shouts, [npc.speech(How <i>dare</i> you try to refuse my gift! I'll give it to you by force!)]")));
+				return new ResponseCombat("战斗", "你别无选择，只能战斗！", getCultist(), Util.newHashMapOfValues(
+						new Value<>(Main.game.getPlayer(), "你告诉魅魔你不感兴趣，正如你所料，她开始攻击了！"),
+						new Value<>(getCultist(), "[npc.Name]拿起扫帚，大喊一声，[npc.speech(你<i>竟敢</i>拒绝我的馈赠！那我就要硬塞给你！)]")));
 				
 			} else if(index==2) {
-				return new ResponseSex("Accept", "Drop to your knees and prepare to service her orally.",
+				return new ResponseSex("接受", "你双膝跪地，准备给她口交。",
 						true, true,
 						new SMCultistKneeling(
 								Util.newHashMapOfValues(new Value<>(getCultist(), SexSlotUnique.KNEELING_RECEIVING_ORAL_CULTIST)),
@@ -120,7 +120,7 @@ public class CultistDialogue {
 				
 			} else if(index == 3) {
 				if(Main.game.getPlayer().hasVagina()) {
-					return new ResponseSex("Offer Pussy", "Offer [npc.name] your pussy instead.", Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY),
+					return new ResponseSex("献上小穴", "作为替代，给[npc.name]献上你的小穴。", Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY),
 							null, Fetish.FETISH_PREGNANCY.getAssociatedCorruptionLevel(), null, null, null,
 							true, false,
 							new SMAltarMissionary(
@@ -152,11 +152,11 @@ public class CultistDialogue {
 					};
 					
 				} else {
-					return new Response("Offer Pussy", "You'd need a vagina in order to offer it to [npc.name]...", null);
+					return new Response("献上小穴", "你需要拥有阴道，才能献给[npc.name]……", null);
 				}
 				
 			} else if(index==4) {
-				return new ResponseSex("Offer Ass", "Offer [npc.name] your ass instead.", Util.newArrayListOfValues(Fetish.FETISH_ANAL_RECEIVING),
+				return new ResponseSex("献上屁眼", "作为替代，给[npc.name]献上你的屁眼。", Util.newArrayListOfValues(Fetish.FETISH_ANAL_RECEIVING),
 						null, Fetish.FETISH_ANAL_RECEIVING.getAssociatedCorruptionLevel(), null, null, null,
 						true, false,
 						new SMAltarMissionary(
@@ -192,7 +192,7 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_REPEAT = new DialogueNode("The Witch's Chapel", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_REPEAT = new DialogueNode("魔女的教堂", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			// Pull up dress:
@@ -209,7 +209,7 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_LEAVING = new DialogueNode("The Witch's Chapel", "", true, true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_LEAVING = new DialogueNode("魔女的教堂", "", true, true) {
 
 		@Override
 		public String getContent() {
@@ -219,7 +219,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Leave the chapel and head back out into the streets of Dominion.", ENCOUNTER_CHAPEL_LEAVING){
+				return new Response("继续", "离开教堂，回到御城区街头。", ENCOUNTER_CHAPEL_LEAVING) {
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -228,9 +228,9 @@ public class CultistDialogue {
 			
 			} else if(index==10) {
 				return new Response(
-						"Remove character",
-						"Scare [npc.name] away."
-							+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]",
+						"移除角色",
+						"赶[npc.name]走"
+							+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]",
 						ENCOUNTER_CHAPEL_LEAVING) {
 					@Override
 					public Colour getHighlightColour() {
@@ -257,7 +257,7 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_COMBAT_VICTORY = new DialogueNode("The Witch's Chapel", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_COMBAT_VICTORY = new DialogueNode("魔女的教堂", "", true) {
 
 		@Override
 		public String getContent() {
@@ -267,7 +267,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Turn around and head for the door.", ENCOUNTER_CHAPEL_LEAVING){
+				return new Response("离开", "转身走向门口。", ENCOUNTER_CHAPEL_LEAVING) {
 					@Override
 					public void effects(){
 						Colour colour = PresetColour.CLOTHING_BLACK;
@@ -285,7 +285,7 @@ public class CultistDialogue {
 				};
 			
 			} else if(index==2) {
-				return new ResponseSex("Sex", "Decide against using [npc.namePos] broomstick to seal [npc.herHim] in place and just have normal, dominant sex with [npc.herHim] instead...",
+				return new ResponseSex("性爱", "决定不用[npc.namePos]的扫帚封印住[npc.herHim]，而是来一场普通的支配型性爱……",
 						true, false,
 						new SMAltarMissionary(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotUnique.MISSIONARY_ALTAR_STANDING_BETWEEN_LEGS)),
@@ -302,7 +302,7 @@ public class CultistDialogue {
 				};
 			
 			} else if(index == 3) {
-				return new ResponseSex("Witch's Seal", "Use her broomstick to cast Witch's Seal on her.",
+				return new ResponseSex("魔女封锁术", "用她的扫把，在她身上施放魔女的封锁。",
 						false, false,
 						new SMAltarMissionarySealed(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotUnique.MISSIONARY_ALTAR_SEALED_STANDING_BETWEEN_LEGS)),
@@ -325,8 +325,8 @@ public class CultistDialogue {
 				};
 				
 			} else if (index == 4) {
-				return new Response("Full transformations",
-						"Take a very detailed look at what [npc.name] can transform [npc.herself] into...",
+				return new Response("完全转化",
+						"仔细观察[npc.name]会将自己转化成什么样……",
 						BodyChanging.BODY_CHANGING_CORE){
 					@Override
 					public void effects() {
@@ -341,7 +341,7 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_COMBAT_LOSS = new DialogueNode("The Witch's Chapel", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_COMBAT_LOSS = new DialogueNode("魔女的教堂", "", true) {
 
 		@Override
 		public String getContent() {
@@ -351,7 +351,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new ResponseSex("Witch's Toy", "You're completely immobilised, and can do nothing as the witch prepares to use you as her toy.",
+				return new ResponseSex("魔女的玩具", "你完全无法行动，只得眼睁睁地看着魔女将你用作玩具。",
 						false, false,
 						new SMAltarMissionarySealed(
 								Util.newHashMapOfValues(new Value<>(getCultist(), SexSlotUnique.MISSIONARY_ALTAR_SEALED_STANDING_BETWEEN_LEGS)),
@@ -402,10 +402,10 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_POST_ORAL_SEX = new DialogueNode("Post-sex", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_POST_ORAL_SEX = new DialogueNode("性交之后", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCultist(), "[npc.Name] has had enough of receiving oral sex from you...");
+			return UtilText.parse(getCultist(), "[npc.Name]已经让你口交爽过了……");
 		}
 		@Override
 		public String getContent() {
@@ -415,7 +415,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Turn around and head for the door.", ENCOUNTER_CHAPEL_POST_ORAL_SEX){
+				return new Response("离开", "转身走向门口。", ENCOUNTER_CHAPEL_POST_ORAL_SEX) {
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -428,10 +428,10 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_POST_VAGINAL_SEX = new DialogueNode("Post-sex", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_POST_VAGINAL_SEX = new DialogueNode("性交之后", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCultist(), "[npc.Name] has had enough of fucking your pussy...");
+			return UtilText.parse(getCultist(), "[npc.Name]已经操你的小穴爽过了……");
 		}
 		@Override
 		public String getContent() {
@@ -441,7 +441,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Turn around and head for the door.", ENCOUNTER_CHAPEL_POST_VAGINAL_SEX){
+				return new Response("离开", "转身走向门口。", ENCOUNTER_CHAPEL_POST_VAGINAL_SEX) {
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -454,10 +454,10 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_POST_ANAL_SEX = new DialogueNode("Post-sex", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_POST_ANAL_SEX = new DialogueNode("性交之后", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCultist(), "[npc.Name] has had enough of fucking your ass...");
+			return UtilText.parse(getCultist(), "[npc.Name]已经操你的屁股爽过了……");
 		}
 
 		@Override
@@ -468,7 +468,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way.", ENCOUNTER_CHAPEL_POST_VAGINAL_SEX){
+				return new Response("继续", "继续你的旅程。", ENCOUNTER_CHAPEL_POST_VAGINAL_SEX){
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -481,10 +481,10 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_POST_SUB_SEALED_SEX = new DialogueNode("Post-sex", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_POST_SUB_SEALED_SEX = new DialogueNode("性交之后", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCultist(), "[npc.Name] has had enough of fucking you...");
+			return UtilText.parse(getCultist(), "[npc.Name]已经操够你了……");
 		}
 		@Override
 		public String getContent() {
@@ -494,7 +494,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way.", ENCOUNTER_CHAPEL_POST_ORAL_SEX){
+				return new Response("继续", "继续你的旅程。", ENCOUNTER_CHAPEL_POST_ORAL_SEX){
 					@Override
 					public DialogueNode getNextDialogue(){
 						return Main.game.getDefaultDialogue(false);
@@ -507,10 +507,10 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_POST_DOM_SEX = new DialogueNode("Post-sex", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_POST_DOM_SEX = new DialogueNode("性交之后", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getCultist(), "You've had enough of fucking [npc.name]...");
+			return UtilText.parse(getCultist(), "你操够[npc.Name]了……");
 		}
 		@Override
 		public String getContent() {
@@ -520,7 +520,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Turn around and head for the door.", ENCOUNTER_CHAPEL_LEAVING){
+				return new Response("离开", "转身走向门口。", ENCOUNTER_CHAPEL_LEAVING) {
 					@Override
 					public void effects(){
 						Main.game.getPlayerCell().getInventory().addClothing(Main.game.getItemGen().generateClothing("innoxia_witch_witch_boots_thigh_high", PresetColour.CLOTHING_BLACK, false));
@@ -536,7 +536,7 @@ public class CultistDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENCOUNTER_CHAPEL_POST_DOM_SEALED_SEX = new DialogueNode("Post-sex", "", true) {
+	public static final DialogueNode ENCOUNTER_CHAPEL_POST_DOM_SEALED_SEX = new DialogueNode("性交之后", "", true) {
 
 		@Override
 		public String getContent() {
@@ -546,7 +546,7 @@ public class CultistDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Turn around and head for the door.", ENCOUNTER_CHAPEL_LEAVING){
+				return new Response("离开", "转身走向门口。", ENCOUNTER_CHAPEL_LEAVING) {
 					@Override
 					public void effects(){
 						Main.game.getPlayerCell().getInventory().addClothing(Main.game.getItemGen().generateClothing("innoxia_witch_witch_boots_thigh_high", PresetColour.CLOTHING_BLACK, false));

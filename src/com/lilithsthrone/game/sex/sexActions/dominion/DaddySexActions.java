@@ -39,7 +39,7 @@ public class DaddySexActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Waitress approaching";
+			return "服务生走近";
 		}
 
 		@Override
@@ -62,14 +62,14 @@ public class DaddySexActions {
 		@Override
 		public String getDescription() {
 			boolean lilayaPresent = Main.game.getCharactersPresent().contains(Main.game.getNpc(Lilaya.class));
-			return "Now that [daddy.nameHasFull] been satisfied, [daddy.she] suddenly seems a lot more aware of [npc.her] surroundings, and, leaning down a little so as to speak to you"
-					+ (lilayaPresent?" and Lilaya":"")
-					+" under the table, [npc.she] hisses,"
-					+ " [daddy.speechNoEffects(I think one of the waitresses knows what's going on! Sit back up!)]"
+			return "[daddy.she]已经心满意足，却忽然对周围的环境警觉起来，[npc.she]俯下身，对桌子下面的你"
+					+ (lilayaPresent?"和莉莱雅":"")
+					+"低声道，"
+					+ "[daddy.speechNoEffects(我想有个服务员知道发生了什么！坐起来！)]"
 					+ "<br/><br/>"
-					+ "Disappointed that [daddy.name] wants to end this so soon, "+(lilayaPresent?"the two of":"")+" you sulkily slide back up into your "+(lilayaPresent?"seats":"seat")+" from under the table,"
-							+ " before making a little show of licking your lips and grinning mischievously at [daddy.herHim]."
-					+ " Sure enough, just as you've finished making this slutty display, you see one of the waitresses walking over towards you...";
+					+ "很遗憾[daddy.name]现在就想停下，"+(lilayaPresent?"你们俩":"你")+"闷闷不乐地从桌子下滑回了 "+(lilayaPresent?"座位":"座位")+"，"
+							+ "你向[daddy.herHim]调皮一笑，舔了舔嘴唇。"
+					+ "果然，你做完淫荡表演，看见一个服务员向你走来……";
 		}
 
 		@Override
@@ -105,16 +105,16 @@ public class DaddySexActions {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto back";
+					return "手交后射在后背上";
 				}
-				return "Pull out (back)";
+				return "外射(后背)";
 			}
-			return "Cum on back";
+			return "射在背上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] back.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]背上。";
 		}
 
 		@Override
@@ -161,16 +161,16 @@ public class DaddySexActions {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto own stomach";
+					return "手交后射在肚子上";
 				}
-				return "Pull out (own stomach)";
+				return "外射(自己的肚子)";
 			}
-			return "Cum on your stomach";
+			return "射在你的肚子上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your stomach.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己肚子上。";
 		}
 
 		@Override

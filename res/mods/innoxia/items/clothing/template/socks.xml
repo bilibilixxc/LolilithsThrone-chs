@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help!
@@ -25,7 +25,7 @@
 		
 		<!-- The determiner which is displayed before this item's name. While usually 'a' or 'an', for things like socks or gloves, you'll want to use 'a pair of'. I use the CDATA tag for all text values, as it allows html markup to be embedded without causing issues.
 			- Example: I've defined this as "a pair of", so in-game, this item will be referred to as "a pair of socks". -->
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一对]]></determiner>
 		
 		<!-- The *singular* name of this clothing.
 			- Example: I've named this "template sock", as the singular for "template socks" is of course "sock"...
@@ -33,20 +33,20 @@
 				i.e. If set to false, this clothing would always be called 'template socks' instead of, for example, 'white template socks' 
 			The 'appendEnchantmentPostfix' attribute works in the same way; you can omit it to default to true, but if you set it to false then this clothing type will never automatically append an automatically-generated enchantment postfix.
 				An example of this would be if a normal item was enchanted with an enslavement enchantment, that item would be have "of enslavement" added to the end of its name. -->
-		<name appendColourName="true" appendEnchantmentPostfix="true"><![CDATA[template sock]]></name>
+		<name appendColourName="true" appendEnchantmentPostfix="true"><![CDATA[样板袜]]></name>
 		
 		<!-- The plural form of the name. The attribute 'pluralByDefault' determines whether this item is naturally referred to as a plural (use true for things like socks or gloves).
 			- Example: I've named the plural as "template socks", and defined pluralByDefault as true, so that this item will be referred to by this plural name in all but extremely exceptional circumstances. -->
-		<namePlural pluralByDefault="true"><![CDATA[template socks]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[样板袜]]></namePlural> 
 		
 		<!-- This is the description which is shown in tooltips and on the item's inspection page.
 			- Example: The description for ordinary, "boring" items of clothing might be a little dry, but as they won't be read by the player much, it doesn't really matter.
 			You can use 'npc' to access the character who's got this clothing equipped, but if you do you should do an npc null check first (as this clothing may be on the ground with no owner), as shown in the example below.  -->
 		<description><![CDATA[
 			#IF(npc!=null)
-				[npc.NamePos] ordinary pair of socks, intended to be worn on the feet in order to absorb perspiration and provide both insulation and comfort. If [npc.name] [npc.is] a silly person, [npc.she] may choose to wear them on [npc.her] hands...
+				[npc.NamePos]的普通袜子，穿在脚上的目的是为了吸汗、保温和保持舒适。如果[npc.name]是个蠢货，[npc.she]或许会选择把它们穿在手上……
 			#ELSE
-				An ordinary pair of socks, intended to be worn on the feet in order to absorb perspiration and provide both insulation and comfort. A silly person may choose to wear them on their hands...
+				一双普通的袜子，穿在脚上的目的是为了吸汗、保温和保持舒适。或许会有蠢人选择穿在手上……
 			#ENDIF
 		]]></description> 
 		
@@ -302,54 +302,55 @@
 	<!-- The following sections are for defining the descriptions of displacing or replacing your clothing. The attribute 'type' defines which DisplacementType your descriptions are applied to. For standard equipping and unequipping, use REMOVE_OR_EQUIP. Types can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java -->
 	<!-- - Example: This is the equip text for when socks are equipped to the "SOCK" slot:-->
 	<replacementText slot="SOCK" type="REMOVE_OR_EQUIP">
-		<self>
-			<!-- These lines follow all of the standard parsing rules, which can be found in-game by accessing the debug menu (type 'buggy' during gameplay), and then selecting 'Open parser', then 'Help'/'Targets'/'Commands' -->
+		<self><![CDATA[
+			[npc.Name]将袜子穿上，盖住了[npc.feet]。
+]]><!-- These lines follow all of the standard parsing rules, which can be found in-game by accessing the debug menu (type 'buggy' during gameplay), and then selecting 'Open parser', then 'Help'/'Targets'/'Commands' -->
 			<![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.feet].]]>
 		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.feet].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.feet].]]>
-		</otherRough>
+		<other><![CDATA[
+			[npc.Name]给[npc2.namePos]的[npc2.feet]套上袜子。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos]的[npc2.feet]强行塞进袜子里。
+		]]></otherRough>
 	</replacementText>
 	<!-- 'displacementText' is used for removal and displacement. -->
 	<!-- - Example: This is the unequip text for when socks are removed from the "SOCK" slot:-->
 	<displacementText slot="SOCK" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] socks.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] socks.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] socks.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]脱下了[npc.her]的袜子。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将[npc2.namePos]的袜子脱下。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的袜子并粗暴地扯下来。
+		]]></otherRough>
 	</displacementText>
 	
 	<!-- - Example: This is the equip text for when socks are equipped to the "HAND" slot:-->
 	<replacementText slot="HAND" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.hands].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.hands].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks onto [npc2.namePos] [npc2.hands].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将袜子套在[npc.hands]上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将袜子套在[npc2.namePos]的手上。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos]的[npc2.hands]强行塞进袜子里。
+		]]></otherRough>
 	</replacementText>
 	<!-- - Example: This is the unequip text for when socks are removed from the "HAND" slot:-->
 	<displacementText slot="HAND" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the socks from off of [npc.her] [npc.hands].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the socks from off of [npc2.namePos] [npc2.hands].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the socks from off of [npc2.namePos] [npc2.hands].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将袜子从手上脱下。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将袜子从[npc2.namePos]的手上脱下。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos][npc2.hands]上的袜子并粗暴地扯下。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	
 	<coreAtributes>
 	
-		<authorTag><![CDATA["Made by the DSG Jewellers Guild" is engraved on the bridge behind the gemstone.]]></authorTag>
+		<authorTag><![CDATA["Made by the DSG Jewellers Guild" 被刻在宝石背面的桥上。]]></authorTag>
 		
 		<value>500000</value>
 		
 		<determiner><![CDATA[]]></determiner>
 		
-		<name appendColourName="false"><![CDATA[Eisek's Ring]]></name>
+		<name appendColourName="false"><![CDATA[艾瑟克的戒指]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Eisek's Rings]]></namePlural>
+		<namePlural pluralByDefault="false"><![CDATA[艾瑟克的戒指]]></namePlural>
 		
-		<description><![CDATA[A strange piece of jewellery with an inscription in an unknown language inside the band. It looks very old and you feel like the eye-shaped gem in the middle is watching you.]]></description>
+		<description><![CDATA[一件怪异的珠宝，内圈镌刻着未知语言的铭文，看起来非常古旧。中央的眼形宝石似乎正在凝视着你。]]></description>
 		
 		<physicalResistance>0</physicalResistance>
 		
@@ -35,7 +35,7 @@
 			<category id="inscription" priority="1"> 
 				<categoryName><![CDATA[Inscription]]></categoryName> 
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected=""> 
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix priority="1"><![CDATA[]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
@@ -46,10 +46,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="scratches" priority="1" defaultSticker="false" zLayer="1" colourSelected="55a2d5"> 
-					<stickerName><![CDATA[Scratches]]></stickerName> 
+					<stickerName><![CDATA[刮痕]]></stickerName> 
 					<namePrefix/> 
 					<namePostfix/> 
-					<descriptionModification fullReplacement="true" priority="1"><![CDATA[A rare example of pre-Dragonfall craftsmanship, this ring was given by Lisophia to those she considered especially loyal. Considered by most modern dragons to be a symbol of slavery, they are nonetheless kept by a few as family heirlooms to remind them of mistakes committed in an ancient age. The inscription once read "faithful servant" but [eisek.Name] has scratched out the word "servant", turning the grim artefact into a symbol of hope for a future spent at your side.]]></descriptionModification> 
+					<descriptionModification fullReplacement="true" priority="1"><![CDATA[这枚戒指是一件罕见的前龙陨时代手工艺品，由莉索菲亚赠送给那些她认为特别忠诚的人。大多数现代龙认为它是奴隶制度的象征，然而，仍有些人将其作为传家宝，以提醒他们在古老的时代犯下的过错。戒指上的铭文曾是“忠实仆人”，但[eisek.Name]擦去了“仆人”二字，将旧时代令人沮丧的残渣变为伴你走向未来的希望之征。]]></descriptionModification> 
 					<imageName zLayer="1">seawings_ring_st_scratch.svg</imageName> 					
 					<itemTagsAdded/> 
 					<itemTagsRemoved/> 
@@ -77,7 +77,7 @@
 			</blockedParts>
 		</blockedPartsList>
 		
-		<incompatibleSlots></incompatibleSlots>
+		<incompatibleSlots/>
 		
 		<primaryColours values="JUST_GOLD"/>
 		<primaryColoursDye values="ALL_METAL"/>
@@ -98,27 +98,27 @@
 	</coreAtributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] the ring onto [npc.her] [npc.finger].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] the ring onto [npc2.namePos] [npc2.finger].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] the ring onto [npc2.namePos] [npc2.finger].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把戒指滑到[npc.her][npc.finger]上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把戒指滑到[npc2.namePos]的[npc2.finger]上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行把戒指套在[npc2.namePos]的[npc2.finger]上。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] [npc.her] ring off [npc.her] [npc.finger].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] [npc2.namePos] ring off [npc2.her] [npc2.finger].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] ring off [npc2.her] [npc2.finger].]]>
-		</otherRough>
+		<self><![CDATA[
+ [npc.Name]从[npc.her][npc.finger]上摘下戒指。
+]]></self>
+		<other><![CDATA[
+[npc.Name]从[npc2.namePos]的[npc2.finger]上摘下戒指。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]猛力将戒指从[npc2.namePos]的[npc2.finger]上拽下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

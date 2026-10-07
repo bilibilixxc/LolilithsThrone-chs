@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -10,23 +10,23 @@
 		
 		<determiner><![CDATA[]]></determiner>
 		
-		<name><![CDATA[morning star]]></name>
+		<name><![CDATA[晨星锤]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[morning stars]]></namePlural>
+		<namePlural pluralByDefault="false"><![CDATA[晨星锤]]></namePlural>
 		
-		<description><![CDATA[A club-like weapon, consisting of a handle and a sturdy shaft, with a spiked ball fixed to the end. This spiked ball has been formed out of arcane energy, allowing its use against people without permanently wounding them.]]></description> 
+		<description><![CDATA[一把类似棍棒的武器，由一个手柄和一根坚固的杆组成，杆顶固定有一个尖球。这个尖球是由奥术能量形成的，使用时不会对人造成永久性伤害。]]></description> 
 		
-		<attackDescriptor>hit</attackDescriptor>
+		<attackDescriptor><![CDATA[砸]]></attackDescriptor>
 		
-		<attackTooltipDescription><![CDATA[Hit [npc2.name] with your morning star.]]></attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用晨星锤砸向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>COMMON</rarity> 
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(position)] [npc.her] morning star at [npc.her] hip, so that [npc.she] may draw it at a moment's notice.]]></equipText>
+		<equipText><![CDATA[[npc.Name]将晨星锤放在[npc.her]的腰间，以便[npc.she]拔出。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] morning star away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]放下[npc.her]的晨星锤。]]></unequipText>
 		
 		<imageName>morning_star.svg</imageName> 
 		
@@ -71,26 +71,26 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] morning star at [npc2.name], grinning as the ethereal arcane ball travels through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]挥舞晨星锤打向[npc2.name]，虚幻的奥术锤头撞向了[npc2.her]的身体，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		Lunging out at [npc2.name] with [npc.her] morning star, [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(see)] the ethereal ball travel straight through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]用晨星锤砸向[npc2.name]，[npc.she]看到虚幻的奥术锤头直直撞向了[npc2.namePos]的身体，不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] at [npc2.name] with [npc.her] morning star, causing [npc2.herHim] to stagger back as the ethereal ball passes right through [npc2.her] chest!
-		]]></hitText>
+		[npc.Name]舞着晨星锤挥向[npc2.name]，虚幻的锤头砸穿了[npc2.her]的胸膛，使得[npc2.herHim]向后踉跄！
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] morning star at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+[npc.Name]用晨星锤挥向[npc2.name]，但最终没有击中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Lunging out at [npc2.name] with [npc.her] morning star, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+[npc.Name]挥舞晨星锤砸向[npc2.name]，但最终没有击中[npc2.herHim]，[npc.her]发出一声沮丧的呼喊！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(swing)] at [npc2.name] with [npc.her] morning star, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用晨星锤猛地砸向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

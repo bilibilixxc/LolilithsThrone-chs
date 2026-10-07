@@ -35,7 +35,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_MISC = new AbstractPerk(20,
 			true,
-			"Misc",
+			"秘术",
 			PerkCategory.JOB,
 			"perks/jobs/prostitute",
 			PresetColour.BASE_PINK,
@@ -43,13 +43,13 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return ".";//TODO
+			return "。";//TODO
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_HARPY_MATRIARCH = new AbstractPerk(20,
 			true,
-			"queen of the skies",
+			"统治天空的女王",
 			PerkCategory.JOB,
 			"perks/jobs/npc_harpy_matriarch",
 			PresetColour.RACE_HARPY,
@@ -60,13 +60,13 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] risen to the position of matriarch of a harpy flock through a combination of [npc.her] natural beauty and willingness to do anything it takes to rule.");
+			return UtilText.parse(owner, "[npc.NameHasFull]凭借[npc.her]的天生丽质，以及为统治而不惜一切代价的精神，跃升为哈比族群的族长。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_HARPY_FLOCK_MEMBER = new AbstractPerk(20,
 			true,
-			"pecking order",
+			"啄食顺序",
 			PerkCategory.JOB,
 			"perks/jobs/npc_harpy_flock_member",
 			PresetColour.RACE_HARPY,
@@ -77,7 +77,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] the member of a harpy flock, and as such has considerable experience in both flattering and backstabbing others.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是哈比部族的成员，因此在奉承和背后捅人刀子的方面经验丰富。");
 		}
 	};
 
@@ -86,7 +86,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_PATROL_INSPECTOR = new AbstractPerk(20,
 			true,
-			"Enforcer: Patrol Inspector",
+			"执法者：巡逻督察",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_inspector",
 			PresetColour.CLOTHING_BLUE,
@@ -99,7 +99,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Inspector' in the Enforcer's Frontline Patrol division, and has received a moderate amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者前线巡逻部门中担任“督察”一职，接受过匹配的战斗训练。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -114,7 +114,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_PATROL_SERGEANT = new AbstractPerk(20,
 			true,
-			"Enforcer: Patrol Sergeant",
+			"执法者：巡逻警长",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_sergeant",
 			PresetColour.CLOTHING_BLUE,
@@ -126,7 +126,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Sergeant' in the Enforcer's Frontline Patrol division, and has received a limited amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者的前线巡逻部门中担任“巡佐”一职，接受过有限的战斗训练。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -141,7 +141,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_PATROL_CONSTABLE = new AbstractPerk(20,
 			true,
-			"Enforcer: Patrol Constable",
+			"执法者：巡逻警员",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_constable",
 			PresetColour.CLOTHING_BLUE,
@@ -153,7 +153,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Constable' in the Enforcer's Frontline Patrol division, and has received a very limited amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者的前线巡逻部门中担任“警员”一职，接受过的战斗训练相当有限。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -168,7 +168,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_SWORD_SUPER = new AbstractPerk(20,
 			true,
-			"Enforcer: SWORD Superintendent",
+			"执法者：SWORD警司",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_superintendent",
 			PresetColour.CLOTHING_BLUE,
@@ -181,7 +181,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Superintendent' in the Enforcer's 'Special Weapons and Operations Response Department', and has received an extensive amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“特种武器行动反应部”中担任“警司”一职，接受过大量的实战训练。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -196,7 +196,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_SWORD_CHIEF_INSPECTOR = new AbstractPerk(20,
 			true,
-			"Enforcer: SWORD Chief Inspector",
+			"执法者：SWORD总督察",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_chief_inspector",
 			PresetColour.CLOTHING_BLUE,
@@ -209,7 +209,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Chief Inspector' in the Enforcer's 'Special Weapons and Operations Response Department', and has received an extensive amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“特种武器行动反应部”担任“总督察”一职，接受过大量的实战训练。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -224,7 +224,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_SWORD_INSPECTOR = new AbstractPerk(20,
 			true,
-			"Enforcer: SWORD Inspector",
+			"执法者：SWORD督察",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_inspector",
 			PresetColour.CLOTHING_BLUE,
@@ -237,7 +237,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Inspector' in the Enforcer's 'Special Weapons and Operations Response Department', and has received an extensive amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“特殊武器和行动反应部”中担任“督察”一职，并接受过大量的实战训练。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -252,7 +252,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_SWORD_SERGEANT = new AbstractPerk(20,
 			true,
-			"Enforcer: SWORD Sergeant",
+			"执法者：SWORD警长",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_sergeant",
 			PresetColour.CLOTHING_BLUE,
@@ -265,7 +265,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Sergeant' in the Enforcer's 'Special Weapons and Operations Response Department', and has received a significant amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“特种武器行动反应部”中担任“警长”一职，接受过大量的战斗训练。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -280,7 +280,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_SWORD_CONSTABLE = new AbstractPerk(20,
 			true,
-			"Enforcer: SWORD Constable",
+			"执法者：SWORD警员",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_constable",
 			PresetColour.CLOTHING_BLUE,
@@ -293,7 +293,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Constable' in the Enforcer's 'Special Weapons and Operations Response Department', and has received a good amount of combat training.");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“特种武器行动反应部”担任“警员”一职，接受过大量的战斗训练。");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -308,7 +308,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_ORICL_INSPECTOR = new AbstractPerk(20,
 			true,
-			"Enforcer: ORICL Inspector",
+			"执法者：ORICL督察",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_inspector",
 			PresetColour.CLOTHING_BLUE,
@@ -323,7 +323,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Inspector' in the Enforcer's 'Office of Realm Intelligence, Counter-Espionage, and Logistics', and knows many ways in which to get someone to talk...");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“王国情报局”中担当“督察”一职，知道很多让人开口的方法……");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -338,7 +338,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_ORICL_SERGEANT = new AbstractPerk(20,
 			true,
-			"Enforcer: ORICL Sergeant",
+			"执法者：ORICL警长",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_sergeant",
 			PresetColour.CLOTHING_BLUE,
@@ -353,7 +353,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Sergeant' in the Enforcer's 'Office of Realm Intelligence, Counter-Espionage, and Logistics', and knows many ways in which to get someone to talk...");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“王国情报局”中担任“警长”一职，知道很多让人开口的方法……");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -368,7 +368,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_ENFORCER_ORICL_CONSTABLE = new AbstractPerk(20,
 			true,
-			"Enforcer: ORICL Constable",
+			"执法者：ORICL警员",
 			PerkCategory.JOB,
 			"perks/jobs/npc_enforcer_constable",
 			PresetColour.CLOTHING_BLUE,
@@ -383,7 +383,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] holds the rank of 'Constable' in the Enforcer's 'Office of Realm Intelligence, Counter-Espionage, and Logistics', and knows many ways in which to get someone to talk...");
+			return UtilText.parse(owner, "[npc.Name]在执法者的“王国情报局”中担任“警员”一职，知道很多让人开口的方法……");
 		}
 		@Override
 		public String getSVGString(GameCharacter owner) {
@@ -398,7 +398,7 @@ public class Perk {
 	
 	public static AbstractPerk JOB_NPC_CULTIST = new AbstractPerk(20,
 			true,
-			"Worshipper of Lilith",
+			"莉莉丝的崇拜者",
 			PerkCategory.JOB,
 			"perks/jobs/npc_cultist",
 			PresetColour.CLOTHING_BLACK,
@@ -410,13 +410,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] a full-time member of the 'Cult of Lilith', and in order to properly worship [npc.her] goddess, [npc.sheHasFull] spent an inordinate amount of time training both [npc.her] spell-casting and seductive powers.");
+					"[npc.NameIsFull]是“莉莉丝异教”的正式成员，为了更好地拜谒[npc.her]女神，[npc.sheHasFull]花费了不少时间来训练[npc.her]施法和诱惑的能力。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_SLAVER_ADMIN = new AbstractPerk(20,
 			true,
-			"shady overseer",
+			"阴影中的监视者",
 			PerkCategory.JOB,
 			"perks/jobs/npc_slave_admin",
 			PresetColour.CLOTHING_BLACK_STEEL,
@@ -428,13 +428,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] the manager of Slaver Alley's 'Slave Administration' building, and while [npc.she] acts friendly enough, it's sure to have taken a lot more than simply being nice to get to this position...");
+					"奴隶巷中“奴隶行政管理”大楼的经理[npc.NameIsFull]，虽然[npc.she]表现得足够友好，但能坐上这个位置，肯定不只是对人好那么简单……");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_BOUNCER = new AbstractPerk(20,
 			true,
-			"bouncer",
+			"保安",
 			PerkCategory.JOB,
 			"perks/jobs/npc_bouncer",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -446,13 +446,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] a bouncer, and [npc.has] accumulated a significant amount of fighting experience while working to keep the riff-raff out of nightclubs and bars.");
+					"[npc.NameIsFull]是一名保安，在夜总会和酒吧工作时积累了大量的格斗经验。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_BARMAID = new AbstractPerk(20,
 			true,
-			"barmaid",
+			"酒保",
 			PerkCategory.JOB,
 			"perks/jobs/npc_barmaid",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -463,23 +463,23 @@ public class Perk {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner==null) {
-				return "bartender";
+				return "酒保";
 			}
 			if(owner.isFeminine()) {
 				return super.getName(owner);
 			}
-			return "barman";
+			return "酒保";
 		}
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Thanks to [npc.her] experience working as a "+(owner.isFeminine()?"barmaid":"barman")+", [npc.name] knows all the tricks to flirting, as well as how to resist the advances of lustful drunks.");
+					"[npc.name]得益于担任酒保的工作经验，[npc.her]知晓调情的所有技巧，也知道该如何抵制好色酒鬼的挑逗。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_BEAUTICIAN = new AbstractPerk(20,
 			true,
-			"beauty ideal",
+			"美容师",
 			PerkCategory.JOB,
 			"perks/jobs/npc_beautician",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -490,13 +490,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.Name] knows all there is to how to make people look their best.");
+					"[npc.Name]知道该如何让人们看起来处在最美的状态。");
 		}
 	};
 	
 	public static AbstractPerk JOB_NPC_NIGHTCLUB_OWNER = new AbstractPerk(20,
 			true,
-			"the boss",
+			"大老板",
 			PerkCategory.JOB,
 			"perks/jobs/npc_nightclub_owner",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -506,13 +506,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] the very wealthy owner of one of Dominion's most popular nightclubs, and has no trouble in getting company for each evening.");
+					"[npc.NameIsFull]是御城区最受欢迎夜总会之一的老板，非常富有，美人俊郎招手即来。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_ARCANE_RESEARCHER = new AbstractPerk(20,
 			true,
-			"secrets of the arcane",
+			"隐世奥术研究者",
 			PerkCategory.JOB,
 			"perks/jobs/npc_arcane_researcher",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -524,13 +524,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameHasFull] dedicated most of [npc.her] life to studying the arcane and unlocking its secrets.");
+					"[npc.NameHasFull]一生中的大部分时间都致力于研究奥术，试图揭开奥术蕴含的秘密。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_SHOP_MANAGER = new AbstractPerk(20,
 			true,
-			"manager",
+			"经理",
 			PerkCategory.JOB,
 			"perks/jobs/npc_shop_manager",
 			PresetColour.CURRENCY_GOLD,
@@ -541,13 +541,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The pressure of having to make sure [npc.her] business is successful has caused [npc.name] to have to do a lot of work, building up [npc.her] resistances in the process.");
+					"确保事业成功的压力让[npc.Name]不得不投入许多精力，在这个过程中，[npc.her]产生了抵触情绪。");
 		}
 	};
         
 	public static AbstractPerk JOB_NPC_REBEL_FIGHTER = new AbstractPerk(20,
 			true,
-			"rebel fighter",
+			"反抗军斗士",
 			PerkCategory.JOB,
 			"perks/jobs/npc_rebel_fighter",
 			PresetColour.CLOTHING_RED_DARK,
@@ -558,13 +558,13 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] training has given [npc.herHim] some defence against Lilith's forces.");
+			return UtilText.parse(owner, "[npc.NamePos]经受过的训练让[npc.herHim]对莉莉丝的部队有一定的防御能力。");
 		}
 	};
 	
 	public static AbstractPerk JOB_NPC_FARMER = new AbstractPerk(20,
 			true,
-			"Feeding the World",
+			"世界粮仓",
 			PerkCategory.JOB,
 			"perks/jobs/npc_farmer",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -578,16 +578,16 @@ public class Perk {
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
 					"#IF(!game.isSillyMode())"
-						+ "The back-breaking work required to make fields bloom has made [npc.name] strong and tough. [npc.She] is also no stranger to the biting cold or the scorching sun."
+						+ "为了让田野焕发生机，[npc.name]艰辛劳作，变得强壮而坚韧。对于严寒和烈日，[npc.she]毫不陌生。"
 					+ "#ELSE"
-						+ "[npc.NameHasFull] a brand new combine harvester and [npc.she]'ll give you the key, but only after driving [npc.her] tractor through your haystack, ooar-ooar!"
+						+ "[npc.NameHasFull]一台全新的联合收割机，[npc.she]会给你钥匙，但前提是[npc.she]能开着拖拉机穿过你的干草堆，呜——呜！"
 					+ "#ENDIF");
 		}
 	};
 	
 	public static AbstractPerk JOB_NPC_JOURNALIST = new AbstractPerk(20,
 			true,
-			"Walk the Line",
+			"刀尖起舞",
 			PerkCategory.JOB,
 			"perks/jobs/npc_journalist",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_DESATURATED_BROWN, PresetColour.CLOTHING_BLACK, PresetColour.CLOTHING_WHITE),
@@ -598,13 +598,13 @@ public class Perk {
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "In a society where only the state's version of the news is permitted, journalists need to walk a very fine line...");
+			return UtilText.parse(owner, "在一个政府严格控制新闻报道，只允许官方版本的新闻发布的社会中，记者们必须小心地在刀尖上跳舞……");
 		}
 	};
 	
 	public static AbstractPerk JOB_NPC_OFFICE_WORKER = new AbstractPerk(20,
 			true,
-			"It's just good business",
+			"一门好生意",
 			PerkCategory.JOB,
 			"perks/jobs/npc_office_worker",
 			PresetColour.CURRENCY_GOLD,
@@ -612,13 +612,13 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "The constant pressure of meeting targets and managing difficult colleagues and clients has built up [npc.namePos] endurance.");
+			return UtilText.parse(owner, "要完成目标、管理难缠的同事和客户，这些持续不断的压力增强了[npc.namePos]的耐力。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_REINDEER_OVERSEER = new AbstractPerk(20,
 			true,
-			"winter-proof",
+			"抗寒",
 			PerkCategory.JOB,
 			"perks/jobs/npc_reindeer_overseer",
 			PresetColour.RACE_REINDEER_MORPH,
@@ -629,13 +629,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] the overseer of a reindeer workgang, and has built up not only a very strong body, but also an impressive resistance to the cold.");
+					"[npc.NameIsFull]是驯鹿劳动队的监督员，不仅拥有强壮的躯体，还具有惊人的抗寒能力。");
 		}
 	};
 
 	public static AbstractPerk JOB_ELDER_LILIN = new AbstractPerk(20,
 			true,
-			"untouchable",
+			"不可捉摸",
 			PerkCategory.JOB,
 			"perks/jobs/elder_lilin",
 			PresetColour.RACE_LILIN,
@@ -660,13 +660,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] one of the seven elder lilin, and [npc.verb(hold)] powers that mere mortals can only dream of.");
+					"[npc.NameIsFull]是七位莉琳长老之一，掌握着凡人只能幻想的力量。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_SLIME_QUEEN = new AbstractPerk(20,
 			true,
-			"royal jelly",
+			"蜂王浆",
 			PerkCategory.JOB,
 			"perks/jobs/npc_slime_queen",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_GOLD, PresetColour.CLOTHING_RED_VERY_DARK, PresetColour.CLOTHING_GOLD),
@@ -679,13 +679,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] the queen of all slimes, and is able to use [npc.her] shape-shifting abilities to make [npc.herself] look truly beautiful.");
+					"[npc.NameIsFull]是统治着所有史莱姆的女王，能使用变形能力令[npc.her]化作美丽的真正代表。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_SLIME_QUEEN_GUARD = new AbstractPerk(20,
 			true,
-			"slime servant",
+			"史莱姆仆役",
 			PerkCategory.JOB,
 			"perks/jobs/npc_slime_queen_guard",
 			PresetColour.RACE_REINDEER_MORPH,
@@ -696,13 +696,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] one of the slime queen's personal guardians, and is well trained in how to handle a sword.");
+					"[npc.NameIsFull]是史莱姆女王的贴身护卫之一，受过良好的剑术训练。");
 		}
 	};
 
 	public static AbstractPerk JOB_EPONA = new AbstractPerk(20,
 			true,
-			"fertility queen",
+			"生殖皇后",
 			PerkCategory.JOB,
 			"perks/jobs/npc_epona",
 			PresetColour.BASE_PINK,
@@ -713,13 +713,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameHasFull] dedicated [npc.her] entire life to helping others become mothers and fathers, and is currently achieving this noble goal by running the game 'pregnancy roulette' in Submission's Gambling Den.");
+					"[npc.NameHasFull]将一生都献给了帮助他人成为父母的愿望之中，目前正在屈城区的“赌场”中经营“怀孕轮盘赌”游戏，以助崇高目标的实现。");
 		}
 	};
 	
 	public static AbstractPerk JOB_GANG_LEADER = new AbstractPerk(20,
 			true,
-			"ruthless leadership",
+			"残酷领袖",
 			PerkCategory.JOB,
 			"perks/jobs/npc_rat_gang",
 			Util.newArrayListOfValues(
@@ -736,13 +736,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameHasFull] all the strength and cunning expected of one who has risen to be the leader of a criminal gang, and [npc.has] furthermore survived countless attempts to challenge [npc.her] position of authority.");
+					"[npc.nameHasFull]拥有着成为犯罪首领应有的力量与狡诈，且从无数次挑战[npc.her]权势的尝试中幸存下来了。");
 		}
 	};
 	
 	public static AbstractPerk JOB_GANG_BODY_GUARD = new AbstractPerk(20,
 			true,
-			"sharpest fangs",
+			"尖牙",
 			PerkCategory.JOB,
 			"perks/jobs/npc_rat_gang",
 			Util.newArrayListOfValues(
@@ -759,13 +759,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Having been recognised as one of the most powerful members of [npc.her] gang, [npc.name] has earned the position of being a bodyguard of [npc.her] leader.");
+					"[npc.Name]公认为[npc.her]帮派中最有权势的成员之一，因此赢得了首领护卫一职。");
 		}
 	};
 	
 	public static AbstractPerk JOB_GANG_MEMBER = new AbstractPerk(20,
 			true,
-			"one of us",
+			"我们中的一员",
 			PerkCategory.JOB,
 			"perks/jobs/npc_rat_gang",
 			Util.newArrayListOfValues(
@@ -782,13 +782,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] a member of a criminal gang, and as such, has seen [npc.her] fair share of fights.");
+					"[npc.NameIsFull]是犯罪团伙的成员，涉及多项打架斗殴行为。");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_STABLE_MISTRESS = new AbstractPerk(20,
 			true,
-			"horse trainer",
+			"训马师",
 			PerkCategory.JOB,
 			"perks/jobs/npc_stable_mistress",
 			Util.newArrayListOfValues(
@@ -803,13 +803,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"As a result of working hard to train and care for a huge number of centaur slaves, [npc.nameIsFull] very fit and healthy, and knows exactly how to deal with any unruly individuals.");
+					"[npc.nameIsFull]努力训练与照顾着大量的半人马奴隶，因此身体非常健康，而且非常清楚该如何对付任何不守规矩的人。");
 		}
 	};
 	
 	public static AbstractPerk JOB_LYSSIETH_GUARD = new AbstractPerk(20,
 			true,
-			"dutiful daughter",
+			"孝顺女儿",
 			PerkCategory.JOB,
 			"perks/jobs/npc_lyssieth_guard",
 			Util.newArrayListOfValues(
@@ -826,13 +826,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] an unrecognised daughter of the elder lilin, Lyssieth, and has been given the task of defending her mother's palace from unwelcome visitors.");
+					"[npc.NameIsFull]是一名莉琳长老，莉西丝的女儿，她的任务是保护母亲的宫殿不受不速之客的侵扰。");
 		}
 	};
 	
 	public static AbstractPerk JOB_TAUR_TRANSPORT = new AbstractPerk(20,
 			true,
-			"Keep on pulling!",
+			"继续拉！",
 			PerkCategory.JOB,
 			"perks/jobs/taur_transport",
 			PresetColour.BASE_GOLD,
@@ -844,13 +844,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Having spent a significant amount of time using [npc.her] tauric body to pull carts and carry cargo, [npc.nameHasFull] built up a considerable level of physical fitness.");
+					"[npc.nameHasFull]花了大量时间用似马的身躯拉车和搬运货物，因此积累了相当不错的体能。");
 		}
 	};
 	
 	public static AbstractPerk JOB_NPC_MAYOR = new AbstractPerk(20,
 			true,
-			"Weight of Responsibility",
+			"责任的重担",
 			PerkCategory.JOB,
 			"perks/jobs/mayor",
 			Util.newArrayListOfValues(
@@ -865,13 +865,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Having had to make countless difficult decisions which affect the lives of thousands of people, [npc.nameHasFull] hardened [npc.her] mind and [npc.is] able to act with full conviction.");
+					"[npc.nameHasFull]不得不做出无数影响成千上万人生活的艰难决定，因此[npc.her]的信念更加坚定，能够满怀信心地行事。");
 		}
 	};
 	
 	public static AbstractPerk JOB_NPC_ASSISTANT = new AbstractPerk(20,
 			true,
-			"A Helping Hand",
+			"援助之手",
 			PerkCategory.JOB,
 			"perks/jobs/assistant",
 			PresetColour.BASE_GREEN,
@@ -882,13 +882,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Acting as [npc.her] superior's personal assistant, [npc.nameHasFull] to always be in prime physical condition in order to always be ready to offer a helping hand.");
+					"作为上级的私人助理，[npc.nameHasFull]始终保持着身体的最佳状态，以便随时准备提供帮助。");
 		}
 	};
 	
 	public static AbstractPerk JOB_LUNETTE_HERD = new AbstractPerk(20,
 			true,
-			"Merciless Raider",
+			"无情劫掠者",
 			PerkCategory.JOB,
 			"perks/jobs/lunette_raider",
 			Util.newArrayListOfValues(
@@ -906,13 +906,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Having spent time training alongside Lunette herself, this demonic-centaur strives to be as destructive and merciless as [npc.her] mother!");
+					"这只恶魔半人马曾伴随在露内特身侧接受训练，努力变得像[npc.her]母亲一样无情与破坏力十足！");
 		}
 	};
 
 	public static AbstractPerk JOB_NPC_MUSHROOM_FORAGER = new AbstractPerk(20,
 			true,
-			"Masterful Mycologist",
+			"高超的菌类学家",
 			PerkCategory.JOB,
 			"perks/jobs/mushroom_forager",//TODO
 			Util.newArrayListOfValues(
@@ -927,13 +927,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NamePos] body [npc.has] become highly resistant to poison through an arduous, and oft-times nauseating, process of discovering which mushrooms are edible, psychedelic, or toxic.");
+					"[npc.namePos]的身体具有很强的抗毒能力，通过艰苦的、有时甚至是令人作呕的过程来发现哪些蘑菇是可食用的、迷幻的或有毒的。");
 		}
 	};
 
 	public static AbstractPerk JOB_LUNETTE_RECOGNISED_DAUGHTER = new AbstractPerk(20,
 			true,
-			"Lunette's favourite",
+			"露内特的最爱",
 			PerkCategory.JOB,
 			"perks/jobs/lunette_raider",
 			Util.newArrayListOfValues(
@@ -950,13 +950,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] a recognised daughter of Lunette herself, and as such is considerably more powerful than a regular demon.");
+					"[npc.NameIsFull]是露内特承认的女儿，比普通恶魔要强大得多。");
 		}
 	};
 
 	public static AbstractPerk JOB_ELDER_LILIN_PAWN = new AbstractPerk(20,
 			true,
-			"A loyal pawn",
+			"忠心的小卒",
 			PerkCategory.JOB,
 			"perks/jobs/elder_lilin_pawn",
 			Util.newArrayListOfValues(PresetColour.RACE_LILIN),
@@ -970,33 +970,33 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] a loyal, valued pawn of an elder lilin, and as such has been granted a fraction of [npc.her] mistress's power.");
+					"[npc.NameIsFull]是一位莉琳长老重要的忠诚棋子，因此主人赋予了其一小部分的力量。");
 		}
 	};
 
 	public static AbstractPerk JOB_SEX_DOLL = new AbstractPerk(20,
 			true,
-			"dutiful doll",
+			"顺服的玩偶",
 			PerkCategory.JOB,
 			"perks/jobs/sex_doll",
 			Util.newArrayListOfValues(PresetColour.RACE_DOLL),
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"[style.boldGood(Obeys)] any command",
-					"[style.boldExcellent(Prioritises)] owner's commands",
-					"[style.boldBad(Ignores)] slaves and other dolls"),
+					"[style.boldGood(遵循)]任何命令",
+					"[style.boldExcellent(优先遵循)]拥有者的命令",
+					"[style.boldBad(无视)]奴隶与其他玩偶"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] an extremely realistic-looking sex doll, who was created at 'Lovienne's Luxuries'."
-					+ " [npc.She] will obey any command given to [npc.herHim], so long as it's not from a slave or another doll, with commands from [npc.her] owner taking priority.");
+					"[npc.NameIsFull]是一个外形极其逼真的性爱玩偶，是在“洛维耶纳的奢侈品店”制作的。"
+					+ "[npc.her]将服从任何命令，而主人的指示为优先项，但会无视来自奴隶或其他玩偶的命令。");
 		}
 	};
 	
 	public static AbstractPerk JOB_AMAZONIAN_QUEEN = new AbstractPerk(20,
 			true,
-			"Queen of Queens",
+			"亚马逊女王",
 			PerkCategory.JOB,
 			"perks/jobs/npc_amazonian_queen",
 			Util.newArrayListOfValues(
@@ -1012,13 +1012,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] the queen of the Amazons, and as such has lived a life full of rigorous physical activity and combat training.");
+					"[npc.NameIsFull]是亚马逊人的领导者，一生都在进行着严苛的体育锻炼和格斗训练。");
 		}
 	};
 	
 	public static AbstractPerk JOB_AMAZONIAN = new AbstractPerk(20,
 			true,
-			"Girl Power",
+			"女性力量",
 			PerkCategory.JOB,
 			"perks/jobs/npc_amazonian",
 			PresetColour.BASE_PINK,
@@ -1033,13 +1033,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] an Amazon, and as such regularly engages in physical activity and combat training.");
+					"[npc.NameIsFull]是一名亚马逊人，经常参加体育活动和战斗训练。");
 		}
 	};
 
 	public static AbstractPerk JOB_YOUKO = new AbstractPerk(20,
 			true,
-			"Bewitching Fox",
+			"魅惑妖狐",
 			PerkCategory.JOB,
 			"perks/jobs/npc_youko",
 			PresetColour.RACE_FOX_MORPH,
@@ -1052,13 +1052,13 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] a Youko, hailing from the Shinrin Highlands. [npc.SheHasFull] spent most of [npc.her] life practicing with the arcane, and as such [npc.her] spells are particularly potent.");
+					"[npc.NameIsFull]一只来自心林高地的妖狐。[npc.SheHasFull]将[npc.her]一生中的大部分时间都花在了钻研奥术上，因此[npc.her]法术尤为强大。");
 		}
 	};
 	
 	public static AbstractPerk JOB_PUGILIST = new AbstractPerk(20,
 			true,
-			"pugalist",
+			"拳击手",
 			PerkCategory.JOB,
 			"perks/jobs/npc_pugilist",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -1070,14 +1070,14 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] a professional boxer, and as such is a fearsome opponent in a fight.");
+					"[npc.NameIsFull]是一名职业拳击手，在比赛中是一名可怕的敌手。");
 		}
 	};
 	
 	
 	public static AbstractPerk JOB_SLAVE = new AbstractPerk(20,
 			true,
-			"A life of servitude",
+			"仆役生活",
 			PerkCategory.JOB,
 			"perks/jobs/slave",
 			PresetColour.BASE_CRIMSON,
@@ -1088,13 +1088,13 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] steeled [npc.her] body and mind to help [npc.herHim] deal with the fact that [npc.sheIs] just someone else's property.");
+			return UtilText.parse(owner, "[npc.NameHasFull]有着强健的身心，这帮助[npc.herHim]消化了[npc.sheIs]只是别人财产的事实。");
 		}
 	};
 
 	public static AbstractPerk JOB_CAPTIVE = new AbstractPerk(20,
 			true,
-			"Kidnapped",
+			"人质",
 			PerkCategory.JOB,
 			"perks/jobs/npc_captive",
 			PresetColour.BASE_RED,
@@ -1104,13 +1104,13 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] been kidnapped and is being illegally held prisoner against [npc.her] will.");
+			return UtilText.parse(owner, "[npc.NameHasFull]遭到了绑架，成为了受他人意愿控制的囚徒。");
 		}
 	};
 	
 	public static AbstractPerk JOB_PROSTITUTE = new AbstractPerk(20,
 			true,
-			"The oldest profession",
+			"传统职业",
 			PerkCategory.JOB,
 			"perks/jobs/prostitute",
 			PresetColour.BASE_PINK,
@@ -1118,48 +1118,48 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_CORRUPTION, 50),
 					new Value<>(Attribute.DAMAGE_LUST, 25),
 					new Value<>(Attribute.RESISTANCE_LUST, 2)),
-			Util.newArrayListOfValues("[style.boldExcellent(Doubles)] all slave and self-prostitution income")) {
+			Util.newArrayListOfValues("[style.boldExcellent(双倍)]自身和奴隶的卖淫收入")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] experienced at selling [npc.her] body to strangers in order to make a living. After having sex so many times, it takes a lot to get [npc.herHim] really turned on.");
+			return UtilText.parse(owner, "[npc.NameIsFull]为谋生向陌生人出卖身体，经验丰富。在经历了无数次性爱后，[npc.herHim]需要卖力投入才能真正兴奋起来。");
 		}
 	};
 	
 	public static AbstractPerk JOB_MUGGER = new AbstractPerk(20,
 			true,
-			"Outlaw",
+			"法外之徒",
 			PerkCategory.JOB,
 			"perks/jobs/mugger",
 			PresetColour.BASE_CRIMSON,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 10),
 					new Value<>(Attribute.HEALTH_MAXIMUM, 15)),
-			Util.newArrayListOfValues("[style.boldExcellent(Triples)] all mugging income")) {
+			Util.newArrayListOfValues("[style.boldExcellent(三倍)]抢劫收入")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.verb(live)] a life of crime, stealing from the rich and poor alike.");
+			return UtilText.parse(owner, "[npc.Name]以犯罪为生，不论贫富，全都偷抢。");
 		}
 	};
 	
 	public static AbstractPerk JOB_BOUNTY_HUNTER = new AbstractPerk(20,
 			true,
-			"No Escape",
+			"无路可逃",
 			PerkCategory.JOB,
 			"perks/jobs/bounty_hunter",
 			PresetColour.BASE_CRIMSON,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.CRITICAL_DAMAGE, 25),
 					new Value<>(Attribute.HEALTH_MAXIMUM, 15)),
-			Util.newArrayListOfValues("[style.boldExcellent(-50%)] chance of enemy escape")) {
+			Util.newArrayListOfValues("[style.boldExcellent(-50%)]敌人逃脱概率")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] an expert at tracking down and capturing fugitives, and as such, enemies have a hard time escaping from [npc.herHim] in combat.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是追踪和抓捕逃犯的专家，敌人很难在战斗中从[npc.herHim]手中逃脱。");
 		}
 	};
 	
 	public static AbstractPerk JOB_CONSTRUCTION_WORKER = new AbstractPerk(20,
 			true,
-			"Builder",
+			"建造者",
 			PerkCategory.JOB,
 			"perks/jobs/npc_construction",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_YELLOW, PresetColour.CLOTHING_BLACK),
@@ -1170,13 +1170,13 @@ public class Perk {
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] [npc.verb(spent)] a while working in the construction industry, helping to build and repair both infrastructure and property.");
+			return UtilText.parse(owner, "[npc.NameHasFull]曾经从事过建筑行业，帮助建造、修复基建与财产。");
 		}
 	};
 	
 	public static AbstractPerk JOB_CONSTRUCTION_WORKER_ARCANE = new AbstractPerk(20,
 			true,
-			"Matter manipulation",
+			"关键操纵",
 			PerkCategory.JOB,
 			"perks/jobs/npc_construction",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_PURPLE, PresetColour.CLOTHING_BLACK),
@@ -1187,7 +1187,7 @@ public class Perk {
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Being able to harness the arcane, and therefore able to telekinetically manipulate manner, [npc.nameIsFull] a very valuable asset for construction firms to have in their employ.");
+			return UtilText.parse(owner, "[npc.nameIsFull]能够驾驭奥术，以心灵感应的方式操纵物体，对建筑公司来说是宝贵的资产。");
 		}
 	};
 	
@@ -1217,7 +1217,7 @@ public class Perk {
 
     public static AbstractPerk JOB_UNEMPLOYED = new AbstractPerk(20,
 			true,
-			"NEET",
+			"家里蹲",
 			PerkCategory.JOB,
 			"perks/jobs/unemployed",
 			PresetColour.BASE_RED,
@@ -1225,11 +1225,11 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 2),
 					new Value<>(Attribute.DAMAGE_UNARMED, 5),
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 5)),
-			Util.newArrayListOfValues("[style.boldExcellent(Boosts)] 'Well Rested' bonus")) {
+			Util.newArrayListOfValues("[style.boldExcellent(增强)]“充分休息”加成")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "With so much free time on [npc.herPos] hands, [npc.nameHas] managed to improve [npc.herself] in several different ways."
-					+ " [npc.Name] also [npc.verb(benefit)] from knowing exactly how best to relax, boosting the bonus [npc.she] [npc.verb(get)] from sleeping.");
+			return UtilText.parse(owner, "[npc.herPos]有着充足的空闲时间，从许多的方面提升着[npc.herself]。"
+					+ "[npc.Name]也因熟知放松的最佳办法而受益，增加睡眠受益。");
 		}
 	};
 
@@ -1281,25 +1281,25 @@ public class Perk {
 
     public static AbstractPerk JOB_OFFICE_WORKER = new AbstractPerk(20,
 			true,
-			"The Salaryman",
+			"白领",
 			PerkCategory.JOB,
 			"perks/jobs/officeWorker",
 			PresetColour.BASE_BROWN,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.CRITICAL_DAMAGE, 50)),
-			Util.newArrayListOfValues("[style.boldExcellent(+25%)] all slave income")) {
+			Util.newArrayListOfValues("奴隶收入[style.boldExcellent(+25%)]")) {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner!=null && owner.isFeminine()) {
-				return "The Career Woman";
+				return "白领";
 			} else {
-				return "The Salaryman";
+				return "白领";
 			}
 		}
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "From [npc.herPos] considerable office experience, [npc.name] [npc.verb(know)] exactly how to motivate those working beneath [npc.herPro]."
-					+ " The stressful work environment has caused [npc.herPro] to bottle up a lot of frustration, which manifests in increased critical power.");
+			return UtilText.parse(owner, "受益于[npc.herPos]丰富的办公室经验，[npc.name]很清楚要如何激励底层员工。"
+					+ "紧张的工作环境使[npc.herPro]积压了大量的压力，增强了暴击伤害。");
 		}
 	};
 
@@ -1328,39 +1328,39 @@ public class Perk {
     };
 	public static AbstractPerk JOB_STUDENT = new AbstractPerk(20,
 			true,
-			"Student Discount",
+			"学生优惠",
 			PerkCategory.JOB,
 			"perks/jobs/student",
 			PresetColour.BASE_YELLOW,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_ARCANE, 10)),
-			Util.newArrayListOfValues("[style.boldExcellent(25%)] discount in all stores")) {
+			Util.newArrayListOfValues("[style.boldExcellent(获得25%)]商店折扣")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] student discount has never failed [npc.herPro] before!"
-					+ " Along with a guaranteed 25% discount in all stores, [npc.she] can be confident in [npc.herPos] ability to quickly learn new things.");
+			return UtilText.parse(owner, "[npc.NamePos]的学生折扣从未让[npc.herPro]失望过！"
+					+ "除了在所有商店都能享受25%折扣外，[npc.she]还对[npc.herPos]快速学习新知识的能力充满信心。");
 		}
 	};
 	
 	public static AbstractPerk JOB_MUSICIAN = new AbstractPerk(20,
 			true,
-			"Arcane Composition",
+			"奥术曲谱",
 			PerkCategory.JOB,
 			"perks/jobs/musician",
 			PresetColour.BASE_GREY,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.DAMAGE_LUST, 25)),
-			Util.newArrayListOfValues("[style.boldExcellent(Double)] length of all spell effects")) {
+			Util.newArrayListOfValues("[style.boldExcellent(双倍)]奥术效应的影响时长")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.verb(find)] that [npc.herPos] abilities as a musician translate quite well into the art of seduction."
-					+ " [npc.She] [npc.verb(feel)] the same sort of rhythm in casting spells as [npc.she] [npc.do] with music, resulting in all of [npc.herPos] spell effects lasting twice as long as usual.");
+			return UtilText.parse(owner, "[npc.Name]发现[npc.herPos]作为音乐家的能力为魅惑之术增添了不少优势。"
+					+ "[npc.She]能感受到施法过程中的音乐节律，导致所有[npc.herPos]法术效果的持续时间是常人的两倍。");
 		}
 	};
 
     public static AbstractPerk JOB_JROTC = new AbstractPerk(20,
             true,
-            "Controlled Aggression",
+            "受控侵略",
             PerkCategory.JOB,
             "perks/jobs/soldier",
             PresetColour.BASE_GREEN,
@@ -1369,60 +1369,60 @@ public class Perk {
                     new Value<>(Attribute.HEALTH_MAXIMUM, 25),
                     new Value<>(Attribute.RESISTANCE_PHYSICAL, 5),
                     new Value<>(Attribute.DAMAGE_PHYSICAL, 10)),
-            Util.newArrayListOfValues("Your damage is [style.boldExcellent(doubled)] in the first turn of combat")) {
+            Util.newArrayListOfValues("在战斗的第一回合，你的伤害[style.boldExcellent(翻倍)]")) {
         @Override
         public String getDescription(GameCharacter owner) {
-            return UtilText.parse(owner, "[npc.NameHas] spent a considerable amount of time training to fight, and as a result, [npc.she] [npc.is] far stronger and healthier than a normal person."
-                    + " Thanks to this training, [npc.she] [npc.is] also able to channel [npc.herPos] aggression into [npc.herPos] attacks.");
+            return UtilText.parse(owner, "[npc.NameHas]花了大量时间进行战斗训练，远比普通人更强壮、更健康。"
+                    + "得益于训练，[npc.she]也能将[npc.herPos]的攻击性转化为攻击的威力。");
         }
     };
 
 	public static AbstractPerk JOB_TEACHER = new AbstractPerk(20,
 			true,
-			"In Control",
+			"尽在掌握",
 			PerkCategory.JOB,
 			"perks/jobs/teacher",
 			PresetColour.BASE_BLUE_LIGHT,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.SPELL_COST_MODIFIER, 10)),
-			Util.newArrayListOfValues("[style.boldExcellent(Triple)] all slave obedience gains")) {
+			Util.newArrayListOfValues("[style.boldExcellent(三倍)]奴隶的服从获得")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.verb(know)] exactly how to deal with unruly students."
-					+ " [npc.HerPos] ability to clearly understand and explain difficult subjects is reflected in a reduced cost of casting spells.");
+			return UtilText.parse(owner, "[npc.Name]明白该如何处理不守规矩的学生。"
+					+ "[npc.HerPos]能够清楚地理解与解释难题，这使得施法成本得以降低。");
 		}
 	};
 	
 	public static AbstractPerk JOB_WRITER = new AbstractPerk(20,
 			true,
-			"Meditations",
+			"冥想",
 			PerkCategory.JOB,
 			"perks/jobs/writer",
 			PresetColour.BASE_PURPLE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.DAMAGE_SPELLS, 25)),
-			Util.newArrayListOfValues("[style.boldExcellent(+25%)] to all experience gains")) {
+			Util.newArrayListOfValues("[style.boldExcellent(+25%)]经验获得")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.verb(keep)] a diary of [npc.herPos] personal thoughts and encounters, allowing [npc.herPro] to reflect upon and learn from [npc.herPos] experiences."
-					+ " [npc.HerPos] keen interest in books also allows [npc.herPro] to quickly read up on the most effective application of spells.");
+			return UtilText.parse(owner, "[npc.Name]随身携带一本记录了[npc.herPos]个人思考和境遇的日记，让[npc.herPro]反思并从[npc.herPos]经历中学习。"
+					+ "[npc.HerPos]对阅读很感兴趣，这使[npc.herPro]能快速施放最有效的应对法术。");
 		}
 	};
 
 	public static AbstractPerk JOB_CHEF = new AbstractPerk(20,
 			true,
-			"Fine Taste",
+			"高雅品味",
 			PerkCategory.JOB,
 			"perks/jobs/chef",
 			PresetColour.BASE_ORANGE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.RESISTANCE_POISON, 25)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Double)] duration of all potion effects",
-					"[style.boldExcellent(Doubles)] potion effect limit")) {
+					"[style.boldExcellent(双倍)]药剂效果的持续时间",
+					"[style.boldExcellent(双倍)]药效上限")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Thanks to spending a considerable amount of time tasting food, [npc.name] [npc.has] both a significant resistance to poison, as well as the ability to make culinary marvels out of basic ingredients.");
+			return UtilText.parse(owner, "由于花费大量时间品尝食物，[npc.Name]有着很强的抗毒能力，以及用基础食材做出美味佳肴的手艺。");
 		}
 	};
 
@@ -1538,7 +1538,7 @@ public class Perk {
 
 	public static AbstractPerk JOB_PLAYER_CONSTRUCTION_WORKER = new AbstractPerk(20,
 			true,
-			"Project Manager",
+			"工头",
 			PerkCategory.JOB,
 			"perks/jobs/construction",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_YELLOW, PresetColour.CLOTHING_BLACK),
@@ -1546,12 +1546,12 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5),
 					new Value<>(Attribute.HEALTH_MAXIMUM, 10),
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 5)),
-			Util.newArrayListOfValues("[style.boldExcellent(Halves)] cost of all room upgrades"),
+			Util.newArrayListOfValues("房间升级费用[style.boldExcellent(减半)]"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Thanks to [npc.her] considerable experience in the industry, [npc.name] [npc.verb(know)] how to efficiently manage construction projects."
-					+ " [npc.Her] time performing manual labour has also given [npc.herHim] a healthy body.");
+			return UtilText.parse(owner, "由于[npc.her]拥有丰富的行业经验，[npc.Name]知道该如何效率地管理建筑项目。"
+					+ "[npc.Her]投入进体力劳动的时间，同时赐予了[npc.herHim]一具健康的身体。");
 		}
 	};
 	
@@ -1577,16 +1577,16 @@ public class Perk {
 
 	public static AbstractPerk JOB_ATHLETE = new AbstractPerk(20,
 			true,
-			"Ten-Second Barrier",
+			"10秒极限",
 			PerkCategory.JOB,
 			"perks/jobs/athlete",
 			PresetColour.BASE_TEAL,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 10)),
-			Util.newArrayListOfValues("All non-zero escape chances in combat are boosted to [style.boldExcellent(100%)]")) {
+			Util.newArrayListOfValues("战斗中只要逃脱率不为零，都会提升至[style.boldExcellent(100%)] ")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.is] a world-class sprinter, and [npc.has] a guaranteed 100% success of escaping any combat situation where running away is an option.");
+			return UtilText.parse(owner, "[npc.Name]是世界一流的短跑运动员，有100%的保证逃脱任何可逃跑的战斗。");
 		}
 	};
 
@@ -1627,7 +1627,7 @@ public class Perk {
     };
 	public static AbstractPerk JOB_ARISTOCRAT = new AbstractPerk(20,
 			true,
-			"Blue Blood",
+			"贵族血统",
 			PerkCategory.JOB,
 			"perks/jobs/aristocrat",
 			PresetColour.BASE_GOLD,
@@ -1636,12 +1636,12 @@ public class Perk {
 					new Value<>(Attribute.DAMAGE_MELEE_WEAPON, 25),
 					new Value<>(Attribute.DAMAGE_RANGED_WEAPON, 25)),
 			Util.newArrayListOfValues(
-					"All [style.colourCorruption(corruption)] gains are [style.colourBad(doubled)]",
-					"[style.colourGood(+0.25)] to [style.colourExcellent(all resistances)] per 1 corruption")) {
+					"[style.colourCorruption(堕落)]将[style.colourBad(双倍)]增加",
+					"每有1堕落，[style.colourExcellent(全抗性)][style.colourGood(+0.25)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] from an ancient aristocratic family, and [npc.has] been given the best education money can buy."
-					+ " Insufferably arrogant, [npc.name] [npc.verb(know)] that [npc.sheIsFull] better than everyone else, and won't let any filthy peasant get the better of [npc.herHim]!");
+			return UtilText.parse(owner, "[npc.NameIsFull]出身簪缨世族，得到了最优渥的精英教育。"
+					+ "颐指气使是[npc.name]的做派。[npc.name]确信自己超群绝伦，如鹤在鸡群。凡夫俗子如何同[npc.herHim]相提并论！");
 		}
 	};
 
@@ -1667,7 +1667,7 @@ public class Perk {
 
     public static AbstractPerk JOB_MAID = new AbstractPerk(20,
 			true,
-			"Housekeeper",
+			"管家",
 			PerkCategory.JOB,
 			"perks/jobs/maid",
 			PresetColour.BASE_PINK_LIGHT,
@@ -1675,18 +1675,18 @@ public class Perk {
 					new Value<>(Attribute.DAMAGE_LUST, 5),
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Boosted)] Maid's set bonuses",
-					"[style.boldExcellent(Double)] slave income from maids and butlers")) {
+					"[style.boldExcellent(增强)]女仆套增益",
+					"从女佣与管家处获得[style.boldExcellent(双倍)]奴隶收益")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.is] the perfect example of a hard-working maid, and while wearing a complete set of maid's clothes, the bonus that [npc.she] [npc.verb(receive)] is considerably boosted."
-					+ " [npc.She] also [npc.verb(know)] how to train butlers and other maids to be exceptional at their jobs.");
+			return UtilText.parse(owner, "[npc.Name]是辛勤女仆的完美典范，穿着整套女佣服时，获得的增益也将大大提高。"
+					+ "[npc.She]同时知晓该如何培训管家与其他女仆，使其在工作的表现上出类拔萃。");
 		}
 	};
 
 	public static AbstractPerk JOB_BUTLER = new AbstractPerk(20,
 			true,
-			"Legacy of Jeeves",
+			"吉夫斯笔下的人物",
 			PerkCategory.JOB,
 			"perks/jobs/butler",
 			PresetColour.BASE_BLUE_STEEL,
@@ -1694,30 +1694,30 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5),
 					new Value<>(Attribute.RESISTANCE_LUST, 25)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Boosted)] Butler's set bonuses",
-					"[style.boldExcellent(Double)] slave income from maids and butlers")) {
+					"[style.boldExcellent(提升)]管家套装的奖励",
+					"[style.boldExcellent(双倍)]从事仆人/管家奴隶的受益")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.is] the perfect example of a hard-working butler, and while wearing a complete set of butler's clothes, the bonus that [npc.she] [npc.verb(receive)] is considerably boosted."
-					+ " [npc.She] also [npc.verb(know)] how to train maids and other butlers to be exceptional at their jobs.");
+			return UtilText.parse(owner, "[npc.Name]是辛勤管家的完美典范，穿着整套管家服时，获得的增益也将大大提高。"
+					+ "[npc.She]还知晓该如何培训女仆与管家，使其在工作的表现上出类拔萃。");
 		}
 	};
 
 	public static AbstractPerk JOB_TOURIST = new AbstractPerk(20,
 			true,
-			"I'm an American!",
+			"爷是美国人！",
 			PerkCategory.JOB,
 			"perks/jobs/tourist",
 			PresetColour.BASE_BLUE_DARK,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.HEALTH_MAXIMUM, 25)),
 			Util.newArrayListOfValues(
-					"All incorrect English spellings are [style.boldExcellent(automatically fixed)]",
-					"Enemies are blinded by your [style.colourFreedom(freedom)] for [style.colourExcellent(-1)] <span style='color:"+Attribute.ACTION_POINTS.getColour().toWebHexString()+";'>"+Attribute.ACTION_POINTS.getName()+"</span>",
-					"Burger effects are [style.colourGood(doubled)]")) {
+					"所有错误的英语拼写都要通通[style.boldExcellent(纠正)]",
+					"敌人被你的[style.colourFreedom(自由民主)]闪瞎了，[style.colourExcellent(-1)]<span style='color:"+Attribute.ACTION_POINTS.getColour().toWebHexString()+";'>"+Attribute.ACTION_POINTS.getName()+"</span>",
+					"汉堡的效果[style.colourGood(翻倍)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.speech(Excuse me! I'm an American! Do you speak English?! My visa expires in four days, where's the embassy?!)]");
+			return UtilText.parse(owner, "[npc.speech(打扰一下！我是美·国·人！你会说英语吗？！我的签证四天后到期，大使馆在哪里？！)]");
 		}
 	};
 	
@@ -1725,7 +1725,7 @@ public class Perk {
 	
 	public static AbstractPerk PHYSICAL_BASE = new AbstractPerk(20,
 			false,
-			"natural fitness",
+			"天生体魄",
 			PerkCategory.PHYSICAL,
 			"perks/attStrength5",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -1734,13 +1734,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.has] a natural amount of physical fitness.");
+			return UtilText.parse(owner, "[npc.Name]拥有与生俱来的强健体魄。");
 		}
 	};
 
 	public static AbstractPerk CRITICAL_BOOST = new AbstractPerk(20,
 			false,
-			"critical power",
+			"关键一击",
 			PerkCategory.PHYSICAL,
 			"perks/critical_power",
 			PresetColour.BASE_ORANGE,
@@ -1751,13 +1751,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] able to really get the most out of any critical moves [npc.she] [npc.verb(make)].");
+			return UtilText.parse(owner, "[npc.NameIsFull]能够真正充分发挥[npc.she]的关键力量。");
 		}
 	};
 
 	public static AbstractPerk CRITICAL_BOOST_LUST = new AbstractPerk(20,
 			false,
-			"critical power",
+			"关键一击",
 			PerkCategory.LUST,
 			"perks/critical_power",
 			PresetColour.BASE_PINK,
@@ -1768,13 +1768,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] able to really get the most out of any critical moves [npc.she] [npc.verb(make)].");
+			return UtilText.parse(owner, "[npc.NameIsFull]能够真正充分发挥[npc.she]的关键力量。");
 		}
 	};
 
 	public static AbstractPerk CRITICAL_BOOST_ARCANE = new AbstractPerk(20,
 			false,
-			"critical power",
+			"关键一击",
 			PerkCategory.ARCANE,
 			"perks/critical_power",
 			PresetColour.BASE_PURPLE,
@@ -1785,13 +1785,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] able to really get the most out of any critical moves [npc.she] [npc.verb(make)].");
+			return UtilText.parse(owner, "[npc.NameIsFull]能够真正充分发挥[npc.she]的关键力量。");
 		}
 	};
 	
 	public static AbstractPerk PHYSIQUE_BOOST = new AbstractPerk(20,
 			false,
-			"physically fit",
+			"身体健康",
 			PerkCategory.PHYSICAL,
 			"perks/attStrength1",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -1800,13 +1800,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent a lot of time working towards improving [npc.her] physical fitness.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花了不少工夫来锤炼[npc.her]的身体。");
 		}
 	};
 	
 	public static AbstractPerk PHYSIQUE_BOOST_ALT = new AbstractPerk(20,
 			false,
-			"physically fit",
+			"身体健康",
 			PerkCategory.PHYSICAL,
 			"perks/attStrength1",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -1815,13 +1815,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent a lot of time working towards improving [npc.her] physical fitness.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花了不少工夫来锤炼[npc.her]的身体。");
 		}
 	};
 
 	public static AbstractPerk PHYSIQUE_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"physically fit",
+			"身体健康",
 			PerkCategory.PHYSICAL,
 			"perks/attStrength5",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -1830,13 +1830,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Through hard work and perseverance, [npc.nameHasFull] managed to massively improve [npc.her] level of physical fitness.");
+			return UtilText.parse(owner, "千锤百炼！[npc.nameHasFull]的身体素质大幅强化了！");
 		}
 	};
 	
 	public static AbstractPerk PHYSICAL_DAMAGE = new AbstractPerk(20,
 			false,
-			"striker",
+			"打击者",
 			PerkCategory.PHYSICAL,
 			"perks/strike",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -1845,13 +1845,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "By training without the aid of the arcane, [npc.nameHasFull] managed to improve the damage of [npc.her] physical attacks.");
+			return UtilText.parse(owner, "通过不涉及奥术的训练，[npc.nameHasFull]成功提升了[npc.her]物理攻击的伤害。");
 		}
 	};
 
 	public static AbstractPerk UNARMED_DAMAGE = new AbstractPerk(20,
 			false,
-			"hand-to-hand",
+			"拳拳到肉",
 			PerkCategory.PHYSICAL,
 			"perks/unarmed_damage",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -1860,13 +1860,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent many hours in training for hand-to-hand combat, making [npc.herHim] a dangerous foe even when unarmed.");
+			return UtilText.parse(owner, "[npc.NameHasFull]训练徒手格斗已久，不凭仗武器亦可制敌。");
 		}
 	};
 
 	public static AbstractPerk MELEE_DAMAGE = new AbstractPerk(20,
 			false,
-			"melee weapons expert",
+			"近战武器专家",
 			PerkCategory.PHYSICAL,
 			"perks/melee_damage",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -1875,13 +1875,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Having spent considerable time training with all sorts of different melee weapons, [npc.nameIsFull] now a very dangerous foe to face in close combat.");
+			return UtilText.parse(owner, "[npc.nameIsFull]投入大量的时间来训练各种不同的近战武器，在近身作战中已然是一名相当可怕的敌手。");
 		}
 	};
 
 	public static AbstractPerk RANGED_DAMAGE = new AbstractPerk(20,
 			false,
-			"sharp-shooter",
+			"神射手",
 			PerkCategory.PHYSICAL,
 			"perks/ranged_damage",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -1890,13 +1890,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Proficient with all sorts of ranged weapons, [npc.nameIsFull] a truly terrifying foe to face in long-distance engagements.");
+			return UtilText.parse(owner, "[npc.nameIsFull]精通各种远程武器，在远距离交战中是能令人真切感到恐惧的敌手。");
 		}
 	};
 
 	public static AbstractPerk BESERK = new AbstractPerk(20,
 			true,
-			"berserk",
+			"狂战士",
 			PerkCategory.PHYSICAL,
 			"perks/beserk",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -1910,13 +1910,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Having little time for strategies which don't involve an all-out show of force, [npc.name] [npc.verb(throw)] [npc.herself] into battle with a complete disregard for [npc.her] own safety.");
+			return UtilText.parse(owner, "[npc.Name]完全不顾自身安危，几乎无暇顾及那些不能全面展示武力的策略。");
 		}
 	};
 	
 	public static AbstractPerk PHYSICAL_DEFENCE = new AbstractPerk(20,
 			false,
-			"defender",
+			"卫士",
 			PerkCategory.PHYSICAL,
 			"perks/shield",
 			PresetColour.DAMAGE_TYPE_PHYSICAL,
@@ -1925,32 +1925,32 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent a good deal of time working on improving [npc.her] ability to counter physical attacks.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花了很多时间来提升[npc.her]抵抗物理攻击的能力。");
 		}
 	};
 
 	public static AbstractPerk HYPERMOBILITY = new AbstractPerk(20,
 			false,
-			"hypermobility",
+			"超级柔韧",
 			PerkCategory.PHYSICAL,
 			"perks/hypermobility",
 			PresetColour.BASE_WHITE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.CRITICAL_DAMAGE, 15)),
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(Unlocks)] autofellatio and autocunnilingus [style.colourSex(sex actions)]")) {
+					"[style.colourExcellent(解锁)]“自我口交”和“自我舔阴”[style.colourSex(性行为)]。")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] exceptionally flexible, allowing [npc.herHim] to strike from completely unexpected angles."
-					+ " As [npc.sheIs] able to bend all the way down until [npc.her] head touches [npc.her] groin, [npc.sheIs] able to perform oral on [npc.herself].");
+					"[npc.NameIsFull]异常柔韧，所以能从刁钻的角度奇袭敌人。"
+					+ "[npc.sheIs]弯起腰来能把自己折叠，所以可以为自己口交。");
 		}
 	};
 	
 	public static AbstractPerk SPELL_DAMAGE = new AbstractPerk(20,
 			false,
-			"spell power",
+			"施法伤害",
 			PerkCategory.ARCANE,
 			"perks/arcane_power_1",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -1958,13 +1958,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "By spending time practicing the casting of spells, [npc.nameHasFull] discovered new ways in which to increase their effectiveness.");
+			return UtilText.parse(owner, "通过下功夫练习施法，[npc.nameHasFull]发现了提高法术效果的新方法。");
 		}
 	};
 	
 	public static AbstractPerk SPELL_DAMAGE_MAJOR = new AbstractPerk(20,
 			false,
-			"spell mastery",
+			"施法熟练",
 			PerkCategory.ARCANE,
 			"perks/arcane_power_3",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -1972,13 +1972,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "By spending a great deal of time focusing on improving the power of [npc.her] spells, [npc.nameIsFull] now able to cast them much more effectively than before.");
+			return UtilText.parse(owner, "[npc.nameIsFull]花费大量时间专注于提高法术的威力，现在能够更有效地施放法术。");
 		}
 	};
 	
 	public static AbstractPerk SPELL_EFFICIENCY = new AbstractPerk(20,
 			false,
-			"spell efficiency",
+			"施法效率",
 			PerkCategory.ARCANE,
 			"perks/spell_efficiency",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -1986,13 +1986,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] managed to improve the efficiency of [npc.her] spell casting!");
+			return UtilText.parse(owner, "[npc.NameHasFull]提高了施法效率！");
 		}
 	};
 	
 	public static AbstractPerk AURA_BOOST = new AbstractPerk(20,
 			false,
-			"aura reserves",
+			"灵气储备",
 			PerkCategory.ARCANE,
 			"perks/resource_boost",
 			PresetColour.ATTRIBUTE_MANA,
@@ -2001,13 +2001,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "After spending quite some time focusing inwards, [npc.nameHasFull] managed to increase [npc.her] aura reserves.");
+			return UtilText.parse(owner, "[npc.nameHasFull]花了不少时间冥想，成功增加了灵气储备。");
 		}
 	};
 	
 	public static AbstractPerk ENERGY_BOOST = new AbstractPerk(20,
 			false,
-			"energy reserves",
+			"能量储备",
 			PerkCategory.PHYSICAL,
 			"perks/resource_boost",
 			PresetColour.ATTRIBUTE_HEALTH,
@@ -2016,13 +2016,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] increased [npc.her] energy reserves, allowing [npc.herHim] to withstand attacks that would once have taken [npc.herHim] out of the fight.");
+			return UtilText.parse(owner, "[npc.NameHasFull]增加了能量储备，使[npc.herHim]能够抵御曾经会使其战败的攻击。");
 		}
 	};
 
 	public static AbstractPerk ENERGY_BOOST_DRAIN_DAMAGE = new AbstractPerk(20,
 			true,
-			"aura shielding",
+			"灵气护盾",
 			PerkCategory.PHYSICAL,
 			"perks/resource_boost_drain_aura",
 			PresetColour.ATTRIBUTE_HEALTH,
@@ -2033,13 +2033,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "By focusing [npc.her] arcane aura into a protective barrier, [npc.nameIsFull] able to endure taking more damage than [npc.she] otherwise would be able to.");
+			return UtilText.parse(owner, "通过集中[npc.her]的奥术灵气制造一道护盾，[npc.nameIsFull]现在可以承受比以往更多的伤害。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_BOOST = new AbstractPerk(20,
 			false,
-			"elemental striker",
+			"元素打击者",
 			PerkCategory.LUST,
 			"perks/elemental_damage",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2051,13 +2051,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] dedicated [npc.herself] to learning how to harness all of the arcane elements more effectively.");
+			return UtilText.parse(owner, "[npc.NameHasFull]致力于学习该如何更有效地利用奥术元素。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_BOOST_ALT = new AbstractPerk(20,
 			false,
-			"elemental striker",
+			"元素打击者",
 			PerkCategory.LUST,
 			"perks/elemental_damage",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2069,13 +2069,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] dedicated [npc.herself] to learning how to harness all of the arcane elements more effectively.");
+			return UtilText.parse(owner, "[npc.NameHasFull]致力于学习该如何更有效地利用奥术元素。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_BOOST_ALT_2 = new AbstractPerk(20,
 			false,
-			"elemental striker",
+			"元素打击者",
 			PerkCategory.LUST,
 			"perks/elemental_damage",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2087,13 +2087,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] dedicated [npc.herself] to learning how to harness all of the arcane elements more effectively.");
+			return UtilText.parse(owner, "[npc.NameHasFull]致力于学习该如何更有效地利用奥术元素。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_DEFENCE_BOOST = new AbstractPerk(20,
 			false,
-			"elemental defender",
+			"元素防御者",
 			PerkCategory.LUST,
 			"perks/elemental_defence",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2105,14 +2105,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent time learning how best to defend [npc.herself] from the arcane elements.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花时间学习如何最好地在奥术元素中保护[npc.herself]。");
 		}
 	};
 	
 	
 	public static AbstractPerk ARCANE_BASE = new AbstractPerk(20,
 			false,
-			"natural arcane power",
+			"天然奥术力量",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence5",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2120,13 +2120,13 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Everybody in this reality has an arcane aura, no matter how weak, and so at the very least has a tiny hint of arcane power available to them.";
+			return "在这个世界里，无论多弱，每个人都会有奥术灵气。因此他们至少都能有一丝奥术力量可用。";
 		}
 	};
 	
 	public static AbstractPerk ARCANE_BOOST = new AbstractPerk(20,
 			false,
-			"arcane training",
+			"奥术训练",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence1",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2135,13 +2135,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] focused on improving [npc.her] ability to harness the arcane.");
+			return UtilText.parse(owner, "[npc.NameHasFull]专注于提高驾驭奥术的能力。");
 		}
 	};
 
 	public static AbstractPerk ARCANE_BOOST_ALT = new AbstractPerk(20,
 			false,
-			"arcane training",
+			"奥术训练",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence5",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2150,13 +2150,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] focused on improving [npc.her] ability to harness the arcane.");
+			return UtilText.parse(owner, "[npc.NameHasFull]专注于提升[npc.her]驾驭奥术的能力");
 		}
 	};
 
 	public static AbstractPerk ARCANE_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"arcane affinity",
+			"奥术亲和力",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence5",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2165,14 +2165,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] unlocked secrets of the arcane which few ever get to know.");
+			return UtilText.parse(owner, "[npc.NameHasFull]解锁了几乎不为人所知的奥术秘闻。");
 		}
 	};
 	
 	
 	public static AbstractPerk LEWD_KNOWLEDGE = new AbstractPerk(20,
 			false,
-			"lewd knowledge",
+			"放荡之识",
 			PerkCategory.LUST,
 			"perks/lewd_knowledge",
 			PresetColour.DAMAGE_TYPE_LUST,
@@ -2183,13 +2183,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.verb(know)] exactly what sort of lewd things the residents of Dominion get up to, and so can use this knowledge to [npc.her] advantage...");
+			return UtilText.parse(owner, "[npc.Name]对御城区居民参加的淫荡活动了如指掌，并能利用这些知识增强[npc.her]的优势……");
 		}
 	};
 	
 	public static AbstractPerk SEDUCTION_BOOST = new AbstractPerk(20,
 			false,
-			"seductive",
+			"摄人心魄",
 			PerkCategory.LUST,
 			"perks/attSeduction1",
 			PresetColour.DAMAGE_TYPE_LUST,
@@ -2197,13 +2197,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent a good deal of time working on [npc.her] seduction techniques, allowing [npc.herHim] to deal extra damage when teasing others.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花大量时间习得了魅惑技术，[npc.herHim]与他人调情时可造成额外的伤害。");
 		}
 	};
 	
 	public static AbstractPerk SEDUCTION_BOOST_ALT = new AbstractPerk(20,
 			false,
-			"seductive",
+			"摄人心魄",
 			PerkCategory.LUST,
 			"perks/attSeduction1",
 			PresetColour.DAMAGE_TYPE_LUST,
@@ -2211,13 +2211,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent a good deal of time working on [npc.her] seduction techniques, allowing [npc.herHim] to deal extra damage when teasing others.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花大量时间习得了魅惑技术，[npc.herHim]与他人调情时可造成额外的伤害。");
 		}
 	};
 	
 	public static AbstractPerk SEDUCTION_BOOST_ALT_2 = new AbstractPerk(20,
 			false,
-			"seductive",
+			"摄人心魄",
 			PerkCategory.LUST,
 			"perks/attSeduction1",
 			PresetColour.DAMAGE_TYPE_LUST,
@@ -2225,13 +2225,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent a good deal of time working on [npc.her] seduction techniques, allowing [npc.herHim] to deal extra damage when teasing others.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花大量时间习得了魅惑技术，[npc.herHim]与他人调情时可造成额外的伤害。");
 		}
 	};
 	
 	public static AbstractPerk SEDUCTION_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"seductive",
+			"摄人心魄",
 			PerkCategory.LUST,
 			"perks/attSeduction5",
 			PresetColour.BASE_PINK_DEEP,
@@ -2239,13 +2239,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a walking sex bomb. [npc.Her] every movement drips with suggestive body language, and people can't help but feel extremely aroused just by looking at [npc.herHim].");
+			return UtilText.parse(owner, "[npc.NameIsFull]是个行走的性爱炸弹。[npc.Her]的一举一动都包含着性暗示。人们只需看[npc.herHim]一眼，就会不由自主地被挑起情欲。");
 		}
 	};
 	
 	public static AbstractPerk SEDUCTION_DEFENCE_BOOST = new AbstractPerk(20,
 			false,
-			"resistance",
+			"抗性",
 			PerkCategory.LUST,
 			"perks/shield",
 			PresetColour.DAMAGE_TYPE_LUST,
@@ -2253,13 +2253,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] steeled [npc.herself] to resist any temptation, making it much more likely that [npc.she]'ll be able to avoid getting turned on when teased.");
+			return UtilText.parse(owner, "[npc.NameHasFull]使[npc.herself]的意志坚如铁石，以此来抗拒任何诱惑，[npc.she]在受到挑逗时更难被挑起情欲。");
 		}
 	};
 	
 	public static AbstractPerk VIRILITY_BOOST = new AbstractPerk(20,
 			false,
-			"virile",
+			"生殖力",
 			PerkCategory.LUST,
 			"perks/virile",
 			PresetColour.BASE_BLUE_LIGHT,
@@ -2267,13 +2267,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] body is able to produce very potent sperm, increasing the chance that any sexual partner of [npc.hers] gets pregnant.");
+			return UtilText.parse(owner, "[npc.NamePos]的身体可以制造出非常强壮的精子，使得[npc.hers]的性对象会更容易怀孕。");
 		}
 	};
 	
 	public static AbstractPerk VIRILITY_MAJOR_BOOST = new AbstractPerk(20,
 			false,
-			"virile",
+			"生殖力",
 			PerkCategory.LUST,
 			"perks/virile",
 			PresetColour.GENERIC_EXCELLENT,
@@ -2281,13 +2281,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] body is able to produce incredibly potent sperm, greatly increasing the chance that any sexual partner of [npc.hers] gets pregnant.");
+			return UtilText.parse(owner, "[npc.NamePos]的身体可以产生无比强壮的精子，大大增加了[npc.hers]的性对象怀孕的几率。");
 		}
 	};
 
 	public static AbstractPerk FERTILITY_BOOST = new AbstractPerk(20,
 			false,
-			"fertile",
+			"生育力",
 			PerkCategory.LUST,
 			"perks/fertile",
 			PresetColour.BASE_PINK_LIGHT,
@@ -2295,13 +2295,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] body is very fertile, increasing the chance that any sexual partner of [npc.hers] manages to get [npc.herHim] pregnant.");
+			return UtilText.parse(owner, "[npc.NamePos]的身体非常易孕，增加了性对象令[npc.herHim]怀孕的概率。");
 		}
 	};
 
 	public static AbstractPerk FERTILITY_MAJOR_BOOST = new AbstractPerk(20,
 			false,
-			"fertile",
+			"生育力",
 			PerkCategory.LUST,
 			"perks/fertile",
 			PresetColour.GENERIC_EXCELLENT,
@@ -2309,14 +2309,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] body is incredibly fertile, increasing the chance that any sexual partner of [npc.hers] manages to get [npc.herHim] pregnant.");
+			return UtilText.parse(owner, "[npc.NamePos]的身体颇具生育力，增强了性对象让[npc.herHim]怀孕的机会。");
 		}
 	};
 	
 	
 	public static AbstractPerk ARCANE_COMBATANT = new AbstractPerk(20,
 			false,
-			"arcane combatant",
+			"奥术战士",
 			PerkCategory.ARCANE,
 			"perks/physical_brawler",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -2327,13 +2327,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] an expert harnessing the arcane for combat applications. [npc.She] [npc.verb(gain)] a bonus to [npc.her] spell damage and efficiency.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是利用奥术战斗的专家，获得法术伤害和效能的加成。");
 		}
 	};
 	
 	public static AbstractPerk SACRIFICIAL_SHIELDING = new AbstractPerk(20,
 			true,
-			"sacrificial shielding",
+			"牺牲护盾",
 			PerkCategory.ARCANE,
 			"perks/sacrificial_shielding",
 			PresetColour.ATTRIBUTE_MANA,
@@ -2344,32 +2344,32 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "By sacrificing a portion of [npc.her] physical strength, [npc.nameIsFull] able to summon forth an all-protective shield.");
+			return UtilText.parse(owner, "[npc.nameIsFull]通过牺牲部分体力，得以召唤出一个全抗性的护盾。");
 		}
 	};
 
 	public static AbstractPerk ARCANE_VAMPYRISM = new AbstractPerk(20,
 			true,
-			"arcane vampyrism",
+			"奥术吸血",
 			PerkCategory.ARCANE,
 			"perks/arcane_vampyrism",
 			PresetColour.ATTRIBUTE_MANA,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, -25)),
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(Absorb 50%)] of any combatant's remaining [style.colourMana("+Attribute.MANA_MAXIMUM.getName()+")]",
-					 "when they are defeated")) {
+					"任何参战者被击败时，[style.colourExcellent(吸收他们50%)]剩余的[style.colourMana("+Attribute.MANA_MAXIMUM.getName()+")]",
+					 "")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] trained [npc.her] arcane aura to be vampyric in nature, relying less on its own reserves, and more upon the ability to drain the aura from anyone (friend or foe) who is defeated nearby.");
+			return UtilText.parse(owner, "[npc.NameHasFull]将训练出吸取本性的奥术灵气，减少了对自身储备的依赖，更多地依靠从附近战败人员(朋友或敌人)身上吸取灵气。");
 		}
 	};
 	
 	
 	public static AbstractPerk FEROCIOUS_WARRIOR = new AbstractPerk(20,
 			false,
-			"ferocious warrior",
+			"悍将",
 			PerkCategory.PHYSICAL,
 			"perks/physical_brawler",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -2383,20 +2383,20 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] a lot of fighting experience, making [npc.herHim] a dangerous opponent for anyone foolish enough to challenge [npc.herHim].");
+			return UtilText.parse(owner, "[npc.NameHasFull]拥有丰富的战斗经验，将使任何蠢到敢于挑战[npc.herHim]的人落入危险的境地。");
 		}
 	};
 	
 	
 	public static AbstractPerk OBSERVANT = new AbstractPerk(60,
 			true,
-			"observant",
+			"敏锐",
 			PerkCategory.PHYSICAL,
 			"perks/misc_observant",
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_PHYSICAL, 5)),
 			Util.newArrayListOfValues(
-					"<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Gender detection</span>")) {
+					"<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>性别看破</span>")) {
 		@Override
 		public String applyPerkGained(GameCharacter character) {
 			return UtilText.parsePlayerThought("");
@@ -2410,10 +2410,10 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner!=null && owner.isPlayer()) {
-				return "You are very perceptive, and are capable of noticing the slightest of changes in your surroundings."
-						+ " You are always able to determine a person's gender, even if you have no knowledge of what their groin looks like.";
+				return "你的洞察力非常敏锐，能够注意到周围环境最细微的变化。"
+						+ "即使看不到对方的腹股沟，也能准确判别性别。";
 			} else {
-				return UtilText.parse(owner, "[npc.Name] is very perceptive, and [npc.she] continuously scans [npc.her] surroundings for signs of danger.");
+				return UtilText.parse(owner, "[npc.Name]非常敏锐，[npc.she]常常扫视着周围的环境，寻找危险的迹象。");
 			}
 		}
 	};
@@ -2421,14 +2421,14 @@ public class Perk {
 
 	public static AbstractPerk HEAVY_SLEEPER = new AbstractPerk(60,
 			true,
-			"heavy sleeper",
+			"重度沉睡者",
 			PerkCategory.PHYSICAL,
 			"statusEffects/sleeping",
 			PresetColour.SLEEP_HEAVY,
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"Will not wake during [style.colourSex(gentle)] sex",
-					"[style.boldExcellent(10x)] [style.colourHealth(health)] and [style.colourMana(aura)] regeneration rate")) {
+					"温柔的[style.colourSex(性行为)]不会让其醒来",
+					"[style.boldExcellent(10x)][style.colourHealth(生命)]和[style.colourMana(灵气)]再生速率")) {
 		@Override
 		public String applyPerkGained(GameCharacter character) {
 			return UtilText.parsePlayerThought("");
@@ -2441,8 +2441,8 @@ public class Perk {
 		public String getDescription(GameCharacter owner) {
 			if(owner!=null) {
 				return UtilText.parse(owner,
-						"[npc.Name] [npc.verb(sleep)] very deeply, with even shouting and physically shaking [npc.herHim] often not being enough to wake [npc.herHim] up."
-							+" [npc.SheIs] so unresponsive while sleeping that a gentle partner could get away with having sex with [npc.herHim] without causing [npc.herHim] to wake...");
+						"[npc.Name]处在深度睡眠中，即便大声呼喊乃至用力摇晃，[npc.herHim]都不会醒来。"
+							+"[npc.SheIs]在睡眠时的反应极为迟钝，以至于一个动作温和的伴侣可以与[npc.herHim]进行性行为而不至于让[npc.herHim]醒来……");
 			}
 			return "";
 		}
@@ -2452,12 +2452,12 @@ public class Perk {
 	
 	public static AbstractPerk ARCANE_CRITICALS = new AbstractPerk(60,
 			false,
-			"arcane precision",
+			"奥术精度",
 			PerkCategory.ARCANE,
 			"perks/physical_accurate",
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_SPELLS, 5)),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_COMBAT.toWebHexString()+ ";'>Critical</span> spells apply <b style='color:"+PresetColour.ATTRIBUTE_LUST.toWebHexString()+";'>Arcane weakness</b>")) {
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_COMBAT.toWebHexString()+ ";'>法术暴击</span>添加<b style='color:"+PresetColour.ATTRIBUTE_LUST.toWebHexString()+";'>奥术弱点</b>")) {
 		@Override
 		public String applyPerkGained(GameCharacter character) {
 			return UtilText.parsePlayerThought("");
@@ -2470,8 +2470,8 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spells are particularly effective when striking a target's weak spots."
-					+ " Any critical hits from [npc.her] spells apply 'Arcane weakness' for one turn (-10 to all shielding).");
+			return UtilText.parse(owner, "[npc.NamePos]的法术在攻击目标弱点时特别有效。"
+					+ "[npc.her]法术的任何暴击命中都会添加“奥术弱点”状态，持续一回合(所有护盾效果-10)。");
 		}
 	};
 	
@@ -2555,7 +2555,7 @@ public class Perk {
 
 	public static AbstractPerk FIRE_ENHANCEMENT = new AbstractPerk(20,
 			false,
-			"firebrand",
+			"煽火者",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence3",
 			PresetColour.DAMAGE_TYPE_FIRE,
@@ -2564,15 +2564,15 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You have a heightened affinity with arcane fire. You know just how to manipulate it in order to maximise the damage caused.";
+				return "你对奥术火焰有高度的亲和力，知道如何使用它来最大限度地造成伤害。";
 			else
-				return UtilText.parse(owner, "[npc.Name] has a heightened affinity with arcane fire. [npc.She] knows just how to manipulate it in order to maximise the damage caused.");
+				return UtilText.parse(owner, "[npc.Name]对奥术火焰有高度的亲和力，知道如何使用它来最大限度地造成伤害。");
 		}
 	};
 
 	public static AbstractPerk FIRE_ENHANCEMENT_2 = new AbstractPerk(20,
 			false,
-			"incendiary",
+			"纵火者",
 			PerkCategory.ARCANE,
 			"perks/arcane_fire_1",
 			PresetColour.DAMAGE_TYPE_FIRE,
@@ -2583,15 +2583,15 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You are an expert at manipulating arcane fire. Not only are you able to maximise its damage, but you also have a heightened resistance to its effects.";
+				return "你是操纵奥术火焰的专家。你不仅能最大限度地提高伤害，还拥有对其影响的高度抵抗力。";
 			else
-				return UtilText.parse(owner, "[npc.Name] is an expert at manipulating arcane fire. Not only is [npc.she] able to maximise its damage, but [npc.she] also has a heightened resistance to its effects.");
+				return UtilText.parse(owner, "[npc.Name]是操纵奥术火焰的专家。[npc.she]不仅能最大限度地提高伤害，还拥有对其影响的高度抵抗力。");
 		}
 	};
 
 	public static AbstractPerk COLD_ENHANCEMENT = new AbstractPerk(20,
 			false,
-			"frosty",
+			"一日之寒",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence3",
 			PresetColour.DAMAGE_TYPE_COLD,
@@ -2600,15 +2600,15 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You have a heightened affinity with arcane ice. You know just how to manipulate it in order to maximise the damage caused.";
+				return "你对奥术寒冷有高度的亲和力，知道如何使用它来最大限度地造成伤害。";
 			else
-				return UtilText.parse(owner, "[npc.Name] has a heightened affinity with arcane ice. [npc.She] knows just how to manipulate it in order to maximise the damage caused.");
+				return UtilText.parse(owner, "[npc.Name]对奥术寒冷有高度的亲和力，知道如何使用它来最大限度地造成伤害。");
 		}
 	};
 
 	public static AbstractPerk COLD_ENHANCEMENT_2 = new AbstractPerk(20,
 			false,
-			"ice cold",
+			"冰冻十尺",
 			PerkCategory.ARCANE,
 			"perks/arcane_ice_1",
 			PresetColour.DAMAGE_TYPE_COLD,
@@ -2620,15 +2620,15 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You are an expert at manipulating arcane ice. Not only are you able to maximise its damage, but you also have a heightened resistance to its effects.";
+				return "你是操纵奥术寒冷的专家。你不仅能最大限度地提高伤害，还拥有对其影响的高度抵抗力。";
 			else
-				return UtilText.parse(owner, "[npc.Name] is an expert at manipulating arcane ice. Not only is [npc.she] able to maximise its damage, but [npc.she] also has a heightened resistance to its effects.");
+				return UtilText.parse(owner, "[npc.Name]是操纵奥术寒冷的专家。[npc.she]不仅能最大限度地提高伤害，还拥有对其影响的高度抵抗力。");
 		}
 	};
 
 	public static AbstractPerk POISON_ENHANCEMENT = new AbstractPerk(20,
 			false,
-			"venomous",
+			"毒液",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence3",
 			PresetColour.DAMAGE_TYPE_POISON,
@@ -2637,15 +2637,15 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You have a heightened affinity with arcane poison. You know just how to manipulate it in order to maximise the damage caused.";
+				return "你对奥术毒素有高度的亲和力，知道如何使用它来最大限度地造成伤害。";
 			else
-				return UtilText.parse(owner, "[npc.Name] has a heightened affinity with arcane poison. [npc.She] knows just how to manipulate it in order to maximise the damage caused.");
+				return UtilText.parse(owner, "[npc.Name]对奥术毒素有高度的亲和力，知道如何使用它来最大限度地造成伤害。");
 		}
 	};
 
 	public static AbstractPerk POISON_ENHANCEMENT_2 = new AbstractPerk(20,
 			false,
-			"toxic",
+			"恶毒",
 			PerkCategory.ARCANE,
 			"perks/arcane_poison_1",
 			PresetColour.DAMAGE_TYPE_POISON,
@@ -2657,71 +2657,71 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You are an expert at manipulating arcane poison. Not only are you able to maximise its damage, but you also have a heightened resistance to its effects.";
+				return "你是操纵奥术毒素的专家。你不仅能最大限度地提高伤害，还拥有对其影响的高度抵抗力。";
 			else
-				return UtilText.parse(owner, "[npc.Name] is an expert at manipulating arcane poison. Not only is [npc.she] able to maximise its damage, but [npc.she] also has a heightened resistance to its effects.");
+				return UtilText.parse(owner, "[npc.Name]是操纵奥术毒素的专家。[npc.she]不仅能最大限度地提高伤害，还拥有对其影响的高度抵抗力。");
 		}
 	};
 
 	// Fitness:
 	public static AbstractPerk RUNNER = new AbstractPerk(20,
 			true,
-			"runner",
+			"跑者",
 			PerkCategory.PHYSICAL,
 			"perks/fitness_runner",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			Util.newHashMapOfValues(new Value<>(Attribute.MAJOR_PHYSIQUE, 3)),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+ ";'>Improved escape chance</span>")) {
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+ ";'>提高逃脱概率</span>")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer())
-				return "You're a natural runner and possess a good level of stamina.";
+				return "你天生善于跑步，拥有良好的耐力。";
 			else
-				return UtilText.parse(owner, "[npc.Name] is natural runner and possesses a good level of stamina.");
+				return UtilText.parse(owner, "[npc.Name]天生善于跑步，拥有良好的耐力。");
 		}
 	};
 
 	public static AbstractPerk RUNNER_2 = new AbstractPerk(20,
 			true,
-			"cardio champion",
+			"有氧运动冠军",
 			PerkCategory.PHYSICAL,
 			"perks/fitness_runner_2",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			Util.newHashMapOfValues(new Value<>(Attribute.HEALTH_MAXIMUM, 5)),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+ ";'>Improved escape chance</span>")) {
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+ ";'>提高逃脱概率</span>")) {
 		@Override
 		public String getName(GameCharacter character) {
 			if (character!=null && character.isFeminine()) {
-				return "Cardio Queen";
+				return "有氧女王";
 			} else {
-				return "Cardio King";
+				return "有氧帝王";
 			}
 		}
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] the " + (owner.isFeminine() ? "queen" : "king") + " of cardio, possessing a seemingly endless reserve of energy.");
+			return UtilText.parse(owner, "[npc.NameIsFull]就是" + (owner.isFeminine() ? "女王" : "帝王") + "，有氧放光芒。能量储备用之不竭。");
 		}
 	};
 
 	public static AbstractPerk COMBAT_REGENERATION = new AbstractPerk(20,
 			true,
-			"combat regeneration",
+			"战斗续行",
 			PerkCategory.PHYSICAL,
 			"perks/regeneration",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			Util.newHashMapOfValues(new Value<>(Attribute.MANA_MAXIMUM, -25)),
-			Util.newArrayListOfValues("[style.boldExcellent(Regenerate 5%)] total [style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")] per turn in combat")) {
+			Util.newArrayListOfValues("每回合[style.boldExcellent(恢复5%)]最大[style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]。")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "At the expense of some of [npc.namePos] "+Attribute.MANA_MAXIMUM.getName()+", the arcane's natural healing properties will now be amplified when in the presence of [npc.her] adrenaline.");
+			return UtilText.parse(owner, "以牺牲部分"+Attribute.MANA_MAXIMUM.getName()+"为代价，奥术的自然治疗属性将在肾上腺素的作用下放大。");
 		}
 	};
 	
 	public static AbstractPerk UNARMED_TRAINING = new AbstractPerk(20,
 			false,
-			"brawler",
+			"斗士",
 			PerkCategory.PHYSICAL,
 			"perks/natural_fighter",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -2731,18 +2731,18 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] [npc.verb(love)] a good brawl, and [npc.is] a fearsome opponent in unarmed combat.");
+			return UtilText.parse(owner, "[npc.Name]热衷于斗殴，是徒手格斗中的可怕敌手。");
 		}
 	};
 
 	public static AbstractPerk FEMALE_ATTRACTION = new AbstractPerk(60,
 			false,
-			"ladykiller",
+			"御女高手",
 			PerkCategory.LUST,
 			"perks/fitness_female_attraction",
 			PresetColour.FEMININE,
-			null, Util.newArrayListOfValues("+10% <span style='color:" + Attribute.DAMAGE_LUST.getColour().toWebHexString() + ";'>lust damage</span>"
-					+ " vs <span style='color:" + PresetColour.FEMININE.toWebHexString()+ ";'>feminine opponents</span>")) {
+			null, Util.newArrayListOfValues(
+					"对<span style='color:" + PresetColour.FEMININE.toWebHexString()+ ";'>女性敌人</span>" + "+10% <span style='color:" + Attribute.DAMAGE_LUST.getColour().toWebHexString() + ";'>性欲伤害</span>")) {
 		@Override
 		public String applyPerkGained(GameCharacter character) {
 			return UtilText.parsePlayerThought("");
@@ -2755,19 +2755,19 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] very flirtatious, and although [npc.her] charms work well on both sexes, [npc.she] [npc.verb(find)] that [npc.her] advances are particularly effective against feminine people.");
+			return UtilText.parse(owner, "[npc.NameIsFull]非常善于调情，虽然[npc.her]的魅力男女通吃，但[npc.she]发现[npc.her]的挑逗对女性尤其起效。");
 		}
 
 	};
 
 	public static AbstractPerk MALE_ATTRACTION = new AbstractPerk(60,
 			false,
-			"minx",
+			"御男高手",
 			PerkCategory.LUST,
 			"perks/fitness_male_attraction",
 			PresetColour.MASCULINE,
-			null, Util.newArrayListOfValues("+10% <span style='color:" + Attribute.DAMAGE_LUST.getColour().toWebHexString() + ";'>lust damage</span>"
-					+ " vs <span style='color:" + PresetColour.MASCULINE.toWebHexString()+ ";'>masculine opponents</span>")) {
+			null, Util.newArrayListOfValues(
+					"对<span style='color:" + PresetColour.MASCULINE.toWebHexString()+ ";'>男性敌人</span>" + "+10% <span style='color:" + Attribute.DAMAGE_LUST.getColour().toWebHexString() + ";'>性欲伤害</span>")) {
 		@Override
 		public String applyPerkGained(GameCharacter character) {
 			return UtilText.parsePlayerThought("");
@@ -2780,69 +2780,69 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] quite a tease, and although [npc.her] charms work well on both sexes, [npc.she] [npc.verb(find)] that [npc.her] advances are particularly effective against masculine people.");
+			return UtilText.parse(owner, "[npc.NameIsFull]很会挑逗，虽然[npc.her]的魅力男女通吃，但[npc.she]发现[npc.her]的挑逗对男性尤其起效。");
 		}
 	};
 	
 	public static AbstractPerk CONVINCING_REQUESTS = new AbstractPerk(20,
 			true,
-			"irresistible appeals",
+			"摄人心魄",
 			PerkCategory.LUST,
 			"perks/convincing_requests",
 			Util.newArrayListOfValues(PresetColour.GENERIC_SEX, PresetColour.BASE_GOLD),
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.DAMAGE_LUST, 1)),
 			Util.newArrayListOfValues(
-					"Requests made during normal sex scenes are always granted",
-					"Unlocks positioning actions in all normal sex scenes"),
+					"在正常的性爱场景中提出的要求总是会被答应。",
+					"解锁普通性爱场景的所有姿势"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] mastered the art of sexual persuasion, and [npc.is] able to convince even the cruelest of dominant partners to do as [npc.she] [npc.verb(ask)].");
+			return UtilText.parse(owner, "[npc.NameHasFull]掌握了情话的艺术，再铁石心肠的支配对象都能听得进[npc.she]的话。");
 		}
 	};
 	
 	public static AbstractPerk OBJECT_OF_DESIRE = new AbstractPerk(20,
 			true,
-			"object of desire",
+			"欲望之源",
 			PerkCategory.LUST,
 			"perks/object_of_desire",
 			PresetColour.GENERIC_SEX,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.DAMAGE_LUST, 1)),
-			Util.newArrayListOfValues("All partners in sex require [style.colourSex(+1 orgasm)] before being satisfied")) {
+			Util.newArrayListOfValues("任何对象在性交中需要[style.colourSex(+1高潮次数)]才能被满足")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] so astoundingly "+(owner.getFemininity()==Femininity.ANDROGYNOUS?"attractive":(owner.isFeminine()?"beautiful":"handsome"))
-					+" that [npc.her] sexual partners can't help but keep on fucking well after they've had their first orgasm.");
+			return UtilText.parse(owner, "[npc.NameIsFull]惊人地"+(owner.getFemininity()==Femininity.ANDROGYNOUS?"attractive":(owner.isFeminine()?"美丽":"英俊"))
+					+"以至于[npc.her]的性对象在第一次高潮之后仍会情难自抑地继续做下去。");
 		}
 	};
 
 	public static AbstractPerk ORGASMIC_LEVEL_DRAIN = new AbstractPerk(20,
 			true,
-			"orgasmic level drain",
+			"高潮等级流失",
 			PerkCategory.LUST,
 			"perks/orgasmic_level_drain",
 			Util.newArrayListOfValues(PresetColour.GENERIC_SEX, PresetColour.GENERIC_EXPERIENCE),
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"[style.boldTerrible(-95% to all)] [style.boldExperience(experience gains)]",
-					"In all [style.boldSex(sex scenes)]:",
-					"Can choose to [style.boldTerrible(drain 1 level)] from orgasming partners",
-					"You gain [style.boldExcellent(5)] [style.boldExperience(experience)] multiplied by the level drained"),
+					"[style.boldTerrible(-95%所有)][style.boldExperience(经验获得)]",
+					"在所有的[style.boldSex(性爱场景)]：",
+					"可以选择让高潮的伴侣[style.boldTerrible(等级流失1级)]",
+					"你将获得流失等级[style.boldExcellent(5)]倍的[style.boldExperience(经验)]"),
 			null, null, null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Via a complex manipulation of [npc.her] arcane aura, [npc.name] [npc.has] become far slower to learn from new experiences,"
-					+ " but in return [npc.is] now able to drain the experience of sexual partners who orgasm in [npc.her] presence.");
+					"通过对[npc.her]奥术灵气的一系列复杂操作，[npc.name]如今从新的经历中学习的速度变得非常缓慢，"
+					+ "但与之相对，现在能从[npc.her]在场时高潮的性爱对象那里汲取经验。");
 		}
 	};
 	
 	public static AbstractPerk NYMPHOMANIAC = new AbstractPerk(20,
 			true,
-			"nymphomaniac",
+			"性瘾成狂",
 			PerkCategory.LUST,
 			"perks/fitness_nymphomaniac",
 			PresetColour.GENERIC_SEX,
@@ -2850,96 +2850,96 @@ public class Perk {
 					new Value<>(Attribute.DAMAGE_LUST, 5),
 					new Value<>(Attribute.RESISTANCE_LUST, -2)),
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(x2)] [style.colourArcane(essence gain)] from orgasming",
-					"Gain [style.colourSex(pent-up)] and [style.colourSex(chastity)] status effects [style.colourTerrible(2x faster)]")) {
+					"[style.colourExcellent(x2)]高潮的[style.colourArcane(精华获取)]",
+					"[style.colourTerrible(2x速度)]获得[style.colourSex(欲求不满)]和[style.colourSex(贞操带)]状态效果")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] completely and hopelessly addicted to sex.");
+			return UtilText.parse(owner, "[npc.NameIsFull]对性爱无可救药地全身心上瘾。");
 		}
 	};
 	
 	public static AbstractPerk AHEGAO = new AbstractPerk(20,
 			true,
-			"ahegao",
+			"阿嘿颜",
 			PerkCategory.LUST,
 			"perks/ahegao",
 			PresetColour.GENERIC_SEX,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.DAMAGE_LUST, 15),
 					new Value<>(Attribute.RESISTANCE_LUST, -5)),
-			Util.newArrayListOfValues("Goes [style.colourSex(ahegao)] upon orgasming")) {
+			Util.newArrayListOfValues("性高潮时会[style.colourSex(阿嘿颜)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] orgasms are particularly intense, and [npc.she] can't help but make an exaggerated facial expression every time [npc.she] [npc.verb(climax)].");
+			return UtilText.parse(owner, "[npc.NamePos]高潮特别强烈，每次高潮[npc.she]都控制不出地半翻白眼，舌头外伸，几乎失去意识。");
 		}
 	};
 
 	public static AbstractPerk LUSTPYRE = new AbstractPerk(20,
 			false,
-			"lustpyre",
+			"葬身欲火",
 			PerkCategory.LUST,
 			"perks/lustful_leech",
 			PresetColour.ATTRIBUTE_MANA,
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_LUST, 2)),
-			Util.newArrayListOfValues("[style.boldExcellent(Absorb 2%)] of target's maximum "+Attribute.MANA_MAXIMUM.getName()+" on each attack which deals [style.boldLust("+Attribute.DAMAGE_LUST.getName()+")]")) {
+			Util.newArrayListOfValues("每当你造成[style.boldLust("+Attribute.DAMAGE_LUST.getName()+")]时[style.boldExcellent(吸收2%)]目标的最大"+Attribute.MANA_MAXIMUM.getName())) {
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "The arcane itself reacts to [npc.namePos] lustful advances, draining a small amount of [npc.her] enemy's "+Attribute.MANA_MAXIMUM.getName()+" each time [npc.she] teases them.");
+			return UtilText.parse(owner, "奥术能量将对[npc.namePos]的淫荡行为产生反应，每当[npc.her]挑逗敌人时，会从目标身上吸收一小股"+Attribute.MANA_MAXIMUM.getName()+"。");
 		}
 	};
 
 	public static AbstractPerk PURE_MIND = new AbstractPerk(20,
 			false,
-			"pure thoughts",
+			"纯洁思想",
 			PerkCategory.LUST,
 			"perks/pure_mind",
 			PresetColour.DAMAGE_TYPE_LUST,
 			Util.newHashMapOfValues(new Value<>(Attribute.RESISTANCE_LUST, 2)),
-			Util.newArrayListOfValues("[style.boldExcellent(Regain 2%)] of your maximum "+Attribute.MANA_MAXIMUM.getName()+" on each attack in which you take [style.boldLust("+Attribute.DAMAGE_LUST.getName()+")]")) {
+			Util.newArrayListOfValues("每当你受到[style.boldLust("+Attribute.DAMAGE_LUST.getName()+")]时[style.boldExcellent(回复2%)]的最大"+Attribute.MANA_MAXIMUM.getName())) {
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Steeling [npc.her] mind against any lustful advances, [npc.nameIsFull] able to enter a meditative state,"
-					+ " reacting to any lust damage [npc.she] [npc.verb(receive)] by regenerating some of [npc.her] "+Attribute.MANA_MAXIMUM.getName()+".");
+			return UtilText.parse(owner, "[npc.her]坚定意志，对抗任何的情欲干扰，[npc.nameIsFull]得以进入冥想状态，"
+					+ "对[npc.she]所受到的任何性欲伤害做出反应，回复[npc.her]的一些"+Attribute.MANA_MAXIMUM.getName()+"。");
 		}
 	};
 	
 	
 	public static AbstractPerk CLOTHING_ENCHANTER = new AbstractPerk(20,
 			false,
-			"arcane weaver",
+			"奥术编织者",
 			PerkCategory.ARCANE,
 			"perks/arcaneWeaver",
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENCHANTMENT_LIMIT, 15)),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Halves cost of all clothing enchantments</span>")) {
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>为衣物附魔的成本减半</span>")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] a natural affinity for weaving arcane enchantments into items of clothing, allowing [npc.herHim] to expend only half of the usual arcane essences when enchanting clothing.");
+			return UtilText.parse(owner, "[npc.NameHasFull]天生擅长将奥术附魔编织到衣物中，所以[npc.herHim]在给衣物附魔时只需消耗通常奥术精华的一半。");
 		}
 	};
 	
 	public static AbstractPerk WEAPON_ENCHANTER = new AbstractPerk(20,
 			false,
-			"arcane smith",
+			"奥术锻造者",
 			PerkCategory.PHYSICAL,
 			"perks/arcaneSmith",
 			PresetColour.GENERIC_ARCANE,
 			Util.newHashMapOfValues(new Value<>(Attribute.ENCHANTMENT_LIMIT, 15)),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Halves cost of all weapon enchantments</span>")) {
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>为武器附魔的成本减半</span>")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] a natural affinity for imbuing weapons with arcane enchantments, allowing [npc.herHim] to expend only half of the usual arcane essences when enchanting weapons.");
+			return UtilText.parse(owner, "[npc.NameHasFull]天生擅长将奥术灌注于武器内，所以[npc.herHim]在给武器附魔时只需消耗通常奥术精华的一半。");
 		}
 	};
 	
 	public static AbstractPerk ENCHANTMENT_STABILITY = new AbstractPerk(20,
 			false,
-			"stable enchantments",
+			"稳固附魔",
 			PerkCategory.PHYSICAL,
 			"perks/enchantment_stability",
 			PresetColour.GENERIC_ARCANE,
@@ -2948,13 +2948,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent time training [npc.her] body and mind in order to handle a higher "+Attribute.ENCHANTMENT_LIMIT.getName()+", allowing [npc.herHim] to equip more enchanted weapons, clothing, and tattoos.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花了很长时间协调身心，来处理更多的"+Attribute.ENCHANTMENT_LIMIT.getName()+"，藉此驾驭更多的附魔武器、服装和纹身。");
 		}
 	};
 
 	public static AbstractPerk ENCHANTMENT_STABILITY_ALT = new AbstractPerk(20,
 			false,
-			"stable enchantments",
+			"稳固附魔",
 			PerkCategory.ARCANE,
 			"perks/enchantment_stability",
 			PresetColour.GENERIC_ARCANE,
@@ -2963,37 +2963,37 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent time training [npc.her] body and mind in order to handle a higher "+Attribute.ENCHANTMENT_LIMIT.getName()+", allowing [npc.herHim] to equip more enchanted weapons, clothing, and tattoos.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花了很长时间协调身心，来处理更多的"+Attribute.ENCHANTMENT_LIMIT.getName()+"，藉此驾驭更多的附魔武器、服装和纹身。");
 		}
 	};
 	
 	public static AbstractPerk BARREN = new AbstractPerk(20,
 			true,
-			"barren",
+			"不孕不育",
 			PerkCategory.LUST,
 			"perks/barren",
 			PresetColour.GENERIC_SEX,
 			Util.newHashMapOfValues(new Value<>(Attribute.FERTILITY, -200)),
-			Util.newArrayListOfValues("While "+Attribute.FERTILITY.getName()+" value is 0 or less, pregnancy is [style.colourTerrible(impossible)]")) {
+			Util.newArrayListOfValues("当"+Attribute.FERTILITY.getName()+"数值为0或更低时，[style.colourTerrible(不可能)]怀孕")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] very infertile, and as a result, [npc.is] highly unlikely to ever get pregnant.");
+			return UtilText.parse(owner, "[npc.NameIsFull]生育力低下，因此怀孕概率很低。");
 		}
 	};
 	
 	public static AbstractPerk FIRING_BLANKS = new AbstractPerk(20,
 			true,
-			"sterile",
+			"精无力",
 			PerkCategory.LUST,
 			"perks/firing_blanks",
 			PresetColour.GENERIC_SEX,
 			Util.newHashMapOfValues(new Value<>(Attribute.VIRILITY, -200)),
-			Util.newArrayListOfValues("While "+Attribute.VIRILITY.getName()+" value is 0 or less, impregnation is [style.colourTerrible(impossible)]")) {
+			Util.newArrayListOfValues("当"+Attribute.VIRILITY.getName()+"数值为0或更低时，[style.colourTerrible(不可能)]令人怀孕")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] seed is incredibly weak, and [npc.sheIs] highly unlikely to ever get anyone pregnant.");
+			return UtilText.parse(owner, "[npc.NamePos]的精子不可思议的孱弱，使得[npc.sheIs]极不可能使任何人怀孕。");
 		}
 	};
 	
@@ -3001,21 +3001,21 @@ public class Perk {
 	
 	public static AbstractPerk FETISH_BROODMOTHER = new AbstractPerk(20,
 			true,
-			"broodmother",
+			"孕母",
 			PerkCategory.LUST,
 			"fetishes/fetish_broodmother",
 			PresetColour.GENERIC_SEX,
 			Util.newHashMapOfValues(new Value<>(Attribute.FERTILITY, 20)),
-			Util.newArrayListOfValues("2x <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Maximum offspring in mothered litters</span>")) {
+			Util.newArrayListOfValues("2x<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>单次受孕数量上限</span>")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
-				return "Your body is built for one thing; pumping out as many children as possible."
-							+ " Whether due to an effect of your arcane aura, or perhaps just because of your body's natural fertility, you seem to always give birth to huge numbers of children at once.";
+				return "你的身体只为一件事而生，那就是尽可能的孕育后代。"
+							+ "不论是由你奥术灵气的影响，还是仅仅因为你身体自然的生育能力，你似乎总是能同时生下大量的后代。";
 			} else {
-				return UtilText.parse(owner, "[npc.NamePos] body is built for one thing; pumping out as many children as possible."
-						+ " [npc.She] seems to always give birth to huge numbers of children at once.");
+				return UtilText.parse(owner, "[npc.NamePos]身体的构造只有一个目的，那就是尽可能的孕育后代。"
+						+ "[npc.she]似乎总是同时生下大量的后代。");
 			}
 		}
 		
@@ -3027,19 +3027,19 @@ public class Perk {
 	
 	public static AbstractPerk FETISH_SEEDER = new AbstractPerk(20,
 			true,
-			"seeder",
+			"种马",
 			PerkCategory.LUST,
 			"fetishes/fetish_seeder",
 			PresetColour.GENERIC_SEX,
 			Util.newHashMapOfValues(new Value<>(Attribute.VIRILITY, 20)),
-			Util.newArrayListOfValues("2x <span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>Maximum offspring in fathered litters</span>")) {
+			Util.newArrayListOfValues("2x<span style='color:"+ PresetColour.GENERIC_SEX.toWebHexString()+ ";'>单次授孕数量上限</span>")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if (owner.isPlayer()) {
-				return "Your seed has the potent effect of causing anyone impregnated by it to give birth to huge numbers of children.";
+				return "你的种子具有强大的功效，能让受孕者生下大量的后代。";
 			} else {
-				return UtilText.parse(owner, "[npc.NamePos] seed has the potent effect of causing anyone impregnated by it to give birth to huge numbers of children.");
+				return UtilText.parse(owner, "[npc.namePos]的种子具有一种强效作用，使任何受其授孕的人都能生下大量的后代。");
 			}
 		}
 
@@ -3051,25 +3051,25 @@ public class Perk {
 	
 	public static AbstractPerk CHUUNI = new AbstractPerk(20,
 			true,
-			"chuuni",
+			"中二",
 			PerkCategory.ARCANE,
 			"perks/misc_chuuni",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.DAMAGE_SPELLS, 20),
 					new Value<>(Attribute.SPELL_COST_MODIFIER, 20)),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>Embarrassing spell dialogue</span>")) {
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_BAD.toWebHexString()+ ";'>令人脚趾抠地的施法咒语</span>")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Roughly translated from Japanese as 'Middle School 2nd Year Syndrome', those with 'chuunibyou' believe and act as though they possess special powers."
-					+ " While chuunis may once have been purely delusional, the arcane now lends some truth to their beliefs...");
+			return UtilText.parse(owner, "原指初中二年级青少年的某些病态自我意识。“中二病”患者相信并表现得好像自己拥有特殊的力量。"
+					+ "虽然中二行径只是那些少年少女们的妄想，但现在奥术能让幻想变为现实……");
 		}
 	};
 
 	public static AbstractPerk SPECIAL_PLAYER = new AbstractPerk(20,
 			false,
-			"abnormal aura",
+			"不寻常的灵气",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence5",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -3077,7 +3077,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "You have a surprisingly large amount of natural arcane power; far more than a regular person ought to have.";
+			return "汝之存在，已超越了凡人的界限。奥能在汝体内中澎湃激荡，是凡人无法理解的神秘与奥妙！";
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3111,7 +3111,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_MERAXIS = new AbstractPerk(20,
 			false,
-			"The Dark Siren",
+			"暗夜塞壬",
 			PerkCategory.ARCANE,
 			"perks/dark_siren",
 			PresetColour.ATTRIBUTE_LUST,
@@ -3124,7 +3124,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Meraxis is none other than the Dark Siren herself! Being the recognised daughter of the elder Lilin Lyssieth, she has considerable skill with wielding the arcane.");
+			return UtilText.parse(owner, "梅拉克西丝正是暗夜塞壬本尊！她是莉琳长老莉西丝承认的女儿，拥有高超的奥术技巧。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3134,7 +3134,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_ARCANE_TATTOOIST = new AbstractPerk(20,
 			false,
-			"Arcane Tattooist",
+			"奥术纹身师",
 			PerkCategory.ARCANE,
 			"perks/tattoo",
 			PresetColour.GENERIC_ARCANE,
@@ -3145,7 +3145,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] undergone extensive training in order to learn how to imbue tattoos with arcane enchantments.");
+			return UtilText.parse(owner, "[npc.NameHasFull]接受了广泛的训练，为学习如何在纹身上注入奥术魔法作铺垫。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3155,17 +3155,17 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_CLOTHING_MASCULINITY_INDIFFERENCE = new AbstractPerk(20,
 			false,
-			"masculine clothing indifference",
+			"男性化衣物漠视",
 			PerkCategory.PHYSICAL,
 			"perks/clothingIndifferenceMasculinity",
 			Util.newArrayListOfValues(PresetColour.MASCULINE, PresetColour.CLOTHING_GREY),
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Immune to 'clothing too masculine' status effect</span>"),
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>不受“服装过于男性化”身份效应的影响</span>"),
 			null, null, null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] always [npc.verb(feel)] comfortable wearing masculine clothing, no matter how feminine [npc.her] body may be.");
+			return UtilText.parse(owner, "[npc.Name]无论身体多么女性化，都不认为穿着男性化服装有不适感。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3175,17 +3175,17 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_CLOTHING_FEMININITY_INDIFFERENCE = new AbstractPerk(20,
 			false,
-			"feminine clothing indifference",
+			"女性化衣物漠视",
 			PerkCategory.PHYSICAL,
 			"perks/clothingIndifferenceFemininity",
 			Util.newArrayListOfValues(PresetColour.FEMININE, PresetColour.CLOTHING_GREY),
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Immune to 'clothing too feminine' status effect</span>"),
+			Util.newArrayListOfValues("<span style='color:"+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>不受“服装过于女性化”身份效应的影响</span>"),
 			null, null, null) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] always [npc.verb(feel)] comfortable wearing feminine clothing, no matter how masculine [npc.her] body may be.");
+			return UtilText.parse(owner, "[npc.Name]无论身体多么男性化，都不认为穿着女性化服装有不适感。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3197,7 +3197,7 @@ public class Perk {
 
 	public static AbstractPerk SPECIAL_DIRTY_MINDED = new AbstractPerk(20,
 			false,
-			"dirty-minded",
+			"下流胚子",
 			PerkCategory.ARCANE,
 			"statusEffects/attCorruption5",
 			PresetColour.ATTRIBUTE_CORRUPTION,
@@ -3207,7 +3207,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] very dirty-minded, and often [npc.verb(find)] [npc.her] thoughts dwelling on sex.");
+			return UtilText.parse(owner, "[npc.NameIsFull]的思想非常下流，常常沉浸于性爱的思绪当中。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3221,7 +3221,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_SLUT = new AbstractPerk(20,
 			false,
-			"slut",
+			"骚货",
 			PerkCategory.ARCANE,
 			"perks/attSeduction3",
 			PresetColour.ATTRIBUTE_LUST,
@@ -3232,7 +3232,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] had countless sexual partners, and [npc.has] performed all manner of lewd acts with them.");
+			return UtilText.parse(owner, "[npc.NameHasFull]有数不清的性对象，与他们进行了各式下流行为。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3246,7 +3246,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_MEGA_SLUT = new AbstractPerk(20,
 			false,
-			"debauched",
+			"恣意放荡",
 			PerkCategory.ARCANE,
 			"perks/attSeduction3",
 			PresetColour.ATTRIBUTE_LUST,
@@ -3257,7 +3257,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When not partaking in it with complete strangers, [npc.nameIsFull] almost always fantasising about sex, and thinks of little else but what sort of lewd act [npc.she] should perform with [npc.her] next partner.");
+			return UtilText.parse(owner, "和完全陌生的人在一起却什么也没发生时，[npc.nameIsFull]几乎总是幻想着性爱，而且满脑子都是他们做爱时该用什么样的淫荡姿势，诸如此类。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3271,7 +3271,7 @@ public class Perk {
 
 	public static AbstractPerk SPECIAL_ARCANE_TRAINING = new AbstractPerk(20,
 			false,
-			"arcane training",
+			"奥术训练",
 			PerkCategory.ARCANE,
 			"perks/attIntelligence3",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -3282,7 +3282,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] undergone extensive training in order to learn how to harness the arcane.");
+			return UtilText.parse(owner, "[npc.NameHasFull]为学习如何驾驭奥术，接受了广泛的训练。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3296,7 +3296,7 @@ public class Perk {
 
 	public static AbstractPerk SPECIAL_ARCANE_LIGHTNING = new AbstractPerk(20,
 			false,
-			"exceptional arcanist",
+			"天赐奥术师",
 			PerkCategory.ARCANE,
 			"perks/special_arcane_lightning",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -3308,7 +3308,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Thanks to an exceptional event in [npc.her] past, [npc.nameHasFull] gained a not only a huge amount of natural arcane power, but also an innate understanding of how best to harness the arcane.");
+			return UtilText.parse(owner, "由于[npc.nameHasFull]经历的一件特殊事件，[npc.her]不仅获得了惊人的天生奥术之力，还对如何更好地利用奥术拥有着本性上的了解。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3322,7 +3322,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_ARCANE_ALLERGY = new AbstractPerk(20,
 			false,
-			"arcane allergy",
+			"奥术过敏",
 			PerkCategory.ARCANE,
 			"perks/arcane_allergy",
 			PresetColour.ATTRIBUTE_ARCANE,
@@ -3332,7 +3332,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.Name] suffers from a rare allergic reaction to the arcane, and is therefore almost completely incapable of harnessing its power.");
+			return UtilText.parse(owner, "[npc.Name]对奥术有罕见的过敏反应，因此几乎完全无法利用奥术的力量。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3346,7 +3346,7 @@ public class Perk {
 
 	public static AbstractPerk SPECIAL_HEALTH_FANATIC = new AbstractPerk(20,
 			false,
-			"health fanatic",
+			"健身狂人",
 			PerkCategory.PHYSICAL,
 			"perks/attStrength3",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -3356,7 +3356,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] obsessed with [npc.her] personal fitness, and spends hours every day working out and planning out [npc.her] diet.");
+			return UtilText.parse(owner, "[npc.NameIsFull]痴迷于个人的健康状态，每天都要花几个小时锻炼身体和规划饮食。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3370,7 +3370,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_MARTIAL_BACKGROUND = new AbstractPerk(20,
 			false,
-			"martial background",
+			"武术底子",
 			PerkCategory.PHYSICAL,
 			"perks/attStrength3",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -3380,7 +3380,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] spent a lot of time training [npc.her] body for combat, and as a result, [npc.sheIs] far stronger than the average person.");
+			return UtilText.parse(owner, "[npc.NameHasFull]花了很多时间进行战斗训练，因此比一般人强壮得多。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3394,7 +3394,7 @@ public class Perk {
 
 	public static AbstractPerk SPECIAL_SHORT_SIGHTED = new AbstractPerk(60,
 			false,
-			"visual impairment",
+			"视力障碍",
 			PerkCategory.PHYSICAL,
 			"statusEffects/short_sighted",
 			Util.newArrayListOfValues(
@@ -3403,7 +3403,7 @@ public class Perk {
 					PresetColour.GENERIC_BAD),
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"While [style.colourMinorBad(not wearing prescription glasses)], suffer from [style.colourTerrible(blurry vision)]"),
+					"当[style.colourMinorBad(未佩戴矫正眼镜时)]，受到[style.colourTerrible(视力模糊)]的影响"),
 			null, null, null) {
 		@Override
 		public String applyPerkGained(GameCharacter character) {
@@ -3417,11 +3417,11 @@ public class Perk {
 		public String getDescription(GameCharacter owner) {
 			if(owner.isPerfectVision()) {
 				return UtilText.parse(owner,
-						"[npc.Name] would ordinarily suffer from visual impairment, but thanks to [npc.her] [npc.eyeRace] [npc.eyes], [npc.she] can see perfectly without needing prescription glasses.");
+						"[npc.Name]患有视力障碍，但多亏了[npc.her]的[npc.eyeRace][npc.eyes]，[npc.she]无需佩戴矫正眼镜也能看得清楚。");
 			}
 			return UtilText.parse(owner,
-					"[npc.Name] [npc.verb(suffer)] from visual impairment, and as a result [npc.she] [npc.verb(struggle)] to see without wearing prescription glasses."
-					+ " When [npc.she] [npc.is] wearing corrective eyewear, however, [npc.her] vision is nothing less than perfect.");
+					"[npc.Name]患有视力障碍，不戴矫正眼镜时很难看清楚。"
+					+ "当[npc.she]佩戴着矫正眼镜时，[npc.her]的视力就和正常人没什么区别了。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3435,7 +3435,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_MELEE_EXPERT = new AbstractPerk(20,
 			false,
-			"melee expert",
+			"近战专家",
 			PerkCategory.PHYSICAL,
 			"perks/melee_damage",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -3445,7 +3445,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] a considerable amount of experience with wielding melee weapons, making [npc.herHim] a fearsome foe to face when armed with a weapon of [npc.her] choice.");
+			return UtilText.parse(owner, "[npc.NameHasFull]在使用近战武器方面拥有相当丰富的经验，这使得[npc.herHim]在使用特定武器时将会成为一名可怕的敌手。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3459,7 +3459,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_RANGED_EXPERT = new AbstractPerk(20,
 			false,
-			"ranged expert",
+			"远程专家",
 			PerkCategory.PHYSICAL,
 			"perks/ranged_damage",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
@@ -3469,7 +3469,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] a considerable amount of experience with wielding ranged weapons, making [npc.herHim] a fearsome foe to face when armed with a weapon of [npc.her] choice.");
+			return UtilText.parse(owner, "[npc.NameHasFull]在使用远程武器方面拥有丰富的经验，这使得[npc.her]在使用特定武器时将会成为一名可怕的敌手。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3483,7 +3483,7 @@ public class Perk {
 	
 	public static AbstractPerk SPECIAL_CHILD_OF_THE_CRAG = new AbstractPerk(20,
 			true,
-			"Child of the Crag",
+			"峭壁之子",
 			PerkCategory.PHYSICAL_WATER,
 			"perks/cragchild",
 			PresetColour.DAMAGE_TYPE_COLD,
@@ -3494,7 +3494,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "The blood of Cimryth runs through [npc.namePos] veins and [npc.she] is long inured to the cold of living so high up in the mountains. However, being so removed from [npc.her] desert kin has lessened [npc.her] natural resistance to fire.");
+			return UtilText.parse(owner, "[npc.namePos]的血管里流淌着辛姆瑞斯的血液，[npc.she]早已适应了高山生活的寒意。不过，由于跟[npc.her]的沙漠亲戚血缘过于遥远，[npc.her]对火的天生抵抗力有所下降。");
 		}
 		
 		@Override
@@ -3505,7 +3505,7 @@ public class Perk {
 
 	public static AbstractPerk SPECIAL_ENFORCER_FIREARMS_TRAINING = new AbstractPerk(20,
 			true,
-			"Firearms Mastery",
+			"枪械掌握",
 			PerkCategory.PHYSICAL,
 			"perks/enforcer_firearms",
 			Util.newArrayListOfValues(
@@ -3513,13 +3513,13 @@ public class Perk {
 					PresetColour.CLOTHING_BLACK,
 					PresetColour.CLOTHING_GUNMETAL),
 			Util.newHashMapOfValues(new Value<>(Attribute.DAMAGE_RANGED_WEAPON, 75)),
-			Util.newArrayListOfValues("[style.colourExcellent(Doubles)] all firearms damage"),
+			Util.newArrayListOfValues("[style.colourExcellent(双倍)]枪械伤害"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameHasFull] not only completed the notoriously grueling Firearms Proficiency Program required of all SWORD Enforcers, but finished with a grade of Master."
-					+ " No doubt this left some dark, lingering memories, but as a result [npc.sheIs] one of the most proficient #IF(npc.isFeminine())markswomen#ELSEmarksmen#ENDIF in the realm.");
+					"[npc.NameHasFull]不仅完成了SWORD执法者都须参加的艰苦的“枪械训程”，还获得了大师的成绩。"
+					+ "这毫无疑问地留下了些挥之不去的阴暗记忆，但结果是，[npc.sheIs]成为了这个领域中的标杆人物之一。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3531,7 +3531,7 @@ public class Perk {
 
 	public static AbstractPerk PIX_TRAINING = new AbstractPerk(20,
 			false,
-			"Pix's Training",
+			"皮克斯的训练",
 			PerkCategory.PHYSICAL,
 			"perks/pix_trained",
 			Util.newArrayListOfValues(
@@ -3546,7 +3546,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Having survived multiple intense workout sessions with Dominion's most excitable and motivated physical trainer, you feel noticeably stronger.");
+			return UtilText.parse(owner, "在与御城区最兴奋、最积极的体能训练师进行多次高强度训练后，你明显感觉到自己变得更强壮了。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3556,18 +3556,18 @@ public class Perk {
 	
 	public static AbstractPerk MARTIAL_ARTIST = new AbstractPerk(20,
 			false,
-			"martial artist",
+			"武术家",
 			PerkCategory.PHYSICAL,
 			"perks/unarmed_training",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
 			Util.newHashMapOfValues(new Value<>(Attribute.CRITICAL_DAMAGE, 25)),
-			Util.newArrayListOfValues("[style.colourUnarmed(Base unarmed damage)] [style.colourExcellent(doubled)]"),
+			Util.newArrayListOfValues("[style.colourUnarmed(徒手基础伤害)][style.colourExcellent(翻倍)]"),
 			null,
 			null,
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameHasFull] received formal training in martial arts, making [npc.herHim] an extremely dangerous individual even while unarmed.");
+			return UtilText.parse(owner, "[npc.NameHasFull]接受过正规的武术训练，使[npc.herHim]即使手无寸铁也极度危险。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3577,7 +3577,7 @@ public class Perk {
 	
 	public static AbstractPerk IMP_SLAYER = new AbstractPerk(20,
 			false,
-			"doomguy",
+			"毁灭战士",
 			PerkCategory.ARCANE,
 			"perks/imp_slayer",
 			PresetColour.RACE_IMP,
@@ -3588,7 +3588,7 @@ public class Perk {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner!=null && owner.isFeminine()) {
-				return "doomgirl";
+				return "毁灭战士";
 			} else {
 				return super.getName(owner);
 			}
@@ -3596,7 +3596,7 @@ public class Perk {
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "<i>It's the same old shit. People think they can fuck with me, and there's only one way to prove 'em wrong!</i>");
+			return UtilText.parse(owner, "<i>又是老一套。要有人以为能跟我胡闹，那我就得证明他是错的！</i>");
 		}
 		
 		@Override
@@ -3607,7 +3607,7 @@ public class Perk {
 	
 	public static AbstractPerk HERO_OF_THEMISCYRA = new AbstractPerk(20,
 			false,
-			"Hero of Themiscyra",
+			"特弥斯库拉的英雄",
 			PerkCategory.ARCANE,
 			"perks/hero_of_themiscyra",
 			PresetColour.BASE_GOLD,
@@ -3618,16 +3618,16 @@ public class Perk {
 		@Override
 		public String getName(GameCharacter owner) {
 			if(owner!=null && owner.isFeminine()) {
-				return "Heroine of Themiscyra";
+				return "特弥斯库拉的英雄";
 			} else {
 				return super.getName(owner);
 			}
 		}
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "<i>The skies, the fountains, every region near"
-					+ "<br/>Seem'd all one mutual cry: I never heard"
-					+ "<br/>So musical a discord, such sweet thunder.</i>";
+			return "<i>天空、喷泉、附近的每个区域"
+					+ "<br/>似乎混成了一片交互的呐喊"
+					+ "<br/>我从来不曾听见过那样谐美的喧声，那样悦耳的雷鸣。</i>";
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3637,7 +3637,7 @@ public class Perk {
 
 	public static AbstractPerk AMAZONIAN_TRAINING = new AbstractPerk(20,
 			false,
-			"Amazonian training",
+			"亚马逊特训",
 			PerkCategory.ARCANE,
 			"perks/amazonian_training",
 			Util.newArrayListOfValues(
@@ -3654,7 +3654,7 @@ public class Perk {
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Having participated in several sparring sessions with Aurokaris, you feel like you've learned a new thing or two about how to fight.");
+			return UtilText.parse(owner, "在与奥罗卡利斯进行了几次格斗训练后，你觉得自己在格斗方面又学到了一两样新东西。");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3667,22 +3667,22 @@ public class Perk {
 	
 	public static AbstractPerk POWER_OF_LIRECEA_1 = new AbstractPerk(20,
 			false,
-			"Lirecea's power",
+			"莉瑞恰的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin1",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldLightBlue(fish transformations)] if a [style.boldDemon(demon)]", //TODO placeholder TF unlock, might change in the future
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"如果是[style.boldDemon(恶魔)]则[style.boldExcellent(解锁)][style.boldLightBlue(鱼转换)]", //TODO placeholder TF unlock, might change in the future
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lirecea's power has been infused into your arcane aura."
+					"莉瑞恰力量的精华已注入你的奥术灵气。"
 					+ (owner.getSubspeciesOverride()==Subspecies.DEMON
-							?" Her power has additionally enabled you to transform your demonic body into that of any aquatic species!"
-							:" If you were a demon, this power would enable you to transform your body parts into those of any aquatic species!"));
+							?"她的力量还令你能将恶魔之躯转换成任何水生物种的身体！"
+							:"如果你是一名恶魔，这种力量能让你把自己的身体部位转换成任何水生物种的身体部位！"));
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3692,7 +3692,7 @@ public class Perk {
 
 	public static AbstractPerk POWER_OF_LIRECEA_1_DEMON = new AbstractPerk(20,
 			false,
-			"Lirecea's true power",
+			"莉瑞恰真实的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin1",
 			PresetColour.BASE_BLUE_LIGHT,
@@ -3702,13 +3702,13 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_CORRUPTION, 15),
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldLightBlue(fish transformations)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"[style.boldExcellent(解锁)][style.boldLightBlue(鱼转化)]",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lirecea's power has been infused into your arcane aura."
-					+ " Her power has been enhanced by your demonic form, which has also enabled you to transform your demonic body into that of any aquatic species!");
+					"莉瑞恰力量的精华已注入你的奥术灵气。"
+					+ "她的力量被你的恶魔形态增强了，现在你可以将你的恶魔之躯转化为任何水生物种的身体！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3718,22 +3718,22 @@ public class Perk {
 	
 	public static AbstractPerk POWER_OF_LOVIENNE_2 = new AbstractPerk(21,
 			false,
-			"Lovienne's power",
+			"洛维耶纳的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin2",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldFeral(feral transformations)] if a [style.boldDemon(demon)]", //TODO placeholder TF unlock, might change in the future
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"如果是一名[style.boldDemon(恶魔)]则[style.boldExcellent(解锁)][style.boldFeral(兽态转化)]", //TODO placeholder TF unlock, might change in the future
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lovienne's power has been infused into your arcane aura."
+					"洛维耶纳力量的精华已注入你的奥术灵气。"
 					+ (owner.getSubspeciesOverride()==Subspecies.DEMON
-							?" Her power has additionally enabled you to transform your demonic body into that of feral animals!"
-							:" If you were a demon, this power would enable you to transform your body parts into those of feral animals!"));
+							?"她的力量还能够使你的恶魔之躯转化为野兽之躯！"
+							:"如果你是一个恶魔，这力量还可以让你把身体的任意部分转化成任何野兽的身体部位！"));
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3743,7 +3743,7 @@ public class Perk {
 
 	public static AbstractPerk POWER_OF_LOVIENNE_2_DEMON = new AbstractPerk(21,
 			false,
-			"Lovienne's true power",
+			"洛维耶纳的真正力量",
 			PerkCategory.ARCANE,
 			"perks/lilin2",
 			PresetColour.RACE_BESTIAL,
@@ -3753,13 +3753,13 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_CORRUPTION, 15),
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldFeral(feral transformations)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"[style.boldExcellent(解锁)][style.boldFeral(兽态转化)]",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lovienne's power has been infused into your arcane aura."
-					+ " Her power has been enhanced by your demonic form, which has also enabled you to transform your demonic body into that of feral animals!");
+					"洛维耶纳力量的精华已注入你的奥术灵气。"
+					+ "你的恶魔形态增强了她的力量，这也使你能够将恶魔之躯转化为野兽之躯！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3769,23 +3769,23 @@ public class Perk {
 	
 	public static AbstractPerk POWER_OF_LASIELLE_3 = new AbstractPerk(22,
 			false,
-			"Lasielle's power",
+			"拉谢尔的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin3",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] ability to transform others into [style.boldDemon(demons)] if a [style.boldDemon(demon)]", //TODO placeholder TF unlock, might change in the future
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"如果是[style.boldDemon(恶魔)]则[style.boldExcellent(解锁)]将他人转化为[style.boldDemon(恶魔)]的能力", //TODO placeholder TF unlock, might change in the future
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lasielle's power has been infused into your arcane aura."
+					"拉谢尔力量的精华已注入你的奥术灵气。"
 					+ (owner.getSubspeciesOverride()==Subspecies.DEMON
-							?" Her power has additionally enabled you to transform others into demons!"
-							:" If you were a demon, this power would enable you to transform others into demons!"));
+							?" 她的力量让你能将其他人变成恶魔！"
+							:" 如果你是恶魔，那这种能力就让你能将其他人也变成恶魔！"));
 		}
 		
 		@Override
@@ -3796,7 +3796,7 @@ public class Perk {
 
 	public static AbstractPerk POWER_OF_LASIELLE_3_DEMON = new AbstractPerk(22,
 			false,
-			"Lasielle's true power",
+			"拉谢尔真正的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin3",
 			PresetColour.RACE_DEMON,
@@ -3806,13 +3806,13 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_CORRUPTION, 15),
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] ability to transform others into [style.boldDemon(demons)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"[style.boldExcellent(解锁)]将他人转化成[style.boldDemon(恶魔)]的能力",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lasielle's power has been infused into your arcane aura."
-					+ " Her power has been enhanced by your demonic form, which has also enabled you to transform others into demons!");
+					"拉谢尔力量的精华已注入你的奥术灵气。"
+					+ "你的恶魔形态增强了她的力量，这也使你能够将他人转化为恶魔！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3822,20 +3822,20 @@ public class Perk {
 	
 	public static AbstractPerk POWER_OF_LYSSIETH_4 = new AbstractPerk(23,
 			false,
-			"Lyssieth's power",
+			"莉西丝的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin4",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, 25)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldHuman(human transformations)] if a [style.boldDemon(demon)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"如果是[style.boldDemon(恶魔)]则[style.boldExcellent(解锁)][style.boldHuman(人类转化)]",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lyssieth's power has been infused into your arcane aura."
-					+ " If you were a demon, this power would be enhanced, and also enable you to transform your body parts into those of a regular human!");
+					"莉西丝力量的精华已注入你的奥术灵气。"
+					+ "如果你是一个恶魔，这力量还可以让你把身体的任意部分转化成普通人类的身体部位！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3845,7 +3845,7 @@ public class Perk {
 
 	public static AbstractPerk POWER_OF_LYSSIETH_4_DEMON = new AbstractPerk(23,
 			false,
-			"Lyssieth's true power",
+			"莉西丝的真正力量",
 			PerkCategory.ARCANE,
 			"perks/lilin4",
 			PresetColour.RACE_HUMAN,
@@ -3856,13 +3856,13 @@ public class Perk {
 					new Value<>(Attribute.MANA_MAXIMUM, 50),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.HUMAN), 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldHuman(human transformations)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"[style.boldExcellent(解锁)][style.boldHuman(人类转化)]",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lyssieth's power has been infused into your arcane aura."
-					+ " Her power has been enhanced by your demonic form, which has also enabled you to transform your demonic body parts into those of a regular human!");
+					"莉索菲亚力量的精华已注入你的奥术灵气。"
+					+ "她的力量被你的恶魔形态增强了，现在你还可以把恶魔身躯的任意部分转化成普通人类的身体部位！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3872,22 +3872,22 @@ public class Perk {
 	
 	public static AbstractPerk POWER_OF_LUNETTE_5 = new AbstractPerk(24,
 			false,
-			"Lunette's power",
+			"露内特的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin5",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldHorse(mammalian transformations)] if a [style.boldDemon(demon)]", //TODO placeholder TF unlock, might change in the future
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"如果是[style.boldDemon(恶魔)]则[style.boldExcellent(解锁)][style.boldHorse(哺乳动物转化)]", //TODO placeholder TF unlock, might change in the future
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lunette's power has been infused into your arcane aura."
+					"露内特力量的精华已注入你的奥术灵气。"
 					+ (owner.getSubspeciesOverride()==Subspecies.DEMON
-							?" Her power has additionally enabled you to transform your demonic body into that of a regular human!"
-							:" If you were a demon, this power would enable you to transform your body parts into those of a regular human!"));
+							?"她的力量还能够使你的恶魔之躯转化为普通人之躯！"
+							:"如果你是一个恶魔，这力量能让你将身体的任意部分转化成普通人类的身体部位！"));
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3897,7 +3897,7 @@ public class Perk {
 
 	public static AbstractPerk POWER_OF_LUNETTE_5_DEMON = new AbstractPerk(24,
 			false,
-			"Lunette's true power",
+			"露内特真正的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin5",
 			PresetColour.RACE_HORSE_MORPH,
@@ -3907,13 +3907,13 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_CORRUPTION, 15),
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldHorse(mammalian transformations)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"[style.boldExcellent(解锁)][style.boldHorse(哺乳动物转化)]",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lunette's power has been infused into your arcane aura."
-					+ " Her power has been enhanced by your demonic form, which has also enabled you to transform your demonic body parts into those of mammalian species!");
+					"露内特力量的精华已注入你的奥术灵气。"
+					+ "她的力量被你的恶魔形态增强了，现在你还可以把恶魔身躯的任意部分转化成哺乳动物的身体部位！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3923,22 +3923,22 @@ public class Perk {
 	
 	public static AbstractPerk POWER_OF_LYXIAS_6 = new AbstractPerk(25,
 			false,
-			"Lyxias's power",
+			"莉西亚斯之力",
 			PerkCategory.ARCANE,
 			"perks/lilin6",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldHarpy(avian transformations)] if a [style.boldDemon(demon)]", //TODO placeholder TF unlock, might change in the future
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"如果是[style.boldDemon(恶魔)]则[style.boldExcellent(解锁)][style.boldHarpy(鸟类转化)]", //TODO placeholder TF unlock, might change in the future
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lyxias's power has been infused into your arcane aura."
+					"莉西亚斯力量的精华已注入你的奥术灵气。"
 					+ (owner.getSubspeciesOverride()==Subspecies.DEMON
-							?" Her power has additionally enabled you to transform your demonic body into that of avian species!"
-							:" If you were a demon, this power would enable you to transform your body parts into those of avian species!"));
+							?"她的力量还令你能将恶魔之躯转换成任何鸟类的身体！"
+							:"如果你是个恶魔，这种力量能让你把自己的身体部位转换成任何鸟类的身体部位！"));
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3948,7 +3948,7 @@ public class Perk {
 
 	public static AbstractPerk POWER_OF_LYXIAS_6_DEMON = new AbstractPerk(25,
 			false,
-			"Lyxias's true power",
+			"莉西亚斯真正的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin6",
 			PresetColour.RACE_HARPY,
@@ -3958,13 +3958,13 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_CORRUPTION, 15),
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldHarpy(avian transformations)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"[style.boldExcellent(解锁)][style.boldHarpy(鸟类转化)]",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lyxias's power has been infused into your arcane aura."
-					+ " Her power has been enhanced by your demonic form, which has also enabled you to transform your demonic body parts into those of avian species!");
+					"莉西亚斯力量的精华已注入你的奥术灵气。"
+					+ "她的力量被你的恶魔形态增强了，现在你还可以把恶魔身躯的任意部分转化成鸟类的身体部位！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -3974,23 +3974,23 @@ public class Perk {
 	
 	public static AbstractPerk POWER_OF_LISOPHIA_7 = new AbstractPerk(26,
 			false,
-			"Lisophia's power",
+			"莉索菲亚之力",
 			PerkCategory.ARCANE,
 			"perks/lilin7",
 			PresetColour.ATTRIBUTE_ARCANE,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldGreenLight(reptilian and amphibian transformations)] if a [style.boldDemon(demon)]", //TODO placeholder TF unlock, might change in the future
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"如果是[style.boldDemon(恶魔)]则[style.boldExcellent(解锁)][style.boldGreenLight(爬虫类转化和两栖类转化)]", //TODO placeholder TF unlock, might change in the future
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lyssieth's power has been infused into your arcane aura."
+					"莉西丝力量的精华已注入你的奥术灵气。"
 					+ (owner.getSubspeciesOverride()==Subspecies.DEMON
-							?" Her power has additionally enabled you to transform your demonic body into that of reptilian and amphibian species!"
-							:" If you were a demon, this power would enable you to transform your body parts into those of reptilian and amphibian species!"));
+							?"她的力量还令你能将恶魔之躯转换成任何爬虫类和两栖类的身体！"
+							:"如果你是个恶魔，这种力量能让你把自己的身体部位转换成任何爬虫类以及两栖类的身体部位！"));
 		}
 		
 		@Override
@@ -4001,7 +4001,7 @@ public class Perk {
 
 	public static AbstractPerk POWER_OF_LISOPHIA_7_DEMON = new AbstractPerk(26,
 			false,
-			"Lisophia's true power",
+			"莉索菲亚真正的力量",
 			PerkCategory.ARCANE,
 			"perks/lilin7",
 			PresetColour.BASE_GREEN_LIGHT,
@@ -4011,13 +4011,13 @@ public class Perk {
 					new Value<>(Attribute.MAJOR_CORRUPTION, 15),
 					new Value<>(Attribute.MANA_MAXIMUM, 50)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlocks)] [style.boldGreenLight(reptilian and amphibian transformations)]",
-					"[style.boldExcellent(Immunity)] to [style.boldArcane(Lilith's Command)]")) {
+					"[style.boldExcellent(解锁)][style.boldGreenLight(爬虫类及两栖类转化)]",
+					"[style.boldExcellent(免疫)][style.boldArcane(莉莉丝之律令)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The essence of Lisophia's power has been infused into your arcane aura."
-					+ " Her power has been enhanced by your demonic form, which has also enabled you to transform your demonic body parts into those of reptilian and amphibian species!");
+					"莉索菲亚力量的精华已注入你的奥术灵气。"
+					+ "她的力量被你的恶魔形态增强了，现在你可以把恶魔身躯的任意部分转化成爬虫类和两栖类动物的身体部位！");
 		}
 		@Override
 		public boolean isHiddenPerk() {
@@ -4027,16 +4027,16 @@ public class Perk {
 	
 	public static AbstractPerk SINGLE_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Single tailed Youko",
+			"单尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail1",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] one arcane tail.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了一条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4045,16 +4045,16 @@ public class Perk {
 
 	public static AbstractPerk TWO_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Two tailed Youko",
+			"双尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail2",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] two arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了两条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4063,16 +4063,16 @@ public class Perk {
 
 	public static AbstractPerk THREE_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Three tailed Youko",
+			"三尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail3",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] three arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了三条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4081,16 +4081,16 @@ public class Perk {
 
 	public static AbstractPerk FOUR_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Four tailed Youko",
+			"四尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail4",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] four arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了四条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4099,16 +4099,16 @@ public class Perk {
 
 	public static AbstractPerk FIVE_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Five tailed Youko",
+			"五尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail5",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] five arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了五条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4117,16 +4117,16 @@ public class Perk {
 
 	public static AbstractPerk SIX_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Six tailed Youko",
+			"六尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail6",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] six arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了六条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4135,16 +4135,16 @@ public class Perk {
 
 	public static AbstractPerk SEVEN_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Seven tailed Youko",
+			"七尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail7",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] seven arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了七条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4153,16 +4153,16 @@ public class Perk {
 
 	public static AbstractPerk EIGHT_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Eight tailed Youko",
+			"八尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail8",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] eight arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了八条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4171,16 +4171,16 @@ public class Perk {
 
 	public static AbstractPerk NINE_TAILED_YOUKO = new AbstractPerk(20,
 			false,
-			"Nine tailed Youko",
+			"九尾妖狐",
 			PerkCategory.ARCANE,
 			"statusEffects/race/raceFoxTail9",
 			PresetColour.RACE_FOX_MORPH,
 			Util.newHashMapOfValues(),
-			Util.newArrayListOfValues("[style.boldExcellent(Unlocks)] [style.boldFox(youko transformations!)]")) {
+			Util.newArrayListOfValues("[style.boldExcellent(解锁)][style.boldFox(妖狐转化)]")) {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] a youko; a type of arcane-powered fox-morph typically found only in the Shinrin Highlands. [npc.Her] service to a higher-ranked youko has afforded [npc.him] nine arcane tails.");
+			return UtilText.parse(owner, "[npc.NameIsFull]是一只妖狐，一种能够操纵奥术的狐化形，只在心林高地出没。[npc.Her]为等级更高的妖狐服务。[npc.Her]得到了九条奥术尾巴作为回报。");
 		}
 
 		@Override
@@ -4283,7 +4283,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_CORE_OCCUPATION = new AbstractPerk(20,
 			true,
-			"elemental",
+			"元素",
 			PerkCategory.JOB,
 			"perks/elemental/coreOccupation",
 			PresetColour.GENERIC_ARCANE,
@@ -4297,8 +4297,8 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"As beings of pure arcane energy, elementals are able to effortlessly harness the arcane in order to cast spells."
-					+ " Due to the lustful nature of the arcane, they are also incredibly perverted, and are always willing and ready to have sex...");
+					"作为一种纯粹的奥术能量，元素可以轻而易举地驾驭用于施法的奥术。"
+					+ "由于奥术的淫荡本质，它们通常都十分的变态，无时不刻地准备着热烈的性交……");
 		}
 	};
 
@@ -4323,7 +4323,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_1 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4335,18 +4335,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] will be able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]即可使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -4357,7 +4357,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_1_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4369,18 +4369,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4391,7 +4391,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_1_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4403,18 +4403,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4425,7 +4425,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_1_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4437,18 +4437,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4459,7 +4459,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_2 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4471,18 +4471,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] will be able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]即可使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -4493,7 +4493,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_2_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4505,18 +4505,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4527,7 +4527,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_2_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4539,18 +4539,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4561,7 +4561,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_2_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4573,18 +4573,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4595,7 +4595,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_3 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4607,18 +4607,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] will be able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]即可使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -4629,7 +4629,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_3_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4641,18 +4641,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4663,7 +4663,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_3_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4675,18 +4675,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4697,7 +4697,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_FIRE_SPELL_3_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_FIRE,
 			null,
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4709,18 +4709,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4731,7 +4731,7 @@ public class Perk {
 	
 	public static AbstractPerk ELEMENTAL_FIRE_BOOST_MINOR = new AbstractPerk(20,
 			false,
-			"ignition",
+			"点燃",
 			PerkCategory.ARCANE_FIRE,
 			"perks/elemental/fire1",
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4742,13 +4742,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "If instructed to focus on [npc.her] ability at harnessing and taking the form of arcane fire, [npc.name] could take the first step towards unlocking the next secret of the school of arcane Fire.");
+			return UtilText.parse(owner, "倘若为[npc.name]指点迷津，令其踏上控制与应用奥术火焰的道路，那么[npc.name]便迈出了解开烈火奥术学派秘密的第一步。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_FIRE_BOOST = new AbstractPerk(20,
 			false,
-			"ablaze",
+			"燃烧",
 			PerkCategory.ARCANE_FIRE,
 			"perks/elemental/fire2",
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4759,14 +4759,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] continuing to pursue the path of a fire elemental, and,"
-					+ " while [npc.she] still has a way to go before reaching a new milestone, [npc.her] affinity with arcane fire is steadily increasing.");
+			return UtilText.parse(owner, "[npc.nameIsFull]继续着追寻火元素之路，"
+					+ "虽然[npc.she]在达到新的里程碑之前还有一段路要走，但[npc.her]与奥术火焰的亲和力正在稳步提升。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_FIRE_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"conflagration",
+			"爆燃",
 			PerkCategory.ARCANE_FIRE,
 			"perks/elemental/fire3",
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4777,13 +4777,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] affinity with arcane fire has massively increased, and [npc.sheIs] on the verge of discovering something incredibly powerful!");
+			return UtilText.parse(owner, "[npc.NamePos]对奥术火焰的亲和力大幅提升，[npc.sheIs]即将发掘出某种无比强大的存在！");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_FIRE_BOOST_ULTIMATE = new AbstractPerk(20,
 			false,
-			"incineration",
+			"燃尽",
 			PerkCategory.ARCANE_FIRE,
 			"perks/elemental/fire4",
 			PresetColour.SPELL_SCHOOL_FIRE,
@@ -4795,7 +4795,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Burning with the beautiful and terrifying power of the sun itself, one strike from [npc.name] is typically all it takes to incapacitate anyone unfortunate enough to incur [npc.her] wrath.");
+			return UtilText.parse(owner, "燃烧着太阳那美丽而又可怕的力量，谁敢招致[npc.name]的怒火，只此一击，足以将之击溃。");
 		}
 	};
 	
@@ -4803,7 +4803,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_1 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -4815,18 +4815,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -4837,7 +4837,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_1_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -4849,18 +4849,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4871,7 +4871,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_1_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -4883,18 +4883,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4905,7 +4905,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_1_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -4917,18 +4917,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -4939,7 +4939,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_2 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -4951,18 +4951,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -4973,7 +4973,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_2_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -4985,18 +4985,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5007,7 +5007,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_2_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5019,18 +5019,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5041,7 +5041,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_2_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5053,18 +5053,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5075,7 +5075,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_3 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5087,18 +5087,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -5109,7 +5109,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_3_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5121,18 +5121,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5143,7 +5143,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_3_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5155,18 +5155,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5177,7 +5177,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_SPELL_3_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_EARTH,
 			null,
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5189,18 +5189,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5211,7 +5211,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_EARTH_BOOST_MINOR = new AbstractPerk(20,
 			false,
-			"impact",
+			"影响力",
 			PerkCategory.PHYSICAL_EARTH,
 			"perks/elemental/earth1",
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5222,13 +5222,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "If instructed to focus on [npc.her] ability to create powerful physical manifestations, [npc.name] could take the first step towards unlocking the next secret of the school of arcane Earth.");
+			return UtilText.parse(owner, "倘若为[npc.name]指点迷津，令其踏上捏造强大物质形态的道路，那么[npc.name]便迈出了解开大地奥术学派秘密的第一步。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_EARTH_BOOST = new AbstractPerk(20,
 			false,
-			"building pressure",
+			"增压",
 			PerkCategory.PHYSICAL_EARTH,
 			"perks/elemental/earth2",
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5239,14 +5239,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] continuing to pursue the path of an earth elemental, and,"
-					+ " while [npc.she] still has a way to go before reaching a new milestone, [npc.her] affinity with arcane force is steadily increasing.");
+			return UtilText.parse(owner, "[npc.nameIsFull]继续着追寻土元素之路，"
+					+ "虽然[npc.she]在达到新的里程碑之前还有一段路要走，但[npc.her]与奥术原力的亲和力正在稳步提升。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_EARTH_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"seismic activity",
+			"地震活动",
 			PerkCategory.PHYSICAL_EARTH,
 			"perks/elemental/earth3",
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5257,13 +5257,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] affinity with arcane force has massively increased, and [npc.sheIs] on the verge of discovering something incredibly powerful!");
+			return UtilText.parse(owner, "[npc.NamePos]对奥术原力的亲和力大幅提升，[npc.sheIs]即将发掘出某种无比强大的存在！");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_EARTH_BOOST_ULTIMATE = new AbstractPerk(20,
 			false,
-			"epicentre",
+			"地震中心",
 			PerkCategory.PHYSICAL_EARTH,
 			"perks/elemental/earth4",
 			PresetColour.SPELL_SCHOOL_EARTH,
@@ -5275,7 +5275,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Taking on a nigh-invincible form, [npc.name] is now able to shrug off almost any attack, which allows [npc.herHim] to get close to [npc.her] enemies and deliver a knock-out punch or kick.");
+			return UtilText.parse(owner, "[npc.name]现在能够无视几乎任何攻击，以一种不可战胜的姿态接近[npc.her]的敌人，给予其终结的一击。");
 		}
 	};
 	
@@ -5283,7 +5283,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_1 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5295,18 +5295,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -5317,7 +5317,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_1_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5329,18 +5329,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5351,7 +5351,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_1_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5363,18 +5363,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5385,7 +5385,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_1_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5397,18 +5397,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5419,7 +5419,7 @@ public class Perk {
 	
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_2 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5431,18 +5431,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -5453,7 +5453,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_2_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5465,18 +5465,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5487,7 +5487,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_2_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5499,18 +5499,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5521,7 +5521,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_2_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5533,18 +5533,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5555,7 +5555,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_3 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5567,18 +5567,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -5589,7 +5589,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_3_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5601,18 +5601,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5623,7 +5623,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_3_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5635,18 +5635,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5657,7 +5657,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_SPELL_3_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.PHYSICAL_WATER,
 			null,
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5669,18 +5669,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5691,7 +5691,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_WATER_BOOST_MINOR = new AbstractPerk(20,
 			false,
-			"chill",
+			"寒意",
 			PerkCategory.PHYSICAL_WATER,
 			"perks/elemental/water1",
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5702,13 +5702,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "If instructed to focus on [npc.her] ability at harnessing and taking the form of arcane ice, [npc.name] could take the first step towards unlocking the next secret of the school of arcane Water.");
+			return UtilText.parse(owner, "倘若为[npc.name]指点迷津，令其踏上控制与应用奥术寒冷的道路，那么[npc.name]便迈出了解开激流奥术学派秘密的第一步。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_WATER_BOOST = new AbstractPerk(20,
 			false,
-			"frost",
+			"结霜",
 			PerkCategory.PHYSICAL_WATER,
 			"perks/elemental/water2",
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5719,14 +5719,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] continuing to pursue the path of a water elemental, and,"
-					+ " while [npc.she] still has a way to go before reaching a new milestone, [npc.her] affinity with arcane ice is steadily increasing.");
+			return UtilText.parse(owner, "[npc.nameIsFull]继续着追寻水元素之路，"
+					+ "虽然[npc.she]在达到新的里程碑之前还有一段路要走，但[npc.her]与奥术寒冷的亲和力正在稳步提升。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_WATER_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"freeze",
+			"极寒",
 			PerkCategory.PHYSICAL_WATER,
 			"perks/elemental/water3",
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5737,13 +5737,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] affinity with arcane ice has massively increased, and [npc.sheIs] on the verge of discovering something incredibly powerful!");
+			return UtilText.parse(owner, "[npc.NamePos]对寒冷奥术的亲和力大幅提升，[npc.sheIs]即将发掘出某种无比强大的存在！");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_WATER_BOOST_ULTIMATE = new AbstractPerk(20,
 			false,
-			"ice-age",
+			"冰河时代",
 			PerkCategory.PHYSICAL_WATER,
 			"perks/elemental/water4",
 			PresetColour.SPELL_SCHOOL_WATER,
@@ -5755,7 +5755,7 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Gliding from place to place with an ethereal grace, [npc.name] is able to shift and reform [npc.her] body in an instant, enabling [npc.herHim] to perform the most impossible of physical feats.");
+			return UtilText.parse(owner, "优雅地从一处滑向另一处，[npc.name]能够在一瞬间改变[npc.her]的身体，使其足以完成物理意义上几乎不可能完成的壮举。");
 		}
 	};
 	
@@ -5763,7 +5763,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_1 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -5775,18 +5775,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -5797,7 +5797,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_1_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -5809,18 +5809,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5831,7 +5831,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_1_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -5843,18 +5843,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5865,7 +5865,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_1_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -5877,18 +5877,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5899,7 +5899,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_2 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -5911,18 +5911,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -5933,7 +5933,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_2_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -5945,18 +5945,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -5967,7 +5967,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_2_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -5979,18 +5979,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6001,7 +6001,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_2_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6013,18 +6013,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6035,7 +6035,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_3 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6047,18 +6047,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -6069,7 +6069,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_3_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6081,18 +6081,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6103,7 +6103,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_3_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6115,18 +6115,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6137,7 +6137,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_SPELL_3_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.ARCANE_AIR,
 			null,
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6149,18 +6149,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6171,7 +6171,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_AIR_BOOST_MINOR = new AbstractPerk(20,
 			false,
-			"breeze",
+			"微风",
 			PerkCategory.ARCANE_AIR,
 			"perks/elemental/air1",
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6182,13 +6182,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "If instructed to focus on [npc.her] ability at harnessing the power of arcane poison, [npc.name] could take the first step towards unlocking the next secret of the school of arcane Air.");
+			return UtilText.parse(owner, "倘若为[npc.name]指点迷津，令其踏上控制与应用奥术毒素的道路，那么[npc.name]便迈出了解开大气奥术学派秘密的第一步。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_AIR_BOOST = new AbstractPerk(20,
 			false,
-			"gale",
+			"大风",
 			PerkCategory.ARCANE_AIR,
 			"perks/elemental/air2",
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6199,14 +6199,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] continuing to pursue the path of an air elemental, and,"
-					+ " while [npc.she] still has a way to go before reaching a new milestone, [npc.her] affinity with arcane poison is steadily increasing.");
+			return UtilText.parse(owner, "[npc.nameIsFull]继续着追寻风元素之路，"
+					+ "虽然[npc.she]在达到新的里程碑之前还有一段路要走，但[npc.her]与奥术毒素的亲和力正在稳步提升。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_AIR_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"storm",
+			"风暴",
 			PerkCategory.ARCANE_AIR,
 			"perks/elemental/air3",
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6217,13 +6217,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] affinity with arcane poison has massively increased, and [npc.sheIs] on the verge of discovering something incredibly powerful!");
+			return UtilText.parse(owner, "[npc.NamePos]对毒素奥术的亲和力大幅提升，[npc.sheIs]即将发掘出某种无比强大的存在！");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_AIR_BOOST_ULTIMATE = new AbstractPerk(20,
 			false,
-			"supercell",
+			"强风暴系统",
 			PerkCategory.ARCANE_AIR,
 			"perks/elemental/air4",
 			PresetColour.SPELL_SCHOOL_AIR,
@@ -6235,8 +6235,8 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Any enemy foolish enough to draw [npc.namePos] ire soon finds themselves reaping the whirlwind,"
-					+ " with each of [npc.her] devastating missiles landing perfectly on-target thanks to the guiding gusts that [npc.she] summons.");
+			return UtilText.parse(owner, "任何愚蠢到招致[npc.namePos]怒火的敌人，很快就会发现他们正在自食其果，"
+					+ "[npc.her]引导的阵风使[npc.her]的每一发毁灭性的投射物，都将完美且精准地命中目标。");
 		}
 	};
 	
@@ -6244,7 +6244,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_1 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6256,18 +6256,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.GENERIC_ARCANE.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -6278,7 +6278,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_1_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6290,18 +6290,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6312,7 +6312,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_1_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6324,18 +6324,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6346,7 +6346,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_1_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6358,18 +6358,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6380,7 +6380,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_2 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6392,18 +6392,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -6414,7 +6414,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_2_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6426,18 +6426,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6448,7 +6448,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_2_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6460,18 +6460,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6482,7 +6482,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_2_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6494,18 +6494,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6516,7 +6516,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_3 = new AbstractPerk(20,
 			false,
-			"Spell",
+			"法术",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6528,18 +6528,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Spell: "+getSpell().getName();
+			return "法术："+getSpell().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Gain spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " when bound to <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"</span>");
+			return Util.newArrayListOfValues("获得法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，前提是绑定至<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSchool().getName()+"学派</span>");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "When bound to the school of "+getSchool().getName()+", [npc.name] is able to use the spell '"+getSpell().getName()+"'.");
+			return UtilText.parse(owner, "当绑定至"+getSchool().getName()+"学派时，[npc.name]就能使用'"+getSpell().getName()+"'。");
 		}
 
 		@Override
@@ -6550,7 +6550,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_3_1 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6562,18 +6562,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6584,7 +6584,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_3_2 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6596,18 +6596,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6618,7 +6618,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_SPELL_3_3 = new AbstractPerk(20,
 			false,
-			"Upgrade",
+			"升级",
 			PerkCategory.LUST,
 			null,
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6630,18 +6630,18 @@ public class Perk {
 		
 		@Override
 		public String getName(GameCharacter owner) {
-			return "Upgrade: "+getSpellUpgrade().getName();
+			return "升级："+getSpellUpgrade().getName();
 		}
 
 		@Override
 		public List<String> getExtraEffects() {
-			return Util.newArrayListOfValues("Upgrades spell '<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>'"
-					+ " with <span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>");
+			return Util.newArrayListOfValues("升级法术“<span style='color:"+ PresetColour.DAMAGE_TYPE_LUST.toWebHexString()+ ";'>"+getSpell().getName()+"</span>”"
+					+ "，获得强化(<span style='color:"+ getSchool().getColour().toWebHexString()+ ";'>"+getSpellUpgrade().getName()+"</span>)");
 		}
 		
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] spell, "+getSpell().getName()+", will be upgraded to have the extra power '"+getSpellUpgrade().getName()+"'.");
+			return UtilText.parse(owner, "[npc.NamePos]的法术，"+getSpell().getName()+"，将会升级成更强力的“"+getSpellUpgrade().getName()+"”。");
 		}
 
 		@Override
@@ -6652,7 +6652,7 @@ public class Perk {
 
 	public static AbstractPerk ELEMENTAL_ARCANE_BOOST_MINOR = new AbstractPerk(20,
 			false,
-			"arousal",
+			"觉醒",
 			PerkCategory.LUST,
 			"perks/elemental/arcane1",
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6663,13 +6663,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "If instructed to focus on [npc.her] ability at harnessing the pure power of the arcane, [npc.name] could take the first step towards unlocking the next secret of the school of the Arcane.");
+			return UtilText.parse(owner, "倘若为[npc.name]指点迷津，令其踏上控制纯粹奥术力量的道路，那么[npc.name]便迈出了解开奥术学派秘密的第一步。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_ARCANE_BOOST = new AbstractPerk(20,
 			false,
-			"passion",
+			"激情",
 			PerkCategory.LUST,
 			"perks/elemental/arcane2",
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6680,14 +6680,14 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NameIsFull] continuing to pursue the path of an arcane elemental, and,"
-					+ " while [npc.she] still has a way to go before reaching a new milestone, [npc.her] affinity with arcane lust is steadily increasing.");
+			return UtilText.parse(owner, "[npc.nameIsFull]继续着追寻奥术元素之路，"
+					+ "虽然[npc.she]在达到新的里程碑之前还有一段路要走，但[npc.her]与奥术性欲的亲和力正在稳步提升。");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_ARCANE_BOOST_MAJOR = new AbstractPerk(20,
 			false,
-			"infatuation",
+			"迷恋",
 			PerkCategory.LUST,
 			"perks/elemental/arcane3",
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6698,13 +6698,13 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "[npc.NamePos] affinity with the arcane has massively increased, and [npc.sheIs] on the verge of discovering something incredibly powerful!");
+			return UtilText.parse(owner, "[npc.NamePos]对奥术的亲和力大幅提升，[npc.sheIs]即将发掘出某种无比强大的存在！");
 		}
 	};
 	
 	public static AbstractPerk ELEMENTAL_ARCANE_BOOST_ULTIMATE = new AbstractPerk(20,
 			false,
-			"nympholepsy",
+			"痴情",
 			PerkCategory.LUST,
 			"perks/elemental/arcane4",
 			PresetColour.SPELL_SCHOOL_ARCANE,
@@ -6716,8 +6716,8 @@ public class Perk {
 
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "Those who look upon [npc.namePos] "+(owner.isFeminine()?"gorgeous body and stunning":"chiselled body and handsome")
-					+" face find themselves falling under [npc.her] spell, and within moments, are completely consumed by a wild, animalistic lust.");
+			return UtilText.parse(owner, "那些注视[npc.namePos]"+(owner.isFeminine()?"动人躯体与迷人":"如刀凿般躯体与英俊")
+					+"脸庞的人如中了魔咒，顷刻间就被狂野的兽欲完全吞噬。");
 		}
 	};
 	
@@ -6725,7 +6725,7 @@ public class Perk {
 	
 	public static AbstractPerk DOLL_PHYSICAL_CORE = new AbstractPerk(20,
 			false,
-			"arcane-infused silicone",
+			"奥术附魔硅胶",
 			PerkCategory.PHYSICAL,
 			"perks/doll/physical0",
 			Util.newArrayListOfValues(PresetColour.BASE_WHITE, PresetColour.GENERIC_ARCANE),
@@ -6735,35 +6735,35 @@ public class Perk {
 					new Value<>(Attribute.RESISTANCE_ICE, 10),
 					new Value<>(Attribute.RESISTANCE_POISON, 10)),
 			Util.newArrayListOfValues(
-					"Orifices slowly absorb fluids"),
+					"腔穴缓慢吸收液体"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NamePos] body is made entirely out of an arcane-infused, silicone-like polymer, the composition of which is a closely-guarded secret of 'Lovienne's Luxuries'."
-						+ " As well as being able to slowly absorb and convert stored fluids to energy, this material is extraordinarily durable.");
+					"[npc.NamePos]的身体全由一种充斥着奥术的硅胶状聚合物制成的，其成分是“洛维耶纳奢侈品店”严守的秘密。"
+						+ "这种材料不仅能缓慢吸收储存的液体，将其转化为能量，还特别耐用。");
 		}
 	};
 	
 	public static AbstractPerk DOLL_PHYSICAL_1 = new AbstractPerk(20,
 			false,
-			"hypermobility",
+			"关节过度活动症",
 			PerkCategory.PHYSICAL,
 			"perks/doll/physical1",
 			PresetColour.BASE_PINK_LIGHT,
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(Unlocks)] autofellatio and autocunnilingus")) {
+					"[style.colourExcellent(解锁)]自我口交和自我舔阴")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NamePos] body is exceptionally flexible, allowing [npc.herHim] to twist [npc.her] body into poses which would make a gymnast jealous.");
+					"[npc.NamePos]的身体异常灵活，[npc.herHim]可以随意摆出连体操运动员都会嫉妒的姿势。");
 		}
 	};
 	
 	public static AbstractPerk DOLL_PHYSICAL_2 = new AbstractPerk(20,
 			false,
-			"no means of reproduction",
+			"不孕不育",
 			PerkCategory.PHYSICAL,
 			"perks/doll/physical2",
 			PresetColour.RACE_DOLL,
@@ -6771,39 +6771,39 @@ public class Perk {
 					new Value<>(Attribute.VIRILITY, -1000),
 					new Value<>(Attribute.FERTILITY, -1000)),
 			Util.newArrayListOfValues(
-					"Impregnation is [style.colourTerrible(impossible)]",
-					"Pregnancy is [style.colourTerrible(impossible)]",
-					"[style.colourTerrible(Cannot)] incubate eggs")) {
+					"受精概率几乎为[style.colourTerrible(零)]",
+					"怀孕概率几乎为[style.colourTerrible(零)]",
+					"[style.colourTerrible(无法)]孵化蛋")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NamePos] artificial body is completely unable to bear offspring of [npc.her] own."
-					+ " [npc.Her] rubbery orifices are also inhospitable places for eggs.");
+					"[npc.NamePos]的人造躯体无法生育[npc.her]自己的后代。"
+					+ "[npc.Her]原状难改的腔穴也不适合产卵。");
 		}
 	};
 	
 	public static AbstractPerk DOLL_PHYSICAL_3 = new AbstractPerk(20,
 			false,
-			"organs not included",
+			"无器官",
 			PerkCategory.PHYSICAL,
 			"perks/doll/physical3",
 			PresetColour.BASE_RED_LIGHT,
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.RESISTANCE_POISON, 50)),
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(Unaffected)] by fluid addictions, psychoactive substances, and alcohol",
-					"Orifices have [style.colourExcellent(unlimited)] depth")) {
+					"[style.colourExcellent(免疫)]液体成瘾，精神活性物质和酒精的影响",
+					"腔穴拥有着[style.colourExcellent(无限)]深度")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The internal structure of [npc.namePos] body consists solely of deep passages which are linked to [npc.her] orifices."
-					+ " Lacking biological systems of any sort, [npc.name] [npc.is] immune to most substances' effects.");
+					"[npc.namePos]的内部结构仅由通向[npc.her]腔穴深处的通道构成。"
+					+ "由于没有任何生物系统，[npc.name]能免疫绝大多数物质的效果。");
 		}
 	};
 
 	public static AbstractPerk DOLL_LUST_CORE = new AbstractPerk(20,
 			false,
-			"sex toy",
+			"性爱玩具",
 			PerkCategory.LUST,
 			"perks/doll/lust0",
 			PresetColour.RACE_DOLL,
@@ -6814,68 +6814,68 @@ public class Perk {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameHasFull] been designed and made to be a sex doll, and although [npc.she] can carry out a wide range of other tasks, [npc.her] true purpose is to get fucked.");
+					"[npc.NameHasFull]是以性爱玩偶的目的被设计和制造的，虽然[npc.she]能胜任绝大多数的其他任务，[npc.her]最根本的目的还是被操。");
 		}
 	};
 
 	public static AbstractPerk DOLL_LUST_1 = new AbstractPerk(20,
 			false,
-			"live to fuck",
+			"为操而生",
 			PerkCategory.LUST,
 			"perks/doll/lust1",
 			PresetColour.RACE_DOLL,
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"Can [style.colourTerrible(never)] <span style='color:"+SexPace.SUB_RESISTING.getColour().toWebHexString()+";'>resist</span> in [style.colourSex(sex scenes)]",
-					"Does not object to <span style='color:"+SexPace.SUB_RESISTING.getColour().toWebHexString()+";'>sadistic</span> sex actions",
-					"Orientation always [style.colourAndrogynous(ambiphilic)]")) {
+					"永远[style.colourTerrible(不能)]在[style.colourSex(性爱场景)]中<span style='color:"+SexPace.SUB_RESISTING.getColour().toWebHexString()+";'>抵抗</span>",
+					"不反对<span style='color:"+SexPace.SUB_RESISTING.getColour().toWebHexString()+";'>施虐</span>性行动",
+					"性取向始终为[style.colourAndrogynous(双性恋)]")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.Name] only [npc.verb(want)] one thing - to be fucked non-stop, no matter who's doing the fucking nor how rough they are.");
+					"[npc.Name]只渴求一件事——挨操，不管是谁来操，也无论他们有多粗暴。");
 		}
 	};
 
 	public static AbstractPerk DOLL_LUST_2 = new AbstractPerk(20,
 			false,
-			"owned",
+			"所有物",
 			PerkCategory.LUST,
 			"perks/doll/lust2",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_BLACK_STEEL, PresetColour.CLOTHING_GOLD, PresetColour.CLOTHING_GOLD),
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"Will always [style.colourSex(obey)] owner",
-					"[style.colourObedience(Obedience)] is [style.colourExcellent(always 100)]"),
+					"将会总是[style.colourSex(服从)]所有者",
+					"[style.colourObedience(服从)]将总是[style.colourExcellent(维持在100)]"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.Name] [npc.verb(know)] that [npc.sheIs] nothing more than an object, and will do absolutely anything [npc.her] owner asks of [npc.herHim].");
+					"[npc.Name]知道[npc.sheIs]仅仅是个物品，并且[npc.her]将毫无保留地去做任何[npc.her]的所有者要求[npc.her]做的事情。");
 		}
 	};
 
 	public static AbstractPerk DOLL_LUST_3 = new AbstractPerk(20,
 			false,
-			"anything goes",
+			"万事皆允",
 			PerkCategory.LUST,
 			"perks/doll/lust3",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_BLUE_GREY, PresetColour.BASE_GREY_LIGHT),
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Cannot)] gain [style.colourFetish(fetishes)]",
-					"[style.colourFetish(Fetish desires)] are always [style.colourHuman(neutral)]",
-					"Indifferent to exhibitionism, clothing femininity, chastity, and being dirty"),
+					"[style.colourTerrible(无法)]获得[style.colourFetish(性癖)]",
+					"[style.colourFetish(性癖欲望)]将总是[style.colourHuman(无倾向)]",
+					"对暴露程度，衣物女性化程度，贞操和污浊都漠不关心"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"As an automaton who lacks free will, [npc.name] [npc.do] not have any opinion on different fetishes, and [npc.is] content to go along with whatever [npc.her] partner asks of [npc.herHim].");
+					"作为一个没有自我意志的机器人，[npc.name]对不同的性癖没有任何想法，同时，不论[npc.her]得到什么样的要求，[npc.her]都会从附和其性对象的一切想法中获得满足感。");
 		}
 	};
 	
 	public static AbstractPerk DOLL_ARCANE_CORE = new AbstractPerk(20,
 			false,
-			"automaton",
+			"自动人偶",
 			PerkCategory.ARCANE,
 			"perks/doll/arcane0",
 			Util.newArrayListOfValues(PresetColour.CLOTHING_PINK_DARK, PresetColour.CLOTHING_PINK, PresetColour.CLOTHING_PINK_LIGHT),
@@ -6884,72 +6884,72 @@ public class Perk {
 					new Value<>(Attribute.DAMAGE_MELEE_WEAPON, -25),
 					new Value<>(Attribute.DAMAGE_RANGED_WEAPON, -25)),
 			Util.newArrayListOfValues(
-					"Can remain motionless indefinitely"),
+					"可以无期限地保持静止不动"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"[npc.NameIsFull] an automaton, and while [npc.sheIs] capable of moving in a life-like fashion, [npc.she] will never be as agile or responsive as a real person."
-					+ " If ordered to, [npc.she] can remain completely motionless for an unlimited amount of time.");
+					"[npc.NameIsFull]，一个自动人偶，虽然[npc.sheIs]可以以一种栩栩如生的方式运动，但[npc.she]永远也不会像真人一样迅捷灵活。"
+					+ "如果指令需要，[npc.she]可以在近乎无限的时间内保持静止不动。");
 		}
 	};
 	
 	public static AbstractPerk DOLL_ARCANE_1 = new AbstractPerk(20,
 			false,
-			"no aura",
+			"无灵气",
 			PerkCategory.ARCANE,
 			"perks/doll/arcane1",
 			Util.newArrayListOfValues(PresetColour.BASE_BLACK, PresetColour.GENERIC_ARCANE),
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_ARCANE, -1000)),
 			Util.newArrayListOfValues(
-					"Can [style.colourTerrible(never)] generate essences from [style.colourSex(orgasming)]",
-					"Can [style.colourTerrible(never)] absorb essences",
-					"[style.colourExcellent(Immune)] to [style.colourTfGeneric(standard transformatives)]"),
+					"[style.colourSex(高潮时)][style.colourTerrible(永远无法)]产生精华",
+					"[style.colourTerrible(永远无法)]吸收精华",
+					"[style.colourExcellent(免疫)][style.colourTfGeneric(常规转化)]"),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"As [npc.sheIs] just a doll, and not a real person, [npc.name] [npc.verb(lack)] an arcane aura, and as such cannot absorb nor generate essences."
-						+ " Normal transformation methods also have no effect on [npc.herHim], with only special doll-specific transformatives having any effect.");
+					"[npc.name]只是个玩偶，并不是真正的人，[npc.sheIs]没有奥术灵气，因此既不能吸收也不能生产精华。"
+						+ "常规的转化方法也无法对[npc.herHim]产生影响，只有玩偶专用的特殊转化才能生效。");
 		}
 	};
 
 	public static AbstractPerk DOLL_ARCANE_2 = new AbstractPerk(20,
 			false,
-			"object limitations",
+			"物件的局限性",
 			PerkCategory.ARCANE,
 			"perks/doll/arcane2",
 			PresetColour.GENERIC_EXPERIENCE,
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"Can [style.colourTerrible(never)] gain [style.colourExperience(experience)]",
-					"[style.colourTerrible(Permanently locked)] to [style.colourExperience(level 1)]",
-					"Can [style.colourTerrible(never)] gain personality traits",
-					"[style.colourAffection(Affection)] to others is <span style='color:"+PresetColour.AFFECTION_NEUTRAL.toWebHexString()+";'>always neutral</span>")) {
+					"[style.colourTerrible(永远无法)]获得[style.colourExperience(经验值)]",
+					"[style.colourTerrible(永久锁定)]为[style.colourExperience(1 级)]",
+					"[style.colourTerrible(永远无法)]获得特性",
+					"对他人的[style.colourAffection(好感)]<span style='color:"+PresetColour.AFFECTION_NEUTRAL.toWebHexString()+";'>总是中立的</span>")) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"With no free will or a conscience, [npc.nameIsFull] unable to learn from [npc.her] experiences, and [npc.is] therefore never going to grow or develop as a real person would.");
+					"[npc.nameIsFull]没有任何的自由意志和良知，[npc.her]无法从经历中学到任何事物，而且也不会像真人一样成长发育。");
 		}
 	};
 
 	public static AbstractPerk DOLL_ARCANE_3 = new AbstractPerk(20,
 			false,
-			"arcane-powered",
+			"奥术能源",
 			PerkCategory.ARCANE,
 			"perks/doll/arcane3",
 			Util.newArrayListOfValues(PresetColour.BASE_PINK, PresetColour.GENERIC_ARCANE),
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"Do not need to eat, drink, nor sleep",
-					"Gain [style.colourExcellent(1000)] "+Attribute.HEALTH_MAXIMUM.getColouredName("span")+" while exposed to an arcane storm"),
+					"无需进食、饮水和睡眠",
+					"每当暴露在奥术风暴下，获得[style.colourExcellent(1000)]"+Attribute.HEALTH_MAXIMUM.getColouredName("span")),
 			null, null, null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"Instead of requiring calories from food or drink to function, [npc.name] passively [npc.verb(absorb)] background arcane energy to power [npc.herself]."
-						+ " Thanks to this, arcane storms grant [npc.herHim] a significant amount of vitality.");
+					"[npc.Name]无需从食物或饮料中获取热量，而是被动吸收着周边的奥术能量来实现自我供能。"
+						+ "正因如此，奥术风暴能赋予其大量的生命力。");
 		}
 	};
 	
@@ -7051,7 +7051,7 @@ public class Perk {
 				
 				AbstractPerk racePerk = new AbstractPerk(20,
 						false,
-						Util.capitaliseSentence(mainSubspecies?sub.getRace().getName(false):subToUse.getName(null))+" knowledge",
+						Util.capitaliseSentence(mainSubspecies?sub.getRace().getName(false):subToUse.getName(null))+"知识",
 						PerkCategory.LUST,
 						null,
 						sub.getColour(null),
@@ -7060,7 +7060,7 @@ public class Perk {
 						null) {
 					@Override
 					public String getDescription(GameCharacter owner) {
-						return UtilText.parse(owner, "[npc.NameHasFull] advanced knowledge of "+(mainSubspecies?sub.getRace().getNamePlural(false):subToUse.getNamePlural(null))+", and can therefore do increased damage when fighting them.");
+						return UtilText.parse(owner, "[npc.NameHasFull]掌握着"+(mainSubspecies?sub.getRace().getNamePlural(false):subToUse.getNamePlural(null))+"的高阶知识，在与其战斗时可以造成更高的伤害。");
 					}
 					@Override
 					public String getSVGString(GameCharacter owner) {

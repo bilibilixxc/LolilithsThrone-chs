@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Outfits are a way to make randomly-generated NPCs' outfit generation less chaotic. -->
 <outfit>
 
 	<coreAttributes>
 		<!-- Names are only used for debugging purposes. Still, in case the name is used elsewhere later on, it's best to give your outfit a suitable (lowercase) name.-->
-		<name><![CDATA[ORICL Enforcer light tactical uniform]]></name>
+		<name><![CDATA[执法者ORICL轻型战术制服]]></name>
 		
 		<!-- Again, descriptions are only used for debugging purposes. Still, in case the name is used elsewhere later on, it's best to give your outfit a suitable description.-->
-		<description><![CDATA[Enforcer light tactical uniform with ORICL colours.]]></description>
+		<description><![CDATA[执法者ORICL部门颜色的轻型战术制服。]]></description>
 		
 		<!-- The femininity needed for someone to generate this outfit. MASCULINE, ANDROGYNOUS, and FEMININE are the three acceptable values. ANDROGYNOUS means anyone can use this outfit, while the other two are self-explanatory.-->
 		<femininity>ANDROGYNOUS</femininity>
@@ -134,7 +134,7 @@
 			
 			<!-- Combat shirt always-->
 			<uniqueClothing>
-				<clothing colour="CLOTHING_PURPLE_DARK" colourSecondary="CLOTHING_BLACK" enchantmentKnown="true" id="dsg_eep_tacequipset_enf_cbtshirt" isDirty="false" pattern="urban_splinter_camo"></clothing>
+				<clothing colour="CLOTHING_PURPLE_DARK" colourSecondary="CLOTHING_BLACK" enchantmentKnown="true" id="dsg_eep_tacequipset_enf_cbtshirt" isDirty="false" pattern="urban_splinter_camo"/>
 			</uniqueClothing>
 			
 			<!-- Battle belt always -->

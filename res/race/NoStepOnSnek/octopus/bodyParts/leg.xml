@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <leg>
 	<race>NoStepOnSnek_octopus</race>
-	<transformationName><![CDATA[octopus]]></transformationName>
+	<transformationName><![CDATA[章鱼]]></transformationName>
 	<coveringType>OCTOPUS_SKIN</coveringType>
 	<defaultFootStructure>TENTACLED</defaultFootStructure>
 	<footType>TENTACLE</footType>
@@ -11,36 +11,36 @@
 	<allowedLegConfigurations>
 		<configuration>CEPHALOPOD</configuration>
 	</allowedLegConfigurations>
-	<name><![CDATA[tentacle]]></name>
-	<namePlural><![CDATA[tentacles]]></namePlural>
+	<name><![CDATA[触手]]></name>
+	<namePlural><![CDATA[触手]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor>masculine</descriptor>
-		<descriptor>suckered</descriptor>
-		<descriptor>octopus-like</descriptor>
+		<descriptor><![CDATA[男性]]></descriptor>
+		<descriptor><![CDATA[带吸盘的]]></descriptor>
+		<descriptor><![CDATA[章鱼般]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>suckered</descriptor>
-		<descriptor>octopus-like</descriptor>
-		<descriptor>slender</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[带吸盘的]]></descriptor>
+		<descriptor><![CDATA[章鱼般]]></descriptor>
+		<descriptor><![CDATA[修长]]></descriptor>
 	</descriptorsFeminine>
 	<footDescriptorsMasculine>
-		<descriptor>octopus-like</descriptor>
+		<descriptor><![CDATA[章鱼般]]></descriptor>
 	</footDescriptorsMasculine>
 	<footDescriptorsFeminine>
-		<descriptor>octopus-like</descriptor>
+		<descriptor><![CDATA[章鱼般]]></descriptor>
 	</footDescriptorsFeminine>
 	<toeDescriptorsMasculine>
-		<descriptor>octopus-like</descriptor>
+		<descriptor><![CDATA[章鱼般]]></descriptor>
 	</toeDescriptorsMasculine>
 	<toeDescriptorsFeminine>
-		<descriptor>octopus-like</descriptor>
+		<descriptor><![CDATA[章鱼般]]></descriptor>
 	</toeDescriptorsFeminine>
 	<transformationDescription><![CDATA[
-		A layer of smooth skin quickly grows over [npc.her] [npc.legs] as they alarmingly take on a tentacle-like appearance. Quickly coming to an end, the powerful transformation leaves [npc.name] with [npc.her] new skin smoothly transitioning into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.
-		<br/>[npc.Name] now [npc.has] [style.boldOctopus(octopus-like legs)], which are [npc.materialDescriptor] [npc.legFullDescription].
-	]]></transformationDescription>
+		[npc.her]的双腿转化成了新的形式，一层柔滑的章鱼皮肤迅速覆盖了上去，新生的腿惊人地呈现出触手般的外观。强而有力的转化迅速完成，[npc.she]看到新皮肤自然过渡成了覆盖到大腿上部的[npc.skin]。
+	<br/>[npc.Name]现在拥有[npc.materialDescriptor][npc.legFullDescription]的[style.boldOctopus(章鱼一般的腿)]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.Her] octopus-like lower body is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].
+		[npc.Her]章鱼般的下肢[npc.materialCompositionDescriptor][npc.legFullDescription(true)]。
 	]]></bodyDescription>
 </leg>

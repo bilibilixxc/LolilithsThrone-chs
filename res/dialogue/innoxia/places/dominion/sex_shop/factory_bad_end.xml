@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Player doll content: -->
@@ -21,8 +21,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Swallow]]></responseTitle>
-				<responseTooltip><![CDATA[You're forced to drink the transformation potion...]]></responseTooltip>
+				<responseTitle><![CDATA[吞咽]]></responseTitle>
+				<responseTooltip><![CDATA[你被强迫喝下转化药水……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_transformed]]></nextDialogue>
 			</response>
 		</responses>
@@ -46,8 +46,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Strapped in]]></responseTitle>
-				<responseTooltip><![CDATA[The nightmares roughly push you towards the table...]]></responseTooltip>
+				<responseTitle><![CDATA[被绑起来]]></responseTitle>
+				<responseTooltip><![CDATA[梦魇们粗暴地将你按在桌子上……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_table]]></nextDialogue>
 			</response>
 		</responses>
@@ -74,16 +74,16 @@
 				<availabilityConditional><![CDATA[[#!pc.isPregnant() && !pc.hasAnyIncubationLitter()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Swallow!]]></responseTitle>
-				<responseTooltip><![CDATA[You have no choice but to swallow the transformative liquid.]]></responseTooltip>
+				<responseTitle><![CDATA[吞咽！]]></responseTitle>
+				<responseTooltip><![CDATA[你别无选择，只能喝下这瓶转化药水。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_dollified]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.isPregnant() || pc.hasAnyIncubationLitter()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Give birth]]></responseTitle>
-				<responseTooltip><![CDATA[Having been forced to drink all of the Mother's Milk, Angelixx makes you give birth...]]></responseTooltip>
+				<responseTitle><![CDATA[分娩]]></responseTitle>
+				<responseTooltip><![CDATA[安吉莉克丝强迫你喝下了所有的母亲的奶水，然后让你开始分娩……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_table_birthed]]></nextDialogue>
 			</response>
 		</responses>
@@ -107,8 +107,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Swallow!]]></responseTitle>
-				<responseTooltip><![CDATA[You have no choice but to swallow the transformative liquid.]]></responseTooltip>
+				<responseTitle><![CDATA[吞咽！]]></responseTitle>
+				<responseTooltip><![CDATA[你别无选择，只能喝下这瓶转化药水。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_dollified]]></nextDialogue>
 			</response>
 		</responses>
@@ -129,8 +129,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Essence extraction]]></responseTitle>
-				<responseTooltip><![CDATA[You don't like the sound of this 'Total Essence Extraction'...]]></responseTooltip>
+				<responseTitle><![CDATA[精华提取]]></responseTitle>
+				<responseTooltip><![CDATA[你不喜欢这种“精华完全提取”的声音……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_essence_extraction]]></nextDialogue>
 			</response>
 		</responses>
@@ -150,8 +150,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Resist]]></responseTitle>
-				<responseTooltip><![CDATA[Try to snap out of it!]]></responseTooltip>
+				<responseTitle><![CDATA[抵抗]]></responseTitle>
+				<responseTooltip><![CDATA[努力摆脱它！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_essence_extraction_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'START_ESSENCE_EXTRACTION_RESIST'))]
@@ -160,8 +160,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Relax]]></responseTitle>
-				<responseTooltip><![CDATA[Just relax for a moment...]]></responseTooltip>
+				<responseTitle><![CDATA[放松]]></responseTitle>
+				<responseTooltip><![CDATA[放松片刻……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_essence_extraction_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'START_ESSENCE_EXTRACTION_RELAX'))]
@@ -188,8 +188,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Escape]]></responseTitle>
-				<responseTooltip><![CDATA[With your three captors gone, you have a chance to try and escape!]]></responseTooltip>
+				<responseTitle><![CDATA[逃跑]]></responseTitle>
+				<responseTooltip><![CDATA[三名看守已经离开，你有机会尝试逃跑！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_escape]]></nextDialogue>
 			</response>
 			<response>
@@ -197,10 +197,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour><![CDATA[GENERIC_BAD_END]]></colour>
-				<responseTitle><![CDATA[Stay still]]></responseTitle>
+				<responseTitle><![CDATA[保持不动]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Surrender to your fate as a sex doll...
-					<br/>[style.italicsBadEnd(This will lead into both you and Fia being fully transformed into dolls!)]
+					接受你作为性爱玩偶的命运……
+					<br/>[style.italicsBadEnd(这会导致你和菲亚被完全转化成玩偶！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_surrender]]></nextDialogue>
 			</response>
@@ -224,8 +224,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You need to find Fia and get her to help you operate the machine in order to reverse the dollification process.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你需要找到菲亚，让她帮你操作机器来逆转玩偶化进程。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'START_ESCAPE_CONTINUE'))]
@@ -250,8 +250,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Reveal all]]></responseTitle>
-				<responseTooltip><![CDATA[Tell your Mistress everything.]]></responseTooltip>
+				<responseTitle><![CDATA[完全展示]]></responseTitle>
+				<responseTooltip><![CDATA[尽数告知主人。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_surrender_fia]]></nextDialogue>
 			</response>
 		</responses>
@@ -270,8 +270,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Remain still as you wait for Sleip and Nir to return.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[保持不动，等待斯雷普和尼尔回来。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_start_surrender_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -292,8 +292,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[It's time for your Mistress to finish your transformation...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[该让你的主人为你完成转化了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_table]]></nextDialogue>
 			</response>
 		</responses>
@@ -319,8 +319,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You need to find Fia and get her to help you operate the machine in order to reverse the dollification process.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你需要找到菲亚，让她帮你操作机器来逆转玩偶化进程。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'FACTORY_HIDE_CONTINUE'))]
@@ -344,12 +344,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hide]]></responseTitle>
+				<responseTitle><![CDATA[躲藏]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getObedienceValue()==100 && game.isBadEndsEnabled())
-						You've allowed yourself to fall into the mindset of an obedient sex doll, and now can't bring yourself to hide from your Mistress!
+						你已经完全沦陷，内心只想成为顺从的性爱玩偶，现在你无法继续躲避你的主人！
 					#ELSE
-						As a doll, you find it effortless to remain completely and utterly still in order to remain hidden from Angelixx...
+						作为一个玩偶，你发现为了躲避安吉莉克丝，你可以毫不费力地保持完全静止……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -365,14 +365,14 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour><![CDATA[GENERIC_BAD_END]]></colour>
-				<responseTitle><![CDATA[Surrender]]></responseTitle>
+				<responseTitle><![CDATA[投降]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getObedienceValue()==100)
-						You want to obey Mistress. You're a good doll.
+						你想服从于主人。你是一个好玩偶。
 					#ELSE
-						Perhaps it would be best if you just gave up and surrendered to Angelixx....
+						或许最好的办法就是放弃并向安吉莉克丝投降……
 					#ENDIF
-					<br/>[style.italicsBadEnd(This will lead into both you and Fia being fully transformed into dolls!)]
+					<br/>[style.italicsBadEnd(这会导致你和菲亚被完全转化成玩偶！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_angelixx_encounter_surrender]]></nextDialogue>
 			</response>
@@ -395,8 +395,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Angelixx has left, allowing you to continue your search for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[安吉莉克丝已经离开了，使得你有机会继续寻找菲亚……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>
@@ -414,8 +414,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Reveal all]]></responseTitle>
-				<responseTooltip><![CDATA[Tell your Mistress everything.]]></responseTooltip>
+				<responseTitle><![CDATA[完全展示]]></responseTitle>
+				<responseTooltip><![CDATA[尽数告知主人。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_angelixx_encounter_surrender_reveal]]></nextDialogue>
 			</response>
 		</responses>
@@ -430,8 +430,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Bow down]]></responseTitle>
-				<responseTooltip><![CDATA[Do as you're told and bow down before your Mistress.]]></responseTooltip>
+				<responseTitle><![CDATA[跪拜]]></responseTitle>
+				<responseTooltip><![CDATA[听从命令，跪在你主人的面前。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_angelixx_encounter_surrender_fia]]></nextDialogue>
 			</response>
 		</responses>
@@ -446,8 +446,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Remain still as you wait for Sleip and Nir to return.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[保持不动，等待斯雷普和尼尔回来。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_angelixx_encounter_surrender_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -468,8 +468,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Obey your Mistress and follow her to the dollification machine.]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[服从你的主人，跟着她去玩偶制造机。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification]]></nextDialogue>
 			</response>
 		</responses>
@@ -502,8 +502,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Step away from the succubus and leave her alone.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[远离魅魔，留她独自一人。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_succubus_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_SUCCUBUS_IGNORE'))]
@@ -513,8 +513,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Watch]]></responseTitle>
-				<responseTooltip><![CDATA[There's surely no harm in staying out of sight and watching what happens next...]]></responseTooltip>
+				<responseTitle><![CDATA[旁观]]></responseTitle>
+				<responseTooltip><![CDATA[躲在别人视线之外，观察接下来发生的事情肯定是没有坏处的……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					#IF(game.isBadEndsEnabled())
@@ -551,8 +551,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Offer help]]></responseTitle>
-				<responseTooltip><![CDATA[This is your purpose. To be a sex toy for those who need you. Strut forwards and offer the succubus the use of your body.]]></responseTooltip>
+				<responseTitle><![CDATA[提供帮助]]></responseTitle>
+				<responseTooltip><![CDATA[这就是你的目标。成为那些需要你的人的性玩具。你大步向前，让魅魔使用你的身体。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					#IF(game.isBadEndsEnabled())
@@ -595,8 +595,8 @@
 		<preParsingEffects><![CDATA[
 			[#sister.returnToHome()]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[The succubus has had enough...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[魅魔已经玩够了……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_bad_end">ENCOUNTER_SUCCUBUS_WATCH_END_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -608,8 +608,8 @@
 		<preParsingEffects><![CDATA[
 			[#sister.returnToHome()]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[The succubus has had enough...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[魅魔已经玩够了……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_bad_end">ENCOUNTER_SUCCUBUS_ASSISTANCE_END_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -628,8 +628,8 @@
 					<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')<4]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Leave the cum for another doll to clean up...]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[把爱液留给另一个玩偶清理……]]></responseTooltip>
 					<nextDialogue defaultPlaceType="innoxia_dominion_sex_shop_factory_main_floor"/>
 					<effects><![CDATA[
 						[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_SUCCUBUS_CLEANUP_REFUSED'))]
@@ -640,8 +640,8 @@
 					<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')>=4]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Leave the cum for another doll to clean up...]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[把爱液留给另一个玩偶清理……]]></responseTooltip>
 					<nextDialogue>innoxia_places_dominion_sex_shop_factory_bad_end_event_fia</nextDialogue>
 					<effects><![CDATA[
 						[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_SUCCUBUS_CLEANUP_REFUSED'))]
@@ -651,8 +651,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Lick it up]]></responseTitle>
-				<responseTooltip><![CDATA[Get down on all fours and clean the floor with your tongue...]]></responseTooltip>
+				<responseTitle><![CDATA[舔干净]]></responseTitle>
+				<responseTooltip><![CDATA[四肢跪地，用舌头清洁地面……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_succubus_clean]]></nextDialogue>
 			</response>
 		</responses>
@@ -675,8 +675,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')<4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've cleaned up the cum you need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在你已经将爱液清理完毕了，你需要继续寻找菲亚……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_dominion_sex_shop_factory_main_floor"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_SUCCUBUS_CLEANUP_DUTY_END'))]
@@ -687,8 +687,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')>=4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've cleaned up the cum you need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在你已经将爱液清理完毕了，你需要继续寻找菲亚……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_factory_bad_end_event_fia</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_SUCCUBUS_CLEANUP_DUTY_END'))]
@@ -722,8 +722,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Offer excuse]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the doll that you've been commanded by Angelixx to head to storage, so you have no time for this.]]></responseTooltip>
+				<responseTitle><![CDATA[寻找借口]]></responseTitle>
+				<responseTooltip><![CDATA[告诉玩偶你已接到安吉莉克丝前往储藏区的命令，所以你没有时间做这件事。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dildos_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DILDOS_REFUSE'))]
@@ -732,8 +732,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Obey the red doll and kneel down in front of her.]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[遵照红色玩偶的命令，跪在她面前。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					#IF(game.isBadEndsEnabled())
@@ -768,8 +768,8 @@
 		<preParsingEffects><![CDATA[
 			[#pc.unequipAllClothingIntoVoid(true, true)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[The doll has finished with you...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[玩偶和你玩够了……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_bad_end">ENCOUNTER_DILDOS_END_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -778,8 +778,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Report]]></responseTitle>
-				<responseTooltip><![CDATA[Report on your experience to the doll.]]></responseTooltip>
+				<responseTitle><![CDATA[汇报]]></responseTitle>
+				<responseTooltip><![CDATA[向玩偶汇报你的经历。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dildos_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DILDOS_END_SEX_REPORT'))]
@@ -801,8 +801,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')<4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You really need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你真的该继续寻找菲亚了……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_dominion_sex_shop_factory_main_machines"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DILDOS_END'))]
@@ -813,8 +813,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')>=4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You really need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你真的该继续寻找菲亚了……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_factory_bad_end_event_fia</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DILDOS_END'))]
@@ -848,8 +848,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Correct her]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the doll that you aren't the one she's looking for, and that you have other business to attend to.]]></responseTooltip>
+				<responseTitle><![CDATA[纠正她]]></responseTitle>
+				<responseTooltip><![CDATA[告诉玩偶你不是她要找的人，你还有其他事情要做。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_bondage_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_BONDAGE_ESCAPE'))]
@@ -858,8 +858,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Allow the doll to tie you up.]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[允许玩偶把你绑起来。]]></responseTooltip>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_bondage_bound]]></nextDialogue>
 			</response>
@@ -892,8 +892,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Struggle...]]></responseTitle>
-				<responseTooltip><![CDATA[There's absolutely nothing you can do except struggle in your bonds like the red doll wants you to...]]></responseTooltip>
+				<responseTitle><![CDATA[挣扎……]]></responseTitle>
+				<responseTooltip><![CDATA[你只能像红色玩偶希望的那样在束缚中挣扎，除此之外什么也做不了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_bondage_bound_wait]]></nextDialogue>
 			</response>
 		</responses>
@@ -911,8 +911,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[The red doll fucks you.]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[红色玩偶开始操你。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_dominion_sex_shop_factory_doll_bondage]]></id>
@@ -946,8 +946,8 @@
 	</scene>
 	
 	<scene id="event_bondage_after_sex">
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[The doll has finished with you...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[玩偶和你玩够了……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_bad_end">ENCOUNTER_BONDAGE_BOUND_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -956,8 +956,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Punished]]></responseTitle>
-				<responseTooltip><![CDATA[You're powerless to resist as the red doll begins your punishment.]]></responseTooltip>
+				<responseTitle><![CDATA[受罚]]></responseTitle>
+				<responseTooltip><![CDATA[红色玩偶开始惩罚你，你无力抵抗。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_bondage_bound_wait_more]]></nextDialogue>
 			</response>
 		</responses>
@@ -978,8 +978,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Released]]></responseTitle>
-				<responseTooltip><![CDATA[The doll is finally releasing you!]]></responseTooltip>
+				<responseTitle><![CDATA[被释放]]></responseTitle>
+				<responseTooltip><![CDATA[玩偶终于放开了你！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_bondage_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.unequipAllClothingIntoVoid(true, true)]
@@ -1002,8 +1002,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')<4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You really need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你真的该继续寻找菲亚了……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_dominion_sex_shop_factory_main_machines"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_BONDAGE_END'))]
@@ -1014,8 +1014,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')>=4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You really need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你真的该继续寻找菲亚了……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_factory_bad_end_event_fia</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_BONDAGE_END'))]
@@ -1047,8 +1047,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Keep moving]]></responseTitle>
-				<responseTooltip><![CDATA[You don't want to join the ranks of these motionless dolls!]]></responseTooltip>
+				<responseTitle><![CDATA[继续前进]]></responseTitle>
+				<responseTooltip><![CDATA[你不想加入这些一动不动的玩偶队伍！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dolls_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DOLLS_REFUSE'))]
@@ -1057,8 +1057,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Take place]]></responseTitle>
-				<responseTooltip><![CDATA[Perhaps you could rest here for a minute...]]></responseTooltip>
+				<responseTitle><![CDATA[代替]]></responseTitle>
+				<responseTooltip><![CDATA[也许你可以在这里休息一会儿……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dolls_take_place]]></nextDialogue>
 			</response>
 		</responses>
@@ -1079,8 +1079,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[No more]]></responseTitle>
-				<responseTooltip><![CDATA[This is dangerous, you need to snap out of it!]]></responseTooltip>
+				<responseTitle><![CDATA[不再继续]]></responseTitle>
+				<responseTooltip><![CDATA[这很危险，你必须摆脱它！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dolls_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DOLLS_SNAP_OUT'))]
@@ -1089,8 +1089,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Remain still]]></responseTitle>
-				<responseTooltip><![CDATA[There's no harm in remaining here a little longer...]]></responseTooltip>
+				<responseTitle><![CDATA[保持不动]]></responseTitle>
+				<responseTooltip><![CDATA[在这里多呆一会儿也没什么坏处……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dolls_comfortable]]></nextDialogue>
 			</response>
 		</responses>
@@ -1111,8 +1111,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enough]]></responseTitle>
-				<responseTooltip><![CDATA[This is dangerous, you need to snap out of it!]]></responseTooltip>
+				<responseTitle><![CDATA[足够了]]></responseTitle>
+				<responseTooltip><![CDATA[这很危险，你必须摆脱它！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dolls_ending]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DOLLS_SNAP_OUT'))]
@@ -1121,8 +1121,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Good doll]]></responseTitle>
-				<responseTooltip><![CDATA[You're a good doll, waiting here like this. You want to be a good doll...]]></responseTooltip>
+				<responseTitle><![CDATA[好玩偶]]></responseTitle>
+				<responseTooltip><![CDATA[你真是个好玩偶，就这样在这里等着。你想当个好玩偶……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_dolls_ending]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[145]]></secondsPassed>
 				<effects><![CDATA[
@@ -1146,8 +1146,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')<4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You really need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你真的该继续寻找菲亚了……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_dominion_sex_shop_factory_storage_dolls"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DOLLS_END'))]
@@ -1158,8 +1158,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('bad_end_dollification_events_count')>=4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You really need to get back to searching for Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你真的该继续寻找菲亚了……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_factory_bad_end_event_fia</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'ENCOUNTER_DOLLS_END'))]
@@ -1180,8 +1180,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fia?]]></responseTitle>
-				<responseTooltip><![CDATA[Approach the source of the noise and see if it's your lost companion.]]></responseTooltip>
+				<responseTitle><![CDATA[菲亚？]]></responseTitle>
+				<responseTooltip><![CDATA[接近噪音源，看看它是否是你失踪的同伴。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_found]]></nextDialogue>
 			</response>
 		</responses>
@@ -1200,8 +1200,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explain]]></responseTitle>
-				<responseTooltip><![CDATA[Explain to Fia what happened to you.]]></responseTooltip>
+				<responseTitle><![CDATA[解释]]></responseTitle>
+				<responseTooltip><![CDATA[向菲亚解释你身上发生了什么事。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_explain]]></nextDialogue>
 			</response>
 		</responses>
@@ -1216,8 +1216,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Fia through the factory.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟着菲亚穿过工厂。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_angelixx]]></nextDialogue>
 			</response>
 		</responses>
@@ -1237,12 +1237,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hide]]></responseTitle>
+				<responseTitle><![CDATA[躲藏]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getObedienceValue()==100 && game.isBadEndsEnabled())
-						You've allowed yourself to fall into the mindset of an obedient sex doll, and now can't bring yourself to hide from your Mistress!
+						你已经完全沦陷，内心只想成为顺从的性爱玩偶，现在你无法继续躲避你的主人！
 					#ELSE
-						Remain hidden with Fia until Angelixx leaves...
+						和菲亚一起躲着，直到安吉莉克丝离开……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1258,14 +1258,14 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour><![CDATA[GENERIC_BAD_END]]></colour>
-				<responseTitle><![CDATA[Surrender]]></responseTitle>
+				<responseTitle><![CDATA[投降]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getObedienceValue()==100)
-						Mistress is looking for you. Why are you hiding? Surrender yourself to her.
+						主人正在找你。你为什么要躲起来？向她屈服吧。
 					#ELSE
-						Perhaps it would be best if you just gave up and surrendered to Angelixx....
+						或许最好的办法就是放弃并向安吉莉克丝投降……
 					#ENDIF
-					<br/>[style.italicsBadEnd(This will lead into both you and Fia being fully transformed into dolls!)]
+					<br/>[style.italicsBadEnd(这会导致你和菲亚被完全转化成玩偶！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_angelixx_surrender]]></nextDialogue>
 			</response>
@@ -1284,8 +1284,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Continue on your way to the dollification machine.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续向玩偶制造机走去。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_final]]></nextDialogue>
 			</response>
 		</responses>
@@ -1304,8 +1304,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Transform]]></responseTitle>
-				<responseTooltip><![CDATA[Lie back and let Fia activate the machine to transform you back to normal.]]></responseTooltip>
+				<responseTitle><![CDATA[要求进行转化]]></responseTitle>
+				<responseTooltip><![CDATA[躺下，让菲亚操作机器把你转化回正常模样。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_final_tf]]></nextDialogue>
 			</response>
 		</responses>
@@ -1327,8 +1327,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Escape]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you're no longer a doll, and Fia has all the evidence she needs, it's time for the two of you to escape!]]></responseTooltip>
+				<responseTitle><![CDATA[逃跑]]></responseTitle>
+				<responseTooltip><![CDATA[现在你已经不再是玩偶了，而且菲亚也掌握了她需要的所有证据，你们两个是时候逃跑了！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_final_escape]]></nextDialogue>
 			</response>
 		</responses>
@@ -1347,8 +1347,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Use the elevator to escape from the factory.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[使用电梯逃离工厂。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_factory_exit_escape</nextDialogue>
 			</response>
 		</responses>
@@ -1367,8 +1367,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[You obediently wait with your Mistress for the arrival of Sleip and Nir.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[你乖乖地和你的主人等待斯雷普和尼尔的到来。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_angelixx_surrender_nightmares]]></nextDialogue>
 			</response>
 		</responses>
@@ -1383,8 +1383,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Stay still]]></responseTitle>
-				<responseTooltip><![CDATA[Remain in your humiliating pose while you wait for Fia to be caught...]]></responseTooltip>
+				<responseTitle><![CDATA[保持不动]]></responseTitle>
+				<responseTooltip><![CDATA[保持你那耻辱的姿势，等待菲亚被抓住……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_event_fia_angelixx_surrender_nightmares_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -1405,8 +1405,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Obey your Mistress and follow her to the dollification machine.]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[服从你的主人，跟着她去玩偶制造机。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification]]></nextDialogue>
 			</response>
 		</responses>
@@ -1430,8 +1430,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[It's time for your Mistress to finish your transformation...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[该让你的主人为你完成转化了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_table]]></nextDialogue>
 			</response>
 		</responses>
@@ -1446,8 +1446,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[Sleip and Nir get their revenge on you...]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[斯雷普和尼尔开始报复你……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1507,8 +1507,8 @@
 			[#pc.setFaceCapacity(CAPACITY_TWO_TIGHT, true)]
 			[#pc.setVaginaCapacity(CAPACITY_TWO_TIGHT, true)]
 		]]></preParsingEffects>
-        <title><![CDATA[Dollified]]></title>
-        <tooltip><![CDATA[You've been completely transformed, both body and mind, into an obedient sex doll!]]></tooltip>
+        <title><![CDATA[玩偶化]]></title>
+        <tooltip><![CDATA[你已经被完全转化了，身心都已变成了一个听话的性爱玩偶！]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_bad_end">DOLLIFICATION_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1517,8 +1517,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Released]]></responseTitle>
-				<responseTooltip><![CDATA[Your Masters release you.]]></responseTooltip>
+				<responseTitle><![CDATA[被释放]]></responseTitle>
+				<responseTooltip><![CDATA[你的主人释放了你。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_fia]]></nextDialogue>
 			</response>
 		</responses>
@@ -1545,8 +1545,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Clean up]]></responseTitle>
-				<responseTooltip><![CDATA[Obey your Mistress and clean yourself up while she transforms Fia into a doll.]]></responseTooltip>
+				<responseTitle><![CDATA[清理]]></responseTitle>
+				<responseTooltip><![CDATA[听从你主人的命令，在她把菲亚转化成玩偶的时候把自己收拾干净。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_fia_tf]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.applyWash(true, true, null, 0)]
@@ -1568,8 +1568,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait to see what your Mistress will ask of you next.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等着你的主人接下来要求你做什么。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_fia_tf_essence_extraction]]></nextDialogue>
 			</response>
 		</responses>
@@ -1595,8 +1595,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hard fuck]]></responseTitle>
-				<responseTooltip><![CDATA[Obey Mistress and fuck Fia good and hard!]]></responseTooltip>
+				<responseTitle><![CDATA[狠狠地操]]></responseTitle>
+				<responseTooltip><![CDATA[服从主人的命令，狠狠地操菲亚！]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1643,8 +1643,8 @@
 			[#pc.setPenisType(PENIS_TYPE_NONE)]
 			[#fia.setVaginaCapacity(CAPACITY_TWO_TIGHT, true)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[You've helped to transform Fia into an obedient sex doll just like you!]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你帮助菲亚转化成了和你一样听话的性爱玩偶！]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/factory_bad_end">DOLLIFICATION_FIA_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1653,8 +1653,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[You clean the other doll then join her in obediently making your way to the storage area to line up alongside the other dolls.]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[你清理好另一个玩偶，然后和她一起乖乖地走到储藏区，和其他玩偶一起列队。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_storage]]></nextDialogue>
 				<effects><![CDATA[
 					[#fia.applyWash(true,  true, null, 0)]
@@ -1677,8 +1677,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait...]]></responseTitle>
-				<responseTooltip><![CDATA[Copying the hundreds of other dolls, you remain totally motionless and wait for an order from your Mistress...]]></responseTooltip>
+				<responseTitle><![CDATA[等……]]></responseTitle>
+				<responseTooltip><![CDATA[你和其他数百个玩偶一样，一动不动地等待着主人的命令……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_wait]]></nextDialogue>
 			</response>
 		</responses>
@@ -1696,8 +1696,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Waiting...]]></responseTitle>
-				<responseTooltip><![CDATA[You continue to wait for your Mistress to arrive...]]></responseTooltip>
+				<responseTitle><![CDATA[等待……]]></responseTitle>
+				<responseTooltip><![CDATA[你继续等待着主人的到来……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_wait_summoned]]></nextDialogue>
 			</response>
 		</responses>
@@ -1716,8 +1716,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Do as your Mistress commands and step forwards.]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[听从主人的命令走向前。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_shop]]></nextDialogue>
 			</response>
 		</responses>
@@ -1732,8 +1732,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow your Mistress as she leads you up to the shop to be sold.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟随你的主人，让她领你去商店，等待被卖掉。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_shop]]></nextDialogue>
 			</response>
 		</responses>
@@ -1753,9 +1753,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Sold]]></responseTitle>
+				<responseTitle><![CDATA[被出售]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Oblivious to the fact that you were once a real person, someone's bought you!
+					你忘记了你曾经是一个真实存在的人，有人买下了你！
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold]]></nextDialogue>
 				<effects><![CDATA[
@@ -1845,8 +1845,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[You're taken home by your new owner.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[你被新主人带回家了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold_incubus]]></nextDialogue>
 			</response>
 			<!--
@@ -1898,8 +1898,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Party doll]]></responseTitle>
-				<responseTooltip><![CDATA[That evening you get your first experience of one of your Master's parties.]]></responseTooltip>
+				<responseTitle><![CDATA[淫趴玩偶]]></responseTitle>
+				<responseTooltip><![CDATA[那天晚上，你第一次参加了主人的其中一个聚会。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold_incubus_party]]></nextDialogue>
 			</response>
 		</responses>
@@ -1925,8 +1925,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Orgy]]></responseTitle>
-				<responseTooltip><![CDATA[The party quickly transforms into a full-blown orgy...]]></responseTooltip>
+				<responseTitle><![CDATA[淫趴]]></responseTitle>
+				<responseTooltip><![CDATA[派对很快就变成了一场盛大的淫趴……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold_incubus_party_orgy]]></nextDialogue>
 			</response>
 		</responses>
@@ -1946,8 +1946,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[It seems like you're going to be taking a very active part in this orgy...]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[看起来你得积极参与这场淫趴……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold_incubus_party_game]]></nextDialogue>
 			</response>
 		</responses>
@@ -1967,8 +1967,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Face-sitting]]></responseTitle>
-				<responseTooltip><![CDATA[Sit on Lilaya's face while she and the demons play their game...]]></responseTooltip>
+				<responseTitle><![CDATA[颜面骑乘]]></responseTitle>
+				<responseTooltip><![CDATA[当莉莱雅和恶魔们玩游戏的时候，坐在她的脸上……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold_incubus_party_later]]></nextDialogue>
 			</response>
 		</responses>
@@ -1987,8 +1987,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[You're treated like what you are; an obedient sex doll who's here to be fucked.]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[你受到的待遇符合你的身份；一个来这里是为了被操的听话的性玩偶。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold_incubus_party_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -2014,8 +2014,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Return to your place in the hall...]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[回到你大厅的位置上……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_factory_bad_end_dollification_final_sold_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/factory_bad_end', 'DOLLIFICATION_FINAL_SOLD_INCUBUS_FINAL_END'))]
@@ -2038,8 +2038,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[The End...]]></responseTitle>
-				<responseTooltip><![CDATA[[style.italicsBadEnd(With this end to your journey, the thread of prophecy is severed. Restore a saved game to restore the weave of fate, or persist in the doomed world you have created.)]]]></responseTooltip>
+				<responseTitle><![CDATA[结局……]]></responseTitle>
+				<responseTooltip><![CDATA[[style.italicsBadEnd(你的旅程就此结束，预言之线也被斩断。是恢复已保存的游戏来重塑命运的编织，还是继续留在你所创造的注定失败的世界中？)]]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 				<effects/>
 			</response>

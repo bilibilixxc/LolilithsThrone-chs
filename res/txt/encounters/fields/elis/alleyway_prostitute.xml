@@ -1,138 +1,137 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="START"><![CDATA[
 	#IF(npc.hasEncounteredBefore())
 		<p>
-			The dark, twisting alleyways of northern Elis are dangerous to be travelling through at night, and so you make sure to keep on high alert as you [pc.walk] down the narrow, cobblestone paths. Thanks to your caution, you manage to spot someone skulking about in a recessed alleyway up ahead, and, preparing for the worst, you ready yourself for a fight. As this shady character catches sight of you and [npc.steps] out from [npc.her] hiding place, however, you see that it's none other than [npc.name], the [npc.fullRace(true)] prostitute who you've encountered in this area before.
+			伊利斯北部黑暗的曲折小巷在夜间非常危险，因此你谨慎地在狭窄的鹅卵石小路中穿行。多亏了你的小心谨慎，你发现前方有人在鬼鬼祟祟地溜达，于是你做好了最坏的打算，准备与之决斗。这个不怀好意的人看到你，从[npc.her]躲藏的地方[npc.steps]出来。你发现这个人不是别人，正是[npc.name]，你以前在这里遇到过的[npc.fullRace(true)]娼妓。
 		</p>
 		#IF(npc.isVisiblyPregnant() && npc.getPregnantLitter().isFatherId(pc.getId()))
 			#IF(!npc.isCharacterReactedToPregnancy(pc))
 				<p>
-					Instantly, your eyes are drawn down to [npc.her] clearly-visible [style.colourSex(pregnant belly)], and as [npc.name] looks across at you, [npc.she] lets out a little laugh and exclaims,
+					你的目光立刻落到[npc.Name]显眼的[style.colourSex(孕肚)]上，[npc.she]与你对视，轻笑着说道：
 					[style.random(
-							[npc.speech(Yeah, that's right, hot stuff! I used one of those arcane pregnancy testers to check, and it was you who knocked me up!)] |
-							[npc.speech(Hey again, babe! Look what you did! I used one of those arcane pregnancy testers to check, and I'm definitely carrying your kids!)] |
-							[npc.speech(Hey again, good lookin'! Check it out! I used one of those arcane pregnancy testers to check; you managed to knock me up!)])]
+							[npc.speech(哦，看到了吧，小东西！我用了奥术验孕棒，就是你把我肚子搞大的！)] |
+							[npc.speech(又见面啦，小宝贝！看看你做了什么！我用了奥术验孕棒，肯定是你的种！)] |
+							[npc.speech(又见面啦，气色不错！你看！我用了奥术验孕棒，你真的把我肚子搞大了！)])]
 				</p>
 				<p>
-					You [pc.step] up to [npc.name], allowing [npc.herHim] to take hold of your [pc.hands] and guide them down to stroke [npc.her] swollen bump. [npc.She] lets out another little laugh, before playfully biting [npc.her] [npc.lip] and teasing, [npc.speech(So, you got a thing for fucking pregnant [npc.girls]? Considering the situation, I'll even give you a discount of fifty percent...)]
+					你[pc.step]走向[npc.name]，让[npc.herHim]握着你的[pc.hands]摸向[npc.her]鼓鼓的孕肚。[npc.she]又发出一阵轻笑，俏皮地咬了咬唇，挑逗道：[npc.speech(这么说，你对操孕妇有兴趣？考虑到现在的情况，我甚至可以给你打五折……)]
 				</p>
 			#ELSE
 				<p>
-					Looking down, you see that [npc.sheIs] still sporting a rounded, [style.colourSex(pregnant belly)], and as [npc.name] notices what you're looking at, [npc.she] lets out a little laugh and exclaims,
+					你往下看，[npc.she]还是挺着一个圆滚滚的[style.colourSex(孕肚)]。[npc.name]发现了你的视线，轻笑着说道：
 					[style.random(
-							[npc.speech(That's right, hot stuff; I'm still waiting for our kids to pop out! Anyway, if you've got a thing for fucking pregnant [npc.girls], I'll give you a fifty percent discount...)] |
-							[npc.speech(Yeah, that's right, babe, I'm still carrying your kids around! Anyway, if you've got a thing for fucking pregnant [npc.girls], I'll give you a fifty percent discount...)] |
-							[npc.speech(Hey again, good lookin'! These kids of ours sure do take a while to grow! Anyway, if you've got a thing for fucking pregnant [npc.girls], I'll give you a fifty percent discount...)])]
+							[npc.speech(对咯，小东西。我还等着我们的孩子出生呢！话说如果你对操孕妇有兴趣，我可以给你打五折……)] |
+							[npc.speech(是呀，看到了吧，宝贝。我还怀着你的种呢！话说如果你对操孕妇有兴趣，我可以给你打五折……)] |
+							[npc.speech(又见面啦，气色不错！我们的孩子还在一点点长大哦！话说如果你对操孕妇有兴趣，我可以给你打五折……)])]
 				</p>
 			#ENDIF
 		#ELSE
 			<p>
-				Looking over at you, [npc.she] smiles and [npc.steps] forwards, blocking your way as [npc.she] exclaims,
+				[npc.she]一看到你就立马微笑着[npc.steps]近，拦住你的去路，说道：
 				[style.random(
-						[npc.speech(Hey again, hot stuff! You lookin' for a good time?)] |
-						[npc.speech(Hey again, babe! You want a good time?)] |
-						[npc.speech(Hey again, good lookin'! I can show you a real good time!)])]
+						[npc.speech(又见面了，小东西！期待来快活一番吗？)] |
+						[npc.speech(又见面了，宝贝！想要快活一番吗？)] |
+						[npc.speech(又见面啦，气色不错！我可以带你爽一番哦！)])]
 			</p>
 			<p>
-				Even if [npc.her] reaction hadn't given it away, [npc.her] slutty clothing and the heavy amount of makeup on [npc.her] face makes it quite obvious that [npc.name] is still working as a prostitute. As you're wondering how to react, the [npc.race] whines, [npc.speech(Come on! Only [#SPECIAL_PARSE_0] flames, and I'm all yours!)]
+				即使[npc.her]的反应没有出卖自己，但你还是注意到了[npc.her]放荡的衣着和脸上浓重的妆容，你一眼就看出[npc.name]是个娼妓。你还在思考该作何反应，[npc.race]就嘀咕道：[npc.speech(来吧！只要[#SPECIAL_PARSE_0]火币，我就是你的了！)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			The dark, twisting alleyways of northern Elis are dangerous to be travelling through at night, and so you make sure to keep on high alert as you [pc.walk] down the narrow, cobblestone paths. Thanks to your caution, you manage to spot someone skulking about in a recessed alleyway up ahead, and, preparing for the worst, you ready yourself for a fight. As this [npc.fullRace(true)] catches sight of you and [npc.steps] out from [npc.her] hiding place, however, you can immediately tell from [npc.her] body language that [npc.sheIs] not aggressive.
+			伊利斯北部黑暗的曲折小巷在夜间非常危险，因此你谨慎地在狭窄的鹅卵石小路中穿行。多亏了你的小心谨慎，你发现前方有人在鬼鬼祟祟地游荡，于是你做好了最坏的打算，准备与之决斗。当这个[npc.fullRace(true)]看到你，并从[npc.her]躲藏的地方[npc.steps]出来时，你立刻就看出[npc.sheIs]没有恶意。
 		</p>
 		<p>
-			Looking over at you, this [npc.race] smiles and [npc.steps] forwards, blocking your way as [npc.she] exclaims,
+			[npc.race]一看到你就立马微笑着[npc.steps]近，拦住你的去路，说道：
 			[style.random(
-					[npc.speech(Hey, hot stuff, the name's [npc.name]! You lookin' for a good time?)] |
-					[npc.speech(Hey, babe, the name's [npc.name]! You want a good time?)] |
-					[npc.speech(Hey, good lookin', the name's [npc.name]! I can show you a real good time!)])]
+					[npc.speech(嘿，小东西，我是[npc.Name]！期待来快活一番吗？)] |
+					[npc.speech(嘿，宝贝，我是[npc.Name]！想要快活一番吗？)] |
+					[npc.speech(嘿，气色不错，我是[npc.Name]！我可以带你爽一番哦！)])]
 		</p>
 		<p>
-			Even if [npc.her] reaction hadn't given it away, [npc.her] slutty clothing and the heavy amount of makeup on [npc.her] face makes it quite obvious that [npc.name] is a prostitute. Although nowhere near as common as in Dominion, you've seen several hookers offering their services out in the main streets of Elis, and you wonder why this particular one would be hiding so far away from the safety of those areas. You assume that [npc.she] must have run afoul of the law, for there's no other reason to be working in a place as dangerous and client-starved as these alleyways.
+			即使[npc.her]的反应没有出卖自己，但你还是注意到了[npc.her]放荡的衣着和脸上浓重的妆容，你一眼就看出[npc.name]是个娼妓。虽然不如御城区常见，但你在伊利斯主干道还是有见过几个妓女，而这位却躲在安全区外。你暗自揣测，[npc.she]肯定是个犯罪分子，不然没必要在这种危险又来客稀少的小巷子里工作。
 		</p>
 		<p>
-			As you're wondering how to react, the [npc.race] whines, [npc.speech(Come on! Only [#SPECIAL_PARSE_0] flames, and I'm all yours!)]
+			你还在思考该作何反应，[npc.race]就嘀咕道：[npc.speech(来吧！只要[#SPECIAL_PARSE_0]火币，我就是你的了！)]
 		</p>
 	#ENDIF
 	]]></htmlContent>
 	
 	<htmlContent tag="ALLEY_PROSTITUTE_LEAVE"><![CDATA[
 	<p>
-		Telling [npc.name] in no uncertain terms that you're not interested in having sex with [npc.herHim], you quickly [pc.step] past [npc.herHim] and continue on your way.
+		你毫不含糊地告诉[npc.name]，对做爱不感兴趣，然后迅速经过[npc.herHim]继续前行。
 	</p>
 	<p>
-		As you [pc.walk] off, [npc.she] calls out after you, [npc.speech(Come back if you ever want the best fuck of your life! Oh, and tell your friends too!)]
+		当你离开时，[npc.she]在你身后喊道：[npc.speech(如果你想享受人生中最棒的性爱，就回来吧！哦，也告诉你的朋友们！)]
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="ALLEY_PROSTITUTE_DOM_SEX"><![CDATA[
 	<p>
-		Liking the sound of what [npc.name] is offering, you hand over [#SPECIAL_PARSE_0] flames to [npc.herHim], saying that you're going to enjoy dominantly fucking [npc.herHim].
+		没有跟[npc.name]还价，你掏出[#SPECIAL_PARSE_0]火币递给[npc.herHim]，然后告诉[npc.herHim]说你喜欢做主动的那方。
 	</p>
 	<p>
-		[npc.speech(That's what I like to hear,)] [npc.name] coyly teases, before [npc.stepping] back into the doorway behind [npc.herHim] and saying, [npc.speech(Come on in; I've got a bed we can use upstairs.)]
+			[npc.speech(我可太想听到这个了！)][npc.name]调笑道，在进入门口前说：[npc.speech(进来吧，我在楼上有张床可以用。)]
+		</p>
+	<p>
+		等[npc.race]娼妓打开房门，你随着[npc.herHim]走进了一条光线昏暗的走廊。沿着吱吱作响的旧楼梯缓缓前进，你们来到了一个家具稀少的小房间。在[npc.she]转身关门的期间，你快速环顾了一下整个房间：这里的家具和陈设都十分简陋，但却意外的干净、整洁，光线也很充足。
 	</p>
 	<p>
-		Waiting for this [npc.race] prostitute to unlock and open the door, you follow [npc.herHim] into a dimly-lit hallway, up a creaky old staircase, and into a small, sparsely-furnished room. Taking a quick look around while [npc.she] closes and locks the door, you see that while the furniture and general décor in [npc.her] tiny apartment is quite shabby, it's surprisingly clean and well-lit.
-	</p>
-	<p>
-		[npc.speech(Let's get to it then, babe!)] [npc.name] excitedly exclaims, before grabbing your [pc.hand] and leading you over to the double-bed on the other side of the room. Turning around and flashing you a seductive grin, she teases, [npc.speech(Come on then; show me how you'd like to dominate me...)]
+		[npc.speech(让我们开始吧，宝贝！)][npc.name]一边兴奋地叫着一边就捉住了你的[pc.hand]。[npc.she]拉着你来到房间另一侧的双人床前，然后转过身来向你露出诱人的笑容，[npc.she]用挑逗的语气说道：[npc.speech(来吧，让我瞧瞧你的本事……)]
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="ALLEY_PROSTITUTE_SUB_SEX"><![CDATA[
 	<p>
-		Although you like the sound of what [npc.name] is offering, you want to make sure that you can be the submissive partner, and so as you hand over [#SPECIAL_PARSE_0] flames to the [npc.race], you ask [npc.herHim] if [npc.she] can take the lead.
+		虽然你对[npc.Name]的服务很感兴趣，但你想确保由[npc.herHim]来做主动的一方。当你递过[#SPECIAL_PARSE_0]火币时，你问[npc.herHim]是否可以主导你们的性爱。
 	</p>
 	<p>
-		[npc.speech(Don't you worry, you sweet little thing; I can take charge,)] [npc.name] confidently states, before [npc.stepping] back into the doorway behind [npc.herHim] and saying, [npc.speech(Come on in; I've got a bed we can use upstairs.)]
+		[npc.speech(别担心，你这可爱的小东西，我会的。)][npc.name]的话充满了自信，[npc.herHim]转过身走进门，说，[npc.speech(进来吧，楼上有床。)]
 	</p>
 	<p>
-		Waiting for this [npc.race] prostitute to unlock and open the door, you follow [npc.herHim] into a dimly-lit hallway, up a creaky old staircase, and into a small, sparsely-furnished room. Taking a quick look around while [npc.she] closes and locks the door, you see that while the furniture and general décor in [npc.her] tiny apartment is quite shabby, it's surprisingly clean and well-lit.
+		等[npc.race]娼妓打开房门，你随着[npc.herHim]走进了一条光线昏暗的走廊。沿着吱吱作响的旧楼梯缓缓前进，你们来到了一个家具稀少的小房间。在[npc.she]转身关门的期间，你快速环顾了一下整个房间：这里的家具和陈设都十分简陋，但却意外的干净、整洁，光线也很充足。
 	</p>
 	<p>
-		[npc.speech(Let's get to it then, babe!)] [npc.name] excitedly exclaims, before grabbing your [pc.hand] and leading you over to the double-bed on the other side of the room. Turning around and flashing you a seductive grin, she teases, [npc.speech(So you wanted me to take charge, huh? Let me show you the sort of things I like...)]
+		[npc.speech(那我们开始吧，宝贝！)][npc.name]兴奋地叫道，然后抓住你的[pc.hand]带你去房间另一边的双人床。她转过身来，向你露出诱人的笑容，挑逗道：[npc.speech(所以你想让我主导，嗯？那么，我就要按我喜欢的来做咯……)]
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="QUESTIONED"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_apartment))
 		<p>
-			As you lie back on [npc.namePos] bed, you find yourself wondering why [npc.she] is choosing to work in these dangerous alleyways, and so you look over and ask [npc.herHim] why [npc.she] doesn't try to attract customers out in the safety of the town's main streets.
+			当你躺在[npc.namePos]的床上时，你思考着[npc.she]为什么会在这种危险巷子里揽客。你看过去，询问[npc.herHim]为什么[npc.she]不去御城区主路上安全地方揽客。		</p>
+		<p>
+			[npc.speech(嘿，我在哪儿揽客关你什么事？)][npc.name]十分戒备，然后开始慌张地喊道，[npc.speech(等等，你不会是执法者吧？！我交不起他妈[#SPECIAL_PARSE_0]火币的罚款！)]
 		</p>
 		<p>
-			[npc.speech(Hey, what business is it of yours where I choose to work?)] [npc.name] defensively asks, before starting to panic and exclaim, [npc.speech(Wait, you're not an Enforcer, are you?! I can't afford to pay that fucking [#SPECIAL_PARSE_0] flame fine!)]
+			你向[npc.name]证明了你不是执法者，看到[npc.she]很明显地长舒了一口气。[npc.her]将注意力转回到整理衣着上，说，[npc.speech(这么说吧，我更喜欢在不太容易被找到的地方工作。不管怎样，你的时间快到了，你该收拾离开了……)]
 		</p>
 		<p>
-			As you confirm to [npc.name] that you're not an Enforcer, you can't help but notice how [npc.she] lets out a sigh of relief. Turning [npc.her] attention back to getting [npc.her] clothes in order, [npc.she] admits, [npc.speech(Look, let's just say that I prefer to work in places where I'm not likely to be found. Anyway, your time's almost up, so please get ready to leave...)]
-		</p>
-		<p>
-			From the manner in which [npc.she] reacted, it's obvious that [npc.name] is wanted by the Enforcers for some sort of crime, and needs to pay a [#SPECIAL_PARSE_0] flame fine in order to get out of it. If you really felt like it, you could use this knowledge to clear [npc.herHim] out of this
+			从[npc.she]的言行举止来看，很明显[npc.name]因某些罪行而被执法者通缉，而且需要上交[#SPECIAL_PARSE_0]火币来摆脱罪名。你可以利用这些信息把[npc.herHim]赶出这个
 			#IF(game.getDialogueFlags().hasFlag(FLAG_prostitutionLicenseObtained))
-				 area, or if you wanted to help, you could offer [npc.herHim] a job back in Dominion at Angel's Kiss...
+				地方，或者你想要帮忙，你可以给[npc.herHim]提供一份在御城区天使之吻的工作……
 			#ELSE
-				 area...
+				地方……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Wondering why [npc.name] is choosing to work in these dangerous alleyways, you ask [npc.herHim] why [npc.she] isn't trying to attract customers out in the safety of Elis's main streets, or, even better, in the city's red-light district.
+			你思考着[npc.she]为什么会在这种危险巷子里揽客。你询问[npc.herHim]为什么[npc.she]不去红灯区揽客，或者至少去伊利斯主路上安全地方。
 		</p>
 		<p>
-			[npc.speech(Hey, what business is it of yours where I choose to work?)] [npc.name] defensively asks, before starting to panic and exclaim, [npc.speech(Wait, you're not an Enforcer, are you?! I can't afford to pay that fucking [#SPECIAL_PARSE_0] flame fine!)]
+			[npc.speech(嘿，我在哪儿揽客关你什么事？)][npc.name]十分戒备，然后开始慌张地喊道，[npc.speech(等等，你不会是执法者吧？！我交不起他妈[#SPECIAL_PARSE_0]火币的罚款！)]
 		</p>
 		<p>
-			As you confirm to [npc.name] that you're not an Enforcer, you can't help but notice how [npc.she] lets out a sigh of relief. Placing [npc.her] [npc.hands] on [npc.her] [npc.hips+], [npc.she] admits, [npc.speech(Look, let's just say that I prefer to work in places where I'm not likely to be found. Now, are you going to fuck me or what?!)]
+			你向[npc.name]证明了你不是执法者，看到[npc.she]很明显地长舒了一口气。[npc.her]把[npc.her]的[npc.hands]放在[npc.her][npc.hips+]上，说，[npc.speech(这么说吧，我更喜欢在不太容易被找到的地方工作。现在你是操我还是要怎样？！)]
 		</p>
 		<p>
-			From the manner in which [npc.she] reacted, it's obvious that [npc.name] is wanted by the Enforcers for some sort of crime, and needs to pay a [#SPECIAL_PARSE_0] flame fine in order to get out of it. If you really felt like it, you could use this knowledge to clear [npc.herHim] out of this
+			从[npc.she]的言行举止来看，很明显[npc.name]因某些罪行而被执法者通缉，而且需要上交[#SPECIAL_PARSE_0]火币来摆脱罪名。如果你想的话，你可以利用这些信息把[npc.herHim]赶出这个
 			#IF(game.getDialogueFlags().hasFlag(FLAG_prostitutionLicenseObtained))
-				 area, or if you wanted to help, you could offer [npc.herHim] a job back in Dominion  at Angel's Kiss...
+				地方，或者你想要帮忙的话，你可以给[npc.herHim]提供一份在御城区天使之吻的工作……
 			#ELSE
-				 area...
+				地方……
 			#ENDIF
 		</p>
 	#ENDIF
@@ -141,28 +140,28 @@
 	
 	<htmlContent tag="ANGELS_KISS"><![CDATA[
 	<p>
-		Wanting to give [npc.name] an opportunity to get out of the unfortunate situation which [npc.she] finds [npc.herself] in, you ask [npc.herHim] if [npc.she]'d like to work in a safe, well-respected brothel.
+		你想要给[npc.name]一个逃离泥潭的机会，于是问[npc.herHim]愿不愿意在一个安全正规的妓院里工作。
 	</p>
 	<p>
-		A look of surprise flashes over [npc.namePos] face, and [npc.she] cautiously asks, [npc.speech(What do you mean by that? There's no brothel in Elis... Well, other than that place over in Wall's End, but they only take respectable sheep-girls there...)]
+		惊喜的表情浮现在[npc.namePos]的面庞上，[npc.she]小心翼翼地问，[npc.speech(你的意思是？可伊利斯是没有妓院的……好吧，除了墙之尽头的那地方，但他们那儿也只接收受有价值的羊女……)]
 	</p>
 	<p>
-		Telling [npc.name] that you're friends with the owner of the brothel, 'Angel's Kiss', back in Dominion, you tell [npc.herHim] that [npc.her] fine could be paid off in exchange for agreeing to work there. Admitting that it would involve paying a percentage of [npc.her] income directly to the brothel, you argue that surely that's a small price to pay in order to get the Enforcers off [npc.her] back, not to mention the fact that [npc.she]'ll have a safe place to work out of.
+		你告诉[npc.name]你是御城区妓院“天使之吻”的主人的朋友，如果[npc.she]答应在那里工作，作为交换，[npc.her]的罚款会被交上。你承认[npc.her]需要把一部分收入付给妓院，但相比于时刻活在执法者的阴影之下，这代价很小了，更不用说[npc.she]能有一个安全的地方工作了。
 	</p>
 	<p>
-		Not needing any more convincing, [npc.namePos] [npc.eyes] light up as [npc.she] hears you offering [npc.herHim] a way out of the alleyways, and [npc.she] gasps, [npc.speech(You're serious?! You'd better not be tricking me! I can... I can finally escape these alleyways?!)]
+		不需要继续说服[npc.herHim]了，当[npc.she]听到你给[npc.herHim]提供的离开巷子的机会时，[npc.namePos]的[npc.eyes]里就闪烁起了光。[npc.she]倒吸一口气，[npc.speech(认真的吗？！你最好别玩儿我！我终于……终于可以离开小巷了？！)]
 	</p>
 	<p>
-		Telling the distrustful [npc.race] that you're being completely truthful with [npc.herHim], you instruct [npc.herHim] to make [npc.her] way to Dominion, seek out the brothel called 'Angel's Kiss', and tell Angel herself that '[pc.name]' sent [npc.herHim].
+		[npc.race]仍感到难以置信，你告诉[npc.herHim]可以相信你，带[npc.herHim]去到御城区，找到名为“天使之吻”的妓院，告诉安吉尔是“[pc.name]”带[npc.herHim]来的。
 	</p>
 	<p>
-		With tears in [npc.her] eyes, [npc.name] accepts your offer by gratefully exclaiming, [npc.speech(Thank you, thank you so much! I can't really... I mean, I'm so grateful... I don't know what to say...)]
+		[npc.name]热泪盈眶，感激地接受了这份工作，[npc.speech(谢谢你，太谢谢你了！我真的……我的意思是，太感谢你了……我不知道该说什么好了……)]
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_apartment))
-			Telling [npc.name] that [npc.sheIs] welcome, you help [npc.herHim] to quickly grab [npc.her] things, before following [npc.herHim] out of [npc.her] apartment and watching [npc.herHim] run off in the direction of the town's gates. Smiling to yourself, you prepare to continue on your way, happy with the fact that you've helped [npc.name] to escape these dangerous alleyways...
+			你告诉[npc.name]不客气，很快帮[npc.herHim]收拾好[npc.her]的东西，然后跟着[npc.herHim]走出公寓，看着[npc.herHim]朝镇大门跑去。你自顾自地笑着，因为帮助[npc.name]离开了这些危险巷子而感到开心。你准备继续上路了……
 		#ELSE
-			Telling [npc.name] that [npc.sheIs] welcome, you watch as [npc.she] quickly grabs [npc.her] things, before thanking you one last time and then hurrying off in the direction of the town's gates. Smiling to yourself, you prepare to continue on your way, happy with the fact that you've helped [npc.name] to escape these dangerous alleyways...
+			你告诉[npc.name]不客气，看着[npc.herHim]很快收拾好[npc.her]的东西，最后一次向你道谢后，[npc.herHim]就朝镇大门跑去。你自顾自地笑着，因为帮助[npc.name]离开了这些危险巷子而感到开心。你准备继续上路了……
 		#ENDIF
 	</p>
 	]]></htmlContent>
@@ -170,41 +169,41 @@
 	<htmlContent tag="REMOVAL_THREATENED"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_apartment))
 		<p>
-			Getting up off [npc.namePos] bed, you turn to face [npc.herHim] and pointedly ask what [npc.she] did in order to have earned a [#SPECIAL_PARSE_0] flame fine from the Enforcers. Letting out an exasperated sigh, the [npc.race] prostitute snaps, [npc.speech(That's none of your business! I should never have mentioned that...)]
+			你从床上站起身来，转身看着[npc.herHim]，刻意地询问[npc.she]做了什么，才在执法者那有了[#SPECIAL_PARSE_0]火币的罚款记录。[npc.race]发出一声恼怒的叹息，说，[npc.speech(不关你的事！我就不该提……)]
 		</p>
 		<p>
-			Having already got what you wanted from [npc.herHim], you continue with your plan to get rid of [npc.name], and casually wonder out loud what the Enforcers would do to [npc.herHim] if they knew where [npc.she] was living. As the [npc.race] turns to look at you with a shocked expression on [npc.her] face, you tell [npc.herHim] that you're looking forward to finding out, before heading towards the door and stating your intention to report [npc.herHim] to the nearest constable.
+			你已经从[npc.herHim]那里得到你想要的了，于是继续试着摆脱[npc.herHim]。你漫不经心地说，不知道如果执法者知道[npc.she]住在哪儿会做什么。当[npc.race]扭头一脸震惊地看着你时，你告诉[npc.herHim]你准备去一探究竟，然后走向门口，说你要将[npc.herHim]报告给最近的警员。
 		</p>
-		<p>
-			Frantically grabbing [npc.her] bag and stuffing [npc.her] personal possessions into it, [npc.name]
+		<p>		
+			[npc.name]发狂似的抓起[npc.her]的包，往里面塞着私人物品，
 			#IF(npc.isFeminine())
-				 screams,
+				尖叫着说，
 			#ELSE
-				 bellows,
+				吼叫着说，
 			#ENDIF
-			 [npc.speech(You fucking [pc.bitch]! I can't believe you're doing this to me!)]
+			[npc.speech(你这个该死的[pc.bitch]！我不敢相信你这样对我！)]
 		</p>
 		<p>
-			Ignoring [npc.her] insult, you quickly exit [npc.namePos] apartment, and after waiting just a couple of minutes, you see [npc.herHim] stumble out of [npc.her] doorway, sobbing and crying as [npc.she] clutches [npc.her] bag tightly to [npc.her] chest. Not even noticing you in [npc.her] haste to get as far away from [npc.her] apartment as possible, the [npc.race] runs off down the alleyway and quickly disappears from your sight, never to be seen again...
+			你无视了[npc.namePos]的辱骂，快步离开公寓。几分钟后，你看见[npc.herHim]跌跌撞撞地跑出门，一边抽泣一边将[npc.her]的包紧紧贴在胸口上。[npc.race]急着尽可能远离[npc.her]的公寓，甚至没有注意到你，很快跑远了，消失在你的视野中……
 		</p>
 	#ELSE
 		<p>
-			Not wanting this lowlife hanging around in this area for any longer, you pointedly ask what [npc.she] did in order to have earned a [#SPECIAL_PARSE_0] flame fine from the Enforcers. Letting out an exasperated sigh, the [npc.race] prostitute snaps, [npc.speech(That's none of your business! I should never have mentioned that...)]
+			你不想让这个下流胚再在这附近呆了，于是刻意地询问[npc.she]做了什么，才在执法者那有了[#SPECIAL_PARSE_0]火币的罚款记录。[npc.race]发出一声恼怒的叹息，说，[npc.speech(不关你的事！我就不该提……)]
 		</p>
 		<p>
-			Continuing with your plan to get rid of [npc.name], you casually wonder out loud what the Enforcers would do to [npc.herHim] if they knew where [npc.she] was living. As a shocked expression quickly settles on the [npc.race]'s face, you tell [npc.herHim] that you're looking forward to finding out, before starting to [pc.walk] off and call out your intention to report [npc.herHim] to the nearest constable.
+			你继续试着摆脱[npc.herHim]，漫不经心地说，不知道如果执法者知道[npc.she]住在哪儿会做什么。当[npc.race]一脸震惊地看着你时，你告诉[npc.herHim]你准备去一探究竟，然后转身走开，说你要将[npc.herHim]报告给最近的警员。
 		</p>
 		<p>
-			[npc.NamePos] look of complete disbelief is quickly replaced by one of fear and anger as [npc.she] hears what it is you're saying, and as you [pc.walk] off, [npc.she]
+			[npc.she]在听到你说的话后，脸上的震惊很快被恐惧和愤怒代替，你转身走开后，[npc.she]在你背后
 			#IF(npc.isFeminine())
-				 screams
+				尖叫着说，
 			#ELSE
-				 bellows
+				吼叫着说，
 			#ENDIF
-			 after you, [npc.speech(You fucking [pc.bitch]! I can't believe you're doing this to me!)]
+			[npc.speech(你这个该死的[pc.bitch]！我不敢相信你这样对我！)]
 		</p>
 		<p>
-			Ignoring [npc.her] insult, you look back to see [npc.name] start to sob and cry as [npc.she] turns and runs off down the alleyway, before turning a corner and disappearing from your sight. With the threat of Enforcers looking for [npc.herHim] in this area, you can be sure that you'll never see [npc.herHim] again...
+			你无视了[npc.herHim]的辱骂，回头看见[npc.herHim]边哭边往巷子里跑，转入一个拐角后就消失在你的视野里了。你相信在威胁[npc.herHim]执法者会在这里找[npc.herHim]之后，你不会再在巷子里见到[npc.herHim]了……
 		</p>
 	#ENDIF
 	]]></htmlContent>
@@ -212,47 +211,47 @@
 	<htmlContent tag="REMOVAL_PAID"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_apartment))
 		<p>
-			Not wanting to leave [npc.name] trapped in such a dangerous place, you ask [npc.herHim] if paying off the [#SPECIAL_PARSE_0] flame fine [npc.she] mentioned earlier would be enough for [npc.herHim] to escape from these alleyways. Letting out an exasperated sigh, the [npc.race] prostitute snaps, [npc.speech(Yes, but that's really none of your business! I should never have mentioned that...)]
+			你不想把[npc.Name]留在这种危险的地方，于是询问[npc.herHim]是不是交上[npc.she]之前提过的[#SPECIAL_PARSE_0]火币罚款，[npc.she]就可以离开这里。她恼怒地叹了口气，说，[npc.speech(是，但这不关你事！我就不该提……)]
 		</p>
 		<p>
-			Clearly on-edge about the fact that [npc.sheHasFull] such a huge fine to pay off, you don't let [npc.namePos] hostile reaction put you off from continuing with your plan. Getting up from off of [npc.her] bed, you [pc.step] over to the [npc.race] and offer [npc.herHim] the [#SPECIAL_PARSE_0] flames [npc.she] needs to pay off [npc.her] fine.
+		你觉得帮[npc.herHim]交上这一大笔罚款更紧要，并没有被[npc.namePos]的态度所影响。你站起身走过去，把用来交罚款的[#SPECIAL_PARSE_0]火币给[npc.herHim]了。
 		</p>
 		<p>
-			[npc.speech(Are you serious?!)] [npc.name] cries out in shock, before clasping [npc.her] [npc.hands] over [npc.her] mouth as [npc.she] sees the amount of flames which you're giving [npc.herHim]. After a moment, [npc.she] tentatively reaches out to take the money, almost as if [npc.she] expects you to pull it away at the last moment. No such thing is on your mind, however, and you let [npc.name] take the flames from you.
+			[npc.speech(你认真的吗？！)][npc.Name]喊，看到你给的那些火币，惊讶地捂住了嘴。片刻后，[npc.she]尝试地伸手拿走火币，好像是觉得你会在最后一刻收回一样。你脑子里压根就没有这回事，任由[npc.Name]拿走了火币。
 		</p>
 		<p>
-			[npc.speech(I don't know what to say... Thank you! Thank you so much! I'm finally going to be able to get out of here!)] [npc.name] sobs, crying tears of joy as [npc.she] looks up into your [pc.eyes] with a huge smile on [npc.her] face. Before you can react to her tearful display, [npc.she] suddenly seems to think of something, and quickly darts over to the other side of the room, before bending down and prising up a loose floorboard. Grabbing something which [npc.she] was hiding under there, [npc.name] skips back over to where you're standing and says, [npc.speech(Don't ask me how I got this, but I was planning on using it as a last resort if the Enforcers found me here. I want you to take it!)]
+			[npc.speech(我不知道说什么好了……谢谢你！太感谢你了！我终于可以离开这里了！)][npc.name]啜泣着，抬头与你对视，给了你一个大大的笑容。在你作出回应前，[npc.name]好像突然想起了什么，冲到房间的另一端，俯身撬起了一块松动的地板。[npc.she]把藏在里面的东西掏出来，走到你面前递给你，说，[npc.speech(别问我是怎么搞到这东西的，我本来是想如果被执法者逮到了，这就是我最后的手段。我希望你能收下它！)]
 		</p>
 		<p>
-			Not giving you much choice in the matter, the [npc.race] pushes the item into your [pc.hands], and you look down to see that it's [#SPECIAL_PARSE_1]!
+			[npc.race]没给你其他选择，直接把东西塞到你[pc.hands]里。你低头，看见手里的是[#SPECIAL_PARSE_1]！
 		</p>
 		<p>
-			Thanking [npc.name], you tell [npc.herHim] not to let [npc.herself] get into such a bad position again. Flashing you one last smile, the [npc.race] reveals, [npc.speech([style.random(Once I've paid off my fine I'm going to take the trip over the Endless Sea. I've had enough of this place!|I'm going to pay off my fine and then move out of this city. I've had enough of Dominion!|After I've paid off my fine, I'm going east to the port of Lyonesse. I'm leaving the Realm and never coming back!|I'm going to pay off my fine then get out of Dominion. I can't stand this city!)])]
+			你谢过[npc.name]，告诉[npc.her]别再让自己处于这样糟糕的境地了。[npc.race]对你笑了笑，说，[npc.speech([style.random(交上罚款以后，我要来一次穿越无尽之海的旅行，我受够这个地方了！|交上罚款后我就搬走，我受够御城区了！|交上罚款后我就往东走，去莱昂内斯的港口。我要离开王国，再也不回来了！|交上罚款后我就离开御城区，我受够这个地方了！)])]
 		</p>
 		<p>
-			With that, [npc.she] turns away and swiftly exits [npc.her] apartment, before running off to go and pay [npc.her] fine. Satisfied that you've done a good deed, you hold your head up high as you prepare to follow in [npc.namePos] footsteps and continue on your journey...
+			[npc.her]说完，转身离开公寓，跑去交罚款了。你因做了好事而感到满足，昂起头，跟随[npc.namePos]的步伐继续你的旅程……
 		</p>
 	#ELSE
 		<p>
-			Not wanting to leave [npc.name] trapped in such a dangerous place, you ask [npc.herHim] if paying off the [#SPECIAL_PARSE_0] flame fine [npc.she] mentioned earlier would be enough for [npc.herHim] to escape from these alleyways. Letting out an exasperated sigh, the [npc.race] prostitute snaps, [npc.speech(Yes, but that's really none of your business! I should never have mentioned that...)]
+			你不想把[npc.Name]留在这种危险的地方，于是询问[npc.herHim]是不是交上[npc.she]之前提过的[#SPECIAL_PARSE_0]火币罚款，[npc.she]就可以离开这里。她恼怒地叹了口气，说，[npc.speech(是，但这不关你事！我就不该提……)]
 		</p>
 		<p>
-			Clearly on-edge about the fact that [npc.sheHasFull] such a huge fine to pay off, you don't let [npc.namePos] hostile reaction put you off from continuing with your plan. [pc.Stepping] towards the [npc.race], you offer [npc.herHim] the [#SPECIAL_PARSE_0] flames [npc.she] needs to pay off [npc.her] fine.
+			你觉得帮[npc.herHim]交上这一大笔罚款更紧要，并没有被[npc.namePos]的态度所影响。你走过去把用来交罚款的[#SPECIAL_PARSE_0]火币给[npc.herHim]了。
 		</p>
 		<p>
-			[npc.speech(Are you serious?!)] [npc.name] cries out in shock, before clasping [npc.her] [npc.hands] over [npc.her] mouth as [npc.she] sees the amount of flames which you're giving [npc.herHim]. After a moment, [npc.she] tentatively reaches out to take the money, almost as if [npc.she] expects you to pull it away at the last moment. No such thing is on your mind, however, and you let [npc.name] take the flames from you.
+			[npc.speech(你认真的吗？！)][npc.Name]喊，看到你给的那些火币，惊讶地捂住了嘴。片刻后，[npc.she]尝试地伸手拿走火币，好像是觉得你会在最后一刻收回一样。你脑子里压根就没有这回事，任由[npc.Name]拿走了火币。
 		</p>
 		<p>
-			[npc.speech(I don't know what to say... Thank you! Thank you so much! I'm finally going to be able to get out of here!)] [npc.name] sobs, crying tears of joy as [npc.she] looks up into your [pc.eyes] with a huge smile on [npc.her] face. Before you can react to her tearful display, [npc.she] suddenly seems to think of something, and quickly darts a little way down the alleyway, before bending down and sliding a loose wall-grate to one side. Grabbing something which [npc.she] was hiding behind it, [npc.name] skips back over to where you're standing and says, [npc.speech(Don't ask me how I got this, but I was planning on using it as a last resort if the Enforcers found me here. I want you to take it!)]
+			[npc.speech(我不知道说什么好了……谢谢你！太感谢你了！我终于可以离开这里了！)][npc.name]啜泣着，抬头给了你一个大大的笑容，眼里满是喜悦。在你作出回应前，[npc.name]好像突然想起了什么，往巷子里跑了一段，弯腰将一块松动的壁篦滑到一边。[npc.she]把藏在后面的东西掏出来，走到你面前递给你说，[npc.speech(别问我是怎么搞到这东西的，我本来是想如果被执法者逮到了，这就是我最后的手段。我希望你能收下它！)]
 		</p>
 		<p>
-			Not giving you much choice in the matter, the [npc.race] pushes the item into your [pc.hands], and you look down to see that it's [#SPECIAL_PARSE_1]! 
+			[npc.race]没给你其他选择，直接把东西塞到你[pc.hands]里。你低头，看见手里的是[#SPECIAL_PARSE_1]！
 		</p>
 		<p>
-			Thanking [npc.name], you tell [npc.herHim] not to let [npc.herself] get into such a bad position again. Flashing you one last smile, the [npc.race] reveals, [npc.speech([style.random(Once I've paid off my fine I'm going to take the trip over the Endless Sea. I've had enough of this place!|I'm going to pay off my fine and then move out of this city. I've had enough of Dominion!|After I've paid off my fine, I'm going east to the port of Lyonesse. I'm leaving the Realm and never coming back!|I'm going to pay off my fine then get out of Dominion. I can't stand this city!)])]
+			你谢过[npc.name]，告诉[npc.her]别再让自己处于这样糟糕的境地了。[npc.race]对你笑了笑，说，[npc.speech([style.random(交上罚款以后，我要来一次穿越无尽之海的旅行，我受够这个地方了！|交上罚款后我就搬走，我受够御城区了！|交上罚款后我就往东走，去莱昂内斯的港口。我要离开王国，再也不回来了！|交上罚款后我就离开御城区，我受够这个地方了！)])]
 		</p>
 		<p>
-			With that, [npc.she] turns away and runs off to go and pay [npc.her] fine. Satisfied that you've done a good deed, you hold your head up high as you prepare to follow in [npc.namePos] footsteps and continue on your journey...
+			[npc.her]说完，转身跑去交罚款。你因做了好事而感到满足，昂起头，跟随[npc.namePos]的步伐继续你的旅程……
 		</p>
 	#ENDIF
 	]]></htmlContent>
@@ -261,23 +260,23 @@
 	<htmlContent tag="ATTACK"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_apartment))
 		<p>
-			Having had your fun with [npc.herHim], you decide that it's time to put this whore in [npc.her] place. Knowing that [npc.sheIs] wanted by the Enforcers, and therefore extremely unlikely to report your assault, you get up off of [npc.her] bed and aggressively tell [npc.herHim] that you're going to teach [npc.herHim] a lesson.
+			你已经玩腻[npc.herHim]了，是时候让这个婊子认清自己的角色了。你知道[npc.sheIs]被执法者通缉，就算被揍了也不可能去上报。你从床上站起身来，直接告诉[npc.herHim]你要好好教训[npc.herHim]一下。
 		</p>
 		<p>
-			[npc.speech(What the fuck?!)] the [npc.race] exclaims as [npc.she] jumps to [npc.her] [npc.feet] and prepares to defend [npc.herself]. [npc.speech(Get away from me!)]
+			[npc.speech(搞什么？！)][npc.race]大叫着跳起来，摆出防御姿态。[npc.speech(离我远点！)]
 		</p>
 		<p>
-			Committed to your course of action, you ignore the [npc.race]'s words as you prepare to attack [npc.herHim]...
+			你打算从一而终，没管[npc.race]说了什么，直接发起攻击……
 		</p>
 	#ELSE
 		<p>
-			Having heard enough from [npc.herHim], you decide that it's time to put this whore in [npc.her] place. Knowing that [npc.sheIs] wanted by the Enforcers, and therefore extremely unlikely to report your assault, you [pc.step] forwards and aggressively tell [npc.herHim] that you're going to teach [npc.herHim] a lesson.
+			你已经听腻[npc.herHim]的话了，是时候让这个婊子认清自己的角色了。你知道[npc.sheIs]被执法者通缉，就算被揍了也不可能去上报。你往前一步，直接告诉[npc.herHim]你要好好教训[npc.herHim]一下。
 		</p>
 		<p>
-			[npc.speech(What the fuck?!)] the [npc.race] exclaims as [npc.she] jumps back and prepares to defend [npc.herself]. [npc.speech(Get away from me!)]
+			[npc.speech(搞什么？！)][npc.race]大叫着往后跳，摆出防御姿态。[npc.speech(离我远点！)]
 		</p>
 		<p>
-			Committed to your course of action, you ignore the [npc.race]'s words as you prepare to attack [npc.herHim]...
+			你打算从一而终，没管[npc.race]说了什么，直接发起攻击……
 		</p>
 	#ENDIF
 	]]></htmlContent>
@@ -285,19 +284,19 @@
 	<htmlContent tag="AFTER_SEX_PAID"><![CDATA[
 	<p>
 		#IF(npc.isSatisfiedFromLastSex())
-			As you [pc.step] back from [npc.name], [npc.she] sinks back onto [npc.her] bed, totally worn out from [npc.her]
+			你从[npc.name]身上退开，[npc.she]早已被
 			#IF(sex.getNumberOfOrgasms(npc)>1)
-				 orgasms.
+				连绵不绝的高潮
 			#ELSE
-				 orgasm.
+				高潮
 			#ENDIF
-			 Looking up at you, a satisfied smile settles on [npc.her] face, and [npc.she] sighs, [npc.speech(Damn, you're good! It looks like I've got a new favourite customer!)]
+			弄得筋疲力竭，一下子瘫软到了床上。[npc.her]抬起头看着你，脸上露出了满意的笑容，感叹到：[npc.speech(你可太特么厉害了，看来我找到了一个新的优质客源，你将来一定会广受欢迎的！)]
 		#ELSE
-			As you [pc.step] back from [npc.name], [npc.she] sinks back onto [npc.her] bed, letting out a deep sigh as [npc.she] realises that you've finished. Looking up at you, a tired smile settles on [npc.her] face, and [npc.she] exclaims, [npc.speech(I hope you had a good time!)]
+			你从[npc.name]身上退开，[npc.she]意识到你已经结束，便深深地叹了一口气，无力地瘫软到了床上。[npc.she]抬起头看着你，脸上浮现出疲惫的笑容，叹息道：[npc.speech(希望你玩得尽兴！)]
 		#ENDIF
 	</p>
 	<p>
-		Lying back on [npc.namePos] bed, you take a moment to catch your breath as [npc.she] stands up and starts to get cleaned and dressed. Looking up at the discoloured ceiling, you let out a deeply-satisfied sigh and wonder where you'll go after this...
+		躺在[npc.namePos]的床上，你趁着[npc.she]整理衣物的功夫小憩了一会儿。仰望着濒临褪色的天花板，你深深地叹了一口气，思考着自己稍后的安排……
 	</p>
 	]]></htmlContent>
 	
@@ -306,51 +305,54 @@
 	
 	<htmlContent tag="COMBAT_WON"><![CDATA[
 	<p>
-		Staggering back, [npc.name] collapses to the floor, completely defeated. [npc.She] looks up at you, and you see that there's a desperate, wild look in [npc.her] [npc.eyes]. Making a pitiful little whining noise, [npc.she] begs, [npc.speech(Do what you want with me! Just, please, I don't want to be a slave! Don't hand me over to the Enforcers!)]
+		[npc.Name]踉跄着后退，倒在地上，完全被击败了。[npc.she]抬起头看着你，你看到[npc.she][npc.eyes]里流露出绝望而狂野的神情。[npc.she]发出可怜的呜呜声，哀求道：[npc.speech(你想对我做什么都行！只是，求求你，我不想做奴隶！不要把我交给执法者！)]
 	</p>
 	<p>
-		Despite the awful situation that [npc.she] finds [npc.herself] in, it appears as though your powerful arcane aura is having a strong effect on [npc.name]. Even as [npc.she] begs for you to have mercy, you see [npc.herHim] glance down hungrily at your body.
-		#IF(npc.isTaur())
-			 Seemingly unaware of what [npc.sheIs] doing, [npc.she] starts rubbing [npc.her] rear-end up against a nearby downpipe, and [npc.she] lets out [npc.a_moan+] as [npc.she] uses it to masturbate...
-		#ELSE
-			 Seemingly unaware of what [npc.sheIs] doing, [npc.her] [npc.hands] suddenly drop down to [npc.her] groin, and [npc.she] lets out [npc.a_moan+] as [npc.she] starts touching [npc.herself]...
-		#ENDIF
+		尽管[npc.name]已陷入举步维艰的境地，但你的强大奥术灵气似乎对[npc.she]产生了强烈的影响。就在[npc.she]乞求你手下留情的时候，你看到[npc.herHim]饥渴地瞥了一眼你的身体。
+		
+			[npc.she]似乎不知道自己在做什么，
+			#IF(npc.isTaur())
+				开始用后臀摩擦附近的下水管，
+			#ELSE
+				突然垂[npc.hand]到腹股沟，开始抚摸自己，
+			#ENDIF
+			发出一阵[npc.a_moan+]……
 	</p>
 	<p>
-		<i>Now that you've revealed [npc.namePos] status as a fugitive from the law, you realise that [style.italicsMinorBad(this will be the last time you ever see [npc.herHim])], as [npc.sheIs] sure to move on once you leave.</i>
+		<i>你已经揭露了[npc.namePos]的逃犯身份，你意识到[style.italicsMinorBad(这将是你最后一次见到[npc.herHim])]，一旦你离开，[npc.sheIs]肯定会逃走。</i>
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX"><![CDATA[
 	<p>
-		Deciding to give this horny [npc.race] what [npc.she] so clearly wants, you pull [npc.herHim] to [npc.her] [npc.feet] and press your body up close against [npc.hers]. Letting out [npc.a_moan+], [npc.name] begs, [npc.speech(Oh yes! Come on, fuck me!)] 
+		你决定满足这个饥渴的[npc.race]，于是你拉起[npc.her]，与[npc.hers]肌肤相贴。[npc.name]发出[npc.a_moan+]，乞求道：[npc.speech(嗯对！来操我吧！)] 
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_GENTLE"><![CDATA[
 	<p>
-		Deciding to give this horny [npc.race] what [npc.she] so clearly wants, you gently pull [npc.herHim] to [npc.her] [npc.feet] and press your body up close against [npc.hers]. Letting out [npc.a_moan+], [npc.name] begs, [npc.speech(Oh yes! Come on, fuck me!)] 
+		你决定满足这个饥渴的[npc.race]，于是你轻柔地拉起[npc.her]，与[npc.hers]肌肤相贴。[npc.name]发出[npc.a_moan+]，乞求道：[npc.speech(嗯对！来操我吧！)] 
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_ROUGH"><![CDATA[
 	<p>
-		Deciding to give this horny [npc.race] what [npc.she] so clearly wants, you roughly pull [npc.herHim] to [npc.her] [npc.feet] and forcefully grind your body up close against [npc.hers]. Letting out [npc.a_moan+], [npc.name] begs, [npc.speech(Oh yes! Come on, fuck me!)] 
+		你决定满足这个饥渴的[npc.race]，于是你粗暴地拉起[npc.her]，激烈地与[npc.hers]肌肤相贴。[npc.name]发出[npc.a_moan+]，乞求道：[npc.speech(嗯对！来操我吧！)] 
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SUBMIT"><![CDATA[
 	<p>
-		You really aren't sure what to do next, and start to feel pretty uncomfortable with the fact that you just attacked this poor [npc.race]. Leaning down, you do the first thing that comes into your mind, and after profusely apologising to [npc.herHim], you ask [npc.name] if there's anything you can do to make it up to [npc.herHim].
+		你手足无措地站在原地，回想起刚刚攻击的可怜[npc.race]，不禁有些愧疚。你俯下身，第一时间开始向对方道歉，问[npc.name]可以怎样补偿[npc.herHim]。
 	</p>
 	<p>
-		For a moment,[npc.name] simply sits there looking confused, but as [npc.she] realises that you're genuinely troubled by what you've just done, an evil grin crosses [npc.her] face. Consumed by [npc.her] lust that's being brought about due to your powerful arcane aura, [npc.she] grabs you by the [pc.arm] and pulls you with [npc.her] as [npc.she] rises to [npc.her] [npc.feet], before forcefully pressing [npc.her] body against yours as [npc.she] growls, [npc.speech(How about you start by apologising properly?!)]
+		有那么一瞬间，[npc.name]一脸困惑。但是，[npc.she]看到你真的为自己刚才的行为感到困扰，脸上浮现出了邪恶的笑容。[npc.she]被你磅礴的奥术灵气带来的欲望所吞噬，站起来抓住你的[pc.arm]，激烈地与你肌肤相亲，怒吼道：[npc.speech(不如你先好好道个歉怎么样？！)]
 	</p>
 	<p>
-		[npc.NamePos] strong, dominant grip on your [pc.arm] causes you to let out a lewd little moan, and your submissive nature takes over as you do as [npc.she] asks and exclaim, [pc.speech(I'm so sorry! Please forgive me! I'll do anything you ask!)]
+		[npc.namePos]用力抓住你的[pc.arm]。你顺从的本性占据主导，不禁发出淫靡的呻吟，大叫道：[pc.speech(我真的很抱歉！求你原谅我吧！我什么都会做的，只要你开口！)]
 	</p>
 	<p>
-		Roughly yanking you forwards, [npc.name] lets out a menacing growl, before forcing [npc.her] tongue into your mouth and starting to passionately kiss you. You let out a muffled yelp as your opponent takes charge, but as you feel [npc.her] [npc.hands] reaching down to start roughly groping your ass, you realise that you couldn't be happier with how things have turned out...
+		[npc.Name]恶狠狠地低声咆哮着，俯身压向你，把[npc.her]的舌头伸进你的嘴里激吻。见对方如此，你诧异地发出闷声的尖叫，但当[npc.her]用[npc.hands]开始粗鲁地揉捏你的屁股时，你意识到你很享受事情的走向……
 	</p>
 	]]></htmlContent>
 	
@@ -359,68 +361,68 @@
 	
 	<htmlContent tag="COMBAT_LOST"><![CDATA[
 	<p>
-		You can't carry on fighting any more, and you feel your [pc.legs] giving out beneath you as you collapse to the ground, defeated. A mocking laugh causes you to look up, and you see [npc.name] grinning down at you.
+		你不能继续战斗了。你感觉到自己的[pc.legs]逐渐无力，最终，你倒在地上，一败涂地。一阵嘲弄的笑声让你抬起头，你看到[npc.name]正朝你咧嘴笑着。
 	</p>
 	#IF(npc.isAttractedTo(pc) && npc.isWillingToRape())
 		<p>
-			[npc.speech(Hah! That was too easy!)] [npc.she] says, before leaning down to grab one of your [pc.arms]. Pulling you to your feet, [npc.name] pushes you against a nearby wall, before growling, [npc.speech(Looks like I'll be having to move on again now. I'm not sticking around for your little Enforcer friends to show up and arrest me! But before I go, I think I'll teach you a lesson not to fuck around with strangers!)]
+			[npc.speech(哈！你可真弱！)][npc.she]说着，俯下身抓起你的一只胳膊，把你拉了起来，随后将你按在墙上，咒骂道，[npc.speech(看样子我该走了，免得你的执法者朋友逮到我！不过，在这之前，让我先给你个教训，好让你学会别招惹陌生人！)]
 		</p>
 		<p>
-			<i>Now that you've revealed [npc.namePos] status as a fugitive from the law, you realise that [style.italicsMinorBad(this will be the last time you ever see [npc.herHim])], as [npc.sheIs] sure to move on once [npc.sheHas] had [npc.her] fun with you.</i>
+			<i>你已经揭露了[npc.namePos]的逃犯身份，你意识到[style.italicsMinorBad(这将是你最后一次见到[npc.herHim])]，一旦[npc.sheIs]玩够了，[npc.her]肯定会逃走。</i>
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(Hah! That was too easy!)] [npc.she] says, before leaning down to grab one of your [pc.arms].
+			[npc.speech(哈，易如反掌！)][npc.she]说，俯身抓住你的一条[pc.arms]。
 		</p>
 		<p>
-			Pulling you to your feet, [npc.name] pushes you against a nearby wall, before demanding that you hand over your money. Reluctantly, you do as [npc.she] says, and, after giving [npc.herHim] some of your cash, [npc.she] roughly pushes you to the floor once more.
+			[npc.name]把你拉起来，粗暴地将你推到附近的墙上，命令你掏钱。你不情愿地照做了。拿走你的钱后，[npc.she]再次粗暴地将你推倒在地。
 		</p>
 		<p>
-			[npc.speech(Looks like I'll be having to move on again now. I'm not sticking around for your little Enforcer friends to show up and arrest me!)] [npc.she] growls down at you, before turning around and running off.
+			[npc.speech(看来我又得走了。我可不想在这里等着你的小执法者朋友们来抓我！)][npc.she]冲你咆哮，然后转身跑开了。
 		</p>
 		<p>
-			<i>Now that you've revealed [npc.namePos] status as a fugitive from the law, you realise that [style.italicsMinorBad(this was the last time you'll ever see [npc.herHim])].</i>
+			<i>你已经揭露了[npc.namePos]的逃犯身份，你意识到[style.italicsMinorBad(这是你最后一次见[npc.herHim])]。</i>
 		</p>
 	#ENDIF
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_SEX"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and [npc.she] continues passionately making out with you for a few moments, before finally pulling away. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you realise that [npc.sheIs] probably not going to be content with just a kiss...
+		[npc.NamePos]的[npc.arms]环住你的腰抚摸你的背，热情地与你亲热了好一会儿才松开。[npc.she]饥渴地舔着[npc.lips]，对你邪魅地笑。你明白，[npc.sheIs]可能不仅仅满足于一个吻……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_SEX_EAGER"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you eagerly lean into [npc.herHim], passionately returning [npc.her] kiss for a few moments, before [npc.she] breaks away from you. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you feel a rush of excitement as you realise that [npc.sheIs] going to want more than just a kiss...
+		[npc.NamePos]用[npc.arms]环绕你的背，你热切地靠在[npc.herHim]身上。[npc.she]热情地回吻片刻，又推开你，露出邪魅的笑容，舔了舔[npc.lips]。你感到一阵兴奋，意识到[npc.she]想要的可不仅仅只是一个吻……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_SEX_RESIST"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you let out a distressed cry as [npc.she] pulls you into a forceful kiss. Summoning the last of your strength, you desperately try to push [npc.herHim] away, pleading for [npc.herHim] to stop. Giving you an evil grin, [npc.she] ignores your protests, and as you see [npc.herHim] hungrily licking [npc.her] [npc.lips], you realise that [npc.sheIs] not going to let you go...
+		[npc.NamePos]用[npc.arms]环住你的背，你被拉过去强制接吻，发出凌厉的哭号。你耗干了最后一丝气力，努力推开[npc.herHim]。你不断地乞求[npc.herHim]停下。[npc.she]邪恶地笑笑，完全无视了你的抵抗。你眼睁睁地看着[npc.herHim]饥渴地舔了舔[npc.lips]，明白过来[npc.sheIs]才不会放你走……
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_CONTINUE"><![CDATA[
 	#IF(npc.isAttractedTo(pc))
 		<p>
-			Refusing to have sex with the [npc.race], you watch as [npc.she] melts back into the undergrowth from whence [npc.she] came. After taking a moment in which to recover your energy, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
+			你拒绝与[npc.race]发生性关系，眼睁睁地看着[npc.she]又原路返回，消失在灌木丛中。你花了一点时间恢复体力，环顾四周，确保没有其他明显的危险后继续前行……
 		</p>
 	#ELSE
 		<p>
-			With one last triumphant sneer thrown your way, [npc.she] melts back into the undergrowth from whence [npc.she] came. After taking a moment in which to recover your energy, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
+			[npc.she]最后冲你得意地冷笑一声后，又钻进了自己来时的灌木丛中。你花了一点时间恢复体力，环顾四周，确保没有其他明显的危险后继续前行……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_FUCKED_WILLING"><![CDATA[
 	<p>
-		Agreeing to have sex with [npc.herHim], you let the bandit continue to grope you, and as you open your mouth to say something, [npc.she] leans forwards and pulls you into a dominant kiss. After grinding up against you for a few moments, [npc.she] pulls back and prepares to fuck you...
+		你同意和[npc.name]做爱，完全迎合着强盗对你身体的猥亵。你张口准备说些什么，结果[npc.she]一个倾身，霸道地将你强吻。在与你厮磨片刻后，[npc.she]抽回身，准备把你办了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_VICTORY -->
@@ -428,32 +430,32 @@
 	<htmlContent tag="AFTER_SEX_VICTORY"><![CDATA[
 	<p>
 		#IF(npc.isSatisfiedFromLastSex())
-			As you [pc.step] back from [npc.name], [npc.she] sinks to the floor, totally worn out from [npc.her]
+			你从[npc.name]身上退开，[npc.she]早已被
 			#IF(sex.getNumberOfOrgasms(npc)>1)
-				 orgasms.
+				连绵不绝的高潮
 			#ELSE
-				 orgasm.
+				高潮
 			#ENDIF
-			 Looking up at you, a satisfied smile settles on [npc.her] face, and you realise that you gave [npc.herHim] exactly what [npc.she] wanted.
+			弄得筋疲力竭，一下子瘫软到了地上。[npc.her]抬头看着你，脸上露出了满意的笑容。你明白[npc.her]一定是对此次“服务”十分满意。
 		#ELSE
-			As you [pc.step] back from [npc.name], [npc.she] sinks to the floor, letting out a desperate whine as [npc.she] realises that you've finished.
+			你从[npc.name]身上退开。意识到你这么快就已结束，[npc.she]发出一声幽怨的抱怨。
 			#IF(npc.isTaur())
-				 Unable to reach back to [npc.her] groin, [npc.she] frantically starts rubbing [npc.her] rear-end up against a nearby downpipe in a desperate attempt to masturbate and finish what you started.
+				[npc.she]无法碰到下体，便开始疯狂地用的后臀摩擦附近的管道，拼命试图自慰，试图完成你未做完的事情。
 			#ELSEIF(npc.hasLegs())
-				 [npc.Her] [npc.hands] dart down between [npc.her] [npc.legs], and [npc.she] frantically starts masturbating as [npc.she] seeks to finish what you started.
+				[npc.Her]将[npc.hands]伸到[npc.legs]之间，开始疯狂地自慰，试图完成你未做完的事情。
 			#ELSE
-				 [npc.Her] [npc.hands] dart down to [npc.her] groin, and [npc.she] frantically starts masturbating as [npc.she] seeks to finish what you started.
+				[npc.Her]将[npc.hands]伸向自己下体，开始疯狂地自慰，试图完成你未做完的事情。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		<i>Now that you've revealed [npc.namePos] status as a fugitive from the law, you realise that [style.italicsMinorBad(this will be the last time you ever see [npc.herHim])], as [npc.sheIs] sure to move on once you leave.</i>
+		<i>你已经揭露了[npc.namePos]的逃犯身份，你意识到[style.italicsMinorBad(这将是你最后一次见到[npc.herHim])]，一旦你离开，[npc.sheIs]肯定会逃走。</i>
 	</p>
 	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_VICTORY_LEAVE"><![CDATA[
 	<p>
-		After spending a few moments getting your breath back, you head over to the door and swiftly exit [npc.namePos] apartment. Grinning to yourself as you think back to how you beat [npc.herHim], you leave the [npc.race] behind and continue on your journey...
+		花了一小会时间调整好自己，你打开大门，迅速离开了[npc.namePos]的公寓。回想着自己“驯服”[npc.herHim]的过程，你不由得会心一笑。把[npc.race]抛到脑后，你继续起自己的旅程……
 	</p>
 	]]></htmlContent>
 	
@@ -463,30 +465,30 @@
 	<htmlContent tag="AFTER_SEX_DEFEAT"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_apartment))
 		<p>
-			As [npc.name] [npc.steps] back and sorts [npc.her] clothes out, you sink to the floor, totally worn out from [npc.her] dominant treatment of you. Glancing up at the [npc.race], you see a very satisfied smile cross [npc.her] face, and [npc.she] leans down to pat you on the head and exclaim, [npc.speech(Farewell forever! You and your Enforcer cronies will have to try harder than that to catch me!)]
+			[npc.Name]后退整理衣服。你瘫倒在地上，经历过由[npc.her]支配的性事后精疲力尽。你抬头看了[npc.race]一眼，发现[npc.her]的脸上掠过一丝餍足的笑意。[npc.she]俯下身来拍了拍你的头说，[npc.speech(永别了！你和你的执法者朋友想抓我还得再努力点！)]
 		</p>
 		<p>
-			With that, [npc.she] quickly gathers up [npc.her] personal possessions, before exiting [npc.her] apartment and leaving you panting on the ground. It takes a little while for you to recover from your ordeal, but eventually you feel strong enough to get your things in order and carry on your way...
+			说完，[npc.she]迅速收拾好个人物品，然后离开公寓，留下你气喘吁吁地躺在地上。你需要一段时间才能从折磨中缓过来，但你最终还是恢复了力气，得以整理好你的东西，继续你的旅途……
 		</p>
 		<p>
-			<i>Now that you've revealed [npc.namePos] status as a fugitive from the law, you realise that [style.italicsMinorBad(this was the last time you'll ever see [npc.herHim])], as [npc.sheIs] sure to move on to a new location.</i>
+			<i>你现在已经清楚[npc.namePos]逃犯的身份了，你意识到[style.italicsMinorBad(这是你最后一次见[npc.herHim])]，因为[npc.sheIs]之后肯定要逃往别处了。</i>
 		</p>
 	#ELSE
 		<p>
-			As [npc.name] [npc.steps] back and sorts [npc.her] clothes out, you sink to the floor, totally worn out from [npc.her] dominant treatment of you. Glancing up at the [npc.race], you see a very satisfied smile cross [npc.her] face, and [npc.she] leans down to pat you on the head and exclaim, [npc.speech(Farewell forever! You and your Enforcer cronies will have to try harder than that to catch me!)]
+			[npc.Name]后退整理衣服。你瘫倒在地上，经历过由[npc.her]支配的性事后精疲力尽。你抬头看了[npc.race]一眼，发现[npc.her]的脸上掠过一丝餍足的笑意。[npc.she]俯下身来拍了拍你的头说，[npc.speech(永别了！你和你的执法者朋友想抓我还得再努力点！)]
 		</p>
 		<p>
-			With that, [npc.she] [npc.walks] off, leaving you panting on the floor of [npc.her] bedroom...
+			说完，[npc.she]走开了，留下你在卧室地上气喘吁吁……
 		</p>
 		<p>
-			<i>Now that you've revealed [npc.namePos] status as a fugitive from the law, you realise that [style.italicsMinorBad(this was the last time you'll ever see [npc.herHim])], as [npc.sheIs] sure to move on to a new location.</i>
+			<i>你现在已经清楚[npc.namePos]逃犯的身份了，你意识到[style.italicsMinorBad(这是你最后一次见[npc.herHim])]，因为[npc.sheIs]之后肯定要逃往别处了。</i>
 		</p>
 	#ENDIF
 	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_DEFEAT_LEAVE"><![CDATA[
 	<p>
-		After spending a few moments getting your breath back, you head over to the door and swiftly exit [npc.namePos] apartment. Letting out a groan as you think back to how you were beaten by [npc.herHim], you quickly leave the area and continue on your journey...
+		你缓了一阵才喘过气来，快步走向门，离开了[npc.namePos]的公寓。你回想起自己是如何被[npc.herHim]揍的，发出一声痛苦的呻吟，很快离开这里继续你的旅程……
 	</p>
 	]]></htmlContent>
 	

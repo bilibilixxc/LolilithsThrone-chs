@@ -61,10 +61,10 @@ public class Felicia extends NPC {
     }
     
     public Felicia(boolean isImported) {
-        super (isImported, new NameTriplet("Felicia"), "Delilah-Hope Renmorre",
-                "Felicia is Arthur's neighbor and sometimes Caregiver." + 
-                        " While she tries to act calm and collected, she lights up at the sight of anything she remotely enjoys." + 
-                        " Is known for the smoothest, fluffiest fur in town.",
+        super (isImported, new NameTriplet("菲利希亚"), "德莉拉-霍普 伦莫尔",
+                "菲利希亚是亚瑟的邻居，有时也做看护。" + 
+                        "只要看到任何喜欢的东西，她都会努力表现得镇定自若，但仍不免眼前一亮。" + 
+                        "相传是城里皮毛最顺滑蓬松的。",
                 30,
                 Month.FEBRUARY, 17,
                 10,

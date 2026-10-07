@@ -1,52 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <arm>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[furred spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛(覆毛)]]></transformationName>
 	<coveringType>charisma_spider_chitinFluffy</coveringType>
 	<underarmHairAllowed>true</underarmHairAllowed>
 	<allowsFlight>false</allowsFlight>
 	<tags>
 		<tag>ARM_STANDARD</tag>
 	</tags>
-	<name><![CDATA[arm]]></name>
-	<namePlural><![CDATA[arms]]></namePlural> 
+	<name><![CDATA[前肢]]></name>
+	<namePlural><![CDATA[前肢]]></namePlural> 
 	<descriptorsMasculine>
-		<descriptor>soft</descriptor>
-		<descriptor>fluffy</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[柔软]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>soft</descriptor>
-		<descriptor>fluffy</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[柔软]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</descriptorsFeminine>
-	<handName><![CDATA[hand]]></handName>
-	<handNamePlural><![CDATA[hands]]></handNamePlural>
+	<handName><![CDATA[蜘蛛爪]]></handName>
+	<handNamePlural><![CDATA[蜘蛛爪]]></handNamePlural>
 	<handDescriptorsMasculine>
-		<descriptor>spider-like</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</handDescriptorsMasculine>
 	<handDescriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>spider-like</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</handDescriptorsFeminine>
-	<fingerName><![CDATA[finger]]></fingerName>
-	<fingerNamePlural><![CDATA[fingers]]></fingerNamePlural>
+	<fingerName><![CDATA[指爪]]></fingerName>
+	<fingerNamePlural><![CDATA[指爪]]></fingerNamePlural>
 	<fingerDescriptorsMasculine>
-		<descriptor>sharp</descriptor>
-		<descriptor>segmented</descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
+		<descriptor><![CDATA[节节分明]]></descriptor>
 	</fingerDescriptorsMasculine>
 	<fingerDescriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>sharp</descriptor>
-		<descriptor>segmented</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
+		<descriptor><![CDATA[节节分明]]></descriptor>
 	</fingerDescriptorsFeminine>
 	<transformationDescription><![CDATA[
-		Within a matter of moments, a layer of shiny chitin has quickly grown over them and, looking down, [npc.she] [npc.verb(see)] [npc.her] new chitin growing to encase [npc.her] hands. As they transform, the joints of [npc.her] fingers take on a segmented appearance, before tapering into sharp points at their tips. This hard chitin then sprouts a fur-like layer of chitinous hairs, which quickly envelops [npc.her] entire arms. [npc.Her] elbows then alarmingly reshape themselves to be ball-jointed, and at [npc.her] shoulders, [npc.her] chitin finished growing so that it sharply transitions into the [npc.skin] that's covering the rest of [npc.her] body.
-		<br/>As the transformation comes to an end, [npc.nameIsFull] left with [style.boldSpider(spider-like arms and hands)], which are [npc.materialDescriptor] [npc.armFullDescription].
+		片刻之后，一层闪亮的几丁质迅速长了出来并覆盖了它们，[npc.she]向下看去，看到新的几丁质层长在了[npc.her]的手上。[npc.her]的指关节在转化过程中呈现出一节节分段的外观，然后在指尖部分逐渐变得尖锐。坚硬的几丁质上随后长出一层类兽的几丁质毛，很快包裹住[npc.her]的整个手臂。[npc.Her]的肘部惊人地转化成了球关节，在[npc.her]的肩部，几丁质已经完成了生长，并且迅速过渡到覆盖[npc.her]身体其余部分的[npc.skin]上。
+		<br/>在转化的尾声，[npc.nameIsFull]留下了一对[style.boldSpider(蜘蛛般的手臂和手)]，[npc.materialDescriptor][npc.armFullDescription]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-	[npc.She] [npc.has] [npc.armRows] arms, which are [npc.materialCompositionDescriptor] [npc.armFullDescription(true)]. [npc.Her] hands have chitinous, joined fingers that taper into sharp points.
+	[npc.She]拥有[npc.armRows]蛛型肢体，[npc.materialCompositionDescriptor][npc.armFullDescription(true)]。手上长着分段且逐渐变尖的几丁质手指。
 	]]></bodyDescription>
 </arm>

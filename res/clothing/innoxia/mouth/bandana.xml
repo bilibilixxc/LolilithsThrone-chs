@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>150</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bandana]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bandanas]]></namePlural> 
-		<description><![CDATA[A square piece of cloth, which can be folded and tied to form a cover for the wearer's head, neck, or face.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[面巾]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[面巾]]></namePlural> 
+		<description><![CDATA[一条方形的布，可以对其进行折叠和捆绑，从而遮挡住佩戴者的头部、颈部或脸部。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -100,117 +100,115 @@
 	</coreAttributes>
 
   <replacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(position)] the bandana over [npc.her] [npc.face], before reaching back and tying the ends together.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(position)] the bandana over [npc2.namePos] [npc2.face], before reaching back and tying the ends together.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the bandana over [npc2.namePos] [npc2.face], before reaching back and tying the ends together.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将面巾放在[npc.her]的[npc.face]上，将其绕到后面并系好。
+    ]]></self>
+    <other><![CDATA[
+[npc.Name]将面巾戴在[npc2.namePos][npc2.face]上，然后伸手到后面把两端绑在一起。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地把面巾蒙到[npc2.namePos]的脸上，然后伸手到后面把两端系在一起。
+]]></otherRough>
   </replacementText>
   <displacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc2.namePos] bandana and [npc.verb(take)] it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了[npc.her]的面巾并将其摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开[npc2.namePos]面巾的两端，然后摘掉了它。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开面巾的两端，然后摘下它。
+]]></otherRough>
   </displacementText>
   <replacementText slot="MOUTH" type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc.her] bandana so that it's no longer covering [npc.her] mouth.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc2.namePos] bandana so that it's no longer covering [npc2.her] mouth]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] bandana so that it's no longer covering [npc2.her] mouth]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的面巾拉下，这样面巾不再遮盖住[npc.her]的嘴。
+]]></self>
+    <other><![CDATA[
+[npc.Name]把[npc2.namePos]面巾拉下来，不再遮住[npc2.her]嘴巴。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的头巾拉下，不再遮住[npc2.her]的嘴巴。
+]]></otherRough>
   </replacementText>
   <displacementText slot="MOUTH" type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] up [npc.her] bandana so that it's once again covering [npc.her] mouth.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] up [npc2.namePos] bandana so that it's once again covering [npc2.her] mouth]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] up [npc2.namePos] bandana so that it's once again covering [npc2.her] mouth]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将面巾拉起，这样面巾又能遮住[npc.her]的嘴了。
+]]></self>
+    <other><![CDATA[
+[npc.Name]把[npc2.namePos]面巾拉上来，再次遮住[npc2.her]嘴巴。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的头巾往上拉，再次遮住[npc2.her]的嘴巴。
+]]></otherRough>
   </displacementText>
   
   <replacementText slot="HEAD" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(position)] the bandana over the top of [npc.her] head, before reaching back and tying the ends together.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(position)] the bandana over the top of [npc2.namePos] head, before reaching back and tying the ends together.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the bandana over the top of [npc2.namePos] head, before reaching back and tying the ends together.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将头巾摆放在[npc.her]的头上，然后伸手到后面把两端绑在一起。
+]]></self>
+    <other><![CDATA[
+[npc.Name]把面巾放在[npc2.namePos]头上，然后伸手到后面把两端系在一起。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将头巾推到[npc2.namePos]头上，然后伸手去把两端系在一起。
+]]></otherRough>
   </replacementText>
   <displacementText slot="HEAD" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc2.namePos] bandana and [npc.verb(take)] it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了[npc.her]的面巾并将其摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开[npc2.namePos]面巾的两端，然后摘掉了它。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开面巾的两端，然后摘下它。
+]]></otherRough>
   </displacementText>
   
   <replacementText slot="HAIR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(position)] the bandana over the top of [npc.her] head, before reaching back and tying the ends together.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(position)] the bandana over the top of [npc2.namePos] head, before reaching back and tying the ends together.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the bandana over the top of [npc2.namePos] head, before reaching back and tying the ends together.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将头巾摆放在[npc.her]的头上，然后伸手到后面把两端绑在一起。
+]]></self>
+    <other><![CDATA[
+[npc.Name]把面巾放在[npc2.namePos]头上，然后伸手到后面把两端系在一起。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将头巾推到[npc2.namePos]头上，然后伸手去把两端系在一起。
+]]></otherRough>
   </replacementText>
   <displacementText slot="HAIR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc2.namePos] bandana and [npc.verb(take)] it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了[npc.her]的面巾并将其摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开[npc2.namePos]面巾的两端，然后摘掉了它。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开面巾的两端，然后摘下它。
+]]></otherRough>
   </displacementText>
   
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the bandana loosely around [npc.her] neck, before reaching back and tying the ends together.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the bandana loosely around [npc2.namePos] neck, before reaching back and tying the ends together.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(tie)] the bandana around [npc2.namePos] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将面巾松松地围绕在[npc.her]的脖子上，然后伸手到后面把两端绑在一起。]]></self>
+    <other><![CDATA[
+[npc.Name]将面巾松松地围绕在[npc2.namePos]的脖子上，然后伸手到后面把两端系在一起。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将头巾绑在[npc2.namePos]的脖子上。
+]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ends of [npc2.namePos] bandana and [npc.verb(take)] it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the ends of [npc.her] bandana and [npc.verb(take)] it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了[npc.her]的面巾并将其摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开[npc2.namePos]面巾的两端，然后摘掉了它。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开面巾的两端，然后摘下它。
+]]></otherRough>
   </displacementText>
   
 </clothing>

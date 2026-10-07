@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -97,7 +97,7 @@
 	<bookIconName>bearicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Strolling Bears</bookName>
+	<bookName><![CDATA[漫游之熊]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -110,49 +110,49 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[panda-morph]]></name>
-			<namePlural><![CDATA[panda-morphs]]></namePlural>
-			<singularMaleName><![CDATA[panda-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[panda-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[panda-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[panda-girls]]></pluralFemaleName>
+			<name><![CDATA[熊猫化形]]></name>
+			<namePlural><![CDATA[熊猫化形]]></namePlural>
+			<singularMaleName><![CDATA[熊猫男]]></singularMaleName>
+			<singularFemaleName><![CDATA[熊猫女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[熊猫男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[熊猫女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<nameAnthroSillyMode>
 		<namesDefault>
-			<name><![CDATA[pamba-morph]]></name>
-			<namePlural><![CDATA[pamba-morphs]]></namePlural>
-			<singularMaleName><![CDATA[pamba-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[pamba-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[pamba-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[pamba-girls]]></pluralFemaleName>
+			<name><![CDATA[能喵化形]]></name>
+			<namePlural><![CDATA[能喵化形]]></namePlural>
+			<singularMaleName><![CDATA[能喵男]]></singularMaleName>
+			<singularFemaleName><![CDATA[能喵女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[能喵男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[能喵女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthroSillyMode>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic panda, known as a 'panda-morph' when bipedal, and a 'pandataur' when the lower body is that of a typically-oversized feral bear.]]></description>
+	<description><![CDATA[一种人形的熊猫，当下肢拟人时被称为熊猫化形，而当下肢呈现出熊兽态时则称为半熊猫人。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[zhouyu]]></name>
-			<namePlural><![CDATA[zhouyu]]></namePlural>
-			<singularMaleName><![CDATA[zhouyu]]></singularMaleName>
-			<singularFemaleName><![CDATA[zhouyu]]></singularFemaleName>
-			<pluralMaleName><![CDATA[zhouyu]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[zhouyu]]></pluralFemaleName>
+			<name><![CDATA[驺虞]]></name>
+			<namePlural><![CDATA[驺虞]]></namePlural>
+			<singularMaleName><![CDATA[驺虞]]></singularMaleName>
+			<singularFemaleName><![CDATA[驺虞]]></singularFemaleName>
+			<pluralMaleName><![CDATA[驺虞]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[驺虞]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[panda]]></feralName>
-		<feralNamePlural><![CDATA[panda]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[panda]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[panda]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[pandas]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[pandas]]></feralPluralFemaleName>
+		<feralName><![CDATA[熊猫]]></feralName>
+		<feralNamePlural><![CDATA[熊猫]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[熊猫]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[熊猫]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[熊猫]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[熊猫]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -183,7 +183,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] panda-like body is strong, and [npc.she] [npc.verb(exude)] a sense of single-minded calm.
+		[npc.NamePos]熊猫般的身体很强壮，[npc.she]拥有专心致志而冷静心细的特质。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

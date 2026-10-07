@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[dining table]]></name>
-	<tooltipDescription><![CDATA[An old wooden table and four matching chairs provide a place at which to eat meals.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Meraxis's hideout]]></virginityLossDescription>
+	<name><![CDATA[餐桌]]></name>
+	<tooltipDescription><![CDATA[一张旧木桌和四把配套的椅子组成了吃饭的地方。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于梅拉克西丝的藏身处]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_STEEL</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

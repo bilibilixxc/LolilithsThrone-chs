@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -30,9 +30,9 @@
 	<applyEndEffects/>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Cock worship]]></title>
+	<title><![CDATA[阴茎侍奉]]></title>
 	<tooltip><![CDATA[
-		Worship Shiranui's cock as it slides back and forth between your and Meraxis's lips.
+		当不知火的阴茎在你和梅拉克西丝的嘴唇间来回滑动时，侍奉它。
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -40,16 +40,16 @@
 				[#npc.isPlayer()]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				You can't help but let out eager [pc.moans] as you happily suckle, kiss, and lick the side of Shiranui's [shiranui.cock+].
+				你开心地吮吸、亲吻并舔舐不知火[shiranui.cock+]一侧，忍不住发出饥渴的[pc.moans]。
 			]]></text>
 			<text><![CDATA[
-				As Shiranui's cock is pushed between your and Meraxis's lips, you eagerly kiss, lick, and worship her hot, throbbing shaft.
+				当不知火的阴茎被送入你和梅拉克西丝的唇间时，你饥渴地亲吻、舔舐并侍奉她炽热、搏动的阴茎。
 			]]></text>
 			<text><![CDATA[
-				You press your [pc.lips+] against the side of Shiranui's hot cock, and as she slides her [shiranui.cock+] between your and Meraxis's lips, you eagerly kiss and lick it.
+				你将[pc.lips+]贴在不知火滚烫的肉棒侧面，当她把[shiranui.cock+]滑入你与梅拉克西丝的唇间时，你饥渴地亲吻舔舐起来。
 			]]></text>
 			<text><![CDATA[
-				Shiranui's [shiranui.cock+] pushes forwards between you and Meraxis, and as it grinds over your mouth, you part your [pc.lips+] and dutifully kiss and worship its throbbing length.
+				不知火[shiranui.cock+]从你和梅拉克西丝之间挤向前来，蹭过你的嘴唇。你顺从地张开[pc.lips+]，亲吻并侍奉着它那不断搏动的长度。
 			]]></text>
 		</description>
 		
@@ -58,16 +58,16 @@
 				[#!npc.isPlayer()]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Meraxis lets out eager little moans as she happily suckles, kisses, and licks the side of Shiranui's [shiranui.cock+].
+				梅拉克西丝开心地吮吸、亲吻并舔舐不知火的[shiranui.cock+]一侧，同时发出饥渴的轻吟。
 			]]></text>
 			<text><![CDATA[
-				As Shiranui's cock is pushed between your and Meraxis's lips, the chunni [meraxis.race] eagerly kisses, licks, and worships her hot, throbbing shaft.
+				不知火的阴茎挤入你和梅拉克西丝的双唇之间，中二[meraxis.race]便饥渴地亲吻、舔舐、侍奉她炽热搏动的阴茎。
 			]]></text>
 			<text><![CDATA[
-				Meraxis presses her [meraxis.lips+] against the side of Shiranui's hot cock, and as the youko slides her [shiranui.cock+] past Meraxis's mouth, she eagerly kisses and licks it.
+				梅拉克西丝把[meraxis.lips+]贴上不知火滚烫的肉棒侧面，妖狐的[shiranui.cock+]从她嘴边滑过时，她便饥渴地亲吻舔舐起来。
 			]]></text>
 			<text><![CDATA[
-				Shiranui's [shiranui.cock+] pushes forwards between you and Meraxis, and as it grinds over Meraxis's mouth, she parts her [meraxis.lips+] and dutifully kisses and worships its throbbing length.
+				不知火[shiranui.cock+]从你和梅拉克西丝之间挤向前来，蹭过梅拉克西丝的嘴唇。她顺从地张开[meraxis.lips+]，亲吻并侍奉着它那不断搏动的长物。
 			]]></text>
 		</description>
 	</descriptions>

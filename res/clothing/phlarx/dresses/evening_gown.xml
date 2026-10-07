@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	
 	<coreAtributes>
-		<clothingAuthorTag><![CDATA[A tag discreetly sewn into the dress's inner lining informs you that it was made by 'Phlarx'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[裙子里缝着的标签告诉你这是由"Phlarx"制作的。]]></clothingAuthorTag>
 		<value>1000</value> 
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[evening gown]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[evening gowns]]></namePlural> 
-		<description><![CDATA[An elegant evening gown, perfect for dinner parties with the social elite.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[晚礼服]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[晚礼服]]></namePlural> 
+		<description><![CDATA[一条优雅的晚礼服，非常适合参加社交精英的晚宴。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>TORSO_UNDER</slot> 
@@ -84,51 +84,46 @@
 
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] the back of [npc.her] evening gown, letting it fall to [npc.her] feet.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] the back of [npc2.namePos] evening gown, letting it fall to [npc2.her] feet.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] the back of [npc2.namePos] evening gown, and [npc.verb(yank)] it down to [npc2.her] feet.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉下了[npc.her]的晚礼服拉链，让它滑落到[npc.her]的脚上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉下了[npc2.namePos]的晚礼服拉链，让它滑落到[npc2.her]的脚上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]拉下了[npc2.namePos]的晚礼服拉链，将它拽落到[npc2.her]的脚上。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the evening gown up to [npc.her] chest, then [npc.verb(zip)] it closed.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the evening gown up to [npc2.namePos] chest, then [npc.verb(zip)] it closed.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the evening gown up to [npc2.namePos] chest, then [npc.verb(tug)] the zipper closed.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将晚礼服拉到[npc.her]的胸部，然后拉上拉链。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将晚礼服拉到[npc2.namePos]的胸部，然后拉上拉链。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将晚礼服拉到[npc2.namePos]的胸部，然后拉上拉链。
+]]></otherRough>
 	</replacementText>
 
 	
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc.her] evening gown.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc2.namePos] evening gown.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] up the skirt of [npc2.namePos] evening gown.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]提起[npc.her]晚礼服的裙子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉起[npc2.namePos]晚礼服的下摆。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地拉起[npc2.namePos]晚礼服的下摆。]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the skirt of [npc.her] evening gown.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the skirt of [npc2.namePos] evening gown.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] down the skirt of [npc2.namePos] evening gown.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉下[npc.her]晚礼服的裙子。]]></self>
+		<other><![CDATA[
+[npc.Name]放下[npc2.namePos]晚礼服的下摆。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地放下[npc2.namePos]的晚礼服的下摆。]]></otherRough>
 	</replacementText>
 </clothing>

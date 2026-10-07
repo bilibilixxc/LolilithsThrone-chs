@@ -90,11 +90,11 @@ public class HarpyNestHelena {
 				return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
 							+ UtilText.parse(Main.sex.getTargetedPartner(Main.game.getPlayer()),
 								UtilText.returnStringAtRandom(
-									"Scarlett's harpy followers smirk and make the occasional comment on your performance.",
-									"One of the harpies starts making lewd comments to her friend as she watches you having sex.",
-									"You several harpies commenting on your performance.",
-									"Smirking and giggling to one another, the group of harpies watch as you continue having sex with [npc.name].",
-									"You glance across to see one of the harpies touching herself as she watches you and Scarlett go at it."))
+									"跟着斯嘉丽的几只哈比有时窃笑，有时对你们的表演指指点点。",
+									"有个哈比看着你们做爱，跟身边的朋友满口黄腔地评论了起来。",
+									"好几只哈比对你们的表演评价起来。",
+									"一群哈比看着你继续跟[npc.Name]做爱，互相嬉笑私语起来。",
+									"你瞄了一眼，发现有几个哈比已经一边看着你和斯嘉丽一边抚摸起自己"))
 						+"</p>";
 			}
 			@Override
@@ -178,7 +178,7 @@ public class HarpyNestHelena {
 		}
 	}
 	
-	public static final DialogueNode HELENAS_NEST_EXTERIOR = new DialogueNode("Helena's nest", "", false) {
+	public static final DialogueNode HELENAS_NEST_EXTERIOR = new DialogueNode("海伦娜的巢", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -200,55 +200,55 @@ public class HarpyNestHelena {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getCurrentWeather() == Weather.MAGIC_STORM) {
-					return new Response("Helena",
-							"Helena's flock is taking shelter in the buildings below her nest. You'll have to come back after the arcane storm has passed.",
+					return new Response("海伦娜",
+							"海伦娜的族群正躲在巢下的建筑中躲避风暴。等奥术风暴过去后再来。",
 							null);
 					
 				} else if(!Main.game.isExtendedWorkTime()) {
-					return new Response("Meet with Helena",
+					return new Response("面见海伦娜",
 							Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_E_REPORT_TO_HELENA)
-								?"Both Helena and her flock are sleeping in the buildings below her nest. If you wanted to speak with Helena, you should go to her shop in Slaver Alley."
-								:"Both Helena and her flock are sleeping in the buildings below her nest. You'll have to come back during the day if you want to speak with her.",
+								?"海伦娜和她的族群都在巢下的建筑中睡觉。如果想跟海伦娜谈话，应该去她在奴隶巷的商店。"
+								:"海伦娜和她的族群都在巢下的建筑中睡觉。如果想跟海伦娜谈话，应该白天再来。",
 							null);
 					
 				} else {
 					if(Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_E_REPORT_TO_HELENA) {
-						return new Response("Helena", "Walk over to the tall platform to meet with Helena.", HELENAS_NEST_MAIN_QUEST);
+						return new Response("海伦娜", "走上高台见见海伦娜。", HELENAS_NEST_MAIN_QUEST);
 						
 					} else if(Main.game.getPlayer().isQuestCompleted(QuestLine.ROMANCE_HELENA) && Main.game.getCharactersPresent().contains(Main.game.getNpc(Helena.class))) {
-						return new Response("Helena", "Walk over to the tall platform to meet with Helena.", HELENAS_NEST);
+						return new Response("海伦娜", "走上高台见见海伦娜。", HELENAS_NEST);
 						
 					}  else if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_E_REPORT_TO_HELENA)) {
-						return new Response("Helena", "Helena has flown off to Slaver Alley! You'll have to find her there.", null);
+						return new Response("海伦娜", "海伦娜飞去奴隶巷了！你得去那找她。", null);
 						
 					} else {
-						return new Response("Helena", "You have no reason to talk to Helena.", null);
+						return new Response("海伦娜", "你没有合适的理由和海伦娜说话。", null);
 					}
 				}
 				
 			} else if(index==2) {
 				if(Main.game.getNonCompanionCharactersPresent().contains(Main.game.getNpc(Scarlett.class))) {
 					if(Main.game.getCurrentWeather() == Weather.MAGIC_STORM) {
-						return new Response("Scarlett",
-								"As there's an arcane storm currently raging overhead, Scarlett and the rest of the nest's inhabitants are sheltering in the buildings below her nest."
-										+ " You'll have to come back once the storm has passed if you want to speak with her.",
+						return new Response("斯嘉丽",
+								"由于外面奥术风暴正在肆虐，四家了和其余的巢内居民都在下面的建筑中躲避。"
+										+ "如果想和她说话，要等奥术风暴过去后再来。",
 								null);
 						
 					} else if(!Main.game.isExtendedWorkTime()) {
-						return new Response("Scarlett",
-								"Both Scarlett and the rest of Helena's flock are sleeping in the buildings below her nest. You'll have to come back during the day if you want to speak with her.",
+						return new Response("斯嘉丽",
+								"斯嘉丽和族群的其余成员都在巢下的建筑中睡觉。如果想跟她谈话，应该白天再来。",
 								null);
 						
 					} else {
 						if(Main.game.getPlayer().isQuestCompleted(QuestLine.ROMANCE_HELENA)) {
-							return new Response("Scarlett", "Head over to where Scarlett is surrounded by a crowd of harpies and say hello.", HELENAS_NEST_MEETING_SCARLETT);
+							return new Response("斯嘉丽", "朝着被一群哈比包围的斯嘉丽走过去，打个招呼。", HELENAS_NEST_MEETING_SCARLETT);
 						}
-						return new Response("Scarlett", "Head over to where Scarlett is sitting and say hello.", HELENAS_NEST_MEETING_SCARLETT);
+						return new Response("斯嘉丽", "朝着斯嘉丽坐着的位置走过去，打个招呼。", HELENAS_NEST_MEETING_SCARLETT);
 					}
 				}
 				
 			} else if(index==5 && Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaDateFirstDateComplete)) {
-				return new Response("Dominion", "Use the elevator to travel down through 'The Golden Feather' and out into Dominion.", HelenaHotel.HOTEL_TRAVEL_TO_DOMINION) {
+				return new Response("御城区", "使用电梯从“金羽毛”酒店上到御城区。", HelenaHotel.HOTEL_TRAVEL_TO_DOMINION) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_HELENA_HOTEL);
@@ -260,7 +260,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST = new DialogueNode("Helena's nest", "", true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST = new DialogueNode("海伦娜的巢", "", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -275,7 +275,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Scarlett's woe", "Tell Helena about Scarlett's failure to run her slavery business.", HELENAS_NEST_MAIN_QUEST_SCARLETT);
+				return new Response("斯嘉丽的麻烦", "告诉海伦娜斯嘉丽经营奴隶生意失败了。", HELENAS_NEST_MAIN_QUEST_SCARLETT);
 				
 			} else {
 				return null;
@@ -283,7 +283,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_SCARLETT = new DialogueNode("Helena's nest", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_SCARLETT = new DialogueNode("海伦娜的巢", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -298,7 +298,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("No punishment", "Don't take Scarlett's punishment for her.", HELENAS_NEST_MAIN_QUEST_NO_PUNISHMENT) {
+				return new Response("不接受惩罚", "不替斯嘉丽承受她的惩罚。", HELENAS_NEST_MAIN_QUEST_NO_PUNISHMENT) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Helena.class).setLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP);
@@ -308,7 +308,7 @@ public class HarpyNestHelena {
 				};
 				
 			} else if(index==2) {
-				return new Response("Take punishment", "Offer to take Scarlett's punishment for her.", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT,
+				return new Response("接受惩罚", "替斯嘉丽接受她的惩罚。", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT,
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_MASOCHIST),
 						CorruptionLevel.THREE_DIRTY,
 						null,
@@ -325,7 +325,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_NO_PUNISHMENT = new DialogueNode("Helena's nest", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_NO_PUNISHMENT = new DialogueNode("海伦娜的巢", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -340,7 +340,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Leave Helena's nest.", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "离开海伦娜的巢。", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "HELENAS_NEST_MAIN_QUEST_LEAVING"));
@@ -349,10 +349,10 @@ public class HarpyNestHelena {
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().isAbleToFly()) {
-					return new Response("Fly after her", "Take off and fly after Helena.", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
+					return new Response("跟着她飞", "跟着海伦娜起飞。", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
 					
 				} else {
-					return new Response("Fly after her", "You can't fly, so you'll have to travel to Slaver Alley by foot.", null);
+					return new Response("跟着她飞", "你不会飞行，必须走着去奴隶巷。", null);
 				}
 			}
 			
@@ -360,7 +360,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT = new DialogueNode("Helena's nest", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT = new DialogueNode("海伦娜的巢", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -375,7 +375,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Endure it", "Try and keep quiet and endure your punishment.", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENDURE) {
+				return new Response("忍耐", "尽量保持沉默，忍受惩罚。", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENDURE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Helena.class).setLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP);
@@ -385,7 +385,7 @@ public class HarpyNestHelena {
 				};
 				
 			} else if(index==2) {
-				return new Response("Struggle", "Start struggling and crying out in discomfort.", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_STRUGGLE) {
+				return new Response("挣扎", "开始挣扎，因不适而哭泣。", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_STRUGGLE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Helena.class).setLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP);
@@ -395,7 +395,7 @@ public class HarpyNestHelena {
 				};
 				
 			} else if(index==3) {
-				return new Response("Beg for more", "Beg to be punished.", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENJOY,
+				return new Response("乞求更多", "乞求被惩罚。", HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENJOY,
 						Util.newArrayListOfValues(Fetish.FETISH_MASOCHIST),
 						CorruptionLevel.THREE_DIRTY,
 						null,
@@ -414,7 +414,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENDURE = new DialogueNode("Helena's nest", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENDURE = new DialogueNode("海伦娜的巢", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -432,7 +432,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Leave Helena's nest.", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "离开海伦娜的巢。", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "HELENAS_NEST_MAIN_QUEST_LEAVING"));
@@ -441,10 +441,10 @@ public class HarpyNestHelena {
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().isAbleToFly()) {
-					return new Response("Fly after her", "Take off and fly after Helena.", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
+					return new Response("跟着她飞", "跟着海伦娜起飞。", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
 					
 				} else {
-					return new Response("Fly after her", "You can't fly, so you'll have to travel to Slaver Alley by foot.", null);
+					return new Response("跟着她飞", "你不会飞行，必须走着去奴隶巷。", null);
 				}
 			}
 			
@@ -452,7 +452,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_STRUGGLE = new DialogueNode("Helena's nest", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_STRUGGLE = new DialogueNode("海伦娜的巢", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -470,7 +470,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Leave Helena's nest.", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "离开海伦娜的巢。", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "HELENAS_NEST_MAIN_QUEST_LEAVING"));
@@ -479,10 +479,10 @@ public class HarpyNestHelena {
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().isAbleToFly()) {
-					return new Response("Fly after her", "Take off and fly after Helena.", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
+					return new Response("跟着她飞", "跟着海伦娜起飞。", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
 					
 				} else {
-					return new Response("Fly after her", "You can't fly, so you'll have to travel to Slaver Alley by foot.", null);
+					return new Response("跟着她飞", "你不会飞行，必须走着去奴隶巷。", null);
 				}
 			}
 			
@@ -490,7 +490,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENJOY = new DialogueNode("Helena's nest", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENJOY = new DialogueNode("海伦娜的巢", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -508,7 +508,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Leave Helena's nest.", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "离开海伦娜的巢。", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "HELENAS_NEST_MAIN_QUEST_LEAVING"));
@@ -518,13 +518,13 @@ public class HarpyNestHelena {
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().isPartyAbleToFly()) {
-					return new Response("Fly after her", "Take off and fly after Helena.", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
+					return new Response("跟着她飞", "跟着海伦娜起飞。", HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT);
 					
 				} else {
 					if(Main.game.getPlayer().isAbleToFly()) {
-						return new Response("Fly after her", "As your companion is unable to fly, you'll have to travel to Slaver Alley by foot...", null);
+						return new Response("跟着她飞", "你的同伴不能飞行，所以必须徒步前往奴隶巷……", null);
 					} else {
-						return new Response("Fly after her", "As you are unable to fly, you'll have to travel to Slaver Alley by foot...", null);
+						return new Response("跟着她飞", "你不会飞行，必须徒步前往奴隶巷……", null);
 					}
 				}
 			}
@@ -534,7 +534,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT = new DialogueNode("Helena's nest", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT = new DialogueNode("海伦娜的巢", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -549,7 +549,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Scarlett's Shop", "You arrive at Scarlett's Shop.", PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP.getDialogue(false)) {
+				return new Response("斯嘉丽的商店", "你到达了斯嘉丽的商店。", PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP, false);
@@ -577,7 +577,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "Say goodbye to Helena and exit her nest.", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "告别海伦娜并离开她的巢。", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Helena.class).setCharacterReactedToPregnancy(Main.game.getPlayer(), true);
@@ -589,12 +589,12 @@ public class HarpyNestHelena {
 				
 			} else if(index==1) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_NEST_TALK) {
-					return new Response("Talk", "You are already talking to Helena...", null);
+					return new Response("对话", "你今天已经跟海伦娜谈过话了……", null);
 				}
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaNestTalkedTo)) {
-					return new Response("Talk", "You've already spent some time talking to Helena in her nest today...", null);
+					return new Response("对话", "你今天已经跟海伦娜在她巢里谈过话了……", null);
 				}
-				return new Response("Talk", "Ask Helena how she is.", HELENAS_NEST_TALK) {
+				return new Response("交谈", "询问海伦娜她怎么样。", HELENAS_NEST_TALK) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.helenaNestTalkedTo, true);
@@ -604,9 +604,9 @@ public class HarpyNestHelena {
 				
 			} else if(index==2 && ((Helena) Main.game.getNpc(Helena.class)).isSlutty()) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaNestFucked)) {
-					return new Response("Apartment", "You've already had sex with Helena in her nest today, and she doesn't have time to do it again...", null);
+					return new Response("公寓", "你今天已经跟海伦娜在巢里做过了，她没再有多余的时间……", null);
 				}
-				return new Response("Apartment", "Accept Helena's offer of 'showing you around her apartment'.<br/>[style.italicsSex(This will lead into having sex with her...)]", HELENAS_NEST_APARTMENT_BEDROOM) {
+				return new Response("公寓", "同意海伦娜的提议，让她“带着你去公寓逛逛”。<br/>[style.italicsSex(随后会与她做爱……)]", HELENAS_NEST_APARTMENT_BEDROOM) {
 					@Override
 					public boolean isSexHighlight() {
 						return true;
@@ -641,7 +641,7 @@ public class HarpyNestHelena {
 		}
 	};
 
-	public static final DialogueNode HELENAS_NEST_APARTMENT_BEDROOM = new DialogueNode("Helena's Bedroom", "", true, true) {
+	public static final DialogueNode HELENAS_NEST_APARTMENT_BEDROOM = new DialogueNode("海伦娜的卧室", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().setLocation(WorldType.HELENAS_APARTMENT, PlaceType.HELENA_APARTMENT_HELENA_BEDROOM);
@@ -685,10 +685,10 @@ public class HarpyNestHelena {
 		public Response getResponse(int responseTab, int index) {
 			List<Response> responses = new ArrayList<>();
 			if(index==0) {
-				return new Response("Leave",
+				return new Response("离开",
 						((Scarlett)Main.game.getNpc(Scarlett.class)).isLikesPlayer()
-							?"Tell Scarlett that you only wanted to stop by and say hello, and that you've got to leave now."
-							:"Not wanting to put up with her awful attitude, you tell Scarlett that you're going to leave.",
+							?"告诉斯嘉丽你只是想来打个招呼，你现在得走了。"
+							:"你不想再忍受斯嘉丽那张臭嘴，便告诉他你得走了。",
 						HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
@@ -704,13 +704,13 @@ public class HarpyNestHelena {
 			
 			if(Main.game.getPlayer().isQuestCompleted(QuestLine.ROMANCE_HELENA)) {
 				if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
-					responses.add(new Response("Servant",
-							"As Scarlett is not attracted to you, she does not want you acting as her servant...",
+					responses.add(new Response("仆从",
+							"斯嘉丽并没有被你吸引，不想让你做她的仆从……",
 							null));
 					
 				} else if(Main.game.getDayMinutes()>19*60) {
-					responses.add(new Response("Servant",
-							"It's too late in the day to start working as Scarlett's servant. You should try again another day before [units.time(19)]...",
+					responses.add(new Response("仆从",
+							"现在再当斯嘉丽的仆从有些太晚了。你应该另找一天[units.time(19)]之前来……",
 							null));
 					
 				} else if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true) // Performing oral
@@ -720,10 +720,10 @@ public class HarpyNestHelena {
 						|| (Main.game.getNpc(Scarlett.class).hasPenis() && Main.game.isAnalContentEnabled() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) // Getting anally fucked
 						|| (Main.game.getNpc(Scarlett.class).hasPenis() && Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) // Getting fucked
 						) {
-					responses.add(new Response("Servant",
+					responses.add(new Response("仆从",
 							((Scarlett)Main.game.getNpc(Scarlett.class)).isLikesPlayer()
-								?"Tell Scarlett that you'd like to repay her kindness towards you by acting as her servant for the day."
-								:"Work as Scarlett's servant for the day to get a chance at fucking her.",
+								?"告诉斯嘉丽你愿意今天做一天她的仆从，来回报她对你的好意。"
+								:"做一天斯嘉丽的仆从，换一次上她的机会。",
 							HELENAS_NEST_SCARLETTS_SERVANT) {
 						@Override
 						public void effects() {
@@ -733,19 +733,19 @@ public class HarpyNestHelena {
 					});
 					
 				} else {
-					responses.add(new Response("Servant",
-							"You need to be able to access your mouth or genitals in order to work as Scarlett's servant...",
+					responses.add(new Response("仆从",
+							"你需要能够使用自己的嘴巴或者下体，才能做斯嘉丽的仆从……",
 							null));
 				}
 				
 				if(((Scarlett)Main.game.getNpc(Scarlett.class)).isLikesPlayer()) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.scarlettRelaxed)) {
-						responses.add(new Response("Relax",
-								"Scarlett has already spent time relaxing with you today. If you wanted to spend more time with her, you'll have to return tomorrow.",
+						responses.add(new Response("放松",
+								"斯嘉丽今天已经跟你一起放松过了。如果还想再跟她度过一段时光，得明天再来。",
 								null));
 					} else {
-						responses.add(new Response("Relax",
-								"Accept Scarlett's invitation to sit down and relax with her for a while.",
+						responses.add(new Response("放松",
+								"接受斯嘉丽的邀请，坐下来跟她一起放松一会儿。",
 								HELENAS_NEST_SCARLETT_RELAX) {
 							@Override
 							public void effects() {
@@ -759,14 +759,14 @@ public class HarpyNestHelena {
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) { // Scarlett has a penis (this should always be the case, as Scarlett only loses her vagina after Helena's romance quest is complete):
 					if(Main.game.isAnalContentEnabled()) {
 						if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
-							responses.add(new Response("Offer ass", "Scarlett is not attracted to you, and so is unwilling to have sex with you.", null));
+							responses.add(new Response("献出屁股", "斯嘉丽并没有被你吸引，所以不愿意跟你做爱。", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-							responses.add(new Response("Offer ass", "Scarlett is only interested in fucking your ass, and as you can't get access to it, she's not interested in having sex with you.", null));
+							responses.add(new Response("献出屁股", "斯嘉丽只对干你的屁股感兴趣，由于你无法使用该部位，她就没兴趣跟你做爱了。", null));
 							
 						} else {
-							responses.add(new ResponseSex("Offer ass",
-									"Tell Scarlett that if that's what she wants, then of course she can fuck your ass.",
+							responses.add(new ResponseSex("献出屁股",
+									"告诉斯嘉丽，如果她愿意，她可以随便干你屁股。",
 									true, false,
 									new SMAllFours(
 											Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Scarlett.class), SexSlotAllFours.BEHIND)),
@@ -811,14 +811,14 @@ public class HarpyNestHelena {
 					} else { // If anal content is off, Scarlett will fuck the player's pussy or receive oral:
 						if(Main.game.getPlayer().hasVagina()) {
 							if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
-								responses.add(new Response("Offer pussy", "Scarlett is not attracted to you, and so is unwilling to have sex with you.", null));
+								responses.add(new Response("献出小穴", "斯嘉丽并没有被你吸引，所以不愿意跟你做爱。", null));
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-								responses.add(new Response("Offer pussy", "Scarlett is only interested in fucking your pussy, and as you can't get access to it, she's not interested in having sex with you.", null));
+								responses.add(new Response("献出小穴", "斯嘉丽只对操你的小穴感兴趣，由于你无法使用该部位，她就没兴趣跟你做爱了。", null));
 								
 							} else {
-								responses.add(new ResponseSex("Offer pussy",
-										"Tell Scarlett that if that's what she wants, then of course she can fuck your pussy.",
+								responses.add(new ResponseSex("献出小穴",
+										"告诉斯嘉丽，如果她愿意，她可以随便操你的小穴。",
 										true, false,
 										new SMAllFours(
 												Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Scarlett.class), SexSlotAllFours.BEHIND)),
@@ -862,14 +862,14 @@ public class HarpyNestHelena {
 							
 						} else {
 							if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
-								responses.add(new Response("Offer oral", "Scarlett is not attracted to you, and so is unwilling to have sex with you.", null));
+								responses.add(new Response("提供口交", "斯嘉丽并没有被你吸引，所以不愿意跟你做爱。", null));
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-								responses.add(new Response("Offer oral", "Scarlett is only interested in receiving oral, and as you can't get access to your mouth, she's not interested in having sex with you.", null));
+								responses.add(new Response("提供口角", "斯嘉丽只对口交感兴趣，由于你无法使用该部位，她就没兴趣跟你做爱了。", null));
 								
 							} else {
-								responses.add(new ResponseSex("Offer oral",
-										"Tell Scarlett that if that's what she wants, then of course you'll suck her cock.",
+								responses.add(new ResponseSex("提供口交",
+										"告诉斯嘉丽，如果她愿意，你就可以给她舔鸡巴。",
 										true, false,
 										new SMStanding(
 												Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Scarlett.class), SexSlotStanding.STANDING_DOMINANT)),
@@ -916,7 +916,7 @@ public class HarpyNestHelena {
 			}
 			
 			if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)==Quest.ROMANCE_HELENA_4_SCARLETTS_RETURN) {
-				responses.add(new Response("Helena", "Tell Scarlett that Helena is requesting her presence back at her shop in Slaver Alley.", HELENAS_NEST_MEETING_SCARLETT_TO_SHOP) {
+				responses.add(new Response("海伦娜", "告诉斯嘉丽，海伦娜又要她回到奴隶巷的商店。", HELENAS_NEST_MEETING_SCARLETT_TO_SHOP) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Scarlett.class).setHomeLocation(WorldType.HELENAS_APARTMENT, PlaceType.HELENA_APARTMENT_SCARLETT_BEDROOM);
@@ -947,11 +947,11 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Step back", "Now that your work here is done, there's nothing left to do but step back and prepare to travel back down to Helena's store in Slaver Alley...", HELENAS_NEST_EXTERIOR);
+				return new Response("退开", "你在这的工作已经完成了，现在无事可做，只能准备返回海伦娜的商店里……", HELENAS_NEST_EXTERIOR);
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().isPartyAbleToFly()) {
-					return new Response("Fly after her", "Take off and fly after Scarlett.", ScarlettsShop.ROMANCE_SHOP_CORE) {
+					return new Response("跟着她飞", "跟着斯嘉丽起飞。", ScarlettsShop.ROMANCE_SHOP_CORE) {
 						@Override
 						public void effects() {
 							// Move them both here to make sure they haven't gone due to time ticking over into night time when player arrives:
@@ -965,9 +965,9 @@ public class HarpyNestHelena {
 					
 				} else {
 					if(Main.game.getPlayer().isAbleToFly()) {
-						return new Response("Fly after her", "As your companion is unable to fly, you cannot fly after Scarlett...", null);
+						return new Response("跟着她飞", "你的同伴无法飞行，所以不能跟着斯嘉丽一起飞……", null);
 					} else {
-						return new Response("Fly after her", "As you are unable to fly, you cannot fly after Scarlett...", null);
+						return new Response("跟着她飞", "你无法飞行，所以不能跟着斯嘉丽一起飞……", null);
 					}
 				}
 			}
@@ -975,7 +975,7 @@ public class HarpyNestHelena {
 		}
 	};
 
-	public static final DialogueNode AFTER_SCARLETT_SEX = new DialogueNode("Finished", "Scarlett has had enough for now...", true) {
+	public static final DialogueNode AFTER_SCARLETT_SEX = new DialogueNode("结束", "斯嘉丽暂时做够了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -994,7 +994,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Do as Scarlett says and leave the nest...", HELENAS_NEST_EXTERIOR);
+				return new Response("离开", "按斯嘉丽说的做，离开巢穴……", HELENAS_NEST_EXTERIOR);
 			}
 			return null;
 		}
@@ -1013,10 +1013,10 @@ public class HarpyNestHelena {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
-					return new Response("Apartment", "As Scarlett is not attracted to you, she will not invite you to spend some time with her in her room...", null);
+					return new Response("公寓", "斯嘉丽并没有被你吸引，所以不愿意邀请你去她的房间待一会儿……", null);
 				}
-				return new Response("Apartment",
-						"Accept Scarlett's invitation to spend some time with her in her room.",
+				return new Response("公寓",
+						"接受斯嘉丽的邀请，去她的房间待一会儿。",
 						HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX) {
 					@Override
 					public boolean isSexHighlight() {
@@ -1032,11 +1032,11 @@ public class HarpyNestHelena {
 			} else if(index==2) {
 				return new Response(
 						!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())
-							?"Leave"
-							:"Decline",
+							?"离开"
+							:"回绝",
 						!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())
-							?"Say goodbye to Scarlett and head out of Helena's nest."
-							:"Tell Scarlett that you've got other matters which require your attention today, before taking your leave and heading back out of Helena's nest.",
+							?"跟斯嘉丽道别，离开海伦娜的巢。"
+							:"告诉斯嘉丽你今天还有其他事情，随后便离开了海伦娜的巢。",
 						HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
@@ -1062,14 +1062,14 @@ public class HarpyNestHelena {
 		public Response getResponse(int responseTab, int index) {
 			List<Response> responses = new ArrayList<>();
 			
-			responses.add(new Response("Back massage", "Choose to massage Scarlett's back...", HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE) {
+			responses.add(new Response("背部按摩", "选择给斯嘉丽按摩背部……", HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE) {
 				@Override
 				public void effects() {
 					Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Scarlett.class).incrementAffection(Main.game.getPlayer(), 5));
 				}
 			});
 			
-			responses.add(new Response("Groom wings", "Choose to groom Scarlett's wings...", HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS) {
+			responses.add(new Response("梳理翅膀", "选择帮斯嘉丽梳理翅膀……", HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS) {
 				@Override
 				public void effects() {
 					Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Scarlett.class).incrementAffection(Main.game.getPlayer(), 5));
@@ -1077,7 +1077,7 @@ public class HarpyNestHelena {
 			});
 			
 			if(Main.game.isFootContentEnabled()) {
-				responses.add(new Response("Talons", "Choose to massage Scarlett's bird-like feet...", HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE) {
+				responses.add(new Response("鸟爪", "选择给斯嘉丽按摩那鸟一样的脚……", HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Scarlett.class).incrementAffection(Main.game.getPlayer(), 5));
@@ -1109,7 +1109,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Hold back", "Choose to hold back and wait until later for Scarlett's reward.", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD) {
+				return new Response("退开", "退到一旁，等待斯嘉丽的奖励。", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE_HOLD_BACK"));
@@ -1119,11 +1119,11 @@ public class HarpyNestHelena {
 			} else if(index==2) {
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Blowjob", "As you are unable to access your mouth, you cannot perform oral on Scarlett...", null);
+						return new Response("口交", "因为不能使用你的嘴，你不能给斯嘉丽口交……", null);
 					}
 					return new ResponseSex(
-							"Blowjob",
-							"Take your reward now and suck Scarlett's cock while the other harpies continue to pamper her...",
+							"口交",
+							"接受你的奖励，含住斯嘉丽的肉棒，让其他哈比继续服侍她……",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -1131,7 +1131,7 @@ public class HarpyNestHelena {
 									Util.newHashMapOfValues(
 											new Value<>(Main.game.getNpc(Scarlett.class), Util.newArrayListOfValues(CoverableArea.PENIS)),
 											new Value<>(Main.game.getPlayer(), Util.newArrayListOfValues(CoverableArea.MOUTH))),
-									"Scarlett's harpy followers continue to pamper her while you get started on sucking her cock..."),
+									"斯嘉丽的哈比随从继续服侍着她，你则开始舔她的肉棒……"),
 							null,
 							null,
 							AFTER_SCARLETT_SERVANT_SEX,
@@ -1144,11 +1144,11 @@ public class HarpyNestHelena {
 					
 				} else {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Cunnilingus", "As you are unable to access your mouth, you cannot perform oral on Scarlett...", null);
+						return new Response("舔阴", "因为不能使用你的嘴，你不能给斯嘉丽口交……", null);
 					}
 					return new ResponseSex(
-							"Cunnilingus",
-							"Take your reward now and orally service Scarlett's pussy while the other harpies continue to pamper her...",
+							"舔阴",
+							"接受你的奖励，侍奉斯嘉丽的小穴，让其他哈比继续服侍她……",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -1156,7 +1156,7 @@ public class HarpyNestHelena {
 									Util.newHashMapOfValues(
 											new Value<>(Main.game.getNpc(Scarlett.class), Util.newArrayListOfValues(CoverableArea.VAGINA)),
 											new Value<>(Main.game.getPlayer(), Util.newArrayListOfValues(CoverableArea.MOUTH))),
-									"Scarlett's harpy followers continue to pamper her while you get started on licking her pussy..."),
+									"斯嘉丽的哈比随从继续服侍着她，你则开始舔她的小穴……"),
 							null,
 							null,
 							AFTER_SCARLETT_SERVANT_SEX,
@@ -1184,7 +1184,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Hold back", "Choose to hold back and wait until later for Scarlett's reward.", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD) {
+				return new Response("退开", "退到一旁，等待斯嘉丽的奖励。", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS_HOLD_BACK"));
@@ -1194,15 +1194,15 @@ public class HarpyNestHelena {
 			} else if(index==2)  {
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 					return new ResponseSex(
-							"Handjob",
-							"Take your reward now and jerk off Scarlett's cock while the other harpies continue to pamper her...",
+							"手交",
+							"接受你的奖励，给斯嘉丽手淫，让其他哈比继续服侍她……",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
 									new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaPenetration.FINGER),
 									Util.newHashMapOfValues(
 											new Value<>(Main.game.getNpc(Scarlett.class), Util.newArrayListOfValues(CoverableArea.PENIS))),
-									"Scarlett's harpy followers continue to pamper her while you get started on jerking off her cock..."),
+									"斯嘉丽的哈比随从继续服侍着她，你则开始撸动她的肉棒……"),
 							null,
 							null,
 							AFTER_SCARLETT_SERVANT_SEX,
@@ -1215,15 +1215,15 @@ public class HarpyNestHelena {
 					
 				} else {
 					return new ResponseSex(
-							"Finger her",
-							"Take your reward now and finger Scarlett's pussy while the other harpies continue to pamper her...",
+							"指交她",
+							"接受你的奖励，用手指插入斯嘉丽的小穴，让其他哈比继续服侍她……",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
 									new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.FINGER),
 									Util.newHashMapOfValues(
 											new Value<>(Main.game.getNpc(Scarlett.class), Util.newArrayListOfValues(CoverableArea.VAGINA))),
-									"Scarlett's harpy followers continue to pamper her while you get started on fingering her pussy..."),
+									"斯嘉丽的哈比随从继续服侍着她，你则开始扣她的小穴……"),
 							null,
 							null,
 							AFTER_SCARLETT_SERVANT_SEX,
@@ -1251,7 +1251,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Hold back", "Choose to hold back and wait until later for Scarlett's reward.", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD) {
+				return new Response("退开", "退到一旁，等待斯嘉丽的奖励。", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE_HOLD_BACK"));
@@ -1262,11 +1262,11 @@ public class HarpyNestHelena {
 			} else if(index==2) {
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Blowjob", "As you are unable to access your mouth, you cannot perform oral on Scarlett...", null);
+						return new Response("口交", "因为不能使用你的嘴，你不能给斯嘉丽口交……", null);
 					}
 					return new ResponseSex(
-							"Blowjob",
-							"Take your reward now and suck Scarlett's cock while the other harpies continue to pamper her...",
+							"口交",
+							"接受你的奖励，含住斯嘉丽的肉棒，让其他哈比继续服侍她……",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -1274,7 +1274,7 @@ public class HarpyNestHelena {
 									Util.newHashMapOfValues(
 											new Value<>(Main.game.getNpc(Scarlett.class), Util.newArrayListOfValues(CoverableArea.PENIS)),
 											new Value<>(Main.game.getPlayer(), Util.newArrayListOfValues(CoverableArea.MOUTH))),
-									"Scarlett's harpy followers continue to pamper her while you get started on sucking her cock..."),
+									"斯嘉丽的哈比随从继续服侍着她，你则开始舔她的肉棒……"),
 							null,
 							null,
 							AFTER_SCARLETT_SERVANT_SEX,
@@ -1287,11 +1287,11 @@ public class HarpyNestHelena {
 					
 				} else {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Cunnilingus", "As you are unable to access your mouth, you cannot perform oral on Scarlett...", null);
+						return new Response("舔阴", "因为不能使用你的嘴，你不能给斯嘉丽口交……", null);
 					}
 					return new ResponseSex(
-							"Cunnilingus",
-							"Take your reward now and orally service Scarlett's pussy while the other harpies continue to pamper her...",
+							"舔阴",
+							"接受你的奖励，侍奉斯嘉丽的小穴，让其他哈比继续服侍她……",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -1299,7 +1299,7 @@ public class HarpyNestHelena {
 									Util.newHashMapOfValues(
 											new Value<>(Main.game.getNpc(Scarlett.class), Util.newArrayListOfValues(CoverableArea.VAGINA)),
 											new Value<>(Main.game.getPlayer(), Util.newArrayListOfValues(CoverableArea.MOUTH))),
-									"Scarlett's harpy followers continue to pamper her while you get started on licking her pussy..."),
+									"斯嘉丽的哈比随从继续服侍着她，你则开始舔她的小穴……"),
 							null,
 							null,
 							AFTER_SCARLETT_SERVANT_SEX,
@@ -1313,21 +1313,21 @@ public class HarpyNestHelena {
 				
 			} else if(index==3) {
 				if(!Main.game.getPlayer().hasPenis()) {
-					return new Response("Talon-job", "As you don't have a penis, you cannot receive a talon-job from Scarlett...", null);
+					return new Response("爪交", "你没有阴茎，所以不能让斯嘉丽给你爪交……", null);
 				}
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-					return new Response("Talon-job", "As you can't get access to your penis, you cannot receive a talon-job from Scarlett...", null);
+					return new Response("爪交", "你无法使用自己的阴茎，所以不能让斯嘉丽给你爪交……", null);
 				}
 				return new ResponseSex(
-						"Talon-job",
-						"Take your reward now and have Scarlett use her talons to jerk you off while the other harpies continue to pamper her...",
+						"爪交",
+						"接受你的奖励，让斯嘉丽用鸟爪给你撸管，其他哈比则继续服侍她……",
 						true,
 						false,
 						getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
 								new SexType(SexParticipantType.NORMAL, SexAreaPenetration.FOOT, SexAreaPenetration.PENIS),
 								Util.newHashMapOfValues(
 										new Value<>(Main.game.getPlayer(), Util.newArrayListOfValues(CoverableArea.PENIS))),
-								"Scarlett's harpy followers continue to pamper her while she jerks you off using her bird-like talons..."),
+								"斯嘉丽的哈比随从继续服侍着她，她则开始用鸟爪撸动你的肉棒……"),
 						null,
 						null,
 						AFTER_SCARLETT_SERVANT_SEX,
@@ -1342,7 +1342,7 @@ public class HarpyNestHelena {
 		}
 	};
 
-	public static final DialogueNode AFTER_SCARLETT_SERVANT_SEX = new DialogueNode("Finished", "Scarlett has had enough for now...", true) {
+	public static final DialogueNode AFTER_SCARLETT_SERVANT_SEX = new DialogueNode("结束", "斯嘉丽暂时做够了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -1354,7 +1354,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Continue on your way over to the entrance of Helena's nest.", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "继续前往海伦娜巢穴的入口。", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						applyScarlettFuckedEffects();
@@ -1382,11 +1382,11 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Back out", "Back out of this and tell Scarlett that you're going to leave...", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_LEAVE);
+				return new Response("反悔", "告诉斯嘉丽你不做了，然后准备离开……", HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_LEAVE);
 				
 			} else if(index==1) {
-				return new Response("Kiss feet",
-						"Kiss Scarlett's feet.<br/>[style.italicsExcellent(She will definitely choose you as her partner if you do this!)]",
+				return new Response("吻足",
+						"亲吻斯嘉丽的脚。<br/>[style.italicsExcellent(如果你这么做，她就一定会选你做伴侣！)]",
 						HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX) {
 					@Override
 					public boolean isSexHighlight() {
@@ -1401,8 +1401,8 @@ public class HarpyNestHelena {
 				};
 				
 			} else if(index==2) {
-				return new Response("Bow down",
-						"Bow down in front of Scarlett.<br/>[style.italicsGood(She is likely, but not certain, to choose you as her partner if you do this.)]",
+				return new Response("鞠躬",
+						"在斯嘉丽面前鞠躬。<br/>[style.italicsGood(如果你这么做，她有可能选择你作为伴侣，但不是一定。)]",
 						randomChance<0.75f
 							?HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX
 							:HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_NOT_CHOSEN) {
@@ -1424,8 +1424,8 @@ public class HarpyNestHelena {
 				};
 				
 			} else if(index==3) {
-				return new Response("Flatter",
-						"Do your best to flatter and impress Scarlett.<br/>[style.italicsMinorGood(She is just as likely as not to choose you as her partner if you do this.)]",
+				return new Response("奉承",
+						"尽全力奉承讨好斯嘉丽。<br/>[style.italicsMinorGood(如果你这么做，她或许会选择你作为伴侣，或许也不会。)]",
 						randomChance<0.5f
 							?HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX
 							:HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_NOT_CHOSEN) {
@@ -1461,7 +1461,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Exit Helena's nest.", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "离开海伦娜的巢。", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						applyScarlettFuckedEffects();
@@ -1488,7 +1488,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Leave the nest and hope to be chosen by Scarlett the next time you decide to act as her servant...", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "离开巢穴，希望下次决定去当斯嘉丽的仆人时能被选中……", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Scarlett.class).returnToHome();
@@ -1518,8 +1518,8 @@ public class HarpyNestHelena {
 			List<Response> responses = new ArrayList<>();
 			
 			responses.add(new ResponseSex(
-					"No preference",
-					"Tell Scarlett that you have no preference in how you want her to fuck you, and that she can figure it out after getting started...",
+					"没有偏好",
+					"告诉斯嘉丽对于她操你的方式，你没有什么偏好，她可以自己决定，然后开始……",
 					true,
 					false,
 					getScarlettSexManager(SexPosition.STANDING, SexSlotStanding.STANDING_DOMINANT, SexSlotStanding.STANDING_SUBMISSIVE,
@@ -1534,12 +1534,12 @@ public class HarpyNestHelena {
 			
 			if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					responses.add(new Response("Blowjob", "As you cannot access your mouth, you cannot suck Scarlett's cock...", null));
+					responses.add(new Response("口交", "你无法使用自己的嘴巴，不能舔斯嘉丽的肉棒……", null));
 					
 				} else {
 					responses.add(new ResponseSex(
-							"Blowjob",
-							"Tell Scarlett that you want to suck her cock.",
+							"口交",
+							"告诉斯嘉丽，你想舔她的鸡巴。",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -1561,12 +1561,12 @@ public class HarpyNestHelena {
 				
 				if(Main.game.isAnalContentEnabled()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-						responses.add(new Response("Anal", "As you cannot gain access to your ass, you cannot ask Scarlett to anally fuck you...", null));
+						responses.add(new Response("肛交", "你无法使用自己的屁股，所以不能让斯嘉丽给你肛交……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Anal",
-								"Ask Scarlett to fuck your ass.",
+								"肛交",
+								"让斯嘉丽干你的屁股。",
 								true,
 								false,
 								getScarlettSexManager(SexPosition.ALL_FOURS, SexSlotAllFours.BEHIND, SexSlotAllFours.ALL_FOURS,
@@ -1589,12 +1589,12 @@ public class HarpyNestHelena {
 				
 				if(Main.game.getPlayer().hasVagina()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						responses.add(new Response("Fucked", "As you cannot gain access to your pussy, you cannot ask Scarlett to fuck you...", null));
+						responses.add(new Response("挨操", "你无法使用自己的小穴，斯嘉丽不能插入你……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Fucked",
-								"Ask Scarlett to fuck your pussy.",
+								"挨操",
+								"让斯嘉丽操你的逼。",
 								true,
 								false,
 								getScarlettSexManager(SexPosition.ALL_FOURS, SexSlotAllFours.BEHIND, SexSlotAllFours.ALL_FOURS,
@@ -1617,12 +1617,12 @@ public class HarpyNestHelena {
 				
 			} else { // Scarlett has a pussy:
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					responses.add(new Response("Cunnilingus", "As you cannot access your mouth, you cannot perform oral on Scarlett...", null));
+					responses.add(new Response("舔阴", "你无法使用自己的嘴巴，所以不能给斯嘉丽舔阴……", null));
 					
 				} else {
 					responses.add(new ResponseSex(
-							"Cunnilingus",
-							"Tell Scarlett that you want to eat her out.",
+							"舔阴",
+							"告诉斯嘉丽你想品尝她的下面。",
 							true,
 							false,
 							getScarlettSexManager(SexPosition.LYING_DOWN, SexSlotLyingDown.FACE_SITTING, SexSlotLyingDown.LYING_DOWN,
@@ -1644,15 +1644,15 @@ public class HarpyNestHelena {
 
 				if(Main.game.getPlayer().hasVagina()) {
 					if(Main.game.getPlayer().isTaur()) {
-						responses.add(new Response("Scissor", "As you are a taur, you can't get into a suitable position in which to scissor with Scarlett...", null));
+						responses.add(new Response("剪刀式", "你的下肢是兽态，所以找不到跟斯嘉丽剪刀式的合适姿势……", null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						responses.add(new Response("Scissor", "As you cannot gain access to your pussy, you cannot ask to scissor with Scarlett...", null));
+						responses.add(new Response("剪刀式", "你无法使用自己的小穴，不能让斯嘉丽跟你剪刀式……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Scissor",
-								"Ask Scarlett if you can scissor with her.",
+								"剪刀式",
+								"询问斯嘉丽能不能跟她做剪刀式。",
 								true,
 								false,
 								getScarlettSexManager(SexPosition.LYING_DOWN, SexSlotLyingDown.SCISSORING, SexSlotLyingDown.LYING_DOWN,
@@ -1675,12 +1675,12 @@ public class HarpyNestHelena {
 				
 				if(Main.game.getPlayer().hasPenis()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						responses.add(new Response("Fuck her", "As you cannot gain access to your cock, you cannot ask to fuck Scarlett's pussy...", null));
+						responses.add(new Response("操她", "你无法使用自己的阴茎，所以不能提出请求，要操斯嘉丽的小穴……", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Fuck her",
-								"Tell Scarlett that you want to fuck her pussy.",
+								"操她",
+								"告诉斯嘉丽你想插进她的小穴里。",
 								true,
 								false,
 								getScarlettSexManager(SexPosition.LYING_DOWN, SexSlotLyingDown.LYING_DOWN, SexSlotLyingDown.MISSIONARY,
@@ -1702,16 +1702,16 @@ public class HarpyNestHelena {
 					
 					if(Main.game.isAnalContentEnabled()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Anal", "As you cannot gain access to your cock, you cannot ask to fuck Scarlett's ass...", null));
+							responses.add(new Response("肛交", "你无法使用自己的阴茎，所以不能提出请求，操斯嘉丽的屁股……", null));
 							
 						} else {
 							responses.add(new ResponseSex(
 									Main.game.getNpc(Scarlett.class).isAssVirgin()
-										?"Take anal virginity"
-										:"Anal",
+										?"夺取肛门贞操"
+										:"肛交",
 									Main.game.getNpc(Scarlett.class).isAssVirgin()
-										?"Ask Scarlett if you can take her anal virginity and fuck her ass."
-										:"Ask Scarlett if you can fuck her ass.",
+										?"询问斯嘉丽能不能将肛门贞操交给你，让你草她的屁股。"
+										:"询问斯嘉丽你能不能操他的屁股。",
 									true,
 									false,
 									getScarlettSexManager(SexPosition.ALL_FOURS, SexSlotAllFours.ALL_FOURS, SexSlotAllFours.BEHIND,
@@ -1744,7 +1744,7 @@ public class HarpyNestHelena {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX = new DialogueNode("Finished", "Scarlett has had enough for now...", true) {
+	public static final DialogueNode AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX = new DialogueNode("结束", "斯嘉丽暂时做够了……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getDialogueFlags().setFlag(DialogueFlagValue.scarlettGoneHome, true);
@@ -1760,7 +1760,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "Tell Scarlett that you need to be leaving now and ride the elevator back up to Helena's nest...", HELENAS_NEST_EXTERIOR) {
+				return new Response("离开", "告诉斯嘉丽你现在得离开，然后乘电梯返回海伦娜的巢……", HELENAS_NEST_EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/helena", "AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX_LEAVE"));
@@ -1769,7 +1769,7 @@ public class HarpyNestHelena {
 				};
 				
 			} else if(index==1) {
-				return new Response("Sleep over", "Agree to spend the night with Scarlett.", AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX_SLEEP_OVER) {
+				return new Response("过夜", "同意跟斯嘉丽过夜。", AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX_SLEEP_OVER) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Scarlett.class).incrementAffection(Main.game.getPlayer(), 5));
@@ -1793,7 +1793,7 @@ public class HarpyNestHelena {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on over to the exit of Helena's nest...", HELENAS_NEST_EXTERIOR);
+				return new Response("继续", "继续走向海伦娜的巢的出口……", HELENAS_NEST_EXTERIOR);
 			}
 			return null;
 		}

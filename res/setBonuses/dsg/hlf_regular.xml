@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[HLF Regular]]></name>
+	<name><![CDATA[HLF正规军]]></name>
 	<statusEffect>dsg_set_hlf_regular</statusEffect>
 	<numberRequiredForCompleteSet>4</numberRequiredForCompleteSet>
 	<blockedSlotsCountingTowardsFullSet>

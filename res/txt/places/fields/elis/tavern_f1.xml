@@ -1,262 +1,262 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- All of these are linked to the 'dialogue/innoxia/places/fields/elis/tavern_f1.xml' dialogue nodes. -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		The corridor which you find yourself travelling down connects all of the rooms of the tavern's first floor. Pictures similar to the ones found downstairs line the walls, and invariably portray some form of idyllic pastoral scene. The wall-mounted arcane lamps cast this area in a pale yellow glow, and you end up making the old, wooden floorboards creak as you [pc.walk] over them on your way forwards... 
+		你沿着走廊继续向下走去，这里连接着酒馆二楼的所有房间，墙壁上挂满了与楼下类似的图片——它们无一例外都描绘着乡野田园的风景。挂在墙壁上的奥术灯将这一区域笼罩在淡黄色的光晕中。你缓缓通过走廊，古旧的木地板发出咯吱咯吱的声音……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_GENERIC"><![CDATA[
 	<p>
-		The old wooden door before you leads into one of the many rooms which are rented out to lodgers, and is currently firmly shut. A sign slotted into a brass bracket displays the word 'Occupied', and you think you can hear the sounds of someone moving around within.
+		你面前的这间房间是出租给房客的众多房间之一，目前房间的老旧木门牢牢紧闭。一个标牌插在门前的黄铜托架上，上面写着“使用中”，你觉得你听到了房间内有人走动的声音。
 	</p>
 	<p>
-		As you have no business with the room's occupant, there's little else for you to do except turn around and continue on your way down the corridor...
+		由于你没有任何事要找这间房间的租客，所以你现在唯一能做的就是转身离开然后沿着走廊继续移动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_MERAXIS"><![CDATA[
 	<p>
-		Even if you didn't already know that the door before you leads to Meraxis's room, you could very easily deduce it from the words on the metal sign that's been nailed into its surface.
+		尽管你还没来过梅拉克西丝的房间，眼前的这扇门也是第一次见，但你还是通过钉在门上的金属标牌中的内容轻易推断出房间的主人了。
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			 Smiling to yourself as you see her impressive title, you read:
+			在看到她惊艳炫酷的标题后，你暗自微笑，上面写着：
 		#ELSE
-			 Letting out a despairing sigh as you see her ridiculous title, you read:
+			在看到她愚蠢中二的标题后，你发出一声绝望的叹息，上面写着：
 		#ENDIF
-		 <i>'This is the lair of The Dark Siren! Only the brave or foolish dare to disturb my slumber! Mwhahaha!'</i>
+		<i>“这里是暗夜塞壬的栖身处！胆敢打扰我安眠的人要么是勇气十足，要么是蠢到没边！桀桀桀！”</i>
 	</p>
 	<p>
-		Wondering whether she dictated the words of this sign to someone else, or actually wrote herself laughing at the bottom, you listen for any sound of movement coming from inside
+		你不知道这块牌子上的字是她口述给别人写下的，还是她自己在发出中二的大笑声时写下的。你把耳朵贴在门上，仔细地听里面的动静。
 		#IF(game.getCharactersPresent().contains(meraxis))
-			 and hear the chuuni [meraxis.race] loudly snoring. As she previously told you not to disturb her sleep unless there's an emergency, you decide that it's best to turn around and head back the way you came...
+			你听到中二病[meraxis.race]打着响亮的呼噜。因为她之前告诉过你，除非有紧急情况，否则不要打扰她睡觉，所以你决定最好原路返回……
 		#ELSE
-			 but don't hear a thing. If you wanted to speak with Meraxis, it looks like you'll have to head back the way you came and search for her at her usual spot downstairs...
+			但什么也没听到。如果你想和梅拉克西丝对话，看来你得原路返回，到楼下的老地方去找她……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Player's room: -->
 	
 	<htmlContent tag="ROOM_PLAYER"><![CDATA[
 	<p>
-		While not as large as the one back in Lilaya's mansion, your room here in The Red Dragon is nevertheless impressively spacious. Although it houses a double-size bed, a smart wardrobe and dresser, and a couple of comfortable chairs, there's plenty of space left over for you to [pc.walk] around in. Doing just that, you [pc.step] forwards over the dark wooden floorboards and onto the rug that's positioned at the end of your bed. Looking around at the cream-coloured walls and dark wooden beams that hold up the high ceiling, you find yourself thinking that although it's smaller than the one you've become accustomed to in Dominion, your room here has a very relaxing, cosy feel to it.
+		虽不如莉莱雅宅邸里的房间那么大，但红龙酒馆的房间依旧宽敞得令人印象深刻。即使房间里已经摆放了一张双人床、一个时髦的衣柜、一个梳妆台，以及几把舒适的椅子，但仍然留有足够的空间供你活动。就这样，你[pc.step]过深色的木质地板，踩在了床尾的地毯上。环顾着四周乳白色的墙壁和头顶深色的木质房梁，你不禁沉思，这里的房间虽比你在御城区的要小一些，但它却给你带来一种轻松、惬意的感觉。
 	</p>
 	<p>
-		Heading over to the far side of the room, you're able to look out of the leaded, bay windows and see a good portion of the streets of Elis down below.
+		你来到房间另一侧，这里视野开阔，可以看到伊利斯的大部分街道。你从窗台上向下望去，
 		#IF(game.isDayTime())
-			 Thanks to the time of day, there are quite a lot of people out and about, and you spend a minute or two simply watching the residents of this town travelling about on their business.
+			白天的街道上人声鼎沸、熙熙攘攘，十分热闹。你简单观察了一下小镇里的居民，发现他们大都在自顾自地忙着事情。
 		#ELSE
-			 Thanks to the time of night, the arcane street lamps are all turned on and casting a pale yellow light over the quiet road.
+			一盏盏奥术路灯正熠熠生辉，它们规律地妆点在宁静的街道两侧，投下一团团如同黄宝石的光晕，为夜晚的伊利斯凭添一分魅力。
 		#ENDIF
 	</p>
 	<p>
-		Turning back to face your room, you look over at the door to your ensuite. Having been left open, you're able to look inside and see not only your porcelain bath and shower, but also your arcane-powered washing machine. The promotional sticker has been left on the side of this machine, and promises to remove all stains and have even the dirtiest items of clothing dry and ready to wear in under ten minutes.
+		你转过头来看向浴室，里面不仅陈设着一个瓷质浴缸以及一套淋浴设备，还有一台奥术洗衣机。这台洗衣机侧面贴着宣传海报，承诺它能在十分钟内洗干净所有污渍并烘干——不论衣服有多脏。
 	</p>
 	<p>
-		Letting out a relaxed sigh, you wonder whether to spend some time resting in here, or perhaps to make use of the washing facilities available to you...
+		你舒了一口气，但一时间难以抉择是先吃饭，还是先洗澡，还是说……先睡觉……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_PLAYER_REST"><![CDATA[
 	<p>
-		Feeling a little worn down and tired from all of your recent activities, you draw your curtains before collapsing down onto your bed and setting your phone's alarm. Closing your eyes, you then let out a deep sigh, and with the feeling of being safe and comfortable here in The Red Dragon, you soon drift off to sleep, thinking about all the things that have happened to you recently...
+		最近的活动让你感到有些疲惫，你拉上窗帘，然后倒在床上，设置了手机闹钟。闭上眼睛，你深深地叹了一口气，带着在“红龙酒馆”安全舒适的感觉，你很快就进入了梦乡，想着最近发生在你身上的所有事情……
 	</p>
 	<p>
-		<i>Beep-beep... beep-beep... bee-</i>
+		<i>哔哔……哔哔……哔——</i>
 	</p>
 	<p>
-		Rolling over, you fumble for your phone, turning off the alarm before sinking back onto your bed with a sigh. As comfortable as you are, you decide that you'd better get out of bed, and so after a minute of lying beneath the covers, you do just that. Opening the curtains, you set about gathering your things, and then with one final stretch, you get ready to set out once more...
+		你翻了个身，摸索着拿起手机，关闭闹铃，然后叹了口气，重新躺回床上。虽然很舒服，但你还是决定下床，于是在被子里躺了一分钟后，你就下床了。拉开窗帘，收拾好自己的东西，最后伸了个懒腰，准备再次出发……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_PLAYER_FAST_TRAVEL_ENTRANCE"><![CDATA[
 	<p>
-		Wanting to head up to your room, you cross the tavern floor and make your way to the staircase at the rear of the building. Heading up to the first floor, you proceed directly to your room, and consequently soon find yourself [pc.stepping] into it...
+		你打算回房，于是便穿过旅店，从建筑后面的楼梯上到了二楼。你径直走向自己的客房，直接踏了进去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_PLAYER_SHOWER_QUICK"><![CDATA[
 	<p>
-		Wanting to clean yourself, but not spend too much time doing so, you [pc.step] into your ensuite bathroom and decide upon taking a quick shower. Disrobing, you put your clothing into the arcane washing machine, before stepping over to your basic-yet-functional shower.
+		你想清洗身体，但又不想把太多的时间浪费到浴缸里，便决定洗个淋浴。<br>你脱掉衣服丢进奥术洗衣机，然后走进浴室开始冲洗。
 	</p>
 	<p>
-		Turning on the tap, you let out a relaxed sigh as you feel the warm water flowing down over your naked body. Not wanting to spend too much time in the shower, you focus on quickly cleaning yourself.
+		打开花洒，你享受着温水在肌肤上划过的感觉，不由得发出惬意的叹息。不过你没打算在这里耽搁太久，开始快速清洗起来。
 	</p>
 	<p>
-		After a short while spent cleaning your body under the flowing water, you feel as though you've spent enough time in the shower, and so turn off the tap and dry yourself with a fluffy towel. Retrieving your now-clean clothing from the arcane washing machine, you get dressed and [pc.step] back into your room...
+		稍许之后，你感觉已经清洗得足够干净了，于是就关掉喷头，用柔软的毛巾擦干身体。<br>你从奥术洗衣机里取出已经洗好的衣服，穿戴整齐，[pc.step]回房去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_PLAYER_SHOWER"><![CDATA[
 	<p>
-		Wanting to clean yourself, you [pc.step] into your ensuite bathroom and decide upon taking a shower. Disrobing, you put your clothing into the arcane washing machine, before stepping over to your basic-yet-functional shower.
+		你打算洗个澡清洁一下，于是便[pc.step]向客房中的浴室。<br>你脱下衣服扔进奥术洗衣机，然后[pc.step]去淋浴间。
 	</p>
 	<p>
-		Turning on the tap, you let out a relaxed sigh as you feel the warm water flowing down over your naked body. Deciding that it wouldn't be so bad to take some time out in order to relax, you don't rush as you set about thoroughly cleaning yourself.
+		你打开水阀，温暖的水流带着无比的舒适缓缓淌过你的全身，让你不由得发出一声轻松的呻吟。你不慌不忙地开始清洗身体，决定花点时间放松一下。
 	</p>
 	<p>
-		After a while spent cleaning your body under the flowing water, you feel as though you've spent enough time in the shower, and so turn off the tap and dry yourself with a fluffy towel. Retrieving your now-clean clothing from the arcane washing machine, you get dressed and [pc.step] back into your room...
+		洗了一阵子，你感觉身上已经足够干净了，于是便关掉喷头，用柔软的毛巾擦干身体。<br>你从奥术洗衣机里取出已经洗好的衣服，穿戴整齐，[pc.step]回房去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_PLAYER_BATH"><![CDATA[
 	<p>
-		Wanting to spend some time relaxing and getting cleaned, you [pc.step] into your ensuite bathroom and decide upon taking a long bath. Disrobing, you put your clothing into the arcane washing machine, before stepping over to your basic-yet-functional bathtub.
+		你想花点时间放松一下，好好洗个澡，于是[pc.step]进你的私人套间浴室。<br>你褪下所有衣物，把它们扔进奥术洗衣机，然后走向那台多功能浴缸。
 	</p>
 	<p>
-		Turning on the taps and running yourself a bath, you slip down into the hot water and let out a contented sigh. Deciding that it wouldn't be so bad to take some time out in order to relax, you don't rush as you set about thoroughly cleaning yourself...
+		你拨开浴缸的水龙头，放了满满的热水，然后才滑入水中，发出惬意至极的叹息。花点时间放松一下不也挺好的吗，你开始不慌不忙地仔细清洗自己……
 	</p>
 	<p>
-		After a while spent cleaning your body and relaxing in the water, you feel as though you've spent enough time in the bath, and so after pulling the plug you [pc.step] out of the tub and dry yourself off with a fluffy towel. Retrieving your now-clean clothing from the arcane washing machine, you get dressed and [pc.step] back into your room...
+		在水里清洗身体和放松了一会儿后，你觉得在浴缸里泡的时间已经够长了，于是拔掉塞子把水放了，[pc.step]出浴缸，用松软的毛巾擦干身体。从奥术洗衣机中取出已经洗好烘干的衣服，穿戴整齐，[pc.step]回房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="ROOM_OWNER"><![CDATA[
 	<p>
-		The wooden door before you is tightly shut, and hanging from a nail hammered into its surface, there's a sign which reads: 'Flash's Room. Do not disturb unless in case of emergency.'
+		你面前的木门紧紧地关着，门上挂着一个牌子，上面写着：“弗拉什的房间，非紧急情况请勿打扰。”
 	</p>
 	<p>
-		As there's no emergency,
+		目前并没有什么紧急情况，
 		#IF(!game.getCharactersPresent().contains(flash))
-			 and as Flash is currently downstairs working at the bar,
+			而且弗拉什正在楼下的酒馆工作，
 		#ENDIF
-		 there's nothing to be gained from knocking on the door. Instead, all that's left for you to do is turn around and continue on your way down the corridor...
+		所以完全没必要去敲门。你现在唯一能做的就是转身离开然后沿着走廊继续移动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_SEX"><![CDATA[
 	<p>
-		You find yourself standing before the only door in the corridor that's not in its original state. Not only is it painted a light shade of pink, but someone, who you assume to be Jess, has used white paint to write in flowery, feminine handwriting on the surface: 'Jess's Room. Please do not disturb! See me downstairs if you want something! xxx'
+		你正站在走廊里唯一一扇不是原样的门前，眼前地这扇门不仅被漆成了淡淡的粉红色，而且有人(你猜是婕斯)还用白色颜料在门上留下了花花绿绿的女性笔迹：“婕斯的房间，请勿打扰！如果你想要什么，请到楼下找我！”
 	</p>
 	<p>
 		#IF(game.getCharactersPresent().contains(jess))
-			Although the door seems to have been reseated so as to form a tight seal around its frame, you can still see some light escaping through its narrow keyhole, letting you know that Jess must be inside.
+			尽管大门似乎已被牢牢关上，门框周围也没留下任何缝隙，但凭借从狭小锁孔中透出的些许光线 ，你知道婕斯一定在里面。
 			#IF(game.getNonCompanionCharactersPresent().size()>1)
-				 The need for the door's tight seal is made clear as you spend a moment standing in front of it; Jess's high-pitched moaning and the creaking of her bed can be quite clearly be heard from through the keyhole, and if the door was as poorly-fitting as the others in the corridor, you imagine that none of the lodgers would be able to get any peace while Jess was working.
+				当站在门前的那一刻，你就明白了门窗的密封性有多么重要了——婕斯高亢的呻吟声伴着床榻的吱呀声从锁孔里隐隐传出。<br>如果这扇门跟走廊里其他门一样关不严实的话，你可以想象得到，婕斯工作的时候恐怕所有的房客都不得安宁。
 			#ELSE
-				 Honouring her written request to not be disturbed, you [pc.step] away from Jess's door and prepare to continue on your way down the corridor...
+				你遵照她不希望被打扰要求，从婕斯的门前[pc.step]过，沿着走廊继续前行。
 			#ENDIF
 		#ELSE
-			Although the door seems to have been reseated so as to form a tight seal around its frame, you can still see that there's no light escaping through its narrow keyhole, letting you know that Jess isn't currently in her room. With nothing to be gained from standing here any longer, you quickly turn away from the door and prepare to continue on your way down the corridor...
+			大门紧紧地关着，门缝和锁孔也没有透出任何的光线 ，你知道婕斯并没在房间里。意识到在这里干站着也没有任何意义，于是你转身离开，沿着走廊继续前行……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_SEX_PEEPING_JESS_FUCKED"><![CDATA[
 	<p>
-		Wanting to see what's happening inside Jess's room, you look around to make sure that nobody's watching before putting your [pc.eye(true)] to the keyhole and looking inside. Although you're only able to see a limited angle of the room, the double-bed on which the action is happening is directly in your field of vision, and you find yourself unable to look away as you watch
+		你想看看婕斯的房间里有些什么，在环顾四周确保没有人在看后，你将低下头向钥匙孔处看去，虽然你只能从有限的角度看到房间里的情况，但双人床就在你的视野范围内，你可以看到
 		#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-			 Jess
+			婕斯，
 		#ELSE
-			 a very pretty fox-girl, who you assume to be Jess,
+			一个漂亮的女孩，
 		#ENDIF
-		 submitting to [ncom.a_feminine] [ncom.race].
+		一个充满[ncom.a_feminine]的[ncom.race]。
 	</p>
 	<p>
 		#IF(ncom.getFetishDesire(FETISH_ANAL_GIVING).isPositive() || ncom.getFetishDesire(FETISH_DOMINANT).isPositive())
-			Jess is facing away from you as she kneels down on all fours on her bed, while the [ncom.race] has dropped down behind her. Thanks to their position, you can quite clearly see
+			婕斯以面朝着你的方向四肢着地跪在床上，那个[ncom.race]则趴在她的身后。由于他们的位置，你可以很清楚地看到
 		#ELSE
-			Jess is facing away from you as she lies back on her bed, while the [ncom.race] has dropped down between her legs. Thanks to their missionary position, you can quite clearly see
+			婕斯以背朝着你的方向平躺在床上，而那个[ncom.race]则趴在了她的双腿之间。由于他们采用的体位，你可以很清楚地看到
 		#ENDIF
 		#IF(ncom.getFetishDesire(FETISH_ANAL_GIVING).isPositive())
-			 that the [ncom.race] has [ncom.her] [ncom.cock+] hilted deep in Jess's ass. With [ncom.a_moan+], the [ncom.race] pulls back, before starting to repeatedly thrust [ncom.her] [ncom.cock+] in and out of Jess's [jess.asshole+].
+			那个[ncom.race]将[ncom.cock+]狠狠地插入了婕斯的屁眼深处。随着[ncom.a_moan+]，[ncom.race]向后扭腰，然后开始反复用[ncom.cock+]抽插婕斯[jess.asshole+]。
 		#ELSE
-			 that the [ncom.race] has [ncom.her] [ncom.cock+] hilted deep in Jess's wet pussy, which is leaking a slimy mixture of girlcum and precum all over her duvet. With [ncom.a_moan+], the [ncom.race] pulls back, before starting to repeatedly thrust [ncom.her] [ncom.cock+] in and out of Jess's [jess.pussy+].
+			那个[ncom.race]将[ncom.cock+]狠狠地插入了婕斯的阴穴深处，床单上满是二人交合所留下的痕迹。随着[ncom.a_moan+]，[ncom.race]向后扭腰，然后开始反复用[ncom.cock+]抽插婕斯[jess.pussy+]。
 		#ENDIF
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-			As Jess continues to be fucked by her client on her bed, you wonder whether you should continue enjoying the show, or stop watching and leave them to it...
+			婕斯还在床上被她的客户操干，你不知道是应该继续欣赏节目，还是停止偷窥并离开……
 		#ELSE
-			As the fox-girl continues to be fucked by her partner on the bed, you wonder whether you should continue enjoying the show, or stop watching and leave them to it...
+			那个狐女还在床上被她的性伴侣操干，你不知道是应该继续欣赏节目，还是停止偷窥并离开……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_SEX_PEEPING_JESS_SCISSOR"><![CDATA[
 	<p>
-		Wanting to see what's happening inside Jess's room, you look around to make sure that nobody's watching before putting your [pc.eye(true)] to the keyhole and looking inside. Although you're only able to see a limited angle of the room, the double-bed on which the action is happening is directly in your field of vision, and you find yourself unable to look away as you watch
+		你想看看婕斯的房间里有些什么，在环顾四周确保没有人在看后，你将低下头向钥匙孔处看去，虽然你只能从有限的角度看到房间里的情况，但双人床就在你的视野范围内，你可以看到
 		#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-			 Jess
+			婕斯，
 		#ELSE
-			 a very pretty fox-girl, who you assume to be Jess,
+			一个漂亮的女孩，
 		#ENDIF
-		 dominating [ncom.a_feminine] [ncom.race].
+		一个充满[ncom.a_feminine]的[ncom.race]。
 	</p>
 	<p>
-		The [ncom.race] is facing away from you as [ncom.she] lies back on the bed, while Jess has dropped down over the top of [ncom.herHim] so as to straddle [ncom.her] groin. Thanks to their scissoring position, you can quite clearly see that Jess is rubbing her clit up and down over the [ncom.race]'s [ncom.pussy+]. A slimy mixture of girlcum is drooling down all over Jess's duvet, and as you continue to watch, she lets out [jess.a_moan+] and starts to desperately grind her [jess.pussy+] up and down against the [ncom.race]'s clit.
+		[ncom.race]背对着你，躺在床上，而婕斯则从[ncom.herHim]的上方俯身下来，跨坐在[ncom.her]的腹股沟处。由于二人的剪刀式体位，你可以清楚地看到婕斯正在[ncom.race][ncom.pussy+]处来回磨蹭她[jess.pussy+]，黏糊糊的混合爱液流满了婕斯的羽绒被。你继续观看，婕斯发出[jess.a_moan+]，拼命地用起她[jess.pussy+]上下顶弄[ncom.race]的阴蒂。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-			As Jess continues to dominate her client on her bed, you wonder whether you should continue enjoying the show, or stop watching and leave them to it...
+			婕斯还在床上支配她的客户，你不知道是应该继续欣赏节目，还是停止偷窥并离开……
 		#ELSE
-			As the fox-girl continues to dominate her partner on the bed, you wonder whether you should continue enjoying the show, or stop watching and leave them to it...
+			那个狐女还在床上支配她的性伴侣，你不知道是应该继续欣赏节目，还是停止偷窥并离开……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_SEX_PEEPING_JESS_FACE_SITTING"><![CDATA[
 	<p>
-		Wanting to see what's happening inside Jess's room, you look around to make sure that nobody's watching before putting your [pc.eye(true)] to the keyhole and looking inside. Although you're only able to see a limited angle of the room, the double-bed on which the action is happening is directly in your field of vision, and you find yourself unable to look away as you watch
+		你想看看婕斯的房间里有些什么，在环顾四周确保没有人在看后，你将低下头向钥匙孔处看去，虽然你只能从有限的角度看到房间里的情况，但双人床就在你的视野范围内，你可以看到
 		#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-			 Jess
+			婕斯，
 		#ELSE
-			 a very pretty fox-girl, who you assume to be Jess,
+			一个漂亮的女孩，
 		#ENDIF
-		 dominating [ncom.a_feminine] [ncom.race].
+		一个充满[ncom.a_feminine]的[ncom.race]。
 	</p>
 	<p>
-		The [ncom.race] is facing away from you as [ncom.she] lies back on the bed, while Jess has dropped down over the top of [ncom.herHim] so as to straddle [ncom.her] face. Thanks to their face-sitting position, you can quite clearly see that Jess is rubbing her [jess.pussy+] up and down over the [ncom.race]'s mouth. A slimy mixture of girlcum is drooling down all over this [ncom.race]'s face, and as you continue to watch, [ncom.she] lets out a muffled, [ncom.moan+] and starts to desperately perform cunnilingus on the dominant fox-girl.
+		[ncom.race]背对着你，躺在床上，而婕斯则从[ncom.herHim]的上方俯身下来，跨坐在[ncom.her]的脸上。由于她们的脸部坐姿，你可以清楚地看到婕斯正在[ncom.race]的嘴上上下摩擦她[jess.pussy+]。黏糊糊的混合爱液正流到这个[ncom.race]的脸上，当你继续观看时，[ncom.she]发出一声低沉的[ncom.moan+]，并开始拼命地对这个主导位的狐女进行舔阴。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-			As Jess continues to dominate her client on her bed, you wonder whether you should continue enjoying the show, or stop watching and leave them to it...
+			婕斯还在床上支配她的客户，你不知道是应该继续欣赏节目，还是停止偷窥并离开……
 		#ELSE
-			As the fox-girl continues to dominate her partner on the bed, you wonder whether you should continue enjoying the show, or stop watching and leave them to it...
+			那个狐女还在床上支配她的性伴侣，你不知道是应该继续欣赏节目，还是停止偷窥并离开……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_SEX_PEEPING_AFTER_SEX"><![CDATA[
 	<p>
-		Having had your fun, you take your [pc.eye(true)] away from the keyhole and [pc.step] back from the door. Not wanting to be caught and questioned about your voyeuristic activities, you [pc.walk] down the corridor and enter your room. Giving Jess and her partner some time in which to finish having sex, you relax for a short while, before wondering what to do next...
+		玩得尽兴之后，你便将[pc.eye(true)]从钥匙孔处移开并退到了门边，以免被人发现并质问你的偷窥行为，随后你[pc.walk]过走廊并回到了自己的房间。你放松了一小会儿，给婕斯和她的伴侣留出时间来收尾性爱，然后思索着下一步该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		The staircase before you winds down in an anti-clockwise fashion to the ground floor. While it's quite wide, the steps are rather steep, which seems to be the reason why a sign identical to the one found at the base has been secured to the wall, reading: 'To avoid any further accidents, please don't run up or down the stairs!'
+		面前的楼梯以逆时针的方向一路向下蜿蜒到一楼。台阶虽然很宽，但坡度却很陡，因此墙壁上挂着和你在一楼见到的完全相同的标语，上面写着：“为了避免事故发生，请勿在楼梯上奔跑！”
 	</p>
 	<p>
-		From here you could travel down to the tavern's ground floor, or instead head down the corridor which connects the rooms of this level to one another...
+		从这里你可以下到酒馆的一楼，或者沿走廊继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS_DOWN"><![CDATA[
 	<p>
-		Deciding to head down to the ground floor, you descend the steep staircase and soon find yourself at the bottom...
+		你决定下到一楼，于是便沿着陡峭的楼梯往下走，很快就下到了一层……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

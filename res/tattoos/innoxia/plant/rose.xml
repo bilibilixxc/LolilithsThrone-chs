@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>750</value> 
 		
-		<name><![CDATA[rose]]></name>
+		<name><![CDATA[玫瑰]]></name>
 		
-		<description><![CDATA[A stylised depiction of a rose, complete with a portion of its stem and several leaves.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts a stylised depiction of a rose]]></bodyOverviewDescription> 
+		<description><![CDATA[玫瑰图案，包括一节茎和几片叶子。]]></description> 
+		<bodyOverviewDescription><![CDATA[描绘了一朵风格化玫瑰的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>rose.svg</imageName> 
 		
 		<slotAvailability/>
 		
 		<primaryColours values="ALL" defaultColour="CLOTHING_RED"/> 
-		<secondaryColours values="ALL"  defaultColour="CLOTHING_GREEN"/> 
+		<secondaryColours values="ALL" defaultColour="CLOTHING_GREEN"/> 
 		<tertiaryColours/>
 		
 	</coreAttributes>

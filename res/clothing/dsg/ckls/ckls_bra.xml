@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Printed on the inside, a small tag reads 'MFD by DSG Costume Supply Co, Ltd'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[一个小标签的内侧印着“DSG服装供应有限公司生产”。]]></clothingAuthorTag>
 		<value>400</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[kitty bra]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[kitty bras]]></namePlural>
-		<description><![CDATA[A crop-top style bra with tie-up spaghetti straps and a cutout in the shape of a stylized cat.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[猫咪胸罩]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[猫咪胸罩]]></namePlural>
+		<description><![CDATA[一款露沟式胸罩，带有超细肩带和卡通猫咪形状的镂空。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot>
@@ -66,51 +65,51 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slip)] the bra over [npc.her] head and down onto [npc.her] torso before tying up the shoulder straps over each of [npc.her] shoulders.]]>
-    </self>
-    <other>
-	  <![CDATA[[npc.Name] [npc.verb(slip)] the bra over [npc2.namePos] head and down onto [npc2.her] torso before tying up the shoulder straps over each of [npc2.her] shoulders.]]>
-    </other>
-    <otherRough>
-	  <![CDATA[[npc.Name] [npc.verb(shove)] the bra over [npc2.namePos] head and down onto [npc.her] torso before hastily tying up the shoulder straps over each of [npc2.her] shoulders.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将胸罩从头顶滑下覆盖到躯体上，随后[npc.her]将吊带拉到肩膀上。
+    ]]></self>
+    <other><![CDATA[
+	[npc.Name]将胸罩从[npc2.namePos]头顶滑下覆盖到躯体上，随后将吊带拉到[npc2.her]的肩膀上。
+    ]]></other>
+    <otherRough><![CDATA[
+	[npc.Name]将胸罩从[npc2.namePos]头顶套下覆盖到躯体上，随后将吊带匆忙地拉到[npc2.her]的肩膀上。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-	  <![CDATA[[npc.Name] [npc.verb(untie)] the shoulder straps on [npc.her] bra before pulling it up over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the shoulder straps on [npc2.namePos] bra before pulling it up over [npc2.her] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(rip)] off [npc2.namePos] bra.]]>
-    </otherRough>
+    <self><![CDATA[
+	[npc.Name]移开肩膀上的吊带，随后将胸罩自头上脱下。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将[npc2.namePos]肩膀上的吊带移开，随后将胸罩自[npc2.her]头上脱下。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]将[npc2.namePos]的胸罩扯掉。
+    ]]></otherRough>
   </displacementText>
 	
   <replacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] bra back down, covering [npc.her] torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] bra back down, covering [npc2.her] torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] bra back down, covering [npc2.her] torso.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将胸罩重新拉下遮住躯体。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将胸罩重新拉下遮住[npc2.namePos]的躯体。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地将胸罩猛拉下来遮住[npc2.namePos]的躯体。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] bra up to just below [npc.her] chin, fully exposing [npc.her] torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] bra up to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] bra to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将胸罩拉到[npc.her]下巴的下方，将[npc.her]的躯体完全露出。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将胸罩拉到[npc2.namePos]下巴的下方，将[npc2.her]的躯体完全露出。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地将胸罩拉到[npc2.namePos]下巴的下方，将[npc2.her]的躯体完全露出。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

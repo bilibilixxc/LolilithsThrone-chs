@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version with comments, see "rental_mommy.xml". -->
 <clothing>
 	<coreAtributes>
 		<value>1500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[gothic dress]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[gothic dresses]]></namePlural>
-		<description><![CDATA[Dresses such as this one are typically only worn by Lilin or high-ranking demons when called upon to attend a prestigious event.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[哥特长裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[哥特长裙]]></namePlural>
+		<description><![CDATA[一件通常只有莉琳或高级恶魔在出席重要活动时才会穿的礼服。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot>

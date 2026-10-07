@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <breast>
 	<race>innoxia_sheep</race>
 	
-	<transformationName><![CDATA[sheep]]></transformationName>
+	<transformationName><![CDATA[绵羊]]></transformationName>
 	
 	<coveringType>innoxia_sheep_wool</coveringType>
 	
@@ -19,18 +19,18 @@
 	<descriptorsFlat/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldSheep(sheep-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldSheep(sheep milk)].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldSheep(绵羊般)][npc.nipplesFullDescription]，[npc.she]在哺乳期会分泌[style.boldSheep(绵羊乳汁)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] sheep-like, [npc.nipplesFullDescription].
-	]]></bodyDescription>
+		[npc.her]每个[npc.breastSize]的[npc.breasts]上都长着[npc.nipplesPerBreast]颗绵羊般[npc.nipplesFullDescription]。
+]]></bodyDescription>
 	
 	<crotchBoobsTransformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldSheep(sheep-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldSheep(sheep milk)].
+		[npc.She]现在拥有[style.boldSheep(绵羊般)][npc.crotchNipplesFullDescription]，[npc.she]在哺乳期内会分泌[style.boldSheep(绵羊乳汁)]。
 	]]></crotchBoobsTransformationDescription>
 	
 	<crotchBoobsBodyDescription><![CDATA[
-		On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] sheep-like, [npc.crotchNipplesFullDescription].
-	]]></crotchBoobsBodyDescription>
+		[npc.her]的每个[npc.crotchBoobSize][npc.crotchBoobs]上都长着[npc.crotchNipplesPerBreast]颗绵羊般[npc.crotchNipplesFullDescription]。
+]]></crotchBoobsBodyDescription>
 </breast>

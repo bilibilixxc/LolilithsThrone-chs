@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Street]]></name>
-	<tooltipDescription><![CDATA[The streets of Themiscyra are strewn with debris, scorch marks, and other remnants of battle.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the streets of Themiscyra]]></virginityLossDescription>
+	<name><![CDATA[街道]]></name>
+	<tooltipDescription><![CDATA[特弥斯库拉的街道上到处都是废墟、烧焦的痕迹和其他战争的残余。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在特弥斯库拉的街道上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>raiders</svgName>
 	<colour>BASE_GREY</colour>

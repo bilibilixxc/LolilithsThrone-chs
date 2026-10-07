@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>2500</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Biojuice Canister]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Biojuice Canister]]></namePlural>
-		<description><![CDATA[A canister of heavily processed glowing pink liquid, which has a thick, slimy consistency. The warning sign on the front makes it quite clear that drinking this would be a bad idea...]]></description>
+		<determiner><![CDATA[一罐]]></determiner>
+		<name><![CDATA[生物萃取液]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[生物萃取液]]></namePlural>
+		<description><![CDATA[一罐经过大量加工的粉红色液体，粘稠粘稠的。罐子正面的警告标志清楚地表明，喝下这种液体可不是个好主意……]]></description>
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -18,7 +18,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/slime/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/slime/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="-15" imageSize="75">slime_biojuice_canister.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -26,15 +26,15 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[slime]]></potionDescriptor>
+		<potionDescriptor><![CDATA[史莱姆]]></potionDescriptor>
 		<associatedRace>SLIME</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
 			<line><![CDATA[[#ATTRIBUTE_MAJOR_CORRUPTION.getFormattedValue(10)]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_CORRUPTION.getFormattedValue(25)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldSlime(Transforms body into slime!)]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_CORRUPTION.getFormattedValue(25)]到“药剂效果” ]]></line>
+			<line><![CDATA[[style.boldSlime(将身体转化为史莱姆！)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -43,11 +43,11 @@
 			
 			#IF(npc.getBody().getBodyMaterial()==BODY_MATERIAL_SLIME)
 				<p style='margin-bottom:0; padding-bottom:0;'>
-					[style.colourDisabled([npc.NameIsFull] already a slime, so nothing happens...)]
+					[style.colourDisabled([npc.NameIsFull]已经是史莱姆了，所以无事发生……)]
 				</p>
 			#ELSEIF(npc.getBody().getBodyMaterial()!=BODY_MATERIAL_FLESH)
 				<p style='margin-bottom:0; padding-bottom:0;'>
-					[style.colourDisabled([npc.NameIsFull] an elemental, so nothing happens...)]
+					[style.colourDisabled([npc.NameIsFull]是元素，所以无事发生……)]
 				</p>
 			#ELSE
 				[#npc.setBodyMaterial(BODY_MATERIAL_SLIME)]
@@ -64,10 +64,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Ignoring the warning on the front, [npc.name] [npc.verb(unseal)] one end of the Biojuice Canister and [npc.verb(bring)] it up to [npc.her] [npc.lips]. The glowing pink liquid within gives off a faintly sweet smell, which encourages [npc.herHim] to tilt [npc.her] head back and gulp it all down...
+		无视标签的警告，[npc.name]拧开生物汁罐的一端，然后把它送到[npc.her]的嘴边。罐中发出微弱的甜味，促使[npc.herHim]仰起头，将所有的液体大口大口地喝下去……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Ignoring the warning on the front, [npc.name] [npc.verb(unseal)] one end of the Biojuice Canister and [npc.verb(bring)] it up to [npc2.namePos] [npc2.lips]. The glowing pink liquid within gives off a faintly sweet smell, which encourages [npc2.name] to tilt [npc2.her] head back and gulp it all down...
+		无视前面的警告，[npc.name]拧开生物汁罐的一端，然后把它送到[npc2.namePos][npc2.lips]前。罐中发出微弱的甜味，促使[npc2.name]仰起头，将所有的液体大口大口地喝下去……
 		]]></otherUse>
 	</useDescriptions>
 

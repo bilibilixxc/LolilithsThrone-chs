@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Default place type dialogues which should never be seen (as the player can never travel freely through the dungeon): -->
@@ -13,8 +13,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit the dungeon and head back out into Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[走出地牢，回到伊利斯的街道上。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_tower"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -60,18 +60,18 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Submit to Yui and allow her to take you down into her dungeon for a night of submissive, masochistic sex...
-					<br/>[style.italicsSex(This will involve submissive, masochistic sex with numerous strangers!)]
+					屈服于唯，让她把你带进地牢，享受一整晚的服从与受虐性爱……
+					<br/>[style.italicsSex(这将涉及与众多陌生人进行的服从、受虐式性行为！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_start]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Yui that you're not interested in her offer.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉唯，你对她的提议不感兴趣。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_refused]]></nextDialogue>
 			</response>
 		</responses>
@@ -91,8 +91,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Continue on your way through Elis...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续穿过伊利斯……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_tower_yui"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 			</response>
@@ -112,8 +112,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Bondage]]></responseTitle>
-				<responseTooltip><![CDATA[Allow Mistress Yui to dress you...]]></responseTooltip>
+				<responseTitle><![CDATA[拘束]]></responseTitle>
+				<responseTooltip><![CDATA[允许主人唯为你换上衣服……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_dressed]]></nextDialogue>
 			</response>
 		</responses>
@@ -132,8 +132,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Prepared]]></responseTitle>
-				<responseTooltip><![CDATA[Securely tied to the bondage bench, there's nothing you can do but submit to Yui and allow her to 'prepare' you...]]></responseTooltip>
+				<responseTitle><![CDATA[准备]]></responseTitle>
+				<responseTooltip><![CDATA[你被牢牢地绑在拘束凳上，只能屈服于唯，任由她帮你“准备”……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_prepared]]></nextDialogue>
 			</response>
 		</responses>
@@ -154,8 +154,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Madly aroused and desperate to be fucked, you squirm about as you wait for Yui's client to arrive...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[你性欲大发，渴求着被操，在等待唯的客人到来时，不停地扭动着身体……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_client]]></nextDialogue>
 			</response>
 		</responses>
@@ -176,8 +176,8 @@
 				<availabilityConditional><![CDATA[[#!client.hasFetish(FETISH_VOYEURIST) && !client.hasFetish(FETISH_IMPREGNATION)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Punished]]></responseTitle>
-				<responseTooltip><![CDATA[This dominant client takes great pleasure in punishing you...]]></responseTooltip>
+				<responseTitle><![CDATA[受罚]]></responseTitle>
+				<responseTooltip><![CDATA[这个支配者客户在惩罚你的过程中会获得无比的快乐……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_client_start]]></nextDialogue>
 			</response>
 			<!-- 'Teaser' client: -->
@@ -185,8 +185,8 @@
 				<availabilityConditional><![CDATA[[#client.hasFetish(FETISH_VOYEURIST)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Teased]]></responseTitle>
-				<responseTooltip><![CDATA[This client takes great pleasure in teasing you...]]></responseTooltip>
+				<responseTitle><![CDATA[被玩弄]]></responseTitle>
+				<responseTooltip><![CDATA[这个客户非常喜欢挑逗你……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_client_start]]></nextDialogue>
 			</response>
 			<!-- 'Breeder' client: -->
@@ -194,8 +194,8 @@
 				<availabilityConditional><![CDATA[[#client.hasFetish(FETISH_IMPREGNATION)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fertilised]]></responseTitle>
-				<responseTooltip><![CDATA[This client seems intent on getting you pregnant...]]></responseTooltip>
+				<responseTitle><![CDATA[被授精]]></responseTitle>
+				<responseTooltip><![CDATA[这个客户似乎一心想要让你怀孕……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_client_start]]></nextDialogue>
 			</response>
 		</responses>
@@ -231,9 +231,9 @@
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(client.hasFetish(FETISH_IMPREGNATION))
-						Completely at the mercy of your anonymous [client.Mistress], you're to be made the mother of [client.her] children...
+						你完全任由那个不知名的[client.Mistress]摆布，即将成为[client.her]孩子的母亲……
 					#ELSE
-						Completely at the mercy of your anonymous [client.Mistress], you prepare to get fucked by [client.herHim]...
+						你完全任由那个不知名的[client.Mistress]摆布，已经准备好挨操了……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -299,8 +299,8 @@
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/yui_dungeon', 'CLIENT_1_END_SEX'))]
 			[#game.banishNPC(client)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Your [client.name] has had enough...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你的[client.name]已经爽够了……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -311,8 +311,8 @@
 				<availabilityConditional><![CDATA[[#game.isHourBetween(5, 12)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Yui arrives]]></responseTitle>
-				<responseTooltip><![CDATA[You've serviced all of Yui's clients, and so the [yui.race] arrives to release you...]]></responseTooltip>
+				<responseTitle><![CDATA[唯到来]]></responseTitle>
+				<responseTooltip><![CDATA[你已经服务了唯的所有客户，于是[yui.race]前来释放你……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_night_of_sex]]></nextDialogue>
 			</response>
 			<!-- More sex scenes: -->
@@ -320,10 +320,10 @@
 				<availabilityConditional><![CDATA[[#game.isHourBetween(12, 5)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Recover]]></responseTitle>
+				<responseTitle><![CDATA[恢复]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You have a few moments in which to recover before another client arrives...
-					<br/>[style.italicsSex(Keep on experiencing sex scenes as you're repeatedly fucked by Yui's clients.)]
+					你只有片刻喘息时间，很快就会有另一个客户到来……
+					<br/>[style.italicsSex(继续体验被唯的客户们轮番侵犯的性爱场景。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_client]]></nextDialogue>
 			</response>
@@ -332,10 +332,10 @@
 				<availabilityConditional><![CDATA[[#game.isHourBetween(12, 5)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Night of sex]]></responseTitle>
+				<responseTitle><![CDATA[彻夜的性爱]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You've got no other option but to spend the rest of the night in Yui's dungeon...
-					<br/>[style.italicsMinorBad(This will skip through the rest of the night until Yui arrives to release you.)]
+					你别无选择，只能在唯的地牢里度过今晚的剩余时间……
+					<br/>[style.italicsMinorBad(这将跳过今晚的剩余时间，直到唯来释放你。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_night_of_sex]]></nextDialogue>
 			</response>
@@ -360,8 +360,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Released]]></responseTitle>
-				<responseTooltip><![CDATA[Yui has returned to release you...]]></responseTooltip>
+				<responseTitle><![CDATA[被释放]]></responseTitle>
+				<responseTooltip><![CDATA[唯回来将你释放了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -377,8 +377,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave (shower)]]></responseTitle>
-				<responseTooltip><![CDATA[Take a quick shower and then thank Mistress Yui for the good time and exit her dungeon.]]></responseTooltip>
+				<responseTitle><![CDATA[离开(冲澡)]]></responseTitle>
+				<responseTooltip><![CDATA[快速冲个澡，然后感谢主人唯给你带来的美好时光并离开地牢。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_end_final]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -395,8 +395,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Leave (no shower)]]></responseTitle>
-				<responseTooltip><![CDATA[Thank Mistress Yui for the good time and exit her dungeon without having a shower.]]></responseTooltip>
+				<responseTitle><![CDATA[离开(不冲澡)]]></responseTitle>
+				<responseTooltip><![CDATA[感谢主人唯给你带来的美好时光，并没有洗澡，直接离开地牢。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_yui_dungeon_session_1_end_final]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -421,8 +421,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续走……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_tower_yui"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 			</response>

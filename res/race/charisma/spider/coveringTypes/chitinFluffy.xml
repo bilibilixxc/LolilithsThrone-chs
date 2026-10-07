@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>MAIN_FUR</category>
-	<determiner><![CDATA[a layer of]]></determiner>
-	<name><![CDATA[furry chitin]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[furry chitin]]></namePlural> 
+	<determiner><![CDATA[一层]]></determiner>
+	<name><![CDATA[多毛几丁质外壳]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[多毛几丁质外壳]]></namePlural> 
 	<naturalCoveringModifiers>
 		<modifier>FLUFFY</modifier>
 		<modifier>SHORT</modifier>

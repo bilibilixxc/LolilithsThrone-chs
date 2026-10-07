@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -29,19 +29,19 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Swap end]]></title>
-	<tooltip><![CDATA[Move around to the other end of your partner.]]></tooltip>
+	<title><![CDATA[换边]]></title>
+	<tooltip><![CDATA[绕到伴侣的另一侧。]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
 				#IF(sex.getCurrentSexPreference(npc, pc).getTargetedSexArea()==ORIFICE_MOUTH)
-					Having had enough of fucking you, [npc.name] slides [npc.her] [npc.cock+] free, before swiftly moving around to the other end of the bondage bench and slapping [npc.her] [npc.cock+] against your [pc.face+].
+					操够了你之后，[npc.name]将[npc.cock+]抽了出来，迅速绕到束缚凳的另一头，把[npc.cock+]拍在了你[pc.face+]上。
 				#ELSE
-					Having had enough of fucking your face, [npc.name] slides [npc.her] [npc.cock+] out of your mouth, before swiftly moving around to the other end of the bondage bench and slapping [npc.her] [npc.cock+] against your
+					玩够了你嘴后，[npc.name]将[npc.cock+]从你口中抽出，迅速绕到束缚凳的另一头，把[npc.cock+]拍在了你
 					#IF(sex.getCurrentSexPreference(npc, pc).getTargetedSexArea()==ORIFICE_VAGINA)
-						 [pc.pussy+].
+						[pc.pussy+]上。
 					#ELSE
-						 [pc.asshole+].
+						[pc.asshole+]上。
 					#ENDIF
 				#ENDIF
 			]]></text>

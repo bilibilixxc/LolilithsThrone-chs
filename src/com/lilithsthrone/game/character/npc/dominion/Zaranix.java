@@ -80,9 +80,9 @@ public class Zaranix extends NPC {
 	}
 	
 	public Zaranix(boolean isImported) {
-		super(isImported, new NameTriplet("Zaranix", "Zaranix", "Zaranix"), "Lyniximartu",
-				"Zaranix is one of the few demons that feels more comfortable in his incubus, rather than succubus, form."
-						+ " Muscular, tall, and handsome, Zaranix uses both his cunning mind and good looks to get what he wants.",
+		super(isImported, new NameTriplet("扎拉尼克斯", "扎拉尼克斯", "扎拉尼克斯"), "莉莉茜马尔图",
+				"扎拉尼克斯是少数几个更适应淫梦魔形态而不是魅魔形态的恶魔之一。"
+						+ "扎拉尼克斯肌肉发达、身材高大、英俊潇洒，善于利用精明的头脑和英俊的外表来达到自己的目的。",
 				204, Month.JULY, 3,
 				15,
 				null, null, null,
@@ -114,7 +114,7 @@ public class Zaranix extends NPC {
 			this.setSkinCovering(new Covering(BodyCoveringType.NIPPLES, PresetColour.SKIN_PURPLE_DARK), true);
 			this.clearPenisModifiers();
 			this.addPenisModifier(PenetrationModifier.RIBBED);
-			this.setName(new NameTriplet("Zaranix", "Zaranix", "Zaranix"));
+			this.setName(new NameTriplet("扎拉尼克斯", "扎拉尼克斯", "扎拉尼克斯"));
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.4.9.8")) {
 			this.setAge(204);
@@ -382,9 +382,9 @@ public class Zaranix extends NPC {
 		return "<p>"
 				+ UtilText.parse(target,
 						UtilText.returnStringAtRandom(
-						"With a booming shout, [zaranix.name] delivers a solid kick to [npc.namePos] torso!",
-						"With an angry roar, [zaranix.name] punches [npc.name] square in the chest!",
-						"[Zaranix.name] lets out a furious shout as he punches [npc.name] in the [npc.arm]!")) 
+						"[zaranix.name]气吞山河地大喊一声，对着[npc.namePos]的身子就是一脚！",
+						"[zaranix.name]怒吼一声，一拳打在[npc.Name]胸口！",
+						"[Zaranix.name]怒吼一声，打了[npc.name][npc.arm]一拳！")) 
 			+ "</p>";
 	}
 
@@ -392,8 +392,8 @@ public class Zaranix extends NPC {
 	public String getSpellDescription() {
 		return "<p>"
 				+ UtilText.returnStringAtRandom(
-						"Letting out a booming roar, Zaranix thrusts his arm into the air and casts a spell!",
-						"Zaranix steps back, and with an angry shout, casts a spell!") 
+						"扎拉尼克斯轰隆咆哮，手臂高举到半空，释放了法术！",
+						"扎拉尼克斯怒骂一声，后退几步，释放了法术！") 
 			+ "</p>";
 	}
 
@@ -405,7 +405,7 @@ public class Zaranix extends NPC {
 	@Override
 	public Response endCombat(boolean applyEffects, boolean victory) {
 		if (victory) {
-			return new Response("Victory", "You have defeated Zaranix!", ZaranixDialogue.AFTER_COMBAT_VICTORY) {
+			return new Response("胜利", "你打败了扎拉尼克斯！", ZaranixDialogue.AFTER_COMBAT_VICTORY) {
 				@Override
 				public void effects() {
 					Main.game.getNpc(Arthur.class).setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB, false);
@@ -416,7 +416,7 @@ public class Zaranix extends NPC {
 				}
 			};
 		} else {
-			return new Response("Defeat", "You have been defeated...", ZaranixDialogue.AFTER_COMBAT_DEFEAT);
+			return new Response("失败", "你被打败了……", ZaranixDialogue.AFTER_COMBAT_DEFEAT);
 		}
 	}
 	

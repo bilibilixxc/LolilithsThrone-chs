@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tail>
 	<race>innoxia_sheep</race>
 	
-	<transformationName><![CDATA[sheep]]></transformationName>
+	<transformationName><![CDATA[绵羊]]></transformationName>
 	
 	<coveringType>innoxia_sheep_wool</coveringType>
 	
@@ -20,43 +20,43 @@
 	<determiner><![CDATA[]]></determiner>
 	<determinerPlural><![CDATA[]]></determinerPlural> 
 	
-	<name><![CDATA[tail]]></name>
-	<namePlural><![CDATA[tails]]></namePlural> 
+	<name><![CDATA[尾巴]]></name>
+	<namePlural><![CDATA[尾巴]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>sheep-like</descriptor>
-		<descriptor>woolly</descriptor>
+		<descriptor><![CDATA[绵羊般]]></descriptor>
+		<descriptor><![CDATA[羊毛]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>sheep-like</descriptor>
-		<descriptor>woolly</descriptor>
+		<descriptor><![CDATA[绵羊般]]></descriptor>
+		<descriptor><![CDATA[羊毛]]></descriptor>
 	</descriptorsFeminine>
 	
-	<tipName><![CDATA[tip]]></tipName>
-	<tipNamePlural><![CDATA[tips]]></tipNamePlural>
+	<tipName><![CDATA[尖端]]></tipName>
+	<tipNamePlural><![CDATA[尖端]]></tipNamePlural>
 	<tipDescriptorsMasculine>
-		<descriptor>woolly</descriptor>
+		<descriptor><![CDATA[羊毛]]></descriptor>
 	</tipDescriptorsMasculine>
 	<tipDescriptorsFeminine>
-		<descriptor>woolly</descriptor>
+		<descriptor><![CDATA[羊毛]]></descriptor>
 	</tipDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
 		#IF(npc.getTailCount()==1)
-			A woolly, sheep-like tail sprouts from just above [npc.her] ass, rapidly growing in size until it's about [npc.tailLength] long. [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] a very limited amount of control over it, and can only swat it from side to side.
-			<br/>[npc.Name] now [npc.has] a [style.boldSheep(sheep-like tail)], [npc.materialDescriptor] [npc.tailFullDescription(true)].
+			一条羊毛状的绵羊般的尾巴，从尾椎处延伸而出，迅速生长至大概有[npc.tailLength]长。[npc.She]很快意识到自己对尾巴的控制力非常有限，只能够上下摆动它。
+			<br/>[npc.Name]现在拥有一条[style.boldSheep(绵羊般的尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ELSE
-			[npc.TailCount] woolly, sheep-like tails sprout from just above [npc.her] ass, rapidly growing in size until they're each about [npc.tailLength] long. [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] a very limited amount of control over them, and can only swat them from side to side.
-			<br/>[npc.Name] now [npc.has] [npc.tailCount] [style.boldSheep(sheep-like tails)], [npc.materialDescriptor] [npc.tailFullDescription(true)].
+			[npc.TailCount]条毛茸茸的绵羊般的尾巴，从尾椎处延伸而出，迅速生长至大概有[npc.tailLength]长。[npc.She]很快意识到自己对尾巴的控制力非常有限，只能够上下摆动它。
+			<br/>[npc.Name]现在拥有[npc.tailCount]条[style.boldSheep(绵羊般的尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ENDIF
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		Growing out from just above [npc.her] ass, [npc.sheHasFull]
+		[npc.sheHasFull]的尾椎处延伸出
 		#IF(npc.getTailCount()==1)
-			 a #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF [npc.tailColour(true)] sheep tail, which [npc.she] can just about swish from side to side.
+			一条#IF(npc.isTailFeral())[style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]的绵羊尾巴，只能左右摇摆。
 		#ELSE
-			 [npc.tailCount] #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF [npc.tailColour(true)] sheep tails, which [npc.she] can just about swish from side to side.
+			[npc.tailCount]条#IF(npc.isTailFeral()) [style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]的绵羊尾巴，只能左右摇摆。
 		#ENDIF
 	]]></bodyDescription>
 </tail>

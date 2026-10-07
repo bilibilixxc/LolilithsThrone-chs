@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<renderingPriority>70</renderingPriority>
 	
@@ -14,10 +14,10 @@
 	
 	<tags/>
 	
-	<name><![CDATA[Trickster's Bounty]]></name>
+	<name><![CDATA[诡骗奖励]]></name>
 	
 	<description><![CDATA[
-		By wearing the Trickster's set, [npc.nameIs] filled with a sense of roguish delight. With all manner of cunning plots and schemes jumping into [npc.her] mind, [npc.name] [npc.verb(feel)] as though [npc.sheHas] become a trickster god#IF(npc.isFeminine())dess#ENDIF!
+		穿上诡术套装，[npc.nameIs]充满了恶作剧的喜悦感。各种狡猾的阴谋诡计跃入[npc.she]的脑海，[npc.name]感觉仿佛[npc.she]成为了诡术之神。
 	]]></description>
 	
 	<imageName>trickster_set.svg</imageName>

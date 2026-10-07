@@ -924,8 +924,8 @@ public class OccupancyUtil implements XMLSaving {
 									Util.newArrayListOfValues(
 											SlaveEventTag.JOB_LILAYA_INTRUSIVE_TESTING),
 									Util.newArrayListOfValues(
-                      "[style.boldGood(+1)] [style.boldAffection(Affection)]",
-											"[style.boldGood(+5)] [style.boldAffection(Affection towards Lilaya)]"),
+                      "[style.boldGood(+1)][style.boldAffection(好感)]",
+											"[style.boldGood(+5)][style.boldAffection(对莉莱雅的好感)]"),
 									true));
 
 							return events;
@@ -938,8 +938,8 @@ public class OccupancyUtil implements XMLSaving {
 									Util.newArrayListOfValues(
 											SlaveEventTag.JOB_LILAYA_INTRUSIVE_TESTING),
 									Util.newArrayListOfValues(
-											"[style.boldBad(-1)] [style.boldAffection(Affection)]",
-											"[style.boldBad(-5)] [style.boldAffection(Affection towards Lilaya)]"),
+											"[style.boldBad(-1)][style.boldAffection(好感)]",
+											"[style.boldBad(-5)][style.boldAffection(对莉莱雅的好感)]"),
 									true));
 							return events;
 
@@ -952,13 +952,13 @@ public class OccupancyUtil implements XMLSaving {
 								if(slave.hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
 									slave.incrementAffection(Main.game.getPlayer(), 1);
 									slave.incrementAffection(Main.game.getNpc(Lilaya.class), 5);
-									list.add("[style.boldGood(+1)] [style.boldAffection(Affection)]");
-									list.add("[style.boldGood(+5)] [style.boldAffection(Affection towards Lilaya)]");
+									list.add("[style.boldGood(+1)][style.boldAffection(好感)]");
+									list.add("[style.boldGood(+5)][style.boldAffection(对莉莱雅的好感)]");
 								} else {
 									slave.incrementAffection(Main.game.getPlayer(), -1);
 									slave.incrementAffection(Main.game.getNpc(Lilaya.class), -5);
-									list.add("[style.boldBad(-1)] [style.boldAffection(Affection)]");
-									list.add("[style.boldBad(-5)] [style.boldAffection(Affection towards Lilaya)]");
+									list.add("[style.boldBad(-1)][style.boldAffection(好感)]");
+									list.add("[style.boldBad(-5)][style.boldAffection(对莉莱雅的好感)]");
 								}
 								
 								String tf = "";
@@ -984,13 +984,13 @@ public class OccupancyUtil implements XMLSaving {
 								if(slave.hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
 									slave.incrementAffection(Main.game.getPlayer(), 1);
 									slave.incrementAffection(Main.game.getNpc(Lilaya.class), 5);
-									list2.add("[style.boldGood(+1)] [style.boldAffection(Affection)]");
-									list2.add("[style.boldGood(+5)] [style.boldAffection(Affection towards Lilaya)]");
+									list2.add("[style.boldGood(+1)][style.boldAffection(好感)]");
+									list2.add("[style.boldGood(+5)][style.boldAffection(对莉莱雅的好感)]");
 								} else {
 									slave.incrementAffection(Main.game.getPlayer(), -1);
 									slave.incrementAffection(Main.game.getNpc(Lilaya.class), -5);
-									list2.add("[style.boldBad(-1)] [style.boldAffection(Affection)]");
-									list2.add("[style.boldBad(-5)] [style.boldAffection(Affection towards Lilaya)]");
+									list2.add("[style.boldBad(-1)][style.boldAffection(好感)]");
+									list2.add("[style.boldBad(-5)][style.boldAffection(对莉莱雅的好感)]");
 								}
 								
 								String tf2 = "";
@@ -1046,17 +1046,17 @@ public class OccupancyUtil implements XMLSaving {
 								name = halfDemonSubspecies.getHalfDemonName(null)[2];
 							}
 						}
-						name = Util.capitaliseSentence(UtilText.generateSingularDeterminer(name)) +" "+ name;
+						name = Util.capitaliseSentence(UtilText.generateSingularDeterminer(name)) + name;
 						
 						// If no settings are able to be used, or if a random roll is greater than 0.8, just add a groping event:
 						if(settingsEnabled.isEmpty() || Math.random()>0.8f) {
 								effectDescriptions.append(UtilText.parse(slave,
 										UtilText.returnStringAtRandom(
-												name+" groped and molested [npc.namePos] exposed body!",
-												name+" roughly molested [npc.namePos] vulnerable body!",
-												name+" spent some time groping and fondling every part of [npc.namePos] body!")));
+												name+"抚摸骚扰着[npc.namePos]暴露的身体！",
+												name+"粗暴地揉搓着[npc.namePos]无法反抗的身体！",
+												name+"对着[npc.namePos]身体的每一部分都抚摸、揉搓了好一会儿！")));
 	
-							effects.add("<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Molested:</span> "+effectDescriptions.toString());
+							effects.add("<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>被抚摸:</span> "+effectDescriptions.toString());
 							effectDescriptions.setLength(0);
 							
 						} else {
@@ -1066,11 +1066,11 @@ public class OccupancyUtil implements XMLSaving {
 								case SEX_ANAL:
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													name+" came deep inside [npc.namePos] [npc.asshole+]!",
-													name+" fucked [npc.namePos] [npc.asshole+], before filling [npc.herHim] with [npc.cum+]!",
-													name+" filled [npc.namePos] [npc.asshole+] with cum!")));
+													name+"在[npc.namePos][npc.asshole+]深处射了出来！",
+													name+"对着[npc.namePos][npc.asshole+]操了起来，随后在[npc.herHim]体内射满了[npc.cum+]！",
+													name+"用精液填满了[npc.namePos][npc.asshole+]！")));
 		
-									effects.add("[style.colourSex(Received Anal:)] "+effectDescriptions.toString());
+									effects.add("[style.colourSex(接受肛交：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, null, subspecies, halfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.PENIS));
 									break;
@@ -1078,11 +1078,11 @@ public class OccupancyUtil implements XMLSaving {
 								case SEX_ORAL:
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													name+" came deep down [npc.namePos] throat!",
-													name+" face-fucked [npc.name], before filling [npc.her] stomach with hot cum!",
-													name+" filled [npc.namePos] stomach with cum!")));
+													name+"在[npc.namePos]的喉咙深处射了出来！",
+													name+"操了[npc.name]的脸，随后将滚烫的精液注入了[npc.her]的肚子！",
+													name+"用精液填满了[npc.namePos]的肚子！")));
 		
-									effects.add("[style.colourSex(Gave Blowjob:)] "+effectDescriptions.toString());
+									effects.add("[style.colourSex(提供口交：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 	
 									slave.calculateGenericSexEffects(false, true, null, subspecies, halfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, SexAreaPenetration.PENIS));
@@ -1091,11 +1091,11 @@ public class OccupancyUtil implements XMLSaving {
 								case SEX_NIPPLES:
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													name+" came deep inside [npc.namePos] [npc.nipples+]!",
-													name+" fucked [npc.namePos] [npc.nipples+], before filling [npc.her] [npc.breasts+] with hot cum!",
-													name+" filled [npc.namePos] [npc.nipples+] with cum!")));
+													name+"在[npc.namePos][npc.nipples+]深处射了出来！",
+													name+"对着[npc.namePos][npc.nipples+]操了起来，随后在[npc.her][npc.breasts+]内射满了[npc.cum+]！",
+													name+"用精液装满了[npc.namePos][npc.nipples+]！")));
 									
-									effects.add("[style.colourSex(Nipples Fucked:)] "+effectDescriptions.toString());
+									effects.add("[style.colourSex(被操乳头：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 	
 									slave.calculateGenericSexEffects(false, true, null, subspecies, halfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE, SexAreaPenetration.PENIS));
@@ -1104,36 +1104,36 @@ public class OccupancyUtil implements XMLSaving {
 								case SEX_VAGINAL:
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													name+" came deep inside [npc.namePos] [npc.pussy+], ",
-													name+" fucked [npc.namePos] [npc.pussy+], before filling [npc.herHim] with [npc.cum+], ",
-													name+" filled [npc.namePos] [npc.pussy+] with cum, ")));
+													name+"在[npc.namePos][npc.pussy+]深处射了出来！",
+													name+"对着[npc.namePos][npc.pussy+]操了起来，随后用[npc.cum+]填满了[npc.herHim]！",
+													name+"用精液填满了[npc.namePos][npc.pussy+]！")));
 	
 									slave.calculateGenericSexEffects(false, true, null, subspecies, halfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS));
 		
 									if(slave.isVisiblyPregnant()) {
-										effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] already pregnant, the only result is a fresh creampie..."));
-										effects.add("[style.colourSex(Pussy Fucked:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "但由于[npc.sheIs]已经怀孕，所以是很安全的内射……"));
+										effects.add("[style.colourSex(被操小穴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else if(!slave.isImpregnationPhysicallyPossible()) {
-										effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] incapable of being impregnated, the only result is a fresh creampie..."));
-										effects.add("[style.colourSex(Pussy Fucked:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "但由于[npc.sheIs]无法怀孕，所以是很安全的内射……"));
+										effects.add("[style.colourSex(被操小穴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else if(slave.getSlavePermissionSettings().get(SlavePermission.PREGNANCY).contains(SlavePermissionSetting.PILLS_PROMISCUITY_PILLS)) {
 										if(slave.isHasAnyPregnancyEffects()) {
 											effectDescriptions.append(UtilText.parse(slave,
-													"but as [npc.sheIs] on [#ITEM_innoxia_pills_sterility.getNamePlural(false)], there's no chance of [npc.herHim] getting pregnant."
-													+ " ([npc.She] already has a risk of pregnancy from a previous encounter, however...)"));
+													"但由于[npc.sheIs]服用了[#ITEM_innoxia_pills_sterility.getNamePlural(false)]，便没有可能再怀孕。"
+													+ "(然而[npc.She]在之前的遭遇中就已经有怀孕风险了……)"));
 										} else {
-											effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] on [#ITEM_innoxia_pills_sterility.getNamePlural(false)], there's no chance of [npc.herHim] getting pregnant."));
+											effectDescriptions.append(UtilText.parse(slave,"但由于[npc.sheIs]服用了[#ITEM_innoxia_pills_sterility.getNamePlural(false)]，便没有可能再怀孕。"));
 										}
-										effects.add("[style.colourSex(Pussy Fucked:)] "+effectDescriptions.toString());
+										effects.add("[style.colourSex(被操小穴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else {
-										effectDescriptions.append(UtilText.parse(slave, "resulting in a risk of pregnancy!"));
-										effects.add("[style.colourDeepPink(Pregnancy Risk:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "有怀孕风险！"));
+										effects.add("[style.colourDeepPink(怀孕风险：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 									}
 									
@@ -1231,8 +1231,8 @@ public class OccupancyUtil implements XMLSaving {
 								partnerName = partnerHalfDemonSubspecies.getHalfDemonName(null)[2];
 							}
 						}
-						partnerNameCapitalised = Util.capitaliseSentence(UtilText.generateSingularDeterminer(partnerName)) +" "+ partnerName;
-						partnerName = UtilText.generateSingularDeterminer(partnerName) +" "+ partnerName;
+						partnerNameCapitalised = Util.capitaliseSentence(UtilText.generateSingularDeterminer(partnerName)) + partnerName;
+						partnerName = UtilText.generateSingularDeterminer(partnerName) + partnerName;
 					}
 //					System.out.println("partner spawned for "+slave.getName()+": "+partner.getWorldLocation()+" "+partner.getLocation().getX()+", "+partner.getLocation().getY());
 					
@@ -1240,11 +1240,11 @@ public class OccupancyUtil implements XMLSaving {
 					if(eventGenerated==null || Math.random()<0.01f) {
 						effectDescriptions.append(UtilText.parse(slave,
 								UtilText.returnStringAtRandom(
-										partnerNameCapitalised+" groped and molested [npc.namePos] exposed body!",
-										partnerNameCapitalised+" molested [npc.namePos] vulnerable body!",
-										partnerNameCapitalised+" spent some time groping and fondling every part of [npc.namePos] body!")));
+										partnerNameCapitalised+"揉搓爱抚着[npc.namePos]暴露的身体！",
+										partnerNameCapitalised+"爱抚着[npc.namePos]脆弱的身体！",
+										partnerNameCapitalised+"对着[npc.namePos]身体的每一部分都抚摸揉搓了好一会儿！")));
 
-						effects.add("<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Molested:</span> "+effectDescriptions.toString());
+						effects.add("<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>被抚摸:</span> "+effectDescriptions.toString());
 						effectDescriptions.setLength(0);
 						
 					} else {
@@ -1253,20 +1253,20 @@ public class OccupancyUtil implements XMLSaving {
 								if(usingRealPartner) {
 									effectDescriptions.append(UtilText.parse(partner, slave,
 											UtilText.returnStringAtRandom(
-													partnerNameCapitalised+" came deep inside [npc2.namePos] [npc2.asshole+]!",
-													partnerNameCapitalised+" roughly fucked [npc2.namePos] [npc2.asshole+], before filling [npc2.herHim] with [npc.cum+]!",
-													partnerNameCapitalised+" filled [npc2.namePos] [npc2.asshole+] with [npc.her] [npc.cum+]!")));
-									effects.add(UtilText.parse("[style.colourSex(Received Anal:)] "+effectDescriptions.toString()));
+													partnerNameCapitalised+"在[npc2.namePos][npc2.asshole+]深处射了出来！",
+													partnerNameCapitalised+"粗暴地操干[npc2.namePos][npc2.asshole+]，随后在[npc.herHim]体内射满了[npc.cum+]！",
+													partnerNameCapitalised+"用[npc.cum+]填满了[npc2.namePos][npc2.asshole+]！")));
+									effects.add(UtilText.parse("[style.colourSex(接受肛交：)] "+effectDescriptions.toString()));
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.PENIS));
 									
 								} else {
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													partnerNameCapitalised+" came deep inside [npc.namePos] [npc.asshole+]!",
-													partnerNameCapitalised+" fucked [npc.namePos] [npc.asshole+], before filling [npc.herHim] with [npc.cum+]!",
-													partnerNameCapitalised+" filled [npc.namePos] [npc.asshole+] with cum!")));
-									effects.add("[style.colourSex(Received Anal:)] "+effectDescriptions.toString());
+													partnerNameCapitalised+"在[npc2.namePos][npc2.asshole+]深处射了出来！",
+													partnerNameCapitalised+"对着[npc.namePos][npc.asshole+]操了起来，随后在[npc.herHim]体内射满了[npc.cum+]！",
+													partnerNameCapitalised+"用精液填满了[npc.namePos][npc.asshole+]！")));
+									effects.add("[style.colourSex(接受肛交：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.PENIS));
 								}
@@ -1275,20 +1275,20 @@ public class OccupancyUtil implements XMLSaving {
 								if(usingRealPartner) {
 									effectDescriptions.append(UtilText.parse(partner, slave,
 											UtilText.returnStringAtRandom(
-													"[npc2.Name] came deep inside "+partnerName+"'s [npc.asshole+]!",
-													"[npc2.Name] roughly fucked "+partnerName+"'s [npc.asshole+], before filling [npc.herHim] with [npc2.cum+]!",
-													"[npc2.Name] filled "+partnerName+"'s [npc.asshole+] with [npc2.her] [npc2.cum+]!")));
-									effects.add(UtilText.parse("[style.colourSexDom(Performed Anal:)] "+effectDescriptions.toString()));
+													"[npc2.Name]在"+partnerName+"[npc.asshole+]深处射了出来！",
+													"[npc2.Name]粗暴地操干"+partnerName+"[npc.asshole+]，随后在[npc.herHim]体内射满了[npc.cum+]！",
+													"[npc2.Name]用[npc2.cum+]填满了"+partnerName+"[npc.asshole+]！")));
+									effects.add(UtilText.parse("[style.colourSexDom(进行肛交：)] "+effectDescriptions.toString()));
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ANUS));
 									
 								} else {
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													"[npc.Name] came deep inside "+partnerName+"'s asshole!",
-													"[npc.Name] roughly fucked "+partnerName+"'s asshole, before filling "+partnerHerHim+" with [npc.cum+]!",
-													"[npc.Name] filled "+partnerName+"'s asshole with [npc.her] [npc.cum+]!")));
-									effects.add("[style.colourSexDom(Performed Anal:)] "+effectDescriptions.toString());
+													"[npc.Name]在"+partnerName+"的肛门深处射了出来！",
+													"[npc.Name]粗暴地操干"+partnerName+"的肛门，随后在"+partnerHerHim+"体内射满了[npc.cum+]！",
+													"[npc.Name]用[npc.cum+]填满了"+partnerName+"的肛门！")));
+									effects.add("[style.colourSexDom(进行肛交：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ANUS));
 								}
@@ -1299,20 +1299,20 @@ public class OccupancyUtil implements XMLSaving {
 									if(partner.hasPenis()) {
 										effectDescriptions.append(UtilText.parse(partner, slave,
 												UtilText.returnStringAtRandom(
-														partnerNameCapitalised+" came deep down [npc2.namePos] throat!",
-														partnerNameCapitalised+" roughly face-fucked [npc2.name], before filling [npc2.her] stomach with [npc.cum+]!",
-														partnerNameCapitalised+" filled [npc2.namePos] stomach with [npc.her] [npc.cum+]!")));
-										effects.add("[style.colourSex(Gave Blowjob:)] "+effectDescriptions.toString());
+														partnerNameCapitalised+"在[npc2.namePos]的喉咙深处射了出来！",
+														partnerNameCapitalised+"粗暴地操着[npc2.name]的脸，随后在[npc2.her]的胃里射满了[npc.cum+]！",
+														partnerNameCapitalised+"用[npc.cum+]填满了[npc2.namePos]的胃！")));
+										effects.add("[style.colourSex(提供口交：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, SexAreaPenetration.PENIS));
 										
 									} else {
 										effectDescriptions.append(UtilText.parse(partner, slave,
 												UtilText.returnStringAtRandom(
-														partnerNameCapitalised+" got [npc2.name] to eat [npc.herHim] out!",
-														partnerNameCapitalised+" roughly ground [npc.her] pussy down over [npc2.namePos] mouth as [npc2.she] ate [npc.herHim] out!",
-														partnerNameCapitalised+" received cunnilingus from [npc2.namePos]!")));
-										effects.add("[style.colourSex(Performed Cunnilingus:)] "+effectDescriptions.toString());
+														partnerNameCapitalised+"让[npc2.name]舔弄[npc.herHim]！",
+														partnerNameCapitalised+"粗暴地将小穴压向[npc2.namePos]的嘴，让[npc2.she]舔自己！",
+														partnerNameCapitalised+"被[npc2.namePos]舔阴了！")));
+										effects.add("[style.colourSex(进行舔阴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.VAGINA));
 									}
@@ -1321,20 +1321,20 @@ public class OccupancyUtil implements XMLSaving {
 									if(!partnerGender.isFeminine()) {// If not feminine, it's a blowjob, otherwise cunnilingus
 										effectDescriptions.append(UtilText.parse(slave,
 												UtilText.returnStringAtRandom(
-														partnerNameCapitalised+" came deep down [npc.namePos] throat!",
-														partnerNameCapitalised+" face-fucked [npc.name], before filling [npc.her] stomach with hot cum!",
-														partnerNameCapitalised+" filled [npc.namePos] stomach with cum!")));
-										effects.add("[style.colourSex(Gave Blowjob:)] "+effectDescriptions.toString());
+														partnerNameCapitalised+"在[npc.namePos]的喉咙深处射了出来！",
+														partnerNameCapitalised+"操了[npc.name]的脸，随后将滚烫的精液注入了[npc.her]的肚子！",
+														partnerNameCapitalised+"用精液填满了[npc.namePos]肚子！")));
+										effects.add("[style.colourSex(提供口交：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, SexAreaPenetration.PENIS));
 										
 									} else {
 										effectDescriptions.append(UtilText.parse(slave,
 												UtilText.returnStringAtRandom(
-														partnerNameCapitalised+" got [npc.name] to eat "+partnerHerHim+" out!",
-														partnerNameCapitalised+" roughly ground "+partnerHer+" pussy down over [npc.namePos] mouth as [npc.she] ate "+partnerHerHim+" out!",
-														partnerNameCapitalised+" received cunnilingus from [npc.namePos]!")));
-										effects.add("[style.colourSex(Performed Cunnilingus:)] "+effectDescriptions.toString());
+														partnerNameCapitalised+"让[npc.name]舔弄自己！",
+														partnerNameCapitalised+"粗暴地将小穴压向[npc.namePos]的嘴，让[npc.she]舔自己！",
+														partnerNameCapitalised+"被[npc.namePos]舔阴了！")));
+										effects.add("[style.colourSex(进行舔阴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.VAGINA));
 									}
@@ -1347,20 +1347,20 @@ public class OccupancyUtil implements XMLSaving {
 									if(slavePenis && (slaveVagina?Math.random()<0.5f:true)) { // If slave has vagina available, 50/50 for oral type
 										effectDescriptions.append(UtilText.parse(partner, slave,
 												UtilText.returnStringAtRandom(
-														"[npc2.Name] came deep down "+partnerName+"'s throat!",
-														"[npc2.Name] roughly face-fucked "+partnerName+", before filling [npc.her] stomach with [npc2.cum+]!",
-														"[npc2.Name] filled "+partnerName+"'s stomach with [npc2.her] [npc2.cum+]!")));
-										effects.add(UtilText.parse("[style.colourSexDom(Received Blowjob:)] "+effectDescriptions.toString()));
+														"[npc2.Name]在"+partnerName+"的喉咙深处射了出来！",
+														"[npc2.Name]粗暴地操着"+partnerName+"的脸，随后在[npc.her]的胃里射满了[npc2.cum+]！",
+														"[npc2.Name]用[npc2.cum+]填满了"+partnerName+"的肚子！")));
+										effects.add(UtilText.parse("[style.colourSexDom(接受口交：)] "+effectDescriptions.toString()));
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH));
 										
 									} else {
 										effectDescriptions.append(UtilText.parse(partner, slave,
 												UtilText.returnStringAtRandom(
-														"[npc2.Name] got "+partnerName+" to eat [npc2.herHim] out!",
-														"[npc2.Name] roughly ground [npc2.her] pussy down over "+partnerName+"'s mouth as [npc.she] ate [npc2.herHim] out!",
-														"[npc2.Name] received cunnilingus from "+partnerName+"!")));
-										effects.add("[style.colourSexDom(Received Cunnilingus:)] "+effectDescriptions.toString());
+														"[npc2.Name]让"+partnerName+"舔弄[npc2.herHim]的下体！",
+														"[npc2.Name]粗暴地将小穴压向"+partnerName+"的嘴，让[npc.she]舔自己！",
+														"[npc2.Name]被"+partnerName+"舔阴了！")));
+										effects.add("[style.colourSexDom(接受舔阴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.TONGUE));
 									}
@@ -1369,20 +1369,20 @@ public class OccupancyUtil implements XMLSaving {
 									if(slavePenis && (slaveVagina?Math.random()<0.5f:true)) { // If slave has vagina available, 50/50 for oral type
 										effectDescriptions.append(UtilText.parse(slave,
 												UtilText.returnStringAtRandom(
-														"[npc.Name] came deep down "+partnerName+"'s throat!",
-														"[npc.Name] roughly face-fucked "+partnerName+", before filling "+partnerHer+" stomach with [npc.cum+]!",
-														"[npc.Name] filled "+partnerName+"'s stomach with [npc.her] [npc.cum+]!")));
-										effects.add(UtilText.parse("[style.colourSexDom(Received Blowjob:)] "+effectDescriptions.toString()));
+														"[npc.Name]在"+partnerName+"的喉咙深处射了出来！",
+														"[npc.Name]粗暴地操着"+partnerName+"的脸，随后在"+partnerHer+"的胃里射满了[npc.cum+]！",
+														"[npc.Name]用[npc.cum+]填满了"+partnerName+"的胃！")));
+										effects.add(UtilText.parse("[style.colourSexDom(接受口交：)] "+effectDescriptions.toString()));
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH));
 										
 									} else {
 										effectDescriptions.append(UtilText.parse(slave,
 												UtilText.returnStringAtRandom(
-														"[npc.Name] got "+partnerName+" to eat [npc.herHim] out!",
-														"[npc.Name] roughly ground [npc.her] pussy down over "+partnerName+"'s mouth as "+partnerShe+" ate [npc.herHim] out!",
-														"[npc.Name] received cunnilingus from "+partnerName+"!")));
-										effects.add("[style.colourSexDom(Received Cunnilingus:)] "+effectDescriptions.toString());
+														"[npc.Name]让"+partnerName+"舔弄[npc.herHim]的下体！",
+														"[npc.Name]粗暴地将小穴压向"+partnerName+"的嘴，让"+partnerShe+"舔自己！",
+														"[npc.Name]被"+partnerName+"舔阴了！")));
+										effects.add("[style.colourSexDom(接受舔阴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.TONGUE));
 									}
@@ -1393,22 +1393,22 @@ public class OccupancyUtil implements XMLSaving {
 								if(usingRealPartner) {
 									effectDescriptions.append(UtilText.parse(partner,
 											UtilText.returnStringAtRandom(
-													partnerNameCapitalised+" came deep inside "+UtilText.parse(slave, "[npc.namePos] [npc.nipples+]!"),
-													partnerNameCapitalised+" roughly fucked "+UtilText.parse(slave, "[npc.namePos] [npc.nipples+], before filling [npc.her] [npc.breasts+] with"+UtilText.parse(partner," [npc.cum+]!")),
-													partnerNameCapitalised+" filled "+UtilText.parse(slave, "[npc.namePos] [npc.nipples+]")+UtilText.parse(partner," with [npc.her] [npc.cum+]!"))));
+													partnerNameCapitalised+"在"+UtilText.parse(slave, "[npc.namePos][npc.nipples+]深处射了出来！"),
+													partnerNameCapitalised+"粗暴地操着"+UtilText.parse(slave, "[npc.namePos][npc.nipples+]，随后在[npc.namePos][npc.breasts+]中"+UtilText.parse(partner,"射满了[npc.cum+]！")),
+													partnerNameCapitalised+"用"+UtilText.parse(partner,"[npc.cum+]填满了")+UtilText.parse(slave, "[npc.namePos][npc.nipples+]！"))));
 										
-									effects.add("[style.colourSex(Nipples Fucked:)] "+effectDescriptions.toString());
+									effects.add("[style.colourSex(被操乳头：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE, SexAreaPenetration.PENIS));
 									
 								} else {
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													partnerNameCapitalised+" came deep inside [npc.namePos] [npc.nipples+]!",
-													partnerNameCapitalised+" fucked [npc.namePos] [npc.nipples+], before filling [npc.her] [npc.breasts+] with hot cum!",
-													partnerNameCapitalised+" filled [npc.namePos] [npc.nipples+] with cum!")));
+													partnerNameCapitalised+"在[npc.namePos][npc.nipples+]深处射了出来！",
+													partnerNameCapitalised+"对着[npc.namePos][npc.nipples+]操了起来，随后在[npc.her][npc.breasts+]内射满了[npc.cum+]！",
+													partnerNameCapitalised+"用精液装满了[npc.namePos][npc.nipples+]！")));
 									
-									effects.add("[style.colourSex(Nipples Fucked:)] "+effectDescriptions.toString());
+									effects.add("[style.colourSex(被操乳头：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE, SexAreaPenetration.PENIS));
 								}
@@ -1417,20 +1417,20 @@ public class OccupancyUtil implements XMLSaving {
 								if(usingRealPartner) {
 									effectDescriptions.append(UtilText.parse(partner, slave,
 											UtilText.returnStringAtRandom(
-													"[npc2.Name] came deep inside "+partnerName+"'s [npc.nipples+]!",
-													"[npc2.Name] roughly fucked "+partnerName+"'s [npc.nipples+], before filling [npc.her] [npc.breasts+] with [npc2.cum]!",
-													"[npc2.Name] filled "+partnerName+"'s [npc.nipples+] with [npc2.her] [npc2.cum+]!")));
-									effects.add("[style.colourSexDom(Nipple Fuck:)] "+effectDescriptions.toString());
+													"[npc2.Name]在"+partnerName+"[npc.nipples+]深处射了出来！",
+													"[npc2.Name]粗暴地操干"+partnerName+"[npc.nipples+]，随后在[npc.her][npc.breasts+]内射满了[npc2.cum]！",
+													"[npc2.Name]用[npc2.cum+]填满了"+partnerName+"[npc.nipples+]！")));
+									effects.add("[style.colourSexDom(操干乳头：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE));
 									
 								} else {
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													"[npc.Name] came deep inside "+partnerName+"'s nipples!",
-													"[npc.Name] fucked "+partnerName+"'s nipples, before filling "+partnerHer+" breasts with [npc.cum]!",
-													"[npc.Name] filled "+partnerName+"'s nipples with [npc.cum]!")));
-									effects.add("[style.colourSexDom(Nipple Fuck:)] "+effectDescriptions.toString());
+													"[npc.Name]在"+partnerName+"的乳头深处射了出来！",
+													"[npc.Name]操着"+partnerName+"的乳头，随后在"+partnerHer+"的乳房内射满了[npc.cum]！",
+													"[npc.Name]用[npc.cum]填满了"+partnerName+"的乳头！")));
+									effects.add("[style.colourSexDom(操干乳头：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE));
 								}
@@ -1440,71 +1440,71 @@ public class OccupancyUtil implements XMLSaving {
 								if(usingRealPartner) {
 									effectDescriptions.append(
 											UtilText.returnStringAtRandom(
-													partnerNameCapitalised+" came deep inside "+UtilText.parse(slave, "[npc.namePos] [npc.pussy+], "),
-													partnerNameCapitalised+" roughly fucked "+UtilText.parse(slave, "[npc.namePos] [npc.pussy+], "),
-													partnerNameCapitalised+" filled "+UtilText.parse(slave, "[npc.namePos] [npc.pussy+]")+UtilText.parse(partner," with [npc.her] [npc.cum+], ")));
+													partnerNameCapitalised+"在"+UtilText.parse(slave, "[npc.namePos][npc.pussy+]深处射了出来，"),
+													partnerNameCapitalised+"粗暴地操着"+UtilText.parse(slave, "[npc.namePos][npc.pussy+]，随后在[npc.herHim]体内射满了")+"[npc.cum+]！",
+													partnerNameCapitalised+"用"+UtilText.parse(partner,"[npc.cum+]填满了")+UtilText.parse(slave, "[npc.namePos][npc.pussy+]！")));
 	
 									slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS));
 									
 									if(slave.isVisiblyPregnant()) {
-										effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] already pregnant, the only result is a fresh creampie..."));
-										effects.add("[style.colourSex(Pussy Fucked:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "但由于[npc.sheIs]已经怀孕，所以是很安全的内射……"));
+										effects.add("[style.colourSex(被操小穴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else if(!slave.isImpregnationPhysicallyPossible()) {
-										effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] incapable of being impregnated, the only result is a fresh creampie..."));
-										effects.add("[style.colourSex(Pussy Fucked:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "但由于[npc.sheIs]无法怀孕，所以是很安全的内射……"));
+										effects.add("[style.colourSex(被操小穴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else if(slave.getSlavePermissionSettings().get(SlavePermission.PREGNANCY).contains(SlavePermissionSetting.PILLS_PROMISCUITY_PILLS)) {
 										if(slave.isHasAnyPregnancyEffects()) {
-											effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] on [#ITEM_innoxia_pills_sterility.getNamePlural(false)], there's no chance of [npc.herHim] getting pregnant."
-														+ " ([npc.She] already has a risk of pregnancy from a previous encounter, however...)"));
+											effectDescriptions.append(UtilText.parse(slave,"但由于[npc.sheIs]服用了[#ITEM_innoxia_pills_sterility.getNamePlural(false)]，便没有可能再怀孕。"
+														+ "(然而[npc.She]在之前的遭遇中就已经有怀孕风险了……)"));
 										} else {
-											effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] on [#ITEM_innoxia_pills_sterility.getNamePlural(false)], there's no chance of [npc.herHim] getting pregnant."));
+											effectDescriptions.append(UtilText.parse(slave,"但由于[npc.sheIs]服用了[#ITEM_innoxia_pills_sterility.getNamePlural(false)]，便没有可能再怀孕。"));
 										}
-										effects.add("[style.colourSex(Pussy Fucked:)] "+effectDescriptions.toString());
+										effects.add("[style.colourSex(被操小穴：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else {
-										effectDescriptions.append(UtilText.parse(slave, "resulting in a risk of pregnancy!"));
-										effects.add("[style.colourDeepPink(Pregnancy Risk:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "有怀孕风险！"));
+										effects.add("[style.colourDeepPink(怀孕风险：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 									}
 									
 								} else {
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													partnerNameCapitalised+" came deep inside [npc.namePos] [npc.pussy+], ",
-													partnerNameCapitalised+" fucked [npc.namePos] [npc.pussy+], before filling [npc.herHim] with [npc.cum+], ",
-													partnerNameCapitalised+" filled [npc.namePos] [npc.pussy+] with cum, ")));
+													partnerNameCapitalised+"在[npc.namePos][npc.pussy+]深处射了出来！",
+													partnerNameCapitalised+"对着[npc.namePos][npc.pussy+]操了起来，随后用[npc.cum+]填满了[npc.herHim]！",
+													partnerNameCapitalised+"用精液填满了[npc.namePos][npc.pussy+]！")));
 
 									slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS));
 		
 									if(slave.isVisiblyPregnant()) {
-										effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] already pregnant, the only result is a fresh creampie..."));
-										effects.add("[style.colourSex(Pussy Creampie:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "但由于[npc.sheIs]已经怀孕，所以是很安全的内射……"));
+										effects.add("[style.colourSex(小穴内射：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else if(!slave.isImpregnationPhysicallyPossible()) {
-										effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] incapable of being impregnated, the only result is a fresh creampie..."));
-										effects.add("[style.colourSex(Pussy Creampie:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "但由于[npc.sheIs]无法怀孕，所以是很安全的内射……"));
+										effects.add("[style.colourSex(小穴内射：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else if(slave.getSlavePermissionSettings().get(SlavePermission.PREGNANCY).contains(SlavePermissionSetting.PILLS_PROMISCUITY_PILLS)) {
 										if(slave.isHasAnyPregnancyEffects()) {
 											effectDescriptions.append(UtilText.parse(slave,
-													"but as [npc.sheIs] on [#ITEM_innoxia_pills_sterility.getNamePlural(false)], there's no chance of [npc.herHim] getting pregnant."
-													+ " ([npc.She] already has a risk of pregnancy from a previous encounter, however...)"));
+													"但由于[npc.sheIs]服用了[#ITEM_innoxia_pills_sterility.getNamePlural(false)]，便没有可能再怀孕。"
+													+ "(然而[npc.She]在之前的遭遇中就已经有怀孕风险了……)"));
 										} else {
-											effectDescriptions.append(UtilText.parse(slave, "but as [npc.sheIs] on [#ITEM_innoxia_pills_sterility.getNamePlural(false)], there's no chance of [npc.herHim] getting pregnant."));
+											effectDescriptions.append(UtilText.parse(slave,"但由于[npc.sheIs]服用了[#ITEM_innoxia_pills_sterility.getNamePlural(false)]，便没有可能再怀孕。"));
 										}
-										effects.add("[style.colourSex(Pussy Creampie:)] "+effectDescriptions.toString());
+										effects.add("[style.colourSex(小穴内射：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 										
 									} else {
-										effectDescriptions.append(UtilText.parse(slave, "resulting in a risk of pregnancy!"));
-										effects.add("[style.colourDeepPink(Pregnancy Risk:)] "+effectDescriptions.toString());
+										effectDescriptions.append(UtilText.parse(slave, "有怀孕风险！"));
+										effects.add("[style.colourDeepPink(怀孕风险：)] "+effectDescriptions.toString());
 										effectDescriptions.setLength(0);
 									}
 								}
@@ -1513,20 +1513,20 @@ public class OccupancyUtil implements XMLSaving {
 								if(usingRealPartner) {
 									effectDescriptions.append(UtilText.parse(partner, slave,
 											UtilText.returnStringAtRandom(
-													"[npc2.Name] came deep inside "+partnerName+"'s [npc.pussy+]!",
-													"[npc2.Name] roughly fucked "+partnerName+"'s [npc.pussy+], before filling [npc.herHim] with [npc2.cum+]!",
-													"[npc2.Name] filled "+partnerName+"'s [npc.pussy+] with [npc2.her] [npc2.cum+]!")));
-									effects.add(UtilText.parse("[style.colourSexDom(Fucked Pussy:)] "+effectDescriptions.toString()));
+													"[npc2.Name]在"+partnerName+"[npc.pussy+]深处射了出来！",
+													"[npc2.Name]粗暴地操干"+partnerName+"[npc.pussy+]，随后在[npc.herHim]体内射满了[npc.cum+]！",
+													"[npc2.Name]用[npc2.cum+]填满了"+partnerName+"[npc.pussy+]！")));
+									effects.add(UtilText.parse("[style.colourSexDom(操干小穴：)] "+effectDescriptions.toString()));
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, partner, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA));
 									
 								} else {
 									effectDescriptions.append(UtilText.parse(slave,
 											UtilText.returnStringAtRandom(
-													"[npc.Name] came deep inside "+partnerName+"'s pussy!",
-													"[npc.Name] roughly fucked "+partnerName+"'s pussy, before filling "+partnerHerHim+" with [npc.cum+]!",
-													"[npc.Name] filled "+partnerName+"'s pussy with [npc.her] [npc.cum+]!")));
-									effects.add("[style.colourSexDom(Fucked Pussy:)] "+effectDescriptions.toString());
+													"[npc.Name]在"+partnerName+"的小穴深处射了出来！",
+													"[npc.Name]粗暴地操干"+partnerName+"的小穴，随后在"+partnerHerHim+"体内射满了[npc.cum+]！",
+													"[npc.Name]用[npc.cum+]填满了"+partnerName+"的小穴！")));
+									effects.add("[style.colourSexDom(操干小穴：)] "+effectDescriptions.toString());
 									effectDescriptions.setLength(0);
 									slave.calculateGenericSexEffects(false, true, null, partnerSubspecies, partnerHalfDemonSubspecies, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA));
 								}
@@ -1601,12 +1601,12 @@ public class OccupancyUtil implements XMLSaving {
 					List<String> effects = new ArrayList<>();
 					if(slave.hasPenis()) {
 						slave.setPenisType(PenisType.NONE);
-						effects.add("[style.boldShrink(Lost penis)]");
+						effects.add("[style.boldShrink(失去阴茎)]");
 						
 					}
 					if(!slave.hasVagina()) {
 						slave.setVaginaType(RacialBody.valueOfRace(slave.getRace()).getVaginaType());
-						effects.add(UtilText.parse(slave, "[style.boldGrow(Gained [npc.vaginaRace] vagina)]"));
+						effects.add(UtilText.parse(slave, "[style.boldGrow(获得[npc.vaginaRace]阴道)]"));
 					}
 					return Util.stringsToStringList(effects, false);
 				}
@@ -1619,7 +1619,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(5)+1;
 					slave.incrementFemininity(increment);
-					return "[style.boldGrow(+"+increment+")] [style.boldFeminine(Femininity)]";
+					return "[style.boldGrow(+"+increment+")][style.boldFeminine(女性化程度)]";
 				}
 			});
 		}
@@ -1630,7 +1630,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementBreastSize(increment);
-					return "[style.boldGrow(Gained "+Util.capitaliseSentence(slave.getBreastSize().getCupSizeName())+"-cup breasts)]";
+					return "[style.boldGrow(获得"+Util.capitaliseSentence(slave.getBreastSize().getCupSizeName())+"罩杯的乳房)]";
 				}
 			});
 		}
@@ -1641,7 +1641,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementHipSize(increment);
-					return UtilText.parse(slave, "[style.boldGrow(Hips expanded to '[npc.hipSize]')]");
+					return UtilText.parse(slave, "[style.boldGrow(臀部增大至“[npc.hipSize]”)]");
 				}
 			});
 		}
@@ -1652,7 +1652,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementAssSize(increment);
-					return UtilText.parse(slave, "[style.boldGrow(Ass expanded to '[npc.assSize]')]");
+					return UtilText.parse(slave, "[style.boldGrow(屁股增大至“[npc.assSize]”)]");
 				}
 			});
 		}
@@ -1662,7 +1662,7 @@ public class OccupancyUtil implements XMLSaving {
 				@Override
 				public String applyEffects() {
 					slave.incrementLipSize(1);
-					return UtilText.parse(slave, "[style.boldGrow([npc.Lips] grown to '[npc.lipSize]')]");
+					return UtilText.parse(slave, "[style.boldGrow([npc.Lips]增大至“[npc.lipSize]”)]");
 				}
 			});
 		}
@@ -1685,12 +1685,12 @@ public class OccupancyUtil implements XMLSaving {
 					List<String> effects = new ArrayList<>();
 					if(slave.hasVagina()) {
 						slave.setVaginaType(VaginaType.NONE);
-						effects.add("[style.boldShrink(Lost vagina)]");
+						effects.add("[style.boldShrink(失去阴道)]");
 						
 					}
 					if(!slave.hasPenis()) {
 						slave.setPenisType(RacialBody.valueOfRace(slave.getRace()).getPenisType());
-						effects.add(UtilText.parse(slave, "[style.boldGrow(Gained [npc.penisRace] penis)]"));
+						effects.add(UtilText.parse(slave, "[style.boldGrow(获得[npc.penisRace]阴茎)]"));
 					}
 					return Util.stringsToStringList(effects, false);
 				}
@@ -1703,7 +1703,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(5)+1;
 					slave.incrementFemininity(-increment);
-					return "[style.boldShrink("+increment+")] [style.boldFeminine(Femininity)]";
+					return "[style.boldShrink("+increment+")][style.boldFeminine(女性化程度)]";
 				}
 			});
 		}
@@ -1714,7 +1714,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementBreastSize(-increment);
-					return "[style.boldShrink(Shrunk breasts to "+Util.capitaliseSentence(slave.getBreastSize().getCupSizeName())+"-cup)]";
+					return "[style.boldShrink(乳房缩小到"+Util.capitaliseSentence(slave.getBreastSize().getCupSizeName())+"罩杯)]";
 				}
 			});
 		}
@@ -1725,7 +1725,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementHipSize(-increment);
-					return UtilText.parse(slave, "[style.boldShrink(Hips shrunk to '[npc.hipSize]')]");
+					return UtilText.parse(slave, "[style.boldShrink(臀部缩小至“[npc.hipSize]”)]");
 				}
 			});
 		}
@@ -1736,7 +1736,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementAssSize(-increment);
-					return UtilText.parse(slave, "[style.boldShrink(Ass shrunk to '[npc.assSize]')]");
+					return UtilText.parse(slave, "[style.boldShrink(屁股缩小至“[npc.assSize]”)]");
 				}
 			});
 		}
@@ -1746,7 +1746,7 @@ public class OccupancyUtil implements XMLSaving {
 				@Override
 				public String applyEffects() {
 					slave.incrementLipSize(-1);
-					return UtilText.parse(slave, "[style.boldGrow([npc.Lips] shrunk to '[npc.lipSize]')]");
+					return UtilText.parse(slave, "[style.boldGrow([npc.Lips]缩小至“[npc.lipSize]”)]");
 				}
 			});
 		}
@@ -1769,12 +1769,12 @@ public class OccupancyUtil implements XMLSaving {
 					List<String> effects = new ArrayList<>();
 					if(!slave.hasPenis()) {
 						slave.setPenisType(RacialBody.valueOfRace(slave.getRace()).getPenisType());
-						effects.add("[style.boldGrow(Gained [npc.penisRace] penis)]");
+						effects.add("[style.boldGrow(获得[npc.penisRace]阴茎)]");
 						
 					}
 					if(!slave.hasVagina()) {
 						slave.setVaginaType(RacialBody.valueOfRace(slave.getRace()).getVaginaType());
-						effects.add(UtilText.parse(slave, "[style.boldGrow(Gained [npc.vaginaRace] vagina)]"));
+						effects.add(UtilText.parse(slave, "[style.boldGrow(获得[npc.vaginaRace]阴道)]"));
 					}
 					return Util.stringsToStringList(effects, false);
 				}
@@ -1787,7 +1787,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(5)+1;
 					slave.incrementFemininity(increment);
-					return "[style.boldGrow(+"+increment+")] [style.boldFeminine(Femininity)]";
+					return "[style.boldGrow(+"+increment+")][style.boldFeminine(女性化程度)]";
 				}
 			});
 		}
@@ -1798,7 +1798,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementBreastSize(increment);
-					return "[style.boldGrow(Gained "+Util.capitaliseSentence(slave.getBreastSize().getCupSizeName())+"-cup breasts)]";
+					return "[style.boldGrow(获得"+Util.capitaliseSentence(slave.getBreastSize().getCupSizeName())+"罩杯的乳房)]";
 				}
 			});
 		}
@@ -1809,7 +1809,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementHipSize(increment);
-					return UtilText.parse(slave, "[style.boldGrow(Hips expanded to '[npc.hipSize]')]");
+					return UtilText.parse(slave, "[style.boldGrow(臀部增大至“[npc.hipSize]”)]");
 				}
 			});
 		}
@@ -1820,7 +1820,7 @@ public class OccupancyUtil implements XMLSaving {
 				public String applyEffects() {
 					int increment = Util.random.nextInt(1)+1;
 					slave.incrementAssSize(increment);
-					return UtilText.parse(slave, "[style.boldGrow(Ass expanded to '[npc.assSize]')]");
+					return UtilText.parse(slave, "[style.boldGrow(屁股增大至“[npc.assSize]”)]");
 				}
 			});
 		}
@@ -1830,7 +1830,7 @@ public class OccupancyUtil implements XMLSaving {
 				@Override
 				public String applyEffects() {
 					slave.incrementLipSize(1);
-					return UtilText.parse(slave, "[style.boldGrow([npc.Lips] grown to '[npc.lipSize]')]");
+					return UtilText.parse(slave, "[style.boldGrow([npc.Lips]增大至“[npc.lipSize]”)]");
 				}
 			});
 		}
@@ -1853,7 +1853,7 @@ public class OccupancyUtil implements XMLSaving {
 		slave.setLastTimeHadSex((day*24*60l) + hourOfDay*60l, true);
 		
 		slave.generateSexChoices(false, npc);
-		String sexDescription = UtilText.parse(slave, npc, "[npc.Name] spent some time kissing and groping [npc2.name].");
+		String sexDescription = UtilText.parse(slave, npc, "[npc.Name]对着[npc2.name]又亲又摸。");
 		if(slave.getMainSexPreference(npc)!=null) {
 			SexType sexType = slave.getMainSexPreference(npc);
 			if(sexType.getPerformingSexArea()==SexAreaPenetration.PENIS && sexType.getTargetedSexArea()==SexAreaOrifice.VAGINA && !canImpregnate) {
@@ -1875,72 +1875,72 @@ public class OccupancyUtil implements XMLSaving {
 		switch(currentJob) {
 			case CLEANING:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"While dusting one of the corridors, [npc1.name] caught sight of [npc2.name],"
-								+ " and couldn't resist pulling [npc2.herHim] into an empty room for some "+paceName+" sex.")
+								"[npc1.name]在打扫走廊的时候发现了[npc2.name]，"
+								+ "忍不住把[npc2.herHim]拖进了一个空房间，来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case SECURITY:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"While patrolling one of the corridors, [npc1.name] caught sight of [npc2.name],"
-								+ " and couldn't resist pulling [npc2.herHim] into an empty room for some "+paceName+" sex.")
+								"[npc1.name]在走廊巡逻的时候发现了[npc2.name]，"
+								+ "忍不住把[npc2.herHim]拖进了一个空房间，来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case IDLE:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"[npc1.name] had some "+paceName+" fun with [npc2.name].")
+								"[npc1.name]跟[npc2.name]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case KITCHEN:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"While working in the kitchen, [npc1.name] saw [npc2.name] enter the pantry alone,"
-										+ " and couldn't resist following [npc2.herHim] inside, before locking the door and having some "+paceName+" sex with [npc2.herHim].")
+								"[npc1.name]在厨房工作的时候发现[npc2.name]独自进入了食品储藏室，"
+										+ "忍不住尾随[npc2.herHim]走了进去，然后锁上门跟[npc2.herHim]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case GARDEN:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"[npc1.Name] pulled [npc2.name] behind one of the bushes in the garden, before having some "+paceName+" sex with [npc2.herHim].")
+								"[npc1.Name]把[npc2.name]拖进花园里的一处树丛里，跟[npc2.herHim]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case LAB_ASSISTANT: case TEST_SUBJECT:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"When Lilaya left to take a break, [npc1.name] used the opportunity to have some "+paceName+" sex with [npc2.name] on one of the lab's tables.")
+								"莉莱雅休息的时候，[npc1.name]趁机跟[npc2.name]在实验室的桌子上来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case DOLL_STATUE:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"While stationed as a statue, [npc1.name] caught sight of [npc2.name],"
-									+ " and couldn't resist pulling [npc2.herHim] into an empty room for some "+paceName+" sex.")
+								"[npc1.name]在扮演雕像的时候发现了[npc2.name]，"
+									+ "忍不住把[npc2.herHim]拖进了一个空房间，来了一场"+paceName+"的性爱。")
 									+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case LIBRARY:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"[npc1.Name] pulled [npc2.name] behind one of the shelves in the Library, before having some "+paceName+" sex with [npc2.herHim].")
+								"[npc1.Name]把[npc2.name]拖进一处书架后，跟[npc2.herHim]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case OFFICE:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"Taking a small break from the paperwork assigned to [npc.herHim],"
-								+ " [npc.name] pushed [npc2.name] down over [npc.her] desk and had some "+paceName+" sex with [npc2.herHim].")
+								"[npc.name]在文书工作的闲暇时间，"
+								+ "把[npc2.name]推倒在桌子上，跟[npc2.herHim]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case BEDROOM:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"[npc1.Name] took advantage of being in your bedroom with [npc2.name], and had some "+paceName+" sex with [npc2.herHim].")
+								"[npc1.Name]趁着可以使用你房间的机会，跟[npc2.name]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case SPA:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"[npc1.Name] took advantage of being in the spa with [npc2.name], and had some "+paceName+" sex with [npc2.herHim].")
+								"[npc1.Name]趁着在水疗中心的好机会，跟[npc2.name]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case SPA_RECEPTIONIST:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"[npc1.Name] took advantage of being assigned to the spa's reception desk with [npc2.name], and had some "+paceName+" sex with [npc2.herHim].")
+								"[npc1.Name]趁着被安排在水疗中心前台的好机会，跟[npc2.name]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case DINING_HALL:
 				descriptions = Util.newArrayListOfValues(UtilText.parse(slave, npc,
-								"[npc1.Name] pushed [npc2.name] over the dining hall's table, before having some "+paceName+" sex with [npc2.herHim].")
+								"[npc1.Name]把[npc2.name]推到在餐厅的桌子上，跟[npc2.herHim]来了一场"+paceName+"的性爱。")
 								+ "<br/>[style.italicsSex("+sexDescription+")]");
 				break;
 			case PUBLIC_STOCKS:
@@ -1955,11 +1955,11 @@ public class OccupancyUtil implements XMLSaving {
 				
 			} else if(npc.getFetishDesire(Fetish.FETISH_NON_CON_SUB).isPositive()) {
 				descriptions.add(slave.incrementAffection(npc, 10));
-				descriptions.add(UtilText.parse(slave, npc, "Due to the fact that [npc2.name] enjoys being raped, [npc2.she] gained some affection towards [npc.name]!")
+				descriptions.add(UtilText.parse(slave, npc, "由于[npc2.name]享受被强奸的感觉，[npc2.she]对[npc.name]的好感提升了！")
 						+ "<br/>"+npc.incrementAffection(slave, 25));
 				
 			} else {
-				descriptions.add(UtilText.parse(slave, npc, "[npc2.Name] despises [npc.name] for having raped [npc2.herHim]!")
+				descriptions.add(UtilText.parse(slave, npc, "[npc2.Name]厌恶[npc.name]，因为自己被[npc.her]强奸了！")
 						+ "<br/>"+npc.incrementAffection(slave, -200));
 			}
 			return new SlaveryEventLogEntry(hourOfDay,
@@ -2055,14 +2055,14 @@ public class OccupancyUtil implements XMLSaving {
 					if(Math.random()<chanceToBond) {
 						if(Math.random()<chanceForPositiveOutcome) {
 							if(slave.getAffection(npc)<100 || npc.getAffection(slave)<100) {
-								descriptions.add(UtilText.parse(slave, npc, "[npc.Name] and [npc2.name] spent some time getting to know one another a little better."));
+								descriptions.add(UtilText.parse(slave, npc, "[npc.Name]和[npc2.name]在这段时间内对彼此的了解更加深刻了。"));
 								descriptions.add(slave.incrementAffection(npc, 5));
 								descriptions.add(npc.incrementAffection(slave, 5));
 							}
 							
 						} else {
 							if(slave.getAffection(npc)>-100 || npc.getAffection(slave)>-100) {
-								descriptions.add(UtilText.parse(slave, npc,"[npc.Name] and [npc2.name] spent some time arguing with one another."));
+								descriptions.add(UtilText.parse(slave, npc,"[npc.Name]和[npc2.name]这段时间内争吵了起来。"));
 								descriptions.add(slave.incrementAffection(npc, -5));
 								descriptions.add(npc.incrementAffection(slave, -5));
 							}

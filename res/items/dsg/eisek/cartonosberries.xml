@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA["Grown by the dragons of the DSG Farmer's Guild" is lightly embossed under the carton.]]></authorTag>
+		<authorTag><![CDATA[“由DSG农民工会的巨龙培育”几个字浮现在盒子下方。]]></authorTag>
 		<value>5</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[carton of strawberries]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[cartons of strawberries]]></namePlural>
-		<description><![CDATA[A carton of berries picked from a domestic strawberry plant. They have a faint, translucent glow about them when under sunlight.]]></description>
-		<useDescriptor>eat</useDescriptor>
+		<determiner><![CDATA[一盒]]></determiner>
+		<name><![CDATA[盒装草莓]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[盒装草莓]]></namePlural>
+		<description><![CDATA[一个装满了从家庭草莓植物采摘的草莓的盒子。在阳光下，它们散发着淡淡的半透明光芒。]]></description>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -24,9 +24,9 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Increases)] [style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])] by 7 for 1 hour.]]></line>
-			<line><![CDATA[[style.colourBlueLight(Changes)] the flavour of all fluids to [style.colourCrimson(strawberry)].]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[每小时[style.boldGood(增加)]7个[style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])]。]]></line>
+			<line><![CDATA[[style.colourBlueLight(改变)]液体的风味为[style.colourCrimson(草莓味)]。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -47,9 +47,9 @@
 				[##npc.addStatusEffect(SE_dsg_item_fruit_buff, 3600)]
 			#ENDIF
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(feel)] vaguely healthier...
+				[npc.Name]感到略微健康了一点……
 			</p>
-		]]></applyEffects>
+]]></applyEffects>
 		
 		<itemTags>
 			<tag>SOLD_BY_EISEK</tag>
@@ -59,10 +59,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			[npc.Name] gingerly [npc.verb(pick)] a strawberry from the carton and [npc.verb(start)] eating it, but soon [npc.verb(start)] stuffing them into [npc.her] mouth. It doesn't take long to empty the carton after that...
+			[npc.Name]小心翼翼地从盒子里拿出一个草莓，然后开始吃，但很快就开始把它们快速地塞进嘴里。之后不久，盒子就被清空了……
 		]]></selfUse>
 		<otherUse><![CDATA[
-			[npc.Name] gingerly [npc.verb(pick)] a strawberry from the carton for [npc2.name] to eat, but soon [npc2.name] takes the whole carton from [npc.her] and [npc2.verb(start)] stuffing them into [npc.her] mouth. It doesn't take long to empty the carton after that...
+			[npc.Name]小心翼翼地从盒子里拿出一个草莓递给[npc2.name]吃，但很快[npc2.name]从[npc.her]手中夺走整个盒子，然后开始将它们塞进嘴里。之后不久，盒子就被清空了……
 		]]></otherUse>
 	</useDescriptions>
 

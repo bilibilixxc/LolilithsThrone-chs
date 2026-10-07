@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="start">
@@ -15,8 +15,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Find Meraxis]]></responseTitle>
-				<responseTooltip><![CDATA[Head over to The Red Dragon and tell Meraxis that an important meeting is about to begin.]]></responseTooltip>
+				<responseTitle><![CDATA[寻找梅拉克西丝]]></responseTitle>
+				<responseTooltip><![CDATA[前往红龙酒馆，告诉梅拉克西丝一场重要的会议即将开始。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_find_meraxis]]></nextDialogue>
 			</response>
 		</responses>
@@ -35,8 +35,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wall's End]]></responseTitle>
-				<responseTooltip><![CDATA[Head over to Wall's End to see if Meraxis is there.]]></responseTooltip>
+				<responseTitle><![CDATA[墙之尽头]]></responseTitle>
+				<responseTooltip><![CDATA[前往墙之尽头，看看梅拉克西丝是否在那里。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_walls_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -56,8 +56,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Approach]]></responseTitle>
-				<responseTooltip><![CDATA[You're going to have to interrupt Meraxis's lesson.]]></responseTooltip>
+				<responseTitle><![CDATA[接近]]></responseTitle>
+				<responseTooltip><![CDATA[你不得不打断梅拉克西丝的课程。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_walls_end_continue]]></nextDialogue>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_meraxis_walls_end_fountain_scene_demons_present, false)]
@@ -76,19 +76,19 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Meeting]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis that there's an important meeting in the town hall and that there's no time for this.]]></responseTooltip>
+				<responseTitle><![CDATA[会面]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝市政厅有一场重要的会议，没时间耽搁了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_walls_end_no_time]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Pose attempt]]></responseTitle>
+				<responseTitle><![CDATA[尝试摆姿势]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.hasTraitActivated(PERK_CHUUNI))
-						You don't need to 'attempt' to strike a pose! You're [pc.name]; the chosen one [pc.herself]!
+						你根本不需要“尝试”摆姿势！你可是[pc.name]；天选之人！
 					#ELSE
-						Do your best to strike a heroic pose for Meraxis.
+						尽你所能在梅拉克西丝面前摆出一个英雄般的姿势。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -105,8 +105,8 @@
 				</requiredPerks>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Ultimate pose]]></responseTitle>
-				<responseTooltip><![CDATA[Show Meraxis and the crowd what a real ultimate pose looks like!]]></responseTooltip>
+				<responseTitle><![CDATA[终极姿势]]></responseTitle>
+				<responseTooltip><![CDATA[向梅拉克西丝和围观的人群展示什么才叫真正的终极姿势！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_walls_end_chuuni]]></nextDialogue>
 			</response>
 		</responses>
@@ -126,8 +126,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Town hall]]></responseTitle>
-				<responseTooltip><![CDATA[Accompany Meraxis back to the town hall so that you can attend the meeting.]]></responseTooltip>
+				<responseTitle><![CDATA[市镇议会]]></responseTitle>
+				<responseTooltip><![CDATA[陪梅拉克西丝回到市政厅参加会议。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_return]]></nextDialogue>
 			</response>
 		</responses>
@@ -148,8 +148,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Town hall]]></responseTitle>
-				<responseTooltip><![CDATA[Accompany Meraxis back to the town hall so that you can attend the meeting.]]></responseTooltip>
+				<responseTitle><![CDATA[市镇议会]]></responseTitle>
+				<responseTooltip><![CDATA[陪梅拉克西丝回到市政厅参加会议。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_return]]></nextDialogue>
 			</response>
 		</responses>
@@ -170,8 +170,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Town hall]]></responseTitle>
-				<responseTooltip><![CDATA[Accompany Meraxis back to the town hall so that you can attend the meeting.]]></responseTooltip>
+				<responseTitle><![CDATA[市镇议会]]></responseTitle>
+				<responseTooltip><![CDATA[陪梅拉克西丝回到市政厅参加会议。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_return]]></nextDialogue>
 			</response>
 		</responses>
@@ -196,8 +196,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Begin meeting]]></responseTitle>
-				<responseTooltip><![CDATA[The meeting begins.]]></responseTooltip>
+				<responseTitle><![CDATA[开始会议]]></responseTitle>
+				<responseTooltip><![CDATA[会议开始了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_meeting_start]]></nextDialogue>
 			</response>
 		</responses>
@@ -225,8 +225,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Weapons]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Hammer what can be done about the weapon shortage.]]></responseTooltip>
+				<responseTitle><![CDATA[武器]]></responseTitle>
+				<responseTooltip><![CDATA[询问锤子关于武器短缺的对策。]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_elis_defence_meeting_weapons))
 						innoxia_quests_main_elisDefenceMeeting_meeting_continuation
@@ -245,8 +245,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Spells]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Minotallys if she's powerful enough to shield the town from Lunette's spells.]]></responseTooltip>
+				<responseTitle><![CDATA[法术]]></responseTitle>
+				<responseTooltip><![CDATA[询问米诺塔莉丝她是否有足够的力量为小镇抵挡露内特的法术。]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_elis_defence_meeting_spells))
 						innoxia_quests_main_elisDefenceMeeting_meeting_continuation
@@ -268,8 +268,8 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Meraxis?]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Meraxis what she means by being able to solve both problems.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝？]]></responseTitle>
+				<responseTooltip><![CDATA[询问梅拉克西丝她说的能同时解决两个问题是什么意思。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_meeting_takahashi]]></nextDialogue>
 			</response>
 		</responses>
@@ -285,8 +285,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Youko]]></responseTitle>
-				<responseTooltip><![CDATA[Ask everyone what the problem with the youko is.]]></responseTooltip>
+				<responseTitle><![CDATA[妖狐]]></responseTitle>
+				<responseTooltip><![CDATA[询问大家妖狐的问题是什么。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_meeting_youko]]></nextDialogue>
 			</response>
 		</responses>
@@ -305,8 +305,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[No choice]]></responseTitle>
-				<responseTooltip><![CDATA[As dangerous as these youko may be, there's no other option but to go with Meraxis's plan.]]></responseTooltip>
+				<responseTitle><![CDATA[别无选择]]></responseTitle>
+				<responseTooltip><![CDATA[尽管这些妖狐可能很危险，但除了按梅拉克西丝的计划行事，别无他法。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_meeting_final]]></nextDialogue>
 			</response>
 		</responses>
@@ -322,8 +322,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Leave the town hall with everyone else.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[和其他人一起离开市政厅。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_elisDefenceMeeting_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -349,8 +349,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that the meeting is over, you wonder where to go to next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[会议结束了，你在想接下来该去哪里……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>

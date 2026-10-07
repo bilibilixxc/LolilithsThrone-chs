@@ -93,11 +93,11 @@ public class DominionExpress {
 		muleRewards = new ArrayList<>();
 		// Basic mule: Add horse-morph penis/ass, feminine++, boobs++:
 		muleRewards.add(
-				new MuleReward("Basic [style.Mule]", "Get rid of your pussy and gain a horse-morph cock and ass, as well as big boobs and a feminine figure!", 5) {
+				new MuleReward("基础[style.Mule]", "消去你的小穴，获得马化形的鸡巴和屁股、巨乳以及女性化的身材！", 5) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -127,14 +127,14 @@ public class DominionExpress {
 				});
 		// Taur: Makes lower body taur:
 		muleRewards.add(
-				new MuleReward("Taurrific", "Become a centaur and finally get that feral horse body you've always dreamed of!", 5) {
+				new MuleReward("半人马化", "成为半人马，获得你梦寐以求的兽态下半身！", 5) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						if(Main.game.getPlayer().getLegConfiguration()==LegConfiguration.QUADRUPEDAL) {
-							return new Value<>(false, "You are already a taur, so this reward will do nothing!");
+							return new Value<>(false, "你已经是半兽身人了，所以该奖励没有作用！");
 						}
 						return new Value<>(true, "");
 					}
@@ -160,11 +160,11 @@ public class DominionExpress {
 				});
 		// Ass-pussy: Lubrication, puffy, depth, muscles.
 		muleRewards.add(
-				new MuleReward("Ass-pussy", "Have your ass turned into the perfect sexual orifice!", 15) {
+				new MuleReward("屁穴", "将你的肛门转化成完美的性爱用腔穴！", 15) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -183,11 +183,11 @@ public class DominionExpress {
 				});
 		// Throat-pussy: Bigger lips, wetter throat, depth, muscles.
 		muleRewards.add(
-				new MuleReward("Throat-pussy", "Sucking horse-cock will never be the same again after this!", 15) {
+				new MuleReward("喉穴", "从此以后，吮吸马屌的感觉就再也不一样了！", 15) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -207,11 +207,11 @@ public class DominionExpress {
 				});
 		// Ass-licker: Bigger lips, wetter tongue, longer tongue.
 		muleRewards.add(
-				new MuleReward("Ass-licker", "Big, puffy lips and a long, strong tongue are just what you need to give all those horse-asses the love they deserve!", 15) {
+				new MuleReward("舔肛者", "大而丰满的嘴唇和长而有力的舌头，向给那些马屁股应得的宠爱，就得需要这些！", 15) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -231,14 +231,14 @@ public class DominionExpress {
 				});
 		// Hung: Penis size+, more cum, bigger balls.
 		muleRewards.add(
-				new MuleReward("Hung like a Horse", "You'll love the feeling of having a big, thick cock swinging back and forth while you're getting rutted!", 25) {
+				new MuleReward("晃荡马屌", "你喜欢被上的时候有一根粗大的阴茎在身下来回摆动！", 25) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						if(!Main.game.getPlayer().hasPenisIgnoreDildo()) {
-							return new Value<>(false, "You need to have a penis in order to receive this reward!");
+							return new Value<>(false, "你需要拥有阴茎，才能获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -261,14 +261,14 @@ public class DominionExpress {
 				});
 		// Sissy mule: Penis size-, smaller balls.
 		muleRewards.add(
-				new MuleReward("Sissy-[style.mule]", "Show your partners what a submissive little sissy-[style.mule] you are by having a pathetically-tiny cock between your legs!", 25) {
+				new MuleReward("娘炮[style.mule]", "两腿间夹着一根小得可怜的鸡巴，向你的伴侣展示你是个多么顺从的娘炮[style.mule]！", 25) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						if(!Main.game.getPlayer().hasPenisIgnoreDildo()) {
-							return new Value<>(false, "You need to have a penis in order to receive this reward!");
+							return new Value<>(false, "你需要拥有阴茎，才能获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -296,11 +296,11 @@ public class DominionExpress {
 				});
 		// Top-heavy: Breast size+, puffy nipples, nipple size+
 		muleRewards.add(
-				new MuleReward("Top-heavy", "Boost the size of your breasts and give those centaur slaves something to stare at (and squeeze)!", 25) {
+				new MuleReward("上身沉甸", "增大你的胸部，让那些半人马奴隶有东西可看(也可以捏)！", 25) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -319,11 +319,11 @@ public class DominionExpress {
 				});
 		// Subby slut: submissive, oral giving, anal giving, penis receiving, anal receiving
 		muleRewards.add(
-				new MuleReward("Subby Slut", "Let us help you to remember what a dirty little [style.mule] slut you are!", 50) {
+				new MuleReward("温驯荡妇", "来帮你牢牢记住自己是一个多么下流的[style.mule]小婊子吧！", 50) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -343,11 +343,11 @@ public class DominionExpress {
 				});
 		// Bimbo: Add bimbo fetish, big lips, bleach-blonde hair, breast size+
 		muleRewards.add(
-				new MuleReward("Bimbolicious", "Thinking about stuff other than submitting to horse-cock and horse-ass is, like, totally annoying, isn't it?", 50) {
+				new MuleReward("无脑大胸", "除了屈服于马屌和马屁股之外，还需要去想别的事情，那可太讨厌了，不是吗？", 50) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							return new Value<>(false, "You need to be able to access your mouth to receive this reward!");
+							return new Value<>(false, "你需要能够触碰你的口腔，来获得这个奖励！");
 						}
 						return new Value<>(true, "");
 					}
@@ -383,11 +383,11 @@ public class DominionExpress {
 				});
 		
 		muleRewards.add(
-				new MuleReward("Silver collar", "Get that shiny upgrade! With this, you'll be permitted to service Mistress Natalya once per day!", 100) {
+				new MuleReward("银质项圈", "获得这个闪闪发亮的升级！有了这个之后，你允许为主人娜塔莉亚提供性服务，每天一次！", 100) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(getPlayerCollar().getColour(0)!=PresetColour.CLOTHING_BRONZE) {
-							return new Value<>(false, "You've already upgraded your collar to silver!");
+							return new Value<>(false, "你已经把项圈升级成银色了！");
 						}
 						return new Value<>(true, "");
 					}
@@ -401,14 +401,14 @@ public class DominionExpress {
 				});
 		
 		muleRewards.add(
-				new MuleReward("Gold collar", "Mistress Natalya has promised to let any gold [style.mule] dominate her, but let's be real here; there's no way you're ever going to be able to afford this!", 1000) {
+				new MuleReward("金质项圈", "主人娜塔莉亚答应任何黄金级的[style.mule]都可以支配她，但说实话，你根本不可能买得起这个！", 1000) {
 					@Override
 					public Value<Boolean, String> isAvailable() {
 						if(getPlayerCollar().getColour(0)==PresetColour.CLOTHING_GOLD) {
-							return new Value<>(false, "You've already upgraded your collar to gold!");
+							return new Value<>(false, "你已经把项圈升级成金色了！");
 						}
 						if(getPlayerCollar().getColour(0)!=PresetColour.CLOTHING_SILVER) {
-							return new Value<>(false, "You need to upgrade your collar to silver before advancing to gold!");
+							return new Value<>(false, "你要先把项圈升级成银色，才能再升级成金色！");
 						}
 						return new Value<>(true, "");
 					}
@@ -504,7 +504,7 @@ public class DominionExpress {
 		
 		slave.removePersonalityTraits(PersonalityCategory.SPEECH);
 		
-		slave.setName(new NameTriplet("Thunder"));
+		slave.setName(new NameTriplet("雷霆"));
 		slave.setPlayerKnowsName(true);
 
 		slave.setSkinCovering(new Covering(BodyCoveringType.HUMAN, PresetColour.SKIN_OLIVE), true);
@@ -583,7 +583,7 @@ public class DominionExpress {
 				
 			} else {
 				if(index==0) {
-					return new Response("Exit", "Tell the receptionist that you made a mistake and head back out into the warehouse district.", Warehouses.WAREHOUSE_DISTRICT) {
+					return new Response("离开", "告诉接待员你走错了路，转身返回仓库区域。", Warehouses.WAREHOUSE_DISTRICT) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_WAREHOUSES);
@@ -591,7 +591,7 @@ public class DominionExpress {
 					};
 					
 				} else if(index==1) {
-					return new Response("Show card", "Show the receptionist the card you received from Natalya.", INITIAL_ENTRANCE_CARD_SHOWN);
+					return new Response("展示卡片", "给接待员看看你从娜塔莉亚手里得到的卡片。", INITIAL_ENTRANCE_CARD_SHOWN);
 				}
 				return null;
 			}
@@ -625,7 +625,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Exit", "Head back out into the warehouse district.", Warehouses.WAREHOUSE_DISTRICT) {
+				return new Response("离开", "转身返回仓库区域。", Warehouses.WAREHOUSE_DISTRICT) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_WAREHOUSES);
@@ -650,12 +650,12 @@ public class DominionExpress {
 			if(wearingMuleCollar()) {
 				if(index==1) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Attract attention", "As you are unable to access your mouth, you cannot service any centaur slaves, so there's no point in trying to attract their attention...", null);
+						return new Response("吸引注意力", "因为你不能使用你的嘴，你没法服务任何半人马奴隶，没办法吸引他们的注意力……", null);
 						
 					} else {
 						return new ResponseEffectsOnly(
-								"Look for partner",
-								"With your [style.mule] choker on display, you know that you'll easily be able to attract the attention of a passing centaur slave..."){
+								"寻找同伴",
+								"你展示着脖子上的[style.mule]项圈，你知道自己能轻易地吸引过路的半人马奴隶的注意……"){
 								@Override
 								public int getSecondsPassed() {
 									return 5*60;
@@ -715,13 +715,13 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Machine", "Approach the machine and see if you can interact with it...", FILLY_STATION_MACHINE);
+				return new Response("机器", "靠近机器看看能不能和它互动……", FILLY_STATION_MACHINE);
 				
 			} else if(index==2) {
 				if(Main.game.getCurrentDialogueNode()==FILLY_STATION_POSTER) {
-					return new Response("Poster", "You're already reading the informative poster...", null);
+					return new Response("海报", "你已经在读信息很多的海报了……", null);
 				}
-				return new Response("Poster", "Read the informative poster that's taped to the wall beside the arcane machine.", FILLY_STATION_POSTER);
+				return new Response("海报", "奥术机器旁边的墙上贴着一张信息很多的海报，读读它。", FILLY_STATION_POSTER);
 			}
 			return null;
 		}
@@ -768,7 +768,7 @@ public class DominionExpress {
 						Value<Boolean, String> available = fr.isAvailable();
 						sb.append("<div class='container-full-width inner' style='margin-bottom:4px;'>");
 							sb.append((available.getKey()?"[style.boldPink(":"[style.boldBad(")+fr.getName()+":)] ");
-							sb.append((points<fr.getCost()?"[style.colourBad(":"[style.colourPinkLight(")+fr.getCost()+")] [style.colourPinkLight([style.Mule] Points)]<br/>");
+							sb.append((points<fr.getCost()?"[style.colourBad(":"[style.colourPinkLight(")+fr.getCost()+")][style.colourPinkLight([style.Mule]点数)]<br/>");
 							sb.append(fr.getDescription());
 							if(!available.getKey()) {
 								sb.append("<br/>[style.italicsBad("+available.getValue()+")]");
@@ -783,7 +783,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Step back", "Step away from the machine...", FILLY_STATION);
+				return new Response("退开", "从机械旁边退开……", FILLY_STATION);
 			}
 			if(wearingMuleCollar()) {
 				List<Response> responses = new ArrayList<>();
@@ -794,10 +794,10 @@ public class DominionExpress {
 						responses.add(new Response(fr.getName()+" ("+fr.getCost()+")", fr.getDescription()+"<br/>[style.italicsBad("+available.getValue()+")]", null));
 						
 					} else if(points<fr.getCost()) {
-						responses.add(new Response(fr.getName()+" ("+fr.getCost()+")", fr.getDescription()+"<br/>[style.italicsBad(You "+(points==0?"have no":"only have "+points)+" [style.mule] points, so cannot afford the cost of "+fr.getCost()+"!)]", null));
+						responses.add(new Response(fr.getName()+" ("+fr.getCost()+")", fr.getDescription()+"<br/>[style.italicsBad(你"+(points==0?"没有":"只有"+points)+"[style.mule]点数，付不起"+fr.getCost()+"！)]", null));
 						
 					} else {
-						responses.add(new Response(fr.getName()+" ("+fr.getCost()+")", fr.getDescription()+"<br/>[style.italicsPinkLight(You have "+points+" [style.mule] points, and this will cost you "+fr.getCost()+"!)]", FILLY_STATION_REWARD) {
+						responses.add(new Response(fr.getName()+" ("+fr.getCost()+")", fr.getDescription()+"<br/>[style.italicsPinkLight(你拥有"+points+"[style.mule]点数，这将花费你"+fr.getCost()+"！)]", FILLY_STATION_REWARD) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(fr.applyEffect());
@@ -826,7 +826,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue interacting with the [style.mule] reward station.", FILLY_STATION_MACHINE);
+				return new Response("继续", "继续与[style.mule]奖品站互动。", FILLY_STATION_MACHINE);
 			}
 			return null;
 		}
@@ -856,11 +856,11 @@ public class DominionExpress {
 			if(index==1) {
 				if(Main.game.getPlayer().isQuestCompleted(QuestLine.ROMANCE_NATALYA)) {
 					if(!wearingMuleCollar()) {
-						return new Response("Enter", "You cannot see Mistress Natalya without wearing your [style.mule] choker!", null);
+						return new Response("进入", "你没有佩戴[style.mule]项圈，不能见娜塔莉亚小姐！", null);
 					} else if(!isPlayerBodyCorrect()) {
-						return new Response("Enter", "You cannot see Mistress Natalya without being a busty [style.shemale]!", null);
+						return new Response("进入", "你没有丰满的[style.shemale]，不能和娜塔莉亚小姐见面！", null);
 					}
-					return new Response("Enter", "Enter the stables and look for centaur slaves to service...", STABLES_INTERIOR) {
+					return new Response("进入", "进入马厩，寻找半人马奴隶提供服务……", STABLES_INTERIOR) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "STABLES_ENTERED"));
@@ -868,7 +868,7 @@ public class DominionExpress {
 					};
 					
 				} else {
-					return new Response("Enter", "As you are not a slave or qualified [style.mule], you cannot enter the stables...", null);
+					return new Response("进入", "因为你不是奴隶或合格的[style.mule]，不能进入马厩……", null);
 				}
 			}
 			return null;
@@ -887,16 +887,16 @@ public class DominionExpress {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index==0) {
-				return "Stables";
+				return "马厩";
 			} else if(index==1) {
-				return "Favourites";
+				return "最爱";
 			}
 			return null;
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Exit", "Exit the stables and head back out into the main warehouse...", CORRIDOR) {
+				return new Response("离开", "离开马厩，回到主仓库……", CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.DOMINION_EXPRESS, PlaceType.DOMINION_EXPRESS_CORRIDOR, false);
@@ -908,12 +908,12 @@ public class DominionExpress {
 			if(responseTab==0) {
 				if(index==1) {
 					if(getSavedSlaves().size()>=10) {
-						return new Response("Centaur", "You already have the maximum amount of favourite slaves (10)...", null);
+						return new Response("半人马", "你喜爱的奴隶数量已达到最大值(10)……", null);
 					}
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Centaur", "You cannot gain access to your mouth, and so cannot service any slaves...", null);
+						return new Response("半人马", "你无法触碰你的嘴，所以不能服务任何奴隶……", null);
 					}
-					return new Response("Centaur", "Search for a centaur to service...", STABLE_SEX) {
+					return new Response("半人马", "寻找一位半人马提供服务……", STABLE_SEX) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.MASCULINE;
@@ -929,12 +929,12 @@ public class DominionExpress {
 					
 				} else if(index==2) {
 					if(getSavedSlaves().size()>=10) {
-						return new Response("Centauress", "You already have the maximum amount of favourite slaves (10)...", null);
+						return new Response("半人马", "喜爱你的奴隶已达到最大值(10)……", null);
 					}
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Centauress", "You cannot gain access to your mouth, and so cannot service any slaves...", null);
+						return new Response("半人马",  "你无法控制你的嘴，因此也无法服务任何奴隶……", null);
 					}
-					return new Response("Centauress", "Search for a centauress to service...", STABLE_SEX) {
+					return new Response("女半人马", "寻找一位女半人马提供服务……", STABLE_SEX) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.FEMININE;
@@ -950,12 +950,12 @@ public class DominionExpress {
 					
 				} else if(index==5) {
 					if(Main.game.getCurrentDialogueNode()==STABLE_SHOWER) {
-						return new Response("Shower", "You have just taken a shower!", null);
+						return new Response("洗澡", "你刚刚才洗过澡！", null);
 					}
-					return new Response("Shower",
-								"Use the stable's shower facilities to clean yourself."
-									+ "<br/>[style.italicsGood(Cleans <b>a maximum of "+Units.fluid(500)+"</b> of fluids from all orifices.)]"
-									+ "<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]",
+					return new Response("洗澡",
+								"你可以在在马场的淋浴设施里清洗干净。"
+									+ "<br/>[style.italicsGood(从所有腔穴中清理<b>最多"+Units.fluid(500)+"</b>液体。)]"
+									+ "<br/>[style.italicsGood(将<b>仅会</b>清理当前装备的衣物。)]",
 								STABLE_SHOWER);
 				}
 				
@@ -963,10 +963,10 @@ public class DominionExpress {
 				List<Response> responses = new ArrayList<>();
 				for(GameCharacter slave : getSavedSlaves()) {
 					if(!getSlaves().contains(slave)) {
-						responses.add(new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "[npc.Name] is out working at the moment, and as such is unavailable for you to sexually service..."), null));
+						responses.add(new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "[npc.Name]目前出差在外，无法与你做爱……"), null));
 						
 					} else {
-						responses.add(new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "Find [npc.namePos] stall and offer to sexually service [npc.herHim] again..."), STABLE_SEX) {
+						responses.add(new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "找到[npc.namePos]的摊位，和[npc.herHim]做爱……"), STABLE_SEX) {
 							@Override
 							public void effects() {
 								activeSlave = slave;
@@ -1003,8 +1003,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Suck cock",
-						UtilText.parse(activeSlave, "Drop down onto your knees and suck [npc.namePos] cock."),
+						"吮吸鸡巴",
+						UtilText.parse(activeSlave, "跪下来嗦[npc.namePos]的鸡巴。"),
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -1035,8 +1035,8 @@ public class DominionExpress {
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						"Anilingus",
-						UtilText.parse(activeSlave, "Drop down onto your knees behind [npc.name] and give [npc.herHim] a rimjob."),
+						"吻肛",
+						UtilText.parse(activeSlave, "跪向[npc.name]，给[npc.herHim]舔肛。"),
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -1059,11 +1059,11 @@ public class DominionExpress {
 				
 			} else if(index==3) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-					return new Response("Mounted", UtilText.parse(activeSlave, "You cannot gain access to your anus, and so cannot get mounted by [npc.name]..."), null);
+					return new Response("顶入", UtilText.parse(activeSlave, "你无法控制肛门，没法让[npc.name]进入……"), null);
 				}
 				return new ResponseSex(
-						"Mounted",
-						UtilText.parse(activeSlave, "Present your [pc.asshole+] to [npc.name] and let [npc.herHim] mount you."),
+						"被骑",
+						UtilText.parse(activeSlave, "把你[pc.asshole+]露给[npc.name]看，让[npc.herHim]进入你。"),
 						true,
 						false,
 						new SMDominionExpress(SexPosition.ALL_FOURS,
@@ -1097,10 +1097,10 @@ public class DominionExpress {
 		}
 	};
 
-	public static final DialogueNode AFTER_STABLE_SEX = new DialogueNode("Finished", "The slave has finished with you...", true) {
+	public static final DialogueNode AFTER_STABLE_SEX = new DialogueNode("结束", "奴隶和你做完了……", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(activeSlave, "[npc.Name] has finished with you...");
+			return UtilText.parse(activeSlave, "[npc.Name]和你做够了……");
 		}
 		@Override
 		public void applyPreParsingEffects() {
@@ -1117,9 +1117,9 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave ([style.colourMinorGood(Favourite)])",
-						UtilText.parse(activeSlave, "Decide to make a note of [npc.namePos] stall so that you can visit [npc.herHim] again as you head back out into the stables."
-								+ "<br/>[style.colourMinorGood(You will be able to meet [npc.name] again!)]"),
+				return new Response("离开 ([style.colourMinorGood(Favourite)])",
+						UtilText.parse(activeSlave, "你给[npc.namePos]的摊位做了标记，以便你回马场时再次拜访[npc.herHim]。"
+								+ "<br/>[style.colourMinorGood(你可以再次拜访[npc.Name]了！)]"),
 						STABLES_INTERIOR) {
 					@Override
 					public void effects() {
@@ -1131,11 +1131,11 @@ public class DominionExpress {
 				
 			} else if(index==2) {
 				if(activeSlave.equals(getSadistSlave())) { // Cannot remove sadist slave:
-					return new Response("Leave (Forget)", UtilText.parse(activeSlave, "You cannot forget [npc.name]..."), null);
+					return new Response("离开(忘记)", UtilText.parse(activeSlave, "你无法忘记[npc.name]……"), null);
 				}
-				return new Response("Leave ([style.colourMinorBad(Forget)])",
-						UtilText.parse(activeSlave, "Decide not to ever visit [npc.name] again as you exit [npc.her] stall and head back out into the stables."
-								+ "<br/>[style.colourMinorBad(You will not be able to meet [npc.name] again!)]"),
+				return new Response("离开 ([style.colourMinorBad(Forget)])",
+						UtilText.parse(activeSlave, "你离开[npc.her]的摊位，转身回马场，不打算去拜访[npc.Name]。"
+								+ "<br/>[style.colourMinorBad(你无法再拜访[npc.name]了！)]"),
 						STABLES_INTERIOR) {
 					@Override
 					public void effects() {
@@ -1147,10 +1147,10 @@ public class DominionExpress {
 				
 			} else if(index==3) {
 				if(Main.game.getHourOfDay()>4 && Main.game.getHourOfDay()<22) {
-					return new Response("Sleep", UtilText.parse(activeSlave, "You can only sleep with a slave between [style.time(22)] and [style.time(4)]."), null);
+					return new Response("睡觉", UtilText.parse(activeSlave, "你只能在[style.time(22)]到[style.time(4)]之间与奴隶一起睡觉。"), null);
 					
 				} else {
-					return new Response("Sleep", UtilText.parse(activeSlave, "Accept [npc.namePos] offer to sleep with [npc.herHim] for the night."), AFTER_STABLE_SEX_SLEEP);
+					return new Response("睡觉", UtilText.parse(activeSlave, "接受[npc.namePos]的过夜邀请。"), AFTER_STABLE_SEX_SLEEP);
 				}
 			}
 			return null;
@@ -1203,9 +1203,9 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(sleepSexAreaWanted==null) {
 				if(index==1) {
-					return new Response("Leave ([style.colourMinorGood(Favourite)])",
-							UtilText.parse(activeSlave, "Decide to make a note of [npc.namePos] stall so that you can visit [npc.herHim] again as you head back out into the stables."
-									+ "<br/>[style.colourMinorGood(You will be able to meet [npc.name] again!)]"),
+					return new Response("离开 ([style.colourMinorGood(Favourite)])",
+							UtilText.parse(activeSlave, "你给[npc.namePos]的摊位做了标记，以便你回马场时再次拜访[npc.herHim]。"
+									+ "<br/>[style.colourMinorGood(你可以再次拜访[npc.Name]了！)]"),
 							STABLES_INTERIOR) {
 						@Override
 						public void effects() {
@@ -1217,11 +1217,11 @@ public class DominionExpress {
 					
 				} else if(index==2) {
 					if(activeSlave.equals(getSadistSlave())) { // Cannot remove sadist slave:
-						return new Response("Leave (Forget)", UtilText.parse(activeSlave, "You cannot forget [npc.name]..."), null);
+						return new Response("离开(忘记)", UtilText.parse(activeSlave, "你无法忘记[npc.name]……"), null);
 					}
-					return new Response("Leave ([style.colourMinorBad(Forget)])",
-							UtilText.parse(activeSlave, "Decide not to ever visit [npc.name] again as you exit [npc.her] stall and head back out into the stables."
-									+ "<br/>[style.colourMinorBad(You will not be able to meet [npc.name] again!)]"),
+					return new Response("离开 ([style.colourMinorBad(Forget)])",
+							UtilText.parse(activeSlave, "你离开[npc.her]的摊位，转身回马场，不打算去拜访[npc.Name]。"
+									+ "<br/>[style.colourMinorBad(你无法再拜访[npc.name]了！)]"),
 							STABLES_INTERIOR) {
 						@Override
 						public void effects() {
@@ -1235,8 +1235,8 @@ public class DominionExpress {
 			} else if(sleepSexAreaWanted==SexAreaOrifice.MOUTH) {
 				if(index==1) {
 					return new ResponseSex(
-							"Suck cock",
-							UtilText.parse(activeSlave, "You have little choice but to suck on [npc.namePos] fat, feral horse-cock."),
+							"吮吸鸡巴",
+							UtilText.parse(activeSlave, "你别无选择，只能嗦[npc.namePos]粗壮的马屌。"),
 							true,
 							false,
 							new SMDominionExpress(SexPosition.STANDING,
@@ -1260,8 +1260,8 @@ public class DominionExpress {
 			} else if(sleepSexAreaWanted==SexAreaPenetration.TONGUE) {
 				if(index==1) {
 					return new ResponseSex(
-							"Anilingus",
-							UtilText.parse(activeSlave, "You have little choice but to give [npc.name] a rimjob."),
+							"吻肛",
+							UtilText.parse(activeSlave, "你别无选择，只能给[npc.Name]舔肛。"),
 							true,
 							false,
 							new SMDominionExpress(SexPosition.LYING_DOWN,
@@ -1285,8 +1285,8 @@ public class DominionExpress {
 			} else {
 				if(index==1) {
 					return new ResponseSex(
-							"Fucked",
-							UtilText.parse(activeSlave, "You have little choice but to let [npc.name] pound your asshole."),
+							"挨操",
+							UtilText.parse(activeSlave, "你别无选择，只能让[npc.Name]操你的屁股。"),
 							true,
 							false,
 							new SMDominionExpress(SexPosition.ALL_FOURS,
@@ -1311,10 +1311,10 @@ public class DominionExpress {
 		}
 	};
 
-	public static final DialogueNode AFTER_STABLE_SEX_SLEEP_AFTER_WAKEUP_SEX = new DialogueNode("Finished", "The slave has finished with you...", true) {
+	public static final DialogueNode AFTER_STABLE_SEX_SLEEP_AFTER_WAKEUP_SEX = new DialogueNode("结束", "奴隶和你做完了……", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(activeSlave, "[npc.Name] has finished with you...");
+			return UtilText.parse(activeSlave, "[npc.Name]和你做够了……");
 		}
 		@Override
 		public void applyPreParsingEffects() {
@@ -1344,9 +1344,9 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave ([style.colourMinorGood(Favourite)])",
-						UtilText.parse(activeSlave, "Decide to make a note of [npc.namePos] stall so that you can visit [npc.herHim] again as you head back out into the stables."
-								+ "<br/>[style.colourMinorGood(You will be able to meet [npc.name] again!)]"),
+				return new Response("离开 ([style.colourMinorGood(Favourite)])",
+						UtilText.parse(activeSlave, "你给[npc.namePos]的摊位做了标记，以便你回马场时再次拜访[npc.herHim]。"
+								+ "<br/>[style.colourMinorGood(你可以再次拜访[npc.Name]了！)]"),
 						STABLES_INTERIOR) {
 					@Override
 					public void effects() {
@@ -1358,11 +1358,11 @@ public class DominionExpress {
 				
 			} else if(index==2) {
 				if(activeSlave.equals(getSadistSlave())) { // Cannot remove sadist slave:
-					return new Response("Leave (Forget)", UtilText.parse(activeSlave, "You cannot forget [npc.name]..."), null);
+					return new Response("离开(忘记)", UtilText.parse(activeSlave, "你无法忘记[npc.name]……"), null);
 				}
-				return new Response("Leave ([style.colourMinorBad(Forget)])",
-						UtilText.parse(activeSlave, "Decide not to ever visit [npc.name] again as you exit [npc.her] stall and head back out into the stables."
-								+ "<br/>[style.colourMinorBad(You will not be able to meet [npc.name] again!)]"),
+				return new Response("离开 ([style.colourMinorBad(Forget)])",
+						UtilText.parse(activeSlave, "你离开[npc.her]的摊位，转身回马场，不打算去拜访[npc.Name]。"
+								+ "<br/>[style.colourMinorBad(你无法再拜访[npc.name]了！)]"),
 						STABLES_INTERIOR) {
 					@Override
 					public void effects() {
@@ -1415,16 +1415,16 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.isAnalContentEnabled() && !Main.game.getPlayer().hasQuest(QuestLine.ROMANCE_NATALYA)) {
-					return new Response("Enter",
-							"You get the feeling that you don't want anything to do with Natalya..."
-									+ "<br/>[style.italicsMinorBad(Natalya's scenes involve anal content, and as such will be disabled for as long as your 'Anal Content' setting is turned off.)]",
+					return new Response("进入",
+							"你不想和娜塔莉亚有任何瓜葛……"
+									+ "<br/>[style.italicsMinorBad(娜塔莉亚的场景包含肛门内容，若关闭“肛门内容”则相关文本也会被移除。)]",
 							null);
 				}
 				
-				return new Response("Enter",
-						"Knock on the door to Natalya's office and step inside."
+				return new Response("进入",
+						"敲敲娜塔莉亚办公室的门，走进去。"
 						+ (!Main.game.getPlayer().hasQuest(QuestLine.ROMANCE_NATALYA)
-							?"<br/>[style.italicsQuestRomance(This will start Natalya's romance quest!)]"
+							?"<br/>[style.italicsQuestRomance(这会开启娜塔莉亚的浪漫任务！)]"
 							:""),
 						OFFICE_STABLE_ENTRY) {
 					@Override
@@ -1504,7 +1504,7 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(isOfficeEntryDenied()) {
 				if(index==1) {
-					return new Response("Leave", "As you're not allowed to see Natalya in your current state, there's nothing left for you to do except leave...", OFFICE_STABLE_EXIT_NO_CONTENT) {
+					return new Response("离开", "你现在的状态不允许你去见娜塔莉亚，除了离开也没别的办法了……", OFFICE_STABLE_EXIT_NO_CONTENT) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_ENTRY_DENIED_ENTRY"));
@@ -1514,7 +1514,7 @@ public class DominionExpress {
 				
 			} else if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_NATALYA)==Quest.ROMANCE_NATALYA_1_INTERVIEW_START) {
 				if(index==1) {
-					return new Response("Interview", "Accept Natalya's offer of an interview.", OFFICE_STABLE_INTERVIEW_1) {
+					return new Response("面试", "接受娜塔莉亚的面试。", OFFICE_STABLE_INTERVIEW_1) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.natalyaInterviewOffered, true);
@@ -1523,7 +1523,7 @@ public class DominionExpress {
 					};
 					
 				} else if(index==2) {
-					return new Response("Refuse", "Refuse to be interviewed by Natalya.<br/>[style.italicsTerrible(This will fail Natalya's romance quest!)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
+					return new Response("拒绝", "拒绝被娜塔莉亚面试。<br/>[style.italicsTerrible(这会导致娜塔莉亚的浪漫任务失败！)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.GENERIC_TERRIBLE;
@@ -1543,7 +1543,7 @@ public class DominionExpress {
 			} else {
 				if(!isPlayerBodyCorrect()) {
 					if(index==1) {
-						return new Response("Drink potion", "Drink the potion and be transformed into [style.a_shemale].", OFFICE_STABLE_ENTRY_TRANSFORMED){
+						return new Response("喝下药水", "喝下药水转化为[style.a_shemale]。", OFFICE_STABLE_ENTRY_TRANSFORMED){
 							@Override
 							public Colour getHighlightColour() {
 								return PresetColour.TRANSFORMATION_GENERIC;
@@ -1564,19 +1564,19 @@ public class DominionExpress {
 				} else {
 					if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_NATALYA)==Quest.ROMANCE_NATALYA_4_TRAINING_2) {
 						if(index==1) {
-							return new Response("Kneel", "Do as Mistress Natalya says and [pc.step] over to kneel down beside her...", OFFICE_STABLE_TRAINING_2);
+							return new Response("跪下", "按主人娜塔莉亚说的，跪在她的旁边……", OFFICE_STABLE_TRAINING_2);
 						}
 						
 					} else if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_NATALYA)==Quest.ROMANCE_NATALYA_5_TRAINING_3) {
 						if(index==1) {
-							return new Response("Kneel", "Do as Mistress Natalya says and [pc.step] over to kneel down beside her...", OFFICE_STABLE_TRAINING_3);
+							return new Response("跪下", "按主人娜塔莉亚说的，跪在她的旁边……", OFFICE_STABLE_TRAINING_3);
 						}
 							
 					} else { // Qualified mule:
 						AbstractClothing collar = getPlayerCollar();
 						
 						if(index==0) {
-							return new Response("Leave", "Tell Natalya that you'll get back to your duties and leave...", OFFICE_STABLE_EXIT_NO_CONTENT) {
+							return new Response("离开", "告诉娜塔莉亚，你要回去履行你的职责，然后离开……", OFFICE_STABLE_EXIT_NO_CONTENT) {
 								@Override
 								public void effects() {
 									Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_ENTRY_FILLY_LEAVE"));
@@ -1587,18 +1587,18 @@ public class DominionExpress {
 						// Silver:
 						} else if(index==1) {
 							if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.natalyaDailySexAsSub)) {
-								return new Response("Suck cock", "You've already serviced Natalya today, and as such she has no more time for you...", null);
+								return new Response("吮吸肉棒", "你今天已经给娜塔莉亚口交过了，她没时间再陪你……", null);
 								
 							} else if(collar.getColour(0)!=PresetColour.CLOTHING_SILVER && collar.getColour(0)!=PresetColour.CLOTHING_GOLD) {
-								return new Response("Suck cock",
-										"You do not have a high enough [style.mule] ranking for this!<br/>[style.italics(Requires a ranking of at least 'silver', and you are only '"+collar.getColour(0).getName()+"'...)]",
+								return new Response("吮吸肉棒",
+										"你的[style.mule]段位太低！<br/>[style.italics(要求至少有“白银”段位，而你只有“"+collar.getColour(0).getName()+"”……)]",
 										null);
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-								return new Response("Suck cock", "As you cannot gain access to your mouth, you cannot suck Mistress Natalya's cock!", null);
+								return new Response("吮吸肉棒", "你的嘴此刻被限制，不能吸娜塔莉亚的肉棒！", null);
 								
 							} else {
-								return new Response("Suck cock", "Tell Natalya that you'd like to make use of your [style.mule] ranking's benefit and suck her cock.", OFFICE_STABLE_FILLY_GIVE_BLOWJOB) {
+								return new Response("吮吸肉棒", "你告诉娜塔莉亚你想用[style.mule]段位奖励换取吮吸她肉棒的机会。", OFFICE_STABLE_FILLY_GIVE_BLOWJOB) {
 									@Override
 									public boolean isSexHighlight() {
 										return true;
@@ -1613,18 +1613,18 @@ public class DominionExpress {
 							
 						} else if(index==2) {
 							if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.natalyaDailySexAsSub)) {
-								return new Response("Give rimjob", "You've already serviced Natalya today, and as such she has no more time for you...", null);
+								return new Response("舔肛", "你今天已经给娜塔莉亚口交过了，她没时间再陪你……", null);
 								
 							} else if(collar.getColour(0)!=PresetColour.CLOTHING_SILVER && collar.getColour(0)!=PresetColour.CLOTHING_GOLD) {
-								return new Response("Give rimjob",
-										"You do not have a high enough [style.mule] ranking for this!<br/>[style.italics(Requires a ranking of at least 'silver', and you are only '"+collar.getColour(0).getName()+"'...)]",
+								return new Response("提供舔肛",
+										"你的[style.mule]段位太低！<br/>[style.italics(要求至少有“白银”段位，而你只有“"+collar.getColour(0).getName()+"”……)]",
 										null);
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-								return new Response("Give rimjob", "As you cannot gain access to your mouth, you cannot give Mistress Natalya a rimjob!", null);
+								return new Response("舔肛", "你的嘴此刻被限制，不能舔娜塔莉亚的肛门！", null);
 								
 							} else {
-								return new Response("Give rimjob", "Tell Natalya that you'd like to make use of your [style.mule] ranking's benefit and eat her ass.", OFFICE_STABLE_FILLY_GIVE_RIMJOB) {
+								return new Response("舔肛", "你告诉娜塔莉亚你想用[style.mule]段位奖励换取舔她肛门的机会。", OFFICE_STABLE_FILLY_GIVE_RIMJOB) {
 									@Override
 									public boolean isSexHighlight() {
 										return true;
@@ -1639,18 +1639,18 @@ public class DominionExpress {
 							
 						} else if(index==3) {
 							if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.natalyaDailySexAsSub)) {
-								return new Response("Get mounted", "You've already serviced Natalya today, and as such she has no more time for you...", null);
+								return new Response("顶入", "你今天已经和娜塔莉亚做过了，她没时间再陪你……", null);
 								
 							} else if(collar.getColour(0)!=PresetColour.CLOTHING_SILVER && collar.getColour(0)!=PresetColour.CLOTHING_GOLD) {
-								return new Response("Get mounted",
-										"You do not have a high enough [style.mule] ranking for this!<br/>[style.italics(Requires a ranking of at least 'silver', and you are only '"+collar.getColour(0).getName()+"'...)]",
+								return new Response("顶入",
+										"你的[style.mule]段位太低！<br/>[style.italics(要求至少有“白银”段位，而你只有“"+collar.getColour(0).getName()+"”……)]",
 										null);
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-								return new Response("Get mounted", "As you cannot gain access to your asshole, Natalya cannot mount you!", null);
+								return new Response("顶入", "你无法控制肛门，没法让娜塔莉亚进入你！", null);
 								
 							} else {
-								return new Response("Get mounted", "Tell Natalya that you'd like to make use of your [style.mule] ranking's benefit and get mounted by her.", OFFICE_STABLE_FILLY_GET_MOUNTED) {
+								return new Response("被上", "你告诉娜塔莉亚你想用[style.mule]段位奖励换取和她做爱的机会。", OFFICE_STABLE_FILLY_GET_MOUNTED) {
 									@Override
 									public boolean isSexHighlight() {
 										return true;
@@ -1666,18 +1666,18 @@ public class DominionExpress {
 						// Gold:
 						} else if(index==6) {
 							if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.natalyaDailySexAsDom)) {
-								return new Response("Receive blowjob", "You've already dominated Mistress Natalya today, and as such she will not let you do it again until tomorrow...", null);
+								return new Response("口交", "你今天已经和娜塔莉亚口交过了，她可能明天才愿意再这么干……", null);
 								
 							} else if(collar.getColour(0)!=PresetColour.CLOTHING_GOLD) {
-								return new Response("Receive blowjob",
-										"You do not have a high enough [style.mule] ranking for this!<br/>[style.italics(Requires a ranking of at least 'gold', and you are only '"+collar.getColour(0).getName()+"'...)]",
+								return new Response("被口交",
+										"你的[style.mule]段位太低！<br/>[style.italics(要求至少有“黄金”段位，而你只有“"+collar.getColour(0).getName()+"”……)]",
 										null);
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-								return new Response("Receive blowjob", "As you cannot gain access to your penis, you cannot get Mistress Natalya to suck your cock!", null);
+								return new Response("口交", "由于无法使用阴茎，娜塔莉亚不能唆你的鸡巴。", null);
 								
 							} else {
-								return new Response("Receive blowjob", "Order Mistress Natalya to drop down onto her knees and suck your cock.", OFFICE_STABLE_FILLY_RECEIVE_BLOWJOB) {
+								return new Response("口交", "要求娜塔莉亚跪下来唆你的鸡巴。", OFFICE_STABLE_FILLY_RECEIVE_BLOWJOB) {
 									@Override
 									public boolean isSexHighlight() {
 										return true;
@@ -1692,18 +1692,18 @@ public class DominionExpress {
 							
 						} else if(index==7) {
 							if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.natalyaDailySexAsDom)) {
-								return new Response("Receive rimjob", "You've already dominated Mistress Natalya today, and as such she will not let you do it again until tomorrow...", null);
+								return new Response("舔肛", "你今天已经和娜塔莉亚这么做过了，她可能明天才愿意再这么干……", null);
 								
 							} else if(collar.getColour(0)!=PresetColour.CLOTHING_GOLD) {
-								return new Response("Receive rimjob",
-										"You do not have a high enough [style.mule] ranking for this!<br/>[style.italics(Requires a ranking of at least 'gold', and you are only '"+collar.getColour(0).getName()+"'...)]",
+								return new Response("舔肛",
+										"你的[style.mule]段位太低！<br/>[style.italics(要求至少有“黄金”段位，而你只有“"+collar.getColour(0).getName()+"”……)]",
 										null);
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-								return new Response("Receive rimjob", "As you cannot gain access to your asshole, you cannot get Mistress Natalya to give you a rimjob!", null);
+								return new Response("舔肛", "你控制不了肛门，没法让娜塔莉亚给你舔肛！", null);
 								
 							} else {
-								return new Response("Receive rimjob", "Order Mistress Natalya to drop down onto her knees and eat your ass.", OFFICE_STABLE_FILLY_RECEIVE_RIMJOB) {
+								return new Response("舔肛", "要求娜塔莉亚跪下来给你舔肛。", OFFICE_STABLE_FILLY_RECEIVE_RIMJOB) {
 									@Override
 									public boolean isSexHighlight() {
 										return true;
@@ -1718,18 +1718,18 @@ public class DominionExpress {
 							
 						} else if(index==8) {
 							if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.natalyaDailySexAsDom)) {
-								return new Response("Mount her", "You've already dominated Mistress Natalya today, and as such she will not let you do it again until tomorrow...", null);
+								return new Response("顶入她", "你今天已经和娜塔莉亚这么做过了，她可能明天才愿意再这么干……", null);
 								
 							} else if(collar.getColour(0)!=PresetColour.CLOTHING_GOLD) {
-								return new Response("Mount her",
-										"You do not have a high enough [style.mule] ranking for this!<br/>[style.italics(Requires a ranking of at least 'gold', and you are only '"+collar.getColour(0).getName()+"'...)]",
+								return new Response("顶入她",
+										"你的[style.mule]段位太低！<br/>[style.italics(要求至少有“黄金”段位，而你只有“"+collar.getColour(0).getName()+"”……)]",
 										null);
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-								return new Response("Mount her", "As you cannot gain access to your penis, you cannot mount Natalya!", null);
+								return new Response("顶入她", "你控制不了你的阴茎，无法进入娜塔莉亚！", null);
 								
 							} else {
-								return new Response("Mount her", "Order Mistress Natalya to present you with her asshole so that you can mount her and start anally rutting her.", OFFICE_STABLE_FILLY_MOUNT_HER) {
+								return new Response("顶入她", "你要求娜塔莉亚露出肛门让你进去操她。", OFFICE_STABLE_FILLY_MOUNT_HER) {
 									@Override
 									public boolean isSexHighlight() {
 										return true;
@@ -1781,7 +1781,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Strip & kneel", "Do as Natalya commands and strip naked before kneeling down before her.", OFFICE_STABLE_INTERVIEW_2) {
+				return new Response("脱衣服并跪下", "听从娜塔莉亚的命令，脱光衣服跪在她面前。", OFFICE_STABLE_INTERVIEW_2) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Natalya.class).incrementAffection(Main.game.getPlayer(), 5));
@@ -1789,7 +1789,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==2) {
-				return new Response("Refuse", "Refuse to kneel before Natalya.<br/>[style.italicsTerrible(This will fail Natalya's romance quest!)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
+				return new Response("拒绝", "拒绝跪在娜塔莉亚前面<br/>[style.italicsTerrible(这会导致娜塔莉亚的浪漫任务失败！)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.GENERIC_TERRIBLE;
@@ -1831,7 +1831,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lift skirt", "Do as Natalya commands and lift her skirt...", OFFICE_STABLE_INTERVIEW_3) {
+				return new Response("掀起裙子", "按照娜塔莉亚的命令，掀起她的裙子……", OFFICE_STABLE_INTERVIEW_3) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Natalya.class).displaceClothingForAccess(CoverableArea.ANUS, null);
@@ -1840,7 +1840,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==2) {
-				return new Response("Refuse", "Refuse to lift Natalya's skirt.<br/>[style.italicsTerrible(This will fail Natalya's romance quest!)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
+				return new Response("拒绝", "拒绝撩起娜塔莉亚的裙子。<br/>[style.italicsTerrible(这将使娜塔莉亚的浪漫任务失败！)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.GENERIC_TERRIBLE;
@@ -1873,8 +1873,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Reluctant kiss",
-						"Hesitantly kiss Natalya's asshole and then get started on sucking her cock.",
+						"不情愿地舔",
+						"犹豫着亲吻娜塔莉亚的屁眼，开始嗦她的牛子。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -1913,8 +1913,8 @@ public class DominionExpress {
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						"Eager kiss",
-						"Eagerly tongue Natalya's asshole and then get started on sucking her cock.",
+						"急切地舔",
+						"急切地舔娜塔莉亚的屁眼，然后开始嗦她的牛子。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -1956,7 +1956,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==3) {
-				return new Response("Refuse", "Refuse to kiss Natalya's asshole.<br/>[style.italicsTerrible(This will fail Natalya's romance quest!)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
+				return new Response("拒绝", "拒绝亲吻娜塔莉亚的菊花。<br/>[style.italicsTerrible(这将使娜塔莉亚的浪漫任务失败！)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.GENERIC_TERRIBLE;
@@ -2015,7 +2015,7 @@ public class DominionExpress {
 		}
 	};
 
-	public static final DialogueNode OFFICE_STABLE_INTERVIEW_AFTER_SEX = new DialogueNode("Finished", "Natalya is satisfied with your performance.", true) {
+	public static final DialogueNode OFFICE_STABLE_INTERVIEW_AFTER_SEX = new DialogueNode("结束", "娜塔莉亚很满意你的表现。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -2027,7 +2027,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Clean cock", "Clean Natalya's cock while she prepares your contract.", OFFICE_STABLE_CONTRACT_OFFERED) {
+				return new Response("清洁肉棒", "在娜塔莉亚准备你的合同时，清理她的肉棒。", OFFICE_STABLE_CONTRACT_OFFERED) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Natalya.class).replaceAllClothing();
@@ -2057,7 +2057,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sign", "Do as Natalya says and sign the contract.", OFFICE_STABLE_CONTRACT_SIGNED) {
+				return new Response("签字", "按照娜塔莉亚说的，在合同上签字。", OFFICE_STABLE_CONTRACT_SIGNED) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.ROMANCE_NATALYA, Quest.ROMANCE_NATALYA_3_TRAINING_1));
@@ -2065,7 +2065,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==2) {
-				return new Response("Refuse", "Refuse to sign the contract.<br/>[style.italicsTerrible(This will fail Natalya's romance quest!)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT){
+				return new Response("拒绝", "拒绝在合同上签字。<br/>[style.italicsTerrible(这会导致娜塔莉亚的浪漫任务失败！)]", OFFICE_STABLE_FULL_EXIT_NO_CONTENT){
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.GENERIC_TERRIBLE;
@@ -2103,7 +2103,7 @@ public class DominionExpress {
 				
 			} else {
 				if(index==1) {
-					return new Response("Drink potion", "Drink the potion and be transformed into one of Mistress Natalya's [style.shemale] [style.mules].", OFFICE_STABLE_TRANSFORMED){
+					return new Response("喝下药水", "喝下药水转化为主人娜塔莉亚的[style.shemale][style.mules]。", OFFICE_STABLE_TRANSFORMED){
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.TRANSFORMATION_GENERIC;
@@ -2133,7 +2133,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Centaur", "Tell Natalya that you'd prefer to service a centaur.", OFFICE_STABLE_TRAINING_1) {
+				return new Response("半人马", "告诉娜塔莉亚你更想服务半人马。", OFFICE_STABLE_TRAINING_1) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.MASCULINE;
@@ -2145,7 +2145,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==2) {
-				return new Response("Centauress", "Tell Natalya that you'd prefer to service a centauress.", OFFICE_STABLE_TRAINING_1) {
+				return new Response("女半人马", "告诉娜塔莉亚你更想服务女半人马。", OFFICE_STABLE_TRAINING_1) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.FEMININE;
@@ -2172,7 +2172,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Reluctant kiss", UtilText.parse(getSadistSlave(), "Hesitantly kiss [npc.namePos] asshole."), OFFICE_STABLE_TRAINING_1_SEX) {
+				return new Response("不情愿地吻", UtilText.parse(getSadistSlave(), "犹豫地亲吻[npc.namePos]地肛门。"), OFFICE_STABLE_TRAINING_1_SEX) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_1_RELUCTANT_KISS", getSadistSlave()));
@@ -2183,7 +2183,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==2) {
-				return new Response("Eager kiss", UtilText.parse(getSadistSlave(), "Eagerly kiss [npc.namePos] asshole."), OFFICE_STABLE_TRAINING_1_SEX) {
+				return new Response("急切地吻", UtilText.parse(getSadistSlave(), "急切的亲吻[npc.namePos]地肛门。"), OFFICE_STABLE_TRAINING_1_SEX) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_1_EAGER_KISS", getSadistSlave()));
@@ -2211,8 +2211,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Lick cock",
-						UtilText.parse(getSadistSlave(), "Do as Mistress Natalya commands and drop down to lick [npc.namePos] feral horse-cock."),
+						"舔鸡巴",
+						UtilText.parse(getSadistSlave(), "按照主人娜塔莉亚地指令，下去舔[npc.namePos]兽态地马屌。"),
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -2255,7 +2255,7 @@ public class DominionExpress {
 		}
 	};
 
-	public static final DialogueNode OFFICE_STABLE_TRAINING_1_AFTER_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode OFFICE_STABLE_TRAINING_1_AFTER_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			banishSlave(getSadistSlave(), false);
@@ -2263,7 +2263,7 @@ public class DominionExpress {
 		}
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getSadistSlave(), "[npc.Name] has finished with you, and slides [npc.her] cock out from your abused throat.");
+			return UtilText.parse(getSadistSlave(), "[npc.Name]和你做够了，把鸡巴从你受虐地喉咙里拔出。");
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -2276,7 +2276,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Obey", UtilText.parse(getSadistSlave(), "Tell Mistress Natalya that you're a slutty [style.mule] who loves horse-ass and horse-cock, before following [npc.name] out of the office..."), OFFICE_STABLE_EXIT_NO_CONTENT) {
+				return new Response("服从", UtilText.parse(getSadistSlave(), "告诉主人娜塔莉亚，你是一匹淫荡的[style.mule]，喜欢马尻和马屌，然后跟着[npc.name]离开办公室……"), OFFICE_STABLE_EXIT_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().equipAllClothingFromHoldingInventory();
@@ -2311,7 +2311,7 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().isAbleToWearMakeup()) {
 				if(index==1) {
-					return new Response("Matte dark blue", "Choose the matte dark blue lipstick.", OFFICE_STABLE_TRAINING_2_MAKEUP) {
+					return new Response("哑光深蓝", "选择亚光深蓝口红。", OFFICE_STABLE_TRAINING_2_MAKEUP) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_2_LIPSTICK_DARK_BLUE"));
@@ -2321,7 +2321,7 @@ public class DominionExpress {
 					};
 					
 				} else if(index==2) {
-					return new Response("Sparkly gold", "Choose the sparkly gold lipstick.", OFFICE_STABLE_TRAINING_2_MAKEUP) {
+					return new Response("闪亮金色", "选择闪亮的金色口红。", OFFICE_STABLE_TRAINING_2_MAKEUP) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_2_LIPSTICK_SPARKLY_GOLD"));
@@ -2331,7 +2331,7 @@ public class DominionExpress {
 					};
 					
 				} else if(index==3) {
-					return new Response("Glowing pink", "Choose the glowing pink lipstick.", OFFICE_STABLE_TRAINING_2_MAKEUP) {
+					return new Response("明亮粉色", "选择亮粉色的口红。", OFFICE_STABLE_TRAINING_2_MAKEUP) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_2_LIPSTICK_GLOWING_PINK"));
@@ -2368,7 +2368,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Reluctant kisses", "Hesitantly start kissing Natalya's asshole.", OFFICE_STABLE_TRAINING_2_MAKEUP_ANILINGUS) {
+				return new Response("不情愿的吻", "犹豫地亲上娜塔莉亚的肛门。", OFFICE_STABLE_TRAINING_2_MAKEUP_ANILINGUS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_2_MAKEUP_RELUCTANT_KISSES", getSadistSlave()));
@@ -2383,7 +2383,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==2) {
-				return new Response("Eager kisses", "Eagerly start kissing Natalya's asshole.", OFFICE_STABLE_TRAINING_2_MAKEUP_ANILINGUS) {
+				return new Response("渴求的吻", "饥渴难耐地亲吻娜塔莉亚的肛门。", OFFICE_STABLE_TRAINING_2_MAKEUP_ANILINGUS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_2_MAKEUP_EAGER_KISSES", getSadistSlave()));
@@ -2421,8 +2421,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Eager anilingus",
-						"Start using your tongue to perform anilingus on Natalya.",
+						"渴望吻肛",
+						"开始用舌头给娜塔莉亚吻肛。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -2455,7 +2455,7 @@ public class DominionExpress {
 		}
 	};
 	
-	public static final DialogueNode OFFICE_STABLE_TRAINING_2_AFTER_SEX = new DialogueNode("Finished", "Mistress Natalya is satisfied with your performance...", true) {
+	public static final DialogueNode OFFICE_STABLE_TRAINING_2_AFTER_SEX = new DialogueNode("结束", "娜塔莉亚主人对你的表现很满意……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			UtilText.addSpecialParsingString(Main.game.getPlayer().getLipstick().getColourDescriptor(Main.game.getPlayer(), false, false), true);
@@ -2473,7 +2473,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Natalya has no more time for you today, so you'll have to return tomorrow to continue your training.", OFFICE_STABLE_EXIT_NO_CONTENT){
+				return new Response("离开", "娜塔莉亚今天没时间招待你了，你得明天再来继续训练。", OFFICE_STABLE_EXIT_NO_CONTENT){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().equipAllClothingFromHoldingInventory();
@@ -2503,7 +2503,7 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new Response(UtilText.parse(getSadistSlave(), "[npc.Name]"),
-						UtilText.parse(getSadistSlave(), "Mistress Natalya hurries off to fetch [npc.name], so that you can perform anilingus on [npc.herHim] while she fucks your ass."),
+						UtilText.parse(getSadistSlave(), "娜塔莉亚主人忙着应付[npc.name]，你在她操你屁眼的时候可以给[npc.herHim]吻肛。"),
 						OFFICE_STABLE_TRAINING_3_SLAVE_ENTRY) {
 					@Override
 					public void effects() {
@@ -2527,7 +2527,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Reluctantly beg", "Hesitantly tell Natalya that you want her to rut you.", OFFICE_STABLE_TRAINING_3_FUCKED) {
+				return new Response("不情愿地乞求", "吞吞吐吐地告诉娜塔莉亚你想让她发情。", OFFICE_STABLE_TRAINING_3_FUCKED) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_3_SLAVE_ENTRY_OBEY", getSadistSlave()));
@@ -2539,7 +2539,7 @@ public class DominionExpress {
 				};
 				
 			} else if(index==2) {
-				return new Response("Eagerly beg", "Eagerly beg for Mistress Natalya to start rutting you.", OFFICE_STABLE_TRAINING_3_FUCKED) {
+				return new Response("急切地乞求", "急切地乞求主人娜塔莉亚操你。", OFFICE_STABLE_TRAINING_3_FUCKED) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_3_SLAVE_ENTRY_EAGERLY_OBEY", getSadistSlave()));
@@ -2569,8 +2569,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Push back",
-						UtilText.parse(getSadistSlave(), "Push back and penetrate yourself on Natalya's cock while you perform anilingus on [npc.name]..."),
+						"向后推",
+						UtilText.parse(getSadistSlave(), "向后推，让娜塔莉亚的肉棒插入你，同时为[npc.Name]提供吻肛……"),
 						true,
 						false,
 						new SMDominionExpress(SexPosition.ALL_FOURS,
@@ -2628,7 +2628,7 @@ public class DominionExpress {
 		}
 	};
 	
-	public static final DialogueNode OFFICE_STABLE_TRAINING_3_AFTER_SEX = new DialogueNode("Finished", "Mistress Natalya has had her fun, and slides her cock out of your well-rutted ass...", true) {
+	public static final DialogueNode OFFICE_STABLE_TRAINING_3_AFTER_SEX = new DialogueNode("结束", "娜塔莉亚主人爽够了，把肉棒从你被操透的屁眼里抽了出来……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getSadistSlave().fillCumToMaxStorage();
@@ -2645,8 +2645,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Round two",
-						UtilText.parse(getSadistSlave(), "Present your ass to [npc.name] so that [npc.she] can mount and anally rut you..."),
+						"第二轮",
+						UtilText.parse(getSadistSlave(), "向[npc.Name]展示你的屁穴，让[npc.she]能骑着你操你的屁穴……"),
 						true,
 						false,
 						new SMDominionExpress(SexPosition.ALL_FOURS,
@@ -2685,14 +2685,14 @@ public class DominionExpress {
 		}
 	};
 	
-	public static final DialogueNode OFFICE_STABLE_TRAINING_3_AFTER_SEX_SECOND = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode OFFICE_STABLE_TRAINING_3_AFTER_SEX_SECOND = new DialogueNode("结束", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			banishSlave(getSadistSlave(), false);
 		}
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getSadistSlave(), "Having contributed to the ruined, cum-stuffed state of your asshole, [npc.name] steps back and slides [npc.her] cock out from your ass.");
+			return UtilText.parse(getSadistSlave(), "你的屁穴被精液灌得满满当当，[npc.name]后退一步，把鸡巴从你的屁眼里滑了出来。");
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -2706,7 +2706,7 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(index==1) {
-					return new Response("[style.Mule] choker", "Let Natalya strap your new choker around your neck...", OFFICE_STABLE_TRAINING_3_CHOKER_EQUIPPED){
+					return new Response("[style.Mule]项圈", "让娜塔莉亚把新颈圈系在你的脖子上……", OFFICE_STABLE_TRAINING_3_CHOKER_EQUIPPED){
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().equipClothingFromNowhere(generateCollar(), true, Main.game.getNpc(Natalya.class)));
@@ -2739,7 +2739,7 @@ public class DominionExpress {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Do as Natalya says and exit her office...", OFFICE_STABLE_TRAINING_3_EXIT) {
+				return new Response("离开", "按娜塔莉亚说的，离开办公室……", OFFICE_STABLE_TRAINING_3_EXIT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/dominionExpress", "OFFICE_STABLE_TRAINING_3_CHOKER_EQUIPPED_LEAVE"));
@@ -2786,8 +2786,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Kiss asshole",
-						"Kiss Natalya's asshole and then get started on sucking her cock.",
+						"亲吻肛门",
+						"亲吻娜塔莉亚的肛门，开始嗦她的牛子。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -2840,8 +2840,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Anilingus",
-						"Kiss Natalya's asshole and then start using your tongue to perform anilingus on her.",
+						"吻肛",
+						"亲吻娜塔莉亚的肛门，用舌头给她吻肛。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -2887,8 +2887,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Kiss asshole",
-						"Kiss Natalya's asshole and then present yourself to be mounted by her.",
+						"亲吻肛门",
+						"亲吻娜塔莉亚的肛门，让她骑在你身上。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.ALL_FOURS,
@@ -2947,8 +2947,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Dominate her",
-						"Dominate Mistress Natalya by thrusting your cock down her throat.",
+						"支配她",
+						"把你的鸡巴冲入她的喉咙，支配主人娜塔莉亚。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -2990,8 +2990,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Dominate her",
-						"Dominate Mistress Natalya by pushing your hips back and smothering her face with your [pc.asshole+].",
+						"支配她",
+						"屁股向后一顶，用你[pc.asshole+]捂住她的脸，支配主人娜塔莉亚。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.STANDING,
@@ -3033,8 +3033,8 @@ public class DominionExpress {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Dominate her",
-						"Dominate Mistress Natalya by thrusting your [pc.cock+] into her [natalya.asshole+].",
+						"支配她",
+						"支配者娜塔莉亚主人用她的[natalya.asshole+]深深含住你[pc.cock+]。",
 						true,
 						false,
 						new SMDominionExpress(SexPosition.ALL_FOURS,
@@ -3063,7 +3063,7 @@ public class DominionExpress {
 		}
 	};
 	
-	public static final DialogueNode OFFICE_STABLE_FILLY_AFTER_SEX_AS_SUB = new DialogueNode("Finished", "Mistress Natalya is satisfied, and so brings an end to your fun...", true) {
+	public static final DialogueNode OFFICE_STABLE_FILLY_AFTER_SEX_AS_SUB = new DialogueNode("结束", "娜塔莉亚主人很满意，你的快乐也来到尽头……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -3086,7 +3086,7 @@ public class DominionExpress {
 		}
 	};
 	
-	public static final DialogueNode OFFICE_STABLE_FILLY_AFTER_SEX_AS_DOM = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode OFFICE_STABLE_FILLY_AFTER_SEX_AS_DOM = new DialogueNode("完成", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;

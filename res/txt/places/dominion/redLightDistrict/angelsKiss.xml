@@ -1,889 +1,889 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- ANGELS_KISS_ENTRANCE -->
 	
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		Deciding that you want to take a look inside, you step up to the front doors of 'Angel's Kiss', and, pushing one of them open, you enter the establishment. A little bell rings above your head as you step forwards into the entrance hall, and as you let the door swing shut behind you, you take a look at your surroundings.
+		你想进去看看，于是走到了“天使之吻”的门口。推开门，你进入了这栋建筑，当你进入到门厅时，头顶的一个小铃铛开始发出“叮铃”的声音。你松开门把手，环顾周遭的一切，你推开的门在身后关上了。
 	</p>
 	<p>
-		A golden chandelier dangles from the high ceiling above you, bathing the entire entrance hall in a soft white light. To your right, a long, mahogany counter runs in parallel to the wall, which, much like the other three that surround you, is half-panelled in dark wood, with the top half being covered in a finely detailed light-blue and white floral wallpaper. Underfoot, a rich burgundy carpet runs down the middle of the hall, with spaces on either side displaying polished oak boards.
+		金色的吊灯自高高的天花板垂下，将整个大厅染上一层轻柔的白光。你的右手边是一张长长的红木柜台，和墙壁平行放置。墙壁的下半部分镶嵌了深色的木板，而上半部分则贴着精致的浅蓝与白色花卉纹理墙纸。脚下，一条浓酒红色地毯铺在抛光过的橡木地板上，地毯从门厅的入口，沿着中轴线一路延伸出去。
 	</p>
 	<p>
-		There doesn't seem to be anyone in here at the moment, and you wonder just how bad business must be for there not even to be someone assigned to greet customers. With the place appearing to be abandoned, you're on the verge of turning around and making your exit when suddenly someone steps forwards from beyond the archway that links this room to the rest of the building.
+		现在，这里看不到一个人影，你在想这里的生意该有多差，门厅内甚至看不到有人来迎接客人。这个地方显然是荒废的，你想，于是转身打算离去。就在这时，有人从连接这个房间和大楼其他部分的拱廊中走了出来。
 	</p>
 	<p>
-		Wearing a long, purple plunge dress, the blonde-haired, blue-eyed woman that approaches is nothing short of breath-takingly beautiful. As she steps forwards, her full, red lips turn up into a delightful smile, and she lowers her head a little as she apologises, [angel.speech(I'm so sorry that I kept you waiting, and welcome to my establishment! My name is Angel, and if there's any administrative business you need taken care of, you've come to the right place!)]
+		来者穿着紫色的长款紧身连衣裙，金发碧眼，眉眼间气质绝佳，令看到她美貌的人屏息凝神。她向你走来，丰润的红唇勾起一个恰到好处的弧度，而后她微微低下头，你听到了她道歉的声音，[angel.speech(很抱歉让你久等了，欢迎来到我的地盘！我叫安吉尔，如果有什么行政方面的事务需要来处理，你可以到这里来。)]
 	</p>
 	<p>
-		[pc.speech(I'm [pc.name],)] you reply, but before you can say anything further, Angel suddenly seems to remember something, and cuts you off.
+		[pc.speech(我叫[pc.name]，)]你回答她，不过就在你要接着往下说时，安吉尔似乎突然想到了什么，然后打断了你。
 	</p>
 	<p>
-		[angel.speech(Oh! And we're still operating as a brothel too! We might not have as wide of a selection as some of our competitors, but my two girls are among the very best in all of Dominion!)] Angel wrings her hands and glances back the way she came as she continues, [angel.speech(I'm sorry that I'm not able to provide you with the level of comfort that this establishment was once known for, but ever since the Enforcers designated this as the red-light district's administrative centre, I've been buried beneath a pile of paperwork. I really need to get back to it right away, so if you're here to apply for a prostitution license, please follow me back to my office. Oh, and if you're here for Bunny or Loppy, you can find them upstairs.)]
+		[angel.speech(哦，我们其实也是作为妓院经营着的，这里可供选择的并没有我们竞争对手那么多，不过我们这里有两位特色头牌，可以说是冠绝于御城区了！)]安吉尔搓了搓手，回头瞥了一眼，接着说，[angel.speech(我很抱歉，以前这里是以服务体贴闻名的，只不过上面把这里指定成了红灯区的行政中心，我就不得不每天埋头在办公桌前处理堆成山的文件，现在也是。所以如果你想办卖淫许可证的话，就跟我来办公室。哦，如果你是来找兔兔和耷耷的话，上楼就能看见他们。)]
 	</p>
 	<p>
-		With that, the madam of the establishment rushes off back to her office, leaving you once more all alone in the deserted entrance hall. You could follow Angel to her office, and try to talk to her about the current state of her brothel, or to apply for a prostitution license. You could also head upstairs and try to find the girls Angel referred to as 'Bunny' and 'Loppy'...
+		说完这些，安吉尔转身往她的办公室方向走了，这精致而空旷的大厅里再度只留下了你一个人。你可以跟上安吉尔，去她的办公室里，了解一下妓院的近况，或者办一张卖淫许可证。你也可以上楼去见一见安吉尔口中所说的“兔兔”和“耷耷”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_REPEAT"><![CDATA[
 	<p>
-		Once again, you find yourself standing in the entrance hall of the brothel 'Angel's Kiss'. A golden chandelier dangles from the high ceiling above you, bathing the entire entrance hall in a soft white light. To your right, a long, mahogany counter runs in parallel to the wall, which, much like the other three that surround you, is half-panelled in dark wood, with the top half being covered in a finely detailed light-blue floral wallpaper. Underfoot, a rich burgundy carpet runs down the middle of the hall, with spaces on either side displaying polished oak boards.
+		你发现你再次站在了“天使之吻”的门厅里。金色的吊灯自高高的天花板垂下，将整个大厅染上一层轻柔的白光。你的右手边是一张长长的红木柜台，和墙壁平行放置。墙壁的下半部分镶嵌了深色的木板，而上半部分则贴着精致的浅蓝与白色花卉纹理墙纸。脚下，一条浓酒红色毯铺在抛光过的橡木地板上，地毯从门厅的入口，沿着中轴线一路延伸出去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_REPEAT_EMPTY"><![CDATA[
 	<p>
-		There doesn't seem to be anyone in here at the moment, and you wonder just how bad business must be for there not even to be someone assigned to greet customers...
+		现在，这里看不到一个人影，你在想这里的生意该有多差，门厅内甚至看不到有人来迎接客人……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_REPEAT_STAFFED"><![CDATA[
 	<p>
-		Your slave, [npc.name], is standing behind the front desk, and [npc.she] smiles at you and offers you a greeting.
+		[npc.name]，你的奴隶，正站在前台。[npc.she]向你微笑，和你打了个招呼。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANGELS_KISS_CORRIDOR -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		The corridors of Angel's Kiss bear the same decor as the entrance hall. The walls are half-panelled in dark wood, with the top half being covered in a finely detailed light-blue floral wallpaper. Underfoot, a rich burgundy carpet runs down the middle of the hall, with spaces on either side displaying polished oak boards. The odd painting, cabinet, or doorway breaks up the monotony of your surroundings, which are illuminated by the soft white glow given off from the many light fixtures set into the high ceiling above.
+		“天使之吻”的走廊，和门厅的装修风格相一致——墙壁下半部分用了同样的深色木材镶板，上半部分贴着精致的浅蓝色花纹墙纸，脚下同样是抛光的橡木地板，上面铺着一条浓酒红色地毯。一些奇怪的墙绘、橱柜和小门使得这里的布局没有那么单调。天花板上的许多灯发出柔和的白光，照亮了整个走廊。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANGELS_KISS_STAIRS_UP -->
 	
 	<htmlContent tag="STAIRS_UP"><![CDATA[
 	<p>
-		A grand staircase, carpeted in the same rich burgundy as the rest of the establishment, stands before you. From here, you could make your way up to the first floor of the building, or head off into the looping corridor that runs around the ground floor.
+		你面前是一个宏伟的、铺着和其他地方一样浓酒红色地毯的大楼梯。从这里，你可以上到二楼，或者进入环绕二楼的环形走廊……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANGELS_KISS_STAIRS_DOWN -->
 	
 	<htmlContent tag="STAIRS_DOWN"><![CDATA[
 	<p>
-		A grand staircase, carpeted in the same rich burgundy as the rest of the establishment, stands before you. From here, you could make your way down to the ground floor of the building, or head off into the looping corridor that runs around the first floor.
+		你面前是一个宏伟的、铺着和其他地方一样浓酒红色地毯的大楼梯。从这里，你可以下到一楼，或者进入环绕一楼的环形走廊……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANGELS_KISS_BEDROOM -->
 	
 	<htmlContent tag="BEDROOM"><![CDATA[
 	<p>
-		The many bedrooms in Angel's Kiss are all decorated in much the same way. A clean, king-sized bed sits against one wall, with a pair of bedside cabinets flanking it on either side. An arcane-powered free-standing lamp, giving out a deep red glow, is positioned near the window. The walls are covered in finely detailed floral wallpaper, while underfoot, there's the same burgundy carpet that runs through the rest of the establishment.
+		“天使之吻”的卧室有着统一的装修风格：靠墙放着一张干净的特大号床，两侧各有一只床头柜。以奥术魔力驱动的落地灯靠窗放置，发出酒红色的光芒。墙上覆盖着精致花卉纹理的壁纸，脚下则是与整个建筑风格统一的勃艮第地毯。
 	</p>
 	<p>
-		A simple wooden door on one side of the room opens out into a small bathroom, allowing the bedroom's occupant to clean themselves after entertaining each of their customers.
+		房间的一侧有一个简易的小木门，那里通向浴室，可以让这里的人在招待客人之后把自己洗干净。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_EMPTY"><![CDATA[
 	<p>
-		This bedroom is currently empty, but despite the lack of any sign of a recent occupant, the room is immaculately clean and free of dust.
+		这间卧室目前是空的，尽管看起来没有任何人住过这里，但房间依然干净整洁，没有一点灰尘。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_EMPTY_WHORE_SELF_GROUND_FLOOR"><![CDATA[
 	<p>
-		This bedroom is currently empty, but despite the lack of any sign of a recent occupant, the room is immaculately clean and free of dust. Although you own a prostitution license, your agreement with Angel was that you'd only be allowed to use the first floor rooms to whore yourself out in. If you were interested in working as a prostitute, you should probably head upstairs...
+		这间卧室目前是空的，尽管看起来没有任何人住过这里，但房间依然干净整洁，没有一点灰尘。尽管你现在有一张卖淫许可证，但是安吉尔在和你协议时已经说过，你只能占用二楼的房间去卖淫。如果你是来卖身的，那你应该上楼…… 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_EMPTY_WHORE_SELF"><![CDATA[
 	<p>
-		This bedroom is currently empty, but despite the lack of any sign of a recent occupant, the room is immaculately clean and free of dust. As you own a prostitution license, and have the agreement with Angel that you're allowed to whore yourself out in the first floor rooms, you could wait in here for a client to turn up...
+		这间卧室目前是空的，尽管看起来没有任何人住过这里，但房间依然干净整洁，没有一点灰尘。你现在有了卖淫许可证，而且安吉尔同意你在一楼的房间里卖淫，所以，你现在可以在这里等待，之后会有客人推开门进来的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_SUB"><![CDATA[
 	<p>
-		Deciding that you'll sell your body to a client to make some quick cash, you head down to Angel's office to let her know that you're available. After specifying that you'd like to be the submissive partner, you accept Angel's offer of having a new client sent your way, and, returning to your room, you sit down on the bed and wait...
+		你决定出卖你的身体挣点快钱，于是走进了安吉尔的办公室，告诉她你现在可以工作了。在你明确表示希望成为顺从的一方之后，安吉尔点了点头，表示会找到适合你的客户。你回到房间，坐在床上等待……
 	</p>
 	<p>
-		Around twenty-five minutes later, you hear a knock at the door, and you turn to see [npc.a_fullRace] stepping into the room. [npc.speech(Are you [pc.name]? Angel said you're available for two-thousand flames...)]
+		大概25分钟过后，你听见了敲门声，转过身，看到了[npc.a_fullRace]走进了房间。[npc.speech(你是[pc.name]吗？安吉尔说可以用2000火币买你一次……)]
 	</p>
 	<p>
-		[pc.speech(Yeah, that's me!)] you happily reply, jumping up from the bed and walking over towards the client. You only have a moment to decide whether you're going to let this [npc.race] pay to fuck you or not...
+		[pc.speech(对，就是我！)]你高兴地回答，从床上站起来，走向你的客户。你得赶紧做决定，要不要把身体卖给[npc.race]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_SUB_START"><![CDATA[
 	<p>
-		Deciding that you'll take this client, you step forwards and press yourself against [npc.herHim], sighing, [pc.speech(If you've got the money, I'm all yours...)]
+		你觉得这买卖可以接受，于是向前一步，将你的身体贴在[npc.herHim]身上，叹了口气，[pc.speech(如果你带了钱，那么，我的一切都可以属于你……)]
 	</p>
 	<p>
-		[npc.Name] eagerly hands over the two-thousand flames, and, after taking the money and putting it to one side, you wrap your arms around [npc.herHim]. Leaning in to whisper in [npc.her] ear, you [pc.moan], [pc.speech(Show me how a real [npc.race] fucks...)]
+		[npc.Name]很快把2000火币交到你手上，你把钱放在一边，用胳膊勾着[npc.herHim]。你伏到[npc.her]耳边，呻吟着，[pc.moan]，[pc.speech(让我见识一下，一个真正的[npc.race]会怎么样操我……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_SUB_AFTER_SEX"><![CDATA[
 	<p>
-		You collapse down onto the bed, breathing heavily as [npc.name] disentangles [npc.herself] from your clutches. Looking down at you, [npc.she] smirks. [npc.speech(That was amazing! You're a great fuck, [pc.name]. Maybe I'll have you again some time.)]
+		你倒在床上，喘着粗气，[npc.name]从你的怀抱中离开，看着床上气喘吁吁的你，[npc.she]得意地笑着。[npc.speech(真不错，[pc.name]，我感觉很爽。也许下次我还会来指名要你。)]
 	</p>
 	<p>
-		As [npc.she] gathers [npc.her] things and heads towards the exit, you call out, [pc.speech(Come again soon!)]
+		当[npc.she]收拾好东西，离开时，你朝[npc.she]喊，[pc.speech(我等着你，别让我等太久哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_DOM"><![CDATA[
 	<p>
-		Deciding that you'll sell your body to a client to make some quick cash, you head down to Angel's office to let her know that you're available. After specifying that you'd like to be the dominant partner, you accept Angel's offer of having a new client sent your way, and, returning to your room, you sit down on the bed and wait...
+		你决定出卖你的身体挣点快钱，于是走进了安吉尔的办公室，告诉她你现在可以工作了。在你明确表示希望成为支配的一方之后，安吉尔点了点头，表示会找到适合你的客户。你回到房间，坐在床上等待……
 	</p>
 	<p>
-		Around twenty-five minutes later, you hear a knock at the door, and you turn to see [npc.a_fullRace] stepping into the room. [npc.speech(Are you [pc.name]? Angel said you'd dominate me for two-thousand flames...)]
+		大概25分钟过后，你听见了敲门声，转过身，看到了[npc.a_fullRace]走进了房间。[npc.speech(你是[pc.name]吗？安吉尔说你比较喜欢主动支配……2000火币，可以吗？)]
 	</p>
 	<p>
-		[pc.speech(Yeah, that's me!)] you reply, standing up from the bed and striding towards the client. You only have a moment to decide whether you're going to let this [npc.race] pay to be dominated by you or not...
+		[pc.speech(对，就是我！)]你高兴地回答，从床上站起来，走向你的客户。你得赶紧做决定，要不要和[npc.race]来一次……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_DOM_START"><![CDATA[
 	<p>
-		Deciding that you'll take this client, you step forwards and press yourself against [npc.herHim], reaching around to take a firm grip of [npc.her] [npc.ass+] as you [pc.moan], [pc.speech(If you've got the money, I'll show you how a real dom treats [pc.her] sub...)]
+		你决定拿下这个委托人，于是走上前紧贴着[npc.herHim]，你[pc.moan]着伸出手，用力捏了一把[npc.her][npc.ass+]，[pc.speech(如果你带了钱，我就告诉你一个真正的dom会怎么对待[pc.her]的sub……)]
 	</p>
 	<p>
-		[npc.Name] eagerly hands over the two-thousand flames, and, after taking the money and putting it to one side, you focus your attention on your new client. Leaning in to growl in [npc.her] ear, you [pc.moan], [pc.speech(It's time to show you how I fuck submissive little [npc.races] like you...)]
+		[npc.Name]急切地交给你两千火币，你拿过钱后放在一边，随后将注意力放在你的新委托人身上。你倾身在[npc.her]的耳边低声[pc.moan]道，[pc.speech(就让你看看我会怎么操你这样顺从的小[npc.races]……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_DOM_AFTER_SEX"><![CDATA[
 	<p>
-		[npc.Name] collapses down onto the bed, breathing heavily as you disentangle yourself from [npc.her] clutches. Looking down at [npc.herHim], you smirk. [pc.speech(Good bitch, you were a half-decent fuck after all! Maybe I'll let you be my toy again some time.)]
+		你从[npc.Name]的怀抱中解脱出来，而[npc.her]倒在床上喘着粗气。你俯视着[npc.herHim]得意地笑道，[pc.speech(好婊子，你也算是个过得去的贱货了！将来或许我还会再让你当我的玩具的。)]
 	</p>
 	<p>
-		After waiting a moment for [npc.name] to catch [npc.her] breath, you help [npc.herHim] gather [npc.her] things and show [npc.herHim] to the exit. Smiling after [npc.herHim], you call out, [pc.speech(Come again soon!)]
+		你等待[npc.name]调整好呼吸，帮忙收拾好东西，随后带[npc.herHim]去出口。你微笑着呼唤，[pc.speech(下次再来哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_DECLINE"><![CDATA[
 	<p>
-		Deciding that you don't want to take this client, you step forwards and apologise, [pc.speech(I'm so sorry, there must have been a mistake. I'm actually coming to the end of my shift now... I'm sure one of the girls down the corridor will love to have some fun with you though!)]
+		你决定不服务这名委托人，于是向前致歉道，[pc.speech(很抱歉，肯定是出了岔子。我其实快要下班了……但我保证走廊里肯定会有姑娘愿意陪你找点乐子的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_DECLINE_SUB"><![CDATA[
 	<p>
-		[npc.Name] lets out an annoyed huff, but doesn't press the issue. [npc.speech(Fine... Maybe I'll get to ride you another time...)]
+		[npc.Name]不悦地叹了口气，但并没有深究。[npc.speech(好吧……也许我得改天才能骑你了……)]
 	</p>
 	<p>
-		With that, [npc.she] makes [npc.her] exit, leaving you alone in the bedroom once again.
+		随后，[npc.she]从出口离开了，你又一次一个人待在了卧室里。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_SELF_DECLINE_DOM"><![CDATA[
 	<p>
-		[npc.Name] lets out a disappointed whine, but doesn't press the issue. [npc.speech(Fine... Maybe you'll want to ride me another time...)]
+		[npc.Name]失望地嘀咕了一声，但并没有深究。[npc.speech(好吧……也许改天你会愿意骑我的……)]
 	</p>
 	<p>
-		With that, [npc.she] makes [npc.her] exit, leaving you alone in the bedroom once again.
+		随后，[npc.she]从出口离开了，你又一次一个人待在了卧室里。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_OCCUPIED_SLAVE"><![CDATA[
 	<p>
-		Your slave [npc.name], [npc.a_fullRace], is currently working in this room, and [npc.she] smiles at you as you step through the open door. [npc.speech(Oh, hi, [npc.pcName]! Are you here to have some fun? I don't think there's any need to be charging you, after all...)]
+		你的奴隶[npc.name]，[npc.a_fullRace]，正在这个房间内工作。你从开着的门进入时[npc.she]对你微笑道，[npc.speech(哦，嗨，[npc.pcName]！你是来找乐子的吗？虽然不认为有向你收费的必要……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_OCCUPIED_SLAVE_SEX"><![CDATA[
 	<p>
-		The door to this bedroom is firmly shut and locked, and from within, you can hear the moans of your slave, [npc1.name], as [npc1.she] entertains [npc1.her] client. Checking the ledger that's near the door, you see that [npc1.she]'s currently entertaining [npc2.a_fullRace(true)].
+			这间卧室的门紧紧关着并上了锁，从里面传来了你的奴隶，[npc1.name]的呻吟声，[npc1.she]正在招待[npc1.her]的客户。在查看门边的记录后，你知道了[npc1.she]目前正在招待一个[npc2.a_fullRace(true)]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_PROSTITUTE_SLAVE_SEX"><![CDATA[
 	<p>
-		Deciding that you'd like to have some fun with [npc.name], you step forwards and pull [npc.herHim] in against your chest. Leaning in over [npc.her] shoulder, you [pc.moan], [pc.speech(It's time for a good fuck!)]
+		你决定和[npc.Name]好好玩玩，在递上三百火币后，你将[npc.herHim]揽入怀中。然后靠在[npc.her]的肩膀上[pc.moan]道：[pc.speech(是时候来上一炮了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_PROSTITUTE_SLAVE_SEX_SUB"><![CDATA[
 	<p>
-		Deciding that you'd like to have some fun with [npc.name], you step up to [npc.herHim], [pc.moaning], [pc.speech(Come on, [npc.name]! I want you to dominate me!)]
+		你决定和[npc.name]找点乐子，于是[pc.moaning]着走到[npc.herHim]面前：[pc.speech(来吧！[npc.name]！我想让你支配我！)]
 	</p>
 	<p>
-		[npc.Name] obediently does as you ask, and, reaching around to grab hold of your [pc.ass+], [npc.she] pulls you into [npc.herHim], growling into your ear, [npc.speech(Sure thing, [npc.pcName]... <i>I'm</i> the one in charge now...)]
+		[npc.Name]点了点头，随后突然抓住你[pc.ass+]，在猛地把你拉向[npc.herHim]时，[npc.she]对着你的耳朵咆哮道：[npc.speech(当然可以，[npc.pcName]……现在，<i>我说了算</i>……)] 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_OCCUPIED"><![CDATA[
 	<p>
-		The [npc.fullRace], [npc.name], is currently working in this room, and [npc.she] smiles at you as you step through the open door. [npc.speech([pc.Name]! I can never thank you enough for saving me from those alleyways... Angel insists that I charge everyone I sleep with, so I can't offer you a free ride, but I can still give you a huge discount! Instead of the usual two-thousand flames, I'll only charge you three-hundred. That is, if you wanted to have sex with me...)]
+		那个叫[npc.name]的[npc.fullRace]正在这个房间里工作，当看见你走进房间时，[npc.she]微笑着说道：[npc.speech(嗨！[pc.Name]！你把我从那阴暗地小巷子里救了出来，我真的感激不尽……安吉尔坚持要我向每个上床的人收费，所以我不能免费和你来一发，但我还是可以给你一个大大的折扣，只收你三百，而不是通常的两千。当然，前提是你想和我上床的话……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_OCCUPIED_SEX"><![CDATA[
 	<p>
-		The door to this bedroom is firmly shut and locked, and from within, you can hear the moans of [npc1.name] as [npc1.she] entertains [npc1.her] client. Checking the ledger that's near the door, you see that [npc1.she]'s currently entertaining [npc2.a_fullRace(true)].
+		这间卧室的门紧紧关着并上了锁，从里面传来了[npc1.name]的呻吟声，[npc1.she]正在招待[npc1.her]的客户。在查看门边的记录后，你知道了[npc1.she]目前正在招待一个[npc2.a_fullRace(true)]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_PROSTITUTE_SEX"><![CDATA[
 	<p>
-		Deciding that you'd like to have some fun with [npc.name], you hand over the three-hundred flames, before stepping forwards and pulling [npc.herHim] in against your chest. Leaning in over [npc.her] shoulder, you [pc.moan], [pc.speech(It's time for a good fuck!)]
+		你决定和[npc.Name]好好玩玩，在递上三百火币后，你将[npc.herHim]揽入怀中。然后靠在[npc.her]的肩膀上[pc.moan]道：[pc.speech(好好地让我爽一下吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_PROSTITUTE_SEX_SUB"><![CDATA[
 	<p>
-		Deciding that you'd like to have some fun with [npc.name], you hand over the three-hundred flames, before stepping up to [npc.herHim] and [pc.moaning], [pc.speech(Come on, [npc.name]! I want you to dominate me!)]
+		你决定要和[npc.Name]玩玩，在递上了三百火币后，你[pc.moaning]着走到[npc.herHim]的面前：[pc.speech(来吧！[npc.name]！我想让你支配我！)]
 	</p>
 	<p>
-		[npc.Name] obediently does as you ask, and, reaching around to grab hold of your [pc.ass+], [npc.she] pulls you into [npc.herHim], growling into your ear, [npc.speech(Sure thing, [npc.pcName]... <i>I'm</i> the one in charge now...)]
+		[npc.Name]点了点头，随后突然抓住你[pc.ass+]，在猛地把你拉向[npc.herHim]时，[npc.she]对着你的耳朵咆哮道：[npc.speech(当然可以，[npc.pcName]……现在，<i>我说了算</i>……)] 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_PROSTITUTE -->
 	
 	<htmlContent tag="PROSTITUTE_AFTER_SEX"><![CDATA[
 	<p>
-		[npc.Name] collapses down onto [npc.her] bed, panting heavily. [npc.speech(Ah... [npc.pcName]... that was amazing!)]
+		[npc.Name]倒在[npc.her]的床上，喘着粗气，[npc.speech(啊……[npc.pcName]……这太棒了！)]
 	</p>
 	<p>
-		You smile down at the exhausted [npc.race], before turning away and gathering your things. As you head towards the door to make your exit, [npc.name] calls out after you, [npc.speech(Please come back again!)]
+		你微笑地看了看筋疲力竭的[npc.race]，转过身收拾好东西。当你走到门边，准备离开时，[npc.name]在你身后喊道，[npc.speech(下次再来哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PROSTITUTE_AFTER_SEX_NO_ORGASM"><![CDATA[
 	<p>
-		[npc.Name] collapses down onto [npc.her] bed, letting out a happy sigh, [loppy.speech(Ah... [npc.pcName]... that was great!)]
+		[npc.Name]倒在[npc.her]的床上，高兴地叹了口气，[loppy.speech(啊……[npc.pcName]……真的很爽！)]
 	</p>
 	<p>
-		[npc.She] doesn't sound completely honest, and, seeing as you didn't bring [npc.herHim] to an orgasm, you realise that [npc.she]'s just being professionally courteous. Not being too concerned with this fact, you turn away and start to gather your things. As you head towards the door to make your exit, [npc.name] calls out after you, [npc.speech(Please come back again!)]
+		[npc.She]听起来没说实话，毕竟你根本没让[npc.herHim]高潮，你意识到这只是[npc.she]这一行的套话罢了。你对此并不介意，转头收拾你的东西。当你走到门边，打算离开时， [npc.name]在身后对你说，[npc.speech(下次再来！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANGELS_KISS_BEDROOM_BUNNY -->
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_BUNNY"><![CDATA[
 	<p>
-		Finding yourself at one end of the corridor, you see that the door to the nearest bedroom has been left half-open. Approaching this inviting doorway, you look through to discover that unlike most of the other rooms in Angel's Kiss, this one is actually occupied by a prostitute.
+		你走到走廊的一端，发现最近的一间卧室的门半开着。走近这扇诱人的房门，你发现与天使之吻的大多数其他房间不同，这间房里住了一名妓女。
 	</p>
 	<p>
-		Lying on her stomach on the pink, king-sized bed that's sitting against one wall, this room's occupant is burying her face in the pillows as she kicks her slender legs up and down in frustration. Watching this curious display, you see that the girl has got a round, fluffy rabbit's tail growing out just above her perfectly shaped ass, while up on her head she's got a pair of upright rabbit's ears which are twitching back and forth in time with the kicking of her legs. Suddenly lifting her face up out of the pillows, she groans out loud, [bunny.speech(Bored... bored... bored... BORED!)]
+		她趴在靠墙的粉红色大床上，把脸埋在枕头里，懊恼地上下踢着修长的双腿。看着她这奇特的举动，你发现，在她完美的臀部上方，长着一条又圆又蓬松的兔子尾巴，而在她的头上，有一对直立的兔子耳朵，正随着她踢腿的动作来回抽动。突然，她从枕头中抬起脸，大声呻吟起来[bunny.speech(无聊……无聊……无聊……无聊！！！)]
 	</p>
 	<p>
-		You wonder if you should enter the room and say hello to this rabbit-girl, or turn around and leave...
+		你该走进房间和兔女打招呼，还是转身离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_BUNNY_REPEAT"><![CDATA[
 	<p>
 		#IF(bunny.isVisiblyPregnant())
-			Once again finding yourself standing just outside of Bunny's bedroom, you look through the half-open door to see the rabbit-girl lying back on her bed, staring up at the ceiling and kicking her legs up and down as she waits for her next customer. From your vantage point, you're clearly able to see that the rabbit-girl has a swollen belly, revealing the fact that [style.colourSex(she's pregnant)].
+			你再次来到了那个兔女的卧室外面，透过半开的门，你看到兔女躺在床上，仰望着天花板，双腿来回踢动着，以此来打发无聊的时间，好等待下一位客人。从你的位置看去，你可以清楚地看到兔女的肚子大了起来，这说明了一个事实，那就是[style.colourSex(她怀孕了)]。
 		#ELSE
-			Once again finding yourself standing just outside of Bunny's bedroom, you look through the half-open door to see the rabbit-girl once again lying face-down on her bed, kicking her legs up and down as she waits for her next customer.
+			你再次来到了那个兔女的卧室外面，透过半开的门，你看到兔女躺在床上，仰望着天花板，双腿来回踢动着，以此来打发无聊的时间，好等待下一位客人。
 		#ENDIF
 	</p>
 	<p>
-		You wonder if you should enter the room and say hello to Bunny again, or turn around and leave...
+		你是该走进房间和兔女打招呼，还是直接转身离开呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ANGELS_KISS_BEDROOM_BUNNY_ENTER -->
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_BUNNY_ENTER"><![CDATA[
 	<p>
-		Deciding to introduce yourself to this bored rabbit-girl, you push open the door and [pc.step] forwards into her room. Hearing the creak of the floorboards beneath your [pc.feet], the girl turns over on the bed, and after catching sight of you, jumps up onto her hands and knees and excitedly exclaims, [bunny.speech(Eeep! Are you a customer?! A real-life, <i>actual</i> customer?!)]
+		你决定向这个无聊的兔女介绍自己，于是推开门，走进她的房间。听到地板发出的吱吱声，女孩翻身下床，看到你后，手脚并用地跳了起来，兴奋地叫道：[bunny.speech(呀！你是客人吗？现实生活中的，<i>真正的</i>客人？！)]
 	</p>
 	<p>
-		The rabbit-girl's voice, full of shock at first, quickly shifts to an excited tone, and, not giving you a moment to respond, she suddenly leaps to her feet and bounces towards you. [bunny.speech(Hi, hi, hi! Oh my goodness, a customer! Oh, I'm being super rude aren't I? I'm Bunny! So nice to meet you!)]
+		兔女的声音充满震惊，很快转为兴奋，不给你反应的时间，她突然一跃而起，蹦蹦跳跳地向你跑来：[bunny.speech(嗨，嗨，嗨！哦，天哪，有客人！哦，我是不是太失礼了？我是兔兔！很高兴见到你！)]
 	</p>
 	<p>
-		[pc.speech(Hi, Bunny, I'm [pc.name],)] you reply.
+		[pc.speech(嗨，兔兔，我是[pc.name]。)]你回复道。
 	</p>
 	<p>
-		The rabbit-girl grabs your [pc.hand] and gives it an enthusiastic shake as she continues, [bunny.speech(So I guess Angel told you to come up here? I'm so sorry that she didn't show you up here in person, she's been super busy with stuff for a while now... But anyway! Enough of that! You wanna have sex, right? It's been aaages since my older sis' Loppy and I got any customers here, so I'm sooo horny right now.)]
+		兔女抓住你的[pc.hand]，一边热情地摇晃，一边继续说：[bunny.speech(我猜是安吉尔让你来这里的？我很抱歉她没有亲自带你来，她这阵子超级忙……但不管怎样！不说了！你想做爱，对吧？我和大姐耷耷已经很久没有见到客人来了，我现在非常饥渴。)]
 	</p>
 	<p>
-		[pc.speech(You work here with your sister?)] you ask.
+		[pc.speech(你和姐姐在这里工作？)]你问道。
 	</p>
 	<p>
-		[bunny.speech(Yeah, she's down the other end of the corridor. We used to share a room, back when this place was the busiest brothel in all Dominion, but ever since those Enforcers made Angel run this place as an admin centre, people started to stop coming here. Better not to get involved with anything the Enforcers have a hand in, right?)] Bunny suddenly realises what she's saying, and splutters, [bunny.speech(W-Wait, there's nothing wrong with this place, it's just people are kind of wary, y'know? Anyway, I started talking about boring stuff again... So yeah, Loppy's my older sister, and, getting down to business, it's gonna be one-thousand five-hundred flames to have some fun with either of us. Angel sets the prices, so there's no haggling, ok?)]
+		[bunny.speech(对，她在走廊的另一头。我们以前共用一个房间，那时这里是全御城区最热闹的妓院，但自从那些执法者让安吉尔把这里当做管理中心后，人们就不再来这里了。最好不要和执法者扯上关系，对吧？)]兔兔突然意识到自己在说什么，语无伦次地说，[bunny.speech(等，等等，这地方没什么问题，只是人们有点警惕，知道吗？总之，我又开始说无聊的事情了……对了，耷耷是我姐姐，说正事，和我们俩任何一个玩要一千五百个火币。价格是安吉尔定的，所以不要讨价还价，好吗？)]
 	</p>
 	<p>
-		You start to respond, but Bunny suddenly lets out an excited little cry, and, jumping up and down on the spot, she happily exclaims, [bunny.speech(Oh! Oh! You look like you're kinda rich, y'know? I don't make this offer to just anyone, but if you want to take Loppy and I at the same time, then for five-thousand flames I can go and fetch her here right now! Oh, and I should warn you, she's a futa, so if you're not into cocks, maybe you'd best just stick with me.)]
+		你刚要回答，兔兔却突然兴奋地叫了起来，她在原地跳了起来，高兴地叫道：[bunny.speech(哦！哦！你看起来挺有钱的，知道吗？我不会随便给别人开这个价，但如果你想同时要我和耷耷的话，只要给我五千火币，我现在就可以去把她带过来！哦，我得提醒你，她是个扶她，如果你不喜欢鸡巴，最好还是跟我吧。)]
 	</p>
 	<p>
-		You wonder if you should take Bunny up on her offer, or decline and perhaps come back later...
+		你不知道是应该接受兔兔的提议，还是拒绝她的好意，也许以后再说……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_BUNNY_ENTER_REPEAT"><![CDATA[
 	#IF(bunny.isVisiblyPregnant())
 		#IF(bunny.getPregnantLitter().isFather(player))
 			<p>
-				[pc.Stepping] into the rabbit-girl's bedroom and announcing your presence with a quick hello, you watch as Bunny's large, rabbit-like ears twitch in response to your greeting, before she laboriously sits up and looks over at the door. Seeing that it's you, she points down at her swollen belly and excitedly calls out,
+				[pc.Stepping]进兔女的卧室，简短地打了声招呼，兔兔大大的兔耳朵随着话语摆动，她费力的坐起身来，然后激动的指了指自己的肚子，兴奋的喊了起来，
 				#IF(!bunny.isCharacterReactedToPregnancy(pc))
-					 [bunny.speech([pc.Name]! Look! Even though I was on the pill, you still managed to get me pregnant! Your seed must be super virile or something; I can't believe you actually managed to get me knocked up! Come and have a feel of my tummy!)]
+					[bunny.speech([pc.Name]！看啊！你让吃了避孕药的我怀孕了！你的种子一定是超级牛逼的存在，我真不敢相信你真的能让我怀孕！快过来摸摸我的肚子！)]
 				#ELSE
-					 [bunny.speech([pc.Name]! Look! I'm still pregnant with our kids! Come and have a feel of my tummy!)]
+					[bunny.speech([pc.Name]！看啊，我正怀着孩子呢！快来摸摸我的肚子吧！)]
 				#ENDIF
 			</p>
 			<p>
-				Doing as the mother of your children asks, you [pc.step] over to where she's still sitting on the edge of her bed and reach down to give her swollen belly a loving rub. Thanks to the fact that she's wearing a miniskirt and cami top in place of her usual tight-fitting bodysuit, you're able to run your hands over Bunny's exposed skin, making her let out a happy little giggle and seductively moan, [bunny.speech(You'd like to fuck a pregnant bunny, wouldn't you, [pc.name]? Come on, just hand over your flames and we can do a recreation of how our kids were conceived...)]
+				依照孩子母亲的要求，你[pc.step]到她所坐在床边的地方，伸出手爱怜地揉了揉她那肿胀的肚子。由于她穿的是超短裙和吊带上衣，而不是平时的紧身连体衣，所以你可以用手抚摸兔兔那裸露的肌肤，而这也让她发出开心的笑声和诱人的呻吟，[bunny.speech(你想狂操一只怀孕的兔子，是不是，[pc.name]？来吧，只要交出你的火币，我们就能重现我们的孩子是如何怀上的……)]
 			</p>
 		#ELSE
 			<p>
-				[pc.Stepping] into the rabbit-girl's bedroom and announcing your presence with a quick hello, you watch as Bunny's large, rabbit-like ears twitch in response to your greeting, before she laboriously sits up and looks over at the door. Seeing that it's you, she points down at her swollen belly and excitedly calls out,
+				[pc.Stepping]进兔女的卧室，简短地打了声招呼，兔兔大大的兔耳朵随着话语摆动，她费力的坐起身来，然后激动的指了指自己的肚子，兴奋的喊了起来，
 				#IF(!bunny.isCharacterReactedToPregnancy(pc))
-					 [bunny.speech([pc.Name]! Look! Even though I was on the pill, Loppy managed to get me pregnant when we had that threesome!)]
+					[bunny.speech([pc.Name]！你看！尽管我在吃避孕药，但耷耷还是成功地让我怀孕了！就在我们3P的时候！)]
 				#ELSE
-					 [bunny.speech([pc.Name]! Look! I'm still pregnant with Loppy's kids!)]
+					[bunny.speech([pc.Name]！看呐！我还怀着耷耷的孩子呢！)]
 				#ENDIF
 			</p>
 			<p>
-				[pc.Stepping] into the room, you head on over to where the pregnant rabbit-girl is sitting on the edge of her bed. Thanks to the fact that she's wearing a miniskirt and cami top in place of her usual tight-fitting bodysuit, you're able to see the exposed fur of Bunny's tummy. Rubbing her hands over her swollen bump, she seductively moans, [bunny.speech(You'd like to fuck a pregnant bunny, wouldn't you, [pc.name]? Come on, just hand over your flames and we can do a recreation of how I ended up like this...)]
+				你[pc.step]到她所坐在床边的地方，看着她伸出手揉了揉她那肿胀的肚子。由于她穿的是超短裙和吊带上衣，而不是平时的紧身连体衣，所以你可以看到兔兔那裸露的肌肤，而她也发了出开心的笑声和诱人的呻吟，[bunny.speech(你想狂操一只怀孕的兔子，是不是，[pc.name]？来吧，只要交出你的火币，我们就能重现那一天的场景……)]
 			</p>
 		#ENDIF
 		<p>
-			Biting her lip and batting her eyelids at you, the horny bunny lets out another little giggle as she awaits your answer. You could pay her for sex, or make an excuse and take your leave...
+			好色的兔兔发出一阵咯咯的笑声，然后咬着嘴唇，眨巴着眼皮看着你，她正在等待你的回答。你可以付钱和她做爱，或者找个借口离开……
 		</p>
 	#ELSE
 		<p>
-			[pc.Stepping] into the rabbit-girl's bedroom and announcing your presence with a quick hello, you watch as Bunny's large, rabbit-like ears twitch in response to your greeting, before she quickly spins over onto her back and jumps up onto her feet. Seeing that it's you, she calls out in excitement, [bunny.speech([pc.Name]! Hi! How're you doing? You here to come get a piece of this bunny's hot ass?! Or maybe you've got the flames to have a go with my sis' and I at the same time?!)]
+			[pc.Stepping]进兔女的卧室，简短地打了声招呼，兔兔大大的兔耳朵随着话语摆动，她迅速翻身跳起。看到是你，便兴奋地叫道，[bunny.speech([pc.Name]！嗨！最近怎么样？你来这是要尝尝兔兔的火辣屁股吗？还是说，你搞到了火币，想让我姐姐也一起来？)]
 		</p>
 		<p>
-			Bunny giggles as she bounds forwards, bouncing up and down on the spot as she awaits your answer. You could pay her for sex, or make an excuse and take your leave...
+			兔兔咯咯地笑了起来，她正等待着你的回答。你可以付钱和她做爱，或者找个借口离开……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_BUNNY_SEX"><![CDATA[
 	<p>
-		You hand over one-thousand five-hundred flames to Bunny, who squeals in excitement as she sees that you're here for sex, [bunny.speech(Ooh! Yes! Finally, this bunny gets to have some fun!)]
+		你交给兔兔1500火币，打算和她做一次，她兴奋地叫了起来，[bunny.speech(哦！小兔子今天终于可以找点乐子了！)]
 	</p>
 	<p>
-		Setting the money to one side, Bunny bounces forwards, wrapping her arms around your back and leaning in as she whispers, [bunny.speech(So, come on then, let's fuck like rabbits!)]
+		兔兔把钱放在一边，蹦蹦跳跳地跑上前来，双手环抱着你的后背，边在你的耳边低语，边靠过来，[bunny.speech(所以，来吧，兔子的欲望可是很旺盛的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_BUNNY_THREESOME"><![CDATA[
 	<p>
-		[pc.speech(How about you run and fetch your sister,)] you say, handing over five-thousand flames.
+		[pc.speech(你快去把你的姐妹叫来吧，)]说完之后，你交出了5000火币。
 	</p>
 	<p>
-		Bunny's eyes go wide as she takes the money, and, placing it to one side, she lets out a delighted squeal, [bunny.speech(Oh! This is gonna be so much fun! Wait right here! I'll go get Loppy!)]
+		兔兔瞪着大大的眼睛接过钱，然后把钱放在一边高兴地叫了起来，[bunny.speech(哦天！这一定会很好玩的！我这就去叫耷耷！)]
 	</p>
 	<p>
-		With that, the excited rabbit-girl sprints out of the room to fetch her elder sister.
+		话音未落，兴奋的兔女便冲出了房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_BUNNY_THREESOME_LOPPY_NOT_INTRODUCED"><![CDATA[
 	<p>
-		You're not kept waiting for long, and after less than two minutes, Bunny bounds back into the room. Following in her footsteps, and looking every bit as excited as her sister, is Loppy.
+		你并没有等太久，不到两分钟，兔兔就蹦蹦跳跳地回到了房间。紧随其后的是耷耷，她看起来一样兴奋。
 	</p>
 	<p>
-		You can instantly tell that they're related, as they have very similar facial features. Loppy's hair and fur is a slighter darker shade of brown than her sister's, and her eyes are brown whereas Bunny's are green, but apart from that, and the fact that her rabbit-like ears are floppy instead of upright, the two sisters are almost identical to one another. As you're marvelling at how alike they look, Loppy grins at you and exclaims, [loppy.speech(Hey there, [pc.name]! Bunny's told me all about your naughty plan... Fucking us both at the same time? This is going to be good!)]
+		你一眼就能看出她们有血缘关系，因为它们的面部特征非常相似。耷耷的头发和皮毛比妹妹的略深一些，她的眼睛是棕色的，而兔兔的眼睛是绿色的，除此之外，她的兔子耳朵是软的，而不是竖起来的，姐妹俩几乎一模一样。就在你惊叹她们长得如此相像的时候，耷耷笑着对你喊道：[loppy.speech(嘿，你好啊！[pc.name]！兔兔已经把你的淘气计划都告诉我了…… 同时干我们两个？光是想想就太棒了！)]
 	</p>
 	<p>
-		Obviously the more dominant of the pair, Loppy turns towards her sister, and, grabbing both sides of her head, she pulls her into a passionate kiss. Dragging Bunny with her, she then steps over towards her sister's bed, and, reaching down to grab her ass, drags her down onto the mattress. Pushing herself up onto all fours, she tells Bunny to do the same, and within the span of just a few seconds, you're looking down at the rabbit-morph sisters as they present themselves to you...
+		耷耷显然更占主导，她转向妹妹，捧住她的脑袋，拉着她热烈地亲吻了起来。然后拖着兔兔走向她的床，在伸手抓住她的屁股后将她按到了床上。她扭动四肢，摆出趴在床上的姿势。然后告诉兔兔也这样做，你低头看着这对兔化形的姐妹花，她们就这样将自己呈现在了你的面前……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_BUNNY_THREESOME_LOPPY_INTRODUCED"><![CDATA[
 	<p>
-		You're not kept waiting for long, and after less than two minutes, Bunny bounds back into the room. Following in her footsteps, and looking every bit as excited as her sister, is Loppy.
+		你并没有等太久，不到两分钟，兔兔就蹦蹦跳跳地回到了房间。紧随其后的是耷耷，她看起来和兔兔一样兴奋。
 		#IF(loppy.isVisiblyPregnant())
 			#IF(!loppy.isCharacterReactedToPregnancy(pc))
-				 As she sees that it's you, Loppy grins and points down to her clearly-swollen belly, before exclaiming, [loppy.speech(Hey there, [pc.name]! Look at what you went and did; you got me knocked up! Anyway, Bunny's told me all about your naughty plan... Fucking us both at the same time? Let's show my sis' how our kids were conceived!)]
+				在看到是你后，耷耷笑了起来，指了指自己明显隆起的肚子，然后故作惊呼道：[loppy.speech(嘿，[pc.name]！看看你干的好事，把我肚子搞大了！总之，兔兔已经把你的淘气计划都告诉我了…… 同时干我们俩？让我妹妹看看我们的孩子是怎么怀上的！)]
 			#ELSE
-				 As she sees that it's you, Loppy grins and points down to her swollen belly, before exclaiming, [loppy.speech([pc.Name], look, I'm still pregnant! Anyway, Bunny's told me all about your naughty plan... Fucking us both at the same time? Let's show my sis' how our kids were conceived!)]
+				在看到是你后，耷耷笑了起来，指了指自己明显隆起的肚子，然后故作惊呼道：[loppy.speech([pc.name]！看呐！我还怀着孕呢！但不管怎样，兔兔已经把你的淘气计划都告诉我了…… 同时干我们两个？让我妹妹看看我们的孩子是怎么怀上的！)]
 			#ENDIF
 		#ELSE
-			 As she sees that it's you, Loppy grins and exclaims, [loppy.speech(Hey there, [pc.name]! Bunny's told me all about your naughty plan... Fucking us both at the same time? This is going to be good!)]
+			在看到是你后，耷耷笑了起来，然后喊道：[loppy.speech(嘿，你好啊！[pc.name]！兔兔已经把你的淘气计划都告诉我了…… 同时干我们两个？光是想想就太棒了！)]
 		#ENDIF
 	</p>
 	<p>
-		Obviously the more dominant of the pair, Loppy turns towards her sister, and, grabbing both sides of her head, pulls her into a passionate kiss. Dragging Bunny with her, she then steps over towards her sister's bed, and by reaching down to grab her ass, drags her down onto the mattress. Pushing herself up onto all fours, she tells Bunny to do the same, and within the span of just a few seconds, you're looking down at the rabbit-morph sisters as they present themselves to you...
+		耷耷显然更占主导，她转向妹妹，捧住她的脑袋，拉着她热烈地亲吻了起来。然后拖着兔兔走向她的床，在伸手抓住她的屁股后将她按到了床上。她扭动四肢，摆出趴在床上的姿势。然后告诉兔兔也这样做，你低头看着这对兔化形的姐妹花，她们就这样将自己呈现在了你的面前……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_BUNNY_DECLINE"><![CDATA[
 	<p>
-		[pc.speech(Sorry, Bunny, I don't have time right now, but I might be back later,)] you explain, before heading towards the door.
+		[pc.speech(对不住啊兔兔，我现在没空，但过会儿应该还会回来。)]你解释道，然后朝门口走去。
 	</p>
 	<p>
-		[bunny.speech(Awww...)] Bunny pouts, [bunny.speech(Make sure to come back soon! I can show you a real good time!)]
+		[bunny.speech(唔唔唔……)]兔兔撅起嘴，[bunny.speech(一定要快点回来啊！我要带你享受真正的美好时光！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_BUNNY -->
 	
 	<htmlContent tag="AFTER_SEX_BUNNY"><![CDATA[
 	<p>
-		Bunny collapses down onto her bed, panting heavily. [bunny.speech(Ah... [pc.name]... that was amazing!)]
+		兔兔瘫倒在床上，大口大口地喘着粗气。[bunny.speech(哦……[pc.name]……这真是太棒了！)]
 	</p>
 	<p>
-		You smile down at the exhausted rabbit-morph, before turning away and gathering your things. As you head towards the door to make your exit, Bunny calls out after you, [bunny.speech(Please come back again!)]
+		你微笑的看着被你折腾到疲惫不堪的兔兔，然后正当你收拾东西，向门口走去时，兔兔在后面叫住了你：[bunny.speech(请一定要再来哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_BUNNY_NO_ORGASM"><![CDATA[
 	<p>
-		Bunny collapses down onto her bed, letting out a happy little sigh, [bunny.speech(Ah... [pc.name]... that was great!)]
+		兔兔瘫倒在床上，并发出满足的叹息声：[bunny.speech(哦……[pc.name]……这太爽了！)]
 	</p>
 	<p>
-		She doesn't sound completely honest, and, seeing as you didn't bring Bunny to an orgasm, you realise that she's just being professionally courteous. Not being too concerned with this fact, you turn away and start to gather your things. As you head towards the door to make your exit, Bunny calls out after you, [bunny.speech(Please come back again!)]
+		这话听起来很是敷衍，而且鉴于你并没有让兔兔达到高潮，所以你意识到她只是出于职业上的礼貌。不过你并没有太在意这个事实，而是转身离开并收拾你的东西。而当你收拾完准备离开时，兔兔在后面叫住了你，[bunny.speech(下次还请指名我哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_BUNNY_THREESOME -->
 	
 	<htmlContent tag="AFTER_SEX_BUNNY_THREESOME"><![CDATA[
 	<p>
-		The two sisters collapse down onto the bed in front of you, panting and sighing with exhaustion. As they realise that you've finished with them, Loppy is the first to make a move, and, turning over to lie on her back, she props herself up on her elbows and calls out, [loppy.speech([pc.Name], that was amazing! My sis' and I haven't had this much fun in forever!)]
+		两姐妹气喘吁吁的平趴在你面前的床上。当她们意识到你已经结束时，耷耷率先动了起来，她翻身仰卧，用手肘撑起身子，然后叫道： [loppy.speech([pc.Name]， 这太爽了！我和妹妹好久没这么开心了！)]
 	</p>
 	<p>
-		Following her sister's lead, Bunny pushes herself up onto her knees, and, turning towards you, giggles, [bunny.speech(Loppy's right, that was really fantastic! You'll come back again soon, right?)]
+		兔兔学着姐姐的样子跪在床上，转过身对着你咯咯笑道：[bunny.speech(耷耷说的对，这感觉真的太棒了！你很快还会再来的，对吗？)]
 	</p>
 	<p>
-		Smiling down at the rabbit-girl sisters before you, you reply, [pc.speech(We'll have to see, won't we?)]
+		看着这对意犹未尽的姐妹花，你微笑着回答道：[pc.speech(让我们拭目以待，好么？)]
 	</p>
 	<p>
-		The girls each let out a playful giggle, before Loppy stands up and gathers her things. [loppy.speech(Well, I'd better get back to my room. I hope we get to have some more fun together some time soon [pc.name]! See ya Bunny!)]
+		在与女孩们说了一会俏皮话后，耷耷站起身开始收拾东西。[loppy.speech(好了，我该回房间去。我希望我们不久后还能一起再找点乐子，[pc.name]！再见，兔兔！)]
 	</p>
 	<p>
-		With that, Loppy makes her exit, and, following her lead, you gather your own things and head towards the door. Just before you make your exit, Bunny calls out after you, [bunny.speech(Please do come back again!)]
+		耷耷在说完之后便离开了，而你也跟着她收拾好自己的东西向门口走去。就在你离开之前，兔兔在后面叫住了你，[bunny.speech(请一定要再来哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANGELS_KISS_BEDROOM_LOPPY -->
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_LOPPY"><![CDATA[
 	<p>
-		The bedroom at this end of the corridor has its door left wide open, and as you approach to take a look inside, you see that it's occupied by a solitary prostitute. Gazing out of the window on the far side of the room, a floppy-eared, cotton-tailed rabbit-girl has her back turned towards you. Her floppy rabbit-ears occasionally twitch back and forth, and as you watch, she lets out a wistful sigh and groans, [loppy.speech(I'm so bored...)]
+		走廊这头的卧室门大开着，你走近一看，发现里面住着一个独身妓女。房间另一侧的窗前，一只软耳棉尾的兔女正背对着你。她软软的兔耳朵不时地来回抽动，在你的注视下，她发出俏皮的叹息和呻吟，[loppy.speech(好无聊……)]
 	</p>
 	<p>
-		You could enter her room and call out a greeting, or instead turn around and return the way you came...
+		你可以进入她的房间问候，或者转身原路返回……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_LOPPY_REPEAT"><![CDATA[
 	<p>
 		#IF(loppy.isVisiblyPregnant())
-			Once again finding yourself standing before the wide-open door to Loppy's bedroom, you look inside to see the rabbit-girl standing on the far side of the room gazing out of the window. Even from this position, you can see that her belly is visibly swollen, revealing the fact that [style.colourSex(she's pregnant)].
+			你再次站在了耷耷卧室大开的门前，向里面望去，只见那个兔女正站在房间的另一侧，凝视着窗外。在这个位置，你可以清楚地看到兔女的肚子大了起来，这说明了一个事实，那就是[style.colourSex(她怀孕了)]。
 		#ELSE
-			Once again finding yourself standing before the wide-open door to Loppy's bedroom, you look inside to see the rabbit-girl standing on the far side of the room gazing out of the window. Her floppy rabbit-ears occasionally twitch back and forth, and as you watch, she lets out a wistful sigh and groans, [loppy.speech(I'm so bored...)]
+		你再次站在了耷耷卧室大开的门前，向里面望去，只见那个兔女正站在房间的另一侧，凝视着窗外。她那软软的兔耳朵不时地来回抽动，在你的注视下，她发出了俏皮的叹息和呻吟，[loppy.speech(好无聊……)]
 		#ENDIF
 	</p>
 	<p>
-		You wonder if you should enter the room and say hello to Loppy again, or turn around and leave...
+		你是该走进房间和兔女打招呼，还是直接转身离开呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANGELS_KISS_BEDROOM_LOPPY_ENTER -->
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_LOPPY_ENTER"><![CDATA[
 	<p>
-		Deciding that you want to say hello to this rabbit-girl, you [pc.step] forwards and enter her room. Before you're able to call out a greeting, the prostitute's floppy rabbit-ears suddenly twitch, and she spins to face you and ask, [loppy.speech(Who are you? Angel said the cleaners wouldn't be here until for another three hours... Wait... You're not a <i>customer</i> are you?)]
+		你决定跟兔女打个招呼，于是走进了她的房间。还没来得及打招呼，妓女软软的兔耳朵突然抽动了一下，她转过身来面对着你问道：[loppy.speech(你是谁？安吉尔说清洁工还要三个小时才会来……等等……你不是<i>顾客</i>吧？)]
 	</p>
 	<p>
-		The rabbit-girl's cheeks start to turn red as she realises her mistake, and, rushing forwards, she frantically apologises, [loppy.speech(Oh no! I'm so, so sorry! I didn't mean any offence, it's just that we haven't had any real customers for so long! I'm Loppy, at your service!)]
+		兔女意识到自己的错误后，脸颊开始泛红，她急忙上前，慌乱地道歉，[loppy.speech(啊不是！我非常，非常抱歉！我无意冒犯，只是我们已经很久没有真正的顾客了！我叫耷耷，为您服务！)]
 	</p>
 	<p>
-		The rabbit-girl hastily bows her head, causing her floppy ears to swing back and forth in a rather comical manner. Smiling down at Loppy you reply, [pc.speech(Hi, Loppy, I'm [pc.name].)]
+		兔女急忙低下头，软软的耳朵来回摆动，颇为滑稽。你微笑着回答耷耷：[pc.speech(嗨，耷耷，我是[pc.name]。)]
 	</p>
 	<p>
-		[loppy.speech(Pleased to meet you, [pc.name]! Oh, my sis' is never going to believe this... an actual customer!)] Loppy bounces up and down in her excitement. [loppy.speech(Oh, my younger sis' is Bunny by the way, and she works here too! She's just down the other end of this corridor. We actually used to share a room, but ever since Angel got mixed up in Enforcer business, all the customers stopped coming, and all of the other girls moved out to the other brothels...)]
+		[loppy.speech(很高兴见到您，[pc.name]！哦我妹妹一定不敢相信……一个真正的客人！)]耷耷兴奋得上蹿下跳：[loppy.speech(对了，我妹妹叫兔兔，她也在这里工作！她就在走廊的另一头，其实我们以前共用一个房间，但自从安吉尔卷入执法者的生意后，所有客人都不来了，其他女孩也都搬到其他妓院去了……)]
 	</p>
 	<p>
-		Suddenly realising that she's not doing the best job of advertising her services, Loppy quickly changes the subject, [loppy.speech(Anyway! Enough of that! If you're looking for a good time, you definitely came to the right place! Oh, and I'd better warn you right now, I've got a nice tight pussy for you to fuck, but I'm also packing a little extra equipment downstairs...)]
+		耷耷突然意识到自己的广告做得不够好，于是赶紧转移话题：[loppy.speech(不管怎么！说了！如果你想找点乐子，那就来对地方了！哦，我最好现在就提醒你，我有个紧致的小穴等着你来操，不过我在下面还带了点‘额外装备’……)]
 	</p>
 	<p>
-		Loppy giggles, and, running her hands down between her legs, she pushes her hips forwards a little. Looking down, you see that she's got a considerable bulge pressing out against the fabric of her bodysuit, and as she sees that you've noticed her 'extra equipment', Loppy giggles, [loppy.speech(I can also get a little more dominant than my sis, so if that takes your fancy, then it'll be two-thousand five-hundred flames for a session where I'm the one in charge. I'm warning you though, I can get a little rough like that... If not, I can be a good little sub and let you fuck my brains out for two-thousand flames. Oh, oh! And if you fancied taking both my sister and I at once, then for five-thousand flames we can do that too! So, what'll it be?)]
+		耷耷咯咯地笑着，双手伸到两腿之间，把臀部向前推了一下。你低头一看，发现她紧贴着紧身衣的布料隆起了一个大包，当她看到你已经注意到她的“额外装备”时，耷耷咯咯地笑了：[loppy.speech(我也可以比我妹妹更霸道一点，所以如果你喜欢的话，那就花两千五百火币，让我来做一次‘老大’。不过我得提醒你，我可能会有点暴力……如果不是这样，我可以被动，你可以用两千火币把我操得一塌糊涂。如果你想同时上我和我妹妹，只要五千火币！那么，你想怎么玩？)]
 	</p>
 	<p>
-		Loppy bites her lip and flutters her eyelids at you, waiting for your answer...
+		耷耷咬着嘴唇，眨巴着眼睛看着你，等待你的回答……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANGELS_KISS_BEDROOM_LOPPY_ENTER_REPEAT"><![CDATA[
 	#IF(loppy.isVisiblyPregnant())
 		<p>
-			Once again, you find yourself stepping into Loppy's bedroom. As she hears you approach, her floppy ears twitch, and after turning around to smile at you, she pointedly rubs her hands over her swollen belly and exclaim,
+			你再次来到了耷耷的卧室。当她听到你走近的脚步声时，那软软的耳朵抽动了一下，她随后转过身对你笑了笑，然后又用手搓了搓肿胀的肚子，感叹道：
 			#IF(!loppy.isCharacterReactedToPregnancy(pc))
-				 [loppy.speech(Take a look at what you've done, [pc.name]! You knocked me up even though I was on the pill! Come and have a feel of my tummy!)]
+				[loppy.speech(看看你都干了些什么，[pc.name]！我明明都吃避孕药了，你还是把我肚子搞大了！快过来摸摸我的肚子！)]
 			#ELSE
-				 [loppy.speech(hey [pc.Name]! I'm still pregnant with our kids! Come and have a feel of my tummy!)]
+				[loppy.speech(嗨！[pc.Name]！我还怀着我们的孩子呢！快来摸摸我的肚子！)]
 			#ENDIF
 		</p>
 		<p>
-			Doing as the mother of your children asks, you [pc.step] over to where she's still standing beside the window and reach down to give her swollen belly a loving rub. Thanks to the fact that she's wearing a miniskirt and cami top in place of her usual tight-fitting bodysuit, you're able to run your hands over Loppy's exposed skin, making her let out a happy little moan and tease, [loppy.speech(You'd like to fuck a pregnant bunny, wouldn't you, [pc.name]? Come on, just hand over your flames and we can do a recreation of how our kids were conceived...)]
+			依照孩子母亲的要求，你[pc.step]到她所坐在床边的地方，伸出手爱怜地揉了揉她那肿胀的肚子。由于她穿的是超短裙和吊带上衣，而不是平时的紧身连体衣，所以你可以用手抚摸耷耷那裸露的肌肤，而这也让她发出开心的笑声和诱人的呻吟，[loppy.speech(你想狂操一只怀孕的兔子，是不是，[pc.name]？来吧，只要交出你的火币，我们就能重现我们的孩子是如何怀上的……)]
 		</p>
 		<p>
-			Leaning into you, Loppy strokes her feminine fingers up the length of your thigh, before seductively smiling at you and waiting to hear your answer. You could pay her for sex, or make an excuse and take your leave...
+			耷耷靠在你身上，用极尽妩媚的姿态抚摸起了你的大腿，然后满是诱惑地对你笑了笑。她正在等待你的回答。你可以付钱和她做爱，或者找个借口离开……
 		</p>
 	#ELSE
 		<p>
-			Once again, you find yourself stepping into Loppy's bedroom. As she hears you approach, her floppy ears twitch, and she spins around to greet you, [loppy.speech([pc.Name]! Hi! How're you doing? You looking for a good time?)]
+			你再次来到了耷耷的卧室。当她听到你走近的脚步声时，那软软的耳朵抽动了一下，她随后转过身对你笑了笑，[loppy.speech([pc.Name]！你好啊！你是想来找点乐子么？)]
 		</p>
 		<p>
-			Quickly bouncing over towards you, with her floppy ears swinging this way and that, Loppy beams at you as she continues, [loppy.speech(I'm feeling super horny right now! You're here for a fuck, right?)]
+			耷耷迅速蹦跳着向你跑来，那软软的耳朵忽左忽右地摆动着，[loppy.speech(我现在感觉超级饥渴 你是来做爱的么？)]
 		</p>
 		<p>
-			Loppy giggles as she comes to a halt in front of you, before starting to bounce up and down on the spot as she eagerly awaits your answer. You could pay her for sex, or make an excuse and take your leave...
+			耷耷咯咯笑着走到你面前停下，在原地蹦蹦跳跳，急切地等待着你的回答。你可以付钱和她做爱，或者找个借口离开……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_SEX"><![CDATA[
 	<p>
-		You hand over two-thousand flames to Loppy, who cries out in excitement as she sees that you're here for sex, [loppy.speech(Yes! Finally, I get to have some real fun!)]
+		你交给耷耷2000火币，打算和她做一次，她兴奋地叫了起来，[bunny.speech(哦！我今天终于可以爽那么一下了！)]
 	</p>
 	<p>
-		Setting the money to one side, Loppy dashes forwards, wrapping her arms around your back and leaning in as she whispers, [loppy.speech(So, come on then, let's fuck like rabbits!)]
+		耷耷把钱放在一边，蹦蹦跳跳地跑上前来，双手环抱着你的后背，一边在你的耳边低语，一边将身体贴的更紧[bunny.speech(所以，来吧，兔子的欲望可是很旺盛的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_SEX_SUBMISSIVE"><![CDATA[
 	<p>
-		You hand over two-thousand five-hundred flames to Loppy, who, instead of giggling in excitement as you anticipated, calmly places the money to one side, before grinning. [loppy.speech(So, you want to get dominated by this bunny's cock, huh?)]
+		你把两千五的火币递给耷耷，但她并没有像你预想的那样兴奋地傻笑，而是平静地把钱放在一边，然后才咧嘴笑了起来。[loppy.speech(所以，你想被兔子的鸡巴支配，是吗？)]
 	</p>
 	<p>
-		You open your mouth to respond, but Loppy quickly raises her hand and presses it over your lips. [loppy.speech(Naughty, naughty... I didn't give you permission to speak!)]
+		你张开嘴想回答，但耷耷迅速抬起手按住了你的嘴唇。[loppy.speech(淘气，小淘气……我可没允许你说话！)]
 	</p>
 	<p>
-		Pressing herself up against you, Loppy uses her free hand to reach around behind your back, and, grabbing a handful of your [pc.ass+], she laughs, [loppy.speech(Mmm, yeah, I'm going to enjoy pounding this cute little ass of yours...)]
+		耷耷压在你身上，然后用空闲着的手一把抓住你[pc.ass+] ，她笑了起来，[loppy.speech(嗯…… 耶，我要好好享受一下你这可爱的小屁股……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_DECLINE"><![CDATA[
 	<p>
-		[pc.speech(Sorry, Loppy, I don't have time right now, but I might be back later,)] you explain, before heading towards the door.
+		[pc.speech(对不住啊耷耷，我现在没空，但过会儿应该还会回来。)]你解释道，然后朝门口走去。
 	</p>
 	<p>
-		[loppy.speech(Awww...)] Loppy sighs. [loppy.speech(Make sure to come back soon! I can show you a real good time!)]
+		[bunny.speech(唔唔唔……)]耷耷撅起嘴，[bunny.speech(一定要快点回来啊！我要带你享受真正的美好时光！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_THREESOME"><![CDATA[
 	<p>
-		[pc.speech(How about you run and fetch your sister,)] you say, handing over five-thousand flames.
+		[pc.speech(你快去把你的姐妹叫来吧，)]说完之后，你交出了5000火币。
 	</p>
 	<p>
-		Loppy's eyes go wide as she takes the money, and, placing it to one side, she lets out a happy cry, [loppy.speech(Oh! This is going to be amazing, I promise! Wait right here! I'll go get Bunny!)]
+		耷耷瞪着大大的眼睛接过钱，然后把钱放在一边高兴地叫了起来，[bunny.speech(哦天！这一定会很好玩的！我这就去叫兔兔！)]
 	</p>
 	<p>
-		With that, the excited rabbit-girl sprints out of the room to fetch her younger sister.
+		话音未落，兴奋的兔女便冲出了房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_THREESOME_BUNNY_NOT_INTRODUCED"><![CDATA[
 	<p>
-		You're not kept waiting for long, and after less than two minutes, Loppy bounds back into the room. Following in her footsteps, and looking every bit as excited as her sister, is Bunny.
+		你并没有等太久，不到两分钟，耷耷就蹦蹦跳跳地回到了房间。紧随其后的是兔兔，她看起来一样兴奋。
 	</p>
 	<p>
-		You can instantly tell that they're related, as they have identical facial features. Bunny's hair and fur is a slighter lighter shade of brown than her sister's, and her eyes are green whereas Loppy's are brown, but apart from that, and the fact that her rabbit-like ears are upright instead of floppy, the two sisters are almost identical to one another. As you're marvelling at how alike they look, Bunny lets out an excited squeal, [bunny.speech(Hey there, [pc.name]! Loppy's told me what you've got in mind! I love being fucked alongside my sis' here! Let's get started!)]
+		你一眼就能看出她们有血缘关系，因为它们的面部特征非常相似。兔兔的头发和皮毛比姐姐的略浅一些，她的眼睛是绿色的，而耷耷的眼睛是棕色的，除此之外，她的兔子耳朵是软的，而不是竖起来的，姐妹俩几乎一模一样。就在你惊叹她们长得如此相像的时候，兔兔笑着对你喊道：[loppy.speech(嘿，你好啊！[pc.name]！耷耷已经把你的淘气计划都告诉我了…… 同时干我们两个？光是想想就太棒了！)]
 	</p>
 	<p>
-		Obviously the more dominant of the pair, Loppy turns towards her sister, and, grabbing both sides of her head, she pulls her into a passionate kiss. Dragging Bunny with her, she then steps over towards her bed, and, reaching down to grab Bunny's ass, she drags her down onto the mattress. Pushing herself up onto all fours, she tells Bunny to do the same, and within the span of just a few seconds, you're looking down at the rabbit-morph sisters as they present themselves to you...
+		耷耷显然更占主导，她转向妹妹，捧住她的脑袋，拉着她热烈地亲吻了起来。然后拖着兔兔走向她自己的床，在伸手抓住她的屁股后将她按到了床上。她扭动四肢，摆出趴在床上的姿势。然后告诉兔兔也这样做，你低头看着这对兔化形的姐妹花，她们就这样将自己呈现在了你的面前……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_THREESOME_BUNNY_INTRODUCED"><![CDATA[
 	<p>
-		You're not kept waiting for long, and after less than two minutes, Loppy bounds back into the room. Following in her footsteps, and looking every bit as excited as her sister, is Bunny.
+		你并没有等太久，不到两分钟，耷耷就蹦蹦跳跳地回到了房间。紧随其后的是兔兔，她看起来和耷耷一样兴奋。
 		#IF(bunny.isVisiblyPregnant())
 			#IF(bunny.getPregnantLitter().isFather(player))
 				#IF(!bunny.isCharacterReactedToPregnancy(pc))
-					 As she sees that it's you, Bunny lets out an excited squeal and points down to her clearly-swollen belly, before exclaiming, [bunny.speech([pc.name]! Look at what you did; you got me knocked up! Anyway, Loppy's told me what you've got in mind! I love being fucked alongside my sis' here! Let's show her how our kids were conceived!)]
+					在看到是你后，兔兔兴奋的尖叫了起来，然后指了指自己的肚子：[bunny.speech(嘿，[pc.name]！看看你干的好事，把我肚子搞大了！总之，耷耷已经把你的淘气计划都告诉我了…… 我喜欢在耸耸旁边被操！让我姐姐看看我们的孩子是怎么怀上的！)]
 				#ELSE
-					 As she sees that it's you, Bunny lets out an excited squeal and points down to her swollen belly, before exclaiming, [bunny.speech([pc.Name], look, I'm still pregnant! Anyway, Loppy's told me what you've got in mind! I love being fucked alongside my sis' here! Let's show her how our kids were conceived!)]
+					在看到是你后，兔兔兴奋的尖叫了起来，然后指了指自己的肚子：[bunny.speech(嘿，[pc.Name]！我还怀着孕呢！总之，耷耷已经把你的淘气计划都告诉我了…… 我喜欢在耸耸旁边被操！让我姐姐看看我们的孩子是怎么怀上的！)]
 				#ENDIF
 			#ELSE
 				#IF(!bunny.isCharacterReactedToPregnancy(pc))
-					 As she sees that it's you, Bunny lets out an excited squeal and points down to her clearly-swollen belly, before exclaiming, [bunny.speech([pc.name]! Look at what Loppy did; she got me knocked up when we had that threesome! Anyway, she's told me what you've got in mind! I love being fucked alongside my sis' here! Let's do a recreation of how I ended up like this!)]
+					在看到是你后，兔兔兴奋的尖叫了起来，然后指了指自己的肚子：[bunny.speech([pc.name]！看看耷耷都干了些什么；我们玩三人行的时候，她把我肚子搞大了！总之，她告诉了我你的想法！我喜欢在姐姐被旁边操！让我们来重现一下我是怎么变成这样的！)]
 				#ELSE
-					 As she sees that it's you, Bunny lets out an excited squeal and points down to her swollen belly, before exclaiming, [bunny.speech([pc.Name], look, I'm still pregnant with Loppy's kids! Anyway, she's told me what you've got in mind! I love being fucked alongside my sis' here! Let's do a recreation of how I ended up like this!)]
+					在看到是你后，兔兔兴奋的尖叫了起来，然后指了指自己的肚子：[bunny.speech([pc.Name]！看啊！我还怀着耸耸的孩子呢！总之，她告诉了我你的想法！我喜欢在姐姐被旁边操！让我们来重现一下我是怎么变成这样的！)]
 				#ENDIF
 			#ENDIF
 		#ELSE
-			 As she sees that it's you, Bunny lets out an excited squeal, [bunny.speech(Hey there, [pc.name]! Loppy's told me what you've got in mind! I love being fucked alongside my sis' here! Let's get started!)]
+			在看到是你后，兔兔兴奋的尖叫了起来，[bunny.speech(你好啊！[pc.name]！耷耷已经把你的淘气计划都告诉我了…… 我喜欢在耸耸旁边被操！光是想想就太棒了！)]
 		#ENDIF
 	</p>
 	<p>
-		Obviously the more dominant of the pair, Loppy turns towards her sister, and, grabbing both sides of her head, pulls her into a passionate kiss. Dragging Bunny with her, she then steps over towards her bed, and, reaching down to grab Bunny's ass, drags her down onto the mattress. Pushing herself up onto all fours, she tells Bunny to do the same, and within the span of just a few seconds, you're looking down at the rabbit-morph sisters as they present themselves to you...
+		耷耷显然更占主导，她转向妹妹，捧住她的脑袋，拉着她热烈地亲吻了起来。然后拖着兔兔走向自己的床，在伸手抓住她的屁股后将她按到了床上。她扭动四肢，摆出趴在床上的姿势。然后告诉兔兔也这样做，你低头看着这对兔化形的姐妹花，她们就这样将自己呈现在了你的面前……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_AFTER_SEX"><![CDATA[
 	<p>
-		Loppy collapses down onto her bed, panting heavily. [loppy.speech(Ah... [pc.name]... that was amazing!)]
+		耷耷瘫倒在床上，大口大口地喘着粗气。[bunny.speech(哦……[pc.name]……这真是太棒了！)]
 	</p>
 	<p>
-		You smile down at the exhausted rabbit-morph, before turning away and gathering your things. As you head towards the door to make your exit, Loppy calls out after you, [loppy.speech(Please come back again!)]
+		你微笑的看着被你折腾到疲惫不堪的耷耷，然后正当你收拾东西，向门口走去时，耷耷在后面叫住了你：[bunny.speech(请一定要再来哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_AFTER_SEX_NO_ORGASM"><![CDATA[
 	<p>
-		Loppy collapses down onto her bed, letting out a happy little sigh, [loppy.speech(Ah... [pc.name]... that was great!)]
+		耸耸瘫倒在床上，并发出满足的叹息声：[bunny.speech(哦……[pc.name]……这太爽了！)]
 	</p>
 	<p>
-		She doesn't sound completely honest, and, seeing as you didn't bring Loppy to an orgasm, you realise that she's just being professionally courteous. Not being too concerned with this fact, you turn away and start to gather your things. As you head towards the door to make your exit, Loppy calls out after you, [loppy.speech(Please come back again!)]
+		这话听起来很是敷衍，而且鉴于你并没有让耸耸达到高潮，所以你意识到她只是出于职业上的礼貌。不过你并没有太在意这个事实，而是转身离开并收拾你的东西。而当你收拾完准备离开时，耸耸在后面叫住了你，[bunny.speech(下次还请指名我哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_LOPPY_AFTER_THREESOME"><![CDATA[
 	<p>
-		The two sisters collapse down onto the bed in front of you, panting and sighing with exhaustion. As they realise that you've finished with them, Loppy is the first to make a move, and, turning over to lie on her back, she props herself up on her elbows and calls out, [loppy.speech([pc.Name], that was amazing! My sis' and I haven't had this much fun in forever!)]
+		两姐妹气喘吁吁的平趴在你面前的床上。当她们意识到你已经结束时，耷耷率先动了起来，她翻身仰卧，用手肘撑起身子，然后叫道： [loppy.speech([pc.Name]， 这太爽了！我和妹妹好久没这么开心了！)]
 	</p>
 	<p>
-		Following her sister's lead, Bunny pushes herself up onto her knees, and, turning towards you, giggles, [bunny.speech(Loppy's right, that was really fantastic! You'll come back again soon, right?)]
+		兔兔学着姐姐的样子跪在床上，转过身对着你咯咯笑道：[bunny.speech(耷耷说的对，这感觉真的太棒了！你很快还会再来的，对吗？)]
 	</p>
 	<p>
-		Smiling down at the rabbit-girl sisters before you, you reply, [pc.speech(We'll have to see, won't we?)]
+		看着这对意犹未尽的姐妹花，你微笑着回答道：[pc.speech(让我们拭目以待，好么？)]
 	</p>
 	<p>
-		The girls each let out a playful giggle, before Bunny stands up and gathers her things. [bunny.speech(Well, I'd better get back to my room. I hope we get to have some more fun together some time soon, [pc.name]! See ya, Loppy!)]
+		在与女孩们说了一会俏皮话后，兔兔站起身开始收拾东西。[loppy.speech(好了，我该回房间去。我希望我们不久后还能一起再找点乐子，[pc.name]！再见，耷耷！)]
 	</p>
 	<p>
-		With that, Bunny makes her exit, and, following her lead, you gather your own things and head towards the door. Just before you make your exit, Loppy calls out after you, [loppy.speech(Please do come back again!)]
+		兔兔在说完之后便离开了，而你也跟着她收拾好自己的东西向门口走去。就在你离开之前，耷耷在后面叫住了你，[bunny.speech(请一定要再来哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE"><![CDATA[
 	<p>
-		The door to Angel's office is wide open, and a little sign outside her door reads: <i>'For all Administrative Enquiries, please knock and enter!'</i>
+		安吉尔办公室的门大敞着，门上贴了个条：<i>“行政事务咨询，请敲门后进入”</i>
 	</p>
 	<p>
-		Following the sign's instructions, you knock the open door as you step inside. The room that you find yourself walking into is stacked high with mountains of ledgers and piles of papers. A snaking path has been left to link the doorway with a desk on the far side of the room, and it's behind this that you spot Angel busily signing and stamping her way through a stack of official-looking forms. As she hears you knock, she looks up and smiles. [angel.speech(Ah, [pc.name]! Please do come in!)]
+		你按门上纸条写的去做，敲了敲门，然后走了进去。安吉尔正伏在桌子上，忙着给一堆看起来就很正式的表格签字盖章。当她听到你敲门后，她抬头看着你，微笑着。[angel.speech(啊，[pc.name]！请进！)]
 	</p>
 	<p>
-		Carefully weaving your way past precariously balanced towers of paperwork, you quickly find yourself standing before Angel's desk. [pc.speech(Hi, Angel,)] you say, [pc.speech(so I'm guessing that this is the place where all the admin work is done.)]
+		屋里到处都是堆成山的账簿和摞得高高的公文，你小心地走过文件中间狭窄曲折的小道，从门口挪到了办公桌前面。[pc.speech(你好啊，安吉尔，)]你说，[pc.speech(我猜这里就是你平时办公的地方？)]
 	</p>
 	<p>
-		Angel puts her pen down and leans back in her chair. [angel.speech(Yeah... It used to all be handled at the Enforcer HQ, until one of the bright sparks over there decided that it would easier to offload all of this work on the largest and most popular brothel in Dominion. Well, at least that's what this place <i>used</i> to be. Once everyone saw that I was working for the Enforcers, they all stopped visiting. Better not to get mixed up in anything that they're associated with, right?)]
+		安吉尔放下笔，整个人向后瘫在椅子上面。[angel.speech(对啊……以前这些乱七八糟的事情都是归执法者总部那边管，直到上边来了一个大聪明，说是在御城区最大最火的妓院办理这些事情会更方便……<i>至少在他们甩这些活给我们之前，我们这里还是挺热闹的。</i>客人看到这里的老板居然和执法者是一伙的，都不敢来了，我猜是这样？)]
 	</p>
 	<p>
-		[pc.speech(I'm guessing you couldn't just say no to them,)] you observe.
+		[pc.speech(我觉得你一开始就不该接手这活？)]你说。
 	</p>
 	<p>
-		Angel lets out a little laugh, [angel.speech(Hah, believe me, I tried! I told the first Enforcer that visited where to shove it, but the very next day, about twenty of them barged their way in and told me that I'd be doing it, or I'd be for sale in Slaver Alley within the hour. Typical Enforcers...)] Angel lets out a little sigh, before shaking her head and smiling up at you. [angel.speech(But anyway, enough of my woes! If it's a prostitution license you're after, then I can set you up with one of those right now. It's a five-thousand flame fee, and then you'll be able to legally charge people for having sex with you. You can also buy an enhanced license for twenty-thousand flames, which will allow you to assign any slaves that you might own as prostitutes.)]
+		安吉尔呵呵一笑，[angel.speech(哈啊，我和第一个执法者这么说了，然后第二天，就来了二十多号执法者，冲进我的办公室把我围住，告诉我，要是不同意，一个小时之内就把我卖到奴隶巷去……这里的执法者就这个样子，你也不是第一天才知道……)]她叹了口气，摇了摇头，笑着看了看你。[angel.speech(不管怎么说，这些破事都过去了！如果你来办卖淫许可证的话，我现在就能给你办下来，5000火币一张，有了这个你就能合法卖淫了。你也可以花20000火币办一张加强许可，有了这个，你的奴隶也可以合法卖淫。)]
 	</p>
 	<p>
-		Angel suddenly seems to sink into a deep thought, and, not wanting to interrupt her, you wait to see what she has on her mind. Letting out another sigh, she finally looks up at you and smiles. [angel.speech(I could also offer you a special deal that would benefit both of us. For the past few weeks, I've had my two girls, Bunny and Loppy, walking around through the red-light district, informing people that the Enforcers aren't interested in policing this establishment in any way. From what they've reported back to me, they've convinced all of our old customers to start visiting us again. The problem is, however, that all of the prostitutes that used to work for me have left, and, what with all this paperwork, I don't have time to find any new ones.)]
+		安吉尔突然低下头，似乎想到了什么。随后，她又叹了口气，抬起腿，微笑着看着你。[angel.speech(我觉得我们有双赢的办法。几周前我让我手下的两个姑娘，兔兔和耷耷，在红灯区转悠，向人们散布消息，我这一片的执法者懒得维持这里的治安。从姑娘们向我汇报的消息来看，他们几乎说服了之前我们这里所有的老主顾，回来光顾我们的妓院。不过，问题是，之前我的那些姑娘们都跑光了，我现在整天得处理这些行政上的事情，也没办法出去招新的姑娘。)]
 	</p>
 	<p>
-		[pc.speech(So you want me to find prostitutes to come and work here?)] you say, surmising what Angel was leading up to.
+		[pc.speech(所以你想让我帮你挖几个妓女过来工作？)]你顺着安吉尔的意思推测着。
 	</p>
 	<p>
-		[angel.speech(Exactly! From what I hear, there are plenty of unregistered prostitutes illegally working out of the alleyways. All you'd need to do is convince them to pay me a visit, and I'll get them started working for me!)]
+		[angel.speech(完全正确！我听说有不少无证卖淫的妓女在小巷子里招徕客人，你最好能说服他们过来，我会给他们安排工作！)]
 	</p>
 	<p>
-		[pc.speech(And how's that beneficial to me?)]
+		[pc.speech(那么，我能拿多少好处？)]
 	</p>
 	<p>
-		[angel.speech(Well, in exchange, I'll offer you the enhanced prostitution license for the fee of just five-thousand flames, instead of the usual twenty. Also, I'll let both you and your slaves work out of the first floor of my brothel. I'll take all of the proceeds from the alleyway prostitutes you send to me, and just fifteen percent of the proceeds from what your slaves earn. I do need at least some income to maintain their rooms, after all.)]
+		[angel.speech(当然不会亏待你，我会给你打个折，5000火币就能卖给你加强许可，而且我也可以让你，或者你的奴隶在我这里的一楼卖淫。你招来的妓女归我，你的奴隶在这里卖淫的话，我会抽成15%，毕竟给他们提供场地，还有维护房间，这些都不是免费的。)]
 	</p>
 	<p>
-		You wonder if you should agree to Angel's deal, but before you can give an answer, she continues, [angel.speech(You don't need to give me an answer right now. Just let me know when you're ready to agree!)]
+		你在想这笔买卖是否划算，这时安吉尔说，[angel.speech(你可以再想一想，如果你觉得可以，随时可以过来告诉我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_CONTINUE"><![CDATA[
 	<p>
-		You could ask Angel about the laws regarding prostitution in Dominion, or perhaps you could ask her about her past. Her offer of an enhanced license, plus the use of the first floor for your slaves, in exchange for five-thousand flames and the promise to send any prostitutes you encounter her way is still open as well...
+		你可以向安吉尔询问御城区有关卖淫的法律，也可以向她询问她的过去。她提出的以五千火币和承诺提高执照等级，以及使用一楼供你的奴隶们卖淫，作为交换你要将你遇到的任何妓女送到她那里去的提议也仍然有效……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_REPEAT"><![CDATA[
 	<p>
-		Once again, you find that the door to Angel's office is wide open, and the familiar little sign hanging outside her door still reads: <i>'For all Administrative Enquiries, please knock and enter!'</i>
+		你再一次发现安吉尔办公室的门大敞着，门外挂的熟悉小牌子上仍然写着：<i>“如需查询行政事务，请敲门！”</i>
+</p>
+	<p>
+		按照指示牌的指示，你敲了敲敞开的房门，迈步走了进去。你马上就发现自己走进的房间里堆满了堆积如山的账本和文件。一条蜿蜒曲折的小路将门口与房间远处的一张桌子连接起来，在桌子后面，你看到安吉尔正忙着在一叠看起来像官方文件的表格上签字盖章。在听到你的敲门声后，她抬起头微笑着向你这边看来。[angel.speech(哦，[pc.name]！你考虑好了吗？只要5000火币，你和你的奴隶就能使用一楼了！)]
 	</p>
 	<p>
-		Following the sign's instructions, you knock the open door as you step inside. The room that you find yourself walking into is stacked high with mountains of ledgers and piles of papers. A snaking path has been left to link the doorway with a desk on the far side of the room, and it's behind this that you spot Angel busily signing and stamping her way through a stack of official-looking forms. As she hears you knock, she looks up and smiles. [angel.speech(Ah, [pc.name]! Come in! Have you given my offer any more thought? Remember, five-thousand flames, and you get the use of the first floor both for yourself and for your slaves!)]
+		你小心翼翼地穿过这随时可能会倒塌的文件塔，来到了安吉尔的办公桌前。你可以向安吉尔询问御城区有关卖淫的法律，也可以向她询问她的过去。她提出的以五千火币和承诺提高执照等级，以及使用一楼供你的奴隶们卖淫，你要将你遇到的任何妓女送到她那里去的提议也仍然有效……
 	</p>
-	<p>
-		Carefully weaving your way past precariously balanced towers of paperwork, you quickly find yourself standing before Angel's desk. You could ask her about the laws regarding prostitution in Dominion, or perhaps you could ask her about her past. Her offer of an enhanced license, plus the use of the first floor for your slaves, in exchange for five-thousand flames and the promise to send any prostitutes you encounter her way is still open as well...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_REPEAT_WITH_LICENSE"><![CDATA[
 	<p>
-		Once again, you find that the door to Angel's office is wide open, and the familiar little sign hanging outside her door still reads: <i>'For all Administrative Enquiries, please knock and enter!'</i>
+		你再一次发现安吉尔办公室的门大敞着，门外挂的熟悉小牌子上仍然写着：<i>“如需查询行政事务，请敲门！”</i>
+</p>
+	<p>
+		按照指示牌的指示，你敲了敲敞开的房门，迈步走了进去。你马上就发现自己走进的房间里堆满了堆积如山的账本和文件。一条蜿蜒曲折的小路将门口与房间远处的一张桌子连接起来，在桌子后面，你看到安吉尔正忙着在一叠看起来像官方文件的表格上签字盖章。在听到你的敲门声后，她抬起头微笑着向你这边看来。[angel.speech(哦，[pc.name]！过来吧！最近好吗？我希望一楼房间的维护能让您满意！)]
 	</p>
 	<p>
-		Following the sign's instructions, you knock the open door as you step inside. The room that you find yourself walking into is stacked high with mountains of ledgers and piles of papers. A snaking path has been left to link the doorway with a desk on the far side of the room, and it's behind this that you spot Angel busily signing and stamping her way through a stack of official-looking forms. As she hears you knock, she looks up and smiles. [angel.speech(Ah, [pc.name]! Come in! How are you doing? I hope the first floor's rooms are being maintained to your satisfaction.)]
-	</p>
-	<p>
-		Carefully weaving your way past precariously balanced towers of paperwork, you quickly find yourself standing before Angel's desk. As you approach, she flashes you a dirty look and teases,
+		你小心翼翼地穿过这随时可能会倒塌的文件塔，来到了安吉尔的办公桌前。当你走近时，她深深的看了你一眼，随之打趣道：
 		#IF(flags.hasFlag(FLAG_acexp_angel_daily_sex))
-			 [angel.speech(I can't stop thinking about the fun we had earlier... I don't have any more time today, but perhaps tomorrow you'd like to come back and pay to fuck me again?)]
+			[angel.speech(我无法停止回想我们之前的鱼水之欢……但我今天没时间了，也许明天？只要你愿意的话，到时候再花钱操我一次？)]
 		#ELSE
-			 [angel.speech(I keep on getting so turned on whenever you're around... For ten thousand flames, I'll let you do anything you want to me... How about it, [pc.name]? Want to pay to fuck me like the dirty whore that I am?)]
+			[angel.speech(每当你在我身边时候，我总是抑制不住的兴奋……给我一万火币，我就让你对我为所欲为……怎么样？想像干妓女一样干我吗？)]
 		#ENDIF					
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_acexp_angel_daily_sex))
-			With Angel not having any more time in which to have sex with you today, all that's left for you to do here is ask her either about the laws regarding prostitution in Dominion or about her past...
+			安吉尔今天没有时间和你做爱了，你能做的就是问她有关御城区卖淫的法律或者她的过去……
 		#ELSE
-			With Angel continuing to give you a dirty, horny look, you wonder whether you should take her up on her offer or instead ask her about something...
+			安吉尔继续用淫荡的眼神看着你，你不知道是应该接受她的提议，还是应该问她一些事情……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_PROSTITUTION"><![CDATA[
 	<p>
-		Wanting to know a little more about prostitution in Dominion, you ask, [pc.speech(I was wondering what the laws are regarding prostitution here in Dominion. I've seen the occasional prostitute out in the streets, so they're not just confined to the red-light district?)]
+		你想了解更多御城区的卖淫情况，问道：[pc.speech(我想知道御城区关于卖淫的法律是怎样的。我偶尔在街上看到过妓女，所以她们不仅仅局限于红灯区吗？)]
 	</p>
 	<p>
-		[angel.speech(That's right,)] Angel replies, sitting back in her chair as she lowers her pen, [angel.speech(prostitutes can work in any part of the city, so long as they have a license. Brothels, however, are only allowed to operate in the red-light district, so all of the prostitutes that you see out in the rest of Dominion are working out of their homes.)]
+		[angel.speech(对的)]安吉尔放下笔，坐回椅子上回答：[angel.speech(只要有执照，妓女可以在城市的任何地方工作。不过，妓院只允许在红灯区营业，所以你在御城区其他地方看到的妓女都是在家里工作的。)]
 	</p>
 	<p>
-		[pc.speech(I see,)] you reply, [pc.speech(and so anyone can work as a prostitute, so long as they have a license?)]
+		[pc.speech(懂了，)]你回复，[pc.speech(只要有执照，谁都可以卖淫？)]
 	</p>
 	<p>
-		[angel.speech(Yes, the only exception is if a slave is working as a prostitute. Slaves don't need to have a prostitution license in order to legally sell themselves for sex, but instead, their owner must have an enhanced prostitution license. Anyone caught working as a prostitute without a license risks being arrested by the Enforcers. I hope that clears everything up!)]
+		[angel.speech(是的，唯一的例外是奴隶从事卖淫活动。奴隶不需要持有卖淫许可证就可以合法卖身为娼，相反，他们的主人必须持有高级卖淫许可证。任何被抓到无证卖淫的人都可能被执法者逮捕。我希望这一切讲清楚了！)]
 	</p>
 	<p>
-		[pc.speech(Yeah, thanks, Angel,)] you reply.
+		[pc.speech(是，谢谢你，安吉尔，)]你回复。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_BACKGROUND"><![CDATA[
 	<p>
-		[pc.speech(I was wondering if I could ask you a personal question,)] you begin, and, as Angel nods her head, you continue, [pc.speech(How did you end up owning this place?)]
+		[pc.speech(我想问你一个私人问题，)]你说，安吉尔点点头，你继续说道：[pc.speech(你是怎么拥有这家妓院的？)]
 	</p>
 	<p>
-		[angel.speech(Ah, well, the story behind that isn't too interesting, I'm afraid, but I'm happy to tell it nonetheless,)] Angel replies, smiling. [angel.speech(I started out as a prostitute, working for a small brothel on the far side of the red-light district. Thanks to my good looks and my skills beneath the sheets, I soon built up a reputation as a first-rate whore. Due to all of that nonsense that the demons keep on propagating about 'humans being troublemakers', us human prostitutes were often on the receiving end of abuse from our clients and fellow whores.)]
+		[angel.speech(啊，好吧，这背后的故事恐怕不是太有趣，但我还是很乐意说出来，)]安吉尔笑着回答，[angel.speech(我最初也是个妓女，在红灯区最边上的一家小妓院工作。凭借我的美貌和床上功夫，我很快成为名妓。由于恶魔们一直在宣传‘人类是麻烦制造者’，我们人类妓女经常受到嫖客和其他妓女的辱骂虐待。)]
 	</p>
 	<p>
-		Angel stops for a moment as she reflects on this fact, before letting out a little sigh and continuing, [angel.speech(Well, most humans eventually decide to take a couple of transformative potions to escape from all that. Myself, however...)] The corners of Angel's mouth start to turn up into a devious smile, and she lets out a triumphant laugh. [angel.speech(I loved it! In fact, I loved it so much that I made it my speciality. 'Put this angel into her rightful place!' the madam at my brothel used to call out, 'She refuses to transform, as she thinks that humans are better than you!')]
+		安吉尔停下来想了一会儿，然后叹了口气，继续说道：[angel.speech(嗯，很多人类都会决定服用一些转化药剂来摆脱这些。但我……)]安吉尔的嘴角开始上扬，露出狡黠的笑容，发出胜利的笑声：[angel.speech(我喜欢被这样对待！事实上，我太喜欢了，以至于把受虐变成了我的专长。‘把这个<i>天使</i>放到她应有的位置上！’我妓院的老板娘经常这样喊，‘她拒绝转化，因为她认为人类比你更好！’)]
 	</p>
 	<p>
-		Angel really seems to be getting into the story now, and, in her excitement, stands up from her chair and starts pacing back and forth. [angel.speech(Oh, how I loved the way my clients would use me... degrade me... make me admit how pathetic humans are... Hah! Well, they seemed to love it too! It didn't take long before I'd amassed a small fortune, and soon after moving to this brothel - which used to be called 'The Demon's Kiss', back then - I'd built up my wealth to the point where I could purchase this place from the previous owner outright!)]
+		安吉尔似乎真的进入了故事，她兴奋地从椅子上站起来，开始来回踱步：[angel.speech(哦，我多么喜欢客户使用我的方式……贬低我……让我承认人类是多么可悲……哈，他们似乎也很喜欢！没过多久，我就积累了一小笔财富，搬到这家妓院后不久——当时这家妓院的名字叫‘恶魔之吻’——我的财富就积累到了可以从前任老板手里买下这里的地步！)]
 	</p>
 	<p>
-		Angel smiles to herself and sighs, before sitting back down as she starts to calm down. [angel.speech(So, that's how I ended up owning this place. I loved my work, and maybe one day I'll hire someone to run this place so I can go back to having all that fun... For now, however, I need to get this paperwork done!)]
+		安吉尔微笑着叹了口气，然后又坐了回去，她开始平静下来：[angel.speech(就这样，我拥有了这个地方。我热爱我的工作，也许有一天我会雇人来经营这个地方，这样我就可以回去颐养天年……不过现在，我得把这些文件处理好！)]
 	</p>
 	<p>
-		[pc.speech(Thanks for sharing your story with me,)] you say, wondering what to ask Angel about next...
+		[pc.speech(感谢你和我分享你的故事。)]你答道。你在思考下一步要问安吉尔什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFICE_LICENSE_PURCHASE"><![CDATA[
 	<p>
-		Producing five thousand flames, you place them on the desk in front of Angel and tell her that you'll take her up on her offer.
+		拿出五千火币，放在安吉尔面前的桌子上，并告诉她你会接受她的提议。
 	</p>
 	<p>
-		A huge smile breaks out over Angel's face, and after first taking the money, she reaches over to grab a pink-coloured piece of paper. Placing it down before her, she quickly fills out several blank fields, before sliding it over the desk towards you and instructing, [angel.speech(Ok, so I'll need you to sign here... and here...)]
+		安吉尔的脸上露出了灿烂的笑容，她先接过钱，然后伸手拿起一张粉红色的纸。她在迅速的填写了几个空白栏后讲纸从桌子上滑给你，随后嘱咐道：[angel.speech(好吧，我需要你在这里……和这里……签字。)]
 	</p>
 	<p>
-		With that, Angel waits patiently while you sign in the places that she pointed to, before picking up the form and handing it over to you. Still smiling, she happily exclaims, [angel.speech(And there you are! You're now the owner of an enhanced prostitution license! As per our agreement, both you and your slaves can work out of the first floor of my brothel, and you'll send any prostitutes that you encounter in the alleyways to me, ok?)]
+		安吉尔耐心地等着你在她指的地方签字，然后在将填完表格递给你时，她笑着说道：[angel.speech(完成了！你现在拥有了更高级的卖淫许可证。按照我们的协议，你和你的奴隶，都可以在我的妓院工作 你一定要把在巷子里遇到的妓女送到我这里来，好吗？)]
 	</p>
 	<p>
-		Agreeing to do as Angel asks, you put your new prostitution license safely away.
+		你在表示明白之后便把新的卖淫许可证收了起来。
 	</p>
 	<p>
-		[angel.speech(This brings back memories,)] Angel wistfully sighs, before leaning back in her chair and lewdly revealing, [angel.speech(The official who gave me my prostitution license was the first to pay me for my services... He bent me over his desk and fucked me good and hard... I was still clutching my license when he started, and by the time he'd finished it was a crumpled mess. He was kind enough to give me a new one when he saw the state of it, then after that he paid to fuck me again!)]
+		[angel.speech(这唤起了我的回忆，)]安吉尔俏皮地叹了口气，然后靠在椅背上摆出个淫荡的姿势，[angel.speech(给我颁发卖淫许可证的官员是我接的第一个客人……他把我压在办公桌上，从后面狠狠地后入了我……在他开始的时候，我的手里还紧紧地抓着我的许可证，等他干完的时候，我的许可证已经皱成一团了。当他看到我的许可证时，他还很好心地给了我一本新的，然后又付钱操了我一顿！)]
 	</p>
 	<p>
-		Clearly getting turned on as she revisits these memories, Angel lets out a horny little whine, before musing quietly to herself, [angel.speech(Perhaps it wouldn't be a bad idea to whore myself out again... But I've got too much paperwork to do these days, and never get time to leave my office...)]
+		在重温这些记忆时，安吉尔明显感到兴奋，在发出一声淫荡的轻吟后，她低声自语道：[angel.speech(也许，再次去卖一下也不是个坏主意……但这些天我有太多的文书工作要做，从来没有时间离开办公室……)]
 	</p>
 	<p>
-		Suddenly seeming to remember that you're still here, Angel looks up and flashes you a dirty look for a split second, before quickly regaining her professional attitude and saying, [angel.speech(Well, don't let me keep you, [pc.name]. Thank you for your business, and I look forward to seeing the whores that you'll be sending my way!)]
+		安吉尔似乎突然想起你还在这里，她抬起头并满眼淫荡的看向你。随后又瞬间恢复了职业态度，[angel.speech(别让我耽误您的时间，[pc.name]。感谢您的惠顾，我期待看到您给我送来的妓女！)]
 	</p>
 	<p>
-		As you wonder what to do next, you see Angel flash you another lustful glance. Perhaps if you were to come back a little later, she'd be desperate enough to proposition you for sex... 
+		当你在想下一步该怎么做时，你看到安吉尔又向你投来淫邪的一瞥。也许，如果你再晚回来一会儿，她就会不顾一切地向你提出性要求…… 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PROSTITUTE_REMOVAL_PAID"><![CDATA[
 	<p>
-		Wanting to give [npc.name] an opportunity to escape from working as a prostitute, you ask [npc.herHim] if [npc.sheIs] still trying to pay off the [#SPECIAL_PARSE_0] flame fine [npc.she] mentioned back in the alleyways. Letting out a wistful sigh, the [npc.race] responds, [npc.speech(Yes, but thanks to you, I no longer have a warrant out for my arrest. I still have to pay the fine, but at least I don't have to worry about going to prison.)]
+		你想给[npc.Name]一个摆脱妓女生涯的机会，于是问[npc.herHim]，[npc.sheIs]是否还在努力偿还[npc.she]在小巷里提到的[#SPECIAL_PARSE_0]火币罚款。[npc.race]叹了一口气，回答道：[npc.speech(是的，但多亏了你，官方取消了我的通缉令。但我还是得交罚款，不过至少不用担心进监狱了。)]
 	</p>
 	<p>
-		[pc.Stepping] towards [npc.herHim], you offer [npc.name] the [#SPECIAL_PARSE_0] flames [npc.she] needs to pay off [npc.her] fine.
+		[pc.Stepping]走向[npc.herHim]，向[npc.she]提供[npc.Name]需要的[#SPECIAL_PARSE_0]火币，以此来偿还[npc.her]所需的罚款。
 	</p>
 	<p>
-		[npc.speech(Are you serious?!)] [npc.she] cries out in shock, before clasping [npc.her] [npc.hands] over [npc.her] mouth as [npc.she] sees the amount of flames which you're giving [npc.herHim]. After a moment, [npc.she] tentatively reaches out to take the money, almost as if [npc.she] expects you to pull it away a the last moment. No such thing is on your mind, however, and you let [npc.name] take the flames from you.
+		[npc.speech(你真要帮我么？！)][npc.she]震惊地大叫，然后在看到你掏出的火币时，[npc.her]紧紧地捂住了[npc.her]的[npc.hands]。过了一会儿后，[npc.she]才试探性地伸手去拿钱，[npc.she]似乎认为你会在最后一刻把钱拿走。不过你并没有这样想，而是任由[npc.Name]从你手中拿走了火币。
 	</p>
 	<p>
-		[npc.speech(I don't know what to say... Thank you! Thank you so much! I'm finally going to be able to get out of this city! I haven't been able to visit my family in so long!)] the [npc.race] sobs, crying tears of joy as [npc.she] looks [npc.heightUp(pc)] into your [pc.eyes] with a huge smile on [npc.her] face. Before you can react to her tearful display, [npc.she] manages to get [npc.her] emotions under control for long enough to seriously state, [npc.speech(But I don't have anything to give you in return... I don't think I could ever repay you...)]
+		[npc.speech(我不知道该说什么……谢谢你！太谢谢你了！我终于可以离开这个城市了！我已经很久没有回家了！)][npc.she]激动地泣不成声，脸上洋溢起了灿烂的笑容，在你对她的泪水做出反应之前，[npc.she]设法控制住了情绪，并认真地说道：[npc.speech(但我没有任何东西可以回报你……我想我永远无法报答你……)]
 	</p>
 	<p>
-		Shaking your head as [npc.she] says this, you tell [npc.name] that the only repayment you require is for [npc.herHim] to get back on [npc.her] feet and to not let [npc.herself] get into such a bad position again. Nodding [npc.her] head in agreement, [npc.race] takes a deep breath and simply says, [npc.speech(Thank you, [pc.name].)]
+		在[npc.she]说完之后，你摇了摇头。并告诉[npc.Name]，你唯一需要的回报就是让[npc.herHim]重新站起来，不要再让自己陷入如此糟糕的境地。[npc.her]点点头，然后深吸一口气，郑重地说道：[npc.speech(谢谢你，[pc.name]。)]
 	</p>
 	<p>
-		With that, [npc.she] gives you one last hug, before turning away and swiftly running off to go and pay [npc.her] fine and settle [npc.her] business with Angel. Satisfied that you've done a good deed, you hold your head up high as you prepare to follow in [npc.namePos] footsteps and continue on your journey...
+		在说完之后，[npc.she]给了你最后一个拥抱，然后转身离开，迅速跑去支付罚款，并解决[npc.her]和安吉尔的事情。你很高兴做了一件好事，并昂起头准备跟随[npc.namePos]的脚步继续前行……
 	</p>
 	]]></htmlContent>
 	

@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>5</value> 
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一双]]></determiner>
 		
-		<name><![CDATA[crude foot wrap]]></name>
+		<name><![CDATA[做工粗糙的裹脚布]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[crude foot wraps]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[做工粗糙的裹脚布]]></namePlural> 
 		
-		<description><![CDATA[A pair of very crude foot wraps, which are little more than bundles of cloth tied up with strips of leather.]]></description> 
+		<description><![CDATA[一双做工粗糙的裹脚布，只不过是由几捆布和几条皮革绑在一起。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -73,27 +73,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tie)] the foot wraps around [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tie)] the foot wraps around [npc2.namePos] [npc2.feet].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(tie)] the foot wraps around [npc2.namePos] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将裹脚布绑在[npc.her]的[npc.feet]上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将裹脚布绑在[npc2.her]的[npc2.feet]上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将裹脚布缠在[npc2.namePos]的[npc2.feet]上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the foot wraps from around [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the foot wraps from around [npc2.namePos] [npc2.feet].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(untie)] the foot wraps from around [npc2.namePos] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her][npc.feet]上的裹脚布解了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos][npc2.feet]上的裹脚布解了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos][npc2.feet]上的裹脚布扯了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

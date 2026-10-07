@@ -25,7 +25,7 @@ import com.lilithsthrone.world.places.PlaceType;
 public class WorldType {
 
 	public static AbstractWorldType EMPTY = new AbstractWorldType(WorldRegion.MISC,
-			"Empty (Holding world)",
+			"空置域(暂存世界)",
 			PresetColour.BASE_BROWN,
 			false,
 			true,
@@ -42,7 +42,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType WORLD_MAP = new AbstractWorldType(WorldRegion.MISC,
-			"Lilith's Realm",
+			"莉莉丝的王国",
 			PresetColour.BASE_TAN,
 			true,
 			true,
@@ -98,7 +98,7 @@ public class WorldType {
 	
 	
 	public static AbstractWorldType DOMINION = new AbstractWorldType(WorldRegion.DOMINION,
-			"Dominion",
+			"御城区",
 			PresetColour.BASE_PURPLE,
 			true,
 			true,
@@ -154,7 +154,7 @@ public class WorldType {
 	};
 
 	public static AbstractWorldType MUSEUM = new AbstractWorldType(WorldRegion.OLD_WORLD,
-			"Museum",
+			"博物馆",
 			PresetColour.BASE_BROWN,
 			false,
 			true,
@@ -179,7 +179,7 @@ public class WorldType {
 	};
 
 	public static AbstractWorldType MUSEUM_LOST = new AbstractWorldType(WorldRegion.OLD_WORLD,
-			"Museum",
+			"博物馆",
 			PresetColour.BASE_BROWN,
 			false,
 			true,
@@ -200,7 +200,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType LILAYAS_HOUSE_GROUND_FLOOR = new AbstractWorldType(WorldRegion.DOMINION,
-			"Lilaya's Home F0",
+			"莉莱雅的家 一楼",
 			PresetColour.BASE_BLUE_LIGHT,
 			true,
 			false,
@@ -230,7 +230,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType LILAYAS_HOUSE_FIRST_FLOOR = new AbstractWorldType(WorldRegion.DOMINION,
-			"Lilaya's Home F1",
+			"莉莱雅的家 二楼",
 			PresetColour.BASE_BLUE_LIGHT,
 			true,
 			false,
@@ -256,7 +256,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType ZARANIX_HOUSE_FIRST_FLOOR = new AbstractWorldType(WorldRegion.DOMINION,
-			"Zaranix's Home F1",
+			"扎拉尼克斯的家 二楼",
 			PresetColour.BASE_CRIMSON,
 			false,
 			false,
@@ -270,7 +270,7 @@ public class WorldType {
 					new Value<>(new Color(0x8000ff), PlaceType.ZARANIX_FF_MAID))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex while in Zaranix's house!";
+			return "你不能在扎拉尼克斯的公寓里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -279,7 +279,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType ZARANIX_HOUSE_GROUND_FLOOR = new AbstractWorldType(WorldRegion.DOMINION,
-			"Zaranix's Home F0",
+			"扎拉尼克斯的家 一楼",
 			PresetColour.BASE_CRIMSON,
 			false,
 			false,
@@ -297,7 +297,7 @@ public class WorldType {
 					new Value<>(new Color(0xff8000), PlaceType.ZARANIX_GF_GARDEN_ENTRY))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex while in Zaranix's house!";
+			return "你不能在扎拉尼克斯的公寓里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -306,7 +306,7 @@ public class WorldType {
 	};
 
 	public static AbstractWorldType HARPY_NEST = new AbstractWorldType(WorldRegion.HARPY_NESTS,
-			"Harpy Nests",
+			"哈比之巢",
 			PresetColour.BASE_CRIMSON,
 			true,
 			true,
@@ -333,7 +333,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType SLAVER_ALLEY = new AbstractWorldType(WorldRegion.DOMINION,
-			"Slaver Alley",
+			"奴隶巷",
 			PresetColour.BASE_RED,
 			true,
 			true,
@@ -369,7 +369,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType BOUNTY_HUNTER_LODGE = new AbstractWorldType(WorldRegion.DOMINION,
-			"The Rusty Collar",
+			"锈项圈酒馆",
 			PresetColour.BASE_COPPER,
 			false,
 			false,
@@ -387,7 +387,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType BOUNTY_HUNTER_LODGE_UPSTAIRS = new AbstractWorldType(WorldRegion.DOMINION,
-			"The Rusty Collar (Upstairs)",
+			"锈项圈酒馆(楼上)",
 			PresetColour.BASE_COPPER,
 			false,
 			false,
@@ -402,7 +402,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType SHOPPING_ARCADE = new AbstractWorldType(WorldRegion.DOMINION,
-			"Shopping Arcade",
+			"购物中心",
 			PresetColour.BASE_YELLOW,
 			true,
 			true,
@@ -429,7 +429,7 @@ public class WorldType {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
 			if((character != null) && !character.getLocationPlace().getPlaceType().equals(PlaceType.SHOPPING_ARCADE_PATH)) {
-				return "This isn't a suitable place in which to be having sex!";
+				return "这不是一个适合做爱的好地方！";
 			}
 			return "";
 		}
@@ -440,7 +440,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType TEXTILES_WAREHOUSE = new AbstractWorldType(WorldRegion.DOMINION,
-			"Kay's Textiles",
+			"凯记纺织",
 			PresetColour.GENERIC_ARCANE,
 			false,
 			false,
@@ -456,7 +456,7 @@ public class WorldType {
 					new Value<>(new Color(0x00ff00), PlaceType.TEXTILE_WAREHOUSE_OFFICE))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -465,7 +465,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType ENFORCER_HQ = new AbstractWorldType(WorldRegion.DOMINION,
-			"Enforcer HQ",
+			"执法者总部",
 			PresetColour.BASE_BLUE,
 			false,
 			false,
@@ -497,7 +497,7 @@ public class WorldType {
 					)) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex in the Enforcer HQ!";
+			return "你不能在执法者总部里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -506,7 +506,7 @@ public class WorldType {
 	};
 
 	public static AbstractWorldType ENFORCER_WAREHOUSE = new AbstractWorldType(WorldRegion.DOMINION,
-			"SWORD Warehouse",
+			"SWORD仓库",
 			PresetColour.BASE_BLUE,
 			false,
 			false,
@@ -530,7 +530,7 @@ public class WorldType {
 					new Value<>(new Color(0x8000ff), PlaceType.ENFORCER_WAREHOUSE_CRATES_SPELL_BOOK))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex in such a dangerous place!";
+			return "你不能在这么危险的地方做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -539,7 +539,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType CITY_HALL = new AbstractWorldType(WorldRegion.DOMINION,
-			"City Hall",
+			"市镇议会厅",
 			PresetColour.BASE_PURPLE,
 			false,
 			false,
@@ -557,7 +557,7 @@ public class WorldType {
 					new Value<>(new Color(0xffff80), PlaceType.CITY_HALL_BUREAU_OF_PROPERTY_RIGHTS_AND_COMMERCE))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -567,7 +567,7 @@ public class WorldType {
 	
 
 	public static AbstractWorldType HOME_IMPROVEMENTS = new AbstractWorldType(WorldRegion.DOMINION,
-			"Argus's DIY Depot",
+			"阿格斯的DIY仓库",
 			PresetColour.BASE_ORANGE,
 			false,
 			false,
@@ -583,13 +583,13 @@ public class WorldType {
 					new Value<>(new Color(0x00ffff), PlaceType.HOME_IMPROVEMENTS_TOILETS))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 	};
 
 	
 	public static AbstractWorldType DOMINION_EXPRESS = new AbstractWorldType(WorldRegion.DOMINION,
-			"Dominion Express",
+			"御城速递",
 			PresetColour.BASE_BROWN,
 			false,
 			false,
@@ -605,7 +605,7 @@ public class WorldType {
 					new Value<>(new Color(0xff8000), PlaceType.DOMINION_EXPRESS_STABLES))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -615,7 +615,7 @@ public class WorldType {
 	
 	
 	public static AbstractWorldType ANGELS_KISS_GROUND_FLOOR = new AbstractWorldType(WorldRegion.DOMINION,
-			"Angel's Kiss F0",
+			"天使之吻 一楼",
 			PresetColour.BASE_MAGENTA,
 			false,
 			false,
@@ -634,7 +634,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType ANGELS_KISS_FIRST_FLOOR = new AbstractWorldType(WorldRegion.DOMINION,
-			"Angel's Kiss F1",
+			"天使之吻 二楼",
 			PresetColour.BASE_MAGENTA,
 			false,
 			false,
@@ -653,7 +653,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType NIGHTLIFE_CLUB = new AbstractWorldType(WorldRegion.DOMINION,
-			"The Watering Hole",
+			"饮水洼夜店",
 			PresetColour.BASE_BLUE,
 			false,
 			false,
@@ -678,7 +678,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType DADDYS_APARTMENT = new AbstractWorldType(WorldRegion.DOMINION,
-			"Daddy's apartment",
+			"爹地的公寓",
 			PresetColour.RACE_DEMON,
 			false,
 			false,
@@ -693,7 +693,7 @@ public class WorldType {
 					)){
 		@Override
 		public String getName() {
-			return UtilText.parse("[daddy.NamePos] apartment");
+			return UtilText.parse("[daddy.NamePos]的公寓");
 		}
 		@Override
 		public boolean isRevealedOnStart() {
@@ -701,7 +701,7 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex while in [daddy.namePos] apartment!";
+			return "你不能在[daddy.namePos]的公寓里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -711,7 +711,7 @@ public class WorldType {
 	
 	public static AbstractWorldType FELICIA_APARTMENT = new AbstractWorldType(
 			WorldRegion.DOMINION,
-			"Small apartment",
+			"小公寓",
 			PresetColour.BASE_YELLOW_PALE,
 			false,
 			false,
@@ -730,7 +730,7 @@ public class WorldType {
 					new Value<>(new Color(0x0051f4), PlaceType.FELICIA_APARTMENT_BEDROOM))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex while in Felicia's apartment!";
+			return "你不能在菲利希亚的公寓里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -739,7 +739,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType HELENAS_APARTMENT = new AbstractWorldType(WorldRegion.DOMINION,
-			"Helena's apartment",
+			"海伦娜的公寓",
 			PresetColour.BASE_GOLD,
 			false,
 			false,
@@ -767,7 +767,7 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex while in Helena's apartment!";
+			return "你不能在海伦娜的公寓里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -776,7 +776,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType NYANS_APARTMENT = new AbstractWorldType(WorldRegion.DOMINION,
-			"Nyan's apartment",
+			"妮安的公寓",
 			PresetColour.BASE_PINK_LIGHT,
 			false,
 			false,
@@ -803,7 +803,7 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex while in Nyan's apartment!";
+			return "你不能在妮安的公寓里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -814,7 +814,7 @@ public class WorldType {
 	// Other:
 
 	public static AbstractWorldType SUBMISSION = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Submission",
+			"屈城区",
 			PresetColour.BASE_GREEN,
 			true,
 			true,
@@ -858,7 +858,7 @@ public class WorldType {
 
 
 	public static AbstractWorldType LYSSIETH_PALACE = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Lyssieth's Palace",
+			"莉西丝的宫殿",
 			PresetColour.BASE_PURPLE,
 			false,
 			false,
@@ -878,7 +878,7 @@ public class WorldType {
 					new Value<>(new Color(0x0000ff), PlaceType.LYSSIETH_PALACE_STAIRS_2))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "You can't have sex while in Lyssieth's Palace!";
+			return "你不能在莉西丝的宫殿里做爱！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -887,7 +887,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType IMP_FORTRESS_ALPHA = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Imp Fortress A",
+			"小恶魔要塞 A",
 			PresetColour.BASE_CRIMSON,
 			false,
 			false,
@@ -903,12 +903,12 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 	};
 
 	public static AbstractWorldType IMP_FORTRESS_DEMON = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Imp Citadel",
+			"小恶魔城堡",
 			PresetColour.BASE_PURPLE,
 			false,
 			false,
@@ -930,12 +930,12 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 	};
 
 	public static AbstractWorldType IMP_FORTRESS_FEMALES = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Imp Fortress F",
+			"小恶魔要塞 F",
 			PresetColour.BASE_PINK,
 			false,
 			false,
@@ -951,12 +951,12 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 	};
 
 	public static AbstractWorldType IMP_FORTRESS_MALES = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Imp Fortress M",
+			"小恶魔要塞 M",
 			PresetColour.BASE_BLUE,
 			false,
 			false,
@@ -972,12 +972,12 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 	};
 
 	public static AbstractWorldType BAT_CAVERNS = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Bat Caverns",
+			"蝙蝠洞窟",
 			PresetColour.BASE_BLACK,
 			true,
 			true,
@@ -1007,7 +1007,7 @@ public class WorldType {
 	};
 
 	public static AbstractWorldType SLIME_QUEENS_LAIR_GROUND_FLOOR = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Slime Queen's Tower F0",
+			"史莱姆女王塔 一楼",
 			PresetColour.BASE_PINK,
 			false,
 			false,
@@ -1028,12 +1028,12 @@ public class WorldType {
 					new Value<>(new Color(0xffff00), PlaceType.SLIME_QUEENS_LAIR_SLIME_QUEEN))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 	};
 
 	public static AbstractWorldType SLIME_QUEENS_LAIR_FIRST_FLOOR = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Slime Queen's Tower F1",
+			"史莱姆女王塔 二楼",
 			PresetColour.BASE_PINK,
 			false,
 			false,
@@ -1051,12 +1051,12 @@ public class WorldType {
 					new Value<>(new Color(0xffff00), PlaceType.SLIME_QUEENS_LAIR_SLIME_QUEEN))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 	};
 
 	public static AbstractWorldType GAMBLING_DEN = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Gambling Den",
+			"赌场",
 			PresetColour.BASE_GOLD,
 			false,
 			false,
@@ -1083,7 +1083,7 @@ public class WorldType {
 		}
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -1092,7 +1092,7 @@ public class WorldType {
 	};
 	
 	public static AbstractWorldType RAT_WARRENS = new AbstractWorldType(WorldRegion.SUBMISSION,
-			"Rat Warrens",
+			"鼠窟",
 			PresetColour.BASE_BROWN,
 			false,
 			false,
@@ -1119,7 +1119,7 @@ public class WorldType {
 					new Value<>(new Color(0x800080), PlaceType.RAT_WARRENS_PRIVATE_BEDCHAMBERS))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "This isn't a suitable place in which to be having sex!";
+			return "这不是一个适合做爱的好地方！";
 		}
 		@Override
 		public boolean isFurniturePresent() {
@@ -1128,7 +1128,7 @@ public class WorldType {
 	};
 	
     public static AbstractWorldType REBEL_BASE = new AbstractWorldType(WorldRegion.SUBMISSION,
-    		"Mysterious Cave",
+    		"神秘洞窟",
 			PresetColour.BASE_GREY,
 			false,
 			false,
@@ -1146,7 +1146,7 @@ public class WorldType {
                     new Value<>(new Color(0x3f48cc), PlaceType.REBEL_BASE_CAVED_IN_ROOM))) {
 		@Override
 		public String getSexBlockedReason(GameCharacter character) {
-			return "A structurally unsound cave is hardly the place for sex!";
+			return "随时可能坍塌的洞穴不是做爱的好地方！";
 		}
 		@Override
 		public boolean isFurniturePresent() {

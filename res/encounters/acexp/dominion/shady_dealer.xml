@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 
     <additionalPlaceTypeTriggers>
@@ -7,7 +7,7 @@
     <!-- Not during loading, only once per day, no one present and player does not look like an Enforcer -->
     <possibleEncounters>
         <encounter>
-            <name><![CDATA[Shady Dealer]]></name>
+            <name><![CDATA[阴影中的商贩]]></name>
             <chanceToTrigger opportunisticEncounter="false"><![CDATA[
    				#IF(!game.isStarted() || flags.hasFlag(FLAG_acexp_shady_dealer_daily_interaction))
 	        		0

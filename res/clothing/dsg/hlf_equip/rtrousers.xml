@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
-		<authorTag><![CDATA[A small tag sewn into the waist reads "MFD by DSG Threadworks".]]></authorTag>
+		<authorTag><![CDATA[腰部有一个小标签印着“DSG织厂生产。”]]></authorTag>
 		<value>250</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[vintage fatigue trousers]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[vintage fatigue trousers]]></namePlural>
-		<description><![CDATA[A pair of trousers made of cotton twill, it has a variety of pockets for storing all sorts of things.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[复古工装裤]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[复古工装裤]]></namePlural>
+		<description><![CDATA[一条棉质斜纹长裤，有各种各样的口袋，可以放各种各样的东西。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>LEG</slot>
@@ -20,7 +19,7 @@
 			<category id="wearntear" priority="1"> 
 				<categoryName><![CDATA[Wear and Tear]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix priority="1"><![CDATA[]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
@@ -31,10 +30,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="patched" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BROWN"> 
-					<stickerName><![CDATA[Patched]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Patched ]]></namePrefix> 
+					<stickerName><![CDATA[补丁]]></stickerName>
+					<namePrefix priority="1"><![CDATA[补丁]]></namePrefix> 
 					<namePostfix/> 
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has been repeatedly patched up, and you don't even want to think about the stains.</i>]]></descriptionModification> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这个已经被缝缝补补多次，你都不敢想象那些斑驳的补丁。</i>]]></descriptionModification> 
 					<imageName>rtrousers_st_ragged.svg</imageName> 
 					<itemTagsAdded/> 
 					<itemTagsRemoved/> 
@@ -110,75 +109,75 @@
 	</coreAtributes>
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] trousers down and [npc.verb(kick)] them off [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] trousers down and [npc.verb(slide)] them off [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] trousers down and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的裤子拉下来并从[npc.her]的[npc.feet]上踢开。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子拉下来并从[npc2.her]的[npc2.feet]上拿走。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]猛地将[npc2.namePos]的裤子拉下并甩到一边去。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into [npc.her] trousers before pulling them up to [npc.her] waist.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the trousers up [npc2.namePos] [npc2.legs] and [npc.verb(button)] them up around [npc2.her] waist.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] [npc2.legs] into the trousers and [npc.verb(yank)] them up around [npc2.her] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿进[npc.her]的长裤里并把它提到腰上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的长裤拉到腰上并扣好前面的扣子。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]迫使[npc2.namePos]的[npc2.legs]穿进裤子里然后将裤子拽到[npc2.her]的腰上。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText type="UNZIPS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] [npc.her] trousers.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] [npc2.namePos] trousers.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unzip)] [npc2.namePos] trousers.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的工装裤脱下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉下了[npc2.namePos]工装裤前面的拉链。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行拉开了[npc2.namePos]工装裤前面的拉链。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="UNZIPS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up [npc.her] trousers.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up [npc2.namePos] trousers.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(zip)] up [npc2.namePos] trousers.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉起[npc.her]的裤子拉链。
+]]></self>
+		<other><![CDATA[
+		[npc.Name]拉上[npc2.namePos]的裤子的拉链。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地拉上[npc2.namePos]的工装裤的拉链。
+		]]></otherRough>
 	</replacementText>
 	
 	<displacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] trousers down.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] trousers down.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] trousers down.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的长裤脱下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子拉下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子拽下。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up [npc.her] trousers.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up [npc2.namePos] trousers.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcefully [npc.verb(pull)] up [npc2.namePos] trousers.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉起[npc.her]的裤子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子提起。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]用力将[npc2.namePos]的裤子拉起。
+]]></otherRough>
 	</replacementText>
 	
 </clothing>

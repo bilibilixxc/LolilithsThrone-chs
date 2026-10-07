@@ -80,7 +80,7 @@ public class OptionsDialogue {
 	
 	private static boolean defaultResetConfirmation = false;
 	
-	public static final DialogueNode MENU = new DialogueNode("Menu", "Menu", true) {
+	public static final DialogueNode MENU = new DialogueNode("菜单", "菜单", true) {
 		
 		@Override
 		public String getLabel() {
@@ -90,33 +90,33 @@ public class OptionsDialogue {
 		@Override
 		public String getContent(){
 			StringBuilder sb = new StringBuilder();
-			sb.append("<h1 class='special-text' style='font-size:48px; line-height:52px; text-align:center;'>"+(Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :"Lilith's Throne")+"</h1>");
+			sb.append("<h1 class='special-text' style='font-size:38px; line-height:41px; text-align:center;'>"+(Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :"Lilith's Throne")+"</h1>");
 			if(Main.game.isSillyMode()) {
-				sb.append("<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>Or, I can't believe I fell into a magic mirror and entered a world in which my aunt is a demon?!</i></p>");
+				sb.append("<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>关于我意外掉进魔法镜，进入到一个姨妈变成恶魔的世界这件事</i></p>");
 			}
 			
 			sb.append("<h5 class='special-text' style='text-align:center;'>Created by "+(Configurations.DEGEN_MODE ? Main.AUTHOR : "KeldonSlayer")+"</h5>");
 			
 			if (Main.CheckNotUnpacked()) {
 				sb.append("<h3 class='special-text' style='text-align:center;'>[style.italicsBad("+(Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :"Lilith's Throne")+" is currently running from a temporary directory!");
-				sb.append("<br/>Please unpack the .zip file before playing!)]</h3>");
+				sb.append("<br/>请解压 .zip 文件后再开始游戏！)]</h3>");
 //				return sb.toString();
 			}
 			
-			sb.append("<p>This game is a text-based erotic RPG, and contains a lot of graphic sexual content. You must agree to the game's disclaimer before playing this game!</p>")
-					.append("<p>You can visit my blog (https://lilithsthrone.blogspot.co.uk) to check on development progress (use the 'Blog' button below to open the blog in your default browser).")
+			sb.append("<p>本游戏为一款文字色情RPG，并包含大量性相关图像内容。在游玩本游戏前必须同意该游戏的声明！(汉化版本在github发布，完全免费，若有问题请前往https://github.com/chinese-liliths-throne/liliths-throne-chinese-release提交Issue或在官方交流群内汇报)</p>")
+					.append("<p>你可以访问我的博客(https://lilithsthrone.blogspot.co.uk) 查看最新开发进度 (点击下方“博客”按钮在浏览器中打开页面)。")
 					//.append(" [style.italicsMinorBad(<b>Note:</b> Intrusive age verification is being rolled out on blogspot, so I will likely create a new blog soon.)]</p>")
-					.append("<p style='text-align:center'><b>Please use either my blog or github to get the latest official version of Lilith's Throne!</b></p>")
-					.append("<p style='text-align:center'><i>Copy over the contents of your 'data' folder to use your old saves in this version!</i></p>");
+					.append("<p style='text-align:center'><b>请通过我的博客或者Github获取最新官方版本的莉莉丝的王座！</b></p>")
+					.append("<p style='text-align:center'><i>将你的“data”文件夹内容复制到新版本中，即可继续使用旧存档！</i></p>");
 			
 			sb.append(getJavaVersionInformation());
 			
 			if(Toolkit.getDefaultToolkit().getScreenSize().getHeight()<800) {
 				sb.append("<p style='text-align:center; color:").append(PresetColour.GENERIC_ARCANE.toWebHexString()).append(";'>")
-					.append("If the game's resolution isn't fitting to your screen, press the keys: 'Windows' + 'Up Arrow' to maximise!</p>");
+					.append("若游戏分辨率与屏幕不符，请按下：'Windows' + 'Up Arrow'来最大化窗口！</p>");
 			}
 			if(!Main.game.isStarted() && !Main.getProperties().name.isEmpty()) {
-				sb.append("<h4 style='text-align:center;'>Last save:</h4>");
+				sb.append("<h4 style='text-align:center;'>最近存档：</h4>");
 				sb.append("<div class='container-full-width' style='width:50%;margin:0 25%;'>");
 					sb.append("<h5 style='color:").append(Main.getProperties().nameColour).append(";text-align:center;'>").append(Main.getProperties().name).append("</h5>");
 					sb.append("<p style='text-align:center;margin:0;padding:0;'><b>Level ").append(Main.getProperties().level).append("</b></p>");
@@ -127,7 +127,7 @@ public class OptionsDialogue {
 					sb.append("<p style='text-align:center;margin:0;padding:0;").append(colourString).append("'><b>").append(Util.capitaliseSentence(Main.getProperties().race)).append("</b></p>");
 					sb.append("<p style='text-align:center;margin:0;padding:0;'>").append(UtilText.formatAsMoney(Main.getProperties().money, "b")).append("</p>");
 					sb.append("<p style='text-align:center;margin:0;padding:0;'>").append(UtilText.formatAsEssences(Main.getProperties().arcaneEssences, "b", false)).append("</p>");
-					sb.append("<p style='text-align:center;margin:0;padding:0;'>Quest: ").append(Util.capitaliseSentence(Main.getProperties().quest)).append("</p>");
+					sb.append("<p style='text-align:center;margin:0;padding:0;'>任务：").append(Util.capitaliseSentence(Main.getProperties().quest)).append("</p>");
 				sb.append("</div>");
 			}
 			return sb.toString();
@@ -139,11 +139,11 @@ public class OptionsDialogue {
 				 if(confirmNewGame || !Main.game.isStarted()) {
 					return new ResponseEffectsOnly(
 							(!Main.game.isStarted()
-									?"New Game"
-									:"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Confirm</b>"),
-							"Start a new game."
+									?"新游戏"
+									:"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>确认</b>"),
+							"开始新游戏。"
 								+(Main.game.isStarted()
-									?"<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]</b>"
+									?"<br/><br/>[style.italicsMinorBad(记得先存档！)]</b>"
 									:"")){
 						@Override
 						public void effects() {
@@ -169,10 +169,10 @@ public class OptionsDialogue {
 					
 				 } else {
 					 return new Response(
-							 "New Game",
-							 "Start a new game."
+							 "新游戏",
+							 "开始新游戏。"
 								+(Main.game.isStarted()
-									?"<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]"
+									?"<br/><br/>[style.italicsMinorBad(记得先存档！)]"
 									:""),
 							 MenuOverrides.MENU){
 							@Override
@@ -183,7 +183,7 @@ public class OptionsDialogue {
 				 }
 				
 			} else if (index == 2) {
-				return new Response("Save/Load", "Open the save/load game window.", SAVE_LOAD){
+				return new Response("存档/读档", "打开存档/读档界面。", SAVE_LOAD){
 					@Override
 					public void effects() {
 						loadConfirmationName = ""; overwriteConfirmationName = ""; deleteConfirmationName = "";
@@ -192,7 +192,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 3) {
-				return new Response("Export character", "Open the character export game window.", IMPORT_EXPORT){
+				return new Response("导出角色", "打开角色导出界面。", IMPORT_EXPORT){
 					@Override
 					public void effects() {
 						loadConfirmationName = ""; overwriteConfirmationName = ""; deleteConfirmationName = "";
@@ -201,7 +201,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 4) {
-				return new Response("Disclaimer", "View the game's disclaimer.", DISCLAIMER){
+				return new Response("声明", "查看游戏声明。", DISCLAIMER){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -209,7 +209,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 5) {
-				return new ResponseEffectsOnly("Quit", "Quits your current game and closes the program.<br/><br/><b>Remember to save your game first!</b>"){
+				return new ResponseEffectsOnly("退出", "退出当前游戏并关闭程序。<br/><br/><b>记得先存档！</b>"){
 					@Override
 					public void effects() {
 						Main.primaryStage.close();
@@ -219,7 +219,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new Response("Options", "Open the options page.", OPTIONS){
+				return new Response("选项", "打开选项界面。", OPTIONS){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -228,7 +228,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 7) {
-				return new Response("Content Options", "Set your preferred content settings.", MISCELLANEOUS){
+				return new Response("内容选项", "设置偏好内容。", MISCELLANEOUS){
 					@Override
 					public void effects() {
 						confirmNewGame=false;
@@ -236,13 +236,13 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 8) {
-				return new Response("Patch notes", "View the patch notes for this version.", PATCH_NOTES);
+				return new Response("更新日志", "查看当前版本的更新日志。", PATCH_NOTES);
 			
 			} else if (index == 9) {
-				return new Response("Credits", "View the game's credits screen.", CREDITS);
+				return new Response("贡献名单", "查看游戏的贡献名单画面。", CREDITS);
 				
 			} else if (index == 11) {
-				return new ResponseEffectsOnly("Blog", "Opens the page:<br/><br/><i>https://lilithsthrone.blogspot.co.uk/</i><br/><br/><b>Externally in your default browser.</b>"){
+				return new ResponseEffectsOnly("博客", "打开页面：<br/><br/><i>https://lilithsthrone.blogspot.co.uk/</i><br/><br/><b>将使用默认浏览器打开。</b>"){
 					@Override
 					public void effects() {
 						Util.openLinkInDefaultBrowser("https://lilithsthrone.blogspot.co.uk/");
@@ -251,7 +251,7 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 12) {
-				return new ResponseEffectsOnly("Github", "Opens the page:<br/><br/><i>https://github.com/Innoxia/liliths-throne-public</i><br/><br/><b>Externally in your default browser.</b>"){
+				return new ResponseEffectsOnly("Github", "打开页面：<br/><br/><i>https://github.com/Innoxia/liliths-throne-public</i><br/><br/><b>将使用默认浏览器打开。</b>"){
 					@Override
 					public void effects() {
 						Util.openLinkInDefaultBrowser("https://github.com/Innoxia/liliths-throne-public");
@@ -260,7 +260,7 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 13) {
-				return new ResponseEffectsOnly("Wiki", "Opens the page:<br/><br/><i>https://www.lilithsthrone.com/wiki/doku.php</i><br/><br/><b>Externally in your default browser.</b>"){
+				return new ResponseEffectsOnly("维基", "打开页面：<br/><br/><i>https://www.lilithsthrone.com/wiki/doku.php</i><br/><br/><b>将使用默认浏览器打开。</b>"){
 					@Override
 					public void effects() {
 						Util.openLinkInDefaultBrowser("https://www.lilithsthrone.com/wiki/doku.php");
@@ -270,7 +270,7 @@ public class OptionsDialogue {
 			
 			} else if (index == 0) {
 				if(Main.game.isStarted()) {
-					return new ResponseEffectsOnly("Resume", "Return to whatever you were doing before opening this menu."){
+					return new ResponseEffectsOnly("返回", "返回打开此菜单前的位置。"){
 						@Override
 						public void effects() {
 							Main.mainController.openOptions();
@@ -281,7 +281,7 @@ public class OptionsDialogue {
 					
 				} else {
 					if(Main.isLoadGameAvailable(Main.getProperties().lastSaveLocation)) {
-						return new ResponseEffectsOnly("Resume", "Continue playing from your last save."){
+						return new ResponseEffectsOnly("继续", "继续游玩最新存档。"){
 							@Override
 							public void effects() {
 								Main.loadGame(Main.getProperties().lastSaveLocation);
@@ -290,9 +290,9 @@ public class OptionsDialogue {
 							}
 						};
 					} else if ( "".equals(Main.getProperties().lastSaveLocation) ) {
-						return new Response("Resume", "There is no previously saved game to resume.", null);
+						return new Response("继续", "没有存档可以继续。", null);
 					} else {
-						return new Response("Resume", "Previously saved game (by the title '"+Main.getProperties().lastSaveLocation+"') not found in 'data/saves' folder.", null);
+						return new Response("继续", "上次存档(名为'"+Main.getProperties().lastSaveLocation+"')未在'data/saves'文件夹中找到。", null);
 					}
 				}
 				
@@ -312,10 +312,10 @@ public class OptionsDialogue {
 		String version = System.getProperty("java.version");
 		
 		sb.append("<p style='text-align:center;'>");
-			sb.append("Your java version: "+System.getProperty("java.version"));
+			sb.append("你的java版本："+System.getProperty("java.version"));
 			if (!version.equals("1.8.0_172")) {
-				sb.append("<br/>[style.italicsBad(1.8.0_172 is the recommended java version!)]");
-				sb.append("<br/>[style.italicsMinorBad(This may result in abnormal behaviour such as tooltips getting stuck! Please launch with the recommended version or use the .exe build.)]");
+				sb.append("<br/>[style.italicsBad(推荐使用的java版本为 1.8.0_172 ！)]");
+				sb.append("<br/>[style.italicsMinorBad(这可能导致异常事件，例如鼠标悬停界面卡顿！请使用推荐的版本号启动或使用.exe构建版本。)]");
 			}
 		sb.append("</p>");
 //				+" | ");
@@ -356,7 +356,7 @@ public class OptionsDialogue {
 	public static String overwriteConfirmationName = "";
 	public static String deleteConfirmationName = "";
 	
-	public static final DialogueNode SAVE_LOAD = new DialogueNode("Save game files", "", true) {
+	public static final DialogueNode SAVE_LOAD = new DialogueNode("存档文件", "", true) {
 
 		@Override
 		public String getContent() {
@@ -369,23 +369,23 @@ public class OptionsDialogue {
 
 			saveLoadSB.append(
 					"<p style='text-align:center;'>"
-						+ "<b>Please Note:</b>"
+						+ "<b>请注意：</b>"
 					+ "</p>"
 					+ "<p>"
-						+ "1. Only standard characters (letters and numbers) will work for save file names.<br/>"
-						+ "2. The 'AutoSave' file is automatically overwritten every time you move between maps.<br/>"
-						+ "3. The 'QuickSave' file is automatically overwritten every time you quick save (binding is "+Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.QUICKSAVE).getFullName()+").<br/>"
-						+ "4. You cannot save during scenes which restrict your movement, including combat and sex."
+						+ "1. 存档文件名仅支持标准字符(字母及数字)。<br/>"
+						+ "2. “AutoSave”文件会在地图间移动时进行自动覆盖。<br/>"
+						+ "3. “QuickSave”文件会在每次按下快捷存档(按键为"+Main.getProperties().hotkeyMapPrimary.get(KeyboardAction.QUICKSAVE).getFullName()+")时进行自动覆盖。<br/>"
+						+ "4. 在禁止移动的场景中无法存档，包括战斗与性交。"
 					+ "</p>"
 					+ "<div class='container-full-width' style='padding:0; margin:0;'>"
 						+ "<div class='container-full-width' style='width:calc(25% - 16px); background:transparent;'>"
-							+ "Time"
+							+ "时间"
 						+ "</div>"
 						+ "<div class='container-full-width' style='width:calc(50% - 16px); text-align:center; background:transparent;'>"
-							+ "Name"
+							+ "名称"
 						+ "</div>"
 						+ "<div class='container-full-width' style='width:calc(25% - 16px); text-align:center; background:transparent;'>"
-							+ "Save | Load | Delete"
+							+ "存档 | 读档 | 删除"
 						+ "</div>"
 					+ "</div>");
 
@@ -412,16 +412,16 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Confirmations: ",
-						"Toggle confirmations being shown when you click to load, overwrite, or delete a saved game."
-							+ " When turned on, it will take two clicks to apply any button press."
-							+ " When turned off, it will only take one click.",
+				return new Response("确认状态：",
+						"在点击读取、覆写或删除存档时会进入确认状态。"
+							+ "启用时，需要进行两次点击才能使行为生效。"
+							+ "关闭时只需要一次点击。",
 						SAVE_LOAD) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
-								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "确认状态："+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
+								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>开启</span>"
+								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>关闭</span>");
 					}
 					
 					@Override
@@ -435,7 +435,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 2) {
-				return new Response("Sort: Date", "Sort all of your saved games by their date.", SAVE_LOAD) {
+				return new Response("排序：日期", "根据日期对所有存档进行排序。", SAVE_LOAD) {
 					@Override
 					public void effects() {
 						alphabeticalFileSort = false;
@@ -443,7 +443,7 @@ public class OptionsDialogue {
 				};
 
 			} else if (index == 3) {
-				return new Response("Sort: Name", "Sort all of your saved games by their name.", SAVE_LOAD) {
+				return new Response("排序：名称", "根据名称对所有存档进行排序。", SAVE_LOAD) {
 					@Override
 					public void effects() {
 						alphabeticalFileSort = true;
@@ -464,7 +464,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode IMPORT_EXPORT = new DialogueNode("Export character", "", true) {
+	public static final DialogueNode IMPORT_EXPORT = new DialogueNode("导出角色", "", true) {
 	
 		@Override
 		public String getContent() {
@@ -476,21 +476,21 @@ public class OptionsDialogue {
 			StringBuilder saveLoadSB = new StringBuilder();
 	
 			saveLoadSB.append("<p>"
-						+ "Here you can export your current character, or delete any characters that you've exported in the past."
-						+ " Any NPC can be exported in-game by viewing their information screen (either from the 'characters present' or your phone's 'contacts' screen), and then pressing the 'export character' button (in the bottom-right of the UI)."
+						+ "在这里你可以导出当前角色，或删除任意曾导出角色。"
+						+ "任意NPC都能在游戏内进行导出，只需查看其信息界面(通过“角色状态”或手机中的“联系”界面)，并点击“导出角色”按钮(位于UI的右下角)。"
 					+ "</p>"
 					+ "<p>"
-						+ "Exported characters can be used as a playable character when starting a new game (choose 'Start (Import)'), or as an importable slave at the Auction Block in Slaver Alley."
+						+ "导出的角色可以在开始新游戏时作为游玩角色(选择“开始(导入)”)，或在奴隶巷的拍卖台处作为奴隶导入。"
 					+ "</p>"
 					+ "<div class='container-full-width' style='padding:0; margin:0;'>"
 						+ "<div class='container-quarter-width' style='text-align:center;'>"
-							+ "Time"
+							+ "时间"
 						+ "</div>"
 						+ "<div class='container-half-width' style='width:calc(55% - 16px); text-align:center; background:transparent;'>"
-							+ "Name"
+							+ "名称"
 						+ "</div>"
 						+ "<div class='container-quarter-width' style='width:calc(20% - 16px); text-align:center; background:transparent;'>"
-							+ "Functions"
+							+ "功能"
 						+ "</div>"
 					+ "</div>");
 			
@@ -508,16 +508,16 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Confirmations: ",
-						"Toggle confirmations being shown when you click to load, overwrite, or delete a saved game."
-							+ " When turned on, it will take two clicks to apply any button press."
-							+ " When turned off, it will only take one click.",
+				return new Response("确认状态：",
+						"在点击读取、覆写或删除存档时会进入确认状态。"
+							+ "启用时，需要进行两次点击才能使行为生效。"
+							+ "关闭时只需要一次点击。",
 							IMPORT_EXPORT) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
-								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "确认状态："+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
+								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>开启</span>"
+								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>关闭</span>");
 					}
 					
 					@Override
@@ -532,15 +532,15 @@ public class OptionsDialogue {
 	
 			} else if (index == 2) {
 				if(Main.game.isStarted()) {
-					return new Response("Export character", "Exports your character file to the 'data/characters/' folder.", IMPORT_EXPORT){
+					return new Response("导出角色", "将你的角色文件导出至'data/characters/'文件夹。", IMPORT_EXPORT){
 						@Override
 						public void effects() {
 							Main.game.getCharacterUtils().saveCharacterAsXML(Main.game.getPlayer());
-							Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Character exported!");
+							Main.game.flashMessage(PresetColour.GENERIC_GOOD, "角色已导出！");
 						}
 					};
 				} else {
-					return new Response("Export character", "You'll need to start a game first!", null);
+					return new Response("导出角色", "你需要先开始一场游戏！", null);
 				}
 			
 			} else if (index == 0) {
@@ -625,7 +625,7 @@ public class OptionsDialogue {
 	}
 	
 	
-	public static final DialogueNode OPTIONS = new DialogueNode("Options", "Options", true) {
+	public static final DialogueNode OPTIONS = new DialogueNode("选项", "选项", true) {
 		
 		@Override
 		public String getContent(){
@@ -633,30 +633,30 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-					+ "<b>Light/Dark theme:</b>"
-					+ "<br/>This switches the main display between a light and dark theme. (Work in progress!)"
+					+ "<b>明亮/黑暗主题：</b>"
+					+ "<br/>在明亮和黑暗主题显示风格之间切换。(正在完善！)"
 					+ "</p>"
 					
 					+"<p>"
-					+ "<b>Font-size:</b><br/>"
-					+ "This cycles the game's base font size. This currently only affects the size of the text in the main dialogue, but in the future I'll expand it to include every display element.<br/>"
-					+ "Minimum font size is "+Game.FONT_SIZE_MINIMUM+". Default font size is "+Game.FONT_SIZE_NORMAL+". Maximum font size is "+Game.FONT_SIZE_HUGE+".<br/>"
-					+ "Current font size: "+Main.getProperties().fontSize+"."
+					+ "<b>字体大小：</b><br/>"
+					+ "循环调整游戏的基础字体大小。当前只影响主对话栏中的文本大小，但未来将会扩展到所有现实元素。<br/>"
+					+ "最小字体大小为"+Game.FONT_SIZE_MINIMUM+"。默认字体大小为"+Game.FONT_SIZE_NORMAL+"。最大字体大小为"+Game.FONT_SIZE_HUGE+"。<br/>"
+					+ "当前字体大小为："+Main.getProperties().fontSize+"。"
 					+ "</p>"
 
 					+"<p>"
-					+ "<b>Fade-in:</b>"
-					+ "<br/>This option is responsible for fading in the main part of the text each time a new scene is displayed."
-					+ " Although it makes scene transitions a little prettier, it is off by default, as it can cause some annoying lag in inventory screens."
+					+ "<b>渐显：</b>"
+					+ "<br/>该选项与每次新场景展示时的文本逐渐显示有关。"
+					+ "尽管该功能会使场景切换显得更顺眼些，但默认是关闭状态，开启可能会导致物品栏界面造成烦人的卡顿。"
 					+ "</p>"
 
 					+"<p>"
-					+ "<b>Difficulty (Currently set to "+Main.getProperties().difficultyLevel.getName()+"):</b>");
+					+ "<b>难度(当前设置为"+Main.getProperties().difficultyLevel.getName()+")：</b>");
 			
 			for(DifficultyLevel dl : DifficultyLevel.values()) {
 				UtilText.nodeContentSB.append("<br/>"+(
 						Main.getProperties().difficultyLevel==dl
-							?"<b style='color:"+dl.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(dl.getName())+"</b> "+dl.getDescription()
+							?"<b style='color:"+dl.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(dl.getName())+"</b>"+dl.getDescription()
 							:"<span style='color:"+dl.getColour().getShades()[0]+";'>"+Util.capitaliseSentence(dl.getName())+"</span> [style.colourDisabled("+dl.getDescription()+")]")
 						 );
 			}
@@ -669,12 +669,12 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Keybinds", "Open the keybinds page, where you can customise all the game's key bindings.", KEYBINDS);
+				return new Response("键位绑定", "打开键位绑定页面，可以自定义游戏所有的键位绑定。", KEYBINDS);
 				
 			} else if (index == 2) {
 
 				if (Main.getProperties().hasValue(PropertyValue.lightTheme)) {
-					return new Response("Dark theme", "Switch the theme to the dark variant.", OPTIONS){
+					return new Response("黑暗主题", "切换主题至黑暗模式。", OPTIONS){
 						@Override
 						public void effects() {
 							Main.mainController.switchTheme();
@@ -682,7 +682,7 @@ public class OptionsDialogue {
 						}
 						};
 				} else {
-					return new Response("Light theme (WIP)", "Switch the theme to the light variant.<br/><br/><b>This is still a work in progress...</b>.", OPTIONS){
+					return new Response("明亮主题(未完成)", "切换主题至明亮模式。<br/><br/><b>仍在进展中……</b>", OPTIONS){
 						@Override
 						public void effects() {
 							Main.mainController.switchTheme();
@@ -692,8 +692,8 @@ public class OptionsDialogue {
 				}
 
 			} else if (index == 3) {
-				return new Response("Font-size -",
-						"Decrease the size of the game's font. Default value is 18. Current value is "+Main.getProperties().fontSize+".",
+				return new Response("字体大小-",
+						"缩小游戏字体大小。默认为18。当前值为"+Main.getProperties().fontSize+"。",
 								OPTIONS){
 					@Override
 					public void effects() {
@@ -706,8 +706,8 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 4) {
-				return new Response("Font-size +",
-						"Increase the size of the game's font. Default value is 18. Current value is "+Main.getProperties().fontSize+".",
+				return new Response("字体大小+",
+						"增大字体大小。默认为18。当前值为"+Main.getProperties().fontSize+"。",
 								OPTIONS){
 					@Override
 					public void effects() {
@@ -720,9 +720,9 @@ public class OptionsDialogue {
 				};
 			
 			} else if (index == 5) {
-				return new Response("Fade-in: " + (Main.getProperties().hasValue(PropertyValue.fadeInText)
-						? "[style.boldGood(ON)]"
-						: "[style.boldBad(OFF)]"), "Toggle the fading in of the game's text. If turned on, it may cause some minor lag in inventory screens.", OPTIONS) {
+				return new Response("渐显：" + (Main.getProperties().hasValue(PropertyValue.fadeInText)
+						? "[style.boldGood(开启)]"
+						: "[style.boldBad(关闭)]"), "打开游戏文本渐显。开启时可能会导致物品栏界面卡顿。", OPTIONS) {
 					@Override
 					public void effects() {
 						Main.getProperties().setValue(PropertyValue.fadeInText, !Main.getProperties().hasValue(PropertyValue.fadeInText));
@@ -731,12 +731,12 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new Response("Gender pronouns", "Customise all gender pronouns and names.", OPTIONS_PRONOUNS);
+				return new Response("性别称呼", "自定义所有性别称呼与名字。", OPTIONS_PRONOUNS);
 				
 			} else if (index == 7) {
-				return new Response("Unit preferences", "Set your preferred measurement units.", UNIT_PREFERENCE);
+				return new Response("单位偏好", "设置你偏好的计量单位。", UNIT_PREFERENCE);
 			} else if (index == 8) {
-				return new Response("Difficulty: "+Main.getProperties().difficultyLevel.getName(), "Cycle the game's difficulty.", OPTIONS){
+				return new Response("难度："+Main.getProperties().difficultyLevel.getName(), "循环设置游戏难度。", OPTIONS){
 					@Override
 					public void effects() {
 						switch(Main.getProperties().difficultyLevel) {
@@ -781,13 +781,13 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode KEYBINDS = new DialogueNode("Options", "Options", true) {
+	public static final DialogueNode KEYBINDS = new DialogueNode("选项", "选项", true) {
 
 		@Override
 		public String getHeaderContent() {
 			return "<p>"
 					+ "<table align='center'>"
-					+ "<tr><th>Action</th><th>Primary binding</th><th>Secondary binding</th></tr>"
+					+ "<tr><th>动作</th><th>主键位</th><th>备用键位</th></tr>"
 					+ getKeybindTableRow(KeyboardAction.MENU)
 					+ "<tr style='height:8px;'></tr>"
 
@@ -916,11 +916,11 @@ public class OptionsDialogue {
 			if (presets == null) loadPresets();
 
 			if (index == 0) {
-				return new Response("Back", "Go back to the options menu.", OPTIONS);
+				return new Response("返回", "返回选项菜单。", OPTIONS);
 				
 			} else if (index <= presets.size()) {
 				Properties preset = presets.get(index - 1);
-				return new Response(preset.getProperty("NAME", "Custom " + index), preset.getProperty("DESCRIPTION", "Reapply your previously saved key bindings."), KEYBINDS) {
+				return new Response(preset.getProperty("NAME", "自定义" + index), preset.getProperty("DESCRIPTION", "重新应用曾经保存的键位绑定。"), KEYBINDS) {
 					@Override
 					public void effects() {
 						loadPreset(preset);
@@ -929,9 +929,9 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 14) {
-				return new Response("Save preset",
-						"Store the current key bindings in a file. If you want to delete any saved presets, navigate to the 'res/keybinds' folder and delete the .txt files that you no longer want."
-								+ " (They will stop showing up in this list after a game restart.)",
+				return new Response("保存预设",
+						"将当前键位绑定保存到文件中。若想删除已经保存的预设，请前往“res/keybinds”文件夹删除不再需要的txt文件。"
+								+ "(游戏重启后不会再于该列表内出现)",
 						KEYBINDS) {
 					@Override
 					public void effects() {
@@ -987,7 +987,7 @@ public class OptionsDialogue {
 				+ "</tr>";
 	}
 	
-	public static final DialogueNode OPTIONS_PRONOUNS = new DialogueNode("Options", "Options", true) {
+	public static final DialogueNode OPTIONS_PRONOUNS = new DialogueNode("选项", "选项", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			defaultResetConfirmation = false;
@@ -997,13 +997,13 @@ public class OptionsDialogue {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p>"
-						+ "<h5 style='text-align:center;'>Global gender names:</h5>"
+						+ "<h5 style='text-align:center;'>全局性别名称：</h5>"
 						+ "<table align='center'>"
 							+ "<tr>"
-							+ "<th>Body Parts</th>"
-								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Masculine</th>"
-								+ "<th style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Androgynous</th>"
-								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Feminine</th>"
+							+ "<th>身体部位</th>"
+								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>男性</th>"
+								+ "<th style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>中性</th>"
+								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>女性</th>"
 							+ "</tr>");
 			
 			for(GenderNames gn : GenderNames.values()) {
@@ -1014,12 +1014,12 @@ public class OptionsDialogue {
 					+ "</p>"
 					
 					+ "<p>"
-						+ "<h5 style='text-align:center;'>Player-specific pronouns:</h5>"
+						+ "<h5 style='text-align:center;'>角色人称：</h5>"
 						+ "<table align='center'>"
 							+ "<tr>"
-								+ "<th>Pronoun</th>"
-								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Masculine</th>"
-								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Feminine</th>"
+								+ "<th>人称代词</th>"
+								+ "<th style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>男性</th>"
+								+ "<th style='color:"+PresetColour.FEMININE.toWebHexString()+";'>女性</th>"
 							+ "</tr>"
 							+ getPronounTableRow(GenderPronoun.NOUN)
 							+ getPronounTableRow(GenderPronoun.YOUNG_NOUN)
@@ -1029,14 +1029,14 @@ public class OptionsDialogue {
 							+ getPronounTableRow(GenderPronoun.POSSESSIVE_ALONE)
 						+ "</table>"
 					+ "</p>"
-					+ "<h5 style='text-align:center;'><span style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Androgynous bodies</span> (option 3)</h5>"
+					+ "<h5 style='text-align:center;'><span style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>中性身体</span>(选项3)</h5>"
 					+ "<p>"
-					+ "<b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>Feminine:</b> Treated as <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>feminine</b>.<br/>"
-					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Clothing feminine:</b> Treated according to clothing femininity."
-							+ " If clothing is neutral, treated as <b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>feminine</b>.<br/>"
-					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Clothing masculine:</b> Treated according to clothing femininity."
-							+ " If clothing is neutral, treated as <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>masculine</b>.<br/>"
-					+ "<b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>Masculine:</b> Treated as <b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>masculine</b>.<br/>"
+					+ "<b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>女性：</b>被视作<b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>女性</b>。<br/>"
+					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>衣着女性：</b>根据衣着偏向决定。"
+							+ "若衣着为中性，则被视作<b style='color:"+PresetColour.FEMININE.toWebHexString()+";'>女性</b>。<br/>"
+					+ "<b style='color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>衣着男性：</b>根据衣着偏向决定。"
+							+ "若衣着为中性，则被视作<b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>男性</b>。<br/>"
+					+ "<b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>男性：</b>被视作<b style='color:"+PresetColour.MASCULINE.toWebHexString()+";'>男性</b>。<br/>"
 					+ "</p>");
 			
 			return sb.toString();	
@@ -1045,7 +1045,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Save", "Save all the pronouns that are currently displayed.") {
+				return new ResponseEffectsOnly("保存", "保存当前显示的所有人称。") {
 					@Override
 					public void effects() {
 						for(GenderNames gn : GenderNames.values()) {
@@ -1058,13 +1058,13 @@ public class OptionsDialogue {
 							Main.getProperties().genderPronounMale.put(gp, ((String) Main.mainController.getWebEngine().executeScript("document.getElementById('masculine_" + gp +"').value")).toLowerCase());
 						}
 						Main.saveProperties();
-						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Pronouns saved!");
+						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "人称已保存！");
 					}
 				};
 				
 			} else if (index == 2) {
 				return new Response("<span style='color:"+Main.getProperties().androgynousIdentification.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Main.getProperties().androgynousIdentification.getName())+"</span>",
-						"Cycle the way the game treats androgynous bodies as described above.", OPTIONS_PRONOUNS){
+						"循环设置游戏中中性身体被如何看待，如上文所示。", OPTIONS_PRONOUNS){
 					@Override
 					public void effects() {
 						switch(Main.getProperties().androgynousIdentification){
@@ -1092,7 +1092,7 @@ public class OptionsDialogue {
 				if(!defaultResetConfirmation) {
 					return getDefaultResetConfirmationResponse();
 				}
-				return new Response("[style.colourMinorBad(Confirm Defaults)]", "Resets all pronouns to their default values.", OPTIONS_PRONOUNS){
+				return new Response("[style.colourMinorBad(确认恢复默认)]", "重设所有人称为预设值。", OPTIONS_PRONOUNS){
 					@Override
 					public void effects() {
 						for(GenderNames gn : GenderNames.values()) {
@@ -1110,7 +1110,7 @@ public class OptionsDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Go back to the options menu.", OPTIONS);
+				return new Response("返回", "返回选项菜单。", OPTIONS);
 				
 			} else {
 				return null;
@@ -1124,7 +1124,7 @@ public class OptionsDialogue {
 	};
 	
 	private static Response getDefaultResetConfirmationResponse() {
-		return new ResponseEffectsOnly("Defaults", "Resets all pronouns to their default values.<br/>[style.italicsMinorBad(Requires a second activation to confirm.)]") {
+		return new ResponseEffectsOnly("默认", "将所有人称代词重置为默认值。<br/>[style.italicsMinorBad(需要二次确认。)]") {
 			@Override
 			public void effects() {
 				defaultResetConfirmation = true;
@@ -1136,9 +1136,9 @@ public class OptionsDialogue {
 	private static String getGenderNameTableRow(GenderNames name) {
 		return "<tr>"
 					+ "<td>"
-						+ (name.isHasPenis()?"[style.colourGood(Penis)]":"[style.colourDisabled(Penis)]")
-						+ " " + (name.isHasVagina()?"[style.colourGood(Vagina)]":"[style.colourDisabled(Vagina)]")
-						+ " " + (name.isHasBreasts()?"[style.colourGood(Breasts)]":"[style.colourDisabled(Breasts)]")
+						+ (name.isHasPenis()?"[style.colourGood(阴茎)]":"[style.colourDisabled(阴茎)]")
+						+ "" + (name.isHasVagina()?"[style.colourGood(阴道)]":"[style.colourDisabled(阴道)]")
+						+ "" + (name.isHasBreasts()?"[style.colourGood(乳房)]":"[style.colourDisabled(乳房)]")
 					+ "</td>"
 					+ "<td style='min-width:160px;'>"
 						+"<form style='padding:0;margin:0;text-align:center;'><input type='text' id='GENDER_NAME_MASCULINE_" + name + "' value='"
@@ -1177,7 +1177,7 @@ public class OptionsDialogue {
 	}
 	
 	
-	public static final DialogueNode PATCH_NOTES = new DialogueNode("Patch Notes", "Patch notes", true) {
+	public static final DialogueNode PATCH_NOTES = new DialogueNode("更新日志", "更新日志", true) {
 		
 		@Override
 		public String getContent(){
@@ -1227,7 +1227,7 @@ public class OptionsDialogue {
 	};
 	
 	
-	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("Gender preferences", "", true) {
+	public static final DialogueNode GENDER_PREFERENCE = new DialogueNode("性别偏好", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			defaultResetConfirmation = false;
@@ -1239,18 +1239,18 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<details>"
-						+ "<summary>[style.boldFeminine(Click for more info.)]</summary>"
-						+ "These options will determine the gender encounter rates of random NPCs."
-						+ " Some NPCs, such as random succubi attackers, have restrictions on their gender, but your preferences will be taken into account wherever possible.<br/>"
-						+ "<b>A visual representation of the encounter chances can be seen in the bars at the bottom of each section.</b>"
-						+ " (The different shades of each gender are solely for recognition in the bars, and don't mean anything other than that.)"
+						+ "<summary>[style.boldFeminine(点击以获得更多信息。)]</summary>"
+						+ "这些选项将会决定游戏中遇到的随机NPC的性别比例。"
+						+ "部分NPC，如随机魅魔袭击者，在性别上有限制，但你的偏好会尽可能地生效。<br/>"
+						+ "<b>遭遇概率会在每一部分的底部以可视化的条状图显示。</b>"
+						+ "(每个性别的都会以不同颜色表示方便辨识，颜色并不代表什么)"
 						+ "<br/>"
-						+ "A character is considered to have breasts if they are at least an AA-cup."
+						+ "如果一个角色至少有AA罩杯，就会被认为有乳房。"
 					+ "</details>");
 			
 			// Offspring preferences:
 
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.ANDROGYNOUS, "Offspring using gender preferences", "Define which offspring use your gender preferences."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.ANDROGYNOUS,  "后代性别偏好", "定义哪些后代将套用你当前的性别偏好。"));
 				int[] orderOptions = new int[] {3, 0, 2, 1};
 				for(int i : orderOptions) {
 					UtilText.nodeContentSB.append(
@@ -1285,7 +1285,7 @@ public class OptionsDialogue {
 				if(!defaultResetConfirmation) {
 					return getDefaultResetConfirmationResponse();
 				}
-				return new Response("[style.colourMinorBad(Confirm Defaults)]", "Restore all gender preferences to their default values.", GENDER_PREFERENCE) {
+				return new Response("[style.colourMinorBad(确认恢复默认)]", "恢复所有性别偏好至默认值。", GENDER_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetGenderPreferences();
@@ -1333,10 +1333,10 @@ public class OptionsDialogue {
 				}
 								
 				sb.append("<p><br/>"
-								+ "<span style='color:"+colour.getShades(8)[count]+";'>" +Util.capitaliseSentence(g.getName())+"s</span> have "
-										+(g.getGenderName().isHasVagina()?"a [style.colourGood(vagina)]":"no [style.colourBad(vagina)]")+", "
-										+(g.getGenderName().isHasPenis()?"a [style.colourGood(penis)]":"no [style.colourBad(penis)]")+", and "
-										+ (g.getGenderName().isHasBreasts()?"[style.colourGood(breasts)]":"no [style.colourBad(breasts)]")+"."
+								+ "<span style='color:"+colour.getShades(8)[count]+";'>" +Util.capitaliseSentence(g.getName())+"</span>"
+										+(g.getGenderName().isHasVagina()?"拥有[style.colourGood(阴道)]":"没有[style.colourBad(阴道)]")+"，"
+										+(g.getGenderName().isHasPenis()?"拥有[style.colourGood(阴茎)]":"没有[style.colourBad(阴茎)]")+"，"
+										+ (g.getGenderName().isHasBreasts()?"拥有[style.colourGood(乳房)]":"没有[style.colourBad(乳房)]")+"。"
 								+ "</p>"
 							+ "</div>"
 						+ "</div>"
@@ -1377,7 +1377,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("Orientation preferences", "", true) {
+	public static final DialogueNode ORIENTATION_PREFERENCE = new DialogueNode("性取向偏好", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			defaultResetConfirmation = false;
@@ -1389,11 +1389,11 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<details>"
-						+ "<summary>[style.boldAndrogynous(Click for more info.)]</summary>"
-						+ "These options will determine the sexual orientation encounter rates of random NPCs."
-						+ " Note that the race and femininity of NPCs can have an influence on their orientation, and that some NPCs have pre-determined orientations, but your preferences will be taken into account wherever possible.</br>"
-						+ "<b>A visual representation of the encounter chances can be seen in the bars at the bottom.</b>"
-						+ " (The different shades of each orientation are solely for recognition in the bars, and don't mean anything other than that.)"
+						+ "<summary>[style.boldAndrogynous(点击以获得更多信息。)]</summary>"
+						+ "这些选项会决定遭遇的随机NPC的性取向比例。"
+						+ "请注意NPC的种族和女性化程度会对其取向有一定影响，且部分NPC拥有预设性取向，但你的偏好会尽可能地生效。</br>"
+						+ "<b>遭遇概率会在每一部分的底部以可视化的条状图显示。</b>"
+						+ "(每个取向的都会以不同颜色表示方便辨识，颜色并不代表什么)"
 					+ "</details>"
 		
 					+ "<div class='container-full-width' style='text-align:center;'>");
@@ -1418,7 +1418,7 @@ public class OptionsDialogue {
 				if(!defaultResetConfirmation) {
 					return getDefaultResetConfirmationResponse();
 				}
-				return new Response("[style.colourMinorBad(Confirm Defaults)]", "Restore all orientation preferences to their default values.", ORIENTATION_PREFERENCE) {
+				return new Response("[style.colourMinorBad(确认恢复默认)]", "恢复所有取向偏好至默认值。", ORIENTATION_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetOrientationPreferences();
@@ -1435,7 +1435,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("Fetish preferences", "", true) {
+	public static final DialogueNode FETISH_PREFERENCE = new DialogueNode("性癖偏好", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			defaultResetConfirmation = false;
@@ -1447,10 +1447,10 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<details>"
-						+ "<summary>[style.boldFetish(Click for more info.)]</summary>"
-						+ "These options will determine the likelihood of random NPCs having these fetishes & preferences."
-						+ " Some races are more likely to get specific fetishes, but your preferences will be taken into account wherever possible.<br/>"
-						+ " Content settings will enable/disable related fetishes."
+						+ "<summary>[style.boldFetish(点击以获得更多信息。)]</summary>"
+						+ "这些选项会决定遭遇的随机NPC拥有这些性癖或偏好的比例。"
+						+ "部分NPC的种族会更有可能拥有特定性癖，但你的偏好会尽可能地生效。<br/>"
+						+ "内容设置将会允许/禁用相关性癖。"
 					+ "</details>"
 							
 					+ "<div class='container-full-width' style='text-align:center;'>");
@@ -1475,7 +1475,7 @@ public class OptionsDialogue {
 				if(!defaultResetConfirmation) {
 					return getDefaultResetConfirmationResponse();
 				}
-				return new Response("[style.colourMinorBad(Confirm Defaults)]", "Reset all fetish preferences to their default settings.", FETISH_PREFERENCE) {
+				return new Response("[style.colourMinorBad(确定恢复默认)]", "恢复所有性癖偏好至默认值。", FETISH_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetFetishPreferences();
@@ -1535,27 +1535,27 @@ public class OptionsDialogue {
 			String disabledMsg=null;
 			if(!fetish.isContentEnabled()) {
 				if (Fetish.FETISH_SIZE_QUEEN.equals(fetish)) {
-					disabledMsg = "Penetrative size-difference";
+					disabledMsg = "插入大小差别";
 				} else if (Fetish.FETISH_NON_CON_DOM.equals(fetish) || Fetish.FETISH_NON_CON_SUB.equals(fetish)) {
-					disabledMsg = "Non-consent";
+					disabledMsg = "非自愿";
 				} else if (Fetish.FETISH_INCEST.equals(fetish)) {
-					disabledMsg = "Incest";
+					disabledMsg = "乱伦";
 				} else if (Fetish.FETISH_LACTATION_SELF.equals(fetish) || Fetish.FETISH_LACTATION_OTHERS.equals(fetish)) {
-					disabledMsg = "Lactation";
+					disabledMsg = "泌乳";
 				} else if (Fetish.FETISH_ANAL_RECEIVING.equals(fetish) || Fetish.FETISH_ANAL_GIVING.equals(fetish)) {
-					disabledMsg = "Anal Content";
+					disabledMsg = "肛门内容";
 				} else if (Fetish.FETISH_FOOT_RECEIVING.equals(fetish) || Fetish.FETISH_FOOT_GIVING.equals(fetish)) {
-					disabledMsg = "Foot Content";
+					disabledMsg = "足控内容";
 				} else if (Fetish.FETISH_ARMPIT_RECEIVING.equals(fetish) || Fetish.FETISH_ARMPIT_GIVING.equals(fetish)) {
-					disabledMsg = "Armpit Content";
+					disabledMsg = "腋窝内容";
 				} else {
-					disabledMsg = "Unspecified Content";
+					disabledMsg = "未确认内容";
 				}
 			}
 			if(disabledMsg!=null) {
 				// Disabled fetishes to default, the fetish won't be a valid option for the generator anyway
 				Main.getProperties().fetishPreferencesMap.put(fetish, fetish.getFetishPreferenceDefault().getValue());
-				sb.append("<div style='display:inline-block;'><span class='option-disabled'>Fetish forcibly disabled due to "+disabledMsg+" setting!</span></div>");
+				sb.append("<div style='display:inline-block;'><span class='option-disabled'>由于"+disabledMsg+"设置，该性癖被强制禁用！</span></div>");
 				break;
 			} else {
 				sb.append("<div id='"+preference+"_"+Fetish.getIdFromFetish(fetish)+"' class='preference-button"+(Main.getProperties().fetishPreferencesMap.get(fetish)==preference.getValue()?" selected":"")+"'"
@@ -1626,7 +1626,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("Age preferences", "", true) {
+	public static final DialogueNode AGE_PREFERENCE = new DialogueNode("年龄偏好", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			defaultResetConfirmation = false;
@@ -1638,10 +1638,10 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<details>"
-						+ "<summary>[style.boldAge(Click for more info.)]</summary>"
-						+ "These options will determine the age encounter rates of random NPCs, based on their femininity."
-						+ " Some NPCs, such as demons and harpies, may appear to be younger than they actually are, but your preferences will be taken into account wherever possible.<br/>"
-						+ "<b>A visual representation of the age chances can be seen in the bars at the bottom of each section.</b>"
+						+ "<summary>[style.boldAge(点击以获得更多信息。)]</summary>"
+						+ "这些选项将会决定游戏中遇到的随机NPC的年龄比例，基于其女性化程度。"
+						+ "部分NPC，如随机恶魔和哈比，可能比实际上显得更年轻，但你的偏好会尽可能地生效。<br/>"
+						+ "<b>年龄概率会在每一部分的底部以可视化的条状图显示。</b>"
 					+ "</details>");
 			
 			UtilText.nodeContentSB.append(LTOptions.getAgePreferencesPanel(PronounType.MASCULINE));
@@ -1663,7 +1663,7 @@ public class OptionsDialogue {
 				if(!defaultResetConfirmation) {
 					return getDefaultResetConfirmationResponse();
 				}
-				return new Response("[style.colourMinorBad(Confirm Defaults)]", "Restore all age preferences to their default values.", AGE_PREFERENCE) {
+				return new Response("[style.colourMinorBad(确认恢复默认)]", "恢复所有年龄偏好至默认值。", AGE_PREFERENCE) {
 					@Override
 					public void effects() {
 						Main.getProperties().resetAgePreferences();
@@ -1746,7 +1746,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode FURRY_PREFERENCE = new DialogueNode("Furry preferences", "", true) {
+	public static final DialogueNode FURRY_PREFERENCE = new DialogueNode("福瑞程度偏好", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			defaultResetConfirmation = false;
@@ -1758,13 +1758,13 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<details>"
-						+ "<summary>[style.boldHuman(Click for more info.)]</summary>"
-						+ "These options determine the amount of furry content that you'll encounter in the game."
-						+ " <i>These options only affect random NPCs at the moment, but reduced-furry versions of each major NPC may be added later on in development.</i>"
+						+ "<summary>[style.boldHuman(点击以获得更多信息。)]</summary>"
+						+ "这些选项决定了你在游戏中会遭遇的福瑞内容数量。"
+						+ "<i>这些选项暂时只会影响随机NPC，但在之后的版本开发中或许会为所有主要角色添加非福瑞版本。</i>"
 						
-						+ "<br/>[style.italicsGood(Hover over the buttons to see what each option means!)]"
+						+ "<br/>[style.italicsGood(将鼠标悬浮在按钮上查看各个选项的意思！)]"
 						
-						+ "<br/>Please note that some races, such as demons and harpies, are limited in their available furry preference options."
+						+ "<br/>请注意，部分种族(如恶魔和哈比)在福瑞程度偏好的可用设置上受限。"
 					+ "</details>"
 							
 					+ "<span style='height:16px;width:800px;float:left;'></span>");
@@ -1772,7 +1772,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append("<div class='container-full-width'>");
 					
 				UtilText.nodeContentSB.append("<div class='container-half-width inner' style='width:31.3%; margin:1%; padding:1%;'>");
-					UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RACE_HUMAN.toWebHexString()+"; float:left; width:100%; text-align:center;'>Human Spawn Rate</b>");
+					UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RACE_HUMAN.toWebHexString()+"; float:left; width:100%; text-align:center;'>人类生成率</b>");
 					UtilText.nodeContentSB.append("<div style='display:inline-block; padding-left:5%; width:100%;'>");
 							UtilText.nodeContentSB.append(getSpawnRateDiv(
 											"HUMAN_SPAWN_RATE",
@@ -1785,7 +1785,7 @@ public class OptionsDialogue {
 				UtilText.nodeContentSB.append("</div>");
 
 				UtilText.nodeContentSB.append("<div class='container-half-width inner' style='width:31.3%; margin:1%; padding:1%;'>");
-					UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RACE_CENTAUR.toWebHexString()+"; float:left; width:100%; text-align:center;'>Taur Spawn Rate</b>");
+					UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RACE_CENTAUR.toWebHexString()+"; float:left; width:100%; text-align:center;'>半兽身人生成率</b>");
 					UtilText.nodeContentSB.append("<div style='display:inline-block; padding-left:5%; width:100%;'>");
 							UtilText.nodeContentSB.append(getSpawnRateDiv(
 											"TAUR_SPAWN_RATE",
@@ -1798,7 +1798,7 @@ public class OptionsDialogue {
 				UtilText.nodeContentSB.append("</div>");
 
 				UtilText.nodeContentSB.append("<div class='container-half-width inner' style='width:31.3%; margin:1%; padding:1%;'>");
-					UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RACE_HALF_DEMON.toWebHexString()+"; float:left; width:100%; text-align:center;'>Half-Demon Spawn Rate</b>");
+					UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RACE_HALF_DEMON.toWebHexString()+"; float:left; width:100%; text-align:center;'>半恶魔生成率</b>");
 					UtilText.nodeContentSB.append("<div style='display:inline-block; padding-left:5%; width:100%;'>");
 							UtilText.nodeContentSB.append(getSpawnRateDiv(
 											"HALF_DEMON_SPAWN_RATE",
@@ -1811,7 +1811,7 @@ public class OptionsDialogue {
 				UtilText.nodeContentSB.append("</div>");
 			UtilText.nodeContentSB.append("</div>");
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.RACE_CENTAUR, "Tauric Upper-body Furriness", "Set how furry you prefer the upper bodies of taurs to be."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.RACE_CENTAUR, "半兽身人上半身福瑞程度", "设置你期望半兽身人上半身的福瑞程度。"));
 			UtilText.nodeContentSB.append(
 					(Main.getProperties().taurFurryLevel==2
 						?"<div id='TAUR_FURRY_LIMIT_"+2+"' class='normal-button selected' style='width:31%; margin:1%; text-align:center; float:right; color:"+FurryPreference.MINIMUM.getColour().toWebHexString()+";'>"
@@ -1822,17 +1822,17 @@ public class OptionsDialogue {
 							+ "</div>")
 					+(Main.getProperties().taurFurryLevel==1
 						?"<div id='TAUR_FURRY_LIMIT_"+1+"' class='normal-button selected' style='width:31%; margin:1%; text-align:center; float:right; color:"+FurryPreference.HUMAN.getColour().toWebHexString()+";'>"
-							+ "Human"
+							+ "人类"
 							+ "</div>"
 						:"<div id='TAUR_FURRY_LIMIT_"+1+"' class='normal-button' style='width:31%; margin:1%; text-align:center; float:right;'>"
-							+ "[style.colourDisabled(Human)]"
+							+ "[style.colourDisabled(人类)]"
 							+ "</div>")
 					+(Main.getProperties().taurFurryLevel==0
 						?"<div id='TAUR_FURRY_LIMIT_"+0+"' class='normal-button selected' style='width:31%; margin:1%; text-align:center; float:right; color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>"
-							+ "Untouched"
+							+ "不修改"
 							+ "</div>"
 						:"<div id='TAUR_FURRY_LIMIT_"+0+"' class='normal-button' style='width:31%; margin:1%; text-align:center; float:right;'>"
-							+ "[style.colourDisabled(Untouched)]"
+							+ "[style.colourDisabled(不修改)]"
 							+ "</div>")
 					
 					+(Main.getProperties().taurFurryLevel==5
@@ -1862,7 +1862,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align: center;'>"
 												+ "<div style='display:inline-block; margin:4px auto;'>"
 													+"<div style='float:left; text-align:right; margin-right:16px;'>"
-														+ "<b>Set all furry preferences:</b>"
+														+ "<b>设置全局福瑞程度偏好：</b>"
 													+ "</div>");
 			for(FurryPreference fp : FurryPreference.values()) {
 				UtilText.nodeContentSB.append("<div id='ALL_FURRY_"+fp+"' class='normal-button' style='width:80px; margin:0 2px;'>"+fp.getName()+"</div>");
@@ -1870,7 +1870,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append("</div>"
 												+ "<div style='display:inline-block; margin:4px auto;'>"
 													+"<div style='float:left; text-align:right; margin-right:16px;'>"
-														+ "<b>Set all spawn frequencies:</b>"
+														+ "<b>设置全局生成频率：</b>"
 													+ "</div>");
 			for(SubspeciesPreference sp : SubspeciesPreference.values()) {
 				UtilText.nodeContentSB.append("<div id='ALL_SPAWN_"+sp+"' class='normal-button' style='width:80px; margin:0 2px;'>"+Util.capitaliseSentence(sp.getName())+"</div>");
@@ -1881,8 +1881,8 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align: center;'>"
 											+"<div class='container-full-width' style='text-align:center; background:"+getEntryBackgroundColour(false)+";'>"
 												+"<div class='container-full-width' style='text-align:center; width:calc(60% - 16px);background:transparent; margin:0 0 0 40%; padding:0;'>"
-													+ "<b style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+"; float:left; width:50%; text-align:center;'>Furry Preference</b>"
-													+ "<b style='color:"+PresetColour.BASE_YELLOW_LIGHT.toWebHexString()+"; float:left; width:50%; text-align:center;'>Spawn frequency</b>"
+													+ "<b style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+"; float:left; width:50%; text-align:center;'>福瑞程度偏好</b>"
+													+ "<b style='color:"+PresetColour.BASE_YELLOW_LIGHT.toWebHexString()+"; float:left; width:50%; text-align:center;'>生成频率</b>"
 												+ "</div>"
 											+ "</div>");
 
@@ -1909,7 +1909,7 @@ public class OptionsDialogue {
 				if(!defaultResetConfirmation) {
 					return getDefaultResetConfirmationResponse();
 				}
-				return new Response("[style.colourMinorBad(Confirm Defaults)]", "Reset all furry and spawn preferences to their default settings.", FURRY_PREFERENCE) {
+				return new Response("[style.colourMinorBad(确实恢复默认)]", "恢复所有福瑞和生成偏好至其默认值。", FURRY_PREFERENCE) {
 					@Override
 					public void effects() {
 						for(AbstractSubspecies subspecies : Subspecies.getAllSubspecies()) {
@@ -2033,7 +2033,7 @@ public class OptionsDialogue {
 		return sb.toString();
 	}
 
-	public static final DialogueNode UNIT_PREFERENCE = new DialogueNode("Unit preferences", "", true) {
+	public static final DialogueNode UNIT_PREFERENCE = new DialogueNode("单位偏好", "", true) {
 
 		@Override
 		public String getHeaderContent() {
@@ -2041,9 +2041,9 @@ public class OptionsDialogue {
 
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width'>"
-							+ "These options determine the units used throughout the game."
-							+ " Using auto detect will attempt to identify the correct settings for your system language."
-							+ " <br/><b>Overriding any option disables auto detect.</b>"
+							+ "这些选项决定了游戏中使用的计量单位。"
+							+ "启用自动检测会根据你的系统语言矫正设置。"
+							+ "<br/><b>调整任意选项都会关闭自动检测。</b>"
 							+ "</div>"
 
 							+ "<span style='height:16px;width:800px;float:left;'></span>");
@@ -2065,7 +2065,7 @@ public class OptionsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Go back to the options menu.", OPTIONS);
+				return new Response("返回", "返回选项菜单。", OPTIONS);
 
 			} else {
 				return null;
@@ -2096,7 +2096,7 @@ public class OptionsDialogue {
 		contentSB.append(
 				"<div class='container-full-width' style='padding:0; margin:2px 0;'>"
 					+ "<div class='container-half-width' style='width:calc(55% - 16px);'>"
-						+ "<b style='text-align:center; color:"+colour.toWebHexString()+";'>"+ title+"</b><b>:</b> "
+						+ "<b style='text-align:center; color:"+colour.toWebHexString()+";'>"+ title+"</b><b>:</b>"
 						+ description
 					+ "</div>"
 					+ "<div class='container-half-width' style='width:calc(45% - 16px);'>");
@@ -2104,18 +2104,18 @@ public class OptionsDialogue {
 		if(enabled) {
 			contentSB.append(
 					"<div class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-							+ "[style.boldGood(ON)]"
+							+ "[style.boldGood(开启)]"
 						+ "</div>"
 					+ "<div id='"+id+"_OFF' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-						+ "[style.colourDisabled(OFF)]"
+						+ "[style.colourDisabled(关闭)]"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div id='"+id+"_ON' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-						+ "[style.colourDisabled(ON)]"
+						+ "[style.colourDisabled(开启)]"
 					+ "</div>"
 					+"<div class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>"
-						+ "[style.boldBad(OFF)]"
+						+ "[style.boldBad(关闭)]"
 					+ "</div>");
 		}
 
@@ -2142,7 +2142,7 @@ public class OptionsDialogue {
                 + "</div>"
                 + "<div class='container-half-width' style='width:calc(45% - 16px);'>" +
                 "<div class='container-full-width' style='width:100%; margin:0; padding:0; text-align:right;'>"
-                + "Breasts: "
+                + "乳房："
                 + "<div id='" + id + "_ON' class='normal-button" + (value == maximum ? " disabled" : "") + "' style='width:10%; margin:0 2.5%; text-align:center; float:right;'>"
                 + (value == maximum ? "[style.boldDisabled(+)]" : "[style.boldGood(+)]")
                 + "</div>"
@@ -2154,7 +2154,7 @@ public class OptionsDialogue {
                 + "</div>"
                 + "</div>" +
                 "<div class='container-full-width' style='width:100%; margin:0; padding:0; text-align:right;'>"
-                + "Udders: "
+                + "腹乳："
                 + "<div id='" + id + "_UDDERS_ON' class='normal-button" + (valueUdders == maximumUdders ? " disabled" : "") + "' style='width:10%; margin:0 2.5%; text-align:center; float:right;'>"
                 + (valueUdders == maximumUdders ? "[style.boldDisabled(+)]" : "[style.boldGood(+)]")
                 + "</div>"
@@ -2182,7 +2182,7 @@ public class OptionsDialogue {
 		contentSB.append("<div class='container-full-width' style='padding:0; margin:2px 0;'>");
 			contentSB.append(
 					"<div class='container-half-width' style='width:calc(55% - 16px);'>"
-						+ "<b style='text-align:center; color:"+colour.toWebHexString()+";'>"+ title+"</b><b>:</b> "
+						+ "<b style='text-align:center; color:"+colour.toWebHexString()+";'>"+ title+"</b><b>:</b>"
 						+ description
 					+ "</div>");
 			
@@ -2218,7 +2218,7 @@ public class OptionsDialogue {
 		contentSB.append(
 				"<div class='container-full-width' style='padding:0; margin:2px 0;'>"
 					+ "<div class='container-half-width' style='width:calc(55% - 16px);'>"
-						+ "<b style='text-align:center; color:"+colour.toWebHexString()+";'>"+ title+"</b><b>:</b> "
+						+ "<b style='text-align:center; color:"+colour.toWebHexString()+";'>"+ title+"</b><b>:</b>"
 						+ description
 					+ "</div>"
 					+ "<div class='container-half-width' style='width:calc(45% - 16px);'>");
@@ -2241,7 +2241,7 @@ public class OptionsDialogue {
 	}
 	
 	
-	public static final DialogueNode CREDITS = new DialogueNode("Credits", "", true) {
+	public static final DialogueNode CREDITS = new DialogueNode("贡献名单", "", true) {
 		
 		@Override
 		public String getContent(){
@@ -2256,7 +2256,7 @@ public class OptionsDialogue {
 						+ (Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :"Lilith's Throne")+" has been created by:<br/>"
 						+ "<b style='color:#9b78fa;'>Innoxia</b> and modified by <b style='color:00C4C4;'>" + (Configurations.DEGEN_MODE ? Main.AUTHOR : "KeldonSlayer") + "</b>"
 						+ "<br/><br/>"
-						+ "Artists whose character art can be found in the game:<br/>");
+						+ "这些画师为游戏提供了角色绘图：<br/>");
 			
 			for(Artist artist : Artwork.allArtists) {
 				if (!artist.getName().equals("Custom")) {
@@ -2265,7 +2265,7 @@ public class OptionsDialogue {
 			}
 
 			UtilText.nodeContentSB.append("<br/>"
-					+ "Contributors:</br>" // In alphabetical order:
+					+ "贡献者：</br>" // In alphabetical order:
 					+ "<b style='color:#21bfc5;'>AceXP</b></br>"
 					+ "<b style='color:#21bfc5;'>DJ Addi</b></br>"
 					+ "<b style='color:#21bfc5;'>DSG</b></br>"
@@ -2281,17 +2281,17 @@ public class OptionsDialogue {
 					+ "<b style='color:#21bfc5;'>Tukaima</b></br>");
 			
 			UtilText.nodeContentSB.append("<br/>"
-						+ "Special thanks to:<br/>"
-						+ "<b>Sensei</b>,<br/>"
-						+ "<b style='color:#fa0063;'>loveless</b>, <b style='color:#c790b2;'>Blue999</b>, and <b style='color:#ec9538;'>DesuDemona</b><br/>"
-						+ "<b style='color:#21bec4;'>Github & wiki contributors</b><br/>"
-						+ "<b style='color:#e06e5f;'>Everyone who's financially supported me</b>,<br/>"
-						+ "<b>Bug reporters</b>,<br/>"
-						+ "and<br/>"
-						+ "<b>Everyone for playing Lilith's Throne!</b>"
+						+ "特别鸣谢：<br/>"
+						+ "<b>Sensei</b>、<br/>"
+						+ "<b style='color:#fa0063;'>loveless</b>、<b style='color:#c790b2;'>Blue999</b>和<b style='color:#ec9538;'>DesuDemona</b><br/>"
+						+ "<b style='color:#21bec4;'>Github和维基的贡献者</b><br/>"
+						+ "<b style='color:#e06e5f;'>所有在经济上支援过我的人</b>、<br/>"
+						+ "<b>错误报告者</b>、<br/>"
+						+ "以及<br/>"
+						+ "<b>所有游玩莉莉丝的王座的玩家！</b>"
 					+ "</p>"
 					+ "<br/>"
-					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>Legendary Patrons</h5>"
+					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>传说级赞助者</h5>"
 					+ "<p style='text-align:center;'>");
 			
 			for(CreditsSlot cs : Main.credits) {
@@ -2299,31 +2299,31 @@ public class OptionsDialogue {
 					UtilText.nodeContentSB.append("<br/>");
 					UtilText.nodeContentSB.append("<div style='width:50%; display:inline-block; text-align:right;'>");
 					if(cs.getName().equals("Anonymous")) {
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_UNCOMMON.toWebHexString()+";'>?</b> ");
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_RARE.toWebHexString()+";'>?</b> ");
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>?</b> ");
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>?</b> ");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_UNCOMMON.toWebHexString()+";'>?</b>");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_RARE.toWebHexString()+";'>?</b>");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>?</b>");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>?</b>");
 					} else {
 						for(int i=0; i<cs.getUncommonCount()%5; i++) {
-							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_UNCOMMON.toWebHexString()+";'>&#9679</b> ");
+							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_UNCOMMON.toWebHexString()+";'>&#9679</b>");
 						}
 						
 						for(int i=0; i<cs.getRareCount()%5; i++) {
-							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_RARE.toWebHexString()+";'>&#9679</b> ");
+							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_RARE.toWebHexString()+";'>&#9679</b>");
 						}
 						
 						for(int i=0; i<cs.getEpicCount()/5; i++) {// 5-marks:
-							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#127775</b> ");
+							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#127775</b>");
 						}
 						for(int i=0; i<cs.getEpicCount()%5; i++) {
-							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#9679</b> ");
+							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#9679</b>");
 						}
 						
 						for(int i=0; i<cs.getLegendaryCount()/5; i++) {// 5-marks:
-							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>&#127775</b> ");
+							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>&#127775</b>");
 						}
 						for(int i=0; i<cs.getLegendaryCount()%5; i++) {
-							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>&#9679</b> ");
+							UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_LEGENDARY.toWebHexString()+";'>&#9679</b>");
 						}
 					}
 					UtilText.nodeContentSB.append("</div>");
@@ -2336,7 +2336,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(
 					"</p>"
 					+ "<br/>"
-					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>Epic Patrons</h5>"
+					+ "<h5 style='text-align:center; color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>史诗级赞助者</h5>"
 					+ "<p style='text-align:center;'>");
 			
 			for(CreditsSlot cs : Main.credits) {
@@ -2344,18 +2344,18 @@ public class OptionsDialogue {
 					UtilText.nodeContentSB.append("<br/>");
 					UtilText.nodeContentSB.append("<div style='width:50%; display:inline-block; text-align:right;'>");
 					for(int i=0; i<cs.getUncommonCount()%5; i++) {
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_UNCOMMON.toWebHexString()+";'>&#9679</b> ");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_UNCOMMON.toWebHexString()+";'>&#9679</b>");
 					}
 					
 					for(int i=0; i<cs.getRareCount()%5; i++) {
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_RARE.toWebHexString()+";'>&#9679</b> ");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_RARE.toWebHexString()+";'>&#9679</b>");
 					}
 					
 					for(int i=0; i<cs.getEpicCount()/5; i++) {// 5-marks:
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#127775</b> ");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#127775</b>");
 					}
 					for(int i=0; i<cs.getEpicCount()%5; i++) {
-						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#9679</b> ");
+						UtilText.nodeContentSB.append("<b style='color:"+PresetColour.RARITY_EPIC.toWebHexString()+";'>&#9679</b>");
 					}
 					UtilText.nodeContentSB.append("</div>");
 					UtilText.nodeContentSB.append("<div style='width:50%; display:inline-block; text-align:left;'>");
@@ -2367,7 +2367,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(
 					"</p>"
 					+ "<br/>"
-					+ "<h5 style='text-align:center; color:"+Subspecies.DEMON.getColour(null).toWebHexString()+";'>Demonic backers</h5>"
+					+ "<h5 style='text-align:center; color:"+Subspecies.DEMON.getColour(null).toWebHexString()+";'>恶魔级支持者</h5>"
 					+ "<p style='text-align:center;'>");
 			
 			for(CreditsSlot cs : Main.credits) {
@@ -2392,7 +2392,7 @@ public class OptionsDialogue {
 				for(Artist artist : Artwork.allArtists) {
 					for(ArtistWebsite website : artist.getWebsites()) {
 						if(index==i) {
-							return new ResponseEffectsOnly(website.getName(), "Opens the page:<br/><br/><i>"+website.getURL()+"</i><br/><br/><b>Externally in your default browser.</b>"){
+							return new ResponseEffectsOnly(website.getName(), "打开页面：<br/><br/><i>"+website.getURL()+"</i><br/><br/><b>将使用默认浏览器打开。</b>"){
 								@Override
 								public void effects() {
 									Util.openLinkInDefaultBrowser(website.getURL());
@@ -2415,28 +2415,28 @@ public class OptionsDialogue {
 	private static Response getContentOptionsResponse(int responseTab, int index) {
 		if (index == 1) {
 			if (Main.game.getCurrentDialogueNode().equals(MISCELLANEOUS)) {
-				return new Response("Misc.", "You are already viewing the miscellaneous content options!", null);
+				return new Response("杂项", "你正在查看杂项内容选项！", null);
 			}
-			return new Response("Misc.", "View the miscellaneous content options.", MISCELLANEOUS);
+			return new Response("杂项", "查看杂项内容选项。", MISCELLANEOUS);
 		} else if (index == 2) {
 			if (Main.game.getCurrentDialogueNode().equals(GAMEPLAY)) {
-				return new Response("Gameplay", "You are already viewing the gameplay content options!", null);
+				return new Response("游戏玩法", "你正在查看游戏玩法内容选项！", null);
 			}
-			return new Response("Gameplay", "View the game's gameplay content options.", GAMEPLAY);
+			return new Response("游戏玩法", "查看游戏的游戏玩法内容选项。", GAMEPLAY);
 		} else if (index == 3) {
 			if (Main.game.getCurrentDialogueNode().equals(SEX)) {
-				return new Response("Sex & Fetishes", "You are already viewing the sex & fetishes content options!", null);
+				return new Response("性与性癖", "你正在查看性与性癖内容选项！", null);
 			}
-			return new Response("Sex & Fetishes", "View the game's sex & fetishes content options.", SEX);
+			return new Response("性与性癖", "查看游戏的性与性癖内容选项。", SEX);
 		} else if (index == 4) {
 			if (Main.game.getCurrentDialogueNode().equals(BODIES)) {
-				return new Response("Bodies", "You are already viewing the bodies content options!", null);
+				return new Response("身体", "你正在查看身体内容选项！", null);
 			}
-			return new Response("Bodies", "View the game's bodies content options.", BODIES);
+			return new Response("身体", "查看游戏的身体内容选项。", BODIES);
 		} else if (index == 5) {
-			return new Response("[style.colourMinorBad(Reset)]",
-					"Resets <b>all 'Misc.', 'Gameplay', 'Sex & Fetishes', and 'Bodies'</b> content preferences to their default values!"
-							+"<br/>Does <b>not</b> reset Gender, Orientation, Age, Furry, or Fetish preferences.",
+			return new Response("[style.colourMinorBad(重置)]",
+					"将<b>所有“杂项”、“游戏玩法”、“性与性癖”和“身体”</b>内容偏好重置为默认值！"
+							+"<br/><b>不会</b>重置性别、去向、年龄、福瑞和性癖偏好。",
 					MISCELLANEOUS) {
 				@Override
 				public void effects() {
@@ -2449,29 +2449,29 @@ public class OptionsDialogue {
 			};
 		} else if (index == 6) {
 			if (Main.game.getCurrentDialogueNode().equals(GENDER_PREFERENCE)) {
-				return new Response("Gender preferences", "You are already viewing the gender preferences screen!", null);
+				return new Response("性别偏好", "你正在查看性别偏好界面！", null);
 			}
-			return new Response("Gender preferences", "Set your preferred gender encounter rates.", GENDER_PREFERENCE);
+			return new Response("性别偏好", "设置你偏好的遭遇性别比例。", GENDER_PREFERENCE);
 		} else if (index == 7) {
 			if (Main.game.getCurrentDialogueNode().equals(ORIENTATION_PREFERENCE)) {
-				return new Response("Orientation preferences", "You are already viewing the sexual orientation preferences screen!", null);
+				return new Response("取向偏好", "你正在查看性取向偏好界面！", null);
 			}
-			return new Response("Orientation preferences", "Set your preferred sexual orientation encounter rates.", ORIENTATION_PREFERENCE);
+			return new Response("取向偏好", "设置你偏好的遭遇性取向比例。", ORIENTATION_PREFERENCE);
 		} else if (index == 8) {
 			if (Main.game.getCurrentDialogueNode().equals(AGE_PREFERENCE)) {
-				return new Response("Age preferences", "You are already viewing the age preferences screen!", null);
+				return new Response("年龄偏好", "你正在查看年龄偏好界面！", null);
 			}
-			return new Response("Age preferences", "Set your preferred age encounter rates.", AGE_PREFERENCE);
+			return new Response("年龄偏好", "设置你偏好的遭遇年龄比例。", AGE_PREFERENCE);
 		} else if (index == 9) {
 			if (Main.game.getCurrentDialogueNode().equals(FURRY_PREFERENCE)) {
-				return new Response("Furry preferences", "You are already viewing the furry preferences screen!", null);
+				return new Response("福瑞程度偏好", "你正在查看福瑞程度偏好界面！", null);
 			}
-			return new Response("Furry preferences", "Set your preferred furry level for encounters.", FURRY_PREFERENCE);
+			return new Response("福瑞程度偏好", "设置你偏好的遭遇福瑞程度。", FURRY_PREFERENCE);
 		} else if (index == 10) {
 			if (Main.game.getCurrentDialogueNode().equals(FETISH_PREFERENCE)) {
-				return new Response("Fetish preferences", "You are already viewing the fetish preferences screen!", null);
+				return new Response("性癖偏好", "你正在查看性癖偏好界面！", null);
 			}
-			return new Response("Fetish preferences", "Set your preferred fetish encounter rates.", FETISH_PREFERENCE);
+			return new Response("性癖偏好", "设置你偏好的遭遇性癖比例。", FETISH_PREFERENCE);
 		} else if (index == 0) {
 			return new Response("Back", "Go back to the main menu.", MenuOverrides.MENU);
 		}
@@ -2479,12 +2479,12 @@ public class OptionsDialogue {
 		return null;
 	}
 	
-	public static final DialogueNode MISCELLANEOUS = new DialogueNode("Content Options (Misc.)", "", true) {
+	public static final DialogueNode MISCELLANEOUS = new DialogueNode("内容选项(杂项)", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.GENERIC_GOOD, "Autosave Frequency", "Choose how often want the game to autosave when you transition from one map to another."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.GENERIC_GOOD, "自动存档频率", "选择从不同地图切换时自动存档的频率。"));
 			for (int i = 2; i>=0; i--) {
 				UtilText.nodeContentSB.append("<div id='AUTOSAVE_FREQUENCY_"+i+"' class='normal-button"+(Main.getProperties().autoSaveFrequency == i?" selected":"")+"' style='width:calc(33% - 8px); margin-right:8px; text-align:center; float:right;'>"
 						+(Main.getProperties().autoSaveFrequency == i
@@ -2500,8 +2500,8 @@ public class OptionsDialogue {
 			
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='padding:0; margin:2px 0;'>"
 				+ "<div class='container-half-width' style='width:calc(55% - 16px);'>"
-					+ "<b style='text-align:center; color:"+PresetColour.BASE_AQUA.toWebHexString()+";'>Preferred Artist</b><b>:</b> "
-					+ "Which artist's work is used by default."
+					+ "<b style='text-align:center; color:"+PresetColour.BASE_AQUA.toWebHexString()+";'>偏好画师</b><b>：</b>"
+					+ "默认使用哪位画师的作品。"
 				+ "</div>"
 				+ "<div class='container-half-width' style='width:calc(45% - 16px);'>");
 			
@@ -2547,7 +2547,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode GAMEPLAY = new DialogueNode("Content Options (Gameplay)", "", true) {
+	public static final DialogueNode GAMEPLAY = new DialogueNode("内容选项(游戏玩法)", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -2559,7 +2559,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(OPPORTUNISTIC_ATTACKERS.getDiv());
 			UtilText.nodeContentSB.append(OFFSPRING_ENCOUNTERS.getDiv());
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_BLUE_LIGHT, "Clothing Femininity", "This sets the limitations of clothing femininity values."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_BLUE_LIGHT, "衣着女性化", "该选项限制了衣着的女性化程度。"));
 			for (int i=Main.getProperties().clothingFemininityTitles.length-1; i>=0; i--) {
 				if (Main.getProperties().getClothingFemininityLevel() == i) {
 					UtilText.nodeContentSB.append("<div id='CLOTHING_FEMININITY_"+i
@@ -2573,7 +2573,7 @@ public class OptionsDialogue {
 			}
 			UtilText.nodeContentSB.append("</div></div>");
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_PINK, "Sex action bypass", "If this is enabled, sex action corruption requirements may be bypassed."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_PINK, "性动作绕过", "启用后，行动做的堕落要求会被绕过。"));
 			for (int i = 2; i>=0; i--) {
 				UtilText.nodeContentSB.append("<div id='BYPASS_SEX_ACTIONS_"+i+"' class='normal-button"+(Main.getProperties().bypassSexActions == i?" selected":"")+"' style='width:calc(33% - 8px); margin-right:8px; text-align:center; float:right;'>"
 						+(Main.getProperties().bypassSexActions == i
@@ -2589,7 +2589,7 @@ public class OptionsDialogue {
 
 			UtilText.nodeContentSB.append(FORCED_TF.getDiv());
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_GREEN, "Forced TF Racial Limits", "This allows you to set the maximum furry limit of what an NPC will forcibly transform you into."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_GREEN, "强制转化种族限制", "该选项允许你设置NPC强制转化你时最高的福瑞程度。"));
 			for (FurryPreference fp : Util.newArrayListOfValues(FurryPreference.REDUCED,
 					FurryPreference.MINIMUM,
 					FurryPreference.HUMAN,
@@ -2607,7 +2607,7 @@ public class OptionsDialogue {
 			}
 			UtilText.nodeContentSB.append("</div></div>");
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_GREEN, "Forced TF Gender Tendency", "This allows you to override NPC tastes when a forced transformation will alter your gender presentation."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_GREEN, "强制转化性别倾向", "该选项允许你覆盖NPC在使用强制转化改变你的性别时的喜好。"));
 			for (ForcedTFTendency ftt : Util.newArrayListOfValues(ForcedTFTendency.NEUTRAL,
 					ForcedTFTendency.FEMININE,
 					ForcedTFTendency.FEMININE_HEAVY,
@@ -2628,8 +2628,8 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(FORCED_FETISH.getDiv());
 			
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.FETISH, "Forced Fetish Tendency",
-					"This allows you to override NPC tastes and control the tendency for forced fetishes to be for topping or bottoming."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.FETISH, "强制性癖倾向",
+					"该选项允许你覆盖NPC在强制给予性癖时，对于低姿态或高姿态性癖的喜好。"));
 			for (ForcedFetishTendency fft : Util.newArrayListOfValues(ForcedFetishTendency.NEUTRAL,
 					ForcedFetishTendency.BOTTOM,
 					ForcedFetishTendency.BOTTOM_HEAVY,
@@ -2663,7 +2663,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode SEX = new DialogueNode("Content Options (Sex & Fetishes)", "", true) {
+	public static final DialogueNode SEX = new DialogueNode("内容选项(性与性癖)", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -2692,7 +2692,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(AUTO_SEX_CLOTHING_STRIP.getDiv());
 			UtilText.nodeContentSB.append(RAPE_PLAY_BY_DEFAULT.getDiv());
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_PINK, "Full exposure descriptions", "Set how often revealed body parts are fully described during sex."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_PINK, "暴露描述", "设置完整描述暴露出的身体部分的频率。"));
 			for (int i = 2; i>=0; i--) {
 				UtilText.nodeContentSB.append("<div id='FULL_EXPOSURE_DESCRIPTIONS_"+i+"' class='normal-button"+(Main.getProperties().bypassSexActions == i?" selected":"")+"' style='width:calc(33% - 8px); margin-right:8px; text-align:center; float:right;'>"
 						+(Main.getProperties().fullExposureDescriptions == i
@@ -2717,7 +2717,7 @@ public class OptionsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BODIES = new DialogueNode("Content Options (Bodies)", "", true) {
+	public static final DialogueNode BODIES = new DialogueNode("内容选项(身体)", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -2729,7 +2729,7 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(CLOACA.getDiv());
 			UtilText.nodeContentSB.append(VESTIGIAL_MULTI_BREAST.getDiv());
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.NIPPLES, "Multi-breasts", "Choose whether randomly-generated furry characters should be given multiple rows of breasts."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.NIPPLES, "多对乳房", "决定随机生成的福瑞角色是否拥有多对乳房。"));
 			int[] buttonOrder = new int[] {2, 1, 0, 3}; // Order buttons in this manner so that they appear to be a little more logical
 			for (int i : buttonOrder) {
 				UtilText.nodeContentSB.append("<div id='MULTI_BREAST_PREFERENCE_"+i+"' class='normal-button"+(Main.getProperties().multiBreasts == i?" selected":"")+"' style='width:calc(33% - 8px); margin-right:8px; text-align:center; float:right;'>"
@@ -2744,7 +2744,7 @@ public class OptionsDialogue {
 			}
 			UtilText.nodeContentSB.append("</div></div>");
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.NIPPLES_CROTCH, "Crotch-boobs & Udders", "Choose whether randomly-generated taurs and furry characters should be given udders or crotch-boobs."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.NIPPLES_CROTCH, "胯乳与腹乳", "决定随机生成的半兽身人和福瑞是否应该拥有腹乳或胯乳。"));
 			for (int i = com.lilithsthrone.game.Properties.uddersLabels.length-1; i>=0; i--) {
 				UtilText.nodeContentSB.append("<div id='UDDER_PREFERENCE_"+i+"' class='normal-button"+(Main.getProperties().getUddersLevel() == i?" selected":"")+"' style='width:calc(33% - 8px); margin-right:8px; text-align:center; float:right;'>"
 						+(Main.getProperties().getUddersLevel() == i
@@ -2754,18 +2754,18 @@ public class OptionsDialogue {
 			}
 			UtilText.nodeContentSB.append("</div></div>");
 			
-			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_BROWN_LIGHT, "Hair growth", "Select how often the player's hair will grow by 1cm. NPCs maintain their hair lengths, so this setting only affects you."));
+			UtilText.nodeContentSB.append(getCustomContentPreferenceDivStart(PresetColour.BASE_BROWN_LIGHT, "头发生长", "选择玩家角色的头发每生长1厘米所需要的时间。NPC的头发长度恒定，该设置只会影响你的角色。"));
 			int[] hairButtonOrder = new int[] {2, 1, 0, 3}; // Order buttons in this manner so that they appear to be a little more logical
 			for (int i : hairButtonOrder) {
 				boolean active = Main.getProperties().getHairGrowth() == i;
 				UtilText.nodeContentSB.append("<div id='HAIR_GROWTH_PREFERENCE_"+i+"' class='normal-button"+(Main.getProperties().getHairGrowth() == i?" selected":"")+"' style='width:calc(33% - 8px); margin-right:8px; text-align:center; float:right;'>"
 						+(i == 0
-								?"[style.bold"+(active?"Bad":"Disabled")+"(Never)]"
+								?"[style.bold"+(active?"Bad":"Disabled")+"(从不)]"
 								:(i == 1
-									?"[style.bold"+(active?"Size10":"Disabled")+"(Weekly)]"
+									?"[style.bold"+(active?"Size10":"Disabled")+"(每周)]"
 									:(i == 2
-										?"[style.bold"+(active?"Size5":"Disabled")+"(Daily)]"
-										:"[style.bold"+(active?"Size0":"Disabled")+"(Hourly)]")))
+										?"[style.bold"+(active?"Size5":"Disabled")+"(每天)]"
+										:"[style.bold"+(active?"Size0":"Disabled")+"(每小时)]")))
 						+"</div>");
 			}
 			UtilText.nodeContentSB.append("</div></div>");
@@ -2792,9 +2792,9 @@ public class OptionsDialogue {
 			UtilText.nodeContentSB.append(getSkinColourContentPreferenceVariableDiv(
 					"SKIN_COLOUR_PREFERENCE",
 					PresetColour.RACE_HUMAN,
-					"Skin Colour Preference",
-					"Affects the weighting of human skin colour for randomly-generated NPCs."
-							+" This does not affect 'Greater' furry NPCs, as they have no human skin coverings."));
+					"皮肤颜色偏好",
+					"影响随机生成的人类皮肤颜色权重。"
+							+"该选项不会影响达到“纯粹”福瑞的NPC，他们并没有类似人类的皮肤覆盖。"));
 			
 			return UtilText.nodeContentSB.toString();
 		}

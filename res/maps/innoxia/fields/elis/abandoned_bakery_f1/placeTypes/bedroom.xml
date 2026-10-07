@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[bedroom]]></name>
-	<tooltipDescription><![CDATA[Worn mattresses sit on a couple of half-broken beds; the relatively fresh stains which cover them make it clear that they've been recently used.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the bedroom in the abandoned bakery in Elis]]></virginityLossDescription>
+	<name><![CDATA[卧室]]></name>
+	<tooltipDescription><![CDATA[半破的床上铺着磨损的床垫；床垫上相对新的污渍显示最近有人使用过。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯废弃面包店的卧室里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PINK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

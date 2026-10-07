@@ -111,9 +111,9 @@ public class SuccubisSecrets {
 				
 				String name = bp.getName(target);
 				if(bp instanceof Torso) {
-					name = "torso";
+					name = "躯干";
 				} else if(bp instanceof Vagina) {
-					name = "vagina";
+					name = "阴道";
 				}
 				
 				boolean addBpi = true;
@@ -170,31 +170,31 @@ public class SuccubisSecrets {
 		}
 		
 		if(target.hasNipples()) {
-			coveringsNamesMap.putIfAbsent(BodyCoveringType.MILK, new Value<>(Race.NONE, Util.newArrayListOfValues("milk")));
+			coveringsNamesMap.putIfAbsent(BodyCoveringType.MILK, new Value<>(Race.NONE, Util.newArrayListOfValues("乳汁")));
 		}
 		if(target.hasPenisIgnoreDildo()) {
-			coveringsNamesMap.putIfAbsent(BodyCoveringType.CUM, new Value<>(Race.NONE, Util.newArrayListOfValues("cum")));
+			coveringsNamesMap.putIfAbsent(BodyCoveringType.CUM, new Value<>(Race.NONE, Util.newArrayListOfValues("精液")));
 		}
 		if(target.hasVagina()) {
-			coveringsNamesMap.putIfAbsent(BodyCoveringType.GIRL_CUM, new Value<>(Race.NONE, Util.newArrayListOfValues("girlcum")));
+			coveringsNamesMap.putIfAbsent(BodyCoveringType.GIRL_CUM, new Value<>(Race.NONE, Util.newArrayListOfValues("爱液")));
 		}
 		
 		
 		if(Main.getProperties().hasValue(PropertyValue.pubicHairContent) && target.getPubicHair()!=BodyHair.ZERO_NONE) {
 			coveringsNamesMap.putIfAbsent(target.getPubicHairType().getType(), new Value<>(Race.NONE, new ArrayList<>()));
-			coveringsNamesMap.get(target.getPubicHairType().getType()).getValue().add(UtilText.parse(target, "growing around [npc.namePos] pubic region"));
+			coveringsNamesMap.get(target.getPubicHairType().getType()).getValue().add(UtilText.parse(target, "生长在[npc.namePos]的阴部"));
 		}
 		if(Main.getProperties().hasValue(PropertyValue.facialHairContent) && target.getFacialHair()!=BodyHair.ZERO_NONE) {
 			coveringsNamesMap.putIfAbsent(target.getFacialHairType().getType(), new Value<>(Race.NONE, new ArrayList<>()));
-			coveringsNamesMap.get(target.getFacialHairType().getType()).getValue().add(UtilText.parse(target, "covering [npc.namePos] face"));
+			coveringsNamesMap.get(target.getFacialHairType().getType()).getValue().add(UtilText.parse(target, "覆盖[npc.namePos]的面部"));
 		}
 		if(Main.getProperties().hasValue(PropertyValue.bodyHairContent) && target.getUnderarmHair()!=BodyHair.ZERO_NONE) {
 			coveringsNamesMap.putIfAbsent(target.getBodyHairCoveringType(), new Value<>(Race.NONE, new ArrayList<>()));
-			coveringsNamesMap.get(target.getBodyHairCoveringType()).getValue().add(UtilText.parse(target, "growing in [npc.namePos] underarms"));
+			coveringsNamesMap.get(target.getBodyHairCoveringType()).getValue().add(UtilText.parse(target, "生长在[npc.namePos]的腋下"));
 		}
 		if(Main.getProperties().hasValue(PropertyValue.assHairContent) && target.getAssHair()!=BodyHair.ZERO_NONE) {
 			coveringsNamesMap.putIfAbsent(target.getAssHairType().getType(), new Value<>(Race.NONE, new ArrayList<>()));
-			coveringsNamesMap.get(target.getAssHairType().getType()).getValue().add(UtilText.parse(target, "growing around [npc.namePos] anus"));
+			coveringsNamesMap.get(target.getAssHairType().getType()).getValue().add(UtilText.parse(target, "生长在[npc.namePos]的肛周"));
 		}
 		
 		// Alter the map for if the target's body is not made of flesh:
@@ -213,19 +213,19 @@ public class SuccubisSecrets {
 		for(Entry<AbstractBodyCoveringType, Value<AbstractRace, List<String>>> entry : coveringsNamesMap.entrySet()) {
 			if(entry.getKey().getCategory()==BodyCoveringCategory.ANUS) {
 				entry.getValue().getValue().clear();
-				entry.getValue().getValue().add("anus");
+				entry.getValue().getValue().add("肛门");
 			} else if(entry.getKey().getCategory()==BodyCoveringCategory.MOUTH) {
 				entry.getValue().getValue().clear();
-				entry.getValue().getValue().add("mouth");
+				entry.getValue().getValue().add("嘴");
 			} else if(entry.getKey().getCategory()==BodyCoveringCategory.NIPPLE) {
 				entry.getValue().getValue().clear();
-				entry.getValue().getValue().add("nipples");
+				entry.getValue().getValue().add("乳头");
 			} else if(entry.getKey().getCategory()==BodyCoveringCategory.NIPPLE_CROTCH) {
 				entry.getValue().getValue().clear();
-				entry.getValue().getValue().add("crotch nipples");
+				entry.getValue().getValue().add("胯乳乳头");
 			} else if(entry.getKey().getCategory()==BodyCoveringCategory.TONGUE) {
 				entry.getValue().getValue().clear();
-				entry.getValue().getValue().add("tongue");
+				entry.getValue().getValue().add("舌头");
 			}
 		}
 	}
@@ -233,54 +233,54 @@ public class SuccubisSecrets {
 	public static Value<String, String> getCoveringTitleDescription(GameCharacter target, AbstractBodyCoveringType coveringType, List<String> areasList) {
 		String title = Util.capitaliseSentence(coveringType.getNameTransformation(target));
 		
-		String description = "This is the "+coveringType.getName(target)+" that's currently covering [npc.namePos] "+Util.stringsToStringList(areasList, false)+".";
+		String description = "这里是"+coveringType.getName(target)+"，现在覆盖着[npc.namePos]的"+Util.stringsToStringList(areasList, false)+"。";
 		
 		if(coveringType.getCategory()==BodyCoveringCategory.FLUID) {
-			description = "As its name would suggest, this is simply [npc.namePos] "+Util.stringsToStringList(areasList, false)+".";
+			description = "正如其名，这只是[npc.namePos]的"+Util.stringsToStringList(areasList, false)+"。";
 			
 		} else if(coveringType.getCategory()==BodyCoveringCategory.ANUS) {
-			title = "Anus";
-			description = "This is the skin that's currently covering [npc.namePos] anal rim. The secondary colour determines what [npc.her] anus's inner-walls look like.";
+			title = "肛门";
+			description = "这是[npc.namePos]肛周的皮肤。次要颜色则决定了肛门内壁的颜色。";
 			
 		} else if(coveringType.getCategory()==BodyCoveringCategory.VAGINA) {
-			title = "Vagina";
-			description = "This is the skin that's currently covering [npc.namePos] labia. The secondary colour determines what [npc.her] vagina's inner-walls look like.";
+			title = "阴道";
+			description = "这是[npc.namePos]阴唇皮肤的颜色。次要颜色是阴道内壁的颜色。";
 			
 		} else if(coveringType.getCategory()==BodyCoveringCategory.PENIS) {
-			title = "Penis";
-			description = "This is the skin that's currently covering [npc.namePos] penis. The secondary colour determines what the inside of [npc.her] urethra looks like (if it's fuckable).";
+			title = "阴茎";
+			description = "这是[npc.namePos]阴茎的皮肤。次要颜色决定了尿道内部的颜色(如果足以插入)。";
 			
 		} else if(coveringType.getCategory()==BodyCoveringCategory.NIPPLE) {
-			title = "Nipples";
-			description = "This is the skin that's currently covering [npc.namePos] nipples and areolae. The secondary colour determines what [npc.her] nipples' inner-walls look like (if they are fuckable).";
+			title = "乳头";
+			description = "这是[npc.namePos]乳头和乳晕的颜色。次要颜色决定了乳头内壁的颜色(如果足以插入)。";
 			
 		} else if(coveringType.getCategory()==BodyCoveringCategory.NIPPLE_CROTCH) {
-			title = "Crotch Nipples";
-			description = "This is the skin that's currently covering the nipples and areolae on [npc.namePos] [npc.crotchBoobs]. The secondary colour determines what [npc.her] nipples' inner-walls look like (if they are fuckable).";
+			title = "胯乳乳头";
+			description = "这是[npc.namePos][npc.crotchBoobs]乳头和乳晕的颜色。次要颜色是乳头内壁的颜色(如果足以插入)。";
 			
 		} else if(coveringType.getCategory()==BodyCoveringCategory.MOUTH) {
-			title = "Lips & Throat";
+			title = "嘴唇与喉咙";
 			if(target.getFaceType().getTags().contains(BodyPartTag.FACE_BEAK)) {
-				description = "This is the colour of [npc.namePos] beak. The secondary colour determines what the insides of [npc.her] mouth and throat look like.";
+				description = "这是[npc.namePos]喙的颜色。次要颜色决定了嘴巴内部和喉咙的颜色。";
 			} else {
-				description = "This is the skin that's currently covering [npc.namePos] lips. The secondary colour determines what the insides of [npc.her] mouth and throat look like.";
+				description = "这是[npc.namePos]嘴唇的皮肤。要颜色决定了嘴巴内部和喉咙的颜色。";
 			}
 			
 		} else if(coveringType.getCategory()==BodyCoveringCategory.TONGUE) {
-			title = "Tongue";
-			description = "This is the skin that's currently covering [npc.namePos] tongue.";
+			title = "舌头";
+			description = "这是[npc.namePos]舌头的皮肤。";
 		
 		} else if(Main.getProperties().hasValue(PropertyValue.pubicHairContent) && coveringType == target.getPubicHairType().getType()) {
-			title = "Pubic "+coveringType.getName(target);
-			description = "This is the "+coveringType.getName(target)+" that's currently "+Util.stringsToStringList(areasList, false)+".";
+			title = "阴部"+coveringType.getName(target);
+			description = "这是"+coveringType.getName(target)+"，目前"+Util.stringsToStringList(areasList, false)+"。";
 			
 		} else if(Main.getProperties().hasValue(PropertyValue.facialHairContent) && coveringType == target.getFacialHairType().getType()) {
-			title = "Facial "+coveringType.getName(target);
-			description = "This is the "+coveringType.getName(target)+" that's currently "+Util.stringsToStringList(areasList, false)+".";
+			title = "面部"+coveringType.getName(target);
+			description = "这是"+coveringType.getName(target)+"，目前"+Util.stringsToStringList(areasList, false)+"。";
 			
 		} else if(Main.getProperties().hasValue(PropertyValue.bodyHairContent) && coveringType == target.getBodyHairCoveringType()) {
-			title = "Body "+coveringType.getName(target);
-			description = "This is the "+coveringType.getName(target)+" that's currently "+Util.stringsToStringList(areasList, false)+".";
+			title = "身体"+coveringType.getName(target);
+			description = "这是"+coveringType.getName(target)+"，目前"+Util.stringsToStringList(areasList, false)+"。";
 		}
 		
 		return new Value<>(title, description);
@@ -306,7 +306,7 @@ public class SuccubisSecrets {
 		return (Kate) Main.game.getNpc(Kate.class);
 	}
 	
-	public static final DialogueNode EXTERIOR = new DialogueNode("Succubi's Secrets (Exterior)", "-", false) {
+	public static final DialogueNode EXTERIOR = new DialogueNode("魅魔的秘密(外部)", "-", false) {
 
 		@Override
 		public String getContent() {
@@ -323,10 +323,10 @@ public class SuccubisSecrets {
 			if(responseTab==0) {
 				if (index == 1) {
 					if(!Main.game.isExtendedWorkTime()) {
-						return new Response("Enter", "'Succubi's Secrets' is currently closed, so you'll have to come back during opening hours if you wanted to take a look inside.", null);
+						return new Response("进入", "“魅魔的秘密”目前打烊了。如果你想进去转转，得营业时间再来。", null);
 						
 					} else if(Main.game.getDialogueFlags().values.contains(DialogueFlagValue.kateIntroduced)) {
-						return new Response("Enter", "Step inside Succubi's Secrets.", SHOP_BEAUTY_SALON_ENTER) {
+						return new Response("进入", "进入魅魔的秘密。", SHOP_BEAUTY_SALON_ENTER) {
 							@Override
 							public void effects() {
 								BodyChanging.setTarget(Main.game.getPlayer());
@@ -334,7 +334,7 @@ public class SuccubisSecrets {
 						};
 						
 					} else {
-						return new Response("Enter", "Step inside Succubi's Secrets.", SHOP_BEAUTY_SALON) {
+						return new Response("进入", "进入魅魔的秘密。", SHOP_BEAUTY_SALON) {
 							@Override
 							public void effects() {
 								BodyChanging.setTarget(Main.game.getPlayer());
@@ -347,7 +347,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getContent() {
@@ -357,13 +357,13 @@ public class SuccubisSecrets {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Wake her", "Wake the sleeping demon.", SHOP_BEAUTY_SALON_WAKE);
+				return new Response("叫醒她", "叫醒睡着的恶魔。", SHOP_BEAUTY_SALON_WAKE);
 				
 			} else if (index == 2) {
-				return new Response("Watch", "Wait for the sleeping demon to wake up.", SHOP_BEAUTY_SALON_WATCH);
+				return new Response("看着", "等睡着的恶魔自然醒来。", SHOP_BEAUTY_SALON_WATCH);
 
 			} else if (index == 0) {
-				return new Response("Leave", "Head back out to the Shopping Arcade.", EXTERIOR) {
+				return new Response("离开", "返回购物中心。", EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.setResponseTab(0);
@@ -373,7 +373,7 @@ public class SuccubisSecrets {
 			return null;
 		}
 	};
-	public static final DialogueNode SHOP_BEAUTY_SALON_WAKE = new DialogueNode("Succubi's Secrets", "-", true, true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_WAKE = new DialogueNode("魅魔的秘密", "-", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getKate().wakeUp();
@@ -386,10 +386,10 @@ public class SuccubisSecrets {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("No thanks", "Tell her that you're not the sort of person who just has sex with random shopkeepers.", SHOP_BEAUTY_SALON_NO_THANKS);
+				return new Response("算了", "告诉她你不是那种随便找个店主就开干的货色。", SHOP_BEAUTY_SALON_NO_THANKS);
 				
 			} else if (index == 2) {
-				return new ResponseSex("Sex", "You can't resist the horny succubus's request...",
+				return new ResponseSex("做爱", "你无法抵抗这个性奋的魅魔的要求……",
 						true, true,
 						new SMSitting(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotSitting.SITTING_BETWEEN_LEGS)),
@@ -408,7 +408,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_WATCH = new DialogueNode("Succubi's Secrets", "-", true, true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_WATCH = new DialogueNode("魅魔的秘密", "-", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getKate().wakeUp();
@@ -421,10 +421,10 @@ public class SuccubisSecrets {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("No thanks", "Tell her that you're not the sort of person who just has sex with random shopkeepers.", SHOP_BEAUTY_SALON_NO_THANKS);
+				return new Response("算了", "告诉她你不是那种随便找个店主就开干的货色。", SHOP_BEAUTY_SALON_NO_THANKS);
 				
 			} else if (index == 2) {
-				return new ResponseSex("Fuck her", "Do as she says and start having sex with her.",
+				return new ResponseSex("干她！", "按她说的跟她做爱。",
 						true, true,
 						new SMSitting(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotSitting.SITTING_BETWEEN_LEGS)),
@@ -443,7 +443,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_NO_THANKS = new DialogueNode("Succubi's Secrets", "-", true, true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_NO_THANKS = new DialogueNode("魅魔的秘密", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -453,7 +453,7 @@ public class SuccubisSecrets {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Services", "Read the brochure that Kate just handed to you.", SHOP_BEAUTY_SALON_MAIN){
+				return new Response("业务", "阅读凯特刚刚递给你的小册子。", SHOP_BEAUTY_SALON_MAIN){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().values.add(DialogueFlagValue.kateIntroduced);
@@ -464,7 +464,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_ENTER = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_ENTER = new DialogueNode("魅魔的秘密", "-", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getKate().wakeUp();
@@ -487,7 +487,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_MAIN = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_MAIN = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getContent() {
@@ -502,37 +502,37 @@ public class SuccubisSecrets {
 	
 	private static Response getMainResponse(int index) {
 		if(index == 1){
-			return new ResponseTrade("Trade with Kate", "There's a separate leaflet tucked into the back of the brochure. It informs you that Kate is a registered distributor for a large jewellery firm.", getKate());
+			return new ResponseTrade("跟凯特交易", "小册子背后还塞着一张分开的纸片。上面告诉你凯特是一家大型珠宝公司的分销商。", getKate());
 			
 		} else if (index == 2) {
 			if(!Main.game.getPlayer().isAbleToWearMakeup()) {
-				return new Response("Makeup", "As your body is made of "+Main.game.getPlayer().getBodyMaterial().getName()+", Kate is unable to apply any makeup!", null);
+				return new Response("妆容", "由于你的身体由"+Main.game.getPlayer().getBodyMaterial().getName()+"构成，凯特无法对你化妆！", null);
 				
 			} else {
-				return new Response("Makeup",
-						"Kate offers a wide range of different cosmetic services, and several pages of the brochure are devoted to images displaying different styles and colours of lipstick, nail polish, and other forms of makeup.",
+				return new Response("妆容",
+						"凯特提供广泛的化妆服务，小册子上有好几页都是各种图片，展示着各色各样的口红、指甲油和其他化妆品的效果。",
 						SHOP_BEAUTY_SALON_COSMETICS);
 			}
 
 		} else if (index == 3) {
-			return new Response("Hair",
-					"There's a double-page spread of all the different dyes, styles, and lengths of hair that Kate's able to work with.",
+			return new Response("头发",
+					"上面有一张跨页的内容，展示了凯特能给头发染各种颜色，换不同造型和长度。",
 					SHOP_BEAUTY_SALON_HAIR);
 
 		} else if (index == 4) {
-				return new Response("Piercings",
-						"Kate offers a wide range of different piercings.",
+				return new Response("穿孔",
+						"凯特提供多种多样、范围广泛的穿孔。",
 						SHOP_BEAUTY_SALON_PIERCINGS);
 
 		}  else if (index == 5) {
-				return new Response("Eyes",
-						"There's a special page near the front of the brochure, advertising Kate's ability to recolour a person's eyes."
-						+ " Just like skin recolourings, this is quite demanding on her aura, and is therefore very expensive.", SHOP_BEAUTY_SALON_EYES);
+				return new Response("眼睛",
+						"小册子刚开始专门有一页，推销着凯特眼睛易色的功夫。"
+						+ "与皮肤易色类似，这对她的灵气要求很高，所以也很昂贵。", SHOP_BEAUTY_SALON_EYES);
 
 		} else if (index == 6) {
-			return new Response("Coverings",
-					"There's a special page in the middle of the brochure, advertising Kate's special ability to harness the arcane in order to recolour a person's skin or fur."
-					+ " Apparently, this is quite demanding on her aura, and is therefore very expensive.",
+			return new Response("体表",
+					"小册子中间专门有一页，推销着凯特驾驭奥术给皮肤或皮毛易色的能力。"
+					+ "显然这对她的灵气有很高要求，所以也很行昂贵。",
 					SHOP_BEAUTY_SALON_SKIN_COLOUR){
 				@Override
 				public void effects() {
@@ -541,15 +541,15 @@ public class SuccubisSecrets {
 			};
 
 		} else if (index == 7) {
-			return new Response("Other", "Kate can offer other miscellaneous services, such as anal bleaching.", SHOP_BEAUTY_SALON_OTHER);
+			return new Response("其他", "凯特还提供各种杂项服务，例如肛门漂白。", SHOP_BEAUTY_SALON_OTHER);
 
 		} else if (index == 8) {
-			return new Response("Tattoos", "Most of the brochure is taken up with drawings and photographs displaying Kate's considerable artistic talents."
-					+ " She's even able to apply arcane-enchanted tattoos, but they look to be very expensive...", SHOP_BEAUTY_SALON_TATTOOS);
+			return new Response("纹身", "小册子的绝大部分都被各种图画和照片占据，体现出凯特非凡的艺术潜质。"
+					+ "她甚至能纹上奥术附魔的纹身，不过看上去不算便宜……", SHOP_BEAUTY_SALON_TATTOOS);
 
 		} else if (index == 9) {
-			return new ResponseSex("Sex",
-					"At the end of the brochure, there's an extremely lewd collection of pictures of Kate inserting her tail into her various orifices, with the suggestive caption 'Don't make me do it myself...'",
+			return new ResponseSex("做爱",
+					"宣传册的结尾处全部都是凯特把尾巴插进自己各处腔穴的样子，还配有极具暗示性的描述：“别让我自己来……”",
 					true, true,
 					new SMSitting(
 							Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotSitting.SITTING_BETWEEN_LEGS)),
@@ -565,9 +565,9 @@ public class SuccubisSecrets {
 					UtilText.parseFromXMLFile("places/dominion/shoppingArcade/succubisSecrets", "SHOP_BEAUTY_SALON_MAIN_SEX"));
 			
 		} else if(index==10) {
-			return new ResponseSex("Sleep sex",
-					"As she's such a deep sleeper, you're confident that you'd be able to fuck Kate without waking her up."
-							+ " All you'd need to do is wait for her to fall asleep and be gentle with her...",
+			return new ResponseSex("睡奸",
+					"她是个深度睡眠者，你有自信可以在不吵醒凯特的情况下操她。"
+							+ "你所要做的就是等她睡着，然后动作小心点儿……",
 					true, false,
 					new SMSitting(
 							Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotSitting.SITTING_BETWEEN_LEGS)),
@@ -606,9 +606,9 @@ public class SuccubisSecrets {
 				&& Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_START
 				&& !Main.game.getPlayer().hasItemType(ItemType.CANDI_PERFUMES)) {
 			if(Main.game.getPlayer().getMoney()<500) {
-				return new Response("Candi's perfume", "You need at least 500 flames in order to pay for Candi's perfume!", null);
+				return new Response("坎迪的香水", "你需要至少拥有500火币，才能付得起坎迪香水的钱！", null);
 			}
-			return new Response("Candi's perfume", "Tell Kate that you're here to collect Candi's order of perfume.", SHOP_BEAUTY_SALON_CANDI_PERFUME) {
+			return new Response("坎迪的香水", "告诉凯特你是来帮坎迪取香水的。", SHOP_BEAUTY_SALON_CANDI_PERFUME) {
 				@Override
 				public void effects() {
 					Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(-500));
@@ -618,7 +618,7 @@ public class SuccubisSecrets {
 			};
 			
 		} else if (index == 0) {
-			return new Response("Leave", "Leave Kate's shop, heading back out into the Shopping Arcade.", EXTERIOR){
+			return new Response("离开", "离开凯特的商店，回到购物中心。", EXTERIOR){
 				@Override
 				public void effects() {
 					Main.game.setResponseTab(0);
@@ -629,7 +629,7 @@ public class SuccubisSecrets {
 		return null;
 	}
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_CANDI_PERFUME = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_CANDI_PERFUME = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getContent() {
@@ -650,7 +650,7 @@ public class SuccubisSecrets {
 		
 		@Override
 		public String getLabel() {
-			return "Cosmetics";
+			return "妆容";
 		}
 
 		@Override
@@ -663,22 +663,22 @@ public class SuccubisSecrets {
 			
 			UtilText.nodeContentSB.append(
 					CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "腮红", "腮红(也叫胭脂)被用来粉饰脸颊，以显得更加年轻或凸显颧骨。", true, true)
 							
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "口红", "口红被用来为嘴唇提供色彩、质地或保护。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "眼线", "眼线用于眼廓周围，有助于修饰眼型或突出不同的特征。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "眼影", "眼影用来让使用者的眼睛更加凸显迷人。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on your [pc.hands].", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "指甲油", "指甲油用于给[pc.hands]添加色彩或提供保护。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on your [pc.feet].", true, true));
+							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "脚趾甲油", "脚趾甲油用于给[pc.feet]添加色彩或提供保护。", true, true));
 			
 			return UtilText.nodeContentSB.toString();
 			
@@ -700,7 +700,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_HAIR = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_HAIR = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getHeaderContent() {
@@ -711,12 +711,12 @@ public class SuccubisSecrets {
 			UtilText.nodeContentSB.append(getMoneyRemainingString());
 			
 			UtilText.nodeContentSB.append(
-				CharacterModificationUtils.getKatesDivHairLengths(true, "Hair Length", "Hair length determines what hair styles you're able to have. The longer the hair, the more styles are available.")
+				CharacterModificationUtils.getKatesDivHairLengths(true, "头发长度", "头发长度决定了你能做的发型种类。头发越长，发型种类就越丰富。")
 
-				+CharacterModificationUtils.getKatesDivHairStyles(true, "Hair Style", "Hair style availability is determined by your hair length.")
+				+CharacterModificationUtils.getKatesDivHairStyles(true, "发型", "可用的发型是由你的头发长度决定的。")
 				
 				+CharacterModificationUtils.getKatesDivCoveringsNew(true, Main.game.getPlayer().getHairType().getRace(), Main.game.getPlayer().getCovering(Main.game.getPlayer().getHairCovering()).getType(),
-						"[pc.Hair] Colour", "All hair recolourings are permanent, so if you want to change your colour again at a later time, you'll have to visit Kate again.", true, true));
+						"[pc.Hair]颜色", "头发的染色都是永久性的，如果你以后想再改变头发颜色，就需要再去凯特那里染发。", true, true));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -737,7 +737,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_SKIN_COLOUR = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_SKIN_COLOUR = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getHeaderContent() {
@@ -784,7 +784,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_EYES = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_EYES = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getHeaderContent() {
@@ -797,21 +797,21 @@ public class SuccubisSecrets {
 			UtilText.nodeContentSB.append(
 					CharacterModificationUtils.getKatesDivCoveringsNew(
 							true, Main.game.getPlayer().getEyeType().getRace(), Main.game.getPlayer().getEyeCovering(),
-							"Irises", "The iris is the coloured part of the eye that's responsible for controlling the diameter and size of the pupil.", true, true)
+							"虹膜", "虹膜指的是眼睛中染色的部分，负责控制瞳孔的直径和大小。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
 							true, Race.NONE,
 							Main.game.getPlayer().getBodyMaterial()!=BodyMaterial.FLESH
 								?BodyCoveringType.getMaterialBodyCoveringType(Main.game.getPlayer().getBodyMaterial(), BodyCoveringCategory.EYE_PUPIL)
 								:BodyCoveringType.EYE_PUPILS,
-							"Pupils", "The pupil is a hole located in the centre of the iris that allows light to strike the retina.", true, true)
+							"瞳孔", "瞳孔是位于虹膜中心的透明物体，以便光线打在视网膜上。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
 							true, Race.NONE,
 							Main.game.getPlayer().getBodyMaterial()!=BodyMaterial.FLESH
 								?BodyCoveringType.getMaterialBodyCoveringType(Main.game.getPlayer().getBodyMaterial(), BodyCoveringCategory.EYE_SCLERA)
 								:BodyCoveringType.EYE_SCLERA,
-							"Sclerae", "The sclera is the (typically white) part of the eye that surrounds the iris.", true, true));
+							"虹膜", "虹膜指的是眼睛中染色的部分，负责控制瞳孔的直径和大小。", true, true));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -832,7 +832,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_PIERCINGS = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_PIERCINGS = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getHeaderContent() {
@@ -868,7 +868,7 @@ public class SuccubisSecrets {
 		
 		@Override
 		public String getLabel() {
-			return "Cosmetics";
+			return "妆容";
 		}
 
 		@Override
@@ -888,20 +888,20 @@ public class SuccubisSecrets {
 //							:"")
 					
 					+(Main.game.isFacialHairEnabled()
-							? CharacterModificationUtils.getKatesDivFacialHair(true, "Facial hair", "The body hair found on your face." 
-									+ (Main.game.isFemaleFacialHairEnabled() ? "" : " Feminine characters cannot grow facial hair."))
+							? CharacterModificationUtils.getKatesDivFacialHair(true, "面部毛发", "你脸上的毛发。" 
+									+ (Main.game.isFemaleFacialHairEnabled() ? "" : "女性化角色无法长出面部毛发。"))
 							:"")
 					
 					+(Main.game.isPubicHairEnabled()
-							?CharacterModificationUtils.getKatesDivPubicHair(true, "Pubic hair", "The body hair found in the genital area; located on and around your sex organs and crotch.")
+							?CharacterModificationUtils.getKatesDivPubicHair(true, "阴毛", "生殖器附近的体毛；位于性器官和下体附近。")
 							:"")
 					
 					+(Main.game.isBodyHairEnabled()
-							?CharacterModificationUtils.getKatesDivUnderarmHair(true, "Underarm hair", "The body hair found in your armpits.")
+							?CharacterModificationUtils.getKatesDivUnderarmHair(true, "腋毛", "腋下的体毛。")
 							:"")
 					
 					+(Main.game.isAssHairEnabled()
-							?CharacterModificationUtils.getKatesDivAssHair(true, "Ass hair", "The body hair found around your asshole.")
+							?CharacterModificationUtils.getKatesDivAssHair(true, "肛毛", "肛门周围的体毛。")
 							:"")
 					);
 			
@@ -911,7 +911,7 @@ public class SuccubisSecrets {
 						|| (Main.game.isAssHairEnabled() &&  Main.game.getPlayer().getAssHairType().getType()==bct)
 						|| (Main.game.isPubicHairEnabled() && Main.game.getPlayer().getPubicHairType().getType()==bct)) {
 					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, bct, "Body hair", "Your body hair.", true, true));
+							true, Race.NONE, bct, "体毛", "你的体毛。", true, true));
 					
 				}
 			}
@@ -935,7 +935,7 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_TATTOOS = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_TATTOOS = new DialogueNode("魅魔的秘密", "-", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -951,19 +951,19 @@ public class SuccubisSecrets {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 8) {
-				return new Response("Tattoos", "You are already looking at the tattoos available...", null);
+				return new Response("纹身", "你正在查看可用的纹身……", null);
 				
 			} else if(index==11) {
-				return new Response("Confirmations: ",
-						"Toggle tattoo removal confirmations."
-							+ " When turned on, it will take two clicks to remove tattoos."
-							+ " When turned off, it will only take one click.",
+				return new Response("确认状态：",
+						"开启纹身去除确认。"
+							+ "启用时，需要点击两次才能移除纹身。"
+							+ "关闭时只需要一次点击。",
 							SHOP_BEAUTY_SALON_TATTOOS) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.tattooRemovalConfirmations)
-									?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-									:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "确认状态："+(Main.getProperties().hasValue(PropertyValue.tattooRemovalConfirmations)
+									?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>开启</span>"
+									:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>关闭</span>");
 					}
 					
 					@Override
@@ -983,11 +983,11 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode SHOP_BEAUTY_SALON_TATTOOS_ADD = new DialogueNode("Succubi's Secrets", "-", true) {
+	public static final DialogueNode SHOP_BEAUTY_SALON_TATTOOS_ADD = new DialogueNode("魅魔的秘密", "-", true) {
 
 		@Override
 		public String getLabel() {
-			return "Succubi's Secrets - "+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getTattooSlotName()) +" Tattoo";
+			return "魅魔的秘密 - "+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getTattooSlotName()) +" 纹身";
 		}
 		
 		@Override
@@ -1004,15 +1004,15 @@ public class SuccubisSecrets {
 			int value = CharacterModificationUtils.tattoo.getValue();
 			if (index == 1) {
 				if(Main.game.getPlayer().getMoney()<value) {
-					return new Response("Apply ("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "You don't have enough money to get a tattoo!", null);
+					return new Response("应用("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "你没有足够的钱用来纹纹身！", null);
 					
 				} else if(CharacterModificationUtils.tattoo.getType().equals(TattooType.getTattooTypeFromId("innoxia_misc_none"))
 						&& CharacterModificationUtils.tattoo.getWriting().getText().isEmpty()
 						&& CharacterModificationUtils.tattoo.getCounter().getType()==TattooCounterType.NONE) {
-					return new Response("Apply ("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "You need to select a tattoo type, add some writing, or add a counter in order to make a tattoo!", null);
+					return new Response("应用("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "你需要选择纹身类型，添加一些文字或计数指示才能形成完整的纹身！", null);
 					
 				} else {
-					return new Response("Apply ("+UtilText.formatAsMoney(value, "span")+")", "Tell Kate that you'd like her to give you this tattoo.", SHOP_BEAUTY_SALON_TATTOOS) {
+					return new Response("应用("+UtilText.formatAsMoney(value, "span")+")", "告诉凯特你想让她帮你纹上这个纹身。", SHOP_BEAUTY_SALON_TATTOOS) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(Main.game.getPlayer().incrementMoney(-value));
@@ -1026,7 +1026,7 @@ public class SuccubisSecrets {
 				}
 			
 			} else if(index==2) {
-				return new Response("Save/Load", "Save/Load tattoo presets.", CosmeticsDialogue.TATTOO_SAVE_LOAD) {
+				return new Response("保存/加载", "保存/加载纹身预设。", CosmeticsDialogue.TATTOO_SAVE_LOAD) {
 					@Override
 					public void effects() {
 						CosmeticsDialogue.initTattooSaveLoadDialogue(SHOP_BEAUTY_SALON_TATTOOS_ADD);
@@ -1034,7 +1034,7 @@ public class SuccubisSecrets {
 				};
 			
 			} else if(index==0) {
-				return new Response("Back", "Decide not to get this tattoo and return to the main selection screen.", SHOP_BEAUTY_SALON_TATTOOS);
+				return new Response("返回", "放弃这个纹身，回到主选择界面。", SHOP_BEAUTY_SALON_TATTOOS);
 			}
 			
 			return null;
@@ -1048,10 +1048,10 @@ public class SuccubisSecrets {
 	
 	// Sex:
 	
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Finished", "", true, false) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("结束", "", true, false) {
 		@Override
 		public String getDescription() {
-			return "[pc.Step] back and allow Kate to recover.";
+			return "退开让凯特恢复一下。";
 		}
 		@Override
 		public String getContent() {
@@ -1060,7 +1060,7 @@ public class SuccubisSecrets {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Services", "Read the brochure that Kate just handed to you.", SuccubisSecrets.SHOP_BEAUTY_SALON_MAIN){
+				return new Response("业务", "阅读凯特刚刚递给你的小册子。", SuccubisSecrets.SHOP_BEAUTY_SALON_MAIN){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().values.add(DialogueFlagValue.kateIntroduced);
@@ -1071,13 +1071,13 @@ public class SuccubisSecrets {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_REPEATED = new DialogueNode("Finished", "", true, false) {
+	public static final DialogueNode AFTER_SEX_REPEATED = new DialogueNode("结束", "", true, false) {
 		@Override
 		public String getDescription() {
 			if(getKate().isAsleep()) {
-				return "[pc.Step] back and leave Kate to continue sleeping.";
+				return "[pc.Step]回去并离开，让凯特继续睡觉。";
 			}
-			return "[pc.Step] back and allow Kate to recover.";
+			return "退开让凯特恢复一下。";
 		}
 		public void applyPreParsingEffects() {
 			Main.game.appendToTextStartStringBuilder(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/succubisSecrets", "AFTER_SEX_REPEATED"));
@@ -1090,7 +1090,7 @@ public class SuccubisSecrets {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Services", "Turn your attention back to the brochure.", SuccubisSecrets.SHOP_BEAUTY_SALON_MAIN);
+				return new Response("业务", "把注意力转回到宣传册上。", SuccubisSecrets.SHOP_BEAUTY_SALON_MAIN);
 			}
 			return null;
 		}

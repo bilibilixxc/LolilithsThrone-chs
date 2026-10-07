@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <face>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[raptor]]></transformationName>
+	<transformationName><![CDATA[猛禽]]></transformationName>
 	
 	<coveringType>innoxia_raptor_feathers</coveringType>
 	
@@ -17,35 +17,35 @@
 	<namesPlural/> 
 	
 	<descriptorsMasculine>
-		<descriptor>anthropomorphic raptor-like</descriptor>
-		<descriptor>raptor-like</descriptor>
+		<descriptor><![CDATA[猛禽般拟人]]></descriptor>
+		<descriptor><![CDATA[猛禽般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>anthropomorphic raptor-like</descriptor>
-		<descriptor>raptor-like</descriptor>
+		<descriptor><![CDATA[猛禽般拟人]]></descriptor>
+		<descriptor><![CDATA[猛禽般]]></descriptor>
 	</descriptorsFeminine>
 	
-	<noseName><![CDATA[nose]]></noseName>
+	<noseName><![CDATA[鼻]]></noseName>
 	<noseNamePlural><![CDATA[noses]]></noseNamePlural>
 	
 	<noseDescriptorsMasculine/>
 	<noseDescriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		[npc.Her] nose and mouth twitch and transform as they fuse together and push out into a sharp, hooked beak, and [npc.her] tongue thins down, turning into a bird-like one.
-		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face,
-		#ELSE
-			 Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+],
-		#ENDIF
-		 and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath. [npc.She] [npc.verb(find)], much to [npc.her] relief, that [npc.sheIs] able to harden or soften the edges of [npc.her] beak at will, allowing [npc.herHim] to portray facial emotions as well as to wrap [npc.her] beak's edges around anything [npc.she] might want to put in [npc.her] mouth.
-		<br/>[npc.Name] now [npc.has] an anthropomorphic [style.boldRaptor(raptor-like face)], [npc.materialDescriptor] [npc.faceFullDescription]. Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldRaptor(thin, bird-like tongue)].
-	]]></transformationDescription>
+		[npc.Her]的鼻子和嘴微微抽动，融合在一起，伸出尖锐的钩状喙，[npc.she]的舌头变细，变成类鸟的舌头。
+	#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
+		一层[npc.faceSkin+]细毛迅速长出并覆盖了[npc.her]的新脸，
+	#ELSE
+		就像[npc.her]身体的其它部位一样，[npc.her]的新脸[npc.materialDescriptor][npc.faceSkin+]，
+	#ENDIF
+	当转化彻底完成时，[npc.sheIs]试图喘口气，却发出了娇喘和呻吟。让[npc.she]感到欣慰的是，[npc.she]能够随意硬化或软化喙，让[npc.she]能够描绘面部情绪，并能用[npc.she]的喙边缘包裹住任何东西。
+	<br/>[npc.Name]现在拥有一张似人的[style.boldRaptor(类猛禽脸)]，[npc.materialDescriptor][npc.faceFullDescription]。在[npc.her]嘴中有一根[style.boldRaptor(薄薄的鸟舌头)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, raptor-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a sharp, hooked beak.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的猛禽面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有完整的吻部。
+]]></bodyDescription>
 	
 	<!-- Feral variant of the above. -->
 	<bodyDescriptionFeral><![CDATA[

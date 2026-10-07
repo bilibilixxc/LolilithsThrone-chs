@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
 	<deskName/>
 	<title/>
@@ -132,11 +132,11 @@
 			<dirtyTalk>
 				<character id="kheiron">
 					<standard additionToDefault="false">
-						<line><![CDATA[Good horsie! Take my cock!]]></line>
-						<line><![CDATA[You're being a very good horsie!]]></line>
-						<line><![CDATA[You love my cock, don't you?!]]></line>
-						<line><![CDATA[Take my cock, you good little horsie!]]></line>
-						<line><![CDATA[Take my cock!]]></line>
+						<line><![CDATA[乖小马！尝尝我的肉棒！]]></line>
+						<line><![CDATA[你是个非常乖的小马！]]></line>
+						<line><![CDATA[你喜欢我的肉棒，对吧？！]]></line>
+						<line><![CDATA[尝尝我的肉棒吧，可爱的小乖马！]]></line>
+						<line><![CDATA[吃掉我的肉棒！]]></line>
 					</standard>
 				</character>
 			</dirtyTalk>

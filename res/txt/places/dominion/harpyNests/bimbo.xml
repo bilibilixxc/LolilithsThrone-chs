@@ -1,586 +1,587 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="HARPY_NEST_BIMBO"><![CDATA[
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_bimboEncountered))
-				Due to the ongoing arcane storm, [bimboHarpy.namePos] nest is completely deserted. Her entire flock has retreated into the safety of the upper-floor of the building below, leaving you with no choice but to return at another time if you wanted to speak to her.
+				由于持续的奥术风暴，[bimboHarpy.namePos]巢穴现在空空荡荡。整个鸟群都撤退到下层建筑的天花板上寻求庇护，你不可能和她谈上话，只能另择时间再来。
 			#ELSE
-				Due to the ongoing arcane storm, this nest is completely deserted. The entire flock has retreated into the safety of the upper-floor of the building below, leaving you with no choice but to return at another time if you wanted to speak to the matriarch of this particular nest.
+				由于持续的奥术风暴，这个巢穴现在空空荡荡。整个鸟群都撤退到下层建筑的天花板上寻求庇护，你不可能和这个巢穴的族长谈上话，只能另择时间再来。
 			#ENDIF
 		</p>
 	#ELSEIF(!game.isExtendedWorkTime())
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_bimboEncountered))
-				Due to the current hour, [bimboHarpy.namePos] nest is completed deserted; both she and her flock have retired to the comfort of the buildings below in order to get a good night's rest. With the entrances to their night-time residence being securely locked, you're left with no choice but to return at another time if you wanted to speak to her.
+				当前时间里[bimboHarpy.namePos]巢穴空无一人；无论是她还是她的鸟群都已经退到下面的建筑里去享受一个舒适的夜晚。通向下面建筑的入口被牢靠地锁上。你不可能和她谈上话，只能另择时间再来。
 			#ELSE
-				Due to the current hour, this nest is completed deserted; both the matriarch and her flock have retired to the comfort of the buildings below in order to get a good night's rest. With the entrances to their night-time residence being securely locked, you're left with no choice but to return at another time if you wanted to speak to her.
+				当前时间里巢穴空无一人；无论是族长还是她的鸟群都已经退到下面的建筑里去享受一个舒适的夜晚。通向下面建筑的入口被牢靠地锁上。你不可能和她谈上话，只能另择时间再来。
 			#ENDIF
 		</p>
 	#ELSE
 		#IF(game.getDialogueFlags().hasFlag(FLAG_bimboEncountered))
 			<p>
-				You find yourself standing on the outskirts of [bimboHarpy.namePos] nest; one of the largest and most populous of all the nests in Dominion. Huge, multi-level platforms extend across the roofs of several buildings, with colourful canvas awnings erected to shield the flock from the elements.
+				你发现自己站在御城区面积最大，人口最多的[bimboHarpy.namePos]巢穴边缘；巨大的多层平台横跨几栋建筑的屋顶，五彩的篷布支在一起以保护鸟群免受元素天气的侵害。
 				#IF(!game.isDayTime())
-					 A series of bright, arcane-powered lights illuminate the entire area, and from what you can see, the harpies here are just as active at night as they are during daylight hours.
+					一系列明亮的、由奥术能量驱动的灯光照亮了整个区域，目光所及范围里，哈比们在夜间和白天一样活跃。
 				#ENDIF
 			</p>
 			<p>
-				Whereas most nests contain a variety of differently-coloured harpies, the overwhelming majority of [bimboHarpy.namePos] flock have, in an attempt to copy their matriarch, had their feathers dyed bleach-blonde. Looking closer, you see that their proportions are also similar to [bimboHarpy.namePos]. From those that you've seen in other nests, you know that the average breast size for a harpy is about a B-cup, but the ones in this particular nest seem to all be at least a D-cup or bigger. Their hips and asses are also far larger than the average, leading you to the obvious conclusion that this particular nest is devoted to imitating their leader.
+				大多数巢穴中都包含着各色羽毛的哈比，与之不同的是，[bimboHarpy.namePos]巢穴中的绝大多数哈比都试图跟随她们的族长，将自己的羽毛染成了白金色。仔细观察，你会发现她们的身材比例也与[bimboHarpy.namePos]相似。根据你在其他巢穴所见，你知道普通哈比的平均胸围大约是B杯，但这个巢穴的哈比似乎都至少是D杯或更大。他们的髋和屁股尺寸也远超均值，这显而易见地表明，这个巢穴在努力模仿着她们的领导者。
 			</p>
 			<p>
-				Up on one of the highest platforms, you see a large gathering of harpies surrounding [bimboHarpy.name]. It seems as though the residents of this particular nest aren't too bothered about outsiders, and if you had any business with her, it would be quite easy to approach her platform.
+				在最高的一个平台上，你看到一大群鸟女簇拥着[bimboHarpy.name]。看来这个巢穴的居民并不太介意外来者，如果你有事要和她谈，接近她的平台将会非常容易。
 			</p>
 		#ELSE
 			<p>
-				You find yourself standing on the outskirts of one of the largest harpy nests in Dominion. Huge, multi-level platforms extend across the roofs of several buildings, with colourful canvas awnings erected to shield the flock from the elements.
+				你发现自己站在御城区面积最大，人口最多的哈比之巢边缘；巨大的多层平台横跨几栋建筑的屋顶，五彩的篷布支在一起以保护鸟群免受元素天气的侵害。
 				#IF(!game.isDayTime())
-					 A series of bright, arcane-powered lights illuminate the entire area, and from what you can see, the harpies here are just as active at night as they are during daylight hours.
+					一系列明亮的、由奥术能量驱动的灯光照亮了整个区域，目光所及范围里，哈比们在夜间和白天一样活跃。
 				#ENDIF
 			</p>
 			<p>
-				Whereas most nests contain a variety of differently-coloured harpies, the overwhelming majority of this particular flock have bleach-blonde feathers. Looking closer, you see that their proportions are rather unusual as well. From those that you've seen in other nests, you know that the average breast size for a harpy is about a B-cup, but the ones in this particular nest seem to all be at least a D-cup or bigger. Their hips and asses are also far larger than the average, leading you to the obvious conclusion that this particular nest prizes large proportions.
+				大多数巢穴中都包含着各色羽毛的哈比，与之不同的是，这个鸟群的绝大多数哈比都拥有白金色的羽毛。仔细观察，你会发现她们的身材比例也非同寻常。根据你在其他巢穴所见，你知道普通哈比的平均胸围大约是B杯，但这个巢穴的哈比似乎都至少是D杯或更大。他们的髋和屁股尺寸也远超均值，这显而易见地表明，这个巢穴崇尚丰满的身材。
 			</p>
 			<p>
-				Up on one of the highest platforms, you see a large gathering of harpies surrounding what must be this nest's matriarch. It seems as though the residents of this particular nest aren't too bothered about outsiders, and if you had any business with her, it would be quite easy to approach the matriarch's platform.
+				在最高的一个平台上，你看到一大群鸟女簇拥着巢穴的族长。看来这个巢穴的居民并不太介意外来者，如果你有事要和她谈，接近她的平台将会非常容易。
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HARPY_NEST_BIMBO_APPROACH"><![CDATA[
 	#IF(flags.hasFlag(FLAG_bimboEncountered))
 		#IF(flags.hasFlag(FLAG_bimboPacified))
 			<p>
-				Deciding that you should go and pay [bimboHarpy.name] another visit, you set off across the nest. Most of the bimbo harpies recognise you as [bimboHarpy.namePos] [pc.mistress], and submissively bow their heads or drop to their knees as you pass. Reaching the staircase that leads to the upper platform, you quickly scale the stairs, and as you reach the top, you're greeted by a familiar sight.
+				你决定再去拜访一下[bimboHarpy.name]，于是动身穿过巢穴。大多数无脑大胸哈比都认出你是[bimboHarpy.namePos]的[pc.mistress]，纷纷顺从地在你经过时低下头或跪下。你迅速爬上楼梯，到达顶层，眼前出现了熟悉的景象。
 			</p>
 			<p>
-				[bimboHarpy.Name] is lying down on a sunbed, surrounded by her inner-circle of harpy bimbos. [bimboHarpyCompanion.Name] is obediently grooming her matriarch's beautiful bleach-blonde feathers, giggling and whispering with her mistress as she works.
+				[bimboHarpy.Name]正躺在日光浴床上，被一群无脑大胸哈比环绕着。[bimboHarpyCompanion.Name]一边顺从地为族长梳理美丽的亮金色羽毛，一边窃窃私语，咯咯笑着。
 				#IF(bimboHarpyCompanion.isVisiblyPregnant())
 					#IF(!bimboHarpyCompanion.isCharacterReactedToPregnancy(pc))
-						 As you approach, you notice that she's got a swollen, [style.colourSex(pregnant belly)], and as she sees you, she nods to confirm that you're the one who knocked her up, before crying out, [bimboHarpyCompanion.speechNoEffects(Mistress! Like, [pc.name] is back!)]
+						当你走近时，你发现她挺着一个[style.colourSex(孕肚)]，她与你目光交汇后点了点头，确认是你把她肚子搞大了，然后叫起来：[bimboHarpyCompanion.speechNoEffects(主人！[pc.name]回来了！)]
 					#ELSE
-						 As you approach, you see that she's still got a swollen, [style.colourSex(pregnant belly)], and as she sees you, she cries out, [bimboHarpyCompanion.speechNoEffects(Mistress! Like, [pc.name] is back!)]
+						当你走近时，你发现她还是挺着一个[style.colourSex(孕肚)]，她看见你后大叫道：[bimboHarpyCompanion.speechNoEffects(主人！[pc.name]回来了！)]
 					#ENDIF
 				#ELSE
-					 As you approach, she suddenly notices you and cries out, [bimboHarpyCompanion.speechNoEffects(Mistress! Like, [pc.name] is back!)]
+					当你走近时，她突然注意到你，大叫道：[bimboHarpyCompanion.speechNoEffects(主人！[pc.name]回来了！)]
 				#ENDIF
 			</p>
 			#IF(bimboHarpy.isVisiblyPregnant())
 				<p>
 					#IF(!bimboHarpy.isCharacterReactedToPregnancy(pc))
-						[bimboHarpy.Name] instantly jumps up off the sunbed, and as she rushes forwards, you see that she's sporting a [style.colourSex(pregnant belly)]. Coming to a halt before you, she bites her lip, pushes out her chest, and teases, [bimboHarpy.speechNoEffects([pc.Mistress], look! You, like, totally got me pregnant!)]
+						[bimboHarpy.Name]立刻从日光浴床上跳起，冲上前来，你看到她挺着一个[style.colourSex(孕肚)]。她在你面前停住脚步，咬着嘴唇，挺起胸膛，挑逗道：[bimboHarpy.speechNoEffects([pc.Mistress]快看！你，嗯，让我怀孕了！)]
 					#ELSE
-						[bimboHarpy.Name] instantly jumps up off the sunbed, and as she rushes forwards, you see that she's still sporting a [style.colourSex(pregnant belly)]. Coming to a halt before you, she bites her lip, pushes out her chest, and teases, [bimboHarpy.speechNoEffects([pc.Mistress], look! I'm still pregnant from when you, like, got me knocked up and stuff!)]
+						[bimboHarpy.Name]立刻从日光浴床上跳起，冲上前来，你看到她还是挺着一个[style.colourSex(孕肚)]。她在你面前停住脚步，咬着嘴唇，挺起胸膛，挑逗道：[bimboHarpy.speechNoEffects([pc.Mistress]快看！我还怀着孕呢，嗯，你把我肚子搞大的时候！)]
 					#ENDIF
 				</p>
 				<p>
-					Before you can react to this, the bimbo harpy quickly changes the subject and happily squeals, [bimboHarpy.speechNoEffects(Me and my girls have all been, like, super good and stuff! We're totally, like, chilled out to the max, right girls?!)]
+					你还没来得及做出任何应答，这个大胸哈比就切换了话题开心地尖叫道，[bimboHarpy.speechNoEffects(咱就是说，我们都很放松，对吧姑娘们？！)]
 				</p>
 			#ELSE
 				<p>
-					[bimboHarpy.Name] instantly jumps up off the sunbed, and, rushing forwards, she throws herself to her knees at your [pc.feet]. Looking up with her big [bimboHarpy.eyeColour] eyes, she pushes out her chest and bites her lip.
+					[bimboHarpy.Name]立刻从日光浴床上跳起，冲上前跪在你[pc.feet]边。她抬起头，用她那双[bimboHarpy.eyeColour]大眼睛看着你，挺着胸，咬着嘴唇。
 				</p>
 				<p>
-					[bimboHarpy.speechNoEffects(Ah! [pc.Mistress]! I've been, like, super good and stuff!)] she happily squeals, [bimboHarpy.speechNoEffects(We've all been, like, super chilled out and stuff, right girls?!)]
+					[bimboHarpy.speechNoEffects(啊！[pc.Mistress]！我一直，嗯，超级好什么的！)]她开心地尖叫着，[bimboHarpy.speechNoEffects(我们都很，嗯，放松，对吧姑娘们？！)]
 				</p>
 			#ENDIF
 			<p>
-				A chorus of eager voices cry out in agreement, and you can't help but smile down at [bimboHarpy.name] as she shuffles a little closer to you.
+				回复的是一片热切的赞同声，当[bimboHarpy.name]向你挪近一点时，你不禁对着她笑了笑。
 			</p>
 			<p>
-				[bimboHarpy.speechNoEffects(Like, erm, I wanna, like, show my girls how good I am!)] she moans, barely able to contain the excitement in her voice. [bimboHarpy.speechNoEffects(I mean, like, only if you want to and stuff!)]
+				[bimboHarpy.speechNoEffects(就是，嗯，我想，就是让我的姑娘们看看我有多棒！)]她呻吟着，几乎无法抑制声音中的兴奋。[bimboHarpy.speechNoEffects(我的意思是，除非你想这样做！)]
 			</p>
 			<p>
-				One of her feathered hands sinks down between her legs, and she leans back on her knees, presenting her panties to you as she starts rubbing at the fabric. Several members of her inner-circle start mimicking her behaviour, and, shuffling ever closer, [bimboHarpy.name] moans out loud, [bimboHarpy.speechNoEffects(Ah! Please! Fuck me!)]
+				[bimboHarpy.name]羽翼覆盖的双手伸向两腿之间，身体向后倾斜，露出内裤，隔着布料揉捏起来，她身边有几个人也模仿起来。她越凑越近，大声呻吟起来：[bimboHarpy.speechNoEffects(啊！求求你！操我！)]
 			</p>
 		#ELSE
 			<p>
-				Deciding that you should go and pay [bimboHarpy.name] another visit, you set off across the nest. A couple of the bimbo harpies that you pass recognise you from before, and start whispering to one another as you pass. Reaching the staircase that leads to the upper platform, you quickly scale the stairs, and as you reach the top, you're greeted by a familiar sight.
+				你决定再去拜访一下[bimboHarpy.name]，于是动身穿过巢穴。你经过的几个无脑大胸哈比认出了你，窃窃私语起来。你迅速爬上楼梯，到达顶层，眼前出现了熟悉的景象。
 			</p>
 			<p>
-				[bimboHarpy.Name] is lying down on a sunbed, surrounded by her inner-circle of harpy bimbos. [bimboHarpyCompanion.Name] is obediently grooming her matriarch's beautiful bleach-blonde feathers, giggling and whispering with her mistress as she works. As you approach, she suddenly notices you, and cries out, [bimboHarpyCompanion.speechNoEffects(Mistress! Like, that [pc.race] is back!)]
+				[bimboHarpy.Name]正躺在日光浴床上，被一群无脑大胸哈比环绕着。[bimboHarpyCompanion.Name]一边顺从地为族长梳理美丽的亮金色羽毛，一边窃窃私语，咯咯笑着。当你走近时，她突然注意到你，大叫道：[bimboHarpyCompanion.speechNoEffects(主人！那个[pc.race]回来了！)]
 			</p>
 			<p>
 				#IF(pc.getFemininityValue()>=FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-					Letting out an annoyed sigh, [bimboHarpy.name] props herself up on the sunbed, and, raising her aviators to look you up-and-down, she makes a dismissive gesture. [bimboHarpy.speechNoEffects(Eugh! Like, what are <i>you</i> doin' here again? Why don't you, like go get your own flock or something?! You're, like, being super rude and stuff comin' here and flaunting yourself in front of my girls!)]
+					[bimboHarpy.name]从日光浴床上起身，抬起飞行员墨镜，打量了一下你，然后叹了口气，比着轻蔑的手势对你说，[bimboHarpy.speechNoEffects(哎，咱就是说，<i>你</i>怎么又来了?你是没有自己的家能回吗？咱就是说，你这样在姑娘面前装成这样真没礼貌！)]
 				#ELSE
-					Letting out an annoyed sigh, [bimboHarpy.name] props herself up on the sunbed, and, raising her aviators to look you up-and-down, she makes a dismissive gesture. [bimboHarpy.speechNoEffects(Eugh! Like, what are <i>you</i> doin' here again? Y'know, you're like, super annoying and stuff!)]
+					[bimboHarpy.name]从日光浴床上起身，抬起飞行员墨镜，打量了一下你，然后叹了口气，比着轻蔑的手势对你说，[bimboHarpy.speechNoEffects(哎，咱就是说，<i>你</i>怎么又来了?你是没有自己的家能回吗？咱就是说，你是真的烦死了！)]
 				#ENDIF
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			This nest looks like the home of one of the matriarchs you agreed to try and calm down. Deciding that you should do as the Enforcer sergeant asked, you set off across the nest towards the staircase leading to the upper platform.
+			这个巢穴看起来像是你要尝试安抚的其中一位族长的家。你决定按照执行者警长的要求去做，于是穿过巢穴，向上楼楼梯走去。
 		</p>
 		<p>
-			As you walk through the nest, you take a closer look at this peculiar, bleach-blonde flock. Just as you saw from the outskirts, most of these harpies have larger-than-average breasts, hips, and asses, but it's the snippets of conversation that you overhear that reveal their true nature,<br/>
-			[style.speechFeminine(...yeah, and, like, she was soooo not pretty...)]<br/>
-			[style.speechFeminineStrong(...uh-huh, and, like, her feathers were like, totally blech!...)]<br/>
-			[style.speechFeminine(...and he was, like, 'I'll do whatever you say!', and I was like, 'Uhh, duh!'...)]
+			你一边穿过巢穴，一边仔细观察这奇特的白金色鸟群。正如你在外围看到的那样，这些哈比的胸、髋和屁股大多比常人要大，但你无意中听到的谈话片段揭示了她们的真实面目，<br/>
+			[style.speechFeminine(……是啊，而且，她实在是太~难看了……)]<br/>
+			[style.speechFeminineStrong(……嗯哼，还有啊，她的羽毛就像……完全就很恶心！……)]<br/>
+			[style.speechFeminine(……他说什么‘你说什么我都照做！’，我就‘呵tui！’……)]
 		</p>
 		<p>
-			Combined with their large assets and choice of feather colour, you're left with no doubt as to what's going on here. Every single one of this nest's occupants is a bimbo. Before you know it, you've reached the staircase that leads to the upper platform, and, taking one look back at the crowd of bimbos, you set off up the stairs, and quickly reach the top.
+			再加上它们硕大的身躯和一致选择的羽毛颜色，让人毫不怀疑这里发生了什么。这个巢穴里的每一个住户都是无脑大胸。不知不觉中，你已经走到了上层的楼梯口，回头看了一眼那群无脑大胸，你又继续上楼，很快就到了顶层。
 		</p>
 		<p>
-			You'd already seen a picture of [bimboHarpy.name] in the Enforcer's papers, but even if you hadn't, it's clearly obvious who the matriarch is. With large, perfectly shaped breasts, the tanned body of a super-model, and one of the most gorgeous faces you've ever seen, [bimboHarpy.name] is the centre of attention. Her inner-circle of bimbo harpies are gathered around her, vying for their leader's attention as they giggle and agree with every word she speaks. One harpy in particular seems to be the closest to her, and it's this particular bimbo who's the first one to notice your approach.
+			你已经在执法者的报纸上看到过[bimboHarpy.name]的照片，但即使你没有看过，族长是谁也显而易见。[bimboHarpy.name]拥有完美的丰满乳房、超模般黝黑的皮肤和你见过的最漂亮的脸蛋，她是众人瞩目的焦点。她身边围着一群胸大无脑的哈比，她们一边咯咯地笑着，一边附和着族长说的每一句话，以争夺她的注意。其中有一只哈比离她最近，正是这只哈比最先注意到你的靠近。
 		</p>
 		<p>
-			[bimboHarpyCompanion.speechNoEffects([bimboHarpy.Name]! There's, like, some [pc.race] over there!)]
+			[bimboHarpyCompanion.speechNoEffects([bimboHarpy.Name]！那边好像有[pc.race]过来了！)]
 		</p>
 		<p>
-			Instantly, all eyes are on you, and [bimboHarpy.Name] stand up from the sunbed upon which she was lying. Stepping forwards, she rests one of her feathered hands on her hips, striking a pose as she speaks,
+			瞬间，所有人的目光都集中在你身上，[bimboHarpy.Name]从日光浴床上站起身，单手叉腰，边走边说：
 			#IF(pc.getFemininityValue()>=FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-				 [bimboHarpy.speechNoEffects(Like, who do you think you are?! I hope you're not, like, thinkin' of tryin' to steal girls from my flock! You, like, might have the looks, but they aren't gonna listen to some stupid slut like you! What do you, like, even want? Coming up here uninvited is, like, super rude y'know?!)]
+				[bimboHarpy.speechNoEffects(你以为你是谁？！我希望你不是想从我这里抢女人！你是有点姿色，但她们不会理你这种蠢货！你到底想干什么？不请自来，真是太没礼貌了，知道吗？)]
 			#ELSE
-				 [bimboHarpy.speechNoEffects(Like, who do you think you are?! Coming up here uninvited is, like, super rude y'know?!)]
+				[bimboHarpy.speechNoEffects(你以为你是谁？！不请自来，真是太没礼貌了，知道吗？)]
 			#ENDIF
 		</p>
 	#ENDIF
 	#IF(!flags.hasFlag(FLAG_bimboPacified) && game.isBadEndsEnabled() && pc.isAbleToHaveRaceTransformed())
 		<p style='text-align:center;'><i>
-			[style.italicsBadEnd(You get the feeling that you'd be in serious trouble if you were to lose a fight against these harpies...)]
+			[style.italicsBadEnd(你有预感，如果你在与这些哈比的战斗中落败，你会有很大的麻烦……)]
 		</i></p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Angry scenes: -->
 	
     <htmlContent tag="BIMBO_LEAVE"><![CDATA[
     <p>
-        Deciding that now isn't the best time to be doing this, you turn around and head back down the stairs. You hear [bimboHarpy.name] complaining to her harpies as you leave, [bimboHarpy.speechNoEffects(Eugh! Like, what was all that about?!)]
-    </p>
+你觉得现在不是这样做的最佳时机，于是转身走下楼梯。当你离开时，你听到[bimboHarpy.name]向她的哈比们抱怨，[bimboHarpy.speechNoEffects(呃！好像，那是怎么回事？！)]
+</p>
     <p>
-        Ignoring her words, you continue down the steps and back across the main platform, quickly finding yourself back on the outskirts of the nest.
+        你无视了她的废话，继续走下台阶，穿过平台，回到了巢穴的边缘。
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
 	<!-- Pacified scenes: -->
 	
     <htmlContent tag="PACIFIED_BIMBO_LEAVE"><![CDATA[
     <p>
-        Deciding that now isn't the best time to be doing this, you turn around and head back down the stairs. You hear [harpyBimbo.name] moaning to her harpies as you leave, [harpyBimbo.speechNoEffects(Awww! Like, I just wanna get fucked in front of you all!)]
+        你认为现在不是做这件事的最佳时机，便转身下楼。你离开时听到[harpyBimbo.name]对哈比们呻吟：[harpyBimbo.speechNoEffects(啊啊啊！我只是想在你们面前被操啊！)]
     </p>
     <p>
-        Ignoring her words, you continue down the steps and back across the main platform, quickly finding yourself back on the outskirts of the nest.
+        你无视了她的废话，继续走下台阶，穿过平台，回到了巢穴的边缘。
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="PACIFIED_BIMBO_SEX_START"><![CDATA[
     <p>
-        Eager to put [harpyBimbo.name] in her place in front of her inner-circle, you reach down and grab her by her wings. Pulling her to her feet, you [pc.step] forwards and plant a deep kiss on her [harpyBimbo.lips+], drawing a series of excited giggles from the surrounding bimbo harpies in the process.
+        你饥渴地抓住这只胸大无脑哈比族长的翅膀，倾身把她推到鸟巢内。然后走上前把她拉起来，在她[harpyBimbo.lips+]上留下深深一个吻。令围观地胸大无脑哈比们兴奋地咯咯笑出声。
     </p>
     <p>
-        [harpyBimbo.Name] responds to your dominant move by wrapping her wings around your back, grinding herself up against you as she passionately returns your kiss...
+        [harpyBimbo.Name]用她的翅膀裹住你的后背，在你身上蹭来蹭去，热切地回吻着你，以此回应你的支配举动……
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="BIMBO_SEX_START_ORAL"><![CDATA[
     <p>
-        Eager to put [harpyBimbo.name] and [harpyBimboCompanion.name] in their place in front of their nest's inner-circle, you reach down and grab the bimbo matriarch's wings. Pulling her to her feet, you [pc.step] forwards, before planting a deep kiss on her [harpyBimbo.lips+] and drawing a series of excited giggles from the surrounding bimbo harpies.
+        你饥渴地抓住这只胸大无脑哈比族长的翅膀，倾身把她和[harpyBimboCompanion.name]一起推到鸟巢内。然后走上前把她拉起来，在她[harpyBimbo.lips+]上留下深深一个吻。令围观地胸大无脑哈比们兴奋地咯咯笑出声。
     </p>
 	#IF(!harpyBimboCompanion.isAttractedTo(pc))
 		<p>
-			[harpyBimbo.Name] responds to your dominant move by wrapping her wings around your back, grinding herself up against you, and passionately returning your kiss. Letting out a disapproving groan, [harpyBimboCompanion.name] sneers, [harpyBimboCompanion.speechNoEffects(Can't you, like, just leave [harpyBimbo.name] alone? I'm, like, so not into watching this!)]
+			服从于你宣示支配权的行动，[harpyBimbo.Name]用翅膀紧紧地抱住你，吻了回来。[harpyBimboCompanion.name]十分不爽，讥讽着说，[harpyBimboCompanion.speechNoEffects(啧，就是说，能不能麻烦你放开[harpyBimbo.name]？就是说，当咱不存在呢！)]
 		</p>
 		<p>
-			Breaking off your kiss with [harpyBimbo.Name], you tell [harpyBimboCompanion.name] that you have no intention of letting her simply stand back and watch. Grabbing the matriarch's subordinate, you pull her into your embrace and give her a taste of your [pc.tongue+]. As the shocked harpy lets out a muffled cry of protest into your mouth, more excited giggles break out amongst the surrounding bimbo harpies.
+			放开[harpyBimbo.Name][harpyBimbo.lips+]，你对[harpyBimboCompanion.name]说，你可以加入我们。然后你也把她拉入到你的怀抱里，强硬地打开她的嘴伸入你[pc.tongue+]。她惊呆了，用喉咙发出抗拒的声音。越来越多的胸大无脑哈比们停了下来，激动地看着你们咯咯笑。
 		</p>
 		<p>
-			Wanting the matriarch's and her subordinate's lips to be employed elsewhere, you break off your kiss, before taking hold of both of the harpies' shoulders and pushing them to their knees before you. Realising what it is you want, [harpyBimbo.Name] eagerly shuffles forwards towards your groin, pulling [harpyBimboCompanion.name] along beside her as she does so. Gazing up into your eyes, she moans, [harpyBimbo.speechNoEffects(We're, like, the best in the whole nests at, like, using our mouths and stuff. Ain't that right, [harpyBimboCompanion.name]?)]
+			你停下侵略性地亲吻，按着这两只哈比的肩膀跪下，暗示她们你想用其他地方享用她们的嘴唇。[harpyBimbo.Name]拉着[harpyBimboCompanion.name]迫不及待地挤向你的小腹，看着她说，[harpyBimbo.speechNoEffects(咱就是说，咱是整个巢穴里口技，就是说，最好的。是这样吧，[harpyBimboCompanion.name]？)]
 		</p>
 		<p>
-			[harpyBimboCompanion.speechNoEffects(You're, like, really going to make me do this? Eugh... I'm <i>so</i> not happy about this!)] [harpyBimboCompanion.name] groans as her matriarch prepares to perform oral on you...
+			[harpyBimboCompanion.speechNoEffects(你，咱就是说，真的要让我这么做吗？呃……咱<i>绝对</i>不愿意！)][harpyBimboCompanion.name]喘着气拒绝，虽然她的族长已经跃跃欲试了……
 		</p>
 	#ELSE
 		<p>
-			[harpyBimbo.Name] responds to your dominant move by wrapping her wings around your back, grinding herself up against you, and passionately returning your kiss. Letting out a hungry moan, [harpyBimboCompanion.name] eagerly asks, [harpyBimboCompanion.speechNoEffects(You're not, like, just going to leave me out of this, right?)]
+			服从于你宣示支配权的行动，[harpyBimbo.Name]用翅膀紧紧地抱住你，吻了回来。[harpyBimboCompanion.name]看得兴起，饥渴问道，[harpyBimboCompanion.speechNoEffects(咱就是说，你们不会丢下我，对吧？)]
 		</p>
 		<p>
-			With [harpyBimbo.name] continuing to desperately kiss you, you motion for [harpyBimboCompanion.name] to step forwards and join in. As she happily skips forwards, you pull back from [harpyBimbo.namePos] lips, before swiftly grabbing [harpyBimbo.namePos] head and giving her a taste of your [pc.tongue+]. As the lustful harpy leans heavily into you, more excited giggles break out amongst the surrounding bimbo harpies.
+			你和[harpyBimbo.name]继续深情吻着，动作示意[harpyBimboCompanion.name]过来加入你们。当她开心地靠过来时，你一把把她拉到身边，然后转头亲了上去，然后把舌头伸了进去在她的嘴里搅动。[harpyBimbo.name]被亲得脱力靠向了你。越来越多的胸大无脑哈比们停了下来，激动地看着你们咯咯笑。
 		</p>
 		<p>
-			Wanting the matriarch's and her subordinate's lips to be employed elsewhere, you break off your kiss, before taking hold of both of the harpies' shoulders and pushing them to their knees before you. Realising what it is you want, they both eagerly shuffle forwards towards your groin. Looking up at you, [harpyBimbo.name] hungrily moans, [harpyBimbo.speechNoEffects(We're, like, the best in the whole nests at, like, using our mouths and stuff. Ain't that right, [harpyBimboCompanion.name]?)]
+			你停下侵略性地亲吻，按着这两只哈比的肩膀跪下，暗示她们你想用其他地方享用她们的嘴唇。她们迫不及待地挤向你的小腹。[harpyBimbo.name]看着你说饥渴地呻吟道，[harpyBimbo.speechNoEffects(咱就是说，咱是整个巢穴里口技，就是说，最好的。是这样吧，[harpyBimboCompanion.name]？)]
 		</p>
 		<p>
-			[harpyBimboCompanion.speechNoEffects(That's, like, super true! Let us take care of you...)] [harpyBimboCompanion.name] replies, and you can't help but grin as she and her matriarch eagerly prepare to perform oral on you...
+			[harpyBimboCompanion.speechNoEffects(咱就是说，完全正确！让我们来取悦……)][harpyBimboCompanion.name]回道。当她和她的族长迫不及待地准备为你口交时，你不禁咧嘴笑了起来……
 		</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="BIMBO_SEX_START_MISSIONARY"><![CDATA[
     <p>
-        Eager to put [harpyBimbo.name] and [harpyBimboCompanion.name] in their place in front of their nest's inner-circle, you grab hold of both of them and push them down onto their backs before you. As you drop down between their legs, [harpyBimbo.name] passionately moans, [harpyBimbo.speechNoEffects(Come on, like, give us both a real good fuck! We're, like, super into this stuff, aren't we, [harpyBimboCompanion.name]?)]
+        你打算让[harpyBimbo.name]和[harpyBimboCompanion.name]好好认识认识自己在巢穴内的地位，于是你抓住她们两个，把她们按倒在你面前。你刚俯身趴在她们的双腿之间，[harpyBimbo.name]就开始激情地呻吟起来，[harpyBimbo.speechNoEffects(来吧，让我们三个来一次真正的性爱！我们对这东西一直都很感兴趣的，不是么，[harpyBimboCompanion.name]?)
     </p>
 	#IF(!harpyBimboCompanion.isAttractedTo(pc))
 		<p>
-			Letting out a disgusted groan, the matriarch's subordinate looks straight up into your eyes and cries out, [harpyBimboCompanion.speechNoEffects(You're, like, really going to make me do this? Eugh... I'm <i>so</i> not happy about this!)]
-		</p>
+族长的下属发出一声厌恶的呻吟，直视着你的眼睛，大声喊道：[harpyBimboCompanion.speechNoEffects(你真的要让我这么做吗？呃……我<i>非常</i>不喜欢这样！)]
+</p>
 		<p>
-			Ignoring her words, you lustfully gaze down at [harpyBimboCompanion.name] and her matriarch as you prepare to fuck them side-by-side...
+			无视她的抱怨，你用满是欲望的眼神凝视着[harpyBimboCompanion.name]和她的首领，准备并排与她们发生性关系……
 		</p>
 	#ELSE
 		<p>
-			Letting out a hungry moan, the matriarch's subordinate looks straight up into your eyes and cries out, [harpyBimboCompanion.speechNoEffects(Yes! Like, I love getting fucked beside [harpyBimbo.name]! Come on and, like, get started and stuff!)]
+			随着一声饥渴的低吼，族长的随从直视你的眼睛并大声呼喊道：[harpyBimboCompanion.speechNoEffects(嗯！我爱死和[harpyBimbo.name]一起挨操了！快来，快开操吧！)]
 		</p>
 		<p>
-			Pleased to hear that she's more than happy to be involved in this threesome, you lustfully gaze down at [harpyBimboCompanion.name] and her matriarch as you prepare to fuck them side-by-side...
-		</p>
+			你很高兴[harpyBimboCompanion.name]乐意参与这场三人游戏，你情欲满满地凝视着她和她的领袖，准备与她们来一场酣畅淋漓地3p……		
+</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="BIMBO_AFTER_SEX"><![CDATA[
 	#IF(sex.isSatisfiedFromOrgasms(harpyBimbo, true))
 		<p>
-			As you [pc.step] back from [harpyBimbo.name], she sinks to the floor, totally worn out from her
+			你从[harpyBimbo.name]身边[pc.step]开，她瘫倒在地，
 			#IF(sex.getNumberOfOrgasms(harpyBimbo)>1)
-				 orgasms.
+				高潮多次让她精疲力竭。
 			#ELSE
-				 orgasm.
+				高潮让她精疲力竭。
 			#ENDIF
-			 Biting her lip and flashing you a dirty look, she teases, [harpyBimbo.speechNoEffects(You, like, made me cum so much! You're, like, real good at fuckin' harpies...)]
+			她咬着唇，下流地看着你，调逗道：[harpyBimbo.speechNoEffects(你让我喷了那么多次！你真的很擅长操哈比……)]
 		</p>
 	#ELSE
 		<p>
-			As you [pc.step] back from [harpyBimbo.name], she sinks to the floor, letting out a desperate whine as she realises that you've finished with her. Her feathered hands dart down between her legs, and she frantically starts masturbating as she seeks to finish what you started.
+			你从[harpyBimbo.name]身边[pc.step]开。她倒在地上，意识到你已经结束了，不禁迷乱地哀鸣，将覆羽的手伸到腿间，疯狂地开始自慰，试图完成你开始的一切。
 		</p>
 	#ENDIF
 	#IF(sex.getAllParticipants(false).contains(harpyBimboCompanion))
 		#IF(sex.isSatisfiedFromOrgasms(harpyBimboCompanion, true))
 			<p>
-				Letting out a deeply satisfied sigh, [harpyBimboCompanion.name] looks to be completely exhausted from the
+				伴着一声满足的吐气，[harpyBimboCompanion.name]看起来完全沉醉于你给她带来的
 				#IF(sex.getNumberOfOrgasms(harpyBimboCompanion)>1)
-					 orgasms
+					多次高潮
 				#ELSE
-					 orgasm
+					高潮
 				#ENDIF
-				 you gave her. Panting and looking up into your eyes, she moans, [harpyBimboCompanion.speechNoEffects(That was, like... Wow...)]
+				中，她气喘吁吁地抬起头望着你的眼睛，呻吟道，[harpyBimboCompanion.speechNoEffects(哇……那真是……)]
 			</p>
 		#ELSE
 			<p>
-				Not being satisfied from this sexual experience, [harpyBimboCompanion.name] looks over at her matriarch, and as she watches [harpyBimbo.namePos] [harpyBimbo.breasts+] rise and fall, she starts shamelessly masturbating right there in front of the rest of the surrounding harpies.
+				对这场性爱仍不满足，[harpyBimboCompanion.name]望向她的族长，观赏着[harpyBimbo.namePos][harpyBimbo.breasts+]上下翻涌，她就在这群围绕着自己的哈比们面前，恬不知耻地自慰起来。
 			</p>
 		#ENDIF
 	#ENDIF
 	<p>
-		[harpyBimbo.NamePos] inner-circle of harpies, having watched the whole thing, kneel down in submission as you finish with their matriarch. Excitedly chattering amongst themselves, they talk about your performance and wonder aloud how long it will be before you're back for more...
+		[harpyBimbo.NamePos]领地内层的哈比们在见证了族长的性交全程后，纷纷跪下来表示臣服于你。然后他们围坐一团叽叽喳喳地谈论着你的英勇的表现，兴奋地表示想知道你什么时候还会再来一次……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="BIMBO_LEAVE_AFTER_SEX"><![CDATA[
 	#IF(sex.getAllParticipants(false).contains(harpyBimboCompanion))
 		<p>
-			Having shown these harpies their place, you set off down the staircase, and after walking back across the lower platform, you quickly find yourself on the outskirts of [harpyBimbo.namePos] nest once again.
+			你告诉他们要认清自己的地位之后，就走下了楼梯，来到更低的平台上。在快速穿过整个平台之后，你发现自己又回到了[harpyBimbo.namePos]巢穴的边缘。
 		</p>
 	#ELSE
 		<p>
-			Having shown [harpyBimbo.name] her place, you set off down the staircase, and after walking back across the lower platform, you quickly find yourself on the outskirts of [harpyBimbo.namePos] nest once again.
+			在让[harpyBimbo.name]认清自己的地位之后，你走下楼梯，在穿过下层的平台后，你很快又回到了[harpyBimbo.NamePos]巢穴的边缘地带。
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 	
 	<!-- After losing fight: -->
 	
     <htmlContent tag="COMBAT_LOST"><![CDATA[
 	<p>
-		You fall to the floor, totally beaten. As you collapse, [bimboHarpyCompanion.name] jumps down on top of you, pinning you to the floor as she calls out to her matriarch, [bimboHarpyCompanion.speechNoEffects([bimboHarpy.Name]! Like, I did it! I got [pc.herHim]!)]
+		你精疲力竭地躺倒在地上，就在你倒下的时候，[bimboHarpyCompanion.name]跳到你身上，将你牢牢地压在地板上，并朝她的族长呼喊，[bimboHarpyCompanion.speechNoEffects([bimboHarpy.Name]！咱就是说，抓到这家伙了！)]
 	</p>
 	<p>
-		[bimboHarpy.speechNoEffects(Good girl, [bimboHarpyCompanion.name]!)] you hear her respond. [bimboHarpy.speechNoEffects(Like, help her out, girls! It's time to teach this little [pc.race] a lesson!)]
+		[bimboHarpy.speechNoEffects(做得好，[bimboHarpyCompanion.name]！)]你听到她回应道。[bimboHarpy.speechNoEffects(姑娘们，都过来，我认为是时候给这个不知天高地厚的小[pc.race]一点教训了！)]
 	</p>
 	<p>
-		As [bimboHarpyCompanion.name] continues holding you down, the rest of [bimboHarpy.NamePos] inner-circle moves in. Several of them help to pin your [pc.arms] and [pc.legs] to the floor, giggling all the while.
+		当[bimboHarpyCompanion.name]持续压制着你时，[bimboHarpy.NamePos]召唤周围的其他哈比前来帮忙。听命于她们的族长，数名哈比过来将你的[pc.arms]和[pc.legs]牢牢地按在地上，对你咯咯地笑着。
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_MATRIARCH"><![CDATA[
 	<p>
-		You fall to the floor, totally beaten. As you collapse, [bimboHarpy.name] orders her flock to hold you still, and, quickly jumping down on top of you, you're quickly pinned to the floor by several bimbo harpies.
+		你输得彻底。当你倒到地上时，[bimboHarpy.name]迅速跳到你身上，然后命令几个大胸哈比把你按在地上。
 	</p>
 	<p>
-		[bimboHarpy.speechNoEffects(Like, [bimboHarpyCompanion.name], are you ok?!)] you hear [bimboHarpy.name] softly calling out to her friend. [bimboHarpy.speechNoEffects(Come on, it's time to teach this little [pc.race] a lesson!)]
+		[bimboHarpy.speechNoEffects(咱就是说，[bimboHarpyCompanion.name]，你还好吧？)]你听到[bimboHarpy.name]温柔的呼唤她的朋友。[bimboHarpy.speechNoEffects(快来，是时候让这位小[pc.race]吃点教训了！)]
 	</p>
 	<p>
-		As the members of [bimboHarpy.namePos] inner-circle continue to hold you down, you hear the bimbo matriarch and her companion walking towards you. The bimbo harpies start giggling as you try to wriggle free, but you're too weak from the fight to offer any real resistance.
+		你被巢内的哈比们摁住，听到[bimboHarpy.name]和她的伴侣朝你走来，你试图挣脱束缚，但刚刚的战斗让你虚弱无比，无力对抗她们，只引起了她们的嘲笑。
 	</p>
 	<p>
-		[bimboHarpy.speechNoEffects(Time for some revenge [bimboHarpyCompanion.name]! We're gonna, like, have to punish this one!)] [bimboHarpy.name] shouts out, and, as her companion moves to help the other bimbos hold you down, she laughs, [bimboHarpy.speechNoEffects(Time for some fun!)]
+		[bimboHarpy.speechNoEffects(该复仇了，[bimboHarpyCompanion.name]！咱就是说，得好好地惩罚[player.her]！)][bimboHarpy.name]喊着，而她的同伴则帮着其他哈比压住你。她笑道，[bimboHarpy.speechNoEffects(享乐时间！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_END"><![CDATA[
 	<p>
-		[bimboHarpy.speechNoEffects(Y'know, I think I understand why, like, you're so angry and rude and stuff!)] [bimboHarpy.name] giggles, stepping forwards to tower over you. [bimboHarpy.speechNoEffects(You're just, like, frustrated and jealous of how super hot all my girls are!)]
+		[bimboHarpy.speechNoEffects(我明白了，就是，你那么生气的原因之类的！)][bimboHarpy.name]咯咯笑着，压在你的身上。[bimboHarpy.speechNoEffects(你只是欲求不满，羡慕嫉妒我那些身材火辣的女孩们吧！)]
 	</p>
 	<p>
-		[pc.speechNoEffects(Let me go!)] you shout, struggling against the bimbo harpies. You're too weak to shake them off, however, and they easily continue to pin you to the floor, holding you quite still as [bimboHarpy.name] stoops down next to your face.
+		[pc.speechNoEffects(放我走！)]你大叫着，挣扎着反抗无脑大胸的哈比。然而，你太虚弱了，无法挣脱，她们很容易就继续把你按在地上，当[bimboHarpy.name]弯下腰贴着你的脸时，你已经无力挣扎。
 	</p>
 	#IF(game.isBadEndsEnabled())
 		<p>
-			[bimboHarpy.speechNoEffects(Don't worry, babe, you're gonna love being one of my girls!)] she laughs, before turning to address her subordinate and commanding, [bimboHarpy.speechNoEffects(Strip her, [bimboHarpyCompanion.name], then, like, hold [pc.her] mouth open! I'm gonna feed her, like, so many of our special lollipops!)]
+			[bimboHarpy.speechNoEffects(别担心，宝贝，你会享受加入我的女孩们！)]她笑了笑，然后转身对她的下属吩咐道，[bimboHarpy.speechNoEffects(把她衣服拖了，[bimboHarpyCompanion.name]，咱就是说，然后撬开[pc.her]的嘴！咱就是说，咱要多给她来点特制棒棒糖！)]
 		</p>
 		<p>
-			With the group of bimbo harpies continuing to overpower you, [bimboHarpyCompanion.name] sets about stripping you of all your clothing, laughing at your fruitless attempt to pull free. Out of the corner of your eye, you see [bimboHarpy.name] stepping forwards with several pink-and-white swirly lollipops clutched in her bird-like hands. A moment later, and you find your mouth being forced open by [bimboHarpyCompanion.name], while her matriarch leans in and forcefully shoves the sweets into your mouth.
+			这群大胸哈比压住你，以便于[bimboHarpyCompanion.name]脱下你所有的衣服。你尝试挣脱，但是没有成功。你用余光看到[bimboHarpy.name]拿着很多粉白漩涡棒棒糖走了过来。[bimboHarpyCompanion.name]强迫你张开嘴，然后族长靠了过来，把所有的棒棒糖塞进你的嘴里。
 		</p>
 		<p>
-			[bimboHarpy.speechNoEffects(Suck on these, babe!)] [bimboHarpy.name] laughs, [bimboHarpy.speechNoEffects(You're, like, gonna become one of my bimbo harpy sluts!)]
+			[bimboHarpy.speechNoEffects(吸吧，多吸点，宝贝！)][bimboHarpy.name]大笑道，[bimboHarpy.speechNoEffects(你，嗯，马上就要变成放荡的无脑大胸哈比的一员了！)]
 		</p>
 	#ELSEIF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
 		<p>
-			[bimboHarpy.speechNoEffects(Like, <i>you're</i> the one who needs to calm down now!)] she laughs, [bimboHarpy.speechNoEffects(Hold [pc.her] mouth open [bimboHarpyCompanion.name]! I think this little troublemaker needs one of our special lollipops!)]
+			[bimboHarpy.speechNoEffects(咱就是说，你需要<i>冷静</i>一下！)]她笑着，[bimboHarpy.speechNoEffects([bimboHarpyCompanion.name]，撬开[pc.her]的嘴！这个小坏蛋需要我们的特制棒棒糖！)]
 		</p>
 		<p>
-			Quickly grabbing your [pc.face+], [bimboHarpyCompanion.name] tries to pull your mouth open, laughing at your fruitless attempt to shake your head free. Out of the corner of your eye, you see [bimboHarpy.name] pull out a pink-and-white swirly lollipop, and, leaning in, she forcefully tries to shove it into your mouth.
+			[bimboHarpyCompanion.name]迅速地抓着你的脸，强迫你张开嘴。你用余光看到[bimboHarpy.name]拿着很多粉白漩涡棒棒糖，靠了过来，把它们塞进你的嘴里。
 		</p>
 		<p>
-			[bimboHarpy.speechNoEffects(This is gonna, like, totally chill you out!)]
+			[bimboHarpy.speechNoEffects(咱就是说，这下你得冷静下来了！)]
 		</p>
 	#ELSE
 		<p>
-			[bimboHarpy.speechNoEffects(Like, <i>you're</i> the one who needs to calm down now!)] she laughs, before letting out a frustrated sigh as she sees that your mouth is inaccessible. Pouting at you, she whines, [bimboHarpy.speechNoEffects(That's, like, totally not fair! I wanted to turn you into one of us bimbo harpies, but, like, you can't suck on our special lollipops while your mouth's like that! Eugh! I guess I'll just have you thrown out of here instead!)]
+			[bimboHarpy.speechNoEffects(咱就是说，你需要<i>冷静</i>一下！)]她露出笑容，直到看到你的嘴根本打不开，发出失望的叹气。她撅起嘴，指着你说，[bimboHarpy.speechNoEffects(咱就是说，这可不公平！你本来该当一只脑袋空空的大胸哈比！但是你连嘴都张不开怎么吃我们的棒棒糖！呕！还是把你扔出去吧！)]
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_MOUTH_BLOCKED"><![CDATA[
 	<p>
-		[harpyBimbo.speechNoEffects(So, [harpyBimboCompanion.name], like what are you waiting for?!)] [harpyBimbo.name] exclaims, before dismissively gesturing towards you and demanding, [harpyBimbo.speechNoEffects(Throw [pc.herHim] out of my nest! I, like, totally don't want to see [pc.herHim] again!)]
+		[harpyBimbo.speechNoEffects(喂，[harpyBimboCompanion.name]咱就是说你在等啥？)][harpyBimbo.name]喊着，朝你做了个蔑视的手势，[harpyBimbo.speechNoEffects(把[pc.herHim]扔出去，咱就是说，咱再也不想看到[pc.herHim]！)]
 	</p>
 	<p>
-		Hurrying to carry out their matriarch's order, [harpyBimboCompanion.name] and several other harpies pull you to your [pc.feet], before roughly marching you out of their nest and physically throwing you down onto a nearby walkway. Not wanting to stick around and give them a chance to abuse you further, you leave the harpies' mocking laughter behind and hurry away from [bimboHarpy.namePos] nest...
+		[harpyBimboCompanion.name]和其他哈比马上开始执行族长的命令，拉着你的[pc.feet]粗暴地把你从它们的巢穴扔到附近的人行道上。无意逗留，也不想继续被虐待，你在哈比们嘲弄的笑声中匆匆离开了[bimboHarpy.namePos]的巢穴……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_NO_TF"><![CDATA[
 	<p>
-		With a determined yank, you finally manage to pull one of your [pc.arms] free from the harpy's clutches. Before they're able to restrain you again, you grab the lollipop out of [bimboHarpy.namePos] feathered hand, before smashing it on the floor beneath you.
+		你下定决心用力一拉，终于把你的一只[pc.arms]从哈比的束缚中拽了出来。在它们再次束缚住你之前，你从[bimboHarpy.namePos]长满羽毛的手里抢过棒棒糖，然后把它向地板上摔去。
 	</p>
 	<p>
-		[bimboHarpy.speechNoEffects(Aaah! You stupid whore!)] [bimboHarpy.name] screams, jumping to her feet and towering over you. [bimboHarpy.speechNoEffects(You're gonna, like, pay for wasting that! You're gonna, like, do <i>exactly</i> what we say, or else you're gonna be our little pet forever!)]
+		[bimboHarpy.speechNoEffects(啊！你这个蠢婊子！)][bimbo Harpy.name]尖叫着跳了起来，高高地越过你的头顶。[bimboHarpy.speechNoEffects(你会！为此！付出代价的！你得，<i>按照</i>，我们说的去做，否则你就得永远做我们的小宠物！)]
 	</p>
 	<p>
-		After flapping her wings and jumping around in anger for a little while, [bimboHarpy.name] storms off to elsewhere in the nest. Only a few moments later, she returns and kneels down beside you, setting a makeup bag down next to your face before letting out a giggle. [bimboHarpy.speechNoEffects(So, like, first, how about us girls give you a makeover?!)]
+		[bimboHarpy.name]生气地拍打着翅膀，左右横跳了一阵子就跑去了巢穴的其他地方。不过没多久她就回来了，她跪在你身边，把一个化妆包凑到你的面前，一边发出了咯咯的笑声。[bimboHarpy.speechNoEffects(那么，先让我们这些女孩给你化个妆怎么样？)]
 	</p>
 	<p>
-		Any protests or objections that leave your mouth are drowned out by a chorus of laughter, and as one, the group of bimbo harpies descend upon you...
+		你的抗议被哈比们此起彼伏的笑声吞没，你就这样淹没在这群痴女哈比的身下……
 	</p>
 	<p>
-		For the next few hours, you're the centre of the harpies' attention. Applying heavy layers of makeup, dressing you up in frilly clothes, and parading you around in front of one another are amongst the least humiliating things you suffer. Eventually, however, [bimboHarpy.name] loses interest, and one-by-one, the rest of the harpies move onto other things.
+		在接下来的几个小时里，你成为了哈比们视线的焦点。她们对你浓妆涂抹，把你打扮得花枝招展，然后拉着你四处展览，这些都是你遭受的最轻微的羞辱。慢慢地，[bimboHarpy.name]对你失去兴趣，而剩下的哈比们也一个接着一个离开。
 	</p>
 	<p>
-		As the last bimbo declares that she's bored of playing with you, the matriarch walks over to you. [bimboHarpy.speechNoEffects(I hope you, like, learned your lesson! Now get out of my nest!)]
+		当最后一只哈比也玩腻了后，族长走过来说，[bimboHarpy.speechNoEffects(咱就是说，希望你学到了教训！现在滚吧！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_TF_START"><![CDATA[
 	<p>
-		Obediently doing as you're told, you open your mouth and let the lollipop slide past your [pc.lips+]. An intense, sweet flavour hits your tongue, and you find that it's quite unlike anything you've ever tasted before. Before you know what you're doing, you're wrapping your [pc.lips] around the delicious candy, letting out little whining noises as you find yourself unable to stop sucking and licking it...
+		你听话地张开嘴，让棒棒糖滑过你[pc.lip+]，进入你的口中。一股浓郁的甜味袭卷了你的舌头，这是你从未品尝过的味道。你还没反应过来自己在做什么，就已经迫不及待地吮吸和舔食起这美味的糖果，嘴里发出呜呜的声音，欲罢不能……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_TF_END"><![CDATA[
 	<p>
-		As the lollipop's transformative effects come to an end, the harpies' grip on your [pc.arms] and [pc.legs] loosens. Blinking slowly a few times, you let out an exhausted little moan. [pc.speechNoEffects(Like, I feel all bubbly inside! That was, like, super intense!)]
+		随着棒棒糖的转化过程结束，哈比松开了你的四肢。你慢慢眨了眨眼睛，发出筋疲力尽的喘息声。[pc.speechNoEffects(好，好强烈的感觉，好像，就好像，粉红色的泡泡，在脑袋里涨了起来！)]
 	</p>
 	<p>
-		The flock of bimbo harpies bursts out into laughter, and the ones who were holding you down finally release you before backing off. Scrambling to your knees, you find yourself looking up at [bimboHarpy.Name] as she continues towering over you.
+		那些抓住你的哈比松开手退开，而之前围观的那些则爆发出巨大的笑声。你慌忙跪下，抬头看着[bimboHarpy.Name]，她则继续高高在上地俯视着你。
 	</p>
 	<p>
-		[harpyBimbo.speechNoEffects(Lookin' good! Now, before you get out of my nest, you're gonna tell me how sorry you are!)]
+		[harpyBimbo.speechNoEffects(看起来唔错！现在，在滚出我的巢之前，先告诉我，你已经为你的所作所为感到抱歉！)]
 	</p>
 	<p>
-		With the effects of the lollipop still lingering in your mind, you find yourself blurting out, [pc.speechNoEffects(Like, I'm so super sorry for causing you so much trouble and stuff! Please, [harpyBimbo.name], forgive me!)]
+		你仍沉浸在棒棒糖的药效中，不由自主说，[pc.speechNoEffects(咱就是说，很抱歉给你们添了这么大麻烦！[harpyBimbo.name]，请原谅我！)]
 	</p>
 	<p>
-		[harpyBimbo.Name] grins down at you, and, to the background noise of dozens of bimbo harpies laughing at you, she shouts, [harpyBimbo.speechNoEffects(That's better! Now, like, I can't have you leaving lookin' so, like, plain! Us girls need to give you a makeover!)]
+		其她胸大无脑哈比们开始嘲笑你，而[harpyBimbo.Name]咧嘴笑着喊，[harpyBimbo.speechNoEffects(这才像样！现在，咱就是说，你这样看起来有点平平无奇，得让姑娘们给你包装一下！)]
 	</p>
 	<p>
-		For the next few hours, you're the centre of the harpies' attention. Applying heavy layers of makeup, dressing you up in frilly clothes, and parading you around in front of one another are amongst the least humiliating things you suffer. Eventually, however, [bimboHarpy.name] loses interest, and one-by-one, the rest of the harpies move onto other things.
+		在接下来的几个小时里，你成为了哈比们视线的焦点。她们对你浓妆涂抹，把你打扮得花枝招展，然后拉着你四处展览，这些都是你遭受的最轻微的羞辱。慢慢地，[bimboHarpy.name]对你失去兴趣，而剩下的哈比们也一个接着一个离开。
 	</p>
 	<p>
-		As the last bimbo declares that she's bored of playing with you, the matriarch walks over to you. [bimboHarpy.speechNoEffects(I hope you, like, learned your lesson! Now get out of my nest!)]
+		当最后一只哈比也玩腻了后，族长走过来说，[bimboHarpy.speechNoEffects(咱就是说，希望你学到了教训！现在滚吧！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_THROWN_OUT"><![CDATA[
 	<p>
-		Finally given an opportunity to escape, you do as [bimboHarpy.name] commands. Running down the staircase, you leave the harpies' mocking laughter behind, and, dashing across the lower platform, you quickly find yourself back on the outskirts of [bimboHarpy.namePos] nest...
+		在获得了离开的机会后，你按照[bimboHarpy.name]的命令行事。无视身后那些哈比们嘲讽的笑声，你飞快地跑了起来，不知不觉间，你发现自己又回到了巢穴的边缘地带……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 	<!-- Bad end: -->
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_TF_START"><![CDATA[
 	<p>
-		Completely overpowered by the bimbo harpies and totally at their mercy, you can't do anything but obey [bimboHarpy.namePos] command. With the matriarch still forcefully shoving several of the large, pink-and-white lollipops into your mouth, you reluctantly start to suck on them. An intense, sweet flavour hits your tongue, and you find that it's quite unlike anything you've ever tasted before. Before you know what you're doing, you're eagerly wrapping your [pc.lips] around the delicious candies, letting out little whining noises as you find yourself unable to stop sucking and licking them.
+		你完全被无脑大胸哈比压制，完全任由她们摆布，除了服从[bimboHarpy.namePos]的命令，你什么也做不了。族长强行把几颗粉白色的大棒棒糖塞进你的嘴里，你不情愿地开始吮吸它们。一股浓郁的甜味袭上舌尖，你发现这是你从未品尝过的味道。不等大脑反应过来，你的嘴唇便迫不及待地裹住了这些美味的糖果，饥渴地舔舐起来，发出呜呜的声音。显然，你对这种味道着了迷，已经无法挣脱。
 	</p>
 	<p>
-		[bimboHarpy.speechNoEffects(That's it, babe, they taste, like, sooo good, don't they?)] she teases, [bimboHarpy.speechNoEffects(Now turn into a sexy, bimbo harpy for me!)]
+		[bimboHarpy.speechNoEffects(就是这样，宝贝，尝起来真——不错，对吧？)]她肆意调戏着你，[bimboHarpy.speechNoEffects(现在，变成我的哈比吧，变得性感，变得脑袋空空，再也想不起做爱之外的事情！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_TF_END"><![CDATA[
 	<p>
-		As the lollipop's transformative effects come to an end, the harpies' grip on your [pc.arms] and [pc.legs] loosens. Blinking slowly a few times, you let out an exhausted little moan and whine, [pc.speechNoEffects(Like, I feel all bubbly inside! That was, like, super intense!)]
+		棒棒糖带来的转化效果即将结束。哈比们松开了你的[pc.arms]和[pc.legs]。你慢慢地眨了几下眼睛，带着喘息发出一声疲惫的感叹，[pc.speechNoEffects(咱就是说，太厉害了！咱就是说，爽到升天了！)]
 	</p>
 	<p>
-		The flock of bimbo harpies bursts out into laughter, and the ones who were holding you down finally release you before backing off. Scrambling to your knees, you find yourself looking up at [bimboHarpy.Name] as she continues towering over you.
+		那些抓住你的哈比松开手退开，而之前围观的那些则爆发出巨大的笑声。你慌忙跪下，抬头看着[bimboHarpy.Name]，她则继续高高在上地俯视着你。
 	</p>
 	<p>
-		[harpyBimbo.speechNoEffects(Lookin' good, babe! Now, like, say sorry for being so super rude to me!)] she demands.
+		[harpyBimbo.speechNoEffects(看起来不错，宝贝。现在，咱就是说，为之前的失礼道歉！)]她命令道。
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_APLOGISE"><![CDATA[
 	<p>
-		With the effects of the lollipops still lingering in your mind, you find yourself blurting out, [pc.speechNoEffects(Like, I'm so super sorry for causing you so much trouble and stuff! Please, [harpyBimbo.name], forgive me!)]
+		你仍沉浸在棒棒糖的药效中，不由自主说，[pc.speechNoEffects(咱就是说，很抱歉给你们添了这么大麻烦！[harpyBimbo.name]，请原谅我！)]
 	</p>
 	<p>
-		[harpyBimbo.Name] grins down at you, and to the background noise of dozens of bimbo harpies laughing at you, she shouts, [harpyBimbo.speechNoEffects(That's better! Now, like, I need to put you in your place! You're just one of my sexy little bimbo harpies, understand? Now, like, tell me who your matriarch is!)]
+		其她胸大无脑哈比们开始嘲笑你，而[harpyBimbo.Name]咧嘴笑着喊，[harpyBimbo.speechNoEffects(就是这样！咱就是说，现在搞清楚自己的地位！咱就是说，你也只不过是我性感淫荡小鸟中的一只，明白了吗？咱就是说，告诉大家你的族长是谁！)]
 	</p>
 	<p>
-		An effect of eating so many lollipops at once seems to be that you've now got a heavy fog in your mind, and so you struggle to understand what [harpyBimbo.name] is saying. Thankfully, [harpyBimboCompanion.name] comes to your rescue, as she impatiently hisses, [harpyBimboCompanion.speechNoEffects(It's, like, [harpyBimbo.name]! Tell her that she's totally your matriarch and you're hers to do with as she pleases!)]
+		你因为棒棒糖的药效感到昏昏沉沉，几乎听不懂[harpyBimbo.name]在说什么。万幸，[harpyBimboCompanion.name]帮助了你，嘶声道，[harpyBimboCompanion.speechNoEffects(这是[harpyBimbo.name]！告诉她你属于她，服从她！)]
 	</p>
 	<p>
-		Repeating what you've just been told, you absent-mindedly squeeze your [pc.breasts+] as you declare, [pc.speechNoEffects(You're my matriarch, [harpyBimbo.name]! I'll, like, totally do anything you tell me to!)]
+		你重复着她告诉你的话，双眼空洞，一边大声宣告，一边捏着你[pc.breasts+]，[pc.speechNoEffects(您是我的族长大人，[harpyBimbo.name]！我会全身心服从您所吩咐的任何命令！)]
 	</p>
 	#IF(pc.hasVagina())
 		<p>
-			[harpyBimbo.speechNoEffects(Stacy! Like, get over here, you dumb slut!)] your matriarch suddenly shouts, before pointing at the ground and commanding you, [harpyBimbo.speechNoEffects(Lie down on your back, babe! You need to learn, like, how good your matriarch's pussy tastes!)]
+			[harpyBimbo.speechNoEffects(史黛西！你个傻荡妇，咱就是说，滚过来！)]你的族长吼道，然后指着地面命令你，[harpyBimbo.speechNoEffects(宝贝，躺过来！咱就是说，你得知道你族长的小穴有多美味！)]
 		</p>
 		<p>
-			Before you can obey, a busty harpy, who you assume to be Stacy, responds to [harpyBimbo.namePos] call by stepping forwards and asking, [harpyBimboMale.speechNoEffects(Heya, [harpyBimbo.name], like, what'd ya need me for?)]
+			你正准备服从命令，就看到那只大概叫史黛西的大胸哈比走过来，回问道，[harpyBimboMale.speechNoEffects(嗨，[harpyBimbo.name]，咱就是说，干啥？)]
 		</p>
 		<p>
-			Looking over at Stacy, you see that she's wearing nothing but a light blue bikini. As she looks down at your exposed body, a huge bulge starts to press out from beneath the fabric of her bikini bottoms, which causes [harpyBimbo.name] to tut and say, [harpyBimbo.speechNoEffects(Ew! Your cock's, like, sooo too big! There's, like, no way I'm letting it near me, but this slut needs to know her place, so you can, like, stick it in her pussy and show her that she's at the bottom of the pecking order around here.)]
+			你看向史黛西，她只穿了一条浅蓝色比基尼。而当她看向你时，她的比基尼内裤慢慢撑起一个鼓包。[harpyBimbo.name]啧啧感叹说，[harpyBimbo.speechNoEffects(呃……咱就是说，你的鸡巴也太大了！咱就是说，拿开，离我远点！不过这个婊子需要它。把它插进她的骚逼，让她知道她在这的下贱地位。)]
 		</p>
 		<p>
-			Shifting aside her bikini, Stacy reveals her cock, which at [harpyBimboMale.penisLengthValue] long would be considered large for anyone, but for a harpy it's absolutely colossal. A chorus of disgusted exclamations and mocking giggles breaks out amongst the surrounding harpies at the sight of Stacy's massive cock. Seemingly used to this sort of reaction, the well-endowed harpy places one hand on her wide hips and retorts, [harpyBimboMale.speechNoEffects(You can all, like, so totally fuck off! You all know you love it!)] 
+			史黛西把比基尼移到一边，掏出了她的大鸡巴。无论是什么种族，[harpyBimboMale.progLengthValue]长的鸡巴都算的上大，更不要说在哈比中。看到史黛西的巨无霸，周围的哈比们发出了一阵恶心的惊叹和嘲弄的笑声。似乎对这种反应已经习以为常，史黛西把一只手放在自己宽大的臀部上，反驳：[harpyBimboMale.speechNoEffects(咱就是说，都滚开点！你会爱上它的！)] 
 		</p>
 		<p>
-			Wanting to get started, your matriarch points to the ground once again and commands you, [harpyBimbo.speechNoEffects(Get down already! I'm, like, gonna sit on your face while Stacy here breaks your pussy!)]
+			等得不耐烦了，你的族长再一次指着地面命令你，[harpyBimbo.speechNoEffects(趴下去让咱坐你脸上！咱就是说，等着史黛西捅爆你的骚逼！)]
 		</p>
 	#ELSE
 		<p>
-			[harpyBimbo.speechNoEffects(That's right, babe, and don't you forget it!)] your matriarch sneers, before pointing at the ground and commanding you, [harpyBimbo.speechNoEffects(Now, like, lie down on your back! You need to, like, learn what your role is in my nest!)]
+			[harpyBimbo.speechNoEffects(好了，宝贝，你会爽到根本忘不掉！)][harpyBimbo.speechNoEffects(现在，咱就是说，躺下来！你得搞清楚，咱就是说，你在我们巢里是个什么身份！)]
 		</p>
 		<p>
-			[harpyBimboCompanion.speechNoEffects(I could totally go with riding her cock,)] [harpyBimboCompanion.name] drawls, before asking, [harpyBimboCompanion.speechNoEffects([harpyBimbo.Name], can I be, like, the one to use her first?)]
+			[harpyBimboCompanion.speechNoEffects(我想骑在她的鸡巴上，)][harpyBimboCompanion.name]对你耳语，问道，[harpyBimboCompanion.speechNoEffects([harpyBimbo.Name]，咱就是说，可以吗？让我先爽一下？)]
 		</p>
 		<p>
-			[harpyBimbo.speechNoEffects(Well, duh!)] [harpyBimbo.name] exclaims, [harpyBimbo.speechNoEffects(That's what I was planning, like, this entire time! Now get down, slut, and let [harpyBimboCompanion.name] ride your cock!)]
+			[harpyBimbo.speechNoEffects(当然！)][harpyBimbo.name]喊道，[harpyBimbo.speechNoEffects(咱就是说，咱就是这么打算的！现在趴下来，荡妇，让[harpyBimboCompanion.name]骑上去！)]
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_SEX_VAGINA_START"><![CDATA[
 	<p>
-		Not wanting to displease your matriarch, you do as you're told and quickly lie down before her. Wasting no time, [harpyBimbo.name] steps over the top of you, and after shifting aside her v-string panties, she drops down and firmly plants her [harpyBimbo.pussy+] over your [pc.lips+]. Letting out a little giggle, she moans, [harpyBimbo.speechNoEffects(Like, come on, babe! Get that tongue of yours in deep!)]
+		你不想得罪这位族长，于是你照她所说快速地躺到了她的身前。[harpyBimbo.name]迫切地迈步走到你的头顶，拉开自己的v字内裤后就坐在了你的脸上。她热情地将自己的[harpyBimbo.pussy+]送到了你[pc.lips+]上，发出了鸟叫般的呻吟，[harpyBimbo.speechNoEffects(就是这样，继续宝贝！让你的舌头进得再深点儿！)]
 	</p>
 	<p>
-		As you dart out your tongue and start to eagerly eat out your matriarch, you suddenly feel your legs being impatiently pushes apart. A moment later, and you feel the unmistakable touch of [harpyBimboMale.namePos] [harpyBimboMale.cock+] as she rubs it up and down over your [pc.labia+]. With a firm grip on your legs, the well-endowed harpy thrusts forwards, sinking her [harpyBimboMale.cock+] into your pussy and causing you to let out a muffled moan into [harpyBimbo.namePos] cunt. Pushing forwards until she's balls-deep inside of you, [harpyBimboMale.name] moans, [harpyBimboMale.speechNoEffects(~Mmm!~ Like, this bitch's pussy feels good! ~Aah!~ I could, like, totally fuck her all day!)]
+		在你伸出舌头急切地开始舔着你的族长时，突然感觉到你的双腿被急不可耐地分开。片刻后，你感受到了[harpyBimboMale.namePos]触摸，她用[harpyBimboMale.cock+]在你[pc.labia+]上上下摩擦。紧握住你的双腿，这位身材丰满的哈比向前推进，将她[harpyBimboMale.cock+]插入你的小穴，让你发出一声闷哼声进入[harpyBimbo.namePos]的阴部。[harpyBimboMale.name]向前推进直到完全深入你体内，呻吟着说：[harpyBimboMale.speechNoEffects(嗯嗯！舒服，这个婊子的阴道感觉真好！啊哈啊！我可以，想，完全干她一整天！)]
+
 	</p>
 	<p>
-		Completely at the mercy of these harpies, you continue to eat out [harpyBimbo.name] while [harpyBimboMale.name] thrusts her fat cock in and out of your [pc.pussy+]...
+		任由这些哈比摆弄着，你为[harpyBimbo.name]口交，而[harpyBimboMale.name]在你[pc.pussy+]中反复抽插着粗大的阴茎……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_SEX_PENIS_START"><![CDATA[
 	<p>
-		Not wanting to displease your matriarch, you do as you're told and quickly lie down before her. Wasting no time, [harpyBimbo.name] steps over the top of you, and after shifting aside her v-string panties, she drops down and firmly plants her [harpyBimbo.pussy+] over your [pc.lips+]. Letting out a little giggle, she moans, [harpyBimbo.speechNoEffects(Like, come on, babe! Get that tongue of yours in deep!)]
+		你不想得罪这位族长，于是你照她所说快速地躺到了她的身前。[harpyBimbo.name]迫切地迈步走到你的头顶，拉开自己的v字内裤后就坐在了你的脸上。她热情地将自己的[harpyBimbo.pussy+]送到了你[pc.lips+]上，发出了鸟叫般的呻吟，[harpyBimbo.speechNoEffects(就是这样，继续宝贝！让你的舌头进得再深点儿！)]
 	</p>
 	<p>
-		As you dart out your tongue and start to eagerly eat out your matriarch, you suddenly feel a feathered finger tease over your [pc.cock+]. As your shaft rises to attention, it's suddenly grabbed by who you assume to be [harpyBimboCompanion.name], before being teased up and down against her [harpyBimboCompanion.labia+]. A moment later, and the harpy drops down, forcing your [pc.cock+] into her [harpyBimboCompanion.pussy+]. Letting out a whorish moan, she pants, [harpyBimboCompanion.speech(~Aah!~ Oh yeah, like, your cock feels super good!)]
+		在你伸出舌头饥渴地品尝你的族长时，突然感觉到一根覆着羽毛的手指开始挑逗起了你[pc.cock+]。[harpyBimboCompanion.name]将你挺立的肉棒握在手心，贴在她[harpyBimboCompanion.labia+]之中上下撸动挑逗起来。过了一会儿，哈比沉下臀肉，将[pc.cock+]插入了她[harpyBimboCompanion.pussy+]。她喘息着，发出淫荡的呻吟声，[harpyBimboCompanion.speech(啊！就是这样，嗯~你的大鸡巴真棒！)]
 	</p>
 	<p>
-		Completely at the mercy of these harpies, you continue to eat out [harpyBimbo.name] while [harpyBimboCompanion.name] bounces up and down on your [pc.cock+]...
+		在这些哈比的控制下，你一边继续舔着[harpyBimbo.name]的骚穴，一边向上狠操着坐在你肉棒上的[harpyBimboCompanion.name]……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_AFTER_SEX"><![CDATA[
 	#IF(pc.hasVagina())
 		<p>
-			Having had enough, your matriarch slides off of you, leaving your face thoroughly soaked in saliva and girlcum. [harpyBimboMale.Name] is far from done, however, and while your matriarch struts off to another part of the nest, she keeps on thrusting her fat cock in and out of your well-fucked pussy. Able to look down into your eyes for the first time, [harpyBimboMale.name] teases, [harpyBimboMale.speechNoEffects(~Mmm!~ You like my cock, bitch?)]
+			族长玩够了，从你身上滑下来。你的脸彻底浸在唾液和爱液中。[harpyBimboMale.Name]却还远未满足。族长大摇大摆走向巢穴的另一端，与此同时，[harpyBimboMale.Name]硕大的阴茎仍在你被侵犯许久的小穴中进进出出。[harpyBimboMale.name]第一次低头看向你的眼睛，调笑道，[harpyBimboMale.speechNoEffects(~嗯！~婊子，你喜欢我的鸡巴吗？)]
 		</p>
 		<p>
-			As you open your mouth to eagerly respond in the positive, you find it suddenly being filled by yet another pink-and-white swirly lollipop. Having returned from wherever she went, you look up to see your matriarch leering over you with at least a dozen more of the transformative candies clutched in her wings. Suppressing a sinister giggle, she states, [harpyBimbo.speechNoEffects(I was told that, like, the effects of these can wear off after a bit, y'know? But if someone eats at least, like, ten or whatever, then the effects are permanent! You're gonna love being permanently turned into another of my bimbo babes!)]
+			你激动地想要说几句来表示强烈的赞同，嘴里突然被一个粉白色螺旋形棒棒糖堵住了。抬起头，眼前这个不知道从哪儿出现的族长正居高临下地俯视着你，翅膀中紧紧夹着一堆同款糖果。压抑着阴恻恻的笑声，她说，[harpyBimbo.speechNoEffects(有人告诉我，这些东西带来的感觉会随时间消逝，你懂吧？但如果一个人一次性能吃上十颗甚至更多，这一刻就是永恒的！而你成为我的宝贝花瓶时，你会为那一刻沉沦！)]
 		</p>
 	#ELSE
 		<p>
-			Having had enough, your matriarch slides off of you, leaving your face thoroughly soaked in saliva and girlcum. [harpyBimboCompanion.Name] is far from done, however, and while your matriarch struts off to another part of the nest, she keeps on bouncing up and down, forcing your [pc.cock+] in and out of her well-fucked pussy. Able to look down into your eyes for the first time, [harpyBimboCompanion.name] teases, [harpyBimboCompanion.speechNoEffects(~Mmm!~ You like my pussy, babe?)]
+			族长得到满足之后放开了你的身体，让你的面庞浸湿在唾液与爱液之中。不过[harpyBimboCompanion.Name]还远未满足，当族长昂首阔步地走到巢穴的另一部分时，[harpyBimboCompanion.name]的身体依然保持着抽插的节奏，淫穴不住地吞吐着[pc.cock+]。直到她终于腾出空来与你对视，调侃道，[harpyBimboCompanion.speechNoEffects(~嗯唔！~ 你喜欢我的骚穴吗宝宝？)]
 		</p>
 		<p>
-			As you open your mouth to eagerly respond in the positive, you find it suddenly being filled by yet another pink-and-white swirly lollipop. Having returned from wherever she went, you look up to see your matriarch leering over you with at least a dozen more of the transformative candies clutched in her wings. Suppressing a sinister giggle, she states, [harpyBimbo.speechNoEffects(I was told that, like, the effects of these can wear off after a bit, y'know? But if someone eats at least, like, ten or whatever, then the effects are permanent! You're gonna love being permanently turned into another of my bimbo babes!)]
+			你激动地想要说几句来表示强烈的赞同，嘴里突然被一个粉白色螺旋形棒棒糖堵住了。抬起头，眼前这个不知道从哪儿出现的族长正居高临下地俯视着你，翅膀中紧紧夹着一堆同款糖果。压抑着阴恻恻的笑声，她说，[harpyBimbo.speechNoEffects(有人告诉我，这些东西带来的感觉会随时间消逝，你懂吧？但如果一个人一次性能吃上十颗甚至更多，这一刻就是永恒的！而你成为我的宝贝花瓶时，你会为那一刻沉沦！)]
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_FINAL"><![CDATA[
 	#IF(pc.hasVagina())
 		<p>
-			Absent-mindedly agreeing with what your matriarch says, you slowly but surely make your way through all of the lollipops she's brought for you, all the while being fucked by [harpyBimboMale.name]...
+			你心不在焉地附和着族长的话，一边慢吞吞地吃完了她为你带来的所有棒棒糖，一边还被[harpyBimboMale.name]操得死去活来……
 		</p>
 		<p style='text-align:center;'>
-			...
+			……
+</p>
+		<p>
+			数月之后，你意识到自己又碰到了似曾相识的处境。[harpyBimboMale.Name]始终把你固定在交配的位置上，用下体承受着她巨大而又湿润的肉棒的蹂躏。你淫荡地呻吟着，[pc.speechNoEffects(嗯嗯~，亲爱的~，给我~，请继续大力抽插人家的小骚穴吧！)]
 		</p>
 		<p>
-			Months later, and you find yourself in what has by now become a very familiar situation. [harpyBimboMale.Name] has you pinned down in the mating press position as her massive cock thrusts in and out of your wet pussy. Letting out a lewd moan, you squeal, [pc.speechNoEffects(~Mmm!~ Yeah, babe, give it to me! ~Ooh!~ Fuck my little pussy good and hard!)]
+			[harpyBimboMale.name]可是相当愿意用她肥大的肉棒享受你的下体，在你的子宫中灌入她浓厚滚烫的精汁。在你急切地榨取着她阴囊内的每一滴汁液时，她俯下身亲吻着你的口穴，用舌头搅动着你幼嫩多汁的内壁。直到她获得了满足之后她才站了起来，让你落入了另一位男性哈比的爪下。
 		</p>
 		<p>
-			More than happy to oblige, [harpyBimboMale.name] thrusts her fat cock deep into your cunt, before pumping your womb full of her hot, thick cum. Leaning down to press her big lips against yours, she thrusts her tongue into your mouth as your quivering pussy eagerly drains her balls. Satisfied for now, she then stands up, leaving you to be seized by yet another of the nest's male harpies.
-		</p>
-		<p>
-			Having been well and truly established as a harpy at the bottom of the nest's hierarchy, you're expected to service any male who wants you, which is a job that you very quickly grew to love. Spreading your legs for your next partner, you let out another excited, giggly moan as she thrusts her cock into your cum-stuffed cunt...
+			在巢穴的底层真正确立了哈比的地位之后，你应当为任何想要你的人服务，你很快就会爱上这份工作。你张开双腿，迎接着下一位伴侣，当她的肉棒插入你那已经溢满了精液的下体时，你不自觉地又发出了鸟叫般的兴奋呻吟……
 		</p>
 	#ELSE
 		<p>
-			Absent-mindedly agreeing with what your matriarch says, you slowly but surely make your way through all of the lollipops she's brought for you, all the while being ridden by [harpyBimboCompanion.name]...
+			你被[harpyBimboCompanion.name]骑着，慢慢地又坚定地吃着族长给你带来的所有棒棒糖，心不在焉地附和着她的话……
 		</p>
 		<p style='text-align:center;'>
-			...
+			……
+</p>
+		<p>
+			数月之后，你意识到自己现在又陷入似曾相识的境地。[harpyBimboCompanion.Name]又一次骑在你的肉棒上上下操弄着自己，而当你的肉棒被迫深深插进她水润的小穴时，她发出了淫荡的呻吟。你色情地低吟着，叫喊着，[pc.speechNoEffects(嗯嗯~，亲爱的~，继续~，哦~，用我的鸡巴狠狠地操你吧！)]
 		</p>
 		<p>
-			Months later, and you find yourself in what has by now become a very familiar situation. [harpyBimboCompanion.Name] is once again bouncing up and down on your cock, letting out whorish moans as your shaft is forced deep inside her wet pussy. Letting out a lewd moan, you squeal, [pc.speechNoEffects(~Mmm!~ Yeah, babe, keep going! ~Ooh!~ Ride my cock!)]
+			[harpyBimboCompanion.name]又十分享受地骑在你的大鸡巴上来回贯穿了几下自己后，就深深坐下去，让你浓厚滚烫的精汁灌入她的子宫中。在她急切地榨取着你阴囊内的每一滴汁液时，她俯下身亲吻着你的口穴，用舌头搅动着你幼嫩多汁的内壁。直到满足后她才站了起来，让你落入了另一位女性哈比的爪下。
 		</p>
 		<p>
-			More than happy to oblige, [harpyBimboCompanion.name] bounces up and down several more times, before dropping down and hilting your cock inside of her just in time for you to start pumping her womb full of your hot, thick cum. Leaning down to press her big lips against yours, she thrusts her tongue into your mouth as her quivering pussy eagerly drains your balls. Satisfied for now, she then stands up, leaving you to be mounted by yet another of the nest's female harpies.
-		</p>
-		<p>
-			Having been well and truly established as a harpy at the bottom of the nest's hierarchy, you're expected to please any female who wants you, which is a job that you very quickly grew to love. Presenting your cock to your next partner, you let out another excited, giggly moan as she drops down and eagerly pushes it into her hot, wet cunt...
+			在巢穴的底层真正确立了哈比的地位之后，你应当去取悦任何一位渴望得到你的雌性。你很快就爱上了这份工作。当你向你的下一位客人展露你的肉棒时，她便迫不及待地坐了下去，将它插入她那湿热的小穴，你不自觉地又发出了那鸟叫般的兴奋呻吟……
 		</p>
 	#ENDIF
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p><i>
-		With your mind having been permanently changed by consuming so many of the transformative lollipops, you never once think of trying to escape from [harpyBimbo.namePos] nest. Even if you did somehow become aware of what had happened, you enjoy your new life far too much to ever want to give it up...
+		吃掉了这么多神奇的棒棒糖，你的观念被永久性改造了，你再也不想逃离[harpyBimbo.name]的巢了。过着醉生梦死的新生活，你也模模糊糊意识到了什么，可是你不想醒来……
 	</i></p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 </dialogue>

@@ -70,7 +70,7 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class MiscDialogue {
 	
-	public static final DialogueNode STATUS_EFFECTS = new DialogueNode("Important status effect updates", "", true) {
+	public static final DialogueNode STATUS_EFFECTS = new DialogueNode("重要状态效果更新", "", true) {
 		@Override
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
@@ -81,7 +81,7 @@ public class MiscDialogue {
 						for(Entry<AbstractStatusEffect, String> innerEntry : entry.getValue().entrySet()) {
 							sb.append("<hr/>");
 							sb.append("<h6 style='text-align:center; margin:0; padding:0;'>");
-								sb.append(Util.capitaliseSentence(innerEntry.getKey()==null?"Miscellaneous Effects":innerEntry.getKey().getName(Main.game.getPlayer())));
+								sb.append(Util.capitaliseSentence(innerEntry.getKey()==null?"杂项效果":innerEntry.getKey().getName(Main.game.getPlayer())));
 							sb.append("</h6>");
 							sb.append("<p style='margin-top:0;'>");
 								sb.append(UtilText.parse(Main.game.getPlayer(), innerEntry.getValue()));
@@ -95,7 +95,7 @@ public class MiscDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new ResponseEffectsOnly("Continue", "Carry on with whatever you were doing."){
+				return new ResponseEffectsOnly("继续", "继续你之前的行为。"){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().getStatusEffectDescriptions().clear();
@@ -124,7 +124,7 @@ public class MiscDialogue {
 		return BODY_CHANGING_MAKEUP;
 	}
 	
-	private static final DialogueNode BODY_CHANGING_MAKEUP = new DialogueNode("Makeup", "", true) {
+	private static final DialogueNode BODY_CHANGING_MAKEUP = new DialogueNode("化妆", "", true) {
 		@Override
 		public String getHeaderContent() {
 			StringBuilder sb = new StringBuilder();
@@ -134,32 +134,32 @@ public class MiscDialogue {
 					+ "</div>"
 					
 					+ (withHairStyle
-						?CharacterModificationUtils.getSelfDivHairStyles("Hair Style", UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] hair style."))
+						?CharacterModificationUtils.getSelfDivHairStyles("发型", UtilText.parse(BodyChanging.getTarget(), "改变[npc.namePos]的发型。"))
 						:""));
 			if(!BodyChanging.getTarget().isAbleToWearMakeup()) {
 				sb.append("<div class='container-full-width' style='text-align:center;'>"
 						+ UtilText.parse(BodyChanging.getTarget(),
-								"<i>As [npc.namePos] body is made of "+BodyChanging.getTarget().getBodyMaterial().getName()+", [npc.sheIsFull] [style.colourBad(unable to wear any makeup)]!</i>")
+								"<i>由于[npc.namePos]的身体由"+BodyChanging.getTarget().getBodyMaterial().getName()+"构成，[npc.sheIsFull][style.colourBad(无法化妆)]！</i>")
 					+ "</div>");
 				
 			} else {
 				sb.append(CharacterModificationUtils.getKatesDivCoveringsNew(
-								false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, true)
+								false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "腮红", "腮红(也叫胭脂)被用来粉饰脸颊，以显得更加年轻或凸显颧骨。", true, true)
 						
 						+CharacterModificationUtils.getKatesDivCoveringsNew(
-								false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, true)
+								false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "口红", "口红被用来为嘴唇提供色彩、质地或保护。", true, true)
 						
 						+CharacterModificationUtils.getKatesDivCoveringsNew(
-								false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, true)
+								false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "眼线", "眼线用于眼廓周围，有助于修饰眼型或突出不同的特征。", true, true)
 						
 						+CharacterModificationUtils.getKatesDivCoveringsNew(
-								false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, true)
+								false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "眼影", "眼影用来让使用者的眼睛更加凸显迷人。", true, true)
 						
 						+CharacterModificationUtils.getKatesDivCoveringsNew(
-								false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on your [pc.hands].", true, true)
+								false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "指甲油", "指甲油用于给[pc.hands]添加色彩或提供保护。", true, true)
 						
 						+CharacterModificationUtils.getKatesDivCoveringsNew(
-								false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on your [pc.feet].", true, true));
+								false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "脚趾甲油", "脚趾甲油用于给[pc.feet]添加色彩或提供保护。", true, true));
 			}
 			
 			return sb.toString();
@@ -173,23 +173,23 @@ public class MiscDialogue {
 			if(index==1) {
 				if(Main.game.isInSex()) {
 					return new Response(
-							"Finished",
-							"Finish using the makeup set...",
+							"结束",
+							"结束化妆……",
 							Main.sex.SEX_DIALOGUE){
 						@Override
 						public void effects(){
 							Main.mainController.openInventory();
 							Main.sex.setUsingItemText(UtilText.parse(BodyChanging.getTarget(),
 								BodyChanging.getTarget().isPlayer()
-									?"You use the arcane makeup set on yourself..."
-									:"You use the arcane makeup set on [npc.name]..."));
+									?"你用奥术化妆套装开始给自己化妆……"
+									:"你用奥术化妆套装开始给[npc.Name]化妆……"));
 							Main.sex.endSexTurn(SexActionUtility.PLAYER_USE_ITEM);
 							Main.sex.setSexStarted(true);
 						}
 					};
 					
 				} else {
-					return new ResponseEffectsOnly("Finished", "Return to your inventory screen.") {
+					return new ResponseEffectsOnly("结束", "返回物品栏界面。") {
 						@Override
 						public void effects() {
 							if(BodyChanging.getTarget().isPlayer()) {
@@ -236,15 +236,15 @@ public class MiscDialogue {
 		
 		if(debug) {
 			System.out.println("UsedCondomInit:");
-			System.out.println(UtilText.parse(condomOwner, "condomOwner: [npc.name]"));
-			System.out.println(UtilText.parse(condomUser, "condomUser: [npc.name]"));
+			System.out.println(UtilText.parse(condomOwner, "避孕套拥有者：[npc.name]"));
+			System.out.println(UtilText.parse(condomUser, "避孕套使用者：[npc.name]"));
 			System.out.println(UtilText.parse(condomTarget, "condomTarget: [npc.name]"));
 		}
 		
 		return USED_CONDOM_SELECTION;
 	}
 	
-	private static final DialogueNode USED_CONDOM_SELECTION = new DialogueNode("Used Condom", "", true) {
+	private static final DialogueNode USED_CONDOM_SELECTION = new DialogueNode("使用过的避孕套", "", true) {
 		@Override
 		public String getHeaderContent() {
 			StringBuilder sb = new StringBuilder();
@@ -253,44 +253,44 @@ public class MiscDialogue {
 			
 			sb.append("<p>");
 				sb.append(condomUseDescription);
-				sb.append(" The condom contains:");
+				sb.append("避孕套里面装着：");
 			sb.append("</p>");
 			
 			sb.append("<p style='text-align:center;'>");
-			sb.append("<b>[units.fluid("+fs.getMillilitres()+")]</b> of");
+			sb.append("<b>[units.fluid("+fs.getMillilitres()+")]</b>");
 			sb.append("<br/>");
 				try {
 					sb.append(UtilText.parse(fs.getFluidCharacter(), "<span style='color:"+fs.getFluidCharacter().getFemininity().getColour().toWebHexString()+";'>[npc.NamePos]</span>"));
-					sb.append(" ");
+					sb.append("");
 					sb.append(" [style.colourCum("+fs.getFluid().getName(condomOwner)+")]");
 				} catch(Exception ex) {
 					String raceName = fs.getBody().getRace().getName(false);
 					sb.append("<span style='color:"+fs.getBody().getRace().getColour().toWebHexString()+";'>");
-					sb.append(UtilText.generateSingularDeterminer(raceName)+" "+ Util.capitaliseSentence(raceName)+"'s");
+					sb.append(UtilText.generateSingularDeterminer(raceName)+ Util.capitaliseSentence(raceName)+"的");
 					sb.append("</span> ");
 					sb.append(" [style.colourCum("+fs.getFluid().getName(null)+")]");
 				}
 				sb.append("<br/>");
-				sb.append("It has the flavour of <span style='color:"+fs.getFluid().getFlavour().getColour().toWebHexString()+";'>"+fs.getFluid().getFlavour().getName()+"</span>");
+				sb.append("是<span style='color:"+fs.getFluid().getFlavour().getColour().toWebHexString()+";'>"+fs.getFluid().getFlavour().getName()+"</span>味的");
 				if(!fs.getFluid().getFluidModifiers().isEmpty()) {
 					sb.append("<br/>");
 					StringBuilder modifiersSB = new StringBuilder();
-					modifiersSB.append("It is ");
+					modifiersSB.append("");
 					List<String> modList = new ArrayList<>();
 					for(FluidModifier mod : fs.getFluid().getFluidModifiers()) {
 						modList.add("<span style='color:"+mod.getColour().toWebHexString()+";'>"+mod.getName()+"</span>");
 					}
 					modifiersSB.append(Util.stringsToStringList(modList, false));
 					sb.append(modifiersSB.toString());
-					sb.append(".");
+					sb.append("。");
 				}
 			sb.append("</p>");
 
 			sb.append("<p>");
 				if(Main.game.getPlayer().hasFetish(Fetish.FETISH_CUM_ADDICT)) {
-					sb.append("As you love cum so much, you feel yourself getting madly turned on at the prospect of using the contents of this condom...");
+					sb.append("由于你过于沉迷精液，只是预想到能够用到避孕套中的内容物，你就起了性欲……");
 				} else {
-					sb.append("The cum is cold and unappealing, making you question your decision to open the condom...");
+					sb.append("精液已经放凉，味道也很差，让你怀疑自己是否真的应该解开避孕套……");
 				}
 			sb.append("</p>");
 			
@@ -305,8 +305,8 @@ public class MiscDialogue {
 			if(index==0) {
 				if(Main.game.isInSex()) {
 					return new Response(
-							"Back",
-							"Decide against using the condom's contents...",
+							"返回",
+							"决定还是不使用避孕套的内容物了……",
 							Main.sex.SEX_DIALOGUE){
 						@Override
 						public void effects(){
@@ -316,7 +316,7 @@ public class MiscDialogue {
 					};
 					
 				} else {
-					return new ResponseEffectsOnly("Back", "Decide against using the condom's contents...") {
+					return new ResponseEffectsOnly("返回", "决定还是不使用避孕套的内容物了……") {
 						@Override
 						public void effects() {
 							condomOwner.addItem(usedCondom);
@@ -339,73 +339,73 @@ public class MiscDialogue {
 			List<Response> responses = new ArrayList<>();
 			
 			if(!condomTarget.isSexAreaExposed(SexAreaOrifice.MOUTH)) {
-				responses.add(new Response("Swallow",
-						UtilText.parse(condomTarget, "[npc.NamePos] mouth is blocked..."),
+				responses.add(new Response("咽下",
+						UtilText.parse(condomTarget, "[npc.NamePos]的嘴巴被堵住了……"),
 						null));
 			} else {
-				responses.add(getUsedCondomResponse("Swallow",
-							"Swallow the condom's contents...",
-							"Get [npc.name] to swallow the condom's contents",
+				responses.add(getUsedCondomResponse("咽下",
+							"吞下避孕套的内容物……",
+							"让[npc.name]吞下避孕套的内容物……",
 							(SexAreaOrifice.MOUTH)));
 			}
 			
 			if(!condomTarget.hasVagina()) {
-				responses.add(new Response("Pussy",
-						UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have a vagina..."),
+				responses.add(new Response("小穴",
+						UtilText.parse(condomTarget, "[npc.Name]没有阴道……"),
 						null));
 			} else if(!condomTarget.isSexAreaExposed(SexAreaOrifice.VAGINA)) {
-				responses.add(new Response("Pussy",
-						UtilText.parse(condomTarget, "[npc.NamePos] pussy is blocked..."),
+				responses.add(new Response("小穴",
+						UtilText.parse(condomTarget, "[npc.NamePos]的小穴被阻挡了……"),
 						null));
 			} else {
-				responses.add(getUsedCondomResponse("Pussy",
-							"Stuff the condom's contents into your pussy...",
-							"Stuff the condom's contents into [npc.namePos] pussy...",
+				responses.add(getUsedCondomResponse("小穴",
+							"将避孕套的内容物塞进你的小穴……",
+							"将避孕套的内容物塞进[npc.namePos]的小穴……",
 							(SexAreaOrifice.VAGINA)));
 			}
 
 			if(Main.game.isAnalContentEnabled()) {
 				if(!condomTarget.isSexAreaExposed(SexAreaOrifice.ANUS)) {
-					responses.add(new Response("Asshole",
-							UtilText.parse(condomTarget, "[npc.NamePos] asshole is blocked..."),
+					responses.add(new Response("肛门",
+							UtilText.parse(condomTarget, "[npc.NamePos]的肛门被阻挡了……"),
 							null));
 				} else {
-					responses.add(getUsedCondomResponse("Asshole",
-								"Stuff the condom's contents into your asshole...",
-								"Stuff the condom's contents into [npc.namePos] asshole...",
+					responses.add(getUsedCondomResponse("肛门",
+								"将避孕套的内容物塞进你的肛门……",
+								"将避孕套的内容物塞进[npc.namePos]的肛门……",
 								(SexAreaOrifice.ANUS)));
 				}
 			}
 			
 			if(Main.game.isNipplePenEnabled()) {
 				if(!condomTarget.isBreastFuckableNipplePenetration()) {
-					responses.add(new Response("Nipples",
-							UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have fuckable nipples into which the condom's contents can be stuffed..."),
+					responses.add(new Response("乳头",
+							UtilText.parse(condomTarget, "[npc.Name]没有可供插入的乳头，来放入避孕套的内容物……"),
 							null));
 				} else if(!condomTarget.isSexAreaExposed(SexAreaOrifice.NIPPLE)) {
-					responses.add(new Response("Nipples",
-							UtilText.parse(condomTarget, "[npc.NamePos] nipples are blocked..."),
+					responses.add(new Response("乳头",
+							UtilText.parse(condomTarget, "[npc.NamePos]的乳头被阻挡了……"),
 							null));
 				} else {
-					responses.add(getUsedCondomResponse("Nipples",
-							"Stuff the condom's contents into your fuckable nipples...",
-							"Stuff the condom's contents into [npc.namePos] fuckable nipples...",
+					responses.add(getUsedCondomResponse("乳头",
+							"将避孕套的内容物塞进你可插入的乳头……",
+							"将避孕套的内容物塞进[npc.namePos]可插入的乳头……",
 							(SexAreaOrifice.NIPPLE)));
 				}
 				
 				if(Main.game.isUdderContentEnabled()) {
 					if(!condomTarget.isBreastCrotchFuckableNipplePenetration()) {
-						responses.add(new Response(condomTarget.getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs",
-								UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have fuckable [npc.nipplesCrotch] into which the condom's contents can be stuffed..."),
+						responses.add(new Response(condomTarget.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳",
+								UtilText.parse(condomTarget, "[npc.Name]没有可供插入的[npc.nipplesCrotch]，来放入避孕套的内容物……"),
 								null));
 					} else if(!condomTarget.isSexAreaExposed(SexAreaOrifice.NIPPLE_CROTCH)) {
-						responses.add(new Response(condomTarget.getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs",
-								UtilText.parse(condomTarget, "[npc.NamePos] [npc.nipplesCrotch] are blocked..."),
+						responses.add(new Response(condomTarget.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳",
+								UtilText.parse(condomTarget, "[npc.NamePos]的[npc.nipplesCrotch]被阻挡了……"),
 								null));
 					} else {
-						responses.add(getUsedCondomResponse(condomTarget.getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs",
-								"Stuff the condom's contents into your [npc.nipplesCrotch+]...",
-								"Stuff the condom's contents into [npc.namePos] [npc.nipplesCrotch+]...",
+						responses.add(getUsedCondomResponse(condomTarget.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳",
+								"将避孕套的内容物塞进你[npc.nipplesCrotch+]……",
+								"将避孕套的内容物塞进[npc.namePos][npc.nipplesCrotch+]……",
 								(SexAreaOrifice.NIPPLE_CROTCH)));
 					}
 				}
@@ -413,52 +413,52 @@ public class MiscDialogue {
 			
 			if(Main.game.isUrethraEnabled()) {
 				if(!condomTarget.hasPenisIgnoreDildo() || !condomTarget.isUrethraFuckable()) {
-					responses.add(new Response("Penile urethra",
+					responses.add(new Response("阴茎尿道",
 							condomTarget.hasPenisIgnoreDildo()
-								?UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have a fuckable urethra into which the condom's contents can be stuffed...")
-								:UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have a penis..."),
+								?UtilText.parse(condomTarget, "[npc.Name]没有可供插入的尿道，来放入避孕套的内容物……")
+								:UtilText.parse(condomTarget, "[npc.Name]没有阴茎……"),
 							null));
 				} else if(!condomTarget.isSexAreaExposed(SexAreaOrifice.URETHRA_PENIS)) {
-					responses.add(new Response("Penile urethra",
-							UtilText.parse(condomTarget, "[npc.NamePos] urethra is blocked..."),
+					responses.add(new Response("阴茎尿道",
+							UtilText.parse(condomTarget, "[npc.NamePos]的尿道被阻挡了……"),
 							null));
 				} else {
-					responses.add(getUsedCondomResponse("Penile urethra",
-							"Stuff the condom's contents into your [npc.urethraPenis]...",
-							"Stuff the condom's contents into [npc.namePos] [npc.urethraPenis+]...",
+					responses.add(getUsedCondomResponse("阴茎尿道",
+							"将避孕套的内容物塞进你的[npc.urethraPenis]……",
+							"将避孕套的内容物塞进[npc.namePos][npc.urethraPenis+]……",
 							(SexAreaOrifice.URETHRA_PENIS)));
 				}
 				
 				if(!condomTarget.hasVagina() || !condomTarget.isVaginaUrethraFuckable()) {
-					responses.add(new Response("Vaginal urethra",
+					responses.add(new Response("阴道尿道",
 							condomTarget.hasVagina()
-								?UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have a fuckable urethra into which the condom's contents can be stuffed...")
-								:UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have a vagina..."),
+								?UtilText.parse(condomTarget, "[npc.Name]没有可供插入的尿道，来放入避孕套的内容物……")
+								:UtilText.parse(condomTarget, "[npc.Name]没有阴道……"),
 							null));
 				} else if(!condomTarget.isSexAreaExposed(SexAreaOrifice.URETHRA_VAGINA)) {
-					responses.add(new Response("Vaginal urethra",
-							UtilText.parse(condomTarget, "[npc.NamePos] urethra is blocked..."),
+					responses.add(new Response("阴道尿道",
+							UtilText.parse(condomTarget, "[npc.NamePos]的尿道被阻挡了……"),
 							null));
 				} else {
-					responses.add(getUsedCondomResponse("Vaginal urethra",
-							"Stuff the condom's contents into your [npc.urethraVagina]...",
-							"Stuff the condom's contents into [npc.namePos] [npc.urethraVagina+]...",
+					responses.add(getUsedCondomResponse("阴道尿道",
+							"将避孕套的内容物塞进你的[npc.urethraVagina]……",
+							"将避孕套的内容物塞进[npc.namePos]的[npc.urethraVagina+]……",
 							(SexAreaOrifice.URETHRA_VAGINA)));
 				}
 			}
 
 			if(!condomTarget.hasSpinneret()) {
-				responses.add(new Response("Spinneret",
-						UtilText.parse(condomTarget, "[npc.Name] [npc.do]n't have a spinneret into which the condom's contents can be stuffed..."),
+				responses.add(new Response("丝囊",
+						UtilText.parse(condomTarget, "[npc.Name]没有丝囊来放入避孕套的内容物……"),
 						null));
 			} else if(!condomTarget.isSexAreaExposed(SexAreaOrifice.SPINNERET)) {
-				responses.add(new Response("Spinneret",
-						UtilText.parse(condomTarget, "[npc.NamePos] spinneret is blocked..."),
+				responses.add(new Response("丝囊",
+						UtilText.parse(condomTarget, "[npc.NamePos]的丝囊被阻挡了……"),
 						null));
 			} else {
-				responses.add(getUsedCondomResponse("Spinneret",
-							"Stuff the condom's contents into your spinneret...",
-							"Stuff the condom's contents into [npc.namePos] spinneret...",
+				responses.add(getUsedCondomResponse("丝囊",
+							"将避孕套的内容物塞进你的丝囊……",
+							"将避孕套的内容物塞进[npc.namePos]的丝囊……",
 							(SexAreaOrifice.SPINNERET)));
 			}
 			
@@ -533,7 +533,7 @@ public class MiscDialogue {
 		sb.append("<p>");
 		String targetNameSelfShe = condomTarget==condomUser?"[npc.she]":"[npc2.name]";
 		String userNamePosSelfHer = condomTarget==condomUser?"[npc.her]":"[npc.namePos]";
-		String cumName = "cum";
+		String cumName = "精液";
 		try {
 			cumName = usedCondom.getCum().getFluid().getName(usedCondom.getCum().getFluidCharacter());
 		} catch(Exception ex) {
@@ -549,89 +549,89 @@ public class MiscDialogue {
 			case ANUS:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as "+targetNameSelfShe+" eagerly [npc2.verb(push)] the slimy fluid into [npc.her] [npc.asshole+]."
-							+ " Desperately stuffing "+userNamePosSelfHer+" [npc.ass] full of the condom's contents, "+targetNameSelfShe+" only [npc2.verb(discard)] the condom once [npc2.sheIs] sure that it's completely empty."));
+							targetNameSelfShe+"急切地把那黏糊糊的液体往[npc.Name][npc.asshole+]里塞，惹得[npc.she]不禁发出一声愉悦的[npc.moan]。"
+							+ targetNameSelfShe + "疯了似的，把套套里的东西往"+userNamePosSelfHer+"的[npc.ass]里塞，保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(shudder)] as "+targetNameSelfShe+" [npc2.verb(push)] the slimy fluid into [npc.her] [npc.asshole+],"
-									+ " trying [npc.her] best not to think about the cold "+cumName+" that's now in [npc.her] [npc.ass] as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							targetNameSelfShe+"将那黏糊糊的液体往[npc.Name][npc.asshole+]里塞得时候，[npc.she]浑身都颤抖起来，"
+									+ "只能竭尽全力不去想自己[npc.ass]里那冰冷的"+cumName+"，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 			case MOUTH:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as [npc.she] greedily [npc.verb(gulp)] down the slimy fluid."
-							+ " Darting [npc.her] [npc.tongue] out, [npc.she] desperately [npc.verb(lick)] up every last drop of cum; only discarding the condom once [npc.sheIs] sure that it's completely empty."));
+							"[npc.Name]按捺不住欣喜地[npc.moan]一声，不知满足地吞咽下了那黏糊糊的液体。"
+							+ "[npc.she]伸出[npc.tongue]来，饥渴难耐地舔干净了每一滴精液；保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(scrunch)] [npc.her] [npc.eyes] shut as [npc.she] [npc.verb(gulp)] down the slimy fluid,"
-									+ " trying [npc.her] best not to think about what [npc.sheHas] just done as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							"[npc.Name]紧闭着[npc.eyes]，才勉强咽下了那黏糊糊的液体，"
+									+ "只能竭尽全力不去想自己刚才做过的事情，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 			case NIPPLE:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as "+targetNameSelfShe+" eagerly [npc2.verb(push)] the slimy fluid into [npc.her] [npc.nipple+]."
-							+ " Desperately stuffing "+userNamePosSelfHer+" [npc.breasts] full of the condom's contents, "+targetNameSelfShe+" only [npc2.verb(discard)] the condom once [npc2.sheIs] sure that it's completely empty."));
+							targetNameSelfShe+"急切地把那黏糊糊的液体往[npc.Name][npc.nipple+]里塞，惹得[npc.she]不禁发出一声愉悦的[npc.moan]。"
+							+ targetNameSelfShe + "疯了似的，把套套里的东西往"+userNamePosSelfHer+"的[npc.breasts]里塞，保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(shudder)] as "+targetNameSelfShe+" [npc2.verb(push)] the slimy fluid into [npc.her] [npc.nipple+],"
-									+ " trying [npc.her] best not to think about the cold "+cumName+" that's now in [npc.her] [npc.breasts] as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							targetNameSelfShe+"将那黏糊糊的液体往[npc.Name][npc.nipple+]里塞得时候，[npc.she]浑身都颤抖起来，"
+									+ "只能竭尽全力不去想自己[npc.breasts]那冰冷的"+cumName+"，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 			case NIPPLE_CROTCH:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as "+targetNameSelfShe+" eagerly [npc2.verb(push)] the slimy fluid into [npc.her] [npc.nippleCrotch+]."
-							+ " Desperately stuffing "+userNamePosSelfHer+" [npc.crotchBoobs] full of the condom's contents, "+targetNameSelfShe+" only [npc2.verb(discard)] the condom once [npc2.sheIs] sure that it's completely empty."));
+							targetNameSelfShe+"急切地把那黏糊糊的液体往[npc.Name][npc.nippleCrotch+]里塞，惹得[npc.she]不禁发出一声愉悦的[npc.moan]。"
+							+ targetNameSelfShe + "疯了似的，把套套里的东西往"+userNamePosSelfHer+"的[npc.crotchBoobs]里塞，保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(shudder)] as "+targetNameSelfShe+" [npc2.verb(push)] the slimy fluid into [npc.her] [npc.nippleCrotch+],"
-									+ " trying [npc.her] best not to think about the cold "+cumName+" that's now in [npc.her] [npc.crotchBoobs] as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							targetNameSelfShe+"将那黏糊糊的液体往[npc.Name][npc.nippleCrotch+]里塞得时候，[npc.she]浑身都颤抖起来，"
+									+ "只能竭尽全力不去想自己[npc.crotchBoobs]那冰冷的"+cumName+"，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 			case SPINNERET:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as "+targetNameSelfShe+" eagerly [npc2.verb(push)] the slimy fluid into [npc.her] [npc.spinneret+]."
-							+ " Desperately stuffing "+userNamePosSelfHer+" web-spinning orifice full of the condom's contents, "+targetNameSelfShe+" only [npc2.verb(discard)] the condom once [npc2.sheIs] sure that it's completely empty."));
+							targetNameSelfShe+"急切地把那黏糊糊的液体往[npc.Name][npc.spinneret+]里塞，惹得[npc.she]不禁发出一声愉悦的[npc.moan]。"
+							+ targetNameSelfShe + "疯了似的，把套套里的东西往"+userNamePosSelfHer+"的丝囊穴里塞，保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(shudder)] as "+targetNameSelfShe+" [npc2.verb(push)] the slimy fluid into [npc.her] [npc.spinneret+],"
-									+ " trying [npc.her] best not to think about the cold "+cumName+" that's now in [npc.her] web-spinning orifice as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							targetNameSelfShe+"将那黏糊糊的液体往[npc.Name][npc.spinneret+]里塞得时候，[npc.she]浑身都颤抖起来，"
+									+ "只能竭尽全力不去想自己丝囊穴中那冰冷的"+cumName+"，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 			case URETHRA_PENIS:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as "+targetNameSelfShe+" eagerly [npc2.verb(push)] the slimy fluid into [npc.her] [npc.urethraPenis+]."
-							+ " Desperately stuffing "+userNamePosSelfHer+" [npc.cock] full of the condom's contents, "+targetNameSelfShe+" only [npc2.verb(discard)] the condom once [npc2.sheIs] sure that it's completely empty."));
+							targetNameSelfShe+"急切地把那黏糊糊的液体往[npc.Name][npc.urethraPenis+]里塞，惹得[npc.she]不禁发出一声愉悦的[npc.moan]。"
+							+ targetNameSelfShe + "疯了似的，把套套里的东西往"+userNamePosSelfHer+"的[npc.cock]里塞，保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(shudder)] as "+targetNameSelfShe+" [npc2.verb(push)] the slimy fluid into [npc.her] [npc.urethraPenis+],"
-									+ " trying [npc.her] best not to think about the cold "+cumName+" that's now in [npc.her] [npc.cock] as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							targetNameSelfShe+"将那黏糊糊的液体往[npc.Name][npc.urethraPenis+]里塞得时候，[npc.she]浑身都颤抖起来，"
+									+ "只能竭尽全力不去想自己[npc.cock]里那冰冷的"+cumName+"，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 			case URETHRA_VAGINA:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as "+targetNameSelfShe+" eagerly [npc2.verb(push)] the slimy fluid into [npc.her] [npc.urethraVagina+]."
-							+ " Desperately stuffing "+userNamePosSelfHer+" [npc.pussy] full of the condom's contents, "+targetNameSelfShe+" only [npc2.verb(discard)] the condom once [npc2.sheIs] sure that it's completely empty."));
+							targetNameSelfShe+"急切地把那黏糊糊的液体往[npc.Name][npc.urethraVagina+]里塞，惹得[npc.she]不禁发出一声愉悦的[npc.moan]。"
+							+ targetNameSelfShe + "疯了似的，把套套里的东西往"+userNamePosSelfHer+"的[npc.pussy]里塞，保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(shudder)] as "+targetNameSelfShe+" [npc2.verb(push)] the slimy fluid into [npc.her] [npc.urethraVagina+],"
-									+ " trying [npc.her] best not to think about the cold "+cumName+" that's now in [npc.her] [npc.pussy] as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							targetNameSelfShe+"将那黏糊糊的液体往[npc.Name][npc.urethraVagina+]里塞得时候，[npc.she]浑身都颤抖起来，"
+									+ "只能竭尽全力不去想自己[npc.pussy]里那冰冷的"+cumName+"，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 			case VAGINA:
 				if(condomTarget.hasFetish(Fetish.FETISH_CUM_ADDICT)) {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] can't help but let out a delighted [npc.moan] as "+targetNameSelfShe+" eagerly [npc2.verb(push)] the slimy fluid into [npc.her] [npc.pussy+]."
-							+ " Desperately stuffing "+userNamePosSelfHer+" [npc.pussy] full of the condom's contents, "+targetNameSelfShe+" only [npc2.verb(discard)] the condom once [npc2.sheIs] sure that it's completely empty."));
+							targetNameSelfShe+"急切地把那黏糊糊的液体往[npc.Name][npc.pussy+]里塞，惹得[npc.she]不禁发出一声愉悦的[npc.moan]。"
+							+ targetNameSelfShe + "疯了似的，把套套里的东西往"+userNamePosSelfHer+"的[npc.pussy]里塞，保证完全清空之后就只是把避孕套丢到了一旁。"));
 				} else {
 					sb.append(UtilText.parse(condomTarget, condomUser,
-							"[npc.Name] [npc.verb(shudder)] as "+targetNameSelfShe+" [npc2.verb(push)] the slimy fluid into [npc.her] [npc.pussy+],"
-									+ " trying [npc.her] best not to think about the cold "+cumName+" that's now in [npc.her] [npc.pussy] as "+targetNameSelfShe+" [npc2.verb(throw)] the now-empty condom to the floor..."));
+							targetNameSelfShe+"将那黏糊糊的液体往[npc.Name][npc.pussy+]里塞得时候，[npc.she]浑身都颤抖起来，"
+									+ "只能竭尽全力不去想自己[npc.pussy]里那冰冷的"+cumName+"，"+targetNameSelfShe+"清空之后，就将避孕套丢在了地上……"));
 				}
 				break;
 		}
@@ -740,7 +740,7 @@ public class MiscDialogue {
 	}
 	
 	
-	public static final DialogueNode DOLL_BROCHURE = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			dollOption = 0;
@@ -764,51 +764,51 @@ public class MiscDialogue {
 				sb.append(Main.game.parseFromFile("txt/places/dominion/sex_shop/generic", "DOLL_BROCHURE"));
 			}
 			
-			sb.append(startWrapper("Model"));
-				sb.append(applyWrapperDiscounted("DD", "Our standard model; the 'DD' comes with DD-cup breasts and a feminine figure.", PresetColour.GENERIC_GOOD, "DOLL_CORE_0", "Select", dollOption==0, getDollCost(0), false));
-				sb.append(applyWrapperDiscounted("HH", "Our premium model; the 'HH' comes with HH-cup breasts and a more womanly figure.", PresetColour.GENERIC_GOOD, "DOLL_CORE_1", "Select", dollOption==1, getDollCost(1), false));
-				sb.append(applyWrapperDiscounted("Anthro Special", "Our special edition anthro dolls come in every race imaginable. You'll be able to select your preferred race after filling out this form.",
-							PresetColour.GENERIC_EXCELLENT, "DOLL_CORE_2", "Select", dollOption==2, getDollCost(2), false));
+			sb.append(startWrapper("型号"));
+				sb.append(applyWrapperDiscounted("DD", "我们的标准型号，‘DD’带有DD罩杯的胸部和女性化的外表。", PresetColour.GENERIC_GOOD, "DOLL_CORE_0", "选择", dollOption==0, getDollCost(0), false));
+				sb.append(applyWrapperDiscounted("HH", "我们的高端型号，‘HH’带有HH罩杯的胸部和女性特点更丰富的外表。", PresetColour.GENERIC_GOOD, "DOLL_CORE_1", "选择", dollOption==1, getDollCost(1), false));
+				sb.append(applyWrapperDiscounted("特别定制人形", "我们的特别定制款人形玩偶，你能想到的种族全都有。填好表格后就可以选择心仪的种族。",
+							PresetColour.GENERIC_EXCELLENT, "DOLL_CORE_2", "选择", dollOption==2, getDollCost(2), false));
 			sb.append(endWrapper());
 
-			sb.append(startWrapper("Genitals"));
-				sb.append(applyWrapperDiscounted("Pussy", "The default option; an artificial pussy.", PresetColour.FEMININE, "DOLL_GENITALS_0", "Select", genitalsOption==0, getGenitalCost(0), true));
-				sb.append(applyWrapperDiscounted("Cock", "Replace your doll's pussy with a cock; our doll's cocks display realistic flaccid and erection behaviour.",
-						PresetColour.MASCULINE, "DOLL_GENITALS_1", "Select", genitalsOption==1, getGenitalCost(1), true));
-				sb.append(applyWrapperDiscounted("Both", "For if you want the best of both worlds; give your doll a pussy and cock.", PresetColour.ANDROGYNOUS, "DOLL_GENITALS_2", "Select", genitalsOption==2, getGenitalCost(2), true));
+			sb.append(startWrapper("生殖器"));
+				sb.append(applyWrapperDiscounted("阴道", "默认设置，人造阴道。", PresetColour.FEMININE, "DOLL_GENITALS_0", "选择", genitalsOption==0, getGenitalCost(0), true));
+				sb.append(applyWrapperDiscounted("阴茎", "将玩偶的阴道替换为阴茎，我们玩偶的阴茎勃起自如。",
+						PresetColour.MASCULINE, "DOLL_GENITALS_1", "选择", genitalsOption==1, getGenitalCost(1), true));
+				sb.append(applyWrapperDiscounted("共有", "专为愿享受双重极乐的客户打造，玩偶同时拥有阴道和阴茎。", PresetColour.ANDROGYNOUS, "DOLL_GENITALS_2", "选择", genitalsOption==2, getGenitalCost(2), true));
 			sb.append(endWrapper());
 
 			if(Main.getProperties().hasValue(PropertyValue.ageContent)) {
-				sb.append(startWrapper("Age Appearance"));
-					sb.append(applyWrapperDiscounted("18", "Our default model has the appearance of an 18 year old.", PresetColour.AGE_TEENS, "DOLL_AGE_0", "Select", ageOption==0, getAgeCost(0), true));
-					sb.append(applyWrapperDiscounted("20's", "We're able to age your doll a little if you like.", PresetColour.AGE_TWENTIES, "DOLL_AGE_1", "Select", ageOption==1, getAgeCost(1), true));
-					sb.append(applyWrapperDiscounted("30's", "Or we can double their age from the default, if you prefer.", PresetColour.AGE_THIRTIES, "DOLL_AGE_2", "Select", ageOption==2, getAgeCost(2), true));
-					sb.append(applyWrapperDiscounted("40's", "Want your doll to look like a MILF? We can do that too.", PresetColour.AGE_FORTIES, "DOLL_AGE_3", "Select", ageOption==3, getAgeCost(3), true));
-					sb.append(applyWrapperDiscounted("50's", "If you prefer more mature bodies, we can keep going...", PresetColour.AGE_FIFTIES, "DOLL_AGE_4", "Select", ageOption==4, getAgeCost(4), true));
-					sb.append(applyWrapperDiscounted("60's", "And make them look *very* mature...", PresetColour.AGE_SIXTIES, "DOLL_AGE_5", "Select", ageOption==5, getAgeCost(5), true));
+				sb.append(startWrapper("外表年龄"));
+					sb.append(applyWrapperDiscounted("18岁", "我们的默认型号，拥有18岁的外表。", PresetColour.AGE_TEENS, "DOLL_AGE_0", "选择", ageOption==0, getAgeCost(0), true));
+					sb.append(applyWrapperDiscounted("20多岁", "我们可以依您的喜好稍微增加玩偶的年龄。", PresetColour.AGE_TWENTIES, "DOLL_AGE_1", "选择", ageOption==1, getAgeCost(1), true));
+					sb.append(applyWrapperDiscounted("30多岁", "如果您愿意，也可以在默认年龄上加倍。", PresetColour.AGE_THIRTIES, "DOLL_AGE_2", "选择", ageOption==2, getAgeCost(2), true));
+					sb.append(applyWrapperDiscounted("40多岁", "喜欢辣妈玩偶吗？我们也能做到。", PresetColour.AGE_FORTIES, "DOLL_AGE_3", "选择", ageOption==3, getAgeCost(3), true));
+					sb.append(applyWrapperDiscounted("50多岁", "如果您青睐更成熟的躯体，我们还能继续……", PresetColour.AGE_FIFTIES, "DOLL_AGE_4", "选择", ageOption==4, getAgeCost(4), true));
+					sb.append(applyWrapperDiscounted("60多岁", "让它们看起来*超级*成熟……", PresetColour.AGE_SIXTIES, "DOLL_AGE_5", "选择", ageOption==5, getAgeCost(5), true));
 				sb.append(endWrapper());
 			}
 			
-			sb.append(startWrapper("Outfits"));
-				sb.append(applyWrapper("Naked", "No clothes are supplied with your doll.", PresetColour.BASE_BLUE_STEEL, "DOLL_CLOTHING_0", "Select", outfitOption==0, getOutfitCost(0), true));
-				sb.append(applyWrapper("Rainbow", "Your doll will arrive wearing rainbow accessories.", PresetColour.BASE_INDIGO, "DOLL_CLOTHING_1", "Select", outfitOption==1, getOutfitCost(1), true));
-				sb.append(applyWrapper("Kitty lingerie", "Your doll will arrive wearing a full set of kitty lingerie.", PresetColour.BASE_PINK_LIGHT, "DOLL_CLOTHING_2", "Select", outfitOption==2, getOutfitCost(2), true));
-				sb.append(applyWrapper("Maid", "Your doll will arrive wearing a full maid's uniform.", PresetColour.BASE_PINK, "DOLL_CLOTHING_3", "Select", outfitOption==3, getOutfitCost(3), true));
+			sb.append(startWrapper("套装"));
+				sb.append(applyWrapper("裸体", "不随玩偶附带衣物。", PresetColour.BASE_BLUE_STEEL, "DOLL_CLOTHING_0", "选择", outfitOption==0, getOutfitCost(0), true));
+				sb.append(applyWrapper("彩虹", "您的玩偶将会穿着整套彩虹套装。", PresetColour.BASE_INDIGO, "DOLL_CLOTHING_1", "选择", outfitOption==1, getOutfitCost(1), true));
+				sb.append(applyWrapper("猫咪内衣", "您的玩偶将会穿着整套猫咪内衣。", PresetColour.BASE_PINK_LIGHT, "DOLL_CLOTHING_2", "选择", outfitOption==2, getOutfitCost(2), true));
+				sb.append(applyWrapper("女仆装", "您的玩偶将会穿着整套女仆装。", PresetColour.BASE_PINK, "DOLL_CLOTHING_3", "选择", outfitOption==3, getOutfitCost(3), true));
 			sb.append(endWrapper());
 			
-			sb.append(startWrapper("Extras"));
-				sb.append(applyWrapper("Erase barcode", "We'll remove the barcode tattoo from your doll's forehead before delivery.", PresetColour.GENERIC_MINOR_GOOD, "DOLL_BARCODE", "Remove", barcodeRemoval, getBarcodeCost(), true));
-				sb.append(applyWrapper("Toy set", "Your doll will come equipped with a selection of toys.", PresetColour.BASE_PINK, "DOLL_TOYS", "Add", toySet, getToyCost(), true));
-				sb.append(applyWrapperDiscounted("Hair", "We'll give your doll a head of synthetic hair.", PresetColour.BASE_BROWN_LIGHT, "DOLL_HAIR", "Add", hair, getHairCost(), true));
+			sb.append(startWrapper("额外配件"));
+				sb.append(applyWrapper("擦除条码", "我们将会在送货前去除您的玩偶身上的条码纹身。", PresetColour.GENERIC_MINOR_GOOD, "DOLL_BARCODE", "去除", barcodeRemoval, getBarcodeCost(), true));
+				sb.append(applyWrapper("玩具套装", "您的玩偶将会附带一套玩具。", PresetColour.BASE_PINK, "DOLL_TOYS", "附加", toySet, getToyCost(), true));
+				sb.append(applyWrapperDiscounted("头发", "我们将会给您的玩偶一头人造秀发。", PresetColour.BASE_BROWN_LIGHT, "DOLL_HAIR", "附加", hair, getHairCost(), true));
 				sb.append(applyWrapperDisabled("D.E.C.K.",
 						(Main.game.getPlayer().hasItemType(ItemType.DOLL_CONSOLE)
-							?"[style.italicsDisabled(You already have a D.E.C.K., and have no need for another...)]"
-							:"Purchase a D.E.C.K. with your doll, allowing you to fully customise it whenever you want."),
-						PresetColour.GENERIC_EXCELLENT, "DOLL_DECK", "Purchase", deck, getDeckCost(), true, Main.game.getPlayer().hasItemType(ItemType.DOLL_CONSOLE)));
+							?"[style.italicsDisabled(你已经有一个D.E.C.K.了……)]"
+							:"随玩偶买一部D.E.C.K.，允许您随时随地全套定制玩偶。"),
+						PresetColour.GENERIC_EXCELLENT, "DOLL_DECK", "购买", deck, getDeckCost(), true, Main.game.getPlayer().hasItemType(ItemType.DOLL_CONSOLE)));
 			sb.append(endWrapper());
 
-			sb.append(startWrapper("Pre-delivery"));
-				sb.append(applyWrapper("Broken-in", "Don't like the idea of your doll being a virgin? Saellatrix will happily break in all of their holes.", PresetColour.BASE_PINK_DEEP, "DOLL_FUCKED", "Fucked", fucked, getFuckedCost(), true));
+			sb.append(startWrapper("送货前服务"));
+				sb.append(applyWrapper("破处", "不喜欢处女玩偶吗？赛拉特里克斯很乐意预先攻入它身上的每一个小洞。", PresetColour.BASE_PINK_DEEP, "DOLL_FUCKED", "被干", fucked, getFuckedCost(), true));
 			sb.append(endWrapper());
 			
 			return sb.toString();
@@ -821,8 +821,8 @@ public class MiscDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getMoney()>=getDollBrochureCost()) {
-					return new Response("Continue ("+UtilText.formatAsMoney(getDollBrochureCost(), "span")+")",
-							"Fill out the form and give it back to Saellatrix.",
+					return new Response("继续("+UtilText.formatAsMoney(getDollBrochureCost(), "span")+")",
+							"填好表格后交还赛拉特里克斯。",
 							dollOption==2
 								?DOLL_BROCHURE_RACE_SELECTION
 								:DOLL_BROCHURE_FINISHED) {
@@ -835,17 +835,17 @@ public class MiscDialogue {
 					};
 					
 				} else {
-					return new Response("Continue ("+UtilText.formatAsMoneyUncoloured(getDollBrochureCost(), "span")+")", "You can't afford this...", null);
+					return new Response("继续("+UtilText.formatAsMoneyUncoloured(getDollBrochureCost(), "span")+")", "你付不起……", null);
 				}
 				
 			} else if(index==2) {
-				return new Response("Back", "Decide against buying a doll after all.", DialogueManager.getDialogueFromId("innoxia_places_dominion_sex_shop_generic_counter"));
+				return new Response("返回", "还是不买玩偶了。", DialogueManager.getDialogueFromId("innoxia_places_dominion_sex_shop_generic_counter"));
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode DOLL_BROCHURE_INTERNAL = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE_INTERNAL = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public String getHeaderContent() {
 			return DOLL_BROCHURE.getHeaderContent();
@@ -893,7 +893,7 @@ public class MiscDialogue {
 		return dollCompatibleSubspecies;
 	}
 	
-	public static final DialogueNode DOLL_BROCHURE_RACE_SELECTION = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE_RACE_SELECTION = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public String getContent() {
 			return Main.game.parseFromFile("txt/places/dominion/sex_shop/generic", "DOLL_BROCHURE_RACE_SELECTION");
@@ -915,7 +915,7 @@ public class MiscDialogue {
 				
 				return new Response(
 						Util.capitaliseSentence(name),
-						"Choose "+UtilText.generateSingularDeterminer(name)+" "+name+" to be your doll's subspecies.",
+						"选择"+UtilText.generateSingularDeterminer(name)+name+"为玩偶的亚种。",
 						DOLL_BROCHURE_FINISHED){
 					@Override
 					public void effects() {
@@ -925,13 +925,13 @@ public class MiscDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to the previous page.", DOLL_BROCHURE_INTERNAL);
+				return new Response("返回", "返回到上一页。", DOLL_BROCHURE_INTERNAL);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode DOLL_BROCHURE_FINISHED = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE_FINISHED = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.addSpecialParsingString(String.valueOf(dollOption), true);
@@ -954,8 +954,8 @@ public class MiscDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Pay ("+UtilText.formatAsMoney(getDollBrochureCost(), "span")+")",
-						"Pay "+UtilText.formatAsMoney(getDollBrochureCost(), "span")+" to buy the doll with the options you've selected.",
+				return new Response("支付("+UtilText.formatAsMoney(getDollBrochureCost(), "span")+")",
+						"支付"+UtilText.formatAsMoney(getDollBrochureCost(), "span")+"购入选定选项的玩偶。",
 						slaveToDollify==null
 							?DOLL_BROCHURE_END
 							:DOLL_BROCHURE_END_SLAVE) {
@@ -967,14 +967,14 @@ public class MiscDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Back", "Return to the brochure.", DOLL_BROCHURE_INTERNAL);
+				return new Response("返回", "返回手册界面。", DOLL_BROCHURE_INTERNAL);
 			}
 			
 			return null;
 		}
 	};
 	
-	public static final DialogueNode DOLL_BROCHURE_END = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE_END = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(deck) {
@@ -989,8 +989,8 @@ public class MiscDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait",
-						"Wait for Saellatrix to return with your new doll.",
+				return new Response("等待",
+						"等赛拉特里克斯带着你的新玩偶回来。",
 						DOLL_BROCHURE_END_FINAL) {
 					@Override
 					public void effects() {
@@ -1005,7 +1005,7 @@ public class MiscDialogue {
 		}
 	};
 
-	public static final DialogueNode DOLL_BROCHURE_END_FINAL = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE_END_FINAL = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.appendToTextEndStringBuilder(Main.game.parseFromFile("txt/places/dominion/sex_shop/generic", "DOLL_BROCHURE_NEW_DOLL_END", newDoll));
@@ -1021,8 +1021,8 @@ public class MiscDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"You've obtained a new doll!",
+				return new Response("继续",
+						"你得到了一个新玩偶！",
 						DOLL_BROCHURE_NEW_DOLL_END);
 			}
 			return null;
@@ -1030,7 +1030,7 @@ public class MiscDialogue {
 	};
 	
 	
-	public static final DialogueNode DOLL_BROCHURE_END_SLAVE = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE_END_SLAVE = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(deck) {
@@ -1045,8 +1045,8 @@ public class MiscDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait",
-						"Wait for Saellatrix to return with your new doll.",
+				return new Response("等待",
+						"等赛拉特里克斯带着你的新玩偶回来。",
 						DOLL_BROCHURE_END_SLAVE_FINAL) {
 					@Override
 					public void effects() {
@@ -1061,7 +1061,7 @@ public class MiscDialogue {
 		}
 	};
 	
-	public static final DialogueNode DOLL_BROCHURE_END_SLAVE_FINAL = new DialogueNode("Doll Brochure", "", true) {
+	public static final DialogueNode DOLL_BROCHURE_END_SLAVE_FINAL = new DialogueNode("玩偶手册", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.appendToTextEndStringBuilder(Main.game.parseFromFile("txt/places/dominion/sex_shop/generic", "DOLL_BROCHURE_NEW_DOLL_END", newDoll));
@@ -1077,15 +1077,15 @@ public class MiscDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"You've obtained a new doll!",
+				return new Response("继续",
+						"你得到了一个新玩偶！",
 						DOLL_BROCHURE_NEW_DOLL_END);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode DOLL_BROCHURE_NEW_DOLL_END = new DialogueNode("Doll Brochure", "", false) {
+	public static final DialogueNode DOLL_BROCHURE_NEW_DOLL_END = new DialogueNode("玩偶手册", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.appendToTextEndStringBuilder(Main.game.parseFromFile("txt/places/dominion/sex_shop/generic", "DOLL_BROCHURE_NEW_DOLL_END", newDoll));
@@ -1149,7 +1149,7 @@ public class MiscDialogue {
 		String dollNumber = "#"+String.format("%05d", dollCount);
 		
 		if(slaveToDollify==null) {
-			doll.setName("Doll");
+			doll.setName("玩偶");
 			((Saellatrix)Main.game.getNpc(Saellatrix.class)).incrementDollsSold(1);
 			doll.setSurname(dollNumber);
 		}
@@ -1165,9 +1165,9 @@ public class MiscDialogue {
 						null));
 
 		if(slaveToDollify!=null) {
-			doll.setDescription("[npc.Name] was once one of your slaves, but you had [npc.herHim] permanently transformed into an obedient sex doll at Lovienne's Luxuries.");
+			doll.setDescription("[npc.Name]曾是你的一名奴隶，但你已经在洛维耶纳奢侈品店将[npc.herHim]永久地转化成了一个唯命是从的性爱玩偶。");
 		} else {
-			doll.setDescription("This doll was created in Lovienne's Luxuries.");
+			doll.setDescription("该玩偶由“洛维耶纳奢侈品店”制作。");
 		}
 		
 		doll.setPetName(Main.game.getPlayer(), "master");
@@ -1358,7 +1358,7 @@ public class MiscDialogue {
 		}
 	}
 
-	public static final DialogueNode SAELLATRIX_DOLL_CORE = new DialogueNode("Core", "", true) {
+	public static final DialogueNode SAELLATRIX_DOLL_CORE = new DialogueNode("核心", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			BodyChanging.setTarget(getDollTarget());
@@ -1369,7 +1369,7 @@ public class MiscDialogue {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-					+ UtilText.parse(getDollTarget(), "<i>With the D.E.C.K.'s cable plugged into the port on the rear of [npc.namePos] neck, you're able to customise the colour of [npc.her] body...</i>")
+					+ UtilText.parse(getDollTarget(), "<i>将D.E.C.K.的数据线插入[npc.namePos]后颈的接口中，之后你就能够自定义[npc.her]的身体了……</i>")
 				+ "</div>");
 				
 			for(Entry<AbstractBodyCoveringType, Value<AbstractRace, List<String>>> entry : SuccubisSecrets.coveringsNamesMap.entrySet()){
@@ -1394,18 +1394,18 @@ public class MiscDialogue {
 			}
 			
 			UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(false, getDollTarget().getEyeType().getRace(), getDollTarget().getCovering(getDollTarget().getEyeCovering()).getType(),
-					"Iris colour",
-					UtilText.parse(getDollTarget(), "The colour and pattern of [npc.namePos] irises."),
+					"虹膜颜色",
+					UtilText.parse(getDollTarget(), "[npc.namePos]虹膜的颜色和形状。"),
 					true, true));
 
 			UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getDollTarget().getCovering(BodyCoveringType.EYE_PUPILS).getType(),
-					"Pupil colour",
-					UtilText.parse(getDollTarget(), "The colour and pattern of [npc.namePos] pupils."),
+					"瞳孔颜色",
+					UtilText.parse(getDollTarget(), "[npc.namePos]瞳孔的颜色与图案。"),
 					true, true));
 
 			UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getDollTarget().getCovering(BodyCoveringType.EYE_SCLERA).getType(),
-					"Sclerae colour",
-					UtilText.parse(getDollTarget(), "The colour and pattern of [npc.namePos] sclerae."),
+					"巩膜颜色",
+					UtilText.parse(getDollTarget(), "[npc.namePos]巩膜的颜色和形状。"),
 					true, true));
 			
 			return UtilText.parse(getDollTarget(), UtilText.nodeContentSB.toString());
@@ -1424,7 +1424,7 @@ public class MiscDialogue {
 		}
 	};
 
-	public static final DialogueNode SAELLATRIX_DOLL_PUSSY = new DialogueNode("Vagina", "", true) {
+	public static final DialogueNode SAELLATRIX_DOLL_PUSSY = new DialogueNode("阴道", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			BodyChanging.setTarget(getDollTarget());
@@ -1463,8 +1463,8 @@ public class MiscDialogue {
 			UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(false,
 					getDollTarget().getVaginaRace(),
 					getDollTarget().getCovering(BodyCoveringType.VAGINA).getType(),
-					"Vagina Colour",
-					UtilText.parse(getDollTarget(), "Change the colour of [npc.namePos] vagina."),
+					"阴道颜色",
+					UtilText.parse(getDollTarget(), "改变[npc.namePos]阴道的颜色。"),
 					true, true));
 
 			return UtilText.parse(getDollTarget(), UtilText.nodeContentSB.toString());
@@ -1483,7 +1483,7 @@ public class MiscDialogue {
 		}
 	};
 
-	public static final DialogueNode SAELLATRIX_DOLL_ASS = new DialogueNode("Ass", "", true) {
+	public static final DialogueNode SAELLATRIX_DOLL_ASS = new DialogueNode("屁股", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			BodyChanging.setTarget(getDollTarget());
@@ -1507,8 +1507,8 @@ public class MiscDialogue {
 					+ CharacterModificationUtils.getKatesDivCoveringsNew(false,
 							getDollTarget().getAssRace(),
 							getDollTarget().getCovering(BodyCoveringType.ANUS).getType(),
-							"Anus Colour", 
-							UtilText.parse(getDollTarget(), "Change the colour of [npc.namePos] asshole."),
+							"肛门颜色", 
+							UtilText.parse(getDollTarget(), "改变[npc.namePos]肛门的颜色。"),
 							true, true));
 				
 			return UtilText.nodeContentSB.toString();
@@ -1527,7 +1527,7 @@ public class MiscDialogue {
 		}
 	};
 
-	public static final DialogueNode SLAVE_DOLLIFICATION = new DialogueNode("Slave Dollification", "", true) {
+	public static final DialogueNode SLAVE_DOLLIFICATION = new DialogueNode("奴隶玩偶化", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			slaveToDollify = null;
@@ -1548,8 +1548,8 @@ public class MiscDialogue {
 				slaveResponses.add(new Response(
 						"<span style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>"+UtilText.parse(slave, "[npc.Name]")+"</span>",
 						UtilText.parse(slave,
-							"Tell Saellatrix that you'd like to have [npc.name], your [npc.raceFull(true)] slave, transformed into a doll."
-								+ "<br/>[style.italicsTerrible(This is a permanent, irreversible transformation!)]"),
+							"告诉赛拉特里克斯，你想将你的[npc.raceFull(true)]奴隶[npc.name]转化为一个玩偶。"
+								+ "<br/>[style.italicsTerrible(这是永久且不可逆的转化！)]"),
 						DOLL_BROCHURE) {
 					@Override
 					public void effects() {
@@ -1559,7 +1559,7 @@ public class MiscDialogue {
 			}
 			
 			if(index==0) {
-				return new Response("Back", "Decide against dollifying your slaves after all.", DialogueManager.getDialogueFromId("innoxia_places_dominion_sex_shop_generic_counter")) {
+				return new Response("返回", "还是不将奴隶玩偶化了。", DialogueManager.getDialogueFromId("innoxia_places_dominion_sex_shop_generic_counter")) {
 					@Override
 					public void effects() {
 						slaveToDollify = null;

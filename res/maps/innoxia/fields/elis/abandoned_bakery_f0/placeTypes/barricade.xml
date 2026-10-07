@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[barricade]]></name>
-	<tooltipDescription><![CDATA[Old crates and broken machinery have been piled up high so as to form an impassable barrier.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[by the barricade in the abandoned bakery in Elis]]></virginityLossDescription>
+	<name><![CDATA[路障]]></name>
+	<tooltipDescription><![CDATA[旧箱子和坏掉的机器被高高堆起作为不可逾越的障碍。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯废弃面包店的路障旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

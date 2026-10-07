@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA[Underneath the stock, a small engraving reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[机匣上刻着细小的字迹，写着“执法者官方分配，DSG铸造厂生产。”]]></authorTag>
 		<value>3000</value>
 		<melee>false</melee>
 		<twoHanded>true</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendDamageName="true"><![CDATA[pepperball bolt-action rifle]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[pepperball bolt-action rifle]]></namePlural>
-		<description><![CDATA[The bolt-action predecessor to the modern pepperball rifle, it uses gelatin instead of solid capsules which reduces its damage. Although it bears Enforcer markings, they have been scratched out and replaced with insignia you don't recognize.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Shoot [npc2.name] with your rifle.]]></attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name appendDamageName="true"><![CDATA[胡椒弹栓动步枪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[胡椒弹栓动步枪]]></namePlural>
+		<description><![CDATA[这把栓动步枪是现代胡椒弹步枪的前身，使用明胶而不是胶囊弹，从而降低了伤害。上面执法者的标记已被刮掉，取而代之的是你不认识的标记。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的步枪射向[npc2.name]。]]></attackTooltipDescription>
 		<rarity>RARE</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] out the rifle, carefully [npc.verb(load)] it, and [npc.verb(crank)] the bolt once before disengaging the safety. The needle on the gauge moves to the green zone as the internal gas reservoir self-pressurizes.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(open)] the bolt and [npc.verb(check)] to see that the chamber is empty before putting the rifle away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]将步枪取出，小心地装填后轻轻拉动一次枪栓，然后解开了保险。气压阀的指针指向绿色区域后，代表内部储气装置已经自加压完毕。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]拉动枪栓查看枪膛确认还有没有子弹，然后收起步枪。]]></unequipText>
 		<imageName>pbboltrifle_uneq.svg</imageName>
 		<imageEquippedName>pbboltrifle.svg</imageEquippedName>
 		<physicalResistance>0</physicalResistance>
@@ -47,14 +47,14 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(pull)] the trigger at [npc2.name]. The gelatin capsule bursts on impact with [npc2.namePos] aura, splattering [npc2.herHim] with stinging, burning oil.
-		]]></hitText>
+		[npc.Name]用瞄准镜对准[npc2.name]，扣动了扳机。明胶弹在与[npc2.namePos]的灵气碰撞时爆裂，溅[npc2.herHim]一身滚烫的油。
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(pull)] the trigger at [npc2.name]. The capsule misses [npc2.herHim] completely and splatters uselessly in the distance.
-		]]></missText>
+		[npc.Name]用瞄准镜对准[npc2.name]，扣动了扳机。弹药完全没击中[npc2.herHim]，无用地飞溅到远处。
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

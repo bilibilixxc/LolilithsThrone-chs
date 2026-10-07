@@ -43,18 +43,18 @@ public class SexActionUtility {
 		
 		@Override
 		public String getActionTitle() {
-			return "Do nothing";
+			return "什么都不做";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Don't make a move.";
+			return "一动不动。";
 		}
 		
 		@Override
 		public String getDescription() {
 			if(Main.sex.isMasturbation()) {
-				return "You remain still, not making a move...";
+				return "你定在原地，一动不动……";
 			}
 			
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction())==SexSlotGeneric.MISC_WATCHING) {
@@ -63,46 +63,46 @@ public class SexActionUtility {
 				if(characters.size()>=2) {
 					return UtilText.parse(characters,
 							UtilText.returnStringAtRandom(
-							"You remain in position, watching [npc.name] and [npc2.name] have sex before you.",
-							"Staying quite still, you watch [npc.name] and [npc2.name] having fun in front of you.",
-							"You carry on watching [npc.name] and [npc2.name], while doing nothing yourself."));
+							"你保持原位，看着[npc.name]和[npc2.name]在你面前做爱。",
+							"你几乎一动不动，看着[npc.name]和[npc2.name]在你面前交欢",
+							"你继续观望[npc.name]和[npc2.name]，自己则什么都不做。"));
 				}
 			}
 			
 			switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 				case DOM_GENTLE:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, gently pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You gently press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"你保持原位，轻轻地压向[npc.name]，但没有对[npc.herHim]做些什么。",
+							"你几乎一动不动，压上了[npc.name]的身躯，等待着[npc.herHim]的下一步动作。",
+							"你轻轻地压上[npc.name]的身躯，期待着[npc.herHim]作出下一步动作。");
 				case DOM_NORMAL:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"你保持原位，压向[npc.name]，但没有对[npc.herHim]做些什么。",
+							"你几乎一动不动，压上了[npc.name]的身躯，等待着[npc.herHim]的下一步动作。",
+							"你压上[npc.name]的身躯，期待着[npc.herHim]作出下一步动作。");
 				case DOM_ROUGH:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, grinding yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you grind yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You grind yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"你保持原位，磨蹭着[npc.name]的身体，但没有对[npc.herHim]做些什么。",
+							"你几乎一动不动，磨蹭着[npc.name]的身躯，等待着[npc.herHim]的下一步动作。",
+							"你磨蹭着[npc.name]的身躯，期待着[npc.herHim]作出下一步动作。");
 				case SUB_EAGER:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"你保持原位，压向[npc.name]，但没有对[npc.herHim]做些什么。",
+							"你几乎一动不动，压上了[npc.name]的身躯，等待着[npc.herHim]的下一步动作。",
+							"你压上[npc.name]的身躯，期待着[npc.herHim]作出下一步动作。");
 				case SUB_NORMAL:
 					return UtilText.returnStringAtRandom(
-							"You remain in position, pressing yourself against [npc.name], but not making any sort of move on [npc.herHim].",
-							"Staying quite still, you press yourself up against [npc.name], waiting for [npc.herHim] to make the next move.",
-							"You press yourself against [npc.name], content to let [npc.herHim] make the next move.");
+							"你保持原位，压向[npc.name]，但没有对[npc.herHim]做些什么。",
+							"你几乎一动不动，压上了[npc.name]的身躯，等待着[npc.herHim]的下一步动作。",
+							"你压上[npc.name]的身躯，期待着[npc.herHim]作出下一步动作。");
 				case SUB_RESISTING:
 					return UtilText.returnStringAtRandom(
-							"You continue struggling against [npc.name], refusing to make any sort of move on [npc.herHim].",
-							"Struggling and [pc.sobbing], you try to wriggle out of [npc.namePos] grasp, dreading what [npc.her] next move might be.",
-							"You try to push [npc.name] away from you, [pc.sobbing] and struggling in distress as you refuse to submit.");
+							"你继续挣扎抵抗着[npc.name]，拒绝对[npc.herHim]做出任何事。",
+							"你挣扎抽泣着想要挣脱[npc.namePos]的掌控，恐惧着[npc.her]的下一步行动。",
+							"你试着将[npc.name]推开，痛苦地啜泣挣扎着，拒绝服从于[npc.herHim]。");
 			}
 
-			return "You remain in position, content to simply wait and see what [npc.name] does next.";
+			return "你保持原位，静观[npc.name]的下一步动作。";
 		}
 	};
 	
@@ -119,12 +119,12 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Calm down";
+			return "平静下来";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Focus on calming yourself down, which lowers your arousal.";
+			return "集中精力让自己平静下来，从而降低你的快感。";
 		}
 
 		@Override
@@ -137,36 +137,36 @@ public class SexActionUtility {
 			switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 				case DOM_GENTLE:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"你花了点时间把注意力从[npc.name]身上移开，在这个过程中让自己平静下来。",
+							"你闭上眼睛，深呼吸，让自己平静下来，也降低了你的快感度。",
+							"深吸一口气，集中精力让自己稍微平静下来。");
 				case DOM_NORMAL:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"你花了点时间把注意力从[npc.name]身上移开，在这个过程中让自己平静下来。",
+							"你闭上眼睛，深呼吸，让自己平静下来，也降低了你的快感度。",
+							"深吸一口气，集中精力让自己稍微平静下来。");
 				case DOM_ROUGH:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"你花了点时间把注意力从[npc.name]身上移开，在这个过程中让自己平静下来。",
+							"你闭上眼睛，深呼吸，让自己平静下来，也降低了你的快感度。",
+							"深吸一口气，集中精力让自己稍微平静下来。");
 				case SUB_EAGER:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"你花了点时间把注意力从[npc.name]身上移开，在这个过程中让自己平静下来。",
+							"你闭上眼睛，深呼吸，让自己平静下来，也降低了你的快感度。",
+							"深吸一口气，集中精力让自己稍微平静下来。");
 				case SUB_NORMAL:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"You take a moment to focus on something other than [npc.name], calming yourself down in the process.",
-							"Closing your [pc.eyes], you take a deep breath, calming yourself down and lowering your arousal.",
-							"Taking a deep breath, you focus on calming yourself down a little.");
+							Main.sex.isMasturbation()?"":"你花了点时间把注意力从[npc.name]身上移开，在这个过程中让自己平静下来。",
+							"你闭上眼睛，深呼吸，让自己平静下来，也降低了你的快感度。",
+							"深吸一口气，集中精力让自己稍微平静下来。");
 				case SUB_RESISTING:
 					return UtilText.returnStringAtRandom(
-							Main.sex.isMasturbation()?"":"Still weakly struggling against [npc.name], you try to calm yourself down a little, reminding yourself that this will all be over soon.",
-							"Scrunching your [pc.eyes] shut, you try to take a deep breath, pretending that this isn't happening as you seek to calm yourself down.",
-							Main.sex.isMasturbation()?"":"Taking a deep breath, you try to calm down a little, before continuing to struggle against [npc.name].");
+							Main.sex.isMasturbation()?"":"你仍在无力地挣扎着抵抗[npc.name]，试图让自己稍微平静下来，提醒着自己这一切很快就会结束。",
+							"你紧闭双眼，努力深呼吸，假装这一切都没有发生，试图让自己平静下来。",
+							Main.sex.isMasturbation()?"":"你深吸一口气，努力让自己平静下来，然后继续挣扎抵抗[npc.Name]。");
 				default:
-					return Main.sex.isMasturbation()?"":"You try to focus on something other than the [npc.race] you're currently having sex with. By doing so, you manage to calm yourself down a little, reducing your arousal.";
+					return Main.sex.isMasturbation()?"":"你试着把注意力从正在和自己做爱的[npc.race]身上移开。这样做可以让自己稍微平静下来，降低快感度。";
 			}
 		}
 	};
@@ -184,17 +184,17 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Do nothing";
+			return "什么都不做";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Decide to do nothing.";
+			return "决定什么都不做。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "[npc.Name] doesn't make a move.";
+			return "[npc.Name]什么都没做。";
 		}
 	};
 	
@@ -221,7 +221,7 @@ public class SexActionUtility {
 		
 		@Override
 		public String getDescription() {
-			return "[npc.Name] lets out [npc.a_moan+].";
+			return "[npc.Name]发出了[npc.a_moan+]。";
 		}
 	};
 
@@ -238,11 +238,11 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Use item";
+			return "使用物品";
 		}
 		@Override
 		public String getActionDescription() {
-			return "See what items you could use.";
+			return "看看有哪些物品能用。";
 		}
 		@Override
 		public String getDescription() {
@@ -277,9 +277,9 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			if(getSexClothingBeingUsed()!=null) {
-				return "Equip "+getSexClothingBeingUsed().getKey().getName();
+				return "装备"+getSexClothingBeingUsed().getKey().getName();
 			}
-			return "Equip clothing";
+			return "装备服装";
 		}
 		@Override
 		public String getActionDescription() {
@@ -324,9 +324,9 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			if(getSexClothingBeingUsed()!=null) {
-				return "Equip "+getSexClothingBeingUsed().getKey().getName();
+				return "装备"+getSexClothingBeingUsed().getKey().getName();
 			}
-			return "Equip clothing";
+			return "装备服装";
 		}
 		@Override
 		public String getActionDescription() {
@@ -363,9 +363,9 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			if(getSexItemBeingUsed()!=null) {
-				return "Use "+getSexItemBeingUsed().getKey().getName();
+				return "使用"+getSexItemBeingUsed().getKey().getName();
 			}
-			return "Use item";
+			return "使用物品";
 		}
 		@Override
 		public String getActionDescription() {
@@ -418,12 +418,12 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return "Accept "+item.getName(false);
+			return "接受"+item.getName(false);
 		}
 		@Override
 		public String getActionDescription() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return Util.capitaliseSentence(item.getUseName())+" the "+item.getName(false)+" "+UtilText.parse(Main.sex.getItemUseInformation().getKey(), " [npc.name] is offering you.");
+			return Util.capitaliseSentence(item.getUseName()+UtilText.parse(Main.sex.getItemUseInformation().getKey(), "[npc.name]给你的")+item.getName(false) +"。");
 		}
 		@Override
 		public String getDescription() {
@@ -454,19 +454,19 @@ public class SexActionUtility {
 		@Override
 		public String getActionTitle() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return "Refuse "+item.getName(false);
+			return "拒绝"+item.getName(false);
 		}
 		@Override
 		public String getActionDescription() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
-			return "Refuse to "+item.getUseName()+" the "+item.getName(false)+" "+UtilText.parse(Main.sex.getItemUseInformation().getKey(), " [npc.name] is offering you.");
+			return "拒绝使用"+item.getUseName()+UtilText.parse(Main.sex.getItemUseInformation().getKey(), "[npc.name]给你的")+item.getName(false)+"。";
 		}
 		@Override
 		public String getDescription() {
 			AbstractItemType item = Main.sex.getItemUseInformation().getValue().getValue().getItemType();
 			return UtilText.parse(Main.sex.getItemUseInformation().getKey(),
-					"You refuse to take the "+item.getName(false)+" from [npc.name]."
-					+ " Letting out a disappointed whine, [npc.she] puts "+(item.isPlural()?"them":"it")+" back into [npc.her] inventory...");
+					"你拒绝接受[npc.name]给你的"+item.getName(false)+"。"
+					+ "[npc.she]发了声失望的呜咽，把"+(item.isPlural()?"它们":"它")+"放回了[npc.her]的物品栏……");
 		}
 		@Override
 		public void applyEffects() {
@@ -492,7 +492,7 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Manage clothing";
+			return "管理服装";
 		}
 
 		@Override
@@ -519,7 +519,7 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Manage clothing";
+			return "管理服装";
 		}
 
 		@Override
@@ -546,7 +546,7 @@ public class SexActionUtility {
 		}
 		@Override
 		public String getActionTitle() {
-			return "New Position";
+			return "调整姿势";
 		}
 
 		@Override

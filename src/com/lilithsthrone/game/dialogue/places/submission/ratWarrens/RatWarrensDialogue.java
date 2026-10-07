@@ -108,7 +108,7 @@ public class RatWarrensDialogue {
 				Main.game.addNPC(rat, false);
 				rat.setLevel(10);
 				rat.setLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_ENTRANCE, true);
-				Main.game.getCharacterUtils().setGenericName(rat, "lieutenant", null);
+				Main.game.getCharacterUtils().setGenericName(rat, "二把手", null);
 				rat.unequipOffhandWeaponIntoVoid(0, false);
 				rat.equipOffhandWeaponFromNowhere(Main.game.getItemGen().generateWeapon("innoxia_bow_pistol_crossbow", DamageType.POISON, Util.newArrayListOfValues(PresetColour.CLOTHING_BLACK_STEEL, PresetColour.CLOTHING_GREEN_DRAB, PresetColour.CLOTHING_GUNMETAL)));
 				rat.incrementEssenceCount(8, false);
@@ -117,7 +117,7 @@ public class RatWarrensDialogue {
 				Main.game.addNPC(rat, false);
 				rat.setLevel(9);
 				rat.setLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_ENTRANCE, true);
-				Main.game.getCharacterUtils().setGenericName(rat, "sidekick", null);
+				Main.game.getCharacterUtils().setGenericName(rat, "帮众", null);
 				rat.unequipOffhandWeaponIntoVoid(0, false);
 				rat.equipOffhandWeaponFromNowhere(Main.game.getItemGen().generateWeapon("innoxia_bow_pistol_crossbow", DamageType.PHYSICAL, Util.newArrayListOfValues(PresetColour.CLOTHING_BLACK_STEEL, PresetColour.CLOTHING_KHAKI, PresetColour.CLOTHING_STEEL)));
 				rat.incrementEssenceCount(3, false);
@@ -152,7 +152,7 @@ public class RatWarrensDialogue {
 					rat.addFetish(Fetish.FETISH_VAGINAL_RECEIVING);
 				}
 				rat.setLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_DICE_DEN, true);
-				Main.game.getCharacterUtils().setGenericName(rat, rat.isFeminine()?"barwoman":"barman", null);
+				Main.game.getCharacterUtils().setGenericName(rat, "酒保", null);
 				
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -250,11 +250,11 @@ public class RatWarrensDialogue {
 	
 	public static void spawnMilkers() {
 		try {
-			String[] adjectives = new String[] {"brainwashed", "submissive", "obedient", "docile"};
+			String[] adjectives = new String[] {"已洗脑", "顺从", "服从", "温驯"};
 			for(int i=0;i<4;i++) {
 				NPC human = new RatWarrensCaptive(Gender.F_V_B_FEMALE);
 				Main.game.addNPC(human, false);
-				human.setGenericName(adjectives[i]+" milker");
+				human.setGenericName(adjectives[i]+"产奶工");
 				human.setAffection(Main.game.getNpc(Murk.class), 100);
 				Main.game.getNpc(Murk.class).calculateGenericSexEffects(true, true, human, new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA), GenericSexFlag.NO_DESCRIPTION_NEEDED);
 				Main.game.getNpc(Murk.class).fillCumToMaxStorage();
@@ -297,13 +297,13 @@ public class RatWarrensDialogue {
 				rat.setLocation(Main.game.getPlayer(), true);
 				rat.addSpecialPerk(Perk.SPECIAL_HEALTH_FANATIC);
 				rat.setMuscle(Muscle.FOUR_RIPPED.getMedianValue());
-				rat.setGenericName(Util.randomItemFrom(Util.newArrayListOfValues("buff", "strong", "muscular", "muscly"))+" lieutenant");
+				rat.setGenericName(Util.randomItemFrom(Util.newArrayListOfValues("大块头的", "强壮的", "肌肉发达的"))+"二把手");
 
 				rat = new RatGangMember(Gender.getGenderFromUserPreferences(false, false));
 				Main.game.addNPC(rat, false);
 				rat.setLevel(9);
 				rat.setLocation(Main.game.getPlayer(), true);
-				adjectives.add(Main.game.getCharacterUtils().setGenericName(rat, "sidekick", adjectives));
+				adjectives.add(Main.game.getCharacterUtils().setGenericName(rat, "跟班", adjectives));
 				
 				Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensEntranceGuardsFight, false);
 				
@@ -317,7 +317,7 @@ public class RatWarrensDialogue {
 				Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensEntranceGuardsFight, true);
 			}
 			for(int i=0;i<(withLeader?totalRatsToSpawn-2:totalRatsToSpawn);i++) {
-				String[] names = new String[] {"thug", "gangster", "gang-member", "mobster"};
+				String[] names = new String[] {"恶棍", "匪徒", "帮派成员", "黑手党成员"};
 				NPC rat = new RatGangMember(Gender.getGenderFromUserPreferences(i==1, i==2));
 				Main.game.addNPC(rat, false);
 				rat.setLevel(8-i);
@@ -341,7 +341,7 @@ public class RatWarrensDialogue {
 		}
 		try {
 			Main.game.addNPC(gambler, false);
-			Main.game.getCharacterUtils().setGenericName(gambler, "gambler", null);
+			Main.game.getCharacterUtils().setGenericName(gambler, "赌徒", null);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -397,10 +397,10 @@ public class RatWarrensDialogue {
 	}
 	
 	private static String getCooperationWarning() {
-		return "<br/>[style.italicsSideQuest(You will be locked into the non-violent quest route if you select this option.)]";
+		return "<br/>[style.italicsSideQuest(如果选择此选项，游戏路线将被锁定为无暴力探索。)]";
 	}
 	
-	public static final DialogueNode RAT_WARREN_INITIAL_ENTRY = new DialogueNode("Entrance", "", true) {
+	public static final DialogueNode RAT_WARREN_INITIAL_ENTRY = new DialogueNode("入口", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -422,7 +422,7 @@ public class RatWarrensDialogue {
 				
 			} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensEntry)) { // They let you in again:
 				if(index==1) {
-					return new Response("Confidential", "Tell the rats that your business is private, and that Vengar will be angry if they delay your entry.", ENTRANCE_NO_CONTENT) {
+					return new Response("机密", "告诉老鼠们你有私人事务，如果他们阻止你入场，文加会生气。", ENTRANCE_NO_CONTENT) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "ENTRANCE_REPEAT_ACCESSED", getGuards(true)));
@@ -432,7 +432,7 @@ public class RatWarrensDialogue {
 			}
 			
 			if(index==1) {
-				return new Response("Axel", "Tell the gang members that you're here to discuss the matter of Axel's payments with Vengar.", ENTRANCE_NO_CONTENT) {
+				return new Response("阿克塞尔", "告诉帮派成员，你是来和文加讨论阿克塞尔的账单的。", ENTRANCE_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensEntry, true);
@@ -441,7 +441,7 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Whore", "Tell the gang members that you're a whore who's been hired to pleasure Vengar.", RAT_WARREN_INITIAL_ENTRY_WHORE) {
+				return new Response("妓女", "告诉帮派成员你是被雇来取悦文加的妓女。", RAT_WARREN_INITIAL_ENTRY_WHORE) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensEntryWhore, true);
@@ -449,7 +449,7 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if(index==3) {
-				return new Response("Challenge", "Tell the gang members that you're here to fight.<br/>[style.italicsBad(This will undoubtedly result in a significant amount of gang members arriving as backup!)]", ENTRANCE_FIGHT) {
+				return new Response("挑战", "告诉帮派成员你是来找茬的。<br/>[style.italicsBad(毫无疑问这会引来一大帮难搞的帮派成员来支援！)]", ENTRANCE_FIGHT) {
 					@Override
 					public void effects() {
 						spawnGuards(false, 1);
@@ -467,7 +467,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode RAT_WARREN_INITIAL_ENTRY_WHORE = new DialogueNode("Entrance", "", true) {
+	public static final DialogueNode RAT_WARREN_INITIAL_ENTRY_WHORE = new DialogueNode("入口", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -479,7 +479,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Refuse", "Tell the gang members that Vengar would be upset with them if he didn't get to be the first to fuck you.", ENTRANCE_NO_CONTENT){
+				return new Response("推辞", "告诉帮派成员，如果文加没第一个操到你，他就会生气。", ENTRANCE_NO_CONTENT){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "RAT_WARREN_INITIAL_ENTRY_WHORE_NO_SEX", getGuards(true)));
@@ -489,11 +489,11 @@ public class RatWarrensDialogue {
 			} else if(index==2) {
 				return new ResponseSex(
 						isCompanionDialogue()
-							?"Sex (solo)"
-							:"Sex",
+							?"做爱 (单人)"
+							:"做爱",
 						isCompanionDialogue()
-							?UtilText.parse(getMainCompanion(), "Tell the gang members that you'd be happy to show them what you're capable of, but that [npc.name] is going to save [npc.herself] for Vengar...")
-							:"Tell the gang members that you'd be happy to show them what you're capable of...",
+							?UtilText.parse(getMainCompanion(), "告诉帮派成员你很乐意让他们看看你的能耐，但那个[npc.name]打算为了文加保留[npc.herself]……")
+							:"告诉帮派成员你很乐意让他们看看你的能耐……",
 						Util.newArrayListOfValues(
 								Fetish.FETISH_SUBMISSIVE),
 						null,
@@ -522,13 +522,13 @@ public class RatWarrensDialogue {
 				GameCharacter companion = getMainCompanion();
 				
 				if(!companion.isAttractedToGroup(getGuards(false)) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response(UtilText.parse(companion, "Sex (both)"),
-							UtilText.parse(getGuards(true), "You can tell that [npc.name] isn't at all interested in having sex with [npc2.name] or [npc3.name], and you can't force [npc.herHim] into it..."),
+					return new Response(UtilText.parse(companion, "双飞"),
+							UtilText.parse(getGuards(true), "你可以看出，[npc.name]对与[npc2.name]或[npc3.name]发生性关系一点兴趣都没有，你也不能强迫[npc.herHim]这样做……"),
 							null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Sex (both)"),
-							UtilText.parse(getGuards(true), "Tell the gang members that both you and [npc.name] would be happy to show them what you're capable of."),
+					return new ResponseSex(UtilText.parse(companion, "做爱(双人)"),
+							UtilText.parse(getGuards(true), "告诉帮派成员，你和[npc.name]都很乐意向他们展示你的能力。"),
 							Util.newArrayListOfValues(
 									Fetish.FETISH_SUBMISSIVE),
 							null,
@@ -558,13 +558,13 @@ public class RatWarrensDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!companion.isAttractedToGroup(getGuards(false)) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-							UtilText.parse(getGuards(true), "You can tell that [npc2.name] isn't at all interested in having sex with [npc.name], and you can't force [npc2.herHim] to do so..."),
+					return new Response(UtilText.parse(companion, "献上[npc.name]"),
+							UtilText.parse(getGuards(true), "你可以看出[npc2.name]对与[npc.name]发生性关系一点兴趣都没有，你也不能强迫[npc2.herHim]这样做……"),
 							null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-							UtilText.parse(getMainCompanion(), "Tell the gang members that you'd be happy to let [npc.name] show them what [npc.sheIs] capable of, but that you're going to save yourself for Vengar..."),
+					return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+							UtilText.parse(getMainCompanion(), "告诉帮派成员，你很乐意让[npc.name]向他们展示[npc.sheIs]的能力，但你要把自己留给文加……"),
 							Util.newArrayListOfValues(
 									Fetish.FETISH_VOYEURIST),
 							null,
@@ -592,7 +592,7 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_ENTRANCE_SEX = new DialogueNode("Finished", "The gang members have finished...", false) {
+	public static final DialogueNode AFTER_ENTRANCE_SEX = new DialogueNode("结束", "帮派成员做完了……", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -628,8 +628,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Fight",
-						"Defend yourself against the rats!",
+				return new ResponseCombat("战斗",
+						"抵御这群老鼠的袭击！",
 						(NPC)getGuardLeader(),
 						getGuards(false),
 						new HashMap<>());
@@ -638,7 +638,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode GUARD_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode GUARD_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 //			if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.RAT_WARRENS_CHECKPOINT_LEFT
@@ -667,10 +667,10 @@ public class RatWarrensDialogue {
 		public String getResponseTabTitle(int index) {
 			if(!getGuards(false).isEmpty()) {
 				if(index==0) {
-					return "Interactions";
+					return "互动";
 					
 				} else if(index==1) {
-					return "Inventories";
+					return "物品栏";
 				}
 			}
  			return null;
@@ -680,7 +680,7 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getGuards(false).isEmpty()) {
 				if (index == 1) {
-					return new Response("Continue", "As you've enslaved all of the gang members who dared to fight you, there's nothing left to do but continue on your way...", Main.game.getDefaultDialogue(false)) {
+					return new Response("继续", "你把那些胆敢对你动手的家伙都奴役了，在这里已经无事可做，只好继续旅程……", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "GUARD_COMBAT_VICTORY_ALL_ENSLAVED"));
@@ -691,7 +691,7 @@ public class RatWarrensDialogue {
 			}
 			if(responseTab == 0) {
 				if (index == 1) {
-					return new Response("Scare off", "Tell the gang members to get out of here while they still can...", Main.game.getDefaultDialogue(false)) {
+					return new Response("吓退", "告诉那群帮派成员最好趁着还能逃跑赶紧离开……", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "GUARD_COMBAT_VICTORY_SCARE_OFF", getGuards(false)));
@@ -702,11 +702,11 @@ public class RatWarrensDialogue {
 				} else if (index == 2) {
 					return new ResponseSex(
 							isCompanionDialogue()
-								?"Solo sex"
-								:"Sex",
+								?"单人做爱"
+								:"做爱",
 							isCompanionDialogue()
-								?UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the gang members.")
-								:"Have sex with the gang members.",
+								?UtilText.parse(getMainCompanion(), "告诉[npc.name]站到一旁，看着你和这群帮派成员做爱。")
+								:"和帮派成员做爱。",
 							true,
 							false,
 							Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -719,11 +719,11 @@ public class RatWarrensDialogue {
 				} else if (index == 3) {
 					return new ResponseSex(
 							isCompanionDialogue()
-								?"Solo sex (Gentle)"
-								:"Sex (Gentle)",
+								?"单人做爱(温柔)"
+								:"做爱(温柔)",
 							isCompanionDialogue()
-								?UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the gang members.")
-								:"Have sex with the gang members.",
+								?UtilText.parse(getMainCompanion(), "告诉[npc.name]站到一旁，看着你和这群帮派成员做爱。")
+								:"和帮派成员做爱。",
 							true,
 							false,
 							Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -737,11 +737,11 @@ public class RatWarrensDialogue {
 				} else if (index == 4) {
 					return new ResponseSex(
 							isCompanionDialogue()
-								?"Solo sex (Rough)"
-								:"Sex (Rough)",
+								?"单人做爱(粗暴)"
+								:"做爱(粗暴)",
 							isCompanionDialogue()
-								?UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the gang members.")
-								:"Have sex with the gang members.",
+								?UtilText.parse(getMainCompanion(), "告诉[npc.name]站到一旁，看着你和这群帮派成员做爱。")
+								:"和帮派成员做爱。",
 							true,
 							false,
 							Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -755,11 +755,11 @@ public class RatWarrensDialogue {
 				} else if (index == 5) {
 					return new ResponseSex(
 							isCompanionDialogue()
-								?"Solo submission"
-								:"Submit",
+								?"单人屈从"
+								:"顺从",
 							isCompanionDialogue()
-								?UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you submit to the gang members, allowing them to have dominant sex with you.")
-								:"Tell the gang members that they can have their way with you...",
+								?UtilText.parse(getMainCompanion(), "告诉[npc.name]站到一旁，看着你向这群帮派成员屈服，让他们主导你。")
+								:"告诉那群帮派成员可以随意摆布你……",
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 							null,
 							Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -779,12 +779,12 @@ public class RatWarrensDialogue {
 					GameCharacter companion = getMainCompanion();
 
 					if(!companion.isAttractedToGroup(getGuards(false)) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response("Group sex",
-								UtilText.parse(companion, "[npc.Name] is not interested in having sex with one or more of the gang members, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+						return new Response("群交",
+								UtilText.parse(companion, "[npc.Name]没兴趣根这些帮派成员做爱，而且[npc.sheIs]不是奴隶，你也不能强迫[npc.herHim]……"), null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Group sex"),
-								UtilText.parse(companion, "Have dominant sex with the gang members, and get [npc.name] to join in with the fun."),
+						return new ResponseSex(UtilText.parse(companion, "群交"),
+								UtilText.parse(companion, "跟这些帮派成员来一场支配型性爱，并且让[npc.name]也一同加入。"),
 								true,
 								false,
 								Main.game.getPlayer().getParty(),
@@ -799,12 +799,12 @@ public class RatWarrensDialogue {
 					GameCharacter companion = getMainCompanion();
 
 					if(!companion.isAttractedToGroup(getGuards(false)) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response("Group submission",
-								UtilText.parse(companion, "[npc.Name] is not interested in having sex with one or more of the gang members, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+						return new Response("群体屈从",
+								UtilText.parse(companion, "[npc.Name]没兴趣根这些帮派成员做爱，而且[npc.sheIs]不是奴隶，你也不能强迫[npc.herHim]……"), null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Group submission"),
-								UtilText.parse(companion, "Get [npc.name] to join you in submitting to the gang members, allowing them to have dominant sex with the two of you."),
+						return new ResponseSex(UtilText.parse(companion, "群体屈从"),
+								UtilText.parse(companion, "让[npc.name]跟你一起向这些帮派成员屈服，任他们支配你们两个。"),
 								true,
 								false,
 								getGuards(false),
@@ -819,12 +819,12 @@ public class RatWarrensDialogue {
 					GameCharacter companion = getMainCompanion();
 
 					if(!companion.isAttractedToGroup(getGuards(false)) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(companion, "Give to [npc.name]"),
-								UtilText.parse(companion, "[npc.Name] is not interested in having sex with one or more of the gang members, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+						return new Response(UtilText.parse(companion, "给[npc.name]"),
+								UtilText.parse(companion, "[npc.Name]没兴趣根这些帮派成员做爱，而且[npc.sheIs]不是奴隶，你也不能强迫[npc.herHim]……"), null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Give to [npc.name]"),
-								UtilText.parse(companion, "Tell [npc.name] that [npc.she] can have some fun with the gang members while you watch."),
+						return new ResponseSex(UtilText.parse(companion, "交给[npc.name]"),
+								UtilText.parse(companion, "告诉[npc.name]说[npc.she]可以跟这些帮派成员爽一爽，你在旁边看着。"),
 								false,
 								false,
 								Util.newArrayListOfValues(getMainCompanion()),
@@ -839,13 +839,13 @@ public class RatWarrensDialogue {
 					GameCharacter companion = getMainCompanion();
 					
 					if(!companion.isAttractedToGroup(getGuards(false)) && ((companion.isAbleToRefuseSexAsCompanion()) || !Main.game.isNonConEnabled())) {
-						return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(companion, "You can tell that [npc.name] isn't at all interested in having sex with the gang members, and you can't force [npc.herHim] to do so..."),
+						return new Response(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(companion, "你看得出来[npc.name]并没有兴趣跟这群帮派成员做爱，而且你也不能强迫[npc.herHim]……"),
 								null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(companion, "Hand [npc.name] over to the gang members, and watch as they have sex with [npc.herHim]."),
+						return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(companion, "将帮派成员都交给[npc.name]，他们做爱的时候你在一旁观看。"),
 								true,
 								false,
 								getGuards(false),
@@ -872,7 +872,7 @@ public class RatWarrensDialogue {
 					if(index==i) {
 						NPC guard = (NPC) getGuards(false).get(i-1);
 						return new ResponseEffectsOnly(UtilText.parse(guard, "[npc.Name]"),
-								UtilText.parse(guard, "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...")) {
+								UtilText.parse(guard, "你已经击败了[npc.name]，要扒衣服还是抢东西都随你的便了……")) {
 							@Override
 							public void effects() {
 								Main.mainController.openInventory(guard, InventoryInteraction.FULL_MANAGEMENT);
@@ -886,7 +886,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode GUARD_COMBAT_VICTORY_AFTER_SEX = new DialogueNode("Step back", "Now that you've had your fun, you step back and wonder what to do with the gang members...", true) {
+	public static final DialogueNode GUARD_COMBAT_VICTORY_AFTER_SEX = new DialogueNode("退开", "你已经享受够了，便退开来，思考起该对帮派成员做些什么……", true) {
 
 		@Override
 		public String getContent() {
@@ -912,7 +912,7 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getGuards(false).isEmpty()) {
 				if (index == 1) {
-					return new Response("Continue", "As you've enslaved all of the gang members who dared to fight you, there's nothing left to do but continue on your way...", Main.game.getDefaultDialogue(false)) {
+					return new Response("继续", "你把那些胆敢对你动手的家伙都奴役了，在这里已经无事可做，只好继续旅程……", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "GUARD_COMBAT_VICTORY_ALL_ENSLAVED"));
@@ -923,7 +923,7 @@ public class RatWarrensDialogue {
 			}
 			if(responseTab==0) {
 				if (index == 1) {
-					return new Response("Scare off", "Scare the gang members off and continue on your way.", Main.game.getDefaultDialogue(false)) {
+					return new Response("吓退", "把帮派成员吓退，继续前进。", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							banishGuards(true);
@@ -940,7 +940,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode GUARD_COMBAT_DEFEAT = new DialogueNode("Defeat", "", true) {
+	public static final DialogueNode GUARD_COMBAT_DEFEAT = new DialogueNode("落败", "", true) {
 		@Override
 		public String getContent() {
 			if(!Main.game.isNonConEnabled()) {
@@ -952,7 +952,7 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.isNonConEnabled()) {
 				if(index==1) {
-					return new Response("Thrown out", "The gang members unceremoniously throw you back out into Submission's tunnels.", PlaceType.SUBMISSION_RAT_WARREN.getDialogue(false)) {
+					return new Response("被扔出去", "帮派成员一起毫不留情地把你扔回了屈城区隧道里。", PlaceType.SUBMISSION_RAT_WARREN.getDialogue(false)) {
 						@Override
 						public int getSecondsPassed() {
 							return 30*60;
@@ -974,9 +974,9 @@ public class RatWarrensDialogue {
 			} else {
 				if(index == 1) {
 					if(isCompanionDialogue()) {
-						return new Response("Save [com.name]",
-								"Use the last of your energy to hold off the rats long enough for [com.name] to escape."
-										+ "<br/>[style.italicsMinorGood([com.Name] will safely return home.)]",
+						return new Response("保护[com.name]",
+								"动用最后一丝力量拖住这些老鼠，让[com.name]逃走。"
+										+ "<br/>[style.italicsMinorGood([com.Name]将会平安无事地回到家。)]",
 								GUARD_COMBAT_DEFEAT_STOCKS) {
 							@Override
 							public void effects() {
@@ -1002,8 +1002,8 @@ public class RatWarrensDialogue {
 						};
 						
 					} else {
-						return new Response("Dragged away",
-								UtilText.parse(getGuards(false), "You are powerless to resist as the gang members drag you off deeper into their lair..."),
+						return new Response("被拖走",
+								UtilText.parse(getGuards(false), "你已经无力抵抗，只能任由这群帮派成员把你拖进这匪窝深处……"),
 								GUARD_COMBAT_DEFEAT_STOCKS) {
 							@Override
 							public void effects() {
@@ -1136,8 +1136,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Stripped",
-						UtilText.parse(getGuards(false), "Murk and [npc.name] set about stripping you naked..."),
+				return new Response("被剥光",
+						UtilText.parse(getGuards(false), "默克和[npc.name]上来把你扒了个精光……"),
 						GUARD_COMBAT_DEFEAT_STOCKS_STRIPPED) {
 					@Override
 					public void effects() {
@@ -1161,8 +1161,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("New home",
-						UtilText.parse(getGuards(false), "Murk and [npc.name] lead you into the adjoining room to introduce you to your 'new home'..."),
+				return new Response("新家",
+						UtilText.parse(getGuards(false), "默克和[npc.name]把你带去了邻接的房间，送去了“新家”……"),
 						GUARD_COMBAT_DEFEAT_STOCKS_STRIPPED_END) {
 					@Override
 					public void effects() {
@@ -1220,8 +1220,8 @@ public class RatWarrensDialogue {
 			List<GameCharacter> guards = getGuards(false);
 			
 			if (index == 1) {
-				return new ResponseSex("Oral",
-						UtilText.parse(getGuards(false), "Do what's expected of you and obediently perform oral on [npc.name]."),
+				return new ResponseSex("口交",
+						UtilText.parse(getGuards(false), "就如他们期待的那样，顺从地给[npc.name]口交起来。"),
 						false,
 						false,
 						getStocksManager(guards, null),
@@ -1240,8 +1240,8 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseSex("Eager oral",
-						UtilText.parse(getGuards(false), "Make a show of how willing you are to obediently perform oral on [npc.name]."),
+				return new ResponseSex("饥渴地口交",
+						UtilText.parse(getGuards(false), "顺从地给[npc.name]口交，展现出你多么地心甘情愿。"),
 						false,
 						false,
 						getStocksManager(guards, SexPace.SUB_EAGER),
@@ -1260,8 +1260,8 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if (index == 3) {
-				return new ResponseSex("Resist oral",
-						UtilText.parse(getGuards(false), "Do your best to resist performing oral on [npc.name]."),
+				return new ResponseSex("抵抗口交",
+						UtilText.parse(getGuards(false), "竭尽全力避免给[npc.name]口交。"),
 						false,
 						false,
 						getStocksManager(guards, SexPace.SUB_RESISTING),
@@ -1284,14 +1284,14 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode GUARD_COMBAT_DEFEAT_STOCKS_AFTER_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode GUARD_COMBAT_DEFEAT_STOCKS_AFTER_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 15*60;
 		}
 		@Override
 		public String getDescription(){
-			return UtilText.parse(getGuards(false).get(0), "[npc.Name] has finished having [npc.her] way with you...");
+			return UtilText.parse(getGuards(false).get(0), "[npc.Name]已经跟你玩够了……");
 		}
 		@Override
 		public String getContent() {
@@ -1300,7 +1300,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Murk", "Murk reappears to tell you what's in store for you next...", RatWarrensCaptiveDialogue.CAPTIVE_DAY_0) {
+				return new Response("默克", "默克再次出现，告诉了你接下来还有什么在等着你……", RatWarrensCaptiveDialogue.CAPTIVE_DAY_0) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/captive", "CAPTIVE_DAY_0", getGuards(false)));
@@ -1314,7 +1314,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE_NO_CONTENT = new DialogueNode("Entrance", "", false) {
+	public static final DialogueNode ENTRANCE_NO_CONTENT = new DialogueNode("入口", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -1329,7 +1329,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE = new DialogueNode("Entrance", "", false) {
+	public static final DialogueNode ENTRANCE = new DialogueNode("入口", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -1342,9 +1342,9 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensHostile)) {
-					return new Response("Leave", "The rats have sealed the doors, preventing your escape! You'll have to confront Vengar in order to get out of here now...", null);
+					return new Response("离开", "这群老鼠封住了门，阻止了你逃离！现在如果想离开，就必须直面文加……", null);
 				}
-				return new Response("Leave", "Tell the gang members that you're leaving, and head back out into Submission's tunnels.", SubmissionGenericPlaces.RAT_WARREN) {
+				return new Response("离开", "告诉帮派成员你要离开了，于是回到了屈城区的隧道里。", SubmissionGenericPlaces.RAT_WARREN) {
 					@Override
 					public void effects() {
 						exit();
@@ -1363,7 +1363,7 @@ public class RatWarrensDialogue {
 			} else if(index==6
 					&& !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedCentre)
 					&& !Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_VENGAR, Quest.VENGAR_TWO_COOPERATION)) {
-				return new Response("Challenge", "Tell the gang members that you're here to fight.<br/>[style.italicsBad(This will undoubtedly result in a significant amount of gang members arriving as backup!)]", ENTRANCE_FIGHT) {
+				return new Response("挑战", "告诉帮派成员你是来找茬的。<br/>[style.italicsBad(毫无疑问这会引来一大帮难搞的帮派成员来支援！)]", ENTRANCE_FIGHT) {
 					@Override
 					public void effects() {
 						spawnGuards(false, 1);
@@ -1380,7 +1380,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode CORRIDOR = new DialogueNode("Twisting Passageway", "", false) {
+	public static final DialogueNode CORRIDOR = new DialogueNode("曲折通道", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.RAT_WARRENS_CHECKPOINT_LEFT
@@ -1458,8 +1458,8 @@ public class RatWarrensDialogue {
 				|| (Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.RAT_WARRENS_CHECKPOINT_RIGHT
 					&& Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedRight)!=Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedCentre))) {
 				if(index==1) {
-					return new ResponseCombat("Fight",
-							"The gang members aren't going to let you go without a fight, so you're forced to defend yourself!",
+					return new ResponseCombat("战斗",
+							"不打一架就无法摆脱这群帮派成员，你必须准备好自卫了！",
 							(NPC)getGuardLeader(),
 							getGuards(false),
 							new HashMap<>());
@@ -1469,7 +1469,7 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode DORMITORY = new DialogueNode("Dormitory", "", false) {
+	public static final DialogueNode DORMITORY = new DialogueNode("宿舍", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -1495,7 +1495,7 @@ public class RatWarrensDialogue {
 					&& !Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_VENGAR, Quest.VENGAR_TWO_COOPERATION)
 					&& ((Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.RAT_WARRENS_DORMITORY_LEFT && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft))
 							|| (Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.RAT_WARRENS_DORMITORY_RIGHT && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedRight)))) {
-				return new Response("Challenge", "Tell the gang members that you're here to fight.<br/>[style.italicsBad(This will undoubtedly result in a significant amount of gang members arriving as backup!)]", ENTRANCE_FIGHT) {
+				return new Response("挑战", "告诉帮派成员你是来找茬的。<br/>[style.italicsBad(毫无疑问这会引来一大帮难搞的帮派成员来支援！)]", ENTRANCE_FIGHT) {
 					@Override
 					public void effects() {
 						spawnGuards(true, 4);
@@ -1512,7 +1512,7 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode DICE_DEN = new DialogueNode("Dice Den", "", false) {
+	public static final DialogueNode DICE_DEN = new DialogueNode("骰子赌场", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -1529,10 +1529,10 @@ public class RatWarrensDialogue {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensHostile)) {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensLootedDiceDen)) {
-						return new Response("Loot bar", "You've already taken everything of value from behind the bar...", null);
+						return new Response("搜刮吧台", "你已经把吧台上值钱的东西都拿走了……", null);
 						
 					} else {
-						return new Response("Loot bar", "Take a look behind the bar and see if there's anything worth taking...", DICE_DEN_LOOT) {
+						return new Response("搜刮吧台", "看一眼吧台后面，有没有值得一拿的东西……", DICE_DEN_LOOT) {
 							@Override
 							public void effects() {
 								Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensLootedDiceDen, true);
@@ -1551,9 +1551,9 @@ public class RatWarrensDialogue {
 				
 				if(index==1) {
 					if(Main.game.getPlayer().getMoney()>=buyIn) {
-						return new ResponseEffectsOnly("[style.colourMasculine(Rat-boy)] ("+UtilText.formatAsMoney(buyIn, "span")+")",
-								"Start playing dice poker with one of the rat-boys. The buy-in amount is "+UtilText.formatAsMoney(table.getInitialBet(), "span")
-									+", but you'll also need "+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+" for any raises.") {
+						return new ResponseEffectsOnly("[style.colourMasculine(鼠男)]("+UtilText.formatAsMoney(buyIn, "span")+")",
+								"跟其中一个鼠男打骰子扑克。买入金额为"+UtilText.formatAsMoney(table.getInitialBet(), "span")
+									+"，但想要加注则还需要"+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+"。") {
 							@Override
 							public void effects() {
 								gambler = generateGambler(Femininity.MASCULINE);
@@ -1563,17 +1563,17 @@ public class RatWarrensDialogue {
 						};
 						
 					} else {
-						return new Response("Rat-boy ("+UtilText.formatAsMoneyUncoloured(buyIn, "span")+")",
-								"The buy-in amount is "+UtilText.formatAsMoney(table.getInitialBet(), "span")
-								+", but you'll also need "+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+" for any raises. As a result, you don't have enough money to play with the rat-boy!",
+						return new Response("鼠男("+UtilText.formatAsMoneyUncoloured(buyIn, "span")+")",
+								"买入金额为"+UtilText.formatAsMoney(table.getInitialBet(), "span")
+								+"，但想要加注则还需要"+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+"。所以你钱不够跟这个鼠男赌！",
 								null);
 					}
 					
 				} else if(index==2) {
 					if(Main.game.getPlayer().getMoney()>=buyIn) {
-						return new ResponseEffectsOnly("[style.colourFeminine(Rat-girl)] ("+UtilText.formatAsMoney(buyIn, "span")+")",
-								"Start playing dice poker with one of the rat-girls. The buy-in amount is "+UtilText.formatAsMoney(table.getInitialBet(), "span")
-									+", but you'll also need "+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+" for any raises.") {
+						return new ResponseEffectsOnly("[style.colourFeminine(鼠女)]("+UtilText.formatAsMoney(buyIn, "span")+")",
+								"跟其中一个鼠女打骰子扑克。买入金额为"+UtilText.formatAsMoney(table.getInitialBet(), "span")
+									+"，但想要加注则还需要"+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+"。") {
 							@Override
 							public void effects() {
 								gambler = generateGambler(Femininity.FEMININE);
@@ -1582,24 +1582,24 @@ public class RatWarrensDialogue {
 						};
 						
 					} else {
-						return new Response("Rat-girl ("+UtilText.formatAsMoneyUncoloured(buyIn, "span")+")",
-								"The buy-in amount is "+UtilText.formatAsMoney(table.getInitialBet(), "span")
-								+", but you'll also need "+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+" for any raises. As a result, you don't have enough money to play with the rat-girl!",
+						return new Response("鼠女 ("+UtilText.formatAsMoneyUncoloured(buyIn, "span")+")",
+								"买入金额为"+UtilText.formatAsMoney(table.getInitialBet(), "span")
+								+"，但想要加注则还需要"+UtilText.formatAsMoney(table.getRaiseAmount(), "span")+"。所以你钱不够跟这个鼠女赌！",
 								null);
 					}
 					
 				} else if(index==3) {
-					return new Response("Rules", UtilText.parse(getGuards(false).get(0), "Ask [npc.name] what the rules of dice poker are."), DICE_DEN_RULES);
+					return new Response("规则", UtilText.parse(getGuards(false).get(0), "询问[npc.name]骰子扑克的规则。"), DICE_DEN_RULES);
 
 				} else if(index==4) {
 					int price = getRumPrice();
 					if(!Main.game.getPlayer().isCoverableAreaExposed(CoverableArea.MOUTH)) {
-						return new Response("Rum ("+UtilText.formatAsMoneyUncoloured(price, "span")+")", "You can't drink a glass of rum, as your mouth is blocked...", null);
+						return new Response("朗姆酒("+UtilText.formatAsMoneyUncoloured(price, "span")+")", "你的嘴巴被封住了，喝不了朗姆酒……", null);
 					}
 					if(Main.game.getPlayer().getMoney()<price) {
-						return new Response("Rum ("+UtilText.formatAsMoneyUncoloured(price, "span")+")", "You can't afford to buy a glass of rum from the rat behind the bar...", null);
+						return new Response("朗姆酒("+UtilText.formatAsMoneyUncoloured(price, "span")+")", "你想买一杯朗姆酒，但没有那么多钱付给吧台后那老鼠……", null);
 					}
-					return new Response("Rum ("+UtilText.formatAsMoney(price, "span")+")", "Buy a glass of rum from the rat behind the bar.", DICE_DEN_RUM) {
+					return new Response("朗姆酒("+UtilText.formatAsMoney(price, "span")+")", "向吧台后面那老鼠买一杯朗姆酒。", DICE_DEN_RUM) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "DICE_DEN_RUM_DRINK", getGuards(true)));
@@ -1613,17 +1613,17 @@ public class RatWarrensDialogue {
 				} else if(index==5 && isCompanionDialogue()) {
 					int price = getRumPrice();
 					if(!getMainCompanion().isCoverableAreaExposed(CoverableArea.MOUTH)) {
-						return new Response("Rum ("+UtilText.parse(getMainCompanion(), "[npc.name]")+") ("+UtilText.formatAsMoneyUncoloured(price, "span")+")",
-								UtilText.parse(getMainCompanion(), "[npc.Name] can't drink a glass of rum, as [npc.her] mouth is blocked..."),
+						return new Response("朗姆酒("+UtilText.parse(getMainCompanion(), "[npc.name]")+") ("+UtilText.formatAsMoneyUncoloured(price, "span")+")",
+								UtilText.parse(getMainCompanion(), "[npc.Name]的嘴巴被堵住了，喝不了朗姆酒……"),
 								null);
 					}
 					if(Main.game.getPlayer().getMoney()<price) {
-						return new Response("Rum ("+UtilText.parse(getMainCompanion(), "[npc.name]")+") ("+UtilText.formatAsMoneyUncoloured(price, "span")+")",
-								UtilText.parse(getMainCompanion(), "You can't afford to buy a glass of rum for [npc.name] from the rat behind the bar..."),
+						return new Response("朗姆酒("+UtilText.parse(getMainCompanion(), "[npc.name]")+") ("+UtilText.formatAsMoneyUncoloured(price, "span")+")",
+								UtilText.parse(getMainCompanion(), "你想买一杯朗姆酒给[npc.name]，但没有那么多钱付给吧台后那老鼠……"),
 								null);
 					}
-					return new Response("Rum ("+UtilText.parse(getMainCompanion(), "[npc.name]")+") ("+UtilText.formatAsMoney(price, "span")+")",
-							UtilText.parse(getMainCompanion(), "Buy a glass of rum for [npc.name] from the rat behind the bar."),
+					return new Response("朗姆酒("+UtilText.parse(getMainCompanion(), "[npc.name]")+") ("+UtilText.formatAsMoney(price, "span")+")",
+							UtilText.parse(getMainCompanion(), "向吧台后面那老鼠买一杯朗姆酒给[npc.Name]。"),
 							DICE_DEN_RUM) {
 						@Override
 						public void effects() {
@@ -1637,7 +1637,7 @@ public class RatWarrensDialogue {
 					
 				} else if(index==6
 						&& !Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_VENGAR, Quest.VENGAR_TWO_COOPERATION)) {
-					return new Response("Challenge", "Tell the gang members that you're here to fight.<br/>[style.italicsBad(This will undoubtedly result in a significant amount of gang members arriving as backup!)]", ENTRANCE_FIGHT) {
+					return new Response("挑战", "告诉帮派成员你是来找茬的。<br/>[style.italicsBad(毫无疑问这会引来一大帮难搞的帮派成员来支援！)]", ENTRANCE_FIGHT) {
 						@Override
 						public void effects() {
 							spawnGuards(false, 1); // Set to 1 as the bar-tender makes the 2nd, and the entrance guards make 3rd and 4th
@@ -1659,7 +1659,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode DICE_DEN_LOOT = new DialogueNode("Dice Den", "", false) {
+	public static final DialogueNode DICE_DEN_LOOT = new DialogueNode("骰子赌场", "", false) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "DICE_DEN_LOOT", getGuards(true));
@@ -1671,7 +1671,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode DICE_DEN_RULES = new DialogueNode("Dice Den", "", false) {
+	public static final DialogueNode DICE_DEN_RULES = new DialogueNode("骰子赌场", "", false) {
 		
 		@Override
 		public String getContent() {
@@ -1681,13 +1681,13 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==3) {
-				return new Response("Rules", UtilText.parse(getGuards(false).get(0), "You are already asking [npc.name] what the rules of dice poker are."), DICE_DEN_RULES);
+				return new Response("规则", UtilText.parse(getGuards(false).get(0), "你已经问过[npc.name]骰子扑克的规则了。"), DICE_DEN_RULES);
 			}
 			return DICE_DEN.getResponse(responseTab, index);
 		}
 	};
 	
-	public static final DialogueNode DICE_DEN_POST_GAMBLING = new DialogueNode("Dice Den", "", false) {
+	public static final DialogueNode DICE_DEN_POST_GAMBLING = new DialogueNode("骰子赌场", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.banishNPC(gambler);
@@ -1708,7 +1708,7 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode DICE_DEN_RUM = new DialogueNode("Dice Den", "", true) {
+	public static final DialogueNode DICE_DEN_RUM = new DialogueNode("骰子赌场", "", true) {
 		@Override
 		public String getContent() {
 			return "";
@@ -1718,15 +1718,15 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			NPC bartender = (NPC) getGuards(false).get(0);
 			if(index==1) {
-				return new Response("Refuse", UtilText.parse(bartender, "Refuse [npc.namePos] offer..."), DICE_DEN);
+				return new Response("拒绝", UtilText.parse(bartender, "拒绝[npc.namePos]的提议……"), DICE_DEN);
 				
 			} else if(index==2) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Accept", UtilText.parse(bartender, "As you cannot access your mouth, you cannot perform oral on [npc.name] in order to get your flames back..."), null);
+					return new Response("接受", UtilText.parse(bartender, "你无法使用自己的嘴巴，所以不能用嘴巴侍奉[npc.name]，来拿回火币……"), null);
 				}
 				return new ResponseSex(
-						"Accept",
-						UtilText.parse(bartender, "Get paid "+getRumPrice()+" flames to perform oral on [npc.name]..."),
+						"接受",
+						UtilText.parse(bartender, "收下"+getRumPrice()+"火币，用嘴巴侍奉[npc.name]……"),
 						true,
 						false,
 						new SMStanding(
@@ -1809,16 +1809,16 @@ public class RatWarrensDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!companion.isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Offer [com.name]", UtilText.parse(companion, bartender, "As [npc.name] cannot access [npc.her] mouth, [npc.she] cannot perform oral on [npc2.name] in order to get your flames back..."), null);
+					return new Response("献出[com.name]", UtilText.parse(companion, bartender, "[npc.name]无法使用自己的嘴巴，所以不能用嘴巴侍奉[npc2.name]，来拿回火币……"), null);
 				}
 				if(!companion.isAttractedToGroup(getGuards(false)) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-							UtilText.parse(companion, bartender, "You can tell that [npc.name] isn't at all interested in performing oral on [npc2.name], and you can't force [npc.herHim] to do so..."),
+					return new Response(UtilText.parse(companion, "献上[npc.name]"),
+							UtilText.parse(companion, bartender, "你看得出来[npc.name]不愿意用嘴巴侍奉[npc2.name]，也无法强迫[npc.herHim]……"),
 							null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-									UtilText.parse(companion, bartender, "Get paid "+getRumPrice()+" flames to have [npc.name] perform oral on [npc2.name]..."),
+					return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+									UtilText.parse(companion, bartender, "收下"+getRumPrice()+"火币，让[npc.Name]用嘴巴侍奉[npc2.name]……"),
 									true,
 									false,
 									new SMStanding(
@@ -1902,14 +1902,14 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_DICE_DEN_ORAL = new DialogueNode("Finished", "", false) {
+	public static final DialogueNode AFTER_DICE_DEN_ORAL = new DialogueNode("结束", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(getRumPrice()));
 		}
 		@Override
 		public String getDescription() {
-			return UtilText.parse((NPC) getGuards(false).get(0), "[npc.Name] has finished...");
+			return UtilText.parse((NPC) getGuards(false).get(0), "[npc.Name]做够了……");
 		}
 		@Override
 		public String getContent() {
@@ -1925,7 +1925,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode MILKING_STORAGE = new DialogueNode("Entrance", "", true) {
+	public static final DialogueNode MILKING_STORAGE = new DialogueNode("入口", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_VENGAR)
@@ -1965,7 +1965,7 @@ public class RatWarrensDialogue {
 			}
 			if(Main.game.getPlayer().isCaptive()) {
 				if(index==1) {
-					return new Response("Step back", "You can't get very far with the chain restricting your movements...", RatWarrensCaptiveDialogue.CAPTIVE_NIGHT) {
+					return new Response("退开", "锁链限制着你的行动，你并不能离开太远……", RatWarrensCaptiveDialogue.CAPTIVE_NIGHT) {
 						@Override
 						public int getSecondsPassed() {
 							return 0; // So that the player can't advance days by repeatedly moving back and forth.
@@ -1981,7 +1981,7 @@ public class RatWarrensDialogue {
 				
 			} else if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
 				if(index==1) {
-					return new Response("Step back", "Do as Murk says and leave.", CORRIDOR) {
+					return new Response("退开", "按默克说的做，离开。", CORRIDOR) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.murkIntroduced, true);
@@ -1991,11 +1991,11 @@ public class RatWarrensDialogue {
 					
 				} else if(index==2) {
 					if(Main.game.getHourOfDay()<14 || Main.game.getHourOfDay()>=22) {
-						return new Response("Milkers ("+UtilText.formatAsMoneyUncoloured(500, "span")+")",
-								"Murk only rents out his milkers between [style.time(14)] and [style.time(22)], so if you wanted to pay them a visit, you'll have to come back between those times.",
+						return new Response("挤奶工("+UtilText.formatAsMoneyUncoloured(500, "span")+")",
+								"默克只有在[style.time(14)]到[style.time(22)]之间才会出租产奶工，如果你想找他们，必须在这段时间内再来。",
 								null);
 					}
-					return new Response("Milkers ("+UtilText.formatAsMoney(500, "span")+")", "Pay Murk 500 flames to gain access to his 'milkers'.", MILKING_ROOM) {
+					return new Response("挤奶工("+UtilText.formatAsMoney(500, "span")+")", "付给默克500火币，跟这些“挤奶工”接触。", MILKING_ROOM) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.murkIntroduced, true);
@@ -2011,7 +2011,7 @@ public class RatWarrensDialogue {
 					
 				} else if(index==6
 						&& !Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_VENGAR, Quest.VENGAR_TWO_COOPERATION)) {
-					return new Response("Challenge", "Tell Murk that you're here to fight.<br/>[style.italicsBad(This will undoubtedly result in a significant amount of gang members arriving as backup!)]", ENTRANCE_FIGHT) {
+					return new Response("挑战", "告诉默克你是来这里打架的。<br/>[style.italicsBad(毫无疑问这会引来一大帮难搞的帮派成员来支援！)]", ENTRANCE_FIGHT) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setNearestLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_CORRIDOR_LEFT, false);
@@ -2032,7 +2032,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode MILKING_ROOM = new DialogueNode("Milking Room", "", false) {
+	public static final DialogueNode MILKING_ROOM = new DialogueNode("挤奶室", "", false) {
 		@Override
 		public boolean isTravelDisabled() {
 			return !Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_VENGAR)
@@ -2061,12 +2061,12 @@ public class RatWarrensDialogue {
 			if(isCompanionDialogue()) {
 				switch(index) {
 					case 0:
-						return "You";
+						return "你";
 					case 1:
 						return UtilText.parse(getMainCompanion(), "[npc.Name]");
 					case 2:
 						if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
-							return "Both";
+							return "双人";
 						}
 						break;
 				}
@@ -2084,8 +2084,8 @@ public class RatWarrensDialogue {
 					GameCharacter milker = milkers.get(index-1);
 					if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
 						return new ResponseSex(
-								"Use "+milker.getName(true),
-								UtilText.parse(milker, "Choose to have sex with [npc.name]..."),
+								"使用"+milker.getName(true),
+								UtilText.parse(milker, "选择和[npc.name]做爱……"),
 								true,
 								false,
 								new SMMilkingStall(
@@ -2120,8 +2120,8 @@ public class RatWarrensDialogue {
 						
 					} else {
 						return new ResponseSex(
-								"Use "+milker.getName(true),
-								UtilText.parse(milker, "Now that you've defeated Murk and the gang members in this area, there's nobody to stop you from having sex with [npc.name]..."),
+								"使用"+milker.getName(true),
+								UtilText.parse(milker, "你已经击败了默克和一同前来的帮派成员，现在没人能阻止你跟[npc.name]做爱了……"),
 								true,
 								false,
 								new SMMilkingStall(
@@ -2159,14 +2159,14 @@ public class RatWarrensDialogue {
 					if(!getMainCompanion().isAttractedTo(milker) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 						return new Response(UtilText.parse(milker, "[npc.Name]"),
 								UtilText.parse(getMainCompanion(), milker,
-										"You can tell that [npc.name] isn't at all interested in having sex with [npc2.name], and you can't force [npc.herHim] to do so..."),
+										"你看得出来[npc.name]没兴趣跟[npc2.name]做爱，也不能强迫[npc.herHim]……"),
 								null);
 					}
 					
 					if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
 						return new ResponseSex(
 								UtilText.parse(milker, "[npc.Name]"),
-								UtilText.parse(getMainCompanion(), milker, "Tell [npc.name] to fuck [npc2.name] while you and Murk watch..."),
+								UtilText.parse(getMainCompanion(), milker, "让[npc.name]去干[npc2.name]，而你和默克在一旁观看……"),
 								true,
 								false,
 								new SMMilkingStall(
@@ -2202,7 +2202,7 @@ public class RatWarrensDialogue {
 					} else {
 						return new ResponseSex(
 								UtilText.parse(milker, "[npc.Name]"),
-								UtilText.parse(getMainCompanion(), milker, "Now that you've defeated Murk and the gang members in this area, there's nobody to stop you from ordering [npc.name] to have sex with [npc2.name] while you watch..."),
+								UtilText.parse(getMainCompanion(), milker, "你已经击败了默克和一同前来的帮派成员，现在没人能阻止你命令[npc.Name]跟[npc2.name]做爱了……"),
 								true,
 								false,
 								new SMMilkingStall(
@@ -2238,15 +2238,15 @@ public class RatWarrensDialogue {
 					GameCharacter milker = milkers.get(index-1);
 					
 					if(!getMainCompanion().isAttractedTo(milker) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(milker, "Both ([npc.Name])"),
+						return new Response(UtilText.parse(milker, "双人([npc.Name])"),
 								UtilText.parse(getMainCompanion(), milker,
-										"You can tell that [npc.name] isn't at all interested in having sex with [npc2.name], and you can't force [npc.herHim] to do so..."),
+										"你看得出来[npc.name]没兴趣跟[npc2.name]做爱，也不能强迫[npc.herHim]……"),
 								null);
 					}
 					
 					return new ResponseSex(
-							UtilText.parse(milker, "Both ([npc.Name])"),
-							UtilText.parse(getMainCompanion(), milker, "Now that you've defeated Murk and the gang members in this area, there's nobody to stop you and [npc.name] from having sex with [npc2.name]..."),
+							UtilText.parse(milker, "双人([npc.Name])"),
+							UtilText.parse(getMainCompanion(), milker, "你已经击败了默克和一同前来的帮派成员，现在没人能阻止你和[npc.Name]跟[npc2.name]做爱了……"),
 							true,
 							false,
 							new SMMilkingStall(
@@ -2283,13 +2283,13 @@ public class RatWarrensDialogue {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensMilkersFreeAttempt)) {
 						return new Response(
-								"Free captives",
-								"You've already tried to free the milkers, and discovered that they are entirely unwilling to escape with you...",
+								"释放俘虏",
+								"你已经尝试过解救这些产奶工，但却发现他们都不愿意跟你逃走……",
 								null);
 					}
 					return new Response(
-							"Free captives",
-							"Now that you've defeated the gang members in this area, there's nobody to stop you from freeing the captive humans...",
+							"释放俘虏",
+							"你已经击败该区域的帮派成员，现在没人能阻止你释放这些被俘虏的人类了……",
 							MILKING_ROOM_FREE_ATTEMPT) {
 						@Override
 						public void effects() {
@@ -2299,8 +2299,8 @@ public class RatWarrensDialogue {
 					
 				} else {
 					return new Response(
-							"Milkers",
-							"Ask Murk how he came to acquire these 'milkers'...",
+							"产奶工",
+							"询问默克他是怎么得到这些“产奶工”的……",
 							MILKING_ROOM_BACKGROUND) {
 						@Override
 						public void effects() {
@@ -2312,7 +2312,7 @@ public class RatWarrensDialogue {
 			} else if(index==6
 					&& !Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_VENGAR, Quest.VENGAR_TWO_COOPERATION)
 					&& !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
-				return new Response("Fight Murk", "Tell Murk that you're here to fight him.<br/>[style.italicsBad(This will undoubtedly result in a significant amount of gang members arriving as backup!)]", ENTRANCE_FIGHT) {
+				return new Response("与默克战斗", "告诉默克你是来这里打架的。<br/>[style.italicsBad(毫无疑问这会引来一大帮难搞的帮派成员来支援！)]", ENTRANCE_FIGHT) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensSeenMilkers, true);
@@ -2330,7 +2330,7 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if(index==0 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
-				return new Response("Leave", "Decide against having sex with any of the milkers and leave...<br/>[style.italicsBad(You will not get your money back!)]", MILKING_ROOM_BACKED_OUT) {
+				return new Response("离开", "决定还是不跟产奶工做爱，直接离开……<br/>[style.italicsBad(交出去的钱不会再还回来！)]", MILKING_ROOM_BACKED_OUT) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensSeenMilkers, true);
@@ -2361,7 +2361,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_MILKER_SEX = new DialogueNode("Finished", "Step back and decide what to do now that you've had your fun...", true) {
+	public static final DialogueNode AFTER_MILKER_SEX = new DialogueNode("结束", "退开。你已经爽够了，考虑之后去做什么……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensSeenMilkers, true);
@@ -2393,8 +2393,8 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensClearedLeft)) {
 				if(index==6 && !Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_VENGAR, Quest.VENGAR_TWO_COOPERATION)) {
-					return new Response("Fight Murk",
-							"Tell Murk that these girls are yours now, and that you're going to put him in his place.<br/>[style.italicsBad(This will undoubtedly result in a significant amount of gang members arriving as backup!)]",
+					return new Response("与默克战斗",
+							"告诉默克这些女的现在都归你，给他来点教训。<br/>[style.italicsBad(毫无疑问这会引来一大帮难搞的帮派成员来支援！)]",
 							ENTRANCE_FIGHT) {
 						@Override
 						public void effects() {
@@ -2430,8 +2430,8 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==5) {
 				return new Response(
-						"Milkers",
-						"You are already asking Murk about how he came to acquire these 'milkers'!",
+						"产奶工",
+						"你已经问过默克是怎么得到这些“产奶工”的了！",
 						null);
 			}
 			return MILKING_ROOM.getResponse(responseTab, index);
@@ -2453,7 +2453,7 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode VENGARS_HALL = new DialogueNode("Vengar's Hall", "", true) {
+	public static final DialogueNode VENGARS_HALL = new DialogueNode("文加的大厅", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -2465,12 +2465,12 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Approach",
+				return new Response("接近",
 						Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensHostile)
-							?"Approach Vengar and prepare to start fighting him."
+							?"接近文加，准备跟他战斗。"
 							:(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarIntroduced)
-								?"Approach Vengar and start talking to him."
-								:"Approach Vengar and introduce yourself to him."),
+								?"接近文加，准备跟他谈话。"
+								:"接近文加，向他自我介绍。"),
 						VENGARS_HALL_APPROACH) {
 					@Override
 					public void effects() {
@@ -2492,7 +2492,7 @@ public class RatWarrensDialogue {
 			}
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarIntroduced)) {
 				if(index==0) {
-					return new Response("Leave", "Decide against approaching Vengar, and instead turn around and exit the hall.", PlaceType.RAT_WARRENS_CORRIDOR_RIGHT.getDialogue(false)) {
+					return new Response("离开", "决定不接近文加，反而是转头离开大厅。", PlaceType.RAT_WARRENS_CORRIDOR_RIGHT.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setNearestLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_CORRIDOR_RIGHT, false);
@@ -2502,7 +2502,7 @@ public class RatWarrensDialogue {
 				
 			} else {
 				if(index==2 && Main.game.getPlayer().hasItemType(ItemType.RESONANCE_STONE)) {
-					return new Response("Resonance stone", "Use the resonance stone to signal the SWORD Enforcers to start their raid.", VENGARS_HALL_RESONANCE_STONE) {
+					return new Response("回声石", "使用回声石，向SWORD执法者传递信号，开始突袭。", VENGARS_HALL_RESONANCE_STONE) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ratWarrensUsedResonanceStone, true);
@@ -2528,8 +2528,8 @@ public class RatWarrensDialogue {
 			// Repeat encounters (after initial quest is resolved):
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.vengarIntroduced)) {
 				if(index==1) {
-					return new Response("Bedroom",
-							"Join Vengar in his private bed-chambers...",
+					return new Response("卧室",
+							"跟文加一起去到他私人的寝室……",
 							VENGARS_BEDROOM) {
 						@Override
 						public boolean isSexHighlight() {
@@ -2549,9 +2549,9 @@ public class RatWarrensDialogue {
 					if(!Main.game.getNpc(Axel.class).getSexualOrientation().isAttractedToFeminine()
 							&& Main.game.getPlayer().isFeminine()
 							&& !Main.game.isVoluntaryNTREnabled()) {
-						return new Response("Lexa", "Lexa is not attracted to you, so you'd be unable to have sex with her while visiting with Vengar...", null);
+						return new Response("莱克萨", "莱克萨并没有被你吸引，所以你不能跟文加一起去和她做爱……", null);
 					}
-					return new Response("Lexa", "Join Vengar in paying Lexa an unannounced visit...", LEXA_VISIT) {
+					return new Response("莱克萨", "跟文加一起去见莱克萨，做个不速之客……", LEXA_VISIT) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_OFFICE, false);
@@ -2564,7 +2564,7 @@ public class RatWarrensDialogue {
 					};
 					
 				} else if(index==0) {
-					return new Response("Leave", "Tell Vengar that you didn't need anything at the moment, but that you might be back some other time.", PlaceType.RAT_WARRENS_CORRIDOR_RIGHT.getDialogue(false)) {
+					return new Response("离开", "告诉文加你现在没什么需求，但是过后你可能还会回来。", PlaceType.RAT_WARRENS_CORRIDOR_RIGHT.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setNearestLocation(WorldType.RAT_WARRENS, PlaceType.RAT_WARRENS_CORRIDOR_RIGHT, false);
@@ -2577,8 +2577,8 @@ public class RatWarrensDialogue {
 					// Fight
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensHostile)) {
 						return new Response(
-								"Prepare",
-								"Prepare to defend yourself!",
+								"准备",
+								"准备自卫！",
 								VENGARS_HALL_FIGHT_NO_CONTENT) {
 							@Override
 							public void effects() {
@@ -2601,7 +2601,7 @@ public class RatWarrensDialogue {
 							}
 						};
 					}
-					return new Response("Challenge", "Tell Vengar that you're here to put an end to him and his gang.", VENGARS_HALL_FIGHT_NO_CONTENT) {
+					return new Response("挑战", "告诉文加你是来这里给他和他的帮派带来毁灭的。", VENGARS_HALL_FIGHT_NO_CONTENT) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vengarIntroduced, true);
@@ -2619,9 +2619,9 @@ public class RatWarrensDialogue {
 					
 				} else if(index==2) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensHostile)) {
-						return new Response("Persuade", "Vengar considers you to be an enemy, so he isn't going to listen to anything you have to say...", null);
+						return new Response("说服", "文加将你视作敌人，无论你再怎么巧舌如簧他也不会多听一句……", null);
 					}
-					return new Response("Persuade", "Try to persuade Vengar to stop extorting protection money from Axel...", VENGARS_HALL_APPROACH_PERSUADE) {
+					return new Response("说服", "尝试说服文加，不要再从阿克塞尔那里勒索保护费……", VENGARS_HALL_APPROACH_PERSUADE) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vengarIntroduced, true);
@@ -2632,20 +2632,20 @@ public class RatWarrensDialogue {
 					
 				} else if(index==3) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensHostile)) {
-						return new Response("Threaten", "You don't have a chance to threaten Vengar, as you've got to deal with his bodyguards!", null);
+						return new Response("威胁", "你没有可能吓住文加，你需要先解决他的保镖！", null);
 					}
 					if(Main.game.getPlayer().hasTraitActivated(Perk.CHUUNI)
 							|| Main.game.getPlayer().getRace()==Race.DEMON
 							|| Main.game.getPlayer().getLevel()>=35) {
-						return new Response("Threaten",
-								"Threaten Vengar, which will cause him to directly fight you without relying on his bodyguards."
-										+ "<br/>[style.italicsMinorGood(Unlocked "
+						return new Response("威胁",
+								"威胁文加，他会在没有保镖保护的情况下直接跟你战斗。"
+										+ "<br/>[style.italicsMinorGood("
 											+(Main.game.getPlayer().hasTraitActivated(Perk.CHUUNI)
-													?"due to acting like chuuni"
+													?"由于你中二病的行为"
 													:(Main.game.getPlayer().getRace()==Race.DEMON
-														?"due to being a demon"
-														:"due to being at least level 35"))
-											+".)]",
+														?"由于你恶魔的身份"
+														:"由于你已经超过35级"))
+											+"而解锁。)]",
 								VENGARS_HALL_APPROACH_THREATEN) {
 							@Override
 							public void effects() {
@@ -2657,21 +2657,21 @@ public class RatWarrensDialogue {
 							}
 						};
 					}
-					return new Response("Threaten",
-							"You aren't able to threaten Vengar into stopping his extortion of Axel."
-							+ "<br/>[style.italicsMinorBad(You need to be at least twice the level of Vengar, be a demon, or have the '"+Perk.CHUUNI.getName(Main.game.getPlayer())+"' perk active in order to successfully threaten him.)]",
+					return new Response("威胁",
+							"你没法威胁文加，让他不再继续勒索阿克塞尔。"
+							+ "<br/>[style.italicsMinorBad(你需要达到文加等级的两倍、身为恶魔，或者开启了“"+Perk.CHUUNI.getName(Main.game.getPlayer())+"”特性，才能成功吓住他。)]",
 							null);
 					
 				} else if(index==4) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensHostile)) {
-						return new Response("Seduce", "Vengar considers you to be an enemy, so he isn't going to pay attention to any attempts at seducing him...", null);
+						return new Response("诱惑", "文加将你视作敌人，无论你如何诱惑他也不会多瞧一眼……", null);
 					}
 					if(Main.game.getPlayer().hasTraitActivated(Perk.CONVINCING_REQUESTS)
 							|| Main.game.getPlayer().hasSpellUpgrade(SpellUpgrade.TELEPATHIC_COMMUNICATION_3)
 							|| Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_LUST)>=75) {
-						return new Response("Seduce",
-								"Seduce Vengar in an attempt to convince him to stop extorting protection money from Axel."
-										+ "<br/>[style.italicsMinorGood(Unlocked from having the '"+Perk.CONVINCING_REQUESTS.getName(Main.game.getPlayer())+"' trait activated.)]"
+						return new Response("诱惑",
+								"诱惑文加，尝试借此劝说他停止从阿克塞尔那里勒索保护费。"
+										+ "<br/>[style.italicsMinorGood(由于开启了“"+Perk.CONVINCING_REQUESTS.getName(Main.game.getPlayer())+"”特性而解锁。)]"
 										+getCooperationWarning(),
 								VENGARS_HALL_APPROACH_SEDUCE) {
 							@Override
@@ -2688,10 +2688,10 @@ public class RatWarrensDialogue {
 							}
 						};
 					}
-					return new Response("Seduce",
-							"You aren't skilled enough in the art of seduction to convince Vengar to stop extorting protection money from Axel in this manner."
-									+ "<br/>[style.italicsMinorBad(Requires the '"+Perk.CONVINCING_REQUESTS.getName(Main.game.getPlayer())+"' trait to be active,"
-											+ " at least 75 lust damage, or the '"+SpellUpgrade.TELEPATHIC_COMMUNICATION_3.getName()+"' upgrade for the '"+Spell.TELEPATHIC_COMMUNICATION.getName()+"' spell.)]",
+					return new Response("诱惑",
+							"你的诱惑技巧不精，只靠这样无法劝说文加不再从阿克塞尔那里勒索保护费。"
+									+ "<br/>[style.italicsMinorBad(需要开启“"+Perk.CONVINCING_REQUESTS.getName(Main.game.getPlayer())+"”特性，"
+											+ "至少拥有75性欲伤害加成，或者“"+Spell.TELEPATHIC_COMMUNICATION.getName()+"”法术获得了“"+SpellUpgrade.TELEPATHIC_COMMUNICATION_3.getName()+"”升级。)]",
 							null);
 				}
 			}
@@ -2712,8 +2712,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Fight",
-						"Fight Vengar's rat-girl bodyguards.",
+				return new ResponseCombat("战斗",
+						"跟文加的鼠女保镖战斗。",
 						Main.game.getNpc(Shadow.class),
 						Util.newArrayListOfValues(Main.game.getNpc(Shadow.class), Main.game.getNpc(Silence.class)),
 						Util.newHashMapOfValues(
@@ -2738,10 +2738,10 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getMoney()<PERSUASION_PAYMENT) {
-					return new Response("Pay ("+UtilText.formatAsMoneyUncoloured(PERSUASION_PAYMENT, "span")+")", "You do not have "+UtilText.formatAsMoney(PERSUASION_PAYMENT, "span")+", so cannot do as Vengar asks...", null);
+					return new Response("支付("+UtilText.formatAsMoneyUncoloured(PERSUASION_PAYMENT, "span")+")", "你没有"+UtilText.formatAsMoney(PERSUASION_PAYMENT, "span")+"，满足不了文加的要求……", null);
 				}
-				return new Response("Pay ("+UtilText.formatAsMoney(PERSUASION_PAYMENT, "span")+")",
-						"Agree to pay Vengar "+UtilText.formatAsMoney(PERSUASION_PAYMENT, "span")+" to show your submission to him..."
+				return new Response("支付("+UtilText.formatAsMoney(PERSUASION_PAYMENT, "span")+")",
+						"同意付给文加"+UtilText.formatAsMoney(PERSUASION_PAYMENT, "span")+"以表臣服……"
 						+getCooperationWarning(),
 						VENGARS_HALL_APPROACH_PERSUADE_PAY) {
 					@Override
@@ -2754,8 +2754,8 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Kneel",
-						"Kneel down before Vengar to show your submission to him...",
+				return new Response("下跪",
+						"在文加面前下跪以表臣服……",
 						VENGARS_HALL_APPROACH_PERSUADE_KNEEL) {
 					@Override
 					public void effects() {
@@ -2764,7 +2764,7 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if(index==3) {
-				return new Response("Refuse", "Outright refuse to pay. Vengar is unlikely to take this well...", VENGARS_HALL_FIGHT_NO_CONTENT) {
+				return new Response("拒绝", "拒不交钱。文加不会给你好脸色的……", VENGARS_HALL_FIGHT_NO_CONTENT) {
 					@Override
 					public boolean isCombatHighlight() {
 						return true;
@@ -2797,7 +2797,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Agree", "Having already decided to take a non-violent approach, agreeing to get Axel to come and show his submission seems to be the only option left to you.", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
+				return new Response("同意", "既然已经决定用非暴力的方法，同意交出阿克塞尔，向他表示臣服，这似乎是唯一的选择。", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_APPROACH_PERSUADE_END_AND_LEAVE", getGuards(true)));
@@ -2821,8 +2821,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Submit",
-						"Do as Vengar says and act as his foot rest."
+				return new Response("屈服",
+						"按照文加的要求，充当他的脚凳。"
 								+getCooperationWarning(),
 						VENGARS_HALL_APPROACH_PERSUADE_KNEEL_SUBMIT) {
 					@Override
@@ -2833,7 +2833,7 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Refuse", "Refuse to humiliate yourself as Vengar orders. He is unlikely to take this well...", VENGARS_HALL_FIGHT_NO_CONTENT) {
+				return new Response("拒绝", "你拒绝如文加的要求那般轻贱自己。他不会给你好脸色的……", VENGARS_HALL_FIGHT_NO_CONTENT) {
 					@Override
 					public boolean isCombatHighlight() {
 						return true;
@@ -2899,7 +2899,7 @@ public class RatWarrensDialogue {
 				if(isCompanionDialogue()) {
 					if(!isAssAccess(getMainCompanion()) && !isVaginaAccess(getMainCompanion())) {
 						if(index==1) {
-							return new Response("Continue", "As Vengar is unable to fuck either of you, he's content to simply inform you what he wants you to do for him.", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
+							return new Response("继续", "文加不能强上你们，所以只是说出他要让你做的事情便满足了。", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
 								@Override
 								public void effects() {
 									Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_SUB_NO_SEX_FINISH", getGuards(true)));
@@ -2912,7 +2912,7 @@ public class RatWarrensDialogue {
 					} else {
 						if(!Main.game.isVoluntaryNTREnabled()) {
 							if(index==1) {
-								return new Response("Continue", "As Vengar is unable to fuck you, he's content to simply inform you what he wants you to do for him.", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
+								return new Response("继续", "文加不能强上你，所以只是说出他要让你做的事情便满足了。", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
 									@Override
 									public void effects() {
 										Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_SUB_NO_SEX_FINISH", getGuards(true)));
@@ -2924,8 +2924,8 @@ public class RatWarrensDialogue {
 							
 						} else {
 							if(index==1) {
-								return new Response("Stand up",
-										UtilText.parse(getMainCompanion(), "Refuse to allow Vengar to fuck [npc.name] in front of everyone, and tell him that you've already done as he asked."),
+								return new Response("起立",
+										UtilText.parse(getMainCompanion(), "不同意让文加在大庭广众之下操[npc.name]，提醒他你已经按他要求的做了。"),
 										VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
 									@Override
 									public void effects() {
@@ -2937,13 +2937,13 @@ public class RatWarrensDialogue {
 								
 							} else if(index==2) {
 								if(!getMainCompanion().isAttractedTo(Main.game.getNpc(Vengar.class)) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
-									return new Response("Agree",
-											UtilText.parse(getMainCompanion(), "You can tell that [npc.name] isn't at all interested in having sex with Vengar, and you can't force [npc.herHim] to do so..."),
+									return new Response("同意",
+											UtilText.parse(getMainCompanion(), "你看得出来[npc.name]没兴趣跟文加做爱，也没法强迫[npc.herHim]……"),
 											null);
 								}
 								return new ResponseSex(
-										"Agree",
-										UtilText.parse(getMainCompanion(), "Let Vengar fuck [npc.name] while you and everyone else in the hall watches."),
+										"同意",
+										UtilText.parse(getMainCompanion(), "让文加操[npc.name]，你和其他人都在一旁观看。"),
 										true,
 										false,
 										new SMVengarDominantSex(
@@ -2977,7 +2977,7 @@ public class RatWarrensDialogue {
 					
 				} else {
 					if(index==1) {
-						return new Response("Continue", "As Vengar is unable to fuck you, he's content to simply inform you what he wants you to do for him.", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
+						return new Response("继续", "文加不能强上你，所以只是说出他要让你做的事情便满足了。", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_SUB_NO_SEX_FINISH"));
@@ -2990,10 +2990,10 @@ public class RatWarrensDialogue {
 			}
 			
 			if(index==1) {
-				return new Response("Stand up",
+				return new Response("起立",
 						isCompanionDialogue()
-							?UtilText.parse(getMainCompanion(), "Refuse to allow Vengar to fuck you or [npc.name] in front of everyone, and tell him that you've already done enough.")
-							:"Refuse to allow Vengar to fuck you in front of everyone, and tell him that you've already done as he asked.",
+							?UtilText.parse(getMainCompanion(), "不同意文加在大庭广众下操你或者操[npc.name]，提醒他你已经按他要求的做过很多了。")
+							:"不同意文加在大庭广众之下操你，提醒他你已经按他要求的做了。",
 						VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
 					@Override
 					public void effects() {
@@ -3005,11 +3005,11 @@ public class RatWarrensDialogue {
 			} else if(index==2) {
 				return new ResponseSex(
 						isCompanionDialogue()
-							?"Present yourself (solo)"
-							:"Present yourself",
+							?"展示自己(单人)"
+							:"展示自己",
 						isCompanionDialogue()
-							?UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand back, before shuffling around and raising your ass towards Vengar, presenting yourself to be fucked by him in front of everyone in the hall.")
-							:"Shuffle around and raise your ass towards Vengar, presenting yourself to be fucked by him in front of everyone in the hall.",
+							?UtilText.parse(getMainCompanion(), "让[npc.name]站到一旁，上前之后抬起屁股对准文加，将自己的下体展露无遗，等待着他在大庭广众之下操你。")
+							:"上前之后抬起屁股对准文加，将自己的下体展露无遗，等待着他在大庭广众之下操你。",
 						true,
 						false,
 						new SMVengarDominantSex(
@@ -3041,14 +3041,14 @@ public class RatWarrensDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!getMainCompanion().isAttractedTo(Main.game.getNpc(Vengar.class)) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
-					return new Response(UtilText.parse(companion, "Present yourselves"),
-							UtilText.parse(getMainCompanion(), "You can tell that [npc.name] isn't at all interested in having sex with Vengar, and you can't force [npc.herHim] to do so..."),
+					return new Response(UtilText.parse(companion, "展示自己"),
+							UtilText.parse(getMainCompanion(), "你看得出来[npc.name]没兴趣跟文加做爱，也没法强迫[npc.herHim]……"),
 							null);
 					
 				} else {
 					return new Response(
-							UtilText.parse(companion, "Present yourselves"),
-							UtilText.parse(getMainCompanion(), "Tell [npc.name] to join you in shuffling around and raising your asses towards Vengar, presenting yourselves to be fucked by him in front of everyone in the hall."),
+							UtilText.parse(companion, "展示自己"),
+							UtilText.parse(getMainCompanion(), "让[npc.name]跟你一起，上前之后抬起屁股对准文加，将自己的下体展露无遗，等待着他在大庭广众之下操你们。"),
 							VENGARS_HALL_APPROACH_PERSUADE_SEX_DOUBLE_CHOICE) {
 						@Override
 						public boolean isSexHighlight() {
@@ -3061,13 +3061,13 @@ public class RatWarrensDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!companion.isAttractedTo(Main.game.getNpc(Vengar.class)) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-							UtilText.parse(companion, "You can tell that [npc.name] isn't at all interested in having sex with Vengar, and you can't force [npc.herHim] to do so..."),
+					return new Response(UtilText.parse(companion, "献上[npc.name]"),
+							UtilText.parse(companion, "你看得出来[npc.name]没兴趣跟文加做爱，也没法强迫[npc.herHim]……"),
 							null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-							UtilText.parse(getMainCompanion(), "Tell Vengar that while you're not keen on the idea yourself, you'd be happy to let him fuck [npc.name] in front of everyone..."),
+					return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+							UtilText.parse(getMainCompanion(), "告诉文加虽然你自己对这个注意没什么兴趣，但很乐意看着他在大庭广众之下操[npc.name]……"),
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -3112,16 +3112,16 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Fucked first",
+				return new ResponseSex("首先挨操",
 						UtilText.parse(getMainCompanion(),
-							"Push your [pc.hips] back against Vengar, signalling to him that you want him to fuck you first."
+							"用你的[pc.hips]顶住文加，示意他先操你。"
 								+ (!isMouthAccess(Main.game.getPlayer())
-									?" As you are unable to access your mouth, [npc.name] can't receive oral from you, and must simply watch and wait [npc.her] turn as Vengar fucks you..."	
+									?"因为你无法使用自己的嘴巴，不能给[npc.name]口交，所以[npc.she]只能眼睁睁看着文加操你，静候着轮到[npc.her]……"	
 									:(isVaginaAccess(getMainCompanion())
-										?"You will be tasked with eating [npc.name] out while Vengar fucks you, so that [npc.sheIs] prepared for Vengar's cock once he's finished with you."
+										?"你又得到了一个任务，文加操你的时候你要给[npc.name]舔阴，这样就能在跟你做完之后，立刻为文加的肉棒准备好。"
 										:(isAssAccess(getMainCompanion())
-											?"You will be tasked with performing anilingus on [npc.name] while Vengar fucks you, so that [npc.sheIs] prepared for Vengar's cock once he's finished with you."
-											:" [npc.Name] will have to watch and wait [npc.her] turn as Vengar fucks you...")))),
+											?"你又得到了一个任务，文加操你的时候你要给[npc.name]吻肛，这样就能在跟你做完之后，立刻为文加的肉棒准备好。"
+											:"文加操你的时候，[npc.Name]必须在一旁看着，静候着轮到[npc.her]……")))),
 						true,
 						false,
 						new SMVengarDominantSex(
@@ -3179,16 +3179,16 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Fucked second",
+				return new ResponseSex("第二个挨操",
 						UtilText.parse(getMainCompanion(), 
 							!isMouthAccess(getMainCompanion())
-								?"Shuffle away from Vengar a little, signalling to him that you want him to fuck your companion first."
-										+ " As [npc.name] is unable to access [npc.her] mouth, [npc.she] can't perform oral on you while Vengar fucks [npc.herHim], leaving you with nothing to do but watch and wait your turn..."
+								?"你稍稍离开了文加一点，意思是想让他先操你的同伴。"
+										+ "因为[npc.name]无法使用自己的嘴巴，不能给你口交，所以你只能眼睁睁地看着文加操[npc.herHim]，静候着轮到你……"
 								:isVaginaAccess(Main.game.getPlayer())
-									?"Get [npc.name] to start eating you out, signalling to Vengar that you want him to fuck your companion first."
+									?"让[npc.name]给你舔阴，意思是想让文加先操你的同伴。"
 									:(isAssAccess(getMainCompanion())
-										?"Get [npc.name] to crawl around behind you and start performing anilingus on you, signalling to Vengar that you want him to fuck your companion first."
-										:"Shuffle away from Vengar a little, signalling to him that you want him to fuck your companion first.")),
+										?"让[npc.name]爬到你身后给你舔肛，意思是想让文加先操你的同伴。"
+										:"你稍稍离开了文加一点，意思是想让他先操你的同伴。")),
 						true,
 						false,
 						new SMVengarDominantSex(
@@ -3248,7 +3248,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode VENGARS_HALL_APPROACH_PERSUADE_AFTER_SEX_DOUBLE = new DialogueNode("Finished", "Vengar is satisfied, and brings an end to the sex...", true) {
+	public static final DialogueNode VENGARS_HALL_APPROACH_PERSUADE_AFTER_SEX_DOUBLE = new DialogueNode("结束", "文加满足了，结束了做爱……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -3266,15 +3266,15 @@ public class RatWarrensDialogue {
 			
 			if(index==1) {
 				if(Main.sex.getSexPositionSlot(Main.game.getPlayer())!=SexSlotAllFours.ALL_FOURS) {
-					return new ResponseSex("Fucked",
+					return new ResponseSex("挨操",
 							UtilText.parse(getMainCompanion(),
 								!isMouthAccess(Main.game.getPlayer())
-									?"You lift your ass as you prepare to get fucked by Vengar."
+									?"你抬起屁股，准备让文加操。"
 									:isVaginaAccess(getMainCompanion())
-										?"Start eating the cum out of [npc.namePos] pussy as you prepare to get fucked by Vengar next."
+										?"你开始舔食从[npc.namePos]小穴中流出的精液，准备下一个挨文加操。"
 										:(isAssAccess(getMainCompanion())
-												?"Start eating the cum out of [npc.namePos] ass as you get fucked by Vengar next."
-												:"You lift your ass as you prepare to get fucked by Vengar.")),
+												?"你开始舔食从[npc.namePos]屁穴中流出的精液，准备下一个挨文加操。"
+												:"你抬起屁股，准备让文加操。")),
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -3339,16 +3339,16 @@ public class RatWarrensDialogue {
 				} else {
 					return new ResponseSex(
 							!isMouthAccess(getMainCompanion()) || (!isVaginaAccess(Main.game.getPlayer()) && !isAssAccess(Main.game.getPlayer()))
-								?UtilText.parse(getMainCompanion(), "[npc.NamePos] turn")
-								:"Oral cleanup",
+								?UtilText.parse(getMainCompanion(), "轮到[npc.NamePos]")
+								:"用嘴巴清洁",
 							UtilText.parse(getMainCompanion(),
 								!isMouthAccess(getMainCompanion())
-									?"Look on as Vengar fucks [npc.name] next..."
+									?"眼看着文加接下来要操[npc.name]……"
 									:isVaginaAccess(Main.game.getPlayer())
-										?"Get [npc.name] to start eating the cum out of your pussy as Vengar fucks [npc.herHim] next."
+										?"让[npc.name]舔食你小穴里流出的精液，文加接下来准备操[npc.herHim]。"
 										:(isAssAccess(Main.game.getPlayer())
-											?"Get [npc.name] to crawl around behind you and start eating the cum out of your ass as Vengar fucks [npc.herHim] next."
-											:"Look on as Vengar fucks [npc.name] next...")),
+											?"让[npc.name]爬到你身后，舔食你屁穴中流出的精液，文加接下来准备操[npc.herHim]。"
+											:"眼看着文加接下来要操[npc.name]……")),
 							true,
 							false,
 							new SMVengarDominantSex(
@@ -3409,7 +3409,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode VENGARS_HALL_APPROACH_PERSUADE_AFTER_SEX = new DialogueNode("Finished", "Vengar is satisfied, and brings an end to the sex...", true) {
+	public static final DialogueNode VENGARS_HALL_APPROACH_PERSUADE_AFTER_SEX = new DialogueNode("结束", "文加满足了，结束了性爱……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -3424,7 +3424,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Stand up", "Stand up and await Vengar's next command...", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
+				return new Response("起身", "站起来等候文加接下来的命令……", VENGARS_HALL_APPROACH_PERSUADE_FINISH) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_APPROACH_PERSUADE_AFTER_SEX_FINISH", getGuards(true)));
@@ -3448,7 +3448,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Agree", "Having already decided to take a non-violent approach, agreeing to get Axel to come and show his submission seems to be the only option left to you.", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
+				return new Response("同意", "既然已经决定用非暴力的方法，同意交出阿克塞尔，向他表示臣服，这似乎是唯一的选择。", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_APPROACH_PERSUADE_END_AND_LEAVE", getGuards(true)));
@@ -3484,30 +3484,30 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Fight",
-						"Defend yourself against Vengar!",
+				return new ResponseCombat("战斗",
+						"抵御文加的攻击！",
 						Main.game.getNpc(Vengar.class));
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().hasPerkAnywhereInTree(Perk.MARTIAL_ARTIST)
 						|| Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_UNARMED)>=75
 						|| Main.game.getPlayer().hasSpellUpgrade(SpellUpgrade.SLAM_3)) {
-					return new Response("Knock out",
-							"You can take advantage of Vengar's haste to deliver a knock-out blow to him."
+					return new Response("击昏",
+							"趁着文加匆忙，将其一击击昏。"
 									+ "<br/>[style.italicsMinorGood("
 									+(Main.game.getPlayer().hasSpellUpgrade(SpellUpgrade.SLAM_3)
-										?"Unlocked from having the '"+SpellUpgrade.SLAM_3.getName()+"' upgrade to the '"+Spell.SLAM.getName()+"' spell."
+										?"拥有“"+SpellUpgrade.SLAM_3.getName()+"”升级的“"+Spell.SLAM.getName()+"”而解锁。"
 										:(Main.game.getPlayer().hasPerkAnywhereInTree(Perk.MARTIAL_ARTIST)
-											?"Unlocked from having the '"+Perk.MARTIAL_ARTIST.getName(Main.game.getPlayer())+"' trait."
-											:"Unlocked from having over 75 unarmed damage."))
+											?"拥有“"+Perk.MARTIAL_ARTIST.getName(Main.game.getPlayer())+"”特性而解锁。"
+											:"拥有超过75徒手攻击加成而解锁。"))
 									+ ")]",
 							VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT);
 					
 				} else {
-					return new Response("Knock out",
-							"You aren't able to take advantage of Vengar's haste..."
-									+ "<br/>[style.italicsMinorBad(Requires the '"+Perk.MARTIAL_ARTIST.getName(Main.game.getPlayer())+"' trait,"
-											+ " over 75 unarmed damage, or the '"+SpellUpgrade.SLAM_3.getName()+"' upgrade to the '"+Spell.SLAM.getName()+"' spell.)]",
+					return new Response("击昏",
+							"你无法抓住文加匆忙的机会……"
+									+ "<br/>[style.italicsMinorBad(需要“"+Perk.MARTIAL_ARTIST.getName(Main.game.getPlayer())+"特性，"
+											+ "超过75徒手伤害加成，或者拥有“"+SpellUpgrade.SLAM_3.getName()+"”升级的“"+Spell.SLAM.getName()+"”。)]",
 							null);
 				}
 				
@@ -3535,7 +3535,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Defend", "Defend yourself against the rat-girls!", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS);
+				return new Response("自卫", "保卫自己免受鼠女的攻击！", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS);
 			}
 			return null;
 		}
@@ -3553,7 +3553,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Prepare", "Prepare yourself for whatever is coming!", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_SWORD_RAID);
+				return new Response("准备好", "无论接下来发生什么，都要做好准备！", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_SWORD_RAID);
 			}
 			return null;
 		}
@@ -3571,7 +3571,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "You don't have any choice but to wait for the Frontline Patrol division to show up...", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_SWORD_RAID_CLAIRE) {
+				return new Response("等待", "你别无选择，只能等待前线巡逻队现身……", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_SWORD_RAID_CLAIRE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Claire.class).setLocation(Main.game.getPlayer(), false);
@@ -3594,7 +3594,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "You don't have much choice but to do as Claire says and follow her out of the Rat Warrens...", SWORD_RAID_EXIT) {
+				return new Response("跟随", "你别无选择，只能照克莱尔的说法，跟她离开鼠窟……", SWORD_RAID_EXIT) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(applyConflictQuestEnd());
@@ -3643,14 +3643,14 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Just tease",
-						"Tease Vengar by promising him sex at a later time, once all this business with Axel has been resolved.",
+				return new Response("只挑逗",
+						"调戏文加，保证解决阿克塞尔的事情后就会跟他做。",
 						VENGARS_HALL_APPROACH_SEDUCE_NO_SEX);
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						"Submit",
-						"Tell Vengar that he can do whatever he wants with you...",
+						"顺从",
+						"告诉文加他可以对你为所欲为……",
 						true,
 						true,
 						new SMGeneric(
@@ -3663,8 +3663,8 @@ public class RatWarrensDialogue {
 				
 			} else if(index==3) {
 				return new ResponseSex(
-						"Dominate",
-						"Tell Vengar that he's going to submit to you...",
+						"支配",
+						"告诉文加他应该向你屈服……",
 						true,
 						true,
 						new SMGeneric(
@@ -3694,7 +3694,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Agree", "Having already decided to take a non-violent approach, agreeing to get Axel to come and show his submission seems to be the only option left to you.", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
+				return new Response("同意", "既然已经决定用非暴力的方法，同意交出阿克塞尔，向他表示臣服，这似乎是唯一的选择。", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_APPROACH_SEDUCE_NO_SEX_LEAVE", getGuards(true)));
@@ -3708,7 +3708,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode VENGARS_HALL_APPROACH_SEDUCE_AFTER_SEX = new DialogueNode("Finished", "Vengar is satisfied, and brings an end to the sex...", true) {
+	public static final DialogueNode VENGARS_HALL_APPROACH_SEDUCE_AFTER_SEX = new DialogueNode("结束", "文加很满足，结束了性爱……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -3723,7 +3723,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Agree", "Having already decided to take a non-violent approach, agreeing to get Axel to come and show his submission seems to be the only option left to you.", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
+				return new Response("同意", "既然已经决定用非暴力的方法，同意交出阿克塞尔，向他表示臣服，这似乎是唯一的选择。", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_HALL_APPROACH_SEDUCE_AFTER_SEX_LEAVE", getGuards(true)));
@@ -3749,7 +3749,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Defend", "Defend yourself against the rat-girls!", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS);
+				return new Response("自卫", "保卫自己免受鼠女的攻击！", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS);
 			}
 			return null;
 		}
@@ -3790,8 +3790,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Silence",
-						"It looks like you'll have to deal with both Silence and her newly-summoned elemental!",
+				return new ResponseCombat("默",
+						"看来你必须把默和刚刚召唤出来的元素体击败！",
 						Main.game.getNpc(Silence.class),
 						Util.newArrayListOfValues(Main.game.getNpc(Silence.class), Main.game.getNpc(Silence.class).getElemental()),
 						null);
@@ -3818,8 +3818,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Shadow",
-						"It looks like you'll have to deal with an enraged Shadow!",
+				return new ResponseCombat("影",
+						"看来你必须击败盛怒中的影！",
 						Main.game.getNpc(Shadow.class),
 						Util.newArrayListOfValues(Main.game.getNpc(Shadow.class)),
 						null);
@@ -3840,8 +3840,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Vengar",
-						"Now that you've dealt with his bodyguards, you're going to need to take on Vengar himself!",
+				return new ResponseCombat("文加",
+						"你已经解决了文加的保镖，现在该直面文加了！",
 						Main.game.getNpc(Vengar.class));
 			}
 			return null;
@@ -3864,15 +3864,15 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.isNonConEnabled()) {
 				if(index==1) {
-					return new Response("Defend", "Defend yourself against the rat-girls!", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS); //TODO test
+					return new Response("自卫", "保护自己免受鼠女的攻击！", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS); //TODO test
 				}
 				
 			} else {
 				if(index==1) { //TODO
 					if(isCompanionDialogue()) {
-						return new Response("Save [com.name]",
-								"Use the last of your energy to hold off the rats long enough for [com.name] to escape."
-										+ "<br/>[style.italicsMinorGood([com.Name] will safely return home.)]",
+						return new Response("保护[com.name]",
+								"动用最后一丝力量拖住这些老鼠，让[com.name]逃走。"
+										+ "<br/>[style.italicsMinorGood([com.Name]将会平安无事地回到家。)]",
 								BODYGUARDS_COMBAT_DEFEAT_DRAGGED_OFF) {
 							@Override
 							public void effects() {
@@ -3888,8 +3888,8 @@ public class RatWarrensDialogue {
 						};
 						
 					} else {
-						return new Response("Dragged away",
-								"You're powerless to resist as Vengar drags you off to another part of his lair...",
+						return new Response("被拖走",
+								"你无力抵抗，只能任由文加把你拖进这匪窝深处……",
 								BODYGUARDS_COMBAT_DEFEAT_DRAGGED_OFF) {
 							@Override
 							public void effects() {
@@ -3950,8 +3950,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Stripped",
-						"Murk sets about stripping you naked...",
+				return new Response("被剥光",
+						"默克上来把你扒了个精光……",
 						BODYGUARDS_COMBAT_DEFEAT_STRIPPED) {
 					@Override
 					public void effects() {
@@ -3975,8 +3975,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("New home",
-						"Murk and Vengar lead you into the adjoining room to introduce you to your 'new home'...",
+				return new Response("新家",
+						"默克和文加把你带去了邻接的房间，送去了“新家”……",
 						BODYGUARDS_COMBAT_DEFEAT_STRIPPED_END) {
 					@Override
 					public void effects() {
@@ -4003,8 +4003,8 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new ResponseSex("Blowjob",
-						"Do what's expected of you and obediently give Vengar a blowjob.",
+				return new ResponseSex("口交",
+						"就如他们期待的那样，顺从地给文加口交起来。",
 						false,
 						false,
 						getStocksManager(Util.newArrayListOfValues(Main.game.getNpc(Vengar.class)), null),
@@ -4019,8 +4019,8 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseSex("Eager blowjob",
-						"Make a show of how willing you are to obediently give Vengar a blowjob.",
+				return new ResponseSex("饥渴地口交",
+						"顺从地给文加口交，展现出你多么地心甘情愿。",
 						false,
 						false,
 						getStocksManager(Util.newArrayListOfValues(Main.game.getNpc(Vengar.class)), SexPace.SUB_EAGER),
@@ -4035,8 +4035,8 @@ public class RatWarrensDialogue {
 				};
 				
 			} else if (index == 3) {
-				return new ResponseSex("Resist blowjob",
-						"Do your best to resist performing giving Vengar a blowjob.",
+				return new ResponseSex("抗拒口交",
+						"竭尽全力避免给文加口交。",
 						false,
 						false,
 						getStocksManager(Util.newArrayListOfValues(Main.game.getNpc(Vengar.class)), SexPace.SUB_RESISTING),
@@ -4055,14 +4055,14 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode BODYGUARDS_COMBAT_DEFEAT_AFTER_MILKING_ROOM_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode BODYGUARDS_COMBAT_DEFEAT_AFTER_MILKING_ROOM_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 15*60;
 		}
 		@Override
 		public String getDescription(){
-			return "Having had his fun, Vengar steps back and prepares to leave...";
+			return "文加爽过之后，从你身边推开，准备离开……";
 		}
 		@Override
 		public String getContent() {
@@ -4071,7 +4071,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Murk", "Murk reappears to tell you what's in store for you next...", RatWarrensCaptiveDialogue.CAPTIVE_DAY_0) {
+				return new Response("默克", "默克再次出现，告诉了你接下来还有什么在等着你……", RatWarrensCaptiveDialogue.CAPTIVE_DAY_0) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/captive", "CAPTIVE_DAY_0"));
@@ -4098,7 +4098,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Defend", "Defend yourself against the rat-girls!", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS);
+				return new Response("自卫", "保卫自己免受鼠女的攻击！", VENGARS_HALL_APPROACH_THREATEN_KNOCK_OUT_CHAOS);
 			}
 			return null;
 		}
@@ -4132,8 +4132,8 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Submit",
-						"Tell Vengar that he can do whatever he wants with you...",
+						"顺从",
+						"告诉文加他可以对你为所欲为……",
 						true,
 						true,
 						new SMGeneric(
@@ -4151,8 +4151,8 @@ public class RatWarrensDialogue {
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						"Dominate",
-						"Tell Vengar that he's going to submit to you...",
+						"支配",
+						"告诉文加他应该向你屈服……",
 						true,
 						true,
 						new SMGeneric(
@@ -4172,7 +4172,7 @@ public class RatWarrensDialogue {
 		}
 	};
 
-	public static final DialogueNode VENGARS_BEDROOM_AFTER_SEX = new DialogueNode("Finished", "Vengar is satisfied, and brings an end to the sex...", true) {
+	public static final DialogueNode VENGARS_BEDROOM_AFTER_SEX = new DialogueNode("结束", "文加很满足，结束了性爱……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -4184,7 +4184,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Tell Vengar that you'll see him again some other time before taking your leave.", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
+				return new Response("离开", "离开之前，告诉文加你不久之后还会再来找他的。", VENGARS_HALL_CORRIDOR_EXIT_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "VENGARS_BEDROOM_AFTER_SEX_LEAVE"));
@@ -4197,7 +4197,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode LEXA_VISIT = new DialogueNode("The Gambling Den", "", true) {
+	public static final DialogueNode LEXA_VISIT = new DialogueNode("赌场", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -4210,11 +4210,11 @@ public class RatWarrensDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getNpc(Axel.class).getSexualOrientation().isAttractedToFeminine() && Main.game.getPlayer().isFeminine()) {
-					return new Response("Threesome", "[axel.Name] is only attracted to masculine people, and as such, is unwilling to have sex with you...", null);
+					return new Response("三人行", "[axel.Name]只会被男性化角色吸引，所以不愿意跟你做爱……", null);
 				}
 				return new ResponseSex(
-						"Threesome",
-						"Join Vengar in having dominant sex with [axel.name]...",
+						"三人行",
+						"跟文加一起支配[axel.name]……",
 						true,
 						true,
 						new SMGeneric(
@@ -4235,8 +4235,8 @@ public class RatWarrensDialogue {
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						"Watch",
-						"Watch Vengar fuck [axel.name]...",
+						"旁观",
+						"旁观文加跟[axel.name]做爱……",
 						true,
 						true,
 						new SMGeneric(
@@ -4253,7 +4253,7 @@ public class RatWarrensDialogue {
 						UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "LEXA_VISIT_WATCH", getGuards(true)));
 				
 			} else if(index==3) {
-				return new Response("Leave", "Decide against doing anything lewd with Vengar and [axel.name], and instead leave the two of them to it...", PlaceType.SUBMISSION_GAMBLING_DEN.getDialogue(false)) {
+				return new Response("离开", "决定不跟文加和[axel.name]做什么淫行，让他们两个自己搞去吧……", PlaceType.SUBMISSION_GAMBLING_DEN.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/ratWarrens/core", "LEXA_VISIT_LEAVE", getGuards(true)));
@@ -4268,7 +4268,7 @@ public class RatWarrensDialogue {
 		}
 	};
 	
-	public static final DialogueNode LEXA_VISIT_AFTER_SEX = new DialogueNode("Finished", "Vengar is satisfied, and brings an end to the sex...", true) {
+	public static final DialogueNode LEXA_VISIT_AFTER_SEX = new DialogueNode("结束", "文加很满足，结束了性爱……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -4280,7 +4280,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "You're left alone with [axel.name] back in the Gambling Den's main entrance.", PlaceType.GAMBLING_DEN_ENTRANCE.getDialogue(false)) {
+				return new Response("继续", "[axel.name]回到了赌场的主入口，留下了你一个。", PlaceType.GAMBLING_DEN_ENTRANCE.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_ENTRANCE, false);
@@ -4314,7 +4314,7 @@ public class RatWarrensDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "继续你的旅程……", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}

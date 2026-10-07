@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[corridor]]></name>
-	<tooltipDescription><![CDATA[A concrete corridor links the slime milking chamber to the darkest corners of the factory...]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor in the factory beneath Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[走廊]]></name>
+	<tooltipDescription><![CDATA[一条混凝土走廊将史莱姆挤奶室与工厂最黑暗的角落连接起来……]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店下面工厂的走廊里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

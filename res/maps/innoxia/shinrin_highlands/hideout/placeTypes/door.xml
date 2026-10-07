@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[sliding door]]></name>
-	<tooltipDescription><![CDATA[A Japanese-style sliding door separates the main living area from the two bedrooms located to the rear of the building.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Meraxis's hideout]]></virginityLossDescription>
+	<name><![CDATA[推拉门]]></name>
+	<tooltipDescription><![CDATA[一道日式推拉门将主生活区与房屋里侧的两间卧室分隔开来。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于梅拉克西丝的藏身处]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>door</svgName>
 	<colour>BASE_GREEN_LIGHT</colour>

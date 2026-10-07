@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<title><![CDATA[For old times' sake]]></title>
-	<wallName><![CDATA[stack of papers]]></wallName>
+	<title><![CDATA[看在老交情的份上]]></title>
+	<wallName><![CDATA[堆成山的文书]]></wallName>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[true]]></subHasEqualControl>
 	<canSkipSex><![CDATA[true]]></canSkipSex>
@@ -106,18 +106,18 @@
 			<dirtyTalk>
 				<character id="pc">
 					<standard additionToDefault="true">
-						<line><![CDATA[Go on, treat me like a whore!]]></line>
-						<line><![CDATA[You know I'm just a dirty whore!]]></line>
-						<line><![CDATA[Put this pathetic human in her place!]]></line>
-						<line><![CDATA[I love getting fucked for money, give it to me!]]></line>
-						<line performingAnyPenetration="true"><![CDATA[Treat me like the filthy whore that I am!]]></line>
+						<line><![CDATA[继续，把我当婊子一样操！]]></line>
+						<line><![CDATA[你知道的，我就是个下流的贱货！]]></line>
+						<line><![CDATA[让我这可悲的人类明白自己的处境！]]></line>
+						<line><![CDATA[我喜欢被操赚钱，我还要！]]></line>
+						<line performingAnyPenetration="true"><![CDATA[像对待下贱的妓女一样对待我！]]></line>
 					</standard>
 					<submissive additionToDefault="true">
-						<line><![CDATA[Go on, treat me like a whore!]]></line>
-						<line><![CDATA[You know I'm just a dirty whore!]]></line>
-						<line><![CDATA[Put this pathetic human in her place!]]></line>
-						<line><![CDATA[I love getting fucked for money, give it to me!]]></line>
-						<line performingAnyPenetration="true"><![CDATA[Treat me like the filthy whore that I am!]]></line>
+						<line><![CDATA[继续，把我当婊子一样操！]]></line>
+						<line><![CDATA[你知道的，我就是个下流的贱货！]]></line>
+						<line><![CDATA[让我这可悲的人类明白自己的处境！]]></line>
+						<line><![CDATA[我喜欢被操赚钱，我还要！]]></line>
+						<line performingAnyPenetration="true"><![CDATA[像对待下贱的妓女一样对待我！]]></line>
 					</submissive>
 				</character>
 			</dirtyTalk>

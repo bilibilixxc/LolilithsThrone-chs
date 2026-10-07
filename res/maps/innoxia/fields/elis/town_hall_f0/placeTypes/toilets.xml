@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[toilets]]></name>
-	<tooltipDescription><![CDATA[Unfortunately for members of the public, these toilets are signed as being 'staff only', and are securely locked.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the toilets in Elis's town hall]]></virginityLossDescription>
+	<name><![CDATA[厕所]]></name>
+	<tooltipDescription><![CDATA[遗憾的是，这些厕所都标明“仅限工作人员使用”，并被严密地锁住了。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯市镇议会的厕所里]]></virginityLossDescription>
 	<sexBlockedReason/>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>

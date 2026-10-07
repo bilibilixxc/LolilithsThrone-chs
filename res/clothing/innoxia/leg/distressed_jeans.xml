@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>400</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[distressed jeans]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[distressed jeans]]></namePlural>
-		<description><![CDATA[A pair of unisex jeans, which, in the name of fashion, have been weathered and torn prior to sale.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[做旧牛仔裤]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[做旧牛仔裤]]></namePlural>
+		<description><![CDATA[一条男女皆宜的牛仔裤，为了时髦，在出售前已经做旧磨损。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>LEG</slot>
@@ -77,27 +77,22 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(step)] into the jeans, before pulling them up and fastening the button at [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(get)] [npc2.name] to step into the jeans, before pulling them up and fastening the button at [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step into the jeans, before yanking them up and fastening the button at [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[[npc.Name]穿进牛仔裤，然后拉上它，扣上腰部的扣子。
+]]></self>
+    <other><![CDATA[[npc.Name]让[npc2.name]穿进牛仔裤，然后拉上它，扣上[npc2.her]腰部的扣子。
+]]></other>
+    <otherRough><![CDATA[[npc.Name]强迫[npc2.name]穿进牛仔裤，然后拉上它，扣上[npc2.her]腰部的扣子。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the button on [npc.her] jeans, before slipping them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the button on [npc2.namePos] jeans, before slipping them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the button on [npc2.namePos] jeans, before yanking them off.]]>
-    </otherRough>
+    <self><![CDATA[[npc.Name]解开牛仔裤上的扣子，然后脱下它。
+]]></self>
+    <other><![CDATA[[npc.Name]解开[npc2.namePos]牛仔裤上的扣子，然后脱下它。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]解开[npc2.namePos]牛仔裤的扣子，脱下了它。
+		]]></otherRough>
   </displacementText>
 	
 </clothing>

@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
 		<value>25000</value> 
 		<melee>false</melee>
 		<twoHanded>false</twoHanded>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[arcane revolver]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[arcane revolvers]]></namePlural> 
+		<determiner><![CDATA[一把]]></determiner>
+		<name><![CDATA[奥术转轮手枪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[奥术转轮手枪]]></namePlural> 
 		
-		<description><![CDATA[Although this revolver appears to be of the top-break variety, there's actually no way to open and reload it, as instead of bullets, it fires concentrated arcane essences. This weapon is only seen being carried by Lyssieth's elite guards.]]></description> 
+		<description><![CDATA[尽管这把转轮手枪看起来是中折式的，但实际上无法打开和装弹。因为它发射的不是子弹，而是浓缩的奥术精华。这种武器只有莉西丝的精英守卫才会装备。]]></description> 
 		
-		<attackDescriptor>shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your arcane revolver.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用你的奥术转轮手枪射向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity> 
 		
 		<weaponSet>LYSSIETH_GUARD</weaponSet> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(draw)] [npc.her] arcane revolver, ready to use it in combat.]]></equipText>
+		<equipText><![CDATA[[npc.Name]给[npc.her]的奥术转轮手枪充能，准备用于战斗。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(holster)] [npc.her] arcane revolver.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]把[npc.her]的奥术转轮手枪放入枪套中。]]></unequipText>
 		
 		<imageName>revolver.svg</imageName> 
 		
@@ -63,27 +63,27 @@
 	<!-- Descriptions that are used when hitting an enemy. One of the hitText values will be randomly selected each time the attacker hits their target. Follow the same guidelines as equipText. -->
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Aiming and firing [npc.her] arcane revolver, [npc.name] [npc.verb(manage)] to hit [npc2.name] with a powerful arcane bullet!
-		]]></hitText>
+		[npc.Name]瞄准并用奥术转轮手枪射击，[npc.Name]成功用威力强大的奥术子弹击中了[npc2.name]！
+]]></hitText>
 		<hitText><![CDATA[
-		Taking aim at [npc2.name] with [npc.her] arcane revolver, [npc.name] [npc.verb(pull)] the trigger, unleashing a powerful blast of arcane energy that slams into [npc2.namePos] torso!
-		]]></hitText>
+		[npc.name]用奥术转轮手枪瞄准[npc2.name]并扣下扳机，释放出一股强大的奥术能量击中[npc2.namePos]的躯干！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] arcane revolver, and, pulling the trigger, [npc.she] [npc.verb(manage)] to hit [npc2.herHim] right in the chest!
-		]]></hitText>
+		[npc.Name]用[npc.her]的奥术转轮手枪瞄准[npc2.name]并扣动扳机，[npc.she]成功命中[npc2.herHim]的胸部！
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		Aiming and firing [npc.her] arcane revolver, [npc.name] [npc.verb(miss)] [npc2.name]!
-		]]></missText>
+		[npc.Name]瞄准并用奥术转轮手枪射击，[npc.Name]未命中[npc2.name]！
+]]></missText>
 		<missText><![CDATA[
-		Taking aim at [npc2.name] with [npc.her] arcane revolver, [npc.name] [npc.verb(pull)] the trigger, letting out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.name]用奥术转轮手枪瞄准[npc2.name]并扣下扳机，在[npc.she]射偏了[npc.her]目标时发出了沮丧的声音！
+]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] arcane revolver and [npc.verb(pull)] the trigger, but [npc.she] [npc.verb(end)] up missing [npc.her] target!
-		]]></missText>
+		[npc.Name]用[npc.her]的奥术转轮手枪瞄准[npc2.name]并扣动扳机，但是[npc.she]最终还是没有击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

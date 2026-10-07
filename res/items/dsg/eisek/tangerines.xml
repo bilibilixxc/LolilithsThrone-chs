@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint wax stamp on the peel reads "Grown by the dragons of the DSG Farmer's Guild."]]></authorTag>
+		<authorTag><![CDATA[外皮上一处轻微的火漆印写着“由DSG农民工会的巨龙培育”]]></authorTag>
 		<value>8</value>
-		<determiner><![CDATA[some]]></determiner>
-		<name><![CDATA[tangerines]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[tangerines]]></namePlural>
-		<description><![CDATA[A winter citrus fruit that is less sour than many of its larger cousins. The peel has a glossy shine to it, as if it has been polished.]]></description>
-		<useDescriptor>eat</useDescriptor>
+		<determiner><![CDATA[一些]]></determiner>
+		<name><![CDATA[橘子]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[橘子]]></namePlural>
+		<description><![CDATA[这是一种冬季柑橘水果，比许多较大的柑橘果更不酸。果皮带有一种光泽，就好像被抛光过一样。]]></description>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -24,9 +24,9 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Increases)] [style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])] by 5 for 90 minutes.]]></line>
-			<line><![CDATA[[style.colourBlueLight(Changes)] the flavour of all fluids to [style.colourOrange(orange)].]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[在90分钟里[style.boldGood(增加)]5个[style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])]。]]></line>
+			<line><![CDATA[[style.colourBlueLight(改变)]液体的风味为[style.colourOrange(橘子味)]。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -47,7 +47,7 @@
 				[##npc.addStatusEffect(SE_dsg_item_fruit_buff, 5400)]
 			#ENDIF
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(feel)] vaguely healthier...
+				[npc.Name]感到略微健康了一点……
 			</p>
 		]]></applyEffects>
 		
@@ -59,11 +59,11 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			[npc.Name] [npc.verb(find)] the tangerine surprisingly easy to peel and [npc.verb(start)] eating it wedge by wedge. It doesn't take long to consume the whole thing after that...
-		]]></selfUse>
+			[npc.Name]发现这个橘子很容易剥开，然后开始一瓣一瓣地吃。之后不久就吃完了整个橘子……
+	]]></selfUse>
 		<otherUse><![CDATA[
-			[npc.Name] [npc.verb(find)] the tangerine surprisingly easy to peel and [npc.verb(start)] feeding it to [npc2.name] wedge by wedge. It doesn't take long to consume the whole thing after that...
-		]]></otherUse>
+[npc.Name]发现这个橘子居然很容易剥开，然后一瓣一瓣地把它喂给了[npc2.name]。之后不久就吃完了整个橘子……
+]]></otherUse>
 	</useDescriptions>
 
 	

@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small engraving on the belt buckle reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[皮带扣上的小雕塑印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>500</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's utility belt]]></name>
+		<name><![CDATA[执法者多功能腰带]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's utility belts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者多功能腰带]]></namePlural> 
 
-		<description><![CDATA[A two-layer belt made from ballistic nylon with all sorts of useful pouches and a holster for a sidearm attached.]]></description> 
+		<description><![CDATA[一条由弹道尼龙布制成的双层腰带，带有各类功能口袋和一个可放入副武器的枪套。]]></description> 
 
 		<physicalResistance>1</physicalResistance> 
 
@@ -67,27 +66,27 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the utility belt around [npc.her] waist and [npc.verb(snap)] the buckle together.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the utility belt around [npc2.namePos] waist and [npc.verb(snap)] the buckle together.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the utility belt around [npc2.namePos] waist as much as possible and forcibly [npc.verb(snap)] the buckle together.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]将多功能腰带环绕腰部，随后合上搭扣。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]将多功能腰带环绕[npc2.namePos]的腰部，随后合上搭扣。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]将多功能腰带紧紧环绕[npc2.namePos]的腰部，随后强行合上搭扣。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] utility belt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] utility belt.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(rip)] the utility belt off [npc2.namePos] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开多功能腰带。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]的多功能腰带。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]从[npc2.namePos]的腰部将多功能腰带扯下。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

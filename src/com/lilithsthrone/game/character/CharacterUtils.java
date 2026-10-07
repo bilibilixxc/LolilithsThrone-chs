@@ -2007,38 +2007,38 @@ public class CharacterUtils {
 		for(PersonalityTrait trait : character.getPersonalityTraits()) {
 			switch(trait) {
 				case BRAVE:
-					characterAdjectives.add("daring");
-					characterAdjectives.add("fearless");
-					characterAdjectives.add("brash");
-					characterAdjectives.add("cocky");
+					characterAdjectives.add("大胆的");
+					characterAdjectives.add("无畏的");
+					characterAdjectives.add("自以为是的");
+					characterAdjectives.add("自傲的");
 					break;
 				case COWARDLY:
-					characterAdjectives.add("suspicious");
-					characterAdjectives.add("cowardly");
+					characterAdjectives.add("疑神疑鬼的");
+					characterAdjectives.add("懦弱的");
 					break;
 				case CONFIDENT:
-					characterAdjectives.add("excitable");
-					characterAdjectives.add("energetic");
-					characterAdjectives.add("playful");
+					characterAdjectives.add("好动的");
+					characterAdjectives.add("精力旺盛的");
+					characterAdjectives.add("活泼的");
 					break;
 				case KIND:
 					break;
 				case LEWD:
-					characterAdjectives.add("lewd");
-					characterAdjectives.add("crass");
-					characterAdjectives.add("vulgar");
-					characterAdjectives.add("licentious");
+					characterAdjectives.add("淫荡的");
+					characterAdjectives.add("粗俗的");
+					characterAdjectives.add("低俗的");
+					characterAdjectives.add("放荡的");
 					break;
 				case PRUDE:
-					characterAdjectives.add("prude");
+					characterAdjectives.add("大惊小怪的");
 					break;
 				case SELFISH:
 				case CYNICAL:
-					characterAdjectives.add("rude");
+					characterAdjectives.add("鲁莽的");
 					break;
 				case SHY:
-					characterAdjectives.add("nervous");
-					characterAdjectives.add("shy");
+					characterAdjectives.add("神经紧张的");
+					characterAdjectives.add("害羞的");
 					break;
 //				case BIMBO:
 //				case BRO:
@@ -2046,7 +2046,7 @@ public class CharacterUtils {
 				case SLOVENLY:
 					break;
 				case STUTTER:
-					characterAdjectives.add("stuttering");
+					characterAdjectives.add("结巴的");
 					break;
 				case MUTE:
 					break;
@@ -2061,7 +2061,7 @@ public class CharacterUtils {
 			characterAdjectives.removeAll(exclusiveAdjectives);
 		}
 		if(characterAdjectives.isEmpty()) {
-			characterAdjectives = Util.newArrayListOfValues("cheeky", "excitable", "energetic", "cunning", "rude", "cocky", "smug");
+			characterAdjectives = Util.newArrayListOfValues("厚脸皮的", "容易激动的", "充满活力的", "狡猾的", "粗鲁的", "自大的", "自鸣得意的");
 			if(exclusiveAdjectives!=null) {
 				characterAdjectives.removeAll(exclusiveAdjectives);
 			}
@@ -2070,9 +2070,9 @@ public class CharacterUtils {
 		String adjective = Util.randomItemFrom(characterAdjectives);
 		
 		if(baseName==null || baseName.isEmpty()) {
-			character.setGenericName(adjective+" "+character.getSubspecies().getName(character.getBody()));
+			character.setGenericName(adjective+""+character.getSubspecies().getName(character.getBody()));
 		} else {
-			character.setGenericName(adjective+" "+baseName);
+			character.setGenericName(adjective+""+baseName);
 		}
 		
 		return adjective;
@@ -3492,16 +3492,16 @@ public class CharacterUtils {
 				if(Math.random()<0.1f && lewdTattoos) {
 					if(slot==InventorySlot.GROIN && character.hasVagina()) {
 						writing = Util.randomItemFrom(Util.newArrayListOfValues(
-								character.getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive()?"Breed me!":null,
-								"Fuck me!",
-								"Hot Pussy"));
+								character.getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive()?"让我怀孕！":null,
+								"操我！",
+								"下流小穴"));
 						
 					} else {
 						writing = Util.randomItemFrom(Util.newArrayListOfValues(
-								character.getFetishDesire(Fetish.FETISH_SUBMISSIVE).isPositive()?"Dominate me":null,
-								character.getFetishDesire(Fetish.FETISH_SUBMISSIVE).isPositive()?"Good pet":null,
-								character.getFetishDesire(Fetish.FETISH_DOMINANT).isPositive()?"Bow down":null,
-								character.getFetishDesire(Fetish.FETISH_DOMINANT).isPositive()?"Submit to me":null));
+								character.getFetishDesire(Fetish.FETISH_SUBMISSIVE).isPositive()?"支配我":null,
+								character.getFetishDesire(Fetish.FETISH_SUBMISSIVE).isPositive()?"乖宠物":null,
+								character.getFetishDesire(Fetish.FETISH_DOMINANT).isPositive()?"跪下":null,
+								character.getFetishDesire(Fetish.FETISH_DOMINANT).isPositive()?"向我臣服":null));
 					}
 				}
 				TattooWriting tattooWriting = null;

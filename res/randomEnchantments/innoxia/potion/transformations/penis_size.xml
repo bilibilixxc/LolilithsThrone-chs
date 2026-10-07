@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -22,9 +22,9 @@
 	
 	<name defaultPrepend="true"><![CDATA[
 		#IF(flags.getInt('extremeTF')<50)
-			Cock-shrinking
+			阴茎缩小
 		#ELSE
-			Cock-growth
+			阴茎增长
 		#ENDIF
 	]]></name>
 	

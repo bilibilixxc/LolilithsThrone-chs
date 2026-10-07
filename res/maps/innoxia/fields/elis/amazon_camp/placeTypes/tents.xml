@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Tents]]></name>
-	<tooltipDescription><![CDATA[In order to house the Amazon refugees from Themiscyra, hundreds of tents have been erected in this camp.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in a tent in the Amazons' camp]]></virginityLossDescription>
+	<name><![CDATA[帐篷]]></name>
+	<tooltipDescription><![CDATA[为了容纳来自特弥斯库拉的亚马逊难民，营地里竖起了数百顶帐篷。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在亚马逊人营地的一顶帐篷里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_YELLOW</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

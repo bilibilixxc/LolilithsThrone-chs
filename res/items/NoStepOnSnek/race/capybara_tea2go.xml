@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>100</value> 
-		<determiner><![CDATA[a thermo cup of]]></determiner>
-		<name><![CDATA[Chamomile Tea]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Chamomile Teas]]></namePlural>
-		<description><![CDATA[A large, insulated cup filled with a calming chamomile tea. Nobody seems completely sure whether it causes the capybaras' legendary serenity or merely complements it, but they're certainly consuming a lot of the stuff.]]></description> 
+		<determiner><![CDATA[一保温杯]]></determiner>
+		<name><![CDATA[甘菊茶]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[甘菊茶]]></namePlural>
+		<description><![CDATA[一个大保温杯，里面装满了让人平静的甘菊茶。似乎没人能完全确定，这究竟是造成毛冠豚传说中的宁静的原因，还是仅仅是对它的补充，但它们肯定喝了很多这种茶。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MANA_MAXIMUM.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MANA_MAXIMUM.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				An uplifting wave of arcane energy washes over [npc.name]...
+				一道振奋人心的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MANA_MAXIMUM, 2)]
 		]]></applyEffects>
@@ -50,10 +50,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the lid of the cup and, upon discovering that the tea within is still at a nice temperature, [npc.verb(take)] a deep swig of the calming liquid.
+		[npc.Name]打开杯子的盖子，发现茶仍然保持着适中的温度，于是深深地喝了一口这舒缓的液体。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the lid of the cup and, upon discovering that the tea within is still at a nice temperature, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips] so [npc2.she] can take a deep swig of the calming liquid.
+		[npc.Name]打开杯子的盖子，发现茶仍然保持着适中的温度，然后将它递到[npc2.namePos]等待[npc2.lips]前，以便[npc2.she]能够深深地喝一口这舒缓的液体。
 		]]></otherUse>
 	</useDescriptions>
 

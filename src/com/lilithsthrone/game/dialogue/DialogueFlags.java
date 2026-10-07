@@ -659,11 +659,11 @@ public class DialogueFlags implements XMLSaving {
 		StringBuilder sb = new StringBuilder();
 		sb.append("<p style='text-align:center;'>");
 			if(increment>0) {
-				sb.append("You [style.colourGood(gained)] [style.boldPink("+increment+")] [style.colourPinkLight([style.mule] point"+(plural?"s":"")+")]!");
+				sb.append("你[style.colourGood(获得了)][style.boldPink("+increment+")][style.colourPinkLight([style.mule]点数"+(plural?"s":"")+")]！");
 			} else {
-				sb.append("You [style.colourBad(lost)] [style.boldPink("+(-increment)+")] [style.colourPinkLight([style.mule] point"+(plural?"s":"")+")]!");
+				sb.append("你[style.colourBad(失去了)][style.boldPink("+(-increment)+")][style.colourPinkLight([style.mule]点数)]！");
 			}
-			sb.append("<br/>You now have [style.boldPink("+getNatalyaPoints()+")] [style.colourPinkLight([style.mule] points)]!");
+			sb.append("<br/>你现在有[style.boldPink("+getNatalyaPoints()+")][style.colourPinkLight([style.mule]点数)]！");
 		sb.append("</p>");
 		return sb.toString();
 	}

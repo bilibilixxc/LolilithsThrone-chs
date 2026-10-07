@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[Shiranui's fire]]></name>
-	<tooltipDescription><![CDATA[A pink flame, suspended in mid-air and burning with arcane energy, powers Shiranui's spell and keeps trespassers trapped within her realm.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside one of the fires within Shiranui's trap]]></virginityLossDescription>
+	<name><![CDATA[不知火的火焰]]></name>
+	<tooltipDescription><![CDATA[一团燃烧奥术能量的粉色火焰悬在半空，为不知火的法术供能，把闯入者困在她的领域里。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在不知火陷阱内的一簇火焰旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>flame</svgName>
 	<colour>BASE_PINK</colour>

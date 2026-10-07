@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Toy Cabinets]]></name>
-	<tooltipDescription><![CDATA[On one side of the basement, a series of ornate wooden cabinets are filled with every type of BDSM toy and accessory imaginable.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Yui's bondage basement]]></virginityLossDescription>
+	<name><![CDATA[玩具柜]]></name>
+	<tooltipDescription><![CDATA[在地下室的一侧，一系列华丽的木柜里摆满了各种各样的BDSM玩具和配件。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于唯的束缚地下室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

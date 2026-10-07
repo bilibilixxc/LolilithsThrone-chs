@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Printed on the inside, a small tag reads 'MFD by DSG Costume Supply Co, Ltd'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[一个小标签的内侧印着“DSG服装供应有限公司生产”。]]></clothingAuthorTag>
 		<value>100</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[kitty stockings]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[kitty stockings]]></namePlural>
-		<description><![CDATA[A pair of thigh-high stockings with a stylized cat face printed on them and a pair of stylized cat ears attached.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[猫咪长筒袜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[猫咪长筒袜]]></namePlural>
+		<description><![CDATA[一双长及大腿上部的长筒袜，上面印着卡通猫脸还带有一对卡通猫耳。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>SOCK</slot> 
@@ -53,27 +53,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] on the stockings before pulling them all the way up to [npc.her] thighs.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up [npc2.her] thighs.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up to [npc2.her] thighs.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]套上长筒袜，将它们一路拉至大腿位置。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将长筒袜套到[npc2.namePos]的[npc2.feet]上，将它们一路拉至[npc2.her]的大腿位置。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地将长筒袜套到[npc2.namePos]的[npc2.feet]上，将它们一路拉至[npc2.her]的大腿位置。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] stockings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] stockings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] stockings.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]脱下长筒袜。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]脱下[npc2.namePos]的长筒袜。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地脱下[npc2.namePos]的长筒袜。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

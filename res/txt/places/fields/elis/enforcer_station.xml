@@ -1,74 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Corridor: -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		You find yourself [pc.walking] down the corridor which leads from the reception area into the rest of the Enforcer station. Worn, greyish-blue carpet covers the floor, while up above bright fluorescent-style arcane lights illuminate the dark wooden beams which hold up the ceiling. The entire area has that faint, musty smell which is often found in old, public buildings like this one.
+		你[pc.walking]在从接待区通往执法局走廊上。灰蓝色的破旧地毯铺满了地面，上方明亮的荧光灯照亮了支撑天花板的深色木梁。整个区域都弥漫着一股淡淡的老式公共建筑中常见的霉味。
 	</p>
 	<p>
-		The odd Enforcer passes you as you travel down this corridor. Busy with their duties, they don't stop to ask what you're doing back here, and instead hurry past you with either the briefest of nods or no acknowledgement at all.
+		当你走过这条走廊时，有零星的执法者与你擦肩而过。他们忙于执行任务匆匆从你身边走过，没有停下来问你来这里做什么，有的要么点了点头，要么根本不理睬你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- Entrance/Exit: -->
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		You're currently standing in a modestly-sized reception area. Just like its exterior suggested, the inside of this building looks to be quite old, with dark wooden beams visible both overhead and set into the walls. Allowing your gaze to wander over the worn, drab-green carpet, you see that a long, free-standing desk has been positioned on the far side of this room. Behind this desk is standing
+		你正站在一个面积不大的接待区。就像它的外观一样，这栋建筑的内部看起来也相当陈旧，头顶和墙壁上都能看到深色的木梁。你的视线扫过破旧、单调的绿色地毯，房间的最里面摆放着一张独立的长办公桌。桌子后面站着
 		#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
-			 the familiar horse-girl, Sterope.
+			熟悉的马女，斯特罗普。
 		#ELSE
-			 a lesser horse-girl.
+			一个亚马女。
 		#ENDIF
-		 About half a dozen cushioned chairs are lined up along the sides of this area, and although they look to be quite shabby and well used, they're all currently unoccupied.
+		在接待区的两侧，都有靠背椅一字排开，虽然看起来相当破旧，而且使用率很高，但目前都无人问津。
 	</p>
 	<p>
-		From here, you could proceed forwards to greet
+		在这里，你可以继续向前，问候
 		#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
-			 Sterope,
+			斯特罗普，
 		#ELSE
-			 the horse-girl Enforcer,
+			马女执法者，
 		#ENDIF
-		 or instead turn around and exit the building via the same way you entered it...
+		或者掉头原路返回……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_INITIAL_ENTRY"><![CDATA[
 	<p>
-		Deciding to enter the Enforcer station, you [pc.walk] down the wide path which runs through the knot garden and approach the entrance. The wooden doors have been propped open, allowing you to pass by a couple of friendly-looking Enforcers and enter the building without stopping.
+		你决定进入执法局，沿着穿过结纹园的宽阔小路向入口[pc.walk]去。木门已经被撑开，你可以从几个面容和善的执法者身边经过进入建筑。
 	</p>
 	<p>
-		Taking a look around as you [pc.step] inside, you see that you're standing in a modestly-sized reception area. Just like its exterior suggested, the inside of this building looks to be quite old, with dark wooden beams visible both overhead and set into the walls. Allowing your gaze to wander over the worn, drab-green carpet, you see that a long, free-standing desk has been positioned on the far side of this room. Behind this desk is standing
+		当你[pc.step]进去，环顾四周，你正站在一个面积不大的接待区。就像它的外观一样，这栋建筑的内部看起来也相当陈旧，头顶和墙壁上都能看到深色的木梁。你的视线扫过破旧、单调的绿色地毯，房间的最里面摆放着一张独立的长办公桌。桌子后面站着
 		#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
-			 the familiar horse-girl, Sterope.
+			熟悉的马女，斯特罗普。
 		#ELSE
-			 a lesser horse-girl.
+			一个亚马女。
 		#ENDIF
-		 About half a dozen cushioned chairs are lined up along the sides of this area, and although they look to be quite shabby and well used, they're all currently unoccupied.
+		在接待区的两侧，都有靠背椅一字排开，虽然看起来相当破旧，而且使用率很高，但目前都无人问津。
 	</p>
 	<p>
-		From here, you could proceed forwards to greet
+		在这里，你可以继续向前，问候
 		#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
-			 Sterope,
+			斯特罗普，
 		#ELSE
-			 the horse-girl Enforcer,
+			马女执法者，
 		#ENDIF
-		 or instead turn around and exit the building via the same way you entered it...
+		或者掉头原路返回……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Having concluded your business within the Enforcer station, you exit via the main entrance. After passing through the propped-open doors, you pass through the knot garden and quickly return to the street beyond.
+		你结束在执法者站内的业务后，便从正门离开。穿过撑开的大门和结纹园后，很快就回到了外面的街道上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- Reception area: -->
@@ -76,217 +76,217 @@
 	<htmlContent tag="RECEPTION"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
-			Crossing through the reception area, you approach the desk and say hello to Sterope.
+			你穿过接待区并靠近服务台，向斯特罗普打招呼。
 		#ELSE
-			Crossing through the reception area, you approach the desk and introduce yourself to the receptionist.
+			你穿过接待区并靠近服务台，向接待员介绍自己。
 		#ENDIF
 		#IF(flags.hasFlag(FLAG_innoxia_sterope_fully_furry))
-			 Having convinced her to remain as a greater horse-girl, you see that Sterope is in the form of a fully anthropomorphised horse. Both the hair covering her body as well as the mane-like hair which is tied up into a bun is dark brown in colour, while her eyes are the same shade of green that they were when she was mostly human. Her Enforcer uniform is in immaculate condition, and as you finish your greeting, she brushes a speck of dust from her sleeve and fixes you with her stern gaze.
+			在说服她继续做一个纯马女之后，你发现斯特罗普已经变成了一匹人形的马。她身上的毛发和扎成发髻的鬃毛都是深棕色，而她的眼睛则是人类时的绿色。她的执法者制服整洁如新，你打完招呼后，她拂去袖子上的一粒灰尘，用严厉的目光注视着你。
 		#ELSE
-			 From her dark brown, horse-like ears and tail, it's quite obvious that
+			从她暗棕色的马一般的耳朵和尾巴上不难看出，
 			#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
-				 Sterope
+				斯特罗普
 			#ELSE
-				 this receptionist
+				这个接待员
 			#ENDIF
-			 is a horse-girl, but apart from these animal features she's otherwise human in appearance. Her skin is olive in colour, while her dark brown hair is tied up into a bun. Her Enforcer uniform is in immaculate condition, and as you finish your greeting, she brushes a speck of dust from her sleeve and sternly gazes at you with her green eyes.
+			是个马女，但除了动物特征外，她的外表与人类无异。皮肤呈橄榄色，深棕色的头发扎成一个发髻。执法者制服整洁如新，你打完招呼后，她拂去袖子上的一粒灰尘，用绿色的眼睛严厉地注视着你。
 		#ENDIF
 	</p>
 	#IF(pc.hasAnyEnforcerStatusEffect())
 		#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
 			<p>
-				[sterope.speech([pc.Name],)] the cold-mannered horse-girl greets you by simply stating your name. Suspiciously looking at your Enforcer uniform, she asks, [sterope.speech(Are you <i>really</i> an Enforcer?)]
+				[sterope.speech([pc.Name]，)]冷漠的马女向你打招呼。然后怀疑地看着你的执法者制服问，[sterope.speech(你<i>真的</i>是一个执法者？)]
 			</p>
 			<p>
-				You assure Sterope that you are, but that you're on a secret assignment from Dominion and so can't say too much to her. Before you can say anything else, Sterope
+				你向斯特罗普保证你是，但你正在执行御城区的秘密任务，所以不能对她说太多。在你还要继续说之前，斯特罗普
 				#IF(flags.hasFlag(FLAG_innoxia_sterope_met_in_tavern))
-					 flashes you an icy look and hisses under her breath, [sterope.speech(Don't you <i>dare</i> mention anything about my private life while I'm on duty.)]
+					给了你一个冰冷的眼神，压低声音说，[sterope.speech(别<i>想着</i>在我值班的时候提任何和我私生活有关的事。)]
 				#ELSE
-					 gives you a slightly disdainful look, before asking, [sterope.speech(So, what is it that I can help you with?)]
+					略带不屑地看了你一眼，然后问，[sterope.speech(所以，我能帮你什么呢？)]
 				#ENDIF
 			</p>
 		#ELSE
 			<p>
-				[sterope.speech([pc.Name], is it?)] she replies in a flat tone. Her professional attitude borders on being cold and aloof, and after suspiciously looking at your Enforcer uniform, she taps the nameplate on her chest and reveals, [sterope.speech(I'm Constable Hippos, but as you're an Enforcer as well, I can be 'Sterope' to you... You <i>are</i> an Enforcer, aren't you?)]
+				[sterope.speech([pc.Name]，是吧？)]她的回答语气平淡。态度近乎冷漠，在怀疑地看了看你的执法者制服后，她敲了敲胸前的铭牌，然后笑着说，[sterope.speech(我是警员希波斯，但既然你也是执法者，你也可以叫我‘斯特罗普’……你<i>是</i>个执法者，对吧？)]
 			</p>
 			<p>
-				You assure Sterope that you are, but that you're on a secret assignment from Dominion and so can't say too much to her. Before you can say anything else, Sterope gives you a slightly disdainful look, before asking, [sterope.speech(So, what is it that I can help you with?)]
+				你向斯特罗普保证你是，但你正在执行御城区的秘密任务，所以不能对她说太多。还没等你说什么，斯特罗普就略带不屑地看了你一眼，然后问，[sterope.speech(所以，我能帮你什么呢？)]
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(flags.hasFlag(FLAG_innoxia_elis_enforcers_sterope_met))
 			<p>
-				[sterope.speech([pc.Name],)] the cold-mannered horse-girl greets you by simply stating your name. Before you can say anything else, she
+				[sterope.speech([pc.Name]，是吧？)]冷漠的马女向你打招呼。在你还要继续说之前，她
 				#IF(flags.hasFlag(FLAG_innoxia_sterope_met_in_tavern))
-					 flashes you an icy look and hisses under her breath, [sterope.speech(Don't you <i>dare</i> mention anything about my private life while I'm on duty.)]
+					给了你一个冰冷的眼神，压低声音说，[sterope.speech(别<i>想着</i>在我值班的时候提任何和我私生活有关的事。)]
 				#ELSE
-					 gives you a slightly disdainful look, before asking, [sterope.speech(Do you have a crime to report? Or is there something else you're hoping that I can help you with?)]
+					略带不屑地看了你一眼，然后问，[sterope.speech(你要报案吗？还是希望我帮你什么？)]
 				#ENDIF
 			</p>
 		#ELSE
 			<p>
-				[sterope.speech([pc.Name], is it?)] she replies in a flat tone. Her professional attitude borders on being cold and aloof, and with a slightly disdainful look on her face, she taps the nameplate on her chest and reveals, [sterope.speech(I'm Constable Hippos, but to build trust with members of the public we've all been instructed to use our first names, so that's 'Sterope' to you. Do you have a crime to report? Or is there something else you're hoping that I can help you with?)]
+				[sterope.speech([pc.Name]，是吧？)]她的回答语气平淡。态度近乎冷漠，脸上带着略微不屑的神情，轻轻敲了敲胸前的铭牌，然后露出了笑容，[sterope.speech(我是警员希波斯，但为了跟公众建立信任，我们都是用名称呼的，所以你就叫我‘斯特罗普’吧。你要报案吗？还是希望我帮你什么？)]
 			</p>
 			<p>
-				Impatiently tapping her fingernails on the desk a couple of times, Sterope waits to hear what it is that you're here for...
+				斯特罗佩不耐烦地用指甲在桌子上敲了几下，她在等着听你说你来这里的目的……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="RECEPTION_STEP_BACK"><![CDATA[
 	<p>
-		Not having anything else to discuss with Sterope, you tell her that you've got to be going and [pc.step] away from her desk. Giving you the briefest of nods, the stern horse-girl simply says, [sterope.speech(Stay out of trouble.)]
+		你和斯特罗普没有别的事情可谈，就告诉她你得走了，然后从她的办公桌边[pc.step]开。严厉的马女向你点了点头，然后简单地说，[sterope.speech(不要惹事。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TALK_WORK"><![CDATA[
 	<p>
-		Wanting to know more about what sort of work the Enforcers do here in Elis, you ask Sterope if there's much crime to be dealt with. 
+		你想了解执法者在伊利斯都做些什么工作，便问斯特罗普是否有很多犯罪要处理。
 	</p>
 	<p>
-		[sterope.speech(There's some crime, yes,)] she replies. Letting out an impatient sigh as she realises that you were hoping for more information than that, she continues in a flat tone, [sterope.speech(It used to be very peaceful here in Elis, but with the influx of refugees from the Foloi Fields, there's been an increase in criminal activity. We can easily manage it during daylight hours, but we don't have the manpower to keep the alleyways safe after dark, so don't go wandering through the northern part of town at night.)]
+		[sterope.speech(是的，有一些犯罪，)]她回道。她意识到你希望得到比这更多的信息时，她不耐烦地叹了口气，继续用平淡的语气说，[sterope.speech(伊利斯曾经非常宁静，但随着弗洛伊田野难民的涌入，犯罪活动有所增加。白天我们还能轻松应对，但天黑后我们就没有人手来保证小巷的安全了，所以晚上不要在城北闲逛。)]
 	</p>
 	<p>
-		Thanking her for the information, you wonder what to ask of Sterope next...
+		你谢过她提供的信息，你想着接下来该问斯特罗普什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TALK_CAREER"><![CDATA[
 	<p>
-		Wanting to know more about Sterope's background, you ask her what led to her becoming an Enforcer.
+		你想了解斯特罗普的背景，就问她是因为什么原因成为执法者的。
 	</p>
 	<p>
-		[sterope.speech(I don't see how that's any of your business,)] Sterope coldly replies, before sighing, [sterope.speech(You're lucky that the higher-ups have ordered us to be friendly with members of the public.)]
+		[sterope.speech(我看不出这与你有什么关系，)]斯特罗普冷冷地回答，然后叹了口气，[sterope.speech(你很幸运，上级命令我们对公众保持友好。)]
 	</p>
 	<p>
-		If this is her being friendly, you can't help but wonder what Sterope would normally be like as she prepares to reveal her past to you.
+		在斯特罗普准备向你揭露她的过去时，你不禁在想，如果这是她在表示友好，那平时她会是什么样子。
 	</p>
 	<p>
-		[sterope.speech(If you must know, I joined the Enforcers when I was just nineteen, and I've been stationed here in Elis for almost my entire career,)] she says, before going on to state, [sterope.speech(I've been offered a promotion several times, but I've no interest in going through officer school, and I like my job here. I think that's all you need to know.)]
+		[sterope.speech(如果你一定要知道，我十九岁就加入了执法者，几乎整个职业生涯都驻扎在伊利斯这里，)]她接着说，[sterope.speech(我曾多次获得晋升机会，但我没有兴趣去上警校，我喜欢这里的工作。我想这就是你想要知道的了)]
 	</p>
 	<p>
-		Feeling like trying to push her to reveal any further information would be futile, you wonder what to ask Sterope next...
+		你觉得再逼她透露更多信息也是徒劳，想着接下来该问斯特罗普什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TALK_LUNETTE"><![CDATA[
 	<p>
-		Curious to hear what an Enforcer has to say about Lunette, you ask Sterope what she thinks of the elder lilin and the chaos she's caused in the Foloi Fields.
+		你想听听执法者对露内特的看法，于是问斯特罗普她对莉琳长老和她在弗洛伊田野造成的混乱有什么看法。
 	</p>
 	<p>
-		[sterope.speech(It's Lunette's daughters who are causing the problem, not her,)] Sterope tactfully responds, [sterope.speech(It's certainly not for me to question a daughter of Lilith herself.)]
+		[sterope.speech(是露内特的女儿们造成的问题，而不是她，)]斯特罗普委婉地回应，[sterope.speech(我当然不能质疑莉莉丝的女儿。)]
 	</p>
 	<p>
-		Just as you think that Sterope has finished her response, she continues, [sterope.speech(Besides, it's really not so bad for those out in the Fields. There are far worse fates than being taken by a succutaur and turned into her submissive, worthless cock-sleeve...)]
+		就在你以为斯特罗普已经回答完的时候，她继续说道，[sterope.speech(而且，这对那些在野外的人来说也没那么糟。还有比被四足魅魔抓走，变成她顺从的、毫无价值的鸡巴套更糟糕的命运……)]
 	</p>
 	<p>
-		Suddenly catching herself and realising what it is she's saying, Sterope clears her throat and says, [sterope.speech(Anyway, nevermind about that...)]
+		斯特罗普突然意识到自己在说什么，她清了清嗓子说，[sterope.speech(总之，别管这些了……)]
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_sterope_unlocked))
-			Before you can tease her about what she's just said, Sterope flashes you a stern look and hisses, [sterope.speech(Don't say a word... Remember, I'm in 'The Centaur's Sword' every evening after nine...)]
+			你还没来得及调侃她刚才说的话，斯特罗普就用严厉的眼神瞪了你一眼，然后低声说，[sterope.speech(别说一个字……记住，每天晚上九点以后我都在‘半人马之剑’……)]
 		#ELSE
-			It seems as though the horse-girl has inadvertently revealed a secret desire of hers. Perhaps you could push her a little further and get her to admit this desire to you?
+			看来，马女无意中透露了她的一个秘密愿望。也许你可以再逼她一下，让她向你承认这个欲望？
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TALK_SWORD"><![CDATA[
 	<p>
-		Wanting to know more about the group of SWORD Enforcers who are stationed here, you ask Sterope what she knows about them.
+		你想更多地了解驻扎在这里的这群SWORD执法者，便向斯特罗普询问她对他们的了解。
 	</p>
 	<p>
-		[sterope.speech(It's not my place to share rumours with members of the public,)] the horse-girl bluntly responds, before impatiently drumming her fingers on the desk and asking, [sterope.speech(Anything else?)]
+		[sterope.speech(我的职责不是和公众分享谣言，)]马女直截了当地回答，然后不耐烦地用手指敲着桌子问，[sterope.speech(还有其他问题吗？)]
 	</p>
 	<p>
-		Not satisfied with her answer, you remind Sterope that you're working on behalf of Minotallys herself, and that the lilin would be disappointed to find out that one of her town's Enforcers had been uncooperative.
+		你对她的回答并不满意，于是提醒斯特罗普，你是代表米诺塔利斯工作的，如果莉琳发现她镇上的一名执法者不合作，她会很失望的。
 	</p>
 	<p>
-		[sterope.speech(Lilin and mayor she may be, but we Enforcers are not under her command, so take your threats elsewhere,)] Sterope angrily snaps, before rolling her eyes and sighing, [sterope.speech(I suppose there's no need to make this into an issue. You want to know about those SWORD guys? Well, they don't mix with the rest of us, so I don't know much. They were assigned to Elis about five years ago, and the rumour was that they caused a fuss in Dominion and got on the wrong side of an elder lilin.)]
+		[sterope.speech(她确实是莉琳，还是市长，但我们执法者不受她的摆布，你威胁别人去吧，)]斯特罗普愤怒地咆哮着，然后翻了个白眼，叹了口气，[sterope.speech(我想没必要把这变成一个问题。你想了解那些SWORD吗？他们不和我们混在一起，所以我知道的不多。大约五年前，他们被派到伊利斯，有传言说他们在御城区引起了轩然大波，还惹上了一位莉琳长老。)]
 	</p>
 	<p>
-		Wanting to know more, you press Sterope for more information. Shrugging her shoulders and crossing her arms, the horse-girl reluctantly reveals, [sterope.speech(I don't know if any of this is true, but there was talk that a recognised daughter of the elder lilin Lasielle had been given a high-ranking position in the Enforcers, and that a year or so after her appointment a SWORD group arrested her. Apparently Lasielle was furious and wanted to disband SWORD entirely. All that happened in the end, however, was that the Enforcers who were involved were transferred here.)]
+		你想知道更多，便向斯特罗普询问更多信息。马女耸耸肩，双手交叉，无奈地透露，[sterope.speech(我不知道这些是否属实，但有传言说，莉琳长老拉谢尔的一个公认的女儿在执法者中担任了高级职位，在她上任一年后，一个SWORD小队逮捕了她。显然，拉谢尔非常愤怒，想要彻底解散SWORD。不过，最后的结果是，涉案的执法者被调到了这里。)]
 	</p>
 	<p>
-		Before you can ask Sterope if she knows anything else, she shakes her head and says, [sterope.speech(That's all I know. If you want to know more, just ask them yourself.)]
+		还没等你问斯特罗普是否还知道什么，她就摇摇头说，[sterope.speech(我就知道这么多了，如果你想知道更多不如自己去问他们。)]
 	</p>
 	<p>
-		Thanking the horse-girl for the information, you wonder what to do next...
+		你谢过马女提供信息，想着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_FLIRT"><![CDATA[
 	<p>
-		Seizing upon what Sterope has just said, you tease the horse-girl by asking her if she thinks about succutaurs turning people into submissive, worthless cock-sleeves often. Although she blushes a little as you say this, Sterope maintains her composure and looks down her nose at you as she prepares her response.
+		你抓住斯特罗普刚才说的话，逗弄这个马女，问她是否经常想到四足魅魔会把人变成顺从的、没用的鸡巴套子。虽然你这么说让她有些脸红，但斯特罗普仍然保持镇定，低头看着你准备回答。
 	</p>
 	<p>
-		[sterope.speech(I'm on duty at the moment, so this sort of conversation is entirely unacceptable,)] she coolly states, before glancing around to make sure that no other Enforcers are nearby. Satisfied that nobody's going to overhear her, she says under her breath, [sterope.speech(If you like that sort of thing, I'm in 'The Centaur's Sword' every evening. Look for me after nine.)]
+		[sterope.speech(我现在正在值班，所以不能接受这种对话，)]她冷淡地说道，然后环顾四周，确保附近没有其他执法者。在确认没有人会听到她的话后，她小声说，[sterope.speech(如果你喜欢这类东西，我每天晚上都在‘半人马之剑’。晚上九点以后来找我。)]
 	</p>
 	<p>
-		Before you can ask her any more about this, the Enforcer clears her throat and asks in a stern tone, [sterope.speech(Is there anything else I can help you with?)]
+		你还没来得及问她更多，执法者就清了清嗓子，用严厉的语气问，[sterope.speech(还有什么我能帮你的吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_SWORD"><![CDATA[
 	<p>
-		Wanting to meet with the SWORD Enforcers who are stationed here as soon as possible, you tell Sterope that you've been sent by Minotallys herself to make contact with them. The horse-girl flashes you a suspicious look, before flatly stating, [sterope.speech(I find that hard to believe. I'll need some proof.)]
+		你想尽快与驻扎在这里的SWORD执法者会面，于是告诉斯特罗普，你是米诺塔莉丝派来与他们接触的。马女向你投来狐疑的目光，然后斩钉截铁地说，[sterope.speech(我很难相信。我需要证据。)]
 	</p>
 	<p>
-		Taking out your town hall access card, you show it to the distrustful Enforcer, who snatches it from your [pc.hand(true)] and closely inspects it. Letting out an annoyed hum, she hands it back to you, before saying, [sterope.speech(Fine, you can head on through. They're in the room at the far end of the corridor, but don't expect a warm welcome.)]
+		你拿出市政厅的门禁卡给不信任的执法者看，她从你[pc.hand(true)]中夺过卡，仔细检查了一番。她恼怒地哼了一声，然后把卡递回给你并说，[sterope.speech(好吧，你可以过去了。他们在走廊尽头的房间里，但别指望会受到热烈欢迎。)]
 	</p>
 	<p>
-		With that, Sterope motions for you to head on past her desk and through the door behind her. Before you proceed, however, you could always take a moment to ask her what she could tell you about these SWORD Enforcers...
+		斯特罗普说完，示意你走过她的办公桌，穿过她身后的门。不过，在你继续前行之前，你可以花点时间问问她，关于这些SWORD执行者，她能告诉你些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Locked door: -->
 
 	<htmlContent tag="LOCKED_DOOR"><![CDATA[
 	<p>
-		This door is marked as leading to the Enforcer station's cells and offices, although a quick test of the handle reveals it to be locked. An arcane card-reading device is attached to the wall to one side of it, letting you know that you'd need an access card to gain entry.
+		这扇门上标记着通往执法局的牢房和办公室的图标，但你拉动门把手，发现门是锁着的。门边墙上挂着一个奥术读卡器，需要门禁卡才能进入。
 	</p>
 	<p>
-		Unable to proceed through this door, all you can do is turn around and head back into the corridor...
+		由于你无法通过这扇门，只能掉头返回走廊……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="LOCKED_DOOR_STEP_BACK"><![CDATA[
 	<p>
-		You [pc.step] back into the corridor and wonder which way to go now...
+		你[pc.step]回走廊，想着接下来去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Cells: -->
 
 	<htmlContent tag="CELLS"><![CDATA[
 	<p>
-		TODO Four cells are where the town's criminals are held while awaiting trial...
+		TODO 四间牢房是镇上罪犯候审的地方……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Office: -->
 
 	<htmlContent tag="OFFICE"><![CDATA[
 	<p>
-		TODO In this office Enforcers fill out paperwork and plan their patrols...
+		TODO在这间办公室里，执法者填写文件并按计划巡逻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SWORD: -->
@@ -294,603 +294,603 @@
 	<htmlContent tag="SWORD"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_elis_sword_met))
 		<p>
-			The door at the end of the corridor is fitted with an opaque glass window, and etched into this glass are the words 'SWORD 3rd Battalion, 1st Company - Company Headquarters'. An old, seriously-dented ballistic helmet is being used to prop this door ajar, although all that can be seen through the narrow opening is a section of beige wall. Several deep voices can be heard within, which occasionally turn into brief, booming laughs.
+			走廊尽头的门上装有一扇不透明的玻璃窗，玻璃窗上刻着“SWORD第三营第一连-连部”。一顶严重凹陷的旧防弹头盔撑着这扇门，透过狭窄的门缝只能看到米黄色的墙壁。门内传出几声低沉的声音，偶尔会变成短暂而洪亮的笑声。
 		</p>
 		<p>
-			Giving the door a brief knock, you push it open and [pc.step] into the room beyond. The voices are instantly silenced as you make your entrance, and the eyes of half a dozen veteran SWORD Enforcers are fixed onto you. A couple of these Enforcers are sitting behind desks on the far side of the room, but the rest are lounging about on sofas that have been arranged into a rectangular area to the left of where you're standing. While each of these Enforcers are of a different race, and a few of them are female, they all appear to be at least in their late fifties. Although you've seen SWORD Enforcers on duty in Elis's town hall, you don't recognise any of the ones before you, and you realise that those guards must be separate to this group.
+			你轻轻敲了敲门并推开门，[pc.step]进房间。一进门，房间立刻变得鸦雀无声，六个资深SWORD执法者都盯着你。其中几名执法者坐在房间远处的办公桌后面，其余的则躺在沙发上，沙发在你所站位置的左侧被摆放成一个长方形区域。尽管这些执法者的种族各不相同，其中还有几个是女性，但他们看起来至少都已年过五旬。你见过在伊利斯市政厅执勤的SWORD执法者，但你不认识眼前的这些人，你意识到市政厅的SWORD肯定和这群人不是一起的。
 		</p>
 		<p>
-			One of the Enforcers who's sitting behind a desk is a large, grey-furred wolf-boy with a furry beard and a black patch over one eye. Despite appearing to be in his late sixties, he looks to be very physically fit, and from his confident posture and position in the room he seems to be the leader of this group. As you start to introduce yourself, he grunts and says in a deep, gravelly voice, [hammer.speech(We know who you are, [pc.name]. You think someone as dangerous as you enters our town without us noticing? State your business quickly; we don't have time for small talk.)]
+			其中一名坐在办公桌后面的执法者是一个身材高大、长着灰色毛发、留着毛茸茸的胡子、一只眼睛上戴着黑色眼罩的狼男。尽管看起来已经六十多了，但他看起来身体非常健康，从他自信的姿态和在房间里的位置来看，他似乎是这群人的领导者。当你开始自我介绍时，他哼了一声，用低沉沙哑的声音说，[hammer.speech(我们知道你是谁，[pc.name]。你以为像你这么危险的人进入我们的小镇我们会毫无察觉吗？快说你的事，我们没时间闲聊。)]
 		</p>
 		#IF(pc.hasAnyEnforcerStatusEffect())
 			<p>
-				Before you can start to say anything, a mean-looking tiger-girl takes one look at your uniform and growls from her position on one of the sofas, [style.speechFeminineStrong(You're not convincing anyone in this room that you're an Enforcer, so don't even try.)]
+				还没等你开口，一个长相凶恶的虎女看了你的制服一眼，就在沙发上咆哮起来，[style.speechFeminineStrong(你没法让我们相信你是执法者，所以别试了。)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Pushing open the door marked 'SWORD 3rd Battalion, 1st Company - Company Headquarters' at the far end of the corridor, you [pc.step] around the old, seriously-dented ballistic helmet which was being used to prop the door ajar and enter the room beyond. The voices of the Enforcers, which were audible from out in the corridor, are instantly silenced as you make your entrance. As they see that it's you, however, they turn back to their conversations and leave you to Hammer and Ghost. 
+			推开走廊尽头标有“SWORD第 3 营第 1 连-连部”的门，你绕过用来虚掩大门的严重凹陷的旧防弹头盔，[pc.step]进房间。你一进门，房间里执法者们的声音立刻停了下去。不过，当他们看到是你时，又继续着他们的谈话，把你留给了锤子和幽灵。
 		</p>
 		#IF(pc.getQuest(QUEST_LINE_MAIN)==QUEST_MAIN_3_G_SWORD_SCAPEGOAT)
 			#IF(game.getDayOfWeek()==DOW_TUESDAY && game.isHourBetween(17, 24))
 				<p>
-					The small otter-girl turns on her sofa to face you and say, [ghost.speech(The succubus and her gang are going to be holding their weekly meeting in a few hours. You're ready to go, right?)]
+					小水獭女在沙发上转过身来，面对着你说， [ghost.speech(魅魔和她的帮派将在几小时后召开周会。你准备好了吗？)]
 				</p>
 				<p>
-					[hammer.speech(Refugees are still going missing. We can't afford to wait another week,)] Hammer grunts while cracking his knuckles, [hammer.speech(We need to take that bitch out tonight.)]
+					[hammer.speech(难民仍然毫无踪迹。我们不能再等一周了，)]锤子一边咬着指关节，一边咕哝，[hammer.speech(我们今晚就得干掉那个婊子。)]
 				</p>
 				<p>
-					Although you're not obliged to go with them this evening, it seems like it would be a good idea to get this operation done sooner rather than later...
+					虽然你没有义务今天晚上跟他们一起去，但尽早完成任务似乎是个好主意……
 				</p>
 			#ELSE
 				<p>
-					The small otter-girl turns on her sofa to face you and say,
+					小水獭女在沙发上转过身来，面对着你说，
 					#IF(game.getDayOfWeek()==DOW_MONDAY)
-						 [ghost.speech(The succubus and her gang are going to be holding their weekly meeting tomorrow evening. You'll be ready for that, right?)]
+						[ghost.speech(魅魔和她的帮派明天晚上要召开周会。你会准备好的，对吧？)]
 					#ELSE
-						 [ghost.speech(The succubus and her gang are going to be holding their weekly meeting on Tuesday evening. You'll be ready for that, right?)]
+						[ghost.speech(魅魔和她的帮派将在周二晚上召开周会。你会准备好的，对吧？)]
 					#ENDIF
 				</p>
 				<p>
-					[hammer.speech([pc.She]'ll be ready,)] Hammer grunts, before looking at you from behind his desk and saying, [hammer.speech(We've got other ops to plan, so we'll see you on Tuesday evening.)]
+					[hammer.speech([pc.She]会准备好的。)]锤子哼了一声，然后从办公桌后面看着你说，[hammer.speech(我们还有其他行动要安排，周二晚上见。)]
 				</p>
 				<p>
-					It seems like you'll have to earn the Enforcers' trust before they'll be comfortable with you being here...
+					看来你得先赢得执法者的信任，他们才会放心你在这里……
 				</p>
 			#ENDIF
 		#ELSE
 			#IF(flags.hasFlag(FLAG_innoxia_sword_mission_react_needed))
 				<p>
-					[hammer.speech(Good work on that op,)] the wolf-boy grunts from behind his desk.
+					[hammer.speech(干得漂亮，)]狼男在办公桌后面咕哝着。
 				</p>
 				<p>
-					[ghost.speech(Yeah, sorry we had to plan to use you as a scapegoat, but at least it didn't come to that, right?)] Ghost says with a smile from her place on one of the sofas.
+					[ghost.speech(是啊，很抱歉我们不得不计划拿你当替罪羊，但至少事情没有发展到那一步，对吧？)]幽灵坐在沙发上笑着说。
 				</p>
 				#IF(flags.hasFlag(FLAG_innoxia_sword_mission_reward))
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_chose_hammer))
 						<p>
-							[hammer.speech(You didn't have to risk yourself to help us fight those gang members,)] Hammer sternly says, before placing a sheathed dagger down on his desk and grunting, [hammer.speech(I don't like being in someone's debt, so take this and then we're even.)]
+							[hammer.speech(你不必冒着生命危险来帮我们打击那些帮派成员，)]锤子厉声说道，然后把一把带鞘的匕首放在桌子上，哼了一声，[hammer.speech(我不喜欢欠别人的，所以拿着这个，我们就扯平了。)]
 						</p>
 						<p>
-							[ghost.speech(When's the last time you actually used that thing?)] Ghost playfully asks the wolf-boy as she sees what it is he's offering you.
+							[ghost.speech(你上一次真正使用那东西是什么时候？)]幽灵看到狼男给你的东西时，俏皮地问他。
 						</p>
 						<p>
-							[hammer.speech(Knives aren't my style; I leave that work to you,)] Hammer replies, before beckoning for you to take the dagger and barking, [hammer.speech(Come on, I don't have all day.)]
+							[hammer.speech(用刀不是我的风格，我会把这个工作留给你，)]铁锤回道，然后招手让你接过匕首，并喊，[hammer.speech(快点，我可没那么多时间。)]
 						</p>
 						<p>
-							Despite his stern attitude, you get the feeling that the wolf-boy genuinely likes you. This feeling is reinforced as you approach his desk and see that the dagger he's giving you looks to be quite a special one...
+							尽管他的态度很严厉，但你还是感觉到狼男是真心喜欢你。当你走近他的办公桌，看到他给你的匕首看起来很特别时，这种感觉就更加强烈了……
 						</p>
 					#ELSE
 						<p>
-							Before you can reply, the otter-girl holds a sheathed dagger towards you and says, [ghost.speech(We didn't expect you to put yourself at risk and fight alongside us. I get the feeling that you're going to get yourself into a lot more fights in the future, so perhaps you'd like this?)]
+							还没等你回答，水獭女就拿着一把带鞘的匕首对着你说，[ghost.speech(我们没想到你会冒着风险和我们并肩作战。我感觉你今后会卷入更多的战斗，也许你会喜欢这个？)]
 						</p>
 						<p>
-							[hammer.speech(You're giving away your dagger?)] Hammer asks in surprise as he sees what it is the otter-girl's offering you.
+							[hammer.speech(你要把匕首送人？)]锤子看到水獭女给你的东西后惊讶地问。
 						</p>
 						<p>
-							[ghost.speech(I have like ten of these,)] Ghost replies, before chuckling at the look of surprise on Hammer's face and teasing, [ghost.speech(So I can still surprise you even after all these years.)]
+							[ghost.speech(我好像还有十把，)]幽灵回答道，然后看着锤子惊讶的表情，笑着调侃，[ghost.speech(所以即使过了这么多年，我还是能给你带来惊喜。)]
 						</p>
 						<p>
-							The wolf-boy simply grunts and crosses his arms in response. You understand his surprise as you approach Ghost and see that the dagger she's giving you looks to be quite a special one...
+							狼男只是咕哝了一声，然后双手交叉。你理解他的惊讶，因为你靠近幽灵时，看到她给你的匕首看起来很特别……
 						</p>
 					#ENDIF
 				#ELSE
 					<p>
-						[hammer.speech(Before you ask, we're working on the plan to defend Elis,)] Hammer grunts, motioning towards a large map of the town and the surrounding area that's pinned to one wall. Although there are an impressive number of lines, unit markers, and technical symbols drawn over it, there doesn't quite seem to be enough to defend the entire town. Noticing your questioning look, the wolf-boy simply grunts, [hammer.speech(We'll get it sorted.)]
+						[hammer.speech(在你问之前，我们正在制定保卫伊利斯的计划，)]锤子哼了一声，指了指钉在一面墙上的小镇及周边地区的大地图。虽然上面画着大量的线条、单位标记和技术符号，但似乎还不足以保卫整个小镇。狼男注意到了你质疑的眼神，只是简单地咕哝了一声，[hammer.speech(我们会处理好的。)]
 					</p>
 					<p>
-						Now that the SWORD Enforcers seem to trust you, you wonder if you can ask them a few questions...
+						现在SWORD执法者似乎信任你，你想着是否可以问他们几个问题……
 					</p>
 				#ENDIF
 			#ELSE
 				<p>
-					[ghost.speech(Hi, [pc.name],)] the otter-girl cheerfully calls out from her place on one of the sofas.
+					[ghost.speech(嗨，[pc.name]，)]水獭女在沙发上欢快地叫着。
 				</p>
 				<p>
-					[hammer.speech(Before you ask, we're working on the plan to defend Elis,)] Hammer grunts, motioning towards a large map of the town and the surrounding area that's pinned to one wall. Although there are an impressive number of lines, unit markers, and technical symbols drawn over it, there doesn't quite seem to be enough to defend the entire town. Noticing your questioning look, the wolf-boy simply grunts, [hammer.speech(We'll get it sorted.)]
+					[hammer.speech(我们正在制定保卫伊利斯的计划，)]锤子哼了一声，指了指钉在一面墙上的小镇及周边地区的大地图。虽然上面画着大量的线条、单位标记和技术符号，但似乎还不足以保卫整个小镇。狼男注意到了你质疑的眼神，只是简单地咕哝了一声：[hammer.speech(我们会处理好的。)]
 				</p>
 				<p>
-					Now that the SWORD Enforcers seem to trust you, you wonder if you can ask them a few questions...
+					现在SWORD执法者似乎信任你，你想着是否可以问他们几个问题……
 				</p>
 			#ENDIF
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_DAGGER_HAMMER"><![CDATA[
 	<p>
-		[pc.Stepping] up to Hammer's desk, you take the offered dagger from him. Unclasping the sheath's restraining strap, you slide the weapon free to get a good look at it. It's quite simple in design, having a plain foil grip and a tapered, double-edged blade. Like almost all weapons in the realm, the blade isn't made from metal, but is instead formed from arcane energy. Its sharp point makes it clear that it was made for thrusting and stabbing attacks.
+		你[pc.Stepping]到锤子的办公桌前接过他递过来的匕首。解开匕首鞘的束缚带，你拔出匕首，仔细端详起来。它的设计非常简单，只有一个普通的箔片握把和一把锥形双刃匕首。和王国中几乎所有的武器一样，它的刀刃并非由金属制成，而是由奥术能量形成。它锋利的刀尖足以看得出来，它是为刺入和刺伤攻击而制造的。
 	</p>
 	<p>
-		[hammer.speech(We were issued those back when SWORD was first formed,)] Hammer reveals, [hammer.speech(They still use the same design today, but that one's a first pattern example. They only issued them from 1976 to '77.)]
+		[hammer.speech(SWORD成立之初，就给我们发了这些东西，)]锤子透露，[hammer.speech(到现在他们仍在使用相同的设计，但这是第一款。他们只在 1976 年至 77 年间发行过。)]
 	</p>
 	<p>
-		[ghost.speech(You sure you want to be giving it away?)] Ghost asks from the other side of the room, [ghost.speech(Haven't you got some memories attached to that thing?)]
+		[ghost.speech(你确定要把它送人？)]幽灵在房间的另一边问， [ghost.speech(你不是对那东西有些回忆？)]
 	</p>
 	<p>
-		[hammer.speech(Only bad ones,)] Hammer grunts, before giving you a brief nod and saying, [hammer.speech(I haven't unsheathed it for over a decade. At least with you it might see some use.)]
+		[hammer.speech(只有坏的，)]锤子哼了一声，然后向你简短地点了点头说，[hammer.speech(我已经有十多年没拔出过它了。至少在你这里，它还能派上用场。)]
 	</p>
 	<p>
-		[ghost.speech(Oh, and before you ask, we're working on the plan to defend Elis,)] Ghost says, motioning towards a large map of the town and the surrounding area that's pinned to one wall. Although there are an impressive number of lines, unit markers, and technical symbols drawn over it, there doesn't quite seem to be enough to defend the entire town. Noticing your questioning look, the otter-girl sighs, [ghost.speech(We'll get it sorted. I hope...)]
+		[ghost.speech(哦，在你问之前，我们正在制定保卫伊利斯的计划，)]幽灵说着，指了指钉在一面墙上的小镇及周边地区的大地图。虽然上面画着大量的线条、单位标记和技术符号，但似乎还不足以保卫整个小镇。注意到你质疑的眼神，水獭女叹了口气，[ghost.speech(我们会搞定的，希望吧……)]
 	</p>
 	<p>
-		Now that the SWORD Enforcers seem to trust you, you wonder if you can ask them a few questions...
+		现在SWORD执法者似乎信任你，你想着是否可以问他们几个问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_DAGGER_GHOST"><![CDATA[
 	<p>
-		[pc.Stepping] over to Ghost, you take the offered dagger from her. Unclasping the sheath's restraining strap, you slide the weapon free to get a good look at it. It's quite simple in design, having a plain foil grip and a tapered, double-edged blade. Like almost all weapons in the realm, the blade isn't made from metal, but is instead formed from arcane energy. Its sharp point makes it clear that it was made for thrusting and stabbing attacks.
+		你[pc.Stepping]到幽灵面前接过她递过来的匕首。解开匕首鞘的束缚带，拔出匕首，仔细端详起来。它的设计非常简单，只有一个普通的箔片握把和一把锥形双刃匕首。和王国中几乎所有的武器一样，它的刀刃并非由金属制成，而是由奥术能量形成。从锋利的刀尖足以看出，它是为刺入和刺伤攻击而制造的。
 	</p>
 	<p>
-		[ghost.speech(We were issued these back when SWORD was first formed,)] Ghost reveals, [ghost.speech(They still use the same design today, but this one's a first pattern example. They only issued them from 1976 to '77. The newer ones are fine, but I've always preferred the weighting and feel of these old ones.)]
+		[ghost.speech(SWORD成立之初，就给我们发了这些东西，)]幽灵透露，[ghost.speech(到现在他们仍在使用相同的设计，但这款是首款。他们只在 1976 年至 77 年间发行过这种刀。新款也不错，但我一直更喜欢老款的重量和手感。)]
 	</p>
 	<p>
-		[hammer.speech(A firearm's the better choice,)] Hammer grunts from the other side of the room, [hammer.speech(Knife fights are far too risky.)]
+		[hammer.speech(枪械是更好的选择，)]锤子在房间的另一侧发出咕哝声，[hammer.speech(用刀太冒险了。)]
 	</p>
 	<p>
-		[ghost.speech(It's only risky if the target sees you before they feel the blade,)] Ghost coldly replies, before giving you a brief nod and saying, [ghost.speech(I prefer to run my blades with a poison enchantment, but you do you. Thanks again for backing us up on that op.)]
+		[ghost.speech(只有当目标在感觉到刀刃之前看到你时，才会有风险，)]幽灵冷冷地回答，然后向你微微点头说，[ghost.speech(我更喜欢用附毒的刀片，但你做你的。再次感谢你支持我们的行动。)]
 	</p>
 	<p>
-		[hammer.speech(Before you ask, we're working on the plan to defend Elis,)] Hammer grunts, motioning towards a large map of the town and the surrounding area that's pinned to one wall. Although there are an impressive number of lines, unit markers, and technical symbols drawn over it, there doesn't quite seem to be enough to defend the entire town. Noticing your questioning look, the wolf-boy simply grunts, [hammer.speech(We'll get it sorted.)]
+		[hammer.speech(你问之前，我们正在制定保卫伊利斯的计划，)]锤子哼了一声，指了指钉在一面墙上的小镇及周边地区的大地图。虽然上面画着大量的线条、单位标记和技术符号，但似乎还不足以保卫整个小镇。狼男注意到了你质疑的眼神，只是简单地咕哝了一声，[hammer.speech(我们会处理好的。)]
 	</p>
 	<p>
-		Now that the SWORD Enforcers seem to trust you, you wonder if you can ask them a few questions...
+		现在SWORD执法者似乎信任你，你想着是否可以问他们几个问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_INITIAL"><![CDATA[
 	<p>
-		Deciding that it would be best to do as the wolf-boy says, you explain the situation to all of the assembled SWORD Enforcers. After telling them what happened in Themiscyra, you say that the defeat of Lunexis will bring the wrath of Lunette herself down on Elis. As a result, Minotallys has asked you to come here and ask for these Enforcers' help in preparing a plan to defend the town.
+		你决定最好按照狼男说的做，于是你向所有聚集在一起的SWORD执法者说明了情况。在告诉他们在特弥斯库拉发生的事情后，你说露内克西丝的失败会让露内特本人的愤怒降临伊利斯。因此，米诺塔利斯请你到这里来，请求这些执法者帮助制定保卫城镇的计划。
 	</p>
 	<p>
-		[ghost.speech(So the lilin comes crawling to us for help, but she can't even be bothered to meet us in person,)] a feminine voice speaks out from the sofas. Hidden up until now behind the huge, muscular bull-boy she's sitting next to, a small otter-girl leans forwards and flashes you a grin. Like the wolf-boy, she looks to be in her late sixties, and again like her comrade she bears a visible scar. Her entire left arm, right up to the point where it meets the short sleeve of her shirt, is covered in horrific burn scars. Standing up, and allowing you to see that she's no more than [ghost.heightValue] tall in the process, she says in an accusatory tone, [ghost.speech(You've been living with one of Lyssieth's recognised daughters in Dominion, and now that you've arrived here in our town you've brought the other one with you. You've clearly been sent here on her orders, and now you come here and ask us to fight Lunette? It sounds to me like you want to use us as pawns in some plot of Lyssieth's.)]
+		[ghost.speech(所以莉琳屈尊向我们求助，但她却懒得亲自来见我们，)]女人的声音从沙发上传出。身材娇小的水獭女向前倾了倾身子，向你咧嘴一笑。和狼男一样，她看上去也有六十多岁了，她和同伴一样，身上也有一道明显的伤疤。整个左臂，直到与衬衫短袖相接的地方，都布满了可怕的烧伤疤痕。她站起身来，你发现她不过[ghost.heightValue]高。她用指责的语气说， [ghost.speech(你一直和莉西丝在御城区的一个女儿住在一起，现在你来到了我们的小镇，还把另一个女儿也带来了。你显然是奉她的命令被派到这里来的，而现在你却来要求我们和露内特战斗？在我看来你是想利用我们来完成莉西丝的阴谋。)]
 	</p>
 	<p>
-		Clearly having been expecting you, this otter-girl throws a folder down onto the coffee table nearest to you, and out spill dozens of papers
+		这位水獭女显然在等你，她把文件夹扔到离你最近的茶几上，几十份文件
 		#IF(game.isSillyMode())
-			 and lurid pictures
+			和色图
 		#ENDIF
-		 detailing your exploits in Dominion, Submission, and now Elis. On the front of this folder are printed the words 'ORICL: Top Secret', letting you know that these Enforcers clearly have some important contacts back in Dominion, as well as that your exploits haven't gone unnoticed.
+		飞了出来 ，详细记录了你在御城区、屈城区和现在在伊利斯的事迹。文件夹的正面印着“ORICL：绝密”的字样，让你知道这些执法者显然在御城区有重要的关系，也让你知道你的所作所为没有被忽视。
 	</p>
 	<p>
-		[hammer.speech(You only have to take one look at the Foloi Fields to know that Lunette needs to be stopped,)] the wolf-boy growls, [hammer.speech(but by doing your bidding it seems to me like we'll just be swapping one elder lilin for another. Why should we trust you?)]
+		[hammer.speech(你只要看一眼弗洛伊田野，就知道需要有人制止露内特，)]狼男咕哝着，[hammer.speech(但在我看来，要是听你的，我们只是从听命于一个莉琳长老换成了另一个长老。我们为什么要相信你？)]
 	</p>
 	<p>
-		It seems like these Enforcers don't trust any of the elder lilin. As they know about your connection to Lyssieth, it looks like you'll need to do some convincing to get them on your side...
+		看来这些执法者不信任任何一个莉琳长老。由于他们知道你和莉西斯的关系，看来你需要说服他们才能让他们站在你这边……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_CONVINCE_TRUTH"><![CDATA[
 	<p>
-		Considering how experienced and distrustful these Enforcers seem, you decide that telling them the truth is the best course of action. Although they seem to dislike the elder lilin, you aren't sure of their opinion of Lilith, and so you have to hope that they'll be sympathetic to your cause as you tell them that your plan is to defeat each of the elder lilin and then overthrow Lilith herself.
+		你考虑到这些执法者老道又多疑，最好的办法还是告诉他们真相。虽然他们似乎不喜欢莉琳长老，但你不确定他们对莉莉丝的看法，所以只能寄希望于他们会同情你的事业，你要告诉他们你的计划是打败每一个莉琳长老，然后推翻莉莉丝本人。
 	</p>
 	<p>
-		[hammer.speech(So you decided to waltz on in and admit to a group of SWORD Enforcers that you're plotting an act of high treason?)] the wolf-boy asks, and for the first time since entering this room his stoic expression is broken by a toothy grin. Leaning back in his chair, he states, [hammer.speech(We've got all we need to arrest you right now and have you enslaved for life.)]
+		[hammer.speech(所以你就这样大摇大摆地走进来，向一群SWORD执法者承认你正在策划叛国行为？)]狼男问，这是进入房间以来他第一次绷不住表情，他靠在椅子上笑着说，[hammer.speech(我们现在就可以逮捕你，让你终身为奴。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_CONVINCE_LIE"><![CDATA[
 	<p>
-		Although you need to trust these Enforcers to an extent, you don't think that it's wise to admit to them that you're planning on eventually overthrowing Lilith herself. As a result, you simply tell them that you've been sent here by Lyssieth to help deal with Lunette, and that the elder lilin needs to be defeated to bring an end to her reign of terror over the Foloi Fields.
+		尽管你需要信任这些执法者，但你认为向他们承认你打算推翻莉莉丝本人并不明智。因此，你只告诉他们，你是被莉西丝派来帮助对付露内特的，只有打败莉琳长老才能结束她对弗洛伊田野的恐怖统治。
 	</p>
 	<p>
-		[hammer.speech(You're aware that plotting against an elder lilin is an act of high treason?)] the wolf-boy asks, and for the first time since entering this room his stoic expression is broken by a toothy grin. Leaning back in his chair, he states, [hammer.speech(We've got all we need to arrest you right now and have you enslaved for life.)]
+		[hammer.speech(你知道谋害长老是叛国罪吗？)]狼男问，这是进入房间以来他第一次绷不住表情，他靠在椅子上笑着说，[hammer.speech(我们现在就可以逮捕你，让你终身为奴。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_CONVINCE_END"><![CDATA[
 	<p>
-		As all of the Enforcers remain stationary as the wolf-boy says this, you point out that they aren't making a move to arrest you.
+		狼男说这话时，所有执法者都没有动作，你指出他们并没有采取行动逮捕你。
 	</p>
 	<p>
-		[hammer.speech(We're not interested in enforcing Lilith's laws any more,)] the wolf-boy growls, his grin vanishing as quickly as it appeared, [hammer.speech(We do what we can to help the ordinary citizens of the realm. We'll help you, but not for Lyssieth or Minotallys or any other lilin. We'll do it to help bring an end to the suffering that the folk of the Fields have endured for years.)]
+		[hammer.speech(我们再也不想执行莉莉丝的法律了，)]狼男咆哮着，他的笑容很快就消失了，[hammer.speech(我们会尽我们所能帮助王国的普通公民。我们也会帮助你，但不是为了莉西丝或米诺塔莉丝又或其他任何莉琳。我们这么做是为了结束田野人民多年来所遭受的苦难。)]
 	</p>
 	<p>
-		The other Enforcers nod as the wolf-boy says this. The otter-girl, who seems to have a far friendlier attitude than the wolf-boy, begins the introductions by saying, [ghost.speech(We don't use our real names here, so you can just call me 'Ghost'. The big scary wolf-boy over there's called 'Hammer'.)]
+		狼男说这话时，其他执法者都点了点头。水獭女的态度似乎比狼男好得多，她开始介绍说，[ghost.speech(我们在这里不用真名，所以你可以叫我‘幽灵’。那边那个吓人的大狼男叫‘锤子’。)]
 	</p>
 	<p>
-		The other Enforcers offer their own callsigns, and after they've finished Hammer says, [hammer.speech(Before we help you, we need you to help us.)]
+		其他执法者也说出了他们的代号，锤子说， [hammer.speech(在我们帮你之前，我们需要你来帮我们。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_HELP"><![CDATA[
 	<p>
-		Everything about these Enforcers suggests that they're very experienced and extremely dangerous. As such, it seems odd that they'd need your help with something, and so you ask them what it is that you can offer them.
+		这些执法者的一切都表明他们非常有经验而且极其危险。所以，他们需要你的帮助似乎有些奇怪，于是你问你能为他们提供什么帮助。
 	</p>
 	<p>
-		[ghost.speech(As you've already defeated one daughter of an elder lilin, we were hoping that you could help us deal with another one,)] Ghost says, before quietly stepping forwards to push the door closed behind you. After retrieving the folder which contains details of your exploits, she returns to sit on the sofa and reveals, [ghost.speech(We've got an op planned to take down a succubus, but if we're recognised while doing it then that'll be the end for us. Her mother, who's the elder lilin Lovienne, will undoubtedly find out if her daughter is attacked, and if it's known that we were behind it then we'd be one order away from being kicked out of SWORD, or maybe even being enslaved. As such, we need some insurance against her mother's wrath.)]
+		[ghost.speech(你已经打败了一个莉琳长老的女儿，我们希望你能帮我们对付另一个，)]幽灵说，然后悄悄向前走了一步，关上了你身后的门。她取回了装有你的详细事迹的文件夹，然后回到沙发上坐下说，[ghost.speech(我们计划执行一项行动，干掉一个魅魔，但如果我们在行动中被认出来，那我们就完了。她的母亲莉琳长老洛维耶纳，必然会发现自己的女儿遭到了袭击，如果被人知道是我们干的，那么我们离被踢出SWORD，甚至被奴役就只差一道命令了。所以，我们需要一些保险，以防她母亲发怒。)]
 	</p>
 	<p>
-		[hammer.speech(We know that you're somehow related to Lyssieth, and as you've just got away with defeating Lunexis then you'll be able to deal with any fallout from our op should we be recognised,)] Hammer gruffly states, [hammer.speech(We don't need you to fight, but we want you to tag along and get any heat off of us if we're recognised.)]
+		[hammer.speech(我们知道你和莉西丝有些关系，而且你刚刚击败了露内克西丝，如果我们的行动被发现了，你也能应付后果。)]锤子粗声粗气地说，[hammer.speech(我们不需要你去战斗，但我们希望你能跟着我们，如果我们被认出来，你能帮我们分担一些压力。)]
 	</p>
 	<p>
-		You're not sure that you like the sound of being used like this, but it might be best to get the full details of this mission before agreeing or refusing to go along with it...
+		你不确定自己是否喜欢这样被人利用，但在同意或拒绝之前，最好还是先了解一下这次任务的全部细节……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_MISSION"><![CDATA[
 	<p>
-		Wanting to know exactly what this operation is all about, you ask the Enforcers for some more details.
+		你想知道这次行动到底是怎么回事，便向执法者打听更多细节。
 	</p>
 	<p>
-		[hammer.speech(We first discovered the disappearance of refugees a few months ago, but it's likely that it's been going on a lot longer than that,)] Hammer says. Producing a map from out of his drawer, the wolf-boy stands up and walks over to the sofas, before spreading it out over the coffee table and stepping back to give you a clear view. The map appears to show the northern alleyways of Elis, and in about two dozen places red circles have been drawn onto it. [hammer.speech(The ones who are being kidnapped are carefully selected. They never have friends or family who'd report their disappearance, and if it wasn't for the surveillance we were conducting on an unrelated gang, we'd never have discovered it.)]
+		[hammer.speech(我们在几个月前发现有难民失踪，但很可能这种情况已经持续了很长时间，)]锤子说。狼男从抽屉里拿出一张地图，站起身走到沙发前，然后把地图铺在茶几上，退后一步，让你看得一清二楚。地图上标记的似乎是伊利斯北部的小巷，大约有二十几个地方被画上了红圈。[hammer.speech(被绑架的人都被精心挑选。他们没有朋友或家人会报告他们的失踪， 如果不是我们在监视一个不相关的团伙，我们永远不会发现这一点。)]
 	</p>
 	<p>
-		[ghost.speech(After we witnessed one attempted kidnapping, we interrogated the culprits and found out that they're working for a succubus,)] Ghost adds, [ghost.speech(They were far more loyal to their leader than we expected, but after some persuasion I found out that she's a daughter of Lovienne called 'Angelixx'. Thankfully she isn't recognised yet, but our contacts in Dominion found out that she's one of her mother's favourites, and a recognition ceremony is planned for her. Apparently, Lovienne seems to like the fact that her daughter is kidnapping refugees in Elis...)]
+		[ghost.speech(在我们目睹了一起绑架未遂事件后，我们审问了罪犯，发现他们在为一个魅魔工作，)]幽灵补充，[ghost.speech(他们对首领的忠诚远超我们的预期，但经过一番‘劝说’，我发现她是洛维耶纳的女儿，名叫‘安吉莉克丝’。值得庆幸的是，她还没有得到承认，但我们在御城区的联系人发现她是洛维耶纳的宠儿之一，并计划为她举行一个承认仪式。显然，洛维耶纳似乎很喜欢她的女儿在伊利斯绑架难民……)]
 	</p>
 	<p>
-		[hammer.speech(We're going to attack their headquarters and put and end to it,)] Hammer states, [hammer.speech(Any questions?)]
+		[hammer.speech(我们要袭击他们的总部，结束这一切，)]锤子表示， [hammer.speech(还有问题？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_MISSION_DETAILS_REFUGEES"><![CDATA[
 	<p>
-		Wanting to know what's happening to the refugees who are being kidnapped, you ask the Enforcers if they've discovered what's being done with them.
+		你想知道那些被绑架的难民发生了什么，就问执法者是否发现了魅魔对他们做了什么。
 	</p>
 	<p>
-		[ghost.speech(They're being illegally enslaved and teleported to Dominion by the succubus,)] Ghost coldly replies, the icy tone in her voice making it clear that she's angry about it, [ghost.speech(Illegal enslavement is a serious crime, and there are dozens of systems and regulations in place to detect if a slave isn't legal. The Slavery Administration would go ballistic if they got even the slightest inkling of illegal enslavement, and Dominion Enforcers would immediately be dispatched here to put an end to it. Nothing's happened though, suggesting that these slaves are all going to a private buyer who knows but doesn't care about their origin.)]
+		[ghost.speech(他们被魅魔非法奴役并传送到了御城区，)]幽灵冷冷地回答，冰冷的语气让人明白她对此很生气，[ghost.speech(非法奴役是一项严重的罪行，这里有几十个系统和规定来检测奴隶是否不合法。如果奴隶管理局发现哪怕一丁点非法奴役的苗头，他们都会大发雷霆，御城区的执法者也会立即被派来制止。但现在什么都没发生，这说明这些奴隶都被私人买家买走了，他们知道奴隶的来历，但并不在乎。)]
 	</p>
 	<p>
-		One of the other Enforcers, a fox-boy who'd introduced himself as 'Dancer', adds in a rough voice, [style.speechMasculineStrong(It must be for something important, as her mother clearly knows what's going on, and an elder lilin wouldn't risk being tied to illegal enslavement unless it was seriously worth it. If it was found out that an elder lilin was involved in illegal enslavement then it'd be a major scandal, and even the papers wouldn't be able to hide the truth forever. If people thought that they could be enslaved at any time for no reason then there'd definitely be unrest, if not full-blown riots.)]
+		其他执法者中的一个自称“舞者”的狐男粗声补充道，[style.speechMasculineStrong(这肯定是为了什么重要的事情，因为她的母亲显然知道发生了什么事，而且除非非常值得，否则莉琳长老不会冒着风险参与非法奴役的。如果被发现莉琳长老参与了非法奴役，那么这将是一桩大丑闻，即使是报纸也不可能永远掩盖真相。要是人们认为他们随时都可能无缘无故地被奴役，那么肯定会发生动乱，甚至是全面暴动。)]
 	</p>
 	<p>
-		[hammer.speech(Dominion is well outside of our operational area, so all we can do to stop it is disrupt their operation here in Elis,)] Hammer grunts in frustration, [hammer.speech(We don't know exactly what the kidnapped refugees are being used for, but they're never seen again.)]
+		[hammer.speech(御城区远在我们的行动区域之外，所以我们能做的就是破坏他们在伊利斯的行动，)]锤子沮丧地咕哝着，[hammer.speech(我们不知道被绑架的难民究竟被用来做什么，但他们再也没有出现过。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_MISSION_DETAILS_PLAN"><![CDATA[
 	<p>
-		Not knowing what their plan is, nor exactly how they want you to help, you ask the Enforcers for more details of their operation.
+		你不知道他们的计划是什么，也不知道他们到底想让你怎么帮忙，于是你向执法者打听他们行动的更多细节。
 	</p>
 	<p>
-		[ghost.speech(The gang's headquarters is in an abandoned bakery in the alleyways a short distance to the north-west of here. Every Tuesday night they meet with the succubus to have the week's kidnapped refugees teleported to Dominion, so we're going to hit them then,)] Ghost says, [ghost.speech(We can't raid them as Enforcers or else that'll bring the wrath of Lovienne down on us. Instead, we'll hit them like a rival gang would. No insignias, no arrests, and with our faces covered. We'll hit them hard and fast and tell them to clear out of our territory.)]
+		[ghost.speech(这伙人的总部就在西北方小巷里的一个废弃面包店里。每周二晚上，他们都会和魅魔见面，把本周被绑架的难民传送到御城区，所以我们要在那时下手，)]幽灵说，[ghost.speech(我们不能以执法者的身份突袭他们，否则会招致洛维耶纳的愤怒。相反，我们要像打击敌对帮派那样打击他们。不戴徽章，不抓人，蒙着脸。我们要狠狠地揍他们，让他们滚出我们的地盘。)]
 	</p>
 	<p>
-		[hammer.speech(As for Angelixx, we'll rough her up a bit and tell her never to show her face in Elis again,)] Hammer says, [hammer.speech(We'll try to find out what's happening to the refugees from her as well, but we're not likely to have the time to conduct a full interrogation.)]
+		[hammer.speech(至于安吉莉克斯，我们会揍她一顿，告诉她永远不要再在伊利斯露面，)]锤子说，[hammer.speech(我们也会试着从她那里了解难民的情况，但我们不可能有时间进行全面的审问。)]
 	</p>
 	<p>
-		[ghost.speech(If we're somehow recognised during it all, then you're going to use your influence with Lyssieth to get Lovienne off our back,)] Ghost says to you with a smile on her face, [ghost.speech(It most likely won't come to that, but we need you as insurance just in case. We want you there on the op with us so that you can't back out of the agreement later; you'll be seen to be with us, so your fate will be tied to ours. Not that we don't trust you, of course...)]
+		[ghost.speech(如果我们在这期间被认出来了，那么你就要利用你在莉西丝那里的影响力，让洛维耶纳离我们远点，)]幽灵面带笑容地对你说，[ghost.speech(很可能不会走到那一步，但我们需要你作为保险，以防万一。我们希望你和我们一起参加行动，这样你就不能反悔了；你会被人看到和我们在一起，所以你的命运将和我们绑在一起。当然，这并不是说我们不信任你……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_MISSION_DETAILS_SUCCUBUS"><![CDATA[
 	<p>
-		Wanting to know more about Angelixx, the succubus who's the gang's leader, you ask the Enforcers if there's anything else they can tell you about her.
+		你想了解安吉莉克斯，这个帮派的首领魅魔，你问执法者是否还能告诉你关于她的其他事情。
 	</p>
 	<p>
-		[hammer.speech(We've seen her entering and leaving the gang's headquarters several times,)] Hammer states, [hammer.speech(She takes the form of a small, young succubus, but how old she really is we don't know. She seems to make an effort to look and act innocent, likely as a way to influence people and gain loyalty from her followers.)]
+		[hammer.speech(我们多次看到她进出帮派总部。)]锤子说，[hammer.speech(她化身为一个小而年轻的魅魔，但她的真实年龄我们不得而知。她似乎在努力装出一副天真无邪的样子，这很可能是她影响他人并获得追随者忠诚的一种方式。)]
 	</p>
 	<p>
-		[ghost.speech(We don't know much about her combat abilities, but one of our contacts in Dominion told us that she's a complete coward, so once we've beaten her she'll run off back to Dominion with her tail between her legs,)] Ghost says.
+		[ghost.speech(我们对她的战斗能力了解不多，但我们在御城区的一个联络人告诉我们，她是个十足的胆小鬼，所以一旦我们打败了她，她就会夹着尾巴跑回御城区，)]幽灵说，
 	</p>
 	<p>
-		[style.speechMasculineStrong(I know how scum like her operate,)] a huge, muscular horse-boy with the callsign 'mountain' says in a booming voice, [style.speechMasculineStrong(Instead of fighting, she likely tries to turn her opponents against one another, or she'll just keep talking and delaying until she can spring a trap on them. Don't believe anything the bitch says, and attack her as soon as you see her.)]
+		[style.speechMasculineStrong(我知道像她这样的人渣是怎么做事的，)]一个身材魁梧、肌肉发达、代号“高山”的马男用洪亮的声音说， [style.speechMasculineStrong(她很可能不会战斗，而是试图让对手反目成仇，又或者她只会不停地说话和拖延时间，直到她能给对手设下陷阱。不要相信这个贱人说的任何话，一看到她就立刻攻击她。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_MISSION_END"><![CDATA[
 	<p>
-		Needing these Enforcers to help with the defence of Elis, you tell them that you'll do as they ask. You say that you'll come along on their op and do all you can to get Lyssieth to pardon them if they're discovered.
+		你需要这些执法者帮助保卫伊利斯，于是告诉他们，你会按照他们的要求去做。你不仅会参加他们的行动，如果他们被发现，你还会尽力让莉西丝赦免他们。
 	</p>
 	#IF(game.getDayOfWeek()==DOW_TUESDAY && game.isHourBetween(17, 24))
 		<p>
-			[ghost.speech(The succubus and her gang are going to be holding their weekly meeting in a few hours. You're ready to go now, right?)] Ghost asks.
+			[ghost.speech(魅魔和她的帮派将在几小时后召开周会，你现在可以走了对吧？)]幽灵问。
 		</p>
 		<p>
-			[hammer.speech(We can't afford to wait another week,)] Hammer grunts while cracking his knuckles, [hammer.speech(We need to take that bitch out tonight.)]
+			[hammer.speech(我们不能再多等一个星期了，)]锤子掰着手指嘟囔着，[hammer.speech(我们今晚就得把那婊子干掉。)]
 		</p>
 		<p>
-			Although you're not obliged to go with them this evening, it seems like it would be a good idea to get this operation done sooner rather than later...
+			虽然你不是一定要今晚跟他们一起去，但最好还是尽早完成这项任务比较好……
 		</p>
 	#ELSE
 		#IF(game.getDayOfWeek()==DOW_TUESDAY)
 			<p>
-				[ghost.speech(The succubus and her gang are going to be holding their weekly meeting tonight, so we'll see you in a few hours, right?)] Ghost asks.
+				[ghost.speech(魅魔和她的帮派今晚要开周会，我们几小时后见，可以吧？)]幽灵问。
 			</p>
 			<p>
-				[hammer.speech(We can't afford to wait another week,)] Hammer grunts while cracking his knuckles, [hammer.speech(We need to take that bitch out tonight.)]
+				[hammer.speech(我们不能再多等一个星期了，)]锤子掰着手指嘟囔着，[hammer.speech(我们今晚就得把那婊子干掉。)]
 			</p>
 		#ELSE
 			<p>
-				[ghost.speech(We'll see you on Tuesday then. Come here after five in the evening and we'll be ready,)] Ghost says.
+				[ghost.speech(那我们周二下午五点后见吧，我们会准备好的，)]幽灵说，
 			</p>
 			<p>
-				[hammer.speech(Don't forget about it,)] Hammer grunts while cracking his knuckles, [hammer.speech(We need to take that bitch out as soon as possible. Oh, and I shouldn't have to say this, but don't tell anyone about this op. We need to maintain secrecy.)]
+				[hammer.speech(别忘了，)]锤子掰着手指嘟囔着，[hammer.speech(我们得尽快干掉那个婊子。哦，还有，这次行动不要告诉任何人，我们需要保密。)]
 			</p>
 		#ENDIF
 		<p>
-			Stepping past you, Ghost opens the door and cheerfully says, [ghost.speech(We'll see you soon, [pc.name].)]
+			幽灵从你身边走出大门，然后说：[ghost.speech(我们很快就会再见面的，[pc.name]。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_MISSION_END_LEAVE"><![CDATA[
 	<p>
-		Saying goodbye, you head out through the door and return to the corridor. The door swings shut behind you, before knocking into the battered helmet that's serving as a door stop. Taking a quick look around, you prepare to continue on your way...
+		道别后，你穿过大门回到走廊。门在你身后关上，然后撞上了用作门挡的破旧头盔。你环顾四周，准备继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SWORD_MISSION_START"><![CDATA[
 	<p>
-		Wanting to get this operation done as soon as possible, you tell the Enforcers that you're ready to go.
+		为了尽快完成这次行动，你告诉执法者你已经准备好了。
 	</p>
 	<p>
-		[style.speechFeminine(The gang's been unusually vigilant over the past couple of days,)] a pretty lynx-girl says from her spot on one of the sofas. Letting out a frustrated sigh, she continues, [style.speechFeminine(They had double the lookouts last night, and they'll almost certainly have more tonight.)]
+		[style.speechFeminine(这几天，这些帮派分子异常警惕，)]漂亮的猞猁女在沙发上说。她无奈地叹了口气，继续说道，[style.speechFeminine(昨晚他们有比之前多两倍的哨兵，今晚肯定会有更多。)]
 	</p>
 	<p>
-		[hammer.speech(I know, I know...)] Hammer says with a deep sigh. Clenching his fist, he grunts, [hammer.speech(We can't call off the op. If the gang knew we were coming they'd have abandoned their HQ. Their increased awareness must be a coincidence.)]
+		[hammer.speech(我知道，我知道……)]锤子深深地叹了一口气说。他握紧拳头，嘟哝着，[hammer.speech(我们不能取消行动，如果帮派知道我们要来，他们早就放弃总部了。他们的警觉性提高一定是巧合，)]
 	</p>
 	<p>
-		[ghost.speech(I agree, but they'll definitely see us coming and might call off the meeting,)] Ghost says, before suggesting, [ghost.speech(If just two of us go in civvy clothes then we can probably walk on past without alerting them. We've got enough gear in the hideout for two of us to get changed once there.)]
+		[ghost.speech(我同意，但他们肯定会看到我们，可能会取消周会，)]幽灵说，然后又建议，[ghost.speech(如果我们两个穿便服去，也许可以不惊动他们走过去。我们在藏身处有足够的装备供我们两个人在那里装备。)]
 	</p>
 	<p>
-		[hammer.speech(That's risky,)] Hammer grunts, [hammer.speech(but those refugees need us. You and I will go, Ghost. Everyone else, get geared up and wait here. We'll take a resonance stone and activate it if we need backup.)]
+		[hammer.speech(这太冒险了，)]锤子嘟囔着说，[hammer.speech(但那些难民需要我们。幽灵和我去， 其他人都准备好，在这里待命。如果需要支援，我们就启动回声石。)]
 	</p>
 	<p>
-		The Enforcers all stand up and head off to a door on the far side of the room, which you assume leads into the room in which their equipment is stored. Remaining behind for a moment, Ghost steps over to you and explains, [ghost.speech(Hammer and I will get changed into street clothing and then head on over to a hideout we've got with you. Don't worry, the two of us will be more than enough to deal with some petty gang members.)]
+		执法者们都站了起来，向房间远处的一扇门走去，你觉得这扇门后是它们存放装备的房间。幽灵在后面停留了一会儿，走到你身边解释， [ghost.speech(锤子和我会换上街头服装，然后前往我们和你一起找的藏身处。别担心，我们两个对付小小帮派成员绰绰有余。)]
 	</p>
 	<p>
-		With that, the small otter-girl follows her comrades into the other room, leaving you to wait while they all get changed. A few minutes later, Hammer comes out wearing a ribbed jumper and a cap pulled down to conceal his eye patch. Behind him walks Ghost, who's changed into a long-sleeved dress so that her burns are hidden. The other Enforcers don't reappear, and you assume that it's taking them a while longer to put on all of their Enforcer gear.
+		小水獭女跟着她的同伴们进了另一个房间，让你等他们都换好衣服。几分钟后，锤子走了出来，他穿着一件罗纹毛衣，拉下帽子遮住了眼罩。幽灵走在他身后，她换上了一件遮住她的烧伤的长袖连衣裙，其他执法者没有再出现，你想着他们穿上所有的执法者装备还需要一段时间。
 	</p>
 	<p>
-		[hammer.speech(Tag along, [pc.name],)] Hammer grunts as he strides past you out of the room. Flashing you a smile, Ghost gestures for you to go first...
+		[hammer.speech(跟上，[pc.name]，)]锤子一边咕哝着，一边从你身边大步走出房间。幽灵向你微笑，示意你先走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TODO SWORD talk: -->
 	
 	<htmlContent tag="SWORD_TALK_ELIS"><![CDATA[
 	<p>
-		Wanting to hear from them directly what the reason is for their posting to Elis, you ask the Enforcers why they're here instead of in Dominion or elsewhere in the realm.
+		你想知道他们因为什么原因来伊利斯，于是问执法者他们为什么来这里，而不是在御城区或王国的其他地方。
 	</p>
 	<p>
-		[ghost.speech(We trust you enough to talk openly about this,)] Ghost says, before revealing, [ghost.speech(We were loyal to Lilith and served with distinction for years, and we were rewarded for that loyalty by having a clueless daughter of Lasielle assigned as our superior. She got the appointment simply by being an elder lilin's recognised daughter, and her incompetence was directly to blame for several botched operations. To make matters worse, she started selling off our weapons to gangs to make a few extra flames, making our job considerably harder and more dangerous. Our superiors said they couldn't act against a recognised daughter, so we arrested her ourselves.)]
+		[ghost.speech(我们信任你，所以才会开诚布公地谈论这事，)]幽灵说，然后透露， [ghost.speech(我们对莉莉丝忠心耿耿，多年来一直表现出色，而对莉莉丝忠心耿耿的回报是，我们的上司竟然是一个懵懂无知的拉谢尔之女。她仅仅因为是莉琳长老认可的女儿就得到了任命，她的无能直接导致了几次行动的失败。而更糟糕的是，她开始把我们的武器卖给帮派来赚外快，这让我们的工作变得更加困难和危险。我们的上司说他们不能对承认的女儿采取行动，所以我们自己逮捕了她。)]
 	</p>
 	<p>
-		[hammer.speech(For all of our loyalty and a life of sacrifice for Lilith and the realm, we were stripped of our ranks and threatened with slavery. In the end, however, we were instead assigned here to Elis and told to serve out the rest of our days where we couldn't cause any more trouble,)] Hammer growls with a scowl on his face as he reveals the reason for their presence here in Elis. In a bitter tone, he adds, [hammer.speech(Every last lilin, including Lilith herself, are only interested in their own petty games of politics and power. We don't owe Lilith our loyalty and have no interest in enforcing her laws. We do what's right to help the common folk, that's it.)]
+		[hammer.speech(尽管我们忠诚，为了莉莉丝和王国牺牲，但我们被剥夺了军衔，还受到了奴役的威胁。不过最后，我们还是被派到了伊利斯，并被告知要在这里度过余生，不能再惹麻烦了，)]锤子满脸不屑地咆哮着，道出了他们来到伊利斯的原因。他用苦涩的语气补充，[hammer.speech(每一个莉琳，包括莉莉丝本人，都只对自己的政治和权力小游戏感兴趣。现在我们并不效忠莉莉丝，也没有兴趣去为她的法律执法。我们做正确的事，帮助普通人，仅此而已。)]
 	</p>
 	<p>
-		[ghost.speech(Such talk would get us arrested and enslaved,)] Ghost muses out loud, before looking at you with a smirk on her face. [ghost.speech(You won't go around telling anyone about this, [pc.name].)]
+		[ghost.speech(这样的言论会让我们被逮捕和奴役，)]幽灵大声地喃喃自语，然后笑着看着你，[ghost.speech(你不会到处跟别人说这件事对吧，[pc.name]。)]
 	</p>
 	<p>
-		You can't quite tell from the tone in Ghost's voice if that's a threat or a request. With no intention of betraying their trust regardless, you think it best not to ask for clarification and instead wonder what to do next...
+		你从幽灵的语气中听不出这是威胁还是请求。无论如何，你都无意辜负他们的信任，你认为最好不要问个明白，而是想接下来该干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_TALK_HISTORY"><![CDATA[
 	<p>
-		Wanting to know about their history and how they all ended up being in the same SWORD unit, you ask the assembled Enforcers to tell you about their careers. A few of them say things to the effect of telling you to mind your own business, while the others simply sit in silence and don't say anything.
+		你想了解他们的历史，以及他们是如何加入SWORD队伍的，于是你让这些执法者给你介绍他们的职业。他们中的几个人让你少管闲事，而其他人只是一言不发地坐着。
 	</p>
 	<p>
-		[ghost.speech(Well, I at least don't mind talking about it,)] Ghost says with a smile on her face, [ghost.speech(and if I'm telling my story, then I'd be telling Hammer's as well. Go on, Hammer, tell [pc.name] how we started.)]
+		[ghost.speech(好吧，至少我不介意谈论它，)]幽灵面带笑容地说，[ghost.speech(如果我要讲我的故事，那我也会讲到锤子的故事。来吧，锤子，告诉[pc.name]我们是怎么开始的。)]
 	</p>
 	<p>
-		[hammer.speech(I don't suppose there's much point in arguing,)] Hammer sighs at Ghost, before looking over at you and revealing, [hammer.speech(The two of us enlisted together back in the summer of 1974. We were young, motivated, and damn good at our job, which is how we ended up as Patrol weapons specialists just two years later. We were part of the group which helped to put an end to the Grand Bank Heists, and as such were some of the first to be inducted into the newly-formed SWORD.)]
+		[hammer.speech(我想争论也没什么意义，)]锤子对着幽灵叹了口气，然后才看向你，透露道，[hammer.speech(我们俩在1974年的夏天一起进入执法者队伍。我们年轻，积极，而且工作出色，两年后就成了巡逻武器专家。我们是制止大银行抢劫案的小组成员，因此也是第一批加入刚成立的SWORD的成员。)]
 	</p>
 	<p>
-		[ghost.speech(Things were looking good for a while back then,)] Ghost reminisces with a smile. A dark look then quickly falls over her face and she says in a flat tone, [ghost.speech(Then the ambushes started... A couple of years later and the Fifth Human Rebellion broke out, and Hammer and I were there together through the whole thing.)]
+		[ghost.speech(那时的情况一直很好，)]幽灵笑着回忆。随后脸上迅速浮现出阴郁的神情，用平淡的语气说，[ghost.speech(然后伏击开始了……几年后，第五次人类叛乱爆发，锤子和我一起经历了整个过程。)]
 	</p>
 	<p>
-		[style.speechMasculineStrong(Don't forget about me now,)] the fox-boy with the call-sign 'Dancer' says.
+		[style.speechMasculineStrong(现在别忘了我，)]代号“舞者”的狐男说，
 	</p>
 	<p>
-		[hammer.speech(Nor 'Feather',)] Hammer grunts with a nod towards the mean-looking tiger-girl who's sitting beside Dancer.
+		[hammer.speech(还有‘丛翎’，)]锤子嘟哝着朝坐在舞者身边看起来很凶的虎女点点头。
 	</p>
 	<p>
-		[ghost.speech(I know, I know. That's when we started to form this unit after all,)] Ghost says with a gentle laugh, [ghost.speech(After the rebellion, the four of us were stationed in Dominion, where we set about recruiting other veterans into our team. Ever since then we've all been working together.)]
+		[ghost.speech(我知道，我知道。毕竟我们就是从那个时候开始组建这个队伍的，)]幽灵温和地笑着说，[ghost.speech(叛乱结束后，我们四人被派驻到御城区，在那里我们开始招募其他老手加入我们的队伍。从那以后，我们就一直在一起工作。)]
 	</p>
 	<p>
-		[hammer.speech(We make a good team,)] Hammer states, to which the other Enforcers nod.
+		[hammer.speech(我们是一支优秀的队伍，)]锤子说，其他执法者也点了点头。
 	</p>
 	<p>
-		With your question answered, you wonder whether to ask anything else...
+		你的疑问得到了解答，你想着还要不要问别的问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_TALK_ORICL"><![CDATA[
 	<p>
-		Having seen the words 'ORICL: Top Secret' on the front of the folder which Ghost showed you when you first met her, you ask the assembled Enforcers what they can tell you about that organisation.
+		你第一次见到幽灵时，她给你看的文件夹写着有“ORICL：绝密”，你问这些执法者，他们能告诉你这个组织的什么信息。
 	</p>
 	<p>
-		[ghost.speech('The Office of Realm Intelligence, Counter-espionage, and Logistics',)] Ghost says when you mention the acronym 'ORICL', before going on, [ghost.speech(They're at the top of the pecking-order; if they give an order, it's for the Patrol and SWORD branches to carry it out without question. They only accept demons into their ranks, and like to think of themselves as the brains of the Enforcers.)]
+		[ghost.speech(‘王国情报、反间谍和后勤局’(The Office of Realm Intelligence, Counter-espionage, and Logistics)，)]幽灵向你解释“ORICL”的全称，然后继续往下说，[ghost.speech(他们是最高领导；只要他们下达命令，巡逻队和SWORD小队就会毫不犹豫地执行。他们只接受恶魔加入自己的队伍，喜欢把自己当成执法者的大脑。)]
 	</p>
 	<p>
-		[hammer.speech(They're corrupt, scheming scum,)] Hammer grunts from behind his desk, [hammer.speech(Their red and yellow Directorates like to think they're better at our job than we are. As for blue, they can get fucked.)]
+		[hammer.speech(他们都是腐败狡诈的杂碎，)]锤子在办公桌后面咕哝着，[hammer.speech(他们的赤部和黄部喜欢自以为是，认为他们比我们更擅长我们的工作。至于蓝部，他们可以去死了。)]
 	</p>
 	<p>
-		The rest of the room seems to be in agreement with this last statement, for the other SWORD Enforcers either nod or say something to the effect of ORICL's blue Directorate being the worst.
+		房间里的其他人似乎都同意这最后一句话，其他SWORD执法者不是点头就是说 ORICL 的蓝部是最糟糕的。
 	</p>
 	<p>
-		[ghost.speech(They have five Directorates, of which-)] Ghost starts to explain for your benefit, but is swiftly interrupted by Hammer.
+		[ghost.speech(他们有五个部门，其中——)]幽灵开始为你解释，但很快就被锤子打断了。
 	</p>
 	<p>
-		[hammer.speech(Seven. They have seven,)] the wolf-boy corrects his colleague, [hammer.speech(I've seen the records. There were files on 'Indigo' and 'Violet'.)]
+		[hammer.speech(七个，他们有七个，)]狼男纠正同事的说法，[hammer.speech(我看过记录。有关于‘靛部’和‘紫部’的档案。)]
 	</p>
 	<p>
-		[ghost.speech(Right, well even if those two do exist, we only have to deal with the other five, thank goodness,)] Ghost replies, before continuing where she left off, [ghost.speech(Directorate red does the investigate work, while yellow is their tactical group. Both of them tread on toes all the time, or at least they did while we were still in Dominion. As for Directorate blue, they're the answer to 'Who watches the watchmen?', but they do a terrible job of combating corruption.)]
+		[ghost.speech(好吧，即使那两个真的存在，我们也只需要对付其他五个人，谢天谢地，)]幽灵回答道，然后继续她刚才的话题，[ghost.speech(赤部负责调查工作，而黄部则是他们的战术小组。他们两个都经常踩点，至少我们还在御城区的时候是这样。至于蓝部，他们是‘谁来监督监督人’的答案，但他们在打击腐败方面做得很糟糕。)]
 	</p>
 	<p>
-		With the red, yellow, and blue Directorates having been explained, you ask Ghost what the remaining two are.
+		赤黄蓝三部已经解释过了，你问幽灵剩下的两部是什么。
 	</p>
 	<p>
-		[ghost.speech(Directorate green are the ones who show up in the middle of the night to snatch some poor bastard who was heard saying bad things about Lilith,)] the otter-girl replies, [ghost.speech(They make sure that the population stays loyal by removing any dissenters. Thankfully they rarely give orders to SWORD, so we don't have to deal with them. The last one's Orange, but although they're seen around the Block - that's what we call the Enforcer HQ in Dominion - they never speak to anyone outside of their unit.)]
+		[ghost.speech(绿部就是半夜三更跑来抓走那些说了莉莉丝坏话还被人听到的可怜家伙的部门，)]水獭女回答，[ghost.speech(他们通过清除异己来确保民众保持忠诚。幸好他们很少向SWORD下达命令，所以我们不用和他们打交道。最后一个是橙部，虽然他们经常出现在街区——在御城区，我们把它叫做‘执法者总部’——但他们从不与执法者以外的人说话。)]
 	</p>
 	<p>
-		[hammer.speech(Arrogant pricks, the lot of them,)] Hammer grunts, before adding, [hammer.speech(They're always heavily geared up and teleport themselves to their operations, but I've never heard of them operating in Dominion or anywhere else in the realm. They're sometimes carrying weapons which we don't have access to as well. I just know that they're involved with Indigo and Violet...)]
+		[hammer.speech(他们都是傲慢的刺头，)]锤子咕哝了一声，然后又补充道，[hammer.speech(至于靛部和紫部，他们总是全副武装，自己传送到行动地点、但我从未听说过他们在御城区或王国的其他地方行动过。他们有时也会携带我们无法获得的武器。我只知道他们的名字……)]
 	</p>
 	<p>
-		From what he's saying, it sounds like these branches of ORICL are operating out in the rest of the world, likely in support of Lilith's attempts to control the countries not affected by her reality-changing spell. Although you trust them, you don't think that it's wise to share this information with the assembled Enforcers, and so with your initial question answered you wonder what to ask of them next...
+		听他的意思，ORICL的这些分部正在世界其他地方开展活动，很可能是为了支持莉莉丝控制那些没有受到她改变现实咒语影响的国家。虽然你信任他们，但你不认为把这些信息告诉这些执法者是明智之举，所以在解答你最初的问题后，你想着接下来该问他们什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_TALK_HUMAN_REBELLION"><![CDATA[
 	<p>
-		Wanting to hear more about the 'Fifth Human Rebellion', you ask the Enforcers what it was like.
+		你想了解更多关于“第五次人类叛乱”的情况，就问执法者那是什么情况。
 	</p>
 	<p>
-		[hammer.speech(Well, I guess thanks to Ghost you've already heard how we started,)] Hammer says, [hammer.speech(We'd helped to put an end to the Grand Bank Heists of '76, and were some of the first to be recruited into the newly-formed SWORD. Things were going well, then in '82 the ambushes started...)]
+		[hammer.speech(好吧，我想多亏了幽灵，你已经知道我们是怎么开始的了，)]锤子说，[hammer.speech(我们帮助结束了76年的大银行抢劫案 我们是第一批被招募到新成立的SWORD部队的人。一切都很顺利，但到了82年，伏击开始了……)]
 	</p>
 	<p>
-		[ghost.speech(ORICL struggled to find out who was behind them, and for years we were on the back foot, not knowing much about who the enemy were or why they were attacking Enforcer patrols,)] Ghost adds, [ghost.speech(The few we captured were quickly taken away by ORICL before we could seriously question them, and whatever information they revealed during interrogation didn't make it back to us.)]
+		[ghost.speech(ORICL一直在努力寻找幕后黑手，多年来我们一直处于落后状态，对敌人是谁以及他们为什么袭击执法者巡逻队一无所知，)]幽灵补充道，[ghost.speech(我们抓到的几个人还没来得及认真审问，就被ORICL迅速带走了，他们在审问过程中透露的任何信息都没有传回给我们。)]
 	</p>
 	<p>
-		[hammer.speech(ORICL knew exactly what was happening, they just weren't telling us,)] Hammer snaps, before leaning back against the wall and crossing his arms. His cynicism causes Ghost to let out a sigh, to which the wolf-boy grumbles, [hammer.speech(I'll get proof one day. I <i>know</i> that they betrayed us...)]
+		[hammer.speech(ORICL清楚地知道发生了什么，只是没有告诉我们，)]锤子冷冷地说，然后背靠着墙，双手叉腰。他的冷嘲热讽让幽灵发出一声叹息，狼男对此抱怨，[hammer.speech(总有一天我会找到证据的，我<i>知道</i>他们背叛了我们……)]
 	</p>
 	<p>
-		[ghost.speech(They might have betrayed us, or maybe they were just incompetent. It doesn't matter now and it didn't back then,)] Ghost calmly replies with a soft smile on her face. This proves to be just the right attitude to get Hammer to relax, as he uncrosses his arms and looks a little sheepish as Ghost addresses you and continues the tale, [ghost.speech(We decided over the first weekend of August, 1988, to hand in our resignations together. We'd had enough of being sitting ducks for the group which had started calling themselves the 'Human Liberation Front'.)]
+		[ghost.speech(他们可能背叛了我们，也可能只是无能。无论是现在还是当时都不重要，)]幽灵平静地回答，脸上带着柔和的微笑。事实证明，这样的态度正好能让锤子放松下来，他松开双臂，显得有些腼腆，幽灵向你打招呼，继续讲故事，[ghost.speech(1988年8月的第一个周末，我们决定一起递交辞呈。我们已经受够了成为这个自称为‘人类解放阵线’的组织的活靶子。)]
 	</p>
 	<p>
-		[style.speechMasculineHeavy(I'd signed up a week earlier, not knowing how bad the ambushes were,)] a huge, muscular bull-boy, who you recall having introduced himself as 'Boomerang', says from his position on one of the sofas. Shaking his head, he mutters, [style.speechMasculineHeavy(That's what you get for trusting the papers to tell the truth...)]
+		[style.speechMasculineHeavy(我当时一周前报的名，还不知道伏击有多厉害。)]一个身材魁梧、肌肉发达的牛男在沙发上说，你记得他曾介绍自己叫“回旋镖”。他摇了摇头，喃喃自语，[style.speechMasculineHeavy(这就是你相信报纸说真话的结果……)]
 	</p>
 	<p>
-		[hammer.speech(While Boomerang was being put through his first week at the Enforcer Academy, Ghost and I were quitting. We went to our station in the very early hours of Monday morning, hoping that our superior would still be up so that we could get her to sign the paperwork,)] Hammer says, before letting out a humourless laugh and revealing, [hammer.speech(The HLF chose that morning to start their rebellion. Every Enforcer station across the realm was hit at the same time. Most were seized, some managed to hold, and the rest were firebombed to deny their use to us. Our station was one of the latter, and we barely made it out alive...)]
+		[hammer.speech(当回旋镖在执法者学会接受第一周的培训时，我和幽灵却要辞职。周一凌晨，我们去了警局，希望我们的上司还没睡，这样我们就能让她在文件上签字了，)]锤子说着说着发出一阵毫无幽默感的笑声，并透露了自己的想法，[hammer.speech(HLF选择在那天早上发动叛乱。整个王国的每个执法局都在同一时间遭到袭击。大部分被占领了，有些侥幸保住了，剩下的都被炸毁了，我们的执法局就是其中之一，好不容易才活着出来……)]
 	</p>
 	<p>
-		Ghost absent-mindedly rubs her scarred arm as Hammer says this. Letting out a sigh, she recalls, [ghost.speech(Of course, now that a full-blown rebellion was underway there was no chance of us resigning. We managed to link up with what was left of our company and together with other survivors we retreated and regrouped near to the Shinrin Highlands. Thankfully, the youko hadn't taken a side, and they left us alone as we used the HLF's own tactics against them. Outnumbered, we had to rely on ambushes and hit-and-run attacks to get whatever small victories we could.)]
+		锤子说这话的时候，幽灵心神不宁地揉了揉满是伤痕的手臂。她叹了一口气，回忆道，[ghost.speech(当然，叛乱已经全面爆发，我们不可能辞职。我们设法与剩下的人联系上，并与其他幸存者一起撤退，在心林高地附近重新集结。值得庆幸的是，妖狐没有站在任何一边。HLF没有理会我们，因为我们使用了HLF的战术来对付他们。由于寡不敌众，我们只能依靠伏击和打带跑的战术来取得一些小的胜利。)]
 	</p>
 	<p>
-		[hammer.speech(It soon turned into a complete mess,)] Hammer says, [hammer.speech(The Patrol Enforcers who'd remained loyal managed to secure boroughs in Dominion, Itza'aak, and Thinis, but the cities remained split and in a state of conflict throughout the entire rebellion. The first year was by far the worst, especially our time in the jungles around Itza'aak...)]
+		[hammer.speech(很快就变得一团糟，)]锤子说，[hammer.speech(忠诚的巡逻队执法者们成功保住了御城区、伊察阿克和提尼斯，但在整个叛乱期间，这些城市仍然处于分裂和冲突状态。第一年是迄今为止最糟糕的一年，尤其是我们在伊察阿克附近的丛林里……)]
 	</p>
 	<p>
-		[ghost.speech(We were there throughout it all, and finally, after four years, the rebellion came to an end in 1992,)] Ghost says. Clearly not wanting to relive any more of these memories, she brings the tale to an end by saying, [ghost.speech(By the time it was over, Hammer and I, as well as Dancer and Feather, had been promoted and had a lot of responsibility for those under our command. We couldn't abandon them, so gave up on our idea of resigning.)]
+		[ghost.speech(四年之后，叛乱终于在1992年结束，)]幽灵说。显然，她不想再重温这些记忆，于是她开始结束这段故事，[ghost.speech(事情结束时，我和锤子，还有舞者和丛翎，都得到了晋升，为了我们手下的人负责。我们不能抛弃他们，所以放弃了辞职的想法。)]
 	</p>
 	<p>
-		[style.speechFeminineStrong(The jungles weren't so bad,)] the mean-looking tiger-girl called 'Feather' says in a deep, growling tone, [style.speechFeminineStrong(It was far worse for the HLF scum we were hunting.)]
+		[style.speechFeminineStrong(丛林也没那么糟糕，)]长相凶恶、代号“丛翎”的虎女用低沉的咆哮声说，[style.speechFeminineStrong(对于我们追捕的HLF人渣来说，情况更糟。)]
 	</p>
 	<p>
-		Hammer, Ghost, and the fox-boy called 'Dancer' all exchange glances, but what they're thinking about is impossible to determine. Deciding not to pry any further, you wonder what to ask next...
+		锤子、幽灵和那个叫“舞者”的狐男交换了一下眼神，但无法确定他们在想什么。你决定不再继续打听，而是想着接下来该问些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_TALK_HLF"><![CDATA[
 	<p>
-		Curious to hear more about the people these Enforcers were fighting during the Fifth Human Rebellion, you ask them who the 'Human Liberation Front' were.
+		你想更多地了解这些执法者在第五次人类叛乱期间的战斗情况，于是问他们什么是“人类解放阵线”。
 	</p>
 	<p>
-		[hammer.speech(You'd think they were just humans, given what they called themselves,)] Hammer replies, [hammer.speech(but they consisted of every race you could think of. Anyone opposed to Lilith's rule, as well as opportunistic criminals, joined the HLF in the hopes that they could overthrow the lilin and create a new system of governance.)]
+		[hammer.speech(从他们的自称来看，你会认为他们只是人类，)]锤子回答道，[hammer.speech(但他们由你能想到的所有种族组成。任何反对莉琳统治的人以及投机取巧的罪犯都加入了HLF，希望他们能推翻莉琳的统治，建立一个新的治理体系。)]
 	</p>
 	<p>
-		[ghost.speech(The core of the HLF, what we ended up labelling as the 'regulars', were the real threat, especially during that first year,)] Ghost adds, [ghost.speech(They were the die-hard revolutionaries, utterly committed to the cause, well trained, and completely fearless. The vast majority of them were humans, equipped with stolen Enforcer weapons and having their own uniforms, logistics networks, and command structures. Thankfully there weren't too many of them.)]
+		[ghost.speech(HLF的核心成员，也就是我们称为‘正规军’的人，才是真正的威胁，尤其是在第一年，)]幽灵补充着，[ghost.speech(他们是顽固的革命者，完全致力于革命，训练有素，无所畏惧。他们绝大多数是人类，装备着偷来的执法者武器，拥有自己的制服、后勤网络和指挥机构。幸好他们人数不多。)]
 	</p>
 	<p>
-		[hammer.speech(Then they had the irregulars,)] Hammer grunts, [hammer.speech(Committed to the cause, although varying in competence, they were the ones who stuck to guerilla warfare. Blending in with the civilian population before performing hit and run attacks, they left the serious offensive operations to the regulars.)]
+		[hammer.speech(然后是叛乱者，)]锤子咕哝道，[hammer.speech(虽然能力参差不齐，但他们献身革命，坚持游击战。他们先是混入平民中，然后再发动袭击，而真正的进攻行动则留给正规军。)]
 	</p>
 	<p>
-		[style.speechMasculineStrong(Then there was the usual rabble of malcontents, looters, and small-time criminals who joined in to make the most of the chaos,)] Dancer, the fox-boy, says, [style.speechMasculineStrong(The Patrol was more than enough to deal with them most of the time, leaving us with the serious HLF soldiers.)]
+		[style.speechMasculineStrong(然后是一群乌合之众，包括不满者、抢劫者和小混混，他们也加入了这场混乱，)]舞者说，[style.speechMasculineStrong(大多数时候，巡逻队对付他们绰绰有余，留给我们的是坚定的HLF士兵。)]
 	</p>
 	<p>
-		[ghost.speech(In the end, with their regulars having been whittled down to a fraction of their original strength, the HLF succumbed to infighting and fell apart from within,)] Ghost reveals, [ghost.speech(We know that we didn't manage to get all of them in the end, so there's a good chance that there's some veterans hiding out there somewhere.)]
+		[ghost.speech(最后，他们的正规军只剩下了原来的一小部分，HLF因内讧而分崩离析。)]幽灵透露，[ghost.speech(我们知道，我们最终并没有抓住所有的人，所以很有可能还有一些老兵藏在某个地方。)]
 	</p>
 	#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_REBEL_BASE))
 		<p>
-			Remembering the crazed HLF survivor you encountered in Submission, you tell the Enforcers that you encountered one of the veterans which Ghost is talking about.
+			你想起在屈城区遇到的那个疯狂的HLF幸存者。你告诉执法者，你遇到了幽灵所说的其中一个老兵。
 		</p>
 		<p>
-			[hammer.speech(There's bound to be dozens more like that,)] hammer grunts, [hammer.speech(It'd take far too many resources to root them all out, and they can't cause any serious damage any more.)]
+			[hammer.speech(类似的情况肯定还有很多，)]锤子嘟哝着，[hammer.speech(要想把他们全部铲除，需要耗费太多的资源，而且他们再也不能造成任何严重的破坏了。)]
 		</p>
 	#ENDIF
 	<p>
-		With this conversation seemingly now at an end, you wonder what to ask about next...
+		谈话似乎到此结束，你想着接下来该问些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_ANGELIXX_DIARY"><![CDATA[
 	<p>
-		Remembering that Ghost picked up Angelixx's diary at the end of the operation you accompanied her and Hammer on, you ask the otter-girl if it revealed what was happening to the kidnapped refugees.
+		你记得幽灵在你陪同她和锤子进行的行动结束时捡到了安吉莉克丝的日记，你问水獭女日记中是否透露了被绑架难民的情况。
 	</p>
 	<p>
-		[ghost.speech(She's a nasty piece of work,)] Ghost says of the succubus as she walks over to a nearby filing cabinet and produces the diary from within. Holding up the little pink book, she reveals, [ghost.speech(Remember how she tried to act all sweet and innocent when we met her? She's really a massive slut, and treats people like dirt.)]
+		[ghost.speech(她是个下流胚子，)]幽灵一边说着，一边走到附近的一个文件柜前，从里面拿出了那本日记。她举起粉红色的小本子，说，[ghost.speech(还记得我们刚认识她的时候她是如何装出一副天真可爱的样子吗？她其实是个大荡妇，视人如粪土。)]
 	</p>
 	<p>
-		[hammer.speech(There's nothing in there to tell us what's happening to the refugees,)] Hammer grunts, [hammer.speech(but there is an entry which mentions that Angelixx was teleporting them to her sister's shop in Dominion's Demon Home district.)]
+		[hammer.speech(里面没有难民的情况，)]锤子嘟哝着，[hammer.speech(但有一条记录提到，安吉莉克丝把他们传送到了她姐姐在御城区恶魔之家的商店。)]
 	</p>
 	<p>
-		[ghost.speech(That'd be 'Lovienne's Luxuries', which is run by Saellatrix; unlike Angelixx, she's a recognised daughter of Lovienne,)] Ghost says, before regretfully sighing, [ghost.speech(Dominion's outside of our jurisdiction, and if we're caught investigating a recognised daughter of an elder lilin then it'd certainly be the end for us. We've stopped Angelixx's operations here in Elis, and that's all we can do.)]
+		[ghost.speech(那就是‘洛维耶纳奢侈品店’，由赛拉特里克斯经营；不同于安吉莉克丝，她是洛维耶纳受承认的女儿，)]幽灵说，然后遗憾地叹了口气，[ghost.speech(御城区不在我们的管辖范围内，如果我们被抓到调查一个受承认的莉琳长老的女儿，那么我们肯定就完了。我们已经阻止了安吉莉克丝在伊利斯的行动，我们能做的只有这些了。)]
 	</p>
 	<p>
-		[hammer.speech(Perhaps you can do something about it,)] Hammer says to you, before motioning for Ghost to give you the diary. [hammer.speech(We're not asking you to go after Angelixx or confront her sister, but with this diary as proof of Angelixx's deeds, the opportunity's there.)]
+		[hammer.speech(也许你能做点什么，)]锤子对你说，然后示意幽灵把日记给你。[hammer.speech(我们不是要你去找安吉莉克丝或者和她姐姐对质，但有安吉莉克丝所作所为的日记为证，机会就在眼前。)]
 	</p>
 	<p>
-		Holding out the diary towards you, the otter-girl says, [ghost.speech(Be careful if you do decide to take this further. Angelixx is a coward and not much of a physical threat, but she's got others who do the fighting for her. She's also a manipulative bitch; don't trust anything she says. As for Saellatrix, you don't get to be recognised by an elder lilin without being extremely dangerous and utterly ruthless, so I'd avoid any kind of conflict with her if possible.)]
+		水獭女把日记本递给你，说，[ghost.speech(如果你决定进一步行动，一定要小心。安吉莉克斯是个懦夫，对人身威胁不大，但她有其他人替她战斗。她还是个善于操纵的婊子，不要相信她说的任何话。至于赛拉特里克斯，除非你真的能表现得足够危险无情，不然是不可能得到莉琳长老的认可的，所以我会尽可能避免与她发生任何冲突。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_ANGELIXX_DIARY_TAKE"><![CDATA[
 	<p>
-		As there's no obligation being placed on you to pursue Angelixx and investigate her sister's store, you decide that there's no harm in taking the diary. Putting the small, pink notebook in your inventory, you tell the Enforcers that you'll look into it if you get the chance.
+		由于你没有义务去追捕安吉莉克丝和调查她姐姐的商店，拿走这本日记也无妨。你把粉红色小笔记本放进包中，告诉执法者，如果有机会，你会调查一下的。
 	</p>
 	<p>
-		[ghost.speech(We won't be there to back you up this time, so don't take any risks,)] Ghost says with a smile.
+		[ghost.speech(这次我们不会在那里支援你，所以不要冒任何风险，)]幽灵微笑着说。
 	</p>
 	<p>
-		[hammer.speech([pc.Name] can handle [pc.herself] just fine,)] Hammer grunts, before looking at you and saying, [hammer.speech(If you take Angelixx down, make sure to come back and tell us about it. I'd like to know if the bitch got what was coming to her.)]
+		[hammer.speech([pc.Name]可以很好的处理[pc.herself]问题，)]锤子嘟哝着，然后看着你说，[hammer.speech(如果你打倒了安吉莉克丝，一定要回来告诉我们这件事。我想知道那婊子是否得到了报应。)]
 	</p>
 	<p>
-		[ghost.speech(You may have visited it already, but I'd start by taking a look around 'Lovienne's Luxuries' if I were you,)] Ghost suggests, [ghost.speech(We know that the refugees were teleported there, so it's likely that they're either being kept there and used as slave labour or sold off from that location. Either way, there's bound to be signs of them there if you look hard enough.)]
+		[ghost.speech(你可能已经参观过了，但如果我是你，我会先在洛维耶纳奢侈品店里再转转，)]幽灵建议，[ghost.speech(我们知道难民是被传送到那里的，所以他们很可能被关在那里当奴隶，或者从那里被卖掉。不管是哪种情况，只要你仔细寻找，那里一定会有他们的踪迹。)]
 	</p>
 	<p>
-		[hammer.speech(Don't bother with the Enforcers in Dominion,)] Hammer warns, [hammer.speech(They won't lift a finger to go after a daughter of an elder lilin unless you've got substantial, concrete evidence of illegal enslavement; that diary won't be enough for them. Worse, they might even report you to Lovienne directly, then it'd all be over for you.)]
+		[hammer.speech(不要去找御城区的执法者，)]锤子提醒你，[hammer.speech(除非你有非法奴役的大量确凿证据，否则他们不会动一根手指头去找一个莉琳长老的女儿；那本日记对他们来说完全不够的。更糟糕的是，他们可能会直接向洛维耶纳举报你，那你就完了。)]
 	</p>
 	<p>
-		Thanking the Enforcers for the advice, you wonder what to do next...
+		你谢过执法者的建议，想着接下来该干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SWORD_TALK_ANGELIXX_QUEST_COMPLETE"><![CDATA[
 	<p>
-		Wanting to let these Enforcers know what came of your investigation into Angelixx's diary, you ask them if they've got a minute to hear about what you've been up to.
+		你想让这些执法者知道你从安吉莉克丝的日记中调查出了什么，于是便问他们能不能抽出一分钟，听听你的说法。
 	</p>
 	<p>
-		[ghost.speech(You really went after that bitch?)] Ghost asks.
+		[ghost.speech(你真的去追查那个婊子了？)]幽灵问。
 	</p>
 	<p>
-		[hammer.speech(I hope she got what she deserved,)] Hammer grunts, [hammer.speech(Tell us what you found, [pc.name].)]
+		[hammer.speech(希望她罪有应得吧，)]锤子咕哝一声，[hammer.speech(跟我们讲讲你都发现什么了，[pc.name]。)]
 	</p>
 	<p>
-		Starting from when you took Angelixx's diary to Saellatrix and confronted her with it, you recount how you met Fiammetta and together the two of you explored the factory beneath Lovienne's Luxuries. Although they don't interrupt your tale, the Enforcers' expressions get darker and angrier as they hear about how the kidnapped refugees were being permanently transformed into sex dolls. You finish your story by saying that the crimes of Saellatrix, Angelixx, and her sons were exposed in an article published in The Octogram Herald, and although Angelixx, Sleip, and Nir have suffered terrible punishments, Saellatrix pretty much got away with everything.
+		你从拿到安吉莉克丝的日记，去找赛拉特里克斯当面质问开始，接着讲述了自己是如何遇到菲亚梅塔，而你们两人又是如何一起探索洛维耶纳奢侈品店下方工厂的。虽然执法者没有打断你，但在听到被绑架的难民被永久地变成了性玩偶时，他们顿时面色阴沉，面目狰狞起来。而在你故事的最后，赛拉特里克斯、安吉莉克丝和她儿子的罪行都被披露在《八角星先驱报》上发表的一篇文章中，虽然安吉莉克丝、斯雷普和尼尔遭到重罚，可赛拉特里克斯却几乎全身而退。
 	</p>
 	<p>
-		[hammer.speech(Of course the recognised daughter of Lovienne didn't get punished,)] Hammer furiously growls as you finish your tale. Clenching his fist, he slams it on the table next to him, and with his wolf-like face turning up into a toothy snarl, he snaps, [hammer.speech(I'm going to Dominion tonight! I'll make her pay for what's she done!)]
+		[hammer.speech(洛维耶纳认可的女儿当然不可能受罚了，)]听完你的故事，锤子近乎低吼着说道，他攥紧了拳头，狠狠锤在身旁的桌子上，那张狼脸顿时变得狰狞可怖，他厉声道，[hammer.speech(我今晚就去御城区！一定要让她罪有应得！)]
 	</p>
 	<p>
-		[ghost.speech(You're not going anywhere!)] Ghost firmly states. Although she's much smaller and far less physically intimidating than Hammer, the wolf-boy instantly stops snarling as the otter-girl rebukes him. With her hands on her hips, she says, [ghost.speech(You've got Elis to protect, you big idiot! You know that you don't stand a chance against a demon of Saellatrix's power, so all you'd do is throw yourself away when this town needs you the most. Get a grip!)]
+		[ghost.speech(你可不能就这样离开！)]幽灵坚定地说道。尽管她比锤子小得多，身体上远没有他那么具威慑力，但当水獺女斥责他时，这个狼男立刻停止了低吼。她双手叉腰，继续说：[ghost.speech(伊利斯还需要你来保护，大笨蛋！你知道自己根本没办法与赛拉特里克斯那样的恶魔抗衡，在这个镇子最需要你的时候，你只会白白牺牲自己。冷静点！)]
 	</p>
 	<p>
-		The rest of the Enforcers bear silent witness to Hammer's apology as he mumbles, [hammer.speech(You're right, Ghost, as always... It's just the injustice of it all that sickens me...)]
+		其他执法者默默地见证着锤子的道歉，他低声说道，[hammer.speech(你说得对，幽灵，一如既往……这一切的不公让我感到恶心……)]
 	</p>
 	<p>
-		[ghost.speech(We all feel the same way,)] the otter-girl says, [ghost.speech(One day things will change. The best we can do is to try to help those who need us here in Elis.)]
+		[ghost.speech(我们都有同样的感受，)]水獺女说，[ghost.speech(总有一天，一切都会改变。我们能做的就是尽力帮助伊利斯那些需要我们的人。)]
 	</p>
 	<p>
-		Turning to face you, she continues, [ghost.speech(You did all you could, [pc.name]. It's sad that it was too late for those who were already transformed, but at least there'll be no more victims. Thanks for letting us know about it, and at least Angelixx and those terrible sons of hers got what was coming to them.)]
+		她转身面对你，继续说道：[ghost.speech(你已经尽力而为，[pc.name]。对于那些已经转化的人来说，真是太遗憾了，但至少不会再有新的受害者。感谢你告诉我们这件事，至少安吉莉克丝和她那些可恶的儿子得到了应有的报应。)]
 	</p>
 	<p>
-		Giving the otter-girl a brief nod, you wonder what to do now...
+		向水獺女轻轻点了点头，接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

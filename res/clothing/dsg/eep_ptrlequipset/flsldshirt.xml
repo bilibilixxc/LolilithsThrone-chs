@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 		
-		<authorTag><![CDATA[A small tag sewn into the shirt's side seam reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[衬衫侧缝上有个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>200</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[Enforcer's long-sleeved blouse]]></name>
+		<name><![CDATA[执法者长袖女士衬衫]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's long-sleeved blouses]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者长袖女士衬衫]]></namePlural> 
 
-		<description><![CDATA[A long sleeve dress shirt with reinforced stitching and a feminine cut. The rank slides on the epaulets and the nameplate make it clear as to what occupation the wearer is supposed to have.]]></description> 
+		<description><![CDATA[一件长袖正装衬衫，带有强化缝线和女性化的剪裁。滑入衔位的肩章和名牌清楚地表明了佩戴者的职业。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -89,51 +88,51 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] [npc.her] arms through the shirt's sleeves and [npc.verb(button)] up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] [npc2.verb(put)] [npc2.her] arms through the shirt's sleeves and [npc.verb(button)] up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] arms through the shirt's sleeves and hastily [npc.verb(button)] up the front.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]将手臂穿过衬衫的袖子，系上前面的纽扣。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]帮[npc2.name]将手臂穿过衬衫的袖子，系上前面的纽扣。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]强行将[npc2.namePos]的手臂穿过衬衫的袖子，迅速系上前面的纽扣。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc.her] shirt and [npc.verb(pull)] [npc.her] arms out of the sleeves.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc2.namePos] shirt and [npc.verb(help)] [npc2.her] [npc2.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on the front of [npc2.namePos] shirt and roughly [npc.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开衬衫前面的纽扣，把手臂从袖子里抽出。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]衬衫前面的纽扣，帮[npc2.her]把手臂从袖子里抽出。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]突然解开[npc2.namePos]衬衫前面的纽扣，粗暴地把[npc2.her]的手臂从袖子里拉出。
+		]]></otherRough>
 	</displacementText>
 
 	<replacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc.namePos] shirt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc2.namePos] shirt.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(button)] up the front of [npc2.namePos] shirt.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]系上[npc.namePos]衬衫前方的纽扣。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]系上[npc2.namePos]衬衫前方的纽扣。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]迅速地系上[npc2.namePos]衬衫前方的纽扣。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] shirt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.namePos] shirt.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on [npc2.namePos] shirt.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开[npc.her]的衬衫纽扣。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]的衬衫纽扣。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]突然解开[npc2.namePos]的衬衫纽扣。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

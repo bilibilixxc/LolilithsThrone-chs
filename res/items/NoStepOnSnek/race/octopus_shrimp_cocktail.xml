@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>70</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Shrimp Cocktail]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Shrimp Cocktails]]></namePlural>
-		<description><![CDATA[A disposable cocktail glass rimmed with freshly poached shrimp and with a small cup of spicy sauce in the centre. The illustration on the outer packaging shows an octopus-morph in chef's clothing handling a comically large number of ingredients and utensils at once.]]></description> 
+		<determiner><![CDATA[一杯]]></determiner>
+		<name><![CDATA[虾尾酒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[虾尾酒]]></namePlural>
+		<description><![CDATA[一个一次性鸡尾酒杯的边缘镶着新鲜的水煮虾，中间有一小杯香辣酱。外包装上的插图是一个身着厨师服装的章鱼造型，正在同时处理大量的配料和器皿，十分滑稽。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="90" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/NoStepOnSnek/octopus/subspecies/octopus.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="90" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/NoStepOnSnek/octopus/subspecies/octopus.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="80">octopus_shrimp_cocktail.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,21 +25,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[octopus]]></potionDescriptor>
+		<potionDescriptor><![CDATA[章鱼]]></potionDescriptor>
 		<associatedRace>NoStepOnSnek_octopus</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
 		]]></applyEffects>
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] the clear plastic cover and [npc.verb(grab)] the cocktail glass. Unable to resist the delicious-looking little shellfish inside, [npc.she] eagerly [npc.verb(start)] dipping and snacking and in a matter of moments [npc.has] completely devoured the entire arrangement.
+		[npc.Name]打开透明塑料盖并取过虾尾酒杯。看着里面的美味小虾，[npc.she]迫不及待地开始蘸食，不一会[npc.has]就完全吃光了。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] the clear plastic cover and [npc.verb(hold)] out the cocktail glass to [npc2.name]. Unable to resist the delicious-looking little shellfish inside, [npc2.she] eagerly [npc2.verb(start)] dipping and snacking and in a matter of moments [npc2.has] completely devoured the entire arrangement.
+		[npc.Name]打开透明塑料盖并将虾尾酒杯递给[npc2.name]。看着里面美味的小虾，[npc2.she]迫不及待地开始蘸食，不一会儿[npc2.has]就完全吃光了。
 		]]></otherUse>
 	</useDescriptions>
 

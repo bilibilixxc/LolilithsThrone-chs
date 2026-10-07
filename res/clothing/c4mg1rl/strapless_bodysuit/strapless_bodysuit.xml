@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
     <coreAttributes>
         <authorTag/>
         <value>400</value>
-        <determiner><![CDATA[a]]></determiner>
-        <name><![CDATA[strapless bodysuit]]></name>
-        <namePlural pluralByDefault="false"><![CDATA[strapless bodysuits]]></namePlural>
-        <description><![CDATA[A strapless bodysuit with a scooped low back.]]></description>
+        <determiner><![CDATA[一件]]></determiner>
+        <name><![CDATA[无肩紧身衣]]></name>
+        <namePlural pluralByDefault="false"><![CDATA[无肩紧身衣]]></namePlural>
+        <description><![CDATA[一件低背的无肩紧身衣。]]></description>
         <physicalResistance>0</physicalResistance>
         <femininity>FEMININE</femininity>
         <equipSlots>
@@ -86,50 +86,50 @@
     </coreAttributes>
 	
 	  <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] steps into the bodysuit and [npc.verb(pulls)] it up over [npc.her] body.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.name] into the bodysuit as [npc.she] [npc.verb(pull)] it up over [npc2.her] body.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.name] into the bodysuit as [npc.she] [npc.verb(pulls)] it up over [npc2.her] body.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]踏进紧身衣并套在了[npc.her]身体上。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]让[npc2.name]进入紧身衣中并将其套在了[npc2.her]的身体上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地让[npc2.name]进入紧身衣中并将其套在了[npc2.her]的身体上。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pulls)] down [npc.her] bodysuit.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pulls)] down [npc2.namePos] bodysuit.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pulls)] down [npc2.namePos] bodysuit.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]脱下[npc.her]身上的紧身衣。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]脱下[npc2.namePos]的紧身衣。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地脱下[npc2.namePos]的紧身衣。
+    ]]></otherRough>
   </displacementText>
 	
   <replacementText type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pulls)] [npc.her] bodysuit's top back up, covering [npc.her] chest.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pulls)] [npc2.namePos] bodysuit's top back up, covering [npc2.her] chest.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] bodysuit's top back up, covering [npc2.her] chest.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]重新拉上[npc.her]的紧身衣，遮住[npc.her]的胸部。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]重新拉上[npc2.namePos]的紧身衣，遮住[npc2.her]的胸部。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地拉上[npc2.namePos]的紧身衣，遮住[npc2.her]的胸部。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pulls)] [npc.her] bodysuit down just far enough to expose [npc.her] chest.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pulls)] [npc2.namePos] bodysuit down just far enough to expose [npc2.her] chest.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pulls)] [npc2.namePos] bodysuit down far enough to expose [npc2.her] chest.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]拉开了[npc.her]的紧身衣，正好露出[npc.her]的胸部。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]拉开了[npc2.namePos]的紧身衣，正好露出[npc2.her]的胸部。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地拉开了[npc2.namePos]的紧身衣，正好露出[npc2.her]的胸部。
+    ]]></otherRough>
   </displacementText>
 </clothing>

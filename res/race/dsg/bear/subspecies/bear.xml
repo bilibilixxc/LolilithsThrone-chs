@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -87,7 +87,7 @@
 	<bookIconName>bearicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Strolling Bears</bookName>
+	<bookName><![CDATA[漫游之熊]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -100,38 +100,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[bear-morph]]></name>
-			<namePlural><![CDATA[bear-morphs]]></namePlural>
-			<singularMaleName><![CDATA[bear-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[bear-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[bear-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[bear-girls]]></pluralFemaleName>
+			<name><![CDATA[熊化形]]></name>
+			<namePlural><![CDATA[熊化形]]></namePlural>
+			<singularMaleName><![CDATA[熊男]]></singularMaleName>
+			<singularFemaleName><![CDATA[熊女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[熊男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[熊女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic bear, known as a 'bear-morph' when bipedal, and a 'beartaur' when the lower body is that of a typically-oversized feral bear.]]></description>
+	<description><![CDATA[一种人形的熊，当下肢拟人时被称为熊化形，而当下肢呈现出熊兽态时则称为半熊人。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[onikuma]]></name>
-			<namePlural><![CDATA[onikuma]]></namePlural>
-			<singularMaleName><![CDATA[onikuma]]></singularMaleName>
-			<singularFemaleName><![CDATA[onikuma]]></singularFemaleName>
-			<pluralMaleName><![CDATA[onikuma]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[onikuma]]></pluralFemaleName>
+			<name><![CDATA[鬼熊]]></name>
+			<namePlural><![CDATA[鬼熊]]></namePlural>
+			<singularMaleName><![CDATA[鬼熊]]></singularMaleName>
+			<singularFemaleName><![CDATA[鬼熊]]></singularFemaleName>
+			<pluralMaleName><![CDATA[鬼熊]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[鬼熊]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[bear]]></feralName>
-		<feralNamePlural><![CDATA[bear]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[bear]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[bear]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[bears]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[bears]]></feralPluralFemaleName>
+		<feralName><![CDATA[熊]]></feralName>
+		<feralNamePlural><![CDATA[熊]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[熊]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[熊]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[熊]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[熊]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -162,7 +162,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] bear-like body is strong and resilient, and [npc.she] [npc.has] a primal urge to defend what is [npc.hers].
+		[npc.NamePos]熊一般的身体强壮而坚韧，而且[npc.she]总会生发出保卫[npc.hers]领地和所有物的原始冲动。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

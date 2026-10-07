@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <torso>
 	<race>innoxia_panther</race>
 	
-	<transformationName><![CDATA[panther]]></transformationName>
+	<transformationName><![CDATA[豹]]></transformationName>
 	
 	<coveringType>innoxia_panther_fur</coveringType>
 	
@@ -11,11 +11,11 @@
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with panther-like fur. [npc.Her] new fur is a little shaggy around [npc.her] joints, but otherwise follows the lines of [npc.her] figure and is very smooth.
-		<br/>[npc.Name] now [npc.has] [style.boldPanther(panther-like)], [npc.skinFullDescription].
-	]]></transformationDescription>
+		片刻后，转化来到末尾。[npc.she]身上的瘙痒终于褪去，发出了解脱的叹息。豹毛覆盖在[npc.her]的躯干上。新生的毛发在关节处有些蓬松，除此之外都很顺滑，与[npc.her]的形体线条紧密贴合。
+		<br/>[npc.Name]现在拥有[style.boldPanther(豹般)][npc.skinFullDescription]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].
-	]]></bodyDescription>
+		[npc.Her]的躯干有着[npc.a_femininity(true)]外观，并且是[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。
+]]></bodyDescription>
 </torso>

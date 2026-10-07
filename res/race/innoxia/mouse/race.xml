@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_mouse</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[mouse-morph]]></name>
-	<namePlural><![CDATA[mouse-morphs]]></namePlural>
+	<name><![CDATA[鼷鼠化形]]></name>
+	<namePlural><![CDATA[鼷鼠化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[mouse]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[鼷鼠]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[mouse]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[鼷鼠]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[mouse]]></defaultTransformName>
+	<defaultTransformName><![CDATA[鼷鼠]]></defaultTransformName>
 	
 	<colour>innoxia_mouse</colour>
 	

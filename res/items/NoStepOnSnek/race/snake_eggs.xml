@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>60</value> 
-		<determiner><![CDATA[some]]></determiner>
-		<name><![CDATA[Boiled Eggs]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[Boiled Eggs]]></namePlural>
-		<description><![CDATA[A small egg box holding four, ready-to-eat, hard-boiled eggs. The top of the box portraits a small and perhaps slightly too ambitious snake trying to swallow an egg whole.]]></description> 
+		<determiner><![CDATA[一些]]></determiner>
+		<name><![CDATA[水煮蛋]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[水煮蛋]]></namePlural>
+		<description><![CDATA[一个小蛋盒里装着四个即食的煮鸡蛋。盒子的顶部画着一条小蛇，也许是太有野心了，它正试图吞下整个鸡蛋。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="60" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/NoStepOnSnek/snake/subspecies/snake.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="60" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/NoStepOnSnek/snake/subspecies/snake.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="80">snake_eggs.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,21 +25,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[snake]]></potionDescriptor>
+		<potionDescriptor><![CDATA[蛇]]></potionDescriptor>
 		<associatedRace>NoStepOnSnek_snake</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
 		]]></applyEffects>
@@ -53,22 +53,22 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the box and quickly [npc.verb(peel)] one of the eggs before swallowing it
+		[npc.Name]打开盒子，然后迅速剥开一个鸡蛋，
 		#IF(npc.getFaceType().getRace()==RACE_NoStepOnSnek_snake)
-			 whole.
+			整颗吞下。
 		#ELSE
-			 in just a couple bites.
+			分几口吞下。
 		#ENDIF
-		 [npc.Name] [npc.verb(repeat)] this process a few more times, emptying the box in short order.
+		[npc.Name]重复了这个过程几次，迅速地把盒子里的鸡蛋都吃完了。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the box to offer [npc2.name] some nice eggs in these trying times. [npc2.Name] [npc2.verb(take)] and quickly [npc.verb(peel)] one of them before swallowing it
+		[npc.Name]打开盒子，为了度过这艰难时刻，递给[npc2.name]一些美味的鸡蛋。[npc2.Name]拿来并迅速剥开了其中一个，
 		#IF(npc2.getFaceType().getRace()==RACE_NoStepOnSnek_snake)
-			 whole.
+			然后整颗吞下。
 		#ELSE
-			 in just a couple bites.
+			然后分几口吃下。
 		#ENDIF
-		 [npc2.Name] then [npc2.verb(repeat)] this process a few more times, emptying the box in short order.
+		[npc2.Name]重复了这个过程几次，迅速地把盒子里的鸡蛋都吃完了。
 		]]></otherUse>
 	</useDescriptions>
 

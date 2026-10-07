@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[staff room]]></name>
-	<tooltipDescription><![CDATA[Black designer sofas have been placed around the edges of this luxurious staff room, while a fully-stocked bar is staffed by a couple of golden sex dolls.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the staff room in Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[员工休息室]]></name>
+	<tooltipDescription><![CDATA[豪华的员工休息室内，四周摆放着黑色的名牌沙发，吧台上则摆放着几个金色的性爱玩偶。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[洛维耶纳奢侈品店的员工休息室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>80</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[tube top]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[tube tops]]></namePlural>
-		<description><![CDATA[A tube-shaped strip of stretchy material, designed to fit snugly around the chest. It's small enough to leave the wearer's stomach completely exposed.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[抹胸]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[抹胸]]></namePlural>
+		<description><![CDATA[由弹性材料制成的管状条带，设计成紧贴胸部。它足够小，可以让佩戴者的肚子完全暴露在外。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -59,27 +59,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] on the tube top.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the tube top and then [npc.verb(pull)] it down over [npc2.her] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(shove)] [npc2.namePos] [npc2.arms] through the tube top and then [npc.verb(pull)] it down over [npc2.her] head.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将抹胸穿上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]引导[npc2.namePos]的[npc2.arms]伸进抹胸内，并从[npc2.her]的头上套进去。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]塞进抹胸里，并将抹胸下[npc2.her]的头。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] tube top.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] tube top up and over [npc2.her] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] tube top up and over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的抹胸脱下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的抹胸拉起来并拉过头顶。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的抹胸经过[npc2.her]的头拽下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -18,7 +18,7 @@
 		#ENDIF
 	]]></conditionalPreParsing>
 	
-	<name defaultPrepend="true"><![CDATA[Limb-multiplication]]></name>
+	<name defaultPrepend="true"><![CDATA[肢体增殖]]></name>
 	
 	<applicationSpeechStart replaceAll="false"><![CDATA[
 		Wouldn't it be so much fun to have more arms?!

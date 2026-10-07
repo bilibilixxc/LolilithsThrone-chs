@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>120</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[cap]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[caps]]></namePlural>
-		<description><![CDATA[A soft cap with a stiff peak projecting from the front, designed to shield the wearer's eyes from sunlight.]]></description>
+		<determiner><![CDATA[一顶]]></determiner>
+		<name><![CDATA[鸭舌帽]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[鸭舌帽]]></namePlural>
+		<description><![CDATA[一顶从前面伸出硬帽檐的软帽子，设计为从阳光下保护穿戴者的眼睛。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -43,27 +42,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(place)] the cap onto [npc.her] head.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(place)] the cap onto [npc2.namePos] head.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(push)] the cap onto [npc2.namePos] head.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把鸭舌帽戴在[npc.her]头上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]给[npc2.namePos]戴上了鸭舌帽。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地给[npc2.namePos]戴上了鸭舌帽。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] cap.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] cap.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] cap.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]脱下了[npc.her]的鸭舌帽。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]脱下了[npc2.namePos]的鸭舌帽。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]一把抓下[npc2.namePos]的鸭舌帽。
+		]]></otherRough>
 	</displacementText>
   
 </clothing>

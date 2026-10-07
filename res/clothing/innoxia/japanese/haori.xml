@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>750</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[men's haori]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[men's haori]]></namePlural>
-		<description><![CDATA[A traditional thigh-length kimono-style jacket, which is primarily worn by the reclusive youko.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[男式羽织]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[男式羽织]]></namePlural>
+		<description><![CDATA[一件传统的长及大腿的和风外套，主要由隐居的妖狐穿着。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>MASCULINE</femininity>
 		<slot>TORSO_OVER</slot>
@@ -56,26 +56,20 @@
 
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(guide)] [npc.her] [npc.arms] through the haori's sleeves as [npc.she] [npc.verb(pull)] it on.
-		]]></self>
-		<other> <![CDATA[
-			[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the haori's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></other>
+[npc.Name]将[npc.her]的[npc.arms]穿过羽织的袖子，然后将它拉了上去。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的胳膊穿过羽织的袖子，然后帮助[npc2.herHim]穿上它。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(push)] [npc2.namePos] [npc2.arms] through the haori's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></otherRough>
+[npc.Name]粗暴地将[npc2.namePos]的胳膊塞进羽织的袖子，然后粗暴地把它穿在[npc2.herHim]的身上。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(take)] [npc.her] haori off.
-		]]></self>
+[npc.Name]将[npc.her]的羽织脱下。]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(take)] [npc2.namePos] haori off.
-		]]></other>
+[npc.Name]帮助[npc2.name]脱掉羽织。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(take)] [npc2.namePos] haori off.
-		]]></otherRough>
+[npc.Name]粗暴地脱下[npc2.namePos]的羽织。]]></otherRough>
 	</displacementText>
 	
 </clothing>

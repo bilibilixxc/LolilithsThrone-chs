@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA["Grown by the dragons of the DSG Farmer's Guild" is lightly embossed under the carton.]]></authorTag>
+		<authorTag><![CDATA[“由DSG农民工会的巨龙培育”几个字浮现在盒子下方。]]></authorTag>
 		<value>5</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[carton of blueberries]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[cartons of blueberries]]></namePlural>
-		<description><![CDATA[A carton of berries picked from a highbush blueberry plant. They have a faint, translucent glow about them when under sunlight.]]></description>
-		<useDescriptor>eat</useDescriptor>
+		<determiner><![CDATA[一盒]]></determiner>
+		<name><![CDATA[一盒蓝莓]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[一盒蓝莓]]></namePlural>
+		<description><![CDATA[一盒从高山蓝莓植物上摘下的浆果。在阳光下，它们会发出微弱的光芒。]]></description>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -24,9 +24,9 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Increases)] [style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])] by 7 for 1 hour.]]></line>
-			<line><![CDATA[[style.colourBlueLight(Changes)] the flavour of all fluids to [style.colourBlueDark(blueberry)].]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[每小时[style.boldGood(增加)]7个[style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])]。]]></line>
+			<line><![CDATA[[style.colourBlueLight(改变)]液体的风味成为[style.colourBlueDark(蓝莓味)]。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -47,7 +47,7 @@
 				[##npc.addStatusEffect(SE_dsg_item_fruit_buff, 3600)]
 			#ENDIF
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(feel)] vaguely healthier...
+				[npc.Name]感到略微健康了一点……
 			</p>
 		]]></applyEffects>
 		
@@ -59,10 +59,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			[npc.Name] gingerly [npc.verb(pick)] a few blueberries from the carton and [npc.verb(start)] eating them, but soon [npc.she] [npc.verb(start)] dumping the whole thing into [npc.her] mouth. It doesn't take long to empty the carton after that...
+			[npc.Name]小心翼翼地从盒子里拿出一个蓝莓，然后开始吃，但很快就开始把它们快速地塞进嘴里。之后不久，盒子就被清空了……
 		]]></selfUse>
 		<otherUse><![CDATA[
-			[npc.Name] gingerly [npc.verb(pick)] a few blueberries from the carton for [npc2.name] to eat, but soon [npc2.name] takes the whole thing from [npc.her] and [npc2.verb(start)] dumping it into [npc.her] mouth. It doesn't take long to empty the carton after that...
+			[npc.Name]小心翼翼地从盒子里拿出一个蓝莓递给[npc2.name]吃，但很快[npc2.name]从[npc.her]手中夺走整个盒子，然后开始将它们塞进嘴里。之后不久，盒子就被清空了……
 		]]></otherUse>
 	</useDescriptions>
 

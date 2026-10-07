@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>3000</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[kimono]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[kimonos]]></namePlural>
-		<description><![CDATA[Primarily worn by the reclusive youko, these full-length robes are identical to their traditional Japanese namesake.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[女式和服]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[女式和服]]></namePlural>
+		<description><![CDATA[这种长袍主要由隐居的妖狐穿着，与日本传统的长袍名称相同。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot>
@@ -23,10 +23,10 @@
 			<category id="kimono_pattern" priority="1">
 				<categoryName><![CDATA[Pattern]]></categoryName>
 				<sticker id="flowers" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Flowers]]></stickerName>
+					<stickerName><![CDATA[花朵]]></stickerName>
 					<namePrefix/>
-					<namePostfix priority="1"><![CDATA[(flowers)]]></namePostfix>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[ <i>This particular kimono has a floral pattern.</i>]]></descriptionModification>
+					<namePostfix priority="1"><![CDATA[(花朵)]]></namePostfix>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这件女式和服上有花卉的图案。</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="TORSO_UNDER">kimono_flowers.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -34,10 +34,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="blossom" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Blossom]]></stickerName>
+					<stickerName><![CDATA[盛开]]></stickerName>
 					<namePrefix/>
-					<namePostfix priority="1"><![CDATA[(blossom)]]></namePostfix>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[ <i>This particular kimono has a cherry blossom pattern.</i>]]></descriptionModification>
+					<namePostfix priority="1"><![CDATA[(盛开)]]></namePostfix>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这件女式和服上有樱花盛开的图案。</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="TORSO_UNDER">kimono_blossom.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -45,7 +45,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="none" priority="0" defaultSticker="false" zLayer="1">
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -112,11 +112,11 @@
 		
 		<incompatibleSlots/>
 		
-		<primaryColours values ="KIMONO"/>
+		<primaryColours values="KIMONO"/>
 		<primaryColoursDye values="ALL"/>
 		<secondaryColours values="KIMONO"/>
 		<secondaryColoursDye values="ALL"/>
-		<tertiaryColours values ="KIMONO"/>
+		<tertiaryColours values="KIMONO"/>
 		<tertiaryColoursDye values="ALL"/>
 		
 		<itemTags>
@@ -128,26 +128,19 @@
 
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] on the kimono and [npc.verb(spend)] a moment securely tying it up.
-		]]></self>
-		<other> <![CDATA[
-			[npc.Name] [npc.verb(pull)] on the kimono onto [npc2.name] and [npc.verb(spend)] a moment securely tying it up.
-		]]></other>
+[npc.Name]穿上了和服，花了一点儿时间将它系牢。]]></self>
+		<other><![CDATA[
+[npc.Name]将和服穿在[npc2.name]身上，然后花了一些时间将它系好。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(force)] [npc2.name] into the kimono and [npc.verb(spend)] a moment securely tying it up.
-		]]></otherRough>
+[npc.Name]粗暴地把[npc2.name]塞进了和服里，然后花了一点时间将它系紧。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(untie)] [npc.her] kimono and [npc.verb(slip)] out of it.
-		]]></self>
+[npc.Name]解开了和服，然后脱掉了它。]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(untie)] [npc2.namePos] kimono and [npc.verb(pull)] it off of [npc2.herHim].
-		]]></other>
-		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(untie)] [npc2.namePos] kimono and [npc.verb(yank)] it off of [npc2.herHim].
-		]]></otherRough>
+[npc.Name]解开了[npc2.namePos]的和服，然后将它从[npc2.herHim]的身上脱掉。]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地扯开[npc2.namePos]的和服，然后猛地将它从[npc2.herHim]的身上扯掉。]]></otherRough>
 	</displacementText>
 	
 </clothing>

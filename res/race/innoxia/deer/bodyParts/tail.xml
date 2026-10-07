@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tail>
 	<race>innoxia_deer</race>
 	
-	<transformationName><![CDATA[deer]]></transformationName>
+	<transformationName><![CDATA[鹿]]></transformationName>
 	
 	<coveringType>innoxia_deer_fur</coveringType>
 	
@@ -20,43 +20,43 @@
 	<determiner><![CDATA[]]></determiner>
 	<determinerPlural><![CDATA[]]></determinerPlural> 
 	
-	<name><![CDATA[tail]]></name>
-	<namePlural><![CDATA[tails]]></namePlural> 
+	<name><![CDATA[尾巴]]></name>
+	<namePlural><![CDATA[尾巴]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>deer-like</descriptor>
-		<descriptor>furry</descriptor>
+		<descriptor><![CDATA[鹿般]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>deer-like</descriptor>
-		<descriptor>furry</descriptor>
+		<descriptor><![CDATA[鹿般]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
 	</descriptorsFeminine>
 	
-	<tipName><![CDATA[tip]]></tipName>
-	<tipNamePlural><![CDATA[tips]]></tipNamePlural>
+	<tipName><![CDATA[尖端]]></tipName>
+	<tipNamePlural><![CDATA[尖端]]></tipNamePlural>
 	<tipDescriptorsMasculine>
-		<descriptor>furry</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
 	</tipDescriptorsMasculine>
 	<tipDescriptorsFeminine>
-		<descriptor>furry</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
 	</tipDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
 		#IF(npc.getTailCount()==1)
-			A furry, deer-like tail sprouts from just above [npc.her] ass, rapidly growing in size until it's about [npc.tailLength] long. [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] a very limited amount of control over it, and can only lift it up and down.
-			<br/>[npc.Name] now [npc.has] a [style.boldGoat(deer-like tail)], [npc.materialDescriptor] [npc.tailFullDescription(true)].
+			一条毛绒绒的鹿般的尾巴，从尾椎处延伸而出，迅速生长至大概有[npc.tailLength]长。[npc.She]很快意识到自己对尾巴的控制力非常有限，只能够上下摆动它。
+			<br/>[npc.Name]现在拥有一条[style.boldGoat(鹿般的尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ELSE
-			[npc.TailCount] furry, deer-like tails sprout from just above [npc.her] ass, rapidly growing in size until they're each about [npc.tailLength] long. [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] a very limited amount of control over them, and can only lift them up and down.
-			<br/>[npc.Name] now [npc.has] [npc.tailCount] [style.boldGoat(deer-like tails)], [npc.materialDescriptor] [npc.tailFullDescription(true)].
+			[npc.TailCount]条毛茸茸的鹿般的尾巴，从尾椎处延伸而出，迅速生长至大概有[npc.tailLength]长。[npc.She]很快意识到自己对尾巴的控制力非常有限，只能够上下摆动它。
+			<br/>[npc.Name]现在拥有[npc.tailCount]条[style.boldGoat(鹿般的尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ENDIF
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		Growing out from just above [npc.her] ass, [npc.sheHasFull]
+		[npc.sheHasFull]的尾椎处延伸出
 		#IF(npc.getTailCount()==1)
-			 a #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF [npc.tailColour(true)] deer tail, which [npc.she] can lift up and down.
+			一条#IF(npc.isTailFeral())[style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]的鹿尾，可以上下移动。
 		#ELSE
-			 [npc.tailCount] #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF [npc.tailColour(true)] deer tails, which [npc.she] can lift up and down.
+			[npc.tailCount]条#IF(npc.isTailFeral()) [style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]的鹿尾巴，可以上下移动。
 		#ENDIF
 	]]></bodyDescription>
 </tail>

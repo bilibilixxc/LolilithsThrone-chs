@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Milking breasts -->
@@ -10,58 +10,58 @@
 	
 	#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
 		<p>
-			You lie down on the artisan milker's comfortable, padded leather bed, and, attaching the
+			你躺在手工挤奶工铺着皮革的舒适小床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的榨乳器
 			#ELSE
-				 soft suction cups
+				柔软的吸盘
 			#ENDIF
-			 to your [pc.breastRows] [pc.breasts], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			连在你的[pc.breastRows][pc.breasts]上，你把附近的开关打开。随后，机器发出了嗡嗡的声音，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [pc.milk+] from your [pc.nipples+].
+				吸盘开始熟练地挤压、吸吮着你[pc.nipples+]，你[pc.milk+]被榨取出来。
 			#ELSE
-				 begins to squeeze and suck the [pc.milk+] from your [pc.nipples+].
+				开始挤压、吸吮着你[pc.nipples+]，你[pc.milk+]被榨取出来。
 			#ENDIF
-			 You let out a delighted sigh at the satisfying feeling of being milked in comfort, and, allowing your eyes to close, you take a relaxing, well-earned break from your daily activities.
+			你感受着机器榨取着你的乳房，忍不住发出了舒适的喘息声。你觉得是时候闭上眼睛休息一会，享受这忙碌的一天中难得的舒适、惬意的闲暇。
 		</p>
 	#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
 		<p>
-			You lie down on the industrial milker's uncomfortable metal bed, and, attaching the
+			你躺在工厂挤奶工不太舒服的金属硬板床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的榨乳器
 			#ELSE
-				 hard suction cups
+				硬质的吸盘
 			#ENDIF
-			 to your [pc.breastRows] [pc.breasts], you flick the nearby switch to 'on'. Immediately, the machine starts loudly whirring and humming, and
+			连在你的[pc.breastRows][pc.breasts]上。你把附近的开关打开。随后，机器发出了吵闹的轰鸣声，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [pc.milk+] from your [pc.nipples+].
+				吸盘开始熟练地挤压、吸吮着你[pc.nipples+]，你[pc.milk+]被榨取出来。
 			#ELSE
-				 begins to roughly squeeze and suck the [pc.milk+] from your [pc.nipples+].
+				开始挤压、吸吮着你[pc.nipples+]，你[pc.milk+]被榨取出来。
 			#ENDIF
-			 You let out a distressed moan at the harsh feeling of being milked by such a crude machine, but, determined to see this through to the end, you hold still and allow the industrial-grade contraption to do its work.
+			它粗暴地榨取着你的乳房，这让你忍不住发出了痛苦的呻吟声。不过，为了坚持到最后，你保持着现在的姿势，让它继续榨取着你。
 		</p>
 	#ELSE
 		<p>
-			You lie down on the milking machine's leather bed, and, attaching the
+			你躺在挤奶机的皮质小床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的榨乳器
 			#ELSE
-				 suction cups
+				吸盘
 			#ENDIF
-			 to your [pc.breastRows] [pc.breasts], you flick the nearby switch to 'on'. Immediately, the machine starts humming, and
+			连在你的[pc.breastRows][pc.breasts]上。你把附近的开关打开。随后，机器发出了轰鸣声，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [pc.milk+] from your [pc.nipples+].
+				吸盘开始熟练地挤压、吸吮着你[pc.nipples+]，你[pc.milk+]被榨取出来。
 			#ELSE
-				 begins to squeeze and suck the [pc.milk+] from your [pc.nipples+].
+				开始挤压、吸吮着你[pc.nipples+]，你[pc.milk+]被榨取出来。
 			#ENDIF
-			 You let out a little moan at the feeling of being milked by the machine, and hold still as you allow the contraption to do its work.
+			当机器榨取你时，你发出了轻微的呻吟声。你保持姿势不动，让机器继续工作。
 		</p>
 	#ENDIF
 	<p>
-		Before you know it, an hour has passed, and after reaching over to flick the switch off, you unstrap yourself and stand up.
+		不知不觉中，一个小时过去了。你伸手把机器关掉，拔掉身上的吸盘，站起身来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="MILKING_SLAVE_TARGET"><![CDATA[
 	#VAR
@@ -70,43 +70,43 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			As [npc.name] is already lying down on the artisan milker's comfortable, padded leather bed, you simply confirm that the
+			当[npc.name]已经在手工挤奶工的舒适皮革小床上躺好时，你只需要简单确认一下
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的榨乳器
 			#ELSE
-				 soft suction cups
+				柔软的吸盘
 			#ENDIF
-			 are fastly secured over [npc.her] [npc.breastRows] [npc.nipples], and that the gently-humming milking machine's switch is set to 'on'.
+			是否已经牢牢固定在[npc.her][npc.breastRows][npc.nipples]上，然后把这台机器打开。你听到运转的机器发出嗡嗡声。
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			As [npc.name] is already lying down on the industrial milker's uncomfortable metal bed, you simply confirm that the
+			当[npc.name]已经在工厂挤奶工不太舒服的钢板床上躺好时，你只需要简单确认一下
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的榨乳器
 			#ELSE
-				 hard suction cups
+				硬质的吸盘
 			#ENDIF
-			 are fastly secured over [npc.her] [npc.breastRows] [npc.nipples], and that the loudly-whirring milking machine's switch is set to 'on'.
+			是否已经牢牢固定在[npc.her][npc.breastRows][npc.nipples]上，然后把这台机器打开。你听到运转的机器发出巨大的轰鸣声。
 		#ELSE
-			As [npc.name] is already lying down on the milking machine's leather bed, you simply confirm that the
+			当[npc.name]已经在挤奶机铺着皮革的小床上躺好时，你只需要简单确认一下
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的榨乳器
 			#ELSE
-				 suction cups
+				吸盘
 			#ENDIF
-			 are fastly secured over [npc.her] [npc.breastRows] [npc.nipples], and that the steadily-humming milking machine's switch is set to 'on'.
+			是否已经牢牢固定在[npc.her][npc.breastRows][npc.nipples]上，然后把这台机器打开。你听到运转的机器发出轰鸣声。
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and give [npc.her] [npc.breasts+] a firm squeeze, smiling in delight as [npc.her] [npc.milk+] squirts out
+		你坐在一把垫着皮质坐垫的椅子上，伸手去摩擦、挤压着[npc.her][npc.breasts+]。当[npc.her][npc.milk+]喷涌而出时，你感觉很开心。
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 into the aftermarket suction cups, before being quickly sucked away into the storage vats.
+				奶水很快从吸盘里被抽出，流进储存罐中。
 			#ELSE
-				 and is quickly sucked away into the storage vats.
+				奶水很快被抽进储存罐中。
 			#ENDIF
-		 Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to squeeze and milk [npc.namePos] [npc.breasts+].
+		你满意地喘息着，摊在舒适的皮质椅子上，享受忙碌生活中难得的惬意闲暇。而后坐起来，伸手继续给[npc.namePos][npc.breasts+]挤奶。
 	</p>
 	<p>
-		Before you know it, an hour has passed, and, leaving [npc.name] to continue being milked by the machine, you stand up and wonder what to do next...
+		不知不觉间，一个小时过去了。你站起身来，[npc.name]还在被榨乳，你思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MILKING_TARGET"><![CDATA[
 	#VAR
@@ -115,58 +115,58 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the artisan milker's comfortable, padded leather bed, and, attaching the
+			为了给[npc.name]挤奶，你让[npc.herHim]躺在手工挤奶工的舒适皮革小床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的挤奶器
 			#ELSE
-				 soft suction cups
+				柔软的吸盘
 			#ENDIF
-			 to [npc.her] [npc.breastRows] [npc.breasts], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			连在[npc.her][npc.breastRows][npc.breasts]上，打开机器的开关。你听到机器运转的嗡嗡声。
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [npc.milk+] from [npc.her] [npc.nipples+].
+				吸盘娴熟地将[npc.milk+]从[npc.her][npc.nipples+]吸吮出来。
 			#ELSE
-				 begins to squeeze and suck the [npc.milk+] from [npc.her] [npc.nipples+].
+				机器开始将[npc.milk+]从[npc.her][npc.nipples+]榨取出来。
 			#ENDIF
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the industrial milker's uncomfortable metal bed, and, attaching the
+			为了给[npc.name]挤奶，你让[npc.herHim]躺在工厂挤奶工不舒服的钢板床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的挤奶器
 			#ELSE
-				 hard suction cups
+				坚硬的吸盘
 			#ENDIF
-			 to [npc.her] [npc.breastRows] [npc.breasts], you flick the nearby switch to 'on'. Immediately, the machine starts loudly whirring and humming, and
+			连在[npc.her][npc.breastRows][npc.breasts]上，打开机器的开关。你听到机器运转的巨大轰鸣声。
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [npc.milk+] from [npc.her] [npc.nipples+].
+				吸盘娴熟地将[npc.milk+]从[npc.her][npc.nipples+]吸吮出来。
 			#ELSE
-				 begins to roughly squeeze and suck the [npc.milk+] from [npc.her] [npc.nipples+].
+				机器开始粗暴地将[npc.milk+]从[npc.her][npc.nipples+]榨取出来。
 			#ENDIF
 		#ELSE
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the milking machine's leather bed, and, attaching the
+			为了给[npc.name]挤奶，你让[npc.herHim]躺在挤奶机的皮革小床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的挤奶器
 			#ELSE
-				 suction cups
+				吸盘
 			#ENDIF
-			 to [npc.her] [npc.breastRows] [npc.breasts], you flick the nearby switch to 'on'. Immediately, the machine starts humming, and
+			连在[npc.her][npc.breastRows][npc.breasts]上，打开机器的开关。你听到机器运转的轰鸣声。
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [npc.milk+] from [npc.her] [npc.nipples+].
+				吸盘娴熟地将[npc.milk+]从[npc.her][npc.nipples+]吸吮出来。
 			#ELSE
-				 begins to squeeze and suck the [npc.milk+] from [npc.her] [npc.nipples+].
+				机器开始将[npc.milk+]从[npc.her][npc.nipples+]榨取出来。
 			#ENDIF
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and give [npc.her] [npc.breasts+] a firm squeeze, smiling in delight as an extra squirt of [npc.her] [npc.milk+] is 
+		你坐在一把垫着皮质坐垫的椅子上，心情愉悦。你伸手去摩擦、挤压着[npc.her][npc.breasts+]。一股额外的[npc.her][npc.milk+]喷涌而出，流进
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 sucked out and pumped away into the storage vats.
+				吸盘中，又很快被抽进储存罐里。
 			#ELSE
-				 greedily sucked out and pumped away into the storage vats.
+				储存罐里。机器贪婪地吸取着[npc.her][npc.milk+]
 			#ENDIF
-		 Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to squeeze and milk [npc.namePos] [npc.breasts+].
+		你满意地喘息着，摊在舒适的皮质椅子上，享受忙碌生活中难得的惬意闲暇。而后坐起来，伸手继续给[npc.namePos][npc.breasts+]挤奶。
 	</p>
 	<p>
-		Before you know it, an hour has passed, and after unstrapping [npc.name] from the machine, you stand up and wonder what to do next...
+		不知不觉间，一个小时过去了。你站起身来，把[npc.name]身上的吸盘拔下，思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -180,61 +180,61 @@
 	
 	#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
 		<p>
-			You lie down on the artisan milker's comfortable, padded leather bed, and, sliding the
+			你躺在手工挤奶工舒适的软垫皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔管”吮吸管
 			#ELSE
-				 soft suction tube
+				柔软的吮吸管
 			#ENDIF
-			 down over your [pc.cock+], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			连在你[pc.cock+]上面，你把附近的开关打开。随后，机器发出了嗡嗡的声音，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 the aftermarket suction device begin to expertly squeeze and stroke your [pc.cock+].
+				维护后的吮吸管开始娴熟地套弄、榨取着你[pc.cock+]。
 			#ELSE
-				 begins to squeeze and stroke your [pc.cock+].
+				开始娴熟地套弄、榨取着你[pc.cock+]。
 			#ENDIF
-			 It doesn't take long before your orgasm crashes over you, and, bucking your [pc.hips] into the bed's soft leather padding, you feel your [pc.cum+] shooting out into the tube that's enveloping your [pc.cock].
+			没过多久，你就达到了高潮，你的[pc.hips]在床上柔软的皮垫上扭动，感觉到你的[pc.cum+]射进了包裹着你[pc.cock]的管子里。
 		</p>
 	#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
 		<p>
-			You lie down on the industrial milker's uncomfortable metal bed, and, sliding the
+			你躺在工业挤奶机不舒服的金属床上，然后，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔”吮吸管
 			#ELSE
-				 industrial-strength suction tube
+				工业级力度的吮吸管
 			#ENDIF
-			 down over your [pc.cock+], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			连在你[pc.cock+]上。你把附近的开关打开。随后，机器发出了吵闹的轰鸣声，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 the aftermarket suction device begin to expertly squeeze and stroke your [pc.cock+].
+				维护后的吮吸管开始娴熟地套弄、榨取着你[pc.cock+]。
 			#ELSE
-				 begins to roughly squeeze and stroke your [pc.cock+].
+				开始粗暴地套弄、榨取着你[pc.cock+]。
 			#ENDIF
-			 You let out a distressed moan at the harsh feeling of being milked by such a crude machine, but, determined to see this through to the end, you hold still and allow the industrial-grade contraption to do its work. Despite the machine's rough touch, it doesn't take long before you're letting out a heavy groan, and, bucking your [pc.hips] against the bed's cold metal, you feel your [pc.cum+] shooting out into the machine's tube.
+			被如此简陋的机器榨精，你发出了痛苦的呻吟，但你决心坚持到底，一动不动，任由这个工业装置工作。尽管机器的触感很粗糙，但没过多久，你就发出了沉重的呻吟，并用[pc.hips]顶着床的冰冷金属，感觉自己的[pc.cum+]射进了机器的管道。
 		</p>
 	#ELSE
 		<p>
-			You lie down on the milking machine's leather bed, and, sliding the
+			你躺在挤奶机的皮床上，然后把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔”吮吸管
 			#ELSE
-				 suction tube
+				吮吸管
 			#ENDIF
-			 down over your [pc.cock+], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			连在你[pc.cock+]上。你把附近的开关打开。随后，机器发出了轰鸣声，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 the aftermarket suction device begin to expertly squeeze and stroke your [pc.cock+].
+				维护后的吮吸管开始娴熟地套弄、榨取着你[pc.cock+]。
 			#ELSE
-				 begins to squeeze and stroke your [pc.cock+].
+				开始套弄、榨取着你[pc.cock+]。
 			#ENDIF
-			 It doesn't take long before your orgasm crashes over you, and, bucking your [pc.hips] into the bed's padding, you feel your [pc.cum+] shooting out into the tube that's enveloping your [pc.cock], before being pumped away into the storage vats.
+			没过多久，你就达到了高潮，你的[pc.hips]在床上的垫子上扭来扭去，感觉到[pc.cum+]射到了包裹着你[pc.cock+]的管子里，然后被抽到储藏桶里。
 		</p>
 	#ENDIF
 	<p>
-		You're given no time to recover from your orgasm, and the machine continues relentlessly stroking and sucking away at your [pc.cock+]. Within minutes, you've reached a second climax, and, collapsing fully down onto the bed, you surrender yourself to the ceaseless workings of the milking machine...
+		来不及从高潮中恢复过来，机器便继续无情地抚摸和吸吮你[pc.cock+]。几分钟内，你又达到了第二次高潮，这次，你无力地倒在床上，任由挤奶机不停地吮吸……
 	</p>
 	<p>
-		Before you know it, an hour has passed, and after reaching over to flick the switch off, you unstrap yourself and stand up on shaking [pc.legs].
+		不知不觉中，一个小时过去了，伸手关掉开关后，你松开束缚，颤抖着[pc.legs]站了起来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="MILKING_COCK_SLAVE_TARGET"><![CDATA[
 	#VAR
@@ -243,45 +243,45 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			As [npc.name] is already lying down on the artisan milker's comfortable, padded leather bed, you simply confirm that the
+			[npc.Name]已经躺在手工挤奶工舒适的软垫皮床上，你只需要确认
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔管”吮吸管
 			#ELSE
-				 soft suction tube
+				柔软的吮吸管
 			#ENDIF
-			 is fastly secured over [npc.her] [npc.cock+], and that the gently-humming milking machine's switch is set to 'on'.
+			牢牢固定在[npc.her][npc.cock+]上，轻敲挤奶机开关，将其设置为“开”。
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			As [npc.name] is already lying down on the industrial milker's uncomfortable metal bed, you simply confirm that the
+			[npc.Name]已经躺在工业挤奶机不舒服的金属床上，你只需要确认
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔管”吮吸管
 			#ELSE
-				 industrial-strength suction tube
+				工业级力度的吮吸管
 			#ENDIF
-			 is fastly secured over [npc.her] [npc.cock+], and that the loudly-whirring milking machine's switch is set to 'on'.
+			牢牢固定在[npc.her][npc.cock+]上，操作嗡嗡作响的挤奶机，将其设置为“开”。
 		#ELSE
-			As [npc.name] is already lying down on the milking machine's leather bed, you simply confirm that the
+			[npc.Name]已经躺在挤奶机皮床上，你只需要确认
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔管”吮吸管
 			#ELSE
-				 suction tube
+				柔软的吮吸管
 			#ENDIF
-			 is fastly secured over [npc.her] [npc.cock+], and that the steadily-humming milking machine's switch is set to 'on'.
+			牢牢固定在[npc.her][npc.cock+]上，操作嗡嗡作响的挤奶机，将其设置为“开”。
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and take hold of the tube, before smoothly oscillating it up and down over [npc.her] [npc.cock+]. Much to your delight, it only takes a few strokes before [npc.namePos] orgasm crashes over [npc.herHim], and as [npc.she] bucks [npc.her] [npc.hips] into the bed's padding, you watch as [npc.her] [npc.cum+]
+		你坐在[npc.herHim]身旁的软垫皮座上，伸手握住管子，平稳地在[npc.her][npc.cock+]上来回摆动。只不过摆弄了几下，高潮就浸没了[npc.namePos]，你见此情景，喜出望外。继续看着[npc.her][npc.cum+]
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 shoots out into the tube that's enveloping [npc.her] [npc.cock], before being pumped away into the storage vats.
+				喷射到包裹[npc.cock]的管道中，然后被泵送到储藏桶中。
 			#ELSE
-				 shoots out into the tube that's enveloping [npc.her] [npc.cock], before being greedily pumped away into the storage vats.
+				喷射到包裹[npc.cock]的管道中，然后被极尽所能地泵送到储藏桶中。
 			#ENDIF
 	</p>
 	<p>
-		Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to squeeze and milk [npc.namePos] [npc.cock+].
+		你从日常活动中放松下来，发出满足的叹息，仰在舒适的皮椅上放松，将手伸向[npc.namePos][npc.cock+]挤压套弄。
 	</p>
 	<p>
-		Before you know it, an hour has passed, and, leaving [npc.name] to continue being milked by the machine, you stand up and wonder what to do next...
+		不知不觉间，一个小时过去了。你站起身来，[npc.name]还在被榨乳，你思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MILKING_COCK_TARGET"><![CDATA[
 	#VAR
@@ -290,60 +290,60 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			Wanting to have [npc.namePos] cum milked, you get [npc.herHim] to lie down on the artisan milker's comfortable, padded leather bed, and, sliding the
+			你想给[npc.name]榨精，便让[npc.herHim]躺在手工挤奶工舒适的软垫皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔管”吮吸管
 			#ELSE
-				 soft suction tube
+				柔软的吸吮管
 			#ENDIF
-			 down over [npc.her] [npc.cock], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			接在[npc.her]的[npc.cock]上，你按下旁边的按钮“开”，机器瞬间轻微嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 the aftermarket suction device begin to expertly squeeze and stroke [npc.her] [npc.cock+].
+				吸吮杯部件开始熟练地箍紧挤榨[npc.her][npc.cock+]。
 			#ELSE
-				 begins to squeeze and stroke [npc.her] [npc.cock+].
+				开始箍紧挤榨[npc.her][npc.cock+]。
 			#ENDIF
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the industrial milker's uncomfortable metal bed, and, attaching the
+			你想给[npc.name]榨精，便让[npc.herHim]躺在工业挤奶工不舒服的金属床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔管”吸吮管
 			#ELSE
-				 industrial-strength suction tube
+				工业强度的吸吮管
 			#ENDIF
-			 down over [npc.her] [npc.cock], you flick the nearby switch to 'on'. Immediately, the machine starts loudly whirring and humming, and
+			接在[npc.her]的[npc.cock]上，你按下旁边的按钮“开”，机器瞬间发出很大的呼啸嗡鸣声，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 the aftermarket suction device begin to expertly squeeze and stroke [npc.her] [npc.cock+].
+				吸吮管部件开始熟练地箍紧挤榨[npc.her][npc.cock+]。
 			#ELSE
-				 begins to roughly squeeze and stroke [npc.her] [npc.cock+].
+				开始粗暴地箍紧挤榨[npc.her][npc.cock+]。
 			#ENDIF
 		#ELSE
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the milking machine's leather bed, and, attaching the
+			你想给[npc.name]榨精，便让[npc.herHim]躺在挤奶机的皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 special 'Succ-u-Bus' suction tube
+				特殊的“魅魔管”吸吮管
 			#ELSE
-				 suction tube
+				吸吮管
 			#ENDIF
-			 down over [npc.her] [npc.cock], you flick the nearby switch to 'on'. Immediately, the machine starts humming, and
+			接在[npc.her]的[npc.cock]上，你按下旁边的按钮“开”，机器瞬间嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_CUM_EFFICIENCY))
-				 the aftermarket suction device begin to expertly squeeze and stroke [npc.her] [npc.cock+].
+				吸吮管部件开始熟练地箍紧挤榨[npc.her][npc.cock+]。
 			#ELSE
-				 begins to squeeze and stroke [npc.her] [npc.cock+].
+				开始箍紧挤榨[npc.her][npc.cock+]。
 			#ENDIF
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and take hold of the tube, before smoothly oscillating it up and down over [npc.her] [npc.cock+]. Much to your delight, it only takes a few strokes before [npc.namePos] orgasm crashes over [npc.herHim], and as [npc.she] bucks [npc.her] [npc.hips] into the bed's padding, you watch as [npc.her] [npc.cum+]
+		你坐在[npc.herHim]身旁的软垫皮座上，过去把住管子，平稳地在[npc.her][npc.cock+]上来回摆动。只不过摆弄了几下，[npc.namePos]就被高潮浸没了，[npc.she]的[npc.hips]陷进床垫中，你盯着[npc.her][npc.cum+]
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 shoots out into the tube that's enveloping [npc.her] [npc.cock], before being pumped away into the storage vats.
+				射到裹住[npc.cock]的管道中，又被泵到储藏桶里。
 			#ELSE
-				 shoots out into the tube that's enveloping [npc.her] [npc.cock], before being greedily pumped away into the storage vats.
+				射到裹住[npc.cock]的管道中，又被极尽所能地泵到储藏桶里。
 			#ENDIF
 	</p>
 	<p>
-		[npc.NameIsFull] given no time to recover from [npc.her] orgasm, and the machine continues relentlessly stroking and sucking away at [npc.her] [npc.cock+]. Within minutes, [npc.sheHas] reached a second climax, and, collapsing fully down onto the bed, [npc.she] surrenders [npc.herself] to the ceaseless workings of the milking machine.
+		[npc.NameIsFull]还没来得及从高潮中恢复，机器就继续无情地撸动和吸吮[npc.her][npc.cock+]。用不了几分钟，[npc.sheHas]就达到了第二次高潮，并彻底瘫在了床上，[npc.she]向不断工作着的挤奶机缴械投降了。
 	</p>
 	<p>
-		Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to squeeze and help to milk [npc.namePos] [npc.cock+]. Before you know it, an hour has passed, and after unstrapping [npc.name] from the machine, you stand up and wonder what to do next...
+		你发出一声满意的轻叹，从日常活动中腾出时间来好好休息。并在坐在皮椅上休息放松与向前辅助压榨[npc.namePos][npc.cock+]之间不断调整。不知不觉间，一个小时过去了，你站起身，把[npc.name]身上的吸盘拔下，并考虑着接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -357,79 +357,79 @@
 	
 	#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
 		<p>
-			You lie down on the artisan milker's comfortable, padded leather bed, and, sliding the
+			你躺在挤奶工铺着皮垫的舒适的床上，并将
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特制的“振动吮吸泵”
 			#ELSE
-				 soft suction tube
+				吮吸软管
 			#ENDIF
-			 down over your [pc.pussy+], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			扣在你[pc.pussy+]上，你将旁边的开关调到“开”。几乎瞬间，机器开始微微嗡鸣，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 the aftermarket pump begins rapidly vibrating against your [pc.clit+].
+				而经过售后的泵开始贴合着你[pc.clit+]并快速振动。
 			#ELSE
-				 begins to gently vibrate against your [pc.clit+].
+				并开始贴合着你[pc.clit+]并温柔地振动。
 			#ENDIF
-			 It doesn't take long before your orgasm crashes over you, and as your [pc.legs] tremble against the bed's soft leather padding, you feel your [pc.girlcum+]
+			用不了多久高潮就击垮了你，你的[pc.legs]在柔软的皮垫上颤抖，同时感觉到你的[pc.girlcum+]
 				#IF(pc.isVaginaSquirter())
-				 squirting
+				喷射
 				#ELSE
-				 drooling
+				流淌
 				#ENDIF
-			 into the machine's greedy pump.
+			进了机器贪婪的泵里面。
 		</p>
 	#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
 		<p>
-			You lie down on the industrial milker's uncomfortable metal bed, and, sliding the
+			你躺在工业挤奶师那令人不适的金属床上，将
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特制的“振动吮吸泵”
 			#ELSE
-				 industrial-strength suction tube
+				工业级吮吸管
 			#ENDIF
-			 down over your [pc.pussy+], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			扣在你[pc.pussy+]上，并将旁边的开关调到“开”。几乎瞬间，机器开始微微嗡鸣，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 the aftermarket pump begins rapidly vibrating against your [pc.clit+].
+				而经过售后的泵开始贴合着你[pc.clit+]并快速振动。
 			#ELSE
-				 begins to roughly vibrate against your [pc.clit+].
+				并开始贴合着你[pc.clit+]并剧烈地振动。
 			#ENDIF
-			 Despite the machine's rough touch, it doesn't take long before you're letting out a high-pitched squeal, and as your [pc.legs] tremble against the bed's cold metal surface, you feel your [pc.girlcum+]
+			尽管机械的动作很粗鲁，它还是没用多久就让你尖叫连连。你的[pc.legs]在冰冷的金属床上颤抖，同时感觉到你[pc.girlcum+]
 				#IF(pc.isVaginaSquirter())
-				 squirting
+				喷射
 				#ELSE
-				 drooling
+				流淌
 				#ENDIF
-			 into the machine's greedy pump.
+			进了机器贪婪的泵里面。
 		</p>
 	#ELSE
 		<p>
-			You lie down on the milking machine's leather bed, and, sliding the
+			你躺在挤奶工铺着皮垫的舒适的床上，并将
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特制的“振动吮吸泵”
 			#ELSE
-				 suction tube
+				吮吸软管
 			#ENDIF
-			 down over your [pc.pussy+], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			扣在你[pc.pussy+]上，你将旁边的开关调到“开”。几乎瞬间，机器开始微微嗡鸣，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 the aftermarket pump begins rapidly vibrating against your [pc.clit+].
+				而经过售后的泵开始贴合着你[pc.clit+]并快速振动。
 			#ELSE
-				 begins to vibrate against your [pc.clit+].
+				并开始贴合着你[pc.clit+]振动。
 			#ENDIF
-			 It doesn't take long before your orgasm crashes over you, and as your [pc.legs] tremble against the bed's leather padding, you feel your [pc.girlcum+]
+			用不了多久高潮就击垮了你，你的[pc.legs]在柔软的皮垫上颤抖，同时感觉到你[pc.girlcum+]
 				#IF(pc.isVaginaSquirter())
-				 squirting
+				喷射
 				#ELSE
-				 drooling
+				流淌
 				#ENDIF
-			 into the machine's greedy pump.
+			进了机器贪婪的泵里面。
 		</p>
 	#ENDIF
 	<p>
-		You're given no time to recover from your orgasm, and the machine continues vibrating and pumping away at your [pc.pussy+]. Within minutes, you've reached a second climax, and, collapsing fully down onto the bed, you surrender yourself to the ceaseless workings of the milking machine...
+		机器不停地振动和吮吸着你[pc.pussy+]，你找不到时机从高潮中恢复。用不了几分钟，你又迎来了高潮，并瘫在了床上。你向不停工作的挤奶机缴械投降了……
 	</p>
 	<p>
-		Before you know it, an hour has passed, and after reaching over to flick the switch off, you unstrap yourself and stand up on your still-quivering [pc.legs].
+		不知不觉中，一个小时过去了，伸手关掉开关后，你取下身上的吸盘，哆嗦着[pc.legs]站了起来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="MILKING_PUSSY_SLAVE_TARGET"><![CDATA[
 	#VAR
@@ -438,46 +438,46 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			As [npc.name] is already lying down on the artisan milker's comfortable, padded leather bed, you simply confirm that the
+			[npc.name]已经在挤奶师舒适的皮垫床上躺好，你确保了
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特制的“振动吮吸泵”
 			#ELSE
-				 soft suction tube
+				吮吸软管
 			#ENDIF
-			 is fastly secured over [npc.her] [npc.pussy+], and that the gently-humming milking machine's switch is set to 'on'.
+			被紧紧固定在[npc.her][npc.pussy+]上，并且温柔嗡鸣着的挤奶机被调到了“开启”档位。
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			As [npc.name] is already lying down on the industrial milker's uncomfortable metal bed, you simply confirm that the
+			[npc.name]已经在工业挤奶工令人不适的金属床上躺好，你确保了
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特制的“振动吮吸泵”
 			#ELSE
-				 industrial-strength suction tube
+				工业级吮吸管
 			#ENDIF
-			 is fastly secured over [npc.her] [npc.pussy+], and that the loudly-whirring milking machine's switch is set to 'on'.
+			被紧紧固定在[npc.her][npc.pussy+]上，并且吵闹嗡响的挤奶机被调到了“开启”档位。
 		#ELSE
-			As [npc.name] is already lying down on the milking machine's leather bed, you simply confirm that the
+			[npc.name]已经躺在了挤奶机的皮革床上，你确保了
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特制的“振动吮吸泵”
 			#ELSE
-				 suction tube
+				吮吸软管
 			#ENDIF
-			 is fastly secured over [npc.her] [npc.pussy+], and that the steadily-humming milking machine's switch is set to 'on'.
+			被紧紧固定在[npc.her][npc.pussy+]上，而且平稳嗡鸣着的挤奶机被调到了“开启”档位。
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and take hold of the pump, before smoothly pressing it down and rubbing the inner lining against [npc.her] [npc.clit+]. Much to your delight, it only takes a few rubs before [npc.namePos] orgasm crashes over [npc.herHim], and as [npc.her] [npc.legs] tremble and quiver, you see [npc.her] [npc.girlcum+]
+		你坐在[npc.herHim]身边放着皮衬垫的座椅上，伸出手拿过泵，并轻轻将其按下，用其内层摩擦[npc.her][npc.clit+]。令你高兴的是，还没摩擦几下，[npc.herHim]就被高潮击垮了。[npc.her]的[npc.legs]颤抖抽动着，你看见[npc.her][npc.girlcum+]
 			#IF(pc.isVaginaSquirter())
-			 squirting
+			喷射
 			#ELSE
-			 drooling
+			流淌
 			#ENDIF
-		 into the machine's greedy pump.
+		进了机器贪婪的泵里面。
 	</p>
 	<p>
-		Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to rub and milk [npc.namePos] [npc.pussy+].
+		发出了一声心满意足的叹息，你从日常工作中抽出了一段应得的休息时间，在舒适的皮椅上放松着，伸手去揉弄[npc.namePos][npc.pussy+]并榨起汁来。
 	</p>
 	<p>
-		Before you know it, an hour has passed, and, leaving [npc.name] to continue being milked by the machine, you stand up and wonder what to do next...
+		不知不觉间，一个小时过去了。你站起身来，[npc.name]还在被榨乳，你思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MILKING_PUSSY_TARGET"><![CDATA[
 	#VAR
@@ -486,61 +486,61 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			Wanting to have [npc.namePos] girlcum milked, you get [npc.herHim] to lie down on the artisan milker's comfortable, padded leather bed, and, sliding the
+			你想榨[npc.name]的爱液，便让[npc.herHim]躺在手工挤奶工舒适的软垫皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特殊的“仙女泵”
 			#ELSE
-				 soft suction tube
+				柔软的吸吮管
 			#ENDIF
-			 down over [npc.her] [npc.pussy], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			接在[npc.her]的[npc.pussy]上，你按下旁边的按钮“开”，机器瞬间轻微嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 the aftermarket pump begins rapidly vibrating against [npc.her] [npc.clit+].
+				泵部件快速振动着[npc.her][npc.clit+]。
 			#ELSE
-				 begins to vibrate against [npc.her] [npc.clit+].
+				开始振动着[npc.her][npc.clit+]。
 			#ENDIF
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			Wanting to have [npc.name] girlcum, you get [npc.herHim] to lie down on the industrial milker's uncomfortable metal bed, and, sliding the
+			你想榨[npc.name]的爱液，便让[npc.herHim]躺在工业挤奶机不舒服的金属床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特殊的“仙女泵”
 			#ELSE
-				 industrial-strength suction tube
+				工业等级的吸吮管
 			#ENDIF
-			 down over [npc.her] [npc.cock], you flick the nearby switch to 'on'. Immediately, the machine starts loudly whirring and humming, and
+			接在[npc.her]的[npc.pussy]上，你按下旁边的按钮“开”，机器瞬间发出很大的呼啸嗡鸣声，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 the aftermarket pump begins rapidly vibrating against [npc.her] [npc.clit+].
+				泵部件快速振动着[npc.her][npc.clit+]。
 			#ELSE
-				 begins to roughly vibrate against [npc.her] [npc.clit+].
+				开始粗暴地振动着[npc.her][npc.clit+]。
 			#ENDIF
 		#ELSE
-			Wanting to have [npc.name] girlcum, you get [npc.herHim] to lie down on the milking machine's leather bed, and, sliding the
+			你想榨[npc.name]的爱液，便让[npc.herHim]躺在挤奶机皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 special 'Vibro-Pump'
+				特殊的“仙女泵”
 			#ELSE
-				 suction tube
+				吸吮管
 			#ENDIF
-			 down over [npc.her] [npc.cock], you flick the nearby switch to 'on'. Immediately, the machine starts humming, and
+			接在[npc.her]的[npc.pussy]上，你按下旁边的按钮“开”，机器瞬间嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_GIRLCUM_EFFICIENCY))
-				 the aftermarket pump begins rapidly vibrating against [npc.her] [npc.clit+].
+				泵部件快速振动着[npc.her][npc.clit+]。
 			#ELSE
-				 begins to vibrate against [npc.her] [npc.clit+].
+				开始振动着[npc.her][npc.clit+]。
 			#ENDIF
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and take hold of the pump, before smoothly pressing it down and rubbing the inner lining against [npc.her] [npc.clit+]. Much to your delight, it only takes a few rubs before [npc.namePos] orgasm crashes over [npc.herHim], and as [npc.her] [npc.legs] tremble and quiver, you see [npc.her] [npc.girlcum+]
+		你坐在[npc.herHim]身旁的软垫皮座上，伸手握住泵，平稳地来回摆动，磨蹭着内里[npc.clit+]。你喜出望外地发现，只不过摆弄了几下，高潮就浸没了[npc.namePos]，[npc.her]的[npc.legs]战栗颤抖，你盯着[npc.her][npc.girlcum+]
 			#IF(pc.isVaginaSquirter())
-			 squirting
+			喷
 			#ELSE
-			 drooling
+			流
 			#ENDIF
-		 into the machine's greedy pump.
+		进机器似乎无休止的泵中。
 	</p>
 	<p>
-		Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to rub and milk [npc.namePos] [npc.pussy+].
+		发出了一声心满意足的叹息，你从日常工作中抽出了一段应得的休息时间，在舒适的皮椅上放松着，伸手去揉弄[npc.namePos][npc.pussy+]并给她挤奶。
 	</p>
 	<p>
-		Before you know it, an hour has passed, and, leaving [npc.name] to continue being milked by the machine, you stand up and wonder what to do next...
+		不知不觉间，一个小时过去了。你站起身来，[npc.name]还在被榨乳，你思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -554,58 +554,58 @@
 	
 	#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
 		<p>
-			You lie down on the artisan milker's comfortable, padded leather bed, and, attaching the
+			你躺在手工挤奶工舒适的软垫皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 soft suction cups
+				柔软的吸吮杯
 			#ENDIF
-			 to your [pc.crotchBoobsRows] [pc.crotchBoobs], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			连到[pc.crotchBoobsRows][pc.crotchBoobs]上，你按下旁边的按钮“开”，机器瞬间轻微嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [pc.crotchMilk+] from your [pc.crotchNipples+].
+				吸吮杯部件开始熟练地从[pc.crotchNipples+]中挤压吮吸出[pc.crotchMilk+]。
 			#ELSE
-				 begins to squeeze and suck the [pc.crotchMilk+] from your [pc.crotchNipples+].
+				开始从[pc.crotchNipples+]中挤压吮吸出[pc.crotchMilk+]。
 			#ENDIF
-			 You let out a delighted sigh at the satisfying feeling of being milked in comfort, and, allowing your eyes to close, you take a relaxing, well-earned break from your daily activities.
+			你享受着舒适的挤榨感，愉悦地叹了口气，闭上眼睛，从日常中放松下来，享受这来之不易的休憩。
 		</p>
 	#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
 		<p>
-			You lie down on the industrial milker's uncomfortable metal bed, and, attaching the
+			你躺在工业挤奶机不舒服的金属床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 hard suction cups
+				坚硬的吸吮杯
 			#ENDIF
-			 to your [pc.crotchBoobsRows] [pc.crotchBoobs], you flick the nearby switch to 'on'. Immediately, the machine starts loudly whirring and humming, and
+			连到[pc.crotchBoobsRows][pc.crotchBoobs]上，你按下旁边的按钮“开”，机器迅速剧烈嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [pc.crotchMilk+] from your [pc.crotchNipples+].
+				吸吮杯部件开始熟练地从[pc.crotchNipples+]中挤压吮吸出[pc.crotchMilk+]。
 			#ELSE
-				 begins to roughly squeeze and suck the [pc.crotchMilk+] from your [pc.crotchNipples+].
+				开始粗暴地从[pc.crotchNipples+]中挤压吮吸出[pc.crotchMilk+]。
 			#ENDIF
-			 You let out a distressed moan at the harsh feeling of being milked by such a crude machine, but, determined to see this through to the end, you hold still and allow the industrial-grade contraption to do its work.
+			你痛苦呻吟，忍受着被这种暴力机器榨乳。你决心坚持到底，一动不动，任由工业装置工作。
 		</p>
 	#ELSE
 		<p>
-			You lie down on the milking machine's leather bed, and, attaching the
+			你躺在挤奶机的皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 suction cups
+				吸吮杯
 			#ENDIF
-			 to your [pc.crotchBoobsRows] [pc.crotchBoobs], you flick the nearby switch to 'on'. Immediately, the machine starts humming, and
+			连到[pc.crotchBoobsRows][pc.crotchBoobs]上，你按下旁边的按钮“开”，机器嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [pc.crotchMilk+] from your [pc.crotchNipples+].
+				吸吮杯部件开始熟练地从[pc.crotchNipples+]中挤压吮吸出[pc.crotchMilk+]。
 			#ELSE
-				 begins to squeeze and suck the [pc.crotchMilk+] from your [pc.crotchNipples+].
+				开始从[pc.crotchNipples+]中挤压吮吸出[pc.crotchMilk+]。
 			#ENDIF
-			 You let out a little moan at the feeling of being milked by the machine, and hold still as you allow the contraption to do its work.
+			你轻声呻吟，体味着被机器榨乳的感觉，一动不动，任凭装置工作。
 		</p>
 	#ENDIF
 	<p>
-		Before you know it, an hour has passed, and after reaching over to flick the switch off, you unstrap yourself and stand up.
+		不知不觉中，一个小时过去了。你伸手把机器关掉，拔掉身上的吸盘，站起身来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="MILKING_UDDERS_SLAVE_TARGET"><![CDATA[
 	#VAR
@@ -614,43 +614,43 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			As [npc.name] is already lying down on the artisan milker's comfortable, padded leather bed, you simply confirm that the
+			[npc.Name]已经躺在手工挤奶工舒适的软垫皮床上，你只需要确认
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 soft suction cups
+				柔软的吸吮杯
 			#ENDIF
-			 are fastly secured over [npc.her] [npc.crotchBoobsRows] [npc.crotchNipples], and that the gently-humming milking machine's switch is set to 'on'.
+			牢固地连在[npc.her]的[npc.crotchBoobsRows][npc.crotchBoobs]上，轻微嗡鸣着的机器按钮为“开”。
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			As [npc.name] is already lying down on the industrial milker's uncomfortable metal bed, you simply confirm that the
+			[npc.Name]已经躺在工业挤奶工不舒服的金属床上，你只需要确认
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 hard suction cups
+				硬质的吸吮杯
 			#ENDIF
-			 are fastly secured over [npc.her] [npc.crotchBoobsRows] [npc.crotchNipples], and that the loudly-whirring milking machine's switch is set to 'on'.
+			牢固地连在[npc.her]的[npc.crotchBoobsRows][npc.crotchBoobs]上，剧烈嗡鸣着的机器按钮为“开”。
 		#ELSE
-			As [npc.name] is already lying down on the milking machine's leather bed, you simply confirm that the
+			[npc.Name]已经躺在挤奶机的皮床上，你只需要确认
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 suction cups
+				吸吮杯
 			#ENDIF
-			 are fastly secured over [npc.her] [npc.crotchBoobsRows] [npc.crotchNipples], and that the steadily-humming milking machine's switch is set to 'on'.
+			牢固地连在[npc.her]的[npc.crotchBoobsRows][npc.crotchBoobs]上，持续嗡鸣着的机器按钮为“开”。
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and give [npc.her] [npc.crotchBoobs+] a firm squeeze, smiling in delight as [npc.her] [npc.crotchMilk+] squirts out
+		你坐在[npc.herHim]身旁的软垫皮座上，过去用力地挤捏[npc.her][npc.crotchBoobs+]，看到又窜出一股[npc.her][npc.crotchMilk+]， 
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 into the aftermarket suction cups, before being quickly sucked away into the storage vats.
+				流进吸吮杯部件，迅速泵送到储藏桶中。
 			#ELSE
-				 and is quickly sucked away into the storage vats.
+				迅速被吸进储藏桶中。
 			#ENDIF
-		 Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to squeeze and milk [npc.namePos] [npc.crotchBoobs+].
+		愉悦地笑起来，发出心满意足的叹息，从日常活动中得到了休息。你仰在舒适的皮椅上放空自我， 又过去挤挤[npc.namePos][npc.crotchBoobs+]。
 	</p>
 	<p>
-		Before you know it, an hour has passed, and, leaving [npc.name] to continue being milked by the machine, you stand up and wonder what to do next...
+		不知不觉间，一个小时过去了。你站起身来，[npc.name]还在被榨乳，你思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MILKING_UDDERS_TARGET"><![CDATA[
 	#VAR
@@ -659,58 +659,58 @@
 	
 	<p>
 		#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_ARTISAN_MILKERS))
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the artisan milker's comfortable, padded leather bed, and, attaching the
+			你想给[npc.name]挤奶，便让[npc.herHim]躺在手工挤奶工舒适的软垫皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 soft suction cups
+				柔软的吸吮杯
 			#ENDIF
-			 to [npc.her] [npc.crotchBoobsRows] [npc.crotchBoobs], you flick the nearby switch to 'on'. Immediately, the machine starts gently humming, and
+			连到[npc.her]的[npc.crotchBoobsRows][npc.crotchBoobs]上，你按下旁边的按钮“开”，机器瞬间嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [npc.crotchMilk+] from [npc.her] [npc.crotchNipples+].
+				吸吮杯部件开始熟练地从[npc.her][npc.crotchNipples+]中挤压吮吸出[npc.crotchMilk+]。
 			#ELSE
-				 begins to squeeze and suck the [npc.crotchMilk+] from [npc.her] [npc.crotchNipples+].
+				开始从[npc.her][npc.crotchNipples+]中挤压吮吸出[npc.crotchMilk+]。
 			#ENDIF
 		#ELSEIF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_INDUSTRIAL_MILKERS))
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the industrial milker's uncomfortable metal bed, and, attaching the
+			你想给[npc.name]挤奶，便让[npc.herHim]躺在工业挤奶工不舒服的金属床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 hard suction cups
+				硬质的吸吮杯
 			#ENDIF
-			 to [npc.her] [npc.crotchBoobsRows] [npc.crotchBoobs], you flick the nearby switch to 'on'. Immediately, the machine starts loudly whirring and humming, and
+			连到[npc.her]的[npc.crotchBoobsRows][npc.crotchBoobs]上，你按下旁边的按钮“开”，机器瞬间发出很大的呼啸嗡鸣声，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [npc.crotchMilk+] from [npc.her] [npc.crotchNipples+].
+				吸吮杯部件开始熟练地从[npc.her][npc.crotchNipples+]中挤压吮吸出[npc.crotchMilk+]。
 			#ELSE
-				 begins to roughly squeeze and suck the [npc.crotchMilk+] from [npc.her] [npc.crotchNipples+].
+				开始从[npc.her][npc.crotchNipples+]中挤压吮吸出[npc.crotchMilk+]。
 			#ENDIF
 		#ELSE
-			Wanting to have [npc.name] milked, you get [npc.herHim] to lie down on the milking machine's leather bed, and, attaching the
+			你想给[npc.name]挤奶，便让[npc.herHim]躺在挤奶机的皮床上，把
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 special 'Lact-o-Cups'
+				特殊的“榨乳乐”
 			#ELSE
-				 suction cups
+				吸吮杯
 			#ENDIF
-			 to [npc.her] [npc.crotchBoobsRows] [npc.crotchBoobs], you flick the nearby switch to 'on'. Immediately, the machine starts humming, and
+			连到[npc.her]的[npc.crotchBoobsRows][npc.crotchBoobs]上，你按下旁边的按钮“开”，机器嗡鸣起来，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 the aftermarket suction cups begin to expertly squeeze and suck the [npc.crotchMilk+] from [npc.her] [npc.crotchNipples+].
+				吸吮杯部件开始熟练地从[npc.her][npc.crotchNipples+]中挤压吮吸出[npc.crotchMilk+]。
 			#ELSE
-				 begins to squeeze and suck the [npc.crotchMilk+] from [npc.her] [npc.crotchNipples+].
+				开始从[npc.her][npc.crotchNipples+]中挤压吮吸出[npc.crotchMilk+]。
 			#ENDIF
 		#ENDIF
-		 Sitting down on the padded leather seat next to [npc.herHim], you reach out and give [npc.her] [npc.crotchBoobs+] a firm squeeze, smiling in delight as an extra squirt of [npc.her] [npc.crotchMilk+] is 
+		你坐在[npc.herHim]身旁的软垫皮座上，过去用力地挤捏[npc.her][npc.crotchBoobs+]，看到又窜出一股[npc.her][npc.crotchMilk+]，
 			#IF(upgrades.contains(PLACE_UPGRADE_LILAYA_MILKING_ROOM_MILK_EFFICIENCY))
-				 sucked out and pumped away into the storage vats.
+				泵到储藏桶中。
 			#ELSE
-				 greedily sucked out and pumped away into the storage vats.
+				被吸走后极尽所能地泵送到储藏桶中。
 			#ENDIF
-		 Letting out a contented sigh, you take a well-earned break from your daily activities, and alternate between simply relaxing in the comfortable leather chair, and reaching forwards to squeeze and milk [npc.namePos] [npc.crotchBoobs+].
+		愉悦地笑起来，发出心满意足的叹息，从日常活动中得到了休息。你仰在舒适的皮椅上放空自我， 又过去挤挤[npc.namePos][npc.crotchBoobs+]。
 	</p>
 	<p>
-		Before you know it, an hour has passed, and after unstrapping [npc.name] from the machine, you stand up and wonder what to do next...
+		不知不觉间，一个小时过去了。你站起身来，把[npc.name]身上的吸盘拔下，思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

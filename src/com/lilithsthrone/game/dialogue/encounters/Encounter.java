@@ -842,7 +842,7 @@ public class Encounter {
 					try {
 						// Leader (alpha imp):
 						ImpAttacker imp = new ImpAttacker(Subspecies.IMP_ALPHA, Gender.F_P_V_B_FUTANARI, false);
-						imp.setGenericName("alpha-imp leader");
+						imp.setGenericName("阿尔法小恶魔首领");
 						imp.setLevel(8+Util.random.nextInt(5)); // 8-12
 						Main.game.addNPC(imp, false);
 						impGroup.add(imp);
@@ -885,7 +885,7 @@ public class Encounter {
 					try {
 						// Leader (arcane alpha imp):
 						ImpAttacker imp = new ImpAttacker(Subspecies.IMP_ALPHA, Gender.getGenderFromUserPreferences(false, false), false);
-						imp.setGenericName("alpha-imp arcanist");
+						imp.setGenericName("阿尔法小恶魔奥术师");
 						imp.setAttribute(Attribute.MAJOR_ARCANE, 50);
 						imp.addSpell(Spell.ARCANE_AROUSAL);
 						imp.addSpell(Spell.FIREBALL);
@@ -934,7 +934,7 @@ public class Encounter {
 					try {
 						// Leader (Alpha imp):
 						ImpAttacker imp = new ImpAttacker(Subspecies.IMP_ALPHA, Gender.F_V_B_FEMALE, false);
-						imp.setGenericName("alpha-imp leader");
+						imp.setGenericName("阿尔法小恶魔首领");
 						imp.setLevel(12+Util.random.nextInt(7)); // 12-18
 						Main.game.addNPC(imp, false);
 						impGroup.add(imp);
@@ -979,7 +979,7 @@ public class Encounter {
 					try {
 						// Leader (Alpha imp):
 						ImpAttacker imp = new ImpAttacker(Subspecies.IMP_ALPHA, Gender.M_P_MALE, false);
-						imp.setGenericName("alpha-imp leader");
+						imp.setGenericName("阿尔法小恶魔首领");
 						imp.setLevel(12+Util.random.nextInt(7)); // 12-18
 						Main.game.addNPC(imp, false);
 						impGroup.add(imp);

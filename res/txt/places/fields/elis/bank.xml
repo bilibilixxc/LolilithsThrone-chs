@@ -1,166 +1,166 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		Excluding the town hall, the building before you can confidently make the claim that it's the largest and most impressive building within the entire town. In stark contrast to the medieval aesthetic of the surrounding timber-framed structures, this structure is made out of large blocks of pale stone. With a frontage consisting of huge columns holding up a steepled roof, it's a perfect example of neoclassical architecture. Looking up, you see that the words the words 'Bank of Elis' have been carved into its stone frieze.
+		除了市镇议会，你面前的这座建筑可以自信地宣称是整个城里最大、最令人印象深刻的建筑。这座建筑用大块的浅色石头砌成，与周围木结构的中世纪美学形成鲜明对比。它的正面由巨大的圆柱支撑着尖顶，是新古典主义建筑的完美典范。你抬眼望去，石楣上刻有“伊利斯银行”的字样。
 	</p>
 	<p>
-		Whether due to a lawful requirement, or simply to display their loyalty to the public, a pair of identical flags hang down on either side of the bank's entrance, each of which carries the black pentagram of Lilith. Looking between these flags, 
+		不知是出于法律规定，还是仅仅为了向公众展示他们的忠诚，银行入口两侧都悬挂着相同的旗帜，每面旗帜上都有莉莉丝的黑色五角星。在两旁的旗帜之间，
 		#IF(game.getDayOfWeek()==DOW_SUNDAY)
 			#IF((game.getHourOfDay()<10 || game.getHourOfDay()>15))
-				 you see that the bank's large metal doors are firmly shut, and a sign hanging on them explains that the business is usually open between [units.time(9)]-[units.time(17)], but on Sundays they operate reduced hours, and are only open between [style.colourMinorBad([units.time(10)]-[units.time(16)])].
+				你看到银行的金属大门紧锁着，门上挂着一块牌子，写着这家银行的营业时间通常在[units.time(9)]-[units.time(17)]之间，周日营业时间则缩短为在[style.colourMinorBad([units.time(10)]-[units.time(16)])]之间。
 			#ELSE
-				 you see that the bank's large metal doors are fully open, and a sign hanging on them explains that the business is usually open between [units.time(9)]-[units.time(17)], but on Sundays they operate reduced hours, and are only open between [style.colourMinorGood([units.time(10)]-[units.time(16)])].
+				你看到银行的金属大门敞开着，门上挂着一块牌子，写着这家银行的营业时间通常在[units.time(9)]-[units.time(17)]之间，周日营业时间则缩短为在[style.colourMinorBad([units.time(10)]-[units.time(16)])]之间。
 			#ENDIF
 		#ELSE
 			#IF(game.getHourOfDay()<9 || game.getHourOfDay()>16)
-				 you see that the bank's large metal doors are firmly shut, and a sign hanging on them explains that the business is usually open between [style.colourMinorBad([units.time(9)]-[units.time(17)])], but on Sundays they operate reduced hours, and are only open between [units.time(10)]-[units.time(16)].
+				你看到银行的金属大门紧锁着，门上挂着一块牌子，写着这家银行的营业时间通常在[style.colourMinorBad([units.time(9)]-[units.time(17)])]之间，周日营业时间则缩短为在[units.time(10)]-[units.time(16)]之间。
 			#ELSE
-				 you see that the bank's large metal doors are fully open, and a sign hanging on them explains that the business is usually open between [style.colourMinorGood([units.time(9)]-[units.time(17)])], but on Sundays they operate reduced hours, and are only open between [units.time(10)]-[units.time(16)].
+				你看到银行的金属大门敞开着，写着这家银行的营业时间通常在[style.colourMinorBad([units.time(9)]-[units.time(17)])]之间，周日营业时间则缩短为在[units.time(10)]-[units.time(16)]之间。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF((game.getDayOfWeek()==DOW_SUNDAY && (game.getHourOfDay()<10 || game.getHourOfDay()>15)) || (game.getDayOfWeek()!=DOW_SUNDAY && (game.getHourOfDay()<9 || game.getHourOfDay()>16)))
-			As the bank is currently [style.colourBad(closed)], there's nothing more for you to do here...
+			银行现在已[style.colourBad(关门)]，你在这里无事可做……
 		#ELSE
-			As the bank is currently [style.colourGood(open)], you could head inside and take a look around...
+			银行现在正在[style.colourGood(营业)]，你可以进去四处转转……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTER"><![CDATA[
 	<p>
-		You decide to enter the bank, and so after [pc.walking] up to the large metal doors which serve as the main entrance, you push one open and [pc.step] inside...
+		你决定进入银行，于是[pc.walking]向一扇作为银行入口的大型金属门，推开它并[pc.step]了进去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FOYER"><![CDATA[
 	<p>
 		#IF(pc.hasItemType(ITEM_innoxia_quest_bank_card))
-			The bank's cavernous main foyer strikes you as being remarkably similar to the one in the Bank of Dominion, although you notice that it's not quite as large. A vaulted stone ceiling towers above your head, while underfoot polished marble stretches out before you. Arcane chandeliers hang down from above, flooding the interior with cool, bright light.
+			这家银行虽然规模不如御城区银行大，但其宽敞大堂给你的感觉与之相似。石制穹顶高悬于上，足下洁净的大理石延展于前，垂挂着的奥术水晶吊灯使厅内溢满清冷明亮的光芒。
 		#ELSE
-			The bank's cavernous main foyer is every bit as large and impressive as its entrance hall. A vaulted stone ceiling towers above your head, while underfoot polished marble stretches out before you. Arcane chandeliers hang down from above, flooding the interior with cool, bright light.
+			银行宽敞的大堂与其门厅一样宏伟壮观。石制穹顶高悬于上，足下洁净的大理石延展于前，垂挂着的奥术水晶吊灯使厅内溢满清冷明亮的光芒。
 		#ENDIF
 	</p>
 	<p>
-		Looking around, you see clients of all races queuing up before counters, walking about, or waiting upon the provided seating. There are also a few of the bank's clerks walking to and fro here, and you notice that every one of them without exception is a demon. There are also a couple of security guards keeping watch over this area, and you can't help but notice that they're not only equipped with the expected batons and tasers, but are also carrying pepperball rifles.
+		你环顾四周，看到各种族客户在柜台前排队、走动或坐在银行提供的座位上等待。这儿也有一些银行职员穿梭往返，无一例外都是恶魔。几个保安守在这里，你注意到他们除了装备惯有的警棍和电击枪，还携带了胡椒弹步枪。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
 		#IF(pc.hasItemType(ITEM_innoxia_quest_bank_card))
-			The entrance hall to the bank strikes you as being remarkably similar to the one in the Bank of Dominion, although you notice that it's not quite as large. A vaulted stone ceiling towers above your head, while underfoot polished marble stretches out before you. Arcane chandeliers hang down from above, flooding the interior with cool, bright light.
+			这家银行虽然规模不如御城区银行大，但其门厅给你的感觉与之相似。石制穹顶高悬于上，足下洁净的大理石延展于前，垂挂着的奥术水晶吊灯使厅内溢满清冷明亮的光芒。
 		#ELSE
-			The entrance hall to the bank is every bit as large and impressive as you'd expect from the building's outward appearance. A vaulted stone ceiling towers above your head, while underfoot polished marble stretches out before you. Arcane chandeliers hang down from above, flooding the interior with cool, bright light. 
+			银行的门厅与其建筑外观所表现的一样宏伟壮观。石制穹顶高悬于上，足下洁净的大理石延展于前，垂挂着的奥术水晶吊灯使厅内溢满清冷明亮的光芒。
 		#ENDIF
 	</p>
 	<p>
-		Before you lies the cavernous space of the bank's main foyer, in which clients of all races can be seen queuing up before counters, walking about, or waiting upon the provided seating. The large, metal doors behind you will take you back out into Elis, should you wish to leave...
+		你面前是银行大堂的宽阔空间，各种族客户在柜台前排队、走动或坐在银行提供的座位上等待。如果你想离开，通过身后的大型金属门便能回到伊利斯……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Having concluded your business with the bank, you push open one of the large metal doors and [pc.step] back out into Elis...
+		在银行办理完业务后，你推开其中一扇大型金属门，[pc.step]回了伊利斯……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<!-- Counter, opening account: -->
 	
 	<htmlContent tag="COUNTER"><![CDATA[
 	<p>
-		Approaching the far side of the bank's cavernous foyer, you find yourself standing near a long line of counters, each of which is staffed by a demonic bank clerk. As with the main foyer, heavily armed security guards are never too far away, and are keeping a close watch over everyone in the area.
+		你来到银行宽敞大厅的另一端，发现自己站在一排排柜台旁，每个柜台都有一个恶魔银行柜员。与大堂一样，全副武装的保安从不离得太远，他们密切监视着这里的每个人。
 	</p>
 	#IF(pc.hasItemType(ITEM_innoxia_quest_bank_card))
 		<p>
-			Having already obtained a platinum account, there's little for you to discuss with the clerks behind the counters. Instead, if you have business here, all you need to do is head on over to the VIP deposit boxes and manage your funds and stored items directly there.
+			你已经拥有了一个白金账户，没什么需要和柜员沟通的了。如果你有业务需求，只需前往VIP保管箱，直接管理你的财物。
 		</p>
 	#ELSE
 		<p>
-			Identical signs have been fixed to brass poles in front of each of the counters, and as you approach you see that they read: '[style.italicsMinorBad(New account creation is currently unavailable. We apologise for the inconvenience.)]'
+			每个柜台前都立着一根铜杆，杆上挂着相同的标牌，你看到上面写着：“[style.italicsMinorBad(开户业务暂停办理。不便之处，敬请谅解。)]”
 		</p>
 		<p>
-			Noticing that you're looking at one of these signs, one of the bank clerks steps over to you and explains, [style.speechFeminineHeavy(I'm sorry, [pc.miss], but due to the current situation in the Foloi Fields, headquarters have told us that the perceived risk of account holders being rendered unable to repay their loans is too high. As such, we can't open any new accounts here, but if you were to go to our main branch in Dominion, you'll be able to open an account there.)]
+			一名银行职员注意到你在看标牌，走过来向你解释：[style.speechFeminineHeavy([pc.miss]，我很抱歉。总行告知我们，弗洛伊田野当前的局势导致账户持有人无法偿还贷款的感知风险过高，因此不能开设任何新账户。但您可以前往我们在御城区的主要分行，在那里开户。)]
 		</p>
 		<p>
-			Thanking the succubus for the information, you wonder whether it'd be worth travelling back to Dominion to open an account...
+			你感谢这位魅魔提供信息，并思考要不要回御城区开户……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Deposit boxes: -->
 	
 	<htmlContent tag="VIP_DOOR"><![CDATA[
 	#IF(pc.getLastCell().getPlace().getPlaceType()==PLACE_TYPE_innoxia_fields_elis_bank_foyer)
 		<p>
-			The door before you is quite clearly signposted as leading to 'VIP deposit boxes'. A succubi clerk is standing beside this door, and as she sees you approach she smiles and asks, [style.speechFeminineHeavy(Please may I see your platinum account card, [pc.miss]?)]
+			你眼前的门明确地标着“VIP保管箱”。一名魅魔职员站在门边，看到你靠近，她微笑着问：[style.speechFeminineHeavy([pc.miss]，我能看看您的白金账户卡吗？)]
 		</p>
 		#IF(pc.hasItemType(ITEM_innoxia_quest_bank_card))
 			<p>
-				Producing your platinum account card, you show it to the clerk, who upon seeing the glowing stamps on its front, immediately stands aside and gestures towards the door, saying, [style.speechFeminineHeavy(The presence of your card will automatically unlock the door. If you require any assistance, please don't hesitate to contact one of my colleagues who you'll find nearby.)]
+				你向这名职员出示白金账户卡，她看到卡面发光的印记后立即让到一旁，用手将你请到门前并介绍道：[style.speechFeminineHeavy(您只要出示这张卡，门便会自动打开。若您需要任何帮助，请随时联系我的同事，他们就在附近。)]
 			</p>
 			<p>
-				Thanking the clerk, you prepare to pass through the door and enter the VIP area beyond...
+				你向职员道谢，准备穿过那扇门进入VIP区……
 			</p>
 		#ELSE
 			<p>
-				As you tell the succubus that you don't have a 'platinum account card', she frowns and states in a firm voice, [style.speechFeminineHeavy(I'm sorry, [pc.miss], but only platinum account holders are granted access to the deposit boxes. Please step back.)]
+				你告诉魅魔你没有“白金账户卡”，她皱起眉头，语气坚决，[style.speechFeminineHeavy(我很抱歉，[pc.miss]，但只有白金客户才能进入保管箱区域。请您退后。)]
 			</p>
 			<p>
-				There doesn't seem to be any chance of persuading this succubus to let you through, and as there are dozens of security guards nearby, using force is completely out of the question. It looks like you have no choice but to [pc.step] back into the foyer...
+				看起来你没法说服她让你通过，而且附近有许多保安，暴力闯入完全不可行。你别无选择，只能[pc.step]回大厅……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Having concluded your business with your deposit box, you pass through the door to head back out into the foyer. As you pass her, the demonic clerk bows a little and says, [style.speechFeminineHeavy(Thank you for visiting us today, [pc.miss].)]
+			你在保管箱区办完业务，穿过大门返回大厅。经过魅魔职员身边时，她微微鞠躬并说道：[style.speechFeminineHeavy([pc.miss]，感谢您今天的光临。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VIP_DOOR_STEP_BACK"><![CDATA[
 	<p>
-		With little option other that to do as the clerk says, you [pc.step] back and return to the bank's foyer...
+		你别无选择，只得按柜员说的做，退后并[pc.step]回银行大厅……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="DEPOSIT_BOX"><![CDATA[
 	<p>
-		Although large, the circular room you find yourself standing in is a lot smaller than the bank's foyer. With polished marble flooring underfoot, and sculptures and paintings lining the walls, it's no less grand that the other areas of the bank. As you [pc.walk] forwards, you see that a pair of clerks, both succubi, are standing behind a long marble desk in the middle of the room.
+		你所处的圆形房间虽然大，但比银行大厅小得多。光洁大理石在地面铺开，雕塑和画作沿墙陈列，这里的气派丝毫不逊于银行其他区域。你向前[pc.walk]去，看到房间中央有一张大理石长桌，桌后站着两位魅魔职员。
 	</p>
 	<p>
-		[style.speechFeminineHeavy(Please let us know if you require any assistance, [pc.sir],)] they say in unison as you approach. Clearly having been made aware of who you are via some kind of detection spell placed upon your platinum account card, they direct you towards one of several alcoves set into the room's curving wall.
+		[style.speechFeminineHeavy([pc.sir]，如果需要任何帮助，请随时告知我们。)]你走近时，她们异口同声地说。曲面墙上有许多凹室，她们将你引向其中之一，显然已经通过你白金账户卡上的某种侦测法术知道了你的身份。
 	</p>
 	<p>
-		[pc.Stepping] into the alcove, you pull shut a curtain behind you, before turning your attention to the large deposit boxes lining the wall before you. Detecting your card, one of them swings open for you, granting you access to your private stash of items and flames. An arcane enchantment projects a series of purple letters into the air above your deposit box, which lets you know that you have
+		你[pc.Stepping]入凹室，在身后拉上帘幕，然后将注意力转向眼前的大号保管箱。其中一个保管箱检测到了你的卡片并为你开启，让你可以使用存储物品和火币的私人贮藏室。奥术附魔在你的保管箱上方投射出一串紫色文字，提示你当前待收取的利息为
 		#IF(game.getDialogueFlags().getSavedLong('bank_interest')<=0)
-			 [style.moneyFormatUncoloured(0, b)]
+			[style.moneyFormatUncoloured(0, b)]
 		#ELSE
-			 [style.moneyFormat([#game.getDialogueFlags().getSavedLong('bank_interest')], b)]
+			[style.moneyFormat([#game.getDialogueFlags().getSavedLong('bank_interest')], b)]
 		#ENDIF
-		 in interest to collect.
+		。
 	</p>
 	<p style='text-align:center'>
-		[style.italicsMinorGood(Any items or flames stored in this area can be accessed at any of the bank's branches.)]
+		[style.italicsMinorGood(存放在该区域的物品和火币可以在银行的任意分行取用。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DEPOSIT_BOX_INTEREST_COLLECTED"><![CDATA[
 	<p>
-		Deciding that now is as good a time as any to collect your interest, you retrieve your flames and wonder whether to add them to your deposit box, or to hold on to them for now...
+		你觉得现在是个收取利息的好时机。你取出火币，并思索是将这些钱存进保管箱还是暂时留着……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 </dialogue>

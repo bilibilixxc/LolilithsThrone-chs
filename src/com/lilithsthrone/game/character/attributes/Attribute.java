@@ -28,13 +28,13 @@ public class Attribute {
 			0,
 			100,
 			"physique",
-			"Physique",
+			"体格",
 			"strengthIcon",
 			PresetColour.ATTRIBUTE_PHYSIQUE,
-			"power",
-			"weakness",
+			"强壮",
+			"虚弱",
 			Util.newArrayListOfValues(
-					"<b>+2</b> <b style='color: " + PresetColour.ATTRIBUTE_HEALTH.toWebHexString() + "'>Energy</b> per 1 physique")) {
+					"每1点体格<b>+2</b><b style='color: " + PresetColour.ATTRIBUTE_HEALTH.toWebHexString() + "'>生命</b>")) {
 		@Override
 		public boolean hasStatusEffect() {
 			return true;
@@ -42,8 +42,8 @@ public class Attribute {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A measure of how physically healthy [npc.name] [npc.is], physique <b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>passively increases</b> [npc.her]"
-							+ " <b style='color:" + PresetColour.ATTRIBUTE_HEALTH.toWebHexString() + ";'>maximum health</b>.");
+					"衡量[npc.name]身体健康的标准，体格会<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>被动提升</b>[npc.her]的"
+							+ "<b style='color:" + PresetColour.ATTRIBUTE_HEALTH.toWebHexString() + ";'>最大生命值</b>。");
 		}
 		@Override
 		public int getOrderPriority() {
@@ -56,13 +56,13 @@ public class Attribute {
 			0,
 			100,
 			"arcane",
-			"Arcane",
+			"奥术",
 			"intelligenceIcon",
 			PresetColour.ATTRIBUTE_ARCANE,
-			"arcane-boost",
-			"arcane-drain",
+			"奥术增幅",
+			"奥术流失",
 			Util.newArrayListOfValues(
-					"<b>+2</b> <b style='color: " + PresetColour.ATTRIBUTE_MANA.toWebHexString() + "'>Aura</b> per 1 arcane")) {
+					"每1点奥术<b>+2</b><b style='color: " + PresetColour.ATTRIBUTE_MANA.toWebHexString() + "'>灵气</b>")) {
 		@Override
 		public boolean hasStatusEffect() {
 			return true;
@@ -70,8 +70,8 @@ public class Attribute {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-						"A measure of [npc.namePos] affinity with the arcane. This <b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>passively increases</b> [npc.her]"
-								+ " <b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>maximum aura</b>.");
+						"衡量[npc.namePos]奥术亲和力的标准。奥术会<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>被动提升</b>[npc.her]的"
+								+ "<b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>最大灵气</b>。");
 		}
 		@Override
 		public int getOrderPriority() {
@@ -84,14 +84,14 @@ public class Attribute {
 			0,
 			100,
 			"corruption",
-			"Corruption",
+			"堕落",
 			"corruptionIcon",
 			PresetColour.ATTRIBUTE_CORRUPTION,
-			"corruption",
-			"purity",
+			"堕落",
+			"纯洁",
 			Util.newArrayListOfValues(
-					"<b>-0.5</b> <b style='color: " + PresetColour.ATTRIBUTE_MANA.toWebHexString() + "'>arousal resistance</b> per 1 physical corruption",
-					"<b>+0.5</b> <b style='color: " + PresetColour.DAMAGE_TYPE_MANA.toWebHexString() + "'>arousal damage</b> per 1 physical corruption")) {
+					"每1点堕落<b>-0.5</b><b style='color: " + PresetColour.ATTRIBUTE_MANA.toWebHexString() + "'>快感抵抗</b>",
+					"每1点堕落<b>+0.5</b><b style='color: " + PresetColour.DAMAGE_TYPE_MANA.toWebHexString() + "'>快感伤害</b>")) {
 		@Override
 		public boolean hasStatusEffect() {
 			return true;
@@ -99,10 +99,10 @@ public class Attribute {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner.isPlayer()) {
-				return "Corruption is a measure of your perversion and depravity, and affects <b style='color:" + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + ";'>which sex actions you are comfortable performing</b>.";
+				return "堕落是衡量你有多变态的数值，会影响<b style='color:" + PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString() + ";'>哪些性动作能随心所欲地使用</b>。";
 			} else {
 				return UtilText.parse(owner,
-						"Corruption is a measure of [npc.namePos] perversion and depravity. It does <i>not</i> reflect how good or evil [npc.she] is.");
+						"堕落是衡量[npc.namePos]有多变态的数值，并<i>不能</i>反映[npc.she]是善良还是邪恶。");
 			}
 		}
 		@Override
@@ -115,18 +115,18 @@ public class Attribute {
 			1,
 			1,
 			999,
-			"health",
-			"Health",
+			"健康",
+			"生命",
 			"healthIcon",
 			PresetColour.ATTRIBUTE_HEALTH,
-			"health",
-			"sickness",
+			"健康",
+			"患病",
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"The amount of stamina and determination [npc.name] [npc.has]. [npc.She] will be defeated in combat if this reaches 0.<br/>"
-						+ "Extra health is added to the 'bonus' value from:<br/>"
+					"[npc.Name]所拥有的体能与决心。在战斗中降为0后便会被击败。<br/>"
+						+ "能够额外增加至“加成”数值的生命来源:<br/>"
 						+"<b>"+ GameCharacter.HEALTH_CALCULATION + "</b>");
 		}
 
@@ -141,17 +141,17 @@ public class Attribute {
 			1,
 			999,
 			"aura",
-			"Aura",
+			"灵气",
 			"manaIcon",
 			PresetColour.ATTRIBUTE_MANA,
-			"aura-boost",
-			"aura-drain",
+			"灵气增强",
+			"灵气流失",
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"A measure of the amount of arcane energy [npc.name] [npc.has] in [npc.her] aura.<br/>"
-						+ "Extra aura is added to the 'bonus' value from:<br/>"
+					"衡量[npc.name]灵气中奥术能量多少的标准。<br/>"
+						+ "能够额外增加至“加成”数值的灵气来源:<br/>"
 						+ "<b>" + GameCharacter.MANA_CALCULATION + "</b>");
 		}
 
@@ -166,16 +166,16 @@ public class Attribute {
 			0,
 			1000000,
 			"experience",
-			"Experience",
+			"经验",
 			"experienceIcon",
 			PresetColour.GENERIC_EXPERIENCE,
-			"learning",
-			"forgetfulness",
+			"好学",
+			"健忘",
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"How much progress [npc.name] [npc.has] made to the next level.");
+					"[npc.Name]提升至下一级过程中积累的进度。");
 		}
 
 		@Override
@@ -189,16 +189,16 @@ public class Attribute {
 			0,
 			10,
 			"action points",
-			"Action points",
+			"行动点数",
 			"action_points",
 			PresetColour.GENERIC_ACTION_POINTS,
-			"initiative",
-			"lethargy",
+			"掌握先机",
+			"无精打采",
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-					"How many action points [npc.nameHasFull] available to spend on moves in combat.");
+					"[npc.nameHasFull]在战斗中能够用于动作的行动点数。");
 		}
 
 		@Override
@@ -212,16 +212,16 @@ public class Attribute {
 			0,
 			1000,
 			"enchantment instability",
-			"Enchantment instability",
+			"附魔不稳定",
 			"enchantmentLimitIcon",
 			PresetColour.GENERIC_ENCHANTMENT,
-			"harnessing",
-			"clumsiness",
+			"掌控一切",
+			"笨手笨脚",
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			return UtilText.parse(owner,
-						"The total amount of clothing and tattoo enchantments [npc.nameIsFull] able to handle without incurring massive penalties.");
+						"在不造成严重惩罚的前提下，[npc.nameIsFull]能够驾驭的衣物、武器、纹身附魔的总量。");
 		}
 		@Override
 		public boolean isAffectedByEnchantmentCost() {
@@ -245,11 +245,11 @@ public class Attribute {
 			0,
 			100,
 			"lust",
-			"Lust",
+			"性欲",
 			"arousalIcon",
 			PresetColour.ATTRIBUTE_LUST,
-			"passion",
-			"indifference",
+			"肉欲",
+			"冷淡",
 			null) {
 		@Override
 		public boolean hasStatusEffect() {
@@ -258,11 +258,11 @@ public class Attribute {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner.isPlayer()) {
-				return "How desperate for sexual contact you are. Your lust will move towards your resting lust value over time.<br/>"
-						+ "<b>Resting Lust = " + GameCharacter.RESTING_LUST_CALCULATION + "</b>";
+				return "衡量你有多急切地想进行性接触的标准。你的性欲值会随时间逐渐向日常性欲值恢复。<br/>"
+						+ "<b>日常性欲 = " + GameCharacter.RESTING_LUST_CALCULATION + "</b>";
 			} else {
 				return UtilText.parse(owner,
-						"How desperate for sexual contact [npc.name] is.");
+						"[npc.Name]有多急切地想进行性接触。");
 			}
 		}
 		@Override
@@ -276,15 +276,15 @@ public class Attribute {
 			-100,
 			80,
 			"resting lust",
-			"Resting lust",
+			"日常性欲",
 			"arousalIcon",
 			PresetColour.ATTRIBUTE_LUST,
-			"passion",
-			"indifference",
+			"肉欲",
+			"冷淡",
 			null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return UtilText.parse(owner, "The amount of lust which [npc.name] naturally gravitates towards over a period of time.");
+			return UtilText.parse(owner, "[npc.Name]的性欲会随时间恢复至该数值。");
 		}
 
 		@Override
@@ -298,11 +298,11 @@ public class Attribute {
 			0,
 			100,
 			"arousal",
-			"Arousal",
+			"快感",
 			"arousalIcon",
 			PresetColour.ATTRIBUTE_AROUSAL,
-			"long-lasting",
-			"prematurity",
+			"持久",
+			"早泄",
 			null) {
 		@Override
 		public boolean hasStatusEffect() {
@@ -311,10 +311,10 @@ public class Attribute {
 		@Override
 		public String getDescription(GameCharacter owner) {
 			if(owner.isPlayer())
-				return "How aroused you currently are. You will orgasm when your arousal maxes out.";
+				return "你现在积累了多少快感，充满时则会高潮。";
 			else
 				return UtilText.parse(owner,
-						"How aroused [npc.name] is. [npc.She] will orgasm when [npc.her] arousal maxes out.");
+						"[npc.name]积累了多少快感。充满时[npc.She]则会高潮。");
 		}
 		@Override
 		public int getOrderPriority() {
@@ -322,10 +322,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute VIRILITY = new AbstractAttribute(true, 10, -100, 100, "virility", "Virility", "shieldIcon", PresetColour.GENERIC_SEX, "virility", "sterility", null) {
+	public static AbstractAttribute VIRILITY = new AbstractAttribute(true, 10, -100, 100, "virility", "生殖力", "shieldIcon", PresetColour.GENERIC_SEX, "多育", "不育", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases the likelihood of impregnating someone.";
+			return "提升使人受孕的概率。";
 		}
 
 		@Override
@@ -334,10 +334,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute FERTILITY = new AbstractAttribute(true, 10, -100, 100, "fertility", "Fertility", "shieldIcon", PresetColour.GENERIC_SEX, "fertility", "infertility", null) {
+	public static AbstractAttribute FERTILITY = new AbstractAttribute(true, 10, -100, 100, "fertility", "生育力", "shieldIcon", PresetColour.GENERIC_SEX, "多育", "不育", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases the likelihood of becoming pregnant.";
+			return "提升怀孕的概率。";
 		}
 
 		@Override
@@ -348,10 +348,10 @@ public class Attribute {
 
 	// Combat attributes:
 
-	public static AbstractAttribute SPELL_COST_MODIFIER = new AbstractAttribute(true, 0, 0, 80, "spell efficiency", "Spell efficiency", "shieldIcon", PresetColour.ATTRIBUTE_MANA, "proficiency", "incompetence", null) {
+	public static AbstractAttribute SPELL_COST_MODIFIER = new AbstractAttribute(true, 0, 0, 80, "spell efficiency", "法术效率", "shieldIcon", PresetColour.ATTRIBUTE_MANA, "精通", "无能", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Reduces the cost of casting spells.";
+			return "降低释放法术的消耗。";
 		}
 
 		@Override
@@ -360,10 +360,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute CRITICAL_DAMAGE = new AbstractAttribute(true, 150, 100, 500, "critical power", "Critical power", "shieldIcon", PresetColour.ATTRIBUTE_HEALTH, "impact", "failure", null) {
+	public static AbstractAttribute CRITICAL_DAMAGE = new AbstractAttribute(true, 150, 100, 500, "critical power", "暴击伤害", "shieldIcon", PresetColour.ATTRIBUTE_HEALTH, "强大", "无力", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Each point gives 1% extra critical power.";
+			return "每一点给于1%额外的暴击伤害。";
 		}
 
 		@Override
@@ -374,10 +374,10 @@ public class Attribute {
 	
 	// Damages:
 
-	public static AbstractAttribute DAMAGE_UNARMED = new AbstractAttribute(true, 0, -80, 100, "unarmed damage", "Unarmed damage", "swordIcon", PresetColour.DAMAGE_TYPE_UNARMED, "martial arts", "martial incompetence", null) {
+	public static AbstractAttribute DAMAGE_UNARMED = new AbstractAttribute(true, 0, -80, 100, "unarmed damage", "徒手伤害", "swordIcon", PresetColour.DAMAGE_TYPE_UNARMED, "精通武术", "武术不精", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases damage dealt from unarmed attacks, including special attacks obtained from non-human bodyparts.";
+			return "提升徒手攻击造成的伤害，包括又非人类身体部件发出的特殊攻击。";
 		}
 
 		@Override
@@ -386,10 +386,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_MELEE_WEAPON = new AbstractAttribute(true, 0, -80, 100, "melee weapon damage", "Melee Weapon damage", "swordIcon", PresetColour.DAMAGE_TYPE_MELEE, "melee mastery", "melee incompetence", null) {
+	public static AbstractAttribute DAMAGE_MELEE_WEAPON = new AbstractAttribute(true, 0, -80, 100, "melee weapon damage", "近战武器伤害", "swordIcon", PresetColour.DAMAGE_TYPE_MELEE, "近战大师", "不善近战", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases damage dealt from attacks by melee weapons.";
+			return "提升近战武器攻击造成的伤害。";
 		}
 
 		@Override
@@ -398,10 +398,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_RANGED_WEAPON = new AbstractAttribute(true, 0, -80, 100, "ranged weapon damage", "Ranged weapon damage", "swordIcon", PresetColour.DAMAGE_TYPE_RANGED, "ranged mastery", "ranged incompetence", null) {
+	public static AbstractAttribute DAMAGE_RANGED_WEAPON = new AbstractAttribute(true, 0, -80, 100, "ranged weapon damage", "远程武器伤害", "swordIcon", PresetColour.DAMAGE_TYPE_RANGED, "远程大师", "不善远程", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases damage dealt from attacks by ranged weapons.";
+			return "提升远程武器攻击造成的伤害。";
 		}
 
 		@Override
@@ -410,10 +410,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_SPELLS = new AbstractAttribute(true, 0, -80, 100, "spell damage", "Spell damage", "swordIcon", PresetColour.ATTRIBUTE_MANA, "arcane power", "arcane dulling", null) {
+	public static AbstractAttribute DAMAGE_SPELLS = new AbstractAttribute(true, 0, -80, 100, "spell damage", "法术伤害", "swordIcon", PresetColour.ATTRIBUTE_MANA, "奥术威能", "奥术弱能", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases spell damage.";
+			return "提升法术伤害";
 		}
 
 		@Override
@@ -422,10 +422,10 @@ public class Attribute {
 		}
 	};
 
-	public static AbstractAttribute DAMAGE_PHYSICAL = new AbstractAttribute(true, 0, -80, 100, "physical damage", "Physical damage", "swordIcon", PresetColour.DAMAGE_TYPE_PHYSICAL, "force", "softness", null) {
+	public static AbstractAttribute DAMAGE_PHYSICAL = new AbstractAttribute(true, 0, -80, 100, "physical damage", "物理伤害", "swordIcon", PresetColour.DAMAGE_TYPE_PHYSICAL, "强击", "轻击", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases physical damage.";
+			return "提升物理伤害";
 		}
 
 		@Override
@@ -434,10 +434,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_LUST = new AbstractAttribute(true, 0, -80, 100, "lust damage", "Lust damage", "swordIcon", PresetColour.GENERIC_SEX, "seduction", "repulsion", null) {
+	public static AbstractAttribute DAMAGE_LUST = new AbstractAttribute(true, 0, -80, 100, "lust damage", "性欲伤害", "swordIcon", PresetColour.GENERIC_SEX, "勾引", "排斥", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases lust damage.";
+			return "提升性欲伤害。";
 		}
 
 		@Override
@@ -446,10 +446,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_FIRE = new AbstractAttribute(true, 0, -80, 100, "fire damage", "Fire damage", "swordIcon", PresetColour.DAMAGE_TYPE_FIRE, "inferno", "dying embers", null) {
+	public static AbstractAttribute DAMAGE_FIRE = new AbstractAttribute(true, 0, -80, 100, "fire damage", "火焰伤害", "swordIcon", PresetColour.DAMAGE_TYPE_FIRE, "炼狱", "余烬", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases fire damage.";
+			return "提升火焰伤害。";
 		}
 
 		@Override
@@ -458,10 +458,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_ICE = new AbstractAttribute(true, 0, -80, 100, "cold damage", "Cold damage", "swordIcon", PresetColour.DAMAGE_TYPE_COLD, "blizzard", "slush", null) {
+	public static AbstractAttribute DAMAGE_ICE = new AbstractAttribute(true, 0, -80, 100, "cold damage", "寒冷伤害", "swordIcon", PresetColour.DAMAGE_TYPE_COLD, "暴风雪", "融雪", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases cold damage.";
+			return "提升寒冷伤害。";
 		}
 
 		@Override
@@ -470,10 +470,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_POISON = new AbstractAttribute(true, 0, -80, 100, "poison damage", "Poison damage", "swordIcon", PresetColour.DAMAGE_TYPE_POISON, "venom", "dilution", null) {
+	public static AbstractAttribute DAMAGE_POISON = new AbstractAttribute(true, 0, -80, 100, "poison damage", "毒素伤害", "swordIcon", PresetColour.DAMAGE_TYPE_POISON, "剧毒", "稀释", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases poison damage.";
+			return "提升毒素伤害。";
 		}
 
 		@Override
@@ -483,10 +483,10 @@ public class Attribute {
 	};
 	
 
-	public static AbstractAttribute ENERGY_SHIELDING = new AbstractAttribute(false, 0, -100, 500, "health shielding", "Health shielding", "shieldIcon", PresetColour.ATTRIBUTE_HEALTH, "endurance", "vulnerability", null) {
+	public static AbstractAttribute ENERGY_SHIELDING = new AbstractAttribute(false, 0, -100, 500, "health shielding", "生命护盾", "shieldIcon", PresetColour.ATTRIBUTE_HEALTH, "坚韧", "脆弱", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "This value is applied to health shielding at the start of each combat turn.";
+			return "每战斗回合开始时，该数值会被施加到生命护盾上。";
 		}
 		@Override
 		public boolean isInfiniteAtUpperLimit() {
@@ -494,7 +494,7 @@ public class Attribute {
 		}
 		@Override
 		public String getInfiniteDescription() {
-			return "[style.colourExcellent(Immune)] to [style.colourHealth(all damage)]";
+			return "[style.colourExcellent(免疫)][style.colourHealth(所有类型伤害)]";
 		}
 		@Override
 		public int getOrderPriority() {
@@ -505,10 +505,10 @@ public class Attribute {
 	
 	// Resistances:
 
-	public static AbstractAttribute RESISTANCE_PHYSICAL = new AbstractAttribute(false, 0, -100, 500, "physical shielding", "Physical shielding", "shieldIcon", PresetColour.DAMAGE_TYPE_PHYSICAL, "toughness", "softness", null) {
+	public static AbstractAttribute RESISTANCE_PHYSICAL = new AbstractAttribute(false, 0, -100, 500, "physical shielding", "物理护盾", "shieldIcon", PresetColour.DAMAGE_TYPE_PHYSICAL, "强韧", "柔弱", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Reduces physical damage taken.";
+			return "降低受到的物理伤害。";
 		}
 		@Override
 		public boolean isInfiniteAtUpperLimit() {
@@ -516,7 +516,7 @@ public class Attribute {
 		}
 		@Override
 		public String getInfiniteDescription() {
-			return "[style.colourExcellent(Immune)] to [style.colourPhysical(physical damage)]";
+			return "[style.colourExcellent(免疫)][style.colourPhysical(物理伤害)]";
 		}
 		@Override
 		public int getOrderPriority() {
@@ -524,10 +524,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute RESISTANCE_LUST = new AbstractAttribute(false, 0, -100, 500, "lust shielding", "Lust shielding", "shieldIcon", PresetColour.GENERIC_SEX, "chastity", "temptation", null) {
+	public static AbstractAttribute RESISTANCE_LUST = new AbstractAttribute(false, 0, -100, 500, "lust shielding", "性欲护盾", "shieldIcon", PresetColour.GENERIC_SEX, "贞操", "诱惑", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Reduces lust damage taken.";
+			return "降低受到的性欲伤害。";
 		}
 		@Override
 		public boolean isInfiniteAtUpperLimit() {
@@ -535,7 +535,7 @@ public class Attribute {
 		}
 		@Override
 		public String getInfiniteDescription() {
-			return "[style.colourExcellent(Immune)] to [style.colourLust(lust damage)]";
+			return "[style.colourExcellent(免疫)][style.colourLust(性欲伤害)]";
 		}
 		@Override
 		public int getOrderPriority() {
@@ -543,10 +543,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute RESISTANCE_FIRE = new AbstractAttribute(false, 0, -100, 500, "fire shielding", "Fire shielding", "shieldIcon", PresetColour.DAMAGE_TYPE_FIRE, "extinguishing", "flammability", null) {
+	public static AbstractAttribute RESISTANCE_FIRE = new AbstractAttribute(false, 0, -100, 500, "fire shielding", "火焰护盾", "shieldIcon", PresetColour.DAMAGE_TYPE_FIRE, "阻燃", "易燃", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Reduces fire damage taken.";
+			return "降低受到的火焰伤害。";
 		}
 		@Override
 		public boolean isInfiniteAtUpperLimit() {
@@ -554,7 +554,7 @@ public class Attribute {
 		}
 		@Override
 		public String getInfiniteDescription() {
-			return "[style.colourExcellent(Immune)] to [style.colourFire(fire damage)]";
+			return "[style.colourExcellent(免疫)][style.colourFire(火焰伤害)]";
 		}
 		@Override
 		public int getOrderPriority() {
@@ -562,10 +562,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute RESISTANCE_ICE = new AbstractAttribute(false, 0, -100, 500, "cold shielding", "Cold shielding", "shieldIcon", PresetColour.DAMAGE_TYPE_COLD, "warmth", "frostbite", null) {
+	public static AbstractAttribute RESISTANCE_ICE = new AbstractAttribute(false, 0, -100, 500, "cold shielding", "寒冷护盾", "shieldIcon", PresetColour.DAMAGE_TYPE_COLD, "温暖", "冻伤", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Reduces cold damage taken.";
+			return "降低受到的寒冷伤害。";
 		}
 		@Override
 		public boolean isInfiniteAtUpperLimit() {
@@ -573,7 +573,7 @@ public class Attribute {
 		}
 		@Override
 		public String getInfiniteDescription() {
-			return "[style.colourExcellent(Immune)] to [style.colourIce(ice damage)]";
+			return "[style.colourExcellent(免疫)][style.colourIce(寒冷伤害)]";
 		}
 		@Override
 		public int getOrderPriority() {
@@ -581,10 +581,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute RESISTANCE_POISON = new AbstractAttribute(false, 0, -100, 500, "poison shielding", "Poison shielding", "shieldIcon", PresetColour.DAMAGE_TYPE_POISON, "anti-venom", "sickness", null) {
+	public static AbstractAttribute RESISTANCE_POISON = new AbstractAttribute(false, 0, -100, 500, "poison shielding", "毒素护盾", "shieldIcon", PresetColour.DAMAGE_TYPE_POISON, "抗毒", "易感", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Reduces poison damage taken.";
+			return "降低受到的毒素伤害。";
 		}
 		@Override
 		public boolean isInfiniteAtUpperLimit() {
@@ -592,7 +592,7 @@ public class Attribute {
 		}
 		@Override
 		public String getInfiniteDescription() {
-			return "[style.colourExcellent(Immune)] to [style.colourPoison(poison damage)]";
+			return "[style.colourExcellent(免疫)][style.colourPoison(毒素伤害)]";
 		}
 		@Override
 		public int getOrderPriority() {
@@ -646,10 +646,10 @@ public class Attribute {
 //		}
 //	};
 	
-	public static AbstractAttribute DAMAGE_ELDER_LILIN = new AbstractAttribute(true, 0, -100, 100, "elder lilin damage", "Elder lilin damage", "swordIcon", PresetColour.RACE_LILIN, "elder-lilin-obliteration", "elder-lilin-mercy", null) {
+	public static AbstractAttribute DAMAGE_ELDER_LILIN = new AbstractAttribute(true, 0, -100, 100, "elder lilin damage", "莉琳长老伤害", "swordIcon", PresetColour.RACE_LILIN, "肃清莉琳长老", "怜悯莉琳长老", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases damage vs elder lilin.";
+			return "提升对抗莉琳长老的伤害。";
 		}
 
 		@Override
@@ -658,10 +658,10 @@ public class Attribute {
 		}
 	};
 
-	public static AbstractAttribute DAMAGE_LILIN = new AbstractAttribute(true, 0, -100, 100, "lilin damage", "Lilin damage", "swordIcon", PresetColour.RACE_LILIN, "lilin-obliteration", "lilin-mercy", null) {
+	public static AbstractAttribute DAMAGE_LILIN = new AbstractAttribute(true, 0, -100, 100, "lilin damage", "莉琳伤害", "swordIcon", PresetColour.RACE_LILIN, "肃清莉琳", "怜悯莉琳", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases damage vs lilin.";
+			return "提升对抗莉琳的伤害。";
 		}
 
 		@Override
@@ -670,10 +670,10 @@ public class Attribute {
 		}
 	};
 	
-	public static AbstractAttribute DAMAGE_IMP = new AbstractAttribute(true, 0, -100, 100, "imp damage", "Imp damage", "swordIcon", PresetColour.RACE_IMP, "impish-obliteration", "impish-mercy", null) {
+	public static AbstractAttribute DAMAGE_IMP = new AbstractAttribute(true, 0, -100, 100, "imp damage", "小恶魔伤害", "swordIcon", PresetColour.RACE_IMP, "肃清小恶魔", "怜悯小恶魔", null) {
 		@Override
 		public String getDescription(GameCharacter owner) {
-			return "Increases damage vs imps.";
+			return "提升对抗小恶魔的伤害。";
 		}
 
 		@Override

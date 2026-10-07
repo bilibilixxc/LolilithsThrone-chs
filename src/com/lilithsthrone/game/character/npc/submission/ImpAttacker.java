@@ -98,7 +98,7 @@ public class ImpAttacker extends NPC {
 			setName(Name.getRandomTriplet(this.getSubspecies()));
 			this.setPlayerKnowsName(false);
 			setDescription(UtilText.parse(this,
-					"Imps, such as this one, have no interest in anything but sex, and will attack anyone who's not a member of their clan in order to get what they want..."));
+					"小恶魔，尤其是这样的，对性爱以外的所有事情都不感兴趣，并且会袭击帮派成员以外的所有人来获取他们想要的东西……"));
 			
 			// PERSONALITY & BACKGROUND:
 			
@@ -229,7 +229,7 @@ public class ImpAttacker extends NPC {
 		}
 		if(this.isSlave()) {
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of prowling the tunnels of Submission and assaulting innocent travellers are now over. Having run afoul of the law, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+					"[npc.NamePos]在屈城区的隧道游荡和骚扰无辜过路人的日子已经结束。[npc.sheIs]因触犯法律成为了奴隶，不过是[npc.her]主人的财产而已。"));
 		} else {
 			return (UtilText.parse(this, description));
 		}
@@ -360,7 +360,7 @@ public class ImpAttacker extends NPC {
 					AbstractItem potion = EnchantingUtils.craftItem(
 						Main.game.getItemGen().generateItem(effects.getItemType()),
 						effects.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-					potion.setName("Imp's Elixir");
+					potion.setName("小恶魔灵药");
 					TunnelImpsDialogue.getImpGroup().get(1).addItem(potion, false);
 				}
 				if(!Main.game.getPlayer().getNonElementalCompanions().isEmpty()) {
@@ -369,7 +369,7 @@ public class ImpAttacker extends NPC {
 						AbstractItem potion2 = EnchantingUtils.craftItem(
 							Main.game.getItemGen().generateItem(effects2.getItemType()),
 							effects2.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-						potion2.setName("Imp's Elixir");
+						potion2.setName("小恶魔灵药");
 						TunnelImpsDialogue.getImpGroup().get(1).addItem(potion2, false);
 					}
 				}
@@ -404,12 +404,12 @@ public class ImpAttacker extends NPC {
 			if(!target.hasVagina()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.NONE, TFPotency.MINOR_BOOST, 1),
-					"Let's give yer a nice new cunt!"));
+					"来给尼一个漂亮的新穴穴吧！"));
 			}
 			if(target.getVaginaWetness().getValue()<Wetness.SIX_SOPPING_WET.getValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
-					"Yer pussy needs ta be soppin' wet an ready ta get fucked!"));
+					"你的小穴需要被弄湿，准备好挨操！"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -422,12 +422,12 @@ public class ImpAttacker extends NPC {
 			if(!target.hasPenisIgnoreDildo()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.NONE, TFPotency.MINOR_BOOST, 1),
-					"Yer gonna need a cock to satisfy us!"));
+					"尼需要一根鸡巴来满足我们！"));
 			}
 			if(target.getPenisRawSizeValue()<PenisLength.THREE_LARGE.getMedianValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
-					"Yer cock's gonna need ta be bigger'n than!"));
+					"你的鸡巴该比现在更大！"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -435,7 +435,7 @@ public class ImpAttacker extends NPC {
 			if(target.getPenisRawCumStorageValue()<100) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
-					"Yer gonna be cummin' all over the place!"));
+					"尼要设得到处都是！"));
 			}
 			
 		} else if(target.getLocationPlace().getPlaceType().equals(PlaceType.SUBMISSION_IMP_TUNNELS_DEMON)) {
@@ -450,12 +450,12 @@ public class ImpAttacker extends NPC {
 			if(!target.hasPenisIgnoreDildo()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.NONE, TFPotency.MINOR_BOOST, 1),
-					"Yer gonna need a cock to satisfy us!"));
+					"尼需要一根鸡巴来满足我们！"));
 			}
 			if(target.getPenisRawSizeValue()<PenisLength.THREE_LARGE.getMedianValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
-					"Yer cock's gonna need ta be bigger'n than!"));
+					"你的鸡巴该比现在更大！"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -463,12 +463,12 @@ public class ImpAttacker extends NPC {
 			if(target.getPenisRawGirthValue()<PenetrationGirth.FOUR_GIRTHY.getValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.MAJOR_BOOST, 1),
-					"Let's get yer cock nice an' thick!"));
+					"让你的鸡巴更大更粗些吧！"));
 			}
 			if(target.getPenisRawCumStorageValue()<250) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
-					"Ready ta be cummin' buckets fer us?"));
+					"准备好当我们的精液容器了吗？"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -478,12 +478,12 @@ public class ImpAttacker extends NPC {
 			if(!target.hasVagina()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.NONE, TFPotency.MINOR_BOOST, 1),
-					"Let's give yer a nice new cunt!"));
+					"来给尼一个漂亮的新穴穴吧！"));
 			}
 			if(target.getVaginaWetness().getValue()<Wetness.SIX_SOPPING_WET.getValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
-					"Yer pussy needs ta be soppin' wet an ready ta get fucked!"));
+					"你的小穴需要被弄湿，准备好挨操！"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -502,12 +502,12 @@ public class ImpAttacker extends NPC {
 			if(!target.hasPenisIgnoreDildo()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.NONE, TFPotency.MINOR_BOOST, 1),
-					"Yer gonna need a cock to satisfy us!"));
+					"尼需要一根鸡巴来满足我们！"));
 			}
 			if(target.getPenisRawSizeValue()<PenisLength.THREE_LARGE.getMedianValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
-					"Yer cock's gonna need ta be bigger'n than!"));
+					"你的鸡巴该比现在更大！"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -515,13 +515,13 @@ public class ImpAttacker extends NPC {
 			if(target.getPenisRawGirthValue()<PenetrationGirth.FOUR_GIRTHY.getValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.MAJOR_BOOST, 1),
-					"Let's get yer cock nice an' thick!"));
+					"让你的鸡巴更大更粗些吧！"));
 			}
 
 			if(target.getTesticleSize().getValue()<TesticleSize.FOUR_HUGE.getValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE_TERTIARY, TFPotency.MINOR_BOOST, 1),
-					"Gonna make yer balls big an' heavy!"));
+					"你的蛋蛋马上要变大了！"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_SIZE_TERTIARY, TFPotency.MINOR_BOOST, 1),
 					""));
@@ -529,7 +529,7 @@ public class ImpAttacker extends NPC {
 			if(target.getPenisRawCumStorageValue()<250) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
-					"Ready ta be cummin' buckets fer us?"));
+					"准备好当我们的精液容器了吗？"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_PENIS, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -542,7 +542,7 @@ public class ImpAttacker extends NPC {
 			if(target.getTongueLengthValue()<TongueLength.TWO_VERY_LONG.getMedianValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_FACE, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.BOOST, 1),
-					"Yer tongue's betta off being nice an' long, so that yer can give us a special time when eatin' us out!"));
+					"尼的舌头最好是呦长呦漂亮，这样你在舔俺们的时候就能给俺们来点特别的！"));
 			}
 			
 		} else if(target.getLocationPlace().getPlaceType().equals(PlaceType.SUBMISSION_IMP_TUNNELS_MALES)) {
@@ -555,12 +555,12 @@ public class ImpAttacker extends NPC {
 			if(!target.hasVagina()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.NONE, TFPotency.MINOR_BOOST, 1),
-					"Let's give yer a cunt ta fuck!"));
+					"让我们给你一个屄操吧！"));
 			}
 			if(target.getVaginaWetness().getValue()<Wetness.SIX_SOPPING_WET.getValue()) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
-					"Yer pussy needs ta be soppin' wet an ready ta get fucked!"));
+					"你的小穴需要被弄湿，准备好挨操！"));
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 1),
 					""));
@@ -583,49 +583,49 @@ public class ImpAttacker extends NPC {
 		for(int i=target.getFemininityValue(); i>Femininity.MASCULINE.getMinimumFemininity(); i-=15) { // Turn masculine:
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_FEMININITY, TFPotency.MAJOR_DRAIN, 1),
-				"Yer gonna need ta be more manly!"));
+				"你该比现在更有男子气概！"));
 		}
 		if(target.getMuscleValue()<Muscle.THREE_MUSCULAR.getMaximumValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.MAJOR_BOOST, 1),
-				"I want yer bein' more muscly!"));
+				"我要你更强壮！"));
 		}
 		if(target.getBodySizeValue()<BodySize.TWO_AVERAGE.getMinimumValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_SIZE_TERTIARY, TFPotency.MAJOR_BOOST, 1),
-				"Yer gonna get more bigger!"));
+				"你想要变得更大！"));
 		}
 		if(target.getHeightValue()<183) { // 6'
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
-				"That's it; get nice an' tall!"));
+				"就是这样；变得更大更长吧！"));
 		}
 		for(int i=target.getBreastSize().getMeasurement(); i>0; i-=3) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_DRAIN, 1),
-				"Let's get rid o' them titties of yours!"));
+				"把你的奶头去掉吧！"));
 		}
 		if(target.getHipSize().getValue()>HipSize.TWO_NARROW.getValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_ASS, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.MAJOR_DRAIN, 1),
-				"Gotta get them hips lookin' less wide!"));
+				"该让屁股收窄点嘛！"));
 		}
 		if(target.getAssSize().getValue()>AssSize.THREE_NORMAL.getValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_ASS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_DRAIN, 1),
-				"Yer ass is far too fat!"));
+				"你的屁股太肥了！"));
 		}
 		if(target.getHairRawLengthValue()>0) { // If bald, leave bald.
 			for(int i=target.getHairRawLengthValue(); i>HairLength.TWO_SHORT.getMaximumValue(); i-=15) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_HAIR, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_DRAIN, 1),
-					"Yer gonna have ta get a more manly hair-do!"));
+					"你该做一头更男人的发型！"));
 			}
 		}
 		for(int i=target.getLipSizeValue(); i>LipSize.TWO_FULL.getValue(); i-=2) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_FACE, TFModifier.TF_MOD_SIZE, TFPotency.DRAIN, 1),
-				"Let's red rid o' them cock-suckin' lips o' yers!"));
+				"把你这张只会吸鸡巴的嘴弄小一点！"));
 		}
 		
 		return effects;
@@ -637,49 +637,49 @@ public class ImpAttacker extends NPC {
 		for(int i=target.getFemininityValue(); i<Femininity.FEMININE.getMinimumFemininity(); i+=15) { // Turn feminine:
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_FEMININITY, TFPotency.MAJOR_BOOST, 1),
-				"Yer gonna get lookin' far more girly afta this!"));
+				"做完这个，你会看起来更少女！"));
 		}
 		if(target.getMuscleValue()>Muscle.THREE_MUSCULAR.getMedianValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.MAJOR_DRAIN, 1),
-				"Let's get rid o' all that manly muscle ya got goin' on!"));
+				"尼身上有男人味的肌肉该消事了！"));
 		}
 		if(target.getBodySizeValue()>BodySize.TWO_AVERAGE.getMinimumValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_SIZE_TERTIARY, TFPotency.MAJOR_DRAIN, 1),
-				"Yer gonna need ta get slimmer!"));
+				"尼应盖更苗条点！"));
 		}
 		if(target.getHeightValue()>167) { // 5'6"
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_DRAIN, 1),
-				"Yer far too tall fer my tastes!"));
+				"尼太高了，不合俺口味！"));
 		}
 		for(int i=target.getBreastSize().getMeasurement(); i<CupSize.E.getMeasurement(); i+=3) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
-				"Let's give yer some massive titties for me ta play with!"));
+				"把尼的大奶子给俺玩玩噻！"));
 		}
 		if(target.getHipSize().getValue()<HipSize.THREE_GIRLY.getValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_ASS, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.MAJOR_BOOST, 1),
-				"Yer hips are gonna need ta be nice an' wide; all tha better fer carrying the broods o' imps yer gonna get knocked up with!"));
+				"尼的屁股会长到赞赞的肥呦，能载俺小恶魔很多崽呢。俺会把你操怀嘞！"));
 		}
 		if(target.getAssSize().getValue()<AssSize.THREE_NORMAL.getValue()) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_ASS, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
-				"Yer gonna need a fatta ass than that!"));
+				"尼该长个更肥的大屁股！"));
 		}
 		if(target.getHairRawLengthValue()>0) { // If bald, leave bald.
 			for(int i=target.getHairRawLengthValue(); i<HairLength.THREE_SHOULDER_LENGTH.getMaximumValue(); i+=15) {
 				effects.add(new PossibleItemEffect(
 					new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_HAIR, TFModifier.TF_MOD_SIZE, TFPotency.MAJOR_BOOST, 1),
-					"Gonna need yer to have longa hair than that!"));
+					"尼该留耿长的头发！"));
 			}
 		}
 		for(int i=target.getLipSizeValue(); i<LipSize.TWO_FULL.getValue(); i+=2) {
 			effects.add(new PossibleItemEffect(
 				new ItemEffect(itemType.getEnchantmentEffect(), TFModifier.TF_FACE, TFModifier.TF_MOD_SIZE, TFPotency.BOOST, 1),
-				"Time ta give yer some nice an' juicy cock-suckin' lips!"));
+				"该给你多汁的小穴了!"));
 		}
 		
 		return effects;

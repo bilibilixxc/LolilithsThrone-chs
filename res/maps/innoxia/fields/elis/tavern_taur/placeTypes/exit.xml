@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Entrance]]></name>
-	<tooltipDescription><![CDATA[One of the two entrances to 'The Centaur's Sword' tavern.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the entrance to 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[入口]]></name>
+	<tooltipDescription><![CDATA[半人马之剑的两个入口之一。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在半人马之剑的入口处。]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

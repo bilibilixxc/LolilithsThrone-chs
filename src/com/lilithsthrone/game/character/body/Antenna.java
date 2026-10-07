@@ -78,9 +78,9 @@ public class Antenna implements BodyPartInterface {
 		
 		if (type == getType()) {
 			if(type.equals(AntennaType.NONE)) {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.verb(lack)] antennae, so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经没有)]触须了，所以无事发生……</p>");
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.antenna] of [npc.a_antennaRace], so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_antennaRace]的[npc.antenna]了，所以无事发生……)]</p>");
 			}
 		}
 		
@@ -89,18 +89,18 @@ public class Antenna implements BodyPartInterface {
 		if(this.type.equals(AntennaType.NONE)) {
 			sb.append(UtilText.parse(owner, 
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a surprised gasp and [npc.verb(rub)] at [npc.her] forehead as [npc.she] [npc.verb(feel)] it growing hot and sensitive."
-						+ " After just a moment, [npc.her] [npc.eyes] widen in shock as something starts pushing out from under the [npc.faceSkin] of [npc.her] forehead."));
+						+ "[npc.Name]倒吸一口凉气，感到前额变得滚烫又敏感，连忙摸了摸。"
+						+ "过了一会儿，[npc.her]震惊地睁大了[npc.eyes]，有什么东西从[npc.her]前额的[npc.faceSkin]之下冲了出来。"));
 		} else {
 			sb.append(UtilText.parse(owner, 
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a surprised gasp as [npc.she] [npc.verb(feel)] an odd tingling sensation at the base of [npc.her] [npc.antennae]."
-						+ " Before [npc.she] [npc.has] any time in which to react, they rapidly crumble away, and within moments they've completely disappeared. "));
+						+ "[npc.Name]倒吸一口凉气，感到[npc.antennae]的根部有一种奇怪的刺痛感。"
+						+ "还没等[npc.she]反应过来，[npc.antennae]便分崩离析，转瞬消失了。"));
 		}
 		
 		if(type!=AntennaType.NONE) {
 			sb.append(UtilText.parse(owner, 
-					" Hard nubs suddenly push out from the sides of [npc.her] head, and [npc.she] [npc.verb(gasp)] as [npc.she] [npc.verb(feel)] them quickly grow out into "));
+					"[npc.she]惊喘出声，坚硬的小凸起从[npc.her]脑袋上忽然冒出来，并且迅速成长为了"));
 		}
 		
 		this.type = type;
@@ -125,7 +125,7 @@ public class Antenna implements BodyPartInterface {
 		}
 		
 		if(owner.getAntennaRows() == rows) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		boolean removingAntennae = owner.getAntennaRows() > rows;
@@ -134,23 +134,23 @@ public class Antenna implements BodyPartInterface {
 		owner.postTransformationCalculation();
 		
 		if (owner.getAntennaType().equals(AntennaType.NONE)) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		if(removingAntennae) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads over [npc.namePos] [npc.antennae], before moving down and concentrating in [npc.her] forehead."
-						+ " [npc.She] can't help but let out a cry as [npc.she] [npc.verb(feel)] some of them [style.boldShrink(crumbling away)] and disappearing back down into [npc.her] [npc.faceSkin].<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric([npc.a_antennae])]."
+						+ "一股刺痛感传遍了[npc.namePos]的[npc.antennae]，接着这种感觉继续向下，集中在了[npc.her]的前额上。"
+						+ "[npc.She]不禁大叫一声，只感到有些[npc.antennae]顿时分崩离析，消失在[npc.her]的[npc.faceSkin]之下。<br/>"
+						+ "过了一会儿，[npc.sheIs]便得到了[style.boldTfGeneric([npc.a_antennae])]。"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads over [npc.namePos] [npc.antennae], before moving down and concentrating in [npc.her] forehead."
-						+ " [npc.She] can't help but let out a cry as [npc.she] [npc.verb(feel)] new [npc.antennae] [style.boldGrow(pushing up)] and growing out of [npc.her] [npc.faceSkin].<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric([npc.a_antennae])]."
+						+ "一股刺痛感传遍了[npc.namePos]的[npc.antennae]，接着这种感觉继续向下，集中在了[npc.her]的前额上。"
+						+ "[npc.She]不禁大叫一声，只感到全新的[npc.antennae][style.boldGrow(向上推挤)]着，从[npc.her]的[npc.faceSkin]上长了出来。<br/>"
+						+ "过了一会儿，[npc.sheIs]便得到了[style.boldTfGeneric([npc.a_antennae])]。"
 					+ "</p>");
 		}
 	}
@@ -167,7 +167,7 @@ public class Antenna implements BodyPartInterface {
 		}
 		
 		if(owner.getAntennaePerRow() == antennaePerRow) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		boolean removingAntennae = owner.getAntennaePerRow() > antennaePerRow;
@@ -176,23 +176,23 @@ public class Antenna implements BodyPartInterface {
 		owner.postTransformationCalculation();
 		
 		if (owner.getAntennaType().equals(AntennaType.NONE)) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		if(removingAntennae) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A strange bubbling sensation starts to take root at the base of [npc.namePos] [npc.antennae]."
-						+ " Before [npc.she] can react, they start to [style.boldShrink(crumble away and reshape)] themselves.<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric("+Util.intToString(antennaePerRow)+" "+(antennaePerRow==1?"[npc.antenna]":"[npc.antennae]")+(rows==1?"":" in each row")+")]!"
+						+ "一股奇怪的躁动感在[npc.namePos]的[npc.antennae]基部愈发强烈。"
+						+ "还没等[npc.she]反应过来，[npc.antennae]便开始[style.boldShrink(解离重组)]。<br/>"
+						+ "过了一会儿，[npc.sheIs]就变成了" + (rows==1?"":"每一组") + "[style.boldTfGeneric("+Util.intToString(antennaePerRow)+"根"+(antennaePerRow==1?"[npc.antenna]":"[npc.antennae]")+")]！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A strange bubbling sensation starts to rise up in [npc.namePos] forehead."
-						+ " Before [npc.she] can react, new [npc.antennae] suddenly [style.boldGrow(push up)] and grow out of [npc.her] [npc.faceSkin].<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric("+Util.intToString(antennaePerRow)+" "+(antennaePerRow==1?"[npc.antenna]":"[npc.antennae]")+(rows==1?"":" in each row")+")]!"
+						+ "一股奇怪的躁动感在[npc.namePos]的前额愈发强烈。"
+						+ "还没等[npc.she]反应过来，全新的[npc.antennae]便突然冲出，从[npc.her]的[npc.faceSkin]上长了出来。<br/>"
+						+ "过了一会儿，[npc.sheIs]就变成了" + (rows==1?"":"每一组") + "[style.boldTfGeneric("+Util.intToString(antennaePerRow)+"根"+(antennaePerRow==1?"[npc.antenna]":"[npc.antennae]")+")]！"
 					+ "</p>");
 		}
 	}
@@ -219,27 +219,27 @@ public class Antenna implements BodyPartInterface {
 		}
 		
 		if(owner.getAntennaType().equals(AntennaType.NONE)) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] [npc.do]n't have any antennae, so nothing seems to happen...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]没有触须，所以无事发生……)]</p>");
 		}
 		
 		if(sizeChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The length of [npc.namePos] [npc.antennae] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.antennae]的长度没有变化……)]</p>");
 		}
 		
 		if(sizeChange < 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a cry as [npc.she] [npc.verb(feel)] a strange tingling sensation running up through [npc.her] [npc.face] and into [npc.her] [npc.antennae],"
-							+ " before they suddenly shrink down and [style.boldShrink(get noticeably shorter)].<br/>"
-						+ "[npc.Name] now [npc.has] [style.boldTfGeneric([npc.antennaSize] [npc.antennae])]!"
+						+ "[npc.Name]惊叫了一声，[npc.she]感到一股奇怪的刺痛感传遍[npc.face]，很快便传到了[npc.antennae]上，"
+							+ "随后[npc.antennae]便缩回去一截，[style.boldShrink(显然更短了)]。<br/>"
+						+ "[npc.Name]目前拥有[style.boldTfGeneric([npc.antennaSize]的[npc.antennae])]！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a little cry as [npc.she] [npc.verb(feel)] a warm pulsating sensation running up through [npc.her] [npc.face] and into [npc.her] [npc.antennae],"
-							+ " before they suddenly grow out and [style.boldGrow(get noticeably longer)].<br/>"
-						+ "[npc.Name] now [npc.has] [style.boldTfGeneric([npc.antennaSize] [npc.antennae])]!"
+						+ "[npc.Name]发出一小声尖叫，[npc.she]感到一股温热的脉动感从[npc.face]传递到了[npc.antennae]，"
+							+ "随后[npc.antennae]便长出来一截，[style.boldGrow(显然更长了)]。<br/>"
+						+ "[npc.Name]目前拥有[style.boldTfGeneric([npc.antennaSize]的[npc.antennae])]！"
 					+ "</p>");
 		}
 	}

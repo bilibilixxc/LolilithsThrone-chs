@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[kitchen]]></name>
-	<tooltipDescription><![CDATA[The place in which meals are prepared and cooked, the kitchen at 'The Red Dragon' is quite large.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the kitchen in 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[厨房]]></name>
+	<tooltipDescription><![CDATA[作为准备和烹饪饭菜的地方，"红龙酒馆"的厨房相当大。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“红龙酒馆”的厨房]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_TAN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

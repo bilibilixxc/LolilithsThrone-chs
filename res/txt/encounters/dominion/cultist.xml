@@ -1,306 +1,306 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- ENCOUNTER_START -->
 	
 	<htmlContent tag="ENCOUNTER_START"><![CDATA[
 	<p>
-		As you walk down yet another of Dominion's busy streets, you notice that this particular area is extravagantly decorated for Lilith's October celebrations. Banners and streamers, of orange, black, and purple, fly from every lamp post, and numerous posters praising Lilith's rule are plastered over every wall. There are a considerable number of succubi in this area wearing witch's costumes, and you see them approaching members of the public, before dragging them off down nearby alleyways.
+		你走在御城区的某条繁华街道上，注意到这地方貌似为莉莉丝的十月庆典布设了奢华的装饰。每根灯柱上都飘扬着橙色、黑色和紫色的横幅和彩带，每面墙上都贴满了赞美莉莉丝统治的海报。同时这里还有很多穿着女巫服装的魅魔，她们在接近来往的路人，然后把他们拖到附近的小巷里。
 	</p>
 	<p>
-		One of these witch-themed succubi suddenly rushes over towards you, gripping a witch's broomstick tightly in one hand and smiling in delight as she blocks your path and introduces herself, [npc.speech(Heya! I'm [npc.name], do you have a moment to talk?!)]
+		其中一个打扮成女巫样式的魅魔向你冲了过来，她一只手紧握着女巫扫帚，笑呵呵地挡住了你的去路，然后自顾自的向你做起了自我介绍：[npc.speech(你好啊！我叫[npc.name]，请问你有时间来谈一谈么？)]
 	</p>
 	<p>
-		You open your mouth to answer, but before you're able to say anything, the excitable witch cuts you off, [npc.speech(Sure you do! Everyone has the time to talk about how great Lilith is, right?! I'm out here with my sisters to make sure that everyone is having fun in this special month of October! I'm a part of the Cult of Lilith, and I want <i>you</i> to come visit our chapel so that I can give you a special gift!)]
+		在你回答之前，这个兴奋的女巫便打断了你：[npc.speech(当然没问题了！我想每个人都有充足的时间来谈论莉莉丝的伟大，对吧？我和我的姐妹们在这里确保每个人都能在这个十月里玩得开心。我是莉莉丝异教的一员，我想让<i>你</i>来参观我们的小教堂，这样我就可以给你一份特别的礼物了！)]
 	</p>
 	<p>
-		The succubus reaches down to grab you by the [pc.arm], and starts trying to pull you off down a nearby alleyway. As her fingers press into your [pc.armSkin], you feel an overwhelming sense of power radiating from her arcane aura. This demon's power is sure to rival that of Lilaya's, and if she gets you alone down that alleyway, there's no telling what she might do.
+		魅魔伸手抓住你的[pc.arm]并试图把你拉到附近的巷子里。当她的手指按在你的[pc.armSkin]上时，你感觉到一股压倒性的奥术灵气从她的体内散发了出来。这个恶魔的力量肯定能与莉莱雅媲美，如果她把你一个人拉到巷子里，不知道她会做出什么事来。
 	</p>
 	<p>
-		You could pull away and make an excuse to leave, or let her lead you to her chapel, where there's a promise of a 'gift'...
+		你可以找个借口离开，或者让她带你去小教堂，那里有一个承诺好的“礼物”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENCOUNTER_START_LEAVE"><![CDATA[
 	<p>
-		You pull your [pc.arm] away from [npc.name] and take a step back. [pc.speech(I don't have time right now.)]
+		你将[pc.arm]从[npc.name]的手中抽出，后退一步说：[pc.speech(抱歉，我现在没有时间。)]
 	</p>
 	<p>
-		You see a brief flash of anger in [npc.namePos] [npc.eyes+], but it only lasts for a moment before the smile returns to her face. [npc.speech(Just remember to praise Lilith, or else we'll find out!)]
+		你看到[npc.namePos][npc.eyes+]中闪过愤怒的神情。但也仅仅只是在片刻之后，她又恢复了之前的笑容：[npc.speech(只要记得赞美莉莉丝就好了，否则我们会发现的！)]
 	</p>
 	<p>
-		[npc.NamePos] words are followed by a little laugh, but despite her attempt to pass off her remark as a joke, you detect the distinct hint of malice in her tone. Not wanting to get caught up in conversation with this overbearing cultist, you turn around and carry on your way.
+		[npc.NamePos]说完后恢复了标志性的笑容。尽管她试图把自己的话当作玩笑，但你还是从她的语气中察觉到了一丝明显的恶意。你不想和这个盛气凌人的狂信徒再多谈一句话，于是便转身继续前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL"><![CDATA[
 	<p>
-		[pc.speech(Sure, I've got time to come visit your chapel,)] you say, allowing the excitable cultist to pull you towards the foreboding alleyway.
+		[pc.speech(当然，我有时间去参观你们的教堂。)]你在说完之后便任由这个兴奋的邪教徒把你拉向那条不祥的小巷。
 	</p>
 	<p>
-		[npc.speech(Excellent! I knew you weren't like all the others! This is going to be fun!)] [npc.name] replies, practically skipping in excitement as she leads the way.
+		[npc.speech(好极了，我就知道你和其他人不一样！这会很有趣的！)][npc.name]兴奋地边走边回答道。
 	</p>
 	<p>
-		The hustle and bustle of the busy street is soon left behind as [npc.name] hurriedly pulls you down a couple of dark and dingy passageways. Thankfully, her chapel doesn't seem to be too far into the maze of alleyways, and after just a minute, you find yourself stepping out into a tidy little courtyard. A life-sized statue of a breathtakingly beautiful demon, who you assume to be Lilith, stands in the centre. Past this statue, you see your destination taking the form of a small, one-story building, with a pillared facade and red-tiled roof.
+		[npc.name]匆匆地拉着你走过几条阴暗潮湿的通道，繁忙街道的喧嚣声很快就被抛在了脑后。值得庆幸的是，她的小教堂似乎离这迷宫般的小巷并不太远，一分钟后，你来到了整洁的小庭院。院子中央矗立着一座真人大小的雕像，雕像上的恶魔美得令人窒息，你猜她就是莉莉丝。走过雕像，你看到目的地是一栋单层小楼，其外墙由柱状浮雕构成，而屋顶则铺满了红瓦。
 	</p>
 	<p>
-		It's towards this building that [npc.name] pulls you, and after quickly crossing the small courtyard, you find yourself stepping through the doorway. Just as the diminutive exterior suggested, the interior of the chapel consists of a single, long room. Rows of benches line either side of a central aisle, and at the far end, a dark-maroon cloth is draped over a waist-high altar. As [npc.name] leads you towards this altar, you see that the walls are covered in detailed murals, each one portraying a demon engaged in a different sex position.
+		[npc.name]拉着你向这座建筑走去，快速穿过小庭院后你们便直接来到了门口。正如那小巧外观所暗示的那样，小教堂内部只有一个长长的走道兼房间。一排排长凳排列在中央过道的两侧，在最远处，一块深栗色的布铺在齐腰高的祭坛上。当[npc.name]带你向前走时，你开始观察起了四周的环境，四周的墙壁上画满了各式各样的壁画，每幅画都在描述恶魔的不同做爱姿势。
 	</p>
 	<p>
-		[npc.speech(We're here!)] [npc.name] exclaims, stopping before the altar and turning to face you. [npc.speech(You've been such a good [pc.girl]! I usually like to show people around a little first, but I just can't wait any longer! It's time for your gift!)]
+		[npc.speech(我们到了！)][npc.name]感叹，转身面向你说：[npc.speech(你真是最好的[pc.girl]！虽然我通常喜欢先带大家参观一下，但我现在实在等不及了，是时候给你礼物了！)]
 	</p>
 	<p>
-		[npc.Name] lets out a mischievous giggle, before reaching down and pulling up the skirt of her witch's dress. Following the movement of her hands, you look down to see that her now-exposed underwear are completely crotchless, allowing her huge demonic cock to flop free between her legs. Her right hand reaches down beneath her monstrous shaft to stroke her dripping-wet pussy, and her giggle turns into a sensual moan as she bites her lip and looks up at you. [npc.speech(Be a good [pc.girl] now and get down on your knees! You can start with my pussy, and then finish with my cock! You'll be getting your gift straight down your throat soon enough! Oh! And don't even <i>think</i> of trying to back out now!)]
+		[npc.Name]调皮地咯咯笑，然后伸手拉起她的女巫裙。你的视线一直跟随着她双手的动作，你看见露出的下体没穿内裤，巨大的恶魔阴茎在两腿之间自由地晃动着。她将右手伸到巨大的阴茎下面，抚摸起了湿漉漉的阴部，笑声变成了性感的呻吟声，她咬着嘴唇，抬头看着你说：[npc.speech(做个好[pc.girl]，现在跪下来开始舔！你可以从我的阴部开始，然后从我的鸡巴结束！你很快就会收到你的礼物！哦对了，你最好不要想要<i>拒绝</i>！)]
 	</p>
 	<p>
-		You can tell from the threatening tone of her voice that she's definitely not going to take no for an answer. It looks like you'll either have to do as she commands, or try and fight her off...
+		从她威胁的语气中可以听出，她绝对不会接受拒绝的请求。看来你要么得听她的命令，要么就得反抗她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENCOUNTER_CHAPEL_ORAL_SEX"><![CDATA[
 	<p>
-		You do as [npc.name] commands, and obediently drop to your knees in front of her. Looking down at your submissive form, the succubus cultist coos in delight, [npc.speech(Good [pc.girl]! You're eager for my gift, aren't you?!)]
+		你听从[npc.name]的命令，顺从地跪在了她面前。魅魔狂信者看着你顺从的样子，高兴地叫道：[npc.speech(好[pc.girl]！你想得到我的礼物，对不对啊？)]
 	</p>
 	#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
 		<p>
-			You look up to see her happy smile turn into a puzzled frown as she realises that you're not able to get access to your mouth. Reaching down to your sealed clothing, she focuses her arcane energy into removing the seal. [npc.speech(There you go! Now you can suck cock to your heart's content!)]
+			你抬起头，看到她原本开心的笑容变成了不解的皱眉，因为她意识到她无法接近你的嘴。于是她将手伸向你被封印的衣服，并开始集中奥术能量解除封印。[npc.speech(好了！现在你可以尽情地享受口交了！)]
 		</p>
 	#ENDIF
 	<p>
-		Stepping forwards, [npc.name] strokes the top of your head, before gently pulling you towards her crotch...
+		[npc.name]前进一步，轻抚你的头顶，然后慢慢地将你引向她的胯下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENCOUNTER_CHAPEL_VAGINAL_SEX"><![CDATA[
 	<p>
-		You smirk at [npc.name], before batting your eyelids and putting on the most seductive voice you can muster, [pc.speech(Please [npc.name], could I get your gift elsewhere?)]
+		你对着[npc.name]坏笑了两声，然后眨了眨眼，用充满诱惑的声音说：[pc.speech([npc.name]，我是个能得到礼物的好孩子么？)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			You slowly turn around and present your rear-end to [npc.name], drawing [npc.her] eyes down to your [pc.pussy+]. 
+			你慢慢转过身，向[npc.name]展示你的臀部，并借此用你[pc.pussy+]来吸引[npc.her]的目光。
 		#ELSE
-			You slowly trace your fingers over your pussy, drawing [npc.namePos] eyes down to your groin. 
+			你用手指轻轻的划过阴部，把[npc.namePos]的目光吸引到了你的腹股沟上。
 		#ENDIF
-		 She smiles as she realises what you're suggesting, and eagerly grabs your [pc.arm] once again, before pushing you down onto your back on top of the chapel's altar. [npc.speech(What better way to praise Lilith than by filling an eager slut's womb with my seed?! Your belly's going to be nice and swollen with my demonic brood soon enough!)]
+		当她听到你的建议时，她笑了笑，然后在急切地抓住你的[pc.arm]后便将你推倒在了小教堂的祭坛上。[npc.speech(用我的种子填满一个荡妇的子宫，还有什么能比这个更适合赞美莉莉丝呢？你的肚子很快就会被我的恶魔种子撑得鼓鼓囊囊的了。)]
 	</p>
 	#IF(!pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
 		<p>
-			You look up to see her happy smile turn into a puzzled frown as she realises that she's not able to get access to your pussy. Reaching down to your seal clothing, she focuses her arcane energy into removing the seal. [npc.speech(There we go! Now it's time for your special gift!)]
+			你抬起头，看到她原本开心的笑容变成了不解的皱眉，因为她意识到她无法接近你的阴部。于是她将手伸向你被封印的衣服，并开始集中奥术能量解除封印。[npc.speech(好了！现在你可以接受我的礼物了！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENCOUNTER_CHAPEL_ANAL_SEX"><![CDATA[
 	<p>
-		You smirk at [npc.name], before stepping forwards and asking, [pc.speech(Please [npc.name], could I get your gift elsewhere?)]
+		你对着[npc.name]笑了笑，然后说道：[pc.speech([npc.name]，我能在其他地方得到自己的礼物么？)]
 	</p>
 	<p>
-		You slowly turn to one side, tracing your fingers over your ass in order to draw [npc.namePos] eyes down to your rear end. She smiles as she realises what you're suggesting, and eagerly grabs your [pc.arm] once again, before pushing you down onto your back on top of the chapel's altar. [npc.speech(What better way to praise Lilith than by filling some slut's ass with my seed?!)]
+		你慢慢地转过身去，用手指在屁股上划来划去，以此来将[npc.namePos]的视线吸引到你的屁股上。当她意识到你在暗示什么时，她笑了笑，然后在急切地抓住你的[pc.arm]后便将你推倒在了小教堂的祭坛上。[npc.speech(用我的种子填满一个荡妇的肚子，还有什么能比这个更适合赞美莉莉丝呢？)]
 	</p>
 	#IF(!pc.isAbleToAccessCoverableArea(CA_ANUS, true))
 		<p>
-			You look up to see her happy smile turn into a puzzled frown as she realises that she's not able to get access to your asshole. Reaching down to your sealed clothing, she focuses her arcane energy into removing the seal. [npc.speech(There we go! Now it's time for your special gift!)]
+			你抬起头，看到她原本开心的笑容变成了不解的皱眉，因为她意识到她无法接近你的肛门。于是她将手伸向你被封印的衣服，并开始集中奥术能量解除封印。[npc.speech(好了！现在你可以接受我的礼物了！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_REPEAT -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_REPEAT"><![CDATA[
 	<p>
-		Deciding to pay [npc.name] another visit, you set off down the dark passageway that leads to her chapel. The route is quite easy to remember, and after just a minute you find yourself stepping out into a very familiar courtyard. Once again you pass the life-sized statue of Lilith, and after approaching the small, one-story building, you push open the chapel's wooden door and step inside.
+		你决定再去拜访一下[npc.Name]，于是你沿着通往小教堂的黑暗通道前进。路线很容易记住，在一分钟后你就看到了那个非常熟悉的庭院和那个与真人一样大小的莉莉丝雕像，在走到那座单层小楼的门口后，你推开小教堂的木门走了进去。
 	</p>
 	<p>
-		The interior is just as you remember it, with rows of benches lining either side of a central aisle, and at the far end, a dark-maroon cloth is draped over a waist-high altar. The familiar figure of [npc.name] is standing beside the stone block, and as the door swings shut behind you, she turns to see who's entered her sanctum.
+	到了！内部依旧和你记忆中的一样，一排排长凳排列在中央过道的两侧，在最远处，一块深栗色的布铺在齐腰高的祭坛上。当门在你身后被关上时，她转过身来看看是谁进入了她的圣殿。
 	</p>
 	<p>
-		[npc.speech(You're back!)] [npc.name] exclaims, smiling in delight. [npc.speech(What a good [pc.girl]! You've come back for another gift!)]
+		[npc.speech(你回来了！)][npc.name]惊呼着，同时她的脸上露出了欣喜的笑容。[npc.speech(好[pc.girl]！你又回来拿你的礼物了吗？)]
 	</p>
 	<p>
-		[npc.Name] lets out a mischievous giggle, before reaching down and pulling up the skirt of her witch's dress. Following the movement of her hands, you look down to see that her now-exposed underwear are completely crotchless, allowing her huge demonic cock to flop free between her legs. Her right hand reaches down beneath her monstrous shaft to stroke her dripping-wet pussy, and her giggle turns into a sensual moan as she bites her lip and looks up at you. [npc.speech(Now show me what a good [pc.girl] you are and get down on your knees! You can start with my pussy, and then finish with my cock! You'll be getting your gift straight down your throat soon enough! Oh! And don't even <i>think</i> of trying to back out now!)]
+		[npc.Name]调皮地咯咯笑，然后伸手拉起她的女巫裙。你的视线一直跟随着她双手的动作，你看见露出的下体没穿内裤，巨大的恶魔阴茎在两腿之间自由地晃动着。她将右手伸到巨大的阴茎下面，抚摸起了湿漉漉的阴部，笑声变成了性感的呻吟声，她咬着嘴唇，抬头看着你说：[npc.speech(现在告诉我你是个怎样的好[pc.girl]，现在跪下来开始舔！你可以从我的阴部开始，然后从我的鸡巴结束！你很快就会收到你的礼物！哦对了，你最好不要想要<i>拒绝</i>！)]
 	</p>
 	<p>
-		You can tell from the threatening tone of her voice that she's definitely not going to take no for an answer. It looks like you'll either have to do as she commands, or try and fight her off...
+		从她威胁的语气中可以听出，她绝对不会接受拒绝的请求。看来你要么得听她的命令，要么就得反抗她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_LEAVING -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_LEAVING"><![CDATA[
 	<p>
-		Leaving [npc.name] panting and exhausted on the altar, you turn to make your exit. As you're walking towards the door, you notice that there's a spare Witch's outfit neatly folded on one of the empty benches. There's even a spare broomstick lying beside it, and you wonder if you should help yourself to these rare items as way of compensation for [npc.namePos] behaviour...
+		你将气喘吁吁且精疲力竭的[npc.name]留在祭坛上，便转身准备离开。你向门口走去，注意到其中一张空凳上整齐地叠放着一套备用的女巫服装。你不知道自己是否应该拿这些稀有物品作为补偿……
 	</p>
 	<p>
-		<i>Open your inventory to view the items.</i>
+		<i>打开你的物品栏查看物品</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_COMBAT_VICTORY -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_COMBAT_VICTORY"><![CDATA[
 	<p>
-		[npc.Name] staggers back, gripping the edge of the altar with one hand as she pants from exertion. [npc.speech(I-Impossible! How could I be defeated?!)]
+		[npc.Name]踉跄后退，一只手紧紧抓住祭坛的边缘，稳住自己。她气喘吁吁地说：[npc.speech(不，不可能！我怎么会被你打败？)]
 	</p>
 	<p>
-		You step forwards, but before you can respond, [npc.name] lets out an incredibly lewd moan, [npc.speech(~Aah!~ You're so strong! Come and claim your reward!)]
+			你向前走了一步，但还没等你反应过来，[npc.name]就用无比淫荡的呻吟声喊道：[npc.speech(~啊呀！~ 你太厉害了！快来领取你的奖赏吧！)]
 	</p>
 	<p>
-		With that, the horny witch lies back on the altar, pulling up her dress to expose her hard demonic cock and dripping-wet pussy. She continues to moan and squirm as she presents herself, begging for you to come and use her body as you see fit.
+		就这样，这个淫荡女巫躺回了祭坛上，拉起裙子露出那坚硬的恶魔阴茎和湿漉漉的阴户。她继续呻吟扭动着展示自己，以此乞求你来随意使用她的身体。
 	</p>
 	<p>
-		You notice that in her haste to submit to you, she's dropped her broomstick on the floor, and you wonder if you should use this opportunity to give [npc.name] a taste of her own medicine...
+		你突然注意到，她匆忙向你屈服时把扫帚掉在了地上。你在想要不要趁机让[npc.name]尝尝她自己的苦头……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENCOUNTER_CHAPEL_COMBAT_VICTORY_SEX"><![CDATA[
 	<p>
-		You decide against using her broomstick, and step forwards so that you're standing between [npc.namePos] legs. She lets out an excited moan as you run your [pc.hands] up the length of her soft thighs, and props herself up on her elbows as she bites her lip at you. [npc.speech(~Mmm!~ Yes! Use me however you want!)]
+			你决定不使用她的扫帚。你向前走到[npc.namePos]两腿之间。你的[pc.hands]抚摸她那柔软的大腿，她发出了令人兴奋的呻吟声。随后她用手肘撑起身体，咬着嘴唇看着你说：[npc.speech(哦~~！是的！尽情地发泄在我身上吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENCOUNTER_CHAPEL_COMBAT_VICTORY_BROOMSTICK_SEAL_SEX"><![CDATA[
 	<p>
-		As you pick up [npc.namePos] broomstick, you feel a powerful surge of arcane energy flowing into your body. Without even needing to be told, you instantly know exactly how to harness the spells within this powerful weapon. As you gain knowledge of the spell 'Witch's Seal', you realise that you have the opportunity to give [npc.name] a taste of her own medicine...
+		你拿起[npc.namePos]的扫帚，感受到了一股强大的奥术能量涌入你的身体。不用别人来教，你立刻就知道如何利用这件强大武器中的咒语。你掌握了咒语“魔女封锁术”的知识，终于有机会让[npc.name]自食其果了……
 	</p>
 	<p>
-		Stepping towards the horny witch, you thrust out with the broomstick, channelling your energy into casting the powerful immobilising spell. A jolt of purple energy shoots out and strikes [npc.name], and as a ghostly purple pentagram flashes beneath her body, she suddenly stops moving.
+		你向淫荡女巫走去，然后用扫帚猛地一推，将能量注入强大的封锁法术，一股紫色能量喷射而出，击中了[npc.name]，在其身下闪过一个幽灵般的紫色五角星后，她的所有的动作便突然停止了。
 	</p>
 	<p>
-		Dropping the broomstick to the floor, you step forwards between her legs and make sure that she's ok. Thankfully, as you take a closer look, you see that she's still breathing, and her eyes flick up to gaze into yours as you stand over her vulnerable form. The Witch's Seal appears to have completely immobilised her, but as you reach out and lift one of her legs, you discover that the spell still allows you to move her around.
+		你把扫帚扔在地上，走到两腿之间确定情况。值得庆幸的是，你仔细检查，发现她还有呼吸。你站在毫无防范的双腿之间，她的眼睛微微抽动并盯着你。女巫的封印似乎让她完全无法动弹，你伸手抬起一条腿，发现咒语仍然允许你移动她的身体。
 	</p>
 	<p>
-		Grinning down at your new fuck-doll, you push her thighs apart to fully expose her groin, and prepare to have some fun...
+		你带着一脸痴汉的笑容看着你的新玩偶。你分开她的大腿，让腹股沟完全暴露出来，接下来就要好好享受一番了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_COMBAT_LOSS -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_COMBAT_LOSS"><![CDATA[
 	<p>
-		You stagger back against the altar, reaching one hand out to grip the hard edge as you pant from exertion. Although you gave it your best shot, you were no match for a succubus as powerful as this one, and as you use what little energy you have left to focus on keeping yourself standing, you hear the witch let out a mocking laugh.
+		你踉跄着靠在祭坛上，伸出一只手紧紧抓住坚硬的边缘，稳住身形，大口喘息，尝试着回复些气力。你虽然使出了浑身解数，但还是敌不过像她这样强大的魅魔。你集中仅剩的一点力气站住，却听到女巫的嘲笑声。
 	</p>
 	<p>
-		[npc.speech(Ha-ha-ha! Silly little [pc.race]!)] she sneers, stepping forwards and roughly grabbing your chin in one hand. [npc.speech(I think I'll have some fun with you!)]
+		[npc.speech(哈，哈，哈！愚蠢的小[pc.race]！)]她冷笑着走了过来，用力地捏住你的下巴：[npc.speech(我会和你玩得很开心的！)]
 	</p>
 	<p>
-		With that, she steps back, and you look up just in time to see her thrust her broomstick out towards you. A jolt of purple energy shoots out, striking you directly in the chest and causing you to fall back against the altar. You try to push yourself back up, but find that your body won't listen to your commands. You then try to let out a cry, only to find that it takes all of your energy just to utter a little whimper.
+		她说完，后退了一步。你抬起头，正好看到她将扫帚对着你。一股紫色的能量喷射而出并直击你的胸口，你倒在祭坛上。你虽然试图重新站起来，但身体完全不听使唤。你试着哭出来，却发现仅仅发出一声呜咽就耗尽了你所有的力气。
 	</p>
 	<p>
-		[npc.speech(How pathetic!)] [npc.name] mocks, reaching down to pull you up, before pushing you down onto the stone altar. [npc.speech(I wonder if you'll keep on mewling like that as I fuck you senseless! Try and struggle all you want, it's no use; this Witch's Seal I've cast upon you has turned you into my very own fuck-doll!)]
+		[npc.speech(真可悲！)][npc.name]嘲笑道。她伸手拽你起来，又把你推倒在石坛上。[npc.speech(当我把你操到没有知觉的时候，你还会不会继续这样叫呢？哭喊和挣扎都是没用的，我在你身上施展的‘魔女封锁术’已经把你变成了我的玩偶！)]
 	</p>
 	<p>
-		As she talks, the witch moves you around into position, and you find that you're totally powerless as she
+		她边说边挪动你的身体，你只能眼睁睁地看着她
 		#IF(pc.hasLegs())
-			 spreads your legs
+			张开你的双腿
 		#ELSE
-			 takes hold of your [pc.legs]
+			抓住你的[pc.legs]
 		#ENDIF
-		 and steps forwards. [npc.speech(Now, let's have some fun!)]
+		并向前迈了一步。[npc.speech(现在，让我们来找点乐子吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENCOUNTER_CHAPEL_COMBAT_LOSS_SEX"><![CDATA[
 	<p>
 		#IF(!pc.isAbleToAccessCoverableArea(CA_VAGINA, true) || !pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			You look up to see [npc.namePos] grin turn into a puzzled frown as she realises that she's not able to get access to your groin. Reaching down to your sealed clothing, she focuses her arcane energy into removing the seal. [npc.speech(There we go! Now let's both find out how much you love being my fuck-toy!)]
+			你抬起头，看到她原本开心的笑容变成了不解的皱眉，因为她意识到她无法接近你的腹股沟。于是她将手伸向你被封印的衣服，并开始集中奥术能量解除封印。[npc.speech(好了！现在就让我们看看你有多想和我做爱了！)]
 		#ELSE
-			You look up to see a wild, hungry look in [npc.namePos] [npc.eyes+], and [npc.she] excitedly squeals, [npc.speech(Let's both find out how much you love being my fuck-toy!)]
+			你抬起头，看到[npc.namePos][npc.eyes+]那充满野性与饥渴的眼神，[npc.she]兴奋地尖叫起来，[npc.speech(让我们看看你究竟有多想和我做爱！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_POST_ORAL_SEX -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_POST_ORAL_SEX"><![CDATA[
 	<p>
-		[npc.Name] steps back, grinning down at you as she sorts her clothing out. [npc.speech(I hope you enjoyed your gift just as much as I did in giving it to you! Now, I have some cult business to attend to, so run along!)]
+		[npc.Name]后退一步，一边整理衣服一边对你笑着说：[npc.speech(希望你和我一样喜欢你的礼物！现在我要去忙教堂的事了，快点走吧！)]
 	</p>
 	<p>
-		You move to do as [npc.name] says, and as soon as you've finished getting your things together, she grabs you by the arm and starts marching towards the door. You're a little taken aback at how quickly she wants to get rid of you, but before you can object, you're being pushed out of the door. [npc.speech(Come back some other time if you want another gift!)]
+		你按照[npc.name]说的做。但你刚收拾好东西，她就抓住你的胳膊向门口走去。她这么快就想甩掉你让你有点吃惊，但还没来得及反对，你就被推出了门外。[npc.speech(下次再来领取你的其他礼物吧！)]
 	</p>
 	<p>
-		With that, the wooden door to the chapel slams shut, leaving you to walk back out to the street with the taste of demonic cum still on your tongue...
+		就这样，小教堂的木门砰地一声关上了，留下你一个人走回街上，在你的嘴里还残留着恶魔精液的味道……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_POST_VAGINAL_SEX -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_POST_VAGINAL_SEX"><![CDATA[
 	<p>
-		[npc.Name] steps back, grinning down at you as she sorts her clothing out. [npc.speech(I hope you enjoyed your gift just as much as I did in giving it to you! Now, I have some cult business to attend to, so run along!)]
+		[npc.Name]后退一步，一边整理衣服一边对你笑着说：[npc.speech(希望你和我一样喜欢你的礼物！现在我要去忙教堂的事了，快点走吧！)]
 	</p>
 	<p>
-		You move to do as [npc.name] says, and as soon as you've finished getting your things together, she grabs you by the arm and starts marching towards the door. You're a little taken aback at how quickly she wants to get rid of you, but before you can object, you're being pushed out of the door. [npc.speech(Come back some other time if you want another gift!)]
+		你按照[npc.name]说的做。但你刚收拾好东西，她就抓住你的胳膊向门口走去。她这么快就想甩掉你让你有点吃惊，但还没来得及反对，你就被推出了门外。[npc.speech(下次再来领取你的其他礼物吧！)]
 	</p>
 	<p>
-		With that, the wooden door to the chapel slams shut, leaving you to walk back out to the street with the wet feeling of demonic cum still oozing out of your [pc.pussy+]...
+		就这样，小教堂的木门砰地一声关上了，留下你一个人走回街上，恶魔精液还在从你[pc.pussy+]流出，有种湿漉漉的感觉……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_POST_ANAL_SEX -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_POST_ANAL_SEX"><![CDATA[
 	<p>
-		[npc.Name] steps back, grinning down at you as she sorts her clothing out. [npc.speech(I hope you enjoyed your gift just as much as I did in giving it to you! Now, I have some cult business to attend to, so run along!)]
+		[npc.Name]后退一步，一边整理衣服一边对你笑着说：[npc.speech(希望你和我一样喜欢你的礼物！现在我要去忙教堂的事了，快点走吧！)]
 	</p>
 	<p>
-		You move to do as [npc.name] says, and as soon as you've finished getting your things together, she grabs you by the arm and starts marching towards the door. You're a little taken aback at how quickly she wants to get rid of you, but before you can object, you're being pushed out of the door. [npc.speech(Come back some other time if you want another gift!)]
+		你按照[npc.name]说的做。但你刚收拾好东西，她就抓住你的胳膊向门口走去。她这么快就想甩掉你让你有点吃惊，但还没来得及反对，你就被推出了门外。[npc.speech(下次再来领取你的其他礼物吧！)]
 	</p>
 	<p>
-		With that, the wooden door to the chapel slams shut, leaving you to walk back out to the street with the wet feeling of demonic cum still in your ass...
+		就这样，小教堂的木门砰地一声关上了，留下你一个人走回街上，你的屁股里还残存着恶魔精液带来的湿润感……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_POST_SUB_SEALED_SEX -->
 	
 	<htmlContent tag="ENCOUNTER_CHAPEL_POST_SUB_SEALED_SEX"><![CDATA[
 	<p>
-		[npc.Name] steps back, grinning down at you as she sorts her clothing out. [npc.speech(I hope you enjoyed your gift just as much as I did in giving it to you! Now, it may take a few more minutes for that spell to wear off. If only my assistant were here...)]
+		[npc.Name]后退一步，一边整理衣服一边笑着对你说：[npc.speech(希望你和我一样喜欢你的礼物！咒语还有几分钟才会消散，要是我的助手在这里就好了……)]
 	</p>
 	<p>
-		[femaleNPC.speech(Mistress, I'm back! Ooh! Who's this?)] a strange voice calls out from the doorway.
+		[femaleNPC.speech( 主人，我回来了！哦，是谁在那？)]一个陌生的声音从门口喊。
 	</p>
 	<p>
-		[npc.speech(What took you so long?! You were meant to be back here half an hour ago!)] [npc.name] responds. [npc.speech(Well, nevermind! Just drag this [pc.race] out to a bench somewhere, I've finished with [pc.herHim].)]
+		[npc.speech(你怎么去了这么久？你半小时前就该回来了。)][npc.name]回应道。[npc.speech(好吧，无所谓了！把这个[pc.race]拖到长椅上吧，我已经和[pc.herHim]爽完了。)]
 	</p>
 	<p>
-		[femaleNPC.speech(Yes, Mistress!)] the stranger calls out, and after just a few seconds, the black-furred face of a greater cat-girl hovers into view. [femaleNPC.speech(Aww! I missed out on all the fun!)]
+		[femaleNPC.speech(是的，主人！)]那个陌生人喊了一声，几秒钟后，一张黑猫女的脸就出现在了你的眼前。[femaleNPC.speech(哈啊！？我错过了最好玩的那部分！)]
 	</p>
 	<p>
-		After being shouted at once more by [npc.name], the cat-girl grabs you under the arms and drags you outside. She puffs and pants as she pulls you down the dark alleyways, but despite the sounds of exertion, it doesn't her take too long before she's brought you all the way back out to the street where you first met [npc.name]. Rather unceremoniously dumping you down onto an empty bench, the cat-girl takes one last look at you before rushing back off to the chapel.
+		猫女被[npc.name]再次催促，抓住你的胳膊把你往外拖。她一边呼哧呼哧地喘着粗气，一边拉着你走在黑暗的小巷里，尽管听起来很吃力，但没过多久她就把你带回了你第一次遇见[npc.name]的那条街上。猫女毫不客气地把你扔在空长椅上，然后在最后看了你一眼之后便匆匆地返回了小教堂。
 	</p>
 	<p>
-		Thankfully, it only takes a couple of minutes before the spell finally wears off, and with the smell of demonic cum still in the air around you, you continue on your travels...
+		值得庆幸的是，只过了几分钟，咒语就消失了，但周围的空气中还弥漫着恶魔精液的味道，你需要继续前进了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_POST_DOM_SEX -->
@@ -308,13 +308,13 @@
 	<htmlContent tag="ENCOUNTER_CHAPEL_POST_DOM_SEX"><![CDATA[
 	<p>
 		#IF(npc.isSatisfiedFromLastSex())
-			You step back from the altar, grinning down at the witch as she lets out a deeply satisfied sigh. You quickly get your things in order, and before you turn to leave, the succubus calls out, [npc.speech(Come visit me again! Next time, I'll be the one using you!)]
+			你从祭坛上退下来，然后笑看着女巫，她深深地叹了一口气。你迅速整理好自己的东西，转身离开。魅魔叫道：[npc.speech(下次再来找我！到时候就是我来上你了！)]
 		#ELSE
-			You step back from the altar, grinning down at the witch as she lets out a deeply frustrated moan. You quickly get your things in order, and before you turn to leave, the succubus calls out, [npc.speech(You didn't even let me get off! Next time, I'll be the one using you!)]
+			你从祭坛上退下来，然后笑看着女巫，她发出深重且沮丧的呻吟声。你迅速整理好自己的东西，转身离开。魅魔叫道：[npc.speech(你甚至都没让我高潮！下次！下次就是我来上你了！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENCOUNTER_CHAPEL_POST_DOM_SEALED_SEX -->
@@ -322,13 +322,13 @@
 	<htmlContent tag="ENCOUNTER_CHAPEL_POST_DOM_SEALED_SEX"><![CDATA[
 	<p>
 		#IF(npc.isSatisfiedFromLastSex())
-			You step back from the altar, grinning down at the witch as she lets out a deeply satisfied sigh. You quickly get your things in order, and before you turn to leave, the Witch's Seal starts to wear off, allowing [npc.name] to call out, [npc.speech(Come visit me again! Next time, I'll be the one using you!)]
+				你从祭坛上退下来，然后笑看着女巫，她深深地叹了一口气。你迅速整理好自己的东西，转身离开。封印开始消散，魅魔趁机叫道：[npc.speech(下次再来找我！到时候就是我来上你了！)]
 		#ELSE
-			You step back from the altar, grinning down at the witch as she lets out a deeply frustrated moan. You quickly get your things in order, and before you turn to leave, the Witch's Seal starts to wear off, allowing [npc.name] to call out, [npc.speech(You didn't even let me get off! Next time, I'll be the one using you!)]
+			你从祭坛上退下来，然后笑看着女巫，她发出深重且沮丧的呻吟声。你迅速整理好自己的东西，转身离开。封印开始消散，魅魔趁机叫道：[npc.speech(你甚至都没让我高潮！下次！下次就是我来上你了！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 </dialogue>

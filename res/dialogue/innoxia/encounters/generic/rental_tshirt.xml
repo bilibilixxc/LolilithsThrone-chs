@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="start">
@@ -81,7 +81,7 @@
 			#ENDIF
 		]]></preParsingEffects>
 		<title><![CDATA[
-			A Customer Approaches
+			一个顾客走近
 		]]></title>
 		<author><![CDATA[Innoxia]]></author>
 		<content folderPath="txt/encounters/generic/rental_tshirt">START</content>
@@ -93,8 +93,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Turn down [npc.namePos] offer and continue on your way.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝[npc.namePos]的提议，继续走路。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -108,10 +108,10 @@
 				<availabilityConditional><![CDATA[[#!npc.hasFetish(FETISH_EXHIBITIONIST) && npc.hasFetish(FETISH_DOMINANT)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex (+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
+				<responseTitle><![CDATA[做爱(+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Agree to [npc.namePos] offer and allow [npc.herHim] to lead you to [npc.her] nearby apartment so that you can get fucked in privacy.
-					<br/>[style.italicsGood(You will gain:)] [style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
+					同意[npc.namePos]的提议，让[npc.herHim]把你带到附近的公寓私下做爱。
+					<br/>[style.italicsGood(你会得到：)][style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -143,10 +143,10 @@
 				<availabilityConditional><![CDATA[[#!npc.hasFetish(FETISH_EXHIBITIONIST) && !npc.hasFetish(FETISH_DOMINANT)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex (+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
+				<responseTitle><![CDATA[做爱(+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Agree to [npc.namePos] offer and accompany [npc.herHim] to [npc.her] nearby apartment so that you can fuck [npc.herHim] in privacy.
-					<br/>[style.italicsGood(You will gain:)] [style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
+					同意[npc.namePos]的提议并陪同[npc.her]到附近的公寓私下操[npc.herHim]。
+					<br/>[style.italicsGood(你会得到：)][style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -180,10 +180,10 @@
 				<availabilityConditional><![CDATA[[#npc.hasFetish(FETISH_EXHIBITIONIST) && npc.hasFetish(FETISH_DOMINANT)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Public sex (+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
+				<responseTitle><![CDATA[公开做爱 (+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Agree to [npc.namePos] offer and allow [npc.herHim] to fuck you right here in full view of the public.
-					<br/>[style.italicsGood(You will gain:)] [style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
+					同意[npc.namePos]的提议并允许[npc.herHim]就在这操你。
+					<br/>[style.italicsGood(你会得到：)][style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -215,10 +215,10 @@
 				<availabilityConditional><![CDATA[[#npc.hasFetish(FETISH_EXHIBITIONIST) && !npc.hasFetish(FETISH_DOMINANT)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Public sex (+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
+				<responseTitle><![CDATA[公开做爱 (+[style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Agree to [npc.namePos] offer and fuck [npc.herHim] right here in full view of the public.
-					<br/>[style.italicsGood(You will gain:)] [style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
+					同意[npc.namePos]的提议，就在这操[npc.herHim]。
+					<br/>[style.italicsGood(你会得到：)][style.moneyFormat([#flags.getSavedLong('rentalPrice')], span)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -252,8 +252,8 @@
 	<!-- After sex: -->
 	
 	<scene id="after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having had [npc.her] fun, [npc.name] sighs that [npc.sheHas] had enough...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[npc.her]爽够了，[npc.Name]长叹一口气……]]></tooltip>
 		<content folderPath="txt/encounters/generic/rental_tshirt">AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -262,10 +262,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[
-					Leave [npc.namePos] apartment and continue on your way...
-				]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开[npc.namePos]的公寓，然后继续旅行……
+]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -277,8 +276,8 @@
 	</scene>
 	
 	<scene id="after_sex_public">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having had [npc.her] fun, [npc.name] sighs that [npc.sheHas] had enough...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[npc.her]爽够了，[npc.Name]长叹一口气……]]></tooltip>
 		<content folderPath="txt/encounters/generic/rental_tshirt">AFTER_SEX_PUBLIC</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -287,10 +286,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[
-					Leave [npc.namePos] behind and continue on your way...
-				]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[把[npc.name]甩在身后，继续旅程……
+]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[

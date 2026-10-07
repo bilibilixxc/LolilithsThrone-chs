@@ -7,13 +7,13 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum NippleShape {
 
-	NORMAL("normal", false),
+	NORMAL("普通", false),
 	
-	INVERTED("inverted", false),
+	INVERTED("内陷", false),
 	
-	VAGINA("nipple-cunts", true),
+	VAGINA("乳穴", true),
 	
-	LIPS("lipples", true);
+	LIPS("乳唇", true);
 	
 	private String descriptor;
 	private boolean associatedWithPenetrationContent;

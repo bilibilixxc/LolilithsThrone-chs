@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>200</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[stomach sarashi]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[stomach sarashis]]></namePlural> 
-		<description><![CDATA[A long strip of thick cotton, wrapped around the stomach as an added layer of protection, or to gain a slim figure.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[束腰布]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[束腰布]]></namePlural> 
+		<description><![CDATA[一条由厚棉布制成的长布条，包裹在腹部作为额外的保护层，或单纯让腰显得更细。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity> 
 		<slot>STOMACH</slot> 
@@ -50,25 +50,19 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(wrap)] the sarashi around [npc.her] stomach.
-		]]></self>
+[npc.Name]将束腰布紧紧的缠在[npc.her]的腹部上。]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(wrap)] the sarashi around [npc2.namePos] stomach.
-		]]></other>
+[npc.Name]将束腰布紧紧的缠在[npc2.namePos]的腹部上。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(bind)] the sarashi around [npc2.namePos] stomach.
-		]]></otherRough>
+[npc.Name]粗暴地将束腰布紧紧的绑在[npc2.namePos]的腹部上。]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(unwrap)] the sarashi from around [npc.her] stomach and [npc.verb(take)] it off.
-		]]></self>
+[npc.Name]松开[npc.her]腹部的束腰布并将其解下。]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(unwrap)] the sarashi from around [npc2.namePos] stomach and [npc.verb(take)] it off.
-		]]></other>
+[npc.Name]松开[npc2.namePos]腹部的束腰布并将其解下。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(unwrap)] the sarashi from around [npc2.namePos] stomach and [npc.verb(yank)] it off.
-		]]></otherRough>
+[npc.Name]撕开[npc2.namePos]腹部的束腰布并将其扯下。]]></otherRough>
 	</displacementText>
 	
 </clothing>

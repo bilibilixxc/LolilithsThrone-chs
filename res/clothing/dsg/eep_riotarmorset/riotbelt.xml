@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[On the inside of the left thigh panel, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在左护腿板内侧，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>1000</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's riot belt]]></name>
+		<name><![CDATA[执法者防暴腰带]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's riot belt]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者防暴腰带]]></namePlural> 
 
-		<description><![CDATA[A heavy duty belt with a codpiece and a set of ballistic fibre thigh panels attached to it. The odd shape of the thigh panels come from the metallic inserts in them.]]></description> 
+		<description><![CDATA[一条加装了护裆板和防弹纤维护腿的重型防暴腰带，护腿板上奇怪的凸起来自于防弹纤维外的金属插板。]]></description> 
 
 		<physicalResistance>10</physicalResistance> 
 
@@ -91,51 +90,37 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the riot belt up around [npc.her] waist and [npc.verb(adjust)] the thigh panels and codpiece until they're comfortable.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the riot belt up around [npc2.namePos] waist and [npc.verb(help)] [npc2.her] [npc2.verb(adjust)] the thigh panels and codpiece until they're comfortable.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the riot belt around [npc2.namePos] waist and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将防爆腰带系在[npc.her]的腰上，并调整了护裆和护腿板的位置，直到变得能够活动自如。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将防暴腰带围在[npc2.namePos]的身上，并帮助[npc2.her]调整护裆和护腿，直到能够活动自如。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将防爆腰带围在[npc2.namePos]的身上，并匆忙的拉紧卡扣。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] riot belt before unbuckling it.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] riot belt before unbuckling it.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] riot belt before unbuckling it and tossing them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了防爆腰带的卡扣并脱了下来。]]></self>
+		<other><![CDATA[
+[npc.Name]松开了[npc2.namePos]的防暴腰带上的卡扣并脱了下来。]]></other>
+		<otherRough><![CDATA[[npc.Name]扯开[npc2.namePos]防暴腰带的卡扣并丢在了一边。]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_DOWN">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the codpiece on [npc.her] riot belt back down and [npc.verb(tighten)] the adjustment straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the codpiece on [npc.her] riot belt back down and [npc.verb(tighten)] the adjustment straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(flip)] the codpiece on [npc.her] riot belt back down and roughly [npc.verb(tighten)] the adjustment straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的腰带上的护裆板拉低并收紧了调节带。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc.her]的腰带上的护裆板拉低并收紧了调节带。]]></other>
+		<otherRough><![CDATA[[npc.Name]将护裆板向下扯了扯并草草的拉紧了调节带。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the codpiece on [npc.her] riot belt before lifting it up.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the codpiece on [npc2.namePos] riot belt before lifting it up.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tug)] at the codpiece on [npc2.namePos] riot belt until it's loose enough before flipping it up.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]腰带上的护裆板，并移到了一边。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]防暴腰带上的护裆拉开并移到一边。]]></other>
+		<otherRough><![CDATA[[npc.Name]猛地拽[npc2.namePos]的护裆板，当护裆板松开以后将它翻了起来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

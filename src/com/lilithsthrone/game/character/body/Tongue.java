@@ -96,17 +96,17 @@ public class Tongue implements BodyPartInterface {
 
 	public String setPierced(GameCharacter owner, boolean pierced) {
 		if(this.pierced == pierced) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.pierced = pierced;
 		
 		if(pierced) {
 			if(owner.isPlayer()) {
-				return "<p>Your [pc.tongue] is now [style.boldGrow(pierced)]!</p>";
+				return "<p>你的[pc.tongue]现在已[style.boldGrow(穿孔)]！</p>";
 			} else {
 				return UtilText.parse(owner,
-						"<p>[npc.NamePos] [npc.tongue] is now [style.boldGrow(pierced)]!</p>");
+						"<p>[npc.NamePos]的[npc.tongue]现在已[style.boldGrow(穿孔)]！</p>");
 			}
 			
 		} else {
@@ -119,13 +119,13 @@ public class Tongue implements BodyPartInterface {
 			
 			if(owner.isPlayer()) {
 				return "<p>"
-							+ "Your [pc.tongue] is [style.boldShrink(no longer pierced)]!"
+							+ "你的[pc.tongue][style.boldShrink(不再有穿孔了)]！"
 						+ "</p>"
 						+piercingUnequip;
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.NamePos] [npc.tongue] is [style.boldShrink(no longer pierced)]!"
+								+ "[npc.NamePos]的[npc.tongue][style.boldShrink(不再有穿孔了)]！"
 						+ "</p>"
 						+piercingUnequip);
 			}
@@ -147,32 +147,32 @@ public class Tongue implements BodyPartInterface {
 		
 		if(sizeChange == 0) {
 			if(owner.isPlayer()) {
-				return "<p style='text-align:center;'>[style.colourDisabled(The length of your [pc.tongue] doesn't change...)]</p>";
+				return "<p style='text-align:center;'>[style.colourDisabled(你[pc.tongue]的程度没有变化……)]</p>";
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The length of [npc.namePos] [npc.tongue] doesn't change...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.tongue]的长度没有变化……)]</p>");
 			}
 		}
 		
 		if(sizeChange < 0) {
 			if(owner.isPlayer()) {
-				return "<p>A soothing coolness rises up into your [pc.tongue], causing you to let out a surprised gasp as you feel it [style.boldShrink(getting shorter)].<br/>"
-						+ "You now have "+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+" [style.boldTfGeneric("
-						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+" [pc.tongue])]!</p>";
+				return "<p>一股舒缓的微凉感从[pc.tongue]上升起，你惊呼一声，感觉到[pc.tongue][style.boldShrink(变短了)]。<br/>"
+						+ "你现在拥有"+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+"[style.boldTfGeneric("
+						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+"的[pc.tongue])]！</p>";
 			} else {
-				return UtilText.parse(owner, "<p>[npc.Name] lets out a little cry as [npc.she] feels a soothing coolness rise up into [npc.her] [npc.tongue], before it suddenly [style.boldShrink(gets shorter)].<br/>"
-						+ "[npc.Name] now has "+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+" [style.boldTfGeneric("
-						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+" [npc.tongue])]!</p>");
+				return UtilText.parse(owner, "<p>[npc.Name]感觉到[npc.tongue]上升起一丝舒缓的凉意，忍不住轻呼一声，随后[npc.tongue]便突然[style.boldShrink(变短了)]。<br/>"
+						+ "[npc.Name]现在拥有"+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+"[style.boldTfGeneric("
+						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+"的[npc.tongue])]！</p>");
 			}
 			
 		} else {
 			if(owner.isPlayer()) {
-				return "<p>A pulsating warmth rises up into your [pc.tongue], causing you to let out a surprised gasp as you feel it [style.boldGrow(growing longer)].<br/>"
-						+ "You now have "+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+" [style.boldTfGeneric("
-						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+" [pc.tongue])]!</p>";
+				return "<p>一股脉动的暖意从[pc.tongue]上升起，你惊呼一声，感觉到[pc.tongue][style.boldGrow(变长了)]。<br/>"
+						+ "你现在拥有"+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+"[style.boldTfGeneric("
+						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+"的[pc.tongue])]！</p>";
 			} else {
-				return UtilText.parse(owner, "<p>[npc.Name] lets out a little cry as [npc.she] feels a pulsating warmth rise up into [npc.her] [npc.tongue], before it suddenly [style.boldGrow(grows longer)].<br/>"
-						+ "[npc.Name] now has "+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+" [style.boldTfGeneric("
-						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+" [npc.tongue])]!</p>");
+				return UtilText.parse(owner, "<p>[npc.Name]感觉到[npc.tongue]上升起一丝脉动的暖意，忍不住轻呼一声，随后[npc.tongue]便突然[style.boldGrow(变长了)]。<br/>"
+						+ "[npc.Name]现在拥有"+UtilText.generateSingularDeterminer(Util.intToString(this.tongueLength))+"[style.boldTfGeneric("
+						+ Units.size(this.tongueLength, Units.UnitType.LONG_SINGULAR)+"的[npc.tongue])]！</p>");
 			}
 		}
 	}
@@ -183,7 +183,7 @@ public class Tongue implements BodyPartInterface {
 
 	public String addTongueModifier(GameCharacter owner, TongueModifier modifier) {
 		if(hasTongueModifier(modifier)) {
-			return !isCharacterInitialised(owner) ? "" : "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return !isCharacterInitialised(owner) ? "" : "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		tongueModifiers.add(modifier);
@@ -196,40 +196,40 @@ public class Tongue implements BodyPartInterface {
 		sb.append("<p>");
 			switch(modifier) {
 				case RIBBED:
-					sb.append("[npc.Name] [npc.verb(feel)] an intense pressure building up at the back of [npc.her] throat, but before [npc.she] [npc.has] a chance to panic it suddenly fades away,"
-									+ " leaving [npc.herHim] with a series of [style.boldGrow(hard, fleshy ribs)] lining [npc.her] [npc.tongue].<br/>"
-								+ "[style.boldSex([npc.NamePos] [npc.tongue] is now ribbed!)]");
+					sb.append("[npc.Name]感到一阵强烈的压力不断从喉头处产生，[npc.she]还没来得及慌张，这种感觉便消失了，"
+									+ "[npc.tongue]上现在衬着[style.boldGrow(稍硬的肉质螺纹)]。<br/>"
+								+ "[style.boldSex([npc.NamePos]的[npc.tongue]现在长有螺纹！)]");
 					break;
 				case TENTACLED:
-					sb.append("[npc.Name] [npc.verb(feel)] an intense pressure building up at the back of [npc.her] throat, and [npc.she] [npc.verb(let)] out an involuntary gasp as [npc.she] [npc.verb(feel)]"
-									+ " [style.boldGrow(a series of little wriggling tentacles)] grow to cover [npc.her] [npc.tongue].<br/>"
-								+ "[style.boldSex([npc.NamePos] [npc.tongue] is now covered with little tentacles, which wriggle with a mind of their own!)]");
+					sb.append("[npc.Name]感到强烈的压力不断从喉头处产生，于是不由自主地倒吸了一口凉气，"
+									+ "[style.boldGrow(一连串扭动的细小触手)]布满了[npc.tongue]。<br/>"
+								+ "[style.boldSex([npc.NamePos]的[npc.tongue]现在覆盖着细小的触手，自行蜿蜒扭动着！)]");
 					break;
 				case BIFURCATED:
-					sb.append("[npc.Name] [npc.verb(feel)] an intense pressure building up at the back of [npc.her] throat, and [npc.she] [npc.verb(let)] out an involuntary cry as [npc.she] [npc.verb(feel)]"
-									+ " [style.boldGrow(the end of [npc.her] [npc.tongue] split in two)].<br/>"
-								+ "[style.boldSex([npc.NamePos] [npc.tongue] is now bifurcated, like a snake's!)]");
+					sb.append("[npc.Name]感到强烈的压力不断从喉头处产生，于是不由自主地叫了出来，"
+									+ "[style.boldGrow([npc.her][npc.tongue]的顶端一分为二)]了。<br/>"
+								+ "[style.boldSex([npc.NamePos]的[npc.tongue]现在像蛇一样分叉了！)]");
 					break;
 				case STRONG:
-					sb.append("[npc.Name] [npc.verb(feel)] a steady pressure building up at the back of [npc.her] throat, but before [npc.she] can react, the sensation shoots into [npc.her] [npc.tongue], transforming it into"
-									+ " [style.boldGrow(being particularly strong)].<br/>"
-								+ "[style.boldSex([npc.NamePos] [npc.tongue] is now very strong!)]");
+					sb.append("[npc.Name]感到一股平稳的压力不断从喉头处产生，但还没等反应，这感觉便冲向了[npc.tongue]，将其转化"
+									+ "[style.boldGrow(得格外有力)]。<br/>"
+								+ "[style.boldSex([npc.NamePos]的[npc.tongue]现在非常强壮！)]");
 					break;
 				case FLAT:
-					sb.append("[npc.Name] [npc.verb(feel)] a steady pressure building up at the back of [npc.her] throat, but before [npc.she] can react, the sensation shoots into [npc.her] [npc.tongue], transforming it into"
-									+ " [style.boldGrow(being particularly flat)].<br/>"
-								+ "[style.boldSex([npc.NamePos] [npc.tongue] is now particularly flat!)]");
+					sb.append("[npc.Name]感到一股平稳的压力不断从喉头处产生，但还没等反应，这感觉便冲向了[npc.tongue]，将其转化"
+									+ "[style.boldGrow(得格外平直)]。<br/>"
+								+ "[style.boldSex([npc.NamePos]的[npc.tongue]现在又平又直！)]");
 					break;
 				case WIDE:
-					sb.append("[npc.Name] [npc.verb(feel)] a steady pressure building up at the back of [npc.her] throat, but before [npc.she] can react, the sensation shoots into [npc.her] [npc.tongue], transforming it into"
-									+ " [style.boldGrow(being particularly wide)].<br/>"
-								+ "[style.boldSex([npc.NamePos] [npc.tongue] is now particularly wide!)]");
+					sb.append("[npc.Name]感到一股平稳的压力不断从喉头处产生，但还没等反应，这感觉便冲向了[npc.tongue]，将其转化"
+									+ "[style.boldGrow(得格外宽大)]。<br/>"
+								+ "[style.boldSex([npc.NamePos]的[npc.tongue]现在格外宽大！)]");
 					break;
 				case TAPERED:
 					return "<p>"
-							+ "[npc.Name] [npc.verb(feel)] a constricting pressure on all sides of [npc.her] [npc.tongue], and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)]"
-							+ " [style.boldGrow(it taper down towards the tip)].<br/>"
-							+ "[style.boldSex([npc.NamePos] [npc.tongue] is now tapered!)]"
+							+ "[npc.Name]感到一阵从[npc.tongue]四面八方袭来的收缩感，于是倒吸了一口凉气，[npc.tongue]"
+							+ "[style.boldGrow(变为锥形，越靠近顶端变得越细)]。<br/>"
+							+ "[style.boldSex([npc.NamePos]的[npc.tongue]现在是锥形的！)]"
 						+ "</p>";
 			}
 		sb.append("</p>");
@@ -239,7 +239,7 @@ public class Tongue implements BodyPartInterface {
 
 	public String removeTongueModifier(GameCharacter owner, TongueModifier modifier) {
 		if(!hasTongueModifier(modifier)) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		tongueModifiers.remove(modifier);
@@ -247,50 +247,50 @@ public class Tongue implements BodyPartInterface {
 		switch(modifier) {
 			case RIBBED:
 				return "<p>"
-							+ "[npc.Name] [npc.verb(feel)] a soft coolness rising up into [npc.her] [npc.tongue], but it suddenly fades away before [npc.she] [npc.has] a chance to react,"
-								+ " [style.boldShrink(removing)] [npc.her] hard, fleshy ribs in the process.<br/>"
-							+ "[style.boldSex([npc.NamePos] [npc.tongue] is no longer ribbed!)]"
+							+ "[npc.Name]感到一股轻微的凉意从[npc.tongue]上升起，但这感觉转瞬即逝，还没等[npc.she]做出任何反应，"
+								+ "那稍硬的肉质螺纹便[style.boldShrink(消失了)]。<br/>"
+							+ "[style.boldSex([npc.NamePos]的[npc.tongue]不再有螺纹了！)]"
 						+ "</p>";
 			case TENTACLED:
 				return "<p>"
-							+ "[npc.Name] [npc.verb(feel)] a soft coolness rising up into [npc.her] [npc.tongue], and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)] [npc.her]"
-								+ " [style.boldShrink(little wriggling tentacles disappear)].<br/>"
-							+ "[style.boldSex([npc.NamePos] [npc.tongue] is no longer covered with little tentacles!)]"
+							+ "[npc.Name]感到一股轻微的凉意从[npc.tongue]上升起，于是倒吸了一口凉气，"
+								+ "[style.boldShrink(那扭动的细小触手便消失了)]。<br/>"
+							+ "[style.boldSex([npc.NamePos]的[npc.tongue]不再覆盖细小的触手了！)]"
 						+ "</p>";
 			case BIFURCATED:
 				return "<p>"
-							+ "[npc.Name] [npc.verb(feel)] a soft coolness rising up into [npc.her] [npc.tongue], and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)]"
-							+ " [style.boldShrink(it fuse back into a single point)].<br/>"
-							+ "[style.boldSex([npc.NamePos] [npc.tongue] is no longer bifurcated!)]"
+							+ "[npc.Name]感到一股轻微的凉意从[npc.tongue]上升起，于是倒吸了一口凉气，"
+							+ "[style.boldShrink(尖端便融合在了一起)]。<br/>"
+							+ "[style.boldSex([npc.NamePos]的[npc.tongue]不再分叉了！)]"
 						+ "</p>";
 			case FLAT:
 				return "<p>"
-							+ "[npc.Name] [npc.verb(feel)] a pulsating pressure rising up into [npc.her] [npc.tongue], and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)]"
-							+ " [style.boldShrink(it thicken up)].<br/>"
-							+ "[style.boldSex([npc.NamePos] [npc.tongue] is no longer particularly flat!)]"
+							+ "[npc.Name]感到一股脉动的压力从[npc.tongue]上升起，于是倒吸了一口凉气，[npc.tongue]"
+							+ "[style.boldShrink(更厚了)]。<br/>"
+							+ "[style.boldSex([npc.NamePos]的[npc.tongue]不再那么平直了！)]"
 						+ "</p>";
 			case STRONG:
 				return "<p>"
-						+ "[npc.Name] [npc.verb(feel)] a pulsating pressure rising up into [npc.her] [npc.tongue], and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)]"
-						+ " [style.boldShrink(it soften and lose strength)].<br/>"
-						+ "[style.boldSex([npc.NamePos] [npc.tongue] is no longer extra strong!)]"
+						+ "[npc.Name]感到一股脉动的压力从[npc.tongue]上升起，于是倒吸了一口凉气，[npc.tongue]"
+						+ "[style.boldShrink(软了下来，失去了力量)]。<br/>"
+						+ "[style.boldSex([npc.NamePos]的[npc.tongue]不再格外有力了！)]"
 					+ "</p>";
 			case WIDE:
 				return "<p>"
-						+ "[npc.Name] [npc.verb(feel)] a pulsating pressure rising up into [npc.her] [npc.tongue], and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)]"
-						+ " [style.boldShrink(it narrow down)].<br/>"
-						+ "[style.boldSex([npc.NamePos] [npc.tongue] is no longer particularly wide!)]"
+						+ "[npc.Name]感到一股脉动的压力从[npc.tongue]上升起，于是倒吸了一口凉气，[npc.tongue]"
+						+ "[style.boldShrink(缩窄了)]。<br/>"
+						+ "[style.boldSex([npc.NamePos]的[npc.tongue]不再那么宽大了！)]"
 					+ "</p>";
 			case TAPERED:
 				return "<p>"
-						+ "[npc.Name] [npc.verb(feel)] a pulsating pressure building up within [npc.her] [npc.tongue], and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)]"
-						+ " [style.boldShrink(it fill out and lose its tapered point)].<br/>"
-						+ "[style.boldSex([npc.NamePos] [npc.tongue] is no longer tapered!)]"
+						+ "[npc.Name]感到一股脉动的压力不断从[npc.tongue]上产生，于是倒吸了一口凉气，[npc.tongue]"
+						+ "[style.boldShrink(展了开来，不再是尖头的了)]。<br/>"
+						+ "[style.boldSex([npc.NamePos]的[npc.tongue]不再是锥形的了！)]"
 					+ "</p>";
 		}
 		
 		// Catch:
-		return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+		return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 	}
 
 	public void resetTongueModifiers() {

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-    <clothingAuthorTag><![CDATA[Small engraved lettering informs you that these piercings were made by 'Norin'.]]></clothingAuthorTag>
+    <clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
 		<value>800</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[bat earring]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[bat earrings]]></namePlural>
-		<description><![CDATA[A pair of cute bat earrings.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[蝙蝠耳坠]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[蝙蝠耳坠]]></namePlural>
+		<description><![CDATA[一对可爱蝙蝠耳坠。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>PIERCING_EAR</slot> 
@@ -35,11 +35,11 @@
     <secondaryColours>
       <colour>CLOTHING_RED_DARK</colour>
     </secondaryColours>
-		<secondaryColoursDye values ="ALL"/>
+		<secondaryColoursDye values="ALL"/>
     <tertiaryColours>
       <colour>CLOTHING_RED_DARK</colour>
     </tertiaryColours>
-    <tertiaryColoursDye values ="ALL"/>
+    <tertiaryColoursDye values="ALL"/>
 		
 		<itemTags> 
 			<tag>SOLD_BY_KATE</tag>
@@ -47,27 +47,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the bat earrings into [npc.her] [npc.ears].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the bat earrings into [npc2.namePos] [npc2.ears].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(clip)] the bat earrings into [npc2.namePos] [npc2.ears].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将蝙蝠耳坠戴在[npc.her]的[npc.ears]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将蝙蝠耳坠戴在[npc2.namePos]的[npc2.ears]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将蝙蝠耳坠穿在[npc2.namePos]的[npc2.ears]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] bat earrings and [npc.verb(take)] them out.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] bat earrings and [npc.verb(take)] them out.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] bat earrings and roughly [npc.verb(pull)] them out.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的蝙蝠耳坠摘了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的蝙蝠耳坠摘了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的蝙蝠耳坠扯了下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

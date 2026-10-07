@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>120</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[ball stud earring]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[ball stud earrings]]></namePlural>
-		<description><![CDATA[A pair of basic, ball stud earrings, consisting of a thin cylinder topped with a metal sphere.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[球形耳钉]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[球形耳钉]]></namePlural>
+		<description><![CDATA[一对基本的圆珠耳钉。是由一个细长的圆柱体和一个金属球顶部组成的耳钉。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>PIERCING_EAR</slot> 
@@ -42,27 +42,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the ball stud earrings into [npc.her] [npc.ears].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the ball stud earrings into [npc2.namePos] [npc2.ears].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(clip)] the ball stud earrings into [npc2.namePos] [npc2.ears].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将球形耳钉戴在[npc.her]的[npc.ears]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将球形耳钉戴在[npc2.namePos]的[npc2.ears]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将球形耳钉穿在[npc2.namePos]的[npc2.ears]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] ball stud earrings and [npc.verb(take)] them out.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] ball stud earrings and [npc.verb(take)] them out.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] ball stud earrings and roughly [npc.verb(pull)] them out.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的球形耳钉摘了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解下[npc2.namePos]耳垂上球形耳钉的别针，摘下它们。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的球形耳钉扯了下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

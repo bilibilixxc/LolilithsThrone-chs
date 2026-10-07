@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
-		<authorTag><![CDATA[Sewn into the inside, a tag reads "MFD by Threadworks."]]></authorTag>
+		<authorTag><![CDATA[内侧缝着一个小标签写着“织厂制造。”]]></authorTag>
 		<value>150</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[canvas brassard]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[canvas brassards]]></namePlural>
-		<description><![CDATA[A band of heavy cotton fabric designed to be worn around the arm and provide easy identification when uniforms are not available or desirable. You have never seen the insignia sewn into it before.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[帆布臂带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[帆布臂带]]></namePlural>
+		<description><![CDATA[一条厚重的棉质织物带，设计用于手臂周围，在没有制服或不需要制服时便于识别身份。你以前从未见过缝在上面的徽章。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>WRIST</slot>
@@ -48,27 +47,27 @@
 	</coreAtributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the brassard around [npc.her] arm.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the brassard around [npc2.namePos] arm.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the brassard up around [npc2.namePos] arm.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将臂带戴在[npc.her]的手臂上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将臂带戴在[npc2.namePos]的胳膊上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将臂带捆到[npc2.namePos]的手臂上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the brassard off of [npc.her] arm.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the brassard off of [npc2.namePos] arm.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] the brassard off of [npc2.namePos] arm.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将臂带从[npc.her]的胳膊上摘下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将臂带从[npc2.namePos]的胳膊上摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]猛地将臂带从[npc2.namePos]的胳膊上拽下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>600</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[hard hat]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[hard hats]]></namePlural>
-		<description><![CDATA[A protective piece of equipment, typically worn by construction workers while on a building site. It's made out of a hard plastic, and is designed to shield the wearer's head from falling debris and other such hazards.]]></description>
+		<determiner><![CDATA[一顶]]></determiner>
+		<name><![CDATA[安全帽]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[安全帽]]></namePlural>
+		<description><![CDATA[一种防护装备，通常由建筑工人在工地上佩戴。它由坚硬的塑料制成，旨在保护佩戴者的头部免受坠落碎片和其他类似危险物的伤害。]]></description>
 		<physicalResistance>3</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -47,27 +46,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the hard hat onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the hard hat onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the hard hat onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将安全帽戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将安全帽戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将安全帽戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] hard hat.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] hard hat.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] hard hat.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的安全帽脱下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的安全帽脱下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的安全帽。
+]]></otherRough>
   </displacementText>
   
 </clothing>

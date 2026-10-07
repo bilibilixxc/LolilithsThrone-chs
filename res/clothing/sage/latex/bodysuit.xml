@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
 		<value>3900</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[latex bodysuit]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[latex bodysuits]]></namePlural>
-		<description><![CDATA[A tight shiny latex bodysuit worn by high ranking members of the church of Lilith, it looks like liquid oil and conforms to every curve in an almost sinful way.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[乳胶紧身衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乳胶紧身衣]]></namePlural>
+		<description><![CDATA[一件莉莉丝异教高级成员所穿的闪亮乳胶紧身衣，表面看起来就像油一样，以一种近乎罪恶的方式贴合每一处身体曲线。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>STOMACH</slot>
@@ -52,7 +51,7 @@
 			
 			<blockedParts>
 				<displacementType>PULLS_DOWN</displacementType>
-				<clothingAccessRequired />
+				<clothingAccessRequired/>
 				<blockedBodyParts>
 					<bodyPart>NIPPLES</bodyPart>
 					<bodyPart>BREASTS</bodyPart>
@@ -68,7 +67,7 @@
 			
 			<blockedParts>
 				<displacementType>SHIFTS_ASIDE</displacementType>
-				<clothingAccessRequired />
+				<clothingAccessRequired/>
 				<blockedBodyParts>
 					<bodyPart>ASS</bodyPart>
 					<bodyPart>ANUS</bodyPart>
@@ -109,26 +108,26 @@
 	</coreAtributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] on [npc.her] bodysuit, before buckling it up.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.name] into the bodysuit, before buckling [npc2.herHim] up.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.name] into the bodysuit, before impatiently buckling [npc2.herHim] up.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]穿上[npc.her]的紧身衣，然后扣紧搭扣。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]引导[npc2.name]穿进紧身衣里，然后将[npc2.herHim]的搭扣扣好。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地将[npc2.name]塞进紧身衣里，然后不耐烦地将[npc2.herHim]的搭扣扣好。
+		]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] bodysuit, before pulling it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] bodysuit, before pulling it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unbuckle)] [npc2.namePos] bodysuit, before impatiently pulling it off.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开[npc.her]紧身衣的搭扣，然后将其脱掉。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]紧身衣的搭扣，然后将其脱掉。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地解开[npc2.namePos]紧身衣的搭扣，然后不耐烦地将其脱下。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tail>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[furred spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛(覆毛)]]></transformationName>
 	<coveringType>charisma_spider_chitinFluffy</coveringType>
 	<spinneret>true</spinneret>
 	<defaultGirth>6</defaultGirth>
@@ -12,29 +12,29 @@
 	</tags>
 	<determiner><![CDATA[]]></determiner>
 	<determinerPlural><![CDATA[]]></determinerPlural> 
-	<name><![CDATA[abdomen]]></name>
-	<namePlural><![CDATA[abdomens]]></namePlural> 
+	<name><![CDATA[腹部]]></name>
+	<namePlural><![CDATA[腹部]]></namePlural> 
 	<descriptorsMasculine>
-		<descriptor>spider-like</descriptor>
-		<descriptor>smooth</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[光滑]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>spider-like</descriptor>
-		<descriptor>smooth</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[光滑]]></descriptor>
 	</descriptorsFeminine>
-	<tipName><![CDATA[tip]]></tipName>
-	<tipNamePlural><![CDATA[tips]]></tipNamePlural>
+	<tipName><![CDATA[尖端]]></tipName>
+	<tipNamePlural><![CDATA[尖端]]></tipNamePlural>
 	<tipDescriptorsMasculine>
-		<descriptor>pointed</descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
 	</tipDescriptorsMasculine>
 	<tipDescriptorsFeminine>
-		<descriptor>pointed</descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
 	</tipDescriptorsFeminine>
 	<transformationDescription><![CDATA[
-		A chitinous, oval-shaped spider's abdomen sprouts from just above [npc.her] ass, rapidly growing in size until it's about [npc.tailLength] long and over half that in width. [npc.She] then [npc.verb(realise)] that the transformation isn't done, as after a tingling sensation has run up from the tip of [npc.her] new abdomen, [npc.she] [npc.verb(feel)] a deep channel taking form within it. Instinctively, [npc.she] [npc.verb(know)] that this channel is [npc.her] new spinneret, and [npc.she] [npc.verb(feel)] it immediately starting to produce silk.
-		<br/>[npc.Name] now [npc.has] a [style.boldSpider(spider-like abdomen)], [npc.materialDescriptor] [npc.tailFullDescription(true)].
-	]]></transformationDescription>
+		一个几丁质外表的囊状蜘蛛腹部，从尾椎处延伸而出，迅速生长至大概有[npc.tailLength]长，宽度大约是长度的一半。新生腹部尖端的刺痛感让[npc.She]意识到转化尚未完成，[npc.she]感受到内部形成了一条深深的通道，瞬间明白这条通道就是新生的丝囊。丝囊立刻就开始生产蛛丝了。
+		<br/>[npc.Name]现在拥有一个[style.boldSpider(蜘蛛般的腹部)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		Growing out from just above [npc.her] ass, [npc.sheHasFull] a #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF [npc.tailColour(true)] spider abdomen, complete with a spinneret.
-	]]></bodyDescription>
+		[npc.sheHasFull]的尾椎处延伸出一个#IF(npc.isTailFeral())[style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]蜘蛛腹部，附带有丝囊。
+]]></bodyDescription>
 </tail>

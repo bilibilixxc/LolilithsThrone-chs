@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA["MFD by DSG Sanitary Supply GmbH" is lightly embossed on one edge of the packaging.]]></authorTag>
+		<authorTag><![CDATA[“DSG卫生用品有限公司制造”轻轻压印在包装一侧的边缘。]]></authorTag>
 		
 		<value>10</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[wet wipe]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[wet wipes]]></namePlural>
-		<description><![CDATA[Some foil wrapped, alcohol soaked cotton wipes.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[湿巾]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[湿巾]]></namePlural>
+		<description><![CDATA[一些包裹在箔纸中的酒精湿巾。]]></description> 
 		
-		<useDescriptor>use</useDescriptor>
+		<useDescriptor><![CDATA[使用]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -25,17 +25,16 @@
 		<colourTertiary>CLOTHING_BLUE</colourTertiary>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Cleans all inventory slots)]]]></line>
-			<line><![CDATA[[style.boldGood(Cleans all equipped clothing)]]]></line>
+			<line><![CDATA[[style.boldGood(清洁所有物品栏栏位)]]]></line>
+			<line><![CDATA[[style.boldGood(清洁所有已装备衣物)]]]></line>
 		</effectTooltipLines>
 		
-		<applyEffects><![CDATA[
-			[##npc.cleanAllClothing(false, false)]
-			[##npc.cleanAllDirtySlots(true)]
-			<p style='text-align:center; margin-top:0; padding-top:0;'>
-				Just as [npc.she] [npc.verb(start)] looking for a place to toss the soiled wipe, <b>it disappears, conveniently taking the absorbed filth with it</b>!
-			</p>
-		]]></applyEffects>
+		<applyEffects><![CDATA[[##npc.cleanAllClothing(false, false)]
+[##npc.cleanAllDirtySlots(true)]
+<p style='text-align:center; margin-top:0; padding-top:0;'>
+    当[npc.she]寻找扔掉脏湿巾的地方时，<b>它神奇地消失了，并带走了吸收的污垢</b>！
+</p>
+]]></applyEffects>
 		
 		<itemTags>
 			<tag>SOLD_BY_RALPH</tag>
@@ -43,12 +42,10 @@
 	</coreAttributes>
 
 	<useDescriptions>
-		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(tear)] open the foil packet and [npc.verb(take)] out the wet wipe, before quickly cleaning [npc.herself] with it.
-		]]></selfUse>
-		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(tear)] open the foil packet and [npc.verb(take)] out the wet wipe, before quickly cleaning [npc2.name] with it.
-		]]></otherUse>
+		<selfUse><![CDATA[[npc.Name]撕开箔纸包装袋，取出湿巾，然后迅速用它清洁[npc.herself]。
+]]></selfUse>
+		<otherUse><![CDATA[[npc.Name]撕开箔纸包装袋，取出湿巾，然后迅速用它清洁[npc2.name]。
+]]></otherUse>
 	</useDescriptions>
 
 	

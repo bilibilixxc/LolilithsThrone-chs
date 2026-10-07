@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1000</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[feminine blazer]]></name>
+		<name><![CDATA[女性夹克]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[feminine blazers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[女性夹克]]></namePlural> 
 		
-		<description><![CDATA[A smart blazer, typically worn as part of a business suit. Its cut is such that is only suitable for feminine figures.]]></description> 
+		<description><![CDATA[一件时尚的西装外套，通常作为商务套装的一部分穿着。其板式适合女性身材。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

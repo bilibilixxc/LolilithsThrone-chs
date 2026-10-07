@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>innoxia_deer</race>
 	
-	<transformationName><![CDATA[deer]]></transformationName>
+	<transformationName><![CDATA[鹿]]></transformationName>
 	
 	<coveringType>innoxia_deer_fur</coveringType>
 	
@@ -15,10 +15,10 @@
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldGoat(deer-like)], [npc.assholeFullDescription].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldGoat(鹿般)][npc.assholeFullDescription]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] a deer-like, [npc.anusFullDescription(true)]
-	]]></bodyDescription>
+		拥有鹿般[npc.anusFullDescription(true)]
+]]></bodyDescription>
 </ass>

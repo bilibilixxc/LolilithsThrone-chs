@@ -112,17 +112,17 @@ public class PhoneDialogue {
 			this.species_name = this.female
 					? Util.capitaliseSentence(npc.getSubspecies().getSingularFemaleName(npc.getBody()))
 					: Util.capitaliseSentence(npc.getSubspecies().getSingularMaleName(npc.getBody()));
-			this.mother = (npc.getMother() == null ? "???" : (npc.getMother().isPlayer() ? "[style.colourExcellent(You)]" : Util.capitaliseSentence(npc.getMother().getName(true))));
+			this.mother = (npc.getMother() == null ? "???" : (npc.getMother().isPlayer() ? "[style.colourExcellent(你)]" : Util.capitaliseSentence(npc.getMother().getName(true))));
 			if(npc.getMother()==null && !npc.getMotherName().equals("???")) {
 				mother = npc.getMotherName();
 			}
 
-			this.father = (npc.getFather() == null ? "???" : (npc.getFather().isPlayer() ? "[style.colourExcellent(You)]" : Util.capitaliseSentence(npc.getFather().getName(true))));
+			this.father = (npc.getFather() == null ? "???" : (npc.getFather().isPlayer() ? "[style.colourExcellent(你)]" : Util.capitaliseSentence(npc.getFather().getName(true))));
 			if(npc.getFather()==null && !npc.getFatherName().equals("???")) {
 				father = npc.getFatherName();
 			}
 
-			this.incubator = (npc.getIncubator() == null ? "[style.colourDisabled(n/a)]" : (npc.getIncubator().isPlayer() ? "[style.colourExcellent(You)]" : Util.capitaliseSentence(npc.getIncubator().getName(true))));
+			this.incubator = (npc.getIncubator() == null ? "[style.colourDisabled(n/a)]" : (npc.getIncubator().isPlayer() ? "[style.colourExcellent(你)]" : Util.capitaliseSentence(npc.getIncubator().getName(true))));
 			if(npc.getIncubator()==null && !npc.getIncubatorName().equals("???")) {
 				incubator = npc.getIncubatorName();
 			}
@@ -157,22 +157,22 @@ public class PhoneDialogue {
 		offspringTableLineSubject(OffspringSeed os) {
 			this.female = os.isFeminine();
 			this.is_feral = os.isFeral();
-			this.child_name = "Unknown";
+			this.child_name = "未知";
 			this.race_color = os.getRace().getColour().toWebHexString();
 			this.species_name = this.female
 					? Util.capitaliseSentence(os.getSubspecies().getSingularFemaleName(os.getBody()))
 					: Util.capitaliseSentence(os.getSubspecies().getSingularMaleName(os.getBody()));
-			this.mother = (os.getMother() == null ? "???" : (os.getMother().isPlayer() ? "[style.colourExcellent(You)]" : Util.capitaliseSentence(os.getMother().getName(true))));
+			this.mother = (os.getMother() == null ? "???" : (os.getMother().isPlayer() ? "[style.colourExcellent(你)]" : Util.capitaliseSentence(os.getMother().getName(true))));
 			if(os.getMother()==null && !os.getMotherName().equals("???")) {
 				mother = os.getMotherName();
 			}
 
-			this.father = (os.getFather() == null ? "???" : (os.getFather().isPlayer() ? "[style.colourExcellent(You)]" : Util.capitaliseSentence(os.getFather().getName(true))));
+			this.father = (os.getFather() == null ? "???" : (os.getFather().isPlayer() ? "[style.colourExcellent(你)]" : Util.capitaliseSentence(os.getFather().getName(true))));
 			if(os.getFather()==null && !os.getFatherName().equals("???")) {
 				father = os.getFatherName();
 			}
 
-			this.incubator = (os.getIncubator() == null ? "[style.colourDisabled(n/a)]" : (os.getIncubator().isPlayer() ? "[style.colourExcellent(You)]" : Util.capitaliseSentence(os.getIncubator().getName(true))));
+			this.incubator = (os.getIncubator() == null ? "[style.colourDisabled(n/a)]" : (os.getIncubator().isPlayer() ? "[style.colourExcellent(你)]" : Util.capitaliseSentence(os.getIncubator().getName(true))));
 			if(os.getIncubator()==null && !os.getIncubatorName().equals("???")) {
 				incubator = os.getIncubatorName();
 			}
@@ -254,7 +254,7 @@ public class PhoneDialogue {
 		Main.game.getPlayer().setMana(0);
 	}
 	
-	public static final DialogueNode MENU = new DialogueNode("Phone home screen", "Phone", true) {
+	public static final DialogueNode MENU = new DialogueNode("手机主界面", "手机", true) {
 
 		@Override
 		public String getContent() {
@@ -266,13 +266,13 @@ public class PhoneDialogue {
 //				UtilText.nodeContentSB.append(RenderingEngine.ENGINE.getFullMap(Main.game.getPlayer().getWorldLocation(), true));
 //			}
 			
-			UtilText.nodeContentSB.append("<p>You pull out your phone and tap in the unlock code.</p>");
+			UtilText.nodeContentSB.append("<p>你拿出手机，输入锁屏密码。</p>");
 			
 			if(Main.game.isInNewWorld()) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+"Using your powerful aura, you've managed to figure out a way to channel the arcane into charging the battery of your phone, although considering that it's the only one in this world, it's not much use for calling anyone."
-							+ " Instead, you're using it as a way to store information about things you've discovered in this strange new world."
+							+"你通过强大的灵能，成功找到了一种利用奥术给手机充电的方法，然而考虑到这是这个世界唯一的手机，你没办法给别人打电话。"
+							+"作为代替，你把它用来保存在这个陌生的新世界里发现的事物的信息。"
 						+ "</p>");
 			}
 			
@@ -282,9 +282,9 @@ public class PhoneDialogue {
 		public String getResponseTabTitle(int index) {
 			if(!Main.game.getPlayer().getIncubatingLitters().isEmpty()) {
 				if(index==0) {
-					return "Phone";
+					return "手机";
 				} else if(index==1) {
-					return "[style.colourYellowLight(Eggs)]";
+					return "[style.colourYellowLight(蛋)]";
 				}
 			}
 			return super.getResponseTabTitle(index);
@@ -295,9 +295,9 @@ public class PhoneDialogue {
 				if (index == 1) {
 					return new Response(
 							(Main.game.getPlayer().isMainQuestUpdated() || Main.game.getPlayer().isSideQuestUpdated() || Main.game.getPlayer().isRelationshipQuestUpdated())
-								?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Quests</span>"
-								:"Quests",
-							"Open your planner to view your current quests.", PLANNER_MAIN){
+								?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>任务</span>"
+								:"任务",
+							"打开日程表以查看当前任务。", PLANNER_MAIN){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setMainQuestUpdated(false);
@@ -307,12 +307,12 @@ public class PhoneDialogue {
 				} else if (index == 2) {
 					return new Response(
 							Main.getProperties().hasValue(PropertyValue.levelUpHightlight)
-								? "<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Perk Tree</span>"
-								:"Perk Tree",
-							"View your character page.", CHARACTER_PERK_TREE);
+								? "<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>天赋树</span>"
+								:"天赋树",
+							"查看角色信息。", CHARACTER_PERK_TREE);
 					
 				} else if (index == 3) {
-					return new Response("Spells", "View your spells page.", SpellManagement.CHARACTER_SPELLS_EARTH) {
+					return new Response("法术", "查看你的法术页面。", SpellManagement.CHARACTER_SPELLS_EARTH) {
 						@Override
 						public void effects() {
 							SpellManagement.setSpellOwner(Main.game.getPlayer(), MENU);
@@ -320,19 +320,19 @@ public class PhoneDialogue {
 					};
 					
 				} else if (index == 4) {
-					return new Response("Fetishes", "View your fetishes page.", CHARACTER_FETISHES);
+					return new Response("性癖", "查看你的性癖页面。", CHARACTER_FETISHES);
 					
 				} else if (index == 5) {
-					return new Response("Stats", "Take a detailed look at your stats.", CHARACTER_STATS);
+					return new Response("统计", "查看你的统计数据。", CHARACTER_STATS);
 					
 				} else if (index == 6) {
-					return new Response("Selfie", "Take a selfie to get a good view of yourself.", CHARACTER_APPEARANCE);
+					return new Response("自拍", "自拍一张，好好欣赏下自己。", CHARACTER_APPEARANCE);
 					
 				} else if (index == 7) {
 					if(Main.game.getPlayer().getCharactersEncountered().isEmpty()) {
-						return new Response("Contacts", "You haven't met anyone yet!", null);
+						return new Response("联系人", "你还没见过任何人！", null);
 					} else {
-						return new Response("Contacts", "Even though you can't call anyone, on account of there being no phones in this world, you've still kept a record of all the people you've come into contact with.", CONTACTS) {
+						return new Response("联系人", "因为这个世界上没有电话所以你并不能给任何人打电话，但依旧会记录下你接触过的任何人", CONTACTS) {
 							@Override
 							public void effects() {
 								Main.game.getPlayer().sortCharactersEncountered();
@@ -347,9 +347,9 @@ public class PhoneDialogue {
 									|| Main.getProperties().hasValue(PropertyValue.newClothingDiscovered)
 									|| Main.getProperties().hasValue(PropertyValue.newItemDiscovered)
 									|| Main.getProperties().hasValue(PropertyValue.newRaceDiscovered))
-								? "<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Encyclopedia</span>"
-								:"Encyclopedia",
-							"Have a look at all the different items and races you've discovered so far.", ENCYCLOPEDIA){
+								? "<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>百科全书</span>"
+								:"百科全书",
+							"查看目前为止你发现的所有种族和物品", ENCYCLOPEDIA){
 						@Override
 						public void effects() {
 							resetContentForRaces();
@@ -358,8 +358,8 @@ public class PhoneDialogue {
 					
 				} else if (index == 9) {
 					if(Main.game.getPlayer().isAbleToSelfTransform()) {
-						return new Response("Transform",
-								"Transform your body.",
+						return new Response("转化",
+								"转化你的身体",
 								BodyChanging.BODY_CHANGING_CORE) {
 							@Override
 							public void effects() {
@@ -367,11 +367,11 @@ public class PhoneDialogue {
 							}
 						};
 					} else {
-						return new Response("Transform", Main.game.getPlayer().getUnableToTransformDescription(), null);
+						return new Response("转化", Main.game.getPlayer().getUnableToTransformDescription(), null);
 					}
 					
 				} else if (index == 10) {
-					return new Response("Maps", "Take a look at maps of all the places you've visited.", MAP) {
+					return new Response("地图", "查看你去过的地方", MAP) {
 						@Override
 						public void effects() {
 							worldTypeMap = Main.game.getPlayer().getWorldLocation();
@@ -380,31 +380,31 @@ public class PhoneDialogue {
 					
 				} else if (index == 11) {
 					if(Main.game.isSavedDialogueNeutral()) {
-						return new Response("Combat Moves", "Adjust the core combat moves you are prepared to perform in combat.", CombatMovesSetup.COMBAT_MOVES_CORE) {
+						return new Response("战斗动作", "调整你在战斗中使用的核心战斗动作。", CombatMovesSetup.COMBAT_MOVES_CORE) {
 							@Override
 							public void effects() {
 								CombatMovesSetup.setTarget(Main.game.getPlayer(), PhoneDialogue.MENU);
 							}
 						};
 					} else {
-						return new Response("Combat Moves", "You are too busy to change your core combat moves.", null);
+						return new Response("战斗动作", "你现在可没空改你的核心战斗动作。", null);
 					}
 					
 				} else if (index == 12) {
 					if(!Main.game.isSavedDialogueNeutral()) {
-							return new Response("Masturbate", "You are too busy to masturbate right now. (Can only be performed in a neutral scene.)", null);
+							return new Response("自慰", "此时无法手淫 (只能在自由行动的场景触发)", null);
 							
 					} else if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						return new Response("Masturbate", Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getValue(), null);
+						return new Response("自慰", Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getValue(), null);
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						return new Response("Masturbate",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with masturbating in a place where people could see you!",
+						return new Response("自慰",
+								"鉴于你没有[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+"性癖)]，你在会被别人看见的地方自慰会很难受！",
 								null);
 						
 					} else {
-						return new ResponseSex("Masturbate",
-								"Decide to take a break from what you're currently doing in order to masturbate.",
+						return new ResponseSex("自慰",
+								"决定从目前正在做的事情中抽出时间来自慰。",
 								true,
 								true,
 								new SMMasturbation(
@@ -418,48 +418,48 @@ public class PhoneDialogue {
 					}
 					
 				} else if (index == 13){
-					String title = Main.game.isSillyMode()?"Delay":"Loiter";
+					String title = Main.game.isSillyMode()?"延后":"闲逛";
 					if(!Main.game.isSavedDialogueNeutral()) {
-						return new Response(title, "You can only loiter to pass the time when in a neutral dialogue scene!", null);
+						return new Response(title, "你只能在一个中立的对话场景中闲逛来打发时间！", null);
 					}
 					if(Main.game.getPlayerCell().getPlace().isDangerous()) {
-						return new Response(title, "You can only loiter to pass the time when in a safe area!", null);
+						return new Response(title, "你只能在安全的地方闲逛来打发时间！", null);
 					}
 					if(Main.game.getPlayer().getLocationPlace().getPlaceType().isLoiteringEnabledOverride()) {
 						if(!Main.game.getPlayer().getLocationPlace().getPlaceType().isLoiteringEnabled()) {
-							return new Response(title, "This is not a suitable place in which to be loitering about!", null);
+							return new Response(title, "这不是个闲逛的好地方！", null);
 						}
 					} else {
 						if(!Main.game.getPlayerCell().getType().isLoiteringEnabled()) {
-							return new Response(title, "This is not a suitable place in which to be loitering about!", null);
+							return new Response(title, "这不是个闲逛的好地方！", null);
 						}
 					}
-					return new Response(title, "Think about loitering in this area for an as-yet undetermined length of time.", LOITER_SELECTION);
+					return new Response(title, "准备在这个区域闲逛一段不确定的时间。", LOITER_SELECTION);
 					
 				} else if (index == 14){
 					if(!Main.game.getPlayer().isElementalSummoned()) {
 						if(Main.game.getPlayer().hasDiscoveredElemental()) {
 							return new Response("[el.Name]",
-									"You have not summoned [el.name], so you cannot talk to [el.herHim]!"
-											+ "<br/>[style.italicsMinorGood(You can summon your elemental from your 'Spells' screen!)]",
+									"你还没有召唤[el.name]，所以你不能和[el.herHim]说话！"
+											+ "<br/>[style.italicsMinorGood(你可以从你的“法术”屏幕召唤你的元素！)]",
 									null);
 						}
-						return new Response("Elemental",
-								"You have not summoned your elemental, so you cannot talk to them..."
-										+ "<br/>[style.italicsMinorGood(You can summon your elemental by learning an elemental-summoning spell and casting it from your 'Spells' screen!)]",
+						return new Response("元素",
+								"你还没有召唤你的元素，所以你不能和他们说话……"
+										+ "<br/>[style.italicsMinorGood(你可以通过学习一个元素召唤法术并在你的“法术”屏幕上施放它来召唤你的元素！)]",
 								null);
 					}
 					if(!Main.game.isSavedDialogueNeutral()) {
 						return new Response("[el.Name]",
 								Main.game.isInSex()
-									?"You cannot talk to [el.name] during sex!"
+									?"你不能在性爱中与[el.name]说话！"
 									:(Main.game.isInCombat()
-										?"You cannot talk to [el.name] during combat!"
-										:"You cannot talk to [el.name] in this scene!"),
+										?"你不能在战斗中与[el.name]说话！"
+										:"你不能在这个场景和[el.name]说话！"),
 								null);
 					}
 					return new Response("[el.Name]",
-							"Spend some time talking with [el.name].",
+							"花一些时间和[el.name]说话。",
 							ElementalDialogue.ELEMENTAL_START);
 					
 				}
@@ -470,24 +470,24 @@ public class PhoneDialogue {
 				
 				if(incubationAreas.contains(SexAreaOrifice.VAGINA)) {
 					if(!Main.game.isSavedDialogueNeutral()) {
-						responses.add(new Response("Lay eggs (womb)", "You are too busy to lay eggs right now. (Can only be performed in a neutral scene.)", null));
+						responses.add(new Response("产卵(子宫)", "现在不是产卵的时候。(只能在中立场景触发)", null));
 						
 					} else if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						responses.add(new Response("Lay eggs (womb)", "There is no suitable place nearby in which to lay your eggs!", null));
+						responses.add(new Response("产卵(子宫)", "附近没有合适的地方供你产卵！", null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						responses.add(new Response("Lay eggs (womb)", "You are unable to gain access to your vagina, and so cannot currently lay the eggs which have matured in your womb!", null));
+						responses.add(new Response("产卵(子宫)", "你当前无法使用你的阴道，所以你无法产出子宫中成熟的卵！", null));
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						responses.add(new Response("Lay eggs (womb)",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with laying your eggs in a place where people could see you!",
+						responses.add(new Response("产卵(子宫)",
+								"鉴于你并非[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)]，你在会被别人看见的地方产卵会感到不适！",
 								null));
 						
 					} else if(!Main.game.getPlayer().hasStatusEffect(StatusEffect.INCUBATING_EGGS_WOMB_3)) {
-						responses.add(new Response("Lay eggs (womb)", "You need to wait until the eggs in your womb have finished growing before you're able to lay them.", null));
+						responses.add(new Response("产卵(子宫)", "你必须等待子宫中的蛋卵发育成熟才能产卵", null));
 						
 					} else {
-						responses.add(new Response("Lay eggs (womb)", "Find a suitable place nearby in which to lay the eggs you've been incubating in your womb.", INCUBATION_EGG_LAYING) {
+						responses.add(new Response("产卵(子宫)", "在附近找一个合适的地方把你在子宫里孵化的蛋产下来", INCUBATION_EGG_LAYING) {
 							@Override
 							public void effects() {
 								layingEggsArea = SexAreaOrifice.VAGINA;
@@ -498,24 +498,24 @@ public class PhoneDialogue {
 				}
 				if(incubationAreas.contains(SexAreaOrifice.ANUS)) {
 					if(!Main.game.isSavedDialogueNeutral()) {
-						responses.add(new Response("Lay eggs (stomach)", "You are too busy to lay eggs right now. (Can only be performed in a neutral scene.)", null));
+						responses.add(new Response("产卵(腹部)", "现在不是产卵的时候(只能在中立场景触发)", null));
 						
 					} else if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						responses.add(new Response("Lay eggs (stomach)", "There is no suitable place nearby in which to lay your eggs!", null));
+						responses.add(new Response("产卵(腹部)", "附近没有合适的地方供你产卵！", null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-						responses.add(new Response("Lay eggs (stomach)", "You are unable to gain access to your asshole, and so cannot currently lay the eggs which have matured in your stomach!", null));
+						responses.add(new Response("产卵(腹部)", "你当前无法使用你的肛门，所以你无法产出腹部中成熟的卵！", null));
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						responses.add(new Response("Lay eggs (stomach)",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with laying your eggs in a place where people could see you!",
+						responses.add(new Response("产卵(腹部)",
+								"鉴于你并非[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)]，你在会被别人看见的地方产卵会感到不适！",
 								null));
 						
 					} else if(!Main.game.getPlayer().hasStatusEffect(StatusEffect.INCUBATING_EGGS_STOMACH_3)) {
-						responses.add(new Response("Lay eggs (stomach)", "You need to wait until the eggs in your stomach have finished growing before you're able to lay them.", null));
+						responses.add(new Response("产卵(腹部)", "你必须等待腹部里的蛋卵发育成熟才能产卵", null));
 						
 					} else {
-						responses.add(new Response("Lay eggs (stomach)", "Find a suitable place nearby in which to lay the eggs you've been incubating in your stomach.", INCUBATION_EGG_LAYING) {
+						responses.add(new Response("产卵(腹部)", "在附近找一个合适的地方把你在腹部里孵化的蛋产下来", INCUBATION_EGG_LAYING) {
 							@Override
 							public void effects() {
 								layingEggsArea = SexAreaOrifice.ANUS;
@@ -526,24 +526,24 @@ public class PhoneDialogue {
 				}
 				if(incubationAreas.contains(SexAreaOrifice.NIPPLE)) {
 					if(!Main.game.isSavedDialogueNeutral()) {
-						responses.add(new Response("Lay eggs (breasts)", "You are too busy to lay eggs right now. (Can only be performed in a neutral scene.)", null));
+						responses.add(new Response("产卵(胸部)", "现在不是产卵的时候。(只能在中立场景触发)", null));
 						
 					} else if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						responses.add(new Response("Lay eggs (breasts)", "There is no suitable place nearby in which to lay your eggs!", null));
+						responses.add(new Response("产卵(胸部)", "附近没有合适的地方供你产卵！", null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.NIPPLES, true)) {
-						responses.add(new Response("Lay eggs (breasts)", "You are unable to gain access to your nipples, and so cannot currently lay the eggs which have matured in your breasts!", null));
+						responses.add(new Response("产卵(胸部)", "你当前无法使用你的乳头，所以你无法产出胸部中成熟的卵！", null));
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						responses.add(new Response("Lay eggs (breasts)",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with laying your eggs in a place where people could see you!",
+						responses.add(new Response("产卵(胸部)",
+								"鉴于你并非[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)]，你在会被别人看见的地方产卵会感到不适！",
 								null));
 						
 					} else if(!Main.game.getPlayer().hasStatusEffect(StatusEffect.INCUBATING_EGGS_NIPPLES_3)) {
-						responses.add(new Response("Lay eggs (breasts)", "You need to wait until the eggs in your breasts have finished growing before you're able to lay them.", null));
+						responses.add(new Response("产卵(胸部)", "你必须等待胸部中的蛋卵发育成熟才能产卵", null));
 						
 					} else {
-						responses.add(new Response("Lay eggs (breasts)", "Find a suitable place nearby in which to lay the eggs you've been incubating in your breasts.", INCUBATION_EGG_LAYING) {
+						responses.add(new Response("产卵(胸部)", "在附近找一个合适的地方把你在胸部里孵化的蛋产下来", INCUBATION_EGG_LAYING) {
 							@Override
 							public void effects() {
 								layingEggsArea = SexAreaOrifice.NIPPLE;
@@ -553,26 +553,26 @@ public class PhoneDialogue {
 					}
 				}
 				if(incubationAreas.contains(SexAreaOrifice.NIPPLE_CROTCH)) {
-					String udderName = Main.game.getPlayer().getBreastCrotchShape()==BreastShape.UDDERS?"udders":"crotch-boobs";
+					String udderName = Main.game.getPlayer().getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳";
 					if(!Main.game.isSavedDialogueNeutral()) {
-						responses.add(new Response("Lay eggs ("+udderName+")", "You are too busy to lay eggs right now. (Can only be performed in a neutral scene.)", null));
+						responses.add(new Response("产卵("+udderName+")", "现在不是产卵的时候。(只能在中立场景触发)", null));
 						
 					} else if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						responses.add(new Response("Lay eggs ("+udderName+")", "There is no suitable place nearby in which to lay your eggs!", null));
+						responses.add(new Response("产卵("+udderName+")", "附近没有合适的地方供你产卵！", null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.NIPPLES_CROTCH, true)) {
-						responses.add(new Response("Lay eggs ("+udderName+")", "You are unable to gain access to your [pc.crotchNipples], and so cannot currently lay the eggs which have matured in your [pc.crotchBoobs]!", null));
+						responses.add(new Response("产卵("+udderName+")", "你当前无法使用你的[pc.crotchNipples]，所以你无法产出[pc.crotchBoobs]中成熟的卵！", null));
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						responses.add(new Response("Lay eggs ("+udderName+")",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with laying your eggs in a place where people could see you!",
+						responses.add(new Response("产卵("+udderName+")",
+								"鉴于你并非[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)]，你在会被别人看见的地方产卵会感到不适！",
 								null));
 						
 					} else if(!Main.game.getPlayer().hasStatusEffect(StatusEffect.INCUBATING_EGGS_NIPPLES_CROTCH_3)) {
-						responses.add(new Response("Lay eggs ("+udderName+")", "You need to wait until the eggs in your [pc.crotchBoobs] have finished growing before you're able to lay them.", null));
+						responses.add(new Response("产卵("+udderName+")", "你必须等待[pc.crotchBoobs]中的蛋卵发育成熟才能产卵", null));
 						
 					} else {
-						responses.add(new Response("Lay eggs ("+udderName+")", "Find a suitable place nearby in which to lay the eggs you've been incubating in your [pc.crotchBoobs].", INCUBATION_EGG_LAYING) {
+						responses.add(new Response("产卵("+udderName+")", "在附近找一个合适的地方把你在[pc.crotchBoobs]里孵化的蛋产下来", INCUBATION_EGG_LAYING) {
 							@Override
 							public void effects() {
 								layingEggsArea = SexAreaOrifice.NIPPLE_CROTCH;
@@ -584,21 +584,21 @@ public class PhoneDialogue {
 				}
 				if(incubationAreas.contains(SexAreaOrifice.SPINNERET)) {
 					if(!Main.game.isSavedDialogueNeutral()) {
-						responses.add(new Response("Lay eggs (spinneret)", "You are too busy to lay eggs right now. (Can only be performed in a neutral scene.)", null));
+						responses.add(new Response("产卵(丝囊)", "现在不是产卵的时候。(只能在中立场景触发)", null));
 						
 					} else if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						responses.add(new Response("Lay eggs (spinneret)", "There is no suitable place nearby in which to lay your eggs!", null));
+						responses.add(new Response("产卵(丝囊)", "附近没有合适的地方供你产卵！", null));
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						responses.add(new Response("Lay eggs (spinneret)",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with laying your eggs in a place where people could see you!",
+						responses.add(new Response("产卵(丝囊)",
+								"鉴于你并非[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)]，你在会被别人看见的地方产卵会感到不适！",
 								null));
 						
 					} else if(!Main.game.getPlayer().hasStatusEffect(StatusEffect.INCUBATING_EGGS_SPINNERET_3)) {
-						responses.add(new Response("Lay eggs (spinneret)", "You need to wait until the eggs in your spinneret have finished growing before you're able to lay them.", null));
+						responses.add(new Response("产卵(丝囊)", "你必须等待吐丝器中的蛋卵发育成熟才能产卵", null));
 						
 					} else {
-						responses.add(new Response("Lay eggs (spinneret)", "Find a suitable place nearby in which to lay the eggs you've been incubating in your spinneret.", INCUBATION_EGG_LAYING) {
+						responses.add(new Response("产卵(丝囊)", "在附近找一个合适的地方把你在吐丝器里孵化的蛋产下来", INCUBATION_EGG_LAYING) {
 							@Override
 							public void effects() {
 								layingEggsArea = SexAreaOrifice.SPINNERET;
@@ -645,7 +645,7 @@ public class PhoneDialogue {
 			}
 			
 			if(index == 0) {
-				return new ResponseEffectsOnly("Back", "Put your phone away."){
+				return new ResponseEffectsOnly("返回", "把手机收起来。"){
 					@Override
 					public void effects() {
 						Main.game.restoreSavedContent(false);
@@ -672,7 +672,7 @@ public class PhoneDialogue {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.addSpecialParsingString(Util.intToString(incubationOffspringBirthed.size()), true);
-			UtilText.addSpecialParsingString(incubationOffspringBirthed.size()==1?"egg":"eggs", false);
+			UtilText.addSpecialParsingString(incubationOffspringBirthed.size()==1?"卵":"卵", false);
 			
 			UtilText.nodeContentSB.append(UtilText.parseFromXMLFile("misc/misc", "INCUBATION_EGG_LAYING_"+layingEggsArea.toString()));
 			
@@ -687,7 +687,7 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Rest", "You have no energy left, and your eyelids seem to be getting heavier...", INCUBATION_EGG_LAYING_FINISHED){
+				return new Response("休息", "你的体力所剩无几了，眼皮开始变得沉重……", INCUBATION_EGG_LAYING_FINISHED){
 					@Override
 					public void effects() {
 						if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_FIRST_TIME_INCUBATION)) {
@@ -724,9 +724,9 @@ public class PhoneDialogue {
 						OffspringSeed offspring = Main.game.getOffspringSeedById(id);
 						String descriptor = LilayaBirthing.getOffspringDescriptor(offspring);
 						UtilText.nodeContentSB.append("<br/>"
-								+ Util.capitaliseSentence(UtilText.generateSingularDeterminer(descriptor))+" "+descriptor
-								+ " <i style='color:"+offspring.getGender().getColour().toWebHexString()+";'>"+offspring.getGenderName()+"</i>"
-								+ " <i style='color:"+offspring.getSubspecies().getColour(null).toWebHexString()+";'>"+offspring.getSubspecies().getName(offspring.getBody())+"</i>");
+								+ Util.capitaliseSentence(UtilText.generateSingularDeterminer(descriptor))+""+descriptor
+								+ "<i style='color:"+offspring.getGender().getColour().toWebHexString()+";'>"+offspring.getGenderName()+"</i>"
+								+ "<i style='color:"+offspring.getSubspecies().getColour(null).toWebHexString()+";'>"+offspring.getSubspecies().getName(offspring.getBody())+"</i>");
 					} catch(Exception ex) {
 					}
 				}
@@ -750,13 +750,13 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Having successfully laid your eggs, you're now free to continue on your way.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "成功产下卵后，你现在可以自由地继续前进了", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode AFTER_MASTURBATION = new DialogueNode("Finished", "You've had enough of masturbating for now.", true) {
+	public static final DialogueNode AFTER_MASTURBATION = new DialogueNode("完成", "你已经自慰得足够多了", true) {
 
 		@Override
 		public String getContent() {
@@ -766,7 +766,7 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Continue on your way...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "继续你的旅程……", Main.game.getDefaultDialogue(false));
 
 			} else {
 				return null;
@@ -774,7 +774,7 @@ public class PhoneDialogue {
 		}
 	};
 
-	public static final DialogueNode PLANNER_MAIN = new DialogueNode("Planner", "", true) {
+	public static final DialogueNode PLANNER_MAIN = new DialogueNode("任务栏", "", true) {
 
 		@Override
 		public String getContent() {
@@ -819,14 +819,14 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Main quests", "View your progress on the main quest.", null);
+				return new Response("主线任务", "查看主线任务的进度。", null);
 				
 			} else if (index == 2) {
 				return new Response(
 						(Main.game.getPlayer().isSideQuestUpdated()
-							?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Side quests</span>"
-							:"Side quests"),
-						"View your side quests.",
+							?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>支线任务</span>"
+							:"支线任务"),
+						"查看支线任务。",
 						PLANNER_SIDE){
 					@Override
 					public void effects() {
@@ -837,9 +837,9 @@ public class PhoneDialogue {
 			} else if (index == 3) {
 				return new Response(
 						(Main.game.getPlayer().isRelationshipQuestUpdated()
-							?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Romance quests</span>"
-							:"Romance quests"),
-						"View your romance quests.",
+							?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>浪漫任务</span>"
+							:"浪漫任务"),
+						"查看浪漫任务。",
 						PLANNER_RELATIONSHIP){
 					@Override
 					public void effects() {
@@ -848,7 +848,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主页面。", MENU);
 			} else {
 				return null;
 			}
@@ -859,7 +859,7 @@ public class PhoneDialogue {
 			return DialogueNodeType.PHONE;
 		}
 	};
-	public static final DialogueNode PLANNER_SIDE = new DialogueNode("Planner", "", true) {
+	public static final DialogueNode PLANNER_SIDE = new DialogueNode("任务栏", "", true) {
 
 		@Override
 		public String getContent() {
@@ -889,7 +889,7 @@ public class PhoneDialogue {
 						journalSB.append(
 								"<details>"
 								+ "<summary class='quest-title' style='color:" + PresetColour.GENERIC_TERRIBLE.getShades()[1] + ";'>"
-									+ "Failed - " + questLine.getName()
+									+ "失败 - " + questLine.getName()
 								+ "</summary>");
 						journalSB.append(getQuestBoxDivFailed(Main.game.getPlayer().getQuestsFailed().get(questLine)));
 //						journalSB.append(getQuestBoxDiv(q, true)); // Do not append, as this was the failed Quest
@@ -898,7 +898,7 @@ public class PhoneDialogue {
 						journalSB.append(
 								"<details>"
 								+ "<summary class='quest-title' style='color:" + questLine.getType().getColour().getShades()[1] + ";'>"
-									+ "Completed - " + questLine.getName()
+									+ "完成 - " + questLine.getName()
 								+ "</summary>");
 						journalSB.append(getQuestBoxDiv(q, true));
 						
@@ -924,7 +924,7 @@ public class PhoneDialogue {
 			}
 			
 			if(!sideQuestsFound) {
-				journalSB.append("<div class='subTitle'>You haven't got any side quests!</div>");
+				journalSB.append("<div class='subTitle'>你还没有接受任何支线任务！</div>");
 			}
 
 			return journalSB.toString();
@@ -933,15 +933,15 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Main quests", "View your progress on the main quest.", PLANNER_MAIN);
+				return new Response("主线任务", "查看主线任务进度。", PLANNER_MAIN);
 			} else if (index == 2) {
-				return new Response("Side quests", "View your side quests.", null);
+				return new Response("支线任务", "查看支线任务。", null);
 			} else if (index == 3) {
 				return new Response(
 						(Main.game.getPlayer().isRelationshipQuestUpdated()
-						?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Romance quests</span>"
-							:"Romance quests"),
-							"View your romance quests.",
+						?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>浪漫任务</span>"
+							:"浪漫任务"),
+							"查看浪漫任务。",
 						PLANNER_RELATIONSHIP){
 					@Override
 					public void effects() {
@@ -949,7 +949,7 @@ public class PhoneDialogue {
 					}
 				};
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主页面。", MENU);
 			} else {
 				return null;
 			}
@@ -960,7 +960,7 @@ public class PhoneDialogue {
 			return DialogueNodeType.PHONE;
 		}
 	};
-	public static final DialogueNode PLANNER_RELATIONSHIP = new DialogueNode("Planner", "", true) {
+	public static final DialogueNode PLANNER_RELATIONSHIP = new DialogueNode("任务栏", "", true) {
 
 		@Override
 		public String getContent() {
@@ -981,7 +981,7 @@ public class PhoneDialogue {
 						journalSB.append(
 								"<details>"
 								+ "<summary class='quest-title' style='color:" + PresetColour.GENERIC_TERRIBLE.getShades()[1] + ";'>"
-									+ "Failed - " + questLine.getName()
+									+ "失败 - " + questLine.getName()
 								+ "</summary>");
 						journalSB.append(getQuestBoxDivFailed(Main.game.getPlayer().getQuestsFailed().get(questLine)));
 //						journalSB.append(getQuestBoxDiv(q, true)); // Do not append, as this was the failed Quest
@@ -990,7 +990,7 @@ public class PhoneDialogue {
 						journalSB.append(
 								"<details>"
 								+ "<summary class='quest-title' style='color:" + questLine.getType().getColour().getShades()[1] + ";'>"
-									+ "Completed - " + questLine.getName()
+									+ "完成 - " + questLine.getName()
 								+ "</summary>");
 						journalSB.append(getQuestBoxDiv(q, true));
 						
@@ -1016,7 +1016,7 @@ public class PhoneDialogue {
 			}
 			
 			if(!relationshipQuestFound) {
-				journalSB.append("<div class='subTitle'>You haven't got any romance quests!</div>");
+				journalSB.append("<div class='subTitle'>你还没有接受任何浪漫任务！</div>");
 			}
 
 			return journalSB.toString();
@@ -1025,20 +1025,20 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Main quests", "View your progress on the main quest.", PLANNER_MAIN);
+				return new Response("主线任务", "查看主线任务进度。", PLANNER_MAIN);
 			} else if (index == 2) {
 				return new Response((Main.game.getPlayer().isSideQuestUpdated()
-						?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Side quests</span>"
-						:"Side quests"), "View your side quests.", PLANNER_SIDE){
+						?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>支线任务</span>"
+						:"支线任务"), "查看支线任务。", PLANNER_SIDE){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setSideQuestUpdated(false);
 					}
 				};
 			} else if (index == 3) {
-				return new Response("Romance quests", "View your romance quests.", null);
+				return new Response("浪漫任务", "查看浪漫任务。", null);
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主页面。", MENU);
 			} else {
 				return null;
 			}
@@ -1054,7 +1054,7 @@ public class PhoneDialogue {
 		return "<div class='quest-box'>"
 				+ getLevelAndExperienceHTML(q, true)
 				+ "<h6 style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";text-align:center;'>"
-						+ "<b>Failed - "+ q.getName() + "</b>"
+						+ "<b>失败 - "+ q.getName() + "</b>"
 				+ "</h6>"
 				+ "<p style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";text-align:center;'>"
 					+ q.getCompletedDescription()
@@ -1076,7 +1076,7 @@ public class PhoneDialogue {
 			return "<div class='quest-box'>"
 					+ getLevelAndExperienceHTML(q, completed)
 					+ "<h6 style='color:" + q.getQuestType().getColour().getShades()[1] + ";text-align:center;'>"
-							+ "<b>Completed - "+ q.getName() + "</b>"
+							+ "<b>完成 - "+ q.getName() + "</b>"
 					+ "</h6>"
 					+ "<p style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";text-align:center; margin-top:0;'>"
 						+ q.getCompletedDescription()
@@ -1103,26 +1103,26 @@ public class PhoneDialogue {
 		
 		if (!completed) {
 			if(q.getLevel() <= Main.game.getPlayer().getLevel() - 3) {
-				return "<b class='quest-extra level' style='color:"+  PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Level " + q.getLevel()+ "</b>"
-						+ "<b class='quest-extra experience' style='color:" + PresetColour.GENERIC_EXPERIENCE.toWebHexString() + ";'>" + q.getExperienceReward() + " xp</b>";
+				return "<b class='quest-extra level' style='color:"+  PresetColour.GENERIC_GOOD.toWebHexString() + ";'>等级" + q.getLevel()+ "</b>"
+						+ "<b class='quest-extra experience' style='color:" + PresetColour.GENERIC_EXPERIENCE.toWebHexString() + ";'>" + q.getExperienceReward() + " 经验</b>";
 				
 			} else if (q.getLevel() >= Main.game.getPlayer().getLevel() + 3) {
-				return "<b class='quest-extra level' style='color:"+  PresetColour.GENERIC_BAD.toWebHexString() + ";'>Level " + q.getLevel()+ "</b>"
-						+ "<b class='quest-extra experience' style='color:" + PresetColour.GENERIC_EXPERIENCE.toWebHexString() + ";'>" + q.getExperienceReward() + " xp</b>";
+				return "<b class='quest-extra level' style='color:"+  PresetColour.GENERIC_BAD.toWebHexString() + ";'>等级" + q.getLevel()+ "</b>"
+						+ "<b class='quest-extra experience' style='color:" + PresetColour.GENERIC_EXPERIENCE.toWebHexString() + ";'>" + q.getExperienceReward() + " 经验</b>";
 				
 			} else {
-				return "<b class='quest-extra level'>Level " + q.getLevel()+ "</b>"
-						+ "<b class='quest-extra experience' style='color:" + PresetColour.GENERIC_EXPERIENCE.toWebHexString() + ";'>" + q.getExperienceReward() + " xp</b>";
+				return "<b class='quest-extra level'>等级" + q.getLevel()+ "</b>"
+						+ "<b class='quest-extra experience' style='color:" + PresetColour.GENERIC_EXPERIENCE.toWebHexString() + ";'>" + q.getExperienceReward() + " 经验</b>";
 			}
 			
 		} else {
-			return "<b class='quest-extra level' style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Level " + q.getLevel() + "</b>"
-					+ "<b class='quest-extra experience' style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>" + q.getExperienceReward() + " xp</b>";
+			return "<b class='quest-extra level' style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>等级" + q.getLevel() + "</b>"
+					+ "<b class='quest-extra experience' style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>" + q.getExperienceReward() + " 经验</b>";
 		}
 	}
 	
 
-	public static final DialogueNode CHARACTER_APPEARANCE = new DialogueNode("Selfie picture", "Take a selfie", true) {
+	public static final DialogueNode CHARACTER_APPEARANCE = new DialogueNode("自拍照片", "拍一张自拍", true) {
 
 		@Override
 		public String getContent() {
@@ -1133,7 +1133,7 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			} else {
 				return null;
 			}
@@ -1155,7 +1155,7 @@ public class PhoneDialogue {
 		return valueForDisplay;
 	}
 	
-	public static final DialogueNode CHARACTER_STATS = new DialogueNode("Character Stats", "", true) {
+	public static final DialogueNode CHARACTER_STATS = new DialogueNode("角色属性", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1169,100 +1169,100 @@ public class PhoneDialogue {
 				"<div class='container-full-width'>"
 					+ statAttributeHeader()
 					
-					+ "<p style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+"; text-align:center;'><b>Core Attributes</b></p>"
+					+ "<p style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+"; text-align:center;'><b>核心属性</b></p>"
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.MAJOR_PHYSIQUE,
-							"'<b style='color:"+physiqueSE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(physiqueSE.getName(Main.game.getPlayer()))+"</b>' effect gained")
+							"获得“<b style='color:"+physiqueSE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(physiqueSE.getName(Main.game.getPlayer()))+"</b>”状态")
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.MAJOR_ARCANE,
-							"'<b style='color:"+arcaneSE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(arcaneSE.getName(Main.game.getPlayer()))+"</b>' effect gained")
+							"获得“<b style='color:"+arcaneSE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(arcaneSE.getName(Main.game.getPlayer()))+"</b>”状态")
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.MAJOR_CORRUPTION,
-							"'<b style='color:"+corruptionSE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(corruptionSE.getName(Main.game.getPlayer()))+"</b>' effect gained")
+							"获得“<b style='color:"+corruptionSE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(corruptionSE.getName(Main.game.getPlayer()))+"</b>”状态")
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.HEALTH_MAXIMUM,
-							"When reduced to 0, you lose combat")
+							"当数值减到0，你就会输掉战斗")
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.MANA_MAXIMUM,
-							"Used as a resource for casting spells")
+							"用作施法的资源")
 //				+"</div>"
 //				
 //				+"<div class='container-full-width'>"
-					+ "<p style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+"; text-align:center;'><b>Misc. Attributes</b></p>"
+					+ "<p style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+"; text-align:center;'><b>其他属性</b></p>"
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.FERTILITY,
-							"Increases pregnancy chance")
+							"增加怀孕几率")
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.VIRILITY,
-							"Increases impregnation chance")
+							"提升受孕几率")
 
 					+ "<div class='container-full-width' style='text-align:center; background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'>"
-						+ "<b style='color:"+PresetColour.BASE_PINK_LIGHT.toWebHexString()+";'>Pregnancy calculation:</b>"
+						+ "<b style='color:"+PresetColour.BASE_PINK_LIGHT.toWebHexString()+";'>受孕率计算：</b>"
 								+ "<br/>"
 								+ "<i>"+GameCharacter.PREGNANCY_CALCULATION+"</i>"
 					+ "</div>"
 //				+"</div>"
 //					
 //				+"<div class='container-full-width'>"
-					+ "<p style='color:"+PresetColour.GENERIC_COMBAT.toWebHexString()+"; text-align:center;'><b>Combat Attributes</b></p>"
+					+ "<p style='color:"+PresetColour.GENERIC_COMBAT.toWebHexString()+"; text-align:center;'><b>战斗属性</b></p>"
 					
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.CRITICAL_DAMAGE,
-							"Deals <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.CRITICAL_DAMAGE))+"%</b> normal damage",
+							"造成<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.CRITICAL_DAMAGE))+"%</b>普通伤害",
 							true)
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.ENERGY_SHIELDING,
-							"<b>"+getAttributeDisplayValue(Attribute.ENERGY_SHIELDING)+"</b> Health Block/Turn",
+							"<b>"+getAttributeDisplayValue(Attribute.ENERGY_SHIELDING)+"</b>生命护盾/回合",
 							true)
 
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.SPELL_COST_MODIFIER,
-							"Reduces spell cost by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.SPELL_COST_MODIFIER))+"%</b>")
+							"法术消耗降低<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.SPELL_COST_MODIFIER))+"%</b>")
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_SPELLS,
-							"Increases spell damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_SPELLS))+"%</b>",
+							"法术伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_SPELLS))+"%</b>",
 							true)
 
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_UNARMED,
-							"Increases unarmed damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_UNARMED))+"%</b>",
+							"徒手伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_UNARMED))+"%</b>",
 							true)
 					
 
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_MELEE_WEAPON,
-							"Increases melee weapon damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_MELEE_WEAPON))+"%</b>",
+							"近战伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_MELEE_WEAPON))+"%</b>",
 							true)
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_RANGED_WEAPON,
-							"Increases ranged weapon damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_RANGED_WEAPON))+"%</b>",
+							"远程伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_RANGED_WEAPON))+"%</b>",
 							true)
 					
 					
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_PHYSICAL,
-							"Increases physical damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_PHYSICAL))+"%</b>",
+							"物理伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_PHYSICAL))+"%</b>",
 							true)
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.RESISTANCE_PHYSICAL,
-							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_PHYSICAL)+"</b> Physical Block/Turn",
+							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_PHYSICAL)+"</b>物理护盾/每回合",
 							true)
 					
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_FIRE,
-							"Increases fire damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_FIRE))+"%</b>",
+							"火焰伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_FIRE))+"%</b>",
 							true)
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.RESISTANCE_FIRE,
-							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_FIRE)+"</b> Fire Block/Turn",
+							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_FIRE)+"</b>火焰护盾/每回合",
 							true)
 					
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_ICE,
-							"Increases ice damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_ICE))+"%</b>",
+							"寒冰伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_ICE))+"%</b>",
 							true)
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.RESISTANCE_ICE,
-							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_ICE)+"</b> Ice Block/Turn",
+							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_ICE)+"</b>寒冰护盾/每回合",
 							true)
 
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_POISON,
-							"Increases poison damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_POISON))+"%</b>",
+							"毒素伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_POISON))+"%</b>",
 							true)
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.RESISTANCE_POISON,
-							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_POISON)+"</b> Poison Block/Turn",
+							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_POISON)+"</b>毒素护盾/每回合",
 							true)
 
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_LUST,
-							"Increases lust damage by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_LUST))+"%</b>",
+							"性欲伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_LUST))+"%</b>",
 							true)
 					+ getAttributeBox(Main.game.getPlayer(), Attribute.RESISTANCE_LUST,
-							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_LUST)+"</b> Lust Block/Turn",
+							"<b>"+getAttributeDisplayValue(Attribute.RESISTANCE_LUST)+"</b>性欲护盾/每回合",
 							true)
 
 //				+"</div>"
 //				+"<div class='container-full-width'>"
-					+ "<p style='color:"+PresetColour.GENERIC_COMBAT.toWebHexString()+"; text-align:center;'><b>Racial Damage Attributes</b></p>");
+					+ "<p style='color:"+PresetColour.GENERIC_COMBAT.toWebHexString()+"; text-align:center;'><b>种族特化增伤属性</b></p>");
 			
 			List<AbstractRace> raceListSorted = new ArrayList<>(Attribute.racialAttributes.keySet());
 			raceListSorted.sort((r1, r2) -> r1.getName(true).compareTo(r2.getName(true)));
@@ -1274,24 +1274,24 @@ public class PhoneDialogue {
 					// DEMON is split in IMP, DEMON, LILIN, and ELDER_LILIN damage
 					UtilText.nodeContentSB.append(
 							getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_IMP,
-									"Increases damage vs imps by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_IMP))+"%</b>",
+									"对小恶魔的伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_IMP))+"%</b>",
 									true));
 					UtilText.nodeContentSB.append(
 							getAttributeBox(Main.game.getPlayer(), attribute,
-									"Increases damage vs "+race.getNamePlural(true)+" by <b>"+Units.number(damageModifier)+"%</b>",
+									"对"+race.getNamePlural(true)+"的伤害增加<b>"+Units.number(damageModifier)+"%</b>",
 									true));
 					UtilText.nodeContentSB.append(
 							getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_LILIN,
-									"Increases damage vs lilin by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_LILIN))+"%</b>",
+									"对莉琳的伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_LILIN))+"%</b>",
 									true));
 					UtilText.nodeContentSB.append(
 							getAttributeBox(Main.game.getPlayer(), Attribute.DAMAGE_ELDER_LILIN,
-									"Increases damage vs elder lilin by <b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_ELDER_LILIN))+"%</b>",
+									"对莉琳长老的伤害增加<b>"+Units.number(Main.game.getPlayer().getAttributeValue(Attribute.DAMAGE_ELDER_LILIN))+"%</b>",
 									true));
 				} else {
 					UtilText.nodeContentSB.append(
 							getAttributeBox(Main.game.getPlayer(), attribute,
-									"Increases damage vs "+race.getNamePlural(true)+" by <b>"+Units.number(damageModifier)+"%</b>",
+									"对"+race.getNamePlural(true)+"的伤害增加<b>"+Units.number(damageModifier)+"%</b>",
 									true));
 				}
 			}
@@ -1316,19 +1316,19 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Core Stats", "Have a detailed look at your core stats.", null);
+				return new Response("核心属性", "详细了解你的核心属性。", null);
 			
 			} else if (index == 2) {
-				return new Response("Body stats", "Have a detailed look at your body's values.", CHARACTER_STATS_BODY);
+				return new Response("身体属性", "详细了解你身体的各项数据。", CHARACTER_STATS_BODY);
 			
 			} else if (index == 3) {
-				return new Response("Sex stats", "Have a detailed look at your sex stats.", CHARACTER_STATS_SEX);
+				return new Response("性状态", "详细了解你的性状态", CHARACTER_STATS_SEX);
 			
 			} else if (index == 4) {
-				return new Response("Pregnancy stats", "Have a detailed look at your pregnancy stats.", CHARACTER_STATS_PREGNANCY);
+				return new Response("怀孕状态", "详细了解你的怀孕状态", CHARACTER_STATS_PREGNANCY);
 			
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			
 			} else {
 				return null;
@@ -1354,66 +1354,66 @@ public class PhoneDialogue {
 		sb.append("<div class='container-full-width' style='margin-bottom:0;'>");
 		rowCount = 0;
 		
-		sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "Body Attributes")
+		sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "身体属性")
 				+ statHeader()
-				+ statRow(PresetColour.ANDROGYNOUS, "Femininity",
+				+ statRow(PresetColour.ANDROGYNOUS, "女性化程度",
 						PresetColour.TEXT, String.valueOf(character.getFemininityValue()),
 						character.getFemininity().getColour(), Util.capitaliseSentence(character.getFemininity().getName(false)))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Height",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "身高",
 						PresetColour.TEXT, Units.size(character.getHeightValue()),
 						character.getHeight().getColour(), Util.capitaliseSentence(character.getHeight().getDescriptor()))
-				+ statRow(PresetColour.MUSCLE_THREE, "Muscle Definition",
+				+ statRow(PresetColour.MUSCLE_THREE, "肌肉量",
 						PresetColour.TEXT, String.valueOf(character.getMuscleValue()),
 						character.getMuscle().getColour(), Util.capitaliseSentence(character.getMuscle().getName(false)))
-				+ statRow(PresetColour.BODY_SIZE_THREE, "Body Size",
+				+ statRow(PresetColour.BODY_SIZE_THREE, "体型",
 						PresetColour.TEXT, String.valueOf(character.getBodySizeValue()),
 						character.getBodySize().getColour(), Util.capitaliseSentence(character.getBodySize().getName(false)))
-				+ statRow(character.getBodyShape().toWebHexStringColour(), "Body Shape",
+				+ statRow(character.getBodyShape().toWebHexStringColour(), "身体形态",
 						PresetColour.TEXT,
 						"<b style='color:"+character.getMuscle().getColour().toWebHexString()+";'>"+character.getMuscleValue()+"</b>"
-								+ " <b>|</b> <b style='color:"+character.getBodySize().getColour().toWebHexString()+";'>"+character.getBodySizeValue()+"</b>",
+								+ "<b>|</b><b style='color:"+character.getBodySize().getColour().toWebHexString()+";'>"+character.getBodySizeValue()+"</b>",
 						character.getBodyShape().toWebHexStringColour(), Util.capitaliseSentence(character.getBodyShape().getName(false))));
 		
 		sb.append("<span style='height:16px;width:100%;float:left;'></span>");
 		rowCount = 0;
 		
-		sb.append(statRowHeader(PresetColour.TRANSFORMATION_GREATER, "Head & Throat Attributes")
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Hair Length",
+		sb.append(statRowHeader(PresetColour.TRANSFORMATION_GREATER, "头部和喉咙属性")
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "头发长度",
 						PresetColour.TEXT, Units.size(character.getHairRawLengthValue()),
 						character.getHairLength().getColour(), Util.capitaliseSentence(character.getHairLength().getDescriptor()))
 				+ (character.hasHorns()
-						?statRow(PresetColour.TRANSFORMATION_GENERIC, "Horn Length",
+						?statRow(PresetColour.TRANSFORMATION_GENERIC, "角长度",
 							PresetColour.TEXT, Units.size(character.getHornLengthValue()),
 							character.getHornLength().getColour(), Util.capitaliseSentence(character.getHornLength().getDescriptor()))
-						:statRow(PresetColour.TRANSFORMATION_GENERIC, "Horn Length",
+						:statRow(PresetColour.TRANSFORMATION_GENERIC, "角长度",
 								PresetColour.TEXT, Units.size(0),
 								PresetColour.TEXT_GREY, "N/A"))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Tongue Length",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "舌头长度",
 						PresetColour.TEXT, Units.size(character.getTongueLengthValue()),
 						PresetColour.TRANSFORMATION_GENERIC, Util.capitaliseSentence(character.getTongueLength().getDescriptor()))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Throat Wetness",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "喉咙湿润度",
 						PresetColour.TEXT, String.valueOf(character.getFaceWetness().getValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getFaceWetness().getDescriptor()))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Throat Capacity",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "喉咙直径",
 						PresetColour.TEXT, Units.size(character.getFaceRawCapacityValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getFaceCapacity().getDescriptor()))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Throat Depth",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "喉咙深度",
 						PresetColour.TEXT, String.valueOf(character.getFaceDepth().getValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getFaceDepth().getDescriptor()) + " ("+(Math.round(character.getFaceDepth().getDepthPercentage()*100))+"%)")
 				+ (Main.game.isPenetrationLimitationsEnabled()
-					?statRow(PresetColour.TRANSFORMATION_GENERIC, "Comfortable Throat Depth Limit",
+					?statRow(PresetColour.TRANSFORMATION_GENERIC, "喉咙舒适深度极限",
 						PresetColour.GENERIC_MINOR_GOOD, Units.size(character.getFaceMaximumPenetrationDepthComfortable()),
 						PresetColour.TEXT, "N/A")
 					:"")
 				+ (Main.game.isPenetrationLimitationsEnabled()
-					?statRow(PresetColour.TRANSFORMATION_GENERIC, "Uncomfortable Throat Depth Limit",
-						PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":Units.size(character.getFaceMaximumPenetrationDepthUncomfortable()),
+					?statRow(PresetColour.TRANSFORMATION_GENERIC, "喉咙不舒适深度极限",
+						PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"没有限制":Units.size(character.getFaceMaximumPenetrationDepthUncomfortable()),
 						PresetColour.TEXT, "N/A")
 					:"")
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Throat Elasticity",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "喉咙弹性等级",
 						PresetColour.TEXT, String.valueOf(character.getFaceElasticity().getValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getFaceElasticity().getDescriptor()))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Throat Plasticity",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "喉咙可塑性等级",
 						PresetColour.TEXT, String.valueOf(character.getFacePlasticity().getValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getFacePlasticity().getDescriptor())));
 				
@@ -1421,103 +1421,103 @@ public class PhoneDialogue {
 		rowCount = 0;
 		
 		if(character.hasNipples()) {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Breast Attributes")
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Cup Size",
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "乳房属性")
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "罩杯大小",
 							PresetColour.TEXT, String.valueOf(character.getBreastRawSizeValue()),
 							PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getBreastSize().getCupSizeName()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Count",
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "数量",
 							PresetColour.TEXT, String.valueOf(character.getBreastRows()),
-							PresetColour.GENERIC_SEX, Util.capitaliseSentence(Util.capitaliseSentence(Util.intToString(character.getBreastRows()))+" pair"+(character.getBreastRows()==1?"":"s")))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Milk Storage",
-							PresetColour.TEXT, !knowsNipples?"Unknown":Units.fluid(character.getBreastRawMilkStorageValue()),
-							PresetColour.GENERIC_SEX, !knowsNipples?"Unknown":Util.capitaliseSentence(character.getBreastMilkStorage().getDescriptor()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Milk Regeneration Per Breast",
-							PresetColour.TEXT, !knowsNipples?"Unknown":Units.fluid(character.getLactationRegenerationPerSecond(false)*60)+"/minute",
-							PresetColour.GENERIC_SEX, !knowsNipples?"Unknown":Util.capitaliseSentence(character.getBreastLactationRegeneration().getName()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Milk Regeneration Total",
-							PresetColour.TEXT, !knowsNipples?"Unknown":Units.fluid(character.getLactationRegenerationPerSecond(true)*60)+"/minute",
-							PresetColour.GENERIC_SEX, !knowsNipples?"Unknown":Util.capitaliseSentence(character.getBreastLactationRegeneration().getName()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Capacity",
-							PresetColour.TEXT, !knowsNipples?"Unknown":Units.size(character.getNippleRawCapacityValue()),
-							PresetColour.GENERIC_SEX, !knowsNipples?"Unknown":Util.capitaliseSentence(character.getNippleCapacity().getDescriptor()))
+							PresetColour.GENERIC_SEX, Util.capitaliseSentence(Util.capitaliseSentence(Util.intToString(character.getBreastRows()))+"对"))
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "乳汁储量",
+							PresetColour.TEXT, !knowsNipples?"未知":Units.fluid(character.getBreastRawMilkStorageValue()),
+							PresetColour.GENERIC_SEX, !knowsNipples?"未知":Util.capitaliseSentence(character.getBreastMilkStorage().getDescriptor()))
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "乳汁再生速度(每乳房)",
+							PresetColour.TEXT, !knowsNipples?"未知":Units.fluid(character.getLactationRegenerationPerSecond(false)*60)+"/分钟",
+							PresetColour.GENERIC_SEX, !knowsNipples?"未知":Util.capitaliseSentence(character.getBreastLactationRegeneration().getName()))
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "总乳汁再生速度",
+							PresetColour.TEXT, !knowsNipples?"未知":Units.fluid(character.getLactationRegenerationPerSecond(true)*60)+"/分钟",
+							PresetColour.GENERIC_SEX, !knowsNipples?"未知":Util.capitaliseSentence(character.getBreastLactationRegeneration().getName()))
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "直径",
+							PresetColour.TEXT, !knowsNipples?"未知":Units.size(character.getNippleRawCapacityValue()),
+							PresetColour.GENERIC_SEX, !knowsNipples?"未知":Util.capitaliseSentence(character.getNippleCapacity().getDescriptor()))
 					+ (Main.game.isPenetrationLimitationsEnabled() && character.getNippleRawCapacityValue()>0
-						?statRow(PresetColour.TRANSFORMATION_GENERIC, "Nipple Depth",
+						?statRow(PresetColour.TRANSFORMATION_GENERIC, "乳头深度等级",
 							PresetColour.TEXT, String.valueOf(character.getNippleDepth().getValue()),
 							PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getNippleDepth().getDescriptor()) + " ("+(Math.round(character.getNippleDepth().getDepthPercentage()*100))+"%)")
 						:"")
 					+ (Main.game.isPenetrationLimitationsEnabled() && character.getNippleRawCapacityValue()>0
-						?statRow(PresetColour.TRANSFORMATION_GENERIC, "Comfortable Nipple Depth Limit",
-							PresetColour.GENERIC_MINOR_GOOD, (!knowsNipples?"Unknown":Units.size(character.getNippleMaximumPenetrationDepthComfortable())),
+						?statRow(PresetColour.TRANSFORMATION_GENERIC, "乳头舒适深度极限",
+							PresetColour.GENERIC_MINOR_GOOD, (!knowsNipples?"未知":Units.size(character.getNippleMaximumPenetrationDepthComfortable())),
 							PresetColour.TEXT, "N/A")
 						:"")
 					+ (Main.game.isPenetrationLimitationsEnabled() && character.getNippleRawCapacityValue()>0
-						?statRow(PresetColour.TRANSFORMATION_GENERIC, "Uncomfortable Nipple Depth Limit",
-							PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":(!knowsNipples?"Unknown":Units.size(character.getNippleMaximumPenetrationDepthUncomfortable())),
+						?statRow(PresetColour.TRANSFORMATION_GENERIC, "乳头不舒适深度极限",
+							PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":(!knowsNipples?"未知":Units.size(character.getNippleMaximumPenetrationDepthUncomfortable())),
 							PresetColour.TEXT, "N/A")
 						:"")
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Elasticity",
-							PresetColour.TEXT, !knowsNipples?"Unknown":String.valueOf(character.getNippleElasticity().getValue()),
-							PresetColour.GENERIC_SEX, !knowsNipples?"Unknown":Util.capitaliseSentence(character.getNippleElasticity().getDescriptor()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Plasticity",
-							PresetColour.TEXT, !knowsNipples?"Unknown":String.valueOf(character.getNipplePlasticity().getValue()),
-							PresetColour.GENERIC_SEX, !knowsNipples?"Unknown":Util.capitaliseSentence(character.getNipplePlasticity().getDescriptor())));
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "弹性等级",
+							PresetColour.TEXT, !knowsNipples?"未知":String.valueOf(character.getNippleElasticity().getValue()),
+							PresetColour.GENERIC_SEX, !knowsNipples?"未知":Util.capitaliseSentence(character.getNippleElasticity().getDescriptor()))
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "可塑性等级",
+							PresetColour.TEXT, !knowsNipples?"未知":String.valueOf(character.getNipplePlasticity().getValue()),
+							PresetColour.GENERIC_SEX, !knowsNipples?"未知":Util.capitaliseSentence(character.getNipplePlasticity().getDescriptor())));
 		} else {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Breast Attributes")
-					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull] no breasts...")));
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "胸部属性")
+					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull]没有胸部……")));
 		}
 		
 		if(character.hasBreastsCrotch()) {
 			sb.append("<span style='height:16px;width:100%;float:left;'></span>");
 			rowCount = 0;
 			
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, (character.getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs"))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Size",
-								PresetColour.TEXT, !character.isBreastsCrotchVisibleThroughClothing()&&!knowsCrotchNipples?"Unknown":String.valueOf(character.getBreastCrotchRawSizeValue()),
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, (character.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳"))
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "大小",
+								PresetColour.TEXT, !character.isBreastsCrotchVisibleThroughClothing()&&!knowsCrotchNipples?"未知":String.valueOf(character.getBreastCrotchRawSizeValue()),
 								PresetColour.GENERIC_SEX,
 								!character.isBreastsCrotchVisibleThroughClothing()&&!knowsCrotchNipples
-									?"Unknown"
+									?"未知"
 									:(character.getBreastCrotchShape()==BreastShape.UDDERS
 										?Util.capitaliseSentence(character.getBreastCrotchSize().getDescriptor())
 										:Util.capitaliseSentence(character.getBreastCrotchSize().getCupSizeName())))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Count",
-								PresetColour.TEXT, !knowsCrotchNipples?"Unknown":String.valueOf(character.getBreastCrotchRows()),
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "数量",
+								PresetColour.TEXT, !knowsCrotchNipples?"未知":String.valueOf(character.getBreastCrotchRows()),
 								PresetColour.GENERIC_SEX,
 								!knowsCrotchNipples
-									?"Unknown"
+									?"未知"
 									:(character.getBreastCrotchRows()==0
-										?"A single udder"
-										:Util.capitaliseSentence(Util.intToString(character.getBreastCrotchRows()))+" pair"+(character.getBreastCrotchRows()==1?"":"s")))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Milk Storage",
-								PresetColour.TEXT, !knowsCrotchNipples?"Unknown":Units.fluid(character.getBreastCrotchRawMilkStorageValue()),
-								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"Unknown":Util.capitaliseSentence(character.getBreastCrotchMilkStorage().getDescriptor()))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Milk Regeneration Per Crotch-boob",
-								PresetColour.TEXT, !knowsCrotchNipples?"Unknown":Units.fluid(character.getCrotchLactationRegenerationPerSecond(false)*60)+"/minute",
-								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"Unknown":Util.capitaliseSentence(character.getBreastCrotchLactationRegeneration().getName()))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Milk Regeneration Total",
-								PresetColour.TEXT, !knowsCrotchNipples?"Unknown":Units.fluid(character.getCrotchLactationRegenerationPerSecond(true)*60)+"/minute",
-								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"Unknown":Util.capitaliseSentence(character.getBreastCrotchLactationRegeneration().getName()))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Capacity",
-								PresetColour.TEXT, !knowsCrotchNipples?"Unknown":String.valueOf(character.getNippleCrotchRawCapacityValue()),
-								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"Unknown":Util.capitaliseSentence(character.getNippleCrotchCapacity().getDescriptor()))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Nipple Depth",
+										?"单个腹乳"
+										:Util.capitaliseSentence(Util.intToString(character.getBreastCrotchRows()))+"对"))
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "乳汁储量",
+								PresetColour.TEXT, !knowsCrotchNipples?"未知":Units.fluid(character.getBreastCrotchRawMilkStorageValue()),
+								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"未知":Util.capitaliseSentence(character.getBreastCrotchMilkStorage().getDescriptor()))
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "乳汁再生速度(每胯乳)",
+								PresetColour.TEXT, !knowsCrotchNipples?"未知":Units.fluid(character.getCrotchLactationRegenerationPerSecond(false)*60)+"/分钟",
+								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"未知":Util.capitaliseSentence(character.getBreastCrotchLactationRegeneration().getName()))
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "总乳汁再生速度",
+								PresetColour.TEXT, !knowsCrotchNipples?"未知":Units.fluid(character.getCrotchLactationRegenerationPerSecond(true)*60)+"/分钟",
+								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"未知":Util.capitaliseSentence(character.getBreastCrotchLactationRegeneration().getName()))
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "直径",
+								PresetColour.TEXT, !knowsCrotchNipples?"未知":String.valueOf(character.getNippleCrotchRawCapacityValue()),
+								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"未知":Util.capitaliseSentence(character.getNippleCrotchCapacity().getDescriptor()))
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "乳头深度等级",
 								PresetColour.TEXT, String.valueOf(character.getNippleCrotchDepth().getValue()),
 								PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getNippleCrotchDepth().getDescriptor()) + " ("+(Math.round(character.getNippleCrotchDepth().getDepthPercentage()*100))+"%)")
 						+ (Main.game.isPenetrationLimitationsEnabled() && character.getNippleCrotchRawCapacityValue()>0
-							?statRow(PresetColour.TRANSFORMATION_GENERIC, "Comfortable Nipple Depth Limit",
-								PresetColour.GENERIC_MINOR_GOOD, (!knowsCrotchNipples?"Unknown":Units.size(character.getNippleCrotchMaximumPenetrationDepthComfortable())),
+							?statRow(PresetColour.TRANSFORMATION_GENERIC, "乳头舒适深度极限",
+								PresetColour.GENERIC_MINOR_GOOD, (!knowsCrotchNipples?"未知":Units.size(character.getNippleCrotchMaximumPenetrationDepthComfortable())),
 								PresetColour.TEXT, "N/A")
 							:"")
 						+ (Main.game.isPenetrationLimitationsEnabled() && character.getNippleCrotchRawCapacityValue()>0
-							?statRow(PresetColour.TRANSFORMATION_GENERIC, "Uncomfortable Nipple Depth Limit",
-								PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":(!knowsCrotchNipples?"Unknown":Units.size(character.getNippleCrotchMaximumPenetrationDepthUncomfortable())),
+							?statRow(PresetColour.TRANSFORMATION_GENERIC, "乳头不舒适深度极限",
+								PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":(!knowsCrotchNipples?"未知":Units.size(character.getNippleCrotchMaximumPenetrationDepthUncomfortable())),
 								PresetColour.TEXT, "N/A")
 							:"")
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Elasticity",
-								PresetColour.TEXT, !knowsCrotchNipples?"Unknown":String.valueOf(character.getNippleCrotchElasticity().getValue()),
-								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"Unknown":Util.capitaliseSentence(character.getNippleCrotchElasticity().getDescriptor()))
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Plasticity",
-								PresetColour.TEXT, !knowsCrotchNipples?"Unknown":String.valueOf(character.getNippleCrotchPlasticity().getValue()),
-								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"Unknown":Util.capitaliseSentence(character.getNippleCrotchPlasticity().getDescriptor())));
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "弹性等级",
+								PresetColour.TEXT, !knowsCrotchNipples?"未知":String.valueOf(character.getNippleCrotchElasticity().getValue()),
+								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"未知":Util.capitaliseSentence(character.getNippleCrotchElasticity().getDescriptor()))
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "可塑性等级",
+								PresetColour.TEXT, !knowsCrotchNipples?"未知":String.valueOf(character.getNippleCrotchPlasticity().getValue()),
+								PresetColour.GENERIC_SEX, !knowsCrotchNipples?"未知":Util.capitaliseSentence(character.getNippleCrotchPlasticity().getDescriptor())));
 		}
 
 		sb.append("<span style='height:16px;width:100%;float:left;'></span>");
@@ -1525,45 +1525,45 @@ public class PhoneDialogue {
 		
 		if(character.hasTail()) {
 			if(Main.game.isPenetrationLimitationsEnabled()) {
-				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "Tail Attributes")
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Length | Used for penetration",
+				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "尾巴属性")
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "长度 | 能用于插入的长度",
 							PresetColour.TEXT, Units.size(character.getTailLength(false))+" | "+Units.size(character.getTailLength(true)),
 							PresetColour.GENERIC_SEX, "N/A"));
 			} else {
-				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "Tail Attributes")
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Length",
+				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "尾巴属性")
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "长度",
 							PresetColour.TEXT, Units.size(character.getTailLength(false)),
 							PresetColour.GENERIC_SEX, "N/A"));
 			}
 			sb.append(
 					statRow(PresetColour.TRANSFORMATION_GENERIC,
-						"Diameter at lengths",
+						"沿长度的直径分布",
 						PresetColour.TEXT,
 						"[style.colourSize4("+Units.size(character.getTailDiameter(0))+")]"
 							+"<br/>[style.colourSize3("+Units.size(character.getTailDiameter(character.getTailLength(false)*0.33f))+")]"
 							+"<br/>[style.colourSize2("+Units.size(character.getTailDiameter(character.getTailLength(false)*0.66f))+")]"
 							+"<br/>[style.colourSize1("+Units.size(character.getTailDiameter(character.getTailLength(false)))+")]",
 						PresetColour.TRANSFORMATION_GENERIC,
-						"[style.colourSize4(Base)]"
+						"[style.colourSize4(根部)]"
 							+ "<br/>[style.colourSize3(33%)]"
 							+ "<br/>[style.colourSize2(66%)]"
-							+ "<br/>[style.colourSize1(Tip)]")
+							+ "<br/>[style.colourSize1(尖端)]")
 					+ statRow(PresetColour.TRANSFORMATION_GENERIC,
-							"Circumference at lengths",
+							"沿长度的周长分布",
 							PresetColour.TEXT,
 							"[style.colourSize4("+Units.size(character.getTailCircumference(0))+")]"
 								+"<br/>[style.colourSize3("+Units.size(character.getTailCircumference(character.getTailLength(false)*0.33f))+")]"
 								+"<br/>[style.colourSize2("+Units.size(character.getTailCircumference(character.getTailLength(false)*0.66f))+")]"
 								+"<br/>[style.colourSize1("+Units.size(character.getTailCircumference(character.getTailLength(false)))+")]",
 							PresetColour.TRANSFORMATION_GENERIC,
-							"[style.colourSize4(Base)]"
+							"[style.colourSize4(根部)]"
 								+ "<br/>[style.colourSize3(33%)]"
 								+ "<br/>[style.colourSize2(66%)]"
-								+ "<br/>[style.colourSize1(Tip)]"));
+								+ "<br/>[style.colourSize1(尖端)]"));
 			
 		} else {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "Tail Attributes")
-					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull] no tail...")));
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "尾巴属性")
+					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull]没有尾巴……")));
 		}
 
 		sb.append( "<span style='height:16px;width:100%;float:left;'></span>");
@@ -1571,33 +1571,33 @@ public class PhoneDialogue {
 
 		if(!knowsTussy) {
 			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Tussy Attributes")
-					+ statRow(PresetColour.TEXT_GREY, "Unknown!"));
+					+ statRow(PresetColour.TEXT_GREY, "未知！"));
 
 		} else if(character.hasTussy()) {
 			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Tussy Attributes")
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Wetness",
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "湿润度",
 					PresetColour.TEXT, String.valueOf(character.getTussyWetness().getValue()),
 					PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getTussyWetness().getDescriptor()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Capacity",
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "直径",
 					PresetColour.TEXT, Units.size(character.getTussyRawCapacityValue()),
 					PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getTussyCapacity().getDescriptor()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Depth",
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "深度等级",
 					PresetColour.TEXT, String.valueOf(character.getTussyDepth().getValue()),
 					PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getTussyDepth().getDescriptor()) + " ("+(Math.round(character.getTussyDepth().getDepthPercentage()*100))+"%)")
 					+ (Main.game.isPenetrationLimitationsEnabled()
-					?statRow(PresetColour.TRANSFORMATION_GENERIC, "Comfortable Depth Limit",
+					?statRow(PresetColour.TRANSFORMATION_GENERIC, "舒适深度极限",
 					PresetColour.GENERIC_MINOR_GOOD, (Units.size(character.getTussyMaximumPenetrationDepthComfortable())),
 					PresetColour.TEXT, "N/A")
 					:"")
 					+ (Main.game.isPenetrationLimitationsEnabled()
-					?statRow(PresetColour.TRANSFORMATION_GENERIC, "Uncomfortable Depth Limit",
+					?statRow(PresetColour.TRANSFORMATION_GENERIC, "不舒适深度极限",
 					PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":(Units.size(character.getTussyMaximumPenetrationDepthUncomfortable())),
 					PresetColour.TEXT, "N/A")
 					:"")
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Elasticity",
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "弹性等级",
 					PresetColour.TEXT, String.valueOf(character.getTussyElasticity().getValue()),
 					PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getTussyElasticity().getDescriptor()))
-					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Plasticity",
+					+ statRow(PresetColour.TRANSFORMATION_GENERIC, "可塑性等级",
 					PresetColour.TEXT, String.valueOf(character.getTussyPlasticity().getValue()),
 					PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getTussyPlasticity().getDescriptor())));
 
@@ -1614,99 +1614,99 @@ public class PhoneDialogue {
 		
 		if(character.hasTentacle()) {
 			if(Main.game.isPenetrationLimitationsEnabled()) {
-				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "Tentacle Attributes")
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Length | Used for penetration",
+				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "触手属性")
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "长度 | 能用于插入的长度",
 							PresetColour.TEXT, Units.size(character.getTentacleLength(false))+" | "+Units.size(character.getTentacleLength(true)),
 							PresetColour.GENERIC_SEX, "N/A"));
 			} else {
-				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "Tentacle Attributes")
-						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Length",
+				sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "触手属性")
+						+ statRow(PresetColour.TRANSFORMATION_GENERIC, "长度",
 							PresetColour.TEXT, Units.size(character.getTentacleLength(false)),
 							PresetColour.GENERIC_SEX, "N/A"));
 			}
 			sb.append(
 					statRow(PresetColour.TRANSFORMATION_GENERIC,
-						"Diameter at lengths",
+						"沿长度的直径分布",
 						PresetColour.TEXT,
 						"[style.colourSize4("+Units.size(character.getTentacleDiameter(0))+")]"
 							+"<br/>[style.colourSize3("+Units.size(character.getTentacleDiameter(character.getTentacleLength(false)*0.33f))+")]"
 							+"<br/>[style.colourSize2("+Units.size(character.getTentacleDiameter(character.getTentacleLength(false)*0.66f))+")]"
 							+"<br/>[style.colourSize1("+Units.size(character.getTentacleDiameter(character.getTentacleLength(false)))+")]",
 						PresetColour.TRANSFORMATION_GENERIC,
-						"[style.colourSize4(Base)]"
+						"[style.colourSize4(根部)]"
 							+ "<br/>[style.colourSize3(33%)]"
 							+ "<br/>[style.colourSize2(66%)]"
-							+ "<br/>[style.colourSize1(Tip)]")
+							+ "<br/>[style.colourSize1(尖端)]")
 					+ statRow(PresetColour.TRANSFORMATION_GENERIC,
-							"Circumference at lengths",
+							"沿长度的周长分布",
 							PresetColour.TEXT,
 							"[style.colourSize4("+Units.size(character.getTentacleCircumference(0))+")]"
 								+"<br/>[style.colourSize3("+Units.size(character.getTentacleCircumference(character.getTentacleLength(false)*0.33f))+")]"
 								+"<br/>[style.colourSize2("+Units.size(character.getTentacleCircumference(character.getTentacleLength(false)*0.66f))+")]"
 								+"<br/>[style.colourSize1("+Units.size(character.getTentacleCircumference(character.getTentacleLength(false)))+")]",
 							PresetColour.TRANSFORMATION_GENERIC,
-							"[style.colourSize4(Base)]"
+							"[style.colourSize4(根部)]"
 								+ "<br/>[style.colourSize3(33%)]"
 								+ "<br/>[style.colourSize2(66%)]"
-								+ "<br/>[style.colourSize1(Tip)]"));
+								+ "<br/>[style.colourSize1(尖端)]"));
 			
 		} else {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "Tentacle Attributes")
-					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull] no tentacles...")));
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_GENERIC, "触手属性")
+					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull]没有触手……")));
 		}
 		
 		sb.append( "<span style='height:16px;width:100%;float:left;'></span>");
 		rowCount = 0;
 		
 		if(!knowsPenis) {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Penis Attributes")
-					+ statRow(PresetColour.TEXT_GREY, "Unknown!"));
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "阴茎属性")
+					+ statRow(PresetColour.TEXT_GREY, "未知！"));
 			
 		} else if(character.hasPenis()) {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Penis Attributes")
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Length",
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "阴茎属性")
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "长度",
 						PresetColour.TEXT, (Units.size(character.getPenisRawSizeValue())),
 						PresetColour.GENERIC_SEX, (Util.capitaliseSentence(character.getPenisSize().getDescriptor())))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Diameter | Circumference",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "直径|周长",
 						PresetColour.TEXT, (Units.size(character.getPenisDiameter())+" | "+Units.size(character.getPenisCircumference())),
 						PresetColour.TEXT_GREY, "N/A")
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Testicle Size",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "睾丸大小",
 						PresetColour.TEXT, (String.valueOf(character.getTesticleSize().getValue())),
 						PresetColour.GENERIC_SEX, (Util.capitaliseSentence(character.getTesticleSize().getDescriptor())))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Cum Storage",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "精液储量",
 						PresetColour.TEXT, (Units.fluid(character.getPenisRawCumStorageValue())),
 						PresetColour.GENERIC_SEX, (Util.capitaliseSentence(character.getPenisCumStorage().getDescriptor())))
-				+ (Main.getProperties().hasValue(PropertyValue.cumRegenerationContent) ? statRow(PresetColour.TRANSFORMATION_GENERIC, "Cum Regeneration",
-						PresetColour.TEXT, Units.fluid(character.getCumRegenerationPerSecond()*60)+"/minute",
+				+ (Main.getProperties().hasValue(PropertyValue.cumRegenerationContent) ? statRow(PresetColour.TRANSFORMATION_GENERIC, "精液再生速度",
+						PresetColour.TEXT, Units.fluid(character.getCumRegenerationPerSecond()*60)+"/分钟",
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getPenisCumProductionRegeneration().getName()))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Cum Expulsion (% of stored cum)",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "射精量 (占精液储量的百分比)",
 						PresetColour.TEXT, String.valueOf(character.getPenisRawCumExpulsionValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getPenisCumExpulsion().getDescriptor())) : ""));
 			
 		} else {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Penis Attributes")
-					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull] no penis...")));
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "阴茎属性")
+					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull]没有阴茎……")));
 		}
 			
 		sb.append("<span style='height:16px;width:100%;float:left;'></span>");
 		rowCount = 0;
 		
 		if(!knowsVagina) {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Vagina Attributes")
-					+ statRow(PresetColour.TEXT_GREY, "Unknown!"));
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "阴道属性")
+					+ statRow(PresetColour.TEXT_GREY, "未知！"));
 			
 		} else if(character.hasVagina()) {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Vagina Attributes")
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Clitoris Size",
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "阴道属性")
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "阴蒂大小",
 						PresetColour.TEXT, (character.getVaginaType() == VaginaType.NONE ? "N/A" : Units.size(character.getVaginaRawClitorisSizeValue())),
 						PresetColour.GENERIC_SEX, (character.getVaginaType() == VaginaType.NONE ? "N/A" : Util.capitaliseSentence(character.getVaginaClitorisSize().getDescriptor())))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Wetness",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "湿润度",
 						PresetColour.TEXT, (character.getVaginaType() == VaginaType.NONE ? "N/A" : String.valueOf(character.getVaginaWetness().getValue())),
 						PresetColour.GENERIC_SEX, (character.getVaginaType() == VaginaType.NONE ? "N/A" : Util.capitaliseSentence(character.getVaginaWetness().getDescriptor())))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Capacity",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "直径",
 						PresetColour.TEXT, (character.getVaginaType() == VaginaType.NONE ? "N/A" : Units.size(character.getVaginaRawCapacityValue())),
 						PresetColour.GENERIC_SEX, (character.getVaginaType() == VaginaType.NONE ? "N/A" : Util.capitaliseSentence(character.getVaginaCapacity().getDescriptor())))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Depth",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "深度等级",
 						PresetColour.TEXT, String.valueOf(character.getVaginaDepth().getValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getVaginaDepth().getDescriptor()) + " ("+(Math.round(character.getVaginaDepth().getDepthPercentage()*100))+"%)")
 				+ (Main.game.isPenetrationLimitationsEnabled()
@@ -1716,30 +1716,30 @@ public class PhoneDialogue {
 					:"")
 				+ (Main.game.isPenetrationLimitationsEnabled()
 					?statRow(PresetColour.TRANSFORMATION_GENERIC, "Uncomfortable Depth Limit",
-						PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":(Units.size(character.getVaginaMaximumPenetrationDepthUncomfortable())),
+						PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"无限制":(Units.size(character.getVaginaMaximumPenetrationDepthUncomfortable())),
 						PresetColour.TEXT, "N/A")
 					:"")
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Elasticity",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "弹性等级",
 						PresetColour.TEXT, (character.getVaginaType() == VaginaType.NONE ? "N/A" : String.valueOf(character.getVaginaElasticity().getValue())),
 						PresetColour.GENERIC_SEX, (character.getVaginaType() == VaginaType.NONE ? "N/A" : Util.capitaliseSentence(character.getVaginaElasticity().getDescriptor())))
-				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Plasticity",
+				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "可塑性等级",
 						PresetColour.TEXT, (character.getVaginaType() == VaginaType.NONE ? "N/A" : String.valueOf(character.getVaginaPlasticity().getValue())),
 						PresetColour.GENERIC_SEX, (character.getVaginaType() == VaginaType.NONE ? "N/A" : Util.capitaliseSentence(character.getVaginaPlasticity().getDescriptor()))));
 			
 		} else {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Vagina Attributes")
-					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull] no vagina...")));
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "阴道属性")
+					+ statRow(PresetColour.TEXT_GREY, UtilText.parse(character, "[npc.NameHasFull]没有阴道……")));
 		}
 			
 		sb.append("<span style='height:16px;width:100%;float:left;'></span>");
 		rowCount = 0;
 
 		if(!knowsAnus) {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Anus Attributes")
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "肛门属性")
 					+ statRow(PresetColour.TEXT_GREY, "Unknown!"));
 			
 		} else {
-			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "Anus Attributes")
+			sb.append(statRowHeader(PresetColour.TRANSFORMATION_SEXUAL, "肛门属性")
 				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Wetness",
 						PresetColour.TEXT, String.valueOf(character.getAssWetness().getValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getAssWetness().getDescriptor()))
@@ -1750,13 +1750,13 @@ public class PhoneDialogue {
 						PresetColour.TEXT, String.valueOf(character.getAssDepth().getValue()),
 						PresetColour.GENERIC_SEX, Util.capitaliseSentence(character.getAssDepth().getDescriptor()) + " ("+(Math.round(character.getAssDepth().getDepthPercentage()*100))+"%)")
 				+ (Main.game.isPenetrationLimitationsEnabled()
-					?statRow(PresetColour.TRANSFORMATION_GENERIC, "Comfortable Anus Depth Limit",
+					?statRow(PresetColour.TRANSFORMATION_GENERIC, "肛门舒适深度极限",
 						PresetColour.GENERIC_MINOR_GOOD, (Units.size(character.getAssMaximumPenetrationDepthComfortable())),
 						PresetColour.TEXT, "N/A")
 					:"")
 				+ (Main.game.isPenetrationLimitationsEnabled()
-					?statRow(PresetColour.TRANSFORMATION_GENERIC, "Uncomfortable Anus Depth Limit",
-						PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"No limit":(Units.size(character.getAssMaximumPenetrationDepthUncomfortable())),
+					?statRow(PresetColour.TRANSFORMATION_GENERIC, "肛门不舒适深度极限",
+						PresetColour.GENERIC_MINOR_BAD, !character.getBodyMaterial().isOrificesLimitedDepth()?"无限制":(Units.size(character.getAssMaximumPenetrationDepthUncomfortable())),
 						PresetColour.TEXT, "N/A")
 					:"")
 				+ statRow(PresetColour.TRANSFORMATION_GENERIC, "Elasticity",
@@ -1772,7 +1772,7 @@ public class PhoneDialogue {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode CHARACTER_STATS_BODY = new DialogueNode("Body Stats", "", true) {
+	public static final DialogueNode CHARACTER_STATS_BODY = new DialogueNode("身体属性", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1781,40 +1781,40 @@ public class PhoneDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<details>"
-							+ "<summary style='color:"+PresetColour.TRANSFORMATION_SEXUAL.toWebHexString()+"; text-align:center;'>Orifice Mechanics</summary>"
+							+ "<summary style='color:"+PresetColour.TRANSFORMATION_SEXUAL.toWebHexString()+"; text-align:center;'>腔穴相关机能</summary>"
 						
-						+ "[style.boldSex(Capacity:)] An orifice's capacity determines the maximum diameter of penises and tails that can be comfortably inserted."
-						+ " <b>Higher capacity values mean that the orifice can take thicker insertions without stretching.</b>"
-						+ "<br/>- The diameter of a penis is calculated from a combination of their 'length' and 'girth' value, with additional modifiers (such as 'flared' or 'tapered') further altering the final value."
-						+ "<br/>- The diameter of a tail is calculated from both its 'girth' value as well as the character's height."
-						+ "<br/>- Capacity diameter values range from 0 [units.sizes] (extremely tight) to [units.sizes("+Math.round(Capacity.SEVEN_GAPING.getMaximumValue(false))+")] (gaping wide)."
+						+ "[style.boldSex(直径:)]腔穴的直径决定了多粗的物体可以被舒服地容纳入腔穴当中。"
+						+ "<b>直径越大意味着腔穴能够在不扩张的情况下容纳更粗的物体。</b>"
+						+ "<br/>- 阴茎的直径是由“长度”和“周长”值组合计算得出的，附加的修饰特性(如“喇叭形”或“锥形”)会进一步改变最终值。"
+						+ "<br/>- 尾巴的直径是根据它的“周长”值和角色的身高来计算的。"
+						+ "<br/>- 直径范围从0[units.sizes](极细) 到[units.sizes("+Math.round(Capacity.SEVEN_GAPING.getMaximumValue(false))+")](极粗)。"
 						
 						+ "<br/><br/>");
 			
 			if(Main.game.isPenetrationLimitationsEnabled()) {
 				UtilText.nodeContentSB.append(
-					"[style.boldSex(Depth:)] An orifice's depth determines the maximum length of penises and tails which can be comfortably or uncomfortably inserted into it."
-						+ " <b>Higher depth values mean that longer penetrative objects can be accommodated before the character experiences discomfort.</b>"
-						+ "<br/>- Comfortable/Uncomfortable depths of an orifice are based on the height of the character, and are then modified by the orifice's 'depth' value."
-						+ "<br/>- Sexual partners who are not in the 'rough' sex-pace, and whose penises or tails are too long to be fully inserted into an orifice will stop at the limit of comfortable depth."
-						+ "<br/>- Sexual partners who are in the 'rough' sex-pace will push past the comfortable orifice depth limit, causing the character discomfort."
-						+ "<br/>- Size queens treat the 'uncomfortable' portion of orifice depth as being comfortable."
-						+ "<br/>- Slimes and elementals always have the maximum depth value for each of their orifices."
-						+ "<br/>- Depth values range from 0 ("+OrificeDepth.ZERO_EXTREMELY_SHALLOW.getDescriptor()+") to 7 ("+OrificeDepth.SEVEN_FATHOMLESS.getDescriptor()+")."
+					"[style.boldSex(深度:)]腔穴的深度决定了多长的物体可以被舒适地或不舒适地容纳入腔穴之中。"
+						+ "<b>更高的深度等级意味着腔穴在感到不舒适之前可以容纳更长的物体。</b>"
+						+ "<br/>- 腔穴的舒适/不舒适深度首先取决于角色的身高，然后被深度等级所修正。"
+						+ "<br/>- 性对象如果没有达到“粗暴”的性爱烈度，并且他们拥有不能够完全插入腔穴的物体，那么该物体插入腔穴时将只会停留在最大舒适深度。"
+						+ "<br/>- 性对象如果进入“粗暴”的性爱烈度，那么他们将不会遵循停留在最大舒适深度的规则，造成角色不舒服。"
+						+ "<br/>- “尺寸为王”性癖会使得插入深度中不舒适深度的部分转化为舒适深度。"
+						+ "<br/>- 史莱姆和元素的每一个腔穴的深度等级都将永远保持最大。"
+						+ "<br/>- 深度等级的范围从0 ("+OrificeDepth.ZERO_EXTREMELY_SHALLOW.getDescriptor()+") 到7 ("+OrificeDepth.SEVEN_FATHOMLESS.getDescriptor()+")。"
 						
 						+ "<br/><br/>");
 			}
 			
-			UtilText.nodeContentSB.append("[style.boldSex(Elasticity:)] An orifice's elasticity determines how quickly it stretches out, and also has an influence on detecting whether a penetrative object is too big for the orifice."
-						+ " If a partner's penis is too large for your orifice's capacity value, then your orifice will stretch out each turn during sex, with <b>higher elasticity values meaning that it stretches out quicker</b>."
-						+ " <b>Higher elasticity values also have an increased tolerance for objects that would normally be too large for the orifice, allowing larger objects to be inserted before stretching begins</b>."
-						+ "<br/>Elasticity values range from 0 (extremely resistant to being stretched out) to 7 (instantly stretching out)."
+			UtilText.nodeContentSB.append("[style.boldSex(弹性等级:)]一个腔穴的弹性等级决定了这个腔穴有多快被扩张，并且对决定插入腔穴的物体是否过大有影响。"
+						+ "如果对象的阴茎尺寸大于你腔穴所能容纳的尺寸，你的腔穴在性爱中就会被扩张，腔穴有<b>更高的弹性等级意味着扩张得会更快</b>。"
+						+ "<b>更高的弹性等级同时还能提升腔穴对过大尺寸物体的容忍度，使得腔穴在扩张开始之前就可以接受较大物体的插入</b>。"
+						+ "<br/>弹性等级范围从0 (极度抗拒扩张) 到7 (几乎不抗拒扩张)。"
 						
 						+ "<br/><br/>"
 						
-					+ "[style.boldSex(Plasticity:)] An orifice's plasticity determines how quickly it recovers after being stretched out."
-						+ " If your orifice has been stretched out during sex, <b>higher plasticity values mean that it will recover slower, with very high values meaning that it will never recover all of its original tightness</b>."
-						+ "<br/>Plasticity values range from 0 (instantly returns to starting size after sex) to 7 (recovers none of its original size after sex)."
+					+ "[style.boldSex(可塑性等级:)]一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。"
+						+ "如果你的腔穴在性爱中被扩张，<b>高可塑性等级意味着你的腔穴会更难从扩张中恢复，而极高的可塑性等级则意味着你的腔穴几乎不会从扩张中恢复。</b>。"
+						+ "<br/>可塑性等级范围从0 (性爱结束后几乎立刻回到原有大小) 到7 (性爱结束之后几乎不会回到原有大小)。"
 			+ "</details>"
 					
 			+ getBodyStatsPanel(Main.game.getPlayer()));
@@ -1825,19 +1825,19 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Core Stats", "Have a detailed look at your core stats.", CHARACTER_STATS);
+				return new Response("核心状态", "详细了解你的核心状态", CHARACTER_STATS);
 			
 			} else if (index == 2) {
-				return new Response("Body stats", "Have a detailed look at your body's values.", null);
+				return new Response("身体状态", "详细了解你的身体数值", null);
 			
 			} else if (index == 3) {
-				return new Response("Sex stats", "Have a detailed look at your sex stats.", CHARACTER_STATS_SEX);
+				return new Response("性状态", "详细了解你的性状态", CHARACTER_STATS_SEX);
 			
 			} else if (index == 4) {
-				return new Response("Pregnancy stats", "Have a detailed look at your pregnancy stats.", CHARACTER_STATS_PREGNANCY);
+				return new Response("怀孕状态", "详细了解你的怀孕状态", CHARACTER_STATS_PREGNANCY);
 			
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			
 			} else {
 				return null;
@@ -1850,26 +1850,26 @@ public class PhoneDialogue {
 		}
 	};
 	
-	public static final DialogueNode CHARACTER_STATS_SEX = new DialogueNode("Sex Stats", "", true) {
+	public static final DialogueNode CHARACTER_STATS_SEX = new DialogueNode("性属性", "", true) {
 
 		@Override
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<div class='container-full-width' style='text-align:center; width:100%; padding:0; margin:4px 0;'>"
-						+ "You have orgasmed [style.boldSex("+Main.game.getPlayer().getDaysOrgasmCount()+")] time"+(Main.game.getPlayer().getDaysOrgasmCount()==1?"":"s")
-							+" today, bringing your total orgasm count to [style.boldSex("+Main.game.getPlayer().getTotalOrgasmCount()+")]."
+						+ "你今天高潮了[style.boldSex("+Main.game.getPlayer().getDaysOrgasmCount()+")]次"
+							+"，你的高潮总次数为[style.boldSex("+Main.game.getPlayer().getTotalOrgasmCount()+")]。"
 						+ "<br/>"
-						+ "Your record for most orgasms in one day is currently [style.boldSex("+Main.game.getPlayer().getDaysOrgasmCountRecord()+")]."
+						+ "你的单日最多高潮次数现在是[style.boldSex("+Main.game.getPlayer().getDaysOrgasmCountRecord()+")]。"
 						+ "<br/>"
-						+ "You have had sex with a total of [style.boldSex("+Main.game.getPlayer().getUniqueSexPartnerCount()+")] "+(Main.game.getPlayer().getUniqueSexPartnerCount()==1?"person":"different people")+"."
+						+ "你总共与[style.boldSex("+Main.game.getPlayer().getUniqueSexPartnerCount()+")]个对象做过。"
 					+ "</div>");
 					
 			sb.append(sexStatHeader());
 			
 			boolean oddRow = false;
 			
-			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Fingering",
+			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "指交",
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.FINGER, SexAreaOrifice.VAGINA)),
 							-1,
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.FINGER)),
@@ -1879,7 +1879,7 @@ public class PhoneDialogue {
 			oddRow = !oddRow;
 			
 			sb.append((Main.game.isAnalContentEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Anal Fingering",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "肛门指交",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.FINGER, SexAreaOrifice.ANUS)),
 									-1,
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.FINGER)),
@@ -1891,7 +1891,7 @@ public class PhoneDialogue {
 				oddRow = !oddRow;
 			}
 			
-			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Blowjobs",
+			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "口交",
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, SexAreaPenetration.PENIS)),
 							Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH)),
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH)),
@@ -1900,7 +1900,7 @@ public class PhoneDialogue {
 
 			oddRow = !oddRow;
 			
-			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Cunnilingus",
+			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "舔阴",
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.VAGINA)),
 							-1,
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.TONGUE)),
@@ -1910,7 +1910,7 @@ public class PhoneDialogue {
 			oddRow = !oddRow;
 			
 			sb.append((Main.game.isAnalContentEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Anilingus",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "舔肛",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.ANUS)),
 									-1,
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.TONGUE)),
@@ -1922,7 +1922,7 @@ public class PhoneDialogue {
 				oddRow = !oddRow;
 			}
 
-			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Intercrural",
+			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "腿交",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.THIGHS)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.THIGHS)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.THIGHS, SexAreaPenetration.PENIS)),
@@ -1932,7 +1932,7 @@ public class PhoneDialogue {
 			oddRow = !oddRow;
 					
 			sb.append((Main.game.isFootContentEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Footjobs",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "足交",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.FOOT, SexAreaPenetration.PENIS)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaPenetration.FOOT)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaPenetration.FOOT)),
@@ -1945,7 +1945,7 @@ public class PhoneDialogue {
 			}
 
 			sb.append((Main.game.isArmpitContentEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "Armpit fuck",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_ONE, "腋交",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ARMPITS, SexAreaPenetration.PENIS)),
@@ -1957,7 +1957,7 @@ public class PhoneDialogue {
 				oddRow = !oddRow;
 			}
 					
-			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "Vaginal sex",
+			sb.append(sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "阴道性交",
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA)),
 							Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA)),
 							Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS)),
@@ -1967,7 +1967,7 @@ public class PhoneDialogue {
 			oddRow = !oddRow;
 			
 			sb.append((Main.game.isAnalContentEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "Anal sex",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "肛交",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ANUS)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ANUS)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.PENIS)),
@@ -1980,7 +1980,7 @@ public class PhoneDialogue {
 			}
 			
 			sb.append((Main.game.isNipplePenEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "Nipple penetration",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "乳头插入",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE, SexAreaPenetration.PENIS)),
@@ -1993,7 +1993,7 @@ public class PhoneDialogue {
 			}
 			
 			sb.append((Main.game.isNipplePenEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "Crotch Nipple penetration",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "胯乳乳头插入",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE_CROTCH)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE_CROTCH)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE_CROTCH, SexAreaPenetration.PENIS)),
@@ -2006,7 +2006,7 @@ public class PhoneDialogue {
 			}
 			
 			sb.append((Main.game.isUrethraEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "Penis Urethra penetration",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "阴茎尿道插入",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_PENIS)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_PENIS)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_PENIS, SexAreaPenetration.PENIS)),
@@ -2019,7 +2019,7 @@ public class PhoneDialogue {
 			}
 			
 			sb.append((Main.game.isUrethraEnabled()
-							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "Vagina Urethra penetration",
+							?sexStatRow(PresetColour.AROUSAL_STAGE_TWO, "阴户尿道插入",
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_VAGINA)),
 									Main.game.getPlayer().getTotalCumCount(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_VAGINA)),
 									Main.game.getPlayer().getTotalSexCount(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_VAGINA, SexAreaPenetration.PENIS)),
@@ -2033,19 +2033,19 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Core Stats", "Have a detailed look at your core stats.", CHARACTER_STATS);
+				return new Response("核心状态", "详细了解你的核心状态", CHARACTER_STATS);
 			
 			} else if (index == 2) {
-				return new Response("Body stats", "Have a detailed look at your body's values.", CHARACTER_STATS_BODY);
+				return new Response("身体状态", "详细了解你的身体数值", CHARACTER_STATS_BODY);
 			
 			} else if (index == 3) {
-				return new Response("Sex stats", "Have a detailed look at your sex stats.", null);
+				return new Response("性状态", "详细了解你的性状态", null);
 			
 			} else if (index == 4) {
-				return new Response("Pregnancy stats", "Have a detailed look at your pregnancy stats.", CHARACTER_STATS_PREGNANCY);
+				return new Response("怀孕状态", "详细了解你的怀孕状态", CHARACTER_STATS_PREGNANCY);
 			
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			
 			} else {
 				return null;
@@ -2058,7 +2058,7 @@ public class PhoneDialogue {
 		}
 	};
 	
-	public static final DialogueNode CHARACTER_STATS_PREGNANCY = new DialogueNode("Pregnancy Stats", "", true) {
+	public static final DialogueNode CHARACTER_STATS_PREGNANCY = new DialogueNode("怀孕状态", "", true) {
 
 		private void OffspringHeaderDisplay(StringBuilder output, String word_one, String word_two, String color, int count) {
 			output.append("<div class='extraAttribute-quarter'>");
@@ -2198,17 +2198,17 @@ public class PhoneDialogue {
 
 			UtilText.nodeContentSB.setLength(0);
 
-			OffspringHeaderDisplay(UtilText.nodeContentSB, "Mothered", "Sons", PresetColour.MASCULINE.toWebHexString(), sonsBirthed);
-			OffspringHeaderDisplay(UtilText.nodeContentSB, "Mothered", "Daughters", PresetColour.FEMININE.toWebHexString(), daughtersBirthed);
-			OffspringHeaderDisplay(UtilText.nodeContentSB, "Fathered", "Sons", PresetColour.MASCULINE.toWebHexString(), sonsFathered);
-			OffspringHeaderDisplay(UtilText.nodeContentSB, "Fathered", "Daughters", PresetColour.FEMININE.toWebHexString(), daughtersFathered);
+			OffspringHeaderDisplay(UtilText.nodeContentSB, "身为母亲拥有的", "儿子", PresetColour.MASCULINE.toWebHexString(), sonsBirthed);
+			OffspringHeaderDisplay(UtilText.nodeContentSB, "身为母亲拥有的", "女儿", PresetColour.FEMININE.toWebHexString(), daughtersBirthed);
+			OffspringHeaderDisplay(UtilText.nodeContentSB, "身为父亲拥有的", "儿子", PresetColour.MASCULINE.toWebHexString(), sonsFathered);
+			OffspringHeaderDisplay(UtilText.nodeContentSB, "作为父亲拥有的", "女儿", PresetColour.FEMININE.toWebHexString(), daughtersFathered);
 
 			int childrenMet = Main.game.getOffspring().size();
 			int totalChildren = (sonsBirthed+daughtersBirthed+sonsFathered+daughtersFathered+offspringIncubatedCount);
 			int percentageMet = totalChildren == 0 ? 100 : (100 * childrenMet / totalChildren);
 			
 			UtilText.nodeContentSB.append(
-					"<div class='subTitle'>Total offspring: "+ totalChildren+" (Children met: "+ percentageMet +"%)</div>"
+					"<div class='subTitle'>后代总数："+ totalChildren+" (见过的孩子："+ percentageMet +"%)</div>"
 					
 					+ "<span style='height:16px;width:100%;float:left;'></span>"
 					
@@ -2217,23 +2217,23 @@ public class PhoneDialogue {
 					+ "<span style='height:16px;width:100%;float:left;'></span>");
 			
 			UtilText.nodeContentSB.append(
-					"<div class='subTitle'>Offspring list</div>"
+					"<div class='subTitle'>后代列表</div>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
 						+ "<div class='container-full-width'style='float:left; margin:0; width:100%; font-weight:bold;'>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:20%;'>"
-								+ "Name"
+								+ "名字"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:15%;'>"
-								+ "Race"
+								+ "种族"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:20%;'>"
-								+ "Mother"
+								+ "母亲"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:20%;'>"
-								+ "Father"
+								+ "父亲"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:25%;'>"
-								+ "Your relationship"
+								+ "与你的关系"
 							+ "</div>"
 						+ "</div>");
 			
@@ -2243,7 +2243,7 @@ public class PhoneDialogue {
 			List<OffspringSeed> offspringUnknown = new ArrayList<>(Main.game.getOffspringNotSpawned(os->true));
 			if(offspringMet.isEmpty() && offspringUnknown.isEmpty()) {
 				UtilText.nodeContentSB.append("<div class='container-full-width' style='margin:0; padding:0; width:100%;float:left;'>"
-												+ "[style.italicsDisabled(No Offspring...)]"
+												+ "[style.italicsDisabled(没有后代……)]"
 											+ "</div>");
 			} else {
 				offspringMet.sort(Comparator.comparing(GameCharacter::getBirthday));
@@ -2266,26 +2266,26 @@ public class PhoneDialogue {
 			UtilText.nodeContentSB.append("<span style='height:16px;width:100%;float:left;'></span>");
 			
 			UtilText.nodeContentSB.append(
-					"<div class='subTitle'>Incubated offspring list</div>"
+					"<div class='subTitle'>孵化而来的后代列表</div>"
 					+ "<div class='container-full-width' style='text-align:center;'>"
 						+ "<div class='container-full-width'style='float:left; margin:0; width:100%; font-weight:bold;'>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:15%;'>"
-								+ "Name"
+								+ "名字"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:15%;'>"
-								+ "Race"
+								+ "种族"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:15%;'>"
-								+ "Mother"
+								+ "母亲"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:15%;'>"
-								+ "Father"
+								+ "父亲"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:15%;'>"
-								+ "Incubated by"
+								+ "孵化于"
 							+ "</div>"
 							+ "<div class='container-full-width' style='float:left; margin:0; width:25%;'>"
-								+ "Your relationship"
+								+ "与你的关系"
 							+ "</div>"
 						+ "</div>");
 			
@@ -2297,7 +2297,7 @@ public class PhoneDialogue {
 			offspringIncubatedUnknown.removeIf(os -> os.getIncubator()==null || !os.getIncubator().isPlayer()); // Only egg incubated offspring
 			if(offspringIncubated.isEmpty() && offspringIncubatedUnknown.isEmpty()) {
 				UtilText.nodeContentSB.append("<div class='container-full-width' style='float:left; margin:0; width:100%;'>"
-												+ "[style.italicsDisabled(No Incubated Offspring...)]"
+												+ "[style.italicsDisabled(没有孵化的后代……)]"
 											+ "</div>");
 			} else {
 				offspringIncubated.sort(Comparator.comparing(GameCharacter::getBirthday));
@@ -2322,19 +2322,19 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Core Stats", "Have a detailed look at your core stats.", CHARACTER_STATS);
+				return new Response("核心状态", "详细了解你的核心状态", CHARACTER_STATS);
 			
 			} else if (index == 2) {
-				return new Response("Body stats", "Have a detailed look at your body's values.", CHARACTER_STATS_BODY);
+				return new Response("身体状态", "详细了解你的身体数值。", CHARACTER_STATS_BODY);
 			
 			} else if (index == 3) {
-				return new Response("Sex stats", "Have a detailed look at your sex stats.", CHARACTER_STATS_SEX);
+				return new Response("性状态", "详细了解你的性状态", CHARACTER_STATS_SEX);
 			
 			} else if (index == 4) {
-				return new Response("Pregnancy stats", "Have a detailed look at your pregnancy stats.", null);
+				return new Response("怀孕状态", "详细了解你的怀孕状态", null);
 			
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			
 			} else {
 				return null;
@@ -2350,19 +2350,19 @@ public class PhoneDialogue {
 	private static String sexStatHeader() {
 		return "<div class='container-full-width' style='width:100%; padding:0; margin:4px 0; font-weight:bold; text-align:center;'>"
 					+ "<div class='container-full-width' style='width:33.3%; padding:0; margin:0;'>"
-						+ "Type"
+						+ "类型"
 					+ "</div>"
 					+ "<div class='container-full-width' style='width:16.66%; padding:0; margin:0;'>"
-						+ "Performed"
+						+ "提供"
 					+ "</div>"
 					+ "<div class='container-full-width' style='width:16.66%; padding:0; margin:0;'>"
-						+ "Creampies<br/>Given"
+						+ "内射<br/>给出"
 					+ "</div>"
 					+ "<div class='container-full-width' style='width:16.66%; padding:0; margin:0;'>"
-						+ "Received"
+						+ "接受"
 					+ "</div>"
 					+ "<div class='container-full-width' style='width:16.66%; padding:0; margin:0;'>"
-						+ "Creampies<br/>Received"
+						+ "内射<br/>接受"
 					+ "</div>"
 				+ "</div>";
 	}
@@ -2422,7 +2422,7 @@ public class PhoneDialogue {
 		
 		boolean noPregnancies=true;
 
-		contentSB.append("<div class='subTitle'>Mothered & Incubated Offspring</div>");
+		contentSB.append("<div class='subTitle'>作为母亲或孵化而来的后代</div>");
 		
 		if(Main.game.getPlayer().hasStatusEffect(StatusEffect.PREGNANT_0)
 				|| Main.game.getPlayer().hasStatusEffect(StatusEffect.PREGNANT_1)
@@ -2445,18 +2445,18 @@ public class PhoneDialogue {
 								+ (pp.getFather().getGender().isFeminine()
 										?Util.capitaliseSentence(pp.getFather().getSubspecies().getSingularFemaleName(pp.getFather().getBody()))
 										:Util.capitaliseSentence(pp.getFather().getSubspecies().getSingularMaleName(pp.getFather().getBody())))
-								+ "</span>) Probability: "));
+								+ "</span>)概率："));
 					
 					if (pp.getProbability() <= 0) {
-						possibleFathersSB.append("[style.italicsTerrible(None)]");
+						possibleFathersSB.append("[style.italicsTerrible(无)]");
 					} else if(pp.getProbability()<=0.15f) {
-						possibleFathersSB.append("[style.italicsBad(Low)]");
+						possibleFathersSB.append("[style.italicsBad(低)]");
 					} else if(pp.getProbability()<=0.3f) {
-						possibleFathersSB.append("[style.italicsMinorGood(Average)]");
+						possibleFathersSB.append("[style.italicsMinorGood(平均)]");
 					} else if(pp.getProbability()<1) {
-						possibleFathersSB.append("[style.italicsGood(High)]");
+						possibleFathersSB.append("[style.italicsGood(高)]");
 					} else {
-						possibleFathersSB.append("[style.italicsExcellent(Certainty)]");
+						possibleFathersSB.append("[style.italicsExcellent(必然)]");
 					}
 					
 					possibleFathersSB.append("</b>");
@@ -2475,7 +2475,7 @@ public class PhoneDialogue {
 				stage = StatusEffect.PREGNANT_3.getName(Main.game.getPlayer());
 			}
 			
-			contentSB.append(pregnancyRow("[style.boldBad(Ongoing Pregnancy)]", "[style.italicsSex('"+Util.capitaliseSentence(stage)+"')]", "<b>Possible Fathers:</b>", possibleFathersSB.toString()));
+			contentSB.append(pregnancyRow("[style.boldBad(正在进行的怀孕)]", "[style.italicsSex('"+Util.capitaliseSentence(stage)+"')]", "<b>可能的父亲：</b>", possibleFathersSB.toString()));
 			
 			noPregnancies=false;
 		}
@@ -2500,17 +2500,17 @@ public class PhoneDialogue {
 					stage = incubationEntry.getValue().get(2).getName(Main.game.getPlayer());
 				}
 				Litter litter = Main.game.getPlayer().getIncubationLitter(incubationEntry.getKey());
-				contentSB.append(pregnancyRow("[style.boldBad(Ongoing)] [style.boldPurple(Incubation)]",
+				contentSB.append(pregnancyRow("[style.boldBad(正在进行的)][style.boldPurple(孵化)]",
 						(litter.getMother()!=null
 							?(litter.getMother().isPlayer()
-								?"Implanter: [style.colourExcellent(Yourself)]"
-								:UtilText.parse(litter.getMother(), "Implanter: <span style='color:"+litter.getMother().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
-							:"Implanter: [style.colourDisabled(Unknown)]"),
-						"Implanted in "
+								?"授卵者：[style.colourExcellent(你自己)]"
+								:UtilText.parse(litter.getMother(), "授卵者：<span style='color:"+litter.getMother().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
+							:"授卵者：[style.colourDisabled(未知)]"),
+						"授卵于"
 							+(incubationEntry.getKey()==SexAreaOrifice.VAGINA
-								?"womb"
+								?"子宫"
 								:(incubationEntry.getKey()==SexAreaOrifice.ANUS || incubationEntry.getKey()==SexAreaOrifice.MOUTH
-									?"stomach"
+									?"腹部"
 									:incubationEntry.getKey().getName(Main.game.getPlayer(), true)))
 							+": "
 							+Units.date(litter.getIncubationStartDate(), Units.DateType.LONG),
@@ -2524,7 +2524,7 @@ public class PhoneDialogue {
 		
 		if(!Main.game.getPlayer().getLittersBirthed().isEmpty()) {
 			for(Litter litter : Main.game.getPlayer().getLittersBirthed()) {
-				String unknownName = "[style.colourDisabled(Unknown)]";
+				String unknownName = "[style.colourDisabled(未知)]";
 				try {
 					String offspring0 = litter.getOffspring().iterator().next();
 					if(offspring0.contains("NPCOffspring")) {
@@ -2540,34 +2540,34 @@ public class PhoneDialogue {
 					}
 				} catch(Exception ex) {
 				}
-				contentSB.append(pregnancyRow("[style.boldGood(Resolved Pregnancy)]",
+				contentSB.append(pregnancyRow("[style.boldGood(已经结束的怀孕)]",
 						(litter.getFather()!=null
 							?(litter.getFather().isPlayer()
-								?"Father: [style.colourExcellent(Yourself)]"
-								:UtilText.parse(litter.getFather(), "Father: <span style='color:"+litter.getFather().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
-							:"Father: "+unknownName),
-						"Conceived: "
+								?"父亲：[style.colourExcellent(你自己)]"
+								:UtilText.parse(litter.getFather(), "父亲：<span style='color:"+litter.getFather().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
+							:"父亲："+unknownName),
+						"受孕于："
 							+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
-							+" | Delivered: "
+							+" | 生产于："
 							+Units.date(litter.getBirthDate(), Units.DateType.LONG),
-						"Birthed: "
+						"生育："
 							+litter.getBirthedDescription()));
 			}
 			noPregnancies=false;
 		}
 		if(!Main.game.getPlayer().getLittersIncubated().isEmpty()) {
 			for(Litter litter : Main.game.getPlayer().getLittersIncubated()) {
-				contentSB.append(pregnancyRow("[style.boldGood(Resolved)] [style.boldPurple(Incubation)]",
+				contentSB.append(pregnancyRow("[style.boldGood(已经结束的)][style.boldPurple(孵化)]",
 						(litter.getMother()!=null
 							?(litter.getMother().isPlayer()
-								?"Implanter: [style.colourExcellent(Yourself)]"
-								:UtilText.parse(litter.getMother(), "Implanter: <span style='color:"+litter.getMother().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
-							:"Implanter: [style.colourDisabled(Unknown)]"),
-						"Implanted: "
+								?"授卵者：[style.colourExcellent(你自己)]"
+								:UtilText.parse(litter.getMother(), "授卵者：<span style='color:"+litter.getMother().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
+							:"授卵者：[style.colourDisabled(未知)]"),
+						"授卵于:"
 								+Units.date(litter.getIncubationStartDate(), Units.DateType.LONG)
-								+" | Delivered: "
+								+" | 生产于："
 								+Units.date(litter.getBirthDate(), Units.DateType.LONG),
-						"Birthed: "
+						"生育："
 							+litter.getBirthedDescription()));
 			}
 			noPregnancies=false;
@@ -2577,8 +2577,8 @@ public class PhoneDialogue {
 			contentSB.append("<div class='subTitle'>"
 					+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() +
 					(Main.game.getPlayer().getLittersImplanted().isEmpty()
-					?";'>You have never been pregnant...</span>"
-					:";'>You have never given birth...</span>")
+					?";'>你还没有怀孕过……</span>"
+					:";'>你还没有生育过……</span>")
 					+ "</div>");
 		}
 		
@@ -2588,7 +2588,7 @@ public class PhoneDialogue {
 		
 		contentSB.append("<span style='height:16px;width:100%;float:left;'></span>");
 		
-		contentSB.append("<div class='subTitle'>Fathered & Implanted Offspring</div>");
+		contentSB.append("<div class='subTitle'>作为父亲或授卵而来的后代</div>");
 		
 		for(PregnancyPossibility pp : new ArrayList<>(Main.game.getPlayer().getPotentialPartnersAsFather())) {
 			if(pp.getMother()!=null) {
@@ -2630,7 +2630,7 @@ public class PhoneDialogue {
 								:Util.capitaliseSentence(pp.getMother().getSubspecies().getSingularMaleName(pp.getMother().getBody())))
 						+ "</span>)";
 				
-				contentSB.append(pregnancyRow("[style.boldBad(Ongoing Pregnancy)]", "[style.italicsSex('"+Util.capitaliseSentence(stage)+"')]", motherName, impregnationChance));
+				contentSB.append(pregnancyRow("[style.boldBad(正在进行的怀孕)]", "[style.italicsSex("+Util.capitaliseSentence(stage)+")]", motherName, impregnationChance));
 				
 			}
 			noPregnancies=false;
@@ -2656,13 +2656,13 @@ public class PhoneDialogue {
 						} else if(incubator.hasStatusEffect(incubationEntry.getValue().get(2))) {
 							stage = incubationEntry.getValue().get(2).getName(incubator);
 						}
-						contentSB.append(pregnancyRow("[style.boldBad(Ongoing)] [style.boldPurple(Incubation)]",
-								UtilText.parse(incubator, "Incubator: <span style='color:"+incubator.getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"),
-								"Implanted in "
+						contentSB.append(pregnancyRow("[style.boldBad(正在进行的)][style.boldPurple(孵化)]",
+								UtilText.parse(incubator, "孵化者：<span style='color:"+incubator.getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"),
+								"授卵于"
 									+(incubationEntry.getKey()==SexAreaOrifice.VAGINA
-										?"womb"
+										?"子宫"
 										:(incubationEntry.getKey()==SexAreaOrifice.ANUS || incubationEntry.getKey()==SexAreaOrifice.MOUTH
-											?"stomach"
+											?"腹部"
 											:incubationEntry.getKey().getName(incubator, true)))
 									+": "
 									+Units.date(litter.getIncubationStartDate(), Units.DateType.LONG),
@@ -2675,7 +2675,7 @@ public class PhoneDialogue {
 		
 		if(!Main.game.getPlayer().getLittersFathered().isEmpty()) {
 			for (Litter litter : Main.game.getPlayer().getLittersFathered()) {
-				String unknownName = "[style.colourDisabled(Unknown)]";
+				String unknownName = "[style.colourDisabled(未知)]";
 				try {
 					String offspring0 = litter.getOffspring().iterator().next();
 					if(offspring0.contains("NPCOffspring")) {
@@ -2692,17 +2692,17 @@ public class PhoneDialogue {
 				} catch(Exception ex) {
 				}
 				
-				contentSB.append(pregnancyRow("[style.boldGood(Resolved Pregnancy)]",
+				contentSB.append(pregnancyRow("[style.boldGood(已经结束的怀孕)]",
 						(litter.getMother()!=null
 							?(litter.getMother().isPlayer()
-								?"Mother: [style.colourExcellent(Yourself)]"
-								:UtilText.parse(litter.getMother(), "Mother: <span style='color:"+litter.getMother().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
-							:"Mother: "+unknownName),
-						"Conceived: "
+								?"母亲：[style.colourExcellent(你自己)]"
+								:UtilText.parse(litter.getMother(), "母亲：<span style='color:"+litter.getMother().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
+							:"母亲："+unknownName),
+						"受孕于："
 							+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
-							+" | Delivered: "
+							+" | 生产于："
 							+Units.date(litter.getBirthDate(), Units.DateType.LONG),
-						"Birthed: "
+						"生育："
 							+litter.getBirthedDescription()));
 			}
 			noPregnancies=false;
@@ -2711,7 +2711,7 @@ public class PhoneDialogue {
 			List<Litter> incubatorCompletedLitters = new ArrayList<>(Main.game.getPlayer().getLittersImplanted());
 			incubatorCompletedLitters.removeAll(incubatorOngoingLitters);
 			for (Litter litter : incubatorCompletedLitters) {
-				String unknownName = "[style.colourDisabled(Unknown)]";
+				String unknownName = "[style.colourDisabled(未知)]";
 				try {
 					String offspring0 = litter.getOffspring().iterator().next();
 					if(offspring0.contains("NPCOffspring")) {
@@ -2728,17 +2728,17 @@ public class PhoneDialogue {
 				} catch(Exception ex) {
 				}
 				
-				contentSB.append(pregnancyRow("[style.boldGood(Resolved)] [style.boldPurple(Incubation)]",
+				contentSB.append(pregnancyRow("[style.boldGood(已经结束的)][style.boldPurple(孵化)]",
 						(litter.getIncubator()!=null
 							?(litter.getIncubator().isPlayer()
-								?"Incubator: [style.colourExcellent(Yourself)]"
-								:UtilText.parse(litter.getIncubator(), "Incubator: <span style='color:"+litter.getIncubator().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
-							:"Incubator: "+unknownName),
-						"Implanted: "
+								?"孵化者：[style.colourExcellent(你自己)]"
+								:UtilText.parse(litter.getIncubator(), "孵化者:<span style='color:"+litter.getIncubator().getFemininity().getColour().toWebHexString()+";'>[npc.name(A)]</span>"))
+							:"孵化者:"+unknownName),
+						"授卵于:"
 							+Units.date(litter.getIncubationStartDate(), Units.DateType.LONG)
-							+" | Delivered: "
+							+" | 生产于："
 							+Units.date(litter.getBirthDate(), Units.DateType.LONG),
-						"Birthed: "
+						"生育："
 							+litter.getBirthedDescription()));
 			}
 			noPregnancies=false;
@@ -2746,7 +2746,7 @@ public class PhoneDialogue {
 		
 		if(noPregnancies){
 			contentSB.append("<div class='subTitle'>"
-					+ "<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>You have never got anyone pregnant!</span>"
+					+ "<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>你还没有令任何人怀孕过！</span>"
 					+ "</div>");
 		}
 		
@@ -2757,13 +2757,13 @@ public class PhoneDialogue {
 	private static String statHeader() {
 		return "<div class='container-full-width' style='margin-bottom:0;'>"
 					+ "<div style='width:40%; float:left; font-weight:bold; margin:0; padding:0;'>"
-						+ "Attribute"
+						+ "属性"
 					+ "</div>"
 					+ "<div style='width:30%; float:left; font-weight:bold; margin:0; padding:0;'>"
-						+ "Value"
+						+ "数据"
 					+ "</div>"
 					+ "<div style='float:left; width:30%; font-weight:bold; margin:0; padding:0;'>"
-						+ "Description"
+						+ "描述"
 					+"</div>"
 				+ "</div>";
 	}
@@ -2795,10 +2795,10 @@ public class PhoneDialogue {
 					+ "<div style='color:"+colourLeft.toWebHexString()+"; width:40%; float:left; font-weight:bold; margin:0; padding:0;'>"
 						+ left
 					+ "</div>"
-					+ "<div style='color:"+(centre.equalsIgnoreCase("unknown") || centre.equalsIgnoreCase("N/A")?PresetColour.TEXT_GREY:colourCentre).toWebHexString()+"; width:30%; float:left; font-weight:bold; margin:0; padding:0;'>"
+					+ "<div style='color:"+(centre.equalsIgnoreCase("未知") || centre.equalsIgnoreCase("N/A")?PresetColour.TEXT_GREY:colourCentre).toWebHexString()+"; width:30%; float:left; font-weight:bold; margin:0; padding:0;'>"
 						+ centre
 					+ "</div>"
-					+ "<div style='color:"+(right.equalsIgnoreCase("unknown") || right.equalsIgnoreCase("N/A")?PresetColour.TEXT_GREY:colourRight).toWebHexString()+"; width:30%; float:left; font-weight:bold; margin:0; padding:0;'>"
+					+ "<div style='color:"+(right.equalsIgnoreCase("未知") || right.equalsIgnoreCase("N/A")?PresetColour.TEXT_GREY:colourRight).toWebHexString()+"; width:30%; float:left; font-weight:bold; margin:0; padding:0;'>"
 						+ right
 					+ "</div>"
 				+ "</div>";
@@ -2817,19 +2817,19 @@ public class PhoneDialogue {
 		return "<div class='container-full-width' style='text-align:center; background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'><b>"
 				
 					+ "<div class='container-full-width' style='background:transparent;margin:0;padding:0;width:26%;'>"
-						+ "Attribute"
+						+ "属性"
 					+ "</div>"
 
 					+ "<div class='container-full-width' style='background:transparent;margin:0;padding:0;width:16%;'>"
-						+ "Core | Bonus"
+						+ "核心 | 加成"
 					+ "</div>"
 						
 					+ "<div class='container-full-width' style='background:transparent;margin:0;padding:0;width:20%;'>"
-						+ "Value/Max."
+						+ "数值/最大值"
 					+ "</div>"
 						
 					+ "<div class='container-full-width' style='background:transparent;margin:0;padding:0;width:36%;'>"
-						+ "Description"
+						+ "描述"
 					+ "</div>"
 					
 				+ "</b></div>";
@@ -2909,20 +2909,20 @@ public class PhoneDialogue {
 		
 		return UtilText.parse(contact, "<b style='color:"+contact.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b>"+(isOffspring
 				?(contact.isFeminine()
-						?", your [style.colourFeminine(daughter)]"
-						:", your [style.colourMasculine(son)]")
+						?"，你的[style.colourFeminine(女儿)]"
+						:"，你的[style.colourMasculine(儿子)]")
 				:"")
-				+". [npc.She] is "
+				+"，[npc.She]是"
 				+ (contact.getRaceStage()==RaceStage.HUMAN || contact.isRaceConcealed()
 					?"[npc.a_race(true)]"
-					:"[npc.a_raceStage(true)] [npc.race(true)]")
-				+", whose current location is: "
+					:"[npc.a_raceStage(true)][npc.race(true)]")
+				+"，当前位置:"
 				+ (contact.getWorldLocation()==WorldType.EMPTY
-					?"[style.italicsDisabled(Unknown!)]"
-					:"<i>"+contact.getWorldLocation().getName()+", "+contact.getLocationPlace().getPlaceType().getName()+"</i>."));
+					?"[style.italicsDisabled(未知！)]"
+					:"<i>"+contact.getWorldLocation().getName()+", "+contact.getLocationPlace().getPlaceType().getName()+"</i>。"));
 	}
 	
-	public static final DialogueNode CONTACTS = new DialogueNode("Contacts", "Look at your contacts.", true) {
+	public static final DialogueNode CONTACTS = new DialogueNode("联系人", "查看你的联系人", true) {
 
 		@Override
 		public String getContent() {
@@ -2942,7 +2942,7 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			
 			} else if (index <= charactersEncountered.size()) {
 				GameCharacter npc = charactersEncountered.get(index-1);
@@ -2970,7 +2970,7 @@ public class PhoneDialogue {
 		}
 	};
 	
-	public static final DialogueNode CONTACTS_CHARACTER = new DialogueNode("Contacts", "Look at your contacts.", true) {
+	public static final DialogueNode CONTACTS_CHARACTER = new DialogueNode("联系人", "查看你的联系人", true) {
 
 		@Override
 		public String getLabel() {
@@ -2985,13 +2985,13 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			
 			} else if (index <= Main.game.getPlayer().getCharactersEncountered().size()) {
 				try {
 					GameCharacter npc = Main.game.getNPCById(Main.game.getPlayer().getCharactersEncountered().get(index - 1));
 					return new Response(Util.capitaliseSentence(npc.getName(true)),
-							UtilText.parse(npc, "Take a detailed look at what [npc.name] looks like."),
+							UtilText.parse(npc, "仔细查看[npc.Name]的外貌。"),
 							CONTACTS_CHARACTER){
 						@Override
 						public void effects() {
@@ -3037,35 +3037,35 @@ public class PhoneDialogue {
 	
 	private static int encyclopediaItemIndex = 0;
 	
-	public static final DialogueNode ENCYCLOPEDIA = new DialogueNode("Encyclopedia", "", true) {
+	public static final DialogueNode ENCYCLOPEDIA = new DialogueNode("百科全书", "", true) {
 		@Override
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p>"
-						+ "You have collected information on all the races, weapons, clothing, and items that you've encountered in your travels."
+						+ "你在旅途中收集到的所有你遇到过的种族，武器，服饰和物品的信息。"
 					+ "</p>");
 			
 			sb.append("<p style='text-align:center;'>");
-				sb.append("You have discovered:");
+				sb.append("你已经收集到的：");
 				sb.append(Main.getProperties().getSubspeciesDiscoveredCount()==Subspecies.getAllSubspecies().size()
-								?"<br/>[style.colourGood(Subspecies: "+getSubspeciesDiscoveredIndication()+")]"
-								:"<br/>Subspecies: "+getSubspeciesDiscoveredIndication());
+								?"<br/>[style.colourGood(亚种:"+getSubspeciesDiscoveredIndication()+")]"
+								:"<br/>亚种: "+getSubspeciesDiscoveredIndication());
 
 				int size = weaponsDiscoveredList.size();
 				sb.append(Math.min(size, Main.getProperties().getWeaponsDiscoveredCount())==weaponsDiscoveredList.size()
-								?"<br/>[style.colourGood(Weapons: "+getWeaponsDiscoveredIndication()+")]"
-								:"<br/>Weapons: "+getWeaponsDiscoveredIndication());
+								?"<br/>[style.colourGood(武器:"+getWeaponsDiscoveredIndication()+")]"
+								:"<br/>武器: "+getWeaponsDiscoveredIndication());
 				
 				size = clothingDiscoveredList.size();
 				sb.append(Math.min(size, Main.getProperties().getClothingDiscoveredCount())==clothingDiscoveredList.size()
-								?"<br/>[style.colourGood(Clothing: "+getClothingDiscoveredIndication()+")]"
-								:"<br/>Clothing: "+getClothingDiscoveredIndication());
+								?"<br/>[style.colourGood(衣物:"+getClothingDiscoveredIndication()+")]"
+								:"<br/>衣物: "+getClothingDiscoveredIndication());
 				
 				size = itemsDiscoveredList.size();
 				sb.append(Math.min(size, Main.getProperties().getItemsDiscoveredCount())==itemsDiscoveredList.size()
-								?"<br/>[style.colourGood(Items: "+getItemsDiscoveredIndication()+")]"
-								:"<br/>Items: "+getItemsDiscoveredIndication());
+								?"<br/>[style.colourGood(物品: "+getItemsDiscoveredIndication()+")]"
+								:"<br/>物品: "+getItemsDiscoveredIndication());
 			sb.append("</p>");
 			
 			return sb.toString();
@@ -3074,8 +3074,8 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response((Main.getProperties().hasValue(PropertyValue.newRaceDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Races</span>":"Races",
-						"Have a look at all the different races that you've encountered in your travels.", RACES){
+				return new Response((Main.getProperties().hasValue(PropertyValue.newRaceDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>种族</span>":"种族",
+						"查看你在旅途中遇到的所有类型的种族。", RACES){
 					@Override
 					public void effects() {
 						Main.getProperties().setValue(PropertyValue.newRaceDiscovered, false);
@@ -3083,8 +3083,8 @@ public class PhoneDialogue {
 				};
 
 			} else if (index == 2) {
-				return new Response((Main.getProperties().hasValue(PropertyValue.newWeaponDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Weapons</span>":"Weapons",
-						"Have a look at all the different weapons that you've encountered in your travels.", WEAPON_CATALOGUE){
+				return new Response((Main.getProperties().hasValue(PropertyValue.newWeaponDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>武器</span>":"武器",
+						"查看你在旅途中遇到的所有类型的武器。", WEAPON_CATALOGUE){
 					@Override
 					public void effects() {
 						Main.getProperties().setValue(PropertyValue.newWeaponDiscovered, false);
@@ -3092,8 +3092,8 @@ public class PhoneDialogue {
 				};
 
 			} else if (index == 3) {
-				return new Response((Main.getProperties().hasValue(PropertyValue.newClothingDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Clothing</span>":"Clothing",
-						"Have a look at all the different clothing that you've encountered in your travels.", CLOTHING_CATALOGUE){
+				return new Response((Main.getProperties().hasValue(PropertyValue.newClothingDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>衣物</span>":"衣物",
+						"查看你在旅途中遇到的所有类型的衣物。", CLOTHING_CATALOGUE){
 					@Override
 					public void effects() {
 						Main.getProperties().setValue(PropertyValue.newClothingDiscovered, false);
@@ -3102,8 +3102,8 @@ public class PhoneDialogue {
 				};
 
 			} else if (index == 4) {
-				return new Response((Main.getProperties().hasValue(PropertyValue.newItemDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>Items</span>":"Items",
-						"Have a look at all the different items that you've encountered in your travels.", ITEM_CATALOGUE){
+				return new Response((Main.getProperties().hasValue(PropertyValue.newItemDiscovered))?"<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>物品</span>":"物品",
+						"查看你在旅途中遇到的所有类型的物品。", ITEM_CATALOGUE){
 					@Override
 					public void effects() {
 						encyclopediaItemIndex = 0;
@@ -3116,11 +3116,11 @@ public class PhoneDialogue {
 						&& !Main.getProperties().hasValue(PropertyValue.newClothingDiscovered)
 						&& !Main.getProperties().hasValue(PropertyValue.newWeaponDiscovered)
 						&& !Main.getProperties().hasValue(PropertyValue.newRaceDiscovered)) {
-					return new Response("Clear alerts", "Clears encyclopedia alerts.<br/><i>You currently do not have any encyclopedia alerts to clear...</i>", null);
+					return new Response("清除提醒", "清除所有百科全书的提醒。<br/><i>你当前没有任何提醒可以清除……</i>", null);
 					
 				} else {
-					return new ResponseEffectsOnly("Clear alerts",
-							"Clears encyclopedia alerts."){
+					return new ResponseEffectsOnly("清除提醒",
+							"清除百科全书的提醒。"){
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.GENERIC_MINOR_GOOD;
@@ -3136,7 +3136,7 @@ public class PhoneDialogue {
 				}
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主页面。", MENU);
 
 			} else {
 				return null;
@@ -3185,7 +3185,7 @@ public class PhoneDialogue {
 		
 		clothingSlotCategories = new LinkedHashMap<>();
 		
-		clothingSlotCategories.put("Head",
+		clothingSlotCategories.put("头部",
 				Util.newArrayListOfValues(
 				InventorySlot.HEAD,
 				InventorySlot.EYES,
@@ -3193,51 +3193,51 @@ public class PhoneDialogue {
 				InventorySlot.MOUTH,
 				InventorySlot.NECK));
 		
-		clothingSlotCategories.put("Torso",
+		clothingSlotCategories.put("躯干",
 				Util.newArrayListOfValues(
 				InventorySlot.TORSO_OVER,
 				InventorySlot.TORSO_UNDER));
 		
-		clothingSlotCategories.put("Chest",
+		clothingSlotCategories.put("胸部",
 				Util.newArrayListOfValues(
 				InventorySlot.CHEST,
 				InventorySlot.NIPPLE));
 		
-		clothingSlotCategories.put("Arms",
+		clothingSlotCategories.put("手臂",
 				Util.newArrayListOfValues(
 				InventorySlot.HAND,
 				InventorySlot.WRIST,
 				InventorySlot.FINGER));
 		
-		clothingSlotCategories.put("Waist",
+		clothingSlotCategories.put("腰部",
 				Util.newArrayListOfValues(
 				InventorySlot.STOMACH,
 				InventorySlot.HIPS));
 		
-		clothingSlotCategories.put("Groin",
+		clothingSlotCategories.put("腹股沟",
 				Util.newArrayListOfValues(
 				InventorySlot.GROIN,
 				InventorySlot.PENIS,
 				InventorySlot.VAGINA,
 				InventorySlot.ANUS));
 		
-		clothingSlotCategories.put("Legs",
+		clothingSlotCategories.put("腿部",
 				Util.newArrayListOfValues(
 				InventorySlot.LEG,
 				InventorySlot.SOCK));
 		
-		clothingSlotCategories.put("Feet",
+		clothingSlotCategories.put("足部",
 				Util.newArrayListOfValues(
 				InventorySlot.FOOT,
 				InventorySlot.ANKLE));
 		
-		clothingSlotCategories.put("Extra",
+		clothingSlotCategories.put("其他",
 				Util.newArrayListOfValues(
 				InventorySlot.HORNS,
 				InventorySlot.WINGS,
 				InventorySlot.TAIL));
 		
-		clothingSlotCategories.put("Piercings",
+		clothingSlotCategories.put("穿孔",
 				Util.newArrayListOfValues(
 				InventorySlot.PIERCING_EAR,
 				InventorySlot.PIERCING_LIP,
@@ -3252,7 +3252,7 @@ public class PhoneDialogue {
 	public static final DialogueNode WEAPON_CATALOGUE = new DialogueNode("", "", true) {
 		@Override
 		public String getLabel() {
-			return "Discovered Weapons ("+getWeaponsDiscoveredIndication()+")";
+			return "已发现的武器("+getWeaponsDiscoveredIndication()+")";
 		}
 		@Override
 		public String getContent() {
@@ -3305,14 +3305,14 @@ public class PhoneDialogue {
 			
 			sb.append("<div class='container-full-width'>");
 				sb.append("<p style='width:100%; text-align:center; padding:0 margin:0;'>");
-					sb.append("[style.boldBlue(Melee Weapons ("+meleeKnownCount+"/"+meleeCount+"))]");
+					sb.append("[style.boldBlue(近战武器("+meleeKnownCount+"/"+meleeCount+"))]");
 				sb.append("</p>");
 				sb.append(sbMelee.toString());
 			sb.append("</div>");
 			
 			sb.append("<div class='container-full-width'>");
 				sb.append("<p style='width:100%; text-align:center; padding:0 margin:0;'>");
-					sb.append("[style.boldYellow(Ranged Weapons ("+rangedKnownCount+"/"+rangedCount+"))]");
+					sb.append("[style.boldYellow(远程武器("+rangedKnownCount+"/"+rangedCount+"))]");
 				sb.append("</p>");
 				sb.append(sbRanged.toString());
 			sb.append("</div>");
@@ -3323,7 +3323,7 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the encyclopedia.", ENCYCLOPEDIA);
+				return new Response("返回", "返回到百科主界面。", ENCYCLOPEDIA);
 			
 			} else {
 				return null;
@@ -3339,7 +3339,7 @@ public class PhoneDialogue {
 	public static final DialogueNode CLOTHING_CATALOGUE = new DialogueNode("", "", true) {
 		@Override
 		public String getLabel() {
-			return "Discovered Clothing ("+getClothingDiscoveredIndication()+")";
+			return "已发现的衣物("+getClothingDiscoveredIndication()+")";
 		}
 		@Override
 		public String getContent() {
@@ -3386,16 +3386,16 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the encyclopedia.", ENCYCLOPEDIA);
+				return new Response("返回", "返回到百科主界面。", ENCYCLOPEDIA);
 			
 			} else {
 				List<Response> responses = new ArrayList<>();
 				for(Entry<String, List<InventorySlot>> entry : clothingSlotCategories.entrySet()) {
 					if(clothingSlotKey==entry.getKey()) {
-						responses.add(new Response(entry.getKey(), "You are already viewing this category!", null));
+						responses.add(new Response(entry.getKey(), "你正在查看该类别！", null));
 						
 					} else {
-						responses.add(new Response(entry.getKey(), "View all clothing which fits into the following slots:<br/><i>"+Util.capitaliseSentence(Util.inventorySlotsToStringList(entry.getValue()))+".</i>", CLOTHING_CATALOGUE) {
+						responses.add(new Response(entry.getKey(), "查看适合以下栏位的所有服装:<br/><i>"+Util.capitaliseSentence(Util.inventorySlotsToStringList(entry.getValue()))+".</i>", CLOTHING_CATALOGUE) {
 							@Override
 							public void effects() {
 								clothingSlotKey = entry.getKey();
@@ -3415,10 +3415,10 @@ public class PhoneDialogue {
 			return DialogueNodeType.PHONE;
 		}
 	};
-	public static final DialogueNode ITEM_CATALOGUE = new DialogueNode("", "View discovered items", true) {
+	public static final DialogueNode ITEM_CATALOGUE = new DialogueNode("", "查看已经发现的物品", true) {
 		@Override
 		public String getLabel() {
-			return "Discovered Items ("+getItemsDiscoveredIndication()+")";
+			return "已经发现的物品 ("+getItemsDiscoveredIndication()+")";
 		}
 		@Override
 		public String getContent() {
@@ -3477,7 +3477,7 @@ public class PhoneDialogue {
 			if(encyclopediaItemIndex==0) {
 				sb.append("<div class='container-full-width'>");
 					sb.append("<p style='width:100%; text-align:center; padding:0 margin:0;'>");
-						sb.append("[style.boldBlueLight(Items ("+itemKnownCount+"/"+itemCount+"))]");
+						sb.append("[style.boldBlueLight(物品 ("+itemKnownCount+"/"+itemCount+"))]");
 					sb.append("</p>");
 					sb.append(sbItems.toString());
 				sb.append("</div>");
@@ -3486,14 +3486,14 @@ public class PhoneDialogue {
 			if(encyclopediaItemIndex==1) {
 				sb.append("<div class='container-full-width'>");
 					sb.append("<p style='width:100%; text-align:center; padding:0 margin:0;'>");
-						sb.append("[style.boldOrange(Books ("+bookKnownCount+"/"+bookCount+"))]");
+						sb.append("[style.boldOrange(书籍 ("+bookKnownCount+"/"+bookCount+"))]");
 					sb.append("</p>");
 					sb.append(sbBooks.toString());
 				sb.append("</div>");
 				
 				sb.append("<div class='container-full-width'>");
 					sb.append("<p style='width:100%; text-align:center; padding:0 margin:0;'>");
-						sb.append("[style.boldArcane(Essences ("+essenceKnownCount+"/"+essenceCount+"))]");
+						sb.append("[style.boldArcane(精华 ("+essenceKnownCount+"/"+essenceCount+"))]");
 					sb.append("</p>");
 					sb.append(sbEssences.toString());
 				sb.append("</div>");
@@ -3502,7 +3502,7 @@ public class PhoneDialogue {
 			if(encyclopediaItemIndex==2) {
 				sb.append("<div class='container-full-width'>");
 					sb.append("<p style='width:100%; text-align:center; padding:0 margin:0;'>");
-						sb.append("[style.boldSpells(Spells ("+spellKnownCount+"/"+spellCount+"))]");
+						sb.append("[style.boldSpells(法术 ("+spellKnownCount+"/"+spellCount+"))]");
 					sb.append("</p>");
 					sb.append(sbSpells.toString());
 				sb.append("</div>");
@@ -3514,10 +3514,10 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Items",
+				return new Response("道具",
 						encyclopediaItemIndex==0
-							?"You're already viewing all of the items that you've discovered..."
-							:"View all of the items that you've discovered.",
+							?"你正在查看已发现的所有物品……"
+							:"查看已发现的所有物品。",
 						encyclopediaItemIndex==0
 							?null
 							:ITEM_CATALOGUE){
@@ -3528,10 +3528,10 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Books & essences",
+				return new Response("书籍&精华",
 						encyclopediaItemIndex==1
-							?"You're already viewing all of the racial books and essences that you've discovered..."
-							:"View all of the racial books and essences that you've discovered.",
+							?"你正在查看已发现的所有种族书籍和精华……"
+							:"查看已发现的所有种族书籍和精华。",
 						encyclopediaItemIndex==1
 							?null
 							:ITEM_CATALOGUE){
@@ -3542,10 +3542,10 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index==3) {
-				return new Response("Spell books",
+				return new Response("法术书",
 						encyclopediaItemIndex==2
-							?"You're already viewing all of the spell books that you've discovered..."
-							:"View all of the spell books that you've discovered.",
+							?"你正在查看已发现的所有法术书……"
+							:"查看已发现的所有法术书。",
 						encyclopediaItemIndex==2
 							?null
 							:ITEM_CATALOGUE){
@@ -3556,7 +3556,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to the encyclopedia.", ENCYCLOPEDIA);
+				return new Response("返回", "返回到百科主界面。", ENCYCLOPEDIA);
 			}
 			return null;
 		}
@@ -3596,7 +3596,7 @@ public class PhoneDialogue {
 	public static final DialogueNode RACES = new DialogueNode("", "", true) {
 		@Override
 		public String getLabel() {
-			return "Discovered Races ("+getSubspeciesDiscoveredIndication()+")";
+			return "已被发现的物种 ("+getSubspeciesDiscoveredIndication()+")";
 		}
 		@Override
 		public String getContent() {
@@ -3606,11 +3606,11 @@ public class PhoneDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<p style='text-align:center;'>"
-						+ "You have encountered the following races in your travels:"
+						+ "你已经在旅途中遇到了以下种族："
 						+ "<br/>"
-						+ "The number of discovered subspecies for each race are shown in brackets."
+						+ "括号内为每个种族已发现的亚种数量。"
 						+ "<br/>"
-						+ "If you have unlocked advanced knowledge of the race, its icon will be shown."
+						+ "如果你已经解锁了该种族的高阶知识，将会显示其图标。"
 //						+ "Discovered races are [style.boldGood(highlighted)], while undiscovered races are [style.colourDisabled(greyed out)]."
 					+ "</p>");
 			List<AbstractRace> sortedRaces = new ArrayList<>();
@@ -3652,7 +3652,7 @@ public class PhoneDialogue {
 										+"("+discoveredSubspecies+"/"+totalSubspecies+")"
 								+ (discoveredSubspecies==totalSubspecies?")]":""))
 						+ "</div>";
-				//position:relative; width:"+(Util.random.nextInt(23)+10)+"%; padding:2px; margin:0.5%; float:left;filter:blur(1px) grayscale(0.8); font-size:12px; transform: rotate("+(-20+Util.random.nextInt(41))+"deg);'>
+				//position:relative; width:"+(Util.random.nextInt(23)+10)+"%; padding:2px; margin:0.5%; float:left;filter:blur(1px) grayscale(0.8); font-size:10px; transform: rotate("+(-20+Util.random.nextInt(41))+"deg);'>
 				UtilText.nodeContentSB.append("<div class='container-full-width' style='position:relative; width:32%; padding:2px; margin:0.5%; float:left;'>");
 					UtilText.nodeContentSB.append("<div class='overlay' id='ENCYCLOPEDIA_RACE_"+Race.getIdFromRace(race)+"'></div>");
 					UtilText.nodeContentSB.append(icon);
@@ -3684,11 +3684,11 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to the encyclopedia.", ENCYCLOPEDIA);
+				return new Response("返回", "返回到百科主界面。", ENCYCLOPEDIA);
 			
 			} else if (index <= racesDiscovered.size()) {
 				return new Response(Util.capitaliseSentence(racesDiscovered.get(index - 1).getName(false)),
-						"Take a look at all the subspecies of the race: '" + racesDiscovered.get(index - 1).getName(false) + "'",
+						"查看这一种族的所有亚种:'" + racesDiscovered.get(index - 1).getName(false) + "'",
 						SUBSPECIES){
 					@Override
 					public void effects() {
@@ -3730,7 +3730,7 @@ public class PhoneDialogue {
 		fullModList.addAll(subspecies.getExtraEffects(null));
 		
 		if(subspecies.isFeralConfigurationAvailable(null)) {
-			fullModList.add("<br/><b>Additional bonuses when in [style.boldFeral(feral form)]:</b>");
+			fullModList.add("<br/><b>处于[style.boldFeral(兽态)]时额外的加成：</b>");
 			
 			for(String s : subspecies.getFeralEffects()) {
 				fullModList.add(s);
@@ -3766,7 +3766,7 @@ public class PhoneDialogue {
 				"<div class='container-full-width' style='width:40%; float:right;'>"
 					+ "<p style='width:100%; text-align:center;'>"
 						+ "<b style='color:"+subspeciesSelected.getColour(null).toWebHexString()+";'>"+Util.capitaliseSentence(subspeciesSelected.getName(null))+"</b>"
-						+ "<br/>Average stats"
+						+ "<br/>平均属性"
 					+ "</p>"
 					+ "<table align='center'>"
 						+ "<tr>"
@@ -3775,69 +3775,69 @@ public class PhoneDialogue {
 							+ "<td>[style.colourMasculine("+Util.capitaliseSentence(subspeciesSelected.getSingularMaleName(null))+")]</td>"
 						+ "</tr>"
 						+ "<tr>"
-							+ "<td>Height</td>"
+							+ "<td>身高</td>"
 							+ "<td>"+Units.size(femaleBody.getHeightValue())+"</td>"
 							+ "<td>"+Units.size(maleBody.getHeightValue())+"</td>"
 						+ "</tr>"
 						+ "<tr>"
-							+ "<td>Femininity</td>"
+							+ "<td>女性化程度</td>"
 							+ "<td>"+femaleBody.getFemininity()+"</td>"
 							+ "<td>"+maleBody.getFemininity()+"</td>"
 						+ "</tr>"
 						+ "<tr>"
-							+ "<td>Breast size</td>"
+							+ "<td>乳房尺寸</td>"
 							+ "<td>"+(femaleBody.getBreast().getRawSizeValue()==0
-										?"Flat"
-										:femaleBody.getBreast().getSize().getCupSizeName()+"-cup")+"</td>"
+										?"平坦"
+										:femaleBody.getBreast().getSize().getCupSizeName()+"罩杯")+"</td>"
 							+ "<td>"+(maleBody.getBreast().getRawSizeValue()==0
-										?"Flat"
-										:maleBody.getBreast().getSize().getCupSizeName()+"-cup")+"</td>"
+										?"平坦"
+										:maleBody.getBreast().getSize().getCupSizeName()+"罩杯")+"</td>"
 						+ "</tr>"
 						+ "<tr>"
-							+ "<td>Penis length</td>"
+							+ "<td>阴茎长度</td>"
 							+ "<td>-</td>"
 							+ "<td>"+Units.size(maleBody.getPenis().getRawLengthValue())+"</td>"
 						+ "</tr>"
 						+ "<tr>"
-							+ "<td>Penis diameter</td>"
+							+ "<td>阴茎直径</td>"
 							+ "<td>-</td>"
 							+ "<td>"+Units.size(maleBody.getPenis().getRawGirthValue())+"</td>"
 						+ "</tr>"
 						+ "<tr>"
-							+ "<td>Vagina capacity</td>"
+							+ "<td>阴道直径</td>"
 							+ "<td>"+Util.capitaliseSentence(femaleBody.getVagina().getOrificeVagina().getCapacity().getDescriptor())+"</td>"
 							+ "<td>-</td>"
 						+ "</tr>"
 						+ "<tr>"
-							+ "<td>Litter size</td>"
+							+ "<td>产仔数量</td>"
 							+ "<td>"+subspeciesSelected.getRace().getNumberOfOffspringLow()+"-"+subspeciesSelected.getRace().getNumberOfOffspringHigh()+"</td>"
 							+ "<td>-</td>"
 						+ "</tr>"
 					+ "</table>"
 					+ "<hr/>"
 					+ "<p style='width:100%; text-align:center;'>"
-						+ "Nocturnality: "+Util.capitaliseSentence(subspeciesSelected.getNocturnality().getName())
+						+ "生物钟:"+Util.capitaliseSentence(subspeciesSelected.getNocturnality().getName())
 						+ "<br/>"
-						+ "Aquatic: "+(subspeciesSelected.isAquatic()?"Yes":"No")
+						+ "水生:"+(subspeciesSelected.isAquatic()?"是":"否")
 						+ "<br/>"
-						+ "Leg configuration: "+Util.capitaliseSentence(bodyForSubspeciesSelected.getLegConfiguration().getName())
+						+ "腿部配置:"+Util.capitaliseSentence(bodyForSubspeciesSelected.getLegConfiguration().getName())
 						+ "<br/>"
-						+ "Short stature: "+(subspeciesSelected.isShortStature()?"Yes":"No")
+						+ "身材矮小:"+(subspeciesSelected.isShortStature()?"是":"否")
 					+"</p>"
 				+ "</div>");
 					
 			subspeciesSB.append("<p>"
 					+ "<b style='color:"+subspeciesSelected.getColour(null).toWebHexString()+";'>"+Util.capitaliseSentence(subspeciesSelected.getName(null))+"</b>"
 					+ (AbstractSubspecies.getMainSubspeciesOfRace(raceSelected)==subspeciesSelected
-							?" ([style.colourMinorGood(Core)] subspecies of <span style='color:"+raceSelected.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(raceSelected.getName(false))+"</span>)"
-							:" (Subspecies of <span style='color:"+raceSelected.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(raceSelected.getName(false))+"</span>)")
+							?" (<span style='color:"+raceSelected.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(raceSelected.getName(false))+"</span>的[style.colourMinorGood(核心)]亚种)"
+							:" (<span style='color:"+raceSelected.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(raceSelected.getName(false))+"</span>的亚种)")
 					+ "<br/>"
-					+ "Masculine: <span style='color:"+Femininity.valueOf(maleBody.getFemininity()).getColour().toWebHexString()+";'>"+Util.capitaliseSentence(subspeciesSelected.getSingularMaleName(null))+"</span>"
+					+ "男性名:<span style='color:"+Femininity.valueOf(maleBody.getFemininity()).getColour().toWebHexString()+";'>"+Util.capitaliseSentence(subspeciesSelected.getSingularMaleName(null))+"</span>"
 					+ "<br/>"
-					+ "Feminine: <span style='color:"+Femininity.valueOf(femaleBody.getFemininity()).getColour().toWebHexString()+";'>"+Util.capitaliseSentence(subspeciesSelected.getSingularFemaleName(null))+"</span>");
+					+ "女性名:<span style='color:"+Femininity.valueOf(femaleBody.getFemininity()).getColour().toWebHexString()+";'>"+Util.capitaliseSentence(subspeciesSelected.getSingularFemaleName(null))+"</span>");
 
 			subspeciesSB.append("<br/><br/>"
-					+"<b>Race bonuses:</b>");
+					+"<b>种族加成:</b>");
 			if(Main.getProperties().isAdvancedRaceKnowledgeDiscovered(subspeciesSelected)) {
 				for (String s : getSubspeciesModifiersAsStringList(subspeciesSelected)) {
 					subspeciesSB.append("<br/>");
@@ -3846,7 +3846,7 @@ public class PhoneDialogue {
 			} else {
 				subspeciesSB.append("<br/>");
 				subspeciesSB.append("<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>");
-					subspeciesSB.append("Race bonuses can be discovered in books!");
+					subspeciesSB.append("种族加成信息可以从书籍中获取！");
 				subspeciesSB.append("</span>");
 			}
 			
@@ -3854,12 +3854,12 @@ public class PhoneDialogue {
 					+ "<i>"+subspeciesSelected.getDescription(null)+"</i>"
 				+ "</p>");
 					
-			subspeciesSB.append("<h6>"+Util.capitaliseSentence(raceSelected.getName(false))+" Lore</h6>"
+			subspeciesSB.append("<h6>"+Util.capitaliseSentence(raceSelected.getName(false))+"小知识</h6>"
 					+subspeciesSelected.getBasicDescription(null)
 					+ (Main.getProperties().isAdvancedRaceKnowledgeDiscovered(subspeciesSelected)
 						?subspeciesSelected.getAdvancedDescription(null)
 						:"<p style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>"
-							+ "Further information can be discovered in books!"
+							+ "更多的信息可以从书籍中收集！"
 						+ "</p>"));
 			
 			return subspeciesSB.toString();
@@ -3870,19 +3870,19 @@ public class PhoneDialogue {
 			List<AbstractSubspecies> raceSubspecies = Subspecies.getSubspeciesOfRace(raceSelected);
 			
 			if (index == 0) {
-				return new Response("Back", "Return to the race selection screen.", RACES);
+				return new Response("返回", "返回到种族选择界面。", RACES);
 			
 			} else if (index <= raceSubspecies.size()) {
 				AbstractSubspecies indexSubspecies = raceSubspecies.get(index - 1);
 				if(!subspeciesDiscovered.contains(indexSubspecies)) {
 					return new Response(Util.capitaliseSentence(indexSubspecies.getName(null)),
-							"You haven't discovered this subspecies yet!",
+							"你还没有遇到过这种亚种！",
 							null);
 				}
 				return new Response(Util.capitaliseSentence(indexSubspecies.getName(null)),
-						"Take a detailed look at what " + indexSubspecies.getNamePlural(null) + " are like."
+						"仔细查看" + indexSubspecies.getNamePlural(null) + "的细节。"
 						+ (AbstractSubspecies.getMainSubspeciesOfRace(raceSelected)==indexSubspecies
-							?"<br/>This is the [style.colourMinorGood(core)] "+raceSelected.getName(false)+" subspecies."
+							?"<br/>当前为"+raceSelected.getName(false)+"[style.colourMinorGood(核心)]亚种。"
 							:""),
 						SUBSPECIES){
 					@Override
@@ -3910,7 +3910,7 @@ public class PhoneDialogue {
 		}
 	};
 
-	public static final DialogueNode CHARACTER_PERK_TREE = new DialogueNode("Perk Tree", "", true) {
+	public static final DialogueNode CHARACTER_PERK_TREE = new DialogueNode("天赋树", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.getProperties().setValue(PropertyValue.levelUpHightlight, false);
@@ -3921,12 +3921,12 @@ public class PhoneDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<details>"
-							+ "<summary>[style.boldPerk(Perk & Trait Information)]</summary>"
-							+ "[style.colourPerk(Perks)] (circular icons) apply permanent boosts to your attributes.<br/>"
-							+ "[style.colourPerk(Traits)] (square icons) provide unique effects for your character."
-								+ " Unlike perks, <b>traits will have no effect on your character until they're slotted into your 'Active Traits' bar</b>.<br/>"
-							+ "Perks require perk points to unlock. You earn one perk point each time you level up, and earn an extra two perk points every five levels.<br/><br/>"
-							+ "In addition to the perks that can be purchased via perk points, there are also several special, hidden perks that are unlocked via special events."
+							+ "<summary>[style.boldPerk(天赋和特性信息)]</summary>"
+							+ "[style.colourPerk(天赋)](圆形图标)为你的属性提供永久增益。<br/>"
+							+ "[style.colourPerk(特性)](方形图标)为你的角色提供独特的效果。"
+								+ "与天赋不同，<b>特性在加入“生效特性”栏之前不会有任何效果</b>.<br/>"
+							+ "天赋需要消耗天赋点数解锁。每当升级时便会获得一点天赋点数，并且每五级获得额外两点天赋点数。<br/><br/>"
+							+ "除了这些通过天赋点解锁的天赋以外，还存在着一些通过特殊事件解锁的特殊隐藏天赋。"
 					+ "</details>");
 			
 			UtilText.nodeContentSB.append(PerkManager.MANAGER.getPerkTreeDisplay(Main.game.getPlayer(), true));
@@ -3934,7 +3934,7 @@ public class PhoneDialogue {
 			
 			if(!Main.game.getPlayer().isDoll()) {
 				UtilText.nodeContentSB.append("<div class='container-full-width' style='padding:8px; text-align:center;'>"
-							+ "[style.italicsBad(Please note that this perk tree is a work-in-progress. This is not the final version, and is just a proof of concept!)]"
+							+ "[style.italicsBad(请注意此天赋树仍在施工，并非最终版本，仅用于展示概念！)]"
 						+ "</div>");
 			}
 			
@@ -3950,9 +3950,9 @@ public class PhoneDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().isDoll()) {
-					return new Response("Reset", "You cannot reset your perks and traits while you're a doll!", null);
+					return new Response("重置", "身为玩偶时你无法重置天赋及特性！", null);
 				}
-				return new Response("Reset", "Reset all perks and traits, refunding all points spent. (This is a temporary action while the perk tree is still under development.)", CHARACTER_PERK_TREE) {
+				return new Response("重置", "重置所有的天赋和特性，返还所有消耗的天赋点。(临时可用，由于天赋树仍在开发中。)", CHARACTER_PERK_TREE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().resetPerksMap(false, false);
@@ -3960,7 +3960,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "Return to your phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			}
 			
 			return null;
@@ -3974,27 +3974,27 @@ public class PhoneDialogue {
 	
 	
 //	private static boolean confirmReset = false;
-	public static final DialogueNode CHARACTER_FETISHES = new DialogueNode("Desires & Fetishes", "", true) {
+	public static final DialogueNode CHARACTER_FETISHES = new DialogueNode("渴望与性癖", "", true) {
 
 		@Override
 		public String getContent() {
 			journalSB = new StringBuilder(
 					"<details>"
-						+ "<summary>[style.boldFetish(Fetish Information)]</summary>"
-							+ "You can select your [style.colourLust(desire)] for each fetish [style.colourArcane(for free)],"
-							+ " or choose to take the associated [style.colourFetish(fetish)] for a cost of [style.colourArcane(arcane essences)].<br/><br/>"
-							+ "Choosing a desire will affect bonus lust gains in sex, while taking a fetish will permanently lock your desire to 'love', and also give you special bonuses."
-							+ " Fetishes can only be removed through enchanted potions.<br/><br/>"
-							+ "Your currently selected desire has a "+PresetColour.FETISH.getName()+" border, but your true desire (indicated by the coloured desire icon) may be modified by enchanted clothes or other items.<br/><br/>"
-							+ "You earn experience for each fetish through performing related actions in sex."
-							+ " Experience is earned regardless of whether or not you have the associated fetish."
-							+ " Higher level fetishes will cause both you and your partner to gain more arousal from related sex actions, as well as increase the fetish's bonuses.<br/><br/>"
-							+ "Finally, derived fetishes cannot be directly unlocked, but are instead automatically applied when you meet their requirements."
+						+ "<summary>[style.boldFetish(性癖信息)]</summary>"
+							+ "你可以[style.colourArcane(无消耗地)]选择针对每一种性癖的[style.colourLust(渴望)]，"
+							+ "或者消耗[style.colourArcane(奥术精华)]直接选择相关的[style.colourFetish(性癖)]。<br/><br/>"
+							+ "选择渴望值会影响性交中的额外性欲获取，而取得某性癖则会永久将渴望值设置为“热爱”，并给予你特殊增益。"
+							+ "性癖只能通过附魔药水去除。<br/><br/>"
+							+ "你当前选择的渴望值使你拥有"+PresetColour.FETISH.getName()+"的边框，但你的真实渴望值(由染色的渴望值图标表示)可以通过附魔衣物或其他物品调整。<br/><br/>"
+							+ "每次在性交中执行与某性癖相关的动作时，就会获得相应经验。"
+							+ "无论你是否拥有相关性癖，都会获得经验。"
+							+ "更高的性癖等级会令你和你的对象从相关性动作中获得更高的快感，并且也会提升性癖的增益。<br/><br/>"
+							+ "最后，派生性癖无法直接解锁，但在满足要求后会自动解锁。"
 					+ "</details>");
 			
 			// Normal fetishes:
 
-			journalSB.append("<div class='container-full-width' style='text-align:center; font-weight:bold;'><h6>Fetishes</h6></div>");
+			journalSB.append("<div class='container-full-width' style='text-align:center; font-weight:bold;'><h6>性癖</h6></div>");
 			ArrayList<AbstractFetish> derivedFetishList = new ArrayList<>();
 			ArrayList<AbstractFetish> pairedFetishList = new ArrayList<>();
 			ArrayList<AbstractFetish> soloFetishList = new ArrayList<>();
@@ -4031,7 +4031,7 @@ public class PhoneDialogue {
 			
 			// Derived fetishes:
 
-			journalSB.append("<div class='container-full-width' style='text-align:center; font-weight:bold; margin-top:16px;'><h6>Derived Fetishes</h6></div>");
+			journalSB.append("<div class='container-full-width' style='text-align:center; font-weight:bold; margin-top:16px;'><h6>派生性癖</h6></div>");
 			journalSB.append("<div class='fetish-container'>");
 			
 			for(AbstractFetish fetish : derivedFetishList) {
@@ -4061,7 +4061,7 @@ public class PhoneDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Return to your phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主界面。", MENU);
 			
 			} else {
 				return null;
@@ -4089,8 +4089,8 @@ public class PhoneDialogue {
 		return "<div class='container-half-width' style='margin:0 8px;'>"
 					+"<div class='container-full-width' style='text-align:center; font-weight:bold; margin:0 8px; width: calc(78% - 16px);'>"
 						+ (targetedCharacter.hasFetish(fetish)
-								?"[style.colourPink("+Util.capitaliseSentence(fetish.getName(targetedCharacter))+" "+level.getNumeral()+")]"
-								:Util.capitaliseSentence(fetish.getName(targetedCharacter))+" "+level.getNumeral())
+								?"[style.colourPink("+Util.capitaliseSentence(fetish.getName(targetedCharacter))+""+level.getNumeral()+")]"
+								:Util.capitaliseSentence(fetish.getName(targetedCharacter))+""+level.getNumeral())
 						+"<div class='container-full-width' style='margin:2px 0; padding:0; width:100%;'></div>" // Spacer
 						+getFetishDesireEntry(targetedCharacter, fetish, FetishDesire.ZERO_HATE)
 						+getFetishDesireEntry(targetedCharacter, fetish, FetishDesire.ONE_DISLIKE)
@@ -4120,7 +4120,7 @@ public class PhoneDialogue {
 							+ "</div>"
 						+ "</div>"
 						+"<div class='container-full-width' style='text-align:center; margin:0 8px; width: calc(22% - 16px);'>"
-							+ "<span style='color:"+level.getColour().toWebHexString()+";'>"+targetedCharacter.getFetishExperience(fetish)+" xp</span>"
+							+ "<span style='color:"+level.getColour().toWebHexString()+";'>"+targetedCharacter.getFetishExperience(fetish)+" 经验</span>"
 						+ "</div>"
 //						+ "<div class='overlay no-pointer' id='"+Fetish.getIdFromFetish(fetish)+"_EXPERIENCE'></div>"
 					+ "</div>"
@@ -4156,7 +4156,7 @@ public class PhoneDialogue {
 		}
 	}
 	
-	public static final DialogueNode MAP = new DialogueNode("Maps", "", true) {
+	public static final DialogueNode MAP = new DialogueNode("地图", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(Main.game.getCurrentDialogueNode()!=MAP) {
@@ -4165,7 +4165,7 @@ public class PhoneDialogue {
 		}
 		@Override
 		public String getLabel() {
-			return "Map: "+Util.capitaliseSentence(worldTypeMap.getName());
+			return "地图: "+Util.capitaliseSentence(worldTypeMap.getName());
 		}
 		@Override
 		public String getContent() {
@@ -4178,9 +4178,9 @@ public class PhoneDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index==0) {
-				return "Dominion";
+				return "御城区";
 			} else if(index==1) {
-				return "Submission";
+				return "屈城区";
 			} else if(index==2) {
 				return "Foloi Fields";
 			}
@@ -4216,10 +4216,10 @@ public class PhoneDialogue {
 //						String responseTitle = Util.capitaliseSentence(world.getName());
 						
 						if(worldTypeMap==world) {
-							return new Response(responseTitle, "You are already viewing the map of "+world.getName()+"."+(playerPresent?"<br/>[style.colourGood(You are currently in this area!)]":""), null);
+							return new Response(responseTitle, "你已经在查看"+world.getName()+"的地图了"+(playerPresent?"<br/>[style.colourGood(你已经在这个区域里了！)]":""), null);
 							
 						} else if(Main.game.getPlayer().getWorldsVisited().contains(world) || Main.getProperties().hasValue(PropertyValue.mapReveal)) { 
-							return new Response(responseTitle, "View the map of "+world.getName()+"."+(playerPresent?"<br/>[style.colourGood(You are currently in this area!)]":""), MAP) {
+							return new Response(responseTitle, "查看"+world.getName()+"的地图"+(playerPresent?"<br/>[style.colourGood(你已经在这个区域里了！)]":""), MAP) {
 								@Override
 								public Colour getHighlightColour() {
 									if(playerPresent) {
@@ -4238,7 +4238,7 @@ public class PhoneDialogue {
 							};
 							
 						} else {
-							return new Response("???", "You haven't discovered this area yet.", null);
+							return new Response("???", "你还没有发现这个区域", null);
 						}
 					}
 					i++;
@@ -4247,10 +4247,10 @@ public class PhoneDialogue {
 			if (index == 1) {
 				boolean playerPresent = Main.game.getPlayer().getWorldLocation()==WorldType.WORLD_MAP;
 				if(worldTypeMap==WorldType.WORLD_MAP) {
-					return new Response("World map", "You are already viewing the world map."+(playerPresent?"<br/>[style.colourGood(You are currently in this area!)]":""), null);
+					return new Response("世界地图", "你已经在查看世界地图了"+(playerPresent?"<br/>[style.colourGood(你已经在这个区域里了！)]":""), null);
 					
 				} else if(Main.game.getPlayer().isDiscoveredWorldMap()) {
-					return new Response("World map", "Take a look at the world map."+(playerPresent?"<br/>[style.colourGood(You are currently in this area!)]":""), MAP) {
+					return new Response("世界地图", "查看世界地图"+(playerPresent?"<br/>[style.colourGood(你已经在这个区域里了！)]":""), MAP) {
 						@Override
 						public Colour getHighlightColour() {
 							if(playerPresent) {
@@ -4265,11 +4265,11 @@ public class PhoneDialogue {
 						}
 					};
 				} else {
-					return new Response("World map", "You haven't discovered the world map yet!", null);
+					return new Response("世界地图", "你还没有发现世界地图！", null);
 				}
 			
 			} else if (index == 0) {
-				return new Response("Back", "Return to the phone's main menu.", MENU);
+				return new Response("返回", "返回到手机主页面。", MENU);
 			
 			} else {
 				return null;
@@ -4287,18 +4287,18 @@ public class PhoneDialogue {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "You think about how long you'd like to spend loitering in the area..."
+						+ "你在想你要在这个区域闲逛多久……"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Decide against loitering in this area.", MENU);
+				return new Response("返回", "不在这个区域闲逛", MENU);
 			}
 			
 			if(index == 1) {
-				return new ResponseEffectsOnly("5 minutes", "Loiter in this area for the next five minutes.") {
+				return new ResponseEffectsOnly("5分钟", "接下来5分钟在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(5);
@@ -4306,7 +4306,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 2) {
-				return new ResponseEffectsOnly("15 minutes", "Loiter in this area for the next fifteen minutes.") {
+				return new ResponseEffectsOnly("15分钟", "接下来15分钟在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(15);
@@ -4314,7 +4314,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 3) {
-				return new ResponseEffectsOnly("30 minutes", "Loiter in this area for the next thirty minutes.") {
+				return new ResponseEffectsOnly("30分钟", "接下来30分钟在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(30);
@@ -4322,7 +4322,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 4) {
-				return new ResponseEffectsOnly("1 hour", "Loiter in this area for the next hour.") {
+				return new ResponseEffectsOnly("1小时", " 接下来1小时在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(60);
@@ -4330,7 +4330,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 5) {
-				return new ResponseEffectsOnly("2 hours", "Loiter in this area for the next two hours.") {
+				return new ResponseEffectsOnly("2小时", "接下来2小时在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(60*2);
@@ -4338,7 +4338,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 6) {
-				return new ResponseEffectsOnly("4 hours", "Loiter in this area for the next four hours.") {
+				return new ResponseEffectsOnly("4小时", "接下来4小时在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(60*4);
@@ -4346,7 +4346,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 7) {
-				return new ResponseEffectsOnly("6 hours", "Loiter in this area for the next six hours.") {
+				return new ResponseEffectsOnly("6小时", "接下来6小时在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(60*6);
@@ -4354,7 +4354,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 8) {
-				return new ResponseEffectsOnly("8 hours", "Loiter in this area for the next eight hours.") {
+				return new ResponseEffectsOnly("8小时", "接下来8小时在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(60*8);
@@ -4362,7 +4362,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 9) {
-				return new ResponseEffectsOnly("12 hours", "Loiter in this area for the next twelve hours.") {
+				return new ResponseEffectsOnly("12小时", "接下来12小时在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(60*12);
@@ -4370,7 +4370,7 @@ public class PhoneDialogue {
 				};
 				
 			} else if(index == 10) {
-				return new ResponseEffectsOnly("24 hours", "Loiter in this area for the next twenty-four hours.") {
+				return new ResponseEffectsOnly("24小时", "接下来24小时在这个区域闲逛") {
 					@Override
 					public void effects() {
 						loiter(60*24);
@@ -4380,10 +4380,10 @@ public class PhoneDialogue {
 			} else if(index==11) {
 				int timeUntilChange = Main.game.getMinutesUntilNextSunrise() + 5; // Add 5 minutes so that if the days are drawing in, you don't get stuck in a loop of always loitering to sunset/sunrise
 				LocalDateTime[] sunriseSunset = DateAndTime.getTimeOfSolarElevationChange(Main.game.getDateNow(), SolarElevationAngle.SUN_ALTITUDE_SUNRISE_SUNSET, Game.DOMINION_LATITUDE, Game.DOMINION_LONGITUDE);
-				return new ResponseEffectsOnly("Next sunrise",
-						"Loiter in this area for " + (timeUntilChange >= 60 ?timeUntilChange / 60 + " hours " : " ")
-							+ (timeUntilChange % 60 != 0 ? timeUntilChange % 60 + " minutes" : "")
-							+ " until five minutes past sunrise ("+Units.time(sunriseSunset[0].plusMinutes(5))+")."){
+				return new ResponseEffectsOnly("下个日出",
+						"接下来" + (timeUntilChange >= 60 ?timeUntilChange / 60 + "小时" : "")
+							+ (timeUntilChange % 60 != 0 ? timeUntilChange % 60 + "分钟" : "")
+							+ "都在这个区域闲逛，直到日出后5分钟("+Units.time(sunriseSunset[0].plusMinutes(5))+")。"){
 					@Override
 					public void effects() {
 						loiter(timeUntilChange);
@@ -4393,10 +4393,10 @@ public class PhoneDialogue {
 			} else if(index==12) {
 				int timeUntilChange = Main.game.getMinutesUntilNextSunset() + 5; // Add 5 minutes so that if the days are drawing in, you don't get stuck in a loop of always loitering to sunset/sunrise
 				LocalDateTime[] sunriseSunset = DateAndTime.getTimeOfSolarElevationChange(Main.game.getDateNow(), SolarElevationAngle.SUN_ALTITUDE_SUNRISE_SUNSET, Game.DOMINION_LATITUDE, Game.DOMINION_LONGITUDE);
-				return new ResponseEffectsOnly("Next sunset",
-						"Loiter in this area for " + (timeUntilChange >= 60 ?timeUntilChange / 60 + " hours " : " ")
-							+ (timeUntilChange % 60 != 0 ? timeUntilChange % 60 + " minutes" : "")
-							+ " until five minutes past sunrise ("+Units.time(sunriseSunset[1].plusMinutes(5))+")."){
+				return new ResponseEffectsOnly("下个日落",
+						"接下来" + (timeUntilChange >= 60 ?timeUntilChange / 60 + "小时" : "")
+							+ (timeUntilChange % 60 != 0 ? timeUntilChange % 60 + "分钟" : "")
+							+ "都在这个区域闲逛，直到日落后5分钟("+Units.time(sunriseSunset[1].plusMinutes(5))+")。"){
 					@Override
 					public void effects() {
 						loiter(timeUntilChange);
@@ -4422,7 +4422,7 @@ public class PhoneDialogue {
 				period = "period ";
 			}
 			Main.game.getTextStartStringBuilder().append("<p style='text-align:center;'>" +
-					"<i>You spend the next ").append(period).append("loitering about, doing nothing in particular...</i>").append("</p>");
+					"<i>你接下来").append(period).append("都在闲逛，没做什么特别的事情……</i>").append("</p>");
 			Main.game.getPlayer().setActive(false);
 			Main.game.endTurn(60*minutes);
 			Main.game.endTurnTimeTakenAddition = Main.game.endTurnTimeTaken;

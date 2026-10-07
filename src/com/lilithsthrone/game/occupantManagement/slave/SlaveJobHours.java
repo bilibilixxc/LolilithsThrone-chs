@@ -7,15 +7,15 @@ package com.lilithsthrone.game.occupantManagement.slave;
  */
 public enum SlaveJobHours {
 
-	NONE("None", "Do not assign any hours to this character.", 0, 0),
+	NONE("无", "不给角色分配时间。", 0, 0),
 	
-	DAY_NORMAL("Day shift", "Get this character to work eight hours over the course of the day.", 9, 8),
-	DAY_LONG("Day shift +", "Get this character to work sixteen hours over the course of the day.", 6, 16),
+	DAY_NORMAL("白班", "让该角色在白天工作八小时。", 9, 8),
+	DAY_LONG("白班+", "让该角色在白天工作十六小时。", 6, 16),
 	
-	NIGHT_NORMAL("Night shift", "Get this character to work eight hours over the course of the night.", 20, 8),
-	NIGHT_LONG("Night shift +", "Get this character to work sixteen hours over the course of the night.", 16, 16),
+	NIGHT_NORMAL("夜班", "让该角色在晚上工作八小时。", 20, 8),
+	NIGHT_LONG("夜班+", "让该角色在晚上工作十六小时。", 16, 16),
 
-	TWENTY_FOUR_HOURS("24 hours", "Assign every hour as a work hour.", 0, 24);
+	TWENTY_FOUR_HOURS("全天", "让该角色全天无休工作。", 0, 24);
 	
 
 	private String name;

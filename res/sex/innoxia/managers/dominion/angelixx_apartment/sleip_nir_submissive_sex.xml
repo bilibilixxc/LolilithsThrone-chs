@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[coffee table]]></deskName>
+	<deskName><![CDATA[茶几]]></deskName>
 	<title/>
 	<consensual><![CDATA[false]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>

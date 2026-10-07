@@ -58,7 +58,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		((ZaranixMaidKelly)Main.game.getNpc(ZaranixMaidKelly.class)).setStartingBody(false);
 	}
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Zaranix's Home", "", true) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("扎拉尼克斯家", "", true) {
 
 		@Override
 		public String getContent() {
@@ -77,11 +77,11 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(!Main.game.isExtendedWorkTime()) {
-					return new Response("Knock door", "Amber is certainly not going to answer the door at such an unsociable time. You'll have to come back during the day...", null);
+					return new Response("敲门", "安柏肯定不会这么晚来开门的。你必须白天再来……", null);
 				}
 				if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.amberRepeatEncountered)
 						&& (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.zaranixKnockedOnDoor) || Main.game.getNpc(Amber.class).getFoughtPlayerCount()!=0)) {
-					return new Response("Knock door", "Knock on the door and wait for someone to answer.", OUTSIDE_KNOCK_ON_DOOR_KNOWS_AMBER) {
+					return new Response("敲门", "敲敲门，等待应答。", OUTSIDE_KNOCK_ON_DOOR_KNOWS_AMBER) {
 						@Override
 						public void effects() {
 							resetHouseAfterLeaving(); // Reset here as well in case the player teleported out of the house.
@@ -92,7 +92,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else {
-					return new Response("Knock door", "Knock on the door and wait for someone to answer.", OUTSIDE_KNOCK_ON_DOOR) {
+					return new Response("敲门", "敲敲门，等待应答。", OUTSIDE_KNOCK_ON_DOOR) {
 						@Override
 						public void effects() {
 							resetHouseAfterLeaving(); // Reset here as well in case the player teleported out of the house.
@@ -104,7 +104,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				}
 
 			} else if (index == 0) {
-				return new Response("Leave", "Turn around and walk away.", Main.game.getDefaultDialogue(false));
+				return new Response("离开", "转身离开。", Main.game.getDefaultDialogue(false));
 
 			} else {
 				return null;
@@ -112,7 +112,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode OUTSIDE_KNOCK_ON_DOOR_KNOWS_AMBER = new DialogueNode("Zaranix's Home", "", true) {
+	public static final DialogueNode OUTSIDE_KNOCK_ON_DOOR_KNOWS_AMBER = new DialogueNode("扎拉尼克斯家", "", true) {
 
 		@Override
 		public String getContent() {
@@ -125,7 +125,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode OUTSIDE_KNOCK_ON_DOOR = new DialogueNode("Zaranix's Home", "", true) {
+	public static final DialogueNode OUTSIDE_KNOCK_ON_DOOR = new DialogueNode("扎拉尼克斯家", "", true) {
 
 		@Override
 		public String getContent() {
@@ -140,7 +140,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Enter", "Step past Amber and enter Zaranix's home.", ENTRANCE) {
+				return new Response("进入", "走过安柏，进入扎拉尼克斯家。", ENTRANCE) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -5));
@@ -152,7 +152,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				};
 
 			} else if (index == 2) {
-				return new Response("Apologise", "Do as Amber says and get down on your knees to apologise to her.", OUTSIDE_APOLOGY,
+				return new Response("道歉", "按照安柏说的，跪下给她道歉。", OUTSIDE_APOLOGY,
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), CorruptionLevel.THREE_DIRTY, null, null, null) {
 					@Override
 					public void effects() {
@@ -162,19 +162,19 @@ public class ZaranixHomeGroundFloorRepeat {
 				};
 
 			} else if (index == 3) {
-				return new Response("Step back", "Make an excuse and step back from the door, before taking your leave.", OUTSIDE) {
+				return new Response("退开", "找个借口从门边退到一旁，然后再找机会离开。", OUTSIDE) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.amberRepeatEncountered, true);
 						Main.game.getNpc(Amber.class).returnToHome();
 						Main.game.getTextStartStringBuilder().append(
 								"<p>"
-									+ "[pc.speech(I just remembered that I need to be elsewhere right now,)]"
-									+ " you say, stepping back from the door."
+									+ "[pc.speech(我刚想起来，现在得去别的地方，)]"
+									+ "你说着，从门边退了出来。"
 								+ "</p>"
 								+ "<p>"
-									+ "[amber.speech(Don't waste my time again, bitch.)]"
-									+ " Amber snarls, before slamming the door in your face."
+									+ "[amber.speech(别再浪费我的时间了，婊子。)]"
+									+ "安柏咆哮着，砰地一声甩上门。"
 								+ "</p>");
 					}
 				};
@@ -186,7 +186,7 @@ public class ZaranixHomeGroundFloorRepeat {
 	};
 	
 	
-	public static final DialogueNode OUTSIDE_APOLOGY = new DialogueNode("Zaranix's Home", "", true, true) {
+	public static final DialogueNode OUTSIDE_APOLOGY = new DialogueNode("扎拉尼克斯家", "", true, true) {
 
 		@Override
 		public String getContent() {
@@ -209,7 +209,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true) && Main.game.isFootContentEnabled()) {
 				if(index == 1) {
-					return new Response("Enter", "Refuse to lick Amber's heels, and step past her into Zaranix's home.", ENTRANCE) {
+					return new Response("进入", "拒绝舔安柏的鞋跟，路过她进入扎拉尼克斯的家。", ENTRANCE) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -2.5f));
@@ -220,7 +220,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if (index == 2) {
-					return new Response("Reluctantly Lick", "Reluctantly do as Amber says and start obediently licking her heels.", OUTSIDE_LICKING_RELUCTANT,
+					return new Response("不情愿地舔", "不情愿地按照安柏说的做，开始顺从地舔她的脚后跟。", OUTSIDE_LICKING_RELUCTANT,
 							Util.newArrayListOfValues(Fetish.FETISH_MASOCHIST, Fetish.FETISH_FOOT_RECEIVING), CorruptionLevel.THREE_DIRTY, null, null, null) {
 						@Override
 						public void effects() {
@@ -229,7 +229,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 	
 				} else if (index == 3) {
-					return new Response("Eagerly Lick", "Eagerly do as Amber says and start enthusiastically licking her heels.", OUTSIDE_LICKING_EAGER,
+					return new Response("热切地舔", "热切地按照安柏说的做，开始顺从地舔她的脚后跟。", OUTSIDE_LICKING_EAGER,
 							Util.newArrayListOfValues(Fetish.FETISH_MASOCHIST, Fetish.FETISH_FOOT_RECEIVING), CorruptionLevel.THREE_DIRTY, null, null, null) {
 						@Override
 						public void effects() {
@@ -243,7 +243,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				
 			} else {
 				if (index == 1) {
-					return new Response("Enter", "Amber will now let you enter Zaranix's home.", ENTRANCE) {
+					return new Response("进入", "安柏现在会让你进扎拉尼克斯家。", ENTRANCE) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Amber.class).returnToHome();
@@ -259,7 +259,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode OUTSIDE_LICKING_RELUCTANT = new DialogueNode("Zaranix's Home", "", true, true) {
+	public static final DialogueNode OUTSIDE_LICKING_RELUCTANT = new DialogueNode("扎拉尼克斯家", "", true, true) {
 
 		@Override
 		public String getContent() {
@@ -269,7 +269,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Enter", "Finally, Amber will let you enter Zaranix's home...", ENTRANCE) {
+				return new Response("进入", "最终安柏让你进扎拉尼克斯家了……", ENTRANCE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -284,7 +284,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode OUTSIDE_LICKING_EAGER = new DialogueNode("Zaranix's Home", "", true, true) {
+	public static final DialogueNode OUTSIDE_LICKING_EAGER = new DialogueNode("扎拉尼克斯家", "", true, true) {
 
 		@Override
 		public String getContent() {
@@ -294,7 +294,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Refuse", "Refuse to lick Amber's soles.", ENTRANCE) {
+				return new Response("拒绝", "拒绝舔安柏的鞋底。", ENTRANCE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -304,7 +304,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				};
 
 			} else if(index == 2) {
-				return new Response("Obey", "Do as Amber says and start cleaning the soles of her heels with your [pc.tongue].", OUTSIDE_LICKING_SOLES,
+				return new Response("顺从", "按照安柏说的做，用你的[pc.tongue]清理她的鞋底。", OUTSIDE_LICKING_SOLES,
 						Util.newArrayListOfValues(Fetish.FETISH_MASOCHIST, Fetish.FETISH_FOOT_RECEIVING), CorruptionLevel.THREE_DIRTY, null, null, null) {
 					@Override
 					public void effects() {
@@ -319,7 +319,7 @@ public class ZaranixHomeGroundFloorRepeat {
 	};
 	
 	
-	public static final DialogueNode OUTSIDE_LICKING_SOLES = new DialogueNode("Zaranix's Home", "", true, true) {
+	public static final DialogueNode OUTSIDE_LICKING_SOLES = new DialogueNode("扎拉尼克斯家", "", true, true) {
 
 		@Override
 		public String getContent() {
@@ -329,7 +329,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Enter", "Amber will now let you enter Zaranix's home.", ENTRANCE) {
+				return new Response("进入", "安柏现在会让你进扎拉尼克斯家。", ENTRANCE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -355,7 +355,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Entrance Hall";
+			return "门厅";
 		}
 
 		@Override
@@ -370,7 +370,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Exit", "Leave Zaranix's house and head back out into Demon Home.", PlaceType.DOMINION_DEMON_HOME_ZARANIX.getDialogue(false)) {
+				return new Response("出口", "离开扎拉尼克斯家，回到恶魔之家。", PlaceType.DOMINION_DEMON_HOME_ZARANIX.getDialogue(false)) {
 					@Override
 					public void effects() {
 						resetHouseAfterLeaving();
@@ -393,7 +393,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Staircase";
+			return "楼梯";
 		}
 
 		@Override
@@ -422,10 +422,10 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.katherineRepeatEncountered) && Main.game.getCharactersPresent().contains(Main.game.getNpc(ZaranixMaidKatherine.class))) {
-					return new Response("Upstairs", "You need to respond to Katherine first!", null);
+					return new Response("上楼", "你需要先向凯瑟琳回复！", null);
 					
 				} else {
-					return new Response("Upstairs", "Head upstairs to the first floor of Zaranix's house.", PlaceType.ZARANIX_FF_STAIRS.getDialogue(false)) {
+					return new Response("上楼", "前往扎拉尼克斯家二楼。", PlaceType.ZARANIX_FF_STAIRS.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.ZARANIX_HOUSE_FIRST_FLOOR, PlaceType.ZARANIX_FF_STAIRS, false);
@@ -435,7 +435,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 			} else if(Main.game.getCharactersPresent().contains(Main.game.getNpc(ZaranixMaidKatherine.class))) {
 				if(index==2) {
-					return new ResponseSex("Sex", "Have some fun with Katherine.",
+					return new ResponseSex("做爱", "和凯瑟琳爽一爽。",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -451,8 +451,8 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==3) {
-					return new ResponseSex("Submit",
-							"You can't bring yourself to take the dominant role, but you <i>do</i> want to have sex with Katherine. Perhaps if you submitted, [katherine.she]'d be willing to fuck you?",
+					return new ResponseSex("顺从",
+							"你没法主导性爱，但又<i>非常</i>想和凯瑟琳做爱。或许只要选择顺从，[katherine.she]也会愿意干你的？",
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 							true, false,
 							new SMGeneric(
@@ -469,8 +469,8 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if (index == 4) {
-					return new Response("Transformations",
-							"Get Katherine to use [katherine.her] demonic powers to transform [katherine.herself]...",
+					return new Response("转化",
+							"让凯瑟琳使用恶魔之力转化自己……",
 							BodyChanging.BODY_CHANGING_CORE){
 						@Override
 						public void effects() {
@@ -480,8 +480,8 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index == 5 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.katherineRepeatEncountered)) {
-					return new Response("Decline",
-							"Say no to the horny demon and continue on your way.",
+					return new Response("拒绝",
+							"拒绝那个饥渴的恶魔，继续前进。",
 							KATHERINE_DECLINE){
 						@Override
 						public void effects() {
@@ -498,11 +498,11 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode AFTER_KATHERINE_SEX = new DialogueNode("", "Katherine lets out a deep sigh as she steps back.", false) {
+	public static final DialogueNode AFTER_KATHERINE_SEX = new DialogueNode("", "凯瑟琳粗重地喘息，后退几步。", false) {
 
 		@Override
 		public String getLabel() {
-			return "Finished";
+			return "完成";
 		}
 
 		@Override
@@ -522,7 +522,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.ZARANIX_GF_STAIRS)) {
 				if(index==1) {
-					return new Response("Upstairs", "Head upstairs to the first floor of Zaranix's house.", PlaceType.ZARANIX_FF_STAIRS.getDialogue(false)) {
+					return new Response("上楼", "前往扎拉尼克斯家二楼。", PlaceType.ZARANIX_FF_STAIRS.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.ZARANIX_HOUSE_FIRST_FLOOR, PlaceType.ZARANIX_FF_STAIRS, false);
@@ -550,7 +550,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.ZARANIX_GF_STAIRS)) {
 				if(index==1) {
-					return new Response("Upstairs", "Head upstairs to the first floor of Zaranix's house.", PlaceType.ZARANIX_FF_STAIRS.getDialogue(false)) {
+					return new Response("上楼", "前往扎拉尼克斯家二楼。", PlaceType.ZARANIX_FF_STAIRS.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.ZARANIX_HOUSE_FIRST_FLOOR, PlaceType.ZARANIX_FF_STAIRS, false);
@@ -571,7 +571,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Corridor";
+			return "走廊";
 		}
 
 		@Override
@@ -600,7 +600,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getCharactersPresent().contains(Main.game.getNpc(ZaranixMaidKatherine.class))) {
 				if(index==1) {
-					return new ResponseSex("Sex", "Have some fun with Katherine.",
+					return new ResponseSex("做爱", "和凯瑟琳爽一爽。",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -616,8 +616,8 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new ResponseSex("Submit",
-							"You can't bring yourself to take the dominant role, but you <i>do</i> want to have sex with Katherine. Perhaps if you submitted, [katherine.she]'d be willing to fuck you?",
+					return new ResponseSex("顺从",
+							"你没法主导性爱，但又<i>非常</i>想和凯瑟琳做爱。或许只要选择顺从，[katherine.she]也会愿意干你的？",
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 							true, false,
 							new SMGeneric(
@@ -634,8 +634,8 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if (index == 3) {
-					return new Response("Transformations",
-							"Get Katherine to use [katherine.her] demonic powers to transform [katherine.herself]...",
+					return new Response("转化",
+							"让凯瑟琳使用恶魔之力转化自己……",
 							BodyChanging.BODY_CHANGING_CORE){
 						@Override
 						public void effects() {
@@ -645,8 +645,8 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index == 4 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.katherineRepeatEncountered)) {
-					return new Response("Decline",
-							"Say no to the horny demon and continue on your way.",
+					return new Response("拒绝",
+							"拒绝那个饥渴的恶魔，继续前进。",
 							KATHERINE_DECLINE){
 						@Override
 						public void effects() {
@@ -672,7 +672,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Zaranix's Garden";
+			return "扎拉尼克斯的花园";
 		}
 
 		@Override
@@ -695,7 +695,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Zaranix's Garden";
+			return "扎拉尼克斯的花园";
 		}
 
 		@Override
@@ -718,7 +718,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Garden Room";
+			return "花园房";
 		}
 
 		@Override
@@ -745,7 +745,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Room";
+			return "房间";
 		}
 
 		@Override
@@ -768,7 +768,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -779,7 +779,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Amber", "Walk over to Amber and say hello.", LOUNGE_AMBER_GREETING);
+				return new Response("安柏", "靠近安柏，和她打招呼。", LOUNGE_AMBER_GREETING);
 				
 			} else {
 				return null;
@@ -796,7 +796,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -820,7 +820,7 @@ public class ZaranixHomeGroundFloorRepeat {
 			if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM
 					|| Main.game.getCurrentWeather()==Weather.RAIN) {
 				if(index==1) {
-					return new Response("Submit", "Do as Amber says and get down on all fours, ready to act as a foot stall for her.", LOUNGE_AMBER_FOOT_STALL,
+					return new Response("屈服", "按照安柏说的做，四脚着地当她的脚垫。", LOUNGE_AMBER_FOOT_STALL,
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), CorruptionLevel.TWO_HORNY, null, null, null) {
 						@Override
 						public void effects() {
@@ -829,7 +829,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new Response("Decline", "Tell Amber that you're really not interested in that sort of thing.", LOUNGE_AMBER_DECLINED_FOOT_STALL) {
+					return new Response("拒绝", "告诉安柏，你对这种事真的不感兴趣。", LOUNGE_AMBER_DECLINED_FOOT_STALL) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -5));
@@ -838,12 +838,12 @@ public class ZaranixHomeGroundFloorRepeat {
 					
 				} else if(index==3) {
 					if(Main.game.getNpc(Amber.class).getAffection(Main.game.getPlayer())<100) {
-						return new Response("Submissive sex",
-								"There's no way Amber will have sex with you if you were to simply ask for it. Maybe you could try it if you impressed her enough first... (Requires Amber to have maximum affection towards you.)",
+						return new Response("服从型性爱",
+								"如果你只是简单要求，安柏是不可能和你做爱的。如果你先给她留下足够的印象，也许可以试试……(要求安柏对你有最大好感。)",
 								null);
 						
 					} else {
-						return new ResponseSex("Submissive sex", "Ask Mistress Amber to fuck you. As you've been a good bitch for her, you think that she'll say yes.",
+						return new ResponseSex("服从型性爱", "让主人安柏操你。你是她的好母狗，你觉得她会答应的。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_MASOCHIST), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 								true, false,
 								new SMAmberDoggyFucked(
@@ -856,7 +856,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					}
 					
 				} else if(index==4) {
-					return new Response("Fuck off", "Tell Amber to fuck off.", LOUNGE_AMBER_FURIOUS) {
+					return new Response("滚出去", "告诉安柏滚出去。", LOUNGE_AMBER_FURIOUS) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -25));
@@ -869,7 +869,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				
 			} else {
 				if(index==1) {
-					return new Response("Submit", "Do as Amber says and get down on all fours, ready to go for a walk.", LOUNGE_AMBER_WALKIES,
+					return new Response("屈服", "按照安柏说的做，四脚着地准备去被遛。", LOUNGE_AMBER_WALKIES,
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), CorruptionLevel.THREE_DIRTY, null, null, null) {
 						@Override
 						public void effects() {
@@ -895,7 +895,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new Response("Decline", "Tell Amber that you're really not interested in that sort of thing.", LOUNGE_AMBER_DECLINED_WALK) {
+					return new Response("拒绝", "告诉安柏，你对这种事真的不感兴趣。", LOUNGE_AMBER_DECLINED_WALK) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -5));
@@ -904,12 +904,12 @@ public class ZaranixHomeGroundFloorRepeat {
 					
 				} else if(index==3) {
 					if(Main.game.getNpc(Amber.class).getAffection(Main.game.getPlayer())<100) {
-						return new Response("Submissive sex",
-								"There's no way Amber will have sex with you if you were to simply ask for it. Maybe you could try it if you impressed her enough first... (Requires Amber to have maximum affection towards you.)",
+						return new Response("服从型性爱",
+								"如果你只是简单要求，安柏是不可能和你做爱的。如果你先给她留下足够的印象，也许可以试试……(要求安柏对你有最大好感。)",
 								null);
 						
 					} else {
-						return new ResponseSex("Submissive sex", "Ask Mistress Amber to fuck you. As you've been a good bitch for her, you think that she'll say yes.",
+						return new ResponseSex("服从型性爱", "让主人安柏操你。你是她的好母狗，你觉得她会答应的。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_MASOCHIST), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 								true, false,
 								new SMAmberDoggyFucked(
@@ -922,7 +922,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					}
 					
 				}  else if(index==4) {
-					return new Response("Fuck off", "Tell Amber to fuck off.", LOUNGE_AMBER_FURIOUS) {
+					return new Response("滚出去", "告诉安柏滚出去。", LOUNGE_AMBER_FURIOUS) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -25));
@@ -947,7 +947,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 		@Override
 		public String getContent() {
@@ -957,7 +957,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.isFootContentEnabled()) {
 				if(index==1) {
-					return new Response("Massage feet", "Do as Amber says and take off her shoes and stockings to massage her feet.", LOUNGE_AMBER_FOOT_MASSAGE,
+					return new Response("按摩足部", "按照安柏说的，脱掉她的鞋子和袜子，为她按摩双脚。", LOUNGE_AMBER_FOOT_MASSAGE,
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_FOOT_RECEIVING), CorruptionLevel.THREE_DIRTY, null, null, null) {
 						@Override
 						public void effects() {
@@ -966,7 +966,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new Response("Decline", "Stay still and refuse to massage Amber's feet.", LOUNGE_AMBER_FOOT_MASSAGE_REFUSED) {
+					return new Response("拒绝", "保持不动，拒绝按摩安柏的脚。", LOUNGE_AMBER_FOOT_MASSAGE_REFUSED) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -5));
@@ -990,7 +990,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -1013,7 +1013,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -1041,7 +1041,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -1063,7 +1063,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
 				if(index==1) {
-					return new Response("Suck toes", "Do as Amber says and start giving her feet some oral attention.", LOUNGE_AMBER_FOOT_MASSAGE_ORAL,
+					return new Response("吮吸脚趾", "按安柏说的做，用嘴照顾她的脚趾。", LOUNGE_AMBER_FOOT_MASSAGE_ORAL,
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_FOOT_RECEIVING), CorruptionLevel.THREE_DIRTY, null, null, null) {
 						@Override
 						public void effects() {
@@ -1072,7 +1072,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new Response("Decline", "Stay still and refuse to lick Amber's feet.", LOUNGE_AMBER_FOOT_MASSAGE_ORAL_REFUSED) {
+					return new Response("拒绝", "保持不动，拒绝舔安柏的脚。", LOUNGE_AMBER_FOOT_MASSAGE_ORAL_REFUSED) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -5));
@@ -1097,7 +1097,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -1120,7 +1120,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -1152,7 +1152,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode LOUNGE_AMBER_FURIOUS = new DialogueNode("Lounge", "", true, true) {
+	public static final DialogueNode LOUNGE_AMBER_FURIOUS = new DialogueNode("休息室", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1167,7 +1167,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Refuse", "Refuse to let Amber fuck you.", LOUNGE) {
+				return new Response("拒绝", "拒绝让安柏操你。", LOUNGE) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/zaranixHome/groundFloorRepeat", "LOUNGE_AMBER_FURIOUS_NO_APOLOGY"));
@@ -1176,8 +1176,8 @@ public class ZaranixHomeGroundFloorRepeat {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Submit",
-						"Do as Amber says and drop down on all fours, ready for her to fuck you.",
+				return new ResponseSex("顺从",
+						"按照安柏说的做，四脚着地，准备挨操。",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true, false,
 						new SMAmberDoggyFucked(
@@ -1194,7 +1194,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				};
 				
 			} if(index==3) {
-				return new Response("Insult her", "Push your luck and insult Amber again.", LOUNGE_AMBER_LOSES_IT) {
+				return new Response("骂她", "碰碰运气，再次侮辱安柏。", LOUNGE_AMBER_LOSES_IT) {
 					@Override
 					public boolean isCombatHighlight() {
 						return true;
@@ -1211,7 +1211,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode AMBER_LOUNGE_POST_CONSENSUAL_SEX = new DialogueNode("Collapse", "Amber is finished with you.", false) {
+	public static final DialogueNode AMBER_LOUNGE_POST_CONSENSUAL_SEX = new DialogueNode("瘫软", "安柏和你做完了。", false) {
 
 		@Override
 		public String getContent() {
@@ -1224,7 +1224,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode AMBER_LOUNGE_POST_SEX = new DialogueNode("Collapse", "Amber is finished with you.", false) {
+	public static final DialogueNode AMBER_LOUNGE_POST_SEX = new DialogueNode("瘫软", "安柏和你做完了。", false) {
 
 		@Override
 		public String getContent() {
@@ -1237,7 +1237,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode LOUNGE_AMBER_LOSES_IT = new DialogueNode("Lounge", "", true, true) {
+	public static final DialogueNode LOUNGE_AMBER_LOSES_IT = new DialogueNode("休息室", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1252,7 +1252,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new ResponseCombat("Fight", "Defend yourself against Amber!", Main.game.getNpc(Amber.class));
+				return new ResponseCombat("战斗", "保护你自己，防御安柏！", Main.game.getNpc(Amber.class));
 				
 			} else {
 				return null;
@@ -1275,7 +1275,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Used", "Amber starts fucking you.",
+				return new ResponseSex("被使用", "安柏开始操你。",
 						false, false,
 						new SMAmberDoggyFucked(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Amber.class), SexSlotAllFours.BEHIND)),
@@ -1290,7 +1290,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode AFTER_AMBER_SEX_LOSS = new DialogueNode("Used", "", false) {
+	public static final DialogueNode AFTER_AMBER_SEX_LOSS = new DialogueNode("被使用", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1317,7 +1317,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Lounge";
+			return "休息室";
 		}
 
 		@Override
@@ -1328,10 +1328,10 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Refuse", "Refuse to have sex with Amber and leave her to think about how rude she's been to you.", COMBAT_VICTORY_LEAVE);
+				return new Response("拒绝", "拒绝与安柏做爱，让她好好想想刚才对你多无礼。", COMBAT_VICTORY_LEAVE);
 				
 			} if(index==2) {
-				return new ResponseSex("Sex", "Have some fun with Amber.",
+				return new ResponseSex("做爱", "和安柏爽一爽。",
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -1342,8 +1342,8 @@ public class ZaranixHomeGroundFloorRepeat {
 						UtilText.parseFromXMLFile("places/dominion/zaranixHome/groundFloorRepeat", "COMBAT_VICTORY_SEX"));
 				
 			} else if(index==3) {
-				return new ResponseSex("Submit",
-						"Amber's fiery personality is seriously turning you on. You can't bring yourself to take the dominant role, but you <i>do</i> want to have sex with her. Perhaps if you submitted, she'd be willing to fuck you?",
+				return new ResponseSex("顺从",
+						"安柏的暴脾气让你性欲高涨。你没法主导性爱，但又<i>非常</i>想跟她做爱。或许只要选择顺从，她也会愿意干你的？",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true, false,
 						new SMAmberDoggyFucked(
@@ -1360,7 +1360,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode COMBAT_VICTORY_LEAVE = new DialogueNode("Finished", "", false) {
+	public static final DialogueNode COMBAT_VICTORY_LEAVE = new DialogueNode("结束", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1378,7 +1378,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode AFTER_AMBER_SEX_VICTORY = new DialogueNode("Finished", "", false) {
+	public static final DialogueNode AFTER_AMBER_SEX_VICTORY = new DialogueNode("结束", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1396,7 +1396,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode AFTER_AMBER_SEX_SUB_VICTORY = new DialogueNode("Used", "", false) {
+	public static final DialogueNode AFTER_AMBER_SEX_SUB_VICTORY = new DialogueNode("被使用", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1414,7 +1414,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode LOUNGE_AMBER_WALKIES = new DialogueNode("Lounge", "", true, true) {
+	public static final DialogueNode LOUNGE_AMBER_WALKIES = new DialogueNode("休息室", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1433,7 +1433,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Heel", "Crawl alongside Amber as she leads you out into Demon Home.", WALKIES_HUMILIATION) {
+				return new Response("跟着", "与安柏并肩爬行，她会带你进入恶魔之家。Crawl alongside Amber as she leads you out into Demon Home.", WALKIES_HUMILIATION) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						double rnd = Math.random();
@@ -1468,7 +1468,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_HUMILIATION = new DialogueNode("Demon Home", "", true) {
+	public static final DialogueNode WALKIES_HUMILIATION = new DialogueNode("恶魔之家", "", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1484,7 +1484,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.isFootContentEnabled()) {
 				if(index==1) {
-					return new Response("Don't lick", "Refuse to lick Amber's shoes in front of her friends.", WALKIES_HUMILIATION_REFUSE) {
+					return new Response("不舔", "拒绝在安柏的朋友面前舔她的鞋子。", WALKIES_HUMILIATION_REFUSE) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -10));
@@ -1492,7 +1492,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new Response("Reluctant lick", "Reluctantly lick Amber's shoes in front of her friends.", WALKIES_HUMILIATION_RELUCTANT) {
+					return new Response("不情愿地舔", "在安柏的朋友面前不情愿地舔她的鞋子。", WALKIES_HUMILIATION_RELUCTANT) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -2.5f));
@@ -1500,7 +1500,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==3) {
-					return new Response("Eager lick", "Eagerly lick Amber's shoes in front of her friends.", WALKIES_HUMILIATION_EAGER) {
+					return new Response("饥渴地舔", "当着安柏朋友们的面，饥渴地舔她的鞋子。", WALKIES_HUMILIATION_EAGER) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), 5f));
@@ -1510,7 +1510,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				
 			} else {
 				if(index==1) {
-					return new Response("Don't beg", "Refuse to beg like a dog in front of Amber's friends.", WALKIES_HUMILIATION_REFUSE) {
+					return new Response("不乞求", "拒绝在安柏的朋友面前像狗一样。", WALKIES_HUMILIATION_REFUSE) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -10));
@@ -1518,7 +1518,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==2) {
-					return new Response("Reluctant beg", "Reluctantly beg like a dog in front of Amber's friends.", WALKIES_HUMILIATION_RELUCTANT) {
+					return new Response("不情愿地乞求", "在安柏的朋友面前，不情愿地像狗一样地乞求。", WALKIES_HUMILIATION_RELUCTANT) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -2.5f));
@@ -1526,7 +1526,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					};
 					
 				} else if(index==3) {
-					return new Response("Eager beg", "Eagerly beg like a dog in front of Amber's friends.", WALKIES_HUMILIATION_EAGER) {
+					return new Response("饥渴地乞求", "像狗一样，在安柏的朋友们面前摇尾乞怜。", WALKIES_HUMILIATION_EAGER) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), 5f));
@@ -1538,7 +1538,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_HUMILIATION_REFUSE = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_HUMILIATION_REFUSE = new DialogueNode("恶魔之家", "", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -1550,7 +1550,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1562,7 +1562,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_HUMILIATION_RELUCTANT = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_HUMILIATION_RELUCTANT = new DialogueNode("恶魔之家", "", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -1578,7 +1578,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1590,7 +1590,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_HUMILIATION_EAGER = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_HUMILIATION_EAGER = new DialogueNode("恶魔之家", "", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -1606,7 +1606,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1618,7 +1618,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_PEACEFUL = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_PEACEFUL = new DialogueNode("恶魔之家", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1633,7 +1633,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1647,7 +1647,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_PUNISHMENT = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_PUNISHMENT = new DialogueNode("恶魔之家", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1662,7 +1662,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1676,7 +1676,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_AMBER_FUCKS = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_AMBER_FUCKS = new DialogueNode("恶魔之家", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1691,7 +1691,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Refuse", "Refuse to let Amber publicly fuck you.", WALKIES_AMBER_FUCKS_REFUSED) {
+				return new Response("拒绝", "拒绝让安柏公开操你。", WALKIES_AMBER_FUCKS_REFUSED) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -15f));
@@ -1699,8 +1699,8 @@ public class ZaranixHomeGroundFloorRepeat {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Publicly fucked",
-						"Amber starts fucking you right there in full view of the public!",
+				return new ResponseSex("公开被操",
+						"安柏就在众目睽睽之下开始操你！",
 						null, null, null, null, null, null,
 						true, false,
 						new SMAmberDoggyFucked(
@@ -1722,7 +1722,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_AMBER_FUCKS_REFUSED = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_AMBER_FUCKS_REFUSED = new DialogueNode("恶魔之家", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1737,7 +1737,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1751,7 +1751,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_AMBER_FUCKS_POST_SEX = new DialogueNode("Used", "", true) {
+	public static final DialogueNode WALKIES_AMBER_FUCKS_POST_SEX = new DialogueNode("被使用", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1761,7 +1761,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1775,7 +1775,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_PET_FUCKS = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_PET_FUCKS = new DialogueNode("恶魔之家", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1790,7 +1790,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Amber's friend", "You stay by Mistress Amber's side as the two of you head over to who must be Mistress's friend.", WALKIES_PET_FUCKS_SNIFFING) {
+				return new Response("安柏的朋友", "你留在主人安柏身边，一起去找主人的朋友。", WALKIES_PET_FUCKS_SNIFFING) {
 					@Override
 					public void effects() {
 						Gender petGender = Gender.getGenderFromUserPreferences(false, false);
@@ -1854,7 +1854,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_PET_FUCKS_SNIFFING = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_PET_FUCKS_SNIFFING = new DialogueNode("恶魔之家", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1885,7 +1885,7 @@ public class ZaranixHomeGroundFloorRepeat {
 					&& (!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))
 					&& !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
 				if(index==1) {
-					return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+					return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Amber.class).returnToHome();
@@ -1901,7 +1901,7 @@ public class ZaranixHomeGroundFloorRepeat {
 				
 			} else {
 				if(index==1) {
-					return new Response("Refuse", "Refuse to present yourself to [npc.name].", WALKIES_PET_FUCKS_REFUSE) {
+					return new Response("拒绝", "拒绝把自己展示给[npc.name]看。", WALKIES_PET_FUCKS_REFUSE) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Amber.class).incrementAffection(Main.game.getPlayer(), -10f));
@@ -1911,8 +1911,8 @@ public class ZaranixHomeGroundFloorRepeat {
 				} else if(index==2) {
 					if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true) || (Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))) {
 						// Mounting player:
-						return new ResponseSex("Present yourself",
-								"Do as Amber commands and present yourself, ready for [npc.name] to mount you!",
+						return new ResponseSex("展示自己",
+								"按安柏说的展示自己，做好被[npc.Name]骑的准备！",
 								null, null, null, null, null, null,
 								true, false,
 								new SMPetMounting(
@@ -1939,8 +1939,8 @@ public class ZaranixHomeGroundFloorRepeat {
 					
 					} else {
 						// Player performing oral:
-						return new ResponseSex("Perform oral",
-								"Do as Amber commands and get ready to suck [npc.namePos] [npc.cock+].",
+						return new ResponseSex("提供口交",
+								"按照安柏的命令，准备嗦[npc.namePos][npc.cock+]。",
 								null, null, null, null, null, null,
 								true, false,
 								new SMPetOral(
@@ -1962,7 +1962,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_PET_FUCKS_POST_SEX = new DialogueNode("Used", "", true) {
+	public static final DialogueNode WALKIES_PET_FUCKS_POST_SEX = new DialogueNode("被使用", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1972,7 +1972,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -1989,7 +1989,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_PET_FUCKS_POST_SEX_ORAL = new DialogueNode("Used", "", true) {
+	public static final DialogueNode WALKIES_PET_FUCKS_POST_SEX_ORAL = new DialogueNode("被使用", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1999,7 +1999,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -2016,7 +2016,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		}
 	};
 	
-	public static final DialogueNode WALKIES_PET_FUCKS_REFUSE = new DialogueNode("Demon Home", "", true, true) {
+	public static final DialogueNode WALKIES_PET_FUCKS_REFUSE = new DialogueNode("恶魔之家", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -2031,7 +2031,7 @@ public class ZaranixHomeGroundFloorRepeat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Home", "Crawl alongside Amber as she leads you back to Zaranix's Home.", WALKIES_HOME) {
+				return new Response("回家", "与安柏并肩爬行，她会带你回到扎拉尼克斯家。", WALKIES_HOME) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Amber.class).returnToHome();
@@ -2056,7 +2056,7 @@ public class ZaranixHomeGroundFloorRepeat {
 
 		@Override
 		public String getLabel() {
-			return "Entrance Hall";
+			return "门厅";
 		}
 
 		@Override

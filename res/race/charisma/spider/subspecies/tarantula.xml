@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>charisma_spider</race>
 	<colour>charisma_spider_silk_white</colour>
@@ -49,54 +49,54 @@
 	<iconName>icon</iconName>
 	<backgroundName>raceBackground</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Deadly Spiders</bookName>
+	<bookName><![CDATA[致命蜘蛛]]></bookName>
 	<basicDescriptionId>SPIDER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>SPIDER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault> 
-			<name><![CDATA[tarantula-morph]]></name>
-			<namePlural><![CDATA[tarantula-morphs]]></namePlural>
-			<singularMaleName><![CDATA[tarantula-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[tarantula-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[tarantula-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[tarantula-girls]]></pluralFemaleName>
+			<name><![CDATA[狼蛛化形]]></name>
+			<namePlural><![CDATA[狼蛛化形]]></namePlural>
+			<singularMaleName><![CDATA[狼蛛男]]></singularMaleName>
+			<singularFemaleName><![CDATA[狼蛛女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[狼蛛男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[狼蛛女]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="ARACHNID"> 
-			<name><![CDATA[tarantula drider]]></name>
-			<namePlural><![CDATA[tarantula driders]]></namePlural>
-			<singularMaleName><![CDATA[tarantula drider]]></singularMaleName>
-			<singularFemaleName><![CDATA[tarantula drider]]></singularFemaleName>
-			<pluralMaleName><![CDATA[tarantula driders]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[tarantula driders]]></pluralFemaleName>
+			<name><![CDATA[狼蛛蜘蛛人]]></name>
+			<namePlural><![CDATA[狼蛛蜘蛛人]]></namePlural>
+			<singularMaleName><![CDATA[狼蛛蜘蛛人]]></singularMaleName>
+			<singularFemaleName><![CDATA[狼蛛蜘蛛人]]></singularFemaleName>
+			<pluralMaleName><![CDATA[狼蛛蜘蛛人]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[狼蛛蜘蛛人]]></pluralFemaleName>
 		</names>
 	</nameAnthro>
-	<description><![CDATA[An anthropomorphic tarantula, known as a 'tarantula-morph' when bipedal, and a 'tarantula drider' when the lower body is that of a typically-oversized feral spider. To be identified as a tarantula-morph, a character must be a spider-morph with at least one body part being covered in furry chitin.]]></description>
+	<description><![CDATA[一种人形的狼蛛, 当下肢拟人时被称为狼蛛化形，而当下肢呈现出蜘蛛兽态时则称为半狼蛛人。如果一个角色要被认定为狼蛛化形，首先需要是蜘蛛化形，并且至少有一个身体部位被毛茸茸的几丁质覆盖。]]></description>
 	<nameHalfDemon>
 		<namesDefault> 
-			<name><![CDATA[jorogumo]]></name>
-			<namePlural><![CDATA[jorogumos]]></namePlural>
-			<singularMaleName><![CDATA[jorogumo]]></singularMaleName>
-			<singularFemaleName><![CDATA[jorogumo]]></singularFemaleName>
-			<pluralMaleName><![CDATA[jorogumos]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[jorogumos]]></pluralFemaleName>
+			<name><![CDATA[络新妇]]></name>
+			<namePlural><![CDATA[络新妇]]></namePlural>
+			<singularMaleName><![CDATA[络新妇]]></singularMaleName>
+			<singularFemaleName><![CDATA[络新妇]]></singularFemaleName>
+			<pluralMaleName><![CDATA[络新妇]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[络新妇]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="TAIL">
-			<name><![CDATA[arachne]]></name>
-			<namePlural><![CDATA[arachnes]]></namePlural>
-			<singularMaleName><![CDATA[arachne]]></singularMaleName>
-			<singularFemaleName><![CDATA[arachne]]></singularFemaleName>
-			<pluralMaleName><![CDATA[arachnes]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[arachnes]]></pluralFemaleName>
+			<name><![CDATA[阿拉克涅]]></name>
+			<namePlural><![CDATA[阿拉克涅]]></namePlural>
+			<singularMaleName><![CDATA[阿拉克涅]]></singularMaleName>
+			<singularFemaleName><![CDATA[阿拉克涅]]></singularFemaleName>
+			<pluralMaleName><![CDATA[阿拉克涅]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[阿拉克涅]]></pluralFemaleName>
 		</names>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[tarantula]]></feralName>
-		<feralNamePlural><![CDATA[tarantulas]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[tarantula]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[tarantula]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[tarantulas]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[tarantulas]]></feralPluralFemaleName>
+		<feralName><![CDATA[狼蛛]]></feralName>
+		<feralNamePlural><![CDATA[狼蛛]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[狼蛛]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[狼蛛]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[狼蛛]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[狼蛛]]></feralPluralFemaleName>
 		<legConfiguration>ARACHNID</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>200</size>
@@ -109,8 +109,8 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] tarantula-like body is strong and agile, and [npc.she] [npc.has] a primal urge to hunt down prey larger than [npc.herself].
-	]]></statusEffectDescription>
+		[npc.NamePos]狼蛛一般的身体强壮而灵活，[npc.she]有猎杀比自己体型更大的生物的原始冲动。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="15">MAJOR_PHYSIQUE</attribute>
 		<attribute value="15">DAMAGE_POISON</attribute>

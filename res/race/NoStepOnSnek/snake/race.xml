@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>NoStepOnSnek_snake</racialBody>
 	<applyRaceChanges><![CDATA[
@@ -11,17 +11,17 @@
 			[#targetedBody.getVagina().setEggLayer(null, false)]
 		#ENDIF
 	]]></applyRaceChanges>
-	<name><![CDATA[snake-morph]]></name>
-	<namePlural><![CDATA[snake-morphs]]></namePlural>
-	<nameSillyMode><![CDATA[snek-morph]]></nameSillyMode>
-	<namePluralSillyMode><![CDATA[snek-morphs]]></namePluralSillyMode>
+	<name><![CDATA[蛇化形]]></name>
+	<namePlural><![CDATA[蛇化形]]></namePlural>
+	<nameSillyMode><![CDATA[虫它化形]]></nameSillyMode>
+	<namePluralSillyMode><![CDATA[虫它化形]]></namePluralSillyMode>
 	<nameFeral>
-		<name legConfiguration="TAIL_LONG"><![CDATA[snake]]></name>
+		<name legConfiguration="TAIL_LONG"><![CDATA[蛇]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="TAIL_LONG"><![CDATA[snakes]]></name>
+		<name legConfiguration="TAIL_LONG"><![CDATA[蛇]]></name>
 	</nameFeralPlural>
-	<defaultTransformName><![CDATA[snake]]></defaultTransformName>
+	<defaultTransformName><![CDATA[蛇]]></defaultTransformName>
 	<colour>NoStepOnSnek_snake</colour>
 	<disposition>UNPREDICTABLE</disposition>
 	<racialClass>REPTILE</racialClass>

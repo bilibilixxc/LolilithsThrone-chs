@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the bottle reads 'Distilled by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[瓶底刻着细小的字迹，写着“DSG食品有限公司蒸馏”。]]></authorTag>
 		
 		<value>200</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Vodka]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Vodkas]]></namePlural>
-		<description><![CDATA[A glass bottle containing a highly alcoholic beverage made from potatoes.
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[伏特加]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[伏特加]]></namePlural>
+		<description><![CDATA[一个玻璃瓶，里面装着一种由马铃薯制成的高度酒精的饮料。
 		#IF(!game.isSillyModeEnabled())
-		 The label depicts a bear-boy hard at work loading a still.
+		标签上画着一个努力工作、正在操作蒸馏器的熊男。
 		#ELSE
-		 The label depicts a bear-boy squatting in a tracksuit. Above him a speech bubble reads "Иди нахуй", which you assume is some kind of swear.
+		标签上画着一个穿着运动服蹲着的熊男。在他头顶，一个对话框写着“Иди нахуй”，你猜测这是某种脏话。
 		#ENDIF
 		]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -36,20 +36,20 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 15% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_ICE.getFormattedValue(3)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 25% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_ICE.getFormattedValue(3)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]25%[style.boldAlcohol(醉酒度)]]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]25%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
-		<applyEffects><![CDATA[
-			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM) * 0.15)]
+		<applyEffects><![CDATA[[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM) * 0.15)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_RESISTANCE_ICE, 3)]
 			[#npc.incrementAlcoholLevel(0.25)]
-		]]></applyEffects>
+		
+]]></applyEffects>
 		
 		<itemTags>
 			<tag>DRINK</tag>
@@ -60,12 +60,8 @@
 	</coreAttributes>
 
 	<useDescriptions>
-		<selfUse><![CDATA[
-		After first removing the cork, [npc.name] [npc.verb(bring)] the bottle of Vodka up to [npc.her] [npc.mouth]. A very potent smell of alcohol rises from the opening, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the fiery liquid, a tingling warmth begins growing in the core of [npc.her] body.
-		]]></selfUse>
-		<otherUse><![CDATA[
-		After first removing the cork, [npc.name] [npc.verb(bring)] the bottle of Grog up to [npc2.namePos] waiting [npc2.lips]. A very potent smell of alcohol rises from the opening, and as [npc2.she] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the fiery liquid, a tingling warmth begins growing in the core of [npc2.her] body.
-		]]></otherUse>
+		<selfUse><![CDATA[第一次取下瓶塞后，[npc.name]将伏特加瓶递到[npc.her][npc.mouth]。从瓶口飘出了一股非常浓烈的酒精味。[npc.she]把头仰起并且开始喝下这股烈性液体时，一股渐渐升起的热辣感开始在[npc.her]体内蔓延。]]></selfUse>
+		<otherUse><![CDATA[在第一次取下瓶塞后，[npc.name]将格洛格酒(Grog)瓶举到[npc2.lips]边。从瓶口飘出了一股非常浓烈的酒精味，[npc2.she]仰头并饮下烈性液体，一股热辣感开始在[npc2.her]的体内蔓延。]]></otherUse>
 	</useDescriptions>
 
 	

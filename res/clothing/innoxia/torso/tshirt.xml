@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>80</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[T-shirt]]></name>
+		<name><![CDATA[T恤衫]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[T-shirts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[T恤衫]]></namePlural> 
 		
-		<description><![CDATA[A unisex fabric shirt, named after the T shape of its body and sleeves.]]></description> 
+		<description><![CDATA[一款无性别的衬衫，以其身体和袖子呈T形而命名。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -76,51 +76,42 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc.her] [npc.arms] through the T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
-    </otherRough>
+    <self><![CDATA[[npc.Name]将[npc.arms]穿过T恤衫的袖口，然后把它拉过[npc.her]的头。]]></self>
+    <other><![CDATA[
+      [npc.Name]引导[npc2.namePos]把[npc2.arms]探出T恤衫的袖口，直到[npc.she]从领口探出了[npc2.her]的头。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地逼迫[npc2.namePos]把[npc2.arms]伸出T恤衫的袖口，直到[npc.she]从领口探出[npc2.her]的头。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] T-shirt.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] T-shirt.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] T-shirt.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下[npc.her]的T恤衫。]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的T恤衫脱下。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地脱下[npc2.namePos]的T恤衫。]]></otherRough>
   </displacementText>
 	
   <replacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] T-shirt back down, covering [npc.her] torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] T-shirt back down, covering [npc2.her] torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] T-shirt back down, covering [npc2.her] torso.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的T恤衫向下拉，遮住了[npc.her]的上身。]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的T恤衫向下拉，盖住了[npc2.her]的上半身。]]></other>
+    <otherRough><![CDATA[[npc.Name]粗暴地把[npc2.namePos]的T恤衫向下拉，遮住了[npc2.her]的上身。]]></otherRough>
   </replacementText>
 
   <displacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] T-shirt up to just below [npc.her] chin, fully exposing [npc.her] torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] T-shirt up to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] T-shirt up to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
-    </otherRough>
+    <self><![CDATA[
+     [npc.Name]把身上的T恤衫向上拽，一直拽到脖颈处，令上半身完全暴露在外。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把[npc2.namePos]的T恤衫向上拽，一直拽到脖颈处，令[npc2.her]的上半身完全暴露在外。
+    ]]></other>
+    <otherRough><![CDATA[
+     [npc.Name]粗暴地将[npc2.namePos]的T恤衫向上拽，一直拽到脖颈处，令[npc2.her]的上半身完全暴露在外。
+    ]]></otherRough>
   </displacementText>
   
 </clothing>

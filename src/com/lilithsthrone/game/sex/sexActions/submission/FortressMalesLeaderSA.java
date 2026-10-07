@@ -81,12 +81,12 @@ public class FortressMalesLeaderSA {
 		
 		@Override
 		public String getActionTitle() {
-			return "Round two";
+			return "第二轮";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Tell [npc2.name] that you aren't finished yet!";
+			return "跟[npc2.name]说你还没爽够呢！";
 		}
 
 		@Override
@@ -106,15 +106,15 @@ public class FortressMalesLeaderSA {
 
 		@Override
 		public String getDescription() {
-			return "Grabbing [npc2.namePos] [npc2.hips+], [npc.name] thrusts forwards and sinks [npc.her] [npc.cock+] deep into [npc2.her] cum-stuffed cunt."
-					+ " Letting out a deep groan as [npc.she] feels [npc2.namePos] [npc2.labia+] bump against the base of [npc.her] cock, [npc.she] growls,"
-					+ " [npc.speechNoEffects(Let's give you a double stuffing! I want to be sure I'm going to knock you up!)]</br>"
-					+ "Keeping [npc.her] [npc.cock+] hilted in [npc2.namePos] [npc2.pussy], [npc.name] produces a small bottle filled with a light blue liquid."
-					+ " Pulling out the stopper with [npc.her] teeth, [npc.she] quickly downs the potion, before throwing the now-empty vial to one side.</br>"
-					+ "Pulling [npc.her] [npc.hips] back, [npc.name] then starts to rhythmically fuck [npc2.name] once more,"
-						+ " with each of [npc.her] thrusts being accompanied by a lewd squelching sound as the cum filling [npc2.namePos] pussy drools out around [npc.her] thick shaft.</br>"
-					+ "[npc2.Name] soon [npc2.verb(realise)] what the potion [npc.name] just drank was for, as each time the [npc.race]'s balls slap against [npc2.her] [npc2.assSkin], they feel noticeably heavier and heavier."
-					+ " To confirm [npc2.her] suspicions, [npc.name] grunts, [npc.speech(Fuck, my balls feel so full again! Your womb's going to be pumped full of my seed!)]";
+			return "[npc.Name]抓着[npc2.namePos][npc2.hips+]向前挺身，将[npc.her][npc.cock+]深深插入[npc2.her]充满精液的阴道。"
+					+ "[npc.she]感觉到[npc2.namePos][npc2.labia+]撞击[npc.her]鸡巴根部，[npc.she]发出深深的呻吟，低吼着，"
+					+ "[npc.speechNoEffects(让我再给你灌一次！必须搞大你的肚子！)]</br>"
+					+ "[npc.Name]将[npc.cock+]插入[npc2.namePos]的[npc2.pussy]中，拿出一个装满淡蓝色液体的小瓶子。"
+					+ "[npc.she]用牙齿拔出瓶塞，迅速喝下药水，然后把空瓶扔到一边。</br>"
+					+ "[npc.Name]将[npc.hips]后撤，再次有节奏地操起[npc2.name]，"
+						+ "[npc.her]每一次插入都伴随着淫荡的挤压声，充满[npc2.namePos]小穴的精液在[npc.her]粗大的阴茎周围流出。</br>"
+					+ "[npc2.name]很快就意识到刚才[npc.Name]喝下的药水是做什么用的了，因为每次[npc.race]的蛋蛋拍打[npc2.her][npc2.assSkin]时，都会明显感觉越来越重。"
+					+ "为了证实[npc2.her]猜测，[npc.name]咕哝了一声，[npc.speech(操，我的蛋蛋又涨满了！你的子宫会被我的种子填满的！)]";
 		}
 
 		@Override
@@ -133,12 +133,12 @@ public class FortressMalesLeaderSA {
 		
 		@Override
 		public String getActionTitle() {
-			return "Round two (switch)";
+			return "第二轮(换位)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return UtilText.parse(getOtherTarget(), "Switch to fucking [npc.name].");
+			return UtilText.parse(getOtherTarget(), "选择操[npc.name]。");
 		}
 
 		@Override
@@ -159,18 +159,18 @@ public class FortressMalesLeaderSA {
 		@Override
 		public String getDescription() {
 			return UtilText.parse(Util.newArrayListOfValues(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), getOtherTarget()),
-					"Grabbing [npc2.namePos] [npc2.hips+], [npc.name] pulls back and slides [npc.her] [npc.cock+] out of [npc2.her] cum-stuffed cunt."
+					"[npc.Name]抓住[npc2.namePos][npc2.hips+]，向后一拉，把[npc.cock+]从[npc2.her]塞满精液的小穴里滑了出来。"
 					+(getOtherTarget().isAbleToAccessCoverableArea(CoverableArea.VAGINA, false)
-							?" Shuffling to one side, [npc.she] then quickly removes the clothing blocking [npc3.namePos] [npc3.pussy], before starting to rub the head of [npc.her] cock up and down between [npc3.her] [npc3.labia+]."
-							:" Shuffling to one side, [npc.she] then quickly lines [npc.her] [npc.cock+] up to [npc3.namePos] [npc3.pussy], before starting to rub the head up and down between [npc3.her] [npc3.labia+].")
-					+" Suddenly thrusting [npc.her] [npc.hips] forwards, [npc.she] sinks [npc.her] [npc.cock+] deep into [npc3.namePos] [npc2.pussy+], letting out a deep growl as [npc.she] penetrates [npc3.herHim],"
-					+ " [npc.speechNoEffects(Don't think I forgot about you!)]</br></br>"
-					+ "Keeping [npc.her] [npc.cock+] hilted in [npc3.namePos] [npc3.pussy], [npc.name] then produces a small bottle filled with a light blue liquid."
-					+ " Pulling out the stopper with [npc.her] teeth, [npc.she] quickly downs the potion, before throwing the now-empty vial to one side.</br></br>"
-					+ "Pulling [npc.her] [npc.hips] back, [npc.name] then starts to rhythmically fuck [npc3.name],"
-						+ " with each of [npc.her] thrusts easily sliding in and out, thanks to the cum and juices from [npc2.namePos] pussy lubricating [npc.her] thick shaft.</br>"
-					+ "[npc3.Name] soon [npc3.verb(realise)] what the potion [npc.name] just drank was for, as each time the [npc.race]'s balls slap against [npc3.her] [npc3.assSkin], they feel noticeably heavier and heavier."
-					+ " To confirm [npc3.her] suspicions, [npc.name] grunts, [npc.speech(Fuck, my balls feel so full again! Your womb's going to be pumped full of my seed!)]");
+							?"然后，[npc.she]迅速脱掉挡住[npc3.namePos][npc3.pussy]的衣服，开始在[npc3.her][npc3.labia+]之间上下摩擦她的龟头。"
+							:"然后，[npc.she]迅速将[npc.cock+]对准[npc3.namePos]的[npc3.pussy]，将龟头在[npc3.her][npc3.labia+]之间上下摩擦。")
+					+"[npc.she]突然向前挺动[npc.her][npc.hips]，将阴茎深深插入[npc3.namePos][npc2.pussy+]中，在插入[npc3.herHim]时发出低沉的咆哮声，"
+					+ "[npc.speechNoEffects(别以为我原谅你了！)]</br></br>"
+					+ "[npc.Name]将阴茎插入[npc3.namePos][npc3.pussy]，然后拿出一个装满淡蓝色液体的小瓶子。"
+					+ "[npc.she]用[npc.her]牙齿拔出瓶塞，迅速喝下药水，然后把空瓶扔到一边。</br></br>"
+					+ "[npc.Name]将[npc.hips]后撤，再次有节奏地操起[npc3.name]，"
+						+ "由于[npc2.namePos]小穴里的精液和汁液润滑了[npc.her]粗大的阴茎，[npc.her]每次都能轻松地顶进抽出。</br>"
+					+ "[npc3.name]很快就意识到刚才[npc.Name]喝下的药水是做什么用的了，因为每次[npc.race]的蛋蛋拍打[npc3.her][npc3.assSkin]时，都会明显感觉越来越重。"
+					+ "为了证实她的猜测，[npc.name]咕哝了一声[npc.speech(操，我的蛋蛋又涨满了！你的子宫会被我的种子填满的！)]");
 		}
 		
 		@Override
@@ -218,12 +218,12 @@ public class FortressMalesLeaderSA {
 		
 		@Override
 		public String getActionTitle() {
-			return "Round two";
+			return "第二轮";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Tell [npc2.name] that you aren't finished yet!";
+			return "跟[npc2.name]说你还没爽够呢！";
 		}
 
 		@Override
@@ -243,15 +243,15 @@ public class FortressMalesLeaderSA {
 
 		@Override
 		public String getDescription() {
-			return "Grabbing [npc2.namePos] [npc2.hips+], [npc.name] lines [npc.her] [npc.cock+] up to [npc2.her] [npc2.pussy+], before thrusting forwards and sinking [npc.her] [npc.cock+] deep into [npc2.her] cum-stuffed cunt."
-					+ " Letting out a deep groan as [npc.she] feels [npc2.namePos] [npc2.labia+] bump against the base of [npc.her] cock, [npc.she] growls,"
-					+ " [npc.speechNoEffects(Let's give you a double stuffing! I want to be sure I'm going to knock you up!)]</br>"
-					+ "Keeping [npc.her] [npc.cock+] hilted in [npc2.namePos] [npc2.pussy], [npc.name] produces a small bottle filled with a light blue liquid."
-					+ " Pulling out the stopper with [npc.her] teeth, [npc.she] quickly downs the potion, before throwing the now-empty vial to one side.</br>"
-					+ "Pulling [npc.her] [npc.hips] back, [npc.name] then starts to rhythmically fuck [npc2.name] once more,"
-						+ " with each of [npc.her] thrusts being accompanied by a lewd squelching sound as the cum filling [npc2.namePos] pussy drools out around [npc.her] thick shaft.</br>"
-					+ "[npc2.Name] soon [npc2.verb(realise)] what the potion [npc.name] just drank was for, as each time the [npc.race]'s balls slap against [npc2.her] [npc2.assSkin], they feel noticeably heavier and heavier."
-					+ " To confirm [npc2.her] suspicions, [npc.name] grunts, [npc.speech(Fuck, my balls feel so full again! Your womb's going to be pumped full of my seed!)]";
+			return "[npc.name]抓住[npc2.namePos][npc2.hips+]，将[npc.cock+]顶到[npc2.her][npc2.pussy+]上，然后向前一挺，将[npc.cock+]深深插入[npc2.her]塞满精液的小穴。"
+					+ "[npc.she]感觉到[npc2.namePos][npc2.labia+]撞击[npc.her]鸡巴根部，[npc.she]发出深深的呻吟，低吼着，"
+					+ "[npc.speechNoEffects(让我再灌满你一次！我要确保你真的怀孕了！)]</br>"
+					+ "[npc.Name]将[npc.cock+]插入[npc2.namePos]的[npc2.pussy]中，拿出一个装满淡蓝色液体的小瓶子。"
+					+ "[npc.she]用牙齿拔出瓶塞，迅速喝下药水，然后把空瓶扔到一边。</br>"
+					+ "[npc.Name]将[npc.her][npc.臀部]后撤，然后开始再次有节奏地操[npc2.name]，"
+						+ "[npc.her]每一次插入都伴随着淫荡的挤压声，充满[npc2.namePos]小穴的精液在[npc.her]粗大的阴茎周围流出。</br>"
+					+ "[npc2.name]很快就意识到刚才[npc.Name]喝下的药水是做什么用的了，因为每次[npc.race]的蛋蛋拍打[npc2.her][npc2.assSkin]时，都会明显感觉越来越重。"
+					+ "为了证实[npc2.her]的猜测，[npc.name]咕哝了一声，[npc.speech(操，我的蛋蛋又涨满了！你的子宫会被我的种子填满的！)]";
 		}
 
 		@Override
@@ -270,12 +270,12 @@ public class FortressMalesLeaderSA {
 		
 		@Override
 		public String getActionTitle() {
-			return "Round two (switch)";
+			return "第二轮(换位)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return UtilText.parse(getOtherTarget(), "Switch to fucking [npc.name].");
+			return UtilText.parse(getOtherTarget(), "选择操[npc.name]。");
 		}
 
 		@Override
@@ -297,16 +297,16 @@ public class FortressMalesLeaderSA {
 		public String getDescription() {
 			return UtilText.parse(Util.newArrayListOfValues(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), getOtherTarget()),
 					(getOtherTarget().isAbleToAccessCoverableArea(CoverableArea.VAGINA, false)
-							?" Shuffling to one side, [npc.she] quickly removes the clothing blocking [npc3.namePos] [npc3.pussy], before starting to rub the head of [npc.her] cock up and down between [npc3.her] [npc3.labia+]."
-							:" Shuffling to one side, [npc.she] quickly lines [npc.her] [npc.cock+] up to [npc3.namePos] [npc3.pussy], before starting to rub the head up and down between [npc3.her] [npc3.labia+].")
-					+" Suddenly thrusting [npc.her] [npc.hips] forwards, [npc.she] sinks [npc.her] [npc.cock+] deep into [npc3.namePos] [npc2.pussy+], letting out a deep growl as [npc.she] penetrates [npc3.herHim],"
-					+ " [npc.speechNoEffects(Don't think I forgot about you!)]</br></br>"
-					+ "Keeping [npc.her] [npc.cock+] hilted in [npc3.namePos] [npc3.pussy], [npc.name] then produces a small bottle filled with a light blue liquid."
-					+ " Pulling out the stopper with [npc.her] teeth, [npc.she] quickly downs the potion, before throwing the now-empty vial to one side.</br></br>"
-					+ "Pulling [npc.her] [npc.hips] back, [npc.name] then starts to rhythmically fuck [npc3.name],"
-						+ " with each of [npc.her] thrusts easily sliding in and out of [npc3.her] [npc3.pussy+], thanks to the cum and juices from [npc2.namePos] pussy lubricating [npc.her] thick shaft.</br>"
-					+ "[npc3.Name] soon [npc3.verb(realise)] what the potion [npc.name] just drank was for, as each time the [npc.race]'s balls slap against [npc3.her] [npc3.assSkin], they feel noticeably heavier and heavier."
-					+ " To confirm [npc3.her] suspicions, [npc.name] grunts, [npc.speech(Fuck, my balls feel so full again! Your womb's going to be pumped full of my seed!)]");
+							?" 然后，[npc.she]快速移除[npc3.namePos][npc3.pussy]上碍事的衣物，开始在[npc3.her][npc3.labia+]上上下蹭动[npc.her]的龟头。"
+							:"接着，[npc.she]迅速将[npc.her][npc.cock+]对准[npc3.namePos][npc3.pussy]，用龟头在[npc3.her][npc3.labia+]间上下蹭动。")
+					+"[npc.she]突然向前挺动[npc.hips]，将阴茎深深插入[npc3.namePos][npc2.pussy+]中，在插入[npc3.herHim]时发出低沉的咆哮声，"
+					+ "[npc.speechNoEffects(不要以为我原谅你了！)]</br></br>"
+					+ "[npc.Name]将[npc.cock+]插入[npc3.namePos]的[npc3.pussy]，然后拿出一个装满淡蓝色液体的小瓶子。"
+					+ "[npc.she]用牙齿拔出瓶塞，迅速喝下药水，然后把空瓶扔到一边。</br></br>"
+					+ "[npc.Name]将[npc.hips]后撤，再次有节奏地操起[npc3.name]，"
+						+ "[npc.her]每次用力，都能轻松地在[npc3.her][npc3.pussy+]中抽插，多亏了[npc2.namePos]小穴溢出的爱液，润滑了[npc.her]粗大的鸡巴。</br>"
+					+ "[npc3.name]很快就意识到刚才[npc.Name]喝下的药水是做什么用的了，因为每次[npc.race]的蛋蛋拍打[npc3.her][npc3.assSkin]时，都会明显感觉越来越重。"
+					+ "为了证实她的猜测，[npc.name]咕哝了一声[npc.speech(操，我的蛋蛋又涨满了！你的子宫会被我的种子填满的！)]");
 		}
 		
 		@Override

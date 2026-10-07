@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small tag sewn into the side seam reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[侧缝上有个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>1500</value> 
 
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[waistcoat]]></name>
+		<name><![CDATA[马甲]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[waistcoats]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[马甲]]></namePlural> 
 
-		<description><![CDATA[A waistcoat with two pockets that serves as the regulation alternative for Enforcers whose arms cannot fit into the regular dress uniform coat.]]></description> 
+		<description><![CDATA[一件有两个口袋的背心，可作为手臂无法套进常规制服外套的执法者的规定替代品。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -35,8 +34,8 @@
 			<category id="tab" priority="1"> 
 				<categoryName><![CDATA[Collar Tabs]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[None]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix>
+					<stickerName><![CDATA[无]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
 					<imageName/>
@@ -46,10 +45,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="tab_pc" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 
-					<stickerName><![CDATA[Police Constable]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer Constable ]]></namePrefix> 
+					<stickerName><![CDATA[警局警员]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者警员]]></namePrefix> 
 					<namePostfix/> 
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the insignia of a Police Constable attached to it.</i>]]></descriptionModification> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有警局警员的徽章。</i>]]></descriptionModification> 
 					<imageName>enfdwaistcoat_st_tab_pc.svg</imageName> 
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -69,10 +68,10 @@
 					</availabilityText> 
 				</sticker>
 				<sticker id="tab_sg" priority="2" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 
-					<stickerName><![CDATA[Sergeant]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer Sergeant ]]></namePrefix>
+					<stickerName><![CDATA[警长]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者警长]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the insignia of a Sergeant attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有警长的徽章。</i>]]></descriptionModification>
 					<imageName>enfdwaistcoat_st_tab_sg.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -92,10 +91,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_ip" priority="3" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Inspector]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer Inspector ]]></namePrefix>
+					<stickerName><![CDATA[督察]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者督察]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the insignia of an Inspector attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有督察的徽章。</i>]]></descriptionModification>
 					<imageName>enfdwaistcoat_st_tab_ip.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -115,10 +114,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_su" priority="4" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Superintendent]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer Superintendent ]]></namePrefix>
+					<stickerName><![CDATA[警司]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者警司]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the insignia of a Superintendent attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有警司的徽章。</i>]]></descriptionModification>
 					<imageName>enfdwaistcoat_st_tab_su.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -136,10 +135,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="tab_cs" priority="5" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Chief Superintendent]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer Chief Superintendent ]]></namePrefix>
+					<stickerName><![CDATA[总警司]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者总警司]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the insignia of a Chief Superintendent attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>上面有总警司的徽章。</i>]]></descriptionModification>
 					<imageName>enfdwaistcoat_st_tab_cs.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -160,7 +159,7 @@
 			<category id="name" priority="2"> 
 				<categoryName><![CDATA[Name Plate]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="2" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -171,7 +170,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="name_pc" priority="2" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Police Constable]]></stickerName>
+					<stickerName><![CDATA[警局警员]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -190,7 +189,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_sg" priority="2" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Sergeant]]></stickerName>
+					<stickerName><![CDATA[警长]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -209,7 +208,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_ip" priority="3" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Inspector]]></stickerName>
+					<stickerName><![CDATA[督察]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -228,7 +227,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_su" priority="4" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Superintendent]]></stickerName>
+					<stickerName><![CDATA[警司]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -245,7 +244,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="name_cs" priority="5" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE">
-					<stickerName><![CDATA[Chief Superintendent]]></stickerName>
+					<stickerName><![CDATA[总警司]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -358,51 +357,40 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] [npc.her] arms through the waistcoat's arm holes and [npc.verb(button)] up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] [npc2.verb(put)] [npc2.her] arms through the waistcoat's arm holes and [npc.verb(button)] up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] arms through the waistcoat's arm holes and hastily [npc.verb(button)] up the front.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的手臂伸进马甲的开口并扣上前面的扣子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]帮[npc2.name]将[npc2.her]的胳膊伸进马甲的开口并扣好扣子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]迫使[npc2.namePos]的手臂穿过马甲的开口并匆忙的扣好扣子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc.her] waistcoat and [npc.verb(pull)] [npc.her] arms out of the arm holes.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc2.namePos] waistcoat and [npc.verb(help)] [npc2.her] [npc2.verb(pull)] [npc2.her] arms out of the arm holes.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on the front of [npc2.namePos] waistcoat and roughly [npc.verb(pull)] [npc2.her] arms out of the arm holes.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]马甲的扣子并将[npc.her]的胳膊从开口里抽了出来。]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]马甲前部的扣子，帮[npc2.her]将[npc2.her]的手臂从开口中抽出。]]></other>
+		<otherRough><![CDATA[
+[npc2.Name]拽开[npc2.namePos]马甲正面的纽扣，粗暴地将[npc2.her]的手臂从开口中拽出。]]></otherRough>
 	</displacementText>
 
 	<replacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc.namePos] waistcoat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc2.namePos] waistcoat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(button)] up the front of [npc2.namePos] waistcoat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]扣上[npc.namePos]马甲正面的扣子。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]前面的扣子扣了起来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙扣上[npc2.namePos]马甲的正面的扣子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] waistcoat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.namePos] waistcoat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on [npc2.namePos] waistcoat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的马甲。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的马甲。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]崩开了[npc2.namePos]马甲上的扣子。]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Benevolent Blessing]]></name>
+	<name><![CDATA[善心祝福]]></name>
 	<statusEffect>c4mg1rl_benevolent_set</statusEffect>
 	<numberRequiredForCompleteSet>2</numberRequiredForCompleteSet>
 	<blockedSlotsCountingTowardsFullSet>

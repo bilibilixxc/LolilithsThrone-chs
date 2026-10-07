@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<htmlContent tag="SHEEP_BASIC"><![CDATA[
 	<p>
-		Although tending to shun Dominion itself, sheep-morphs are very commonly found working on farms in the Foloi Fields. A woolly body, with the possibility of having curled horns, is usually enough to identify someone as a sheep-morph.
+		尽管绵羊化形倾向于避开御城区，他们也普遍在弗洛伊田野的农场工作。长着羊毛的身体，可能还有卷曲的角，通常就足以让人认出他是绵羊化形。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SHEEP_ADVANCED"><![CDATA[
 	<p>
-		Just like most common races, the personality of sheep-morphs varies wildly from individual to individual. That being said, they do have a tendency for being quite cowardly, and will often flee from physical conflict instead of trying to fight. They also have an instinct to form flocks, which leads to a lot of sheep-morphs being quite kind and friendly to one another.
+		就像大多数普通种族一样，绵羊化形的性格也因人而异。尽管如此，他们也确实相当胆小，经常会在发生肢体冲突时逃跑而非战斗。它们也有结成羊群的本能，这导致很多绵羊化形都非常善良，彼此友好。
 	</p>
 	<p>
-		Along with cow, horse, and goat-morphs, sheep-morphs form the core of the workforce in most of the farms found scattered throughout the Foloi Fields. As well as being able to provide physical labour, sheep-morphs are able to make some extra money by selling their wool to the farm. Due to the care which is taken in its maintenance and grooming, a sheep-morph's wool is of much higher quality, and therefore a lot more valuable, than a regular sheep's.
+		绵羊化形与牛、马和山羊化形构成了散布在弗洛伊田野的大多数农场的核心劳动力。除了提供体力劳动外，绵羊化形还能通过向农场出售羊毛赚取外快。由于绵羊化形在保养和梳理方面非常细心，它们的羊毛质量要比普通绵羊高得多，因此也更有价值。
 	</p>
 	<p>
-		Sheep-morphs, like the other common races, get heavily affected by arcane storms. Being exposed to arcane thunder will make sheep-boys seek out a partner to mate with, while sheep-girls will go into heat.
+		绵羊化形和其他普通种族一样，会受到奥术风暴的严重影响。暴露于奥术雷鸣下，绵羊男会寻找伴侣交配，而绵羊女则会发情。
 	</p>
 	<p>
-		A sheep-morph's offspring will be a mixture of sheep-morphs and offspring of their partner's race.
+		绵羊化形的后代将是绵羊化形和其伴侣种族后代的混合体。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

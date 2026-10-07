@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>30</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Bunny Juice]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Bunny Juices]]></namePlural>
-		<description><![CDATA[A small plastic bottle of what appears to be some sort of carrot juice, labelled as 'Bunny Juice'.  On the label, there's a rather obscene image of a rabbit-girl stuffing a carrot-shaped dildo into her pussy.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[兔兔果汁]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[兔兔果汁]]></namePlural>
+		<description><![CDATA[一个小塑料瓶，里面装的似乎是某种胡萝卜汁，标签上写着“兔兔果汁”。标签上有一张相当淫秽的图片，一个兔子女正把一根胡萝卜形状的假阳具塞进自己的小穴里。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,14 +28,14 @@
 		<enchantmentEffectId>ATTRIBUTE_SEXUAL</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[#ATTRIBUTE_FERTILITY.getFormattedValue(5)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_VIRILITY.getFormattedValue(5)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_LUST.getFormattedValue(-10)] to 'potion effects']]></line>
+			<line><![CDATA[[#ATTRIBUTE_FERTILITY.getFormattedValue(5)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_VIRILITY.getFormattedValue(5)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_LUST.getFormattedValue(-10)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A warm wave of arcane energy washes over [npc.name]...
+				一股温暖的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_FERTILITY, 5)]
 			[#npc.addPotionEffect(ATTRIBUTE_VIRILITY, 5)]
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the Bunny Juice's cap and [npc.verb(start)] drinking the liquid contained within. An intense taste of carrots instantly fills [npc.her] mouth, and after greedily gulping down the entire beverage, [npc.she] [npc.verb(discover)] that it has an unusually sweet aftertaste.
+		[npc.Name]拧开兔兔果汁的瓶盖，然后开始喝其中的液体。瞬间强烈的胡萝卜味弥漫在[npc.her]的口中，而在贪婪地一口气喝下整瓶饮料后，[npc.she]意识到它有着异常甜美的余味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the Bunny Juice's cap and [npc.verb(get)] [npc2.name] to drink the liquid contained within. An intense taste of carrots instantly fills [npc2.her] mouth, and after greedily gulping down the entire beverage, [npc2.she] [npc2.verb(discover)] that it has an unusually sweet aftertaste.
+		[npc.Name]拧开兔兔果汁的瓶盖，然后让[npc2.name]喝其中的液体。瞬间强烈的胡萝卜味弥漫在[npc2.her]的口中，而在贪婪地一口气喝下整瓶饮料后，[npc2.she]意识到它有着异常甜美的余味。
 		]]></otherUse>
 	</useDescriptions>
 

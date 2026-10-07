@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
 	
 	<name><![CDATA[
-		Empty Lot
+		空地
 	]]></name>
 
 	<tooltipDescription><![CDATA[
-		An empty space that has yet to find a new tenant.
+		一个还没有新租户的空地。
 	]]></tooltipDescription>
 	
-	<virginityLossDescription><![CDATA[in the Farmer's Market in Elis]]></virginityLossDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	
 	<sexBlockedFromCharacterPresent>false</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>

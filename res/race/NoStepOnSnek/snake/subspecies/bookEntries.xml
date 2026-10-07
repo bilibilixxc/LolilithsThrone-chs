@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<htmlContent tag="SNAKE_BASIC"><![CDATA[
 	<p>
-		Snake-morphs can be found in all but the coldest regions of the realm, from the southern desert to the jungles in the north and all across the wide fields around Dominion.
+		蛇化型除了寒冷的地区以外遍布整个王国，无论是南部的沙漠还是北部的丛林，又或是御城区周围的广阔荒野。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SNAKE_ADVANCED"><![CDATA[
 	<p>
-		While the individual personalities of snake-morphs vary greatly from one individual to another, they have a reputation for being quite clingy. This is most likely due to the fact that their anatomy is a bizarre mix between cold and warm-blooded, and so just like their feral counterparts, they enjoy cuddling up to the hot bodies of others.
+		虽然蛇化形的个性因人而异，但他们却以非常粘人而著称。这很可能因为它们的解剖结构是冷血和温血的奇异混合体，就像它们的野外同类一样，它们喜欢依偎在别人火热的身体上。
 	</p>
 	<p>
-		While the common term 'snake-morph' refers to bipedal variants of this race, they are very much a small minority of the total snake population, as the vast majority of this race are found in the form of lamia. Slithering around on their long, snake-like lower bodies, this common subspecies is not well adapted to city or town life, and so are most regularly seen out in the countryside. A lamia which also has wings is referred to as a 'melusine'.
+		虽然“蛇化形”这一俗称指的是这一种族的双足变体，但它们在整个蛇类种群中只是极少数，这一种族的绝大多数都是以拉米亚形态出现。这种常见亚种依靠蛇一样长的下半身四处滑行，不太能适应城市或城镇生活，经常出现在郊外。长有翅膀的拉米亚被称为“美露莘”。
 	</p>
 	<p>
-		Like most other races, snake-morphs get affected by arcane storms. Being exposed to arcane thunder will make snake-boys seek out a partner to mate with, while snake-girls will go into heat.
+		与大多数其他种族一样，蛇化形也会受到奥术风暴的影响。受到奥术雷霆的影响，蛇男会寻找伴侣交配，而蛇女则会发情。
 	</p>
 	<p>
-		A snake-morph's offspring will be a mixture of snake-morphs and offspring of their partner's race.
+		蛇化形的后代将是蛇化形和其伴侣种族后代的混合体。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

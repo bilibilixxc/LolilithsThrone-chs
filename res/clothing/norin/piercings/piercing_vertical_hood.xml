@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Small engraved lettering informs you that this piercing was made by 'Norin'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
 		<value>300</value> <!--10 flames = £1 ~ $1.5-->
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[vertical hood piercing]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[vertical hood piercings]]></namePlural>
-		<description><![CDATA[A metal vertical hood piercing with a gem on each end.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[垂直阴蒂钉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[垂直阴蒂钉]]></namePlural>
+		<description><![CDATA[一个金属垂直阴蒂钉，两端各有一颗宝石。]]></description>
 		
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -52,26 +51,26 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the vertical hood piercing into [npc.her] vaginal piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the vertical hood piercing into [npc2.namePos] vaginal piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(slide)] the vertical hood piercing into [npc2.namePos] vaginal piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把垂直阴蒂钉戴在[npc.her]的阴蒂穿孔。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把垂直阴蒂钉戴在[npc2.namePos]的阴蒂穿孔。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把垂直阴蒂钉戴在[npc2.namePos]的阴蒂穿孔。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] vertical hood piercing out of [npc.her] vaginal piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] vertical hood piercing out of [npc2.her] vaginal piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] vertical hood piercing out of [npc2.her] vaginal piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把[npc.her]的垂直阴蒂钉从[npc.her]的阴蒂穿孔中取下。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把[npc2.namePos]的垂直阴蒂钉从[npc2.her]的阴蒂穿孔中取下。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的垂直阴蒂钉从[npc2.her]的阴蒂穿孔中取下。
+]]></otherRough>
 	</displacementText>
 </clothing>

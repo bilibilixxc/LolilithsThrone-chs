@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[locked door]]></name>
-	<tooltipDescription><![CDATA[A locked, staff-only door leads into the parts of town hall which aren't open to the public.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside the locked door in Elis's town hall]]></virginityLossDescription>
+	<name><![CDATA[锁住的门]]></name>
+	<tooltipDescription><![CDATA[一扇上锁的工作人员专用门，通向市政厅不对公众开放的部分。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[伊利斯市政厅锁住的门旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

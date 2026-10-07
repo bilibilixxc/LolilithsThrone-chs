@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 	
 	<!-- Place type id: innoxia_fields_elis_town_hall_f0_corridor -->
@@ -22,8 +22,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit the town hall and head back out into the streets of Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[走出市镇议会，回到伊利斯的街道上。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_street"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -47,9 +47,9 @@
 				<availabilityConditional><![CDATA[[#game.isHourBetween(7, 21)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Minotallys]]></responseTitle>
+				<responseTitle><![CDATA[米诺塔莉丝]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Approach the information desk and ask one of the receptionists about Minotallys.
+					前往问讯处，向接待员询问有关米诺塔莉丝的情况。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_town_hall_f0_info_minotallys]]></nextDialogue>
 			</response>
@@ -66,9 +66,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Minotallys]]></responseTitle>
+				<responseTitle><![CDATA[米诺塔莉丝]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You are already asking one of the receptionists about Minotallys!
+					你已经问过接待员关于米诺塔莉丝了！
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
@@ -107,16 +107,16 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_elis_minotallys_introduced)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Upstairs]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have permission to go upstairs...]]></responseTooltip>
+				<responseTitle><![CDATA[上楼]]></responseTitle>
+				<responseTooltip><![CDATA[你没有许可上楼……]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_minotallys_introduced)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Upstairs]]></responseTitle>
-				<responseTooltip><![CDATA[Head up the staircase into the town hall's tower.]]></responseTooltip>
+				<responseTitle><![CDATA[上楼]]></responseTitle>
+				<responseTooltip><![CDATA[沿着楼梯进入市政厅的塔楼。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_hall_f1_stairs"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -148,10 +148,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Knock]]></responseTitle>
+				<responseTitle><![CDATA[敲门]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Knock on the door and wait for an answer.
-					<br/>[style.italicsMinorBad(This will be added soon!)]
+					敲门等待回应。
+					<br/>[style.italicsMinorBad(不久后会添加！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>

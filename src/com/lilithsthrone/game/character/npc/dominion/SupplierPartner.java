@@ -63,8 +63,8 @@ public class SupplierPartner extends NPC {
 	}
 	
 	public SupplierPartner(boolean isImported) {
-		super(isImported, new NameTriplet("Karl", "Karl", "Karla"), "Hummel",
-				"Karl is the junior partner of the dobermann bounty-hunter duo which you first met at Kay's Textiles.",
+		super(isImported, new NameTriplet("卡尔", "卡尔", "卡拉"), "胡梅尔",
+				"卡尔是杜宾赏金猎人二人里的小弟，你们的第一次碰面是在凯记纺织里。",
 				28, Month.AUGUST, 8,
 				10,
 				null, null, null,
@@ -99,7 +99,7 @@ public class SupplierPartner extends NPC {
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.14")) {
 			this.setStartingBody(true);
 		}
-		this.setDescription("Karl is the junior partner of the dobermann bounty-hunter duo which you first met at Kay's Textiles.");
+		this.setDescription("卡尔是杜宾赏金猎人二人组里的小弟，你们的第一次碰面是在凯记纺织里。");
 	}
 
 	@Override

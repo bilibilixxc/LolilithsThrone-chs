@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>100</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[beer barrel]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[beer barrels]]></namePlural> 
-		<description><![CDATA[A very large wooden barrel, which is being used to hold a beer bitch behind the bar in tavern, 'The Crossed Blades'. Thanks to cutouts in the front and back, the occupant's tits and rear end are left completely exposed.]]></description> 
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[啤酒桶]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[啤酒桶]]></namePlural> 
+		<description><![CDATA[一个很大的木桶，摆放在“十字利刃”酒馆吧台后，装着一个“奶啤妓”。靠着前后的开口，里面的人的奶子和后半身都完全暴露在外。]]></description> 
 		<physicalResistance>50</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity> 
 		<slot>TORSO_OVER</slot> 
@@ -111,25 +110,25 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(climb)] into the beer barrel.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(push)] [npc2.name] into the beer barrel.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(push)] [npc2.name] into the beer barrel.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]爬进啤酒桶里。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.name]推进啤酒桶里。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将[npc2.name]推进啤酒桶里。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(climb)] out of the beer barrel.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.name] out of the beer barrel.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.name] out of the beer barrel.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]爬出啤酒桶。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.name]拉出啤酒桶。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.name]从啤酒桶里拽出来。
+]]></otherRough>
 	</displacementText>
 </clothing>

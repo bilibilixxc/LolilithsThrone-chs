@@ -78,11 +78,11 @@ public class FileController {
 				}
 			}, false);
 			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-					"Add custom artwork",
-					"Browse your own images and add them to the character."
-							+" Please note that GIF animation files are limited to a <b>maximum of 10MB</b> in size, and if over 1MB, <b>may</b> cause [style.italicsBad(significant lag)], depending on your system."
-							+ "<br/>Custom images for the currently played game are located in folder: <b>'data/images/"+Main.game.getId()+"'</b>"
-							+ "<br/>This character's ID is <b>'"+character.getId()+"'</b>",
+					"添加自定义图像",
+					"浏览你拥有的图像，并添加给该角色。"
+							+"请注意GIF动图<b>最大限制在10MB以内</b>，一旦大于1MB，则根据系统不同，<b>可能</b>造成[style.italicsBad(严重卡顿)]。"
+							+ "<br/>当前游戏的自定义图像位于文件夹:<b>'data/images/"+Main.game.getId()+"'</b>内"
+							+ "<br/>该角色的ID为<b>'"+character.getId()+"'</b>",
 					130));
 		}
 		
@@ -100,15 +100,15 @@ public class FileController {
 					
 					String description;
 					if (artwork.getArtist().getName().equals("Custom")) {
-						description = "You added this yourself.";
+						description = "由你自行添加。";
 					} else if (artwork.getArtist().getWebsites().isEmpty()) {
-						description = "This artist has no associated websites!";
+						description = "该画师没有提供相关网站！";
 					} else {
-						description = "Click to open <b style='color:"+artwork.getArtist().getColour().toWebHexString()+";'>"+artwork.getArtist().getWebsites().get(0).getName()+"</b>"
-								+" ("+artwork.getArtist().getWebsites().get(0).getURL()+") <b>externally</b> in your default browser!";
+						description = "点击后打开<b style='color:"+artwork.getArtist().getColour().toWebHexString()+";'>"+artwork.getArtist().getWebsites().get(0).getName()+"</b>"
+								+"("+artwork.getArtist().getWebsites().get(0).getURL()+")通过你的默认<b>外部</b>浏览器！";
 					}
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"Artwork by <b style='color:"+artwork.getArtist().getColour().toWebHexString()+";'>"+artwork.getArtist().getName()+"</b>",
+							"<b style='color:"+artwork.getArtist().getColour().toWebHexString()+";'>"+artwork.getArtist().getName()+"</b>创作的图像",
 							description));
 				}
 				
@@ -170,9 +170,9 @@ public class FileController {
 						Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 					}, false);
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"Remove custom artwork",
-							"Removes the current image from this character."
-									+"<br/>[style.italicsBad(Please note that this will delete the image from the game's folder!)]"));
+							"移除自定义图像",
+							"移除该角色当前的图像。"
+									+"<br/>[style.italicsBad(请注意这将从游戏文件夹中删除该图像！)]"));
 				}
 			} catch (Exception ex) {
 				System.err.println("MainController Artwork handling error.");
@@ -196,19 +196,19 @@ public class FileController {
 						OptionsDialogue.overwriteConfirmationName = f.getName();
 						OptionsDialogue.loadConfirmationName = "";
 						OptionsDialogue.deleteConfirmationName = "";
-						Main.game.setContent(new Response("Save/Load", "Open the save/load game window.", OptionsDialogue.SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载游戏窗口", OptionsDialogue.SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Overwrite", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("覆盖", ""));
 			} else {
 				id = "OVERWRITE_"+fileIdentifier+"_DISABLED";
 				if (MainController.document.getElementById(id) != null) {
 					MainController.addEventListener(MainController.document, id, "mousemove", MainController.moveTooltipListener, false);
 					MainController.addEventListener(MainController.document, id, "mouseleave", MainController.hideTooltipListener, false);
-					TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation("Overwrite (Disabled)",
+					TooltipInformationEventListener el2 = new TooltipInformationEventListener().setInformation("覆盖(禁用)",
 							(!Main.game.isStarted()
-									?"You need to have started a game before you can overwrite a save!"
-									:"You cannot overwrite save files unless you are in a tile's default scene!"));
+									?"你需要先开始游戏才能覆盖存档！"
+									:"除非位于某地块的默认场景，否则无法覆盖存档文件！"));
 					MainController.addEventListener(MainController.document, id, "mouseenter", el2, false);
 				}
 			}
@@ -222,10 +222,10 @@ public class FileController {
 						OptionsDialogue.overwriteConfirmationName = "";
 						OptionsDialogue.loadConfirmationName = f.getName();
 						OptionsDialogue.deleteConfirmationName = "";
-						Main.game.setContent(new Response("Save/Load", "Open the save/load game window.", OptionsDialogue.SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载游戏窗口", OptionsDialogue.SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Load", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("加载", ""));
 			}
 			id = "DELETE_"+fileIdentifier;
 			if (MainController.document.getElementById(id) != null) {
@@ -238,11 +238,11 @@ public class FileController {
 						OptionsDialogue.overwriteConfirmationName = "";
 						OptionsDialogue.loadConfirmationName = "";
 						OptionsDialogue.deleteConfirmationName = f.getName();
-						Main.game.setContent(new Response("Save/Load", "Open the save/load game window.", OptionsDialogue.SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载游戏窗口", OptionsDialogue.SAVE_LOAD));
 					}
 					
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Delete", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("删除", ""));
 			}
 		}
 		id = "NEW_SAVE";
@@ -251,14 +251,14 @@ public class FileController {
 				Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('new_save_name').value;");
 				Main.saveGame(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false, false);
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Save", ""));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("保存", ""));
 		} else {
 			id = "NEW_SAVE_DISABLED";
 			if (MainController.document.getElementById(id) != null) {
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Save (Disabled)",
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("保存(禁用)",
 						(!Main.game.isStarted()
-								?"You need to have started a game before you can save!"
-								:"You cannot save the game unless you are in a tile's default scene!")));
+								?"你需要先开始游戏才能存档！"
+								:"除非位于某地块的默认场景，否则无法存档！")));
 			}
 		}
 	}
@@ -278,10 +278,10 @@ public class FileController {
 						OptionsDialogue.overwriteConfirmationName = "";
 						OptionsDialogue.loadConfirmationName = "";
 						OptionsDialogue.deleteConfirmationName = f.getName();
-						Main.game.setContent(new Response("Import/Export", "Open the Import/Export window.", OptionsDialogue.IMPORT_EXPORT));
+						Main.game.setContent(new Response("导入/导出", "打开导入/导出窗口。", OptionsDialogue.IMPORT_EXPORT));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Delete", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("删除", ""));
 			}
 		}
 		if (MainController.document.getElementById("NEW_SAVE") != null) {
@@ -312,9 +312,9 @@ public class FileController {
 					try {
 						Game.importCharacterAsSlave(fileName);
 						MainController.updateUI();
-						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Imported Character!");
+						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "角色已导入！");
 					} catch (Exception ex) {
-						Main.game.flashMessage(PresetColour.GENERIC_BAD, "Import Failed!");
+						Main.game.flashMessage(PresetColour.GENERIC_BAD, "导入失败！");
 					}
 				}, false);
 			}
@@ -331,12 +331,12 @@ public class FileController {
 						Main.game.setContent(new Response("", "", SlaverAlleyDialogue.AUCTION_BIDDING));
 					}, false);
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							UtilText.parse(npc, "Bid on [npc.name]"),
-							UtilText.parse(npc, "Start bidding on [npc.name]. There's a chance that the bidding might exceed [npc.her] value, so make sure you have enough money first!")));
+							UtilText.parse(npc, "给[npc.name]竞价"),
+							UtilText.parse(npc, "开始给[npc.name]竞价。有可能竞价会超过[npc.her]的价值，所以请先准备好足够的钱！")));
 				} else {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							UtilText.parse(npc, "Bid on [npc.name]"),
-							UtilText.parse(npc, "You don't have a slaver license, so you're unable to big on any slaves!")));
+							UtilText.parse(npc, "给[npc.name]竞价"),
+							UtilText.parse(npc, "你没有贩奴许可，所以无法为任何奴隶竞价！")));
 				}
 			}
 		}
@@ -352,9 +352,9 @@ public class FileController {
 					try {
 						Game.importCharacterAsLodger(fileName);
 						MainController.updateUI();
-						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Imported Character!");
+						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "角色已导入！");
 					} catch (Exception ex) {
-						Main.game.flashMessage(PresetColour.GENERIC_BAD, "Import Failed!");
+						Main.game.flashMessage(PresetColour.GENERIC_BAD, "导入失败！");
 					}
 				}, false);
 			}
@@ -370,8 +370,8 @@ public class FileController {
 					Main.game.setContent(new Response("", "", CityHall.CITY_HALL_APPROACH_LODGER));
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-						UtilText.parse(npc, "Find [npc.name]"),
-						UtilText.parse(npc, "Look around the waiting area and see if you can find [npc.name]...")));
+						UtilText.parse(npc, "寻找[npc.name]"),
+						UtilText.parse(npc, "环顾四周，看看能否在等待区找到[npc.name]……")));
 			}
 		}
 	}
@@ -386,9 +386,9 @@ public class FileController {
 						Game.importCharacterAsClubber(fileName);
 						MainController.updateUI();
 						Main.game.setContent(new Response("", "", Main.game.getDefaultDialogue()));
-						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Imported Character!");
+						Main.game.flashMessage(PresetColour.GENERIC_GOOD, "角色已导入！");
 					} catch (Exception ex) {
-						Main.game.flashMessage(PresetColour.GENERIC_BAD, "Import Failed!");
+						Main.game.flashMessage(PresetColour.GENERIC_BAD, "导入失败！");
 					}
 				}, false);
 			}
@@ -412,10 +412,10 @@ public class FileController {
 						EnchantmentDialogue.overwriteConfirmationName = f.getName();
 						EnchantmentDialogue.loadConfirmationName = "";
 						EnchantmentDialogue.deleteConfirmationName = "";
-						Main.game.setContent(new Response("Save/Load", "Open the save/load enchantment window.", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载附魔窗口。", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Overwrite", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("覆盖", ""));
 			}
 			id = "LOAD_"+fileIdentifier;
 			if (MainController.document.getElementById(id) != null) {
@@ -432,15 +432,15 @@ public class FileController {
 							EnchantmentDialogue.addEffect(ie);
 						}
 						EnchantmentDialogue.setOutputName(lEnch.getName());
-						Main.game.setContent(new Response("Save/Load", "Open the save/load enchantment window.", EnchantmentDialogue.ENCHANTMENT_MENU));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载附魔窗口。", EnchantmentDialogue.ENCHANTMENT_MENU));
 					} else {
 						EnchantmentDialogue.overwriteConfirmationName = "";
 						EnchantmentDialogue.loadConfirmationName = f.getName();
 						EnchantmentDialogue.deleteConfirmationName = "";
-						Main.game.setContent(new Response("Save/Load", "Open the save/load enchantment window.", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载附魔窗口。", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Load", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("加载", ""));
 			}
 			id = "DELETE_"+fileIdentifier;
 			if (MainController.document.getElementById(id) != null) {
@@ -449,15 +449,15 @@ public class FileController {
 						EnchantmentDialogue.deleteConfirmationName = "";
 						EnchantmentDialogue.deleteEnchant(fileName);
 						EnchantmentDialogue.initSaveLoadMenu();
-						Main.game.setContent(new Response("Save/Load", ".", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
 					} else {
 						EnchantmentDialogue.overwriteConfirmationName = "";
 						EnchantmentDialogue.loadConfirmationName = "";
 						EnchantmentDialogue.deleteConfirmationName = f.getName();
-						Main.game.setContent(new Response("Save/Load", ".", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "", EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Delete", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("删除", ""));
 			}
 		}
 		
@@ -467,7 +467,7 @@ public class FileController {
 				Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('new_save_name').value;");
 				EnchantmentDialogue.saveEnchant(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false, EnchantmentDialogue.ENCHANTMENT_SAVE_LOAD);
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Save", ""));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("保存", ""));
 		}
 		for (Map.Entry<String, LoadedEnchantment> entry : EnchantmentDialogue.getLoadedEnchantmentsMap().entrySet()) {
 			id = "LOADED_ENCHANTMENT_"+entry.getKey();
@@ -497,10 +497,10 @@ public class FileController {
 						CosmeticsDialogue.overwriteConfirmationName = f.getName();
 						CosmeticsDialogue.loadConfirmationName = "";
 						CosmeticsDialogue.deleteConfirmationName = "";
-						Main.game.setContent(new Response("Save/Load", "Open the save/load tattoo window.", CosmeticsDialogue.TATTOO_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载纹身窗口。", CosmeticsDialogue.TATTOO_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Overwrite", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("覆盖", ""));
 			}
 			id = "LOAD_"+fileIdentifier;
 			if (MainController.document.getElementById(id) != null) {
@@ -510,15 +510,15 @@ public class FileController {
 						Tattoo loadedTattoo = CosmeticsDialogue.loadTattoo(fileName);
 						CharacterModificationUtils.tattoo = loadedTattoo;
 						
-						Main.game.setContent(new Response("Save/Load", "Open the save/load tattoo window.", CosmeticsDialogue.getReturnToNodeFromTattooSaveLoad()));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载纹身窗口。", CosmeticsDialogue.getReturnToNodeFromTattooSaveLoad()));
 					} else {
 						CosmeticsDialogue.overwriteConfirmationName = "";
 						CosmeticsDialogue.loadConfirmationName = f.getName();
 						CosmeticsDialogue.deleteConfirmationName = "";
-						Main.game.setContent(new Response("Save/Load", "Open the save/load tattoo window.", CosmeticsDialogue.TATTOO_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载纹身窗口。", CosmeticsDialogue.TATTOO_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Load", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("加载", ""));
 			}
 			id = "DELETE_"+fileIdentifier;
 			if (MainController.document.getElementById(id) != null) {
@@ -527,15 +527,15 @@ public class FileController {
 						CosmeticsDialogue.deleteConfirmationName = "";
 						CosmeticsDialogue.deleteTattoo(fileName);
 						CosmeticsDialogue.initSaveLoadMenu();
-						Main.game.setContent(new Response("Save/Load", ".", CosmeticsDialogue.TATTOO_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", ".", CosmeticsDialogue.TATTOO_SAVE_LOAD));
 					} else {
 						CosmeticsDialogue.overwriteConfirmationName = "";
 						CosmeticsDialogue.loadConfirmationName = "";
 						CosmeticsDialogue.deleteConfirmationName = f.getName();
-						Main.game.setContent(new Response("Save/Load", ".", CosmeticsDialogue.TATTOO_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", ".", CosmeticsDialogue.TATTOO_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Delete", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("删除", ""));
 			}
 		}
 		
@@ -545,7 +545,7 @@ public class FileController {
 				Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('new_save_name').value;");
 				CosmeticsDialogue.saveTattoo(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false, CosmeticsDialogue.TATTOO_SAVE_LOAD);
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Save", ""));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("保存", ""));
 		}
 		for (Entry<String, Tattoo> entry : CosmeticsDialogue.getLoadedTattoosMap().entrySet()) {
 			id = "LOADED_TATTOO_"+entry.getKey();
@@ -575,10 +575,10 @@ public class FileController {
 						BodyChanging.overwriteConfirmationName = f.getName();
 						BodyChanging.loadConfirmationName = "";
 						BodyChanging.deleteConfirmationName = "";
-						Main.game.setContent(new Response("Save/Load", "Open the save/load transformation window.", BodyChanging.BODY_CHANGING_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "打开保存/加载转化窗口。", BodyChanging.BODY_CHANGING_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Overwrite", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("覆盖", ""));
 			}
 			id = "LOAD_"+fileIdentifier;
 			if (MainController.document.getElementById(id) != null) {
@@ -588,16 +588,16 @@ public class FileController {
 						if (!Main.getProperties().hasValue(PropertyValue.overwriteWarning) || BodyChanging.loadConfirmationName.equals(f.getName())) {
 							BodyChanging.loadConfirmationName = "";
 							BodyChanging.applyLoadedBody(loadedBody);
-							Main.game.setContent(new Response("Save/Load", "Open the save/load transformation window.", BodyChanging.BODY_CHANGING_CORE));
+							Main.game.setContent(new Response("保存/加载", "打开保存/加载转化窗口。", BodyChanging.BODY_CHANGING_CORE));
 						} else {
 							BodyChanging.overwriteConfirmationName = "";
 							BodyChanging.loadConfirmationName = f.getName();
 							BodyChanging.deleteConfirmationName = "";
-							Main.game.setContent(new Response("Save/Load", "Open the save/load transformation window.", BodyChanging.BODY_CHANGING_SAVE_LOAD));
+							Main.game.setContent(new Response("保存/加载", "打开保存/加载转化窗口。", BodyChanging.BODY_CHANGING_SAVE_LOAD));
 						}
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Load",
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("读取",
 						BodyChanging.isPresetTransformationAvailable(BodyChanging.loadBody(fileName))
 								?""
 								:BodyChanging.getPresetTransformationUnavailabilityText(BodyChanging.loadBody(fileName))));
@@ -609,15 +609,15 @@ public class FileController {
 						BodyChanging.deleteConfirmationName = "";
 						BodyChanging.deleteBody(fileName);
 						BodyChanging.initSaveLoadMenu();
-						Main.game.setContent(new Response("Save/Load", ".", BodyChanging.BODY_CHANGING_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "", BodyChanging.BODY_CHANGING_SAVE_LOAD));
 					} else {
 						BodyChanging.overwriteConfirmationName = "";
 						BodyChanging.loadConfirmationName = "";
 						BodyChanging.deleteConfirmationName = f.getName();
-						Main.game.setContent(new Response("Save/Load", ".", BodyChanging.BODY_CHANGING_SAVE_LOAD));
+						Main.game.setContent(new Response("保存/加载", "", BodyChanging.BODY_CHANGING_SAVE_LOAD));
 					}
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Delete", ""));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("删除", ""));
 			}
 		}
 		id = "NEW_SAVE";
@@ -626,7 +626,7 @@ public class FileController {
 				Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('new_save_name').value;");
 				BodyChanging.saveBody(Main.mainController.getWebEngine().getDocument().getElementById("hiddenPField").getTextContent(), false);
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Save", ""));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("保存", ""));
 		}
 		for (Map.Entry<String, Util.Value<String, Body>> entry : BodyChanging.getPresetTransformationsMap().entrySet()) {
 			id = "LOADED_BODY_"+entry.getKey();
@@ -658,12 +658,12 @@ public class FileController {
 				int essenceCost = loadedOutfit.getEssenceCost();
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(loadedOutfit.getName()),
-						"Total clothing in this outfit: "+loadedOutfit.getClothing().size()
-							+ "<br/>Total weapons in this outfit: "+loadedOutfit.getWeapons().size()
-							+ "<br/>Available from items stored in area: "+availabeOutfits//Math.max(0, availabeOutfits)
-							+ "<br/>Cost to purchase full outfit: "
+						"该套装中的衣物总数："+loadedOutfit.getClothing().size()
+							+ "<br/>该套装中的武器总数："+loadedOutfit.getWeapons().size()
+							+ "<br/>存储在区域中的可用物品数："+availabeOutfits//Math.max(0, availabeOutfits)
+							+ "<br/>购买完整套装的费用："
 								+UtilText.formatAsMoney(loadedOutfit.getCost(), "b")
-								+", "
+								+"，"
 								+(essenceCost==0
 									?UtilText.formatAsEssencesUncoloured(essenceCost, "b", false)
 									:UtilText.formatAsEssences(essenceCost, "b", false))
@@ -682,9 +682,9 @@ public class FileController {
 					
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-						"Equip",
-						"Your character will equip all clothing and weapons as defined by this outfit."
-							+ " Any clothing and weapons which you currently have equipped will be placed in your Dressing Room if they're unequipped when applying this outfit."));
+						"装备",
+						"你的角色将会装备此套装所定义的所有衣物和武器。"
+							+ "任何你当前装备的衣物和武器，如果在应用此套装时被卸下，将被放入你的更衣室。"));
 			}
 			
 			id = "EDIT_OUTFIT_"+fileIdentifier;

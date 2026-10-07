@@ -20,7 +20,7 @@ import com.lilithsthrone.world.places.PlaceUpgrade;
  */
 public class LilayaOfficeDialogue {
 
-	public static final DialogueNode ROOM_OFFICE = new DialogueNode("Room", "", false) {
+	public static final DialogueNode ROOM_OFFICE = new DialogueNode("房间", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 10;
@@ -70,30 +70,30 @@ public class LilayaOfficeDialogue {
 				
 			} else if (index == 1) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Manage room", "Enter the management screen for this particular room.", OccupantManagementDialogue.ROOM_UPGRADES) {
+					return new Response("管理房间", "进入该房间的管理界面。", OccupantManagementDialogue.ROOM_UPGRADES) {
 						@Override
 						public void effects() {
 							OccupantManagementDialogue.cellToInspect = Main.game.getPlayerCell();
 						}
 					};
 				} else {
-					return new Response("Manage room", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+					return new Response("管理房间", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 				}
 				
 			}  else if (index == 2) {
 				if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-					return new Response("Manage people", "Enter the management screen for your slaves and friendly occupants.", OccupantManagementDialogue.getSlaveryRoomListDialogue(null, null)) {
+					return new Response("人员管理", "进入奴隶和友人住客的管理界面。", OccupantManagementDialogue.getSlaveryRoomListDialogue(null, null)) {
 						@Override
 						public void effects() {
 							CompanionManagement.initManagement(Main.game.getDefaultDialogue(), 0, null);
 						}
 					};
 				} else {
-					return new Response("Manage people", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+					return new Response("管理人员", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 				}
 				
 			} else if(index==3) {
-				return new Response("Occupancy ledger", "Open the occupancy ledger screen, from which you can manage all rooms, slaves, and friendly occupants.", OccupantManagementDialogue.getSlaveryOverviewDialogue(null)) {
+				return new Response("住户名单", "打开住户名单界面，可以管理所有房间、奴隶和友善的住户。", OccupantManagementDialogue.getSlaveryOverviewDialogue(null)) {
 					@Override
 					public void effects() {
 						CompanionManagement.initManagement(Main.game.getDefaultDialogue(), 0, null);
@@ -108,10 +108,10 @@ public class LilayaOfficeDialogue {
 					return LilayaHomeGeneric.interactWithNPC(character);
 				} else {
 					return new Response(UtilText.parse(character, "[npc.Name]"), 
-							UtilText.parse(character, "Although this is [npc.namePos] room, [npc.sheIs] "
+							UtilText.parse(character, "虽然这里是[npc.namePos]的房间，但[npc.sheIs]"
 									+(character.getLocationPlace().getPlaceUpgrades().contains(PlaceUpgrade.LILAYA_SLAVE_LOUNGE)
-											?"relaxing in a slave lounge at the moment."
-											:"out at work at the moment.")), null);
+											?"现在正在奴隶休息室休息。"
+											:"现在正在外面工作。")), null);
 				}
 			}
 			

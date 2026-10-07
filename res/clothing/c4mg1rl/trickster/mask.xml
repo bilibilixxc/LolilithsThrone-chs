@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[A marking discreetly engraved into the mask's underside informs you that it was made by 'C4MG1RL'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[在面具的底面上刻着一个标记，告诉你它是由“C4MG1RL”制造的。]]></clothingAuthorTag>
 		<value>6000</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Trickster's mask]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[Trickster's mask]]></namePlural>
-		<description><![CDATA[A fox-like mask, the design of which is based on the mysterious and mischievous youko. Perfect for concealing one's identity while getting up to all kinds of schemes.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[诡术师的面具]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[诡术师的面具]]></namePlural>
+		<description><![CDATA[像狐狸一样的面具，它的设计是基于神秘而淘气的妖狐。完美地隐藏一个人的身份，同时可以进行各种各样的计划。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>
@@ -48,27 +47,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the mask and secure the straps behind [npc.her] head.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the mask onto [npc2.namePos] face, then secure the straps behind [npc2.her] head.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(push)] the mask onto [npc2.namePos] [npc2.face], then secure the straps behind [npc.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]戴上面具，绑好[npc.her]头后面的带子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把面具放在[npc2.namePos]的脸上，然后绑紧了[npc2.her]头后的带子。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把面具拍在[npc2.namePos]的[npc2.face]上，随后系紧了[npc.her]头后面的带子。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the straps behind [npc.her] head, then [npc.verb(take)] off [npc.her] mask.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the straps behind [npc2.her] head, then [npc.verb(take)] off [npc2.namePos] mask.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] mask and roughly [npc.verb(pull)] it off [npc2.namePos] [npc2.face].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]头后面的带子，然后摘下了[npc.her]面具。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.her]头后面的带子，随后取下了[npc2.namePos]的面具。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]抓住[npc2.namePos]的面具，粗暴地把它从[npc2.namePos]的[npc2.face]上摘了下来。
+]]></otherRough>
 	</displacementText>
   
 </clothing>

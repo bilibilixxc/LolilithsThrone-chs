@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-	<authorTag><![CDATA[You find a tag printed on the inner wall, "Envisioned for high-performing athletes, by GLIDE.".]]></authorTag>
+	<authorTag><![CDATA[你发现头盔内印着一个标签，上面写着：“GLIDE为高水平运动员构想”。]]></authorTag>
 		<value>800</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bike racing helmet]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bike racing helmets]]></namePlural>
-		<description><![CDATA[Designed for increased ventilation and optimal aerodynamics, this helmet also features proprietary technology for improved comfort and unrivalled protection.]]></description>
+		<determiner><![CDATA[一顶]]></determiner>
+		<name><![CDATA[自行车比赛头盔]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[自行车比赛头盔]]></namePlural>
+		<description><![CDATA[这款头盔专为增加通风和实现最佳空气动力学而设计，还配备了专有技术，提供卓越的舒适性和无与伦比的保护。]]></description>
 		<physicalResistance>3.0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>

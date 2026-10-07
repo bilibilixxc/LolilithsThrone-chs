@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[one-piece swimsuit]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[one-piece swimsuits]]></namePlural>
-		<description><![CDATA[A sporty one-piece swimsuit.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[一体泳衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[一体泳衣]]></namePlural>
+		<description><![CDATA[一件运动型连体泳衣。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -96,71 +96,71 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the swimsuit and [npc.verb(pull)] it up to cover [npc.her] torso.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.name] into the swimsuit and [npc.verb(pull)] it up over [npc2.her] torso.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(guide)] [npc2.name] into the swimsuit and [npc.verb(yank)] it up over [npc2.her] torso.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]踩进泳衣里，然后将泳衣拉到[npc.her]的躯干上覆盖全身。
+]]></self>
+		<other><![CDATA[
+[npc.Name]引导着[npc2.name]穿进泳衣里并将其拉到[npc2.her]的躯干上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.name]套进泳衣里并把泳衣拽到[npc2.her]的躯干上。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the swimsuit's straps down [npc.her] [npc.arms] and [npc.verb(tug)] it off [npc.her] [npc.legs].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the swimsuit's straps down [npc2.namePos] [npc2.arms] and [npc.verb(tug)] it off [npc2.her] [npc2.legs].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(yank)] the swimsuit's straps down [npc2.namePos] [npc2.arms] and [npc.verb(tug)] it off [npc2.her] [npc2.legs].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将泳装脱下[npc.her]的[npc.arms]，并从[npc.her]的[npc.legs]上拽下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的泳衣拉到[npc2.arms]上然后从[npc2.her]的[npc2.legs]上拽下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的泳衣拉下到[npc2.arms]并从[npc2.her]的[npc2.legs]上拽下来。
+]]></otherRough>
 	</displacementText>
 	
 	<displacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the top half of [npc.her] swimsuit.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the top half of [npc2.namePos] swimsuit.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] down the top half of [npc2.namePos] swimsuit.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]泳衣的上半部分拉下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]泳衣的上半部分拉下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]泳衣的上半身拉下。
+]]></otherRough>
 	</displacementText>
 	<replacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] swimsuit up into its correct position.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] swimsuit up into its correct position.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] swimsuit up into its correct position.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的泳衣拉起到正确的位置。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的泳衣拉起到正确的位置。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的泳衣拉到正确的位置上。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText type="SHIFTS_ASIDE">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the lower part of [npc.her] swimsuit to one side.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the lower part of [npc2.namePos] swimsuit to one side.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the lower part of [npc2.namePos] swimsuit to one side.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的泳衣的下边拉到一侧。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的泳衣的下边拉到一侧。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的泳衣的下边拉到一侧。
+]]></otherRough>
 	</displacementText>
 	<replacementText type="SHIFTS_ASIDE">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the lower part of [npc.her] swimsuit back into its correct position.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the lower part of [npc2.namePos] swimsuit back into its correct position.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the lower part of [npc2.namePos] swimsuit back into its correct position.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的泳衣的下边整理到正确的位置。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的泳衣的下边整理到正确的位置。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的泳衣的下边拉回到正确的位置。
+]]></otherRough>
 	</replacementText>
 </clothing>

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>800</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[strapless strap-on]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[strapless strap-on's]]></namePlural>
-		<description><![CDATA[A [unit.size(25)] dildo made of self-cleaning, arcane-cured silicone, which is designed to be worn vaginally. It features a textured clitoral pad, as well as a handle shaped to target the wearer's G-Spot.]]></description>
+		<determiner><![CDATA[一根]]></determiner>
+		<name><![CDATA[无绑带穿戴式假阳具]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[无绑带穿戴式假阳具]]></namePlural>
+		<description><![CDATA[一根由自清洁硅胶制成的长度为[unit.size(25)]的假阴茎。是专为用阴道穿戴而设计的。它有一个纹理清晰的阴蒂垫，还有一个针对穿戴者G点的短柄。]]></description>
 
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
@@ -72,27 +71,27 @@
 	</sexAttributesOther>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(push)] the strapless dildo into [npc.her] [npc.pussy+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the strapless dildo into [npc2.namePos] [npc2.pussy+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(hold)] [npc2.name] still as [npc.she] roughly [npc.verb(force)] the strapless dildo into [npc2.her] [npc2.pussy+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将假阳具塞进[npc.her][npc.pussy+]。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把假阳具插进[npc2.namePos][npc2.pussy+]。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]并且粗暴地把假阳具插进[npc2.her][npc2.pussy+]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the strapless dildo out of [npc.her] [npc.pussy+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the strapless dildo out [npc2.namePos] [npc2.pussy+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.namePos] strapless dildo and [npc.verb(yank)] it out of [npc2.her] [npc2.pussy+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把假阳具从[npc.her][npc.pussy+]拔出。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把假阳具从[npc2.namePos][npc2.pussy+]拔出。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]紧紧抓住[npc2.namePos]的假阳具并从[npc2.her][npc2.pussy+]里扯出来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

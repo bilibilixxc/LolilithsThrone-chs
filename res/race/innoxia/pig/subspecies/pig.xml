@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_pig</race>
 	<colour>innoxia_pig</colour>
@@ -23,24 +23,24 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Porky Porcines</bookName>
+	<bookName><![CDATA[胖胖小猪]]></bookName>
 	<basicDescriptionId>PIG_BASIC</basicDescriptionId>
 	<advancedDescriptionId>PIG_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[pig-morph]]></name>
-	<namePlural><![CDATA[pig-morphs]]></namePlural>
-	<singularMaleName><![CDATA[pig-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[pig-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[pig-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[pig-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic pig, known as a 'pig-morph' when bipedal, and a 'pigtaur' when the lower body is that of a feral pig.]]></description>
+	<name><![CDATA[猪化形]]></name>
+	<namePlural><![CDATA[猪化形]]></namePlural>
+	<singularMaleName><![CDATA[猪男]]></singularMaleName>
+	<singularFemaleName><![CDATA[猪女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[猪男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[猪女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的猪，当下肢为双足时称为“猪化形”，而下肢呈现出猪兽态时称为“半猪人”。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[pig]]></feralName>
-		<feralNamePlural><![CDATA[pig]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[boar]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[sow]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[boars]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[sows]]></feralPluralFemaleName>
+		<feralName><![CDATA[猪]]></feralName>
+		<feralNamePlural><![CDATA[猪]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[野公猪]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[野母猪]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[野公猪]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[野母猪]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>95</size>
@@ -52,9 +52,7 @@
 		<fingerActionsAvailable>false</fingerActionsAvailable>
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
-	<statusEffectDescription><![CDATA[
-		[npc.NamePos] body gives [npc.herHim] strong urges to try out all manner of new foods, and as such, [npc.she] [npc.has] a slight resistance to food poisoning.
-	]]></statusEffectDescription>
+	<statusEffectDescription><![CDATA[[npc.NamePos]的身体让[npc.herHim]总是渴望尝试各种新食物，因此[npc.she]对食物中毒有轻微的抵抗力。]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="5">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

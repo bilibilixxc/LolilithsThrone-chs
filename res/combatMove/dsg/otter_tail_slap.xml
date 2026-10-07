@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Tail Slap]]></name>
+	<name><![CDATA[扫尾打击]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] otter-like tail to slap [npc.her] target, dealing formattedDamageInflicted damage.
+		用[npc.her]水獭一样尾巴抽打[npc.her]的目标，造成formattedDamageInflicted伤害。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -99,7 +99,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have an otter tail type.
+		仅适用于有水獭尾巴的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -126,7 +126,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target's physique is less than two-thirds of the attacker's physique.
+		目标的体格要小于攻击者体格的三分之二。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -138,12 +138,12 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] otter tail to deliver a powerful slap to [npc2.name], dealing formattedDamageInflicted damage.
+		用[npc.her]的水獭尾巴向[npc2.name]发动强力抽打，造成formattedDamageInflicted伤害。
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] otter tail to deliver a powerful slap to [npc.her] target, dealing formattedDamageInflicted damage.
+		用[npc.her]的水獭尾巴强力抽打[npc.her]的目标，造成formattedDamageInflicted伤害。
 	]]></movePredictionDescriptionNoTarget>
 	
 	<!-- The code that's executed when this move is performed.
@@ -157,14 +157,14 @@
 		<!-- The 'execute' section should be used for the main description of the attack, as well as any extra effects you want to apply.
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
-			[npc.Name] [npc.verb(charge)] at [npc2.name]! At the last second, [npc.she] [npc.verb(whip)] [npc.her] body around with great force, slapping [npc.her] tail against [npc2.namePos] aura! formattedHealthDamage
+			[npc.Name]冲向[npc2.name]！在最后一刹，[npc.she]用力转过身体，用尾巴抽打[npc2.namePos]的灵气！造成formattedHealthDamage点伤害。
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc.NamePos] strike was extremely effective!
-		]]></critDescription>
+			[npc.NamePos]的打击造成了超出预期的效果！
+]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] been dazed by the attack!
-		]]></critEffectDescription>
+			[npc2.Name]已被攻击的效果削弱！
+]]></critEffectDescription>
 	</performMove>
 	
 </combatMove>

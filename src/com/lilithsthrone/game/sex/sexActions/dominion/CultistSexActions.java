@@ -38,19 +38,19 @@ public class CultistSexActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Missionary";
+			return "传教士体位";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stand up so that you're positioned between [npc2.namePos] [npc2.legs].";
+			return "起身站到[npc2.namePos]的[npc2.legs]之间。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Having had enough of pleasuring [npc2.name] with [npc.her] mouth, [npc.name] [npc.verb(stand)] up and #IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF forwards, bringing [npc.her] groin up against [npc2.hers]."
-					+ " Grabbing hold of [npc2.her] [npc2.legs+], [npc.she] [npc.verb(push)] them apart, grinning as [npc.she] [npc.moanVerb],"
-					+ " [npc.speech(Time to have some real fun!)]";
+			return "已经用嘴巴侍奉够了[npc2.name]，[npc.name]站起来并向前#IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF ，把下体贴到[npc2.hers]身上。"
+					+ "紧紧抓着[npc2.her][npc2.legs+]，[npc.she]把它们推开，淫笑着[npc.moanVerb]。"
+					+ "[npc.speech(是时候来点真正的快乐了！)]";
 		}
 
 		@Override
@@ -90,19 +90,19 @@ public class CultistSexActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Missionary Oral";
+			return "传教士体位口交";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Drop down onto your knees and position your face between [npc2.namePos] legs.";
+			return "跪下并把脸伸到[npc2.namePos]腿部的前方。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Dropping down to [npc.her] knees, [npc.name] [npc.verb(position)] [npc.her] head between [npc2.namePos] [npc2.legs], ready to pleasure [npc2.herHim] with [npc.her] mouth."
-					+ " As [npc2.namePos] [npc2.scent+] washes over [npc.herHim], [npc.name] [npc.moanVerb],"
-					+ " [npc.speech(Oh, this is going to be <i>so</i> much fun!)]";
+			return "[npc.name]跪下并把头伸到[npc2.namePos]的[npc2.legs]之间，准备用嘴来侍奉[npc2.herHim]。"
+					+ "[npc2.namePos][npc2.scent+]扑面而来，[npc.name][npc.moanVerb]。"
+					+ "[npc.speech(哦，事情变得<i>更</i>有意思了！)]";
 		}
 
 		@Override

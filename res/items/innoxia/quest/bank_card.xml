@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>10000</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[platinum Bank of Dominion card]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[platinum Bank of Dominion cards]]></namePlural>
-		<description><![CDATA[A plastic card which declares the holder as possessing a platinum account with the Bank of Dominion, thereby identifying them as a direct descendant of an elder lilin.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[御城区白金银行卡]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[御城区白金银行卡]]></namePlural>
+		<description><![CDATA[一张能证明拥有者在御城区银行的白金账户的塑料卡，从而确定他们是莉琳长老的直系后裔。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,14 +23,14 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Grants access to premium banking services]]></line>
+			<line><![CDATA[给予银行的高级权限]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			The small print on the front of the card explains that platinum accounts are only given out to direct descendants of elder lilin, and as such your card has been marked to identify you as being of Lyssieth's lineage. It has been verified with three arcane stamps, which glow when the card is in possession of its rightful owner. A warning on the front instructs citizens to immediately notify the nearest Enforcer if the stamps are not glowing.
+			卡片正面用小字写着，白金账户只发给莉琳长老的直系后裔，因此该卡片已被施法来判断持有者是否拥有莉西丝的血统，如果确实拥有，卡面的三个奥术印记会发光。卡片正面的警告提醒市民，如果印记没有发光，应立即通知最近的执法者。
 		</p>
-		]]></applyEffects>
+]]></applyEffects>
 		
 		<itemTags/>
 		
@@ -38,11 +38,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the bank card...
+		[npc.Name]拿起来看了一眼银行卡……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off [npc.her] bank card to [npc2.name], who is duly impressed by [npc.her] possession of it...
-		]]></otherUse>
+		[npc.Name]向[npc2.name]展示了她的银行卡，后者看起来非常感兴趣……]]></otherUse>
 	</useDescriptions>
 
 	

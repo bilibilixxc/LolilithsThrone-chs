@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -98,7 +98,7 @@
 	<bookIconName>gryphonicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Soaring Gryphons</bookName>
+	<bookName><![CDATA[翱翔的狮鹫]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -111,38 +111,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[gryphon-morph]]></name>
-			<namePlural><![CDATA[gryphon-morphs]]></namePlural>
-			<singularMaleName><![CDATA[gryphon-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[gryphon-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[gryphon-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[gryphon-girls]]></pluralFemaleName>
+			<name><![CDATA[狮鹫化形]]></name>
+			<namePlural><![CDATA[狮鹫化形]]></namePlural>
+			<singularMaleName><![CDATA[狮鹫男]]></singularMaleName>
+			<singularFemaleName><![CDATA[狮鹫女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[狮鹫男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[狮鹫女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic gryphon, known as a 'gryphon-morph' when bipedal, and a 'gryphontaur' when the lower body is that of a typically-oversized feral gryphon.]]></description>
+	<description><![CDATA[一种人形的狮鹫，当下肢为双足时称为“狮鹫化形”，而下肢呈现出狮鹫兽态时称为“半狮鹫人”。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[anzû]]></name>
-			<namePlural><![CDATA[anzûs]]></namePlural>
-			<singularMaleName><![CDATA[anzû]]></singularMaleName>
-			<singularFemaleName><![CDATA[anzû]]></singularFemaleName>
-			<pluralMaleName><![CDATA[anzûs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[anzûs]]></pluralFemaleName>
+			<name><![CDATA[安祖]]></name>
+			<namePlural><![CDATA[安祖]]></namePlural>
+			<singularMaleName><![CDATA[安祖]]></singularMaleName>
+			<singularFemaleName><![CDATA[安祖]]></singularFemaleName>
+			<pluralMaleName><![CDATA[安祖]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[安祖]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[gryphon]]></feralName>
-		<feralNamePlural><![CDATA[gryphons]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[gryphon]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[gryphon]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[gryphons]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[gryphons]]></feralPluralFemaleName>
+		<feralName><![CDATA[狮鹫]]></feralName>
+		<feralNamePlural><![CDATA[狮鹫]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[狮鹫]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[狮鹫]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[狮鹫]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[狮鹫]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -173,7 +173,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] gryphon-like body possesses graceful strength befitting a mythological creature, but [npc.her] closeness to the arcane also brings weaknesses.
+		[npc.NamePos]狮鹫般的身体拥有与神话生物相称的优雅力量， 但[npc.her]与奥术的亲和性也带来弱点。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

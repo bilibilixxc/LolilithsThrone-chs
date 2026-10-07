@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the can reads 'Canned by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[罐子底下刻着细小的字迹，写着“DSG食品有限公司制罐”。]]></authorTag>
 		
 		<value>15</value> 
-		<determiner><![CDATA[a can of]]></determiner>
-		<name><![CDATA[Fizzy Orange Juice]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Fizzy Orange Juices]]></namePlural>
-		<description><![CDATA[A can of carbonated orange juice. The label depicts a ferret-boy wrapped around the branch of an orange tree, stretching his long body to reach for the fruit.]]></description> 
+		<determiner><![CDATA[一罐]]></determiner>
+		<name><![CDATA[橘子碳酸果汁]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[橘子碳酸果汁]]></namePlural>
+		<description><![CDATA[一罐碳酸橙汁。标签上画着一只雪貂男缠绕在橙树的树枝上，伸展他的长身去够果实。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -30,15 +30,15 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(2)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				An uplifting wave of arcane energy washes over [npc.name]...
+				一道振奋人心的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_HEALTH_MAXIMUM, 2)]
 		]]></applyEffects>
@@ -52,10 +52,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After opening it, [npc.name] [npc.verb(bring)] the can of Fizzy Orange Juice up to [npc.her] [npc.mouth]. The smell of fresh citrus fruit punctuated by carbonation rises from the opening, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the tingly liquid, [npc.she] [npc.verb(feel)] much more refreshed.
+		打开汽水后，[npc.name]将罐装的橙汁汽水带到[npc.her]的嘴边。新鲜柑橘水果和气泡的气味从罐口升腾而起，当[npc.she]仰起头开始喝这股微微刺激的液体时，[npc.she]感到自己焕然一新。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After opening it, [npc.name] [npc.verb(bring)] the can of Fizzy Orange Juice up to [npc2.namePos] waiting [npc2.lips]. The smell of fresh citrus fruit punctuated by carbonation rises from the opening, and as [npc2.she] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the tingly liquid, [npc.she] [npc.verb(feel)] much more refreshed.
+		打开汽水后，[npc.name]将罐装的橙汁汽水带到[npc2.namePos]等待[npc2.lips]边。新鲜的柑橘水果和气泡的气味从罐口升腾而起，当[npc2.she]仰起头开始喝这股微微刺激的液体时，[npc.she]感到自己焕然一新。
 		]]></otherUse>
 	</useDescriptions>
 

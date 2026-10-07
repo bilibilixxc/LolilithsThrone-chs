@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 	
 	<!-- The Amazons' Camp tile in Elis: -->
@@ -12,8 +12,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Enter the Amazons' camp and take a look around.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[进入亚马逊人的营地并四处转转。]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_amazon_camp_discovered))
 						innoxia_places_fields_elis_amazon_camp_initial_entry
@@ -44,8 +44,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Aurokaris as she shows you around the camp.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟随奥罗卡利斯，让她带你参观营地。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_initial_entry_follow]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.walkPathNoEffects(0, 2, true, 1)]
@@ -65,8 +65,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Continue following Aurokaris as she leads you to the centre of the Amazons' camp.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续跟随奥罗卡利斯，让她带你到亚马逊人营地的中心。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_initial_entry_follow_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.walkPathNoEffects(PLACE_TYPE_innoxia_fields_elis_amazon_camp_sparring_field, true, 1)]
@@ -85,8 +85,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Goodbye]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Aurokaris and set off to explore the Amazons' camp.]]></responseTooltip>
+				<responseTitle><![CDATA[道别]]></responseTitle>
+				<responseTooltip><![CDATA[告别奥罗卡利斯，出发去探索亚马逊人的营地。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'INITIAL_ENTRY_FOLLOW_END_LEAVE'))]
@@ -109,8 +109,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Having seen enough, you decide to head out of the Amazons' camp.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[看够了之后，你决定离开亚马逊人的营地。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_exterior]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_town, PLACE_TYPE_innoxia_fields_elis_town_amazon_camp)]
@@ -156,18 +156,18 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(aurokaris)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Aurokaris]]></responseTitle>
-				<responseTooltip><![CDATA[Head over to where Aurokaris is working.]]></responseTooltip>
+				<responseTitle><![CDATA[奥罗卡利斯]]></responseTitle>
+				<responseTooltip><![CDATA[去奥罗卡利斯工作的地方。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_trader_aurokaris]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(aurokaris)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Aurokaris]]></responseTitle>
+				<responseTitle><![CDATA[奥罗卡利斯]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Aurokaris isn't here at the moment.
-					<br/>[style.italicsMinorBad(Aurokaris is only present between the hours of [units.time(8)]-[units.time(18)])]
+					奥罗卡利斯现在不在这里。
+					<br/>[style.italicsMinorBad(奥罗卡利斯只出现在[units.time(8)]-[units.time(18)])]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
@@ -188,8 +188,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Aurokaris that you've got to be going now.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告诉奥罗卡利斯，你得走了。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'TRADER_AUROKARIS_LEAVE'))]
@@ -200,8 +200,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Trade]]></responseTitle>
-				<responseTooltip><![CDATA[Take a look at what Aurokaris has for sale...]]></responseTooltip>
+				<responseTitle><![CDATA[交易]]></responseTitle>
+				<responseTooltip><![CDATA[看看奥罗卡利斯有什么出售的……]]></responseTooltip>
 				<nextDialogue/>
 				<tradingVariables enabled="true">
 					<tradePartner><![CDATA[aurokaris]]></tradePartner>
@@ -212,20 +212,20 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred) && !aurokaris.isVisiblyPregnant()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sparring]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Aurokaris if she'd like you to act as her sparring partner.]]></responseTooltip>
+				<responseTitle><![CDATA[格斗]]></responseTitle>
+				<responseTooltip><![CDATA[问问奥罗卡利斯是否愿意让你做她的陪练。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_trader_aurokaris_sparring]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_sparred) || aurokaris.isVisiblyPregnant()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sparring]]></responseTitle>
+				<responseTitle><![CDATA[格斗]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(aurokaris.isVisiblyPregnant())
-						Aurokaris doesn't want to do any sparring while pregnant.
+						奥罗卡利斯怀孕了，不想陪练。
 					#ELSE
-						You've already acted as Aurokaris's sparring partner today.
+						你今天已经找奥罗卡利斯做过陪练了。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -235,14 +235,14 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_had_sex) && (!aurokaris.isAttractedTo(pc) || flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_ambrosia_tasting) || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Ambrosia tasting]]></responseTitle>
+				<responseTitle><![CDATA[仙肴一品]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!aurokaris.isAttractedTo(pc))
-						Aurokaris isn't attracted to you, so she's not willing to offer you some special 'Ambrosia tasting'.
+						奥罗卡利斯没有被你吸引，不愿为你提供特殊的“仙肴一品”。
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						As you're unable to gain access to your mouth, you cannot taste Aurokaris's Ambrosia...
+						你的嘴被限制，无法尝到奥罗卡利斯的仙肴……
 					#ELSE
-						Aurokaris doesn't have time for more 'Ambrosia tasting' today
+						奥罗卡利斯今天没时间再多来点“仙肴一品”了
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -252,8 +252,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Ambrosia tasting]]></responseTitle>
-				<responseTooltip><![CDATA[Accept Aurokaris's offer of some 'Ambrosia tasting'...]]></responseTooltip>
+				<responseTitle><![CDATA[仙肴一品]]></responseTitle>
+				<responseTooltip><![CDATA[接受奥罗卡利斯的提议，品尝一些‘仙肴一品’……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_trader_aurokaris_sex]]></nextDialogue>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_amazon_camp_aurokaris_ambrosia_tasting, true)]
@@ -276,8 +276,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wrestle]]></responseTitle>
-				<responseTooltip><![CDATA[Decide not to use any weapons as you spar with Aurokaris.]]></responseTooltip>
+				<responseTitle><![CDATA[摔跤]]></responseTitle>
+				<responseTooltip><![CDATA[决定在与奥罗卡利斯比武时不使用任何武器。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_trader_aurokaris_sparring_practice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'TRADER_AUROKARIS_SPARRING_START_UNARMED'))]
@@ -287,8 +287,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Dory]]></responseTitle>
-				<responseTooltip><![CDATA[Decide to use the Amazons' spear, a dory, to spar with Aurokaris.]]></responseTooltip>
+				<responseTitle><![CDATA[希腊长矛]]></responseTitle>
+				<responseTooltip><![CDATA[决定使用亚马逊人的长矛与奥罗卡利斯比试。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_trader_aurokaris_sparring_practice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'TRADER_AUROKARIS_SPARRING_START_MELEE'))]
@@ -298,8 +298,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Bow]]></responseTitle>
-				<responseTooltip><![CDATA[Decide to use the Amazons' preferred ranged weapon, a recurve bow.]]></responseTooltip>
+				<responseTitle><![CDATA[弓]]></responseTitle>
+				<responseTooltip><![CDATA[决定使用亚马逊人最喜欢的远程武器——反曲弓。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_trader_aurokaris_sparring_practice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'TRADER_AUROKARIS_SPARRING_START_RANGED'))]
@@ -325,8 +325,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Duel]]></responseTitle>
-				<responseTooltip><![CDATA[Agree to a duel and fight Aurokaris with whatever weapons you want.]]></responseTooltip>
+				<responseTitle><![CDATA[决斗]]></responseTitle>
+				<responseTooltip><![CDATA[同意与奥罗卡利斯决斗并可以使用任何武器战斗。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<combatVariables enabled="true">
@@ -337,7 +337,7 @@
 						<enemy leader="true"><![CDATA[aurokaris]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="aurokaris"><![CDATA[[aurokaris.speech(Give me everything you've got, [pc.name]!)] Aurokaris shouts with a smile on her face, [aurokaris.speech(I'm not going to hold back either!)]]]></combatant>
+						<combatant id="aurokaris"><![CDATA[[aurokaris.speech(给我你的一切，[pc.name]！)]奥罗卡利斯笑着喊道，[aurokaris.speech(我也不会有所保留的！)]]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 				</combatVariables>
@@ -345,8 +345,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Aurokaris that your sparring practice was enough.]]></responseTooltip>
+				<responseTitle><![CDATA[回绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉奥罗卡利斯，你的格斗练习已经足够了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_trader_aurokaris_sparring_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -371,15 +371,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					As Aurokaris has hurried off back to
+					由于奥罗卡利斯匆匆忙忙地回去
 					#IF(aurokaris.getLocationPlace().getPlaceType()==PLACE_TYPE_innoxia_fields_elis_amazon_camp_trader)
-						 work,
+						工作，
 					#ELSE
-						 her tent,
+						她的帐篷，
 					#ENDIF
-					 you're left to continue on your way through the Amazons' camp...
+					你只能继续穿过亚马逊人的营地……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
@@ -428,8 +428,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Pussy]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Aurokaris that you want to lick the Ambrosia from her pussy.]]></responseTooltip>
+				<responseTitle><![CDATA[小穴]]></responseTitle>
+				<responseTooltip><![CDATA[告诉奥罗卡利斯你想舔舐她小穴的“仙肴”。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -463,8 +463,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Breasts]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Aurokaris that you want to lick the Ambrosia from her breasts.]]></responseTooltip>
+				<responseTitle><![CDATA[胸部]]></responseTitle>
+				<responseTooltip><![CDATA[告诉奥罗卡利斯你想舔舐她胸部的“仙肴”。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -506,8 +506,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Ass]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Aurokaris that you want to lick the Ambrosia from her ass.]]></responseTooltip>
+				<responseTitle><![CDATA[屁股]]></responseTitle>
+				<responseTooltip><![CDATA[告诉奥罗卡利斯你想舔舐她菊部的“仙肴”]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -552,8 +552,8 @@
 		<preParsingEffects><![CDATA[
 			[#flags.setFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_had_sex, true)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Aurokaris has had enough, and so brings the sex to an end...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[奥罗卡利斯已经被满足了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/amazon_camp">AUROKARIS_TASTING_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -562,8 +562,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Head on out of the tent and decide what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[走出帐篷，决定下一步该怎么做……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'AUROKARIS_TASTING_AFTER_SEX_LEAVE'))]
@@ -586,23 +586,23 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(aurokaris) && flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_invite_received) && !flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_visited)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Aurokaris]]></responseTitle>
-				<responseTooltip><![CDATA[Having been invited to pay her a visit, head over to Aurokaris's tent and see if she's in there.]]></responseTooltip>
+				<responseTitle><![CDATA[奥罗卡利斯]]></responseTitle>
+				<responseTooltip><![CDATA[应邀拜访她后，前往奥罗卡利斯的帐篷，看看她是否在里面。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_aurokaris_tent_entry]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(aurokaris) || !flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_invite_received) || flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_visited)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Aurokaris]]></responseTitle>
+				<responseTitle><![CDATA[奥罗卡利斯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_invite_received))
-						Aurokaris told you not to disturb her while she's in her tent, so you shouldn't attempt to bother her...
+						奥罗卡利斯告诉过你，当她在帐篷里时不要打扰她，所以你不应该试图打扰她……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_visited))
-						Aurokaris told you that she needs to get some rest, so you should leave her alone for the rest of the night...
+						奥罗卡利斯告诉你她需要休息，所以你应该让她独自过夜……
 					#ELSE
-						Aurokaris isn't here at the moment.
-						<br/>[style.italicsMinorBad(Aurokaris is only present between the hours of [units.time(18)]-[units.time(8)].)]
+						奥罗卡利斯现在不在这里。
+						<br/>[style.italicsMinorBad(奥罗卡利斯在[units.time(18)]-[units.time(8)]出现在这里。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -624,16 +624,16 @@
 					<availabilityConditional><![CDATA[[#!aurokaris.isAttractedTo(pc)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Drink]]></responseTitle>
-					<responseTooltip><![CDATA[Drink Aurokaris's potion to become a feminised version of yourself...]]></responseTooltip>
+					<responseTitle><![CDATA[喝]]></responseTitle>
+					<responseTooltip><![CDATA[喝下奥罗卡利斯的药水并变成女性化版本的自己……]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_aurokaris_tent_transformed]]></nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#!aurokaris.isAttractedTo(pc)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Decline]]></responseTitle>
-					<responseTooltip><![CDATA[Tell Aurokaris that you don't want to be transformed.]]></responseTooltip>
+					<responseTitle><![CDATA[回绝]]></responseTitle>
+					<responseTooltip><![CDATA[告诉奥罗卡利斯你不想被转化。]]></responseTooltip>
 					<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 					<effects><![CDATA[
 						[#pc.setNearestLocation(PLACE_TYPE_innoxia_fields_elis_amazon_camp_pathway)]
@@ -645,8 +645,8 @@
 					<availabilityConditional><![CDATA[[#aurokaris.isAttractedTo(pc)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Dominant sex]]></responseTitle>
-					<responseTooltip><![CDATA[Return Aurokaris's affections and get more intimate with her...]]></responseTooltip>
+					<responseTitle><![CDATA[支配性爱]]></responseTitle>
+					<responseTooltip><![CDATA[回应奥罗卡利斯的爱意并与她更加亲密……]]></responseTooltip>
 					<nextDialogue/>
 					<sexVariablesWithManager enabled="true">
 						<id><![CDATA[innoxia_elis_amazon_camp_aurokaris_sex]]></id>
@@ -671,8 +671,8 @@
 					<availabilityConditional><![CDATA[[#aurokaris.isAttractedTo(pc)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Submissive sex]]></responseTitle>
-					<responseTooltip><![CDATA[Return Aurokaris's affections and let her get more intimate with you...]]></responseTooltip>
+					<responseTitle><![CDATA[服从性爱]]></responseTitle>
+					<responseTooltip><![CDATA[回应奥罗卡利斯的爱意并让她与你更加亲密……]]></responseTooltip>
 					<nextDialogue/>
 					<sexVariablesWithManager enabled="true">
 						<id><![CDATA[innoxia_elis_amazon_camp_aurokaris_sex]]></id>
@@ -698,8 +698,8 @@
 					<availabilityConditional><![CDATA[[#aurokaris.isAttractedTo(pc)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Make an excuse to leave and tell Aurokaris that perhaps you'll be back again to take things further another time.]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[找个借口离开并告诉奥罗卡利斯，也许下次你还会再来，把事情做得更好。]]></responseTooltip>
 					<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 					<effects><![CDATA[
 						[#pc.setNearestLocation(PLACE_TYPE_innoxia_fields_elis_amazon_camp_pathway)]
@@ -729,8 +729,8 @@
 		<preParsingEffects><![CDATA[
 			[#flags.setFlag(FLAG_innoxia_amazon_camp_aurokaris_tent_had_sex, true)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Aurokaris has had enough, and so brings the sex to an end...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[奥罗卡利斯已经被满足了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/amazon_camp">AUROKARIS_TENT_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -739,8 +739,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Aurokaris and leave her to get some rest.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[向奥罗卡利斯道别，让她好好休息。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#pc.setNearestLocation(PLACE_TYPE_innoxia_fields_elis_amazon_camp_pathway)]
@@ -762,8 +762,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Decide against entering Ursa's tent and head back into the Amazons' camp...]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[决定不进入乌萨的帐篷，返回亚马逊人营地……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'QUEEN_BACK'))]
@@ -773,12 +773,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_daily_interaction))
-						Ursa has already seen you today, and has no more time to spare until tomorrow at the earliest.
+						乌萨今天已经见过你了，最早也要明天才能有空。
 					#ELSE
-						Approach the guards and tell them that you'd like to enter Ursa's tent.
+						接近守卫，告诉他们你想进入乌萨的帐篷。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -798,12 +798,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_met)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Lunexis]]></responseTitle>
+				<responseTitle><![CDATA[露内克西丝]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isQuestFailed(QUEST_LINE_SIDE_LUNEXIS_ESCAPE))
-						After revealing Lunexis's plans to Meraxis, Ursa has banned you from seeing the demonic centauress.
+						你向梅拉克西丝坦白了露内克西丝的计划后，乌萨便禁止你与恶魔半人马再见面。
 					#ELSE
-						Tell the guards that you're here to visit Lunexis.
+						告诉守卫，你是来看露内克西丝的。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -826,8 +826,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Ursa as she shows you to where Lunexis is being held.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟随乌萨，她会带你去关押露内克西丝的地方。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_queen_initial_entry_lunexis]]></nextDialogue>
 				<effects><![CDATA[
 					[#lunexis.applyEnslavedClothingChange()]
@@ -847,8 +847,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Return]]></responseTitle>
-				<responseTooltip><![CDATA[Go with Ursa and exit the tent.]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[和乌萨一起离开帐篷。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_queen_initial_entry_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_amazon_camp, PLACE_TYPE_innoxia_fields_elis_amazon_camp_queen)]
@@ -885,8 +885,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Submit to Ursa and let her fuck you.]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[屈服于乌萨，让她上你。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_amazon_camp_ursa_sex]]></id>
@@ -910,8 +910,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Ursa that you're not interested in sex.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉乌萨，你不想做爱。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_queen_entry_sex_declined]]></nextDialogue>
 			</response>
 		</responses>
@@ -926,8 +926,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Ursa's command and strip so that she can fuck you.]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[听从乌萨的命令，脱光衣服，让她操你。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_amazon_camp_ursa_sex]]></id>
@@ -951,16 +951,16 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Refuse again]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Ursa that you're <i>really</i> not interested in having sex right now.]]></responseTooltip>
+				<responseTitle><![CDATA[再次拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉乌萨你现在<i>真的</i>不想做爱。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_queen_entry_sex_declined_end]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 	
 	<scene id="queen_entry_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Ursa has had enough, and so brings the sex to an end...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[乌萨已经被满足了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/amazon_camp">QUEEN_ENTRY_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -977,8 +977,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[As Ursa is too busy to give you any more of her time today, all that's left is for you to leave...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[乌萨今天太忙了，没时间陪你，于是你只好转身离去……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_amazon_camp_ursa_daily_interaction, true)]
@@ -990,12 +990,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Amazons]]></responseTitle>
+				<responseTitle><![CDATA[亚马逊人]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_talk_amazons))
-						You've already asked Ursa about the history and customs of the Amazons...
+						你已经向乌萨打听过亚马逊人的历史和习俗了……
 					#ELSE
-						Ask Ursa about the history and customs of the Amazons.
+						向乌萨了解亚马逊人的历史和习俗。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1013,12 +1013,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Queen]]></responseTitle>
+				<responseTitle><![CDATA[女王]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_talk_queen))
-						You've already asked Ursa how she came to be the queen of the Amazons...
+						你已经问过乌萨她是如何成为亚马逊女王了……
 					#ELSE
-						Ask Ursa how she came to be the queen of the Amazons.
+						问尔萨她是如何成为亚马逊女王的。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1036,12 +1036,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Lunette]]></responseTitle>
+				<responseTitle><![CDATA[露内特]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_talk_lunette))
-						You've already asked Ursa what she thinks Lunette's next move will be...
+						你已经问过乌萨她认为露内特的下一步会做什么……
 					#ELSE
-						Ask Ursa what she thinks Lunette's next move will be.
+						问问乌萨觉得露内特下一步会怎么做。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1059,12 +1059,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Aurokaris]]></responseTitle>
+				<responseTitle><![CDATA[奥罗卡利斯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_ursa_talk_aurokaris))
-						You've already asked Ursa how well she knows Aurokaris and what she thinks of her...
+						你已经问过乌萨对奥罗卡利斯了解多少，有什么看法……
 					#ELSE
-						Ask Ursa how well she knows Aurokaris and what she thinks of her.
+						问问乌萨对奥罗卡利斯了解多少，对她有什么看法。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1104,12 +1104,12 @@
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_surrendered)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Interrogate]]></responseTitle>
+					<responseTitle><![CDATA[询问]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_questioned))
-							You've already tried to ask Lunexis about what Lunette's plans might be, and she's proven to be completely uncooperative...
+							你已经试着向露内克西丝询问露内特的计划，但事实证明她完全不合作……
 						#ELSE
-							Ask Lunexis what Lunette's plans might be...
+							问问露内克西丝，露内特会有什么计划……
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -1127,20 +1127,20 @@
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_surrendered)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA['Interrogate']]></responseTitle>
-					<responseTooltip><![CDATA[Try to get Lunexis to answer your questions by getting her turned on.]]></responseTooltip>
+					<responseTitle><![CDATA[“询问”]]></responseTitle>
+					<responseTooltip><![CDATA[通过让露内克西丝兴奋来让她回答你的问题。]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_sexual]]></nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_surrendered)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Pat her]]></responseTitle>
+					<responseTitle><![CDATA[拍她]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_humiliated))
-							You've already humiliated Lunexis by patting her and telling her that she's a good girl.
+							你已经羞辱过露内克西丝，用手拍她，告诉她她是个好女孩了。
 						#ELSE
-							Humiliate Lunexis by patting her and telling her that she's a good girl.
+							你成功羞辱了露内克西丝，你拍拍她，告诉她她是个好女孩。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -1158,8 +1158,8 @@
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_amazon_camp_lunexis_surrendered)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Not wanting to do anything further with Lunexis, you take your leave...]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[不想再和露内克西丝做任何事了，你离开了……]]></responseTooltip>
 					<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 					<effects><![CDATA[
 						[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_LEAVE'))]
@@ -1170,12 +1170,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
+				<responseTitle><![CDATA[服从]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						Obey Lunexis's command and get her cock hard with your mouth while she thinks about how she wants to fuck you...
+						服从露内克西丝的命令，用你的嘴让她的鸡巴硬起来，同时让她想想她想怎么操你……
 					#ELSE
-						Obey Lunexis's command and get her cock hard with your [pc.hands] while she thinks about how she wants to fuck you...
+						服从露内克西丝的命令，用你的[pc.hands]让她的鸡巴硬起来，同时让她想想她想怎么操你……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_submitted_start]]></nextDialogue>
@@ -1208,8 +1208,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Kiss nipples]]></responseTitle>
-				<responseTooltip><![CDATA[Kiss and pinch Lunexis's nipples to get her turned on.]]></responseTooltip>
+				<responseTitle><![CDATA[亲吻乳头]]></responseTitle>
+				<responseTooltip><![CDATA[亲吻和捏弄露内克西丝的乳头，让她兴奋起来。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_sexual_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_SEXUAL_NIPPLES'))]
@@ -1222,8 +1222,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Pussy play]]></responseTitle>
-				<responseTooltip><![CDATA[Stroke Lunexis's pussy and play with her labia to get her horny.]]></responseTooltip>
+				<responseTitle><![CDATA[穴交]]></responseTitle>
+				<responseTooltip><![CDATA[抚摸露内克西丝的小穴，玩弄她的阴唇，让她欲火焚身。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_sexual_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_SEXUAL_PUSSY'))]
@@ -1236,8 +1236,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Stroke cock]]></responseTitle>
-				<responseTooltip><![CDATA[Stroke Lunexis's cock to get her worked up and desperate for sex.]]></responseTooltip>
+				<responseTitle><![CDATA[轻抚肉棒]]></responseTitle>
+				<responseTooltip><![CDATA[抚摸露内克西丝的阴茎，让她兴奋起来，渴望性爱。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_sexual_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_SEXUAL_COCK'))]
@@ -1251,8 +1251,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Anal play]]></responseTitle>
-				<responseTooltip><![CDATA[Tease Lunexis's puffy doughnut and plant a couple of kisses on her ass to get her aroused.]]></responseTooltip>
+				<responseTitle><![CDATA[肛交]]></responseTitle>
+				<responseTooltip><![CDATA[挑逗露内克西丝的肉感肛门，在她的屁股上亲吻几下，让她兴奋起来。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_sexual_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_SEXUAL_ASS'))]
@@ -1265,8 +1265,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Changing your mind, you decide to take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你改变了主意，决定离开……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_SEXUAL_LEAVE'))]
@@ -1289,8 +1289,8 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[0]]></index>
-					<responseTitle><![CDATA[Finished]]></responseTitle>
-					<responseTooltip><![CDATA[Not wanting to do anything further with Lunexis, you decide to leave her pent up and begging for sex and take your leave...]]></responseTooltip>
+					<responseTitle><![CDATA[结束]]></responseTitle>
+					<responseTooltip><![CDATA[你不想再和露内克西丝做任何事，决定让她憋在心里乞求性爱，然后告辞……]]></responseTooltip>
 					<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 					<effects><![CDATA[
 						[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_SEXUAL_END_LEAVE'))]
@@ -1301,8 +1301,8 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Dominate]]></responseTitle>
-					<responseTooltip><![CDATA[Give Lunexis what she wants by dominantly fucking her.]]></responseTooltip>
+					<responseTitle><![CDATA[占据主导地位]]></responseTitle>
+					<responseTooltip><![CDATA[给露内克西丝她想要的，霸道地干她。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1329,16 +1329,16 @@
 					<availabilityConditional><![CDATA[[#!pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Eat her out]]></responseTitle>
-					<responseTooltip><![CDATA[As you're unable to gain access to your mouth, you can't perform oral sex on Lunexis's pussy...]]></responseTooltip>
+					<responseTitle><![CDATA[给她口]]></responseTitle>
+					<responseTooltip><![CDATA[由于你无法使用口腔，因此你无法对露内克西丝的小穴进行口交……]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Eat her out]]></responseTitle>
-					<responseTooltip><![CDATA[Give Lunexis what she wants by performing oral sex on her hot, wet horse-cunt.]]></responseTooltip>
+					<responseTitle><![CDATA[给她口]]></responseTitle>
+					<responseTooltip><![CDATA[给露内克西丝口交，如她愿地为她湿热的马屄口交。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1374,12 +1374,12 @@
 					<availabilityConditional><![CDATA[[#!pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Fuck pussy]]></responseTitle>
+					<responseTitle><![CDATA[操穴]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(!pc.hasPenis())
-							As you don't have a penis, you can't fuck Lunexis's pussy...
+							因为你没有阴茎，所以你不能操露内克西丝的小穴……
 						#ELSE
-							As you're unable to gain access to your penis, you can't fuck Lunexis's pussy...
+							由于你无法触碰到阴茎，你也就无法操露内克西丝的小穴……
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1388,8 +1388,8 @@
 					<availabilityConditional><![CDATA[[#pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Fuck pussy]]></responseTitle>
-					<responseTooltip><![CDATA[Give Lunexis what she wants by filling her wet pussy with your cock.]]></responseTooltip>
+					<responseTitle><![CDATA[操穴]]></responseTitle>
+					<responseTooltip><![CDATA[用你的大肉棒插入湿哒哒的小穴，给露内克西丝她想要的。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1425,16 +1425,16 @@
 					<availabilityConditional><![CDATA[[#!pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Rimjob]]></responseTitle>
-					<responseTooltip><![CDATA[As you're unable to gain access to your mouth, you can't perform anilingus on Lunexis...]]></responseTooltip>
+					<responseTitle><![CDATA[舔肛]]></responseTitle>
+					<responseTooltip><![CDATA[你无法控制你的嘴，你不能给露内克西丝吻肛……]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Rimjob]]></responseTitle>
-					<responseTooltip><![CDATA[Give Lunexis what she wants by performing oral sex on her hot, puffy asshole.]]></responseTooltip>
+					<responseTitle><![CDATA[舔肛]]></responseTitle>
+					<responseTooltip><![CDATA[让露内克西丝得到她想要的，为她那火热、肿胀的屁眼口交。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1470,12 +1470,12 @@
 					<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && (!pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true))]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Fuck ass]]></responseTitle>
+					<responseTitle><![CDATA[操后穴]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(!pc.hasPenis())
-							As you don't have a penis, you can't fuck Lunexis's ass...
+							你没有阴茎，你不能操露内克西丝的菊花……
 						#ELSE
-							As you're unable to gain access to your penis, you can't fuck Lunexis's ass...
+							你无法控制自己的阴茎，你不能操露内克西丝的菊花……
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1484,8 +1484,8 @@
 					<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Fuck ass]]></responseTitle>
-					<responseTooltip><![CDATA[Give Lunexis what she wants by filling her ass with your cock.]]></responseTooltip>
+					<responseTitle><![CDATA[操后穴]]></responseTitle>
+					<responseTooltip><![CDATA[用你的大肉棒插入菊花，给露内克西丝她想要的。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1520,8 +1520,8 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[6]]></index>
-					<responseTitle><![CDATA[Submit]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck you in any manner she wants.]]></responseTooltip>
+					<responseTitle><![CDATA[顺从]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她想到的任何方式随心所欲地操你。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<requiredFetishes>
@@ -1552,16 +1552,16 @@
 					<availabilityConditional><![CDATA[[#!pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[7]]></index>
-					<responseTitle><![CDATA[Face-fucked]]></responseTitle>
-					<responseTooltip><![CDATA[As you're unable to gain access to your mouth, you cannot give Lunexis a blowjob...]]></responseTooltip>
+					<responseTitle><![CDATA[喉交]]></responseTitle>
+					<responseTooltip><![CDATA[你的嘴被限制，没法给露内克西丝口交……]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[7]]></index>
-					<responseTitle><![CDATA[Face-fucked]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck your throat with her massive, horse-like cock.]]></responseTooltip>
+					<responseTitle><![CDATA[喉交]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她巨大如马的鸡巴给你深喉。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<requiredFetishes>
@@ -1601,12 +1601,12 @@
 					<availabilityConditional><![CDATA[[#!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[8]]></index>
-					<responseTitle><![CDATA[Offer pussy]]></responseTitle>
+					<responseTitle><![CDATA[献上小穴]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(!pc.hasVagina())
-							As you don't have a pussy, you can't get vaginally fucked by Lunexis...
+							你没有小穴，没法被露内克西丝操小穴……
 						#ELSE
-							As you're unable to gain access to your pussy, you can't get vaginally fucked by Lunexis...
+							你的小穴被限制，没法被露内克西丝操小穴……
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1615,8 +1615,8 @@
 					<availabilityConditional><![CDATA[[#pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[8]]></index>
-					<responseTitle><![CDATA[Offer pussy]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck your wet pussy with her massive, horse-like cock.]]></responseTooltip>
+					<responseTitle><![CDATA[献上小穴]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她巨大如马的鸡巴操你湿润的小穴。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<requiredFetishes>
@@ -1656,16 +1656,16 @@
 					<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && !pc.isAbleToAccessCoverableArea(CA_ANUS, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[9]]></index>
-					<responseTitle><![CDATA[Offer ass]]></responseTitle>
-					<responseTooltip><![CDATA[As you're unable to gain access to your ass, you can't get anally fucked by Lunexis...]]></responseTooltip>
+					<responseTitle><![CDATA[献上屁股]]></responseTitle>
+					<responseTooltip><![CDATA[你的屁股被限制，没法让露内克西丝操你的屁穴……]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[9]]></index>
-					<responseTitle><![CDATA[Offer ass]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck your ass with her massive, horse-like cock.]]></responseTooltip>
+					<responseTitle><![CDATA[献上屁股]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她巨大如马的鸡巴操你。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<requiredFetishes>
@@ -1704,8 +1704,8 @@
 	</scene>
 	
 	<scene id="lunexis_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough for now, so [pc.step] away from Lunexis and bring an end to the 'interrogation'...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你觉得足够了，所以你[pc.step]远离露内克西丝，结束了这场“审讯”……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/amazon_camp">LUNEXIS_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1714,8 +1714,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Having had your fun, you leave Lunexis to recover...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你玩够了，离开露内克西丝……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_AFTER_SEX_LEAVE'))]
@@ -1726,8 +1726,8 @@
 	</scene>
 	
 	<scene id="lunexis_after_sex_submitted">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Lunexis has had enough for now and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[露内克西丝已经被满足了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/amazon_camp">LUNEXIS_AFTER_SEX_SUBMITTED</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1736,12 +1736,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isBadEndsEnabled())
-						You ignore Lunexis's command and take your leave...
+						你无视露内克西丝的命令，离开了……
 					#ELSE
-						Having finished with her, you do as Lunexis says and take your leave...
+						和她谈完后，你按露内克西丝的吩咐离开了……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
@@ -1754,12 +1754,12 @@
 				<availabilityConditional><![CDATA[[#game.isBadEndsEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
+				<responseTitle><![CDATA[服从]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						Obey Lunexis's command and clean her cock with your mouth while she thinks about what to do with you...
+						服从露内克西丝的命令，用你的嘴清理她的肉棒，同时她会考虑如何处置你……
 					#ELSE
-						Obey Lunexis's command and jerk her off while she thinks about what to do with you...
+						服从露内克西丝的命令，给她做手艺活，同时她会考虑如何处置你……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_after_sex_submitted_obey]]></nextDialogue>
@@ -1783,8 +1783,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to pledge yourself completely to Lunexis and take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝将自己完全献给露内克西丝，然后离开……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_AFTER_SEX_SUBMITTED_OBEYED_LEAVE'))]
@@ -1795,10 +1795,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour><![CDATA[GENERIC_BAD]]></colour>
-				<responseTitle><![CDATA[Surrender]]></responseTitle>
+				<responseTitle><![CDATA[投降]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Completely surrender to Lunexis and agree to become her obedient cock-sleeve, with the promise of being kept as one of her personal slaves once she's free.
-					<br/>[style.italicsBad(You will decide to always submit to Lunexis after taking this decision.)]
+					完全屈服于露内克西丝，同意成为她听话的鸡巴套并成为她的私人奴隶。
+					<br/>[style.italicsBad(你将决定是否总是向露内克西丝屈服。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_after_sex_submitted_obey_surrender]]></nextDialogue>
 				<effects><![CDATA[
@@ -1821,12 +1821,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
+				<responseTitle><![CDATA[听]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						Continue to suck Lunexis's cock as she tells you her plan...
+						在她告诉你计划的时候继续嗦露内克西丝的牛子……
 					#ELSE
-						Continue to stroke Lunexis's cock as she tells you her plan...
+						在她告诉你计划的时候继续摸露内克西丝的肉棒……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_amazon_camp_lunexis_after_sex_submitted_obey_surrender_end]]></nextDialogue>
@@ -1847,8 +1847,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Lunexis that you'll do as she commands and take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[告诉露内克西丝你会听她的话离开……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_AFTER_SEX_SUBMITTED_OBEYED_SURRENDER_END_LEAVE'))]
@@ -1873,8 +1873,8 @@
 					<availabilityConditional><![CDATA[[#flags.getSavedLong('lunexis_sex_choice')==1]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Submit]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck you in any manner she wants.]]></responseTooltip>
+					<responseTitle><![CDATA[顺从]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她想到的任何方式随心所欲地操你。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1901,8 +1901,8 @@
 					<availabilityConditional><![CDATA[[#flags.getSavedLong('lunexis_sex_choice')==4]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Face-fucked]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck your throat with her massive, horse-like cock.]]></responseTooltip>
+					<responseTitle><![CDATA[喉交]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她巨大如马的鸡巴给你深喉。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1938,8 +1938,8 @@
 					<availabilityConditional><![CDATA[[#flags.getSavedLong('lunexis_sex_choice')==2]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Present pussy]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck your wet pussy with her massive, horse-like cock.]]></responseTooltip>
+					<responseTitle><![CDATA[露出小穴]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她巨大如马的鸡巴操你湿润的小穴。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -1975,8 +1975,8 @@
 					<availabilityConditional><![CDATA[[#flags.getSavedLong('lunexis_sex_choice')==3]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Present ass]]></responseTitle>
-					<responseTooltip><![CDATA[Obey Lunexis and submit to her, allowing her to fuck your ass with her massive, horse-like cock.]]></responseTooltip>
+					<responseTitle><![CDATA[露出屁股]]></responseTitle>
+					<responseTooltip><![CDATA[顺从露内克西丝，臣服于她，让她用她巨大如马的鸡巴操你。]]></responseTooltip>
 					<nextDialogue/>
 					<effects/>
 					<sexVariablesWithManager enabled="true">
@@ -2019,8 +2019,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Obey Lunexis and take your leave...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[服从露内克西丝的命令，离开这里……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_amazon_camp_pathway"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/amazon_camp', 'LUNEXIS_SUBMITTED_START_AFTER_SEX_LEAVE'))]

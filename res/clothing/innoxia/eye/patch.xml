@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>200</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[eye-patch]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[eye-patches]]></namePlural>
-		<description><![CDATA[A small patch, made from cloth, which is attached to an elastic band and designed to be worn around the head.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[眼罩]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[眼罩]]></namePlural>
+		<description><![CDATA[一条由布制成的小贴片，附在松紧带上，设计用来戴在头上。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>
@@ -47,27 +46,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(fasten)] the eye patch around [npc.her] head, before moving it into place to cover [npc.her] [npc.eye].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(fasten)] the eye patch around [npc2.namePos] head, before moving it into place to cover [npc2.her] [npc2.eye].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(fasten)] the eye patch around [npc2.namePos] head, before moving it into place to cover [npc2.her] [npc2.eye].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把眼罩在[npc.her]的头部扣紧，然后拉下盖上[npc.her]的[npc.eye]。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]把眼罩在[npc2.namePos]的头部扣紧，然后拉下盖上[npc2.her]的[npc2.eye]。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地把眼罩在[npc2.namePos]的头部扣紧，然后拉下盖上[npc2.her]的[npc2.eye]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] eye patch.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] eye patch.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] eye patch and roughly [npc.verb(pull)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]摘下[npc.her]的眼罩。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]摘下[npc2.namePos]的眼罩。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的眼罩并粗暴地扯下来。
+		]]></otherRough>
 	</displacementText>
   
 </clothing>

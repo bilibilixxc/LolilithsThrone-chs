@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>NoStepOnSnek_octopus</race>
 	<colour>NoStepOnSnek_octopus</colour>
@@ -27,38 +27,38 @@
 	<iconName displaySize="80">octopus</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>octopus</bookIconName>
-	<bookName>Heavily Armed Suckers</bookName>
+	<bookName><![CDATA[全副武装的吸盘]]></bookName>
 	<basicDescriptionId>OCTOPUS_BASIC</basicDescriptionId>
 	<advancedDescriptionId>OCTOPUS_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[octopus-morph]]></name>
-			<namePlural><![CDATA[octopus-morphs]]></namePlural>
-			<singularMaleName><![CDATA[octopus-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[octopus-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[octopus-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[octopus-girls]]></pluralFemaleName>
+			<name><![CDATA[章鱼化形]]></name>
+			<namePlural><![CDATA[章鱼化形]]></namePlural>
+			<singularMaleName><![CDATA[章鱼男]]></singularMaleName>
+			<singularFemaleName><![CDATA[章鱼女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[章鱼男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[章鱼女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
-	<description><![CDATA[An anthropomorphic octopus, known as an 'octopus-morph'.]]></description>
+	<description><![CDATA[一种人形的章鱼，被称为“章鱼化形”。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[kraken]]></name>
-			<namePlural><![CDATA[krakens]]></namePlural>
-			<singularMaleName><![CDATA[kraken]]></singularMaleName>
-			<singularFemaleName><![CDATA[kraken]]></singularFemaleName>
-			<pluralMaleName><![CDATA[krakens]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[krakens]]></pluralFemaleName>
+			<name><![CDATA[克拉肯]]></name>
+			<namePlural><![CDATA[克拉肯]]></namePlural>
+			<singularMaleName><![CDATA[克拉肯]]></singularMaleName>
+			<singularFemaleName><![CDATA[克拉肯]]></singularFemaleName>
+			<pluralMaleName><![CDATA[克拉肯]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[克拉肯]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[octopus]]></feralName>
-		<feralNamePlural><![CDATA[octopuses]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[octopus]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[octopus]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[octopuses]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[octopuses]]></feralPluralFemaleName>
+		<feralName><![CDATA[章鱼]]></feralName>
+		<feralNamePlural><![CDATA[章鱼]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[章鱼]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[章鱼]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[章鱼]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[章鱼]]></feralPluralFemaleName>
 		<legConfiguration>CEPHALOPOD</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>40</size>
@@ -71,7 +71,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] octopus-like body is quite strong, and [npc.she] [npc.has] an increased affinity for the arcane.
+		[npc.NamePos]章鱼般的身体相当强壮，[npc.she]增长了奥术亲和力。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="10">MAJOR_PHYSIQUE</attribute>

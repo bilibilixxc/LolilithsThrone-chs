@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Outfits are a way to make randomly-generated NPCs' outfit generation less chaotic. -->
 <outfit>
 
 	<coreAttributes>
 		<!-- Names are only used for debugging purposes. Still, in case the name is used elsewhere later on, it's best to give your outfit a suitable (lowercase) name.-->
-		<name><![CDATA[SWORD Enforcer dress uniform]]></name>
+		<name><![CDATA[SWORD执法者常服]]></name>
 		
 		<!-- Again, descriptions are only used for debugging purposes. Still, in case the name is used elsewhere later on, it's best to give your outfit a suitable description.-->
-		<description><![CDATA[Enforcer dress uniform with SWORD colours.]]></description>
+		<description><![CDATA[执法者SWORD部门颜色的常服。]]></description>
 		
 		<!-- The femininity needed for someone to generate this outfit. MASCULINE, ANDROGYNOUS, and FEMININE are the three acceptable values. ANDROGYNOUS means anyone can use this outfit, while the other two are self-explanatory.-->
 		<femininity>ANDROGYNOUS</femininity>
@@ -100,7 +100,7 @@
 			
 			<!--A tie always-->
 			<uniqueClothing>
-				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="NECK_TIE" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="NECK_TIE" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Dress jackets during SPRING or AUTUMN-->
@@ -146,98 +146,98 @@
 			<!--Greatcoats when weather is SNOW-->
 			<uniqueClothing>
 				<conditional><![CDATA[condWinter && condSnow]]></conditional>
-				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfgreatcoat" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfgreatcoat" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Sweaters during WINTER when weather is not SNOW-->
 			<uniqueClothing>
 				<conditional><![CDATA[condWinter && (!condSnow)]]></conditional>
-				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_milsweater_crewen" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_milsweater_crewen" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Long sleeved shirts when it's not SUMMER-->
 			<!--Feminine long sleeved shirt -->
 			<uniqueClothing>
 				<conditional><![CDATA[(condSpringOrAutumn || condWinter) && condFeminine]]></conditional>
-				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_flsldshirt" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_flsldshirt" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Masculine long sleeved shirt-->
 			<uniqueClothing>
 				<conditional><![CDATA[(condSpringOrAutumn || condWinter) && (!condFeminine)]]></conditional>
-				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_lsldshirt" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_lsldshirt" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Short sleeved shirts when it's SUMMER-->
 			<!--Feminine short sleeved shirt -->
 			<uniqueClothing>
 				<conditional><![CDATA[condSummer && condFeminine]]></conditional>
-				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_fssldshirt" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_fssldshirt" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Masculine short sleeved shirt -->
 			<uniqueClothing>
 				<conditional><![CDATA[condSummer && (!condFeminine)]]></conditional>
-				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_ssldshirt" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_GREY" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_ptrlequipset_ssldshirt" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Dress belt when jackets are worn-->
 			<uniqueClothing>
 				<conditional><![CDATA[condSpringOrAutumn]]></conditional>
-				<clothing colour="CLOTHING_DESATURATED_BROWN" colourSecondary="CLOTHING_DESATURATED_BROWN" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfdbelt" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_DESATURATED_BROWN" colourSecondary="CLOTHING_DESATURATED_BROWN" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfdbelt" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Stable belt when only short sleeved shirts are on-->
 			<uniqueClothing>
 				<conditional><![CDATA[condSummer]]></conditional>
-				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfstbelt" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfstbelt" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Feminine pants or skirt, 66% chance of skirt during SPRING, SUMMER, and AUTUMN, pants always selected during WINTER-->
 			<uniqueClothing>
 				<conditional><![CDATA[condChance66 && (condSpringOrAutumn || condSummer) && condFeminine]]></conditional>
-				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfskirt" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfskirt" isDirty="false"/>
 			</uniqueClothing>
 			
 			<uniqueClothing>
 				<conditional><![CDATA[((!condChance66) || condWinter) && condFeminine]]></conditional>
-				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfdslacks" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfdslacks" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Masculine pants-->
 			<uniqueClothing>
 				<conditional><![CDATA[!condFeminine]]></conditional>
-				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfdslacks" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_GREY" colourTertiary="CLOTHING_GOLD" enchantmentKnown="true" id="dsg_eep_servequipset_enfdslacks" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Hosery always goes with a skirt-->
 			<uniqueClothing>
 				<conditional><![CDATA[condChance66 && (condSpringOrAutumn || condSummer) && condFeminine]]></conditional>
-				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_sock_pantyhose" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_sock_pantyhose" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Socks always go with pants-->
 			<uniqueClothing>
 				<conditional><![CDATA[(!condFeminine) || (((!condChance66) || condWinter) && condFeminine)]]></conditional>
-				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_sock_socks" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_sock_socks" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Feminine pumps-->
 			<uniqueClothing>
 				<conditional><![CDATA[condFeminine && !(condWinter && condSnow)]]></conditional>
-				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="dsg_eep_servequipset_enfpumps" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="dsg_eep_servequipset_enfpumps" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Masculine shoes-->
 			<uniqueClothing>
 				<conditional><![CDATA[(!condFeminine) && !(condWinter && condSnow)]]></conditional>
-				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_foot_mens_smart_shoes" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_foot_mens_smart_shoes" isDirty="false"/>
 			</uniqueClothing>
 			
 			<!--Jackboots always goes with a greatcoat-->
 			<uniqueClothing>
 				<conditional><![CDATA[condWinter && condSnow]]></conditional>
-				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="dsg_eep_servequipset_enfjackboots" isDirty="false"></clothing>
+				<clothing colour="CLOTHING_BLACK" enchantmentKnown="true" id="dsg_eep_servequipset_enfjackboots" isDirty="false"/>
 			</uniqueClothing>
 			
 		</guaranteedClothingEquips>

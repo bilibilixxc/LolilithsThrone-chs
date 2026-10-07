@@ -71,8 +71,8 @@ public class Belle extends NPC {
 	}
 	
 	public Belle(boolean isImported) {
-		super(isImported, new NameTriplet("Belle"), "Lamb",
-				"A young, white-woolen sheep-girl, who works as a masseuse and prostitute at Elis's spa; 'Woolly Heaven'.",
+		super(isImported, new NameTriplet("贝儿"), "拉姆",
+				"一个年轻，白羊毛的绵羊女。在伊利斯的水疗中心“绵绵天堂”中作为按摩师兼妓女而工作。",
 				19, Month.MARCH, 3, 
 				10,
 				Gender.F_V_B_FEMALE, Subspecies.getSubspeciesFromId("innoxia_sheep_subspecies_sheep"), RaceStage.GREATER,

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>0</value>
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[asshole web-seal]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[asshole web-seals]]></namePlural>
-    <description><![CDATA[A thick layer of sticky spider-webbing has been shot all over [npc.namePos] [npc.asshole+], completely sealing it and preventing it from being penetrated!]]></description>
+    <determiner><![CDATA[一层]]></determiner>
+    <name><![CDATA[覆盖肛门的蛛网]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[覆盖肛门的蛛网]]></namePlural>
+    <description><![CDATA[[npc.namePos][npc.asshole+]上射满了一层厚厚的粘稠蛛网，将其完全封闭，无法穿透！]]></description>
 
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
@@ -54,27 +53,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(use)] [npc.her] spinneret to quickly shoot a thick binding of spider-webbing all over [npc.her] [npc.asshole+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(use)] [npc.her] spinneret to quickly shoot a thick binding of spider-webbing all over [npc2.namePos] [npc2.asshole+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] impatiently [npc.verb(use)] [npc.her] spinneret to quickly shoot a thick binding of spider-webbing all over [npc2.namePos] [npc2.asshole+].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]用[npc.her]的丝囊快速的在[npc.her][npc.asshole+]上吐丝并织成一层厚厚的蜘蛛网。
+]]></self>
+    <other><![CDATA[
+[npc.Name]用[npc.her]的丝囊快速的在[npc2.namePos][npc2.asshole+]上吐丝并织成一层厚厚的蜘蛛网。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]急促的用[npc.her]的丝囊快速的在[npc2.namePos][npc2.asshole+]上吐丝并织成一层厚厚的蜘蛛网。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(tear)] off the webbing which was covering [npc.her] [npc.asshole] and [npc.verb(throw)] it away.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(tear)] off the webbing which was covering [npc2.namePos] [npc2.asshole] and [npc.verb(throw)] it away.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] impatiently [npc.verb(tear)] off the webbing which was covering [npc2.namePos] [npc2.asshole] and [npc.verb(throw)] it away.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]摘下[npc.her][npc.asshole]的蛛网并扔到了一边。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将盖在[npc2.namePos][npc2.asshole]的蜘蛛网扯下来并扔在一边。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]急躁的将盖在[npc2.namePos]的[npc2.asshole]的蜘蛛网扯下来并扔在一边。
+]]></otherRough>
   </displacementText>
 
 

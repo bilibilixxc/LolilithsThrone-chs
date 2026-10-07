@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Main shop dialogues: -->
@@ -31,8 +31,8 @@
 				<availabilityConditional><![CDATA[[#pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)!=QUEST_DOLL_FACTORY_7A && pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)!=QUEST_DOLL_FACTORY_7B]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit Lovienne's Luxuries and head back out into Demon Home.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开洛维耶纳奢侈品店，回到恶魔之家的街道上。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="DOMINION_DEMON_HOME_SEX_SHOP"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -45,16 +45,16 @@
 				<availabilityConditional><![CDATA[[#pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)==QUEST_DOLL_FACTORY_7A]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Saellatrix as she explains what's happened.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[一边跟着赛拉特里克斯，一边听她介绍。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)==QUEST_DOLL_FACTORY_7B]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Saellatrix as she explains what's happened.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[一边跟着赛拉特里克斯，一边听她介绍。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish</nextDialogue>
 			</response>
 		</responses>
@@ -89,8 +89,8 @@
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Demo doll]]></responseTitle>
-					<responseTooltip><![CDATA[Take a closer look at the pink doll.]]></responseTooltip>
+					<responseTitle><![CDATA[演示玩偶]]></responseTitle>
+					<responseTooltip><![CDATA[仔细观察粉色玩偶。]]></responseTooltip>
 					<nextDialogue>innoxia_places_dominion_sex_shop_generic_display_demo_doll</nextDialogue>
 				</response>
 				<response>
@@ -98,30 +98,30 @@
 					<index><![CDATA[2]]></index>
 					<responseTitle><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_sex_shop_display_on))
-							Toys: [style.colourGood(On)]
+							性玩具：[style.colourGood(已开启)]
 						#ELSE
-							Toys: [style.colourBad(Off)]
+							性玩具：[style.colourBad(已关闭)]
 						#ENDIF
 					]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_sex_shop_display_on))
-							Press the button to turn the sex toys off.
+							按此按钮关闭性玩具。
 						#ELSE
-							Press the button to turn the sex toys on.
+							按此按钮开启性玩具。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue>innoxia_places_dominion_sex_shop_generic_display_trio_button</nextDialogue>
 					<effects><![CDATA[
-						[#flags.setFlag(FLAG_innoxia_sex_shop_display_on, !flags.hasFlag(FLAG_innoxia_sex_shop_display_on))]
-					]]></effects>
+					[#flags.setFlag(FLAG_innoxia_sex_shop_display_on, !flags.hasFlag(FLAG_innoxia_sex_shop_display_on))]
+				]]></effects>
 				</response>
 			<!-- Angelixx as slave: -->
 			<response>
 				<availabilityConditional><![CDATA[[#!angelixx.isDoll() && game.getCharactersPresent().contains(angelixx)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Angelixx]]></responseTitle>
-				<responseTooltip><![CDATA[Take a closer look at Angelixx.]]></responseTooltip>
+				<responseTitle><![CDATA[安吉莉克丝]]></responseTitle>
+				<responseTooltip><![CDATA[仔细观察安吉莉克丝。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display_angelixx</nextDialogue>
 			</response>
 			<!-- Angelixx/Fia as dolls: -->
@@ -129,16 +129,16 @@
 				<availabilityConditional><![CDATA[[#angelixx.isDoll() && game.getCharactersPresent().contains(angelixx)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Angelixx]]></responseTitle>
-				<responseTooltip><![CDATA[Take a closer look at Angelixx.]]></responseTooltip>
+				<responseTitle><![CDATA[安吉莉克丝]]></responseTitle>
+				<responseTooltip><![CDATA[仔细观察安吉莉克丝。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display_angelixx_doll</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#fia.isDoll() && game.getCharactersPresent().contains(fia)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Fia]]></responseTitle>
-				<responseTooltip><![CDATA[Take a closer look at Fia.]]></responseTooltip>
+				<responseTitle><![CDATA[菲亚]]></responseTitle>
+				<responseTooltip><![CDATA[仔细观察菲亚。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display_fia_doll</nextDialogue>
 			</response>
 		</responses>
@@ -163,12 +163,12 @@
 				<availabilityConditional><![CDATA[[#!pc.isAbleToAccessCoverableArea(CA_PENIS, true) || !pc.hasPenis()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
+				<responseTitle><![CDATA[口交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						As you don't have a penis, you cannot get a blowjob from the demo doll...
+						你没有阴茎，所以你不能让演示玩偶给你口交……
 					#ELSE
-						As you're unable to access your penis, you cannot get a blowjob from the demo doll...
+						你的阴茎无法被触碰，所以你不能让演示玩偶给你口交……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -177,9 +177,9 @@
 				<availabilityConditional><![CDATA[[#pc.isAbleToAccessCoverableArea(CA_PENIS, true) && pc.hasPenis()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
+				<responseTitle><![CDATA[口交]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Stick your [pc.cock+] down the demo doll's throat and fuck her face.
+					把你[pc.cock+]插进演示玩偶的喉咙，开始操她的脸。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<requiredFetishes>
@@ -225,12 +225,12 @@
 				<availabilityConditional><![CDATA[[#!pc.isAbleToAccessCoverableArea(CA_VAGINA, true) || !pc.hasVagina()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Cunnilingus]]></responseTitle>
+				<responseTitle><![CDATA[舔阴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina())
-						As you don't have a pussy, you cannot get a blowjob from the demo doll...
+						你没有小穴，不能让演示玩偶给你口交……
 					#ELSE
-						As you're unable to access your pussy, you cannot get a blowjob from the demo doll...
+						你的小穴被限制了，不能让演示玩偶给你口交……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -239,9 +239,9 @@
 				<availabilityConditional><![CDATA[[#pc.isAbleToAccessCoverableArea(CA_VAGINA, true) && pc.hasVagina()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Cunnilingus]]></responseTitle>
+				<responseTitle><![CDATA[舔阴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Press your [pc.pussy+] down against the demo doll's mouth and get her to eat you out.
+					把你[pc.pussy+]压向演示玩偶的脸，让她吃你的小穴。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<requiredFetishes>
@@ -280,8 +280,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Decide against using the demo doll...]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[决定不使用演示玩偶……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_DEMO_DOLL_BACK'))]
@@ -294,8 +294,8 @@
 		<preParsingEffects><![CDATA[
 			[#demoDoll.applyWash(true, true, null, 0)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, you [pc.step] away from the demo doll...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你觉得已经足够，你离开了演示玩偶……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">DISPLAY_DEMO_DOLL_BLOWJOB_END</content>
 		<secondsPassed><![CDATA[30]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -308,8 +308,8 @@
 			[#demoDoll.applyWash(true, true, null, 0)]
 			[#saellatrix.setLocation(pc)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, you [pc.step] away from the demo doll...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你觉得已经足够，你离开了演示玩偶……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">DISPLAY_DEMO_DOLL_BLOWJOB_END</content>
 		<secondsPassed><![CDATA[60]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -318,8 +318,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wager?]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Saellatrix what it is she's offering.]]></responseTooltip>
+				<responseTitle><![CDATA[下注？]]></responseTitle>
+				<responseTooltip><![CDATA[问问赛拉特里克斯她提供的是什么。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_DEMO_DOLL_BLOWJOB_END_OFFER_END'))]
@@ -334,8 +334,8 @@
 		<preParsingEffects><![CDATA[
 			[#demoDoll.applyWash(true, true, null, 0)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, you [pc.step] away from the demo doll...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你觉得已经足够，你离开了演示玩偶……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">DISPLAY_DEMO_DOLL_CUNNILINGUS_END</content>
 		<secondsPassed><![CDATA[30]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -353,8 +353,8 @@
 				<availabilityConditional><![CDATA[[#!angelixx.isDoll() && game.getCharactersPresent().contains(angelixx)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fuck Angelixx]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] forwards and fuck Angelixx...]]></responseTooltip>
+				<responseTitle><![CDATA[操安吉莉克丝]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.step]向前操安吉莉克丝……]]></responseTooltip>
 				<nextDialogue/>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_EXHIBITIONIST]]></fetish>
@@ -384,8 +384,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Decide against using Angelixx...]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[决定不使用安吉莉克丝……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_ANGELIXX_BACK'))]
@@ -398,8 +398,8 @@
 		<preParsingEffects><![CDATA[
 			[#angelixx.applyWash(true, true, null, 0)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, you [pc.step] away from Angelixx...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你觉得已经足够了，便从安吉莉克丝身边退开……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">DISPLAY_ANGELIXX_AFTER_SEX</content>
 		<secondsPassed><![CDATA[30]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -408,8 +408,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having had your fun with Angelixx, you wonder what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你和安吉莉克丝玩够了，退开思索下一步要做什么……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_ANGELIXX_AFTER_SEX_END'))]
@@ -427,8 +427,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] forwards and fuck Angelixx...]]></responseTooltip>
+				<responseTitle><![CDATA[操她]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.step]向前操安吉莉克丝……]]></responseTooltip>
 				<nextDialogue/>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_EXHIBITIONIST]]></fetish>
@@ -459,16 +459,16 @@
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()!=DN_SAELLATRIX_DOLL_CORE]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Body]]></responseTitle>
-					<responseTooltip><![CDATA[Use the D.E.C.K. that's plugged into Angelixx's neck port to customise her body.]]></responseTooltip>
+					<responseTitle><![CDATA[身体]]></responseTitle>
+					<responseTooltip><![CDATA[使用连接着安吉莉克丝颈部接口的D.E.C.K.来定制她的身体。]]></responseTooltip>
 					<nextDialogue>SAELLATRIX_DOLL_CORE</nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()==DN_SAELLATRIX_DOLL_CORE]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Body]]></responseTitle>
-					<responseTooltip><![CDATA[You're already using the D.E.C.K. that's plugged into Angelixx's neck port to customise her body...]]></responseTooltip>
+					<responseTitle><![CDATA[身体]]></responseTitle>
+					<responseTooltip><![CDATA[你已经在使用连接着安吉莉克丝颈部接口的D.E.C.K.来定制她的身体了……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 			<!-- TF pussy: -->
@@ -476,16 +476,16 @@
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()!=DN_SAELLATRIX_DOLL_PUSSY]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Pussy]]></responseTitle>
-					<responseTooltip><![CDATA[Use the D.E.C.K. that's plugged into Angelixx's neck port to customise her pussy.]]></responseTooltip>
+					<responseTitle><![CDATA[小穴]]></responseTitle>
+					<responseTooltip><![CDATA[使用连接着安吉莉克丝颈部接口的D.E.C.K.来定制她的小穴。]]></responseTooltip>
 					<nextDialogue>SAELLATRIX_DOLL_PUSSY</nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()==DN_SAELLATRIX_DOLL_PUSSY]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Pussy]]></responseTitle>
-					<responseTooltip><![CDATA[You're already using the D.E.C.K. that's plugged into Angelixx's neck port to customise her pussy...]]></responseTooltip>
+					<responseTitle><![CDATA[小穴]]></responseTitle>
+					<responseTooltip><![CDATA[你已经在使用连接着安吉莉克丝颈部接口的D.E.C.K.来定制她的小穴了……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 			<!-- TF ass: -->
@@ -493,28 +493,28 @@
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()!=DN_SAELLATRIX_DOLL_ASS]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Asshole]]></responseTitle>
-					<responseTooltip><![CDATA[Use the D.E.C.K. that's plugged into Angelixx's neck port to customise her ass.]]></responseTooltip>
+					<responseTitle><![CDATA[肛门]]></responseTitle>
+					<responseTooltip><![CDATA[使用连接着安吉莉克丝颈部接口的D.E.C.K.来定制她的屁股。]]></responseTooltip>
 					<nextDialogue>SAELLATRIX_DOLL_ASS</nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()==DN_SAELLATRIX_DOLL_ASS]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Asshole]]></responseTitle>
-					<responseTooltip><![CDATA[You're already using the D.E.C.K. that's plugged into Angelixx's neck port to customise her ass...]]></responseTooltip>
+					<responseTitle><![CDATA[肛门]]></responseTitle>
+					<responseTooltip><![CDATA[你已经在使用连接着安吉莉克丝颈部接口的D.E.C.K.来定制她的屁股了……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 			<!-- Reset TFs: -->
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Reset]]></responseTitle>
+					<responseTitle><![CDATA[重置]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(saellatrix.isAngelixxFiaDollBodyDefault(angelixx))
-							Angelixx's body already conforms to its default values... 
+							安吉莉克丝的身体已经是初始状态了…… 
 						#ELSE
-							Use the D.E.C.K. that's plugged into Angelixx's neck port to reset her body to its default appearance.
+							使用连接着安吉莉克丝颈部接口的D.E.C.K.来将她的身体重置为初始状态。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue stripContent="true"><![CDATA[
@@ -533,8 +533,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Decide against using Angelixx...]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[决定不使用安吉莉克丝……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_ANGELIXX_DOLL_BACK'))]
@@ -547,8 +547,8 @@
 		<preParsingEffects><![CDATA[
 			[#angelixx.applyWash(true, true, null, 0)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, you [pc.step] away from Angelixx...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你觉得已经足够了，便从安吉莉克丝身边退开……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">DISPLAY_ANGELIXX_DOLL_AFTER_SEX</content>
 		<secondsPassed><![CDATA[30]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -557,8 +557,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having had your fun with Angelixx, you wonder what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你和安吉莉克丝玩够了，退开思索下一步要做什么……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_ANGELIXX_DOLL_AFTER_SEX_END'))]
@@ -577,8 +577,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] forwards and fuck Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[操她]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.step]向前操菲亚……]]></responseTooltip>
 				<nextDialogue/>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_EXHIBITIONIST]]></fetish>
@@ -609,16 +609,16 @@
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()!=DN_SAELLATRIX_DOLL_CORE]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Body]]></responseTitle>
-					<responseTooltip><![CDATA[Use the D.E.C.K. that's plugged into Fia's neck port to customise her body.]]></responseTooltip>
+					<responseTitle><![CDATA[身体]]></responseTitle>
+					<responseTooltip><![CDATA[使用连接着菲亚颈部接口的D.E.C.K.来定制她的身体。]]></responseTooltip>
 					<nextDialogue>SAELLATRIX_DOLL_CORE</nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()==DN_SAELLATRIX_DOLL_CORE]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Body]]></responseTitle>
-					<responseTooltip><![CDATA[You're already using the D.E.C.K. that's plugged into Fia's neck port to customise her body...]]></responseTooltip>
+					<responseTitle><![CDATA[身体]]></responseTitle>
+					<responseTooltip><![CDATA[你已经在使用连接着菲亚颈部接口的D.E.C.K.来定制她的身体了……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 			<!-- TF pussy: -->
@@ -626,16 +626,16 @@
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()!=DN_SAELLATRIX_DOLL_PUSSY]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Pussy]]></responseTitle>
-					<responseTooltip><![CDATA[Use the D.E.C.K. that's plugged into Fia's neck port to customise her pussy.]]></responseTooltip>
+					<responseTitle><![CDATA[小穴]]></responseTitle>
+					<responseTooltip><![CDATA[使用连接着菲亚颈部接口的D.E.C.K.来定制她的小穴。]]></responseTooltip>
 					<nextDialogue>SAELLATRIX_DOLL_PUSSY</nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()==DN_SAELLATRIX_DOLL_PUSSY]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Pussy]]></responseTitle>
-					<responseTooltip><![CDATA[You're already using the D.E.C.K. that's plugged into Fia's neck port to customise her pussy...]]></responseTooltip>
+					<responseTitle><![CDATA[小穴]]></responseTitle>
+					<responseTooltip><![CDATA[你已经在使用连接着菲亚颈部接口的D.E.C.K.来定制她的小穴了……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 			<!-- TF ass: -->
@@ -643,28 +643,28 @@
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()!=DN_SAELLATRIX_DOLL_ASS]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Asshole]]></responseTitle>
-					<responseTooltip><![CDATA[Use the D.E.C.K. that's plugged into Fia's neck port to customise her ass.]]></responseTooltip>
+					<responseTitle><![CDATA[肛门]]></responseTitle>
+					<responseTooltip><![CDATA[使用连接着菲亚颈部接口的D.E.C.K.来定制她的屁股。]]></responseTooltip>
 					<nextDialogue>SAELLATRIX_DOLL_ASS</nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#game.getCurrentDialogueNode()==DN_SAELLATRIX_DOLL_ASS]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Asshole]]></responseTitle>
-					<responseTooltip><![CDATA[You're already using the D.E.C.K. that's plugged into Fia's neck port to customise her ass...]]></responseTooltip>
+					<responseTitle><![CDATA[肛门]]></responseTitle>
+					<responseTooltip><![CDATA[你已经在使用连接着菲亚颈部接口的D.E.C.K.来定制她的屁股了……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 			<!-- Reset TFs: -->
 				<response>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Reset]]></responseTitle>
+					<responseTitle><![CDATA[重置]]></responseTitle>
 					<responseTooltip><![CDATA[
-						#IF(saellatrix.isAngelixxFiaDollBodyDefault(fia))
-							Fia's body already conforms to its default values... 
+						#IF(saellatrix.isAngelixxFiaDollBodyDefault(angelixx))
+							菲亚的身体已经是初始状态了…… 
 						#ELSE
-							Use the D.E.C.K. that's plugged into Fia's neck port to reset her body to its default appearance.
+							使用连接着菲亚颈部接口的D.E.C.K.来将她的身体重置为初始状态。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue stripContent="true"><![CDATA[
@@ -683,8 +683,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Decide against using Fia...]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[决定不使用菲亚……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_FIA_DOLL_BACK'))]
@@ -697,8 +697,8 @@
 		<preParsingEffects><![CDATA[
 			[#fia.applyWash(true, true, null, 0)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, you [pc.step] away from Fia...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[你觉得已经足够了，便从菲亚身边退开……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">DISPLAY_FIA_DOLL_AFTER_SEX</content>
 		<secondsPassed><![CDATA[30]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -707,8 +707,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having had your fun with Fia, you wonder what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你和菲亚玩够了，退开思索下一步要做什么……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_display</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'DISPLAY_FIA_DOLL_AFTER_SEX_END'))]
@@ -749,8 +749,8 @@
 					<availabilityConditional><![CDATA[[#!saellatrix.isPlayerKnowsName()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Greet succubus]]></responseTitle>
-					<responseTooltip><![CDATA[Introduce yourself to the succubus.]]></responseTooltip>
+					<responseTitle><![CDATA[问候魅魔]]></responseTitle>
+					<responseTooltip><![CDATA[向魅魔介绍你自己。]]></responseTooltip>
 					<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_intro</nextDialogue>
 					<effects><![CDATA[
 						[#saellatrix.setPlayerKnowsName(true)]
@@ -762,8 +762,8 @@
 					<availabilityConditional><![CDATA[[#saellatrix.isPlayerKnowsName()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Trade]]></responseTitle>
-					<responseTooltip><![CDATA[Tell Saellatrix if you're planning on buying anything from her store...]]></responseTooltip>
+					<responseTitle><![CDATA[交易]]></responseTitle>
+					<responseTooltip><![CDATA[告诉赛拉特里克斯你打算在她的商店买点什么……]]></responseTooltip>
 					<nextDialogue/>
 					<effects><![CDATA[
 						[#flags.setFlag(FLAG_innoxia_sex_shop_talk_background, false)]
@@ -778,8 +778,8 @@
 					<availabilityConditional><![CDATA[[#saellatrix.isPlayerKnowsName() && !flags.hasFlag(FLAG_innoxia_sex_shop_dolls_unlocked)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Dolls]]></responseTitle>
-					<responseTooltip><![CDATA[Tell Saellatrix that you'd like to know more about the sex dolls she sells here.]]></responseTooltip>
+					<responseTitle><![CDATA[玩偶]]></responseTitle>
+					<responseTooltip><![CDATA[告诉赛拉特里克斯你想要了解更多关于这里销售的性爱玩偶。]]></responseTooltip>
 					<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_doll_tour</nextDialogue>
 					<effects><![CDATA[
 						[#flags.setFlag(FLAG_innoxia_sex_shop_talk_background, false)]
@@ -791,16 +791,16 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sex_shop_dolls_unlocked) && !pc.isQuestCompleted(QUEST_LINE_SIDE_DOLL_STORAGE)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Doll brochure]]></responseTitle>
-					<responseTooltip><![CDATA[You need to get Lilaya's permission to store dolls in her mansion before buying one...]]></responseTooltip>
+					<responseTitle><![CDATA[玩偶手册]]></responseTitle>
+					<responseTooltip><![CDATA[在购买玩偶之前，你需要获得莉莱雅的许可，才能在她的宅邸中存放玩偶……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 				<response>
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sex_shop_dolls_unlocked) && pc.isQuestCompleted(QUEST_LINE_SIDE_DOLL_STORAGE)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Doll brochure]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at the options for buying a doll.]]></responseTooltip>
+					<responseTitle><![CDATA[玩偶手册]]></responseTitle>
+					<responseTooltip><![CDATA[查看购买玩偶的选项。]]></responseTooltip>
 					<nextDialogue>DOLL_BROCHURE</nextDialogue>
 				</response>
 				<!-- 3 & 4: talk -->
@@ -808,12 +808,12 @@
 					<availabilityConditional><![CDATA[[#saellatrix.isPlayerKnowsName()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Background]]></responseTitle>
+					<responseTitle><![CDATA[背景]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_sex_shop_talk_background))
-							You're already asking Saellatrix about her background...
+							你已经向赛拉特里克斯打听过她的过往了……
 						#ELSE
-							Ask Saellatrix how she ended up running this store.
+							问问赛拉特里克斯她是怎么决定经营这家店的。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -833,12 +833,12 @@
 					<availabilityConditional><![CDATA[[#saellatrix.isPlayerKnowsName()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Lovienne]]></responseTitle>
+					<responseTitle><![CDATA[洛维耶纳]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_sex_shop_talk_lovienne))
-							You're already asking Saellatrix about her mother, the elder lilin Lovienne...
+							你已经向赛拉特里克斯询问过她的母亲，长老莉琳·洛维耶纳的事情了……
 						#ELSE
-							Ask Saellatrix what she can tell you about her mother, the elder lilin Lovienne.
+							问问赛拉特里克斯，她能分享些什么关于她母亲莉琳长老·洛维耶纳的故事。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -859,14 +859,14 @@
 					<availabilityConditional><![CDATA[[#!pc.hasQuestInLine(QUEST_LINE_SIDE_DOLL_FACTORY, QUEST_DOLL_FACTORY_7B) && saellatrix.isPlayerKnowsName() && flags.hasFlag(FLAG_innoxia_sex_shop_dolls_unlocked)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Factory tour]]></responseTitle>
+					<responseTitle><![CDATA[参观工厂]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_DOLL_FACTORY))
-							You now know the truth behind how dolls are created, so there's no reason for you to have another tour of the fake factory...
+							你已经知道制造玩偶背后的真相了，再次参观这虚假的工厂毫无意义……
 						#ELSEIF(flags.hasFlag(FLAG_innoxia_sex_shop_daily_tour))
-							You've already had a factory tour today...
+							你今天已经游览过工厂了……
 						#ELSE
-							Tell Saellatrix that you'd like a tour of the doll factory.
+							告诉赛拉特里克斯，你想参观下玩偶工厂。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -884,8 +884,8 @@
 					<availabilityConditional><![CDATA[[#pc.hasQuestInLine(QUEST_LINE_SIDE_DOLL_FACTORY, QUEST_DOLL_FACTORY_7B)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Factory tour]]></responseTitle>
-					<responseTooltip><![CDATA[You know the truth about how dolls are created, so there's no point in having another tour of the fake factory...]]></responseTooltip>
+					<responseTitle><![CDATA[参观工厂]]></responseTitle>
+					<responseTooltip><![CDATA[你已经知道玩偶制造的真相了，没必要再参观这虚假的工厂了……]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
 				</response>
 				<!-- 6: Doll conversions -->
@@ -893,12 +893,12 @@
 					<availabilityConditional><![CDATA[[#pc.hasQuestInLine(QUEST_LINE_SIDE_DOLL_FACTORY, QUEST_DOLL_FACTORY_7B) && (!pc.isQuestCompleted(QUEST_LINE_SIDE_DOLL_STORAGE) || !saellatrix.isAnySlaveAvailableForDollification())]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[10]]></index>
-					<responseTitle><![CDATA[Dollify slave]]></responseTitle>
+					<responseTitle><![CDATA[奴隶玩偶化]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(!saellatrix.isAnySlaveAvailableForDollification())
-							You can't transform one of your slaves into a doll, as you don't have any!
+							你现在没有可供玩偶化的奴隶，因此无法开始转化！
 						#ELSE
-							You need to get Lilaya's permission to store dolls in her mansion before buying one...
+							在购买玩偶之前，你需要获得莉莱雅的许可，才能在她的宅邸中存放玩偶…… 
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue>null</nextDialogue>
@@ -907,8 +907,8 @@
 					<availabilityConditional><![CDATA[[#pc.hasQuestInLine(QUEST_LINE_SIDE_DOLL_FACTORY, QUEST_DOLL_FACTORY_7B) && pc.isQuestCompleted(QUEST_LINE_SIDE_DOLL_STORAGE) && saellatrix.isAnySlaveAvailableForDollification()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[10]]></index>
-					<responseTitle><![CDATA[Dollify slave]]></responseTitle>
-					<responseTooltip><![CDATA[Tell Saellatrix that you'd like to have one of your slaves transformed into a doll...]]></responseTooltip>
+					<responseTitle><![CDATA[奴隶玩偶化]]></responseTitle>
+					<responseTooltip><![CDATA[告诉赛拉特里克斯，你想将你的一名奴隶转化为玩偶……]]></responseTooltip>
 					<nextDialogue>SLAVE_DOLLIFICATION</nextDialogue>
 				</response>
 				<!-- 10: Doll quest -->
@@ -916,14 +916,14 @@
 					<availabilityConditional><![CDATA[[#saellatrix.isPlayerKnowsName() && pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)==QUEST_DOLL_FACTORY_1]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[10]]></index>
-					<responseTitle><![CDATA[Angelixx's diary]]></responseTitle>
+					<responseTitle><![CDATA[安吉莉克丝的日记]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(!flags.hasFlag(FLAG_innoxia_sex_shop_dolls_unlocked))
-							You should try to find out more about Saellatrix's business before confronting her with Angelixx's diary. Perhaps you should ask about the dolls?
+							带着安吉莉克丝的日记跟赛拉特里克对峙之前，应该再多寻找一些跟这门生意有关的信息。或许应该问问玩偶的事情？
 						#ELSEIF(!flags.hasFlag(FLAG_innoxia_sex_shop_had_factory_tour))
-							You should try to do a little more investigating before confronting Saellatrix with Angelixx's diary. Perhaps you should ask to have a factory tour?
+							带着安吉莉克丝的日记跟赛拉特里克对峙之前，应该再多进行一些调查。或许应该问一下能不能去工厂参观？
 						#ELSE
-							You doubt that Saellatrix is going to willingly give any clues about where the missing refugees are. All that's left is for you to confront her with Angelixx's diary and demand some answers.
+							你估计赛拉特里克斯必然会对消失难民的去处会守口如瓶了。那就带着安吉莉克斯的日记找她对峙，逼出一些话来吧。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -946,14 +946,14 @@
 						<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sex_shop_oral_offer) && (!pc.isAbleToAccessCoverableArea(CA_PENIS, true) || !pc.hasPenis() || flags.hasFlag(FLAG_innoxia_sex_shop_saellatrix_sex)) && !flags.hasFlag(FLAG_innoxia_sex_shop_discount) && !flags.hasFlag(FLAG_innoxia_sex_shop_penalty)]]]></availabilityConditional>
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[6]]></index>
-						<responseTitle><![CDATA[Wager]]></responseTitle>
+						<responseTitle><![CDATA[下注]]></responseTitle>
 						<responseTooltip><![CDATA[
 							#IF(flags.hasFlag(FLAG_innoxia_sex_shop_saellatrix_sex))
-								You've already had sex with Saellatrix today, and she doesn't have time for it again...
+								你和赛拉特里克斯做过爱了，她没功夫再来一次了……
 							#ELSEIF(!pc.hasPenis())
-								As you don't have a penis, you cannot take Saellatrix up on her wager...
+								你没有鸡巴，没法接受赛拉特里克斯的赌注……
 							#ELSE
-								As you're unable to access your penis, you cannot take Saellatrix up on her wager...
+								你的鸡巴被限制，没法接受赛拉特里克斯的赌注……
 							#ENDIF
 						]]></responseTooltip>
 						<nextDialogue>null</nextDialogue>
@@ -963,9 +963,9 @@
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[6]]></index>
 						<colour><![CDATA[GENERIC_SEX]]></colour>
-						<responseTitle><![CDATA[Wager]]></responseTitle>
+						<responseTitle><![CDATA[下注]]></responseTitle>
 						<responseTooltip><![CDATA[
-							Tell Saellatrix that you'll take her up on her wager; if you can snap her choker while receiving a blowjob you'll get a 25% discount. If not, you'll have to pay double on everything...
+							告诉赛拉特里克斯你可以接受她的赌注；如果你能在给她口的时候拽住她的项圈，她会给你七五折。如果不能，你需要付双倍……
 						]]></responseTooltip>
 						<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_wager</nextDialogue>
 						<effects><![CDATA[
@@ -984,14 +984,14 @@
 						<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sex_shop_discount) && (!pc.isAbleToAccessCoverableArea(CA_PENIS, true) || !pc.hasPenis() || flags.hasFlag(FLAG_innoxia_sex_shop_saellatrix_sex))]]]></availabilityConditional>
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[6]]></index>
-						<responseTitle><![CDATA[Repeat wager]]></responseTitle>
+						<responseTitle><![CDATA[重复下注]]></responseTitle>
 						<responseTooltip><![CDATA[
 							#IF(flags.hasFlag(FLAG_innoxia_sex_shop_saellatrix_sex))
-								You've already had sex with Saellatrix today, and she doesn't have time for it again...
+								你和赛拉特里克斯做过爱了，她没功夫再来一次了……
 							#ELSEIF(!pc.hasPenis())
-								As you don't have a penis, you cannot take Saellatrix up on her wager again...
+								你没有鸡巴，没法再接受赛拉特里克斯的赌注……
 							#ELSE
-								As you're unable to access your penis, you cannot cannot take Saellatrix up on her wager again...
+								你的鸡巴被限制，没法再接受赛拉特里克斯的赌注……
 							#ENDIF
 						]]></responseTooltip>
 						<nextDialogue>null</nextDialogue>
@@ -1001,10 +1001,10 @@
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[6]]></index>
 						<colour><![CDATA[GENERIC_SEX]]></colour>
-						<responseTitle><![CDATA[Repeat wager]]></responseTitle>
+						<responseTitle><![CDATA[重复下注]]></responseTitle>
 						<responseTooltip><![CDATA[
-							Tell Saellatrix that you'll take her up on a repeat of her wager; if you can snap her choker while receiving a blowjob you'll retain your 25% discount. If not, you'll have to pay double on everything...
-						]]></responseTooltip>
+							告诉赛拉特里克斯你将再次接受她的赌注；如果你能在给她口的时候拽住她的项圈，她会给你七五折。如果不能，你需要付双倍……
+				]]></responseTooltip>
 						<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_wager</nextDialogue>
 						<effects><![CDATA[
 							[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'COUNTER_WAGER_REPEAT'))]
@@ -1018,12 +1018,12 @@
 						<responseTabIndex><![CDATA[0]]></responseTabIndex>
 						<index><![CDATA[6]]></index>
 						<colour><![CDATA[GENERIC_SEX]]></colour>
-						<responseTitle><![CDATA[Submit]]></responseTitle>
+						<responseTitle><![CDATA[顺从]]></responseTitle>
 						<responseTooltip><![CDATA[
 							#IF(flags.hasFlag(FLAG_innoxia_sex_shop_saellatrix_sex))
-								You've already had sex with Saellatrix today, and she doesn't have time for it again...
+								你和赛拉特里克斯做过爱了，她没功夫再来一次了……
 							#ELSE
-								Tell Saellatrix that you'll submit and get fucked by her in exchange for the removal of your double-cost penalty...
+								告诉赛拉特里克斯你愿意顺从被她干，来消除双倍花费的惩罚……
 							#ENDIF
 						]]></responseTooltip>
 						<nextDialogue><![CDATA[
@@ -1044,8 +1044,8 @@
 					<availabilityConditional><![CDATA[[#saellatrix.isPlayerKnowsName()]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[0]]></index>
-					<responseTitle><![CDATA[Back]]></responseTitle>
-					<responseTooltip><![CDATA[[pc.Step] away from the counter and return to the shop floor.]]></responseTooltip>
+					<responseTitle><![CDATA[返回]]></responseTitle>
+					<responseTooltip><![CDATA[[pc.step]离开营业区，回到店面。]]></responseTooltip>
 					<nextDialogue>innoxia_places_dominion_sex_shop_generic_floor</nextDialogue>
 					<effects><![CDATA[
 						[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'COUNTER_STEP_BACK'))]
@@ -1080,8 +1080,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Escorted out]]></responseTitle>
-				<responseTooltip><![CDATA[The wolf-boy security guards escort you out of Lovienne's Luxuries...]]></responseTooltip>
+				<responseTitle><![CDATA[接受护送离开]]></responseTitle>
+				<responseTooltip><![CDATA[狼男保安带着你离开了洛维耶纳奢侈品店……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_generic_counter_angelixx_diary_thrown_out]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_DOMINION, PLACE_TYPE_DOMINION_DEMON_HOME_SEX_SHOP)]
@@ -1101,8 +1101,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to Fiammetta's plan...]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听取菲亚梅塔的计划……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_sex_shop_generic_counter_angelixx_diary_thrown_out_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -1117,8 +1117,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Agree]]></responseTitle>
-				<responseTooltip><![CDATA[You don't see any alternative, so you agree to meet Fiammetta outside Lovienne's Luxuries between [units.time(1)]-[units.time(4)].]]></responseTooltip>
+				<responseTitle><![CDATA[赞同]]></responseTitle>
+				<responseTooltip><![CDATA[你别无他法，于是同意[units.time(1)]到[units.time(4)]之间在洛维耶纳奢侈品店外面与菲亚梅塔会面。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="DOMINION_DEMON_HOME_SEX_SHOP"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -1153,20 +1153,20 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Saellatrix over to where the dolls available for purchase are kept.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[跟着赛拉特里克斯到存放可供购买的玩偶的区域。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_doll_tour_next</nextDialogue>
 			</response>
 			<!-- Obedience: -->
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Obedience]]></responseTitle>
+				<responseTitle><![CDATA[服从]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sex_shop_tour_obedience))
-						You've already asked Saellatrix about the dolls' obedience.
+						你已经向赛拉特里克斯询问过关于玩偶服从度的事情了……
 					#ELSE
-						Ask Saellatrix if all of the dolls are completely obedient from the moment of purchase, or if they need training first.
+						询问赛拉特里克斯所有的玩偶是从购买那一刻起就完全听话，还是需要先进行训练。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1185,12 +1185,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Power]]></responseTitle>
+				<responseTitle><![CDATA[供能方式]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sex_shop_tour_power))
-						You've already asked Saellatrix how the dolls are powered.
+						你已经问过赛拉特里克斯玩偶是如何供能的了。
 					#ELSE
-						Ask Saellatrix how the dolls are powered.
+						询问赛拉特里克斯玩偶是如何供能的。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1229,20 +1229,20 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Return to the counter with Saellatrix, where she'll reveal the dolls' price and tell you what different options are available.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[与赛拉特里克斯一起返回柜台，她会告诉你玩偶的价格并告诉你有哪些不同的选项。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_doll_tour_interruption</nextDialogue>
 			</response>
 			<!-- Silicone: -->
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Silicone]]></responseTitle>
+				<responseTitle><![CDATA[硅胶]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sex_shop_tour_silicone))
-						You've already asked Saellatrix about the dolls' arcane-infused silicone.
+						你已经向赛拉特里克斯询问了玩偶中奥术注能硅胶的信息。
 					#ELSE
-						Ask Saellatrix about the dolls' arcane-infused silicone.
+						向赛拉特里克斯询问有关玩偶中奥术注能硅胶的信息。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1261,12 +1261,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Realism]]></responseTitle>
+				<responseTitle><![CDATA[拟真程度]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sex_shop_tour_realism))
-						You've already asked Saellatrix how they manage to make the dolls look so realistic.
+						你已经问过赛拉特里克斯他们是如何让玩偶看起来如此逼真的
 					#ELSE
-						Ask Saellatrix how they manage to make the dolls look so realistic.
+						询问赛拉特里克斯他们是如何让玩偶看起来如此逼真的
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1305,8 +1305,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[What?]]></responseTitle>
-				<responseTooltip><![CDATA[What's all this about people being turned into dolls?]]></responseTooltip>
+				<responseTitle><![CDATA[啥？]]></responseTitle>
+				<responseTooltip><![CDATA[被变成玩偶的人到底是怎么回事？]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_doll_tour_interruption_next</nextDialogue>
 			</response>
 		</responses>
@@ -1325,8 +1325,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Finish]]></responseTitle>
-				<responseTooltip><![CDATA[Return to the counter with Saellatrix, where she'll reveal the dolls' price and tell you what different options are available.]]></responseTooltip>
+				<responseTitle><![CDATA[结束]]></responseTitle>
+				<responseTooltip><![CDATA[与赛拉特里克斯一起返回柜台，她会告诉你玩偶的价格并告诉你有哪些不同的选项。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_counter_doll_tour_finish</nextDialogue>
 			</response>
 		</responses>
@@ -1359,8 +1359,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Start]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] through the door and start the tour of the doll factory.]]></responseTooltip>
+				<responseTitle><![CDATA[开始]]></responseTitle>
+				<responseTooltip><![CDATA[穿过大门，开始玩偶工厂的参观。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_dominion_sex_shop_generic_mezzanine]]></nextDialogue>
 				<effects><![CDATA[
 					[#flags.setSavedLong('saellatrix_tour_start', game.getSecondsPassed())]
@@ -1388,9 +1388,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Blowjob (drink)]]></responseTitle>
+				<responseTitle><![CDATA[口交(咽下去)]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Down the 'Face Fuck' shot, then give Saellatrix what she wants, trying to snap her choker while you're at it!
+					喝下“口交”酒，让赛拉特里克斯如愿以偿，趁机扯住她的项圈！
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -1431,9 +1431,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Blowjob (don't drink)]]></responseTitle>
+				<responseTitle><![CDATA[口交(不咽)]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide not to drink the 'Face Fuck' shot, and instead just give Saellatrix what she wants, trying to snap her choker while you're at it!
+					决定不喝“口交”酒，而是让赛拉特里克斯如愿以偿，趁机扯住她的项圈！
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -1481,9 +1481,9 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sex_shop_choker_snapped)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Get fucked]]></responseTitle>
+				<responseTitle><![CDATA[开始被操]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Submit to Saellatrix and prepare to get railed by her massive demonic cock.
+					屈服于赛拉特里克斯，准备被她庞大的恶魔肉棒蹂躏。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -1532,8 +1532,8 @@
 				[#saellatrix.growPenis(true)]
 			#ENDIF
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, [saellatrix.name] stands up and brings an end to your blowjob...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[感觉足够了，[saellatrix.name]站起来让你口出来……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">COUNTER_WAGER_BLOWJOB_END</content>
 		<secondsPassed><![CDATA[60]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1546,16 +1546,16 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(game.isNipplePenEnabled())
-						Discount
+						打折
 					#ELSE
-						Follow
+						跟随
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isNipplePenEnabled())
-						Tell Saellatrix that you'll take the discount and follow her back to the shop floor.
+						告诉赛拉特里克斯你接受折扣，跟她一起回到营业区。
 					#ELSE
-						Follow Saellatrix back to the shop floor.
+						跟赛拉特里克斯回到车间。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_dominion_sex_shop_generic_floor</nextDialogue>
@@ -1571,9 +1571,9 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sex_shop_choker_snapped) && game.isNipplePenEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Nipple-fuck]]></responseTitle>
+				<responseTitle><![CDATA[操乳头]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Saellatrix that you'll take her alternative offer and fuck her nipples.
+					告诉赛拉特里克斯你会接受其他建议，操她的乳头。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -1612,8 +1612,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sex_shop_choker_snapped)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Penalty]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Saellatrix that you'll take the double-cost penalty and follow her back to the shop floor.]]></responseTooltip>
+				<responseTitle><![CDATA[惩罚]]></responseTitle>
+				<responseTooltip><![CDATA[告诉赛拉特里克斯你会承担双倍花费惩罚，跟她回到营业区。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_dominion_sex_shop_generic_floor</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'COUNTER_WAGER_BLOWJOB_END_TAKE_PENALTY'))]
@@ -1628,9 +1628,9 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sex_shop_choker_snapped)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Get fucked]]></responseTitle>
+				<responseTitle><![CDATA[开始被操]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Saellatrix that you'll take her alternative offer and get fucked by her massive demonic cock.
+					告诉赛拉特里克斯你会接受她的其他建议，准备被她庞大的恶魔肉棒操。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -1668,8 +1668,8 @@
 	</scene>
 	
 	<scene id="counter_wager_after_nipple_fuck">
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, [saellatrix.name] stands up and brings an end to the sex...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[感觉足够了，[saellatrix.name]站起来结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">COUNTER_WAGER_NIPPLE_FUCK_END</content>
 		<secondsPassed><![CDATA[60]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1678,8 +1678,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Saellatrix back to the shop floor.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟赛拉特里克斯回到营业区。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_dominion_sex_shop_generic_floor</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'COUNTER_WAGER_NIPPLE_FUCK_END_CONTINUE'))]
@@ -1693,8 +1693,8 @@
 	</scene>
 	
 	<scene id="counter_wager_after_fucked">
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having had enough, [saellatrix.name] brings an end to the sex...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[感觉足够了，[saellatrix.name]结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/dominion/sex_shop/generic">COUNTER_WAGER_FUCKED_END</content>
 		<secondsPassed><![CDATA[60]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1703,8 +1703,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Saellatrix back to the shop floor.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟赛拉特里克斯回到营业区。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_dominion_sex_shop_generic_floor</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'COUNTER_WAGER_FUCKED_END_CONTINUE'))]
@@ -1738,8 +1738,8 @@
 				<availabilityConditional><![CDATA[[#saellatrix.isFactoryTourTimeUp()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Saellatrix back to the shop floor.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟赛拉特里克斯回到营业区。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_dominion_sex_shop_generic_counter_doll_end_tour</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'FACTORY_TOUR_TIME_UP_END'))]
@@ -1770,12 +1770,12 @@
 				<availabilityConditional><![CDATA[[#!saellatrix.isFactoryTourTimeUp() && pc.hasPerkAnywhereInTree(PERK_OBSERVANT)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Question]]></responseTitle>
+				<responseTitle><![CDATA[质疑]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sex_shop_tour_question_toy_machines))
-						You've already asked Saellatrix why the dildos are simply going around the conveyor belt...
+						你已经问过赛拉特里克斯为什么假阳具只是绕着传送带走……
 					#ELSE
-						Ask Saellatrix why the dildos are simply going around the conveyor belt...
+						问问赛拉特里克斯为什么假阳具只是绕着传送带走……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1893,12 +1893,12 @@
 				<availabilityConditional><![CDATA[[#!saellatrix.isFactoryTourTimeUp() && pc.hasPerkAnywhereInTree(PERK_OBSERVANT)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Question]]></responseTitle>
+				<responseTitle><![CDATA[质疑]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sex_shop_tour_question_doll_storage))
-						You've already asked Saellatrix why the assembled dolls look nothing like the ones in the shop...
+						你已经问过赛拉特里克斯为什么组装好的玩偶看起来和商店里的玩偶一点都不像……
 					#ELSE
-						Ask Saellatrix why the assembled dolls look nothing like the ones in the shop...
+						问问赛拉特里克斯，为什么组装好的玩偶看起来和商店里的玩偶一点都不像……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1941,8 +1941,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[With nothing to be gained from going through this door, you decide to turn back and explore the rest of the building...]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[即使进了门也必然一无所获，你决定还是离开搜索一下建筑的其他位置……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_dominion_sex_shop_staff_room"/>
 				<effects><![CDATA[
 					[#pc.setNearestLocation(PLACE_TYPE_innoxia_dominion_sex_shop_staff_room)]
@@ -1979,12 +1979,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue tour]]></responseTitle>
+				<responseTitle><![CDATA[继续参观]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(saellatrix.isFactoryTourTimeUp())
-						You've run out of time, and so can't continue the tour...
+						你已经没有时间了，因此无法继续游览……
 					#ELSE
-						Tell Saellatrix that you'd like to continue the tour.
+						告诉赛拉特里克斯你想继续游览。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -2002,8 +2002,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[End tour]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Saellatrix that you've seen enough and bring an end to the tour.]]></responseTooltip>
+				<responseTitle><![CDATA[结束参观]]></responseTitle>
+				<responseTooltip><![CDATA[告诉赛拉特里克斯，你已经看够了，参观到此结束。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_dominion_sex_shop_generic_counter_doll_end_tour</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'CORRIDOR_FACTORY_TOUR_END'))]
@@ -2043,8 +2043,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Ride elevator]]></responseTitle>
-				<responseTooltip><![CDATA[Take the elevator down to the lower level of Lovienne's Luxuries.]]></responseTooltip>
+				<responseTitle><![CDATA[上电梯]]></responseTitle>
+				<responseTooltip><![CDATA[乘电梯去往洛维耶纳奢侈品店的低层。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_factory_elevator_entrance</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -2082,16 +2082,16 @@
 				<availabilityConditional><![CDATA[[#pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)==QUEST_DOLL_FACTORY_7A]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Scapegoat]]></responseTitle>
-				<responseTooltip><![CDATA[Find out who this scapegoat is...]]></responseTooltip>
+				<responseTitle><![CDATA[替罪羊]]></responseTitle>
+				<responseTooltip><![CDATA[查明是谁变成了替罪羊……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_justice</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)==QUEST_DOLL_FACTORY_7B]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fiammetta]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Saellatrix what she's done to Fia.]]></responseTooltip>
+				<responseTitle><![CDATA[菲亚梅塔]]></responseTitle>
+				<responseTooltip><![CDATA[问问赛拉特里克斯她对菲亚做了什么。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_fia_doll</nextDialogue>
 			</response>
 		</responses>
@@ -2113,15 +2113,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Slave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Saellatrix that Angelixx should be kept as a slave.]]></responseTooltip>
+				<responseTitle><![CDATA[奴隶]]></responseTitle>
+				<responseTooltip><![CDATA[告诉赛拉特里克斯，安吉莉克丝应该成为一名奴隶。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_angelixx_slave</nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Doll]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Saellatrix that Angelixx should be transformed into a doll.]]></responseTooltip>
+				<responseTitle><![CDATA[玩偶]]></responseTitle>
+				<responseTooltip><![CDATA[告诉赛拉特里克斯，安吉莉克丝应该被转化为玩偶。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_angelixx_doll</nextDialogue>
 			</response>
 		</responses>
@@ -2141,8 +2141,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You're left wondering what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你思考着接下来要做什么……]]></responseTooltip>
 				<nextDialogue stripContent="true">default</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'QUEST_FINISH_ANGELIXX_SLAVE_END'))]
@@ -2166,8 +2166,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait for Saellatrix's return...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等待赛拉特里克斯回来……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_angelixx_doll_wait</nextDialogue>
 			</response>
 		</responses>
@@ -2187,8 +2187,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Setup]]></responseTitle>
-				<responseTooltip><![CDATA[Saellatrix finishes setting up her new doll...]]></responseTooltip>
+				<responseTitle><![CDATA[调试]]></responseTitle>
+				<responseTooltip><![CDATA[赛拉特里克斯调试好了她的新玩偶……]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_angelixx_doll_setup</nextDialogue>
 			</response>
 		</responses>
@@ -2203,8 +2203,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You're left wondering what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你思考着接下来要做什么……]]></responseTooltip>
 				<nextDialogue stripContent="true">default</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'QUEST_FINISH_ANGELIXX_DOLL_END'))]
@@ -2230,8 +2230,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Angelixx]]></responseTitle>
-				<responseTooltip><![CDATA[Turn to face Angelixx and hear what she has to say.]]></responseTooltip>
+				<responseTitle><![CDATA[安吉莉克丝]]></responseTitle>
+				<responseTooltip><![CDATA[转身面对安吉莉克丝，听听她要说什么。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_fia_doll_angelixx</nextDialogue>
 			</response>
 		</responses>
@@ -2249,8 +2249,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Forgive]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Angelixx that you forgive her.]]></responseTooltip>
+				<responseTitle><![CDATA[原谅]]></responseTitle>
+				<responseTooltip><![CDATA[告诉安吉莉克丝，你原谅她了。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_fia_doll_angelixx_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'QUEST_FINISH_FIA_DOLL_ANGELIXX_FORGIVE'))]
@@ -2260,8 +2260,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Angelixx that you can't forgive her for all she's done.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉安吉莉克丝，你无法原谅她所做的一切。]]></responseTooltip>
 				<nextDialogue>innoxia_places_dominion_sex_shop_generic_quest_finish_fia_doll_angelixx_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'QUEST_FINISH_FIA_DOLL_ANGELIXX_REFUSE'))]
@@ -2285,8 +2285,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You're left wondering what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你思考着接下来要做什么……]]></responseTooltip>
 				<nextDialogue stripContent="true">default</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/sex_shop/generic', 'QUEST_FINISH_FIA_DOLL_ANGELIXX_END'))]

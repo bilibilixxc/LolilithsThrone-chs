@@ -223,15 +223,15 @@ public class AbstractFilledCondom extends AbstractItem implements XMLSaving {
 		
 		if(getCumProvider()!=null) {
 			descriptionsList.add(UtilText.parse(getCumProvider(),
-					"Contains [units.fluid("+getMillilitresStored()+")] of <span style='color:"+getCumProvider().getFemininity().getColour().toWebHexString()+";'>[npc.namePos]</span> [style.colourCum("+cum.getFluid().getName(getCumProvider())+")]"));
+					"装着[units.fluid("+getMillilitresStored()+")]的<span style='color:"+getCumProvider().getFemininity().getColour().toWebHexString()+";'>[npc.namePos]</span> [style.colourCum("+cum.getFluid().getName(getCumProvider())+")]"));
 		} else {
-			descriptionsList.add("Contains [units.fluid("+getMillilitresStored()+")] of [style.colourCum(cum)]");
+			descriptionsList.add("装着[units.fluid("+getMillilitresStored()+")]的[style.colourCum(精液)]");
 		}
 		
-		descriptionsList.add("It tastes of <span style='color:"+cum.getFluid().getFlavour().getColour().toWebHexString()+";'>"+cum.getFluid().getFlavour().getName()+"</span>");
+		descriptionsList.add("尝起来像<span style='color:"+cum.getFluid().getFlavour().getColour().toWebHexString()+";'>"+cum.getFluid().getFlavour().getName()+"</span>");
 		if(!cum.getFluid().getFluidModifiers().isEmpty()) {
 			StringBuilder modifiersSB = new StringBuilder();
-			modifiersSB.append("It is ");
+			modifiersSB.append("");
 			List<String> modList = new ArrayList<>();
 			for(FluidModifier mod : cum.getFluid().getFluidModifiers()) {
 				modList.add("<span style='color:"+mod.getColour().toWebHexString()+";'>"+mod.getName()+"</span>");
@@ -275,11 +275,11 @@ public class AbstractFilledCondom extends AbstractItem implements XMLSaving {
 	@Override
 	public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
 		if(!target.isPlayer() && target.isUnique() && !target.isSlave()) {
-			return UtilText.parse(target, "As [npc.nameIsFull] a non-slave unique character, you cannot use used condoms on [npc.herHim]...");
+			return UtilText.parse(target, "由于[npc.nameIsFull]是一个非奴隶的特殊角色，你不能对[npc.herHim]使用用过的避孕套……");
 		}
-		return "You can't think of a use for this. Maybe it's best to throw it away...<br/>"
-				+ "(You require either the '[style.colourFetish("+Fetish.FETISH_CUM_ADDICT.getName(user)+")]' fetish"
-						+ " or to have at least a <b style='color:"+CorruptionLevel.THREE_DIRTY.getColour().toWebHexString()+";'>"+CorruptionLevel.THREE_DIRTY.getName()+"</b> level of corruption in order to use this!)";
+		return "你想不到这东西还有什么用法。或许还是赶紧扔了吧……<br/>"
+				+ "(你要么需要有'[style.colourFetish("+Fetish.FETISH_CUM_ADDICT.getName(user)+")]'性癖"
+						+ "要么需要至少有<b style='color:"+CorruptionLevel.THREE_DIRTY.getColour().toWebHexString()+";'>"+CorruptionLevel.THREE_DIRTY.getName()+"</b>的堕落度才能使用该物品！)";
 	}
 
 }

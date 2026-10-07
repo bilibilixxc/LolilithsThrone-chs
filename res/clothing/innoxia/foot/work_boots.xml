@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>600</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[work boot]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[work boots]]></namePlural>
-		<description><![CDATA[A pair of heavy work boots, with thick rubber soles and steel-capped toes.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[工装靴]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[工装靴]]></namePlural>
+		<description><![CDATA[一双厚实的工装靴，有厚实的橡胶鞋底和钢头鞋头，能提供额外的耐用性和足部保护。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>MASCULINE</femininity>
 		<slot>FOOT</slot> 
@@ -48,27 +48,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(push)] [npc.her] [npc.feet] into the work boots and [npc.verb(tie)] up the laces.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(push)] [npc2.namePos] [npc2.feet] into the work boots and [npc.verb(tie)] up the laces.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.feet] into the work boots and [npc.verb(tie)] up the laces.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的[npc.feet]塞进工装靴中，然后系上鞋带。
+]]></self>
+    <other><![CDATA[
+[npc.Name]让[npc2.namePos]将[npc2.feet]塞进工装靴中，然后系上鞋带。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的[npc2.feet]强行塞进工装靴中，然后系上鞋带。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the laces of [npc.her] work boots, before slipping them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the laces of [npc2.namePos] work boots, before slipping them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the laces of [npc2.namePos] work boots, before tugging them off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开[npc.her]的工装靴的鞋带，然后脱下它们。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开[npc2.namePos]工装靴的鞋带，然后脱下它们。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开[npc2.namePos]工装靴的鞋带，然后用力将它们拖脱。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

@@ -1,114 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- PLACE_HALLWAY -->
 	
 	<htmlContent tag="PLACE_HALLWAY"><![CDATA[
 	<p>
-		Hallway through Helena's apartment. Occasional harpy maids stop to curtsy as you pass.
+		海伦娜的公寓里的走廊。沿途的哈比仆人偶尔会停下来向你施屈膝礼。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_BALCONY -->
 	
 	<htmlContent tag="PLACE_BALCONY"><![CDATA[
 	<p>
-		Balcony overlooking Dominion streets. Higher than buildings around, so still have privacy (apart from occasional harpy swooping around overhead).
+		阳台在高处俯视御城区的街道，它高过大部分建筑，营造出一种私密性(如果不考虑偶尔有哈比在上方飞过的话)。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_ENTRANCE_HALL -->
 	
 	<htmlContent tag="PLACE_ENTRANCE_HALL"><![CDATA[
 	<p>
-		Large entrance hall. Luxuriously furnished.
+		超大门厅，极致奢华。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_HELENA_BEDROOM -->
 	
 	<htmlContent tag="PLACE_HELENA_BEDROOM"><![CDATA[
 	<p>
-		Helena's bedroom is very large. King-sized bed and massive walk-in wardrobe.
+		海伦娜的卧室相当宽敞，特大号床和巨大的步入式衣柜在她的卧室里丝毫不显得大。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_SCARLETT_BEDROOM -->
 	
 	<htmlContent tag="PLACE_SCARLETT_BEDROOM"><![CDATA[
 	<p>
-		Scarlett's bedroom is very large. King-sized bed and massive walk-in wardrobe.
+		海伦娜的卧室相当宽敞，特大号床和巨大的步入式衣柜在她的卧室里丝毫不显得大。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_BEDROOM -->
 	
 	<htmlContent tag="PLACE_BEDROOM"><![CDATA[
 	<p>
-		Guest bedroom.
+		客房。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_OFFICE -->
 	
 	<htmlContent tag="PLACE_OFFICE"><![CDATA[
 	<p>
-		Helena's study room has several large bookcases stacked full of expensive-looking tomes.
+		海伦娜的书房里有几个大的多层书柜，里面堆满了昂贵的大部头书。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_KITCHEN -->
 	
 	<htmlContent tag="PLACE_KITCHEN"><![CDATA[
 	<p>
-		Kitchen is staffed by professional harpy chef.
+		厨房配备了专业的哈比厨师。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_DINING_ROOM -->
 	
 	<htmlContent tag="PLACE_DINING_ROOM"><![CDATA[
 	<p>
-		Large dining table with a dozen chairs. Harpy maid is standing ready to serve.
+		豪华的长餐桌周围摆设着十几把高档的椅子。哈比女仆正站在一旁准备上菜。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_LOUNGE -->
 	
 	<htmlContent tag="PLACE_LOUNGE"><![CDATA[
 	<p>
-		Huge lounge with a dozen comfortable sofas positioned around the place.
+		宽敞的休息室四周摆放着十几张典雅舒适的沙发。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE_HOT_TUB -->
 	
 	<htmlContent tag="PLACE_HOT_TUB"><![CDATA[
 	<p>
-		Arcane-powered hot tub in one corner of the balcony.
+		阳台的一角设置了一个由灵气驱动的热水浴缸。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

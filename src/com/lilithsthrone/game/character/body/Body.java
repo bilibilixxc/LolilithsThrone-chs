@@ -1277,15 +1277,15 @@ public class Body extends ModBody implements XMLSaving {
 		importedFace.mouth.piercedLip = (Boolean.valueOf(mouth.getAttribute("piercedLip")));
 		
 		Main.game.getCharacterUtils().appendToImportLog(log, 
-				"<br/>depth: "+importedFace.mouth.orificeMouth.getDepth(null)
-				+ "<br/>elasticity: "+importedFace.mouth.orificeMouth.getElasticity()
-				+ "<br/>plasticity: "+importedFace.mouth.orificeMouth.getPlasticity()
-				+ "<br/>capacity: "+importedFace.mouth.orificeMouth.getCapacity()
-				+ "<br/>stretchedCapacity: "+importedFace.mouth.orificeMouth.getStretchedCapacity()
-				+ "<br/>virgin: "+importedFace.mouth.orificeMouth.isVirgin()
-				+ "<br/>piercedLip: "+importedFace.mouth.isPiercedLip()
-				+ "<br/>lipSize: "+importedFace.mouth.getLipSize()
-				+ "<br/>Modifiers: ");
+				"<br/>深度: "+importedFace.mouth.orificeMouth.getDepth(null)
+				+ "<br/>弹性等级: "+importedFace.mouth.orificeMouth.getElasticity()
+				+ "<br/>可塑性等级: "+importedFace.mouth.orificeMouth.getPlasticity()
+				+ "<br/>容量: "+importedFace.mouth.orificeMouth.getCapacity()
+				+ "<br/>撑开后容量: "+importedFace.mouth.orificeMouth.getStretchedCapacity()
+				+ "<br/>处女: "+importedFace.mouth.orificeMouth.isVirgin()
+				+ "<br/>已穿孔嘴唇: "+importedFace.mouth.isPiercedLip()
+				+ "<br/>嘴唇尺寸: "+importedFace.mouth.getLipSize()
+				+ "<br/>修饰词: ");
 
 		Collection<OrificeModifier> mouthOrificeModifiers = importedFace.mouth.orificeMouth.orificeModifiers;
 		mouthOrificeModifiers.clear();
@@ -1311,10 +1311,10 @@ public class Body extends ModBody implements XMLSaving {
 			importedFace.tongue.tongueLength = (Integer.valueOf(tongue.getAttribute("tongueLength")));
 			
 			Main.game.getCharacterUtils().appendToImportLog(log, 
-					"<br/><br/>Tongue: "
-					+ "<br/>piercedTongue: "+importedFace.tongue.isPierced()
-					+ "<br/>tongueLength: "+importedFace.tongue.getTongueLength()
-					+ "<br/>Modifiers: ");
+					"<br/><br/>舌头: "
+					+ "<br/>已穿孔舌头: "+importedFace.tongue.isPierced()
+					+ "<br/>舌头长度: "+importedFace.tongue.getTongueLength()
+					+ "<br/>修饰词: ");
 
 			Collection<TongueModifier> tongueModifiers = importedFace.tongue.tongueModifiers;
 			tongueModifiers.clear();
@@ -1539,13 +1539,13 @@ public class Body extends ModBody implements XMLSaving {
 		}
 		
 		Main.game.getCharacterUtils().appendToImportLog(log, 
-				"<br/>depth: "+importedPenis.orificeUrethra.getDepth(null)
-				+ "<br/>elasticity: "+importedPenis.orificeUrethra.getElasticity()
-				+ "<br/>plasticity: "+importedPenis.orificeUrethra.getPlasticity()
-				+ "<br/>capacity: "+importedPenis.orificeUrethra.getCapacity()
-				+ "<br/>stretchedCapacity: "+importedPenis.orificeUrethra.getStretchedCapacity()
-				+ "<br/>virgin: "+importedPenis.orificeUrethra.isVirgin()
-				+ "<br/>Urethra Modifiers:");
+				"<br/>深度: "+importedPenis.orificeUrethra.getDepth(null)
+				+ "<br/>弹性等级: "+importedPenis.orificeUrethra.getElasticity()
+				+ "<br/>可塑性等级: "+importedPenis.orificeUrethra.getPlasticity()
+				+ "<br/>容量: "+importedPenis.orificeUrethra.getCapacity()
+				+ "<br/>撑开后容量: "+importedPenis.orificeUrethra.getStretchedCapacity()
+				+ "<br/>处女: "+importedPenis.orificeUrethra.isVirgin()
+				+ "<br/>尿道修饰词:");
 
 		Collection<OrificeModifier> urethraOrificeModifiers = importedPenis.orificeUrethra.orificeModifiers;
 		urethraOrificeModifiers.clear();
@@ -2389,13 +2389,13 @@ public class Body extends ModBody implements XMLSaving {
 		StringBuilder sb = new StringBuilder();
 		boolean observant = Main.game.getPlayer().hasTrait(Perk.OBSERVANT, true);
 		// Describe race:
-		sb.append(getHeader("Overview"));
+		sb.append(getHeader("总览"));
 		String colouredHeightValue = "<span style='color:"+this.getHeight().getColour().toWebHexString()+";'>[npc.heightValue]</span>";
 		
-		String heightDescription = " Standing at full height, [npc.she] [npc.verb(measure)] "+colouredHeightValue;
+		String heightDescription = "[npc.she]站直后的身高是"+colouredHeightValue;
 		if(owner.isFeral() && !owner.getFeralAttributes().isSizeHeight()) {
 			if(owner.getLegConfiguration()==LegConfiguration.TAIL_LONG) {
-				heightDescription = " [npc.Her] body measures "+colouredHeightValue+", which combined with [npc.her] [npc.tailLength]-long tail, gives [npc.herHim] a total length of "
+				heightDescription = "[npc.Her]的体长"+colouredHeightValue+"，再加上[npc.tailLength]长的尾巴，总共长有"
 						+ "<span style='color:"+Height.getHeightFromInt(owner.getHeightValue()+owner.getLegTailLength(false)).getColour().toWebHexString()+";'>"
 							+ Units.size(owner.getHeightValue()+owner.getLegTailLength(false), Units.ValueType.NUMERIC, Units.UnitType.LONG)
 						+"</span>";
@@ -2403,75 +2403,75 @@ public class Body extends ModBody implements XMLSaving {
 //				heightDescription = " From head to tail,  [npc.she] [npc.verb(measure)] "
 //						+Units.size(owner.getHeightValue()+owner.getLegTailLength(false), Units.ValueType.NUMERIC, Units.UnitType.LONG);
 			} else {
-				heightDescription = " From head to tail,  [npc.she] [npc.verb(measure)] "+colouredHeightValue;
+				heightDescription = "[npc.she]从头到尾高度为"+colouredHeightValue;
 			}
 		}
 		
 		if (owner.isPlayer()) {
-			sb.append("You are [pc.name], "
+			sb.append("你是[pc.name]，"
 							+(owner.getRace()==Race.HUMAN
-								?"<span style='color:"+owner.getFemininity().getColour().toWebHexString()+";'>[pc.a_femininity]</span> [pc.gender(true)] [style.colourHuman(human)]. "
-								:"[pc.a_fullRace(true)] [pc.gender(true)]. ")
+								?"<span style='color:"+owner.getFemininity().getColour().toWebHexString()+";'>[pc.a_femininity]</span>的[pc.gender(true)][style.colourHuman(人类)]。"
+								:"[pc.gender(true)]，是个[pc.a_fullRace(true)]。")
 						+ owner.getAppearsAsGenderDescription(true)
-						+heightDescription+".");
+						+heightDescription+"。");
 		} else {
 			if(owner.isAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer()) && owner.isAreaKnownByCharacter(CoverableArea.VAGINA, Main.game.getPlayer())) {
-				sb.append("[npc.Name] is "
+				sb.append("[npc.Name]是"
 							+(owner.getRace()==Race.HUMAN
-								?"<span style='color:"+owner.getFemininity().getColour().toWebHexString()+";'>[npc.a_femininity]</span> [npc.gender(true)] [style.colourHuman(human)]. "
-								:"[npc.a_fullRace(true)] [npc.gender(true)]. ")
+								?"<span style='color:"+owner.getFemininity().getColour().toWebHexString()+";'>[npc.a_femininity]</span>的[npc.gender(true)][style.colourHuman(人类)]。"
+								:"[npc.gender(true)]，是个[npc.a_fullRace(true)]。")
 						+ owner.getAppearsAsGenderDescription(true)
 						+ heightDescription);
 			} else {
 				if(observant) {
-					sb.append("Thanks to your observant perk, you can detect that [npc.name] is <span style='color:"+getGender().getColour().toWebHexString()+";'>[npc.a_gender]</span> [npc.raceStage] [npc.race]. "
+					sb.append("凭借着“敏锐”天赋，你辨认出[npc.name]是<span style='color:"+getGender().getColour().toWebHexString()+";'>[npc.a_gender]</span>[npc.raceStage][npc.race]。"
 							+ owner.getAppearsAsGenderDescription(true)
 							+ heightDescription);
 				} else {
-					sb.append("[npc.Name] is a [npc.a_fullRace(true)]. "
+					sb.append("[npc.Name]是个[npc.a_fullRace(true)]。"
 								+ owner.getAppearsAsGenderDescription(true)
 								+ heightDescription);
 				}
 			}
 			if(owner.isSizeDifferenceTallerThan(Main.game.getPlayer())) {
-				String descriptor = owner.isFeral() && !owner.getFeralAttributes().isSizeHeight()?"longer":"taller";
-				sb.append(", making [npc.herHim] <span style='color:"+PresetColour.BODY_SIZE_FOUR.toWebHexString()+";'>significantly "+descriptor+"</span> than you.");
+				String descriptor = owner.isFeral() && !owner.getFeralAttributes().isSizeHeight()?"更长":"更高";
+				sb.append("，使[npc.herHim]显然比你<span style='color:"+PresetColour.BODY_SIZE_FOUR.toWebHexString()+";'>"+descriptor+"</span>。");
 			} else if(owner.isSizeDifferenceShorterThan(Main.game.getPlayer())) {
-				sb.append(", making [npc.herHim] <span style='color:"+PresetColour.BODY_SIZE_ZERO.toWebHexString()+";'>significantly shorter</span> than you.");
+				sb.append("，使[npc.herHim]显然比你<span style='color:"+PresetColour.BODY_SIZE_ZERO.toWebHexString()+";'>" + (owner.isFeral() && !owner.getFeralAttributes().isSizeHeight()?"更短":"更矮") + "</span>。");
 			} else {
-				sb.append(".");
+				sb.append("。");
 			}
 		}
 		
 		switch(owner.getLegConfiguration()) {
 			case ARACHNID:
 				if(owner.isFeral()) {
-					sb.append(" [style.colourFeral([npc.Her] entire body has transformed into that of a feral [npc.legRace]."
-							+ " [npc.Her] genitals are located on the underside of [npc.her] feral [npc.assRace]'s body, while [npc.her] asshole is located near to the end of [npc.her] feral abdomen.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个身体都已经转化为兽态的[npc.legRace]。"
+							+ "[npc.Her]的外生殖器位于[npc.her]兽态[npc.assRace]身体的底部，而[npc.her]肛门则位于[npc.her]兽态腹部的后端。)]");
 				} else {
-					sb.append(" [style.colourFeral([npc.Her] entire lower body, from the waist down, has transformed into that of a huge [npc.legRace]."
-							+ " [npc.Her] legs and genitals are completely feral in nature, and are extremely similar to that of [npc.a_assRace]'s."
-							+ " [npc.Her] genitals are located on the underside of [npc.her] feral [npc.assRace]'s body, while [npc.her] asshole is located near to the end of [npc.her] feral abdomen.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个下半身——腰部以下——都已经转化为[npc.legRace]的巨大身躯。"
+							+ "[npc.Her]的腿和外生殖器已经完全是野兽的形态，与[npc.a_assRace]的极端相似。"
+							+ "[npc.Her]的外生殖器位于[npc.her]兽态[npc.assRace]身体的底部，而[npc.her]肛门则位于[npc.her]兽态腹部的后端。)]");
 				}
 				break;
 			case AVIAN:
 				if(owner.isFeral()) {
-					sb.append(" [style.colourFeral([npc.Her] entire body has transformed into that of a feral [npc.legRace]."
-							+ " [npc.Her] genitals are located towards the rear of the underside of [npc.her] feral [npc.assRace]'s body, and are located within a cloaca.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个身体都已经转化为兽态的[npc.legRace]。"
+							+ "[npc.Her]的外生殖器位于[npc.her]兽态[npc.assRace]身体的底部偏后的泄殖腔内 。)]");
 				} else {
-					sb.append(" [style.colourFeral([npc.Her] entire lower body, from the waist down, has transformed into that of a huge [npc.legRace]."
-							+ " [npc.Her] legs and genitals are completely feral in nature, and are extremely similar to that of [npc.a_assRace]'s."
-							+ " [npc.Her] genitals are located towards the rear of the underside of [npc.her] feral [npc.assRace]'s body, and are located within a cloaca.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个下半身——腰部以下——都已经转化为[npc.legRace]的巨大身躯。"
+							+ "[npc.Her]的腿和外生殖器已经完全是野兽的形态，与[npc.a_assRace]的极端相似。"
+							+ "[npc.Her]的外生殖器位于[npc.her]兽态[npc.assRace]身体的底部偏后的泄殖腔内 。)]");
 				}
 				break;
 			case CEPHALOPOD:
 				if(owner.isFeral()) {
-					sb.append(" [style.colourFeral([npc.Her] entire body has transformed into that of a feral [npc.legRace]."
-							+ " [npc.Her] genitals and asshole are located within a cloaca on the underside of [npc.her] feral body.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个身体都已经转化为兽态的[npc.legRace]。"
+							+ "[npc.Her]的外生殖器和肛门位于[npc.her]兽态身体底部的泄殖腔内。)]");
 				} else {
-					sb.append(" [style.colourFeral([npc.Her] entire lower body, from the waist down, has transformed into that of a huge [npc.legRace]."
-							+ " [npc.Her] legs and genitals are almost completely feral in nature, and are extremely similar to that of [npc.a_assRace]'s."
-							+ " [npc.Her] genitals and asshole are located within a cloaca on the underside of [npc.her] feral body.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个下半身——腰部以下——都已经转化为[npc.legRace]的巨大身躯。"
+							+ "[npc.Her]的腿和外生殖器几乎完全是野兽的形态，与[npc.a_assRace]的极端相似。"
+							+ "[npc.Her]的外生殖器和肛门位于[npc.her]兽态身体底部的泄殖腔内。)]");
 				}
 				break;
 			case BIPEDAL:
@@ -2479,35 +2479,35 @@ public class Body extends ModBody implements XMLSaving {
 				break;
 			case TAIL:
 				if(owner.isFeral()) {
-					sb.append(" [style.colourFeral([npc.Her] entire body has transformed into that of a feral [npc.legRace]."
-							+ " [npc.Her] ass and genitals have shifted to be located within a cloaca on the underside of [npc.her] feral body.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个身体都已经转化为兽态的[npc.legRace]。"
+							+ "[npc.Her]的肛门和外生殖器现在位于[npc.her]兽态身体底部的泄殖腔内。)]");
 				} else {
-					sb.append(" [style.colourFeral([npc.Her] entire lower body, from the waist down, has transformed into the tail of [npc.a_legRace]."
-							+ " [npc.Her] ass and genitals, while retaining anthropomorphic qualities, have shifted to be located within a front-facing cloaca.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个下半身——腰部以下——都已经转化为[npc.legRace]的尾巴。"
+							+ "[npc.Her]的肛门和外生殖器保留了一些人类的特征，现在位于前向泄殖腔内。)]");
 	
 					if(owner.hasStatusEffect(StatusEffect.AQUATIC_NEGATIVE)) {
-						sb.append(" As there is no nearby body of water, [npc.her] tail has automatically [style.colourTan(transformed into a pair of legs)], thereby enabling [npc.herHim] to easily traverse over land.");
+						sb.append("由于附近没有水体，[npc.her]的尾巴自动[style.colourTan(转化为了腿)]，令[npc.herHim]能够轻易地穿越陆地。");
 					}
 				}
 				break;
 			case TAIL_LONG:
 				if(owner.isFeral()) {
-					sb.append(" [style.colourFeral([npc.Her] entire body has transformed into that of a feral [npc.legRace]."
-							+ " [npc.Her] ass and genitals have shifted to be located within a cloaca on the underside of [npc.her] feral body.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个身体都已经转化为兽态的[npc.legRace]。"
+							+ "[npc.Her]的肛门和外生殖器现在位于[npc.her]兽态身体底部的泄殖腔内。)]");
 				} else {
-					sb.append(" [style.colourFeral([npc.Her] entire lower body, from the waist down, has transformed into the long tail of [npc.a_legRace],"
-								+ " which measures "+Units.size(owner.getLegTailLength(false))+" in length."
-							+ " [npc.Her] ass and genitals are completely feral in nature, and, in a manner identical to that of [npc.a_assRace], have shifted to be located within a front-facing cloaca.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个下半身——腰部以下——都已经转化为[npc.a_legRace]的长尾，"
+								+ "长度为"+Units.size(owner.getLegTailLength(false))+"。"
+							+ "[npc.Her]的肛门和外生殖器已经完全是野兽形态，与[npc.a_assRace]的完全相同，现在位于前向的泄殖腔内。)]");
 				}
 				break;
 			case QUADRUPEDAL:
 				if(owner.isFeral()) {
-					sb.append(" [style.colourFeral([npc.Her] entire body has transformed into that of a feral [npc.legRace]."
-							+ " [npc.Her] genitals and asshole are located at the rear-end of [npc.her] feral body.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个身体都已经转化为兽态的[npc.legRace]。"
+							+ "[npc.Her]的外生殖器和肛门位于[npc.her]兽态身体的后端。)]");
 				} else {
-					sb.append(" [style.colourFeral([npc.Her] entire lower body, from the waist down, has transformed into that of [npc.a_legRace]."
-							+ " [npc.Her] legs, tail, ass, and genitals are completely feral in nature, and are identical to those of [npc.a_assRace]'s."
-							+ " [npc.Her] genitals and asshole are located at the rear-end of [npc.her] feral body, in the same location as that of a regular [npc.a_assRace]'s.)]");
+					sb.append("[style.colourFeral([npc.Her]的整个下半身——腰部以下——都已经转化为[npc.a_legRace]的样子。"
+							+ "[npc.Her]的腿、尾巴、屁股、外生殖器已经完全是野兽的形态，与[npc.a_assRace]的完全相同。"
+							+ "[npc.Her]的外生殖器和肛门位于[npc.her]兽态身体的后端，与通常的[npc.a_assRace]位于同样位置。)]");
 				}
 				break;
 		}
@@ -2522,8 +2522,8 @@ public class Body extends ModBody implements XMLSaving {
 				break;
 			case SLIME:
 				sb.append("<p>"
-							+ "[npc.NamePos] entire body, save for a small, glowing sphere in the place where [npc.her] heart should be, is made out of [npc.skinFullDescription(true)]!"
-							+ " [npc.She] [npc.do]n't need to have any parts of [npc.her] body pierced in order to equip jewellery, as [npc.she] can freely morph [npc.her] body at will!"
+							+ "[npc.NamePos]的整个身体都由[npc.skinFullDescription(true)]制成，除了心脏原本的位置是一个发光的小圆球！"
+							+ "[npc.She]所有的身体部位都不需要穿孔就可以装备珠宝，因为[npc.she]可以随意化形身体！"
 						+ "</p>");
 				break;
 			case SILICONE:
@@ -2535,144 +2535,144 @@ public class Body extends ModBody implements XMLSaving {
 			case WATER:
 			case FIRE:
 				sb.append("<p>"
-							+ "[npc.NamePos] entire body, save for a small obsidian sphere in the place where [npc.her] heart should be, is made out of"
-								+ " <b style='color:"+this.getBodyMaterial().getColour().toWebHexString()+";'>"+this.getBodyMaterial().getName()+"</b>!"
+							+ "[npc.NamePos]的整个身体都由"
+								+ "<b style='color:"+this.getBodyMaterial().getColour().toWebHexString()+";'>"+this.getBodyMaterial().getName()+"</b>制成，除了心脏原本的位置是一个黑曜石制的小圆球！"
 						+ "</p>");
 				break;
 		}
 		
 		// Describe face (ears, eyes & horns):
 		// Femininity:
-		sb.append(getHeader("Face"));
+		sb.append(getHeader("面部"));
 		sb.append(face.getType().getBodyDescription(owner));
 		if(owner.getBlusher().getPrimaryColour()!=PresetColour.COVERING_NONE) {
-			sb.append(" [npc.SheIsFull] wearing "+owner.getBlusher().getColourDescriptor(owner, true, false)+" blusher.");
+			sb.append("[npc.SheIsFull]的面颊上轻覆着一层淡淡的"+owner.getBlusher().getColourDescriptor(owner, true, false)+"腮红。");
 		}
 		
 		// Hair:
 		if (hair.getRawLengthValue() == 0) {
 			if(face.isBaldnessNatural() || owner.isFeral()) {
-				sb.append(" [npc.Her] head is [npc.materialDescriptor] [npc.faceFullDescription(true)].");
+				sb.append("[npc.Her]的脑袋[npc.materialDescriptor][npc.faceFullDescription(true)]。");
 			} else {
-				sb.append(" [npc.SheHasFull] no hair on [npc.her] head, revealing the [npc.faceSkin] that covers [npc.her] scalp.");
+				sb.append("[npc.SheHasFull]的头上没有头发，露出了覆盖[npc.her]的[npc.faceSkin]。");
 			}
 			
 		} else {
-			sb.append(" "+hair.getType().getBodyDescription(owner).trim());
+			sb.append(hair.getType().getBodyDescription(owner).trim());
 			
 			if(hair.getType().getTags().contains(BodyPartTag.HAIR_NATURAL_MANE) && owner.getFaceType().getRace()==hair.getType().getRace()) {
-				sb.append(", which forms a mane running down the back of [npc.her] neck and which "); // If hair and face races match, the mane is fully formed
+				sb.append("，有如一缕鬃毛沿着后颈披落下来，"); // If hair and face races match, the mane is fully formed
 			} else {
-				sb.append(", which ");
+				sb.append("，");
 			}
 			
 			switch (hair.getStyle()) {
 				case NONE:
-					sb.append((hair.getType().isDefaultPlural(owner)?"are":"is")+" unstyled.");
+					sb.append("没有什么造型。");
 					break;
 				case BRAIDED:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been woven into a long braid.");
+					sb.append("编成了长辫。");
 					break;
 				case CURLY:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been curled and left loose.");
+					sb.append("披散着，十分卷曲。");
 					break;
 				case LOOSE:
-					sb.append((hair.getType().isDefaultPlural(owner)?"are":"is")+" left loose and unstyled.");
+					sb.append("披散着，没有什么造型。");
 					break;
 				case PONYTAIL:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a ponytail.");
+					sb.append("扎成了马尾。");
 					break;
 				case STRAIGHT:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been straightened and left loose.");
+					sb.append("经过拉直，披散着。");
 					break;
 				case TWIN_TAILS:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into twin tails.");
+					sb.append("扎成了双马尾。");
 					break;
 				case WAVY:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into waves and left loose.");
+					sb.append("披散着，卷曲似波浪。");
 					break;
 				case MOHAWK:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a mohawk.");
+					sb.append("打扮成了莫霍克发型。");
 					break;
 				case AFRO:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into an afro.");
+					sb.append("打扮成了爆炸头。");
 					break;
 				case SIDECUT:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a sidecut.");
+					sb.append("理成了侧剃。");
 					break;
 				case BOB_CUT:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a bob cut.");
+					sb.append("打扮成了波波头。");
 					break;
 				case PIXIE:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a pixie-cut.");
+					sb.append("打扮成了精灵短发。");
 					break;
 				case SLICKED_BACK:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been slicked back.");
+					sb.append("梳成了背头。");
 					break;
 				case MESSY:
-					sb.append((hair.getType().isDefaultPlural(owner)?"are":"is")+" unstyled and very messy.");
+					sb.append("十分凌乱，没什么造型。");
 					break;
 				case HIME_CUT:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been straightened and styled into a hime cut.");
+					sb.append("拉直后打扮成了姬发式。");
 					break;
 				case CHONMAGE:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been straightened, oiled and styled into a chonmage topknot.");
+					sb.append("拉直后涂油保养，扎成了月代头髻。");
 					break;
 				case TOPKNOT:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a topknot.");
+					sb.append("打扮成了髻发。");
 					break;
 				case DREADLOCKS:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into dreadlocks.");
+					sb.append("编成了脏辫。");
 					break;
 				case BIRD_CAGE:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into an elaborate bird cage"+UtilText.returnStringAtRandom(".",", birds not included."));
+					sb.append("编成了优美的鸟笼形"+UtilText.returnStringAtRandom("。","，里面并没有鸟。"));
 					break;
 				case TWIN_BRAIDS:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been woven into long twin braids.");
+					sb.append("编成了长长的双麻花辫。");
 					break;
 				case DRILLS:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into ojou ringlets.");
+					sb.append("打扮成了公主卷发。");
 					break;
 				case LOW_PONYTAIL:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a low ponytail.");
+					sb.append("扎成了低马尾。");
 					break;
 				case CROWN_BRAID:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been woven into a "+UtilText.returnStringAtRandom("crown of braids.","braided crown."));
+					sb.append("编成了冠辫发。");
 					break;
 				case BUN:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been styled into a bun.");
+					sb.append("打扮成了丸子头。");
 					break;
 				case CHIGNON:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been tied up into a chignon.");
+					sb.append("打扮成了低髻。");
 					break;
 				case SIDE_BRAIDS:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been woven into braids that hang down on either side of [npc.her] face.");
+					sb.append("编成麻花辫后侧搭在脸旁。");
 					break;
 				case SIDE_PARTED:
-					sb.append((hair.getType().isDefaultPlural(owner)?"have":"has")+" been combed away from a parting on the side of [npc.her] head.");
+					sb.append("完全梳向了头的其中一侧。");
 					break;
 			}
 		}
 		if (hair.isNeckFluff()) {
-			sb.append(" A large amount of [npc.hair(true)] "+(hair.getType().isDefaultPlural(owner)?"have":"has")+" grown around [npc.her] neck and upper chest.");
+			sb.append("一大片[npc.hair(true)]生长在脖子和胸口偏上的位置。");
 		}
 		
 		// Horns:
 		
 		if(owner.hasHorns()) {
-			sb.append(" "+owner.getHornType().getBodyDescription(owner));
+			sb.append(""+owner.getHornType().getBodyDescription(owner));
 		}
 		
 		// Antenna:
 
 		if(owner.hasAntennae()) {
-			sb.append(" "+owner.getAntennaType().getBodyDescription(owner));
+			sb.append(""+owner.getAntennaType().getBodyDescription(owner));
 		}
 		
 		// Nose:
 		
 		if(face.isPiercedNose()) {
-			sb.append(" [npc.Her] [npc.nose] has been pierced.");
+			sb.append("[npc.Her]的[npc.nose]已经穿过孔。");
 		}
 		
 		// Eyes:
@@ -2680,73 +2680,73 @@ public class Body extends ModBody implements XMLSaving {
 		if(owner.isAreaKnownByCharacter(CoverableArea.EYES, Main.game.getPlayer())) {
 			sb.append(getEyeDescription(owner));
 		} else {
-			sb.append(" [style.colourDisabled(You haven't seen [npc.her] eyes before, so you don't know what they look like.)]");
+			sb.append("[style.colourDisabled(你从未见过[npc.her]的眼睛，所以也不知道到底长什么样子。)]");
 		}
 		
 		// Ear:
 		if(owner.isFeral()) {
-			sb.append(" [npc.She] [npc.has] a pair of #IF(npc.isPiercedEar()) pierced,#ENDIF [npc.earRace] ears, which are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].");
+			sb.append("[npc.She]有一对[npc.earRace]耳朵，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]#IF(npc.isPiercedEar())，已经打过耳洞#ENDIF。");
 			
 		} else {
-			sb.append(" "+ear.getType().getBodyDescription(owner));
+			sb.append(""+ear.getType().getBodyDescription(owner));
 			
 			if(Main.game.isFacialHairEnabled()) {
 				if(owner.getFacialHairType().getType()==BodyCoveringType.BODY_HAIR_SCALES_ALLIGATOR) {
 					switch(owner.getFacialHair()) {
 						case ZERO_NONE:
 							if(!owner.isFeminine()) {
-								sb.append(" [npc.She] [npc.do]n't have any trace of rough, stubbly "+owner.getFacialHairType().getName(owner)+".");
+								sb.append("[npc.She]的[npc.face]上看不出任何"+owner.getFacialHairType().getName(owner)+"的迹象。");
 							}
 							break;
 						case ONE_STUBBLE:
-							sb.append(" [npc.SheHasFull] a stubbly patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一茬"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 						case TWO_MANICURED:
-							sb.append(" [npc.SheHasFull] a small, rough patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face], which resembles a beard.");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片又短又硬的"+owner.getFacialHairType().getFullDescription(owner, true)+"，与胡须很相似。");
 							break;
 						case THREE_TRIMMED:
-							sb.append(" [npc.SheHasFull] a rough patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face], which resembles a beard.");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片硬质的"+owner.getFacialHairType().getFullDescription(owner, true)+"，与胡须很相似。");
 							break;
 						case FOUR_NATURAL:
-							sb.append(" [npc.SheHasFull] a natural-looking rough patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face], which resembles a beard.");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片自然生长的"+owner.getFacialHairType().getFullDescription(owner, true)+"，与胡须很相似。");
 							break;
 						case FIVE_UNKEMPT:
-							sb.append(" [npc.SheHasFull] an unkempt, rough patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face], which resembles a beard.");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片凌乱的"+owner.getFacialHairType().getFullDescription(owner, true)+"，与胡须很相似。");
 							break;
 						case SIX_BUSHY:
-							sb.append(" [npc.SheHasFull] a thick, rough patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face], which resembles a beard.");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片浓厚的"+owner.getFacialHairType().getFullDescription(owner, true)+"，与胡须很相似。");
 							break;
 						case SEVEN_WILD:
-							sb.append(" [npc.SheHasFull] a wild, rough patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face], which resembles a beard.");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片野蛮生长的"+owner.getFacialHairType().getFullDescription(owner, true)+"，与胡须很相似。");
 							break;
 					}
 				} else {
 					switch(owner.getFacialHair()) {
 						case ZERO_NONE:
 							if(!owner.isFeminine()) {
-								sb.append(" [npc.She] [npc.do]n't have any trace of facial "+owner.getFacialHairType().getName(owner)+".");
+								sb.append("没有任何面部"+owner.getFacialHairType().getName(owner)+"的踪迹。");
 							}
 							break;
 						case ONE_STUBBLE:
-							sb.append(" [npc.SheHasFull] a stubbly patch of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一茬"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 						case TWO_MANICURED:
-							sb.append(" [npc.SheHasFull] a small amount of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一小片"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 						case THREE_TRIMMED:
-							sb.append(" [npc.SheHasFull] a well-trimmed beard of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片修剪整齐的"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FOUR_NATURAL:
-							sb.append(" [npc.SheHasFull] a natural-looking beard of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片自然生长的"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FIVE_UNKEMPT:
-							sb.append(" [npc.SheHasFull] an unkempt, bushy beard of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片凌乱的"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SIX_BUSHY:
-							sb.append(" [npc.SheHasFull] a thick, bushy beard of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片浓厚的"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SEVEN_WILD:
-							sb.append(" [npc.SheHasFull] a wild, bushy beard of "+owner.getFacialHairType().getFullDescription(owner, true)+" growing on [npc.her] [npc.face].");
+							sb.append("[npc.SheHasFull]的[npc.face]上长着一片野蛮生长的"+owner.getFacialHairType().getFullDescription(owner, true)+"。");
 							break;
 					}
 				}
@@ -2756,7 +2756,7 @@ public class Body extends ModBody implements XMLSaving {
 		
 		
 		// Mouth & lips:
-		sb.append(getHeader("Mouth"));
+		sb.append(getHeader("嘴巴"));
 		sb.append(face.getMouth().getType().getBodyDescription(owner));
 		
 		// Throat modifiers:
@@ -2764,16 +2764,16 @@ public class Body extends ModBody implements XMLSaving {
 			if(owner.hasFaceOrificeModifier(om)) {
 				switch(om) {
 					case PUFFY:
-						sb.append(" [npc.Her] [npc.lips] have swollen up to be far puffier than what would be considered normal.");
+						sb.append("[npc.Her][npc.lips]十分饱满，比普通的更加有肉感。");
 						break;
 					case MUSCLE_CONTROL:
-						sb.append(" [npc.SheHasFull] a series of internal muscles lining the inside of [npc.her] throat, allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+						sb.append("[npc.SheHasFull]的喉咙拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 						break;
 					case RIBBED:
-						sb.append(" The inside of [npc.her] throat is lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+						sb.append("[npc.her]的喉咙内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 						break;
 					case TENTACLED:
-						sb.append(" [npc.Her] throat is filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+						sb.append("[npc.Her]的喉咙长满了细小的触手，自行蜿蜒扭动着。");
 						break;
 				}
 			}
@@ -2782,40 +2782,40 @@ public class Body extends ModBody implements XMLSaving {
 		
 		// Tongue & blowjob:
 		if(owner.isFeral()) {
-			sb.append(" [npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)] [npc.tongueRace] [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.");
+			sb.append("[npc.Her]的嘴巴里有一根[npc.tongueColour(true)]的[npc.tongueRace][npc.tongue]，看上去[npc.a_tongueLength]#IF(npc.isPiercedTongue())，且已经穿过孔#ENDIF。");
 		} else {
-			sb.append(" "+face.getTongue().getType().getBodyDescription(owner));
+			sb.append(""+face.getTongue().getType().getBodyDescription(owner));
 		}
 		
 		for(TongueModifier tm : TongueModifier.values()) {
 			if(owner.hasTongueModifier(tm)) {
 				switch(tm) {
 					case RIBBED:
-						sb.append(" Hard, fleshy ribs line its entire length, which are sure to grant extra pleasure to any orifice that they penetrate.");
+						sb.append("整根[npc.tongue]上都长满了稍硬的肉质突起，绝对能为任何被插入的腔穴带来额外的快感。");
 						break;
 					case TENTACLED:
-						sb.append(" A series of little tentacles coat its surface, which wriggle and squirm with a mind of their own.");
+						sb.append("一片细小的触手覆盖在[npc.tongue]表面，自行蜿蜒扭动着。");
 						break;
 					case BIFURCATED:
-						sb.append(" Near the tip, it's split in two, leaving [npc.her] tongue bifurcated, like a snake.");
+						sb.append("在靠近尖端处一分为二，像蛇一样分叉开来。");
 						break;
 					case FLAT:
 						if(owner.hasTongueModifier(TongueModifier.WIDE)) {
-							sb.append(" It is both a lot flatter and wider than what would be considered normal.");
+							sb.append("比起一般的来说显得既平又宽。");
 						} else {
-							sb.append(" It is a lot flatter than what would be considered normal.");
+							sb.append("比起一般来的来说显得更加平直。");
 						}
 						break;
 					case STRONG:
-						sb.append(" It is far stronger than a normal tongue.");
+						sb.append("比起一般的来说更加有力。");
 						break;
 					case WIDE:
 						if(!owner.hasTongueModifier(TongueModifier.FLAT)) {
-							sb.append(" It is a lot wider than what would be considered normal.");
+							sb.append("比起一般的来说显得更加宽大。");
 						}
 						break;
 					case TAPERED:
-						sb.append(" It tapers down from its base, getting narrower towards the tip.");
+						sb.append("从根部开始逐渐收紧，越靠近尖端就变得越细。");
 						break;
 				}
 			}
@@ -2824,51 +2824,51 @@ public class Body extends ModBody implements XMLSaving {
 		
 		if (owner.isPlayer() || owner.isAreaKnownByCharacter(CoverableArea.MOUTH, Main.game.getPlayer())) {
 			if(face.getMouth().getOrificeMouth().isVirgin()) { //TODO
-				sb.append(" [npc.SheHas] [style.colourExcellent(never given head before)], so [npc.is] unsure of how much [npc.she] could fit down [npc.her] throat.</span>");
+				sb.append("[npc.SheHas][style.colourExcellent(从来没有口交过)]，所以不清楚[npc.she]的喉咙能够容纳多大的物体。</span>");
 				
 			} else {
 				boolean virginityLossFound = false;
 				for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 					if(pt.isTakesVirginity()) {
 						if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, pt))!=null) {
-							sb.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, pt)) + "</span>");
+							sb.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, pt)) + "</span>");
 							virginityLossFound = true;
 							break;
 						}
 					}
 				}
 				if(!virginityLossFound) {
-					sb.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name] [npc.has] lost [npc.her] oral virginity.</span>");
+					sb.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name]已经失去了口部贞操。</span>");
 				}
 				
-				sb.append(" It is "+Capacity.getCapacityFromValue(face.getMouth().getOrificeMouth().getStretchedCapacity()).getDescriptor(true)+", and can comfortably accommodate objects of up to"
-						+ " [style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(face.getMouth().getOrificeMouth().getElasticity(), face.getMouth().getOrificeMouth().getRawCapacityValue(), true)) + ")] in diameter.");
+				sb.append("[npc.her]"+Capacity.getCapacityFromValue(face.getMouth().getOrificeMouth().getStretchedCapacity()).getDescriptor(true)+"的[npc.mouth]能够轻松容纳直径达"
+						+ "[style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(face.getMouth().getOrificeMouth().getElasticity(), face.getMouth().getOrificeMouth().getRawCapacityValue(), true)) + ")]的物体。");
 				
 				if(Main.game.isPenetrationLimitationsEnabled()) {
 					switch(owner.getFaceDepth()) {
 						default:
-							sb.append(" [npc.Her] throat is <span style='color:"+owner.getFaceDepth().getColour().toWebHexString()+";'>[npc.throatDepth]</span>,");
+							sb.append("[npc.Her]的喉咙<span style='color:"+owner.getFaceDepth().getColour().toWebHexString()+";'>[npc.throatDepth]</span>，");
 							break;
 						case TWO_AVERAGE:
-							sb.append(" [npc.Her] throat is of an <span style='color:"+owner.getFaceDepth().getColour().toWebHexString()+";'>average depth</span>,");
+							sb.append("[npc.Her]的喉咙<span style='color:"+owner.getFaceDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 							break;
 					}
 					if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 						if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-							sb.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-									+ " [style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthUncomfortable())+")].");
+							sb.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+									+ "[style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthUncomfortable())+")]。");
 						} else {
-							sb.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-									+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthUncomfortable())+")].");
+							sb.append("使得[npc.herHim]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+									+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 						}
 						
 					} else {
 						if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-							sb.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-									+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+							sb.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+									+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 						} else {
-							sb.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-									+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+							sb.append("使得[npc.herHim]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getFaceMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+									+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 						}
 					}
 				}
@@ -2876,100 +2876,100 @@ public class Body extends ModBody implements XMLSaving {
 				// Throat wetness:
 				switch (face.getMouth().getOrificeMouth().getWetness(owner)) {
 					case ZERO_DRY:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(very dry)], and [npc.she] struggles to produce any saliva at all.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(极其干燥)]，[npc.she]很难分泌出唾液。");
 						break;
 					case ONE_SLIGHTLY_MOIST:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(drier than most)], and [npc.she] only produces a small amount of saliva.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(比一般人更干燥)]，[npc.she]只能分泌出一点唾液。");
 						break;
 					case TWO_MOIST:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(a little drier than most)], and [npc.she] produces less saliva than what could be considered average.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(稍有些干燥)]，[npc.she]比一般人分泌的唾液要更少。");
 						break;
 					case THREE_WET:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(of a typical wetness)], and [npc.she] produces an average amount of saliva.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(还算湿润)]，[npc.she]能够分泌适量唾液。");
 						break;
 					case FOUR_SLIMY:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(wetter than most)], and [npc.she] produces more saliva than an average person.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(更湿润些)]，[npc.she]比一般人分泌的唾液要更多。");
 						break;
 					case FIVE_SLOPPY:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(considerably wetter than most)], and [npc.she] produces a lot more saliva than an average person.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(相当湿润)]，[npc.she]比一般人分泌的唾液要多得多。");
 						break;
 					case SIX_SOPPING_WET:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(always wet and slimy)], and [npc.she] produces so much saliva that [npc.she] finds [npc.herself] having to swallow every few seconds.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(总是十分湿润粘滑)]，[npc.she]能够分泌大量唾液，每过几秒钟就能感觉到口中有新的唾液。");
 						break;
 					case SEVEN_DROOLING:
-						sb.append(" [npc.Her] mouth and throat are [style.colourWetness(overflowing with saliva)],"
-								+ " and despite [npc.her] continuous efforts to swallow down the slimy mess, a constant stream of drool trickles from the corners of [npc.her] mouth.");
+						sb.append("[npc.Her]的嘴巴和喉咙[style.colourWetness(总是溢满了唾液)]，"
+								+ "尽管[npc.her]不断地吞下这些粘滑的东西，但依然有口水从嘴边溢出。");
 						break;
 				}
 
 				// Elasticity & plasticity:
-				sb.append(" [npc.Her] throat");
+				sb.append("[npc.Her]的喉咙");
 				switch (face.getMouth().getOrificeMouth().getElasticity()) {
 					case ZERO_UNYIELDING:
-						sb.append(" is [style.colourElasticity(extremely unyielding)],");
+						sb.append("[style.colourElasticity(几乎不会扩张)]，");
 						break;
 					case ONE_RIGID:
-						sb.append(" [style.colourElasticity(takes a huge amount of effort to be stretched out)],");
+						sb.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 						break;
 					case TWO_FIRM:
-						sb.append(" [style.colourElasticity(does not stretch very easily)],");
+						sb.append("[style.colourElasticity(不太容易撑开)]，");
 						break;
 					case THREE_FLEXIBLE:
-						sb.append(" [style.colourElasticity(reluctantly stretches out)] when used as a sexual orifice,");
+						sb.append("被用于性交时[style.colourElasticity(撑不太开)]，");
 						break;
 					case FOUR_LIMBER:
-						sb.append(" is [style.colourElasticity(somewhat resistant to being stretched out)],");
+						sb.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 						break;
 					case FIVE_STRETCHY:
-						sb.append(" [style.colourElasticity(stretches out fairly easily)],");
+						sb.append("[style.colourElasticity(可以比较简单地撑开)]，");
 						break;
 					case SIX_SUPPLE:
-						sb.append(" [style.colourElasticity(stretches out very easily)],");
+						sb.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 						break;
 					case SEVEN_ELASTIC:
-						sb.append(" is [style.colourElasticity(extremely elastic)],");
+						sb.append("[style.colourElasticity(弹性极佳)]，");
 						break;
 				}
-				sb.append(" and after being used, it "+face.getMouth().getOrificeMouth().getPlasticity().getDescription()+".");
+				sb.append("在被使用之后，会"+face.getMouth().getOrificeMouth().getPlasticity().getDescription()+"。");
 			}
 			
 		} else {
-			sb.append(" [style.colourDisabled(You don't know [npc.herHim] well enough to know how competent [npc.she] is at performing oral sex.)]");
+			sb.append("[style.colourDisabled(你对[npc.herHim]的认识还不够充分，不知道[npc.she]的口交能力。)]");
 		}
 		
 		sb.append("</p>");
 
 		
 		// Describe body:
-		sb.append(getHeader("Torso"));
+		sb.append(getHeader("躯干"));
 		if(owner.isFeral()) {
-			sb.append("[style.colourFeral([npc.Her] torso is entirely feral in appearance, and is no different to that of a regular [npc.race]'s.)] ");
+			sb.append("[style.colourFeral([npc.Her]的躯干表面上看完全是兽态的，与普通的[npc.race]并无二致。)] ");
 		}
 		sb.append(owner.getTorsoType().getBodyDescription(owner));
-		sb.append(" [npc.SheHasFull] <span style='color:"+ BodySize.valueOf(getBodySize()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySize()).getName(true) + "</span>, "
+		sb.append("[npc.SheHasFull]拥有<span style='color:"+ BodySize.valueOf(getBodySize()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySize()).getName(true) + "</span>且"
 						+ "<span style='color:"+ Muscle.valueOf(getMuscle()).getColour().toWebHexString() + ";'>" +Muscle.valueOf(getMuscle()).getName(false) + "</span>"
-							+ " body, giving [npc.herHim] <span style='color:"+ owner.getBodyShape().toWebHexStringColour() + ";'>[npc.a_bodyShape]</span> body shape.");
+							+ "的身体，塑造了[npc.herHim]<span style='color:"+ owner.getBodyShape().toWebHexStringColour() + ";'>[npc.bodyShape]</span>的身材。");
 		if(torso.getType().getTags().contains(BodyPartTag.ALLOWS_FLIGHT)) {
-			sb.append(" [style.colourBlue(The unique nature of [npc.namePos] body allows [npc.herHim] to fly!)]");
+			sb.append("[style.colourBlue([npc.namePos]身体的特殊构造使得[npc.herHim]可以飞翔！)]");
 		}
 		
 		
 		// Pregnancy:
 		if(owner.isVisiblyPregnant()) {
 			if(owner.getLegConfiguration()!=LegConfiguration.BIPEDAL) {
-				sb.append(" The belly of [npc.her] [style.colourFeral(feral torso)]");
+				sb.append("[npc.her][style.colourFeral(兽态身躯)]的肚子");
 			} else {
-				sb.append("[npc.Her] belly");
+				sb.append("[npc.Her]的肚子");
 			}
 			if(owner.hasStatusEffect(StatusEffect.PREGNANT_1)){
-				sb.append(" is slightly swollen, and it's clear to anyone who takes a closer look that <span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc.sheIs] pregnant</span>.");
+				sb.append("微微隆起，只需要仔细一看就能知道<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc.sheIs]怀孕了</span>。");
 				
 			} else if(owner.hasStatusEffect(StatusEffect.PREGNANT_2)){
-				sb.append(" is heavily swollen, and it's clear to anyone who glances [npc.her] way that <span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc.sheIs] pregnant</span>.");
+				sb.append("高高隆起，只需要朝这边看一眼就能知道<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc.sheIs]怀孕了</span>。");
 			
 			} else if(owner.hasStatusEffect(StatusEffect.PREGNANT_3)){
-				sb.append(" is massively swollen, and it's blatantly obvious to anyone who glances [npc.her] way that"
-						+ " <span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc.sheIs] expecting to give birth very soon</span>.");
+				sb.append("胀得巨大，只需要稍微朝这边扫一眼就能知道"
+						+ "<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc.sheIs]临盆了</span>。");
 			}
 		}
 		sb.append("</p>");
@@ -2977,9 +2977,9 @@ public class Body extends ModBody implements XMLSaving {
 		
 		
 		// Breasts:
-		sb.append(getHeader("Chest"));
+		sb.append(getHeader("胸部"));
 		if(owner.isFeral() && !owner.getFeralAttributes().isBreastsPresent()) {
-			sb.append("As [npc.nameHasFull] the body of a feral [npc.race], [npc.she] [npc.do] not have any breasts!");
+			sb.append("由于[npc.nameHasFull]的身体是兽态[npc.race]，[npc.she]没有乳房！");
 			
 		} else {
 			Breast viewedBreast = breast;
@@ -2999,62 +2999,62 @@ public class Body extends ModBody implements XMLSaving {
 						breast.getNipples().getOrificeNipples().getElasticity().getValue(),
 						breast.getNipples().getOrificeNipples().getPlasticity().getValue(),
 						breast.getNipples().getOrificeNipples().isVirgin());
-				sb.append(" <i style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>The psychoactive milk you recently ingested is causing your view of "+(owner.isPlayer()?"your":"[npc.namePos]")+" breasts to be distorted!</i>");
+				sb.append("<i style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>你最近摄入的致幻乳汁导致你看到"+(owner.isPlayer()?"你的":"[npc.namePos]的")+"乳房发生了扭曲！</i>");
 			}
 			if(viewedBreast.getRawSizeValue()>0){
-				sb.append(" [npc.SheHasFull] " + Util.intToString(owner.getBreastRows()) + " pair" + (owner.getBreastRows() == 1 ? "" : "s") + " of ");
+				sb.append("[npc.SheHasFull]拥有" + Util.intToString(owner.getBreastRows()) + "对");
 				if(Main.game.isVestigialMultiBreastsEnabled() && owner.getBreastRows()>1) {
 					sb.append("[npc.breasts]");
 				} else {
-					sb.append(viewedBreast.getSize().getDescriptor()+" [npc.breasts]");
+					sb.append(viewedBreast.getSize().getDescriptor()+"的[npc.breasts]");
 				}
 				
 				if(owner.getBreastRows()==1) {
 					if (viewedBreast.getSize().isTrainingBraSize()) {
-						sb.append(", which fit comfortably into a training bra.");
+						sb.append("，适合穿着训练内衣。");
 					} else {
-						sb.append(", which fit comfortably into "+UtilText.generateSingularDeterminer(viewedBreast.getSize().getCupSizeName())+" "+viewedBreast.getSize().getCupSizeName()+"-cup bra.");
+						sb.append("，适合穿着"+UtilText.generateSingularDeterminer(viewedBreast.getSize().getCupSizeName())+""+viewedBreast.getSize().getCupSizeName()+"罩杯的内衣。");
 					}
 					
 				} else if(owner.getBreastRows()==2) {
 					if (viewedBreast.getSize().isTrainingBraSize()) {
-						sb.append(", with [npc.her] top pair fitting comfortably into a training bra,"
+						sb.append("，[npc.her]最上方的一对[npc.breast]适合穿着训练内衣，"
 								+(Main.game.isVestigialMultiBreastsEnabled()
-									?" and the pair below being vestigial in size."
-									:" and the pair below being slightly smaller."));
+									?"而下方的一对已经退化了。"
+									:"而下方的一对会更小一些。"));
 					} else {
-						sb.append(", with [npc.her] top pair fitting comfortably into "
-								+UtilText.generateSingularDeterminer(viewedBreast.getSize().getCupSizeName())+" "+viewedBreast.getSize().getCupSizeName()+"-cup bra,"
+						sb.append("，[npc.her]最上方的一对[npc.breast]适合穿着"
+								+UtilText.generateSingularDeterminer(viewedBreast.getSize().getCupSizeName())+""+viewedBreast.getSize().getCupSizeName()+"罩杯内衣，"
 										+(Main.game.isVestigialMultiBreastsEnabled()
-												?" and the pair below being vestigial in size."
-												:" and the pair below being slightly smaller."));
+												?"而下方的一对已经退化了。"
+												:"而下方的一对会更小一些。"));
 					}
 					
 				} else if(owner.getBreastRows()>2) {
 					if (viewedBreast.getSize().isTrainingBraSize()) {
-						sb.append(", with [npc.her] top pair fitting comfortably into a training bra,"
+						sb.append("，[npc.her]最上方的一对[npc.breast]适合穿着训练内衣，"
 								+(Main.game.isVestigialMultiBreastsEnabled()
-										?" and the pairs below being vestigial in size."
-										:" and the pairs below each being slightly smaller than the ones above."));
+										?"而下方几对已经退化了。"
+										:"而下方几对逐渐变小。"));
 					} else {
-						sb.append(", with [npc.her] top pair fitting comfortably into "
-									+UtilText.generateSingularDeterminer(viewedBreast.getSize().getCupSizeName())+" "+viewedBreast.getSize().getCupSizeName()+"-cup bra,"
+						sb.append("，[npc.her]最上方的一对[npc.breast]适合穿着"
+									+UtilText.generateSingularDeterminer(viewedBreast.getSize().getCupSizeName())+""+viewedBreast.getSize().getCupSizeName()+"罩杯内衣，"
 											+(Main.game.isVestigialMultiBreastsEnabled()
-													?" and the pairs below being vestigial in size."
-													:" and the pairs below each being slightly smaller than the ones above."));
+													?"而下方几对已经退化了。"
+													:"而下方几对逐渐变小。"));
 					}
 				}
 				
 			} else {
-				sb.append(" [npc.SheHasFull] a completely flat chest");
+				sb.append("[npc.SheHasFull]的胸部一片平坦");
 				if(owner.getBreastRows()==1) {
-					sb.append(", with a single pair of pecs.");
+					sb.append("，胸部平坦极了。");
 				} else {
-					sb.append(", with "+Util.intToString(owner.getBreastRows())+" pairs of pecs.");
+					sb.append("，只有"+Util.intToString(owner.getBreastRows())+"对平板胸部。");
 				}
 			}
 			
-			sb.append(" " + getBreastDescription(owner, viewedBreast));
+			sb.append("" + getBreastDescription(owner, viewedBreast));
 		}
 		sb.append("</p>");
 		
@@ -3062,26 +3062,26 @@ public class Body extends ModBody implements XMLSaving {
 		// BreastsCrotch:
 		if(owner.isAreaKnownByCharacter(CoverableArea.BREASTS_CROTCH, Main.game.getPlayer())) {
 			if(owner.hasBreastsCrotch()) {
-				sb.append(getHeader(owner.getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs"));
+				sb.append(getHeader(owner.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳"));
 				sb.append(getBreastCrotchDescription(owner, breastCrotch));
 				sb.append("</p>");
 				
 			} else if(this.leg.getLegConfiguration()!=LegConfiguration.BIPEDAL
 					|| this.isFeral()
 					|| (this.getRaceStage()==RaceStage.GREATER && RacialBody.valueOfRace(this.getRace()).getBreastCrotchType()!=BreastType.NONE && Main.getProperties().getUddersLevel()==2)) {
-				sb.append(getHeader(owner.getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs"));
-				sb.append("[style.colourDisabled([npc.She] [npc.do] not have any crotch-boobs or udders.)]");
+				sb.append(getHeader(owner.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳"));
+				sb.append("[style.colourDisabled([npc.She]没有胯乳和腹乳。)]");
 				sb.append("</p>");
 			}
 			
 		} else if(leg.getLegConfiguration()!=LegConfiguration.BIPEDAL
 				|| this.isFeral()
 				|| (this.getRaceStage()==RaceStage.GREATER && Main.getProperties().getUddersLevel()==2)) {
-			sb.append(getHeader(owner.getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs"));
+			sb.append(getHeader(owner.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳"));
 			if(owner.hasBreastsCrotch() && owner.isBreastsCrotchVisibleThroughClothing() && leg.getLegConfiguration().isBipedalPositionedCrotchBoobs()) {
-				sb.append("Although you haven't seen [npc.her] exposed stomach before, [npc.her] [npc.crotchBoobsSize], [npc.crotchBoobsCups]-cup [npc.crotchBoobs] quite clearly bulge out from beneath [npc.her] [npc.topClothing(STOMACH)].");
+				sb.append("尽管你没有看过[npc.her]露出肚子，但[npc.her][npc.crotchBoobsSize]的[npc.crotchBoobsCups]罩杯[npc.crotchBoobs]很明显地从[npc.her]的[npc.topClothing(STOMACH)]之下凸显出来。");
 			} else {
-				sb.append("[style.colourDisabled(You haven't seen [npc.her] exposed stomach before, so you don't know if [npc.sheHasFull] any crotch-boobs or udders.)]");
+				sb.append("[style.colourDisabled(你没有见过[npc.her]露出肚子，所以并不清楚[npc.sheHasFull]有没有胯乳或腹乳。)]");
 			}
 			sb.append("</p>");
 		}
@@ -3090,12 +3090,12 @@ public class Body extends ModBody implements XMLSaving {
 		// Arms and legs:
 
 		// Arms:
-		sb.append(getHeader("Arms"));
+		sb.append(getHeader("手臂"));
 		if(owner.isFeral() && !owner.getFeralAttributes().isArmsOrWingsPresent()) {
 			if(owner.getLegConfiguration()==LegConfiguration.AVIAN) {
-				sb.append("As [npc.nameHasFull] the body of a feral [npc.race], [npc.she] [npc.has] [npc.armRows] wings, which are [npc.materialCompositionDescriptor] beautiful [npc.armFullDescription(true)]!");
+				sb.append("由于[npc.nameHasFull]的身体是兽态[npc.race]，[npc.she]拥有[npc.armRows]翅膀，[npc.materialCompositionDescriptor][npc.armFullDescription(true)]，十分美丽！");
 			} else {
-				sb.append("As [npc.nameHasFull] the body of a feral [npc.race], [npc.she] [npc.do] not have any arms!");
+				sb.append("由于[npc.nameHasFull]的身体是兽态[npc.race]，[npc.she]没有手臂！");
 			}
 			
 		} else {
@@ -3103,9 +3103,9 @@ public class Body extends ModBody implements XMLSaving {
 			
 			if(owner.getHandNailPolish().getPrimaryColour() != PresetColour.COVERING_NONE) {
 				if(owner.getArmType().equals(ArmType.HARPY)) {
-					sb.append(" The little claw on [npc.her] thumb has been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS).getFullDescription(owner, true)+".");
+					sb.append("[npc.her]拇指的爪子上涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS).getFullDescription(owner, true)+"。");
 				} else {
-					sb.append(" [npc.Her] fingernails have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS).getFullDescription(owner, true)+".");
+					sb.append("[npc.Her]的手指甲上涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS).getFullDescription(owner, true)+"。");
 				}
 			}
 			
@@ -3113,74 +3113,74 @@ public class Body extends ModBody implements XMLSaving {
 				if(owner.getUnderarmHairType().getType()==BodyCoveringType.BODY_HAIR_SCALES_ALLIGATOR) {
 					switch(owner.getUnderarmHair()) {
 						case ZERO_NONE:
-							sb.append(" There is no trace of any rough "+owner.getUnderarmHairType().getName(owner)+" in [npc.her] armpits.");
+							sb.append("[npc.her]的腋下没有硬质的"+owner.getUnderarmHairType().getName(owner)+"的踪迹。");
 							break;
 						case ONE_STUBBLE:
-							sb.append(" [npc.SheHasFull] a rough patch of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下长着一片硬质的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case TWO_MANICURED:
-							sb.append(" [npc.SheHasFull] a rough patch of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下长着一片硬质的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case THREE_TRIMMED:
-							sb.append(" [npc.SheHasFull] a rough patch of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下长着一片硬质的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FOUR_NATURAL:
-							sb.append(" [npc.SheHasFull] a natural amount of rough "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下自然生长着一片硬质的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FIVE_UNKEMPT:
-							sb.append(" [npc.SheHasFull] an unkempt mass of rough "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下凌乱地长着一大片硬质的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SIX_BUSHY:
-							sb.append(" [npc.SheHasFull] a thick, rough mass of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下厚实地长着一大片硬质的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SEVEN_WILD:
-							sb.append(" [npc.SheHasFull] a wild, rough mass of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下野蛮生长着一片硬质的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 					}
 				} else {
 					switch(owner.getUnderarmHair()) {
 						case ZERO_NONE:
-							sb.append(" There is no trace of any "+owner.getUnderarmHairType().getName(owner)+" in [npc.her] armpits.");
+							sb.append("[npc.her]的腋下没有"+owner.getUnderarmHairType().getName(owner)+"的踪迹。");
 							break;
 						case ONE_STUBBLE:
-							sb.append(" [npc.SheHasFull] a stubbly patch of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下长着一小茬"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case TWO_MANICURED:
-							sb.append(" [npc.SheHasFull] a well-manicured patch of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下长着一小片整齐的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case THREE_TRIMMED:
-							sb.append(" [npc.SheHasFull] a trimmed patch of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下长着一片修剪过的"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FOUR_NATURAL:
-							sb.append(" [npc.SheHasFull] a natural amount of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下自然生长着一片"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FIVE_UNKEMPT:
-							sb.append(" [npc.SheHasFull] an unkempt mass of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下凌乱地长着一大片"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SIX_BUSHY:
-							sb.append(" [npc.SheHasFull] a thick, bushy mass of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下厚实地长着一大片"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SEVEN_WILD:
-							sb.append(" [npc.SheHasFull] a wild, bushy mass of "+owner.getUnderarmHairType().getFullDescription(owner, true)+" in each of [npc.her] armpits.");
+							sb.append("[npc.SheHasFull]的腋下野蛮生长着一大片"+owner.getUnderarmHairType().getFullDescription(owner, true)+"。");
 							break;
 					}
 				}
 			}
 			
 			if (!(owner.isFeral() && owner.getArmType().allowsFlight())) {
-				sb.append(" [npc.Her] [npc.arms] are "+(Util.randomItemFrom(owner.getBodyShape().getLimbDescriptors()))
-						+", and are <span style='color:"+owner.getFemininity().getColour().toWebHexString()+";'>"+owner.getFemininity().getName(false)+" in appearance.");
+				sb.append("[npc.Her]的[npc.arms]显得"+(Util.randomItemFrom(owner.getBodyShape().getLimbDescriptors()))
+						+"，看上去<span style='color:"+owner.getFemininity().getColour().toWebHexString()+";'>"+owner.getFemininity().getName(false)+"。");
 			}
 			
 			if(arm.getType().allowsFlight()) {
 				if(this.getBodyMaterial() == BodyMaterial.SLIME) {
-					sb.append(" [style.colourSlime(As they're made out of slime, flight is rendered impossible...)]");
+					sb.append("[style.colourSlime(由于[npc.wings]由粘液构成，基本不可能飞得起来……)]");
 				} else if(this.getBodyMaterial() == BodyMaterial.SILICONE) {
-					sb.append(" [style.colourDoll(As they're made out of silicone, flight is rendered impossible...)]");
+					sb.append("[style.colourDoll(由于[npc.arm]由硅胶构成，基本不可能飞得起来……)]");
 				} else if(this.getLeg().getLegConfiguration().getMinimumWingSizeForFlight(this).getValue()>WingSize.THREE_LARGE.getValue()) {
-					sb.append(" They aren't large enough to allow [npc.herHim] to fly.");
+					sb.append("[npc.her]的[npc.wings]尺寸不足，不足以让[npc.herHim]飞翔。");
 				} else {
-					sb.append(" [style.colourBlue(They are large and powerful enough to allow [npc.herHim] to fly!)]");
+					sb.append("[style.colourBlue([npc.her]的[npc.wings]尺寸适合且足够强壮，使得[npc.herHim]能够飞翔！)]");
 				}
 			}
 		}
@@ -3189,32 +3189,32 @@ public class Body extends ModBody implements XMLSaving {
 		
 		// Legs:
 		if(owner.getLegType().isLegsReplacedByTentacles()) {
-			sb.append(getHeader("Tentacle-legs"));
+			sb.append(getHeader("触手状腿"));
 			
-			sb.append("In place of legs, [npc.name] [npc.has] [npc.tentacleCount] tentacles.");
+			sb.append("[npc.Name]拥有[npc.tentacleCount]根触手，而不是腿。");
 			sb.append(owner.getTentacleType().getGirthDescription(owner));
-			sb.append(" They measure [npc.tentacleLength(true)] in length and, at their base, each one measures [npc.tentacleBaseDiameter(true)] in diameter ([npc.tentacleBaseCircumference(true)] in circumference).");
+			sb.append("每一根的长度为[npc.tentacleLength(true)]，而根部的直径为[npc.tentacleBaseDiameter(true)](周长为[npc.tentacleBaseCircumference(true)])。");
 			for(BodyPartTag bpt : owner.getTentacleType().getTags()) {
 				switch(bpt) {
 					case TAIL_PREHENSILE:
-						sb.append(" [npc.She] [npc.has] a very high level of control over each of these tentacles, allowing [npc.herHim] to use them to pick up and manipulate objects.");
+						sb.append("[npc.She]能够精确地控制每一根触手，因而可以用来抓取或操纵物体。");
 						break;
 					case TAIL_SLEEP_HUGGING:
 						break;
 					case TAIL_SUITABLE_FOR_PENETRATION:
-						sb.append(" Each of them can be used as a penetrative object during sex, and when used to penetrate an orifice, a maximum of [npc.tentaclePenetrationLength(true)] can be inserted.");
+						sb.append("每一根都能在性爱时用作插入物，当插入腔穴时，最多能够插入[npc.tentaclePenetrationLength(true)]。");
 						break;
 					case TAIL_TAPERING_EXPONENTIAL:
-						sb.append(" The girth of each one rapidly tapers off from the base, and so the [npc.tentacleTip] of each one is [npc.tentacleTipDiameter(true)] in diameter ([npc.tentacleTipCircumference(true)] in circumference).");
+						sb.append("每一根的周长从根部开始快速减少，所以[npc.tentacleTip]的直径为[npc.tentacleTipDiameter(true)](周长为[npc.tentacleTipCircumference(true)])。");
 						break;
 					case TAIL_TAPERING_LINEAR:
-						sb.append(" The girth of each one tapers off at a steady rate from the base, and so the [npc.tentacleTip] of each one is [npc.tentacleTipDiameter(true)] in diameter ([npc.tentacleTipCircumference(true)] in circumference).");
+						sb.append("每一根的周长从根部开始稳步减少，所以[npc.tentacleTip]的直径为[npc.tentacleTipDiameter(true)](周长为[npc.tentacleBaseCircumference(true)])。");
 						break;
 					case TAIL_TAPERING_NONE:
-						sb.append(" The girth of each one does not taper off from the base, and so each tentacle has a constant diameter all the way to the [npc.tentacleTip].");
+						sb.append("每一根从根部开始粗细变化不大，所以一直到[npc.tentacleTip]都拥有同样的直径。");
 						break;
 					case TAIL_TAPERING_BULBOUS:
-						sb.append(" The girth of each one expands, then tapers off, at a steady rate from the base so as to make a bulbous, oval shape.");
+						sb.append("每一根的周长从根部开始匀速地先增加后减少，形成了鼓起的椭圆形状。");
 						break;
 					default:
 						break;
@@ -3223,42 +3223,42 @@ public class Body extends ModBody implements XMLSaving {
 			sb.append("<br/>");
 			
 		} else {
-			sb.append(getHeader("Legs"));
+			sb.append(getHeader("腿部"));
 		}
 		if(owner.isFeral()) {
-			String feralLegsPrefix = "Just like the rest of [npc.her] body, [npc.her] ";
+			String feralLegsPrefix = "就像[npc.her]身体的其他部分一样，[npc.her]";
 			switch(owner.getLegConfiguration()) {
 				case ARACHNID:
 				case CEPHALOPOD:
 				case AVIAN:
-					sb.append(feralLegsPrefix).append("[npc.legRace] [npc.legs] are entirely [style.colourFeral(feral in nature)]. ");
+					sb.append(feralLegsPrefix).append("[npc.legRace]的[npc.legs]已经完全[style.colourFeral(兽态化)]。");
 					break;
 				case BIPEDAL:
 					break;
 				case TAIL:
-					sb.append(feralLegsPrefix).append("[npc.legRace]'s tail, which [npc.sheHasFull] in place of legs, is entirely [style.colourFeral(feral in nature)]. ");
+					sb.append(feralLegsPrefix).append("[npc.legRace]的尾巴已经完全[style.colourFeral(兽态化)]，取代了腿部。");
 					break;
 				case TAIL_LONG:
-					sb.append(feralLegsPrefix).append("long [npc.legRace]'s tail, which [npc.sheHasFull] in place of legs, is entirely [style.colourFeral(feral in nature)]. ");
+					sb.append(feralLegsPrefix).append("[npc.legRace]的长尾已经完全[style.colourFeral(兽态化)]，取代了腿部。");
 					if(!owner.isFeral()) {
-						sb.append(" It forms the majority of [npc.her] body's [npc.heightValue]-length,");
-						sb.append(" and from [npc.her] head, it tapers off at a steady rate towards the tip, where it ends with a diameter of [npc.tailTipDiameter(true)] ([npc.tailTipCircumference(true)] in circumference).");
-						sb.append(" When used to penetrate an orifice, a maximum of [npc.tailPenetrationLength(true)] can be inserted. ");
+						sb.append("身体有[npc.heightValue]的长度都由[npc.legs]提供，");
+						sb.append("从头部开始，整个身体逐渐匀速变细，到[npc.tailtip]的位置直径为[npc.tailTipDiameter(true)](周长为[npc.tailTipCircumference(true)])。");
+						sb.append("用以插入腔穴时，最多能够插入[npc.tailPenetrationLength(true)]。");
 					} else {
-						sb.append(" Its [npc.tailLength]-length contributes to [npc.her] body's total length of "+Units.size(owner.getHeightValue()+owner.getLegTailLength(false), Units.ValueType.NUMERIC, Units.UnitType.LONG)+".");
-						sb.append(" It tapers off at a steady rate towards the tip, where it ends with a diameter of [npc.tailTipDiameter(true)] ([npc.tailTipCircumference(true)] in circumference).");
-						sb.append(" When used to penetrate an orifice, both [npc.her] tail and body can be inserted, up to a maximum of [npc.tailPenetrationLength(true)]. ");
+						sb.append("[npc.her]的身体总长为"+Units.size(owner.getHeightValue()+owner.getLegTailLength(false), Units.ValueType.NUMERIC, Units.UnitType.LONG)+"，而[npc.tail]就有[npc.tailLength]。");
+						sb.append("[npc.tail]逐渐匀速变细，直到[npc.tailtip]的位置直径为[npc.tailTipDiameter(true)](周长为[npc.tailTipCircumference(true)])。");
+						sb.append("用以插入腔穴时，尾巴和身体都可以插入，最多[npc.tailPenetrationLength(true)]。");
 					}
 					break;
 				case QUADRUPEDAL:
 				case WINGED_BIPED:
-					sb.append(feralLegsPrefix).append("[npc.legs], being part of [npc.her] [npc.legRace]'s body, are entirely [style.colourFeral(feral in nature)]. ");
+					sb.append(feralLegsPrefix).append("的[npc.legs]已经完全[style.colourFeral(兽态化)]，成为了[npc.her][npc.legRace]身体的一部分。");
 					break;
 			}
 			if(owner.getLegConfiguration().getNumberOfLegs()>0) {
-				sb.append("[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into ").append(owner.getLegType().getFootType().getFootNamePlural()).append(".");
+				sb.append("[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，而脚已经转化为").append(owner.getLegType().getFootType().getFootNamePlural()).append("。");
 			} else {
-				sb.append("It is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].");
+				sb.append("[npc.legs][npc.materialCompositionDescriptor][npc.legFullDescription(true)]。");
 			}
 			
 		} else {
@@ -3266,28 +3266,28 @@ public class Body extends ModBody implements XMLSaving {
 				case ARACHNID:
 				case CEPHALOPOD:
 				case AVIAN:
-					sb.append("[npc.Her] [npc.legs], being part of [npc.her] [npc.legRace]'s body, are entirely [style.colourFeral(feral in nature)]. ");
+					sb.append("[npc.Her]的[npc.legs]已经完全[style.colourFeral(兽态化)]，成为了[npc.her][npc.legRace]身体的一部分。");
 					break;
 				case BIPEDAL:
 					break;
 				case TAIL:
-					sb.append("[npc.Her] [npc.legRace]'s tail, which [npc.sheHasFull] in place of legs, is entirely [style.colourFeral(feral in nature)]. ");
+					sb.append("[npc.Her][npc.legRace]的尾巴已经完全[style.colourFeral(兽态化)]，取代了腿部。");
 					break;
 				case TAIL_LONG:
-					sb.append("[npc.Her] long [npc.legRace]'s tail, which [npc.sheHasFull] in place of legs, is entirely [style.colourFeral(feral in nature)].");
-					sb.append(" It measures ").append(Units.size(owner.getLegTailLength(false))).append(" in length,");
-					sb.append(" and tapers off at a steady rate towards the tip, where it ends with a diameter of [npc.tailTipDiameter(true)] ([npc.tailTipCircumference(true)] in circumference).");
-					sb.append(" When used to penetrate an orifice, a maximum of [npc.tailPenetrationLength(true)] can be inserted.");
+					sb.append("[npc.Her][npc.legRace]的长尾已经完全[style.colourFeral(兽态化)]，取代了腿部。");
+					sb.append("长度为").append(Units.size(owner.getLegTailLength(false))).append("，");
+					sb.append("且逐渐匀速变细，直到[npc.tailtip]的位置直径为[npc.tailTipDiameter(true)](周长为[npc.tailTipCircumference(true)])。");
+					sb.append("用以插入腔穴时，最多能够插入[npc.tailPenetrationLength(true)]。");
 					break;
 				case QUADRUPEDAL:
 				case WINGED_BIPED:
-					sb.append("[npc.Her] [npc.legs], being part of [npc.her] [npc.legRace]'s body, are entirely [style.colourFeral(feral in nature)]. ");
+					sb.append("[npc.Her]的[npc.legs]已经完全[style.colourFeral(兽态化)]，成为了[npc.her][npc.legRace]身体的一部分。");
 					break;
 			}
 			if(owner.getLegConfiguration().getNumberOfLegs()>0) {
 				sb.append(leg.getType().getBodyDescription(owner));
 			} else {
-				sb.append(" It is [npc.materialCompositionDescriptor] [npc.legFullDescription(true)].");
+				sb.append("[npc.legs][npc.materialCompositionDescriptor][npc.legFullDescription(true)]。");
 			}
 		}
 
@@ -3297,16 +3297,16 @@ public class Body extends ModBody implements XMLSaving {
 				case TENTACLED:
 					break;
 				case DIGITIGRADE:
-					sb.append(" [npc.Her] [npc.legs] and [npc.feet] are [style.colourTFGeneric("+owner.getFootStructure().getName()+")], meaning that [npc.she] naturally [npc.verb(walk)] on [npc.her] toes.");
+					sb.append("[npc.Her]的[npc.legs]和[npc.feet]使行走方式为[style.colourTFGeneric("+owner.getFootStructure().getName()+")]，意味着[npc.she]天生用脚趾行走。");
 					break;
 				case PLANTIGRADE:
-					sb.append(" [npc.Her] [npc.legs] and [npc.feet] are [style.colourTFGeneric("+owner.getFootStructure().getName()+")], meaning that [npc.she] naturally [npc.verb(walk)] with [npc.her] feet flat on the ground.");
+					sb.append("[npc.Her]的[npc.legs]和[npc.feet]使行走方式为[style.colourTFGeneric("+owner.getFootStructure().getName()+")]，意味着[npc.she]用脚掌在地面行走。");
 					break;
 				case UNGULIGRADE:
-					sb.append(" [npc.Her] [npc.legs] and [npc.feet] are [style.colourTFGeneric("+owner.getFootStructure().getName()+")], meaning that [npc.she] naturally [npc.verb(walk)] on [npc.her] hoofs.");
+					sb.append("[npc.Her]的[npc.legs]和[npc.feet]使行走方式为[style.colourTFGeneric("+owner.getFootStructure().getName()+")]，意味着[npc.she]天生用蹄子行走。");
 					break;
 				case ARACHNOID:
-					sb.append(" [npc.Her] [npc.legs] and [npc.feet] are [style.colourTFGeneric("+owner.getFootStructure().getName()+")], meaning that [npc.she] [npc.verb(walk)] on the ends of [npc.her] segmented arachnoid legs.");
+					sb.append("[npc.Her]的[npc.legs]和[npc.feet]使行走方式为[style.colourTFGeneric("+owner.getFootStructure().getName()+")]，意味着[npc.she]使用蛛化的节肢末端行走。");
 					break;
 			}
 		}
@@ -3318,39 +3318,39 @@ public class Body extends ModBody implements XMLSaving {
 		sb.append("<br/>");
 		
 		if(owner.getLegCount()>0) {
-			sb.append(" [npc.Her] [npc.legs] are "+(Util.randomItemFrom(owner.getBodyShape().getLimbDescriptors()))+", and ");
+			sb.append("[npc.Her]的[npc.legs]显得"+(Util.randomItemFrom(owner.getBodyShape().getLimbDescriptors()))+"，");
 			if (femininity <= Femininity.MASCULINE_STRONG.getMaximumFemininity()) {
-				sb.append("[style.colourMasculineStrong(have a very masculine shape to them)].");
+				sb.append("[style.colourMasculineStrong(极显男性风度)]。");
 				
 			} else if (femininity <= Femininity.MASCULINE.getMaximumFemininity()) {
-				sb.append("[style.colourMasculine(have a masculine shape to them)].");
+				sb.append("[style.colourMasculine(显出男性风度)]。");
 				
 			} else if (femininity <= Femininity.ANDROGYNOUS.getMaximumFemininity()) {
-				sb.append("[style.colourAndrogynous(look quite androgynous)].");
+				sb.append("[style.colourAndrogynous(看上去十分中性)]。");
 				
 			} else if (femininity <= Femininity.FEMININE.getMaximumFemininity()) {
-				sb.append("[style.colourFeminine(have a feminine shape to them)].");
+				sb.append("[style.colourFeminine(显出女性韵味)]。");
 				
 			} else {
-				sb.append("[style.colourFeminineStrong(have an extremely feminine shape to them)].");
+				sb.append("[style.colourFeminineStrong(极显女性韵味)]。");
 			}
 			
 		} else if(!owner.isFeral()) {
-			sb.append(" [npc.Her] [npc.leg(true)] is "+(Util.randomItemFrom(owner.getBodyShape().getLimbDescriptors()))+", and ");
+			sb.append("[npc.Her]的[npc.leg(true)]显得"+(Util.randomItemFrom(owner.getBodyShape().getLimbDescriptors()))+"，");
 			if (femininity <= Femininity.MASCULINE_STRONG.getMaximumFemininity()) {
-				sb.append("[style.colourMasculineStrong(has a very masculine shape to it)].");
+				sb.append("[style.colourMasculineStrong(极显男性风度)]。");
 				
 			} else if (femininity <= Femininity.MASCULINE.getMaximumFemininity()) {
-				sb.append("[style.colourMasculine(has a masculine shape to it)].");
+				sb.append("[style.colourMasculine(显出男性风度)]。");
 				
 			} else if (femininity <= Femininity.ANDROGYNOUS.getMaximumFemininity()) {
-				sb.append("[style.colourAndrogynous(looks quite androgynous)].");
+				sb.append("[style.colourAndrogynous(看上去十分中性)]。");
 				
 			} else if (femininity <= Femininity.FEMININE.getMaximumFemininity()) {
-				sb.append("[style.colourFeminine(has a feminine shape to it)].");
+				sb.append("[style.colourFeminine(显出女性韵味)]。");
 				
 			} else {
-				sb.append("[style.colourFeminineStrong(has an extremely feminine shape to it)].");
+				sb.append("[style.colourFeminineStrong(极显女性韵味)]。");
 			}
 		}
 		
@@ -3359,26 +3359,26 @@ public class Body extends ModBody implements XMLSaving {
 		
 		// Wing:
 		if(wing.getType()!=WingType.NONE) {
-			sb.append(getHeader("Wings"));
+			sb.append(getHeader("翅膀"));
 			if(owner.getLegConfiguration().isWingsOnLegConfiguration()) {
-				sb.append("Growing from either side of [npc.her] [npc.legConfiguration] body, ");
+				sb.append("生长在[npc.her][npc.legConfiguration]身体的两侧，");
 			} else {
-				sb.append("Growing from [npc.her] shoulder-blades, ");
+				sb.append("生长在[npc.her]的肩头，");
 			}
 			sb.append(wing.getType().getBodyDescription(owner));
 			if(wing.getType().allowsFlight()) {
 				if(this.getBodyMaterial() == BodyMaterial.SLIME) {
-					sb.append(" [style.colourSlime(As they're made out of slime, flight is rendered impossible...)]");
+					sb.append("[style.colourSlime(由于[npc.arms]由粘液构成，基本不可能飞得起来……)]");
 				} else if(this.getBodyMaterial() == BodyMaterial.SILICONE) {
-					sb.append(" [style.colourDoll(As they're made out of silicone, flight is rendered impossible...)]");
+					sb.append("[style.colourDoll(由于[npc.arm]由硅胶构成，基本不可能飞得起来……)]");
 				} else if(wing.getSizeValue()>=owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getValue()) {
-					sb.append(" [style.colourBlue(They are large and powerful enough to allow [npc.herHim] to fly!)]");
+					sb.append("[style.colourBlue([npc.her]的[npc.wings]尺寸适合且足够强壮，使得[npc.herHim]能够飞翔！)]");
 				} else {
-					sb.append(" They aren't large enough to allow [npc.herHim] to fly.");
+					sb.append("[npc.her]的[npc.wings]尺寸不足，不足以让[npc.herHim]飞翔。");
 				}
 				
 			} else {
-				sb.append(" They are entirely incapable of flight.");
+				sb.append("[npc.her]的[npc.wings]完全没有飞行能力。");
 			}
 			sb.append("</p>");
 		}
@@ -3386,44 +3386,44 @@ public class Body extends ModBody implements XMLSaving {
 		
 		// Tail:
 		if(tail.getType()!=TailType.NONE) {
-			sb.append(getHeader("Tail"));
+			sb.append(getHeader("尾巴"));
 			sb.append(owner.getTailType().getBodyDescription(owner));
 			sb.append(owner.getTailType().getGirthDescription(owner));
 			if(owner.getTailCount()==1) {
-				sb.append(" It measures [npc.tailLength(true)] in length and, at the base, it measures [npc.tailBaseDiameter(true)] in diameter ([npc.tailBaseCircumference(true)] in circumference).");
+				sb.append("长度为[npc.tailLength(true)]，而根部的直径为[npc.tailBaseDiameter(true)](周长为[npc.tailBaseCircumference(true)])。");
 				if(owner.getTailType().getTags().contains(BodyPartTag.TAIL_TAPERING_EXPONENTIAL)) {
-					sb.append(" It rapidly tapers off from the base, and so at the [npc.tailTip], it is [npc.tailTipDiameter(true)] in diameter ([npc.tailTipCircumference(true)] in circumference).");
+					sb.append("从根部开始快速变细，所以[npc.tailTip]的直径为[npc.tailTipDiameter(true)](周长为[npc.tailTipCircumference(true)])。");
 					
 				} else if(owner.getTailType().getTags().contains(BodyPartTag.TAIL_TAPERING_LINEAR)) {
-					sb.append(" It tapers off at a steady rate from the base, and so at the [npc.tailTip], it is [npc.tailTipDiameter(true)] in diameter ([npc.tailTipCircumference(true)] in circumference).");
+					sb.append("从根部开始逐渐匀速变细，所以[npc.tailTip]的直径为[npc.tailTipDiameter(true)](周长为[npc.tailTipCircumference(true)])。");
 					
 				} else if(owner.getTailType().getTags().contains(BodyPartTag.TAIL_TAPERING_BULBOUS)) {
-					sb.append(" Its girth expands, then tapers off, at a steady rate from the base so as to make a bulbous, oval shape.");
+					sb.append("周长从根部开始匀速地先增加后减少，形成了鼓起的椭圆形状。");
 					
 				} else {
-					sb.append(" It does not taper off from the base, and is a constant diameter all the way to the [npc.tailTip].");
+					sb.append("从根部开始粗细变化不大，所以一直到[npc.tailTip]都拥有同样的直径。");
 				}
 				
 			} else {
-				sb.append(" They measure [npc.tailLength(true)] in length and, at their base, each one measures [npc.tailBaseDiameter(true)] in diameter ([npc.tailBaseCircumference(true)] in circumference).");
+				sb.append("每一根的长度为[npc.tailLength(true)]，而根部的直径为[npc.tailBaseDiameter(true)](周长为[npc.tailBaseCircumference(true)])。");
 				if(owner.getTailType().getTags().contains(BodyPartTag.TAIL_TAPERING_EXPONENTIAL)) {
-					sb.append(" They rapidly taper off from the base, and so at their [npc.tailTips], they are [npc.tailTipDiameter(true)] in diameter ([npc.tailTipCircumference(true)] in circumference).");
+					sb.append("每一根都从根部开始快速变细，所以[npc.tailTip]的直径为[npc.tailTipDiameter(true)](周长为[npc.tailTipCircumference(true)])。");
 					
 				} else if(owner.getTailType().getTags().contains(BodyPartTag.TAIL_TAPERING_LINEAR)) {
-					sb.append(" They taper off at a steady rate from the base, and so at their [npc.tailTips], they are [npc.tailTipDiameter(true)] in diameter ([npc.tailTipCircumference(true)] in circumference).");
+					sb.append("每一根都从根部开始逐渐匀速变细，所以[npc.tailTip]的直径为[npc.tailTipDiameter(true)](周长为[npc.tailTipCircumference(true)])。");
 					
 				} else if(owner.getTailType().getTags().contains(BodyPartTag.TAIL_TAPERING_BULBOUS)) {
-					sb.append(" Their girth expands, then tapers off, at a steady rate from the base so as to make them into bulbous, oval shapes.");
+					sb.append("每一根的周长都从根部开始匀速地先增加后减少，形成了鼓起的椭圆形状。");
 					
 				} else {
-					sb.append(" They do not taper off from the base, and are a constant diameter all the way to the [npc.tailTips].");
+					sb.append("每一根都从根部开始粗细变化不大，所以一直到[npc.tailTip]都拥有同样的直径。");
 				}
 			}
 			
 			if(owner.isTailSuitableForPenetration()) {
-				sb.append(" When used to penetrate an orifice, a maximum of [npc.tailPenetrationLength(true)] can be inserted.");
+				sb.append("用以插入腔穴时，最多能够插入[npc.tailPenetrationLength(true)]。");
 			} else {
-				sb.append(" It is not suitable for penetrating orifices.");
+				sb.append("不适合插入腔穴中。");
 			}
 			sb.append("</p>");
 		}
@@ -3437,7 +3437,7 @@ public class Body extends ModBody implements XMLSaving {
 
 		// Spinneret:
 		if(owner.hasSpinneret()) {
-			sb.append(getHeader("Spinneret"));
+			sb.append(getHeader("丝囊"));
 			sb.append(getSpinneretDescription(owner));
 			sb.append("</p>");
 		}
@@ -3453,7 +3453,7 @@ public class Body extends ModBody implements XMLSaving {
 					break;
 				case CLOACA:
 				case CLOACA_BEHIND:
-					sb.append(getHeader("Cloaca"));
+					sb.append(getHeader("泄殖腔"));
 					sb.append("[style.colourFeral("+owner.getGenitalArrangement().getDescription()+")]");
 					sb.append("</p>");
 					break;
@@ -3462,24 +3462,24 @@ public class Body extends ModBody implements XMLSaving {
 		
 		
 		// Ass & hips:
-		sb.append(getHeader("Ass"));
+		sb.append(getHeader("屁股"));
 		if(!owner.isFeral() && ass.isFeral(owner)) {
-			sb.append("[npc.Her] [npc.hips+] and [npc.assSize] [npc.ass] are [style.colourFeral(part of [npc.her] feral lower body)], and are [npc.materialCompositionDescriptor] [npc.assFullDescription(true)].");
+			sb.append("[npc.Her][npc.hips+]和[npc.assSize]的[npc.ass]是[style.colourFeral(其兽态下半身的一部分)]，[npc.materialCompositionDescriptor][npc.assFullDescription(true)]。");
 		} else {
-			sb.append("[npc.Her] [npc.hips+] and [npc.assSize] [npc.ass] are [npc.materialCompositionDescriptor] [npc.assFullDescription(true)].");
+			sb.append("[npc.Her][npc.hips+]和[npc.assSize]的[npc.ass][npc.materialCompositionDescriptor][npc.assFullDescription(true)]。");
 		}
 		
 		if(owner.isAreaKnownByCharacter(CoverableArea.ANUS, Main.game.getPlayer())) {
-			sb.append(" " + getAssDescription(owner, false));
+			sb.append(getAssDescription(owner, false));
 		} else {
-			sb.append(" [style.colourDisabled(You haven't seen [npc.her] naked ass before, so you don't know what [npc.her] asshole looks like.)]");
+			sb.append("[style.colourDisabled(你从未见过[npc.her]裸露的屁股，所以也不知道菊花到底长什么样子。)]");
 		}
 		sb.append("</p>");
 		
 		if(owner.isAreaKnownByCharacter(CoverableArea.VAGINA, Main.game.getPlayer()) && owner.isAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer())) {
 			// Vagina, virgin/capacity, wetness:
 			if (vagina.getType() == VaginaType.NONE && penis.getType() == PenisType.NONE) {
-				sb.append(getHeader("Genitals"));
+				sb.append(getHeader("外生殖器"));
 				sb.append(getMoundDescription(owner));
 				sb.append("</p>");
 			}
@@ -3488,23 +3488,23 @@ public class Body extends ModBody implements XMLSaving {
 		if(owner.isAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer())) {
 			// Penises, cum production, testicle size, capacity:
 			if (owner.hasPenis()) {
-				sb.append(getHeader("Penis"));
+				sb.append(getHeader("阴茎"));
 				sb.append(getPenisDescription(owner));
 				sb.append("</p>");
 			}
 			
 		} else {
-			sb.append(getHeader("Penis"));
+			sb.append(getHeader("阴茎"));
 			if (observant) {
 				if(owner.hasPenis()) {
-					sb.append("[style.colourDisabled(Thanks to your '"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"' trait, you can tell that [npc.sheHasFull] a cock,"
-										+ " but as you haven't seen [npc.her] naked groin before, you don't know what it looks like.)]");
+					sb.append("[style.colourDisabled(多亏了你的'"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"'特性，你辨认出[npc.sheHasFull]长着阴茎，"
+										+ "但由于你从未见过[npc.her]裸露的胯部，所以也不知道到底长什么样子。)]");
 				} else {
-					sb.append("[style.colourDisabled(You haven't seen [npc.her] naked groin before, but thanks to your '"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"' trait, you can tell that [npc.she] doesn't have a cock.)]");
+					sb.append("[style.colourDisabled(你从未见过[npc.her]裸露的胯部，但多亏了你的'"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"'特性，你辨认出[npc.she]并没有阴茎。)]");
 				}
 				
 			} else {
-				sb.append("[style.colourDisabled(You haven't seen [npc.her] naked groin before, so you don't know what [npc.her] cock looks like, or even if [npc.sheHasFull] one.)]");
+				sb.append("[style.colourDisabled(你从未见过[npc.her]裸露的胯部，所以也不知道[npc.her]阴茎的样子，甚至不知道[npc.her]到底有没有阴茎。)]");
 			}
 			sb.append("</p>");
 		}
@@ -3512,23 +3512,23 @@ public class Body extends ModBody implements XMLSaving {
 		if(owner.isAreaKnownByCharacter(CoverableArea.VAGINA, Main.game.getPlayer())) {
 			// Vagina, virgin/capacity, wetness:
 			if (vagina.getType() != VaginaType.NONE) {
-				sb.append(getHeader("Vagina"));
+				sb.append(getHeader("阴道"));
 				sb.append(getVaginaDescription(owner));
 				sb.append("</p>");
 			}
 		} else {
-			sb.append(getHeader("Vagina"));
+			sb.append(getHeader("阴道"));
 			if (observant){
 				if(vagina.getType() != VaginaType.NONE){
-					sb.append("[style.colourDisabled(Thanks to your '"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"' trait, you can tell that [npc.sheHasFull] a pussy,"
-									+ " but as you haven't seen [npc.her] naked groin before, you don't know what it looks like.)]");
+					sb.append("[style.colourDisabled(多亏了你的'"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"'特性，你辨认出[npc.sheHasFull]长着阴道，"
+									+ "但由于你从未见过[npc.her]裸露的胯部，所以也不知道到底长什么样子。)]");
 					
 				} else {
-					sb.append("[style.colourDisabled(You haven't seen [npc.her] naked groin before, but thanks to your '"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"' trait, you can tell that [npc.she] doesn't have a pussy.)]");
+					sb.append("[style.colourDisabled(你从未见过[npc.her]裸露的胯部，但多亏了你的'"+Perk.OBSERVANT.getName(Main.game.getPlayer())+"'特性，你辨认出[npc.she]并没有阴道。)]");
 				}
 				
 			} else {
-				sb.append("[style.colourDisabled(You haven't seen [npc.her] naked groin before, so you don't know what [npc.her] pussy looks like, or even if [npc.sheHasFull] one.)]");
+				sb.append("[style.colourDisabled(你从未见过[npc.her]裸露的胯部，所以也不知道[npc.her]阴道的样子，甚至不知道[npc.her]到底有没有阴道。)]");
 			}
 			sb.append("</p>");
 		}
@@ -3557,35 +3557,35 @@ public class Body extends ModBody implements XMLSaving {
 				if(tattoo.getBodyOverviewDescription().isEmpty()) { // Old version support
 					tattooSB.append("<span style='color:"+tattoo.getPrimaryColour().toWebHexString()+";'>"+Util.capitaliseSentence(tattooSlot.getTattooSlotName())+":</span> ");
 					tattooSB.append(tattoo.getDescription(owner));
-					tattooSB.append(".");
+					tattooSB.append("。");
 					
 				} else {
-					tattooSB.append("On [npc.her] [style.boldBlueSteel("+tattooSlot.getTattooSlotName()+")], [npc.sheHasFull] ");
+					tattooSB.append("在[npc.her]的[style.boldBlueSteel("+tattooSlot.getTattooSlotName()+")]纹有");
 					tattooSB.append(tattoo.getBodyOverviewDescription());
 					if(tattoo.getType()!=TattooType.getTattooTypeFromId("innoxia_misc_none")) {
-						tattooSB.append(", which is primarily coloured ");
+						tattooSB.append("，主要配色为");
 						tattooSB.append("<span style='color:"+tattoo.getPrimaryColour().toWebHexString()+";'>"+tattoo.getPrimaryColour().getName()+"</span>");
 					}
-					tattooSB.append(".");
+					tattooSB.append("。");
 				}
 				if(tattoo.getWriting()!=null && tattoo.getWriting().getText()!=null && !tattoo.getWriting().getText().isEmpty()) {
-					tattooSB.append(" It bears the words: '"+tattoo.getFormattedWritingOutput()+"'");
+					tattooSB.append("上面写着:'"+tattoo.getFormattedWritingOutput()+"'");
 				}
 				if(tattoo.getCounter()!=null && tattoo.getCounter().getType()!=TattooCounterType.NONE) {
 					String counterName = tattoo.getCounter().getType().getName();
 					if(tattoo.getWriting()!=null && tattoo.getWriting().getText()!=null && !tattoo.getWriting().getText().isEmpty()) {
-						tattooSB.append(", and is enchanted to keep ");
+						tattooSB.append("，并能附魔记录");
 					} else {
-						tattooSB.append(" The tattoo is enchanted to keep ");
+						tattooSB.append("该纹身能附魔记录");
 					}
-					tattooSB.append(UtilText.generateSingularDeterminer(counterName)+" '"+counterName+"' count, which reads: '"+tattoo.getFormattedCounterOutput(owner)+"'.");
+					tattooSB.append(UtilText.generateSingularDeterminer(counterName)+"“"+counterName+"”的数量，现在记录为：“"+tattoo.getFormattedCounterOutput(owner)+"”。");
 				} else if(tattoo.getWriting()!=null && tattoo.getWriting().getText()!=null && !tattoo.getWriting().getText().isEmpty()) {
-					tattooSB.append(".");
+					tattooSB.append("。");
 				}
 			}
 		}
 		if(tattooSB.length()>0) {
-			sb.append(getHeader("Tattoos"));
+			sb.append(getHeader("纹身"));
 			sb.append(tattooSB.toString());
 		}
 		
@@ -4285,17 +4285,17 @@ public class Body extends ModBody implements XMLSaving {
 		StringBuilder sb = new StringBuilder();
 		
 		if(owner.isFeral()) {
-			sb.append(" [npc.SheHasFull] [npc.eyePairs] [npc.eyeRace] eyes, with [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.");
+			sb.append("[npc.SheHasFull]拥有[npc.eyePairs][npc.eyeRace]的眼睛，[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，巩膜则为[npc.scleraColour(true)]。");
 		} else {
-			sb.append(" "+eye.getType().getBodyDescription(owner));
+			sb.append(""+eye.getType().getBodyDescription(owner));
 		}
 		
 		// Eye makeup:
 		if(owner.getEyeLiner().getPrimaryColour()!=PresetColour.COVERING_NONE) {
-			sb.append(" Around [npc.her] [npc.eyes], [npc.sheHas] got a layer of "+owner.getEyeLiner().getColourDescriptor(owner, true, false)+" eye liner.");
+			sb.append("[npc.her]的[npc.eyes]周描有"+owner.getEyeLiner().getColourDescriptor(owner, true, false)+"的眼线。");
 		}
 		if(owner.getEyeShadow().getPrimaryColour()!=PresetColour.COVERING_NONE) {
-			sb.append(" [npc.SheIs] wearing a tasteful amount of "+owner.getEyeShadow().getFullDescription(owner, true)+".");
+			sb.append("[npc.SheIs]涂有淡淡的"+owner.getEyeShadow().getFullDescription(owner, true)+"。");
 		}
 		
 		return sb.toString();
@@ -4312,13 +4312,13 @@ public class Body extends ModBody implements XMLSaving {
 		switch(owner.getGenitalArrangement()) {
 			case CLOACA:
 				if(locationSpecific) {
-					return UtilText.parse(owner, "[style.italicsFeral([npc.Her] asshole is not located between [npc.her] ass cheeks, and is instead positioned within [npc.her] front-facing cloaca!)]");
+					return UtilText.parse(owner, "[style.italicsFeral([npc.Her]的肛门并不在屁股缝里，而是位于前向的泄殖腔处！)]");
 				} else {
-					descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her] asshole is located within [npc.her] slit-like, front-facing cloaca.)] "));
+					descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her]的肛门位于其细缝状的前向泄殖腔处。)] "));
 				}
 				break;
 			case CLOACA_BEHIND:
-				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her] asshole is located within [npc.her] slit-like, rear-facing cloaca.)] "));
+				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her]的肛门位于其细缝状的后向泄殖腔处。)] "));
 				break;
 			case NORMAL:
 			break;
@@ -4328,149 +4328,149 @@ public class Body extends ModBody implements XMLSaving {
 		
 		// Colour:
 		if(ass.getAnus().isBleached()) {
-			descriptionSB.append(", which has been bleached so that the rim is no darker than the [npc.assSkin] around it.");
+			descriptionSB.append("，已经经过了漂白，其边缘于周围的[npc.assSkin]颜色已无二致。");
 		} else {
-			descriptionSB.append(", the rim being slightly darker than the [npc.assSkin] around it.");
+			descriptionSB.append("，其边缘比起周围[npc.assSkin]的颜色更深一些。");
 		}
 		
 		if(owner.isFeral()) {
-			descriptionSB.append(" [style.colourFeral(As is to be expected, it is entirely feral in form, and is no different to that of a normal [npc.assRace]'s.)]");
+			descriptionSB.append("[style.colourFeral(不出所料，已经完全兽态化，与普通的[npc.assRace]并无二致。)]");
 		} else if(ass.isFeral(owner)) {
-			descriptionSB.append(" [style.colourFeral(Being a part of [npc.her] feral lower body, it is entirely feral in form, and is no different to that of a feral [npc.assRace]'s.)]");
+			descriptionSB.append("[style.colourFeral(作为[npc.her]兽态下半身的一部分，已经完全兽态化，与兽态的[npc.assRace])]并无二致。");
 		}
 
-		descriptionSB.append(" It is "+Capacity.getCapacityFromValue(ass.getAnus().getOrificeAnus().getStretchedCapacity()).getDescriptor(true)+", and when lubricated can comfortably accommodate objects of up to"
-				+ " [style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(ass.getAnus().getOrificeAnus().getElasticity(), ass.getAnus().getOrificeAnus().getRawCapacityValue(), true)) + ")] in diameter.");
+		descriptionSB.append("[npc.her]的菊穴"+Capacity.getCapacityFromValue(ass.getAnus().getOrificeAnus().getStretchedCapacity()).getDescriptor(true)+"，润滑后可以舒适地容纳最大"
+				+ "直径为[style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(ass.getAnus().getOrificeAnus().getElasticity(), ass.getAnus().getOrificeAnus().getRawCapacityValue(), true)) + ")]的物体。");
 
 		if(Main.game.isPenetrationLimitationsEnabled()) {
 			switch(owner.getAssDepth()) {
 				default:
-					descriptionSB.append(" [npc.Her] ass is <span style='color:"+owner.getAssDepth().getColour().toWebHexString()+";'>[npc.assDepth]</span>,");
+					descriptionSB.append("[npc.Her]的屁股<span style='color:"+owner.getAssDepth().getColour().toWebHexString()+";'>[npc.assDepth]</span>，");
 					break;
 				case TWO_AVERAGE:
-					descriptionSB.append(" [npc.Her] ass is of an <span style='color:"+owner.getAssDepth().getColour().toWebHexString()+";'>average depth</span>,");
+					descriptionSB.append("[npc.Her]的屁股<span style='color:"+owner.getAssDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 					break;
 			}
 			if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 				if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-					descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-							+ " [style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthUncomfortable())+")].");
+					descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+							+ "[style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthUncomfortable())+")]。");
 				} else {
-					descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-							+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthUncomfortable())+")].");
+					descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+							+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 				}
 				
 			} else {
 				if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-					descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-							+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+					descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+							+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 				} else {
-					descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-							+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+					descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getAssMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+							+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 				}
 			}
 		}
 		
 		if (ass.getAnus().getOrificeAnus().isVirgin()) {
-			descriptionSB.append(" [style.colourExcellent([npc.Name] [npc.has] retained [npc.her] anal virginity.)]");
+			descriptionSB.append("[style.colourExcellent([npc.Name]还保留着菊穴贞操。)]");
 			
 		} else {
 			boolean virginityLossFound = false;
 			for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 				if(pt.isTakesVirginity()) {
 					if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, pt))!=null) {
-						descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, pt)) + "</span>");
+						descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, pt)) + "</span>");
 						virginityLossFound = true;
 						break;
 					}
 				}
 			}
 			if(!virginityLossFound) {
-				descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name] [npc.has] lost [npc.her] anal virginity.</span>");
+				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name]已经失去了菊穴贞操。</span>");
 			}
 		}
 		
 		// Ass wetness:
 		switch (ass.getAnus().getOrificeAnus().getWetness(owner)) {
 			case ZERO_DRY:
-				descriptionSB.append(" It is [style.colourWetness(completely dry)], and would need lubricating before sex.");
+				descriptionSB.append("目前[style.colourWetness(极其干燥)]，需要在性交前润滑。");
 				break;
 			case ONE_SLIGHTLY_MOIST:
-				descriptionSB.append(" It is [style.colourWetness(slightly moist)], but would still need lubricating before sex.");
+				descriptionSB.append("目前[style.colourWetness(略微潮湿)]，但仍需在性交前润滑。");
 				break;
 			case TWO_MOIST:
-				descriptionSB.append(" It is [style.colourWetness(moist)], but would still need lubricating before sex.");
+				descriptionSB.append("目前[style.colourWetness(比较潮湿)]，但仍需在性交前润滑。");
 				break;
 			case THREE_WET:
-				descriptionSB.append(" Its [style.colourWetness(surface constantly beads with wet droplets)], which provides enough natural lubrication for sex.");
+				descriptionSB.append("[style.colourWetness(表面不断有潮湿的滴液出现)]，已经足够用作性交的润滑。");
 				break;
 			case FOUR_SLIMY:
-				descriptionSB.append(" Its surface is always [style.colourWetness(wet)] and ready for penetration.");
+				descriptionSB.append("表面总是[style.colourWetness(很潮湿)]，已经准备好被插入。");
 				break;
 			case FIVE_SLOPPY:
-				descriptionSB.append(" Its surface is always [style.colourWetness(wet and slimy)], presenting a well-lubricated orifice for penetration.");
+				descriptionSB.append("表面总是[style.colourWetness(又潮湿又粘滑)]，为插入提供了极佳的润滑。");
 				break;
 			case SIX_SOPPING_WET:
-				descriptionSB.append(" Its surface is never less than [style.colourWetness(sopping wet)] from natural lubrication, presenting a well-lubricated orifice for penetration.");
+				descriptionSB.append("表面永远[style.colourWetness(十分湿滑)]，为插入提供了极佳的润滑。");
 				break;
 			case SEVEN_DROOLING:
-				descriptionSB.append(" It constantly  [style.colourWetness(drools)] with natural lubrication, and its [style.colourWetness(sopping wet)] entrance is always ready for penetration.");
+				descriptionSB.append("不断地[style.colourWetness(流出水来)]，[style.colourWetness(湿滑)]的入口已经随时准备好被插入。");
 				break;
 		}
 		// Ass elasticity & plasticity:
 		switch (ass.getAnus().getOrificeAnus().getElasticity()) {
 			case ZERO_UNYIELDING:
-				descriptionSB.append(" It is [style.colourElasticity(extremely unyielding)],");
+				descriptionSB.append("[style.colourElasticity(几乎不会扩张)]，");
 				break;
 			case ONE_RIGID:
-				descriptionSB.append(" It [style.colourElasticity(takes a huge amount of effort to stretch it out)],");
+				descriptionSB.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 				break;
 			case TWO_FIRM:
-				descriptionSB.append(" It [style.colourElasticity(does not stretch very easily)],");
+				descriptionSB.append("[style.colourElasticity(不太容易撑开)]，");
 				break;
 			case THREE_FLEXIBLE:
-				descriptionSB.append(" It [style.colourElasticity(reluctantly stretches out)] when used as a sexual orifice,");
+				descriptionSB.append("被用于性交时[style.colourElasticity(撑不太开)]，");
 				break;
 			case FOUR_LIMBER:
-				descriptionSB.append(" It is [style.colourElasticity(somewhat resistant to being stretched out)],");
+				descriptionSB.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 				break;
 			case FIVE_STRETCHY:
-				descriptionSB.append(" It [style.colourElasticity(stretches out fairly easily)],");
+				descriptionSB.append("[style.colourElasticity(可以比较简单地撑开)]，");
 				break;
 			case SIX_SUPPLE:
-				descriptionSB.append(" It [style.colourElasticity(stretches out very easily)],");
+				descriptionSB.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 				break;
 			case SEVEN_ELASTIC:
-				descriptionSB.append(" It is [style.colourElasticity(extremely elastic)],");
+				descriptionSB.append("[style.colourElasticity(弹性极佳)]，");
 				break;
 		}
-		descriptionSB.append(" and after being used, it "+ass.getAnus().getOrificeAnus().getPlasticity().getDescription()+".");
+		descriptionSB.append("在被使用之后，会"+ass.getAnus().getOrificeAnus().getPlasticity().getDescription()+"。");
 		
 		if(Main.game.isAssHairEnabled()) {
 			switch(ass.getAnus().getAssHair()) {
 				case ZERO_NONE:
-					descriptionSB.append(" There is no trace of any "+owner.getAssHairType().getName(owner)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围没有"+owner.getAssHairType().getName(owner)+"的踪迹。");
 					break;
 				case ONE_STUBBLE:
-					descriptionSB.append(" [npc.She] [npc.has] a few strands of "+owner.getAssHairType().getFullDescription(owner, true)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围有几缕"+owner.getAssHairType().getName(owner)+"。");
 					break;
 				case TWO_MANICURED:
-					descriptionSB.append(" [npc.She] [npc.has] a very small amount of "+owner.getAssHairType().getFullDescription(owner, true)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围有极少量"+owner.getAssHairType().getName(owner)+"。");
 					break;
 				case THREE_TRIMMED:
-					descriptionSB.append(" [npc.She] [npc.has] a small amount of "+owner.getAssHairType().getFullDescription(owner, true)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围有少量"+owner.getAssHairType().getName(owner)+"。");
 					break;
 				case FOUR_NATURAL:
-					descriptionSB.append(" [npc.She] [npc.has] a natural amount of "+owner.getAssHairType().getFullDescription(owner, true)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围自然生长着"+owner.getAssHairType().getName(owner)+"。");
 					break;
 				case FIVE_UNKEMPT:
-					descriptionSB.append(" [npc.She] [npc.has] an unkempt mass of "+owner.getAssHairType().getFullDescription(owner, true)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围凌乱地生长着"+owner.getAssHairType().getName(owner)+"。");
 					break;
 				case SIX_BUSHY:
-					descriptionSB.append(" [npc.She] [npc.has] a thick, bushy mass of "+owner.getAssHairType().getFullDescription(owner, true)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围浓密地生长着"+owner.getAssHairType().getName(owner)+"。");
 					break;
 				case SEVEN_WILD:
-					descriptionSB.append(" [npc.She] [npc.has] a wild, bushy mass of "+owner.getAssHairType().getFullDescription(owner, true)+" around [npc.her] asshole.");
+					descriptionSB.append("[npc.her]的肛门周围野蛮地生长着"+owner.getAssHairType().getName(owner)+"。");
 					break;
 			}
 		}
@@ -4479,16 +4479,16 @@ public class Body extends ModBody implements XMLSaving {
 			if(owner.hasAssOrificeModifier(om)) {
 				switch(om) {
 					case MUSCLE_CONTROL:
-						descriptionSB.append(" [npc.She] [npc.has] a series of internal muscles lining the inside of [npc.her] [npc.asshole], allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+						descriptionSB.append("[npc.her]的[npc.asshole]拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 						break;
 					case PUFFY:
-						descriptionSB.append(" The rim of [npc.her] [npc.asshole] has swollen up into a puffy, doughnut-like ring.");
+						descriptionSB.append("[npc.her]的[npc.asshole]边缘略微膨起，形成了一个松软的甜甜圈似的环。");
 						break;
 					case RIBBED:
-						descriptionSB.append(" The inside of [npc.her] [npc.asshole] is lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+						descriptionSB.append("[npc.her][npc.asshole]的内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 						break;
 					case TENTACLED:
-						descriptionSB.append(" [npc.Her] [npc.asshole] is filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+						descriptionSB.append("[npc.Her]的[npc.asshole]长满了满了细小的触手，自行蜿蜒扭动着。");
 						break;
 				}
 			}
@@ -4507,134 +4507,134 @@ public class Body extends ModBody implements XMLSaving {
 		boolean playerKnowledgeOfBreasts = owner.isAreaKnownByCharacter(CoverableArea.NIPPLES, Main.game.getPlayer());
 		
 		if(!owner.isPlayer() && !playerKnowledgeOfBreasts) {
-			descriptionSB.append("[style.colourDisabled(You've never seen [npc.her] naked chest, so you don't know what [npc.her] nipples look like.)]");
+			descriptionSB.append("[style.colourDisabled(你从未见过[npc.her]裸露的胸部，所以也不知道乳头到底长什么样子。)]");
 			
 		} else {
-			descriptionSB.append("On each of [npc.her] "+(owner.hasBreasts()?owner.getBreastShape().getDescriptor()+" breasts":"pecs")+", [npc.she] [npc.has] "+Util.intToString(owner.getNippleCountPerBreast())+" [npc.nippleSize], ");
+			descriptionSB.append("在每个"+(owner.hasBreasts()?owner.getBreastShape().getDescriptor()+"乳房":"平板胸部")+"上，都有"+Util.intToString(owner.getNippleCountPerBreast())+"颗");
 			
 			switch(owner.getNippleShape()) {
 				case NORMAL:
-					descriptionSB.append(" [npc.nipplePrimaryColour(true)]");
+					descriptionSB.append("[npc.nipplePrimaryColour(true)]的");
 					break;
 				case INVERTED:
-					descriptionSB.append(" [npc.nipplePrimaryColour(true)], inverted");
+					descriptionSB.append("[npc.nipplePrimaryColour(true)]的内陷");
 					break;
 				case LIPS:
-					descriptionSB.append(" [npc.nipplePrimaryColour(true)]-lipped");
+					descriptionSB.append("[npc.nipplePrimaryColour(true)]唇的");
 					break;
 				case VAGINA:
-					descriptionSB.append(" [npc.nipplePrimaryColour(true)]-lipped");
+					descriptionSB.append("[npc.nipplePrimaryColour(true)]唇的");
 					break;
 			}
 			if(owner.getNippleCountPerBreast()>1) {
-				descriptionSB.append(" [npc.nipples],");
+				descriptionSB.append("[npc.nipples]，尺寸[npc.nippleSize]，");
 			} else {
-				descriptionSB.append(" [npc.nipple(true)],");
+				descriptionSB.append("[npc.nipple(true)]，尺寸[npc.nippleSize]，");
 			}
 			
 			switch(owner.getAreolaeShape()) {
 				case NORMAL:
-					descriptionSB.append(" with [npc.areolaeSize], circular areolae.");
+					descriptionSB.append("周围是[npc.areolaeSize]的环形乳晕。");
 					break;
 				case HEART:
-					descriptionSB.append(" with [npc.areolaeSize], heart-shaped areolae.");
+					descriptionSB.append("周围是[npc.areolaeSize]的心形乳晕。");
 					break;
 				case STAR:
-					descriptionSB.append(" with [npc.areolaeSize], star-shaped areolae.");
+					descriptionSB.append("周围是[npc.areolaeSize]的星形乳晕。");
 					break;
 			}
 
 			if(breast.isFeral(owner)) {
-				descriptionSB.append(" [style.colourFeral(Due to [npc.her] entire body being feral in form, [npc.her] [npc.nipples] are identical to those of a feral [npc.breastRace]'s.)]");
+				descriptionSB.append("[style.colourFeral(由于[npc.her]的整个身体都完全兽态化，[npc.her]的[npc.nipples]与兽态[npc.breastRace]的并无二致。)]");
 			}
 			
 			if(owner.isPiercedNipple()) {
-				descriptionSB.append(" They have been pierced.");
+				descriptionSB.append("都已经穿孔。");
 			}
 			
 			if(owner.getNippleCapacity() != Capacity.ZERO_IMPENETRABLE && Main.game.isNipplePenEnabled()) {
 				if (viewedBreast.isFuckable()) {
-					descriptionSB.append("<br/>[npc.Her] [npc.breasts] have internal, [npc.nippleSecondaryColour(true)] channels, allowing [npc.her] [npc.breastCapacity] [npc.nipples] to be comfortably penetrated by objects of"
-							+ " [style.colourSex("+ Units.size(Capacity.getCapacityFromValue(viewedBreast.getNipples().getOrificeNipples().getStretchedCapacity()).getMaximumValue(true)) + ")] in diameter when lubricated.");
+					descriptionSB.append("<br/>[npc.Her]的[npc.breasts]内有[npc.nippleSecondaryColour(true)]的通道，使[npc.her][npc.breastCapacity]的[npc.nipples]润滑后可以舒适地容纳最大"
+							+ "直径为[style.colourSex("+ Units.size(Capacity.getCapacityFromValue(viewedBreast.getNipples().getOrificeNipples().getStretchedCapacity()).getMaximumValue(true)) + ")]的物体。");
 
 					if(Main.game.isPenetrationLimitationsEnabled()) {
 						switch(owner.getNippleDepth()) {
 							default:
-								descriptionSB.append(" [npc.Her] fuckable [npc.nipples] are <span style='color:"+owner.getNippleDepth().getColour().toWebHexString()+";'>[npc.breastDepth]</span>,");
+								descriptionSB.append("[npc.Her]足以插入的[npc.nipples]<span style='color:"+owner.getNippleDepth().getColour().toWebHexString()+";'>[npc.breastDepth]</span>，");
 								break;
 							case TWO_AVERAGE:
-								descriptionSB.append(" [npc.Her] fuckable [npc.nipples] are of an <span style='color:"+owner.getNippleDepth().getColour().toWebHexString()+";'>average depth</span>,");
+								descriptionSB.append("[npc.Her]足以插入的[npc.nipples]<span style='color:"+owner.getNippleDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 								break;
 						}
 						if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 							if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-								descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-										+ " [style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthUncomfortable())+")].");
+								descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+										+ "[style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthUncomfortable())+")]。");
 							} else {
-								descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-										+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthUncomfortable())+")].");
+								descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+										+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 							}
 							
 						} else {
 							if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-								descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-										+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+								descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+										+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 							} else {
-								descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-										+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+								descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getNippleMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+										+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 							}
 						}
 					}
 					
 				} else {
-					descriptionSB.append("<br/>[npc.Her] [npc.breasts] have internal, [npc.nippleSecondaryColour(true)] channels,"
-							+ " but [style.colourBad(they need to be at least C-cups)] before [npc.her] "
-							+ Capacity.getCapacityFromValue(viewedBreast.getNipples().getOrificeNipples().getStretchedCapacity()).getDescriptor(true)+" [npc.nipples] could be penetrated.");
+					descriptionSB.append("<br/>[npc.Her]的[npc.breasts]内有[npc.nippleSecondaryColour(true)]的通道，"
+							+ "但[style.colourBad(至少需要到达C罩杯)]，"
+							+ Capacity.getCapacityFromValue(viewedBreast.getNipples().getOrificeNipples().getStretchedCapacity()).getDescriptor(true)+"的[npc.nipples]才能被插入。");
 				}
 
 				// Nipple elasticity & plasticity:
 				switch (viewedBreast.getNipples().getOrificeNipples().getElasticity()) {
 					case ZERO_UNYIELDING:
-						descriptionSB.append(" They are [style.colourElasticity(extremely unyielding)],");
+						descriptionSB.append("[style.colourElasticity(几乎不会扩张)]，");
 						break;
 					case ONE_RIGID:
-						descriptionSB.append(" It [style.colourElasticity(takes a huge amount of effort to stretch them out)],");
+						descriptionSB.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 						break;
 					case TWO_FIRM:
-						descriptionSB.append(" They [style.colourElasticity(does not stretch very easily)],");
+						descriptionSB.append("[style.colourElasticity(不太容易撑开)]，");
 						break;
 					case THREE_FLEXIBLE:
-						descriptionSB.append(" They [style.colourElasticity(reluctantly stretch out)] when used as a sexual orifice,");
+						descriptionSB.append("被用于性交时[style.colourElasticity(撑不太开)]，");
 						break;
 					case FOUR_LIMBER:
-						descriptionSB.append(" They are [style.colourElasticity(somewhat resistant to being stretched out)],");
+						descriptionSB.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 						break;
 					case FIVE_STRETCHY:
-						descriptionSB.append(" They [style.colourElasticity(stretch out fairly easily)],");
+						descriptionSB.append("[style.colourElasticity(可以比较简单地撑开)]，");
 						break;
 					case SIX_SUPPLE:
-						descriptionSB.append(" They [style.colourElasticity(stretch out very easily)],");
+						descriptionSB.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 						break;
 					case SEVEN_ELASTIC:
-						descriptionSB.append(" They are [style.colourElasticity(extremely elastic)],");
+						descriptionSB.append("[style.colourElasticity(弹性极佳)]，");
 						break;
 				}
-				descriptionSB.append(" and after being used, they "+viewedBreast.getNipples().getOrificeNipples().getPlasticity().getDescriptionPlural()+".");
+				descriptionSB.append("在被使用之后，它们会"+viewedBreast.getNipples().getOrificeNipples().getPlasticity().getDescriptionPlural()+"。");
 				
 				for(OrificeModifier om : OrificeModifier.values()) {
 					if(owner.hasNippleOrificeModifier(om)) {
 						switch(om) {
 							case MUSCLE_CONTROL:
-								descriptionSB.append(" [npc.She] [npc.has] a series of muscles lining the insides of [npc.her] [npc.nipples], allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+								descriptionSB.append("[npc.She]的[npc.nipples]拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 								break;
 							case PUFFY:
-								descriptionSB.append(" [npc.Her] [npc.nipples] have swollen up to be exceptionally plump and puffy.");
+								descriptionSB.append("[npc.her]的[npc.nipples]略微膨起，格外丰满有肉感。");
 								break;
 							case RIBBED:
-								descriptionSB.append(" The insides of [npc.her] [npc.nipples] are lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+								descriptionSB.append("[npc.her][npc.nipples]的内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 								break;
 							case TENTACLED:
-								descriptionSB.append(" [npc.Her] [npc.nipples] are filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+								descriptionSB.append("[npc.Her]的[npc.nipples]长满了满了细小的触手，自行蜿蜒扭动着。");
 								break;
 						}
 					}
@@ -4645,53 +4645,53 @@ public class Body extends ModBody implements XMLSaving {
 					for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 						if(pt.isTakesVirginity()) {
 							if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE, pt))!=null) {
-								descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE, pt)) + "</span>");
+								descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE, pt)) + "</span>");
 								virginityLossFound = true;
 								break;
 							}
 						}
 					}
 					if(!virginityLossFound) {
-						descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name] [npc.has] lost [npc.her] nipple virginity.</span>");
+						descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name]已经失去了乳头贞操。</span>");
 					}
 					
 				} else {
-					descriptionSB.append(" [style.colourExcellent([npc.Name] [npc.has] retained [npc.her] nipple virginity.)]");
+					descriptionSB.append("[style.colourExcellent([npc.Name]还保留着乳头贞操。)]");
 				}
 				
 			} else {
 				if(owner.hasNippleOrificeModifier(OrificeModifier.PUFFY)) {
-					descriptionSB.append(" [npc.Her] [npc.nipples] have swollen up to be exceptionally plump and puffy.");
+					descriptionSB.append("[npc.her]的[npc.nipples]略微膨起，格外丰满有肉感。");
 				}	
 			}
 			
 			if (viewedBreast.getRawMilkStorageValue() > 0) {
-				descriptionSB.append("<br/>[npc.SheIsFull] currently producing "+ Units.fluid(viewedBreast.getRawMilkStorageValue(), Units.UnitType.LONG) + " of [npc.milkPrimaryColour(true)] [npc.milk]"
-						+ " ("+ Units.fluid(viewedBreast.getRawStoredMilkValue()) + " currently stored) at [npc.a_milkRegen] rate.");
+				descriptionSB.append("<br/>[npc.SheIsFull]能够分泌"+ Units.fluid(viewedBreast.getRawMilkStorageValue(), Units.UnitType.LONG) + "[npc.milkPrimaryColour(true)]的[npc.milk]"
+						+ "(目前积蓄了"+ Units.fluid(viewedBreast.getRawStoredMilkValue()) + ")，分泌速度[npc.milkRegen]。");
 				
 				switch(viewedBreast.getMilk().getFlavour()) {
 					case MILK:
-						descriptionSB.append(" [npc.Her] [npc.milkColour(true)] [npc.milk] tastes like regular milk.");
+						descriptionSB.append("[npc.Her][npc.milkColour(true)]的[npc.milk]尝起来与一般的乳汁差不多。");
 						break;
 					case BUBBLEGUM:
-						descriptionSB.append(" [npc.Her] [npc.milkColour(true)] [npc.milk] has the fruity taste of bubblegum.");
+						descriptionSB.append("[npc.Her][npc.milkColour(true)]的[npc.milk]尝起来像水果泡泡糖的味道。");
 						break;
 					case FLAVOURLESS:
-						descriptionSB.append(" [npc.Her] [npc.milkColour(true)] [npc.milk] has absolutely no flavour whatsoever.");
+						descriptionSB.append("[npc.Her][npc.milkColour(true)]的[npc.milk]完全没有味道。");
 						break;
 					default:
-						descriptionSB.append(" [npc.Her] [npc.milkColour(true)] [npc.milk] tastes exactly like "+viewedBreast.getMilk().getFlavour().getName()+".");
+						descriptionSB.append("[npc.Her][npc.milkColour(true)]的[npc.milk]尝起来跟"+viewedBreast.getMilk().getFlavour().getName()+"一模一样。");
 						break;
 				}
 				
 				for(FluidModifier fm : FluidModifier.values()) {
 					if(owner.hasMilkModifier(fm)) {
-						descriptionSB.append(" " + fm.getBriefDescription());
+						descriptionSB.append(fm.getBriefDescription());
 					}
 				}
 				
 			} else {
-				descriptionSB.append("<br/>[npc.SheIsFull] not producing any milk.");
+				descriptionSB.append("<br/>[npc.SheIsFull]不分泌乳汁。");
 			}
 		}
 
@@ -4710,177 +4710,177 @@ public class Body extends ModBody implements XMLSaving {
 //		if(owner.isPlayer() || playerKnowledgeOfUdders) {
 			if(owner.isFeral()) {
 				if(owner.getLegConfiguration()==LegConfiguration.QUADRUPEDAL) {
-					descriptionSB.append("Down beneath the groin of [npc.her] feral body,");
+					descriptionSB.append("[npc.her]兽态身体的腹股沟之下，");
 				} else {
-					descriptionSB.append("Just above the groin of [npc.her] feral body,");
+					descriptionSB.append("[npc.her]兽态身体的腹股沟上方一点，");
 				}
 			} else {
 				descriptionSB.append(leg.getLegConfiguration().getCrotchBoobLocationDescription());
 			}
 			if(breastCrotch.getShape()==BreastShape.UDDERS) {
 				if(breastCrotch.getRawSizeValue()>0){
-					descriptionSB.append(" [npc.she] [npc.has] [npc.a_crotchBoobsSize]");
+					descriptionSB.append("有[npc.a_crotchBoobsSize]的");
 				} else {
-					descriptionSB.append(" [npc.she] [npc.has] a completely flat");
+					descriptionSB.append("只有一片平坦的");
 				}
 				if(breastCrotch.getRows()>0) {
-					descriptionSB.append((breastCrotch.getRows()>1?" pairs":" pair")+" of udders.");
+					descriptionSB.append((breastCrotch.getRows()>1?"数对":"一对")+"腹乳。");
 					
 				} else {
-					descriptionSB.append(" udder,");
+					descriptionSB.append("腹乳，");
 				}
 				
 			} else {
 				if(breastCrotch.getRawSizeValue()>0){
-					descriptionSB.append(" [npc.she] [npc.has] [npc.crotchBoobsRows] [npc.crotchBoobsSize], [npc.crotchBoobsCups]-cup [npc.crotchBoobs]");
+					descriptionSB.append("[npc.she]拥有[npc.crotchBoobsRows][npc.crotchBoobsCups]罩杯的[npc.crotchBoobsSize][npc.crotchBoobs]");
 				} else {
-					descriptionSB.append(" [npc.she] [npc.has] [npc.crotchBoobsRows] completely flat [npc.crotchBoobs]");
+					descriptionSB.append("[npc.she]拥有[npc.crotchBoobsRows]完全平坦的[npc.crotchBoobs]");
 				}
 				if(leg.getLegConfiguration().isBipedalPositionedCrotchBoobs() && breastCrotch.getRows()>1) {
-					descriptionSB.append(", with the upper pair"+(breastCrotch.getRows()>2?"s":"")+" being positioned higher up on [npc.her] stomach.");
+					descriptionSB.append("，均位于[npc.her]肚子偏上方。");
 					
 				} else if(breastCrotch.getRows()>1) {
-					descriptionSB.append(", with the extra pair"+(breastCrotch.getRows()>2?"s":"")+" being positioned further towards [npc.her] underbelly.");
+					descriptionSB.append("，多出的腹乳则位于[npc.her]的偏下腹部。");
 					
 				} else {
-					descriptionSB.append(".");
+					descriptionSB.append("。");
 				}
 			}
 			
 			if(viewedBreastCrotch.getShape()==BreastShape.UDDERS) {
 				if(breastCrotch.getRows()>0) {
-					descriptionSB.append(" They are formed into [npc.totalCrotchBoobs] protrusions, upon each of which [npc.she] [npc.has] [npc.crotchBoobsNipplesPerBreast] [npc.crotchNippleSize], ");
+					descriptionSB.append("总共有[npc.totalCrotchBoobs]处突出，每个上面都有[npc.crotchBoobsNipplesPerBreast]颗[npc.crotchNippleSize]的");
 				} else {
-					descriptionSB.append(" upon which [npc.sheHasFull] [npc.crotchBoobsNipplesPerBreast] [npc.crotchNippleSize], ");
+					descriptionSB.append("上面有[npc.crotchBoobsNipplesPerBreast]颗[npc.crotchNippleSize]的");
 				}
 			} else {
-				descriptionSB.append(" On each of [npc.her] [npc.totalCrotchBoobs] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchBoobsNipplesPerBreast] [npc.crotchNippleSize], ");
+				descriptionSB.append("[npc.her][npc.totalCrotchBoobs]个[npc.crotchBoobs]的每一个上面，都有[npc.crotchBoobsNipplesPerBreast]颗[npc.crotchNippleSize]的");
 			}
 			
 			switch(owner.getNippleCrotchShape()) {
 				case NORMAL:
-					descriptionSB.append(" [npc.crotchNipplePrimaryColour(true)]");
+					descriptionSB.append("[npc.crotchNipplePrimaryColour(true)]");
 					break;
 				case INVERTED:
-					descriptionSB.append(" [npc.crotchNipplePrimaryColour(true)], inverted");
+					descriptionSB.append("[npc.crotchNipplePrimaryColour(true)]内陷");
 					break;
 				case LIPS:
-					descriptionSB.append(" [npc.crotchNipplePrimaryColour(true)]-lipped");
+					descriptionSB.append("[npc.crotchNipplePrimaryColour(true)]唇");
 					break;
 				case VAGINA:
-					descriptionSB.append(" [npc.crotchNipplePrimaryColour(true)]-lipped");
+					descriptionSB.append("[npc.crotchNipplePrimaryColour(true)]唇");
 					break;
 			}
 			if(owner.getNippleCrotchCountPerBreast()>1) {
-				descriptionSB.append(" [npc.crotchNipples],");
+				descriptionSB.append("[npc.crotchNipples]，");
 			} else {
-				descriptionSB.append(" [npc.crotchNipple(true)],");
+				descriptionSB.append("[npc.crotchNipple(true)]，");
 			}
 			
 			switch(owner.getAreolaeCrotchShape()) {
 				case NORMAL:
-					descriptionSB.append(" with [npc.crotchBoobsAreolaSize], circular areolae.");
+					descriptionSB.append("周围是[npc.crotchBoobsAreolaSize]的环形乳晕。");
 					break;
 				case HEART:
-					descriptionSB.append(" with [npc.crotchBoobsAreolaSize], heart-shaped areolae.");
+					descriptionSB.append("周围是[npc.crotchBoobsAreolaSize]的心形乳晕。");
 					break;
 				case STAR:
-					descriptionSB.append(" with [npc.crotchBoobsAreolaSize], star-shaped areolae.");
+					descriptionSB.append("周围是[npc.crotchBoobsAreolaSize]的星形乳晕。");
 					break;
 			}
 			if(owner.isFeral()) {
-				descriptionSB.append(" [style.colourFeral(As [npc.sheHasFull] a fully feral body, [npc.her] [npc.crotchBoobs] are identical in form to those found on a normal [npc.crotchBoobRace].)]");
+				descriptionSB.append("[style.colourFeral(由于[npc.her]的整个身体都完全兽态化，[npc.her]的[npc.crotchBoobs]与兽态[npc.crotchBoobRace]的并无二致。)]");
 			} else if(breastCrotch.isFeral(owner)) {
-				descriptionSB.append(" [style.colourFeral(As [npc.sheHasFull] the lower body of an animal, [npc.her] [npc.crotchBoobs] are identical in form to those found on a feral [npc.crotchBoobRace].)]");
+				descriptionSB.append("[style.colourFeral(由于[npc.her]的整个身体都完全兽态化，[npc.her]的[npc.crotchBoobs]与兽态[npc.crotchBoobRace]的并无二致。)]");
 			}
 			
 			if(owner.isPiercedNippleCrotch()) {
-				descriptionSB.append(" They have been pierced.");
+				descriptionSB.append("都已经穿孔。");
 			}
 			
 			if(owner.getNippleCrotchCapacity() != Capacity.ZERO_IMPENETRABLE && Main.game.isNipplePenEnabled()) {
 				if (viewedBreastCrotch.isFuckable()) {
-					descriptionSB.append("<br/>[npc.Her] [npc.crotchBoobs] have internal, [npc.crotchNippleSecondaryColour(true)] channels, allowing [npc.her] [npc.crotchBoobsCapacity] [npc.crotchNipples] to be comfortably penetrated by objects of"
-								+ " [style.colourSex("+ Units.size(Capacity.getCapacityFromValue(viewedBreastCrotch.getNipples().getOrificeNipples().getStretchedCapacity()).getMaximumValue(true)) + ")] in diameter when lubricated.");
+					descriptionSB.append("<br/>[npc.Her]的[npc.crotchBoobs]内有[npc.crotchNippleSecondaryColour(true)]的通道，使[npc.her][npc.crotchBoobsCapacity]的[npc.crotchNipples]润滑后可以舒适地容纳最大"
+								+ "[style.colourSex("+ Units.size(Capacity.getCapacityFromValue(viewedBreastCrotch.getNipples().getOrificeNipples().getStretchedCapacity()).getMaximumValue(true)) + ")]的物体。");
 
 					if(Main.game.isPenetrationLimitationsEnabled()) {
 						switch(owner.getNippleCrotchDepth()) {
 							default:
-								descriptionSB.append(" [npc.Her] fuckable [npc.crotchNipples] are <span style='color:"+owner.getNippleCrotchDepth().getColour().toWebHexString()+";'>[npc.crotchBreastDepth]</span>,");
+								descriptionSB.append("[npc.Her]足以插入的[npc.crotchNipples]<span style='color:"+owner.getNippleCrotchDepth().getColour().toWebHexString()+";'>[npc.crotchBreastDepth]</span>，");
 								break;
 							case TWO_AVERAGE:
-								descriptionSB.append(" [npc.Her] fuckable [npc.crotchNipples] are of an <span style='color:"+owner.getNippleCrotchDepth().getColour().toWebHexString()+";'>average depth</span>,");
+								descriptionSB.append("[npc.Her]足以插入的[npc.crotchNipples]<span style='color:"+owner.getNippleCrotchDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 								break;
 						}
 						if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 							if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-								descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-										+ " [style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthUncomfortable())+")].");
+								descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+										+ "[style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthUncomfortable())+")]。");
 							} else {
-								descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-										+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthUncomfortable())+")].");
+								descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthComfortable())+")]的物体插入，"
+										+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 							}
 							
 						} else {
 							if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-								descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-										+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+								descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+										+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 							} else {
-								descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-										+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+								descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getNippleCrotchMaximumPenetrationDepthComfortable())+")]的物体插入，"
+										+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 							}
 						}
 					}
 					
 				} else {
-					descriptionSB.append("<br/>[npc.Her] [npc.crotchBoobs] have internal, [npc.crotchNippleSecondaryColour(true)] channels,"
-							+ " but [style.colourBad(they need to be at least C-cups)] before [npc.her] "
-							+ Capacity.getCapacityFromValue(viewedBreastCrotch.getNipples().getOrificeNipples().getStretchedCapacity()).getDescriptor(true)+ " [npc.crotchNipples] could be penetrated.");
+					descriptionSB.append("<br/>[npc.Her]的[npc.crotchBoobs]内有[npc.crotchNippleSecondaryColour(true)]的通道，"
+							+ "但[style.colourBad(至少需要到达C罩杯)]，"
+							+ Capacity.getCapacityFromValue(viewedBreastCrotch.getNipples().getOrificeNipples().getStretchedCapacity()).getDescriptor(true)+ "的[npc.crotchNipples]才能被插入。");
 				}
 
 				// Nipple elasticity & plasticity:
 				switch (viewedBreastCrotch.getNipples().getOrificeNipples().getElasticity()) {
 					case ZERO_UNYIELDING:
-						descriptionSB.append(" They are [style.colourElasticity(extremely unyielding)],");
+						descriptionSB.append("[style.colourElasticity(几乎不会扩张)]，");
 						break;
 					case ONE_RIGID:
-						descriptionSB.append(" It [style.colourElasticity(takes a huge amount of effort to stretch them out)],");
+						descriptionSB.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 						break;
 					case TWO_FIRM:
-						descriptionSB.append(" They [style.colourElasticity(does not stretch very easily)],");
+						descriptionSB.append("[style.colourElasticity(不太容易撑开)]，");
 						break;
 					case THREE_FLEXIBLE:
-						descriptionSB.append(" They [style.colourElasticity(reluctantly stretch out)] when used as a sexual orifice,");
+						descriptionSB.append("被用于性交时[style.colourElasticity(撑不太开)]，");
 						break;
 					case FOUR_LIMBER:
-						descriptionSB.append(" They are [style.colourElasticity(somewhat resistant to being stretched out)],");
+						descriptionSB.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 						break;
 					case FIVE_STRETCHY:
-						descriptionSB.append(" They [style.colourElasticity(stretch out fairly easily)],");
+						descriptionSB.append("[style.colourElasticity(可以比较简单地撑开)]，");
 						break;
 					case SIX_SUPPLE:
-						descriptionSB.append(" They [style.colourElasticity(stretch out very easily)],");
+						descriptionSB.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 						break;
 					case SEVEN_ELASTIC:
-						descriptionSB.append(" They are [style.colourElasticity(extremely elastic)],");
+						descriptionSB.append("[style.colourElasticity(弹性极佳)]，");
 						break;
 				}
-				descriptionSB.append(" and after being used, they "+viewedBreastCrotch.getNipples().getOrificeNipples().getPlasticity().getDescriptionPlural()+".");
+				descriptionSB.append("在被使用之后，它们会"+viewedBreastCrotch.getNipples().getOrificeNipples().getPlasticity().getDescriptionPlural()+"。");
 				
 				for(OrificeModifier om : OrificeModifier.values()) {
 					if(owner.hasNippleCrotchOrificeModifier(om)) {
 						switch(om) {
 							case MUSCLE_CONTROL:
-								descriptionSB.append(" [npc.She] [npc.has] a series of muscles lining the insides of [npc.her] [npc.crotchNipples], allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+								descriptionSB.append("[npc.She]的[npc.crotchNipples]拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 								break;
 							case PUFFY:
-								descriptionSB.append(" [npc.Her] [npc.crotchNipples] have swollen up to be exceptionally plump and puffy.");
+								descriptionSB.append("[npc.her]的[npc.crotchNipples]略微膨起，格外丰满有肉感。");
 								break;
 							case RIBBED:
-								descriptionSB.append(" The insides of [npc.her] [npc.crotchNipples] are lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+								descriptionSB.append("[npc.her][npc.crotchNipples]的内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 								break;
 							case TENTACLED:
-								descriptionSB.append(" [npc.Her] [npc.crotchNipples] are filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+								descriptionSB.append("[npc.Her]的[npc.crotchNipples]长满了满了细小的触手，自行蜿蜒扭动着。");
 								break;
 						}
 					}
@@ -4891,54 +4891,54 @@ public class Body extends ModBody implements XMLSaving {
 					for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 						if(pt.isTakesVirginity()) {
 							if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE_CROTCH, pt))!=null) {
-								descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE_CROTCH, pt)) + "</span>");
+								descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.NIPPLE_CROTCH, pt)) + "</span>");
 								virginityLossFound = true;
 								break;
 							}
 						}
 					}
 					if(!virginityLossFound) {
-						descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name] [npc.has] lost [npc.her] [npc.crotchNipple] virginity.</span>");
+						descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name]已经失去了[npc.crotchNipple]贞操。</span>");
 					}
 					
 				} else {
-					descriptionSB.append(" [style.colourExcellent([npc.Name] [npc.has] retained [npc.her] [npc.crotchNipple] virginity.)]");
+					descriptionSB.append("[style.colourExcellent([npc.Name]还保留着[npc.crotchNipple]贞操。)]");
 				}
 				
 			} else {
 				if(owner.hasNippleCrotchOrificeModifier(OrificeModifier.PUFFY)) {
-					descriptionSB.append(" [npc.Her] [npc.crotchNipples] have swollen up to be exceptionally plump and puffy.");
+					descriptionSB.append("[npc.her]的[npc.crotchNipples]略微膨起，格外丰满有肉感。");
 				}	
 			}
 			
 			if (viewedBreastCrotch.getRawMilkStorageValue() > 0) {
-				descriptionSB.append("<br/>[npc.SheIsFull] currently producing "
-						+ Units.fluid(viewedBreastCrotch.getRawMilkStorageValue(), Units.UnitType.LONG) + " of [npc.crotchMilkPrimaryColour(true)] [npc.crotchMilk] ("
-						+ Units.fluid(viewedBreastCrotch.getRawStoredMilkValue(), Units.UnitType.LONG) + " currently stored) at [npc.a_crotchMilkRegen] rate.");
+				descriptionSB.append("<br/>[npc.SheIsFull]能够分泌"
+						+ Units.fluid(viewedBreastCrotch.getRawMilkStorageValue(), Units.UnitType.LONG) + "[npc.crotchMilkPrimaryColour(true)]的[npc.crotchMilk]("
+						+ "目前积蓄了" + Units.fluid(viewedBreastCrotch.getRawStoredMilkValue(), Units.UnitType.LONG) + ")，分泌速度[npc.crotchMilkRegen]。");
 				
 				switch(viewedBreastCrotch.getMilk().getFlavour()) {
 					case MILK:
-						descriptionSB.append(" [npc.Her] [npc.crotchMilkColour(true)] [npc.crotchMilk] tastes like regular milk.");
+						descriptionSB.append("[npc.Her][npc.crotchMilkColour(true)]的[npc.crotchMilk]尝起来与一般的乳汁差不多。");
 						break;
 					case BUBBLEGUM:
-						descriptionSB.append(" [npc.Her] [npc.crotchMilkColour(true)] [npc.crotchMilk] has the fruity taste of bubblegum.");
+						descriptionSB.append("[npc.Her][npc.crotchMilkColour(true)]的[npc.crotchMilk]尝起来像水果泡泡糖的味道。");
 						break;
 					case FLAVOURLESS:
-						descriptionSB.append(" [npc.Her] [npc.crotchMilkColour(true)] [npc.crotchMilk] has absolutely no flavour whatsoever.");
+						descriptionSB.append("[npc.Her][npc.crotchMilkColour(true)]的[npc.crotchMilk]完全没有味道。");
 						break;
 					default:
-						descriptionSB.append(" [npc.Her] [npc.crotchMilkColour(true)] [npc.crotchMilk] tastes exactly like "+viewedBreastCrotch.getMilk().getFlavour().getName()+".");
+						descriptionSB.append("[npc.Her][npc.crotchMilkColour(true)]的[npc.crotchMilk]尝起来跟"+viewedBreastCrotch.getMilk().getFlavour().getName()+"一模一样。");
 						break;
 				}
 				
 				for(FluidModifier fm : FluidModifier.values()) {
 					if(owner.hasMilkCrotchModifier(fm)) {
-						descriptionSB.append(" " + fm.getBriefDescription());
+						descriptionSB.append(fm.getBriefDescription());
 					}
 				}
 				
 			} else {
-				descriptionSB.append("<br/>[npc.SheIsFull] not producing any milk.");
+				descriptionSB.append("<br/>[npc.SheIsFull]不分泌乳汁。");
 			}
 //		}
 
@@ -4960,15 +4960,15 @@ public class Body extends ModBody implements XMLSaving {
 					penis.getTesticle().getTesticleSize().getValue()*2,
 					(int) ((penis.getTesticle().getRawCumStorageValue()+100) * 3.25f),
 					penis.getTesticle().getTesticleCount());
-			descriptionSB.append("<i style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>The psychoactive cum you recently ingested is causing your view of "+(owner.isPlayer()?"your":"[npc.namePos]")+" cock to be distorted!</i> ");
+			descriptionSB.append("<i style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>你最近摄入的致幻精液导致你看到"+(owner.isPlayer()?"你的":"[npc.namePos]的")+"阴茎发生了扭曲！</i>");
 		}
 
 		switch(owner.getGenitalArrangement()) {
 			case CLOACA:
-				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her] cock is located within [npc.her] slit-like, front-facing cloaca.)] "));
+				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her]的阴茎为位于其细缝状的前向泄殖腔处。)] "));
 				break;
 			case CLOACA_BEHIND:
-				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her] cock is located within [npc.her] slit-like, rear-facing cloaca.)] "));
+				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her]阴茎位于其细缝状的后向泄殖腔处。)] "));
 				break;
 			case NORMAL:
 			break;
@@ -4979,18 +4979,18 @@ public class Body extends ModBody implements XMLSaving {
 			penisAppearance = penisAppearance.replaceAll("\\[npc\\.a_cockGirth\\]", UtilText.generateSingularDeterminer(viewedPenis.getGirth().getName())+" "+viewedPenis.getGirth().getName());
 			penisAppearance = penisAppearance.replaceAll("\\[npc\\.cockLengthValue\\]", Units.size(viewedPenis.getRawLengthValue(), Units.UnitType.LONG_SINGULAR));
 			descriptionSB.append(penisAppearance);
-			descriptionSB.append(" It measures "+Units.size(viewedPenis.getDiameter(), Units.UnitType.LONG)+" in diameter ("+Units.size(viewedPenis.getDiameter()* Math.PI, Units.UnitType.LONG)+" in circumference).");
+			descriptionSB.append("直径为"+Units.size(viewedPenis.getDiameter(), Units.UnitType.LONG)+"(周长为"+Units.size(viewedPenis.getDiameter()* Math.PI, Units.UnitType.LONG)+")。");
 			
 		} else {
 			descriptionSB.append(penisAppearance);
-			descriptionSB.append(" It measures [npc.penisDiameter(true)] in diameter ([npc.penisCircumference(true)] in circumference).");
+			descriptionSB.append("直径为[npc.penisDiameter(true)](周长为[npc.penisCircumference(true)])。");
 		}
 
 		if(viewedPenis.getType()!=PenisType.DILDO) {
 			if(owner.isFeral()) {
-				descriptionSB.append(" [style.colourFeral(As is to be expected, [npc.her] [npc.cock] is entirely feral in form, and is no different to that of a normal [npc.penisRace]'s.)]");
+				descriptionSB.append("[style.colourFeral(不出所料，[npc.her]的阴茎[npc.cock]已经完全兽态化，与普通的[npc.penisRace]并无二致。)]");
 			} else if(penis.isFeral(owner)) {
-				descriptionSB.append(" [style.colourFeral(As [npc.her] genitals are located on the animal portion of [npc.her] body, [npc.her] [npc.penis] is identical in functionality to that of a feral [npc.penisRace]'s.)]");
+				descriptionSB.append("[style.colourFeral(由于[npc.her]的外生殖器位于其身体的动物部分，[npc.her]的[npc.penis]与兽态[npc.penisRace]的功能完全相同。)]");
 			}
 		}
 		
@@ -4998,37 +4998,37 @@ public class Body extends ModBody implements XMLSaving {
 			if(owner.hasPenisModifier(pm)) {
 				switch(pm) {
 					case RIBBED:
-						descriptionSB.append(" It's lined with hard, fleshy ribs, which are sure to grant extra pleasure to any orifice that they penetrate.");
+						descriptionSB.append("整根都长满了稍硬的肉质突起，绝对能为任何被插入的腔穴带来额外的快感。");
 						break;
 					case TENTACLED:
-						descriptionSB.append(" A series of little tentacles coat its surface, which wriggle and squirm with a mind of their own.");
+						descriptionSB.append("一片细小的触手覆盖在表面，自行蜿蜒扭动着。");
 						break;
 					case BARBED:
-						descriptionSB.append(" Fleshy, backwards-facing barbs line its length.");
+						descriptionSB.append("肉质的倒刺布满其表面。");
 						break;
 					case BLUNT:
-						descriptionSB.append(" The head curves around to a smooth surface.");
+						descriptionSB.append("头部形成了光滑的弯曲表面。");
 						break;
 					case FLARED:
-						descriptionSB.append(" The head is wide and flared.");
+						descriptionSB.append("头部又平又宽。");
 						break;
 					case KNOTTED:
-						descriptionSB.append(" A fat knot sits at the base.");
+						descriptionSB.append("根部有一个膨大的结。");
 						break;
 					case PREHENSILE:
-						descriptionSB.append(" It is prehensile, and can be manipulated and moved much like a primate's tail.");
+						descriptionSB.append("极其灵活，能够像灵长目的尾巴一样操纵。");
 						break;
 					case SHEATHED:
-						descriptionSB.append(" When not in use, it retreats back into the sheath at its base.");
+						descriptionSB.append("未使用时会缩回根部的鞘内。");
 						break;
 					case TAPERED:
-						descriptionSB.append(" The shaft is tapered, and gets thinner nearer to the head.");
+						descriptionSB.append("肉竿从根部开始逐渐变细，直到顶端。");
 						break;
 					case VEINY:
-						descriptionSB.append(" Large veins press out from its surface.");
+						descriptionSB.append("表面布满了明显的静脉脉络。");
 						break;
 					case OVIPOSITOR:
-						descriptionSB.append(" Its internal structure allows it to be used as an ovipositor, enabling [npc.name] to use it to lay [npc.her] pre-fertilised eggs in a target's orifices.");
+						descriptionSB.append("内部结构使得其能够作产卵器，允许[npc.name]将[npc.her]已受精的卵产在目标的腔穴内。");
 						break;
 				}
 			}
@@ -5040,97 +5040,97 @@ public class Body extends ModBody implements XMLSaving {
 				for(SexAreaOrifice ot : SexAreaOrifice.values()) {
 					if(ot.isInternalOrifice()) {
 						if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, ot))!=null) {
-							descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, ot)) + "</span>");
+							descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, ot)) + "</span>");
 							virginityLossFound = true;
 							break;
 						}
 					}
 				}
 				if(!virginityLossFound) {
-					descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name] [npc.has] lost [npc.her] penile virginity.</span>");
+					descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>[npc.Name]已经失去了童贞。</span>");
 				}
 				
 			} else {
-				descriptionSB.append(" [style.colourExcellent([npc.Name] [npc.has] retained [npc.her] penile virginity.)]");
+				descriptionSB.append("[style.colourExcellent([npc.Name]还保留着童贞。)]");
 			}
 		}
 		
 		// Capacity:
 		if (Capacity.getCapacityFromValue(viewedPenis.getOrificeUrethra().getStretchedCapacity()) != Capacity.ZERO_IMPENETRABLE) {
-			descriptionSB.append("<br/>[npc.Her] cock's urethra has been loosened enough that it presents a ready orifice for penetration, and can be comfortably penetrated by objects of"
-					+ " [style.colourSex("+ Units.size(Capacity.getCapacityFromValue(viewedPenis.getOrificeUrethra().getStretchedCapacity()).getMaximumValue(true)) + ")] in diameter when lubricated.");
+			descriptionSB.append("<br/>[npc.Her]的阴茎尿道已经足够松弛，目前适合插入，润滑后可以舒适地容纳最大"
+					+ "[style.colourSex("+ Units.size(Capacity.getCapacityFromValue(viewedPenis.getOrificeUrethra().getStretchedCapacity()).getMaximumValue(true)) + ")]的物体。");
 
 			if(Main.game.isPenetrationLimitationsEnabled()) {
 				switch(owner.getUrethraDepth()) {
 					default:
-						descriptionSB.append(" [npc.Her] fuckable urethra is <span style='color:"+owner.getUrethraDepth().getColour().toWebHexString()+";'>[npc.penisUrethraDepth]</span>,");
+						descriptionSB.append("[npc.Her]足以插入的尿道<span style='color:"+owner.getUrethraDepth().getColour().toWebHexString()+";'>[npc.penisUrethraDepth]</span>，");
 						break;
 					case TWO_AVERAGE:
-						descriptionSB.append(" [npc.Her] fuckable urethra is of an <span style='color:"+owner.getUrethraDepth().getColour().toWebHexString()+";'>average depth</span>,");
+						descriptionSB.append("[npc.Her]足以插入的尿道<span style='color:"+owner.getUrethraDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 						break;
 				}
 				if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 					if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-						descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-								+ " [style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthUncomfortable())+")].");
+						descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+								+ "[style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthUncomfortable())+")]。");
 					} else {
-						descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-								+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthUncomfortable())+")].");
+						descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthComfortable())+")]的物体插入，"
+								+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 					}
 					
 				} else {
 					if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-						descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-								+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+						descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+								+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 					} else {
-						descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-								+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+						descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getUrethraMaximumPenetrationDepthComfortable())+")]的物体插入，"
+								+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 					}
 				}
 			}
 			
 			switch (viewedPenis.getOrificeUrethra().getElasticity()) {
 				case ZERO_UNYIELDING:
-					descriptionSB.append(" It is [style.colourElasticity(extremely unyielding)],");
+					descriptionSB.append("[style.colourElasticity(几乎不会扩张)]，");
 					break;
 				case ONE_RIGID:
-					descriptionSB.append(" It [style.colourElasticity(takes a huge amount of effort to stretch it out)],");
+					descriptionSB.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 					break;
 				case TWO_FIRM:
-					descriptionSB.append(" It [style.colourElasticity(does not stretch very easily)],");
+					descriptionSB.append("[style.colourElasticity(不太容易撑开)]，");
 					break;
 				case THREE_FLEXIBLE:
-					descriptionSB.append(" It [style.colourElasticity(reluctantly stretches out)] when used as a sexual orifice,");
+					descriptionSB.append("被用于性交时[style.colourElasticity(撑不太开)]，");
 					break;
 				case FOUR_LIMBER:
-					descriptionSB.append(" It is [style.colourElasticity(somewhat resistant to being stretched out)],");
+					descriptionSB.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 					break;
 				case FIVE_STRETCHY:
-					descriptionSB.append(" It [style.colourElasticity(stretches out fairly easily)],");
+					descriptionSB.append("[style.colourElasticity(可以比较简单地撑开)]，");
 					break;
 				case SIX_SUPPLE:
-					descriptionSB.append(" It [style.colourElasticity(stretches out very easily)],");
+					descriptionSB.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 					break;
 				case SEVEN_ELASTIC:
-					descriptionSB.append(" It is [style.colourElasticity(extremely elastic)],");
+					descriptionSB.append("[style.colourElasticity(弹性极佳)]，");
 					break;
 			}
-			descriptionSB.append(" and after being used, it "+viewedPenis.getOrificeUrethra().getPlasticity().getDescription()+".");
+			descriptionSB.append("在被使用之后，会"+viewedPenis.getOrificeUrethra().getPlasticity().getDescription()+"。");
 			
 			for(OrificeModifier om : OrificeModifier.values()) {
 				if(owner.hasUrethraOrificeModifier(om)) {
 					switch(om) {
 						case PUFFY:
-							descriptionSB.append(" [npc.Her] urethra has transformed into having a swollen, puffy rim.");
+							descriptionSB.append("[npc.Her]的尿道边缘略微膨起，变得更加有肉感了。");
 							break;
 						case MUSCLE_CONTROL:
-							descriptionSB.append(" [npc.She] [npc.has] a series of muscles lining the inside of [npc.her] urethra, allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+							descriptionSB.append("[npc.She]的尿道拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 							break;
 						case RIBBED:
-							descriptionSB.append(" The inside of [npc.her] urethra is lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+							descriptionSB.append("[npc.her]的尿道内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 							break;
 						case TENTACLED:
-							descriptionSB.append(" [npc.Her] urethra is filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+							descriptionSB.append("[npc.Her]的尿道长满了满了细小的触手，自行蜿蜒扭动着。");
 							break;
 					}
 				}
@@ -5141,7 +5141,7 @@ public class Body extends ModBody implements XMLSaving {
 			if (isPlayer && !owner.isUrethraVirgin()) {
 				for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 					if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_PENIS, pt))!=null) {
-						descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_PENIS, pt)) + "</span>");
+						descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_PENIS, pt)) + "</span>");
 						break;
 					}
 				}
@@ -5156,55 +5156,55 @@ public class Body extends ModBody implements XMLSaving {
 				if(owner.getPubicHairType().getType()==BodyCoveringType.BODY_HAIR_SCALES_ALLIGATOR) {
 					switch(owner.getPubicHair()) {
 						case ZERO_NONE:
-							descriptionSB.append(" There's no trace of any rough  "+owner.getPubicHairType().getName(owner)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.her]的阴茎根部周围没有硬质"+owner.getPubicHairType().getName(owner)+"的踪迹。");
 							break;
 						case ONE_STUBBLE:
-							descriptionSB.append(" [npc.She] [npc.has] a small amount of rough "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围长着一小片硬质的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case TWO_MANICURED:
-							descriptionSB.append(" [npc.She] [npc.has] a rough patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围长着一片硬质的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case THREE_TRIMMED:
-							descriptionSB.append(" [npc.She] [npc.has] a rough patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围长着一片硬质的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FOUR_NATURAL:
-							descriptionSB.append(" [npc.She] [npc.has] a natural amount of rough "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围自然生长着一片硬质的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FIVE_UNKEMPT:
-							descriptionSB.append(" [npc.She] [npc.has] an unkempt mass of rough "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围凌乱地长着一大片硬质的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SIX_BUSHY:
-							descriptionSB.append(" [npc.She] [npc.has] a thick, rough mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围浓密地生长着一大片硬质的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SEVEN_WILD:
-							descriptionSB.append(" [npc.She] [npc.has] a wild, rough mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围野蛮地生长着一大片硬质的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 					}
 				} else {
 					switch(owner.getPubicHair()) {
 						case ZERO_NONE:
-							descriptionSB.append(" There is no trace of any "+owner.getPubicHairType().getName(owner)+" around the base of [npc.her] cock.");
+							descriptionSB.append("的阴茎根部周围没有任何"+owner.getPubicHairType().getName(owner)+"的踪迹。");
 							break;
 						case ONE_STUBBLE:
-							descriptionSB.append(" [npc.She] [npc.has] a stubbly patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.her]的阴茎根部周围没有"+owner.getPubicHairType().getName(owner)+"的踪迹。");
 							break;
 						case TWO_MANICURED:
-							descriptionSB.append(" [npc.She] [npc.has] a neat, manicured patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围长着一小片整齐的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case THREE_TRIMMED:
-							descriptionSB.append(" [npc.She] [npc.has] a trimmed patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围长着一小片修剪过的"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FOUR_NATURAL:
-							descriptionSB.append(" [npc.She] [npc.has] a natural bush of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围自然生长着一片"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case FIVE_UNKEMPT:
-							descriptionSB.append(" [npc.She] [npc.has] an unkempt bush of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围凌乱地生长着一片"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SIX_BUSHY:
-							descriptionSB.append(" [npc.She] [npc.has] a thick, bushy mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围浓密地生长着一大片"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 						case SEVEN_WILD:
-							descriptionSB.append(" [npc.She] [npc.has] a wild, bushy mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around the base of [npc.her] cock.");
+							descriptionSB.append("[npc.She]的阴茎根部周围野蛮地生长着一大片"+owner.getPubicHairType().getFullDescription(owner, true)+"。");
 							break;
 					}
 				}
@@ -5217,34 +5217,34 @@ public class Body extends ModBody implements XMLSaving {
 
 		if(viewedPenis.getType()!=PenisType.DILDO) {
 			if(owner.isInternalTesticles()) {
-				descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls+] have shifted to sit inside [npc.her] body, leaving [npc.her] [npc.cock] as the only visible part of [npc.her] male reproductive organs.");
+				descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls+]现在位于体内，表面上的男性生殖器官只有[npc.her]的[npc.cock]。");
 				
 			} else {
 				switch (viewedPenis.getTesticle().getTesticleSize()) {
 					case ZERO_VESTIGIAL:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)],"
-								+ " and are so small that they're only just visible as tiny little mounds nestling beneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，"
+								+ "但过于微小，看上去只是蜷缩在[npc.cock]下方的小突起。");
 						break;
 					case ONE_TINY:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)], and are small enough to comfortably nestle underneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，尺寸并不大，能够安稳地待在[npc.cock]之下。");
 						break;
 					case TWO_AVERAGE:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls+] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)], and dangle down beneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls+][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，在[npc.cock]下面晃荡着。");
 						break;
 					case THREE_LARGE:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls+] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)], and hang down beneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls+][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，在[npc.cock]下面悬挂着。");
 						break;
 					case FOUR_HUGE:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls+] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)], and hang down beneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls+][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，在[npc.cock]下面悬挂着。");
 						break;
 					case FIVE_MASSIVE:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls+] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)], and hang down beneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls+][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，在[npc.cock]下面悬挂着。");
 						break;
 					case SIX_GIGANTIC:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls+] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)], and hang down beneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls+][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，在[npc.cock]下面悬挂着。");
 						break;
 					case SEVEN_ABSURD:
-						descriptionSB.append(" [npc.Her] [npc.ballsCount] [npc.balls+] are [npc.materialCompositionDescriptor] [npc.ballFullDescription(true)], and hang down beneath [npc.her] [npc.cock].");
+						descriptionSB.append("[npc.Her]的[npc.ballsCount]颗[npc.balls+][npc.materialCompositionDescriptor][npc.ballFullDescription(true)]，在[npc.cock]下面悬挂着。");
 						break;
 				}
 			}
@@ -5252,90 +5252,90 @@ public class Body extends ModBody implements XMLSaving {
 			switch (viewedPenis.getTesticle().getCumStorage()) {
 				case ZERO_NONE:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() > TesticleSize.TWO_AVERAGE.getValue()) {
-						descriptionSB.append(" Despite their large size, they");
+						descriptionSB.append("尽管尺寸很大，但只");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" don't produce any [npc.cum+] at all.");
+					descriptionSB.append("无法产生任何[npc.cum+]。");
 					break;
 				case ONE_TRICKLE:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() > TesticleSize.TWO_AVERAGE.getValue()) {
-						descriptionSB.append(" Despite their large size, they");
+						descriptionSB.append("尽管尺寸很大，但只");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" only produce a tiny trickle of [npc.cum+].");
+					descriptionSB.append("能产生微量[npc.cum+]。");
 					break;
 				case TWO_SMALL_AMOUNT:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() > TesticleSize.THREE_LARGE.getValue()) {
-						descriptionSB.append(" Despite their large size, they");
+						descriptionSB.append("尽管尺寸很大，但");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" only produce a small amount of [npc.cum+].");
+					descriptionSB.append("能产生少量[npc.cum+]。");
 					break;
 				case THREE_AVERAGE:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() > TesticleSize.FOUR_HUGE.getValue()) {
-						descriptionSB.append(" Despite their huge size, they only");
+						descriptionSB.append("尽管尺寸巨大，但只");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" produce an average amount of [npc.cum+].");
+					descriptionSB.append("能产生差不多量[npc.cum+]。");
 					break;
 				case FOUR_LARGE:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() < TesticleSize.TWO_AVERAGE.getValue()) {
-						descriptionSB.append(" Despite their small size, they");
+						descriptionSB.append("尽管尺寸不大，但");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" produce a large amount of [npc.cum+].");
+					descriptionSB.append("能产生大量[npc.cum+]。");
 					break;
 				case FIVE_HUGE:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() < TesticleSize.TWO_AVERAGE.getValue()) {
-						descriptionSB.append(" Despite their small size, they");
+						descriptionSB.append("尽管尺寸不大，但");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" produce a huge amount of [npc.cum+].");
+					descriptionSB.append("能产生巨量[npc.cum+]。");
 					break;
 				case SIX_EXTREME:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() < TesticleSize.TWO_AVERAGE.getValue()) {
-						descriptionSB.append(" Despite their small size, they");
+						descriptionSB.append("尽管尺寸不大，但");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" produce an extreme amount of [npc.cum+].");
+					descriptionSB.append("能产生极巨量[npc.cum+]。");
 					break;
 				case SEVEN_MONSTROUS:
 					if (viewedPenis.getTesticle().getTesticleSize().getValue() < TesticleSize.TWO_AVERAGE.getValue()) {
-						descriptionSB.append(" Despite their small size, they");
+						descriptionSB.append("尽管尺寸不大，但");
 					} else {
-						descriptionSB.append(" They");
+						descriptionSB.append("");
 					}
-					descriptionSB.append(" produce a monstrous amount of [npc.cum+].");
+					descriptionSB.append("能产生恐怖量[npc.cum+]。");
 					break;
 			}
 			
-			descriptionSB.append(" [npc.Her] [npc.cumColour(true)] [npc.cum]");
+			descriptionSB.append("[npc.Her]的[npc.cumColour(true)][npc.cum]");
 			
 			switch(viewedPenis.getTesticle().getCum().getFlavour()) {
 				case CUM:
-					descriptionSB.append(", much to nobody's surprise, tastes like cum.");
+					descriptionSB.append("，不出所料，尝起来像精液。");
 					break;
 				case BUBBLEGUM:
-					descriptionSB.append(" has the fruity taste of bubblegum.");
+					descriptionSB.append("尝起来像水果口味的泡泡糖。");
 					break;
 				case FLAVOURLESS:
-					descriptionSB.append(" has absolutely no flavour whatsoever.");
+					descriptionSB.append("没有任何味道。");
 					break;
 				default:
-					descriptionSB.append(" tastes exactly like "+viewedPenis.getTesticle().getCum().getFlavour().getName()+".");
+					descriptionSB.append("尝起来跟"+viewedPenis.getTesticle().getCum().getFlavour().getName()+"一模一样。");
 					break;
 			}
 			
 			for(FluidModifier fm : FluidModifier.values()) {
 				if(owner.hasCumModifier(fm)) {
-					descriptionSB.append(" " + fm.getBriefDescription());
+					descriptionSB.append(fm.getBriefDescription());
 				}
 			}
 		}
@@ -5363,87 +5363,87 @@ public class Body extends ModBody implements XMLSaving {
 					vagina.getOrificeVagina().getPlasticity().getValue(),
 					vagina.getOrificeVagina().isVirgin());
 			viewedVagina.setPierced(owner, vagina.isPierced());
-			descriptionSB.append("<i style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>The psychoactive girlcum which you recently ingested is causing your view of "+(owner.isPlayer()?"your":"[npc.namePos]")+" pussy to be distorted!</i> ");
+			descriptionSB.append("<i style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>你最近摄入的致幻爱液导致你看到"+(owner.isPlayer()?"你的":"[npc.namePos]的")+"小穴发生了扭曲！</i>");
 			hallucinating = true;
 		}
 
 		switch(owner.getGenitalArrangement()) {
 			case CLOACA:
-				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her] pussy is located within [npc.her] slit-like, front-facing cloaca.)] "));
+				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her]的阴道位于其细缝状的前向泄殖腔处。)] "));
 				break;
 			case CLOACA_BEHIND:
-				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her] pussy is located within [npc.her] slit-like, rear-facing cloaca.)] "));
+				descriptionSB.append(UtilText.parse(owner, "[style.italicsFeral([npc.Her][npc.Her]的阴道位于其细缝状的后向泄殖腔处。)] "));
 				break;
 			case NORMAL:
 				break;
 		}
 		
 		if(owner.hasPenis()) {
-			descriptionSB.append("Beneath [npc.her] [npc.penis], ");
+			descriptionSB.append("位于[npc.her]的[npc.penis]下方，");
 		} else if(owner.hasLegs()) {
-			descriptionSB.append("Between [npc.her] [npc.legs], ");
+			descriptionSB.append("位于[npc.her]的[npc.legs]间，");
 		} else {
-			descriptionSB.append("Down at [npc.her] groin, ");
+			descriptionSB.append("位于[npc.her]的腹股沟处，");
 		}
 		
 		descriptionSB.append(viewedVagina.getType().getBodyDescription(owner));
 		
 		if(owner.isImpregnationPhysicallyPossible()) {
 			if(owner.isVaginaEggLayer()) {
-				descriptionSB.append(" Due to the configuration of [npc.her] reproductive organs, [npc.she] [style.colourEgg([npc.verb(lay)] eggs instead of giving birth to live young)].");
+				descriptionSB.append("由于其生殖器官的配置，[npc.she][style.colourEgg(通过育卵繁育后代，而非分娩)]。");
 			} else {
-				descriptionSB.append(" Due to the configuration of [npc.her] reproductive organs, [npc.she] [style.colourSex([npc.verb(give)] birth to live young)].");
+				descriptionSB.append("由于其生殖器官的配置，[npc.she][style.colourSex(通过分娩繁育后代)]。");
 			}
 		}
 		
 		if(owner.isFeral()) {
-			descriptionSB.append(" [style.colourFeral(As is to be expected, [npc.her] [npc.pussy] is entirely feral in form, and is no different to that of a normal [npc.vaginaRace]'s.)]");
+			descriptionSB.append("[style.colourFeral(不出所料，[npc.her]的[npc.pussy]已经完全兽态化，与普通的[npc.vaginaRace]并无二致。)]");
 		} else if(vagina.isFeral(owner)) {
-			descriptionSB.append(" [style.colourFeral(As it is located on the lower, animalistic part of [npc.her] body, [npc.her] [npc.pussy] is no different to that of a feral [npc.vaginaRace]'s.)]");
+			descriptionSB.append("[style.colourFeral([npc.her]的[npc.pussy]位于其兽态的下半身，已经与兽态的[npc.vaginaRace]并无二致。)]");
 		}
 		
 		// Clit:
-		descriptionSB.append("<br/>[npc.She] [npc.has] [npc.a_clitSize]"+(owner.getClitorisGirth()==PenetrationGirth.THREE_AVERAGE?"":", [npc.clitGirth]")
-				+" clit, which measures [npc.clitSizeValue] in length and [npc.clitDiameter(true)] in diameter ([npc.clitCircumference(true)] in circumference).");
+		descriptionSB.append("<br/>[npc.She]拥有[npc.a_clitSize]"+(owner.getClitorisGirth()==PenetrationGirth.THREE_AVERAGE?"":"，[npc.clitGirth]")
+				+"的阴蒂，长度为[npc.clitSizeValue]，直径为[npc.clitDiameter(true)](周长为[npc.clitCircumference(true)])。");
 		if(owner.isClitorisPseudoPenis()) {
-			descriptionSB.append(" [style.colourSex(Its considerable size allows [npc.herHim] to use it as a pseudo-penis)].");
+			descriptionSB.append("[style.colourSex(其可观的尺寸使得[npc.herHim]能够将其当作假屌使用)]。");
 		}
 		
 		for(PenetrationModifier pm : PenetrationModifier.getPenetrationModifiers()) {
 			if(owner.hasClitorisModifier(pm)) {
 				switch(pm) {
 					case RIBBED:
-						descriptionSB.append(" It's lined with hard, fleshy ribs, which are sure to grant extra pleasure to any orifice that they penetrate.");
+						descriptionSB.append("整根都长满了稍硬的肉质突起，绝对能为任何被插入的腔穴带来额外的快感。");
 						break;
 					case TENTACLED:
-						descriptionSB.append(" A series of little tentacles coat its surface, which wriggle and squirm with a mind of their own.");
+						descriptionSB.append("一片细小的触手覆盖在表面，自行蜿蜒扭动着。");
 						break;
 					case BARBED:
-						descriptionSB.append(" Fleshy, backwards-facing barbs line its length.");
+						descriptionSB.append("肉质的倒刺布满其表面。");
 						break;
 					case BLUNT:
-						descriptionSB.append(" The tip curves around to a smooth surface.");
+						descriptionSB.append("顶端形成了光滑的弯曲表面。");
 						break;
 					case FLARED:
-						descriptionSB.append(" The tip is wide and flared, like a horse's cock.");
+						descriptionSB.append("顶部又平又宽，像马屌一样。");
 						break;
 					case KNOTTED:
-						descriptionSB.append(" A fat knot sits at the base.");
+						descriptionSB.append("根部有一个膨大的结。");
 						break;
 					case PREHENSILE:
-						descriptionSB.append(" It is prehensile, and can be manipulated and moved much like a primate's tail.");
+						descriptionSB.append("极其灵活，能够像灵长目的尾巴一样操纵。");
 						break;
 					case SHEATHED:
-						descriptionSB.append(" Its clitoral hood has transformed into a large sheath, into which [npc.her] [npc.clit] can retract, no matter how large it grows.");
+						descriptionSB.append("阴蒂包皮转化为了巨大的鞘，无论[npc.clit]有多大，都可以收回其中。");
 						break;
 					case TAPERED:
-						descriptionSB.append(" The shaft is tapered, and gets thinner nearer to the head.");
+						descriptionSB.append("肉竿从根部开始逐渐变细，直到顶端。");
 						break;
 					case VEINY:
-						descriptionSB.append(" Large veins press out from its surface.");
+						descriptionSB.append("表面布满了明显的静脉脉络。");
 						break;
 					case OVIPOSITOR:
-						descriptionSB.append(" Its internal structure allows it to be used as an ovipositor, enabling [npc.name] to use it to lay [npc.her] pre-fertilised eggs in a target's orifices.");
+						descriptionSB.append("内部结构使得其能够作产卵器，允许[npc.name]将[npc.her]已受精的卵产在目标的腔穴内。");
 						break;
 				}
 			}
@@ -5455,16 +5455,16 @@ public class Body extends ModBody implements XMLSaving {
 		if(viewedVagina.getOrificeVagina().isVirgin()) {
 			if(isPlayer || !hallucinating) {
 				if(viewedVagina.getOrificeVagina().hasHymen()) {
-					descriptionSB.append(" Within [npc.her] " + Capacity.getCapacityFromValue(viewedVagina.getOrificeVagina().getStretchedCapacity()).getDescriptor(true)
-							+ " [npc.pussy], [style.colourMinorGood([npc.her] hymen is still intact)], and [style.colourExcellent([npc.she] [npc.has] retained [npc.her] vaginal virginity)].");
+					descriptionSB.append("[npc.her]" + Capacity.getCapacityFromValue(viewedVagina.getOrificeVagina().getStretchedCapacity()).getDescriptor(true)
+							+ "的[npc.pussy]内，[style.colourMinorGood(处女膜仍旧完好)]，[style.colourExcellent([npc.she]还保留着阴道贞操)]。");
 					
 				} else {
 					if(owner.isDoll()) {
-						descriptionSB.append(" As a sex doll, [npc.name] [npc.do] not have a hymen, and [style.colourExcellent([npc.has] retained [npc.her] vaginal virginity)].");
+						descriptionSB.append("作为性爱玩偶，[npc.name]没有处女膜，[style.colourExcellent(还保留着阴道贞操)]。");
 						
 					} else {
-						descriptionSB.append(" Within [npc.her] " + Capacity.getCapacityFromValue(viewedVagina.getOrificeVagina().getStretchedCapacity()).getDescriptor(true)
-								+ " [npc.pussy], [style.colourMinorBad([npc.her] hymen has been torn)], but despite this, [style.colourExcellent([npc.she] [npc.has] retained [npc.her] vaginal virginity)].");
+						descriptionSB.append("[npc.her]" + Capacity.getCapacityFromValue(viewedVagina.getOrificeVagina().getStretchedCapacity()).getDescriptor(true)
+								+ "的[npc.pussy]内，尽管[style.colourMinorBad(处女膜已经撕裂)]，但[style.colourExcellent([npc.she]还保留着阴道贞操)]。");
 					}
 				}
 			}
@@ -5474,57 +5474,57 @@ public class Body extends ModBody implements XMLSaving {
 			for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 				if(pt.isTakesVirginity()) {
 					if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, pt))!=null) {
-						descriptionSB.append(" [style.colourArcane("+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, pt)) + ")]");
+						descriptionSB.append("[style.colourArcane("+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, pt)) + ")]");
 						virginityLossFound = true;
 						break;
 					}
 				}
 			}
 			if(!virginityLossFound) {
-				descriptionSB.append(" [style.colourArcane([npc.Name] [npc.has] lost [npc.her] virginity.)]");
+				descriptionSB.append("[style.colourArcane([npc.Name]已经失去了贞操。)]");
 			}
 			if(viewedVagina.getOrificeVagina().hasHymen()) {
-				descriptionSB.append(" Although [npc.sheIsFull] no longer a virgin, [style.colourMinorGood([npc.she] [npc.has] an intact hymen)] within [npc.her] pussy.");
+				descriptionSB.append(" 尽管[npc.sheIsFull]不再是处女，[npc.her]的阴道内[style.colourMinorGood(仍拥有完好的处女膜)]。");
 			} else {
 				if(owner.isDoll()) {
-					descriptionSB.append(" As a sex doll, [npc.name] [npc.do] not have a hymen.");
+					descriptionSB.append("作为性爱玩偶，[npc.name]没有处女膜。");
 					
 				} else {
-					descriptionSB.append(" As is to be expected of someone who is no longer a virgin, [style.colourMinorBad([npc.her] hymen has been torn)].");
+					descriptionSB.append("不出所料，作为一个不再是处女的人，[style.colourMinorBad([npc.her]的处女膜已经撕裂了)]。");
 				}
 			}
 		}
 		
 		if (isPlayer || !hallucinating) {
-			descriptionSB.append(" [npc.Her] pussy is " + Capacity.getCapacityFromValue(viewedVagina.getOrificeVagina().getStretchedCapacity()).getDescriptor(true)+" and when lubricated can comfortably accommodate objects of up to"
-					+ " [style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(viewedVagina.orificeVagina.getElasticity(), viewedVagina.getOrificeVagina().getRawCapacityValue(), true)) + ")] in diameter.");
+			descriptionSB.append("[npc.Her]的小穴" + Capacity.getCapacityFromValue(viewedVagina.getOrificeVagina().getStretchedCapacity()).getDescriptor(true)+"，润滑后可以舒适地容纳最大"
+					+ "直径为[style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(viewedVagina.orificeVagina.getElasticity(), viewedVagina.getOrificeVagina().getRawCapacityValue(), true)) + ")]的物体。");
 		}
 
 		if(Main.game.isPenetrationLimitationsEnabled()) {
 			switch(owner.getVaginaDepth()) {
 				default:
-					descriptionSB.append(" [npc.Her] pussy is <span style='color:"+owner.getVaginaDepth().getColour().toWebHexString()+";'>[npc.pussyDepth]</span>,");
+					descriptionSB.append("[npc.Her]的小穴<span style='color:"+owner.getVaginaDepth().getColour().toWebHexString()+";'>[npc.pussyDepth]</span>，");
 					break;
 				case TWO_AVERAGE:
-					descriptionSB.append(" [npc.Her] pussy is of an <span style='color:"+owner.getVaginaDepth().getColour().toWebHexString()+";'>average depth</span>,");
+					descriptionSB.append("[npc.Her]的小穴<span style='color:"+owner.getVaginaDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 					break;
 			}
 			if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 				if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-					descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-							+ " [style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthUncomfortable())+")].");
+					descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+							+ "[style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthUncomfortable())+")]。");
 				} else {
-					descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-							+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthUncomfortable())+")].");
+					descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+							+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 				}
 				
 			} else {
 				if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-					descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-							+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+					descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+							+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 				} else {
-					descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-							+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+					descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getVaginaMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+							+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 				}
 			}
 		}
@@ -5532,78 +5532,78 @@ public class Body extends ModBody implements XMLSaving {
 		// Wetness:
 		switch (viewedVagina.getOrificeVagina().getWetness(owner)) {
 			case ZERO_DRY:
-				descriptionSB.append(" It's [style.colourWetness(completely dry and never gets wet)], no matter how aroused [npc.she] [npc.is].");
+				descriptionSB.append("目前[style.colourWetness(极其干燥，且永远不会湿润)]，无论[npc.she]有多兴奋。");
 				break;
 			case ONE_SLIGHTLY_MOIST:
-				descriptionSB.append(" It's [style.colourWetness(slightly moist)], and [npc.she] [npc.verb(need)] a huge amount of stimulation before [npc.she] [npc.verb(get)] wet.");
+				descriptionSB.append("目前[style.colourWetness(略微潮湿)]，还需要大量的刺激才能变得湿润。");
 				break;
 			case TWO_MOIST:
-				descriptionSB.append(" It's [style.colourWetness(moist)], but [npc.she] still [npc.verb(need)] a lot of stimulation before [npc.she] [npc.verb(get)] wet.");
+				descriptionSB.append("目前[style.colourWetness(比较潮湿)]，但还需要不少刺激才能变得湿润。");
 				break;
 			case THREE_WET:
-				descriptionSB.append(" It's of an [style.colourWetness(average wetness)], and [npc.she] only [npc.verb(need)] a small amount of foreplay before [npc.sheIs] wet enough for a pleasurable penetration.");
+				descriptionSB.append("目前[style.colourWetness(湿润度适中)]，只需要少量前戏就能够变得足够湿润，进行一场欢愉的性交了。");
 				break;
 			case FOUR_SLIMY:
-				descriptionSB.append(" It's always [style.colourWetness(slimy and wet)], and [npc.sheIs] ready for penetration at a moment's notice.");
+				descriptionSB.append("表面造势[style.colourWetness(又潮湿又粘滑)]，已经随时为插入做好了准备。");
 				break;
 			case FIVE_SLOPPY:
-				descriptionSB.append(" Its surface is always coated in [style.colourWetness(slimy moisture)], and within, [npc.her] pussy is permanently [style.colourWetness(sloppy)] and practically begging to be fucked.");
+				descriptionSB.append("表面总是覆盖着[style.colourWetness(粘滑的湿气)]，而在其小穴内部，则已经[style.colourWetness(溢满了淫液)]，渴望着挨操。");
 				break;
 			case SIX_SOPPING_WET:
-				descriptionSB.append(" [npc.Her] pussy is never anything less than [style.colourWetness(sopping wet)], and a trickle of [npc.her] natural lubricant constantly dribbles from [npc.her] slit.");
+				descriptionSB.append("[npc.Her]的小穴永远[style.colourWetness(十分湿滑)]，一滴滴天然润滑液不停地从秘缝中流出。");
 				break;
 			case SEVEN_DROOLING:
-				descriptionSB.append(" [npc.Her] pussy is [style.colourWetness(so wet that it audibly squelches with every step [npc.she] [npc.verb(take)])], and a constant stream of juices flow from [npc.her] inviting cunt.");
+				descriptionSB.append("[npc.Her]的小穴[style.colourWetness(已经湿到每走一步都会发出滋滋的水声)]，不断地有蜜汁从诱人的穴中流淌而出。");
 				break;
 		}
 		
 		if(viewedVagina.getOrificeVagina().isSquirter()) {
-			descriptionSB.append(" [npc.She] [npc.is] a [style.colourArcane(squirter)], and [style.colourWetness([npc.verb(produce)] a considerable amount of female ejaculate)] each time [npc.she] [npc.verb(orgasm)].");
+			descriptionSB.append("[npc.She]会[style.colourArcane(潮吹)]，每次高潮时[style.colourWetness(都会产生大量的溅出物)]。");
 		}
 		
 		// Elasticity & plasticity:
 		switch (viewedVagina.getOrificeVagina().getElasticity()) {
 			case ZERO_UNYIELDING:
-				descriptionSB.append(" It is [style.colourElasticity(extremely unyielding)],");
+				descriptionSB.append("[style.colourElasticity(几乎不会扩张)]，");
 				break;
 			case ONE_RIGID:
-				descriptionSB.append(" It [style.colourElasticity(takes a huge amount of effort to stretch it out)],");
+				descriptionSB.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 				break;
 			case TWO_FIRM:
-				descriptionSB.append(" It [style.colourElasticity(does not stretch very easily)],");
+				descriptionSB.append("[style.colourElasticity(不太容易撑开)]，");
 				break;
 			case THREE_FLEXIBLE:
-				descriptionSB.append(" It [style.colourElasticity(reluctantly stretches out)] when penetrated,");
+				descriptionSB.append("被插入时[style.colourElasticity(撑不太开)]，");
 				break;
 			case FOUR_LIMBER:
-				descriptionSB.append(" It is [style.colourElasticity(somewhat resistant to being stretched out)],");
+				descriptionSB.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 				break;
 			case FIVE_STRETCHY:
-				descriptionSB.append(" It [style.colourElasticity(stretches out fairly easily)],");
+				descriptionSB.append("[style.colourElasticity(可以比较简单地撑开)]，");
 				break;
 			case SIX_SUPPLE:
-				descriptionSB.append(" It [style.colourElasticity(stretches out very easily)],");
+				descriptionSB.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 				break;
 			case SEVEN_ELASTIC:
-				descriptionSB.append(" It is [style.colourElasticity(extremely elastic)],");
+				descriptionSB.append("[style.colourElasticity(弹性极佳)]，");
 				break;
 		}
-		descriptionSB.append(" and after being used, it "+viewedVagina.getOrificeVagina().getPlasticity().getDescription()+".");
+		descriptionSB.append("在被使用之后，会"+viewedVagina.getOrificeVagina().getPlasticity().getDescription()+"。");
 		
 		for(OrificeModifier om : OrificeModifier.values()) {
 			if(owner.hasVaginaOrificeModifier(om)) {
 				switch(om) {
 					case MUSCLE_CONTROL:
-						descriptionSB.append(" [npc.She] [npc.has] a series of internal muscles lining the inside of [npc.her] [npc.vagina], allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+						descriptionSB.append("[npc.She]的[npc.vagina]拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 						break;
 					case PUFFY:
-						descriptionSB.append(" [npc.Her] labia have swollen up into big, extra-puffy pussy lips.");
+						descriptionSB.append("[npc.Her]的阴唇略微膨起，变得又大又软。");
 						break;
 					case RIBBED:
-						descriptionSB.append(" The inside of [npc.her] [npc.vagina] is lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+						descriptionSB.append("[npc.her][npc.vagina]的内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 						break;
 					case TENTACLED:
-						descriptionSB.append(" [npc.Her] [npc.vagina] is filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+						descriptionSB.append("[npc.Her]的[npc.vagina]长满了满了细小的触手，自行蜿蜒扭动着。");
 						break;
 				}
 			}
@@ -5612,26 +5612,26 @@ public class Body extends ModBody implements XMLSaving {
 		
 		// Girlcum:
 		
-		descriptionSB.append(" [npc.Her] [npc.girlcumColour(true)] [npc.girlcum]");
+		descriptionSB.append("[npc.Her]的[npc.girlcumColour(true)][npc.girlcum]");
 		
 		switch(viewedVagina.getGirlcum().getFlavour()) {
 			case GIRL_CUM:
-				descriptionSB.append(", much to nobody's surprise, tastes like ordinary girlcum.");
+				descriptionSB.append("，不出所料，尝起来就像普通的爱液。");
 				break;
 			case BUBBLEGUM:
-				descriptionSB.append(" has the fruity taste of bubblegum.");
+				descriptionSB.append("尝起来像水果口味的泡泡糖。");
 				break;
 			case FLAVOURLESS:
-				descriptionSB.append(" has absolutely no flavour whatsoever.");
+				descriptionSB.append("没有任何味道。");
 				break;
 			default:
-				descriptionSB.append(" tastes exactly like "+viewedVagina.getGirlcum().getFlavour().getName()+".");
+				descriptionSB.append("尝起来跟"+viewedVagina.getGirlcum().getFlavour().getName()+"一模一样。");
 				break;
 		}
 		
 		for(FluidModifier fm : FluidModifier.values()) {
 			if(viewedVagina.getGirlcum().getFluidModifiers().contains(fm)) {
-				descriptionSB.append(" " + fm.getBriefDescription());
+				descriptionSB.append(fm.getBriefDescription());
 			}
 		}
 		
@@ -5639,34 +5639,34 @@ public class Body extends ModBody implements XMLSaving {
 		
 		// Urethra:
 		if (Capacity.getCapacityFromValue(viewedVagina.getOrificeUrethra().getStretchedCapacity()) != Capacity.ZERO_IMPENETRABLE) {
-			descriptionSB.append("[npc.Her] vagina's urethra has been loosened enough that it presents a ready orifice for penetration, and when lubricated can comfortably accommodate objects of up to"
-					+ " [style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(viewedVagina.getOrificeUrethra().getElasticity(), viewedVagina.getOrificeUrethra().getRawCapacityValue(), true)) + ")] in diameter.");
+			descriptionSB.append("[npc.Her]的阴部尿道已经足够松弛，目前适合插入，润滑后可以舒适地容纳最大"
+					+ "直径为[style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(viewedVagina.getOrificeUrethra().getElasticity(), viewedVagina.getOrificeUrethra().getRawCapacityValue(), true)) + ")]的物体。");
 			
 			if(Main.game.isPenetrationLimitationsEnabled()) {
 				switch(owner.getVaginaUrethraDepth()) {
 					default:
-						descriptionSB.append(" [npc.Her] fuckable urethra is <span style='color:"+owner.getVaginaUrethraDepth().getColour().toWebHexString()+";'>[npc.pussyUrethraDepth]</span>,");
+						descriptionSB.append("[npc.Her]足以插入的尿道<span style='color:"+owner.getVaginaUrethraDepth().getColour().toWebHexString()+";'>[npc.pussyUrethraDepth]</span>，");
 						break;
 					case TWO_AVERAGE:
-						descriptionSB.append(" [npc.Her] fuckable urethra is of an <span style='color:"+owner.getVaginaUrethraDepth().getColour().toWebHexString()+";'>average depth</span>,");
+						descriptionSB.append("[npc.Her]足以插入的尿道<span style='color:"+owner.getVaginaUrethraDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 						break;
 				}
 				if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 					if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-						descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-								+ " [style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthUncomfortable())+")].");
+						descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+								+ "[style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthUncomfortable())+")]。");
 					} else {
-						descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-								+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthUncomfortable())+")].");
+						descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+								+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 					}
 					
 				} else {
 					if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-						descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-								+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+						descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+								+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 					} else {
-						descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-								+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+						descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getVaginaUrethraMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+								+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 					}
 				}
 			}
@@ -5674,46 +5674,46 @@ public class Body extends ModBody implements XMLSaving {
 			// Elasticity & plasticity:
 			switch (viewedVagina.getOrificeUrethra().getElasticity()) {
 				case ZERO_UNYIELDING:
-					descriptionSB.append(" It is [style.colourElasticity(extremely unyielding)],");
+					descriptionSB.append("[style.colourElasticity(几乎不会扩张)]，");
 					break;
 				case ONE_RIGID:
-					descriptionSB.append(" It [style.colourElasticity(takes a huge amount of effort to stretch it out)],");
+					descriptionSB.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 					break;
 				case TWO_FIRM:
-					descriptionSB.append(" It [style.colourElasticity(does not stretch very easily)],");
+					descriptionSB.append("[style.colourElasticity(不太容易撑开)]，");
 					break;
 				case THREE_FLEXIBLE:
-					descriptionSB.append(" It [style.colourElasticity(reluctantly stretches out)] when penetrated,");
+					descriptionSB.append("被插入时[style.colourElasticity(撑不太开)]，");
 					break;
 				case FOUR_LIMBER:
-					descriptionSB.append(" It is [style.colourElasticity(somewhat resistant to being stretched out)],");
+					descriptionSB.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 					break;
 				case FIVE_STRETCHY:
-					descriptionSB.append(" It [style.colourElasticity(stretches out fairly easily)],");
+					descriptionSB.append("[style.colourElasticity(可以比较简单地撑开)]，");
 					break;
 				case SIX_SUPPLE:
-					descriptionSB.append(" It [style.colourElasticity(stretches out very easily)],");
+					descriptionSB.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 					break;
 				case SEVEN_ELASTIC:
-					descriptionSB.append(" It is [style.colourElasticity(extremely elastic)],");
+					descriptionSB.append("[style.colourElasticity(弹性极佳)]，");
 					break;
 			}
-			descriptionSB.append(" and after being used, it "+viewedVagina.getOrificeUrethra().getPlasticity().getDescription()+".");
+			descriptionSB.append("在被使用之后，会"+viewedVagina.getOrificeUrethra().getPlasticity().getDescription()+"。");
 			
 			for(OrificeModifier om : OrificeModifier.values()) {
 				if(owner.hasVaginaUrethraOrificeModifier(om)) {
 					switch(om) {
 						case PUFFY:
-							descriptionSB.append(" [npc.Her] urethra has transformed into having a swollen, puffy rim.");
+							descriptionSB.append("[npc.Her]的尿道边缘略微膨起，变得更加有肉感了。");
 							break;
 						case MUSCLE_CONTROL:
-							descriptionSB.append(" [npc.She] [npc.has] a series of muscles lining the inside of [npc.her] urethra, allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+							descriptionSB.append("[npc.She]的尿道拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 							break;
 						case RIBBED:
-							descriptionSB.append(" The inside of [npc.her] urethra is lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+							descriptionSB.append("[npc.her]的尿道内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 							break;
 						case TENTACLED:
-							descriptionSB.append(" [npc.Her] urethra is filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+							descriptionSB.append("[npc.Her]的尿道长满了满了细小的触手，自行蜿蜒扭动着。");
 							break;
 					}
 				}
@@ -5725,55 +5725,55 @@ public class Body extends ModBody implements XMLSaving {
 			if(owner.getPubicHairType().getType()==BodyCoveringType.BODY_HAIR_SCALES_ALLIGATOR) {
 				switch(owner.getPubicHair()) {
 					case ZERO_NONE:
-						descriptionSB.append(" There's no trace of any rough  "+owner.getPubicHairType().getName(owner)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围没有硬质"+owner.getPubicHairType().getName(owner)+"的踪迹。");
 						break;
 					case ONE_STUBBLE:
-						descriptionSB.append(" [npc.SheHasFull] a small amount of rough "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围长着一小片硬质的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case TWO_MANICURED:
-						descriptionSB.append(" [npc.SheHasFull] a rough patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围长着一片硬质的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case THREE_TRIMMED:
-						descriptionSB.append(" [npc.SheHasFull] a rough patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围长着一片硬质的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case FOUR_NATURAL:
-						descriptionSB.append(" [npc.SheHasFull] a natural amount of rough "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围自然生长着一片硬质的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case FIVE_UNKEMPT:
-						descriptionSB.append(" [npc.SheHasFull] an unkempt mass of rough "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围凌乱地生长着一大片硬质的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case SIX_BUSHY:
-						descriptionSB.append(" [npc.SheHasFull] a thick, rough mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围浓密地生长着一大片硬质的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case SEVEN_WILD:
-						descriptionSB.append(" [npc.SheHasFull] a wild, rough mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围野蛮地生长着一大片硬质的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 				}
 			} else {
 				switch(owner.getPubicHair()) {
 					case ZERO_NONE:
-						descriptionSB.append(" There is no trace of any "+owner.getPubicHairType().getName(owner)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围没有"+owner.getPubicHairType().getName(owner)+"的踪迹。");
 						break;
 					case ONE_STUBBLE:
-						descriptionSB.append(" [npc.SheHasFull] a stubbly patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围长着一茬"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case TWO_MANICURED:
-						descriptionSB.append(" [npc.SheHasFull] a neat, manicured patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围长着一小片整齐的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case THREE_TRIMMED:
-						descriptionSB.append(" [npc.SheHasFull] a trimmed patch of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围长着一小片修剪过的"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case FOUR_NATURAL:
-						descriptionSB.append(" [npc.SheHasFull] a natural bush of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围自然地生长着一片"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case FIVE_UNKEMPT:
-						descriptionSB.append(" [npc.SheHasFull] an unkempt bush of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围凌乱地生长着一片"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case SIX_BUSHY:
-						descriptionSB.append(" [npc.SheHasFull] a thick, bushy mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围浓密地生长着一大片"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 					case SEVEN_WILD:
-						descriptionSB.append(" [npc.SheHasFull] a wild, bushy mass of "+owner.getPubicHairType().getFullDescription(owner, true)+" around [npc.her] [npc.pussy].");
+						descriptionSB.append("[npc.her]的[npc.pussy]周围野蛮地生长着一大片"+owner.getPubicHairType().getName(owner)+"。");
 						break;
 				}
 			}
@@ -5783,7 +5783,7 @@ public class Body extends ModBody implements XMLSaving {
 		if (isPlayer && !owner.isVaginaUrethraVirgin()) {
 			for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 				if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_VAGINA, pt))!=null) {
-					descriptionSB.append(" <span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_VAGINA, pt))+ "</span>");
+					descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.URETHRA_VAGINA, pt))+ "</span>");
 					break;
 				}
 			}
@@ -5794,8 +5794,8 @@ public class Body extends ModBody implements XMLSaving {
 
 	public String getMoundDescription(GameCharacter owner) {
 		return UtilText.parse(owner,
-				"As [npc.she] [npc.verb(possess)] no genitalia, all [npc.she] [npc.has] is a genderless mound."
-				+ " Despite [npc.her] lack of sexual organs, it's still an incredibly sensitive area, and [npc.she] can be brought to a quasi-orgasm by stimulating it.");
+				"由于[npc.she]没有外生殖器，于是只有一片无法辨识性别的光秃秃表面。"
+				+ "尽管[npc.she]缺乏性器官，这里仍是十分敏感的区域，经过刺激后仍可以到达假性高潮。");
 	}
 	
 	public String getSpinneretDescription(GameCharacter owner) {
@@ -5806,60 +5806,60 @@ public class Body extends ModBody implements XMLSaving {
 		descriptionSB = new StringBuilder();
 		
 		if(owner.hasLegSpinneret()) {
-			descriptionSB.append("At the end of [npc.her] [npc.legRace]'s abdomen, ");
+			descriptionSB.append("在[npc.her][npc.legRace]腹部的后端，");
 		} else {
-			descriptionSB.append("At the end of [npc.her] [npc.tail+], ");
+			descriptionSB.append("在[npc.her][npc.tail+]的后端，");
 		}
-		descriptionSB.append("[npc.she] [npc.has] a [npc.spinneretFullDescription(true)]. It is not only capable of producing strong webbing, but can also be used as a sexual orifice.");
+		descriptionSB.append("拥有一个[npc.spinneretFullDescription(true)]。不仅可以吐出结实的粘性网，还能用来当作性交腔穴。");
 		
 		// Virgin/capacity:
 		if(spinneret.isVirgin()) {
-			descriptionSB.append(" [npc.She] [npc.has] [style.colourExcellent(retained [npc.her] spinneret virginity)].");
+			descriptionSB.append("[npc.She][style.colourExcellent(还保留着丝囊贞操)]。");
 			
 		} else {
 			boolean virginityLossFound = false;
 			for(SexAreaPenetration pt : SexAreaPenetration.values()) {
 				if(pt.isTakesVirginity()) {
 					if(owner.getVirginityLoss(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.SPINNERET, pt))!=null) {
-						descriptionSB.append(" [style.colourArcane("+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.SPINNERET, pt)) + ")]");
+						descriptionSB.append("[style.colourArcane("+ owner.getVirginityLossDescription(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.SPINNERET, pt)) + ")]");
 						virginityLossFound = true;
 						break;
 					}
 				}
 			}
 			if(!virginityLossFound) {
-				descriptionSB.append(" [style.colourArcane([npc.Name] [npc.has] lost [npc.her] spinneret virginity.)]");
+				descriptionSB.append("[style.colourArcane([npc.Name]已经失去了丝囊贞操。)]");
 			}
 		}
 		
-		descriptionSB.append(" [npc.Her] spinneret is " + Capacity.getCapacityFromValue(spinneret.getStretchedCapacity()).getDescriptor(true)+" and when lubricated can comfortably accommodate objects of up to"
-				+ " [style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(spinneret.getElasticity(), spinneret.getRawCapacityValue(), true)) + ")] in diameter.");
+		descriptionSB.append("[npc.Her]的丝囊" + Capacity.getCapacityFromValue(spinneret.getStretchedCapacity()).getDescriptor(true)+"，润滑后可以舒适地容纳最大"
+				+ "直径为[style.colourSex("+ Units.size(Capacity.getMaximumComfortableDiameter(spinneret.getElasticity(), spinneret.getRawCapacityValue(), true)) + ")]的物体。");
 
 		if(Main.game.isPenetrationLimitationsEnabled()) {
 			switch(owner.getSpinneretDepth()) {
 				default:
-					descriptionSB.append(" It is <span style='color:"+owner.getSpinneretDepth().getColour().toWebHexString()+";'>[npc.spinneretDepth]</span>,");
+					descriptionSB.append("其<span style='color:"+owner.getSpinneretDepth().getColour().toWebHexString()+";'>[npc.spinneretDepth]</span>，");
 					break;
 				case TWO_AVERAGE:
-					descriptionSB.append(" It is of an <span style='color:"+owner.getSpinneretDepth().getColour().toWebHexString()+";'>average depth</span>,");
+					descriptionSB.append("其<span style='color:"+owner.getSpinneretDepth().getColour().toWebHexString()+";'>深度适中</span>，");
 					break;
 			}
 			if(owner.getBodyMaterial().isOrificesLimitedDepth()) {
 				if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-					descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of a maximum length of "
-							+ " [style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthUncomfortable())+")].");
+					descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，将其能够[style.colourMinorGood(舒适地)]容纳的物体最大长度增加至"
+							+ "[style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthUncomfortable())+")]。");
 				} else {
-					descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-							+ " and [style.colourMinorBad(uncomfortably)] accommodate [style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthUncomfortable())+")].");
+					descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+							+ "以及[style.colourMinorBad(不舒服地)]容纳[style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthUncomfortable())+")]长的物体插入。");
 				}
 				
 			} else {
 				if(owner.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-					descriptionSB.append(" and as [npc.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(owner)+", combined with the fact that [npc.her] body is made out of [npc.bodyMaterial],"
-							+ " [npc.she] can be pushed to [style.colourMinorGood(comfortably)] accommodate objects of [style.colourSex(any length)].");
+					descriptionSB.append("且由于[npc.sheIsFull]认为"+Fetish.FETISH_SIZE_QUEEN.getName(owner)+"，加之[npc.her]的身体由[npc.bodyMaterial]构成，"
+							+ "[npc.she]能够[style.colourMinorGood(舒适地)]容纳[style.colourSex(任何长度)]的物体。");
 				} else {
-					descriptionSB.append(" allowing [npc.herHim] to [style.colourMinorGood(comfortably)] accommodate [style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthComfortable())+")] of a penetrative object,"
-							+ " and as [npc.her] body is made out of [npc.bodyMaterial], [npc.she] can be pushed to [style.colourMinorBad(uncomfortably)] accommodate objects of [style.colourSex(any length)].");
+					descriptionSB.append("让[npc.herHim]能[style.colourMinorGood(舒适地)]容纳[style.colourSex("+Units.size(owner.getSpinneretMaximumPenetrationDepthComfortable())+")]长的物体插入，"
+							+ "且由于[npc.her]的身体[npc.bodyMaterial]构成，[npc.she]能够[style.colourMinorBad(不舒服地)]容纳[style.colourSex(任何长度)]的物体。");
 				}
 			}
 		}
@@ -5867,74 +5867,74 @@ public class Body extends ModBody implements XMLSaving {
 		// Wetness:
 		switch (spinneret.getWetness(owner)) {
 			case ZERO_DRY:
-				descriptionSB.append(" It's [style.colourWetness(completely dry and never gets wet)], no matter how aroused [npc.she] [npc.is].");
+				descriptionSB.append("目前[style.colourWetness(极其干燥，且永远不会湿润)]，无论[npc.she]有多兴奋。");
 				break;
 			case ONE_SLIGHTLY_MOIST:
-				descriptionSB.append(" It's [style.colourWetness(slightly moist)], and [npc.she] [npc.verb(need)] a huge amount of stimulation before [npc.she] [npc.verb(get)] wet.");
+				descriptionSB.append("目前[style.colourWetness(略微潮湿)]，还需要大量的刺激才能变得湿润。");
 				break;
 			case TWO_MOIST:
-				descriptionSB.append(" It's [style.colourWetness(moist)], but [npc.she] still [npc.verb(need)] a lot of stimulation before [npc.she] [npc.verb(get)] wet.");
+				descriptionSB.append("目前[style.colourWetness(比较潮湿)]，但还需要不少刺激才能变得湿润。");
 				break;
 			case THREE_WET:
-				descriptionSB.append(" It's of an [style.colourWetness(average wetness)], and [npc.she] only [npc.verb(need)] a small amount of foreplay before [npc.sheIs] wet enough for a pleasurable penetration.");
+				descriptionSB.append("目前[style.colourWetness(湿润度适中)]，只需要少量前戏就能够变得足够湿润，进行一场欢愉的性交了。");
 				break;
 			case FOUR_SLIMY:
-				descriptionSB.append(" It's always [style.colourWetness(slimy and wet)], and [npc.sheIs] ready for penetration at a moment's notice.");
+				descriptionSB.append("表面造势[style.colourWetness(又潮湿又粘滑)]，已经随时为插入做好了准备。");
 				break;
 			case FIVE_SLOPPY:
-				descriptionSB.append(" Its surface is always coated in [style.colourWetness(slimy moisture)], and within, [npc.her] spinneret is permanently [style.colourWetness(sloppy)] and practically begging to be fucked.");
+				descriptionSB.append("表面总是覆盖着[style.colourWetness(粘滑的湿气)]，而在其丝囊内部，则已经[style.colourWetness(溢满了淫液)]，渴望着挨操。");
 				break;
 			case SIX_SOPPING_WET:
-				descriptionSB.append(" [npc.Her] spinneret is never anything less than [style.colourWetness(sopping wet)], and a trickle of [npc.her] natural lubricant constantly dribbles from it.");
+				descriptionSB.append("[npc.Her]的丝囊永远[style.colourWetness(十分湿滑)]，一滴滴天然润滑液不停地从其中流出。");
 				break;
 			case SEVEN_DROOLING:
-				descriptionSB.append(" [npc.Her] spinneret is [style.colourWetness(so wet that it audibly squelches with every step [npc.she] [npc.verb(take)])], and a constant stream of juices flow from [npc.her] inviting orifice.");
+				descriptionSB.append("[npc.Her]的丝囊[style.colourWetness(已经湿到每走一步都会发出滋滋的水声)]，不断地有蜜汁从诱人的穴中流淌而出。");
 				break;
 		}
 		
 		// Elasticity & plasticity:
 		switch (spinneret.getElasticity()) {
 			case ZERO_UNYIELDING:
-				descriptionSB.append(" It is [style.colourElasticity(extremely unyielding)],");
+				descriptionSB.append("[style.colourElasticity(几乎不会扩张)]，");
 				break;
 			case ONE_RIGID:
-				descriptionSB.append(" It [style.colourElasticity(takes a huge amount of effort to stretch it out)],");
+				descriptionSB.append("[style.colourElasticity(想要被撑开需要费九牛二虎之力)]，");
 				break;
 			case TWO_FIRM:
-				descriptionSB.append(" It [style.colourElasticity(does not stretch very easily)],");
+				descriptionSB.append("[style.colourElasticity(不太容易撑开)]，");
 				break;
 			case THREE_FLEXIBLE:
-				descriptionSB.append(" It [style.colourElasticity(reluctantly stretches out)] when penetrated,");
+				descriptionSB.append("被插入时[style.colourElasticity(撑不太开)]，");
 				break;
 			case FOUR_LIMBER:
-				descriptionSB.append(" It is [style.colourElasticity(somewhat resistant to being stretched out)],");
+				descriptionSB.append("[style.colourElasticity(被扩张时有些抵抗)]，");
 				break;
 			case FIVE_STRETCHY:
-				descriptionSB.append(" It [style.colourElasticity(stretches out fairly easily)],");
+				descriptionSB.append("[style.colourElasticity(可以比较简单地撑开)]，");
 				break;
 			case SIX_SUPPLE:
-				descriptionSB.append(" It [style.colourElasticity(stretches out very easily)],");
+				descriptionSB.append("[style.colourElasticity(可以相当轻松地撑开)]，");
 				break;
 			case SEVEN_ELASTIC:
-				descriptionSB.append(" It is [style.colourElasticity(extremely elastic)],");
+				descriptionSB.append("[style.colourElasticity(弹性极佳)]，");
 				break;
 		}
-		descriptionSB.append(" and after being used, it "+spinneret.getPlasticity().getDescription()+".");
+		descriptionSB.append("在被使用之后，会"+spinneret.getPlasticity().getDescription()+"。");
 		
 		for(OrificeModifier om : OrificeModifier.values()) {
 			if(owner.hasSpinneretOrificeModifier(om)) {
 				switch(om) {
 					case MUSCLE_CONTROL:
-						descriptionSB.append(" [npc.She] [npc.has] a series of internal muscles lining the inside of [npc.her] spinneret, allowing [npc.herHim] to expertly squeeze and grip down on any intruding object.");
+						descriptionSB.append("[npc.She]的丝囊拥有一片活动自如的肌肉，使得[npc.herHim]能够精妙地抓住、挤压任何入侵的物体。");
 						break;
 					case PUFFY:
-						descriptionSB.append(" The rim has swollen up into being particularly big and puffy.");
+						descriptionSB.append("边缘略微膨起，变得又大又软。");
 						break;
 					case RIBBED:
-						descriptionSB.append(" The inside of [npc.her] spinneret is lined with sensitive, fleshy ribs, which grant [npc.herHim] extra pleasure when stimulated.");
+						descriptionSB.append("[npc.her]丝囊的内部长满了敏感的肉质突起，被刺激时可以给[npc.herHim]提供额外的快感。");
 						break;
 					case TENTACLED:
-						descriptionSB.append(" [npc.Her] spinneret is filled with tiny little tentacles, which wriggle and squirm with a mind of their own.");
+						descriptionSB.append("[npc.Her]的丝囊长满了满了细小的触手，自行蜿蜒扭动着。");
 						break;
 				}
 			}
@@ -5948,61 +5948,61 @@ public class Body extends ModBody implements XMLSaving {
 		if(owner.getTotalTimesHadSex(Main.game.getPlayer()) >=1) {
 			descriptionSB = new StringBuilder();
 
-			descriptionSB.append(getHeader("Sex History"));
+			descriptionSB.append(getHeader("性爱经历"));
 			
 			// Amount of sex:
 			
 			descriptionSB.append(
 					UtilText.parse(owner,
 							"<span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>"
-							+ "You have had sex with [npc.name] "+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+" "+(owner.getTotalTimesHadSex(Main.game.getPlayer())==1?"time.":"times.")
+							+ "你已经和[npc.name]做过了"+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+"次。"
 						+"</span>"));
 			
 			if(owner.getSexConsensualCount(Main.game.getPlayer())>=1) {
 				if(owner.getSexConsensualCount(Main.game.getPlayer()) == owner.getTotalTimesHadSex(Main.game.getPlayer())) {
 					if(owner.getTotalTimesHadSex(Main.game.getPlayer())==1) {
-						descriptionSB.append(UtilText.parse(owner," The one time you had sex with [npc.herHim], it was consensual."));
+						descriptionSB.append(UtilText.parse(owner,"你跟[npc.herHim]做的一次是两厢情愿。"));
 					} else {
-						descriptionSB.append(UtilText.parse(owner," All "+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+" times were consensual."));
+						descriptionSB.append(UtilText.parse(owner,"所有"+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+"次都是两厢情愿。"));
 					}
 					
 				} else {
 					if(owner.getTotalTimesHadSex(Main.game.getPlayer())==1) {
-						descriptionSB.append(UtilText.parse(owner," The one time you had sex with [npc.herHim], it was consensual."));
+						descriptionSB.append(UtilText.parse(owner,"你跟[npc.herHim]做的一次是两厢情愿。"));
 					} else {
-						descriptionSB.append(UtilText.parse(owner," "+Util.capitaliseSentence(Util.intToString(owner.getSexConsensualCount(Main.game.getPlayer())))+" of these times were consensual."));
+						descriptionSB.append(UtilText.parse(owner,"其中"+Util.capitaliseSentence(Util.intToString(owner.getSexConsensualCount(Main.game.getPlayer())))+"次是两厢情愿。"));
 					}
 				}
 			}
 			if(owner.getSexAsSubCount(Main.game.getPlayer())>=1) {
 				if(owner.getSexAsSubCount(Main.game.getPlayer()) == owner.getTotalTimesHadSex(Main.game.getPlayer())) {
 					if(owner.getTotalTimesHadSex(Main.game.getPlayer())==1) {
-						descriptionSB.append(UtilText.parse(owner," The one time you had sex with [npc.herHim], you were the dominant partner."));
+						descriptionSB.append(UtilText.parse(owner,"你跟[npc.herHim]做的一次，你是支配方。"));
 					} else {
-						descriptionSB.append(UtilText.parse(owner," All "+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+" times you were the dominant partner."));
+						descriptionSB.append(UtilText.parse(owner,"所有"+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+"次你都是支配方。"));
 					}
 					
 				} else {
 					if(owner.getTotalTimesHadSex(Main.game.getPlayer())==1) {
-						descriptionSB.append(UtilText.parse(owner," The one time you had sex with [npc.herHim], you were the dominant partner."));
+						descriptionSB.append(UtilText.parse(owner,"你跟[npc.herHim]做的一次，你是支配方。"));
 					} else {
-						descriptionSB.append(UtilText.parse(owner," "+Util.capitaliseSentence(Util.intToString(owner.getSexAsSubCount(Main.game.getPlayer())))+" of these times you were the dominant partner."));
+						descriptionSB.append(UtilText.parse(owner,"其中"+Util.capitaliseSentence(Util.intToString(owner.getSexAsSubCount(Main.game.getPlayer())))+"次你是支配方。"));
 					}
 				}
 			}
 			if(owner.getSexAsDomCount(Main.game.getPlayer())>=1) {
 				if(owner.getSexAsDomCount(Main.game.getPlayer()) == owner.getTotalTimesHadSex(Main.game.getPlayer())) {
 					if(owner.getTotalTimesHadSex(Main.game.getPlayer())==1) {
-						descriptionSB.append(UtilText.parse(owner," The one time you had sex with [npc.herHim], you were the submissive partner."));
+						descriptionSB.append(UtilText.parse(owner,"你跟[npc.herHim]做的一次，你是服从方。"));
 					} else {
-						descriptionSB.append(UtilText.parse(owner," All "+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+" times you were the submissive partner."));
+						descriptionSB.append(UtilText.parse(owner,"所有"+Util.intToString(owner.getTotalTimesHadSex(Main.game.getPlayer()))+"次你都是服从方。"));
 					}
 					
 				} else {
 					if(owner.getTotalTimesHadSex(Main.game.getPlayer())==1) {
-						descriptionSB.append(UtilText.parse(owner," The one time you had sex with [npc.herHim], you were the submissive partner."));
+						descriptionSB.append(UtilText.parse(owner,"你跟[npc.herHim]做的一次，你是服从方。"));
 					} else {
-						descriptionSB.append(UtilText.parse(owner," "+Util.capitaliseSentence(Util.intToString(owner.getSexAsDomCount(Main.game.getPlayer())))+" of these times you were the submissive partner."));
+						descriptionSB.append(UtilText.parse(owner,"其中"+Util.capitaliseSentence(Util.intToString(owner.getSexAsDomCount(Main.game.getPlayer())))+"次你是服从方。"));
 					}
 				}
 			}
@@ -6022,22 +6022,22 @@ public class Body extends ModBody implements XMLSaving {
 		// NPC is mother:
 		
 		if(owner.isVisiblyPregnant()) {
-			descriptionSB.append(getHeader("Pregnancy"));
+			descriptionSB.append(getHeader("怀孕"));
 			GameCharacter father = owner.getPregnantLitter().getFather();
 			if(father == null) {
-				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>From one of [npc.her] sexual encounters, [npc.name] has ended up getting impregnated.</span>");
+				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>某次性行为后，[npc.name]怀孕了。</span>");
 			} else if(father.isPlayer()) {
-				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>From one of your sexual encounters, you've ended up impregnating [npc.name].</span>");
+				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>某次性行为后，你终于让[npc.name]受孕了。</span>");
 			} else {
-				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>From one of [npc.her] sexual encounters, [npc.name] has ended up getting impregnated by "+father.getName(true)+".</span>");
+				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>某次性行为后，"+father.getName(true)+"终于让[npc.name]受孕了。</span>");
 			}
 			
 			if(owner.hasStatusEffect(StatusEffect.PREGNANT_1)) {
-				descriptionSB.append(" [npc.Her] belly is only a little swollen, as [npc.sheIs] only in the first stage of pregnancy.");
+				descriptionSB.append("[npc.Her]的肚子微微隆起，正处于怀孕的最初阶段。");
 			} else if(owner.hasStatusEffect(StatusEffect.PREGNANT_2)) {
-				descriptionSB.append(" [npc.Her] belly is noticeably swollen, as [npc.sheIs] well into [npc.her] pregnancy.");
+				descriptionSB.append("[npc.Her]的肚子肉眼可见地隆起，孕期非常顺利。");
 			} else {
-				descriptionSB.append(" [npc.Her] belly is massively swollen, and although [npc.sheIs] clearly ready for it, [npc.sheHasFull]n't decided to give birth just yet.");
+				descriptionSB.append("[npc.Her]的肚子高高隆起，尽管已经做好了准备，但[npc.sheIs]还没决定是否分娩。");
 			}
 			descriptionSB.append("</p>");
 			sectionAdded = true;
@@ -6045,31 +6045,31 @@ public class Body extends ModBody implements XMLSaving {
 		
 		if(!owner.getLittersBirthed().isEmpty()) {
 			if(!sectionAdded) {
-				descriptionSB.append(getHeader("Pregnancy"));
+				descriptionSB.append(getHeader("怀孕"));
 			} else {
 				descriptionSB.append("<p>");
 			}
 			descriptionSB.append(
 					"<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"
-						+ "[npc.Name] has given birth "+Util.intToString(owner.getLittersBirthed().size())+" "+(owner.getLittersBirthed().size()==1?"time":"times")+".</span>");
+						+ "[npc.Name]已经分娩过"+Util.intToString(owner.getLittersBirthed().size())+"次。</span>");
 			
 			for(Litter litter : owner.getLittersBirthed()) {
 				if(litter.getFather() == null) {
-					descriptionSB.append("<br/>On "+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
-							+", [npc.she] was impregnated, and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", [npc.she] gave birth to ");
+					descriptionSB.append("<br/>"+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
+							+"，[npc.she]受孕了，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，[npc.she]分娩出了");
 					
 				} else if(litter.getFather().isPlayer()) {
-					descriptionSB.append("<br/>On "+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
-							+", you impregnated [npc.herHim], and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", [npc.she] gave birth to ");
+					descriptionSB.append("<br/>"+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
+							+"，你让[npc.herHim]受孕了，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，[npc.she]分娩出了");
 					
 				} else {
-					descriptionSB.append("<br/>On "+Units.date(litter.getConceptionDate(), Units.DateType.LONG)+", "+litter.getFather().getName(true)
-							+" impregnated [npc.herHim], and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", [npc.she] gave birth to ");
+					descriptionSB.append("<br/>"+Units.date(litter.getConceptionDate(), Units.DateType.LONG)+"，"+litter.getFather().getName(true)
+							+"让[npc.herHim]受孕了，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，[npc.she]分娩出了");
 				}
 				
 				descriptionSB.append(litter.getBirthedDescription());
 				
-				descriptionSB.append(".");
+				descriptionSB.append("。");
 			}
 			
 			descriptionSB.append("</p>");
@@ -6082,11 +6082,11 @@ public class Body extends ModBody implements XMLSaving {
 			for(PregnancyPossibility pp : Main.game.getPlayer().getPotentialPartnersAsMother()) {
 				if(pp.getFather()!=null && pp.getFather().equals(owner)) {
 					if(!sectionAdded) {
-						descriptionSB.append(getHeader("Pregnancy"));
+						descriptionSB.append(getHeader("怀孕"));
 					} else {
 						descriptionSB.append("<p>");
 					}
-					descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>From one of your sexual encounters, you've been impregnated, and it's possible that [npc.name] is the father.</span>");
+					descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>某次性行为后，你受孕了，[npc.name]有可能是孩子的父亲。</span>");
 					descriptionSB.append("</p>");
 					sectionAdded = true;
 					break;
@@ -6105,17 +6105,17 @@ public class Body extends ModBody implements XMLSaving {
 			
 			if(fatheredLitters!=0) {
 				if(!sectionAdded) {
-					descriptionSB.append(getHeader("Pregnancy"));
+					descriptionSB.append(getHeader("怀孕"));
 				} else {
 					descriptionSB.append("<p>");
 				}
 				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"
-							+ "[npc.Name] is the father of some of your children, and has, in total, impregnated you "+Util.intToString(fatheredLitters)+" "+(fatheredLitters==1?"time":"times")+".</span>");
+							+ "[npc.Name]是你某个孩子的父亲，并且总共让你受孕了"+Util.intToString(fatheredLitters)+" 次。</span>");
 				
 				for(Litter litter : Main.game.getPlayer().getLittersBirthed()) {
 					if(litter.getFather()!=null && litter.getFather().equals(owner)){
-						descriptionSB.append("<br/>On "+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
-								+", [npc.she] impregnated you, and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", you gave birth to "+litter.getBirthedDescription()+".");
+						descriptionSB.append("<br/>"+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
+								+"，[npc.she]让你受孕了，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，你分娩出了"+litter.getBirthedDescription()+"。");
 					}
 				}
 				
@@ -6133,7 +6133,7 @@ public class Body extends ModBody implements XMLSaving {
 		
 		if(!owner.getIncubatingLitters().isEmpty()) {
 			sectionAdded = true;
-			descriptionSB.append(getHeader("Egg Incubation"));
+			descriptionSB.append(getHeader("孵化"));
 			int i=0;
 			for(Entry<SexAreaOrifice, Litter> entry : owner.getIncubatingLitters().entrySet()) {
 				if(i>0) {
@@ -6144,54 +6144,54 @@ public class Body extends ModBody implements XMLSaving {
 				switch(entry.getKey()) {
 					case ANUS:
 					case MOUTH:
-						areaEgged = "stomach";
+						areaEgged = "肚子";
 						if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_STOMACH_1)) {
-							stage = " [npc.Her] belly is only a little swollen, as the eggs in [npc.her] stomach have only recently been implanted.";
+							stage = " [npc.Her]的肚子只是微微隆起，因为肚子里的卵只是刚刚被注入。";
 						} else if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_STOMACH_2)) {
-							stage = " [npc.Her] belly is noticeably swollen, as the eggs in [npc.her] stomach have had time in which to mature and grow.";
+							stage = " [npc.Her]的肚子已经肉眼可见的隆起，因为肚子里的卵已经有些时间，开始生长成熟了。";
 						} else {
-							stage = " [npc.Her] belly is massively swollen, and although [npc.sheIs] clearly ready for it, [npc.sheHasFull]n't decided to lay the eggs which [npc.sheHas] incubated in [npc.her] stomach just yet.";
+							stage = " [npc.Her]的肚子高高隆起，不过[npc.sheIs]明显早有准备，还不准备将在肚中孵化的卵产下。";
 						}
 						break;
 					case NIPPLE:
 						areaEgged = "[npc.breasts]";
 						if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_NIPPLES_1)) {
-							stage = " [npc.Her] [npc.breasts] are only a little swollen, as the eggs in [npc.her] [npc.nipples] have only recently been implanted.";
+							stage = " [npc.Her]的[npc.breasts]只是微微隆起，因为[npc.nipples]里的卵只是刚刚被注入。";
 						} else if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_NIPPLES_2)) {
-							stage = " [npc.Her] [npc.breasts] are noticeably swollen, as the eggs in [npc.her] [npc.nipples] have had time in which to mature and grow.";
+							stage = " [npc.Her]的[npc.breasts]已经肉眼可见的隆起，因为[npc.nipples]里的卵已经有些时间，开始生长成熟了。";
 						} else {
-							stage = " [npc.Her] [npc.breasts] are massively swollen, and although [npc.sheIs] clearly ready for it, [npc.sheHasFull]n't decided to lay the eggs which [npc.sheHas] incubated in [npc.her] [npc.nipples] just yet.";
+							stage = " [npc.Her]的[npc.breasts]高高隆起，不过[npc.sheIs]明显早有准备，还不准备将在[npc.nipples]中孵化的卵产下。";
 						}
 						break;
 					case NIPPLE_CROTCH:
 						areaEgged = "[npc.crotchBoobs]";
 						if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_NIPPLES_CROTCH_1)) {
-							stage = " [npc.Her] [npc.crotchBoobs] are only a little swollen, as the eggs in [npc.her] [npc.crotchNipples] have only recently been implanted.";
+							stage = " [npc.Her]的[npc.crotchBoobs]只是微微隆起，因为[npc.crotchNipples]里的卵只是刚刚被注入。";
 						} else if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_NIPPLES_CROTCH_2)) {
-							stage = " [npc.Her] [npc.crotchBoobs] are noticeably swollen, as the eggs in [npc.her] [npc.crotchNipples] have had time in which to mature and grow.";
+							stage = " [npc.Her]的[npc.crotchBoobs]已经肉眼可见的隆起，因为[npc.crotchNipples]里的卵已经有些时间，开始生长成熟了。";
 						} else {
-							stage = " [npc.Her] [npc.crotchBoobs] are massively swollen, and although [npc.sheIs] clearly ready for it, [npc.sheHasFull]n't decided to lay the eggs which [npc.sheHas] incubated in [npc.her] [npc.crotchNipples] just yet.";
+							stage = " [npc.Her]的[npc.crotchBoobs]高高隆起，不过[npc.sheIs]明显早有准备，还不准备将在[npc.crotchNipples]中孵化的卵产下。";
 						}
 						break;
 					case SPINNERET:
 						areaEgged = "[npc.spinneret]";
 						String spinneretArea = owner.hasTailSpinneret()?"[npc.tail]":"abdomen";
 						if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_SPINNERET_1)) {
-							stage = " [npc.Her] "+spinneretArea+" is only a little swollen, as the eggs in [npc.her] spinneret have only recently been implanted.";
+							stage = " [npc.Her]的"+spinneretArea+"只是微微隆起，因为丝囊里的卵只是刚刚被注入。";
 						} else if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_SPINNERET_2)) {
-							stage = " [npc.Her] "+spinneretArea+" is noticeably swollen, as the eggs in [npc.her] spinneret have had time in which to mature and grow.";
+							stage = " [npc.Her]的"+spinneretArea+"已经肉眼可见的隆起，因为丝囊里的卵已经有些时间，开始生长成熟了。";
 						} else {
-							stage = " [npc.Her] "+spinneretArea+" is massively swollen, and although [npc.sheIs] clearly ready for it, [npc.sheHasFull]n't decided to lay the eggs which [npc.sheHas] incubated in [npc.her] spinneret just yet.";
+							stage = " [npc.Her]的"+spinneretArea+"高高隆起，不过[npc.sheIs]明显早有准备，还不准备将在丝囊中孵化的卵产下。";
 						}
 						break;
 					case VAGINA:
-						areaEgged = "womb";
+						areaEgged = "子宫";
 						if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_WOMB_1)) {
-							stage = " [npc.Her] belly is only a little swollen, as the eggs in [npc.her] womb have only recently been implanted.";
+							stage = " [npc.Her]的肚子只是微微隆起，因为子宫里的卵只是刚刚被注入。";
 						} else if(owner.hasStatusEffect(StatusEffect.INCUBATING_EGGS_WOMB_2)) {
-							stage = " [npc.Her] belly is noticeably swollen, as the eggs in [npc.her] womb have had time in which to mature and grow.";
+							stage = " [npc.Her]的肚子已经肉眼可见的隆起，因为子宫里的卵已经有些时间，开始生长成熟了。";
 						} else {
-							stage = " [npc.Her] belly is massively swollen, and although [npc.sheIs] clearly ready for it, [npc.sheHasFull]n't decided to lay the eggs which [npc.sheHas] incubated in [npc.her] womb just yet.";
+							stage = " [npc.Her]的肚子高高隆起，不过[npc.sheIs]明显早有准备，还不准备将在子宫中孵化的卵产下。";
 						}
 						break;
 					case ARMPITS:
@@ -6206,11 +6206,11 @@ public class Body extends ModBody implements XMLSaving {
 				GameCharacter mother = entry.getValue().getMother();
 				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>");
 					if(mother == null) {
-						descriptionSB.append("From one of [npc.her] sexual encounters, [npc.name] has [npc.her] "+areaEgged+" filled with eggs.");
+						descriptionSB.append("某次性行为后，[npc.name]在[npc.her]的"+areaEgged+"里填满了卵。");
 					} else if(mother.isPlayer()) {
-						descriptionSB.append("From one of your sexual encounters, you've ended up filling [npc.namePos] "+areaEgged+" with eggs.");
+						descriptionSB.append("某次性行为后，你在[npc.namePos]的"+areaEgged+"里填满了卵。");
 					} else {
-						descriptionSB.append("From one of [npc.her] sexual encounters, [npc.name] has ended up having [npc.her] "+areaEgged+" filled with eggs by "+mother.getName(true)+".");
+						descriptionSB.append("某次性行为后，[npc.name]的"+areaEgged+"里填满了"+mother.getName(true)+"的卵。");
 					}
 				descriptionSB.append("</span>");
 				descriptionSB.append(stage);
@@ -6221,34 +6221,34 @@ public class Body extends ModBody implements XMLSaving {
 		
 		if(!owner.getLittersIncubated().isEmpty()) {
 			if(!sectionAdded) {
-				descriptionSB.append(getHeader("Egg Incubation"));
+				descriptionSB.append(getHeader("孵化"));
 			} else {
 				descriptionSB.append("<p>");
 			}
 			sectionAdded = true;
 				descriptionSB.append(
 						"<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"
-							+ "[npc.Name] has incubated and laid eggs "+Util.intToString(owner.getLittersIncubated().size())+" "+(owner.getLittersIncubated().size()==1?"time":"times")+"."
+							+ "[npc.Name]已经孵化、产卵过"+Util.intToString(owner.getLittersIncubated().size())+"次。"
 						+ "</span>");
 
 				//Litter.getMother is the character who passed on the eggs to the incubator
 				for(Litter litter : owner.getLittersIncubated()) {
 					if(litter.getMother()==null) {
-						descriptionSB.append("<br/>On "+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
-								+", [npc.she] was implanted with "+litter.getTotalLitterCount()+" eggs, and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", [npc.she] laid and birthed ");
+						descriptionSB.append("<br/>"+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
+								+"，[npc.she]被注入"+litter.getTotalLitterCount()+"颗卵，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，[npc.she]将卵再次产出，诞下了");
 						
 					} else if(litter.getMother().isPlayer()) {
-						descriptionSB.append("<br/>On "+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
-								+", you implanted [npc.herHim] with "+litter.getTotalLitterCount()+" eggs, and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", [npc.she] laid and birthed ");
+						descriptionSB.append("<br/>"+Units.date(litter.getConceptionDate(), Units.DateType.LONG)
+								+"，你在[npc.herHim]体内注入"+litter.getTotalLitterCount()+"颗卵，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，[npc.she]将卵再次产出，诞下了");
 						
 					} else {
-						descriptionSB.append("<br/>On "+Units.date(litter.getConceptionDate(), Units.DateType.LONG)+", "+litter.getMother().getName(true)
-								+" implanted [npc.herHim] with "+litter.getTotalLitterCount()+" eggs, and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", [npc.she] laid and birthed ");
+						descriptionSB.append("<br/>"+Units.date(litter.getConceptionDate(), Units.DateType.LONG)+"，"+litter.getMother().getName(true)
+								+"在[npc.herHim]体内注入"+litter.getTotalLitterCount()+"颗卵，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，[npc.she]将卵再次产出，诞下了");
 					}
 					
 					descriptionSB.append(litter.getBirthedDescription());
 					
-					descriptionSB.append(".");
+					descriptionSB.append("。");
 				}
 			descriptionSB.append("</p>");
 		}
@@ -6263,7 +6263,7 @@ public class Body extends ModBody implements XMLSaving {
 					switch(entry.getKey()) {
 						case ANUS:
 						case MOUTH:
-							areaEgged = "stomach";
+							areaEgged = "肚子";
 							break;
 						case NIPPLE:
 							areaEgged = "[pc.nipples]";
@@ -6272,10 +6272,10 @@ public class Body extends ModBody implements XMLSaving {
 							areaEgged = "[pc.crotchNipples]";
 							break;
 						case SPINNERET:
-							areaEgged = "spinneret";
+							areaEgged = "丝囊";
 							break;
 						case VAGINA:
-							areaEgged = "womb";
+							areaEgged = "子宫";
 							break;
 						case ARMPITS:
 						case ASS:
@@ -6291,14 +6291,14 @@ public class Body extends ModBody implements XMLSaving {
 			}
 			if(!areasEgged.isEmpty()) {
 				if(!sectionAdded) {
-					descriptionSB.append(getHeader("Egg Incubation"));
+					descriptionSB.append(getHeader("孵化"));
 				} else {
 					descriptionSB.append("<p>");
 				}
 				sectionAdded = true;
 				descriptionSB.append(
 						"<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"
-							+ "[npc.NameIsFull] the one responsible for implanting the eggs that are currently in your "+Util.stringsToStringList(areasEgged, false)+"."
+							+ "是[npc.NameIsFull]将卵注入到了你的"+Util.stringsToStringList(areasEgged, false)+"内。"
 						+ "</span>");
 				descriptionSB.append("</p>");
 			}
@@ -6315,17 +6315,17 @@ public class Body extends ModBody implements XMLSaving {
 			
 			if(incubatedLitters!=0) {
 				if(!sectionAdded) {
-					descriptionSB.append(getHeader("Egg Incubation"));
+					descriptionSB.append(getHeader("孵化"));
 				} else {
 					descriptionSB.append("<p>");
 				}
 				descriptionSB.append("<span style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>"
-							+ "[npc.Name] is responsible for previously having laid [npc.her] eggs in you, and in total, [npc.sheHasFull] done so "+Util.intToString(incubatedLitters)+" "+(incubatedLitters==1?"time":"times")+".</span>");
+							+ "[npc.Name]曾经将卵注入到了你的体内，[npc.sheHasFull]总共这样做过"+Util.intToString(incubatedLitters)+"次。</span>");
 				
 				for(Litter litter : Main.game.getPlayer().getLittersIncubated()) {
 					if(litter.getMother()!=null && litter.getMother().equals(owner)) {
-						descriptionSB.append("<br/>On "+Units.date(litter.getIncubationStartDate(), Units.DateType.LONG)
-								+", [npc.she] implanted a clutch of eggs in you, and then on "+Units.date(litter.getBirthDate(), Units.DateType.LONG)+", you laid and hatched "+litter.getBirthedDescription()+".");
+						descriptionSB.append("<br/>"+Units.date(litter.getIncubationStartDate(), Units.DateType.LONG)
+								+"，[npc.she]在你的体内注入了一窝卵，随后"+Units.date(litter.getBirthDate(), Units.DateType.LONG)+"，你将卵再次产出，孵化出了"+litter.getBirthedDescription()+"。");
 					}
 				}
 				
@@ -6779,8 +6779,8 @@ public class Body extends ModBody implements XMLSaving {
 				if(!initialCovering.equals(newCovering)) {
 					sb.append("<p>");
 						sb.append(UtilText.parse(target,
-								"[npc.NamePos] body begins to itch, and [npc.she] [npc.verb(let)] out a startled cry as [npc.her] "+coveringType.getName(target)+" rapidly "+(coveringType.isDefaultPlural()?"change":"changes")+" colour.<br/>"
-									+ "[npc.She] now [npc.has] "+newCovering.getFullDescription(target, true)+"."));
+								"[npc.NamePos]的身体愈发瘙痒起来，[npc.she]惊呼一声，[npc.her]的"+coveringType.getName(target)+"迅速地变了颜色。<br/>"
+									+ "[npc.She]现在有了 "+newCovering.getFullDescription(target, true)+"。"));
 					sb.append("</p>");
 				}
 			}

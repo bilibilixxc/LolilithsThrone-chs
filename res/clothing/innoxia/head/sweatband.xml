@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>50</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[sweatband]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[sweatbands]]></namePlural>
-		<description><![CDATA[A plain sweatband, designed to be worn around the forehead both to keep the wearer's hair back as well as to absorb any sweat before it drips down into their eyes.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[汗带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[汗带]]></namePlural>
+		<description><![CDATA[一条普通的汗带，设计成戴在前额周围，既可以将佩戴者的头发掀起，又可以吸收汗水，防止汗水滴入眼睛。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -43,27 +42,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the sweatband onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the sweatband onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the sweatband onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将汗带戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将汗带戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将汗带戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] sweatband.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] sweatband.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] sweatband.]]>
-    </otherRough>
+    <self><![CDATA[
+			[npc.Name]摘下[npc.her]的汗带。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的汗带脱下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的汗带。
+]]></otherRough>
   </displacementText>
   
 </clothing>

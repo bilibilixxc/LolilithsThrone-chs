@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!--
@@ -29,8 +29,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Interrupt]]></responseTitle>
-				<responseTooltip><![CDATA[Interrupt Saellatrix and Lilaya to tell them that you're here to see them.]]></responseTooltip>
+				<responseTitle><![CDATA[打断]]></responseTitle>
+				<responseTooltip><![CDATA[打断赛拉特里克斯和莉莱雅，告诉她们你是来见她们的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_start_intro]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/lilayasHome/doll_quest', 'START_INTERRUPT'))]
@@ -39,8 +39,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait for Saellatrix to finish with Lilaya...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等待赛拉特里克斯与莉莱雅结束谈话……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_start_intro]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -59,8 +59,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Hear what it is that Saellatrix has to say to you.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听赛拉特里克斯要对你说什么。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_reveal]]></nextDialogue>
 			</response>
 		</responses>
@@ -75,8 +75,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explain]]></responseTitle>
-				<responseTooltip><![CDATA[Explain to Lilaya what you and FIammetta found beneath Saellatrix's shop.]]></responseTooltip>
+				<responseTitle><![CDATA[解释]]></responseTitle>
+				<responseTooltip><![CDATA[向莉莱雅解释你和菲亚梅塔在赛拉特里克斯的商店地下发现了什么。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_explain]]></nextDialogue>
 			</response>
 		</responses>
@@ -91,8 +91,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Her excuse]]></responseTitle>
-				<responseTooltip><![CDATA[Hear how Saellatrix thinks she'll be able to get out of this.]]></responseTooltip>
+				<responseTitle><![CDATA[她的借口]]></responseTitle>
+				<responseTooltip><![CDATA[听听赛拉特里克斯为什么认为她能解决这一切。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_counter]]></nextDialogue>
 			</response>
 		</responses>
@@ -107,8 +107,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Alone]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you're alone with Saellatrix, you hope that she's going to drop the act.]]></responseTooltip>
+				<responseTitle><![CDATA[独自一人]]></responseTitle>
+				<responseTooltip><![CDATA[现在你和赛拉特里克斯单独在一起，你希望她不要再装模作样了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_lilaya_leaves]]></nextDialogue>
 			</response>
 		</responses>
@@ -127,8 +127,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Loyal to Fia]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to betray Fia's trust and tell Saellatrix that she deserves to be behind bars.]]></responseTooltip>
+				<responseTitle><![CDATA[忠于菲亚]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝背叛菲亚的信任，并告诉赛拉特里克斯她应该被关进监狱。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_choice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/lilayasHome/doll_quest', 'SIDE_FIA'))]
@@ -141,8 +141,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Betray Fia]]></responseTitle>
-				<responseTooltip><![CDATA[Perhaps it'd be best to side with a recognised daughter of an elder lilin rather than stay loyal to a no-name reporter.]]></responseTooltip>
+				<responseTitle><![CDATA[背叛菲亚]]></responseTitle>
+				<responseTooltip><![CDATA[或许跟一位莉琳长老承认的女儿站在一边要比忠于一个无名记者更好。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_dominion_lilayas_home_doll_quest_choice]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/lilayasHome/doll_quest', 'SIDE_SAE'))]
@@ -167,8 +167,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now left alone in the library, you think over your decision before continuing on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在图书馆里只有你自己，你仔细考虑了你的决定，之后继续你的旅程……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/dominion/lilayasHome/doll_quest', 'END'))]

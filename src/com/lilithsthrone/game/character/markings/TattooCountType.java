@@ -9,31 +9,31 @@ import com.lilithsthrone.utils.Util;
  */
 public enum TattooCountType {
 
-	NUMBERS("numbers") {
+	NUMBERS("数字") {
 		@Override
 		public String convertInt(int input) {
 			return String.valueOf(input);
 		}
 	},
-	TALLY("tally markings") {
+	TALLY("计数符号") {
 		@Override
 		public String convertInt(int input) {
 			return Util.intToTally(input, 50);
 		}
 	},
-	NUMERALS("Roman numerals") {
+	NUMERALS("罗马数字") {
 		@Override
 		public String convertInt(int input) {
 			return Util.intToNumerals(input);
 		}
 	},
-	WRITTEN("written out") {
+	WRITTEN("书写文字") {
 		@Override
 		public String convertInt(int input) {
 			return Util.capitaliseSentence(Util.intToString(input));
 		}
 	},
-	CHINESE("Chinese characters tally") {
+	CHINESE("汉字计数") {
 		public String convertInt(int input) {
 			return Util.intToZheng(input, 50);
 		}

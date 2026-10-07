@@ -13,15 +13,15 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum HornLength {
 	
-	ZERO_TINY("tiny", 0, 5, PresetColour.GENERIC_SIZE_ONE, false),
+	ZERO_TINY("微小", 0, 5, PresetColour.GENERIC_SIZE_ONE, false),
 
-	ONE_SMALL("small", 5, 15, PresetColour.GENERIC_SIZE_THREE, true),
+	ONE_SMALL("短小", 5, 15, PresetColour.GENERIC_SIZE_THREE, true),
 
-	TWO_LONG("long", 15, 30, PresetColour.GENERIC_SIZE_FIVE, true),
+	TWO_LONG("修长", 15, 30, PresetColour.GENERIC_SIZE_FIVE, true),
 
-	THREE_HUGE("huge", 30, 50, PresetColour.GENERIC_SIZE_SEVEN, true),
+	THREE_HUGE("极大", 30, 50, PresetColour.GENERIC_SIZE_SEVEN, true),
 
-	FOUR_MASSIVE("massive", 50, 75, PresetColour.GENERIC_SIZE_NINE, true);
+	FOUR_MASSIVE("巨大", 50, 75, PresetColour.GENERIC_SIZE_NINE, true);
 
 	private int minimumValue, maximumValue;
 	private String descriptor;

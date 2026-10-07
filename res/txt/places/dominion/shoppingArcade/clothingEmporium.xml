@@ -1,441 +1,441 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- EXTERIOR -->
 
 	<htmlContent tag="NYAN_EXTERIOR"><![CDATA[
 	<p>
-		Most of the clothing stores in the shopping arcade are small, one-story affairs, with a limited selection of goods on offer. The establishment before you appears to be the exception to this rule, and takes the form of a huge, two-story clothing department bearing the sign 'Nyan's Clothing Emporium'.
+		购物商场中的大多数服装店都是小型的一层建筑，提供有限的商品选择。而你面前的这家店似乎是个例外，它是一家巨大的两层服装店，挂着“妮安服装店”的招牌。
 	</p>
 	#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<20)
 		<p>
-			Due to the fact that the main doors are propped wide open, as well as there being a constant stream of shoppers entering and exiting the establishment, it's quite clear that this Clothing Emporium is [style.colourGood(open)]. A list of opening times etched into the glass beside the entrance reveals that the [style.colourMinorGood(opening hours are [unit.time(9)]-[unit.time(20)])].
+			服装店的大门敞开，进出的顾客络绎不绝，这家店显然是[style.colourGood(营业)]的。入口旁边的玻璃上挂着着一张营业时间表，上面写着[style.colourMinorGood(营业时间：[unit.time(9)]到[unit.time(20)])]。
 		</p>
 		<p>
-			You wonder if you should head inside, or perhaps come back at another time...
+			你不知道是否应该进去，或者是下次再来……
 		</p>
 	#ELSE
 		<p>
-			Due to the fact that the main doors are firmly shut, as well as there being no lights on inside the establishment, it's quite clear that this Clothing Emporium is currently [style.colourBad(closed)]. A list of opening times etched into the glass beside the entrance reveals that the [style.colourMinorBad(opening hours are [unit.time(9)]-[unit.time(20)])].
+			服装店大门紧闭，店内也没有开灯，很明显这家店目前是[style.colourBad(打烊)]的。入口旁边的玻璃上挂着着一张营业时间表，上面写着[style.colourMinorBad(营业时间：[unit.time(9)]到[unit.time(20)])]。
 		</p>
 		<p>
-			If you wanted to do some shopping here, or meet Nyan, you'll have to come back at a later time...
+			如果你想在这里购物，或者见见妮安，那就得晚点再来了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHOP_CLOTHING -->
 	
 	<htmlContent tag="SHOP_CLOTHING"><![CDATA[
 	<p>
-		As the pair of front doors are propped wide open, you're able to swiftly [pc.step] inside and enter the large, modern-looking clothing store. After [pc.walking] around most of the ground floor, and then travelling upstairs to see what's on offer up there, you're able to conclude not only that this must be the largest shop in the arcade, but that it must also be the busiest. Thick crowds of shoppers block many of the aisles that you'd like to [pc.walk] down, and every member of staff that you see is busily occupied with other customers.
+		由于前门敞开着，你能够迅速地[pc.step]进这家大而现代的服装店。在你绕着地面一层[pc.walking]了一圈后，你往楼上看了圈店铺的商品，你完全可以确信，这一定是购物中心最大且生意最好的一家店。密密麻麻的购物人群挡住了你想[pc.walk]下去的过道，你可以看到的每个工作人员都在忙着接待其他顾客。
 	</p>
 	<p>
-		Deciding that it's going to be more trouble than it's worth to try and find something worth buying in here, you turn around and start to head for the exit. Just as you start to move, however, you hear a nervous, high-pitched voice quietly calling out from down the aisle to your right-hand side, [nyan.speechNoEffects(E-Excuse me? Erm... C-Can I help you?)]
+		你觉得在这买东西实在是麻烦，于是你准备离开这里。然而，就在你开始动身的时候，你听到一位紧张而尖锐的声音从右侧过道处轻声呼唤，[nyan.speechNoEffects(你……你好？嗯……我……我能帮助你吗？)]
 	</p>
 	<p>
-		Turning in the direction that this timid voice came from, you find yourself facing a lesser cat-girl. As you look into her bright blue eyes, her pale cheeks instantly turn a deep shade of red, and she glances down at the floor and starts shuffling her feet as she explains, [nyan.speechNoEffects(I-I saw that none of my staff are free... U-Usually I don't... I-I mean, I'm not really g-good at helping customers, b-but I thought maybe I should try today. Oh, erm, I-I'm Nyan, the m-manager and owner... I probably should have said that first... W-Welcome to my c-clothing emporium...)]
+		你转向那个胆怯声音的方向，看到了一位亚猫女。当你看着她明亮的蓝眼睛时，她苍白的脸颊瞬间变得绯红，她垂下头看着自己的脚，解释道，[nyan.speechNoEffects(我……我看到我的员工都很忙……通常我不……我是说，我不太擅长帮助顾客，但我想也许今天应该试一下。哦，嗯，我……我是妮安，这家服装百货店的经理和老板……我可能应该先说这个……欢迎来到我的服装店……)]
 	</p>
 	<p>
-		If it wasn't for the fact that she's smartly dressed, with a little name tag pinned to her blouse reading 'Nyan, Store Manager', you're not sure that you would have believed this nervous, stuttering cat-girl to be the store's owner. In an attempt to put her at ease, you ignore the fact that Nyan is visibly trembling and happily explain to her that you were looking for some new clothing, but that due to the crowds, you've been unable to get a good look at what her store has to offer.
+		如果不是因为她穿着得体，胸前别着一枚写着“妮安，店长”的小名牌，你可能不会相信这位紧张而结巴的猫女是这家店铺的老板。为了让她感到放松，你不去看妮安明显的颤抖，正常地向她解释说，你正在寻找一些新的衣物，但由于人群拥挤，你一直没办法好好看看她的店有什么。
 	</p>
 	<p>
-		[nyan.speechNoEffects(O-Oh, yes, it is r-rather busy today... S-Sorry! Um, well, e-everything we have on display can also b-be found back in our stockroom. I-I don't think it would be a problem for you to... That is... I-I mean... F-Follow me and I'll show you what we've got!)]
+		[nyan.speechNoEffects(哦，是，是的，今天真的相当忙碌……对不起！嗯，我们展示的东西都可以在后面的储藏室找到。我觉得对你来那个……不会有问题的。我是说……跟我来，我会给你看看我们有什么！)]
 	</p>
 	<p>
-		In what appears to be an almost desperate attempt to escape further conversation, Nyan hurries past you and half-walks, half-runs towards a nearby door which bears a sign reading 'Staff Only'. Doing as she instructed, you follow her through the door into her store's stockroom.
+		妮安几乎是不顾一切地试图逃避进一步的谈话，她匆匆地从你身边走过，半走半跑地走向附近的一扇门，门上挂着“仅限员工”的牌子。你跟着她进了她店里的库房。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHOP_CLOTHING_STOCK_ROOM -->
 	
 	<htmlContent tag="SHOP_CLOTHING_STOCK_ROOM"><![CDATA[
 	<p>
-		The stockroom of Nyan's Clothing Emporium looks pretty much exactly as you'd expected it be. Ceiling-height shelving units are stocked full of clothes, shoes, and accessories of all different sorts, and there's a distinctive 'new clothing' smell lingering in the air.
+		妮安服装店的库房与你预期的几乎一模一样。天花板高的货架上摆满了各种不同类型的衣物、鞋子和配饰，空气中还弥漫着独特的“新衣物”气味。
 	</p>
 	<p>
-		Nyan's heels clatter across the laminate flooring as she hurries to retrieve a notepad that she uses to track what's currently in stock. Rushing back over to you, she fumbles with the little pad and almost drops it on the floor. [nyan.speechNoEffects(A-Ah! S-Sorry, I don't usually interact with customers, s-so sorry if I'm a little unprofessional... A-Anyway, let me know what you'd like t-to see, and I'll show y-you what I've got in stock!)]
+		妮安的高跟鞋在强化地板上嗒嗒作响，她拿来一个她用来跟踪库存的小本子。她匆忙走回你身边，手忙脚乱地弄着那本小本子，差点让它掉在地上。[nyan.speechNoEffects(啊！对不起，我通常不与顾客交流，所以如果我有点不专业，真的很抱歉……无论如何，请告诉我你想看什么，我会给你看看我有什么存货！)]
 	</p>
 	<p>
-		You start to thank the nervous cat-girl, but she suddenly squeaks out and cuts you off, [nyan.speechNoEffects(O-Oh! A-and I forgot! I-I was going to do a t-trial of offering to buy old clothes from customers, s-so if you wanted to, I-I could buy some old clothing from you...	 O-Oh, I interrupted you... S-Sorry...)]
+		你刚想要感谢这位紧张的猫女，但她突然尖叫起来，打断了你的话，[nyan.speechNoEffects(哦！我差点忘了！我本来想试试向顾客收购旧衣服的，所以如果你愿意的话，我可以从你那里买些旧衣服……哦，我打断了你……对不起……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHOP_CLOTHING_REPEAT -->
 	
 	<htmlContent tag="SHOP_CLOTHING_REPEAT_NO_NYAN"><![CDATA[
 	<p>
-		Stepping through the open pair of wide, glass doors, you find 'Nyan's Clothing Emporium' to be just as busy as ever. Crowds of shoppers block almost every aisle, and every single member of staff who you see is already occupied with other customers. 
+		穿过敞开的宽大玻璃门，你发现“妮安服装店”和往常一样繁忙。购物的人群几乎堵住了每一条过道，你可以看到的每个工作人员都在忙着接待其他顾客。
 	</p>
 	<p>
-		As it's currently the weekend, you know that your girlfriend is not coming into work today, and so you head straight over to the stockroom. Having been given both Nyan's key and permission to do so, you could always unlock the door and head inside in order to see what items she's marked as being for sale...
+		由于现在是周末，你知道你的女朋友今天不会来上班，所以你直奔库房。在拿到到妮安的钥匙和许可后，你可以打开门，进去看看她标记为出售的物品……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_HIDING_NEXT_DAY"><![CDATA[
 	<p>
-		Stepping through the open pair of wide, glass doors, you find 'Nyan's Clothing Emporium' to be just as busy as ever. Crowds of shoppers block almost every aisle, and every single member of staff who you see is already occupied with other customers.
+		穿过敞开的宽大玻璃门，你发现“妮安服装店”和往常一样繁忙。购物的人群几乎堵住了每一条过道，你可以看到的每个工作人员都在忙着接待其他顾客。
 	</p>
 	<p>
-		Hoping that you'll be able to find Nyan here today, you start to scan around for any sign of the nervous cat-girl. After just a minute of searching, you suddenly hear a familiar squeak coming from behind you, [nyan.speechNoEffects([pc.Name]? S-Sorry that I-I ran off before...)]
+		你希望今天能在这里找到妮安，于是开始四处搜寻她的身影，刚找了一分钟，你突然听到身后传来了熟悉的声音，[nyan.speechNoEffects([pc.Name]？抱……抱歉，我之前跑掉了……)]
 	</p>
 	<p>
-		You turn around to see Nyan sheepishly looking down at her feet as she shuffles them about on the shop's laminate flooring. Wringing her hands together, she interrupts your greeting by hastily blurting out, [nyan.speechNoEffects(I-I received the enchanted c-clothing shipment from Kay this morning, t-thanks to you! And... Erm... Also...)]
+		你转过身来，看到妮安怯怯地低头看着自己的脚，在你面前晃来晃去。她双手绞在一起，紧张的打断了你的问候，[nyan.speechNoEffects(我……我今天早上收到了凯送过来的附魔服装，多亏了你！还有……嗯……)]
 	</p>
 	<p>
-		The cat-girl's pale cheeks start to flush red as her voice trails off, but before you're able to ask what's wrong, she looks up and desperately exclaims, [nyan.speechNoEffects(P-Please, I want to t-tell you something! F-Follow me!)]
+		猫女的苍白脸颊开始泛红，声音逐渐消失，但你还没来得及问她怎么了，她就抬起头，拼命地喊道，[nyan.speechNoEffects(我想告诉你一些事情！请跟我来！)]
 	</p>
 	<p>
-		Turning around on the spot, the cat-girl starts to rush over to the same storeroom which she's shown you into before. Curious to hear what it is she's got to tell you, and eager to see what sort of enchanted clothing she might have for sale, you decide to do as Nyan asks and follow her into the storeroom...
+		猫女在原地转身，开始匆匆走向之前带你进去过的库房。你很好奇她要告诉你什么，也很想看看她有什么出售的附魔服装，你决定照着妮安的要求，跟着她进了库房……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_HIDING"><![CDATA[
 	<p>
-		Stepping through the open pair of wide, glass doors, you find 'Nyan's Clothing Emporium' to be just as busy as ever. Crowds of shoppers block almost every aisle, and every single member of staff who you see is already occupied with other customers. 
+		穿过敞开的宽大玻璃门，你发现“妮安服装店”和往常一样繁忙。购物的人群几乎堵住了每一条过道，你可以看到的每个工作人员都在忙着接待其他顾客。
 	</p>
 	<p>
-		After taking a short while to search for her, you're disappointed to discover that there's absolutely no sign of Nyan. Heading over to the stockroom which she'd shown you into before, you find that not only is the door securely locked, but the store's nervous owner is still nowhere to be seen.
+		找了一会儿，你失望地发现完全没有妮安的踪影。你来到她之前带你进去过的库房，发现不仅门被牢牢锁住了，而且店主也不见踪影。
 	</p>
 	<p>
-		Recalling how embarrassed she was the last time you saw her, you realise that Nyan must have either run off home or gone into hiding somewhere in her store. With no hope of meeting her again today, nor getting any shopping done, there's nothing more for you to do but leave and return to try and find her tomorrow...
+		回想起上次见面时她的窘态，你意识到妮安一定是跑回家了，或者躲到她店里的某个地方去了。所以你今天没办法再见到她了，也无法完成购物，你只能离开，明天再回来找她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_GREETING_REPEAT"><![CDATA[
 	<p>
-		Stepping through the open pair of wide, glass doors, you find 'Nyan's Clothing Emporium' to be just as busy as ever. Crowds of shoppers block almost every aisle, and every single member of staff who you see is already occupied with other customers.
+		穿过敞开的宽大玻璃门，你发现“妮安服装店”和往常一样繁忙。购物的人群几乎堵住了每一条过道，你可以看到的每个工作人员都在忙着接待其他顾客。
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_nyanmumInterviewPassed))
 		<p>
-			Scanning around for any sign of your girlfriend, you suddenly hear a familiar voice call out from behind you, [nyan.speechNoEffects([pc.Name]!)]
+			你四处搜寻女友的踪迹，突然听到身后传来一个熟悉的声音，[nyan.speechNoEffects([pc.Name]！)]
 		</p>
 		<p>
-			You turn around to see Nyan happily smiling at you, and after you've returned her greeting, she coyly teases,
+			你转过身，看到妮安正开心地冲你微笑，在你回礼后，她腼腆地调侃道，
 			#IF(!game.getDialogueFlags().hasFlag(FLAG_nyanmumDateCompleted))
-				 [nyan.speechNoEffects(So, have you got plans for this weekend? My mum seems pretty excited about the prospect of it...)]
+				[nyan.speechNoEffects(这个周末你有安排吗？我妈妈似乎十分非常开心……)]
 			#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_nyanmumGirlfriend))
-				 [nyan.speechNoEffects(So, have you got plans for this weekend? Mum and I would really like to go on another date with you...)]
+				[nyan.speechNoEffects(这个周末你有安排吗？我和妈妈很想和你再约会一次……)]
 			#ELSE
-				 [nyan.speechNoEffects(So, have you got plans for this weekend? I'd really like to go on another date with you...)]
+				[nyan.speechNoEffects(这个周末你有安排吗？我真的很想和你再约会一次……)]
 			#ENDIF
 		</p>
 		<p>
-			After telling her that she'll have to wait and see, Nyan grins and playfully swishes her tail around behind her. There's no doubt that she's significantly more confident than when you first met her, and you notice that the cat-girl's stutter has completely vanished as she points behind her and says, [nyan.speechNoEffects(Come on, I can show you the stockroom again if you'd like! Follow me!)]
+			在告诉她要等着看之后，妮安咧嘴笑了笑，调皮地晃动着自己的尾巴。毫无疑问，她比初次见面时更加自信，你注意到她的结巴完全消失了，她指着身后说，[nyan.speechNoEffects(来吧，如果你愿意的话，我可以再次带你去库房！跟着我！)]
 		</p>
 	#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_nyanRestaurantDateCompleted))
 		#IF(game.getDialogueFlags().hasFlag(FLAG_nyanApologised))
 			<p>
-				Scanning around for any sign of your girlfriend, you suddenly hear a familiar voice call out from behind you, [nyan.speechNoEffects([pc.Name]!)]
+				你四处搜寻女友的踪迹，突然听到身后传来一个熟悉的声音，[nyan.speechNoEffects([pc.Name]！)]
 			</p>
 			<p>
-				You turn around to see Nyan happily smiling at you, but after you've returned her greeting, her smile disappears and she awkwardly mutters, [nyan.speechNoEffects(Sorry about my m-mum... She gets r-really over-protective of me...)]
+				你转过身，看到妮安开心地对你微笑，但在你回敬她的问候后，她的笑容消失了，尴尬地嘀咕着，[nyan.speechNoEffects(对不起，我妈妈……她对我过度保护了……)]
 			</p>
 			<p>
-				After telling her that there's no need to apologise, you're relieved to see the smile return to Nyan's face. Although she seems a lot more confident than when you first met, you notice that the cat-girl's stutter hasn't entirely vanished as she points behind her and says, [nyan.speechNoEffects(Come on, I-I can show you the stockroom again if you'd like! F-Follow me!)]
+				在告诉她不必道歉后，你看到妮安脸上又恢复了笑容，你松了一口气。虽然她看起来比你们初次见面时自信了许多，但你注意到猫女的口吃并没有完全消失，她指着自己的身后说，[nyan.speechNoEffects(来吧，我……我如果你愿意的话，可以再次带你去库房！跟我来吧！)]
 			</p>
 		#ELSE
 			<p>
-				Scanning around for any sign of your girlfriend, you suddenly hear a familiar voice call out from behind you, [nyan.speechNoEffects([pc.Name]!)]
+				你四处搜寻女友的踪迹，突然听到身后传来一个熟悉的声音，[nyan.speechNoEffects([pc.Name]！)]
 			</p>
 			<p>
-				You turn around to see Nyan happily smiling at you, and after you've returned her greeting, she exclaims, [nyan.speechNoEffects(Come on, I-I can show you the stockroom again if you'd like! F-Follow me!)]
+				你转过身来，看到妮安正开心地冲你微笑，在你向她回礼后，她大喊道，[nyan.speechNoEffects(来吧，我……我如果你愿意的话，可以再次带你去库房！跟我来吧！)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Scanning around for any sign of the store's nervous owner, you suddenly hear a familiar squeak coming from behind you, [nyan.speechNoEffects(A-Ah! H-Hello again!)]
+			你四处搜寻紧张的店主的身影，突然听到身后传来一个熟悉的声音，[nyan.speechNoEffects(啊！你好再次见到你！)]
 		</p>
 		<p>
-			You turn around to see Nyan looking down at her feet as she shuffles them about on the shop's laminate flooring. [pc.speech(Hi, Nyan, how are y-)]
+			你转过身来，看到妮安怯怯地低头看着自己的脚，在你面前晃来晃去。[pc.speech(嗨！妮安，你怎么样——)]
 		</p>
 		<p>
-			[nyan.speechNoEffects(I-I'm fine! T-Thanks for asking,)] Nyan bursts out, interrupting you in her haste to answer. Pointing behind her, she continues, [nyan.speechNoEffects(I-I can show you the stockroom again if y-you'd like! F-Follow me!)]
+			[nyan.speechNoEffects(我……我很好！谢谢你关心，)]妮安突然爆发出声音，匆忙的打断了你。她指着身后继续说，[nyan.speechNoEffects(我……我如果你愿意的话，可以再次带你去库房！跟我来吧！)]
 		</p>
 	#ENDIF
 	<p>
-		Doing as she says, you follow Nyan into her store's stockroom once again. As the door swings shut, you wonder what to take a look at this time...
+		按照她说的，你再次跟着妮安走进她店里的库房。当门关上时，你开始考虑这次要看什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_GREETING_REPEAT_PREGNANT"><![CDATA[
 	<p>
-		Entering the store, you're surprised to find that Nyan is nowhere in sight. Pushing through the throngs of people, you manage to catch one of the employees not busy with a customer, and upon asking after Nyan, you're pointed in the direction of the stock room.
+		进入商店后，你惊讶地发现妮安不见了踪影。在人群中挤过去，你设法找到一名没有正在忙于顾客的员工，并询问妮安的下落，员工指了指库房的方向。
 	</p>
 	<p>
-		Entering the familiar room, you discover that Nyan is indeed in here, murmuring to herself behind a stack of boxed clothing. Wringing her hands and staring at her feet, something has quite clearly got her more worked up than usual, and you notice that she jumps a little as she sees you approach.
+		进入这个熟悉的房间，你发现妮安确实在这里，在一堆盒装衣物的后面喃喃自语。她握着双手，低头看着脚，显然有些事情让她比平常更加激动，你注意到她在看到你走近时有些惊讶。
 	</p>
 	<p>
-		[pc.speech(What's wrong, Nyan?)] you ask, concerned by how she appears to have lost all of her confidence.
+		[pc.speech(妮安？你还好吗？)]你问道，对她似乎完全失去信心感到担忧。
 	</p>
 	<p>
-		[nyan.speechNoEffects(O-Oh... well um...)] she says haltingly. [nyan.speechNoEffects(Do y-you remember when w-we... you know...)] She blushes fiercely and says in a very quiet voice, [nyan.speechNoEffects(Had s-sex...?)]
+		[nyan.speechNoEffects(哦，哦……那个，嗯……)]她含含糊糊的说道，[nyan.speechNoEffects(你还记得我们上次……你知道的那个……)]她羞红了脸，小声说道，[nyan.speechNoEffects(做了……爱？)]
 	</p>
 	<p>
-		You smile at the memory and nod. Nyan smiles nervously back, before continuing, [nyan.speechNoEffects(W-Well my tummy felt a little funny a-after so I took a t-test and... a-and...)] She closes her eyes and takes a deep breath, bunching up the bottom of her skirt as if gathering her courage before blurting out, [nyan.speechNoEffects(I'm pregnant with your baby!)]
+		你对这个回忆微笑着点了点头。妮安也紧张地笑了笑，然后继续说，[nyan.speechNoEffects(嗯……然后我的肚子感觉有点不舒服，所以我做了个测试，然后……然后……)]她闭上眼睛，深吸一口气，抓紧了裙边，似乎在鼓足勇气，然后脱口而出，[nyan.speechNoEffects(我怀了你的孩子了！)]
 	</p>
 	<p>
-		After her outburst, she just stands there; eyes scrunched closed, trembling hands clenching her skirt, she seems to be waiting for an admonishment. Stepping forwards, you sweep her into your arms, wishing that you'd been able to record the surprised squeak that bursts out of her mouth. She blinks in surprise as you hold her close, before pulling back a little and staring at you with open-mouthed shock. [nyan.speechNoEffects(W-W-What? You're not a-angry?)]
+		在她的爆发之后，她只是站在那里，眼睛紧闭，颤抖的双手握紧裙子，似乎在等待着被责备。你向前迈步，把她搂进你的怀里，希望自己能够记录下她吃惊的尖叫声。她惊讶地眨了眨眼，然后稍微退后一点，用张大嘴巴震惊的盯着你。[nyan.speechNoEffects(你……你……你不生气吗？)]
 	</p>
 	<p>
-		You hold her at arm's length for a moment, smiling as you shake your head. [pc.speech(Why would I be angry? This is great news!)]
+		你和她保持了一会儿距离，微笑的摇摇头。[pc.speech(我为什么要生气？这可是个好消息！)]
 	</p>
 	<p>
-		A visible tension seems to melt from her entire being as the nervous cat-girl cutely smiles back and snuggles into your [pc.arms]. The confidence which she'd gained over the course of your relationship soon returns, and she asks, [nyan.speechNoEffects(Will you come by and visit from time to time?)]
+		她整个人似乎都放松下来，紧张的猫女可爱地笑着，依偎在你[pc.arms]的怀里。在你们的交流过程中，她的自信很快就回来了，她问道，[nyan.speechNoEffects(你会经常地过来看看我吗？)]
 	</p>
 	<p>
-		You instantly agree, and can't help but grin as you notice that she's looking happier than you've ever seen her before. Still nestled against your chest, Nyan asks, [nyan.speechNoEffects(Did you need something while we're in here?)]
+		你立刻表示同意，并情不自禁地笑了起来，因为你发现她看起来比你以前见过的任何时候都要开心。妮安仍然依偎在你的胸前，问道，[nyan.speechNoEffects(正好我们在这里，你需要买些什么吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_HIDING_LEAVE"><![CDATA[
 	<p>
-		With the nervous cat-girl nowhere to be seen, you [pc.walk] over to the store's
+		你没找见紧张的猫女，便[pc.walk]到商店的
 		#IF(!game.isHourBetween(9, 20))
-			 exit and
+			出口，
 		#ELSE
-			 exit, and after having to push your way through a crowd of customers who're loitering around the large glass doors, you
+			出口，你不得不挤过在玻璃门周围闲逛的顾客人群，
 		#ENDIF
-		 head back out into the shopping arcade. Hopefully you'll be able to meet Nyan if you return here tomorrow...
+		回到了购物中心。你希望明天再来这里时，能见到妮安……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_CLOTHING_REPEAT_GIRLFRIEND"><![CDATA[
 	<p>
-		Having changed your mind about Nyan's earlier proposition, you tell her that you've been thinking about her offer of becoming her [pc.girlfriend]. As you reveal that you'd love to start a relationship with her, the cute cat-girl lets out an excited squeak, and after grabbing the book which she showed to you earlier, she holds it up to cover her blushing cheeks and declares, [nyan.speechNoEffects(T-This is just like i-in my books! N-Now we have to g-get to know one another b-before we can... I-I mean... D-Do the thing together...)]
+		你改变了对妮安先前提议的想法，告诉她你最近一直在考虑成为她[pc.girlfriend]的事情。当你说出你很想和她开始一段恋情时，可爱的猫女发出了兴奋的尖叫声，然后拿起她之前给你看的那本书，遮住羞红的脸颊，说：[nyan.speechNoEffects(这就像我书里写的一样！现在我们得彼此了解一下，然后……我是说……在一起做那件事之前……)]
 	</p>
 	<p>
-		From the influence of her romance novels, Nyan clearly has some pre-defined notions about what being your girlfriend is going to entail. Not wanting to do anything which would bring your relationship to an end before it's even begun, you decide to play along with the nervous cat-girl and take things at a pace which she's comfortable with.
+		妮安显然是受言情小说的熏陶，对女朋友的角色已经有一些既定的认知。你不想在关系刚开始时就把它结束掉，于是决定配合这位紧张的猫女，按她适应的节奏来发展关系。
 	</p>
 	<p>
-		[nyan.speechNoEffects(S-So... N-Now we...)] Nyan stutters, pausing for a moment before looking at you with her big blue eyes and suggesting, [nyan.speechNoEffects(We c-could talk for a w-while... I-I am your girlfriend now, after all, s-so you should g-get to know me a little better...)]
+		[nyan.speechNoEffects(所以……现在……我们，嗯……)]妮安结巴着停顿了一会，然后用她那双大大的蓝色眼睛看着你，建议道，[nyan.speechNoEffects(我们可以聊一会儿……毕竟我现在是你的女朋友，所以你应该更多地了解我一些……)]
 	</p>
 	<p>
-		With your nervous girlfriend still clutching her book up to her face and timidly shuffling her feet, you realise that any attempt to do more than talk to her will surely result in her suffering from a panic attack. Giving her your most disarming look, you wonder what to ask of Nyan...
+		你紧张的女友仍然把书本紧紧地贴在脸上，怯生生地挪动着脚步，你意识到，任何与她多说几句话的尝试都会导致她恐慌发作。你露出无害的笑容，思考着要向妮安提出什么要求……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_EXIT"><![CDATA[
 	#IF(!game.getCharactersPresent().contains(nyan))
 		<p>
-			Deciding that it's time to leave, you make your way back out through the store to the exit.
+			你决定是时候离开了，于是你穿过商店回到出口。
 			#IF(!game.isHourBetween(9, 20))
-				 Heading back out into the Arcade, you wonder what to do next...
+				你回到购物中心，思考着下一步该做什么……
 			#ELSE
-				 Having to push your way through a crowd of customers that's loitering around the glass doors, you head back out into the Arcade and wonder what to do next...
+				你不得不挤过在玻璃门周围闲逛的顾客人群，回到购物中心，思考着下一步该做什么……
 			#ENDIF
 		</p>
 	#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_nyanmumInterviewPassed))
 		<p>
-			Thanking Nyan for her time, you explain to her that you need to get going now. Putting her little notepad away, she cheekily plants a quick kiss on your cheek, before exclaiming, [nyan.speechNoEffects(Thanks for dropping by, [pc.name]! I'll see you again this weekend, right?)]
+			感谢妮安抽出时间，你解释说你现在必须要走了。她把小本子收好，厚脸皮地在你的脸颊上亲了一下，然后叫道，[nyan.speechNoEffects(谢谢你过来，[pc.name]！这个周末我们还会见面，对吧？)]
 		</p>
 		<p>
-			Telling your girlfriend that you'll do your best to make time for another date with her, you give her a quick kiss goodbye and exit the stockroom. Making your way to the store's
+			你告诉你的女朋友你会尽力找时间和她再次约会，你与她快速吻别，然后离开了库房。你走向商店的
 			#IF(!game.isHourBetween(9, 20))
-				 exit, you head back out into the Arcade and wonder what to do next...
+				出口，你回到了购物中心，思考着接下来该做什么……
 			#ELSE
-				 exit, you have to push your way through a crowd of customers that's loitering around the glass doors, before finally heading back out into the Arcade and wondering what to do next...
+				出口，你不得不挤过一群在玻璃门附近闲逛的顾客，回到了购物中心，思考着接下来该做什么……
 			#ENDIF
 		</p>
 	#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_nyanRestaurantDateCompleted))
 		<p>
-			Thanking Nyan for her time, you explain to her that you need to get going now. Putting her little notepad away, she exclaims, [nyan.speechNoEffects(Thanks for d-dropping by, [pc.name]! I'll see you again this w-weekend, right?)]
+			感谢妮安抽出时间，你解释说你现在必须要走了。她把小本子收好，然后叫道，[nyan.speechNoEffects(谢谢你过来，[pc.name]！这个周末我们还会见面，对吧？)]
 		</p>
 		<p>
-			Telling your girlfriend that you'll do your best to make time for another date with her, you give her a quick kiss goodbye and exit the stockroom. Making your way to the store's
+			你告诉你的女朋友你会尽力找时间和她再次约会，你与她快速吻别，然后离开了库房。你走向商店的
 			#IF(!game.isHourBetween(9, 20))
-				 exit, you head back out into the Arcade and wonder what to do next...
+				出口，你回到了购物中心，思考着接下来该做什么……
 			#ELSE
-				 exit, you have to push your way through a crowd of customers that's loitering around the glass doors, before finally heading back out into the Arcade and wondering what to do next...
+				出口，你不得不挤过一群在玻璃门附近闲逛的顾客，回到了购物中心，思考着接下来该做什么……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Thanking Nyan for her time, you explain to her that you need to get going now. Hurrying to put her little notepad away, she stutters, [nyan.speechNoEffects(W-well, thanks for choosing to s-shop here! If you ever want t-to come back, just find me and I-I'll show you what's in stock back here!)]
+			感谢妮安抽出时间，你解释说你现在必须要走了。她匆忙收起她的小本子，结结巴巴说道，[nyan.speechNoEffects(嗯，谢谢你选择在这里购物！如果你想再回来，只要找到我，我就会带你看看这里有什么存货！)]
 		</p>
 		<p>
-			Before you can respond, Nyan turns around and runs off deeper into the stockroom. You're pretty sure that there aren't any other exits in that direction, and that she was just unable to continue the conversation any longer.
+			在你回答之前，妮安就转身跑进了库房的更深处。你很确定那个方向没有其他出口，她只是无法继续对话了。
 		</p>
 		<p>
-			[pc.Stepping] out of the stockroom, you make your way through the store to the exit.
+			你[pc.Stepping]出库房，来到商店的出口，
 			#IF(!game.isHourBetween(9, 20))
-				 Heading back out into the Arcade, you wonder what to do next...
+				你回到了购物中心，思考着接下来该做什么……
 			#ELSE
-				 Having to push your way through a crowd of customers that's loitering around the glass doors, you head back out into the Arcade and wonder what to do next...
+				你不得不挤过在玻璃门附近闲逛的顾客人群，回到了购物中心，思考着接下来该做什么……
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHOP_ENCHANTED_CLOTHING -->
 	
 	<htmlContent tag="SHOP_ENCHANTED_CLOTHING"><![CDATA[
 	<p>
-		As you look around Nyan's stockroom, you can't help but notice the fact that all of her wares are very <i>ordinary</i>. You'd expected to have seen at least one or two items of enchanted clothing in a store as large as this, but there's no sign of anything out of the ordinary on any of the shelves. Turning to face the nervous cat-girl who's been hovering at your side, you tell her what's on your mind and ask her if she's got any enchanted clothing hidden away somewhere nearby.
+		当你环顾妮安的储藏室时，你不禁注意到所有的货物都非常<i>普通</i>。你本以为在这么大的店里至少能看到一两件附魔服装，但货架上却没有任何一件不寻常的东西。你转过身来，面对一直在你身边徘徊的紧张的猫女，告诉她你的想法，并问她附近是否有附魔服装。
 	</p>
 	<p>
-		[nyan.speechNoEffects(O-Oh... W-Well, erm, you see, I-I used to, but then Kay s-stopped sending the usual shipments, a-and when I went over t-to his warehouse to try and contact him, the receptionist t-told me that 'someone l-like me' would be in danger i-if I tried to see him!)] Nyan blurts out, tripping over her words in her haste to offer you this patchy explanation. Nervously wringing her delicate, paw-like hands together, she makes a series of quick bows and blurts out an apology, [nyan.speechNoEffects(I-I'm really sorry, b-but that's why I don't have any enchanted clothing to sell to you!)]
+		[nyan.speechNoEffects(噢……嗯，我曾经有过，但后来凯停止了送货，当我去他的仓库试图联系他时，接待员告诉我，如果我试图见他，‘像我这样的人’会有危险！)]妮安突然冒出这么一句话，匆忙中磕磕绊绊地给你做了这个不完整的解释。她紧张地将爪子拧在一起，快速地鞠了一躬，并大声道歉，[nyan.speechNoEffects(我，我真的很抱歉，但这就是为什么我没有附魔衣服卖给你！)]
 	</p>
 	<p>
-		With Nyan's story seemingly only half-told, and wondering who this 'Kay' character could be, you give the cat-girl a reassuring smile and ask her if she could tell you the whole story. After all, this could turn out to be a problem which you're able to solve for her.
+		听完只说了一半的故事，不知道这个“凯”是谁，你给这位猫女一个安慰的微笑，问她能否告诉你整个故事。毕竟，这可能是你能够为她解决的问题。
 	</p>
 	<p>
-		Your request for more information seems a little too much for Nyan to handle, and, reaching up to place her paw-like hands on her heaving chest, she scrunches her eyes closed and tries to focus on getting her rapid breathing under control. Not wanting to exasperate the delicate cat-girl, you keep quiet and wait for her to get into a state in which she'd be comfortable responding. As you stand there in silence, you take a moment to think about how miraculous it is, considering her extreme nervousness, for Nyan to have somehow risen to the position of owning her own store.
+		你的要求似乎让妮安难以承受，她伸手把像猫爪放在胸前，闭上眼睛，试图集中注意力，控制自己急促的呼吸。不想让这位娇弱的猫女感到烦恼，你保持沉默，等待她进入一个可以自如回应的状态。在静静地站着的时候，你不禁想象，在考虑到她极度的紧张情绪的情况下，妮安竟然能够升到拥有自己店铺的地步是多么的奇迹。
 	</p>
 	<p>
-		Before you're able to give that curiosity much more thought, the cat-girl's breathing slows down to a steady rate. Opening her eyes, she smiles at you and manages to talk without stuttering even once, [nyan.speechNoEffects(Sorry about that... I can get a little overwhelmed sometimes, but I have that breathing exercise I can do to avoid having a panic attack... I should be ok for a little while now...)]
+		你还没来得及多想，猫女的呼吸就平稳下来了。她睁开眼睛，对你微笑，说话时甚至没有一次结巴，[nyan.speechNoEffects(很抱歉……我有时会有点不知所措，但我有呼吸练习，可以避免恐慌发作……我现在应该没事了……)]
 	</p>
 	<p>
-		Expressing your relief that she's feeling better, you once again ask Nyan if she can tell you more about the issue with her supply of enchanted clothing, and who Kay is.
+		你对她的好转表示欣慰，并再次询问妮安是否能告诉你更多关于附魔衣服供应的问题，以及凯是谁。
 	</p>
 	<p>
-		[nyan.speechNoEffects(Of course,)] she replies, [nyan.speechNoEffects(Kay is the wholesale supplier I've always used as my source of enchanted clothing. He's been so helpful and kind ever since I was first put in touch with him, and right from the start we've had a friendly business relationship. That was, until a few weeks ago...)]
+		[nyan.speechNoEffects(当然，)]她回答道，[nyan.speechNoEffects(凯是我这一直以来的附魔服装批发供应商。自从我第一次和他接触以来，他就一直乐于助人，为人和善，从一开始我们就保持着友好的业务关系。直到几周前……)]
 	</p>
 	<p>
-		Nyan lets out a distressed sigh, and you can tell that the composure she gained from performing her breathing exercises is quickly starting to waver. Nervously fidgeting, she explains, [nyan.speechNoEffects(I've tried as hard as I can, b-but I just can't think of any reason why he'd suddenly stop s-sending the usual shipments. H-His business is s-still operating, but he's ignored e-every letter I've sent him. A-As I mentioned before, I eventually m-managed to summon the c-courage to go and try to see him i-in person, but when I got there, t-the receptionist gave me this w-worried look and t-told me to leave! I-It must have been something I did! I-I don't... I-I can't remember saying or d-doing anything wrong!)]
+		妮安发出一声苦恼的叹息，你可以看出她从呼吸练习中获得的镇定很快就开始动摇了。她紧张地解释道，[nyan.speechNoEffects(我已经尽力了，但我就是想不出为什么他突然停止送货。他的生意仍在继续，但他无视了我寄给他的每一封信。正如我之前提到的，我最终鼓起勇气亲自去见他，但当我到了那里时，接待员给了我这种担忧的表情，告诉我离开！肯定是我做了什么事情！我……我不记得说或做了什么错事！)]
 	</p>
 	<p>
-		Sensing that Nyan is once again on the verge of a panic attack, you decide that it would be best to drop the subject. After reassuring the trembling cat-girl that you're certain she couldn't have done anything wrong, you ask her if you can return to browsing the wares she has stored back here.
+		你感觉到妮安又一次处于恐慌发作的边缘，你决定最好放弃这个话题。你安慰颤抖的猫女，说你确信她没有做错任何事，然后问她是否可以继续浏览她存放在这里的物品。
 	</p>
 	<p>
-		Nyan lets out a relieved sigh and casts her eyes down at her clipboard, clearly grateful for the fact that you're not continuing your line of questioning. As the two of you continue on your way through the storeroom, you wonder whether you should offer to go and see this 'Kay' character on Nyan's behalf and see if you can solve whatever issue is causing him to ignore the nervous cat-girl...
+		妮安松了一口气，低头看了看她的写字板，显然她很感激你没有继续追问下去。当你们俩继续穿过库房时，你在想是否应该代表妮安去见见这位“凯”，看看能否解决导致他忽视这位紧张的猫女的问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHOP_OFFER_HELP -->
 	
 	<htmlContent tag="SHOP_OFFER_HELP"><![CDATA[
 	<p>
-		Deciding that it'd be best to get Nyan into a more relaxed state before bringing up the subject of her enchanted clothing supplier again, you walk around the storeroom for a little while, asking innocuous questions about the sorts of clothing on each shelf. Just as you'd hoped, the subject is one that she's very comfortable talking about, and after a little while her stuttering becomes less frequent and she begins to offer some clothing-related trivia of her own volition.
+		你决定最好先让妮安进入更放松的状态，然后再提起她的附魔服装供应商的话题，于是你在库房里走了一会儿，问了一些关于每个架子上的衣服种类的无关紧要的问题。正如你所希望的那样，这个话题让妮安聊得很自在，过了一会儿，她的结巴就不那么频繁了，她开始主动提供一些与服装有关的琐事。
 	</p>
 	<p>
-		Eventually you decide that the time is right, and turn towards the nervous cat-girl with a disarming smile on your face. In as delicate a manner as you can, you tell her that you'd like to help her with her supply problem, and offer to go and speak to Kay on her behalf.
+		最终，你觉得时机成熟了，脸上带着一个无害的微笑，你转向紧张的猫女。你以尽可能温和的方式告诉她，你想帮助她解决供应问题，并提出代表她去找凯谈一谈。
 	</p>
 	<p>
-		[nyan.speechNoEffects(Really? Y-You'd do that for me?)] Nyan replies in an excited tone, before shyly shuffling her feet and offering, [nyan.speechNoEffects(I-I'll give you a reward if you manage to g-get Kay to resume the usual shipments I-I've been receiving from him. I-I could give you f-five thousand flames, a-and a lifetime discount in my store!)]
+		[nyan.speechNoEffects(真，真的？你愿意为我做这些事？)]妮安用兴奋的语气回答，然后害羞地挪动脚步，提出了自己的要求，[nyan.speechNoEffects(如果你能让凯恢复供应，我会给你奖励的。我可以给你五千火币，还有我店里的终身折扣！)]
 	</p>
 	<p>
-		Thanking Nyan for her generous offer, you ask her where you could find Kay.
+		感谢了妮安的慷慨提议，你问她在哪里可以找到凯。
 	</p>
 	<p>
-		[nyan.speechNoEffects(H-He's got his business in the warehouse district,)] she replies, [nyan.speechNoEffects(I-It's over in the north-west of the c-city. There s-should be a big sign on the f-front of his warehouse r-reading 'Kay's Textiles'. I-It should be open from s-six in the morning t-to ten at night...)]
+		[nyan.speechNoEffects(他在仓库区有自己的生意，)]她回答道，[nyan.speechNoEffects(它位于城市的西北部。他的仓库前面应该有一个大大的标牌，上面写着‘凯记纺织’。它应该从早上六点开到晚上十点……)]
 	</p>
 	<p>
-		Thanking Nyan for the information, you assure her that you'll head over to 'Kay's Textiles' as soon as you're able, and that you're sure you'll be able to return to her with good news before long.
+		感谢妮安提供的信息，你向她保证，你会尽快赶往“凯记纺织”，相信不久就能带着好消息回到她身边。
 	</p>
 	<p>
-		[nyan.speechNoEffects(Y-You're... I-I mean...)] Nyan mumbles, blushing as she looks down at the floor and starts to shuffle her feet. Taking a deep breath, she somehow manages to summon the courage to look up into your eyes, and while still blushing, she blurts out, [nyan.speechNoEffects(T-Thank you, [pc.name]! Y-You're so... k-kind...)]
+		[nyan.speechNoEffects(你真的……我是说……)]妮安低声嘟囔着，脸红地看着地面，局促地磨蹭着脚。她深吸一口气，不知怎么地设法鼓起勇气看着你的眼睛，尽管仍然脸红着，她突然说道：[nyan.speechNoEffects(谢……谢谢你！[pc.name]！你真的……真的……太善良了……)]
 	</p>
 	<p>
-		With her expression of gratitude conveyed, the nervous cat-girl looks back down at her clipboard and prepares to continue showing you around the stockroom...
+		你表达了感激之情后，这位紧张的猫女低头看了看写字板，准备继续带你参观库房……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHOP_REPORT_BACK -->
 	
 	<htmlContent tag="SHOP_REPORT_BACK"><![CDATA[
 	<p>
-		Deciding that now's as good a time as any to report your success in having freed Kay from Wolfgang and Karl, you turn to Nyan and explain what happened, minus the details which you think might be too much for her to handle.
+		你认为这正是汇报从沃尔夫冈和卡尔手中救出凯一事的好时机，于是你转向妮安，向她解释着事情的发生与经过，但你认为她可能会承受不住细节。
 	</p>
 	<p>
-		Upon hearing your report of the situation, an excited little squeak bursts out from between Nyan's lips, causing her to instinctively clasp her paw-like hands over her mouth. Taking a little breath, she then stutters, [nyan.speechNoEffects(S-So Kay w-wasn't ignoring me? H-He'd been bullied by t-two mean bounty hunters? T-Thank you s-so much for saving him, [pc.name]!)]
+		听完你的报告，一声兴奋的尖叫从妮安的唇间溢出，让她下意识用爪般的双手捂住嘴巴。她稍稍喘了口气，然后结结巴巴地开口道：[nyan.speechNoEffects(所，所以凯没打算无视我嘛？他是遭到两个卑鄙的赏金猎人欺负了？非常感谢你救了他，[pc.name]！)]
 	</p>
 	<p>
-		You smile at Nyan's genuine reaction to the news, which unintentionally makes matters worse for the nervous cat-girl. As she sees your happy expression, Nyan's cheeks turn a deep shade of scarlet, and she averts her eyes as she stutters, [nyan.speechNoEffects(I-I need to... T-That is... I-I mean, I-I, erm, well, t-there was the reward I p-promised! H-Hold on one minute please!)]
+		你对妮安真实的反应回以微笑，不经意间让紧张的猫女变得更加情以何堪。看到你开心的表情，妮安的脸颊染上了绯红，移开目光，结结巴巴地说：[nyan.speechNoEffects(我，我得……那，那是……我，我的意思是，我，我，呃，我答，答应给你的奖励在这里！请稍等！)]
 	</p>
 	<p>
-		Without any further warning, Nyan suddenly runs off, leaving you all alone in the stockroom. Knowing that she'll be back once she's calmed down, you take a moment in which to relax and think about the delicate cat-girl's behaviour. She seems to be more nervous than ever today, and you wonder if there's any way you could help her overcome her anxiety. Perhaps once all this business is taken care of, you could try to get to know her a little better.
+		没有任何预兆，妮安突然跑走，留下你一个人呆在仓库里。你知道等她平静下来后她就会回来，便花了点时间歇息，并回想着这位娇弱猫女的处事风格。她今天似乎比以往都要紧张，你思考着是否有什么方法可以帮助她克服焦虑。或许等这件事解决后，你可以试着多了解她一点。
 	</p>
 	<p>
-		Any further thoughts on the matter are interrupted as Nyan suddenly returns, and before you're able to say anything, she rushes up to you and thrusts a little bag of cash into your [pc.hands]. Performing a series of flustered little bows, she squeaks, [nyan.speechNoEffects(P-Please take this! I-I'll give you a t-twenty-five percent d-discount as well! T-Thank you for all of y-your help!)]
+		妮安唐突的返回打断了你的思绪。在你开口前，她就冲到你面前，把一小袋现金塞进你的[pc.hands]。她忙乱地鞠了一躬，随后吱吱唔唔地说：[nyan.speechNoEffects(请，请收下这个！我还会给你百分之二十五的折扣！谢谢你的慷慨相助！)]
 	</p>
 	<p>
-		Seeing that Nyan is on the brink of having a panic attack, you gently thank her for her generous reward, before telling her that you're very happy to have been able to help her out.
+		看着妮安正处于恐慌发作的边缘，你温柔地感谢了她慷慨的报酬，并告诉她你很高兴能帮上忙。
 	</p>
 	<p>
-		[nyan.speechNoEffects(I-I really a-appreciate all you've done, [pc.name],)] Nyan stammers while nervously wringing her cat-like hands together. Suddenly blushing and looking down at the floor, she unexpectedly reveals, [nyan.speechNoEffects(I-I don't have a-a [pc.girlfriend] o-or anything...)]
+		[nyan.speechNoEffects(我，我真的很感，感谢你所做的一切，[pc.name]，)]妮安一边结结巴巴地说着，一边紧张地把猫爪似的小手扭在一块。突然，她脸红了，低头望着地板，意外露出了一抹笑容，[nyan.speechNoEffects(我，我没有[pc.girlfriend]或别的……)]
 	</p>
 	<p>
-		This revelation comes out of nowhere, and as you prepare to respond, Nyan suddenly realises what she's just said and lets out another little squeak, [nyan.speechNoEffects(Eep! I-I mean, no, I-I meant that I-I don't have a-anyone I could have a-asked for help! I-I didn't mean, that is, I-I wasn't asking y-you, n-not that I w-wouldn't, b-but... ~Aah!~)]
+		这句令人惊喜的披露凭空出现，你准备回应，妮安却突然意识到她刚刚说了什么，又是一声尖叫，[nyan.speechNoEffects(咿！我，我是想说，不对，我，我的意思是我，我没有别的人能问可，可不可以帮忙了！我，我不是说，就，我，我不是想约你，你，也不是我不，不想，但，但……~哎呀！~)]
 	</p>
 	<p>
-		Unable to deal with the situation, Nyan turns and sprints off. As she turns the corner at the end of the storeroom, you get one last glimpse of her scarlet-coloured cheeks before she disappears from sight. Considering the state that she's in, you doubt that she'll be back any time soon. It would probably be best to come back a little later, once Nyan's had some time to cool-off...
+		妮安无法应对这种情况，转身冲了出去。她转过储藏室尽头的拐角，你最后一次瞥见了她绯红的脸颊，她便就从你的视野中消失了。考虑到她现在的状况，你不认为她会很快回来。或许等晚点再回来，让妮安有时间冷静一下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_EXIT_EMBARRASSED"><![CDATA[
 	<p>
-		Having been abandoned by the panic-stricken cat-girl, you walk out of Nyan's stockroom and head towards the exit. After pushing your way through a crowd of customers who're loitering around the large glass doors, you head back out into the shopping arcade.
+		在那位惊慌失措的猫女抛下你后，你走出了妮安的库房，朝着出口走去。在穿过一群在大玻璃门附近闲逛的顾客后，你走回了购物中心。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- NYAN_HIDING_END -->
 	
 	<htmlContent tag="NYAN_HIDING_END"><![CDATA[
 	<p>
-		Following in Nyan's hurried footsteps, you soon find yourself once again standing in her shop's storeroom. Turning to face you, the nervous cat-girl fidgets about for a moment, and before you're able to break the silence, she blurts out, [nyan.speechNoEffects(W-When I said before about not h-having a [pc.girlfriend]... I-I was meaning that it was j-just like in my books, when a #IF(pc.isFeminine())b-beautiful#ELSEh-handsome#ENDIF stranger comes to the aid of the p-protagonist...)]
+		跟随着妮安匆忙的脚步，你很快又发现自己站在她的商店库房里。她转身面对你，紧张的猫女瞎忙了一会儿，在你打破沉默之前，她突然说道，[nyan.speechNoEffects(我之前说没有[pc.girlfriend]的意思是……就像我的小说中，当一个#IF(pc.isFeminine())漂……漂亮的#ELSE英……英俊的#ENDIF陌生人来帮助主人公一样……)]
 	</p>
 	<p>
-		Furiously blushing, Nyan steps over to a nearby shelf, before picking up a book and thrusting it towards you. As the cat-girl presents you with this evidence of what she meant, you're able to see that the book looks to be some sort of romance novel, and coincidentally enough, there's a swooning cat-girl on the front cover being held in the arms of [pc.a_feminine] [pc.race]. Pulling the book back and using it to cover her blushing face, Nyan peeks over the top and stutters, [nyan.speechNoEffects(S-See? W-What you did for m-me was just like what happens i-in here... A-And after that, w-well, t-the two characters start d-dating...)]
+		妮安羞红了脸，走到旁边的书架前，拿起一本书塞给你。当猫女向你展示她的这个证据时，你可以看到这本书看起来像是某种爱情小说，巧合的是，封面上有一只晕倒的猫女被[pc.a_feminine][pc.race]抱在怀里。她拿回书，用它遮住了满脸通红的脸，偷偷地从书的上面探出来，结结巴巴地说道，[nyan.speechNoEffects(看见了吗？你为我做的事情就像书里发生的一样……而之后，那两个角色开始约会……)]
 	</p>
 	<p>
-		In an extraordinary display of courage for someone as nervous as Nyan, she hides her face completely behind the book and asks, [nyan.speechNoEffects(I-If you'd like... I-I could be your... I-I mean... D-Do you want me t-to be your g-girlfriend?)]
+		对于像妮安这样紧张的人来说，她表现出了非凡的勇气，她把脸完全藏在书后面，问道，[nyan.speechNoEffects(如果你愿意……我可以做你的……我是说……你想让我做你的女朋友吗？)]
 	</p>
 	<p>
-		Daring to peek over the top of her book, Nyan shuffles her feet and waits for your answer...
+		妮安大胆地从书本上探出头来，挪动着脚步，等待着你的回答……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_HIDING_END_GIRLFRIEND"><![CDATA[
 	<p>
-		More than happy to accept Nyan's proposition, you tell her that you'd love to be her [pc.girlfriend]. Before you can make a move on the cute cat-girl, however, she lets out an excited squeak and declares, [nyan.speechNoEffects(T-This is just like i-in my books! N-Now we have to g-get to know one another b-before we can... I-I mean... D-Do the thing together...)]
+		你非常乐意接受妮安的提议，告诉她你很愿意做她的[pc.girlfriend]。然而，还没等你对这位可爱的猫女采取行动，她就兴奋地尖叫着宣布，[nyan.speechNoEffects(这就像我书里写的一样！现在我们得彼此了解一下，然后……我是说……在一起做那件事之前……)]
 	</p>
 	<p>
-		From the influence of her romance novels, Nyan clearly has some pre-defined notions about what being your girlfriend is going to entail. Not wanting to do anything which would bring your relationship to an end before it's even begun, you decide to play along with the nervous cat-girl and take things at a pace which she's comfortable with.
+		妮安显然是受言情小说的熏陶，对女朋友的角色已经有一些既定的认知。你不想在关系刚开始时就把它结束掉，于是决定配合这位紧张的猫女，按她适应的节奏来发展关系。
 	</p>
 	<p>
-		[nyan.speechNoEffects(S-So... I-I could show you the enchanted clothing that I r-received from Kay, or...)] Nyan stutters, pausing for a moment before looking at you with her big blue eyes and suggesting, [nyan.speechNoEffects(Or we c-could talk for a w-while... I-I am your girlfriend now, after all, s-so you should g-get to know me a little better...)]
+		[nyan.speechNoEffects(所以……我可以给你看我从凯那里收到的魔法服装，或者……)]妮安结巴着停顿了一会，然后用她那双大大的蓝色眼睛看着你，建议道，[nyan.speechNoEffects(或者我们可以聊一会儿……毕竟我现在是你的女朋友，所以你应该更多地了解我一点……)]
 	</p>
 	<p>
-		With your nervous girlfriend still clutching her book up to her face and timidly shuffling her feet, you realise that any attempt to do more than talk to her will surely result in her suffering from a panic attack. Giving her your most disarming look, you wonder what to ask of Nyan...
+		你紧张的女友仍然把书本紧紧地贴在脸上，怯生生地挪动着脚步，你意识到，任何与她多说几句话的尝试都会导致她恐慌发作。你露出无害的笑容，思考着要向妮安提出什么要求……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NYAN_HIDING_END_DECLINE"><![CDATA[
 	<p>
-		Unwilling to get romantically involved with this nervous cat-girl, but also not wanting to undo all of your hard work in getting access to a supply of enchanted clothing, you gently let Nyan down by telling her that you can't commit to having a relationship at the moment. Somewhat surprisingly, she takes this rejection far better than you could have hoped, as she simply lets out a wistful sigh and mutters, [nyan.speechNoEffects(W-Well, this sometimes happens i-in my books too...)]
+		虽然你暂时不想与这位紧张的猫女谈恋爱，但也不想断掉获得附魔服装供给的来源，你轻声地告诉妮安，你暂时不能承诺建立一段关系。令人惊讶的是，她比你预期的更好地接受了这个拒绝，她只是发出了一声渴望的叹息，嘟囔着说道，[nyan.speechNoEffects(嗯……嗯我的书中有时也会出现这种情况……)]
 	</p>
 	<p>
-		Placing her romance novel down on the shelf, she turns back to face you and offers, [nyan.speechNoEffects(Y-You can change y-your mind at any time. I-I'm not planning on asking a-anyone else to be my [pc.girlfriend]... A-Anyway, did you w-want me to show you the enchanted clothing that I r-received from Kay?)]
+		她把爱情小说放在书架上，转过身来面对你，说出了自己的想法，[nyan.speechNoEffects(你可以随时改变主意。我也没打算让别人做我的[pc.girlfriend]……总之，你想看看我从凯那里得到的附魔衣服吗？]
 	</p>
 	<p>
-		Happy to see that she's not overly upset at your refusal to become her [pc.girlfriend], you give the nervous cat-girl your most disarming look and wonder what to ask of her...
+		看到她没有因为你拒绝成为她的[pc.girlfriend]而过分生气，你很高兴，你给了这个紧张的猫女一个无害的眼神，思考着要向她提出什么要求……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

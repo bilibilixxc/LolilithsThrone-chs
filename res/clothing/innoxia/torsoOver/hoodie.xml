@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>300</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[hoodie]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[hoodies]]></namePlural>
-		<description><![CDATA[A long-sleeved pullover shirt, fashioned out of thick cotton and complete with a hood.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[帽衫]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[帽衫]]></namePlural>
+		<description><![CDATA[长袖套头衫，由厚棉制成，配有兜帽。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>TORSO_OVER</slot>
@@ -63,48 +63,48 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] on the hoodie.
-		]]></self>
+[npc.Name]穿上了帽衫。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the hoodie's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></other>
+[npc.Name]将帽衫套在[npc2.namePos]身上并引导[npc2.namePos]的[npc2.arms]穿过帽衫的袖子。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the hoodie's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></otherRough>
+      [npc.Name]粗暴地逼迫[npc2.namePos]把[npc2.arms]伸出帽衫的袖口，直到[npc.she]从领口探出[npc2.her]的头。
+    ]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc.her] hoodie.
-		]]></self>
+[npc.Name]将[npc.her]的帽衫脱下。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc2.namePos] hoodie.
-		]]></other>
+[npc.Name]脱下了[npc2.namePos]的帽衫。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] hoodie.
-		]]></otherRough>
+[npc.Name]粗暴地脱下[npc2.namePos]的帽衫。
+]]></otherRough>
 	</displacementText>
 	
 	
 	<replacementText type="PULLS_UP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] [npc.her] hoodie back down to cover [npc.her] torso.
-		]]></self>
+[npc.Name]将[npc.her]的帽衫向下拉，遮住了[npc.her]的上身。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] [npc2.namePos] hoodie back down to cover [npc2.her] torso.
-		]]></other>
+[npc.Name]将[npc2.namePos]的帽衫向下拉，盖住了[npc2.her]的上半身。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] hoodie back down to cover [npc2.her] torso.
-		]]></otherRough>
+[npc.Name]粗暴地把[npc2.namePos]的帽衫向下拉，遮住了[npc2.her]的上身。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="PULLS_UP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] [npc.her] hoodie up to just below [npc.her] chin, letting the elastic rim hold it in place.
-		]]></self>
+[npc.Name]将[npc.her]的帽衫拉到[npc.her]的下巴上。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] [npc2.namePos] hoodie up to just below [npc2.her] chin, letting the elastic rim hold it in place.
-		]]></other>
+[npc.Name]将[npc2.namePos]的帽衫拉到[npc2.her]的下巴上。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] hoodie up to just below [npc2.her] chin, letting the elastic rim hold it in place.
-		]]></otherRough>
+[npc.Name]粗暴地将[npc2.namePos]的帽衫拉到[npc2.her]的下巴上。
+]]></otherRough>
 	</displacementText>
 </clothing>

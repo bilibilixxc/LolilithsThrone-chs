@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_pig</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[pig-morph]]></name>
-	<namePlural><![CDATA[pig-morphs]]></namePlural>
+	<name><![CDATA[猪化形]]></name>
+	<namePlural><![CDATA[猪化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[pig]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[猪]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[pig]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[猪]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[pig]]></defaultTransformName>
+	<defaultTransformName><![CDATA[猪]]></defaultTransformName>
 	
 	<colour>innoxia_pig</colour>
 	

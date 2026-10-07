@@ -6,17 +6,17 @@ package com.lilithsthrone.game.dialogue.companions;
  * @author Anonymous-BCFED
  */
 public enum OccupantSortingMethod {
-    NONE("none", "Reset the sorting order, resulting in values being ordered by their default values."),
+    NONE("无", "重置排序顺序，以默认价值的顺序显示。"),
     
-    NAME("name", "Sort slaves in alphabetical order of their first name."),
+    NAME("名称", "根据奴隶名称首字母顺序排序。"),
 
-    FEMININITY("femininity", "Sort slaves in by their femininity value."),
+    FEMININITY("女性化程度", "根据奴隶女性化程度排序。"),
     
-    RACE("race", "Sort slaves in alphabetical order of their race name."),
+    RACE("种族", "根据奴隶种族名首字母顺序排序。"),
     
-    ROOM("room", "Sort slaves in alphabetical order of the room in which they're located."),
+    ROOM("房间", "根据所在房间名的首字母顺序排序。"),
     
-    VALUE("value", "Sort slaves in order of their monetary value.");
+    VALUE("价值", "根据奴隶的售价排序。");
     
 	
 	private String name;

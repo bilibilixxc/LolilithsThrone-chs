@@ -80,8 +80,8 @@ public class FortressFemalesLeader extends NPC {
 	
 	public FortressFemalesLeader(boolean isImported) {
 		super(isImported,
-				new NameTriplet("Hyorlyix", "Hyorlyss", "Hyorlyss"), "Loviennemartu",
-				"The leader of one of Submission's imp fortresses, [npc.name] has a loyal following of female imps, who love nothing more than to join [npc.herHim] in having dominant sex with those who oppose their ruler, 'The Dark Siren'...",
+				new NameTriplet("赫尔利克斯", "希尔莉丝", "希尔莉丝"), "洛维耶纳马尔图",
+				"[npc.Name]是屈城区一处小恶魔要塞的首领，拥有一群雌性小恶魔作为随从，对于那些胆敢反抗其统治者“暗夜塞壬”的家伙，她们会一拥而上，狠狠地支配……",
 				22, Month.JANUARY, 11,
 				20, Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.GREATER, new CharacterInventory(false, 10), WorldType.IMP_FORTRESS_FEMALES, PlaceType.FORTRESS_FEMALES_KEEP, true);
 		
@@ -298,9 +298,9 @@ public class FortressFemalesLeader extends NPC {
 	public String getDescription() {
 		if(this.isSlave()) {
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of ruling over [npc.her] imp fortress are now over. Having run afoul of the law, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+					"[npc.NamePos]统治着小恶魔要塞的日子已经结束。[npc.sheIs]因触犯法律成为了奴隶，不过是其主人的财产而已。"));
 		} else {
-			return (UtilText.parse(this, "The leader of one of Submission's imp fortresses, [npc.name] has a loyal following of female imps, who love nothing more than to join [npc.herHim] in having dominant sex with those who oppose their ruler, 'The Dark Siren'..."));
+			return (UtilText.parse(this, "[npc.Name]是屈城区一处小恶魔要塞的首领，拥有一群雌性小恶魔作为随从，对于那些胆敢反抗其统治者“暗夜塞壬”的家伙，她们会一拥而上，狠狠地支配……"));
 		}
 	}
 	

@@ -1127,15 +1127,15 @@ public enum SVGImages {
 	}
 
 	public String getWomensWatchHourHand(List<Colour> colours, List<ColourReplacement> replacements) {
-		return SvgUtil.colourReplacement("womanWatchHour", colours, replacements, womensWatchHourHand);
-	}
-
-	public String getWomensWatchMinuteHand(List<Colour> colours, List<ColourReplacement> replacements) {
 		return SvgUtil.colourReplacement("womanWatchMinute", colours, replacements, womensWatchMinuteHand);
 	}
 
-	public String getMensWatchHourHand(List<Colour> colours, List<ColourReplacement> replacements) {
+	public String getWomensWatchMinuteHand(List<Colour> colours, List<ColourReplacement> replacements) {
 		return SvgUtil.colourReplacement("manWatchHour", colours, replacements, mensWatchHourHand);
+	}
+
+	public String getMensWatchHourHand(List<Colour> colours, List<ColourReplacement> replacements) {
+		return SvgUtil.colourReplacement("manWatchMinute", colours, replacements, mensWatchMinuteHand);
 	}
 
 	public String getMensWatchMinuteHand(List<Colour> colours, List<ColourReplacement> replacements) {

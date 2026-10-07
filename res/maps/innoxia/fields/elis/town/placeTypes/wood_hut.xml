@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[woodsman's hut]]></name>
-	<tooltipDescription><![CDATA[Managing the woodland surrounding Elis is a full time job for the occupant of this quaint hut.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside the woodsman's hut at Elis]]></virginityLossDescription>
+	<name><![CDATA[樵夫小屋]]></name>
+	<tooltipDescription><![CDATA[这个古雅小屋的主人全职管理围绕着伊利斯的林地。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯樵夫小屋旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND_GREEN</backgroundColour>

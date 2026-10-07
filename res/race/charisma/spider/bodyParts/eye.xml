@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <eye>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛]]></transformationName>
 	<coveringType>charisma_spider_eye</coveringType>
 	<defaultPairCount>4</defaultPairCount>
 	<defaultIrisShape>ROUND</defaultIrisShape>
 	<defaultPupilShape>ROUND</defaultPupilShape>
-	<name><![CDATA[eye]]></name>
-	<namePlural><![CDATA[eyes]]></namePlural>
+	<name><![CDATA[眼睛]]></name>
+	<namePlural><![CDATA[眼睛]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor><![CDATA[spider-like]]></descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor><![CDATA[spider-like]]></descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
 	</descriptorsFeminine>
 	<transformationDescription><![CDATA[
-		By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed and quadrupled into spider-like eyes, with the two largest located where [npc.her] former eyes were in the centre of [npc.her] face.
-		<br/>[npc.Name] now [npc.has] [style.boldSpider(spider-like eyes)] of a solid [npc.irisColour(true)] colour.
-	]]></transformationDescription>
+ 当[npc.she]犹豫地再次睁开眼时，它们已经变成了四对蜘蛛般的眼睛，最大的两只位于[npc.her]脸部中央以前眼睛的位置。
+<br/>[npc.Name]现在拥有纯[npc.irisColour(true)]色的[style.boldSpider(蜘蛛般的眼睛)]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.eyePairs] spider-like eyes, with two larger ones located where a human's would be and the rest spread across [npc.her] forehead and the sides of [npc.her] head. They are a reflective, solid [npc.irisColour(true)] colour.
-	]]></bodyDescription>
+ [npc.SheHasFull]拥有[npc.eyePairs]蜘蛛般的眼睛，两只较大的眼睛位于正常人类眼睛的位置，其余的分布在[npc.her]的前额和头部两侧。反射着光芒，呈现纯[npc.irisColour(true)]。
+]]></bodyDescription>
 </eye>

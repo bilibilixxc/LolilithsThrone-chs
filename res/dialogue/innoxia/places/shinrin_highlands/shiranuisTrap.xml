@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Path & linked "exits": -->
@@ -23,8 +23,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Keep going]]></responseTitle>
-				<responseTooltip><![CDATA[Keep going down the path to see if you can escape from Shiranui's trap.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续沿着小路走下去，看看能不能从不知火的陷阱中逃出去。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_path]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -47,8 +47,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Approach]]></responseTitle>
-				<responseTooltip><![CDATA[Approach the flame and try to find a way to extinguish it.]]></responseTooltip>
+				<responseTitle><![CDATA[接近]]></responseTitle>
+				<responseTooltip><![CDATA[靠近火币，试着找到熄灭它的方法。]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==0)
 						innoxia_places_shinrin_highlands_shiranuisTrap_flame1
@@ -72,8 +72,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Smash bottle]]></responseTitle>
-				<responseTooltip><![CDATA[There's no way that you'll drink a potion which this trickster youko has created!]]></responseTooltip>
+				<responseTitle><![CDATA[砸碎瓶子]]></responseTitle>
+				<responseTooltip><![CDATA[你绝不会喝这个恶作剧妖狐调制的魔药！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame1_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME1_SMASH'))]
@@ -82,8 +82,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Drink potion]]></responseTitle>
-				<responseTooltip><![CDATA[You decide to do as Shiranui says and drink the potion...]]></responseTooltip>
+				<responseTitle><![CDATA[饮用药水]]></responseTitle>
+				<responseTooltip><![CDATA[你决定照不知火说的做，喝下魔药……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame1_drink]]></nextDialogue>
 				<effects><![CDATA[
 					[#flags.setObject('shiranuiPreTFSubspecies', pc.getSubspecies())]
@@ -107,8 +107,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Transformed!]]></responseTitle>
-				<responseTooltip><![CDATA[As you should have known, the potion turned out to be a transformative one!]]></responseTooltip>
+				<responseTitle><![CDATA[变身了！]]></responseTitle>
+				<responseTooltip><![CDATA[你本该料到的，那瓶魔药果然是转化型的！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame1_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME1_TRANSFORMED'))]
@@ -130,8 +130,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Although one flame has now been extinguished, there are still more which need to be dealt with.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[虽然一枚火币已经被熄灭，但还有更多需要处理。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>
@@ -148,8 +148,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Rip string]]></responseTitle>
-				<responseTooltip><![CDATA[Rip the string to free the ribbon.]]></responseTooltip>
+				<responseTitle><![CDATA[扯断绳子]]></responseTitle>
+				<responseTooltip><![CDATA[扯断绳子，解开丝带。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame2_bound]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME2_RIP_STRING'))]
@@ -163,8 +163,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Rip both]]></responseTitle>
-				<responseTooltip><![CDATA[Rip up both the string and the ribbon.]]></responseTooltip>
+				<responseTitle><![CDATA[全部扯断]]></responseTitle>
+				<responseTooltip><![CDATA[把绳子和丝带一起撕碎。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame2_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME2_RIP_BOTH'))]
@@ -182,8 +182,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Dressed]]></responseTitle>
-				<responseTooltip><![CDATA[Stripped of your belongings, Shiranui now dresses you in a new outfit...]]></responseTooltip>
+				<responseTitle><![CDATA[穿好了]]></responseTitle>
+				<responseTooltip><![CDATA[你的随身物品被搜刮一空，不知火现在给你换上了一套新服装……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame2_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME2_DRESSED'))]
@@ -208,8 +208,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that a second flame has been extinguished, there should only be one left to deal with.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[第二枚火币也已经熄灭，应该只剩最后一枚需要处理了。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>
@@ -229,15 +229,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Watch more]]></responseTitle>
-				<responseTooltip><![CDATA[Surely there'd be no harm in watching a little more.]]></responseTooltip>
+				<responseTitle><![CDATA[继续观看]]></responseTitle>
+				<responseTooltip><![CDATA[再多看一会儿应该也没什么坏处吧。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame3_watch1]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Smash mirrors]]></responseTitle>
-				<responseTooltip><![CDATA[Enough of this!]]></responseTooltip>
+				<responseTitle><![CDATA[砸碎镜子]]></responseTitle>
+				<responseTooltip><![CDATA[够了！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame3_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME3_SMASH1'))]
@@ -259,15 +259,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Mimic]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Shiranui says and mimic the lewd scenes before you in order to influence what's happening.]]></responseTooltip>
+				<responseTitle><![CDATA[模仿]]></responseTitle>
+				<responseTooltip><![CDATA[按照不知火说的做，模仿眼前的好色场景，以此来影响正在发生的事情。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame3_watch2]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Smash mirrors]]></responseTitle>
-				<responseTooltip><![CDATA[Enough of this!]]></responseTooltip>
+				<responseTitle><![CDATA[砸碎镜子]]></responseTitle>
+				<responseTooltip><![CDATA[够了！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame3_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME3_SMASH2'))]
@@ -293,17 +293,17 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					As you feel the ghostly imprint of Shiranui's cock sliding over your
+					当你感受到不知火的阴茎如幽灵般的触感滑过你的
 					#IF(pc.hasVagina())
-						 [pc.pussy+], 
+						[pc.pussy+]，
 					#ELSEIF(game.isAnalContentEnabled())
-						 [pc.asshole+], 
+						[pc.asshole+]，
 					#ELSE
-						 [pc.lips+], 
+						[pc.lips+]，
 					#ENDIF
-					 you decide to do as she commands and submit to her...
+					你决定照她的命令去做，向她屈服……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
@@ -373,8 +373,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Smash mirrors]]></responseTitle>
-				<responseTooltip><![CDATA[Snap out of it!]]></responseTooltip>
+				<responseTitle><![CDATA[砸碎镜子]]></responseTitle>
+				<responseTooltip><![CDATA[清醒过来！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_flame3_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME3_SMASH3'))]
@@ -403,7 +403,7 @@
 			[#shiranui.fillCumToMaxStorage()]
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'FLAME3_AFTER_SEX'))]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
+        <title><![CDATA[结束]]></title>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -412,8 +412,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that all of the flames have been extinguished, you'll be able to find Meraxis.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[所有火焰都已经熄灭了，现在你可以去找梅拉克西丝了。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>
@@ -439,8 +439,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that all of the flames have been extinguished, you'll be able to find Meraxis.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[所有火焰都已经熄灭了，现在你可以去找梅拉克西丝了。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>
@@ -475,8 +475,8 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Meraxis]]></responseTitle>
-				<responseTooltip><![CDATA[Call out to Meraxis.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝]]></responseTitle>
+				<responseTooltip><![CDATA[呼唤梅拉克西丝。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_hideout_meraxis]]></nextDialogue>
 			</response>
 			
@@ -486,8 +486,8 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Double Meraxis?!]]></responseTitle>
-				<responseTooltip><![CDATA[There are two of Meraxis! Approach them and try to find out what's going on.]]></responseTooltip>
+				<responseTitle><![CDATA[两个梅拉克西丝？！]]></responseTitle>
+				<responseTooltip><![CDATA[有两个梅拉克西丝！走上前去，试着弄清楚到底怎么回事。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_hideout_final]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'HIDEOUT_FINAL_START'))]
@@ -513,12 +513,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Quest]]></responseTitle>
+				<responseTitle><![CDATA[任务]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getBool('shiranui_meraxis_question_quest'))
-						You've already asked Meraxis to tell you about the end-goal of your quest...
+						你已经问过梅拉克西丝关于你们任务最终目标的事了……
 					#ELSE
-						Ask Meraxis to tell you about the end-goal of your quest.
+						让梅拉克西丝告诉你这次任务的最终目标。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -536,12 +536,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submission]]></responseTitle>
+				<responseTitle><![CDATA[屈城区]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getBool('shiranui_meraxis_question_submission'))
-						You've already asked Meraxis about what she was doing in Submission when you first met her...
+						你已经问过梅拉克西丝她第一次遇见你时在屈城区做什么了……
 					#ELSE
-						Ask Meraxis what she was doing in Submission when you first met her.
+						问梅拉克西丝你们第一次见面时她在屈城区做什么。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -559,12 +559,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Show off]]></responseTitle>
+				<responseTitle><![CDATA[炫耀]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getBool('shiranui_meraxis_question_pose'))
-						You've already asked Meraxis to show you her most impressive pose...
+						你已经让梅拉克西丝展示她最厉害的姿势了……
 					#ELSE
-						Ask Meraxis to show you her most impressive pose.
+						让梅拉克西丝展示她最厉害的姿势。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -583,12 +583,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Naked]]></responseTitle>
+				<responseTitle><![CDATA[赤身裸体]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getBool('shiranui_meraxis_question_quest') && flags.getBool('shiranui_meraxis_question_submission') && flags.getBool('shiranui_meraxis_question_pose'))
-						Take the side of the fully naked Meraxis and help her to subdue the hat-wearing one.
+						站在全裸的梅拉克西丝一边，帮助她制服戴帽的那个。
 					#ELSE
-						You should question Meraxis more before making a decision...
+						在做决定之前，你应该多问问梅拉克西丝……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -602,12 +602,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Hat-wearing]]></responseTitle>
+				<responseTitle><![CDATA[戴着帽子]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getBool('shiranui_meraxis_question_quest') && flags.getBool('shiranui_meraxis_question_submission') && flags.getBool('shiranui_meraxis_question_pose'))
-						Take the side of the hat-wearing Meraxis and help her to subdue the fully naked one.
+						站在戴帽的梅拉克西丝一边，帮助她制服全裸的那个。
 					#ELSE
-						You should question Meraxis more before making a decision...
+						在做决定之前，你应该多问问梅拉克西丝……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -638,8 +638,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Kiss]]></responseTitle>
-				<responseTooltip><![CDATA[Bound up by the ribbon, there's nothing you and Meraxis can do except wait for Shiranui to return and set you free.]]></responseTooltip>
+				<responseTitle><![CDATA[接吻]]></responseTitle>
+				<responseTooltip><![CDATA[被丝带捆缚住了，你和梅拉克西丝什么也做不了，只能等不知火回来释放你们。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_hideout_incorrect_choice_kissing]]></nextDialogue>
 			</response>
 		</responses>
@@ -663,8 +663,8 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Keep kissing]]></responseTitle>
-				<responseTooltip><![CDATA[Bound up by the ribbon, there's nothing you and Meraxis can do except wait for Shiranui to return and set you free.]]></responseTooltip>
+				<responseTitle><![CDATA[继续亲吻]]></responseTitle>
+				<responseTooltip><![CDATA[被丝带捆缚住了，你和梅拉克西丝什么也做不了，只能等不知火回来释放你们。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_hideout_incorrect_choice_endure]]></nextDialogue>
 			</response>
 			<!-- Non-con on, oral sex scene with painting being done in background: -->
@@ -674,9 +674,9 @@
                 ]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Cock worship]]></responseTitle>
+				<responseTitle><![CDATA[侍奉阴茎]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You and Meraxis are forced to worship the youko's cock...
+					你和梅拉克西丝被迫侍奉妖狐的阴茎……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
@@ -743,8 +743,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Free]]></responseTitle>
-				<responseTooltip><![CDATA[With Shiranui having departed, and the binding ribbon destroyed, you're free to reclaim Meraxis's old hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[解放]]></responseTitle>
+				<responseTooltip><![CDATA[不知火已经离开，束缚的丝带也被摧毁了，你可以自由地夺回梅拉克西丝的旧藏身处了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_ending_reclaim_hideout]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'HIDEOUT_ENTRY_NORMAL'))]
@@ -757,7 +757,7 @@
 		<preParsingEffects><![CDATA[
 			[#shiranui.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, true)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
+        <title><![CDATA[结束]]></title>
 		<content folderPath="txt/places/shinrin_highlands/shiranuisTrap">AFTER_SEX_COCK_WORSHIP</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -766,8 +766,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Free]]></responseTitle>
-				<responseTooltip><![CDATA[With Shiranui having departed, and the binding ribbon destroyed, you're free to reclaim Meraxis's old hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[解放]]></responseTitle>
+				<responseTooltip><![CDATA[不知火已经离开，束缚的丝带也被摧毁了，你可以自由地夺回梅拉克西丝的旧藏身处了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_ending_reclaim_hideout]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'HIDEOUT_ENTRY_NORMAL'))]
@@ -790,55 +790,55 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Gifts]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui that the gifts she's offered are enough.]]></responseTooltip>
+				<responseTitle><![CDATA[礼物]]></responseTitle>
+				<responseTooltip><![CDATA[告诉不知火，她提供的礼物已经足够了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_hideout_correct_choice_gift]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[Accept Shiranui's offer of sex instead of the gifts.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[接受不知火以性爱代替礼物的提议。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_hideout_correct_choice_sex]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Threesome]]></responseTitle>
+				<responseTitle><![CDATA[三人行]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) && flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) && (!game.isAnalContentEnabled() || flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked)))
-						Accept Shiranui's offer of sex instead of the gifts.
-						<br/>[style.italicsMinorGood(As you've previously convinced Meraxis to have sex with you, you think that you'll be able to get her to join in for a threesome.)]
+						接受不知火以性爱代替礼物的提议。
+						<br/>[style.italicsMinorGood(由于你之前已经说服梅拉克西丝与你做爱，你觉得你能让她加入来一场三人行。)]
 					#ELSE
-						Accept Shiranui's offer of sex instead of the gifts.
+						接受不知火以性爱代替礼物的提议。
 						<br/>
-						<i>Meraxis needs to be comfortable with having
+						<i>梅拉克西丝需要先接受与你进行
 						#IF(flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked))
-							 [style.colourGood(oral)],
+							[style.colourGood(口交)]、
 						#ELSE
-							 [style.colourBad(oral)],
+							[style.colourBad(口交)]、
 						#ENDIF
 						#IF(flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked))
 							#IF(game.isAnalContentEnabled())
-								 [style.colourGood(vaginal)],
+								[style.colourGood(阴道)]、
 							#ELSE
-								 and [style.colourGood(vaginal)]
+								以及[style.colourGood(阴道)]
 							#ENDIF
 						#ELSE
 							#IF(game.isAnalContentEnabled())
-								 [style.colourBad(vaginal)],
+								[style.colourBad(阴道)]、
 							#ELSE
-								 and [style.colourBad(vaginal)]
+								以及[style.colourBad(阴道)]
 							#ENDIF
 						#ENDIF
 						#IF(flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked))
-							 and [style.colourGood(anal)]
+							以及[style.colourGood(肛交)]
 						#ELSE
-							 and [style.colourBad(anal)]
+							以及[style.colourBad(肛交)]
 						#ENDIF
-						 sex with you before she'd agree to get involved in a threesome...</i>
+						，她才会同意参与三人行……</i>
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -866,8 +866,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hideout]]></responseTitle>
-				<responseTooltip><![CDATA[With Shiranui having departed, you and Meraxis are now free to enter her old hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[不知火已经离开，你和梅拉克西丝现在可以自由进入她的旧藏身处了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_ending_reclaim_hideout]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'HIDEOUT_ENTRY_NORMAL'))]
@@ -888,8 +888,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Youko form]]></responseTitle>
-				<responseTooltip><![CDATA[Have sex with Shiranui in her youko form.]]></responseTooltip>
+				<responseTitle><![CDATA[妖狐形态]]></responseTitle>
+				<responseTooltip><![CDATA[以不知火的妖狐形态与她做爱。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects/>
@@ -913,8 +913,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Meraxis]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui to transform back into Meraxis before having sex with her.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝]]></responseTitle>
+				<responseTooltip><![CDATA[让不知火变回梅拉克西丝的样子，然后再做爱。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -941,8 +941,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Youko (female)]]></responseTitle>
-				<responseTooltip><![CDATA[Have sex with Shiranui in her youko form, but to transform herself to remove her cock.]]></responseTooltip>
+				<responseTitle><![CDATA[妖狐(女性)]]></responseTitle>
+				<responseTooltip><![CDATA[以不知火的妖狐形态与她做爱，但要她转化身体去掉肉棒。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -968,8 +968,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Meraxis (futa)]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui to transform back into Meraxis before having sex with her, but to remain a futa.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝(扶她)]]></responseTitle>
+				<responseTooltip><![CDATA[让不知火变回梅拉克西丝但保留扶她特征，然后再做爱。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1001,7 +1001,7 @@
 			[#shiranui.setBodyToMeraxis(false, true)]
 			[#shiranui.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, true)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
+        <title><![CDATA[结束]]></title>
 		<content folderPath="txt/places/shinrin_highlands/shiranuisTrap">CORRECT_CHOICE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1010,8 +1010,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hideout]]></responseTitle>
-				<responseTooltip><![CDATA[With Shiranui having departed, you're now free to enter Meraxis's hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[不知火已经离开，你现在可以自由进入梅拉克西丝的藏身处了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_ending_reclaim_hideout]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'HIDEOUT_ENTRY_SOLO'))]
@@ -1029,8 +1029,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Youko]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui to remain in her youko form for this.]]></responseTooltip>
+				<responseTitle><![CDATA[妖狐]]></responseTitle>
+				<responseTooltip><![CDATA[让不知火保持妖狐形态。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects/>
@@ -1069,8 +1069,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Meraxis]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui to transform back into Meraxis for this.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝]]></responseTitle>
+				<responseTooltip><![CDATA[让不知火变回梅拉克西丝的样子。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1112,8 +1112,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Youko (female)]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui to remain in her youko form for this, but to transform herself to remove her cock.]]></responseTooltip>
+				<responseTitle><![CDATA[妖狐(女性)]]></responseTitle>
+				<responseTooltip><![CDATA[让不知火保持妖狐形态，但转化身体去掉肉棒。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1154,8 +1154,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Meraxis (futa)]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui to transform back into Meraxis for this, but to remain a futa as she does so.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝(扶她)]]></responseTitle>
+				<responseTooltip><![CDATA[让不知火变回梅拉克西丝，不过要保持双性特征。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1198,8 +1198,8 @@
                 <availabilityConditional><![CDATA[[#!meraxis.hasPenis()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Meraxis (double futa)]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Shiranui to transform back into Meraxis for this, but to remain a futa as she does so. Tell Meraxis to also give herself a cock for this.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝(双扶她)]]></responseTitle>
+				<responseTooltip><![CDATA[让不知火变回梅拉克西丝，但仍要保持扶他状态。让梅拉克西丝也顺带给自己变出一根肉棒。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -1249,7 +1249,7 @@
 			[#shiranui.setBodyToMeraxis(false, true)]
 			[#meraxis.setPenisType(PENIS_TYPE_NONE)]
 		]]></preParsingEffects>
-        <title><![CDATA[Finished]]></title>
+        <title><![CDATA[结束]]></title>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1258,8 +1258,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hideout]]></responseTitle>
-				<responseTooltip><![CDATA[With Shiranui having departed, you and Meraxis are now free to enter her old hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[不知火已经离开，你和梅拉克西丝现在可以自由进入她原来的藏身处了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_ending_reclaim_hideout]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/shiranuisTrap', 'HIDEOUT_ENTRY_NORMAL'))]
@@ -1310,8 +1310,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explain]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Takahashi that Shiranui has gone.]]></responseTooltip>
+				<responseTitle><![CDATA[解释]]></responseTitle>
+				<responseTooltip><![CDATA[告诉高桥，不知火已经走了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_ending_reclaim_hideout_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -1337,8 +1337,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Success]]></responseTitle>
-				<responseTooltip><![CDATA[Meraxis's hideout has been reclaimed and you managed to locate and rescue Takahashi.]]></responseTooltip>
+				<responseTitle><![CDATA[成功]]></responseTitle>
+				<responseTooltip><![CDATA[梅拉克西丝的藏身处已被夺回，你也成功找到并救出了高桥。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_shiranuisTrap_ending_reclaim_hideout_end_final]]></nextDialogue>
 			</response>
 		</responses>
@@ -1356,8 +1356,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You're finally free to take a look around Meraxis's hideout.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你终于可以在梅拉克西丝的藏身处好好看看了。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>

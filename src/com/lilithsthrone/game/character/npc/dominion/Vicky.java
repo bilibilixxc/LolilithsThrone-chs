@@ -182,8 +182,8 @@ public class Vicky extends NPC {
 	}
 	
 	public Vicky(boolean isImported) {
-		super(isImported, new NameTriplet("Vicky"), "Haugen",
-				"Vicky is the owner of the shop 'Arcane Arts'. Her manner of staring at anyone who enters her shop is quite unsettling, and you feel as though she's ready to pounce on you at any moment...",
+		super(isImported, new NameTriplet("维姬"), "豪根",
+				"维姬是“奥术艺术”的店主。她盯着进入店里客人的行为总是让人不安，你觉得她好像随时准备扑向你……",
 				37, Month.MAY, 26,
 				10, Gender.F_P_V_B_FUTANARI,
 				Subspecies.WOLF_MORPH, RaceStage.GREATER, new CharacterInventory(false, 10), WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_VICKYS_SHOP, true);
@@ -725,12 +725,12 @@ public class Vicky extends NPC {
 	@Override
 	public String getTraderDescription() {
 		return "<p>"
-					+ "You walk up to the counter, trying to ignore Vicky's piercing gaze and wolfish grin."
-					+ " As you start to ask her about what sort of things she has in stock, she suddenly crouches down slightly, and you brace yourself as you half-expect her to leap over the counter and attack."
-					+ " Instead, thankfully, she bends down and retrieves a few items, placing them before you on the countertop."
+					+ "你走向柜台，试着无视维姬锐利的目光和不怀好意的笑。"
+					+ "你开始问她有什么存货时，她突然微微蹲下身子。你集中注意力，以防她跳过柜台攻击你。"
+					+ "不过还好，她只是弯腰拿出几件商品摆在你面前的柜台。"
 				+ "</p>"
 				+ "<p>"
-					+ UtilText.parseSpeech("This is what I've got today... I might have some new stuff tomorrow... You interested?", this) + " she asks, never taking her eyes off of you for a second."
+					+ UtilText.parseSpeech("今天我就只有这么多了……或许明天我会整些新玩意……你感兴趣吗？", this) + "她询问道，一直目不转睛地盯着你。"
 				+ "</p>";
 	}
 

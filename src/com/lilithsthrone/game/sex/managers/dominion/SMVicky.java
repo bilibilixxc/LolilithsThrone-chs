@@ -48,9 +48,9 @@ public class SMVicky extends SexManagerDefault {
 	@Override
 	public String getDeskName() {
 		if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_apartment")) {
-			return "coffee table";
+			return "茶几";
 		}
-		return "counter";
+		return "柜台";
 	}
 	
 	@Override

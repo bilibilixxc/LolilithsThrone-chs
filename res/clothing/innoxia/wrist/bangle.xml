@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>600</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bangle]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bangles]]></namePlural>
-		<description><![CDATA[A simple metal bangle that fits comfortably around the wearer's wrist or tail.]]></description>
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[手镯]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[手镯]]></namePlural>
+		<description><![CDATA[一只简约的金属镯，手或尾巴佩戴都很舒适。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -57,51 +56,51 @@
 	</coreAttributes>
 
   <replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle into place around [npc.her] wrist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle into place around [npc2.namePos] wrist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the bangle into place around [npc2.namePos] wrist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将手镯套上[npc.her]的手腕。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将手镯套进[npc2.namePos]的手腕里。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]强行将手镯套进[npc2.namePos]的手腕里。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle off [npc.her] wrist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle off [npc2.namePos] wrist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the bangle off [npc2.namePos] wrist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]取下[npc.her]手腕上的手镯。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]取下[npc2.namePos]的手镯。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]扯下[npc2.namePos]的手镯。
+    ]]></otherRough>
   </displacementText>
   
   <replacementText slot="TAIL" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle into place around [npc.her] [npc.tail(true)].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle into place around [npc2.namePos] [npc2.tail(true)].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the bangle into place around [npc2.namePos] [npc2.tail(true)].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将手镯套上[npc.her]的[npc.tail(true)]。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将手镯套上[npc2.namePos]的[npc2.tail(true)]。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]强行将手镯套进[npc2.namePos]的[npc2.tail(true)]里。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText slot="TAIL" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle off [npc.her] [npc.tail(true)].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the bangle off [npc2.namePos] [npc2.tail(true)].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the bangle off [npc2.namePos] [npc2.tail(true)].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]取下[npc.her][npc.tail(true)]上的手镯。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]取下[npc2.namePos][npc2.tail(true)]上的镯子。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]扯下[npc2.namePos][npc2.tail(true)]上的镯子。
+    ]]></otherRough>
   </displacementText>
   
 </clothing>

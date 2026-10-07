@@ -71,7 +71,7 @@ public class SexSlot {
 	 */
 	public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
 		if(orgasmingCharacter.equals(targetedCharacter)) {
-			return "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.";
+			return "[npc.Name]发出了一声[npc.a_moan+]，即将迎来高潮。";
 		}
 		if(orgasmDescription==null) {
 			return getGenericOrgasmDescription(orgasmingCharacter, targetedCharacter);
@@ -85,10 +85,10 @@ public class SexSlot {
 	private String getGenericOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
 		if(orgasmingCharacter.equals(targetedCharacter)) {
 			return UtilText.parse(orgasmingCharacter, targetedCharacter,
-					"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.");
+					"[npc.Name]发出[npc.a_moan+]，即将迎来高潮。");
 		} else {
 			return UtilText.parse(orgasmingCharacter, targetedCharacter,
-					"Pressing [npc.herself] against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.");
+					"[npc.Name]紧紧贴在[npc2.name]身上，发出一声[npc.a_moan+]，即将迎来高潮。");
 		}
 	}
 
@@ -97,15 +97,15 @@ public class SexSlot {
 	 */
 	public String getGenericEndSexDescription(GameCharacter endingCharacter, GameCharacter targetedCharacter) {
 		if(Main.game.isInSex() && Main.sex.isMasturbation()) {
-			return UtilText.parse(endingCharacter, "Deciding that [npc.sheHas] had enough for now, [npc.name] [npc.verb(put)] an end to [npc.her] masturbation session and [npc.verb(prepare)] to continue on [npc.her] way.");
+			return UtilText.parse(endingCharacter, "[npc.Name]认为已经满足，结束了自慰，准备继续干其他事情。");
 		}
 
 		if(targetedCharacter.isAsleep()) {
 			return UtilText.parse(endingCharacter, targetedCharacter,
-					"With a satisfied sigh, [npc.name] [npc.verb(separate)] [npc.herself] from [npc2.name], making sure not to wake [npc2.herHim] up in the process.");
+					"随着一声满足的叹息，[npc.Name]与[npc2.name]分开了，确保期间不会弄醒[npc2.herHim]。");
 		}
 		return UtilText.parse(endingCharacter, targetedCharacter,
-				"With a satisfied sigh, [npc.name] [npc.verb(disentangle)] [npc.herself] from [npc2.namePos] clutches, before stating that [npc.sheHas] had enough for now.");
+				"随着一声满足的叹息，[npc.Name]从[npc2.namePos]紧抱中脱离出来，说[npc.sheHas]已经满足了。");
 	}
 	
 	

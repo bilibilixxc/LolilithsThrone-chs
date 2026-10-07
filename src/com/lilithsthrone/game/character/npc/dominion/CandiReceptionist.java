@@ -51,9 +51,9 @@ public class CandiReceptionist extends NPC {
 	}
 	
 	public CandiReceptionist(boolean isImported) {
-		super(isImported, new NameTriplet("Candi"), "Lykke",
-				"Candi is the receptionist at the Enforcer HQ."
-				+ " A completely brain-dead bimbo, Candi seems to only ever be interested in three things; applying makeup, flirting, and fucking.",
+		super(isImported, new NameTriplet("坎迪"), "吕克",
+				"坎迪是执法者总部的接待员。"
+				+ "一个大脑几乎不存在的性感无脑大胸，坎迪看起来只对三样事情感兴趣：化妆，调情，做爱。",
 				24, Month.JUNE, 11,
 				5, Gender.F_V_B_FEMALE, Subspecies.CAT_MORPH, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_RECEPTION_DESK, true);

@@ -90,7 +90,7 @@ public class Murk extends NPC {
 	}
 	
 	public Murk(boolean isImported) {
-		super(isImported, new NameTriplet("Murk"), "Triche",
+		super(isImported, new NameTriplet("默克"), "特里奇",
 				"",
 				36, Month.JANUARY, 12,
 				10, Gender.M_P_MALE, Subspecies.RAT_MORPH, RaceStage.GREATER,
@@ -105,7 +105,7 @@ public class Murk extends NPC {
 	public void loadFromXML(Element parentElement, Document doc, CharacterImportSetting... settings) {
 		loadNPCVariablesFromXML(this, null, parentElement, doc, settings);
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.5.7")) {  // Reset character
-			this.setName(new NameTriplet("Murk", "Missy", "Missy"));
+			this.setName(new NameTriplet("默克", "米西", "米西"));
 			setupPerks(true);
 			equipClothing(EquipClothingSetting.getAllClothingSettings());
 			setStartingBody(true);
@@ -136,7 +136,7 @@ public class Murk extends NPC {
 			this.setPenisGirth(PenetrationGirth.SEVEN_FAT);
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.9.4")) {
-			this.setName(new NameTriplet("Murk"));
+			this.setName(new NameTriplet("默克"));
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.17")) {
 			this.setPenisGirth(PenetrationGirth.SEVEN_FAT);
@@ -348,22 +348,22 @@ public class Murk extends NPC {
 		
 		if(this.getHomeLocationPlace().getPlaceType()==PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE) {
 			if(this.isFeminine()) {
-				sb.append("Having convinced Epona to punish Murk in a manner fitting his crimes, the once rat-'boy' is now a rat-'girl'."
-						+ " 'Missy', as she's now known, is still responsible for cleaning up the pregnancy roulette stalls, although Epona seems to be a little more lenient towards her now.");
+				sb.append("伊波娜被说服了，默克受到了与罪相抵的惩罚，过去的鼠“男”现在是鼠“女”咯。"
+						+ "“米西”，是她现在的名字，依然负责清理怀孕轮盘赌的台子，不过伊波娜现在似乎对她宽容了一些。");
 				
 			} else {
-				sb.append("Having been enslaved as punishment for his crimes of rape and kidnap, Murk has ended up being given to [axel.name] as a form of compensation for the protection money he was made to pay in the past."
-						+ " Not at all interested in owning such a depraved creature, [axel.name] was quick to give him to Epona, who, furious at discovering the facts about Murk's past, has put him to hard work cleaning up the pregnancy roulette stalls.");
+				sb.append("默克由于其强奸和绑架的罪行，受到了奴役，最后被交给了[axel.name]处置，当作曾经收取保护费的补偿。"
+						+ "[axel.name]对拥有这样一个堕落的生物没有丝毫兴趣，立刻就将他交给了伊波娜，她发现默克的所作所为后大为愤怒，便罚他清理怀孕轮盘赌的台子。");
 			}
 			
 		} else {
-			sb.append("Short, chubby, and with a love for openly displaying his disproportionately huge cock, the rat-boy known as Murk is not exactly known for either his looks or modesty."
-					+ " Instead, his undesirable reputation throughout the Rat Warrens has been gained from the open knowledge that he's selfish, cowardly, and has a cruel streak bordering on sadism.");
+			sb.append("这个鼠男称作默克，长得又矮又圆，最喜欢展示他那不成比例的巨大鸡巴，但最出名的还不是他的长相或者礼节。"
+					+ "其实他在整个鼠窟的坏名声，却来源于公认的自私、懦弱、残忍到近乎虐待狂的性格。");
 
 			sb.append("<br/>"
-					+ "Although anyone else would have been subjected to relentless bullying for continuously displaying these less-than-admirable qualities,"
-						+ " Murk's fellow gang members tolerate him due to the fact that he runs what he calls the 'Milking Room'."
-					+ " This aptly-named area is home to several kidnapped humans, who have been transformed so as to provide both a steady supply of milk and a welcome source of sexual release to Vengar's gang members.");
+					+ "若是换做其他人，必然会因为不断表现出这些烦人的素质而受到无情的欺凌，"
+						+ "但默克手下的帮派成员容忍了他，因为他经营着所谓的“挤奶室”。"
+					+ "正如其名，那里是几个被绑来的人的住处，他们转化后既能提供稳定的奶水供应，又能为文加的帮派成员提供性释放的场所。");
 		}
 		
 		return sb.toString();
@@ -547,34 +547,34 @@ public class Murk extends NPC {
 							if(Capacity.isPenetrationDiameterTooBig(
 									target.getAssElasticity(), target.getAssStretchedCapacity(), this.getPenisDiameter(), true)) {
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Ya feel me fat cock stretchin' yer ass out?! Yer gonna end up as nothin' but me slutty cock-sleeve!",
-										"Ya horny bitch! I'm gonna make ya into me filthy little butt-slut!",
-										"Ya feel that, fuck toy?! Ya feel me fat cock plungin' deep into ya slutty little ass an' stretchin' ya out?!",
-										"Yer slutty asshole is gonna be ruined by the time I'm done with ya!",
-										"Ain't nothin' betta than the feel o' stretchin' fresh butts out an' turnin' 'em into ruined gapin' 'oles!",
-										"Yer slutty asshole is stretchin' out nicely! Ya gonna be well an' truly ruined soon enough!"));
+										"恁有感觉了？俺的大屌是不是要把恁屁股撑裂了？！骚逼，就当了俺的鸡巴套吧！",
+										"恁个好色的婊子！恁就拿了屁眼儿给俺用吧！",
+										"尼感觉到没油，尼届各骚货肉便器，看到窝德大几巴了吗？它马上就要淦进你的骚菊花了，看看它是怎摸撑爆你的骚穴的！",
+										"看窝怎么把你给操烂，待会尼那淫荡的小小屁穴就该报废了！",
+										"莫有比把肥腚操烂更好嘞，瞧它变了合不得的大洞喽！",
+										"恁那浪荡屁眼被撑大咯！恁很快得全糟嘞！"));
 							} else {
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Ya feel me fat cock sinkin' deep into yer ruined asshole?! Ain't nothin' but me fat cock that can satisfy ya now!",
-										"Ya horny bitch! Take me fat cock deep into yer gapin' butt!",
-										"Ya feel that, fuck toy?! Ya feel me fat cock plungin' deep into ya ruined ass?!"));
+										"恁感得俺滴肥屌插进恁操烂的屁眼么？！只得俺嘞肥屌能满足恁嘞！",
+										"恁个浪婊子！吃俺滴肥屌吧！干恁屁股！",
+										"恁感得了么，小肉便器？感到俺的粗肉棒捅进恁贪吃的屁股了么？！"));
 							}
 							break;
 						case VAGINA:
 							if(Capacity.isPenetrationDiameterTooBig(
 									target.getVaginaElasticity(), target.getVaginaStretchedCapacity(), this.getPenisDiameter(), true)) {
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Ya feel me fat cock stretchin' yer filthy cunt out?! Yer gonna end up as nothin' but me slutty gapin' cock-sleeve!",
-										"Ya horny bitch! I'm gonna ruin yer pussy an turn it into a gapin' hole that'll only fit me fat cock!",
-										"Ya feel that, fuck toy?! Ya feel me fat cock plungin' deep into ya slutty cunt an' stretchin' ya out?!",
-										"Yer filthy cunt is gonna be ruined by the time I'm done with ya!",
-										"Ain't nothin' betta than the feel o' stretchin' fresh pussies out an' turnin' 'em into ruined gapin' 'oles!",
-										"Yer dirty cunt is stretchin' out nicely! Ya gonna be well an' truly ruined soon enough!"));
+										"恁有感觉了？俺的大屌是不是要把恁逼撑裂了？！骚逼，就当了俺的鸡巴套吧！",
+										"恁个浪婊子！俺滴肥屌要把恁操烂！干恁！",
+										"恁感得了么，小肉便器？感到俺的粗肉棒捅进你贪吃的小穴了么？！被撑大了塞？",
+										"等俺操烂，恁那淫荡的逼就该报废了！",
+										"莫有比把小逼操烂更好嘞，瞧它变了合不得的大洞喽！",
+										"恁那浪逼被撑大咯！恁很快得全糟嘞！"));
 							} else {
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Ya feel me fat cock sinkin' deep into yer ruined cunt?! Ain't nothin' but me fat cock that can satisfy ya now!",
-										"Ya horny bitch! Take me fat cock deep into yer gapin' pussy!",
-										"Ya feel that, fuck toy?! Ya feel me fat cock plungin' deep into ya ruined pussy?!"));
+										"恁感得俺滴肥屌插进恁操开的小逼么？！只得俺嘞肥屌能满足恁嘞！",
+										"恁个浪婊子！吃俺滴肥屌吧！干恁浪逼！",
+										"恁感得了么，小肉便器？感到俺的粗肉棒捅进恁贪吃的小逼了么？！"));
 							}
 							break;
 						default:
@@ -585,15 +585,15 @@ public class Murk extends NPC {
 					switch(orifice) {
 						case ANUS:
 							availableLines.add(UtilText.returnStringAtRandom(
-									"Ya feel me fat cock sinkin' deep into yer ass?! Yer nothin' but me slutty cock-sleeve!",
-									"Ya horny bitch! I'm gonna make ya into me filthy little butt-slut!",
-									"Ya feel that, fuck toy?! Ya feel me fat cock plungin' deep into ya slutty little ass?!"));
+									"恁有感觉了？俺的大屌是不是要把恁屁眼子捅穿了？！骚逼，就当了俺的鸡巴套吧！",
+									"恁个好色的婊子！恁就拿了屁眼儿给俺用吧！",
+									"恁感觉到没，这个骚货肉便器，感觉到俺嘞大鸡巴了吗？它马上就要淦进你的骚菊花深处了？！"));
 							break;
 						case VAGINA:
 							availableLines.add(UtilText.returnStringAtRandom(
-									"Ya feel me fat cock sinkin' deep into yer slutty cunt?! Yer nothin' but me dirty little cock-sleeve!",
-									"Ya horny bitch! Take me fat cock deep into yer dirty cunt!",
-									"Ya feel that, fuck toy?! Ya feel me fat cock plungin' deep into ya slutty pussy?!"));
+									"恁有感觉了？俺的大屌是不是要把恁逼捅穿了？！骚逼，就当了俺的鸡巴套吧！",
+									"恁个浪婊子！小逼吃俺滴肥屌吧！",
+									"恁感得了么，小肉便器？感到俺的粗肉棒捅进你贪吃的小穴了么？！"));
 							break;
 						default:
 							break;
@@ -626,27 +626,27 @@ public class Murk extends NPC {
 	@Override
 	public String getSpecialPlayerPureVirginityLoss(GameCharacter penetratingCharacter, SexAreaPenetration penetrating) {
 		return "<p style='text-align:center;'>"
-					+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Broken Virgin</b>"
+					+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>失格处女</b>"
 				+ "</p>"
 				+ "<p>"
-					+ "As Murk's fat cock continues thrusting in and out of your ugly cunt, the sudden realisation of what's just happened hits you like a sledgehammer."
+					+ "默克粗大的肉棒不停顶弄着你下贱的小穴，突然意识到正在发生的现实一切如同重锤一般砸在你身上。"
 				+ "</p>"
 				+ "<p style='text-align:center;'>"
-					+ "[pc.thought(I've lost my virginity?!"
-						+ "<br/>Like... <b>this</b>?!)]"
+					+ "[pc.thought(我就这样失贞了？！"
+						+ "<br/>只是……<b>这样就</b>？！)]"
 				+ "</p>"
 				+ "<p>"
-					+ "You don't know what's worse; losing the virginity that you prized so highly, or the fact that you're actually enjoying it."
-					+ " As your massive, dangling labia lewdly spread to accommodate the rat-boy's fat, throbbing dick, you start to think of yourself as nothing more than just another one of his milker sluts..."
+					+ "你不知道哪个更糟糕；是失去了这样看重的第一次，还是自己反而乐在其中。"
+					+ "你肥厚硕大的阴唇淫荡地张开，吃下了鼠男搏动着的粗壮肉棒，你开始自我怀疑自己要成为下一个乳畜了……"
 				+ "</p>"
 				+ "<p style='text-align:center;'>"
-					+ "[pc.thought(As I've given my virginity to Murk, that makes me his slut...<br/>"
-						+ "Yes...<br/>"
-						+ "I'll be his good milker slut...)]"
+					+ "[pc.thought(因为我的第一次献给了默克，所以后来我就成了他胯下的荡妇……<br/>"
+						+ "好的……<br/>"
+						+ "我会做他最好的挤奶婊子……)]"
 				+ "</p>"
 				+ "<p>"
-					+ "Completely surrendering to Murk, you let out a horny moan and start desperately bucking your hips back against him, resigning yourself to the fact that now you're nothing more than a"
-					+ " <b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>broken virgin</b>..."
+					+ "你完全沉沦于默克的攻势，发出浪荡的呻吟，狂乱地朝他扭拱屁股，承认自己只不过是个"
+					+ "<b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>失格处女</b>……"
 				+ "</p>";
 	}
 }

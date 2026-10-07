@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Jess's room]]></name>
-	<tooltipDescription><![CDATA[The fox-girl prostitute, Jess, lives and works out of this room.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Jess's room at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[婕斯的房间]]></name>
+	<tooltipDescription><![CDATA[狐娘妓女婕斯就在这个房间里生活和工作。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆内的婕斯房间]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PINK_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<authorTag><![CDATA[There's a tag sewn into the inner lining which informs you that these stockings were made by 'Blooms'.]]></authorTag>
+		<authorTag><![CDATA[内衬里缝着的标签告诉你这是由"Blooms"制作的。]]></authorTag>
 		<value>150</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[toeless stocking]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[toeless stockings]]></namePlural>
-		<description><![CDATA[A pair of nylon stockings, which reach up to the wearer's upper-thigh. The material around the toes and heel has been cut out, leaving the wearer's feet mostly exposed.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[踩脚袜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[踩脚袜]]></namePlural>
+		<description><![CDATA[一双尼龙过膝踩脚袜。脚趾和脚跟周围的材料已被剪掉，穿着者的足部大部分裸露在外。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>SOCK</slot> 
@@ -47,27 +47,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] on the stockings before pulling them all the way up to [npc.her] upper-thigh.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up to [npc2.her] upper-thigh.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up to [npc2.her] upper-thigh.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]拽住长筒袜向上拉，一直拉到[npc.her]大腿上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]将长筒袜套到[npc2.namePos]的[npc2.feet]上，将它一路拉到[npc2.her]的大腿上侧。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地将长筒袜套到[npc2.namePos]的[npc2.feet]上，将它一路拉到[npc2.her]的大腿上侧。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] stockings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] stockings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] stockings.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]脱下[npc.her]的长筒袜。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]脱下[npc2.namePos]的长筒袜。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地脱下[npc2.namePos]的长筒袜。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

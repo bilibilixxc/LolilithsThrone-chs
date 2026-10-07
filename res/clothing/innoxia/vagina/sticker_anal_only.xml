@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>500</value>
-    <determiner><![CDATA[an]]></determiner>
-    <name><![CDATA[anal-only pastie]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[anal-only pasties]]></namePlural>
-    <description><![CDATA[An adhesive strip of flexible plastic, designed to be stuck over someone's vagina in order to prohibit access. The words 'anal only' make it clear as to which orifice this person prefers to have used.]]></description>
+    <determiner><![CDATA[一张]]></determiner>
+    <name><![CDATA[“仅限肛门”标贴]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[“仅限肛门”标贴]]></namePlural>
+    <description><![CDATA[一张柔性塑料胶条，用于粘贴在某人的阴部，“仅限肛门"的字样清楚地表明了这个人喜欢使用哪个腔穴。]]></description>
 
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
@@ -61,27 +60,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(stick)] the anal-only pastie over [npc.her] [npc.pussy+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(stick)] the anal-only pastie over [npc2.namePos] [npc2.pussy+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(stick)] the anal-only pastie over [npc2.namePos] [npc2.pussy+].]]>
-    </otherRough>
+    <self><![CDATA[
+			[npc.Name]将“仅限肛门”标贴贴在[npc.her][npc.pussy+]上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把“仅限肛门”标贴贴在[npc2.namePos][npc2.pussy+]上。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把“仅限肛门”标贴贴在[npc2.namePos][npc2.pussy+]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] carefully [npc.verb(peel)] off the anal-only pastie that was covering [npc.her] [npc.pussy+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] carefully [npc.verb(peel)] off the anal-only pastie that was covering [npc2.namePos] [npc2.pussy+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] quickly [npc.verb(rip)] off the anal-only pastie that was covering [npc2.namePos] [npc2.pussy+], causing [npc2.herHim] to let out a startled yell.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]撕下了[npc.her][npc.pussy+]上的“仅限肛门”标贴。
+    ]]></self>
+    <other><![CDATA[
+			[npc.Name]把“仅限肛门”标贴从[npc2.her][npc2.pussy+]上撕下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]迅速地将“仅限肛门”标贴从[npc2.namePos][npc2.pussy+]上拽了下来。导致[npc2.herHim]发出一声惊叫。
+    ]]></otherRough>
   </displacementText>
 
 

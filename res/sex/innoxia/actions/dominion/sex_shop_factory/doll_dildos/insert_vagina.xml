@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -36,9 +36,9 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Pussy test]]></title>
+	<title><![CDATA[小穴检测]]></title>
 	<tooltip><![CDATA[
-		Test out the next dildo on the doll.
+		在玩偶上检测下一个假阳具。
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -46,9 +46,9 @@
 				[#sex.getNumberOfOrgasms(pc)==0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				The doll grabs a light pink insertable dildo from the table, before kneeling down between your legs and firmly pushing it into your pussy. As it's pushed fully inside of you, the toy starts to vibrate, which causes you to let out a delighted, muffled moan.
+				玩偶从桌子上抓一个淡粉色的可插入假阳具，跪在你的腿之间，用力把它推进你的小穴。待完全进入你体内，玩具开始振动，令你发出愉悦而低沉的呻吟。
 				<br/>
-				Giving the dildo another push to make sure that it's fully inserted into your dripping cunt, the doll commands, [doll.speech(Focus on the pleasure and the strength of the vibrations.)]
+				玩偶又推了假阳具一把，确保它完全插入你滴着水的小穴，命令道，[doll.speech(专注体验快感和振动的力道。)]
 			]]></text>
 		</description>
 		<description>
@@ -56,15 +56,15 @@
 				[#sex.getNumberOfOrgasms(pc)>0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Squatting down to pull the light pink insertable dildo out of your pussy, the doll makes an approving hum as she sees how wet you are. Grabbing
+				玩偶蹲下来把淡粉色的可插入假阳具从你的小穴里拉出来，看着湿漉漉的你发出赞叹。她抓起
 				#IF(game.isAnalContentEnabled())
-					 a huge, equine dildo, similar to the ones you've got down your throat and up your ass but coloured a realistic-looking black-and-pink,
+					一个巨大的马假阳具，它类似于你喉咙里和屁股上的假阳具，但颜色是逼真的黑粉色。
 				#ELSE
-					 a huge, equine dildo, similar to the one you've got down your throat but coloured a realistic-looking black-and-pink,
+					一个巨大的马假阳具，它类似于你喉咙里的假阳具，但颜色是逼真的黑粉色。
 				#ENDIF
-				 she wastes no time in ramming it balls-deep into your quivering plastic pussy. Bracing yourself with one arm placed down on the floor behind you, you shudder and moan in ecstasy as you feel the toy's wide, flared head stretching out your insides.
+				她不愿浪费一秒时间，深插进你颤抖的塑料小穴，直顶到蛋蛋的深度。你一只胳膊撑在身后的地板上，感觉到玩具平平的头向你体内扩张，你颤抖着，狂喜地呻吟着。
 				<br/>
-				[doll.speech(Now fuck yourself with this one,)] the doll commands in her expressionless voice, [doll.speech(and put some real force into it; these toys need to be checked for their durability.)]
+				[doll.speech(现在用这个自己操自己吧，)]玩偶面无表情地命令道，[doll.speech(用力点；这些玩具的耐用性需要检查。)]
 			]]></text>
 		</description>
 	</descriptions>

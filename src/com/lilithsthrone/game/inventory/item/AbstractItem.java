@@ -212,22 +212,22 @@ public abstract class AbstractItem extends AbstractCoreItem implements XMLSaving
 					if(!added) {
 						continue;
 					}
-					String timeDesc = time+" turns";
+					String timeDesc = time+"回合";
 					if(!se.isCombatEffect()) {
 						int timeMinutes = (time/60);
 						if(timeMinutes > 3*60) {
-							timeDesc = timeMinutes/60+" hours";
+							timeDesc = timeMinutes/60+"小时";
 						} else {
-							timeDesc = timeMinutes+" minutes";
+							timeDesc = timeMinutes+"分钟";
 						}
 					}
 					sb.append(UtilText.parse(target,
 							"<p style='text-align:center; padding-top:0; margin-top:0;'>"
-							+ "[npc.NameIsFull] now "
-							+(se.getBeneficialStatus()==EffectBenefit.DETRIMENTAL?"suffering from [style.italicsBad(":(se.getBeneficialStatus()==EffectBenefit.BENEFICIAL?"benefitting from [style.italicsGood(":"affected by "))
+							+ "[npc.NameIsFull]现在"
+							+(se.getBeneficialStatus()==EffectBenefit.DETRIMENTAL?"正在遭受[style.italicsBad(":(se.getBeneficialStatus()==EffectBenefit.BENEFICIAL?"正在受到[style.italicsGood(":"正在受到"))
 							+se.getName(target)
 							+(se.getBeneficialStatus()==EffectBenefit.NEUTRAL?"":")]")
-							+ " for "+timeDesc+"!"
+							+ "的影响，持续"+timeDesc+"！"
 							+ "</p>"));
 				}
 			}
@@ -272,7 +272,7 @@ public abstract class AbstractItem extends AbstractCoreItem implements XMLSaving
 			if(intoxicationLevel>0 && target.getRace()==Race.getRaceFromId("charisma_spider")) {
 				sb.append(UtilText.parse(target,
 						"<p style='text-align:center;'>"
-							+ "Due to [npc.her] spider physiology, the caffeine in the "+this.getName()+" acts in a similar manner to alcohol, and as a result [npc.she] [npc.verb(feel)] [npc.herself] getting [style.boldAlcohol(drunk)]..."
+							+ "由于其蜘蛛的生理特征，"+this.getName()+"中的咖啡因就像酒精一样，使[npc.she]感到逐渐喝醉了……"
 						+ "</p>"));
 				sb.append(target.incrementAlcoholLevel(intoxicationLevel/100f));
 				break;
@@ -284,7 +284,7 @@ public abstract class AbstractItem extends AbstractCoreItem implements XMLSaving
 				&& !Main.game.isInCombat()) { // Items which break out of inventory should be unavailable in combat, but just in case add a check here
 			if(Main.game.isInSex()) {
 				Main.game.setContent(new Response(
-						Util.capitaliseSentence(this.getItemType().getUseName()) +(user.equals(target)?" (Self)":" ("+targetNameBeforeEffects+")"),
+						Util.capitaliseSentence(this.getItemType().getUseName()) +(user.equals(target)?" (自己)":" ("+targetNameBeforeEffects+")"),
 						"",
 						Main.sex.SEX_DIALOGUE) {
 					@Override
@@ -322,7 +322,7 @@ public abstract class AbstractItem extends AbstractCoreItem implements XMLSaving
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()) {
 					@Override
 					public String getTitle() {
-						return Util.capitaliseSentence(AbstractItem.this.getName()+": "+Util.capitaliseSentence(AbstractItem.this.getItemType().getUseName())) +(user.equals(target)?" (Self)":" ("+targetNameBeforeEffects+")");
+						return Util.capitaliseSentence(AbstractItem.this.getName()+"："+Util.capitaliseSentence(AbstractItem.this.getItemType().getUseName())) +(user.equals(target)?"(自己)":" ("+targetNameBeforeEffects+")");
 					}
 					@Override
 					public boolean isStripContent() {
@@ -449,7 +449,7 @@ public abstract class AbstractItem extends AbstractCoreItem implements XMLSaving
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("<p>"
-					+ "<b>Effects:</b>");
+					+ "<b>效果：</b>");
 		
 		for(ItemEffect ie : getEffects()) {
 			for(String s : ie.getEffectsDescription(user, target)) {
@@ -467,7 +467,7 @@ public abstract class AbstractItem extends AbstractCoreItem implements XMLSaving
 
 		sb.append("</p>"
 				+ "<p>"
-					+ (this.getItemType().isPlural()?"They have":"It has")+" a value of " + UtilText.formatAsMoney(getValue()) + "."
+					+ (this.getItemType().isPlural()?"该物品价值为":"该物品价值为") + UtilText.formatAsMoney(getValue()) + "。"
 				+ "</p>");
 		
 		return sb.toString();

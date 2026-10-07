@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendColourName="false"><![CDATA[pussy pump]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[pussy pumps]]></namePlural>
-		<description><![CDATA[This pump consists of a vibrating dildo, which is inserted into the wearer's pussy, and an enclosing shield. At the base of the dildo, there are a series of holes, through which the orgasming wearer's girlcum is drained and sucked down into a plastic tube.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name appendColourName="false"><![CDATA[阴道泵]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[阴道泵]]></namePlural>
+		<description><![CDATA[这个泵由一个振动的假阳具和一个封闭的护罩组成，假阴茎插入佩戴者的小穴。在假阳具的底部，有一系列的洞，通过这些洞，达到高潮的佩戴者的爱液被抽干并被吸入塑料管中。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>VAGINA</slot>
@@ -69,39 +68,39 @@
 	</sexAttributesSelf>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(push)] the dildo into [npc.her] [npc.pussy+], before turning up the dial on the milking machine and letting the now-pressurised shield suck itself into place over [npc.her] [npc.labia+].
+		<self><![CDATA[
+			[npc.Name]将假阳具插进[npc.her][npc.pussy+]，然后将挤奶器的开关旋开，使得负压的护罩吸在[npc.her][npc.labia+]上。
 			#IF(npc.getTotalFluidInArea(ORIFICE_VAGINA)>0)
-				<br/>[style.italicsCum(The pussy-pump quickly sucks out all of [npc.namePos] creampie!)]
+				<br/>[style.italicsCum(阴道泵很快就把[npc.namePos]体内所有的液体吸了出来了)]
 			#ENDIF
-			]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the dildo into [npc2.namePos] [npc2.pussy+], before turning up the dial on the milking machine and letting the now-pressurised shield suck itself into place over [npc2.her] [npc2.labia+].
-			#IF(npc2.getTotalFluidInArea(ORIFICE_VAGINA)>0)
-				<br/>[style.italicsCum(The pussy-pump quickly sucks out all of [npc2.namePos] creampie!)]
+			
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将假阳具插进[npc2.namePos][npc2.pussy+]，然后将挤奶器的开关旋开，使得负压的护罩吸在[npc2.her][npc2.labia+]上。
+			#IF(npc.getTotalFluidInArea(ORIFICE_VAGINA)>0)
+				<br/>[style.italicsCum(阴道泵很快就把[npc2.namePos]体内所有的液体吸了出来)]
 			#ENDIF
-			]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] firmly [npc.verb(hold)] [npc2.name] still as [npc.she] roughly [npc.verb(force)] the dildo into [npc2.her] [npc2.pussy+], before cranking up the dial on the milking machine and letting the now-pressurised shield suck itself into place over [npc2.her] [npc2.labia+].
-			#IF(npc2.getTotalFluidInArea(ORIFICE_VAGINA)>0)
-				<br/>[style.italicsCum(The pussy-pump quickly sucks out all of [npc2.namePos] creampie!)]
+
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]牢牢地抓住[npc2.name]，并强行将假阳具插进[npc2.namePos][npc2.pussy+]，然后将挤奶器的开关旋开，使得负压的护罩吸在[npc2.her][npc2.labia+]上。
+			#IF(npc.getTotalFluidInArea(ORIFICE_VAGINA)>0)
+				<br/>[style.italicsCum(阴道泵很快就把[npc2.namePos]体内所有的液体吸了出来)]
 			#ENDIF
-			]]>
-		</otherRough>
+
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before sliding the dildo out of [npc.her] [npc.pussy+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before sliding the dildo out of [npc2.namePos] [npc2.pussy+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[With no regard for [npc2.her] comfort, [npc.name] roughly [npc.verb(pull)] the still-pressurised pump off of [npc2.namePos] [npc2.labia+] and [npc.verb(yank)] the vibrating dildo out of [npc2.her] [npc2.pussy+].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将挤奶器的开关关闭并将假阳具从[npc.her][npc.pussy+]里抽出。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将挤奶器的开关关闭并将假阳具从[npc2.namePos][npc2.pussy+]里抽出。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]毫不顾忌[npc2.her]的感受地将正在减压的护罩从[npc2.namePos][npc2.labia+]上扯下来，并将还在震动的假阳具从[npc2.her][npc2.pussy+]里拔出来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>500000</value> 
 		<melee>false</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name appendDamageName="false"><![CDATA[Waspley Mk IV .38/200 Service Revolver]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Waspley Mk IV Service Revolvers]]></namePlural> 
-		<description><![CDATA[Although nearly identical in appearance to its .455 calibre counterpart, this particular top-break, double action revolver is chambered for the smaller .38 cartridge.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription>Shoot [npc2.name] with your revolver.</attackTooltipDescription>
+		<name appendDamageName="false"><![CDATA[Waspley Mk IV .38/200 军用转轮手枪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[Waspley Mk IV 军用转轮手枪]]></namePlural> 
+		<description><![CDATA[虽然在外观上与.455口径的同类产品几乎完全相同，但这把中折式转轮手枪采用较小的.38口径弹药。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的转轮手枪射向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>LEGENDARY</rarity> 
 		<weaponSet/> 
-		<equipText><![CDATA[[npc.Name] [npc.verb(draw)] [npc.her] revolver, ready to use it in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(holster)] [npc.her] revolver.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]给[npc.her]的转轮手枪装弹，准备用于战斗。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]把[npc.her]的转轮手枪放回枪套中。]]></unequipText>
 		
 		<imageName>revolver.svg</imageName> 
 		<imageEquippedName/>
@@ -48,14 +48,14 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Taking aim with [npc.her] pistol, [npc.name] [npc.verb(pull)] the trigger and [npc.verb(fire)] a bullet at [npc2.name], hitting [npc2.herHim] directly in the chest!<br/>Thankfully, there seems to be some kind of arcane force preventing [npc2.name] from being seriously wounded or killed...
-		]]></hitText>
+		[npc.Name]用[npc.her]的手枪瞄准[npc2.name]并扣动扳机，[npc.she]成功命中[npc2.herHim]的胸部！<br/>幸好，似乎有某种奥术力量阻止[npc2.name]重伤或死亡……
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Taking aim with [npc.her] pistol, [npc.name] [npc.verb(pull)] the trigger and fires a bullet at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.Name]用[npc.her]的手枪瞄准[npc2.name]并扣动扳机发射一发子弹射向[npc2.name]，但是最终还是没有击中[npc2.herHim]！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

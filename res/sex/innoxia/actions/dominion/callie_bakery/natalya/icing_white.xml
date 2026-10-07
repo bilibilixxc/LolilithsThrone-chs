@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -24,46 +24,33 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[White]]></title>
+	<title><![CDATA[白色]]></title>
 	<tooltip><![CDATA[
 		#IF(npc2==natalya)
-			Cover Mistress Natalya's puffy asshole in white icing, and use the pink icing for Callie.
+			用白色糖霜覆盖主人娜塔莉亚肉感十足的肛门，粉色糖霜则给卡丽用。
 		#ELSE
-			Cover Callie's puffy asshole in white icing, and use the pink icing for Mistress Natalya.
+			用白色糖霜覆盖卡丽肉感十足的肛门，粉色糖霜则给主人娜塔莉亚用。
 		#ENDIF
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
 				#IF(npc2==natalya)
-					Deciding to start with Mistress Natalya, you shuffle over behind her and lift the piping bag up to her big, puffy asshole. Gently squeezing the bag, you run the first line of white icing over the top of her equine anus.
-					
+					你决定先从主人娜塔莉亚开始，于是挪到她身后，将裱花袋对准她那肉感十足的屁穴。你轻轻挤压裱花袋，沿着菊门的边缘挤出了第一道白色糖霜。
 					<br/><br/>
-					
-					[natalya.speechNoEffects(Make sure to do a good job, [style.mule]!)] the centauress snaps as she feels the icing begin to cover her rear entrance. Not wanting to disappoint your Mistress, you make sure to carefully paint every last part of her round asshole in icing, turning it from ebony to brilliant white in the process. As you finish and discard the now-empty piping bag to one side, you tell her that her anus now looks exactly like an iced doughnut.
-					
+					[natalya.speechNoEffects(给我好好干，[style.mule]！)]半人马感觉到糖霜覆盖在后穴上，便呵斥道。为了不让主人失望，你仔细地将她浑圆的肛门每一寸都涂满糖霜，使其从乌木色变成了亮白色。完工后你把空裱花袋扔到一旁，告诉她现在的肛门看起来就像个糖霜甜甜圈。
 					<br/><br/>
-					
-					[callie.speechNoEffects(Great job, [pc.name]! I'm going to be pink then, huh?)] Callie asks as she takes a quick peek at the centauress's freshly-iced hole. Leaning back down over the counter, she pushes her butt back towards you as set about covering her own puffy asshole in icing. Layering the shiny pink goo over her back door, you quickly turn Callie's anus into a delicious-looking iced doughnut.
-					
+					[callie.speechNoEffects(干得好，[pc.name]！接下来该把我涂成粉色了吧？)]卡丽偷瞄着半人马新鲜出炉的糖霜菊穴问道。她俯身趴到柜台上，将屁股朝你撅起，等待你给她丰满的肛门也涂上糖霜。你将闪亮的粉色糖霜层层覆盖在后庭，很快就把卡丽的肛门变成了诱人的糖霜甜甜圈。
 					<br/><br/>
-					
-					[natalya.speechNoEffects(All done?)] Mistress Natalya asks, before impatiently demanding, [natalya.speechNoEffects(Then decorate our doughnuts, [style.mule]!)]
-					
+					[natalya.speechNoEffects(完成了吗？)]主人娜塔莉亚问完，随即不耐烦地命令道，[natalya.speechNoEffects(那就给我们的甜甜圈装饰一下吧，[style.mule]！)]
 				#ELSE
-					Deciding to start with Callie, you lift the piping bag up to her big, puffy asshole. Gently squeezing the bag, you run the first line of white icing over the top of her equine anus.
-					
+					你决定先从卡丽开始，将裱花袋对准她那肉感十足的屁穴。你轻轻挤压裱花袋，沿着菊门的边缘挤出了第一道白色糖霜。
 					<br/><br/>
-					
-					[callie.speechNoEffects(That feels kind of nice!)] the horse-girl happily giggles the icing begins to cover her rear entrance. Determined to do a good job of this, you make sure to carefully paint every last part of her round asshole in icing, turning it from ebony to brilliant white in the process. As you finish and discard the now-empty piping bag to one side, you tell Callie that her anus now looks exactly like an iced doughnut.
-					
+					[callie.speechNoEffects(感觉还挺舒服的！)]当糖霜洒落在后穴上，马女开心地咯咯笑起来。为了完美完成任务，你仔细地将她浑圆的肛门每一寸都涂满糖霜，使其从乌木色变成了亮白色。完工后你把空裱花袋扔到一旁，告诉她现在的肛门看起来就像个糖霜甜甜圈。
 					<br/><br/>
-					
-					[natalya.speechNoEffects(Now it's my turn, [style.mule]! Paint my asshole pink!)] Mistress Natalya impatiently demands as she paws at the ground with one of her hoofs. Pushing her big, feral ass back towards you, she lets out an approving hum as you set about covering her big, puffy asshole in icing. Layering the shiny pink goo over her back door, you quickly turn your Mistress's anus into a delicious-looking iced doughnut.
-					
+					[natalya.speechNoEffects(现在轮到我了，[style.mule]！把我的屁眼涂成粉色！)]主人娜塔莉亚不耐烦地用蹄子刨着地面命令道。她朝你撅起硕大的兽态后半身，当你开始给她丰满的肛门涂抹糖霜时，她发出了满意的哼声。你将闪亮的粉色糖霜层层覆盖在她的后庭，很快就把主人的肛门变成了诱人的糖霜甜甜圈。
 					<br/><br/>
-					
-					[callie.speechNoEffects(All done, [pc.name]?)] callie asks, before enthusiastically declaring, [callie.speechNoEffects(Then it's time to decorate our doughnuts!)]
+					[callie.speechNoEffects(完成了吗，[pc.name]？)]卡丽问道，随即亢奋地宣布，[callie.speechNoEffects(现在是装饰甜甜圈的时间啦！)]
 				#ENDIF
 			]]></text>
 		</description>

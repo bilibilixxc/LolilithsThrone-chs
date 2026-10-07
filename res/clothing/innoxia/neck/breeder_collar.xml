@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>10000</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[collar]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[collars]]></namePlural>
-		<description><![CDATA[A <span style='color:[#thisItem.getColour(0).toWebHexString()];'>[style.glow(glowing [#thisItem.getColourName()])]</span> leather collar, with bold metal lettering attached to the front spelling out the word ]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[项圈]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[项圈]]></namePlural>
+		<description><![CDATA[一个<span style='color:[#thisItem.getColour(0).toWebHexString()];'>[style.glow(glowing [#thisItem.getColourName()])]</span>色皮质项圈，正面用醒目的金属字母拼出单词]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
     <equipSlots>
@@ -22,10 +21,10 @@
 		<category id="txt" priority="1">
 			<categoryName><![CDATA[Text]]></categoryName>
 			<sticker id="breeder" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-				<stickerName><![CDATA[Breeder]]></stickerName>
-				<namePrefix priority="1"><![CDATA[ornate <i>'Breeder'</i> ]]></namePrefix>
+				<stickerName><![CDATA[繁育者]]></stickerName>
+				<namePrefix priority="1"><![CDATA[ornate<i>“繁育者”</i>]]></namePrefix>
 				<namePostfix/>
-				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'BREEDER'</i>.]]></descriptionModification>
+				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>“繁育者”</i>.]]></descriptionModification>
 				<imageName zLayer="1" slot="NECK">breeder_collar_stickers/breeder.svg</imageName>
 				<itemTagsAdded/>
 				<itemTagsRemoved/>
@@ -33,10 +32,10 @@
 				<availabilityText/>
 			</sticker>
 			<sticker id="bimbo" priority="2" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-				<stickerName><![CDATA[Bimbo]]></stickerName>
-				<namePrefix priority="1"><![CDATA[ornate <i>'Bimbo'</i> ]]></namePrefix>
+				<stickerName><![CDATA[无脑大胸]]></stickerName>
+				<namePrefix priority="1"><![CDATA[ornate<i>'无脑大胸 '</i>]]></namePrefix>
 				<namePostfix/>
-				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'BIMBO'</i>.]]></descriptionModification>
+				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>“无脑大胸”</i>.]]></descriptionModification>
 				<imageName zLayer="1" slot="NECK">breeder_collar_stickers/bimbo.svg</imageName>
 				<itemTagsAdded/>
 				<itemTagsRemoved/>
@@ -44,10 +43,10 @@
 				<availabilityText/>
 			</sticker>
 			<sticker id="bitch" priority="3" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-				<stickerName><![CDATA[Bitch]]></stickerName>
-				<namePrefix priority="1"><![CDATA[ornate <i>'Bitch'</i> ]]></namePrefix>
+				<stickerName><![CDATA[婊子]]></stickerName>
+				<namePrefix priority="1"><![CDATA[ornate<i>“婊子”</i>]]></namePrefix>
 				<namePostfix/>
-				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'BITCH'</i>.]]></descriptionModification>
+				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>“婊子”</i>.]]></descriptionModification>
 				<imageName zLayer="1" slot="NECK">breeder_collar_stickers/bitch.svg</imageName>
 				<itemTagsAdded/>
 				<itemTagsRemoved/>
@@ -55,10 +54,10 @@
 				<availabilityText/>
 			</sticker>
 			<sticker id="slut" priority="4" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-				<stickerName><![CDATA[Slut]]></stickerName>
-				<namePrefix priority="1"><![CDATA[ornate <i>'Slut'</i> ]]></namePrefix>
+				<stickerName><![CDATA[骚货]]></stickerName>
+				<namePrefix priority="1"><![CDATA[ornate<i>“骚货”</i>]]></namePrefix>
 				<namePostfix/>
-				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'SLUT'</i>.]]></descriptionModification>
+				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>“荡妇”</i>.]]></descriptionModification>
 				<imageName zLayer="1" slot="NECK">breeder_collar_stickers/slut.svg</imageName>
 				<itemTagsAdded/>
 				<itemTagsRemoved/>
@@ -66,10 +65,10 @@
 				<availabilityText/>
 			</sticker>
 			<sticker id="cum_slut" priority="5" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-				<stickerName><![CDATA[Cum Slut]]></stickerName>
-				<namePrefix priority="1"><![CDATA[ornate <i>'Cum Slut'</i> ]]></namePrefix>
+				<stickerName><![CDATA[精液荡妇]]></stickerName>
+				<namePrefix priority="1"><![CDATA[ornate<i>“精液荡妇”</i>]]></namePrefix>
 				<namePostfix/>
-				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'CUM SLUT'</i>.]]></descriptionModification>
+				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>“精液荡妇”</i>.]]></descriptionModification>
 				<imageName zLayer="1" slot="NECK">breeder_collar_stickers/cum_slut.svg</imageName>
 				<itemTagsAdded/>
 				<itemTagsRemoved/>
@@ -77,10 +76,10 @@
 				<availabilityText/>
 			</sticker>
 			<sticker id="whore" priority="6" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-				<stickerName><![CDATA[Whore]]></stickerName>
-				<namePrefix priority="1"><![CDATA[ornate <i>'Whore'</i> ]]></namePrefix>
+				<stickerName><![CDATA[妓女]]></stickerName>
+				<namePrefix priority="1"><![CDATA[ornate<i>“妓女”</i>]]></namePrefix>
 				<namePostfix/>
-				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'WHORE'</i>.]]></descriptionModification>
+				<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>“妓女”</i>]]></descriptionModification>
 				<imageName zLayer="1" slot="NECK">breeder_collar_stickers/whore.svg</imageName>
 				<itemTagsAdded/>
 				<itemTagsRemoved/>
@@ -91,7 +90,7 @@
 		<category id="ring" priority="2">
 			<categoryName><![CDATA[Extras]]></categoryName>
 			<sticker id="present" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-				<stickerName><![CDATA[D-ring]]></stickerName>
+				<stickerName><![CDATA[D型环]]></stickerName>
 				<namePrefix/>
 				<namePostfix/>
 				<descriptionModification/>
@@ -102,7 +101,7 @@
 				<availabilityText/>
 			</sticker>
 			<sticker id="none" priority="2" defaultSticker="false" zLayer="1" colourSelected="TEXT_GREY"> 
-				<stickerName><![CDATA[None]]></stickerName>
+				<stickerName><![CDATA[无]]></stickerName>
 				<namePrefix/>
 				<namePostfix/>
 				<descriptionModification/>
@@ -145,7 +144,7 @@
 	<secondaryColours values="JUST_STEEL"/>
 	<secondaryColoursDye values="ALL_WITH_METALS"/>
 	<tertiaryColours values="JUST_STEEL"/>
-	<tertiaryColoursDye  values="ALL_WITH_METALS"/>
+	<tertiaryColoursDye values="ALL_WITH_METALS"/>
 
 	<itemTags>
 		<tag>SOLD_BY_NYAN</tag>
@@ -153,26 +152,26 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] can't help but let out a small, needy moan as [npc.she] [npc.verb(fasten)] the enchanted collar around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc2.Name] can't help but let out a small, needy moan as [npc.name] [npc.verb(fasten)] the enchanted collar around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc2.Name] can't help but let out a small, needy moan as [npc.name] roughly [npc.verb(fasten)] the enchanted collar around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]在[npc.her]的脖子上系紧附魔项圈并发出一声轻微的呻吟。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]在[npc2.her]的脖子上系紧附魔项圈时，[npc2.name]发出一声轻微的呻吟。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地在[npc2.her]的脖子上系紧附魔项圈时，[npc2.name]发出一声轻微的呻吟。
+]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] enchanted collar, before taking it off from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] enchanted collar, before taking it off from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] enchanted collar, before yanking it off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的附魔项圈，然后从[npc.her]的脖子上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的附魔项圈，然后从[npc2.her]的脖子上取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地解开[npc2.namePos]的附魔项圈，然后从[npc2.her]的脖子上扯下。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

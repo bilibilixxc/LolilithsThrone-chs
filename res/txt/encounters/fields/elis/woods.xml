@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Finding berries encounter: -->
@@ -6,266 +6,266 @@
 	<htmlContent tag="FIND_BERRIES"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_innoxia_elis_berries_encountered))
 		<p>
-			While [pc.walking] through the woods and observing the local flora, you suddenly spot another one of those curious berry bushes which you've previously happened upon. Being no more than a small shrub, it's not the plant's diminutive size which draws your attention, nor its rather plain-looking oval green leaves. Instead, what leads you to stoop down and take a closer look at this botanical specimen is the luminosity and size of the red and purple berries which hang off of it.
+			当你[pc.walking]过树林，观察当地植物时，你发现另一种以前遇到过的奇特浆果灌木。它是一棵小灌木，引起你注意的不是它的矮小，也不是它那看起来很普通的椭圆形绿叶。让你弯下腰仔细观察这个植物标本的，是它红色和紫色浆果的亮度及大小。
 		</p>
 		<p>
-			As you take a closer look, you see that the red berries have grown into the shape of hearts, while the purple ones have taken the form of small stars. With the shape of the berries strongly hinting at the possibility of this plant not being a product of natural evolution, you assume that it must have been designed and grown for commercial use, although how it ended up growing here in the middle of these woods will likely forever remain a complete mystery.
+			仔细观察，你发现红色浆果是心形的，而紫色浆果则长成小星星的形状。浆果的形状强烈暗示了这种植物可能不是自然进化的，你觉得它一定是为商业用途而设计和种植的。它是如何在这片树林中生长的，这可能永远是个谜。
 		</p>
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_innoxia_elis_berries_eaten))
-				Knowing from previous experience that these berries are not only edible, but extremely delicious, you begin to wonder whether you should take advantage of your discovery and help yourself to the plant's bounty. Reaching out to touch the closest of the red berries, you're once again amazed to see that it starts to glow a bright pink the closer you move it to its purple companions. While you know that eating either the red or purple berries should be safe, consuming both types at once is surely going to be a bad idea.
+				根据以前的经验，你知道这些浆果不仅可以食用，而且非常美味，因此你考虑是否享用这些果实。伸手触摸最近的红浆果，你惊讶地发现，越靠近紫浆果，红浆果就发出越明亮的粉红色光芒。虽然你知道吃红色或紫浆果都是安全的，但同时吃两种浆果肯定不是个好主意。
 			#ELSE
-				Although it'd typically be a terrible idea to taste wild, unidentified produce of any kind, the sweet, somehow-familiar smell which these berries are giving off gives you a strong feeling that they're edible. Reaching out to touch the closest of the red ones, you're amazed to see that it starts to glow a bright pink the closer you move it to its purple companions. While you're confident that eating either the red or purple berries should be safe, consuming both types at once is surely going to be a bad idea.
+				虽然品尝野生且不知名的农产品是个糟糕的主意，但这些浆果散发出的甜美、莫名熟悉的气味让你强烈地感觉到它们是可以吃的。伸手触摸红浆果，你惊奇地发现，越靠近紫浆果，红浆果就发出越明亮的粉红色光芒。即使你确信吃红色或紫浆果都是安全的，但同时吃两种浆果肯定不是个好主意。
 			#ENDIF
 		</p>
 		<p>
-			Toying with the berries for a moment longer, you wonder whether to eat them or simply leave them behind and continue on your way...
+			你把玩了一会儿浆果，不知道是吃掉它们，还是干脆把它们扔掉，继续赶路……
 		</p>
 	#ELSE
 		<p>
-			While [pc.walking] through the woods and observing the local flora, you suddenly happen to spot a most unusual looking plant. Being no more than a small shrub, it's not the plant's diminutive size which draws your attention, nor its rather plain-looking oval green leaves. Instead, what leads you to stoop down and take a closer look at this botanical specimen is the luminosity and size of the red and purple berries which hang off of it.
+			当你[pc.walking]过树林，观察当地植物时，你发现另一种以前遇到过的奇特浆果灌木。它是一棵小灌木，引起你注意的不是它的矮小，也不是它那看起来很普通的椭圆形绿叶。让你弯下腰仔细观察这个植物的，是它红色和紫色浆果的亮度及大小。
 		</p>
 		<p>
-			As you take a closer look, you see that the red berries have grown into the shape of hearts, while the purple ones have taken the form of small stars. With the shape of the berries strongly hinting at the possibility of this plant not being a product of natural evolution, you assume that it must have been designed and grown for commercial use, although how it ended up growing here in the middle of these woods will likely forever remain a complete mystery.
+			仔细观察，你发现红色浆果是心形的，而紫色浆果则长成小星星的形状。浆果的形状强烈暗示了这种植物可能不是自然进化的，你觉得它一定是为商业用途而设计和种植的。它是如何在这片树林中生长的，这可能永远是个谜。
 		</p>
 		<p>
-			Although it'd typically be a terrible idea to taste wild, unidentified produce of any kind, the sweet, somehow-familiar smell which these berries are giving off gives you a strong feeling that they're edible. Reaching out to touch the closest of the red ones, you're amazed to see that it starts to glow a bright pink the closer you move it to its purple companions. While you're confident that eating either the red or purple berries should be safe, consuming both types at once is surely going to be a bad idea.
+			虽然品尝野生且不知名的农产品是个糟糕的主意，但这些浆果散发出的甜美、莫名熟悉的气味让你强烈地感觉到它们是可以吃的。伸手触摸红浆果，你惊奇地发现，越靠近紫浆果，红浆果就发出越明亮的粉红色光芒。即使你确信吃红色或紫浆果都是安全的，但同时吃两种浆果肯定不是个好主意。
 		</p>
 		<p>
-			Toying with the berries for a moment longer, you wonder whether to eat them or simply leave them behind and continue on your way...
+			你把玩了一会儿浆果，不知道是吃掉它们，还是干脆把它们扔掉，继续赶路……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BERRIES_IGNORE"><![CDATA[
 	<p>
-		Deciding that it's best not to eat berries from a random bush in the middle of the woods, you stand up and continue on your way...
+		你决定最好不能随便吃灌木丛的浆果，于是站起来继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EAT_BERRIES_RED"><![CDATA[
 	<p>
-		Deciding to try your luck with the red berries, you pick one from the plant and experimentally break it open to give it a lick, noting that there are no seeds within as you do so. The flavour is similar to its smell; a sweet, vaguely strawberry-like taste, it compels you to pop the rest of the berry into your mouth and swallow it down. Immediately, you're overcome with an intense desire to eat the rest of the red berries, and within a couple of minutes you've done just that.
+		你决定在红浆果上碰碰运气，于是摘下一颗，尝试性地掰开舔了舔，发现里面没有种子。它的味道和气味相似，是甜甜的，隐约有草莓的味道，让你忍不住把掰开的浆果塞进嘴里吞下。随即，你产生了一种强烈的渴望，想要吃掉剩下的红浆果，几分钟后，你全吃完了。
 	</p>
 	<p>
-		Left with a craving for more of these delicious fruits, you turn your attention towards the purple specimens, only to see that they're rapidly withering up and falling from the plant as inedible husks. Wondering if this behaviour is the reason why you've never seen this plant being cultivated before, you stand up and scan your surroundings for any more of them.
+		你渴望吃到更多美味的果实，于是把目光转向紫色果实，却发现它们正在迅速枯萎，从植株上掉落，变成无法食用的果壳。你不确定这种行为是否就是以前从未见过这种植物的原因，于是你站起身来，扫视周围，寻找更多的果实。
 	</p>
 	<p>
-		While your quick search unfortunately proves to be fruitless, your craving for more of the red berries is quickly replaced by a wonderful feeling of health and vigour spreading out from your body's core, which also washes away any negative thoughts you were having.
+		遗憾的是，快速搜索没有结果，但你对更多红浆果的渴望很快被从身体核心蔓延开的健康和活力的美妙感觉所取代，这种新感觉也冲淡了你之前的负面想法。你
 		#IF(pc.hasLegs())
-			 With a spring in your step,
+			步履轻盈地
 		#ELSE
-			 Smiling happily to yourself,
+			对自己开心地笑了笑，
 		#ENDIF
-		 you set off on your way through the woods, making sure to keep a lookout for any more of those berry bushes as you go...
+		穿过树林，在路上留意着浆果丛中是否还有浆果……
 	</p>
 	[#SPECIAL_PARSE_0]
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EAT_BERRIES_PURPLE"><![CDATA[
 	<p>
-		Deciding to try your luck with the purple berries, you pick one from the plant and experimentally break it open to give it a lick, noting that there are no seeds within as you do so. The flavour is similar to its smell; a sweet, vaguely raspberry-like taste, it compels you to pop the rest of the berry into your mouth and swallow it down. Immediately, you're overcome with an intense desire to eat the rest of the purple berries, and within a couple of minutes you've done just that.
+		你决定在紫浆果上碰运气，于是摘下一颗，尝试性地掰开舔了舔，发现里面没有种子。它的味道和气味相似；甜甜的、像是覆盆子的味道，让你忍不住把掰开的浆果塞进嘴里吞下。随即，你产生了一种强烈的渴望，想要吃掉剩下的紫色浆果，几分钟后，你全吃光了。
 	</p>
 	<p>
-		Left with a craving for more of these delicious fruits, you turn your attention towards the red specimens, only to see that they're rapidly withering up and falling from the plant as inedible husks. Wondering if this behaviour is the reason why you've never seen this plant being cultivated before, you stand up and scan your surroundings for any more of them.
+		你渴望吃到更多美味的果实，于是把目光转向红浆果，却发现它们正在迅速枯萎，从植株上掉落，成为无法食用的果壳。你不知道这种行为是否就是以前从未见过这种植物的原因，于是你站起身来，扫视周围，寻找更多的果实。
 	</p>
 	<p>
-		While your quick search unfortunately proves to be fruitless, your craving for more of the purple berries is quickly replaced by a wonderful feeling of clear-mindedness, which also washes away any negative thoughts you were having.
+		遗憾的是，快速搜索没有结果，但你对更多紫浆果的渴望很快被一种头脑清醒的美妙感觉所取代，这种感觉也洗去了你之前的负面想法。你
 		#IF(pc.hasLegs())
-			 With a spring in your step,
+			步履轻盈地
 		#ELSE
-			 Smiling happily to yourself,
+			对自己开心地笑了笑，
 		#ENDIF
-		 you set off on your way through the woods, making sure to keep a lookout for any more of those berry bushes as you go...
+		穿过树林，在路上留意着浆果丛中是否还有浆果……
 	</p>
 	[#SPECIAL_PARSE_0]
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EAT_BERRIES_BOTH"><![CDATA[
 	<p>
-		Despite your instincts telling you that the behaviour of the berries to glow bright pink when in close proximity to one another is a bad sign, you decide to eat both the red and purple ones at the same time. Quickly picking a pair of them from the plant, you experimentally break them both open to give each one a lick, noting that there are no seeds within either of them as you do so. The flavour of the berries is similar to their smell; a sweet, vaguely strawberry-like taste for the red one, and hints of raspberry for its purple counterpart.
+		尽管你的直觉告诉你，当两种浆果靠近时发出明亮的粉红色是个不好的信号，但你还是决定同时吃掉红色和紫浆果。你迅速从植物上摘下两个，尝试性地把它们都掰开，分别舔了舔，注意到里面都没有种子。浆果的味道与气味相似；红浆果甜甜的，隐约有草莓的味道，而紫浆果则有一丝覆盆子的味道。
 	</p>
 	<p>
-		As the tastes of the two berries combine on your tongue, you suddenly find your mouth filled with an intensely sweet cherry-like flavour. The result of combining the berries doesn't end there, as you're suddenly overcome with an intense desire to eat as many of them as possible, and after popping the ones in your [pc.hands] into your mouth, you spend the next couple of minutes ravenously devouring every last one of both the red and purple berries.
+		当两种浆果的味道在舌尖融合时，你发现嘴里充满了浓郁的樱桃甜味。效果还不止于此，你产生了一种强烈的渴望，想要吃掉更多的浆果。在将[pc.hands]中的浆果放入口中后，才几分钟，你就狼吞虎咽地吃光了全部红紫浆果。
 	</p>
 	<p>
-		What follows next is an intense, sudden spike of arousal, the strength of which causes you to let out [pc.a_moan+].
+		接下来是一阵强烈的、突如其来的亢奋，猛烈到让你发出[pc.a_moan+]的声音。
 		#IF(pc.hasPenis())
-			 Your [pc.cock+] immediately rises to attention,
+			你[pc.cock+]迅速勃起、
 			#IF(pc.hasVagina())
-				 while beneath it
+			在下面
 				#IF(pc.getVaginaWetness().getArousalNeededToGetVaginaWet()>0)
-					 you feel your [pc.pussyWetness] [pc.pussy] starting to drip from excitement.
+					你会感觉到[pc.pussyWetness][pc.pussy]因兴奋而开始湿润滴水。
 				#ELSE
-					 you feel your [pc.girlcum+] start to stream out of your [pc.pussyWetness] [pc.pussy].
+					感觉到[pc.girlcum+]开始从[pc.pussyWetness][pc.pussy]中流出。
 				#ENDIF
 			#ELSE
-				 and you're struck by the sudden urge to masturbate right here in the middle of the woods.
+				你突然有种冲动，想在这片树林里自慰。
 			#ENDIF
 		#ELSEIF(pc.hasVagina())
 			#IF(pc.getVaginaWetness().getArousalNeededToGetVaginaWet()>0)
-				 Your [pc.pussyWetness] [pc.pussy] immediately starts to drip from excitement,
+				你的[pc.pussyWetness][pc.pussy]立即因兴奋而湿润滴水、
 			#ELSE
-				 You feel your [pc.girlcum+] immediately start to stream out of your [pc.pussyWetness] [pc.pussy],
+				你感觉到你的[pc.girlcum+]立即开始从你的[pc.pussyWetness][pc.pussy]中流出、
 			#ENDIF
-			 and you're struck by the sudden urge to masturbate right here in the middle of the woods.
+			你突然有种冲动，想在这片树林里自慰。
 		#ELSE
-			 Despite lacking genitalia, you're immediately struck by the sudden urge to masturbate right here in the middle of the woods.
+			尽管你没有可插入小穴的道具，但在这茫茫森林中，你突然有了手淫的冲动。
 		#ENDIF
 		#IF(pc.isTaur())
-			 Although unable to reach your genitals due to their distant location on your [pc.legRace]'s body, you feel as though you wouldn't need much stimulation to orgasm right now. As you start to decide how best to masturbate,
+			虽然生殖器位于[pc.legRace]身体的远处而无法触及，但你觉得不需要太多刺激就能达到高潮。你开始决定自慰的最佳方式时、
 		#ELSE
-			  As your [pc.hands] drop down towards your genitals,
+			当你的[pc.hands]触碰你的生殖器时、
 		#ENDIF
-		 you're able to gain a moment of clarity, and use it to quickly decide whether or not to give in and pleasure yourself...
-	</p>
+		你获得了片刻的清醒，并借此迅速决定是否屈服并取悦自己……
+</p>
 	[#SPECIAL_PARSE_0]
 	[#SPECIAL_PARSE_1]
 	[#SPECIAL_PARSE_2]
 	[#SPECIAL_PARSE_3]
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EAT_BERRIES_BOTH_CALM_DOWN"><![CDATA[
 	<p>
-		Not wanting to masturbate in the middle of the woods, you take control of your emotions and focus on calming down.
+		你不想在树林中手淫，因此控制住情绪，尽力让自己冷静下来。
 		#IF(pc.hasPenis())
-			 Although your throbbing erection
+			尽管你的阴茎勃起
 			#IF(pc.hasVagina())
-				 and wet pussy don't make it easy,
+				和湿润的阴部，但这并不容易、
 			#ELSE
-				 doesn't make it easy,
+				也不会让事情变得简单、
 			#ENDIF
 		#ELSEIF(pc.hasVagina())
-			 Although your wet pussy doesn't make it easy,
+			你湿漉漉的阴部并不会让事情变得简单，
 		#ELSE
-			 Although it's not easy,
+			虽然这不容易
 		#ENDIF
-		 you're able to successfully subdue your near-overwhelming lust, and after what aspires to be almost ten minutes of steadily breathing and doing your best to not fantasise about
+		你成功地抑制住了近乎压倒性的性欲，十分钟左右的平稳呼吸，并尽力不去幻想
 		#IF(pc.getSexualOrientation().isAttractedToFeminine())
-			 the berry bush transforming into a sexy dryad,
+			浆果灌木丛变成性感的干尸、
 		#ELSE
-			 a hot satyr appearing from out of the bushes,
+			一个性感的萨提尔从灌木丛中出现、
 		#ENDIF
-		 your intense arousal is firmly under control.
+		你强烈的快感已被牢牢控制。
 	</p>
 	<p>
-		Looking down at the cause of this unexpected near-sexual experience, you see that there are already tiny little red and purple berries starting to regrow on the bush. Not wanting to wait around for who-knows how many hours or days it will take for them to reach full maturity, there's little else for you to do here, and so you set off on your way through the woods once again...
+		低头看这次意外的近乎性体验的起因，你发现灌木丛已经重新长出小红紫浆果。你不想再等下去了，因为不知道要等多少个小时或多少天它们才能完全成熟。你在森林里无事可做，于是再次启程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BERRIES_MASTURBATING_START"><![CDATA[
 	<p>
-		Deciding that it's best to address your overwhelming arousal in the most direct manner possible, you let out [pc.a_moan+] and prepare to start masturbating right here in the middle of the woods...
-	</p>
-	]]>
-	</htmlContent>
+                决定用最直接的方式来解决你难以抑制的兴奋，你发出了[pc.a_moan+]，准备在这树林中自慰……
+         </p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BERRIES_AFTER_MASTURBATING"><![CDATA[
 	#IF(sex.getNumberOfOrgasms(pc)>0)
 		<p>
-			Satisfied from
+			从
 			#IF(sex.getNumberOfOrgasms(pc)>1)
-				 experiencing multiple orgasms,
+				体验多次性高潮、
 			#ELSE
-				 bringing yourself to an orgasm,
+				让自己达到高潮、
 			#ENDIF
-			 you let out a sigh and take a quick look around to make sure that nobody's snuck up on you while you were distracted.
+			你发出一声叹息，快速环顾四周，确保没人趁你分神时偷袭你。
 			#IF(pc.hasFetish(FETISH_EXHIBITIONIST))
-				 Much to your disappointment, there's no sign of anyone having watched your lewd display,
+				令你失望的是，没有人观看你精彩的淫秽表演、
 			#ELSE
-				 Much to your relief, there's absolutely no sign of anyone in the woods around you,
+				让你松了一口气的是，周围的树林里完全没有任何人的踪迹、
 			#ENDIF
-			 and so with little else to do here you prepare to move off and continue on your way.
+			在这里无事可做，你准备离开，再次启程。
 		</p>
 		<p>
-			Before you go, however, you take one last glance down at the berry bush which provided you with this unexpected source of pleasure. Much to your amazement, it seems to have somehow reacted to your orgasm, as in the place where each of the red and purple berries were hanging just a short time ago, a bulbous, brown seed pod has rapidly grown. Not looking in the least bit appetising, you decide to leave the plant's newly-acquired seeds behind; after all, if ever you had a need or desire to gather these seeds, you now know roughly where to find these berry bushes and how to entice them into producing seeds. 
+			不过，在离开前，你最后看了一眼灌木丛，它给你带来了意想不到的快乐。让你惊讶的是，它似乎对你的高潮做出了某种反应，因为在不久前还挂着红色和紫浆果的地方，迅速长出了一个球状的棕色豆荚。看起来没有食欲，你决定留下新获得的种子；毕竟，如果你需要或想收集这些种子，大概知道在哪里可以找到这些浆果灌木丛，以及如何引诱它们结出新种子。
 		</p>
 		<p>
-			With one final sigh, you leave the bush behind and continue on your way through the woods...
+			最后，你叹了口气，把灌木丛抛在身后，穿过树林……
 		</p>
 	#ELSE
 		<p>
-			Although not satisfied due to failing to experience even a single orgasm, you find yourself losing your will to masturbate, and so put an end to your lewd activities. After letting out a frustrated sigh, you take a quick look around to make sure that nobody's snuck up on you while you were distracted.
+			虽然连一次高潮都没达到，你感到不满足，但你发现自己失去了自慰的渴望，于是结束了淫荡的活动。发出一声沮丧的叹息后，你快速环顾四周，确保没人趁你分神时偷袭。
 			#IF(pc.hasFetish(FETISH_EXHIBITIONIST))
-				 Much to your disappointment, there's no sign of anyone having watched your lewd display,
+				令你失望的是，没有人观看了你的淫秽表演、
 			#ELSE
-				 Much to your relief, there's absolutely no sign of anyone in the woods around you,
+				让你松了一口气的是，周围的树林里完全没有人的踪迹、
 			#ENDIF
-			 and so with little else to do here you prepare to move off and continue on your way.
+			因此，在这里无事可做，你离开了。
 		</p>
 		<p>
-			Before you go, however, you take one last glance down at the berry bush which provided you with this unexpected experience. Much to your amazement, you see that there are already tiny little red and purple berries starting to regrow on the plant's green stems. Not wanting to wait around for who-knows how many hours or days it will take for them to reach full maturity, you let out one final sigh and set off on your way through the woods once again...
+			不过，在离开前，你最后看了一眼给你带来这次意外经历的浆果丛。让你惊讶的是，绿色的茎上已经开始重新长出小红紫浆果。你不想浪费时间，不知道要等多少个小时或多少天它们才能完全成熟，于是你轻叹一声，再次启程……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Finding clearing encounter: -->
 	
 	<htmlContent tag="FIND_CLEARING"><![CDATA[
 	<p>
-		Although the patches of woodland surrounding Elis aren't large by any stretch of the imagination, they're still big enough to conceal many interesting terrain features, such as small ponds, rocky depressions, and tranquil clearings. It's into one of these clearings which you find yourself inadvertently entering, and thanks to the
+		伊利斯周围的林地面积并不大，却足以隐藏许多有趣的地形特征，例如小池塘、岩石洼地和宁静的空地。你无意中进入了其中一种，多亏了
 		#IF(game.isDayTime())
-			 sunlight
+			阳光
 		#ELSE
-			 moonlight
+			月光
 		#ENDIF
-		 which is streaming down through the break in the canopy, you're able to immediately identify a couple of fallen trees which look suitable for you to use as a place to sit down and get some rest.
+		从树冠的缝隙中洒下来的阳光，让你发现了几棵倒下的树，它们看起来很适合坐下休息。
 	</p>
 	<p>
 		#IF(game.getSeason()==SEASON_WINTER)
-			Although there isn't much foliage to be seen at this time of year, there are a few nearby coniferous trees which add a welcome splash of green to the otherwise monotone landscape.
+			虽然在这个季节树叶稀疏，但附近有几棵针叶树，为原本单调的景色增添了一抹绿色。
 			#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-				 Although the clearing's floor is covered in deep snow, there are several animal tracks which criss-cross the area, which would allow you to easily approach the fallen trees and take a break, if you should so desire...
+				虽然地面上覆盖着厚厚的积雪，但有不少动物的足迹纵横交错，如果你想的话，可以在倒地的树木上休息一下……
 			#ELSE
-				 With winter's first snow not yet having fallen, the frozen ground is covered in browning grass, and as you take a moment to 
+				冬天的第一场雪还没下，冰冻的地面满是枯黄的草，你可以花一点时间 
 				#IF(game.isDayTime())
-					 listen to the occasional chirp of birdsong,
+					聆听偶尔传来的鸟鸣、
 				#ELSE
-					 appreciate the quiet of the night,
+					欣赏夜晚的宁静、
 				#ENDIF
-				 you wonder whether to stop here and take a short break...
+				你想知道是否要在这里停下来稍作休息……
 			#ENDIF
 		#ELSEIF(game.getSeason()==SEASON_AUTUMN)
-			Due to the time of year, the leaves on the surrounding trees can be seen in all sorts of beautiful shades of red, orange, yellow, and green. The clearing's floor is painted in these same colours, and with a pleasant, moist scent of autumnal mulch in the air, you take a moment to
+			由于时节关系，周围的树叶呈现出红、橙、黄、绿等各种美丽的色调。空旷地面也被涂上了同样的颜色，空气中弥漫着秋天泥土的湿润气息，令人心旷神怡。
 			#IF(game.isDayTime())
-				 listen to the birdsong
+				聆听鸟鸣
 			#ELSE
-				 appreciate the quiet of the night
+				欣赏夜的宁静
 			#ENDIF
-			 and wonder whether to stop here and take a short break...
+			并思考是否要在此停留，稍作休息……
 		#ELSE
-			Although a gentle breeze causes the surrounding trees to rhythmically sway to and fro, the wind's strength is depleted by the time it reaches the clearing's floor, allowing the wild grasses and flowers before you to remain all but motionless. These pretty flowers bestow a delicate floral scent to this area, and you can't help but stop and take a moment to appreciate both the scene before you and the
+			一阵微风吹来，周围树木有节奏地来回摇摆，但风吹到空地上时，风力已耗尽，在你眼前的野花野草一动不动。这片区域弥漫着淡淡的花香，你不禁停下脚步，欣赏眼前的景色和
 			#IF(game.isDayTime())
-				 harmonious sound of birdsong.
+				和谐的鸟鸣声。
 			#ELSE
-				 quiet of the night.
+				宁静的夜晚。
 			#ENDIF
-			 Letting out a satisfied sigh, you wonder whether to stop here and take a short break...
+			发出一声满足的叹息，你在想是否就此停下，稍作休息……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLEARING_RELAX"><![CDATA[
 	<p>
-		Deciding that you deserve a break, you head over to the fallen trees and find a comfortable spot upon which to sit. Letting your mind wander, you spend about half an hour relaxing in this tranquil clearing, after which you feel remarkably refreshed and well rested. Wondering if your rejuvenation is due to some sort of benevolent arcane spell, or if it's simply the calming nature of this clearing at work, you stand back up and set off on your way once again...
+		你决定休息一下，走到倒下的树旁，找了个舒适的地方坐下。在这片宁静的空地上，花了半个小时来放松自己。你感到神清气爽，休息得很不错。不知道充分休息是因为某种仁慈的奥术法术，还是仅仅是这空地的平静性质在起作用，你重新站了起来，再次踏上路途……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLEARING_LEAVE"><![CDATA[
 	<p>
-		You don't have time to relax in the clearing, and so quickly pass over to the other side and continue on your way...
+		你没有时间在空地上休息，于是迅速穿过空地，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

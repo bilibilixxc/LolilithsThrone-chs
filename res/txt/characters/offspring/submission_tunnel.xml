@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER"><![CDATA[
@@ -12,185 +12,185 @@
 	
 	#IF(!npc.hasFlag(NPC_FLAG_flagOffspringIntroduced))
 		<p>
-			Although the narrow, twisting tunnels of Submission appear to be deserted, there's no shortage of inset doorways, large, metal pipes, or crumbling brickwork to offer would-be attackers the perfect place to hide. Thankfully, these spots for an ambush have been overlooked by the next person you see, for as you turn a corner, you spot [npc.a_fullRace(true)] a short way up ahead, who's leaning back against one of the tunnel's walls.
+			迷宫般的狭窄隧道看似荒凉无人，但随处可见凹陷的门廊、巨大的金属管道以及破败的砖石结构，为潜在的袭击者提供了理想的藏身之处。好在有个人完全无视了这些伏击点。你转过拐角，抬起头，看见一个[npc.a_fullRace(true)]倚在隧道墙上。
 		</p>
 		#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
 			<p>
 				#IF(npc.isConfident())
-					From [npc.her] slutty attire, the amount of makeup plastered on [npc.her] face, and [npc.her] general posturing, there's almost no doubt in your mind that [npc.sheIs] a prostitute. As [npc.she] notices your approach, [npc.she] steps out to block your path, and in a sultry tone, confirms your suspicions, [npc.speech(Hey babe! You lookin' for a good time? Fifty flames for an hour's ride with [npc.name]!)]
-				#ELSE
-					From [npc.her] slutty attire, the amount of makeup plastered on [npc.her] face, and [npc.her] general posturing, there's almost no doubt in your mind that [npc.sheIs] a prostitute. As [npc.she] notices your approach, [npc.she] looks over at you, and in a sultry tone, confirms your suspicions, [npc.speech(You lookin' for a good time? Only fifty flames and [npc.namePos] all yours for an hour!)]
-				#ENDIF
-			</p>
-			<p>
-				Your gaze is drawn to [npc.her] [npc.hands] as [npc.she] sensually runs [npc.her] [npc.fingers+] up the length of [npc.her] body, before stopping at [npc.her] chest to push [npc.her] [npc.breasts+] together. Looking up to [npc.her] face as you prepare to give [npc.herHim] your answer, your planned response leaves your mouth as a surprised gasp, as you find yourself instantly recognising the person before you.
-			</p>
-			<p>
-				#IF(npc.isConfident())
-					[npc.speech(Yeah, I know, right?! It's such a bargain that you don't know what to say! So, just hand those fifty flames over and we can get right to the fuckin-)] [npc.Her] words are abruptly cut off as [npc.her] [npc.eyeColour] [npc.eyes] finally come to rest on your [pc.face]. [npc.speech(No way... [npc.PcName]?!)]
-				#ELSE
-					[npc.speech(Don't act so surprised! Just hand over the fifty flames and we can start alre-)] [npc.Her] words are abruptly cut off as [npc.her] [npc.eyeColour] [npc.eyes] finally come to rest on your [pc.face]. [npc.speech(N-No way... [npc.PcName]?!)]
-				#ENDIF
-			</p>
-		#ELSE
-			<p>
-				#IF(npc.isConfident())
-					From the devilish grin on [npc.her] face, combined with the evidence of an empty wallet on the floor beside [npc.herHim], and the handful of coins that you see [npc.herHim] putting away, there's almost no doubt in your mind that [npc.sheIs] a mugger, and has just finished with [npc.her] latest victim. As [npc.she] notices your approach, [npc.she] steps out to block your path, and in a low growl, confirms your suspicions, [npc.speech(Looks like another poor lost little lamb's come to pay [npc.name] the toll for walking through [npc.her] territory!)]
-				#ELSE
-					From the devilish grin on [npc.her] face, combined with the evidence of an empty wallet on the floor beside [npc.herHim], and the handful of coins that you see [npc.herHim] putting away, there's almost no doubt in your mind that [npc.sheIs] a mugger, and has just finished with [npc.her] latest victim. As [npc.she] notices your approach, [npc.she] glances over at you, and in a low growl, confirms your suspicions, [npc.speech(You're gonna have to pay the toll for walking through [npc.namePos] territory!)]
-				#ENDIF
-			</p>
-			<p>
-				You let out an irritated sigh as you realise that this amateur is referring to [npc.herself] in the third person, as if that's meant to make them sound more important. Looking up to [npc.her] face as you prepare to give [npc.herHim] a piece of your mind, your planned response leaves your mouth as a surprised gasp, as you find yourself instantly recognising the person before you.
-			</p>
-			<p>
-				#IF(npc.isConfident())
-					[npc.speech(Yeah, that's the reaction I'm lookin' for! Poor, scared little thing, gasping at the thought of what I'm gonna do to you! Perhaps after I've got your flames, I'll give you a good fuckin-)] [npc.Her] words are abruptly cut off as [npc.her] [npc.eyeColour] [npc.eyes] finally come to rest on your [pc.face]. [npc.speech(No way... [npc.PcName]?!)]
-				#ELSE
-					[npc.speech(Gasping and acting all innocent isn't gonna make me let you go! Just hand over your flames, and maybe I'll decide not to fuck yo-)] [npc.Her] words are abruptly cut off as [npc.her] [npc.eyeColour] [npc.eyes] finally come to rest on your [pc.face]. [npc.speech(N-No way... [npc.PcName]?!)]
-				#ENDIF
-			</p>
-		#ENDIF
-		<p>
-			Whether by some natural instinct, or perhaps some curious quirk of the arcane, you're instantly left with no doubt in your mind that the [npc.woman] in front of you is your [npc.relation(pc)]. From [npc.her] reaction, it's quite apparent that [npc.sheHas] recognised you as well, and as [npc.her] [npc.hands] reach up to cover [npc.her] [npc.mouth] in shock, you're left to decide how best to respond...
-		</p>
-	#ELSE
-		<p>
-			#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
-				Knowing that [npc.name] lives in this area, you keep an eye out for your [npc.relation(pc)] as you travel through the twisting, narrow tunnels of Submission. Sure enough, as you cast your glance down a particularly gloomy service tunnel that you pass on your right, you see the familiar figure of your [npc.race] [npc.relation(pc)] applying yet more makeup in an attempt to attract future customers. Deciding to take a quick detour to check in on [npc.herHim], you enter this confined passageway and start to [pc.walk] towards [npc.herHim].
+				[npc.her]穿着下流的衣服，脸上铺着厚厚的脂粉，正在搔首弄姿。你想都没想，就看出[npc.her]是个妓女。[npc.she]注意到你，上前堵住了路。[npc.she]魅惑的语调更证实了你的猜测，[npc.speech(嘿，宝贝儿！想来找点乐子吗？50火币就可以骑[npc.name]一小时哦！)]
 			#ELSE
-				Knowing that [npc.name] lives in this area, you keep an eye out for your [npc.relation(pc)] as you travel through the twisting, narrow tunnels of Submission. Sure enough, as you cast your glance down a particularly gloomy service tunnel that you pass on your right, you see the familiar figure of your [npc.race] [npc.relation(pc)] lurking in the shadows. Deciding to take a quick detour to check in on [npc.herHim], you enter this confined passageway and start to [pc.walk] towards [npc.herHim].
+				[npc.her]穿着下流的衣服，脸上铺着厚厚的脂粉，正在搔首弄姿。你几乎能猜到[npc.her]是个妓女。[npc.she]注意到你，上前堵住了路。[npc.she]魅惑的语调更证实了你的猜测，[npc.speech(想来找点乐子吗？50火币就能独占[npc.namePos]一小时哦！)]
 			#ENDIF
 		</p>
+			<p>
+			你的视线被[npc.her]的[npc.hands]牢牢锁住。[npc.she][npc.fingers+]沿着躯干向上游移，描摹着身体的线条，然后停在胸部，把[npc.breasts+]挤到一起。你抬起头，准备回答。你看见[npc.her]的脸，计划好的回应瞬间变成了倒吸一口凉气。
+		</p>
+			<p>
+			#IF(npc.isConfident())
+				[npc.speech(来，我懂你，没关系哦？是不是被便宜得大吃一惊啦！乖乖交来50火币，我们开始扌——)][npc.Her]硬生生把话吃回喉咙里，[npc.eyeColour]的[npc.eyes]最终定格在你的[pc.face]上。[npc.speech(不会吧……[npc.PcName]？！)]
+			#ELSE
+				[npc.speech(别一惊一乍的！乖乖交来50火币，我们开始扌——)][npc.Her]硬生生把话吃回喉咙里，[npc.eyeColour]的[npc.eyes]最终定格在你的[pc.face]上。[npc.speech(不，不会吧……[npc.PcName]？！)]
+			#ENDIF
+		</p>
+		#ELSE
+			<p>
+			#IF(npc.isConfident())
+				[npc.her]脸上挂着邪恶的笑容，地上扔着一个空钱包，脚边还散落着证据。你看见[npc.herHim]捧起一把硬币，想都没想，就看出这是个刚抢完人的小偷。[npc.she]注意到你，上前堵住了路。[npc.she]低沉的咆哮更证实了你的猜测，[npc.speech(看看吧，又来了一只可怜的迷路小羊羔，来给你[npc.namePos]交过路费咯！)]
+			#ELSE
+				[npc.her]脸上挂着邪恶的笑容，地上扔着一个空钱包，脚边还散落着证据。你看见[npc.herHim]捧起一把硬币，几乎能猜到这是个刚抢完人的小偷。[npc.she]注意到你，上前堵住了路。[npc.she]低沉的咆哮更证实了你的猜测，[npc.speech(想过去？得先给你[npc.namePos]交过路费！)]
+			#ENDIF
+		</p>
+			<p>
+				你看着小混混不断装模作样地自称[npc.namePos]，忍不住烦躁地出了口气。你抬起头，准备说点什么，不过一看到[npc.her]的脸，你不由得吸了一口气。你认出了这个人。
+			</p>
+			<p>
+			#IF(npc.isConfident())
+				[npc.speech(真好，我喜欢你的反应。吓破胆的小东西，猜猜看我要对你做什么？等我刮干净你的火币，说不定我们能大扌——)][npc.Her]硬生生把话吃回喉咙里，[npc.eyeColour]的[npc.eyes]最终定格在你的[pc.face]上。[npc.speech(不会吧……[npc.PcName]？！)]
+			#ELSE
+				[npc.speech(我可不会因为装可怜就放过你哦！乖乖把火币交上来，说不定我就不扌——)][npc.Her]硬生生把话吃回喉咙里，[npc.eyeColour]的[npc.eyes]最终定格在你的[pc.face]上。[npc.speech(不，不会吧……[npc.PcName]？！)]
+			#ENDIF
+		</p>
+		#ENDIF
 		<p>
-			#IF(affection<AFFECTION_NEGATIVE_FOUR_HATE.getMaximumValue())
+		可能是出于自然本能，也可能是某种神秘的奥术感应，你立刻意识到并且认定前面那个[npc.woman]是你的[npc.relation(pc)]。[npc.her]的反应透露出[npc.her]显然也认出了你。[npc.her]震惊地用[npc.hands]紧紧捂住[npc.mouth]。你微微转身，决定最佳的回应方式……
+	</p>
+	#ELSE
+		<p>
+		#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
+			你知道[npc.name]住在这附近。你边穿越着御城区幽静的后巷，边寻找着[npc.relation(pc)]的痕迹。你把目光投向右侧格外阴暗的小道，不出所料，看到了熟悉的身影。[npc.race][npc.relation(pc)]正在一层又一层地涂脂抹粉，试图吸引潜在的顾客。你决定稍微绕个道看看[npc.herHim]。你进入小巷，朝[npc.herHim]走去。
+		#ELSE
+			你知道[npc.name]住在这附近。你边穿越着御城区幽静的后巷，边寻找着[npc.relation(pc)]的痕迹。你把目光投向右侧格外阴暗的小道，不出所料，看到了熟悉的身影。[npc.race][npc.relation(pc)]潜伏在阴影中。你决定稍微绕个道看看[npc.herHim]。你进入小巷，朝[npc.herHim]走去。
+		#ENDIF
+	</p>
+		<p>
+		#IF(affection<AFFECTION_NEGATIVE_FOUR_HATE.getMaximumValue())
 				#IF(npc.isSelfish())
-					Hearing your approach, [npc.name] turns towards you, and in a furious tone, [npc.she] shouts at you, [npc.speech(What the fuck do you want?! If you're not here to apologise, then turn around and fuck off!)]
+					[npc.name]听到你接近，转过身，以怪诞的语调冲你大喊，[npc.speech(你他妈的到底要干什么？！如果你不是来道歉的，那就滚回去！)]
 				#ELSE
-					Hearing your approach, [npc.name] turns towards you, and with an angry scowl, [npc.she] cries out, [npc.speech(What the hell do you want?! Unless you're here to apologise, I'm not interested in anything you have to say!)]
+					[npc.name]听到你接近，转过身，愤怒地皱着眉，哭叫道，[npc.speech(我干你妈的！你到底要什么？！如果不是来道歉的，我他妈的不会听你一句鬼话！)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_NEGATIVE_TWO_DISLIKE.getMaximumValue())
 				#IF(npc.isConfident())
-					Hearing your approach, [npc.name] turns towards you, and in an angry tone, [npc.she] scowls at you, [npc.speech(I'm not talking to you! If you're not here to apologise, you may as well turn right around and get out of here!)]
+					[npc.name]听到你接近，转过身，皱着眉，以愤怒的语调冲你大喊，[npc.speech(我不会听你讲话！如果你不是来道歉的，就快点离开这里！)]
 				#ELSE
-					Hearing your approach, [npc.name] turns towards you, and with an angry scowl, [npc.she] calls out, [npc.speech(I'm not talking to you! Unless you're here to apologise, just go away and leave me alone!)]
+					[npc.name]听到你接近，转过身，愤怒地皱着眉，大喊道，[npc.speech(我不会听你讲话！如果你不是来道歉的，就快点走，让我自己静静！)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
 				#IF(npc.isConfident())
-					Hearing your approach, [npc.name] turns towards you, and in a rather cold manner, [npc.she] calls out, [npc.speech(Oh, it's you. Hi, [npc.pcName].)]
+					[npc.name]听到你接近，转过身，动作相当僵硬，[npc.she]喊道，[npc.speech(哇哦，是你。你好，[npc.pcName]。)]
 				#ELSE
-					Hearing your approach, [npc.name] turns towards you, and with a distinct lack of emotion in [npc.her] voice, [npc.she] calls out, [npc.speech(Hi, [npc.pcName].)]
+					[npc.name]听到你接近，转过身，以一种干巴巴的缺少感情的声音说道，[npc.speech(嘿，[npc.pcName]。)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_POSITIVE_ONE_FRIENDLY.getMaximumValue())
 				#IF(npc.isConfident())
-					Hearing your approach, [npc.name] turns towards you, and with a big smile on [npc.her] [npc.face], [npc.she] calls out, [npc.speech([npc.PcName]! You're back!)]
+					[npc.name]听到你接近，转过身，[npc.face]绽开大大的笑容。[npc.she]喊道，[npc.speech([npc.PcName]！你回来啦！)]
 				#ELSE
-					Hearing your approach, [npc.name] turns towards you, and with a smile on [npc.her] [npc.face], [npc.she] calls out, [npc.speech(Hi, [npc.pcName]!)]
+					[npc.name]听到你接近，转过身，[npc.face]绽开大大的笑容。[npc.she]喊道，[npc.speech(你好呀，[npc.pcName]！)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_POSITIVE_THREE_CARING.getMaximumValue())
 				#IF(npc.isConfident())
-					Hearing your approach, [npc.name] turns towards you, and you see [npc.her] [npc.face] light up as [npc.she] excitedly calls out, [npc.speech([npc.PcName]! I've missed you so much!)]
+					[npc.name]听到你接近，转过身，脸庞明亮起来。[npc.she]兴奋地大喊，[npc.speech([npc.PcName]！我好想你！)]
 				#ELSE
-					Hearing your approach, [npc.name] turns towards you, and with a voice filled with excitement, [npc.she] calls out, [npc.speech([npc.PcName]! You've come back to see me again!)]
+					[npc.name]听到你接近，转过身，声音里满满的激动。[npc.she]兴奋地大喊，[npc.speech([npc.PcName]！你又来看我啦！)]
 				#ENDIF
 			#ELSE
 				#IF(npc.isConfident())
-					Hearing your approach, [npc.name] turns towards you, and upon seeing who you are, [npc.she] excitedly jumps up and down on the spot and [npc.she] gleefully calls out, [npc.speech([npc.PcName]! You're back! I've missed you so much! I love you!)]
+					[npc.name]听到你接近，转过身。[npc.she]认出了你是谁，兴奋地上蹿下跳，兴高采烈地喊道，[npc.speech([npc.PcName]！你回来啦！我好想你！我爱你！)]
 				#ELSE
-					Hearing your approach, [npc.name] turns towards you, and you see [npc.her] [npc.eyes] light up with joy as [npc.she] gleefully calls out, [npc.speech([npc.PcName]! You've come back to see me again! I love you!)]
+					[npc.name]听到你接近，转过身。你对上一双充满喜悦的[npc.eyes]。[npc.she]兴高采烈地喊道，[npc.speech([npc.PcName]！你又来看我啦！我爱你！)]
 				#ENDIF
 			#ENDIF
 		</p>
 		#IF(offspringPregnant || playerPregnant)
 			<p>
-				#IF(affection<AFFECTION_NEGATIVE_THREE_STRONG_DISLIKE.getMaximumValue())
+			#IF(affection<AFFECTION_NEGATIVE_THREE_STRONG_DISLIKE.getMaximumValue())
 					#IF(playerPregnant)
 						#IF(reactedToPlayerPregnancy)
-							As you continue to approach your [npc.relation(pc)], [npc.she] lets out a disapproving snort as [npc.her] [npc.eyes] move down to rest on your pregnant belly. [npc.speech(Still pregnant, I see. Stupid slut.)]
+							你继续接近[npc.relation(pc)]，[npc.she]轻蔑地哼了一声，眼神落在你的孕肚上。[npc.speech(还是怀孕了，我就知道。蠢婊子。)]
 						#ELSE
-							As you continue to approach your [npc.relation(pc)], [npc.she] lets out an exasperated gasp as [npc.her] [npc.eyes] move down to rest on your pregnant belly. [npc.speech(You're pregnant?! Again?! Do this next lot a favour and don't try to ruin their lives, like you have with mine!)]
+							你继续接近[npc.relation(pc)]，[npc.she]懊恼地哼了一声，眼神落在你的孕肚上。[npc.speech(你怀孕了？！又怀孕？！行行好吧，别再毁掉别人的生活。你毁掉我还不够吗！)]
 						#ENDIF
 						#IF(offspringPregnant)
 							</p>
 							<p>
-						#ENDIF
-					#ENDIF
-					#IF(offspringPregnant)
-						#IF(reactedToOffspringPregnancy)
-							The sound of your footsteps echoing off the brick walls of the tunnel are interrupted as [npc.name] steps out of the shadows, stroking [npc.her] swollen stomach as [npc.she] calls out, [npc.speech(Unlike <i>you</i>, I'm taking good care of my children! Not that you'd give a damn; you're probably going to treat them just as badly as you do with me!)]
-						#ELSE
-							The sound of your footsteps echoing off the brick walls of the tunnel are suddenly silenced as you stop dead in your tracks. As [npc.name] steps out from the shadows, you see that [npc.sheIs] stroking a very swollen stomach, and calls out," [npc.speech(That's right, <i>[npc.pcName]</i>! You got me pregnant, you stupid slut! I seriously can't believe that my own [pc.mother] knocked me up! I hate you, I <i>hate</i> you!)]
-						#ENDIF
-					#ENDIF
-				#ELSEIF (affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
-					#IF(playerPregnant)
-						#IF(reactedToPlayerPregnancy)
-							As you continue to approach your [npc.relation(pc)], [npc.she] lets out a disinterested hum as [npc.her] [npc.eyes] move down to rest on your pregnant belly. [npc.speech(Still pregnant, I see.)]
-						#ELSE
-							As you continue to approach your [npc.relation(pc)], [npc.she] lets out a shocked gasp as [npc.her] [npc.eyes] move down to rest on your pregnant belly. [npc.speech(You're pregnant?! Well, it's obviously not your first time, so I'm sure you know what you're doing...)]
-						#ENDIF
-						#IF(offspringPregnant)
-							</p>
-							<p>
-						#ENDIF
-					#ENDIF
-					#IF(offspringPregnant)
-						#IF(reactedToOffspringPregnancy)
-							The sound of your footsteps echoing off the brick walls of the tunnel are interrupted as [npc.name] steps out of the shadows, stroking [npc.her] swollen stomach as [npc.she] calls out, [npc.speech(I'm taking good care of our children.)]
-						#ELSE
-							The sound of your footsteps echoing off the brick walls of the tunnel are suddenly silenced as you stop dead in your tracks. As [npc.name] steps out from the shadows, you see that [npc.sheIs] stroking a very swollen stomach, and calls out, [npc.speech(That's right, [npc.pcName], you got me pregnant! I can't believe that my own [pc.mother] knocked me up...)]
-						#ENDIF
-					#ENDIF
-				#ELSE
-					#IF(playerPregnant)
-						#IF(reactedToPlayerPregnancy)
-							As you continue to approach your [npc.relation(pc)], [npc.she] lets out a happy gasp as [npc.her] [npc.eyes] move down to rest on your pregnant belly. [npc.speech(You're still pregnant, I see. I wonder if I'll end up meeting any of my new brothers and sisters?)]
-						#ELSE
-							As you continue to approach your [npc.relation(pc)], [npc.she] lets out a surprised gasp as [npc.her] [npc.eyes] move down to rest on your pregnant belly. [npc.speech(You're pregnant?! Oh, [npc.pcName], I'm so happy for you! I'm going to have some new brothers and sisters!)]
-						#ENDIF
-						#IF(offspringPregnant)
-							</p>
-							<p>
-						#ENDIF
-					#ENDIF
-					#IF(offspringPregnant)
-						#IF(reactedToOffspringPregnancy)
-							The sound of your footsteps echoing off the brick walls of the tunnel are interrupted as [npc.name] steps out of the shadows, stroking [npc.her] swollen stomach as [npc.she] calls out, [npc.speech(I'm taking good care of our children, [npc.pcName]! I'll make you proud!)]
-						#ELSE
-							The sound of your footsteps echoing off the brick walls of the tunnel are suddenly silenced as you stop dead in your tracks. As [npc.name] steps out from the shadows, you see that [npc.sheIs] stroking a very swollen stomach, and calls out, [npc.speech([npc.PcName]... You got me pregnant! I can't believe that my own [pc.mother] knocked me up... I love you [npc.pcName], and I'll take good care of our children!)]
-						#ENDIF
 					#ENDIF
 				#ENDIF
-			</p>
+				#IF(offspringPregnant)
+					#IF(reactedToOffspringPregnancy)
+						你的脚步声回荡在小巷的砖墙上。就在此时，[npc.name]从阴影里走出来，轻抚着[npc.her]隆起的肚子，呼喊道，[npc.speech(我可不像<i>你</i>，我会照顾好自己的孩子！我可指不上你。你大概会毁了他们。就像你毁了我那样！)]
+					#ELSE
+						你的脚步声回荡在小巷的砖墙上。突然间，你停在原地，[npc.name]从阴影里走出来，轻抚着[npc.her]高高隆起的肚子，呼喊道，[npc.speech(看见了吗，<i>[npc.pcName]</i>！我怀了你的孩子，你个傻浪货！真荒谬，我被自己的[pc.mother]操怀孕了！我恨你。我<i>恨</i>你！)]
+					#ENDIF
+				#ENDIF
+			#ELSEIF (affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
+					#IF(playerPregnant)
+						#IF(reactedToPlayerPregnancy)
+							你继续靠近你的[npc.relation(pc)]，[npc.she]漠然地哼了一声，眼神落在你的孕肚上，[npc.speech(还在怀孕。我就知道。)]
+						#ELSE
+							你继续靠近你的[npc.relation(pc)]，[npc.she]惊讶地吸气，眼神落在你的孕肚上，[npc.speech(你怀孕了？！好吧，也不是第一次了，我相信你知道自己在干什么……)]
+						#ENDIF
+						#IF(offspringPregnant)
+							</p>
+							<p>
+					#ENDIF
+				#ENDIF
+				#IF(offspringPregnant)
+					#IF(reactedToOffspringPregnancy)
+						你的脚步声回荡在小巷的砖墙上。就在此时，[npc.name]从阴影里走出来，轻抚着[npc.her]隆起的肚子，呼喊道，[npc.speech(我会照顾好我们的孩子。)]
+					#ELSE
+						你的脚步声回荡在小巷的砖墙上。突然间，你停在原地，[npc.name]从阴影里走出来，轻抚着[npc.her]高高隆起的肚子，呼喊道，[npc.speech(看吧，[npc.pcName]，我怀了你的孩子！真荒谬，我被自己的[pc.mother]操怀孕了……)]
+					#ENDIF
+				#ENDIF
+			#ELSE
+				#IF(playerPregnant)
+					#IF(reactedToPlayerPregnancy)
+						你继续靠近你的[npc.relation(pc)]，[npc.she]开心地舒了口气，眼神落在你的孕肚上。[npc.speech(你又在怀孕，我知道的。我能见到新的弟弟妹妹们吗？)]
+					#ELSE
+						你继续靠近你的[npc.relation(pc)]，[npc.she]惊喜地吸气，眼神落在你的孕肚上。[npc.speech(你怀孕啦？！天呐，[npc.pcName]，我真为你开心！我要见到新弟弟妹妹们啦！)]
+					#ENDIF
+					#IF(offspringPregnant)
+						</p>
+							<p>
+					#ENDIF
+				#ENDIF
+				#IF(offspringPregnant)
+					#IF(reactedToOffspringPregnancy)
+						你的脚步声回荡在小巷的砖墙上。就在此时，[npc.name]从阴影里走出来，轻抚着[npc.her]隆起的肚子，呼喊道，[npc.speech(我会照顾好我们的孩子，[npc.pcName]！你会以我为傲的！)]
+					#ELSE
+						你的脚步声回荡在小巷的砖墙上。突然间，你停在原地，[npc.name]从阴影里走出来，轻抚着[npc.her]高高隆起的肚子，呼喊道，[npc.speech([npc.PcName]……我怀了你的孩子！我竟然被自己的[pc.mother]操怀孕了……我爱你，[npc.pcName]。我会照顾好我们的孩子！)]
+					#ENDIF
+				#ENDIF
+			#ENDIF
+		</p>
 		#ENDIF
 		<p>
-			#IF(npc.hasFlag(NPC_FLAG_flagOffspringFightApologyNeeded) || npc.hasFlag(NPC_FLAG_flagOffspringRapeApologyNeeded))
-				#IF(affection<AFFECTION_NEGATIVE_THREE_STRONG_DISLIKE.getMaximumValue())
-					Coming to a halt in front of your [npc.relation(pc)], you see that [npc.sheIs] sunk into a slight crouch, as though [npc.sheIs] prepared to attack you at any moment. You're not entirely surprised by [npc.her] reaction, and considering what you did to [npc.herHim], you're lucky that [npc.she] didn't run away or attempt to fight you the moment [npc.she] saw you. Realising that you're not going to be able to have a proper conversation with [npc.herHim] until you've sincerely apologised, you're only left with a few options...
+		#IF(npc.hasFlag(NPC_FLAG_flagOffspringFightApologyNeeded) || npc.hasFlag(NPC_FLAG_flagOffspringRapeApologyNeeded))
+			#IF(affection<AFFECTION_NEGATIVE_THREE_STRONG_DISLIKE.getMaximumValue())
+					你停在[npc.relation(pc)]面前。[npc.she]警惕地下蹲，似乎准备随时攻击。你对[npc.her]的反应并不怎么惊讶。考虑到之前的所作所为，你很庆幸[npc.she]没有在看到你的那一刻就逃跑或发起进攻。你真诚道歉之前无法与[npc.herHim]正常交流，现在只剩下几个选择……
 				#ELSEIF (affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
-					Coming to a halt in front of your [npc.relation(pc)], you see that [npc.sheIs] avoiding looking directly at you, as though [npc.sheIs] disinterested in anything you have to say. You're not entirely surprised by [npc.her] reaction, and considering what you did to [npc.herHim], you're lucky that [npc.sheIs] tolerating your presence in such a dignified manner. Realising that you're not going to be able to have a proper conversation with [npc.herHim] until you've apologised for your actions, you're only left with a few options...
+					你停在[npc.relation(pc)]面前。[npc.she]避开目光接触，打算对什么都充耳不闻。你对[npc.her]的反应并不怎么惊讶。考虑到之前的所作所为，你很庆幸[npc.she]能这么礼貌地容忍你过来。你真诚道歉之前无法与[npc.herHim]正常交流，现在只剩下几个选择……
 				#ELSE
-					Coming to a halt in front of your [npc.relation(pc)], you get the sense that [npc.sheIs] slightly uneasy in your presence, despite [npc.her] amicable greeting. You're not entirely surprised by this, and considering what you did to [npc.herHim], you're lucky that [npc.sheIs] still treating you in such a friendly manner. Realising that you're not going to be able to have a proper conversation with [npc.herHim] until you've apologised for your actions, you're only left with a few options...
+					你停在[npc.relation(pc)]面前。尽管[npc.she]友善地打了招呼，但还是有点不安。你对[npc.her]的反应并不怎么惊讶。考虑到之前的所作所为，你很庆幸[npc.she]能如此友善地打招呼。你真诚道歉之前无法与[npc.herHim]正常交流，现在只剩下几个选择……
 				#ENDIF
 			#ELSE
 				#IF(affection<AFFECTION_NEGATIVE_FOUR_HATE.getMaximumValue())
-					Coming to a halt in front of your [npc.relation(pc)], you see that [npc.sheIs] sunk into a slight crouch, as though [npc.sheIs] prepared to attack you at any moment. It really seems as though [npc.she] hates you, and you consider that you're quite lucky that [npc.she] didn't run away or attempt to fight you the moment [npc.she] saw you. Realising that you're not going to be able to have a proper conversation with [npc.herHim] until you've apologised for the way you've acted towards [npc.herHim], you're only left with a few options...
+					你停在[npc.relation(pc)]面前。[npc.she]警惕地下蹲，似乎准备随时攻击。虽然[npc.she]透露着明显的恨意，但值得庆幸的是，[npc.she]没有在看到你的那一刻就逃跑或发起进攻。你在为[npc.herHim]的遭遇真诚道歉之前，无法与[npc.herHim]正常交流，现在只剩下几个选择……
 				#ELSEIF (affection<AFFECTION_NEGATIVE_TWO_DISLIKE.getMaximumValue())
-					Coming to a halt in front of your [npc.relation(pc)], you see that [npc.sheIs] making a point of not looking in your direction, and with head held high, [npc.she] lets out a derisive hum. It really seems as though [npc.she] dislikes you, and if you wanted to have a proper conversation with [npc.herHim], it looks like you'll have to apologise for the way you've acted towards [npc.herHim]...
+					你停在[npc.relation(pc)]面前。[npc.she]刻意避开你，昂首挺胸，轻蔑地哼了一声。[npc.she]好像真的很讨厌你。如果你想正常交谈，最好先为自己对待[npc.herHim]的方式道歉……
 				#ELSEIF (affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
-					As you come to a halt in front of your [npc.relation(pc)], [npc.she] steps forwards and looks into your [pc.eyes]. [npc.She] seems to be mildly annoyed with you at the moment, and you wonder how best to greet [npc.herHim] while [npc.sheIs] like this...
+					你停在[npc.relation(pc)]面前。[npc.she]靠得更近，对上你的[pc.eyes]。[npc.She]似乎有些被惹恼了，你不禁思考该怎么和[npc.herHim]打招呼最好……
 				#ELSEIF (affection<AFFECTION_POSITIVE_ONE_FRIENDLY.getMaximumValue())
-					As you come to a halt in front of your [npc.relation(pc)], [npc.she] steps forwards, and with a smile on [npc.her] face, looks into your [pc.eyes]. [npc.She] seems to be happy to see you, and you wonder how best to greet [npc.herHim] while [npc.sheIs] like this...
+					你停在[npc.relation(pc)]面前，[npc.she]靠得更近，微笑着与你对视。[npc.She]似乎很开心能看见你。你不禁思考该怎么和[npc.herHim]打招呼最好……
 				#ELSEIF (affection<AFFECTION_POSITIVE_THREE_CARING.getMaximumValue())
-					As you come to a halt in front of your [npc.relation(pc)], [npc.she] bounces forwards, and with a big smile on [npc.her] face, [npc.she] looks expectantly at you as [npc.she] waits for your greeting. It's quite obvious that's [npc.sheIs] very happy to see you, and you wonder how best to greet [npc.herHim] while [npc.sheIs] like this...
+					你停在[npc.relation(pc)]面前。[npc.she]蹦跳着前进，脸上挂着灿烂的微笑，眼神满怀期待，等待着你的问候。[npc.she]好像很开心与你见面。你不禁思考该怎么和[npc.herHim]打招呼最好……
 				#ELSE
-					As you come to a halt in front of your [npc.relation(pc)], [npc.she] bounces forwards, and with a big smile on [npc.her] face, [npc.she] gazes lovingly into your [pc.eyes]. It's quite obvious that's [npc.sheIs] more than happy to see you, and you wonder how best to greet [npc.herHim] while [npc.sheIs] like this...
+					你停在[npc.relation(pc)]面前，[npc.she]靠得更近，充满爱意地与你对视。[npc.She]似乎非常开心能看见你。你不禁思考该怎么和[npc.herHim]打招呼最好……
 				#ENDIF
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_GREETING"><![CDATA[
 	#VAR
@@ -199,27 +199,27 @@
 		
 	#IF(!npc.hasFlag(NPC_FLAG_flagOffspringIntroduced))
 		<p>
-			You're the first to recover from the shock of your surprise meeting, and, stepping forwards, you greet your [npc.relation(pc)],
+			你先于你的[npc.relation(pc)]一步从这场意外的相遇所带来的震惊中回过神来，于是你友好地打了个招呼，
 			#IF(npc.getIncubator()!=null)
 				#IF(!npc.getIncubator().isPlayer())
-					 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure [#npc.getIncubator().getName(true)] told you, but I'm-)]
+					[pc.speech([npc.Name]，是你吗？很高兴能遇见你！[#npc.getIncubator().getName(true)]也许告诉过你，但是我——)]
 				#ELSE
 					#IF(pcIsMother)
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched, but I'm your mother. You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，但是我确实是你的母亲。你可以叫我[pc.name]。)]
 					#ELSEIF(npc.getFather()!=null && npc.getFather().isPlayer())
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched, but I'm your father. You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，但是我确实是你的父亲。你可以叫我[pc.name]。)]
 					#ELSE
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched. I'm neither your mother nor father, but I did incubate you until you were ready to hatch... You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，我不是你的父亲或者母亲，但你确实是我的孩子。你可以叫我[pc.name]。)]
 					#ENDIF
 				#ENDIF
 			#ELSE
 				#IF(pcIsMother)
-					 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure Lilaya told you, but I'm-)]
+					[pc.speech([npc.Name]，是你吗？很高兴能遇见你！莉莱雅应该告诉过你，但是我——)]
 				#ELSE
 					#IF(npc.getMother()==null || !npc.getMother().isPlayerKnowsName())
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure your mother told you, but I'm-)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！你妈妈应该告诉过你，但是我——)]
 					#ELSE
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure [#npc.getMother().getName(true)] told you, but I'm-)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！[#npc.getMother().getName(true)]应该告诉过你，但是我——)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
@@ -227,29 +227,29 @@
 		<p>
 			#IF(npc.getIncubator()!=null)
 				#IF(!npc.getIncubator().isPlayer())
-					[npc.speech([pc.Name], yeah, [#npc.getIncubator().getName(true)] told me about you. I didn't really hang around to get the full story, though. You know how it is...)]
+					[npc.speech([pc.Name]，嗯，[#npc.getIncubator().getName(true)]告诉过我关于你的事情，但是我并没有留下来听完关于你的事情，你知道那是怎么回事……)]
 				#ELSE
-					[npc.speech(Yeah, sorry that I didn't hang around to get the full story. You know how it is...)]
+					[npc.speech(对，很抱歉，但是我并没有留下来听完关于你的事情，你知道那是怎么回事……)]
 				#ENDIF
 			#ELSE
 				#IF(pcIsMother)
-					[npc.speech([pc.Name], yeah, Lilaya told me about you. Sorry that I didn't stick around for you to wake up, but, you know how it is...)]
+					[npc.speech([pc.Name]，对，莉莱雅告诉过我关于你的事情，但我没等到你醒过来，你知道那是怎么回事……)]
 				#ELSE
-					[npc.speech([pc.Name], yeah, mum told me about you. I didn't really hang around to get the full story, though. You know how it is...)]
+					[npc.speech([pc.Name]，对，妈妈告诉过我关于你的事，但是我没有留下来听完关于你的事情，你知道那是因为什么……)]
 				#ENDIF
 			#ENDIF
-			 [npc.name] explains, clearly feeling a little guilty about it. [npc.speech(But anyway! Now that you're here, come with me! I can show you my place!)]
+			[npc.name]辩解着，似乎对此有些负罪感，[npc.speech(但无论如何，你来了，和我过来吧，我带你去我住的地方！)]
 		</p>
 	#ELSE
 		<p>
-			Deciding that just a friendly verbal greeting will do, you smile at [npc.name]. [pc.speech(Hello again, [npc.Name], how have you been?)]
+			你看到[npc.name]对你很热情友好，于是你微笑着看向[npc.she]，[pc.speech(那，重新打个招呼吧，[npc.Name]，你过得怎么样？)]
 		</p>
 		<p>
-			[npc.speech(I've been fine, [npc.pcName], you don't need to worry about me,)] [npc.she] replies, before continuing, [npc.speech(I don't like to stop and chat in the same place as I work, so let's go back to my place.)]
+			[npc.speech(我过得还好，[npc.pcName]，不需要为我担心。)][npc.she]接着说，[npc.speech(我不太想在工作的地方和你停下来聊天，所以，和我走吧。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_HUG"><![CDATA[
 	#VAR
@@ -258,27 +258,27 @@
 		
 	#IF(!npc.hasFlag(NPC_FLAG_flagOffspringIntroduced))
 		<p>
-			You're the first to recover from the shock of your surprise meeting, and, stepping forwards, you wrap your [pc.arms] around your [npc.relation(pc)], before pulling [npc.herHim] into a loving hug. [npc.She] returns your embrace, hugging you close to [npc.her] warm body as you both share a happy moment, before breaking away from each other. Looking into [npc.her] [npc.eyes+], you greet your [npc.relation(pc)] for the first time,
+			你先于你的[npc.relation(pc)]一步从这场意外的相遇所带来的震惊中回过神来，于是，你走上前，将你的[pc.arms]环过你[npc.relation(pc)]的身体，给了[npc.herHim]一个爱的拥抱，[npc.She]也抱住了你，把你拉向[npc.her]温暖的身体。你们就这样享受了片刻幸福的时光，之后，你们放开手。你看向[npc.her][npc.eyes+]，向你的[npc.relation(pc)]打了个招呼，
 			#IF(npc.getIncubator()!=null)
 				#IF(!npc.getIncubator().isPlayer())
-					 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure [#npc.getIncubator().getName(true)] told you, but I'm-)]
+					[pc.speech([npc.Name]，是你吗？很高兴能遇见你！[#npc.getIncubator().getName(true)]也许告诉过你，但是我——)]
 				#ELSE
 					#IF(pcIsMother)
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched, but I'm your mother. You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，但是我确实是你的母亲。你可以叫我[pc.name]。)]
 					#ELSEIF(npc.getFather()!=null && npc.getFather().isPlayer())
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched, but I'm your father. You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，但是我确实是你的父亲。你可以叫我[pc.name]。)]
 					#ELSE
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched. I'm neither your mother nor father, but I did incubate you until you were ready to hatch... You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，我不是你的父亲或者母亲，但你确实是我的孩子。你可以叫我[pc.name]。)]
 					#ENDIF
 				#ENDIF
 			#ELSE
 				#IF(pcIsMother)
-					 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure Lilaya told you, but I'm-)]
+					[pc.speech([npc.Name]，是你吗？很高兴能遇见你！莉莱雅应该告诉过你，但是我——)]
 				#ELSE
 					#IF(npc.getMother()==null || !npc.getMother().isPlayerKnowsName())
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure your mother told you, but I'm-)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！你妈妈应该告诉过你，但是我——)]
 					#ELSE
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure [#npc.getMother().getName(true)] told you, but I'm-)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！[#npc.getMother().getName(true)]应该告诉过你，但是我——)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
@@ -286,29 +286,29 @@
 		<p>
 			#IF(npc.getIncubator()!=null)
 				#IF(!npc.getIncubator().isPlayer())
-					[npc.speech([pc.Name], yeah, [#npc.getIncubator().getName(true)] told me about you. I didn't really hang around to get the full story, though. You know how it is...)]
+					[npc.speech([pc.Name]，嗯，[#npc.getIncubator().getName(true)]告诉过我关于你的事情，但是我并没有留下来听完关于你的事情，你知道那是怎么回事……)]
 				#ELSE
-					[npc.speech(Yeah, sorry that I didn't hang around to get the full story. You know how it is...)]
+					[npc.speech(对，很抱歉，但是我并没有留下来听完关于你的事情，你知道那是怎么回事……)]
 				#ENDIF
 			#ELSE
 				#IF(pcIsMother)
-					[npc.speech([pc.Name], yeah, Lilaya told me about you. Sorry that I didn't stick around for you to wake up, but, you know how it is...)]
+					[npc.speech([pc.Name]，对，莉莱雅告诉过我关于你的事情，但我没等到你醒过来，你知道那是怎么回事……)]
 				#ELSE
-					[npc.speech([pc.Name], yeah, mum told me about you. I didn't really hang around to get the full story, though. You know how it is...)]
+					[npc.speech([pc.Name]，对，妈妈告诉过我关于你的事，但是我没有留下来听完关于你的事情，你知道那是因为什么……)]
 				#ENDIF
 			#ENDIF
-			 [npc.name] explains, clearly feeling a little guilty about it. [npc.speech(But anyway! Now that you're here, come with me! I can show you my place!)]
+			[npc.name]辩解着，似乎对此有些负罪感，[npc.speech(但无论如何，你来了，和我过来吧，我带你去我住的地方！)]
 		</p>
 	#ELSE
 		<p>
-			Deciding that [npc.namePos] in need of a hug, you step forwards and wrap your [pc.arms] around your [npc.relation(pc)], before pulling [npc.herHim] into your loving embrace. [npc.She] returns your gesture, hugging you close to [npc.her] warm body as you both share a happy moment, before breaking away from each other. Looking into [npc.her] [npc.eyes+], you greet your [npc.relation(pc)] once again, [pc.speech(Hello again, [npc.Name], how have you been?)]
+			你觉得[npc.namePos]现在需要一个拥抱，于是你走上前，将你的[pc.arms]环过你[npc.relation(pc)]的身体，给了[npc.herHim]一个爱的拥抱，[npc.She]也抱住了你，把你拉向[npc.her]温暖的身体。你们就这样享受了片刻幸福的时光，之后，你们放开手。你看向[npc.her][npc.eyes+]，再次向你的[npc.relation(pc)]问好，[pc.speech(又见到你了，[npc.Name]，最近怎么样？)]
 		</p>
 		<p>
-			[npc.speech(I've been fine, [npc.pcName], you don't need to worry about me,)] [npc.she] replies, before continuing, [npc.speech(I don't like to stop and chat in the same place as I work, so let's go back to my place.)]
+			[npc.speech(我过得还好，[npc.pcName]，不需要为我担心。)][npc.she]接着说，[npc.speech(我不太想在工作的地方和你停下来聊天，所以，和我走吧。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_KISS"><![CDATA[
 	#VAR
@@ -317,27 +317,27 @@
 		
 	#IF(!npc.hasFlag(NPC_FLAG_flagOffspringIntroduced))
 		<p>
-			You're the first to recover from the shock of your surprise meeting, and, stepping forwards, you wrap your [pc.arms] around your [npc.relation(pc)], before planting a wet kiss on [npc.her] cheek and pulling [npc.herHim] into a loving hug. [npc.She] returns your embrace, hugging you close to [npc.her] warm body as you both share a happy moment, before breaking away from each other. Looking into [npc.her] [npc.eyes+], you greet your [npc.relation(pc)] for the first time,
+			你先于你的[npc.relation(pc)]一步从这场意外的相遇所带来的震惊中回过神来，于是，你走上前，在[npc.her]的脸颊上留下了热情的一吻，随后将你的[pc.arms]环过你[npc.relation(pc)]的身体，给了[npc.herHim]一个爱的拥抱，[npc.She]也抱住了你，把你拉向[npc.her]温暖的身体。你们就这样享受了片刻幸福的时光，之后，你们放开手。你看向[npc.her][npc.eyes+]，向你的[npc.relation(pc)]打了个招呼，
 			#IF(npc.getIncubator()!=null)
 				#IF(!npc.getIncubator().isPlayer())
-					 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure [#npc.getIncubator().getName(true)] told you, but I'm-)]
+					[pc.speech([npc.Name]，是你吗？很高兴能遇见你！[#npc.getIncubator().getName(true)]也许告诉过你，但是我——)]
 				#ELSE
 					#IF(pcIsMother)
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched, but I'm your mother. You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，但是我确实是你的母亲。你可以叫我[pc.name]。)]
 					#ELSEIF(npc.getFather()!=null && npc.getFather().isPlayer())
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched, but I'm your father. You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，但是我确实是你的父亲。你可以叫我[pc.name]。)]
 					#ELSE
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I didn't get a chance to speak to you after you'd hatched. I'm neither your mother nor father, but I did incubate you until you were ready to hatch... You can call me [pc.name].)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！在你出生后我没机会和你搭过话，我不是你的父亲或者母亲，但你确实是我的孩子。你可以叫我[pc.name]。)]
 					#ENDIF
 				#ENDIF
 			#ELSE
 				#IF(pcIsMother)
-					 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure Lilaya told you, but I'm-)]
+					[pc.speech([npc.Name]，是你吗？很高兴能遇见你！莉莱雅应该告诉过你，但是我——)]
 				#ELSE
 					#IF(npc.getMother()==null || !npc.getMother().isPlayerKnowsName())
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure your mother told you, but I'm-)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！你妈妈应该告诉过你，但是我——)]
 					#ELSE
-						 [pc.speech([npc.Name], was it? I'm so happy to meet you! I'm sure [#npc.getMother().getName(true)] told you, but I'm-)]
+						[pc.speech([npc.Name]，是你吗？很高兴能遇见你！[#npc.getMother().getName(true)]应该告诉过你，但是我——)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
@@ -345,199 +345,199 @@
 		<p>
 			#IF(npc.getIncubator()!=null)
 				#IF(!npc.getIncubator().isPlayer())
-					[npc.speech([pc.Name], yeah, [#npc.getIncubator().getName(true)] told me about you. I didn't really hang around to get the full story, though. You know how it is...)]
+					[npc.speech([pc.Name]，嗯，[#npc.getIncubator().getName(true)]告诉过我关于你的事情，但是我并没有留下来听完关于你的事情，你知道那是怎么回事……)]
 				#ELSE
-					[npc.speech(Yeah, sorry that I didn't hang around to get the full story. You know how it is...)]
+					[npc.speech(对，很抱歉，但是我并没有留下来听完关于你的事情，你知道那是怎么回事……)]
 				#ENDIF
 			#ELSE
 				#IF(pcIsMother)
-					[npc.speech([pc.Name], yeah, Lilaya told me about you. Sorry that I didn't stick around for you to wake up, but, you know how it is...)]
+					[npc.speech([pc.Name]，对，莉莱雅告诉过我关于你的事情，但我没等到你醒过来，你知道那是怎么回事……)]
 				#ELSE
-					[npc.speech([pc.Name], yeah, mum told me about you. I didn't really hang around to get the full story, though. You know how it is...)]
+					[npc.speech([pc.Name]，对，妈妈告诉过我关于你的事，但是我没有留下来听完关于你的事情，你知道那是因为什么……)]
 				#ENDIF
 			#ENDIF
-			 [npc.name] explains, clearly feeling a little guilty about it. [npc.speech(But anyway! Now that you're here, come with me! I can show you my place!)]
+			[npc.name]辩解着，似乎对此有些负罪感，[npc.speech(但无论如何，你来了，和我过来吧，我带你去我住的地方！)]
 		</p>
 	#ELSE
 		<p>
-			Deciding that [npc.namePos] in need of some parental love, you step forwards and wrap your [pc.arms] around your [npc.relation(pc)], before planting a wet kiss on [npc.her] cheek and pulling [npc.herHim] into a loving hug. [npc.She] returns your gesture, hugging you close to [npc.her] warm body as you both share a happy moment, before breaking away from each other. Looking into [npc.her] [npc.eyes+], you greet your [npc.relation(pc)] once again, [pc.speech(Hello again, [npc.Name], how have you been?)]
+			你觉得[npc.namePos]现在需要感受一下亲情的温暖，于是你走上前，在[npc.her]的脸颊上留下了热情的一吻，随后将你的[pc.arms]环过你[npc.relation(pc)]的身体，给了[npc.herHim]一个爱的拥抱，[npc.She]也抱住了你，把你拉向[npc.her]温暖的身体。你们就这样享受了片刻幸福的时光，之后，你们放开手。你看向[npc.her][npc.eyes+]，再次向你的[npc.relation(pc)]问好，[pc.speech(又见到你了，[npc.Name]，最近怎么样？)]
 		</p>
 		<p>
-			[npc.speech(I've been fine, [npc.pcName], you don't need to worry about me,)] [npc.she] replies, before continuing, [npc.speech(I don't like to stop and chat in the same place as I work, so let's go back to my place.)]
+			[npc.speech(我过得还好，[npc.pcName]，不需要为我担心。)][npc.she]接着说，[npc.speech(我不太想在工作的地方和你停下来聊天，所以，和我走吧。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_PASSIONATE_KISS"><![CDATA[
 	#IF(!npc.hasFlag(NPC_FLAG_flagOffspringIntroduced))
 		#IF(npc.isAttractedTo(pc))
 			<p>
-				You're the first to recover from the shock of your surprise meeting, and, with one thought in your mind, you step forwards, before wrapping your [pc.arms] around [npc.namePos] back. [npc.She] smiles fondly at you, [npc.her] innocent [npc.eyes] informing you that [npc.sheIs] expecting nothing more than a loving hug.
+				你首先从这场突如其来的相遇中回过神来，随后，一个有趣的念头闯进了你的脑海之中，你走上前，用[pc.arms]环过[npc.namePos]的后背，[npc.She]温柔地对你笑着，那双天真的[npc.eyes]提醒了你，[npc.sheIs]所期望的是一个爱的拥抱，而不是更越界的事情。
 			</p>
 			<p>
-				That's not quite what you have in mind, however, and as [npc.she] leans forwards to return your embrace, you quickly press your [pc.lips+] against [npc.hers]. Darting your [pc.hands] up to take hold of [npc.her] head, you passionately thrust your [pc.tongue+] into [npc.her] mouth, desperately [pc.moaning] as you push your surprised [npc.relation(pc)] back against the tunnel's brick wall and start to make out with [npc.herHim].
+				但那不是你所期望的，当你的[npc.relation(pc)]投入你温暖的怀抱中时，你很快将你的[pc.lips+]贴在[npc.hers]唇上，你的[pc.hands]迅速从后面按住了[npc.her]的头，热情地将你的[pc.tongue+]伸进[npc.her]的口中。随后，你在自己急切的[pc.moaning]声中，将你的[npc.relation(pc)]按在通道的砖墙上，和[npc.herHim]更进一步地亲热起来。
 			</p>
 			<p>
-				Much to your delight, [npc.she] doesn't try to push you away, and instead, [npc.her] own [npc.hands] reach up to wrap around your back. Pulling you in closer, [npc.she] starts grinding against you, and you feel [npc.her] own [npc.tongue] wetly sliding over yours as [npc.she] enthusiastically returns your kiss.
+				让你高兴的是，[npc.she]并没有一把把你推开，反而伸出[npc.hands]抱住了你，把你拉得更近。[npc.she]开始在你的身上磨蹭起来，你感觉到[npc.tongue]开始和你的舌头紧紧纠缠起来，回应着你热情的吻。
 			</p>
 			<p>
-				You continue with this for some time, and as you press your [npc.relation(pc)] back against the wall, your [pc.hands] start to move down over [npc.her] body, eagerly groping, stroking, and squeezing every [unit.size] of [npc.her] body that's within your reach. Eventually, you feel as though you should give [npc.herHim] a chance to say something, and after planting one last wet kiss on [npc.her] [npc.lips+], you pull back, smiling.
+				你们就这样亲热了几分钟，随后，你壁咚着你的[npc.relation(pc)]，不安分的[pc.hands]开始向下探索[npc.her]的身体，你的指尖抚摸、揉捏、划过[npc.her]身体的每一[unit.size]皮肤。最后，你觉得该听听[npc.herHim]的感想了，在[npc.her][npc.lips+]上留下一个湿乎乎的吻后，你退后一步，向[npc.her]微笑着。
 			</p>
 			<p>
-				[npc.speech([pc.Name]... That was...)] [npc.she] pants, wiping the excess saliva from [npc.her] mouth. [npc.speech(Wow...)]
+				[npc.speech([pc.Name]……这可真是……)][npc.she]喘息着，拭去嘴角的口水，[npc.speech(哇……)]
 			</p>
 			<p>
-				You can't help but laugh at [npc.namePos] stunned reaction, [pc.speech(Haha, you like that sort of greeting then?)]
+				你看着[npc.namePos]那副拘束的样子，不由得开怀大笑， [pc.speech(哈哈，你喜欢这种问候的方式吗？)]
 			</p>
 			<p>
-				[npc.speech(Yeah, perhaps we should do it more often... But first, come with me! We'll be more comfortable at my place!)]
+				[npc.speech(嗯，我觉得，我们应该经常做这个……不过现在，跟我走吧，到我家里坐坐，那里舒服一些！)]
 			</p>
 		#ELSE
 			<p>
-				You're the first to recover from the shock of your surprise meeting, and, with one thought in your mind, you step forwards, before wrapping your [pc.arms] around [npc.namePos] back. [npc.She] smiles fondly at you, [npc.her] innocent [npc.eyes] informing you that [npc.sheIs] expecting nothing more than a loving hug.
+				你首先从这场突如其来的相遇中回过神来，随后，一个有趣的念头闯进了你的脑海之中，你走上前，用[pc.arms]环过[npc.namePos]的后背，[npc.She]温柔地对你笑着，那双天真的[npc.eyes]提醒了你，[npc.sheIs]所期望的是一个爱的拥抱，而不是更越界的事情。
 			</p>
 			<p>
-				That's not quite what you have in mind, however, and as [npc.she] leans forwards to return your embrace, you quickly press your [pc.lips+] against [npc.hers]. Darting your [pc.hands] up to take hold of [npc.her] head, you passionately thrust your [pc.tongue+] into [npc.her] mouth, desperately [pc.moaning] as you push your surprised [npc.relation(pc)] back against the tunnel's brick wall and start to make out with [npc.herHim].
+				但那不是你所期望的，当你的[npc.relation(pc)]投入你温暖的怀抱中时，你很快将你的[pc.lips+]贴在[npc.hers]唇上，你的[pc.hands]迅速从后面按住了[npc.her]的头，热情地将你的[pc.tongue+]伸进[npc.her]的口中。随后，你在自己急切的[pc.moaning]声中，将你的[npc.relation(pc)]按在通道的砖墙上，和[npc.herHim]更进一步地亲热起来。
 			</p>
 			<p>
-				As the initial shock wears off, [npc.name] starts to struggle, and desperately pushes you away from [npc.herHim]. Taking the opportunity to plant one last wet kiss on [npc.her] [npc.lips+], you then allow yourself to be pushed away, and let out a little laugh as you see the startled expression on your [npc.relation(pc)]'s face.
+				[npc.name]从震惊中回过神来，开始挣扎，用力把你从[npc.herHim]身边推开，你抓住机会在[npc.her][npc.lips+]上留下一个湿乎乎的吻后，任由[npc.her]把你推开。随后，当你看到你[npc.relation(pc)]脸上震惊的表情后，你不由得开心地笑了笑。
 			</p>
 			<p>
-				[npc.speech([pc.Name]! What was that?!)] [npc.she] pants, wiping the excess saliva from [npc.her] mouth. [npc.speech(Y-You can't greet your [npc.relation(pc)] like that!)]
+				[npc.speech([pc.Name]！这，这是做什么？！)][npc.she]喘息着，擦去嘴角的口水，[npc.speech(你，你一直是这样和你的[npc.relation(pc)]打招呼的吗！)]
 			</p>
 			<p>
-				You can't help but continue to smile at [npc.namePos] reaction. [pc.speech(Aw, sorry [npc.name], I just wanted to show you how much I love you!)]
+				你看着[npc.namePos]的反应，笑得更开心了，[pc.speech(啊，对不起啦[npc.name]，我只是想让你知道我有多么爱你！)]
 			</p>
 			<p>
-				[npc.speech(Yeah, well, perhaps leave out the whole kissing part next time... Anyway, come with me! We can talk more at my place.)]
+				[npc.speech(啊，好吧，我知道了，下次就不要这样了……总之，和我走吧，到我家去，我们接着聊聊！)]
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(npc.isAttractedTo(pc))
 			<p>
-				Deciding that your [npc.relation(pc)]'s in need of some intimate parental love, you step forwards and wrap your [pc.arms] around [npc.her] back. [npc.She] smiles fondly at you, [npc.her] innocent [npc.eyes] informing you that [npc.sheIs] expecting nothing more than a loving hug.
+				你觉得你的[npc.relation(pc)]需要感受一下亲情的温暖，于是走上前，用[pc.arms]环过[npc.namePos]的后背，[npc.She]温柔地对你笑着，那双天真的[npc.eyes]提醒了你，[npc.sheIs]所期望的是一个爱的拥抱，而不是更越界的事情。
 			</p>
 			<p>
-				That's not quite what you have in mind, however, and as [npc.she] leans forwards to return your embrace, you quickly press your [pc.lips+] against [npc.hers]. Darting your [pc.hands] up to take hold of [npc.her] head, you passionately thrust your [pc.tongue+] into [npc.her] mouth, desperately [pc.moaning] as you push your surprised [npc.relation(pc)] back against the tunnel's brick wall and start to make out with [npc.herHim].
+				但那不是你所期望的，当你的[npc.relation(pc)]投入你温暖的怀抱中时，你很快将你的[pc.lips+]贴在[npc.hers]唇上，你的[pc.hands]迅速从后面按住了[npc.her]的头，热情地将你的[pc.tongue+]伸进[npc.her]的口中。随后，你在自己急切的[pc.moaning]声中，将你的[npc.relation(pc)]按在通道的砖墙上，和[npc.herHim]更进一步地亲热起来。
 			</p>
 			<p>
-				Much to your delight, [npc.she] doesn't try to push you away, and instead, [npc.her] own [npc.hands] reach up to wrap around your back. Pulling you in closer, [npc.she] starts grinding against you, and you feel [npc.her] own [npc.tongue] wetly sliding over yours as [npc.she] enthusiastically returns your kiss.
+				让你高兴的是，[npc.she]并没有一把把你推开，反而伸出[npc.hands]抱住了你，把你拉得更近。[npc.she]开始在你的身上磨蹭起来，你感觉到[npc.tongue]开始和你的舌头紧紧纠缠起来，回应着你热情的吻。
 			</p>
 			<p>
-				You continue with this for some time, and as you press your [npc.relation(pc)] back against the wall, your [pc.hands] start to move down over [npc.her] body, eagerly groping, stroking, and squeezing every [unit.size] of [npc.her] body that's within your reach. Eventually, you feel as though you should give [npc.herHim] a chance to say something, and after planting one last wet kiss on [npc.her] [npc.lips+], you pull back, smiling.
+				你们就这样亲热了几分钟，随后，你壁咚着你的[npc.relation(pc)]，不安分的[pc.hands]开始向下探索[npc.her]的身体，你的指尖抚摸、揉捏、划过[npc.her]身体的每一[unit.size]皮肤。最后，你觉得该听听[npc.herHim]的感想了，在[npc.her][npc.lips+]上留下一个湿乎乎的吻后，你退后一步，向[npc.her]微笑着。
 			</p>
 			<p>
-				[npc.speech(Mmm, thanks, [npc.pcName]...)] [npc.she] pants, wiping the excess saliva from [npc.her] mouth. [npc.speech(I love these greetings of yours!)]
+				[npc.speech(嗯，谢谢你，[npc.pcName]……)][npc.she]喘息着，擦去嘴角的口水，[npc.speech(我喜欢你打招呼的方式……)]
 			</p>
 			<p>
-				You can't help but smile at [npc.namePos] happy reaction. [pc.speech(I'll make sure to keep them coming!)]
+				看到[npc.namePos]很开心，你笑着说，[pc.speech(那我每次来的时候，都这样和你打招呼好了！)]
 			</p>
 			<p>
-				[npc.speech(Mmm, I think I'm in the mood for some more of your attention... We'll be more comfortable at my place, follow me!)]
+				[npc.speech(嗯，我想我需要些更亲密的接触……在我家里做这些会更舒服， 跟我来！)]
 			</p>
 		#ELSE
 			<p>
-				Deciding that your [npc.relation(pc)]'s in need of some intimate parental love, you step forwards and wrap your [pc.arms] around [npc.her] back. [npc.She] smiles fondly at you, [npc.her] innocent [npc.eyes] informing you that [npc.sheIs] expecting nothing more than a loving hug.
+				你觉得你的[npc.relation(pc)]需要感受一下亲情的温暖，于是走上前，用[pc.arms]环过[npc.namePos]的后背，[npc.She]温柔地对你笑着，那双天真的[npc.eyes]提醒了你，[npc.sheIs]所期望的是一个爱的拥抱，而不是更越界的事情。
 			</p>
 			<p>
-				That's not quite what you have in mind, however, and as [npc.she] leans forwards to return your embrace, you quickly press your [pc.lips+] against [npc.hers]. Darting your [pc.hands] up to take hold of [npc.her] head, you passionately thrust your [pc.tongue+] into [npc.her] mouth, desperately [pc.moaning] as you push your surprised [npc.relation(pc)] back against the tunnel's brick wall and start to make out with [npc.herHim].
+				但那不是你所期望的，当你的[npc.relation(pc)]投入你温暖的怀抱中时，你很快将你的[pc.lips+]贴在[npc.hers]唇上，你的[pc.hands]迅速从后面按住了[npc.her]的头，热情地将你的[pc.tongue+]伸进[npc.her]的口中。随后，你在自己急切的[pc.moaning]声中，将你的[npc.relation(pc)]按在通道的砖墙上，和[npc.herHim]更进一步地亲热起来。
 			</p>
 			<p>
-				As the initial shock wears off, [npc.name] starts to struggle, and desperately pushes you away from [npc.herHim]. Taking the opportunity to plant one last wet kiss on [npc.her] [npc.lips+], you then allow yourself to be pushed away, and let out a little laugh as you see the startled expression on your [npc.relation(pc)]'s face.
+				[npc.name]从震惊中回过神来，开始挣扎，用力把你从[npc.herHim]身边推开，你抓住机会在[npc.her][npc.lips+]上留下一个湿乎乎的吻后，任由[npc.her]把你推开。随后，当你看到你[npc.relation(pc)]脸上震惊的表情后，你不由得开心地笑了笑。
 			</p>
 			<p>
-				[npc.speech([pc.Name]! What was that?!)] [npc.she] pants, wiping the excess saliva from [npc.her] mouth. [npc.speech(Y-You can't greet your [npc.relation(pc)] like that!)]
+				[npc.speech([pc.Name]！这，这是做什么？！)][npc.she]喘息着，擦去嘴角的口水，[npc.speech(你，你一直是这样和你的[npc.relation(pc)]打招呼的吗！)]
 			</p>
 			<p>
-				You can't help but continue to smile at [npc.namePos] reaction. [pc.speech(Aw, sorry [npc.name], I just wanted to show you how much I love you!)]
+				你看着[npc.namePos]的反应，笑得更开心了，[pc.speech(啊，对不起啦[npc.name]，我只是想让你知道我有多么爱你！)]
 			</p>
 			<p>
-				[npc.speech(Yeah, well, perhaps leave out the whole kissing part next time... Anyway, come with me. We can talk more at my place.)]
+				[npc.speech(啊，好吧，我已经知道了，下次就不要这样了……总之，和我走吧，到我家去，我们接着聊聊！)]
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_SCOLDING"><![CDATA[
 	#IF(!npc.hasFlag(NPC_FLAG_flagOffspringIntroduced))
 		#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
 			<p>
-				You're the first to recover from the shock of your surprise meeting, and as your initial surprise fades away, you find that you're shaking your head in utter disbelief. Looking into your [npc.relation(pc)]'s [npc.eyes], you frown in disapproval as you start to voice your concerns, [pc.speech([npc.Name]! Please don't tell me that you're working as a... a prostitute!)]
+				你首先从这场意外的相遇中回过神来，随着最初的惊讶逐渐消失，你发现自己完全无法接受这一切，摇了摇头。你看着你[npc.relation(pc)]的[npc.eyes]，皱着眉头表示不赞同，并开始表达你的担忧，[pc.speech([npc.Name]！别告诉我你在这里……卖身，不会吧！)]
 			</p>
 			#IF(npc.isConfident())
 				<p>
-					[npc.speech(So what if I am?!)] [npc.name] shouts back, clearly upset by your judgemental remark. [npc.speech(It's my body, I can do what I want with it!)]
+					[npc.speech(如果我说‘是’，会怎么样？！)][npc.name]回怼你，对你评论[npc.her]的职业表示不满，[npc.speech(我的身体，我想卖就卖！)]
 				</p>
 			#ELSE
 				<p>
-					[npc.speech(Yeah, so?)] [npc.name] replies, shuffling [npc.her] [npc.feet]. [npc.speech(I can do what I want. It's <i>my</i> body...)]
+					[npc.speech(是这样，然后呢？)][npc.name]挪了挪[npc.her]的[npc.feet]。[npc.speech(我想做什么就做什么，这是<i>我的</i>身体……)]
 				</p>
 			#ENDIF
 		#ELSE
 			<p>
-				You're the first to recover from the shock of your surprise meeting, and as your initial surprise fades away, you find that you're shaking your head in utter disbelief. Looking into your [npc.relation(pc)]'s [npc.eyes], you frown in disapproval as you start to voice your concerns, [pc.speech([npc.Name]! Please don't tell me that you're just another lowlife mugger!)]
+				你首先从这场意外的相遇中回过神来，随着最初的惊讶逐渐消失，你发现自己完全无法接受这一切，摇了摇头。你看着你[npc.relation(pc)]的[npc.eyes]，皱着眉头表示不赞同，并开始表达你的担忧，[pc.speech([npc.Name]！别告诉我你在这里……打家劫舍，就和那些小混混一样，不会吧！)]
 			</p>
 			#IF(npc.isConfident())
 				<p>
-					[npc.speech(So what if I am?!)] [npc.name] shouts back, clearly upset by your judgemental remark. [npc.speech(Do you know how hard it is to make a living around here?!)]
+					[npc.speech(是又怎么样！)][npc.name]回怼你，对你评论[npc.her]的职业表示不满，[npc.speech(你知道我在这里的日子，过得有多艰难吗？！)]
 				</p>
 			#ELSE
 				<p>
-					[npc.speech(Yeah, so what if I am?)] [npc.name] replies, shuffling [npc.her] [npc.feet]. [npc.speech(I need a way to earn money...)]
+					[npc.speech(是，然后呢？)][npc.name]挪了挪[npc.her]的[npc.feet]。[npc.speech(我总得有个赚钱的办法……)]
 				</p>
 			#ENDIF
 		#ENDIF
 		<p>
-			[pc.speech(Don't you back-talk me!)] you respond in the sternest tone you can muster, [pc.speech(I don't approve of what you're doing, and what's more, I don't want you hanging out in these tunnels! It's very dangerous down here!)]
+			[pc.speech(还敢还嘴！)]你以最严厉的语气呵斥道，[pc.speech(我不赞成你这么做，更何况，我不想你在这些通道里闲逛，这里很危险！)]
 		</p>
 		<p>
-			Obviously deciding that it's better to just endure your lecture rather than trying to talk back, [npc.name] just rolls [npc.her] [npc.eyes] and leans back against the wall. You continue to scold [npc.herHim] for a little while, making comments on everything, from the state of [npc.her] clothes, to speculating about the sort of hours [npc.she] keeps.
+			显然，[npc.name]认为与其顶嘴还不如忍受你的说教，[npc.she]只是翻了个白眼，然后靠在墙上。你继续对着[npc.she]全身上下进行无死角输出，从[npc.she]的着装到猜测[npc.she]的作息时间，你对所有事情都发表了意见。
 		</p>
 		<p>
-			Eventually, however, you run out of steam, and [npc.name] pushes [npc.herself] off of the wall, before turning to you. [npc.speech(Thanks for the lecture, [npc.pcName], I'll do my best to meet with your approval for the next time we see each other. Anyway, I don't like to stop and chat in the same place as I work, so let's go back to my place. Perhaps you can have fun lecturing me about the state of my apartment as well...)]
+			但你最终还是说不动了，[npc.name]直起身，转头看向你，[npc.speech(谢谢你的长篇大论，[npc.pcName]，下次见面时，我会尽力让你看我更顺眼些。总之，我不喜欢在工作的地方停下来聊天，所以我们还是回我的住处吧。也许你还可以就我公寓的状况继续发表一番评论……)]
 		</p>
 	#ELSE
 		#IF(npc.getHistory()==OCCUPATION_NPC_MUGGER)
 			<p>
-				As you look [npc.name] up and down, you find yourself shaking your head in utter disbelief. Looking into your [npc.relation(pc)]'s [npc.eyes], you frown in disapproval as you start to voice your concerns, [pc.speech([npc.Name]! Please don't tell me that you're still out here mugging people!)]
+				你上下打量了一番[npc.name]，难以置信地摇了摇头，看向你[npc.relation(pc)]的[npc.eyes]。你皱着眉头表示不赞同，同时表达了你的担忧，[pc.speech([npc.Name]！别告诉我你还在这里……打家劫舍，不会吧！)]
 			</p>
 			#IF(npc.isConfident())
 				<p>
-					[npc.speech(So what if I am?!)] [npc.name] shouts back, clearly upset by your judgemental remark. [npc.speech(Do you know how hard it is to make a living around here?!)]
+					[npc.speech(是又怎么样！)][npc.name]回怼你，对你评论[npc.her]的职业表示不满，[npc.speech(你知道我在这里的日子，过得有多艰难吗？！)]
 				</p>
 			#ELSE
 				<p>
-					[npc.speech(Yeah, so?)] [npc.name] replies, shuffling [npc.her] [npc.feet]. [npc.speech(I need a way to earn money...)]
+					[npc.speech(是，然后呢？)][npc.name]挪了挪[npc.her]的[npc.feet]。[npc.speech(我总得有个赚钱的办法……)]
 				</p>
 			#ENDIF
 		#ELSE
 			<p>
-				As you look [npc.name] up and down, you find yourself shaking your head in utter disbelief. Looking into your [npc.relation(pc)]'s [npc.eyes], you frown in disapproval as you start to voice your concerns, [pc.speech([npc.Name]! Please don't tell me that you're still working as a prostitute!)]
+				你上下打量了一番[npc.name]，难以置信地摇了摇头，看向你[npc.relation(pc)]的[npc.eyes]。你皱着眉头表示不赞同，同时表达了你的担忧，[pc.speech([npc.Name]！别告诉我你还在这里卖身，不会吧？！)]
 			</p>
 			#IF(npc.isConfident())
 				<p>
-					[npc.speech(So what if I am?!)] [npc.name] shouts back, clearly upset by your judgemental remark. [npc.speech(It's my body, I can do what I want with it!)]
+					[npc.speech(如果我说‘是’，会怎么样？！)][npc.name]回怼你，对你评论[npc.her]的职业表示不满，[npc.speech(我的身体，我想卖就卖！)]
 				</p>
 			#ELSE
 				<p>
-					[npc.speech(Yeah, so?)] [npc.name] replies, shuffling [npc.her] [npc.feet]. [npc.speech(I can do what I want. It's <i>my</i> body...)]
+					[npc.speech(是这样，然后呢？)][npc.name]挪了挪[npc.her]的[npc.feet]。[npc.speech(我想做什么就做什么，这是<i>我的</i>身体……)]
 				</p>
 			#ENDIF
 		#ENDIF
 		<p>
-			[pc.speech(Don't you back-talk me!)] you respond in the sternest tone you can muster. [pc.speech(I don't approve of what you're doing, and what's more, I don't want you hanging out in these tunnels! It's very dangerous down here!)]
+			[pc.speech(还敢还嘴！)]你以最严厉的语气呵斥道，[pc.speech(我不赞成你这么做，更何况，我不想你在这些通道里闲逛，这里很危险！)]
 		</p>
 		<p>
-			Obviously deciding that it's better to just endure your lecture rather than trying to talk back, [npc.name] just rolls [npc.her] [npc.eyes] and leans back against the wall. You continue to scold [npc.herHim] for a little while, making comments on everything, from the state of [npc.her] clothes, to speculating about the sort of hours [npc.she] keeps.
+			显然，[npc.name]认为与其顶嘴还不如忍受你的说教，[npc.she]只是翻了个白眼，然后靠在墙上。你继续对着[npc.she]全身上下进行无死角输出，从[npc.she]的着装到猜测[npc.she]的作息时间，你对所有事情都发表了意见。
 		</p>
 		<p>
-			Eventually, however, you run out of steam, and [npc.name] pushes [npc.herself] off of the wall, before turning to you. [npc.speech(Thanks for the lecture, [npc.pcName], I'll do my best to meet with your approval for the next time we see each other. Anyway, I don't like to stop and chat in the same place as I work, so let's go back to my place. Perhaps you can have fun lecturing me about the state of my apartment as well...)]
+			但你最终还是说不动了，[npc.name]直起身，转头看向你，[npc.speech(谢谢你的长篇大论，[npc.pcName]，下次见面时，我会尽力让你看我更顺眼些。总之，我不喜欢在工作的地方停下来聊天，所以我们还是回我的住处吧。也许你还可以就我公寓的状况继续发表一番评论……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_LEAVE"><![CDATA[
 	#VAR
@@ -545,307 +545,307 @@
 	#ENDVAR
 
 	<p>
-		You don't really have time to stop and talk with [npc.name] at the moment, and you tell [npc.herHim] as much, [pc.speech(This isn't the best time for me right now, I'll come back later.)]
+		你时间很紧，没办法停下来和[npc.name]聊聊天了，于是你尽快告诉了[npc.herHim]，[pc.speech(现在我有些事要处理，下次吧，下次我还会回来找你的。)]
 	</p>
 
 	#IF(npc.hasFlag(NPC_FLAG_flagOffspringFightApologyNeeded) || npc.hasFlag(NPC_FLAG_flagOffspringRapeApologyNeeded))
 		<p>
 			#IF(affection<AFFECTION_NEGATIVE_THREE_STRONG_DISLIKE.getMaximumValue())
-				Letting out an angry snort, your [npc.relation(pc)] turns [npc.her] back on you and starts to walk away, shouting over [npc.her] shoulder as [npc.she] makes [npc.her] exit,
+				你的[npc.relation(pc)]生气地哼了一声，转过身去，准备走开了，临走前，[npc.she]回过头对你说，
 				#IF(npc.isConfident())
-					 [npc.speech(Fine, fuck off then! See if I care! Don't bother coming back unless you're gonna apologise!)]
+					[npc.speech(好吧，那就滚蛋！我才不稀罕见到你！除非你道歉，否则就别回来了！)]
 				#ELSE
-					 [npc.speech(Eugh, fine! See if I care! Oh, and don't bother coming back unless you're gonna apologise!)]
+					[npc.speech(行，好吧！我一点也不在乎，除非你要道歉，否则就别回来了！)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
-				Letting out a dismissive snort, your [npc.relation(pc)] turns [npc.her] back on you and starts to walk away, shouting over [npc.her] shoulder as [npc.she] makes [npc.her] exit,
+				你的[npc.relation(pc)]轻蔑地哼了一声，转过身去，准备走开了，临走前，[npc.she]回过头对你说，
 				#IF(npc.isConfident())
-					 [npc.speech(Fine, see you later! And you'd better be ready to apologise by then!)]
+					[npc.speech(好，下次见，希望下次你能好好向我道歉！)]
 				#ELSE
-					 [npc.speech(Fine, see you later! I'm expecting an apology when you return!)])
+					[npc.speech(好，下次见，希望你下次来的时候，已经想好怎么向我道歉了！)])
 				#ENDIF
 			#ELSE
-				Letting out a disappointed whine, your [npc.relation(pc)] reluctantly accepts your excuse to leave.
+				你的[npc.relation(pc)]失望地咕哝了两句，随后不情愿地接受了你离开的借口。
 				#IF(npc.isConfident())
-					 [npc.speech(Ok then... I'll see you later!)]
+					[npc.speech(好吧，那……一定要再见哦！)]
 				#ELSE
-					 [npc.speech(Ok then... I'll see you later I guess...)])
+					[npc.speech(好吧，那……我猜我们还会再见面的，对吧？)])
 				#ENDIF
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
 			#IF(affection<AFFECTION_NEGATIVE_FOUR_HATE.getMaximumValue())
-				Letting out an angry snort, your [npc.relation(pc)] turns [npc.her] back on you and starts to walk away, shouting over [npc.her] shoulder as [npc.she] makes [npc.her] exit,
+				你的[npc.relation(pc)]生气地哼了一声，转过身去，准备走开了，临走前，[npc.she]回过头对你说，
 				#IF(npc.isConfident())
-					[npc.speech(Fine, fuck off then! See if I care!)]
+					[npc.speech(好吧，那就滚蛋！我才不稀罕见到你！)]
 				#ELSE
-					[npc.speech(Eugh, fine! See if I care!)]
+					[npc.speech(行，好吧！我一点也不在乎！)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_NEGATIVE_TWO_DISLIKE.getMaximumValue())
-				Letting out a derisive snort, your [npc.relation(pc)] turns [npc.her] back on you and starts to walk away, shouting over [npc.her] shoulder as [npc.she] makes [npc.her] exit,
+				你的[npc.relation(pc)]嘲讽地哼了一声，转过身去，准备走开了，临走前，[npc.she]回过头对你说，
 				#IF(npc.isConfident())
-					[npc.speech(Fine! See if I care!)]
+					[npc.speech(哼！我才不在乎你！)]
 				#ELSE
-					[npc.speech(Eugh, fine! See if I care!)]
+					[npc.speech(嗯，行吧，我才不在乎你呢！)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
-				Letting out a dismissive snort, your [npc.relation(pc)] turns [npc.her] back on you and starts to walk away, shouting over [npc.her] shoulder as [npc.she] makes [npc.her] exit,
+				你的[npc.relation(pc)]轻蔑地哼了一声，转过身去，准备走开了，临走前，[npc.she]回过头对你说，
 				#IF(npc.isConfident())
-					[npc.speech(Fine, see you later [npc.pcName]!)]
+					[npc.speech(好，下次见，[npc.pcName]。)]
 				#ELSE
-					[npc.speech(Fine, see you later I guess!)]
+					[npc.speech(好吧，希望下次还能见到你。)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_POSITIVE_ONE_FRIENDLY.getMaximumValue())
-				Letting out a disappointed whine, your [npc.relation(pc)] reluctantly accepts your excuse to leave.
+				你的[npc.relation(pc)]失望地咕哝了两句，随后不情愿地接受了你离开的借口。
 				#IF(npc.isConfident())
-					[npc.speech(Fine, see you later [npc.pcName]...)]
+					[npc.speech(好吧，那下次见了，[npc.pcName]……)]
 				#ELSE
-					[npc.speech(Fine, see you later I guess...)]
+					[npc.speech(好吧，那下次一定要来见我……)]
 				#ENDIF
 			#ELSEIF (affection<AFFECTION_POSITIVE_THREE_CARING.getMaximumValue())
-					Letting out a miserable whine, your [npc.relation(pc)] reluctantly accepts your excuse to leave.
+					你的[npc.relation(pc)]很伤心地咕哝了两句，随后不情愿地接受了你离开的借口。
 				#IF(npc.isConfident())
-					[npc.speech(Aww... Come back soon, ok?! I miss you!)]
+					[npc.speech(啊……希望你早点过来，好吗？！我真的很想你！)]
 				#ELSE
-					[npc.speech(Aww... I hope you come back soon...)]
+					[npc.speech(啊……我真的很希望你再回来看看我……)]
 				#ENDIF
 			#ELSE
-				With a look of despair on [npc.her] face, your [npc.relation(pc)] miserably accepts your excuse to leave.
+				你的[npc.relation(pc)]难过的心情溢于言表，经过片刻内心的挣扎后，[npc.she]不情愿地接受了你离开的借口。
 				#IF(npc.isConfident())
-					[npc.speech(Aww... Please come back soon! I love you [npc.pcName]!)]
+					[npc.speech(啊……多回来看看我！我真的很喜欢你，[npc.pcName]！)]
 				#ELSE
-					[npc.speech(Aww... I hope you come back soon... I love you [npc.pcName]!)]
+					[npc.speech(啊……真希望你能早点回来看看我……我爱你，[npc.pcName]！)]
 				#ENDIF
 			#ENDIF
 		</p>
 	#ENDIF
 	<p>
-		Walking away, you leave your [npc.relation(pc)] to get on with whatever it was that [npc.she] was up to, and continue on your journey.
+		你离开了你的[npc.relationship(pc)]，让[npc.she]继续做[npc.she]的事情，而你则继续前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_APOLOGY"><![CDATA[
 	<p>
 		#IF(npc.hasFlag(NPC_FLAG_flagOffspringFightApologyNeeded) && npc.hasFlag(NPC_FLAG_flagOffspringRapeApologyNeeded))
-			Deciding that you need to apologise for both attacking, and then raping your [npc.relation(pc)], you step forwards and start to speak, [pc.speech([npc.Name], I really am sorry for what I've done to you. I'm truly sorry...)]
+			决定对你先袭击后强上你的[npc.relation(pc)]的行为道歉，你迈步上前开口说道，[pc.speech([npc.Name]，我为我对你做过的事情道歉，我真的很对不起……)]
 		#ELSEIF (npc.hasFlag(NPC_FLAG_flagOffspringFightApologyNeeded))
-			Deciding that you need to apologise for attacking your [npc.relation(pc)], you step forwards and start to speak, [pc.speech([npc.Name], I really am sorry for what I've done to you. I'm truly sorry...)]
+			决定对袭击你的[npc.relation(pc)]的行为道歉，你迈步上前开口说道，[pc.speech([npc.Name]，我为我对你做过的事情道歉，我真的很对不起……)]
 		#ELSEIF (npc.hasFlag(NPC_FLAG_flagOffspringRapeApologyNeeded))
-			Deciding that you need to apologise for attacking your [npc.relation(pc)], you step forwards and start to speak, [pc.speech([npc.Name], I really am sorry for what I've done to you. I'm truly sorry...)]
+			决定对袭击你的[npc.relation(pc)]的行为道歉，你迈步上前开口说道，[pc.speech([npc.Name]，我为我对你做过的事情道歉，我真的很对不起……)]
 		#ELSE
-			Deciding that you need to apologise for treating your [npc.relation(pc)] so poorly, you step forwards and start to speak, [pc.speech([npc.Name], I really am sorry for the way I've treated you. I know I've done some bad things, but please believe me when I say that I'm truly sorry.)]
+			决定要为你对待[npc.relation(pc)]太过恶劣的行为道歉，你迈步上前开口说道，[pc.speech([npc.Name]我对自己曾经对待你的方式真诚地道歉。我知道我做过的事情很恶劣，但请相信我，我真的非常抱歉。)]
 		#ENDIF
 	</p>
 		
 	#IF(npc.isConfident())
 		<p>
-			[npc.Name] turns towards you and puts [npc.her] [npc.hands] on [npc.her] [npc.hips]. [npc.speech(You're damn right you're sorry! And you're going to need to say more than that if you want me to forgive you!)]
+			[npc.Name]转向你并把[npc.her]的[npc.hands]放在[npc.her]的[npc.hips]上。[npc.speech(你他妈当然会觉得抱歉！只靠这两句话我可不会原谅你！)]
 		</p>
 		<p>
-			You continue to apologise to your [npc.relation(pc)] for some time, and while [npc.she] frequently interrupts you to berate you, you can tell that your words are having a positive effect. After a while of this back-and-forth, you run out of ways in which to say sorry, and [npc.name] finally stops shouting at you, before stepping back and sighing.
+			你又继续给你的[npc.relation(pc)]道歉了一阵，当你发现[npc.she]频繁地打断并呵斥你时，你明白你的话开始起作用了。就这样说了几轮车轱辘话后，你已经想不出道歉的话了，而[npc.name]也终于不再对你怒吼，随后退后一些，张口叹气。
 		</p>
 		<p>
-			A heavy silence fills the air, and just as you're about to say something to break it, [npc.name] finally speaks once more, [npc.speech(I need some time to think about this. Just... Eugh! Come back later if you really care.)]
+			空气中充满了沉重的静默，正在你向说些什么打破沉默时，[npc.name]终于又开口了，[npc.speech(我需要一些时间好好想想这些事，能不能……啊啊啊！你要是真在乎我就晚点再来找我！)]
 		</p>
 		<p>
-			With that, [npc.she] spins around and hurriedly walks off, [npc.her] words echoing in your [pc.ears] as you watch [npc.herHim] turn the corner and disappear out of sight.
+			话音刚落，[npc.she]急匆匆地扭头就走。你看着[npc.herHim]转过在拐角消失在你的视野中，[npc.her]的话还在你的脑海中回荡。
 		</p>
 		<p>
-			[pc.thought(That could have gone better,)] you think to yourself as you prepare to continue on your way, [pc.thought(then again, it could also have gone a lot worse...)]
+			[pc.thought(这样也好，)]你一边动身上路一边考虑道，[pc.thought(虽然话说回来，这样也可能让事情变得更糟……)]
 		</p>
 	#ELSE
 		<p>
-			[npc.Name] turns towards you and crosses [npc.her] [npc.arms]. [npc.speech(Yeah? Go on, I'm listening.)]
+			[npc.Name]转向你并抱起了[npc.her]的[npc.arms]。[npc.speech(嗯？继续啊，我听着呢。)]
 		</p>
 		<p>
-			You continue to apologise to your [npc.relation(pc)] for some time, and while [npc.she] frequently turns [npc.her] back on you, before spinning around to mention yet another thing you've done wrong, you can tell that your words are having a positive effect. After a while of this back-and-forth, you run out of ways in which to say sorry, and [npc.name] lets out a deep sigh, before starting to pace back and forth in front of you.
+			你又继续给你的[npc.relation(pc)]道歉了一阵，当你发现[npc.she]不停地转身背对你，随后转身提醒你做过的另一件错事时，你明白你的话开始起作用了。就这样说了几轮车轱辘话后，你已经想不出道歉的话了，[npc.name]长叹一声，最后开始在你的面前前后踱步。
 		</p>
 		<p>
-			A heavy silence fills the air, and just as you're about to say something to break it, [npc.name] finally speaks once more, [npc.speech(I need some time to think about this. Just... Eugh! Come back later if you really care.)]
+			空气中充满了沉重的静默，正在你向说些什么打破沉默时，[npc.name]终于又开口了，[npc.speech(我需要一些时间好好想想这些事，能不能……啊啊啊！你要是真在乎我就晚点再来找我！)]
 		</p>
 		<p>
-			With that, [npc.she] spins around and hurriedly walks off, [npc.her] words echoing in your [pc.ears] as you watch [npc.herHim] turn the corner and disappear out of sight.
+			话音刚落，[npc.she]急匆匆地扭头就走。你看着[npc.herHim]转过在拐角消失在你的视野中，[npc.her]的话还在你的脑海中回荡。
 		</p>
 		<p>
-			[pc.thought(That could have gone better,)] you think to yourself as you prepare to continue on your way, [pc.thought(then again, it could also have gone a lot worse...)]
+			[pc.thought(这样也好，)]你一边动身上路一边考虑道，[pc.thought(虽然话说回来，这样也可能让事情变得更糟……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_FIGHT"><![CDATA[
 	<p>
-		Just because [npc.sheIs] your [npc.relation(pc)], that doesn't mean [npc.sheIs] any better than the rest of the lowlifes inhabiting these tunnels. Lowering into a combat stance, you grin at [npc.name]. [pc.speech(No [npc.relation(pc)] of mine is going to live like this and expect not to be punished! I'm going to teach you a lesson!)]
+		[npc.sheIs]是你的[npc.relation(pc)]，但[npc.sheIs]也是隧道里偷鸡摸狗，打家劫舍的混混群体的一员，所以，你摆出了战斗的姿势，看向[npc.name]：[pc.speech(我的[npc.relation(pc)]不该在这种地方苟且偷生，你应该受到惩罚。现在，让我来教训一下你！)]
 	</p>
 	#IF(npc.isConfident())
 		<p>
-			[npc.speech(What the hell?!)] [npc.name] cries out, before jumping back and preparing to defend [npc.herself]. [npc.speech(You'll be sorry!)]
+			[npc.speech(什么鬼？！)][npc.name]大喊，往后退了两步，准备格挡你的进攻。[npc.speech(你会后悔的！)]
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(W-What?!)] [npc.name] cries out, before jumping back and preparing to defend [npc.herself]. [npc.speech(I can't believe this!)]
+			[npc.speech(啊？什么？)][npc.name]大喊，往后退了两步，准备格挡你的进攻。[npc.speech(这合理吗？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_TALKING"><![CDATA[
 	#IF(!npc.hasFlag(NPC_FLAG_flagOffspringApartmentIntroduced))
 		<p>
-			[npc.Name] turns around and sets off down the tunnel. Following in [npc.her] footsteps, you allow your [npc.relation(pc)] to take the lead as [npc.she] guides you through the trail of narrow passageways that lead to [npc.her] home. As the width of the tunnels rarely offers you the chance to walk side-by-side, you decide to save conversation for when you finally arrive, leading to your five-minute journey being mostly in silence.
+			[npc.name]转过身，沿着隧道走去。你的[npc.relation(pc)]在前面领路，而你跟在后面，穿过通往[npc.her]家的狭窄通道。由于隧道的宽度让你们很少有机会并肩而行，所以你们决定把话留到回到家再说，因此，在五分钟的路程中，你们几乎没说什么话。
 		</p>
 		<p>
-			Eventually, [npc.name] steps off to one side, and, producing a set of keys, [npc.she] unlocks an unassuming metal door, before stepping inside and calling for you to follow [npc.herHim]. Although there's not much of an exterior to look at, as you step into your [npc.relation(pc)]'s home, you find that the interior gives the impression of this place being at least somewhat inhabitable.
+			最后，[npc.name]停了下来，拿出一串钥匙，[npc.she]打开了一扇不起眼的铁门，然后走了进去，叫你跟上[npc.herHim]。虽然从外面看很简陋，但当你踏进[npc.relation(pc)]的家门时，没想到里面看起来甚至还足以一住。
 		</p>
 		<p>
-			Looking down the length of what must at one time have been a maintenance storage area, you see that [npc.name] has done [npc.her] best to convert it into having the appearance of an apartment. You assume that the single door off to the left-hand side leads into your [npc.relation(pc)]'s bedroom, while the main area in which you find yourself standing is being used as a combined living and dining-room, with a small section partitioned off at the far end serving as a kitchen.
+			往里看，这地方之前肯定是个维修储物区。显然[npc.name]已经尽力将其改造成公寓的样子。你估计左手边那扇门里面就是你[npc.relation(pc)]的卧室，而你现在所处相对宽敞的区域则被用作起居室和餐厅，最里面的一小部分被隔开作为厨房。
 		</p>
 		<p>
-			[pc.speech(You've done well with this place,)] you say, and even if you don't approve of the methods in which [npc.she] earns a living, you're happy that your [npc.relation(pc)] at least has a roof over [npc.her] head. [pc.speech(You seem to be keeping the place clean. Good [npc.girl]!)]
+			[pc.speech(这地方还不错，)]你虽然并不认同[npc.she]租金的来源，但还是因你的[npc.relation(pc)]能有一个遮风挡雨的小窝而感到开心，[pc.speech(你把这里打扫得很干净，真是个好[npc.girl]！)]
 		</p>
 		<p>
 			#IF(npc.isConfident())
-				[npc.speech(Thanks, [npc.pcName]!)]
+				[npc.speech(谢谢，[npc.pcName]！)]
 			#ELSE
-				[npc.speech([pc.Name]... You're embarrassing me...)]
+				[npc.speech([pc.Name]……不要说这些羞人的话啦……)]
 			#ENDIF
-			 [npc.name] replies, locking the door after you and motioning for you to take a seat, before heading over to the kitchen to make you a drink. After just a moment [npc.she] returns, and sits down on the sofa next to you. [npc.speech(So, what do you want to talk about? I only have a little while before I need to get back to... erm... 'work', but let's make the most of our time together!)]
+			[npc.name]回答道，然后锁上门，示意你坐在沙发上，然后去厨房给你倒了些喝的。过了一会儿，[npc.she]回来了，在你旁边坐下。[npc.speech(你想谈什么？在我回去……呃……‘工作’之前，我只有一小会儿时间，但让我们充分利用我们难得能待在一起的时间吧！)]
 		</p>
 	#ELSE
 		<p>
-			[npc.Name] turns around and sets off down the tunnel. Following in [npc.her] footsteps, you allow your [npc.relation(pc)] to take the lead as [npc.she] guides you through the trail of narrow passageways that lead to [npc.her] home. As the width of the tunnels rarely offers you the chance to walk side-by-side, you decide to save conversation for when you finally arrive, leading to your five-minute journey being mostly in silence.
+			[npc.name]转过身，沿着隧道走去。你的[npc.relation(pc)]在前面领路，而你跟在后面，穿过通往[npc.her]家的狭窄通道。由于隧道的宽度让你们很少有机会并肩而行，所以你们决定把话留到回到家再说，因此，在五分钟的路程中，你们几乎没说什么话。
 		</p>
 		<p>
-			Eventually, you recognise that you're almost at your destination, and sure enough, [npc.name] soon steps off to one side, before unlocking the metal door to [npc.her] rudimentary apartment and stepping inside. Following your [npc.relation(pc)] into the room beyond, you're once again pleasantly surprised to see that the interior is in a relatively clean and orderly state.
+			最终，你认出了这就是目的地。[npc.name]停了下来，拿出一串钥匙，[npc.she]打开了一扇不起眼的铁门，然后走进了这简陋的小屋，叫你跟上[npc.herHim]。当你踏进[npc.relation(pc)]的家门时，你发现里面干净整洁，就像上次来的那样。
 		</p>
 		<p>
-			Looking down the length of what must at one time have been a maintenance storage area, you see that [npc.name] has done [npc.her] best to convert it into having the appearance of an apartment. You assume that the single door off to the left-hand side leads into your [npc.relation(pc)]'s bedroom, while the main area in which you find yourself standing is being used as a combined living and dining-room, with a small section partitioned off at the far end serving as a kitchen.
+			往里看，这地方之前肯定是个维修储物区。显然[npc.name]已经尽力将其改造成公寓的样子。你估计左手边那扇门里面就是你[npc.relation(pc)]的卧室，而你现在所处相对宽敞的区域则被用作起居室和餐厅，最里面的一小部分被隔开作为厨房。
 		</p>
 		<p>
-			[pc.speech(Good [npc.girl], you're keeping this place nice and clean,)] you say, turning to smile at [npc.name].
+			[pc.speech(你把这里打扫得很干净，真是个好[npc.girl]！)]你说着，对[npc.name]露出温暖的微笑。
 		</p>
 		<p>
 			#IF(npc.isConfident())
-				[npc.speech(Thanks, [npc.pcName], I'm doing my best!)]
+				[npc.speech(谢谢你，[npc.pcName]，我做得还不错吧！)]
 			#ELSE
-				[npc.speech([pc.Name]... You're embarrassing me again...)]
+				[npc.speech([pc.Name]……你又在说这些羞人的话了……)]
 			#ENDIF
-			 [npc.name] replies, locking the door after you and motioning for you to take your usual seat, before heading over to the kitchen to fetch some refreshments. After just a moment [npc.she] returns, and sits down on the sofa next to you. [npc.speech(So, what do you want to talk about? I only have a little while before I need to get back to... erm... 'work', but let's make the most of our time together!)]
+			[npc.name]回答道，然后锁上门，示意你坐在沙发上，然后去厨房给你拿了些零食。过了一会儿，[npc.she]回来了，在你旁边坐下。[npc.speech(你想谈什么？在我回去……呃……‘工作’之前，我只有一小会儿时间，但让我们充分利用我们难得能待在一起的时间吧！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_TALKING_OUT_OF_TIME"><![CDATA[
 	<p>
-		[npc.Name] has been glancing at the clock on the wall for the last few minutes, and as you finish what you were talking about, [npc.she] stands up. [npc.speech(Sorry, [npc.pcName], I really need to be getting on now...)]
+		[npc.Name]抬头看了看表，当你说完后，[npc.she]站了起来。[npc.speech(对不起，[npc.pcName]，我真的该走了……)]
 	</p>
 	<p>
-		You follow your [npc.relation(pc)]'s lead and get up off the sofa. [pc.speech(Ok, well I hope you don't mind me coming to visit some other time!)]
+		你随着你的[npc.relation(pc)]一起从沙发上站起来，[pc.speech(哦，好吧，希望你不介意我下次再来！)]
 	</p>
 	<p>
-		[npc.speech(Not at all! I'd love to see you again!)] [npc.she] replies, showing you to the door. You both say your farewells, and after just a few moments, you find yourself back out in the tunnels of Submission once again...
+		[npc.speech(当然不介意！我很期待你下次再来！)][npc.she]说着，为你打开门。你们两个走到小巷里，彼此道别后，你发现自己再次站在了屈城区的通道内……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_TALKING_INVENTORY"><![CDATA[
 	<p>
-		You shuffle a bit closer to [npc.name], and [npc.she] looks up at you expectantly as [npc.she] asks, [npc.speech(What is it, [npc.pcName]?)]
+		你向[npc.name]挪了挪，靠近了一点。[npc.she]抬起头，期待地望着你，问道：[npc.speech([npc.pcName]，有事吗？)]
 	</p>
 	<p>
-		[pc.speech(I think we need to have a little talk about the state of your clothes,)] you reply, looking up and down over you [npc.relation(pc)]'s body.
+		[pc.speech(我想我们需要谈谈你的衣服状况。)]你回道，同时上下左右打量着[npc.relation(pc)]的身体。
 	</p>
 	<p>
-		[npc.speech(Yes, [npc.pcName]...)] [npc.she] obediently answers, clearly comfortable with doing whatever [npc.sheIs] told.
+		[npc.speech(好呀[npc.pcName]……)][npc.she]顺从地回应，显然，[npc.sheIs]很乐意听命行事。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_TALKING_LEAVE"><![CDATA[
 	<p>
-		As you finish what you were talking about, you glance up at the clock on the wall, letting out a little gasp as you see what the time is. [pc.speech(Sorry, [npc.name], I really need to be getting on now...)]
+		聊完当下的话题后，你抬头看了一眼墙上的表，轻轻叹了口气，你知道没时间继续聊下去了。[pc.speech(对不起，[npc.name]，我真的该走了……)]
 	</p>
 	<p>
-		Your [npc.relation(pc)] follows your lead as you stand up and get up off the sofa. [npc.speech(Ok, [npc.pcName], come back to visit soon!)]
+		你的[npc.relation(pc)]跟你一起从沙发上站起来，[npc.speech(好吧，[npc.pcName]，要常来哦！)]
 	</p>
 	<p>
-		[pc.speech(Of course, I'll visit you again as soon as I can,)] you reply, allowing [npc.name] to show you to the door. You both say your farewells, and after just a few moments, you find yourself back out in the tunnels of Submission once again...
+		[pc.speech(当然，我会常来的！)]你答道。[npc.name]陪着你来到门边，告别后，你发现自己再次站在了屈城区隧道里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_BACKGROUND"><![CDATA[
 	<p>
-		Deciding that you'd like to get to know [npc.name] a little better, you ask [npc.herHim] about how [npc.sheIs] doing, [pc.speech(Tell me about your life! How's everything going for you right now?)]
+		你想多了解一下[npc.name]，于是你问[npc.herHim]最近怎么样，[pc.speech(聊聊你自己的生活吧！你最近过得怎么样？)]
 	</p>
 	#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
 		#IF(npc.isConfident())
 			<p>
-				[npc.She] leans back on the sofa and smiles. [npc.speech(Well, you know, there's always <i>someone</i> looking for a quick fuck, so I never have any problems with money. I mean, Submission's not a bad place for being a prostitute!)]
+				[npc.She]靠在沙发上，笑了笑，[npc.speech(嗯，你懂的，<i>总有些人</i>想来一炮，所以我生意还不错，不太缺钱。屈城区的通道也算个卖淫的好地方！)]
 			</p>
 			<p>
-				From [npc.her] positive attitude, you can tell that [npc.sheHasFull] absolutely no qualms about selling [npc.her] body. Before you can offer a response, [npc.she] continues, [npc.speech(So yeah, everything's pretty good for me at the moment. Sure, the location of this place could be better, but it's nice enough!)]
+				从[npc.her]自在的态度中，你明白了[npc.sheHasFull]丝毫没有因为卖身而有额外的心理负担。不等你说话，[npc.she]接着说，[npc.speech(对我来说，现在一切都很好。当然，住的地方还可以更好一些，但我也知足了！)]
 			</p>
 		#ELSE
 			<p>
-				[npc.She] leans back on the sofa and smiles. [npc.speech(Well, you know, there's always <i>someone</i> who has need of my... erm... services, so I never have any problems with money. I mean, Submission's not a bad place for my line of work... erm... being a prostitute, that is...)]
+				[npc.She]靠在沙发上，笑了笑，[npc.speech(嗯，你知道的，<i>总有些人</i>需要我的……呃……服务，所以挣钱是没什么问题的，我是说，屈城区的通道也算个好地方，我，我是说，呃，卖淫的好地方……)]
 			</p>
 			<p>
-				From [npc.her] attitude, you can tell that [npc.sheHasFull] no qualms about selling [npc.her] body, although [npc.sheIs] a little nervous talking to you about it. Before you can offer a response, [npc.she] continues, [npc.speech(So yeah, everything's pretty good for me at the moment. Sure, the location of this place could be better, but it's nice enough!)]
+				从[npc.her]的态度中，你明白了[npc.sheHasFull]没有因为卖身而有额外的心理负担，只是有些羞于启齿，因而结结巴巴。不等你说话，[npc.she]接着说，[npc.speech(对我来说，现在一切都很好。当然，住的地方还可以更好一些，但我也知足了！)]
 			</p>
 		#ENDIF
 		<p>
-			You're relieved to hear that your [npc.relation(pc)] is doing well for [npc.herself], and after talking about [npc.her] situation a little more, [npc.she] starts to get carried away and tells you about one of the recent customers [npc.she] had,
-			 [style.random(
+			你听到你的[npc.relation(pc)]说[npc.herself]一切还好，于是稍稍松了口气。在你鼓励[npc.she]再多聊聊自己的事情之后，[npc.she]迫不及待地和你分享一些最近的事情，关于[npc.she]最近招徕的嫖客，
+			[style.random(
 				#IF(npc.hasVagina())
-					[npc.speech(... So then he doesn't pull out, and he's all like 'Get pregnant slut!', and I'm like 'Ah, no! I can't get pregnant, please!', and then I get him to pay me extra for finishing inside! And the funny thing is, I was on slut pills the whole time!)]
+					[npc.speech(……所以他不肯拔出去，还说什么‘怀孕吧荡妇’，我就在那里大喊‘啊，不要，我不要怀孕，求你拔出去！’之类的，之后他还是射在了里面，我收了他双倍的钱！哈哈，有意思的是，其实当时我吃药了！)]
 				#ELSE
-					[npc.speech(... So then he doesn't pull out, and he's all like 'Take my load you dirty butt-slut!', and I'm like 'Ah, no! We didn't agree on that!', and then I get him to pay me extra for finishing inside!)]
+					[npc.speech(……所以他不肯拔出去，还说什么‘灌满你这个屁穴荡妇！’，我就喊‘啊，不要，当时可不是这么说的！’，最后他射在了里面，我收了他双倍的钱！)]
 				#ENDIF
 				|
-				[npc.speech(... So then she's like 'Oh yeah, my boyfriend is joining in too', and I'm like 'Uhh, that's going to cost double', and so she pays me double, and then her boyfriend doesn't even use me at all!)]
+				[npc.speech(……然后她就说‘哦，能不能让我的男朋友一起来’，我就说‘啊，那可得收双份的钱了’，然后她就给了我双倍的钱，结果她男朋友根本没用我！)]
 				|
-				[npc.speech(... And his knot was like, <i>huge</i>, and it locks us together for about 30 minutes. And I'm just like 'Uhh, I charge by the minute by the way!')]
+				[npc.speech(……上面带着<i>好大的</i>一个锁结，我们两个就那样锁在一起大概半个小时，我就和他说‘我可要按分钟计费了！’)]
 				|
-				[npc.speech(... So this cute little human wanted me to just sit on their face for half an hour, and it was, like, the easiest money I've ever made!)]
+				[npc.speech(……那个可爱的小人类只是让我坐在他脸上，坐了半个小时，那钱来得可太容易了！)]
 				|
-				[npc.speech(... And so he's pushing me up against the wall, fucking me really hard, and then he suddenly pulls out and cums all over my shoes! And I'm like, 'You're paying the cleaning bill for those!')])]
+				[npc.speech(……之后他把我按在墙上，操得特别凶，最后他突然拔出来的时候，居然射在了我鞋子上！然后我就说‘我要额外收你清理鞋子的钱了！’)])]
 		</p>
 	#ELSE
 		#IF(npc.isConfident())
 			<p>
-				[npc.She] leans back on the sofa and smiles. [npc.speech(Well, you know, there's always <i>someone</i> dumb enough to wander around in my territory, so I never have any problems with money. I mean, if they didn't want to get mugged, they wouldn't come wandering through the tunnels! Everyone knows that they're dangerous!)]
+				[npc.She]靠在沙发上，笑了笑，[npc.speech(嗯，你懂的，<i>总有些蠢货</i>会转悠到我的地盘上，所以我不太缺钱。我是说，他们要是不想被抢劫，那就不该来这通道里，人人都知道这里很危险！)]
 			</p>
 			<p>
-				From [npc.her] blasé attitude, you can tell that [npc.sheHasFull] absolutely no qualms about beating people up and stealing their money. Before you can offer a response, [npc.she] continues, [npc.speech(So yeah, everything's pretty good for me at the moment. Sure, the location of this place could be better, but it's nice enough!)]
+				从[npc.her]自在的态度中，你明白了[npc.sheHasFull]丝毫没有因为拦路抢劫然后搜刮路人的腰包而有额外的心理负担。不等你说话，[npc.she]接着说，[npc.speech(对我来说，现在一切都很好。当然，住的地方还可以更好一些，但我也知足了！)]
 			</p>
 		#ELSE
 			<p>
-				[npc.She] leans back on the sofa and smiles. [npc.speech(Well, you know, there's always <i>someone</i> who's... erm... intruding on my territory, so I never have any problems with money. I mean, Submission's tunnels are known to be dangerous, so why would they be here if they didn't want to get robbed?)]
+				[npc.She]靠在沙发上，笑了笑，[npc.speech(呃，你懂的，<i>总有些人</i>就是，呃……擅闯我的地盘，所以我确实不太缺钱，我是说，屈城区的通道很危险，这种事情人尽皆知，所以他们来这里不就是想被抢劫吗？)]
 			</p>
 			<p>
-				From [npc.her] blasé attitude, you can tell that [npc.sheHasFull] absolutely no qualms about beating people up and stealing their money, although [npc.sheIs] a little nervous talking to you about it. Before you can offer a response, [npc.she] continues, [npc.speech(So yeah, everything's pretty good for me at the moment. Sure, the location of this place could be better, but it's nice enough!)]
+				从[npc.her]自在的态度中，你明白了[npc.sheHasFull]丝毫没有因为拦路抢劫然后搜刮路人的腰包而有额外的心理负担，只是不太好意思和你说这些。不等你说话，[npc.she]接着说，[npc.speech(对我来说，现在一切都很好。当然，住的地方还可以更好一些，但我也知足了！)]
 			</p>
 		#ENDIF
 		<p>
-			Wanting to learn more about the manner in which [npc.she] earns a living, you encourage your [npc.relation(pc)] to talk about [npc.her] situation a little more, and as you ask a few more questions, [npc.she] starts to get carried away while giving you the details of one of the recent encounters [npc.she] had,
-		 [style.random(
-				[npc.speech(... And <i>he</i> was the one who attacked me first! So it was only fair that I took everything he had!)]
+			你听到你的[npc.relation(pc)]说[npc.herself]一切还好，于是稍稍松了口气。在你鼓励[npc.she]再多说些自己的事情之后，[npc.she]迫不及待地和你分享一些最近的事情，关于[npc.she]最近抢劫的路人，
+		[style.random(
+				[npc.speech(……结果<i>是他</i>先动手想要抢劫我！那我把他扒干净了也没什么错！)]
 				|
-				[npc.speech(... So then as she runs off, she's like 'You're gonna be sorry when I tell my boyfriend!', and then later this horse-boy shows up claiming to be her boyfriend, so I beat him up too!)]
+				[npc.speech(……她跑开的时候说，‘等我告诉我男朋友，你会后悔的！’后来，来了个马男，自称是她男朋友，我就把他也揍了一顿！)]
 				|
-				[npc.speech(... And then the Enforcers turned up, and I only just managed to get away! That was a close one...)]
+				[npc.speech(……结果执法者突然来了，我就找机会跑了，那是最险的一次……)]
 				|
-				[npc.speech(... So after I'd robbed her, that slutty cat-girl starts begging for me to 'show her no mercy', and drops down on all fours right there in the tunnel!)]
+				[npc.speech(……我抢了她之后，那个婊子猫女就开始说什么‘不要对她手下留情’，然后就趴在了地上！)]
 				|
-				[npc.speech(... And I'm pushing him back against the wall, demanding he hands over his wallet, and I feel something pressing out against my leg. That horny dog-boy was getting turned on by being robbed!)])]
+				[npc.speech(……我就把他按在墙上，逼他交出钱包，结果我发现什么玩意顶住了我的腿，那个狗男居然在被抢劫的时候硬了！)])]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_SMALL_TALK"><![CDATA[
 	#VAR
@@ -853,635 +853,635 @@
 	#ENDVAR
 		
 	<p>
-		You start to talk with [npc.name] about all sorts of unimportant things, ranging from the recent weather you've been having, to the state of Submission's walkways and tunnels. Talking to your [npc.relation(pc)] fills you with a deep sense of calm and happiness, and every time [npc.she] smiles and offers [npc.her] opinion on something, you listen with rapt attention to every word that comes out of [npc.her] mouth.
+		你开始和[npc.name]聊些琐事，从最近的天气，聊到屈城区的道路和隧道。和你的[npc.relation(pc)]聊天让你倍感亲切，心情也变得更加平和。每当[npc.she]笑着接你的话茬开始聊些什么的时候，你都会全神贯注地去聆听。
 	</p>
 	<p>
 		#IF(affection<AFFECTION_ZERO_NEUTRAL.getMaximumValue())
-			After a short while, [npc.she] offers you another drink, and after happily accepting, you sit with your [npc.relation(pc)] on the sofa in [npc.her] apartment, talking away as though you've known each other forever.
+			片刻后，[npc.she]又给你倒了些喝的，你开心地接了过来，坐在你[npc.relation(pc)]的旁边。你们无话不谈，仿佛很久之前就已经熟悉了彼此一样，亲密无间。
 		#ELSEIF (affection<AFFECTION_POSITIVE_ONE_FRIENDLY.getMaximumValue())
 			#IF(npc.isConfident())
-				 After a short while, [npc.she] offers you another drink, and after happily accepting, your [npc.relation(pc)] hurries off to the kitchen to fetch it for you. When [npc.she] returns, [npc.she] sits down right beside you on the sofa, smiling in a friendly manner as [npc.she] hands you your glass, before the two of you continue talking away as though you've known each other forever.
+				片刻后，[npc.she]问你要不要喝点什么，你开心地答应了，于是[npc.she]高兴地跑到厨房，端了杯饮料回来。你的[npc.relation(pc)]坐到了你的旁边，微笑地将玻璃杯递给了你。随后，你们继续闲聊，无话不谈，仿佛很久之前就已经熟悉了彼此一样，亲密无间。
 			#ELSE
-				 After a short while, [npc.she] offers you another drink, and after happily accepting, your [npc.relation(pc)] hurries off to the kitchen to fetch it for you. When [npc.she] returns, [npc.she] sits down beside you on the sofa, smiling in a friendly manner as [npc.she] hands you your glass, before the two of you continue talking away as though you've known each other forever.
+				片刻后，[npc.she]问你要不要喝点什么，你开心地答应了，于是[npc.she]高兴地跑到厨房，端了杯饮料回来。你的[npc.relation(pc)]坐到了你的旁边，微笑地将玻璃杯递给了你。随后，你们继续闲聊，无话不谈，仿佛很久之前就已经熟悉了彼此一样，亲密无间。
 			#ENDIF
 		#ELSEIF (affection<AFFECTION_POSITIVE_THREE_CARING.getMaximumValue())
 			#IF(npc.isConfident())
-				 After a short while, [npc.she] offers you another drink, and after happily accepting, your [npc.relation(pc)] hurries off to the kitchen to fetch it for you. When [npc.she] returns, [npc.she] sits down right beside you on the sofa, smiling in a loving manner as [npc.she] hands you your glass, before the two of you continue talking away as though you've known each other forever.
+				片刻后，[npc.she]问你要不要喝点什么，你开心地答应了，于是[npc.she]高兴地跑到厨房，端了杯饮料回来。你的[npc.relation(pc)]坐到了你的旁边，高兴地将玻璃杯递给了你。随后，你们继续闲聊，无话不谈，仿佛很久之前就已经熟悉了彼此一样，亲密无间。
 			#ELSE
-				 After a short while, [npc.she] offers you another drink, and after happily accepting, your [npc.relation(pc)] hurries off to the kitchen to fetch it for you. When [npc.she] returns, [npc.she] sits down beside you on the sofa, smiling in a loving manner as [npc.she] hands you your glass, before the two of you continue talking away as though you've known each other forever.
+				片刻后，[npc.she]问你要不要喝点什么，你开心地答应了，于是[npc.she]高兴地跑到厨房，端了杯饮料回来。你的[npc.relation(pc)]坐到了你的旁边，高兴地将玻璃杯递给了你。随后，你们继续闲聊，无话不谈，仿佛很久之前就已经熟悉了彼此一样，亲密无间。
 			#ENDIF
 		#ELSE
 			#IF(npc.isConfident())
-				 After a short while, [npc.she] offers you another drink, and after happily accepting, your [npc.relation(pc)] hurries off to the kitchen to fetch it for you. When [npc.she] returns, [npc.she] sits down right beside you on the sofa, smiling in a loving manner as [npc.she] hands you your glass, before the two of you continue talking away as though you've known each other forever.
+				片刻后，[npc.she]问你要不要喝点什么，你开心地答应了，于是[npc.she]高兴地跑到厨房，端了杯饮料回来。你的[npc.relation(pc)]坐到了你的旁边，微笑地将玻璃杯递给了你，当你喝饮料的时候，[npc.she]在一旁看着你，眼神里满是关爱。随后，你们继续闲聊，无话不谈，仿佛很久之前就已经熟悉了彼此一样，亲密无间。
 			#ELSE
-				 After a short while, [npc.she] offers you another drink, and after happily accepting, your [npc.relation(pc)] hurries off to the kitchen to fetch it for you. When [npc.she] returns, [npc.she] sits down beside you on the sofa, smiling in a loving manner as [npc.she] hands you your glass, before the two of you continue talking away as though you've known each other forever.
+				片刻后，[npc.she]问你要不要喝点什么，你开心地答应了，于是[npc.she]高兴地跑到厨房，端了杯饮料回来。你的[npc.relation(pc)]坐到了你的旁边，微笑地将玻璃杯递给了你，当你喝饮料的时候，[npc.she]在一旁看着你，眼神里满是关爱。随后，你们继续闲聊，无话不谈，仿佛很久之前就已经熟悉了彼此一样，亲密无间。
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_ENCOURAGE"><![CDATA[
 	<p>
-		Thinking that it must be hard for [npc.name] to make a living down here in Submission's tunnels, you decide to offer [npc.her] some words of encouragement,
+		你知道[npc.name]在屈城区的隧道里求生不易，决定鼓励一下[npc.her]。
 		#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
-			 [pc.speech(I know that it must be hard to try and make a living down here, so I just wanted you to know that I'm very proud of you, [npc.name].)]
+			[pc.speech(我知道你在这里过得很艰难，但我还是要说，你是我的骄傲，[npc.name]。)]
 		#ELSE
-			 [pc.speech(I know that it must be hard to try and make a living down here, so I just wanted you to know that I'm happy to see that you're taking good care of yourself, [npc.name].)]
+			[pc.speech(我知道你在这里过得很艰难，但我还是因你能照顾好自己而为你高兴，[npc.name]。)]
 		#ENDIF
 	</p>
 	#IF(npc.isConfident())
 		<p>
-			[npc.Name] blushes a little, and casts [npc.her] [npc.eyes] to the floor as [npc.she] replies, [npc.speech([npc.PcName], stop! You're embarrassing me!)]
+			[npc.Name]的脸微微发红，[npc.eyes]看向地面，[npc.speech([npc.PcName]！别再说了！怪难为情的！)]
 		</p>
 		<p>
-			Despite [npc.her] reaction, you can tell that your words have made a positive difference, and when [npc.she] looks up again, you see that there's a big smile on [npc.her] face. Reiterating what you've just said, you go on to encourage your [npc.relation(pc)] to do [npc.her] best, and once you've finished, [npc.she] sincerely thanks you for your kind words.
+			尽管[npc.her]有些难为情，但你可以看出你的话起到了积极的作用。当[npc.her]再次抬起头时，你看到[npc.her]的脸上露出了灿烂的笑容。你继续鼓励你的[npc.relationship(pc)]尽[npc.her]最大的努力好好活着，说完后，[npc.she]真诚地感谢你的好意。
 		</p>
 	#ELSE
 		<p>
-			[npc.Name] smiles as [npc.she] hears your words, and happily replies, [npc.speech(Thanks, [npc.pcName], that really means a lot to me.)]
+			[npc.Name]听到你的话语，笑了起来，[npc.speech(谢谢你，[npc.pcName]，听到你这么说，我真的很开心。)]
 		</p>
 		<p>
-			From the sincerity of [npc.her] reaction, you can tell that your words have made a positive difference, and the big smile on [npc.her] face fills your heart with happiness. Reiterating what you've just said, you go on to encourage your [npc.relation(pc)] to do [npc.her] best, and once you've finished, [npc.she] lovingly thanks you for your kind words.
+			从[npc.her]真诚的反应中，你可以看出你的话起到了积极的作用，[npc.she]的脸上灿烂的笑容让你感到幸福。你继续鼓励你的[npc.relationship(pc)]，说完后，[npc.she]充满爱意地感谢了你。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_SEX"><![CDATA[
 	<p>
-		From the moment you entered [npc.namePos] apartment, you haven't been able to take your [pc.eyes] off of [npc.herHim]. The fact that [npc.sheIs] your [npc.relation(pc)] is only serving to make you even more aroused, and as [npc.she] smiles #IF(npc.isFeminine())sweetly#ELSEcharmingly#ENDIF at you once more, you can't help but act.
+		你走进[npc.namePos]的公寓，[pc.eyes]一直盯着[npc.herHim]，越看越觉得你的[npc.relation(pc)]真是妩媚，让你不自觉间性欲高涨。当[npc.she]再次#IF(npc.isFeminine())对你露出甜美的笑容#ELSE对你露出迷人的笑容#ENDIF之后，你再也受不了了，于是决定采取行动。
 	</p>
 	<p>
 		#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
-			[pc.speech(So, [npc.name],)] you say, putting on your most seductive voice as you shuffle closer to [npc.herHim] on the sofa, [pc.speech(you must be pretty experienced in bed, what with your line of work and all... Perhaps you'd like to teach me a few of your tricks?)]
+			[pc.speech(所以，[npc.name]，)]你往[npc.herHim]旁边挪了挪，用你最诱人的声线挑逗[npc.herHim]，[pc.speech(我知道你一定床上功夫了得，你一直在做这个……所以，你愿意把你工作时候的小窍门教给我吗？)]
 		#ELSE
-			[pc.speech(So, [npc.name],)] you say, putting on your most seductive voice as you shuffle closer to [npc.herHim] on the sofa, [pc.speech(you must have taken a little more than just cash from some of the people wandering through 'your territory'... Perhaps you'd like to show me some of the things you do to them?)]
+			[pc.speech(所以，[npc.name]，)]你往[npc.herHim]旁边挪了挪，用你最诱人的声线挑逗[npc.herHim]，[pc.speech(那些人在进了你的‘领地’之后，你劫的肯定不仅仅是财，对吧？也许，你也可以对我试一试？)]
 		#ENDIF
 	</p>
 	#IF(npc.isAttractedTo(pc))
 		<p>
-			[npc.NamePos] mouth opens a little as [npc.she] lets out a desperate little whine.
-			 With that as your only warning, your [npc.relation(pc)] suddenly lurches forwards, grabbing your head in both [npc.hands] as [npc.she] desperately presses [npc.her] [npc.lips] to yours.
+			[npc.she]的嘴因惊讶而微微张开，轻轻发出了一声哀鸣。
+			你只是旁敲侧击了一下，但你的[npc.relation(pc)]迅速靠了过来，双手伸向你的后脑勺，急切地把[npc.her]的[npc.lips]压在你的唇上。
 		</p>
 		<p>
-			Reaching up to pull [npc.herHim] close, you eagerly return [npc.namePos] passionate kiss, and, right there in the middle of [npc.her] apartment, you show your [npc.relation(pc)] just how much you love [npc.herHim]...
+			你把[npc.herHim]拉得更近些，饥渴地回应着[npc.namePos]热情的吻。就在[npc.her]的公寓里，你要向你的[npc.relation(pc)]证明你有多爱[npc.herHim]……
 		</p>
 	#ELSEIF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
 		<p>
-			A flicker of worry crosses [npc.namePos] face for a moment, but [npc.she] quickly regains [npc.her] composure. [npc.speech(Well, I <i>could</i> take you as a client, but this is strictly professional, ok? I do love you, but not quite in the same way that I think you love me...)]
+			一抹担忧的阴霾从[npc.namePos]的脸上一闪而过，但[npc.she]很快镇定了下来。[npc.speech(呃，我<i>可以</i>把你当成我的客人，但这只是我的职业，好吗？我很爱你，但我不知道我对你的爱，是否和你对我的爱是同一种……)]
 		</p>
 		<p>
-			Although you're disappointed to hear that [npc.sheIs] not interested in having sex with you, you're nonetheless relieved to hear that there's still an opportunity to get what you want. Before you can respond, your [npc.relation(pc)] continues, [npc.speech(Usually I charge fifty flames for an hour, but it's kind of weird the way you're my [pc.mom] and all, so I'm going to have to charge double.)]
+			虽然你因为[npc.sheIs]并不想和你做而感到有点失望，但你也意识到，你确实有机会和[npc.sheIs]玩一玩。不等你说话，你的[npc.relation(pc)]继续说，[npc.speech(你可是我的[pc.mom]！啊，我不是说不行，我的意思是，那得加钱……这种事太怪了，我平时50火币一小时，但是我要收你100。)]
 		</p>
 		<p>
-			You wonder if you should pay [npc.name] the 100 flames that [npc.sheIs] asking for, or just forget it and do something else...
+			你在思考要不要花100火币和[npc.name]做一次，还是说就当做什么也没发生，做些别的……
 		</p>
 	#ELSE
 		<p>
-			[npc.Name] backs away from you with a very worried look on [npc.her] face. [npc.speech([pc.Name]?! What the hell?! I'm not going to have sex with my own [pc.mother]!)]
+			[npc.Name]往后退了退，脸上写满了担忧，[npc.speech([pc.Name]？！怎么回事？！我怎么可能和自己的[pc.mother]做这种事！)]
 		</p>
 		<p>
-			#IF(pc.isFeminine())You pout#ELSEYou frown#ENDIF at your [npc.relation(pc)], upset that [npc.sheIs] not interested in what you had in mind, [pc.speech(Well, the offer's out there, if you ever change your mind.)]
+			你朝你的[npc.relation(pc)]#IF(pc.isFeminine())撅起嘴来#ELSE皱了皱眉#ENDIF，因[npc.sheIs]对你不感兴趣而有些难过，[pc.speech(好吧，如果你改主意了，我随时等着你。)]
 		</p>
 		<p>
-			[npc.speech(Ok, can we move on and pretend that this never happened now?!)] [npc.she] says, clearly upset by this turn of events.
+			[npc.speech(好吧，那我们能当这一切从未发生过吗？)][npc.she]显然因你的所作所为感到有些沮丧。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_SCOLD"><![CDATA[
 	<p>
-		Unimpressed by [npc.namePos] method of making a living, you decide to scold [npc.herHim] in the hopes that [npc.she]'ll change [npc.her] ways,
+		你对[npc.namePos]的谋生手段不感兴趣，打算训[npc.herHim]一顿，希望[npc.she]会改变自己的行为。
 		#IF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE) 
-			 [pc.speech(I really don't want my [npc.daughter] working as a prostitute. You need to start thinking about getting a real job, [npc.name]!)]
+			[pc.speech(我真的不希望我的[npc.daughter]做一个妓女。你真的该考虑找个正经工作了，[npc.name]！)]
 		#ELSE
-			 [pc.speech(I really don't want my [npc.daughter] down here in Submission's tunnels mugging people. You need to start thinking about getting a real job, [npc.name]!)]
+			[pc.speech(我真的不希望我的[npc.daughter]龟缩在屈城区的隧道里打劫路人。你真的该考虑找个正经工作了，[npc.name]！)]
 		#ENDIF
 	</p>
 	#IF(npc.isConfident())
 		<p>
-			[npc.Name] leans back on the sofa, letting out an annoyed snort as [npc.she] hears your words. Rolling [npc.her] [npc.eyes], [npc.she] replies, [npc.speech(Don't come in here and try to tell me how to live my life, [npc.pcName]! I can do what I want!)]
+			[npc.Name]听到你的话，向后靠在沙发上，发出一声不悦的咕哝。[npc.her]翻着白眼回复道，[npc.speech(别再来这里教导我我的人生该怎么过，[npc.pcName]！我想干什么就干什么！)]
 		</p>
 		<p>
-			You don't like [npc.her] insolent attitude, and after [npc.she] stops speaking, you start to berate [npc.her] some more. Reiterating what you've just said, you tell your [npc.relation(pc)] that you expect far more from [npc.herHim], and that you don't want [npc.herHim] prowling the tunnels any longer. You're not sure if your words really have any effect, but at least [npc.she] now knows that [npc.her] [pc.mother] doesn't approve of the way in which [npc.sheIs] living [npc.her] life.
+			你不喜欢[npc.her]那傲慢无礼的态度，而当[npc.she]停下之后，你打算继续斥责[npc.her]。把你的话又说了一遍，你告诉你的[npc.relation(pc)]你对[npc.herHim]有更高的期望，不想让[npc.herHim]再在隧道里面游荡了。你不确定自己的话是否有效，但至少现在[npc.she]知道了[npc.her]的[pc.mother]并不认可[npc.sheIs]现在谋生的方式。
 		</p>
 	#ELSE
 		<p>
-			[npc.Name] leans back on the sofa, letting out a little sigh as [npc.she] hears your words. Rolling [npc.her] [npc.eyes], [npc.she] replies, [npc.speech(This is how I'm choosing to live my life, [npc.pcName]! I can do what I want!)]
+			[npc.Name]听到你的话，向后靠在沙发上，发出一声轻轻的叹息。[npc.her]翻着白眼回复道，[npc.speech(我选择了这样的生活，[npc.pcName]！我想做什么就要去做！)]
 		</p>
 		<p>
-			You don't like [npc.her] insolent attitude, and after [npc.she] stops speaking, you start to berate [npc.her] some more. Reiterating what you've just said, you tell your [npc.relation(pc)] that you expect far more from [npc.herHim], and that you don't want [npc.herHim] prowling the tunnels any longer. You're not sure if your words really have any effect, but at least [npc.she] now knows that [npc.her] [pc.mother] doesn't approve of the way in which [npc.sheIs] living [npc.her] life.
+			你不喜欢[npc.her]那傲慢无礼的态度，而当[npc.she]停下之后，你打算继续斥责[npc.her]。把你的话又说了一遍，你告诉你的[npc.relation(pc)]你对[npc.herHim]有更高的期望，不想让[npc.herHim]再在隧道里面游荡了。你不确定自己的话是否有效，但至少现在[npc.she]知道了[npc.her]的[pc.mother]并不认可[npc.sheIs]现在谋生的方式。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_PRESENT"><![CDATA[
 	<p>
-		Deciding that it would be nice to give your [npc.relation(pc)] a present this Yuletide, you hold out the gift towards [npc.herHim]. [pc.speech(This is for you, [npc.name]. Happy Yuletide!)]
+		你决定在这个圣诞节给你的[npc.relation(pc)]一份礼物，于是你向[npc.herHim]送出了礼物。[pc.speech(这是给你的，[npc.name]。圣诞快乐！)]
 	</p>
 	<p>
-		[npc.Name] lets out a little gasp as you give [npc.herHim] the present, and, looking up into your [pc.eyes], [npc.she] cries out, [npc.speech([npc.pcName]! Thank you so much! I-I don't know what to say!)]
+		你把礼物递给[npc.Name]。[npc.herHim]轻微哽咽了一下，抬起头对上你的[pc.eyes]。[npc.she]放声大哭：[npc.speech([npc.pcName]！太谢谢了！我都不知道该怎么感谢你了！)]
 	</p>
 	<p>
-		Choosing to express [npc.her] gratitude in a more physical form, [npc.name] places the present to one side, before moving up next to you and pulling you into a loving hug. You return your [npc.relation(pc)]'s warm embrace, and spend a few moments pressing your body against [npc.hers] as you both share in a loving moment together.
+		[npc.Name]选择用更实际的方式来表达感激之情。[npc.hers]把礼物放在一边，走到你身旁，深情地抱住你。而你也回敬了[npc.relation(pc)]，你们热切相拥。你的身体贴着[npc.hers]的，共度这充满爱的时刻。
 	</p>
 	<p>
-		After a little while, [npc.name] pulls back, before smiling up at you. [npc.speech(Really, thank you, [npc.pcName]. That really means a lot to me...)]
+		[npc.name]拥抱了你好一会，抽开身，面带微笑说：[npc.speech(真的，真的谢谢你，[npc.pcName]。这对我来说很有意义……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_ENCOUNTER_APARTMENT_FIGHT"><![CDATA[
 	<p>
-		Deciding that [npc.name] needs to be taught a lesson, you get up off the sofa and step towards [npc.herHim]. [pc.speech(No [npc.relation(pc)] of mine is going to live like this and expect not to be punished! It's time that I put you in your place!)]
+		你显然觉得该教训一下[npc.Name]，于是从沙发上站了起来，走向[npc.herHim]。[pc.speech(我的[npc.relation(pc)]不该这样苟且偷生，你应该受到惩罚！让我来教训一下你！)]
 	</p>
 	<p>
 		#IF(npc.isConfident())
-			[npc.speech(What the hell?!)] [npc.name] cries out, before jumping up and preparing to defend [npc.herself]. [npc.speech(You'll be sorry!)]
+			[npc.speech(什么鬼？！)][npc.name]大喊，站了起来，准备格挡你的进攻。[npc.speech(你会后悔的！)]
 		#ELSE
-			[npc.speech(W-What?!)] [npc.name] cries out, before jumping up and preparing to defend [npc.herself]. [npc.speech(I can't believe this!)]
+			[npc.speech(啊？什么？)][npc.name]大喊，站了起来，准备格挡你的进攻。[npc.speech(这合理吗？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY"><![CDATA[
 	#IF(npc.isAttractedTo(pc) || !game.isNonConEnabled())
 		<p>
-			[npc.Name] collapses to the floor, completely defeated. As [npc.she] looks up at you, you see that your powerful aura is having a strong effect on [npc.herHim], and there's a hungry, lustful look in [npc.her] [npc.eyes+]. [npc.She] #IF(npc.isTaur())starts bucking [npc.her] hips in a humping motion,#ELSEreaches down to [npc.her] crotch and starts stroking [npc.herself],#ENDIF making pitiful little whining noises as [npc.she] squirms on the floor.
+			[npc.Name]彻底战败，瘫倒在地。[npc.she]抬头看向你，你发现自己强大的灵气正强烈影响着[npc.herHim]。[npc.her][npc.eyes+]里满是饥渴淫荡的神色。[npc.She]#IF(npc.isTaur())开始耸动腰胯，做出交合般的动作，#ELSE伸手探向胯下，开始抚摸自己，#ENDIF[npc.she]一边在地上来回扭动，一边可怜地呜叫着。
 		</p>
 		<p>
-			[npc.speech(Please, [npc.pcName]! Fuck me!)], [npc.she] pleads, biting [npc.her] [npc.lip] as [npc.she] continues touching [npc.herself]. [npc.speech(I'll be a good [npc.daughter]! Just please, fuck me!)]
+			[npc.speech(求你了，[npc.pcName]！操我！)][npc.she]不住地咬着[npc.lip]，继续抚摸自己，[npc.speech(我会做个乖[npc.daughter]的！求你来操我吧！)]
 		</p>
 	#ELSE
 		<p>
-			[npc.Name] collapses to the floor, completely defeated. As [npc.she] looks up at you, you see that there's a desperate look of fear in [npc.her] [npc.eyes+]. Making pitiful little whining noises, [npc.she] tries to shuffle away from you, clearly worried about what your intentions are.
+			[npc.Name]战败倒地。[npc.she]抬头看向你，[npc.eyes+]中流露出绝望与恐惧。[npc.her]试图起身逃离你，显然是在担心你接下来的所作所为。
 		</p>
 		<p>
-			[npc.speech(Please, [npc.pcName]! Don't! Leave me alone!)], [npc.she] pleads with tears in [npc.her] [npc.eyes]. [npc.speech(I'll be a good [npc.daughter]! I promise!)]
+			[npc.speech(求你了，[npc.pcName]！不要！不要伤害我！)][npc.she]泪眼婆娑地喊： [npc.speech(我，我会当个好[npc.daughter]的！我保证！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_APOLOGISE"><![CDATA[
 	<p>
-		Looking down at your [npc.relation(pc)] as [npc.she] shuffles about on the floor, you're suddenly overcome with regret, and, kneeling down next to [npc.herHim], you pull [npc.herHim] into a loving hug. Leaning in over [npc.her] shoulder as you press yourself to [npc.herHim], you apologise for what you've done, [pc.speech([npc.Name], I'm so sorry! I don't know what came over me! Please forgive me!)]
+		你低头看向你的[npc.relation(pc)]，[npc.she]局促不安地躺在地上，你突然感到一阵悔意，为自己做的傻事而愧疚。于是你跪在[npc.herHim]旁边，将[npc.herHim]拉进你怀里，抱住了[npc.her]，轻声为你的所作所为而向[npc.herHim]道歉，[pc.speech([npc.Name]，真的很对不起！我只是……一时控制不住我自己了！请原谅我！)]
 	</p>
 	<p>
-		[npc.She] hesitantly wraps [npc.her] [npc.arms] around you, and after a few moments, you feel [npc.her] grip tightening, before [npc.she] speaks out in a surprisingly stern voice, [npc.speech(I can't believe what you've done, [npc.pcName]! I'm going to need some time...)]
+		[npc.She]迟疑地回抱。过了一会，你感觉[npc.her]的胳膊收紧了。[npc.she]前所未有地厉声说，[npc.speech(我真不敢相信你做了什么，[npc.pcName]！我需要一些时间……)]
 	</p>
 	<p>
-		[pc.speech(I understand,)] you say, pulling back from your [npc.relation(pc)]. [pc.speech(I really am sorry...)]
+		[pc.speech(我明白了，)]你说完，从[npc.relation(pc)]怀中抽身，[pc.speech(我真的很抱歉……)]
 	</p>
 	<p>
-		[npc.Name] walks you to the door in silence, and after trying to say sorry once more, only to have your [npc.relation(pc)] slam the door in your face, you find yourself back out in the tunnels once again...
+		[npc.Name]默默送你到门口。你还想转身道歉，[npc.relation(pc)]却重重地摔上了门，只留下你独自一人继续站在这隧道里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SEX"><![CDATA[
 	<p>
-		Reaching down to take hold of one of [npc.namePos] [npc.arms], you pull [npc.herHim] to [npc.her] [npc.feet], before wrapping your [pc.arms] around [npc.her] back and stepping forwards. Tilting your head to one side, you press your [pc.lips+] against [npc.hers] and start passionately thrusting your [pc.tongue+] into [npc.her] mouth.
+		你上前抓住[npc.namePos]的一只[npc.arms]，让[npc.herHim]站起来，随后将你的[pc.arms]环过[npc.her]的背，上前一步。你将[pc.lips+]贴在[npc.hers]的唇上，热情地将你[pc.tongue+]送入[npc.her]口中。
 	</p>
 	<p>
-		Much to your delight, you feel [npc.herHim] returning your kiss, and as your [npc.relation(pc)] leans into you, [npc.she] mumbles, [npc.speech(Yes, [npc.pcName]... Fuck me...)]
+		让你非常高兴的是，你感觉到[npc.herHim]正在回应你的吻，你的[npc.relation(pc)]靠向你，[npc.she]呢喃着，[npc.speech(太棒了，[npc.pcName]……我们来做吧……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_RAPE"><![CDATA[
 	<p>
-		Reaching down, you grab [npc.namePos] [npc.arm], and, pulling [npc.herHim] to [npc.her] feet, you start grinding yourself up against [npc.herHim]. Seeing the lustful look in your [pc.eyes], [npc.she] lets out a little [npc.sob], desperately trying to struggle out of your grip as you hold [npc.herHim] firmly in your embrace.
+		你伸手抓住[npc.namePos]的[npc.arm]，把[npc.herHim]拉到脚边，开始蹭[npc.herHim]。看到你那淫荡的[pc.eyes]，[npc.she]不禁发出轻微的[npc.sob]，拼命想挣脱你的控制，而你则紧紧地把[npc.herHim]搂在怀里。
 	</p>
 	<p>
-		[npc.speech([pc.Name]! No! Please!)]
+		[npc.speech([pc.Name]！别这样，求你了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SEX_GENTLE"><![CDATA[
 	<p>
-		Reaching down to take hold of one of [npc.namePos] [npc.arms], you gently lift [npc.herHim] to [npc.her] [npc.feet], before wrapping your [pc.arms] around [npc.her] back and stepping forwards. Tilting your head to one side, you softly press your [pc.lips+] against [npc.hers] and start slowly thrusting your [pc.tongue+] into [npc.her] mouth.
+		你走上前，温柔地握住[npc.namePos]的一只[npc.arms]，让[npc.herHim]站起来，随后将你的[pc.arms]环过[npc.her]的背，上前一步。你轻轻地将[pc.lips+]贴在[npc.hers]的唇上，慢慢将你[pc.tongue+]送入[npc.her]口中。
 	</p>
 	<p>
-		Much to your delight, you feel [npc.herHim] returning your loving kiss, and as your [npc.relation(pc)] leans into you, [npc.she] mumbles, [npc.speech(Yes, [npc.pcName]... Fuck me...)]
+		让你非常高兴的是，你能感觉到[npc.herHim]正在回应你那深情的吻。你的[npc.relation(pc)]靠向你，呢喃着，[npc.speech(太棒了，[npc.pcName]……我们来做吧……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_RAPE_GENTLE"><![CDATA[
 	<p>
-		Reaching down, you take hold of [npc.namePos] [npc.arm], and, pulling [npc.herHim] to [npc.her] feet, you start pressing yourself up against [npc.herHim]. Seeing the lustful look in your [pc.eyes], [npc.she] lets out a little [npc.sob], desperately trying to struggle out of your grip as you hold [npc.herHim] in your embrace.
+		你伸手挽住[npc.namePos]的[npc.arm]，把[npc.herHim]拉到脚边，开始把身体压在[npc.herHim]身上。看到你那淫荡的[pc.eyes]，[npc.she]不禁发出轻微的[npc.sob]，拼命想挣脱你的控制，而你则不依不饶地把[npc.herHim]搂在怀里。
 	</p>
 	<p>
-		[npc.speech([pc.Name]! No! Please!)]
+		[npc.speech(别！求你了！[pc.Name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SEX_ROUGH"><![CDATA[
 	<p>
-		Reaching down to take hold of one of [npc.namePos] [npc.arms], you roughly yank [npc.herHim] to [npc.her] [npc.feet], before wrapping your [pc.arms] around [npc.her] back and stepping forwards. Tilting your head to one side, you greedily press your [pc.lips+] against [npc.hers] and start dominantly thrusting your [pc.tongue+] into [npc.her] mouth.
+		你上前用力抓住[npc.namePos]的一只[npc.arms]，让[npc.herHim]站起来，随后将你的[pc.arms]环过[npc.her]的背，上前一步。你贪婪地将[pc.lips+]贴在[npc.hers]的唇上，主动将你[pc.tongue+]送入[npc.her]口中。
 	</p>
 	<p>
-		Much to your delight, you feel [npc.herHim] returning your forceful kiss, and as your [npc.relation(pc)] leans into you, [npc.she] mumbles, [npc.speech(Yes, [npc.pcName]... Fuck me...)]
+		让你非常高兴的是，你感觉到[npc.herHim]正在回应你那带有强迫意味的吻，你的[npc.relation(pc)]靠向你，[npc.she]呢喃着，[npc.speech(太棒了，[npc.pcName]……我们来做吧……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_RAPE_ROUGH"><![CDATA[
 	<p>
-		Reaching down, you grab [npc.namePos] [npc.arm], and, roughly yanking [npc.herHim] to [npc.her] feet, you start forcefully grinding yourself up against [npc.herHim]. Seeing the lustful look in your [pc.eyes], [npc.she] lets out a little [npc.sob], desperately trying to struggle out of your grip as you firmly hold [npc.herHim] in your embrace.
+		你伸手抓住[npc.namePos]的[npc.arm]，粗暴地把[npc.herHim]拽到脚边，开始用力地磨蹭[npc.herHim]。看到你那淫荡的[pc.eyes]，[npc.she]不禁发出轻微的[npc.sob]，拼命想挣脱你的控制，而你则紧紧地把[npc.herHim]搂在怀里。
 	</p>
 	<p>
-		[npc.speech([pc.Name]! No! Please!)]
+		[npc.speech(别这样！求你了！[pc.Name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SUBMIT"><![CDATA[
 	<p>
-		Looking down at your [npc.relation(pc)] as [npc.she] shuffles about on the floor, you're suddenly overcome with regret, and, kneeling down next to [npc.herHim], you pull [npc.herHim] into a loving hug. Leaning in over [npc.her] shoulder as you press yourself to [npc.herHim], you apologise for what you've done, [pc.speech([npc.Name], I'm so sorry! I don't know what came over me! Please forgive me!)]
+		你低头看向你的[npc.relation(pc)]，[npc.she]局促不安地躺在地上，你突然感到一阵悔意，为自己做的傻事而愧疚。于是你跪在[npc.herHim]旁边，将[npc.herHim]拉进你怀里，抱住了[npc.her]，轻声为你的所作所为而向[npc.herHim]道歉，[pc.speech([npc.Name]，真的很对不起！我只是……一时控制不住我自己了！请原谅我！)]
 	</p>
 	<p>
-		[npc.She] hesitantly wraps [npc.her] [npc.arms] around you, and after a few moments, you feel [npc.her] grip tightening, before [npc.she] speaks out in a surprisingly stern voice, [npc.speech(If you're really sorry, you're going to prove it to me! Show me how much you <i>really</i> love me!)]
+		[npc.She]犹豫地将[npc.her]的[npc.arms]环过你，片刻之后，你感觉[npc.her]开始紧紧地拥抱住你，随后[npc.she]以一种惊人的命令的语气，和你说，[npc.speech(如果你是真心实意为你的所作所为感到道歉，那就向我证明啊！向你展示一下，你<i>到底有多爱我</i>！)]
 	</p>
 	<p>
-		As you pull away in order to respond, [npc.name] suddenly leans forwards and grabs your head, before pressing [npc.her] [npc.lips+] against yours. Shuffling forwards, [npc.she] pins you back against the wall behind you, thrusting [npc.her] [npc.tongue+] into your mouth as [npc.she] takes advantage of your guilty state of mind.
+		[npc.name]不等你起身解释，突然贴了上来，手伸向你的脑袋，将[npc.her][npc.lips+]压在你的唇上。[npc.she]向前挪了挪，将你壁咚在身后的墙上，她将[npc.tongue+]探入你的口中，利用你内心的自责满足她的欲望。
 	</p>
 	<p>
-		Eventually, [npc.she] pulls back in order to demand a response from you, and, eager to earn your [npc.relation(pc)]'s forgiveness, you reply, [pc.speech(I love you, [npc.name]! Please, do whatever you want to me!)]
+		最后，[npc.she]退后一些，等待着你的回应。为了得到你[npc.relation(pc)]的原谅，你说，[pc.speech(我爱你，[npc.name]！无论你想对我做什么，我都会接受的！)]
 	</p>
 	<p>
-		A hungry grin spreads across [npc.namePos] face, before [npc.she] pulls you to your feet and starts to kiss you once more...
+		[npc.namePos]的脸上露出了饥渴的笑容，[npc.she]把你拉起来，更热情地和你亲吻，一次又一次……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_REMOVE_CHARACTER"><![CDATA[
 	#IF(npc.hasFlag(NPC_FLAG_fightOffspringInApartment))
 		<p>
-			Looking down at your [npc.relation(pc)] as [npc.she] shuffles about on the floor, you remind yourself that you're doing this for [npc.her] own good. With your [pc.hands] on your [pc.hips], you speak down to [npc.herHim], [pc.speech([npc.Name], this is the end of your shameful lifestyle! You're going to pack everything up and move elsewhere! It's time for you to find a respectable job and lead an honest life!)]
+			你低头看向你的[npc.relation(pc)]，[npc.she]躺在地上，挣扎着。你狠下心来，告诉自己做这些都是为了[npc.her]好。你叉着腰，低头告诉[npc.herHim]，[pc.speech([npc.Name]，在小巷子里苟且偷生，是你该做的吗！现在，带上你的东西去别的地方，找一份体面的工作，堂堂正正地活着！)]
 		</p>
 		<p>
-			[npc.She] doesn't offer much resistance, and you watch as your [npc.relation(pc)] packs up [npc.her] things and prepares to move out. After a short while, [npc.sheIs] ready, and before [npc.she] leaves your life forever, [npc.she] turns around and mutters, [npc.speech(I'll make you proud, [pc.mom]...)]
+			[npc.She]并没有过多抵抗，你静静地看着你的[npc.relation(pc)]站起来，开始收拾[npc.her]的东西，准备离开这里。不一会儿，[npc.sheIs]拎着一个小包裹，嘴角抽动着，似是想在最后的告别之前对你说些什么。[npc.she]转过身来，看向你，用那含糊不清的低语，向你承诺着，[npc.speech(总会有一天，我会成为你的骄傲，[pc.mom]……)]
 		</p>
 		<p>
-			With that, [npc.sheIs] gone, and you're left with little else to do but set off into the tunnels once again...
+			[npc.sheIs]说完便离开了，你无事可做，只得再度走进那多了一分寂静的小巷……
 		</p>
 	#ELSE
 		<p>
-			Looking down at your [npc.relation(pc)] as [npc.she] shuffles about on the floor, you remind yourself that you're doing this for [npc.her] own good. With your [pc.hands] on your [pc.hips], you speak down to [npc.herHim], [pc.speech([npc.Name], this is the end of your shameful lifestyle! You're going to pack everything up and move elsewhere! It's time for you to find a respectable job and lead an honest life!)]
+			你低头看向你的[npc.relation(pc)]，[npc.she]躺在地上，挣扎着。你狠下心来，告诉自己做这些都是为了[npc.her]好。你叉着腰，低头告诉[npc.herHim]，[pc.speech([npc.Name]，在小巷子里苟且偷生，是你该做的吗！现在，带上你的东西去别的地方，找一份体面的工作，堂堂正正地活着！)]
 		</p>
 		<p>
-			[npc.She] doesn't offer much resistance, and you watch as your [npc.relation(pc)] meekly hangs [npc.her] head and agrees to do as you say. Before [npc.she] walks off and leaves your life forever, [npc.she] turns around and mutters, [npc.speech(I'll make you proud, [pc.mom]...)]
+			[npc.She]并没有过多抵抗，你静静地看着你的[npc.relation(pc)]站起来，点了点头，准备离开这里。你看到[npc.sheIs]嘴角抽动着，似是想在最后的告别之前对你说些什么。犹豫片刻后，[npc.she]转过身来，看向你，用那含糊不清的低语，向你承诺着，[npc.speech(总会有一天，我会成为你的骄傲，[pc.mom]……)]
 		</p>
 		<p>
-			With that, [npc.sheIs] gone, and you're left with little else to do but set off into the tunnels once again...
+			[npc.sheIs]说完便离开了，你无事可做，只得再度走进那多了一分寂静的小巷……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_LEAVE"><![CDATA[
 	<p>
-		[pc.speech(I hope you've learned your lesson,)] you say, speaking down to your [npc.relation(pc)] as [npc.she] shuffles about on the floor. [pc.speech(Maybe I'll come and visit you another time, but I need to be going now.)]
+		[pc.speech(我希望你得到了教训。)]你低下头，对你那在地上挣扎的[npc.relation(pc)]说，[pc.speech(也许下次我还会来看你的，但我现在得走了。)]
 	</p>
 	<p>
-		With that, you turn around and walk over to the front door, ignoring the little whimpers coming from your defeated [npc.relation(pc)]. Turning the handle, you open the door and make your exit, and within a few minutes, find yourself walking through the tunnels once again...
+		说完，你无视你那被打败的[npc.relationship(pc)]发出的呜咽声，转身走到门口。你打开门，离开了公寓，几分钟后，你又回到了通道中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT"><![CDATA[
 	#IF(npc.isAttractedTo(pc) && game.isIncestEnabled())
 		<p>
-			You can't carry on fighting any more, and you feel your [pc.legs] giving out beneath you as you collapse to the ground, defeated.
+			你不能继续战斗了。你感觉到自己的[pc.legs]逐渐无力，最终，你倒在地上，一败涂地。
 		</p>
 		<p>
-			[npc.speech(Are you ok, [npc.pcName]?!)] [npc.name] shouts, before leaning down to grab one of your [pc.arms]. [npc.speech(I was only defending myself!)]
+			[npc.speech(你还好吗，[npc.pcName]？！)][npc.name]冲了过来，抓住你的[pc.arms]。[npc.speech(我只是想防卫一下！)]
 		</p>
 		<p>
-			As you groan in the affirmative, [npc.name] lets out a sigh of relief. Pulling you to your feet, [npc.she] suddenly steps forwards and presses [npc.herself] up against you. [npc.speech(Well, so long as you're ok, I think it's time for your apology!)]
+			你气若游丝地告诉[npc.name]你还好，[npc.she]长舒了一口气，把你拉了起来。随后，[npc.she]突然上前，靠在了你身上。[npc.speech(好吧，既然你没大事，那我觉得你该给我道歉了！)]
 		</p>
 		<p>
-			The moment that you open your mouth to respond, your [npc.relation(pc)] darts forwards, pressing [npc.her] [npc.lips+] against yours as [npc.she] pulls you into a passionate kiss. Grinding [npc.herself] up against your body, [npc.she] breaks off the kiss for a moment to [npc.moanVerb] into your [pc.ear], [npc.speech(So, [npc.pcName] likes a little bit of rough play, huh?! Well, I like that sort of thing too!)]
+			不等你回话，你的[npc.relation(pc)]便将[npc.her][npc.lips+]按在了你的嘴唇上面，用热情的吻堵住了你的嘴。片刻后，[npc.she]把嘴唇移开，但还在用身体不停地磨蹭着你，[npc.she]那吻过你的唇移向了你的耳边，[npc.moanVerb]着，[npc.speech(所以，[npc.pcName]其实是想要来点粗暴的玩法吗？！啊，我也喜欢这个！)]
 		</p>
 	#ELSE
 		<p>
-			You can't carry on fighting any more, and you feel your [pc.legs] giving out beneath you as you collapse to the ground, defeated.
+			你不能继续战斗了。你感觉到自己的[pc.legs]逐渐无力，最终，你倒在地上，一败涂地。
 		</p>
 		<p>
-			[npc.speech(Are you ok [npc.pcName]?!)] [npc.name] shouts, before leaning down to grab one of your [pc.arms]. [npc.speech(I was only defending myself!)]
+			[npc.speech(你还好吗，[npc.pcName]？！)][npc.name]冲了过来，抓住你的[pc.arms]。[npc.speech(我只是想防卫一下！)]
 		</p>
 		<p>
-			As you groan in the affirmative, [npc.name] lets out a sigh of relief. Pulling you to your feet, [npc.she] makes sure that you're able to stand under your own strength before stepping back and taking on a stern tone, [npc.speech(What the hell was that all about?! You owe me an apology!)]
+			你气若游丝地告诉[npc.name]你还好，[npc.she]长舒了一口气，把你拉了起来。在确保你自己能站稳后，[npc.she]退后一步，严厉地质问你，[npc.speech(所以你是想干什么？！你该给我道歉了！)]
 		</p>
 		<p>
-			Not being in any kind of situation to refuse, you apologise to your [npc.relation(pc)] for attacking [npc.herHim]. Letting out a little huff, [npc.she] continues, [npc.speech(Well, I can't forgive you just yet! Anyway, you can help make it up to me by giving me some allowance money!)]
+			你从各种意义上都别无选择了，所以你为你的突然袭击向你的[npc.relation(pc)]表达歉意。[npc.she]生气地哼了一声，[npc.speech(哼，这可不算完！不如给我点零花钱来补偿我一下！)]
 		</p>
 		<p>
-			Letting out a groan, you're forced to comply with [npc.her] request, and after handing over some of your cash, [npc.name] leads you away from [npc.her] home. Leaving you somewhere in the tunnels, [npc.she] calls out behind [npc.herHim] as [npc.she] takes [npc.her] leave, [npc.speech(Don't bother to come back unless you're truly sorry!)]
+			在你交出钱后，[npc.name]带着你离开了[npc.her]的家。在你以为[npc.she]打算离开时，[npc.she]转身叫住了你，[npc.speech(除非你真心实意感到抱歉，否则，就别再回来了！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEX"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and [npc.she] continues passionately making out with you for a few moments, before finally breaking away from you. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you realise that [npc.sheIs] probably not going to be content with just a kiss...
+		[npc.NamePos]的[npc.arms]环住你的腰抚摸你的背，热情地与你亲热了好一会儿才松开。[npc.she]饥渴地舔着[npc.lips]，对你邪魅地笑。你明白，[npc.sheIs]可能不仅仅满足于一个吻……
 	</p>
 	<p>
-		[npc.speech(Time for some fun, [npc.pcName]!)]
+		[npc.speech(该做愉悦的事情了，[npc.pcName]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEX_EAGER"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you eagerly lean into [npc.herHim], passionately returning [npc.her] kiss for a few moments, before [npc.she] breaks away from you. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you feel a rush of excitement as you realise that [npc.sheIs] going to want more than just a kiss...
+		[npc.NamePos]用[npc.arms]环绕你的背，你热切地靠在[npc.herHim]身上。[npc.she]热情地回吻片刻，又推开你，露出邪魅的笑容，舔了舔[npc.lips]。你感到一阵兴奋，意识到[npc.she]想要的可不仅仅只是一个吻……
 	</p>
 	<p>
-		[npc.speech(Time for some fun, [npc.pcName]!)]
+		[npc.speech(来快乐一下吧，[npc.pcName]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEX_RESIST"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you let out a distressed cry as [npc.she] pulls you into a forceful kiss. Summoning the last of your strength, you desperately try to push [npc.herHim] away, pleading for [npc.herHim] to stop. Giving you an evil grin, [npc.she] ignores your protests, and as you see [npc.herHim] hungrily licking [npc.her] [npc.lips], you realise that [npc.sheIs] not going to let you go...
+		[npc.NamePos]用[npc.arms]环住你的背，你被拉过去强制接吻，发出凌厉的哭号。你耗干了最后一丝气力，努力推开[npc.herHim]。你不断地乞求[npc.herHim]停下。[npc.she]邪恶地笑笑，完全无视了你的抵抗。你眼睁睁地看着[npc.herHim]饥渴地舔了舔[npc.lips]，明白过来[npc.sheIs]才不会放你走……
 	</p>
 	<p>
-		[npc.speech(Time for some fun, [npc.pcName]!)]
+		[npc.speech(会很舒服的哦，[npc.pcName]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_CONSENSUAL"><![CDATA[
 	#IF(npc.isSatisfiedFromLastSex())
 		<p>
-			Disentangling yourselves from each other's clutches, you both sink down onto [npc.namePos] sofa once again. Turning [npc.her] head towards you, your [npc.relation(pc)] sighs, [npc.speech(Fuck... That was good, [npc.pcName]...)]
+			你们两个放开了手，两个人都躺倒在沙发上。你的[npc.relation(pc)]转头看向你，叹了口气，[npc.speech(操……真不错，[npc.pcName]……)]
 		</p>
 		<p>
-			You lie with each other for a little while, enjoying the closeness of one another's company, before eventually it's time for you to leave. Giving [npc.name] a kiss goodbye, you promise that you'll come and see [npc.herHim] again, before setting out to continue on your journey.
+			你们两个就这样依偎着躺了一会儿，享受着彼此的陪伴，直到你必须该走了，你们两个才恋恋不舍地分开。你给了[npc.name]一个道别吻，向[npc.herHim]保证还会来看望[npc.herHim]，便离开了公寓，继续前进。
 		</p>
 	#ELSE
 		<p>
-			Disentangling yourselves from each other's clutches, you both sink down onto [npc.namePos] sofa once again. Turning [npc.her] head towards you, your [npc.relation(pc)] whines, [npc.speech(Fuck... [npc.pcName], I'm not satisfied from that...)]
+			你们两个放开了手，两个人都躺倒在沙发上。你的[npc.relation(pc)]转头看向你，抱怨着，[npc.speech(操……[npc.pcName]，我还没尽兴呢……)]
 		</p>
 		<p>
-			You lie with each other for a little while, reassuring [npc.name] that you'll allow [npc.herHim] to orgasm next time, before eventually it's time for you to leave. Giving [npc.herHim] a kiss goodbye, you promise that you'll come and see [npc.herHim] again, before setting out to continue on your journey.
+			你告诉[npc.name]下次一定让[npc.herHim]高潮个爽，之后，你们两个就这样依偎着躺了一会儿，直到你必须该走了，才恋恋不舍地分开。你给了[npc.herHim]一个道别吻，承诺还会来看望[npc.herHim]，便离开了公寓，继续前进。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_VICTORY"><![CDATA[
 	#IF(npc.hasFlag(NPC_FLAG_fightOffspringInApartment))
 		#IF(!npc.isAttractedTo(pc) && game.isNonConEnabled())
 			<p>
-				As you step back from [npc.name], [npc.she] grabs on to the edge of the sofa and sinks to the floor, letting out a thankful sob as [npc.she] realises that you've finished.
+				你从[npc.name]身边退开。[npc.she]抓着沙发边沿跌坐在地上。[npc.she]意识到你已经结束了，发出了感激的啜泣声。
 			</p>
 		#ELSEIF (npc.isSatisfiedFromLastSex())
 			<p>
-				As you step back from [npc.name], [npc.she] grabs on to the edge of the sofa and sinks to the floor, totally worn out from [npc.her] orgasm. Looking up at you, a satisfied smile settles across [npc.her] face, and you lean down to pat [npc.her] head.
+				你从[npc.name]身边退开。[npc.she]抓着沙发边沿跌坐在地上，因为高潮而疲惫不堪。[npc.she]抬头看着你，脸上露出了满意的笑容，你俯下身拍了拍[npc.her]的头。
 			</p>
 			<p>
-				[npc.speech(Thanks, [npc.pcName],)] [npc.she] sighs, before resting [npc.her] head on the sofa's cushions and falling asleep.
+				[npc.speech(谢谢，[npc.pcName]，)][npc.she]叹息道，然后把头靠在沙发垫上睡着了。
 			</p>
 		#ELSE
 			<p>
-				As you step back from [npc.name], [npc.she] grabs on to the edge of the sofa and sinks to the floor, letting out a desperate whine as [npc.she] realises that you've finished. [npc.Her] [npc.hands] dart down between [npc.her] [npc.legs], and [npc.she] frantically starts masturbating as [npc.she] seeks to finish what you started.
+				你从[npc.name]身边退开。[npc.she]抓着沙发边沿跌坐在地上，意识到你已经结束了。[npc.she]发出迷乱的哀鸣，将[npc.hands]伸到[npc.legs]间，疯狂地开始自慰，试图完成你开始的一切。
 			</p>
 			<p>
-				[npc.speech([pc.Name]! I'm still horny!)] [npc.she] whines.
+				[npc.speech([pc.Name]！我还是欲火焚身！)][npc.she]哀求着。
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(!npc.isAttractedTo(pc) && game.isNonConEnabled())
 			<p>
-				As you step back from [npc.name], [npc.she] sinks down to floor, letting out a thankful sob as [npc.she] realises that you've finished.
+				当你从[npc.name]身边退开时，[npc.she]倒在地上，意识到你已经结束了，[npc.she]发出了感激的啜泣声。
 			</p>
 		#ELSEIF (npc.isSatisfiedFromLastSex())
 			<p>
-				As you step back from [npc.name], [npc.she] sinks to the floor, totally worn out from [npc.her] orgasm. Looking up at you, a satisfied smile settles across [npc.her] face, and you realise that you gave [npc.herHim] exactly what [npc.she] wanted.
+					你从[npc.name]身边退开。[npc.she]倒在地上，因高潮而疲惫不堪。[npc.she]抬头看着你，脸上露出了满意的笑容，你意识到你给[npc.herHim]正是[npc.she]真正想要的。
 			</p>
 			<p>
-				[npc.speech(Thanks, [npc.pcName],)] [npc.she] sighs.
+				[npc.speech(谢谢，[npc.pcName]，)][npc.she]叹息道。
 			</p>
 		#ELSE
 			<p>
-				As you step back from [npc.name], [npc.she] sinks to the floor, letting out a desperate whine as [npc.she] realises that you've finished. [npc.Her] [npc.hands] dart down between [npc.her] [npc.legs], and [npc.she] frantically starts masturbating as [npc.she] seeks to finish what you started.
+				你从[npc.name]身边退开。[npc.she]倒在地上，意识到你已经结束了。[npc.she]迷乱地哀鸣，将[npc.hands]伸到[npc.legs]间，疯狂地开始自慰，试图完成你开始的一切。
 			</p>
 			<p>
-				[npc.speech([pc.Name]! I'm still horny!)] [npc.she] whines.
+				[npc.speech([pc.Name]！我还是欲火焚身！)][npc.she]哀求着。
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_VICTORY_LEAVING"><![CDATA[
 	<p>
 	#IF(npc.hasFlag(NPC_FLAG_fightOffspringInApartment))
 		#IF(!npc.isAttractedTo(pc) && game.isNonConEnabled())
-			 Smirking down at your [npc.relation(pc)] one last time, you turn around and walk over to the door, before pulling it open and heading back out into the tunnels.
+			最后向你的[npc.relation(pc)]坏笑了一声，你转身走到了门口，然后拉开门径直走入蝙蝠洞窟。
 		#ELSE
 			#IF(npc.isSatisfiedFromLastSex())
-				Leaving [npc.herHim] to recover by [npc.herself], you turn around and walk over to the door, before pulling it open and heading back out into the tunnels.
+				留下[npc.herHim]在余韵中恢复自己，你转身走到了门口，然后拉开门径直走入蝙蝠洞窟。
 			#ELSE
-				Having already had your fun, you leave [npc.herHim] to get some pleasure by [npc.herself]. Turning around and walking over to the door, you pull it open and head back out into the tunnels.
+				你已经满足了自己的欲望，于是丢下[npc.herHim]自行取悦自己。你转身走到了门口，然后拉开门径直走入蝙蝠洞窟。
 			#ENDIF
 		#ENDIF
 	#ELSE
 		#IF(!npc.isAttractedTo(pc) && game.isNonConEnabled())
-			As you step back from [npc.name], [npc.she] sinks down to floor, letting out a thankful sob as [npc.she] realises that you've finished. Smirking down at your [npc.relation(pc)] one last time, you turn around and take your leave, feeling thoroughly satisfied as you continue on your journey through the tunnels.
+			在你退开[npc.name]几步后，[npc.she]瘫在了地上，意识到你已经完事后，感激地啜泣着。最后对着你的[npc.relation(pc)]坏笑了一下，你转身离开，在继续穿越洞窟时感到无比满足。
 		#ELSE
 			#IF(npc.isSatisfiedFromLastSex())
-				Leaving [npc.herHim] to recover by [npc.herself], you set off and continue on your journey through the tunnels.
+				留下[npc.herHim]在余韵中恢复自己，你起身继续穿行在蝙蝠洞窟中。
 			#ELSE
-				Leaving [npc.herHim] to get some pleasure by [npc.herself], you set off and continue on your journey through the tunnels.
+				丢下[npc.herHim]自行取悦自己，你起身继续穿行在蝙蝠洞窟中。
 			#ENDIF
 		#ENDIF
 	#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_VICTORY_REMOVE_CHARACTER"><![CDATA[
 	#IF(npc.hasFlag(NPC_FLAG_fightOffspringInApartment))
 		<p>
-			Looking down at your [npc.relation(pc)] as [npc.she] shuffles about on the floor, you remind yourself that you're doing this for [npc.her] own good. With your [pc.hands] on your [pc.hips], you speak down to [npc.herHim], [pc.speech([npc.Name], this is the end of your shameful lifestyle! You're going to pack everything up and move elsewhere! It's time for you to find a respectable job and lead an honest life!)]
+			你低头看向你的[npc.relation(pc)]，[npc.she]躺在地上，挣扎着。你狠下心来，告诉自己做这些都是为了[npc.her]好。你叉着腰，低头告诉[npc.herHim]，[pc.speech([npc.Name]，在小巷子里苟且偷生，是你该做的吗！现在，带上你的东西去别的地方，找一份体面的工作，堂堂正正地活着！)]
 		</p>
 		<p>
-			[npc.She] doesn't offer much resistance, and you watch as your [npc.relation(pc)] packs up [npc.her] things and prepares to move out. After a short while, [npc.sheIs] ready, and before [npc.she] leaves your life forever, [npc.she] turns around and mutters, [npc.speech(I'll make you proud, [pc.mom]...)]
+			[npc.She]并没有过多抵抗，你静静地看着你的[npc.relation(pc)]站起来，开始收拾[npc.her]的东西，准备离开这里。不一会儿，[npc.sheIs]拎着一个小包裹，嘴角抽动着，似是想在最后的告别之前对你说些什么。[npc.she]转过身来，看向你，用那含糊不清的低语，向你承诺着，[npc.speech(总会有一天，我会成为你的骄傲，[pc.mom]……)]
 		</p>
 		<p>
-			With that, [npc.sheIs] gone, and you're left with little else to do but set off into the tunnels once again...
+			[npc.sheIs]说完便离开了，你无事可做，只得再度走进那多了一分寂静的小巷……
 		</p>
 	#ELSE
 		<p>
-			Looking down at your [npc.relation(pc)] as [npc.she] shuffles about on the floor, you remind yourself that you're doing this for [npc.her] own good. With your [pc.hands] on your [pc.hips], you speak down to [npc.herHim], [pc.speech([npc.Name], this is the end of your shameful lifestyle! You're going to pack everything up and move elsewhere! It's time for you to find a respectable job and lead an honest life!)]
+			你低头看向你的[npc.relation(pc)]，[npc.she]躺在地上，挣扎着。你狠下心来，告诉自己做这些都是为了[npc.her]好。你叉着腰，低头告诉[npc.herHim]，[pc.speech([npc.Name]，在小巷子里苟且偷生，是你该做的吗！现在，带上你的东西去别的地方，找一份体面的工作，堂堂正正地活着！)]
 		</p>
 		<p>
-			[npc.She] doesn't offer much resistance, and you watch as your [npc.relation(pc)] meekly hangs [npc.her] head and agrees to do as you say. Before [npc.she] walks off and leaves your life forever, [npc.she] turns around and mutters, [npc.speech(I'll make you proud, [pc.mom]...)]
+			[npc.She]并没有过多抵抗，你静静地看着你的[npc.relation(pc)]站起来，点了点头，准备离开这里。你看到[npc.sheIs]嘴角抽动着，似是想在最后的告别之前对你说些什么。犹豫片刻后，[npc.she]转过身来，看向你，用那含糊不清的低语，向你承诺着，[npc.speech(总会有一天，我会成为你的骄傲，[pc.mom]……)]
 		</p>
 		<p>
-			With that, [npc.sheIs] gone, and you're left with little else to do but set off into the tunnels once again...
+			[npc.sheIs]说完便离开了，你无事可做，只得再度走进那多了一分寂静的小巷……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_DEFEAT"><![CDATA[
 	#IF(npc.hasFlag(NPC_FLAG_fightOffspringInApartment))
 		<p>
-			As [npc.name] steps back and sorts [npc.her] clothes out, you sink down onto the sofa, totally worn out from [npc.her] dominant treatment of you. Once [npc.sheIs] finished getting [npc.her] things in order, [npc.she] walks over and looks down at you, smirking in a very satisfied manner. Leaning down, [npc.she] pats you on the head. [npc.speech(Silly [npc.pcName]! This is what happens if you try attacking me!)]
+			[npc.name]退后一步整理衣服。你沉沉地瘫倒在沙发上，完全被[npc.her]的支配所折服。[npc.sheIs]把事情收拾好之后，走过来低头看着你，露出了非常满意的笑容。[npc.she]俯下身拍了拍你的头。[npc.speech(愚蠢的[npc.pcName]！这就是你试图攻击我的后果！)]
 		</p>
 		<p>
-			With that, [npc.she] hooks one of [npc.her] [npc.arms] under yours, and, after pulling you to your feet and handing you your things, walks you over to the door. Still exhausted from your ordeal, you can do nothing but allow yourself to be led out of your [npc.relation(pc)]'s apartment.
+			就这样，[npc.she]用一只[npc.her][npc.arms]钩住你的胳膊下面，将你拉起来并把你的东西交给你，然后把你带到门口。你仍旧筋疲力尽，除了任由自己被带出你[npc.relation(pc)]的公寓，什么也做不了。
 		</p>
 		<p>
-			After a short while, [npc.she] comes to a halt, and, turning to look at you, [npc.she] grins. [npc.speech(Don't bother trying to attack me like that again! If you do, I'll just have to keep on fucking you until you've learned your lesson!)]
+			过了一会儿，[npc.she]停了下来，转过头来看着你，[npc.she]咧嘴笑着。[npc.speech(不要再这样试图攻击我了！如果你还敢这么做，我就一直操你到吸取教训为止！)]
 		</p>
 		<p>
-			With that, [npc.she] turns around and walks off, leaving you to get your things in order before setting off into the tunnels once again...
+			说罢，[npc.she]转身离去，只留下你收拾好自己的东西，然后再一次进入隧道……
 		</p>
 	#ELSE
 		<p>
-			As [npc.name] steps back and sorts [npc.her] clothes out, you sink down onto the ground, totally worn out from [npc.her] dominant treatment of you. Once [npc.sheIs] finished getting [npc.her] things in order, [npc.she] walks over and looks down at you, smirking in a very satisfied manner. Leaning down, [npc.she] pats you on the head. [npc.speech(Silly [npc.pcName]! This is what happens if you try attacking me!)]
+			[npc.name]退后一步整理衣服。你沉沉地瘫倒在地上，完全被[npc.her]的支配所折服。[npc.sheIs]把事情收拾好，走过来低头看着你，露出了非常满意的笑容。[npc.she]俯下身拍了拍你的头。[npc.speech(愚蠢的[npc.pcName]！这就是你试图攻击我的后果！)]
 		</p>
 		<p>
-			With that, [npc.she] hooks one of [npc.her] [npc.arms] under yours, and, after pulling you to your feet and handing you your things, makes sure that you're strong enough to stand under your own strength. Still exhausted from your ordeal, you can do nothing but allow yourself to be manhandled by your [npc.relation(pc)], and obediently stand in place as [npc.she] scolds you, [npc.speech(Don't bother trying to attack me like that again! If you do, I'll just have to keep on fucking you until you've learned your lesson!)]
+			就这样，[npc.she]用一只[npc.arms]钩住你的胳膊下面，将你拉起来并把你的东西交给你，确保你有足够的力气靠自己的力量站起来。你仍旧筋疲力尽，除了任由自己被[npc.relation(pc)]摆布，什么也做不了，你顺从地站在原地被[npc.she]责骂，[npc.speech(不要再这样试图攻击我了！如果你还敢这么做，我就一直操你到吸取教训为止！)]
 		</p>
 		<p>
-			With that, [npc.she] turns around and walks off, leaving you to get your things in order before setting off into the tunnels once again...
+			说罢，[npc.she]转身离去，只留下你收拾好自己的东西，然后再一次进入隧道……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_OFFER_ROOM"><![CDATA[
 	#VAR
 		var affection = npc.getAffection(pc);
 	#ENDVAR
 	<p>
-		You can't bear to let any [npc.relation(pc)] of yours continue to live in such squalid conditions, and so you say, [pc.speech([npc.Name], I really don't think living here is good for you. I want you to move in with me, so that you can live in comfort until you get your life back on track.)]
+		让你的[npc.relation(pc)]住在这种肮脏的地方，你于心不忍，[pc.speech([npc.Name]，待在这种地方可不好，在你找到合适工作之前，你可以搬过来和我一起住。)]
 	</p>
 	<p>
 		#IF(affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
-			[npc.speech(Really? After how you've treated me?)] [npc.name] asks, crossing [npc.her] [npc.arms] and letting out an exasperated sigh,
+			[npc.speech(在你对我做了那些事情之后，我还能相信你吗？)][npc.name]叉起[npc.arms]，发出恼怒的哼声，旋即叹了口气，
 			#IF(npc.getMother()!=null && npc.getMother().isPlayer())
-				 [npc.speech(I mean, I suppose I can forgive you... Y-You're really serious about letting me come and live with you in that massive mansion?)]
+				[npc.speech(我的意思是，我想我可以原谅你……但你，你真的打算让我和你一起住在那个大宅子里？)]
 			#ELSE
-				 [npc.speech(I mean, I suppose I can forgive you... Y-You're really serious about letting me come and live with you?)]
+				[npc.speech(我的意思是，我想我可以原谅你……但是你，你真的打算让我和你一起住？)]
 			#ENDIF
 		#ELSE
-			[npc.speech(Really?!)] [npc.name] asks, [npc.her] face lighting up as [npc.she] realises that [npc.sheIs] soon to be free of [npc.her] old, miserable life.
+			[npc.speech(真的？！)][npc.name]眼前一亮，因终于有机会告别这悲惨的生活而兴奋起来。
 			#IF(npc.getMother()!=null && npc.getMother().isPlayer())
-				 [npc.speech(I get to come and live with you in that massive mansion?!)]
+				[npc.speech(我可以和你一起住在那大宅子里？！)]
 			#ELSE
-				 [npc.speech(I get to come and live with you?!)]
+				[npc.speech(我真的可以搬过去和你住吗？！)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		[pc.speech(That's right, I have a room already waiting for you. We just need to get your luggage sorted and then we can head straight the-)] you explain, but your sentence is cut short as your [npc.relation(pc)], with tears of joy in [npc.her] [npc.eyes], suddenly launches [npc.herself] at you and gives you a big, loving hug.
+		[pc.speech(没错，我已经为你准备好房间了。只需要把你的行李整理好，然后我们就可以直接去——)]你向你的[npc.relation(pc)]解释，但话没说完，[npc.her]便飞扑过来，抱住了你，眼里噙着泪花。
 	</p>
 	<p>
 		#IF(affection<AFFECTION_NEGATIVE_ONE_ANNOYED.getMaximumValue())
-			[npc.speech(I-I can't believe it!)] [npc.she] sobs,
+			[npc.speech(难，难以置信！)][npc.she]啜泣着，
 			#IF(npc.isSizeDifferenceTallerThan(pc))
-			 pulling your [pc.face] into [npc.her] torso.
+			把你的[pc.face]按在[npc.her]身体上。
 			#ELSE
-			 burying [npc.her] [npc.face] into your shoulder.
+			把[npc.her][npc.face]靠在你的肩膀上。
 			#ENDIF
-			 [npc.speech(I-I thought you hated me!)]
+			[npc.speech(我，我还以为你会记恨我的！)]
 			</p>
 			<p>
-				[pc.speech(Don't be ridiculous,)] you reassure your [npc.relation(pc)], [pc.speech(I love you, and want to see you happy.)]
+				[pc.speech(别说笑了，)]你向你的[npc.relation(pc)]保证，[pc.speech(我只是喜欢你，想让你过得幸福一些。)]
 		#ELSE
-			[npc.speech(I'm so happy, thank you [pc.name]!)] [npc.she] sobs,
+			[npc.speech(我真的，真的很幸福，谢谢你，[pc.name]！)][npc.she]啜泣着，
 			#IF(npc.isSizeDifferenceTallerThan(pc))
-			 pulling your [pc.face] into [npc.her] torso.
+			把你的[pc.face]贴在[npc.her]身上。
 			#ELSE
-			 burying [npc.her] [npc.face] into your shoulder.
+			把[npc.her][npc.face]靠在你肩上。
 			#ENDIF
-			 [npc.speech(This is the best day of my life!)]
+			[npc.speech(这是我最幸福的一天……我此生都不会忘记这一刻。)]
 			</p>
 			<p>
-				[pc.speech(I'm just sorry it took me so long to find you,)] you say to your [npc.relation(pc)], [pc.speech(but it'll all be ok now.)]
+				[pc.speech(抱歉，我找了你很久，)]你看向你的[npc.relation(pc)]，[pc.speech(还好，我找到你了，不算太晚。)]
 		#ENDIF
 	</p>
 	<p>
-		Pulling back, [npc.name] wipes the tears from [npc.her] [npc.eyes], before smiling at you and sniffling, [npc.speech(Sorry, [pc.name], I didn't mean to get so emotional... S-Shall I get my stuff packed then?)]
+		[npc.name]后退一步，拭去[npc.her][npc.eyes]留下的泪水，随后用那双略有红肿的双眼看向你，微笑着，但仍不时抽噎，[npc.speech(对不起，[pc.name]，我并不是有意要这么激动的……那我，我打包一下我的东西？)]
 	</p>
 	<p>
-		Replying in the affirmative, you help your [npc.relation(pc)] to pack up what little personal belongings [npc.sheHasFull]. It turns out that the vast majority of [npc.her] apartment's furniture and furnishings are either owned by the landlord, or too old and shabby to be worth taking with you. As a result, the packing only takes ten minutes or so, and with a small suitcase filled with [npc.namePos] belongings, the two of you leave [npc.her] old apartment behind and set off in the direction of Lilaya's home.
+		你点点头，帮[npc.relation(pc)]打包了一下[npc.her]那少得可怜的家当，屋里的家具大多属于房东，[npc.her]自己的几件家具已经过于破烂，没有拿的必要。所以，十来分钟之后，你们两个提着一个小手提箱，走出昏暗的公寓，向莉莱雅的家走去。
 	</p>
 	<p>
-		After a short while you arrive at your destination,
+		不久后，你们到达了目的地，
 		#IF(npc.getMother()!=null && npc.getMother().isPlayer())
-			 which [npc.name] recognises as the place in which [npc.she] was born. Looking up at the familiar mansion in which [npc.sheIs] soon to live, [npc.name] sighs, [npc.speech(It's even bigger than I remember... Lilaya briefly told me that you were living here with her, but I didn't stick around to find out more...)]
+			[npc.name]仍能认出这里就是[npc.she]出生的地方，看向这栋熟悉的别墅，[npc.name]叹了口气，[npc.speech(这比我记忆中的还要大……莉莱雅当时简短地告诉我，你和她住就住在这里，除此之外我就什么样不知道了……)]
 		#ELSE
-			 and, upon realising that you live in the huge mansion before [npc.herHim], [npc.name] gasps, [npc.speech(You live here?! But this is a palace!)]
+			[npc.name]看向这栋大别墅，惊叹道，[npc.speech(你住这里？！这简直就是宫殿吧！)]
 		#ENDIF
 	</p>
 	<p>
-		Briefly explaining how Lilaya is not only your aunt, but also the recognised daughter of Lyssieth, you reach up to knock on the front door.
+		你简单解释了一下莉莱雅不仅是你的姨妈，还是莉西丝承认的女儿，然后伸手敲了敲门。
 	</p>
 	<p>
 		#IF((npc.getMother()!=null && npc.getMother().equals(lyssieth)) || (npc.getFather()!=null && npc.getFather().equals(lyssieth)))
-				[npc.speech(So Lilaya's my half-sister?)] [npc.name] gasps once again, [npc.speech(Is there any chance of convincing her to have mommy recognise me as well?)]
+				[npc.speech(所以莉莱雅是我的姐妹？)][npc.name]再次惊叹，[npc.speech(那我也能成为被妈妈承认的女儿吗？)]
 			</p>
 			<p>
-				[pc.speech(I think that would be pushing your luck,)] you reply, but before you can say anything further, the front door swings open, and you're greeted by the familiar sight of the cat-girl maid, Rose.
+				[pc.speech(那看你的造化了。)]你回答道，但还没等你说下去，前门就被推开了，迎接你们的是熟悉的猫女仆萝丝。
 		#ELSE
-				[npc.speech(So we're related to an elder Lilin?!)] [npc.name] gasps once again, [npc.speech(So we're royalty?!)]
+				[npc.speech(所以我们也和莉琳长老有亲缘吗？！)][npc.name]再次惊讶地问，[npc.speech(那我们也是贵族吗？)]
 			</p>
 			<p>
-				[pc.speech(Well, not really; we're not exactly recognised as such,)] you reply, but before you can say anything further, the front door swings open, and you're greeted by the familiar sight of the cat-girl maid, Rose.
+				[pc.speech(呃，不是，只有少部分受到长老承认的才算是贵族。)]你回答道，但还没等你说下去，前门就被推开了，迎接你们的是熟悉的猫女仆萝丝。
 		#ENDIF
 	</p>
 	<p>
-		[rose.speech(Good [style.evening], [pc.name],)] Rose greets you, curtsying and stepping aside to let you and [npc.name] enter. [rose.speech(I see you have company, would you like me to prepare a room?)]
+		[rose.speech([style.evening]好，[pc.name]，)]萝丝对你行了个屈膝礼，站在旁边示意你们进去， [rose.speech(我要为你的朋友准备间屋子吗？)]
 	</p>
 	<p>
-		[pc.speech(One's already been set aside for [npc.name],)] you reply, [pc.speech(I was going to let [npc.herHim] have the guest room that you prepared for me before, remember?)]
+		[pc.speech(我为[npc.name]准备好了。)]你回答，[pc.speech(我打算让[npc.herHim]住之前请你准备好的那间客房，可以吗？)]
 	</p>
 	<p>
-		[rose.speech(Of course,)] Rose replies, shutting the front door as you and [npc.name] move forwards into the grand entrance hall. The cat-girl maid then turns to address your [npc.relation(pc)], [rose.speech(Welcome to the household, [npc.name]. If there's anything you need, please don't hesitate to use the pull-cord in your room to summon me. Now, if the two of you will excuse me, I'll inform Mistress Lilaya of your arrival.)]
+		[rose.speech(当然可以。)]萝丝回答道。当你和[npc.name]走进门厅时，她关上了门。猫女仆转过身对[npc.relation(pc)]说，[rose.speech(欢迎你的到来，[npc.name]。如果你有什么需要，请拉响房间里的拉绳。现在，恕我失陪，我需要向莉莱雅主人报告一下。)]
 	</p>
 	<p>
-		Curtsying once more, Rose turns and hurries off back to the lab. Taking hold of [npc.namePos] [npc.hand], you then set off into the mansion, leading [npc.herHim] to [npc.her] new room...
+		再次屈膝行礼后，萝丝转身匆匆返回实验室。你握住[npc.namePos]的[npc.hand]，带着[npc.herHim]走进宅邸，来到[npc.her]的新房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OFFSPRING_OFFER_ROOM_BACK_HOME"><![CDATA[
 	<p>
-		It doesn't take long for you and your [npc.relation(pc)] to arrive at [npc.her] new room, and after you've opened the door and lead [npc.her] inside, you turn to [npc.name] and say, [pc.speech(This is your room now, so please make yourself feel at home. You've got an ensuite bathroom over there, and if you put your dirty clothes in the laundry basket, they'll be cleaned for you for the next day. You can leave all of your worries behind, now that you're living here with me.)]
+		没用多长时间，你和你的[npc.relation(pc)]来到了[npc.her]的新房间。你打开门，领着[npc.her]走了进来，转过身看向[npc.name]，[pc.speech(现在，这里是你的房间了，不用那么拘谨。浴室在那边，如果你把脏衣服放在洗衣篮里，第二天会有人帮你洗干净的。你可以把所有的烦恼都抛在脑后，现在，你和我住在一起了。)]
 	</p>
 	<p>
-		Dropping [npc.her] suitcase to the floor, your [npc.relation(pc)] once again launches [npc.herself] at you, and as [npc.she] pulls you into a big hug, [npc.she] exclaims, [npc.speech(I love you, [pc.mom]! Thank you so much! I-I can't believe this is really happening!)]
+		[npc.her]放下手提箱后，再次扑向了你，给了你一个大大的拥抱，[npc.she]兴奋地对你说，[npc.speech(我爱你，[pc.mom]！太，太感谢你了！这一切好像在梦里一样！)]
 	</p>
 	<p>
-		[pc.speech(I love you too,)] you respond, returning your [npc.relation(pc)]'s hug as you share this precious moment with [npc.herHim].
+		[pc.speech(我也爱你。)]你也抱住你的[npc.relation(pc)]，享受着依偎在彼此身边的幸福感觉。
 	</p>
 	<p>
-		After a moment, [npc.name] pulls back, before planting a kiss on your cheek and saying, [npc.speech(This is honestly the best thing that's ever happened to me... I can never thank you enough! I'll keep on looking for a job, and once I've got one, I'll start paying rent. I'll repay you for all of this, I promise!)]
+		片刻后，[npc.name]后退一步，在你的脸颊上吻了吻，[npc.speech(这真的，真的是我遇到过的最美妙的事情……我真是感激不尽……我会继续找工作，一旦找到了，我就开始付房租，我一定会报答你的，我保证！)]
 	</p>
 	<p>
-		Telling [npc.name] to take it easy, and to spend some time getting used to [npc.her] new room, you step over to the door and prepare to take your leave. Before you depart, however, your [npc.relation(pc)] once again thanks you for your kindness, and tells you that [npc.she] is eternally grateful to you for not abandoning [npc.herHim] to a life of crime.
+		你告诉[npc.name]可以慢慢来，带着[npc.her]在房间里转了转，两个人又待了一会儿。最后，你来到了门边，准备和[npc.her]道别。离别时，你的[npc.relation(pc)]再次向你道谢，并且告诉你，你避免了[npc.she]误入歧途，[npc.she]会一生铭记你的恩情。
 	</p>
 	<p>
-		Promising [npc.herHim] that you'll be back later to check up on [npc.herHim], you step out of [npc.namePos] room and wonder what to do next...
+		你向[npc.herHim]保证你不久后还会来看[npc.herHim]，于是走出了[npc.namePos]的房间，思考接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

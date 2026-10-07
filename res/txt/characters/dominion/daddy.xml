@@ -1,684 +1,683 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- CONVINCING_LILAYA -->
 	
 	<htmlContent tag="CONVINCING_LILAYA"><![CDATA[
 	<p>
-		It being a suitable time of evening in which to go and meet and [daddy.herHim], you decide that now is the right moment in which to tell Lilaya about [daddy.name], and what the two of you discussed over dinner. As you mention [daddy.her] name, Lilaya lets out an annoyed sigh and rolls her eyes, but as you recount what [daddy.name] said about loving Lyssieth and wanting to marry her, Lilaya's expression shifts from irritation to one of curiosity.
+		晚上正是去见[daddy.herHim]的合适时候，你觉得这正是告诉莉莱雅关于[daddy.name]和在晚餐上讨论事情的好时间。当你提到[daddy.her]的名字时，莉莱雅发出一声懊恼的叹息，翻了个白眼。但当你说着[daddy.name]是如何爱着莉西丝并且要结婚时，莉莱雅表情逐渐由恼火变为好奇。
 	</p>
 	<p>
-		Before you're even half-way through your story, Lilaya interrupts, [lilaya.speech(Hold on, so <i>that's</i> what [daddy.she] wanted all this time? I thought [daddy.she] was trying to scam me... I guess that explains why [daddy.she] was so persistent...)]
+		你的事情还没说完一半，莉莱雅就打断了你[lilaya.speech(等等， 所以<i>那就是</i>[daddy.she]一直想要的吗？我以为[daddy.she]只是想骗我…… 我想这也说明了为什么[daddy.she]一直这么坚持……)]
 	</p>
 	<p>
-		Assuring Lilaya that you're beyond convinced that [daddy.name] is genuinely in love with Lyssieth, you then tell the rest of your tale, before finishing with the part about [daddy.herHim] wanting Lilaya to accept [daddy.herHim] as her new '[daddy.daddy]'. As she hears you say this, your [lilaya.relation(pc)]'s cheeks flush red, and, with her tail nervously wrapping around her left leg, she stammers, [lilaya.speech(W-What? [daddy.She] w-wants me to call [daddy.herHim]... '[daddy.daddy]'?)]
+		你让莉莱雅确信你能肯定[daddy.name]真的爱上了莉西斯，接下来你讲完了剩下的故事。最后你说[daddy.herHim]希望莉莱雅接受[daddy.herHim]当她的新 “[daddy.daddy]”。当她听到你这么说的时候，[lilaya.relation(pc)]的脸红了，尾巴紧张地缠绕在左腿上，结结巴巴地说，[lilaya.speech(什、什么？[daddy.She]希望我、我叫[daddy.herHim]……‘[daddy.daddy]’？)]
 	</p>
 	<p>
-		As you confirm that that's [daddy.namePos] request, you can't help but notice a little gleam in Lilaya's [lilaya.eyeColour] eyes, and, after clearing her throat to shake off her earlier stutter, she says, [lilaya.speech(Well, it wouldn't be so bad to have someone step in as a father figure... I mean, I've never met my biological father, and mommy couldn't recall who it was either...)]
+		在你再次确认[daddy.namePos]的请求时，你不禁注意到莉莱雅[lilaya.eyeColour]的眼中闪动着泪光。她清了清喉咙，摆脱了之前的口吃，然后说，[lilaya.speech(好吧，有人来做父亲角色也不错……我是说，我从未见过我的生父，也记不清妈妈是谁……)]
 	</p>
 	<p>
-		Lilaya seems to get a little annoyed towards the end of that last sentence, but, turning her thoughts to the future instead of the past, she continues, [lilaya.speech(I trust your judgement, [pc.name], and it might be fun having someone like that who I could visit now and again...)]
+		莉莱雅讲到最后一句话时似乎有些不开心，但她很快把思绪从过去拉到未来，继续说道， [lilaya.speech(我相信[pc.name]的判断，并且偶尔去拜访那样的人可能也很有趣……)]
 	</p>
 	<p>
-		At this moment, Lilaya turns her head a little and casts a glance across at Rose, and as you follow her gaze over towards the cat-girl, you just about catch the end of her giving Lilaya an approving nod. Having obtained permission from the girl who's supposed to be her maid, Lilaya addresses you once more, [lilaya.speech(I'm not in the middle of any critical experiment at the moment, so let's head over to [daddy.her] place now. I should probably slip into something a little more suitable first, so can you wait by the front door while I get ready?)]
+		这时，莉莱雅稍微转过头来向萝丝一瞥，当你随着她的目光看向那个猫女时，正好看到她对莉莱雅点头赞同。莉莱雅得到了看起来是她女仆的许可，再次对你说，[lilaya.speech(我现在没有什么重要实验，所以我们现在就去[daddy.her]那里吧。但我想换上更合适的衣服，在我准备的时候你能在前门等我吗？)]
 	</p>
 	<p>
-		While Lilaya and Rose hurry up the stairs to her bedroom, you head over to the entrance hall and wait for your [lilaya.relation(pc)] to get ready...
+		在莉莱雅与萝丝急匆匆的上楼去卧室时，你走向门口，等待你的[lilaya.relation(pc)]准备好……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 
 	<!-- FIRST_ENCOUNTER -->
 	
 	<htmlContent tag="FIRST_ENCOUNTER"><![CDATA[
 	<p>
-		As you draw nearer to Lilaya's mansion, you see that the front door is being held open by Rose, and that an unfamiliar human, wearing blue jeans and a plain white t-shirt, is standing at the top of the stairs leading up to the doorstep, talking to her. He seems to be a construction worker of some sort, as you notice that he's holding a purple-coloured hard hat in one hand, while with the other, he appears to be trying to give the cat-girl maid a bouquet of flowers. Approaching the two characters before you, you hear the human plead, [daddy.speech(Please, she hasn't even heard me out!)]
+		当你走近莉莱雅地豪宅时，你看见萝丝站在前门边。一个穿着蓝色牛仔裤和白色T恤的陌生人站在通往门口的楼梯头上，在和萝丝说话。他可能是建筑工人，因为你看见他一只手拿着紫色的安全帽，另一只手拿着准备给这个猫女仆送的一束花。当你走近你面前的这两个人时，你听到那个人恳求说，[daddy.speech(求求你了，她都没有听我说完！)]
 	</p>
 	<p>
-		[rose.speech(Mistress has already told me that she has no intention of meeting you, and furthermore, she's incredibly busy at the moment, so for the last time, leave her alone!)] Rose sharply snaps, and, clearly not having noticed you approaching, steps back and slams the door on his face.
+		[rose.speech(主人已经和我说了，她现在很忙，没有见你的想法，所以最后再说一次，不要再打扰她了！)]萝丝尖声地说着，并且显然没看见你正过来，她后退一步，砰地关上门。
 	</p>
 	<p>
-		Letting out a defeated sigh, the human turns back towards the street, at which point he notices your approach. Flashing you a half-hearted smile, he says, [daddy.speech(Hey, if you're looking for a meeting with Lilaya, you'd be better off coming back tomorrow. Apparently, she's pretty busy today, and you don't want to piss off that maid of hers. Trust me on that one.)]
+		那个人发出一声失落地叹息，转身回到街上，这时他发现了你正过来。他向你敷衍地微笑着，[daddy.speech(如果你想和莉莱雅见面，最好明天再来。显然她今天很忙，你肯定不想惹那个女仆生气。相信我吧。)]
 	</p>
 	<p>
 		#IF(pc.getSexualOrientation()!=ORIENTATION_GYNEPHILIC)
-			You feel your heart beating a little faster as you look up and suddenly notice how handsome this tall, muscular man is. Although he only appears to be in his early forties, his hair is already a magnificent silvery-white in colour, and as you look upon his light-skinned face, you find yourself gazing into a pair of twinkling [daddy.eyeColour] eyes. It's at this moment that you suddenly realise there's something not quite 'human' about this person, and that although he appears to be one at first glance, these unusual features, combined with his strikingly-good looks and an air of arcane power that you sense surrounding him, reveal him to be a demon.
+			你抬头看了下这个男人，突然发现他高大、肌肉健壮，你感觉自己心跳加速了一点。尽管他应该只有四十出头，但他的头发已经是一种华丽的银白色，当你看见他浅色皮肤的脸时，你发现自己正凝视着一双闪烁着[daddy.eyeColour]光芒的眼睛。就在这时，你突然意识到这个人有些不太“人类”，尽管他乍一看是人，但这些不寻常的特征，加上引人注目的外貌和你感觉到围绕着他的奥术力量，说明了他是一个恶魔。
 		#ELSE
-			As you step forwards, you find yourself looking up at this tall, muscular man. Although he only appears to be in his early forties, his hair is already a magnificent silvery-white in colour, and as you look upon his light-skinned face, you find yourself gazing into a pair of twinkling [daddy.eyeColour] eyes. It's at this moment that you suddenly realise there's something not quite 'human' about this person, and that although he appears to be one at first glance, these unusual features, combined with his undeniably-handsome face and an air of arcane power that you sense surrounding him, reveal him to be a demon.
+			当你向前走，你看见了一个高大、肌肉健壮的男人。尽管他应该只有四十出头，但他的头发已经是一种华丽的银白色，当你看见他浅色皮肤的脸时，你发现自己正凝视着一双闪烁着[daddy.eyeColour]光芒的眼睛。就在这时，你突然意识到这个人有些不太“人类”，尽管他乍一看是人，但这些不寻常的特征，加上引人注目的外貌和你感觉到围绕着他的奥术力量，说明了他是一个恶魔。
 		#ENDIF
 	</p>
 	<p>
-		As the incubus starts to walk back down the short staircase, you wonder whether you should tell him that you live here, or simply push past and head inside.
+		当这个男恶魔从开始走下楼梯离开，你想着是否要告诉他你住在哪，还是直接进到屋子里去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_ENCOUNTER_ANSWER"><![CDATA[
 	<p>
-		Deciding to let this incubus know who you are, you quickly tell him that not only do you live here, but that you're also related to Lilaya. As you reveal this information to him, the incubus suddenly becomes reinvigorated, and with a voice full of optimism, he exclaims, [daddy.speech(You're just the person I need to talk to! Look, I'm out of time right now, but if you could please pay me a visit at my place over in Demon Home one evening when you're free, I'll treat you to dinner in one of Dominion's finest restaurants! I work some pretty unusual shifts, so I'm only available between six and ten every evening. You can find me here...)]
+		你决定让这个恶魔知道你是谁，迅速地告诉他你不仅住在这里，而且还和莉莱雅十分有关系。当你告诉他这些信息时，这个恶魔突然变得兴奋，他高声说道，[daddy.speech(你正是我要找的人！不过你看，我现在没时间了，如果你能在空闲时候地晚上来恶魔之家找我，我会请你去御城区最好的餐厅吃饭！我工作的时间不寻常，所以只有每天晚上六点到十点有空。你可以到这里找我……)]
 	</p>
 	<p>
-		Producing a business card from his left pocket, he pushes it into your hands before glancing at his watch and sharply inhaling, [daddy.speech(Damn, I knew I'd be cutting this close! I need to go! Please, I'm begging you, come and visit me whenever you can!)]
+		他从左口袋里拿出一张名片，把它塞进你的手里，然后看了看手表，猛地吸了口气，[daddy.speech(完了，我赶时间！我得走了！拜托你有空的时候一定来找我！)]
 	</p>
 	<p>
-		Leaving you no time in which to respond, he flashes you one last charming smile, before putting his hard hat back on, turning away, and then dashing off down the street. After briefly watching him run off, you glance down at the business card still in your [pc.hand], which informs you both of this curious incubus's address, as well as the fact that his name is '[daddy.name]'. Wondering what you'll do about his request to meet him, you turn towards Lilaya's mansion, before stepping up to the front door and giving it a knock.
+		等你还没反应过来，他就向你微微一笑，戴上他的安全帽转身离开，然后冲下街去。你看着他离开后，低头看着还在你[pc.hand]里的名片，上面告诉你这个奇怪的恶魔的住址，以及他的名字“[daddy.name]”。你正想着要如何应对他的见面请求，转向莉莱雅的豪宅，走到前门，敲门。
 	</p>
 	<p>
-		As usual, you only have to wait a moment before it swings open before you, bringing you face-to-face with Rose. Obviously having expected [daddy.name] to be the one who knocked, she looks a little surprised to see that it's you standing before her, but, quickly recovering, she dutifully stands aside to let you enter. As you step inside, she asks, [rose.speech(I don't suppose you saw an incubus leaving here just now?)]
+		像平时一样，你需要在门打开前等一会儿，然后就会面对面地看到萝丝。很显然，她原本以为敲门的是[daddy.name]，看到你站在她面前，她显得有些惊讶，但很快又恢复过来，恭敬地站在一边让你进来。你进去的时候，她问道，[rose.speech(我不知道你刚刚有没有看到一个男恶魔离开这里？)]
 	</p>
 	<p>
-		After replying in the affirmative, Rose lets out a small sigh and asks, [rose.speech(You wouldn't be able to help us get rid of him for good, would you? He keeps on pestering mistress in the hopes of going out to dinner with her, even though he's been informed that she has absolutely no interest in such an arrangement. If you could go to his place and let him know not to bother us ever again, that would be most helpful. I can give you the address, if you'll just bear with me a moment.)]
+		在得到你肯定地答复后，萝丝轻轻叹了口气，[rose.speech(你能帮我们彻底摆脱他吗？他一直在纠缠主人，希望和她一起出去吃饭，尽管已经告诉他主人对这些安排毫无兴趣。如果你能去他那，让他不要再打扰我们，那就太好了。如果你愿意等我一会，我可以给你他的地址。)]
 	</p>
 	<p>
-		You tell Rose that he's already given you his business card, and, taking that as confirmation that you'll go and see him, Rose curtsies towards you before excusing herself and hurrying off in the direction of Lilaya's lab. Looking down at the card in your hand, you wonder whether you should head over to Demon Home and do as Rose asks, or perhaps once you're there you could give [daddy.name] a chance to explain himself...
+		你告诉萝丝他已经给你名片了。萝丝知道你会去见他就向你鞠躬，然后告辞，匆匆走向莉莱雅的实验室。你低头看着手中的卡片，思考是否应该去恶魔之家，按照萝丝的要求做；或者一到那里，给[daddy.name]一个解释自己的机会……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_ENCOUNTER_PUSH_PAST"><![CDATA[
 	<p>
-		Deciding that nothing good will come from involving yourself with this unwelcome incubus, you simply stride past him up the steps to knock on the front door. Just as he starts to repeat his warning about not bothering Lilaya, the door swings open before you, and, much to his amazement, he watches as Rose curtsies towards you, before standing aside and letting you step past her.
+		你觉得和这个男恶魔扯上关系绝不会有什么好事，于是决定无视他并大步走上直接敲门。正当他重复着告诫你不要惹怒莉莱雅时，门打开了。萝丝向你鞠躬并退到一边，让你进去。他看着这一切，大出所料。
 	</p>
 	<p>
-		[daddy.speech(You live here?! Hey, wait, I need to speak to you! Please, let me buy you dinner one evenin-)] he starts to exclaim, but, taking your hint of not even turning around to look at him, Rose simply steps forwards and slams the door on his face.
+		[daddy.speech(你住在这？！嘿，等等，听我说！求你了，让我请你吃晚——)]他突然开始大喊，但是萝丝领会你不理睬的暗示，只是简单的向前一步，砰地关上了门。
 	</p>
 	<p>
-		[rose.speech(Welcome home,)] the cat-girl maid says as she turns towards you, before asking, [rose.speech(You wouldn't be able to help us get rid of that nuisance for good, would you? He keeps on pestering mistress in the hopes of going out to dinner with her, even though he's been informed that she has absolutely no interest in such an arrangement. If you could go to his place and let him know not to bother us ever again, that would be most helpful. I can give you the address, if you'll just bear with me a moment.)]
+		[rose.speech(欢迎回家，)]猫女仆转身向你说，[rose.speech(你能帮我们摆脱那个烦人鬼吗？他一直纠缠主人，想和主人共进晚餐。已经提醒他很多次，主人对此毫无兴趣了。如果你能去他那，让他不要再打扰我们，那就太好了。如果你愿意等我一会，我可以给你他的地址。)]
 	</p>
 	<p>
-		Still being indebted to Lilaya for everything she's done for you, you decide that it would be best to assist her with this problem, and watch as Rose quickly steps over towards a nearby cabinet, before opening a drawer and producing a small business card. Moving back over to stand before you, she hands over this card and explains, [rose.speech(This card lists his address, over in Demon Home. if you could pay him a visit and settle this matter for good, it would be most appreciated.)]
+		看着萝丝快步走向一个柜子，你觉得帮他们解决这个问题这正是偿还欠下莉莱雅人情的好机会。萝丝打开一个抽屉，拿出了一张小的名片。她走回来站在你面前，把这张卡片递给你，[rose.speech(这张卡上写着他在恶魔之家的地址。如果你能拜访他，永远解决这个问题，我们将不胜感激。)]
 	</p>
 	<p>
-		Thanking you for your help, Rose curtsies once more, before excusing herself and hurrying off in the direction of Lilaya's lab. Looking down at the card in your hand, you see that the incubus's name is '[daddy.name]'. Putting it away, you wonder whether you should head over to Demon Home and do as Rose asks, or perhaps once you're there you could give [daddy.name] a chance to explain himself...
+		再次感谢你的帮助，萝丝向你鞠躬后告辞，匆匆向莉莱雅的实验室走去。看着手里面的卡片，你看见了男恶魔的名字“[daddy.name]”。你把它收起来，思考是否应该去恶魔之家，按照萝丝的要求做；或者一到那里，给[daddy.name]一个解释自己的机会……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- MEETING -->
 	
 	<htmlContent tag="MEETING_RETURN_AFTER_REFUSED"><![CDATA[
 	<p>
-		Deciding to pay [daddy.name] another visit, you head over to his apartment building, and after stepping inside and making your way up the staircase to the first floor, you quickly locate and knock on his door. Almost immediately, you hear sounds of movement beyond, and after just a few seconds, the door swings open before you, and you find yourself face-to-face with the silver-haired incubus once more.
+		你决定再次拜访[daddy.name]，你走向他的公寓大楼，进去并且上到二楼，很快就找到并敲了他的门。几乎是同时，你听到门后有动静，然后门自就己打开了，你再次面对面地看到了那个银发男恶魔。
 	</p>
 	<p>
-		[daddy.speech(You're back?!)] he exclaims in surprise, before quickly recovering his composure and flashing you a charming smile. Grabbing his keys from off of the top of his hallway table, he then moves forwards as though to exit his apartment, saying, [daddy.speech(Come on, let me treat you to dinner. You can't keep on refusing me!)]
+		[daddy.speech(你回来了？！)]他惊讶地叫道，然后迅速恢复了镇定，露出迷人的笑容。他从走廊桌子上拿起钥匙，然后像是要离开公寓一样向前走去，说道，[daddy.speech(来吧，让我请你吃饭。你不能一直拒绝我！)]
 	</p>
 	<p>
-		Although you knocked on his door with the intention of giving him another chance, you now find yourself wondering if you should go through with this after all, or change your mind and turn him down yet again...
+		虽然你敲他的门是想给他再一次机会，但你现在开始想是否真的应该这么做，或者改变主意再次拒绝他……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_RETURN_AFTER_REFUSED_AT_DINNER"><![CDATA[
 	<p>
-		Deciding to pay [daddy.name] another visit, you head over to [daddy.her] apartment building, and after stepping inside and making your way up the staircase to the first floor, you quickly locate and knock on [daddy.her] door. Almost immediately, you hear sounds of movement beyond, and after just a few seconds, the door swings open before you, and you find yourself face-to-face with the silver-haired [daddy.race] once more.
+		决定再去拜访[daddy.name]，你走向[daddy.her]的公寓大楼，走进去，沿着楼梯走到二楼，很快就找到并敲了[daddy.her]的门。几乎是同时，你听到门后有动静，然后门自就己打开了，你再次面对面地看到了那个银发的[daddy.race]。
 	</p>
 	<p>
 		#IF(daddy.isFeminine())
-			[daddy.speech(You're back?!)] she exclaims in surprise, before quickly recovering her composure and flashing you a captivating smile. Leaning against the door-frame, she then asks, [daddy.speech(So, have you changed your mind yet? Come on, it wouldn't be so bad having me as your mum now, would it? Just say yes, and your new mommy'll take you out for dinner!)]
+			[daddy.speech(你回来了？！)]她惊讶地叫了出来，然后迅速恢复了镇定，露出迷人的微笑。她靠在门框上，然后问道，[daddy.speech(那么，你改变主意了吗？我做你的妈妈也不是那么糟糕，对不对？只要你说，你的新妈妈马上就带你出去吃饭！)]
 		#ELSE
-			[daddy.speech(You're back?!)] he exclaims in surprise, before quickly recovering his composure and flashing you a charming smile. Leaning against the door-frame, he then asks, [daddy.speech(So, have you changed your mind yet? Come on, it wouldn't be so bad having me as your dad now, would it? Just say yes, and your new daddy'll take you out for dinner!)]
+			[daddy.speech(你回来了？！)]他惊讶地叫了出来，然后迅速恢复了镇定，露出迷人的微笑。他靠在门框上，然后问道， [daddy.speech(那么，你改变主意了吗？我做你的爸爸也不是那么糟糕，对不对？只要你说，你的新爸爸马上就带你出去吃饭！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.isAttractedTo(daddy) && pc.hasFetish(FETISH_INCEST))
-			You feel your heart beating in your chest as [daddy.name] asks this, and, with thoughts of incestuous passion running through your mind, you wonder if you should accept [daddy.herHim] as your '[daddy.daddy]', or perhaps you should keep your desires in check and turn [daddy.herHim] down once again...
-		#ELSE
-			Although you knocked on [daddy.her] door with the intention of accepting [daddy.name] as your '[daddy.daddy]', you now find yourself wondering if you should go through with this after all, or change your mind and turn [daddy.herHim] down yet again...
+			当你听[daddy.name]说这些时，你能感觉你的心砰砰直跳，并且，脑海里翻滚着乱伦的激情，你思考是否因该接受[daddy.herHim]当作你的“[daddy.daddy]”，还是再做考虑，拒绝[daddy.herHim]…… 		#ELSE
+			尽管你敲了[daddy.her]的门，打算接受[daddy.name]作为你的“[daddy.daddy]”，但你现在在想，你是否应该坚持下去，或者改变主意，再次拒绝[daddy.herHim]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_MEETING_RUDE"><![CDATA[
 	<p>
-		Having decided to pay [daddy.name] a visit, you soon find yourself standing before the apartment building whose address matches the one on his business card. Finding that the front door is unlocked, you step inside, and once again following the business card's directions, make your way up the staircase to the first floor, where you're able to quickly locate and knock on [daddy.her] door.
+		你决定去拜访[daddy.name]，很快就站在了商务名片上对应的公寓楼前。你发现大门没有锁，走了进去。你再一次跟随着名片的指引，走向二楼。在那里你很快就找到并敲了[daddy.her]的门。
 	</p>
 	<p>
-		Almost immediately, you hear sounds of movement in the apartment beyond, and after just a few seconds, the door swings open before you, and you find yourself face-to-face with the silver-haired [daddy.race] once more.
+		几乎是同时，你听到门后有动静，然后门就自己打开了，你再次与银发男恶魔面对面。
 	</p>
 	<p>
-		[daddy.speech(You came!)] he happily exclaims, before immediately grabbing his keys from off of the top of his hallway table. Moving forwards as though to exit his apartment, he says, [daddy.speech(Come on, I'll treat you to dinner. I need to fix the bad first impression I must have made on you!)]
+		[daddy.speech(你来了！)]他高兴地叫道，然后立刻从走廊桌子上拿起钥匙。他向前走，好像要出公寓的门，并说道：[daddy.speech(来吧，我请你吃饭。我要弥补我给你不好的第一印象！)]
 	</p>
 	<p>
-		With just a moment in which to make your decision, you wonder if you should let [daddy.name] take you out to dinner and listen to what he has to say, or simply refuse him right here and now...
+		你只有很短的时间来做决定。你开始想是否应该让[daddy.name]带你出去吃饭，并听他说话，或者现在就在这里拒绝他……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INITIAL_MEETING"><![CDATA[
 	<p>
-		Having decided to pay [daddy.name] a visit, you soon find yourself standing before the apartment building whose address matches the one on his business card. Finding that the front door is unlocked, you step inside, and once again following the business card's directions, make your way up the staircase to the first floor, where you're able to quickly locate and knock on [daddy.her] door.
+		你决定去拜访[daddy.name]，很快就站在了商务名片上对应的公寓楼前。你发现大门没有锁，走了进去。你再一次跟随着名片的指引，走向二楼。在那里你很快就找到并敲了[daddy.her]的门。
 	</p>
 	<p>
-		Almost immediately, you hear sounds of movement in the apartment beyond, and after just a few seconds, the door swings open before you, and you find yourself face-to-face with the silver-haired [daddy.race] once more.
+		几乎是同时，你听到门后有动静，然后门就自己打开了，你再次与银发男恶魔面对面。
 	</p>
 	<p>
-		[daddy.speech(You came!)] he happily exclaims, before immediately grabbing his keys from off of the top of his hallway table. Moving forwards as though to exit his apartment, he says, [daddy.speech(Come on, I'll treat you to dinner. There's a lot I need to talk to you about!)]
+		[daddy.speech(你来了！)]他高兴地叫道，然后立刻从走廊桌子上拿起钥匙。他向前走，好像要出公寓的门，并说道：[daddy.speech(来吧，我请你吃饭。我有很多事情要和你谈！)]
 	</p>
 	<p>
-		With just a moment in which to make your decision, you wonder if you should let [daddy.name] take you out to dinner and listen to what he has to say, or simply refuse him right here and now...
+		在做决定的短短一点时间内，你开始想是否应该让[daddy.name]带你出去吃饭，并听他说话，或者现在就在这里直接拒绝他……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_INITIAL_MEETING"><![CDATA[
 	<p>
-		After you've been waiting for about ten minutes, Lilaya finally comes back down the staircase, and you feel your eyes widening as you look upon a version of your [lilaya.relation(pc)] that you haven't seen before. Instead of her usual lab coat, shirt, and skirt, she's wearing a sleek black plunge dress, which clings to the curves of her body while showing off a generous amount of her ample cleavage. Her stiletto heels and pearl stud earrings, both as black as her dress, are also quite unlike anything you've seen her wear before, while her typically-loose hair has been tied up into a scrunchie-bound ponytail. 
+		大约等了十分钟以后，莉莱雅终于从楼梯上走下来了。你不禁瞪大眼睛，因为你见到了你的[lilaya.relation(pc)]以前从未见过的样子：她没有穿平时的实验室大衣与外套、裙子，而是穿着一件修身的黑色深V连衣裙，慷概地展示着丰满胸部间的沟壑，同时也紧紧地勾勒出身体曲线。她的珍珠耳钉与高跟鞋同样是黑色，完全不似之前的穿搭，通常松散的头发也被发圈束成了马尾。
 	</p>
 	<p>
-		[lilaya.speech(So, what do you think?)] she hesitantly asks, stepping up before you, [lilaya.speech(Is this ok? Rose said it looks good, but I feel kind of uncomfortable in stuff like this...)]
+		[lilaya.speech(那么，你觉得怎么样？)]她犹豫地问道，走到你面前，[lilaya.speech(这样可以吗？萝丝说不错，但是我穿这种东西感觉有点不舒服……)]
 	</p>
 	<p>
-		Reassuring her that she looks stunning, you can't help but give your [lilaya.relation(pc)] an endearing smile as she blushes profusely and insists that the two of you leave immediately. Doing as she says, you join her in stepping out into the streets of Dominion, before heading off in the direction of Demon Home. The two of you make conversation the entire way there, and although a lot of it ends up revolving around the arcane experiments Lilaya has been performing recently, she also asks you lots of questions about what [daddy.name] is like. 
+		你告诉她十分漂亮，她脸红得厉害并且要马上出发，你情不自禁地对[lilaya.relation(pc)]深情微笑。如她所愿，你和她一起走出御城区的街道，然后朝着恶魔之家的方向前进。你们俩一路上都在聊天，虽然大部分话题都围绕着莉莱雅最近正在进行的奥术实验，但她也问了你很多关于[daddy.name]怎么样的问题。
 	</p>
 	<p>
-		After half an hour of walking, the two of you finally arrive at [daddy.namePos] apartment building, and after stepping inside and making your way up the staircase to the first floor, you quickly locate and knock on [daddy.her] door. Almost immediately, you hear sounds of movement beyond, and after just a few seconds, the door swings open before you, and you once again find yourself face-to-face with your new [daddy.daddy].
+		步行半小时之后，你们最终俩到达了[daddy.namePos]的公寓大楼。你们走进去上到二楼，迅速的找到并且叩响了[daddy.her]的门。几乎是同时，你听到门后有动静，然后门就自己打开了，你再次与你的新[daddy.daddy]面对面。
 	</p>
 	<p>
-		Seeing both you and Lilaya standing before [daddy.herHim], [daddy.name] joyously smiles at you, before turning to your companion and exclaiming, [daddy.speech(I can't believe it! Finally, I get to meet you, Lilaya! I must say that you look every bit as beautiful as your mother!)]
+		[daddy.name]看到你和莉莱雅都站在[daddy.herHim]面前，愉快地向你笑着，转向你的伙伴说， [daddy.speech(我简直不敢相信！我终于见到你了，莉莱雅！我必须说你和你母亲一样美丽！)]
 	</p>
 	<p>
 		#IF(lilaya.getSubspecies()==SUBSPECIES_DEMON)
-			Although Lilaya's demonic skin is already scarlet in colour, you look across to see it turning an even darker shade of red, and as she starts blushing, she stammers, [lilaya.speech(P-Please don't say such embarrassing things!)]
+			虽然莉莱雅的恶魔皮肤本来就是猩红色的，但你看到她的脸色变得更深了一些，她结结巴巴地说，[lilaya.speech(请不要说这么尴尬的话！)]
 		#ELSE
-			Looking across at her, you see Lilaya's cheeks turning a deep shade of scarlet, and as she starts blushing, she stammers, [lilaya.speech(P-Please don't say such embarrassing things!)]
+			你看到莉莱雅的脸霎时变得绯红，她结结巴巴地说，[lilaya.speech(请不要说这么尴尬的话！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.isVisiblyPregnant())
 			#IF(!pc.isCharacterReactedToPregnancy(daddy))
 				#IF(pc.getPregnantLitter().isFatherId(daddy.getId()))
-						[daddy.speech(Hey, [pc.name]!)] [daddy.name] exclaims, suddenly noticing the bulge in your belly, [daddy.speech(I got you pregnant?! That's fantastic! Here, let me help you out a little!)]
+						[daddy.speech(嘿，[pc.name]！)][daddy.name]注意到了你隆起的腹部，[daddy.speech(我让你怀上了？！那可太棒啦！来，让我帮你一下！)]
 					</p>
 					<p>
-						With that, your [daddy.daddy] ducks back into [daddy.her] apartment, before quickly appearing with a small bag of flames. Before you have a chance to accept or refuse [daddy.her] help, [daddy.sheHas] already pushed the money into your [pc.hands], and is saying, [daddy.speech(I know you'll make an excellent mother for our kids, [pc.name]!)]
+						你的[daddy.daddy]说完这些，快速回到[daddy.her]的公寓，然后很快拿出了一个装火币的小袋子。你还没来得及拒绝，[daddy.her]已经把钱塞到了你[pc.hands]里，[daddy.speech(我知道你会成为我们孩子的优秀母亲，[pc.name]！)]
 				#ELSE
-						[daddy.speech(Hey, [pc.name]!)] [daddy.name] exclaims, suddenly noticing the bulge in your belly, [daddy.speech(You're pregnant?! Here, let me help you out a little...)]
+						[daddy.speech(嘿，[pc.name]！)][daddy.name]注意到了你隆起的腹部，[daddy.speech(你怀上了？来，让我帮你一下……)]
 					</p>
 					<p>
-						With that, your [daddy.daddy] ducks back into [daddy.her] apartment, before quickly appearing with a small bag of flames. Before you have a chance to accept or refuse [daddy.her] help, [daddy.sheHas] already pushed the money into your [pc.hands], and is saying, [daddy.speech(I know you'll make an excellent mother, [pc.name]!)]
+						你的[daddy.daddy]说完这些，快速回到[daddy.her]的公寓，然后很快拿出了一个装火币的小袋子。你还没来得及拒绝，[daddy.her]已经把钱塞到了你的[pc.hands]里，[daddy.speech(我知道你会成为一个优秀的母亲，[pc.name]！)]
 				#ENDIF
 			#ELSE
 				#IF(pc.getPregnantLitter().isFatherId(daddy.getId()))
-						[daddy.speech(Hey, [pc.name]!)] [daddy.name] exclaims, noticing the bulge in your belly, [daddy.speech(You're still pregnant with our kids? I hope everything's going ok for you!)]
+						[daddy.speech(嘿， [pc.name]！)][daddy.name]注意到了你隆起的腹部，[daddy.speech(你还在怀着我们的孩子吗？我希望你一切都好！)]
 					</p>
 					<p>
 				#ELSE
-						[daddy.speech(Hey, [pc.name]!)] [daddy.name] exclaims, noticing the bulge in your belly, [daddy.speech(You're still pregnant? I hope everything's going ok for you!)]
+						[daddy.speech(嘿， [pc.name]！)][daddy.name]注意到了你隆起的腹部，[daddy.speech(你还怀着？我希望你一切都好！)]
 					</p>
 					<p>
 				#ENDIF
 			#ENDIF
 			</p>
 			<p>
-				[daddy.speech(Oh, hey, I didn't mean for my earlier comment to make you blush,)] [daddy.name] says to Lilaya, having just noticed the colour of her cheeks. Saying this to her, combined with his next sentence, only causes Lilaya's cheeks to darken even more, [daddy.speech(So, assuming [pc.name]'s explained my plan to you, you're here ready to accept me as your new [daddy.dad], aren't you?)]
+				[daddy.speech(额，我刚才的话并不是想让你脸红，)][daddy.name]对莉莱雅说，他才刚刚注意到她的脸色。但他对她说这句话，再加上他接下来的一句话，只会让莉莱雅的脸颊变得更红，[daddy.speech(所以，我假设[pc.name]已经向你解释了我的想法了，你现在能接受我成为你新的[daddy.dad]，是吗？)]
 		#ELSE
-			[daddy.speech(Ah, sorry about that, I didn't mean to make you blush,)] [daddy.name] replies, which, combined with his next sentence, only causes Lilaya's cheeks to darken even more, [daddy.speech(So, assuming [pc.name]'s explained my plan to you, you're here ready to accept me as your new [daddy.dad], aren't you?)]
+			[daddy.speech(额，我刚才的话并不是想让你脸红，)][daddy.name]但他对她说这句话，再加上他接下来的一句话，只会让莉莱雅的脸颊变得更红，[daddy.speech(所以，我假设[pc.name]已经向你解释了我的想法了，你现在能接受我成为你新的[daddy.dad]，是吗？)]
 		#ENDIF
 	</p>
 	<p>
-		[lilaya.speech(W-Well, I-I... T-That is...)] Lilaya stammers, clearly struggling to find the right words. You're certain that she's trying to say yes, as she let you know on more than one occasion on the way over here that if she didn't like the look of [daddy.name], she was going to immediately turn around and march back home.
+		[lilaya.speech(额——额，我、我……这个是……)]莉莱雅结结巴巴地说着，显然在努力寻找合适的词汇。但你确定她想，因为在来这里的时候，她说过很多次：如果她不喜欢[daddy.name]的样子，她就立刻转身回家。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING"><![CDATA[
 	<p>
-		Deciding to pay [daddy.name] another visit, you head over to [daddy.her] apartment building, and after stepping inside and making your way up the staircase to the first floor, you quickly locate and knock on [daddy.her] door. Almost immediately, you hear sounds of movement beyond, and after just a few seconds, the door swings open before you, and you find yourself face-to-face with the silver-haired [daddy.race] once more.
+		你决定再次拜访[daddy.name]，你走向[daddy.her]的公寓大楼，进去并且上到二楼，很快就找到并敲了[daddy.her]的门。几乎是同时，你听到门后有动静，然后门自就己打开了，你再次面对面地看到了那个银发的[daddy.race]。
 	</p>
 	#IF(pc.isVisiblyPregnant())
 		<p>
 			#IF(!pc.isCharacterReactedToPregnancy(daddy))
 				#IF(pc.getPregnantLitter().isFatherId(daddy.getId()))
-						[daddy.speech(Oh hey, [pc.name]!)] [daddy.she] exclaims, before suddenly noticing the bulge in your belly and gasping, [daddy.speech(I got you pregnant?! That's fantastic! Here, let me help you out a little!)]
+						[daddy.speech(嘿，[pc.name]！)][daddy.she]注意到了你在喘气与隆起的腹部，[daddy.speech(我让你怀上了？！那可太棒啦！来，让我帮你一下！)]
 					</p>
 					<p>
-						With that, your [daddy.daddy] ducks back into [daddy.her] apartment, before quickly appearing with a small bag of flames. Before you have a chance to accept or refuse [daddy.her] help, [daddy.sheHas] already pushed the money into your [pc.hands], and is saying, [daddy.speech(I know you'll make an excellent mother for our kids, [pc.name]! Now, do you want to go out for dinner with me again? Or perhaps you just want to come inside and hang out for a bit?)]
+						你的[daddy.daddy]说完这些，快速回到[daddy.her]的公寓，然后很快拿出了一个装火币的小袋子。你还没来得及拒绝，[daddy.her]已经把钱塞到了你[pc.hands]里，[daddy.speech(我知道你会成为我们孩子的优秀的母亲，[pc.name]！现在要和我一起出去吃晚餐吗？或者还是进来呆一会？)]
 				#ELSE
-						[daddy.speech(Oh hey, [pc.name]!)] [daddy.she] exclaims, before suddenly noticing the bulge in your belly, [daddy.speech(You're pregnant?! Here, let me help you out a little...)]
+						[daddy.speech(嘿，[pc.name]！)][daddy.she]注意到了你隆起的腹部， [daddy.speech(你怀上了？！让我帮你一下……)]
 					</p>
 					<p>
-						With that, your [daddy.daddy] ducks back into [daddy.her] apartment, before quickly appearing with a small bag of flames. Before you have a chance to accept or refuse [daddy.her] help, [daddy.sheHas] already pushed the money into your [pc.hands], and is saying, [daddy.speech(I know you'll make an excellent mother, [pc.name]! Now, do you want to go out for dinner with me again? Or perhaps you just want to come inside and hang out for a bit?)]
+						你的[daddy.daddy]说完这些，快速回到[daddy.her]的公寓，然后很快拿出了一个装火币的小袋子。你还没来得及拒绝，[daddy.her]已经把钱塞到了你[pc.hands]里，[daddy.speech(我知道你会成为一个优秀的母亲，[pc.name]！现在要和我一起出去吃晚餐吗？或者还是进来呆一会？)]
 				#ENDIF
 			#ELSE
 				#IF(pc.getPregnantLitter().isFatherId(daddy.getId()))
-						[daddy.speech(Hey, [pc.name]!)] [daddy.name] exclaims, noticing the bulge in your belly, [daddy.speech(You're still pregnant with our kids? I hope everything's going ok for you!)]
+						[daddy.speech(嘿，[pc.name]！)][daddy.name]注意到了你隆起的腹部，[daddy.speech(你还在怀着我们的孩子吗？我希望你一切都好！)]
 					</p>
 					<p>
-						After you've replied in the positive, [daddy.name] continues, [daddy.speech(That's great! Now, do you want to go out for dinner with me again? Or perhaps you just want to come inside and hang out for a bit?)]
+						当你肯定以后，[daddy.name]继续说，[daddy.speech(那太好了！现在要和我一起出去吃晚餐吗？或者还是进来呆一会？)]
 				#ELSE
-						[daddy.speech(Hey, [pc.name]!)] [daddy.name] exclaims, noticing the bulge in your belly, [daddy.speech(You're still pregnant? I hope everything's going ok for you!)]
+						[daddy.speech(嘿，[pc.name]！)][daddy.name]注意到了你隆起的腹部，[daddy.speech(你怀上了？我希望你一切都好！)]
 					</p>
 					<p>
-						After you've replied in the positive, [daddy.name] continues, [daddy.speech(That's great! Now, do you want to go out for dinner with me again? Or perhaps you just want to come inside and hang out for a bit?)]
+						当你肯定以后，[daddy.name]继续说，[daddy.speech(那太好了！现在要和我一起出去吃晚餐吗？或者还是进来呆一会？)]
 				#ENDIF
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
 			#IF(daddy.isFeminine())
-				[daddy.speech(Oh hey, [pc.name]!)] [daddy.she] exclaims, before flashing you a captivating smile and asking, [daddy.speech(Want to go out for dinner with me again? Or perhaps you just want to come inside and hang out for a bit?)]
+				[daddy.speech(嘿，[pc.name]！)][daddy.she]向你露出诱人的微笑，[daddy.speech(现在要和我一起出去吃晚餐吗？或者还是进来呆一会？)]
 			#ELSE
-				[daddy.speech(Oh hey, [pc.name]!)] [daddy.she] exclaims, before flashing you a charming smile and asking, [daddy.speech(Want to go out for dinner with me again? Or perhaps you just want to come inside and hang out for a bit?)]
+				[daddy.speech(嘿，[pc.name]！)][daddy.she]向你露出迷人的微笑，[daddy.speech(现在要和我一起出去吃晚餐吗？或者还是进来呆一会？)]
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_MEETING"><![CDATA[
 	<p>
-		With Lilaya by your side, you make your way over to Demon Home, before heading to the street in which [daddy.name] lives. After arriving at [daddy.her] apartment building, the two of you head inside and make your way up the staircase to the first floor, before quickly locating and knocking on [daddy.her] door. Almost immediately, you hear sounds of movement beyond, and after just a few seconds, the door swings open before you, and you find yourself face-to-face with the silver-haired [daddy.race] once more.
+		莉莱雅陪你身边，一起去往恶魔之家[daddy.name]居住的街道。到达[daddy.her]的公寓大楼，你们一起进去并且上到二楼，很快就找到并敲了[daddy.her]的门。几乎是同时，你听到门后有动静，然后门自就己打开了，你再次面对面地看到了那个银发的[daddy.race]。
 	</p>
 	<p>
 		#IF(pc.isVisiblyPregnant() || lilaya.isVisiblyPregnant())
 			#IF(!pc.isVisiblyPregnant() || (lilaya.isVisiblyPregnant() && !lilaya.isCharacterReactedToPregnancy(daddy) && pc.isCharacterReactedToPregnancy(daddy)))
 				#IF(!lilaya.isCharacterReactedToPregnancy(daddy))
 					#IF(lilaya.getPregnantLitter().isFatherId(daddy.getId()))
-						[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulge in Lilaya's stomach, [daddy.speech(Hey, sweetheart, I got you pregnant?! That's fantastic! Hold on, let me get you something to help!)]
+						[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到莉莱雅肚子的隆起，[daddy.speech(嘿，宝贝，我让你怀孕了？太棒了！等一下，让我给你找点东西帮忙！)]
 					#ELSE
-						[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulge in Lilaya's stomach, [daddy.speech(Hey, sweetheart, you're pregnant?! Hold on, let me get you something to help!)]
+						[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到莉莱雅肚子的隆起，[daddy.speech(嘿，宝贝，你怀孕了？等一下，让我给你找点东西帮忙！)]
 					#ENDIF
 					</p>
 					<p>
-						Ignoring Lilaya's logical observation that she has the wealth of an elder lilin at her disposal, [daddy.name] insists upon giving her a small bag of flames. Smiling happily between you and your [lilaya.relation(pc)], [daddy.she] then asks, [daddy.speech(So, do you want me to treat the two of you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+						尽管根据观察就能知道莉莱雅有着莉琳长老级别的财富任她支配，但[daddy.name]坚持给了她一小袋火币。[daddy.she]在你和你的[lilaya.relation(pc)]间笑着，问道，[daddy.speech(那么，你们想再让我请吃饭吗？还是进来坐一会儿？)]
 				#ELSE
-						[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before noticing the bulge in Lilaya's stomach, [daddy.speech(Hey, sweetheart, I hope your pregnancy's going ok!)]
+						[daddy.she]高兴地说，[daddy.speech(哎呀，这果不是我最爱的两个未来的继子！)]然后注意到莉莱雅肚子的隆起，[daddy.speech(嘿，宝贝，我希望你怀孕进展顺利！)]
 					</p>
 					<p>
-						After Lilaya has informed [daddy.herHim] that she's managing just fine, [daddy.name] asks, [daddy.speech(So, do you want me to treat the two of you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+						在莉莱雅告诉[daddy.herHim]她一切都很好后，[daddy.name]问，[daddy.speech(那么，你们想再让我请吃饭吗？还是想进来坐一会儿？)]
 				#ENDIF
 			#ELSE
 				#IF(!lilaya.isVisiblyPregnant() || (pc.isVisiblyPregnant() && !pc.isCharacterReactedToPregnancy(daddy) && lilaya.isCharacterReactedToPregnancy(daddy)))
 					#IF(!pc.isCharacterReactedToPregnancy(daddy))
 						#IF(pc.getPregnantLitter().isFatherId(daddy.getId()))
-							[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulge in your stomach, [daddy.speech(Hey, sweetheart, I got you pregnant?! That's fantastic! Hold on, let me get you something to help!)]
+							[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到你肚子的隆起，[daddy.speech(嘿，宝贝，我让你怀孕了？太棒了！等一下，让我给你找点东西帮忙！)]
 						#ELSE
-							[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulge in your stomach, [daddy.speech(Hey, sweetheart, you're pregnant?! Hold on, let me get you something to help!)]
+							[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到你肚子的隆起，[daddy.speech(嘿，宝贝，你怀孕了？等一下，让我给你找点东西帮忙！)]
 						#ENDIF
 						</p>
 						<p>
-							With that, your [daddy.daddy] ducks back into [daddy.her] apartment, before quickly appearing with a small bag of flames. Before you have a chance to accept or refuse [daddy.her] help, [daddy.sheHas] already pushed the money into your [pc.hands], and is asking, [daddy.speech(So, do you want me to treat the two of you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+							你的[daddy.daddy]说完这些，快速回到[daddy.her]的公寓，然后很快拿出了一个装火币的小袋子。你还没来得及拒绝，[daddy.her]已经把钱塞到了你[pc.hands]里，问道：[daddy.speech(那么，你们想再让我吃饭吗？还是想进来坐一会儿？)]
 					#ELSE
-							[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before noticing the bulge in your stomach, [daddy.speech(Hey, sweetheart, I hope your pregnancy's going ok!)]
+							[daddy.she]高兴地说，[daddy.speech(哎呀，这果不是我最爱的两个未来继子！)]然后注意到你肚子的隆起，[daddy.speech(嘿，宝贝，我希望你怀孕进展顺利！)]
 						</p>
 						<p>
-							After you've informed [daddy.herHim] that you're managing just fine, [daddy.name] asks, [daddy.speech(So, do you want me to treat the two of you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+							在你告诉[daddy.herHim]一切都很好后，[daddy.name]问，[daddy.speech(那么，你们想再让我吃饭吗？还是想进来坐一会儿？)]
 					#ENDIF
 				#ELSE
 					#IF(!pc.isCharacterReactedToPregnancy(daddy) && !lilaya.isCharacterReactedToPregnancy(daddy))
 						#IF(pc.getPregnantLitter().isFatherId(daddy.getId()))
 							#IF(lilaya.getPregnantLitter().isFatherId(daddy.getId()))
-								[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulges in each of your stomachs, [daddy.speech(Hey, sweethearts, I got the two of you pregnant?! That's fantastic! Hold on, let me get you something to help!)]
+								[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到你们两个肚子的隆起，[daddy.speech(嘿，宝贝，我让你们怀孕了？太棒了！等一下，让我给你们找点东西帮忙！)]
 							#ELSE
-								[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulges in each of your stomachs, [daddy.speech(Hey, [pc.name], I got you pregnant?! That's fantastic! And you're pregnant too, Lilaya?! Hold on, let me get you something to help!)]
+								[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到你们两个肚子的隆起，[daddy.speech(嘿，[pc.name]，我让你怀孕了？太棒了！莉莱雅也怀孕了吗？等一下，让我给你们找点东西帮忙！)]
 							#ENDIF
 						#ELSE
 							#IF(lilaya.getPregnantLitter().isFatherId(daddy.getId()))
-								[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulges in each of your stomachs, [daddy.speech(Hey, Lilaya, I got you pregnant?! That's fantastic! And you're pregnant too, [pc.name]?! Hold on, let me get you something to help!)]
+								[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到你们两个肚子的隆起，[daddy.speech(嘿，莉莱雅，我让你怀孕了？！太棒了！你也怀孕了，[pc.name]？！等一下，让我给你们找点东西帮忙！)]
 							#ELSE
-								[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before suddenly noticing the bulges in each of your stomachs, [daddy.speech(Hey, sweethearts, you're both pregnant?! Hold on, let me get you something to help!)]
+								[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来的继子！)]突然，注意到你们两个肚子的隆起，[daddy.speech(嘿，宝贝，你们怀孕了？等一下，让我给你们找点东西帮忙！)]
 							#ENDIF
 						#ENDIF
 						</p>
 						<p>
-							Ignoring Lilaya's logical observation that she, and by extension, you, have the wealth of an elder lilin at your disposal, [daddy.name] insists upon giving each of you a small bag of flames. Smiling happily between you and your [lilaya.relation(pc)], [daddy.she] then asks, [daddy.speech(So, do you want me to treat the two of you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+							尽管根据观察就能知道莉莱雅有着莉琳长老级别的财富任她支配，但[daddy.name]坚持给了她一小袋火币。[daddy.she]在你和你的[lilaya.relation(pc)]间笑着，问道，[daddy.speech(那么，你们想再让我请吃饭吗？还是进来坐一会儿？)]
 					#ELSE
-							[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before noticing the bulges in each of your stomachs, [daddy.speech(Hey, sweethearts, I hope your pregnancies are going ok!)]
+							[daddy.she]高兴地说，[daddy.speech(哎呀，这果不是我最爱的两个未来继子！)]然后注意到你们两个肚子的隆起，[daddy.speech(嘿，宝贝，我希望你们怀孕进展顺利！)]
 						</p>
 						<p>
-							After each of you have informed [daddy.herHim] that you're managing just fine, [daddy.name] asks, [daddy.speech(So, do you want me to treat the two of you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+							在你们两个都告诉[daddy.herHim]一切都很好后，[daddy.name]问，[daddy.speech(那么，你们想再让我请吃饭吗？还是想进来坐一会儿？)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
 		#ELSE
 			#IF(daddy.isFeminine())
-				[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before flashing you each a captivating smile and asking, [daddy.speech(You want me to treat you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+				[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来继子！)]然后向你们露出诱人的微笑，[daddy.speech(你们想让我再请你们两个吃饭吗？还是想进来坐一会儿？)]
 			#ELSE
-				[daddy.speech(Well, if it isn't my two favourite step-kids-to-be!)] [daddy.she] exclaims, before flashing you each a charming smile and asking, [daddy.speech(You want me to treat you to dinner again? Or perhaps you just want to come inside and hang out for a bit?)]
+				[daddy.she]高兴地说，[daddy.speech(哎呀，这不是我最爱的两个未来继子！)]然后向你们露出迷人的微笑，[daddy.speech(你们想让我再请你们两个吃饭吗？还是想进来坐一会儿？)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_AGREE"><![CDATA[
 	<p>
-		Deciding to accept [daddy.namePos] offer of dinner, you step back and allow [daddy.herHim] to exit [daddy.her] apartment, before informing him both of your name, and that while you're willing to hear him out, you're ultimately here to let him know that Lilaya doesn't want to be bothered by him again. Not being deterred by this information in the slightest, he happily leads you out of the apartment building and across the street, towards a restaurant bearing the name 'Temptation'.
+		你决定接受[daddy.namePos]的晚餐邀请，退后一步，让[daddy.herHim]走出[daddy.her]公寓，然后告诉他你的名字以及你愿意听他解释，但你最终只是为了让他不再打扰莉莱雅。他毫不受这些信息的影响，高高兴兴地带着你走出公寓大楼，穿过街道，来到一家名为“餮馆”的餐厅。
 	</p>
 	<p>
-		As you approach, it's quite clear that this eatery must have an excellent reputation, as not only can you see through its large windows that all the tables are taken, but there's also a small queue lining up outside the front door. Asking [daddy.name] if he's intending to have you wait in this queue with him, he simply smirks across at you, before leading you past the line of potential diners and directly towards the entrance.
+		当你走近时，很明显这家餐厅名声不错，因为你透过窗户看到所有的桌子都占满了，门口还有一小队人排队等待。当你问[daddy.name]是否要和他一起排队时，他冷笑着看你，然后带着你穿过食客的队伍，直接走向入口。
 	</p>
 	<p>
-		[daddy.speech(Hey, Helly, how's it going?)] he calls out to a waiter standing just inside the doorway.
+		[daddy.speech(嘿，赫利，怎么样？)]他对站在门口的服务员喊道。
 	</p>
 	<p>
-		[genericMale.speech(Good evening, [daddy.name], may I assist you with anything this evening?)] the waiter responds in a friendly tone, clearly being on good terms with the incubus.
+		[genericMale.speech(晚上好，[daddy.name]，今晚需要我帮忙吗？)]服务员友好地回答着，明显与这个恶魔关系不错。
 	</p>
 	<p>
-		[daddy.speech(Yeah, are you able to get the two of us a table?)] your companion asks.
+		[daddy.speech(当然，你能给我们两个人准备一桌吗？)]，他问道。
 	</p>
 	<p>
-		[genericMale.speech(I don't think the boss would ever forgive me if I were to say no to you. Let me see what I can do,)] the waiter says, before stepping back into the restaurant.
+		[genericMale.speech(我要是拒绝老板肯定让我好看，现在让我看下能帮你做什么吧，)]然后服务员退回到餐厅里。
 	</p>
 	<p>
-		[daddy.speech(Don't you worry, [pc.name], I can always get a table here,)] [daddy.name] says, flashing you another of his charming smiles.
+		[daddy.speech(别担心，[pc.name]，我准能订到桌子，)][daddy.name]向你露出迷人的微笑。.
 	</p>
 	<p>
-		After less than a minute, the waiter returns, and, beckoning the two of you forwards, he leads you to a clear table in the rear right-hand corner of the restaurant. After the two of you have been seated, he hands you each a menu, before informing you of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, he then departs, leaving you and [daddy.name] alone.
+		不到一分钟，服务员就回来了。他招手让你们俩向前走，然后把你们带到了餐厅后面右手边的一个干净的桌子上。在你们坐下后，他给你们每人递上了菜单，并告诉你们今晚餐厅特色菜。他继续和你们说，马上就会回来为你们拿上饮料，然后离开了，留下了你和[daddy.name]。
 	</p>
 	<p>
-		[daddy.speech(Want to share a bottle of wine with me?)] he asks, relaxing back in his chair as he smiles your way yet again.
+		[daddy.speech(要陪我喝杯酒吗？)]他问道，放松地靠在椅子上，再次对你微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_AGREE_FLIRT"><![CDATA[
 	<p>
-		Deciding to accept [daddy.namePos] offer of dinner, you tell him that you'd love to go out on a date with him, before putting on your most flirtatious tone to inform him both of your name, and that while you're happy to hear him out, you're ultimately here to let him know that Lilaya doesn't want to be bothered by him again. Delivering this information in such a seductive manner immediately yields results, for, after shrugging off the fact that you're the bearer of bad news, and then leading you out of his apartment building, the handsome incubus reaches down to slip an arm around your waist. Telling you that he's happy to treat this like a date if you are, he holds you close as he leads you across the street towards a restaurant bearing the name 'Temptation'.
+		你决定接受[daddy.namePos]的晚餐邀请，告诉他你很想和他约会，然后用你最轻佻的语气告诉他你的名字，虽然你很高兴听他说完，但你最终是来让他知道莉莱雅不想再被他打扰。以如此诱人的方式告诉他这些信息马上就有了结果，因为在甩掉你是坏消息的传递者这一事实，然后带你离开他的公寓楼后，这位英俊的淫梦魔伸手搂住了你的腰。他告诉你，如果你愿意，他很乐意把这次约会当做一次约会，然后他紧紧搂着你，带你穿过街道，走向一家名为“餮馆”的餐厅。
 	</p>
 	<p>
-		As you approach, it's quite clear that this eatery must have an excellent reputation, as not only can you see through its large windows that all the tables are taken, but there's also a small queue lining up outside the front door. As you start playfully teasing [daddy.name] about it being bad manners to have his date wait in such a long queue, he looks [daddy.heightDown(pc)] and winks at you, before leading you past the line of potential diners and directly towards the entrance.
+		当你走近时，很明显这家餐厅的名声一定很好，因为你不仅可以透过它的大窗户看到所有的桌子都被占满了，而且大门外还排着一条小长龙。当你开始调侃[daddy.name]让他的约会对象排这么长的队是不礼貌的时候，他看了看[daddy.heightDown(pc)]并向你眨了眨眼睛，然后带着你穿过潜在食客的队伍，直接走向入口。
 	</p>
 	<p>
-		[daddy.speech(Hey, Helly, how's it going?)] he calls out to a waiter standing just inside the doorway.
+		[daddy.speech(嘿，赫利，最近怎么样？)]他向站在门口的服务员喊道。
 	</p>
 	<p>
-		[genericMale.speech(Good evening, [daddy.name], may I assist you and your partner with anything this evening?)] the waiter responds in a friendly tone, clearly being on good terms with your companion.
+		[genericMale.speech(晚上好，[daddy.name]，我今晚能为您和您的伙伴提供什么帮助吗？)]服务员用友好的语气回答，显然与你的同伴关系不错。
 	</p>
 	<p>
-		[daddy.speech(Yeah, are you able to get the two of us a table?)]
+		[daddy.speech(你能给我们俩安排一张桌子吗？)]
 	</p>
 	<p>
-		[genericMale.speech(I don't think the boss would ever forgive me if I were to say no to you. Let me see what I can do,)] the waiter says, before stepping back into the restaurant.
+		[genericMale.speech(如果我拒绝了你，我想老板是不会原谅我的。让我想想我能做些什么，)]服务员说，然后就走回了餐厅。
 	</p>
 	<p>
-		[daddy.speech(Don't you worry, [pc.name], I can always get a table here,)] [daddy.name] says, flashing you another of his charming smiles.
+		[daddy.speech(别担心，[pc.name]，我总能在这里找到位子，)][daddy.name]说道，再次向你展示他那迷人的微笑。
 	</p>
 	<p>
-		After less than a minute, the waiter returns, and, beckoning the two of you forwards, he leads you to a clear table in the rear right-hand corner of the restaurant. You can't help but smile as you see that the waiter has placed both a lit candle and a small vase containing a single, beautiful rose upon the table's surface, creating a very romantic atmosphere. After the two of you have been seated, he hands you each a menu, before informing you of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, he then departs, leaving you and [daddy.name] alone.
+		过了不到一分钟，服务员回来了，他向你们招招手，带你们来到餐厅右后角的一张空桌前。当你看到服务员在餐桌上摆放了一支点燃的蜡烛和一个小花瓶，花瓶里插着一朵美丽的玫瑰，营造出一种非常浪漫的氛围时，你不禁会心一笑。你们两人落座后，他递给你们每人一份菜单，然后告诉你们餐厅今晚的特色菜。他接着告诉你们，他马上就会回来接受你们点的饮料，然后就离开了，留下你们和[daddy.name]独处。
 	</p>
 	<p>
-		[daddy.speech(Want to share a bottle of wine with me?)] he asks, relaxing back in his chair as he smiles your way yet again.
+		[daddy.speech(想和我分享一瓶葡萄酒吗？)]他问道，一边放松地靠在椅子上，一边再次向你微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_REFUSE"><![CDATA[
 	<p>
-		Blocking [daddy.namePos] exit, you inform him that you have no intention of going out to dinner with him, and that you're here simply to make sure that he never bothers Lilaya again. As he attempts to shrug off your message, you take on the most serious, threatening tone you can muster, and, glaring into his eyes, you tell him that if you ever see him near Lilaya's home, you'll make him regret it.
+		你挡住[daddy.namePos]的去路，告诉他没有和他一起出去吃饭的打算，你到这来只是为了确保他再也不打扰莉莱雅。因为他满不在乎你说的话，你拿出你最严肃、最有威胁性的语气，瞪着他的眼睛，告诉他如果再看到他在莉莱雅家附近，绝对会让他后悔。
 	</p>
 	<p>
-		Left with no doubt as to how sincere your warning is, the incubus lets out an extremely defeated sigh. Dropping his shoulders and casting his eyes to the floor, he steps past you, closing the door behind him as he says in a deflated tone, [daddy.speech(Fine... I'll forget about convincing Lilaya...)]
+		对于你毫无疑问而认真的警告，这个恶魔发出了极度沮丧的叹息。他耷拉着肩膀，眼睛看着地面，从你身边走过，关上门，泄气地说，[daddy.speech(好吧……我再不会去说服莉莱雅了……)]
 	</p>
 	<p>
-		Without even giving you a backwards glance, he sulkily descends the stairs, before pushing his hands into his pockets and strolling off somewhere into Demon Home. Having followed him down and watched him go, you prepare to continue on your way...
+		他都没有回头看你一眼，就闷闷不乐地下了楼，手插在口袋里，在恶魔之家的某个地方漫步。看着他走下去，你准备继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_REFUSE_AFTER_RETURN"><![CDATA[
 	<p>
-		Upon meeting [daddy.name] once again, you decide to change your mind about hearing him out, and, blocking his exit, you inform him that you have no intention of going out to dinner with him, and that you're here simply to make sure that he's staying away from Lilaya.
+		再次遇到[daddy.name]时，你改变了自己的想法，挡住了他的去路，听他说话。但你告诉他不想和他一起出去吃饭，在这里只是确保他远离莉莱雅。
 	</p>
 	<p>
-		Having been rejected yet again, the incubus lets out one of his defeated sighs. Dropping his shoulders and casting his eyes to the floor, he steps past you, closing the door behind him as he says in a deflated tone, [daddy.speech(Don't worry... I'm staying away from Lilaya...)]
+		再次被你拒绝以后，[daddy.race]发出了[daddy.her]沮丧的叹息。他耷拉着肩膀，眼睛看着地面，从你身边走过，关上门，泄气地说，[daddy.speech(不用担心……我会远离莉莱雅……)]
 	</p>
 	<p>
-		Without even giving you a backwards glance, he sulkily descends the stairs, before pushing his hands into his pockets and strolling off somewhere into Demon Home. Having followed him down and watched him go, you prepare to continue on your way...
+		他都没有回头看你一眼，就闷闷不乐地下了楼，手插在口袋里，在恶魔之家的某个地方漫步。看着他走下去，你准备继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ACCEPT_AFTER_RETURN"><![CDATA[
 	<p>
-		Deciding that you're going to accept [daddy.name] as your '[daddy.daddy]', you look [pc.heightUp(daddy)] into [daddy.her] [daddy.eyeColour] eyes and say, [pc.speech(Ok... [daddy.Daddy]... I'll accept you as that, and I'll convince Lilaya to do the same...)]
+		决定接受[daddy.name]作为你的“[daddy.daddy]”后，你[pc.heightUp(daddy)]抬头看着[daddy.her]的[daddy.eyeColour]眼睛说：[pc.speech(好的……[daddy.Daddy]……我接受你，也去说服莉莱雅……)]
 	</p>
 	<p>
-		Immediately falling into [daddy.her] new role, [daddy.name] happily steps forwards and pulls you into a big hug, exclaiming, [daddy.speech(That's my [pc.girl]! I'll get those scrolls and old spell book of mine sent to you before I sleep tonight, just as I promised! Come on now, let [daddy.dad] take you out for dinner!)]
+		立刻陷入[daddy.her]新角色的[daddy.name]高兴地走上前来，把你拉进怀中：[daddy.speech(这就是我的[pc.girl]！我说过今晚睡觉前就把那些卷轴和我的旧法术书寄给你！来吧，让[daddy.dad]带你出去吃饭！)]
 	</p>
 	<p>
-		Taking [daddy.herHim] up on [daddy.her] offer, you join the [daddy.race] as [daddy.she] leads you out of [daddy.her] apartment building and across the street, towards the familiar restaurant, 'Temptation'. Once again, you can see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Thankfully, it appears as though all of the waiting staff are on familiar terms with your new [daddy.daddy], and before you know it, you've been led inside and over to your usual table in the rear right-hand corner of the restaurant.
+		接受[daddy.her]的邀请，你跟随[daddy.she]走出[daddy.her]公寓楼，穿过街道，朝着熟悉的餐厅“餮馆”走去。再一次，你透过窗户看到所有的桌子都满了，门口还在排队。幸运的是，所有的服务员似乎都熟悉你的新[daddy.daddy]，你立刻就被带到了餐厅后右手边角落的桌子。
 	</p>
 	<p>
-		After the two of you have been seated, the waiter hands you each a menu, before informing you of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, the waiter then departs, leaving you and [daddy.name] alone.
+		你们入座以后，服务员递给你们每人一份菜单，告诉你们今晚餐厅提供的特色菜。他表示他会马上回来为你们下单饮品，接着便离开了，留下你和[daddy.name]。
 	</p>
 	<p>
-		[daddy.speech(Want to share a bottle of wine with me to celebrate our new relationship?)] [daddy.name] asks, relaxing back in [daddy.her] chair as [daddy.she] smiles your way yet again.
+		[daddy.speech(要喝一杯来庆祝我们的新关系吗？)][daddy.name]放松地靠在[daddy.her]的椅子上，再次对你微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ACCEPT_AFTER_RETURN_FLIRT"><![CDATA[
 	<p>
-		Deciding that you're going to accept [daddy.name] as your '[daddy.daddy]', you look [pc.heightUp(daddy)] into [daddy.her] [daddy.eyeColour] eyes, before putting on your most alluring look and saying, [pc.speech(That's right, I'd like for you to be my new [daddy.daddy]... Oh, and I'll convince Lilaya to do the same!)]
+		你决定接受[daddy.name]作为你的“[daddy.daddy]”，你看着[pc.heightUp(daddy)][daddy.her][daddy.eyeColour]的眼睛，然后摆出最诱人的表情说，[pc.speech(没错，我想让你做我的新[daddy.daddy]……哦，我会说服莉莱雅也这么做的！)]
 	</p>
 	<p>
-		Immediately falling into [daddy.her] new role, [daddy.name] happily steps forwards and pulls you into a big hug, exclaiming, [daddy.speech(That's my [pc.girl]! I'll get those scrolls and old spell book of mine sent to you before I sleep tonight, just as I promised! Come on now, let [daddy.dad] take you out for dinner!)]
+		[daddy.name]立刻进入了[daddy.her]的新角色，高兴地走上前去，把你拉进一个大大的拥抱中，感叹道，[daddy.speech(这是我的[pc.girl]！今晚睡觉前，我会把我的那些卷轴和旧咒语书寄给你，我答应过你的！来吧，让[daddy.dad]带你出去吃晚饭！)]
 	</p>
 	<p>
-		Responding with a flirtatious remark, you take your new [daddy.daddy] up on [daddy.her] offer, smiling happily [pc.heightUp(daddy)] at [daddy.herHim] as [daddy.she] slips [daddy.her] hand around your waist. Telling you that [daddy.sheIs] happy to have this kind of relationship with you, [daddy.she] holds you close as [daddy.she] leads you out of [daddy.her] apartment building and across the street, towards the familiar restaurant, 'Temptation'. Once again, you can see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Thankfully, it appears as though all of the waiting staff are on familiar terms with your new [daddy.daddy], and before you know it, you've been led inside and over to your usual table in the rear right-hand corner of the restaurant.
+		当[daddy.her]把[daddy.her]的手搂在你的腰上时，你开心地[pc.heightUp(daddy)]对[daddy.herHim]笑着回应[daddy.she]一句调情的话，接受了新[daddy.daddy]的提议。[daddy.she]告诉你，[daddy.she]很高兴能和你有这样的关系，[daddy.she]紧紧抱着你，[daddy.she]带着你走出[daddy.she]的公寓楼，穿过街道，走向熟悉的餐厅“餮馆”。你又一次透过窗户看到，所有的桌子都已被占满，前门外又排起了长队。幸好，似乎所有的服务员都和你的新[daddy.daddy]很熟悉，你还没反应过来，就被领进了餐厅，坐到了餐厅右后角的老位子上。
 	</p>
 	<p>
-		You can't help but smile as you see that the waiter has placed both a lit candle and a small vase containing a single, beautiful rose upon the table's surface, creating a very romantic atmosphere. After the two of you have been seated, you're each handed a menu, and then informed by the waiter of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, the waiter then departs, leaving you and [daddy.name] alone. 
+		当你们看到服务员在餐桌上摆放了一支点燃的蜡烛和一个小花瓶，花瓶里插着一朵美丽的玫瑰，营造出一种非常浪漫的氛围时，不禁会心一笑。两人落座后，服务员递给你们每人一份菜单，然后告诉你们餐厅今晚的特色菜。服务员告诉你们，他马上就会回来接受你们点的饮料，然后就离开了，留下你和[daddy.name]独处。
 	</p>
 	<p>
-		[daddy.speech(Want to share a bottle of wine with me to celebrate our new relationship?)] [daddy.name] asks, relaxing back in [daddy.her] chair as [daddy.she] flashes you a seductive smile.
+		[daddy.speech(想和我分享一瓶葡萄酒来庆祝我们的新关系吗？)][daddy.name]问道，放松地靠在[daddy.her]的椅子上，[daddy.she]向你露出一个诱人的微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REFUSE_AFTER_RETURN"><![CDATA[
 	<p>
-		Upon meeting [daddy.name] once again, you decide to change your mind about accepting [daddy.herHim] as your '[daddy.daddy]', and, frowning at [daddy.herHim], you inform [daddy.herHim] that you have no intention of doing as [daddy.she] asks, and that you're here simply to make sure that [daddy.sheIs] staying away from Lilaya.
+		再次遇到[daddy.name]，你决定不再把[daddy.herHim]作为你的“[daddy.daddy]”。你皱着眉头看着[daddy.herHim]，告诉[daddy.herHim]你不会按[daddy.she]的想法去做什么，来这里只是保证[daddy.sheIs]远离莉莱雅。
 	</p>
 	<p>
-		Having been rejected yet again, the [daddy.race] lets out one of [daddy.her] defeated sighs. Dropping [daddy.her] shoulders and casting [daddy.her] eyes to the floor, [daddy.she] steps past you, closing the door behind [daddy.herHim] as [daddy.she] says in a deflated tone, [daddy.speech(Don't worry... I'm staying away from Lilaya...)]
+		再次被你拒绝以后，[daddy.race]发出了[daddy.her]沮丧的叹息。他耷拉着肩膀，眼睛看着地面，从你身边走过，关上门，泄气地说，[daddy.speech(不用担心……我会远离莉莱雅……)]
 	</p>
 	<p>
-		Without even giving you a backwards glance, [daddy.she] sulkily descends the stairs, before pushing [daddy.her] hands into [daddy.her] pockets and strolling off somewhere into Demon Home. Having followed [daddy.herHim] down and watched [daddy.herHim] go, you prepare to continue on your way...
+		他都没有回头看你一眼，就闷闷不乐地下了楼，手插在口袋里，在恶魔之家的某个地方漫步。看着他走下去，你准备继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_INITIAL_MEETING_TO_DINNER"><![CDATA[
 	<p>
-		Deciding to help your stuttering [lilaya.relation(pc)] out, you move a little closer to her and remind her of what she said back in her lab, about how it would be nice to have a father figure. Although it doesn't help with her blushing, your words do seem to have a positive effect, and, looking the silver-haired [daddy.race] in the eyes, she replies, [lilaya.speech(Ok, [daddy.name], I'll give you a trial run as my... a-as my... [daddy.daddy]. B-But you'd better be serious about everything you've said! Don't make me regret giving you this chance!)]
+		你决定帮口吃的[lilaya.relationship(pc)]解围，你向她靠近了一点，提醒她在实验室里说过的话，说有个父亲的形象会有多好。虽然这对她的脸红没有帮助，但你的话似乎起到了积极作用，看着银发[daddy.race]的眼睛，她回答道，[lilaya.speech(好吧，[daddy.name]，我让你试演一下我的……我的……[daddy.daddy]但你最好对你说的每句话都认真点！别让我后悔给你这个机会！)]
 	</p>
 	<p>
-		[daddy.speech(You won't regret it, I promise,)] [daddy.name] replies.
+		[daddy.speech(你不会后悔的，我保证，)][daddy.name]回复道。
 	</p>
 	<p>
-		Unable to hold [daddy.her] gaze any longer, and still quite clearly extremely embarrassed about this whole situation, Lilaya turns her back on [daddy.name], before asking, [lilaya.speech(S-So are we going to stand in this hallway all night or what?)] 
+		莉莱雅无法再被[daddy.her]注视着，而且很明显她对整个情况仍然感到非常尴尬，于是她背对着[daddy.name]，然后问道，[lilaya.speech(所……所以我们要在走廊里站一晚上吗？)] 
 	</p>
 	<p>
-		[daddy.speech(Good point, lets head out,)] [daddy.name] replies, grabbing [daddy.her] keys and stepping out of [daddy.her] apartment. Smiling at you, [daddy.she] then glances down at the back of Lilaya's dress, where a large hole has been cut in the fabric in order to allow her tail to comfortably swing down behind her. [daddy.speech(You know, you really are so similar to your mother. I had the good fortune to see her take on her full demonic appearance, and your tail is just as thick and alluring as hers...)]
+		[daddy.speech(说得好，我们出发吧，)][daddy.name]回答道，拿起[daddy.her]的钥匙，走出了[daddy.her]的公寓。[daddy.she]微笑着看着你，然后低头看了一眼莉莱雅的裙子后面，那里的布料被剪了一个大洞，以便让她的尾巴可以舒适地在身后摆动。[daddy.speech(你知道吗，你和你妈妈真的很像，我有幸看到她完全变成恶魔的样子，而你的尾巴也和她一样粗壮诱人……)]
 	</p>
 	<p>
-		Although clearly meant as a compliment, this remark seems to cause Lilaya to let out an embarrassed little cry, and, wrapping her tail around her body, she desperately clutches it in both hands as she turns and exclaims, [lilaya.speech(Th-Thick?! W-What are you even saying?! Y-You've got one more c-chance, o-ok?! S-Stop embarrassing me!)]
+		虽然这句话明显是在夸奖莉莱雅，但似乎还是让她不好意思地小声哭了起来，她把尾巴缠在身上，双手拼命地攥着尾巴，一边转过身去，一边惊呼道，[lilaya.speech(粗……粗壮？你……你在说什么啊？你……你还有一次机……机会，好……好吗？别……别再让我难堪了！)]
 	</p>
 	<p>
-		With that, and still clutching her tail, Lilaya turns and marches off down the stairs, with you and [daddy.name] in hot pursuit. As you follow your [lilaya.relation(pc)] down and out into Demon Home, you find yourself glancing down at the base of Lilaya's tail, and remarking to yourself how it is indeed quite thick, easily having a circumference as large as one of her arms at the base. As she comes to a halt in front of the two of you, you see that she's holding her tail quite gently, and before letting it go and turning to face you, she gives it an almost-unnoticeable tender stoke.
+		说完，莉莱雅仍然紧紧抓住尾巴，转身下楼去了，你和[daddy.name]在后面紧追不舍。当你跟着[lilaya.relation(pc)]下楼，来到恶魔之家时，你发现自己低头瞥了一眼莉莱雅的尾巴根部，心想这尾巴确实很粗，很容易就有她一只手臂那么粗。当她在你们俩面前停下来时，你看到她正轻轻地拽着尾巴，在松开尾巴转身面对你之前，她用几乎不易察觉的温柔方式捅了捅尾巴。
 	</p>
 	<p>
-		[lilaya.speech(So, where are we going?)] she asks.
+		[lilaya.speech(所以，我们要去哪？)]她问。
 	</p>
 	<p>
-		[daddy.speech(I thought we could go and eat at 'Temptation',)] [daddy.name] responds.
+		[daddy.speech(我想我们可以去‘餮馆’吃饭，)][daddy.name]回答道。
 	</p>
 	<p>
-		[lilaya.speech(~Pfft!~ As if,)] Lilaya laughs, [lilaya.speech(Just because I don't get out much, doesn't mean you get to tease me like that. Even I know it's impossible to get a booking there, and I don't really feel comfortable using the 'I'm a recognised daughter of Lyssieth' card to get a favour or anything.)]
+		[lilaya.speech(~噗！~说真的？)]莉莱雅笑道，[lilaya.speech(虽然我不常出门，但并不意味着你可以这样戏弄我。连我自己都知道，在那里是不可能被预订的，而且我也不太愿意用‘我是公认的莉西丝之女’这张牌来博取别人的好感什么的。)]
 	</p>
 	<p>
-		[daddy.speech(I'm not teasing,)] [daddy.name] says, smiling at Lilaya, [daddy.speech(and you don't need to do anything like that. Leave the talking to your new [daddy.dad].)]
+		[daddy.speech(我没有开玩笑，)][daddy.name]微笑着对莉莱雅， [daddy.speech(也你不需要做这样的事。让你的新[daddy.dad]去说吧。)]
 	</p>
 	<p>
-		Leading the two of you over towards the now-familiar restaurant, you can once again see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Just like the last time you were here, and much to Lilaya's surprise, [daddy.name] is able to get the waitress at the front door to secure the three of you a table, and before you know it, you've been led inside and over to the same rear right-hand corner of the restaurant in which you sat before.
+		带着你们俩走向那家熟悉的餐厅，透过窗户，你们又一次看到所有的桌子都被占满了，前门外又排起了长队。就像你们上次来这里一样，令莉莱雅感到惊讶的是，[daddy.name]能让前门的女服务员给你们三人安排一张桌子。
 	</p>
 	<p>
-		After the three of you have been seated, the waitress hands you each a menu, before informing you of the specials that the restaurant is serving this evening. Proceeding to tell you that she'll be back momentarily to take your orders for drinks, she then departs, giving the three of you some privacy.
+		三人落座后，女服务员递给你们每人一份菜单，然后告诉你们餐厅今晚的特色菜。她接着告诉你们，她很快就会回来拿你们点的饮料，然后就离开了，给你们三人留出了一些私人空间。
 	</p>
 	<p>
-		[lilaya.speech(No way,)] Lilaya says, clearly impressed by how [daddy.name] got the three of you in here so easily, [lilaya.speech(How did you even do that? Last I heard, this place is fully booked at least six months in advance.)]
+		[lilaya.speech(啊？)]莉莱雅说，[daddy.name]这么容易就把你们三个弄进来了，这显然给她留下了深刻印象，[lilaya.speech(你是怎么做到的？上次我听说这里至少提前六个月就被订满了。)]
 	</p>
 	<p>
-		[daddy.speech(Ah, well, you know how it is,)] [daddy.name] responds in as nonchalant a manner as he can, [daddy.speech(I just helped the owner out with some minor repairs here and there when this place was first setting up, and now he seems to think he's eternally in my debt or something. Anyway, do you two want to start with a bottle of wine?)]
+		[daddy.speech(啊，好吧，你知道是怎么回事，)][daddy.name]尽可能淡定地回应道，[daddy.speech(我只是在这里刚开张的时候帮店主修了一些小地方，现在他似乎觉得他永远欠我的什么的。总之，你们俩想先来一瓶酒吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_INITIAL_MEETING_TO_DINNER_FLIRT"><![CDATA[
 	<p>
-		Deciding to help your stuttering [lilaya.relation(pc)] out, you move a little closer to her, and, making sure to use several sexual innuendos, you remind her of what she said back in her lab, about how it would be nice to have a father figure. Although it doesn't help with her blushing, your words do seem to have a positive effect, and, looking the silver-haired [daddy.race] in the eyes, she replies, [lilaya.speech(Ok, [daddy.name], I'll give you a trial run as my... a-as my... [daddy.daddy]. B-But you'd better be serious about everything you've said! Don't make me regret giving you this chance!)]
+		你决定帮你的结巴[lilaya.relationship(pc)]解围，你向她靠近了一点，并确保使用一些性暗示，提醒她在实验室里说过的话，说有一个父亲的形象会有多好。虽然这并不能让她脸红，但你的话似乎起到了积极作用，她看着银发[daddy.race]的眼睛回答道，[lilaya.speech(好吧，[daddy.name]，我让你试演一下我的……我的……[daddy.daddy]但……但你最好对你说的每句话都认真点！别让我后悔给你这个机会！)]
 	</p>
 	<p>
-		[daddy.speech(You won't regret it, I promise,)] [daddy.name] replies.
+		[daddy.speech(你不会后悔的，我保证，)][daddy.name]回答道。
 	</p>
 	<p>
-		Unable to hold [daddy.her] gaze any longer, and still quite clearly extremely embarrassed about this whole situation, Lilaya turns her back on [daddy.name], before asking, [lilaya.speech(S-So are we going to stand in this hallway all night or what?)] 
+		莉莱雅无法再注视着[daddy.her]，而且很明显她对整个情况仍然感到非常尴尬，于是她背对着[daddy.name]，然后问道，[lilaya.speech(所……所以我们要在走廊里站一晚上吗？)] 
 	</p>
 	<p>
-		[daddy.speech(Good point, lets head out,)] [daddy.name] replies, grabbing [daddy.her] keys and stepping out of [daddy.her] apartment. Smiling at you, [daddy.she] then glances down at the back of Lilaya's dress, where a large hole has been cut in the fabric in order to allow her tail to comfortably swing down behind her. [daddy.speech(You know, you really are so similar to your mother. I had the good fortune to see her take on her full demonic appearance once, and your tail is just as thick and alluring as hers...)]
+		[daddy.speech(说得好，我们出发吧，)][daddy.name]回答道，拿起[daddy.her]的钥匙，走出了[daddy.her]的公寓。[daddy.she]微笑着看着你，然后低头看了一眼莉莱雅的裙子后面，那里的布料被剪了一个大洞，以便让她的尾巴可以舒适地在身后摆动。[daddy.speech(你知道吗，你和你妈妈真的很像，我有幸看到她完全变成恶魔的样子，而你的尾巴也和她一样粗壮诱人……)]
 	</p>
 	<p>
-		Although clearly meant as a compliment, this remark seems to cause Lilaya to let out an embarrassed little cry, and, wrapping her tail around her body, she desperately clutches it in both hands as she turns and exclaims, [lilaya.speech(Th-Thick?! W-What are you even saying?! Y-You've got one more c-chance, o-ok?! S-Stop embarrassing me!)]
+		虽然这句话明显是在夸奖莉莱雅，但似乎还是让她不好意思地小声哭了起来，她把尾巴缠在身上，双手拼命地攥着尾巴，一边转过身去，一边惊呼道，[lilaya.speech(粗……粗壮？你……你在说什么啊？你……你还有一次机……机会，好……好吗？别……别再让我难堪了！)]
 	</p>
 	<p>
-		With that, and still clutching her tail, Lilaya turns and marches off down the stairs, with you and [daddy.name] in hot pursuit. As you follow your [lilaya.relation(pc)] down and out into Demon Home, you find yourself glancing down at the base of Lilaya's tail, and remarking to yourself how it is indeed quite thick, easily having a circumference as large as one of her arms at the base. As she comes to a halt in front of the two of you, you see that she's holding her tail quite gently, and before letting it go and turning to face you, she gives it an almost-unnoticeable tender stoke.
+		说完，莉莱雅仍然紧紧抓住尾巴，转身下楼去了，你和[daddy.name]在后面紧追不舍。当你跟着[lilaya.relation(pc)]下楼，来到恶魔之家时，你发现自己低头瞥了一眼莉莱雅的尾巴根部，心想这尾巴确实很粗，很容易就有她一只手臂那么粗。当她在你们俩面前停下来时，你看到她正轻轻地拽着尾巴，在松开尾巴转身面对你之前，她用几乎不易察觉的温柔方式捅了捅尾巴。
 	</p>
 	<p>
-		[lilaya.speech(So, where are we going?)] she asks.
+		[lilaya.speech(所以，我们要去哪？)]她问。
 	</p>
 	<p>
-		[daddy.speech(I thought we could go and eat at 'Temptation',)] [daddy.name] responds.
+		[daddy.speech(我想我们可以去‘餮馆’吃饭，)][daddy.name]回答道。
 	</p>
 	<p>
-		[lilaya.speech(~Pfft!~ As if,)] Lilaya laughs, [lilaya.speech(Just because I don't get out much, doesn't mean you get to tease me like that. Even I know it's impossible to get a booking there, and I don't really feel comfortable using the 'I'm a recognised daughter of Lyssieth' card to get a favour or anything.)]
+		[lilaya.speech(~噗！~说真的？)]莉莱雅笑道，[lilaya.speech(虽然我不常出门，但并不意味着你可以这样戏弄我。连我自己都知道，在那里是不可能被预订的，而且我也不太愿意用‘我是公认的莉西丝之女’这张牌来博取别人的好感什么的。)]
 	</p>
 	<p>
-		[daddy.speech(I'm not teasing,)] [daddy.name] says, smiling at Lilaya, [daddy.speech(and you don't need to do anything like that. Leave the talking to your new [daddy.dad].)]
+		[daddy.speech(我没有开玩笑，)][daddy.name]微笑着对莉莱雅， [daddy.speech(也你不需要做这样的事。让你的新[daddy.dad]去说吧。)]
 	</p>
 	<p>
-		Leading the two of you over towards the now-familiar restaurant, you can once again see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Just like the last time you were here, and much to Lilaya's surprise, [daddy.name] is able to get the waitress at the front door to secure the three of you a table, and before you know it, you've been led inside and over to the same rear right-hand corner of the restaurant in which you sat before. You can't help but smile as you see that the waitress picked up on the fact that you're acting in a very sexual manner towards both [daddy.name] and Lilaya, and has consequently placed both a lit candle, as well as a small vase containing a single, beautiful rose, upon the table's surface, creating a very romantic atmosphere.
+		带着你们俩走向那家熟悉的餐厅，透过窗户，你们又一次看到所有的桌子都被占满了，前门外又排起了长队。就像你们上次来这里一样，让莉莱雅感到惊讶的是，[daddy.name]竟然能让前门的女服务员给你们三人安排一张桌子。你看到女服务员发现你对[daddy.name]和莉莱雅都表现出非常性感的举动，不禁会心一笑，于是在餐桌上摆上了点燃的蜡烛和一个小花瓶，里面插着一朵美丽的玫瑰，营造出一种非常浪漫的气氛。
 	</p>
 	<p>
-		After the three of you have been seated, the waitress hands you each a menu, before informing you of the specials that the restaurant is serving this evening. Proceeding to tell you that she'll be back momentarily to take your orders for drinks, she then departs, giving the three of you some privacy.
+		三人落座后，女服务员递给你们每人一份菜单，然后告诉你们餐厅今晚的特色菜。她接着告诉你们，她很快就会回来接受你们点的饮料，然后就离开了，给你们三人留出了一些私人空间。
 	</p>
 	<p>
-		[lilaya.speech(No way,)] Lilaya says, clearly impressed by how [daddy.name] got you in here so easily, [lilaya.speech(How did you even do that? Last I heard, this place is fully booked at least six months in advance.)]
+		[lilaya.speech(啊？)]莉莱雅说，[daddy.name]这么容易就把你们三个弄进来了，这显然给她留下了深刻印象，[lilaya.speech(你是怎么做到的？上次我听说这里至少提前六个月就被订满了。)]
 	</p>
 	<p>
-		[daddy.speech(Ah, well, you know how it is,)] [daddy.name] responds in as nonchalant a manner as he can, [daddy.speech(I just helped the owner out with some minor repairs here and there when this place was first setting up, and now he seems to think he's eternally in my debt or something. Anyway, do you two want to start with a bottle of wine?)]
+		[daddy.speech(啊，好吧，你知道是怎么回事，)][daddy.name]尽可能淡定地回应道，[daddy.speech(我只是在这里刚开张的时候帮店主修了一些小地方，现在他似乎觉得他永远欠我的什么的。总之，你们俩想先来一瓶酒吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_OUT_FOR_DINNER"><![CDATA[
 	<p>
-		Telling [daddy.name] that you'd like to go out to dinner with [daddy.herHim] again, you very quickly find yourself walking alongside [daddy.herHim] as [daddy.she] leads you out of [daddy.her] apartment building and across the street, towards the familiar restaurant, 'Temptation'. Once again, you can see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Thankfully, it appears as though all of the waiting staff are on familiar terms with your [daddy.daddy], and before you know it, you've been led inside and over to your usual table in the rear right-hand corner of the restaurant.
+		告诉[daddy.name]你想再和[daddy.herHim]出去吃晚饭，你很快就发现自己和[daddy.herHim]并肩而行，[daddy.she]带着你走出[daddy.she]的公寓楼，穿过街道，走向熟悉的餐厅“餮馆”。透过窗户，你又一次看到所有的桌子都被占满了，前门外又排起了长队。值得庆幸的是，似乎所有的服务员都和你的[daddy.daddy]很熟悉，你还没反应过来，就已经被领进了餐厅，来到了餐厅右后角的老位子。
 	</p>
 	<p>
-		After the two of you have been seated, the waiter hands you each a menu, before informing you of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, the waiter then departs, leaving you and [daddy.name] alone.
+		你们俩落座后，服务员递给你们每人一份菜单，然后告诉你们餐厅今晚的特色菜。服务员接着告诉你们，他很快就会回来接受你们点的饮料，然后就离开了，留下你们和[daddy.name]独处。
 	</p>
 	<p>
-		[daddy.speech(Want to share a bottle of wine with me?)] [daddy.name] asks, relaxing back in [daddy.her] chair as [daddy.she] smiles your way yet again.
+		[daddy.speech(想和我分享一瓶葡萄酒吗？)][daddy.name]问道，放松地坐回[daddy.her]的椅子上，[daddy.she]再次向你微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_MEETING_OUT_FOR_DINNER"><![CDATA[
 	<p>
-		Telling [daddy.name] that you and Lilaya would like to go out to dinner with [daddy.herHim] again, you very quickly find yourselves walking alongside [daddy.herHim] as [daddy.she] leads the two of you out of [daddy.her] apartment building and across the street, towards the familiar restaurant, 'Temptation'. Once again, you can see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Thankfully, it appears as though all of the waiting staff are on familiar terms with your [daddy.daddy], and before you know it, you've been led inside and over to your usual table in the rear right-hand corner of the restaurant.
+		告诉[daddy.name]你和莉莱雅想再和[daddy.herHim]出去吃晚饭，你们很快就发现自己和[daddy.herHim]并肩而行，[daddy.she]带着你们俩走出[daddy.her]的公寓楼，穿过街道，走向熟悉的餐厅“餮馆”。你又一次透过窗户看到，所有的桌子都被占满了，前门外又排起了长队。值得庆幸的是，似乎所有的服务员都和你的[daddy.daddy]很熟悉，你还没反应过来，就已经被领进了餐厅，来到了餐厅右后角的老位子。
 	</p>
 	<p>
-		After the three of you have been seated, the waiter hands you each a menu, before informing you of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, the waiter then departs, giving you, Lilaya, and [daddy.name] some privacy.
+		三人落座后，服务员递给你们每人一份菜单，然后告诉你们餐厅今晚的特色菜。服务员接着告诉你们，他马上就会回来接受你们点的饮料，然后就离开了，给了你们、莉莱雅和[daddy.name]一些私人空间。
 	</p>
 	<p>
-		[daddy.speech(Do you two want to share a bottle of wine with me?)] [daddy.name] asks, relaxing back in [daddy.her] chair as [daddy.she] flashes you both a smile.
+		[daddy.speech(你们俩想和我分享一瓶酒吗？)][daddy.name]问道，[daddy.she]坐在[daddy.her]的椅子上放松下来，[daddy.she]向你们俩露出一个微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_OUT_FOR_DINNER_FLIRTING"><![CDATA[
 	<p>
-		Responding with a flirtatious remark, you take [daddy.daddy] up on [daddy.her] offer of dinner, smiling happily [pc.heightUp(daddy)] at [daddy.herHim] as [daddy.she] steps forwards and slips a hand around your waist. Telling you that [daddy.sheIs] happy to have this kind of relationship with you, [daddy.she] holds you close as [daddy.she] leads you out of [daddy.her] apartment building and across the street, towards the familiar restaurant, 'Temptation'. Once again, you can see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Thankfully, it appears as though all of the waiting staff are on familiar terms with your [daddy.daddy], and before you know it, you've been led inside and over to your usual table in the rear right-hand corner of the restaurant.
+		[daddy.her]上前搂住你的腰，开心地[pc.heightUp(daddy)]对[daddy.herHim]笑着。[daddy.she]告诉你，[daddy.she]很高兴和你有这样的关系，[daddy.she]紧紧抱着你，带着你走出[daddy.she]的公寓楼，穿过街道，走向熟悉的餐厅“餮馆”。透过窗户，你又一次看到所有的桌子都被占满了，前门外又排起了长队。值得庆幸的是，似乎所有的服务员都和你的[daddy.daddy]很熟悉，你还没反应过来，就已经被领进了餐厅，来到了餐厅右后角的老位子。
 	</p>
 	<p>
-		You can't help but smile as you see that the waitress picked up on the fact that you're acting in a very sexual manner towards both [daddy.name] and Lilaya, and has consequently placed both a lit candle, as well as a small vase containing a single, beautiful rose, upon the table's surface, creating a very romantic atmosphere. After the two of you have been seated, you're each handed a menu, and then informed by the waiter of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, the waiter then departs, giving you some privacy.
+		你看到女服务员发现你对[daddy.name]和莉莱雅都表现出了非常性感的举动，不禁会心一笑，于是在餐桌上摆上了点燃的蜡烛和一个小花瓶，花瓶里插着一朵美丽的玫瑰，营造出一种非常浪漫的氛围。两人落座后，服务员递给你们每人一份菜单，并告诉你们餐厅今晚的特色菜。服务员告诉你们，他很快就会回来接受你们的酒水订单，然后就离开了，给了你们一些私人空间。
 	</p>
 	<p>
-		[daddy.speech(Do you two want to share a bottle of wine with me?)] [daddy.name] asks, relaxing back in [daddy.her] chair as [daddy.she] flashes you a seductive smile.
+		[daddy.speech(你们俩想和我分享一瓶酒吗？)][daddy.name]问道，放松地靠在[daddy.her]的椅子上，[daddy.her]向你露出一个诱人的微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_MEETING_OUT_FOR_DINNER_FLIRTING"><![CDATA[
 	<p>
-		Responding with a flirtatious remark, you take [daddy.daddy] up on [daddy.her] offer of dinner, smiling happily [pc.heightUp(daddy)] at [daddy.herHim] as [daddy.she] steps up between you and Lilaya, before slipping a hand around each of your waists. Telling you both that [daddy.sheIs] happy to have this kind of relationship with you, [daddy.she] holds each of you close as [daddy.she] leads you out of [daddy.her] apartment building and across the street, towards the familiar restaurant, 'Temptation'. Once again, you can see through the windows that all the tables have been taken, and there's yet another queue lining up outside the front door. Thankfully, it appears as though all of the waiting staff are on familiar terms with your [daddy.daddy], and before you know it, you've been led inside and over to your usual table in the rear right-hand corner of the restaurant.
+		[daddy.her]走到你和莉莱雅中间，你回以淫声浪语，接受了晚餐邀请。你[pc.heightUp(daddy)]对[daddy.her]欣喜地笑。[daddy.herHim]用一只手搂住你们的腰，诉说着[daddy.she]很高兴能和你们有这般关系。[daddy.she]紧紧地抱着你们，走出公寓，穿过街道，走向熟悉的“餮馆”。你们透过窗户观察，目之所及的所有桌子都满了，前门外还排着长队。值得庆幸的是，似乎所有服务员都和[daddy.daddy]很熟悉，你还没反应过来，就已经被领进餐厅，来到右后角的老位子。
 	</p>
 	<p>
-		You can't help but smile as you see that the waitress picked up on the fact that you're acting in a very sexual manner towards both [daddy.name] and Lilaya, and has consequently placed both a lit candle, as well as a small vase containing a single, beautiful rose, upon the table's surface, creating a very romantic atmosphere. After the three of you have been seated, you're each handed a menu, and then informed by the waiter of the specials that the restaurant is serving this evening. Proceeding to tell you that he'll be back momentarily to take your orders for drinks, the waiter then departs, giving you, Lilaya, and [daddy.name] some privacy.
+		服务员发现你对[daddy.name]和莉莱雅表现得亲昵又淫靡，不禁会心一笑，在桌上摆了支点燃的蜡烛和插着一朵美丽玫瑰的小花瓶，气氛浪漫又旖旎。三人落座后，服务员递给你们每人一份菜单，推荐着今晚的特色菜。他表示马上就回来给你们点饮料，随后离开，给你、莉莱雅和[daddy.name]保留了私人空间。
 	</p>
 	<p>
-		[daddy.speech(Do you two want to share a bottle of wine with me?)] [daddy.name] asks, relaxing back in [daddy.her] chair as [daddy.she] flashes you both a seductive smile.
+		[daddy.speech(你们想和我喝酒吗？)][daddy.name]放松地靠在椅子上问道。[daddy.she]向你们俩露出诱人的微笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_STAY_IN_APARTMENT"><![CDATA[
 	<p>
-		You tell [daddy.name] that you'd like to come in and hang out in [daddy.her] apartment for a while, to which [daddy.she] happily replies, [daddy.speech(Of course, come right in!)]
+		你跟[daddy.name]说你想去[daddy.her]的公寓闲待一会，玩一玩，而[daddy.she]高兴地回道：[daddy.speech(当然可以，快进来吧！)]
 	</p>
 	<p>
-		After stepping inside, [daddy.name] shuts the front door after you, before leading you through the entrance hall and into [daddy.her] open-plan lounge-cum-kitchen. Sitting down on the comfortable sofa found in this area, you smile up at [daddy.name] as [daddy.she] fetches the two of you some drinks and snacks.
+		你进到屋内，[daddy.name]在你身后关上了门，随后引着你穿过门廊，来到[daddy.her]的开放式餐厨厅内。你坐进舒服的沙发里，[daddy.name]找来了零食与饮料递给你，你对[daddy.she]露出了微笑。
 	</p>
 	<p>
-		[daddy.speech(So, how are things with you?)] [daddy.name] asks, sitting down on the chair next to your sofa.
+		[daddy.speech(嗯，你最近过得怎样？)][daddy.name]坐到你身旁，开口问道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_MEETING_STAY_IN_APARTMENT"><![CDATA[
 	<p>
-		You tell [daddy.name] that you and Lilaya would like to come in and hang out in [daddy.her] apartment for a while, to which [daddy.she] happily replies, [daddy.speech(Of course, come right in, you two!)]
+		你告诉[daddy.name]你和莉莱雅想去[daddy.her]的公寓里待一会儿，[daddy.she]高兴地回答，[daddy.speech(当然，你们两个进来吧！)]
 	</p>
 	<p>
-		After stepping inside, [daddy.name] shuts the front door after you, before leading you through the entrance hall and into [daddy.her] open-plan lounge-cum-kitchen. Sitting down next to one another on the comfortable sofa found in this area, you and Lilaya smile up at [daddy.name] as [daddy.she] fetches some drinks and snacks.
+		你们走进去后，[daddy.name]从你们身后关上门，然后带着穿过了入口大厅，走进[daddy.her]的开放式休息室兼厨房。你和莉莱雅坐在这里的舒适沙发上，对着[daddy.name]微笑，[daddy.she]去拿一些饮料和零食。
 	</p>
 	<p>
-		[daddy.speech(So, how are my two favourite step-kids-to-be doing?)] [daddy.name] asks, sitting down on the chair next to your sofa.
+		[daddy.speech(那么，我最爱的两个准继子过得怎么样？)][daddy.name]坐在你们沙发旁的椅子上问。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_STAY_IN_APARTMENT_FLIRTING"><![CDATA[
 	<p>
-		In a very flirtatious manner, you tell [daddy.name] that you'd like to come inside and have some fun in [daddy.her] apartment, to which [daddy.she] smirks and replies, [daddy.speech(That sounds good to me, come right in!)]
+		你以荡漾又调情的方式告诉[daddy.name]，你想进到[daddy.her]的公寓里找点乐子。[daddy.she]笑着回答，[daddy.speech(听起来不错，进来吧！)]
 	</p>
 	<p>
-		After stepping inside, [daddy.name] shuts the front door after you, before leading you through the entrance hall and into [daddy.her] open-plan lounge-cum-kitchen. Sitting down on the comfortable sofa found in this area, you throw a seductive smile up at [daddy.name] as [daddy.she] fetches the two of you some drinks and snacks.
+		[daddy.name]踏进门口，跟在你身后关上前门，然后带你穿过玄关，进入[daddy.her]的开放式休息室兼厨房。你坐在舒服的沙发上，看[daddy.name]给你俩拿饮料和点心。你向[daddy.she]投去一个诱人的微笑。
 	</p>
 	<p>
-		[daddy.speech(So, what sort of fun things did you have in mind?)] [daddy.name] asks, sitting down right next to you on the sofa.
+		[daddy.speech(那么，你有什么有趣的想法呢？)][daddy.name]边问边坐上沙发，靠在你身边。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_MEETING_STAY_IN_APARTMENT_FLIRTING"><![CDATA[
 	<p>
-		In a very flirtatious manner, you tell [daddy.name] that you and Lilaya would like to come inside and have some fun in [daddy.her] apartment, to which [daddy.she] smirks and replies, [daddy.speech(That sounds good to me, come right in, you two!)]
+		你暧昧地跟[daddy.name]说，你和莉莱雅想去[daddy.her]的公寓闲玩一会，[daddy.she]笑着回复说，[daddy.speech(听起来不错，你们俩快进来吧！)]
 	</p>
 	<p>
-		After stepping inside, [daddy.name] shuts the front door after you, before leading you through the entrance hall and into [daddy.her] open-plan lounge-cum-kitchen. Sitting down next to one another on the comfortable sofa found in this area, you and Lilaya smile seductively up at [daddy.name] as [daddy.she] fetches some drinks and snacks.
+		你们进到屋内，[daddy.name]从你们身后关上了门，随后引着你们穿过门廊，来到[daddy.her]的开放式餐厨厅内。你和莉莱雅坐在这里的舒适沙发上，诱惑地向着[daddy.name]笑，[daddy.she]去拿一些饮料和零食。
 	</p>
 	<p>
-		[daddy.speech(So, what sort of fun things did my two favourite step-kids-to-be have in mind?)] [daddy.name] asks, sitting down on the sofa right between you and Lilaya.
+		[daddy.speech(好了，我最爱的两个准继子有什么好玩的事情想做呢？)]  [daddy.name]坐在你和莉莱雅之间，问道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DINNER -->
@@ -686,337 +685,337 @@
 	<htmlContent tag="FIRST_DINNER_WATER"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly turning down [daddy.her] offer of wine, you tell [daddy.name] that you'd prefer to drink water this evening, before batting your eyelids at [daddy.herHim] and asking how [daddy.she] was able to get past the front queue so easily.
+			你委婉地拒绝了[daddy.name]的酒邀，告诉[daddy.her]你今晚更想喝水，然后对[daddy.herHim]眨了眨眼睛，问[daddy.she]怎么能这么容易就排到前面去了。
 		#ELSE
-			Turning down [daddy.her] offer of wine, you inform [daddy.name] that you'll stick to drinking water this evening, before asking [daddy.herHim] how [daddy.she] was able to get past the front queue so easily.
+			你拒绝了[daddy.name]的酒邀，告诉[daddy.her]今晚你还是喝水吧，然后问[daddy.herHim]是怎么这么容易就排到前面去的。
 		#ENDIF
 	</p>
 	<p>
-		[daddy.speech(Well, you know how it is,)] [daddy.she] responds, smiling as [daddy.she] tries to act as nonchalant as possible, [daddy.speech(I helped the owner out with some repairs when he first set this place up, and he feels like he's in my debt or something.)]
+		[daddy.speech(嗯……你知道是怎么回事，)][daddy.she]微笑着回应，尽量表现得不慌不忙，[daddy.speech(店主刚开张的时候，我帮他修了一些东西，他觉得欠了我什么的。)]
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
 			#IF(!pc.isTaur())
-				Running your [pc.foot] up the length of [daddy.namePos] leg, you bite your lip as you ask if that's what [daddy.she] does for a living. Clearly getting turned on by your teasing, the silver-haired [daddy.race] gazes hungrily into your [pc.eyes] as [daddy.she] answers,
+				你的[pc.foot]在[daddy.namePos]的腿上游走，你咬着嘴唇问[daddy.she]是否以此为生。银发的[daddy.race]显然被你的挑逗弄得兴奋起来，[daddy.she]回答时饥渴地凝视着你的[pc.eyes]，
 			#ELSE
-				Making a show of glancing down at [daddy.namePos] muscular chest, you bite your lip as you ask if that's what [daddy.she] does for a living. Clearly getting turned on by your teasing, the silver-haired [daddy.race] gazes hungrily into your [pc.eyes] as [daddy.she] answers,
+				你低头瞥了一眼[daddy.namePos]肌肉发达的胸部，咬着嘴唇问[daddy.she]是否以此为生。银发的[daddy.race]显然被你挑逗起了兴趣，[daddy.she]回答时饥渴地凝视着你的[pc.eyes]，
 			#ENDIF
 		#ELSE
-			Asking [daddy.herHim] if that's what [daddy.she] does for a living, the silver-haired [daddy.race] nods and answers,
+			问[daddy.she]是否以此为生，满头银发的[daddy.race]点头回答，
 		#ENDIF
-		 [daddy.speech(That's right, I work as a contractor in the construction industry. Demons are always in high demand for jobs like that, what with us being able to harness the arcane in order to telekinetically manipulate matter and such.)]
+		[daddy.speech(没错，我是建筑业的承包商。恶魔对这种工作的需求量一直都很大，因为我们能驾驭奥术，用心灵感应操纵物质什么的。)]
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with your bottled water and [daddy.namePos] glass of wine. You then place your orders for your meals, and after that's done, you're finally able to move on and ask [daddy.name] what this is all about.
+		这时，服务员回来帮你们点饮料，你们点完，他很快就拿着瓶装水和[daddy.namePos]的酒杯回来了。然后你们点餐。你点完餐，终于可以继续问[daddy.namePos]这到底是怎么回事了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_DINNER_WINE"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly accepting [daddy.her] offer of wine, you tell [daddy.name] that it would be fun to let yourself go a little this evening, before batting your eyelids at [daddy.herHim] and asking how [daddy.she] was able to get past the front queue so easily.
+			你腼腆地接受了[daddy.her]的酒邀，告诉[daddy.name]说，今晚让自己放纵一下会很有趣，然后对[daddy.herHim]眨了眨眼睛，问[daddy.she]怎么能这么轻松地通过前面的排队。
 		#ELSE
-			Accepting [daddy.her] offer of wine, you tell [daddy.name] that you'll let [daddy.herHim] pick the vintage, before asking [daddy.herHim] how [daddy.she] was able to get past the front queue so easily.
+			接受了[daddy.her]的红酒邀请，你告诉[daddy.name]，你会让[daddy.herHim]挑选年份酒，然后问[daddy.herHim]，[daddy.she]怎么能这么容易地通过前面的排队。
 		#ENDIF
 	</p>
 	<p>
-		[daddy.speech(Well, you know how it is,)] [daddy.she] responds, smiling as [daddy.she] tries to act as nonchalant as possible, [daddy.speech(I helped the owner out with some repairs when he first set this place up, and he feels like he's in my debt or something.)]
+		[daddy.speech(你知道是怎么回事，)][daddy.she]微笑着回应，尽量表现得不慌不忙，[daddy.speech(店主刚开张的时候，我帮他修了一些东西，他觉得欠了我的债什么的。)]
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
 			#IF(!pc.isTaur())
-				Running your [pc.foot] up the length of [daddy.namePos] leg, you bite your lip as you ask if that's what [daddy.she] does for a living. Clearly getting turned on by your teasing, the silver-haired [daddy.race] gazes hungrily into your [pc.eyes] as [daddy.she] answers,
+				你的[pc.foot]在[daddy.namePos]的腿上游走，你咬着嘴唇问[daddy.she]是否以此为生。银发的[daddy.race]显然被你的挑逗弄得兴奋起来，[daddy.she]回答时饥渴地凝视着你的[pc.eyes]，
 			#ELSE
-				Making a show of glancing down at [daddy.namePos] muscular chest, you bite your lip as you ask if that's what [daddy.she] does for a living. Clearly getting turned on by your teasing, the silver-haired [daddy.race] gazes hungrily into your [pc.eyes] as [daddy.she] answers,
+				你低头瞥了一眼[daddy.namePos]肌肉发达的胸部，咬着嘴唇问[daddy.she]是否以此为生。银发的[daddy.race]显然被你挑逗起了兴趣，[daddy.she]回答时饥渴地凝视着你的[pc.eyes]，
 			#ENDIF
 		#ELSE
-			Asking [daddy.herHim] if that's what [daddy.she] does for a living, the silver-haired [daddy.race] nods and answers,
+			问[daddy.she]是否以此为生，满头银发的[daddy.race]点头回答，
 		#ENDIF
-		 [daddy.speech(That's right, I work as a contractor in the construction industry. Demons are always in high demand for jobs like that, what with us being able to harness the arcane in order to telekinetically manipulate matter and such.)]
+		[daddy.speech(没错，我是建筑业的承包商。恶魔对这种工作的需求量一直都很大，因为我们能驾驭奥术，用心灵感应操纵物质什么的。)]
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with the requested bottle of wine. You then place your orders for your meals, and after that's done, you're finally able to move on and ask [daddy.name] what this is all about.
+		这时，服务员回来给你们点饮料，点完后，他很快就拿着你们要的一瓶酒回来了。然后你们点餐，点完餐后，你们终于可以继续问[daddy.name]这到底是怎么回事了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="FIRST_DINNER_CORE"><![CDATA[
 	<p>
-		[daddy.speech(Well, it's a long story, which is why I wanted to have the time to tell you all about it over dinner,)] [daddy.name] says, before launching into [daddy.her] tale, [daddy.speech(It all started a few years ago, when I was doing a big job down in Submission. I'm not sure if you've met her or not, but I was doing work for Lyssieth's other recognised daughter, Meraxis. She was having this huge fortress built down in some cavern down there, and I was brought on to do some of the heavy lifting of stone blocks. Anyway, one day, while on the job, I saw her for the first time...)]
+		[daddy.speech(嗯……说来话长，所以我想有时间边吃晚饭边给你们讲讲，)][daddy.name]说，然后开始讲[daddy.her]的故事，[daddy.speech(事情要从几年前说起，那时我在屈城区做一件大事，我不知道你是否见过她，但我当时在为莉西丝另一个公认的女儿梅拉克西丝干活。她在下面的某个洞穴里建造了一个巨大的要塞，我被派去搬运石块。总之，有一天，在工作的时候，我第一次见到了她……)]
 	</p>
 	<p>
-		[daddy.Name] leans back in [daddy.her] chair, letting out a deep, contented sigh as [daddy.she] thinks back to who it was [daddy.she] saw that day. Curious to know who [daddy.sheIs] referring to, you tell him that you have indeed met Meraxis, and ask if it was her that [daddy.name] saw, to which [daddy.she] replies, [daddy.speech(Oh, no, it's not her I'm talking about, but her mother... Lyssieth... It was as though I'd seen a vision of perfection itself... She was so graceful, and beautiful beyond imagining. It was at that moment that I knew I was destined to make her my wife.)]
+		当[daddy.her]回想那天[daddy.her]看到的是谁时，[daddy.her]靠在椅子上，发出了一声深沉而满足的叹息。你很想知道[daddy.sheIs]指的是谁，就告诉他你确实见过梅拉克西丝，并问[daddy.Name]看到的是不是她，[daddy.she]回答说，[daddy.speech(哦，不，我说的不是她，而是她的母亲……莉西丝……我仿佛看到了完美的幻象……她是如此优雅，美丽得超乎想象。就在那一刻，我知道我注定要娶她为妻。)]
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			[pc.speech(Your <i>wife</i>?)] you ask, pouting at [daddy.herHim] as you hear that [daddy.she] already has a romantic interest.
+			[pc.speech(你的<i>妻子</i>？)]你问，你听说[daddy.she]已经有了恋爱对象，不禁撅起了嘴。
 		#ELSE
-			[pc.speech(Your <i>wife</i>?)] you ask, unsure if you'd heard [daddy.herHim] correctly.
+			[pc.speech(你的<i>妻子</i>？)]你问道，不确定是不是自己听错了。
 		#ENDIF
 	</p>
 	<p>
-		[daddy.speech(Yeah, yeah, I know marriages aren't exactly a fashionable thing, but there's something deep inside me that just wants the two of us to be together forever,)] [daddy.name] replies, [daddy.her] voice taking on an uncharacteristically sincere tone, [daddy.speech(So ever since that moment I first saw her, I've been working towards making my dream a reality. I quickly found out that she only likes humans, hence this appearance I choose to take on, and, rather unfortunately, that she secludes herself in that fortified palace down in Submission. I tried countless times to get an audience with her, but those guards at the front gate made it quite clear that such a thing would be 'absolutely impossible'. It was then that I realised I was only trying to take on half of my future responsibilities; once we're married, I'll have to look after not only Lyssieth, but also all of her recognised children. Realising this, I decided to set out and convince her daughters that I'd make a suitable father for them. If I'm able to do that, Lyssieth will definitely want to meet me!)]
+		[daddy.speech(是啊，是啊，我知道结婚并不是一件流行的事，但我内心深处有一种东西，就是希望我们两个能永远在一起，)][daddy.name]回答道，[daddy.her]的声音带着不寻常的真诚，[daddy.speech(因此，自从我第一次见到她，我就一直在努力实现我的梦想。我很快就发现，她只喜欢人类，所以我选择了这个外表，而且非常不幸的是，她把自己封闭在屈城区的那座坚固宫殿里。我曾无数次想要见她，但前门的守卫明确表示‘绝对不可能’。那时我才意识到，我只是想承担未来一半的责任；一旦我们结婚，我不仅要照顾莉西丝，还要照顾她所有被承认的孩子。意识到这一点后，我决定着手说服她的女儿们，让她们相信我会是一个合适的父亲。如果我能做到这一点，莉西丝一定会想见我的！)]
 	</p>
 	<p>
-		[pc.speech(So why are you focused on Lilaya, and not also attempting to convince Meraxis?)] you ask.
+		[pc.speech(那么，你为什么只关注莉莱雅，而不同时试图说服梅拉克西丝呢？)]你问到。
 	</p>
 	<p>
-		[daddy.speech(Hah, well, as you must know, she's a little more... <i>eccentric</i> than her sister,)] [daddy.name] replies, [daddy.speech(I actually managed to meet her fairly easily, but she insisted on duelling me in single combat in order to 'prove my worth' to her. I'm willing to do anything it takes to be by Lyssieth's side, so I quickly accepted... She didn't look so powerful, despite all of her boasting and talk of 'destroying the universe', but I seriously underestimated her... The next thing I knew, I was being thrown out of her fortress, and being told to only return when I'm worthy of fighting her again.)]
+		[daddy.speech(哈，额，你一定知道，她比她姐姐更……<i>古怪</i>，)][daddy.name]回答道，[daddy.speech(其实我很容易就见到了她，但她坚持要和我单挑决斗，以向她‘证明我的价值’。为了站在莉西丝的身边，我愿意做任何事，所以我很快就答应了……尽管她夸夸其谈，说要‘毁灭宇宙’，但她看起来并不那么强大，但我还是严重低估了她……接下来，我就被赶出了她的要塞，并被告知只有当我有资格再次与她战斗时才能回来。)]
 	</p>
 	<p>
-		At this moment, your food arrives, and [daddy.namePos] story is momentarily put on hold as the two of you start eating. 
+		这时，你们的食物送来了，[daddy.namePos]的故事暂时搁置，因为你们俩开始吃东西了。
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			 Quickly discovering that the food served here is nothing short of exceptional, you allow the conversation to slow down in order to fully enjoy it, while still making sure to throw in a flirtatious remark here and there.
+			你很快就发现这里的食物绝无仅有，为了充分享受美食，你放慢了谈话的速度，同时还不忘时不时地抛出一句调情的话。
 		#ELSE
-			 Quickly discovering that the food served here is nothing short of exceptional, you happily allow the conversation to slow down in order to fully enjoy it.
+			很快，你就发现这里的食物无与伦比，于是你高兴地让谈话放缓，以便充分享受美食。
 		#ENDIF
-		 With this break in the flow of [daddy.her] story, [daddy.name] starts recounting some of [daddy.her] history, and you soon discover that [daddy.sheIs] an unrecognised descendant of the elder Lilin, Lovienne, and has spent most of [daddy.her] life working in the construction industry here in Dominion.
+		随着[daddy.her]故事的中断，[daddy.name]开始讲述[daddy.her]的一些过往，你很快意识到，[daddy.her]是莉琳长老洛维耶纳的后裔，但未得到承认，[daddy.her]一生中的大部分时间都在御城区的建筑行业工作。
 	</p>
 	<p>
-		Soon enough, the two of you have finished eating, and [daddy.name] once more turns the topic of conversation back to the reason why [daddy.she] brought you here, [daddy.speech(The first thing I need your help with is regarding my looks. I've never been able to get a decent answer out of anyone who actually knows her, and seeing as you're related to her, you must know... Is my appearance the sort of thing that Lyssieth likes?)]
+		很快，你们俩就吃完了，[daddy.name]再次把话题转回到[daddy.she]带你们来这里的原因上，[daddy.speech(我需要你帮忙的第一件事，就是关于我的长相。我一直无法从真正了解她的人那里得到像样的答案，既然你和她是亲戚，你一定知道……我的外表是莉西丝喜欢的类型吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_NO_TF"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Making sure to drop in several remarks as to how handsome he is, you assure [daddy.name] that his appearance is the closest he'll be able to get to pleasing Lyssieth, but that because he's not a human, she might not be interested.
+			你一边加入了若干对于他帅气外表的评论，一边向[daddy.name]保证说他的外貌已经是能取悦莉西丝的最好状态了，但因为他不是人类，她可能对他没兴趣。
 		#ELSE
-			You assure [daddy.name] that his appearance is the closest he'll be able to get to pleasing Lyssieth, but that because he's not a human, she might not be interested.
+			你向[daddy.name]保证说他的外貌已经是能取悦莉西丝的最好状态了，但因为他不是人类，她可能对他没兴趣。
 		#ENDIF
-		 Brushing aside this warning, he says, [daddy.speech(That's all I needed to know, I'm sure I'll be able to seduce Lyssieth, if I can only get to meet her! That's where I really need your help...)]
+		他不以为意地摆了摆手，说：[daddy.speech(我知道这些就够了，我相信我能诱惑莉西丝，只要我能见到她！这就是我真正需要你帮忙的地方……)]
 	</p>
 	<p>
-		You ask [daddy.name] what he has in mind, and, leaning forwards in his chair, he takes on a serious tone as he says, [daddy.speech(I'll need you to convince Lilaya to accept me as her father, and to come out here and meet me. No matter what I try, that cat-girl maid of hers always instantly shoots me down, so I can't do this without your help... Oh, and there is one other very important thing. I'm going to need to show Lyssieth that several of her children have already accepted me as their father, and as you're related to her, that includes you, doesn't it)]
+		你询问[daddy.name]有何打算，他往椅子上一靠，认真地说道：[daddy.speech(我需要你说服莉莱雅认可我当她的父亲，并且出来见我。无论我怎么尝试，她那个猫女女仆总是当场拒绝我，所以没有你的帮助我办不到……哦，还有一件非常重要的事。我需要向莉西丝证明她的几个孩子已经接受我当他们的父亲，既然你和她有血缘关系，那你也包括在内，不是吗？)]
 	</p>
 	<p>
-		[pc.speech(Well, it's a little more complicated than that,)] you reply.
+		[pc.speech(嗯，这事要更复杂一点，)]你回答。
 	</p>
 	<p>
-		[daddy.speech(In any case, you're directly related to her,)] [daddy.name] says, [daddy.speech(so I need you to accept me as your father. That includes you calling me '[daddy.daddy]'.)]
+		[daddy.speech(不管怎样，你和她有直接的亲缘关系，)][daddy.name]说， [daddy.speech(所以我需要你接受我当你的父亲。这包括你叫我‘[daddy.daddy]’。)]
 	</p>
 	<p>
-		You're caught off-guard by this demand suddenly being made of you, and before you're able to think of a response, [daddy.name] continues, [daddy.speech(It wouldn't be so bad having me as your new dad, would it? If you agree to help me like this, I'll give you all of my old arcane spell books and scrolls.)]
+		你被他突然提出的要求打得措手不及，还没来得及想出回应，[daddy.name]继续说：[daddy.speech(接受我当你新爸爸没那么糟，对吗？如果你同意，我会把我所有的旧奥术书和卷轴都给你。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_SUCCUBUS_TF"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Thinking that it would be a lot hotter if [daddy.name] took on his succubus form, you tell him that Lyssieth seems to prefer to be surrounded by females, and, making sure to make several sexual remarks, attempt to convince him that he'd probably have a better chance at seducing her if he transformed himself into one.
+			你考虑到如果[daddy.name]变成魅魔形态会更加性感，告诉他莉西丝似乎更享受被女性簇拥，接着你一边给出性暗示，一边说服他如果转化成魅魔，可能更有机会诱惑莉西丝。
 		#ELSE
-			Thinking that it would be better if [daddy.name] took on his succubus form, you tell him that Lyssieth seems to prefer to be surrounded by females, and that he'd probably have a better chance at seducing her if he transformed himself into one.
+			你考虑到如果[daddy.name]变成他的魅魔形态会更加性感，告诉他莉西丝似乎更享受被女性簇拥着，如果转化成魅魔，可能更有机会诱惑莉西丝。
 		#ENDIF
-		 Letting out a sigh, he says, [daddy.speech(Well, I was prepared to hear that... Give me just a moment...)]
+		他叹了口气，说：[daddy.speech(哎，我已经有心理准备会听到这些了……给我点时间……)]
 	</p>
 	<p>
-		With that, [daddy.name] stands up from the table, before making his way over the restaurant's restrooms. Just a few minutes later, 'she' returns, fully transformed into her succubus form. Unlike most female demons, however, [daddy.name] appears reluctant to fully embrace her feminine potential, choosing to give herself small, B-cup breasts, a girly pair of hips, and a barely-rounded ass. Her face, too, while definitely cute enough to be regarded as feminine, strays a little close to androgynous territory. Her height and hair have also changed, and she's now a good deal shorter than she was before, while her now-wavy, white hair has grown down to her shoulders, and is being held back from her face by means of a black sweatband. As she draws nearer, you can't help but notice that there's a visible bulge in her jeans, letting you know that she's still all-man where it counts...
+		[daddy.name]说完，从桌子旁起身，走向餐厅洗手间。短短几分钟后，“她”以魅魔的形态返回了。然而，和大多数女性恶魔不同，[daddy.name]似乎并不乐意完全展现女性魅力，她拥有着B罩杯的小胸部，少女般的髋部，和勉强算丰满的屁股。她的脸虽然像女性一样足够可爱，但也略微接近中性。她的身高和头发也发生了变化，现在比之前矮了很多；白色波浪发丝已经垂至肩膀，用一条黑发带束住，以露出她的脸。当她靠近时，你不禁注意到她牛仔裤里某个部位鼓鼓囊囊，在重要的地方她依然是个男人……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_SUCCUBUS_TF_END"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Sitting down in front of you, [daddy.name] lets out an exhausted sigh, and as her chest moves, you can't help but glance down and see that her now-large nipples are clearly visible through the stretched fabric of her t-shirt. Seeing this really starts to turn you on, and you can't help but make a complimentary, sexual remark about her new body.
+			[daddy.name]在你面前坐下，疲惫地叹了一口气。你忍不住向下瞥了一眼她起伏的胸部，你透过被撑大的T恤衫清楚地看到了她正在逐渐变大的乳头。看到这些你兴奋了起来，你开始忍不住下流地夸赞她的新身体。
 		#ELSE
-			Sitting down in front of you, [daddy.name] lets out an exhausted sigh, and as her chest moves, you can't help but notice that her now-large nipples are clearly visible through the stretched fabric of her t-shirt.
+			[daddy.name]在你面前坐下，疲惫地叹了一口气。你忍不住向下瞥了一眼她起伏的胸部，你透过被撑大的T恤衫清楚地看到了她正在逐渐变大的乳头。
 		#ENDIF
-		 As her full lips turn up into a smile, she says, in a much higher-pitched, feminine voice, [daddy.speech(You know, it's been so long since I took on this form that I forgot how good it feels... Anyway, what do you think? Would Lyssieth like me more now?)]
+		她丰满的嘴唇带上了一抹微笑，用比平时更高的也更女性化的音调开口，[daddy.speech(你是知道的，时间隔得太长我都快忘了上次这样做时的感觉了……那个，你觉得呢？莉西丝会更喜欢我现在的样子吗？)]
 	</p>
 	<p>
-		You can't help but feel a lot happier with [daddy.namePos] new appearance, and after quickly replying in the positive, you ask her what else she wanted you to help her with. Leaning forwards in her chair, she takes on a serious tone as she says, [daddy.speech(Well, now that I've got the right looks, I need you to convince Lilaya to accept me as her father... No, wait, I guess now it'd be her second mother... And also for her to come out here and meet me. No matter what I try, that cat-girl maid of hers always instantly shoots me down, so I can't do this without your help. Oh, and there is one other very important thing. I'm going to need to show Lyssieth that as many of her children have already accepted me as their new parent as possible, and as you're related to her, that includes you, doesn't it)]
+		你禁不住地对[daddy.namePos]的新外貌感到越来越兴奋。你急忙夸了她两句，开始询问你能帮到些什么。她向前倾了倾身，用严肃的语气说，[daddy.speech(嗯，现在我有了合适的长相，我需要你去说服莉莱雅我来当她的父亲……不对，等等，还是说她的第二个母亲更合适……并且也要让她来到这里见我。不管我怎么尝试，她的猫女女仆总是当场拒绝我，所以没有你的帮助我不可能做到。哦，还有一件很重要的事。我要向莉西丝证明她的几个孩子里有不少已经接受我当他们的父亲，既然你和她有血缘关系，那你也包括在内，不是吗？)]
 	</p>
 	<p>
-		[pc.speech(Well, it's a little more complicated than that,)] you reply.
+		[pc.speech(呃，事情比这要更复杂一点，)]你回答。
 	</p>
 	<p>
-		[daddy.speech(In any case, you're directly related to her,)] [daddy.name] says, [daddy.speech(so I need you to accept me as your mother. That includes you calling me '[daddy.daddy]'.)]
+		[daddy.speech(不管怎么说，你和她是直系的亲人，)][daddy.name]说，[daddy.speech(所以我需要你接受我当你的母亲。这也包括你要叫我‘[daddy.daddy]’。)]
 	</p>
 	<p>
-		You're caught off-guard by this demand suddenly being made of you, and before you're able to think of a response, [daddy.name] continues, [daddy.speech(It wouldn't be so bad having me as your new mum, would it? If you agree to help me like this, I'll give you all of my old arcane spell books and scrolls.)]
+		你被这突如其来的要求吓了一跳。你还没来得及想好怎么回复之前，[daddy.name]继续说，[daddy.speech(我当你的新妈妈不会太糟，对吧？如果你能像我说的一样帮我，我会把我所有的奥术法术书和卷轴都给你。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_WATER"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly turning down [daddy.her] offer of wine, you tell [daddy.name] that you'd prefer to drink water this evening, before batting your eyelids at [daddy.herHim] and asking how [daddy.sheHas] been lately.
+			你害羞地拒绝了[daddy.her]饮酒的建议，告诉[daddy.name]你今晚更想喝水，然后对[daddy.herHim]眨了眨眼睛，问[daddy.herHim]最近过得怎么样。
 		#ELSE
-			Turning down [daddy.her] offer of wine, you inform [daddy.name] that you'll stick to drinking water this evening, before asking [daddy.herHim] how [daddy.sheHas] been lately.
+			你拒绝了[daddy.her]饮酒的建议，并告诉[daddy.name]你喝白开水就够了，之后你问起了[daddy.herHim]的近况。
 		#ENDIF
-		 Responding positively, [daddy.name] tells you that [daddy.sheHas] been well, although he hasn't had much time in which to relax, as [daddy.sheIs] currently busy working on several projects around the city.
+		[daddy.name]说[daddy.sheHas]最近过得还不错，就是作为[daddy.sheIs]的忙碌让他实在没什么时间去休息。
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with your bottled water and [daddy.namePos] glass of wine. You then place your orders for your meals, and after that's done,
+		你们点完了饮料，不久后，服务员为你们端上来了一杯水和一瓶红酒。并告诉你们可以点餐了。过了一会，
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			 you're able to really get started on flirting with and teasing your [daddy.daddy].
+			你终于可以正式开始和[daddy.daddy]调情了。
 		#ELSE
-			 you're able to get a real conversation going with your [daddy.daddy].
+			你终于可以正式和[daddy.daddy]对话了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_WINE"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly accepting [daddy.her] offer of wine, you tell [daddy.name] that it would be fun to let yourself go a little this evening, before batting your eyelids at [daddy.herHim] and asking how [daddy.sheHas] been lately.
+			你害羞地接受了[daddy.her]饮酒的建议，告诉[daddy.name]今晚放松一下会很有趣，然后对[daddy.herHim]眨了眨眼睛，问[daddy.sheHas]最近过的怎么样。
 		#ELSE
-			Accepting [daddy.her] offer of wine, you tell [daddy.name] that you'll let [daddy.herHim] pick the vintage, before asking [daddy.herHim] how [daddy.sheHas] been lately.
+			你接受了[daddy.her]饮酒的建议，让[daddy.herHim]挑选红酒的年份，之后你问起了[daddy.herHim]的近况。
 		#ENDIF
-		 Responding positively, [daddy.name] tells you that [daddy.sheHas] been well, although he hasn't had much time in which to relax, as [daddy.sheIs] currently busy working on several projects around the city.
+		[daddy.name]说[daddy.sheHas]最近过得还不错，就是忙于城市的几个项目，实在没什么时间去休息。
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with your chosen bottle of wine. You then place your orders for your meals, and after that's done,
+		你们点完了饮料，不久后，服务员为你们端上了你们挑选的红酒。并告诉你们可以点餐了。过了一会，
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			 you're able to really get started on flirting with and teasing your [daddy.daddy].
+			你终于可以正式开始和[daddy.daddy]调情了。
 		#ELSE
-			 you're able to get a real conversation going with your [daddy.daddy].
+			你终于可以正式和[daddy.daddy]对话了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_CORE"><![CDATA[
 	<p>
-		Soon enough, your food arrives, and your current conversation is momentarily put on hold as the two of you start eating.
+		很快，餐上齐了。你们暂停了对话，开始吃饭。
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
 			#IF(!pc.isTaur())
-				 Not letting a moment go to waste, you continue your flirting by running your [pc.foot] up the length of [daddy.namePos] leg, pausing now and again to bite your lip and coyly ask if [daddy.sheIs] enjoying your company. Clearly getting turned on by your teasing, the silver-haired [daddy.race] responds very much in the positive, and makes it well known to you that [daddy.she] would like for you to come back to [daddy.her] apartment after your meal. 
+				你不浪费片刻继续调情，[pc.foot]沿着[daddy.namePos]的腿向上移动，不时停下来，害羞地咬着嘴唇问[daddy.sheIs]是否享受你的陪伴。银发[daddy.race]很显然被你勾起了性欲，身体做出了反应，并告诉你[daddy.she]希望你饭后去[daddy.her]的公寓。
 			#ELSE
-				Making a show of hungrily glancing down at [daddy.namePos] body, you bite your lip as you coyly ask if [daddy.sheIs] enjoying your company. Clearly getting turned on by your teasing, the silver-haired [daddy.race] responds very much in the positive, and makes it well known to you that [daddy.she] would like for you to come back to [daddy.her] apartment after your meal.
+				你展示出对[daddy.namePos]身体的饥渴，害羞地咬着嘴唇问[daddy.sheIs]是否享受你的陪伴。银发[daddy.race]很显然被你勾起了性欲，身体做出了反应，并告诉你[daddy.she]希望你饭后去[daddy.her]的公寓。
 			#ENDIF
 		<p>
-			Continuing to flirt with one another in this manner, it doesn't take long before you've both finished with your meals, and after setting [daddy.her] cutlery down, [daddy.name] asks you if you'd like to order some dessert.
+			你们继续以这种方式调情，很快吃完了饭。[daddy.name]放下餐具，询问你想来点甜点吗。
 		</p>
 		#ELSE
-			 It doesn't take long before you've both finished with your meals, and after setting [daddy.her] cutlery down, [daddy.name] asks you if you'd like to order some dessert.
+			没过多久，你们俩都吃完了饭，把[daddy.her]的餐具放下后，[daddy.name]问你要不要点甜点。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_WATER"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly turning down [daddy.her] offer of wine, you tell [daddy.name] that you'd prefer to drink water this evening, before making several flirtatious remarks towards both [daddy.herHim] and Lilaya. Much to your delight, both of your companions seem more than happy to reciprocate with several sexual remarks of their own.
+			你害羞地拒绝了[daddy.her]饮酒的建议，告诉[daddy.name]你今晚更想喝水，然后对[daddy.herHim]和莉莱雅说了些挑逗的话。两位同伴都很乐意回应你的调情，这令你感到很愉快。
 		#ELSE
-			Turning down [daddy.her] offer of wine, you inform [daddy.name] that you'll stick to drinking water this evening, before asking [daddy.herHim] how [daddy.sheHas] been recently. Responding positively, [daddy.name] says that [daddy.sheHas] been well, although he hasn't had much time in which to relax, as [daddy.sheIs] currently busy working on several projects around the city.
+			你拒绝了[daddy.her]饮酒的提议，并告诉[daddy.name]你喝白开水就够了，之后你问起了[daddy.herHim]的近况。[daddy.name]说[daddy.sheHas]最近过得还不错，就是忙于城市的几个项目让他实在没什么时间去休息。
 		#ENDIF
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with your bottled water and a bottle of wine for Lilaya and [daddy.name] to share. You then place your orders for your meals, and after that's done,
+		你们点完了饮料，不久后，服务员端上了[daddy.name]和莉莱雅的红酒和你的瓶装水。并告诉你们可以点餐了。过了一会，
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			 you're able to really get started on flirting with and teasing your [lilaya.relation(pc)] and [daddy.daddy].
+			你终于可以正式开始和[lilaya.relation(pc)]和[daddy.daddy]调情了。
 		#ELSE
-			 you're able to get a real conversation going with your [lilaya.relation(pc)] and [daddy.daddy].
+			你终于可以正式和[lilaya.relation(pc)]和[daddy.daddy]对话了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_WINE"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly accepting [daddy.her] offer of wine, you tell [daddy.name] that it would be fun to let yourself go a little this evening, before making several flirtatious remarks towards both [daddy.herHim] and Lilaya. Much to your delight, both of your companions seem more than happy to reciprocate with several sexual remarks of their own.
+			你害羞地接受了[daddy.her]饮酒的建议，告诉[daddy.name]今晚放松一下会很有趣，然后对[daddy.herHim]和莉莱雅说了些挑逗的话。两位同伴都很乐意回应你的调情，这令你感到很愉快。
 		#ELSE
-			Accepting [daddy.her] offer of wine, you tell [daddy.name] that you'll let [daddy.herHim] pick the vintage, before asking [daddy.herHim] how [daddy.sheHas] been recently. Responding positively, [daddy.name] says that [daddy.sheHas] been well, although he hasn't had much time in which to relax, as [daddy.sheIs] currently busy working on several projects around the city.
+			你接受了[daddy.her]饮酒的建议，让[daddy.herHim]挑选红酒的年份，之后你问起了[daddy.herHim]的近况。[daddy.name]说[daddy.sheHas]最近过得还不错，就是忙于城市的几个项目，实在没什么时间去休息。
 		#ENDIF
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with your chosen bottle of wine. You then place your orders for your meals, and after that's done,
+		你们点完了饮料，不久后，服务员端上了你们挑选的红酒。并告诉你们可以点餐了。过了一会，
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			 you're able to really get started on flirting with and teasing your [lilaya.relation(pc)] and [daddy.daddy].
+			你终于可以正式开始和[lilaya.relation(pc)]和[daddy.daddy]调情了。
 		#ELSE
-			 you're able to get a real conversation going with your [lilaya.relation(pc)] and [daddy.daddy].
+			你终于可以正式和[lilaya.relation(pc)]和[daddy.daddy]对话了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_CORE"><![CDATA[
 	<p>
-		Soon enough, your food arrives, and your current conversation is momentarily put on hold as the three of you start eating.
+		很快，餐上齐了。你们暂停了对话，开始吃饭。
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
 			#IF(!pc.isTaur())
-				 Not letting a moment go to waste, you continue your flirting by running your [pc.foot] up the length of Lilaya's and [daddy.namePos] legs, pausing now and again to bite your lip and coyly ask if they are enjoying your company. Clearly getting turned on by your teasing, the two of them respond very much in the positive, with [daddy.name] making it well known to that [daddy.she] would like for the two of you to come back to [daddy.her] apartment after your meal. 
+				你不浪费片刻继续调情，[pc.foot]沿着莉莱雅和[daddy.namePos]的腿向上移动，不时停下来，害羞地咬着嘴唇询问他们是否享受你的陪伴。两人很显然都被你勾起了性欲，身体做出了反应。而后[daddy.name]告诉你们，[daddy.she]希望你们饭后去[daddy.her]的公寓。
 			#ELSE
-				Making a show of hungrily glancing down at Lilaya's and [daddy.namePos] bodies, you bite your lip as you coyly ask if they are enjoying your company. Clearly getting turned on by your teasing, the two of them respond very much in the positive, with [daddy.name] making it well known to that [daddy.she] would like for the two of you to come back to [daddy.her] apartment after your meal. 
+				你展示出对莉莱雅和[daddy.namePos]身体的饥渴，害羞地咬着嘴唇询问他们是否享受你的陪伴。两人很显然都被你勾起了性欲，身体做出了反应。而后[daddy.name]告诉你们，[daddy.she]希望你们饭后去[daddy.her]的公寓。
 			#ENDIF
 		<p>
-			Continuing to flirt with your two companions in this manner, it doesn't take long before you've all finished with your meals, and after setting [daddy.her] cutlery down, [daddy.name] asks if either of you would like to order some dessert.
+			你继续以这种方式和两位同伴调情。你们很快吃完了饭。[daddy.name]放下餐具，询问你想来点甜点吗。
 		</p>
 		#ELSE
-			 It doesn't take long before you've all finished with your meals, and after setting [daddy.her] cutlery down, [daddy.name] asks if either of you would like to order some dessert.
+			没过多久，你们就都吃完了，把[daddy.her]的餐具放下后，[daddy.name]问你要不要点甜点。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_WATER_INITIAL"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly turning down [daddy.her] offer of wine, you tell [daddy.name] that you'd prefer to drink water this evening, before making several flirtatious remarks towards both [daddy.herHim] and Lilaya. Much to your delight, both of your companions seem more than happy to reciprocate with several sexual remarks of their own.
+			你腼腆地拒绝了[daddy.her]的红酒，告诉[daddy.name]你今晚只愿意喝水，随后对[daddy.herHim]和莉莱雅说了些轻浮的话。让你开心的是，你的两名伙伴都看起来很乐意回应你的调情。
 		#ELSE
-			Turning down [daddy.her] offer of wine, you inform [daddy.name] that you'll stick to drinking water this evening, before asking [daddy.herHim] how [daddy.sheHas] been recently. Responding positively, [daddy.name] says that [daddy.sheHas] been well, although he hasn't had much time in which to relax, as [daddy.sheIs] currently busy working on several projects around the city.
+			你拒绝了[daddy.her]的红酒，告诉[daddy.name]你今晚只喝水，随后问候[daddy.herHim][daddy.sheHas]今晚过的怎么样。[daddy.name]开心地回答道[daddy.sheHas]过得很好，尽管因为[daddy.shels]最近因为城市里的几个工程忙的团团转而没什么时间放松。
 		#ENDIF
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with your bottled water and a bottle of wine for Lilaya and [daddy.name] to share. You then place your orders for your meals, and after that's done, talk turns to the matter of [daddy.namePos] potential meeting with Lyssieth.
+		这时，侍者去拿你要求的饮品，随后不久端上了你的一瓶水以及莉莱雅和[daddy.name]的红酒。之后你点了正餐，在那之后，话题转到了[daddy.name]与莉西丝的关键会面上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_WINE_INITIAL"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Coyly accepting [daddy.her] offer of wine, you tell [daddy.name] that it would be fun to let yourself go a little this evening, before making several flirtatious remarks towards both [daddy.herHim] and Lilaya. Much to your delight, both of your companions seem more than happy to reciprocate with several sexual remarks of their own.
+			你腼腆地接受了[daddy.her]的红酒，告诉[daddy.name]今晚放的开一点会很让人开心，随后对[daddy.herHim]和莉莱雅发表了一些轻浮的言论。很让你开心的是，你的两名伙伴都很乐意接受你对他们的调情。
 		#ELSE
-			Accepting [daddy.her] offer of wine, you tell [daddy.name] that you'll let [daddy.herHim] pick the vintage, before asking [daddy.herHim] how [daddy.sheHas] been recently. Responding positively, [daddy.name] says that [daddy.sheHas] been well, although he hasn't had much time in which to relax, as [daddy.sheIs] currently busy working on several projects around the city.
+			你接受了[daddy.her]的红酒，告诉[daddy.name]你想要让[daddy.herHim]挑选酒的年份，随后问[daddy.herHim]最近过得如何。[daddy.name]开心地回答道[daddy.sheHas]过得很好，尽管[daddy.shels]最近因为城市里的几个工程忙的团团转而没什么时间放松。
 		#ENDIF
 	</p>
 	<p>
-		At this point, the waiter returns to take your orders for drinks, and after he's done so, soon returns with your chosen bottle of wine. You then place your orders for your meals, and after that's done, talk turns to the matter of [daddy.namePos] potential meeting with Lyssieth.
+		就在此时，侍者来问你要点什么饮品，之后不久就带着你点的红酒返回。之后你点了正餐，在那之后，话题转到了[daddy.name]与莉西丝的关键会面上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_CORE_INITIAL"><![CDATA[
 	<p>
-		[daddy.speech(So, with the two of you accepting me as your new [daddy.dad], Lyssieth is sure to want to meet me, isn't she?)] [daddy.name] asks, smiling at you and Lilaya.
+		[daddy.speech(既然你们俩都接受我是你们新的[daddy.dad]，那么莉西丝一定想要见我吧？)][daddy.name]笑着询问你和莉莱雅。
 	</p>
 	<p>
-		Letting out a sigh, Lilaya tries to deliver her bad news as gently as possible, [lilaya.speech(Look, I can see that you're genuinely willing to assume the role of mommy's new partner, but I really don't think she'll be keen to meet you... I mean, I appreciate that you've transformed to look as human as possible, but mommy's only interested in actual humans, and even then, she's currently not really able to meet anyone...)]
+		莉莱雅叹了口气，尽可能温柔地说出这个坏消息，[lilaya.speech(是这样的，我看得出来你真的很想承担妈妈新伴侣的角色，但我真的不认为她会很想见你……我是说，我很感激你已经变得尽可能像个人类了，但妈妈只对真正的人类感兴趣，即使你是，她最近也不太能见任何人……)]
 	</p>
 	<p>
-		[daddy.speech(But surely you can put in a good word on my behalf?)] [daddy.name] asks.
+		[daddy.speech(但你一定可以为我美言几句吧？)][daddy.name]询问道。
 	</p>
 	<p>
-		[lilaya.speech(When I see her, I will,)] Lilaya replies, [lilaya.speech(but unless you're able to do what nobody's ever been able to before, and become human, then I'm afraid your chances of meeting her are non-existent. Once her current situation changes, and she's able to open up her palace again, I'll make sure you get a meeting with her, but who knows when that will be...)]
+		[lilaya.speech(等我见到她的时候，我会的，)]莉莱雅回答， [lilaya.speech(只是，除非你做到了前人从未做到的事情，并且成为了真正的人类，否则你见她的可能性基本为零。只要你做到了，一旦她情况好转，重新开放宫殿，我会确保你有见到她的机会，但谁知道那会是什么时候……)]
 	</p>
 	<p>
-		[daddy.speech(Ah...)] [daddy.name] sighs, dropping [daddy.her] shoulders and casting [daddy.her] eyes down at the table surface. This display of anguish only lasts a moment, however, as [daddy.she] quickly looks back up and smiles at the two of you, before saying, [daddy.speech(Well, I'll just have to try extra hard to become the sort of person she'll want as her [daddy.husband]! Even if it takes a thousand years, one day I'll be by her side, and until then, I've got the two of you to take care of!)]
+		[daddy.speech(唉……)][daddy.name]叹了口气，垂下[daddy.her]的肩膀，垂眸看着桌面，不过他这种失望的表现只持续了一会儿。[daddy.she]很快转过头来笑着看向你俩，说， [daddy.speech(好吧，我会尽可能地努力成为她愿意当做她的[daddy.husband]的那种人！即使需要一千年，总有一天我也会站在她身边。在此之前，我会照顾好你们俩的！)]
 	</p>
 	<p>
-		As she hears this, Lilaya blushes a little, before saying, [lilaya.speech(Don't worry, you don't need to do anything special to take care of me, I'm just looking forward to having a... a [daddy.dad] I can visit now and again...)]
+		莉莱雅听到这时脸红了，说， [lilaya.speech(别担心，照顾我不需要做什么特别的事，我只是很希望有……有个我可以时不时去拜访的[daddy.dad]……)]
 	</p>
 	<p>
-		[daddy.speech(Well, you can certainly do that with me! Come and visit me here in Demon Home as often as you like!)] [daddy.name] happily exclaims.
+		[daddy.speech(你当然可以这么做，只要你愿意，可以随时来恶魔之家拜访我！)][daddy.name]高兴地说。
 	</p>
 	<p>
-		With the matter of [daddy.namePos] meeting with Lyssieth now being resolved, talk soon turns to more mundane matters, consisting mostly of you, Lilaya, and [daddy.name] telling one another about recent events in your lives. 
+		[daddy.namePos]和莉西丝的见面问题解决后，话题转向了日常琐事，你、莉莱雅和[daddy.name]聊着最近生活里发生的事情。
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			 Keen to get the two of them into the mood for some fun later on, you make sure to keep a flirtatious tone running through most of the conversation. Happy enough to play along, both Lilaya and [daddy.name] drop in several sexual remarks of their own, and you can soon tell that the two of them are getting very turned on...
+			你迫切希望他们俩一会儿能有找点乐子的心情，于是一直挑逗地进行着交谈。莉莱雅和[daddy.name]都很乐意，也都说了些调情的话。你很快就看出他们俩都兴奋了起来……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FIRST_DINNER -->
@@ -1024,26 +1023,26 @@
 	<htmlContent tag="FIRST_DINNER_ACCEPT"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Deciding to do as [daddy.name] asks, you seductively reply, [pc.speech(You know, I was actually hoping that you'd want to be my [daddy.daddy]... And I'm sure I can convince Lilaya to feel the same way...)]
+			你决定照着[daddy.name]说的做，诱惑地回复道：[pc.speech(你知道吗，我其实很希望你愿意当我的[daddy.daddy]……而且我确信可以让莉莱雅也这么想……)]
 		#ELSE
-			Deciding to do as [daddy.name] asks, you reply, [pc.speech(Ok... You can be my [daddy.daddy]... And I'll convince Lilaya to come and meet you.)]
+			你决定照着[daddy.name]说的做，回复道：[pc.speech(好吧……你可以做我的[daddy.daddy]……而且我会劝说莉莱雅前来见你。)]
 		#ENDIF
 	</p>
 	<p>
-		[daddy.speech(That's my [pc.girl]!)] [daddy.name] happily replies, instantly taking on the role of your new [daddy.dad], [daddy.speech(I'll get those scrolls and old spell book of mine sent to you as soon I'm home, just as I promised! Now let's get some dessert to celebrate our new relationship!)]
+		[daddy.speech(这才是我的好[pc.girl]！)][daddy.name]开心地回答，快速代入了你新[daddy.dad]的角色，[daddy.speech(我一回家就会尽快把我的那些卷轴和旧法术书送给你，就像我承诺的那样！现在来吃些甜点庆祝我们新缔结的关系吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_DINNER_REFUSE"><![CDATA[
 	<p>
-		Feeling as though that's an arrangement you're definitely not comfortable with, you tell [daddy.name] that you're not prepared to do as [daddy.she] asks, and that it would be best if [daddy.she] didn't bother Lilaya about all this ever again. Immediately, [daddy.she] lets out a defeated sigh, and, dropping [daddy.her] shoulders, says, [daddy.speech(Right... Well, if you ever change your mind, you know where to find me...)]
+		尽管感觉这个安排一定会让你不适， 你告诉[daddy.name]你还不准备按照[daddy.she]说的做，而[daddy.she]最好不要再用这件事打搅莉莱雅.几乎立刻[daddy.she]发出了一声挫败的叹息，他沉下了[daddy.her]的肩膀，说道：[daddy.speech(好吧…… 那么，如果你回心转意了，你知道该去哪里找我……)]
 	</p>
 	<p>
-		With that, [daddy.she] tells you that [daddy.she] hopes you'll one day change your mind, before standing up and heading over to the restaurant's small bar area in order to settle the bill. With the evening's business between the two of you now concluded, you exit the restaurant just after [daddy.name], and watch as [daddy.she] walks off into Demon Home, lost in [daddy.her] thoughts...
+		就这样，[daddy.she]告诉你[daddy.she]希望你有一天能回心转意，随后站起身，走向餐馆的吧台区域去结账。随着你们今晚的事情告一段落，你紧跟着[daddy.name]离开了餐馆，目睹着[daddy.she]走进了恶魔之家，沉浸在[daddy.her]的思绪中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DINNER_MID -->
@@ -1051,188 +1050,188 @@
 	<htmlContent tag="DINNER_DESSERT"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			You tell [daddy.name] that you'd like to take [daddy.herHim] up on [daddy.her] offer of dessert, giving you more time in which to continue flirting with [daddy.herHim].
+			你告诉[daddy.name]，你很乐意接受[daddy.herHim]共用甜点的邀请，这给了你更多时间来和[daddy.herHim]调情。
 		#ELSE
-			You tell [daddy.name] that you'd like to take [daddy.herHim] up on [daddy.her] offer of dessert, giving you more time in which to continue your conversation.
+			你告诉[daddy.name]，你很乐意接受[daddy.herHim]共用甜点的邀请，这给了你更多时间来继续对话。
 		#ENDIF
-		 Consequently, when the waiter comes to clear your table, [daddy.name] asks to see the dessert menu, and after looking over it, the two of you place your orders.
+		因此，当侍者来为你们清理餐桌时，[daddy.name]要来了甜食菜单并阅览，你们俩都点了自己的甜食。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Soon enough, you and your [daddy.daddy] are tucking in to your selected treats, while continuing to flirt and tease one another.
+			很快，你和你的[daddy.daddy]享用着你们选择的甜食， 同时不断地调戏和挑逗着彼此。
 		#ELSE
-			Soon enough, you and your [daddy.daddy] are tucking in to your selected treats, while continuing to talk about all manner of goings on in Dominion.
+			很快，你和你的[daddy.daddy]享用着你们选择的甜食，同时不断地讨论着御城区里发生的各种事情。
 		#ENDIF
-		 The steady background chatter filling the restaurant starts to get quieter as each of you finish off your desserts, and, noticing the time, [daddy.name] says that the two of you should be making a move, before heading over to the restaurant's small bar area and settling the bill.
+		在你们吃完甜食的过程中，充满餐馆的闲聊声开始慢慢静了下来。[daddy.name]注意到时间，说你们应该动身了，随后前往餐馆的吧台区域去付账。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			With your evening out coming to an end, you exit the restaurant with [daddy.namePos] arm around your waist, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at you, [daddy.she] pulls you close as [daddy.she] asks, [daddy.speech(So, you want to come back to my place for a little more fun?)]
+			随着你们今晚的约会接近尾声，你被[daddy.namePos]搂着腰离开了餐馆，并且很快踏上了恶魔之家所在的街道。[daddy.she][daddy.heightDown(pc)]看着你，一边将你拉近一边问道，[daddy.speech(所以，想回我那里再找点乐子吗？)]
 		#ELSE
 			#IF(pc.getQuest(QUEST_LINE_SIDE_DADDY) == QUEST_DADDY_ACCEPTED)
-				With your evening out coming to an end, you exit the restaurant by [daddy.namePos] side, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at you, [daddy.she] smiles as [daddy.she] says, [daddy.speech(You know, I really enjoyed this evening with you, [pc.name]. Please do come and visit me any other evening you like, and I'm looking forward to meeting Lilaya when you bring her with you.)]
+				随着你们今晚的约会接近尾声，你跟在[daddy.namePos]身边离开了餐馆，并且很快踏上了恶魔之家所在的街道。[daddy.she][daddy.heightDown(pc)]看着你，微笑着说， [daddy.speech(你知道吗，我今晚和你过的很愉快，[pc.name]。如果你想，可以在其他晚上随时光临，我很期待你能带着莉莱雅来，好让我见见她。)]
 			#ELSE
-				With your evening out coming to an end, you exit the restaurant by [daddy.namePos] side, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at you, [daddy.she] smiles as [daddy.she] says, [daddy.speech(You know, I really enjoyed this evening with you, [pc.name]. Please do come and visit me any other evening you like, and we can do this again.)]
+				随着你们今晚的约会接近尾声，你跟在[daddy.namePos]身边离开了餐馆，并且很快踏上了恶魔之家所在的街道。[daddy.she][daddy.heightDown(pc)]看着你，微笑着说，[daddy.speech(你知道吗，我今晚和你过得很愉快，[pc.name]。如果你想，可以在其他晚上随时光临，我们可以再来一次。)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_DESSERT"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Both you and Lilaya tell [daddy.name] that you'd like to take [daddy.herHim] up on [daddy.her] offer of dessert, giving you more time in which to flirt with one another.
+			你和莉莱雅告诉[daddy.name]你们愿意接受[daddy.her]共进甜食的邀请，这给了你们更多时间来彼此调情。
 		#ELSE
-			Both you and Lilaya tell [daddy.name] that you'd like to take [daddy.herHim] up on [daddy.her] offer of dessert, giving you more time in which to continue your conversation.
+			你和莉莱雅告诉[daddy.name]你们愿意接受[daddy.her]共进甜食的邀请，这给了你们更多时间来继续谈话。
 		#ENDIF
-		 Consequently, when the waiter comes to clear your table, [daddy.name] asks to see the dessert menu, and after looking over it, the three of you place your orders.
+		因此，当侍者来为你们清理餐桌时，[daddy.name]要来了甜食菜单并阅览，你们三个分别点好了甜食。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Soon enough, you, your [lilaya.relation(pc)], and your [daddy.daddy] are tucking in to your selected treats, while continuing to flirt and tease one another.
+			很快，你，你的[lilaya.relation(pc)]，和你的[daddy.daddy]享用着选好的甜食，同时不断地挑逗和调戏着彼此。
 		#ELSE
-			Soon enough, you, your [lilaya.relation(pc)], and your [daddy.daddy] are tucking in to your selected treats, while continuing to talk about all manner of goings on in Dominion.
+			很快，你，你的[lilaya.relation(pc)]，和你的[daddy.daddy]享用着选好的甜食，同时不断地讨论着御城区里发生的各种事情。
 		#ENDIF
-		 The steady background chatter filling the restaurant starts to get quieter as each of you finish off your desserts, and, noticing the time, [daddy.name] says that the three of you should be making a move, before heading over to the restaurant's small bar area and settling the bill.
+		在你们吃完甜食的过程中，充满餐馆的闲聊声开始慢慢静了下来。[daddy.name]注意到时间，说你们三个应该动身了，随后前往餐馆的吧台区域去付账。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			With your evening out coming to an end, and with [daddy.namePos] arms around each of your waists, you and Lilaya move to exit the restaurant, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at Lilaya, and then over at you, [daddy.she] pulls you both close as [daddy.she] asks, [daddy.speech(So, do you two want to come back to my place for a little more fun?)]
+			今晚的约会接近尾声，你和莉莱雅被[daddy.namePos]搂着腰，一同离开了餐馆，并且很快踏上了恶魔之家所在的街道。[daddy.heightDown(pc)]看着莉莱雅，随后又看向你。[daddy.she]一边将你们两个拉近，一边问，[daddy.speech(所以，你们两个想回我那里再找点乐子吗？)] 
 		#ELSE
-			With your evening out coming to an end, you and Lilaya exit the restaurant by [daddy.namePos] side, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at Lilaya, and then across to you, [daddy.she] smiles as [daddy.she] says, [daddy.speech(You know, I really enjoyed this evening with the two of you. Please do come and visit me any other evening you like, and we can do this again.)]
+			随着你们今晚的约会接近尾声，你和莉莱雅跟在[daddy.namePos]身边离开了餐馆，并且很快踏上了恶魔之家所在的街道。[daddy.she][daddy.heightDown(pc)]着莉莱雅，随后看着你，[daddy.she]微笑着说，[daddy.speech(你知道吗，我今晚和你们两个过得很愉快。如果你想，可以在其他晚上随时光临，我们可以再约一次。)] 
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_NO_DESSERT"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			You tell [daddy.name] that you were thinking of a different sort of dessert, and that perhaps you could soon head back to [daddy.her] apartment in order to get started on it.
+			你告诉[daddy.name]你考虑尝尝另一种不同的甜食，或许过一会你可以去[daddy.her]的公寓来享用它。
 		#ELSE
-			You tell [daddy.name] that you're too full to have any dessert, and that you should probably be thinking about leaving soon.
+			你告诉[daddy.name]你吃的太饱已经吃不下甜食，已经在考虑是否应该马上离开。
 		#ENDIF
-		 Consequently, when the waiter comes to clear your table, [daddy.name] asks to settle the bill, and once that's done, the two of you prepare to make a move.
+		终于，在侍者来为你们清理餐桌时，[daddy.name]要侍者来买单，在那之后，你们两个开始准备动身。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			With your evening out coming to an end, you exit the restaurant with [daddy.namePos] arm around your waist, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at you, [daddy.she] pulls you close as [daddy.she] asks, [daddy.speech(So, you want to come back to my place for some special 'dessert'?)]
+			在你们今晚的约会到达尾声时，你离开了餐馆，[daddy.namePos]的胳膊搂在你的腰上，很快就走回到了恶魔之家所在的街道上。[daddy.heightDown(pc)]着你，[daddy.she]将你拉近并问道：[daddy.speech(所以，想回去我那里尝点特别的‘甜食’吗？)]
 		#ELSE
 			#IF(pc.getQuest(QUEST_LINE_SIDE_DADDY) == QUEST_DADDY_ACCEPTED)
-				With your evening out coming to an end, you exit the restaurant by [daddy.namePos] side, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at you, [daddy.she] smiles as [daddy.she] says, [daddy.speech(You know, I really enjoyed this evening with you, [pc.name]. Please do come and visit me any other evening you like, and I'm looking forward to meeting Lilaya when you bring her with you.)]
+				在你们今晚的约会到达尾声时，你跟在[daddy.namePos]身边离开了餐馆， 很快就走回到了恶魔之家所在的街道上。[daddy.heightDown(pc)]着你，[daddy.she]微笑着说：[daddy.speech(你知道吗，今晚和你在一起度过得很愉快，[pc.name]。如果你在别的晚上还想来，请千万别客气，我期待着你能带莉莱雅来好让我和她聊聊。)]
 			#ELSE
-				With your evening out coming to an end, you exit the restaurant by [daddy.namePos] side, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at you, [daddy.she] smiles as [daddy.she] says, [daddy.speech(You know, I really enjoyed this evening with you, [pc.name]. Please do come and visit me any other evening you like, and we can do this again.)]
+				在你们今晚的约会到达尾声时，你跟在[daddy.namePos]身边离开了餐馆， 很快就走回到了恶魔之家所在的街道上。[daddy.heightDown(pc)]着你，[daddy.she]微笑着说：[daddy.speech(你知道吗，今晚和你在一起度过得很愉快，[pc.name]。如果你在别的晚上还想来，请千万别客气，我们可以再这样约会。)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_NO_DESSERT"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			You tell [daddy.name] that you and Lilaya would like a different sort of dessert, and that perhaps you could soon head back to [daddy.her] apartment in order to get started on it.
+			你告诉[daddy.name]你和莉莱雅考虑尝尝另一种不同的甜食， 或许过一会你们可以去[daddy.her]的公寓来享用它。
 		#ELSE
-			You tell [daddy.name] that you're too full to have any dessert, which turns out to be the case for Lilaya as well.
+			你告诉[daddy.name]你吃的太饱已经吃不下甜食，莉莱雅也是一样。
 		#ENDIF
-		 Consequently, when the waiter comes to clear your table, [daddy.name] asks to settle the bill, and once that's done, the three of you prepare to make a move.
+		终于，在侍者来为你们清理餐桌时，[daddy.name]要侍者来买单，在那之后，你们三个开始准备动身。
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			With your evening out coming to an end, and with [daddy.namePos] arms around each of your waists, you and Lilaya move to exit the restaurant, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at Lilaya, and then over at you, [daddy.she] pulls you both close as [daddy.she] asks, [daddy.speech(So, do you two want to come back to my place for some special 'dessert'?)]
+			在你们今晚的约会到达尾声时，你和莉莱雅离开了餐馆，[daddy.namePos]的胳膊搂在你们两个的腰上，很快就走回到了恶魔之家所在的街道上。[daddy.heightDown(pc)]着莉莱雅，随后是你，[daddy.she]将你拉近并问道：[daddy.speech(所以，你们两个想回去我那里尝点特别的‘甜食’吗？)]
 		#ELSE
-			With your evening out coming to an end, you and Lilaya exit the restaurant by [daddy.namePos] side, and are soon stepping back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at Lilaya, and then across to you, [daddy.she] smiles as [daddy.she] says, [daddy.speech(You know, I really enjoyed this evening with the two of you. Please do come and visit me any other evening you like, and we can do this again.)]
+			在你们今晚的约会到达尾声时，你和莉莱雅跟在[daddy.namePos]身边离开了餐馆， 很快就走回到了恶魔之家所在的街道上。[daddy.heightDown(pc)]着莉莱雅，然后是你，[daddy.she]微笑着说：[daddy.speech(你知道吗，今晚和你们两个在一起度过得很愉快，[pc.name]。如果你们别的晚上还想来，请千万别客气，我们可以再这样约会。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_DADDYS_DESSERT"><![CDATA[
 	<p>
-		Thanks to your flirting, you've managed to turn on not only [daddy.name], but also yourself, and upon hearing [daddy.herHim] mention dessert, you suddenly get a naughty idea. Biting your [pc.lip], you seductively tease, [pc.speech(You go ahead and order something for yourself, I already know what I'm having for dessert...)]
+		得益于你的调情，你让[daddy.name]和你自己的情绪都高涨起来，当听见[daddy.herHim]提到甜食时，你突然想到了一个好主意。咬着你的[pc.lip]，你诱惑地挑逗道：[pc.speech(你去给自己点些东西吧，我已经想好甜食该吃什么了……)]
 	</p>
 	<p>
-		With that, you slide down in your chair, before dropping down onto your knees under the table. Thanks to the white cloth draped over the surface above you, nobody else in the restaurant is able to see what you're doing, and, imagining the look on [daddy.namePos] face, you smile to yourself as you shuffle forwards between [daddy.her] legs.
+		你滑下你的椅子，随后用膝盖跪在餐桌下面。多亏餐桌上覆盖的白色桌布，餐馆里的其他人根本看不见你在做什么。想象着[daddy.namePos]脸上的表情，你坏笑着挪向[daddy.her]的双腿之间。
 	</p>
 	<p>
-		[daddy.speech(Oh, yes, I'll need just one dessert menu,)] you hear [daddy.name] suddenly say from up above you, letting you know that one of the waiters has approached your table. With a mischievous grin on your face, you reach up to stroke [daddy.namePos] leg, before moving your touch up to unbutton and unzip [daddy.her] jeans. Pulling them down a little, you can't help but let out a small, hungry [pc.moan] as you see the outline of [daddy.her] [daddy.cockSize], hardening cock pressing up beneath the fabric of [daddy.her] underwear.
+		[daddy.speech(哦，是的，我只需要一份甜食菜单。)]你听见[daddy.name]突然在你的上面开口，让你得知侍者来到了你们的桌边。调皮地微笑着，你伸出手抚摸着[daddy.namePos]腿，随后向上摸去，解开了[daddy.her]牛仔裤的扣子和拉链。把它们往下拽了一些，你忍不住微笑，当你看见[daddy.her]硬起来的[daddy.cockSize]肉棒从下面顶着[daddy.her]内裤布料的轮廓时，你饥渴地[pc.moan]。
 	</p>
 	<p>
-		[daddy.speech(Yes, could I get this,)] [daddy.name] says from up above as [daddy.she] places [daddy.her] order for dessert. Wanting to tease [daddy.herHim] a little, you stroke and gently squeeze [daddy.her] shaft through [daddy.her] boxers, smiling to yourself as your touch causes [daddy.herHim] to [daddy.moan], [daddy.speech(~Mmm!~ No, [pc.sheHas] just gone to the restroom... ~Aah!~ And said [pc.she] didn't want any dessert, so it's just the one.)]
+		[daddy.speech(好的，我就要这个，)][daddy.name]在上面说着，点好了[daddy.her]的甜食。想要给[daddy.herHim]一点挑逗，你隔着[daddy.her]内裤抚摸并轻轻挤压着[daddy.her]肉棒，微笑着听着[daddy.name]因为你的触摸开始[daddy.moan]，[daddy.speech(~嗯！~ 不，[pc.sheHas]刚刚去了洗手间……~啊！~ 而且[pc.she]说[pc.she]不想要甜食，所以只需要一份。)]
 	</p>
 	<p>
-		As the waiter moves away, you unbutton [daddy.namePos] boxers, allowing [daddy.her] [daddy.cockGirth], fully-erect cock to spring free. Leaning forwards, you plant a wet kiss on its [daddy.cockHead+], before running your [pc.tongue+] all the way down the underside. Stopping at the base, you then move down and deliver a series of kisses and licks to [daddy.her] [daddy.ballSize], heavy balls, softly [pc.moaning] as you imagine them pumping their load deep down your throat.
+		侍者刚刚离开，你就解开了[daddy.namePos]的内裤，让[daddy.her][daddy.cockGirth]、挺立着的肉棒得以获得自由。你向前倾身，给了[daddy.her][daddy.cockHead+]一个湿润的吻，随后用你[pc.tongue+]一路扫荡向下。你在根部暂停，接着往下，对着[daddy.her][daddy.ballSize]而沉重的睾丸亲吻舔舐，一边想象着它们把存储的东西注入你的喉咙，一边轻声[pc.moaning]。
 	</p>
 	<p>
-		Wanting to be a good [pc.girl] for your [daddy.daddy], you remember your manners, and wait until you hear [daddy.her] dessert arriving before moving up and getting started on enjoying your own. Delivering yet another wet kiss to the very tip of [daddy.her] cock, you slowly drop your head down, parting your [pc.lips+] as you take [daddy.her] throbbing length down your throat...
+		想要做个[daddy.daddy]的好[pc.girl]，你将规矩牢记于心，直到你听见[daddy.her]的甜食上桌，才向上移动并享受你的那一份。给了[daddy.her]的肉棒又一个湿吻，你慢慢把头低了下去，分开你的[pc.lips+] ，将[daddy.her]搏动着的肉棒送进你的喉咙……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_DADDYS_DESSERT"><![CDATA[
 	<p>
-		Thanks to your flirting, you've managed to turn on not only your two dinner companions, but also yourself, and upon hearing [daddy.daddy] mention dessert, you suddenly get a naughty idea. Running your [pc.hand] over her thigh, you lean in to seductively whisper in Lilaya's ear, [pc.speech(I was thinking of getting some dessert directly from [daddy.name], you want to join me?)]
+		得益于你的调情，你让你自己和你的两位同伴的情绪都高涨起来，当你听见[daddy.daddy]提到甜食时，你突然想到一个好主意。用你的[pc.hand]摸过她的大腿，你倾斜向莉莱雅，对她的耳朵诱惑地说：[pc.speech(我想直接从[daddy.name]身上弄一点甜食吃，要和我一起吗？)]
 	</p>
 	<p>
-		Letting out a hurried reply in the positive, Lilaya bites her lip at [daddy.name] as you tell [daddy.herHim], [pc.speech(You go ahead and order something for yourself, [daddy.daddy], Lilaya and I already know what we're having for dessert...)]
+		匆匆地答应一声，莉莱雅对着[daddy.name]咬着嘴唇，同时你告诉[daddy.herHim]，[pc.speech(去给你自己点些东西吧，[daddy.daddy]，莉莱雅和我知道甜食该吃什么……)]
 	</p>
 	<p>
-		With that, the two of you slide down in your chairs, before dropping down onto your knees under the table. Thanks to the white cloth draped over the surface above you, nobody else in the restaurant is able to see what the two of you are doing, and, imagining the look on [daddy.namePos] face, you smile to yourself as you shuffle forwards alongside your [lilaya.relation(pc)] until the two of you are side-by-side between [daddy.her] legs.
+		随后，你们两个滑下你们的椅子，随后用你们的膝盖跪在餐桌下面。多亏了你们头上餐桌表面上盖着的白布，餐馆里的其他人看不到你们在做什么。想象着[daddy.namePos]脸上的表情， 你坏笑着和你的[lilaya.relation(pc)]挪动着，直到你们并排待在[daddy.her]双腿之间。
 	</p>
 	<p>
-		[daddy.speech(Oh, yes, I'll need just one dessert menu,)] you hear [daddy.name] suddenly say from up above you, letting you know that one of the waiters has approached your table. With a mischievous grin on your face, you reach up to stroke [daddy.namePos] leg, while Lilaya moves her hands up to unbutton and unzip [daddy.namePos] jeans. As the horny succubus pulls them down a little, the two of you can't help but let out small, hungry [pc.moans] as you see the outline of your [daddy.daddy]'s [daddy.cockSize], hardening cock pressing up beneath the fabric of [daddy.her] underwear.
+		[daddy.speech(哦，是的，我只需要一份甜食菜单。)]你听见[daddy.name]突然在你的头顶开口，让你得知侍者来到了你们的桌边。调皮地微笑着，你伸出手抚摸着[daddy.namePos]腿，同时莉莱雅向上伸出手，解开了[daddy.namePos]牛仔裤的扣子和拉链。随着这个淫荡的魅魔将它们拉下了一些，你们在看见[daddy.her]硬起来的[daddy.cockSize]肉棒从下面顶着[daddy.her]内裤布料的轮廓时，不可抑制地发出饥渴的小声[pc.moans]。
 	</p>
 	<p>
-		[daddy.speech(Yes, could I get this,)] [daddy.name] says from up above as [daddy.she] places [daddy.her] order for dessert. Wanting to tease [daddy.herHim] a little, both you and Lilaya get to work stroking and gently squeezing [daddy.her] shaft through [daddy.her] boxers, grinning at one another as your combined touch causes [daddy.herHim] to [daddy.moan], [daddy.speech(~Mmm!~ No, they've just gone to the restroom... ~Aah!~ And they said they didn't want any dessert, so it's just the one.)]
+		[daddy.speech(是的，我要这个，)][daddy.name]的声音从头顶上传来，[daddy.she]点好了[daddy.her]的甜食。想要挑逗一下[daddy.herHim]，你和莉莱雅开始隔着[daddy.her]内裤抚摸并轻轻按压着[daddy.her]的肉棒，听到你们的组合动作让[daddy.herHim][daddy.moan]时，你们相视一笑， [daddy.speech(~嗯！~ 不，她们刚刚去了洗手间…… ~啊！~ 而且她们说了不需要甜食，所以只要一份。)]
 	</p>
 	<p>
-		As the waiter moves away, you unbutton [daddy.namePos] boxers, allowing [daddy.her] [daddy.cockGirth], fully-erect cock to spring free. Leaning forwards, Lilaya plants a wet kiss on its [daddy.cockHead+], while you lean in beneath her to deliver a series of kisses and licks to [daddy.her] [daddy.ballSize], heavy balls, softly [pc.moaning] as you imagine them pumping their load deep down your throat.
+		侍者刚一离开，你就解开了[daddy.namePos]的内裤，让[daddy.her][daddy.cockGirth]、挺立着的肉棒得以获得自由。莉莱雅向前倾身，给了它[daddy.cockHead+]一个湿吻，同时你靠在她的下面，对着[daddy.her][daddy.ballSize]而沉重的睾丸亲吻舔舐，一边想象着它们把存储的东西注入你的喉咙，一边轻声[pc.moaning]。
 	</p>
 	<p>
-		[lilaya.speech(Remember your manners,)] Lilaya giggles as she whispers to you, her voice dripping with lust, [lilaya.speech(It's rude to start eating before everyone's got their food in front of them.)]
+		[lilaya.speech(注意你的礼仪，)]莉莱雅一边轻声笑着，一边对你耳语。她的声音浸满了色欲， [lilaya.speech(菜还没上齐就先开吃可是很粗鲁的。)]
 	</p>
 	<p>
-		Wanting to be good
+		想要为你的
 		#IF(lilaya.isFeminine()==pc.isFeminine())
-			 [pc.girls]
+			[pc.girls]
 		#ENDIF
-		 for your [daddy.daddy], both you and Lilaya wait until you hear [daddy.her] dessert arriving before moving up and getting started on enjoying your own. This time, your [lilaya.relation(pc)] allows you to be the one to plant a wet kiss to the very tip of [daddy.namePos] cock, while she moves down to lick [daddy.her] heavy balls. With a soft [pc.moan], you then slowly drop your head down, parting your [pc.lips+] as you take [daddy.her] throbbing length down your throat...
+		[daddy.daddy]做个好女孩，你和莉莱雅都等待着，直到你们听见[daddy.her]的甜食上桌，才开始抬起头，享用你们的那一份。这一次，你的[lilaya.relation(pc)]允许你第一个给予[daddy.namePos]肉棒的尖端一个湿吻，而她低下头，舔舐着[daddy.her]沉重的睾丸。伴随着一声轻柔的[pc.moan]，你慢慢把头低了下去，分开你的[pc.lips+] ，将[daddy.her]搏动着的肉棒送进你的喉咙……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_UNDER_TABLE_SEX"><![CDATA[
 	<p>
-		[genericFemale.speech(Is everything ok, [daddy.name]?)] the waitress asks, glancing over at you with a frown on her face.
+		[genericFemale.speech(一切都还好吗，[daddy.name]？)]女侍者问道，皱着眉头打量着你。
 	</p>
 	<p>
-		[daddy.speech(Yes, thanks, [pc.name] here had just dropped something, but it's all sorted now,)] [daddy.name] replies, [daddy.speech(I think it's time for us to leave, could I have the bill please?)]
+		[daddy.speech(是的，谢谢，[pc.name]刚刚掉了什么东西，但现在没问题了，)][daddy.name]回答道，[daddy.speech(我想我们该走了，能把账单给我吗？)]
 	</p>
 	<p>
-		[genericFemale.speech(Of course,)] she replies, giving you one last questioning glance before heading off to do as she's asked.
+		[genericFemale.speech(当然了，)]她回答道，在去拿账单之前最后狐疑地看了你一眼。
 	</p>
 	<p>
-		Continuing to flirt with [daddy.herHim] as [daddy.she] settles the bill, you smile as [daddy.name] slips one arm down around your waist and leads you back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at you, [daddy.she] pulls you close as [daddy.she] asks, [daddy.speech(I'm sure you weren't satisfied from your 'dessert', were you? How about you come back to my place for seconds?)]
+		你在[daddy.she]结账时不断地和[daddy.she]调着情，微笑着让[daddy.name]用一只胳膊环绕着你的腰，将你带回了恶魔之家所在的街道。[daddy.heightDown(pc)]看着你，[daddy.she]将你拉近，说道，[daddy.speech(我想你大概对甜食不甚满意吧？要不要回我那里待一会？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AFTER_UNDER_TABLE_SEX"><![CDATA[
 	<p>
-		[genericFemale.speech(Is everything ok, [daddy.name]?)] the waitress asks, glancing over at you and Lilaya with a frown on her face.
+		[genericFemale.speech(有什么事情吗，[daddy.name]？)]服务员问道，皱着眉头看着你和莉莱雅。
 	</p>
 	<p>
-		[daddy.speech(Yes, thanks, my kids had just dropped something, but it's all sorted now,)] [daddy.name] replies, [daddy.speech(I think it's time for us to leave, could I have the bill please?)]
+		[daddy.speech(没事，谢谢。我的孩子们刚刚丢了点东西，现在都好了。)][daddy.name]回答，[daddy.speech(我们要走了，能给我账单吗？)]
 	</p>
 	<p>
-		[genericFemale.speech(Of course,)] she replies, giving you and your [lilaya.relation(pc)] one last questioning glance before heading off to do as she's asked.
+		[genericFemale.speech(当然，)]服务员一边说，一边最后再次疑惑地看着你和你的[lilaya.relation(pc)]。
 	</p>
 	<p>
-		Continuing to flirt with [daddy.herHim] as [daddy.she] settles the bill, you and Lilaya smile at one another as [daddy.name] slips [daddy.her] arms down around your waists, before leading the two of you back out into the streets of Demon Home. Looking [daddy.heightDown(pc)] at Lilaya, and then over at you, [daddy.she] pulls you both close as [daddy.she] asks, [daddy.speech(I'm sure you two weren't satisfied from your 'dessert', were you? How about you both come back to my place for seconds?)]
+		你和莉莱雅笑着看着对方，趁着[daddy.herHim]结账的时候继续和[daddy.herHim]调情，[daddy.name]把[daddy.her]的手臂放在你们的腰上，然后领着你们两个回到恶魔之家的街上。看着[daddy.heightDown(pc)]莉莱雅，然后看着你，[daddy.she]把你们两个拉到一起，[daddy.speech(我肯定你们两个对‘甜点’还不满足，对吧？到我家再来一份怎么样？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DINNER_END -->
@@ -1240,280 +1239,280 @@
 	<htmlContent tag="DINNER_END_REFUSE"><![CDATA[
 	<p>
 		#IF(pc.getQuest(QUEST_LINE_SIDE_DADDY) == QUEST_DADDY_ACCEPTED)
-			Not feeling in the mood to go back to [daddy.her] place, you make your excuses and decline [daddy.namePos] offer. In a disappointed tone, [daddy.name] replies, [daddy.speech(Ok, well, I'm just happy that you accepted me as your new [daddy.dad]. I really had a lot of fun tonight, and I'm looking forward to meeting Lilaya when you bring her with you.)]
+			你的心情糟糕，不想回到[daddy.her]的地方，找了个借口拒绝了[daddy.namePos]的邀请。[daddy.name]失望地回答，[daddy.speech(好吧，我只是很高兴你能接受我作为你的新[daddy.dad]。我今晚真的玩得很开心，期待你带莉莱雅来见我。)]
 		#ELSE
-			Not feeling in the mood to go back to [daddy.her] place, you make your excuses and decline [daddy.namePos] offer. In a disappointed tone, [daddy.name] replies, [daddy.speech(Ok, well, come back and visit me any evening you want. I really had a lot of fun tonight.)]
+			你的心情糟糕，不想回到[daddy.her]的地方，找了个借口拒绝了[daddy.namePos]的邀请。[daddy.name]失望地回答，[daddy.speech(好吧，你想来找我就来吧。我今晚真的玩得很开心。)]
 		#ENDIF
 	</p>
 	<p>
-		With one last goodbye, the two of you part ways. As [daddy.name] heads back to [daddy.her] apartment, you turn to head off down the street in front of you, wondering where you'll head to next...
+		你们最后各自道别离开。当[daddy.name]回到[daddy.her]的公寓时，你转身走向你面前的街道，想着接下来要去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_END_REFUSE"><![CDATA[
 	<p>
-		Not feeling in the mood to go back to [daddy.her] place, you make your excuses and decline [daddy.namePos] offer. Saying that she'll stay with you, and accompany you back to her place, Lilaya steps up beside you. In a disappointed tone, [daddy.name] replies, [daddy.speech(Ok, well, come back and visit me any evening you want. I really had a lot of fun tonight.)]
+		你的心情不好，不想回到[daddy.her]的地方，找了个借口拒绝了[daddy.namePos]的邀请。莉莱雅走到你身边，说她会和你在一起，陪你回到她的家。[daddy.name]失望地回答，[daddy.speech(好吧，你想来找我就来吧。我今晚真的玩得很开心。)]
 	</p>
 	<p>
-		Saying that you'll be sure to visit [daddy.herHim] again soon, you and Lilaya give your [daddy.daddy] one last goodbye, before parting ways with [daddy.herHim]. As [daddy.name] heads back to [daddy.her] apartment, you and Lilaya set off back to her mansion, talking with one another about your evening the entire way there.
+		你和莉莱雅向你们的[daddy.daddy]道了最后的再见，你说你一定会很快再去找[daddy.herHim]，然后才和[daddy.herHim]分开。当[daddy.name]回[daddy.her]的公寓时，你和莉莱雅也向着她的家里走，一路上你们都在谈论今天晚上地事情。
 	</p>
 	<p>
-		Roughly half an hour later the two of you arrive back home, and after Rose has let you in, Lilaya thanks you for your company, before heading off upstairs with her cat-girl maid to get changed. Being left alone in the hallway, you wonder what to do next...
+		大约半小时后，你们回到了家。萝丝让你们进来后，莉莱雅感谢你今天的陪伴，然后带着猫女上楼去换衣服。你一个人留在走廊里，想着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_END_ACCEPT"><![CDATA[
 	<p>
-		Rubbing up against your [daddy.daddy], you tell [daddy.herHim] that you'd love to go back to [daddy.her] place, and that you can't wait to find out what [daddy.sheIs] got in store for you. Moving [daddy.her] grip down from your waist, [daddy.name] gives your [pc.ass+] a firm squeeze, before saying, [daddy.speech(I'm going to show you how your [daddy.daddy] treats [daddy.her] good little [pc.girl]...)]
+		你轻轻磨蹭着[daddy.daddy]，告诉[daddy.herHim]你很乐意去[daddy.her]那里，并且你等不及想看看[daddy.sheIs]为你准备了什么。从你的腰肢向下摸去，[daddy.name]用力捏了捏你[pc.ass+]，随后说，[daddy.speech(我会让你见识见识[daddy.daddy]会怎么对待[daddy.her]的好[pc.girl]……)]
 	</p>
 	<p>
-		Hurriedly crossing the street, [daddy.name] leads you inside [daddy.her] apartment building and up the flight of stairs, before unlocking [daddy.her] door and pulling you into [daddy.her] apartment. Immediately, your hands are all over one another, and as [daddy.her] [daddy.lips+] press against yours, you feel [daddy.her] touch roam down to grope between your [pc.legs].
+		[daddy.name]匆匆穿过街道，带着你走进了[daddy.her]的公寓楼，随后爬上楼梯，接着打开门，并把你拉进[daddy.her]的公寓。几乎立刻，你们开始抚摸彼此，随着[daddy.her][daddy.lips+]贴在你的嘴唇上，你感受到[daddy.her]的触摸一路往下，向着你的[pc.legs]间摸索着。
 	</p>
 	<p>
-		In your haste to move forwards into the apartment's lounge, the hallway table is bumped into and sent crashing to the ground, but you're so caught up in your passion that neither of you care. Stripping your [daddy.daddy]'s t-shirt off, you press your lips down against [daddy.her] [daddy.breasts+], kissing [daddy.her] [daddy.nipples+] as you reach down to slip off your own clothing.
+		你们急切地冲向公寓的休息室，走廊的桌子被撞到，倒在地上，但你们欲火攻心，没有一个人注意到。你脱下了[daddy.daddy]的T恤衫，将你的嘴唇贴在[daddy.her][daddy.breasts+]上， 一边亲吻着[daddy.her][daddy.nipples+]，一边脱下你自己的衣服。
 	</p>
 	<p>
-		With [daddy.name] helping you to strip to your underwear in record time, your garments are soon thrown all over the floor. Taking hold of your [pc.hips+], [daddy.she] locks [daddy.her] [daddy.eyes+] onto yours and commands, [daddy.speech(That's [daddy.daddy]'s good [pc.girl]... Now get on my bed and present yourself to me...)]
+		[daddy.name]帮助你用创纪录的速度脱下内衣，你们的衣服很快扔得满地都是。[daddy.she]捏着你[pc.hips+]，[daddy.eyes+]紧盯着你并命令道：[daddy.speech(这才是[daddy.daddy]的好[pc.girl]……现在去我的床上，准备好好表现……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_END_ACCEPT"><![CDATA[
 	<p>
-		Rubbing up against your [daddy.daddy], you and Lilaya tell [daddy.herHim] that you'd both love to go back to [daddy.her] place, and that you can't wait to find out what [daddy.sheIs] got in store for the two of you. Moving [daddy.her] grip down from your waists, [daddy.name] gives each of your asses a firm squeeze, before saying, [daddy.speech(I'm going to show you how your [daddy.daddy] treats [daddy.her] good little
+		你轻轻磨蹭着[daddy.daddy]。你和莉莱雅告诉[daddy.herHim]你们都很乐意去[daddy.her]那里，并且你们等不及想看看[daddy.sheIs]为你们两个准备了什么。[daddy.name]从你们的腰肢向下摸去，用力捏了你们两个的屁股，随后说，[daddy.speech(我会让你见识见识你们的[daddy.daddy]会怎么对待[daddy.her]的好
 		#IF(lilaya.isFeminine()==pc.isFeminine())
-			 [pc.girls]
+			[pc.girls]
 		#ELSE
-			 [pc.girl] and [lilaya.girl]
+			[pc.girl]和[lilaya.girl]
 		#ENDIF
-		...)]
+		……)]
 	</p>
 	<p>
-		Hurriedly crossing the street, [daddy.name] leads you inside [daddy.her] apartment building and up the flight of stairs, before unlocking [daddy.her] door and pulling you both into [daddy.her] apartment. Immediately, your hands are all over one another, and as [daddy.name] alternates between kissing you and Lilaya, you feel [daddy.her] touch roam down to grope between your [pc.legs].
+		[daddy.name]匆匆穿过街道，带着你们走进了[daddy.her]的公寓楼，随后爬上楼梯，接着打开门，并把你们拉进[daddy.her]的公寓。几乎立刻，你们开始抚摸彼此，[daddy.name]交替亲吻着你和莉莱雅，你感受到[daddy.her]的触摸一路往下，向着你们的[pc.legs]之间摸索着。
 	</p>
 	<p>
-		In your haste to move forwards into the apartment's lounge, the hallway table is bumped into and sent crashing to the ground, but you're all so caught up in your passion that none of you care. Stripping your [daddy.daddy]'s t-shirt off, you press your lips down against [daddy.her] [daddy.breasts+], kissing [daddy.her] [daddy.nipples+] as your [lilaya.relation(pc)] thrusts her tongue into [daddy.her] mouth. Reaching across, you help Lilaya to slip off her plunge dress, revealing a matching pair of lacy black panties and bra. Pulling back to return the favour, Lilaya runs her hands over your body, helping you to strip off your outer layers as your [daddy.daddy] gives you your turn of having [daddy.her] tongue thrust into your mouth.
+		你们急切地冲向公寓的休息室，走廊的桌子被撞到，倒在地上，但你们欲火攻心，都没注意到。你脱下了[daddy.daddy]的T恤衫，将嘴唇贴在[daddy.her][daddy.breasts+]上， 亲吻着[daddy.nipples+]，同时你的[lilaya.relation(pc)]将舌头送进[daddy.her]嘴里。你腾出手来，帮着莉莱雅脱掉她的紧身连衣裙，露出成套的黑色蕾丝内裤和胸罩。作为回敬，莉莱雅的双手摸过你的身躯，帮你脱掉外衣，同时[daddy.daddy]给了你机会，让你得以把[daddy.her]舌头含进嘴里。
 	</p>
 	<p>
-		With you and Lilaya stripped to your underwear in record time, [daddy.name] pulls back, before moving [daddy.her] [daddy.eyes+] up over your exposed bodies and ordering, [daddy.speech(That's [daddy.daddy]'s good
+		你和莉莱雅用创纪录的时间脱下你们的内衣，[daddy.name]后退了一些，随后[daddy.eyes+]扫视着你们暴露的躯体并命令道，[daddy.speech(这才是[daddy.daddy]的好
 		#IF(lilaya.isFeminine()==pc.isFeminine())
-			 [pc.girls]
+			[pc.girls]
 		#ELSE
-			 [pc.girl] and [lilaya.girl]
+			[pc.girl]和[lilaya.girl]
 		#ENDIF
-		... Now get on my bed and present yourselves to me...)]
+		……现在到我的床上去，准备好展现你们自己……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DINNER_END_HOME"><![CDATA[
 	<p>
-		Telling [daddy.herHim] that you had a lot of fun this evening, you thank [daddy.name] for treating you to dinner. In a happy tone, [daddy.she] replies, [daddy.speech(You're more than welcome! Anything for my good [pc.girl]! I really had a lot of fun tonight as well, and please come back and visit me any evening you want.)]
+		你告诉[daddy.herHim]今晚很愉快，感谢他的款待。[daddy.she]高兴地回答道，[daddy.speech(我很乐意见到你！为了我的好[pc.girl]什么都可以！我今晚也玩得很开心，只要你愿意，任何一个晚上你都可以来找我。)]
 	</p>
 	<p>
-		With one last goodbye, the two of you part ways. As [daddy.name] heads back to [daddy.her] apartment, you turn to head off down the street in front of you, wondering where you'll head to next...
+		你们在道别后分道扬镳。[daddy.name]朝着[daddy.her]的公寓走，你转身沿着面前的街道走，思索着你之后要去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_DINNER_END_HOME"><![CDATA[
 	<p>
-		Telling [daddy.herHim] that you had a lot of fun this evening, both you and Lilaya thank [daddy.name] for treating you to dinner. In a happy tone, [daddy.she] replies, [daddy.speech(You're more than welcome! Anything for my good
+		你和莉莱雅告诉[daddy.herHim]今晚很愉快，感谢他的款待。[daddy.she]高兴地回答道，[daddy.speech(我很乐意见到你们！为了我的
 		#IF(lilaya.isFeminine()==pc.isFeminine())
-			 [pc.girls]
+			[pc.girls]
 		#ELSE
-			 [pc.girl] and [lilaya.girl]
+			[pc.girl]和[lilaya.girl]
 		#ENDIF
-		! I really had a lot of fun tonight as well, and please come back and visit me any evening you want.)]
+		，什么都可以！我今晚也玩得很开心，只要你们愿意，任何一个晚上都可以来找我。)]
 	</p>
 	<p>
-		Saying that you'll be sure to visit [daddy.herHim] again soon, you and Lilaya give your [daddy.daddy] one last goodbye, before parting ways with [daddy.herHim]. As [daddy.name] heads back to [daddy.her] apartment, you and Lilaya set off back to her mansion, talking with one another about your evening the entire way there.
+		你们告诉他很快会再次拜访他的。在最后的道别后，你与他分道扬镳。[daddy.name]朝着[daddy.her]的公寓走，你和莉莱雅启程返回她的家，路上你们聊着夜晚的琐事。
 	</p>
 	<p>
-		Roughly half an hour later the two of you arrive back home, and after Rose has let you in, Lilaya thanks you for your company, before heading off upstairs with her cat-girl maid to get changed. Being left alone in the hallway, you wonder what to do next...
+		大约半小时后，你们两个回到家。萝丝为你们开门，莉莱雅在感谢了你的陪伴后，和她的猫女女仆上楼换衣服去了。你站在走廊里，思考着之后要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_DINNER -->
 	
 	<htmlContent tag="AFTER_DINNER_SEX"><![CDATA[
 	<p>
-		More than happy to do as [daddy.she] tells you to do, you head into [daddy.namePos] bedroom, with [daddy.herHim] right on your heels. Stepping over towards [daddy.her] king-sized bed, you climb up on top of it,
+		你十分乐意照着[daddy.she]告诉你的去做，走进[daddy.namePos]的卧室，而[daddy.herHim]紧跟在你的后面。迈步走向[daddy.her]的超大号床，你爬到了上面，
 		#IF(!pc.isTaur())
-			 before falling forwards onto your [pc.hands] and knees and presenting your rear end to your [daddy.daddy].
+			随后向前倒下，用你的[pc.hands]和膝盖撑起自己，将你的屁股展示给你的[daddy.daddy]。
 		#ELSE
-			 before lying down on your animalistic lower half and presenting your rear end to your [daddy.daddy].
+			随后仰躺下来，将你兽性十足的下半身和屁股展示给你的[daddy.daddy]。
 		#ENDIF
 	</p>
 	<p>
-		Looking back over your shoulder, you see [daddy.name] stripping off the last of [daddy.her] clothes, revealing [daddy.her] [daddy.cockSize], [daddy.cockGirth], fully-erect cock. As [daddy.she] sees what it is you're hungrily staring at, [daddy.name] grins and teases, [daddy.speech(Can't wait to get a feel of your [daddy.daddy]'s cock?)]
+		你回头看去，发现[daddy.name]脱下了[daddy.her]的最后一件衣服，露出[daddy.her][daddy.cockSize]，[daddy.cockGirth]，完全勃起的肉棒。[daddy.name]看见你正在饥渴地盯着它，笑着挑逗道，[daddy.speech(已经等不及想感受一下[daddy.daddy]的肉棒了吗？)]
 	</p>
 	<p>
-		[pc.speech(Please,)] you [pc.moan], [pc.speech(Come and fuck me!)]
+		[pc.speech(拜托了，)]你[pc.moan]道，[pc.speech(快来上我吧！)]
 	</p>
 	<p>
-		Not needing to be told twice, [daddy.name] climbs up onto the bed behind you, bumping the [daddy.cockHead+] of [daddy.her] throbbing dick against your [pc.ass+] in the process. Letting out yet another [pc.moan+], you prepare to get fucked by your [daddy.daddy]...
+		不用过多提醒，[daddy.name]从你的后面爬到了床上，同时将[daddy.her]的搏动着的肉棒[daddy.cockHead+]顶在你[pc.ass+]上。发出了又一声[pc.moan+]，你做好了被你的[daddy.daddy]猛干的准备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AFTER_DINNER_SEX"><![CDATA[
 	<p>
-		More than happy to do as [daddy.she] commands, both you and Lilaya head into [daddy.namePos] bedroom, with [daddy.herHim] right on your heels. Stepping over towards [daddy.her] king-sized bed, the two of you share a wet, passionate kiss, before climbing up on top of the sheets together.
+		你十分乐意照着[daddy.she]告诉你们的去做，你和莉莱雅走进[daddy.namePos]的卧室，[daddy.herHim]紧随其后。你们走向超大床，充满激情地湿吻，随后一起爬到了床上。
 		#IF(!pc.isTaur())
-			 Mirroring one another's movements, the two of you fall forwards onto your hands and knees, presenting your rear ends to your [daddy.daddy].
+			你们两个以一模一样的动作倒在床上，用双[pc.hands]和膝盖撑起自己，将屁股展示给[daddy.daddy]。
 		#ELSE
-			 As Lilaya falls forwards onto her hands and knees, you lie down on your animalistic lower half beside her, presenting your rear ends to your [daddy.daddy].
+			莉莱雅用手和膝盖撑起自己，你躺在她身边，将兽性十足的下半身和屁股展示给[daddy.daddy]。
 		#ENDIF
 	</p>
 	<p>
-		Looking back over your shoulders, you see [daddy.name] stripping off the last of [daddy.her] clothes, revealing [daddy.her] [daddy.cockSize], [daddy.cockGirth], fully-erect cock. As [daddy.she] sees what it is the two of you are hungrily staring at, [daddy.name] grins and teases, [daddy.speech(Can't wait to get a feel of your [daddy.daddy]'s cock?)]
+		你们回头看，发现[daddy.name]脱下了最后一件衣服，露出完全勃起的[daddy.cockGirth][daddy.cockSize]肉棒。[daddy.name]看见你们两个正在饥渴地盯着它，笑着挑逗道，[daddy.speech(已经等不及想感受一下[daddy.daddy]的肉棒了吗？)]
 	</p>
 	<p>
-		[pc.speech(Please,)] you [pc.moan].
+		[pc.speech(拜托了，)]你[pc.moan]道。
 	</p>
 	<p>
 		#IF(!pc.isTaur())
 			#IF(lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-				[lilaya.speech(Come and fuck us! J-Just don't cum inside me, ok? I'm <i>not</i> getting pregnant from this!)] Lilaya finishes, before turning towards you and pulling you into a desperate kiss.
+				[lilaya.speech(来干我们吧！只是，只是不要射在我里面，行吗？我<i>不想</i>因此怀孕！)]莉莱雅说完，转向你并忘情地亲吻着。
 			#ELSE
-				[lilaya.speech(Come and fuck us!)] Lilaya finishes, before turning towards you and pulling you into a desperate kiss.
+				[lilaya.speech(来干我们吧！)]莉莱雅说完，转向你并忘情地亲吻着。
 			#ENDIF
 		#ELSE
 			#IF(lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-				[lilaya.speech(Come and fuck us! J-Just don't cum inside me, ok? I'm <i>not</i> getting pregnant from this!)] Lilaya finishes, before joining you in enticingly raising and shaking her ass.
+				[lilaya.speech(来干我们吧！只是，只是不要射在我里面，行吗？我<i>不想</i>因此怀孕！)]莉莱雅说完，和你一起卖弄地撅起并扭着屁股。
 			#ELSE
-				[lilaya.speech(Come and fuck us!)] Lilaya finishes, before joining you in enticingly raising and shaking her ass.
+				[lilaya.speech(来干我们吧！)]莉莱雅说完，和你一起卖弄地撅起并扭着屁股。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Not needing to be told twice, [daddy.name] climbs up onto the bed behind you, before reaching forwards and starting to grope and slap your asses with each hand. Letting out yet another [pc.moan+], you prepare to get fucked alongside Lilaya by your [daddy.daddy]...
+		不用过多提醒，[daddy.name]从你们的后面爬到了床上，同时向前移动并用双手揉捏和拍打着你们的屁股。发出了又一声[pc.moan+]，你和莉莱雅做好了被[daddy.daddy]猛干的准备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_DINNER_DOMINATE"><![CDATA[
 	<p>
-		Giving [daddy.name] a mischievous grin, you step up to press yourself against [daddy.her] hot body, before informing [daddy.herHim], [pc.speech(That's not quite how this is going to work. I'm the one who's going to be giving orders around here.)]
+		你对着[daddy.name]莞尔一笑，上前紧贴住[daddy.her]炽热的身体，随后对[daddy.herHim]说， [pc.speech(这样可是行不通的。我才是发号施令的那个人。)]
 	</p>
 	<p>
-		Not giving [daddy.herHim] any time to object, you move to strip your [daddy.daddy] naked, throwing [daddy.herHim] a lustful grin as [daddy.her] [daddy.cockSize], [daddy.cockGirth] cock is revealed. Grabbing [daddy.herHim] by the arm, you then pull [daddy.herHim] into [daddy.her] bedroom, before pushing [daddy.herHim] down onto [daddy.her] bed.
+		你不给[daddy.herHim]一点拒绝的时间，动手把你的[daddy.daddy]脱光，给[daddy.herHim]一个色迷迷的笑，让[daddy.cockGirth]的[daddy.cockSize]肉棒暴露在外。你用胳膊抓住[daddy.herHim]，把[daddy.herHim]拉进卧室，随后将[daddy.herHim]按倒在床。
 	</p>
 	<p>
-		[daddy.speech(Easy now, there's no need to rush-)] [daddy.name] starts, but [daddy.her] voice is cut off as you jump forwards and, lowering yourself down over the top of [daddy.herHim], firmly press your [pc.lips+] down against [daddy.hers]. After dominantly kissing [daddy.herHim] in this fashion for a moment, you pull back,
+		[daddy.speech(放松点，别那么着急……)][daddy.name]开口，但随着你向前方跳去，并在[daddy.herHim]的身体上压低身体，坚定地把你[pc.lips+]贴在[daddy.hers]的上面，[daddy.her]的声音戛然而止。就这样压倒性地亲吻了[daddy.herHim]一段时间，你向后退去，
 		#IF(!pc.hasLegs())
-			 before sliding down and bumping your groin against [daddy.her] crotch.
+			随后向下溜去，你的胯贴住[daddy.her]的胯。
 		#ELSEIF(pc.isTaur())
-			 before repositioning yourself and lowering your animalistic rear end down over [daddy.her] crotch.
+			随后重新找好姿势，放低野性十足的屁股，紧贴住[daddy.her]的胯。
 		#ELSE
-			 before swinging your [pc.legs] over [daddy.hers] and straddling [daddy.her] crotch.
+			随后伸开你的[pc.legs]，越过[daddy.her]的身体，横跨在[daddy.her]胯上。
 		#ENDIF
 	</p>
 	<p>
-		[pc.speech(There we go... All comfortable down there?)] you ask, preparing to start having some dominant fun with your [daddy.daddy] as [daddy.she] gives you a very positive response...
+		[pc.speech(准备开始……感觉不错吧？)]你问道，准备以主导者的身份陪[daddy.daddy]好好快活一番，同时[daddy.she]给了你积极的反馈……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AFTER_DINNER_DOMINATE"><![CDATA[
 	<p>
-		Sharing a mischievous grin with Lilaya, the two of you step up on either side of [daddy.name], before informing [daddy.herHim], [pc.speech(That's not quite how this is going to work. What do you say, Lilaya, you get [daddy.her] tongue, and I get [daddy.her] cock?)]
+		你们俩和莉莱雅一起调皮地笑着，走到[daddy.name]的两侧，然后告诉[daddy.herHim]，[pc.speech(这样可不行。你说呢，莉莱雅？舌头归你，鸡巴归我？)]
 	</p>
 	<p>
-		[lilaya.speech(That sounds good to me,)] Lilaya replies, lifting a finger and running it over [daddy.namePos] lips. [lilaya.speech(You're going to love the taste of my pussy...)]
+		[lilaya.speech(听起来不错，)]莉莱雅抬起手指在[daddy.namePos]的嘴唇上划过，回答道。[lilaya.speech(你会爱上我小穴的味道……)]
 	</p>
 	<p>
-		Not giving [daddy.herHim] any time to object, you and your [lilaya.relation(pc)] move to strip your [daddy.daddy] naked, throwing each other lustful grins as [daddy.her] [daddy.cockSize], [daddy.cockGirth] cock is revealed. Grabbing [daddy.her] arms, the two of you then pull [daddy.herHim] into [daddy.her] bedroom, before pushing [daddy.herHim] down onto [daddy.her] bed.
+		你和你的[lilaya.relationship(pc)]没有给[daddy.herHim]任何反对的时间，动手扒光了[daddy.daddy]的衣服，当[daddy.her]的[daddy.cockSize]、[daddy.cockGirth]鸡巴露出来时，你们互相露出淫笑。抓住[daddy.her]的胳膊，然后你们俩把[daddy.herHim]拉进[daddy.her]的卧室，再把[daddy.herHim]推倒在[daddy.her]的床上。
 	</p>
 	<p>
-		[daddy.speech(Easy now, there's no need to rush-)] [daddy.name] starts, but [daddy.her] voice is cut off as Lilaya jumps forwards and, facing down towards [daddy.her] lower body, plants her panty-covered pussy over [daddy.her] mouth.
+		[daddy.speech(放松，不用着急——)][daddy.name]开始说，但[daddy.her]的声音被打断了，因为莉莱雅向前一跳，朝向[daddy.her]的下半身，把她覆盖着内裤的阴部对准了[daddy.her]的嘴。
 	</p>
 	<p>
 		#IF(!pc.isTaur())
-			Quickly moving to straddle [daddy.namePos] crotch, you find yourself face-to-face with Lilaya,
+			你迅速跨坐在[daddy.namePos]的胯下，和莉莱雅面对面，
 		#ELSE
-			Quickly moving to press your animalistic rear end down over [daddy.namePos] crotch, you look back over your shoulder towards Lilaya,
+			你快速移动你的兽性后臀，压在[daddy.namePos]的胯下，回过头看向莉莱雅，
 		#ENDIF
-		 grinning happily at one another as the [daddy.race] beneath you reaches up to grab her thighs. As you start rubbing your groin up and down over [daddy.namePos] erect cock, Lilaya teases, [lilaya.speech(So, are you ready for a taste down there?)]
+		当你们身下的[daddy.race]伸手抓住她的大腿时，你们彼此开心地笑着。当你开始在[daddy.namePos]勃起的鸡巴上下摩擦时，莉莱雅挑逗道，[lilaya.speech(那么，你准备好在下面尝尝鲜了吗？)]
 	</p>
 	<p>
-		Taking [daddy.namePos] muffled cry as a 'yes', your [lilaya.relation(pc)] reaches down to pull her lacy panties to one side, before firmly planting her wet, [lilaya.pussy+] down over [daddy.her] mouth. As your [daddy.daddy] starts eating Lilaya out, you prepare to start making the most of [daddy.her] [daddy.cock+]...
+		你的[lilaya.relation(pc)]把[daddy.namePos]的闷叫声当作“是”，伸手把她的蕾丝内裤拉到一边，然后把她湿漉漉的[lilaya.pussy+]紧紧地贴在[daddy.her]的嘴上。当你的[daddy.daddy]开始舔莉莱雅的下体时候，你也准备开始好好用一用[daddy.her]的[daddy.cock+]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_APARTMENT_SEX -->
 	
 	<htmlContent tag="AFTER_APARTMENT_SEX"><![CDATA[
 	<p>
-		Disentangling yourselves from one another, you and [daddy.name] collapse back onto [daddy.her] bed, panting for breath. Once you've recovered from your exertion, you roll over onto your side, before teasing [pc.a_finger] over [daddy.her] [daddy.breasts] and telling [daddy.herHim] how good that was.
+		你和[daddy.name]松开彼此后，倒在[daddy.her]的床上，喘着粗气。你从力竭状态中恢复过来后，翻身侧躺着，[pc.a_finger]调戏着[daddy.her]的[daddy.breasts]，告诉[daddy.herHim]刚才有多棒。
 	</p>
 	#IF(daddy.isSatisfiedFromLastSex())
 		<p>
-			[daddy.speech(You sure know how to please your [daddy.daddy],)] [daddy.she] replies, flashing you a grin.
+			[daddy.speech(你很清楚怎么取悦[daddy.daddy]，)][daddy.she]回答道，露出一个灿烂的微笑。
 		</p>
 	#ELSE
 		<p>
-			[daddy.speech(Yeah, that sure was something, but if we do this again, you could try pleasing your [daddy.daddy] a little more,)] [daddy.she] replies, making it clear that you didn't manage to satisfy [daddy.herHim].
+			[daddy.speech(是的，那确实令人印象深刻，但如果我们再做一次，你可以试着更多取悦你的[daddy.daddy] ，)][daddy.she]回应道，清楚地表明你没能满足[daddy.herHim]。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AFTER_APARTMENT_SEX"><![CDATA[
 	<p>
-		Disentangling yourselves from one another, you and [daddy.name] collapse back onto [daddy.her] bed, panting for breath. Once you've recovered from your exertion, you roll over onto your side, before teasing [pc.a_finger] over [daddy.her] [daddy.breasts] and telling [daddy.herHim] how good that was.
+		你和[daddy.name]松开彼此后，倒在[daddy.her]的床上，喘着粗气。你从力竭状态中恢复过来后，翻身侧躺着，[pc.a_finger]调戏着[daddy.her]的[daddy.breasts]，告诉[daddy.herHim]刚才有多棒。
 	</p>
 	<p>
 		#IF(daddy.isSatisfiedFromLastSex())
-			[daddy.speech(You sure know how to please your [daddy.daddy],)] [daddy.she] replies, flashing both of you a grin.
+			[daddy.speech(你很清楚怎么取悦[daddy.daddy]，)][daddy.she]回答道，向你们俩露出一个灿烂的微笑。
 		#ELSE
-			[daddy.speech(Yeah, that sure was something, but if we do this again, you could try pleasing your [daddy.daddy] a little more,)] [daddy.she] replies, making it clear that you didn't manage to satisfy [daddy.herHim].
+			[daddy.speech(是的，那确实令人印象深刻，但如果我们再做一次，你可以试着更多取悦你的[daddy.daddy] ，)][daddy.she]回应道，清楚地表明你没能满足[daddy.herHim]。
 		#ENDIF
 	</p>
 	<p>
 		#IF(lilaya.isSatisfiedFromLastSex())
-			[lilaya.speech(~Mmm~ I did enjoy that,)] Lilaya sighs, [lilaya.speech(I hope we can do this again some time...)]
+			[lilaya.speech(~嗯~我刚才确实很享受，)]莉莱雅叹了口气，[lilaya.speech(希望我们能有机会再次这样做……)]
 		#ELSE
-			[lilaya.speech(~Mmm~ I could have done with a little more attention,)] Lilaya sighs, [lilaya.speech(Perhaps if we do this again, you can make sure I'm fully satisfied...)]
+			[lilaya.speech(~嗯~我可能需要更多的关注，)]莉莱雅叹了口气，[lilaya.speech(如果我们再做一次，你也许能确保我能被满足……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_APARTMENT_SEX_HOME"><![CDATA[
 	<p>
-		After lying next to one another for a while, you eventually decide that it's time for you to leave, and, after putting your clothes back on, [daddy.name] leads you back to [daddy.her] front door. Leaning in to plant one last kiss on your [pc.lips+] [daddy.she] says,
+		在相互依偎了一会儿之后，你决定是时候离开了。穿上衣服后，[daddy.name]将你引领到前门。[daddy.she]倾身最后吻了吻你[pc.lips+]说，
 		#IF(pc.getQuest(QUEST_LINE_SIDE_DADDY) == QUEST_DADDY_ACCEPTED)
-			 [daddy.speech(I really had a lot of fun tonight, [pc.name]. Please come and visit me again soon, and I'm looking forward to meeting Lilaya when you bring her with you!)]
+			[daddy.speech(今晚真的很愉快，[pc.name]。有时间请一定来找我，我也很期待你和莉莱雅一起来的时候能见到她！)]
 		#ELSE
-			 [daddy.speech(I really had a lot of fun tonight, [pc.name]. Please come and visit me again soon!)]
+			[daddy.speech(今晚真的很愉快，[pc.name]。有时间请一定来找我！)]
 		#ENDIF
 	</p>
 	<p>
-		Reassuring [daddy.herHim] that you will, you make your exit, heading down the stairs and back out into Demon Home...
+		你向[daddy.herHim]表示你会再来后，下楼离开了，返回了恶魔之家……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AFTER_APARTMENT_SEX_HOME"><![CDATA[
 	<p>
-		After lying next to one another for a while, you eventually decide that it's time for you to leave, and, after putting your clothes back on, [daddy.name] leads you and Lilaya back to [daddy.her] front door. Leaning in to plant one last kiss on each of your lips, [daddy.she] says, [daddy.speech(I really had a lot of fun tonight. Please come and visit me again soon!)]
+		在相互依偎了一会儿之后，你决定是时候离开了。穿上衣服后，[daddy.name]将你和莉莱雅引领到前门。[daddy.she]倾身最后吻了吻你们，[daddy.she]说，[daddy.speech(今晚真的很愉快，[pc.name]。有时间请一定来找我！)]
 	</p>
 	<p>
-		Reassuring [daddy.herHim] that you will, you make your exit, heading down the stairs and back out into Demon Home. Agreeing to accompany Lilaya back to her mansion, the two of you set off, talking with one another about your fun-filled evening the entire way there.
+		你向[daddy.herHim]表示你会再来后，走下楼梯离开了，返回了恶魔之家……你答应陪莉莱雅回她的府邸，你们俩出发了，一路上不断聊着充满乐趣的夜晚经历。
 	</p>
 	<p>
-		Roughly half an hour later the two of you arrive back home, and after Rose has let you in, Lilaya thanks you for your company, before heading off upstairs with her cat-girl maid to get changed. Being left alone in the hallway, you wonder what to do next...
+		大约半个小时后，你们两人回到了家，萝丝开了门，莉莱雅在感谢了你的陪伴后，与她的猫女仆一起上楼换衣服去了。你独自站在走廊里，想着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- APARTMENT -->
@@ -1521,104 +1520,104 @@
 	<htmlContent tag="APARTMENT_TALK"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
 		<p>
-			Wanting to hear about [daddy.namePos] recent exploits, you continue to make flirtatious remarks as you ask [daddy.herHim] about what [daddy.sheHas] been getting up to recently. More than happy to regale you with tales from [daddy.her] ongoing construction projects, [daddy.name] proceeds to spend a good deal of time telling you several stories from the life of an arcane construction worker.
+			你想要听[daddy.namePos]的近况，继续以挑逗的口吻询问[daddy.herHim]最近都在忙些什么。[daddy.name]非常乐意与你分享[daddy.her]正在进行的一个建筑项目，花费了不少时间向你讲述了作为奥术建筑工人的生活中的故事。
 		</p>
 		<p>
-			After a while, and with the atmosphere still sexually-charged from your relentless flirting, talk turns to your own adventures throughout Dominion, and then on to news of other mundane goings-on in the city. Eventually, conversation starts to run dry, and you wonder if now would be a good time to make a move on [daddy.herHim]...
+			氛围因你不断的挑逗仍然保持暧昧。过了一会儿，话题转向了你在御城区中的经历，然后又谈到了城区中其他琐碎的事务。最终，谈话开始变得平淡，你觉得现在会是与[daddy.herHim]更进一步的好时机……
 		</p>
 	#ELSE
 		<p>
-			Wanting to hear about [daddy.namePos] recent exploits, you ask [daddy.herHim] about what [daddy.sheHas] been getting up to recently. More than happy to regale you with tales from [daddy.her] ongoing construction projects, [daddy.name] proceeds to spend a good deal of time telling you several stories from the life of an arcane construction worker.
+			你想要听[daddy.namePos]的近况，询问[daddy.herHim]最近都在忙些什么。[daddy.name]非常乐意与你分享[daddy.her]正在进行的一个建筑项目，花费了不少时间向你讲述了作为奥术建筑工人的生活中的故事。
 		</p>
 		<p>
-			After a while, talk turns to your own adventures throughout Dominion, and then on to news of other mundane goings-on in the city. Eventually, conversation starts to run dry, and you wonder if now would be a good time to say goodbye...
+			过了一会儿，话题转向了你在御城区中的经历，然后又谈到了城区中其他琐碎的事情。最终，谈话开始变得平淡，你觉得是时候告别了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_APARTMENT_TALK"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
 		<p>
-			Wanting to hear about [daddy.namePos] recent exploits, you continue to make flirtatious remarks as you ask [daddy.herHim] about what [daddy.sheHas] been getting up to recently. More than happy to regale you and Lilaya with tales from [daddy.her] ongoing construction projects, [daddy.name] proceeds to spend a good deal of time telling you several stories from the life of an arcane construction worker.
+			你想要听[daddy.namePos]的近况，继续以挑逗的口吻询问[daddy.herHim]最近都在忙些什么。[daddy.name]非常乐意与你和莉莱雅分享[daddy.her]正在进行的建筑项目，花费了不少时间向你讲述了作为奥术建筑工人的生活中的几个故事。
 		</p>
 		<p>
-			After a while, and with the atmosphere still sexually-charged from your relentless flirting, talk turns to your own adventures throughout Dominion, and then on to news of Lilaya's arcane research projects. Eventually, conversation starts to run dry, and, with your two companions quite clearly turned-on, you wonder if now would be a good time to make a move on them...
+			气氛因你不断的挑逗仍然保持暧昧。过了一会儿，话题转向了你在御城区中的经历，然后又谈到了莉莱雅奥术研究项目的最新消息。最终，谈话开始变得平淡，你的两位同伴很明显被挑起了性致，你觉得这会是一个更进一步的好时机……
 		</p>
 	#ELSE
 		<p>
-			Wanting to hear about [daddy.namePos] recent exploits, you ask [daddy.herHim] about what [daddy.sheHas] been getting up to recently. More than happy to regale you and Lilaya with tales from [daddy.her] ongoing construction projects, [daddy.name] proceeds to spend a good deal of time telling you several stories from the life of an arcane construction worker.
+			你想要听[daddy.namePos]的近况，询问[daddy.herHim]最近都在忙些什么。[daddy.name]非常乐意与你和莉莱雅分享[daddy.her]正在进行的建筑项目，花费了不少时间向你讲述了作为奥术建筑工人的生活中的几个故事。
 		</p>
 		<p>
-			After a while, talk turns to your own adventures throughout Dominion, and then on to news of Lilaya's arcane research projects. Eventually, conversation starts to run dry, and you wonder if now would be a good time for you and your [lilaya.relation(pc)] to bid [daddy.name] farewell...
+			过了一会儿，话题转向了你在御城区中的经历，然后又谈到了莉莱雅奥术研究项目的最新消息。最终，谈话开始变得平淡，你觉得现在是你和[lilaya.relation(pc)]告别[daddy.name]的时候了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APARTMENT_SEDUCE"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Wanting to do a little more than simply flirt with [daddy.name] this evening, you turn up the heat a little and start making some very sexual remarks, while playfully running your hand over [daddy.her] leg.
+			今晚你想做的不仅仅是和[daddy.name]调情，你开始说一些非常露骨的话，使气氛变得燥热起来，同时调皮地用手抚摸着[daddy.name]的腿。
 		#ELSE
-			Deciding that you want to have a little fun this evening, you start flirting with [daddy.name], before leading up to asking [daddy.herHim] to come over and sit next to you on the sofa. After [daddy.she]'s done as you asked, you then turn up the heat by starting to make some very sexual remarks, while playfully running your hand over [daddy.her] leg.
+			你决定今晚想找点乐子，开始和[daddy.name]调情，然后让[daddy.herHim]过来坐在沙发上你身旁的地方。在[daddy.she]照做了后，你开始说一些非常露骨的话，使气氛变得燥热起来，同时调皮地用手抚摸着[daddy.name]的腿。
 		#ENDIF
-		 More than eager to play along, your [daddy.daddy] leans in close to you, and the next time you gaze longingly into [daddy.her] [daddy.eyeColour] [daddy.eyes+], [daddy.she] suddenly leans forwards and presses [daddy.her] lips against yours.
+		[daddy.daddy]非常渴望继续下去，倾身靠近你。你渴望地注视着[daddy.her][daddy.eyeColour][daddy.eyes+]，[daddy.she]忽然身体前倾将[daddy.her]的嘴唇压向你的。
 	</p>
 	<p>
-		Before you know what's happening, the two of you are thrusting your tongues into one another's mouths, while your [pc.hands] are desperately roaming all over each other's bodies. Quickly stripping your [daddy.daddy]'s t-shirt off, you press your lips down against [daddy.her] [daddy.breasts+], kissing [daddy.her] [daddy.nipples+] as you reach down to start slipping off your own clothing.
+		不知不觉中，你们俩就把舌头伸进了对方的嘴里，而你的[pc.hands]则饥渴地在对方身上游走。你迅速脱掉[daddy.daddy]的T恤，把嘴唇贴向[daddy.her][daddy.breasts+]，一边亲吻[daddy.her][daddy.nipples+]，一边开始伸手脱自己的衣服。
 	</p>
 	<p>
-		With [daddy.name] helping you to undress in record time, your garments are soon thrown all over the floor. Now standing face-to-face, [daddy.name] locks [daddy.her] [daddy.eyes+] onto yours and commands, [daddy.speech(That's [daddy.daddy]'s good [pc.girl]... Now get on my bed and present yourself to me...)]
+		你在[daddy.name]的帮助下快速脱光，你的衣服被七零八落扔在地上。现在面对面站着，[daddy.name]目光锁定在你身上，命令道，[daddy.speech(真是[daddy.daddy]的好[pc.girl]……现在上床向我展示自己……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_APARTMENT_SEDUCE"><![CDATA[
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_flirtingWithDaddy))
-			Wanting to do a little more than simply flirt with your two companions this evening, you turn up the heat a little and start making some very sexual remarks, while playfully running your hand over [daddy.namePos] leg.
+			今晚，除了与两个同伴调情外，你还想做得更出格些，于是你使氛围变得燥热起来，并开始说些露骨的话，同时调皮地将手放在[daddy.namePos]腿上抚弄。
 		#ELSE
-			Deciding that you want to have a little fun this evening, you start flirting with your two companions, before leading up to asking [daddy.name] to come over and sit between you and Lilaya on the sofa. After [daddy.she]'s done as you asked, you then turn up the heat by starting to make some very sexual remarks, while playfully running your hand over [daddy.her] leg.
+			你决定今晚找些乐子，开始和两个同伴调情，然后要[daddy.name]坐在你和莉莱雅间的沙发上。在[daddy.she按照你的要求做后，你开始说一些非常露骨的话来让氛围变得燥热，同时调皮地用手在[daddy.her]腿上抚弄着。
 		#ENDIF
-		 More than eager to play along, your [daddy.daddy] puts [daddy.her] arms around you and Lilaya, and the next time your [lilaya.relation(pc)] gazes hungrily into [daddy.namePos] [daddy.eyeColour] [daddy.eyes+], [daddy.she] suddenly leans forwards and presses [daddy.her] lips against hers.
+		[daddy.daddy]非常想同你们一起，用[daddy.her]胳膊搂着你和莉莱雅，在你的[lilaya.relation(pc)]饥渴地注视着[daddy.namePos][daddy.eyeColour][daddy.eyes+]时，[daddy.she]突然向前倾身，将[daddy.her]嘴唇贴向她的。
 	</p>
 	<p>
-		Before you know what's happening, you and Lilaya are taking turns to thrust your tongues into [daddy.namePos] mouth, while your [pc.hands] are desperately roaming all over [daddy.her] body. Stripping your [daddy.daddy]'s t-shirt off, you press your lips down against [daddy.her] [daddy.breasts+], kissing [daddy.her] [daddy.nipples+] as Lilaya once again desperately presses her [lilaya.lips+] against [daddy.her] mouth.
+		不知不觉中，你和莉莱雅轮流将舌头伸进[daddy.namePos]的嘴里，而你的[pc.hands]则饥渴地在[daddy.her]的身上游走。你脱掉[daddy.daddy]的T恤，把嘴唇贴在[daddy.her][daddy.breasts+]上，开始亲吻[daddy.her][daddy.nipples+]，莉莱雅再次饥渴地把[lilaya.lips+]贴在[daddy.her]的嘴上。
 	</p>
 	<p>
-		Just a moment later, you find yourself standing next to Lilaya, helping her to slip off her plunge dress and reveal her matching pair of lacy black panties and bra. Pulling back to return the favour, Lilaya runs her hands over your body, helping you to strip off your outer layers as your [daddy.daddy] steps forwards and gives you your turn of having [daddy.her] tongue explore the insides of your mouth.
+		片刻，你发现自己站在莉莱雅身边，帮她脱掉深V连衣裙露出配套的黑色蕾丝内裤和胸罩。最为回报，莉莱雅抚摸着你的身体，帮你褪去外衣，你的[daddy.daddy]走上前，轮到你让[daddy.her]舌头在你口中探索。
 	</p>
 	<p>
-		With you and Lilaya stripped to your underwear in record time, [daddy.name] pulls back, before moving [daddy.her] [daddy.eyes+] up over your exposed bodies and ordering, [daddy.speech(That's [daddy.daddy]'s good
+		你和莉莱雅用最短时间脱光内衣，[daddy.name]退了退，然后用[daddy.her][daddy.eyes+]扫视你们裸露的身体并命令道，[daddy.speech(这才是[daddy.daddy]的乖
 		#IF(lilaya.isFeminine()==pc.isFeminine())
-			 [pc.girls]
+			[pc.girls]
 		#ELSE
-			 [pc.girl] and [lilaya.girl]
+			[pc.girl]和[lilaya.girl]
 		#ENDIF
-		... Now get on my bed and present yourselves to me...)]
+		……现在到我床上来让我看看你们……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APARTMENT_LEAVE"><![CDATA[
 	<p>
-		Saying that you enjoyed your time together, and that you'll be sure to visit [daddy.herHim] again soon, you say goodbye to your [daddy.daddy]. Allowing [daddy.herHim] to lead you to the front door, you make your exit, heading down the stairs before stepping back out into Demon Home.
+		你说很享受你们在一起的时光，你一定会很快再来探望[daddy.herHim]的，随后向[daddy.daddy]告别。让[daddy.herHim]把你送到前门，你离开了，走下楼梯，然后回到恶魔之家。
 	</p>
 	<p>
-		Looking up and down the street, you wonder where you should head off to next...
+		看着街道的角角落落，你想着该去哪呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_APARTMENT_LEAVE"><![CDATA[
 	<p>
-		Saying that you enjoyed your time together, and that you'll be sure to visit [daddy.herHim] again soon, you and Lilaya say goodbye to your [daddy.daddy]. Allowing [daddy.name] to lead you to the front door, the two of you make your exit, heading down the stairs before stepping back out into Demon Home. Agreeing to accompany your [lilaya.relation(pc)] back to her mansion, you set off by her side, talking with one another about your evening the entire way there.
+		你说很享受你们在一起的时光，并确保很快将会再次拜访[daddy.herHim]，你和莉莱雅向[daddy.daddy]告别。让[daddy.name]将你们送到前门，你们俩离开，下了楼然后回到恶魔之家。你同意陪着你的[lilaya.relation(pc)]回到她的豪宅，你再她身边走着，一路上谈论着今晚发生的事。
 	</p>
 	<p>
-		Roughly half an hour later the two of you arrive back home, and after Rose has let you in, Lilaya thanks you for your company, before heading off upstairs with her cat-girl maid to get changed. Being left alone in the hallway, you wonder what to do next...
+		大约半小时，你们回到家中，随后萝丝让你们进屋，莉莱雅感谢你的陪伴，然后和她的猫女仆上楼更衣。你独自在走廊待着，想下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 </dialogue>

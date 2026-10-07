@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- These 'enchantment' files are used to populate the unidentified enchantments which can randomly spawn on clothing -->
 <enchantment>
 
@@ -43,12 +42,12 @@
 		If this element returns nothing, or if only whitespace is returned, then no prefix will be added. -->
 	<namePrefix><![CDATA[
 		#IF(flags.getInt('rapidTF')<33)
-			Powerful
+			强力
 		#ENDIF
 	]]></namePrefix>
 	<!-- namePostfix assigns text after the clothing's type name.
 		e.g. A namePostfix of 'of the cow', when applied to a ring, would result in the name being 'Ring of the cow' -->
-	<namePostfix><![CDATA[of the cow]]></namePostfix>
+	<namePostfix><![CDATA[牛之]]></namePostfix>
 	<!-- namePrefix and namePostfix can be used in combination with each other.
 		So, for example, if you define them as so:
 			<namePrefix><![CDATA[Holy]]></namePrefix> 

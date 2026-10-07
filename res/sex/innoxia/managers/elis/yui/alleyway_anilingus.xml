@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[crate]]></deskName>
+	<deskName><![CDATA[板条箱]]></deskName>
 	<title/>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>
@@ -15,15 +15,15 @@
 	<publicSex>
 		<isPublic><![CDATA[true]]></isPublic>
 		<startingDescription><![CDATA[
-			The gang members look on and encourage their victim as [client.she] uses [client.her] tongue to clean your [pc.asshole+]...
-		]]></startingDescription>
+			帮派成员们一边围观一边怂恿受害者用舌头清理你[pc.asshole+]……
+]]></startingDescription>
 		<randomDescriptions enabled="true">
-			<description><![CDATA[One of the gang members loudly comments on how submissive and pathetic you look.]]></description>
-			<description><![CDATA[A gang member laughs and tells their victim to keep licking your asshole.]]></description>
-			<description><![CDATA[One of the gang members uses their foot to push [client.namePos] face into your ass.]]></description>
-			<description><![CDATA[A few members of the gang laugh as they watch the scene before them.]]></description>
-			<description><![CDATA[You hear jeers and insults being thrown from several members of the gang as [client.name] continues to perform anilingus.]]></description>
-			<description><![CDATA[A gang member crudely comments on the state of your saliva-coated asshole.]]></description>
+			<description><![CDATA[一个帮派成员大声评论你看起来多么顺从和可怜。]]></description>
+			<description><![CDATA[一名帮派成员大笑着让受害者继续舔你的屁穴。]]></description>
+			<description><![CDATA[一个帮派成员用脚把[client.namePos]的脸按了在你的屁股上。]]></description>
+			<description><![CDATA[帮派中有几个人看着眼前的场景笑了起来。]]></description>
+			<description><![CDATA[你听见帮派成员中传来几处讥讽和辱骂，此时[client.name]仍在进行吻肛。]]></description>
+			<description><![CDATA[一名帮派成员粗鲁地评论着你那沾满唾液的屁穴。]]></description>
 		</randomDescriptions>
 	</publicSex>
 	<characterInformationContainer>

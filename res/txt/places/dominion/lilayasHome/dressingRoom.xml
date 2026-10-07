@@ -1,128 +1,128 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Room upgrades: -->
 	
 	<htmlContent tag="INSTALLATION"><![CDATA[
 	<p>
-		Using the bell-pull in the corner of the room, you summon Rose to your location. It takes her less than a minute to arrive, and as she enters your presence she performs a curtsy and asks, [rose.speech(What can I do for you, [pc.sir]?)]
+		你用房间角落的拉铃召唤萝丝到你身边。没过一分钟她就来到了你的面前，她行了个屈膝礼，问道，[rose.speech(我能为您做些什么，[pc.sir]？)]
 	</p>
 	<p>
-		You briefly explain how you were thinking of turning this room into a dedicated dressing room, before asking if it would be possible to get some wardrobes and dressers brought in here.
+		你简要地向她解释你打算把这个房间改造成一间专用的更衣室，然后问她能否找些衣柜和梳妆台搬进来。 
 	</p>
 	<p>
-		[rose.speech(Of course, we have a number of suitable items of furniture in storage,)] Rose replies, before excusing herself by stating, [rose.speech(I will require Mistress Lilaya's assistance. Please wait here; I shall return in just a moment.)]
+		[rose.speech(当然，我们的储藏室中有许多合适的家具，)]萝丝回答道，[rose.speech(我需要莉莱雅主人的帮助。请在这里等一下，我马上就回来。)]
 	</p>
 	<p>
-		True to her word, it only takes a couple of minutes for the cat-girl maid to return. Striding behind her is your demonic [lilaya.relation(pc)], and thanks to a telekinetic spell, a line of wardrobes, dressers, mirrors, chairs, and tables are floating in the air behind her. She pushes her glasses up onto the bridge of her nose as she enters the room, and after clearing her throat she
+		猫女女仆言而有信，她只用了几分钟便就回来了。你的恶魔[lilaya.relation(pc)]跟在她身后，得益于念力法术，她身后漂浮着一排衣柜、梳妆台、镜子、椅子和桌子。她走进房间，推了推鼻梁上的眼镜，清了清嗓子，
 		#IF(lilaya.getLocationPlaceType()==PLACE_TYPE_LILAYA_HOME_ROOM_ROSE)
-			 tuts, [lilaya.speech(Did you really have to wake me up for this? Oh well, it will take just a moment...)]
+			啧了一声，[lilaya.speech(你非得为了这事把我叫醒吗？好吧，不会花太长时间的……)]
 		#ELSE
-			 says, [lilaya.speech(Hello, [pc.name]. So, you want this to be your dressing room? Very well, this will take just a moment...)]
+			说道，[lilaya.speech(你好，[pc.name]。所以说，你想把这里弄成你的更衣室？很好，这只需片刻……)]
 		#ENDIF
 	</p>
 	<p>
-		Continuing to use her telekinetic spell, Lilaya uses the furniture she's brought along with her to rapidly transform your surroundings into an impressive dressing room. Looking around at the wardrobes and dressers, you imagine that there's now enough storage space in here to hold many hundreds of outfits. Curiously, your [lilaya.relation(pc)] has left a rather conspicuous gap in the furniture arrangement, and as you draw her attention to it, she gives you a rather smug smirk.
+		莉莱雅继续施展她的念力法术，利用她带来的家具迅速将周围装饰成了一间令人印象深刻的更衣室。环顾四周的衣柜和梳妆台，你能想象到现在这里有足够的储存空间来放置数百套服装。奇怪的是，你的[lilaya.relation(pc)]在家具的摆放上留了一个相当明显的空间，当你注意到这一点时，她朝你露出了一个得意的坏笑。
 	</p>
 	<p>
-		[lilaya.speech(Did you think that I'd made a mistake?)] she asks in a playful tone. Stepping out of the room for a moment, she once again casts her spell and retrieves the final piece of furniture. A huge wardrobe, ornately carved out of ivory and decorated with gold, floats in the air before her, and after placing it into the gap she'd left for it, she turns to face you and explains, [lilaya.speech(This was made for
+		[lilaya.speech(你是不是以为我摆错了？)]她以调皮的语气问道。她走出房间片刻，再次施法，取回了最后一件家具。那是一个巨大的衣柜，由象牙精美雕刻而成，搭配有黄金装饰，悬浮在她的面前。她将衣柜放入之前为其留出的空间后，转向你解释道，[lilaya.speech(这是为
 			#IF(flags.hasFlag(FLAG_innoxia_child_of_lyssieth))
-				 our mommy... I-I mean, for our mother.
+				我们的妈咪……我、我是说，为我们的母亲而制作的。
 			#ELSEIF(game.isPlotDiscovered())
-				 Lyssieth.
+				莉西丝而制作的。
 			#ELSE
-				 my mother; the elder lilin, Lyssieth.
+				我的母亲——莉琳长老，莉西丝而制作的。 
 			#ENDIF
-			 It's not only an extravagant piece of furniture, but it holds an exceptionally powerful enchantment. If you place your hand on the door and imagine what clothing you'd like to see when you open it, then the wardrobe will create it for you. Unfortunately, it does have a couple of limitations; it can only create what you've physically seen before, and the enchantment loses power every time it's used. It needs regularly topping up with essences to keep it working. Due to those drawbacks, mommy had a better version of it made shortly after it was created, so she left it here and forgot about it.)]
+			这不仅是一件奢华的家具，它还蕴含着异常强大的附魔。如果你将手放在门上，同时想象着你打开时希望看到的衣物，那么衣柜就会为你将它创造出来。不幸的是，它有一些局限性：它只能创造你之前实际见过的东西，而且每次使用时附魔的力量都会减弱。它还需要定期补充精华才能维持运作。由于这些缺陷，妈咪在它制作不久后就换了一个更好的版本，于是她把这个衣柜忘在了这里。)]
 	</p>
 	<p>
-		Impressed by the power of this wardrobe, you ask Lilaya if you can try it out. Shaking her head, she replies, [lilaya.speech(I already extracted all of the enchantment's essences for use in some of my experiments, so it doesn't work right now. I could re-activate the enchantment, but it will take many thousands of essences to do so. If you want it to be fixed, then I guess... Maybe... Yes... I think a quarter of a million flames should cover the costs. And no, I can't offer you a better price; I'm not charging you for my time and effort, your flames will all be spent on the essences required to fix it.)] 
+		衣柜的能力让你印象深刻，你问莉莱雅是否可以试用一下。她摇了摇头，回答道，[lilaya.speech(为了我的一些实验，我已经把附魔的所有精华都提取走了，所以它现在没法使用。我可以重新激活这个附魔，但这需要成千上万的精华。如果你想修好它，我想……也许……是的……我认为25万火币应该足够支付费用了。而且很遗憾，我没法给你更优惠的价格；我付出时间和精力没算在费用里，你的火币全都将用于修复所需的精华。)]
 	</p>
 	<p>
-		Before you can react to the extortionate cost of getting Lyssieth's wardrobe fixed, the room suddenly shakes. The sound of a loud bang from somewhere else in the mansion accompanies this mini-earthquake, and Lilaya happily claps her hands together and exclaims, [lilaya.speech(It sounds like my experiment's worked! Come on, Rose, I'll need your help to clean up! See you later, [pc.name]!)]
+		你还没来得及对莉西丝的衣柜高昂的修理费用做出回应，房间突然震动了起来。伴随着这场小地震，宅邸的某处传来了巨大的轰鸣声，莉莱雅开心地拍了拍手，兴奋地说道，[lilaya.speech(听起来我的实验成功了！来吧，萝丝，我需要你来帮助清理！回头见，[pc.name]！)]
 	</p>
 	<p>
-		With that, Lilaya and Rose swiftly exit your new dressing room, leaving you looking at Lyssieth's wardrobe wondering if it'd be worth paying a quarter of a million flames to get it fixed...
+		说着，莉莱雅和萝丝迅速离开了你的新更衣室，只留你自己看着莉西丝的衣柜，你思考着是否值得花费25万火币来修理它……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WARDROBE_ACTIVATION"><![CDATA[
 	<p>
-		Prepared to pay what Lilaya has asked for in exchange for getting the enchantment on Lyssieth's wardrobe re-activated, you set aside a quarter of a million flames and use the room's bell-pull to summon Rose. The cat-girl maid arrives within seconds, and upon seeing the money which you've gathered, she curtsies and then correctly surmises, [rose.speech(You'd like Mistress Lilaya to fix the enchantment on Lyssieth's wardrobe? Please wait here while I inform her.)]
+		你决定支付莉莱雅所要求的费用，以此来重新激活莉西丝的衣柜上的附魔，你准备好了25万火币，并使用房间里的拉铃召唤萝丝。猫女女仆几秒钟就赶来了，看到你收集的火币后，她向你行了个屈膝礼，正确地推测道，[rose.speech(您是想让莉莱雅主人修复莉西丝的衣柜上的附魔吗？请在这里稍等，我去通知她。)]
 	</p>
 	<p>
-		After swiftly gathering up the flames which you've provided, Rose exits the way she came, leaving you waiting for her return. A couple of minutes later, she steps into the room behind your [lilaya.relation(pc)], who smiles at you and says, [lilaya.speech(Those flames you've provided should cover the cost of the essences I'm about to use. So, shall I get started?)]
+		萝丝迅速地收好了你提供的火币，然后沿原路离开，你留在原地等待着她的返回。几分钟后，萝丝走回了房间，身后跟着你的[lilaya.relation(pc)]，她对你微笑着，[lilaya.speech(你提供的火币足够支付我使用的精华的费用了。那么，我可以开始了吗？)]
 	</p>
 	<p>
-		You reply in the affirmative, after which Lilaya steps over to the ivory-and-gold wardrobe and places one of her [lilaya.hands+] on it. A stream of bright purple light begins to flow down through her arm, and as she re-activates her mother's enchanted artefact, she reveals, [lilaya.speech(It's quite trivial for me to fix this enchantment, but I could never create it from scratch. It took a true genius to make this wardrobe...)]
+		你做出了肯定的回答，随后莉莱雅走向象牙金色的衣柜，将一只[lilaya.hands+]放在上面。一道明亮的紫色光流开始沿着她的手臂流下，莉莱雅开始重新激活她母亲的附魔造物，她说道，[lilaya.speech(修复这个附魔对我来说很简单，但我永远无法从头开始创造它。只有真正的天才才可以制作出这个衣柜……)]
 	</p>
 	<p>
-		As Lilaya continues with the process of fixing the wardrobe's enchantment, you comment on how expensive it must have been to commission.
+		莉莱雅继续修复着衣柜的附魔，你评论道，委托制作一定花费了不少钱。
 	</p>
 	<p>
-		[lilaya.speech(Yes it was, but mommy didn't pay the creator in flames, land, essences, or anything like that. The artist responsible for this creation, who was a reclusive succubus of no particular importance, instead asked for a single favour; to be given an audience with Lilith herself. Mommy agreed upon the condition that she be taught the secret behind the wardrobe's enchantment. The artist shared her secrets with mommy, was granted an audience with Lilith, and was never seen again...)]
+		[lilaya.speech(是的，确实如此，但妈咪并没有付给创作者火币、领土、精华或是其他的什么东西。负责这项创作的工匠是一位不知名的隐居魅魔，她只提出了一个请求；与莉莉丝本人见面。妈咪同意了，但条件是必须教给她衣柜附魔的秘密。工匠给妈咪分享了她的秘密，由此得到了与莉莉丝见面的机会，随后就再也没有出现过了……)]
 	</p>
 	<p>
-		At that moment, the purple light stops flowing down Lilaya's arm, and she lets out a satisfied sigh as she takes her hand off the wardrobe. Pushing her glasses up onto the bridge of her nose, she declares, [lilaya.speech(All done! Now, as I told you before, the wardrobe consumes essences from its enchantment in order to create items. So, in order to keep it working, you'll need to leave me enough flames to cover the cost of the consumed essences each time you use it. Oh, and if you want to create enchanted items, then the wardrobe will need to draw essences directly out of your aura. You'll figure it out once you start using it. Now, let me just demonstrate how it's done...)]
+		话音刚落，莉莱雅手臂上不再有紫色光芒流动，她满意地叹了口气，将手从衣柜上拿开。她推了推鼻梁上的眼镜，宣布道，[lilaya.speech(完成了！正如我之前告诉你的，衣柜会消耗附魔中的精华来创造物品。因此，为了保持它的运作，每次使用时你需要留给我足够的火币来支付消耗精华的费用。哦对了，如果你想创造附魔物品，那么衣柜将会直接从你的灵气中抽取精华。你上手用一用就会明白什么情况了。现在，让我来演示一下怎么操作……)]
 	</p>
 	<p>
-		Once again placing her hand on the wardrobe, Lilaya pauses for a moment as she imagines the clothing she wants to discover within it, and then throws open the doors. Inside, neatly arranged on coat hangers, is a full set of black-and-pink kitty lingerie. Letting out a cheeky giggle, she swiftly retrieves this skimpy outfit, but her playful mannerisms are quickly dispelled when she turns around to see how Rose is glaring at her.
+		莉莱雅再次把手放在衣柜上，停顿片刻，想象着她想要的衣物，然后猛地打开了柜门。衣柜里面整齐地挂着一整套黑粉色的猫咪内衣。她调皮地咯咯笑了一声，迅速地拿起了这套暴露的服装，但当她转过身看到萝丝瞪着她的目光时，嬉笑的举动很快就消失了。
 	</p>
 	<p>
-		[lilaya.speech(W-Well, anyway, that's how it's done,)] Lilaya sheepishly says as she attempts to hide the sexy lingerie behind her back.
+		[lilaya.speech(这、这就是操作方法，)]莉莱雅害羞地说道，试图把性感的内衣藏在背后。
 	</p>
 	<p>
-		You thank your [lilaya.relation(pc)] for restoring the wardrobe's functionality, and for demonstrating how to use it. Smiling at you, she makes her exit, and as she and Rose leave, you overhear the cat-girl maid hissing at her Mistress, [rose.speech(If you think I'm going to wear that, you can think again. You'll look rather good in it though...)]
+		你感谢你的[lilaya.relation(pc)]恢复了衣柜的功能，并演示了使用方法。她对你笑了笑，便离开了。就在她和萝丝离开时，你听到猫女女仆带着怒气对她的主人低声说道，[rose.speech(如果你认为我会穿那个，那我建议你再好好想想。不过你穿上的话倒是应该挺好看的……)]
 	</p>
 	<p>
-		With that, the two of them exit your dressing room, leaving you wondering whether you should try out Lyssieth's wardrobe right away...
+		说着，她们两人离开了你的更衣室，留下你思考着是否应该马上试试莉西丝的衣柜……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Outfits: -->
 	
 	<htmlContent tag="OUTFIT_PURCHASE"><![CDATA[
 	<p>
-		Placing your hand on Lyssieth's wardrobe, you imagine the outfit which you'd like to discover within. You feel a surge of power emanating from within the ivory-and-gold creation as its enchantment creates the outfit which you
+		你将手放在莉西丝的衣柜上，想象着希望在其中发现的服装。你感受到这件象牙色与金色交织的造物涌现出庞大的能量，通过其上的附魔创造出了你
 		#IF(pc.getSlavesOwned().size()>0)
-			 desire.
+			需要的物品。
 		#ELSE
-			 desire...
+			需要的物品……
 		#ENDIF
 	</p>
 	#IF(pc.getSlavesOwned().size()>0)
 		<p>
-			Now all you need to decide is whether to equip this outfit yourself, or to instead get one of your slaves to wear it...
+			现在你只需决定是自己穿上这套服装，还是让你的一个奴隶来穿上它们……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTFIT_OWNED"><![CDATA[
 	<p>
-		As you already own every component of your desired outfit, there's no need for you to spend money or essences on Lyssieth's wardrobe. Instead, you retrieve the items you require from elsewhere in your dressing
+		由于你已经拥有了目标套装的每一个部位，因此你无需在莉西丝的衣柜上花费火币或精华。相反，你需要从
 		#IF(pc.getSlavesOwned().size()>0)
-			 room.
+			更衣室的其他地方取回所需的物品。
 		#ELSE
-			 room...
+			更衣室的其他地方取回所需的物品……
 		#ENDIF
 	</p>
 	#IF(pc.getSlavesOwned().size()>0)
 		<p>
-			Now all you need to decide is whether to equip this outfit yourself, or to instead get one of your slaves to wear it...
+			现在你只需决定是自己穿上这套服装，还是让你的一个奴隶来穿上它们……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTFIT_NOTHING"><![CDATA[
 	<p>
-		Deciding that the best outfit is nothing at all, you don't even need to use Lyssieth's wardrobe to get what you want...
+		你认为最好的装扮就是一丝不挂，你根本不需要使用莉西丝的衣柜就能得到你想要的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

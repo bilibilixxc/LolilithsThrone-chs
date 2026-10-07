@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Kissing Booth]]></name>
-	<tooltipDescription><![CDATA[A goat-girl is offering a kiss form one of her trio of cow-girl slaves in exchange for a Faire ticket from out of this stall.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the Farmer's Market in Elis]]></virginityLossDescription>
+	<name><![CDATA[接吻棚]]></name>
+	<tooltipDescription><![CDATA[在这个摊位上，一个山羊女提供她三个牛女奴隶之一的香吻，以换取人们的集市票。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>kissing</svgName>
 	<colour>BASE_PINK_LIGHT</colour>

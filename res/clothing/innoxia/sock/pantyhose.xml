@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>120</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[pantyhose]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[pantyhose]]></namePlural>
-		<description><![CDATA[A pair of nylon pantyhose which reach up to the wearer's lower abdomen.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[连裤丝袜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[连裤丝袜]]></namePlural>
+		<description><![CDATA[一双长度到穿戴者小腹的尼龙连裤袜。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>SOCK</slot> 
@@ -64,52 +64,49 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(push)] [npc.her] feet into the pantyhose and [npc.verb(pull)] them up to [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(push)] [npc2.namePos] feet into the pantyhose and [npc.verb(pull)] them up to [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] [npc2.namePos] feet into the pantyhose and [npc.verb(pull)] them up to [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的脚塞进连裤丝袜中，然后将它拉到腰部。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的脚塞进连裤丝袜中，然后将它拉到[npc2.her]的腰部。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的双脚强行塞进连裤丝袜中，然后用力将它们拉到[npc2.her]的腰部。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] pantyhose.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] pantyhose.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] pantyhose.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下了[npc.her]的连裤丝袜。]]></self>
+    <other><![CDATA[
+[npc.Name]脱下了[npc2.namePos]的连裤丝袜。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地脱下[npc2.namePos]的连裤丝袜。]]></otherRough>
   </displacementText>
   
   
    <replacementText type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the top of [npc.her] pantyhose back up to sit around [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the top of [npc2.namePos] pantyhose back up to sit around [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the top of [npc2.namePos] pantyhose back up to sit around [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]抓住[npc.her]的连裤丝袜顶端并拉至[npc.her]的腰部。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]抓住[npc2.namePos]的连裤丝袜顶端并拉至[npc2.her]的腰部。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]抓住[npc2.namePos]的连裤丝袜顶端并粗暴地拉至[npc2.her]的腰部。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down the top of [npc.her] pantyhose.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down the top of [npc2.namePos] pantyhose.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] down the top of [npc2.namePos] pantyhose.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把[npc.her]的连裤丝袜拉下来。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把[npc2.namePos]的连裤丝袜拉下来。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的连裤丝袜拉下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

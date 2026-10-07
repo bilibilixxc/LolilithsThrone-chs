@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>200</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Workout Power]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Workout Powers]]></namePlural>
-		<description><![CDATA[A plastic, turquoise drink bottle, of the sort typically used during exercise. A small sticker on the bottom names the pre-filled energy drink 'Workout Power', and declares that it's the ideal formula for hyena-morphs looking to gain muscle.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[锻炼能量]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[锻炼能量]]></namePlural>
+		<description><![CDATA[一个绿松石色的塑料饮料瓶，通常在运动时使用。瓶底贴着一张小标签，上面写着预装能量饮料 "锻炼能量 "的名字，并宣称这是鬣狗及其化形增肌的理想配方。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -29,15 +29,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -51,10 +51,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After first popping up the cap, [npc.name] [npc.verb(bring)] the bottle of Workout Power up to [npc.her] [npc.mouth]. A very artificial smell of tropical fruits rises from the opening, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the cool liquid, [npc.she] [npc.verb(discover)] that it tastes exactly the same as its smell.
+		打开瓶盖后，[npc.name]将锻炼能量的瓶子端到[npc.her]的[npc.mouth]边。一股非常人工的热带水果香味从瓶口升腾而起，当[npc.she]仰起头并开始饮用凉爽的液体时，[npc.she]发现它的味道与气味完全相同。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After first popping up the cap, [npc.name] [npc.verb(bring)] the bottle of Workout Power up to [npc2.namePos] waiting [npc2.lips]. A very artificial smell of tropical fruits rises from the opening, and as [npc2.she] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the cool liquid, [npc2.she] [npc2.verb(discover)] that it tastes exactly the same as its smell.
+		打开瓶盖后，[npc.name]将锻炼能量的瓶子端到[npc2.namePos]等待[npc2.lips]前。一股非常人工的热带水果香味从瓶口升腾而起，当[npc2.she]仰起头并开始饮用凉爽的液体时，[npc2.she]发现它的味道与气味完全相同。
 		]]></otherUse>
 	</useDescriptions>
 

@@ -11,7 +11,7 @@ public enum QuestLine {
 
 	// Main quests:
 
-	MAIN("Lilith's Throne", "You have completed all main quest content in this version!",
+	MAIN("莉莉丝的王座", "你已完成当前版本的所有主线任务！",
 			QuestType.MAIN,
 			QuestTree.mainQuestTree),
 
@@ -25,114 +25,114 @@ public enum QuestLine {
 //			QuestType.SIDE,
 //			Quest.SIDE_DISCOVER_ALL_RACES),
 
-	SIDE_ENCHANTMENT_DISCOVERY("Essences and Enchantments", "You now know how to use essences in order to create and modify enchanted items!",
+	SIDE_ENCHANTMENT_DISCOVERY("精华与附魔", "你现在知道该如何使用精华来制作和调整附魔物品！",
 			QuestType.SIDE,
 			QuestTree.enchantmentTree),
 
-	SIDE_FIRST_TIME_PREGNANCY("Knocked Up", "With Lilaya's help, you managed to complete your first pregnancy. Perhaps the first of many...",
+	SIDE_FIRST_TIME_PREGNANCY("一夜大肚", "在莉莱雅的帮助下，你成功地完成了你人生中的第一次分娩。有了第一次，或许就会有更多次……",
 			QuestType.SIDE,
 			QuestTree.pregnancyTree),
 
-	SIDE_FIRST_TIME_INCUBATION("Egged", "You successfully incubated, laid, and hatched the eggs which were planted inside of you!",
+	SIDE_FIRST_TIME_INCUBATION("卵生", "你成功地孕育、产下并孵化了种在你体内的蛋！",
 			QuestType.SIDE,
 			QuestTree.incubationTree),
 
-	SIDE_SLAVERY("Slaver", "Thanks to Lilaya's letter of recommendation, you managed to obtain a coveted slaver license!",
+	SIDE_SLAVERY("奴隶主", "多亏了莉莱雅的推荐信，你成功获得了梦寐以求的贩奴许可！",
 			QuestType.SIDE,
 			QuestTree.slaveryTree),
 
-	SIDE_ACCOMMODATION("Bed & Board", "Lilaya happily gave you her permission to use the spare rooms to accommodate your friends and family, provided that you pay for the expenses that they incur...",
+	SIDE_ACCOMMODATION("衣食住行", "莉莱雅很乐意让你使用空余的房间，为你的朋友或家人提供住宿，条件是你必须支付他们的支出费用……",
 			QuestType.SIDE,
 			QuestTree.accommodationTree),
 
-	SIDE_DOLL_STORAGE("Doll Storage", "Lilaya told you that you can use any spare room in which to store any dolls you buy...",
+	SIDE_DOLL_STORAGE("储存玩偶", "莉莱雅同意你使用空闲房间来存放你购买的所有玩偶……",
 			QuestType.SIDE,
 			QuestTree.dollStorageTree),
 
-	SIDE_HYPNO_WATCH("Arthur's Experiment", "You helped Arthur to complete his research into an orientation-changing Hypno-Watch, which is now in your possession!",
+	SIDE_HYPNO_WATCH("亚瑟的实验", "你协助亚瑟完成了实验，制作出能够改变倾向的催眠怀表，现在已经收入你的囊中！",
 			QuestType.SIDE,
 			QuestTree.hypnoWatchTree),
 
-	SIDE_ARCANE_LIGHTNING("Arcane Lightning", "Arthur was able to extract the secrets of arcane lightning from the globe which you gave to him, allowing you to learn two incredibly powerful spells.",
+	SIDE_ARCANE_LIGHTNING("奥术闪电", "亚瑟能够将奥术闪电的秘密从你给他的圆球中提取出来，让你学会了两个十分强大的魔法。",
 			QuestType.SIDE,
 			QuestTree.arcaneLightningTree),
 	
-	SIDE_HARPY_PACIFICATION("Angry Harpies", "You managed to calm down all three of the harpy matriarchs, resulting in the Harpy Nests being safe to travel through!",
+	SIDE_HARPY_PACIFICATION("愤怒的哈比", "你成功安抚了三位哈比族长，现在可以在哈比之巢通行无阻！",
 			QuestType.SIDE,
 			QuestTree.angryHarpyTree),
 
-	SIDE_SLIME_QUEEN("Slime Queen", "You dealt with the Slime Queen!",
+	SIDE_SLIME_QUEEN("史莱姆女王", "你解决了史莱姆女王！",
 			QuestType.SIDE,
 			QuestTree.slimeQueenTree),
 
-	SIDE_TELEPORTATION("The Trouble with Teleporting", "After learning how to teleport, you managed to escape from the Enforcer warehouse.",
+	SIDE_TELEPORTATION("传送的麻烦", "你习得传送法术，然后逃离了执法者仓库。",
 			QuestType.SIDE,
 			QuestTree.teleportingTree),
 
-	SIDE_DADDY("An Inquiring Incubus", "You dealt with the demon, [daddy.name], who was showing an interest in Lilaya.",
+	SIDE_DADDY("好奇的淫梦魔", "你解决了那个对莉莱雅感兴趣的恶魔[daddy.name]。",
 			QuestType.SIDE,
 			QuestTree.daddyTree),
 
-	SIDE_BUYING_BRAX("Acquiring a Wolf", "After she'd got you to perform a series of tedious tasks for her, Candi finally sold [brax.name] to you.",
+	SIDE_BUYING_BRAX("收购一匹狼", "你把坎迪的一系列麻烦任务都搞定了，终于买到了[brax.name]。",
 			QuestType.SIDE,
 			QuestTree.buyingBraxTree),
 
-	SIDE_VENGAR("Vengar's Tyranny", "You dealt with Vengar and made sure that Axel doesn't have to worry about him again.",
+	SIDE_VENGAR("暴君文加", "你解决了文加，阿克塞尔不用再担心了。",
 			QuestType.SIDE,
 			QuestTree.vengarTree),
 
 
-	SIDE_WES("The Rogue Enforcer", "You were able to successfully deal with the Enforcer Quartermaster.",
+	SIDE_WES("胡作非为的执法者", "你成功解决了执法者军需官。",
 			QuestType.SIDE,
 			QuestTree.wesTree),
         
-	SIDE_REBEL_BASE("Grave Robbing", "You managed to escape the abandoned rebel hideout.",
+	SIDE_REBEL_BASE("摸金校尉", "你成功从废弃的叛军藏匿点逃了出来。",
 		QuestType.SIDE,
 		QuestTree.rebelBaseTree),
 
-	SIDE_REBEL_BASE_FIREBOMBS("Spicy Meatballs", "You've gotten yourself a steady supply of Arcane Firebombs. At the usual premium, of course.",
+	SIDE_REBEL_BASE_FIREBOMBS("香辣肉丸", "你现在有了源源不断的奥术燃烧弹供应。呃，虽然高于市场价。",
 		QuestType.SIDE,
 		QuestTree.rebelBaseFirebombTree),
 	
-	SIDE_EISEK_STALL("Fix 'Er Upper", "You've helped Eisek fix up his stall.",
+	SIDE_EISEK_STALL("暴屠暴徒", "你帮艾瑟克收拾了他的摊位。",
 		    QuestType.SIDE,
 		    QuestTree.eisekStallTree),
 	
-	SIDE_EISEK_MOB("Mob Mentality", "You've convinced the mob that was hounding Eisek to leave him alone.",
+	SIDE_EISEK_MOB("暴徒心理学", "你说服了纠缠艾瑟克的暴徒，让他们放他一马。",
 		    QuestType.SIDE,
 		    QuestTree.eisekMobTree),
 	
-	SIDE_EISEK_SILLYMODE("Dragon Enthusiasts", "You encountered a strange group of dragon obssessed weirdos and cleared their dungeon.",
+	SIDE_EISEK_SILLYMODE("龙类爱好者", "你遇到了一群迷恋龙类的怪人，并清空了他们的地牢。",
 		    QuestType.SIDE,
 		    QuestTree.eisekSillyModeTree),
 
-	SIDE_OGLIX_BEER_BARRELS("Beer Bitch Bonanza", "You secured more barrels for Oglix, allowing you to send four criminals from the nearby alleyways to her to become new beer-bitches!",
+	SIDE_OGLIX_BEER_BARRELS("奶啤妓富豪", "你为奥格利克斯找来了更多的桶，你可以从附近的小巷找四个罪犯送到她那里，成为新的奶啤妓！",
 			QuestType.SIDE,
 			QuestTree.beerBarrelTree),
 
-	SIDE_LUNEXIS_ESCAPE("Serving Lunexis", "You obeyed your Mistress's orders and ensured that she was able to escape, thereby sealing your fate to become one of her personal cock-sleeves...",
+	SIDE_LUNEXIS_ESCAPE("服侍露内克西丝", "你听从了主人的命令，确保她能逃脱，这注定了你以后的命运就是成为她的一只私人鸡巴套……",
 			QuestType.SIDE,
 			QuestTree.lunexisEscapeTree),
 
-	SIDE_DOLL_FACTORY("Dealing With Dolls", "You uncovered the truth behind how the premium sex dolls for sale in 'Lovienne's Luxury' are created...",
+	SIDE_DOLL_FACTORY("处理玩偶", "你揭示了“洛维耶纳奢侈品店”出售的高级性爱玩偶制作方式的真相……",
 			QuestType.SIDE,
 			QuestTree.dollFactoryTree),
 	
 	// Romance quests:
 	
-	RELATIONSHIP_NYAN_HELP("Supplier Issues", "You helped Nyan solve the problem she was having with her suppliers.",
+	RELATIONSHIP_NYAN_HELP("供货难题", "你帮助妮安解决了供货商的问题。",
 			QuestType.RELATIONSHIP,
 			QuestTree.nyanTree),
 
-	ROMANCE_HELENA("Her Highness's Helper", "You successfully completed every task which Helena gave to you, and as a reward, you can both order custom slaves from her and take her on a date each Friday evening.",
+	ROMANCE_HELENA("族长的帮手", "你成功完成了海伦娜给你的每一项任务，作为奖励，你可以从她那里定制奴隶，还可以在每周五晚上和她约会。",
 			QuestType.RELATIONSHIP,
 			QuestTree.helenaTree),
 
-	ROMANCE_NATALYA("[style.Mule] Training", "Having completed Mistress Natalya's training, you are now a qualified [style.mule] and are expected to sexually service Dominion Express's centaur slaves.",
+	ROMANCE_NATALYA("[style.Mule]训练", "你完成了娜塔莉亚主人的训练，现在是一匹合格的[style.mule]，为御城速递的半人马奴隶提供性服务。",
 			QuestType.RELATIONSHIP,
 			QuestTree.natalyaTree),
 
-	ROMANCE_MONICA("Monica's Milker", "You successfully retrieved Monica's personalised Moo Milker, and as a result she is very grateful to you.",
+	ROMANCE_MONICA("莫妮卡的吸奶器", "你成功找回了莫妮卡的定制吸奶器，因此她非常感激你。",
 			QuestType.RELATIONSHIP,
 			QuestTree.monicaTree),
 	;

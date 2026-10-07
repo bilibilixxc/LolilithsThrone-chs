@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Locked Door]]></name>
-	<tooltipDescription><![CDATA[A locked door bars anyone from progressing further down the corridor.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[锁住的门]]></name>
+	<tooltipDescription><![CDATA[一扇锁住的门阻止任何人通过走廊。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的走廊上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>door</svgName>
 	<colour>BASE_CRIMSON</colour>

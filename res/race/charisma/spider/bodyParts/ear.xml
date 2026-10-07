@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ear>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛]]></transformationName>
 	<coveringType>charisma_spider_chitinSmooth</coveringType>
 	<tags/>
-	<name><![CDATA[ear]]></name>
-	<namePlural><![CDATA[ears]]></namePlural>
+	<name><![CDATA[耳朵]]></name>
+	<namePlural><![CDATA[耳朵]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor>spider-like</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>spider-like</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
 	</descriptorsFeminine>
 	<transformationDescription><![CDATA[
-		They quickly recede into small holes while a chitin plating grows over to protect them.
-		<br/>[npc.Name] now [npc.has] [style.boldSpider(internal, spider-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].
+		它们很快就缩进小洞里，同时几丁质外壳会生长出来保护它们。
+		<br/>[npc.Name]现在拥有[style.boldSpider(位于体内、蜘蛛般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.Her] ears are an internal part of [npc.her] head, and are covered by [npc.earFullDescription(true)].
+		[npc.Her]的耳朵位于头内部，并被[npc.earFullDescription(true)]覆盖。
 		#IF(npc.isPiercedEar())
-			 They have been cleverly pierced so as to allow [npc.herHim] to wear ear-specific jewellery.
+			它们很巧妙地穿了孔，从而能够戴上为耳部设计的首饰。
 		#ENDIF
 	]]></bodyDescription>
 </ear>

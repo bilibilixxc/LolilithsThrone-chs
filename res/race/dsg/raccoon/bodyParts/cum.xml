@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -6,18 +6,18 @@
 	
 	<race>dsg_raccoon</race>
 	
-	<transformationName><![CDATA[raccoon]]></transformationName>
+	<transformationName><![CDATA[浣熊]]></transformationName>
 	
 	<baseFluidType>CUM</baseFluidType>
 	
 	<flavour>CUM</flavour>
 	
 	<namesMasculine>
-		<name><![CDATA[raccoon-]]></name>
+		<name><![CDATA[浣熊]]></name>
 	</namesMasculine>
 	
 	<namesFeminine>
-		<name><![CDATA[raccoon-]]></name>
+		<name><![CDATA[浣熊]]></name>
 	</namesFeminine>
 	
 	<descriptorsMasculine/>

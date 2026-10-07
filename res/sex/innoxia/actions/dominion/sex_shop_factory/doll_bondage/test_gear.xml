@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -24,46 +24,47 @@
 	<areasCummedIn/>
 	<areasCummedOn/>
 	<title><![CDATA[
-		Test gear
+		测试装置
 	]]></title>
 	<tooltip><![CDATA[
-		Use this opportunity to test the bondage gear's durability.
+		利用这个机会来测试束缚装置的耐久性。
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
 				[style.random(
-					Using this opportunity to test the durability of your bondage gear, 
+					玩偶打算利用这个机会来测试你的束缚装置的耐用性，
 					|
-					Wanting to test the limits of your bondage gear, 
+					玩偶想要测试束缚装置的极限，
 					|
-					Deciding that now's the time to test out some of your bondage gear, 
+					玩偶认为现在是时候测试一下你的束缚装置了，
 					|
-					Taking a moment to test the durability of your bondage gear, 
+					玩偶决定花点时间测试一下束缚装置的耐用性，
 				)]
-				the doll
+				她
 				[style.random(
-					 hilts her dildo deep in your pussy and 
+					把假阳具深深地插进你的阴道里，
 					|
-					 reaches up and 
+					伸出手，
 					|
-					 slams her strap-on deep into your cunt and 
+					将穿戴式假阳具深深地撞进你的阴道里，
 					|
-					stops fucking you for a moment and 
+					暂时停止操你，
 				)]
+				然后
 				[style.random(
-					roughly pulls on your nipple clamps. Your moans are muffled into your ballgag as your silicone nipples are painfully pinched and tugged on, and you squirm about in your bindings as the doll continues to yank on the clamps.
+					粗暴地拉扯着你的乳头夹。你的硅胶乳头被痛苦地夹住并拉扯着，你的呻吟声因为口球而变得模糊不清。玩偶继续拉扯着夹子，你只能在束缚装置中不停地扭动着。
 					|
-					grabs your leather choker. Yanking on it, she causes you to choke and splutter, which does nothing to deter her from tightly squeezing it around your neck.
+					抓住你的皮革项圈。她猛拉项圈，让你感到一阵窒息。你不由自主地喘息着，但这丝毫不影响她紧紧地勒住你的脖子。
 					|
-					takes hold of your spreader bar. Yanking it up and backwards, she forces your ankles to be pulled back behind your head, which thanks to your flexible silicone body doesn't cause you any discomfort.
+					抓住你的一字杆脚铐。她用力地从后面向上拉，强行将你的脚踝拉到头后面。由于你的硅胶身体很柔软，所以这不会给你带来任何不适。
 					|
-					pulls on the ropes of your karada. Tightening them around the base of your [pc.cupSize]-cup breasts, she painfully constricts your tits, forcing them to deform and swell outwards.
+					开始拉扯你龟甲缚的绳索。她用力将绳索勒紧你[pc.cupSize]罩杯的乳房底部，迫使你的乳房痛苦地变形并向外凸起。
 				)]
 				
 				<br/><br/>
 				
-				Satisfied with how the bondage gear is holding up, she returns her focus to roughly fucking you with her strap-on.
+				她对束缚装置的承受效果感到满意，然后重新集中注意力，继续用穿戴式假阳具粗暴地操你。
 			]]></text>
 		</description>
 	</descriptions>

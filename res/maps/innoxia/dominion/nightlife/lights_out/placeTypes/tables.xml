@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[tables]]></name>
-	<tooltipDescription><![CDATA[Taking up most of the floor space in 'Lights Out', numerous metal tables are where most of the bar's patrons choose to sit and drink.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at one of the tables within 'Lights Out']]></virginityLossDescription>
+	<name><![CDATA[桌子]]></name>
+	<tooltipDescription><![CDATA[大量的金属桌占据了“影液”酒吧的绝大多数地面空间。酒吧的大多数顾客都喜欢坐在这里喝酒。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“影液”酒吧里的一张桌子旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

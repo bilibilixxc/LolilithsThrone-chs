@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>150</value>
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[ribbon]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[ribbons]]></namePlural>
-    <description><![CDATA[A small, cute cotton ribbon. It could be tied around a tail, or into someone's hair. It could also potentially be tied around someone's penis...]]></description>
+    <determiner><![CDATA[一条]]></determiner>
+    <name><![CDATA[缎带]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[缎带]]></namePlural>
+    <description><![CDATA[一条小巧可爱的棉质缎带。可以系在尾巴上，也可以系在头发上。还可以系在某人的阴茎上……]]></description>
     
     <physicalResistance>0</physicalResistance>
     <femininity>FEMININE</femininity>
@@ -77,78 +76,78 @@
   </coreAttributes>
 
   <replacementText slot="TAIL" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(tie)] the ribbon into place around [npc.her] [npc.tail+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(tie)] the ribbon into place around [npc2.namePos] [npc2.tail+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(tie)] the ribbon into place around [npc2.namePos] [npc2.tail+].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把缎带系在[npc.her][npc.tail+]上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把缎带系在[npc2.namePos][npc2.tail+]上。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把缎带绑在[npc2.namePos][npc2.tail+]上。
+]]></otherRough>
   </replacementText>
   <displacementText slot="TAIL" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ribbon from around [npc.her] [npc.tail+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ribbon from around [npc2.namePos] [npc2.tail+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the ribbon from around [npc2.namePos] [npc2.tail+].]]>
-    </otherRough>
+    <self><![CDATA[
+			[npc.Name]解开[npc.her][npc.tail+]上的缎带。
+]]></self>
+    <other><![CDATA[
+			[npc.Name]解开[npc2.namePos][npc2.tail+]上的缎带。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]粗暴地解开[npc2.namePos][npc2.tail+]上的缎带。
+]]></otherRough>
   </displacementText>
 
   <replacementText slot="HAIR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(tie)] the ribbon into place into [npc.her] [npc.hair+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(tie)] the ribbon into place into [npc2.namePos] [npc2.hair+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(tie)] the ribbon into place into [npc2.namePos] [npc2.hair+].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把缎带系在[npc.her][npc.hair+]上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把缎带系在[npc2.namePos][npc2.hair+]上。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把缎带绑在[npc2.namePos][npc2.hair+]上。
+]]></otherRough>
   </replacementText>
   <displacementText slot="HAIR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[
-	  #IF(npc.hasHair())
-		[npc.Name] [npc.verb(untie)] the ribbon from [npc.her] [npc.hair+].
-	  #ELSE
-		As [npc.name] no longer [npc.has] any [npc.hair], [npc.her] ribbon [npc.verb(falls)] off of [npc.her] head.
-	  #ENDIF
-	  ]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ribbon from [npc2.namePos] [npc2.hair+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the ribbon from [npc2.namePos] [npc2.hair+].]]>
-    </otherRough>
+    <self><![CDATA[
+      
+	#IF(npc.hasHair())
+			[npc.Name]解开[npc.her][npc.hair+]上的缎带。
+	#ELSE
+		由于[npc.name]不再有任何[npc.hair]，[npc.her]的缎带从[npc.her]头部落下。
+	#ENDIF
+	
+    ]]></self>
+    <other><![CDATA[
+			[npc.Name]解开[npc2.namePos][npc2.hail+]上的缎带。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]粗暴地解开[npc2.namePos][npc2.hail+]上的缎带。
+]]></otherRough>
   </displacementText>
   
   <replacementText slot="PENIS" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(tie)] the ribbon into place around [npc.her] [npc.penis+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(tie)] the ribbon into place around [npc2.namePos] [npc2.penis+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(tie)] the ribbon into place around [npc2.namePos] [npc2.penis+].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把缎带系在[npc.her][npc.penis+]上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把缎带系在[npc2.namePos][npc2.penis+]上。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把缎带绑在[npc2.namePos][npc2.penis+]上。
+]]></otherRough>
   </replacementText>
   <displacementText slot="PENIS" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ribbon from around [npc.her] [npc.penis+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] the ribbon from around [npc2.namePos] [npc2.penis+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] the ribbon from around [npc2.namePos] [npc2.penis+].]]>
-    </otherRough>
+    <self><![CDATA[
+			[npc.Name]解开[npc.her][npc.penis+]上的缎带。
+]]></self>
+    <other><![CDATA[
+			[npc.Name]解开[npc2.namePos][npc2.penis+]上的缎带。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]粗暴地解开[npc2.namePos][npc2.penis+]上的缎带。
+]]></otherRough>
   </displacementText>
   
 </clothing>

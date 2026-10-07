@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendColourName="false"><![CDATA[cock pump]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[cock pumps]]></namePlural>
-		<description><![CDATA[Designed to slide over a person's penis via its open end, this hollow, plastic cylinder is connected to two tubes. One pressurises the container, while the other sucks up the cum that's spurted out of the wearer's cock.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name appendColourName="false"><![CDATA[榨精泵]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[榨精泵]]></namePlural>
+		<description><![CDATA[这个中空的塑料圆筒连接着两根管子，可以通过开口端套在穿戴者的阴茎上。一根给容器减压，另一根则吸取穿戴者阴茎喷出的精液。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>PENIS</slot>
@@ -73,38 +72,38 @@
 	</sexAttributesSelf>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(turn)] up the dial on the milking machine, before sliding the now-pressurised pump down over [npc.her] [npc.cock+].
+		<self><![CDATA[
+			[npc.Name]打开榨精泵的开关，然后把正在减压的圆筒套在[npc.her][npc.cock+]上。
 			#IF(npc.getTotalFluidInArea(ORIFICE_URETHRA_PENIS)>0)
-				<br/>[style.italicsCum(The cock-pump quickly drains [npc.namePos] urethra-creampie!)]
+				<br/>[style.italicsCum(榨精泵快速地从[npc.namePos]的尿道吸出液体)]
 			#ENDIF
-			]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(turn)] up the dial on the milking machine, before sliding the now-pressurised pump down over [npc2.namePos] [npc2.cock+].
+			
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]打开榨精泵的开关，然后把正在减压的圆筒套在[npc2.namePos][npc2.cock+上。
 			#IF(npc2.getTotalFluidInArea(ORIFICE_URETHRA_PENIS)>0)
-				<br/>[style.italicsCum(The cock-pump quickly drains [npc2.namePos] urethra-creampie!)]
+				<br/>[style.italicsCum(榨精泵快速地从[npc2.namePos]的尿道吸出液体！)]
 			#ENDIF
-			]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(crank)] up the dial on the milking machine, before roughly shoving the now-pressurised pump down over [npc2.namePos] [npc2.cock+].
+			
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]打开榨精泵的开关，然后粗暴地把[npc2.namePos][npc2.cock+]塞进正在减压的圆筒里。
 			#IF(npc2.getTotalFluidInArea(ORIFICE_URETHRA_PENIS)>0)
-				<br/>[style.italicsCum(The cock-pump quickly drains [npc2.namePos] urethra-creampie!)]
+				<br/>[style.italicsCum(榨精泵快速地从[npc2.namePos]尿道吸出液体！)]
 			#ENDIF
-			]]>
-		</otherRough>
+			
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pump slide off of [npc.her] [npc.cock+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pump slide off of [npc2.namePos] [npc2.cock+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[With no regard for [npc2.her] comfort, [npc.name] roughly [npc.verb(yank)] the still-pressurised pump off of [npc2.namePos] [npc2.cock+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]关闭榨精泵的开关，让快速加压的圆筒从[npc.her][npc.cock+]脱落。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]关闭榨精泵的开关，让快速加压的圆筒从[npc2.namePos][npc2.cock+]脱落。
+]]></other>
+		<otherRough><![CDATA[
+			不顾[npc2.her]感受，[npc.name]粗暴地把正在减压的圆筒从[npc2.namePos][npc2.cock+]上扯下。
+]]></otherRough>
 	</displacementText>
 </clothing>

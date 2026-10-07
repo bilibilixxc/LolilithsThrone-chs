@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>750</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[half-rim glasses]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[half-rim glasses]]></namePlural>
-		<description><![CDATA[A pair of designer half-rim glasses. They're unisex, and would look good on anyone.]]></description>
+		<determiner><![CDATA[一副]]></determiner>
+		<name><![CDATA[半框眼镜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[半框眼镜]]></namePlural>
+		<description><![CDATA[一副设计师设计的男女皆宜的半框眼镜。戴在任何人身上都好看。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>
@@ -57,27 +56,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the glasses.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the glasses onto [npc2.namePos] face.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(push)] the glasses onto [npc2.namePos] face.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]戴上眼镜。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将眼镜戴在[npc2.namePos]的[npc2.face]上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将眼镜戴在[npc2.namePos]的脸上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] glasses.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] glasses.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] glasses and roughly [npc.verb(pull)] them off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]摘下[npc.her]的眼镜。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把[npc2.namePos]眼镜从[npc2.her][npc2.face]上摘下。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的眼镜并粗暴地扯下来。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

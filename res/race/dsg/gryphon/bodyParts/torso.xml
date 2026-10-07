@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <torso>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_gryphon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[gryphon]]></transformationName>
+	<transformationName><![CDATA[狮鹫]]></transformationName>
 	
 	<!-- The id of the material covering this torso.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -31,13 +31,13 @@
 	<!-- The description which is shown when a character transforms to obtain this torso type.
 	This description immediately follows a brief description of the torso type beginning to transform. -->
 	<transformationDescription><![CDATA[
-		After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with gryphon-like feathers. [npc.Her] new feathers are much finer around [npc.her] joints and is quite densely packed.
-		<br/>[npc.Name] now [npc.has] [style.boldGryphon(gryphon-like)], [npc.skinFullDescription].
+		没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被狮鹫般的羽毛覆盖。长在[npc.Her]关节周围的新羽毛更漂亮，而且非常密集。
+		<br/>[npc.Name]现在拥有[style.boldGryphon(狮鹫般)][npc.skinFullDescription]。
 	]]></transformationDescription>
 	
 	<!-- How this torso is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].
+		[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。
 	]]></bodyDescription>
 	
 </torso>

@@ -63,7 +63,7 @@ public class Vengar extends NPC {
 	}
 	
 	public Vengar(boolean isImported) {
-		super(isImported, new NameTriplet("Vengar"), "Ironfist",
+		super(isImported, new NameTriplet("文加"), "铁拳",
 				"",
 				27, Month.JUNE, 2,
 				25, Gender.M_P_MALE, Subspecies.RAT_MORPH, RaceStage.GREATER,
@@ -351,12 +351,12 @@ public class Vengar extends NPC {
 		StringBuilder sb = new StringBuilder();
 		
 		if(this.getHomeLocationPlace().getPlaceType()==PlaceType.GAMBLING_DEN_TRADER) {
-			sb.append("While at one time he was the leader of a ruthless criminal gang, Vengar now finds himself at the mercy of his ex-girlfriend, Roxy."
-					+ " Thoroughly subdued and hopelessly addicted to her pussy, this once-proud rat-boy now finds himself doing anything his abusive ex demands of him.");
+			sb.append("文加曾是黑帮犯罪组织的头目，但如今却只能事事央求他的前女友，罗克西。"
+					+ "这曾经风光无量的鼠男不怎么说话，而且无可救药地对她的小穴上了瘾，如今已经对对虐待自己的前女友言听计从。");
 			
 		} else {
-			sb.append("Strong, scarred, and with an almost-perpetual snarl on his face, Vengar strikes the very sort of figure that's needed to ensure the unwavering loyalty of several dozen criminal rat-morphs."
-					+ " Always ready to back up his words with action, this rat-boy is considered to be one of the most dangerous inhabitants of Submission.");
+			sb.append("文加身体强壮，浑身伤疤，张口就是咆哮，若要让几十个鼠化形罪犯宣誓效忠，他就是不二人选。"
+					+ "这个鼠男随时都准备好以行动证实自己的言论，被认为是屈城区最危险的货色。");
 		}
 		
 		return sb.toString();

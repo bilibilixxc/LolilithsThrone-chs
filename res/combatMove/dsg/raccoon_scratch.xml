@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Cornered Beast]]></name>
+	<name><![CDATA[困兽之斗]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] claw-tipped digits to deliver a blow to [npc.her] target, dealing formattedDamageInflicted damage. Does triple damage when [npc.her] HP is below [style.boldCrimson(50%)].
+		使用[npc.her]的爪尖向[npc.her]的目标发动一次打击，造成formattedDamageInflicted伤害。当[npc.her]的HP低于[style.boldCrimson(50%)]时，造成三倍伤害。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -105,7 +105,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have a raccoon arm type.
+		仅适用于有浣熊手臂的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -138,7 +138,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Attacker's HP is less than [style.boldCrimson(20%)].
+		攻击者的HP小于[style.boldCrimson(20%)].
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -150,17 +150,17 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] raccoon claws to deliver a powerful blow to [npc2.name], dealing formattedDamageInflicted damage. Will deal triple damage when [npc.namePos] HP is below [style.boldCrimson(50%)].
+		用[npc.her]的浣熊爪向[npc2.name]发动强力打击，造成formattedDamageInflicted伤害。当[npc.namePos]的HP低于[style.boldCrimson(50%)]时造成三倍伤害。
 		#IF(npc.isArmMovementHindered())
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] arms are restricted!)]
+			[style.italicsTerrible(由于[npc.her]双臂受限，伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] raccoon claws to deliver a powerful blow to [npc.her] target, dealing formattedDamageInflicted damage. Will deal triple damage when [npc.namePos] HP is below [style.boldCrimson(50%)].
+		用[npc.her]的浣熊爪向[npc.her]的目标发动强力打击，造成formattedDamageInflicted伤害。当[npc.namePos]的HP低于[style.boldCrimson(50%)]时造成三倍伤害。
 		#IF(npc.isArmMovementHindered())
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] arms are restricted!)]
+			[style.italicsTerrible(由于[npc.her]双臂受限，伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionNoTarget>
 	
@@ -176,17 +176,17 @@
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
 			#IF(npc.isArmMovementHindered())
-				As [npc.her] arms are restricted, [npc.name] [npc.verb(fail)] to hit [npc2.name], and [npc.verb(end)] up doing no damage at all...
+				[npc.name]双臂受限，没能击中[npc2.name]，没有造成任何伤害……
 			#ELSE
-				[npc.Name] [npc.verb(lunge)] at [npc2.name] with [npc.her] claws and [npc.verb(leave)] deep gashes in [npc2.namePos] aura!
+				[npc.Name]猛扑向[npc2.name]，用[npc.her]的爪子在[npc2.namePos]的灵气上留下了深深的裂缝！
 			#ENDIF
 			formattedHealthDamage
 		]]></execute>
 		<critDescription><![CDATA[
-			In [npc.her] desperation, [npc.namePos] makes an extremely effective strike!
+			[npc.namePos]在[npc.her]的绝望下造成了极其有效的打击！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] been crippled by the attack!
+			[npc2.Name]已被攻击的效果削弱！
 		]]></critEffectDescription>
 	</performMove>
 	

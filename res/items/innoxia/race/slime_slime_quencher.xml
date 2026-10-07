@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Slime Quencher]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Slime Quenchers]]></namePlural>
-		<description><![CDATA[A small glass bottle of luminescent, fizzy pop. The label on the front reads 'Slime Quencher', and beneath this, there's a picture of a completely naked slime-girl pressing her breasts together and smiling at you.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[史莱姆畅饮]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[史莱姆畅饮]]></namePlural>
+		<description><![CDATA[一个小玻璃瓶，里面装着发光的汽水。正面的标签上写着“史莱姆畅饮”，下面有一张全裸的史莱姆女的照片，她把乳房压在一起，对着你微笑。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,14 +28,14 @@
 		<enchantmentEffectId>ATTRIBUTE_SEXUAL</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldSex(+1)] [style.boldWetness(Vagina Wetness)]]]></line>
-			<line><![CDATA[[style.boldSex(+1)] [style.boldWetness(Anal Wetness)]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_DAMAGE_LUST.getFormattedValue(5)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldSex(+1)][style.boldWetness(阴道湿度)]]]></line>
+			<line><![CDATA[[style.boldSex(+1)][style.boldWetness(肛门湿度)]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_DAMAGE_LUST.getFormattedValue(5)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A warm wave of arcane energy washes over [npc.name]...
+				一股温暖的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.incrementVaginaWetness(1)]
 			[#npc.incrementAssWetness(1)]
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the cap off of the bottle of Slime Quencher and [npc.verb(start)] drinking the liquid contained within. The recognisable taste of a sugary energy drink fills [npc.namePos] mouth, and [npc.she] greedily [npc.verb(gulp)] down the all of the glowing beverage in a matter of seconds.
+		[npc.Name]起掉了史莱姆畅饮瓶的瓶盖，然后开始喝里面的液体。熟悉的甜蜜能量饮料的味道充满了[npc.namePos]的口腔，[npc.she]贪婪地大口灌下下了瓶中所有的发光饮料，仅仅几秒钟就消灭殆尽。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the cap off of the bottle of Slime Quencher and [npc.verb(get)] [npc2.name] to drink the liquid contained within. The recognisable taste of a sugary energy drink fills [npc2.namePos] mouth, and [npc2.she] greedily [npc2.verb(gulp)] down the all of the glowing beverage in a matter of seconds.
+		[npc.Name]起掉了史莱姆饮料瓶的瓶盖，然后让[npc2.name]喝里面的液体。熟悉的甜蜜能量饮料的味道充满了[npc2.namePos]口腔，[npc2.she]贪婪地大口灌下了瓶中所有的发光饮料，仅仅几秒钟就消灭殆尽。
 		]]></otherUse>
 	</useDescriptions>
 

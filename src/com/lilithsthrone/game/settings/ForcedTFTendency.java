@@ -10,15 +10,15 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum ForcedTFTendency {
 	
-	FEMININE_HEAVY(true, false, "Feminine+", "There is a strong chance that forced transformations will make you more feminine regardless of NPC tastes.", PresetColour.FEMININE_PLUS),
+	FEMININE_HEAVY(true, false, "女性化+", "强制转化有很大概率使你更加女性化，与NPC的喜好无关。", PresetColour.FEMININE_PLUS),
 	
-	FEMININE(true, false, "Feminine", "While NPC tastes still matter, forced transformations will often make you more feminine.", PresetColour.FEMININE),
+	FEMININE(true, false, "女性化", "当符合NPC喜好时，强制转化通常会使你更加女性化。", PresetColour.FEMININE),
 	
-	NEUTRAL(false, false, "Neutral", "Gender effects of forced transformations will be determined solely by the tastes and whims of the controlling NPC, and the inherent randomness of the universe.", PresetColour.ANDROGYNOUS),
+	NEUTRAL(false, false, "中性", "强制转化的性别效果单纯由NPC的喜好、一时的心血来潮和宇宙固有的随机性决定。", PresetColour.ANDROGYNOUS),
 	
-	MASCULINE(false, true, "Masculine", "While NPC tastes still matter, forced transformations will often make you more masculine.", PresetColour.MASCULINE),
+	MASCULINE(false, true, "男性化", "当符合NPC喜好时，强制转化通常会使你更加男性化。", PresetColour.MASCULINE),
 	
-	MASCULINE_HEAVY(false, true, "Masculine+", "There is a strong chance that forced transformations will make you more masculine regardless of NPC tastes.", PresetColour.MASCULINE_PLUS);
+	MASCULINE_HEAVY(false, true, "男性化+", "强制转化有很大概率使你更加男性化，与NPC的喜好无关。", PresetColour.MASCULINE_PLUS);
 	
 	
 	private final String name;

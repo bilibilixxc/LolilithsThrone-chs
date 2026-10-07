@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -91,7 +91,7 @@
 	<bookIconName>ferreticon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Playful Ferrets</bookName>
+	<bookName><![CDATA[调皮之貂]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -104,38 +104,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[ferret-morph]]></name>
-			<namePlural><![CDATA[ferret-morphs]]></namePlural>
-			<singularMaleName><![CDATA[ferret-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[ferret-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[ferret-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[ferret-girls]]></pluralFemaleName>
+			<name><![CDATA[貂化形]]></name>
+			<namePlural><![CDATA[貂化形]]></namePlural>
+			<singularMaleName><![CDATA[貂男]]></singularMaleName>
+			<singularFemaleName><![CDATA[貂女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[貂男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[貂女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic ferret, known as a 'ferret-morph' when bipedal, and a 'ferrettaur' when the lower body is that of a typically-oversized feral ferret.]]></description>
+	<description><![CDATA[一种人形的雪貂，当下肢为双足时称为“貂化形”，而下肢呈现出经典大型雪貂兽态时称为“半貂人”。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[vallug]]></name>
-			<namePlural><![CDATA[vallug]]></namePlural>
-			<singularMaleName><![CDATA[vallug]]></singularMaleName>
-			<singularFemaleName><![CDATA[vallug]]></singularFemaleName>
-			<pluralMaleName><![CDATA[vallug]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[vallug]]></pluralFemaleName>
+			<name><![CDATA[瓦卢格]]></name>
+			<namePlural><![CDATA[瓦卢格]]></namePlural>
+			<singularMaleName><![CDATA[瓦卢格]]></singularMaleName>
+			<singularFemaleName><![CDATA[瓦卢格]]></singularFemaleName>
+			<pluralMaleName><![CDATA[瓦卢格]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[瓦卢格]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[ferret]]></feralName>
-		<feralNamePlural><![CDATA[ferrets]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[ferret]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[ferret]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[ferrets]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[ferrets]]></feralPluralFemaleName>
+		<feralName><![CDATA[貂]]></feralName>
+		<feralNamePlural><![CDATA[貂]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[貂]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[貂]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[貂]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[貂]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -166,7 +166,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] ferret-like body is very flexible and quick. Once fixated on something, [npc.she] [npc.verb(gain)] the primal urge find out everything there is to know about it.
+		[npc.NamePos]貂一般的躯体柔软灵活，迅捷轻盈。一旦对某事产生兴趣，[npc.she]会生发出追寻一切相关信息的原始冲动。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

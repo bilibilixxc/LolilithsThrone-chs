@@ -675,7 +675,7 @@ public class Sex {
 			sexSB.append(Main.sex.getInitialSexManager().getPublicSexStartingDescription());
 		}
 
-		sexSB.append("<p style='text-align:center;'><b>Starting Position:</b> <b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>"+sexManager.getPosition().getName()+"</b><br/>"
+		sexSB.append("<p style='text-align:center;'><b>起始位置：</b><b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>"+sexManager.getPosition().getName()+"</b><br/>"
 				+"<i><b>"+sexManager.getPosition().getDescription(Main.sex.getAllOccupiedSlots(false))+"</b></i></p>");
 		
 		sexSB.append(calculateWetAreas(true));
@@ -696,66 +696,66 @@ public class Sex {
 				switch(immobilisationType) {
 					case CHAINS:
 					case ROPE:
-						sexSB.append("Having been securely bound with "+(immobilisationType==ImmobilisationType.CHAINS?"chains":"ropes")+", ");
+						sexSB.append("已经被"+(immobilisationType==ImmobilisationType.CHAINS?"锁链":"绳索")+"结实地绑缚住了，");
 						sexSB.append(Util.stringsToStringList(names, false));
 						if(names.size()>1 || immobilisedCharacters.contains(Main.game.getPlayer())) {
-							sexSB.append(" are");
+							sexSB.append("");
 						} else {
-							sexSB.append(" is");
+							sexSB.append("");
 						}
-						sexSB.append(" unable to move!");
+						sexSB.append("动弹不得！");
 						break;
 					case STOCKS:
-						sexSB.append("Having been securely locked into a set of stocks, ");
+						sexSB.append("被锁在一套颈手枷中，");
 						sexSB.append(Util.stringsToStringList(names, false));
 						if(names.size()>1 || immobilisedCharacters.contains(Main.game.getPlayer())) {
-							sexSB.append(" are");
+							sexSB.append("");
 						} else {
-							sexSB.append(" is");
+							sexSB.append("");
 						}
-						sexSB.append(" unable to move!");
+						sexSB.append("动弹不得！");
 						break;
 					case COMMAND:
-						sexSB.append("Having been ordered to do so, ");
+						sexSB.append("奉命行事，");
 						sexSB.append(Util.stringsToStringList(names, false));
 						if(names.size()>1 || immobilisedCharacters.contains(Main.game.getPlayer())) {
-							sexSB.append(" are");
+							sexSB.append("");
 						} else {
-							sexSB.append(" is");
+							sexSB.append("");
 						}
-						sexSB.append(" remaining frozen in place!");
+						sexSB.append("仍被冻结在原地！");
 						break;
 					case SLEEP:
-						sexSB.append("As ");
+						sexSB.append("由于");
 						if(immobilisedCharacters.contains(Main.game.getPlayer())) {
-							sexSB.append(" you are deep sleepers, ");
+							sexSB.append("你睡得很深，");
 						} else if(names.size()>1) {
-							sexSB.append(" they are deep sleepers, ");
+							sexSB.append("他们睡得很深，");
 						} else {
-							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next(), "[npc.sheIs] a deep sleeper, "));
+							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next(), "[npc.sheIs]是一个深度睡眠者，"));
 						}
 						sexSB.append(Util.stringsToStringList(names, false));
 						if(names.size()>1) {
-							sexSB.append(" remain");
+							sexSB.append("保持");
 						} else {
-							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next()," [npc.verb(remain)]"));
+							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next(),"保持"));
 						}
-						sexSB.append(" asleep!");
+						sexSB.append("睡着了！");
 						sexSB.append("<br/>");
 						if(immobilisedCharacters.contains(Main.game.getPlayer())) {
-							sexSB.append("You ");
+							sexSB.append("你");
 						} else if(names.size()>1) {
-							sexSB.append("They ");
+							sexSB.append("他们");
 						} else {
-							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next(), "[npc.She] "));
+							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next(), "[npc.She]"));
 						}
-						sexSB.append("will wake up if any dominant pace is not gentle, or if");
+						sexSB.append("会在主导者不处于温柔状态时醒来，或者如果");
 						if(immobilisedCharacters.contains(Main.game.getPlayer())) {
-							sexSB.append(" your throats are penetrated!");
+							sexSB.append("你的喉咙被插入了！");
 						} else if(names.size()>1) {
-							sexSB.append(" their throats are penetrated!");
+							sexSB.append("他们的喉咙被插入也会醒来！");
 						} else {
-							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next(), " [npc.her] throat is penetrated!"));
+							sexSB.append(UtilText.parse(immobilisedCharacters.iterator().next(), "[npc.her]喉咙被插入也会醒来！"));
 						}
 						break;
 					case COCOON:
@@ -921,7 +921,7 @@ public class Sex {
 				}
 				if(!sexManager.isCharacterStartNaked(character)) {
 					sexSB.append("<p style='text-align:center;'>"
-									+ "[style.italicsSex(You quickly strip off all of your clothes!)]"
+									+ "[style.italicsSex(你利落地扒掉了自己所有的衣服！)]"
 								+ "</p>");
 				}
 				
@@ -950,7 +950,7 @@ public class Sex {
 				}
 				if(anyClothingStripped) {
 					sexSB.append("<p style='text-align:center;'>"
-									+ UtilText.parse(character, "[style.italicsSex(You quickly strip off all of [npc.namePos] clothes!)]")
+									+ UtilText.parse(character, "[style.italicsSex(你利落地扒掉了[npc.namePos]所有的衣服！)]")
 								+ "</p>");
 				}
 			}
@@ -1246,33 +1246,33 @@ public class Sex {
 
 	private static String getStretchInstantRecoveryDescription(boolean plural, String name) {
 		return "<p style='text-align:center;'><i>"
-					+ "[npc.NamePos] [style.italicsPlasticity(stretched)] "+name+" quickly recover"+(plural?"":"s")+" from "+(plural?"their":"its")+" ordeal, [style.italicsExcellent(instantly regaining all of "+(plural?"their":"its")+" tightness)]!"
+					+ "[npc.NamePos][style.italicsPlasticity(被扩张的)]"+name+"迅速从摧残中恢复，[style.italicsExcellent(立刻恢复至原有的紧致度)]！"
 				+ "</i></p>";
 	}
 	
 	private static String getStretchNoRecoveryDescription(boolean plural, String name, Capacity capacity) {
 		return "<p style='text-align:center;'><i>"
-					+ "[npc.NamePos] "+name+" "+(plural?"have":"has")+" been"
-						+ " [style.italicsTerrible(permanently)] [style.italicsPlasticity(stretched)] into being"
-						+ " <span style='color:"+capacity.getColour().toWebHexString()+";'>"+ capacity.getDescriptor() +"</span>!"
+					+ "[npc.NamePos]的"+name+"被"
+						+ "[style.italicsTerrible(永久)][style.italicsPlasticity(扩张)]至"
+						+ "<span style='color:"+capacity.getColour().toWebHexString()+";'>"+ capacity.getDescriptor() +"</span>！"
 				+ "</i></p>";
 	}
 	
 	private static String getStretchPartialRecoveryDescription(boolean plural, String name, OrificeElasticity elasticity, Capacity capacityRaw, Capacity capacityStretched) {
 		return "<p style='text-align:center;'><i>"
-					+ "[npc.NamePos] "+ elasticity.getDescriptor()+" [style.italicsAsshole("+name+")] "+(plural?"have":"has")+" been [style.italicsPlasticity(stretched)] from "+(plural?"their":"its")+" ordeal, and "+(plural?"are":"is")+" currently"
-						+ " <span style='color:"+capacityStretched.getColour().toWebHexString()+";'>"+ capacityStretched.getDescriptor() + "</span>!"
-					+ "<br/>"+(plural?"They":"It")+" will recover [style.italicsMinorBad(only some)] of "+(plural?"their":"its")+" original size, eventually tightening back to being"
-						+ " <span style='color:"+capacityRaw.getColour().toWebHexString()+";'>" + capacityRaw.getDescriptor() + "</span>!"
+					+ "[npc.NamePos]"+ elasticity.getDescriptor()+"的[style.italicsAsshole("+name+")]在折磨中[style.italicsPlasticity(扩张)]，目前显得"
+						+ "<span style='color:"+capacityStretched.getColour().toWebHexString()+";'>"+ capacityStretched.getDescriptor() + "</span>！"
+					+ "<br/>只会恢复[style.italicsMinorBad(一部分)]原有的容量，最终收紧为"
+						+ "<span style='color:"+capacityRaw.getColour().toWebHexString()+";'>" + capacityRaw.getDescriptor() + "</span>！"
 				+ "</i></p>";
 	}
 	
 	private static String getStretchFullRecoveryDescription(boolean plural, String name, OrificeElasticity elasticity, Capacity capacityRaw, Capacity capacityStretched) {
 		return "<p style='text-align:center;'><i>"
-				+ "[npc.NamePos] "+ elasticity.getDescriptor()+" [style.italicsAsshole("+name+")] "+(plural?"have":"has")+" been [style.italicsPlasticity(stretched)] from "+(plural?"their":"its")+" ordeal, and "+(plural?"are":"is")+" currently"
-					+ " <span style='color:"+capacityStretched.getColour().toWebHexString()+";'>"+ capacityStretched.getDescriptor() + "</span>!"
-				+ "<br/>"+(plural?"They":"It")+" will recover [style.italicsMinorGood(all)] of "+(plural?"their":"its")+" original size, eventually tightening back to being"
-					+ " <span style='color:"+capacityRaw.getColour().toWebHexString()+";'>" + capacityRaw.getDescriptor() + "</span>!"
+				+ "[npc.NamePos]"+ elasticity.getDescriptor()+"的[style.italicsAsshole("+name+")]在折磨中[style.italicsPlasticity(扩张)]，目前显得"
+					+ "<span style='color:"+capacityStretched.getColour().toWebHexString()+";'>"+ capacityStretched.getDescriptor() + "</span>！"
+				+ "<br/>会恢复[style.italicsMinorGood(所有)]原有的容量，最终收紧为"
+					+ "<span style='color:"+capacityRaw.getColour().toWebHexString()+";'>" + capacityRaw.getDescriptor() + "</span>！"
 			+ "</i></p>";
 	}
 	
@@ -1283,11 +1283,11 @@ public class Sex {
 		if(participant.getAssRawCapacityValue() != participant.getAssStretchedCapacity() && areasStretched.get(participant).contains(SexAreaOrifice.ANUS)) {
 			if(participant.getAssPlasticity() == OrificePlasticity.ZERO_RUBBERY){
 				participant.setAssStretchedCapacity(participant.getAssRawCapacityValue());
-				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsAsshole(asshole)]"));
+				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsAsshole(肛门)]"));
 				
 			} else if(participant.getAssPlasticity().getCapacityIncreaseModifier()>=1){
 				participant.setAssCapacity(participant.getAssStretchedCapacity(), true);
-				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsAsshole(asshole)]", Capacity.getCapacityFromValue(participant.getAssRawCapacityValue())));
+				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsAsshole(肛门)]", Capacity.getCapacityFromValue(participant.getAssRawCapacityValue())));
 				
 			} else {
 				// Increment core capacity by the Plasticity's capacityIncreaseModifier:
@@ -1295,11 +1295,11 @@ public class Sex {
 
 				if(participant.getAssPlasticity().getCapacityIncreaseModifier()>0) {
 					sb.append(getStretchPartialRecoveryDescription(
-							false, "[style.italicsAsshole(asshole)]", participant.getAssElasticity(), Capacity.getCapacityFromValue(participant.getAssRawCapacityValue()), Capacity.getCapacityFromValue(participant.getAssStretchedCapacity())));
+							false, "[style.italicsAsshole(肛门)]", participant.getAssElasticity(), Capacity.getCapacityFromValue(participant.getAssRawCapacityValue()), Capacity.getCapacityFromValue(participant.getAssStretchedCapacity())));
 					
 				} else {
 					sb.append(getStretchFullRecoveryDescription(
-							false, "[style.italicsAsshole(asshole)]", participant.getAssElasticity(), Capacity.getCapacityFromValue(participant.getAssRawCapacityValue()), Capacity.getCapacityFromValue(participant.getAssStretchedCapacity())));
+							false, "[style.italicsAsshole(肛门)]", participant.getAssElasticity(), Capacity.getCapacityFromValue(participant.getAssRawCapacityValue()), Capacity.getCapacityFromValue(participant.getAssStretchedCapacity())));
 				}
 			}
 		}
@@ -1307,11 +1307,11 @@ public class Sex {
 		if(participant.getVaginaRawCapacityValue() != participant.getVaginaStretchedCapacity() && areasStretched.get(participant).contains(SexAreaOrifice.VAGINA)) {
 			if(participant.getVaginaPlasticity() == OrificePlasticity.ZERO_RUBBERY){
 				participant.setVaginaStretchedCapacity(participant.getVaginaRawCapacityValue());
-				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsVagina(pussy)]"));
+				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsVagina(小穴)]"));
 				
 			} else if(participant.getVaginaPlasticity().getCapacityIncreaseModifier()>=1){
 				participant.setVaginaCapacity(participant.getVaginaStretchedCapacity(), true);
-				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsVagina(pussy)]", Capacity.getCapacityFromValue(participant.getAssRawCapacityValue())));
+				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsVagina(小穴)]", Capacity.getCapacityFromValue(participant.getAssRawCapacityValue())));
 				
 			} else {
 				// Increment core capacity by the Plasticity's capacityIncreaseModifier:
@@ -1319,11 +1319,11 @@ public class Sex {
 
 				if(participant.getVaginaPlasticity().getCapacityIncreaseModifier()>0) {
 					sb.append(getStretchPartialRecoveryDescription(
-							false, "[style.italicsVagina(pussy)]", participant.getVaginaElasticity(), Capacity.getCapacityFromValue(participant.getVaginaRawCapacityValue()), Capacity.getCapacityFromValue(participant.getVaginaStretchedCapacity())));
+							false, "[style.italicsVagina(小穴)]", participant.getVaginaElasticity(), Capacity.getCapacityFromValue(participant.getVaginaRawCapacityValue()), Capacity.getCapacityFromValue(participant.getVaginaStretchedCapacity())));
 					
 				} else {
 					sb.append(getStretchFullRecoveryDescription(
-							false, "[style.italicsVagina(pussy)]", participant.getVaginaElasticity(), Capacity.getCapacityFromValue(participant.getVaginaRawCapacityValue()), Capacity.getCapacityFromValue(participant.getVaginaStretchedCapacity())));
+							false, "[style.italicsVagina(小穴)]", participant.getVaginaElasticity(), Capacity.getCapacityFromValue(participant.getVaginaRawCapacityValue()), Capacity.getCapacityFromValue(participant.getVaginaStretchedCapacity())));
 				}
 			}
 		}
@@ -1331,11 +1331,11 @@ public class Sex {
 		if(participant.getFaceRawCapacityValue() != participant.getFaceStretchedCapacity() && areasStretched.get(participant).contains(SexAreaOrifice.MOUTH)) {
 			if(participant.getFacePlasticity() == OrificePlasticity.ZERO_RUBBERY){
 				participant.setFaceStretchedCapacity(participant.getFaceRawCapacityValue());
-				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsMouth(throat)]"));
+				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsMouth(喉咙)]"));
 				
 			} else if(participant.getFacePlasticity().getCapacityIncreaseModifier()>=1){
 				participant.setFaceCapacity(participant.getFaceStretchedCapacity(), true);
-				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsMouth(throat)]", Capacity.getCapacityFromValue(participant.getAssRawCapacityValue())));
+				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsMouth(喉咙)]", Capacity.getCapacityFromValue(participant.getAssRawCapacityValue())));
 				
 			} else {
 				// Increment core capacity by the Plasticity's capacityIncreaseModifier:
@@ -1343,11 +1343,11 @@ public class Sex {
 
 				if(participant.getFacePlasticity().getCapacityIncreaseModifier()>0) {
 					sb.append(getStretchPartialRecoveryDescription(
-							false, "[style.italicsMouth(throat)]", participant.getFaceElasticity(), Capacity.getCapacityFromValue(participant.getFaceRawCapacityValue()), Capacity.getCapacityFromValue(participant.getFaceStretchedCapacity())));
+							false, "[style.italicsMouth(喉咙)]", participant.getFaceElasticity(), Capacity.getCapacityFromValue(participant.getFaceRawCapacityValue()), Capacity.getCapacityFromValue(participant.getFaceStretchedCapacity())));
 					
 				} else {
 					sb.append(getStretchFullRecoveryDescription(
-							false, "[style.italicsMouth(throat)]", participant.getFaceElasticity(), Capacity.getCapacityFromValue(participant.getFaceRawCapacityValue()), Capacity.getCapacityFromValue(participant.getFaceStretchedCapacity())));
+							false, "[style.italicsMouth(喉咙)]", participant.getFaceElasticity(), Capacity.getCapacityFromValue(participant.getFaceRawCapacityValue()), Capacity.getCapacityFromValue(participant.getFaceStretchedCapacity())));
 				}
 			}
 		}
@@ -1355,11 +1355,11 @@ public class Sex {
 		if(participant.getNippleRawCapacityValue() != participant.getNippleStretchedCapacity() && areasStretched.get(participant).contains(SexAreaOrifice.NIPPLE)) {
 			if(participant.getNipplePlasticity() == OrificePlasticity.ZERO_RUBBERY){
 				participant.setNippleStretchedCapacity(participant.getNippleRawCapacityValue());
-				sb.append(getStretchInstantRecoveryDescription(true, "[style.italicsNipples(nipples)]"));
+				sb.append(getStretchInstantRecoveryDescription(true, "[style.italicsNipples(乳头)]"));
 				
 			} else if(participant.getNipplePlasticity().getCapacityIncreaseModifier()>=1){
 				participant.setNippleCapacity(participant.getNippleStretchedCapacity(), true);
-				sb.append(getStretchNoRecoveryDescription(true, "[style.italicsNipples(nipples)]", Capacity.getCapacityFromValue(participant.getNippleRawCapacityValue())));
+				sb.append(getStretchNoRecoveryDescription(true, "[style.italicsNipples(乳头)]", Capacity.getCapacityFromValue(participant.getNippleRawCapacityValue())));
 				
 			} else {
 				// Increment core capacity by the Plasticity's capacityIncreaseModifier:
@@ -1367,11 +1367,11 @@ public class Sex {
 
 				if(participant.getNipplePlasticity().getCapacityIncreaseModifier()>0) {
 					sb.append(getStretchPartialRecoveryDescription(
-							true, "[style.italicsNipples(nipples)]", participant.getNippleElasticity(), Capacity.getCapacityFromValue(participant.getNippleRawCapacityValue()), Capacity.getCapacityFromValue(participant.getNippleStretchedCapacity())));
+							true, "[style.italicsNipples(乳头)]", participant.getNippleElasticity(), Capacity.getCapacityFromValue(participant.getNippleRawCapacityValue()), Capacity.getCapacityFromValue(participant.getNippleStretchedCapacity())));
 					
 				} else {
 					sb.append(getStretchFullRecoveryDescription(
-							true, "[style.italicsNipples(nipples)]", participant.getNippleElasticity(), Capacity.getCapacityFromValue(participant.getNippleRawCapacityValue()), Capacity.getCapacityFromValue(participant.getNippleStretchedCapacity())));
+							true, "[style.italicsNipples(乳头)]", participant.getNippleElasticity(), Capacity.getCapacityFromValue(participant.getNippleRawCapacityValue()), Capacity.getCapacityFromValue(participant.getNippleStretchedCapacity())));
 				}
 			}
 		}
@@ -1379,11 +1379,11 @@ public class Sex {
 		if(participant.getNippleCrotchRawCapacityValue() != participant.getNippleCrotchStretchedCapacity() && areasStretched.get(participant).contains(SexAreaOrifice.NIPPLE_CROTCH)) {
 			if(participant.getNippleCrotchPlasticity() == OrificePlasticity.ZERO_RUBBERY){
 				participant.setNippleCrotchStretchedCapacity(participant.getNippleCrotchRawCapacityValue());
-				sb.append(getStretchInstantRecoveryDescription(true, "[style.italicsNippleCrotch(crotch-nipples)]"));
+				sb.append(getStretchInstantRecoveryDescription(true, "[style.italicsNippleCrotch(胯乳乳头)]"));
 				
 			} else if(participant.getNippleCrotchPlasticity().getCapacityIncreaseModifier()>=1){
 				participant.setNippleCrotchCapacity(participant.getNippleCrotchStretchedCapacity(), true);
-				sb.append(getStretchNoRecoveryDescription(true, "[style.italicsNippleCrotch(crotch-nipples)]", Capacity.getCapacityFromValue(participant.getNippleCrotchRawCapacityValue())));
+				sb.append(getStretchNoRecoveryDescription(true, "[style.italicsNippleCrotch(胯乳乳头)]", Capacity.getCapacityFromValue(participant.getNippleCrotchRawCapacityValue())));
 				
 			} else {
 				// Increment core capacity by the Plasticity's capacityIncreaseModifier:
@@ -1391,12 +1391,12 @@ public class Sex {
 
 				if(participant.getNippleCrotchPlasticity().getCapacityIncreaseModifier()>0) {
 					sb.append(getStretchPartialRecoveryDescription(
-							true, "[style.italicsNippleCrotch(crotch-nipples)]", participant.getNippleCrotchElasticity(),
+							true, "[style.italicsNippleCrotch(胯乳乳头)]", participant.getNippleCrotchElasticity(),
 							Capacity.getCapacityFromValue(participant.getNippleCrotchRawCapacityValue()), Capacity.getCapacityFromValue(participant.getNippleCrotchStretchedCapacity())));
 					
 				} else {
 					sb.append(getStretchFullRecoveryDescription(
-							true, "[style.italicsNippleCrotch(crotch-nipples)]", participant.getNippleCrotchElasticity(),
+							true, "[style.italicsNippleCrotch(胯乳乳头)]", participant.getNippleCrotchElasticity(),
 							Capacity.getCapacityFromValue(participant.getNippleCrotchRawCapacityValue()), Capacity.getCapacityFromValue(participant.getNippleCrotchStretchedCapacity())));
 				}
 			}
@@ -1405,11 +1405,11 @@ public class Sex {
 		if(participant.getPenisRawCapacityValue() != participant.getPenisStretchedCapacity() && areasStretched.get(participant).contains(SexAreaOrifice.URETHRA_PENIS)) {
 			if(participant.getUrethraPlasticity() == OrificePlasticity.ZERO_RUBBERY){
 				participant.setPenisStretchedCapacity(participant.getPenisRawCapacityValue());
-				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsPenisUrethra(penile urethra)]"));
+				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsPenisUrethra(阴茎尿道)]"));
 				
 			} else if(participant.getUrethraPlasticity().getCapacityIncreaseModifier()>=1){
 				participant.setPenisCapacity(participant.getPenisStretchedCapacity(), true);
-				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsPenisUrethra(penile urethra)]", Capacity.getCapacityFromValue(participant.getPenisRawCapacityValue())));
+				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsPenisUrethra(阴茎尿道)]", Capacity.getCapacityFromValue(participant.getPenisRawCapacityValue())));
 				
 			} else {
 				// Increment core capacity by the Plasticity's capacityIncreaseModifier:
@@ -1417,12 +1417,12 @@ public class Sex {
 
 				if(participant.getUrethraPlasticity().getCapacityIncreaseModifier()>0) {
 					sb.append(getStretchPartialRecoveryDescription(
-							false, "[style.italicsPenisUrethra(penile urethra)]", participant.getUrethraElasticity(),
+							false, "[style.italicsPenisUrethra(阴茎尿道)]", participant.getUrethraElasticity(),
 							Capacity.getCapacityFromValue(participant.getPenisRawCapacityValue()), Capacity.getCapacityFromValue(participant.getPenisStretchedCapacity())));
 					
 				} else {
 					sb.append(getStretchFullRecoveryDescription(
-							false, "[style.italicsPenisUrethra(penile urethra)]", participant.getUrethraElasticity(),
+							false, "[style.italicsPenisUrethra(阴茎尿道)]", participant.getUrethraElasticity(),
 							Capacity.getCapacityFromValue(participant.getPenisRawCapacityValue()), Capacity.getCapacityFromValue(participant.getPenisStretchedCapacity())));
 				}
 			}
@@ -1431,11 +1431,11 @@ public class Sex {
 		if(participant.getVaginaUrethraRawCapacityValue() != participant.getVaginaUrethraStretchedCapacity() && areasStretched.get(participant).contains(SexAreaOrifice.URETHRA_VAGINA)) {
 			if(participant.getVaginaUrethraPlasticity() == OrificePlasticity.ZERO_RUBBERY){
 				participant.setVaginaUrethraStretchedCapacity(participant.getVaginaUrethraRawCapacityValue());
-				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsVaginaUrethra(vaginal urethra)]"));
+				sb.append(getStretchInstantRecoveryDescription(false, "[style.italicsVaginaUrethra(阴道尿道)]"));
 				
 			} else if(participant.getVaginaUrethraPlasticity().getCapacityIncreaseModifier()>=1){
 				participant.setVaginaUrethraCapacity(participant.getVaginaUrethraStretchedCapacity(), true);
-				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsPenisUrethra(vaginal urethra)]", Capacity.getCapacityFromValue(participant.getVaginaUrethraRawCapacityValue())));
+				sb.append(getStretchNoRecoveryDescription(false, "[style.italicsPenisUrethra(阴道尿道)]", Capacity.getCapacityFromValue(participant.getVaginaUrethraRawCapacityValue())));
 				
 			} else {
 				// Increment core capacity by the Plasticity's capacityIncreaseModifier:
@@ -1443,12 +1443,12 @@ public class Sex {
 
 				if(participant.getVaginaUrethraPlasticity().getCapacityIncreaseModifier()>0) {
 					sb.append(getStretchPartialRecoveryDescription(
-							false, "[style.italicsPenisUrethra(vaginal urethra)]", participant.getVaginaUrethraElasticity(),
+							false, "[style.italicsPenisUrethra(阴道尿道)]", participant.getVaginaUrethraElasticity(),
 							Capacity.getCapacityFromValue(participant.getVaginaUrethraRawCapacityValue()), Capacity.getCapacityFromValue(participant.getVaginaUrethraStretchedCapacity())));
 					
 				} else {
 					sb.append(getStretchFullRecoveryDescription(
-							false, "[style.italicsPenisUrethra(vaginal urethra)]", participant.getVaginaUrethraElasticity(),
+							false, "[style.italicsPenisUrethra(阴道尿道)]", participant.getVaginaUrethraElasticity(),
 							Capacity.getCapacityFromValue(participant.getVaginaUrethraRawCapacityValue()), Capacity.getCapacityFromValue(participant.getVaginaUrethraStretchedCapacity())));
 				}
 			}
@@ -1485,21 +1485,21 @@ public class Sex {
 				
 				if(getHeavyLipstickUsedCharacter().contains(participant)) {
 					if(participant.hasItemType(ItemType.MAKEUP_SET)) {
-						endSexSB.append("<p style='text-align:center'><i>Your [style.italicsPinkDeep(heavy layer)] of lipstick has worn off, but you have "
+						endSexSB.append("<p style='text-align:center'><i>你[style.italicsPinkDeep(浓重)]的口红已经淡掉了，但你有"
 								+ ItemType.MAKEUP_SET.getName(true, false)
-								+ ", so you take a few moments to [style.italicsGood(re-apply)] your [style.italicsPinkDeep(heavy layer)] of lipstick.</i></p>");
+								+ "，所以你花了一小会来[style.italicsGood(重涂)][style.italicsPinkDeep(浓重)]的口红。</i></p>");
 					} else {
 						participant.removeHeavyMakeup(BodyCoveringType.MAKEUP_LIPSTICK);
-						endSexSB.append("<p style='text-align:center'><i>Your [style.italicsPinkDeep(heavy layer)] of lipstick has [style.italicsBad(worn off)]!</i></p>");
+						endSexSB.append("<p style='text-align:center'><i>你[style.italicsPinkDeep(浓重)]的口红已经[style.italicsBad(淡掉了)]！</i></p>");
 					}
 				}
 				
 				if((participant.getArousal() > ArousalLevel.THREE_HEATED.getMaximumValue() || Main.sex.getNumberOfDeniedOrgasms(participant)>0) && getNumberOfOrgasms(participant) == 0) {
 					participant.addStatusEffect(StatusEffect.FRUSTRATED_NO_ORGASM, (240*60)+(postSexDialogue.getSecondsPassed()));
 					if(Main.sex.getNumberOfDeniedOrgasms(participant)>0) {
-						endSexSB.append("<p style='text-align:center'>[style.boldArcane(After being denied your orgasm, you're left feeling frustrated and horny!)]</p>");
+						endSexSB.append("<p style='text-align:center'>[style.boldArcane(性高潮被拒绝，令你心中只余不满与饥渴！)]</p>");
 					} else {
-						endSexSB.append("<p style='text-align:center'>[style.boldArcane(After stopping so close to the edge, you're left feeling frustrated and horny!)]</p>");
+						endSexSB.append("<p style='text-align:center'>[style.boldArcane(在高潮的边际止步，令你心中只余不满与饥渴！)]</p>");
 					}
 				}
 				if(getNumberOfOrgasms(participant) > 0
@@ -1508,8 +1508,8 @@ public class Sex {
 					if(participant.hasStatusEffect(StatusEffect.RECOVERING_AURA)) {
 						int orgasmCount = Main.sex.getNumberOfOrgasms(participant);
 						endSexSB.append("<div class='container-full-width' style='text-align:center;'>"
-								+ "<i>Your arcane aura is still strengthened from a previous sexual encounter,"
-									+ " so [style.italicsBad(you don't receive any essences)] from your [style.colourSex("+(orgasmCount==1?"single orgasm":Util.intToString(orgasmCount)+" orgasms")+")]!</i><br/>"
+								+ "<i>你的奥术灵气仍因近期的性行为而增强着，"
+									+ "因此未能从你的[style.colourSex("+(orgasmCount==1?"单次高潮":Util.intToString(orgasmCount)+"次高潮")+")][style.italicsBad(中收集到精华)]！</i><br/>"
 							+ "</div>");
 						
 					} else {
@@ -1519,13 +1519,13 @@ public class Sex {
 								if(Main.sex.isMasturbation()) {
 									endSexSB.append(
 										"<p><i>"
-											+ "As you stop masturbating, you suddenly become aware of a strange, shimmering pink glow that's started to materialise around your body,"
-												+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-											+ " Quickly realising that you're somehow able to see your own arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-											+ " Just as you think that it can't get any brighter, your aura suddenly leaps back into your body, and you find yourself sharply inhaling as you feel it gaining strength."
+											+ "你刚停止自慰，就意识到你周身闪烁着一股奇异的粉红色光芒，"
+												+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+											+ "你很快就明白过来，你不知为何能够看到自己的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+											+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回你的身体里，你感觉到它的力量在增强，不由得开始剧烈吸气。"
 										+ "</i></p>"
 										+ "<p><i>"
-											+ "You think that it would probably be best to go and ask Lilaya about what just happened..."
+											+ "你觉得最好去问问莉莱雅刚才发生的事……"
 										+ "</i></p>"
 										+(!((PlayerCharacter) participant).hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
 												?((PlayerCharacter) participant).startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
@@ -1533,13 +1533,13 @@ public class Sex {
 								} else if(Main.sex.isSpectator(Main.game.getPlayer())) {
 									endSexSB.append(
 											"<p><i>"
-												+ "As you stop watching the sex scene, you suddenly become aware of a strange, shimmering pink glow that's started to materialise around your body,"
-													+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-												+ " Quickly realising that you're somehow able to see your own arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-												+ " Just as you think that it can't get any brighter, your aura suddenly leaps back into your body, and you find yourself sharply inhaling as you feel it gaining strength."
+												+ "你刚停止观看性爱场景，就意识到你周身闪烁着一股奇异的粉红色光芒，"
+													+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+												+ "你很快就明白过来，你不知为何能够看到自己的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+												+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回你的身体里，你感觉到它的力量在增强，不由得开始剧烈吸气。"
 											+ "</i></p>"
 											+ "<p><i>"
-												+ "You think that it would probably be best to go and ask Lilaya about what just happened..."
+												+ "你觉得最好去问问莉莱雅刚才发生的事……"
 											+ "</i></p>"
 											+(!((PlayerCharacter) participant).hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
 													?((PlayerCharacter) participant).startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
@@ -1548,14 +1548,14 @@ public class Sex {
 									endSexSB.append(
 											UtilText.parse(Main.sex.getTargetedPartner(Main.game.getPlayer()),
 											"<p><i>"
-												+ "As you disentangle yourself from [npc.name], you suddenly become aware of a strange, shimmering pink glow that's started to materialise around your body,"
-													+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-												+ " Quickly realising that you're somehow able to see your own arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-												+ " Just as you think that it can't get any brighter, your aura suddenly leaps back into your body, and you find yourself sharply inhaling as you feel it gaining strength."
+												+ "你刚从[npc.Name]那里解脱出来，就意识到你周身闪烁着一股奇异的粉红色光芒，"
+													+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+												+ "你很快就明白过来，你不知为何能够看到自己的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+												+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回你的身体里，你感觉到它的力量在增强，不由得开始剧烈吸气。"
 											+ "</i></p>"
 											+ "<p><i>"
-												+ "Looking back over at [npc.name], you see that [npc.she] seems completely oblivious to what you've just witnessed."
-												+ " You think that it would probably be best to go and ask Lilaya about what just happened..."
+												+ "你又回头看向[npc.name]，发现[npc.she]似乎完全没有看到你刚才目睹的一切。"
+												+ "你觉得最好去问问莉莱雅刚才发生的事……"
 											+ "</i></p>"
 											+(!((PlayerCharacter) participant).hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
 													?((PlayerCharacter) participant).startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)
@@ -1565,37 +1565,37 @@ public class Sex {
 							} else {
 								if(Main.sex.isMasturbation()) {
 									endSexSB.append("<p><i>"
-											+ "As you stop masturbating, you suddenly become aware of a strange, shimmering pink glow that's started to materialise around your body,"
-												+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-											+ " Quickly realising that you're somehow able to see your own arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-											+ " Just as you think that it can't get any brighter, your aura suddenly leaps back into your body, and you find yourself sharply inhaling as you feel it gaining strength."
+											+ "你刚停止自慰，就意识到你周身闪烁着一股奇异的粉红色光芒，"
+												+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+											+ "你很快就明白过来，你不知为何能够看到自己的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+											+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回你的身体里，你感觉到它的力量在增强，不由得开始剧烈吸气。"
 										+ "</i></p>"
 										+ "<p><i>"
-											+ "You suddenly remember what Lilaya told you about absorbing essences, and how it's absolutely harmless for both parties involved, and breathe a sigh of relief..."
+											+ "你忽然回忆起莉莱雅告诉过你有关吸收精华的事情，而且这种行为对双方都没有任何损害，这才长长的吁了一口气……"
 										+ "</i></p>");
 								} else if(Main.sex.isSpectator(Main.game.getPlayer())) {
 									endSexSB.append(
 											"<p><i>"
-												+ "As you stop watching the sex scene, you suddenly become aware of a strange, shimmering pink glow that's started to materialise around your body,"
-													+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-												+ " Quickly realising that you're somehow able to see your own arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-												+ " Just as you think that it can't get any brighter, your aura suddenly leaps back into your body, and you find yourself sharply inhaling as you feel it gaining strength."
+												+ "你刚停止观看性爱场景，就意识到你周身闪烁着一股奇异的粉红色光芒，"
+													+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+												+ "你很快就明白过来，你不知为何能够看到自己的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+												+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回你的身体里，你感觉到它的力量在增强，不由得开始剧烈吸气。"
 											+ "</i></p>"
 											+ "<p><i>"
-												+ "You suddenly remember what Lilaya told you about absorbing essences, and how it's absolutely harmless for both parties involved, and breathe a sigh of relief..."
+												+ "你忽然回忆起莉莱雅告诉过你有关吸收精华的事情，而且这种行为对双方都没有任何损害，这才长长的吁了一口气……"
 											+ "</i></p>");
 								} else {
 									endSexSB.append(
 											UtilText.parse(Main.sex.getTargetedPartner(Main.game.getPlayer()),
 											"<p><i>"
-												+ "As you disentangle yourself from [npc.name], you suddenly become aware of a strange, shimmering pink glow that's started to materialise around your body,"
-													+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-												+ " Quickly realising that you're somehow able to see your own arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-												+ " Just as you think that it can't get any brighter, your aura suddenly leaps back into your body, and you find yourself sharply inhaling as you feel it gaining strength."
+												+ "你刚从[npc.Name]那里解脱出来，就意识到你周身闪烁着一股奇异的粉红色光芒，"
+													+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+												+ "你很快就明白过来，你不知为何能够看到自己的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+												+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回你的身体里，你感觉到它的力量在增强，不由得开始剧烈吸气。"
 											+ "</i></p>"
 											+ "<p><i>"
-												+ "Looking back over at [npc.name], you see that [npc.she] seems completely oblivious to what you've just witnessed."
-												+ " You suddenly remember what Lilaya told you about absorbing essences, and how it's absolutely harmless for both parties involved, and breathe a sigh of relief..."
+												+ "你又回头看向[npc.name]，发现[npc.she]似乎完全没有看到你刚才目睹的一切。"
+												+ "你忽然回忆起莉莱雅告诉过你有关吸收精华的事情，而且这种行为对双方都没有任何损害，这才长长的吁了一口气……"
 											+ "</i></p>"));
 								}
 							}
@@ -1604,7 +1604,7 @@ public class Sex {
 						int essences = getEssenceGeneration(participant);
 						essences = Math.round(essences * (ModProps.essenceMultiplier * 0.01f));
 						endSexSB.append("<div class='container-full-width' style='text-align:center;'>"
-											+ "<i>Your aura absorbs the "+(essences==1?"arcane essence":"arcane essences")+" generated by your [style.colourSex("+(orgasmCount==1?"single orgasm":Util.intToString(orgasmCount)+" orgasms")+")]!</i><br/>"
+											+ "<i>你的灵气吸收了你[style.colourSex("+(orgasmCount==1?"高潮":Util.intToString(orgasmCount)+"次高潮")+")]时产生的奥术精华！</i><br/>"
 											+ Main.game.getPlayer().incrementEssenceCount(essences, true)
 										+ "</div>");
 						
@@ -1626,12 +1626,12 @@ public class Sex {
 
 				if(getHeavyLipstickUsedCharacter().contains(participant)) {
 					if(participant.hasItemType(ItemType.MAKEUP_SET)) {
-						endSexSB.append("<p style='text-align:center'><i>[npc.NamePos] [style.italicsPinkDeep(heavy layer)] of lipstick has worn off, but [npc.she] [npc.has] "
+						endSexSB.append("<p style='text-align:center'><i>[npc.NamePos][style.italicsPinkDeep(浓重)]的口红已经淡掉了，但[npc.she]有"
 								+ ItemType.MAKEUP_SET.getName(true, false)
-								+ ", so [npc.she] [npc.verb(take)] a few moments to [style.italicsGood(reapply)] [npc.her] [style.italicsPinkDeep(heavy layer)] of lipstick.</i></p>");
+								+ "，所以[npc.she]花了一小会来[style.italicsGood(重涂)][style.italicsPinkDeep(浓重)]的口红。</i></p>");
 					} else {
 						participant.removeHeavyMakeup(BodyCoveringType.MAKEUP_LIPSTICK);
-						endSexSB.append("<p style='text-align:center'><i>[npc.NamePos] [style.italicsPinkDeep(heavy layer)] of lipstick has [style.italicsBad(worn off)]!</i></p>");
+						endSexSB.append("<p style='text-align:center'><i>[npc.NamePos][style.italicsPinkDeep(浓重)]的口红已经[style.italicsBad(淡掉了)]！</i></p>");
 					}
 				}
 				
@@ -1639,9 +1639,9 @@ public class Sex {
 				if((participant.getArousal() > ArousalLevel.THREE_HEATED.getMaximumValue() || Main.sex.getNumberOfDeniedOrgasms(participant)>0) && getNumberOfOrgasms(participant) == 0) {
 					participant.addStatusEffect(StatusEffect.FRUSTRATED_NO_ORGASM, (240*60)+(postSexDialogue.getSecondsPassed()));
 					if(Main.sex.getNumberOfDeniedOrgasms(participant)>0) {
-						endSexSB.append("<p style='text-align:center'>[style.boldArcane(After being denied [npc.her] orgasm, [npc.name] is left feeling frustrated and horny!)]</p>");
+						endSexSB.append("<p style='text-align:center'>[style.boldArcane(性高潮被拒绝，令[npc.Name]心中只余不满与饥渴！)]</p>");
 					} else {
-						endSexSB.append("<p style='text-align:center'>[style.boldArcane(After stopping so close to the edge, [npc.name] is left feeling frustrated and horny!)]</p>");
+						endSexSB.append("<p style='text-align:center'>[style.boldArcane(在高潮的边际止步，令[npc.Name]心中只余不满与饥渴！)]</p>");
 					}
 				}
 				if(getNumberOfOrgasms(participant) > 0
@@ -1651,8 +1651,8 @@ public class Sex {
 
 						int orgasmCount = Main.sex.getNumberOfOrgasms(participant);
 						endSexSB.append("<div class='container-full-width' style='text-align:center;'>"
-								+ "<i>[npc.NamePos] arcane aura is still strengthened from a previous sexual encounter,"
-									+ " so [style.italicsBad(you don't receive any essences)] from [npc.her] [style.colourSex("+(orgasmCount==1?"single orgasm":Util.intToString(orgasmCount)+" orgasms")+")]!</i><br/>"
+								+ "<i>[npc.NamePos]的奥术灵气仍因近期的性行为而增强着，"
+									+ "因此未能从[npc.her]的[style.colourSex("+(orgasmCount==1?"单次高潮":Util.intToString(orgasmCount)+"次高潮")+")][style.italicsBad(中收集到精华)]！</i><br/>"
 							+ "</div>");
 						
 					} else {
@@ -1664,17 +1664,17 @@ public class Sex {
 											UtilText.parse(participant,
 											"<p><i>"
 												+ (Main.sex.isSpectator(Main.game.getPlayer())
-														?"Just as you begin to look away from [npc.name],"
-														:"As you disentangle yourself from [npc.name],")
-													+ " you suddenly become aware of a strange, shimmering pink glow that's started to materialise around [npc.her] body,"
-													+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-												+ " Quickly realising that you're somehow able to see [npc.namePos] arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-												+ " Just as you think that it can't get any brighter, [npc.her] aura suddenly leaps back into [npc.her] body, but as it does so, a single shard breaks off and flies towards you."
-												+ " Unable to dodge in time, you find yourself sharply inhaling as the small piece of [npc.namePos] aura shoots into your chest."
+														?"你刚把目光从[npc.name]身上移开，"
+														:"你刚从[npc.name]那里解脱出来，")
+													+ "就意识到[npc.her]周身闪烁着一股奇异的粉红色光芒，"
+													+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+												+ "你很快就明白过来，你不知为何能够看到[npc.namePos]的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+												+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回[npc.her]身体里，就在同一时间，一片灵气碎片脱落下来并飞向你。"
+												+ "没能在第一时间躲开，[npc.namePos]的灵气小碎片射入了你的胸口，你不由得开始剧烈吸气。"
 											+ "</i></p>"
 											+ "<p><i>"
-												+ "Alarmed at what's just happened, you look back over at [npc.name], only to see that [npc.she] seems completely oblivious to what you've just witnessed."
-												+ " You think that it would probably be best to go and ask Lilaya about what just happened..."
+												+ "对刚才发生的事情感到震惊，你又回头看向[npc.name]，发现[npc.she]似乎完全没有看到你刚才目睹的一切。"
+												+ "你觉得最好去问问莉莱雅刚才发生的事……"
 											+ "</i></p>"
 											+(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)?Main.game.getPlayer().startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY):"")));
 									
@@ -1683,17 +1683,17 @@ public class Sex {
 											UtilText.parse(participant,
 											"<p><i>"
 												+ (Main.sex.isSpectator(Main.game.getPlayer())
-														?"Just as you begin to look away from [npc.name],"
-														:"As you disentangle yourself from [npc.name],")
-												+" you suddenly become aware of a strange, shimmering pink glow that's started to materialise around [npc.her] body,"
-													+ " just like the one you saw in Lilaya's lab when she ran her tests on you the first time you met her."
-												+ " Quickly realising that you're somehow able to see [npc.namePos] arcane aura, you watch, fascinated, as it rapidly increases in luminosity."
-												+ " Just as you think that it can't get any brighter, [npc.her] aura suddenly leaps back into [npc.her] body, but as it does so, a single shard breaks off and flies towards you."
-												+ " Unable to dodge in time, you find yourself sharply inhaling as the small piece of [npc.namePos] aura shoots into your chest."
+														?"你刚把目光从[npc.name]身上移开，"
+														:"你刚从[npc.name]那里解脱出来，")
+												+ "就意识到[npc.her]周身闪烁着一股奇异的粉红色光芒，"
+													+ "就像你在莉莱雅实验室进行首次测试时出现的场景那样。"
+												+ "你很快就明白过来，你不知为何能够看到[npc.namePos]的奥术灵气了，于是着迷了似的，直勾勾地着看它快速变亮。"
+												+ "就在你认为灵气的亮度到达极限的时候，它猛然冲回[npc.her]身体里，就在同一时间，一片灵气碎片脱落下来并飞向你。"
+												+ "没能在第一时间躲开，[npc.namePos]的灵气小碎片射入了你的胸口，你不由得开始剧烈吸气。"
 											+ "</i></p>"
 											+ "<p><i>"
-												+ "Alarmed at what's just happened, you look back over at [npc.name], only to see that [npc.she] seems completely oblivious to what you've just witnessed."
-												+ " You suddenly remember what Lilaya told you about absorbing essences, and how it's absolutely harmless for both parties involved, and breathe a sigh of relief..."
+												+ "对刚才发生的事情感到震惊，你又回头看向[npc.name]，发现[npc.she]似乎完全没有看到你刚才目睹的一切。"
+												+ "你忽然回忆起莉莱雅告诉过你有关吸收精华的事情，而且这种行为对双方都没有任何损害，这才长长的吁了一口气……"
 											+ "</i></p>"));
 								}
 								auraEventTriggered = true;
@@ -1703,8 +1703,8 @@ public class Sex {
 						int orgasmCount = Main.sex.getNumberOfOrgasms(participant);
 						int essences = getEssenceGeneration(participant);
 						endSexSB.append("<div class='container-full-width' style='text-align:center;'>"
-											+ "<i>Your aura absorbs the "+(essences==1?"arcane essence":"arcane essences")
-												+" generated by [npc.namePos] [style.colourSex("+(orgasmCount==1?"single orgasm":Util.intToString(orgasmCount)+" orgasms")+")]!</i><br/>"
+											+ "<i>你的灵气吸收了奥术精华"
+												+"，精华产生于[npc.namePos]的[style.colourSex("+(orgasmCount==1?"单次高潮":Util.intToString(orgasmCount)+"次高潮")+")]！</i><br/>"
 											+ Main.game.getPlayer().incrementEssenceCount(essences, true)
 										+ "</div>");
 					}
@@ -1720,25 +1720,25 @@ public class Sex {
 					if(Main.sex.getAllParticipants().contains(Main.game.getPlayer())) {
 						if((Main.sex.getSexPace(participant)==SexPace.SUB_RESISTING && !participant.getFetishDesire(Fetish.FETISH_NON_CON_SUB).isPositive())) {
 							for(GameCharacter domParticipant : Main.sex.getDominantParticipants(false).keySet()) {
-								endSexSB.append(participant.incrementAffection(domParticipant, -200, "[npc.Name] now despises [npc2.name] for raping [npc.herHim]!"));
+								endSexSB.append(participant.incrementAffection(domParticipant, -200, "现在[npc.Name]十分鄙视[npc2.name]，因为[npc2.name]强暴了[npc.herHim]！"));
 							}
 							
 						} else if(characterWhoEndedSex!=participant) {
 							// Affection loss only applies towards who ended sex early:
 							if(participant.getFetishDesire(Fetish.FETISH_DENIAL_SELF).isPositive()) {
 								if(participant.isAbleToOrgasm() && Main.sex.getNumberOfDeniedOrgasms(participant)==0 && Main.sex.getNumberOfOrgasms(participant)==0) {
-									endSexSB.append(participant.incrementAffection(characterWhoEndedSex, -5f, "[npc.Name] is upset at [npc2.name] for failing to give or deny [npc.herHim] a single orgasm."));
+									endSexSB.append(participant.incrementAffection(characterWhoEndedSex, -5f, "[npc.Name]对[npc2.name]十分失望，因为[npc2.name]没能或拒绝给[npc.herHim]一次高潮。"));
 								}
 								
 							} else {
 								int orgasms = Main.sex.getNumberOfOrgasms(participant);
 								if(Main.sex.getNumberOfOrgasms(participant)==0) {
-									endSexSB.append(participant.incrementAffection(characterWhoEndedSex, -5f, "[npc.Name] is upset at [npc2.name] for failing to give [npc.herHim] a single orgasm."));
+									endSexSB.append(participant.incrementAffection(characterWhoEndedSex, -5f, "[npc.Name]对[npc2.name]十分失望，因为[npc2.name]没能给[npc.herHim]一次高潮。"));
 									
 								} else if(orgasms < participant.getOrgasmsBeforeSatisfied()){
 									endSexSB.append(participant.incrementAffection(characterWhoEndedSex, -2.5f,
-											"[npc.Name] is annoyed at [npc2.name] for only giving [npc.herHim] "+Util.intToString(orgasms)+" orgasm"+(orgasms==1?"":"s")
-												+", when [npc.she] really wanted at least "+Util.intToString(participant.getOrgasmsBeforeSatisfied())+"."));
+											"[npc.Name]对[npc2.name]十分恼火，因为[npc2.name]只让[npc.herHim]经历了"+Util.intToString(orgasms)+"次高潮"
+												+"，而[npc.she]至少想要"+Util.intToString(participant.getOrgasmsBeforeSatisfied())+"次。"));
 								}
 							}
 						}
@@ -1759,7 +1759,7 @@ public class Sex {
 		String s = endSexSB.toString();
 		if(!s.isEmpty()) {
 			endSexDescription ="<p style='text-align:center;'>"
-					+ "<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>End of sex status</b>"
+					+ "<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>性爱状态结束</b>"
 							+ "</p>"
 					+s;
 		} else {
@@ -1834,19 +1834,19 @@ public class Sex {
 				return null;
 			}
 			if(index==0) {
-				return "Misc. Actions";
+				return "其它行为";
 				
 			} else if(index==1) {
-				return "Self Actions";
+				return "自慰行为";
 				
 			} else if(index==2) {
-				return "Sex Actions";
+				return "性动作";
 				
 			} else if(index==3) {
-				return "Positioning";
+				return "姿势";
 				
 			} else if(index==4) {
-				return "Repeat Actions";
+				return "重复行为";
 				
 			} else {
 				return null;
@@ -1905,7 +1905,7 @@ public class Sex {
 							return miscActionsPlayer.get(index).toResponse();
 						}
 						if(index==miscActionsPlayer.size() && !miscActionsPlayer.contains(GenericActions.PLAYER_SKIP_SEX)) {
-							return new Response(GenericActions.PLAYER_SKIP_SEX.getActionTitle(), isMasturbation()?"You cannot use quick sex during masturbation scenes.":"As this is a special sex scene, you cannot skip it!", null);
+							return new Response(GenericActions.PLAYER_SKIP_SEX.getActionTitle(), isMasturbation()?"自慰场景中不能使用快速性爱。":"这是一个特殊的性爱场景，所以无法跳过！", null);
 						}
 						
 					} else {
@@ -1917,7 +1917,7 @@ public class Sex {
 							return miscActionsPlayer.get(i-1).toResponse();
 						}
 						if(i==miscActionsPlayer.size()+1 && !miscActionsPlayer.contains(GenericActions.PLAYER_SKIP_SEX)) {
-							return new Response(GenericActions.PLAYER_SKIP_SEX.getActionTitle(), isMasturbation()?"You cannot use quick sex during masturbation scenes.":"As this is a special sex scene, you cannot skip it!", null);
+							return new Response(GenericActions.PLAYER_SKIP_SEX.getActionTitle(), isMasturbation()?"自慰场景中不能使用快速性爱。":"这是一个特殊的性爱场景，所以无法跳过！", null);
 						}
 					}
 					
@@ -2385,7 +2385,7 @@ public class Sex {
 			}
 		}
 		
-		positionActionsPlayer.sort((a1, a2) -> 
+		positionActionsPlayer.sort((a1, a2) -> true?((a1.getActionType() == a2.getActionType())? (a1.isPositionSwap() == a2.isPositionSwap() ? a1.getActionTitle().compareTo(a2.getActionTitle()) : (a1.isPositionSwap() ? -1 : 1)): (a1.getActionType() == SexActionType.POSITIONING_MENU ? -1 : 1)): 
 		a1.getActionType()==SexActionType.POSITIONING_MENU
 			?a2.getActionType()==SexActionType.POSITIONING_MENU
 				?a1.getActionTitle().compareTo(a2.getActionTitle())
@@ -2420,7 +2420,7 @@ public class Sex {
 													}
 													@Override
 													public String getActionDescription() {
-														return UtilText.parse(character, "Set [npc.name] as the active partner. (You can also do this by clicking on their name in the side bar.)");
+														return UtilText.parse(character, "将[npc.name]切换为主目标。(在侧边栏点击他们的名字也能切换。)");
 													}
 													@Override
 													public String getDescription() {
@@ -2619,7 +2619,7 @@ public class Sex {
 			} else {
 				System.err.println("Warning! Main.sex.getActionsAvailablePartner() is returning null for: "
 						+(Main.sex.getCharacterPerformingAction()==null?"NULL":Main.sex.getCharacterPerformingAction().getId())
-						+", "
+						+"，"
 						+(targetedCharacter==null?"NULL":targetedCharacter.getId()));
 			}
 			
@@ -2888,7 +2888,7 @@ public class Sex {
 						continue;
 					} else if(!condomBrokeAppended) {
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(cumProvider,
-								"<p style='text-align:center;'>[style.boldTerrible([npc.NamePos] condom broke as [npc.she] [npc.was] "+(condomFailure==CondomFailure.EGG_LAYING?"laying [npc.her] eggs":"cumming")+"!)]</p>"));
+								"<p style='text-align:center;'>[style.boldTerrible([npc.NamePos]的避孕套在"+(condomFailure==CondomFailure.EGG_LAYING?"产卵时":"射精时")+"破了！)]</p>"));
 						condomBrokeAppended = true;
 					}
 				}
@@ -2923,15 +2923,15 @@ public class Sex {
 					List<CoverableArea> extraCoverableAreasHit = new ArrayList<>();
 					if(extraDirtySlots>0) {
 						dirtiedSlotsSB.append("<p style='text-align:center;'>[style.boldSex(");
-						dirtiedSlotsSB.append(UtilText.parse(cumProvider, cumTarget, "[npc.Name] [npc.verb(cum)] so much that"));
+						dirtiedSlotsSB.append(UtilText.parse(cumProvider, cumTarget, "[npc.Name]射得太多了"));
 						switch(cumProduction) {
 							case FOUR_LARGE:
 							case FIVE_HUGE:
 							case SIX_EXTREME:
-								dirtiedSlotsSB.append(UtilText.parse(cumProvider, cumTarget, " [npc.her] [npc.cum+] splatters all over [npc2.name]!"));
+								dirtiedSlotsSB.append(UtilText.parse(cumProvider, cumTarget, "[npc.her][npc.cum+]溅满了[npc2.name]的身体！"));
 								break;
 							case SEVEN_MONSTROUS:
-								dirtiedSlotsSB.append(UtilText.parse(cumProvider, cumTarget, " [npc2.nameIsFull] absolutely drenched in [npc.her] [npc.cum+]!"));
+								dirtiedSlotsSB.append(UtilText.parse(cumProvider, cumTarget, "[npc2.nameIsFull]完全浸没在[npc.her][npc.cum+]中！"));
 								break;
 							case THREE_AVERAGE:
 							case TWO_SMALL_AMOUNT:
@@ -3010,7 +3010,7 @@ public class Sex {
 							MilkingRoom room = Main.game.getOccupancyUtil().getMilkingRoom(c.getType(), c.getLocation());
 							room.incrementFluidStored(new FluidStored(Main.sex.getCharacterPerformingAction().getId(), Main.sex.getCharacterPerformingAction().getGirlcum(), squirtAmount), squirtAmount);
 							stringBuilderForAppendingDescriptions.append("<p style='text-align:center; padding:0; margin:0;'>"
-										+ UtilText.parse(Main.sex.getCharacterPerformingAction(), "[style.italicsGirlCum("+Units.fluid(squirtAmount)+" of [npc.namePos] [npc.girlcum] is sucked down into the milking machine's storage vat!)]")
+										+ UtilText.parse(Main.sex.getCharacterPerformingAction(), "[style.italicsGirlCum("+Units.fluid(squirtAmount)+"的[npc.namePos][npc.girlcum]尽数被吸进了吸奶器的储仓中！)]")
 									+ "</p>");
 									
 						} else if(!vaginaClothing.getItemTags().contains(ItemTag.PLUGS_VAGINA)
@@ -3019,7 +3019,7 @@ public class Sex {
 							stringBuilderForAppendingDescriptions.append("<p style='text-align:center;'>");
 								stringBuilderForAppendingDescriptions.append("[style.italicsGirlCum(");
 									stringBuilderForAppendingDescriptions.append(
-											UtilText.parse(Main.sex.getCharacterPerformingAction(), "[npc.NamePos] "+vaginaClothing.getName()+" "+(vaginaClothing.getClothingType().isPlural()?"are":"is")+" dirtied from [npc.her] squirting!"));
+											UtilText.parse(Main.sex.getCharacterPerformingAction(), "[npc.NamePos]的"+vaginaClothing.getName()+"被[npc.her]的潮吹弄脏了！"));
 								stringBuilderForAppendingDescriptions.append(")]");
 							stringBuilderForAppendingDescriptions.append("</p>");
 						}
@@ -3054,14 +3054,14 @@ public class Sex {
 					if(!charactersContactingVagina.isEmpty()) {
 						stringBuilderForAppendingDescriptions.append("<p style='text-align:center; padding:0; margin:0;'>");
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(Main.sex.getCharacterPerformingAction(),
-								"<i>[style.boldSex(Feminine Fertility:)]</i>"));
+								"<i>[style.boldSex(女性生育力：)]</i>"));
 						for(GameCharacter character : charactersContactingVagina) {
 							stringBuilderForAppendingDescriptions.append(UtilText.parse(Main.sex.getCharacterPerformingAction(), character,
-									"<br/><i>[npc.NamePos] orgasm triggers a wave of hot arcane energy that rushes up deep into [npc2.namePos] [npc2.pussy+],"
-									+ " causing [npc2.herHim] to [npc2.verb(let)] out an erotic moan as [npc2.she] [npc2.verb(realise)] that"
+									"<br/><i>[npc.NamePos]的高潮触发了一股炽热的奥术能量波，冲入[npc2.namePos][npc2.pussy+]深处，"
+									+ "引得[npc2.herHim]发出了一阵色情的呻吟"
 									+ (character.isVisiblyPregnant() || character.hasIncubationLitter(SexAreaOrifice.VAGINA)
-											?" if it weren't for the fact that [npc2.her] womb is already occupied, [npc2.she] might have got pregnant from this!"
-											:" [npc2.she] might get pregnant from this!")
+											?"若不是[npc2.her]的子宫已被占用，[npc2.she]或许会因此怀孕！"
+											:"[npc2.she]或许会因此怀孕！")
 									+ "</i>"));
 							stringBuilderForAppendingDescriptions.append(character.rollForPregnancy(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterPerformingAction().getBody(), 1, true, FertilisationType.TRIBBING, Attribute.FERTILITY));
 						}
@@ -3092,7 +3092,7 @@ public class Sex {
 				Main.sex.getCharacterPerformingAction().setArousal(Main.sex.getCharacterPerformingAction().getLust()/2f);
 				Main.sex.getCharacterPerformingAction().addStatusEffect(StatusEffect.FRUSTRATED_NO_ORGASM, (4*60*60)+(postSexDialogue.getSecondsPassed()));
 				stringBuilderForAppendingDescriptions.append(UtilText.parse(Main.sex.getCharacterPerformingAction(),
-						"<p style='text-align:center'>Without producing any cum, [npc.namePos] climax can't be counted as a real orgasm, and makes [npc.name] feel [style.boldBad(frustrated and horny)]!</p>"));
+						"<p style='text-align:center'>因为没能产生任何精液，[npc.namePos]的高潮没法被算作一次真正的高潮，这让[npc.name]感到[style.boldBad(沮丧且欲火中烧)]！</p>"));
 			}
 			
 			// Draining levels:
@@ -3203,31 +3203,31 @@ public class Sex {
 			SexPace finalPace = Main.sex.getSexPace(entry.getKey());
 			if(entry.getValue() != finalPace && !entry.getKey().isPlayer()) {
 				stringBuilderForAppendingDescriptions.append("<p style='text-align:center;'>"
-						+ "<b style='color:"+finalPace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(finalPace.getName())+" Pace</b><br/>");
+						+ "<b style='color:"+finalPace.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(finalPace.getName())+"状态</b><br/>");
 				switch(finalPace) {
 					case DOM_GENTLE:
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(entry.getKey(),
-								"[npc.Name] lets out a soft sigh as [npc.she] calms down a little..."));
+								"[npc.Name]发出柔和的呻吟，稍微冷静下来……"));
 						break;
 					case DOM_NORMAL:
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(entry.getKey(),
-								"[npc.Name] lets out "+(entry.getValue()==SexPace.DOM_GENTLE?"[npc.a_moan+] as [npc.she] starts getting more turned on":"a soft [npc.moan] as [npc.she] calms down a little")+"..."));
+								"[npc.Name]发出"+(entry.getValue()==SexPace.DOM_GENTLE?"[npc.a_moan+]，更加欲火焚身":"柔和的[npc.moan]，稍微冷静下来")+"……"));
 						break;
 					case DOM_ROUGH:
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(entry.getKey(),
-								"[npc.Name] lets out a wild [npc.moan] as [npc.she] finds [npc.herself] filled with lust..."));
+								"[npc.Name]充满了性欲，发出了一声狂野的[npc.moan]……"));
 						break;
 					case SUB_EAGER:
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(entry.getKey(),
-								"[npc.Name] lets out a desperate [npc.moan] as [npc.she] finds [npc.herself] filled with lust..."));
+								"[npc.Name]充满了性欲，发出了一声渴望的[npc.moan]…… "));
 						break;
 					case SUB_NORMAL:
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(entry.getKey(),
-								"[npc.Name] lets out "+(entry.getValue()==SexPace.SUB_RESISTING?"[npc.a_moan+] as [npc.she] starts getting more turned on":"a soft [npc.moan] as [npc.she] calms down a little")+"..."));
+								"[npc.Name]发出"+(entry.getValue()==SexPace.SUB_RESISTING?"[npc.a_moan+]，更加欲火焚身":"柔和的[npc.moan]，稍微冷静下来")+"……"));
 						break;
 					case SUB_RESISTING:
 						stringBuilderForAppendingDescriptions.append(UtilText.parse(entry.getKey(),
-								"[npc.Name] lets out an uncomfortable whine as [npc.she] suddenly finds [npc.herself] not happy with the current situation..."));
+								"[npc.Name]对目前的状态并不满意，发出了不舒服的抱怨声……"));
 						break;
 				}
 				stringBuilderForAppendingDescriptions.append("</p>");
@@ -3239,7 +3239,7 @@ public class Sex {
 				activeCharacter.cleanAllDirtySlots(true);
 				stringBuilderForAppendingDescriptions.append(UtilText.parse(activeCharacter,
 						"<p style='text-align:center;'>"
-							+ "[style.italicsAqua([npc.NamePos] body is quickly cleaned by the flowing water!)]"
+							+ "[style.italicsAqua(流水迅速地清洁了[npc.NamePos]的躯体！)]"
 						+ "</p>"));
 			}
 			if(activeCharacter.getClothingCurrentlyEquipped().stream().anyMatch(c->c.isDirty())) {
@@ -3322,7 +3322,7 @@ public class Sex {
 		dirtiedSlotsSB.append(getDirtyingAreasString(cumProvider, cumTarget, slotsDirtied, forceSlotsPlural, clothingDirtied, forceClothingPlural));
 		if(Main.game.isMuskContentEnabled() && nonClothingAreaDirtied && cumProvider.hasCumModifier(FluidModifier.MUSKY)) {
 			cumTarget.addMuskMarkerCharacter(cumProvider);
-			dirtiedSlotsSB.append("<br/>[style.colourDirty([npc2.NameIsFull] marked by the musky scent of [npc.namePos] cum!)]");
+			dirtiedSlotsSB.append("<br/>[style.colourDirty([npc2.NameIsFull]因为[npc.namePos]的精液而沾染上了浓重的气味！)]");
 		}
 		if(applyFormatting) {
 			dirtiedSlotsSB.append(")]</p>");
@@ -3388,7 +3388,7 @@ public class Sex {
 		dirtiedSlotsSB.append(getDirtyingAreasString(squirtProvider, squirtTarget, slotsDirtied, forceSlotsPlural, clothingDirtied, forceClothingPlural));
 		if(Main.game.isMuskContentEnabled() && nonClothingAreaDirtied && squirtProvider.hasGirlcumModifier(FluidModifier.MUSKY)) {
 			squirtTarget.addMuskMarkerCharacter(squirtProvider);
-			dirtiedSlotsSB.append("<br/>[style.colourDirty([npc2.NameIsFull] marked by the musky scent of [npc.namePos] cum!)]");
+			dirtiedSlotsSB.append("<br/>[style.colourDirty([npc2.NameIsFull]因为[npc.namePos]的精液而沾染上了浓重的气味！)]");
 		}
 		return UtilText.parse(squirtProvider, squirtTarget, dirtiedSlotsSB.toString());
 	}
@@ -3397,22 +3397,22 @@ public class Sex {
 		StringBuilder dirtiedSlotsSB = new StringBuilder();
 		if(!slotsDirtied.isEmpty() || !clothingDirtied.isEmpty()) {
 			if(!slotsDirtied.isEmpty()) {
-				dirtiedSlotsSB.append("[npc2.NamePos] "+Util.stringsToStringList(slotsDirtied, false));
-				dirtiedSlotsSB.append(slotsDirtied.size()==1 && !forceSlotsPlural?" is":" are");
-				dirtiedSlotsSB.append(" dirtied");
+				dirtiedSlotsSB.append("[npc2.NamePos]的"+Util.stringsToStringList(slotsDirtied, false));
+				dirtiedSlotsSB.append(slotsDirtied.size()==1 && !forceSlotsPlural?"":"");
+				dirtiedSlotsSB.append("被弄脏了");
 			}
 			if(!clothingDirtied.isEmpty()) {
 				if(!slotsDirtied.isEmpty()) {
-					dirtiedSlotsSB.append(", as "+(clothingDirtied.size()==1 && !forceClothingPlural?"is":"are")+" [npc2.her] ");
+					dirtiedSlotsSB.append("，还有[npc2.her]的");
 					dirtiedSlotsSB.append(Util.stringsToStringList(clothingDirtied, false));
-					dirtiedSlotsSB.append("!");
+					dirtiedSlotsSB.append("！");
 				} else {
-					dirtiedSlotsSB.append("[npc2.NamePos] ");
+					dirtiedSlotsSB.append("[npc2.NamePos]的");
 					dirtiedSlotsSB.append(Util.stringsToStringList(clothingDirtied, false));
-					dirtiedSlotsSB.append((clothingDirtied.size()==1 && !forceClothingPlural?" is":" are")+" dirtied!");
+					dirtiedSlotsSB.append((clothingDirtied.size()==1 && !forceClothingPlural?"":"")+"被弄脏了！");
 				}
 			} else {
-				dirtiedSlotsSB.append("!");
+				dirtiedSlotsSB.append("！");
 			}
 		}
 		return dirtiedSlotsSB.toString();
@@ -3457,8 +3457,8 @@ public class Sex {
 				exposedSB.append(UtilText.parse(characterBeingExposed,
 						formatCoverableAreaBecomingExposed(
 								(atStartOfSex
-										?"[npc.NamePos] [npc.asshole+] was already exposed before starting sex!"
-										:"[npc.NamePos] [npc.asshole+] is now exposed!")))
+										?"[npc.NamePos][npc.asshole+]在做爱前便露出来了！"
+										:"[npc.NamePos][npc.asshole+]现在露出来了！")))
 						+ (Main.getProperties().fullExposureDescriptions==0 || (Main.getProperties().fullExposureDescriptions==1 && knowsArea)?"":revealReaction)
 						+ formatCoverableAreaGettingWet(getLubricationDescription(characterBeingExposed, SexAreaOrifice.ANUS)));
 				areasExposed.get(characterBeingExposed).add(CoverableArea.ANUS);
@@ -3472,8 +3472,8 @@ public class Sex {
 					exposedSB.append(UtilText.parse(characterBeingExposed,
 							formatCoverableAreaBecomingExposed(
 									(atStartOfSex
-											?"[npc.NamePos] [npc.cock+] was already exposed before starting sex!"
-											:"[npc.NamePos] [npc.cock+] is now exposed!")))
+											?"[npc.NamePos][npc.cock+]在做爱前便露出来了！"
+											:"[npc.NamePos][npc.cock+]现在露出来了！")))
 							+ (Main.getProperties().fullExposureDescriptions==0 || (Main.getProperties().fullExposureDescriptions==1 && knowsArea)?"":revealReaction)
 							+ formatCoverableAreaGettingWet(getLubricationDescription(characterBeingExposed, SexAreaPenetration.PENIS)));
 				}
@@ -3488,8 +3488,8 @@ public class Sex {
 					exposedSB.append(UtilText.parse(characterBeingExposed,
 							formatCoverableAreaBecomingExposed(
 									(atStartOfSex
-											?"[npc.NamePos] [npc.pussy+] was already exposed before starting sex!"
-											:"[npc.NamePos] [npc.pussy+] is now exposed!")))
+											?"[npc.NamePos][npc.pussy+]在做爱前便露出来了！"
+											:"[npc.NamePos][npc.pussy+]现在露出来了！")))
 							+ (Main.getProperties().fullExposureDescriptions==0 || (Main.getProperties().fullExposureDescriptions==1 && knowsArea)?"":revealReaction)
 							+ formatCoverableAreaGettingWet(getLubricationDescription(characterBeingExposed, SexAreaOrifice.VAGINA))
 							+ formatCoverableAreaGettingWet(getLubricationDescription(characterBeingExposed, SexAreaPenetration.CLIT)));
@@ -3498,8 +3498,8 @@ public class Sex {
 					exposedSB.append(UtilText.parse(characterBeingExposed,
 							formatCoverableAreaBecomingExposed(
 									(atStartOfSex
-											?"[npc.NamePos] doll-like mound was already exposed before starting sex!"
-											:"[npc.NamePos] doll-like mound is now exposed!")))
+											?"[npc.NamePos]玩偶似的下体在做爱前便露出来了！"
+											:"[npc.NamePos]玩偶似的下体现在露出来了！")))
 							+ sexManager.getMoundRevealReaction(characterBeingExposed, charactersReacting));
 				}
 				
@@ -3516,8 +3516,8 @@ public class Sex {
 				exposedSB.append(UtilText.parse(characterBeingExposed,
 						formatCoverableAreaBecomingExposed(
 								(atStartOfSex
-										?"[npc.NamePos] [npc.nipples+] were already exposed before starting sex!"
-										:"[npc.NamePos] [npc.nipples+] are now exposed!")))
+										?"[npc.NamePos][npc.nipples+]在做爱前便露出来了！"
+										:"[npc.NamePos][npc.nipples+]现在露出来了！")))
 							+ (Main.getProperties().fullExposureDescriptions==0 || (Main.getProperties().fullExposureDescriptions==1 && knowsArea)?"":revealReaction)
 							+ formatCoverableAreaGettingWet(getLubricationDescription(characterBeingExposed, SexAreaOrifice.NIPPLE)));
 				areasExposed.get(characterBeingExposed).add(CoverableArea.NIPPLES);
@@ -3530,8 +3530,8 @@ public class Sex {
 				exposedSB.append(UtilText.parse(characterBeingExposed,
 						formatCoverableAreaBecomingExposed(
 								(atStartOfSex
-										?"[npc.NamePos] [npc.crotchBoobs+] were already exposed before starting sex!"
-										:"[npc.NamePos] [npc.crotchBoobs+] are now exposed!")))
+										?"[npc.NamePos][npc.crotchBoobs+]在做爱前便露出来了！"
+										:"[npc.NamePos][npc.crotchBoobs+]现在露出来了！")))
 							+ (Main.getProperties().fullExposureDescriptions==0 || (Main.getProperties().fullExposureDescriptions==1 && knowsArea)?"":revealReaction)
 							+ formatCoverableAreaGettingWet(getLubricationDescription(characterBeingExposed, SexAreaOrifice.NIPPLE_CROTCH)));
 				areasExposed.get(characterBeingExposed).add(CoverableArea.BREASTS_CROTCH);
@@ -3625,8 +3625,8 @@ public class Sex {
 				if(lubeSB.length()>0) {
 					if(onSexInit) {
 						wetSB.append(formatCoverableAreaGettingWet(UtilText.parse(character,
-								"Thanks to the <b>[#ITEM_innoxia_pills_lubrication.getName(false)]</b> [npc.sheHas] recently swallowed,"
-								+ " [npc.namePos] orifices instantly get wet, and a thin layer of slippery, odourless liquid seeps out of [npc.her] [npc.skin] to coat [npc.her] entire body in a thin layer of lubricant.")));
+								"多亏了[npc.she]刚吞下去的<b>[#ITEM_innoxia_pills_lubrication.getName(false)]</b>,"
+								+ " [npc.namePos]的腔穴马上开始变湿，并且少量湿滑无味的液体迅速从[npc.her]的[npc.skin]表面渗出，给[npc.she]全身都涂上了薄薄一层润滑液。")));
 					}
 					wetSB.append(lubeSB.toString());
 				}
@@ -3665,7 +3665,7 @@ public class Sex {
 						// Cannot lubricate with self cum or precum via penis through a condom:
 						&& ((lt!=LubricationType.PRECUM && lt!=LubricationType.CUM) || characterArea!=SexAreaPenetration.PENIS || !character.isWearingCondom() || !character.equals(lubricantProvider))) {
 					wetAreas.get(targetCharacter).get(targetArea).get(lubricantProvider).add(lt);
-					lubricationTransferred.add((lubricantProvider==null?"":UtilText.parse(lubricantProvider, "[npc.namePos] "))+lt.getName(lubricantProvider));
+					lubricationTransferred.add((lubricantProvider==null?"":UtilText.parse(lubricantProvider, "[npc.namePos]的"))+lt.getName(lubricantProvider));
 					lastLubricationPlural = lt.isPlural();
 				}
 			}
@@ -3675,9 +3675,9 @@ public class Sex {
 			lubeSB.append(formatCoverableAreaGettingWet(
 					Util.capitaliseSentence(Util.stringsToStringList(lubricationTransferred, false))
 						+(sexInitFinished
-							?" quickly lubricate"+(lubricationTransferred.size()>1 || !lastLubricationPlural?"s ":" ")
-							:" has already lubricated ")
-						+(targetCharacter.isPlayer()?"your ":targetCharacter.getName("the")+"'s ")+targetArea.getName(targetCharacter)+"."));
+							?"迅速浸湿了"+(lubricationTransferred.size()>1 || !lastLubricationPlural?"":"")
+							:"已经充分润滑了")
+						+(targetCharacter.isPlayer()?"你的":targetCharacter.getName("")+"的")+targetArea.getName(targetCharacter)+"。"));
 		}
 		
 		lubricationTransferred.clear();
@@ -3688,7 +3688,7 @@ public class Sex {
 						// Cannot lubricate with self cum or precum via penis through a condom:
 						&& ((lt!=LubricationType.PRECUM && lt!=LubricationType.CUM) || targetArea!=SexAreaPenetration.PENIS || !targetCharacter.isWearingCondom() || !targetCharacter.equals(lubricantProvider))) {
 					wetAreas.get(character).get(characterArea).get(lubricantProvider).add(lt);
-					lubricationTransferred.add((lubricantProvider==null?"":UtilText.parse(lubricantProvider, "[npc.namePos] "))+lt.getName(lubricantProvider));
+					lubricationTransferred.add((lubricantProvider==null?"":UtilText.parse(lubricantProvider, "[npc.namePos]的"))+lt.getName(lubricantProvider));
 					lastLubricationPlural = lt.isPlural();
 				}
 			}
@@ -3698,9 +3698,9 @@ public class Sex {
 			lubeSB.append(formatCoverableAreaGettingWet(
 					Util.capitaliseSentence(Util.stringsToStringList(lubricationTransferred, false))
 						+(sexInitFinished
-							?" quickly lubricate"+(lubricationTransferred.size()>1 || !lastLubricationPlural?"s ":" ")
-							:" has already lubricated ")
-						+(character.isPlayer()?"your ":character.getName("the")+"'s ")+characterArea.getName(character)+"."));
+							?"迅速浸湿了"+(lubricationTransferred.size()>1 || !lastLubricationPlural?"":"")
+							:"已经充分润滑了")
+						+(character.isPlayer()?"你的":character.getName()+"的")+characterArea.getName(character)+"。"));
 		}
 		
 		return lubeSB.toString();
@@ -3719,7 +3719,7 @@ public class Sex {
 			for(LubricationType lube : wetAreas.get(character).get(area).get(lubricantProvider)) {
 				lubes.add((lubricantProvider==null
 							?""
-							:UtilText.parse(lubricantProvider, character.equals(lubricantProvider)?"[npc.her] ":"[npc.namePos] "))
+							:UtilText.parse(lubricantProvider, character.equals(lubricantProvider)?"[npc.her]的":"[npc.namePos]的"))
 						+lube.getName(lubricantProvider));
 			}
 		}
@@ -3728,8 +3728,8 @@ public class Sex {
 			return "";
 		}
 		
-		StringBuilder description = new StringBuilder(UtilText.parse(character, "[npc.NamePos] ")+area.getName(character) +" "+(area.isPlural()?"are":"is")+" lubricated with ");
-		description.append(Util.stringsToStringList(lubes, false)+".");
+		StringBuilder description = new StringBuilder(UtilText.parse(character, "[npc.NamePos]的")+area.getName(character) +""+(area.isPlural()?"":"")+"被液体润滑：");
+		description.append(Util.stringsToStringList(lubes, false)+"。");
 		
 		return description.toString();
 	}
@@ -3777,20 +3777,20 @@ public class Sex {
 				if(characterProvidingLubrication==null) {
 					lubeSB.append(formatCoverableAreaGettingWet(UtilText.parse(characterGettingLubricated,
 							"[npc.NamePos] "+sexArea.getName(characterGettingLubricated, true)
-							+(sexArea.isPlural()?" are":" is")
+							+(sexArea.isPlural()?"":"")
 							+(sexInitFinished
-									?" quickly lubricated by "
-									:" already lubricated by ")
-							+lubrication.getName(characterProvidingLubrication)+".")));
+									?"迅速被"
+									:"已经被")
+							+lubrication.getName(characterProvidingLubrication)+"润滑了。")));
 					
 				} else {
 					lubeSB.append(formatCoverableAreaGettingWet(UtilText.parse(characterGettingLubricated, characterProvidingLubrication,
 							"[npc.NamePos] "+sexArea.getName(characterGettingLubricated, true)
-							+(sexArea.isPlural()?" are":" is")
+							+(sexArea.isPlural()?"":"")
 							+(sexInitFinished
-									?" quickly lubricated by "
-									:" already lubricated by ")
-							+(characterProvidingLubrication.equals(characterGettingLubricated)?"[npc.her] ":"[npc2.namePos] ")+lubrication.getName(characterProvidingLubrication)+".")));
+									?"迅速被"
+									:"已经被")
+							+(characterProvidingLubrication.equals(characterGettingLubricated)?"[npc.her]的":"[npc2.namePos]的")+lubrication.getName(characterProvidingLubrication)+"润滑了。")));
 					
 				}
 			}
@@ -4044,7 +4044,7 @@ public class Sex {
 							GameCharacter fluidCharacter = fluid.getFluidCharacter();
 							penetrationSB.append(
 									"<p style='text-align:center; margin-bottom:0; padding-bottom:0; color:"+PresetColour.BASE_ORANGE.toWebHexString()+";'><i>"
-										+ UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(find)] [npc.herself] swallowing down some fluids previously deposited in [npc2.namePos] "+orifice.getName(characterPenetrated)+"!")
+										+ UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]意识到自己吞下了一些先前留在[npc2.namePos]"+orifice.getName(characterPenetrated)+"中的液体！")
 									+ "</i></p>"
 									+ characterPenetrating.ingestFluid(
 											fluidCharacter,
@@ -4055,7 +4055,7 @@ public class Sex {
 							if(fluid.isCum()) {
 								penetrationSB.append(
 										"<p style='text-align:center; margin-bottom:0; padding-bottom:0; color:"+PresetColour.BASE_ORANGE.toWebHexString()+";'><i>"
-											+ UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(find)] [npc.herself] swallowing down some fluids previously deposited in [npc2.namePos] "+orifice.getName(characterPenetrated)+"!")
+											+ UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]意识到自己吞下了一些先前留在[npc2.namePos]"+orifice.getName(characterPenetrated)+"中的液体！")
 										+ "</i></p>"
 										+ characterPenetrating.ingestFluid(
 												null,
@@ -4066,7 +4066,7 @@ public class Sex {
 							} else {
 								penetrationSB.append(
 										"<p style='text-align:center; margin-bottom:0; padding-bottom:0; color:"+PresetColour.BASE_ORANGE.toWebHexString()+";'><i>"
-											+ UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(find)] [npc.herself] swallowing down some fluids previously deposited in [npc2.namePos] "+orifice.getName(characterPenetrated)+"!")
+											+ UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]意识到自己吞下了一些先前留在[npc2.namePos]"+orifice.getName(characterPenetrated)+"中的液体！")
 										+ "</i></p>"
 										+ characterPenetrating.ingestFluid(
 												fluid,
@@ -4136,7 +4136,7 @@ public class Sex {
 							
 						} else if(characterPenetrated.hasHymen()){
 							characterPenetrated.setHymen(false);
-							penetrationSB.append(UtilText.formatVirginityLoss(UtilText.parse(characterPenetrated, "[npc.NamePos] hymen was torn!")));
+							penetrationSB.append(UtilText.formatVirginityLoss(UtilText.parse(characterPenetrated, "[npc.NamePos]的处女膜破了！")));
 						}
 					}
 					
@@ -4686,7 +4686,7 @@ public class Sex {
 								}
 								penetrationSB.append(UtilText.parse(characterPenetrated, characterPenetrating,
 										"<p style='text-align:center;'>"
-												+ "[style.italicsSex([npc2.NamePos] "+penetrationType.getName(characterPenetrating)+" bulges [npc.namePos] throat so much that [npc.her] [style.boldBad("+clothing.getName()+" snaps)]!)]"
+												+ "[style.italicsSex([npc2.NamePos]"+penetrationType.getName(characterPenetrating)+"使[npc.namePos]的喉咙过度隆起，[npc.her]的[style.boldBad("+clothing.getName()+"断裂了)]！)]"
 												+ "<br/>"+characterPenetrated.addedItemToInventoryText(clothing, 1)
 										+ "</p>"));
 								characterPenetrated.unequipClothingIntoInventory(clothing, true, characterPenetrated);
@@ -4747,7 +4747,7 @@ public class Sex {
 		
 		if(clothingRemoval == null || clothingRemoval.getKey() == null) {
 			Main.sex.setUnequipClothingText(null,
-					UtilText.parse(characterManagingClothing, targetForManagement, "[npc.Name] can't find a piece of [npc2.namePos] clothing to remove in order to access the slot '"+coverableArea+"'. (This is a bug...)"));
+					UtilText.parse(characterManagingClothing, targetForManagement, "[npc.Name]不知道栏位'"+coverableArea+"'要怎样触及，无法找到本该移除的任意衣物。(这是bug……)"));
 			System.err.println("manageClothingToAccessCoverableArea() can't find clothing - CoverableArea."+coverableArea.toString());
 			return SexActionUtility.CLOTHING_REMOVAL;
 		}
@@ -5030,7 +5030,7 @@ public class Sex {
 	public void setUnequipClothingText(AbstractClothing clothing, String unequipClothingText) {
 		Main.sex.unequipClothingText =
 						"<p style='text-align:center;'>"
-								+ "<i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Clothing removal</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
+								+ "<i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>移除衣物</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
 								+"<br/>"
 								+ unequipClothingText
 						+ "</p>";
@@ -5039,7 +5039,7 @@ public class Sex {
 	public void setUnequipWeaponText(AbstractWeapon weapon, String unequipClothingText) {
 		Main.sex.unequipClothingText = 
 				"<p style='text-align:center;'>"
-						+ "<i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Weapon removal</i>"+(weapon==null?"":": "+Util.capitaliseSentence(weapon.getName()))
+						+ "<i style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>移除武器</i>"+(weapon==null?"":": "+Util.capitaliseSentence(weapon.getName()))
 						+"<br/>"
 						+ unequipClothingText
 				+ "</p>";
@@ -5048,7 +5048,7 @@ public class Sex {
 	public void setDisplaceClothingText(AbstractClothing clothing, String unequipClothingText) {
 		Main.sex.unequipClothingText = 
 				"<p style='text-align:center;'>"
-						+ "<i style='color:" + PresetColour.GENERIC_MINOR_BAD.toWebHexString() + ";'>Clothing displacement</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
+						+ "<i style='color:" + PresetColour.GENERIC_MINOR_BAD.toWebHexString() + ";'>移开衣物</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
 						+"<br/>"
 						+ unequipClothingText
 				+ "</p>";
@@ -5057,7 +5057,7 @@ public class Sex {
 	public void setEquipClothingText(AbstractClothing clothing, String unequipClothingText) {
 		Main.sex.unequipClothingText =
 				"<p style='text-align:center;'>"
-						+ "<i style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Clothing equip</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
+						+ "<i style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>装备衣物</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
 						+"<br/>"
 						+ unequipClothingText
 				+ "</p>";
@@ -5066,7 +5066,7 @@ public class Sex {
 	public void setJinxRemovalClothingText(AbstractClothing clothing, String unequipClothingText) {
 		Main.sex.unequipClothingText = 
 				"<p style='text-align:center;'>"
-						+ "<i style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>Seal removal</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
+						+ "<i style='color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>移除封印</i>"+(clothing==null?"":": "+Util.capitaliseSentence(clothing.getName()))
 						+"<br/>"
 						+ unequipClothingText
 				+ "</p>";
@@ -5745,7 +5745,7 @@ public class Sex {
 		}
 		
 		sexSB.append(
-				"<p style='text-align:center;'><b>New position:</b> <b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>"+Main.sex.sexManager.getPosition().getName()+"</b><br/>"
+				"<p style='text-align:center;'><b>调整姿势:</b><b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>"+Main.sex.sexManager.getPosition().getName()+"</b><br/>"
 				+"<i><b>"+Main.sex.sexManager.getPosition().getDescription(Main.sex.getAllOccupiedSlots(false))+"</b></i></p>");
 	}
 	

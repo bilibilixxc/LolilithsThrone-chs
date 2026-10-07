@@ -380,7 +380,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 			} else if(coreAttributes.getOptionalFirstOf("authorTag").isPresent()) {
 				this.authorDescription = coreAttributes.getMandatoryFirstOf("authorTag").getTextContent();
 			} else if(!author.equalsIgnoreCase("innoxia")){
-				this.authorDescription = "A tag discreetly attached to the "+(plural?namePlural:name)+" informs you that "+(plural?"they were":"it was")+" made by a certain '"+Util.capitaliseSentence(author)+"'.";
+				this.authorDescription = "一张仔细贴在"+(plural?namePlural:name)+"上的标签告诉你"+(plural?"它是":"它是")+"由'"+Util.capitaliseSentence(author)+"'制作的。";
 			} else {
 				this.authorDescription = "";
 			}
@@ -1411,7 +1411,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 					} else if(npcEquippingOtherNPC!=null){
 						return UtilText.parse(clothingEquipper, clothingOwner, npcEquippingOtherNPC);
 					} else {
-						return UtilText.parse(clothingEquipper, clothingOwner, "[npc1.Name] manipulates [npc2.namePos] clothing.");
+						return UtilText.parse(clothingEquipper, clothingOwner, "[npc1.Name]控制着[npc2.namePos]的衣物。");
 					}
 				}
 			}
@@ -1457,7 +1457,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 						&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT_SELF)) {
 					return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT_SELF));
 				}
-				return UtilText.parse(clothingOwner, "[npc.Name] [npc.verb(equip)] the "+clothing.getName()+"."); //TODO
+				return UtilText.parse(clothingOwner, "[npc.Name]装备了"+clothing.getName()+"。"); //TODO 先焊了再说
 				
 			} else {
 				if(rough) {
@@ -1466,7 +1466,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT_ROUGH)) {
 						return UtilText.parse(clothingEquipper, clothingOwner, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT_ROUGH));
 					}
-					return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name] [npc.verb(get)] [npc2.name] to equip the "+clothing.getName()+".");
+					return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name]让[npc2.name]装备上"+clothing.getName()+"。");
 					
 				} else {
 					if(displacementDescriptions.get(slotToEquipInto)!=null
@@ -1474,7 +1474,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT)) {
 						return UtilText.parse(clothingEquipper, clothingOwner, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT));
 					}
-					return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name] roughly [npc.verb(force)] [npc2.name] to equip the "+clothing.getName()+".");
+					return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name]粗暴地强迫[npc2.name]装备上"+clothing.getName()+"。");
 				}
 			}
 			
@@ -1488,7 +1488,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT_SELF)) {
 							return displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT_SELF);
 						}
-						return "You equip the "+clothing.getName()+".";
+						return "你装备上"+clothing.getName()+"。";
 						
 					} else {
 						if(rough) {
@@ -1498,7 +1498,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT_ROUGH)) {
 								return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT_ROUGH));
 							}
-							return UtilText.parse(clothingOwner, "You roughly force "+clothing.getName(true)+" onto [npc.name].");
+							return UtilText.parse(clothingOwner, "你粗暴地把"+clothing.getName(true)+"强行装备给[npc.name]。");
 							
 						} else {
 							if(displacementDescriptions!=null
@@ -1507,7 +1507,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT)) {
 								return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT));
 							}
-							return UtilText.parse(clothingOwner, "You put "+clothing.getName(true)+" on [npc.name].");
+							return UtilText.parse(clothingOwner, "你把"+clothing.getName(true)+"穿在[npc.name]身上。");
 						}
 					}
 					
@@ -1520,7 +1520,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT_ROUGH)) {
 								return UtilText.parse(clothingEquipper, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT_ROUGH));
 							}
-							return UtilText.parse(clothingEquipper, "[npc.Name] roughly forces "+clothing.getName(true)+" onto you.");
+							return UtilText.parse(clothingEquipper, "[npc.Name]粗暴地把"+clothing.getName(true)+"强行装备给你。");
 							
 						} else {
 							if(displacementDescriptions!=null
@@ -1529,7 +1529,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT)) {
 								return UtilText.parse(clothingEquipper, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT));
 							}
-							return UtilText.parse(clothingEquipper, "[npc.Name] puts "+clothing.getName(true)+" on you.");
+							return UtilText.parse(clothingEquipper, "[npc.Name]把"+clothing.getName(true)+"穿在你身上。");
 						}
 					} else {
 						if(clothingOwner.equals(clothingEquipper)) {
@@ -1539,7 +1539,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.REPLACEMENT_SELF)) {
 								return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.REPLACEMENT_SELF));
 							}
-							return UtilText.parse(clothingOwner, "[npc.Name] equips "+clothing.getName(true)+".");
+							return UtilText.parse(clothingOwner, "[npc.Name]装备了"+clothing.getName(true)+"。");
 							
 						} else {
 							if(rough) {
@@ -1549,7 +1549,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 										&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT_ROUGH)) {
 									return UtilText.parse(clothingEquipper, clothingOwner,displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT_ROUGH));
 								}
-								return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name] roughly forces [npc2.name] to equip "+clothing.getName(true)+".");
+								return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name]粗暴地逼迫[npc2.name]装备上"+clothing.getName(true)+"。");
 								
 							} else {
 								if(displacementDescriptions!=null
@@ -1558,7 +1558,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 										&& displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT)) {
 									return UtilText.parse(clothingEquipper, clothingOwner,displacementDescriptions.get(slotToEquipInto).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT));
 								}
-								return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name] gets [npc2.name] to equip "+clothing.getName(true)+".");
+								return UtilText.parse(clothingEquipper, clothingOwner, "[npc.Name]让[npc2.name]装备上"+clothing.getName(true)+"。");
 							}
 						}
 					}
@@ -1583,7 +1583,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 						&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT_SELF)) {
 					return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT_SELF));
 				}
-				return UtilText.parse(clothingOwner, "[npc.Name] [npc.verb(unequip)] [npc.her] "+clothing.getName()+".");
+				return UtilText.parse(clothingOwner, "[npc.Name]解除了"+clothing.getName()+"的装备。");
 				
 			} else {
 				if(rough) {
@@ -1592,7 +1592,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT_ROUGH)) {
 						return UtilText.parse(clothingRemover, clothingOwner, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT_ROUGH));
 					}
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] roughly [npc.verb(unequip)] [npc2.namePos] "+clothing.getName()+".");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]粗暴地解除了[npc2.namePos]的"+clothing.getName()+"。");
 					
 				} else {
 					if(displacementDescriptions.get(slotToUnequipFrom)!=null
@@ -1600,7 +1600,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT)) {
 						return UtilText.parse(clothingRemover, clothingOwner, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT));
 					}
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] [npc.verb(get)] [npc2.name] to unequip [npc2.her] "+clothing.getName()+".");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]让[npc2.name]解除了"+clothing.getName()+"的装备。");
 				}
 			}
 			
@@ -1613,7 +1613,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT_SELF)) {
 						return displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT_SELF);
 					}
-					return "You unequip the "+clothing.getName()+".";
+					return "你解除了"+clothing.getName()+"的装备。";
 					
 				} else {
 					if(rough) {
@@ -1623,7 +1623,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT_ROUGH)) {
 							return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT_ROUGH));
 						}
-						return UtilText.parse(clothingOwner, "You roughly take off [npc.namePos] "+clothing.getName()+".");
+						return UtilText.parse(clothingOwner, "你粗暴地脱下"+clothing.getName()+"。");
 					} else {
 						if(displacementDescriptions!=null
 								&& displacementDescriptions.get(slotToUnequipFrom)!=null
@@ -1631,7 +1631,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT)) {
 							return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT));
 						}
-						return UtilText.parse(clothingOwner, "You take off [npc.namePos] "+clothing.getName()+".");
+						return UtilText.parse(clothingOwner, "你脱下"+clothing.getName()+"。");
 					}
 				}
 				
@@ -1644,7 +1644,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT_ROUGH)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT_ROUGH));
 						}
-						return UtilText.parse(clothingRemover, "[npc.Name] roughly takes off your "+clothing.getName()+".");
+						return UtilText.parse(clothingRemover, "[npc.Name]粗暴地脱下你的"+clothing.getName()+"。");
 					} else {
 						if(displacementDescriptions!=null
 								&& displacementDescriptions.get(slotToUnequipFrom)!=null
@@ -1652,7 +1652,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT));
 						}
-						return UtilText.parse(clothingRemover, "[npc.Name] takes off your "+clothing.getName()+".");
+						return UtilText.parse(clothingRemover, "[npc.Name]脱下你的"+clothing.getName()+"。");
 					}
 				} else {
 					if(clothingOwner.equals(clothingRemover)) {
@@ -1662,7 +1662,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.DISPLACEMENT_SELF)) {
 							return UtilText.parse(clothingOwner, displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.DISPLACEMENT_SELF));
 						}
-						return UtilText.parse(clothingOwner, "[npc.Name] unequips [npc.her] "+clothing.getName()+".");
+						return UtilText.parse(clothingOwner, "[npc.Name]解除了"+clothing.getName()+"的装备。");
 						
 					} else {
 						if(rough) {
@@ -1672,7 +1672,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT_ROUGH)) {
 								return UtilText.parse(clothingRemover, clothingOwner,displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT_ROUGH));
 							}
-							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] roughly forces [npc2.name] to equip "+clothing.getName(true)+".");
+							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]粗暴地强迫[npc2.name]装备上"+clothing.getName(true)+"。");
 							
 						} else {
 							if(displacementDescriptions!=null
@@ -1681,7 +1681,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).containsKey(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT)) {
 								return UtilText.parse(clothingRemover, clothingOwner,displacementDescriptions.get(slotToUnequipFrom).get(DisplacementType.REMOVE_OR_EQUIP).get(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT));
 							}
-							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] gets [npc2.name] to equip "+clothing.getName(true)+".");
+							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]让[npc2.name]装备上"+clothing.getName(true)+"。");
 						}
 					}
 				}
@@ -1702,7 +1702,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 					return UtilText.parse(clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT_SELF));
 				}
 //				System.out.println(dt);
-				return UtilText.parse(clothingOwner, "[npc.Name] "+(clothingRemover.isPlayer()?dt.getDescription():dt.getDescriptionThirdPerson())+" [npc.her] "+this.getName()+".");
+				return UtilText.parse(clothingOwner, "[npc.Name]"+(clothingRemover.isPlayer()?dt.getDescription():dt.getDescriptionThirdPerson())+"[npc.her]"+this.getName()+"。");
 				
 			} else {
 				if(rough) {
@@ -1711,7 +1711,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT_ROUGH)) {
 						return UtilText.parse(clothingRemover, clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT_ROUGH));
 					}
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] roughly "+(clothingRemover.isPlayer()?dt.getDescription():dt.getDescriptionThirdPerson())+" [npc2.namePos] "+this.getName()+".");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]粗暴地"+(clothingRemover.isPlayer()?dt.getDescription():dt.getDescriptionThirdPerson())+"[npc2.namePos]"+this.getName()+"。");
 					
 				} else {
 					if(displacementDescriptions.get(slotClothingIsEquippedTo)!=null
@@ -1719,7 +1719,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT)) {
 						return UtilText.parse(clothingRemover, clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT));
 					}
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] "+(clothingRemover.isPlayer()?dt.getDescription():dt.getDescriptionThirdPerson())+" [npc2.namePos] "+this.getName()+".");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]"+(clothingRemover.isPlayer()?dt.getDescription():dt.getDescriptionThirdPerson())+"[npc2.namePos]"+this.getName()+"。");
 				}
 			}
 			
@@ -1732,7 +1732,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT_SELF)) {
 						return displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT_SELF);
 					}
-					return "You "+dt.getDescription()+" your "+this.getName()+".";
+					return "你"+dt.getDescription()+""+this.getName()+"。";
 				} else {
 					if(rough) {
 						if(displacementDescriptions!=null
@@ -1741,7 +1741,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT_ROUGH)) {
 							return UtilText.parse(clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT_ROUGH));
 						}
-						return UtilText.parse(clothingOwner, "You roughly "+dt.getDescription()+" [npc.namePos] "+this.getName()+".");
+						return UtilText.parse(clothingOwner, "你粗暴地"+dt.getDescription()+"[npc.namePos]"+this.getName()+"。");
 					} else {
 						if(displacementDescriptions!=null
 								&& displacementDescriptions.get(slotClothingIsEquippedTo)!=null
@@ -1749,7 +1749,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT)) {
 							return UtilText.parse(clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT));
 						}
-						return UtilText.parse(clothingOwner, "You "+dt.getDescription()+" [npc.namePos] "+this.getName()+".");
+						return UtilText.parse(clothingOwner, "你"+dt.getDescription()+"[npc.namePos]"+this.getName()+"。");
 					}
 				}
 				
@@ -1762,7 +1762,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT_ROUGH)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT_ROUGH));
 						}
-						return UtilText.parse(clothingRemover, "[npc.Name] roughly "+dt.getDescriptionThirdPerson()+" your "+this.getName()+".");
+						return UtilText.parse(clothingRemover, "[npc.Name]粗暴地"+dt.getDescriptionThirdPerson()+"你的"+this.getName()+"。");
 						
 					} else {
 						if(displacementDescriptions!=null
@@ -1771,7 +1771,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT));
 						}
-						return UtilText.parse(clothingRemover, "[npc.Name] "+dt.getDescriptionThirdPerson()+" your "+this.getName()+".");
+						return UtilText.parse(clothingRemover, "[npc.Name]"+dt.getDescriptionThirdPerson()+"你的"+this.getName()+"。");
 					}
 				} else {
 					if(clothingOwner.equals(clothingRemover)) {
@@ -1781,7 +1781,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.DISPLACEMENT_SELF)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.DISPLACEMENT_SELF));
 						}
-						return UtilText.parse(clothingOwner, "[npc.Name] "+dt.getDescriptionThirdPerson()+" [npc.her] "+this.getName()+".");
+						return UtilText.parse(clothingOwner, "[npc.Name]"+dt.getDescriptionThirdPerson()+"[npc.her]的"+this.getName()+"。");
 						
 					} else {
 						if(rough) {
@@ -1791,7 +1791,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT_ROUGH)) {
 								return UtilText.parse(clothingRemover, clothingOwner,displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT_ROUGH));
 							}
-							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] roughly "+dt.getDescriptionThirdPerson()+" [npc2.namePos] "+this.getName()+".");
+							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]粗暴地 "+dt.getDescriptionThirdPerson()+"[npc2.namePos]"+this.getName()+"。");
 							
 						} else {
 							if(displacementDescriptions!=null
@@ -1800,7 +1800,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT)) {
 								return UtilText.parse(clothingRemover, clothingOwner,displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.NPC_ON_NPC_DISPLACEMENT));
 							}
-							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] "+dt.getDescriptionThirdPerson()+" [npc2.namePos] "+this.getName()+".");
+							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]"+dt.getDescriptionThirdPerson()+"[npc2.namePos]"+this.getName()+"。");
 						}
 					}
 				}
@@ -1820,7 +1820,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 						&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT_SELF)) {
 					return UtilText.parse(clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT_SELF));
 				}
-				return UtilText.parse(clothingOwner, "[npc.Name] "+(clothingRemover.isPlayer()?dt.getOppositeDescription():dt.getOppositeDescriptionThirdPerson())+" [npc.her] "+this.getName()+".");
+				return UtilText.parse(clothingOwner, "[npc.Name]"+(clothingRemover.isPlayer()?dt.getOppositeDescription():dt.getOppositeDescriptionThirdPerson())+"[npc.her]的"+this.getName()+"。");
 				
 			} else {
 				if(rough) {
@@ -1829,7 +1829,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT_ROUGH)) {
 						return UtilText.parse(clothingRemover, clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT_ROUGH));
 					}
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] "+(clothingRemover.isPlayer()?dt.getOppositeDescription():dt.getOppositeDescriptionThirdPerson())+" [npc2.namePos] "+this.getName()+".");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]"+(clothingRemover.isPlayer()?dt.getOppositeDescription():dt.getOppositeDescriptionThirdPerson())+"[npc2.namePos]"+this.getName()+"。");
 					
 				} else {
 					if(displacementDescriptions.get(slotClothingIsEquippedTo)!=null
@@ -1837,7 +1837,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT)) {
 						return UtilText.parse(clothingRemover, clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT));
 					}
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] roughly "+(clothingRemover.isPlayer()?dt.getOppositeDescription():dt.getOppositeDescriptionThirdPerson())+" [npc2.namePos] "+this.getName()+".");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]粗暴地"+(clothingRemover.isPlayer()?dt.getOppositeDescription():dt.getOppositeDescriptionThirdPerson())+"[npc2.namePos]"+this.getName()+"。");
 				}
 			}
 			
@@ -1850,7 +1850,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 							&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT_SELF)) {
 						return displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT_SELF);
 					}
-					return "You "+dt.getOppositeDescription()+" your "+this.getName()+".";
+					return "你"+dt.getOppositeDescription()+""+this.getName()+"。";
 				} else {
 					if(rough) {
 						if(displacementDescriptions!=null
@@ -1859,7 +1859,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT_ROUGH)) {
 							return UtilText.parse(clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT_ROUGH));
 						}
-						return UtilText.parse(clothingOwner, "You roughly "+dt.getOppositeDescription()+" [npc.namePos] "+this.getName()+".");
+						return UtilText.parse(clothingOwner, "你粗暴地"+dt.getOppositeDescription()+"[npc.namePos]"+this.getName()+"。");
 					} else {
 						if(displacementDescriptions!=null
 								&& displacementDescriptions.get(slotClothingIsEquippedTo)!=null
@@ -1867,7 +1867,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT)) {
 							return UtilText.parse(clothingOwner, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT));
 						}
-						return UtilText.parse(clothingOwner, "You "+dt.getOppositeDescription()+" [npc.namePos] "+this.getName()+".");
+						return UtilText.parse(clothingOwner, "你"+dt.getOppositeDescription()+"[npc.namePos]"+this.getName()+"。");
 					}
 				}
 				
@@ -1880,7 +1880,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT_ROUGH)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT_ROUGH));
 						}
-						return UtilText.parse(clothingRemover, "[npc.Name] roughly "+dt.getOppositeDescriptionThirdPerson()+" your "+this.getName()+".");
+						return UtilText.parse(clothingRemover, "[npc.Name]粗暴地"+dt.getOppositeDescriptionThirdPerson()+"你的"+this.getName()+"。");
 						
 					} else {
 						if(displacementDescriptions!=null
@@ -1889,7 +1889,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT));
 						}
-						return UtilText.parse(clothingRemover, "[npc.Name] "+dt.getOppositeDescriptionThirdPerson()+" your "+this.getName()+".");
+						return UtilText.parse(clothingRemover, "[npc.Name]"+dt.getOppositeDescriptionThirdPerson()+"你的"+this.getName()+"。");
 					}
 				} else {
 					if(clothingOwner.equals(clothingRemover)) {
@@ -1899,7 +1899,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 								&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.REPLACEMENT_SELF)) {
 							return UtilText.parse(clothingRemover, displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.REPLACEMENT_SELF));
 						}
-						return UtilText.parse(clothingOwner, "[npc.Name] "+dt.getOppositeDescriptionThirdPerson()+" [npc.her] "+this.getName()+".");
+						return UtilText.parse(clothingOwner, "[npc.Name]"+dt.getOppositeDescriptionThirdPerson()+"[npc.her]"+this.getName()+"。");
 						
 					} else {
 						if(rough) {
@@ -1909,7 +1909,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT_ROUGH)) {
 								return UtilText.parse(clothingRemover, clothingOwner,displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT_ROUGH));
 							}
-							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] roughly "+dt.getOppositeDescriptionThirdPerson()+" [npc2.namePos] "+this.getName()+".");
+							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]粗暴地"+dt.getOppositeDescriptionThirdPerson()+"[npc2.namePos]"+this.getName()+"。");
 							
 						} else {
 							if(displacementDescriptions!=null
@@ -1918,7 +1918,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 									&& displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).containsKey(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT)) {
 								return UtilText.parse(clothingRemover, clothingOwner,displacementDescriptions.get(slotClothingIsEquippedTo).get(dt).get(DisplacementDescriptionType.NPC_ON_NPC_REPLACEMENT));
 							}
-							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] "+dt.getOppositeDescriptionThirdPerson()+" [npc2.namePos] "+this.getName()+".");
+							return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]"+dt.getOppositeDescriptionThirdPerson()+"[npc2.namePos]"+this.getName()+"。");
 						}
 					}
 				}
@@ -2060,7 +2060,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 			sb.append(c.getId());
 		}
 		if(pattern==null) {
-			sb.append("nopattern");
+			sb.append("无范式");
 		} else {
 			sb.append(pattern);
 		}
@@ -2068,7 +2068,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 			sb.append(c.getId());
 		}
 		if(stickers==null || stickers.isEmpty()) {
-			sb.append("nostickers");
+			sb.append("无标签");
 			
 		} else {
 			for(Entry<String, String> entry : stickers.entrySet()) {
@@ -2474,7 +2474,7 @@ public abstract class AbstractClothingType extends AbstractCoreType {
 			this.isPatternAvailable = true;
 		}
 		
-		return SvgUtil.getSVGWithHandledPattern("Clothing causing error: "+this.getName(), s, pattern, patternColours, this.getPatternColourReplacements());
+		return SvgUtil.getSVGWithHandledPattern("服装引起错误："+this.getName(), s, pattern, patternColours, this.getPatternColourReplacements());
 	}
 
 	public float getPatternChance() {

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[room]]></name>
-	<tooltipDescription><![CDATA[Just like all of the others, this room has already been rented by someone.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the upstairs corridor at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[客间]]></name>
+	<tooltipDescription><![CDATA[和其他客间一样，这个房间已经被别人租走了。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆楼上的走廊里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>room</svgName>
 	<colour>BASE_TEAL</colour>

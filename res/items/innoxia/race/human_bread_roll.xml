@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>15</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Bread Roll]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Bread Rolls]]></namePlural>
-		<description><![CDATA[A perfectly average bread roll, wrapped in a small, brown paper bag. A logo printed on one side of this wrapper shows a portly human chef giving you a thumbs-up while surrounded by all manner of delicious-looking baked goods.]]></description> 
+		<determiner><![CDATA[一块]]></determiner>
+		<name><![CDATA[小面包]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[小面包]]></namePlural>
+		<description><![CDATA[一个非常普通的小面包，包装在一个棕色的小纸袋里。包装纸的一面印有一个徽标，上面印着一个身材魁梧的人类厨师向你竖起大拇指，周围则是各种美味的烘焙食品。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/human/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/human/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">human_bread_roll.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,21 +25,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[human]]></potionDescriptor>
+		<potionDescriptor><![CDATA[人类]]></potionDescriptor>
 		<associatedRace>HUMAN</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId> <!-- 'RACE' is a special value, and when defined, this item will use the defined 'associatedRace' to give the player enchantment options for making a TF elixir for that race. -->
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel a lot healthier...
+				[npc.Name]开始感到更加健康……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
 		]]></applyEffects>
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] the bread roll out of its protective paper bag and quickly [npc.verb(devour)] it, leaving [npc.herHim] with the delicious taste of freshly baked bread filling [npc.her] mouth.
+		[npc.Name]从包装中拿出小面包，迅速将其狼吞虎咽地吞掉，为[npc.herHim]留下了新鲜烤制的面包的美味味道弥漫在[npc.her]的口中。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(take)] the bread roll out of its protective paper bag, before bringing it up to [npc2.namePos] [npc2.lips] and getting [npc2.herHim] to eat it. Quickly devouring it, [npc2.name] is left with the delicious taste of freshly baked bread filling [npc2.her] mouth.
+		[npc.Name]从包装中拿出小面包，然后递到[npc2.namePos][npc2.lips]前，让[npc2.herHim]吃下。[npc2.herHim]迅速狼吞虎咽地吃下它，留下新鲜烤制的面包的美味味道弥漫在[npc2.her]的口中。
 		]]></otherUse>
 	</useDescriptions>
 

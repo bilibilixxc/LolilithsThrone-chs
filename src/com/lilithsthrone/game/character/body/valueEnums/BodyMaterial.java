@@ -34,24 +34,24 @@ import java.util.Map;
  */
 public enum BodyMaterial {
 
-	FLESH("flesh",
-			"skin", "fleshy",
-			"skin", "fleshy",
-			"flesh", "fleshy",
-			"flesh", "fleshy",
-			"hair", "hairy",
-			"hair", "hairy",
-			"hair", "hairy",
-			"fur", "furry",
-			"fur", "furry",
-			"feathers", "feathered",
-			"feathers", "feathered",
-			"scales", "scaled",
-			"scales", "scaled",
-			"shell", "shelled",
-			"shell", "shelled",
-			"nails", "hard",
-			"keratin", "keratinous",
+	FLESH("血肉",
+			"皮肤", "肉质",
+			"皮肤", "肉质",
+			"血肉", "肉质",
+			"血肉", "肉质",
+			"毛发", "覆盖毛发",
+			"毛发", "覆盖毛发",
+			"毛发", "覆盖毛发",
+			"皮毛", "毛茸茸",
+			"皮毛", "毛茸茸",
+			"羽毛", "羽毛覆盖",
+			"羽毛", "羽毛覆盖",
+			"鳞片", "覆盖鳞片",
+			"鳞片", "覆盖鳞片",
+			"甲壳", "覆盖甲壳",
+			"甲壳", "覆盖甲壳",
+			"指甲", "坚硬",
+			"角质", "角质",
 			PresetColour.BASE_PINK_LIGHT,
 			DamageType.PHYSICAL,
 			true,
@@ -67,7 +67,7 @@ public enum BodyMaterial {
 		}
 	},
 	
-	SLIME("slime", PresetColour.RACE_SLIME, DamageType.PHYSICAL, false, true, false) {
+	SLIME("粘液", PresetColour.RACE_SLIME, DamageType.PHYSICAL, false, true, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -76,20 +76,20 @@ public enum BodyMaterial {
 		@Override
 		public List<String> getExtraEffects(GameCharacter target) {
 			List<String> extraEffectsLsit = new ArrayList<>();
-			extraEffectsLsit.add("[style.colourBad(-75%)] base [style.colourUnarmed(unarmed damage)]");
-			extraEffectsLsit.add("[style.colourTfGeneric(Can morph body at will*)]");
+			extraEffectsLsit.add("[style.colourBad(-75%)]基础[style.colourUnarmed(徒手伤害)]");
+			extraEffectsLsit.add("[style.colourTfGeneric(可随意变形身体*)]");
 			if(target!=null && target.isPlayer()) {
-				extraEffectsLsit.add("[style.colourTfGeneric(*)][style.colourMinorBad(Requires having encountered races)]");
-				extraEffectsLsit.add("[style.colourMinorBad(to be able to transform into them)]");
+				extraEffectsLsit.add("[style.colourTfGeneric(*)][style.colourMinorBad(需已遭遇过对应种族)]");
+				extraEffectsLsit.add("[style.colourMinorBad(才能转化)]");
 			}
-			extraEffectsLsit.add("[style.colourSex(Impregnated through any orifice)]");
+			extraEffectsLsit.add("[style.colourSex(可通过任何腔穴受孕)]");
 			return extraEffectsLsit;
 		}
 	},
 
 	// Dolls:
 	
-	SILICONE("silicone", "smooth", PresetColour.BASE_BLACK, DamageType.PHYSICAL, true, false, true) {
+	SILICONE("硅胶", "光滑", PresetColour.BASE_BLACK, DamageType.PHYSICAL, true, false, true) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return null;
@@ -100,13 +100,13 @@ public enum BodyMaterial {
 		}
 		@Override
 		public List<String> getPartDescriptors() {
-			return Util.newArrayListOfValues("silicone", "artificial", "doll");
+			return Util.newArrayListOfValues("硅胶", "人工", "玩偶");
 		}
 	},
 	
 	// Fire elementals:
 	
-	FIRE("fire", "burning", PresetColour.BASE_ORANGE, DamageType.FIRE, false, false, false) {
+	FIRE("火焰", "燃烧", PresetColour.BASE_ORANGE, DamageType.FIRE, false, false, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -123,7 +123,7 @@ public enum BodyMaterial {
 
 	// Water elementals:
 
-	WATER("water", "cool", PresetColour.BASE_AQUA, DamageType.ICE, false, true, false) {
+	WATER("水", "清凉", PresetColour.BASE_AQUA, DamageType.ICE, false, true, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -138,7 +138,7 @@ public enum BodyMaterial {
 		}
 	},
 	
-	ICE("ice", "freezing", PresetColour.BASE_BLUE_LIGHT, DamageType.ICE, true, true, true) {
+	ICE("寒冰", "冰冷", PresetColour.BASE_BLUE_LIGHT, DamageType.ICE, true, true, true) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -153,7 +153,7 @@ public enum BodyMaterial {
 
 	// Air elementals:
 
-	AIR("storm-clouds", "swirling", PresetColour.BASE_BLUE_STEEL, DamageType.POISON, false, false, false) {
+	AIR("风暴", "旋动", PresetColour.BASE_BLUE_STEEL, DamageType.POISON, false, false, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -168,7 +168,7 @@ public enum BodyMaterial {
 
 	// Earth elementals:
 	
-	STONE("stone", "hard", PresetColour.BASE_GREY, DamageType.PHYSICAL, true, false, true) {
+	STONE("岩石", "坚硬", PresetColour.BASE_GREY, DamageType.PHYSICAL, true, false, true) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(
@@ -195,7 +195,7 @@ public enum BodyMaterial {
 	
 	// Arcane elementals:
 	
-	ARCANE("energy", PresetColour.GENERIC_ARCANE, DamageType.PHYSICAL, false, false, false) {
+	ARCANE("能量", PresetColour.GENERIC_ARCANE, DamageType.PHYSICAL, false, false, false) {
 		@Override
 		public Map<AbstractAttribute, Float> getAttributeModifiers(GameCharacter target) {
 			return Util.newHashMapOfValues(

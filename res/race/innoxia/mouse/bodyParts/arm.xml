@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <arm>
 	<race>innoxia_mouse</race>
 	
-	<transformationName><![CDATA[mouse]]></transformationName>
+	<transformationName><![CDATA[鼷鼠]]></transformationName>
 	
 	<coveringType>innoxia_mouse_fur</coveringType>
 	
@@ -12,60 +12,60 @@
 		<tag>ARM_STANDARD</tag>
 	</tags>
 	
-	<name><![CDATA[arm]]></name>
-	<namePlural><![CDATA[arms]]></namePlural> 
+	<name><![CDATA[前肢]]></name>
+	<namePlural><![CDATA[前肢]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>furry</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>furry</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsFeminine>
 	
-	<handName><![CDATA[hand]]></handName>
-	<handNamePlural><![CDATA[hands]]></handNamePlural>
+	<handName><![CDATA[手]]></handName>
+	<handNamePlural><![CDATA[手]]></handNamePlural>
 	<handDescriptorsMasculine>
-		<descriptor>mouse-like</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>claw-like</descriptor>
-		<descriptor>rodent</descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[爪状的]]></descriptor>
+		<descriptor><![CDATA[啮齿]]></descriptor>
 	</handDescriptorsMasculine>
 	<handDescriptorsFeminine>
-		<descriptor>soft</descriptor>
-		<descriptor>feminine</descriptor>
-		<descriptor>mouse-like</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>claw-like</descriptor>
-		<descriptor>rodent</descriptor>
+		<descriptor><![CDATA[柔软]]></descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[爪状的]]></descriptor>
+		<descriptor><![CDATA[啮齿动物]]></descriptor>
 	</handDescriptorsFeminine>
 	
-	<fingerName><![CDATA[finger]]></fingerName>
-	<fingerNamePlural><![CDATA[fingers]]></fingerNamePlural>
+	<fingerName><![CDATA[手指]]></fingerName>
+	<fingerNamePlural><![CDATA[手指]]></fingerNamePlural>
 	<fingerDescriptorsMasculine>
-		<descriptor>mouse-like</descriptor>
-		<descriptor>claw-like</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>rodent</descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
+		<descriptor><![CDATA[爪状的]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[啮齿动物]]></descriptor>
 	</fingerDescriptorsMasculine>
 	<fingerDescriptorsFeminine>
-		<descriptor>soft</descriptor>
-		<descriptor>feminine</descriptor>
-		<descriptor>mouse-like</descriptor>
-		<descriptor>claw-like</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>rodent</descriptor>
+		<descriptor><![CDATA[柔软]]></descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
+		<descriptor><![CDATA[爪状的]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[啮齿动物]]></descriptor>
 	</fingerDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		Within a matter of moments, a layer of [npc.armFullDescription] has quickly grown over them, and, looking down, [npc.she] [npc.verb(see)] [npc.her] fur growing over the backs of [npc.her] hands as sharp little claws push out to replace [npc.her] fingernails. [npc.Her] palms rapidly transform to be [npc.materialDescriptor] little pink pads, and at [npc.her] upper-biceps, [npc.her] new fur smoothly transitions into the [npc.skin] that's covering the rest of [npc.her] body.
-		<br/>As the transformation comes to an end, [npc.nameIsFull] left with anthropomorphic, [style.boldMouse(mouse-like arms and hands)], which are [npc.materialDescriptor] [npc.armFullDescription].
-	]]></transformationDescription>
+		不一会，一层[npc.armFullDescription]迅速长了出来，低头看去，[npc.she]看见[npc.her]新的毛发覆盖了[npc.her]的手背，尖锐的爪子伸出来，取代了[npc.her]的指甲。[npc.Her]的掌心迅速变成了[npc.materialDescriptor]粉色小肉垫，而在[npc.her]的上臂处，[npc.her]的毛发平稳地过渡到了[npc.skin]，覆盖了[npc.her]的身体的其余部分。
+<br/>转变已经完全完成，[npc.nameIsFull]现在拥有类人的[style.boldMouse(鼠般的手臂和手)]，[npc.materialDescriptor][npc.armFullDescription]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.She] [npc.has] [npc.armRows] arms, which are [npc.materialCompositionDescriptor] [npc.armFullDescription(true)]. [npc.Her] hands are formed into anthropomorphic, mouse-like hands, complete with claws.
-	]]></bodyDescription>
+	[npc.She]有着[npc.armRows]手臂，[npc.materialCompositionDescriptor]的[npc.armFullDescription(true)]。[npc.Her]拥有鼷鼠般拟人的手，指爪尖利。
+]]></bodyDescription>
 	
 </arm>

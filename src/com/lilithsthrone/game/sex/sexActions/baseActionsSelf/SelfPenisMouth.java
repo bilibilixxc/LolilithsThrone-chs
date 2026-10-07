@@ -37,54 +37,54 @@ public class SelfPenisMouth {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Start autofellatio";
+			return "开始自我口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Bend over and take your [npc.cock+] into your mouth, before starting to give yourself a blowjob.";
+			return "你准备好要用嘴取悦自己了，于是弯下腰来将[npc.cock+]放入自己口中。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"In a display of impressive flexibility, [npc.name] [npc.verb(bend)] down and ",
-					"Showing off how flexibile [npc.sheIsFull], [npc.name] [npc.verb(double)] over and ",
-					"Putting [npc.her] flexibility to the test, [npc.name] [npc.verb(bend)] down and "));
+					"[npc.name]拥有令人惊叹的柔韧性，[npc.she]将身体弯下",
+					"[npc.name]炫耀着自己的身体有多么柔软，[npc.she]将身体几乎对折般弯下腰",
+					"[npc.name]测试着自己身体的柔韧性，[npc.she]将腰慢慢弯下"));
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.verb(bring)] [npc.her] [npc.lips+] to the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Slowly taking [npc.her] [npc.cock] into [npc.her] mouth, [npc.she] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] [npc.verb(start)] giving [npc.herself] a blowjob.",
+							"将[npc.her][npc.lips+]吻上[npc.her][npc.cock]上[npc.cockHead+]。"
+									+ "慢慢将[npc.cock]含入口中并开始取悦[npc.herself]，[npc.she]发出含混不清的[npc.moan]。",
 
-							"[npc.verb(wrap)] [npc.her] [npc.lips+] around the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Letting out a muffled [npc.moan], [npc.she] [npc.verb(start)] giving [npc.herself] a gentle blowjob."));
+							"[npc.her]用[npc.lips+]包裹起[npc.cock]上[npc.cockHead+]。"
+									+ "发出一声含混不清的[npc.moan]，[npc.she]用嘴温柔地取悦起[npc.herself]。"));
 					break;
 				case DOM_NORMAL:
 				case SUB_EAGER:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.verb(bring)] [npc.her] [npc.lips+] to the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Eagerly taking [npc.her] [npc.cock] into [npc.her] mouth, [npc.she] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] happily [npc.verb(start)] giving [npc.herself] a blowjob.",
+							"将[npc.her][npc.lips+]吻上[npc.her][npc.cock]上[npc.cockHead+]。"
+									+ "饥渴难耐地将[npc.her]的[npc.cock]吞入口中，[npc.she]呜咽着含混不清的[npc.moan]并开始给[npc.herself]带来一场愉悦的口交。",
 
-							"[npc.verb(wrap)] [npc.her] [npc.lips+] around the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Letting out a muffled [npc.moan], [npc.she] eagerly [npc.verb(start)] giving [npc.herself] an enthusiastic blowjob."));
+							"[npc.her]用[npc.lips+]包裹起[npc.cock]上[npc.cockHead+]。"
+									+ "发出一声含混不清的[npc.moan]，[npc.she]饥渴地用嘴为[npc.herself]带来狂热的欢愉。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.verb(bring)] [npc.her] [npc.lips+] to the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Hungrily taking [npc.her] [npc.cock] into [npc.her] mouth, [npc.she] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] [npc.verb(start)] giving [npc.herself] a blowjob.",
+							"将[npc.her][npc.lips+]吻上[npc.her][npc.cock]上[npc.cockHead+]。"
+									+ "极度渴求地将[npc.her]的[npc.cock]吞入口中，[npc.she]呜咽着含混不清的[npc.moan]并开始为[npc.herself]带来一场愉悦的口交。",
 
-							"[npc.verb(wrap)] [npc.her] [npc.lips+] around the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Letting out a muffled [npc.moan], [npc.she] greedily [npc.verb(start)] giving [npc.herself] a rough blowjob."));
+							"[npc.her]用[npc.lips+]包裹起[npc.cock]上[npc.cockHead+]。"
+									+ "发出一声含混不清的[npc.moan]，[npc.she]贪婪地用嘴给[npc.herself]粗暴地口交起来。"));
 					break;
 				case SUB_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.verb(bring)] [npc.her] [npc.lips+] to the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Taking [npc.her] [npc.cock] into [npc.her] mouth, [npc.she] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] [npc.verb(start)] giving [npc.herself] a blowjob.",
+							"将[npc.her][npc.lips+]吻上[npc.her][npc.cock]上[npc.cockHead+]。"
+									+ "将[npc.cock]含入口中，[npc.she]发出含混不清的[npc.moan]并开始取悦[npc.herself]。",
 
-							"[npc.verb(wrap)] [npc.her] [npc.lips+] around the [npc.cockHead+] of [npc.her] [npc.cock]."
-									+ " Letting out a muffled [npc.moan], [npc.she] [npc.verb(start)] giving [npc.herself] a blowjob."));
+							"[npc.her]用[npc.lips+]包裹起[npc.cock]上[npc.cockHead+]。"
+									+ "发出一声含混不清的[npc.moan]，[npc.she]开始给[npc.herself]进行口交。"));
 					break;
 				default:
 					break;
@@ -105,11 +105,11 @@ public class SelfPenisMouth {
 			SexParticipantType.SELF) {
 		@Override
 		public String getActionTitle() {
-			return "Deep throat";
+			return "深喉";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take your [npc.cock+] as deep as possible down your throat.";
+			return "将你[npc.cock+]尽可能地往深处送。";
 		}
 		@Override
 		public String getDescription() {
@@ -118,44 +118,44 @@ public class SelfPenisMouth {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Gently wrapping [npc.her] [npc.lips+] around [npc.her] own [npc.cock], [npc.name] [npc.verb(push)] [npc.her] head forwards,"
-									+ " taking it as deep down [npc.her] throat as [npc.she] possibly can.",
+							"温柔地用[npc.lips+]包裹住[npc.her]自己的[npc.cock]，[npc.name]把头往前推了推。"
+									+ "尽可能地将它深入[npc.her]的喉咙。",
 
-							"With a soft, muffled [npc.moan], [npc.name] gently [npc.verb(bend)] down as far as [npc.she] can,"
-									+ " parting [npc.her] [npc.lips+] as [npc.she] [npc.verb(take)] as much of [npc.her] [npc.cock+] down [npc.her] throat as possible.",
+							"随着一声柔软的，含混不清的[npc.moan]，[npc.name]小心翼翼地尽可能将腰弯下，"
+									+ "[npc.her]张开[npc.lips+]并尽可能地把[npc.her][npc.cock+]深入[npc.her]的喉咙深处。",
 
-							"Slowly sliding [npc.her] head forwards, [npc.name] gently [npc.verb(part)] [npc.her] [npc.lips+], before taking [npc.her] [npc.cock+] deep down [npc.her] throat."));
+							"慢慢把[npc.her]的脑袋向前滑动，[npc.name]温柔地张开她[npc.lips+]，以便将[npc.her][npc.cock+]深入[npc.her]的喉咙。"));
 					break;
 				case DOM_NORMAL:
 				case SUB_EAGER:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Eagerly wrapping [npc.her] [npc.lips+] around [npc.her] own [npc.cock], [npc.name] quickly [npc.verb(push)] [npc.her] head forwards,"
-									+ " greedily taking it as deep down [npc.her] throat as [npc.she] possibly can.",
+							"饥渴地用[npc.lips+]把[npc.cock]完全包裹住，[npc.name]将头快速地往里推。"
+									+ "贪婪地将它尽可能地吞入[npc.her]的喉咙深处。",
 
-							"With a muffled, [npc.moan+], [npc.name] eagerly [npc.verb(bend)] down as far as [npc.she] can,"
-									+ " parting [npc.her] [npc.lips+] as [npc.she] desperately [npc.verb(take)] as much of [npc.her] [npc.cock+] down [npc.her] throat as possible.",
+							"随着一声含混不清的[npc.moan]，[npc.name]饥渴地把腰弯到了极限，"
+									+ "[npc.her]张开[npc.lips+]并极度渴求着把[npc.her][npc.cock+]深入[npc.her]的喉咙深处。",
 
-							"Greedily sliding [npc.her] head forwards, [npc.name] readily [npc.verb(part)] [npc.her] [npc.lips+] as [npc.she] [npc.verb(take)] [npc.her] [npc.cock+] deep down [npc.her] throat."));
+							"[npc.name]将脑袋贪婪地往下滑动，欣然张开她[npc.lips+]，将[npc.her][npc.cock+]深入[npc.her]的喉咙。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Forcefully wrapping [npc.her] [npc.lips+] around [npc.her] own [npc.cock], [npc.name] roughly [npc.verb(slam)] [npc.her] head forwards,"
-									+ " forcing it as deep down [npc.her] throat as [npc.she] possibly can.",
+							"[npc.name][npc.lips+]将自己的[npc.cock]猛然包裹住，[npc.her]把头粗暴地向下推压。"
+									+ "迫使它尽可能地深入[npc.her]的喉咙深处。",
 
-							"With a muffled, [npc.moan+], [npc.name] quickly [npc.verb(bend)] down as far as [npc.she] can,"
-									+ " parting [npc.her] [npc.lips+] as [npc.she] roughly [npc.verb(force)] as much of [npc.her] [npc.cock+] down [npc.her] throat as possible.",
+							"随着一声含混不清的[npc.moan]，[npc.name]迅速地把腰弯到了极限，"
+									+ "[npc.her]张开[npc.lips+]并粗暴地把[npc.her][npc.cock+]尽可能地深入[npc.her]的喉咙深处。",
 
-							"Aggressively pushing [npc.her] head forwards, [npc.name] [npc.verb(part)] [npc.her] [npc.lips+] as [npc.she] [npc.verb(force)] [npc.her] [npc.cock+] deep down [npc.her] throat."));
+							"激烈地将[npc.her]的脑袋向下推动，[npc.name]张开[npc.her][npc.lips+]，迫使[npc.her][npc.cock+]深深推入[npc.her]的喉咙。"));
 					break;
 				case SUB_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Wrapping [npc.her] [npc.lips+] around [npc.her] own [npc.cock], [npc.name] quickly [npc.verb(push)] [npc.her] head forwards,"
-									+ " taking it as deep down [npc.her] throat as [npc.she] possibly can.",
+							"[npc.name]用[npc.lips+]把[npc.her]的[npc.cock]完全包裹住，并把头快速地往里推送。"
+									+ "尽可能地将它深入[npc.her]的喉咙。",
 
-							"With a muffled, [npc.moan+], [npc.name] [npc.verb(bend)] down as far as [npc.she] can,"
-									+ " parting [npc.her] [npc.lips+] as [npc.she] [npc.verb(take)] as much of [npc.her] [npc.cock+] down [npc.her] throat as possible.",
+							"随着一声含混不清的[npc.moan]，[npc.name]把腰尽可能地弯下来，"
+									+ "[npc.her]张开[npc.lips+]并尽可能地把[npc.her][npc.cock+]深入[npc.her]的喉咙深处。",
 
-							"Sliding [npc.her] head forwards, [npc.name] [npc.verb(part)] [npc.her] [npc.lips+] as [npc.she] [npc.verb(take)] [npc.her] [npc.cock+] deep down [npc.her] throat."));
+							"[npc.name]将脑袋往下滑动，张开她[npc.lips+]，将[npc.her][npc.cock+]深入[npc.her]的喉咙。"));
 					break;
 				default:
 					break;
@@ -175,21 +175,21 @@ public class SelfPenisMouth {
 			SexPace.DOM_GENTLE) {
 		@Override
 		public String getActionTitle() {
-			return "Gentle autofellatio";
+			return "自我口交(温柔)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Gently suck your [npc.cock+].";
+			return "吸吮你[npc.cock+](温柔)。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Gently wrapping [npc.her] [npc.lips+] around [npc.her] own [npc.cock+], [npc.name] [npc.verb(start)] bobbing [npc.her] head up and down as [npc.she] [npc.verb(give)] [npc.herself] a loving blowjob.",
-					"With a soft, muffled [npc.moan], [npc.name] gently [npc.verb(start)] bobbing [npc.her] head up and down,"
-							+ " wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] head.",
-					"Slowly bobbing [npc.her] head up and down, [npc.name] gently [npc.verb(wrap)] [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] a blowjob."));
+					"温柔地用[npc.lips+]包裹住自己[npc.cock+]后，[npc.name]把头上下移动着，深情地口交自己。",
+					"随着一声柔软的，含混不清的[npc.moan]，[npc.name]开始和缓地上下移动[npc.her]的脑袋，"
+							+ "当[npc.her]给[npc.herself]口交时，[npc.her]用[npc.lips+]包裹住了[npc.cock+]。",
+					"慢慢地把头上下移动，[npc.name]温柔地用[npc.her][npc.lips+]包裹住[npc.her][npc.cock+]，为[npc.herself]口交。"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -206,21 +206,21 @@ public class SelfPenisMouth {
 			SexPace.DOM_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Autofellatio";
+			return "自我口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Eagerly suck your [npc.cock+].";
+			return "饥渴地吸吮你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Eagerly wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] rapidly bobbing [npc.her] head up and down as [npc.she] [npc.verb(give)] [npc.herself] an enthusiastic blowjob.",
-					"With a muffled, [npc.moan+], [npc.name] quickly [npc.verb(start)] bobbing [npc.her] head up and down,"
-							+ " greedily wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] head.",
-					"Rapidly bobbing [npc.her] head up and down, [npc.name] desperately [npc.verb(wrap)] [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] an eager blowjob."));
+					"饥渴地用[npc.lips+]包裹住[npc.her]自己[npc.cock+]后，[npc.name]立刻将头上下移动起来，给[npc.herself]进行起了狂热的口交。",
+					"随着一声含混不清的[npc.moan]，[npc.name]开始迅速地上下移动起[npc.her]的脑袋，"
+							+ "当[npc.her]给[npc.herself]口交时，[npc.her]用贪婪[npc.lips+]一口包住[npc.cock+]。",
+					"[npc.name]极度渴求地用[npc.lips+]包裹住[npc.her][npc.cock+]，然后脑袋立刻上下运动起来，给[npc.herself]如饥似渴地口交着。"));
 		
 			return UtilText.nodeContentSB.toString();
 		}
@@ -237,21 +237,21 @@ public class SelfPenisMouth {
 			SexPace.DOM_ROUGH) {
 		@Override
 		public String getActionTitle() {
-			return "Rough autofellatio";
+			return "自我口交(粗暴)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Roughly suck your [npc.cock+].";
+			return "粗暴地吸吮你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Forcefully gripping [npc.her] [npc.lips+] down around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] aggressively bobbing [npc.her] head up and down as [npc.she] [npc.verb(give)] [npc.herself] a rough blowjob.",
-					"With a muffled, [npc.moan+], [npc.name] violently [npc.verb(start)] bobbing [npc.her] head up and down,"
-							+ " roughly wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] head.",
-					"Roughly bobbing [npc.her] head up and down, [npc.name] dominantly [npc.verb(wrap)] [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] a forceful blowjob."));
+					"用力地将[npc.lips+]缠绕上[npc.her][npc.cock+]，[npc.name]将脑袋大幅度地上下移动起来，粗暴地为[npc.herself]口交着。",
+					"随着一声含混不清的[npc.moan]，[npc.name]开始激烈地上下移动[npc.her]的脑袋，"
+							+ "当[npc.her]给[npc.herself]口交时，[npc.her]粗暴地用[npc.lips+]裹起了[npc.her][npc.cock+]。",
+					"粗暴地上下移动脑袋，[npc.name]支配性地用[npc.her][npc.lips+]包裹住[npc.her][npc.cock+]，强制[npc.she]给[npc.herself]口交。"));
 		
 			return UtilText.nodeContentSB.toString();
 		}
@@ -268,21 +268,21 @@ public class SelfPenisMouth {
 			SexPace.SUB_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Autofellatio";
+			return "自我口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Continue sucking your [npc.cock+].";
+			return "继续吸吮你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] rapidly bobbing [npc.her] head up and down as [npc.she] [npc.verb(give)] [npc.herself] a blowjob.",
-					"With a muffled, [npc.moan+], [npc.name] quickly [npc.verb(start)] bobbing [npc.her] head up and down,"
-							+ " wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] head.",
-					"Rapidly bobbing [npc.her] head up and down, [npc.name] [npc.verb(wrap)] [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] a blowjob."));
+					"用[npc.lips+]包裹住[npc.her]自己[npc.cock+]后，[npc.name]立刻将头上下移动起来，给[npc.herself]进行口交。",
+					"随着一声含混不清的[npc.moan]，[npc.name]开始迅速地上下移动起[npc.her]的脑袋，"
+							+ "当[npc.her]给[npc.herself]口交时，[npc.her]用[npc.lips+]包裹住了[npc.cock+]。",
+					"[npc.name]用[npc.lips+]包裹住[npc.her][npc.cock+]，然后脑袋立刻上下运动起来，给[npc.herself]进行口交。"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -299,21 +299,21 @@ public class SelfPenisMouth {
 			SexPace.SUB_EAGER) {
 		@Override
 		public String getActionTitle() {
-			return "Eager autofellatio";
+			return "自我口交(渴求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Eagerly suck your [npc.cock+].";
+			return "饥渴地吸吮你[npc.cock+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Eagerly wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+], [npc.name] [npc.verb(start)] rapidly bobbing [npc.her] head up and down as [npc.she] [npc.verb(give)] [npc.herself] an enthusiastic blowjob.",
-					"With a muffled, [npc.moan+], [npc.name] quickly [npc.verb(start)] bobbing [npc.her] head up and down,"
-							+ " greedily wrapping [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] head.",
-					"Rapidly bobbing [npc.her] head up and down, [npc.name] desperately [npc.verb(wrap)] [npc.her] [npc.lips+] around [npc.her] [npc.cock+] as [npc.she] [npc.verb(give)] [npc.herself] an eager blowjob."));
+					"饥渴地用[npc.lips+]包裹住[npc.her]自己[npc.cock+]后，[npc.name]立刻将头上下移动起来，给[npc.herself]进行起了狂热的口交。",
+					"随着一声含混不清的[npc.moan]，[npc.name]开始迅速地上下移动起[npc.her]的脑袋，"
+							+ "当[npc.her]给[npc.herself]口交时，[npc.her]用贪婪[npc.lips+]一口包住[npc.cock+]。",
+					"[npc.name]极度渴求地用[npc.lips+]包裹住[npc.her][npc.cock+]，然后脑袋立刻上下运动起来，给[npc.herself]如饥似渴地口交着。"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -329,11 +329,11 @@ public class SelfPenisMouth {
 			SexParticipantType.SELF) {
 		@Override
 		public String getActionTitle() {
-			return "Stop autofellatio";
+			return "停止自我口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take your [npc.cock+] out of your mouth and stop giving yourself a blowjob.";
+			return "停下来并把你[npc.cock+]从嘴里拔了出来";
 		}
 		@Override
 		public String getDescription() {
@@ -342,16 +342,16 @@ public class SelfPenisMouth {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Roughly forcing [npc.her] [npc.cock+] down [npc.her] throat one last time, [npc.name] then [npc.verb(pull)] [npc.her] head back, putting a quick end to [npc.her] autofellatio.",
+							"粗暴地将[npc.her][npc.cock+]往喉咙最深处向下一压，[npc.name]接着把头拉了回来，快速地宣告了这次自我愉悦的结束。",
 
-							"Slamming [npc.her] [npc.face] into [npc.her] own groin, [npc.name] [npc.verb(force)] [npc.her] [npc.cock+] deep down [npc.her] throat,"
-									+ " before pulling completely back and putting an end to [npc.her] autofellatio."));
+							"把[npc.face]猛然推进[npc.her]自己的根部，[npc.name]迫使[npc.her][npc.cock+]深深推入[npc.her]的喉咙中，"
+									+ "然后完全退回，[npc.her]结束了给自己的口交。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Sliding [npc.her] [npc.cock+] out of [npc.her] mouth, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(put)] an end to [npc.her] autofellatio.",
+							"[npc.name]将自己[npc.cock+]从口中滑出，发出一阵[npc.a_moan+]，结束了这次自我口交。",
 
-							"With [npc.a_moan+], [npc.name] [npc.verb(pull)] [npc.her] head back, sliding [npc.her] [npc.cock+] fully out of [npc.her] mouth."));
+							"[npc.name]发出[npc.a_moan+]，缩回头，把[npc.her][npc.cock+]从嘴里完全滑了出来。"));
 					break;
 			}
 			

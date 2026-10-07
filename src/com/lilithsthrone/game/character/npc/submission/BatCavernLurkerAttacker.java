@@ -186,13 +186,13 @@ public class BatCavernLurkerAttacker extends NPC {
 		}
 		if(this.isSlave()) {
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of attacking innocent travellers in the Bat Caverns are now over. Having run afoul of the law, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+					"[npc.NamePos]在蝙蝠洞窟袭击无辜路人的日子已经结束。[npc.sheIs]因触犯法律成为了奴隶，不过是[npc.her]主人的财产而已。"));
 		} else if(Main.game.getPlayer().getFriendlyOccupants().contains(this.getId())){
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of attacking innocent travellers in the Bat Caverns are now over. Having befriended [npc.herHim], you invited [npc.name] to move in with you and helped [npc.herHim] to start a new life."));
+					"[npc.NamePos]在蝙蝠洞窟袭击无辜路人的日子已经结束。你与[npc.herHim]成为朋友，邀请[npc.name]搬到你家，帮助[npc.herHim]开始新生活。"));
 		} else {
 			return (UtilText.parse(this,
-					"[npc.Name] is a resident of the Bat Caverns, and enjoys nothing more than attacking innocent travellers that pass by [npc.her] roost."));
+					"[npc.Name]是蝙蝠洞窟的居民，并以袭击经过[npc.her]栖息处的无辜路人为乐。"));
 		}
 	}
 	

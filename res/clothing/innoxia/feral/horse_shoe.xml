@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>500</value>
-    <determiner><![CDATA[a set of]]></determiner>
-    <name><![CDATA[horseshoe]]></name>
-    <namePlural pluralByDefault="true"><![CDATA[horseshoes]]></namePlural>
-    <description><![CDATA[A set of four horseshoes. Although they're intended for centaurs and feral horses, a pair of them would also be suitable for being fit onto hoofed anthros.]]></description>
+    <determiner><![CDATA[一套]]></determiner>
+    <name><![CDATA[马蹄铁]]></name>
+    <namePlural pluralByDefault="true"><![CDATA[马蹄铁]]></namePlural>
+    <description><![CDATA[一套四个的马蹄铁。虽然它们是为半人马和野马设计的，但也适合有蹄的人类。]]></description>
 
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
@@ -56,27 +55,27 @@
   </coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(step)] onto the horseshoes, at which point their arcane enchantment activates, attaching themselves securely to [npc.her] hoofs.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(direct)] [npc2.name] to step onto the horseshoes, at which point their arcane enchantment activates, attaching themselves securely to [npc2.her] hoofs.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step onto the horseshoes, at which point their arcane enchantment activates, attaching themselves securely to [npc2.her] hoofs.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]踏上马蹄铁。此时马蹄铁上的奥术附魔激活了，将自己牢牢地固定在[npc.her]的蹄子上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]引导[npc2.name]踏上马蹄铁，此时它们的奥术附魔会激活，牢固地附着在[npc2.her]的蹄子上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强迫[npc2.name]踏上马蹄铁，此时它们的奥术附魔激活，牢固地附着在[npc2.her]的蹄子上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(stomp)] [npc.her] hoofs against the ground, forcing the horseshoes to undo their enchantment and fall off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(direct)] [npc2.name] to stomp [npc2.her] hoofs against the ground, which forces the horseshoes to undo their enchantment and fall off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] impatiently [npc.verb(order)] [npc2.name] to stomp [npc2.her] hoofs against the ground, which forces the horseshoes to undo their enchantment and fall off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]重重地跺在地面上，迫使马蹄铁解除它们的附魔并掉下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]引导[npc2.name]猛地在地面上跺[npc2.her]的蹄子，这迫使马蹄铁解除了它们的附魔并掉了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]不耐烦地命令[npc2.name]在地面上跺[npc2.her]的蹄子，这迫使马蹄铁解除了它们的附魔并掉落。
+]]></otherRough>
 	</displacementText>
 
 </clothing>

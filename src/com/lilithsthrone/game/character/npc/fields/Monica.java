@@ -95,8 +95,8 @@ public class Monica extends NPC {
 	}
 	
 	public Monica(boolean isImported) {
-		super(isImported, new NameTriplet("Monica"), "Webster",
-				"Monica is the namesake and owner of the shop, 'The Fashionable Moo', which is located in Elis's shopping precinct, 'Wall's End'.",
+		super(isImported, new NameTriplet("莫妮卡"), "韦伯斯特",
+				"莫妮卡是位于伊利斯购物区“墙之尽头”的“哞求时尚”商店的店主和命名者。",
 				27, Month.FEBRUARY, 28,
 				15,
 				Gender.F_V_B_FEMALE, Subspecies.COW_MORPH, RaceStage.PARTIAL,
@@ -104,7 +104,7 @@ public class Monica extends NPC {
 				WorldType.getWorldTypeFromId("innoxia_fields_elis_shops"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_shops_clothing"),
 				true);
 
-		this.setGenericName("busty cow-girl");
+		this.setGenericName("巨乳牛女");
 
 		commonFemaleClothing = new ArrayList<>();
 		commonFemaleUnderwear = new ArrayList<>();

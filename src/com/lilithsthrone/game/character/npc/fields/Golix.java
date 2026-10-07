@@ -28,7 +28,7 @@ public class Golix extends Elemental {
 		super(isImported);
 		
 		if(!isImported) {
-			this.setSurname("Oglixkamu");
+			this.setSurname("奥格里克斯卡姆");
 		}
 	}
 
@@ -41,7 +41,7 @@ public class Golix extends Elemental {
 		super.loadFromXML(parentElement, doc, settings);
 		
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.4.10.8")) {
-			this.setSurname("Oglixkamu");
+			this.setSurname("奥格里克斯卡姆");
 			this.setElementalSchool(SpellSchool.EARTH);
 		}
 	}

@@ -33,12 +33,12 @@ public class CitadelYoukoSA {
 		
 		@Override
 		public String getActionTitle() {
-			return "Denied";
+			return "拒绝";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "As you prepare to reach your climax, [citadelArcanist.name] suddenly holds you in place, and forces you to calm down!";
+			return "正当你快要高潮时，[citadelArcanist.name]突然把你锁住并逼你冷静下来！";
 		}
 
 		@Override
@@ -49,14 +49,14 @@ public class CitadelYoukoSA {
 
 		@Override
 		public String getDescription() {
-			return "[npc.Name] [npc.verb(feel)] a desperate heat rising in [npc.her] groin, and, as [npc.she] [npc.verb(prepare)] to orgasm, [npc.she] [npc.verb(cry)] out, [npc.speech(Yes! I'm going to cum!)]"
+			return "[npc.Name]觉得自己的胯下的温度疯狂上升，即将高潮时，[npc.she]兴奋地大喊着，[npc.speech(哦！快要！快要来了！啊啊啊啊！)]"
 						+ "<br/><br/>"
-					+ "Upon hearing this, [citadelArcanist.name] lets out an amused giggle, [citadelArcanist.speechNoEffects(You silly thing! Didn't I tell you that you're not allowed to orgasm?!)]"
+					+ "正听到这，[citadelArcanist.name]发出咯咯的笑声：[citadelArcanist.speechNoEffects(你个笨蛋！我难道没和你说过你不许高潮吗！？)]"
 						+ "<br/><br/>"
-					+"Before [npc.name] can say anything, [citadelArcanist.name] uses her arcane power to telekinetically force [npc.herHim] to remain still."
-					+ " [npc.Name] [npc.verb(try)] to desperately rub [npc.her] crotch up against [citadelArcanist.namePos] leg, but the tricky youko simply steps back, and patiently waits until [npc.namePos] climax has ebbed away."
-					+ " Once it's clear that [npc.sheHas] calmed down, [citadelArcanist.name] releases [npc.herHim], and, pushing her pussy back up against [npc.her] face, she teases,"
-					+ " [citadelArcanist.speechNoEffects(Silly! This is all about my pleasure, not yours!)]";
+					+"[npc.name]还没来得及说话，[citadelArcanist.name]用她的奥术将[npc.herHim]困在原地。"
+					+ "[npc.Name]拼命地用股间磨蹭着[citadelArcanist.namePos]的腿，但那狡猾的妖狐却只是后撤一步，耐心等待[npc.namePos]的性欲减退。"
+					+ "[npc.sheHas]冷静下来后，[citadelArcanist.name]便立刻松开了[npc.herHim]，用小穴压着[npc.her]的脸，取笑道，"
+					+ "[citadelArcanist.speechNoEffects(笨蛋！轮到我享受了！)]";
 		}
 
 		@Override

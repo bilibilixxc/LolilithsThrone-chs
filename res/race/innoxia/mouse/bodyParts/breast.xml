@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <breast>
 	<race>innoxia_mouse</race>
 	
-	<transformationName><![CDATA[mouse]]></transformationName>
+	<transformationName><![CDATA[鼷鼠]]></transformationName>
 	
 	<coveringType>innoxia_mouse_fur</coveringType>
 	
@@ -19,18 +19,18 @@
 	<descriptorsFlat/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldMouse(mouse-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldMouse(mouse milk)].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldMouse(鼷鼠般)][npc.nipplesFullDescription]，[npc.she]在哺乳期会分泌[style.boldMouse(鼷鼠乳汁)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] mouse-like, [npc.nipplesFullDescription].
-	]]></bodyDescription>
+		[npc.her]每个[npc.breastSize]的[npc.breasts]上都长着[npc.nipplesPerBreast]颗鼷鼠般[npc.nipplesFullDescription]。
+]]></bodyDescription>
 	
 	<crotchBoobsTransformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldMouse(mouse-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldMouse(mouse milk)].
+		[npc.She]现在拥有[style.boldMouse(鼷鼠般)][npc.crotchNipplesFullDescription]，[npc.she]在哺乳期内会分泌[style.boldMouse(鼷鼠乳汁)]。
 	]]></crotchBoobsTransformationDescription>
 	
 	<crotchBoobsBodyDescription><![CDATA[
-		On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] mouse-like, [npc.crotchNipplesFullDescription].
-	]]></crotchBoobsBodyDescription>
+		[npc.her]的每个[npc.crotchBoobSize][npc.crotchBoobs]上都长着[npc.crotchNipplesPerBreast]颗鼷鼠般[npc.crotchNipplesFullDescription]。
+]]></crotchBoobsBodyDescription>
 </breast>

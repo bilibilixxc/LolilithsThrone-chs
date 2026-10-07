@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[beanie]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[beanies]]></namePlural>
-		<description><![CDATA[A head-hugging brimless cap, knitted out of merino wool. Thick, ribbed stitching helps to give it structure and extra insulation.]]></description>
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[毛线帽]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[毛线帽]]></namePlural>
+		<description><![CDATA[一顶贴头的无檐帽，由美利奴羊毛编织而成。厚实的有螺纹缝线有助于保持其形状并提供额外的保暖效果。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -43,27 +42,15 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the beanie down onto [npc.her] head.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the beanie down  onto [npc2.namePos] head.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(push)] the beanie down onto [npc2.namePos] head.]]>
-		</otherRough>
+		<self><![CDATA[[npc.Name]将毛线帽拉下来戴在[npc.her]头上。]]></self>
+		<other><![CDATA[[npc.Name]将毛线帽往下拽，套在[npc2.namePos]头上。]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地将毛线帽往下按在[npc2.namePos]的头上。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] beanie.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] beanie.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] beanie.]]>
-		</otherRough>
+		<self><![CDATA[[npc.Name]摘下了自己的毛线帽。]]></self>
+		<other><![CDATA[[npc.Name]一把扯下[npc2.namePos]的毛线帽。]]></other>
+		<otherRough><![CDATA[[npc.Name]一把扯下[npc2.namePos]的毛线帽。]]></otherRough>
 	</displacementText>
   
 </clothing>

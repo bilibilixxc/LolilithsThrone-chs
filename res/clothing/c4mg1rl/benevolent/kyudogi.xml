@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>4000</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[kyudogi]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[kyudogi]]></namePlural>
-		<description><![CDATA[A simple gi and muneate designed for use with a yumi.]]></description> 
+		<determiner><![CDATA[一套]]></determiner>
+		<name><![CDATA[弓道服]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[弓道服]]></namePlural>
+		<description><![CDATA[由和服与护胸组成，是专为弓道而设计的简朴服饰。]]></description> 
 		<physicalResistance>2</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>TORSO_UNDER</slot>
@@ -78,27 +78,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc.her] [npc.arms] through the kyudogi sleeves as [npc.she] [npc.verb(wraps)] it around [npc.her] and secures the muneate in place.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the kyudogi sleeves as [npc.she] [npc.verb(wraps)] it around [npc2.her] and secures the muneate in place.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the kyudogi sleeves as [npc.she] [npc.verb(wraps)] it around [npc2.her] and secures the muneate in place.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]披上弓道服，[npc.arms]穿过袖子，随后将护胸调整到了合适的位置。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]为[npc2.namePos]披上弓道服，并引导其[npc2.arms]穿过袖子，随后将护胸调整到合适的位置。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗鲁地给[npc2.namePos]披上弓道服，强拉着其[npc2.arms]穿过袖子，随后将护胸调整到合适的位置。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] muneate and kyudogi.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] muneate and kyudogi.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] muneate and kyudogi.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将护胸与弓道服从[npc.her]身上脱下。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将护胸与弓道服从[npc2.namePos]的身上脱下。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]将护胸与弓道服从[npc2.namePos]的身上粗暴地脱下。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

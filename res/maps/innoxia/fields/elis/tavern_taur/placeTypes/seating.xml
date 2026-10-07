@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[seating area]]></name>
-	<tooltipDescription><![CDATA[Large sofas, specially-designed to accommodate taurs, are scattered throughout this seating area.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the seating area at 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[座位区]]></name>
+	<tooltipDescription><![CDATA[在座位区里，到处摆放着为容纳半兽身人而特别设计的大沙发。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[半人马之剑的座位区。]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

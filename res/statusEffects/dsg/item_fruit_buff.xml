@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	
 	<renderingPriority>70</renderingPriority>
@@ -10,9 +10,9 @@
 	<combatEffect>false</combatEffect>
 	<sexEffect>false</sexEffect>
 	<tags/>
-	<name><![CDATA[Crag's Bounty]]></name>
+	<name><![CDATA[峭壁恩赐]]></name>
 	<description><![CDATA[
-		Consuming mountain-grown produce wards [npc.name] from poison!
+		食用山地生产的食物可以保护[npc.name]免受毒害！
 	]]></description>
 	<imageName>fruit_buff_tangerine.svg</imageName>
 	<colourPrimary>GENERIC_GOOD</colourPrimary> 

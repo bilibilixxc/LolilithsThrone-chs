@@ -62,15 +62,15 @@ public class HeadlessHorseman extends NPC {
 	}
 	
 	public HeadlessHorseman(boolean isImported) {
-		super(isImported, new NameTriplet("Tim"), "Irving",
-				"During the month of October, this menace prowls the Foloi Fields at night, searching for his next victim to give him head...",
+		super(isImported, new NameTriplet("提姆"), "欧文",
+				"在十月期间，这个威胁在夜间游荡在弗洛伊田野上，寻找下一个受害者给他头……",
 				36, Month.OCTOBER, 31,
 				25, Gender.M_P_MALE, Subspecies.HORSE_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 10),
 				WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL,
 				true);
 		
-		this.setGenericName("headless horseman");
+		this.setGenericName("无头马男");
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
@@ -241,9 +241,9 @@ public class HeadlessHorseman extends NPC {
 	@Override
 	public String getGenericName() {
 		if(this.isFeminine()) {
-			return "headless horsewoman";
+			return "无头马女";
 		}
-		return "headless horseman";
+		return "无头马男";
 	}
 	
 	@Override

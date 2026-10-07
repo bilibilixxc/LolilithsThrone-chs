@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <eye>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>innoxia_hyena</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[hyena]]></transformationName>
+	<transformationName><![CDATA[鬣狗]]></transformationName>
 	
 	<!-- The id of the material covering this eye.
 	Hard-coded values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/body/coverings/BodyCoveringType.java -->
@@ -34,28 +34,28 @@
 	<defaultPupilShape>VERTICAL</defaultPupilShape>
 	
 	<!-- The singular and plural names of this eye. -->
-	<name><![CDATA[eye]]></name>
-	<namePlural><![CDATA[eyes]]></namePlural>
+	<name><![CDATA[眼睛]]></name>
+	<namePlural><![CDATA[眼睛]]></namePlural>
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's eye of this type. -->
 	<descriptorsMasculine>
-		<descriptor><![CDATA[predatory]]></descriptor>
+		<descriptor><![CDATA[猎食性]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor><![CDATA[predatory]]></descriptor>
+		<descriptor><![CDATA[猎食性]]></descriptor>
 	</descriptorsFeminine>
 	
 	<!-- The description which is shown when a character transforms to obtain this eye type.
 	This description immediately follows a brief description of the eye type undergoing a transformation. -->
 	<transformationDescription><![CDATA[
-		By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into hyena-like eyes, with large irises and vertical pupils.
-		<br/>[npc.Name] now [npc.has] [style.boldHyena(hyena-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].
+		当[npc.she]犹豫地再次睁开双眼时，它们变成了一对大虹膜、竖瞳的鬣狗眼睛。
+		<br/>[npc.Name]现在拥有[style.boldHyena(鬣狗一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。
 	]]></transformationDescription>
 	
 	<!-- How this eye is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.eyePairs] hyena-like eyes, the irises and pupils of which are larger than a regular human's. They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.
+		[npc.SheHasFull]拥有[npc.eyePairs]鬣狗的眼睛，其瞳孔和虹膜都大于常人。[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。
 	]]></bodyDescription>
 	
 </eye>

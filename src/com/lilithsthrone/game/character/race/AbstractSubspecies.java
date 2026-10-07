@@ -145,60 +145,60 @@ public abstract class AbstractSubspecies {
 	public static Map<LegConfiguration, String[]> demonLegConfigurationNames = Util.newHashMapOfValues(
 			new Value<>(LegConfiguration.ARACHNID,
 					new String[] {
-						"demonid",
-						"demonids",
+						"蛛形恶魔",
+						"蛛形恶魔",
 						"incunid",
-						"succunid",
-						"incunids",
-						"succunids"}),
+						"蛛形魅魔",
+						"蛛形淫梦魔",
+						"蛛形魅魔"}),
 			new Value<>(LegConfiguration.BIPEDAL,
 					new String[] {
-						"demon",
-						"demons",
-						"incubus",
-						"succubus",
-						"incubi",
-						"succubi"}),
+						"恶魔",
+						"恶魔",
+						"淫梦魔",
+						"魅魔",
+						"淫梦魔",
+						"魅魔"}),
 			new Value<>(LegConfiguration.CEPHALOPOD,
 					new String[] {
-						"demopus",
-						"demopuses",
-						"incupus",
-						"succupus",
-						"incupuses",
-						"succupuses"}),
+						"海怪恶魔",
+						"海怪恶魔",
+						"海怪淫梦魔",
+						"海怪魅魔",
+						"海怪淫梦魔",
+						"海怪魅魔"}),
 			new Value<>(LegConfiguration.QUADRUPEDAL,
 					new String[] {
-						"demotaur",
-						"demotaurs",
-						"incutaur",
-						"succutaur",
-						"incutaurs",
-						"succutaurs"}),
+						"四足恶魔",
+						"四足恶魔",
+						"四足淫梦魔",
+						"四足魅魔",
+						"四足淫梦魔",
+						"四足魅魔"}),
 			new Value<>(LegConfiguration.TAIL,
 					new String[] {
-						"demomer",
-						"demomers",
-						"incumer",
-						"succumer",
-						"incumers",
-						"succumers"}),
+						"人鱼恶魔",
+						"人鱼恶魔",
+						"人鱼淫梦魔",
+						"人鱼魅魔",
+						"人鱼淫梦魔",
+						"人鱼魅魔"}),
 			new Value<>(LegConfiguration.TAIL_LONG,
 					new String[] {
-						"demomia",
-						"demomias",
-						"incumia",
-						"succumia",
-						"incumias",
-						"succumias"}),
+						"蛇尾恶魔",
+						"蛇尾恶魔",
+						"蛇尾淫梦魔",
+						"蛇尾魅魔",
+						"蛇尾淫梦魔",
+						"蛇尾魅魔"}),
 			new Value<>(LegConfiguration.AVIAN,
 					new String[] {
-						"demoa",
-						"demoas",
-						"incumoa",
-						"succumoa",
-						"incumoas",
-						"succumoas"}));
+						"鸟形恶魔",
+						"鸟形恶魔",
+						"鸟形淫梦魔",
+						"鸟形魅魔",
+						"鸟形淫梦魔",
+						"鸟形魅魔"}));
 	
 	static {
 		youkoIconMap = new HashMap<>();
@@ -1229,21 +1229,21 @@ public abstract class AbstractSubspecies {
 	protected String applyNonBipedNameChange(Body body, String baseName, boolean applyFeminineForm, boolean plural) {
 		switch(body.getLegConfiguration()) {
 			case ARACHNID:
-				return baseName+"-arachne"+(plural?"s":"");
+				return "蛛形"+baseName+(plural?"":"");
 			case AVIAN:
-				return baseName+"-moa"+(plural?"s":"");
+				return "鸟形"+baseName+(plural?"":"");
 			case WINGED_BIPED:
-				return baseName+"-demimoa"+(plural?"s":"");
+				return "半鸟"+baseName+(plural?"":"");
 			case BIPEDAL:
 				break;
 			case CEPHALOPOD:
-				return baseName+"-kraken"+(plural?"s":"");
+				return "海怪"+baseName+(plural?"":"");
 			case TAIL:
-				return "mer"+baseName+(plural?"s":"");
+				return "人鱼"+baseName+(plural?"":"");
 			case TAIL_LONG:
-				return baseName+"-lamia"+(plural?"s":"");
+				return "蛇尾"+baseName+(plural?"":"");
 			case QUADRUPEDAL:
-				return baseName+getTaurEnding()+(applyFeminineForm?"ess"+(plural?"es":""):(plural?"s":""));
+				return "四足"+baseName+(plural?"":"");
 		}
 		return baseName;
 	}
@@ -1433,15 +1433,15 @@ public abstract class AbstractSubspecies {
 			int landSpeed = character.getLandSpeedModifier();
 			int waterSpeed =  character.getWaterSpeedModifier();
 			if(landSpeed!=0) {
-				effectsModified.add((landSpeed<0?"[style.boldExcellent("+landSpeed+"%)]":"[style.boldTerrible(+"+landSpeed+"%)]")+" travel time on land");
+				effectsModified.add((landSpeed<0?"[style.boldExcellent("+landSpeed+"%)]":"[style.boldTerrible(+"+landSpeed+"%)]")+"陆路行进耗时");
 			}
 			if(waterSpeed!=0) {
-				effectsModified.add((waterSpeed<0?"[style.boldExcellent("+waterSpeed+"%)]":"[style.boldTerrible(+"+waterSpeed+"%)]")+" travel time in water");
+				effectsModified.add((waterSpeed<0?"[style.boldExcellent("+waterSpeed+"%)]":"[style.boldTerrible(+"+waterSpeed+"%)]")+"水中行进耗时");
 			}
 			
 			if(character.getLegConfiguration()==LegConfiguration.TAIL) {
-				effectsModified.add("[style.boldTan(Grows legs on land)]");
-				effectsModified.add("[style.boldBlueLight(Loses legs in water)]");
+				effectsModified.add("[style.boldTan(在陆地上长出下肢)]");
+				effectsModified.add("[style.boldBlueLight(在水中失去下肢)]");
 			}
 			
 			if(character.isFeral()) {
@@ -1458,8 +1458,8 @@ public abstract class AbstractSubspecies {
 	public List<String> getFeralEffects() {
 		List<String> feralEffects = new ArrayList<>();
 		
-		feralEffects.add("[style.colourUnarmed(Base unarmed damage)] [style.colourExcellent(tripled)]");
-		feralEffects.add("[style.colourExcellent(Immune)] to [style.colourGenericTf(racial transformations)]");
+		feralEffects.add("[style.colourUnarmed(基础徒手伤害)][style.colourExcellent(三倍)]");
+		feralEffects.add("[style.colourExcellent(免疫)][style.colourGenericTf(种族转化)]");
 
 		return feralEffects;
 	}
@@ -1979,12 +1979,12 @@ public abstract class AbstractSubspecies {
 			String[] demonNames = demonLegConfigurationNames.get(body ==null?LegConfiguration.BIPEDAL: body.getLegConfiguration());
 			
 			names = new String[] {
-				"half-"+demonNames[0],
-				"half-"+demonNames[1],
-				"half-"+demonNames[2],
-				"half-"+demonNames[3],
-				"half-"+demonNames[4],
-				"half-"+demonNames[5]};	
+				"半"+demonNames[0],
+				"半"+demonNames[1],
+				"半"+demonNames[2],
+				"半"+demonNames[3],
+				"半"+demonNames[4],
+				"半"+demonNames[5]};	
 		}
 		
 		if(names==null) {
@@ -1996,21 +1996,21 @@ public abstract class AbstractSubspecies {
 				
 			} else if(body ==null) {
 				names = new String[] {
-						"demonic-"+getAnthroNamesMap().get(null)[0],
-						"demonic-"+getAnthroNamesMap().get(null)[1],
-						"demonic-"+getAnthroNamesMap().get(null)[2],
-						"demonic-"+getAnthroNamesMap().get(null)[3],
-						"demonic-"+getAnthroNamesMap().get(null)[4],
-						"demonic-"+getAnthroNamesMap().get(null)[5]};
+						"恶魔"+getAnthroNamesMap().get(null)[0],
+						"恶魔"+getAnthroNamesMap().get(null)[1],
+						"恶魔"+getAnthroNamesMap().get(null)[2],
+						"恶魔"+getAnthroNamesMap().get(null)[3],
+						"恶魔"+getAnthroNamesMap().get(null)[4],
+						"恶魔"+getAnthroNamesMap().get(null)[5]};
 				
 			} else {
 				names = new String[] {
-						"demonic-"+this.getName(body),
-						"demonic-"+this.getNamePlural(body),
-						"demonic-"+this.getSingularMaleName(body),
-						"demonic-"+this.getSingularFemaleName(body),
-						"demonic-"+this.getPluralMaleName(body),
-						"demonic-"+this.getPluralFemaleName(body)};
+						"恶魔"+this.getName(body),
+						"恶魔"+this.getNamePlural(body),
+						"恶魔"+this.getSingularMaleName(body),
+						"恶魔"+this.getSingularFemaleName(body),
+						"恶魔"+this.getPluralMaleName(body),
+						"恶魔"+this.getPluralFemaleName(body)};
 			}
 		}
 		

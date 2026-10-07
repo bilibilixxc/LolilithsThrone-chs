@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>100000</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Angel's Tears]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Angel's Tears]]></namePlural>
-		<description><![CDATA[A delicate glass vial full of a light turquoise liquid.​ There's an image of a weeping angel engraved into the glass, and you see that her tears are falling into a vial just like this one.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[天使之泪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[天使之泪]]></namePlural>
+		<description><![CDATA[一支精致的玻璃小瓶，里面装满了淡蓝色的液体。玻璃上刻有一个哭泣的天使的图像，你看到她的眼泪正滴入一个与这个瓶子类似的小瓶中。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,10 +28,10 @@
 		<enchantmentEffectId>ATTRIBUTE_CORRUPTION</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 100% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Restores)] 100% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldExcellent(Lowers)] [style.boldLust(lust)] to resting level]]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_LUST.getFormattedValue(50)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]100%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]100%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[style.boldExcellent(降低)][style.boldLust(性欲)]到平静水平]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_LUST.getFormattedValue(50)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -39,7 +39,7 @@
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM))]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A soothing wave of pure energy washes over [npc.name]...
+				一股宁静的纯净能量波浪席卷了[npc.name]……
 			</p>
 			#IF(npc.getLust()>npc.getRestingLust())
 				[#npc.setLust(npc.getRestingLust())]
@@ -55,10 +55,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Pulling out the stopper from the vial of Angel's Tears, [npc.name] [npc.verb(bring)] it up to [npc.her] waiting [npc.lips]. The faint scent of roses rises up from the opening, and [npc.she] [npc.verb(find)] [npc.herself] letting out a gentle sigh before tilting back [npc.her] head and drinking down all of the cool liquid.
+		从天使之泪小瓶中拔出塞子后，[npc.name]将其送到[npc.her]等待[npc.lips]边。淡淡的玫瑰香气从瓶口散发出来，[npc.she]注意到[npc.herself]发出轻轻的叹息，然后将头仰起，喝下了所有的凉爽液体。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Pulling out the stopper from the vial of Angel's Tears, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips]. The faint scent of roses rises up from the opening, and [npc2.name] [npc2.verb(find)] [npc2.herself] letting out a gentle sigh before tilting back [npc2.her] head and drinking down all of the cool liquid.
+		从天使之泪小瓶中拔出塞子后，[npc.name]将其送到[npc2.namePos]等待[npc2.lips]边。淡淡的玫瑰香气从瓶口散发出来，[npc2.name]注意到[npc2.herself]发出轻轻的叹息，然后将头仰起，喝下了所有的冷却液体。
 		]]></otherUse>
 	</useDescriptions>
 

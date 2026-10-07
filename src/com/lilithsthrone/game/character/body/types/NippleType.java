@@ -31,15 +31,15 @@ public class NippleType {
 
 	public static AbstractNippleType ANGEL = new AbstractNippleType(BodyCoveringType.NIPPLES,
 			Race.ANGEL,
-			Util.newArrayListOfValues("perfect", "flawless"),
-			Util.newArrayListOfValues("perfect", "flawless"),
+			Util.newArrayListOfValues("完美", "无暇"),
+			Util.newArrayListOfValues("完美", "无暇"),
 			Util.newArrayListOfValues()){
 	};
 
 	public static AbstractNippleType DEMON = new AbstractNippleType(BodyCoveringType.NIPPLES,
 			Race.DEMON,
-			Util.newArrayListOfValues("perfect", "flawless"),
-			Util.newArrayListOfValues("perfect", "flawless"),
+			Util.newArrayListOfValues("完美", "无暇"),
+			Util.newArrayListOfValues("完美", "无暇"),
 			Util.newArrayListOfValues()){
 	};
 

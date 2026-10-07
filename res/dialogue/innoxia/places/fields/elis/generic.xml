@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_town_entry_east -->
@@ -19,8 +19,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Leave Elis and head back out into the Foloi Fields.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开伊利斯，然后返回弗洛伊田野。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="WORLD_MAP_FIELDS_CITY"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -49,8 +49,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Leave Elis and head back out into the Foloi Fields.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开伊利斯，然后返回弗洛伊田野。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="WORLD_MAP_FIELDS_CITY"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -75,12 +75,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explore]]></responseTitle>
+				<responseTitle><![CDATA[探索]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(ENCOUNTER_innoxia_elis_alleyway.isAnyEncounterAvailable())
-						Spend some time exploring the surrounding alleyways to see if you can find anything of interest.
+						花点时间探索周围的小巷，看看能否找到感兴趣的东西。
 					#ELSE
-						You get the feeling that you're not going to find anything interesting in the surrounding alleyways, so there's no reason to waste your time exploring...
+						你在周围的小巷里找不到任何有用的东西，没有理由浪费时间去探索……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -111,8 +111,8 @@
 				<availabilityConditional><![CDATA[[#(game.getDayOfWeek()==DOW_SUNDAY && !game.isHourBetween(10, 16)) || (game.getDayOfWeek()!=DOW_SUNDAY && !game.isHourBetween(9, 17))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[The bank is currently closed...]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[银行目前打烊了……]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 				<effects/>
 			</response>
@@ -120,8 +120,8 @@
 				<availabilityConditional><![CDATA[[#(game.getDayOfWeek()==DOW_SUNDAY && game.isHourBetween(10, 16)) || (game.getDayOfWeek()!=DOW_SUNDAY && game.isHourBetween(9, 17))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Enter the bank.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[进入银行。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_bank_exit"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -160,12 +160,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(8, 20))
-						Head inside the Enforcer station...
+						进入执法局……
 					#ELSE
-						The enforcer station is currently closed to members of the public...
+						执法局目前不向公众开放……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -204,8 +204,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Leave Elis and head back out into the Foloi Fields.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开伊利斯，然后返回弗洛伊田野。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="WORLD_MAP_FIELDS_CITY"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -220,8 +220,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fly onto wall]]></responseTitle>
-				<responseTooltip><![CDATA[As you're capable of flight, you could fly on up onto the walls of Elis from here.]]></responseTooltip>
+				<responseTitle><![CDATA[飞到墙上]]></responseTitle>
+				<responseTooltip><![CDATA[你有飞行能力，可以从这里飞上伊利斯的城墙。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_wall"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -235,8 +235,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fly onto tower]]></responseTitle>
-				<responseTooltip><![CDATA[As you're capable of flight, you could fly on up onto the nearest tower from here.]]></responseTooltip>
+				<responseTitle><![CDATA[飞到塔上]]></responseTitle>
+				<responseTooltip><![CDATA[你有飞行能力，可以从这里飞到最近的塔上。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_tower"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -265,8 +265,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enforcers]]></responseTitle>
-				<responseTooltip><![CDATA[Approach the Enforcers who're guarding the gatehouse.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[执法者]]></responseTitle>
+				<responseTooltip><![CDATA[接近守卫门房的执法者。<br/>[style.italicsBad(不久后会添加！)] ]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<!-- The player IS travelling along the walls (index 1): -->
@@ -276,8 +276,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enforcer]]></responseTitle>
-				<responseTooltip><![CDATA[Approach the Enforcer who's guarding the portcullis.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[执法者]]></responseTitle>
+				<responseTooltip><![CDATA[接近守卫栅栏的执法者。<br/>[style.italicsBad(不久后会添加！)] ]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -301,8 +301,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enforcers]]></responseTitle>
-				<responseTooltip><![CDATA[Approach the Enforcers who're guarding the gatehouse.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[执法者]]></responseTitle>
+				<responseTooltip><![CDATA[接近守卫门房的执法者。<br/>[style.italicsBad(不久后会添加！)] ]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<!-- The player IS travelling along the walls (index 1): -->
@@ -312,8 +312,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enforcer]]></responseTitle>
-				<responseTooltip><![CDATA[Approach the Enforcer who's guarding the portcullis.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[执法者]]></responseTitle>
+				<responseTooltip><![CDATA[接近守卫栅栏的执法者。<br/>[style.italicsBad(不久后会添加！)] ]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -333,8 +333,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Turn away from the lake's shore and head back into the fields.]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[转离湖岸，返回田野。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_fields"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -348,15 +348,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Swim]]></responseTitle>
-				<responseTooltip><![CDATA[Swim out into the middle of the lake.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[游泳]]></responseTitle>
+				<responseTooltip><![CDATA[游到湖中央。<br/>[style.italicsBad(不久后会添加！)] ]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Skip stones]]></responseTitle>
-				<responseTooltip><![CDATA[Start skipping stones over the surface of the lake.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[打水漂]]></responseTitle>
+				<responseTooltip><![CDATA[开始在湖面上打水漂。<br/>[style.italicsBad(不久后会添加！)] ]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -389,16 +389,16 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(8, 18))
-						Enter the Farmer's Market and take a look around the stalls...
+						进入农贸市场，逛逛摊位……
 					#ELSEIF(game.getHourOfDay()==7)
-						As the stalls of the Farmer's Market are currently being set up, there's not yet a reason to start taking a look around. You should return in an hour if you wanted to do some shopping...
+						农贸市场的摊位还在布置，没什么可逛的。如果你想购物，应该在一小时后回来……
 					#ELSEIF(game.getHourOfDay()==18)
-						As the stalls of the Farmer's Market are currently being cleared away, there's no reason to start taking a look around. You should return tomorrow if you wanted to do some shopping...
+						农贸市场的摊位目前开始清理了，没什么可逛的了。如果你想购物的话，明天再来吧……
 					#ELSE
-						As the Farmer's Market is currently closed, there's nothing here except a large, empty, cobblestone square. You should return tomorrow if you wanted to do some shopping...
+						农贸市场目前已经关闭，这里除了一个巨大、空旷的鹅卵石广场外，什么也没有。如果你想购物，应该明天再来……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -426,8 +426,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Information sign]]></responseTitle>
-				<responseTooltip><![CDATA[Take a moment to read one of the information signs positioned at each of the entrances to the market.]]></responseTooltip>
+				<responseTitle><![CDATA[信息标牌]]></responseTitle>
+				<responseTooltip><![CDATA[花点时间阅读市场每个入口处的信息标牌。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_generic_market_info</nextDialogue>
 			</response>
 		</responses>
@@ -446,8 +446,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[You've finished reading and so [pc.step] away from the sign.]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[你读完了，离开标牌。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_market"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects/>
@@ -469,8 +469,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Loiter]]></responseTitle>
-				<responseTooltip><![CDATA[You aren't afraid of a so-called pond monster! Loiter about and see if it decides to show itself.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[闲逛]]></responseTitle>
+				<responseTooltip><![CDATA[你不怕所谓的池塘怪兽！四处闲逛，看看它是否会现身。<br/>[style.italicsBad(不久后会添加！)] ]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -516,8 +516,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wall's End]]></responseTitle>
-				<responseTooltip><![CDATA[Head into the shopping precinct.]]></responseTooltip>
+				<responseTitle><![CDATA[墙之尽头]]></responseTitle>
+				<responseTooltip><![CDATA[前往购物区。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_shops_exit"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -575,8 +575,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Use one of the tavern's entrances to head inside.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[从酒馆的一个入口进去。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_f0_first_entry]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -591,8 +591,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Use one of the tavern's entrances to head inside.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[从酒馆的一个入口进去。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f0_exit"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -620,9 +620,9 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
-					The tavern isn't open at this time of day...
+					酒馆现在还没开门……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					null
@@ -635,8 +635,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Push open the tavern's door and head inside.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[推开酒馆的门，向里面走去。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_tavern_alley_exit"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -653,14 +653,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Old stables]]></responseTitle>
+				<responseTitle><![CDATA[旧马厩]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!game.isHourBetween(6, 7))
-						You need to come back between [units.time(6)]-[units.time(7)] if you wanted to see what Golix does to Kheiron...
+						如果你想看看戈利克斯对喀戎做了什么，你得[units.time(6)]-[units.time(7)]来……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_oglix_kheiron_spectated_today))
-						You've already seen what Golix does to Kheiron today...
+						你今天看到戈利克斯对喀戎做的了……
 					#ELSE
-						Sneak around the back of the tavern to the old stables so that you can watch what Golix does to Kheiron...
+						悄悄绕到酒馆后面的旧马厩，看看戈利克斯要对喀戎做什么……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -679,59 +679,48 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Yui]]></responseTitle>
+				<responseTitle><![CDATA[唯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_yui_public_toy_unavailable_today))
-						As you've already refused Yui's offer today, you aren't going to be able to meet her here until next Friday...
+						由于你今天已经拒绝了唯的邀约，在下周五之前都无法在这里见到她……
 					#ELSE
-						#IF(!game.isHourBetween(20, 23))
-							Yui told you to meet her here between [style.italicsMinorBad([units.time(20)]-[units.time(23)])], on a
-						#ELSE
-							Yui told you to meet her here between [style.italicsMinorGood([units.time(20)]-[units.time(23)])], 
-						#ENDIF
+						唯让你在
 						#IF(game.getDayOfWeek()==DOW_FRIDAY)
-							 [style.colourMinorGood(Friday)],
+							[style.colourMinorGood(周五)]的
 						#ELSE
-							 [style.colourMinorBad(Friday)],
+							[style.colourMinorBad(周五)]的
+						#ENDIF
+						#IF(!game.isHourBetween(20, 23))
+							[style.italicsMinorBad([units.time(20)]-[units.time(23)])]之间来这里见她，
+						#ELSE
+							[style.italicsMinorGood([units.time(20)]-[units.time(23)])]之间来这里见她，
 						#ENDIF
 						#IF(game.isHourBetween(20, 23) && game.getDayOfWeek()==DOW_FRIDAY)
-							 so you could wait here for her to show herself...
+							所以你可以在这里等她出现……
 						#ELSE
-							 so she won't show up at the moment...
+							所以她现在不会出现……
 						#ENDIF
 						
 						#IF(!pc.hasFetish(FETISH_MASOCHIST))
-							<br/>As you're [style.italicsBad(not a masochist)], you've got a bad feeling about this and [style.italicsBad(decide not to meet with Yui)]...
+							<br/>由于你[style.italicsBad(不是受虐狂)]，并不太喜欢，[style.italicsBad(决定不与唯见面)]……
 						#ELSEIF(pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects() || pc.getDirtySlots().size()>0 || (!game.isAnalContentEnabled() && !pc.hasVagina()) || pc.getLegConfiguration()!=LEG_CONFIGURATION_BIPEDAL)
-							<br/>As you have
+							<br/>由于你
 							#IF(pc.isAnyEquippedClothingSealed())
-								 [style.italicsSealed(sealed)] clothing equipped,
+								装备了[style.italicsSealed(被封印)]的衣物，
 							#ENDIF
 							#IF(pc.isHasAnyPregnancyEffects())
-								#IF(pc.isAnyEquippedClothingSealed() && pc.getDirtySlots().size()==0)
-									 and
-								#ENDIF
-								 a [style.italicsSex(pregnancy-related status effect)] active,
+								有[style.italicsSex(怀孕相关的状态效果)]生效，
 							#ENDIF
 							#IF(pc.getDirtySlots().size()>0)
-								#IF(pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects())
-									 and
-								#ENDIF
-								 [style.italicsDirty(dirty inventory slots)], 
+								[style.italicsDirty(物品栏栏位脏污)]，
 							#ENDIF
 							#IF(!game.isAnalContentEnabled() && !pc.hasVagina())
-								#IF(pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects() || pc.getDirtySlots().size()>0)
-									 and
-								#ENDIF
-								 [style.italicsSex(no vagina)], 
+								[style.italicsSex(没有阴道)]，
 							#ENDIF
 							#IF(pc.getLegConfiguration()!=LEG_CONFIGURATION_BIPEDAL)
-								#IF(pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects() || pc.getDirtySlots().size()>0 || (!game.isAnalContentEnabled() && !pc.hasVagina()))
-									 and
-								#ENDIF
-								 [style.italicsTfGeneric(a non-bipedal lower body)], 
+								[style.italicsTfGeneric(下半身非双足)]，
 							#ENDIF
-							 [style.italicsBad(Yui won't show up)]!
+							[style.italicsBad(唯不会出现)]！
 						#ENDIF
 					#ENDIF
 				]]></responseTooltip>
@@ -763,8 +752,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Use one of the tavern's entrances to head inside.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[从酒馆的一个入口进去。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_taur_exit"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -792,8 +781,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fly down]]></responseTitle>
-				<responseTooltip><![CDATA[As you're capable of flight, you could fly down into the fields from here.]]></responseTooltip>
+				<responseTitle><![CDATA[飞下来]]></responseTitle>
+				<responseTooltip><![CDATA[你有飞行能力，可以从这里飞到田野里去。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_fields"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -827,54 +816,48 @@
 						1
 					#ENDIF
 				]]></index>
-				<responseTitle><![CDATA[Yui]]></responseTitle>
+				<responseTitle><![CDATA[唯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_yui_dungeon_unavailable_today))
-						As you've already refused Yui's offer this evening, you aren't going to be able to meet her here until
+						由于你今晚已拒绝了唯的邀请，在她下次出现前你无法在此与她相见，时间要等到
 						#IF(game.getDayOfWeek()==DOW_MONDAY)
-							 Wednesday evening...
+							周三晚上……
 						#ELSE
-							 Monday evening...
+							周一晚上……
 						#ENDIF
 					#ELSE
 						#IF(!game.isHourBetween(20, 23))
-							Yui told you to meet her here between [style.italicsMinorBad([units.time(20)]-[units.time(23)])], on a
+							唯让你在[style.italicsMinorBad([units.time(20)]-[units.time(23)])]之间来此找她，具体日期是
 						#ELSE
-							Yui told you to meet her here between [style.italicsMinorGood([units.time(20)]-[units.time(23)])], 
+							唯让你在[style.italicsMinorGood([units.time(20)]-[units.time(23)])]之间来此找她，具体日期是
 						#ENDIF
 						#IF(game.getDayOfWeek()==DOW_MONDAY)
-							 [style.colourMinorGood(Monday)] or Wednesday.
+							[style.colourMinorGood(周一)]或周三。
 						#ELSEIF(game.getDayOfWeek()==DOW_WEDNESDAY)
-							 Monday or [style.colourMinorGood(Wednesday)],
+							周一或[style.colourMinorGood(周三)]，
 						#ELSE
-							 [style.colourMinorBad(Monday or Wednesday)],
+							[style.colourMinorBad(周一或周三)]，
 						#ENDIF
 						#IF(game.isHourBetween(20, 23)&& (game.getDayOfWeek()==DOW_MONDAY || game.getDayOfWeek()==DOW_WEDNESDAY))
-							 so you could wait here for her to show herself...
+							所以你可以在此等候她的出现……
 						#ELSE
-							 so she won't show up at the moment...
+							所以她此刻不会现身……
 						#ENDIF
 						
 						#IF(!pc.hasFetish(FETISH_MASOCHIST))
-							<br/>As you're [style.italicsBad(not a masochist)], you've got a bad feeling about this and [style.italicsBad(decide not to meet with Yui)]...
+							<br/>由于你[style.italicsBad(并非受虐狂)]，对此感到不安，[style.italicsBad(决定不与唯会面)]……
 						#ELSEIF(pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects() || pc.getDirtySlots().size()>0)
-							<br/>As you have
+							<br/>由于你
 							#IF(pc.isAnyEquippedClothingSealed())
-								 [style.italicsSealed(sealed)] clothing equipped,
+								装备了[style.italicsSealed(被封印)]衣物，
 							#ENDIF
 							#IF(pc.isHasAnyPregnancyEffects())
-								#IF(pc.isAnyEquippedClothingSealed() && pc.getDirtySlots().size()==0)
-									 and
-								#ENDIF
-								 a [style.italicsSex(pregnancy-related status effect)] active,
+								存在[style.italicsSex(怀孕相关状态效果)]，
 							#ENDIF
 							#IF(pc.getDirtySlots().size()>0)
-								#IF(pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects())
-									 and
-								#ENDIF
-								 [style.italicsDirty(dirty inventory slots)], 
+								[style.italicsDirty(物品栏位污损)]，
 							#ENDIF
-							 [style.italicsBad(Yui won't show up)]!
+							[style.italicsBad(唯不会出现)]！
 						#ENDIF
 					#ENDIF
 				]]></responseTooltip>
@@ -906,14 +889,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getHourOfDay()>=7 && game.getHourOfDay()<21)
-						Use the door marked as the 'public entrance' to head inside Elis's town hall.
+						从标有“公共入口”的门进入伊利斯市镇议会。
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_elis_minotallys_introduced))
-						Show the Enforcer your pass and enter the town hall.
+						向执法者出示通行证，然后进入市镇议会。
 					#ELSE
-						As the town hall is closed at this hour, you're unable to head inside...
+						市镇议会现在关闭，你不能进去……
 					#ENDIF
 					]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -949,8 +932,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fly down]]></responseTitle>
-				<responseTooltip><![CDATA[As you're capable of flight, you could fly down into the fields from here.]]></responseTooltip>
+				<responseTitle><![CDATA[飞下来]]></responseTitle>
+				<responseTooltip><![CDATA[你有飞行能力，可以从这里飞到田野里去。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_fields"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -975,8 +958,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Knock]]></responseTitle>
-				<responseTooltip><![CDATA[Knock on the door to the log cabin and introduce yourself to its occupant.<br/>[style.italicsMinorBad(This will be added soon!)]]]></responseTooltip>
+				<responseTitle><![CDATA[敲门]]></responseTitle>
+				<responseTooltip><![CDATA[敲开木屋的门，向友人住客介绍自己。<br/>[style.italicsBad(不久后会添加！)]]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -996,14 +979,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explore]]></responseTitle>
+				<responseTitle><![CDATA[探索]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(ENCOUNTER_innoxia_elis_woodland.isAnyEncounterAvailable())
-						Spend some time exploring the surrounding woodland to see if you can find anything of interest.
+						花点时间探索周围的林地，看看能否找到感兴趣的东西。
 					#ELSE
-						You get the feeling that you're not going to find anything interesting in the surrounding woodland, so there's no reason to waste your time exploring...
+						你在周围的林地里找不到任何有用的东西，没有理由浪费时间去探索……
 						<br/>
-						<i>Perhaps if you came back tomorrow there'd be something worth finding.</i>
+						<i>或许明天再来会有新收获。</i>
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[

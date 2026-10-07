@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>NoStepOnSnek_snake</race>
 	<colour>NoStepOnSnek_snake</colour>
@@ -30,38 +30,38 @@
 	<iconName displaySize="60">snake</iconName>
 	<backgroundName>background_wing</backgroundName>
 	<bookIconName>snake</bookIconName>
-	<bookName>Clutching Coils</bookName>
+	<bookName><![CDATA[缠紧盘绕]]></bookName>
 	<basicDescriptionId>SNAKE_BASIC</basicDescriptionId>
 	<advancedDescriptionId>SNAKE_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[melusine]]></name>
-			<namePlural><![CDATA[melusines]]></namePlural>
-			<singularMaleName><![CDATA[melusine-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[melusine-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[melusine-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[melusine-girls]]></pluralFemaleName>
+			<name><![CDATA[美露莘]]></name>
+			<namePlural><![CDATA[美露莘]]></namePlural>
+			<singularMaleName><![CDATA[美露莘男]]></singularMaleName>
+			<singularFemaleName><![CDATA[美露莘女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[美露莘男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[美露莘女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
-	<description><![CDATA[An anthropomorphic snake with the lower body of a typically-oversized feral snake and a pair of wings, known as a 'melusine'.]]></description>
+	<description><![CDATA[一种人形的蛇，下半身是典型的超大蛇身并长着一对翅膀，被称为 “美露莘” 。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[demonic-melusine]]></name>
-			<namePlural><![CDATA[demonic-melusines]]></namePlural>
-			<singularMaleName><![CDATA[demonic-melusine]]></singularMaleName>
-			<singularFemaleName><![CDATA[demonic-melusine]]></singularFemaleName>
-			<pluralMaleName><![CDATA[demonic-melusines]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[demonic-melusine]]></pluralFemaleName>
+			<name><![CDATA[恶魔美露莘]]></name>
+			<namePlural><![CDATA[恶魔美露莘]]></namePlural>
+			<singularMaleName><![CDATA[恶魔美露莘]]></singularMaleName>
+			<singularFemaleName><![CDATA[恶魔美露莘]]></singularFemaleName>
+			<pluralMaleName><![CDATA[恶魔美露莘]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[恶魔美露莘]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[snake]]></feralName>
-		<feralNamePlural><![CDATA[snakes]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[snake]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[snake]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[snakes]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[snakes]]></feralPluralFemaleName>
+		<feralName><![CDATA[蛇]]></feralName>
+		<feralNamePlural><![CDATA[蛇]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[蛇]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[蛇]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[蛇]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[蛇]]></feralPluralFemaleName>
 		<legConfiguration>TAIL_LONG</legConfiguration>
 		<sizeHeight>false</sizeHeight>
 		<size>160</size>
@@ -75,8 +75,8 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		Although [npc.namePos] snake-like body is very quick and strong, [npc.she] can't regulate [npc.her] body temperature very well, and so [npc.sheIs] weak to both arcane ice and fire. On the positive side, [npc.she] [npc.has] a strong affinity with arcane poison.
-	]]></statusEffectDescription>
+		虽然[npc.namePos]蛇一样的身体非常敏捷且强壮，但[npc.she]并不能很好地调节[npc.her]的体温，因此[npc.sheIs]对奥术火焰和奥术冰霜的抗性很弱。但也有好的方面，[npc.she]对奥术毒素有很高的亲和力。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="10">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

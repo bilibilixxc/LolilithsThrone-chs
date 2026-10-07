@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA["Tailored by the DSG Textile Guild" is crudely sewn into the fabric near the side seam]]></authorTag>
+		<authorTag><![CDATA[“DSG织厂定制” 被粗糙地缝在侧缝旁的面料上。]]></authorTag>
 
 		<value>150</value> 
 
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[roughspun tunic]]></name>
+		<name><![CDATA[粗布束腰外衣]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[roughspun tunics]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[粗布束腰外衣]]></namePlural> 
 
-		<description><![CDATA[A tunic made from roughspun wool, cinched about the waist with a leather belt. Although it reaches down to the wearer's thighs, movement is not impeded thanks to partial slits cut into the sides. A small pouch is attached to the belt for handy storage. The fabric is threadbare despite still being whole.]]></description> 
+		<description><![CDATA[一件由粗羊毛制成的束腰外衣，用皮带系在腰部。虽然它一直延伸到穿着者的大腿，但由于侧面有部分切口，运动不会受到阻碍。皮带上附有一个袋子，便于存放物品。这织物虽然还完好无损，但还是破旧不堪。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -91,51 +90,51 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] on the tunic. [npc.She] then securely [npc.verb(fasten)] the belt around [npc.namePos] waist.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] [npc2.verb(put)] [npc2.her] arms through the tunic's sleeves as [npc.she] [npc.verb(pull)] the rest down over [npc2.her] torso. [npc.She] then securely [npc.verb(fasten)] the belt around [npc2.namePos] waist.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.name] [npc2.verb(put)] [npc2.her] arms into the tunic's sleeves as [npc.she] roughly [npc.verb(pull)] the rest down over [npc2.her] torso. [npc.She] then [npc.verb(yanks)] the belt around [npc2.namePos] waist and [npc.verb(cinch)] it up as tightly as possible.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿上外衣，然后将腰带紧紧的系在[npc.namePos]的腰上。
+]]></self>
+		<other><![CDATA[
+		[npc.Name]帮助[npc2.name]把[npc2.her]双臂穿过外衣的袖子，[npc.she]拉下剩余部分覆盖[npc2.her]的躯干。然后，[npc.she]把皮带牢牢系紧在[npc2.namePos]腰间。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴把[npc2.name]的双臂塞入外衣的袖子，同时粗鲁地将剩余部分拉下覆盖[npc2.her]的躯干。然后，[npc.she]猛力拉紧[npc2.namePos]腰间的皮带，尽可能地将其扎紧。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(undo)] the belt around [npc.namePos] waist and [npc.verb(pull)] off [npc.her] tunic.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(undo)] the belt around [npc2.namePos] waist [npc.verb(pull)] off [npc2.her] tunic.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(undo)] the belt around [npc2.namePos] waist, then [npc.verb(grab)] hold of [npc2.namePos] tunic and roughly [npc.verb(pull)] it off over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.namePos]腰上的腰带并将上衣脱了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]腰间的皮带，脱下[npc2.her]的外衣。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙地解开[npc2.namePos]腰间的皮带，然后抓住[npc2.namePos]的外衣，粗暴地从[npc2.her]头上扯了下来。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] tunic back down over [npc.her] torso and securely [npc.verb(fasten)] the belt around [npc.namePos] waist.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] tunic back down over [npc2.her] torso and securely [npc2.verb(fasten)] the belt around [npc2.namePos] waist.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] tunic back down over [npc2.her] torso before yanking the belt around [npc2.namePos] waist and cinching it up as tightly as possible.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]把[npc.her]外衣重新盖回[npc.her]的躯干，牢牢系紧[npc.namePos]腰间的皮带。
+		]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的外衣拉回遮盖[npc2.her]的躯干，并牢牢地系上[npc2.namePos]腰间的皮带。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的外衣拉回遮盖[npc2.her]的躯干，然后猛力拉紧[npc2.namePos]腰间的皮带，尽可能地扎紧它。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(undo)] the belt around [npc.namePos] waist and [npc.verb(pull)] [npc.her] tunic up to just below [npc.her] chin.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(undo)] the belt around [npc2.namePos] waist and [npc.verb(pull)] [npc2.namePos] tunic up to just below [npc2.her] chin.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(undo)] the belt around [npc2.namePos] waist and roughly [npc.verb(pull)] [npc2.namePos] tunic up to just below [npc2.her] chin.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开[npc.namePos]腰间的皮带，拉起[npc.her]的外衣到[npc.her]下巴上方。
+		]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]腰间的皮带，然后把[npc2.namePos]的外衣上拉到[npc2.her]下巴下面。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙地解开[npc2.namePos]腰间的皮带，然后粗暴地将[npc2.namePos]的外衣拉起到[npc2.her]下巴下方。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

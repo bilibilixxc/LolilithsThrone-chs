@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Meraxis's room]]></name>
-	<tooltipDescription><![CDATA[Having lost a duel to Meraxis, the tavern's owner has surrendered possession of this room to the chuuni [meraxis.race].]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Meraxis's room at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[梅拉克西丝的房间]]></name>
+	<tooltipDescription><![CDATA[酒馆老板在决斗中输给了梅拉克西丝，因此这个房间的所有权被交给了这个中二的[meraxis.race]。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆内的梅拉克西丝房间里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>room</svgName>
 	<colour>BASE_PURPLE</colour>

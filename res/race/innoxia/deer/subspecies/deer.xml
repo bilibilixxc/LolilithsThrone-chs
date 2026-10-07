@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_deer</race>
 	<colour>innoxia_deer</colour>
@@ -23,34 +23,34 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Harts and Hinds</bookName>
+	<bookName><![CDATA[麚与麀]]></bookName>
 	<basicDescriptionId>DEER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>DEER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[deer-morph]]></name>
-	<namePlural><![CDATA[deer-morphs]]></namePlural>
-	<singularMaleName><![CDATA[stag-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[deer-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[stag-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[deer-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic deer, known as a 'deer-morph' when bipedal, and a 'deer-taur' when the lower body is that of a feral deer.]]></description>
+	<name><![CDATA[鹿化形]]></name>
+	<namePlural><![CDATA[鹿化形]]></namePlural>
+	<singularMaleName><![CDATA[鹿男]]></singularMaleName>
+	<singularFemaleName><![CDATA[鹿女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[鹿男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[鹿女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的鹿，当下肢为双足时称为“鹿化形”，而下肢呈现出鹿兽态时称为“半鹿人”。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[peryton]]></name>
-			<namePlural><![CDATA[perytons]]></namePlural>
-			<singularMaleName><![CDATA[peryton]]></singularMaleName>
-			<singularFemaleName><![CDATA[peryton]]></singularFemaleName>
-			<pluralMaleName><![CDATA[perytons]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[perytons]]></pluralFemaleName>
+			<name><![CDATA[佩里顿]]></name>
+			<namePlural><![CDATA[佩里顿]]></namePlural>
+			<singularMaleName><![CDATA[佩里顿]]></singularMaleName>
+			<singularFemaleName><![CDATA[佩里顿]]></singularFemaleName>
+			<pluralMaleName><![CDATA[佩里顿]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[佩里顿]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[deer]]></feralName>
-		<feralNamePlural><![CDATA[deer]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[stag]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[doe]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[stags]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[does]]></feralPluralFemaleName>
+		<feralName><![CDATA[鹿]]></feralName>
+		<feralNamePlural><![CDATA[鹿]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[公鹿]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[母鹿]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[公鹿]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[母鹿]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>75</size>
@@ -63,8 +63,8 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] strong, tough body helps [npc.herHim] to endure physical blows as well as to put some extra power behind attacks of [npc.her] own.
-	]]></statusEffectDescription>
+		[npc.NamePos]强健紧实的身体能帮助[npc.herHim]承受物理伤害，并为[npc.her]自身提供一定的攻击加成。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="10">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

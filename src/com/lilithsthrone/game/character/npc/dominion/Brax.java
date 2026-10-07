@@ -93,8 +93,8 @@ public class Brax extends NPC {
 	}
 	
 	public Brax(boolean isImported) {
-		super(isImported, new NameTriplet("Brax", "Bree", "Brandi"), "Volkov",
-				"Holding the rank of Inspector, Brax is a high-ranking Enforcer. Muscular, handsome, and with an incredibly dominant personality, he's the focus of every female Enforcer's attention.",
+		super(isImported, new NameTriplet("布拉克斯", "布瑞", "布兰迪"), "沃尔科夫",
+				"布拉克斯拥有督察的警衔，是一名高阶执法者。他肌肉发达、英俊潇洒、个性霸道，是每一位女性执法者关注的焦点。",
 				30, Month.NOVEMBER, 27,
 				10, Gender.M_P_MALE,
 				Subspecies.WOLF_MORPH, RaceStage.GREATER, new CharacterInventory(false, 10), WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_BRAXS_OFFICE, true);
@@ -106,7 +106,7 @@ public class Brax extends NPC {
 			AbstractItem potion = EnchantingUtils.craftItem(
 				Main.game.getItemGen().generateItem(tfPotion.getItemType()),
 				tfPotion.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-			potion.setName("Brax's Surprise");
+			potion.setName("布拉克斯的小惊喜");
 			this.addItem(potion, false);
 		}
 	}
@@ -140,7 +140,7 @@ public class Brax extends NPC {
 			AbstractItem potion = EnchantingUtils.craftItem(
 				Main.game.getItemGen().generateItem(tfPotion.getItemType()),
 				tfPotion.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-			potion.setName("Brax's Surprise");
+			potion.setName("布拉克斯的小惊喜");
 			this.addItem(potion, false);
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.17") && !this.isSlave()) {
@@ -368,7 +368,13 @@ public class Brax extends NPC {
 
 	@Override
 	public String getArtworkFolderName() {
-		return this.getNameIgnoresPlayerKnowledge();
+		if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.bimbofiedBrax))
+			return "Brandi";
+		else if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.feminisedBrax))
+			return "Bree";
+		else
+			return "Brax";
+
 	}
 	
 	@Override
@@ -380,29 +386,29 @@ public class Brax extends NPC {
 	public String getDescription() {
 		if(this.isSlave() && this.getOwner().isPlayer()) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.bimbofiedBrax)) {
-				return "At one time being an Enforcer holding the rank of Inspector, [brax.name] ended up becoming Candi's slave, and under her ownership, [brax.she] was transformed into a sex-obsessed bimbo wolf-girl."
-				+ " Eventually, after performing several tasks for the bimbo cat-girl Enforcer, you became [brax.namePos] new owner.";
+				return "[brax.name]曾是一名拥有督察警衔的执法者，而[brax.her]最终变成了坎迪的奴隶，且在她的掌控之下，转变成了一名性成瘾的无脑大胸狼女。"
+				+ "在你为胸大无脑的猫女执法者完成了几项任务后，你就成为了[brax.namePos]的新主人。";
 				
 			} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.feminisedBrax)) {
-				return "At one time being an Enforcer holding the rank of Inspector, [brax.name] ended up becoming Candi's slave, and under her ownership, [brax.she] was transformed into a wolf-girl."
-						+ " Eventually, after performing several tasks for the bimbo cat-girl Enforcer, you became [brax.namePos] new owner.";
+				return "[brax.name]曾是一名拥有督察警衔的执法者，而[brax.her]最终变成了坎迪的奴隶，且在她的掌控之下，转变成了一名狼女。"
+						+ "在你为胸大无脑的猫女执法者完成了几项任务后，你就成为了[brax.namePos]的新主人。";
 				
 			} else {
-				return "At one time being an Enforcer holding the rank of Inspector, [brax.name] ended up becoming Candi's slave, and after you performed several tasks for the bimbo cat-girl Enforcer, you became [brax.namePos] new owner.";
+				return "[brax.name]曾是一名拥有督察警衔的执法者，而[brax.her]最终变成了坎迪的奴隶。在你为胸大无脑的猫女执法者完成了几项任务后，你就成了[brax.namePos]的新主人。";
 			}
 		}
 		
 		if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.bimbofiedBrax)) {
-			return "At one time being an Enforcer holding the rank of Inspector, [brax.name] is now completely unrecognisable from [brax.her] former self."
-					+ " With some help from Candi, she's been transformed into a brain-dead bimbo, who can only think about where the next cock is coming from.";
+			return "[brax.name]曾是一名拥有督察警衔的执法者，而现在的[brax.her]与以前几乎不可同日而语。"
+					+ "借着坎迪的帮助，你将[brax.herHim]转变成了一名性感的无脑大胸，只想着下次挨操会是什么时候。";
 			
 		} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.feminisedBrax)) {
-			return "At one time being an Enforcer holding the rank of Inspector, [brax.name] is almost unrecognisable from [brax.her] former self."
-					+ " With some help from Candi, you've transformed [brax.herHim] into a wolf-girl."
-					+ " Where once [brax.she] was muscular and dominant, [brax.sheIs] now feminine and submissive, and meekly agrees to do anything that's asked of [brax.herHim].";
+			return "[brax.name]曾是一名拥有督察警衔的执法者，而现在的[brax.her]与以前几乎不可同日而语。"
+					+ "借着坎迪的帮助，你将[brax.herHim]转变成了一名狼女。"
+					+ "曾经的[brax.she]肌肉发达，霸气十足，而现在的[brax.she]则柔弱顺从，温顺地答应任何向[brax.herHim]提出的要求。";
 			
 		} else {
-			return "Holding the rank of Inspector, Brax is a high-ranking Enforcer. Muscular, handsome, and with an incredibly dominant personality, he's the focus of every female Enforcer's attention.";
+			return "布拉克斯拥有督察的警衔，是一名高阶执法者。他肌肉发达、英俊潇洒、个性霸道，是每一位女性执法者关注的焦点。";
 		}
 		
 	}

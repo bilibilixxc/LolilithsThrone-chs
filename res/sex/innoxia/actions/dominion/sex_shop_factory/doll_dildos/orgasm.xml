@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 
 	<buttonPriority>0</buttonPriority>
@@ -30,11 +30,11 @@
 	<!-- Information displayed to the player: -->
 	
 	<title><![CDATA[
-		Climax
+		高潮
 	]]></title>
 	
 	<tooltip><![CDATA[
-		You orgasm on the doll's command.
+		你在玩偶的命令下高潮。
 	]]></tooltip>
 	
 	<descriptions>
@@ -43,27 +43,27 @@
 				[#sex.getNumberOfOrgasms(pc)==0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Whether you wanted to obey or not, the doll's command comes just as you reach your orgasm. Pumping the dildo in and out of your
+				不管你愿不愿意服从，玩偶的命令就在你达到高潮的时候到来。假阳具在你的
 				#IF(game.isAnalContentEnabled())
-					 throat while bouncing up and down on the silicone horse-cock that's stuffed deep in your ass,
+					喉咙里抽进抽出，硅胶马屌也随着你上下起伏塞进你的屁股深处。
 				#ELSE
-					 throat,
+					喉咙里抽进抽出，
 				#ENDIF
-				 you let out a series of muffled, gargled moans as you feel your pussy clench down around the toy that's stuffed inside it. Climaxing while being used to test these dildos makes something click in your mind, and for a moment you find yourself unable to think of yourself as anything but an obedient sex doll. Clear fluids squirt out from your quivering cunt as you orgasm, and you continue to obediently fuck
+				你感觉小穴紧裹着塞在里面的玩具，口中发出了一长串低沉而含混的呻吟。自己被用来测试这些假阳具的时候，高潮会让你的脑海里响起一些东西，有那么一刻，你发现自己除了把自己当成一个顺从的性爱玩偶之外，什么都不能想。高潮时，清澈的液体从你颤抖的小穴喷射出来，你继续顺从地
 				#IF(game.isAnalContentEnabled())
-					 yourself with the dildos
+					用着假阳具，
 				#ELSE
-					 your throat with the dildo
+					用着假阳具抽插喉咙，
 				#ENDIF
-				 while your legs tremble and your ecstatic moans come out in gargled bursts.
-				 
-				<br/><br/>
-				
-				[doll.speech(All of these dildos seem to be adequate, but I'll wait to hear your report before signing the designs off as having passed quality control,)] the red doll states as she observes your climax. Making a few notes on a nearby clipboard, she turns to face you and commands, [doll.speech(That's enough. Now stay still so I can swap in the other toys.)]
+				双腿颤抖，狂喜地呻吟着，发出阵阵漱口声。
 				
 				<br/><br/>
 				
-				With your orgasm at an end, you obediently hold still as the doll reaches down towards you...
+				[doll.speech(这些假阳具似乎都合格了，但我要等你们的报告出来再签字，说明这些设计已经通过了质量控制，)]红色玩偶一边观察你的高潮，一边说着。她在旁边的剪贴板上做了一些笔记，然后转向你，命令道：[doll.speech(这就够了。别动，我去换其他玩具。)]
+				
+				<br/><br/>
+				
+				等高潮结束，你顺从地静止不动，看着玩偶向你伸出手……
 			]]></text>
 		</description>
 		<description>
@@ -71,27 +71,27 @@
 				[#sex.getNumberOfOrgasms(pc)>0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Without thinking, you instantly obey the doll. Allowing your climax to crash over you, a shuddering, muffled moan escapes from around the corners of the equine dildo that's shoved deep down your throat. Your hands continue to furiously slam the other silicone horse-cock in and out of your quivering cunt, 
+				你不假思索地服从命令。任高潮在你身上迸发，一声发颤而低沉的呻吟从深插在喉咙里的假马屌周围逸出来。你的手继续猛烈地用另一个硅胶马屌抽插你颤抖的小穴，
 				#IF(game.isAnalContentEnabled())
-					 and you shudder and squeal in depraved delight as you force the entire length of the gigantic ribbed dildo into your ass.
+					在堕落的喜悦中颤抖着、浪叫着，把整个巨大的有螺纹的假阳具插入你的屁股。
 				#ELSE
-					 causing you to shudder and squeal in depraved delight.
+					在堕落的喜悦中颤抖着、浪叫着。
 				#ENDIF
-				 The intensity of your orgasm causes your mind to blank out for a moment, and for a second you want nothing more than to be caught by Angelixx and fully turned into an obedient sex doll.
-				 
-				<br/><br/>
-				
-				The red doll watches you as you continue to fuck yourself with the 
-				#IF(game.isAnalContentEnabled())
-					 dildos
-				#ELSE
-					 dildo
-				#ENDIF
-				 throughout your orgasm, and then after making a few notes on her clipboard she states, [doll.speech(All toy designs have been tested. Stop what you're doing and place the dildos on the table.)]
+				高潮让你的大脑暂时一片空白，在那一秒钟里，你只想被安吉莉克丝抓住，完全变成一个顺从的性爱玩偶。
 				
 				<br/><br/>
 				
-				The doll's command brings your blissful rapture to an abrupt end. Obediently doing as you're told, you immediately stop fucking yourself and start to remove the dildos from your well-fucked orifices...
+				红色玩偶继续看着你拿着 
+				#IF(game.isAnalContentEnabled())
+					假阳具
+				#ELSE
+					假阳具
+				#ENDIF
+				操着自己，然后在她的剪贴板上做了一些笔记，接着说道：[doll.speech(所有的玩具都经过了测试。停下手头的事，把假阳具放在桌子上。)]
+				
+				<br/><br/>
+				
+				玩偶的命令让你的喜悦戛然而止。乖乖照做，立即停下手中的动作，开始从你的腔穴中拔出假阳具……
 			]]></text>
 		</description>
 	</descriptions>

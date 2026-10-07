@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Small engraved lettering informs you that this piercing was made by 'Norin'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
 		<value>500</value> <!--10 flames = £1 ~ $1.5-->
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[pentagram piercing]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[pentagram piercings]]></namePlural>
-		<description><![CDATA[A navel piercing with a pentagram at its base.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[五角星脐钉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[五角星脐钉]]></namePlural>
+		<description><![CDATA[一个底部有五角星图案的脐钉。]]></description>
 		
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -58,26 +57,26 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the pentagram piercing into [npc.her] navel.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the pentagram piercing into [npc2.namePos] navel.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(slide)] the pentagram piercing into [npc2.namePos] navel.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把五角星脐钉戴在[npc.her]的肚脐。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把五角星脐钉戴在[npc2.namePos]的肚脐。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把五角星脐钉戴在[npc2.namePos]的肚脐。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] pentagram piercing out of [npc.her] navel.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] pentagram piercing out of [npc2.her] navel.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] pentagram piercing out of [npc2.her] navel.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把[npc.her]的五角星脐钉从[npc.her]的肚脐上取下。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把[npc2.namePos]的五角星脐钉从[npc2.her]的肚脐上取下。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的五角星脐钉从[npc2.her]的肚脐上取下。
+]]></otherRough>
 	</displacementText>
 </clothing>

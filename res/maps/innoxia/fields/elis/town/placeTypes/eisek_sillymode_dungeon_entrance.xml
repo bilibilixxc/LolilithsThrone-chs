@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[street]]></name>
-	<tooltipDescription><![CDATA[This section of street looks much the same as any other in Elis, except for a faintly familiar foul smell emanating from a basement entrance.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the streets of Elis near a smelly basement]]></virginityLossDescription>
+	<name><![CDATA[街道]]></name>
+	<tooltipDescription><![CDATA[除了从一个地下室入口处散发出熟悉的淡淡恶臭外，这段街道看起来与伊利斯的其他街道没什么两样。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯一个散发着臭味的地下室旁的街道上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>dungeon_door</svgName>
 	<colour>BASE_WHITE</colour>

@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	
 	
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Printed on the inside, a small tag reads 'MFD by DSG Costume Supply Co, Ltd'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[一个小标签的内侧印着“DSG服装供应有限公司生产”。]]></clothingAuthorTag>
 		<value>250</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[kitty panties]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[kitty panties]]></namePlural> 
-		<description><![CDATA[A pair of tie-up, very low riding panties with a pair of stylized cat ears attached to the front.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[猫咪内裤]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[猫咪内裤]]></namePlural> 
+		<description><![CDATA[一条低腰系带内裤，前面附有一对卡通猫耳。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>GROIN</slot> 
@@ -69,51 +68,51 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the panties up to [npc.her] groin and [npc.verb(tie)] it up on either side of [npc.her] waist.]]>
-    </self>
-    <other>
-	  <![CDATA[[npc.Name] [npc.verb(pull)] the panties up to [npc2.namePos] groin and [npc.verb(tie)] it up on either side of [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-	  <![CDATA[[npc.Name] [npc.verb(pull)] the panties up to [npc2.namePos] groin so hard it practically gives [npc2.herHim] a wedgie and [npc.verb(tie)] it up on either side of [npc2.namePos] waist as tightly as possible.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将内裤拉上大腿根部，在[npc.her]的腰侧系好丝带。
+    ]]></self>
+    <other><![CDATA[
+	[npc.Name]将内裤拉上[npc2.namePos]的大腿根部，在[npc2.her]的腰侧系好丝带。
+    ]]></other>
+    <otherRough><![CDATA[
+	[npc.Name]将内裤用力拉上[npc2.namePos]的大腿根部，以至于内裤都夹在了[npc2.her]的臀瓣之间，随后在腰侧紧紧系上丝带。
+    ]]></otherRough>
   </replacementText>
   
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] [npc.her] panties and [npc.verb(let)] them fall from [npc.her] waist.]]>
-    </self>
-    <other>
-	  <![CDATA[[npc.Name] [npc.verb(untie)] [npc2.namePos] panties and [npc.verb(let)] them fall from [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(rip)] off [npc2.namePos] panties.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开内裤，任它从腰上飘落。
+    ]]></self>
+    <other><![CDATA[
+	[npc.Name]解开[npc2.namePos]的内裤，任它从腰上飘落。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]将[npc2.namePos]的内裤扯下。
+    ]]></otherRough>
   </displacementText>
 	
   <replacementText type="SHIFTS_ASIDE">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(shift)] [npc.her] panties back into place, covering [npc.her] groin.]]>
-    </self>
-    <other>
-	  <![CDATA[[npc.Name] [npc.verb(shift)] [npc2.namePos] panties back into place, covering [npc2.her] groin.]]>
-    </other>
-    <otherRough>
-	  <![CDATA[[npc.Name] [npc.verb(snap)] [npc2.namePos] panties back into place, covering [npc2.her] groin.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将内裤重新调整到正确位置，遮住[npc.her]的下体。
+    ]]></self>
+    <other><![CDATA[
+	[npc.Name]将[npc2.namePos]的内裤重新调整到正确位置，遮住[npc2.her]的下体。
+    ]]></other>
+    <otherRough><![CDATA[
+	[npc.Name]啪的一声将[npc2.namePos]的内裤拉到正确位置，遮住[npc2.her]的下体。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="SHIFTS_ASIDE">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(shift)] [npc.her] panties aside, exposing [npc.her] groin.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(shift)] [npc2.namePos] panties aside, exposing [npc2.her] groin.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] panties aside, exposing [npc2.her] groin.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将内裤拉开，露出[npc.her]的下体。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将[npc2.namePos]的内裤拉开，露出[npc2.her]的下体。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]将[npc2.namePos]的内裤用力拉开，露出[npc2.her]的下体。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

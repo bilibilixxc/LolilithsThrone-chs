@@ -366,7 +366,7 @@ public class SlaverAlleyDialogue {
 					+ baseName
 				+ "</td>"
 				+ "<td>"
-					+ "<div class='saveLoadButton' id='IMPORT_SLAVE_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Import</div>"
+					+ "<div class='saveLoadButton' id='IMPORT_SLAVE_" + identifier + "' style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>导出</div>"
 				+ "</td>"
 				+ "</tr>";
 	}
@@ -650,7 +650,7 @@ public class SlaverAlleyDialogue {
 				!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyTwoPartners));
 	}
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Slaver Alley", "-", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("奴隶巷", "-", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -665,7 +665,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Slaver Alley", "Step through the gate and enter Slaver Alley.", PlaceType.SLAVER_ALLEY_ENTRANCE.getDialogue(false)){
+				return new Response("奴隶巷", "经过大门进入奴隶巷。", PlaceType.SLAVER_ALLEY_ENTRANCE.getDialogue(false)){
 					@Override
 					public void effects() {
 						// If Sean is not introduced and the stocks slaves are not present, then this must be the first time the player has entered slaver alley, in which case the slaves need to be initialised:
@@ -681,7 +681,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode GATEWAY = new DialogueNode("Gateway", "", false) {
+	public static final DialogueNode GATEWAY = new DialogueNode("大门", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -700,7 +700,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "Step back out into Dominion's alleyways.", PlaceType.DOMINION_SLAVER_ALLEY.getDialogue(false)) {
+				return new Response("离开", "退回到御城区的巷道里。", PlaceType.DOMINION_SLAVER_ALLEY.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_SLAVER_ALLEY, false);
@@ -708,14 +708,14 @@ public class SlaverAlleyDialogue {
 				};
 				
 			} else if(index==2 && Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)==Quest.ROMANCE_HELENA_6_ADVERTISING) {
-				return new Response("Posters", "Ask the guards for permission to put up the posters which Helena gave to you.", GATEWAY_POSTER_PERMISSION);
+				return new Response("海报", "询问守卫是否能把海伦娜给你的海报贴上去。", GATEWAY_POSTER_PERMISSION);
 			}
 			
 			return null;
 		}
 	};
 	
-	public static final DialogueNode GATEWAY_POSTER_PERMISSION = new DialogueNode("Gateway", "", true) {
+	public static final DialogueNode GATEWAY_POSTER_PERMISSION = new DialogueNode("大门", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -728,7 +728,7 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 //				if(Main.game.getPlayer().getMoney()>=100) {
-					return new Response("Pay ("+UtilText.formatAsMoney(100, "span")+")", "Pay the guards the hundred flames they're asking for.", GATEWAY_POSTER_PERMISSION_END) {
+					return new Response("支付("+UtilText.formatAsMoney(100, "span")+")", "付上守卫要求的100火币。", GATEWAY_POSTER_PERMISSION_END) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "GATEWAY_POSTER_PERMISSION_PAID"));
@@ -747,8 +747,8 @@ public class SlaverAlleyDialogue {
 				if(Main.game.getPlayer().hasBreasts()) {
 					if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.NIPPLES, true)) {
 						if(Main.game.getPlayer().isCoverableAreaExposed(CoverableArea.NIPPLES)) {
-							return new Response("Groped",
-									"Let the guards grope your exposed breasts in exchange for them letting you put up the posters.",
+							return new Response("被摸一把",
+									"让守卫摸一把你露在外面的胸部，换取张贴海报的许可。",
 									GATEWAY_POSTER_PERMISSION_GROPED,
 									Util.newArrayListOfValues(Fetish.FETISH_BREASTS_SELF, Fetish.FETISH_EXHIBITIONIST),
 									CorruptionLevel.THREE_DIRTY,
@@ -763,8 +763,8 @@ public class SlaverAlleyDialogue {
 							};
 							
 						} else {
-							return new Response("Flash breasts",
-									"Fully expose your breasts to the guards in exchange for them letting you put up the posters.",
+							return new Response("秀出胸部",
+									"将胸部完全展露在守卫面前，换取张贴海报的许可。",
 									GATEWAY_POSTER_PERMISSION_GROPED,
 									Util.newArrayListOfValues(Fetish.FETISH_BREASTS_SELF, Fetish.FETISH_EXHIBITIONIST),
 									CorruptionLevel.THREE_DIRTY,
@@ -780,7 +780,7 @@ public class SlaverAlleyDialogue {
 						}
 						
 					} else {
-						return new Response("Flash breasts", "You are unable to fully expose your breasts, so can't flash them at the guards in exchange for them letting you put up the posters...", null);
+						return new Response("秀出胸部", "你无法将胸部完全展露出来。所以不能向守卫秀出胸部，以换取张贴海报的许可……", null);
 					}
 				}
 				
@@ -809,7 +809,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Posters", "Now that you've got permission from the guards, you can put up the posters.", GATEWAY_POSTER_PERMISSION_END) {
+				return new Response("海报", "获得守卫的许可后，可以张贴海报了。", GATEWAY_POSTER_PERMISSION_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "GATEWAY_POSTER_PERMISSION_END"));
@@ -834,7 +834,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Scarlett", "Find out what it is Scarlett wants.", GATEWAY_POSTER_PERMISSION_END_RETURN);
+				return new Response("斯嘉丽", "搞明白斯嘉丽想干什么。", GATEWAY_POSTER_PERMISSION_END_RETURN);
 			}
 			return null;
 		}
@@ -852,7 +852,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Return", "Follow Scarlett and return to Helena's Boutique.", ScarlettsShop.ROMANCE_RETURN_AFTER_POSTERS) {
+				return new Response("返回", "跟着斯嘉丽返回海伦娜精品店。", ScarlettsShop.ROMANCE_RETURN_AFTER_POSTERS) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP);
@@ -865,7 +865,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode ALLEYWAY = new DialogueNode("Alleyway", "", false) {
+	public static final DialogueNode ALLEYWAY = new DialogueNode("小巷", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -880,7 +880,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode DESERTED_ALLEYWAY = new DialogueNode("Deserted alleyway", "", false) {
+	public static final DialogueNode DESERTED_ALLEYWAY = new DialogueNode("空无一人的小巷", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -898,7 +898,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_FEMALE = new DialogueNode("A Woman's Touch", "", false) {
+	public static final DialogueNode MARKET_STALL_FEMALE = new DialogueNode("女士风味", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -914,9 +914,9 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getPlayer().isHasSlaverLicense()) {
-					return new Response("Slave Manager", "You don't have a slaver license, so can't buy or sell any slaves...", null);
+					return new Response("奴隶管理", "你还没有贩奴许可，无法购买或卖出奴隶……", null);
 				}
-				return new Response("Slave Manager", "Enter the slave management screen.", MARKET_STALL_FEMALE) {
+				return new Response("奴隶管理", "进入奴隶管理界面", MARKET_STALL_FEMALE) {
 					@Override
 					public boolean isTradeHighlight() {
 						return true;
@@ -932,7 +932,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_MALE = new DialogueNode("Iron & Steel", "", false) {
+	public static final DialogueNode MARKET_STALL_MALE = new DialogueNode("铁 & 钢", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -948,9 +948,9 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getPlayer().isHasSlaverLicense()) {
-					return new Response("Slave Manager", "You don't have a slaver license, so can't buy or sell any slaves...", null);
+					return new Response("奴隶管理", "你还没有贩奴许可，无法购买或卖出奴隶……", null);
 				}
-				return new Response("Slave Manager", "Enter the slave management screen.", MARKET_STALL_FEMALE) {
+				return new Response("奴隶管理", "进入奴隶管理界面", MARKET_STALL_FEMALE) {
 					@Override
 					public boolean isTradeHighlight() {
 						return true;
@@ -966,7 +966,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_ANAL = new DialogueNode("The Rear Entrance", "", false) {
+	public static final DialogueNode MARKET_STALL_ANAL = new DialogueNode("请走后门", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -982,9 +982,9 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getPlayer().isHasSlaverLicense()) {
-					return new Response("Slave Manager", "You don't have a slaver license, so can't buy or sell any slaves...", null);
+					return new Response("奴隶管理", "你还没有贩奴许可，无法购买或卖出奴隶……", null);
 				}
-				return new Response("Slave Manager", "Enter the slave management screen.", MARKET_STALL_FEMALE) {
+				return new Response("奴隶管理", "进入奴隶管理界面", MARKET_STALL_FEMALE) {
 					@Override
 					public boolean isTradeHighlight() {
 						return true;
@@ -1000,7 +1000,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_VAGINAL = new DialogueNode("White Lilies", "", false) {
+	public static final DialogueNode MARKET_STALL_VAGINAL = new DialogueNode("白百合", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1016,9 +1016,9 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getPlayer().isHasSlaverLicense()) {
-					return new Response("Slave Manager", "You don't have a slaver license, so can't buy or sell any slaves...", null);
+					return new Response("奴隶管理", "你还没有贩奴许可，无法购买或卖出奴隶……", null);
 				}
-				return new Response("Slave Manager", "Enter the slave management screen.", MARKET_STALL_FEMALE) {
+				return new Response("奴隶管理", "进入奴隶管理界面", MARKET_STALL_FEMALE) {
 					@Override
 					public boolean isTradeHighlight() {
 						return true;
@@ -1034,7 +1034,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_ORAL = new DialogueNode("Viva Voce", "", false) {
+	public static final DialogueNode MARKET_STALL_ORAL = new DialogueNode("声音万岁(Viva Voce)", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1050,9 +1050,9 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getPlayer().isHasSlaverLicense()) {
-					return new Response("Slave Manager", "You don't have a slaver license, so can't buy or sell any slaves...", null);
+					return new Response("奴隶管理", "你还没有贩奴许可，无法购买或卖出奴隶……", null);
 				}
-				return new Response("Slave Manager", "Enter the slave management screen.", MARKET_STALL_FEMALE) {
+				return new Response("奴隶管理", "进入奴隶管理界面", MARKET_STALL_FEMALE) {
 					@Override
 					public boolean isTradeHighlight() {
 						return true;
@@ -1068,7 +1068,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_STATUE = new DialogueNode("Statue of the Fallen Angel", "", false) {
+	public static final DialogueNode MARKET_STALL_STATUE = new DialogueNode("堕天使雕像", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1096,7 +1096,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_EXCLUSIVE = new DialogueNode("Slave Rental Store", "", false) {
+	public static final DialogueNode MARKET_STALL_EXCLUSIVE = new DialogueNode("奴隶租赁商店", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1114,7 +1114,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode MARKET_STALL_BULK = new DialogueNode("Zaibatsu Exchange", "", false) {
+	public static final DialogueNode MARKET_STALL_BULK = new DialogueNode("财阀交易所", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1144,7 +1144,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Enter", "Enter the cafe and sit down at one of the tables.", MARKET_STALL_CAFE_INTERIOR);
+				return new Response("进入", "进入咖啡店，找一张桌子坐下。", MARKET_STALL_CAFE_INTERIOR);
 			}
 			return null;
 		}
@@ -1296,7 +1296,7 @@ public class SlaverAlleyDialogue {
 		public String getResponseTabTitle(int index) {
 			if(Main.game.getPlayer().hasCompanions()) {
 				if(index==0) {
-					return "Self";
+					return "自己";
 				} else if(index==1) {
 					return "[com.Name]";
 				}
@@ -1306,7 +1306,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "Exit the cafe and head back out into Slaver Alley.", MARKET_STALL_CAFE);
+				return new Response("离开", "离开小餐厅，退回奴隶巷。", MARKET_STALL_CAFE);
 			}
 			
 			if(getCafeItems().containsKey(index)) {
@@ -1315,14 +1315,14 @@ public class SlaverAlleyDialogue {
 				if(responseTab==0) {
 					if(Main.game.getPlayer().getMoney()<itemValue) {
 						return new Response(itemType.getName(false)+" ("+UtilText.formatAsMoneyUncoloured(itemValue, "span")+")",
-								"You don't have enough money to order "+itemType.getDeterminer()+" "+itemType.getName(false)+"...",
+								"你的钱不够点"+itemType.getDeterminer()+itemType.getName(false)+"……",
 								null);
 						
 					} else {
 						return new Response(itemType.getName(false)+" ("+UtilText.formatAsMoney(itemValue, "span")+")",
 										Main.game.getPlayer().hasCompanions()
-											?"Order "+itemType.getDeterminer()+" "+itemType.getName(false)+" for yourself."
-											:"Order "+itemType.getDeterminer()+" "+itemType.getName(false)+".",
+											?"给自己点"+itemType.getDeterminer()+itemType.getName(false)+"。"
+											:"点"+itemType.getDeterminer()+itemType.getName(false)+"。",
 											MARKET_STALL_CAFE_INTERIOR_NO_CONTENT) {
 									@Override
 									public void effects() {
@@ -1339,11 +1339,11 @@ public class SlaverAlleyDialogue {
 					
 				} else if(responseTab==1) {
 					if(Main.game.getPlayer().getMoney()<itemValue) {
-						return new Response(itemType.getName(false), "You don't have enough money to order "+itemType.getDeterminer()+" "+itemType.getName(false)+"...", null);
+						return new Response(itemType.getName(false), "你的钱不够点"+itemType.getDeterminer()+itemType.getName(false)+"……", null);
 						
 					} else {
 						return new Response(itemType.getName(false),
-										"Order "+itemType.getDeterminer()+" "+itemType.getName(false)+" for [com.name].",
+										"给[com.name]点"+itemType.getDeterminer()+itemType.getName(false)+"。",
 										MARKET_STALL_CAFE_INTERIOR_NO_CONTENT) {
 									@Override
 									public void effects() {
@@ -1391,7 +1391,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Enter", "Enter the establishment and take a look around inside...", BountyHunterLodge.ENTRANCE_INITITAL) {
+				return new Response("进入", "进入展览四处逛逛……", BountyHunterLodge.ENTRANCE_INITITAL) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.BOUNTY_HUNTER_LODGE, PlaceType.BOUNTY_HUNTER_LODGE_ENTRANCE, false);
@@ -1402,7 +1402,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode AUCTION_BLOCK = new DialogueNode("Auctioning block", "", false) {
+	public static final DialogueNode AUCTION_BLOCK = new DialogueNode("拍卖台", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1418,9 +1418,9 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().isHasSlaverLicense()) {
-					return new Response("Approach", "Approach the auction block.", AUCTION_BLOCK_LIST);
+					return new Response("靠近", "靠近拍卖台。", AUCTION_BLOCK_LIST);
 				} else {
-					return new Response("Approach", "You don't have a slaver license, so you're unable to participate in any slave auctions.", null);
+					return new Response("靠近", "你没有贩奴许可，无法参加奴隶拍卖。", null);
 				}
 			}
 			return null;
@@ -1428,7 +1428,7 @@ public class SlaverAlleyDialogue {
 	};
 	
 	
-	public static final DialogueNode AUCTION_BLOCK_LIST = new DialogueNode("Auctioning block", "", true) {
+	public static final DialogueNode AUCTION_BLOCK_LIST = new DialogueNode("拍卖台", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1437,22 +1437,22 @@ public class SlaverAlleyDialogue {
 			UtilText.nodeContentSB.append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "AUCTION_BLOCK_LIST_START"));
 			UtilText.nodeContentSB.append(
 					"<p style='text-align:center;'>"
-						+ "<b>Upcoming Public Auctions</b>"
+						+ "<b>即将开始的公开拍卖</b>"
 						+ "<div class='container-full-width' style='margin-bottom:0; text-align:center;'>"
 							+ "<div style='width:40%; float:left; font-weight:bold; margin:0; padding:0;'>"
-								+ "Slave"
+								+ "奴隶"
 							+ "</div>"
 							+ "<div style='float:left; width:17%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>Obedience</b>"
+								+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>服从</b>"
 							+"</div>"
 							+ "<div style='float:left; width:17%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Value</b>"
+								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>价值</b>"
 							+"</div>"
 							+ "<div style='float:left; width:17%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Starting Bid</b>"
+								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>起拍价</b>"
 							+"</div>"
 							+ "<div style='float:left; width:9%; font-weight:bold; margin:0; padding:0; text-align:center;'>"
-								+ "Bid"
+								+ "竞拍"
 							+ "</div>"
 						+ "</div>");
 			
@@ -1464,7 +1464,7 @@ public class SlaverAlleyDialogue {
 			if(charactersPresent.isEmpty()) {
 				UtilText.nodeContentSB.append(
 						"<div class='container-full-width' style='margin-bottom:0; text-align:center;'>"
-								+ "<b>There are no upcoming auctions...</b>"
+								+ "<b>没有即将开始的拍卖……</b>"
 						+ "</div>");
 				
 			} else {
@@ -1475,7 +1475,7 @@ public class SlaverAlleyDialogue {
 					UtilText.nodeContentSB.append(UtilText.parse(slave,
 							"<div class='container-full-width inner' style='margin-bottom:0;"+(alternateBackground?"background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'":"'")+"'>"
 								+ "<div style='width:40%; float:left; margin:0; padding:0; text-align:center;'>"
-									+ "<b style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>"+slave.getName(true)+"</b> - "
+									+ "<b style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>"+slave.getName(true)+"</b>- "
 									+ "<span style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(slave.getGender().getName())+"</span> "
 									+ "<span style='color:"+slave.getRace().getColour().toWebHexString()+";'>"
 										+Util.capitaliseSentence((slave.isFeminine()?slave.getSubspecies().getSingularFemaleName(slave.getBody()):slave.getSubspecies().getSingularMaleName(slave.getBody())))
@@ -1507,10 +1507,10 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Import", "View the character import screen.", AUCTION_IMPORT);
+				return new Response("导入", "查看导入角色的界面。", AUCTION_IMPORT);
 				
 			} else if(index==0) {
-				return new Response("Back", "Walk away from the auction block.", AUCTION_BLOCK);
+				return new Response("返回", "走出拍卖台。", AUCTION_BLOCK);
 				
 			} else {
 				return null;
@@ -1518,7 +1518,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode AUCTION_IMPORT = new DialogueNode("Auctioning block", "", true) {
+	public static final DialogueNode AUCTION_IMPORT = new DialogueNode("拍卖台", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1551,7 +1551,7 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			
 			if(index==0) {
-				return new Response("Back", "Return to the previous screen.", AUCTION_BLOCK_LIST);
+				return new Response("返回", "回到上一界面。", AUCTION_BLOCK_LIST);
 				
 			} else {
 				return null;
@@ -1559,7 +1559,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode AUCTION_BIDDING = new DialogueNode("Auctioning block", "", true) {
+	public static final DialogueNode AUCTION_BIDDING = new DialogueNode("拍卖台", "", true) {
 		
 		@Override
 		public boolean isContinuesDialogue() {
@@ -1605,13 +1605,13 @@ public class SlaverAlleyDialogue {
 			if(biddingRounds==biddingRoundsTotal) {
 				if(index==1) {
 					if(playerBidLeader) {
-						return new Response("Continue", UtilText.parse(biddingNPC, "You won the bidding! [npc.Name] is now ready for collection from Slavery Administration."), AUCTION_BLOCK) {
+						return new Response("继续", UtilText.parse(biddingNPC, "你赢得了竞拍！[npc.Name]现在位于奴隶管理局等待取走。"), AUCTION_BLOCK) {
 							@Override
 							public void effects() {
 							}
 						};
 					} else {
-						return new Response(UtilText.parse(biddingNPC, "[npc.Name] sold"), "You didn't win the auction, but there's always next time, right?", AUCTION_BLOCK) {
+						return new Response(UtilText.parse(biddingNPC, "[npc.Name]被卖出"), "你没能赢得这次拍卖，但下次还有机会，对吧？", AUCTION_BLOCK) {
 							@Override
 							public void effects() {
 								Main.game.getNpc(Finch.class).removeSlave(biddingNPC);
@@ -1627,7 +1627,7 @@ public class SlaverAlleyDialogue {
 			} else {
 				if(index==1) {
 					if(Main.game.getPlayer().getMoney()>=biddingPrice+100) {
-						return new Response("Bid "+UtilText.formatAsMoney(biddingPrice+100, "span"), UtilText.parse(biddingNPC, "Place a bid of "+(biddingPrice+100)+" flames for [npc.name]."), AUCTION_BIDDING) {
+						return new Response("叫价"+UtilText.formatAsMoney(biddingPrice+100, "span"), UtilText.parse(biddingNPC, "给[npc.Name]叫价"+(biddingPrice+100)+"火币。"), AUCTION_BIDDING) {
 							@Override
 							public void effects() {
 								biddingPrice += 100;
@@ -1641,11 +1641,11 @@ public class SlaverAlleyDialogue {
 							}
 						};
 					} else {
-						return new Response("Bid "+UtilText.formatAsMoneyUncoloured(biddingPrice+100, "span"), "You can't afford a bid of "+(biddingPrice+100)+" flames, so you'll have to let this slave go to someone else.", null);
+						return new Response("叫价"+UtilText.formatAsMoneyUncoloured(biddingPrice+100, "span"), "你负担不起"+(biddingPrice+100)+"火币的价格，只能让这名奴隶归他人所有了。", null);
 					}
 					
 				} else if(index==2) {
-					return new Response("Stop bidding", UtilText.parse(biddingNPC, "Stop bidding, which will allow someone else to buy [npc.name]."), AUCTION_BIDDING) {
+					return new Response("停止竞拍", UtilText.parse(biddingNPC, "停止竞拍，会让其他人买下[npc.name]。"), AUCTION_BIDDING) {
 						@Override
 						public void effects() {
 							playerBidLeader = false;
@@ -1660,7 +1660,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode PUBLIC_STOCKS = new DialogueNode("Public Stocks", "", false) {
+	public static final DialogueNode PUBLIC_STOCKS = new DialogueNode("公开颈手枷", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1684,28 +1684,28 @@ public class SlaverAlleyDialogue {
 				for(NPC npc : charactersPresent) {
 					UtilText.nodeContentSB.append(UtilText.parse(npc, 
 							"<p>"
-								+ "[npc.Name]," + (npc.getOwner().isPlayer()?" [style.boldArcane(who is your slave)], and is":"")
-								+ " <span style='color:"+npc.getGender().getColour().toWebHexString()+";'>[npc.a_gender]</span>"
-										+ " <span style='color:"+npc.getRace().getColour().toWebHexString()+";'>[npc.race]</span>, has been marked as available for"));
+								+ "[npc.Name]，" + (npc.getOwner().isPlayer()?"[style.boldArcane(你的奴隶)]，":"")
+								+ "<span style='color:"+npc.getGender().getColour().toWebHexString()+";'>[npc.a_gender]</span>"
+										+ "<span style='color:"+npc.getRace().getColour().toWebHexString()+";'>[npc.race]</span>，标记为"));
 					
 					sexAvailability.clear();
 					if(npc.hasSlaveJobSetting(SlaveJob.PUBLIC_STOCKS, SlaveJobSetting.SEX_ORAL)) {
-						sexAvailability.add(" <b style='color:"+PresetColour.BASE_PINK_LIGHT.toWebHexString()+";'>oral</b>");
+						sexAvailability.add("<b style='color:"+PresetColour.BASE_PINK_LIGHT.toWebHexString()+";'>口穴</b>");
 					}
 					if(npc.hasSlaveJobSetting(SlaveJob.PUBLIC_STOCKS, SlaveJobSetting.SEX_VAGINAL)) {
-						sexAvailability.add(" <b style='color:"+PresetColour.BASE_PINK.toWebHexString()+";'>vaginal</b>");
+						sexAvailability.add("<b style='color:"+PresetColour.BASE_PINK.toWebHexString()+";'>阴道</b>");
 					}
 					if(npc.hasSlaveJobSetting(SlaveJob.PUBLIC_STOCKS, SlaveJobSetting.SEX_ANAL)) {
-						sexAvailability.add(" <b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>anal</b>");
+						sexAvailability.add("<b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>肛门</b>");
 					}
 					
 					if(!sexAvailability.isEmpty()) {
 						UtilText.nodeContentSB.append(
 								Util.stringsToStringList(sexAvailability, false)
-								+" use.</p>");
+								+"随意使用。</p>");
 					} else {
 						UtilText.nodeContentSB.append(
-								" [style.boldBad(no penetration at all)].</p>");
+								"[style.boldBad(不准插入)]。</p>");
 					}
 				}
 			}
@@ -1721,10 +1721,10 @@ public class SlaverAlleyDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index==0) {
-				return "Solo";
+				return "单人";
 				
 			} else if(index==1) {
-				return "Threesome";
+				return "三人行";
 			}
 			return null;
 		}
@@ -1738,8 +1738,8 @@ public class SlaverAlleyDialogue {
 			if((responseTab==0 || isCompanionDialogue()) && index==1) {
 				return new Response("[sean.Name]",
 						Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyComplained)
-							?"You see [sean.name] watching over the area, so perhaps you could go and talk to [sean.herHim] again..."
-							:"There appears to be an Enforcer watching over the area. Perhaps you could go and talk to him...",
+							?"你看到[sean.name]在看管这个区域，或许应该再找[sean.herHim]聊一聊……"
+							:"似乎有一位执法者在看管这个区域，或许应该找他聊一聊……",
 							PUBLIC_STOCKS_SEAN);
 			}
 			
@@ -1749,8 +1749,8 @@ public class SlaverAlleyDialogue {
 						GameCharacter slave = charactersPresent.get(index-2);
 						boolean ownedByPlayer = slave.isSlave() && slave.getOwner().isPlayer();
 						return new ResponseSex(
-								UtilText.parse(slave,"Use [npc.name]"),
-								UtilText.parse(slave, "Walk up to [npc.name] and start fucking [npc.herHim] right here in public..."),
+								UtilText.parse(slave,"使用[npc.name]"),
+								UtilText.parse(slave, "到[npc.name]的旁边，开始在大庭广众之下操[npc.herHim]……"),
 								false,
 								false,
 								new SMStocks(
@@ -1786,25 +1786,25 @@ public class SlaverAlleyDialogue {
 						
 						if(companion.isAbleToRefuseSexAsCompanion()) {
 							if(!companion.isAttractedTo(Main.game.getPlayer())) {
-								return new Response(UtilText.parse(slave, "Use [npc.name]"),
-										UtilText.parse(companion, "You can tell that [npc.name] isn't at all interested in having sex with you, and as [npc.she] isn't your slave, you can't make [npc.herHim]..."),
+								return new Response(UtilText.parse(slave, "使用[npc.name]"),
+										UtilText.parse(companion, "你感觉得到[npc.name]完全没兴趣跟你做爱，而且[npc.she]不是你的奴隶，你也无法强迫……"),
 										null);
 							}
 							if(!companion.isAttractedTo(slave)) {
-								return new Response(UtilText.parse(slave, "Use [npc.name]"),
-										UtilText.parse(slave, companion, "You can tell that [npc2.name] isn't at all interested in having sex with [npc.name], and as [npc2.she] isn't your slave, you can't make [npc.herHim]..."),
+								return new Response(UtilText.parse(slave, "使用[npc.name]"),
+										UtilText.parse(slave, companion, "你感觉的到[npc2.name]完全没兴趣跟[npc.name]做爱，而且[npc2.she]不是你的奴隶，你也无法强迫……"),
 										null);
 							}
 							if(companion.getFetishDesire(Fetish.FETISH_EXHIBITIONIST).isNegative()) {
-								return new Response(UtilText.parse(slave, "Use [npc.name]"),
-										UtilText.parse(companion, "[npc.Name] has a negative attitude towards the '"+Fetish.FETISH_EXHIBITIONIST.getName(companion)+"' fetish, and as such, is unwilling to have sex in public."
-												+ " As [npc.she] isn't your slave, you can't make [npc.herHim] do it, either..."),
+								return new Response(UtilText.parse(slave, "使用[npc.name]"),
+										UtilText.parse(companion, "[npc.Name]对“"+Fetish.FETISH_EXHIBITIONIST.getName(companion)+"”性癖有些反感，所以不愿意在大庭广众下做爱。"
+												+ "而且[npc.she]不是你的奴隶，你也无法强迫……"),
 										null);
 							}
 						}
 						return new ResponseSex(
-								UtilText.parse(slave, "Use [npc.name]"),
-								UtilText.parse(slave, companion, "Walk up to [npc.name] and have [npc2.name] join you in fucking [npc.herHim] right here in public..."),
+								UtilText.parse(slave, "使用[npc.name]"),
+								UtilText.parse(slave, companion, "到[npc.name]的旁边，让[npc2.name]跟你一起在大庭广众之下操[npc.herHim]……"),
 								false,
 								false,
 								new SMStocks(
@@ -1840,10 +1840,10 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_STOCKS_SEX = new DialogueNode("Public Stocks", "", true) {
+	public static final DialogueNode AFTER_STOCKS_SEX = new DialogueNode("公开颈手枷", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(stocksSlaveTargeted, "Having finished with [npc.name], you step away from [npc.herHim] and prepare to continue on your way.");
+			return UtilText.parse(stocksSlaveTargeted, "跟[npc.name]结束后，你退了下来，准备继续你的旅程。");
 		}
 		@Override
 		public String getContent() {
@@ -1852,7 +1852,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way.", PUBLIC_STOCKS) {
+				return new Response("继续", "继续你的旅程。", PUBLIC_STOCKS) {
 					@Override
 					public void effects() {
 						stocksSlaveTargeted = null;
@@ -1866,7 +1866,7 @@ public class SlaverAlleyDialogue {
 	public static final DialogueNode PUBLIC_STOCKS_SEAN = new DialogueNode("", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
-			Main.game.getNpc(Sean.class).setGenericName(UtilText.parse("Constable [sean.surname]"));
+			Main.game.getNpc(Sean.class).setGenericName(UtilText.parse("警员[sean.surname]"));
 			Main.game.getPlayer().addCharacterEncountered(Main.game.getNpc(Sean.class));
 			
 		}
@@ -1882,10 +1882,10 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getCurrentDialogueNode()==PUBLIC_STOCKS_TALK) {
-					return new Response("Talk", "You are already talking to [sean.name].", null);
+					return new Response("对话", "你已经跟[sean.name]谈过话了。", null);
 				}
-				return new Response("Talk",
-						"Ask [sean.name] why he's guarding this area, and whether anything interesting has happened recently.",
+				return new Response("交谈",
+						"询问[sean.name]他为什么在看管这片区域，最近有没有发生什么有趣的事情。",
 						PUBLIC_STOCKS_TALK) {
 					@Override
 					public void effects() {
@@ -1903,11 +1903,11 @@ public class SlaverAlleyDialogue {
 				
 			} if(index==2) {
 				if(Main.game.getCurrentDialogueNode()==PUBLIC_STOCKS_TALK_FREED_SLAVES) {
-					return new Response("Freed slaves", "You are already asking [sean.name] about the situation regarding the freed slaves.", null);
+					return new Response("放走的奴隶", "你已经问过[sean.name]那些被放走的奴隶的现状了。", null);
 				}
 				if(!slavesInStocksPresent()) {
-					return new Response("Freed slaves",
-							"Ask [sean.name] if he's going to get in trouble for letting you free the slaves in the stocks.",
+					return new Response("放走的奴隶",
+							"询问[sean.name]放走颈手枷里的奴隶他会不会惹上麻烦。",
 							PUBLIC_STOCKS_TALK_FREED_SLAVES) {
 						@Override
 						public void effects() {
@@ -1921,8 +1921,8 @@ public class SlaverAlleyDialogue {
 						}
 					};
 				}
-				return new Response("Complain",
-						"You don't like the idea of slaves being publicly used. Complain to [sean.name] about it...",
+				return new Response("抱怨",
+						"你不喜欢奴隶被公开使用。向[sean.name]抱怨……",
 						PUBLIC_STOCKS_COMPLAIN) {
 					@Override
 					public void effects() {
@@ -1936,10 +1936,10 @@ public class SlaverAlleyDialogue {
 				
 			} else if(index==3 && Main.game.getNpc(Sean.class).getTotalTimesHadSex(Main.game.getPlayer())>0) {
 				if(!Main.game.getNpc(Sean.class).isAttractedTo(Main.game.getPlayer())) {
-					return new Response("Seduce", "[sean.Name] is not attracted to you, and so attempting to seduce him would be pointless.", null);
+					return new Response("诱惑", "[sean.Name]并没有被你吸引，诱惑他只会白费功夫。", null);
 				}
-				return new Response("Seduce",
-						"Playfully tease [sean.name] and ask him if he wants to have some fun with you again...",
+				return new Response("诱惑",
+						"玩味地挑逗[sean.name]，问他还想不想跟你爽一爽……",
 						PUBLIC_STOCKS_SEAN_SEDUCE) {
 					@Override
 					public boolean isSexHighlight() {
@@ -1953,7 +1953,7 @@ public class SlaverAlleyDialogue {
 				
 				
 			} else if(index==0) {
-				return new Response("Step back", "Decide against asking anything of [sean.name] and instead step back.", PUBLIC_STOCKS) {
+				return new Response("退开", "你决定不向[Sean.name]询问任何事情，转而退开。", PUBLIC_STOCKS) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.seanIntroduced, true);
@@ -2021,9 +2021,9 @@ public class SlaverAlleyDialogue {
 //				}
 				return new ResponseSex(
 						isCompanionDialogue()
-							?"Alleyway (solo)"
-							:"Alleyway",
-						"Tell [sean.name] that you want to go to the hidden alleyway and have sex with him there...",
+							?"小巷(单人)"
+							:"小巷",
+						"告诉[sean.name]你想去隐蔽的小巷，跟他在那里做爱……",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 						null,
 						CorruptionLevel.TWO_HORNY,
@@ -2054,19 +2054,19 @@ public class SlaverAlleyDialogue {
 				
 			} else if(index==2) {
 				if(!Main.game.getPlayer().hasVagina()) {
-					return new Response("Stocks breeding", "You do not have a vagina, so cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("颈手枷配种", "你没有阴道，所以没法在颈手枷里让[sean.name]给你配种。", null);
 				}
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					return new Response("Stocks breeding", "[sean.Name] cannot gain access to your vagina, so you cannot be bred by him in the stocks.", null);
+					return new Response("颈手枷配种", "[sean.Name]无法使用你的阴道，所以也就没法在颈手枷里让他给你配种。", null);
 				}
 				if(Main.game.getPlayer().isPregnant()) {
-					return new Response("Stocks breeding", "You are already pregnant, so cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("颈手枷配种", "你已经怀孕了，所以没法在颈手枷里让[sean.name]给你配种。", null);
 				}
 				if(Main.game.getPlayer().hasIncubationLitter(SexAreaOrifice.VAGINA)) {
-					return new Response("Stocks breeding", "Your womb is full of eggs, so you cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("颈手枷配种", "你的子宫里装满了卵，所以没法在颈手枷里让[sean.name]给你配种。", null);
 				}
-				return new ResponseSex("Stocks breeding",
-						"Ask [sean.name] if he'd like to lock you in the stocks and breed you in front of members of the public.",
+				return new ResponseSex("颈手枷配种",
+						"询问[sean.name]他能不能把你锁在颈手枷里，在大庭广众下给你配种。",
 						Util.newArrayListOfValues(Fetish.FETISH_EXHIBITIONIST, Fetish.FETISH_PREGNANCY, Fetish.FETISH_SUBMISSIVE),
 						null,
 						CorruptionLevel.FOUR_LUSTFUL,
@@ -2155,19 +2155,19 @@ public class SlaverAlleyDialogue {
 //							null);
 //				}
 				if(!Main.game.getNpc(Sean.class).isAttractedTo(getMainCompanion())) {
-					return new Response("Alleyway (threesome)", "[sean.Name] is not attracted to [com.name], so is unwilling to have a threesome with [com.herHim].", null);
+					return new Response("小巷(三人行)", "[sean.Name]并没有被[com.name]吸引，所以不愿意跟[com.herHim]三人行。", null);
 				}
 //				if(getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					if(!getMainCompanion().isAttractedTo(Main.game.getPlayer())) {
-						return new Response("Alleyway (threesome)", "[com.Name] is not attracted to you, so is unwilling to have a threesome with you and [sean.name].", null);
+						return new Response("小巷(三人行)", "[com.Name]并没有被你吸引，所以不愿意跟你和[sean.name]三人行。", null);
 					}
 					if(!getMainCompanion().isAttractedTo(Main.game.getNpc(Sean.class))) {
-						return new Response("Alleyway (threesome)", "[com.Name] is not attracted to [sean.name], so is unwilling to have a threesome with you and him.", null);
+						return new Response("Alleyway (threesome)", "[com.Name]并没有被[sean.name]吸引，所以不愿意跟他和你三人行。", null);
 					}
 //				}
 				return new ResponseSex(
-						"Alleyway (threesome)",
-						"Tell [sean.name] that you and [com.name] want to go to the hidden alleyway and have sex with him there...",
+						"小巷(三人行)",
+						"告诉[sean.name]你和[com.name]想去隐蔽的小巷，跟他在那里做爱……",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 						null,
 						CorruptionLevel.TWO_HORNY,
@@ -2198,54 +2198,54 @@ public class SlaverAlleyDialogue {
 				
 			} else if(index==7 && isCompanionDialogue()) {
 				if(!Main.game.getPlayer().hasVagina()) {
-					return new Response("Double breeding", "You do not have a vagina, so cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("双人配种", "你没有阴道，所以没法在颈手枷里让[sean.name]给你配种。", null);
 				}
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					return new Response("Double breeding", "[sean.Name] cannot gain access to your vagina, so you cannot be bred by him in the stocks.", null);
+					return new Response("双人配种", "[sean.Name]无法使用你的阴道，所以也就没法在颈手枷里让他给你配种。", null);
 				}
 				if(Main.game.getPlayer().isPregnant()) {
-					return new Response("Double breeding", "You are already pregnant, so cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("双人配种", "你已经怀孕了，所以没法在颈手枷里让[sean.name]给你配种。", null);
 				}
 				if(Main.game.getPlayer().hasIncubationLitter(SexAreaOrifice.VAGINA)) {
-					return new Response("Double breeding", "Your womb is full of eggs, so you cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("双人配种", "你的子宫里装满了卵，所以没法在颈手枷里让[sean.name]给你配种。", null);
 				}
 				if(!getMainCompanion().hasVagina()) {
-					return new Response("Double breeding", "[com.Name] does not have a vagina, so cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("双人配种", "[com.Name]没有阴道，所以没法在颈手枷里让[sean.name]给[com.her]配种。", null);
 				}
 				if(!getMainCompanion().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					return new Response("Double breeding", "[sean.Name] cannot gain access to [com.namePos] vagina, so [com.she] cannot be bred by him in the stocks.", null);
+					return new Response("双人配种", "[sean.Name]无法使用[com.namePos]的阴道，所以也就没法在颈手枷里让他给[com.her]配种。", null);
 				}
 				if(getMainCompanion().isPregnant()) {
-					return new Response("Double breeding", "[com.Name] is already pregnant, so cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("双人配种", "[com.Name]已经怀孕了，所以没法在颈手枷里让[sean.name]给[com.her]配种。", null);
 				}
 				if(getMainCompanion().hasIncubationLitter(SexAreaOrifice.VAGINA)) {
-					return new Response("Double breeding", "[com.NamePos] womb is full of eggs, so [com.she] cannot be bred by [sean.name] in the stocks.", null);
+					return new Response("双人配种", "[com.NamePos]的子宫里装满了卵，所以没法在颈手枷里让[sean.name]给[com.her]配种。", null);
 				}
 				if(!Main.game.getNpc(Sean.class).isAttractedTo(getMainCompanion())) {
-					return new Response("Double breeding", "[sean.Name] is not attracted to [com.name], so is unwilling to breed [com.herHim].", null);
+					return new Response("双人配种", "[sean.Name]并没有被[com.name]吸引，所以不愿意给[com.her]配种。", null);
 				}
 //				if(getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					if(!getMainCompanion().isAttractedTo(Main.game.getPlayer())) {
-						return new Response("Double breeding", "[com.Name] is not attracted to you, and so is unwilling to participate in the breeding.", null);
+						return new Response("双人配种", "[com.Name]并没有被你吸引，所以不愿意参与到配种中。", null);
 					}
 					if(!getMainCompanion().isAttractedTo(Main.game.getNpc(Sean.class))) {
-						return new Response("Double breeding", "[com.Name] is not attracted to [sean.name], and so is unwilling to participate in the breeding.", null);
+						return new Response("双人配种", "[com.Name]并没有被[sean.name]吸引，所以不愿意参与到配种中。", null);
 					}
 					if(!getMainCompanion().getFetishDesire(Fetish.FETISH_EXHIBITIONIST).isPositive()) {
-						return new Response("Double breeding",
-								"As [com.name] does not have a positive view of the '"+Fetish.FETISH_EXHIBITIONIST.getName(getMainCompanion())+"' fetish, [com.she] will not agree to do this."
-										+ " [sean.Name] will also not want to force [com.herHim] into anything [com.she] doesn't want to do.",
+						return new Response("双人配种",
+								"由于[com.name]对于“"+Fetish.FETISH_EXHIBITIONIST.getName(getMainCompanion())+"”性癖心存反感，所以不会同意。"
+										+ "[sean.Name]也不想强迫[com.herHim]做不愿意做的事情。",
 								null);
 					}
 					if(!getMainCompanion().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive()) {
-						return new Response("Double breeding",
-								"As [com.name] does not have a positive view of the '"+Fetish.FETISH_PREGNANCY.getName(getMainCompanion())+"' fetish, [com.she] will not agree to do this."
-										+ " [sean.Name] will also not want to force [com.herHim] into anything [com.she] doesn't want to do.",
+						return new Response("双人配种",
+								"由于[com.name]对于“"+Fetish.FETISH_PREGNANCY.getName(getMainCompanion())+"”性癖心存反感，所以不会同意。"
+										+ "[sean.Name]也不想强迫[com.herHim]做不愿意做的事情。",
 								null);
 					}
 //				}
-				return new ResponseSex("Double breeding",
-						"Ask [sean.name] if he'd like to lock you and [com.name] in the stocks and breed the two of you in front of members of the public.",
+				return new ResponseSex("双人配种",
+						"询问[sean.name]他能不能把你和[com.name]都锁在颈手枷里，在大庭广众下给你们配种。",
 						Util.newArrayListOfValues(Fetish.FETISH_EXHIBITIONIST, Fetish.FETISH_PREGNANCY, Fetish.FETISH_SUBMISSIVE),
 						null,
 						CorruptionLevel.FOUR_LUSTFUL,
@@ -2329,7 +2329,7 @@ public class SlaverAlleyDialogue {
 				};
 				
 			} else if(index==0) {
-				return new Response("Back out", "Decide against having sex with [sean.name]...", PUBLIC_STOCKS_SEAN_SEDUCE_BACK_OUT) {
+				return new Response("反悔", "决定还是不跟[sean.name]做爱了……", PUBLIC_STOCKS_SEAN_SEDUCE_BACK_OUT) {
 					@Override
 					public void effects() {
 						if(Main.game.getNpc(Sean.class).getAffection(Main.game.getPlayer())>AffectionLevel.NEGATIVE_ONE_ANNOYED.getMedianValue()) {
@@ -2357,7 +2357,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEAN_SEDUCE_ALLEYWAY_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_SEAN_SEDUCE_ALLEYWAY_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -2365,9 +2365,9 @@ public class SlaverAlleyDialogue {
 		@Override
 		public String getDescription() {
 			if(isCompanionDialogue() && Main.sex.getAllParticipants(false).contains(getMainCompanion())) {
-				return "You, [com.name], and [sean.name] have finished having sex with one another...";
+				return "你、[com.name]和[sean.name]结束了性爱……";
 			}
-			return "You and [sean.name] have finished having sex with one another...";
+			return "你和[sean.name]结束了性爱……";
 		}
 		@Override
 		public String getContent() {
@@ -2379,8 +2379,8 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Head back out into Slaver Alley.",
+				return new Response("继续",
+						"返回奴隶巷。",
 						PlaceType.SLAVER_ALLEY_PATH.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -2424,7 +2424,7 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionAcceptedDeal)) {
-					return new Response("Wait", "[sean.Name] leaves you and [com.name] locked up in the stocks for a while longer.", AFTER_SEAN_SEDUCE_STOCKS_BREEDING_FINISHED) {
+					return new Response("等待", "[sean.Name]把你和[com.name]锁在颈手枷上又过了一段时间。", AFTER_SEAN_SEDUCE_STOCKS_BREEDING_FINISHED) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().performImpregnationCheck(true);
@@ -2436,7 +2436,7 @@ public class SlaverAlleyDialogue {
 					};
 					
 				} else {
-					return new Response("Wait", "[sean.Name] leaves you locked up in the stocks a while longer.", AFTER_SEAN_SEDUCE_STOCKS_BREEDING_FINISHED) {
+					return new Response("等待", "[sean.Name]把你锁在颈手枷上又过了一段时间。", AFTER_SEAN_SEDUCE_STOCKS_BREEDING_FINISHED) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().performImpregnationCheck(true);
@@ -2466,7 +2466,7 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionAcceptedDeal)) {
-					return new Response("Released", "[sean.Name] moves to release you and [com.name] from the stocks.", PUBLIC_STOCKS) {
+					return new Response("解放", "[sean.Name]上前把你和[com.name]从颈手枷里解放出来。", PUBLIC_STOCKS) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "AFTER_SEAN_SEDUCE_STOCKS_BREEDING_THREESOME_FINISHED_END"));
@@ -2476,7 +2476,7 @@ public class SlaverAlleyDialogue {
 						}
 					};
 				} else {
-					return new Response("Released", "[sean.Name] moves to release you from the stocks.", PUBLIC_STOCKS) {
+					return new Response("解放", "[sean.Name]上前把你从颈手枷中解放出来。", PUBLIC_STOCKS) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "AFTER_SEAN_SEDUCE_STOCKS_BREEDING_FINISHED_END"));
@@ -2508,7 +2508,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Step back", "Do as [sean.name] says and step back.", PUBLIC_STOCKS) {
+				return new Response("退开", "按着[sean.name]说的做，退开。", PUBLIC_STOCKS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "PUBLIC_STOCKS_COMPLAIN_STEP_BACK"));
@@ -2517,7 +2517,7 @@ public class SlaverAlleyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Persist", "Ignore [sean.namePos] command and demand that the slaves be released.", PUBLIC_STOCKS_COMPLAIN_PERSIST);
+				return new Response("坚持己见", "无视[sean.namePos]的命令，仍然要求释放奴隶。", PUBLIC_STOCKS_COMPLAIN_PERSIST);
 			}
 			return null;
 		}
@@ -2538,7 +2538,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Decline", "Decide not to take up [sean.namePos] challenge and step back.", PUBLIC_STOCKS) {
+				return new Response("拒绝", "决定不接受[sean.namePos]的挑战，然后退开。", PUBLIC_STOCKS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "PUBLIC_STOCKS_COMPLAIN_PERSIST_STEP_BACK"));
@@ -2547,7 +2547,7 @@ public class SlaverAlleyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Challenge", "Accept [sean.namePos] challenge.", PUBLIC_STOCKS_COMPLAIN_CHALLENGE) {
+				return new Response("挑战", "接受[sean.namePos]的挑战。", PUBLIC_STOCKS_COMPLAIN_CHALLENGE) {
 					@Override
 					public boolean isCombatHighlight() {
 						return true;
@@ -2582,12 +2582,12 @@ public class SlaverAlleyDialogue {
 				
 			} else if(index==3) {
 				if(Main.game.getPlayer().getMoney()<5000) {
-					return new Response("Bribe ("+UtilText.formatAsMoneyUncoloured(5000, "span")+")",
-							"You don't have enough money to bribe [sean.name]...<br/>[style.italicsBad(Requires 5000 flames!)]",
+					return new Response("贿赂("+UtilText.formatAsMoneyUncoloured(5000, "span")+")",
+							"你的钱不够贿赂[sean.name]……<br/>[style.italicsBad(需要5000火币！)]",
 							null);
 				}
-				return new Response("Bribe ("+UtilText.formatAsMoney(5000, "span")+")",
-						"Offer [sean.name] a bribe to look the other way while you release the slaves.",
+				return new Response("贿赂("+UtilText.formatAsMoney(5000, "span")+")",
+						"贿赂[sean.name]，让他在你释放奴隶的时候假装看向别处。",
 						PUBLIC_STOCKS_COMPLAIN_BRIBE) {
 					@Override
 					public void effects() {
@@ -2607,11 +2607,11 @@ public class SlaverAlleyDialogue {
 			} else if(index==4) {
 				return new Response(
 						isCompanionDialogue()
-							?"Take place (solo)"
-							:"Take place",
+							?"代替(单人)"
+							:"代替",
 						isCompanionDialogue()
-							?"Do as [sean.name] suggests and take the place of one of the slaves, leaving [com.name] to wait and watch nearby..."
-							:"Do as [sean.name] suggests and take the place of one of the slaves.",
+							?"按照[sean.name]的建议，取代其中一名奴隶，让[com.name]等在旁边看着……"
+							:"按照[sean.name]的建议，取代其中一名奴隶。",
 						PUBLIC_STOCKS_LOCKED_UP) {
 					@Override
 					public boolean isSexHighlight() {
@@ -2635,20 +2635,20 @@ public class SlaverAlleyDialogue {
 			} else if(index==5 && isCompanionDialogue()) {
 //				if(getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					if(!getMainCompanion().getFetishDesire(Fetish.FETISH_EXHIBITIONIST).isPositive()) {
-						return new Response("Take place (both)",
-								"As [com.name] does not have a positive view of the '"+Fetish.FETISH_EXHIBITIONIST.getName(getMainCompanion())+"' fetish, [com.she] will not agree to do this."
-										+ " [sean.Name] will also not want to force [com.herHim] into anything [com.she] doesn't want to do.",
+						return new Response("代替(双飞)",
+								"由于[com.name]对于“"+Fetish.FETISH_EXHIBITIONIST.getName(getMainCompanion())+"”性癖心存反感，所以不会同意。"
+										+ "[sean.Name]也不想强迫[com.herHim]做不愿意做的事情。",
 								null);
 					}
 					if(!getMainCompanion().getFetishDesire(Fetish.FETISH_NON_CON_SUB).isPositive()) {
-						return new Response("Take place (both)",
-								"As [com.name] does not have a positive view of the '"+Fetish.FETISH_NON_CON_SUB.getName(getMainCompanion())+"' fetish, [com.she] will not agree to do this."
-										+ " [sean.Name] will also not want to force [com.herHim] into anything [com.she] doesn't want to do.",
+						return new Response("代替(双飞)",
+								"由于[com.name]对于“"+Fetish.FETISH_PREGNANCY.getName(getMainCompanion())+"”性癖心存反感，所以不会同意。"
+										+ "[sean.Name]也不想强迫[com.herHim]做不愿意做的事情。",
 								null);
 					}
 //				}
-				return new Response("Take place (both)",
-						"Do as [sean.name] suggests and get [com.name] to join you in taking the place of two of the slaves.",
+				return new Response("代替(双飞)",
+						"按照[sean.name]的建议，让[com.name]跟你一起取代其中的两名奴隶。",
 						PUBLIC_STOCKS_LOCKED_UP) {
 					@Override
 					public boolean isSexHighlight() {
@@ -2688,10 +2688,10 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("Fight", "Start your fight with [sean.name]!", Main.game.getNpc(Sean.class));
+				return new ResponseCombat("战斗", "跟[sean.name]开打！", Main.game.getNpc(Sean.class));
 				
 			} else if(index==0) {
-				return new Response("Back out", "Decide against fighting [sean.name] after all...", 
+				return new Response("反悔", "决定还是不跟[sean.name]战斗了……", 
 						PlaceType.SLAVER_ALLEY_PATH.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -2721,7 +2721,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Free slaves", "Head back into the square and unlock all of the stocks.", PUBLIC_STOCKS_COMPLAIN_FREE_SLAVES) {
+				return new Response("释放奴隶", "回到广场，解开颈手枷的锁。", PUBLIC_STOCKS_COMPLAIN_FREE_SLAVES) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/genericDialogue", "PUBLIC_STOCKS_COMPLAIN_CHALLENGE_VICTORY_FREE_SLAVES"));
@@ -2732,14 +2732,14 @@ public class SlaverAlleyDialogue {
 				
 			} else if(index==2) {
 				if(!Main.game.getPlayer().isFeminine()) {
-					return new Response("Seduce",
-							"[sean.Name] isn't attracted to you, so you can't seduce him. It would also be an extremely bad idea to force yourself upon him, as that would no doubt quickly lead to you being declared a wanted criminal.",
+					return new Response("诱惑",
+							"[sean.Name]并没有被你吸引，所以你无法诱惑他。而你强行凑上去可能是个很糟糕的主意，你会立刻成为悬赏的罪犯。",
 							null);
 				}
 				return new ResponseSex(
-						"Seduce",
-						"Tell [sean.name] that you were only really interested in getting some alone time with him..."
-								+ "<br/>[style.italicsMinorBad(Having sex with [sean.name] will not leave you with enough time in which to also free the slaves.)]",
+						"诱惑",
+						"告诉[sean.name]你真的只想和他独处一段时间……"
+								+ "<br/>[style.italicsMinorBad(跟[sean.name]做爱后你就没有足够的时间释放奴隶了。)]",
 						true,
 						true,
 						new SMGeneric(
@@ -2752,32 +2752,32 @@ public class SlaverAlleyDialogue {
 				
 			} else if(index==3 && isCompanionDialogue()) {
 				if(!Main.game.getPlayer().isFeminine()) {
-					return new Response("Seduce (threesome)",
-							"[sean.Name] isn't attracted to you, so you can't seduce him. It would also be an extremely bad idea to force yourself on him, as that would no doubt quickly lead to you being declared a wanted criminal.",
+					return new Response("诱惑(三人行)",
+							"[sean.Name]并没有被你吸引，所以你无法诱惑他。而你强行凑上去可能是个很糟糕的主意，你会立刻成为悬赏的罪犯。",
 							null);
 				}
 				if(!getMainCompanion().isFeminine()) {
-					return new Response("Seduce (threesome)",
-							"[sean.Name] isn't attracted to [com.name], so you can't seduce him into having a threesome."
-									+ " It would also be an extremely bad idea to force yourselves on him, as that would no doubt quickly lead to both you and [com.name] being declared wanted criminals.",
+					return new Response("诱惑(三人行)",
+							"[sean.Name]并没有被[com.name]吸引，所以你不能诱惑他加入三人行。"
+									+ "而你们强行凑上去可能是个很糟糕的主意，你和[com.name]都会立刻成为悬赏的罪犯。",
 							null);
 				}
 //				if(getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					if(!getMainCompanion().isAttractedTo(Main.game.getPlayer())) {
-						return new Response("Seduce (threesome)",
-								"You can tell that [com.name] isn't at all interested in having sex with you...",
+						return new Response("诱惑(三人行)",
+								"你看得出来[com.name]一点也不想和你做爱……",
 								null);
 					}
 					if(!getMainCompanion().isAttractedTo(Main.game.getNpc(Sean.class))) {
-						return new Response("Seduce (threesome)",
-								"You can tell that [com.name] isn't at all interested in having sex with [sean.name]...",
+						return new Response("诱惑(三人行)",
+								"你看得出来[com.name]一点也不想和[sean.name]做爱……",
 								null);
 					}
 //				}
 				return new ResponseSex(
-						"Seduce (threesome)",
-						"Tell [sean.name] that you and [com.name] were only really interested in getting some alone time with him..."
-								+ "<br/>[style.italicsMinorBad(Having a threesome with [sean.name] and [com.name] will not leave you with enough time in which to also free the slaves.)]",
+						"诱惑(三人行)",
+						"告诉[sean.name]你真的只想和[com.name]独处一段时间……"
+								+ "<br/>[style.italicsMinorBad(跟[sean.name]和[com.name]三人行后你就没有足够的时间释放奴隶了。)]",
 						true,
 						true,
 						new SMGeneric(
@@ -2795,7 +2795,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEAN_ALLEYWAY_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_SEAN_ALLEYWAY_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -2803,9 +2803,9 @@ public class SlaverAlleyDialogue {
 		@Override
 		public String getDescription() {
 			if(isCompanionDialogue() && Main.sex.getAllParticipants(false).contains(getMainCompanion())) {
-				return "You, [com.name], and [sean.name] have finished having sex with one another...";
+				return "你、[com.name]和[sean.name]结束了性爱……";
 			}
-			return "You and [sean.name] have finished having sex with one another...";
+			return "你和[sean.name]结束了性爱……";
 		}
 		@Override
 		public String getContent() {
@@ -2817,8 +2817,8 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Head back out into Slaver Alley",
+				return new Response("继续",
+						"返回奴隶巷",
 						PlaceType.SLAVER_ALLEY_PATH.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -2851,10 +2851,10 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Locked up",
+				return new Response("被锁住",
 						isCompanionDialogue()
-							?"You and [com.name] are locked up in the stocks..."
-							:"You are locked up in the stocks...",
+							?"你和[com.name]被锁在颈手枷上了……"
+							:"你被锁在颈手枷上了……",
 						PUBLIC_STOCKS_LOCKED_UP) {
 					@Override
 					public void effects() {
@@ -2878,7 +2878,7 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Free slaves", "Head back into the square and unlock all of the stocks.", PUBLIC_STOCKS_COMPLAIN_FREE_SLAVES) {
+				return new Response("释放奴隶", "回到广场，解开颈手枷的锁。", PUBLIC_STOCKS_COMPLAIN_FREE_SLAVES) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Sean.class).setNearestLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_CAFE, false);
@@ -2906,8 +2906,8 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Step back",
-						"Do as the guards say and step back while they try to figure out what happened.",
+				return new Response("退开",
+						"听从守卫的话，退到一旁，让他们调查发生了什么事情。",
 						PUBLIC_STOCKS_COMPLAIN_FREE_SLAVES_END) {
 					@Override
 					public void effects() {
@@ -2964,8 +2964,8 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(isSeanOfferingDeal(Main.game.getPlayer())) {
 				if(index==1) {
-					return new Response("Accept",
-							"Swallow the "+ItemType.getItemTypeFromId("innoxia_pills_fertility").getName(false)+" that [sean.name] is offering you, thereby accepting his deal of protection in exchange for letting him try to impregnate you...",
+					return new Response("接受",
+							"吞下[sean.name]给你的"+ItemType.getItemTypeFromId("innoxia_pills_fertility").getName(false)+"，也相当于接受了他的保护，而他则会尝试让你受孕作为交换……",
 							PUBLIC_STOCKS_LOCKED_UP_FIRST_SEX) {
 						@Override
 						public void effects() {
@@ -2978,8 +2978,8 @@ public class SlaverAlleyDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Refuse",
-							"Refuse to swallow the "+ItemType.getItemTypeFromId("innoxia_pills_fertility").getName(false)+" and instead accept the fact that you're going to be used by members of the public.",
+					return new Response("拒绝",
+							"拒绝吞下"+ItemType.getItemTypeFromId("innoxia_pills_fertility").getName(false)+"，但同意自己被公众使用。",
 							PUBLIC_STOCKS_LOCKED_UP_FIRST_SEX) {
 						@Override
 						public int getSecondsPassed() {
@@ -3000,8 +3000,8 @@ public class SlaverAlleyDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Continue",
-							"All you can do is wait and see if you're going to be used by members of the public...",
+					return new Response("继续",
+							"你只能在此静候，看看有没有哪个人来使用你……",
 							PUBLIC_STOCKS_LOCKED_UP_FIRST_SEX) {
 						@Override
 						public int getSecondsPassed() {
@@ -3035,8 +3035,8 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
 				if(index==1) {
-					return new ResponseSex("Get bred",
-							"[sean.Name] steps up behind you and prepares to start breeding you.",
+					return new ResponseSex("开始接受“配种”",
+							"[sean.Name]站到你的身后，准备给你配种。",
 							true,
 							false,
 							new SexManagerDefault(
@@ -3105,10 +3105,10 @@ public class SlaverAlleyDialogue {
 				
 			} else {
 				if(index==1) {
-					return new ResponseSex("Used",
+					return new ResponseSex("被使用",
 							Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyTwoPartners)
-								?"The two strangers prepare to start using you..."
-								:"The stranger prepares to start using you...",
+								?"这两个陌生人准备来使用你了……"
+								:"有个陌生人准备来使用你了……",
 							false,
 							false,
 							getRandomPartnerSexManager(),
@@ -3123,7 +3123,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode PUBLIC_STOCKS_LOCKED_UP_AFTER_FIRST_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode PUBLIC_STOCKS_LOCKED_UP_AFTER_FIRST_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -3131,13 +3131,13 @@ public class SlaverAlleyDialogue {
 		@Override
 		public String getDescription() {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
-				return "Having filled your [pc.pussy+] with his cum, [sean.name] is finished with you and steps back.";
+				return "[sean.name]让你[pc.pussy+]里溢满了精液，完事之后就退了下去。";
 				
 			} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyTwoPartners)) {
-				return "Having had their fun, the strangers step back...";
+				return "陌生人舒服过后就退了下去……";
 				
 			} else {
-				return UtilText.parse(randomSexPartners.get(0), "Having had [npc.her] fun, the stranger steps back...");
+				return UtilText.parse(randomSexPartners.get(0), "路人操够了[npc.her]，走开了……");
 			}
 		}
 		@Override
@@ -3153,8 +3153,8 @@ public class SlaverAlleyDialogue {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionInStocks)) {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionAcceptedDeal)) {
-						return new Response("[com.NamePos] turn",
-								"[sean.Name] prepares to start fucking [com.name]...",
+						return new Response("轮到[com.NamePos]了",
+								"[sean.Name]准备好跟[com.name]开干了……",
 								PUBLIC_STOCKS_LOCKED_UP_COMPANION_FIRST_SEX) {
 							@Override
 							public void effects() {
@@ -3167,8 +3167,8 @@ public class SlaverAlleyDialogue {
 						};
 						
 					} else {
-						return new Response("[com.NamePos] turn",
-								"A stranger moves up to [com.name] and prepares to start fucking [com.herHim]...",
+						return new Response("轮到[com.NamePos]了",
+								"一个路人走到[com.name]身边，开始操[com.herHim]……",
 								PUBLIC_STOCKS_LOCKED_UP_COMPANION_FIRST_SEX) {
 							@Override
 							public void effects() {
@@ -3184,8 +3184,8 @@ public class SlaverAlleyDialogue {
 			} else {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
-						return new Response("Wait",
-								"You can't do anything but wait until [sean.name] is ready to fuck you again...",
+						return new Response("等待",
+								"你没什么事好做，只能干等着[sean.name]再来操你……",
 								PUBLIC_STOCKS_LOCKED_UP_SECOND_SEX) {
 							@Override
 							public void effects() {
@@ -3194,8 +3194,8 @@ public class SlaverAlleyDialogue {
 						};
 						
 					} else {
-						return new Response("Wait",
-								"You can't do anything but wait and see if you're going to get used again...",
+						return new Response("等待",
+								"你没什么事好做，只能等着看看有没有哪个人来使用你……",
 								PUBLIC_STOCKS_LOCKED_UP_SECOND_SEX) {
 							@Override
 							public void effects() {
@@ -3224,8 +3224,8 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
-					return new Response("Wait",
-							"You can't do anything but wait until [sean.name] is ready to fuck you again...",
+					return new Response("等待",
+							"你没什么事好做，只能干等着[sean.name]再来操你……",
 							PUBLIC_STOCKS_LOCKED_UP_SECOND_SEX) {
 						@Override
 						public void effects() {
@@ -3234,8 +3234,8 @@ public class SlaverAlleyDialogue {
 					};
 					
 				} else {
-					return new Response("Wait",
-							"You can't do anything but wait and see if you're going to get used again...",
+					return new Response("等待",
+							"你没什么事好做，只能等着看看有没有哪个人来使用你……",
 							PUBLIC_STOCKS_LOCKED_UP_SECOND_SEX) {
 						@Override
 						public void effects() {
@@ -3263,8 +3263,8 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
 				if(index==1) {
-					return new ResponseSex("Bred again",
-							"[sean.Name] steps up behind you and prepares to start breeding you.",
+					return new ResponseSex("再次被配种",
+							"[sean.Name]站到你的身后，准备给你配种。",
 							true,
 							false,
 							new SexManagerDefault(
@@ -3333,10 +3333,10 @@ public class SlaverAlleyDialogue {
 				
 			} else {
 				if(index==1) {
-					return new ResponseSex("Used again",
+					return new ResponseSex("再次被使用",
 							Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyTwoPartners)
-								?"The two strangers prepare to start using you..."
-								:"The stranger prepares to start using you...",
+								?"这两个陌生人准备来使用你了……"
+								:"有个陌生人准备来使用你了……",
 							false,
 							false,
 							getRandomPartnerSexManager(),
@@ -3351,7 +3351,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 
-	public static final DialogueNode PUBLIC_STOCKS_LOCKED_UP_AFTER_SECOND_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode PUBLIC_STOCKS_LOCKED_UP_AFTER_SECOND_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -3359,13 +3359,13 @@ public class SlaverAlleyDialogue {
 		@Override
 		public String getDescription() {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
-				return "Having filled your [pc.pussy+] with his cum, [sean.name] is finished with you and steps back.";
+				return "[sean.name]让你[pc.pussy+]里溢满了精液，完事之后就退了下去。";
 				
 			} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyTwoPartners)) {
-				return "Having had their fun, the strangers step back...";
+				return "陌生人舒服过后就退了下去……";
 				
 			} else {
-				return UtilText.parse(randomSexPartners.get(0), "Having had [npc.her] fun, the stranger steps back...");
+				return UtilText.parse(randomSexPartners.get(0), "路人操够了[npc.her]，走开了……");
 			}
 		}
 		@Override
@@ -3381,8 +3381,8 @@ public class SlaverAlleyDialogue {
 			if(isCompanionDialogue() && Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionInStocks)) {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionAcceptedDeal)) {
-						return new Response("[com.NamePos] turn",
-								"[sean.Name] moves over to [com.name] and prepares to start fucking [com.herHim]...",
+						return new Response("轮到[com.NamePos]了",
+								"[sean.Name]到了[com.name]身边，准备开始操[com.herHim]……",
 								PUBLIC_STOCKS_LOCKED_UP_COMPANION_SECOND_SEX) {
 							@Override
 							public void effects() {
@@ -3393,8 +3393,8 @@ public class SlaverAlleyDialogue {
 						};
 						
 					} else {
-						return new Response("[com.NamePos] turn",
-								"A pair of strangers move up to [com.name] and prepare to start fucking [com.herHim]...",
+						return new Response("轮到[com.NamePos]了",
+								"两个陌生人来到[com.name]身边，准备开始操[com.herHim]……",
 								PUBLIC_STOCKS_LOCKED_UP_COMPANION_SECOND_SEX) {
 							@Override
 							public void effects() {
@@ -3410,8 +3410,8 @@ public class SlaverAlleyDialogue {
 			} else {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
-						return new Response("Wait",
-								"There's nothing for you to do but wait until [sean.name] returns and releases you from the stocks...",
+						return new Response("等待",
+								"你没什么事好做，只能干等着[sean.name]回来把你从颈手枷解下……",
 								PUBLIC_STOCKS_LOCKED_UP_FINISHED) {
 							@Override
 							public void effects() {
@@ -3423,8 +3423,8 @@ public class SlaverAlleyDialogue {
 						};
 						
 					} else {
-						return new Response("Wait",
-								"There's nothing for you to do but wait until [sean.name] returns and releases you from the stocks...",
+						return new Response("等待",
+								"你没什么事好做，只能干等着[sean.name]回来把你从颈手枷解下……",
 								PUBLIC_STOCKS_LOCKED_UP_FINISHED) {
 							@Override
 							public void effects() {
@@ -3451,8 +3451,8 @@ public class SlaverAlleyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
-					return new Response("Wait",
-							"There's nothing for you to do but wait until [sean.name] returns and releases you from the stocks...",
+					return new Response("等待",
+							"你没什么事好做，只能干等着[sean.name]回来把你从颈手枷解下……",
 							PUBLIC_STOCKS_LOCKED_UP_FINISHED) {
 						@Override
 						public void effects() {
@@ -3470,8 +3470,8 @@ public class SlaverAlleyDialogue {
 					};
 					
 				} else {
-					return new Response("Wait",
-							"There's nothing for you to do but wait until [sean.name] returns and releases you from the stocks...",
+					return new Response("等待",
+							"你没什么事好做，只能干等着[sean.name]回来把你从颈手枷解下……",
 							PUBLIC_STOCKS_LOCKED_UP_FINISHED) {
 						@Override
 						public void effects() {
@@ -3502,8 +3502,8 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Now that you're free, you can continue on your way once again...",
+				return new Response("继续",
+						"你已经自由了，可以继续你的路程……",
 						PUBLIC_STOCKS) {
 					@Override
 					public void effects() {
@@ -3521,8 +3521,8 @@ public class SlaverAlleyDialogue {
 			}
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
 				if(index==2) {
-					return new Response("More",
-							"Tell [sean.name] that you want to stay in the stocks for a little longer...",
+					return new Response("更多",
+							"告诉[sean.name]你还想在颈手枷里待久一些……",
 							PUBLIC_STOCKS_LOCKED_UP_FINISHED_REPEAT,
 							Util.newArrayListOfValues(
 									Fetish.FETISH_EXHIBITIONIST,
@@ -3560,10 +3560,10 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Used",
+				return new ResponseSex("被使用",
 						Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyTwoPartners)
-							?"The two strangers prepare to start using you..."
-							:"The stranger prepares to start using you...",
+							?"这两个陌生人准备来使用你了……"
+							:"有个陌生人准备来使用你了……",
 						false,
 						false,
 						getRandomPartnerSexManager(),
@@ -3576,7 +3576,7 @@ public class SlaverAlleyDialogue {
 		}
 	};
 	
-	public static final DialogueNode PUBLIC_STOCKS_LOCKED_UP_FINISHED_REPEAT_AFTER_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode PUBLIC_STOCKS_LOCKED_UP_FINISHED_REPEAT_AFTER_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -3584,13 +3584,13 @@ public class SlaverAlleyDialogue {
 		@Override
 		public String getDescription() {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyAcceptedDeal)) {
-				return "Having filled your [pc.pussy+] with his cum, [sean.name] is finished with you and steps back.";
+				return "[sean.name]让你[pc.pussy+]里溢满了精液，完事之后就退了下去。";
 				
 			} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyTwoPartners)) {
-				return "Having had their fun, the strangers step back...";
+				return "陌生人舒服过后就退了下去……";
 				
 			} else {
-				return UtilText.parse(randomSexPartners.get(0), "Having had [npc.her] fun, the stranger steps back...");
+				return UtilText.parse(randomSexPartners.get(0), "路人操够了[npc.her]，走开了……");
 			}
 		}
 		@Override
@@ -3602,8 +3602,8 @@ public class SlaverAlleyDialogue {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionInStocks)
 					&& !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.slaverAlleyCompanionAcceptedDeal)) {
 				if(index==1) {
-					return new Response("[com.NamePos] turn",
-							"A stranger moves up to [com.name] and prepares to start fucking [com.herHim]...",
+					return new Response("轮到[com.NamePos]了",
+							"一个路人走到[com.name]身边，开始操[com.herHim]……",
 							PUBLIC_STOCKS_LOCKED_UP_FINISHED_REPEAT_COMPANION_SEX) {
 						@Override
 						public void effects() {
@@ -3617,8 +3617,8 @@ public class SlaverAlleyDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Wait",
-							"There's nothing for you to do but wait until [sean.name] returns and releases you from the stocks...",
+					return new Response("等待",
+							"你没什么事好做，只能干等着[sean.name]回来把你从颈手枷解下……",
 							PUBLIC_STOCKS_LOCKED_UP_FINISHED) {
 						@Override
 						public void effects() {
@@ -3643,8 +3643,8 @@ public class SlaverAlleyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait",
-						"There's nothing for you to do but wait until [sean.name] returns and releases you from the stocks...",
+				return new Response("等待",
+						"你没什么事好做，只能干等着[sean.name]回来把你从颈手枷解下……",
 						PUBLIC_STOCKS_LOCKED_UP_FINISHED) {
 					@Override
 					public void effects() {

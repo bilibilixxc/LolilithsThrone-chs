@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Charging Bite]]></name>
+	<name><![CDATA[冲锋撕咬]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] mouthful of sharp sharkteeth to deliver a powerful bite to [npc.her] target, dealing formattedDamageInflicted damage.
+		用[npc.her]一口锋利的鲨鱼齿对[npc.her]的目标狠狠的咬一口，造成formattedDamageInflicted伤害。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -103,7 +103,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have a shark face type.
+		仅适用于有鲨鱼面部的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -134,7 +134,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target's physique is less than two-thirds of the attacker's physique.
+		目标的体格要小于攻击者体格的三分之二。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -146,17 +146,17 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] mouthful of sharp sharkteeth to deliver a powerful bite [npc2.name], dealing formattedDamageInflicted damage.
+		用[npc.her]一口锋利的鲨鱼齿狠狠的咬了[npc2.name]一口，造成formattedDamageInflicted伤害。
 		#IF(!npc.isCoverableAreaExposed(CA_MOUTH))
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] mouth is blocked!)]
+			[style.italicsTerrible([npc.her]的咬击被抵挡住了，造成的伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] mouthful of sharp sharkteeth to deliver a powerful bite [npc.her] target, dealing formattedDamageInflicted damage.
+		用[npc.her]一口锋利的鲨鱼齿狠狠的咬[npc.her]的目标，造成formattedDamageInflicted伤害。
 		#IF(!npc.isCoverableAreaExposed(CA_MOUTH))
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] mouth is blocked!)]
+			[style.italicsTerrible([npc.her]的咬击被抵挡住了，造成的伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionNoTarget>
 	
@@ -172,17 +172,17 @@
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
 			#IF(!npc.isCoverableAreaExposed(CA_MOUTH))
-				As [npc.her] mouth is blocked, [npc.name] [npc.verb(fail)] to bite [npc2.name], and [npc.verb(end)] up doing no damage at all...
+				npc.her]的嘴被堵住，[npc.name]没能咬住[npc2.name]，根本没有造成伤害……
 			#ELSE
-				[npc.Name] [npc.verb(charge)] with incredible speed at [npc2.name] and [npc.verb(open)] [npc.her] mouth just before impact, revealing extremely sharp teeth that [npc.she] [npc.verb(sink)] into [npc2.namePos] aura!
+				[npc.Name]以惊人的速度冲向[npc2.name]，在撞击前露出[npc.her]极其锋利的牙齿刺入[npc2.namePos]的灵气！
 			#ENDIF
 			formattedHealthDamage
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc.NamePos] bite was extremely effective!
+			[npc.NamePos]的撕咬造成了超出预期的效果！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] been crippled by the attack!
+			[npc2.Name]已被攻击的效果削弱！
 		]]></critEffectDescription>
 	</performMove>
 	

@@ -95,15 +95,15 @@ public class Ass implements BodyPartInterface {
 		}
 		
 		if (type == getType()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the ass of [npc.a_assRace], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经具有[npc.a_assRace]的屁股，所以无事发生……)]</p>");
 		}
 		
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(
 				"<p>"
-				+ "[npc.NamePos] [npc.verb(feel)] [npc.her] [npc.ass] suddenly softening and becoming very sensitive, and [npc.she] [npc.verb(let)] out [npc.a_moan+] as the intense feeling moves down into [npc.her] [npc.asshole]."
-				+ " Panting and sighing, [npc.she] [npc.verb(continue)] letting out the occasional involuntary [npc.moan] as [npc.she] [npc.verb(feel)] [npc.her] entire rear-end transform.<br/>");
+				+ "[npc.NamePos]突然感觉到[npc.her]的[npc.ass]变得柔软且极度敏感，随着刺激感来到[npc.her]的[npc.asshole]处，[npc.she]的喉间冒出了一声[npc.a_moan+]。"
+				+ "[npc.she]意识到整个后庭的变化后，喘息着，断断续续地发出着不情愿的[npc.moan]。<br/>");
 		
 		// Parse existing content before transformation:
 		String s = UtilText.parse(owner, sb.toString());
@@ -144,34 +144,34 @@ public class Ass implements BodyPartInterface {
 		int sizeChange = this.assSize - oldSize;
 		
 		if (sizeChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] ass doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]的屁股尺寸没有变化……)]</p>");
 		}
 		
 		String sizeDescriptor = getAssSize().getDescriptor();
 		if (sizeChange > 0) {
 			if (owner.isPlayer()) {
 				return "<p>"
-							+ "You feel a little off-balance as your [pc.ass] suddenly seems to get heavier, and as you give it an experimental shake, you find that it's definitely [style.boldGrow(grown larger)].<br/>"
-							+ "You now have [style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + " " + sizeDescriptor + " ass)]!"
+							+ "你的[pc.ass]突然变得沉重，你感到微微的不平衡感，于是实验地摇晃了一下，确信[pc.ass][style.boldGrow(变得更大了)]。<br/>"
+							+ "你现在拥有[style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + "" + sizeDescriptor + "的屁股)]！"
 						+ "</p>";
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] looks to be a little off-balance as [npc.her] [npc.ass] suddenly seems to get bigger, and as [npc.she] gives it an experimental shake, [npc.she] discovers that it's definitely [style.boldGrow(grown larger)].<br/>"
-							+ "[npc.She] now has [style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + " " + sizeDescriptor + " ass)]!"
+							+ "[npc.Name]的[npc.ass]似乎突然变大了，[npc.she]看上去有些不太平衡，于是实验地摇晃了一下，确信[npc.her]的[npc.ass][style.boldGrow(变得更大了)]。<br/>"
+							+ "[npc.She]现在拥有[style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + "" + sizeDescriptor + "的屁股)]！"
 						+ "</p>");
 			}
 		} else {
 			if (owner.isPlayer()) {
 				return "<p>"
-							+ "You suddenly feel like a weight has been lifted from your rear end, and, giving your [pc.ass] an experimental shake, you discover that it's [style.boldShrink(shrunk)].<br/>"
-							+ "You now have [style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + " " + sizeDescriptor + " ass)]!"
+							+ "你忽然感觉到身后轻了一块，于是实验地摇晃了一下[pc.ass]，确信[pc.ass][style.boldShrink(缩小了)]。<br/>"
+							+ "你现在拥有[style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + "" + sizeDescriptor + "的屁股)]！"
 						+ "</p>";
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] looks to be a little off-balance as [npc.her] [npc.ass] suddenly seems to get smaller, and as [npc.she] gives it an experimental shake, [npc.she] discovers that it's definitely [style.boldShrink(shrunk)].<br/>"
-							+ "[npc.She] now has [style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + " " + sizeDescriptor + " ass)]!"
+							+ "[npc.Name]的[npc.ass]似乎突然变小了，[npc.she]看上去有些不太平衡，于是实验地摇晃了一下，确信[npc.her]的[npc.ass][style.boldShrink(缩小了)]。<br/>"
+							+ "[npc.She]现在拥有[style.boldSex(" + UtilText.generateSingularDeterminer(sizeDescriptor) + "" + sizeDescriptor + "的屁股)]！"
 						+ "</p>");
 			}
 		}
@@ -199,22 +199,22 @@ public class Ass implements BodyPartInterface {
 		}
 		
 		if (sizeChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] hips doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]臀部的尺寸没有变化……)]</p>");
 		}
 		
-		String styledSizeDescriptor = "[style.boldSex("+ getHipSize().getDescriptor() + " hips)]";
+		String styledSizeDescriptor = "[style.boldSex("+ getHipSize().getDescriptor() + "臀部)]";
 		if (sizeChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(inhale)] sharply in surprise as [npc.she] [npc.verb(feel)] [npc.her] hips reshape themselves, pushing out and [style.boldGrow(growing wider)].<br/>"
-						+ "[npc.She] now [npc.has] " + styledSizeDescriptor + "!"
+						+ "[npc.Name]惊讶的倒吸一口冷气，[npc.she]感觉道自己的臀部正在重塑、向外突出并变得[style.boldGrow(越来越宽)]。<br/>"
+						+ "[npc.She]现在拥有了" + styledSizeDescriptor + "！"
 					+ "</p>");
 				
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(inhale)] sharply in surprise as [npc.she] [npc.verb(feel)] [npc.her] hips collapse inwards and reshape themselves as they get [style.boldShrink(narrower)].<br/>"
-						+ "[npc.She] now [npc.has] " + styledSizeDescriptor + "!"
+						+ "[npc.Name]惊讶地倒吸一口冷气，[npc.she]感觉到[npc.her]的臀部正在变化、向内塌陷并变的[style.boldShrink(越来越窄)]。<br/>"
+						+ "[npc.She]现在拥有了" + styledSizeDescriptor + "！"
 					+ "</p>");
 		}
 	}

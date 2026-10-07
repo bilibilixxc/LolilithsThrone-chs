@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
-		<authorTag><![CDATA[A small tag sewn into the waist reads "Sage".]]></authorTag>
+		<authorTag><![CDATA[腰部缝了个小标签印着“Sage”。]]></authorTag>
 		<value>200</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[latex zip bra]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[latex zip bras]]></namePlural>
-		<description><![CDATA[A low-cut bra that reveals a lot of the wearer's cleavage. A zip splits the front and can be undone in order to provide quick access to the wearer's breasts.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[乳胶拉链胸罩]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乳胶拉链胸罩]]></namePlural>
+		<description><![CDATA[一条低胸胸罩，能露出穿戴者的乳沟。正面有一条拉链可以拉开，以便快速接触穿戴者的胸部。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -63,27 +63,19 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the latex bra around [npc.her] chest before pulling up on the zipper.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the latex bra around [npc2.namePos] chest before pulling up on the zipper.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the latex bra around [npc2.namePos] chest before roughly pulling up on the zipper.]]>
-	  </otherRough>
+		<self><![CDATA[[npc.Name]将乳胶胸罩放在[npc.her]的胸部上，并拉好[npc.her]背后的拉链。]]></self>
+		<other><![CDATA[
+[npc.Name]将乳胶胸罩放在[npc2.namePos]的胸部上，并把[npc2.her]背后的拉链拉好。]]></other>
+		<otherRough><![CDATA[[npc.Name]将乳胶胸罩放在[npc2.her]的胸部上，并粗暴地拉上[npc2.her]背后的拉链。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] [npc.her] latex bra and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] [npc2.namePos] latex bra and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unzip)] [npc2.namePos] latex bra and [npc.verb(take)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉开[npc.her]的乳胶胸罩的拉链并将其摘下。]]></self>
+		<other><![CDATA[
+[npc.Name]拉开[npc2.namePos]的乳胶胸罩的拉链并将其摘下。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地拉下[npc2.namePos]乳胶胸罩的拉链并将其扯下。]]></otherRough>
 	</displacementText>
 	
 </clothing>

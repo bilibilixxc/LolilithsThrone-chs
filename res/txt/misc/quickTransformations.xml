@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Quick Transformations -->
@@ -6,389 +6,389 @@
 	<htmlContent tag="QUICK_TRANSFORMATIONS_FEMININITY"><![CDATA[
 	#IF(npc.isAttractedTo(pc) || !game.isNonConEnabled())
 		<p>
-			Wanting to take full advantage of the fact that this horny [npc.race] can transform [npc.her] body into whatever form [npc.she] desires, you take a step forwards and prepare to tell [npc.herHim] exactly how feminine [npc.her] body should be. Looking up at you as you approach, [npc.she] whines, [npc.speech(Yes! Come on then; fuck me already!)]
+			你想充分利用这个可以将[npc.her]的身体变成[npc.she]想要的任何样子的好色[npc.race]，于是向前一步准备告诉[npc.herHim]具体应将[npc.her]的身体变得更偏向哪一性。[npc.she]在你靠近时抬头看向你，发出哀鸣，[npc.speech(对！来吧；操我吧！)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to take full advantage of the fact that this horny [npc.race] can transform [npc.her] body into whatever form [npc.she] desires, you take a step forwards and prepare to tell [npc.herHim] exactly how feminine [npc.her] body should be. Looking up at you as you approach, [npc.she] nervously shuffles backwards and whines, [npc.speech(What do you want?! Just leave me alone!)]
+			你想充分利用这个可以将[npc.her]的身体变成[npc.she]想要的任何样子的好色[npc.race]，于是向前一步准备告诉[npc.herHim]具体应将[npc.her]的身体变得更偏向哪一性。[npc.she]在你靠近时抬头看向你，紧张地向后退去并发出哀鸣，[npc.speech(你想做什么？！离我远点！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_FEMININITY_VERY_MASCULINE"><![CDATA[
 	<p>
 		#IF(npc.getFemininity() == FEMININITY_MASCULINE_STRONG)
-			You decide that you like [npc.name] having a very masculine body and face, and can't help but hungrily look [npc.herHim] up and down as you wonder if you should get [npc.herHim] to
+			你决定让[npc.name]将身体和脸庞变得非常男性化，并忍不住饥渴地上下打量着[npc.herHim]，思考你是否应让[npc.herHim]
 		#ELSE
-				Wanting [npc.name] to transform [npc.herself] so that [npc.sheHasFull] a very masculine face and body, you command, [pc.speech(Make your body as manly as you possibly can!)]
+				你想让[npc.name]进行转化以拥有非常男性化的身体与脸庞，于是命令道，[pc.speech(尽你所能地将身体男性化！)]
 			</p>
 			<p>
-				[npc.speech(Really?)] [npc.name] mumbles, before realising that [npc.sheHasFull] no say in the matter, [npc.speech(Fine...)]
+				[npc.speech(真的吗？)][npc.name]喃喃自语，然后意识到[npc.sheHasFull]没有发言权，[npc.speech(好吧……)]
 			</p>
 			<p>
-				With that, [npc.she] focuses [npc.her] energy on transforming [npc.her] body to become as masculine as [npc.she] can manage, and within just a moment, you find yourself smiling at his now-extremely-manly body and handsome face. You wonder if you should now get him to
+				就这样，[npc.she]集中能量以转化身体，尽[npc.her]所能地变得男性化，过了一会，你就发现自己正微笑地看着他现在极具男人味的身体与英俊的脸庞。你想知道现在是否应让他
 		#ENDIF
 		#IF(npc.hasPenis())
-			 transform his cock...
+			转化他的阴茎……
 		#ELSE
-			 grow a cock...
+			长出阴茎……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_FEMININITY_MASCULINE"><![CDATA[
 	<p>
 		#IF(npc.getFemininity() == FEMININITY_MASCULINE)
-			You decide that you like [npc.name] having a masculine body and face, and can't help but hungrily look [npc.herHim] up and down as you wonder if you should get [npc.herHim] to
+			你决定让[npc.name]将身体和脸庞变得男性化，并忍不住饥渴地上下打量着[npc.herHim]，思考你是否应让[npc.herHim]
 		#ELSE
-				Wanting [npc.name] to transform [npc.herself] so that [npc.sheHasFull] a masculine face and body, you command, [pc.speech(Transform your body so that you're masculine, but not too much so!)]
+				你想让[npc.name]进行转化以拥有男性化的脸庞与身体，于是命令道，[pc.speech(转化你的身体以变得男性化，但不能太过！)]
 			</p>
 			<p>
-				[npc.speech(Really?)] [npc.name] mumbles, before realising that [npc.sheHasFull] no say in the matter, [npc.speech(Fine...)]
+				[npc.speech(真的吗？)][npc.name]喃喃自语，然后意识到[npc.sheHasFull]没有发言权，[npc.speech(好吧……)]
 			</p>
 			<p>
-				With that, [npc.she] focuses [npc.her] energy on transforming [npc.her] body to become masculine, and within just a moment, you find yourself smiling at his now-manly body and handsome face. You wonder if you should now get him to
+				就这样，[npc.she]集中能量转化身体以变得男性化，过了一会，你就发现自己正微笑地看着他恰到好处的男性身体与英俊的脸庞。你想知道现在是否应让他
 		#ENDIF
 		#IF(npc.hasPenis())
-			 transform his cock...
+			转化他的阴茎……
 		#ELSE
-			 grow a cock...
+			长出阴茎……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_FEMININITY_ANDROGYNOUS"><![CDATA[
 	<p>
 		#IF(npc.getFemininity() == FEMININITY_ANDROGYNOUS)
-			You decide that you like [npc.name] having an androgynous body and face, and can't help but hungrily look [npc.herHim] up and down as you wonder if you should get [npc.herHim] to
+			你决定让[npc.name]将身体和脸庞变得更中性，并忍不住饥渴地上下打量着[npc.herHim]，思考你是否应让[npc.herHim]
 		#ELSE
-				Wanting [npc.name] to transform [npc.herself] so that [npc.sheHasFull] an androgynous face and body, you command, [pc.speech(Transform your body so that you look androgynous!)]
+				你想让[npc.name]进行转化以拥有中性的脸庞与身体，于是命令道，[pc.speech(转化你的身体让你看起来更中性！)]
 			</p>
 			<p>
-				[npc.speech(Really?)] [npc.name] mumbles, before realising that [npc.sheHasFull] no say in the matter, [npc.speech(Fine...)]
+				[npc.speech(真的吗？)][npc.name]喃喃自语，然后意识到[npc.sheHasFull]没有发言权，[npc.speech(好吧……)]
 			</p>
 			<p>
-				With that, [npc.she] focuses [npc.her] energy on transforming [npc.her] body to become androgynous, and within just a moment, you find yourself smiling at their gender-neutral body and face. You wonder if you should now get [npc.name] to
+				就这样，[npc.she]集中能量转化身体以变得中性，过了一会，你就发现自己正微笑地看着ta中性的身体与脸庞。你想知道现在是否应让[npc.name]
 		#ENDIF
 		#IF(npc.hasPenis())
-			 transform their cock...
+			转化ta的阴茎……
 		#ELSE
-			 grow a cock...
+			长出阴茎……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_FEMININITY_FEMININE"><![CDATA[
 	<p>
 		#IF(npc.getFemininity() == FEMININITY_FEMININE)
-			You decide that you like [npc.name] having a feminine body and face, and can't help but hungrily look [npc.herHim] up and down as you wonder if you should get [npc.herHim] to
+			你决定让[npc.name]将身体和脸庞变得女性化，并忍不住饥渴地上下打量着[npc.herHim]，思考你是否应让[npc.herHim]
 		#ELSE
-				Wanting [npc.name] to transform [npc.herself] so that [npc.sheHasFull] a feminine face and body, you command, [pc.speech(Transform your body so that you're feminine, but not too much so!)]
+				你想让[npc.name]进行转化以拥有女性化的脸庞与身体，于是命令道，[pc.speech(转化你的身体以变得女性化，但不能太过！)]
 			</p>
 			<p>
-				[npc.speech(Really?)] [npc.name] mumbles, before realising that [npc.sheHasFull] no say in the matter, [npc.speech(Fine...)]
+				[npc.speech(真的吗？)][npc.name]喃喃自语，然后意识到[npc.sheHasFull]没有发言权，[npc.speech(好吧……)]
 			</p>
 			<p>
-				With that, [npc.she] focuses [npc.her] energy on transforming [npc.her] body to become feminine, and within just a moment, you find yourself smiling at her girly body and pretty face. You wonder if you should now get her to
+				就这样，[npc.she]集中能量转化身体以变得女性化，过了一会，你就发现自己正微笑地看着她少女般的身体与漂亮的脸蛋。你想知道现在是否应让她
 		#ENDIF
 		#IF(npc.hasPenis())
-			 transform her cock...
+			转化她的阴茎……
 		#ELSE
-			 grow herself a cock...
+			长出阴茎……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_FEMININITY_VERY_FEMININE"><![CDATA[
 	<p>
 		#IF(npc.getFemininity() == FEMININITY_FEMININE_STRONG)
-			You decide that you like [npc.name] having a very feminine body and face, and can't help but hungrily look [npc.herHim] up and down as you wonder if you should get [npc.herHim] to
+			你决定让[npc.name]将身体和脸庞变得非常女性化，并忍不住饥渴地上下打量着[npc.herHim]，思考你是否应让[npc.herHim]
 		#ELSE
-				Wanting [npc.name] to transform [npc.herself] so that [npc.sheHasFull] a very feminine face and body, you command, [pc.speech(Make your body appear as feminine as you possibly can!)]
+				你想让[npc.name]进行转化以拥有非常女性化的身体与脸庞，于是命令道，[pc.speech(尽你所能地将身体女性化！)]
 			</p>
 			<p>
-				[npc.speech(Really?)] [npc.name] mumbles, before realising that [npc.sheHasFull] no say in the matter, [npc.speech(Fine...)]
+				[npc.speech(真的吗？)][npc.name]喃喃自语，然后意识到[npc.sheHasFull]没有发言权，[npc.speech(好吧……)]
 			</p>
 			<p>
-				With that, [npc.she] focuses [npc.her] energy on transforming [npc.her] body to become as feminine as [npc.she] can manage, and within just a moment, you find yourself smiling at her extremely womanly body and beautiful face. You wonder if you should now get her to
+				就这样，[npc.she]集中能量以转化身体，尽[npc.her]所能地变得女性化，过了一会，你就发现自己正微笑地看着她富有女人味的身体与美丽的脸。你想知道现在是否应让她
 		#ENDIF
 		#IF(npc.hasPenis())
-			 transform her cock...
+			转化她的阴茎……
 		#ELSE
-			 grow herself a cock...
+			长出阴茎……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_PENIS"><![CDATA[
 	<p>
-		[npc.speech(Come on... You don't want me to transform any more, do you?)] [npc.name] whines.
+		[npc.speech(来吧……你不会想让我再转化了，对吗？)][npc.name]哀叫道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_PENIS_NONE"><![CDATA[
 	<p>
-		Not really liking the idea of [npc.name] having a cock, you tell [npc.herHim] as much, [pc.speech(I don't want you having a cock, ok?)]
+		你不喜欢[npc.name]有阴茎，于是告诉[npc.herHim]，[pc.speech(我不想你长着阴茎，知道吗？)]
 	</p>
 	<p>
-		[npc.speech(Not my cock!)] [npc.race] moans, before relenting, [npc.speech(Fine, I'll do as you ask...)]
+		[npc.speech(别动我的阴茎啊！)][npc.race]呻吟着，随后缓和[npc.speech(好吧，我听你的……)]
 	</p>
 	<p>
 		#IF(npc.isCoverableAreaVisible(CA_PENIS))
-			Looking down at [npc.her] exposed crotch, you thankfully see that [npc.sheHas] done as [npc.sheHas] been told, and there's no evidence of any male genitalia between [npc.her] [npc.legs].
+			你低头看向[npc.her]暴露的胯部，庆幸地发现[npc.sheHas]已经按吩咐做了，在[npc.her]的[npc.legs]间没有任何男性生殖器存在过的迹象。
 		#ELSE
-			Looking down at [npc.her] crotch, you thankfully don't see any sign of a bulge beneath [npc.her] clothes; evidence that [npc.sheHas] done as [npc.sheHas] been told.
+			你低头看向[npc.her]的胯部，庆幸地发现在[npc.her]衣服下面不存在任何隆起；证明[npc.sheHas]已经按吩咐做了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_PENIS_TINY"><![CDATA[
 	<p>
-		Deciding that [npc.name] should have a cute little sissy-cock, you order [npc.herHim] to transform, [pc.speech(I think a little bit of humiliation would do you good! You're going to give yourself a cute little cock for me, understood? And keep it tiny!)]
+		你决定让[npc.name]拥有一根可爱的小阴茎，于是命令[npc.herHim]进行转化，[pc.speech(我觉得羞辱一下对你有好处！你要为我长出根可爱的小阴茎，明白吗？它必须小！)]
 	</p>
 	<p>
-		[npc.speech(Does it really have to be tiny?)] [npc.race] moans, before relenting, [npc.speech(Fine, I'll do as you ask...)]
+		[npc.speech(真的必须很小吗？)][npc.race]呻吟着，随后缓和，[npc.speech(好吧，我听你的……)]
 	</p>
 	<p>
 		#IF(npc.isCoverableAreaVisible(CA_PENIS))
-			Looking down at [npc.her] exposed crotch, you thankfully see that [npc.sheHas] done as [npc.sheHas] been told, and that [npc.she] now has a tiny little sissy-cock between [npc.her] [npc.legs].
+			你低头看向[npc.her]暴露的胯部，庆幸地发现[npc.sheHas]已经按吩咐做了，在[npc.her]的[npc.legs]间有一根小小的阴茎。
 		#ELSE
-			Looking down at [npc.her] crotch, you don't see any sign of a bulge beneath [npc.her] clothes, but then again, if [npc.sheHas] kept it tiny like you asked, you wouldn't expect to see anything there anyway.
+			你低头看向[npc.her]的胯部，在[npc.her]衣服下面看不到隆起，话又说回来，如果[npc.sheHas]按你要求的那样有一个小阴茎，你自然不会看到任何东西。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_PENIS_AVERAGE"><![CDATA[
 	<p>
-		Deciding that [npc.she] should have an average-sized cock, you order [npc.name] to grow one, [pc.speech(You're going to give yourself a nice cock for me, understood? And keep it a reasonable size! I don't want to see anything too big!)]
+		你决定让[npc.name]拥有一根平均尺寸的阴茎，于是命令[npc.herHim]进行转化，[pc.speech(你要为我长出根漂亮的阴茎，明白吗？它必须尺寸适中！我不想看到太大的东西！)]
 	</p>
 	<p>
-		With no choice but to do as you command, [npc.race] sighs, [npc.speech(Fine, I'll do as you ask...)]
+		没办法，[npc.race]只能边叹息着边按你说的做，[npc.speech(好吧，我听你的……)]
 	</p>
 	<p>
 		#IF(npc.isCoverableAreaVisible(CA_PENIS))
-			Looking down at [npc.her] exposed crotch, you thankfully see that [npc.sheHas] done as [npc.sheHas] been told, and that [npc.she] now has an average-sized cock hanging down between [npc.her] [npc.legs].
+			你低头看向[npc.her]暴露的胯部，庆幸地发现[npc.sheHas]已经按吩咐做了，在[npc.her]的[npc.legs]间垂着一根平均尺寸的阴茎。
 		#ELSE
-			Looking down at [npc.her] crotch, you see a small bulge beneath [npc.her] clothes, and you find yourself smiling in delight as you realise that the [npc.race] is going to do anything you command.
+			你低头看向[npc.her]的胯部，在[npc.her]的衣服下面能看到一个小凸起，当你意识到[npc.race]会听从你的任何命令时，你开心地笑了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_PENIS_LARGE"><![CDATA[
 	<p>
-		Deciding that [npc.she] should have a nice, big cock, you order the [npc.race] to transform, [pc.speech(You're going to give yourself a nice big cock, understood? And I'm serious about it being big!)]
+		你决定让[npc.name]拥有一根又大又漂亮的阴茎，于是命令[npc.herHim]进行转化，[pc.speech(你要为我长出根漂亮的大阴茎，明白吗？我是认真的，它必须大！)]
 	</p>
 	<p>
-		With no choice but to do as you command, [npc.race] sighs, [npc.speech(Fine, I'll do as you ask...)]
+		没办法，[npc.race]只能边叹息着边按你说的做，[npc.speech(好吧，我听你的……)]
 	</p>
 	<p>
 		#IF(npc.isCoverableAreaVisible(CA_PENIS))
-			Looking down at [npc.her] exposed crotch, you thankfully see that [npc.sheHas] done as [npc.sheHas] been told, and that [npc.she] now has a large cock dangling down between [npc.her] [npc.legs].
+			你低头看向[npc.her]暴露的胯部，庆幸地发现[npc.sheHas]已经按吩咐做了，[npc.she]现在有一根大阴茎垂在[npc.her]的[npc.legs]间。
 		#ELSE
-			Looking down at [npc.her] crotch, you see a large bulge beneath [npc.her] clothes, and you find yourself smiling in delight as you realise that the [npc.race] is going to do anything you command.
+			你低头看向[npc.her]的胯部，在[npc.her]的衣服下面能看到一个大凸起，当你意识到[npc.race]会听从你的任何命令时，你开心地笑了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_PENIS_HUGE"><![CDATA[
 	<p>
-		Deciding that [npc.she] should have the biggest cock [npc.sheIs] able to grow, you order the [npc.race] to get started, [pc.speech(You're going to give yourself a huge cock, understood? And make it as big as possible! If you aren't hung like a horse, then you're going to be in trouble!)]
+		你决定让[npc.name]拥有一根尽可能大的阴茎，于是命令[npc.herHim]进行转化，[pc.speech(你要为我长出根巨大的阴茎，明白吗？要尽可能大！如果它不屌得像匹马的，那你就有麻烦了！)]
 	</p>
 	<p>
-		With no choice but to do as you command, [npc.race] sighs, [npc.speech(Fine, I'll do as you ask...)]
+		没办法，[npc.race]只能边叹息着边按你说的做，[npc.speech(好吧，我听你的……)]
 	</p>
 	<p>
 		#IF(npc.isCoverableAreaVisible(CA_PENIS))
-			Looking down at [npc.her] exposed crotch, you thankfully see that [npc.sheHas] done as [npc.sheHas] been told, and that [npc.she] now has an absolutely massive cock dangling down between [npc.her] [npc.legs].
+			你低头看向[npc.her]暴露的胯部，庆幸地发现[npc.sheHas]已经按吩咐做了，[npc.she]现在有一根超大的阴茎垂在[npc.her]的[npc.legs]间。
 		#ELSE
-			Looking down at [npc.her] crotch, you see a massive bulge beneath [npc.her] clothing, and you find yourself smiling in delight as you realise that the [npc.race] is going to do anything you command.
+			你低头看向[npc.her]的胯部，在[npc.her]的衣服下能看到一个巨大的凸起，当你意识到[npc.race]会听从你的任何命令时，你开心地笑了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_VAGINA"><![CDATA[
 	<p>
-		Panting and moaning, the [npc.race] pleads with you, [npc.speech(Come on! There isn't anything else is there?!)]
+		喘息呻吟着，[npc.race]请求道，[npc.speech(来吧！再没别的了吧？！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_VAGINA_ENABLED"><![CDATA[
 	<p>
-		Wanting to [npc.name] to have female genitalia, you order [npc.herHim], [pc.speech(You're going to make sure you've got a pussy for me to play with, understand?)]
+		你想要[npc.name]拥有一个女性生殖器，于是命令[npc.herHim]，[pc.speech(你要长出一个小穴给我玩，明白吗？)]
 	</p>
 	<p>
-		By now [npc.name] has give up trying to complain, and just obediently sighs, [npc.speech(Ok, ok! Hold on... And... Done!)]
+		[npc.name]事到如今已经放弃了抱怨，顺从地叹了口气道，[npc.speech(好，好！稍等……再……做好了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_VAGINA_DISABLED"><![CDATA[
 	<p>
-		Not having any plans to use [npc.her] pussy, you bark out your order, [pc.speech(I don't want to see a pussy between your legs, understood? You're not getting off like that with me!)]
+		你并不打算使用[npc.her]的小穴，于是大声命令道，[pc.speech(我不想在你的腿间看到小穴，懂吗？长着它你就别想在我这得到满足！)]
 	</p>
 	#IF(npc.hasVagina())
 		<p>
-			[npc.Name] shuffles around uncomfortably and lets out a mortified groan as [npc.she] voices [npc.her] reluctance to carry out your order, [npc.speech(That would really suck... Do I have to?)]
+			[npc.Name]不自在地扭来扭去以传达[npc.she]的不情愿，并发出一声羞愧的呻吟，[npc.speech(那真的很糟糕……我必须这样做吗？)]
 		</p>
 		<p>
-			Reminding [npc.herHim] that [npc.sheIs] in no position to be making demands, you order [npc.her] once again to remove [npc.her] pussy. Seeing that you mean business, [npc.she] whines, [npc.speech(Fine! Just... Hold on... Ok... It's gone...)]
+			你提醒[npc.herHim][npc.sheIs]没资格提要求，并再次命令移除小穴。看到你是认真的，[npc.she]抱怨道，[npc.speech(好吧！就……稍等……好的……没了……)]
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(I don't even have one,)] [npc.name] whines, [npc.speech(and I'm in no hurry to grow one for you...)]
+			[npc.name]抱怨道，[npc.speech(我本来就没有，而且我也没想为你长出一个……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_BREASTS"><![CDATA[
 	<p>
-		Shuffling about in discomfort, the [npc.race] stares up into your eyes and whines, [npc.speech(What more do you want?!)]
+		[npc.race]不自在地扭来扭去，盯着你的眼睛抱怨道，[npc.speech(你还想要什么？！)]
 	</p>
 	<p>
 		#IF(npc.hasBreasts())
-			Ignoring [npc.her] question, you wonder if you should get [npc.herHim] to perform one final transformation. [npc.Her] [npc.cupSize]-cup breasts might need some work, after all...
+			无视[npc.her]的问题，你想是否还要让[npc.herHim]进行最后一次转化，毕竟[npc.Her][npc.cupSize]罩杯的胸部可能还需要进行一些修饰……
 		#ELSE
-			Ignoring [npc.her] question, you wonder if you should get [npc.herHim] to perform one final transformation. [npc.Her] flat chest might need some work, after all...
+			无视[npc.her]的问题，你想是否还要让[npc.herHim]进行最后一次转化，毕竟[npc.Her]平坦的胸部可能还需要一些修饰……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_BREASTS_FLAT"><![CDATA[
 	#IF(npc.hasBreasts())
 		<p>
-			Wanting to humiliate [npc.herHim] a little, you order [npc.name] to get rid of [npc.her] breasts, [pc.speech(You're going to get rid of your tits, understand? You're going to be as flat as a board, or else!)]
+			你想要羞辱一下[npc.herHim]，于是命令[npc.name]移除[npc.her]的胸部，[pc.speech(你要移除掉你的胸部，懂吗？你必须变得像块板一样平，否则……！)]
 		</p>
 		<p>
-			With a desperate sob, the [npc.race] does as you command. [npc.speech(Really?! Aah... Fine!)]
+			[npc.race]发出一声绝望的抽泣，按你的命令做了。[npc.speech(你认真的？！啊……好吧！)]
 		</p>
 	#ELSE
 		<p>
-			Wanting [npc.herHim] to have a flat chest, you order [npc.name], [pc.speech(You're going to have a flat chest, ok?!)]
+			你想让[npc.herHim]拥有一对平坦的胸部，于是命令[npc.name]，[pc.speech(你要让胸部变平，好吗？！)]
 		</p>
 		<p>
-			[npc.speech(Fine! It's not like I have any choice in the matter, do I?)] [npc.she] groans.
+			[npc.speech(好吧！反正我也没有其他选择！)][npc.she]哼哼道。
 		</p>
 	#ENDIF
 	<p>
-		Looking at [npc.her] torso, you see [npc.her] chest rapidly transform, and after just a couple of seconds, [npc.sheIs] completely flat-chested. Satisfied with the changes you've made to [npc.namePos] body, you wonder what to do next...
+		你看向[npc.her]的躯干，你会看到[npc.her]的胸部在迅速转化，并在几秒钟后变得完全平坦。你对[npc.namePos]身体的变化感到满意，思考着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_BREASTS_AA"><![CDATA[
 	<p>
 		#IF(npc.hasBreasts())
-			Wanting to humiliate [npc.herHim] a little, you order [npc.name] to shrink [npc.her] breasts, [pc.speech(You're going to shrink your tits, understand? If they're anything bigger than little double-A's, then you'll have to start all over again!)]
+			你想要羞辱一下[npc.herHim]，于是命令[npc.name]缩小[npc.her]的胸部，[pc.speech(我要你缩小你的胸部，懂吗？如果它大于AA杯，那你就得重新再来了！)]
 		#ELSE
-			Wanting to humiliate [npc.herHim] a little, you order [npc.name] to grow some breasts, [pc.speech(You're going to grow some tiny tits for me, understand? And if they're anything other than little double-A's, then you'll have to start all over again!)]
+			你想要羞辱一下[npc.herHim]，于是命令[npc.name]长出一点胸部来，[pc.speech(我要你长出一点胸部，懂吗？如果它大于AA杯，那你就得重新再来了！)]
 		#ENDIF
 	</p>
 	<p>
-		With a desperate sob, the [npc.race] does as you command. [npc.speech(Really?! Aah... Fine!)]
+		[npc.race]发出一声绝望的抽泣，按你的命令做了。[npc.speech(你认真的？！啊……好吧！)]
 	</p>
 	<p>
-		Looking at [npc.her] torso, you see [npc.her] chest rapidly transform, and after just a couple of seconds, [npc.sheIs] almost completely flat-chested. Satisfied with the changes you've made to [npc.namePos] body, you wonder what to do next...
+		你看向[npc.her]的躯干，你会看到[npc.her]的胸部在迅速转化，并在几秒钟后变得近乎平坦。你对[npc.namePos]身体的变化感到满意，思考着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_BREASTS_C"><![CDATA[
 	<p>
 		#IF(npc.hasBreasts())
-			Wanting [npc.herHim] to have average-sized breasts, you order [npc.name], [pc.speech(These tits of yours aren't to my liking! Make them a more reasonable size! C-cups should do just fine.)]
+			你想要[npc.herHim]拥有一对大小适中的胸部，于是命令[npc.name]，[pc.speech(我不喜欢你现在的胸部！把它们调整到更合理的尺寸！C杯就可以了！)]
 		#ELSE
-			Wanting to humiliate [npc.herHim] a little, you order [npc.name] to grow some breasts, [pc.speech(You're going to grow some tits for me, understand? And if they're anything other than C-cups, then you'll have to start all over again!)]
+			你想要羞辱一下[npc.herHim]，于是命令[npc.name]长出一些胸部来，[pc.speech(我要你长出一些胸部，懂吗？如果它们不是C杯，那你就得重新再来了！)]
 		#ENDIF
 	</p>
 	<p>
-		With a desperate sob, the [npc.race] does as you command. [npc.speech(Really?! Aah... Fine!)]
+		[npc.race]发出一声绝望的抽泣，按你的命令做了。[npc.speech(你认真的？！啊……好吧！)]
 	</p>
 	<p>
-		Looking at [npc.her] torso, you see [npc.her] chest rapidly transform, and after just a couple of seconds, [npc.sheHasFull] [npc.breastShape], C-cup breasts. Satisfied with the changes you've made to [npc.namePos] body, you wonder what to do next...
+		你看向[npc.her]的躯干，你会看到[npc.her]的胸部在迅速转化，几秒钟后[npc.sheHasFull]有了对[npc.breastShape]C杯胸部。你对[npc.namePos]身体的变化感到满意，思考着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_BREASTS_E"><![CDATA[
 	<p>
 		#IF(npc.hasBreasts())
-			Wanting [npc.herHim] to have large breasts, you order [npc.name], [pc.speech(I want you with big tits! E-cups should do just fine.)]
+			你想要[npc.herHim]拥有一对大胸，于是命令[npc.name]，[pc.speech(我想要你有对大胸，E杯就刚好！)]
 		#ELSE
-			Wanting to humiliate [npc.herHim], you order [npc.name] to grow some breasts, [pc.speech(You're going to grow some tits for me, understand? And if they're anything other than E-cups, then you'll have to start all over again!)]
+			你想要羞辱[npc.herHim]，于是命令[npc.name]让胸部更大，[pc.speech(你要为我隆胸，懂吗？如果它们不是E杯，那你就得重新再来了！)]
 		#ENDIF
 	</p>
 	<p>
-		With a desperate sob, the [npc.race] does as you command. [npc.speech(Really?! Aah... Fine!)]
+		[npc.race]发出一声绝望的抽泣，按你的命令做了。[npc.speech(你认真的？！啊……好吧！)]
 	</p>
 	<p>
-		Looking at [npc.her] torso, you see [npc.her] chest rapidly transform, and after just a couple of seconds, [npc.sheHasFull] [npc.breastShape], E-cup breasts. Satisfied with the changes you've made to [npc.namePos] body, you wonder what to do next...
+		你看向[npc.her]的躯干，你会看到[npc.her]的胸部在迅速转化，几秒钟后[npc.sheHasFull]有了对[npc.breastShape]E杯胸部。你对[npc.namePos]身体的变化感到满意，思考着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_BREASTS_H"><![CDATA[
 	#IF(npc.hasBreasts() && npc.getBreastRawSizeValue()<15)
 		<p>
-			Wanting to make [npc.her] breasts a little bigger, you order [npc.herHim] to make the change, [pc.speech(I thought [npc.races] liked having big breasts? I don't know what you'd call those things, but they're definitely not big by my standards. Make them at least an H-cup.)]
+			你想让[npc.her]的胸部变得更大一点，于是命令[npc.herHim]进行改变，[pc.speech(我以为[npc.races]喜欢大胸？我不清楚你们怎么看，但按我的标准它们绝对算不上大。至少增大到H杯。)]
 		</p>
 		<p>
-			You see the [npc.race]'s cheeks flash red, and you realise that you've obviously touched a nerve. [npc.speech(W-What?! But everyone always says that these are big enough! F-Fine... I can make them bigger for you...)]
+			你看到[npc.race]脸红了，意识到你显然触动了对方的神经。[npc.speech(什，什么？！但是每个人都说这已经足够大了！好，好吧……我可以为你将它们变得更大……)]
 		</p>
 		<p>
-			Looking down at [npc.her] chest, you see [npc.her] [npc.breastSize], [npc.cupSize]-cup breasts start to expand, and after just a couple of seconds, [npc.sheIs] left with a massive, H-cup bust.
+			低头看向[npc.her]的胸部，你会看到[npc.her][npc.breastSize]，[npc.cupSize]罩杯的胸部开始膨胀，几秒后，[npc.sheIs]拥有了一个巨大的H杯胸部。
 		</p>
 	#ELSE
 		<p>
-			Wanting to humiliate [npc.herHim], you order [npc.name] to grow some huge breasts, [pc.speech(You're going to grow some massive tits for me, understand? And if they're anything other than H-cups, then you'll have to start all over again!)]
+			你想要羞辱[npc.herHim]，于是命令[npc.name]长出巨大的胸部，[pc.speech(你要为我长出巨大的胸部，懂吗？如果它们不是H杯，那你就得重新再来了！)]
 		</p>
 		<p>
-			With a desperate sob, the [npc.race] does as you command. [npc.speech(Really?! Aah... I just need to get fucked so bad... Fine!)]
+			[npc.race]发出一声绝望的抽泣，按你的命令做了。[npc.speech(你认真的？！啊……我只是太想被操了……好吧！)]
 		</p>
 		<p>
-			Looking at [npc.her] torso, you see [npc.her] chest rapidly transform, and after just a couple of seconds, [npc.sheHasFull] [npc.breastShape], H-cup breasts. Satisfied with the changes you've made to [npc.namePos] body, you wonder what to do next...
+			你看向[npc.her]的躯干，你会看到[npc.her]的胸部在迅速转化，几秒钟后[npc.sheHasFull]有了对[npc.breastShape]H杯胸部。你对[npc.namePos]身体的变化感到满意，思考着下一步该做什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="QUICK_TRANSFORMATIONS_BREASTS_N"><![CDATA[
 	#IF(npc.hasBreasts() && npc.getBreastRawSizeValue()<25)
 		<p>
-			Wanting to make [npc.her] breasts a little bigger, you order [npc.herHim] to make the change, [pc.speech(I thought [npc.races] liked having big breasts? I don't know what you'd call those things, but they're definitely not big by my standards. Make them at least an N-cup.)]
+			你想让[npc.her]的胸部变得更大一点，于是命令[npc.herHim]进行改变，[pc.speech(我以为[npc.races]喜欢大胸？我不清楚你们怎么看，但按我的标准它们绝对算不上大。至少增大到N杯。)]
 		</p>
 		<p>
-			You see the [npc.race]'s cheeks flash red, and you realise that you've obviously touched a nerve. [npc.speech(What?! But everyone always says that these are big enough! Fine... I can make them bigger for you...)]
+			你看到[npc.race]脸红了，意识到你显然触动了对方的神经。[npc.speech(什，什么？！但是每个人都说这已经足够大了！好，好吧……我可以为你将它们变得更大……)]
 		</p>
 		<p>
-			Looking down at [npc.her] chest, you see [npc.her] [npc.breastSize], [npc.cupSize]-cup breasts start to expand, and after just a couple of seconds, [npc.sheIs] left with a massive, N-cup bust. Satisfied with the changes you've made to [npc.namePos] body, you wonder what to do next...
+			低头看向[npc.her]的胸部，你会看到[npc.her][npc.breastSize]，[npc.cupSize]罩杯的胸部开始膨胀，几秒后，[npc.sheIs]拥有了一个巨大的N杯胸部。你对[npc.namePos]身体的变化感到满意，思考着下一步该做什么……
 		</p>
 	#ELSE
 		<p>
-			Wanting to humiliate [npc.herHim], you order [npc.name] to grow some huge breasts, [pc.speech(You're going to grow some massive tits for me, understand? And if they're anything other than N-cups, then you'll have to start all over again!)]
+			你想要羞辱[npc.herHim]，于是命令[npc.name]长出巨大的胸部，[pc.speech(你要为我长出巨大的胸部，懂吗？如果它们不是N杯，那你就得重新再来了！)]
 		</p>
 		<p>
-			With a desperate sob, the [npc.race] does as you command. [npc.speech(Really?! Aah... Fine!)]
+			[npc.race]发出一声绝望的抽泣，按你的命令做了。[npc.speech(你认真的？！啊……好吧！)]
 		</p>
 		<p>
-			Looking at [npc.her] torso, you see [npc.her] chest rapidly transform, and after just a couple of seconds, [npc.sheHasFull] [npc.breastShape], N-cup breasts. Satisfied with the changes you've made to [npc.namePos] body, you wonder what to do next...
+			你看向[npc.her]的躯干，你会看到[npc.her]的胸部在迅速转化，几秒钟后[npc.sheHasFull]有了对[npc.breastShape]N杯胸部。你对[npc.namePos]身体的变化感到满意，思考着下一步该做什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

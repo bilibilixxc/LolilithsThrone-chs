@@ -53,7 +53,7 @@ public class SlaveForSale extends NPC {
 	
 	public SlaveForSale(Gender gender, boolean allowTaurSpawns, boolean isImported) {
 		super(isImported,
-				new NameTriplet("Slave"), "",
+				new NameTriplet("奴隶"), "",
 				"",
 				21, Util.randomItemFrom(Month.values()), 1+Util.random.nextInt(27),
 				1,
@@ -210,10 +210,10 @@ public class SlaveForSale extends NPC {
 			return super.getDescription();
 		}
 		if(this.isSlave()) {
-			return UtilText.parse(this, "For one reason or another, [npc.nameIsFull] a slave, and is no more than [npc.her] owner's property.");
+			return UtilText.parse(this, "由于某些原因，[npc.nameIsFull]是一名奴隶，只不过是其主人的财产。");
 			
 		} else {
-			return UtilText.parse(this, "After a period of being your slave, [npc.nameIsFull] now your trusted friend.");
+			return UtilText.parse(this, "[npc.nameIsFull]曾有一段时间是你的奴隶，但现在是你很信任的朋友了。");
 		}
 	}
 	

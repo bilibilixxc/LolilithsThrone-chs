@@ -37,7 +37,7 @@ public class SlaveImport extends NPC {
 	}
 	
 	public SlaveImport(boolean isImported) {
-		super(isImported, new NameTriplet("Slave"), "", "-",
+		super(isImported, new NameTriplet("奴隶"), "", "-",
 				18, Month.JUNE, 10,
 				1, Gender.F_V_B_FEMALE, Subspecies.HUMAN, RaceStage.HUMAN,
 				new CharacterInventory(false, 0), WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL, false);
@@ -136,7 +136,7 @@ public class SlaveImport extends NPC {
 		if(this.isSlave() && this.isDoll()) {
 			return super.getDescription();
 		}
-		return UtilText.parse(this, "As a slave, [npc.name] is no more than someone's property. The first time you saw [npc.herHim], [npc.she] was being sold in Slaver Alley.");
+		return UtilText.parse(this, "[npc.name]身为一名奴隶，只不过是某人的财产。你第一次遇见[npc.herHim]时，[npc.she]正在奴隶巷待售。");
 	}
 	
 	@Override

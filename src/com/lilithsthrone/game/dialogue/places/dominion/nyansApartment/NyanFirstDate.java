@@ -85,7 +85,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lounge", "Follow Nyan through into her lounge.", DATE_START_LOUNGE);
+				return new Response("休息室", "跟随妮安进入她的休息室。", DATE_START_LOUNGE);
 			}
 			return null;
 		}
@@ -108,7 +108,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Nyan", "Nyan makes her return...", DATE_START_LOUNGE_NYAN_DRESS);
+				return new Response("妮安", "妮安回来了……", DATE_START_LOUNGE_NYAN_DRESS);
 			}
 			return null;
 		}
@@ -132,7 +132,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Restaurant", "Accompany Nyan to the restaurant.", DATE_RESTAURANT_1_ARRIVED);
+				return new Response("餐厅", "陪妮安去餐厅。", DATE_RESTAURANT_1_ARRIVED);
 			}
 			return null;
 		}
@@ -157,10 +157,10 @@ public class NyanFirstDate {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				int cost = 350;
-				return new Response("Vulpine's Vineyard ("+UtilText.formatAsMoney(cost, "span")+")", "Order the cheapest wine on the menu, which is nevertheless still a very good vintage.", DATE_RESTAURANT_2_WINE_ORDER) {
+				return new Response("狐狸庄园 (" + UtilText.formatAsMoney(cost, "span") + ")","点菜单上最便宜的葡萄酒，尽管如此，它仍然是一款非常好的佳酿。", DATE_RESTAURANT_2_WINE_ORDER) {
 					@Override
 					public void effects() {
-						UtilText.addSpecialParsingString("Vulpine's Vineyard", true);
+						UtilText.addSpecialParsingString("狐狸葡萄园", true);
 						UtilText.addSpecialParsingString(Util.intToString(cost), false);
 						dateBill+=cost;
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_2_VULPINE"));
@@ -169,10 +169,10 @@ public class NyanFirstDate {
 				
 			} else if(index==2) {
 				int cost = 600;
-				return new Response("Alicorn's Finest ("+UtilText.formatAsMoney(cost, "span")+")", "Order one of the more expensive wines on the menu.", DATE_RESTAURANT_2_WINE_ORDER) {
+				return new Response("天角兽精选 (" + UtilText.formatAsMoney(cost, "span") + ")", "点菜单上较贵的一款葡萄酒。", DATE_RESTAURANT_2_WINE_ORDER) {
 					@Override
 					public void effects() {
-						UtilText.addSpecialParsingString("Alicorn's Finest", true);
+						UtilText.addSpecialParsingString("天角兽精选", true);
 						UtilText.addSpecialParsingString(Util.intToString(cost), false);
 						dateBill+=cost;
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_2_ALICORN"));
@@ -182,10 +182,10 @@ public class NyanFirstDate {
 				
 			} else if(index==3) {
 				int cost = 950;
-				return new Response("Youko's Reserve ("+UtilText.formatAsMoney(cost, "span")+")", "Order the most expensive wine on the menu.", DATE_RESTAURANT_2_WINE_ORDER) {
+				return new Response("妖狐的珍藏("+UtilText.formatAsMoney(cost, "span")+")", "点餐单上最昂贵的葡萄酒。", DATE_RESTAURANT_2_WINE_ORDER) {
 					@Override
 					public void effects() {
-						UtilText.addSpecialParsingString("Youko's Reserve", true);
+						UtilText.addSpecialParsingString("妖狐的珍藏", true);
 						UtilText.addSpecialParsingString(Util.intToString(cost), false);
 						dateBill+=cost;
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_2_YOUKO"));
@@ -209,7 +209,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Share bottle", "Say that you'll share the bottle with Nyan.", DATE_RESTAURANT_3_PLAYER_DRINK) {
+				return new Response("共享美酒", "说你会和妮安共享这瓶酒。", DATE_RESTAURANT_3_PLAYER_DRINK) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_3_SHARE"));
@@ -218,7 +218,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Water", "Order a bottle of water for yourself.", DATE_RESTAURANT_3_PLAYER_DRINK) {
+				return new Response("水", "给自己点一瓶水。", DATE_RESTAURANT_3_PLAYER_DRINK) {
 					@Override
 					public void effects() {
 						dateBill+=25;
@@ -228,7 +228,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==3) {
-				return new Response("Beer", "Order a beer for yourself.", DATE_RESTAURANT_3_PLAYER_DRINK) {
+				return new Response("啤酒", "给自己点一扎啤酒。", DATE_RESTAURANT_3_PLAYER_DRINK) {
 					@Override
 					public void effects() {
 						dateBill+=50;
@@ -253,7 +253,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Order", "Place your orders and wait for the starters to arrive.", DATE_RESTAURANT_4_STARTERS) {
+				return new Response("点餐", "下单并等待开胃菜送上来。", DATE_RESTAURANT_4_STARTERS) {
 					@Override
 					public void effects() {
 						dateBill+=700;
@@ -262,7 +262,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Order (candle)", "Place your orders and wait for the starters to arrive. Also ask if you could have a romantic candle lit on your table.", DATE_RESTAURANT_4_STARTERS) {
+				return new Response("点餐(蜡烛)", "点餐并等待开胃菜送上来。同时请求在你们的桌子上点燃浪漫的蜡烛。", DATE_RESTAURANT_4_STARTERS) {
 					@Override
 					public void effects() {
 						dateBill+=700;
@@ -293,7 +293,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Talk", "Make small talk with Nyan about her day went.", DATE_RESTAURANT_5_MAIN_MEAL) {
+				return new Response("交谈", "与妮安闲聊，问问她今天过得如何。", DATE_RESTAURANT_5_MAIN_MEAL) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_5_TALK"));
@@ -301,7 +301,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Compliments", "Compliment Nyan on how pretty she looks.", DATE_RESTAURANT_5_MAIN_MEAL) {
+				return new Response("恭维", "恭维妮安看起来很漂亮。", DATE_RESTAURANT_5_MAIN_MEAL) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_5_COMPLIMENT"));
@@ -310,7 +310,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==3) {
-				return new Response("Dirty talk", "Make it clear to Nyan that you want to get into her panties tonight.<br/>[style.italicsMinorBad(You can't imagine that she'll react well to this...)]", DATE_RESTAURANT_5_MAIN_MEAL) {
+				return new Response("说骚话", "告诉妮安你想在今晚脱下她的裤子。<br/>[style.italicsMinorBad(你简直难以想象她对此反应多大……)]", DATE_RESTAURANT_5_MAIN_MEAL) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_5_DIRTY"));
@@ -339,7 +339,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Food talk", "Make small talk with Nyan about the quality of your meal.", DATE_RESTAURANT_6_DESSERT) {
+				return new Response("谈谈食物", "与妮安闲聊，说说你的饭尝起来怎么样。", DATE_RESTAURANT_6_DESSERT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_6_TALK"));
@@ -347,7 +347,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Flirt", "Flirt with Nyan and insinuate that you'd like to do more than just have dinner with her this evening.", DATE_RESTAURANT_6_DESSERT) {
+				return new Response("调情", "和妮安调情，充满深意地暗示你和她吃完晚餐后，还想加餐。", DATE_RESTAURANT_6_DESSERT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_6_FLIRT"));
@@ -356,7 +356,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==3) {
-				return new Response("Footsie", "Slide your [pc.foot] up Nyan's leg and tell her that you can't wait to fuck her.<br/>[style.italicsBad(You really can't imagine that she'll react well to this at all!)]", DATE_RESTAURANT_6_DESSERT) {
+				return new Response("用脚轻轻摩擦", "在妮安的腿上磨蹭你的[pc.foot]，告诉她你等不及要操她了。<br/>[style.italicsBad(你简直难以想象她对此反应多大！)]", DATE_RESTAURANT_6_DESSERT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "DATE_RESTAURANT_6_FOOTSIE"));
@@ -385,7 +385,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Order desserts", "Order individual desserts for both you and Nyan.", DATE_7_END) {
+				return new Response("点心", "为你和妮安点各自的点心。", DATE_7_END) {
 					@Override
 					public void effects() {
 						dateBill+=500;
@@ -394,7 +394,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Order to share", "Order a single dessert to share with Nyan.", DATE_7_END) {
+				return new Response("共享点心", "点一份甜点，和妮安分享。", DATE_7_END) {
 					@Override
 					public void effects() {
 						dateBill+=250;
@@ -424,7 +424,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave ("+UtilText.formatAsMoney(dateBill, "span")+")", "Pay the bill and accompany Nyan back to her apartment building.", DATE_END_RETURN) {
+				return new Response("离开("+UtilText.formatAsMoney(dateBill, "span")+")", "付账然后陪妮安回她的公寓。", DATE_END_RETURN) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(-dateBill));
@@ -456,7 +456,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Inside", "Accept Nyan's invitation to come into her apartment.", POST_DATE_APARTMENT);
+				return new Response("进入", "接受妮安的邀请进入她的公寓。", POST_DATE_APARTMENT);
 			}
 			return null;
 		}
@@ -484,7 +484,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lounge", "Enter the lounge...", POST_DATE_APARTMENT_LOUNGE);
+				return new Response("休息室", "进入休息室……", POST_DATE_APARTMENT_LOUNGE);
 			}
 			return null;
 		}
@@ -506,7 +506,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Introduction", "Introduce yourself to Nyan's mum.", POST_DATE_APARTMENT_INTERVIEW_1_SUPPORT);
+				return new Response("介绍", "向妮安的妈妈介绍自己。", POST_DATE_APARTMENT_INTERVIEW_1_SUPPORT);
 			}
 			return null;
 		}
@@ -530,9 +530,9 @@ public class NyanFirstDate {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getMoney()<1_000_000) {
-					return new Response("Wealth", "You require at least one million flames in order to impress [nyanmum.name] with your wealth!", null);
+					return new Response("财富", "你需要至少拥有一百万火币，才能凭借你的财富给[nyanmum.name]留下深刻印象！", null);
 				}
-				return new Response("Wealth", "Tell [nyanmum.name] that you have a considerable amount of wealth, and so supporting Nyan would be easy.", POST_DATE_APARTMENT_INTERVIEW_2_FOOD) {
+				return new Response("财富", "告诉[nyanmum.name]你有相当可观数量的财富，所以能轻易支持妮安。", POST_DATE_APARTMENT_INTERVIEW_2_FOOD) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "POST_DATE_APARTMENT_INTERVIEW_2_WEALTH"));
@@ -543,10 +543,10 @@ public class NyanFirstDate {
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().getSlavesOwned().size()<20) {
-					return new Response("Slaves", "You require at least twenty slaves in order to impress [nyanmum.name]!", null);
+					return new Response("奴隶", "你需要至少拥有二十个奴隶，才能让[nyanmum.name]印象深刻！", null);
 				}
-				return new Response("Slaves",
-						"Tell [nyanmum.name] that you own a considerable amount of slaves, and so money will never be a problem for you or Nyan.",
+				return new Response("奴隶",
+						"告诉[nyanmum.name]你拥有很多奴隶，所以支持妮安的开销对你来说不成问题。",
 						POST_DATE_APARTMENT_INTERVIEW_2_FOOD) {
 					@Override
 					public void effects() {
@@ -558,10 +558,10 @@ public class NyanFirstDate {
 				
 			} else if(index==3) {
 				if(Main.game.getPlayer().getSubspeciesOverrideRace()!=Race.DEMON) {
-					return new Response("Demon", "You are not a demon, and so cannot impress [nyanmum.name] in this manner...", null);
+					return new Response("恶魔", "你不是恶魔，所以你没法通过这种方式让[nyanmum.name]记住你……", null);
 				}
-				return new Response("[#pc.getLilinMother().getName()]'s [pc.daughter]",
-						"Reveal to [nyanmum.name] that you're a direct [pc.daughter] of a lilin, and so you'll never struggle to provide for Nyan.",
+				return new Response("是[#pc.getLilinMother().getName()]的[pc.daughter]",
+						"告诉[nyanmum.name]你可是个莉琳的直系[pc.daughter]，你永远不会为支持妮安发愁。",
 						POST_DATE_APARTMENT_INTERVIEW_2_FOOD) {
 					@Override
 					public void effects() {
@@ -576,12 +576,12 @@ public class NyanFirstDate {
 						Occupation.MUSICIAN,
 						Occupation.ARISTOCRAT
 						).contains(Main.game.getPlayer().getOccupation())) {
-					return new Response("Occupation", "You do not have a suitable occupation for impressing [nyanmum.name]...", null);
+					return new Response("职业", "你没有一个适合让[nyanmum.name]印象深刻的职业……", null);
 				}
-				return new Response("Occupation",
+				return new Response("职业",
 						Main.game.getPlayer().getOccupation()==Occupation.ARISTOCRAT
-							?"Tell [nyanmum.name] that you are a member of a highly prestigious aristocratic family, and so your wealth and status will be more than enough to support Nyan."
-							:"Tell [nyanmum.name] that you are an accomplished [pc.job], and so you'll always be able to find work in order to support Nyan.",
+							?"告诉[nyanmum.name]你是雍容华贵的名门望族成员，以你的财富和地位足以支持妮安。"
+							:"告诉[nyanmum.name]你有一份高薪的[pc.job]，所以你能通过工资支持妮安。",
 						POST_DATE_APARTMENT_INTERVIEW_2_FOOD) {
 					@Override
 					public void effects() {
@@ -592,7 +592,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==5) {
-				return new Response("Do your best", "Tell [nyanmum.name] that you'll do your best...", POST_DATE_APARTMENT_INTERVIEW_2_FOOD) {
+				return new Response("尽力而为", "告诉[nyanmum.name]你会尽力而为……", POST_DATE_APARTMENT_INTERVIEW_2_FOOD) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "POST_DATE_APARTMENT_INTERVIEW_2_DO_BEST"));
@@ -622,31 +622,31 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Salad", "Tell [nyanmum.name] that Nyan's favourite food is salad.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("沙拉", "告诉[nyanmum.name]，妮安最喜欢的食物是沙拉。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("salad"); }
+					public void effects() { failEffects("沙拉"); }
 				};
 			} else if(index==2) {
-				return new Response("Tsipoura", "Tell [nyanmum.name] that Nyan's favourite food is the fish dish, 'tsipoura'.", POST_DATE_APARTMENT_INTERVIEW_3_HISTORY) {
+				return new Response("提斯普拉金鲷鱼", "告诉[nyanmum.name]，妮安最喜欢的食物是一道鱼做的菜，名为“提斯普拉金鲷鱼”。", POST_DATE_APARTMENT_INTERVIEW_3_HISTORY) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(ClothingEmporium.incrementAffection(getNyanMum(), 1, -20, 20));
 					}
 				};
 			} else if(index==3) {
-				return new Response("Pizza", "Tell [nyanmum.name] that Nyan's favourite food is pizza.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("披萨", "告诉[nyanmum.name]，妮安最喜欢的食物是披萨。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("pizza"); }
+					public void effects() { failEffects("披萨"); }
 				};
 			} else if(index==4) {
-				return new Response("Catnip", "Tell [nyanmum.name] that Nyan's favourite food is the plant 'nepeta cataria', known by the common name of catnip.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("猫薄荷", "告诉[nyanmum.name]，妮安最喜欢的食物是‘荆芥’，又名猫薄荷。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("catnip"); }
+					public void effects() { failEffects("猫薄荷"); }
 				};
 			} else if(index==5) {
-				return new Response("Ice cream", "Tell [nyanmum.name] that Nyan's favourite food is ice cream.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("冰淇淋", "告诉[nyanmum.name]，妮安最喜欢的食物是冰淇淋。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("ice cream"); }
+					public void effects() { failEffects("冰激凌"); }
 				};
 			}
 			return null;
@@ -670,31 +670,31 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Organise day", "Tell [nyanmum.name] that Nyan used to organise her day for her every morning.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("安排日程", "告诉[nyanmum.name]，妮安以前每天早上都为她安排当天的日程。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("organise her day for her"); }
+					public void effects() { failEffects("为她安排日程"); }
 				};
 			} else if(index==2) {
-				return new Response("Kiss her", "Tell [nyanmum.name] that Nyan used to kiss her every morning.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("亲吻她", "告诉[nyanmum.name]，妮安以前每天早上都会亲吻她。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("kiss her"); }
+					public void effects() { failEffects("吻她"); }
 				};
 			} else if(index==3) {
-				return new Response("Breakfast in bed", "Tell [nyanmum.name] that Nyan used to make breakfast in bed for her every morning.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("床上早餐", "告诉[nyanmum.name]，妮安以前每天早上都会做好早餐送到她床上。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("make breakfast in bed for her"); }
+					public void effects() { failEffects("做好早餐送到她床上"); }
 				};
 			} else if(index==4) {
-				return new Response("Bake pastries", "Tell [nyanmum.name] that Nyan used to bake pastries for her every morning.", POST_DATE_APARTMENT_INTERVIEW_4_STORE) {
+				return new Response("烤点心", "告诉[nyanmum.name]，妮安以前每天早上都会为她烤点心。", POST_DATE_APARTMENT_INTERVIEW_4_STORE) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(ClothingEmporium.incrementAffection(getNyanMum(), 2, -20, 20));
 					}
 				};
 			} else if(index==5) {
-				return new Response("Play piano", "Tell [nyanmum.name] that Nyan used to play the piano for her every morning.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("弹钢琴", "告诉[nyanmum.name]，妮安以前每天早上都会为她弹钢琴。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("play the piano for her"); }
+					public void effects() { failEffects("给她弹钢琴"); }
 				};
 			}
 			return null;
@@ -718,27 +718,27 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Space", "Tell [nyanmum.name] that Nyan's store used to be called 'Space'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("太空", "告诉[nyanmum.name]，妮安的店以前叫做 “太空”。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("Space"); }
+					public void effects() { failEffects("太空"); }
 				};
 			} else if(index==2) {
-				return new Response("Dapper Duds", "Tell [nyanmum.name] that Nyan's store used to be called 'Dapper Duds'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("时尚小垃圾", "告诉[nyanmum.name]，妮安的商店以前叫做“时尚小垃圾”。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("Dapper Duds"); }
+					public void effects() { failEffects("时尚小垃圾"); }
 				};
 			} else if(index==3) {
-				return new Response("The Dress Shop", "Tell [nyanmum.name] that Nyan's store used to be called 'The Dress Shop'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("连衣裙专卖店", "告诉[nyanmum.name]，妮安的商店以前叫做“连衣裙专卖店”。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("The Dress Shop"); }
+					public void effects() { failEffects("连衣裙专卖店"); }
 				};
 			} else if(index==4) {
-				return new Response("[nyanmum.NamePos] Finest", "Tell [nyanmum.name] that Nyan's store used to be called '[nyanmum.NamePos] Finest'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("[nyanmum.NamePos]的最佳选择", "告诉[nyanmum.name]，妮安的商店以前叫做'[nyanmum.NamePos]的最佳选择'。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("[nyanmum.NamePos] Finest"); }
+					public void effects() { failEffects("[nyanmum.NamePos]的最佳选择"); }
 				};
 			} else if(index==5) {
-				return new Response("Golden Threads", "Tell [nyanmum.name] that Nyan's store used to be called 'Golden Threads'.", POST_DATE_APARTMENT_INTERVIEW_5_FLOWER) {
+				return new Response("金丝银线", "告诉[nyanmum.name]，妮安的商店以前叫做“金丝银线”。", POST_DATE_APARTMENT_INTERVIEW_5_FLOWER) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(ClothingEmporium.incrementAffection(getNyanMum(), 3, -20, 20));
@@ -766,31 +766,31 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Daisies", "Tell [nyanmum.name] that Nyan's favourite flowers are daisies.", POST_DATE_APARTMENT_INTERVIEW_6_BOOK) {
+				return new Response("雏菊", "告诉[nyanmum.name]，妮安最喜欢的花是雏菊。", POST_DATE_APARTMENT_INTERVIEW_6_BOOK) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(ClothingEmporium.incrementAffection(getNyanMum(), 4, -20, 20));
 					}
 				};
 			} else if(index==2) {
-				return new Response("Tulips", "Tell [nyanmum.name] that Nyan's favourite flowers are tulips.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("郁金香", "告诉[nyanmum.name]，妮安最喜欢的花是郁金香。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("tulips"); }
+					public void effects() { failEffects("郁金香"); }
 				};
 			} else if(index==3) {
-				return new Response("Roses", "Tell [nyanmum.name] that Nyan's favourite flowers are roses.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("玫瑰花", "告诉[nyanmum.name]，妮安最喜欢的花是玫瑰花。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("roses"); }
+					public void effects() { failEffects("玫瑰"); }
 				};
 			} else if(index==4) {
-				return new Response("Fuchsias", "Tell [nyanmum.name] that Nyan's favourite flowers are fuchsias.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("报春花", "告诉[nyanmum.name]，妮安最喜欢的花是报春花。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("fuchsias"); }
+					public void effects() { failEffects("报春花"); }
 				};
 			} else if(index==5) {
-				return new Response("Hydrangeas", "Tell [nyanmum.name] that Nyan's favourite flowers are hydrangeas.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("绣球花", "告诉[nyanmum.name]，妮安最喜欢的花是绣球花。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("hydrangeas"); }
+					public void effects() { failEffects("绣球花"); }
 				};
 			}
 			return null;
@@ -818,31 +818,31 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Nightmare Chapel", "Tell [nyanmum.name] that Nyan's favourite book is called 'Nightmare Chapel'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("梦魇礼拜堂", "告诉[nyanmum.name]，妮安最喜欢的书叫做“梦魇礼拜堂”。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("Nightmare Chapel"); }
+					public void effects() { failEffects("梦魇礼拜堂"); }
 				};
 			} else if(index==2) {
-				return new Response("The Peacock's Progress", "Tell [nyanmum.name] that Nyan's favourite book is called 'The Peacock's Progress'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("孔雀的进化", "告诉[nyanmum.name]，妮安最喜欢的书叫做“孔雀的进化”。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("The Peacock's Progress"); }
+					public void effects() { failEffects("孔雀的进化"); }
 				};
 			} else if(index==3) {
-				return new Response("One Day in June", "Tell [nyanmum.name] that Nyan's favourite book is called 'One Day in June'.", POST_DATE_APARTMENT_INTERVIEW_PASS) {
+				return new Response("六月的某天", "告诉[nyanmum.name]，妮安最喜欢的书叫做 “六月的某天”。", POST_DATE_APARTMENT_INTERVIEW_PASS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(ClothingEmporium.incrementAffection(getNyanMum(), 5, -20, 20));
 					}
 				};
 			} else if(index==4) {
-				return new Response("The Sign of Eight", "Tell [nyanmum.name] that Nyan's favourite book is called 'The Sign of Eight'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("八之符号", "告诉[nyanmum.name]，妮安最喜欢的书叫做“八之符号”。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("The Sign of Eight"); }
+					public void effects() { failEffects("八之符号"); }
 				};
 			} else if(index==5) {
-				return new Response("Lord of the Hats", "Tell [nyanmum.name] that Nyan's favourite book is called 'Lord of the Hats'.", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
+				return new Response("帽子之主", "告诉[nyanmum.name]，妮安最喜欢的书叫做“帽子之主”。", POST_DATE_APARTMENT_INTERVIEW_FAIL) {
 					@Override
-					public void effects() { failEffects("Lord of the Hats"); }
+					public void effects() { failEffects("帽子之主"); }
 				};
 			}
 			return null;
@@ -861,7 +861,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "As you don't want to risk destroying your relationship with Nyan, there really isn't any other option but to do as [nyanmum.name] says and leave...", POST_DATE_APARTMENT_INTERVIEW_FAIL_LEAVE);
+				return new Response("离开", "由于你不想冒险破坏你和妮安的关系，实际上，别无选择，只能遵从[nyanmum.name]的话离开……", POST_DATE_APARTMENT_INTERVIEW_FAIL_LEAVE);
 			}
 			return null;
 		}
@@ -904,7 +904,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) { 
-				return new Response("Hug", "Nyan looks like she could really use a reassuring hug right about now.", POST_DATE_APARTMENT_BEDROOM);
+				return new Response("拥抱", "看起来妮安现在真的需要一个安慰的拥抱。", POST_DATE_APARTMENT_BEDROOM);
 			}
 			return null;
 		}
@@ -926,7 +926,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Kiss", "Give Nyan what she wants...", POST_DATE_APARTMENT_BEDROOM_KISS);
+				return new Response("亲吻", "给妮安她想要的……", POST_DATE_APARTMENT_BEDROOM_KISS);
 			}
 			return null;
 		}
@@ -952,7 +952,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Cunnilingus", "Give the horny cat-girl what she wants by eating her out.",
+				return new ResponseSex("舔阴", "舔舐她的阴部，给淫荡小猫女想要的。",
 						true, true,
 						new SMNyanSex(
 								SexPosition.SITTING,
@@ -979,7 +979,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Fingering", "Gently push Nyan down on her bed and finger her while kissing her.",
+				return new ResponseSex("指交", "温柔地把妮安压在床上，边亲吻边指交。",
 						true, true,
 						new SMNyanSex(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN_TWO)),
@@ -1031,14 +1031,14 @@ public class NyanFirstDate {
 			
 			if(Main.game.getPlayer().hasPenisIgnoreDildo()) {
 				if(!penisAccess) {
-					receiveOralResponses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (blowjob)":""), "As you are unable to access your penis, you cannot sixty-nine with Nyan!", null));
+					receiveOralResponses.add(new Response("六九式"+(Main.game.getPlayer().hasVagina()?"(口交)":""), "因为你不能使用自己的阴茎。所以你没法和妮安玩六九式！", null));
 
 				} else if(Main.game.getPlayer().isTaur()) {
-					receiveOralResponses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (blowjob)":""), "Due to your [pc.legRace]'s lower body, you cannot use this position!", null));
+					receiveOralResponses.add(new Response("六九式"+(Main.game.getPlayer().hasVagina()?" (口交)":""), "因为你[pc.legRace]的下半身，你不能采用这个体位！", null));
 						
 				} else {
 					receiveOralResponses.add(
-							new ResponseSex("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (blowjob)":""), "Get Nyan to straddle your face and bend down to suck your cock while you're eating her out for a second time.",
+							new ResponseSex("六九式"+(Main.game.getPlayer().hasVagina()?" (口交)":""), "让妮安跨坐在你脸上，屈身吸吮你的鸡巴，你再次舔舐着她的下体。",
 									true, true,
 									new SMNyanSex(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN)),
@@ -1073,14 +1073,14 @@ public class NyanFirstDate {
 			}
 			if(Main.game.getPlayer().hasVagina()) {
 				if(!vaginaAccess) {
-					receiveOralResponses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasPenisIgnoreDildo()?" (cunnilingus)":""), "As you are unable to access your vagina, you cannot sixty-nine with Nyan!", null));
+					receiveOralResponses.add(new Response("六九式"+(Main.game.getPlayer().hasPenisIgnoreDildo()?"(舔阴)":""), "你的阴部无法被触及，所以你没法和妮安玩六九式！", null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					receiveOralResponses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (cunnilingus)":""), "Due to your [pc.legRace]'s lower body, you cannot use this position!", null));
+					receiveOralResponses.add(new Response("六九式"+(Main.game.getPlayer().hasVagina()?" (舔阴)":""), "因为你[pc.legRace]的下半身，你不能采用这个体位！", null));
 						
 				} else {
 					receiveOralResponses.add(
-							new ResponseSex("Sixty-nine"+(Main.game.getPlayer().hasPenisIgnoreDildo()?" (cunnilingus)":""), "Get Nyan to straddle your face and bend down to eat you out while you're returning the favour.",
+							new ResponseSex("六九式"+(Main.game.getPlayer().hasPenisIgnoreDildo()?" (舔阴)":""), "让妮安跨坐在你脸上，屈下腰舔舐着你的下面，你也回敬她。",
 									true, true,
 									new SMNyanSex(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN)),
@@ -1116,10 +1116,10 @@ public class NyanFirstDate {
 			
 			if(Main.game.getPlayer().hasPenisIgnoreDildo()) {
 				if(!penisAccess) {
-					receiveOralResponses.add(new Response("Receive blowjob", "As you are unable to access your penis, you cannot get Nyan to suck your cock!", null)); 
+					receiveOralResponses.add(new Response("被口交", "因为你不能使用自己的阴茎，所以你没法让妮安吸你的鸡巴！", null)); 
 				} else {
 					receiveOralResponses.add(
-							new ResponseSex("Receive blowjob", "Swap positions with Nyan and get her to suck your cock.",
+							new ResponseSex("被口交", "和妮安交换位置，让她吮吸你的鸡巴。",
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -1156,10 +1156,10 @@ public class NyanFirstDate {
 			}
 			if(Main.game.getPlayer().hasVagina()) {
 				if(!vaginaAccess) {
-					receiveOralResponses.add(new Response("Receive cunnilingus", "As you are unable to access your vagina, you cannot get Nyan to perform cunnilingus on you!", null)); 
+					receiveOralResponses.add(new Response("被舔阴", "因为你的阴部无法被触及，所以你不能让妮安给你舔阴！", null)); 
 				} else {
 					receiveOralResponses.add(
-							new ResponseSex("Receive cunnilingus", "Swap positions with Nyan and get her to return the favour.",
+							new ResponseSex("被舔阴", "和妮安交换位置，让她尝尝你的味道。",
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -1196,7 +1196,7 @@ public class NyanFirstDate {
 			}
 			
 			if(index==1) {
-				return new Response("Sleep", "Let Nyan rest and go sleep with her in her bed.", POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP) {
+				return new Response("睡觉", "让妮安休息，和她一起去床上睡觉。", POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP_START"));
@@ -1206,7 +1206,7 @@ public class NyanFirstDate {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Face-sitting", "Get Nyan to sit on your face and eat her out for a second time.", 
+				return new ResponseSex("颜面骑乘", "让妮安骑在你脸上，你再次舔舐她的下体。", 
 								true, true,
 								new SMNyanSex(
 										Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN)),
@@ -1243,7 +1243,7 @@ public class NyanFirstDate {
 		}
 	};
 	
-	public static final DialogueNode POST_DATE_APARTMENT_BEDROOM_POST_SECOND_SEX = new DialogueNode("Finished", "Nyan seems to be completely exhausted...", true) {
+	public static final DialogueNode POST_DATE_APARTMENT_BEDROOM_POST_SECOND_SEX = new DialogueNode("结束", "妮安看起来筋疲力尽……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getNyan().applyWash(true, true, StatusEffect.CLEANED_SHOWER, 8*60);
@@ -1260,7 +1260,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sleep", "Let Nyan rest and go sleep with her in her bed.", POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP){
+				return new Response("睡觉", "让妮安休息，和她一起去床上睡觉。", POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDate", "POST_DATE_APARTMENT_BEDROOM_POST_SECOND_SEX_SLEEP_START"));// These names...
@@ -1291,7 +1291,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Kitchen", "Head into the kitchen to find Nyan.", POST_DATE_APARTMENT_BEDROOM_MORNING);
+				return new Response("厨房", "去厨房找妮安", POST_DATE_APARTMENT_BEDROOM_MORNING);
 			}
 			return null;
 		}
@@ -1316,7 +1316,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Pastries", "Eat the pastries which Nyan has made for you and [nyanmum.name].", POST_DATE_APARTMENT_BEDROOM_MORNING_END);
+				return new Response("面点", "吃掉妮安为你和[nyanmum.name]做的面点。", POST_DATE_APARTMENT_BEDROOM_MORNING_END);
 			}
 			return null;
 		}
@@ -1338,7 +1338,7 @@ public class NyanFirstDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Goodbye", "Kiss Nyan goodbye and tell her that you'll see her soon.", POST_DATE_NO_CONTENT_END) {
+				return new Response("再见", "亲亲妮安，和她告别，并告诉她你们很快会再见。", POST_DATE_NO_CONTENT_END) {
 					@Override
 					public void effects() {
 						getNyan().wearApron(false);

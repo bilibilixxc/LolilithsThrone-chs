@@ -75,13 +75,13 @@ public class Wing implements BodyPartInterface {
 		
 		if (type == getType()) {
 			if(type == WingType.NONE) {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.verb(lack)] wings, so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经没有翅膀了，所以无事发生……)]</p>");
 				
 			} else if(type.getRace()!=Race.NONE) {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.wings] of [npc.a_wingRace], so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_wingRace]的[npc.wings]了，所以无事发生……)]</p>");
 				
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] "+type.getTransformName()+" [npc.wings], so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有"+type.getTransformName()+"[npc.wings]了，所以无事发生……)]</p>");
 			}
 		}
 		
@@ -90,27 +90,27 @@ public class Wing implements BodyPartInterface {
 		if(type != WingType.NONE) {
 			sb.append(
 					"<p>"
-						+ "[npc.Name] [npc.verb(try)] to look behind [npc.herHim] as [npc.she] [npc.verb(feel)] a strange bubbling sensation rising up in [npc.her] back, before something starts pushing out from under [npc.her] [npc.skin].");
+						+ "[npc.Name]感到背部忽然一阵躁动感，正准备回头看，就有什么东西从[npc.skin]下破体而出。");
 			
 		} else {
 			sb.append(
 					"<p>"
-						+ "[npc.NamePos] [npc.wings] suddenly start to twitch and flap with a mind of their own, and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)] them start to transform.");
+						+ "[npc.NamePos]的[npc.wings]突然开始不受控制地颤抖扇动起来，[npc.she]感到转化已经开始了，禁不住倒吸一口凉气。");
 		}
 		
-		sb.append(" "+type.getTransformationDescription(owner));
+		sb.append(type.getTransformationDescription(owner));
 		
 		if(type!=WingType.NONE) {
 			if(this.getSize().getValue() >= owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getValue()) {
 				sb.append("</br>"
-						+ "Giving them an experimental flap, [npc.sheIs] delighted to discover that they're [style.colourGood(powerful enough to enable [npc.herHim] to fly)]!"
+						+ "[npc.sheIs]尝试着扇动了一下，惊喜地发现竟然[style.colourGood(足够有力以支持[npc.herHim]飞翔)]了！"
 						+ "<br/>"
-						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+" bodies require wings to be at least '"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"' to enable flight.)]");
+						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+"的身躯需要翅膀至少达到“"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"”尺寸才能够飞翔。)]");
 			} else {
 				sb.append("</br>"
-						+ "Giving them an experimental flap, [npc.sheIs] disappointed to discover that they're [style.colourBad(not powerful enough to enable [npc.herHim] to fly)]..."
+						+ "[npc.sheIs]尝试着扇动了一下，失望地发现还是[style.colourBad(并不足以支持[npc.herHim]飞翔)]……"
 						+ "<br/>"
-						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+" bodies require wings to be at least '"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"' to enable flight.)]");
+						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+"的身躯需要翅膀至少达到“"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"”尺寸才能够飞翔。)]");
 			}
 		}
 		sb.append("</p>");
@@ -149,40 +149,40 @@ public class Wing implements BodyPartInterface {
 		}
 		
 		if(this.getType()==WingType.NONE) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.NamePos] [npc.do]n't have any wings, so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.NamePos]没有翅膀，所以无事发生……)]</p>");
 		}
 		
 		int effectiveSize = Math.max(this.getType().getMinimumSize().getValue(), Math.min(wingSize, this.getType().getMaximumSize().getValue()));
 		if(owner.getWingSizeValue() == effectiveSize) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] [npc.wings] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.wings]的尺寸没有变化……)]</p>");
 		}
 
 		StringBuilder sb = new StringBuilder();
 		
 		if(this.size > effectiveSize) {
 			sb.append(
-					UtilText.parse(owner, "<p>[npc.Name] [npc.verb(let)] out an alarmed cry as [npc.she] [npc.verb(feel)] a soothing coolness rise up into [npc.her] [npc.wings+], before they suddenly [style.boldShrink(shrink)].<br/>"));
+					UtilText.parse(owner, "<p>[npc.Name]感受到一股舒缓的清凉感从[npc.her][npc.wings+]中升腾而起，忍不住惊呼一声，[npc.wings]紧接着[style.boldShrink(缩小)]了。<br/>"));
 			
 		} else {
 			sb.append(
-					UtilText.parse(owner, "<p>[npc.Name] [npc.verb(let)] out an alarmed gasp as [npc.she] [npc.verb(feel)] a pulsating warmth rise up into [npc.her] [npc.wings+], before they suddenly [style.boldGrow(grow larger)].<br/>"));
+					UtilText.parse(owner, "<p>[npc.Name]感受到一股搏动的温暖感从[npc.her][npc.wings+]中升腾而起，忍不住惊呼一声，[npc.wings]紧接着[style.boldGrow(变大)]了。<br/>"));
 		}
 		
 		this.size = effectiveSize;
 
-		sb.append(UtilText.parse(owner, "[npc.Name] now [npc.has] [style.boldSex([npc.wingSize] [npc.wings])]!"));
+		sb.append(UtilText.parse(owner, "[npc.Name]现在拥有[style.boldSex([npc.wingSize]的[npc.wings])]！"));
 
 		if(type!=WingType.NONE) {
 			if(this.getSize().getValue() >= owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getValue()) {
 				sb.append("</br>"
-						+ "Giving them an experimental flap, [npc.sheIs] delighted to discover that they're [style.colourGood(powerful enough to enable [npc.herHim] to fly)]!"
+						+ "[npc.sheIs]尝试着扇动了一下，惊喜地发现竟然[style.colourGood(足够有力以支持[npc.herHim]飞翔)]了！"
 						+ "<br/>"
-						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+" bodies require wings to be at least '"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"' to enable flight.)]");
+						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+"的身躯需要翅膀至少达到“"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"”尺寸才能够飞翔。)]");
 			} else {
 				sb.append("</br>"
-						+ "Giving them an experimental flap, [npc.sheIs] disappointed to discover that they're [style.colourBad(not powerful enough to enable [npc.herHim] to fly)]..."
+						+ "[npc.sheIs]尝试着扇动了一下，失望地发现还是[style.colourBad(并不足以支持[npc.herHim]飞翔)]……"
 						+ "<br/>"
-						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+" bodies require wings to be at least '"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"' to enable flight.)]");
+						+ "[style.italics("+Util.capitaliseSentence(owner.getLegConfiguration().getName())+"的身躯需要翅膀至少达到“"+owner.getLegConfiguration().getMinimumWingSizeForFlight(owner.getBody()).getName()+"”尺寸才能够飞翔。)]");
 			}
 		}
 		sb.append("</p>");

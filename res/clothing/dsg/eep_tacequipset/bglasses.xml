@@ -1,26 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	
 	
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A faint engraving on the frame reads "MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[镜框上刻着细小的字迹，写着“DSG织厂生产。”]]></authorTag>
 	
 		
 		<value>900</value> 
 		
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一副]]></determiner>
 		
 		
-		<name><![CDATA[ballistic glasses]]></name>
+		<name><![CDATA[防破片镜]]></name>
 		
 		
-		<namePlural pluralByDefault="false"><![CDATA[Ballistic Glasses]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[防破片镜]]></namePlural> 
 		
 		
-		<description><![CDATA[A pair of lightweight glasses with impact resistant polycarbonate lenses.]]></description> 
+		<description><![CDATA[一副轻便的眼镜，配有抗冲击聚碳酸酯镜片。]]></description> 
 		
 		
 		<physicalResistance>1</physicalResistance> 
@@ -102,28 +101,26 @@
 	
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the ballistic glasses.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the ballistic glasses onto [npc2.namePos] [npc2.face].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the ballistic glasses onto [npc2.namePos] [npc2.face].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]戴上防破片镜。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将防破片镜戴在[npc2.namePos][npc2.face]。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将防破片镜戴在[npc2.namePos]的[npc2.face]上。]]></otherRough>
 	</replacementText>
 
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] ballistic glasses.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] ballistic glasses off [npc2.her] [npc2.face].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] ballistic glasses from [npc2.her] [npc2.face].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]摘下[npc.her]的防破片镜。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把[npc2.namePos]防破片镜从[npc2.her][npc2.face]摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将防破片镜从[npc2.namePos]的[npc2.face]上拽了下来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

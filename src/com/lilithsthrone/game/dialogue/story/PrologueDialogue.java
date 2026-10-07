@@ -47,7 +47,7 @@ public class PrologueDialogue {
 		return CharacterCreation.femalePrologueNPC();
 	}
 	
-	public static final DialogueNode INTRO = new DialogueNode("In the Museum", "", true) {
+	public static final DialogueNode INTRO = new DialogueNode("博物馆中", "", true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -67,7 +67,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Agree", "Overwhelmed with arousal, you decide to agree to go and have some fun.", INTRO_EMPTY_ROOM) {
+				return new Response("同意", "沉溺在情欲中，你决定干点愉悦的事。", INTRO_EMPTY_ROOM) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.MUSEUM, PlaceType.MUSEUM_OFFICE);
@@ -80,7 +80,7 @@ public class PrologueDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Say No", "You don't think it's a good idea to sneak off and have sex when you're supposed to be here to see your aunt Lily. Say no.", INTRO_NO) {
+				return new Response("拒绝", "你觉得要见莉莉姨妈的时候溜去做爱是好主意吗？别吧！", INTRO_NO) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.MUSEUM, PlaceType.MUSEUM_CROWDS);
@@ -93,7 +93,7 @@ public class PrologueDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTRO_EMPTY_ROOM = new DialogueNode("In the Museum", "", true, true) {
+	public static final DialogueNode INTRO_EMPTY_ROOM = new DialogueNode("博物馆中", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -114,7 +114,7 @@ public class PrologueDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(femalePrologueNPC()) {
 				if (index == 1) {
-					return new ResponseSex("Dominant sex", "Give in to your lust, take the lead, and start having sex with [prologueFemale.name]...",
+					return new ResponseSex("支配型性爱", "屈服于你的性欲，占据支配权，同[prologueFemale.name]做爱……",
 							null, null, null,
 							null, null, null,
 							true, true,
@@ -137,7 +137,7 @@ public class PrologueDialogue {
 					};
 					
 				} else if(index==2) {
-					return new ResponseSex("Submissive sex", "Give in to your lust, submit to [prologueFemale.name], and let her take the lead as you have sex with her...",
+					return new ResponseSex("服从型性爱", "屈从于你的性欲，臣服于[prologueFemale.name]，让她支配这次性爱……",
 							null, null, null,
 							null, null, null,
 							true, true,
@@ -163,7 +163,7 @@ public class PrologueDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new ResponseSex("Dominant sex", "Give in to your lust, take the lead, and start having sex with [prologueMale.name]...",
+					return new ResponseSex("支配型性爱", "屈服于你的性欲，占据支配权，同[prologueMale.name]做爱……",
 							null, null, null,
 							null, null, null,
 							true, true,
@@ -185,7 +185,7 @@ public class PrologueDialogue {
 					};
 					
 				} else if(index==2) {
-					return new ResponseSex("Submissive sex", "Give in to your lust, submit to [prologueMale.name], and let him take the lead as you have sex with him...",
+					return new ResponseSex("服从型性爱", "屈从于你的性欲，臣服于[prologueMale.name]，让他支配这次性爱……",
 							null, null, null,
 							null, null, null,
 							true, true,
@@ -210,7 +210,7 @@ public class PrologueDialogue {
 			}
 			
 			if (index == 3) {
-				return new Response("Second Thoughts", "Decide that this is a bad idea after all, and put an end to this.", INTRO_SECOND_THOUGHTS) {
+				return new Response("三思", "这终究不是个好主意，到此为止吧！", INTRO_SECOND_THOUGHTS) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.MUSEUM, PlaceType.MUSEUM_CROWDS);
@@ -223,7 +223,7 @@ public class PrologueDialogue {
 	};
 	
 
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Finished", "Now that you've had your fun, you really should go and find your aunt Lily...", true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("结束", "现在你玩够了，真的应该去找莉莉姨妈了……", true) {
 
 		@Override
 		public String getContent() {
@@ -255,7 +255,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Search", "Go and search the museum for Arthur.", INTRO_2) {
+				return new Response("搜寻", "在博物馆找亚瑟吧。", INTRO_2) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.MUSEUM_LOST, PlaceType.MUSEUM_MIRROR);
@@ -268,7 +268,7 @@ public class PrologueDialogue {
 	};
 	
 	
-	public static final DialogueNode INTRO_SECOND_THOUGHTS = new DialogueNode("In the Museum", "", true, true) {
+	public static final DialogueNode INTRO_SECOND_THOUGHTS = new DialogueNode("博物馆中", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -294,7 +294,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Search", "Go and search the museum for Arthur.", INTRO_2) {
+				return new Response("搜寻", "在博物馆找亚瑟吧。", INTRO_2) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.MUSEUM_LOST, PlaceType.MUSEUM_MIRROR);
@@ -306,7 +306,7 @@ public class PrologueDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTRO_NO = new DialogueNode("In the Museum", "", true, true) {
+	public static final DialogueNode INTRO_NO = new DialogueNode("博物馆中", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -332,7 +332,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Search", "Go and search the museum for Arthur.", INTRO_2){
+				return new Response("搜寻", "在博物馆找亚瑟吧。", INTRO_2){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.MUSEUM_LOST, PlaceType.MUSEUM_MIRROR);
@@ -344,7 +344,7 @@ public class PrologueDialogue {
 		}
 	};
 
-	public static final DialogueNode INTRO_2 = new DialogueNode("In the Museum", "", true, true) {
+	public static final DialogueNode INTRO_2 = new DialogueNode("博物馆中", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -359,9 +359,9 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Agree", "Go and look behind the mirror to find out who's there.", INTRO_3A);
+				return new Response("同意", "去看看究竟是谁藏身于镜子之后。", INTRO_3A);
 			} else if (index == 2) {
-				return new Response("Nope", "This is the most obvious trap you've ever seen.", INTRO_3B);
+				return new Response("不要", "这明显是陷阱好吗？", INTRO_3B);
 			} else {
 				return null;
 			}
@@ -383,7 +383,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("The horror!", "Aaaa!", INTRO_4);
+				return new Response("太恐怖了！", "啊啊啊啊嗷嗷啊啊！", INTRO_4);
 			} else {
 				return null;
 			}
@@ -405,14 +405,14 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("The horror!", "Aaaa!", INTRO_4);
+				return new Response("太恐怖了！", "啊啊啊啊嗷嗷啊啊！", INTRO_4);
 			} else {
 				return null;
 			}
 		}
 	};
 
-	public static final DialogueNode INTRO_4 = new DialogueNode("The horror!", "", true, true) {
+	public static final DialogueNode INTRO_4 = new DialogueNode("太恐怖了！", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -427,7 +427,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Panic", "Now would be a good time to panic.", INTRO_5);
+				return new Response("惊慌失措", "要害怕就趁现在吧。", INTRO_5);
 			} else {
 				return null;
 			}
@@ -449,7 +449,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Wake up", "You slowly start to regain consciousness.", INTRO_NEW_WORLD_1){
+				return new Response("醒来", "你慢慢开始恢复知觉。", INTRO_NEW_WORLD_1){
 					@Override
 					public void effects() {
 						Main.game.setWeatherInSeconds(Weather.MAGIC_STORM, 5*60*60);
@@ -481,7 +481,7 @@ public class PrologueDialogue {
 		}
 	};
 
-	public static final DialogueNode INTRO_NEW_WORLD_1 = new DialogueNode("A new world", "", true, false) {
+	public static final DialogueNode INTRO_NEW_WORLD_1 = new DialogueNode("新世界", "", true, false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -496,13 +496,13 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Struggle", "Try to struggle out of their grip.", INTRO_NEW_WORLD_1_STRUGGLE);
+				return new Response("挣扎", "试着挣脱他们的控制。", INTRO_NEW_WORLD_1_STRUGGLE);
 				
 			} else if (index == 2) {
-				return new Response("Furries?! Yes!",
-						"Furries are real?! You <b>love</b> furries!<br/>"
-						+ "<b>This will set all of your starting furry preferences to </b><b style='color:"+ RaceStage.GREATER.getColour().toWebHexString()+ ";'>"+FurryPreference.MAXIMUM.getName()+"</b><b>."
-						+ " This can be changed at any time from the options menu.</b>", 
+				return new Response("福瑞？！好耶！",
+						"福瑞真的存在？！你<b>爱死</b>福瑞了！<br/>"
+						+ "<b>这会将你所有的初始福瑞程度偏好设置为</b><b style='color:"+ RaceStage.GREATER.getColour().toWebHexString()+ ";'>"+FurryPreference.MAXIMUM.getName()+"</b><b>。"
+						+ "之后可随时在选项菜单中更改。</b>", 
 						INTRO_NEW_WORLD_1_BY_THE_POWER_OF_LOVING_FURRIES){
 					@Override
 					public void effects(){
@@ -517,10 +517,10 @@ public class PrologueDialogue {
 				};
 				
 			} else if (index == 3) {
-				return new Response("Furries?! No!",
-						"Why are furries real?! You <b>hate</b> furries! Channel your rage and try to break free.<br/>"
-						+ "<b>This will set all of your starting furry preferences to </b><b style='color:"+ RaceStage.HUMAN.getColour().toWebHexString()+ ";'>"+FurryPreference.HUMAN.getName()+"</b><b>."
-						+ " This can be changed at any time from the options menu.</b>", 
+				return new Response("福瑞？！不要啊！",
+						"不是吧，真的有福瑞？！你<b>讨厌</b>福瑞！释放你的怒火，挣脱束缚吧！<br/>"
+						+ "<b>这会将你所有的初始福瑞程度偏好设置为</b><b style='color:"+ RaceStage.HUMAN.getColour().toWebHexString()+ ";'>"+FurryPreference.HUMAN.getName()+"</b><b>。"
+						+ "之后可随时在选项菜单中更改。</b>", 
 						INTRO_NEW_WORLD_1_BY_THE_POWER_OF_HATING_FURRIES){
 					@Override
 					public void effects(){
@@ -557,7 +557,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Someone's come to save you!", INTRO_NEW_WORLD_2){
+				return new Response("继续", "有人来救你了！", INTRO_NEW_WORLD_2){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Lilaya.class).setLocation(WorldType.DOMINION, PlaceType.DOMINION_AUNTS_HOME, false);
@@ -589,7 +589,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Someone's come to save you!", INTRO_NEW_WORLD_2){
+				return new Response("继续", "有人来救你了！", INTRO_NEW_WORLD_2){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Lilaya.class).setLocation(WorldType.DOMINION, PlaceType.DOMINION_AUNTS_HOME, false);
@@ -621,7 +621,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Someone's come to save you!", INTRO_NEW_WORLD_2){
+				return new Response("继续", "有人来救你了！", INTRO_NEW_WORLD_2){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Lilaya.class).setLocation(WorldType.DOMINION, PlaceType.DOMINION_AUNTS_HOME, false);
@@ -649,7 +649,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Explain", "Quickly explain to Lily what happened back at the museum.", INTRO_NEW_WORLD_2_A);
+				return new Response("解释", "迅速向莉莉解释博物馆里发生的事情。", INTRO_NEW_WORLD_2_A);
 				
 			} else {
 				return null;
@@ -672,7 +672,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Follow", "Follow Lily as she leads you back to her house.", INTRO_NEW_WORLD_3){
+				return new Response("跟随", "跟上莉莉，她会带你回她的家里。", INTRO_NEW_WORLD_3){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Rose.class).setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_ENTRANCE_HALL, false);
@@ -687,7 +687,7 @@ public class PrologueDialogue {
 		}
 	};
 
-	public static final DialogueNode INTRO_NEW_WORLD_3 = new DialogueNode("Lilaya's Home", "", true) {
+	public static final DialogueNode INTRO_NEW_WORLD_3 = new DialogueNode("莉莱雅的家", "", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -702,7 +702,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("To the lab", "Follow Lilaya to her lab.", INTRO_NEW_WORLD_4){
+				return new Response("去实验室", "跟莉莱雅去她的实验室。", INTRO_NEW_WORLD_4){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Rose.class).setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB, false);
@@ -732,7 +732,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Blinded", "The pink flash was so bright that you're left temporarily blinded!", INTRO_NEW_WORLD_5){
+				return new Response("瞎了", "粉红色的闪光异常耀眼，让你一时睁不开眼！", INTRO_NEW_WORLD_5){
 					@Override
 					public void effects() {
 						// Remove clothing:
@@ -766,7 +766,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("I'm a demon?!", "Lilaya keeps using the word 'Demon' to describe your 'aura'. You're starting to worry that something must have changed deep inside of you...", INTRO_NEW_WORLD_6){
+				return new Response("我是恶魔？！", "莉莱雅一直用“恶魔”这个词来形容你的“灵气”。你开始担心，你的内心深处一定发生了什么变化……", INTRO_NEW_WORLD_6){
 					@Override
 					public void effects() {
 						// Equip clothing:
@@ -820,25 +820,25 @@ public class PrologueDialogue {
 
 		@Override
 		public String getContent() {
-			String demonstoneImages = "images of flames";
-			String demonstoneEnergy = "flame";
+			String demonstoneImages = "火焰的图像";
+			String demonstoneEnergy = "火焰";
 			switch(CharacterCreation.getStartingDemonstoneSpellSchool()) {
 				case AIR:
-					demonstoneImages = "images of gaseous green vapours";
-					demonstoneEnergy = "poison";
+					demonstoneImages = "绿色蒸汽的图像";
+					demonstoneEnergy = "毒素";
 					break;
 				case EARTH:
-					demonstoneImages = "lines of energy";
-					demonstoneEnergy = "energy";
+					demonstoneImages = "能量线条";
+					demonstoneEnergy = "能量";
 					break;
 				case ARCANE:
 				case FIRE:
-					demonstoneImages = "images of flames";
-					demonstoneEnergy = "flame";
+					demonstoneImages = "火焰的图像";
+					demonstoneEnergy = "火焰";
 					break;
 				case WATER:
-					demonstoneImages = "images of snowflakes and icicles";
-					demonstoneEnergy = "ice";
+					demonstoneImages = "雪花与冰柱的图像";
+					demonstoneEnergy = "寒冷";
 					break;
 			}
 			UtilText.addSpecialParsingString(demonstoneImages, true);
@@ -849,13 +849,13 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Magic!", "Thanks to your powerful aura, you can harness the arcane!", INTRO_NEW_WORLD_7){
+				return new Response("魔法！", "凭借你强大的灵气，你可以驾驭奥术！", INTRO_NEW_WORLD_7){
 					@Override
 					public String getTitle() {
 						if (!Main.game.getPlayer().isFeminine())
-							return "You're a wizard!";
+							return "我是巫师！";
 						else
-							return "You're a witch!";
+							return "我是女巫！";
 					}
 				};
 				
@@ -897,7 +897,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Your room", "You follow Rose as she leads you up to your new room.", INTRO_NEW_WORLD_8){
+				return new Response("你的卧室", "你跟着萝丝，她会领你到新房间。", INTRO_NEW_WORLD_8){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Rose.class).setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_PLAYER, false);
@@ -911,7 +911,7 @@ public class PrologueDialogue {
 		}
 	};
 
-	public static final DialogueNode INTRO_NEW_WORLD_8 = new DialogueNode("Your room", "You follow Rose as she leads you up to your new room.", true, true) {
+	public static final DialogueNode INTRO_NEW_WORLD_8 = new DialogueNode("你的卧室", "你跟着萝丝，她会领你到新房间。", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -926,7 +926,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Knocking", "Rose said she'd be back in about half an hour, so that must be her knocking at your door.", INTRO_NEW_WORLD_9){
+				return new Response("敲门声", "萝丝说她大约半小时后回来，所以一定是她在敲门。", INTRO_NEW_WORLD_9){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().incrementMoney(5000);
@@ -951,7 +951,7 @@ public class PrologueDialogue {
 						AbstractItem spellBook = Main.game.getItemGen().generateItem(ItemType.getSpellBookType(startingSpell));
 						Main.game.getWorlds().get(WorldType.LILAYAS_HOUSE_FIRST_FLOOR).getCell(PlaceType.LILAYA_HOME_ROOM_PLAYER).getInventory().addItem(spellBook);
 						
-						Main.game.getTextEndStringBuilder().append("<p style='text-align:center;'>[style.boldExcellent("+spellBook.getName()+")] added to your room's storage!</p>");
+						Main.game.getTextEndStringBuilder().append("<p style='text-align:center;'>[style.boldExcellent("+spellBook.getName()+")]已添加到卧室的储藏空间！</p>");
 						
 					}
 				};
@@ -962,7 +962,7 @@ public class PrologueDialogue {
 		}
 	};
 
-	public static final DialogueNode INTRO_NEW_WORLD_9 = new DialogueNode("Knocking", "Rose said she'd be back in about half an hour, so that must be her knocking at your door.", true, true) {
+	public static final DialogueNode INTRO_NEW_WORLD_9 = new DialogueNode("敲门声", "萝丝说她大约半小时后回来，所以一定是她在敲门。", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -977,7 +977,7 @@ public class PrologueDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Freedom!", "Decide what you want to do next.", RoomPlayer.ROOM){
+				return new Response("自由！", "接下来做什么好呢。", RoomPlayer.ROOM){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Rose.class).setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB, false);

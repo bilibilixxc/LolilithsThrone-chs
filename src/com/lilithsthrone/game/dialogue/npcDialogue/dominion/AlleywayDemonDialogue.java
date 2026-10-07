@@ -89,7 +89,7 @@ public class AlleywayDemonDialogue {
 		return AffectionLevel.getAttitudeDescription(getDemon(), Main.game.getPlayer(), true);
 	}
 	
-	public static final DialogueNode DEMON_ATTACK = new DialogueNode("Assaulted!", "A figure jumps out from the shadows!", true) {
+	public static final DialogueNode DEMON_ATTACK = new DialogueNode("敌袭！", "一个家伙从阴影中跳了出来！", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(!isWantsToFight()) { // Catch for if the player has somehow raised this npc's affection without using the talk option. Should be impossible but someone managed it somehow (maybe with mods)
@@ -237,7 +237,7 @@ public class AlleywayDemonDialogue {
 			
 			if(isWantsToFight()) {
 				if (index == 1) {
-					return new ResponseCombat("Fight", "Stand up for yourself and fight [npc.name]!", getDemon()) {
+					return new ResponseCombat("战斗", "挺身而出，与[npc.name]决一胜负！", getDemon()) {
 						@Override
 						public void effects() {
 							applyPregnancyReactions();
@@ -245,13 +245,13 @@ public class AlleywayDemonDialogue {
 					};
 					
 				} else if (index == 2) {
-					return new Response("Offer money", UtilText.parse(getDemon(), "Unlike common muggers, [npc.Name] isn't interested in your money!"), null);
+					return new Response("献上财物", UtilText.parse(getDemon(), "与普通的抢劫者不同，[npc.Name]对你的钱不感兴趣！"), null);
 					
 				} else if (index == 3) {
 					if(getDemon().isAttractedTo(Main.game.getPlayer())) {
-						return new ResponseSex("Offer body",
-								"Offer your body to [npc.name] so that you can avoid a violent confrontation."
-									+"<br/>[style.italicsSex(Repeatedly submitting to [npc.name] will eventually lead to [npc.herHim] demanding that you become [npc.her] bitch...)]",
+						return new ResponseSex("献上身体",
+								"向[npc.name]献出身体，以避免发生暴力对抗。"
+									+"<br/>[style.italicsSex(重复性地向[npc.name]屈服将会导致[npc.herHim]要求你成为[npc.her]的荡妇……)]",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
 								null, null, null,
 								true, false,
@@ -278,14 +278,14 @@ public class AlleywayDemonDialogue {
 						};
 						
 					} else {
-						return new Response("Offer body", "You can tell that [npc.name] isn't at all interested in having sex with you. You'll either have to offer [npc.herHim] some money, or prepare for a fight!", null);
+						return new Response("献出身体", "你可以看出来[npc.name]对和你做爱完全不感兴趣。你只能选择要么给[npc.herHim]些钱，要么准备战斗！", null);
 					}
 					
 				} else if (index == 4 && getDemon().isApplyingPostCombatTransformations()) {
-					return new Response("Surrender",
-							"Completely surrender to [npc.name] and let [npc.herHim] do whatever [npc.she] wants with your body..."
-									+"<br/>[style.italicsTfGeneric(This will result in [npc.name] trying to get you to drink a transformation potion, before possibly choosing to fuck you!)]."
-									+"<br/>[style.italicsSex(Repeatedly submitting to [npc.name] will eventually lead to [npc.herHim] demanding that you become [npc.her] bitch...)]",
+					return new Response("投降",
+							"向[npc.name]投降，让[npc.herHim]能够对你的身体为所欲为……"
+									+"<br/>[style.italicsTfGeneric(这会导致[npc.Name]可能在选择操你之前，会先试着让你喝下转化药水！)]"
+									+"<br/>[style.italicsSex(重复性地向[npc.name]屈服将会导致[npc.herHim]要求你成为[npc.her]的荡妇……)]",
 								SURRENDER,
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_TRANSFORMATION_RECEIVING), Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(), null, null, null) {
 						@Override
@@ -303,23 +303,23 @@ public class AlleywayDemonDialogue {
 					GameCharacter companion = getMainCompanion();
 	
 					if(!getDemon().isAttractedTo(Main.game.getPlayer())) {
-						return new Response(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc.name] isn't at all interested in having sex with you, so wouldn't want to have a threesome..."),
+						return new Response(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "你看得出来，[npc.name]一点也不想和你做爱，所以也就不会想要和你三人行……"),
 								null);
 						
 					} else if(!getDemon().isAttractedTo(companion)) {
-						return new Response(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc.name] isn't at all interested in having sex with [npc2.name], so wouldn't want to have a threesome..."),
+						return new Response(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "你看得出来，[npc.name]一点也不想和[npc2.name]做爱，所以也就不会想要和你三人行……"),
 								null);
 						
 					} else if(!companion.isAttractedTo(getDemon()) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc2.name] isn't at all interested in having sex with [npc.name], and you can't force [npc2.herHim] to do so..."),
+						return new Response(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "你看得出来[npc2.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[npc2.herHim]这么做……"),
 								null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "Offer [npc.name] the opportunity to have sex with both you and [npc2.name] in order to avoid a violent confrontation."),
+						return new ResponseSex(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "让[npc.name]有和你，以及[npc2.name]一起做爱的机会，以此来避免暴力冲突。"),
 								true, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(getDemon()),
@@ -340,18 +340,18 @@ public class AlleywayDemonDialogue {
 					GameCharacter companion = getMainCompanion();
 	
 					if(!getDemon().isAttractedTo(companion)) {
-						return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc.name] isn't at all interested in having sex with [npc2.name]..."),
+						return new Response(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(getDemon(), companion, "你看得出来[npc.name]完全没兴趣和[npc2.name]做爱……"),
 								null);
 						
 					} else if(!companion.isAttractedTo(getDemon()) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc2.name] isn't at all interested in having sex with [npc.name], and you can't force [npc2.herHim] to do so..."),
+						return new Response(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(getDemon(), companion, "你看得出来[npc2.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[npc2.herHim]这么做……"),
 								null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(getDemon(), companion, "Tell [npc.name] that [npc.she] can use [npc2.namePos] body in order to avoid a violent confrontation."),
+						return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(getDemon(), companion, "为了避免发生暴力冲突，你告诉[npc.name]，[npc.she]可以享用[npc2.namePos]的身体。"),
 								true, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(getDemon()),
@@ -377,9 +377,9 @@ public class AlleywayDemonDialogue {
 			} else {
 				if (index == 1) {
 					if(talked) {
-						return new Response("Talk", "You've already spent time talking with [npc.name]...", null);
+						return new Response("对话", "你今天已经跟[npc.Name]谈过话了……", null);
 					}
-					return new Response("Talk", "Talk to [npc.name] for a while in order to get to know [npc.herHim] a little better.", DEMON_PEACEFUL_TALK) {
+					return new Response("对话", "和[npc.name]聊一会儿，以便于多了解[npc.herHim]一点。", DEMON_PEACEFUL_TALK) {
 						@Override
 						public void effects() {
 							applyPregnancyReactions();
@@ -392,11 +392,11 @@ public class AlleywayDemonDialogue {
 					};
 					
 				} else if (index == 2) {
-					return new Response("Offer money", UtilText.parse(getDemon(), "Unlike common muggers, [npc.name] has no need for your money!"), null);
+					return new Response("献上财物", UtilText.parse(getDemon(), "与普通的抢劫者不同，[npc.Name]不需要你的钱！"), null);
 					
 				} else if (index == 3) {
 					if(getDemon().isAttractedTo(Main.game.getPlayer())) {
-						return new ResponseSex("Sex (dom)", "Take the dominant role and have sex with [npc.name].",
+						return new ResponseSex("做爱(支配)", "同[npc.name]做爱，并占据支配地位。",
 								Util.newArrayListOfValues(Fetish.FETISH_DOMINANT), null, Fetish.FETISH_DOMINANT.getAssociatedCorruptionLevel(),
 								null, null, null,
 								true, true,
@@ -413,12 +413,12 @@ public class AlleywayDemonDialogue {
 						};
 						
 					} else {
-						return new Response("Sex (dom)", "You can tell that [npc.name] isn't interested in having sex with you...", null);
+						return new Response("做爱(支配)", "你看得出[npc.name]不想和你做爱……", null);
 					}
 					
 				} else if (index == 4) {
 					if(getDemon().isAttractedTo(Main.game.getPlayer())) {
-						return new ResponseSex("Sex (sub)", "Offer your body to [npc.name].",
+						return new ResponseSex("做爱(顺从)", "向[npc.name]献上身体。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
 								null, null, null,
 								true, true,
@@ -435,28 +435,28 @@ public class AlleywayDemonDialogue {
 						};
 						
 					} else {
-						return new Response("Sex (sub)", "You can tell that [npc.name] isn't interested in having sex with you...", null);
+						return new Response("做爱(顺从)", "你看得出[npc.name]不想和你做爱……", null);
 					}
 					
 				} if (index == 5) {
 					if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_ACCOMMODATION) || !getDemon().isAffectionHighEnoughToInviteHome()) {
-						return new Response("Offer room",
-								"You feel as though it would be best to spend some more time getting to know [npc.name] before inviting [npc.herHim] back to Lilaya's mansion...<br/>"
-								+ "[style.italics(Requires [npc.name] to have at least "+AffectionLevel.POSITIVE_THREE_CARING.getMinimumValue()+" affection towards you.)]",
+						return new Response("提供房间",
+								"你觉得在邀请[npc.name]回莉莱雅的宅邸之前，最好能花时间多了解[npc.herHim]一些……<br/>"
+								+ "[style.italics(要求[npc.name]对你拥有至少"+AffectionLevel.POSITIVE_THREE_CARING.getMinimumValue()+"的好感。)]",
 								null);
 						
 					} else if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ACCOMMODATION)) {
-						return new Response("Offer room",
-								"You'll need to get Lilaya's permission before inviting [npc.name] back to her mansion...",
+						return new Response("提供房间",
+								"你要先获得莉莱雅的同意才能邀请[npc.name]到她的宅邸……",
 								null);
 						
 					} else if(!OccupancyUtil.isFreeRoomAvailableForOccupant()) {
-						return new Response("Offer room",
-								"You don't have a suitable room prepared for [npc.name] to move in to. Upgrade one of the empty rooms in Lilaya's house to a 'Guest Room' first.",
+						return new Response("提供房间",
+								"你没有合适的房间让[npc.name]搬进去。你得先将莉莱雅宅邸中的一个空房间升级为“客房”。",
 								null);
 						
 					}else {
-						return new Response("Offer room", "Ask [npc.name] if [npc.she] would like a room in Lilaya's mansion.", DEMON_PEACEFUL_OFFER_ROOM) {
+						return new Response("提供房间", "问一问[npc.name]想不想在莉莱雅的宅邸中要一个房间。", DEMON_PEACEFUL_OFFER_ROOM) {
 							@Override
 							public void effects() {
 								applyPregnancyReactions();
@@ -468,14 +468,14 @@ public class AlleywayDemonDialogue {
 				} else if(index==6) {
 					if(getDemon().getPlayerSurrenderCount()<3 && getDemon().isApplyingPostCombatTransformations()) {
 						if(transformationsApplied) {
-							return new Response("Get transformed",
-									"[npc.Name] has already given you all the transformation potions [npc.she] had!",
+							return new Response("开始被转化",
+									"[npc.Name]早就把[npc.she]所有的转化药水给你了！",
 									null);
 							
 						} else {
-							return new Response("Get transformed",
-									"Tell [npc.name] that you'd like to drink any transformation potions which [npc.she] has..."
-										+"<br/>[style.italicsTfGeneric(This will result in [npc.name] getting you to drink a transformation potion!)]",
+							return new Response("开始被转化",
+									"告诉[npc.name]你愿意喝下[npc.she]所拥有的任何转化药水……"
+										+"<br/>[style.italicsTfGeneric(这将会导致[npc.name]让你喝下一剂转化药水！)]",
 										DEMON_PEACEFUL_TRANSFORMED,
 									Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_TRANSFORMATION_RECEIVING), Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel(), null, null, null) {
 								@Override
@@ -494,7 +494,7 @@ public class AlleywayDemonDialogue {
 					}
 					
 				} else if (index==10) {
-					return new Response("Attack", "Betray [npc.namePos] trust and attack [npc.herHim]!", DEMON_PEACEFUL_ATTACK) {
+					return new Response("攻击", "背叛[npc.namePos]的信任并攻击[npc.herHim]！", DEMON_PEACEFUL_ATTACK) {
 						@Override
 						public void effects() {
 							applyPregnancyReactions();
@@ -511,23 +511,23 @@ public class AlleywayDemonDialogue {
 					GameCharacter companion = getMainCompanion();
 	
 					if(!getDemon().isAttractedTo(Main.game.getPlayer())) {
-						return new Response(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc.name] isn't at all interested in having sex with you, so wouldn't want to have a threesome..."),
+						return new Response(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "你看得出来，[npc.name]一点也不想和你做爱，所以也就不会想要和你三人行……"),
 								null);
 						
 					} else if(!getDemon().isAttractedTo(companion)) {
-						return new Response(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc.name] isn't at all interested in having sex with [npc2.name], so wouldn't want to have a threesome..."),
+						return new Response(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "你看得出来，[npc.name]一点也不想和[npc2.name]做爱，所以也就不会想要和你三人行……"),
 								null);
 						
 					} else if(!companion.isAttractedTo(getDemon()) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc2.name] isn't at all interested in having sex with [npc.name], and you can't force [npc2.herHim] to do so..."),
+						return new Response(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "你看得出来[npc2.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[npc2.herHim]这么做……"),
 								null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(getDemon(), companion, "Offer [npc.name] the opportunity to have sex with both you and [npc2.name]."),
+						return new ResponseSex(UtilText.parse(companion, "三人行"),
+								UtilText.parse(getDemon(), companion, "让[npc.name]拥有和你，以及[npc2.name]一起做爱的机会。"),
 								true, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(getDemon()),
@@ -547,18 +547,18 @@ public class AlleywayDemonDialogue {
 					GameCharacter companion = getMainCompanion();
 	
 					if(!getDemon().isAttractedTo(companion)) {
-						return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc.name] isn't at all interested in having sex with [npc2.name]..."),
+						return new Response(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(getDemon(), companion, "你看得出来[npc.name]完全没兴趣和[npc2.name]做爱……"),
 								null);
 						
 					} else if(!companion.isAttractedTo(getDemon()) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(getDemon(), companion, "You can tell that [npc2.name] isn't at all interested in having sex with [npc.name], and you can't force [npc2.herHim] to do so..."),
+						return new Response(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(getDemon(), companion, "你看得出来[npc2.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[npc2.herHim]这么做……"),
 								null);
 						
 					} else {
-						return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(getDemon(), companion, "Tell [npc.name] that [npc.she] can use [npc2.namePos] body."),
+						return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(getDemon(), companion, "告诉[npc.name][npc.she]可以使用[npc2.namePos]身体。"),
 								true, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(getDemon()),
@@ -577,14 +577,14 @@ public class AlleywayDemonDialogue {
 					}
 					
 				} else if (index == 0) {
-					return new Response("Leave", "Tell [npc.name] that you're in a rush to be somewhere else, before continuing on your way.", Main.game.getDefaultDialogue(false));
+					return new Response("离开", "告诉[npc.name]你急着去别的地方，继续旅程。", Main.game.getDefaultDialogue(false));
 				}
 				return null;
 			}
 		}
 	};
 	
-	public static final DialogueNode DEMON_PEACEFUL_TALK = new DialogueNode("Talk", "", true, true) {
+	public static final DialogueNode DEMON_PEACEFUL_TALK = new DialogueNode("谈话", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			talked = true;
@@ -617,7 +617,7 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode DEMON_PEACEFUL_OFFER_ROOM = new DialogueNode("Offer room", "", true, true) {
+	public static final DialogueNode DEMON_PEACEFUL_OFFER_ROOM = new DialogueNode("提供房间", "", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -629,7 +629,7 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Take home", "Take [npc.name] to [npc.her] new room.", DEMON_PEACEFUL_OFFER_ROOM_BACK_HOME) {
+				return new Response("带回家", "带[npc.name]到[npc.her]的新房间。", DEMON_PEACEFUL_OFFER_ROOM_BACK_HOME) {
 					@Override
 					public void effects() {
 						Cell c = OccupancyUtil.getFreeRoomForOccupant();
@@ -645,7 +645,7 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode DEMON_PEACEFUL_OFFER_ROOM_BACK_HOME = new DialogueNode("New Room", "", true) {
+	public static final DialogueNode DEMON_PEACEFUL_OFFER_ROOM_BACK_HOME = new DialogueNode("新房间", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -657,7 +657,7 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Let [npc.name] get settled in.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "让[npc.name]安顿下来。", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
@@ -674,7 +674,7 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode DEMON_PEACEFUL_ATTACK = new DialogueNode("Attack", "", true, true) {
+	public static final DialogueNode DEMON_PEACEFUL_ATTACK = new DialogueNode("攻击", "", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -686,7 +686,7 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight", "Start fighting [npc.name]!", getDemon());
+				return new ResponseCombat("战斗", "开始与[npc.name]战斗！", getDemon());
 				
 			} else {
 				return null;
@@ -694,7 +694,7 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_PEACEFUL = new DialogueNode("Continue", "Step away from [npc.name] and prepare to continue on your way.", true) {
+	public static final DialogueNode AFTER_SEX_PEACEFUL = new DialogueNode("继续", "从[npc.name]身边走开，准备继续你的旅程。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -710,13 +710,13 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_PEACEFUL_THREESOME = new DialogueNode("Continue", "Step away from [npc.name] and prepare to continue on your way.", true) {
+	public static final DialogueNode AFTER_SEX_PEACEFUL_THREESOME = new DialogueNode("继续", "从[npc.name]身边走开，准备继续你的旅程。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -728,13 +728,13 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_PEACEFUL_OFFERED_COMPANION = new DialogueNode("Continue", "Step away from [npc.name] and prepare to continue on your way.", true) {
+	public static final DialogueNode AFTER_SEX_PEACEFUL_OFFERED_COMPANION = new DialogueNode("继续", "从[npc.name]身边走开，准备继续你的旅程。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -750,13 +750,13 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getDemon().setPlayerSurrenderCount(0);
@@ -768,7 +768,7 @@ public class AlleywayDemonDialogue {
 		}
 		@Override
 		public String getDescription() {
-			return "You have defeated [npc.name]!";
+			return "你打败了[npc.name]！";
 		}
 		@Override
 		public String getContent() {
@@ -791,10 +791,10 @@ public class AlleywayDemonDialogue {
 			boolean rapePlay = getDemon().isPostCombatRapePlay();
 			
 			if (index == 1) {
-				return new Response("Continue",
-						"Carry on your way..."
+				return new Response("继续",
+						"继续前行……"
 							+ (getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)
-								?UtilText.parse(getDemon(), "<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]")
+								?UtilText.parse(getDemon(), "<br/>[style.italicsBad([npc.Name]将会从游戏中永久移除。)]")
 								:""),
 						Main.game.getDefaultDialogue(false)){
 					@Override
@@ -814,11 +814,11 @@ public class AlleywayDemonDialogue {
 				
 			} else if (index == 2) {
 				if(noSex) {
-					return new Response("Sex", "[npc.Name] has no interest in having sex with you!", null);
+					return new Response("做爱", "[npc.Name]不想和你做爱！", null);
 					
 				} else if(wantsSex) {
-					return new ResponseSex(rapePlay?"Rape-play":"Sex",
-							"Well, [npc.she] <i>is</i> asking for it!",
+					return new ResponseSex(rapePlay?"强奸play":"做爱",
+							"反正这<i>正是</i>[npc.she]想要的！",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -829,8 +829,8 @@ public class AlleywayDemonDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", rapePlay?"AFTER_COMBAT_VICTORY_RAPE":"AFTER_COMBAT_VICTORY_SEX", getDemon()));
 				} else {
 					return new ResponseSex(
-							"Rape [npc.herHim]",
-							"[npc.She] needs to be punished for attacking you like that...",
+							"强奸[npc.herHim]",
+							"[npc.she]竟敢对你发起攻击，就该受罚……",
 							Util.newArrayListOfValues(Fetish.FETISH_NON_CON_DOM), null, Fetish.FETISH_NON_CON_DOM.getAssociatedCorruptionLevel(), null, null, null,
 							false, false,
 							new SMGeneric(
@@ -844,11 +844,11 @@ public class AlleywayDemonDialogue {
 				
 			} else if (index == 3) {
 				if(noSex) {
-					return new Response("Gentle Sex", "[npc.Name] has no interest in having sex with you!", null);
+					return new Response("做爱(温柔)", "[npc.Name]不想和你做爱！", null);
 					
 				} else if(wantsSex) {
-					return new ResponseSex(rapePlay?"Rape-play (gentle)":"Gentle sex",
-							"Well, [npc.she] <i>is</i> asking for it!",
+					return new ResponseSex(rapePlay?"强奸play (温柔)":"做爱(温柔)",
+							"反正这<i>正是</i>[npc.she]想要的！",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -860,8 +860,8 @@ public class AlleywayDemonDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", rapePlay?"AFTER_COMBAT_VICTORY_RAPE_GENTLE":"AFTER_COMBAT_VICTORY_SEX_GENTLE", getDemon()));
 					
 				} else {
-					return new ResponseSex("Rape [npc.herHim] (gentle)",
-							"[npc.She] needs to be punished for attacking you like that...",
+					return new ResponseSex("强奸[npc.herHim](温柔)",
+							"[npc.she]竟敢对你发起攻击，就该受罚……",
 							Util.newArrayListOfValues(Fetish.FETISH_NON_CON_DOM), null, Fetish.FETISH_NON_CON_DOM.getAssociatedCorruptionLevel(), null, null, null,
 							false, false,
 							new SMGeneric(
@@ -876,11 +876,11 @@ public class AlleywayDemonDialogue {
 				
 			} else if (index == 4) {
 				if(noSex) {
-					return new Response("Rough Sex", "[npc.Name] has no interest in having sex with you!", null);
+					return new Response("做爱(粗暴)", "[npc.Name]对你不感兴趣！", null);
 					
 				} else if(wantsSex) {
-					return new ResponseSex(rapePlay?"Rape-play (rough)":"Rough sex",
-							"Well, [npc.she] <i>is</i> asking for it!",
+					return new ResponseSex(rapePlay?"强奸play (粗暴)":"做爱(粗暴)",
+							"反正这<i>正是</i>[npc.she]想要的！",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -892,8 +892,8 @@ public class AlleywayDemonDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", rapePlay?"AFTER_COMBAT_VICTORY_RAPE_ROUGH":"AFTER_COMBAT_VICTORY_SEX_ROUGH", getDemon()));
 					
 				} else {
-					return new ResponseSex("Rape [npc.herHim] (rough)",
-							"[npc.She] needs to be punished for attacking you like that...",
+					return new ResponseSex("强奸[npc.herHim](粗暴)",
+							"[npc.she]竟敢对你发起攻击，就该受罚……",
 							Util.newArrayListOfValues(Fetish.FETISH_NON_CON_DOM), null, Fetish.FETISH_NON_CON_DOM.getAssociatedCorruptionLevel(), null, null, null,
 							false, false,
 							new SMGeneric(
@@ -908,12 +908,12 @@ public class AlleywayDemonDialogue {
 				
 			} else if (index == 5) {
 				if(!getDemon().isAttractedTo(Main.game.getPlayer()) || getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
-					return new Response("Submit",
-							"You can't submit to [npc.herHim], as [npc.sheHasFull] no interest in having sex with you!",
+					return new Response("屈服",
+							"你不能向[npc.herHim]屈服，因为[npc.sheHasFull]对和你做爱没有任何兴趣！",
 							null);
 				} else {
-					return new ResponseSex("Submit",
-							"You're not really sure what to do now... Perhaps it would be best to let [npc.name] choose what to do next?",
+					return new ResponseSex("顺从",
+							"你不太确定现在该做什么……也许最好让[npc.name]来决定接下来做什么？",
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 							null, CorruptionLevel.THREE_DIRTY, null, null, null,
 							true, false,
@@ -926,7 +926,7 @@ public class AlleywayDemonDialogue {
 				}
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory", "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items..."){
+				return new ResponseEffectsOnly("物品栏", "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……"){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(getDemon(), InventoryInteraction.FULL_MANAGEMENT);
@@ -935,13 +935,13 @@ public class AlleywayDemonDialogue {
 				
 			} else if (index == 7) {
 				if(Main.game.getCurrentDialogueNode()==AFTER_COMBAT_VICTORY_TALK) {
-					return new Response("Talk", "You are already talking to [npc.name]...", null);
+					return new Response("对话", "你已经在和[npc.name]交谈了……", null);
 					
 				} else if(getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
-					return new Response("Talk", "After betraying [npc.namePos] trust, [npc.she] will never want to talk to you again.", null);
+					return new Response("对话", "在背叛了[npc.namePos]的信任之后，[npc.she]不会想再跟你说话。", null);
 					
 				} else {
-					return new Response("Talk", "Talk to [npc.name] and ask [npc.herHim] why [npc.she] attacked you.", AFTER_COMBAT_VICTORY_TALK){
+					return new Response("对话", "和[npc.name]交谈，问问[npc.herHim]为什么会袭击你。", AFTER_COMBAT_VICTORY_TALK){
 						@Override
 						public void effects() {
 							getDemon().setPlayerKnowsName(true);
@@ -951,8 +951,8 @@ public class AlleywayDemonDialogue {
 				}
 				
 			} else if (index == 8 && getDemon().isAbleToSelfTransform()) {
-				return new Response("Transform [npc.herHim]",
-						"Take a very detailed look at what [npc.name] can transform [npc.herself] into...",
+				return new Response("转化[npc.herHim]",
+						"仔细观察[npc.name]会将自己转化成什么样……",
 						BodyChanging.BODY_CHANGING_CORE){
 					@Override
 					public void effects() {
@@ -962,16 +962,16 @@ public class AlleywayDemonDialogue {
 				};
 				
 			} else if (index == 9 && getDemon().isAbleToSelfTransform()) {
-				return new Response("Quick transformations",
-						"If all [npc.she] wants is sex, then you're more than happy to oblige. Besides, if [npc.sheIs] able to transform [npc.herself], you have a few ideas in mind..."
-								+ "(You'll return to these options once finished transforming [npc.herHim].)",
+				return new Response("快速转化",
+						"如果[npc.she]想要的只是性爱，那么你会非常乐意满足她。此外，如果[npc.sheIs]能够转化[npc.herself] ，你也会有一些想法……"
+								+ "(你完成[npc.herHim]的转化后将返回选项界面。)",
 						QuickTransformations.initQuickTransformations("misc/quickTransformations", getDemon(), AFTER_COMBAT_VICTORY));
 			
 			} else if (index == 10 && !getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
 				return new Response(
-						"Remove character",
-						UtilText.parse(getDemon(), "Scare [npc.name] away."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+						"移除角色",
+						UtilText.parse(getDemon(), "赶[npc.name]走。"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 						Main.game.getDefaultDialogue(false)){
 					@Override
 					public Colour getHighlightColour() {
@@ -988,14 +988,14 @@ public class AlleywayDemonDialogue {
 				GameCharacter companion = getMainCompanion();
 				
 				if(!Main.game.isNonConEnabled() && (!getDemon().isAttractedTo(Main.game.getPlayer()) || !getDemon().isAttractedTo(companion))) {
-					return new Response("Threesome", UtilText.parse(companion, getDemon(), "[npc2.Name] has no interest in having sex with you or [npc.name]!"), null);
+					return new Response("三人行", UtilText.parse(companion, getDemon(), "[npc2.Name]没兴趣和你或[npc.name]做爱！"), null);
 					
 				} else if(!companion.isAttractedTo(getDemon())) {
-					return new Response(UtilText.parse(companion, "Threesome"), UtilText.parse(companion, getDemon(), "[npc.Name] isn't attracted to [npc2.name], so wouldn't be willing to have sex with [npc2.herHim]!"), null);
+					return new Response(UtilText.parse(companion, "三人行"), UtilText.parse(companion, getDemon(), "[npc.Name]并没有被[npc2.name]所吸引，所以将不会愿意和[npc2.herHim]一起做爱！"), null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Threesome"),
-							UtilText.parse(getDemon(), companion, "Have dominant sex with [npc.name], and get [npc2.name] to join in with the fun."),
+					return new ResponseSex(UtilText.parse(companion, "三人行"),
+							UtilText.parse(getDemon(), companion, "和[npc.name]来一场支配型性爱，同时让[npc2.name]也来爽一爽。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer(), companion),
@@ -1010,14 +1010,14 @@ public class AlleywayDemonDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!Main.game.isNonConEnabled() && !getDemon().isAttractedTo(companion)) {
-					return new Response(UtilText.parse(companion, "Give to [npc.name]"), UtilText.parse(companion, getDemon(), "[npc2.Name] isn't attracted to [npc.name], so wouldn't be willing to have sex with [npc.herHim]!"), null);
+					return new Response(UtilText.parse(companion, "给予[npc.name]"), UtilText.parse(companion, getDemon(), "[npc2.Name]并没有被[npc.name]所吸引，所以并不愿意和[npc.herHim]一起做爱！"), null);
 					
 				} else if(!companion.isAttractedTo(getDemon())) {
-					return new Response(UtilText.parse(companion, "Give to [npc.name]"), UtilText.parse(companion, getDemon(), "[npc.Name] isn't attracted to [npc2.name], so wouldn't be willing to have sex with [npc2.herHim]!"), null);
+					return new Response(UtilText.parse(companion, "给予[npc.name]"), UtilText.parse(companion, getDemon(), "[npc.Name]并没有被[npc2.name]所吸引，所以将不会愿意和[npc2.herHim]一起做爱！"), null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Give to [npc.name]"),
-							UtilText.parse(companion, getDemon(), "Tell [npc.name] that [npc.she] can have some fun with [npc2.name] while you watch."),
+					return new ResponseSex(UtilText.parse(companion, "交给[npc.name]"),
+							UtilText.parse(companion, getDemon(), "告诉[npc.name]让[npc.she]和[npc2.name]好好玩玩，你在旁边看着。"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(companion),
@@ -1031,19 +1031,19 @@ public class AlleywayDemonDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!Main.game.isNonConEnabled() && !companion.isAttractedTo(getDemon())) {
-					return new Response(UtilText.parse(companion, "Offer [npc.name]"), UtilText.parse(companion, getDemon(), "[npc.Name] has no interest in having sex with [npc2.name]!"), null);
+					return new Response(UtilText.parse(companion, "献上[npc.name]"), UtilText.parse(companion, getDemon(), "[npc.Name]没兴趣跟[npc2.name]做爱！"), null);
 					
 				} else if(!getDemon().isAttractedTo(companion)) {
-					return new Response(UtilText.parse(companion, "Offer [npc.name]"), UtilText.parse(companion, getDemon(), "[npc2.Name] has no interest in having sex with [npc.name]!"), null);
+					return new Response(UtilText.parse(companion, "献上[npc.name]"), UtilText.parse(companion, getDemon(), "[npc2.Name]没兴趣和[npc.name]做爱！"), null);
 					
 				} else if(!companion.isAttractedTo(getDemon()) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-							UtilText.parse(getDemon(), companion, "You can tell that [npc2.name] isn't at all interested in having sex with [npc.name], and you can't force [npc2.herHim] to do so..."),
+					return new Response(UtilText.parse(companion, "献上[npc.name]"),
+							UtilText.parse(getDemon(), companion, "你看得出来[npc2.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[npc2.herHim]这么做……"),
 							null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-							UtilText.parse(getDemon(), companion, "Tell [npc.name] that [npc.she] can use [npc2.name]."),
+					return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+							UtilText.parse(getDemon(), companion, "告诉[npc.name][npc.she]可以使用[npc2.name]的身体。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getDemon()),
@@ -1065,7 +1065,7 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_VICTORY_TALK = new DialogueNode("Talk", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY_TALK = new DialogueNode("交谈", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 10*60;
@@ -1091,8 +1091,8 @@ public class AlleywayDemonDialogue {
 		if(potion!=null && forcedTF) {
 			sb.append(UtilText.parse(getDemon(), target,
 					"<p>"
-						+ "[npc.Name] steps back, grinning down at [npc2.name] as [npc2.she] obediently [npc2.verb(swallow)] the strange liquid."
-						+ " [npc.speech(Good [npc2.girl]! I'm going to turn you into my perfect "+getDemon().getPreferredBodyDescription("b")+"!)]"
+						+ "[npc.Name]向后退去，看到[npc2.name]听话地喝下了那奇怪的液体，嘴角露出了一抹笑容。"
+						+ "[npc.speech(乖[npc2.girl]！我要把你变成我完美的"+getDemon().getPreferredBodyDescription("b")+"啊！)]"
 					+ "</p>"));
 			sb.append(getDemon().applyPotion(potion, target));
 		}
@@ -1100,8 +1100,8 @@ public class AlleywayDemonDialogue {
 		if(fetishPotion!=null && forcedFetish) {
 			sb.append(UtilText.parse(getDemon(),
 					"<p>"
-						+ "With a look of fiendish delight in [npc.her] [npc.eyes], [npc.name] excitedly cries out,"
-						+ " [npc.speech(That's right, swallow it all down! These changes are all for the better!)]"
+						+ "[npc.name]的[npc.eyes]投射出恶魔般的喜悦神情，[npc.her]兴奋地喊叫，"
+						+ "[npc.speech(这就对了，全都咽下去！这些变化没坏处的！)]"
 					+ "</p>"));
 			sb.append(getDemon().applyPotion(fetishPotion, target));
 		}
@@ -1122,7 +1122,7 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("Defeat", "", true) {
+	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("落败", "", true) {
 
 		TransformativePotion potion = null;
 		TransformativePotion companionPotion = null;
@@ -1154,7 +1154,7 @@ public class AlleywayDemonDialogue {
 		}
 		@Override
 		public String getDescription() {
-			return "You have been defeated by [npc.name]!";
+			return "你被[npc.name]打败了！";
 		}
 		@Override
 		public String getContent() {
@@ -1234,7 +1234,7 @@ public class AlleywayDemonDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
 				if (index == 1) {
-					return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false)) {
+					return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.banishNPC(getDemon());
@@ -1278,17 +1278,17 @@ public class AlleywayDemonDialogue {
 						return Response.getDisallowedSpittingResponse();
 					}
 					if(!Collections.disjoint(Main.game.getPlayer().getFetishes(true), applicableFetishes)) {
-						return new Response("Spit",
-									"Due to your [style.boldFetish("+applicableFetishes.get(0).getName(Main.game.getPlayer())+")] fetish,"
-										+ " you love "+applicableFetishes.get(0).getShortDescriptor(Main.game.getPlayer())+" so much that you can't bring yourself to spit out the transformative "+(multiplePotions?"potions":"potion")+"!",
+						return new Response("吐出",
+									"由于你的[style.boldFetish("+applicableFetishes.get(0).getName(Main.game.getPlayer())+")]性癖，"
+										+ "你太喜欢"+applicableFetishes.get(0).getShortDescriptor(Main.game.getPlayer())+"了，甚至无法吐出转化药剂！",
 								null);
 					} else {
-						return new Response("Spit", 
+						return new Response("吐出", 
 								UtilText.parse(getMainCompanion(),
-										"Spit out the "+(multiplePotions?"potions":"potion")+"."
-												+ " ([npc.Name] will likely choose to "
-													+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isPositive()?"[style.boldTfGeneric(swallow)]":"[style.boldMinorBad(spit out)]")
-													+" [npc.her] own "+(companionMultiplePotions?"potions":"potion")+"!)"),
+										"吐出药水。"
+												+ "([npc.Name]更有可能选择"
+													+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isPositive()?"[style.boldTfGeneric(吞下)]":"[style.boldMinorBad(吐出)]")
+													+"自己的药剂！)"),
 								AFTER_COMBAT_TRANSFORMATION) {
 							@Override
 							public void effects(){
@@ -1306,12 +1306,12 @@ public class AlleywayDemonDialogue {
 					}
 					
 				} else if (index == 2) {
-					return new Response("Swallow",
+					return new Response("吞咽",
 							UtilText.parse(getMainCompanion(),
-								"Swallow the "+(multiplePotions?"potions":"potion")+"."
-										+ " ([npc.Name] will likely choose to "
-											+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isPositive()?"[style.boldTfGeneric(swallow)]":"[style.boldMinorBad(spit out)]")
-											+" [npc.her] own "+(companionMultiplePotions?"potions":"potion")+"!)"),
+								"吞下药水。"
+										+ "([npc.Name]更有可能选择"
+											+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isPositive()?"[style.boldTfGeneric(吞下)]":"[style.boldMinorBad(吐出)]")
+											+"自己的药剂！)"),
 							AFTER_COMBAT_TRANSFORMATION,
 							applicableFetishes,
 							applicableCorruptionLevel,
@@ -1336,21 +1336,21 @@ public class AlleywayDemonDialogue {
 					
 				} else if (index == 6) {
 					if(Main.game.isSpittingDisabled()) {
-						return Response.getDisallowedSpittingResponse("Spit (both)");
+						return Response.getDisallowedSpittingResponse("吐出(双人)");
 					}
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-						return new Response("Spit (both)",
+						return new Response("吐出(双人)",
 								UtilText.parse(getMainCompanion(),
-									"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-										+"</b> fetish, you love being transformed so much that you can't bring yourself to spit out the transformative "+(multiplePotions?"potions":"potion")+", nor to tell [npc.name] to do so!"),
+									"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+										+"</b>的性癖，你乐于被转化，所以无法把转化液体吐出来，也不能让[npc.Name]这么做！"),
 								null);
 						
 					} else {
-						return new Response("Spit (both)",
+						return new Response("吐出(双人)",
 								UtilText.parse(getMainCompanion(),
-										"Spit out the "+(multiplePotions?"potions":"potion")+", and tell [npc.name] to do the same."
+										"吐出药剂，而且也让[npc.name]吐出来。"
 										+ (getMainCompanion().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)
-												?" (However, as [npc.name] has the "+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+" fetish, [npc.sheIsFull] unlikely to listen to you!)"
+												?" (然而，因为[npc.name]拥有"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+"的性癖，[npc.sheIsFull]并不愿意听你的。)"
 												:"")),
 								AFTER_COMBAT_TRANSFORMATION) {
 							@Override
@@ -1372,11 +1372,11 @@ public class AlleywayDemonDialogue {
 					}
 					
 				} else if (index == 7) {
-					return new Response("Swallow (both)",
+					return new Response("吞咽(双人)",
 							UtilText.parse(getMainCompanion(),
-									"Swallow the "+(multiplePotions?"potions":"potion")+", and tell [npc.name] to do the same."
+									"吞下药剂，而且让[npc.name]也喝下去。"
 									+ (getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isNegative()
-											?" (However, as [npc.name] has a negative desire towards the "+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+" fetish, [npc.sheIsFull] unlikely to listen to you!)"
+											?"(然而，因为[npc.name]对于"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+"性癖有负面情绪，[npc.sheIsFull]并不愿意听你的。)"
 											:"")),
 							AFTER_COMBAT_TRANSFORMATION,
 							applicableFetishes,
@@ -1409,12 +1409,12 @@ public class AlleywayDemonDialogue {
 						return Response.getDisallowedSpittingResponse();
 					};
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-						return new Response("Spit",
-								"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-									+"</b> fetish, you love being transformed so much that you can't bring yourself to spit out the transformative "+(multiplePotions?"potions":"potion")+"!",
+						return new Response("吐出",
+								"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+									+"</b>的性癖，你乐于被转化，所以无法把转化液体吐出来，也不能让[npc.Name]这么做！",
 								null);
 					} else {
-						return new Response("Spit", "Spit out the potion.", AFTER_COMBAT_TRANSFORMATION) {
+						return new Response("吐出", "吐出药水。", AFTER_COMBAT_TRANSFORMATION) {
 							@Override
 							public void effects() {
 								transformationsApplied = true;
@@ -1424,8 +1424,8 @@ public class AlleywayDemonDialogue {
 					}
 					
 				} else if (index == 2) {
-					return new Response("Swallow",
-							"Swallow the "+(multiplePotions?"potions":"potion")+".",
+					return new Response("吞咽",
+							"吞下药水。",
 							AFTER_COMBAT_TRANSFORMATION,
 							applicableFetishes,
 							applicableCorruptionLevel,
@@ -1441,50 +1441,50 @@ public class AlleywayDemonDialogue {
 					};
 					
 				} else if (index == 6 && isCompanionDialogue()) {
-					return new Response("Swallow (both)",
+					return new Response("吞咽(双人)",
 							UtilText.parse(getMainCompanion(),
 									getMainCompanion().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)
-										?"[npc.Name] is not being forced to drink any transformative potions!"
-										:"As [npc.namePos] mouth is blocked, [npc.she] cannot drink any transformative potions!"),
+										?"[npc.Name]没有被强制喂下转化药剂！"
+										:"[npc.namePos]的嘴被堵住了，所以[npc.she]无法喝下任何转化药水！"),
 							null);
 					
 				}  else if (index == 7 && isCompanionDialogue()) {
 					if(Main.game.isSpittingDisabled()) {
-						return Response.getDisallowedSpittingResponse("Spit (both)");
+						return Response.getDisallowedSpittingResponse("吐出(双人)");
 					}
-					return new Response("Spit (both)",
+					return new Response("吐出(双人)",
 							UtilText.parse(getMainCompanion(),
 									getMainCompanion().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)
-										?"[npc.Name] is not being forced to drink any transformative potions!"
-										:"As [npc.namePos] mouth is blocked, [npc.she] cannot drink any transformative potions!"),
+										?"[npc.Name]没有被强制喂下转化药剂！"
+										:"[npc.namePos]的嘴被堵住了，所以[npc.she]无法喝下任何转化药水！"),
 							null);
 				}
 				
 			} else if(isCompanionDialogue()) {
 				if (index == 1) {
-					return new Response("Spit",
+					return new Response("吐出",
 							UtilText.parse(getMainCompanion(),
 									Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)
-										?"You are not being forced to drink any transformative potions!"
-										:"As your mouth is blocked, you cannot drink any transformative potions!"),
+										?"你没有被强制喂下转化药剂！"
+										:"因为你的嘴被堵上了，所以你不能喝下任何转化药水！"),
 							null);
 					
 				} else if (index == 2) {
-					return new Response("Swallow",
+					return new Response("吞咽",
 							UtilText.parse(getMainCompanion(),
 									Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)
-										?"You are not being forced to drink any transformative potions!"
-										:"As your mouth is blocked, you cannot drink any transformative potions!"),
+										?"你没有被强制喂下转化药剂！"
+										:"因为你的嘴被堵上了，所以你不能喝下任何转化药水！"),
 							null);
 					
 				} else if (index == 6) {
 					if(Main.game.isSpittingDisabled()) {
-						return Response.getDisallowedSpittingResponse("Order spit");
+						return Response.getDisallowedSpittingResponse("命令吐出");
 					}
-					return new Response("Order spit",
-							UtilText.parse(getMainCompanion(), "Tell [npc.name] to spit out the "+(companionMultiplePotions?"potions":"potion")+"!"
+					return new Response("要求吐出",
+							UtilText.parse(getMainCompanion(), "告诉[npc.name]把"+(companionMultiplePotions?"药水吐出来":"药水吐出来")+"！"
 									+ (getMainCompanion().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)
-											?" (However, as [npc.name] has the "+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+" fetish, [npc.sheIsFull] unlikely to listen to you!)"
+											?" (然而，因为[npc.name]拥有"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+"的性癖，[npc.sheIsFull]并不愿意听你的。)"
 											:"")),
 							AFTER_COMBAT_TRANSFORMATION) {
 						@Override
@@ -1502,11 +1502,11 @@ public class AlleywayDemonDialogue {
 					};
 					
 				} else if (index == 7) {
-					return new Response("Order swallow",
+					return new Response("要求吞咽",
 							UtilText.parse(getMainCompanion(),
-								"Tell [npc.name] to swallow the "+(companionMultiplePotions?"potions":"potion")+"."
+								"叫[npc.name]吞下药水。"
 								+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isNegative()
-										?" (However, as [npc.she] dislikes being transformed, [npc.sheIsFull] unlikely to listen to you!)"
+										?" (然而，由于讨厌被转化，[npc.sheIsFull]并不愿意听从你！)"
 										:"")),
 							AFTER_COMBAT_TRANSFORMATION,
 							applicableFetishes,
@@ -1533,7 +1533,7 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_TRANSFORMATION = new DialogueNode("Transformed", "", true) {
+	public static final DialogueNode AFTER_COMBAT_TRANSFORMATION = new DialogueNode("被转化", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -1590,11 +1590,11 @@ public class AlleywayDemonDialogue {
 				if(getDemon().isAttractedTo(Main.game.getPlayer())) {
 					if(getDemon().isAttractedTo(getMainCompanion())) { // Threesome sex:
 						if (index == 1) {
-							return new ResponseSex("Sex",
+							return new ResponseSex("做爱",
 									UtilText.parse(getDemon(),
 											getDemon().isWillingToRape()
-												?"[npc.Name] forces [npc.herself] on you"+(companionSex?UtilText.parse(getMainCompanion(), " and [npc.name]"):"")+"..."
-												:"Tell [npc.name] that you"+(companionSex?UtilText.parse(getMainCompanion(), " and [npc.name]"):"")+" would like to have sex with [npc.herHim]."),
+												?"[npc.Name]强行压住了你"+(companionSex?UtilText.parse(getMainCompanion(), "和[npc.name]"):"")+"……"
+												:"告诉[npc.name]"+(companionSex?UtilText.parse(getMainCompanion(), "和[npc.name]"):"")+"你愿意和[npc.herHim]做爱。"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1612,11 +1612,11 @@ public class AlleywayDemonDialogue {
 									UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX_THREESOME", getDemon()));
 							
 						} else if (index == 2) {
-							return new ResponseSex("Eager Sex",
+							return new ResponseSex("做爱(渴求)",
 									UtilText.parse(getDemon(),
 											getDemon().isWillingToRape()
-												?"[npc.Name] forces [npc.herself] on you"+(companionSex?UtilText.parse(getMainCompanion(), " and [npc.name]"):"")+"..."
-												:"Tell [npc.name] that you"+(companionSex?UtilText.parse(getMainCompanion(), " and [npc.name]"):"")+" are more than happy to have sex with [npc.herHim]."),
+												?"[npc.Name]强行压住了你"+(companionSex?UtilText.parse(getMainCompanion(), "和[npc.name]"):"")+"……"
+												:"告诉[npc.name]你"+(companionSex?UtilText.parse(getMainCompanion(), "和[npc.name]"):"")+"十分乐意同[npc.herHim]做爱。"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1635,8 +1635,8 @@ public class AlleywayDemonDialogue {
 									UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX_THREESOME", getDemon()));
 							
 						} else if (index == 3 && Main.game.isNonConEnabled()) {
-							return new ResponseSex("Resist Sex",
-									UtilText.parse(getDemon(), "[npc.Name] forces [npc.herself] on you"+(companionSex?UtilText.parse(getMainCompanion(), " and [npc.name]"):"")+"..."),
+							return new ResponseSex("抵抗做爱",
+									UtilText.parse(getDemon(), "[npc.Name]强行压住了你"+(companionSex?UtilText.parse(getMainCompanion(), "和[npc.name]"):"")+"……"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1655,8 +1655,8 @@ public class AlleywayDemonDialogue {
 									UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX_THREESOME_RESIST", getDemon()));
 							
 						} else if (index == 4 && !getDemon().isWillingToRape()) {
-							return new Response("Refuse",
-									UtilText.parse(getDemon(), "Refuse to have sex with [npc.name] and continue on your way."),
+							return new Response("拒绝",
+									UtilText.parse(getDemon(), "拒绝和[npc.name]做爱，你继续你的行程。"),
 									Main.game.getDefaultDialogue(false)) {
 								@Override
 								public void effects() {
@@ -1668,11 +1668,11 @@ public class AlleywayDemonDialogue {
 						
 					} else { // Solo sex with player:
 						if (index == 1) {
-							return new ResponseSex("Sex",
+							return new ResponseSex("做爱",
 									UtilText.parse(getDemon(),
 											getDemon().isWillingToRape()
-												?"[npc.Name] forces [npc.herself] on you..."
-												:"Tell [npc.name] that you would like to have sex with [npc.herHim]."),
+												?"[npc.Name]强行压住了你……"
+												:"告诉[npc.name]你愿意同[npc.herHim]做爱。"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1683,11 +1683,11 @@ public class AlleywayDemonDialogue {
 									UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX", getDemon()));
 							
 						} else if (index == 2) {
-							return new ResponseSex("Eager Sex",
+							return new ResponseSex("做爱(渴求)",
 									UtilText.parse(getDemon(),
 											getDemon().isWillingToRape()
-												?"[npc.Name] forces [npc.herself] on you..."
-												:"Tell [npc.name] that you are more than happy to have sex with [npc.herHim]."),
+												?"[npc.Name]强行压住了你……"
+												:"告诉[npc.name]非常乐意和[npc.herHim]做爱。"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1699,8 +1699,8 @@ public class AlleywayDemonDialogue {
 									UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX", getDemon()));
 							
 						} else if (index == 3 && Main.game.isNonConEnabled()) {
-							return new ResponseSex("Resist Sex",
-									UtilText.parse(getDemon(), "[npc.Name] forces [npc.herself] on you..."),
+							return new ResponseSex("抵抗做爱",
+									UtilText.parse(getDemon(), "[npc.Name]强行压住了你……"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1712,8 +1712,8 @@ public class AlleywayDemonDialogue {
 									UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX_RESIST", getDemon()));
 							
 						} else if (index == 4 && !getDemon().isWillingToRape()) {
-							return new Response("Refuse",
-									UtilText.parse(getDemon(), "Refuse to have sex with [npc.name] and continue on your way."),
+							return new Response("拒绝",
+									UtilText.parse(getDemon(), "拒绝和[npc.name]做爱，你继续你的行程。"),
 									Main.game.getDefaultDialogue(false)) {
 								@Override
 								public void effects() {
@@ -1728,9 +1728,9 @@ public class AlleywayDemonDialogue {
 						&& Main.getProperties().hasValue(PropertyValue.involuntaryNTR)) { // Solo sex with companion:
 					if(getDemon().isWillingToRape()) {
 						if (index == 1) {
-							return new ResponseSex("Watch rape",
+							return new ResponseSex("旁观强奸",
 									UtilText.parse(getDemon(), getMainCompanion(),
-											"You can do nothing but watch as [npc.name] forces [npc.herself] on [npc2.name]."),
+											"你无能为力，只得眼睁睁看着[npc.name]强迫[npc2.name]。"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1743,9 +1743,9 @@ public class AlleywayDemonDialogue {
 						
 					} else if(companionHappyToHaveSex) {
 						if (index == 1) {
-							return new ResponseSex("Watch sex",
+							return new ResponseSex("观看性爱",
 									UtilText.parse(getDemon(), getMainCompanion(),
-											"You can do nothing but watch as [npc2.name] happily agrees to let [npc.name] fuck [npc2.herHim]."),
+											"你无能为力，值得眼睁睁地看着[npc2.name]欣然同意[npc.name]来干[npc2.herHim]。"),
 									false, false,
 									new SMGeneric(
 											Util.newArrayListOfValues(getDemon()),
@@ -1758,8 +1758,8 @@ public class AlleywayDemonDialogue {
 						
 					} else if (index == 1) {
 						return new Response(
-								UtilText.parse(getMainCompanion(), "[npc.Name] refuses"),
-								UtilText.parse(getDemon(), getMainCompanion(), "It looks like [npc2.name] is going to refuse to have sex with [npc.name]."),
+								UtilText.parse(getMainCompanion(), "[npc.Name]拒绝"),
+								UtilText.parse(getDemon(), getMainCompanion(), "看起来[npc2.name]打算拒绝和[npc.name]做爱。"),
 								Main.game.getDefaultDialogue(false)) {
 							@Override
 							public void effects() {
@@ -1772,11 +1772,11 @@ public class AlleywayDemonDialogue {
 			} else {
 				if(getDemon().isAttractedTo(Main.game.getPlayer())) { // Solo sex with player:
 					if (index == 1) {
-						return new ResponseSex("Sex",
+						return new ResponseSex("做爱",
 								UtilText.parse(getDemon(),
 										getDemon().isWillingToRape()
-											?"[npc.Name] forces [npc.herself] on you..."
-											:"Tell [npc.name] that you would like to have sex with [npc.herHim]."),
+											?"[npc.Name]强行压住了你……"
+											:"告诉[npc.name]你愿意同[npc.herHim]做爱。"),
 								false, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(getDemon()),
@@ -1787,11 +1787,11 @@ public class AlleywayDemonDialogue {
 								UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX", getDemon()));
 						
 					} else if (index == 2) {
-						return new ResponseSex("Eager Sex",
+						return new ResponseSex("做爱(渴求)",
 								UtilText.parse(getDemon(),
 										getDemon().isWillingToRape()
-											?"[npc.Name] forces [npc.herself] on you..."
-											:"Tell [npc.name] that you are more than happy to have sex with [npc.herHim]."),
+											?"[npc.Name]强行压住了你……"
+											:"告诉[npc.name]非常乐意和[npc.herHim]做爱。"),
 								false, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(getDemon()),
@@ -1803,8 +1803,8 @@ public class AlleywayDemonDialogue {
 								UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX", getDemon()));
 						
 					} else if (index == 3 && Main.game.isNonConEnabled()) {
-						return new ResponseSex("Resist Sex",
-								UtilText.parse(getDemon(), "[npc.Name] forces [npc.herself] on you..."),
+						return new ResponseSex("抵抗做爱",
+								UtilText.parse(getDemon(), "[npc.Name]强行压住了你……"),
 								false, false,
 								new SMGeneric(
 										Util.newArrayListOfValues(getDemon()),
@@ -1816,8 +1816,8 @@ public class AlleywayDemonDialogue {
 								UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "START_DEFEATED_SEX_RESIST", getDemon()));
 						
 					} else if (index == 4 && !getDemon().isWillingToRape()) {
-						return new Response("Refuse",
-								UtilText.parse(getDemon(), "Refuse to have sex with [npc.name] and continue on your way."),
+						return new Response("拒绝",
+								UtilText.parse(getDemon(), "拒绝和[npc.name]做爱，你继续你的行程。"),
 								Main.game.getDefaultDialogue(false)) {
 							@Override
 							public void effects() {
@@ -1829,7 +1829,7 @@ public class AlleywayDemonDialogue {
 				}
 			}
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false)) {
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("encounters/dominion/alleywayDemonAttack", "DEFEATED_NO_SEX", getDemon()));
@@ -1842,14 +1842,14 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("返回", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
 		}
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你已经满足了，可以离开让[npc.name]休息一下。";
 		}
 		@Override
 		public String getContent() {
@@ -1872,7 +1872,7 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false)){
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false)){
 					@Override
 					public void effects() {
 						if(getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
@@ -1882,7 +1882,7 @@ public class AlleywayDemonDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory", "There's nothing stopping you from helping yourself to [npc.namePos] clothing and items..."){
+				return new ResponseEffectsOnly("物品栏", "现在你可以随意拿取[npc.namePos]衣服和道具，谁也拦不了你……"){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(getDemon(), InventoryInteraction.FULL_MANAGEMENT);
@@ -1891,9 +1891,9 @@ public class AlleywayDemonDialogue {
 				
 			} else if (index == 10 && !getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {
 				return new Response(
-						"Remove character",
-						UtilText.parse(getDemon(), "Scare [npc.name] away."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+						"移除角色",
+						UtilText.parse(getDemon(), "赶[npc.name]走。"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 						AFTER_COMBAT_VICTORY){
 					@Override
 					public Colour getHighlightColour() {
@@ -1913,14 +1913,14 @@ public class AlleywayDemonDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("Collapse", "", true) {
+	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("瘫软", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 15*60;
 		}
 		@Override
 		public String getDescription(){
-			return "You're completely worn out from [npc.namePos] dominant treatment, and need a while to recover.";
+			return "你在[npc.namePos]的支配下精疲力竭，需要休息一会儿。";
 		}
 		@Override
 		public String getContent() {
@@ -1929,7 +1929,7 @@ public class AlleywayDemonDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", AFTER_SEX_VICTORY) {
+				return new Response("继续", "继续你的旅程。", AFTER_SEX_VICTORY) {
 					@Override
 					public void effects() {
 						if(getDemon().hasFlag(NPCFlagValue.genericNPCBetrayedByPlayer)) {

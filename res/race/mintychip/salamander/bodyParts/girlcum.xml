@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -6,7 +6,7 @@
 	
 	<race>mintychip_salamander</race>
 	
-	<transformationName><![CDATA[salamander]]></transformationName>
+	<transformationName><![CDATA[蝾螈]]></transformationName>
 	
 	<baseFluidType>GIRLCUM</baseFluidType>
 	
@@ -17,11 +17,11 @@
 	<namesFeminine/>
 	
 	<descriptorsMasculine>
-		<name><![CDATA[salamander]]></name>
+		<name><![CDATA[蝾螈]]></name>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<name><![CDATA[salamander]]></name>
+		<name><![CDATA[蝾螈]]></name>
 	</descriptorsFeminine>
 	
 	<defaultFluidModifiers>

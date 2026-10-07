@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[raptor]]></transformationName>
+	<transformationName><![CDATA[猛禽]]></transformationName>
 	
 	<coveringType>innoxia_raptor_feathers</coveringType>
 	
@@ -14,11 +14,11 @@
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>
 	
-	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] an [style.boldRaptor(avian)], [npc.assholeFullDescription].
-	]]></transformationDescription>
+	<transformationDescription><![CDATA[ 
+		[npc.She]现在拥有[style.boldRaptor(禽鸟般)][npc.assholeFullDescription]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] an avian, [npc.anusFullDescription(true)]
-	]]></bodyDescription>
+		拥有禽鸟般[npc.anusFullDescription(true)]
+]]></bodyDescription>
 </ass>

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[safety goggles]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[safety goggles]]></namePlural>
-		<description><![CDATA[A form of protective eyewear which fully enclose and shield the wearer's eyes from particulates and chemicals.]]></description>
+		<determiner><![CDATA[一副]]></determiner>
+		<name><![CDATA[防护眼镜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[防护眼镜]]></namePlural>
+		<description><![CDATA[一种全封闭式的防护眼镜，可以完全包住并保护佩戴者的眼睛，防止颗粒物质和化学物质侵入。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>
@@ -60,51 +59,51 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the safety goggles.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(strap)] the safety goggles into position so that they're shielding [npc2.namePos] [npc2.eyes].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(strap)] the safety goggles into position so that they're shielding [npc2.namePos] [npc2.eyes].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]戴上防护眼镜。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将防护眼镜固定到位置，以保护[npc2.namePos]的[npc2.eyes]。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将防护眼镜粗暴地固定到位置，以保护[npc2.namePos]的[npc2.eyes]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] safety goggles.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] safety goggles.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] safety goggles and roughly [npc.verb(pull)] them off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]摘下[npc.her]的防护眼镜。
+]]></self>
+		<other><![CDATA[
+[npc.Name]脱下了[npc2.namePos]的防护眼镜。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地脱下[npc2.namePos]的防护眼镜。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] safety goggles back down to shield [npc.her] [npc.eyes].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] safety goggles back down to shield [npc2.her] [npc2.eyes].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] safety goggles back down to shield [npc2.her] [npc2.eyes].]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的防护眼镜向下拉，遮住了[npc.her]的[npc.eyes]。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的防护眼镜向下拉，盖住了[npc2.her]的[npc2.eyes]。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的防护眼镜向下拉，盖住了[npc2.her]的[npc2.eyes]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] safety goggles up onto [npc.her] forehead.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] safety goggles up onto [npc2.her] forehead.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(grab)] hold [npc2.namePos] safety goggles and roughly [npc.verb(pull)] them up onto [npc2.her] forehead.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的防护眼镜拉到[npc.her]的额头上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的防护眼镜拉到[npc2.her]的额头上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]抓住了[npc2.namePos]的防护眼镜，粗暴地将它们拉到[npc2.her]额头上。
+]]></otherRough>
 	</displacementText>
   
 </clothing>

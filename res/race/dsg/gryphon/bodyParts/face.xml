@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <face>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_gryphon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[gryphon]]></transformationName>
+	<transformationName><![CDATA[狮鹫]]></transformationName>
 	
 	<!-- The id of the material covering this face.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -43,21 +43,21 @@
 	<!-- The descriptors which should be drawn upon when describing a masculine character's face of this type.
 	Can be left blank. -->
 	<descriptorsMasculine>
-		<descriptor>anthropomorphic gryphon-like</descriptor>
-		<descriptor>gryphon-like</descriptor>
-		<descriptor>avian</descriptor>
+		<descriptor><![CDATA[狮鹫般拟人]]></descriptor>
+		<descriptor><![CDATA[狮鹫般]]></descriptor>
+		<descriptor><![CDATA[鸟类]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor>anthropomorphic gryphon-like</descriptor>
-		<descriptor>gryphon-like</descriptor>
-		<descriptor>avian</descriptor>
+		<descriptor><![CDATA[狮鹫般拟人]]></descriptor>
+		<descriptor><![CDATA[狮鹫般]]></descriptor>
+		<descriptor><![CDATA[鸟类]]></descriptor>
 	</descriptorsFeminine>
 	
 	
 	<!-- The singular and plural names of the nose associated with this face type.
 	For most faces, it will be 'nose' and 'noses'. -->
-	<noseName><![CDATA[beak]]></noseName>
+	<noseName><![CDATA[喙]]></noseName>
 	<noseNamePlural><![CDATA[beaks]]></noseNamePlural>
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's nose of this type.
@@ -73,20 +73,20 @@
 	<!-- The description which is shown when a character transforms to obtain this face type.
 	This description immediately follows a brief description of the face type beginning to transform. -->
 	<transformationDescription><![CDATA[
-		[npc.Her] nose and mouth twitch and transform as they push out into a sharp, dangerously hooked gryphon-like beak, and [npc.her] tongue tapers into a similarly animalistic one to fit.
+		[npc.Her]的鼻子和嘴微微抽动，随后便转化为了尖锐又危险的钩状狮鹫喙部，舌头形状也逐渐变细，与动物类似。
 		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face, 
+			一层[npc.faceSkin+]细毛迅速长出并覆盖了她的新脸，
 		#ELSE
-			 Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+], 
+			就像她身体的其它部位一样，她的新脸[npc.materialDescriptor][npc.faceSkin+]， 
 		#ENDIF
-		and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.
-		<br/>[npc.Name] now [npc.has] an anthropomorphic [style.boldGryphon(gryphon-like face)], [npc.materialDescriptor] [npc.faceFullDescription]. Within [npc.her] [npc.mouth], [npc.she] [npc.has] a [style.boldGryphon(tapered, gryphon-like tongue)].
+		当转化彻底完成时，[npc.sheIs]试图喘口气，却发出了娇喘和呻吟。
+		<br/>[npc.Name]现在拥有一张似人的[style.boldGryphon(狮鹫般的脸)]，[npc.materialDescriptor][npc.faceFullDescription]。在[npc.her]嘴中有一根[style.boldGryphon(逐渐变细的狮鹫舌头)]。
 	]]></transformationDescription>
 	
 	<!-- How this face is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, gryphon-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a sharp beak.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的狮鹫面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有尖锐的喙。
+]]></bodyDescription>
 	
 	<bodyDescriptionFeral><![CDATA[
 		[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a sharp beak.

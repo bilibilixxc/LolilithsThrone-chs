@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <leg>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_raccoon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[raccoon]]></transformationName>
+	<transformationName><![CDATA[浣熊]]></transformationName>
 	
 	<!-- The id of the material covering this leg.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -47,53 +47,53 @@
 	<!-- The singular and plural name of this leg type.
 	These should be left as 'leg' and 'legs' for standard leg types.
 	The values 'tail/tails', 'tentacle/tentacles' should be used if this leg type is a serpent/fish tail or a collection of tentacles, respectively. -->
-	<name><![CDATA[leg]]></name>
-	<namePlural><![CDATA[legs]]></namePlural> 
+	<name><![CDATA[腿]]></name>
+	<namePlural><![CDATA[腿]]></namePlural> 
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's leg of this type.
 	Can be left blank. -->
 	<descriptorsMasculine>
-		<descriptor>masculine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>anthropomorphic, raccoon-like</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[男性]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[浣熊般拟人]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>anthropomorphic, raccoon-like</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[浣熊般拟人]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsFeminine>
 	
 	<!-- Same descriptor formats as those for the leg type above, but these describe the leg's feet.
 	Foot type descriptors are also used, so these are extra definitions related to this leg type's race. -->
 	<footDescriptorsMasculine>
-		<descriptor>raccoon-like</descriptor>
+		<descriptor><![CDATA[浣熊般]]></descriptor>
 	</footDescriptorsMasculine>
 	<footDescriptorsFeminine>
-		<descriptor>raccoon-like</descriptor>
+		<descriptor><![CDATA[浣熊般]]></descriptor>
 	</footDescriptorsFeminine>
 	
 	<!-- Same naming formats as those for the leg type above, but these describe the leg's toes.
 	Foot type's toe descriptors are also used, so these are extra definitions related to this leg type's race. -->
 	<toeDescriptorsMasculine>
-		<descriptor>raccoon-like</descriptor>
+		<descriptor><![CDATA[浣熊般]]></descriptor>
 	</toeDescriptorsMasculine>
 	<toeDescriptorsFeminine>
-		<descriptor>raccoon-like</descriptor>
+		<descriptor><![CDATA[浣熊般]]></descriptor>
 	</toeDescriptorsFeminine>
 	
 	<!-- The description which is shown when a character transforms to obtain this leg type.
 	This description immediately follows a brief description of the leg type beginning to transform. -->
 	<transformationDescription><![CDATA[
-		A layer of raccoon-like fur quickly grows over [npc.her] legs as they shift into a new form. As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and tough leathery pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet. As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.
-		<br/>[npc.Name] now [npc.has] anthropomorphic, [style.boldRaccoon(raccoon-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].
-	]]></transformationDescription>
+		[npc.her]的双腿转化成了新的形式，一层浣熊皮毛迅速覆盖了上去。[npc.her]的新皮毛覆盖到了其脚趾的末端，[npc.her]的脚趾甲变粗成了锐利的爪子，皮革质感的肉掌从脚底板长出，将脚完全变成浣熊的形状。转变完成时，[npc.she]看到皮毛自然过渡成了覆盖到大腿上部的[npc.skin]。
+	<br/>[npc.Name]现在拥有似人非人的[style.boldRaccoon(浣熊一般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。
+]]></transformationDescription>
 	
 	<!-- How these legs are described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic raccoon-like paws, complete with sharp claws and tough leathery pads.
-	]]></bodyDescription>
+		[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，[npc.her]的脚转变成了似人且像浣熊一般的脚，长着尖锐的爪子和硬皮质感的肉垫。
+]]></bodyDescription>
 	
 </leg>

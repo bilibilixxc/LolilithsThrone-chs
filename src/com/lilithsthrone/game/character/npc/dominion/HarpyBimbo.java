@@ -59,10 +59,10 @@ public class HarpyBimbo extends NPC {
 	}
 	
 	public HarpyBimbo(boolean isImported) {
-		super(isImported, new NameTriplet("Brittany"), "Blomgren",
-				"One of the more notable harpy matriarchs, Brittany is the leader of a flock of harpies."
-						+ " In order to get into her good graces, most of her flock try to mimic her behaviour and appearance."
-						+ " As a result, Brittany's flock is primarily made up of bleach-blonde bimbos.",
+		super(isImported, new NameTriplet("布里塔尼"), "布洛姆根",
+				"布里塔尼是一位更为尊贵的哈比族长，一群哈比的首领。"
+						+ "为了博得她的欢心，她族群中的大多数都试图模仿她的行为和外表。"
+						+ "因而，布里塔尼的族群基本都是一群亮金色羽毛、胸大无脑的哈比。",
 				24, Month.MARCH, 17,
 				7, Gender.F_V_B_FEMALE, Subspecies.HARPY, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HARPY_NEST_YELLOW, true);
@@ -343,8 +343,8 @@ public class HarpyBimbo extends NPC {
 		if(user.isPlayer() && !target.isPlayer() && (item.getItemType().equals(ItemType.FETISH_UNREFINED) || item.getItemType().equals(ItemType.FETISH_REFINED))) {
 			return new Value<>(false,
 					"<p>"
-						+ "You try to give [npc.name] your "+item.getName()+", but [npc.she] takes one look at it and laughs,"
-						+ " [npc.speechNoEffects(Erm, do you, like, seriously expect me to drink that icky-lookin' potion?! That's, like, totally not happening!)]"
+						+ "你想把"+item.getName()+"交给[npc.name]，但[npc.she]却只是瞧了一眼，便笑道，"
+						+ "[npc.speechNoEffects(额嗯，我说，你该不是认真的吧，要让我喝那个看着黏糊糊的药水？！我说，完全不可能！)]"
 					+ "</p>");
 		}
 		

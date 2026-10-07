@@ -55,10 +55,10 @@ public class Rose extends NPC {
 	}
 	
 	public Rose(boolean isImported) {
-		super(isImported, new NameTriplet("Rose"), "Thorne",
-				"Rose is Lilaya's slave, and is the only other member of her household that you've ever seen."
-						+ " A partial cat-girl, Rose is treated with extreme fondness by Lilaya, and appears to be the only other person Lilaya has any regular contact with."
-						+ " Their relationship strays into something more than a master-slave arrangement, and Rose and Lilaya can often be seen hugging and whispering to one another.",
+		super(isImported, new NameTriplet("萝丝"), "索恩",
+				"萝丝是莉莱雅的奴隶，也是你在莉莱雅家唯二除莉莱雅之外见过的另一个家庭成员。"
+						+ "萝丝是一个亚猫女，她被莉莱雅极尽宠爱，显然也是唯一与莉莱雅有日常联系的人。"
+						+ "她们的关系在某些方面超过了主奴的界限，你常常看见萝丝和莉莱雅互相拥抱着，在对方耳边低声呢喃。",
 				20, Month.MARCH, 5,
 				10, Gender.F_V_B_FEMALE, Subspecies.CAT_MORPH, RaceStage.PARTIAL_FULL,
 				new CharacterInventory(false, 10), WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_ROSE, true);

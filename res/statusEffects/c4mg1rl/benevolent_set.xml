@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<renderingPriority>70</renderingPriority>
 	<renderInEffectsPanel>true</renderInEffectsPanel>
@@ -7,10 +7,10 @@
 	<combatEffect>false</combatEffect>
 	<sexEffect>false</sexEffect>
 	<tags/>
-	<name><![CDATA[Benevolent Blessing]]></name>
+	<name><![CDATA[仁慈赐福]]></name>
 	<description><![CDATA[
-		By wearing the benevolent set, [npc.nameIs] filled with a sense of peaceful tranquility. [npc.name] [npc.verb(feel)] as though [npc.she] can save the world!
-	]]></description>
+		穿上这套仁善套装后，[npc.name]的内心被平和与宁静充满。[npc.she]感觉自己可以拯救世界！
+]]></description>
 	<imageName>benevolent_set.svg</imageName>
 	<colourPrimary>CLOTHING_RED_DARK</colourPrimary>
 	<colourSecondary/>

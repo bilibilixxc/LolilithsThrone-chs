@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[A tag discreetly sewn into the poncho's inner lining informs you that it was made by 'Serpentia Silk&Satin Ltd.'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[披衫里缝着的标签告诉你这是由"Serpentia Silk&Satin Ltd."制作的。]]></clothingAuthorTag>
 
 		<value>750</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一张]]></determiner>
 		
-		<name><![CDATA[poncho]]></name>
+		<name><![CDATA[披衫]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[ponchos]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[披衫]]></namePlural> 
 		
-		<description><![CDATA[A fringed blanket shaped for easy wear, it makes for a warm yet airy garment suitable for a broad range of temperatures.]]></description> 
+		<description><![CDATA[一张温暖又透气的流苏毯，适合在各种天气下穿着。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -69,27 +69,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the poncho.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(put)] the poncho onto [npc2.name].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(put)] the poncho onto [npc2.name].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]披上披衫。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将披衫披在[npc2.name]身上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将披衫批在[npc2.name]的身上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] poncho.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] poncho.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] poncho.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]脱下[npc.her]的披衫。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将披衫从[npc2.namePos]身上脱下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将披衫从[npc2.namePos]的身上扯下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

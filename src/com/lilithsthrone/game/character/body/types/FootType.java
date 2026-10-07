@@ -19,17 +19,17 @@ import com.lilithsthrone.utils.Util;
  */
 public class FootType {
 
-	public static AbstractFootType NONE = new AbstractFootType("none",
-			"none",
-			"none",
+	public static AbstractFootType NONE = new AbstractFootType("无",
+			"无",
+			"无",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"none",
-			"none",
+			"无",
+			"无",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"footjob",
-			"[npc.SheHasFull] no feet.",
+			"足交",
+			"[npc.SheHasFull]没有脚。",
 			Util.newArrayListOfValues(FootStructure.NONE)) {
 				@Override
 				public String getFootNailPolishDescription(GameCharacter owner) {
@@ -37,158 +37,158 @@ public class FootType {
 				}
 	};
 	
-	public static AbstractFootType HUMANOID = new AbstractFootType("humanoid",
-			"foot",
-			"feet",
-			Util.newArrayListOfValues("masculine"),
-			Util.newArrayListOfValues("feminine", "soft", "delicate", "slender"),
-			"toe",
-			"toes",
-			Util.newArrayListOfValues("masculine"),
-			Util.newArrayListOfValues("feminine", "soft", "delicate", "slender"),
-			"footjob",
-			"[npc.SheHasFull] human-like feet.",
+	public static AbstractFootType HUMANOID = new AbstractFootType("人类",
+			"脚",
+			"脚",
+			Util.newArrayListOfValues("阳刚"),
+			Util.newArrayListOfValues("阴柔", "柔软", "精致", "修长"),
+			"脚趾",
+			"脚趾",
+			Util.newArrayListOfValues("阳刚"),
+			Util.newArrayListOfValues("阴柔", "柔软", "精致", "修长"),
+			"足交",
+			"[npc.SheHasFull]拥有像人一样的脚。",
 			Util.newArrayListOfValues(FootStructure.PLANTIGRADE)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " [npc.Her] toenails have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "[npc.Her]的脚趾甲上涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 
-	public static AbstractFootType PAWS = new AbstractFootType("paw-like",
-			"paw",
-			"paws",
-			Util.newArrayListOfValues("masculine","padded"),
-			Util.newArrayListOfValues("feminine", "soft", "padded", "delicate", "slender"),
-			"toe",
-			"toes",
-			Util.newArrayListOfValues("masculine", "padded"),
-			Util.newArrayListOfValues("feminine", "soft", "padded", "delicate", "slender"),
-			"footjob",
-			"[npc.SheHasFull] paw-like feet.",
+	public static AbstractFootType PAWS = new AbstractFootType("爪一般",
+			"脚爪",
+			"脚爪",
+			Util.newArrayListOfValues("男性化","带肉垫"),
+			Util.newArrayListOfValues("阴柔", "柔软", "带肉垫", "精致", "纤细"),
+			"脚趾",
+			"脚趾",
+			Util.newArrayListOfValues("阳刚", "肉垫"),
+			Util.newArrayListOfValues("阴柔", "柔软", "带肉垫", "精致", "纤细"),
+			"足交",
+			"[npc.SheHasFull]拥有爪一般的脚。",
 			Util.newArrayListOfValues(
 					FootStructure.PLANTIGRADE,
 					FootStructure.DIGITIGRADE)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " [npc.Her] toenails have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "[npc.Her]的脚趾甲上涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 
-	public static AbstractFootType HOOFS = new AbstractFootType("hoof-like",
-			"hoof",
-			"hoofs",
-			Util.newArrayListOfValues("masculine","hard"),
-			Util.newArrayListOfValues("feminine", "delicate", "hard"),
-			"hoof",
-			"hoofs",
-			Util.newArrayListOfValues("masculine", "hard"),
-			Util.newArrayListOfValues("feminine", "hard", "delicate"),
-			"hoofjob",
-			"[npc.SheHasFull] hoofs in place of feet.",
+	public static AbstractFootType HOOFS = new AbstractFootType("蹄子般",
+			"蹄子",
+			"蹄子",
+			Util.newArrayListOfValues("阳刚","坚硬"),
+			Util.newArrayListOfValues("阴柔", "精致", "坚硬"),
+			"蹄",
+			"蹄子",
+			Util.newArrayListOfValues("阳刚", "坚硬"),
+			Util.newArrayListOfValues("阴柔", "坚硬", "精致"),
+			"蹄交",
+			"[npc.SheHasFull]拥有蹄子而非脚。",
 			Util.newArrayListOfValues(
 					FootStructure.UNGULIGRADE)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " [npc.Her] hoofs have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "[npc.Her]的蹄子涂上了"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 
-	public static AbstractFootType REPTILIAN = new AbstractFootType("reptilian",
-			"foot",
-			"feet",
-			Util.newArrayListOfValues("masculine","clawed"),
-			Util.newArrayListOfValues("feminine", "clawed", "slender"),
-			"toe",
-			"toes",
-			Util.newArrayListOfValues("masculine", "clawed"),
-			Util.newArrayListOfValues("feminine", "clawed", "slender"),
-			"footjob",
-			"[npc.SheHasFull] reptilian feet.",
+	public static AbstractFootType REPTILIAN = new AbstractFootType("爬行类",
+			"脚",
+			"脚",
+			Util.newArrayListOfValues("阳刚","带爪"),
+			Util.newArrayListOfValues("阴柔", "带爪", "修长"),
+			"脚趾",
+			"脚趾",
+			Util.newArrayListOfValues("阳刚", "带爪"),
+			Util.newArrayListOfValues("阴柔", "带爪", "修长"),
+			"足交",
+			"[npc.SheHasFull]拥有爬行类的脚。",
 			Util.newArrayListOfValues(
 					FootStructure.PLANTIGRADE,
 					FootStructure.DIGITIGRADE)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " The claws at the end of [npc.her] stout toes have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "在[npc.her]粗短脚趾顶端的爪子上涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 
-	public static AbstractFootType AMPHIBIAN = new AbstractFootType("amphibian",
-			"foot",
-			"feet",
-			Util.newArrayListOfValues("masculine", "webbed"),
-			Util.newArrayListOfValues("feminine", "webbed", "slender"),
-			"toe",
-			"toes",
-			Util.newArrayListOfValues("masculine", "webbed"),
-			Util.newArrayListOfValues("feminine", "webbed", "slender"),
-			"footjob",
-			"[npc.SheHasFull] amphibian feet.",
+	public static AbstractFootType AMPHIBIAN = new AbstractFootType("两栖类",
+			"脚",
+			"脚",
+			Util.newArrayListOfValues("阳刚", "带蹼"),
+			Util.newArrayListOfValues("阴柔", "带蹼", "修长"),
+			"脚趾",
+			"脚趾",
+			Util.newArrayListOfValues("阳刚", "带蹼"),
+			Util.newArrayListOfValues("阴柔", "带蹼", "修长"),
+			"足交",
+			"[npc.SheHasFull]拥有两栖类的脚。",
 			Util.newArrayListOfValues(
 					FootStructure.PLANTIGRADE,
 					FootStructure.DIGITIGRADE)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " The ends of [npc.her] toes have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "[npc.her]脚趾的顶端涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 
-	public static AbstractFootType TALONS = new AbstractFootType("bird-like",
-			"talon",
-			"talons",
-			Util.newArrayListOfValues("masculine","clawed"),
-			Util.newArrayListOfValues("feminine", "clawed", "slender"),
-			"claw",
-			"claws",
-			Util.newArrayListOfValues("masculine", "sharp"),
-			Util.newArrayListOfValues("feminine", "sharp", "slender"),
-			"clawjob",
-			"[npc.SheHasFull] bird-like talons in place of feet.",
+	public static AbstractFootType TALONS = new AbstractFootType("鸟一般",
+			"利爪",
+			"利爪",
+			Util.newArrayListOfValues("阳刚","带爪"),
+			Util.newArrayListOfValues("阴柔", "带爪", "修长"),
+			"爪子",
+			"爪子",
+			Util.newArrayListOfValues("阳刚", "尖锐"),
+			Util.newArrayListOfValues("阴柔", "尖锐", "修长"),
+			"爪交",
+			"[npc.SheHasFull]拥有鸟一样的利爪而非脚。",
 			Util.newArrayListOfValues(
 					FootStructure.DIGITIGRADE)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " The claws on [npc.her] talons have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "[npc.her]鸟爪的爪子上涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 
-	public static AbstractFootType ARACHNID = new AbstractFootType("arachnid",
-			"foot",
-			"feet",
-			Util.newArrayListOfValues("masculine","segmented"),
-			Util.newArrayListOfValues("feminine", "segmented", "slender"),
-			"claw",
-			"claws",
-			Util.newArrayListOfValues("masculine", "sharp"),
-			Util.newArrayListOfValues("feminine", "sharp", "slender"),
-			"clawjob",
-			"[npc.SheHasFull] arachnid claws in place of feet.",
+	public static AbstractFootType ARACHNID = new AbstractFootType("蛛形",
+			"脚",
+			"脚",
+			Util.newArrayListOfValues("阳刚","节节分明"),
+			Util.newArrayListOfValues("阴柔", "节节分明", "纤细"),
+			"爪子",
+			"爪子",
+			Util.newArrayListOfValues("阳刚", "尖锐"),
+			Util.newArrayListOfValues("阴柔", "尖锐", "修长"),
+			"爪交",
+			"[npc.SheHasFull]拥有蛛形爪而非脚。",
 			Util.newArrayListOfValues(
 					FootStructure.PLANTIGRADE,
 					FootStructure.DIGITIGRADE)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " The claws on [npc.her] arachnid legs have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "[npc.her]蛛形的爪上涂了"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 
-	public static AbstractFootType TENTACLE = new AbstractFootType("tentacle",
-			"tentacle",
-			"tentacles",
-			Util.newArrayListOfValues("masculine","strong"),
-			Util.newArrayListOfValues("feminine", "strong", "slender"),
-			"sucker",
-			"suckers",
-			Util.newArrayListOfValues("strong"),
-			Util.newArrayListOfValues("strong"),
-			"tentaclejob",
-			"The ends of [npc.her] tentacles are used in much the same way as feet.",
+	public static AbstractFootType TENTACLE = new AbstractFootType("触手",
+			"触手",
+			"触手",
+			Util.newArrayListOfValues("阳刚","有力"),
+			Util.newArrayListOfValues("阴柔", "有力", "修长"),
+			"吸盘",
+			"吸盘",
+			Util.newArrayListOfValues("有力"),
+			Util.newArrayListOfValues("有力"),
+			"触手淫",
+			"[npc.her]的触手顶端可以当做脚来用。",
 			Util.newArrayListOfValues(
 					FootStructure.TENTACLED)) {
 		@Override
 		public String getFootNailPolishDescription(GameCharacter owner) {
-			return " The tips of [npc.her] tentacles have been painted in "+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+".";
+			return "[npc.her]触手的顶端涂着"+owner.getCovering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET).getFullDescription(owner, true)+"。";
 		}
 	};
 	

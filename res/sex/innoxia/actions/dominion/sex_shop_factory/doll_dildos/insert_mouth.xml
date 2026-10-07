@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -34,9 +34,9 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Oral test]]></title>
+	<title><![CDATA[口交检测]]></title>
 	<tooltip><![CDATA[
-		Test out the next dildo on the doll.
+		在玩偶上检测下一个假阳具。
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -44,15 +44,15 @@
 				[#sex.getNumberOfOrgasms(pc)==0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Picking up a dark purple dildo from the table, the doll steps towards you and commands, [doll.speech(Open wide. This first one's going down your throat.)]
+				玩偶从桌上拿起一根深紫色的假阳具，向你走来并命令道，[doll.speech(张大嘴巴，第一根要进入你的喉咙了。)]
 				
 				<br/><br/>
 				
-				Committed to your course of action, you don't really have to do anything but remain still to obey the doll, as your plump lips are already formed into a resting 'o' shape. After carefully pushing the tip of the dildo into your mouth, the doll suddenly rams the entire length of it down your throat, causing you to let out a muffled, gargled cry.
+				你其实什么都不用做，只要保持静止听从玩偶的命令就行了，你丰满的嘴唇已经变成了一个静止的“O”形，玩偶小心翼翼地把假阳具的尖端塞进你的嘴里，然后突然把整根假阳具塞入你的喉咙，让你发出一声低沉模糊的哭喊。
 				
 				<br/><br/>
 				
-				[doll.speech(Fuck your throat with that toy,)] the red doll commands in an expressionless tone, before turning to the table to get the next dildo...
+				[doll.speech(用那个玩具操你自己的喉咙，)]红色玩偶用毫无情感的语气命令道，然后转身走向桌子去拿下一根假阳具……
 			]]></text>
 		</description>
 		<description>
@@ -60,17 +60,17 @@
 				[#sex.getNumberOfOrgasms(pc)>0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Pulling the dark purple dildo out of your mouth, the doll places it on the table and retrieves the next toy that's going down your throat.
+				玩偶将深紫色的假阳具从你的嘴里拔出，放在桌子上，然后拿出下一根要塞进你喉咙的玩具。
 				#IF(pc.getClothingInSlot(IS_ANUS)==null)
-					 The huge, [units.sizeShort(45)]-long dildo which she retrieves is shaped like a realistic horse's penis, and has been coloured in shades of blue, from dark at the base to light at the wide, flared tip.
+					她取出了一根巨大的假阳具，有[units.sizeShort(45)]长，形状像一根逼真的马阴茎，拥有蓝色的底纹，根部是深色的，到了宽大的喇叭形尖端就渐变成了浅色。
 				#ELSE
-					 The huge, equine dildo which she retrieves is similar to the one that's in your ass, but this particular toy has been coloured in shades of blue, from dark at the base to light at the wide, flared tip.
+					她取出的巨大的马形假阳具与你屁股里的那根很相似，但这根特殊的玩具拥有蓝色的底纹，根部是深色的，到了宽大的喇叭形尖端就渐变成了浅色。
 				#ENDIF
-				 Treating you like nothing more than an object to be used for her tests, the doll unceremoniously pushes the head of the dildo past your 'o'-shaped lips and into your mouth, before using her palm to push on the flat base and force the entire length down your throat.
+				玩偶把你当成了她的测试用具，毫不客气地把假阳具的尖端推过你“O”形的嘴唇，塞进你的嘴里，然后用她的手掌按压平坦的底座，把整根假阳具塞入你的喉咙。
 				
 				<br/><br/>
 				
-				[doll.speech(Leave it like that and use your tongue to massage it,)] the red doll commands as she turns to retrieve the next toy.
+				[doll.speech(保持这个姿势，用舌头按摩它，)]红色玩偶一边命令道，一边转身去拿下一个玩具。
 			]]></text>
 		</description>
 	</descriptions>

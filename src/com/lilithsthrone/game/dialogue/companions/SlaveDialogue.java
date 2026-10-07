@@ -401,7 +401,7 @@ public class SlaveDialogue {
 	}
 	
 	private static boolean enslavementWorked = false;
-	public static final DialogueNode DEFAULT_ENSLAVEMENT_DIALOGUE = new DialogueNode("New Slave", "", true) {
+	public static final DialogueNode DEFAULT_ENSLAVEMENT_DIALOGUE = new DialogueNode("新奴隶", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(!SlaveDialogue.getEnslavementTarget().isSlave() && SlaveDialogue.getEnslavementTarget().isAbleToBeEnslaved() && Main.game.getPlayer().isHasSlaverLicense()) {
@@ -415,7 +415,7 @@ public class SlaveDialogue {
 			GameCharacter target = enslavementTarget;
 			AbstractClothing enslavementClothing = target.getEnslavementClothing();
 			UtilText.addSpecialParsingString(enslavementClothing.getName(), true);
-			UtilText.addSpecialParsingString(enslavementClothing.getClothingType().isPlural()?"them":"it", false);
+			UtilText.addSpecialParsingString(enslavementClothing.getClothingType().isPlural()?"它们":"它", false);
 			String path = "characters/enslavement";
 			if(target instanceof NPCOffspring) {
 				path = "characters/offspring/enslavement";
@@ -460,8 +460,8 @@ public class SlaveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
 				if(enslavementWorked) {
-					return new Response("Continue",
-							"Carry on your way.",
+					return new Response("继续",
+							"继续你的旅程。",
 							SlaveDialogue.getFollowupEnslavementDialogue()){
 						@Override
 						public void effects() {
@@ -475,8 +475,8 @@ public class SlaveDialogue {
 					};
 					
 				} else {
-					return new Response("Continue",
-							UtilText.parse(SlaveDialogue.getEnslavementTarget(), "That didn't work, but it doesn't mean you're finished with [npc.name] yet!"),
+					return new Response("继续",
+							UtilText.parse(SlaveDialogue.getEnslavementTarget(), "虽然不起效果，但你可没想放过[npc.name]！"),
 							SlaveDialogue.getFollowupEnslavementDialogue());
 				}
 				
@@ -486,7 +486,7 @@ public class SlaveDialogue {
 		}
 	};
 	
-	public static final DialogueNode FREEDOM_DIALOG = new DialogueNode("Freed Slave", "", true) {
+	public static final DialogueNode FREEDOM_DIALOG = new DialogueNode("已释放奴隶", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getTextEndStringBuilder().append(enslavementTarget.incrementAffection(Main.game.getPlayer(), -25));
@@ -496,14 +496,14 @@ public class SlaveDialogue {
 			GameCharacter target = enslavementTarget;
 			AbstractClothing enslavementClothing = target.getEnslavementClothing();
 			UtilText.addSpecialParsingString(enslavementClothing.getName(), true);
-			UtilText.addSpecialParsingString(enslavementClothing.getClothingType().isPlural()?"them":"it", false);
+			UtilText.addSpecialParsingString(enslavementClothing.getClothingType().isPlural()?"它们":"它", false);
 			return UtilText.parseFromXMLFile("characters/enslavement", "ENSLAVEMENT_FAIL_FREEDOM_CERTIFICATION", target);
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue",
-						UtilText.parse(SlaveDialogue.getEnslavementTarget(), "That didn't work, but it doesn't mean you're finished with [npc.name] yet!"),
+				return new Response("继续",
+						UtilText.parse(SlaveDialogue.getEnslavementTarget(), "虽然不起效果，但你可没想放过[npc.name]！"),
 						SlaveDialogue.getFollowupEnslavementDialogue());
 			}
 			return null;
@@ -518,8 +518,8 @@ public class SlaveDialogue {
 				// Pregnant encounters:
 				if(!getSlave().isCharacterReactedToPregnancy(Main.game.getPlayer())) {
 					sb.append("<p>");
-						sb.append("As you look at the [npc.race], it's impossible not to notice the fact that [npc.sheIs] sporting a round belly.");
-						sb.append(" [npc.She] absent-mindedly #IF(npc.isTaur())gestures towards#ELSEstrokes#ENDIF [npc.her] swollen bump as [npc.she] returns your gaze,");
+						sb.append("当你看到[npc.race]时，很难不注意到[npc.sheIs]正挺着孕肚。");
+						sb.append("[npc.She]和你对视时心神恍惚地#IF(npc.isTaur())示意着#ELSE轻抚着#ENDIF[npc.her]隆起的腹部，");
 					
 					GameCharacter father = getSlave().getPregnantLitter().getFather();
 					
@@ -528,48 +528,48 @@ public class SlaveDialogue {
 							case DISLIKE:
 								switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 									case DISOBEDIENT:
-										sb.append(" not bothering to even to try and conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] spits,"
-												+ " [npc.speech(Eugh, it's <i>you</i>. You went and got me pregnant, so I expect some time off work. Fucking asshole...)]");
+										sb.append("[npc.she]向你吐口水时甚至没有掩饰[npc.eyes]中的恨意，"
+												+ "[npc.speech(呸，都是<i>你</i>。你让我怀孕了，所以我这段时间不能工作，该死的混蛋……)]");
 										break;
 									case NEUTRAL:
-										sb.append(" trying to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] remarks,"
-												+ " [npc.speech(Oh, hello, [npc.pcName]. You got me pregnant, so I'll need some time off work.)]");
+										sb.append("[npc.she]努力抑制[npc.eyes]中流露出的恨意，说道，"
+												+ "[npc.speech(哦，嗨，[npc.pcName]。你让我怀孕了，所以我需要一些时间来休息。)]");
 										break;
 									case OBEDIENT:
-										sb.append(" obediently doing [npc.her] very best to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] calls out,"
-												+ " [npc.speech(Hello, [npc.pcName]. As I'm sure you can see, you've got me pregnant...)]");
+										sb.append("[npc.she]呼唤着你并顺从地掩饰着[npc.her]眼中的恨意，"
+												+ "[npc.speech(嗨，[npc.pcName]。我相信你看得出来，你让我怀孕了……)]");
 										break;
 								}
 								break;
 							case NEUTRAL:
 								switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 									case DISOBEDIENT:
-										sb.append(" sighing,"
-												+ " [npc.speech(Hi, [npc.pcName]. You got me pregnant, so I'm going to need to take it easy for a while, ok?)]");
+										sb.append("叹了口气，"
+												+ "[npc.speech(嗨，[npc.pcName]。你让我怀孕了，所以我这段时间需要放松一下，好吗？)]");
 										break;
 									case NEUTRAL:
-										sb.append(" sighing,"
-												+ " [npc.speech(Hello, [npc.pcName]. You got me pregnant...)]");
+										sb.append("叹了口气，"
+												+ "[npc.speech(嗨，[npc.pcName]。你让我怀孕了……)]");
 										break;
 									case OBEDIENT:
-										sb.append(" sighing,"
-												+ " [npc.speech(Hello, [npc.pcName]. You got me pregnant... I'll make sure to take good care of our children!)]");
+										sb.append("叹了口气，"
+												+ "[npc.speech(嗨，[npc.pcName]。你让我怀孕了……所以我得做好照顾好孩子的准备！)]");
 										break;
 								}
 								break;
 							case LIKE:
 								switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 									case DISOBEDIENT:
-										sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-												+ " [npc.speech([npc.PcName]! Look! You got me pregnant, isn't it wonderful?! I'm going to need to take it easy for a while, so that I can take good care of myself, ok?)]");
+										sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+												+ "[npc.speech([npc.PcName]！看！你让我怀孕了，是不是很棒？！我需要休息一段时间，这样才能照顾好自己，怎么样？)]");
 										break;
 									case NEUTRAL:
-										sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-												+ " [npc.speech([npc.PcName]! You got me pregnant, isn't it wonderful?! I'll make sure to take good care of our children!)]");
+										sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+												+ "[npc.speech([npc.PcName]！你让我怀孕了，是不是很棒？！我一定会照顾好我们的孩子！)]");
 										break;
 									case OBEDIENT:
-										sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-												+ " [npc.speech(Hello, [npc.pcName]! You got me pregnant! I'll make sure to take good care of our children!)]");
+										sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+												+ "[npc.speech(嗨，[npc.pcName]！你让我怀孕了！所以我得做好照顾好孩子的准备！)]");
 										break;
 								}
 								break;
@@ -577,101 +577,101 @@ public class SlaveDialogue {
 						sb.append("</p>");
 						sb.append(
 								"<p>"
-									+ "You [pc.step] up to your slave and run your [pc.hands] over [npc.her] pregnant belly."
-									+ " Smiling reassuringly at the mother of your children, you tell [npc.herHim] that Lilaya will be able to help [npc.herHim] give birth once the time is right."
+									+ "你[pc.step]到你的奴隶面前并用[pc.hands]抚摸着[npc.her]的孕肚。"
+									+ "你放心地对你孩子的母亲微笑，告诉[npc.herHim]一旦时间到了，莉莱雅就能帮助[npc.herHim]分娩。"
 								+ "</p>"
 								+ "<p>"
-									+ "[npc.Name] acknowledges this with a nod, and so after you've stroked and caressed [npc.her] belly for a little while longer, you [pc.step] back and wonder what to do next..."
+									+ "[npc.Name]点了点头，于是在你抚摸了一会[npc.her]的腹部后，你退了出去，想着接下来该干什么……"
 								+ "</p>");
 						
 					} else {
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								sb.append(" sighing,"
-										+ " [npc.speech(Hi, [npc.pcName]. "
+								sb.append("叹了口气，"
+										+ "[npc.speech(嗨，[npc.pcName]。"
 											+(father==null || father.equals(getSlave())
-												?"I ended up getting pregnant"
-												:father.getName("A")+" got me pregnant")
-											+", so I'm going to take it easy for a while. Get one of the other slaves to cover for me, ok?)]");
+												?"结果我怀孕了"
+												:father.getName("")+"让我怀孕了")
+											+"，所以说我要休息一阵子。找个别的奴隶来顶替我，好吗？)]");
 								break;
 							case NEUTRAL:
-								sb.append(" sighing,"
-										+ " [npc.speech(Hi, [npc.pcName]. "
+								sb.append("叹了口气，"
+										+ "[npc.speech(嗨，[npc.pcName]。"
 											+(father==null || father.equals(getSlave())
-												?"I ended up getting pregnant"
-												:father.getName("A")+" got me pregnant")
-											+", so I'm going to need to take it easy for a while, ok?)]");
+												?"结果我怀孕了"
+												:father.getName("")+"让我怀孕了")
+											+", 所以我这段时间需要放松一下，可以吧？)]");
 								break;
 							case OBEDIENT:
-								sb.append(" obediently informing you of what happened,"
-										+ " [npc.speech(Hello, [npc.pcName]. "
+								sb.append("顺从地告诉你发生了什么，"
+										+ "[npc.speech(你好，[npc.pcName]。"
 											+(father==null || father.equals(getSlave())
-												?"I ended up getting pregnant"
-												:father.getName("A")+" got me pregnant")
-											+", but I won't let it get in the way of my duties!)]");
+												?"结果我怀孕了"
+												:father.getName("")+"让我怀孕了")
+											+"，但我不会让这妨碍我履行职责的！)]");
 								break;
 						}
 						sb.append("</p>");
 						sb.append(
 								"<p>"
-									+ "You [pc.step] up to your slave and run your [pc.hands] over [npc.her] pregnant belly."
-									+ " Smiling reassuringly at the [npc.race], you tell [npc.herHim] that Lilaya will be able to help [npc.herHim] give birth once the time is right."
+									+ "你[pc.step]到你的奴隶面前并用[pc.hands]抚摸着[npc.her]的孕肚。"
+									+ "你放心地对[npc.race]微笑，告诉[npc.herHim]一旦时间到了，莉莱雅就能帮助[npc.herHim]分娩。"
 								+ "</p>"
 								+ "<p>"
-									+ "[npc.Name] acknowledges this with a nod, and so after you've stroked and caressed [npc.her] belly for a little while longer, you [pc.step] back and wonder what to do next..."
+									+ "[npc.Name]点了点头，于是在你抚摸了一会[npc.her]的腹部后，你退了出去，想着接下来该干什么……"
 								+ "</p>");
 					}
 				
 				} else {
 					sb.append(
 							"<p>"
-								+ "As you look at the [npc.race], you see that [npc.sheIs] still sporting a round belly, and [npc.she] absent-mindedly strokes [npc.her] pregnant bump as [npc.she] returns your gaze,");
+								+ "在你看向[npc.race]时，你看见[npc.sheIs]依然挺着孕肚，而[npc.She]一边你对视一边心神恍惚地抚摸着她肿胀的腹部，");
 					switch(AffectionLevelBasic.getAffectionLevelFromValue(getSlave().getAffection(Main.game.getPlayer()))) {
 						case DISLIKE:
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
-									sb.append(" not bothering to even to try and conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] spits,"
-											+ "[npc.speech(Eugh, it's <i>you</i>. What the hell do you want now?!)]");
+									sb.append("[npc.she]向你吐口水时甚至没有掩饰[npc.eyes]中的恨意，"
+											+ "[npc.speech(呸，是<i>你</i>。你他妈现在又想干什么？！)]");
 									break;
 								case NEUTRAL:
-									sb.append(" trying to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] remarks,"
-											+ "[npc.speech(Oh, hello, [npc.pcName]. What is it that you want?)]");
+									sb.append("[npc.she]努力抑制[npc.eyes]中流露出的恨意，说道，"
+											+ "[npc.speech(哦，你好，[npc.pcName]。你想要干什么？)]");
 									break;
 								case OBEDIENT:
-									sb.append(" obediently doing [npc.her] very best to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] calls out,"
-											+ " [npc.speech(Hello, [npc.pcName]. What can I do for you?)]");
+									sb.append("[npc.she]呼唤着你并顺从地掩饰着[npc.her]眼中的恨意，"
+											+ "[npc.speech(您好，[npc.pcName]。我能为您做些什么？)]");
 									break;
 							}
 							break;
 						case NEUTRAL:
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
-									sb.append(" sighing,"
-											+ " [npc.speech(Hi, [npc.pcName]. I'm taking it easy, what with the pregnancy and all, ok?)]");
+									sb.append("叹了口气，"
+											+ "[npc.speech(嗨，[npc.pcName]。我现在很轻松，因为我怀孕了，好吗？)]");
 									break;
 								case NEUTRAL:
-									sb.append(" sighing,"
-											+ " [npc.speech(Hello, [npc.pcName]. What can I do for you?)]");
+									sb.append("叹了口气，"
+											+ "[npc.speech(您好，[npc.pcName]。我能为您做些什么？)]");
 									break;
 								case OBEDIENT:
-									sb.append(" sighing,"
-											+ " [npc.speech(Hello, [npc.pcName]. Is there anything that I can do for you?)]");
+									sb.append("叹了口气，"
+											+ "[npc.speech(嗨，[npc.pcName]。有何贵干？)]");
 									break;
 							}
 							break;
 						case LIKE:
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
-									sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-											+ " [npc.speech(Hi, [npc.pcName]! How are you doing?! I'm taking it easy at the moment, so that I can take good care of myself, ok?)]");
+									sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+											+ "[npc.speech(嗨，[npc.pcName]！您好吗？！我现在很轻松，可以照顾好自己，好吗？)]");
 									break;
 								case NEUTRAL:
-									sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-											+ " [npc.speech(Hello, [npc.pcName]! I'm taking good care of myself! How are you?)]");
+									sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+											+ "[npc.speech(嗨，[npc.pcName]！我能照顾好自己，您怎么样？)]");
 									break;
 								case OBEDIENT:
-									sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-											+ " [npc.speech(Hello, [npc.pcName]! Is there anything I can do for you?)]");
+									sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+											+ "[npc.speech(嗨，[npc.pcName]！有何贵干？)]");
 									break;
 							}
 							break;
@@ -679,11 +679,11 @@ public class SlaveDialogue {
 					sb.append("</p>");
 					sb.append(
 							"<p>"
-								+ "You [pc.step] up to your slave and run your [pc.hands] over [npc.her] pregnant belly."
-								+ " Smiling reassuringly at the [npc.race], you tell [npc.herHim] that Lilaya will be able to help [npc.herHim] give birth once the time is right."
+								+ "你[pc.step]到你的奴隶面前并用[pc.hands]抚摸着[npc.her]的孕肚。"
+								+ "你放心地对[npc.race]微笑，告诉[npc.herHim]一旦时间到了，莉莱雅就能帮助[npc.herHim]分娩。"
 							+ "</p>"
 							+ "<p>"
-								+ "[npc.Name] acknowledges this with a nod, and so after you've stroked and caressed [npc.her] belly for a little while longer, you [pc.step] back and wonder what to do next..."
+								+ "[npc.Name]点了点头，于是在你抚摸了一会[npc.her]的腹部后，你退了出去，想着接下来该干什么……"
 							+ "</p>");
 				}
 				
@@ -692,57 +692,57 @@ public class SlaveDialogue {
 				sb.append("<p>");
 				
 				if(isDoll()) {
-					sb.append("[npc.speech(Good [style.morning], [pc.name],)] [npc.she] says in [npc.her] slightly robotic voice, [npc.speech(How may I serve you?)]");
+					sb.append("[npc.speech([style.morning]好，[pc.name]，)][npc.she]发出略显机械的声音，[npc.speech(我能帮你做点什么？)]");
 					
 				} else {
-					sb.append("As you look at the [npc.race], [npc.she] returns your gaze,");
+					sb.append("你看着[npc.race]，[npc.she]同样凝视着你，");
 					
 					switch(AffectionLevelBasic.getAffectionLevelFromValue(getSlave().getAffection(Main.game.getPlayer()))) {
 						case DISLIKE:
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
-									sb.append(" not bothering to even to try to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] spits,"
-											+ "[npc.speech(Eugh, it's <i>you</i>. What the hell do you want now?!)]");
+									sb.append("[npc.she]向你吐口水时甚至没有掩饰[npc.eyes]中的恨意，"
+											+ "[npc.speech(呸，是<i>你</i>。你他妈现在又想干什么？！)]");
 									break;
 								case NEUTRAL:
-									sb.append(" trying to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] remarks,"
-											+ "[npc.speech(Oh, hello, [npc.pcName]. What is it that you want?)]");
+									sb.append("[npc.she]努力抑制[npc.eyes]中流露出的恨意，说道，"
+											+ "[npc.speech(哦，嗨，[npc.pcName]。你想要干什么？)]");
 									break;
 								case OBEDIENT:
-									sb.append(" obediently doing [npc.her] very best to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] calls out,"
-											+ " [npc.speech(Hello, [npc.pcName]. What can I do for you?)]");
+									sb.append("[npc.she]呼唤着你并顺从地掩饰着[npc.her]眼中的恨意，"
+											+ "[npc.speech(嗨，[npc.pcName]。我能为您做些什么？)]");
 									break;
 							}
 							break;
 						case NEUTRAL:
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
-									sb.append(" sighing,"
-											+ " [npc.speech(Hi, [npc.pcName]. What do you want?)]");
+									sb.append("叹了口气，"
+											+ "[npc.speech(嗨，[npc.pcName]。你需要些什么呢？)]");
 									break;
 								case NEUTRAL:
-									sb.append(" sighing,"
-											+ " [npc.speech(Hello, [npc.pcName]. What can I do for you?)]");
+									sb.append("叹了口气，"
+											+ "[npc.speech(嗨，[npc.pcName]。我能为您做些什么？)]");
 									break;
 								case OBEDIENT:
-									sb.append(" sighing,"
-											+ " [npc.speech(Hello, [npc.pcName]. Is there anything that I can do for you?)]");
+									sb.append("叹了口气，"
+											+ "[npc.speech(嗨，[npc.pcName]。有何贵干？)]");
 									break;
 							}
 							break;
 						case LIKE:
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
-									sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-											+ " [npc.speech(Hi, [npc.pcName]! Oh, I'm so happy to see you again! I've been on my best behaviour!)]");
+									sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+											+ "[npc.speech(嗨，[npc.pcName]！我看见您真是太高兴了，我一直都表现的很好！)]");
 									break;
 								case NEUTRAL:
-									sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-											+ " [npc.speech(Hello, [npc.pcName]! How are you? Is there anything I can do for you?)]");
+									sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+											+ "[npc.speech(嗨，[npc.pcName]！您好吗？有何贵干？)]");
 									break;
 								case OBEDIENT:
-									sb.append(" a huge smile breaking out across [npc.her] face as [npc.she] joyously calls out,"
-											+ " [npc.speech(Hello, [npc.pcName]! Is there anything I can do for you?)]");
+									sb.append("[npc.she]绽放出灿烂的笑容，高兴地喊道，"
+											+ "[npc.speech(嗨，[npc.pcName]！有何贵干？)]");
 									break;
 							}
 							break;
@@ -752,7 +752,7 @@ public class SlaveDialogue {
 				sb.append("</p>");
 				sb.append(
 						"<p>"
-							+ "With your slave waiting to hear what your command will be, you wonder what to do with [npc.herHim] now..."
+							+ "奴隶正在等待你的命令，但你不知道现在该如何安排[npc.herHim]……"
 						+ "</p>");
 			}
 		}
@@ -786,10 +786,10 @@ public class SlaveDialogue {
 	};
 	
 	private static Response getWakeUpResponse() {
-		return new Response(UtilText.parse(getSlave(), "Wake [npc.herHim]"),
+		return new Response(UtilText.parse(getSlave(), "叫醒[npc.herHim]"),
 				UtilText.parse(getSlave(),
-						"Wake [npc.name] up so that you can interact with [npc.herHim]."
-						+ "<br/>[style.italicsMinorBad([npc.She] will be a little annoyed with you for having woken [npc.herHim] up...)]"),
+						"把[npc.name]叫醒，这样你就可以和[npc.herHim]进行互动。"
+						+ "<br/>[style.italicsMinorBad(要是把[npc.She]吵醒了，[npc.herHim]肯定会很生气的……)]"),
 				SLAVE_START_NO_CONTENT) {
 			@Override
 			public void effects() {
@@ -797,20 +797,20 @@ public class SlaveDialogue {
 				
 				StringBuilder sb = new StringBuilder();
 				sb.append("<p>");
-					sb.append("Wanting to interact with [npc.name], you [pc.step] over to where [npc.sheIs] sleeping and ");
+					sb.append("你想与[npc.name]互动，便[pc.step]到[npc.sheIs]睡觉的地方，然后");
 					if(Main.game.getPlayer().isMute()) {
-						sb.append(" give [npc.herHim] a shake.");
+						sb.append("摇了摇[npc.herHim]。");
 					} else {
-						sb.append(" call out [npc.her] name.");
+						sb.append("叫着[npc.her]的名字。");
 					}
 					if(getSlave().hasTrait(Perk.HEAVY_SLEEPER, true)) {
-						sb.append(" Being such a heavy sleeper, this isn't enough to wake [npc.herHim],"
-								+ " and you have to give [npc.herHim] several forceful shoves before [npc.she] finally begins to sleepily open [npc.her] [npc.eyes].");
+						sb.append("因为[npc.name]是重度沉睡者，这并不足以唤醒[npc.herHim]，"
+								+ "你不得不用力推了[npc.herHim]好几次，[npc.she]才终于睁开疲倦的[npc.eyes]。");
 					}
-					sb.append(" Waking to see you standing over [npc.herHim], [npc.she] quickly stands up and turns to face you.");
+					sb.append("[npc.name]醒过来看你站在旁边，便迅速站起身面向你。");
 				sb.append("</p>");
 				if (ModProps.hasValue(PropertyValue.wakeAffectionLoss)) {
-					sb.append("<p style='text-align:center;'>[style.italicsMinorBad([npc.Name] doesn't appreciate being woken up...)]</p>");
+					sb.append("<p style='text-align:center;'>[style.italicsMinorBad([npc.Name]不想被叫醒……)]</p>");
 					Main.game.appendToTextEndStringBuilder(getSlave().incrementAffection(Main.game.getPlayer(), -1));
 				}
 				Main.game.appendToTextEndStringBuilder(UtilText.parse(getSlave(), sb.toString()));
@@ -819,7 +819,7 @@ public class SlaveDialogue {
 		};
 	}
 	
-	public static final DialogueNode SLAVE_START = new DialogueNode("", ".", true) {
+	public static final DialogueNode SLAVE_START = new DialogueNode("", "。", true) {
 		@Override
 		public DialogueNodeType getDialogueNodeType() {
 			return DialogueNodeType.OCCUPANT_MANAGEMENT;
@@ -834,16 +834,16 @@ public class SlaveDialogue {
 			
 			UtilText.nodeContentSB.append("<p>");
 				if(getSlave().isAsleep()) {
-					UtilText.nodeContentSB.append("As [npc.name] is sleeping at this time, you'll need to wake [npc.herHim] up before interacting with [npc.herHim].");
-					UtilText.nodeContentSB.append(" Doing so is sure to annoy [npc.herHim] at least a little...");
+					UtilText.nodeContentSB.append("[npc.name]现在正在睡觉，你得先叫醒[npc.herHim]，才能和[npc.herHim]互动。");
+					UtilText.nodeContentSB.append("这样做肯定会让[npc.herHim]有些恼火……");
 				} else {
 					if(isDoll()) {
-						UtilText.nodeContentSB.append("Deciding that you'd like to interact with [npc.name], you [pc.walk] up to your doll and get [npc.her] attention.");
+						UtilText.nodeContentSB.append("你想要和[npc.name]互动，便[pc.walk]到玩偶面前，引起了[npc.her]的注意。");
 						if(isDollStatue()) {
-							UtilText.nodeContentSB.append(" As you've ordered [npc.herHim] to act as a statue, [npc.she] dutifully ignores your approach and remains frozen in place.");
+							UtilText.nodeContentSB.append("因为你命令[npc.herHim]扮演雕像，所以[npc.she]尽职尽责地无视你的靠近，在原地保持静止。");
 						}
 					} else {
-						UtilText.nodeContentSB.append("Deciding that you'd like to interact with [npc.name], you [pc.walk] over to [npc.herHim] and get [npc.her] attention.");
+						UtilText.nodeContentSB.append("你想要和[npc.name]互动，便[pc.walk]到[npc.herHim]面前引起了[npc.her]的注意。");
 					}
 				}
 			UtilText.nodeContentSB.append("</p>");
@@ -858,11 +858,11 @@ public class SlaveDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index == 0) {
-				return "Interaction";
+				return "互动";
 			} else if(index == 1) {
-				return UtilText.parse("[style.colourSex(Sex)]");
+				return UtilText.parse("[style.colourSex(做爱)]");
 			} else if(index == 2) {
-				return UtilText.parse("[style.colourCompanion(Manage)]");
+				return UtilText.parse("[style.colourCompanion(管理)]");
 			}
 			return null;
 		}
@@ -871,13 +871,13 @@ public class SlaveDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(responseTab == 0) {
 				if(index == 0) {
-					return new Response("Leave",
+					return new Response("离开",
 							UtilText.parse(getSlave(),
 									isDollStatue()
-										?"Leave [npc.name] frozen in place and continue on your way."
+										?"让[npc.name]静止在原地，继续你的旅程。"
 										:(getSlave().isAsleep()
-											?"Leave [npc.name] to sleep..."
-											:"Tell [npc.name] that you'll catch up with [npc.herHim] some other time.")),
+											?"离开，让[npc.name]继续睡觉……"
+											:"告诉[npc.name]你会在其他时间再去找[npc.herHim]。")),
 							Main.game.getDefaultDialogue(false)) {
 						@Override
 						public DialogueNode getNextDialogue() {
@@ -894,14 +894,14 @@ public class SlaveDialogue {
 				
 				if(isDollStatue()) {
 					if(index == 1) {
-						return new Response("Stop statue",
-								UtilText.parse(getSlave(), "Tell [npc.name] to temporarily stop acting like a statue so that you can interact with [npc.herHim]."),
+						return new Response("暂停扮演雕像",
+								UtilText.parse(getSlave(), "让[npc.name]暂时停止扮演雕像，这样你就可以与[npc.herHim]互动了。"),
 								SLAVE_START_NO_CONTENT) {
 							@Override
 							public void effects() {
 								dollStatueInterrupted = true;
 								Main.game.appendToTextEndStringBuilder("<p>");
-									Main.game.appendToTextEndStringBuilder("Wanting to interact with [npc.name] without [npc.herHim] continuing to act like an unresponsive statue, you give [npc.herHim] permission to temporarily move freely once again.");
+									Main.game.appendToTextEndStringBuilder("想要与[npc.name]互动，而不想让[npc.herHim]继续像一尊毫无反应的雕像一样，你应该允许[npc.herHim]再次暂时自由移动。");
 								Main.game.appendToTextEndStringBuilder("</p>");
 								Main.game.appendToTextEndStringBuilder(getSlaveStartCoreContent());
 							}
@@ -916,11 +916,11 @@ public class SlaveDialogue {
 				} else {
 					if(index == 1) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlaveBackground)) {
-							return new Response("Background",
+							return new Response("过往历史",
 									UtilText.parse(getSlave(),
 											isDoll()
-												?"Ask [npc.name] what [npc.she] can remember of being created."
-												:"Ask [npc.name] about [npc.her] past life."),
+												?"问[npc.name]被创造时的记忆。"
+												:"问[npc.name]过去的生活。"),
 									SLAVE_PROGRESSION) {
 								@Override
 								public void effects() {
@@ -932,12 +932,12 @@ public class SlaveDialogue {
 								}
 							};
 						} else {
-							return new Response("Background", UtilText.parse(getSlave(), "You've already talked with [npc.name] about this today..."), null);
+							return new Response("过往历史", UtilText.parse(getSlave(), "你今天已经和[npc.name]聊过这个问题了……"), null);
 						}
 						
 					} else if(index == 2) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlaveSmallTalk)) {
-							return new Response("Small talk", UtilText.parse(getSlave(), "Chat about this and that with [npc.name]."), SLAVE_MINOR) {
+							return new Response("闲聊", UtilText.parse(getSlave(), "与[npc.name]聊这聊那。"), SLAVE_MINOR) {
 								@Override
 								public void effects() {
 									applyReactionReset();
@@ -958,7 +958,7 @@ public class SlaveDialogue {
 								}
 							};
 						} else {
-							return new Response("Small talk", UtilText.parse(getSlave(), "You've already spent time talking with [npc.name] today."), null);
+							return new Response("闲聊", UtilText.parse(getSlave(), "你今天已经花时间和[npc.name]聊过了。"), null);
 						}
 						
 					} else if(index == 3
@@ -966,12 +966,12 @@ public class SlaveDialogue {
 							&& !Main.getProperties().hasValue(PropertyValue.companionContent)
 							&& Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)==Quest.ROMANCE_HELENA_4_SCARLETTS_RETURN) {
 						if(Main.game.getNpc(Helena.class).getLocationPlace().getPlaceType()!=PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP) {
-							return new Response("Helena",
-									UtilText.parse(getSlave(), "Helena's shop is currently closed, so you're unable to take [npc.name] to her at the moment..."),
+							return new Response("海伦娜",
+									UtilText.parse(getSlave(), "海伦娜的商店目前关闭，因此你暂时无法带[npc.Name]去找她……"),
 									null);
 						}
-						return new Response("Helena",
-								UtilText.parse(getSlave(), "Accompany [npc.name] to Helena's store in Slaver Alley."),
+						return new Response("海伦娜",
+								UtilText.parse(getSlave(), "陪同[npc.Name]前往奴隶巷中海伦娜的商店。"),
 								ScarlettsShop.ROMANCE_SHOP_CORE) {
 							@Override
 							public Colour getHighlightColour() {
@@ -992,13 +992,13 @@ public class SlaveDialogue {
 					} else if(index == 5 && Main.getProperties().hasValue(PropertyValue.companionContent)) {
 						if(!Main.game.getPlayer().hasCompanion(getSlave())) {
 							if(!getSlave().isCompanionAvailable(Main.game.getPlayer())) {
-								return new Response("Add to party",
-										UtilText.parse(getSlave(), "[npc.Name] cannot be added to your party!"),
+								return new Response("加入队伍",
+										UtilText.parse(getSlave(), "[npc.Name]不能加入你的队伍！"),
 										null);
 									
 							} else if(Main.game.getPlayer().canHaveMoreCompanions()) {
-								return new Response("Add to party",
-										UtilText.parse(getSlave(), "Command [npc.name] to start following you around."),
+								return new Response("加入队伍",
+										UtilText.parse(getSlave(), "命令[npc.name]跟随你。"),
 										SLAVE_START){
 									@Override
 									public void effects() {
@@ -1007,13 +1007,13 @@ public class SlaveDialogue {
 									}
 								};
 							} else {
-								return new Response("Add to party",
-										"You are already at your party limit!",
+								return new Response("加入队伍",
+										"你的队伍满员了！",
 										null);
 							}
 						} else {
-							return new Response("Remove from party",
-									UtilText.parse(getSlave(), "Command [npc.name] to leave your party."),
+							return new Response("从队伍移除",
+									UtilText.parse(getSlave(), "命令[npc.name]从你的队伍里离开。"),
 									SLAVE_START){
 								@Override
 								public void effects() {
@@ -1026,13 +1026,13 @@ public class SlaveDialogue {
 					} else if(index == 6) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlaveEncourage)) {
 							if(getCurrentJob()==SlaveJob.IDLE) {
-								return new Response("Work",
+								return new Response("工作",
 										UtilText.parse(getSlave(),
-												"[npc.Name] isn't currently doing any work...<br/>[style.italicsMinorBad(You can't ask [npc.name] about [npc.her] work while [npc.sheIs] idle!)]"),
+												"[npc.Name]现在没有任何工作……<br/>[style.italicsMinorBad(在[npc.name]无所事事的时候，你不能问[npc.her]工作相关的事情！)]"),
 										null);
 								
 							} else {
-								return new Response("Work", UtilText.parse(getSlave(), "Ask [npc.name] about how [npc.her] work is going."), SLAVE_ENCOURAGE) {
+								return new Response("工作", UtilText.parse(getSlave(), "询问[npc.name][npc.her]的工作如何。"), SLAVE_ENCOURAGE) {
 									@Override
 									public void effects() {
 										applyReactionReset();
@@ -1058,12 +1058,12 @@ public class SlaveDialogue {
 							}
 							
 						} else {
-							return new Response("Work", UtilText.parse(getSlave(), "You've talked to [npc.name] about [npc.her] work today."), null);
+							return new Response("工作", UtilText.parse(getSlave(), "你已经问过[npc.name][npc.her]的工作了。"), null);
 						}
 						
 					} else if(index == 7) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlaveHug)) {
-							return new Response("Hug", UtilText.parse(getSlave(), "Hug [npc.name]."), SLAVE_HUG) {
+							return new Response("拥抱", UtilText.parse(getSlave(), "拥抱[npc.name]。"), SLAVE_HUG) {
 								@Override
 								public void effects() {
 									applyReactionReset();
@@ -1088,12 +1088,12 @@ public class SlaveDialogue {
 								}
 							};
 						} else {
-							return new Response("Hug", UtilText.parse(getSlave(), "You've already spent time hugging [npc.name] today."), null);
+							return new Response("拥抱", UtilText.parse(getSlave(), "你今天已经花时间拥抱[npc.name]了。"), null);
 						}
 						
 					} else if(index == 8) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlavePettings)) {
-							return new Response("Pettings", UtilText.parse(getSlave(), "Give [npc.name] some loving pettings."), SLAVE_PETTINGS) {
+							return new Response("爱抚", UtilText.parse(getSlave(), "给[npc.name]充满爱的抚摸。"), SLAVE_PETTINGS) {
 								@Override
 								public void effects() {
 									applyReactionReset();
@@ -1118,15 +1118,15 @@ public class SlaveDialogue {
 								}
 							};
 						} else {
-							return new Response("Pettings", UtilText.parse(getSlave(), "You've already spent time petting [npc.name] today."), null);
+							return new Response("爱抚", UtilText.parse(getSlave(), "你今天已经花时间爱抚[npc.name]了。"), null);
 						}
 						
 					} else if(index == 9) {
 						if(Main.game.getPlayer().hasItemType(ItemType.PRESENT)) {
 							if(isDoll()) {
-								return new Response("Give Present", UtilText.parse(getSlave(), "As a doll, [npc.name] has no need or appreciation for presents..."), null);
+								return new Response("赠送礼物", UtilText.parse(getSlave(), "作为一个玩偶，[npc.name]不需要也不喜欢礼物……"), null);
 							}
-							return new Response("Give Present", UtilText.parse(getSlave(), "Give [npc.name] the present that you're carrying."), SLAVE_PRESENT) {
+							return new Response("赠送礼物", UtilText.parse(getSlave(), "把你携带的礼物交给[npc.name]。"), SLAVE_PRESENT) {
 								@Override
 								public void effects() {
 									applyReactionReset();
@@ -1145,7 +1145,7 @@ public class SlaveDialogue {
 						
 					} else if(index == 11) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlaveInspect)) {
-							return new Response("Inspect", UtilText.parse(getSlave(), "Make [npc.name] strip and parade around [npc.her] room for your inspection."), SLAVE_INSPECT) {
+							return new Response("检查", UtilText.parse(getSlave(), "让[npc.name]脱光衣服，在房间里绕圈并接受你的检查。"), SLAVE_INSPECT) {
 								@Override
 								public void effects() {
 									applyReactionReset();
@@ -1172,12 +1172,12 @@ public class SlaveDialogue {
 								}
 							};
 						} else {
-							return new Response("Inspect", UtilText.parse(getSlave(), "You've already inspected [npc.name] today."), null);
+							return new Response("检查", UtilText.parse(getSlave(), "你今天已经花时间检查[npc.name]了。"), null);
 						}
 						
 					} else if(index == 12) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlaveSpanking)) {
-							return new Response("Spanking", UtilText.parse(getSlave(), "Bend [npc.name] over your knee and give [npc.herHim] a rough spanking."), SLAVE_SPANKING) {
+							return new Response("打屁股", UtilText.parse(getSlave(), "把[npc.name]按在你膝盖上，粗暴地打[npc.herHim]的屁股。"), SLAVE_SPANKING) {
 								@Override
 								public void effects() {
 									applyReactionReset();
@@ -1193,12 +1193,12 @@ public class SlaveDialogue {
 								}
 							};
 						} else {
-							return new Response("Spanking", UtilText.parse(getSlave(), "You've already spanked [npc.name] today."), null);
+							return new Response("打屁股", UtilText.parse(getSlave(), "你今天已经打过[npc.name]的屁股了。"), null);
 						}
 						
 					} else if(index == 13) {
 						if(!getSlave().NPCFlagValues.contains(NPCFlagValue.flagSlaveMolest)) {
-							return new Response("Molest", UtilText.parse(getSlave(), "Make [npc.name] sit still as you grope and molest [npc.her] body."), SLAVE_MOLEST) {
+							return new Response("猥亵", UtilText.parse(getSlave(), "猥亵[npc.name]的身体，并让[npc.her]保持不动。"), SLAVE_MOLEST) {
 								@Override
 								public void effects() {
 									applyReactionReset();
@@ -1217,7 +1217,7 @@ public class SlaveDialogue {
 								}
 							};
 						} else {
-							return new Response("Molest", UtilText.parse(getSlave(), "You've already molested [npc.name] today."), null);
+							return new Response("猥亵", UtilText.parse(getSlave(), "你今天已经猥亵过[npc.name]了。"), null);
 						}
 						
 					}
@@ -1227,13 +1227,13 @@ public class SlaveDialogue {
 			
 			} else if(responseTab == 1) {
 				if(index == 0) {
-					return new Response("Leave", 
+					return new Response("离开", 
 							UtilText.parse(getSlave(),
 									isDollStatue()
-										?"Leave [npc.name] frozen in place and continue on your way."
+										?"让[npc.name]静止在原地，继续你的旅程。"
 										:(getSlave().isAsleep()
-											?"Leave [npc.name] to sleep..."
-											:"Tell [npc.name] that you'll catch up with [npc.herHim] some other time."))
+											?"让[npc.name]继续睡觉……"
+											:"告诉[npc.name]你会在其他时间再去找[npc.herHim]。"))
 							, Main.game.getDefaultDialogue(false)) {
 						@Override
 						public DialogueNode getNextDialogue() {
@@ -1252,10 +1252,10 @@ public class SlaveDialogue {
 					if(index == 1) {
 						if((!characterForSex.isSlave() || !characterForSex.getOwner().isPlayer())
 								&& !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Sex", UtilText.parse(characterForSex, "[npc.Name] is not attracted to you, and you cannot force [npc.herHim] to have sex with you..."), null);
+							return new Response("做爱", UtilText.parse(characterForSex, "[npc.Name]没被你吸引，你不能强迫[npc.herHim]和你做爱……"), null);
 							
 						} else if(Main.game.isNonConEnabled() && !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new ResponseSex("Rape", UtilText.parse(characterForSex, "[npc.Name] is definitely not interested in having sex with you, but it's not like [npc.sheHasFull] a choice in the matter..."), 
+							return new ResponseSex("强奸", UtilText.parse(characterForSex, "[npc.Name]显然不想跟你做爱，[npc.sheHasFull]似乎别无选择……"), 
 									false, false,
 									new SMMilkingStall(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotMilkingStall.BEHIND_MILKING_STALL)),
@@ -1278,7 +1278,7 @@ public class SlaveDialogue {
 							};
 							
 						} else {
-							return new ResponseSex("Sex", UtilText.parse(characterForSex, "Have sex with [npc.name]."), 
+							return new ResponseSex("做爱", UtilText.parse(characterForSex, "和[npc.name]做爱。"), 
 									true, false,
 									new SMMilkingStall(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotMilkingStall.BEHIND_MILKING_STALL)),
@@ -1302,16 +1302,16 @@ public class SlaveDialogue {
 					if(index == 1) {
 						if((!characterForSex.isSlave() || !characterForSex.getOwner().isPlayer())
 								&& !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Sleep sex", UtilText.parse(characterForSex, "[npc.Name] is not attracted to you, and you cannot force [npc.herHim] to have sex with you..."), null);
+							return new Response("睡奸", UtilText.parse(characterForSex, "[npc.Name]没被你吸引，你不能强迫[npc.herHim]和你做爱……"), null);
 							
 						} else if(Main.game.isNonConEnabled() && !characterForSex.isAttractedTo(Main.game.getPlayer())) {
 							if(!getSlave().hasTrait(Perk.HEAVY_SLEEPER, true)) {
-								return new Response("Sleep rape", UtilText.parse(characterForSex, "[npc.Name] is not a heavy sleeper, and so you can't have sleep sex with [npc.herHim]..."), null);
+								return new Response("睡奸", UtilText.parse(characterForSex, "[npc.Name]并不是重度沉睡者，因此你不能对[npc.herHim]进行睡奸……"), null);
 							}
-							return new ResponseSex("Sleep rape",
+							return new ResponseSex("睡奸",
 									UtilText.parse(characterForSex,
-											"[npc.Name] is definitely not interested in having sex with you, but it's not like [npc.sheHasFull] a choice in the matter."
-											+ " As [npc.sheIs] a heavy sleeper, you can gently fuck [npc.herHim] without waking [npc.herHim] up..."), 
+											"[npc.Name]显然不想跟你做爱，但[npc.sheHasFull]似乎别无选择……"
+											+ "因为[npc.sheIs]是个重度沉睡者，你可以在不吵醒[npc.herHim]的前提下温柔地操[npc.herHim]……"), 
 									false, false,
 									getGenericSlaveSexManager(
 											Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -1332,10 +1332,10 @@ public class SlaveDialogue {
 						
 						} else {
 							if(!getSlave().hasTrait(Perk.HEAVY_SLEEPER, true)) {
-								return new Response("Sleep sex", UtilText.parse(characterForSex, "[npc.Name] is not a heavy sleeper, and so you can't have sleep sex with [npc.herHim]..."), null);
+								return new Response("睡奸", UtilText.parse(characterForSex, "[npc.Name]并不是重度沉睡者，因此你不能对[npc.herHim]进行睡奸……"), null);
 							}
-							return new ResponseSex("Sleep sex",
-									UtilText.parse(characterForSex, "As [npc.sheIs] a heavy sleeper, you can gently fuck [npc.name] without waking [npc.herHim] up..."), 
+							return new ResponseSex("睡奸",
+									UtilText.parse(characterForSex, "因为[npc.sheIs]是个重度沉睡者，你可以在不吵醒[npc.herHim]的前提下温柔地操[npc.herHim]……"), 
 									true, false,
 									getGenericSlaveSexManager(
 											Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -1361,10 +1361,10 @@ public class SlaveDialogue {
 					if(index == 1) {
 						if((!characterForSex.isSlave() || !characterForSex.getOwner().isPlayer())
 								&& !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Sex", UtilText.parse(characterForSex, "[npc.Name] is not attracted to you, and you cannot force [npc.herHim] to have sex with you..."), null);
+							return new Response("做爱", UtilText.parse(characterForSex, "[npc.Name]没被你吸引，你不能强迫[npc.herHim]和你做爱……"), null);
 							
 						} else if(Main.game.isNonConEnabled() && !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new ResponseSex("Rape", UtilText.parse(characterForSex, "[npc.Name] is definitely not interested in having sex with you, but it's not like [npc.sheHasFull] a choice in the matter..."), 
+							return new ResponseSex("强奸", UtilText.parse(characterForSex, "[npc.Name]显然不想跟你做爱，[npc.sheHasFull]似乎别无选择……"), 
 									false, false,
 									getGenericSlaveSexManager(
 											Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -1389,7 +1389,7 @@ public class SlaveDialogue {
 							};
 						
 						} else {
-							return new ResponseSex("Sex", UtilText.parse(characterForSex, "Have sex with [npc.name]."), 
+							return new ResponseSex("做爱", UtilText.parse(characterForSex, "和[npc.name]做爱。"), 
 									true, false,
 									getGenericSlaveSexManager(
 											Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -1415,48 +1415,48 @@ public class SlaveDialogue {
 						
 					} else if(index == 2) {
 						if(characterForSexSecondary==null || charactersPresent.size()<2) {
-							return new Response("Spitroast (front)", "You'd need a third person to be present in order to get a spitroast going...", null);
+							return new Response("“串肉串”(在前)", "得有第三个人在场，你才能开始“串肉串”……", null);
 							
 						} else if(characterForSex.isPlayer()) {
-							return new Response("Spitroast (front)", "You cannot target yourself for this action!", null);
+							return new Response("“串肉串”(在前)", "你不能以自己为目标应用这个动作！", null);
 							
 						} else if (characterForSexSecondary.isDollStatue()) {
-							return new Response("Spitroast (front)",
+							return new Response("“串肉串”(在前)",
 									UtilText.parse(characterForSexSecondary,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (characterForSexSecondary.isAsleep()) {
-							return new Response("Spitroast (front)",
+							return new Response("“串肉串”(在前)",
 									UtilText.parse(characterForSexSecondary,
-											"As [npc.sheIsFull] currently asleep, [npc.name] cannot participate in sex..."),
+											"[npc.name]现在完全睡着了，不能参与做爱……"),
 									null);
 							
 						} else if(!characterForSexSecondary.isAttractedTo(characterForSex)) {
-							return new Response("Spitroast (front)",
+							return new Response("“串肉串”(在前)",
 									UtilText.parse(characterForSexSecondary, characterForSex,
-											"[npc.Name] is not attracted to [npc2.name], and so it would not be possible to make [npc.herHim] take a dominant position in order to fuck [npc2.herHim]..."),
+											"[npc.Name]对[npc2.name]不感兴趣，因此不可能让[npc.herHim]占据主导地位与[npc2.herHim]做爱……"),
 									null);
 								
 						} else if((!Main.game.isNonConEnabled() || !characterForSex.isSlave()) && !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Spitroast (front)",
+							return new Response("“串肉串”(在前)",
 									UtilText.parse(characterForSex,
-											"[npc.Name] is not attracted to you, and so would not be willing to be in a threesome position in which [npc.she] interacts with you..."),
+											"[npc.Name]对你没有兴趣，因此不愿意在[npc.she]与你三人行的……"),
 									null);
 							
 						} else if((!Main.game.isNonConEnabled() || !characterForSex.isSlave()) && !characterForSex.isAttractedTo(characterForSexSecondary)) {
-							return new Response("Spitroast (front)",
+							return new Response("“串肉串”(在前)",
 									UtilText.parse(characterForSexSecondary, characterForSex,
-											"[npc2.Name] is not attracted to [npc.name], and so would not be willing to be in a threesome position in which [npc2.she] interacts with [npc.herHim]..."),
+											"[npc2.Name]对[npc.name]没有兴趣，因此不愿意参与[npc2.she]与[npc.herHim]的三人行……"),
 									null);
 							
 						} else {
 							boolean isRape = !characterForSex.isAttractedTo(Main.game.getPlayer()) && !characterForSex.isAttractedTo(characterForSexSecondary);
 							return new ResponseSex(
 									isRape
-										?"Spitroast rape (front)"
-										:"Spitroast (front)",
-									UtilText.parse(characterForSex, characterForSexSecondary, "Move around in front of [npc.name] so that you can use [npc.her] mouth while [npc2.name] takes [npc.her] rear."),
+										?"“串肉串”强奸(在前)"
+										:"“串肉串”(在前)",
+									UtilText.parse(characterForSex, characterForSexSecondary, "移动到[npc.name]前面，[npc2.name]玩弄[npc.her]的时候，你可以使用[npc.her]的嘴。"),
 									null, null, null, null, null, null,
 									!isRape, false,
 									getGenericSlaveSexManager(
@@ -1476,49 +1476,49 @@ public class SlaveDialogue {
 					
 					} else if(index == 3) {
 						if(characterForSexSecondary==null || charactersPresent.size()<2) {
-							return new Response("Spitroast (behind)", "You'd need a third person to be present in order to get a spitroast going...", null);
+							return new Response("“串肉串”(在后)", "得有第三个人在场，你才能开始“串肉串”……", null);
 							
 						} else if(characterForSex.isPlayer()) {
-							return new Response("Spitroast (behind)", "You cannot target yourself for this action!", null);
+							return new Response("“串肉串”(在后)", "你不能以自己为目标应用这个动作！", null);
 							
 						} else if (characterForSexSecondary.isDollStatue()) {
-							return new Response("Spitroast (behind)",
+							return new Response("“串肉串”(在后)",
 									UtilText.parse(characterForSexSecondary,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (characterForSexSecondary.isAsleep()) {
-							return new Response("Spitroast (behind)",
+							return new Response("“串肉串”(在后)",
 									UtilText.parse(characterForSexSecondary,
-											"As [npc.sheIsFull] currently asleep, [npc.name] cannot participate in sex..."),
+											"[npc.name]现在完全睡着了，不能参与做爱……"),
 									null);
 							
 						} else if(!characterForSexSecondary.isAttractedTo(characterForSex)) {
-							return new Response("Spitroast (behind)",
+							return new Response("“串肉串”(在后)",
 									UtilText.parse(characterForSexSecondary, characterForSex,
-											"[npc.Name] is not attracted to [npc2.name], and so it would not be possible to make [npc.herHim] take a dominant position in order to fuck [npc2.herHim]..."),
+											"[npc.Name]对[npc2.name]不感兴趣，因此不可能让[npc.herHim]占据主导地位与[npc2.herHim]做爱……"),
 									null);
 								
 						} else {
 							 if((!Main.game.isNonConEnabled() || !characterForSex.isSlave()) && !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-								return new Response("Spitroast (behind)",
+								return new Response("“串肉串”(在后)",
 										UtilText.parse(characterForSex,
-												"[npc.Name] is not attracted to you, and so would not be willing to be in a threesome position in which [npc.she] interacts with you..."),
+												"[npc.Name]对你没有兴趣，因此不愿意在[npc.she]与你三人行的……"),
 										null);
 								
 							} else if((!Main.game.isNonConEnabled() || !characterForSex.isSlave()) && !characterForSex.isAttractedTo(characterForSexSecondary)) {
-								return new Response("Spitroast (behind)",
+								return new Response("“串肉串”(在后)",
 										UtilText.parse(characterForSexSecondary, characterForSex,
-												"[npc2.Name] is not attracted to [npc.name], and so would not be willing to be in a threesome position in which [npc2.she] interacts with [npc.herHim]..."),
+												"[npc2.Name]对[npc.name]没有兴趣，因此不愿意参与[npc2.she]与[npc.herHim]的三人行……"),
 										null);
 								
 							} else {
 								boolean isRape = !characterForSex.isAttractedTo(Main.game.getPlayer()) && !characterForSex.isAttractedTo(characterForSexSecondary);
 								return new ResponseSex(
 										isRape
-											?"Spitroast rape (behind)"
-											:"Spitroast (behind)",
-										UtilText.parse(characterForSex, characterForSexSecondary, "Move around behind [npc.name] so that you can use [npc.her] rear while [npc2.name] takes [npc.her] mouth."),
+											?"“串肉串”强奸(在后)"
+											:"“串肉串”(在后)",
+										UtilText.parse(characterForSex, characterForSexSecondary, "移动到[npc.name]背后，[npc2.name]使用[npc.her]的嘴的时候，你可以玩弄[npc.her]的后面。"),
 										null, null, null, null, null, null,
 										!isRape, false,
 										getGenericSlaveSexManager(
@@ -1538,36 +1538,36 @@ public class SlaveDialogue {
 					
 					} else if(index == 4) {
 						if(characterForSexSecondary==null || charactersPresent.size()<2) {
-							return new Response("Side-by-side (as dom)", "You'd need a third person to be present in order to get a spitroast going...", null);
+							return new Response("并排后入(作为支配方)", "得有第三个人在场，你才能开始并排后入……", null);
 							
 						} else if(characterForSex.isPlayer()) {
-							return new Response("Side-by-side (as dom)", "You cannot target yourself for this action!", null);
+							return new Response("并排后入(作为支配方)", "你不能以自己为目标应用这个动作！", null);
 							
 						} else if (characterForSexSecondary.isAsleep()) {
-							return new Response("Side-by-side (as dom)",
+							return new Response("并排后入(作为支配方)",
 									UtilText.parse(characterForSexSecondary,
-											"As [npc.sheIsFull] currently asleep, [npc.name] cannot participate in sex..."),
+											"[npc.name]现在完全睡着了，不能参与做爱……"),
 									null);
 							
 						} else if((!Main.game.isNonConEnabled() || !characterForSexSecondary.isSlave()) && !characterForSexSecondary.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Side-by-side (as dom)",
+							return new Response("并排后入(作为支配方)",
 									UtilText.parse(characterForSexSecondary,
-											"[npc.Name] is not attracted to you, and so would not be willing to be in a threesome position in which [npc.she] interacts with you..."),
+											"[npc.Name]对你没有兴趣，因此不愿意在[npc.she]与你三人行的……"),
 									null);
 								
 						} else if((!Main.game.isNonConEnabled() || !characterForSex.isSlave()) && !characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Side-by-side (as dom)",
+							return new Response("并排后入(作为支配方)",
 									UtilText.parse(characterForSex,
-											"[npc.Name] is not attracted to you, and so would not be willing to be in a threesome position in which [npc.she] interacts with you..."),
+											"[npc.Name]对你没有兴趣，因此不愿意在[npc.she]与你三人行的……"),
 									null);
 							
 						} else {
 							boolean isRape = !characterForSex.isAttractedTo(Main.game.getPlayer()) || !characterForSexSecondary.isAttractedTo(Main.game.getPlayer());
 							return new ResponseSex(
 									isRape
-										?"Side-by-side rape (as dom)"
-										:"Side-by-side (as dom)",
-									UtilText.parse(characterForSex, characterForSexSecondary, "Push [npc.name] and [npc2.name] down onto all fours, before kneeling behind [npc.name], ready to fuck them both side-by-side."),
+										?"并排后入(强奸)(在上)"
+										:"并排后入(在上)",
+									UtilText.parse(characterForSex, characterForSexSecondary, "让[npc.name]和[npc2.name]四体投地，跪在[npc.Name]身后，准备并排后入他们。"),
 									null, null, null, null, null, null,
 									!isRape, false,
 									getGenericSlaveSexManager(
@@ -1586,15 +1586,15 @@ public class SlaveDialogue {
 						
 					} else if(index==5) {
 						if(charactersPresent.size()<3) {
-							return new Response("Gangbang (as dom)",
-									"There need to be at least three characters present in order to start a gangbang.",
+							return new Response("一受多攻(作为支配方)",
+									"至少要有三个角色在场才能开始群交。",
 									null);
 							
 						} else if (charactersPresent.stream().anyMatch(c->c.isAsleep())) {
 							boolean soloSleeper = charactersPresent.stream().filter(c->c.isAsleep()).count()==1;
 							String names = Util.charactersToStringListOfNames(charactersPresent.stream().filter(c->c.isAsleep()).collect(Collectors.toList()));
-							return new Response("Gangbang (as dom)",
-											names+" "+(soloSleeper?"needs":"need")+" to be awake to participate in a gangbang!",
+							return new Response("一受多攻(作为支配方)",
+											names+"需要醒来才能群交！",
 									null);
 							
 						} else {
@@ -1610,9 +1610,9 @@ public class SlaveDialogue {
 									}
 									String isAre = nonSlaves.size()==1?"is":"are";
 									String slavePural = nonSlaves.size()==1?"slave":"slaves";
-									String them = nonSlaves.size()==1?UtilText.parse(nonSlaves.get(0), "[npc.herHim]"):"them";
-									return new Response("Gangbang (as dom)",
-											"As "+Util.charactersToStringListOfNames(nonSlaves)+" "+isAre+" not attracted to you, and "+isAre+" not your "+slavePural+", you cannot have a gangbang with "+them+".",
+									String them = nonSlaves.size()==1?UtilText.parse(nonSlaves.get(0), "[npc.herHim]"):"他们";
+									return new Response("一受多攻(作为支配方)",
+											"由于"+Util.charactersToStringListOfNames(nonSlaves)+" "+isAre+" 对你不感兴趣，并且"+isAre+"不是你的"+slavePural+"，你不能与"+them+"进行群交。",
 											null);
 									
 								} else if(!Main.game.isNonConEnabled()) {
@@ -1623,9 +1623,9 @@ public class SlaveDialogue {
 										}
 									}
 									String isAre = nonAttracted.size()==1?"is":"are";
-									String them = nonAttracted.size()==1?UtilText.parse(nonAttracted.get(0), "[npc.herHim]"):"them";
-									return new Response("Gangbang (as dom)",
-											"As "+Util.charactersToStringListOfNames(nonAttracted)+" "+isAre+" not attracted to you, you cannot have a gangbang with "+them+".",
+									String them = nonAttracted.size()==1?UtilText.parse(nonAttracted.get(0), "[npc.herHim]"):"他们";
+									return new Response("一受多攻(作为支配方)",
+											"由于"+Util.charactersToStringListOfNames(nonAttracted)+" "+isAre+" 对你不感兴趣，你不能与"+them+"进行群交。",
 											null);
 								}
 							}
@@ -1637,15 +1637,15 @@ public class SlaveDialogue {
 								}
 							}
 							String isAre = nonAttracted.size()==1?"is":"are";
-							String them = nonAttracted.size()==1?UtilText.parse(nonAttracted.get(0), "[npc.herHim]"):"them";
+							String them = nonAttracted.size()==1?UtilText.parse(nonAttracted.get(0), "[npc.herHim]"):"他们";
 							List<GameCharacter> sexParticipants = new ArrayList<GameCharacter>(charactersPresent);
 							return new ResponseSex(
 									isRape
-										?"Gangbang rape (as dom)"
-										:"Gangbang (as dom)",
-									"Have sex with "+Util.charactersToStringListOfNames(sexParticipants)+"."
+										?"轮奸(作为支配方)"
+										:"一受多攻(作为支配方)",
+									"同"+Util.charactersToStringListOfNames(sexParticipants)+"做爱。"
 										+ (isRape
-											?" As "+Util.charactersToStringListOfNames(nonAttracted)+" "+isAre+" not attracted to you, you will have to force "+them+" into it..."
+											?"由于"+Util.charactersToStringListOfNames(nonAttracted)+"没被你吸引，你必须强迫"+them+"加入……"
 											:""),//TODO sleeping
 									null, null, null, null, null, null,
 									!isRape, false,
@@ -1665,23 +1665,23 @@ public class SlaveDialogue {
 						
 					} else if(index == 6) {
 						if (characterForSex.isDollStatue()) {
-							return new Response("Submissive sex",
+							return new Response("服从型性爱",
 									UtilText.parse(characterForSex,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if(!characterForSex.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Submissive sex",
+							return new Response("服从型性爱",
 									UtilText.parse(characterForSex, 
-										"[npc.Name] is not attracted to you,"
+										"[npc.Name]对你不感兴趣，"
 										+ (Main.game.isNonConEnabled() && characterForSex.isSlave()
-												?" so if you wanted to have sex with [npc.herHim], you'd need to rape [npc.herHim] as the dominant partner."
-												:" so you can't have submissive sex with [npc.herHim].")),
+												?" 所以如果你想和[npc.herHim]发生性关系，就需要作为主导者强奸[npc.herHim]。"
+												:"所以你不能与[npc.herHim]进行服从型性爱。")),
 									null);
 							
 						} else {
-							return new ResponseSex("Submissive sex",
-									UtilText.parse(characterForSex, "Have submissive sex with [npc.name]."), 
+							return new ResponseSex("服从性爱",
+									UtilText.parse(characterForSex, "和[npc.name]来一场服从型性爱。"), 
 									Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(), null, null, null,
 									true, true,
 									getGenericSlaveSexManager(
@@ -1705,61 +1705,61 @@ public class SlaveDialogue {
 						
 					} else if(index == 7) {
 						if(characterForSexSecondary==null || charactersPresent.size()<2) {
-							return new Response("Spitroasted (front)", "You'd a third person to be present in order to get spitroasted...", null);
+							return new Response("接受“串肉串”(在前)", "得有第三个人在场，你才能接受“串肉串”……", null);
 							
 						} else if(characterForSex.isPlayer()) {
-							return new Response("Spitroasted (front)", "You cannot target yourself for this action!", null);
+							return new Response("接受“串肉串”(在前)", "你不能以自己为目标应用这个动作！", null);
 							
 						} else if (characterForSex.isDollStatue()) {
-							return new Response("Spitroasted (front)",
+							return new Response("接受“串肉串”(在前)",
 									UtilText.parse(characterForSex,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (characterForSexSecondary.isAsleep()) {
-							return new Response("Spitroasted (front)",
+							return new Response("接受“串肉串”(在前)",
 									UtilText.parse(characterForSexSecondary,
-											"As [npc.sheIsFull] currently asleep, [npc.name] cannot participate in sex..."),
+											"[npc.name]现在完全睡着了，不能参与做爱……"),
 									null);
 							
 						} else if (characterForSexSecondary.isDollStatue()) {
-							return new Response("Spitroasted (front)",
+							return new Response("接受“串肉串”(在前)",
 									UtilText.parse(characterForSexSecondary,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if(!characterForSex.isAttractedTo(Main.game.getPlayer())) {
 							if(!characterForSexSecondary.isAttractedTo(Main.game.getPlayer())) {
-								return new Response("Spitroasted (front)",
+								return new Response("接受“串肉串”(在前)",
 										UtilText.parse(characterForSexSecondary, characterForSex,
-												"Neither [npc.name] nor [npc2.name] are attracted to you,"
+												"[npc.name]和[npc2.name]都对你不感兴趣，"
 												+ (Main.game.isNonConEnabled() && characterForSexSecondary.isSlave()
-														?" so if you wanted to have sex with them, you'd need to rape them as the dominant partner."
-														:" so you can't have submissive sex with them.")),
+														?"所以，如果你想和他们进行性关系，你就必须以支配者的身份强奸他们。"
+														:"所以你不能和他们进行服从型性爱。")),
 										null);
 							} else {
-								return new Response("Spitroasted (front)",
+								return new Response("接受“串肉串”(在前)",
 										UtilText.parse(characterForSex,
-												"[npc.Name] is not attracted to you,"
+												"[npc.Name]对你不感兴趣，"
 												+ (Main.game.isNonConEnabled()
-													?" so if you wanted to have sex with [npc.herHim], you'd need to rape [npc.herHim] as the dominant partner."
-													:" so you can't have submissive sex with [npc.herHim].")),
+													?" 所以如果你想和[npc.herHim]发生性关系，就需要作为主导者强奸[npc.herHim]。"
+													:"所以你不能与[npc.herHim]进行服从型性爱。")),
 										null);
 							}
 							
 						} else if(!characterForSexSecondary.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Spitroasted (front)",
+							return new Response("接受“串肉串”(在前)",
 									UtilText.parse(characterForSexSecondary,
-										"[npc.Name] is not attracted to you,"
+										"[npc.Name]对你不感兴趣，"
 										+ (Main.game.isNonConEnabled() && characterForSexSecondary.isSlave()
-											?" so if you wanted to have sex with [npc.herHim], you'd need to rape [npc.herHim] as the dominant partner."
-											:" so you can't have submissive sex with [npc.herHim].")),
+											?" 所以如果你想和[npc.herHim]发生性关系，就需要作为主导者强奸[npc.herHim]。"
+											:"所以你不能与[npc.herHim]进行服从型性爱。")),
 									null);
 							
 						} else {
 							return new ResponseSex(
-									"Spitroasted (front)",
-									UtilText.parse(characterForSex, characterForSexSecondary, "Get down on all fours facing [npc.name], so that [npc.she] can use your mouth while [npc2.name] takes your rear."),
+									"接受“串肉串”(在前)",
+									UtilText.parse(characterForSex, characterForSexSecondary, "你四肢着地，面朝[npc.name]，[npc2.name]玩弄你的后面的时候，[npc.she]就可以使用你的嘴了。"),
 									null, null, null, null, null, null,
 									true, true,
 									getGenericSlaveSexManager(
@@ -1779,61 +1779,61 @@ public class SlaveDialogue {
 						
 					} else if(index == 8) {
 						if(characterForSexSecondary==null || charactersPresent.size()<2) {
-							return new Response("Spitroast (behind)", "You'd need a third person to be present in order to get a spitroast going...", null);
+							return new Response("“串肉串”(在后)", "得有第三个人在场，你才能开始“串肉串”……", null);
 							
 						} else if(characterForSex.isPlayer()) {
-							return new Response("Spitroasted (behind)", "You cannot target yourself for this action!", null);
+							return new Response("接受“串肉串”(在后)", "你不能以自己为目标应用这个动作！", null);
 							
 						} else if (characterForSex.isDollStatue()) {
-							return new Response("Spitroasted (behind)",
+							return new Response("接受“串肉串”(在后)",
 									UtilText.parse(characterForSex,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (characterForSexSecondary.isDollStatue()) {
-							return new Response("Spitroasted (behind)",
+							return new Response("接受“串肉串”(在后)",
 									UtilText.parse(characterForSexSecondary,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (characterForSexSecondary.isAsleep()) {
-							return new Response("Spitroasted (behind)",
+							return new Response("接受“串肉串”(在后)",
 									UtilText.parse(characterForSexSecondary,
-											"As [npc.sheIsFull] currently asleep, [npc.name] cannot participate in sex..."),
+											"[npc.name]现在完全睡着了，不能参与做爱……"),
 									null);
 							
 						} else if(!characterForSex.isAttractedTo(Main.game.getPlayer())) {
 							if(!characterForSexSecondary.isAttractedTo(Main.game.getPlayer())) {
-								return new Response("Spitroasted (behind)",
+								return new Response("接受“串肉串”(在后)",
 										UtilText.parse(characterForSexSecondary, characterForSex,
-												"Neither [npc.name] nor [npc2.name] are attracted to you,"
+												"[npc.name]和[npc2.name]都对你不感兴趣，"
 												+ (Main.game.isNonConEnabled() && characterForSexSecondary.isSlave()
-														?" so if you wanted to have sex with them, you'd need to rape them as the dominant partner."
-														:" so you can't have submissive sex with them.")),
+														?"所以，如果你想和他们进行性关系，你就必须以支配者的身份强奸他们。"
+														:"所以你不能和他们进行服从型性爱。")),
 										null);
 							} else {
-								return new Response("Spitroasted (behind)",
+								return new Response("接受“串肉串”(在后)",
 										UtilText.parse(characterForSex,
-												"[npc.Name] is not attracted to you,"
+												"[npc.Name]对你不感兴趣，"
 												+ (Main.game.isNonConEnabled()
-													?" so if you wanted to have sex with [npc.herHim], you'd need to rape [npc.herHim] as the dominant partner."
-													:" so you can't have submissive sex with [npc.herHim].")),
+													?" 所以如果你想和[npc.herHim]发生性关系，就需要作为主导者强奸[npc.herHim]。"
+													:"所以你不能与[npc.herHim]进行服从型性爱。")),
 										null);
 							}
 							
 						} else if(!characterForSexSecondary.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Spitroasted (behind)",
+							return new Response("接受“串肉串”(在后)",
 									UtilText.parse(characterForSexSecondary,
-										"[npc.Name] is not attracted to you,"
+										"[npc.Name]对你不感兴趣，"
 										+ (Main.game.isNonConEnabled() && characterForSexSecondary.isSlave()
-											?" so if you wanted to have sex with [npc.herHim], you'd need to rape [npc.herHim] as the dominant partner."
-											:" so you can't have submissive sex with [npc.herHim].")),
+											?" 所以如果你想和[npc.herHim]发生性关系，就需要作为主导者强奸[npc.herHim]。"
+											:"所以你不能与[npc.herHim]进行服从型性爱。")),
 									null);
 							
 						} else {
 							return new ResponseSex(
-									"Spitroasted (behind)",
-									UtilText.parse(characterForSex, characterForSexSecondary, "Get down on all fours and present your rear to [npc.name], so that [npc.she] can fuck you while [npc2.name] uses your mouth."),
+									"接受“串肉串”(在后)",
+									UtilText.parse(characterForSex, characterForSexSecondary, "你四肢跪地，将身后展现给[npc.name]，这样在[npc.she]干你的时候[npc2.name]可以同时使用你的嘴巴。"),
 									null, null, null, null, null, null,
 									true, true,
 									getGenericSlaveSexManager(
@@ -1852,52 +1852,52 @@ public class SlaveDialogue {
 					
 					} else if(index == 9) {
 						if(characterForSexSecondary==null || charactersPresent.size()<2) {
-							return new Response("Side-by-side (as sub)", UtilText.parse(characterForSex, "You'd need a third person to be present in order to get fucked alongside either them or [npc.name]..."), null);
+							return new Response("并排后入(在下)", UtilText.parse(characterForSex, "你需要第三个人在场，才能被他们或者[npc.name]操……"), null);
 							
 						} else if(characterForSex.isPlayer()) {
-							return new Response("Side-by-side (as sub)", "You cannot target yourself for this action!", null);
+							return new Response("并排后入(作为服从方)", "你不能以自己为目标应用这个动作！", null);
 							
 						} else if (characterForSex.isDollStatue()) {
-							return new Response("Side-by-side (as sub)",
+							return new Response("并排后入(作为服从方)",
 									UtilText.parse(characterForSex,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (characterForSexSecondary.isDollStatue()) {
-							return new Response("Side-by-side (as sub)",
+							return new Response("并排后入(作为服从方)",
 									UtilText.parse(characterForSexSecondary,
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (characterForSexSecondary.isAsleep()) {
-							return new Response("Side-by-side (as sub)",
+							return new Response("并排后入(作为服从方)",
 									UtilText.parse(characterForSexSecondary,
-											"As [npc.sheIsFull] currently asleep, [npc.name] cannot participate in sex..."),
+											"[npc.name]现在完全睡着了，不能参与做爱……"),
 									null);
 							
 						} else if(!characterForSex.isAttractedTo(Main.game.getPlayer())) {
 							if(!characterForSexSecondary.isAttractedTo(Main.game.getPlayer())) {
-								return new Response("Side-by-side (as sub)", UtilText.parse(characterForSexSecondary, characterForSex, "Neither [npc.name] nor [npc2.name] are attracted to you..."), null);
+								return new Response("并排后入(在下)", UtilText.parse(characterForSexSecondary, characterForSex, "[npc.name]和[npc2.name]都没被你吸引……"), null);
 							} else {
-								return new Response("Side-by-side (as sub)", UtilText.parse(characterForSex, "[npc.Name] is not attracted to you, and so would be unwilling to participate in a threesome..."), null);
+								return new Response("并排后入(在下)", UtilText.parse(characterForSex, "[npc.Name]没被你吸引，不想参加三人行……"), null);
 							}
 							
 						} else if(!characterForSexSecondary.isAttractedTo(Main.game.getPlayer())) {
-							return new Response("Side-by-side (as sub)", UtilText.parse(characterForSexSecondary, characterForSex, "[npc.Name] is not attracted to you, and so neither [npc.she] nor [npc2.name] would be willing to have a threesome..."), null);
+							return new Response("并排后入(在下)", UtilText.parse(characterForSexSecondary, characterForSex, "[npc.Name]没被你吸引，[npc.she]和[npc2.name]都不愿意三人行……"), null);
 							
 						} else if(!characterForSexSecondary.isAttractedTo(characterForSex)) {
-							return new Response("Side-by-side (as sub)",
-									UtilText.parse(characterForSexSecondary, characterForSex, "[npc.Name] is not attracted to [npc2.name], and so neither of them would be willing to be in a threesome position in which they are expected to interact with one other..."),
+							return new Response("并排后入(作为服从方)",
+									UtilText.parse(characterForSexSecondary, characterForSex, "[npc.Name]没被[npc2.name]吸引，他们不想彼此接触，所以都不会参加三人行……"),
 									null);
 
 						} else if(!characterForSex.isAttractedTo(characterForSexSecondary)) {
-							return new Response("Side-by-side (as sub)",
-									UtilText.parse(characterForSexSecondary, characterForSex, "[npc2.Name] is not attracted to [npc.name], and so neither of them would be willing to be in a threesome position in which they are expected to interact with one other..."),
+							return new Response("并排后入(作为服从方)",
+									UtilText.parse(characterForSexSecondary, characterForSex, "[npc2.name]没被[npc2.name]吸引，他们不想彼此接触，所以都不会参加三人行……"),
 									null);
 							
 						} else {
-							return new ResponseSex("Side-by-side (as sub)",
-									UtilText.parse(characterForSex, characterForSexSecondary, "Get down on all fours beside [npc2.name], so that [npc.name] can kneel down behind the two of you, ready to fuck you both side-by-side."),
+							return new ResponseSex("并排后入(在下)",
+									UtilText.parse(characterForSex, characterForSexSecondary, "在[npc2.name]身边四肢跪地，这样[npc.name]就可以跪在你们身后，跟挨在一起的你们两个做爱了。"),
 									null, null, null, null, null, null,
 									true, false,
 									getGenericSlaveSexManager(
@@ -1916,21 +1916,21 @@ public class SlaveDialogue {
 					
 					}else if(index==10) {
 						if(charactersPresent.size()<3) {
-							return new Response("Gangbang (as sub)",
-									"There need to be at least three characters present in order to start a gangbang.",
+							return new Response("一受多攻(作为服从方)",
+									"至少要有三个角色在场才能开始群交。",
 									null);
 							
 						} else if (charactersPresent.stream().anyMatch(c->c.isDollStatue())) {
-							return new Response("Gangbang (as sub)",
+							return new Response("一受多攻(作为服从方)",
 									UtilText.parse(charactersPresent.stream().filter(c->c.isDollStatue()).findFirst().get(),
-											"As an immobile doll, [npc.name] cannot take a dominant role in sex..."),
+											"[npc.name]是一个无法移动的玩偶，不能在做爱中占据支配地位……"),
 									null);
 							
 						} else if (charactersPresent.stream().anyMatch(c->c.isAsleep())) {
 							boolean soloSleeper = charactersPresent.stream().filter(c->c.isAsleep()).count()==1;
 							String names = Util.charactersToStringListOfNames(charactersPresent.stream().filter(c->c.isAsleep()).collect(Collectors.toList()));
-							return new Response("Gangbang (as sub)",
-											names+" "+(soloSleeper?"needs":"need")+" to be awake to participate in a gangbang!",
+							return new Response("一受多攻(作为服从方)",
+											names+"需要醒来才能群交！",
 									null);
 							
 						} else {
@@ -1944,16 +1944,16 @@ public class SlaveDialogue {
 									}
 								}
 								String isAre = nonAttracted.size()==1?"is":"are";
-								String them = nonAttracted.size()==1?UtilText.parse(nonAttracted.get(0), "[npc.herHim]"):"them";
-								return new Response("Gangbang (as sub)",
-										"As "+Util.charactersToStringListOfNames(nonAttracted)+" "+isAre+" not attracted to you, you cannot make "+them+" dominantly participate in a gangbang you.",
+								String them = nonAttracted.size()==1?UtilText.parse(nonAttracted.get(0), "[npc.herHim]"):"他们";
+								return new Response("一受多攻(作为服从方)",
+										"由于"+Util.charactersToStringListOfNames(nonAttracted)+" "+isAre+" 不被你吸引，你不能让"+them+"在群交中占据主导。",
 										null);
 							}
 							
 							List<GameCharacter> sexParticipants = new ArrayList<GameCharacter>(charactersPresent);
 							return new ResponseSex(
-									"Gangbang (as sub)",
-									"Have "+Util.charactersToStringListOfNames(sexParticipants)+" take the dominant roles and get them to gangbang you.",
+									"一受多攻(作为服从方)",
+									"让"+Util.charactersToStringListOfNames(sexParticipants)+"占据主导地位，并让她们与你开展群交。",
 									null, null, null, null, null, null,
 									true, false,
 									getGenericSlaveSexManager(
@@ -1974,8 +1974,8 @@ public class SlaveDialogue {
 					} else if(index==11) {
 						if(characterForSexSecondary!=null) {
 							return new ResponseEffectsOnly(
-									UtilText.parse(characterForSex, "Target: <b style='color:"+characterForSex.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b>"),
-									"Cycle the targeted character for group sex.") {
+									UtilText.parse(characterForSex, "目标：<b style='color:"+characterForSex.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b>"),
+									"循环切换选择群交角色。") {
 								@Override
 								public void effects() {
 									if(charactersPresent.size()>1) {
@@ -2002,16 +2002,16 @@ public class SlaveDialogue {
 							
 						} else {
 							return new Response(
-									UtilText.parse(characterForSex, "Target: <b>[npc.Name]</b>"),
-									"Cycle the targeted character for group sex.<br/>[style.italicsBad(You'd need to have a companion with you for this action to be unlocked!)]",
+									UtilText.parse(characterForSex, "目标：<b>[npc.Name]</b>"),
+									"循环切换选择群交目标角色。<br/>[style.italicsBad(若要解锁该动作，需要带着一名同伴！)]",
 									null); 
 						}
 						
 					} else if(index==12) {
 						if(characterForSexSecondary!=null) {
 							return new ResponseEffectsOnly(
-									UtilText.parse(characterForSexSecondary, "Secondary: <b style='color:"+characterForSexSecondary.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b>"),
-									"Cycle the secondary targeted character for group sex.") {
+									UtilText.parse(characterForSexSecondary, "次目标：<b style='color:"+characterForSexSecondary.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b>"),
+									"循环切换选择群交次目标角色。") {
 								@Override
 								public void effects() {
 									if(charactersPresent.size()>1) {
@@ -2038,8 +2038,8 @@ public class SlaveDialogue {
 							
 						} else {
 							return new Response(
-									UtilText.parse(characterForSex, "Secondary: <b>[npc.Name]</b>"),
-									"Cycle the secondary targeted character for group sex.<br/>[style.italicsBad(You'd need to have a companion with you for this action to be unlocked!)]",
+									UtilText.parse(characterForSex, "次目标：<b>[npc.Name]</b>"),
+									"循环切换选择群交次目标角色。<br/>[style.italicsBad(若要解锁该动作，需要带着一名同伴！)]",
 									null);
 						}
 					}
@@ -2049,14 +2049,14 @@ public class SlaveDialogue {
 			} else if(responseTab == 2) {
 				if(isDollStatue()) {
 					if(index == 1) {
-						return new Response("Stop statue",
-								UtilText.parse(getSlave(), "Tell [npc.name] to temporarily stop acting like a statue so that you can manage [npc.herHim]."),
+						return new Response("暂停扮演雕像",
+								UtilText.parse(getSlave(), "让[npc.name]暂时停止扮演雕像，这样你就可以管理[npc.herHim]了。"),
 								SLAVE_START_NO_CONTENT) {
 							@Override
 							public void effects() {
 								dollStatueInterrupted = true;
 								Main.game.appendToTextEndStringBuilder("<p>");
-									Main.game.appendToTextEndStringBuilder("Wanting to interact with [npc.name] without [npc.herHim] continuing to act like an unresponsive statue, you give [npc.herHim] permission to temporarily move freely once again.");
+									Main.game.appendToTextEndStringBuilder("想要与[npc.name]互动，而不想让[npc.herHim]继续像一尊毫无反应的雕像一样，你应该允许[npc.herHim]再次暂时自由移动。");
 								Main.game.appendToTextEndStringBuilder("</p>");
 								Main.game.appendToTextEndStringBuilder(getSlaveStartCoreContent());
 							}
@@ -2093,8 +2093,8 @@ public class SlaveDialogue {
 		return UtilText.parse(getSlave(),
 				"<p><i>"
 					+ (getSlave().isAttractedTo(Main.game.getPlayer())
-						?"From the way [npc.she] keeps on glancing hungrily at your body, you can tell that [npc.sheIs] attracted to you..."
-						:"[npc.She] doesn't seem to be attracted to you...")
+						?"[npc.she]如饥似渴地盯着你的身体，你看出[npc.sheIs]被你吸引了……"
+						:"[npc.she]似乎并没有被你吸引……")
 				+ "</i></p>");
 	}
 	
@@ -2106,7 +2106,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Talking with [npc.Name]");
+			return UtilText.parse(getSlave(), "与[npc.Name]交谈");
 		}
 
 		@Override
@@ -2116,23 +2116,23 @@ public class SlaveDialogue {
 			if(isDoll()) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "Wanting to hear about it from [npc.her] point of view, you ask [npc.name] what [npc.she] can tell you about the process by which [npc.she] was created."
+							+ "你想要了解[npc.Name]的看法，问了问[npc.she]被创造时的记忆"
 						+ "</p>"
 						+ "<p>"
-							+ "[npc.speech(I'm sorry, [pc.name], but I don't remember anything of it,)] [npc.she] replies, [npc.speech(My first memory is of being commanded to take my place alongside a dozen other dolls, and to there wait until I was sold.)]"
+							+ "[npc.speech(抱歉[pc.name]，但我已经记不清了)]，[npc.she]回答道，[npc.speech(我最初的记忆是，我被命令和其他十几个玩偶站在一起，等着被卖掉。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "It doesn't sound like [npc.name] is going to be able to tell you anything you didn't already learn from Saellatrix, and so decide not to waste your time with any more questions on this subject..."
+							+ "看样子，[npc.Name]似乎无法提供任何赛拉特里克斯未曾告诉过你的信息，所以你决定不再就这个问题浪费时间提问……"
 						+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "<i>This isn't fully implemented yet!</i>" //TODO
+							+ "<i>还没做完！</i>" //TODO
 						+ "</p>"
 						+ "<p>"
-							+ "Deciding that you'd like to talk to [npc.name] about something a little more serious, you ask [npc.herHim] about [npc.her] life before becoming your slave,"
-							+ " [pc.speech(I'd like to know a little more about your past, [npc.name]. What was your life like before coming here?)]"
+							+ "你决定要和[npc.Name]谈一些更严肃的话题，于是你向[npc.herHim]询问了[npc.her]在成为你的奴隶之前的生活，"
+							+ "[pc.speech(我想了解一下你的过去，[npc.name]。来这里之前，你的生活是怎样的？)]"
 						+ "</p>"
 						+ "<p>");
 				
@@ -2140,48 +2140,48 @@ public class SlaveDialogue {
 					case DISLIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								UtilText.nodeContentSB.append("With a look of intense hatred in [npc.her] [npc.eyes], [npc.she] quickly spits out an insolent response,"
-										+ " [npc.speech(Fuck off! Like I'm going to talk about that stuff with you! Asshole!)]");
+								UtilText.nodeContentSB.append("[npc.her]的[npc.eyes]中流露出强烈的仇恨神情，[npc.she]迅速做出了无礼的回应，"
+										+ "[npc.speech(滚你妈的！说得好像我会跟你谈这些似的！傻逼！)]");
 								break;
 							case NEUTRAL:
-								UtilText.nodeContentSB.append("Although [npc.she] tries to conceal it, you see the distinct look of hatred in [npc.her] [npc.eyes] as [npc.she] remarks,"
-										+ " [npc.speech(I wasn't doing much. There's really nothing more to say, [npc.pcName].)]");
+								UtilText.nodeContentSB.append("虽然[npc.she]极力掩饰，但在[npc.she]说话时，你还是看到了[npc.her][npc.eyes]里明显的仇恨眼神，"
+										+ "[npc.speech(我没做什么。真的没什么好说的了，[npc.pcName]。)]");
 								break;
 							case OBEDIENT:
-								UtilText.nodeContentSB.append("[npc.She] obediently does [npc.her] very best to conceal the look of hatred in [npc.her] [npc.eyes] as [npc.she] responds,"
-										+ " [npc.speech(There's not really much to say about all that, [npc.pcName]. I lived an uneventful life up until becoming your property. Is there anything else you need?)]");
+								UtilText.nodeContentSB.append("在[npc.she]回答时，[npc.she]顺从地竭力掩饰[npc.her][npc.eyes]中的仇恨神情，"
+										+ "[npc.speech(其实这没什么好说的，[npc.pcName]。在成为你的财产之前，我过着平淡无奇的生活。你还需要问什么吗？)]");
 								break;
 						}
 						break;
 					case NEUTRAL:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								UtilText.nodeContentSB.append("Although [npc.she] doesn't seem to hate you, [npc.name] obviously doesn't feel too comfortable talking about [npc.her] past with you, and sighs,"
-										+ " [npc.speech(I don't know, [npc.pcName], it's not like there's anything to tell, really. Let's just talk about something else, ok?)]");
+								UtilText.nodeContentSB.append("虽然[npc.she]似乎并不讨厌你，但[npc.Name]显然不太愿意和你谈论[npc.her]的过去，于是叹了口气，"
+										+ "[npc.speech(我不知道，[npc.pcName]，好像没什么好说的，真的。我们还是谈点别的吧，好吗？)]");
 								break;
 							case NEUTRAL:
-								UtilText.nodeContentSB.append("Although [npc.she] doesn't seem to hate you, [npc.name] obviously doesn't feel too comfortable talking about [npc.her] past with you, and sighs,"
-										+ " [npc.speech(I'm sorry [npc.pcName], there's not really anything to say about my past. Perhaps I can do something else for you?)]");
+								UtilText.nodeContentSB.append("虽然[npc.she]似乎并不讨厌你，但[npc.Name]显然不太愿意和你谈论[npc.her]的过去，于是叹了口气，"
+										+ "[npc.speech(抱歉[npc.pcName]，关于我的过去，真的没什么好说的。也许我能为你做点别的什么？)]");
 								break;
 							case OBEDIENT:
-								UtilText.nodeContentSB.append("Although [npc.she] doesn't seem to hate you, [npc.name] obviously doesn't feel too comfortable talking about [npc.her] past with you, and simply responds,"
-										+ " [npc.speech(There isn't anything to say about that, [npc.pcName]. My life was entirely uneventful before becoming your slave. Can I do anything else for you?)]");
+								UtilText.nodeContentSB.append("虽然[npc.she]似乎并不讨厌你，但[npc.Name]显然不太愿意和你谈论[npc.her]的过去，只是简单地回应了一下，"
+										+ "[npc.speech(这没什么好说的，[npc.pcName]。在成为你的奴隶之前，我的生活一帆风顺。我还能为你做什么吗？)]");
 								break;
 						}
 						break;
 					case LIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) { //TODO
 							case DISOBEDIENT:
-								UtilText.nodeContentSB.append("Barely able to contain [npc.her] excitement at being asked about [npc.her] past life, [npc.name] quickly responds,"
-										+ " [npc.speech(Thanks for asking, [npc.pcName]! Oh, but maybe we should talk about this some other time...)]");
+								UtilText.nodeContentSB.append("在被问及[npc.her]的过往时，[npc.her]几乎无法抑制激动的心情，[npc.Name]很快就做出了回答，"
+										+ "[npc.speech(谢谢你的关心，[npc.pcName]！哦，但也许我们应该改天再讨论这个问题……)]");
 								break;
 							case NEUTRAL:
-								UtilText.nodeContentSB.append("[npc.Name] smiles as you ask [npc.herHim] about [npc.her] past life, and responds,"
-										+ " [npc.speech(Ah, [npc.pcName], maybe we should talk about this some other time...)]");
+								UtilText.nodeContentSB.append("你向[npc.Name]问及[npc.her]过去的生活，[npc.herHim]微笑着回答，"
+										+ "[npc.speech(啊，[npc.pcName]，也许我们应该改天再讨论这个问题……)]");
 								break;
 							case OBEDIENT:
-								UtilText.nodeContentSB.append("Clearly happy at being asked about [npc.her] past life, [npc.name] quickly responds,"
-										+ " [npc.speech(I'm sorry, [npc.pcName], but we'll have to talk about this some other time...)]");
+								UtilText.nodeContentSB.append("被问及[npc.Name]的过往让[npc.her]显然很高兴，很快就做出了回答，"
+										+ "[npc.speech(对不起，[npc.pcName]，我们得改天再谈这个……)]");
 								break;
 						}
 						break;
@@ -2213,7 +2213,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Talking with [npc.Name]");
+			return UtilText.parse(getSlave(), "与[npc.Name]交谈");
 		}
 
 		@Override
@@ -2222,130 +2222,130 @@ public class SlaveDialogue {
 			
 			if(isDoll()) {
 				UtilText.nodeContentSB.append("<p>"
-							+ "Deciding to take advantage of the fact that [npc.name] is more than just a sex doll, you start to make small talk with [npc.herHim]."
+							+ "鉴于[npc.name]不仅仅是一个性玩偶，所以你决定与[npc.herHim]闲聊一会。"
 						+ "</p>"
 						+ "<p>"
-							+ "At first it seems like you're talking to a normal person, as [npc.name] responds to your questions and statements in an engaging manner."
-							+ " You soon notice, however, that [npc.she] doesn't really offer anything to the conversation, and is simply reacting to whatever you say."
+							+ "[npc.name]以一种积极参与的方式回应你的问题和陈述，让你感觉就像是在与一个正常人交谈。"
+							+ "你很快发现，[npc.she]实际上没讲什么，仅仅是对你言听计从。"
 						+ "</p>"
 						+ "<p>"
-							+ "Having noticed this limitation of [npc.namePos] abilities, you allow the conversation to end, before wondering what to do next..."
+							+ "在注意到[npc.namePos]的局限性后，你结束了这次对话，随后开始思考接下来该做什么……"
 						+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append("<p>"
-							+ "You decide to try and make some small talk with [npc.name], and ask [npc.herHim] a series of questions ranging from how [npc.sheIs] finding life as your slave,"
-							+ " to what [npc.she] thinks of the peculiar arcane weather here in Dominion.");
+							+ "你决定尝试与[npc.name]闲聊几句，于是向[npc.herHim]提出了一系列问题，从[npc.sheIs]作为你的奴隶生活感觉如何开始，"
+							+ "到[npc.she]如何看待御城区这奇特的奥术天气。");
 				
 				switch(AffectionLevelBasic.getAffectionLevelFromValue(getSlave().getAffection(Main.game.getPlayer()))) {
 					case DISLIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								UtilText.nodeContentSB.append(" No matter how hard you try, however, your attempts at conversation are met with incredibly rude remarks."
+								UtilText.nodeContentSB.append("然而，无论你如何努力，你的谈话尝试都会遭到令人难以置信的粗鲁评价。"
 										+ "</p>"
 										+ "<p>"
-										+ "Realising that you're not going to get anywhere like this, you give up on trying to talk to [npc.name]."
-										+ " As you turn away, [npc.she] scowls."
-										+ " [npc.speech(Can you please just fuck off now?!)]");
+										+ "意识到这样下去不会有结果，你放弃了与[npc.name]对话的尝试。"
+										+ "当你转身离开时，[npc.she]皱起了眉头。"
+										+ "[npc.speech(请您能滚蛋了吗？！)]");
 								break;
 							case NEUTRAL:
-								UtilText.nodeContentSB.append(" No matter how hard you try, however, your attempts at conversation are met with short, dismissive remarks."
+								UtilText.nodeContentSB.append("然而，无论你如何努力尝试，你的谈话都会遭到简短、轻蔑的回应。"
 										+ "</p>"
 										+ "<p>"
-										+ "Realising that you're not going to get anywhere like this, you give up on trying to talk to [npc.name]."
-										+ " As you turn away, [npc.she] scowls."
-										+ " [npc.speech(Are you finished with me, [npc.pcName]?)]");
+										+ "意识到这样下去不会有结果，你放弃了与[npc.name]对话的尝试。"
+										+ "当你转身离开时，[npc.she]皱起了眉头。"
+										+ "[npc.speech(你说完了吗，[npc.pcName]？)]");
 								break;
 							case OBEDIENT:
-								UtilText.nodeContentSB.append(" No matter how hard you try, however, your attempts at conversation are met with short, dismissive remarks."
+								UtilText.nodeContentSB.append("然而，无论你如何努力尝试，你的谈话都会遭到简短、轻蔑的回应。"
 										+ "</p>"
 										+ "<p>"
-										+ "Realising that you're not going to get anywhere like this, you give up on trying to talk to [npc.name]."
-										+ " As you turn away, [npc.she] asks,"
-										+ " [npc.speech(Is there anything else I can do for you, [npc.pcName]?)]");
+										+ "意识到这样下去不会有结果，你放弃了与[npc.name]对话的尝试。"
+										+ "当你转身离开时，[npc.she]问道，"
+										+ "[npc.speech(还有什么需要我帮忙的吗，[npc.pcName]？)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, your attempt at making small talk is doing more harm than good!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，你想和对方套近乎的做法弊大于利！</i>"
 								+ "</p>");
 						break;
 					case NEUTRAL:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											" Although [npc.she] seems uninterested in talking to you at first, [npc.name] nevertheless responds to each of your questions in an amicable manner."
-											+ " From the smile that slowly forms on [npc.her] face, you can tell that [npc.she] appreciates the fact that you're attempting to put [npc.herHim] at ease."
+											" 虽然[npc.she]一开始似乎对与你交谈不感兴趣，但[npc.name]还是友好地回答了你的每一个问题。"
+											+ "从[npc.her]脸上慢慢绽放的笑容中，你可以看出[npc.she]很感激你试图让[npc.herHim]安心。"
 										+ "</p>"
 										+ "<p>"
-											+ "After spending some time talking with [npc.name] like this, you decide to bring your conversation to an end, and as you do, your slave mutters,"
-											+ " [npc.speech(Thanks for talking to me, [npc.pcName]...)]");
+											+ "你与[npc.name]聊了一会，决定结束对话。这时你的奴隶嘟囔了一句，"
+											+ "[npc.speech(谢谢你跟我说话，[npc.pcName]……)]");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										" Although [npc.she] seems a little hesitant to talk to you, [npc.name] nevertheless responds to each of your questions in an amicable manner."
-										+ " From the smile that slowly forms on [npc.her] face, you can tell that [npc.she] appreciates the fact that you're attempting to put [npc.herHim] at ease."
+										"虽然[npc.she]在与你交谈时显得有些犹豫，但[npc.name]还是友好地回答了你的每一个问题。"
+										+ "从[npc.her]脸上慢慢绽放的笑容中，你可以看出[npc.she]很感激你试图让[npc.herHim]安心。"
 									+ "</p>"
 									+ "<p>"
-										+ "After spending some time talking with [npc.name] like this, you decide to bring your conversation to an end, and as you do, your slave mutters,"
-										+ " [npc.speech(Thank you, [npc.pcName]. I enjoyed talking with you...)]");
+										+ "你与[npc.name]聊了一会，决定结束对话。这时你的奴隶嘟囔了一句，"
+										+ "[npc.speech(谢谢你，[npc.pcName]。我很高兴与你交谈……)]");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										" [npc.She] obediently responds to each one of your questions in an amicable manner."
-										+ " From the smile that slowly forms on [npc.her] face, you can tell that [npc.she] appreciates the fact that you're attempting to put [npc.herHim] at ease."
+										"[npc.she]顺从且友好地回答你的每一个问题。"
+										+ "从[npc.her]脸上慢慢绽放的笑容中，你可以看出[npc.she]很感激你试图让[npc.herHim]安心。"
 									+ "</p>"
 									+ "<p>"
-										+ "After spending some time talking with [npc.name] like this, you decide to bring your conversation to an end, and as you do, your slave smiles."
-										+ " [npc.speech(I hope my answers were to your satisfaction, [npc.pcName].)]");
+										+ "你与[npc.Name]聊了一会，决定结束对话。在这时，你的奴隶露出了笑容。"
+										+ "[npc.speech(希望我的回答能让你满意，[npc.pcName]。)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, your attempt at making small talk is helping to get [npc.herHim] to like you more!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，你试图闲聊的举动正在让[npc.herHim]更喜欢你！</i>"
 								+ "</p>");
 						break;
 					case LIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											" Beaming from ear to ear, [npc.name] enthusiastically responds to each of your questions, [npc.her] attitude more like that of a close friend than of your slave."
-											+ " From [npc.her] smile and the way [npc.she] looks longingly up into your [pc.eyes], you can tell that [npc.name] really appreciates the fact that you're taking some time to talk with [npc.herHim]."
+											"[npc.Name]满面笑容，热情地回答你的每一个问题，[npc.her]的态度更像是一位亲密的朋友，而不是你的奴隶。"
+											+ "从[npc.her]的微笑和[npc.she]凝视你[pc.eyes]的眼神中，你可以看出[npc.name]非常感激你花时间和[npc.herHim]交谈。"
 										+ "</p>"
 										+ "<p>"
-											+ "After a little while, you decide to bring your conversation to an end, and as you do, your slave grins at you."
-											+ " [npc.speech(Thanks, [npc.pcName]! It's really great getting to talk with you now and again!)]");
+											+ "过了一会儿，你决定结束谈话，就在你结束谈话时，你的奴隶对你咧嘴一笑。"
+											+ "[npc.speech(谢谢，[npc.pcName]！偶尔能和你聊聊天真的很开心！)]");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										" Beaming from ear to ear, [npc.name] enthusiastically responds to each of your questions, but [npc.she] makes sure not to overdo it, remaining a little distant as [npc.she] tries to act like a good slave."
-										+ " From [npc.her] smile and the way [npc.she] looks longingly up into your [pc.eyes], you can tell that [npc.name] really appreciates the fact that you're taking some time to talk with [npc.herHim]."
+										"[npc.Name]满面笑容，热情地回答你的每一个问题，但[npc.she]确保不会做得太过火，保持一点距离，因为[npc.she]努力表现得像个好奴隶。"
+										+ "从[npc.her]的微笑和[npc.she]凝视你[pc.eyes]的眼神中，你可以看出[npc.name]非常感激你花时间和[npc.herHim]交谈。"
 									+ "</p>"
 									+ "<p>"
-										+ "After a little while, you decide to bring your conversation to an end, and as you do, your slave smiles."
-										+ " [npc.speech(Thank you, [npc.pcName]. I appreciate you taking your time to talk with me.)]");
+										+ "过了一会儿，你决定结束谈话，这时你的奴隶露出了笑容。"
+										+ "[npc.speech(谢谢你，[npc.pcName]。感谢你抽出时间和我说话。)]");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										" Trying to control the excitement in [npc.her] voice, [npc.name] enthusiastically responds to each of your questions,"
-												+ " although [npc.sheIs] careful to retain [npc.her] composure, doing [npc.her] very best to act like an obedient slave."
-										+ " [npc.She] can't manage to totally suppress [npc.her] smile and the way [npc.she] looks longingly up into your [pc.eyes], however,"
-											+ " letting you know that [npc.she] really appreciates the fact that you're taking some time to talk with [npc.herHim]."
+										"[npc.Name]努力控制住[npc.her]激动的声音，热情地回答你的每一个问题，"
+												+ "尽管[npc.sheIs]小心翼翼地保持[npc.her]的镇定，竭尽全力表现得像个听话的奴隶。"
+										+ "不过，[npc.she]无法完全抑制[npc.her]的微笑和[npc.she]渴望地仰望你[pc.eyes]的眼神，"
+											+ "让你知道，[npc.she]非常感激你花时间与[npc.herHim]交谈。"
 									+ "</p>"
 									+ "<p>"
-										+ "After a little while, you decide to bring your conversation to an end, and as you do, your slave smiles."
-										+ " [npc.speech(I hope my answers were to your satisfaction, [npc.pcName].)]");
+										+ "过了一会儿，你决定结束谈话，这时你的奴隶露出了笑容。"
+										+ "[npc.speech(希望我的回答能让你满意，[npc.pcName]。)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, your attempt at making small talk is greatly helping to get [npc.herHim] to like you more!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，你试图闲聊的举动大大有助于让[npc.herHim]更喜欢你！</i>"
 								+ "</p>");
 						break;
 				}
@@ -2375,7 +2375,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Encouraging [npc.Name]");
+			return UtilText.parse(getSlave(), "鼓励[npc.Name]");
 		}
 
 		@Override
@@ -2385,14 +2385,14 @@ public class SlaveDialogue {
 			if(isDoll()) {
 				String jobName = getCurrentJob().getName(getSlave());
 				UtilText.nodeContentSB.append("<p>"
-							+ "Wanting to hear what [npc.name] has to say about [npc.her] job, you ask [npc.herHim] what [npc.she] thinks of working as "
-							+ UtilText.generateSingularDeterminer(jobName)+" "+jobName+"."
+							+ "你想听听[npc.Name]对[npc.her]工作的想法，便问[npc.herHim]觉得工作怎么样"
+							+ UtilText.generateSingularDeterminer(jobName)+""+jobName+"。"
 						+ "</p>"
 						+ "<p>"
-							+ "[npc.speech(I do not think anything of it, [pc.name],)] the doll responds, [npc.speech(I am simply here to serve you, no matter what it is that you ask me to do.)]"
+							+ "[npc.speech(我没想过，[pc.name]，)]玩偶回应道，[npc.speech(我只是来服务你的，任凭差遣。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "It doesn't seem like you're going to get much out of [npc.name] on this topic..."
+							+ "看起来在这个话题上，你从[npc.name]那里得不到太多信息……"
 						+ "</p>");
 				
 			} else {
@@ -2400,56 +2400,56 @@ public class SlaveDialogue {
 				
 				switch(getCurrentJob()) {
 					case CLEANING:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working as your ");
+						UtilText.nodeContentSB.append("希望鼓励[npc.Name]在工作时做到最好，作为你的 ");
 						UtilText.nodeContentSB.append(Util.capitaliseSentence(SlaveJob.CLEANING.getName(getSlave())));
-						UtilText.nodeContentSB.append(", you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("，你询问[npc.sheIs]发现了什么。");
 						break;
 					case IDLE:
-						UtilText.nodeContentSB.append("Although [npc.name] hasn't been assigned to a job, you ask [npc.her] how [npc.sheIs] finding life as your slave.");
+						UtilText.nodeContentSB.append("虽然[npc.name]还没有被分配工作，但你还是要问问[npc.her]作为你的奴隶生活得怎么样。");
 						break;
 					case GARDEN:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working as a gardener, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.name]在做园丁时尽心尽力，你问[npc.her]做得怎么样。");
 						break;
 					case SECURITY:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working as a security guard, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.name]在做保安时尽心尽力，你问[npc.sheIs]觉得怎么样。");
 						break;
 					case KITCHEN:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working in the kitchen as your cook, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.Name]在厨房做厨师时尽心尽力，你问[npc.her]觉得怎么样。");
 						break;
 					case LAB_ASSISTANT:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working in Lilaya's lab as your [lilaya.relation(pc)]'s assistant, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.Name]作为你的[lilaya.relation(pc)]的助手在莉莱雅的实验室工作时尽心尽力，你问[npc.her]觉得怎么样。");
 						break;
 					case LIBRARY:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working as a librarian in Lilaya's extensive library, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.name]在莉莱雅琳琅满目的图书馆担任图书管理员期间尽心尽力，你询问[npc.her]觉得怎么样。");
 						break;
 					case OFFICE:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working in the office, you ask [npc.her] if [npc.sheIs] happy dealing with all the paperwork.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.Name]在办公室工作时尽心尽力，你问[npc.her]处理这些文书工作是否开心。");
 						break;
 					case TEST_SUBJECT:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while being used as a test subject for Lilaya's work on transformations, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("你想鼓励[npc.name]在作为莉莱雅改造工作的试验品时尽全力做好[npc.her]的工作，于是问[npc.her]觉得怎么样。");
 						break;
 					case PUBLIC_STOCKS:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while being publicly used in the stocks in Slaver Alley, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.Name]在奴隶巷被公开利用的同时，尽最大努力做好[npc.her]的工作，你问[npc.her]感觉如何。");
 						break;
 					case PROSTITUTE:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working as a prostitute in Angel's Kiss, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.name]在“天使之吻”做妓女时尽心尽力，你询问[npc.her]感觉如何。");
 						break;
 					case MILKING:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working in the milking stalls, you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("为了鼓励[npc.name]在挤奶间工作时尽心尽力，你问[npc.her]感觉如何。");
 						break;
 					case BEDROOM:
-						UtilText.nodeContentSB.append("Wanting to make sure that [npc.nameIsFull] happy, you ask [npc.herHim] how [npc.she] feels about being assigned to wait upon you in your bedroom.");
+						UtilText.nodeContentSB.append("为了让[npc.nameIsFull]满意，你询问[npc.herHim]对于[npc.she]被指派在卧室里伺候你感觉如何。");
 						break;
 					case SPA:
-						UtilText.nodeContentSB.append("Wanting to make sure that [npc.nameIsFull] happy, you ask [npc.herHim] how [npc.she] feels about being assigned to work in the spa.");
+						UtilText.nodeContentSB.append("为了让[npc.nameIsFull]开心，你询问[npc.herHim]对[npc.she]被分配到水疗中心工作的感受。");
 						break;
 					case SPA_RECEPTIONIST:
-						UtilText.nodeContentSB.append("Wanting to make sure that [npc.nameIsFull] happy, you ask [npc.herHim] how [npc.she] feels about being assigned to work in the spa.");
+						UtilText.nodeContentSB.append("为了让[npc.nameIsFull]开心，你询问[npc.herHim]对[npc.she]被分配到水疗中心工作的感受。");
 						break;
 					case DINING_HALL:
-						UtilText.nodeContentSB.append("Wanting to encourage [npc.name] to do [npc.her] best while working as your ");
+						UtilText.nodeContentSB.append("希望鼓励[npc.Name]在工作时做到最好，作为你的 ");
 						UtilText.nodeContentSB.append(Util.capitaliseSentence(SlaveJob.DINING_HALL.getName(getSlave())));
-						UtilText.nodeContentSB.append(", you ask [npc.her] how [npc.sheIs] finding it.");
+						UtilText.nodeContentSB.append("，你询问[npc.sheIs]发现了什么。");
 						break;
 					case DOLL_STATUE:
 						break;
@@ -2459,120 +2459,120 @@ public class SlaveDialogue {
 					case DISLIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								UtilText.nodeContentSB.append(" The moment that you finish speaking, your disobedient slave spits out,"
-										+ " [npc.speech(Fuck off! I hate it, and I'm not even doing any work while I'm on duty, so fuck you!)]"
+								UtilText.nodeContentSB.append("你话音刚落，不听话的奴隶就啐了出来，"
+										+ "[npc.speech(滚你妈的！我讨厌这样，而且我在值班的时候根本没工作，所以去你妈了个逼的！)]"
 										+ "</p>"
 										+ "<p>"
-										+ "From [npc.her] rude reaction, it's quite clear that [npc.name] not only hates you, but also isn't too keen on living life as your slave."
-										+ " Before you can try asking [npc.herHim] to give you a proper answer, [npc.she] turns [npc.her] back on you and snarls,"
-										+ " [npc.speech(Why don't you fuck off and go suck Lilaya's cock!)]");
+										+ "从[npc.her]粗鲁的反应来看，很明显[npc.Name]不仅讨厌你，而且也不情愿过作为你的奴隶的生活。"
+										+ "还没等你试着要求[npc.herHim]给你一个合适的答案，[npc.she]就朝你转过身咆哮起来，"
+										+ "[npc.speech(你为什么不滚开去给莉莱雅舔鸡巴？)]");
 								break;
 							case NEUTRAL:
-								UtilText.nodeContentSB.append(" The moment that you finish speaking, your slave sharply responds,"
-										+ " [npc.speech(I do what I must. I don't enjoy it, or being your slave for that matter, but I'll do what I have to.)]"
+								UtilText.nodeContentSB.append("你话音刚落，你的奴隶就做出了尖锐的回应，"
+										+ "[npc.speech(我做我必须做的。我不喜欢这样，也不喜欢做你的奴隶，但我会做我必须做的。)]"
 										+ "</p>"
 										+ "<p>"
-										+ "From [npc.her] curt reaction, it's quite clear that [npc.name] isn't too well adjusted to [npc.her] life as a slave."
-										+ " Before you can say anything else, [npc.she] impatiently asks,"
-										+ " [npc.speech(Is there anything else, [npc.pcName]? Or are you finished with me for now?)]");
+										+ "从[npc.her]急促的反应来看，[npc.Name]显然不太适应[npc.her]的奴隶生活。"
+										+ "还没等你开口，[npc.she]就不耐烦地问，"
+										+ "[npc.speech(还有什么事吗，[npc.pcName]？或者说你现在已经说完了？)]");
 								break;
 							case OBEDIENT:
-								UtilText.nodeContentSB.append(" The moment that you finish speaking, your obedient slave quickly responds,"
-										+ " [npc.speech(I do whatever I'm told to, [npc.pcName]. I'll carry out my duties to the best of my ability, as that's what's expected of me.)]"
+								UtilText.nodeContentSB.append("你话音刚落，听话的奴隶就迅速做出反应，"
+										+ "[npc.speech([npc.pcName]让我做什么我就做什么。我会尽我所能履行我的职责，因为这是对我的期望。)]"
 										+ "</p>"
 										+ "<p>"
-										+ "From [npc.her] curt reaction, it's quite clear that while [npc.name] will obediently carry out [npc.her] duties as a slave, [npc.she] doesn't like you."
-										+ " Before you can say anything else, [npc.she] asks,"
-										+ " [npc.speech(What more do you need of me, [npc.pcName]?)]");
+										+ "从[npc.her]粗鲁的反应中可以看出，虽然[npc.Name]会顺从地履行[npc.her]作为奴隶的职责，但[npc.she]并不喜欢你。"
+										+ "还没等你开口，[npc.she]问道，"
+										+ "[npc.speech(你还需要我做什么，[npc.pcName]？)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, showing your interest in [npc.her] work has only had a minor effect!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，对[npc.her]的工作表现来说，兴趣只是起到了微不足道的作用！</i>"
 								+ "</p>");
 						break;
 					case NEUTRAL:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								UtilText.nodeContentSB.append(" The moment that you finish speaking, your disobedient slave whines,"
-										+ " [npc.speech(Well, it's not like I have a choice in the matter. I mean, thanks for asking, but I'm a slave, so I've kind of got to do whatever you order me to, whether I like it or not...)]"
+								UtilText.nodeContentSB.append("你话音刚落，你不听话的奴隶就发出呜呜声，"
+										+ "[npc.speech(我也没得选择啊。我是说，谢谢你的关心，但我是个奴隶，所以不管我喜不喜欢，你命令我做什么，我就得做什么……)]"
 										+ "</p>"
 										+ "<p>"
-										+ "From [npc.her] brutally honest reaction, it's quite clear that [npc.name] isn't fully adjusted to living life as your slave just yet."
-										+ " As you wonder how to respond, [npc.she] asks,"
-										+ " [npc.speech(So is there anything you want, [npc.pcName]?)]");
+										+ "从[npc.her]粗暴诚实的反应来看，[npc.Name]显然还没有完全适应作为你的奴隶的生活。"
+										+ "你思忖着如何回答，[npc.she]问，"
+										+ "[npc.speech(所以，你想要什么？[npc.pcName]？)]");
 								break;
 							case NEUTRAL:
-								UtilText.nodeContentSB.append(" The moment that you finish speaking, your slave replies,"
-										+ " [npc.speech(Well, it's not too bad, [npc.pcName]. Thanks for asking, I'll do whatever you order me to...)]"
+								UtilText.nodeContentSB.append("你话音刚落，你的奴隶就回答，"
+										+ "[npc.speech(还不错，[npc.pcName]。谢谢你的关心，你让我做什么我就做什么……)]"
 										+ "</p>"
 										+ "<p>"
-										+ "From [npc.her] honest reaction, it's quite clear that [npc.name] still has a few reservations about being your slave."
-										+ " As you wonder how to respond, [npc.she] asks,"
-										+ " [npc.speech(Is there anything else I can do for you, [npc.pcName]?)]");
+										+ "从[npc.her]诚实的反应来看，很明显[npc.Name]对成为你的奴隶还有些保留意见。"
+										+ "你思忖着如何回答，[npc.she]问，"
+										+ "[npc.speech(还有什么需要我帮忙的吗，[npc.pcName]？)]");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-											" The moment that you finish speaking, your slave replies,"
-											+ " [npc.speech(I always do my best, [npc.pcName]. Thank you for asking, but please be assured that I'm working to the best of my abilities.)]"
+											" 你话音刚落，你的奴隶就回答，"
+											+ "[npc.speech(我总是尽我所能，[npc.pcName]。谢谢您的关心，但请放心，我一定会尽我所能。)]"
 										+ "</p>"
 										+ "<p>"
-											+ "From [npc.her] reaction, it's quite clear that [npc.name] has fully accepted [npc.her] place as your slave."
-											+ " [npc.Her] answer seemed a little cold, however, and you realise that while [npc.she] doesn't hate you, [npc.she] doesn't exactly love you either."
-											+ " Before you can make a comment, [npc.she] continues,"
-											+ " [npc.speech(What more can I do for you, [npc.pcName]?)]");
+											+ "从[npc.her]的反应来看，很明显[npc.Name]已经完全接受了[npc.her]作为你的奴隶的地位。"
+											+ "[npc.her]的回答似乎有点冷淡，你意识到虽然[npc.she]并不恨你，但[npc.she]也并不完全爱你。"
+											+ "你还没来得及发表评论，[npc.she]就继续说道，"
+											+ "[npc.speech(我还能为你做什么，[npc.pcName]？)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, showing your interest in [npc.her] work has had a noticeable effect!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你, 你对[npc.her]对工作表现出兴趣产生了明显的效果！</i>"
 								+ "</p>");
 						break;
 					case LIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											" The moment that you finish speaking, your disobedient slave laughs,"
-											+ " [npc.speech(Well, it's not like I really have a choice in the matter, do I? Haha! Don't worry though, I love you! I-I mean! I love <i>working</i> for you!)]"
+											"你话音刚落，你不听话的奴隶就笑了，"
+											+ "[npc.speech(好吧，在这件事上我也别无选择，不是吗？哈哈！不过别担心，我爱你！我，我是说！我喜欢为你<i>工作</i>！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "[npc.Her] cheeks flush bright red as [npc.she] tries to hastily cover up [npc.her] slip of the tongue, but even without [npc.her] accidental confession, you already know that [npc.name] cares for you deeply."
-											+ " From the way [npc.she] looks at you, to the smile that breaks out on [npc.her] face each time you show [npc.herHim] any attention, it's clear to everyone how infatuated with you [npc.she] is."
-											+ " Before you can say anything on the matter, your slave quickly tries to shift the topic to something less embarrassing for [npc.herHim],"
-											+ " [npc.speech(Can I do anything else for you, [npc.pcName]? Anything at all, just ask!)]");
+											+ "[npc.she]试图匆忙掩饰自己的失言，脸颊涨得通红，但即使没有意外表白，你也已经知道[npc.Name]深深地关心着你。"
+											+ "从[npc.she]看你的眼神，到每次你对[npc.herHim]表示关注时[npc.her]脸上绽放的笑容，大家都清楚[npc.she]是多么迷恋你。"
+											+ "还没等你开口，你的奴隶就赶紧试图把话题转移到让[npc.herHim]不那么尴尬的地方，"
+											+ "[npc.speech(我还能为你做什么吗，[npc.pcName]？什么都行，尽管开口！)]");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										" The moment that you finish speaking, your slave smiles and responds,"
-										+ " [npc.speech(Everything's going fine, thank you for asking, [npc.pcName]. I love working for you...)]"
+										"你一说完，你的奴隶就会微笑着回应，"
+										+ "[npc.speech(一切都很顺利，谢谢你的关心，[npc.pcName]。我喜欢为你工作……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "[npc.Her] cheeks flush bright red as [npc.she] admits to [npc.her] enjoyment at being your slave, but even without [npc.her] shy display, you already know that [npc.name] cares for you deeply."
-										+ " From the way [npc.she] looks at you, to the smile that breaks out on [npc.her] face each time you show [npc.herHim] any attention, it's clear to everyone how infatuated with you [npc.she] is."
-										+ " Before you can say anything on the matter, your slave quickly tries to shift the topic to something less embarrassing for [npc.herHim],"
-										+ " [npc.speech(Can I do anything else for you, [npc.pcName]?)]");
+										+ "当[npc.she]承认[npc.she]喜欢做你的奴隶时，[npc.her]的脸颊变得通红，但即使没有[npc.she]害羞的表现，你也已经知道[npc.Name]非常在乎你。"
+										+ "从[npc.she]看你的眼神，到每次你对[npc.herHim]表示关注时[npc.her]脸上绽放的笑容，大家都清楚[npc.she]是多么迷恋你。"
+										+ "还没等你开口，你的奴隶就赶紧试图把话题转移到让[npc.herHim]不那么尴尬的地方，"
+										+ "[npc.speech(您还需要什么吗，[npc.pcName]？)]");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										" The moment that you finish speaking, your slave smiles and responds,"
-										+ " [npc.speech(Everything's going very well, [npc.pcName]. I love working for you...)]"
+										"你一说完，你的奴隶就会微笑着回应，"
+										+ "[npc.speech(一切都很顺利，[npc.pcName]。我喜欢为你工作……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "[npc.Her] cheeks flush bright red as [npc.she] admits to [npc.her] enjoyment at being your slave, but even without [npc.her] shy display, you already know that [npc.name] cares for you deeply."
-										+ " From the way [npc.she] looks at you, to the smile that breaks out on [npc.her] face each time you show [npc.herHim] any attention, it's clear to everyone how infatuated with you [npc.she] is."
-										+ " Before you can say anything on the matter, your slave quickly tries to shift the topic to something less embarrassing for [npc.herHim],"
-										+ " [npc.speech(Can I do anything else for you, [npc.pcName]?)]");
+										+ "当[npc.she]承认[npc.she]喜欢做你的奴隶时，[npc.her]的脸颊变得通红，但即使没有[npc.she]害羞的表现，你也已经知道[npc.Name]非常在乎你。"
+										+ "从[npc.she]看你的眼神，到每次你对[npc.herHim]表示关注时[npc.her]脸上绽放的笑容，大家都清楚[npc.she]是多么迷恋你。"
+										+ "还没等你开口，你的奴隶就赶紧试图把话题转移到让[npc.herHim]不那么尴尬的地方，"
+										+ "[npc.speech(您还需要什么吗，[npc.pcName]？)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, showing your interest in [npc.her] work has had a significant effect!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你, 显示你对[npc.her]工作的兴趣产生了重大影响！</i>"
 								+ "</p>");
 						break;
 				}
@@ -2601,7 +2601,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Hugging [npc.Name]");
+			return UtilText.parse(getSlave(), "拥抱[npc.Name]");
 		}
 
 		@Override
@@ -2610,14 +2610,14 @@ public class SlaveDialogue {
 
 			if(isDoll()) {
 				UtilText.nodeContentSB.append("<p>"
-							+ "Wanting to give [npc.name] some physical affection, you [pc.step] up to [npc.herHim] and pull [npc.herHim] into a big hug."
+							+ "出于给予[npc.name]一些肢体关怀的愿望，你[pc.step]上前，将[npc.herHim]紧紧拥抱在怀中。"
 						+ "</p>"
 						+ "<p>"
-							+ "Your doll immediately responds in kind by wrapping [npc.her] [npc.arms] around you and pulling you into [npc.herHim]."
-							+ " Although it's the reaction you wanted, [npc.namePos] hug doesn't have any warmth or intimacy to it, and so you soon break it off and [pc.step] back from [npc.herHim]."
+							+ "你的玩偶立刻作出了同样的回应，[npc.she]用[npc.her]的[npc.arms]环绕住你，将你拉近[npc.herHim]怀里。"
+							+ "尽管这是你期待的回应，但[npc.namePos]的拥抱却缺乏温度和亲密感，因此你很快结束了拥抱并离开了[npc.herHim]。"
 						+ "</p>"
 						+ "<p>"
-							+ "[npc.speech(I hope that was to your satisfaction, [pc.name],)] [npc.she] says, before waiting to hear what it is you want of [npc.herHim] next..."
+							+ "[npc.speech(我希望这能满足您的需求，[pc.name]。)][npc.she]回答道，接下来你要对[npc.herHim]有何需求……"
 						+ "</p>");
 				
 			} else {
@@ -2628,9 +2628,9 @@ public class SlaveDialogue {
 				UtilText.nodeContentSB.append("<p>");
 				
 				if(silly) {
-					UtilText.nodeContentSB.append("Wanting [npc.name] to show you some physical affection, you ask [npc.herHim] to give you a hug.");
+					UtilText.nodeContentSB.append("想让[npc.Name]向你表达一些身体上的好感，你要求[npc.herHim]给你一个拥抱。");
 				} else {
-					UtilText.nodeContentSB.append("You decide that [npc.name] is in need of some physical comfort, and, stepping forwards, you reach and take hold of [npc.herHim], before pulling [npc.herHim] into a tight hug.");
+					UtilText.nodeContentSB.append("你认为[npc.Name]需要一些身体上的安慰，于是走上前去，伸手拉住[npc.herHim]，然后给[npc.herHim]一个紧紧的拥抱。");
 				}
 				
 				switch(slaveAffection) {
@@ -2638,43 +2638,43 @@ public class SlaveDialogue {
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											" [npc.She] instantly tries to wriggle free from your grasp, shouting,"
-											+ " [npc.speech(Let me go! Fuck off already!)]"
+											"[npc.she]立刻试图挣脱你的控制，并大喊大叫，"
+											+ "[npc.speech(放开我！滚开！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You ignore your disobedient slave's protests, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-											+ " [npc.She] carries on struggling against you, not at all impressed by your method of reassuring [npc.herHim]."
-											+ " After a short while, you finally release [npc.name], and [npc.she] staggers back, shouting,"
-											+ " [npc.speech(I don't need your sympathy, you "+(Main.game.getPlayer().isFeminine()?"bitch":"bastard")+"!)]");
+											+ "你无视不听话的奴隶的抗议，将[npc.herHim]紧紧抱在怀里，呼吸着[npc.her][npc.scent]的气息。"
+											+ "[npc.she]反抗，丝毫不为你安抚[npc.herHim]的行为所动。"
+											+ "过了一小会儿，你终于松开了[npc.Name]，而[npc.she]则踉踉跄跄地后退并大喊大叫，"
+											+ "[npc.speech(我不需要你的同情，你个"+(Main.game.getPlayer().isFeminine()?"婊子":"混蛋")+"！)]");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										" [npc.She] instinctively tries to pull free from your grasp, whining,"
-										+ " [npc.speech([npc.PcName], please! I don't want this!)]"
+										"[npc.she]本能地试图挣脱你的控制，并发出呜呜声，"
+										+ "[npc.speech([npc.PcName]求你了！我不喜欢这样！)]"
 									+ "</p>"
 									+ "<p>"
-										+ "You ignore your slave's protests, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-										+ " [npc.She] tries to slip free from your grip, clearly not impressed by your method of reassuring [npc.herHim], but you make sure to hold on tightly, preventing [npc.her] escape."
-										+ " After a short while, you finally release [npc.name], and [npc.she] staggers back, muttering,"
-										+ " [npc.speech(I don't even like hugs...)]");
+										+ "你无视奴隶的抗议，将[npc.herHim]紧紧抱在怀里，呼吸着[npc.her][npc.scent]的气味。"
+										+ "[npc.she]试图挣脱你的控制，显然对你安抚[npc.herHim]的方法不以为然，但你还是紧紧抓住，防止[npc.her]逃脱。"
+										+ "过了一会儿，你终于松开了[npc.Name]，而[npc.she]则踉踉跄跄地后退，嘴里还在嘟囔着什么，"
+										+ "[npc.speech(我甚至都不喜欢拥抱……)]");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										" [npc.She] freezes up as you take hold of [npc.herHim], and mutters, without a trace of sincerity in [npc.her] voice,"
-										+ " [npc.speech(Thank you, [npc.pcName]...)]"
+										"当你抱住[npc.herHim]时，[npc.she]愣住了，喃喃自语，声音中没有一丝真诚，"
+										+ "[npc.speech(谢谢，[npc.pcName]……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "You ignore your slave's cold reaction, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-										+ " [npc.She] remains completely still, clearly not impressed by your method of reassuring [npc.herHim], but you ignore [npc.her] refusal to react, and continue pressing yourself against [npc.herHim]."
-										+ " After a short while, you finally release [npc.name], and [npc.she] steps back, looking down at the floor."
-										+ " [npc.speech(Thank you, [npc.pcName]. What else do you require?)]");
+										+ "你无视奴隶的冷淡反应，将[npc.herHim]紧紧抱在怀里，呼吸着[npc.her][npc.scent]的气味。"
+										+ "[npc.she]一动不动，显然对你安抚的方法不以为然，但你无视[npc.her]的抗拒的反应，继续把自己压在[npc.herHim]身上。"
+										+ "过了一会儿，你终于松开了[npc.Name]，而[npc.she]则退后一步，低头看着地面。"
+										+ "[npc.speech(谢谢，[npc.pcName]。你还需要什么？)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, your attempt at forcing physical contact is doing more harm than good!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，你试图强行进行身体接触的做法弊大于利！</i>"
 								+ "</p>");
 						break;
 					case NEUTRAL:
@@ -2682,108 +2682,108 @@ public class SlaveDialogue {
 							UtilText.nodeContentSB.append(
 									"</p>"
 									+ "<p>"
-										+ "[npc.speech(~Eugh!~ Fine...)] [npc.name] relents, before blushing and holding out [npc.her] [npc.arms] towards you."
-										+ " Beckoning you forwards into [npc.her] embrace, she sighs, [npc.speech(I guess you are my little pogchamp... Come here...)]"
+										+ "[npc.speech(~呃！好吧……)][npc.Name]松了口气，然后红着脸向你伸出[npc.her][npc.arms]。"
+										+ "将你拥入[npc.her]的怀抱，她叹息道，[npc.speech(我猜你是我的小秀儿……过来……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "[pc.Stepping] forwards, you ignore [npc.namePos] embarrassment and let [npc.herHim] give you a big hug."
-										+ " [npc.She] pats your back a little, and you get the distinct impression that [npc.sheIs] only reciprocating your gesture because that's what's expected of [npc.herHim]."
-										+ " After a short while, you finally release [npc.name], allowing [npc.herHim] to [npc.step] back and mutter,"
-										+ " [npc.speech(That was kind of poggers...)]");
+										+ "[pc.Stepping]向前，你无视[npc.namePos]的尴尬，让[npc.herHim]给了你一个大大的拥抱。"
+										+ "[npc.she]轻轻拍了拍你的背，你明显感觉到[npc.she]只是在回应你的动作，因为这是[npc.herHim]所期望的。"
+										+ "过了一小会儿，你终于松开了[npc.Name]，[npc.herHim]向后[npc.step]并喃喃自语，"
+										+ "[npc.speech(这有点秀了……)]");
 						} else {
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
 									UtilText.nodeContentSB.append(
-											" [npc.She] half-heartedly returns your embrace, sighing,"
-											+ " [npc.speech(Thanks, [npc.pcName], I guess a hug now and then isn't too bad...)]"
+											"[npc.she]半信半疑地回到你的怀抱，叹了口气，"
+											+ "[npc.speech(谢谢，[npc.pcName]，我想偶尔来个拥抱也不错……)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You pull [npc.name] in a little more, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-											+ " [npc.She] pats your back a little, and you get the distinct impression that [npc.sheIs] only reciprocating your gesture because that's what's expected of [npc.herHim]."
-											+ " After a short while, you finally release [npc.name], and [npc.she] steps back, smiling."
-											+ " [npc.speech(That was nice, I guess. Anything else you want?)]");
+											+ "你将[npc.name]拉近一点，将[npc.herHim]紧紧抱在怀里，呼吸[npc.her][npc.scent]的气味。"
+											+ "[npc.she]轻轻拍了拍你的背，你明显感觉到[npc.she]只是在回应你的动作，因为这是[npc.herHim]所期望的。"
+											+ "过了一小会儿，你终于松开了[npc.Name]，而[npc.she]则微笑着后退了一步。"
+											+ "[npc.speech(很不错吧？你还想要什么吗？)]");
 									break;
 								case NEUTRAL:
 									UtilText.nodeContentSB.append(
-											" [npc.She] half-heartedly returns your embrace, sighing,"
-											+ " [npc.speech(Thank you, [npc.pcName]...)]"
+											"[npc.she]半信半疑地回到你的怀抱，叹了口气，"
+											+ "[npc.speech(谢谢，[npc.pcName]……)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You pull [npc.name] in a little more, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-											+ " [npc.She] pats your back a little, and you get the distinct impression that [npc.sheIs] only reciprocating your gesture because that's what's expected of [npc.herHim]."
-											+ " After a short while, you finally release [npc.name], and [npc.she] steps back, smiling."
-											+ " [npc.speech(Is there anything else you need, [npc.pcName]?)]");
+											+ "你将[npc.name]拉近一点，将[npc.herHim]紧紧抱在怀里，呼吸[npc.her][npc.scent]的气味。"
+											+ "[npc.she]轻轻拍了拍你的背，你明显感觉到[npc.she]只是在回应你的动作，因为这是[npc.herHim]所期望的。"
+											+ "过了一小会儿，你终于松开了[npc.Name]，而[npc.she]则微笑着后退了一步。"
+											+ "[npc.speech(你还需要什么吗，[npc.pcName]？)]");
 									break;
 								case OBEDIENT:
 									UtilText.nodeContentSB.append(
-											" [npc.She] half-heartedly returns your embrace, sighing,"
-											+ " [npc.speech(Thank you, [npc.pcName].)]"
+											"[npc.she]半信半疑地回到你的怀抱，叹了口气，"
+											+ "[npc.speech(谢谢你，[npc.pcName]。)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You pull [npc.name] in a little more, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-											+ " [npc.She] pats your back a little, and you get the distinct impression that [npc.sheIs] only reciprocating your gesture because it's what's expected of [npc.herHim]."
-											+ " After a short while, you finally release [npc.name], and [npc.she] steps back, smiling."
-											+ " [npc.speech(Is there anything else you need, [npc.pcName]?)]");
+											+ "你将[npc.name]拉近一点，将[npc.herHim]紧紧抱在怀里，呼吸[npc.her][npc.scent]的气味。"
+											+ "[npc.she]轻轻拍了拍你的背，你明显感觉到[npc.sheIs]只是在回应你的动作，因为这是[npc.herHim]所期望的。"
+											+ "过了一小会儿，你终于松开了[npc.Name]，而[npc.she]则微笑着后退了一步。"
+											+ "[npc.speech(你还需要什么吗，[npc.pcName]？)]");
 									break;
 							}
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, giving [npc.herHim] a reassuring hug has had a positive affect on how [npc.she] sees you! However, being treated in such a familiar manner has had a slightly negative impact on [npc.her] obedience...</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，给[npc.herHim]一个安心的拥抱，对[npc.she]如何看待你产生了积极的影响！不过，以如此熟悉的方式对待[npc.she]，对[npc.her]的服从性有一点负面影响……</i>"
 								+ "</p>");
 						break;
 					case LIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											" [npc.She] eagerly returns your embrace, letting out a deep sigh,"
-											+ " [npc.speech(Thank you, [npc.pcName]!)]"
+											"[npc.she]热切地回应你的拥抱，发出一声深深的叹息，"
+											+ "[npc.speech(谢谢你，[npc.pcName]！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You pull [npc.name] in a little more, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-											+ " [npc.She] snuggles into you, wrapping [npc.her] [npc.arms] around your back and letting out a contented sigh."
-											+ " From [npc.her] reaction, it's quite clear that [npc.she] really appreciates your physical gesture, and, encouraged by [npc.her] enthusiasm, you spend quite some time hugging your slave."
+											+ "你将[npc.name]拉近一点，将[npc.herHim]紧紧抱在怀里，呼吸[npc.her][npc.scent]的气味。"
+											+ "[npc.she]依偎着你，[npc.her]的[npc.arms]环绕着你的后背，发出满足的叹息。"
+											+ "从[npc.her]的反应来看，[npc.she]显然非常欣赏你的行为，在[npc.her]热情的鼓励下，你花了不少时间拥抱你的奴隶。"
 										+ "</p>"
 										+ "<p>"
-											+ "After a while, you finally release [npc.name], and [npc.she] steps back, smiling."
-											+ " [npc.speech(Thank you, [npc.pcName]! I really needed that...)]");
+											+ "过了一会儿，你终于松开了[npc.Name]，而[npc.she]则微笑着退后。"
+											+ "[npc.speech(谢谢你，[npc.pcName]！我真的需要它……)]");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										" [npc.She] eagerly returns your embrace, letting out a deep sigh,"
-										+ " [npc.speech(Thank you, [npc.pcName]...)]"
+										"[npc.she]热切地回应你的拥抱，发出一声深深的叹息，"
+										+ "[npc.speech(谢谢，[npc.pcName]……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "You pull [npc.name] in a little more, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-										+ " [npc.She] snuggles into you, wrapping [npc.her] [npc.arms] around your back and letting out a contented sigh."
-										+ " From [npc.her] reaction, it's quite clear that [npc.she] really appreciates your physical gesture, and, encouraged by [npc.her] enthusiasm, you spend quite some time hugging your slave."
+										+ "你将[npc.name]拉近一点，紧紧抱在怀里，呼吸[npc.her][npc.scent]的气味。"
+										+ "[npc.she]依偎着你，[npc.her]的[npc.arms]环绕着你的后背，发出满足的叹息。"
+										+ "从[npc.her]的反应来看，[npc.she]显然非常欣赏你的行为，在[npc.her]热情的鼓励下，你花了不少时间拥抱你的奴隶。"
 									+ "</p>"
 									+ "<p>"
-										+ "After a while, you finally release [npc.name], and [npc.she] steps back, smiling."
-										+ " [npc.speech(Thank you, [npc.pcName]. I really needed that... Is there anything I can do for you?)]");
+										+ "过了一会儿，你终于松开了[npc.Name]，而[npc.she]则微笑着退后。"
+										+ "[npc.speech(谢谢你，[npc.pcName]。我真的需要这个……有什么我能为你做的吗？)]");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										" [npc.She] eagerly returns your embrace, letting out a deep sigh,"
-										+ " [npc.speech(Thank you, [npc.pcName]...)]"
+										"[npc.she]热切地回应你的拥抱，发出一声深深的叹息，"
+										+ "[npc.speech(谢谢，[npc.pcName]……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "You pull [npc.name] in a little more, holding [npc.herHim] close to your body and breathing in [npc.her] [npc.scent]."
-										+ " [npc.She] snuggles into you, wrapping [npc.her] [npc.arms] around your back and letting out a contented sigh."
-										+ " From [npc.her] reaction, it's quite clear that [npc.she] really appreciates your physical gesture, and, encouraged by [npc.her] enthusiasm, you spend quite some time hugging your slave."
+										+ "你将[npc.name]拉近一点，将[npc.herHim]紧紧抱在怀里，呼吸[npc.her][npc.scent]的气味。"
+										+ "[npc.she]依偎着你，[npc.her]的[npc.arms]环绕着你的后背，发出满足的叹息。"
+										+ "从[npc.her]的反应来看，[npc.she]显然非常欣赏你的行为，在[npc.her]热情的鼓励下，你花了不少时间拥抱你的奴隶。"
 									+ "</p>"
 									+ "<p>"
-										+ "After a while, you finally release [npc.name], and [npc.she] steps back, smiling."
-										+ " [npc.speech(Thank you, [npc.pcName]. Is there anything I can do for you?)]");
+										+ "过了一会儿，你终于松开了[npc.Name]，而[npc.she]则微笑着退后。"
+										+ "[npc.speech(谢谢你，[npc.pcName]。有什么需要我帮忙的吗？)]");
 								break;
 						}
 						UtilText.nodeContentSB.append("</p>"
 								+ "<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, giving [npc.herHim] a reassuring hug has had a hugely positive affect on how [npc.she] sees you! However, being treated in such a familiar manner has had a slightly negative impact on [npc.her] obedience...</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，给[npc.herHim]一个安心的拥抱，对[npc.she]如何看待你产生了巨大的积极影响！不过，如此亲昵地对待[npc.she]，会降低[npc.her]的服从性……</i>"
 								+ "</p>");
 						break;
 				}
@@ -2813,7 +2813,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Petting [npc.Name]");
+			return UtilText.parse(getSlave(), "爱抚[npc.Name]");
 		}
 
 		@Override
@@ -2822,21 +2822,21 @@ public class SlaveDialogue {
 
 			if(isDoll()) {
 				UtilText.nodeContentSB.append("<p>"
-						+ "Wanting to give [npc.name] some reassuring pettings, you reach up and place a [pc.hand] on [npc.her] head."
-						+ " Before [npc.she] can react, you start stroking [npc.her] [npc.hair+], before moving down to gently scratch behind one of [npc.her] [npc.ears]."
+						+ "你想让[npc.Name]感到安心，于是伸[pc.hand]在[npc.her]的头上摸了一把。"
+						+ "在[npc.she]还没反应过来之前，你开始抚摸[npc.her]的[npc.hair+]，然后向下轻轻挠在[npc.her]的[npc.ears]后面。"
 					+ "</p>"
 					+ "<p>"
-						+ "Your doll leans into your pettings, saying as [npc.she] does so, [npc.speech(Thank you, [pc.name]. I hope that I'm serving you well.)]"
+						+ "你的玩偶在你的爱抚之下轻轻依偎过来，同时回应道：[npc.speech(谢谢你，[pc.name]。我希望我能很好地服务于你。)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Although you continue to pet [npc.name] for a few more moments, [npc.her] cold, robotic response isn't quite what you were looking for."
-						+ " A blank, expressionless stare from your doll is the final straw, and you take your [pc.hand] away before wondering what to do next..."
+						+ "虽然你继续抚摸[npc.name]几秒钟，但[npc.her]那冷淡且机械般的反应并不符合你期望的温情互动。"
+						+ "来自你的玩偶那一片空白且毫无表情的凝视成了最后一根稻草，你收回了你的[pc.hand]，并然后开始思索下一步该怎么做……"
 					+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append("<p>"
-								+ "Wanting to give [npc.name] some reassuring pettings, you reach up and place a [pc.hand] on [npc.her] head."
-								+ " Before [npc.she] can react, you start stroking [npc.her] [npc.hair+], before moving down to gently scratch behind one of [npc.her] [npc.ears]."
+								+ "你想让[npc.Name]感到安心，于是伸[pc.hand]在[npc.her]的头上摸了一把。"
+								+ "在[npc.she]还没反应过来之前，你开始抚摸[npc.her]的[npc.hair+]，然后向下轻轻挠在[npc.her]的[npc.ears]后面。"
 							+ "</p>"
 							+ "<p>");
 				
@@ -2845,110 +2845,110 @@ public class SlaveDialogue {
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											"Shocked by your actions, it takes [npc.name] a moment to respond, and with an angry cry, [npc.she] slaps your [pc.hand] away and steps back, shouting,"
-											+ " [npc.speech(What the fuck?! Get off me! Leave me alone you fuck!)]"
+											"[npc.Name]被你的举动吓了一跳，过了一会儿才反应过来。[npc.she]一声怒喝，拍开你的[pc.hand]，后退几步，大声喊道，"
+											+ "[npc.speech(干你娘的？！放开我！你他妈的让我自己待会！)]"
 										+ "</p>");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										"Shocked by your actions, it takes [npc.name] a moment to respond, and with an uncomfortable whine, [npc.she] steps back, apologising,"
-										+ " [npc.speech(Sorry, [npc.pcName], but, could you not do that?)]"
+										"[npc.Name]被你的行为吓了一跳，过了一会儿才反应过来，不自在地哼了一声，[npc.she]向后退了一步，表示歉意，"
+										+ "[npc.speech(对不起，[npc.pcName]，但是，你能不能不要这样做？)]"
 									+ "</p>");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										"Shocked by your actions, it takes [npc.name] a moment to respond, and with an uncomfortable whine,"
-											+ " [npc.she] remains still, scrunching up [npc.her] [npc.eyes] as [npc.she] forces [npc.herself] to endure your unwanted attention."
-										+ " After a moment, you stop what you're doing and take your [pc.hand] away, causing [npc.name] to let out a relieved sigh, before asking,"
-										+ " [npc.speech(Is there anything else I can do for you, [npc.pcName]?)]"
+										"[npc.Name]被你的举动吓了一跳，过了一会儿才反应过来，发出不舒服的呜呜声，"
+											+ "[npc.she]一动不动，眯起[npc.eyes]，强迫自己忍受你多余的关注。"
+										+ "过了一会儿，你停下手中的活儿，把[pc.hand]拿开，[npc.Name]松了一口气，问道，"
+										+ "[npc.speech(还有什么需要我帮忙的吗，[npc.pcName]？)]"
 									+ "</p>");
 								break;
 						}
 						UtilText.nodeContentSB.append(
 								"<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, your attempt at forcing physical contact is doing more harm than good!</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，你试图强行进行身体接触的做法弊大于利！</i>"
 								+ "</p>");
 						break;
 					case NEUTRAL:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											"Taken by surprise at your action, it takes [npc.name] a moment to respond, and with little sigh, [npc.she] tilts [npc.her] head to one side."
-											+ " [npc.speech(That feels kind of good... Keep going!)]"
+											"[npc.Name]被你的举动吓了一跳，过了一会儿才反应过来，叹了口气，[npc.she]把[npc.her]的头偏向一边。"
+											+ "[npc.speech(感觉有点不错……继续不要停！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You do as [npc.she] asks, and continue stroking and patting [npc.her] head for quite some time."
-											+ " Eventually, however, you feel as though [npc.namePos] had enough for now, and take your [pc.hand] away, smiling as your slave lets out a very contented sigh."
+											+ "你按照[npc.she]的要求，继续抚摸和拍打[npc.her]的头好一会儿。"
+											+ "最后，你觉得[npc.name]已经享受够了，于是把[pc.hand]拿开，看着你的奴隶发出满足的喘息，你笑了。"
 										+ "</p>");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										"Taken by surprise at your action, it takes [npc.name] a moment to respond, and with little sigh, [npc.she] tilts [npc.her] head to one side."
-										+ " [npc.speech(That feels kind of good... Thank you, [npc.pcName]...)]"
+										"[npc.Name]被你的举动吓了一跳，过了一会儿才反应过来，叹了口气，[npc.she]把[npc.her]的头偏向一边。"
+										+ "[npc.speech(感觉还不错……谢谢你，[npc.pcName]……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "Encouraged by [npc.her] reaction, you continue stroking and patting [npc.her] head for quite some time."
-										+ " Eventually, however, you feel as though [npc.namePos] had enough for now, and take your [pc.hand] away, smiling as your slave lets out a very contented sigh."
+										+ "在[npc.her]反应的鼓励下，你继续抚摸和拍打[npc.her]的头，持续了好一会儿。"
+										+ "最后，你觉得[npc.name]已经享受够了，于是把[pc.hand]拿开，看着你的奴隶发出满足的喘息，你笑了。"
 									+ "</p>");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										"Taken by surprise at your action, it takes [npc.name] a moment to respond, and with little sigh, [npc.she] tilts [npc.her] head to one side."
-										+ " [npc.speech(Thank you, [npc.pcName]...)]"
+										"[npc.Name]被你的举动吓了一跳，过了一会儿才反应过来，叹了口气，[npc.she]把[npc.her]的头偏向一边。"
+										+ "[npc.speech(谢谢，[npc.pcName]……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "Encouraged by [npc.her] reaction, you continue stroking and patting [npc.her] head for quite some time."
-										+ " Eventually, however, you feel as though [npc.namePos] had enough for now, and take your [pc.hand] away, smiling as your slave lets out a very contented sigh."
+										+ "在[npc.her]反应的鼓励下，你继续抚摸和拍打[npc.her]的头，持续了好一会儿。"
+										+ "最后，你觉得[npc.name]已经享受够了，于是把[pc.hand]拿开，看着你的奴隶发出满足的喘息，你笑了。"
 									+ "</p>");
 								break;
 						}
 						UtilText.nodeContentSB.append(
 								"<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, giving [npc.herHim] such intimate physical attention has made [npc.her] like you a lot more! However, being treated in such a familiar manner has had a slightly negative impact on [npc.her] obedience...</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，给予[npc.herHim]如此亲密的身体接触，让[npc.her]更喜欢你了！不过，受到如此熟悉的对待对[npc.her]的服从性产生了一点负面影响……</i>"
 								+ "</p>");
 						break;
 					case LIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											"[npc.Name] lets out a loving sigh, and steps towards you as [npc.she] tilts [npc.her] head to one side."
-											+ " [npc.speech(That feels so good... Keep on going!)]"
+											"[npc.Name]发出一声充满爱意的喘息，歪了歪头，向你走来。"
+											+ "[npc.speech(感觉真好……继续不要停！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You do as [npc.she] asks, and continue stroking and patting [npc.her] head for quite some time."
-											+ " Eventually, however, you feel as though [npc.namePos] had enough for now, and take your [pc.hand] away, smiling as your slave lets out a very contented sigh."
+											+ "你按照[npc.she]的要求，继续抚摸和拍打[npc.her]的头好一会儿。"
+											+ "最后，你觉得[npc.name]已经享受够了，于是把[pc.hand]拿开，看着你的奴隶发出满足的喘息，你笑了。"
 										+ "</p>");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-											"[npc.Name] lets out a loving sigh, and steps towards you as [npc.she] tilts [npc.her] head to one side."
-											+ " [npc.speech(Thank you, [npc.pcName]! That feels so good! Please don't stop!)]"
+											"[npc.Name]发出一声充满爱意的喘息，歪了歪头，向你走来。"
+											+ "[npc.speech(谢谢你，[npc.pcName]！感觉真的很好！请不要停下来！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You do as [npc.she] asks, and continue stroking and patting [npc.her] head for quite some time."
-											+ " Eventually, however, you feel as though [npc.namePos] had enough for now, and take your [pc.hand] away, smiling as your slave lets out a very contented sigh."
+											+ "你按照[npc.she]的要求，继续抚摸和拍打[npc.her]的头好一会儿。"
+											+ "最后，你觉得[npc.name]已经享受够了，于是把[pc.hand]拿开，看着你的奴隶发出满足的喘息，你笑了。"
 										+ "</p>");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-											"[npc.Name] lets out a loving sigh, and steps towards you as [npc.she] tilts [npc.her] head to one side."
-											+ " [npc.speech(Thank you, [npc.pcName]!)]"
+											"[npc.Name]发出一声充满爱意的喘息，歪了歪头，向你走来。"
+											+ "[npc.speech(谢谢你，[npc.pcName]！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "Encouraged by [npc.her] reaction, you continue stroking and patting [npc.her] head for quite some time."
-											+ " Eventually, however, you feel as though [npc.namePos] had enough for now, and take your [pc.hand] away, smiling as your slave lets out a very contented sigh."
+											+ "在[npc.her]反应的鼓励下，你继续抚摸和拍打[npc.her]的头，持续了好一会儿。"
+											+ "最后，你觉得[npc.name]已经享受够了，于是把[pc.hand]拿开，看着你的奴隶发出满足的喘息，你笑了。"
 										+ "</p>");
 								break;
 						}
 						UtilText.nodeContentSB.append(
 								"<p>"
-									+ "<i>Due to the fact that [npc.name]"
-										+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-										+ " you, giving [npc.herHim] such intimate physical attention has made [npc.her] like you a lot more! However, being treated in such a familiar manner has had a slightly negative impact on [npc.her] obedience...</i>"
+									+ "<i>由于[npc.Name]"
+										+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+										+ "你，给予[npc.herHim]如此亲密的身体接触，让[npc.her]更喜欢你了！不过，受到如此熟悉的对待对[npc.her]的服从性产生了一点负面影响……</i>"
 								+ "</p>");
 						break;
 				}
@@ -2978,7 +2978,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Giving [npc.Name] a present");
+			return UtilText.parse(getSlave(), "给[npc.Name]礼物");
 		}
 
 		@Override
@@ -2986,8 +2986,8 @@ public class SlaveDialogue {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append("<p>"
-							+ "Deciding that [npc.name] deserves a gift this Yuletide, you hold out the present towards [npc.herHim]."
-							+ " [pc.speech(This is for you, [npc.name]. Happy Yuletide!)]"
+							+ "你认为[npc.Name]值得在这个圣诞节收到一份礼物，于是将礼物递给了[npc.herHim]。"
+							+ "[pc.speech(这是给你的，[npc.name]。圣诞快乐)]"
 						+ "</p>"
 						+ "<p>");
 			
@@ -2996,80 +2996,80 @@ public class SlaveDialogue {
 					switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 						case DISOBEDIENT:
 							UtilText.nodeContentSB.append(
-										"Taken completely off-guard, [npc.name] doesn't seem to know how to respond, and as you press the gift into [npc.her] [npc.hands], [npc.she] mutters,"
-										+ " [npc.speech(F-For me? I still hate you, you know...)]"
+										"你把礼物塞进[npc.Name][npc.hands]里，[npc.she]喃喃自语，"
+										+ "[npc.speech(给，给我的？你知道我还是恨你的……)]"
 									+ "</p>");
 							break;
 						case NEUTRAL:
 							UtilText.nodeContentSB.append(
-									"Taken completely off-guard, [npc.name] doesn't seem to know how to respond, and as you press the gift into [npc.her] [npc.hands], [npc.she] mutters,"
-									+ " [npc.speech(F-For me? I guess I'll take it then...)]"
+									"当你把礼物塞进[npc.her][npc.hands]里的时候，[npc.she]喃喃自语道，"
+									+ "[npc.speech(给，给我的？那我就收下了……)]"
 								+ "</p>");
 							break;
 						case OBEDIENT:
 							UtilText.nodeContentSB.append(
-									"Taken completely off-guard, [npc.name] doesn't seem to know how to respond, but as you press the gift into [npc.her] [npc.hands], [npc.she] regains [npc.her] composure and coldly states,"
-									+ " [npc.speech(I will accept this if it your wish, [npc.pcName].)]"
+									"[npc.Name]完全措手不及，不知道该如何回应。你把礼物塞进[npc.her][npc.hands]里。[npc.she]镇定下来，冷冷地说，"
+									+ "[npc.speech(如果这是你的所想的话，我会接受的，[npc.pcName]。)]"
 								+ "</p>");
 							break;
 					}
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "<i>Despite the fact that [npc.she]"
-									+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-									+ " you, [npc.name] is happy to have been given a gift!</i>"
+								+ "<i>尽管[npc.she]"
+									+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+									+ "你，[npc.name]很高兴能得到一份礼物！</i>"
 							+ "</p>");
 					break;
 				case NEUTRAL:
 					switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 						case DISOBEDIENT:
 							UtilText.nodeContentSB.append(
-										"Taken completely off-guard, [npc.name] lets out a happy little cry, and as you press the gift into [npc.her] [npc.hands], [npc.she] smiles at you."
-										+ " [npc.speech(F-For me? Thank you, [npc.pcName]!)]"
+										"当你把礼物塞进[npc.her][npc.hands]里的时候，[npc.she]对你微笑。"
+										+ "[npc.speech(给-给我的？谢谢你，[npc.pcName]！)]"
 									+ "</p>");
 							break;
 						case NEUTRAL:
 							UtilText.nodeContentSB.append(
-									"Taken completely off-guard, [npc.name] lets out a happy little cry, and as you press the gift into [npc.her] [npc.hands], [npc.she] smiles at you."
-									+ " [npc.speech(F-For me? Thank you, [npc.pcName]!)]"
+									"当你把礼物塞进[npc.her][npc.hands]里的时候，[npc.she]对你微笑。"
+									+ "[npc.speech(给-给我的？谢谢你，[npc.pcName]！)]"
 								+ "</p>");
 							break;
 						case OBEDIENT:
 							UtilText.nodeContentSB.append(
-									"Taken completely off-guard, [npc.name] lets out a happy little cry, and as you press the gift into [npc.her] [npc.hands], [npc.she] smiles at you."
-									+ " [npc.speech(Thank you, [npc.pcName], I wish you a happy Yuletide as well!)]"
+									"你把礼物塞进[npc.Name][npc.hands]里，[npc.she]对你微笑。"
+									+ "[npc.speech(谢谢你，[npc.pcName]，我也祝你圣诞快乐！)]"
 								+ "</p>");
 							break;
 					}
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "<i>While [npc.name] is happy to have been given a gift, being treated in such a friendly manner has had a slightly negative impact on [npc.her] obedience...</i>"
+								+ "<i>虽然[npc.Name]很高兴能得到礼物，但受到如此友好的对待降低了[npc.her]的服从性……</i>"
 							+ "</p>");
 					break;
 				case LIKE:
 					switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 						case DISOBEDIENT:
 							UtilText.nodeContentSB.append(
-										"Taken completely off-guard, [npc.name] lets out an ecstatic cry, and as you press the gift into [npc.her] [npc.hands], [npc.she] bursts out,"
-										+ " [npc.speech([npc.PcName]! Thank you so much! Happy Yuletide to you too!)]"
+										"当你把礼物塞进[npc.her][npc.hands]里的时候，[npc.she]迸发出一阵狂喜，"
+										+ "[npc.speech([npc.PcName]！非常感谢！也祝你圣诞快乐)]"
 									+ "</p>");
 							break;
 						case NEUTRAL:
 							UtilText.nodeContentSB.append(
-									"Taken completely off-guard, [npc.name] lets out an ecstatic cry, and as you press the gift into [npc.her] [npc.hands], [npc.she] bursts out,"
-									+ " [npc.speech([npc.PcName]! Thank you so much! Happy Yuletide to you too!)]"
+									"当你把礼物塞进[npc.her][npc.hands]里的时候，[npc.she]迸发出一阵狂喜，"
+									+ "[npc.speech([npc.PcName]！非常感谢！也祝你圣诞快乐)]"
 								+ "</p>");
 							break;
 						case OBEDIENT:
 							UtilText.nodeContentSB.append(
-									"Taken completely off-guard, [npc.name] lets out an ecstatic cry, and as you press the gift into [npc.her] [npc.hands], [npc.she] beams at you."
-									+ " [npc.speech(Thank you, [npc.pcName]! Happy Yuletide to you too!)]"
+									"当你把礼物塞进[npc.her][npc.hands]里的时候，[npc.she]向你投来赞许的目光。"
+									+ "[npc.speech(谢谢你，[npc.pcName]！也祝你圣诞快乐！)]"
 								+ "</p>");
 							break;
 					}
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "<i>While [npc.name] is happy to have been given a gift, being treated in such a friendly manner has had a slightly negative impact on [npc.her] obedience...</i>"
+								+ "<i>虽然[npc.Name]很高兴能得到礼物，但受到如此友好的对待降低了[npc.her]的服从性……</i>"
 							+ "</p>");
 					break;
 			}
@@ -3104,7 +3104,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Inspecting [npc.Name]");
+			return UtilText.parse(getSlave(), "审视[npc.Name]");
 		}
 
 		@Override
@@ -3114,29 +3114,29 @@ public class SlaveDialogue {
 			UtilText.nodeContentSB.append(
 						"<p>"
 							+ (isSlaveNaked()
-									?"Deciding that you'd like to inspect [npc.namePos] naked body, you order [npc.herHim] to take a step back so that you can get a better view of [npc.herHim]."
-									:"Deciding that you'd like to inspect [npc.namePos] body, you order [npc.herHim] to strip naked, before taking a step back in order to get a better view of [npc.herHim].")
+									?"你决定要检查一下[npc.namePos]的裸体，于是命令[npc.herHim]退后一步，这样你就能更好地观察[npc.herHim]。"
+									:"你决定检查一下[npc.namePos]的身体，于是命令[npc.herHim]脱光衣服，然后退后一步，以便更好地观察[npc.herHim]。")
 						+ "</p>"
 						+ "<p>");
 			String legsSpreading = getSlave().hasLegs()
-					?"spread [npc.her] [npc.legs] and present [npc.her] "
-					:"present you with [npc.her] ";
+					?"张开[npc.her]的[npc.legs]并展示[npc.her]"
+					:"展示给你[npc.her]";
 			
 			if(isDoll()) {
 				UtilText.nodeContentSB.append(
 						(isSlaveNaked()
-								?"[npc.She] immediately moves to obey your order, and obediently steps back and asks,"
-								:"[npc.She] immediately moves to obey your order, and obediently drops [npc.her] clothing to the floor."
-									+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,")
-						+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+								?"[npc.She]立即回应了你的命令，顺从地后退一步并询问,"
+								:"[npc.She]立即响应你的命令，顺从地将[npc.her]的衣服丢弃在了地板上。"
+									+ "当[npc.she]脱下[npc.her]的最后一件衣服时，[npc.she]问道，")
+						+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You answer in the affirmative, before commanding [npc.name] to parade around in front of you; an order which [npc.she] again dutifully carries out."
-						+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-						+ " Finally, you command your doll to show you the port in the back of [npc.her] neck, and check it to make sure that it's in perfect condition."
+						+ "你给予了肯定的回答，然后命令[npc.Name]在你面前展示自己；[npc.she]再次尽职尽责地执行了这一命令。"
+						+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+						+ "最后，你命令你的玩偶展示颈部后面的接口，并检查确保其处于完美状态。"
 					+ "</p>"
 					+ "<p>"
-						+ "Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and without a word of complaint, [npc.she] once more does exactly as you say."
+						+ "你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]毫无怨言地再次照你说的做了。"
 					+ "</p>");
 				
 			} else {
@@ -3146,51 +3146,51 @@ public class SlaveDialogue {
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
 									UtilText.nodeContentSB.append(
-												"[npc.She] lets out an angry scowl as [npc.she] hears your order, but, realising that [npc.she] really doesn't have any choice in the matter, begrudgingly moves to obey."
+												"[npc.she]听到你的命令，生气地皱起了眉头。但[npc.she]意识到自己别无选择，只好勉强服从。"
 												+ (isSlaveNaked()
-														?" Shooting you a furious glare, [npc.she] snarls,"
-														:" As [npc.she] takes [npc.her] clothes off, [npc.she] snarls,")
-												+ " [npc.speech(Fucking "+(Main.game.getPlayer().isFeminine()?"bitch":"bastard")+"! Go on! Take a good look at your <i>property</i>, you sick fuck!)]"
+														?"[npc.she]双目圆睁，怒视着你，咆哮道，"
+														:"[npc.she]咆哮着脱下衣服，")
+												+ "[npc.speech(该死的"+(Main.game.getPlayer().isFeminine()?"婊子":"混球")+"！继续！仔细看看你的<i>财产</i>吧，你这个病态的混蛋！)]"
 											+ "</p>"
 											+ "<p>"
-												+ "Despite [npc.her] angry words, you detect an undercurrent of arousal in [npc.namePos] voice,"
-													+ " and [npc.she] puts up surprisingly little resistance as you command [npc.herHim] to parade around in front of you."
-												+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-												+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-													+", and even though this draws yet another angry remark from between your disobedient slave's [npc.lips],"
-													+ " you can tell that [npc.she] secretly enjoyed presenting [npc.herself] to you."
+												+ "尽管[npc.namePos]言辞激烈，但你还是从[npc.her]的声音中听出了一丝兴奋，"
+													+ "你命令[npc.herHim]在你面前露出，[npc.she]几乎没有抵抗。"
+												+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+												+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")
+													+"，而尽管这让你那不顺从的奴隶又发表了一句恼怒的言论，"
+													+ "你确信[npc.she]在偷偷享受向你展示自己。"
 											+ "</p>");
 									break;
 								case NEUTRAL:
 									UtilText.nodeContentSB.append(
-											"[npc.She] lets out a frustrated sigh as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, begrudgingly moves to obey."
+											"听到你的命令，[npc.she]无奈地叹了口气，但还是努力控制住[npc.her]的情绪，勉强服从命令。"
 											+ (isSlaveNaked()
-													?" Glaring at you, [npc.she] snaps,"
-													:" As [npc.she] takes [npc.her] clothes off, [npc.she] snaps,")
-											+ " [npc.speech(Very well, <i>[npc.pcName]</i>.)]"
+													?"瞪着你，[npc.she]冷笑道："
+													:"[npc.she]恶声恶气地脱下衣服，")
+											+ "[npc.speech(很好，<i>[npc.pcName]</i>。)]"
 										+ "</p>"
 										+ "<p>"
-											+ "Despite [npc.her] slightly-rebellious tone, you detect an undercurrent of arousal in [npc.namePos] voice,"
-												+ " and [npc.she] puts up surprisingly little resistance as you command [npc.herHim] to parade around in front of you."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-												+", and from [npc.her] disappointed sigh, you can tell that [npc.she] enjoyed presenting [npc.herself] to you."
+											+ "尽管[npc.her]的语气略显叛逆，但你还是从[npc.namePos]的声音中听出了一丝快感，"
+												+ "你命令[npc.herHim]在你面前展示自己，[npc.she]意外地几乎没抵抗。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")
+												+"，而从[npc.her]失望的叹息声中，你可以看出[npc.she]很喜欢向你展示[npc.herself]。"
 										+ "</p>");
 									break;
 								case OBEDIENT:
 									UtilText.nodeContentSB.append(
 											(isSlaveNaked()
-													? "[npc.She] immediately moves to obey your order, but you see the distinct look of hatred in [npc.her] [npc.eyes] as [npc.she] obediently steps back and asks,"
-													: "[npc.She] immediately moves to obey your order, but you see the distinct look of hatred in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-														+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,")
-											+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+													? "[npc.she]立即服从你的命令，但你看到[npc.her][npc.eyes]里明显流露出憎恨的神情，[npc.her]顺从地后退并问道，"
+													: "[npc.she]顺从地把[npc.her]的衣服扔到地上，[npc.her]立即移动脚步去服从你的命令，但你看到了[npc.her][npc.eyes]中明显的仇恨神情。"
+														+ "当[npc.she]脱下[npc.her]的最后一件衣服时，[npc.she]问道，")
+											+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You answer in the affirmative, before commanding [npc.name] to parade around in front of you; an order which [npc.she] again dutifully carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+ " Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-												+", and, without a word of complaint, [npc.she] once more does exactly as you say."
-											+ " From the way [npc.her] cheeks have flushed, you can tell that [npc.she] enjoyed presenting [npc.herself] to you."
+											+ "你给予了肯定的回答，然后命令[npc.Name]在你面前展示自己；[npc.she]再次尽职尽责地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+ "你对[npc.Name]的外表感到满意，便让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")
+												+"，然后，[npc.she]毫无怨言地再次照你说的做了。"
+											+ "从[npc.her]脸颊泛红的样子可以看出，[npc.she]很喜欢向你展示[npc.herself]。"
 										+ "</p>");
 									break;
 							}
@@ -3199,46 +3199,46 @@ public class SlaveDialogue {
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
 									UtilText.nodeContentSB.append(
-												"[npc.She] lets out a happy cry as [npc.she] hears your order, and quickly moves to obey."
+												"[npc.she]听到你的命令后，发出了欢快的叫声，并迅速行动起来服从命令。"
 												+ (isSlaveNaked()
-														?" Smiling seductively at you, [npc.she] [npc.moansVerb],"
-														:" As [npc.she] takes [npc.her] clothes off, [npc.she] [npc.moansVerb],")
-												+ " [npc.speech(~Mmm~ I hope you enjoy this as much as I do, [npc.pcName]...)]"
+														?"对着你露出诱人的微笑，[npc.she][npc.moansVerb]道，"
+														:"[npc.she][npc.moansVerb]，脱下衣服，")
+												+ "[npc.speech(~姆姆姆~ 希望你和我一样喜欢这个，[npc.pcName]……)]"
 											+ "</p>"
 											+ "<p>"
-												+ "Ignoring [npc.her] words, you command [npc.name] to parade around in front of you; an order which [npc.she] again eagerly carries out."
-												+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-												+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-												+", which draws a disappointed sigh from between your disobedient slave's [npc.lips]."
+												+ "你无视[npc.her]的话语，命令[npc.Name]在你面前展示自己；[npc.she]再次迫不及待地执行了这一命令。"
+												+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+												+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")
+												+"这引来了你不听话的奴隶的一声失望的叹息。"
 											+ "</p>");
 									break;
 								case NEUTRAL:
 									UtilText.nodeContentSB.append(
-											"[npc.She] lets out a happy cry as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, quickly moves to obey."
+											"[npc.she]听到你的命令，高兴地叫了一声，但还是努力控制住[npc.her]的情绪，迅速行动起来服从命令。"
 											+ (isSlaveNaked()
-													?" Smiling seductively at you, [npc.she] [npc.moansVerb],"
-													:" As [npc.she] takes [npc.her] clothes off, [npc.she] [npc.moansVerb],")
-											+ " [npc.speech(I hope this is to your satisfaction, [npc.pcName].)]"
+													?"对着你露出诱人的微笑，[npc.she][npc.moansVerb]道，"
+													:"[npc.she][npc.moansVerb]，脱下衣服，")
+											+ "[npc.speech(我希望这能让你满意，[npc.pcName]。)]"
 										+ "</p>"
 										+ "<p>"
-											+ "After [npc.sheHas] stripped naked, you command [npc.name] to parade around in front of you; an order which [npc.she] again eagerly carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, with a disappointed sigh, [npc.she] does as you command."
+											+ "在[npc.she]脱光衣服后，你命令[npc.Name]在你面前展示自己；[npc.she]再次迫不及待地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]失望地叹了口气，照你的吩咐做了。"
 										+ "</p>");
 									break;
 								case OBEDIENT:
 									UtilText.nodeContentSB.append(
 											(isSlaveNaked()
-													?"[npc.She] immediately moves to obey your order, and you see the distinct look of arousal in [npc.her] [npc.eyes] as [npc.she] obediently steps back and asks,"
-													:"[npc.She] immediately moves to obey your order, and you see the distinct look of arousal in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-														+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,")
-											+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+													?"[npc.she]顺从地后退，你看到[npc.her]的[npc.eyes]里流露出明显的兴奋神情，问道，"
+													:"[npc.she]顺从地把[npc.her]的衣服脱到地上，你看到[npc.her]的[npc.eyes]里流露出明显的兴奋神情。"
+														+ "当[npc.she]脱下[npc.her]的最后一件衣服时，[npc.she]问道，")
+											+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You answer in the affirmative, before commanding [npc.name] to parade around in front of you; an order which [npc.she] again dutifully carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+ " Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, without a word of complaint, [npc.she] once more does exactly as you say."
-											+ " From the way [npc.her] cheeks have flushed, you can tell that [npc.she] enjoyed presenting [npc.herself] to you."
+											+ "你给予了肯定的回答，然后命令[npc.Name]在你面前展示自己；[npc.she]再次尽职尽责地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+ "你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]毫无怨言地再次照你说的做了。"
+											+ "从[npc.her]脸颊泛红的样子可以看出，[npc.she]很喜欢向你展示[npc.herself]。"
 										+ "</p>");
 									break;
 							}
@@ -3247,46 +3247,46 @@ public class SlaveDialogue {
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
 									UtilText.nodeContentSB.append(
-												"[npc.She] lets out a happy little cry as [npc.she] hears your order, and quickly moves to obey."
+												"[npc.she]听到你的命令后高兴地叫了一声，并迅速行动起来服从命令。"
 												+ (isSlaveNaked()
-														?" Smiling seductively at you, [npc.she] [npc.moansVerb],"
-														:" As [npc.she] takes [npc.her] clothes off, [npc.she] [npc.moansVerb],")
-												+ " [npc.speech(~Mmm~ It's so degrading being forced to do this... I love it...)]"
+														?"对着你露出诱人的微笑，[npc.she][npc.moansVerb]道，"
+														:"[npc.she][npc.moansVerb]，脱下衣服，")
+												+ "[npc.speech(~姆姆姆~被迫这么做真是有失身份……我喜欢……)]"
 											+ "</p>"
 											+ "<p>"
-												+ "Ignoring [npc.her] words, you command [npc.name] to parade around in front of you; an order which [npc.she] again happily carries out."
-												+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-												+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-													+", which draws a disappointed sigh from between your disobedient slave's [npc.lips]."
+												+ "你无视[npc.her]的话语，命令[npc.Name]在你面前展示自己；[npc.she]再次高兴地执行了这一命令。"
+												+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+												+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")
+													+"这引来了你不听话的奴隶的一声失望的叹息。"
 											+ "</p>");
 									break;
 								case NEUTRAL:
 									UtilText.nodeContentSB.append(
-											"[npc.She] lets out a happy little cry as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, quickly moves to obey."
+											"[npc.she]听到你的命令，高兴地叫了一声，但还是努力控制住情绪，服从命令，迅速行动起来。"
 											+ (isSlaveNaked()
-													?" Smiling seductively at you, [npc.she] [npc.moansVerb],"
-													:" As [npc.she] takes [npc.her] clothes off, [npc.she] [npc.moansVerb],")
-											+ " [npc.speech(I hope this pleases you, [npc.pcName]...)]"
+													?"对着你露出诱人的微笑，[npc.she][npc.moansVerb]道，"
+													:"[npc.she][npc.moansVerb]，脱下衣服，")
+											+ "[npc.speech(我希望你喜欢，[npc.pcName]……)]"
 										+ "</p>"
 										+ "<p>"
-											+ "Ignoring the amorous tone of [npc.her] voice, you command [npc.name] to parade around in front of you; an order which [npc.she] again happily carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, with a disappointed sigh, [npc.she] does as you command."
+											+ "你无视[npc.her]充满情欲的语气，命令[npc.Name]在你面前走来走去；[npc.she]再次愉快地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]失望地叹了口气，照你的吩咐做了。"
 										+ "</p>");
 									break;
 								case OBEDIENT:
 									UtilText.nodeContentSB.append(
 											(isSlaveNaked()
-													?"[npc.She] immediately moves to obey your order, and you see the distinct look of arousal in [npc.her] [npc.eyes] as [npc.she] obediently steps back and asks,"
-													:"[npc.She] immediately moves to obey your order, and you see the distinct look of arousal in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-														+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,")
-											+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+													?"[npc.she]顺从地后退，你看到[npc.her]的[npc.eyes]里流露出明显的兴奋神情，问道，"
+													:"[npc.she]顺从地把[npc.her]的衣服脱到地上，你看到[npc.her]的[npc.eyes]里流露出明显的兴奋神情。"
+														+ "当[npc.she]脱下[npc.her]的最后一件衣服时，[npc.she]问道，")
+											+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You answer in the affirmative, before commanding [npc.name] to parade around in front of you; an order which [npc.she] again dutifully carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+ " Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, without a word of complaint, [npc.she] once more does exactly as you say."
-											+ " From the way [npc.her] cheeks have flushed, you can tell that [npc.she] enjoyed presenting [npc.herself] to you."
+											+ "你给予了肯定的回答，然后命令[npc.Name]在你面前展示自己；[npc.she]再次尽职尽责地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+ "你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]毫无怨言地再次照你说的做了。"
+											+ "从[npc.her]脸颊泛红的样子可以看出，[npc.she]很喜欢向你展示[npc.herself]。"
 										+ "</p>");
 									break;
 							}
@@ -3294,7 +3294,7 @@ public class SlaveDialogue {
 					}
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "<i>[npc.Name] loves displaying [npc.herself] like this, and both [npc.her] affection towards you and [npc.her] obedience increases!</i>"
+								+ "<i>[npc.Name]喜欢这样展示[npc.herself]，[npc.her]对你的好感和[npc.her]的服从性都会增加！</i>"
 							+ "</p>");
 					
 				} else {
@@ -3303,45 +3303,45 @@ public class SlaveDialogue {
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
 									UtilText.nodeContentSB.append(
-												"[npc.She] lets out an angry scowl as [npc.she] hears your order, but, realising that [npc.she] really doesn't have any choice in the matter, begrudgingly moves to obey."
+												"[npc.she]听到你的命令，生气地皱起了眉头。但[npc.she]意识到自己别无选择，只好勉强服从。"
 												+ (isSlaveNaked()
-														?" Shooting you a furious glare, [npc.she] snarls,"
-														:" As [npc.she] takes [npc.her] clothes off, [npc.she] snarls,")
-												+ " [npc.speech(Fucking "+(Main.game.getPlayer().isFeminine()?"bitch":"bastard")+"! Go on! Take a good look at your <i>property</i>, you sick fuck!)]"
+														?"[npc.she]双目圆睁，怒视着你，咆哮道，"
+														:"[npc.she]咆哮着脱下衣服，")
+												+ "[npc.speech(该死的"+(Main.game.getPlayer().isFeminine()?"婊子":"混球")+"！继续！仔细看看你的<i>财产</i>吧，你这个病态的混蛋！)]"
 											+ "</p>"
 											+ "<p>"
-												+ "Ignoring [npc.her] rebellious words, you command [npc.name] to parade around in front of you; an order which [npc.she] again reluctantly carries out."
-												+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-												+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-													+", drawing yet another angry remark from between your disobedient slave's [npc.lips]."
+												+ "你无视[npc.her]的反叛言论，命令[npc.Name]在你面前展示自己；[npc.she]再次勉强地执行了这一命令。"
+												+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+												+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前站起来":"重新穿上衣服")
+													+"你不听话的奴隶[npc.lips]之间又发出了一句愤怒的话语。"
 											+ "</p>");
 									break;
 								case NEUTRAL:
 									UtilText.nodeContentSB.append(
-											"[npc.She] lets out a frustrated sigh as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, begrudgingly moves to obey."
+											"听到你的命令，[npc.she]无奈地叹了口气，但还是努力控制住[npc.her]的情绪，勉强服从命令。"
 												+ (isSlaveNaked()
-														?" Glaring at you, [npc.she] snaps,"
-														:" As [npc.she] takes [npc.her] clothes off, [npc.she] snaps,")
-											+ " [npc.speech(Very well, <i>[npc.pcName]</i>.)]"
+														?"瞪着你，[npc.she]冷笑道："
+														:"[npc.she]恶声恶气地脱下衣服，")
+											+ "[npc.speech(很好，<i>[npc.pcName]</i>。)]"
 										+ "</p>"
 										+ "<p>"
-											+ "Ignoring [npc.her] slightly-rebellious tone, you command [npc.name] to parade around in front of you; an order which [npc.she] again reluctantly carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, with a relieved sigh, [npc.she] does as you command."
+											+ "你无视[npc.her]略带反抗的语气，命令[npc.Name]在你面前展示自己；[npc.she]再次勉强执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+"你对[npc.Name]的外表感到满意，便让[npc.her]"+(isSlaveNaked()?"在你面前重新起身":"重新穿上衣服")+"[npc.she]解脱般舒了口气，遵从了你的命令。"
 										+ "</p>");
 									break;
 								case OBEDIENT:
 									UtilText.nodeContentSB.append(
 											(isSlaveNaked()
-													? "[npc.She] immediately moves to obey your order, but you see the distinct look of hatred in [npc.her] [npc.eyes] as [npc.she] obediently steps back and asks,"
-													: "[npc.She] immediately moves to obey your order, but you see the distinct look of hatred in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-														+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,")
-											+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+													? "[npc.she]立即服从你的命令，但你看到[npc.her][npc.eyes]里明显流露出憎恨的神情，[npc.her]顺从地后退并问道，"
+													: "[npc.she]顺从地把[npc.her]的衣服扔到地上，[npc.her]立即移动脚步去服从你的命令，但你看到了[npc.her][npc.eyes]中明显的仇恨神情。"
+														+ "当[npc.she]脱下[npc.her]的最后一件衣服时，[npc.she]问道，")
+											+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You answer in the affirmative, before commanding [npc.name] to parade around in front of you; an order which [npc.she] again dutifully carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+ " Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, without a word of complaint, [npc.she] once more does exactly as you say."
+											+ "你给予了肯定的回答，然后命令[npc.Name]在你面前展示自己；[npc.she]再次尽职尽责地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+ "你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]毫无怨言地再次照你说的做了。"
 										+ "</p>");
 									break;
 							}
@@ -3350,45 +3350,45 @@ public class SlaveDialogue {
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
 									UtilText.nodeContentSB.append(
-												"[npc.She] lets out a flustered cry as [npc.she] hears your order, but, realising that [npc.she] really doesn't have any choice in the matter, begrudgingly moves to obey."
+												"[npc.she]听到你的命令，慌张地叫了一声，但意识到[npc.she]在这件事上真的别无选择，只好勉强服从命令。"
 												+ (isSlaveNaked()
-														?" Putting on [npc.her] most pleading expression, [npc.she] whines,"
-														:" As [npc.she] takes [npc.her] clothes off, [npc.she] whines,")
-												+ " [npc.speech(Do I really have to? It's kind of degrading being forced to do this...)]"
+														?"[npc.her]摆出最哀求的表情，抱怨道，"
+														:"[npc.she]抱怨着脱下衣服，")
+												+ "[npc.speech(我真的必须这么做吗？被迫这样做有点有辱人格……)]"
 											+ "</p>"
 											+ "<p>"
-												+ "Ignoring [npc.her] words, you command [npc.name] to parade around in front of you; an order which [npc.she] again reluctantly carries out."
-												+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-												+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-													+", which draws a relieved sigh from between your disobedient slave's [npc.lips]."
+												+ "你无视[npc.her]的话语，命令[npc.Name]在你面前展示自己；[npc.she]再次勉强执行了这一命令。"
+												+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+												+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")
+													+"你不听话的奴隶的[npc.lips]间发出一声如释重负的叹息。"
 											+ "</p>");
 									break;
 								case NEUTRAL:
 									UtilText.nodeContentSB.append(
-											"[npc.She] lets out a flustered cry as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, begrudgingly moves to obey."
+											"[npc.she]听到你的命令后，发出了一声慌乱的叫喊，但还是努力控制住[npc.her]的情绪，勉强服从命令。"
 											+ (isSlaveNaked()
-													?" Putting on [npc.her] most pleading expression, [npc.she] whines,"
-													:" As [npc.she] takes [npc.her] clothes off, [npc.she] whines,")
-											+ " [npc.speech(Just give me a moment, [npc.pcName].)]"
+													?"[npc.her]摆出最哀求的表情，抱怨道，"
+													:"[npc.she]抱怨着脱下衣服，")
+											+ "[npc.speech(给我一点时间，[npc.pcName]。)]"
 										+ "</p>"
 										+ "<p>"
-											+ "After [npc.sheIs] stripped naked, you command [npc.name] to parade around in front of you; an order which [npc.she] again reluctantly carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, with a relieved sigh, [npc.she] does as you command."
+											+ "在[npc.sheIs]被剥光衣服后，你命令[npc.Name]在你面前展示自己；[npc.she]再次不情愿地执行了这个命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+"你对[npc.Name]的外表感到满意，便让[npc.her]"+(isSlaveNaked()?"在你面前重新起身":"重新穿上衣服")+"[npc.she]解脱般舒了口气，遵从了你的命令。"
 										+ "</p>");
 									break;
 								case OBEDIENT:
 									UtilText.nodeContentSB.append(
 											(isSlaveNaked()
-													?"[npc.She] immediately moves to obey your order, and you see the distinct look of distress in [npc.her] [npc.eyes] as [npc.she] obediently steps back and asks,"
-													:"[npc.She] immediately moves to obey your order, and you see the distinct look of distress in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-														+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,")
-											+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+													?"[npc.she]顺从地后退，你看到[npc.her]的[npc.eyes]里流露出明显的痛苦神情，问道，"
+													:"[npc.she]顺从地把[npc.her]的衣服脱到地上，你看到[npc.her]的[npc.eyes]里流露出明显的痛苦神情。"
+														+ "当[npc.she]脱下[npc.her]的最后一件衣服时，[npc.she]问道，")
+											+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You answer in the affirmative, before commanding [npc.name] to parade around in front of you; an order which [npc.she] again dutifully carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+ " Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, without a word of complaint, [npc.she] once more does exactly as you say."
+											+ "你给予了肯定的回答，然后命令[npc.Name]在你面前展示自己；[npc.she]再次尽职尽责地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+ "你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]毫无怨言地再次照你说的做了。"
 										+ "</p>");
 									break;
 							}
@@ -3397,45 +3397,45 @@ public class SlaveDialogue {
 							switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 								case DISOBEDIENT:
 									UtilText.nodeContentSB.append(
-												"[npc.She] lets out a sad little cry as [npc.she] hears your order, but, realising that [npc.she] really doesn't have any choice in the matter, begrudgingly moves to obey."
+												"[npc.she]听到你的命令，伤心地哭出来，但意识到[npc.she]在这件事上真的别无选择，只好勉强服从命令。"
 												+ (isSlaveNaked()
-														?" Putting on [npc.her] most pleading expression, [npc.she] whines,"
-														:" As [npc.she] takes [npc.her] clothes off, [npc.she] whines,")
-												+ " [npc.speech(You know, it's kind of degrading being forced to do this... I thought you liked me...)]"
+														?"[npc.her]摆出最哀求的表情，抱怨道，"
+														:"[npc.she]抱怨着脱下衣服，")
+												+ "[npc.speech(你知道吗，被迫这样做有点有辱人格……我以为你喜欢我的……)]"
 											+ "</p>"
 											+ "<p>"
-												+ "Ignoring [npc.her] words, you command [npc.name] to parade around in front of you; an order which [npc.she] again reluctantly carries out."
-												+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-												+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")
-													+", which draws a relieved sigh from between your disobedient slave's [npc.lips]."
+												+ "你无视[npc.her]的话语，命令[npc.Name]在你面前展示自己；[npc.she]再次勉强执行了这一命令。"
+												+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+												+"你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")
+													+"你不听话的奴隶的[npc.lips]间发出一声如释重负的叹息。"
 											+ "</p>");
 									break;
 								case NEUTRAL:
 									UtilText.nodeContentSB.append(
-											"[npc.She] lets out a sad little cry as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, slowly moves to obey."
+											"当[npc.she]听到你的命令时，[npc.she]发出了悲伤的哭声，但她努力控制住[npc.her]的情绪，慢慢地走去服从命令。"
 											+ (isSlaveNaked()
-													?" Putting on [npc.her] most pleading expression, [npc.she] whines,"
-													:" As [npc.she] takes [npc.her] clothes off, [npc.she] whines,")
-											+ " [npc.speech(I thought you liked me, [npc.pcName]... But if this is what you want...)]"
+													?"[npc.her]摆出最哀求的表情，抱怨道，"
+													:"[npc.she]抱怨着脱下衣服，")
+											+ "[npc.speech(我以为你喜欢我，[npc.pcName]……但如果这是你想要的……)]"
 										+ "</p>"
 										+ "<p>"
-											+ "Ignoring [npc.her] slightly-rebellious protest, you command [npc.name] to parade around in front of you; an order which [npc.she] again reluctantly carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+" Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, with a relieved sigh, [npc.she] does as you command."
+											+ "你无视[npc.her]略带反抗的抗议，命令[npc.Name]在你面前展示自己；[npc.she]再次不情愿地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+"你对[npc.Name]的外表感到满意，便让[npc.her]"+(isSlaveNaked()?"在你面前重新起身":"重新穿上衣服")+"[npc.she]解脱般舒了口气，遵从了你的命令。"
 										+ "</p>");
 									break;
 								case OBEDIENT:
 									UtilText.nodeContentSB.append(
 											(isSlaveNaked()
-													?"[npc.She] immediately moves to obey your order, and you see the distinct look of sadness in [npc.her] [npc.eyes] as [npc.she] obediently steps back and asks,"
-													:"[npc.She] immediately moves to obey your order, and you see the distinct look of sadness in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-														+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,")
-											+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+													?"[npc.she]顺从地后退，你看到[npc.her]的[npc.eyes]里流露出明显的痛苦神情，问道，"
+													:"[npc.she]顺从地把[npc.her]的衣服脱到地上，你看到[npc.her]的[npc.eyes]里流露出明显的悲伤神情。"
+														+ "当[npc.she]脱下[npc.her]的最后一件衣服时，[npc.she]问道，")
+											+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 										+ "</p>"
 										+ "<p>"
-											+ "You answer in the affirmative, before commanding [npc.name] to parade around in front of you; an order which [npc.she] again dutifully carries out."
-											+ " After that, you get [npc.herHim] to "+legsSpreading+partInspection()
-											+ " Satisfied with [npc.her] appearance, you tell [npc.name] "+(isSlaveNaked()?"to step back up before you":"to get dressed again")+", and, without a word of complaint, [npc.she] once more does exactly as you say."
+											+ "你给予了肯定的回答，然后命令[npc.Name]在你面前展示自己；[npc.she]再次尽职尽责地执行了这一命令。"
+											+ "在这之后，你让[npc.herHim]"+legsSpreading+partInspection()
+											+ "你对[npc.Name]的外表感到满意，让[npc.her]"+(isSlaveNaked()?"在你面前重新站起来":"重新穿上衣服")+"，然后[npc.she]毫无怨言地再次照你说的做了。"
 										+ "</p>");
 									break;
 							}
@@ -3443,9 +3443,9 @@ public class SlaveDialogue {
 					}
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "<i>It makes no difference that [npc.name]"
-									+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-									+ " you, as being forced to strip and present [npc.herself] to you like a piece of meat has a hugely negative impact on [npc.her] affection towards you, while simultaneously increasing [npc.her] obedience!</i>"
+								+ "<i>这并没有改变[npc.name]"
+									+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+									+ "你的事实，[npc.she]被强行脱光衣服，像一块肉一样在你面前展示自己，这对[npc.her]对你的好感产生了巨大的负面影响，但同时也会增加[npc.her]的服从性！</i>"
 							+ "</p>");
 				}
 			}
@@ -3469,16 +3469,16 @@ public class SlaveDialogue {
 	private static String partInspection() {
 		if(getSlave().hasPenis()) {
 			if(getSlave().hasVagina()) {
-				return ("[npc.penis+] and [npc.vagina+] for your inspection.");
+				return ("[npc.penis+]和[npc.vagina+]供你检查。");
 			} else {
-				return ("[npc.penis+] for your inspection.");
+				return ("[npc.penis+]供你检查。");
 			}
 			
 		} else if(getSlave().hasVagina()) {
-			return ("[npc.vagina+] for your inspection.");
+			return ("[npc.vagina+]供你检查。");
 			
 		} else {
-			return ("genderless mound for your inspection.");
+			return ("无性别的下体供你检查。");
 		}
 	}
 	
@@ -3491,7 +3491,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Spanking [npc.Name]");
+			return UtilText.parse(getSlave(), "打[npc.Name]的屁股");
 		}
 
 		@Override
@@ -3500,27 +3500,27 @@ public class SlaveDialogue {
 
 			if(isDoll()) {
 				UtilText.nodeContentSB.append("<p>"
-						+ "You feel like [npc.name] should be reminded of [npc.her] place, and so after taking a seat you order [npc.herHim] to strip and bend over in your lap."
+						+ "你认为有必要让[npc.name]记住[npc.her]的身份地位，因此在坐下之后，你命令[npc.herHim]脱掉衣物并在你的膝上弯腰屈身。"
 					+ "</p>"
 					+ "<p>"
-						+ "[npc.She] immediately moves to obey your order and obediently drops [npc.her] clothing to the floor."
-						+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,"
-						+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+						+ "[npc.She]立即遵从你的命令，乖乖地将[npc.her]的衣服放到地上。"
+						+ "[npc.she]脱下[npc.her]的最后一件衣服，[npc.she]问道，"
+						+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You answer in the affirmative, before once again commanding [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] again carries out as quickly as [npc.she] can."
-						+ " As [npc.she] lies down in your lap, presenting you with [npc.her] [npc.ass+], you swiftly bring your [pc.hand] down to smack [npc.her] exposed cheeks."
-						+ " A robotic-sounding squeal accompanies the sharp sound of silicone being slapped, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+						+ "你给出了肯定的回答，然后再次命令[npc.name]趴在你的膝盖上；[npc.she]立刻遵从了这一命令。"
+						+ "[npc.she]躺在你的腿上并展现出[npc.her][npc.ass+]，你迅速抬起[pc.hand]，重重地拍打[npc.her]那裸露的臀部。"
+						+ "一阵类似机器的吱啦声伴随着硅胶被打时的清脆声响，这使得你再次出手打击了[npc.her]的[npc.ass]。"
 					+ "</p>"
 					+ "<p>"
-						+ "You continue this for a little while; your doll obediently holding still in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-						+ " Although [npc.she] squeals and pants in response, you can't help but feel that [npc.sheIs] putting it on for your benefit, and that the punishment isn't hurting [npc.herHim] at all."
-						+ " As such, you bring the spanking to and end..."
+						+ "你继续这样做了片刻；但你的玩偶只是顺从地趴在你的膝上，任由你一掌又一掌地拍打在[npc.her]那柔弱的臀部上。"
+						+ "尽管[npc.she]在你的惩罚下以尖叫和喘息着回应，但你总觉得[npc.she]是为了迎合你而做出这样的反应，实际上这种惩罚并未对[npc.herHim]造成任何伤害。"
+						+ "见此你只有结束这场惩戒……"
 					+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append("<p>"
-								+ "You feel like [npc.name] could do with a reminder of who's in charge, so, taking a seat, you order [npc.herHim] to strip and bend over in your lap."
+								+ "你觉得[npc.Name]可以回想一下谁是老大，于是，你坐下来，命令[npc.herHim]脱光衣服，弯腰趴在你腿上。"
 							+ "</p>"
 							+ "<p>");
 	
@@ -3529,52 +3529,52 @@ public class SlaveDialogue {
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-											"An angry growl escapes from [npc.her] mouth as [npc.she] hears what you're ordering [npc.herHim] to do, but,"
-													+ " understanding that [npc.she] doesn't have any choice in the matter, reluctantly moves to obey."
-											+ " As [npc.she] slowly takes [npc.her] clothes off, [npc.she] snaps,"
-											+ " [npc.speech(You fucking "+(Main.game.getPlayer().isFeminine()?"bitch":"bastard")+"! I hate you so fucking much!)]"
+											"当[npc.her]听到你命令[npc.herHim]做什么时，[npc.she]嘴里发出愤怒的咆哮声，但是"
+													+ "[npc.she]明白[npc.she]别无选择，只好勉强服从。"
+											+ "[npc.she]恶声恶气慢慢脱掉[npc.her]的衣服，"
+											+ "[npc.speech(你这该死的"+(Main.game.getPlayer().isFeminine()?"婊子":"混球")+"！我真他妈的恨死你了！)]"
 										+ "</p>"
 										+ "<p>"
-											+ "Ignoring [npc.her] insolent remarks, you once again command [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] again carries out as slowly as [npc.she] possibly can."
-											+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-											+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+											+ "你无视[npc.her]的无礼言论，再次命令[npc.Name]跪下；[npc.she]再次尽可能磨蹭地执行命令。"
+											+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+											+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 										+ "</p>"
 										+ "<p>"
-											+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-											+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+											+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+											+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 										+ "</p>");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										"[npc.She] lets out a flustered cry as [npc.she] hears what you're ordering [npc.herHim] to do, but,"
-												+ " trying to keep [npc.her] emotions under control, reluctantly moves to obey."
-										+ " As [npc.she] slowly takes [npc.her] clothes off, [npc.she] sighs,"
-										+ " [npc.speech(This will just take a moment, <i>[npc.pcName]</i>.)]"
+										"当[npc.she]听到你命令[npc.herHim]做什么时，[npc.she]发出了一声惊慌失措的叫声，但是"
+												+ "[npc.her]努力控制的情绪，勉强做出服从的举动。"
+										+ "[npc.she]慢慢脱下[npc.her]的衣服，叹了口气，"
+										+ "[npc.speech(这需要一点点时间，<i>[npc.pcName]</i>。)]"
 									+ "</p>"
 									+ "<p>"
-										+ "Ignoring [npc.her] slightly-rebellious tone, you once again command [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] carries out as slowly as [npc.she] possibly can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "你没有理会[npc.her]略带反抗的语气，再次命令[npc.Name]把自己趴到你的膝盖上；[npc.she]尽可能磨蹭地执行了这一命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										"[npc.She] immediately moves to obey your order, but you see the distinct look of hatred in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-										+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,"
-										+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+										"[npc.she]顺从地把[npc.her]的衣服扔到地上，立即移动脚步去服从你的命令，但你看到了[npc.her]的[npc.eyes]中明显的仇恨神情。"
+										+ "[npc.she]脱下[npc.her]的最后一件衣服，[npc.she]问道，"
+										+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 									+ "</p>"
 									+ "<p>"
-										+ "You answer in the affirmative, before once again commanding [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] carries out as slowly as [npc.she] possibly can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "你给予了肯定的回答，然后再次命令[npc.Name]让[npc.herself]跪下；[npc.she]尽可能磨蹭地执行了这一命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 						}
@@ -3583,50 +3583,50 @@ public class SlaveDialogue {
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-										"[npc.She] lets out a flustered cry as [npc.she] hears your order, but, realising that [npc.she] really doesn't have any choice in the matter, begrudgingly moves to obey."
-										+ " As [npc.she] takes [npc.her] clothes off, [npc.she] whines,"
-										+ " [npc.speech(Do I really have to? It's kind of degrading being forced to do this...)]"
+										"[npc.she]听到你的命令，慌张地叫了一声，但意识到[npc.she]在这件事上真的别无选择，只好勉强服从命令。"
+										+ "[npc.she]抱怨着脱下衣服，"
+										+ "[npc.speech(我真的必须这么做吗？被迫这样做有点有辱人格……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "Ignoring [npc.her] words, you once again command [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] again carries out as slowly as [npc.she] possibly can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "你没有理会[npc.her]的话，再次命令[npc.Name]趴到你膝盖上；[npc.she]再次尽可能磨蹭地执行了这一命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										"[npc.She] lets out a flustered cry as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, begrudgingly moves to obey."
-										+ " As [npc.she] takes [npc.her] clothes off, [npc.she] whines,"
-										+ " [npc.speech(Just give me a moment, [npc.pcName].)]"
+										"[npc.she]听到你的命令后，发出了一声慌乱的叫喊，但还是努力控制住[npc.her]的情绪，勉强服从命令。"
+										+ "[npc.she]抱怨着脱下衣服，"
+										+ "[npc.speech(给我一点时间，[npc.pcName]。)]"
 									+ "</p>"
 									+ "<p>"
-										+ "After [npc.sheIs] stripped naked, you once again command [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] again carries out as slowly as [npc.she] possibly can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "在[npc.sheIs]被脱光后，你再次命令[npc.Name]趴到你膝盖上；[npc.she]再次以尽可能慢的速度执行命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										"[npc.She] immediately moves to obey your order, but you see the distinct look of distress in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-										+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,"
-										+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+										"[npc.she]立即服从你的命令，但当[npc.she]顺从地把[npc.her]的衣服扔到地上时，你看到[npc.her]的[npc.eyes]里明显流露出痛苦的神情。"
+										+ "[npc.she]脱下[npc.her]的最后一件衣服，[npc.she]问道，"
+										+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 									+ "</p>"
 									+ "<p>"
-										+ "You answer in the affirmative, before once again commanding [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] carries out as quickly as [npc.she] can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "你给出了肯定的回答，接着再次命令[npc.name]伏在你的膝上；[npc.she]立马遵从了命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 						}
@@ -3635,50 +3635,50 @@ public class SlaveDialogue {
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
 								UtilText.nodeContentSB.append(
-										"[npc.She] lets out a sad little cry as [npc.she] hears your order, but, realising that [npc.she] really doesn't have any choice in the matter, begrudgingly moves to obey."
-										+ " As [npc.she] takes [npc.her] clothes off, [npc.she] whines,"
-										+ " [npc.speech(You know, it's kind of degrading being forced to do this... I thought you liked me...)]"
+										"[npc.she]听到你的命令，伤心地哭出来，但意识到[npc.she]在这件事上真的别无选择，只好勉强服从命令。"
+										+ "[npc.she]抱怨着脱下衣服，"
+										+ "[npc.speech(你知道吗，被迫这样做有点有辱人格……我以为你喜欢我的……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "Ignoring [npc.her] words, you once again command [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] again carries out as slowly as [npc.she] possibly can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "你没有理会[npc.her]的话，再次命令[npc.Name]趴到你膝盖上；[npc.she]再次尽可能磨蹭地执行了这一命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 							case NEUTRAL:
 								UtilText.nodeContentSB.append(
-										"[npc.She] lets out a sad little cry as [npc.she] hears your order, but, trying to keep [npc.her] emotions under control, slowly moves to obey."
-										+ " As [npc.she] takes [npc.her] clothes off, [npc.she] whines,"
-										+ " [npc.speech(I thought you liked me, [npc.pcName]... But if this is what you want...)]"
+										"当[npc.she]听到你的命令时，[npc.she]发出了悲伤的哭声，但她努力控制住[npc.her]的情绪，慢慢地走去服从命令。"
+										+ "[npc.she]抱怨着脱下衣服，"
+										+ "[npc.speech(我以为你喜欢我，[npc.pcName]……但如果这是你想要的……)]"
 									+ "</p>"
 									+ "<p>"
-										+ "Ignoring [npc.her] words, you once again command [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] again carries out as slowly as [npc.she] possibly can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "你没有理会[npc.her]的话，再次命令[npc.Name]趴到你膝盖上；[npc.she]再次尽可能磨蹭地执行了这一命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 							case OBEDIENT:
 								UtilText.nodeContentSB.append(
-										"[npc.She] immediately moves to obey your order, but you see the distinct look of sadness in [npc.her] [npc.eyes] as [npc.she] obediently drops [npc.her] clothing to the floor."
-										+ " As [npc.she] takes the last of [npc.her] clothes off, [npc.she] asks,"
-										+ " [npc.speech(Is this to your pleasure, [npc.pcName]?)]"
+										"[npc.she]顺从地把[npc.her]的衣服扔到地上，立即移动脚步去服从你的命令，但你看到[npc.her]的[npc.eyes]中流露出明显的悲伤神情。"
+										+ "[npc.she]脱下[npc.her]的最后一件衣服，[npc.she]问道，"
+										+ "[npc.speech(你满意了吗，[npc.pcName]？)]"
 									+ "</p>"
 									+ "<p>"
-										+ "You answer in the affirmative, before once again commanding [npc.name] to bend [npc.herself] over your knee; an order which [npc.she] again carries out as slowly as [npc.she] possibly can."
-										+ " As [npc.she] lies down in your lap, presenting [npc.her] [npc.ass+], you let out a victorious laugh, before swiftly bringing your [pc.hand] down to smack [npc.her] exposed cheeks."
-										+ " A squeal accompanies the sharp sound of flesh being whacked, which drives you to deliver yet another blow to [npc.her] [npc.ass]."
+										+ "你的回答是肯定的，然后再次命令[npc.Name]让[npc.herself]屈膝；[npc.she]再次尽可能磨蹭地执行命令。"
+										+ "[npc.she]趴在你大腿上，展示[npc.her][npc.ass+]时，你发出胜利的笑声，然后迅速用[pc.hand]扇[npc.her]裸露的屁股。"
+										+ "一声尖叫响起，和着肉体被拍打的声音，促使你再次打向[npc.her]的[npc.ass]。"
 									+ "</p>"
 									+ "<p>"
-										+ "You continue this for a little while; your slave squirming and squealing in your lap as you rain down blow after blow upon [npc.her] vulnerable backside."
-										+ " Eventually, however, you feel as though [npc.sheIs] been taught [npc.her] lesson, and you order [npc.herHim] to stand up and put [npc.her] clothes on once more."
+										+ "你继续这样做了一会儿；你的奴隶伏在大腿上扭动着，尖叫着，你一下又一下地打着[npc.her]脆弱的脊背。"
+										+ "最终，你觉得[npc.sheIs]已经得到了教训，于是你命令[npc.herHim]站起来，重新穿上[npc.her]的衣服。"
 									+ "</p>");
 								break;
 						}
@@ -3688,15 +3688,15 @@ public class SlaveDialogue {
 				if(getSlave().getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive()) {
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "<i>As [npc.name] is a masochist, spanking [npc.herHim] has actually made [npc.herHim] like you more, as well as increasing [npc.her] obedience!</i>"
+								+ "<i>由于[npc.Name]是个受虐狂，打[npc.herHim]的屁股实际上让[npc.herHim]更喜欢你了，也增加了[npc.her]的服从性！</i>"
 							+ "</p>");
 					
 				} else {
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "<i>It makes no difference that [npc.name]"
-									+ " <span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
-									+ " you, as being forced to present [npc.herself] for a disciplinary spanking has a hugely negative impact on [npc.her] affection towards you, while simultaneously increasing [npc.her] obedience!</i>"
+								+ "<i>这并没有改变[npc.name]"
+									+ "<span style='"+getSlave().getAffectionLevel(Main.game.getPlayer()).getColour().toWebHexString()+"'>"+getSlave().getAffectionLevel(Main.game.getPlayer()).getDescriptor()+"</span>"
+									+ "你的事实，[npc.she]被迫接受惩罚性打屁股，这对[npc.her]对你的好感产生了巨大的负面影响，但同时也会增加[npc.her]的服从性！</i>"
 							+ "</p>");
 				}
 			}
@@ -3725,7 +3725,7 @@ public class SlaveDialogue {
 		
 		@Override
 		public String getLabel(){
-			return UtilText.parse(getSlave(), "Molesting [npc.Name]");
+			return UtilText.parse(getSlave(), "性侵[npc.Name]");
 		}
 
 		@Override
@@ -3734,33 +3734,33 @@ public class SlaveDialogue {
 
 			if(isDoll()) {
 				UtilText.nodeContentSB.append("<p>"
-							+ "Not being able to resist the allure of [npc.namePos] [npc.feminine] body, you walk around behind [npc.her] back, before stepping forwards and wrapping your [pc.arms] around [npc.herHim]."
-							+ " Your doll obediently holds still as you grab [npc.her] [npc.breasts+], and lets out [npc.a_moan+] as you move your touch down between [npc.her] [npc.legs]."
+							+ "你无法抵挡[npc.namePos][npc.feminine]身体的诱惑，绕到[npc.her]背后，然后向前迈出一步，用[pc.arms]环抱住[npc.herHim]。"
+							+ "你抓住玩偶[npc.breasts+]，[npc.her]顺服地一动不动。你向下摸到[npc.her][npc.legs]间，才发出[npc.a_moan+]。"
 						+ "</p>"
 						+ "<p>"
-							+ "[npc.speech(Yes, [pc.name], please use me however you want,)] [npc.she] pants."
+							+ "[npc.speech(是的，[pc.name]，请随意按照您的意愿使用我，)][npc.she]回答道。"
 						+ "</p>"
 						+ "<p>"
-							+ "Doing just that, you continue groping and molesting [npc.name], only stopping once you've had your fun and explored every inch of [npc.her] silicone body."
-							+ " [pc.Stepping] back, you wonder what to do next..."
+							+ "就这样，你继续对[npc.name]进行猥亵和摸索，直到尽兴并且探索了[npc.her]硅胶身体的每一寸肌肤才停止。"
+							+ "你退了开来，思索着下一步该怎么做……"
 						+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append("<p>"
-							+ "Not being able to resist the allure of [npc.namePos] [npc.feminine] body, you walk around behind [npc.her] back, before stepping forwards and wrapping your [pc.arms] around [npc.herHim].");
+							+ "你无法抵挡[npc.namePos][npc.feminine]身体的诱惑，绕到[npc.her]背后，然后向前迈出一步，用[pc.arms]环抱住[npc.herHim]。");
 	
-				String firstCry = "a horrified cry";
-				String firstReaction = "instantly starts squirming and trying to pull away from your touch";
-				String firstSpeech = "Fuck off! Leave me alone!";
-				String firstPCReaction = "[npc.Her] words do nothing to deter your advance upon [npc.her] unwilling body";
+				String firstCry = "一声惊恐的哭喊";
+				String firstReaction = "突然开始扭动，试图挣脱你的抚摸";
+				String firstSpeech = "滚开！别烦我！";
+				String firstPCReaction = "[npc.her]的言语无法阻止你向[npc.her]不情愿的身体前进";
 				
-				String secondReaction = "[npc.She] continues to shout and struggle";
-				String thirdReaction = ", despite [npc.her] protests,";
-				String secondSpeech = "[npc.speech(Stop it! F-Fuck off already!)]"
-							+ " [npc.she] shouts, [npc.her] words falling on deaf ears as you continue having your fun.";
+				String secondReaction = "[npc.she]继续呼喊和挣扎";
+				String thirdReaction = "，尽管[npc.her]提出了抗议，";
+				String secondSpeech = "[npc.speech(停下！滚……滚开！)]"
+							+ "[npc.she]喊道，你对[npc.her]的话充耳不闻，继续享受你的乐趣。";
 				
-				String finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to dash across to the other side of the room, you look [npc.herHim] up and down, grinning."
-							+ " [npc.She] continues to spit curses and tell you to leave [npc.herHim] alone, and you wonder if you should do as your slave asks, or do something else with [npc.herHim]...";
+				String finalDescription = "最终，你觉得自己满足了，于是松开[npc.Name]让[npc.herHim]到房间的另一边去，你上下打量着[npc.herHim]，咧嘴笑了起来。"
+							+ "[npc.she]继续吐口水诅咒你，让你不要再打扰[npc.herHim]，你不知道是应该按照你的奴隶的要求去做，还是对[npc.herHim]做些别的事情……";
 				
 				switch(AffectionLevelBasic.getAffectionLevelFromValue(getSlave().getAffection(Main.game.getPlayer()))) {
 					case DISLIKE:
@@ -3768,124 +3768,124 @@ public class SlaveDialogue {
 							case DISOBEDIENT:
 								break;
 							case NEUTRAL:
-								firstCry = "an uncomfortable cry";
-								firstReaction = "starts squirming and trying to shift [npc.her] body away from your touch";
-								firstSpeech = "C-Can you stop this now?!";
-								firstPCReaction = "[npc.Her] words do nothing to deter your advance upon [npc.her] unwilling body";
+								firstCry = "令人不适的哭声";
+								firstReaction = "开始扭动并试图将[npc.her]的身体从你的抚摸中移开";
+								firstSpeech = "你……你能停下了吗？！";
+								firstPCReaction = "[npc.her]的言语无法阻止你向[npc.her]不情愿的身体前进";
 								
-								secondReaction = "[npc.She] continues to struggle in discomfort";
-								thirdReaction = ", despite [npc.her] reluctance,";
-								secondSpeech = "[npc.speech(P-Please! S-Stop it now!)]"
-											+ " [npc.she] cries, [npc.her] words falling on deaf ears as you continue having your fun.";
+								secondReaction = "[npc.She]继续在不适中挣扎";
+								thirdReaction = "，尽管[npc.her]并不情愿，";
+								secondSpeech = "[npc.speech(求……求你了！快……快住手！)]"
+											+ "[npc.she]哭泣着，你对[npc.her]的话被充耳不闻，继续享受你的乐趣。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to dash across to the other side of the room, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] avoids your gaze as [npc.she] asks you to leave [npc.herHim] alone, and you wonder if you should do as your slave requests, or do something else with [npc.herHim]...";
+								finalDescription = "最终，你觉得自己满足了，于是松开[npc.Name]让[npc.herHim]冲到房间的另一边，你上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "当[npc.she]请求你放过[npc.herHim]时，[npc.she]避开了你的视线，你不知道是应该按照你的奴隶的要求去做，还是对[npc.herHim]做些别的事情……";
 								break;
 							case OBEDIENT:
-								firstCry = "a shocked cry";
-								firstReaction = "obediently holds [npc.her] body still for you";
-								firstSpeech = "I am yours to use, [npc.pcName].";
-								firstPCReaction = "[npc.Her] cold words do nothing to deter your advance upon [npc.her] body";
+								firstCry = "哭喊";
+								firstReaction = "顺从地为你保持[npc.her]的身体一动不动";
+								firstSpeech = "我随你使用，[npc.pcName]。";
+								firstPCReaction = "[npc.her]的冷言冷语无助于阻止你向[npc.her]的身体前进";
 								
-								secondReaction = "[npc.She] continues to obediently allow [npc.herself] to be used";
-								thirdReaction = ", despite [npc.her] cold attitude,";
-								secondSpeech = "[npc.speech(Is this to your satisfaction, [npc.pcName]?)]"
-											+ " [npc.she] dutifully asks, showing no sign of emotion as you continue having your fun.";
+								secondReaction = "[npc.she]继续顺从地允许[npc.herself]被使用";
+								thirdReaction = "，尽管[npc.her]态度冷淡，";
+								secondSpeech = "[npc.speech(这是否令你满意？[npc.pcName]？)]"
+											+ "[npc.she]尽职尽责地问道，在你们继续享受乐趣时没有表现出任何情绪。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to take a step back, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] obediently asks you if there's anything else that's required of [npc.herHim], which makes you wonder if you should do something else with [npc.herHim]...";
+								finalDescription = "最终，你觉得自己满足了，松开[npc.Name]让[npc.herHim]往后退了一步，然后上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "[npc.she]顺从地询问你是否还需要[npc.herHim]做什么，这让你怀疑是否应该对[npc.herHim]做其他事情……";
 								break;
 						}
 						break;
 					case NEUTRAL:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								firstCry = "a startled cry";
-								firstReaction = "starts squirming and trying to shift [npc.her] body away from your touch";
-								firstSpeech = "D-Do you have to do this?";
-								firstPCReaction = "[npc.Her] worried tone does nothing to deter your advance upon [npc.her] body";
+								firstCry = "惊呼";
+								firstReaction = "开始扭动并试图将[npc.her]的身体从你的抚摸中移开";
+								firstSpeech = "你……你一定要这么做吗？";
+								firstPCReaction = "[npc.her]忧心忡忡的语气丝毫不能阻止你向[npc.her]的身体前进";
 								
-								secondReaction = "[npc.She] continues to struggle a little";
-								thirdReaction = ", despite [npc.her] less-than-enthusiastic attitude,";
-								secondSpeech = "[npc.speech(How much longer is this going to do on for, [npc.pcName]?)]"
-											+ " [npc.she] asks, [npc.her] disobedient questioning receiving no answer as you continue having your fun.";
+								secondReaction = "[npc.She]继续轻轻地挣扎";
+								thirdReaction = "，尽管[npc.her]的态度并不热情，";
+								secondSpeech = "[npc.speech(这还要持续多久，[npc.pcName]？)]"
+											+ "[npc.her]不服气地质问，但没有得到任何回答，你们继续享受乐趣。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to take a few steps back, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] lets out a sigh of relief as [npc.she] asks you to leave [npc.herHim] alone now, and you wonder if you should do as your slave requests, or do something else with [npc.herHim]...";
+								finalDescription = "最终，你觉得自己满足了，于是松开[npc.Name]让[npc.herHim]往后退了几步，然后上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "当[npc.she]请你放过[npc.herHim]时，[npc.she]叹了一口气，你不知道是应该按照你的奴隶的要求去做，还是对[npc.herHim]做些别的事情……";
 								break;
 							case NEUTRAL:
-								firstCry = "a half-suppressed cry";
-								firstReaction = "starts squirming and trying to shift [npc.her] body away from your touch";
-								firstSpeech = "[npc.pcName], do you really have to do this?";
-								firstPCReaction = "[npc.Her] worried tone does nothing to deter your advance upon [npc.her] body";
+								firstCry = "半压抑的哭泣";
+								firstReaction = "开始扭动并试图将[npc.her]的身体从你的抚摸中移开";
+								firstSpeech = "[npc.pcName]，真的要这样做吗？";
+								firstPCReaction = "[npc.her]忧心忡忡的语气丝毫不能阻止你向[npc.her]的身体前进";
 								
-								secondReaction = "[npc.She] continues to struggle a little";
-								thirdReaction = ", despite [npc.her] less-than-enthusiastic attitude,";
-								secondSpeech = "[npc.speech(Are you almost done, [npc.pcName]?)]"
-											+ " [npc.she] asks, [npc.her] disobedient questioning receiving no answer as you continue having your fun.";
+								secondReaction = "[npc.She]继续轻轻地挣扎";
+								thirdReaction = "，尽管[npc.her]的态度并不热情，";
+								secondSpeech = "[npc.speech(你快完事了吗？[npc.pcName]？)]"
+											+ "[npc.her]不服气地质问，但没有得到任何回答，你们继续享受乐趣。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to take a few steps back, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] lets out a little sigh of relief as [npc.she] avoids your gaze, and you wonder if you should do something else with [npc.herHim]...";
+								finalDescription = "最终，你觉得自己满足了，于是松开[npc.Name]让[npc.herHim]往后退了几步，然后上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "当[npc.she]避开你的视线时，[npc.she]稍稍松了一口气，你在想是否应该对[npc.herHim]做点别的什么……";
 								break;
 							case OBEDIENT:
-								firstCry = "a shocked cry";
-								firstReaction = "obediently holds [npc.her] body still for you";
-								firstSpeech = "I am yours to use, [npc.pcName].";
-								firstPCReaction = "[npc.Her] cold words do nothing to deter your advance upon [npc.her] body";
+								firstCry = "哭喊";
+								firstReaction = "顺从地为你保持[npc.her]的身体一动不动";
+								firstSpeech = "我随你使用，[npc.pcName]。";
+								firstPCReaction = "[npc.her]的冷言冷语无助于阻止你向[npc.her]的身体前进";
 								
-								secondReaction = "[npc.She] continues to obediently allow [npc.herself] to be used";
-								thirdReaction = ", despite [npc.her] cold attitude,";
-								secondSpeech = "[npc.speech(Is this to your satisfaction, [npc.pcName]?)]"
-											+ " [npc.she] dutifully asks, showing no sign of emotion as you continue having your fun.";
+								secondReaction = "[npc.she]继续顺从地允许[npc.herself]被使用";
+								thirdReaction = "，尽管[npc.her]态度冷淡，";
+								secondSpeech = "[npc.speech(这是否令你满意？[npc.pcName]？)]"
+											+ "[npc.she]尽职尽责地问道，在你们继续享受乐趣时没有表现出任何情绪。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to take a step back, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] obediently asks you if there's anything else that's required of [npc.herHim], which makes you wonder if you should do something else with [npc.herHim]...";
+								finalDescription = "最终，你觉得自己满足了，松开[npc.Name]让[npc.herHim]往后退了一步，然后上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "[npc.she]顺从地询问你是否还需要[npc.herHim]做什么，这让你怀疑是否应该对[npc.herHim]做其他事情……";
 								break;
 						}
 						break;
 					case LIKE:
 						switch(ObedienceLevelBasic.getObedienceLevelFromValue(getSlave().getObedienceValue())) {
 							case DISOBEDIENT:
-								firstCry = "a startled cry";
-								firstReaction = "starts squirming and trying to shift [npc.her] body away from your touch";
-								firstSpeech = "[npc.PcName]! I thought you liked me?! W-Why are you doing this?!";
-								firstPCReaction = "[npc.Her] distressed tone does nothing to deter your advance upon [npc.her] body";
+								firstCry = "惊呼";
+								firstReaction = "开始扭动并试图将[npc.her]的身体从你的抚摸中移开";
+								firstSpeech = "[npc.pcName]！我以为你喜欢我的！你为什么要这么做？！";
+								firstPCReaction = "[npc.her]痛苦的语气丝毫不能阻止你向[npc.her]的身体前进";
 								
-								secondReaction = "[npc.She] continues to struggle a little";
-								thirdReaction = ", despite [npc.her] less-than-enthusiastic attitude,";
-								secondSpeech = "[npc.speech([npc.PcName], please! I-I just wanted a hug...)]"
-											+ " [npc.she] sighs, [npc.her] disobedient remark receiving no answer as you continue having your fun.";
+								secondReaction = "[npc.She]继续轻轻地挣扎";
+								thirdReaction = "，尽管[npc.her]的态度并不热情，";
+								secondSpeech = "[npc.speech([npc.PcName]，求你了！我……我只是想抱抱……)]"
+											+ "[npc.she]叹了口气，[npc.she]不听话的话语没有得到任何回答，你继续享受你的乐趣。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to take a few steps back, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] lets out a sigh of relief as [npc.she] smiles up at you, and you wonder if you should do something else with [npc.herHim] now...";
+								finalDescription = "最终，你觉得自己满足了，于是松开[npc.Name]让[npc.herHim]往后退了几步，然后上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "当[npc.she]对你微笑时，[npc.She]松了一口气，你不知道现在是否应该对[npc.herHim]做点别的什么……";
 								break;
 							case NEUTRAL:
-								firstCry = "a little cry";
-								firstReaction = "holds [npc.her] body still for you";
-								firstSpeech = "[npc.PcName], do you really have to do this?";
-								firstPCReaction = "[npc.Her] worried tone does nothing to deter your advance upon [npc.her] body";
+								firstCry = "一声轻呼";
+								firstReaction = "为你保持[npc.her]的身体一动不动";
+								firstSpeech = "[npc.PcName]，真的要这样做吗？";
+								firstPCReaction = "[npc.her]忧心忡忡的语气丝毫不能阻止你向[npc.her]的身体前进";
 								
-								secondReaction = "[npc.She] continues to hold still";
-								thirdReaction = ", despite [npc.her] slightly-disobedient attitude,";
-								secondSpeech = "[npc.speech(Is this to your liking, [npc.pcName]?)]"
-											+ " [npc.she] asks, [npc.her] questioning receiving no answer as you continue having your fun.";
+								secondReaction = "[npc.She]继续保持一动不动";
+								thirdReaction = "，尽管[npc.her]有一点不听话，";
+								secondSpeech = "[npc.speech(这就是你喜欢的吗？[npc.pcName]？)]"
+											+ "[npc.she]问道，[npc.her]的质问没有得到回答，你们继续享受乐趣。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to take a few steps back, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] lets out a little sigh of relief as [npc.she] avoids your gaze, and you wonder if you should do something else with [npc.herHim]...";
+								finalDescription = "最终，你觉得自己满足了，于是松开[npc.Name]让[npc.herHim]往后退了几步，然后上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "当[npc.she]避开你的视线时，[npc.she]稍稍松了一口气，你在想是否应该对[npc.herHim]做点别的什么……";
 								break;
 							case OBEDIENT:
-								firstCry = "a little gasp";
-								firstReaction = "obediently holds [npc.her] body still for you";
-								firstSpeech = "I am yours to use, [npc.pcName].";
-								firstPCReaction = "[npc.Her] cold words do nothing to deter your advance upon [npc.her] body";
+								firstCry = "娇喘";
+								firstReaction = "顺从地为你保持[npc.her]的身体一动不动";
+								firstSpeech = "我随你使用，[npc.pcName]。";
+								firstPCReaction = "[npc.her]的冷言冷语无助于阻止你向[npc.her]的身体前进";
 								
-								secondReaction = "[npc.She] continues to obediently allow [npc.herself] to be used";
-								thirdReaction = ", despite [npc.her] cold attitude,";
-								secondSpeech = "[npc.speech(Is this to your satisfaction, [npc.pcName]?)]"
-											+ " [npc.she] dutifully asks, showing no sign of emotion as you continue having your fun.";
+								secondReaction = "[npc.she]继续顺从地允许[npc.herself]被使用";
+								thirdReaction = "，尽管[npc.her]态度冷淡，";
+								secondSpeech = "[npc.speech(这是否令你满意？[npc.pcName]？)]"
+											+ "[npc.she]尽职尽责地问道，在你们继续享受乐趣时没有表现出任何情绪。";
 								
-								finalDescription = "Eventually, you feel as though you've had enough, and, releasing [npc.name] to allow [npc.herHim] to take a step back, you look [npc.herHim] up and down, grinning."
-											+ " [npc.She] obediently asks you if there's anything else that's required of [npc.herHim], which makes you wonder if you should do something else with [npc.herHim]...";
+								finalDescription = "最终，你觉得自己满足了，松开[npc.Name]让[npc.herHim]往后退了一步，然后上下打量着[npc.herHim]，咧嘴笑了起来。"
+											+ "[npc.she]顺从地询问你是否还需要[npc.herHim]做什么，这让你怀疑是否应该对[npc.herHim]做其他事情……";
 								break;
 						}
 						break;
@@ -3895,41 +3895,41 @@ public class SlaveDialogue {
 				
 				if(getSlave().hasBreasts()) {
 					UtilText.nodeContentSB.append(
-								" Your [pc.hands] reach up to cup and squeeze [npc.her] [npc.breasts+], drawing "+firstCry+" from [npc.namePos] mouth as [npc.she] "+firstReaction+","
-								+ " [npc.speech("+firstSpeech+")]"
+								"你的[pc.hands]伸到罩杯然后揉捏[npc.namePos][npc.breasts+]，[npc.she]"+firstReaction+"，口中发出"+firstCry+"，"
+								+ "[npc.speech("+firstSpeech+")]"
 							+ "</p>"
 							+ "<p>"
-								+ firstPCReaction+", and, with one [pc.hand] still squeezing [npc.her] [npc.breasts+], you slip the other down #IF(npc.hasLegs())between [npc.her] [npc.legs]#ELSEto [npc.her] groin#ENDIF.");
+								+ firstPCReaction+"，你用一只[pc.hand]继续揉捏着[npc.her][npc.breasts+]，将另一只手滑#IF(npc.hasLegs())到[npc.her]两腿之间#ELSE向[npc.her]的胯部#ENDIF。");
 				} else {
 					UtilText.nodeContentSB.append(
-							" Your [pc.hands] reach up to run over [npc.her] chest, drawing "+firstCry+" from [npc.namePos] mouth as [npc.she] "+firstReaction+","
-							+ " [npc.speech("+firstSpeech+")]"
+							"你伸出[pc.hands]摸向[npc.her]的胸部，让[npc.namePos]在"+firstReaction+"的同时从口中发出"+firstCry+"，"
+							+ "[npc.speech("+firstSpeech+")]"
 						+ "</p>"
 						+ "<p>"
-							+ firstPCReaction+", and, with one [pc.hand] still pressed against [npc.her] chest, you slip the other down #IF(npc.hasLegs())between [npc.her] [npc.legs]#ELSEto [npc.her] groin#ENDIF.");
+							+ firstPCReaction+"，你用一只[pc.hand]继续揉捏着[npc.her]的胸部，将另一只手滑#IF(npc.hasLegs())到[npc.her]两腿之间#ELSE向[npc.her]的胯部#ENDIF。");
 				}
 	
 				if(getSlave().hasVagina() && getSlave().hasPenis()) {
 					UtilText.nodeContentSB.append(
-								" "+secondReaction+" as you grope, stroke, and fondle [npc.her] [npc.penis+], and you can't help but [pc.moan] into your slave's [npc.ear] as"+thirdReaction+" you feel [npc.her] [npc.cock+] growing hard under your touch."
-								+ " Dropping your [pc.hand] down yet further, you shift your attention to [npc.her] [npc.pussy+],"
-									+ " grinning once again as you feel that your stimulation of [npc.her] [npc.clit+] and [npc.labia+] have already gotten [npc.her] wet."
+								"你对着[npc.her][npc.penis+]抚摸、撸动、挑弄，"+secondReaction+"，你忍不住在奴隶的[npc.ear]边[pc.moan]着"+thirdReaction+"你还是能感觉到[npc.her][npc.cock+]正在你的戏弄下逐渐胀大。"
+								+ "你将[pc.hand]继续向下探索，逐渐将重心转移到[npc.her][npc.pussy+]上，"
+									+ "你感觉到在你的刺激下，[npc.her][npc.clit+]和[npc.labia+]已经慢慢湿润起来，不禁又露出了笑容。"
 							+ "</p>");
 					
 				} else if(getSlave().hasVagina()) {
 					UtilText.nodeContentSB.append(
-							" "+secondReaction+" as you grope, stroke, and probe at [npc.her] [npc.clit+] and [npc.labia+], and you can't help but [pc.moan] into your slave's [npc.ear] as"+thirdReaction+" you feel [npc.her] [npc.pussy+]"
-									+ " is already wet from your touch."
+							"你对着[npc.her][npc.clit+]抚摸、撸动、挑弄，"+secondReaction+"，你忍不住在奴隶的[npc.ear]边[pc.moan]着"+thirdReaction+"你还是能感觉到[npc.her][npc.pussy+]"
+									+ "在你的戏弄下湿润了。"
 						+ "</p>");
 					
 				} else if(getSlave().hasPenis()) {
 					UtilText.nodeContentSB.append(
-							" "+secondReaction+" as you grope, stroke, and fondle [npc.her] [npc.penis+], and you can't help but [pc.moan] into your slave's [npc.ear] as"+thirdReaction+" you feel [npc.her] [npc.cock+] growing hard under your touch."
+							"你对着[npc.her][npc.penis+]抚摸、撸动、挑弄，"+secondReaction+"，你忍不住在奴隶的[npc.ear]边[pc.moan]着"+thirdReaction+"你还是能感觉到[npc.her][npc.cock+]正在你的戏弄下逐渐胀大。"
 						+ "</p>");
 					
 				} else {
 					UtilText.nodeContentSB.append(
-							" "+secondReaction+" as you grope, stroke, and probe at [npc.her] genderless mound, and you can't help but [pc.moan] into your slave's [npc.ear] as"+thirdReaction+" you feel [npc.herHim] thrust [npc.her] [npc.hips] out against your touch."
+							"你对着[npc.her]无性别的下体抚摸、挑弄，"+secondReaction+"，你忍不住在奴隶的[npc.ear]边[pc.moan]着"+thirdReaction+"你还是能感觉到[npc.her]在你的戏弄下晃动起了腰身。"
 						+ "</p>");
 					
 				}
@@ -3944,37 +3944,37 @@ public class SlaveDialogue {
 				
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "<i>Molesting [npc.name] has helped reinforce in [npc.her] mind that [npc.she] belongs to you, increasing [npc.her] obedience!");
+							+ "<i>调戏[npc.name]有助于强化[npc.her]的意识——[npc.she]是属于你的——这会提高[npc.her]的服从！");
 				if(getSlave().isAttractedTo(Main.game.getPlayer())) {
 					if(getSlave().hasFetish(Fetish.FETISH_SUBMISSIVE) || getSlave().hasFetish(Fetish.FETISH_NON_CON_SUB)) {
 						UtilText.nodeContentSB.append(
-									" As [npc.sheIs] both attracted to you, as well as"
+									"由于[npc.sheIs]不仅被你吸引，而且"
 									+ (getSlave().hasFetish(Fetish.FETISH_SUBMISSIVE)
 											?(getSlave().hasFetish(Fetish.FETISH_NON_CON_SUB)
-													?" being both a submissive and turned on by non-consensual encounters,"
-													:" being a submissive,")
-											:" being turned on by non-consensual encounters,")
-									+ " your dominant, non-consensual use of [npc.namePos] body has resulted in [npc.herHim] liking you more!</i>"
+													?"既愿意做顺从者，又因未经同意的性行为而兴奋，"
+													:"愿意做顺从者，")
+											:"因未经同意的性行为而兴奋，")
+									+ "你对于[npc.namePos]身体的使用不容拒绝，也没有得到同意，反而让[npc.herHim]更喜欢你了！</i>"
 								+ "</p>");
 					} else {
 						UtilText.nodeContentSB.append(
-								" As [npc.sheIs] attracted to you, your dominant, non-consensual use of [npc.namePos] body has resulted in [npc.herHim] neither losing nor gaining affection towards you!</i>"
+								"由于[npc.sheIs]受到了你的吸引，而你对于[npc.namePos]身体的使用不容拒绝，也没有得到同意，并没有让[npc.herHim]对你的好感上升或下降！</i>"
 							+ "</p>");
 					}
 				} else {
 					if(getSlave().hasFetish(Fetish.FETISH_SUBMISSIVE) || getSlave().hasFetish(Fetish.FETISH_NON_CON_SUB)) {
 						UtilText.nodeContentSB.append(
-								" Despite the fact that [npc.sheIs] not attracted to you,"
+								"尽管[npc.sheIs]并没有被你吸引，但[npc.she]"
 								+ (getSlave().hasFetish(Fetish.FETISH_SUBMISSIVE)
 										?(getSlave().hasFetish(Fetish.FETISH_NON_CON_SUB)
-												?" by being both a submissive and turned on by non-consensual encounters,"
-												:" by being a submissive,")
-										:" by being turned on by non-consensual encounters,")
-								+ " your dominant, non-consensual use of [npc.namePos] body has resulted in [npc.herHim] neither losing nor gaining affection towards you!</i>"
+												?"既愿意做顺从者，又因未经同意的性行为而兴奋，"
+												:"愿意做顺从者，")
+										:"因未经同意的性行为而兴奋，")
+								+ "你对于[npc.namePos]身体的使用不容拒绝，也没有得到同意，却并没有让[npc.herHim]对你的好感上升或下降！</i>"
 							+ "</p>");
 					} else {
 						UtilText.nodeContentSB.append(
-								" As [npc.sheIs] not attracted to you, your dominant, non-consensual use of [npc.namePos] body has resulted in [npc.herHim] losing a lot of affection towards you!</i>"
+								"由于[npc.sheIs]并没有被你吸引，而你对于[npc.namePos]身体的使用不容拒绝，也没有得到同意，所以[npc.herHim]失去了一些对你的好感！</i>"
 							+ "</p>");
 					}
 				}
@@ -3996,10 +3996,10 @@ public class SlaveDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("返回", "", true) {
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你已经爽过了，离开这里让[npc.name]恢复一下吧。";
 		}
 		@Override
 		public String getContent() {
@@ -4022,7 +4022,7 @@ public class SlaveDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Decide what to do next.", SLAVE_START_NO_CONTENT) {
+				return new Response("继续", "决定接下来该做什么。", SLAVE_START_NO_CONTENT) {
 					@Override
 					public void effects() {
 						SlaveDialogue.initDialogue(getSlave(), false); // Need to re-init this dialogue as it gets cleared in Game turnUpdate during this scene.

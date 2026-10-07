@@ -10,11 +10,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum ForcedFetishTendency {
 	
-	BOTTOM_HEAVY("Bottoming+", "Forced fetishes will almost always add bottoming and remove topping activities and behaviors.", PresetColour.BASE_PINK_LIGHT),
-	BOTTOM("Bottoming", "While NPC tastes still matter, forced fetishes will usually add bottoming and remove topping activities and behaviors.", PresetColour.BASE_PINK),
-	NEUTRAL("Neutral", "Forced fetishes will be determined solely by the tastes and whims of the controlling NPC, and the inherent randomness of the universe.", PresetColour.ANDROGYNOUS),
-	TOP ("Topping", "While NPC tastes still matter, forced fetishes will usually add topping and remove bottoming activities and behaviors.", PresetColour.BASE_PURPLE_LIGHT),
-	TOP_HEAVY("Topping+", "Forced fetishes will almost always add topping and remove bottoming activities and behaviors.", PresetColour.BASE_PURPLE);
+	BOTTOM_HEAVY("低姿态+", "强加的性癖总会是低姿态的并移除高姿态的行为。", PresetColour.BASE_PINK_LIGHT),
+	BOTTOM("低姿态", "当符合NPC喜好时，强加的性癖经常会是低姿态的并移除高姿态的行为。", PresetColour.BASE_PINK),
+	NEUTRAL("中性", "强加的性癖单纯由NPC的喜好、一时的心血来潮和宇宙固有的随机性决定。", PresetColour.ANDROGYNOUS),
+	TOP ("高姿态", "当符合NPC喜好时，强加的性癖经常会是高姿态的并移除低姿态的行为。", PresetColour.BASE_PURPLE_LIGHT),
+	TOP_HEAVY("高姿态+", "强加的性癖总会是高姿态的并移除低姿态的行为。", PresetColour.BASE_PURPLE);
 
 	private final String name;
 	private final String description;

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <breast>
 	<race>innoxia_pig</race>
 	
-	<transformationName><![CDATA[pig]]></transformationName>
+	<transformationName><![CDATA[猪]]></transformationName>
 	
 	<coveringType>innoxia_pig_fur</coveringType>
 	
@@ -19,18 +19,18 @@
 	<descriptorsFlat/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldPig(pig-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldPig(pig milk)].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldPig(猪般)][npc.nipplesFullDescription]，[npc.she]在哺乳期会分泌[style.boldPig(猪乳汁)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] pig-like, [npc.nipplesFullDescription].
-	]]></bodyDescription>
+		[npc.her]的每个[npc.breastSize][npc.breasts]上都长着[npc.nipplesPerBreast]猪般[npc.nipplesFullDescription]。
+]]></bodyDescription>
 	
 	<crotchBoobsTransformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldPig(pig-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldPig(pig milk)].
+		[npc.She]现在拥有[style.boldPig(猪般)][npc.crotchNipplesFullDescription]，[npc.she]在哺乳期内会分泌[style.boldPig(猪乳汁)]。
 	]]></crotchBoobsTransformationDescription>
 	
 	<crotchBoobsBodyDescription><![CDATA[
-		On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] pig-like, [npc.crotchNipplesFullDescription].
-	]]></crotchBoobsBodyDescription>
+		[npc.her]的每个[npc.crotchBoobSize][npc.crotchBoobs]上都长着[npc.crotchNipplesPerBreast]颗猪般[npc.crotchNipplesFullDescription]。
+]]></crotchBoobsBodyDescription>
 </breast>

@@ -49,8 +49,8 @@ public class Ziva extends NPC {
 	}
 	
 	public Ziva(boolean isImported) {
-		super(isImported, new NameTriplet("Ziva"), "Levine",
-				"Ms. Levine is the owner and operator of the 'Kissing Booth' in the Farmer's Market in Elis.",
+		super(isImported, new NameTriplet("齐瓦"), "莱文",
+				"莱文女士是伊利斯的农贸市场接吻棚的所有者和经营者。",
 				49, Month.OCTOBER, 2,
 				15,
 				Gender.F_V_B_FEMALE, Subspecies.getSubspeciesFromId("innoxia_goat_subspecies_goat"), RaceStage.GREATER,
@@ -58,7 +58,7 @@ public class Ziva extends NPC {
 				WorldType.getWorldTypeFromId("innoxia_fields_elis_market"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_market_kissing"),
 				true);
 		
-		this.setGenericName("haughty goat-girl");
+		this.setGenericName("傲慢的山羊女");
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);

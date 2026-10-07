@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- World map dialogue: -->
@@ -11,8 +11,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Evelyx's Dairy]]></responseTitle>
-				<responseTooltip><![CDATA[Head over to Evelyx's Dairy and [pc.step] inside...]]></responseTooltip>
+				<responseTitle><![CDATA[艾弗利克斯乳业]]></responseTitle>
+				<responseTooltip><![CDATA[走进艾弗利克斯乳业……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_exit</nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_dairyFarm, PLACE_TYPE_innoxia_fields_dairyFarm_exit)]
@@ -33,8 +33,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Exit]]></responseTitle>
-				<responseTooltip><![CDATA[Exit Evelyx's Dairy and head back out into the Foloi Fields.]]></responseTooltip>
+				<responseTitle><![CDATA[退出]]></responseTitle>
+				<responseTooltip><![CDATA[离开艾弗利克斯乳业，返回弗洛伊田野]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_dairyFarm"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -66,8 +66,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[You can't get through the door...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[你进不了门……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_corridor</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -105,8 +105,8 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Talk]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Dale if he's got some time to talk.]]></responseTooltip>
+				<responseTitle><![CDATA[交谈]]></responseTitle>
+				<responseTooltip><![CDATA[问问戴尔有没有空聊聊。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_reception_talk</nextDialogue>
 			</response>
 			<!-- Sex with cow: -->
@@ -114,8 +114,8 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Milker sex]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Dale about having sex with one of the farm's 'cows'.]]></responseTooltip>
+				<responseTitle><![CDATA[奶工性爱]]></responseTitle>
+				<responseTooltip><![CDATA[问问戴尔和农场的一只“牛”做爱的事。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_reception_milker_sex</nextDialogue>
 			</response>
 			<!-- Work/Promotions: -->
@@ -123,12 +123,12 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && !flags.hasFlag(FLAG_innoxia_evelyx_work_started)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
+				<responseTitle><![CDATA[工作]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!game.isLactationContentEnabled())
-						Lactation content needs to be enabled in order to work here as a cow!
+						需启用泌乳内容才能在这里工作！
 					#ELSE
-						Tell Dale that you'd like to know more about working here as a cow.
+						告诉戴尔你想了解更多关于当奶牛的事。
 					#ENDIF
 					]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -143,16 +143,16 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && flags.hasFlag(FLAG_innoxia_evelyx_work_started) && !flags.hasFlag(FLAG_innoxia_evelyx_work_promotion_meeting)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Promotion]]></responseTitle>
+				<responseTitle><![CDATA[晋升]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_work_promotion1) || flags.hasFlag(FLAG_innoxia_evelyx_work_promotion2) || flags.hasFlag(FLAG_innoxia_evelyx_work_promotion3))
 						#IF(!pc.hasClothingType(CT_innoxia_quest_dairy_ear_tag, true))
-							You need to be in possession of your ear tag in order to receive a promotion! You should track down who you gave the ear tag to and get it back from them...
+							你必须拥有耳标才能获得晋升！你得找找你把耳标给了谁，从他们那拿回来……
 						#ELSE
-							Tell Dale that you've qualified for a promotion, and would like to get your tag upgraded.
+							告诉戴尔你已经获得了晋升资格，希望升级你的标签。
 						#ENDIF
 					#ELSE
-						You haven't earned a promotion yet...
+						你还没有挣够资格……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -167,44 +167,44 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && flags.hasFlag(FLAG_innoxia_evelyx_work_started) && flags.hasFlag(FLAG_innoxia_evelyx_work_promotion_meeting) && !flags.hasFlag(FLAG_innoxia_evelyx_finished_no_bad_end)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Evelyx promotion]]></responseTitle>
+				<responseTitle><![CDATA[艾弗利克斯促销]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true) || !pc.isFeminine() || pc.getLegConfiguration()!=LEG_CONFIGURATION_QUADRUPEDAL || (pc.getRace()!=RACE_COW_MORPH && pc.isAbleToHaveRaceTransformed()))
-						To receive your final promotion, you require
+						想获得最终晋升，你需要
 						#IF(!pc.hasVagina())
-							 [style.colourBad(a vagina)]
+							[style.colourBad(小穴)]
 						#ELSE
-							 [style.colourGood(a vagina)]
+							[style.colourGood(小穴)]
 						#ENDIF
-						 and
+						和
 						#IF(!pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-							 [style.colourBad(to be able to access it)],
+							[style.colourBad(不被限制)]，并拥有
 						#ELSE
-							 [style.colourGood(to be able to access it)],
+							[style.colourGood(不被限制)]，并拥有
 						#ENDIF
 						#IF(!pc.isFeminine())
-							 [style.colourBad(a feminine appearance)],
+							[style.colourBad(女性化的外貌)],
 						#ELSE
-							 [style.colourGood(a feminine appearance)],
+							[style.colourGood(女性化的外貌)],
 						#ENDIF
-						 to have
+						并拥有
 						#IF(pc.getLegConfiguration()!=LEG_CONFIGURATION_QUADRUPEDAL)
-							 [style.colourBad(a quadrupedal lower body)],
+							[style.colourBad(四足的下半身)]，
 						#ELSE
-							 [style.colourGood(a quadrupedal lower body)],
+							[style.colourGood(四足的下半身)],
 						#ENDIF
-						 and to
+						并转化为
 						#IF(pc.getRace()!=RACE_COW_MORPH && pc.isAbleToHaveRaceTransformed())
-							 [style.colourBad(be a cow-girl or be unable to transform your race)].
+							[style.colourBad(牛女或无法被转化)]。
 						#ELSE
-							 [style.colourGood(be a cow-girl or be unable to transform your race)].
+							[style.colourGood(牛女或无法被转化)]。
 						#ENDIF
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_work_promotion_meeting_didnt_sign))
-						Evelyx told you that she didn't want to see you again today. If you wanted to meet her again, you'll have to wait until tomorrow...
+						艾弗利克斯说今天不想看见你了，你或许得明天再来……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_work_promotion_meeting_happened))
-						Tell Dale that you've changed your mind and want to meet Evelyx again regarding your special promotion.
+						告诉戴尔你改变主意了，想就你的特别晋升与艾弗利克斯再见一面。
 					#ELSE
-						Tell Dale that you're ready to meet Evelyx to receive your special promotion.
+						告诉戴尔你决定去见艾弗利克斯来获得你的特殊晋升。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -220,14 +220,14 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && pc.hasQuest(QUEST_LINE_ROMANCE_MONICA) && pc.isQuestProgressLessThan(QUEST_LINE_ROMANCE_MONICA, QUEST_ROMANCE_MONICA_3_THE_JOURNEY_HOME)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Monica's Milker]]></responseTitle>
+				<responseTitle><![CDATA[莫妮卡挤奶器]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_monica_meeting_refused))
-						As you've refused Evelyx's offer regarding Monica's breast pump today, she's unwilling to see you again until tomorrow...
+						你拒绝了艾弗利克斯关于莫妮卡的吸奶器的提议，她可能明天才愿意见你……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_monica_meeting))
-						Ask Dale if you can have another meeting with Evelyx regarding Monica's breast pump.
+						问问戴尔，你能否就莫妮卡的吸奶器问题再和艾弗利克斯见一面。
 					#ELSE
-						Ask Dale if he knows where Monica's personalised breast pump is, and whether you can have it.
+						问问戴尔是否知道莫妮卡的定制吸奶器在哪里，你能不能有一个。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -243,12 +243,12 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Evelyx]]></responseTitle>
+				<responseTitle><![CDATA[艾弗利克斯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_daily_fuck))
-						You've already had a special meeting with Evelyx today...
+						你今天已经和艾弗利克斯见过面了……
 					#ELSE
-						Tell Dale that you'd like to have a special meeting with Evelyx...
+						告诉戴尔你想和艾弗利克斯来一场特殊会面……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -265,18 +265,18 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && dale.getTotalTimesHadSex(pc)>0 && !pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
-				<responseTooltip><![CDATA[You can't access your mouth, so can't suck Dale's cock...]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[你的嘴被限制，无法嗦戴尔的牛子……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && dale.getTotalTimesHadSex(pc)>0 && pc.isAbleToAccessCoverableArea(CA_MOUTH, true) && flags.hasFlag(FLAG_innoxia_evelyx_reception_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
+				<responseTitle><![CDATA[口交]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You've already given Dale a blowjob under his desk today, and he's currently alert and ready to stop you from repeating your performance...
-					<br/>[style.italicsMinorBad(You should come back tomorrow if you want to give him another blowjob.)]
+					你今天已经在桌子下给戴尔口过了，他目前警惕你再来一次……
+					<br/>[style.italicsMinorBad(如果想给他口交得明天再来。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
@@ -284,8 +284,8 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && dale.getTotalTimesHadSex(pc)>0 && pc.isAbleToAccessCoverableArea(CA_MOUTH, true) && !flags.hasFlag(FLAG_innoxia_evelyx_reception_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
-				<responseTooltip><![CDATA[Get down under Dale's desk and give him a blowjob.]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[爬到戴尔桌子下面给他口交。]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -328,14 +328,14 @@
 						1
 					#ENDIF
 				]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(dale))
-						Tell Dale that you don't have any business here and [pc.step] back towards the exit.
+						告诉戴尔你没别的事了并走向出口。
 					#ELSEIF(dale.isPlayerKnowsName())
-						As Dale is currently not on duty, there's very little else for you to do but [pc.step] back into the waiting area.
+						戴尔现在不在，你只能回到等候区了。
 					#ELSE
-						As the receptionist is currently not on duty, there's very little else for you to do but [pc.step] back into the waiting area.
+						接待员现在不在，你只能回到等候区了。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_exit</nextDialogue>
@@ -353,8 +353,8 @@
 			[#flags.setFlag(FLAG_innoxia_evelyx_reception_sex, true)]
 		]]></preParsingEffects>
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had your fun, and so bring an end to the blowjob...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你爽够了，用口交结束……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">RECEPTION_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -391,12 +391,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Himself]]></responseTitle>
+				<responseTitle><![CDATA[他自己]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_dale_talk_himself))
-						You've already asked Dale to tell you a little more about himself today. If you wanted to repeat this conversation, you'll have to return tomorrow...
+						你今天已经问过戴尔他的情况了，如果想重复这段对话或许明天再来……
 					#ELSE
-						Ask Dale to tell you a little more about himself.
+						和戴尔聊聊他自己。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -417,12 +417,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
+				<responseTitle><![CDATA[工作]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_dale_talk_work))
-						You've already asked Dale about what kind of work he does here at the farm today. If you wanted to repeat this conversation, you'll have to return tomorrow...
+						你今天已经问过戴尔他在农场做什么工作了，如果想重复这段对话或许明天再来……
 					#ELSE
-						Ask Dale about what kind of work he does here at the farm.
+						问问戴尔他在农场做什么工作。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -444,12 +444,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Evelyx]]></responseTitle>
+				<responseTitle><![CDATA[艾弗利克斯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_dale_talk_evelyx))
-						You've already asked Dale what he thinks about his boss, Evelyx, today. If you wanted to repeat this conversation, you'll have to return tomorrow...
+						你今天已经问过戴尔关于他的老板艾弗利克斯了，如果想重复这段对话或许明天再来……
 					#ELSE
-						Ask Dale what he thinks about his boss, Evelyx.
+						向戴尔打听打听他的老板艾弗利克斯。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -467,12 +467,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Farm]]></responseTitle>
+				<responseTitle><![CDATA[农场]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_dale_talk_farm))
-						You've already asked Dale about the history of this farm today. If you wanted to repeat this conversation, you'll have to return tomorrow...
+						你今天已经问过戴尔农场的历史了，如果想重复这段对话或许明天再来……
 					#ELSE
-						Ask Dale about the history of this farm.
+						向戴尔打听打听农场的历史。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -490,12 +490,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Lunette]]></responseTitle>
+				<responseTitle><![CDATA[露内特]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_dale_talk_lunette))
-						You've already asked Dale what he knows about Lunette today. If you wanted to repeat this conversation, you'll have to return tomorrow...
+						你今天已经向戴尔问过露内特了，如果想重复这段对话或许明天再来……
 					#ELSE
-						Ask Dale what he knows about Lunette, and why she's spared this farm from destruction.
+						向戴尔打听打听露内特为什么能使农场幸免遇难。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -515,13 +515,13 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_dale_talk_work_revealed) && !flags.hasFlag(FLAG_innoxia_dale_talk_sleep)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[6]]></index>
-					<responseTitle><![CDATA[Sleep]]></responseTitle>
+					<responseTitle><![CDATA[睡觉]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(dale.getAffection(pc)<AFFECTION_POSITIVE_THREE_CARING.getMinimumValue())
-							You feel as though Dale doesn't quite like you enough to openly talk about how well he's sleeping...
-							<br/>[style.italicsBad(Requires Dale to have an affection of at least '[#AFFECTION_POSITIVE_THREE_CARING.getName()]' towards you.)]
+							你觉得戴尔对你的喜爱度还不足以让他与你讨论自己睡得有多好……
+							<br/>[style.italicsBad(要求戴尔对你的好感至少达到‘[#AFFECTION_POSITIVE_THREE_CARING.getName()]’。)]
 						#ELSE
-							You don't like the way Dale said he gets 'mostly' gets enough sleep, so ask him how many hours he's resting each night.
+							你不喜欢戴尔说他“基本上”睡眠充足，问问他每晚具体休息多少小时。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue stripContent="true"><![CDATA[
@@ -543,12 +543,12 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_dale_talk_sleep) && !dale.hasTrait(PERK_HEAVY_SLEEPER, true)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[6]]></index>
-					<responseTitle><![CDATA[Teddy bear]]></responseTitle>
+					<responseTitle><![CDATA[泰迪熊]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(pc.hasItemType(ITEM_GIFT_TEDDY_BEAR))
-							Give Dale a teddy bear to help him sleep at night.
+							送戴尔一个泰迪熊助眠。
 						#ELSE
-							You don't have a teddy bear, so can't give one to Dale...
+							你没有泰迪熊，无法送给戴尔……
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue stripContent="true"><![CDATA[
@@ -572,8 +572,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Thank Dale for his time and say that you've kept him from his work for long enough.]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[感谢戴尔，你已经耽误他很长时间了。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_reception_no_content</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'RECEPTION_TALK_END'))]
@@ -592,8 +592,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Trainee (#IF(pc.getMoney()>=10000)[style.moneyFormat(10000, span)]#ELSE[style.moneyFormatUncoloured(10000, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=10000) Hand over ten thousand flames and have sex with one of the farm's trainee milkers. #ELSE You can't afford to have sex with one of the farm's trainee milkers... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[学徒(#IF(pc.getMoney()>=10000)[style.moneyFormat(10000, span)]#ELSE[style.moneyFormatUncoloured(10000, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=10000) 交一万火币，和一个学徒奶工做爱。#ELSE 你付不起和一个学徒奶工做爱…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=10000)innoxia_places_fields_dairyFarm_milker_sex_start#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -612,8 +612,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Heifer (#IF(pc.getMoney()>=5000)[style.moneyFormat(5000, span)]#ELSE[style.moneyFormatUncoloured(5000, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=5000) Hand over five thousand flames and have sex with one of the farm's heifers. #ELSE You can't afford to have sex with one of the farm's heifers... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[小母牛(#IF(pc.getMoney()>=5000)[style.moneyFormat(5000, span)]#ELSE[style.moneyFormatUncoloured(5000, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=5000) 交五千火币，和农场的小母牛做爱。#ELSE 你付不起火币和小母牛做爱…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=5000)innoxia_places_fields_dairyFarm_milker_sex_start#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -632,8 +632,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Cow (#IF(pc.getMoney()>=2500)[style.moneyFormat(2500, span)]#ELSE[style.moneyFormatUncoloured(2500, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=2500) Hand over two thousand five hundred flames and have sex with one of the farm's cows. #ELSE You can't afford to have sex with one of the farm's cows... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[奶牛(#IF(pc.getMoney()>=2500)[style.moneyFormat(2500, span)]#ELSE[style.moneyFormatUncoloured(2500, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=2500) 交两千五火币，和农场的奶牛做爱。#ELSE 你付不起钱和奶牛做爱……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=2500)innoxia_places_fields_dairyFarm_milker_sex_cow_choices#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -647,8 +647,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Dale that you've changed your mind and don't want to have sex with a cow-girl.]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[告诉戴尔你改变主意了，不想和牛女做爱。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_reception_no_content</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'RECEPTION_MILKER_SEX_BACK'))]
@@ -666,8 +666,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Get started]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] up behind the [cow.name] and prepare to fuck her...]]></responseTooltip>
+				<responseTitle><![CDATA[开始]]></responseTitle>
+				<responseTooltip><![CDATA[站到[cow.name]准备操她……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fields_dairyFarm_milking_stall]]></id>
@@ -696,24 +696,24 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<responseTitle><![CDATA[
-					Refund
+					退钱
 					#IF(flags.getSavedLong('evelyx_work_level')==0)
-						 ([style.moneyFormat(9500, span)])
+						([style.moneyFormat(9500, span)])
 					#ELSEIF(flags.getSavedLong('evelyx_work_level')==1)
-						 ([style.moneyFormat(4500, span)])
+						([style.moneyFormat(4500, span)])
 					#ELSE
-						 ([style.moneyFormat(2000, span)])
+						([style.moneyFormat(2000, span)])
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Dale that you've changed your mind and don't want to have sex with this cow after all.
-					<br/>[style.italicsMinorGood(You will receive a refund of)]
+					告诉戴尔你改变主意了，不想和这只奶牛做爱。
+					<br/>[style.italicsMinorGood(你会得到退款)]
 					#IF(flags.getSavedLong('evelyx_work_level')==0)
-						 nine thousand five hundred flames!
+						9500火币！
 					#ELSEIF(flags.getSavedLong('evelyx_work_level')==1)
-						 four thousand five hundred flames!
+						4500火币！
 					#ELSE
-						 two thousand flames!
+						2000火币！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_reception_no_content</nextDialogue>
@@ -742,8 +742,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Find cow]]></responseTitle>
-				<responseTooltip><![CDATA[Find a cow which matches your preferences...]]></responseTooltip>
+				<responseTitle><![CDATA[找到母牛]]></responseTitle>
+				<responseTooltip><![CDATA[找个合你口味的奶牛……]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_milker_sex_start</nextDialogue>
 				<effects><![CDATA[
 					[#game.addNPC('EvelyxMilker', 'cow')]
@@ -758,17 +758,17 @@
 				<index><![CDATA[2]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_furry))
-						Stage: [style.colourTfGreater(Greater)]
+						Stage: [style.colourTfGreater(纯兽)]
 					#ELSE
-						Stage: [style.colourTfPartial(Partial)]
+						Stage: [style.colourTfPartial(似兽)]
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide whether to search for a partial or greater cow-girl.
+					决定找个似牛女或是纯牛女。
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_furry))
-						<br/>[style.colourTfGreater(You are searching for a greater cow-girl, who will be fully furry.)]
+						<br/>[style.colourTfGreater(你要找一个纯牛女，她会是完全福瑞。)]
 					#ELSE
-						<br/>[style.italicsTfPartial(You are searching for a partial cow-girl, who will be mostly human apart from her ears, horns, hair, tail, and eyes.)]
+						<br/>[style.italicsTfPartial(你要找一个似牛女，她除了耳朵、角、头发、尾巴和眼部以外都是人类。)]
 					#ENDIF
 				]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[0]]></secondsPassed>
@@ -787,17 +787,17 @@
 				<index><![CDATA[3]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_taur))
-						Lower body: [style.colourTfGreater(Taur)]
+						下半身：[style.colourTfGreater(半兽身人)]
 					#ELSE
-						Lower body: [style.colourTfHuman(Biped)]
+						下半身：[style.colourTfHuman(两足)]
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide whether to search for a normal, bipedal cow-girl, or a taur.
+					决定找个普通的双足行走的牛女或是半兽身人。
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_taur))
-						<br/>[style.colourTfGreater(You are searching for a tauric cow-girl, who will have the lower body of a feral cow.)]
+						<br/>[style.colourTfGreater(你要找一个半兽身人牛女，她的下半身回事兽态的牛。)]
 					#ELSE
-						<br/>[style.colourTfHuman(You are searching for a normal, bipedal cow-girl.)]
+						<br/>[style.colourTfHuman(你要找一个普通的双足行走的牛女。)]
 					#ENDIF
 				]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[0]]></secondsPassed>
@@ -816,17 +816,17 @@
 				<index><![CDATA[4]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_pregnant))
-						Belly: [style.colourSexDom(Pregnant)]
+						腹部：[style.colourSexDom(怀孕)]
 					#ELSE
-						Belly: [style.colourSex(Not pregnant)]
+						腹部：[style.colourSex(没怀孕)]
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide whether to search for a pregnant or non-pregnant cow-girl.
+					决定找个怀孕的牛女或是没怀孕的牛女。
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_pregnant))
-						<br/>[style.colourSexDom(You are searching for a visibly-pregnant cow-girl.)]
+						<br/>[style.colourSexDom(你要找一个显怀的牛女。)]
 					#ELSE
-						<br/>[style.colourSex(You are searching for a non-pregnant cow-girl.)]
+						<br/>[style.colourSex(你要找一个未孕的牛女。)]
 					#ENDIF
 				]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[0]]></secondsPassed>
@@ -845,17 +845,17 @@
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_high_mileage))
-						Mileage: [style.colourMinorBad(High)]
+						使用“里程”：[style.colourMinorBad(高)]
 					#ELSE
-						Mileage: [style.colourMinorGood(Normal)]
+						使用“里程”：[style.colourMinorGood(普通)]
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide whether to search for a cow-girl whose holes look to be relatively tight or one that's been well stretched-out.
+					决定找个比较“紧”的牛女或是比较“松”的牛女。
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_cow_search_high_mileage))
-						<br/>[style.colourMinorBad(You are searching for a cow-girl with loose, well-fucked holes.)]
+						<br/>[style.colourMinorBad(你要找一个“松”的、很好操的牛女。)]
 					#ELSE
-						<br/>[style.colourMinorGood(You are searching for a cow-girl with relatively tight holes.)]
+						<br/>[style.colourMinorGood(你要找一个很“紧”的牛女)]
 					#ENDIF
 				]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[0]]></secondsPassed>
@@ -873,8 +873,8 @@
 	
 	<scene id="milker_after_sex">
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough for now...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你觉得足够了……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">RECEPTION_MILKER_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -883,8 +883,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Reception]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Dale back to his desk.]]></responseTooltip>
+				<responseTitle><![CDATA[接待处]]></responseTitle>
+				<responseTooltip><![CDATA[跟戴尔回到他的办公桌。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_reception_no_content]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'RECEPTION_MILKER_AFTER_SEX_END'))]
@@ -905,8 +905,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Accept]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Dale that you'll work under those conditions and sign the contract.]]></responseTooltip>
+				<responseTitle><![CDATA[接受]]></responseTitle>
+				<responseTooltip><![CDATA[告诉戴尔你同意这些条件并在合同上签字。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_reception_no_content</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'RECEPTION_MILKER_WORK_ACCEPT'))]
@@ -920,8 +920,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Dale that you're not interested in working under those conditions.]]></responseTooltip>
+				<responseTitle><![CDATA[回绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉戴尔你对在这些条件下工作没兴趣。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_reception_no_content</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'RECEPTION_MILKER_WORK_DECLINE'))]
@@ -932,8 +932,8 @@
 				<availabilityConditional><![CDATA[[#!pc.isPiercedEar()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Accept (pierced)]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Dale that you'll work under those conditions and sign the contract, and take him up on his offer of having your ear pierced.]]></responseTooltip>
+				<responseTitle><![CDATA[接受(被穿孔)]]></responseTitle>
+				<responseTooltip><![CDATA[告诉戴尔你同意这些条件并在合同上签字，同时接受他为你打耳洞的提议。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_reception_no_content</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'RECEPTION_MILKER_WORK_ACCEPT'))]
@@ -967,8 +967,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Thank Dale and decide what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[感谢戴尔，决定下一步该怎么做……]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_reception_no_content_continue_dialogue</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'RECEPTION_MILKER_WORK_PROMOTION_END'))]
@@ -995,8 +995,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Enter Evelyx's office.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[进入艾弗利克斯的办公室。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_work_promotion_evelyx_enter</nextDialogue>
 			</response>
 		</responses>
@@ -1011,8 +1011,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Evelyx commands and present her with your pussy while she reads over your performance report.]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[听从艾弗利克斯的命令，在她读你业绩报告的同时向她展示你的小穴。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_work_promotion_evelyx_contract</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'WORK_PROMOTION_EVELYX_ENTER_OBEY'))]
@@ -1021,8 +1021,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to humiliate yourself in front of Evelyx and remain still as she reads over your performance report.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝在艾弗利克斯面前自取其辱，在她阅读你的业绩报告时保持安静。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_work_promotion_evelyx_contract</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'WORK_PROMOTION_EVELYX_ENTER_REFUSE'))]
@@ -1044,8 +1044,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Don't sign]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to sign the contract, which will lead into being thrown out of Evelyx's office.]]></responseTooltip>
+				<responseTitle><![CDATA[不签]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝签合同，这会导致你被赶出艾弗利克斯的办公室。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_work_promotion_evelyx_contract_refused</nextDialogue>
 				<effects><![CDATA[
 					[#evelyx.transformCock(false)]
@@ -1061,14 +1061,14 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour>GENERIC_BAD_END</colour>
-				<responseTitle><![CDATA[Sign]]></responseTitle>
+				<responseTitle><![CDATA[签字]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Sign yourself into slavery, thereby allowing Evelyx to take ownership of you and do with you as she pleases...
-					<br/>[style.boldBadEnd(BAD END:)] There's no way out of becoming Evelyx's slave!
+					将自己签为奴隶，从而允许艾弗利克斯拥有你，并随心所欲地处置你……
+					<br/>[style.boldBadEnd(坏结局：)]成为艾弗利克斯的奴隶，就再也没有未来了！
 				]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_work_promotion_evelyx_contract_signed</nextDialogue>
 				<effects><![CDATA[
-					[#game.setBadEnd("Evelyx's Slave")]
+					[#game.setBadEnd("艾弗利克斯的奴隶")]
 					[#game.appendToTextEndStringBuilder(evelyx.stripPlayer())]
 					[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'WORK_PROMOTION_EVELYX_CONTRACT_SIGNED_END'))]
 				]]></effects>
@@ -1078,9 +1078,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Sign]]></responseTitle>
+				<responseTitle><![CDATA[签字]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Sign the contract, allowing you to get fucked by a demonic centauress in exchange for a thousand flames once per day. This will also lead into Evelyx fucking your pussy...
+					签署合同，允许自己被恶魔半人马操，日薪一千火币。这也会导致艾弗利克斯操你的小穴……
 				]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_work_promotion_evelyx_contract_signed</nextDialogue>
 				<effects><![CDATA[
@@ -1100,8 +1100,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[At least you weren't fired...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[至少你没被解雇……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_dairyFarm_corridor"/>
 				<effects><![CDATA[
 					[#evelyx.transformCock(false)]
@@ -1121,8 +1121,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Present yourself to Evelyx so that she can hilt her massive cock deep into your pussy...]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[将你自己献给艾弗利克斯，让她用巨大的肉棒深深插入你的小穴……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fields_dairyFarm_evelyx_office_doggy]]></id>
@@ -1157,8 +1157,8 @@
 	
 	<scene id="work_promotion_evelyx_after_sex">
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having had her fun, Evelyx brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[艾弗利克斯爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">WORK_PROMOTION_EVELYX_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1169,8 +1169,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_evelyx_finished_no_bad_end)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow your new Mistress as she leads you to the slave barn...]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟着你的新主人，她会带你到奴隶谷仓……]]></responseTooltip>
 				<nextDialogue>innoxia_badEnds_evelyx_start</nextDialogue>
 				<effects><![CDATA[
 					[#evelyx.transformCock(false)]
@@ -1185,8 +1185,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_evelyx_finished_no_bad_end)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Evelyx says and leave her office.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[按艾弗利克斯说的做，离开她的办公室。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_dairyFarm_corridor"/>
 				<effects><![CDATA[
 					[#evelyx.transformCock(false)]
@@ -1209,12 +1209,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Meeting]]></responseTitle>
+				<responseTitle><![CDATA[会面]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_monica_meeting) && pc.hasTraitActivated(PERK_CHUUNI))
-						Proceed directly to Evelyx's office, leaving Dale to catch up with you...
+						直接去艾弗利克斯的办公室，让戴尔来追你……
 					#ELSE
-						Follow Dale as he leads you to Evelyx's office for your meeting with her.
+						跟随戴尔来到艾弗利克斯的办公室见她。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1241,8 +1241,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explain]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Evelyx why you want that breast pump.]]></responseTooltip>
+				<responseTitle><![CDATA[解释]]></responseTitle>
+				<responseTooltip><![CDATA[告诉艾弗利克斯为什么你想要那个吸奶器。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_intro</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.setQuestProgress(QUEST_LINE_ROMANCE_MONICA, QUEST_ROMANCE_MONICA_2_UNREASONABLE_DEMAND))]
@@ -1277,8 +1277,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Pay (#IF(pc.getMoney()>=50000)[style.moneyFormat(50000, span)]#ELSE[style.moneyFormatUncoloured(50000, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50000) Give Evelyx the fifty thousand flames which she's demanding in return for Monica's breast pump. #ELSE You can't afford to pay fifty thousand flames for Monica's breast pump... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[支付(#IF(pc.getMoney()>=50000)[style.moneyFormat(50000, span)]#ELSE[style.moneyFormatUncoloured(50000, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50000) 给艾弗利克斯五万火币让她代购莫妮卡的吸奶器。#ELSE 你没有五万火币来买莫妮卡的吸奶器……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=50000)innoxia_places_fields_dairyFarm_monica_quest_meeting_paid#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-50000))]
@@ -1290,14 +1290,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wear ring]]></responseTitle>
+				<responseTitle><![CDATA[戴戒指]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToEquip(evelyx.getOralRing(), true, pc))
-						As you're unable to equip Evelyx's special ring, you're unable to wear it in exchange for receiving Monica's breast pump...
+						你无法装备艾弗利克斯的特殊环，无法佩戴它来换取莫妮卡的吸奶器……
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						As you're unable gain access to your mouth, you're unable to wear Evelyx's special ring in exchange for receiving Monica's breast pump...
+						你的嘴被限制，无法佩戴艾弗利克斯的特殊环来换取莫妮卡的吸奶器……
 					#ELSE
-						Equip Evelyx's special ring and answer her questions in exchange for receiving Monica's breast pump...
+						装备艾弗利克斯的特殊环并回答她的问题来换取莫妮卡的吸奶器……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1324,13 +1324,13 @@
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_ORAL_GIVING]]></fetish>
 				</requiredFetishes>
-				<responseTitle><![CDATA[Seduce her]]></responseTitle>
+				<responseTitle><![CDATA[诱惑她]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						As you're unable to gain access to your mouth, you're unable to seduce Evelyx...
+						你的嘴被限制，无法勾引艾弗利克斯……
 					#ELSE
-						Tell Evelyx that you can offer her something far more valuable than flames...
-						<br/>[style.italicsSex(This will lead into performing cunnilingus on Evelyx.)]
+						告诉艾弗利克斯你能提供一些比火币更有价值的东西……
+						<br/>[style.italicsSex(这会让你给艾弗利克斯舔阴。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1348,8 +1348,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Evelyx that you're not interested in either of her deals and leave her office...]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉艾弗利克斯你对她的交易不感兴趣，离开她的办公室……]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_monica_quest_meeting_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'MONICA_QUEST_MEETING_INTRO_LEAVE'))]
@@ -1368,8 +1368,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Dale takes you back to the reception...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[戴尔带你回到接待处……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_end</nextDialogue>
 			</response>
 		</responses>
@@ -1384,8 +1384,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Agree]]></responseTitle>
-				<responseTooltip><![CDATA[Agree with Evelyx and say that you couldn't imagine anything better than performing cunnilingus on her...]]></responseTooltip>
+				<responseTitle><![CDATA[赞同]]></responseTitle>
+				<responseTooltip><![CDATA[同意艾弗利克斯并告诉她你无法想象还有什么比给她舔阴更好的事了……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_ring_next</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'MONICA_QUEST_MEETING_RING_AGREE'))]
@@ -1394,8 +1394,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Disagree]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Evelyx that you could think of better things to be doing than eating her out...]]></responseTooltip>
+				<responseTitle><![CDATA[不同意]]></responseTitle>
+				<responseTooltip><![CDATA[告诉艾弗利克斯，你可以来点比口她更好的事情……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_ring_next</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'MONICA_QUEST_MEETING_RING_DISAGREE'))]
@@ -1419,8 +1419,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Flatter]]></responseTitle>
-				<responseTooltip><![CDATA[Flatter Evelyx by telling her that her pussy is the prettiest you've ever seen...]]></responseTooltip>
+				<responseTitle><![CDATA[讨好]]></responseTitle>
+				<responseTooltip><![CDATA[奉承艾弗利克斯，告诉她这是你见过最漂亮的小穴……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_ring_final</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'MONICA_QUEST_MEETING_RING_NEXT_FLATTER'))]
@@ -1429,8 +1429,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Unimpressed]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Evelyx that you've seen better pussies before...]]></responseTooltip>
+				<responseTitle><![CDATA[印象平平]]></responseTitle>
+				<responseTooltip><![CDATA[告诉艾弗利克斯你见过更好的小穴……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_ring_final</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'MONICA_QUEST_MEETING_RING_NEXT_UNIMPRESSED'))]
@@ -1451,8 +1451,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Obey Evelyx and lick her fingers clean, before dropping down and getting ready to eat her out...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[顺从艾弗利克斯，舔干净她的手指，然后俯下身子准备给她口……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_ring_final_pussy_tf</nextDialogue>
 				<effects><![CDATA[
 				]]></effects>
@@ -1460,8 +1460,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse Evelyx's offer and have Dale take you back to the reception...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝艾弗利克斯的offer，让戴尔带你回到接待处……]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_dairyFarm_monica_quest_meeting_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'MONICA_QUEST_MEETING_RING_REFUSE'))]
@@ -1482,8 +1482,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Eat her out]]></responseTitle>
-				<responseTooltip><![CDATA[Get started and perform cunnilingus on Evelyx...]]></responseTooltip>
+				<responseTitle><![CDATA[给她口]]></responseTitle>
+				<responseTooltip><![CDATA[开始给艾弗利克斯舔阴……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -1520,16 +1520,16 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_evelyx_monica_ring_questions_failed)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Loosen up]]></responseTitle>
-				<responseTooltip><![CDATA[As you didn't give Evelyx satisfactory answers, you're not permitted to ask her to transform her pussy!]]></responseTooltip>
+				<responseTitle><![CDATA[稍微松动]]></responseTitle>
+				<responseTooltip><![CDATA[你没有给艾弗利克斯满意的答复，不能要求她转化阴部小穴！]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_evelyx_monica_ring_questions_failed)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Loosen up]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Evelyx to loosen her pussy up a little, before getting started on eating her out...]]></responseTooltip>
+				<responseTitle><![CDATA[稍微松动]]></responseTitle>
+				<responseTooltip><![CDATA[在开始给她口之前，先让艾弗利克斯把她的小穴弄松一点……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -1568,16 +1568,16 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_evelyx_monica_ring_questions_failed) && game.isGapeContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Gaping mess]]></responseTitle>
-				<responseTooltip><![CDATA[As you didn't give Evelyx satisfactory answers, you're not permitted to ask her to transform her pussy!]]></responseTooltip>
+				<responseTitle><![CDATA[松垮不堪]]></responseTitle>
+				<responseTooltip><![CDATA[你没有给艾弗利克斯满意的答复，不能要求她转化小穴！]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_evelyx_monica_ring_questions_failed) && game.isGapeContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Gaping mess]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Evelyx to transform her tight, pretty pussy into a gaping, sloppy mess, before getting started on eating her out...]]></responseTooltip>
+				<responseTitle><![CDATA[松垮不堪]]></responseTitle>
+				<responseTooltip><![CDATA[在添她的小穴之前，让艾弗利克斯把她紧致美丽的小穴变得松垮洞开……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -1624,8 +1624,8 @@
 			[#flags.setFlag(FLAG_innoxia_evelyx_daily_fuck_unlocked, true)]
 			[#flags.setFlag(FLAG_innoxia_evelyx_daily_fuck, true)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Evelyx is satisfied. For now...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[艾弗利克斯很满意，现在……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">MONICA_QUEST_MEETING_RING_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1634,8 +1634,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Dale takes you back to the reception...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[戴尔带你回到接待处……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_end</nextDialogue>
 			</response>
 		</responses>
@@ -1653,8 +1653,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Cunnilingus]]></responseTitle>
-				<responseTooltip><![CDATA[Kneel down before Evelyx and eat her out...]]></responseTooltip>
+				<responseTitle><![CDATA[舔阴]]></responseTitle>
+				<responseTooltip><![CDATA[在艾弗利克斯前面跪下，给她口……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -1691,12 +1691,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
+				<responseTitle><![CDATA[操她]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You can't fuck Evelyx's pussy if you don't have a penis...
+						你没有鸡巴，没法操艾弗利克斯的小穴，这是无鸡之谈……
 					#ELSE
-						You can't fuck Evelyx if you are unable to access your cock...
+						你的鸡巴被限制，没法操艾弗利克斯……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1705,8 +1705,8 @@
 				<availabilityConditional><![CDATA[[#pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
-				<responseTooltip><![CDATA[Convince Evelyx to let you fuck her pussy instead...]]></responseTooltip>
+				<responseTitle><![CDATA[操她]]></responseTitle>
+				<responseTooltip><![CDATA[说服艾弗利克斯让你操她的小穴……]]></responseTooltip>
 				<requiredPerks>
 					<perk><![CDATA[CONVINCING_REQUESTS]]></perk>
 				</requiredPerks>
@@ -1750,8 +1750,8 @@
 			[#flags.setFlag(FLAG_innoxia_evelyx_daily_fuck_unlocked, true)]
 			[#flags.setFlag(FLAG_innoxia_evelyx_daily_fuck, true)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Evelyx is satisfied and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[艾弗利克斯很满足，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">MONICA_QUEST_MEETING_SEDUCE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1760,8 +1760,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Dale takes you back to the reception...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[戴尔带你回到接待处……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_monica_quest_meeting_end</nextDialogue>
 			</response>
 		</responses>
@@ -1793,8 +1793,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait for Evelyx to be ready to see you...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等艾弗利克斯准备好见你……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_evelyx_sex_meeting_office</nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_dairyFarm, PLACE_TYPE_innoxia_fields_dairyFarm_manager)]
@@ -1812,8 +1812,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Stay tight]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Evelyx that her pussy is perfect as it is.]]></responseTooltip>
+				<responseTitle><![CDATA[保持紧致]]></responseTitle>
+				<responseTooltip><![CDATA[告诉艾弗利克斯她的小穴太棒了。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_evelyx_sex_meeting_pussy_tf</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'EVELYX_SEX_MEETING_TF_NONE'))]
@@ -1823,8 +1823,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Loosen up]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Evelyx to loosen her pussy up a little.]]></responseTooltip>
+				<responseTitle><![CDATA[稍微松动]]></responseTitle>
+				<responseTooltip><![CDATA[让艾弗利克斯把她的小穴弄松点。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_evelyx_sex_meeting_pussy_tf</nextDialogue>
 				<effects><![CDATA[
 					[#evelyx.loosenPussy()]
@@ -1836,8 +1836,8 @@
 				<availabilityConditional><![CDATA[[#game.isGapeContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Gaping mess]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Evelyx to transform her tight, pretty pussy into a gaping, sloppy mess.]]></responseTooltip>
+				<responseTitle><![CDATA[松垮不堪]]></responseTitle>
+				<responseTooltip><![CDATA[让艾弗利克斯把她紧致美丽的小穴变得松垮洞开……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_evelyx_sex_meeting_pussy_tf</nextDialogue>
 				<effects><![CDATA[
 					[#evelyx.gapingMessPussy()]
@@ -1857,8 +1857,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Cunnilingus]]></responseTitle>
-				<responseTooltip><![CDATA[Kneel down before Evelyx and eat her out...]]></responseTooltip>
+				<responseTitle><![CDATA[舔阴]]></responseTitle>
+				<responseTooltip><![CDATA[在艾弗利克斯前面跪下，给她口……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -1895,12 +1895,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
+				<responseTitle><![CDATA[操她]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You can't fuck Evelyx's pussy if you don't have a penis...
+						你没有鸡巴，没法操艾弗利克斯的小穴，这是无鸡之谈……
 					#ELSE
-						You can't fuck Evelyx if you are unable to access your cock...
+						你的鸡巴被限制，没法操艾弗利克斯……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1909,8 +1909,8 @@
 				<availabilityConditional><![CDATA[[#pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
-				<responseTooltip><![CDATA[Convince Evelyx to let you fuck her pussy...]]></responseTooltip>
+				<responseTitle><![CDATA[操她]]></responseTitle>
+				<responseTooltip><![CDATA[说服艾弗利克斯让你操她的小穴……]]></responseTooltip>
 				<requiredPerks>
 					<perk><![CDATA[CONVINCING_REQUESTS]]></perk>
 				</requiredPerks>
@@ -1953,8 +1953,8 @@
 			[#dale.setLocation(pc)]
 			[#flags.setFlag(FLAG_innoxia_evelyx_daily_fuck, true)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Evelyx is satisfied and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[艾弗利克斯很满足，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">EVELYX_SEX_MEETING_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1963,8 +1963,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Dale takes you back to the reception...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[戴尔带你回到接待处……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_evelyx_sex_meeting_end</nextDialogue>
 			</response>
 		</responses>
@@ -1996,8 +1996,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Rest (1 hour)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for an hour. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息 (1小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息一小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[60]]></secondsPassed>
 				<effects><![CDATA[
@@ -2011,8 +2011,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Rest (4 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for four hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(4小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息四小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[240]]></secondsPassed>
 				<effects><![CDATA[
@@ -2026,8 +2026,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Rest (8 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for eight hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(8小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息八小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[480]]></secondsPassed>
 				<effects><![CDATA[
@@ -2041,8 +2041,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rest (12 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for twelve hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(12小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息十二小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[720]]></secondsPassed>
 				<effects><![CDATA[
@@ -2057,28 +2057,28 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[
-					Rest until
+					休息直到
 					#IF(game.isDayTime())
-						 Sunset
+						日落
 					#ELSE
-						 Sunrise
+						日出
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Rest for
+					五分钟后，休息
 					#IF(game.getMinutesUntilNextMorningOrEvening() >= 60)
-						 [#~~(game.getMinutesUntilNextMorningOrEvening()/60)] hours
+						[#~~(game.getMinutesUntilNextMorningOrEvening()/60)]时
 					#ENDIF
 					#IF(game.getMinutesUntilNextMorningOrEvening() % 60 != 0)
-						 [#~~(game.getMinutesUntilNextMorningOrEvening()%60)] minutes
+						[#~~(game.getMinutesUntilNextMorningOrEvening()%60)]分
 					#ENDIF
-					 until five minutes past
+					直到
 					#IF(game.isDayTime())
-						 sunset.
+						日落。
 					#ELSE
-						 sunrise.
+						天明。
 					#ENDIF
-					 As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.
+					不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]和[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
@@ -2096,11 +2096,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Quick shower]]></responseTitle>
+				<responseTitle><![CDATA[快速淋浴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the dormitory's wetroom to take a quick shower.
-					<br/>[style.italicsGood(Cleans <b>a maximum of [style.fluid(500)]</b> of fluids from all orifices.)]
-					<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]
+					用宿舍的浴室洗个快澡。
+					<br/>[style.italicsGood(最多能从所有腔穴种清理<b>[style.fluid(500)]</b>液体。)]
+					<br/>[style.italicsGood(这<b>只能</b>清理你正在装备的衣物。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
@@ -2112,11 +2112,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Thorough shower]]></responseTitle>
+				<responseTitle><![CDATA[全身冲淋]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the dormitory's wetroom to take a shower, and spend some time thoroughly cleaning yourself.
-					<br/>[style.italicsExcellent(This will clean <b>all</b> fluids out of all your orifices.)]
-					<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]
+					用宿舍的浴室好好洗个澡，花些时间彻底清理自己。
+					<br/>[style.italicsExcellent(这会清理你腔穴里的<b>所有</b>液体。)]
+					<br/>[style.italicsGood(这<b>只能</b>清理你正在装备的衣物。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
@@ -2130,8 +2130,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Set alarm]]></responseTitle>
-				<responseTooltip><![CDATA[Set the alarm on your phone, so that you can wake at a specific time.]]></responseTooltip>
+				<responseTitle><![CDATA[调闹钟]]></responseTitle>
+				<responseTooltip><![CDATA[在手机上设置闹钟，这样你就能在特定时间醒来。]]></responseTooltip>
 				<nextDialogue stripContent="false"><![CDATA[ROOM_SET_ALARM]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[[#game.saveDialogueNode()]]]></effects>
@@ -2141,9 +2141,9 @@
 				<index><![CDATA[10]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.getSavedLong('player_phone_alarm') < 0)
-						Rest until alarm (unset)
+						睡到闹铃响起(未设置)
 					#ELSE
-						Rest until alarm ([#
+						睡到闹铃响起 ([#
 							var alarm = flags.getSavedLong('player_phone_alarm');
 							var alarmObj = game.getCustomTime(alarm/60, alarm%60, 0);
 							game.getDisplayTime(alarmObj)
@@ -2152,20 +2152,20 @@
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getSavedLong('player_phone_alarm') < 0)
-						[style.colourBad(Your alarm is unset!)]
+						[style.colourBad(未设定闹铃！)]
 					#ELSE
-						Rest for
+						休息
 						#IF(game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))==0)
-							 24 hours,
+							24小时，
 						#ELSE
 							#IF((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) >= 60)
-								 [#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) / 60)] hours,
+								[#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) / 60)]小时，
 							#ENDIF
 							#IF((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60 != 0)
-								 [#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60)] minutes,
+								[#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60)]分钟，
 							#ENDIF
 						#ENDIF
-						 until your alarm goes off. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.
+						直到闹钟响起。除了恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能使你获得“充分休息”效果。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -2200,8 +2200,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[11]]></index>
-				<responseTitle><![CDATA[Vending Machine]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] up to the vending machine and take a closer look at what's on offer.]]></responseTooltip>
+				<responseTitle><![CDATA[自动贩卖机]]></responseTitle>
+				<responseTooltip><![CDATA[走到自动售货机前，仔细看看有什么。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_dormitory_vending_machine]]></nextDialogue>
 			</response>
 			
@@ -2210,12 +2210,12 @@
 				<availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(dale) && dale.getTotalTimesHadSex(pc)>0]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[12]]></index>
-				<responseTitle><![CDATA[Dale]]></responseTitle>
+				<responseTitle><![CDATA[戴尔]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_dorm_sex))
-						At this time of night, you know that Dale is sleeping in the worker's dormitory. You've already worn him out enough for one night, however, and so should leave him to sleep...
+						这个时候戴尔正在员工宿舍睡觉。不过，你已经让他疲惫了一个晚上，所以应该让他自己好好睡……
 					#ELSE
-						At this time of night, Dale must be sleeping in the worker's dormitory. You could sneak in there and see if you could find him...
+						这个时候戴尔正在员工宿舍睡觉。你可以溜进去看看能不能找到他……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -2241,12 +2241,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Water (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) Purchase a bottle of water. #ELSE You can't afford a bottle of water... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[水(#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20)买瓶水。#ELSE你没钱买水……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=20)innoxia_places_fields_dairyFarm_dormitory_vending_machine#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(20)]', true)]
-					[#game.addSpecialParsingString('a bottle of vanilla water', false)]
+					[#game.addSpecialParsingString('一瓶香草水', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_DRINK'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-20))]
 					[#game.appendToTextStartStringBuilder(pc.addItem(itemGen.generateItem('innoxia_race_human_vanilla_water')))]
@@ -2255,12 +2255,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Bubble milk (#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30) Purchase a bottle of bubble milk. #ELSE You can't afford a bottle of bubble milk... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[泡泡牛奶(#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30)买瓶泡泡牛奶。#ELSE你买不起泡泡牛奶……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=30)innoxia_places_fields_dairyFarm_dormitory_vending_machine#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(30)]', true)]
-					[#game.addSpecialParsingString('a bottle of bubble milk', false)]
+					[#game.addSpecialParsingString('一瓶泡泡牛奶', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_DRINK'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-30))]
 					[#game.appendToTextStartStringBuilder(pc.addItem(itemGen.generateItem('innoxia_race_cow_bubble_milk')))]
@@ -2269,12 +2269,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Bread roll (#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30) Purchase an individually-wrapped bread roll. #ELSE You can't afford a bread roll... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[小面包(#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30)买个独立包装小面包。#ELSE你买不起小面包……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=30)innoxia_places_fields_dairyFarm_dormitory_vending_machine#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(30)]', true)]
-					[#game.addSpecialParsingString('an individually-wrapped bread roll', false)]
+					[#game.addSpecialParsingString('一块独立包装小面包', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-30))]
 					[#game.appendToTextStartStringBuilder(pc.addItem(itemGen.generateItem('innoxia_race_human_bread_roll')))]
@@ -2283,12 +2283,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Bubble cream (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Purchase a pot of bubble cream. #ELSE You can't afford a pot of bubble cream... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[泡泡奶油(#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40)买一壶泡泡奶油。#ELSE你买不起泡泡奶油……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_dairyFarm_dormitory_vending_machine#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(40)]', true)]
-					[#game.addSpecialParsingString('a pot of bubble cream', false)]
+					[#game.addSpecialParsingString('一罐泡泡奶油', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-40))]
 					[#game.appendToTextStartStringBuilder(pc.addItem(itemGen.generateItem('innoxia_race_cow_bubble_cream')))]
@@ -2297,12 +2297,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Berry trifle (#IF(pc.getMoney()>=60)[style.moneyFormat(60, span)]#ELSE[style.moneyFormatUncoloured(60, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=60) Purchase a pot of berry trifle. #ELSE You can't afford a pot of berry trifle... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[浆果松饼 (#IF(pc.getMoney()>=60)[style.moneyFormat(60, span)]#ELSE[style.moneyFormatUncoloured(60, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=60)买一盘浆果松饼。#ELSE你买不起浆果松饼……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=60)innoxia_places_fields_dairyFarm_dormitory_vending_machine#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(60)]', true)]
-					[#game.addSpecialParsingString('a pot of berry trifle', false)]
+					[#game.addSpecialParsingString('一盘浆果松饼', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-60))]
 					[#game.appendToTextStartStringBuilder(pc.addItem(itemGen.generateItem('innoxia_race_badger_berry_trifle')))]
@@ -2312,12 +2312,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA['Pretty Cow' (#IF(pc.getMoney()>=1200)[style.moneyFormat(1200, span)]#ELSE[style.moneyFormatUncoloured(1200, span)]#ENDIF)]]></responseTitle>
+				<responseTitle><![CDATA[“美牛牛”(#IF(pc.getMoney()>=1200)[style.moneyFormat(1200, span)]#ELSE[style.moneyFormatUncoloured(1200, span)]#ENDIF)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<1200)
-						You cannot afford a 'Pretty Cow' potion...
+						你买不起“美牛牛”药水……
 					#ELSE
-						Insert one thousand two hundred flames into the vending machine and choose to receive a 'Pretty Cow' potion.
+						将1200火币投入贩卖机，买一瓶“美牛牛”药水。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -2329,7 +2329,7 @@
 				]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(1200)]', true)]
-					[#game.addSpecialParsingString('Pretty Cow', false)]
+					[#game.addSpecialParsingString('“美牛牛”', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_POTION'))]
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-1200))]
 					[#game.appendToTextEndStringBuilder(pc.addItem(evelyx.getVendingMachinePotionFem()))]
@@ -2338,12 +2338,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA['Busty Cow' (#IF(pc.getMoney()>=1400)[style.moneyFormat(1400, span)]#ELSE[style.moneyFormatUncoloured(1400, span)]#ENDIF)]]></responseTitle>
+				<responseTitle><![CDATA[“波牛牛”(#IF(pc.getMoney()>=1400)[style.moneyFormat(1400, span)]#ELSE[style.moneyFormatUncoloured(1400, span)]#ENDIF)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<1400)
-						You cannot afford a 'Busty Cow' potion...
+						你买不起“波牛牛”药水……
 					#ELSE
-						Insert one thousand four hundred flames into the vending machine and choose to receive a 'Busty Cow' potion.
+						将1400火币投入贩卖机，买一瓶“波牛牛”药水。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -2355,7 +2355,7 @@
 				]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(1400)]', true)]
-					[#game.addSpecialParsingString('Busty Cow', false)]
+					[#game.addSpecialParsingString('“波牛牛”', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_POTION'))]
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-1400))]
 					[#game.appendToTextEndStringBuilder(pc.addItem(evelyx.getVendingMachinePotionBusty()))]
@@ -2364,12 +2364,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA['Milky Cow' (#IF(pc.getMoney()>=1600)[style.moneyFormat(1600, span)]#ELSE[style.moneyFormatUncoloured(1600, span)]#ENDIF)]]></responseTitle>
+				<responseTitle><![CDATA[“乳牛牛”(#IF(pc.getMoney()>=1600)[style.moneyFormat(1600, span)]#ELSE[style.moneyFormatUncoloured(1600, span)]#ENDIF)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<1600)
-						You cannot afford a 'Milky Cow' potion...
+						你买不起“乳牛牛”药水……
 					#ELSE
-						Insert one thousand six hundred flames into the vending machine and choose to receive a 'Milky Cow' potion.
+						将1600火币投入贩卖机，买一瓶“乳牛牛”药水。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -2381,7 +2381,7 @@
 				]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(1600)]', true)]
-					[#game.addSpecialParsingString('Milky Cow', false)]
+					[#game.addSpecialParsingString('“乳牛牛”', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_POTION'))]
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-1600))]
 					[#game.appendToTextEndStringBuilder(pc.addItem(evelyx.getVendingMachinePotionMilky()))]
@@ -2390,12 +2390,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA['Wet Cow' (#IF(pc.getMoney()>=1800)[style.moneyFormat(1800, span)]#ELSE[style.moneyFormatUncoloured(1800, span)]#ENDIF)]]></responseTitle>
+				<responseTitle><![CDATA[“淫牛牛”(#IF(pc.getMoney()>=1800)[style.moneyFormat(1800, span)]#ELSE[style.moneyFormatUncoloured(1800, span)]#ENDIF)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<1800)
-						You cannot afford a 'Wet Cow' potion...
+						你买不起“淫牛牛”药水……
 					#ELSE
-						Insert one thousand eight hundred flames into the vending machine and choose to receive a 'Wet Cow' potion.
+						将1800火币投入贩卖机，买一瓶“淫牛牛”药水。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -2407,7 +2407,7 @@
 				]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(1800)]', true)]
-					[#game.addSpecialParsingString('Wet Cow', false)]
+					[#game.addSpecialParsingString('“淫牛牛”', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_POTION'))]
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-1800))]
 					[#game.appendToTextEndStringBuilder(pc.addItem(evelyx.getVendingMachinePotionWet()))]
@@ -2416,12 +2416,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA['Happy Cow' (#IF(pc.getMoney()>=2000)[style.moneyFormat(2000, span)]#ELSE[style.moneyFormatUncoloured(2000, span)]#ENDIF)]]></responseTitle>
+				<responseTitle><![CDATA[“喜牛牛”(#IF(pc.getMoney()>=2000)[style.moneyFormat(2000, span)]#ELSE[style.moneyFormatUncoloured(2000, span)]#ENDIF)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<2000)
-						You cannot afford a 'Happy Cow' potion...
+						你买不起“喜牛牛”药水……
 					#ELSE
-						Insert two thousand flames into the vending machine and choose to receive a 'Happy Cow' potion.
+						将2000火币投入贩卖机，买一瓶“喜牛牛”药水。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -2433,7 +2433,7 @@
 				]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString(2000)]', true)]
-					[#game.addSpecialParsingString('Happy Cow', false)]
+					[#game.addSpecialParsingString('“喜牛牛”', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_PURCHASE_POTION'))]
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-2000))]
 					[#game.appendToTextEndStringBuilder(pc.addItem(evelyx.getVendingMachinePotionBimbo()))]
@@ -2442,8 +2442,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] away from the vending machine...]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[离开自动贩卖机……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_VENDING_MACHINE_BACK'))]
@@ -2461,8 +2461,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave him]]></responseTitle>
-				<responseTooltip><![CDATA[Deciding that it would be unfair to wake him, you leave Dale sleeping in his bed and head back to the cows' dormitory...]]></responseTooltip>
+				<responseTitle><![CDATA[离开他]]></responseTitle>
+				<responseTooltip><![CDATA[你觉得吵醒他不好，留下睡着的戴尔，返回奶牛宿舍……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/dairyFarm', 'DORMITORY_DALE_BACK'))]
@@ -2472,8 +2472,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Join him]]></responseTitle>
-				<responseTooltip><![CDATA[Get into bed with Dale and tell him that you're hungry for his cock...]]></responseTooltip>
+				<responseTitle><![CDATA[加入他]]></responseTitle>
+				<responseTooltip><![CDATA[爬上戴尔的床，告诉他你对鸡巴十分饥渴……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -2506,16 +2506,16 @@
 				<availabilityConditional><![CDATA[[#!pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
-				<responseTooltip><![CDATA[You can't access your mouth, so can't suck Dale's cock...]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[你的嘴被限制，无法嗦戴尔的牛子……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
-				<responseTooltip><![CDATA[Gently pull back the covers and start giving Dale a blowjob...]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[温柔地掀开被子，开始给戴尔口交……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -2556,12 +2556,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Ride cock]]></responseTitle>
+				<responseTitle><![CDATA[骑上鸡巴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina())
-						You don't have a vagina, so can't ride Dale's cock...
+						你没有小穴，没法骑上戴尔的鸡巴……
 					#ELSE
-						You can't access your vagina, so can't ride Dale's cock...
+						你的小穴被限制，没法骑上戴尔的鸡巴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -2572,16 +2572,16 @@
 				<index><![CDATA[4]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isVaginaVirgin())
-						Give virginity
+						献上童贞
 					#ELSE
-						Ride cock
+						骑上鸡巴
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isVaginaVirgin())
-						Gently pull back Dale's sheets and climb on top of him, before teasing his cock against your virgin pussy and telling him that he can be your first...
+						温柔地拉开戴尔床单，爬到他的上位，用他的鸡巴挑逗你的处女小穴，告诉他他可以成为你的第一次……
 					#ELSE
-						Gently pull back Dale's sheets and climb on top of him, before teasing his cock against your pussy and riding him...
+						温柔地拉开戴尔床单，爬到他的上位，用他的鸡巴挑逗你的小穴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -2624,8 +2624,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && !pc.isAbleToAccessCoverableArea(CA_ANUS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Ride cock (anal)]]></responseTitle>
-				<responseTooltip><![CDATA[You can't access your asshole, so can't ride Dale's cock...]]></responseTooltip>
+				<responseTitle><![CDATA[骑上鸡巴(肛门)]]></responseTitle>
+				<responseTooltip><![CDATA[你的肛门被限制，没办法骑到戴尔的鸡巴上……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -2634,16 +2634,16 @@
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isAssVirgin())
-						Give anal virginity
+						献上菊穴童贞
 					#ELSE
-						Ride cock (anal)
+						骑上鸡巴(肛门)
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					#IF(pc.isAssVirgin())
-						Gently pull back Dale's sheets and climb on top of him, before teasing his cock against your virgin asshole and telling him that he can be your first...
+					#IF(pc.isVaginaVirgin())
+						温柔地拉开戴尔床单，爬到他的上位，用他的鸡巴挑逗你的童贞菊穴，告诉他他可以成为你的第一次……
 					#ELSE
-						Gently pull back Dale's sheets and climb on top of him, before teasing his cock against your asshole and riding him...
+						温柔地拉开戴尔床单，爬到他的上位，用他的鸡巴挑逗你的菊穴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -2686,8 +2686,8 @@
 				<availabilityConditional><![CDATA[[#dale.hasTrait(PERK_HEAVY_SLEEPER, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Sleep sex]]></responseTitle>
-				<responseTooltip><![CDATA[Thanks to the teddy bear you've given him, Dale is sleeping very heavily, and so if you're gentle, you could fuck him without waking him up...]]></responseTooltip>
+				<responseTitle><![CDATA[睡奸]]></responseTitle>
+				<responseTooltip><![CDATA[多亏了你送的泰迪熊，戴尔睡得很沉，所以只要你温柔点，你可以在不弄醒他的情况下和他做爱……]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -2719,8 +2719,8 @@
 			[#flags.setFlag(FLAG_innoxia_evelyx_dorm_sex, true)]
 		]]></preParsingEffects>
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Dale is completely exhausted and needs to sleep...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[戴尔太累了需要睡觉……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">DORMITORY_DALE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2729,8 +2729,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Leave Dale to sleep and head back to the cows' dormitory...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[留下睡着的戴尔，返回奶牛宿舍……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_dormitory]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -2752,8 +2752,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Talk]]></responseTitle>
-				<responseTooltip><![CDATA[Approach one of the office workers and say hello.]]></responseTooltip>
+				<responseTitle><![CDATA[交谈]]></responseTitle>
+				<responseTooltip><![CDATA[靠近一个办公室职员问好。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_storage_talk]]></nextDialogue>
 				<effects/>
 			</response>
@@ -2769,8 +2769,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Talk]]></responseTitle>
-				<responseTooltip><![CDATA[The workers don't seem to have time to talk...]]></responseTooltip>
+				<responseTitle><![CDATA[交谈]]></responseTitle>
+				<responseTooltip><![CDATA[这个职员貌似没工夫聊天……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 				<effects/>
 			</response>
@@ -2789,16 +2789,16 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_evelyx_finished_no_bad_end)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Centaur fuck (+[style.moneyFormat(1000, span)])]]></responseTitle>
+				<responseTitle><![CDATA[给半人马操 (+[style.moneyFormat(1000, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isTaur())
-						You need to have a tauric lower body in order to receive your daily centaur fuck...
+						你需要有半兽身人下半身才能进行你的半人马每日一操……
 					#ELSEIF(!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-						You require a vagina and to be able to access it in order to receive your daily centaur fuck...
+						你需要有小穴并且不受限制才能进行你的半人马每日一操……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_no_bad_end_daily_fuck))
-						You've already received your daily centaur fuck today. You'll have to come back tomorrow if you want more...
+						你今天完成半人马每日一操了，如果想要的话明天再来……
 					#ELSE
-						Knock on the door to Evelyx's office and tell her that you're here for your daily centaur fuck...
+						敲艾弗利克斯办公室的门，说你来完成半人马每日一操……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -2825,8 +2825,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Evelyx to the auction room.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟随艾弗利克斯前往拍卖厅。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_manager_enter_auction]]></nextDialogue>
 				<effects><![CDATA[
 					[#evelyx.transformCock(false)]
@@ -2839,8 +2839,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Warm up]]></responseTitle>
-				<responseTooltip><![CDATA[Beg for Evelyx to hilt her massive cock deep into your pussy and get you warmed up for what's to come...]]></responseTooltip>
+				<responseTitle><![CDATA[热身]]></responseTitle>
+				<responseTooltip><![CDATA[乞求艾弗利克斯将她巨大的肉棒深深插入你的小穴，为即将到来的一切做好准备……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fields_dairyFarm_evelyx_office_doggy]]></id>
@@ -2883,8 +2883,8 @@
 			[#pc.applyWash(true, true, null, 0)]
 			[#evelyx.applyWash(true, true, null, 0)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having had her fun, Evelyx brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[艾弗利克斯爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">EVELYX_OFFICE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2893,8 +2893,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Evelyx to the auction room.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟随艾弗利克斯前往拍卖厅。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_manager_enter_auction]]></nextDialogue>
 				<effects><![CDATA[
 					[#evelyx.transformCock(false)]
@@ -2914,8 +2914,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Bidding]]></responseTitle>
-				<responseTooltip><![CDATA[The demonic centauresses start bidding against one another as they try to be the one to purchase you...]]></responseTooltip>
+				<responseTitle><![CDATA[竞拍]]></responseTitle>
+				<responseTooltip><![CDATA[恶魔半人马们开始争相竞价，都想拍下你……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_manager_enter_auction_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.addNPC('LunetteMelee', 'owner')]
@@ -2934,8 +2934,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Mounted]]></responseTitle>
-				<responseTooltip><![CDATA[[owner.Name] celebrates her winning bid by mounting you and rutting your pussy right in front of her sisters...]]></responseTooltip>
+				<responseTitle><![CDATA[被骑]]></responseTitle>
+				<responseTooltip><![CDATA[[owner.Name]为了庆祝中标，骑在你身上，当着她姐妹的面粗暴地蹂躏你的小穴……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fields_dairyFarm_centauress_mounted]]></id>
@@ -2970,8 +2970,8 @@
 	</scene>
 	
 	<scene id="manager_enter_auction_sex_end">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having had her fun, the centauress brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[半人马爽够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">EVELYX_OFFICE_AUCTION_SEX_END</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2980,8 +2980,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Finished]]></responseTitle>
-				<responseTooltip><![CDATA[Evelyx leads you back to the reception area...]]></responseTooltip>
+				<responseTitle><![CDATA[结束]]></responseTitle>
+				<responseTooltip><![CDATA[艾弗利克斯带你回到接待处……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_manager_enter_auction_sex_end_leave]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.banishNPC(owner)]
@@ -3018,21 +3018,21 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Start work]]></responseTitle>
+				<responseTitle><![CDATA[开始工作]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.hasStatusEffect(SE_FATIGUED))
-						You cannot work while feeling so fatigued!
-						<br/>[style.italicsMinorBad(You cannot start work while you are suffering from the 'fatigued' status effect...)]
+						你不能在如此疲劳的情况下工作！
+						<br/>[style.italicsMinorBad(当你受到 “疲劳”状态效果影响时，你不能开始工作……)]
 					#ELSEIF(!game.isLactationContentEnabled())
-						Lactation content needs to be enabled for milking scenes to work correctly!
+						挤奶场景需要启用泌乳内容才能正常工作！
 					#ELSEIF(!pc.isCoverableAreaExposed(CA_NIPPLES))
-						You need your nipples to be fully exposed before being able to start work!
+						在开始工作之前，你需要完全露出乳头！
 					#ELSEIF(pc.hasVagina() && !pc.isCoverableAreaExposed(CA_VAGINA))
-						You need your vagina to be fully exposed before being able to start work!
+						在开始工作之前，你需要完全露出小穴！
 					#ELSEIF(pc.hasBreastsCrotch() && !pc.isCoverableAreaExposed(CA_NIPPLES_CROTCH))
-						You need your crotch-nipples to be fully exposed before being able to start work!
+						在开始工作之前，你需要完全露出胯乳乳头！
 					#ELSE
-						Lie down in one of the free milking stalls and get ready to be milked for the next four hours...
+						躺在一个空着的挤奶台上，准备在接下来的四个小时里挤奶……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -3078,8 +3078,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')!=0 && pc.hasClothingType(CT_innoxia_quest_dairy_ear_tag, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[You can't get through the door...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[你进不了门……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_corridor</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -3122,8 +3122,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')!=1 && pc.hasClothingType(CT_innoxia_quest_dairy_ear_tag, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[You can't get through the door...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[你进不了门……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_corridor</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -3166,8 +3166,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')!=2 && pc.hasClothingType(CT_innoxia_quest_dairy_ear_tag, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[You can't get through the door...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[你进不了门……]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_dairyFarm_corridor</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -3190,15 +3190,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Drink]]></responseTitle>
-				<responseTooltip><![CDATA[Drink the thick yellow fluid which promises to make you start lactating.]]></responseTooltip>
+				<responseTitle><![CDATA[喝]]></responseTitle>
+				<responseTooltip><![CDATA[喝下浓稠的黄色液体，它能让你开始泌乳。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_barn_work_no_milk_drink]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to drink the thick yellow fluid and [pc.step] away from the milking stall...]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝喝浓稠的黄色液体，离开挤奶台……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_dairyFarm_barn1]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -3222,8 +3222,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you're lactating, you can get started with your work.]]></responseTooltip>
+				<responseTitle><![CDATA[工作]]></responseTitle>
+				<responseTooltip><![CDATA[现在你正在哺乳期，可以开始工作了。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_barn_work_initial]]></nextDialogue>
 			</response>
 		</responses>
@@ -3243,10 +3243,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Stay quiet]]></responseTitle>
+				<responseTitle><![CDATA[保持安静]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Stay quiet in the hopes that the [partner.race] doesn't choose to fuck you.
-					<br/>[style.italicsSex(There is a 10% chance that [partner.she]'ll choose to fuck you anyway!)]
+					保持沉默，祈祷[partner.race]不选择操你。
+					<br/>[style.italicsSex([partner.she]有10%的概率选择操你！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(RND.nextInt(100)<10)
@@ -3262,10 +3262,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Show off]]></responseTitle>
+				<responseTitle><![CDATA[炫耀]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Sway your [pc.hips+] from side to side and spread your legs a little in the hopes that [partner.she]'ll choose to fuck you.
-					<br/>[style.italicsSex(There is a 50% chance that [partner.she]'ll choose to fuck you if you do this!)]
+					左右摇晃你[pc.hips+]，微微张开腿，希望[partner.she]选择操你。
+					<br/>[style.italicsSex([partner.she]有50%的几率选择操你！)]
 				]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
@@ -3285,10 +3285,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Beg for it]]></responseTitle>
+				<responseTitle><![CDATA[乞求]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Lift your [pc.hips+] and spread your legs, before desperately crying out for the [partner.race] to fuck you.
-					<br/>[style.italicsSex(There is a 90% chance that [partner.she]'ll choose to fuck you if you do this!)]
+					抬起你[pc.hips+]，张开腿开始叫喊，让[partner.race]来操你。
+					<br/>[style.italicsSex([partner.she]有90%的概率选择操你！)]
 				]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
@@ -3317,10 +3317,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked (+[style.moneyFormat(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[被操 (+[style.moneyFormat(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					The [partner.race] has chosen to fuck your pussy...
-					<br/>[style.italicsGood(You are going to earn a bonus of [style.moneyFormat(500, span)] from this!)]
+					[partner.race]选择操你的小穴……
+					<br/>[style.italicsGood(你会得到[style.moneyFormat(500, span)]奖金！)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
@@ -3382,8 +3382,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having been passed over and not chosen as the cow to be fucked, you're left to continue working...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[你没有被选为挨操的母牛，你只能继续工作……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_barn_work_after_interrupt]]></nextDialogue>
 			</response>
 		</responses>
@@ -3402,8 +3402,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
-				<responseTooltip><![CDATA[Relax and prepare to spend the next four hours being milked...]]></responseTooltip>
+				<responseTitle><![CDATA[工作]]></responseTitle>
+				<responseTooltip><![CDATA[放松准备接下来四个小时的挤奶……]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(flags.getSavedLong('evelyx_work_level')==2 && !flags.hasFlag(FLAG_innoxia_evelyx_work_sex_scene_just_ended) && (pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) && RND.nextInt(100)<40)
 						innoxia_places_fields_dairyFarm_barn_work_sex_interrupt
@@ -3420,12 +3420,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Tease Dale]]></responseTitle>
+				<responseTitle><![CDATA[挑逗戴尔]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(dale.isAttractedTo(pc))
-						Playfully tease and flirt with Dale...
+						与戴尔调情……
 					#ELSE
-						Dale isn't attracted to you, so teasing and flirting with him would be a bad idea...
+						戴尔没有被你吸引，和他调情或许不是个好主意……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -3454,8 +3454,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
-				<responseTooltip><![CDATA[Thank Dale for his attention and get on with work...]]></responseTooltip>
+				<responseTitle><![CDATA[工作]]></responseTitle>
+				<responseTooltip><![CDATA[感谢戴尔的关注，继续工作……]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(flags.getSavedLong('evelyx_work_level')==2 && !flags.hasFlag(FLAG_innoxia_evelyx_work_sex_scene_just_ended) && (pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) && RND.nextInt(100)<40)
 						innoxia_places_fields_dairyFarm_barn_work_sex_interrupt
@@ -3473,8 +3473,8 @@
 				<availabilityConditional><![CDATA[[#!pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Offer blowjob]]></responseTitle>
-				<responseTooltip><![CDATA[You can't access your mouth, so can't suck Dale's cock...]]></responseTooltip>
+				<responseTitle><![CDATA[提供口交]]></responseTitle>
+				<responseTooltip><![CDATA[你的嘴被限制，无法嗦戴尔的牛子……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -3483,16 +3483,16 @@
 				<index><![CDATA[2]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isFaceVirgin())
-						Offer oral virginity
+						提供口穴童贞
 					#ELSE
-						Offer blowjob
+						提供口交
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isFaceVirgin())
-						Tell Dale that you want him to take your oral virginity...
+						告诉戴尔你想给他你的口穴童贞……
 					#ELSE
-						Tell Dale that you want to suck his cock...
+						告诉戴尔你想嗦他的牛子……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -3533,12 +3533,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Offer pussy]]></responseTitle>
+				<responseTitle><![CDATA[献上小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina())
-						You don't have a vagina, so can't get fucked by Dale...
+						你没有小穴，不能被戴尔操……
 					#ELSE
-						You can't access your vagina, so can't get fucked by Dale...
+						你的小穴被限制，没法被戴尔操……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -3549,20 +3549,20 @@
 				<index><![CDATA[3]]></index>
 				<responseTitle><![CDATA[
 					#IF(!pc.isVaginaVirgin() && pc.hasHymen())
-						Offer 'virginity'
+						献上“处女童贞”
 					#ELSEIF(pc.isVaginaVirgin())
-						Offer virginity
+						献上童贞
 					#ELSE
-						Offer pussy
+						献上小穴
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isVaginaVirgin() && pc.hasHymen())
-						Tell Dale that even though you're not a virgin, breaking your hymen will feel every bit as good as if you were the real thing...
+						告诉戴尔，即使你不是处女，破处的感觉也会和真的一样好……
 					#ELSEIF(pc.isVaginaVirgin())
-						Tell Dale that you want him to take your virginity...
+						告诉戴尔你想给他你的处女……
 					#ELSE
-						Tell Dale that you want him to fuck your pussy...
+						告诉戴尔你想他操你的小穴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -3603,8 +3603,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && !pc.isAbleToAccessCoverableArea(CA_ANUS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Offer ass]]></responseTitle>
-				<responseTooltip><![CDATA[You can't access your asshole, so can't get fucked by Dale...]]></responseTooltip>
+				<responseTitle><![CDATA[献上屁股]]></responseTitle>
+				<responseTooltip><![CDATA[你的肛门被限制，没办法被戴尔操……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -3613,16 +3613,16 @@
 				<index><![CDATA[4]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isAssVirgin())
-						Offer anal virginity
+						献上菊穴童贞
 					#ELSE
-						Offer ass
+						献上屁穴
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isAssVirgin())
-						Tell Dale that you want him to take your anal virginity...
+						告诉戴尔你想给他你的菊穴童贞……
 					#ELSE
-						Tell Dale that you want him to fuck your ass...
+						告诉戴尔你想他操你的屁穴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -3666,8 +3666,8 @@
 			[#flags.setFlag(FLAG_innoxia_evelyx_work_sex_scene_just_ended, true)]
 		]]></preParsingEffects>
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Dale has had enough and steps back...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[戴尔觉得足够了，撤开了……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">BARN_WORK_DALE_TEASE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -3676,8 +3676,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Dale and get on with work...]]></responseTooltip>
+				<responseTitle><![CDATA[工作]]></responseTitle>
+				<responseTooltip><![CDATA[告别戴尔，继续工作……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_dairyFarm_barn_work]]></nextDialogue>
 				<effects><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_evelyx_work_not_pregnant_at_start) && pc.isPregnant())
@@ -3752,14 +3752,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue working]]></responseTitle>
+				<responseTitle><![CDATA[继续工作]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getSavedLong('evelyx_work_hours')<16)
-						Decide against choosing a reward and continue to be milked for another four hours.
-						<br/>[style.italicsMinorGood(You can work for a maximum of 16 hours in a row, and you've currently worked for [#flags.getSavedLong('evelyx_work_hours')].)]
+						决定不选择奖品，继续挤奶四个小时。
+						<br/>[style.italicsMinorGood(你一次最多工作16小时，你已经工作了[#flags.getSavedLong('evelyx_work_hours')]小时。)]
 					#ELSE
-						You're far too tired to do another 4-hour shift...
-						<br/>[style.italicsMinorBad(You can work for a maximum of 16 hours in a row, and you've currently worked for [#flags.getSavedLong('evelyx_work_hours')].)]
+						你太累了，来不了另一个四小时了……
+						<br/>[style.italicsMinorBad(你一次最多工作16小时，你已经工作了[#flags.getSavedLong('evelyx_work_hours')]小时。))]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -3777,8 +3777,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Finished]]></responseTitle>
-				<responseTooltip><![CDATA[You've had enough of being milked for now...]]></responseTooltip>
+				<responseTitle><![CDATA[结束]]></responseTitle>
+				<responseTooltip><![CDATA[你挤奶挤得够多了……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<!-- fatigued for 6 hours (21600 seconds) when ending -->
 				<effects><![CDATA[
@@ -3790,12 +3790,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Better Body]]></responseTitle>
+				<responseTitle><![CDATA[身体倍棒]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(evelyx.isAnyCowTransformationAvailable(pc))
-						Choose the 'Better Body' potion as your reward...
+						选择“身体倍棒”药水作为奖励……
 					#ELSE
-						You already have a suitable body, so the 'Better Body' potion is not available to you...
+						你已经有了合适的身体，所以“身体倍棒”药水对你无效……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -3814,12 +3814,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Improved Mind]]></responseTitle>
+				<responseTitle><![CDATA[大脑升级]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(evelyx.isAnyCowFetishAvailable(pc))
-						Choose the 'Improved Mind' potion as your reward...
+						选择“大脑升级”药水作为奖励……
 					#ELSE
-						You already have a suitable attitude, so the 'Improved Mind' potion is not available to you...
+						你已经有了合适的心态，所以“大脑升级”药水对你无效……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -3840,42 +3840,42 @@
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.getSavedLong('evelyx_work_level')==0)
-						Trainee Accessories
+						学徒配件
 					#ELSEIF(flags.getSavedLong('evelyx_work_level')==1)
-						Heifer Accessories
+						小母牛配件
 					#ELSE
-						Cow Accessories
+						奶牛配件
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!evelyx.isCowAbleToEquipGear(pc))
-						You are unable to equip a collar and nose ring, so cannot choose this reward...
+						你无法装备项圈和鼻环，无法选择此奖励……
 					#ELSE
 						#IF(flags.getSavedLong('evelyx_work_level')==0)
 							#IF(flags.hasFlag(FLAG_innoxia_evelyx_work_accessories_trainee))
-								You have already previously received this reward, and cannot choose to receive it again...
+								你之前已领取过此奖励，无法再次领取……
 							#ELSE
-								Choose the 'Trainee Accessories' reward, which will give you a cowbell collar and nose ring.
+								选择“学徒配件”，这会给你一个牛铃项圈和鼻环。
 								#IF(!pc.isPiercedNose())
-									<br/>[style.colourPink(This will involve having your nose pierced in order to equip the nose ring!)]
+									<br/>[style.colourPink(佩戴鼻环需要在鼻子上穿孔！)]
 								#ENDIF
 							#ENDIF
 						#ELSEIF(flags.getSavedLong('evelyx_work_level')==1)
 							#IF(flags.hasFlag(FLAG_innoxia_evelyx_work_accessories_heifer))
-								You have already previously received this reward, and cannot choose to receive it again...
+								你之前已领取过此奖励，无法再次领取……
 							#ELSE
-								Choose the 'Heifer Accessories' reward, which will give you a cowbell collar and nose ring.
+								选择“小母牛配件”，这会给你一个牛铃项圈和鼻环。
 								#IF(!pc.isPiercedNose())
-									<br/>[style.colourPink(This will involve having your nose pierced in order to equip the nose ring!)]
+									<br/>[style.colourPink(佩戴鼻环需要在鼻子上穿孔！)]
 								#ENDIF
 							#ENDIF
 						#ELSE
 							#IF(flags.hasFlag(FLAG_innoxia_evelyx_work_accessories_cow))
-								You have already previously received this reward, and cannot choose to receive it again...
+								你之前已领取过此奖励，无法再次领取……
 							#ELSE
-								Choose the 'Cow Accessories' reward, which will give you a cowbell collar and nose ring.
+								选择“奶牛配件”，这会给你一个牛铃项圈和鼻环。
 								#IF(!pc.isPiercedNose())
-									<br/>[style.colourPink(This will involve having your nose pierced in order to equip the nose ring!)]
+									<br/>[style.colourPink(佩戴鼻环需要在鼻子上穿孔！)]
 								#ENDIF
 							#ENDIF
 						#ENDIF
@@ -3915,18 +3915,18 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')!=2 && (!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Mated (+[style.moneyFormatUncoloured(500, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You need to have a vagina, and to be able to gain access to it, in order to get fucked...]]></responseTooltip>
+				<responseTitle><![CDATA[交配 (+[style.moneyFormatUncoloured(500, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你需要有小穴且不被限制才能被操……]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')!=2 && pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Mated (+[style.moneyFormat(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[交配 (+[style.moneyFormat(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Press the button to request a mate, which will lead into a random member of the public fucking your pussy...
-					<br/>[style.italicsGood(You will earn a bonus of [style.moneyFormat(500, span)]!)]
+					按下按钮请求交配，这将导致一名随机的成员操你的小穴……
+					<br/>[style.italicsGood(你会得到[style.moneyFormat(500, span)]奖金！)]
 				]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
@@ -3945,8 +3945,8 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')==2]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Mated]]></responseTitle>
-				<responseTooltip><![CDATA[You are no longer given the choice of when to request a mate, and can be fucked by a random member of the public at any time while working here...]]></responseTooltip>
+				<responseTitle><![CDATA[交配]]></responseTitle>
+				<responseTooltip><![CDATA[你不再有权选择何时要求交配，在这里工作期间，你随时都可能被随机的什么人操……]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<!-- Heifer+ rewards: -->
@@ -3954,15 +3954,15 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')>0]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Cow-girl (lesser)]]></responseTitle>
+				<responseTitle><![CDATA[牛女(亚)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToHaveRaceTransformed())
-						As your race cannot be transformed, you are unable to choose this reward and be transformed into a lesser cow-girl!
+						由于你的种族无法转化，你无法选择这项奖励，也无法转化成为亚牛女！
 					#ELSEIF(pc.getRace()==RACE_COW_MORPH)
-						You are already a cow-girl, so cannot choose this reward!
+						你已经是牛女了，不能选择这项奖励！
 					#ELSE
-						Choose the cow-girl reward and get transformed into a lesser cow-girl.
-						<br/>[style.italicsTfPartial(You will be transformed into a human with cow-girl ears, tail, horns, hair, and eyes!)]
+						选择牛女奖励，可以转化成为亚牛女。
+						<br/>[style.italicsTfPartial(你将转化成一个有牛女耳朵、尾巴、角、毛和眼的人！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -3982,15 +3982,15 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')>0]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Cow-girl (greater)]]></responseTitle>
+				<responseTitle><![CDATA[牛女(纯)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToHaveRaceTransformed())
-						As your race cannot be transformed, you are unable to choose this reward and be transformed into a greater cow-girl!
+						由于你的种族无法转化，你无法选择这项奖励，也无法转化成为纯牛女！
 					#ELSEIF(pc.getRace()==RACE_COW_MORPH && pc.getRaceStage()==RACE_STAGE_GREATER)
-						You are already a greater cow-girl, so cannot choose this reward!
+						你已经是纯牛女了，不能选择这项奖励！
 					#ELSE
-						Choose the cow-girl reward and get transformed into a greater cow-girl.
-						<br/>[style.italicsTfGreater(You will be transformed into a fully furry cow-girl!)]
+						选择牛女奖励，可以转化成为纯牛女。
+						<br/>[style.italicsTfGreater(你会转化为完全福瑞牛女！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -4011,15 +4011,15 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')>1]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Cowtaur]]></responseTitle>
+				<responseTitle><![CDATA[半母牛人]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToHaveRaceTransformed())
-						As your race cannot be transformed, you are unable to choose this reward and be transformed into a cowtaur!
+						由于你的种族无法转化，你无法选择这项奖励，也无法转化成为半母牛人！
 					#ELSEIF(pc.getLegRace()==RACE_COW_MORPH && pc.getLegConfiguration()==LEG_CONFIGURATION_QUADRUPEDAL)
-						You are already a cowtaur, so cannot choose this reward!
+						你已经是半母牛人了，不能选择这项奖励！
 					#ELSE
-						Choose the cowtaur reward and get transformed so that you've got the lower body of a feral cow.
-						<br/>[style.italicsTfGreater(You will be gain the lower body of a feral cow!)]
+						选择牛女奖励，可以转化成为半母牛人，下半身变成兽态的牛。
+						<br/>[style.italicsTfGreater(这会让你的下半身变成兽态的牛！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -4039,13 +4039,13 @@
 				<availabilityConditional><![CDATA[[#flags.getSavedLong('evelyx_work_level')>1]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Tattooed]]></responseTitle>
+				<responseTitle><![CDATA[纹身]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getTattooInSlot(IS_ANUS)!=null)
-						You already have a tattoo on your ass, so cannot be marked as one of Evelyx's cows...
+						你的屁股上已经有纹身了，所以不能被标记为艾弗利克斯的奶牛……
 					#ELSE
-						Choose the tattoo reward and get a number tattooed on your ass.
-						<br/>[style.italicsMinorBad(You will receive a tattoo with the text 'Evelyx's Dairy Milker #[#flags.getSavedLong('evelyx_player_number')]' on your ass!)]
+						选择纹身奖励，在屁股上纹一个数字。
+						<br/>[style.italicsMinorBad(你的屁股上会纹上“艾弗利克斯乳业奶工 #[#flags.getSavedLong('evelyx_player_number')]' ”！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -4072,14 +4072,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue working]]></responseTitle>
+				<responseTitle><![CDATA[继续工作]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getSavedLong('evelyx_work_hours')<16)
-						Continue to be milked for another four hours.
-						<br/>[style.italicsMinorGood(You can work for a maximum of 16 hours in a row, and you've currently worked for [#flags.getSavedLong('evelyx_work_hours')].)]
+						继续下个四小时的挤奶。
+						<br/>[style.italicsMinorGood(你一次最多工作16小时，你已经工作了[#flags.getSavedLong('evelyx_work_hours')]小时。)]
 					#ELSE
-						You're far too tired to do another 4-hour shift...
-						<br/>[style.italicsMinorBad(You can work for a maximum of 16 hours in a row, and you've currently worked for [#flags.getSavedLong('evelyx_work_hours')].)]
+						你太累了，来不了另一个四小时了……
+						<br/>[style.italicsMinorBad(你一次最多工作16小时，你已经工作了[#flags.getSavedLong('evelyx_work_hours')]小时。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -4097,8 +4097,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Finished]]></responseTitle>
-				<responseTooltip><![CDATA[You've had enough of being milked for now...]]></responseTooltip>
+				<responseTitle><![CDATA[结束]]></responseTitle>
+				<responseTooltip><![CDATA[你挤奶挤得够多了……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<!-- fatigued for 6 hours (21600 seconds) when ending -->
 				<effects><![CDATA[
@@ -4118,8 +4118,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[[partner.Name] wastes no time in sinking [partner.her] cock into your pussy!]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[[partner.Name]毫不犹豫地将[partner.her]的肉棒插入你的小穴！]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<sexVariablesWithManager enabled="true">
@@ -4171,8 +4171,8 @@
 			[#flags.setFlag(FLAG_innoxia_evelyx_work_sex_scene_just_ended, true)]
 		]]></preParsingEffects>
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[partner.Name] has had enough and [partner.steps] back...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[partner.Name]觉得足够了，撤开了……]]></tooltip>
 		<content folderPath="txt/places/fields/dairyFarm">BARN_WORK_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -4181,8 +4181,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[[partner.Name] exits the barn, leaving you to continue being milked...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[[partner.Name]离开牛舍，留你继续挤奶……]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(flags.getSavedLong('evelyx_work_level')==2)
 						innoxia_places_fields_dairyFarm_barn_work_after_interrupt

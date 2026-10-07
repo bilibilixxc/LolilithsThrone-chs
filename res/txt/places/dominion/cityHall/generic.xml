@@ -1,316 +1,316 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	<p>
-		This particular street is dominated by the huge structure of Dominion's city hall. The architecture of this seat of local government is distinctly classical, with the frontage consisting of a series of huge marble pillars and polished stone steps. A sign near the entrance of this impressive building informs you that it's open to the public from
+		这条特殊的街道被御城区市政厅的巨大建筑所占据。这座政府所在地的建筑具有鲜明的古典风格，正面由一系列巨大的大理石柱和抛光的石阶组成。令人印象深刻的建筑入口处的标志牌告诉你，它在以下时间段向公众开放
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<=16)
-			 [style.colourMinorGood([units.time(9)]-[units.time(16)])].
+			[style.colourMinorGood([units.time(9)]-[units.time(16)])]。
 		#ELSE
-			 [style.colourMinorBad([units.time(9)]-[units.time(16)])].
+			[style.colourMinorBad([units.time(9)]-[units.time(16)])]。
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			As there's an arcane storm raging overhead, your surroundings are almost completely deserted, with only the occasional demon to be seen walking down the street.
+			由于头顶上正肆虐着一场奥术风暴，你的周围几乎空无一人，只能偶尔看到恶魔在街上行走。
 			#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<=16)
-				 As city hall is [style.colourGood(currently open to the public)], you wonder how many people are inside due to legitimate business, and how many are just making use of the building to take shelter from the storm.
+				市政厅[style.colourGood(正在向公众开放)]，有多少人是为了正当生意在里面，又有多少人只是为了躲避风暴呢？
 			#ELSE
-				 Unfortunately, due to the time of day, city hall is [style.colourBad(currently closed to the public)], so if you had any business within, you'll have to return during regular opening times.
+				不幸的，这时候市政厅[style.colourBad(正在向公众关闭)]，如果你有业务，得在正常开放时间内返回。
 			#ENDIF
 		#ELSE
 			#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<=16)
-				As city hall is [style.colourGood(currently open to the public)], you could always head inside and seek to conduct whatever business you have to attend to.
+				市政厅[style.colourGood(正在向公众开放)]，你可以随时进去处理你要处理的事务。
 			#ELSE
-				Unfortunately, due to the time of day, city hall is [style.colourBad(currently closed to the public)], so if you had any business within, you'll have to return during regular opening times.
+				不幸的，这时候市政厅[style.colourBad(向公众关闭)]，如果你有业务，得在正常开放时间内返回。
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CITY_HALL_ENTRANCE -->
 
 	<htmlContent tag="ENTRY"><![CDATA[
 	<p>
-		Walking up the short series of polished marble steps which lead to city hall's main entrance, you find yourself confronted by a pair of revolving glass doors. Heading through the one marked 'Entrance', you step into the main foyer and take a look at your new surroundings.
+		沿着市政厅正门的一连串抛光大理石台阶拾级而上，你面对着一扇旋转玻璃门。穿过标有“入口”的那扇门，你步入主门厅，打量着周围的新环境。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="CITY_HALL_FOYER"><![CDATA[
 	<p>
-		The grand entrance to Dominion's city hall gives visitors the impression of great wealth and prestige. Huge marble pillars line the edges of this colossal foyer, and between them, sitting upon the polished marble floor, are numerous finely-carved busts of notable demons. Hanging from the walls are gigantic portraits of yet more demons and half-demons, with nameplates identifying them as particularly important members of the local government. Looking up at the high vaulted ceiling, you see the source of this area's illumination taking the form of several huge, crystal chandeliers.
+		御城区市政厅的宏伟入口给访客留下了极其富有和气派的印象。巨大的大理石柱子排列在庞大门厅的边缘，而在它们之间，坐落在抛光的大理石地面上的是许多精细雕刻的著名恶魔半身像。墙上挂着巨大的恶魔和半恶魔肖像，名牌标明了他们是当地政府中特别重要的成员。抬头望向高高的拱形天花板，你看到这个区域照明的来源是几个巨大的水晶吊灯。
 	</p>
 	<p>
-		On one end of this grand foyer, there's the pair of revolving glass doors which serve as the public entrance and exit, while on the other, a huge, circular desk is staffed by ten or so receptionists, who each wait patiently to answer any queries directed their way by visiting members of the public. Beyond that, the entrance hall branches off left and right into two corridors, which lead into the depths of this centre of bureaucracy.
+		在这个宏伟门厅的一端，有一对旋转玻璃门作为公共出入口，而在另一端，有一个巨大的、圆形的服务台，由十个左右的接待员工作，他们各自耐心地等待着回答公众成员提出的任何问题。除此之外，入口大厅左右两边分叉进入两个走廊，通向这个官僚主义中心的深处。
 	</p>
 	<p>
-		Although not busy by any stretch of the imagination, several members of the public are milling around in this area, and are no doubt waiting for their friends or companions to finish conducting whatever business they had within.
+		虽然这里绝对不算繁忙，但有几个公众成员正在这个区域里闲逛，无疑是在等待他们的朋友或伴侣完成他们在里面要办的事情。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CITY_HALL_INFORMATION_DESK -->
 	
 	<htmlContent tag="CITY_HALL_INFORMATION_DESK"><![CDATA[
 	<p>
-		Near the far end of the grand foyer, there's a huge, circular desk, which is staffed by ten or so receptionists. It's beside this desk that you currently find yourself standing, and you wonder whether you should approach one of the helpful-looking girls currently on duty, or simply head past them without asking for assistance.
+		在大门厅的最里面，有一张巨大的圆形办公桌，上面有十来个接待员。你现在就站在这张桌子旁边，你不知道是应该走向正值班的一位看起来乐于助人的女孩，还是直接走过去而不寻求帮助。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="CITY_HALL_INFORMATION_DESK_NAME_CHANGE"><![CDATA[
 	<p>
-		Wanting to know where to go in order to get your name officially changed, you step up to the desk and ask one of the receptionists for directions.
+		你想要知道如何正式更改你的名字，走到服务台，问其中一个接待员该往哪里去。
 	</p>
 	<p>
-		[genericFemale.speech(Ah, you'll want the Bureau of Demographics for that,)] the girl happily answers, before turning in her chair and pointing down the corridor which leads to the left. [genericFemale.speech(You need to head that way, and at the end of the corridor, take another left, and then the office you're looking for will be at the end of that corridor on your right. Applying for a change of name is considered minor business, so once you're there, you'll only need to fill out forms 2-B, 7-D, and the usual series of A-series documents from 1 to 13. There's also no need to wait for an appointment; the Bureau of Demographics is always open to all members of the public. Have a nice day!)]
+		[genericFemale.speech(啊，你要找的是人口统计局，)]这个女孩高兴地回答，然后转过她的椅子，指向通往左边的走廊。[genericFemale.speech(你需要朝那个方向走，在走廊的尽头左转，然后你要找的办公室就会在那条走廊的右手边的尽头。更改名字被认为是次要业务，所以到了那里，你只需要填写2-B、7-D表格，以及通常的从1到13的A系列文档。不需要等待预约;人口统计局对所有公众都是开放的。祝你今天愉快！)]
 	</p>
 	<p>
-		Without asking if there was anything else you needed, the receptionist calls out to someone standing behind you, and proceeds to ask them if there's anything she can help them with. As you've already got the information you wanted, you step away from the desk and wonder if you should head down to this 'Bureau of Demographics' right away...
+		没有问你是否还需要别的什么，接待员对站在你身后的人喊了一声，然后继续问他们是否需要她的帮助。由于你已经得到了你想要的信息，你从服务台上走开，开始考虑是否应该立即去这个“人口统计局”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="CITY_HALL_INFORMATION_DESK_PROPERTY"><![CDATA[
 	<p>
-		Curious about the purchase of property in Dominion, you approach the information desk and ask one of the free receptionists where you'd need to go to talk about such a matter.
+		你想知道如何在御城区购买地产，走向咨询台，并询问空闲的接待员在哪里可以讨论此类事宜。
 	</p>
 	<p>
-		[genericFemale.speech(Oh, I'm sorry, [pc.sir],)] the receptionist says, the forced smile on her face making it clear that she isn't actually sorry at all. [genericFemale.speech(The transfer of property rights have recently been suspended, and there's no telling when they might be available again. For future reference, the Bureau of Property and Commerce is down the corridor on the right. Have a good day!)]
+		[genericFemale.speech(哦，对不起，[pc.sir]，)]接待员说，她脸挤出来的微笑很明显地表明她其实一点也没感到抱歉。[genericFemale.speech(地权转让最近已暂停，也没有确切的时间表说明何时可能再次开放。供您日后参考，财产与商业局就在右侧走廊的尽头。祝您今天愉快！)]
 	</p>
 	<p>
-		Looking right past you, the girl then calls out to someone who was waiting behind you, and proceeds to ask them if they need any assistance. As your question has now been answered, you step away from the desk and wonder what to do next...
+		女孩越过你，然后对站在你身后等待的某人喊了一声，并继续问他们需要什么服务。由于你已经得到了回答，你从服务台上走开，开始考虑接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CITY_HALL_CORRIDOR -->
 	
 	<htmlContent tag="CITY_HALL_CORRIDOR"><![CDATA[
 	<p>
-		Just like the main foyer, the corridors of Dominion's city hall are a grand affair. Polished marble flooring, high-vaulted ceilings, and impressive portraits lining the walls all give the impression of great wealth and importance.
+		和主门厅一样，御城区市政厅的走廊也是气势恢宏。抛光的大理石地面、高高拱起的天花板、墙壁上栩栩如生的肖像，无不给人一种富丽堂皇的印象。
 	</p>
 	<p>
-		Although there are several office workers and self-important bureaucrats hurrying to and fro, the corridor is easily wide enough to accommodate all of you, and, thanks to this abundance of space, you find that there's no need for anyone to adjust their tangent as you all continue on your separate ways.
+		尽管有几个上班族和自视甚高的官僚在匆匆来往，但走廊的宽度足以轻松容纳你们所有人，而且，空间充裕，你发现在你们继续各行其是的时候，没有人需要调整自己的路线。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CITY_HALL_WAITING_AREA -->
 	
 	<htmlContent tag="CITY_HALL_WAITING_AREA"><![CDATA[
 	<p>
-		For those residents of Dominion who have specific business with the city's administrators, a large, well-furnished waiting room has been provided. Sitting upon the many low-backed sofas which litter this open area, there are numerous members of the public, and you notice that many of them are holding little ticket stubs. A large, arcane-powered notification board is fixed to the far wall, and you see that it reads: <i>Now serving: [#((game.getHourOfDay()*115)+(game.getDayMinutes()%60)).toFixed(0)]</i>
+		为那些与城市管理者有特殊业务往来的御城区居民提供了一个宽敞、设施齐全的等候室。在这块空地上的许多低靠背沙发上，坐着许多市民，你发现他们中的许多人都拿着小票根。远处的墙壁上固定着一块巨大的、由奥术驱动的告示牌，写着：<i>正在服务：[#((game.getHourOfDay()*115)+(game.getDayMinutes()%60)).toFixed(0)]</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_QUEST"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_cityHallLodgerBoardSeen))
 		<p>
-			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn your attention towards the small, free-standing notice board that's positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to this notice board and start reading.
+			一想到要指望御城区官僚系统的慈悲，你不由得打了个寒颤，将注意力转向了等候室一侧的一个小型、独立的公告板。好奇地想知道能在上面贴的许多便条中发现些什么，你迅速走到这个公告板前开始阅读。
 		</p>
 		<p>
-			It soon becomes apparent that the only item which holds any interest to you is the piece of paper titled 'Lodgers Seeking Rooms To Rent'. While you're sure that this will be a way in which to meet new and exciting people, there's not much point in looking over the list of Lodgers until you've gained Lilaya's permission to invite guests to stay in one of the empty rooms in her mansion. Resolving to ask your [lilaya.relation(pc)] about that as soon as possible, you [pc.step] back and prepare to continue on your way...
+			很快，你发现唯一让你有兴趣的是一张标题为“寻求租房的住客”的纸。虽然你确信这将是一种认识新朋友和令人兴奋的人的方式，但在得到莉莱雅的允许，让客人住在她府邸的空房间里之前，查看住客名单没有多大意义。决定尽快询问你的[lilaya.relation(pc)]，你[pc.step]回去，准备继续你的旅程……
 		</p>
 	#ELSE
 		<p>
-			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn away and prepare to leave, but as you do so, you spot a small, free-standing notice board positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to the notice board and start reading.
+			一想到要指望御城区官僚系统的慈悲，你不由得打了个寒颤，然后准备离开，但在这样做的时候，你注意到等候室一侧有一个小型、独立的公告板。好奇地想知道能在上面贴的许多便条中发现些什么，你迅速走到这个公告板前开始阅读。
 		</p>
 		<p>
-			Unfortunately, the vast majority of the posters and proclamations pinned to the board are either advertising some frivolous product or making a common-sense public service announcement. There is, however, one piece of paper which attracts your attention, as it's titled 'Lodgers Seeking Rooms To Rent'. Wondering if this could be a way in which to meet new and exciting people, you decide to ask Lilaya about inviting guests to stay in one of the empty rooms in her mansion. Until such time as you've gained her permission, there's not much point in looking over the list of Lodgers, and so you [pc.step] back and prepare to continue on your way...
+			不幸的是，大多数贴在公告板上的海报和声明要么是一些琐碎的产品的广告，要么是在做一些常识性的公共服务公告。然而，有一张标题为“寻求租房的住客”的纸引起了你的注意。想知道这是否可能是一种认识新朋友和令人兴奋的人的方式，你决定问问莉莱雅是否可以邀请客人住在她府邸的空房间里。在得到她的允许之前，查看住客名单没有多大意义，因此你[pc.step]回去，准备继续你的旅程……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_NO_ROOM"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_cityHallLodgerBoardSeen))
 		<p>
-			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn your attention towards the small, free-standing notice board that's positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to this notice board and start reading.
+			一想到要指望御城区官僚系统的慈悲，你不由得打了个寒颤，将注意力转向了等候室一侧的一个小型、独立的公告板。好奇地想知道能在上面贴的许多便条中发现些什么，你迅速走到这个公告板前开始阅读。
 		</p>
 		<p>
-			It soon becomes apparent that the only item which holds any interest to you is the piece of paper titled 'Lodgers Seeking Rooms To Rent'. Unfortunately, you don't currently have any free guest rooms in Lilaya's mansion where you could house a lodger, and so with little point in reading over the list of names, you [pc.step] back and prepare to continue on your way...
+			你很快发现，唯一能引起你兴趣的是一张写着“租客求房”标题的纸。不幸的是，目前莉莱雅的豪宅里没有任何空余的客房可以容纳房客了，所以接着阅读这份名单几乎没有意义，于是你向后退了退，准备继续前进……
 		</p>
 	#ELSE
 		<p>
-			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn away and prepare to leave, but as you do so, you spot a small, free-standing notice board positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to the notice board and start reading.
+			一想到要指望御城区官僚系统的慈悲，你不由得打了个寒颤，然后准备离开，但在这样做的时候，你注意到等候室一侧有一个小型、独立的公告板。好奇地想知道能在上面贴的许多便条中发现些什么，你迅速走到这个公告板前开始阅读。
 		</p>
 		<p>
-			Unfortunately, the vast majority of the posters and proclamations pinned to the board are either advertising some frivolous product or making a common-sense public service announcement. There is, however, one piece of paper which attracts your attention, as it's titled 'Lodgers Seeking Rooms To Rent'. Unfortunately, you don't currently have any free guest rooms in Lilaya's mansion where you could house a lodger, and so with little point in reading over the list of names, you [pc.step] back and prepare to continue on your way...
+			不幸的是，绝大多数在广告牌上的海报和公告要么是在宣传一些无聊的商品，要么是在做些常识性的公益广告。然而，有一张纸吸引了你的注意，因为它的标题是“房客寻找出租的房间”。遗憾的是，目前在莉莱雅的豪宅里你没有闲置客房，所以没有必要阅读名单，你[pc.step]开，准备继续上路……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_AVAILABLE"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_cityHallLodgerBoardSeen))
 		<p>
-			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn your attention towards the small, free-standing notice board that's positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to this notice board and start reading.
+			一想到要指望御城区官僚系统的慈悲，你不由得打了个寒颤，将注意力转向了等候室一侧的一个小型、独立的公告板。好奇地想知道能在上面贴的许多便条中发现些什么，你迅速走到这个公告板前开始阅读。
 		</p>
 		<p>
-			It soon becomes apparent that the only item which holds any interest to you is the piece of paper titled 'Lodgers Seeking Rooms To Rent'. You wonder whether you should take some time to read over the list of names of people looking for lodgings, or simply [pc.step] back and continue on your way...
+			你很快发现，唯一能引起你兴趣的是一张写着“租客求房”标题的纸。你思索着是否要花些时间看看那些求租者的名字，或是[pc.step]回你原本的路线上……
 		</p>
 	#ELSE
 		<p>
-			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn away and prepare to leave, but as you do so, you spot a small, free-standing notice board positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to the notice board and start reading.
+			一想到要指望御城区官僚系统的慈悲，你不由得打了个寒颤，然后准备离开，但在这样做的时候，你注意到等候室一侧有一个小型、独立的公告板。好奇地想知道能在上面贴的许多便条中发现些什么，你迅速走到这个公告板前开始阅读。
 		</p>
 		<p>
-			Unfortunately, the vast majority of the posters and proclamations pinned to the board are either advertising some frivolous product or making a common-sense public service announcement. There is, however, one piece of paper which attracts your attention, as it's titled 'Lodgers Seeking Rooms To Rent'. You wonder whether you should take some time to read over the list of names of people looking for lodgings, or simply [pc.step] back and continue on your way...
+			不幸的是，大多数贴在公告板上的海报和声明要么是在宣传一些无聊的产品，要么是在发布一些常识性的公共服务公告。然而，有一张标题为“寻求租房的住客”的纸引起了你的注意。你琢磨着要不要花些时间阅读一下寻找住处的人的名单，或者只是[pc.step]回去，继续你的旅程……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CITY_HALL_WAITING_AREA_LODGER_LIST -->
 	
 	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_LIST"><![CDATA[
 	<p>
-		Thinking that it would be fun to have someone staying in one of the guest rooms which you've had prepared, you take a closer look at the piece of paper titled 'Lodgers Seeking Rooms To Rent' and spend some time reading through the list of names...
+		你打算让别人住在你准备好的客房里，觉得这样很有意思。于是你仔细看了看那张“寻找租房的房客”单子，花了些时间读了读上面的名单……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LODGER_IMPORT_START -->
 	
 	<htmlContent tag="LODGER_IMPORT_START"><![CDATA[
 	<p>
-		You can import any of your previously exported characters in order to add them to the lodger list. Once imported, this character will show up in this area, and by interacting with them you can add them as a friendly occupant.
+		你可以导入以前导出的任何角色，以便将其添加到联系列表中。导入后，该角色将显示在此区域，通过与他们互动，你就可以将他们添加为友人住客。
 	</p>
 	<p>
-		<i>You can export any character in the game by viewing their character sheet and pressing the little export button in the bottom-right of the screen.</i>
+		<i>你可以查看游戏中任意角色的角色卡，然后点击屏幕右下方的导出按钮，导出该角色。</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CITY_HALL_APPROACH_LODGER -->
 	
 	<htmlContent tag="CITY_HALL_APPROACH_LODGER"><![CDATA[
 	<p>
-		Liking the sound of '[npc.name]', you look around the waiting room to see if you can find anyone matching [npc.her] description. Sure enough, after a brief [pc.walk] around the many low-backed sofas which litter the waiting room, you see [npc.a_race] sitting beside a small suitcase which undoubtedly contains [npc.her] possessions.
+		你很喜欢“[npc.name]”这个名字，于是环顾等待室寻找着符合描述的人。不出所料，在休息室满地的低背沙发间[pc.walk]片刻之后，你看见一名[npc.a_race]坐在一个小行李箱旁边，里面毫无疑问装着[npc.her]的个人物品。
 	</p>
 	<p>
-		[pc.Walking] up to this [npc.race], you ask [npc.her] if [npc.sheIs] the same [npc.name] who's put [npc.her] name down on the list of lodgers looking for rooms to rent.
+		你[pc.Walking]向这名[npc.race]，并询问[npc.her]是否是房客名单上寻找租房的[npc.name]。
 		#IF(npc.isShy())
-			 Shyly averting [npc.her] [npc.eyes+] and looking down at the floor,
+			[npc.name]羞怯地撇开[npc.eyes+]看着地面，
 		#ELSEIF(npc.isConfident())
-			 Confidently standing up and fixing [npc.her] [npc.eyes+] upon your face,
+			[npc.name]信心满满地站起身，[npc.eyes+]直视着你的脸，
 		#ELSE
-			 Looking up at you with [npc.her] [npc.eyes+],
+			[npc.name]看着你，
 		#ENDIF
 		#IF(npc.isMute())
-			 the [npc.name] reveals the fact that [npc.sheIs] mute by simply nodding [npc.her] head up and down as a means of conveying a positive response.
+			[npc.name]上下点了点头，通过这种表示肯定的方式，你明白[npc.her]是个哑巴。
 		#ELSE
-			  the [npc.name] replies,
+			[npc.name]回答道，
 			#IF(npc.isSelfish())
-				 [npc.speech(Yes, that's me. You've got a room for me, right? I deserve it more than anyone else.)]
+				[npc.speech(是的，我就是。你有房间可以租给我，对吧？我比其他人都更有资格。)]
 			#ELSEIF(npc.isKind())
-				 [npc.speech(Yes, that's me. You've got a room for me? If someone needs it more than me then you can give it to them, but if not, then I'd really appreciate having a place to stay.)]
+				[npc.speech(是的，我就是。你有房间可以租给我吗？如果有人比我更需要的话，你可以把房间给他们，但如果没有，我会为得到地方栖身而深表感激。)]
 			#ELSE
-				 [npc.speech(Yes, that's me. You've got a room for me?)]
+				[npc.speech(是的，我就是。你有房间可以租给我吗？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Taking hold of [npc.her] suitcase, [npc.name] seems ready to leave, and so you need to quickly decide whether or not you really do want to offer [npc.herHim] a room in which to stay...
+		[npc.name]拎着[npc.her]的手提箱，似乎准备离开。因此你需要马上决断，要不要分出房间，让[npc.herHim]住下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LODGER_DENIED -->
 	
 	<htmlContent tag="LODGER_DENIED"><![CDATA[
 	<p>
-		Not liking your first impression of [npc.name], you tell [npc.herHim] that you've changed your mind and don't have a room to offer [npc.herHim] after all. Letting out a weary sigh, the [npc.race] picks up [npc.her] suitcase and
+		由于[npc.name]没有给你留下什么好印象，你告诉[npc.herHim]你改变了主意，没有房间可以提供给[npc.herHim]了。这个[npc.race]疲惫地叹了口气，提起了[npc.her]的手提箱然后
 		#IF(npc.isMute())
-			 silently heads for the exit.
+			安静地离开了。
 		#ELSE
-			 heads for the exit, muttering, [npc.speech(I'll have better luck elsewhere in the Realm...)]
+			一边喃喃自语着：[npc.speech(希望在其他地方我能运气好点吧……)]一边离开了
 		#ENDIF
 	</p>
 	<p>
-		With [npc.name] having swiftly departed, you're left standing in the waiting room wondering what to do next...
+		[npc.name]匆匆离去，你独自站在等候室里思考着接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LODGER_GIVEN_ROOM -->
 	
 	<htmlContent tag="LODGER_GIVEN_ROOM"><![CDATA[
 	<p>
-		Responding to [npc.namePos] question by confirming that you are indeed here to offer [npc.herHim] a room, you ask the [npc.race] if [npc.sheIs] ready to leave this place straight away.
+		你肯定地答复了[npc.namePos]，你确实是来这里给[npc.herHim]提供房间的。之后，你问这个[npc.race]，准没准备好立刻离开这里。
 	</p>
 	#IF(npc.isMute())
 		<p>
-			As [npc.sheIs] unable to talk, [npc.name] responds once again by nodding [npc.her] head, before taking hold of [npc.her] suitcase and accompanying you out of city hall and down the street. As the two of you travel beside one another, [npc.name] seems to be getting more excited about [npc.her] future, and by the time that you've arrived at Lilaya's mansion, the previous worn-out look on [npc.her] face has been replaced by an expression of wide-eyed wonder.
+			由于[npc.sheIs]无法讲话，[npc.name]再次重重地点了点头，以示回复。然后拿起了[npc.her]的手提箱跟随你走出了市政厅到达了大街上。你们两个并排走在大街上，[npc.name]看起来对[npc.her]的未来越来越兴奋。当你们到达莉莱雅的豪宅时，[npc.her]睁大了眼睛，先前疲惫的表情迅速被惊奇和不敢相信所取代。
 		</p>
 		<p>
-			Although [npc.she] can't talk, [npc.name] makes [npc.her] emotions known by giving you a look of utter disbelief as you head to the front door. After telling [npc.herHim] that this is where you live, the [npc.race] shakes [npc.her] head in wonder, before following you up the steps to the mansion's entrance.
+			尽管[npc.she]不能说话，但[npc.name]还是在你走向前门时给了你一个完全难以置信的表情，以此来表达[npc.her]的震惊。在告诉[npc.herHim]这里就是你住的地方之后，这个[npc.race]惊奇地摇了摇[npc.her]的头，然后跟着你走上了通往豪宅入口的台阶。
 		</p>
 		<p>
-			After Rose has opened the door, you accompany [npc.name] through the mansion and show [npc.herHim] to [npc.her] room. Putting [npc.her] suitcase down beside the bed, [npc.she] turns towards you and offers you [npc.her] sincere thanks by bowing [npc.her] head and smiling at you. Telling [npc.name] that [npc.sheIs] very welcome, you tell [npc.herHim] to take [npc.her] time getting settled in, before [pc.stepping] out of [npc.her] room and giving [npc.herHim] some privacy in which to unpack. Feeling as though you've done a good thing, you wonder what to do next...
+			萝丝为你们打开门后，你陪着[npc.name]穿过豪宅把[npc.herHim]带到了[npc.her]的房间。在床边放下[npc.her]的手提箱后，[npc.she]转向你，对着你颔首微笑，以表达[npc.her]衷心的感谢。你告诉[npc.name]，这里十分欢迎[npc.sheIs]，让[npc.herHim]慢慢来，好好安顿下来。然后[pc.stepping]出了[npc.her]的房间，给[npc.herHim]一点隐私空间来收拾行李。你带着或许做了一件好事的愉悦心情，开始思考接下来做些什么……
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(Yes,)] [npc.she] immediately replies, before sighing, [npc.speech(I've been waiting here for an opportunity like this for days...)]
+			[npc.speech(是的，)][npc.she]立刻回复道，然后叹了口气，[npc.speech(我已经在这里呆了好几天了，就为了等到这样一次机会……)]
 		</p>
 		<p>
-			Taking hold of [npc.her] suitcase, [npc.name] accompanies you out of city hall and down the street. As the two of you travel and talk with one another, [npc.name] starts to get more excited about [npc.her] future, and by the time that you've arrived at Lilaya's mansion, the previous worn-out look on [npc.her] face has been replaced by an expression of wide-eyed wonder.
+			提着[npc.her]的手提箱，[npc.name]跟上你离开了市政厅走到街上。你们俩并排走在路上，彼此聊着天。[npc.name]开始对[npc.her]的未来越来越兴奋。当你们到达莉莱雅的豪宅时，[npc.her]睁大了眼睛，先前疲惫的表情迅速被惊奇和不敢相信所取代。
 		</p>
 		<p>
-			[npc.speech(You mean, you're offering me a place to stay in <i>there</i>?)] [npc.name] asks in disbelief as you head to the front door. After responding in the positive, the [npc.race] sighs, [npc.speech(Wow...)]
+			[npc.speech(你是说，你要给我住的地方在这里面？<i>这个地方</i>？)]在你走向前门时，[npc.name]不可置信地问你。在得到肯定的答复后，这个[npc.race]惊叹着，[npc.speech(好家伙……)]
 		</p>
 		<p>
-			After Rose has opened the door, you accompany [npc.name] through the mansion and show [npc.herHim] to [npc.her] room. Putting [npc.her] suitcase down beside the bed, [npc.she] turns towards you and offers you [npc.her] sincere thanks, 
+			萝丝为你们打开门后，你陪着[npc.name]穿过豪宅，把[npc.herHim]带到[npc.her]的房间。在床边放下[npc.her]的手提箱后，[npc.she]转向你并且向你表达[npc.her]由衷的感谢，
 			#IF(npc.hasJob())
-				 [npc.speech(Thank you so much for offering me this place to stay. I've got a pretty steady job, so paying rent won't be an issue. Seriously, thank you.)]
+				[npc.speech(实在是太感谢你能为我提供住的地方了。我有一份挺稳定的工作来着，所以不用担心房租的问题，我一定会按时付给你的。真的，太感谢你了。)]
 			#ELSE
-				 [npc.speech(Thank you so much for offering me this place to stay. I don't have a job right now, but I'll be sure to find one soon, and then paying rent won't be an issue. Seriously, thank you.)]
+				[npc.speech(实在是太感谢你能为我提供住的地方了。虽然我现在暂时还没有工作，但是我保证会尽快找到一份的，到时候就不用担心房租的问题了。真的，太感谢你了。)]
 			#ENDIF
 		</p>
 		<p>
-			Telling [npc.name] that [npc.sheIs] very welcome, you tell [npc.herHim] to take [npc.her] time getting settled in, before [pc.stepping] out of [npc.her] room and giving [npc.herHim] some privacy in which to unpack. Feeling as though you've done a good thing, you wonder what to do next...
+			你告诉[npc.name]，这里十分欢迎[npc.sheIs]，让[npc.herHim]慢慢来，好好安顿下来，然后退出了[npc.her]的房间，给[npc.herHim]一些私人空间来收拾行李。带着或许做了一件好事的愉悦心情，你开始思考接下来做些什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CITY_HALL_OFFICE -->
 	
 	<htmlContent tag="CITY_HALL_OFFICE"><![CDATA[
 	<p>
-		The door to the office before you is made from rich mahogany and frosted glass, with a brass plate fixed to the centre which reads: <i>'Private'</i>. Knowing that a private office such as this one would have nothing to offer you except for tedious, pointless government bureaucracy, you decide against taking a look inside, and instead turn around and prepare to continue on your way elsewhere...
+		你面前的办公室门由高档的红木和磨砂玻璃制造而成，其正中有一个黄铜铭牌：<i>“私人区域”</i>。你清楚从这样的私人办公室里除了冗长乏味，毫无意义的官腔之外什么也得不到，你放弃了进去看一眼的念头，而是转身并准备前往其他地方……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CITY_HALL_STAIRS -->
 	
 	<htmlContent tag="CITY_HALL_STAIRS"><![CDATA[
 	<p>
-		While the polished marble stairs before you offer access to the upper floors of city hall, you are unable to scale them, as a barrier of red rope bars your passage. A little sign hangs from this obstacle, which reads:
+		你面前抛光的大理石台阶直通市政厅，但却被红绳阻挡，使你无法通行。红绳上挂着一个小标语，其上写着：
 	</p>
 	<p style='text-align:center;'>
-		<i>'Public access prohibited!<br/>Admission only to visitors accompanied by a member of staff.'</i>
+		<i>“谢绝公众进入！<br/>仅限工作人员陪同时进入。”</i>
 	</p>
 	<p>
-		While there is obviously nothing really stopping you from simply stepping over this barrier and proceeding upstairs, you know that only the dull inner-workings of government bureaucracy would await you, and so, with that in mind, you decide not to waste your time and choose to head elsewhere...
+		尽管你知道这障碍挡不住你走上楼梯，但你明白上面只会有政府部门无趣的内部员工。于是，怀着这种念头，你决定不去浪费时间，而是去别的地方转转…… 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	

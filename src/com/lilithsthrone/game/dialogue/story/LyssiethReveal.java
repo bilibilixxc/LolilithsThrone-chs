@@ -51,7 +51,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Let Elizabeth lead you towards Lyssieth's throne room.", FORWARDS_1) {
+				return new Response("跟随", "让伊丽莎白领着你进入莉西丝的王座间。", FORWARDS_1) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()+1));
@@ -78,7 +78,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Onwards", "Carry on following Elizabeth.", FORWARDS_2) {
+				return new Response("继续", "继续跟着伊丽莎白。", FORWARDS_2) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()+1));
@@ -105,7 +105,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Enter", "You ready yourself for meeting Lyssieth, and follow Elizabeth through the open doors.",
+				return new Response("进入", "你做好与莉西丝见面的准备，跟随伊丽莎白走进开着的门。",
 						FORWARDS_3) {
 					@Override
 					public void effects() {
@@ -133,7 +133,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lyssieth's office", "Allow [siren.name] to introduce you to Lyssieth.", OFFICE) {
+				return new Response("莉西丝的办公室", "让[siren.name]将你介绍给莉西丝。", OFFICE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()+1));
@@ -160,7 +160,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Defend", "It looks like Lyssieth is about to attack you! Defend yourself!", OFFICE_REACTION);
+				return new Response("防御", "莉西丝似乎想要攻击你！准备防御！", OFFICE_REACTION);
 			}
 			return null;
 		}
@@ -181,7 +181,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Resist", "Don't give in! Resist Lyssieth's spell and try to remain on your [pc.feet].", OFFICE_REACTION_BETRAYAL) {
+				return new Response("抵抗", "不要放弃！抵抗莉西丝的法术，努力站起来。", OFFICE_REACTION_BETRAYAL) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "OFFICE_REACTION_RESIST"));
@@ -189,7 +189,7 @@ public class LyssiethReveal {
 				};
 				
 			} else if(index==2) {
-				return new Response("Submit", "Yes... Kneel... Just give in...", OFFICE_REACTION_BETRAYAL) {
+				return new Response("屈服", "好吧……下跪……就屈服吧……", OFFICE_REACTION_BETRAYAL) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "OFFICE_REACTION_SUBMIT"));
@@ -215,7 +215,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Stand", "Do as Lyssieth says and push yourself to your feet.", OFFICE_REACTION_END);
+				return new Response("站起", "听从莉西丝的指示，站起身子。", OFFICE_REACTION_END);
 			}
 			return null;
 		}
@@ -236,7 +236,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Forwards", "Move up beside Lyssieth so that she's able to teleport you and [siren.name] to Lilaya's home.", OFFICE_TELEPORT);
+				return new Response("向前", "走到莉西丝身边，让让她把你和[siren.name]传送到莉莱雅的家里。", OFFICE_TELEPORT);
 			}
 			return null;
 		}
@@ -257,7 +257,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Arrival", "The three of you arrive in Lyssieth's laboratory.", OFFICE_TELEPORT_ARRIVE) {
+				return new Response("到达", "你们三个到达了莉西丝的实验室中。", OFFICE_TELEPORT_ARRIVE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB);
@@ -288,7 +288,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Arthur", "Hear Arthur's theory.", LAB_ARTHUR_THEORY);
+				return new Response("亚瑟", "听听亚瑟的理论。", LAB_ARTHUR_THEORY);
 			}
 			return null;
 		}
@@ -309,7 +309,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("What?!", "Express your alarm at what Lyssieth has just said.", LAB_WORLD_REVEAL);
+				return new Response("什么？！", "对于莉西丝说出的事实表达震惊。", LAB_WORLD_REVEAL);
 			}
 			return null;
 		}
@@ -330,7 +330,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lilaya", "While [siren.name] and Arthur seem to be taking this news well, Lilaya looks incredibly distressed, and it appears as though she has something to say.", LAB_LILAYA_ANGERY);
+				return new Response("莉莱雅", "虽然[siren.name]和亚瑟似乎都轻松地接受了事实，但莉莱雅看起来很苦恼，像是有话要说。", LAB_LILAYA_ANGERY);
 			}
 			return null;
 		}
@@ -351,7 +351,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Calm", "Calm Lilaya down by reassuring her that she's still fundamentally the same person you've always known.", LAB_LILAYA_CALMED_DOWN);
+				return new Response("安慰", "安慰莉莱雅，说她仍旧还算是你认识的那个人，让她冷静下来。", LAB_LILAYA_CALMED_DOWN);
 			}
 			return null;
 		}
@@ -373,9 +373,9 @@ public class LyssiethReveal {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked1)) {
-					return new Response("World", "You've already asked Lyssieth about the rest of the world.", null);
+					return new Response("世界", "你已经问过莉西丝这个世界其他地方的事情了。", null);
 				} else {
-					return new Response("World", "Ask Lyssieth why the rest of the world hasn't done something already.", LAB_QUESTION) {
+					return new Response("世界", "询问莉西丝为什么世界上其他地方没有采取行动。", LAB_QUESTION) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_QUESTION_WORLD"));
@@ -387,9 +387,9 @@ public class LyssiethReveal {
 				
 			} if(index==2) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked2)) {
-					return new Response("Betrayal", "You've already asked Lyssieth about why she chose to betray Lilith.", null);
+					return new Response("背叛", "你已经问过莉西丝为什么选择背叛莉莉丝了。", null);
 				} else {
-					return new Response("Betrayal", "Ask Lyssieth why she has chosen to betray Lilith.", LAB_QUESTION) {
+					return new Response("背叛", "询问莉西丝她为什么要背叛莉莉丝。", LAB_QUESTION) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_QUESTION_BETRAYAL"));
@@ -400,9 +400,9 @@ public class LyssiethReveal {
 				
 			} else if(index==3) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked3)) {
-					return new Response("People", "Lilaya has already asked Lyssieth about people's transformations.", null);
+					return new Response("人类", "莉莱雅已经问过人类转化的问题了。", null);
 				} else {
-					return new Response("People", "Lilaya wants to ask about the way in which people were changed into different version of themselves.", LAB_QUESTION) {
+					return new Response("人类", "莉莱雅想要问询人类被转化成各种样子，是依照了什么规律。", LAB_QUESTION) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_QUESTION_PEOPLE"));
@@ -413,9 +413,9 @@ public class LyssiethReveal {
 				
 			} else if(index==4) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked4)) {
-					return new Response("Spell", "[siren.Name] has already asked Lyssieth about Lilith's reality-altering spell.", null);
+					return new Response("法术", "[siren.Name]已经问过莉西丝这种扭曲现实的法术了。", null);
 				} else {
-					return new Response("Spell", "[siren.Name] wants to ask about Lilith's reality-altering spell.", LAB_QUESTION) {
+					return new Response("法术", "[siren.Name]想要询问有关莉莉丝这个扭曲现实的法术的问题。", LAB_QUESTION) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_QUESTION_SPELL"));
@@ -426,9 +426,9 @@ public class LyssiethReveal {
 				
 			} else if(index==5) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked5)) {
-					return new Response("Reversal", "Arthur has already asked Lyssieth about the possibility of reversing Lilith's spell.", null);
+					return new Response("逆转", "亚瑟已经问过莉西丝，是否有可能逆转莉西丝的法术。", null);
 				} else {
-					return new Response("Reversal", "Arthur wants to ask about the possibility of reversing Lilith's spell.", LAB_QUESTION) {
+					return new Response("逆转", "亚瑟想要询问是否有可能逆转莉西丝的法术。", LAB_QUESTION) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_QUESTION_REVERSAL"));
@@ -443,9 +443,9 @@ public class LyssiethReveal {
 						|| !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked3)
 						|| !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked4)
 						|| !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethQuestionAsked5)) {
-					return new Response("Continue", "You need to ask Lyssieth about the spell before continuing.", null);
+					return new Response("继续", "在继续之前，你应该先问问莉西丝法术的事情。", null);
 				} else {
-					return new Response("Continue", "Lyssieth has no more time for questions.", LAB_QUESTION_END);
+					return new Response("继续", "莉西丝没时间再回答其他问题了。", LAB_QUESTION_END);
 				}
 			}
 			
@@ -486,7 +486,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Liberate", "Tell everyone that you want to defeat Lilith and end her tyrannical rule.", LAB_ENDING) {
+				return new Response("解放", "告诉大家你想击败莉莉丝，将世界从她的暴政下解放。", LAB_ENDING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_ENDING_LIBERATE"));
@@ -499,7 +499,7 @@ public class LyssiethReveal {
 				};
 				
 			} else if(index==2) {
-				return new Response("Usurp", "Say that you intend to defeat Lilith, and take her place as the ruler of all Dominion.", LAB_ENDING) {
+				return new Response("篡位", "说你想击败莉莉丝，并且取代她成为御城区的统治者。", LAB_ENDING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_ENDING_USURP"));
@@ -511,7 +511,7 @@ public class LyssiethReveal {
 				};
 				
 			} else if(index==3) {
-				return new Response("Join", "Say that you want to join Lilith.", LAB_ENDING) {
+				return new Response("加入", "说你想加入莉莉丝。", LAB_ENDING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "LAB_ENDING_JOIN"));
@@ -524,8 +524,8 @@ public class LyssiethReveal {
 				};
 				
 			} else if(index==4) {
-				return new Response("Nothing",
-						"You really don't care about saving the world or any of that nonsense. It's far less effort to just decide to do nothing and leave the fate of the world to people with more enthusiasm.",
+				return new Response("没什么想说",
+						"你对于拯救世界的屁话没什么兴趣。什么都不做，把这个世界的命运交给那些更有精力的家伙可简单多了。",
 						LAB_ENDING) {
 					@Override
 					public void effects() {
@@ -557,7 +557,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Impossible", "Ask Lyssieth how you're meant to fight an elder lilin and her army of demonic centaurs.", LAB_ENDING_MINOTALLYS);
+				return new Response("不可能", "询问莉西丝你怎么才能击败一位莉琳长老，还有一支由恶魔半人马组成的军队。", LAB_ENDING_MINOTALLYS);
 			}
 			return null;
 		}
@@ -575,7 +575,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Youko?", "Ask Meraxis who the youko are.", LAB_ENDING_SIREN_HELP);
+				return new Response("妖狐？", "询问梅拉克西丝谁是妖狐。", LAB_ENDING_SIREN_HELP);
 			}
 			return null;
 		}
@@ -597,7 +597,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Return", "Return with Lyssieth to her office, leaving Lilaya and [siren.name] behind.", LAB_ENDING_RETURN) {
+				return new Response("返回", "跟莉西丝回到办公室，让莉莱雅和[siren.name]留在这。", LAB_ENDING_RETURN) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LYSSIETH_PALACE, PlaceType.LYSSIETH_PALACE_OFFICE);
@@ -627,8 +627,8 @@ public class LyssiethReveal {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getRace()==Race.HUMAN) {
-					return new Response("Refuse sex",
-							"Tell Lyssieth that you don't want to have sex, and if it's necessary for her to orgasm, she'll just have to masturbate.",
+					return new Response("拒绝做爱",
+							"告诉莉西丝你不想做爱，如果她需要高潮，那自慰就好了。",
 							LAB_ENDING_RETURN_DECLINE_SEX) {
 						@Override
 						public void effects() {
@@ -637,8 +637,8 @@ public class LyssiethReveal {
 						}
 					};
 				} else {
-					return new Response("Refuse sex",
-							"Tell Lyssieth that you're not interested in having sex with her, and allow her to infuse her power into your aura.",
+					return new Response("拒绝做爱",
+							"告诉莉西丝你没兴趣跟她做爱，直接让她将能力注入你的灵气中。",
 							LAB_ENDING_RETURN_DECLINE_SEX) {
 						@Override
 						public void effects() {
@@ -649,8 +649,8 @@ public class LyssiethReveal {
 				}
 				
 			} else if(index==2) {
-				return new ResponseSex("Pussy",
-						"Tell Lyssieth that you want to have sex with her, and that you want to dominantly use her pussy.",
+				return new ResponseSex("小穴",
+						"告诉莉西丝你想跟她做爱，而且想要作为主导者使用她的蜜穴。",
 						true,
 						true,
 						new SMLyssiethSex(
@@ -663,8 +663,8 @@ public class LyssiethReveal {
 						UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "SEX_PUSSY"));
 				
 			} else if(index==3) {
-				return new ResponseSex("Cock",
-						"Tell Lyssieth that you want to have sex with her, and that she should grow a cock and dominantly fuck you.",
+				return new ResponseSex("肉棒",
+						"告诉莉西丝你想跟她做爱，让她长出一根鸡巴，作为主导者来干你。",
 						true,
 						true,
 						new SMLyssiethSex(
@@ -720,7 +720,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Vision", "You have a strange vision, in which you are Lyssieth...", POWER_VISION) {
+				return new Response("幻象", "你看到了奇怪的幻象，你仿佛变成了莉西丝……", POWER_VISION) {
 					@Override
 					public void effects() {
 //						setPlayerAsLyssieth();
@@ -731,7 +731,7 @@ public class LyssiethReveal {
 		}
 	};
 	
-	public static final DialogueNode POWER_VISION = new DialogueNode("Vision", "You have a strange vision, in which you are Lyssieth...", true) {
+	public static final DialogueNode POWER_VISION = new DialogueNode("幻象", "你看到了奇怪的幻象，你是莉西丝……", true) {
 
 		@Override
 		public String getContent() {
@@ -741,7 +741,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wake up", "You regain consciousness in Lyssieth's office.", POWER_EXPLANATION) {
+				return new Response("清醒", "你恢复了意识，仍在莉西丝的办公室。", POWER_EXPLANATION) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(Main.game.getPlayer().addSpecialPerk(Perk.POWER_OF_LYSSIETH_4));
@@ -767,7 +767,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lap pillow", "Take up Lyssieth's offer, and continue resting your head on her lap as you tell her about the vision you saw.", POWER_EXPLANATION_CONTINUE) {
+				return new Response("膝枕", "接受莉西丝的建议，继续躺在她的大腿上，跟她讲述你看到的幻象。", POWER_EXPLANATION_CONTINUE) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "POWER_EXPLANATION_LAP"));
@@ -775,7 +775,7 @@ public class LyssiethReveal {
 				};
 				
 			} else if(index==2) {
-				return new Response("Stand up", "You don't feel comfortable like this. Stand up and tell her about the vision you saw.", POWER_EXPLANATION_CONTINUE) { // But why
+				return new Response("站起", "你觉得不太舒服。站起身后跟她讲述你看到的幻象。", POWER_EXPLANATION_CONTINUE) { // But why
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("quests/main/lyssiethReveal", "POWER_EXPLANATION_STAND_UP"));
@@ -801,7 +801,7 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Step out", "Step outside Lyssieth's office so that she can fetch [siren.name].", END_SIREN) {
+				return new Response("离开", "走出莉西丝的办公室，让她把[siren.name]带回来。", END_SIREN) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LYSSIETH_PALACE, PlaceType.LYSSIETH_PALACE_SIREN_OFFICE);
@@ -831,15 +831,15 @@ public class LyssiethReveal {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Map", "Take the world map that is being given to you.", END_FINAL) {
+				return new Response("地图", "拿走递给你的地图。", END_FINAL) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.LYSSIETH_PALACE, PlaceType.LYSSIETH_PALACE_CORRIDOR, false);
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.MAIN, Quest.MAIN_3_ELIS));
 						Main.game.getTextEndStringBuilder().append(
 								"<div class='container-full-width' style='text-align:center;'>"
-										+ "[style.colourExcellent(You have unlocked the world map!)]<br/>"
-										+ "<i>It can be viewed either through your phone's map menu, or by travelling to one of Dominion's exit tiles and accessing the 'World travel' menu.</i>"
+										+ "[style.colourExcellent(你解锁了世界地图！)]<br/>"
+										+ "<i>可以通过手机的地图菜单看到，或者行进至御城区的任何一处出口地块，选择“世界旅行”菜单。</i>"
 								+ "</div>");
 					}
 				};

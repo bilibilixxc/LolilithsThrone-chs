@@ -1,46 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- PARTNER_INTERRUPTED  -->
 	
 	<htmlContent tag="PARTNER_INTERRUPTED"><![CDATA[
-		[claire.speechNoEffects(~Mmm!~ Yes!)] Claire moans, before suddenly opening her eyes wide and hissing, [claire.speechNoEffects(I think I hear someone coming!)]
+		[claire.speechNoEffects(~嗯嗯！~好舒服！)]克莱尔呻吟道，忽然她瞪大了眼睛，连忙压低了声音，[claire.speechNoEffects(好像有人来了！)]
 	</p>
 	<p>
-		Sure enough, as you look over towards the door to the storeroom, you see the handle beginning to turn.
+		的确，你看向储藏室的门，门把手正在转动。
 		#IF(sex.getSexPositionSlot(pc).isStanding(pc))
-			Before you can make a move, Claire frantically grabs hold of you and pulls you behind a nearby filing cabinet. With her hot breath falling on your bare [pc.skin], [npc.she] hisses, [claire.speech(Don't make a sound!)]
+			在你从僵硬中恢复之前，克莱尔猛地把你拉进身旁的文件柜里。她呼出的热气喷在你赤裸的[pc.skin]上，[npc.she]发出嘶嘶声，[claire.speech(别出声！)]
 		#ELSE
-			Before you can make a move, Claire frantically grabs hold of you and pulls you down onto the carpeted floor behind a stack of papers. With her hot breath falling on your bare [pc.skin], [npc.she] hisses, [claire.speech(Don't make a sound!)]
+			在你从僵硬中恢复之前，在你反应过来之前，克莱尔猛地抓住你，把你按在地毯上，躲在一堆文件后面。她呼出的热气喷在你赤裸的[pc.skin]上，[npc.she]发出嘶嘶声，[claire.speech(别出声！)]
 		#ENDIF
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsBad(There is an Enforcer entering the stockroom!)]
+		[style.italicsBad(一名执法者闯进了储藏室！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- PLAYER_STAY_QUIET and PLAYER_KEEP_GOING -->
 	
 	<htmlContent tag="ENFORCER_ENTERING"><![CDATA[
-		From your hiding place, you and Claire are only just concealed from the angle of the doorway, and as you hear it swing open, you wonder if the two of you are about to be discovered. Turning to look back over their shoulder, the Enforcer who's entering the room shouts,
+		躲在你们的藏身之处，进门的人只是刚好看不见你和克莱尔，你听见开门的吱嘎声，你担惊受怕，畏惧着被发现。你扭头看向他们的肩膀，跨入房间的执法者大喊道：
 	#IF(RND.nextInt(100)<50)
 		[style.speechFeminine(
 	#ELSE
 		[style.speechMasculine(
 	#ENDIF
 	[style.random(
-		What?! Just one box?!
+		什么？！只有一盒？！
 		|
-		Yeah, I know, I'm getting it now!
+		对，我知道了，我这就去拿！
 		|
-		Did you say you were after the red ones?! ... Ok!
+		你不是说在那个红的后面么……，好吧。
 		|
-		I think I know where they're kept by now! I <i>have</i> been working here for two years, remember?!
+		我想到他们在哪儿了！我<i>已经</i>在这工作两年了，忘了吗？
 		|
-		Yeah, I'll grab you some pencils as well, hold on!)]
+		嗯嗯，我再给你带点铅笔，稍等一下！)]
 	)]
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

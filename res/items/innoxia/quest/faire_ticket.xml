@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>0</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Faire ticket]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Faire tickets]]></namePlural>
-		<description><![CDATA[A type of fairground ticket given out at the Farmer's Market in Elis. It can be traded in at some of the stalls for special rewards.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[集市票]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[集市票]]></namePlural>
+		<description><![CDATA[这是在伊利斯农贸市场发放的一种展销会券，可以在一些摊位上兑换特殊奖励。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,12 +23,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Exchanged for rewards at stalls in the Farmer's Market]]></line>
+			<line><![CDATA[在农贸市场的摊位上兑换奖励]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			A small paper ticket, bearing the icon of a bull's head and the word 'Faire'. It can be traded in for special rewards at some of the stalls in the Farmer's Market at Elis.
+			这是一张小纸质票，上面印有一个公牛头像和字样“Faire”。可以在伊利斯农贸市场的一些摊位上兑换特殊奖励。
 		</p>
 		]]></applyEffects>
 		
@@ -38,10 +38,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the ticket...
+		[npc.Name]仔细观察这张票……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off [npc.her] ticket to [npc2.name]...
+		[npc.Name]向[npc2.name]展示[npc.her]的票……
 		]]></otherUse>
 	</useDescriptions>
 

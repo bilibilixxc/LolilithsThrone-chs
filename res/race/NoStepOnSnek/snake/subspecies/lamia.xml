@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>NoStepOnSnek_snake</race>
 	<colour>NoStepOnSnek_snake</colour>
@@ -25,38 +25,38 @@
 	<iconName displaySize="60">snake</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>snake</bookIconName>
-	<bookName>Clutching Coils</bookName>
+	<bookName><![CDATA[缠紧盘绕]]></bookName>
 	<basicDescriptionId>SNAKE_BASIC</basicDescriptionId>
 	<advancedDescriptionId>SNAKE_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[lamia]]></name>
-			<namePlural><![CDATA[lamias]]></namePlural>
-			<singularMaleName><![CDATA[lamia-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[lamia-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[lamia-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[lamia-girls]]></pluralFemaleName>
+			<name><![CDATA[拉弥亚]]></name>
+			<namePlural><![CDATA[拉弥亚]]></namePlural>
+			<singularMaleName><![CDATA[拉弥亚蛇男]]></singularMaleName>
+			<singularFemaleName><![CDATA[拉弥亚蛇女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[拉弥亚蛇男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[拉弥亚蛇女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
-	<description><![CDATA[An anthropomorphic snake with the lower body of a typically-oversized feral snake, known as a 'lamia'.]]></description>
+	<description><![CDATA[一种人形的蛇，下半身是典型的超大蛇身，被称为 “拉弥亚” 。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[naga]]></name>
-			<namePlural><![CDATA[nagas]]></namePlural>
-			<singularMaleName><![CDATA[naga]]></singularMaleName>
-			<singularFemaleName><![CDATA[naga]]></singularFemaleName>
-			<pluralMaleName><![CDATA[nagas]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[naga]]></pluralFemaleName>
+			<name><![CDATA[娜迦]]></name>
+			<namePlural><![CDATA[娜迦]]></namePlural>
+			<singularMaleName><![CDATA[娜迦]]></singularMaleName>
+			<singularFemaleName><![CDATA[娜迦]]></singularFemaleName>
+			<pluralMaleName><![CDATA[娜迦]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[娜迦]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[snake]]></feralName>
-		<feralNamePlural><![CDATA[snakes]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[snake]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[snake]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[snakes]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[snakes]]></feralPluralFemaleName>
+		<feralName><![CDATA[蛇]]></feralName>
+		<feralNamePlural><![CDATA[蛇]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[蛇]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[蛇]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[蛇]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[蛇]]></feralPluralFemaleName>
 		<legConfiguration>TAIL_LONG</legConfiguration>
 		<sizeHeight>false</sizeHeight>
 		<size>180</size>
@@ -70,7 +70,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		Although [npc.namePos] snake-like body is very quick and strong, [npc.she] can't regulate [npc.her] body temperature very well, and so [npc.sheIs] weak to both arcane ice and fire. On the positive side, [npc.she] [npc.has] a strong affinity with arcane poison.
+		虽然[npc.namePos]蛇一样的身体非常敏捷且强壮，但[npc.she]不能很好地调节[npc.her]的体温，因此[npc.sheIs]对奥术火焰和奥术冰霜虚弱。好的方面，[npc.she]对奥术毒素有很高的亲和力。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="10">MAJOR_PHYSIQUE</attribute>

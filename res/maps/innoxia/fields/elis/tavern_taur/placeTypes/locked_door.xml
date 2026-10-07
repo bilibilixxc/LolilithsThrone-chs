@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[locked door]]></name>
-	<tooltipDescription><![CDATA[The door which leads to the stable at the rear of the tavern is kept locked.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside the locked door in 'The Centaur's Sword']]></virginityLossDescription>
+	<name><![CDATA[锁住的门]]></name>
+	<tooltipDescription><![CDATA[酒馆后面那扇通往马场的门一直紧锁着。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“半人马之剑”酒馆内上锁的门旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

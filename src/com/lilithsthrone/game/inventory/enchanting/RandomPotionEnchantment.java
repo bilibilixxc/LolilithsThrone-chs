@@ -212,10 +212,10 @@ public class RandomPotionEnchantment {
 
 	public String getName(GameCharacter target) {
 		if(name==null || name.isEmpty()) {
-			return "Youko's Mystery Potion";
+			return "妖狐的神秘魔药";
 		}
 		if(defaultPrepend) {
-			return "Youko's Potion of "+UtilText.parse(target, name);
+			return "妖狐的"+UtilText.parse(target, name)+"魔药";
 		} else {
 			return UtilText.parse(target, name);
 		}
@@ -279,9 +279,9 @@ public class RandomPotionEnchantment {
 			} else {
 				sb.append("<p>");
 					if(target.isPlayer()) {
-						sb.append("As you swallow down the last of the potion, you hear a ghostly, female voice speaking inside your head, ");
+						sb.append("当你咽下最后一口魔药时，你听到一个幽灵般的女性声音在你脑海中响起，");
 					} else {
-						sb.append(UtilText.parse(target, "As [npc.name] swallows down the last of the potion, [npc.she] hears a ghostly, female voice speaking inside [npc.her] head, "));
+						sb.append(UtilText.parse(target, "当[npc.name]咽下最后一口魔药时，[npc.she]听到一个幽灵般的女性声音在[npc.her]脑海中响起，"));
 					}
 					sb.append(UtilText.parse(target, "[style.thoughtFeminineStrong("+this.getApplicationSpeech()+")]"));
 				sb.append("</p>");
@@ -301,12 +301,12 @@ public class RandomPotionEnchantment {
 			} else {
 				sb.append("<p>");
 					if(target.isPlayer()) {
-						sb.append("As the potion's effects come to an end, you hear "+(initialSpeechApplied?"the ethereal feminine voice speaking to you once again,":"a ghostly, female voice speaking inside your head,"));
+						sb.append("随着魔药的效果逐渐消退，你听到"+(initialSpeechApplied?"那个奥术女性声音再次对你说道，":"一个幽灵般的女性声音在你脑海中响起，"));
 					} else {
-						sb.append(UtilText.parse(target, "As the potion's effects come to an end, [npc.name] hears "
+						sb.append(UtilText.parse(target, "随着魔药的效果逐渐消退，[npc.name]听到"
 								+(initialSpeechApplied
-										?"the ethereal feminine voice speaking to [npc.herHim] once again,"
-										:"a ghostly, female voice speaking inside [npc.her] head,")));
+										?"那个奥术女性声音再次对[npc.herHim]说道，"
+										:"一个幽灵般的女性声音在[npc.her]脑海中响起，")));
 					}
 					sb.append(UtilText.parse(target, "[style.thoughtFeminineStrong("+this.getApplicationSpeechEnd()+")]"));
 				sb.append("</p>");

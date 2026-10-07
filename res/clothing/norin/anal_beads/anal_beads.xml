@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>300</value> <!--10 flames = £1 ~ $1.5-->
-		<determiner><![CDATA[a string of]]></determiner>
-		<name><![CDATA[anal beads]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[anal beads]]></namePlural>
-		<description><![CDATA[A string of six large balls of arcane-cured silicone, which are meant to be inserted into the anus.]]></description>
+		<determiner><![CDATA[一串]]></determiner>
+		<name><![CDATA[肛门拉珠]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[肛门拉珠]]></namePlural>
+		<description><![CDATA[一串由六个大硅胶球组成的拉珠，用于插入肛门。]]></description>
 		
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -57,27 +56,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(push)] the anal beads into [npc.her] [npc.ass+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the anal beads into [npc2.namePos] [npc2.ass+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(hold)] [npc2.name] still as [npc.she] roughly [npc.verb(force)] the anal beads into [npc2.her] [npc2.ass+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将拉珠塞进[npc.her][npc.ass+]里。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]把拉珠塞进[npc2.namePos][npc2.ass+]。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]并且粗暴地把拉珠塞进[npc2.her][npc2.ass+]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] anal beads out of [npc.her] [npc.ass+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] anal beads out of [npc2.her] [npc2.ass+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.namePos] anal beads and [npc.verb(yank)] them out of [npc2.her] [npc2.ass+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将拉珠从[npc.her][npc.ass+]里拔出。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]把拉珠从[npc2.namePos][npc2.ass+]拔出。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]紧紧抓住[npc2.namePos]的拉珠并从[npc2.her][npc2.ass+]里扯出来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

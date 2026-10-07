@@ -82,9 +82,9 @@ public class Scarlett extends NPC {
 	}
 	
 	public Scarlett(boolean isImported) {
-		super(isImported, new NameTriplet("Scarlett"), "Kardos",
-				"Scarlett is the owner of the rather unoriginally named establishment 'Scarlett's shop'."
-						+ " Rude, loud, and quick to anger, Scarlett isn't a very pleasant person to have to deal with.",
+		super(isImported, new NameTriplet("斯嘉丽"), "卡多斯",
+				"斯嘉丽是是这家名字特别突兀的商店“斯嘉丽小店”的老板。"
+						+ "斯嘉丽粗鲁、聒噪、易怒，打起交道来总会让人恼火。",
 				23, Month.NOVEMBER, 14,
 				5, Gender.M_P_MALE, Subspecies.HARPY, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP, true);
@@ -330,30 +330,30 @@ public class Scarlett extends NPC {
 	public String getDescription() {
 		if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.ROMANCE_HELENA, Quest.ROMANCE_HELENA_4_SCARLETTS_RETURN)) {
 			return UtilText.parse(this,
-					"Scarlett is currently employed in the very same establishment that she used to own as Helena's personal assistant."
-						+ " Showing respect only to her matriarch, she's extremely rude and obnoxious towards everyone else.");
+					"斯嘉丽现在是一名职员，正在那家她曾经拥有的店铺里打工，担任海伦娜的私人助理。"
+						+ "她只会对族长展现出稍有的尊重，而面对其他人则及其粗鲁，格外令人厌恶。");
 		}
 		if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_F_SCARLETTS_FATE)) {
 			if(this.getLocationPlace().getPlaceType()==PlaceType.GENERIC_EMPTY_TILE) {
 				return UtilText.parse(this,
-						"Once the owner of a shop in Slaver Alley, Scarlett is now a slave [npc.herself]."
-								+ " Having been sold by you, there's no knowing where [npc.she] is or what [npc.sheIs] doing...");
+						"斯嘉丽曾是奴隶巷一家商店的老板，现在自己却成了奴隶。"
+								+ "[npc.she]被你卖掉后不知所踪，也无处得知当前的状态……");
 				
 			} else if(this.isSlave()) {
 				return UtilText.parse(this,
-						"Once the owner of a shop in Slaver Alley, Scarlett is now a slave [npc.herself]."
-								+ " Rude, loud, and quick to anger, [npc.she] isn't a very pleasant person to have to deal with.");
+						"斯嘉丽曾是奴隶巷一家商店的老板，现在自己却成了奴隶。"
+								+ "[npc.she]粗鲁、聒噪、易怒，打起交道来总会让人恼火。");
 				
 			} else {
 				return UtilText.parse(this,
-						"Once the owner of a shop in Slaver Alley, Scarlett was enslaved by [helena.name], before then being set free by you."
-								+ " Rude, loud, and quick to anger, [npc.she] isn't a very pleasant person to have to deal with.");
+						"斯嘉丽曾是奴隶巷一家商店的老板，曾经被[helena.name]奴役，随后又被你放归自由。"
+								+ "[npc.she]粗鲁、聒噪、易怒，打起交道来总会让人恼火。");
 			}
 			
 		} else {
 			return UtilText.parse(this,
-					"Scarlett is the owner of the rather unoriginally named establishment, 'Scarlett's shop'."
-							+ " Rude, loud, and quick to anger, [npc.she] isn't a very pleasant person to have to deal with.");
+					"斯嘉丽是是这家名字特别突兀的商店“斯嘉丽小店”的老板。"
+							+ "[npc.she]粗鲁、聒噪、易怒，打起交道来总会让人恼火。");
 		}
 	}
 	
@@ -382,7 +382,7 @@ public class Scarlett extends NPC {
 		if(this.getVirginityLoss(sexType)!=null
 				&& sexType.equals(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS))
 				&& this.getVirginityLoss(sexType).getKey().isEmpty()) {
-			return UtilText.parse(this, "[npc.Name] lost [npc.her] virginity to one of [npc.her] harpy friends up in Helena's nest.");
+			return UtilText.parse(this, "[npc.Name]将贞操给了[npc.her]在海伦娜巢穴的一个哈比朋友。");
 		}
 		return super.getVirginityLossDescription(sexType);
 	}
@@ -476,8 +476,8 @@ public class Scarlett extends NPC {
 	}
 	
 	public void resetName() {
-		this.setName(new NameTriplet("Scarlett"));
-		this.setSurname("Kardos");
+		this.setName(new NameTriplet("斯嘉丽"));
+		this.setSurname("卡多斯");
 	}
 	
 	public void completeBodyReset() {

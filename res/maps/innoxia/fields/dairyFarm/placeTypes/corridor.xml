@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Corridor]]></name>
-	<tooltipDescription><![CDATA[A clean, tiled corridor links the dairy farm's barns.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[走廊]]></name>
+	<tooltipDescription><![CDATA[一条干净的瓷砖走廊将乳业农场的各个棚屋连接起来。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的走廊上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

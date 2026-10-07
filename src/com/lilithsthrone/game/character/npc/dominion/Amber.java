@@ -81,8 +81,8 @@ public class Amber extends NPC {
 	}
 	
 	public Amber(boolean isImported) {
-		super(isImported, new NameTriplet("Amber"), "Lireceamartu",
-				"The highest-ranking of Zaranix's maids, Amber is clearly outraged by the fact that you're wandering around her master's house unsupervised.",
+		super(isImported, new NameTriplet("安柏"), "莉瑞恰马尔图",
+				"作为扎拉尼克斯的最高阶女仆，安柏显然因为你能在无人监督的情况下在她主人的房子旁闲逛而愤懑。",
 				117, Month.OCTOBER, 17,
 				15,
 				null, null, null,
@@ -340,23 +340,23 @@ public class Amber extends NPC {
 	@Override
 	public String getName(boolean applyNameAlteringEffects) {
 		if(!playerKnowsName) {
-			return "Fiery Maid";
+			return "暴躁女仆";
 			
 		} else {
-			return "Amber";
+			return "安柏";
 		}
 	}
 	
 	@Override
 	public String getDescription() {
 		if(!playerKnowsName) {
-			return "This fiery maid is clearly outraged by the fact that you're wandering around her master's house unsupervised";
+			return "这个暴躁女仆显然因为你能在无人监督的情况下在她主人的房子旁闲逛而愤懑。";
 			
 		} else {
-			return "The highest-ranking of Zaranix's maids, Amber is one of the most striking succubi you've ever seen."
-					+ " Her amber hair and eyes, from which she gets her name, glow with a brilliant luminosity, providing a stark contrast to her jet-black ebony skin."
+			return "作为扎拉尼克斯的最高女仆，安柏是你曾见过的最妩媚的魅魔之一。"
+					+ "人如其名，她那琥珀色的头发与眼睛发出宝石般的光辉，与她的乌黑皮肤形成鲜明的对比。"
 					+ "<br/>"
-					+ "Amber is ruthlessly sadistic, and delights in imposing her dominance over her subordinates.";
+					+ "安柏是个残酷的施虐狂，喜欢把自己的支配强加于下属。";
 		}
 	}
 	
@@ -397,10 +397,10 @@ public class Amber extends NPC {
 		return "<p>"
 					+ UtilText.parse(target,
 							UtilText.returnStringAtRandom(
-							"Amber's eyes burn with an incandescent fury as she delivers a kick straight into [npc.namePos] side!",
-							"With a furious cry, Amber punches [npc.name] square in the chest!",
-							"Spitting curses, Amber furiously kicks at [npc.namePos] shins!",
-							"Amber's hair, burning with the same fiery fury as her eyes, swishes through the air as she spins to one side and delivers a solid punch to [npc.namePos] [npc.arm]!"))
+							"安柏的眼中燃起了恐怖的怒火，向着[npc.namePos]身侧踢了过去！",
+							"安柏怒吼一声，一拳打在[npc.Name]胸口！",
+							"安柏口中骂骂咧咧，愤怒地踢在了[npc.namePos]的小腿上！",
+							"安柏的头发跟眼中一样，也燃起了怒火，她转身扭腰，嗖地一声，重重地拳打在[npc.namePos][npc.arm]上！"))
 				+ "</p>";
 	}
 			
@@ -408,9 +408,9 @@ public class Amber extends NPC {
 	public String getSpellDescription() {
 		return "<p>"
 				+ UtilText.returnStringAtRandom(
-						"Letting out a wild scream, Amber thrusts her arm into mid air as she casts a spell!",
-						"Spitting curses, Amber locks her blazing eyes onto yours, before casting a spell!",
-						"With an angry curse, Amber steps forwards and casts a spell!") 
+						"安柏高声急呼，手臂高举到半空，释放了法术！",
+						"安柏口吐咒言，目不转睛地盯着你的眼睛，释放了法术！",
+						"安柏怒骂一声，冲上前来释放了法术！") 
 			+ "</p>";
 	}
 	
@@ -438,32 +438,32 @@ public class Amber extends NPC {
 		}
 	}
 	
-	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Amber staggers back, bracing herself against the wall as she lets out one last hateful curse,"
-						+ " [amber.speech(You... "+(Main.game.getPlayer().isFeminine()?"bitch...":"bastard...")+")]"
+						+ "安柏蹒跚着退下，最后靠着墙壁恨恨地骂道，"
+						+ "[amber.speech(你这……"+(Main.game.getPlayer().isFeminine()?"婊子……":"混蛋……")+")]"
 					+ "</p>"
 					+ "<p>"
-						+ "It's quite clear that she's unable to continue fighting any longer, and after just a moment, the effects of your powerful arcane aura make themselves known."
-						+ " Amber's angry scowl trails off into an exceptionally lewd moan, and, averting the gaze of her luminescent eyes from you for the first time, she looks down at her groin and slips a hand under her dress."
+						+ "显然她已经无法继续战斗了，过了一会儿，你强大的奥术灵气的效果便展现出来。"
+						+ "安柏的怒骂声渐渐转变成为格外下流的呻吟，头一次将那发光的眼睛从你身上移开，看向两腿之间，接着一只手伸进裙摆下。"
 					+ "</p>"
 					+ "<p>"
-						+ "[amber.speech(~Aaah!~ Fuck...)]"
-						+ " she moans, the movement of her arm making it quite clear that she's fingering herself."
+						+ "[amber.speech(~啊！~操……)]"
+						+ "她呻吟着，手臂的动作明显是在给自己扣。"
 					+ "</p>"
 					+ "<p>"
-						+ "Despite the noise of your fight, there's no sign of the other maid whose voice you heard upon entering the house."
-						+ " Given the chance to have some fun with this angry, and now very horny, maid, you wonder if you should take it, or continue on your way to find Zaranix."
+						+ "虽然战斗引发了不小的噪音，但是却没有听到其他女仆进到屋子里的声音。"
+						+ "现在正是绝佳的时机，能够与这位总是怒气冲天但现在欲火焚身的女仆爽上一爽，你思索起来是否应该趁上这个机会，还是继续去找扎拉尼克斯。"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue exploring Zaranix's house.", PlaceType.ZARANIX_GF_ENTRANCE.getDialogue(false)) {
+				return new Response("继续", "继续探索扎拉尼克斯家。", PlaceType.ZARANIX_GF_ENTRANCE.getDialogue(false)) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getPlayerCell().getDialogue(false);
@@ -471,8 +471,8 @@ public class Amber extends NPC {
 				};
 				
 			} if(index==2) {
-				return new ResponseSex("Use Amber",
-						"Have some fun with this fiery maid.",
+				return new ResponseSex("使用安柏",
+						"跟这个火气很大的女仆爽一爽。",
 						true,
 						false,
 						new SMGeneric(
@@ -482,18 +482,18 @@ public class Amber extends NPC {
 						null),
 						AFTER_SEX_VICTORY,
 						"<p>"
-							+ "It doesn't look like any of the other maids of the household are coming to help her, so you decide to take this opportunity to have a little fun with Amber."
-							+ " Stepping over to where she's leaning against the wall, you reach forwards and take hold of her arm, before pulling her hand out from under her dress."
-							+ " Denied the freedom to get herself off, Amber pitifully looks up into your eyes, and instead of fury, you see them filled with burning lust."
+							+ "看来同住一家的其他女仆并没有来帮她，你决定抓住机会，跟安柏玩一玩。"
+							+ "你靠近她依靠的墙边，攥住了她的胳膊，接着把她的手从裙子下面扯了出来。"
+							+ "安柏被剥夺了发泄的自由，可怜巴巴地抬起头，紧盯着你的眼睛，其中却没有丝毫愤怒，而是充满了燃烧的欲望。"
 						+ "</p>"
 						+ "<p>"
-							+ "She pushes herself off from the wall, wrapping her arms around your back and desperately pressing her [amber.lips+] against yours."
-							+ " You reciprocate the gesture, and after spending a few moments of sliding your tongues into one another's mouths, you pull back, grinning..."
+							+ "她推了一把离开了墙壁，上前抱住了你，立刻将她[amber.lips+]压在了你的嘴上。"
+							+ "你也做出了回应，舌头在彼此的嘴里纠缠了片刻后，你们抽回舌头，淫笑起来……"
 						+ "</p>");
 				
 			} else if(index==3) {
-				return new ResponseSex("Submit",
-						"Amber's fiery personality is seriously turning you on. You can't bring yourself to take the dominant role, but you <i>do</i> want to have sex with her. Perhaps if you submitted, she'd be willing to fuck you?",
+				return new ResponseSex("顺从",
+						"安柏的暴脾气让你性欲高涨。你没法主导性爱，但又<i>非常</i>想跟她做爱。或许只要选择顺从，她也会愿意干你的？",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true, false,
 						new SMGeneric(
@@ -503,22 +503,22 @@ public class Amber extends NPC {
 						null),
 						AFTER_SEX_VICTORY,
 						"<p>"
-							+ "Despite her currently-defeated state, you find yourself incredibly turned on by Amber's dominant, fiery personality."
-							+ " Not willing to take the dominant role, but with a deep desire to have sex with the now-very-horny succubus, you walk up to where she's leaning against the wall, and sigh,"
-							+ " [pc.speech('Miss Amber' was it? Erm... If you're feeling a little horny, perhaps you could use me? I mean, I-)]"
+							+ "尽管她战败了，但你却发现自己被安柏霸道而暴躁的性格深深吸引了。"
+							+ "你不愿主导性爱，但又渴望和这位欲火焚身的魅魔做爱，于是走到她依靠的墙边，叹道，"
+							+ "[pc.speech(‘安柏小姐’，是吗？嗯……你如果想要的话，或许可以用我来发泄？我是说，我——)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Despite the fact that you're a stranger in her master's house, Amber looks up at you with an intense, burning passion in her eyes."
-							+ " Sliding her hand out from under her dress, she pushes herself off of the wall, interrupting your sentence as she grabs your head and pulls you into a desperate kiss."
+							+ "尽管你是闯入她主人屋子里的陌生人，安柏却带着热烈的情感望向你。"
+							+ "她从裙子底下抽出手来，把自己从墙边推离，控制住你的脑袋，直接来了一场热烈的吻，同时也打断了你的话。"
 						+ "</p>"
 						+ "<p>"
-							+ "You reciprocate the gesture, but only spend a few moments sliding your tongues into one another's mouths before Amber pulls back, moaning,"
-							+ " [amber.speech(Good bitch! Fuck... I'm so fucking horny! I <i>need</i> you!)]"
+							+ "你做出了回应，但安柏只亲吻了片刻，就退出去呻吟道，"
+							+ "[amber.speech(乖婊子！操……我太他妈想要了！我<i>想要</i>你！)]"
 						+ "</p>");
 				
 			} else if (index == 4) {
-				return new Response("Transformations",
-						"Get Amber to use [amber.her] demonic powers to transform [amber.herself]...",
+				return new Response("转化",
+						"让安柏使用[kelly.her]的恶魔能力来转化自己……",
 						BodyChanging.BODY_CHANGING_CORE){
 					@Override
 					public void effects() {
@@ -533,7 +533,7 @@ public class Amber extends NPC {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("Continue", "", true) {
+	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("继续", "", true) {
 
 		@Override
 		public String getContent() {
@@ -541,23 +541,23 @@ public class Amber extends NPC {
 			if(Main.sex.getNumberOfOrgasms(Main.game.getNpc(Amber.class)) >= Main.game.getNpc(Amber.class).getOrgasmsBeforeSatisfied()) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "Amber lets out a deeply satisfied sigh, before sinking to the floor in total exhaustion."
-							+ " Despite her fatigue, you see one of her hands slip down between her legs, and, quite clearly still overwhelmed by lust, she starts masturbating in front of you."
-							+ " She's obviously not going to pose much of a threat like this, so you turn your attention back towards the task at hand; that of finding Zaranix and rescuing Arthur."
+							+ "安柏深深地叹了一口气，然后筋疲力尽地倒在地上。"
+							+ "尽管她很疲惫，但你看到她仍将其中一只手伸到两腿之间，很明显，她仍然欲火缠身，她开始在你面前自慰起来。"
+							+ "她显然不会构成太大的威胁，所以你把注意力转向手头的任务；找到扎拉尼克斯并营救亚瑟。"
 						+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "Amber lets out a desperate whine, before sinking to the floor and pressing both of her hands to her groin."
-							+ " Having not been satisfied, she's quite clearly still overcome by her intense lust, and starts frantically masturbating right there on the floor."
-							+ " She's obviously not going to pose much of a threat like this, so you turn your attention back towards the task at hand; that of finding Zaranix and rescuing Arthur."
+							+ "安柏发出一声渴求的呜叫，双手抚上腹股沟，倒在地上。"
+							+ "很明显，她由于没有得到满足而沉溺于欲望之中，瘫在地上疯狂地自慰。"
+							+ "她显然不会构成太大的威胁，所以你把注意力转向手头的任务；找到扎拉尼克斯并营救亚瑟。"
 						+ "</p>");
 			}
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-							+ "Conscious of the fact that there are other maids to look out for, you prepare to set off further into the house..."
+							+ "你考虑到还有其他女仆需要担心，便准备向房子的更深处前进……"
 					+ "</p>");
 			
 			return UtilText.nodeContentSB.toString();
@@ -566,7 +566,7 @@ public class Amber extends NPC {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue exploring Zaranix's house.", Main.game.getPlayerCell().getDialogue(false)) {
+				return new Response("继续", "继续探索扎拉尼克斯家。", Main.game.getPlayerCell().getDialogue(false)) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getPlayerCell().getDialogue(false);
@@ -579,31 +579,31 @@ public class Amber extends NPC {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("Defeated", "", true) {
+	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("落败", "", true) {
 
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "The fiery-haired maid proves to be too much for you to handle, and, unable to continue fighting, you stumble back against a nearby wall."
-						+ " Amber's mocking laughter rings out as she sees that you're defeated, and, stepping towards you, she growls,"
-						+ " [amber.speech(You stupid fucking bitch! Now you're going to <i>really</i> pay!)]"
+						+ "事实证明，你应付不来这个红头发女仆。你失去了战斗能力，跌跌撞撞地靠在旁边的墙上。"
+						+ "安柏看到你被打败，发出了嘲弄的笑声。她向你走来，咆哮着，"
+						+ "[amber.speech(你这个愚蠢的婊子！现在你<i>真的</i>要付出代价了！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You look up to see the burning amber eyes of the angry succubus glaring into yours, and before you can do or say anything, she reaches up with one hand and firmly grabs you by the neck."
-						+ " You let out a coughing splutter as her grip tightens, which only serves to make her let out another mocking laugh,"
-						+ " [amber.speech(Hahaha! Pathetic!)]"
+						+ "你抬头一看，魅魔那燃烧的琥珀色眼睛怒视着你，在你能做出任何反应前，她伸出一只手，紧紧抓住你的脖子。"
+						+ "她抓得更紧，使你咳嗽起来，只引得她又发出一阵嘲讽的笑声，"
+						+ "[amber.speech(哈哈哈！真可悲！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "With that, she suddenly hurls you to the floor, and you let out a cry as you fall down onto all fours."
-						+ " Amber steps around behind you, and as you try to crawl away, she delivers a stinging sharp slap to your rear end,"
-						+ " [amber.speech(Stupid bitch! You've got me all worked up now! Time to teach you a lesson!)]"
+						+ "说完，她猛地将你摔到地上，你四肢着地，发出一声惨叫。"
+						+ "安柏在你身后踱来踱去，当你试图爬走时，她狠狠地拍了你屁股一巴掌，"
+						+ "[amber.speech(愚蠢的婊子！你把我惹急了！是时候教训教训你了！)]"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Used", "Amber starts fucking you.",
+				return new ResponseSex("被使用", "安柏开始操你。",
 						false, false,
 						new SMAmberDoggyFucked(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Amber.class), SexSlotAllFours.BEHIND)),
@@ -612,9 +612,9 @@ public class Amber extends NPC {
 						null,
 						AFTER_SEX_DEFEAT,
 						"<p>"
-							+ "Amber takes a firm grasp of your hips, before roughly lifting your ass a little higher."
-							+ " The sharp slap of her hand across your right cheek causes you to let out a little cry, which is met by the maid's aggressive growl,"
-							+ " [amber.speech(Squeal all you want bitch, <i>you're mine now!</i>)]"
+							+ "安柏牢牢把住你的屁股，粗暴地让它再撅高点。"
+							+ "她的手狠狠扇了你右脸一巴掌，你的呜咽被淹没在女仆气势汹汹的咆哮中，"
+							+ "[amber.speech(婊子，你就吱吱叫吧，<i>你现在是我的了！</i>)]"
 						+ "</p>");
 			} else {
 				return null;
@@ -622,25 +622,25 @@ public class Amber extends NPC {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("Used", "", true) {
+	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("被使用", "", true) {
 
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "You collapse to the floor, totally exhausted from Amber's rough treatment of you."
-						+ " With a final, scornful sneer, Amber stands up,"
-						+ " [amber.speech(That's all bitches like you are good for! Now get the fuck out of this house!)]"
+						+ "你瘫倒在地，安柏粗暴的对待使你筋疲力尽。"
+						+ "最后，安柏挂着轻蔑的冷笑起身，"
+						+ "[amber.speech(像你这样的贱人也就这样了！现在给我滚出去！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Reaching down to grab "+(Main.game.getPlayer().getHairRawLengthValue()>4?"a fistful of your [pc.hair(true)]":"you by the back of the neck")+", Amber mercilessly drags you to the front door."
-						+ " Yanking it open, she spits one last hateful remark your way, before literally kicking you out into the street and slamming the door behind you."
+						+ "安柏伸手抓住你的"+(Main.game.getPlayer().getHairRawLengthValue()>4?"一撮[pc.hair(true)]":"脖子")+"，毫不留情地把你拖到前门。"
+						+ "她拉开门，对你吐出最后一句憎恨的话，然后一脚把你踹到街上，砰地一声甩上门。"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Thrown out", "Amber throws you out into the street.", PlaceType.DOMINION_DEMON_HOME.getDialogue(false)) {
+				return new Response("被扔出去", "安柏把你扔到了街上。", PlaceType.DOMINION_DEMON_HOME.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_DEMON_HOME, false);
@@ -682,15 +682,15 @@ public class Amber extends NPC {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(UtilText.returnStringAtRandom(
-				"Letting out a mocking laugh, Amber roughly grabs hold of you and growls, ",
-				"Amber's glowing eyes open wide, and with a cruel laugh, she reveals, ",
-				"Letting out a cruel, mocking laugh, Amber greedily absorbs your energy and taunts, "
+				"安柏发出嘲弄的笑声，粗暴地抓住你，咆哮道，",
+				"安柏炯炯有神的眼睛睁得大大的，带着残忍的笑意，说道，",
+				"安柏发出残忍、嘲弄的笑声，贪婪地吸收着你的能量并嘲弄道，"
 				));
 		
 		sb.append(UtilText.returnStringAtRandom(
-				"[npc.speech(I'm going to drain all of your power! You'll be nothing but my worthless pet by the time I'm done with you!)]",
-				"[npc.speech(You pathetic bitch! All of your power will be mine!)]",
-				"[npc.speech(What a pathetic bitch you are to be having your power drained away like this!)]"));
+				"[npc.speech(我要榨干你所有的能量！等我解决了你，你就只是我的一只宠物罢了！)]",
+				"[npc.speech(你这个可悲的婊子！你所有的力量都将属于我！)]",
+				"[npc.speech(你真是个可悲的贱人，你的力量就这样被耗尽了！)]"));
 		
 		return UtilText.parse(this, target, sb.toString());
 	}
@@ -778,13 +778,13 @@ public class Amber extends NPC {
 	public String getRoughTalk() {
 		if(Main.sex.getSexManager().getDominants().containsKey(Main.game.getNpc(Zaranix.class))) { // Assisting the player to suck Zaranix's cock:
 			if(Main.game.getNpc(Zaranix.class).getArousal()>=95) {
-				return "[npc.speech(Get ready for your [zaranix.master]'s cum, you worthless whore!)]";
+				return "[npc.speech(准备迎接你[zaranix.master]的精液，你这个没用的婊子！)]";
 			}
 			return UtilText.returnStringAtRandom(
-					"[npc.speech(That's right, you worthless bitch, show your [zaranix.master] that you're nothing but [zaranix.his] slutty little fuck-toy!)]",
-					"[npc.speech(Hah! I love watching pathetic, submissive sluts getting face-fucked!)]",
-					"[npc.speech(You're nothing but your [zaranix.master]'s worthless fuck-toy, understand?! Your mouth belongs to [zaranix.him]!)]",
-					"[npc.speech(That's right! You love taking [zaranix.his] cock, don't you, you worthless slut?!)]");
+					"[npc.speech(没错，你这个没用的婊子，让你的[zaranix.master]看看你不过是[zaranix.his]的小肉便器！)]",
+					"[npc.speech(哈！我最喜欢看可悲又顺从的荡妇被操脸了！)]",
+					"[npc.speech(你只不过是你[zaranix.master]的没用的肉便器，明白吗？你的嘴属于[zaranix.him]！)]",
+					"[npc.speech(这就对了！你喜欢[zaranix.his]的鸡巴，是不是，你这个没用的荡妇？)]");
 		}
 		return super.getRoughTalk();
 	}
@@ -793,13 +793,13 @@ public class Amber extends NPC {
 	public String getDirtyTalk() {
 		if(Main.sex.getSexManager().getDominants().containsKey(Main.game.getNpc(Zaranix.class))) { // Assisting the player to suck Zaranix's cock:
 			if(Main.game.getNpc(Zaranix.class).getArousal()>=95) {
-				return "[npc.speech(Get ready for your [zaranix.master]'s cum, you worthless whore!)]";
+				return "[npc.speech(准备迎接你[zaranix.master]的精液，你这个没用的婊子！)]";
 			}
 			return UtilText.returnStringAtRandom(
-					"[npc.speech(Come on, bitch, you can take [zaranix.his] cock deeper than that!)]",
-					"[npc.speech(That's right, whore, do your best to please your [zaranix.master]'s cock!)]",
-					"[npc.speech(Deeper, bitch! Take [zaranix.his] cock deeper!)]",
-					"[npc.speech(Come on, you worthless slut, get your tongue working as well!)]");
+					"[npc.speech(来吧，婊子，你可以让[zaranix.his]的鸡巴插得更深！)]",
+					"[npc.speech(没错，妓女，尽全力取悦你[zaranix.master]的鸡巴吧！)]",
+					"[npc.speech(再深点！贱人！把[zaranix.his]的鸡巴再插深一点！)]",
+					"[npc.speech(来吧，你这个没用的荡妇，让你的舌头也动起来！)]");
 		}
 		return super.getDirtyTalk();
 	}

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[pentagram]]></name>
+		<name><![CDATA[五角星]]></name>
 		
-		<description><![CDATA[The pentagram is the symbol of Lilith herself, and this particular depiction of it has been set within a circle.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts a pentagram within a circle]]></bodyOverviewDescription> 
+		<description><![CDATA[圆圈套着五角星，其中的五角星是莉莉丝的象征。]]></description> 
+		<bodyOverviewDescription><![CDATA[圆圈套着五角星的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>pentagram.svg</imageName> 
 		

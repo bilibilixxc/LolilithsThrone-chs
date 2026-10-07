@@ -104,7 +104,7 @@ public class EnchantmentDialogue {
 		
 		inventorySB.append("<div class='container-full-width'>"
 				+ "<div class='container-half-width' style='width:78%; margin:0 1%; text-align:center; line-height:100vh;'>"
-				+ "<h5 style='margin:0; padding:0;'>Primary Modifier</h5>"
+				+ "<h5 style='margin:0; padding:0;'>首要修饰词</h5>"
 				+ "</div>"
 				+ "<div class='container-half-width' style='width:18%; margin:0 1%;'>");
 		if(primaryMod != null) {
@@ -150,7 +150,7 @@ public class EnchantmentDialogue {
 		}
 		inventorySB.append("</div>"
 				+ "<div class='container-half-width' style='width:78%; margin:0 1%; text-align:center; line-height:100vh;'>"
-					+ "<h5 style='margin:0; padding:0;'>Secondary Modifier</h5>"
+					+ "<h5 style='margin:0; padding:0;'>次要修饰词</h5>"
 				+ "</div>"
 				+ "</div>");
 		
@@ -174,22 +174,22 @@ public class EnchantmentDialogue {
 			inventorySB.append(
 					"<div class='container-full-width' style='text-align:center; padding:8px 0; margin-top:0;'>"
 						+ "<div style='float:left; width:14.6%; margin:0 1%; padding:0;'>"
-							+ "<div class='normal-button"+(limit == 0?" disabled":"")+"' id='LIMIT_MINIMUM' style='width:100%;'>Limit Min.</div>"
+							+ "<div class='normal-button"+(limit == 0?" disabled":"")+"' id='LIMIT_MINIMUM' style='width:100%;'>最低极限</div>"
 						+ "</div>"
 						+ "<div style='float:left; width:14.6%; margin:0 1%; padding:0;'>"
-							+ "<div class='normal-button"+(limit == 0?" disabled":"")+"' id='LIMIT_DECREASE_LARGE' style='width:100%;'>Limit--</div>"
+							+ "<div class='normal-button"+(limit == 0?" disabled":"")+"' id='LIMIT_DECREASE_LARGE' style='width:100%;'>极限--</div>"
 						+ "</div>"
 						+ "<div style='float:left; width:14.6%; margin:0 1%; padding:0;'>"
-							+ "<div class='normal-button"+(limit == 0?" disabled":"")+"' id='LIMIT_DECREASE' style='width:100%;'>Limit-</div>"
+							+ "<div class='normal-button"+(limit == 0?" disabled":"")+"' id='LIMIT_DECREASE' style='width:100%;'>极限-</div>"
 						+ "</div>"
 						+ "<div style='float:left; width:14.6%; margin:0 1%; padding:0;'>"
-							+ "<div class='normal-button"+(limit == ingredientLimit?" disabled":"")+"' id='LIMIT_INCREASE' style='width:100%;'>Limit+</div>"
+							+ "<div class='normal-button"+(limit == ingredientLimit?" disabled":"")+"' id='LIMIT_INCREASE' style='width:100%;'>极限+</div>"
 						+ "</div>"
 						+ "<div style='float:left; width:14.6%; margin:0 1%; padding:0;'>"
-							+ "<div class='normal-button"+(limit == ingredientLimit?" disabled":"")+"' id='LIMIT_INCREASE_LARGE' style='width:100%;'>Limit++</div>"
+							+ "<div class='normal-button"+(limit == ingredientLimit?" disabled":"")+"' id='LIMIT_INCREASE_LARGE' style='width:100%;'>极限++</div>"
 						+ "</div>"
 						+ "<div style='float:left; width:14.6%; margin:0 1%; padding:0;'>"
-							+ "<div class='normal-button"+(limit == ingredientLimit?" disabled":"")+"' id='LIMIT_MAXIMUM' style='width:100%;'>Limit Max.</div>"
+							+ "<div class='normal-button"+(limit == ingredientLimit?" disabled":"")+"' id='LIMIT_MAXIMUM' style='width:100%;'>最高极限</div>"
 						+ "</div>"
 					+ "</div>");
 		}
@@ -198,7 +198,7 @@ public class EnchantmentDialogue {
 		inventorySB.append("<div class='container-full-width' style='text-align:center; padding:8px 0; margin-top:0;'>");
 
 			inventorySB.append("<div class='container-half-width' style='width:28%; margin:0 1%;'>"
-									+ "<b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Effect to be added:</b>"
+									+ "<b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>要添加的效果：</b>"
 								+ "</div>");
 		
 			inventorySB.append("<div class='container-half-width' style='width:48%; margin:0 1%;'>");
@@ -255,7 +255,7 @@ public class EnchantmentDialogue {
 						|| getEnchantmentEffectBlockedReason(effect)!=null) {
 					inventorySB.append(
 							"<div class='normal-button disabled' style='width:100%; margin:auto 0;'>"
-							+ "<b>Add</b> | "
+							+ "<b>添加</b>| "
 							+ (ingredient instanceof Tattoo
 									?UtilText.formatAsMoneyUncoloured(EnchantingUtils.getModifierEffectCost(true, ingredient, effect)*EnchantingUtils.FLAME_COST_MODIFER, "b")
 									:UtilText.formatAsEssencesUncoloured(EnchantingUtils.getModifierEffectCost(true, ingredient, effect), "b", false))
@@ -265,7 +265,7 @@ public class EnchantmentDialogue {
 				} else {
 					inventorySB.append(
 							"<div class='normal-button' style='width:100%; margin:auto 0;'>"
-							+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Add</b> | "
+							+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>添加</b>| "
 									+ (ingredient instanceof Tattoo
 											?UtilText.formatAsMoney(EnchantingUtils.getModifierEffectCost(true, ingredient, effect)*EnchantingUtils.FLAME_COST_MODIFER, "b")
 											:UtilText.formatAsEssences(EnchantingUtils.getModifierEffectCost(true, ingredient, effect), "b", false))
@@ -291,7 +291,7 @@ public class EnchantmentDialogue {
 		}
 		
 			inventorySB.append("<div class='container-half-width' style='width:18%; margin:0 1%; text-align:center;'>");
-				inventorySB.append("<b>Input</b>"
+				inventorySB.append("<b>输入</b>"
 						+ "<div class='enchanting-ingredient' style='background-color:"+ingredient.getRarity().getBackgroundColour().toWebHexString()+";'>"
 						+ "<div class='enchanting-ingredient-content'>"+ingredient.getSVGString()+"</div>"
 						+ "<div class='overlay' id='INGREDIENT_ENCHANTING'  style='cursor:default;'></div>"
@@ -306,19 +306,19 @@ public class EnchantmentDialogue {
 				inventorySB.append("<form style='padding:0; margin:0 0 4px 0; float:left; width:90%; text-align:center;'>");
 					inventorySB.append("<input type='text' id='output_name' value='" +UtilText.parseForHTMLDisplay(outputName)+"' style='padding:0;margin:0;width:100%;text-align:center;'>");
 				inventorySB.append("</form>");
-				inventorySB.append("<div class='normal-button' id='apply_enchanted_item_name' style='float:left; width:9.5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>");
+				inventorySB.append("<div class='normal-button' id='apply_enchanted_item_name' style='float:left; width:9.5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>");
 					inventorySB.append("&#10003;");
 				inventorySB.append("</div>");
 			
-				inventorySB.append("<b>Effects (</b>"
+				inventorySB.append("<b>效果(</b>"
 									+ (effects.size()>=ingredient.getEnchantmentLimit()?"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>":"<b>")+""
-											+ effects.size()+"/"+ingredient.getEnchantmentLimit()+"</b><b>)</b> | Cost: "
+											+ effects.size()+"/"+ingredient.getEnchantmentLimit()+"</b><b>)</b>| 花费："
 												+ (ingredient instanceof Tattoo
 														?UtilText.formatAsMoney(EnchantingUtils.getCost(ingredient, effects)*EnchantingUtils.FLAME_COST_MODIFER, "b")
 														:UtilText.formatAsEssences(EnchantingUtils.getCost(ingredient, effects), "b", false)));
 			
 				if(effects.isEmpty()) {
-					inventorySB.append("<br/><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>No effects added</span>");
+					inventorySB.append("<br/><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>无效果添加</span>");
 				} else {
 					int cost = 0;
 					
@@ -352,14 +352,14 @@ public class EnchantmentDialogue {
 							if(i==0) {
 								inventorySB.append(
 									(ingredient.getEffects().contains(ie)
-										?"<div class='normal-button' style='width:auto; min-width:64px; height:22px; line-height:22px; font-size:16px; margin:0; padding:0 0 0 4px; float:right; text-align:left;'>"
-												+ "<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>X</b> "
+										?"<div class='normal-button' style='width:auto; min-width:64px; height:17px; line-height:17px; font-size:14px; margin:0; padding:0 0 0 4px; float:right; text-align:left;'>"
+												+ "<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>X</b>"
 												+ (ingredient instanceof Tattoo
 														?UtilText.formatAsMoney(EnchantingUtils.getModifierEffectCost(false, ingredient, ie)*EnchantingUtils.FLAME_COST_MODIFER, "b")
 														:UtilText.formatAsEssences(EnchantingUtils.getModifierEffectCost(false, ingredient, ie), "b", false))
 												+ "<div class='overlay' id='DELETE_EFFECT_"+it+"'></div>"
 											+ "</div>"
-										:"<div class='normal-button' id='DELETE_EFFECT_"+it+"' style='width:22px; height:22px; line-height:22px; font-size:16px; margin:0; padding:0; float:right; color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>"
+										:"<div class='normal-button' id='DELETE_EFFECT_"+it+"' style='width:17px; height:17px; line-height:17px; font-size:14px; margin:0; padding:0; float:right; color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>"
 											+ "<b>X</b>"
 										+ "</div>"));
 							}
@@ -398,7 +398,7 @@ public class EnchantmentDialogue {
 			
 			if(preview!=null) {
 				inventorySB.append("<div class='container-half-width' style='width:18%; margin:0 1%; text-align:center;'>");
-					inventorySB.append("<b>Output</b>");
+					inventorySB.append("<b>结果</b>");
 					inventorySB.append("<div class='enchanting-ingredient' style='background-color:"+preview.getRarity().getBackgroundColour().toWebHexString()+";'>");
 						inventorySB.append("<div class='enchanting-ingredient-content'>"+preview.getSVGString()+"</div>");
 						inventorySB.append("<div class='overlay' id='OUTPUT_ENCHANTING' style='cursor:default;'></div>");
@@ -431,7 +431,7 @@ public class EnchantmentDialogue {
 	/**
 	 * Use getEnchantmentMenu() to get this DialogueNodeOld when initially opening the Enchantment menu, as it resets all variables for you.
 	 */
-	public static final DialogueNode ENCHANTMENT_MENU = new DialogueNode("Enchantments", "", true) {
+	public static final DialogueNode ENCHANTMENT_MENU = new DialogueNode("附魔", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			InventoryDialogue.setNPCInventoryInteraction(InventoryInteraction.FULL_MANAGEMENT);
@@ -441,7 +441,7 @@ public class EnchantmentDialogue {
 		}
 		@Override
 		public String getLabel() {
-			return "Enchanting";
+			return "附魔";
 		}
 		@Override
 		public String getHeaderContent() {
@@ -454,7 +454,7 @@ public class EnchantmentDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "Stop enchanting.", InventoryDialogue.ITEM_INVENTORY) {
+				return new Response("返回", "停止附魔。", InventoryDialogue.ITEM_INVENTORY) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						if(ingredient instanceof AbstractItem) {
@@ -522,23 +522,23 @@ public class EnchantmentDialogue {
 				if (index == 1) {
 					if((effects.equals(ingredient.getEffects())
 							|| (effects.isEmpty() && ingredient instanceof AbstractItem))) {
-						return new Response("Craft", "You need to add at least one effect before you can craft something!", null);
+						return new Response("制作", "制作至少需要添加一种效果！", null);
 						
 					} else if(!canAffordCost(ingredient, effects, 1)) {
 						return new Response(
 								(ingredient instanceof Tattoo
-										?"Enchant ("+UtilText.formatAsMoneyUncoloured(price, "span")+")"
-										:"Craft ("+UtilText.formatAsEssencesUncoloured(essenceCost, "span", false)+")"),
-								"You can't afford to craft this right now!", null);
+										?"附魔("+UtilText.formatAsMoneyUncoloured(price, "span")+")"
+										:"制作 ("+UtilText.formatAsEssencesUncoloured(essenceCost, "span", false)+")"),
+								"制作所需开销不足！", null);
 						
 					} else  {
 						return new ResponseEffectsOnly(
 								(ingredient instanceof Tattoo
-									?"Enchant ("+UtilText.formatAsMoney(price, "span")+")"
-									:"Craft ("+UtilText.formatAsEssences(essenceCost, "span", false)+")"),
+									?"附魔 ("+UtilText.formatAsMoney(price, "span")+")"
+									:"制作 ("+UtilText.formatAsEssences(essenceCost, "span", false)+")"),
 								((ingredient instanceof Tattoo)
-									?"Enchant this tattoo with the specified effects. This will cost "+UtilText.formatAsMoney(price, "span")+"."
-									:"Craft '"+EnchantingUtils.getPotionName(ingredient, effects)+"'. This will cost [style.boldArcane("+essenceCost+")] arcane essences.")){
+									?"将此纹身附魔上特殊效果，将花费"+UtilText.formatAsMoney(price, "span")+"。"
+									:"制作“"+EnchantingUtils.getPotionName(ingredient, effects)+"”。将会花费[style.boldArcane("+essenceCost+")]奥术精华。")){
 							@Override
 							public void effects() {
 								applyEnchantingEffect(1);
@@ -549,24 +549,24 @@ public class EnchantmentDialogue {
 				} else if (index == 2 && !(ingredient instanceof Tattoo)) {
 					if((effects.equals(ingredient.getEffects())
 							|| (effects.isEmpty() && ingredient instanceof AbstractItem))) {
-						return new Response("Craft x5", "You need to add at least one effect before you can craft something!", null);
+						return new Response("制作x5", "制作至少需要添加一种效果！", null);
 						
 					} else if(ingredientCount<5) {
 						return new Response(
-								"Craft x5 ("+UtilText.formatAsEssencesUncoloured(essenceCost*5, "span", false)+")",
-								"You don't have five "+ingredient.getNamePlural()+", so you can't craft five of these right now...",
+								"制作x5 ("+UtilText.formatAsEssencesUncoloured(essenceCost*5, "span", false)+")",
+								"你并未拥有五个"+ingredient.getNamePlural()+"，所以无法制作五个此类物品……",
 								null);
 						
 					} else if(!canAffordCost(ingredient, effects, 5)) {
 						return new Response(
-								"Craft x5 ("+UtilText.formatAsEssencesUncoloured(essenceCost*5, "span", false)+")",
-								"You can't afford to craft five of these right now!",
+								"制作x5 ("+UtilText.formatAsEssencesUncoloured(essenceCost*5, "span", false)+")",
+								"制作五个所需开销不足！",
 								null);
 						
 					} else {
 						return new ResponseEffectsOnly(
-								"Craft x5 ("+UtilText.formatAsEssences(essenceCost*5, "span", false)+")",
-								"Craft five '"+EnchantingUtils.getPotionName(ingredient, effects)+"'. This will cost [style.boldArcane("+essenceCost*5+")] arcane essences."){
+								"制作x5 ("+UtilText.formatAsEssences(essenceCost*5, "span", false)+")",
+								"制作五个'"+EnchantingUtils.getPotionName(ingredient, effects)+"'. 将会花费[style.boldArcane("+EnchantingUtils.getCost(ingredient, effects)+")]奥术精华。"){
 							@Override
 							public void effects() {
 								applyEnchantingEffect(5);
@@ -577,18 +577,18 @@ public class EnchantmentDialogue {
 				} else if (index == 3 && !(ingredient instanceof Tattoo)) {
 					if((effects.equals(ingredient.getEffects())
 							|| (effects.isEmpty() && ingredient instanceof AbstractItem))) {
-						return new Response("Craft all (x"+ingredientCount+")", "You need to add at least one effect before you can craft something!", null);
+						return new Response("全部制作 (x"+ingredientCount+")", "你需要至少添加一个效果才能进行制作！", null);
 						
 					} else if(!canAffordCost(ingredient, effects, ingredientCount)) {
 						return new Response(
-								"Craft all (x"+ingredientCount+") ("+UtilText.formatAsEssencesUncoloured(essenceCost*ingredientCount, "span", false)+")",
-								"You can't afford to craft five of these right now!",
+								"制作所有 (x"+ingredientCount+") ("+UtilText.formatAsEssencesUncoloured(essenceCost*ingredientCount, "span", false)+")",
+								"制作五个所需开销不足！",
 								null);
 						
 					} else {
 						return new ResponseEffectsOnly(
-								"Craft all (x"+ingredientCount+") ("+UtilText.formatAsEssences(essenceCost*ingredientCount, "span", false)+")",
-								"Craft "+Util.intToString(ingredientCount)+" '"+EnchantingUtils.getPotionName(ingredient, effects)+"'. This will cost [style.boldArcane("+essenceCost*ingredientCount+")] arcane essences."){
+								"全部制作 (x"+ingredientCount+") ("+UtilText.formatAsEssences(essenceCost*ingredientCount, "span", false)+")",
+								"制作"+Util.intToString(ingredientCount)+"个“"+EnchantingUtils.getPotionName(ingredient, effects)+"”。将会花费[style.boldArcane("+essenceCost*ingredientCount+")]奥术精华。"){
 							@Override
 							public void effects() {
 								applyEnchantingEffect(ingredientCount);
@@ -597,7 +597,7 @@ public class EnchantmentDialogue {
 					}
 	
 				} else if (index == 6) {
-					return new Response("Save/Load", "Save/Load enchantment recipes.", ENCHANTMENT_SAVE_LOAD) {
+					return new Response("保存/读取", "保存/读取附魔方法。", ENCHANTMENT_SAVE_LOAD) {
 						@Override
 						public void effects() {
 							Main.mainController.getWebEngine().executeScript("document.getElementById('hiddenPField').innerHTML=document.getElementById('output_name').value;");
@@ -680,7 +680,7 @@ public class EnchantmentDialogue {
 			Main.game.getPlayer().removeItem((AbstractItem) ingredient);
 			AbstractItem craftedItem = EnchantingUtils.craftItem(ingredient, effects);
 			Main.game.getPlayer().addItem(craftedItem, false);
-			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Item Enchanted)]", Util.capitaliseSentence(craftedItem.getName(false, true))), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(道具附魔)]", Util.capitaliseSentence(craftedItem.getName(false, true))), false);
 			if(applyCost) {
 				Main.game.getPlayer().incrementEssenceCount(-EnchantingUtils.getCost(ingredient, effects), false);
 			}
@@ -693,7 +693,7 @@ public class EnchantmentDialogue {
 			Main.game.getPlayer().removeClothing((AbstractClothing) ingredient);
 			AbstractClothing craftedClothing = EnchantingUtils.craftClothing(ingredient, effects);
 			Main.game.getPlayer().addClothing(craftedClothing, false);
-			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Clothing Enchanted)]", Util.capitaliseSentence(craftedClothing.getName(false, true))), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(衣物附魔)]", Util.capitaliseSentence(craftedClothing.getName(false, true))), false);
 			if(applyCost) {
 				Main.game.getPlayer().incrementEssenceCount(-EnchantingUtils.getCost(ingredient, effects), false);
 			}
@@ -706,7 +706,7 @@ public class EnchantmentDialogue {
 			Main.game.getPlayer().removeWeapon((AbstractWeapon) ingredient);
 			AbstractWeapon craftedWeapon = EnchantingUtils.craftWeapon(ingredient, effects);
 			Main.game.getPlayer().addWeapon(craftedWeapon, false);
-			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Weapon Enchanted)]", Util.capitaliseSentence(craftedWeapon.getName(false, true))), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(武器附魔)]", Util.capitaliseSentence(craftedWeapon.getName(false, true))), false);
 			if(applyCost) {
 				Main.game.getPlayer().incrementEssenceCount(-EnchantingUtils.getCost(ingredient, effects), false);
 			}
@@ -728,7 +728,7 @@ public class EnchantmentDialogue {
 				System.err.println("craftAndApplyFullInventoryEffects() error: Tattoo is not equipped?");
 				tattoo = EnchantingUtils.craftTattoo(ingredient, effects);
 			}
-			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Tattoo Enchanted)]", Util.capitaliseSentence(((Tattoo)ingredient).getName())), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourExcellent(纹身附魔)]", Util.capitaliseSentence(((Tattoo)ingredient).getName())), false);
 			if(finalCraftInStack) {
 				finaliseCrafting(ingredient, effects);
 			}
@@ -828,7 +828,7 @@ public class EnchantmentDialogue {
 		}
 	}
 	
-	public static final DialogueNode ENCHANTMENT_SAVE_LOAD = new DialogueNode("Save enchantment files", "", true) {
+	public static final DialogueNode ENCHANTMENT_SAVE_LOAD = new DialogueNode("保存附魔文件", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			initSaveLoadMenu();
@@ -843,17 +843,17 @@ public class EnchantmentDialogue {
 			
 			saveLoadSB.append(
 					"<div class='container-full-width' style='padding:0; margin:0 0 8px 0;'>"
-							+ "Only standard characters (letters and numbers) will work for save file names."
-							+ "<br/>Hover over each item's icon to see the effects to be saved/loaded."
-							+ "<br/>If a name is [style.colourBad(red)], then you don't have a suitable item in your inventory, and cannot load that effect."
-							+ "<br/>You can only save/overwrite saves if your enchantment has at least one effect added."
+							+ "只有标准的符号(字母与数字)能作为保存文件的名字。"
+							+ "<br/>悬停在道具图标上方以查看要保存/读取的效果。"
+							+ "<br/>如果名字是[style.colourBad(红色)]的，这代表你没有相应的道具，以至于无法读取对应效果。"
+							+ "<br/>如果你的附魔已添加至少一种效果，那么只能保存/覆盖。"
 					+ "</div>"
 					+ "<div class='container-full-width' style='padding:0; margin:0;'>"
 						+ "<div class='container-full-width' style='width:calc(75% - 16px); text-align:center; background:transparent;'>"
-							+ "Name"
+							+ "名字"
 						+ "</div>"
 						+ "<div class='container-full-width' style='width:calc(25% - 16px); text-align:center; background:transparent;'>"
-							+ "Save | Load | Delete"
+							+ "保存 | 读取 | 删除"
 						+ "</div>"
 					+ "</div>");
 
@@ -875,16 +875,16 @@ public class EnchantmentDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Confirmations: ",
-						"Toggle confirmations being shown when you click to load, overwrite, or delete a saved enchantment."
-							+ " When turned on, it will take two clicks to apply any button press."
-							+ " When turned off, it will only take one click.",
+				return new Response("确认状态：",
+						"在点击读取、覆写或删除附魔时会进入确认状态。"
+							+ "启用时，需要进行两次点击才能使行为生效。"
+							+ "关闭时只需要一次点击。",
 						ENCHANTMENT_SAVE_LOAD) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
-								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "确认："+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
+								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>开启</span>"
+								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>关闭</span>");
 					}
 					
 					@Override
@@ -898,7 +898,7 @@ public class EnchantmentDialogue {
 				};
 
 			} else if (index == 0) {
-				return new Response("Back", "Back to the enchantment menu.", ENCHANTMENT_MENU);
+				return new Response("返回", "回到附魔菜单。", ENCHANTMENT_MENU);
 
 			} else {
 				return null;
@@ -978,7 +978,7 @@ public class EnchantmentDialogue {
 				return "<div class='container-full-width' style='padding:0; margin:0 0 4px 0;"+(altColour?"background:#222;":"")+"'>"
 						
 							+ "<div class='container-full-width' style='width:calc(75% - 16px); background:transparent; text-align:center;'>"
-								+"[style.colourDisabled(Cannot save an enchantment that has no effects added!)]"
+								+"[style.colourDisabled(无法保存无效果添加的附魔！)]"
 							+ "</div>"
 								
 							+ "<div class='container-full-width' style='width:calc(25% - 16px); text-align:center; background:transparent;'>"
@@ -1047,7 +1047,7 @@ public class EnchantmentDialogue {
 				for (File child : directoryListing) {
 					if (child.getName().equals(name+".xml")){
 						if(!allowOverwrite) {
-							Main.game.flashMessage(PresetColour.GENERIC_BAD, "Name already exists!");
+							Main.game.flashMessage(PresetColour.GENERIC_BAD, "名称已存在！");
 							return;
 						}
 					}
@@ -1120,7 +1120,7 @@ public class EnchantmentDialogue {
 		if(dialogueNode!=null) {
 			Main.game.setContent(new Response("", "", dialogueNode));
 		}
-		Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Enchantment saved!");
+		Main.game.flashMessage(PresetColour.GENERIC_GOOD, "附魔已保存！");
 	}
 
 	public static LoadedEnchantment loadEnchant(String name) {
@@ -1191,7 +1191,7 @@ public class EnchantmentDialogue {
 			}
 			
 		} else {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "File not found...");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "未找到文件……");
 		}
 	}
 
@@ -1240,7 +1240,7 @@ public class EnchantmentDialogue {
 			if(effect.getSecondaryModifier()==TFModifier.CLOTHING_VIBRATION) {
 				for(ItemEffect ie : effects) {
 					if(ie.getSecondaryModifier()==TFModifier.CLOTHING_VIBRATION) {
-						return "Only one 'vibration' effect can be added to clothing!";
+						return "一件衣服只能添加一个“震动”效果！";
 					}
 				}
 			}
@@ -1360,7 +1360,7 @@ public class EnchantmentDialogue {
 
 	public static void setOutputName(String outputName) {
 		// Handle parsing:
-		outputName = outputName.replaceAll("\\[\\#(.*?)]", ""); // Remove game parsing
+		outputName = outputName.replaceAll("\\[\\#(.*?)]", ""); // 移除游戏解析
 		EnchantmentDialogue.outputName = outputName;
 	}
 

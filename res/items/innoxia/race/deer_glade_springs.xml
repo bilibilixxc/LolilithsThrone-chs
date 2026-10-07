@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>20</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Glade Springs]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Glade Springs]]></namePlural>
-		<description><![CDATA[A glass bottle of sparkling water bearing the brand name 'Glade Springs'. On the reverse label, a muscular stag-boy is pictured post-coitus with two deer-girls, and is drinking a bottle of this sparkling water.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[林间泉水]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[林间泉水]]></namePlural>
+		<description><![CDATA[一瓶带有“林间泉水”品牌名称的碳酸水玻璃瓶。在背面的标签上，有一只肌肉发达的雄鹿男与两只鹿女事后的画面，他正在喝一瓶这种碳酸水。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A soothing wave of arcane energy washes over [npc.name]...
+				一股丝滑的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -51,10 +51,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			After first unscrewing the cap, [npc.name] [npc.verb(bring)] the glass bottle of Glade Springs up to [npc.her] [npc.mouth]. A faint sweet smell informs [npc.herHim] that this isn't any ordinary water, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the fizzy liquid, [npc.she] [npc.verb(taste)] a subtle hint of mint.
+			[npc.name]先拧开瓶盖，然后把林间泉水的玻璃瓶拿到[npc.her]的嘴边。淡淡的甜味告诉[npc.herHim]这不是普通的水，当[npc.she]仰起头开始喝这种气泡液体时，[npc.she]品尝到了微妙的薄荷味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-			After first unscrewing the cap, [npc.name] [npc.verb(bring)] the glass bottle of Glade Springs up to [npc2.namePos] waiting [npc2.lips]. A faint sweet smell informs [npc2.herHim] that this isn't any ordinary water, and as [npc2.she] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the fizzy liquid, [npc.she] [npc.verb(taste)] a subtle hint of mint.
+			[npc.Name]旋开盖子后，将林间泉水的玻璃瓶送到[npc2.namePos]等待[npc2.lips]边。淡淡的甜香告诉[npc2.herHim]这不是普通的水，而当[npc2.she]仰起头并开始喝下这气泡液体时，[npc.she]尝到了一丝微妙的薄荷味。
 		]]></otherUse>
 	</useDescriptions>
 

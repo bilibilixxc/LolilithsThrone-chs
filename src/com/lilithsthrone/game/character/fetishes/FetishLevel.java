@@ -15,15 +15,15 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum FetishLevel {
 	
-	ZERO_NO_EXPERIENCE("inexperienced", "I", "", "overlay1", 0, 0, 0, 10, PresetColour.DESIRE_STAGE_ZERO),
+	ZERO_NO_EXPERIENCE("生涩", "I", "", "overlay1", 0, 0, 0, 10, PresetColour.DESIRE_STAGE_ZERO),
 	
-	ONE_AMATEUR("amateur", "II", "", "overlay2", 0.5f, 1, 10, 50, PresetColour.DESIRE_STAGE_ONE),
+	ONE_AMATEUR("入门", "II", "", "overlay2", 0.5f, 1, 10, 50, PresetColour.DESIRE_STAGE_ONE),
 	
-	TWO_EXPERIENCED("experienced", "III", "", "overlay3", 1f, 2, 50, 100, PresetColour.DESIRE_STAGE_TWO),
+	TWO_EXPERIENCED("熟练", "III", "", "overlay3", 1f, 2, 50, 100, PresetColour.DESIRE_STAGE_TWO),
 	
-	THREE_EXPERT("expert", "IV", "", "overlay4", 2f, 3, 100, 200, PresetColour.DESIRE_STAGE_THREE),
+	THREE_EXPERT("专家", "IV", "", "overlay4", 2f, 3, 100, 200, PresetColour.DESIRE_STAGE_THREE),
 	
-	FOUR_MASTERFUL("masterful", "V", "", "overlay5", 2.5f, 4, 200, 200, PresetColour.DESIRE_STAGE_FOUR);
+	FOUR_MASTERFUL("大师", "V", "", "overlay5", 2.5f, 4, 200, 200, PresetColour.DESIRE_STAGE_FOUR);
 	
 	
 	private String name;

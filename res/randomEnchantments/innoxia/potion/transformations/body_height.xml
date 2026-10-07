@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -22,9 +22,9 @@
 	
 	<name defaultPrepend="true"><![CDATA[
 		#IF(flags.getInt('extremeTF')<50)
-			Shrinking
+			缩小
 		#ELSE
-			Growth
+			增长
 		#ENDIF
 	]]></name>
 	

@@ -27,141 +27,141 @@ public class TorsoType {
 			Race.HUMAN,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with human skin."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldHuman(human)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被人类皮肤所覆盖。"
+				+ "<br/>[npc.Name]现在拥有[style.boldHuman(人类)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType DEMON_COMMON = new AbstractTorsoType(BodyCoveringType.DEMON_COMMON,
 			Race.DEMON,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with"
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被"
 					+ "#IF(npc.isShortStature())"
-						+ " impish"
+						+ "小恶魔"
 					+ "#ELSE"
-						+ " demonic"
+						+ "恶魔"
 					+ "#ENDIF"
-					+ " skin."
-				+ " It's far smoother than regular human skin, and the colour tones all over [npc.her] body have become perfectly balanced in order to help show off [npc.her] figure."
-				+ "<br/>[npc.Name] now [npc.has]"
+					+ "皮肤所覆盖。"
+				+ "比通常人类的皮肤要细腻许多，全身的色调也变得极其和谐，能够凸显出[npc.her]的身材。"
+				+ "<br/>[npc.Name]现在拥有"
 				+ "#IF(npc.isShortStature())"
-					+ " [style.boldImp(impish)]"
+					+ "[style.boldImp(小恶魔)]"
 				+ "#ELSE"
-					+ " [style.boldDemon(demonic)]"
+					+ "[style.boldDemon(恶魔)]"
 				+ "#ENDIF"
-				+ ", [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+				+ "[npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType ANGEL = new AbstractTorsoType(BodyCoveringType.ANGEL,
 			Race.ANGEL,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with angelic skin."
-				+ " It's far smoother than regular human skin, and the colour tones all over [npc.her] body have become perfectly balanced in order to help show off [npc.her] figure."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldAngel(angelic)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被天使皮肤所覆盖。"
+				+ "比通常人类的皮肤要细腻许多，全身的色调也变得极其和谐，能够凸显出[npc.her]的身材。"
+				+ "<br/>[npc.Name]现在拥有[style.boldAngel(天使)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType COW_MORPH = new AbstractTorsoType(BodyCoveringType.BOVINE_FUR,
 			Race.COW_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with short, cow-like hair."
-				+ " [npc.Her] new hair looks very sleek and helps to show off [npc.her] figure, although it's a little coarse to the touch."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldCowMorph(bovine)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干被牛一般稍短的毛发所覆盖。"
+				+ "[npc.Her]新生的毛发油亮光滑，虽然摸上去稍显粗糙，但能够凸显出[npc.her]的身材。"
+				+ "<br/>[npc.Name]现在拥有[style.boldCowMorph(牛一般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType DOG_MORPH = new AbstractTorsoType(BodyCoveringType.CANINE_FUR,
 			Race.DOG_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with dog-like fur."
-				+ " [npc.Her] new fur follows the lines of [npc.her] figure and is quite smooth and pleasant to touch."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldDogMorph(canine)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被犬一般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛紧贴着[npc.her]身材的线条，光滑柔顺，摸起来很舒服。"
+				+ "<br/>[npc.Name]现在拥有[style.boldDogMorph(犬一般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType WOLF_MORPH = new AbstractTorsoType(BodyCoveringType.LYCAN_FUR,
 			Race.WOLF_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with wolf-like fur."
-				+ " [npc.Her] new fur is a little shaggy around [npc.her] joints and is quite densely packed."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldWolfMorph(lupine)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被狼一般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛在关节处有些乱蓬蓬的，而且相当密集。"
+				+ "<br/>[npc.Name]现在拥有[style.boldWolfMorph(狼一般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 	
 	public static AbstractTorsoType FOX_MORPH = new AbstractTorsoType(BodyCoveringType.FOX_FUR,
 			Race.FOX_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with fox-like fur."
-				+ " [npc.Her] new fur is a little shaggy around [npc.her] joints and is quite densely packed."
-				+ "</br>[npc.Name] now [npc.has] [style.boldFoxMorph(vulpine)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被狐狸般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛在关节处有些乱蓬蓬的，而且相当密集。"
+				+ "<br/>[npc.Name]现在拥有[style.boldFoxMorph(狐狸般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType CAT_MORPH = new AbstractTorsoType(BodyCoveringType.FELINE_FUR,
 			Race.CAT_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with cat-like fur."
-				+ " [npc.Her] new fur follows the lines of [npc.her] figure and is extremely smooth and soft."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldCatMorph(feline)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被猫一般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛紧贴着[npc.her]身材的线条，格外地光滑柔顺。"
+				+ "<br/>[npc.Name]现在拥有[style.boldCatMorph(猫一般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType SQUIRREL_MORPH = new AbstractTorsoType(BodyCoveringType.SQUIRREL_FUR,
 			Race.SQUIRREL_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with squirrel-like fur."
-				+ " [npc.Her] new fur follows the lines of [npc.her] figure and is extremely smooth and soft."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldSquirrelMorph(squirrel-like)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被松鼠般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛紧贴着[npc.her]身材的线条，格外地光滑柔顺。"
+				+ "<br/>[npc.Name]现在拥有[style.boldSquirrelMorph(松鼠般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType RAT_MORPH = new AbstractTorsoType(BodyCoveringType.RAT_FUR,
 			Race.RAT_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with rat-like fur."
-				+ " [npc.Her] new fur follows the lines of [npc.her] figure and is a little coarse to the touch."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldRatMorph(rat-like)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被老鼠般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛紧贴着[npc.her]身材的线条，但摸起来有些粗糙。"
+				+ "<br/>[npc.Name]现在拥有[style.boldRatMorph(老鼠般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType RABBIT_MORPH = new AbstractTorsoType(BodyCoveringType.RABBIT_FUR,
 			Race.RABBIT_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with rabbit-like fur."
-				+ " [npc.Her] new fur follows the lines of [npc.her] figure and is extremely smooth and soft."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldRabbitMorph(rabbit-like)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被兔子般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛紧贴着[npc.her]身材的线条，格外地光滑柔顺。"
+				+ "<br/>[npc.Name]现在拥有[style.boldRabbitMorph(兔子般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType BAT_MORPH = new AbstractTorsoType(BodyCoveringType.BAT_FUR,
 			Race.BAT_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with bat-like fur."
-				+ " [npc.Her] new fur follows the lines of [npc.her] figure and is quite smooth and pleasant to touch."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldBatMorph(bat-like)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被蝙蝠般的皮毛所覆盖。"
+				+ "[npc.Her]新生的皮毛紧贴着[npc.her]身材的线条，光滑柔顺，摸起来很舒服。"
+				+ "<br/>[npc.Name]现在拥有[style.boldBatMorph(蝙蝠般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType ALLIGATOR_MORPH = new AbstractTorsoType(BodyCoveringType.ALLIGATOR_SCALES,
 			Race.ALLIGATOR_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with tough, overlapping scales."
-				+ " [npc.Her] new scales follow the lines of [npc.her] figure, and, while being quite hard to the touch, are also very smooth when rubbed in the right direction."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldGatorMorph(reptile)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被重叠的硬质鳞片所覆盖。"
+				+ "[npc.Her]新生的鳞片紧贴着[npc.her]身材的线条，摸上去很坚硬，顺着方向抚摸也会很光滑。"
+				+ "<br/>[npc.Name]现在拥有[style.boldGatorMorph(爬行动物般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 		@Override
 		public boolean isDefaultPlural(GameCharacter gc) {
 			return true;
@@ -172,30 +172,30 @@ public class TorsoType {
 			Race.HORSE_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with short, horse-like hair."
-				+ " [npc.Her] new hair looks very sleek, and helps to show off [npc.her] figure, although it's a little coarse to the touch."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldHorseMorph(equine)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干被马一般稍短的毛发所覆盖。"
+				+ "[npc.Her]新生的毛发油亮光滑，虽然摸上去稍显粗糙，但能够凸显出[npc.her]的身材。"
+				+ "<br/>[npc.Name]现在拥有[style.boldHorseMorph(马一般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType REINDEER_MORPH = new AbstractTorsoType(BodyCoveringType.REINDEER_FUR,
 			Race.REINDEER_MORPH,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with short, reindeer-like hair."
-				+ " [npc.Her] new fur looks very sleek, and helps to show off [npc.her] figure, although it's a little coarse to the touch."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldReindeerMorph(reindeer)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干被驯鹿般稍短的毛发所覆盖。"
+				+ "[npc.Her]新生的毛发油亮光滑，虽然摸上去稍显粗糙，但能够凸显出[npc.her]的身材。"
+				+ "<br/>[npc.Name]现在拥有[style.boldReindeerMorph(驯鹿般)][npc.skinFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 	};
 
 	public static AbstractTorsoType HARPY = new AbstractTorsoType(BodyCoveringType.FEATHERS,
 			Race.HARPY,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with beautiful, overlapping feathers."
-				+ " [npc.Her] new feathers follow the lines of [npc.her] figure, and are extremely smooth and soft to the touch."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldHarpy(avian)], [npc.skinFullDescription].",
-			"[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].") {
+			"没过多久，转化就步入尾声，[npc.she]感觉瘙痒感终于褪去，长叹一声，[npc.her]的躯干现在被重叠的美丽羽毛所覆盖。"
+				+ "[npc.Her]新生的羽毛紧贴着[npc.her]身材的线条，摸起来格外地光滑柔顺。"
+				+ "<br/>[npc.She]现在拥有[style.boldHarpy(鸟一般)][npc.assholeFullDescription]。",
+			"[npc.Her]的躯干看上去[npc.a_femininity(true)]，[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。") {
 		@Override
 		public boolean isDefaultPlural(GameCharacter gc) {
 			return true;

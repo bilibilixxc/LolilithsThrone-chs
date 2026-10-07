@@ -253,9 +253,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 			return determiner;
 		}
 		if(gc.getLegCount()==1) {
-			return "a";
+			return "一条";
 		} else if(gc.getLegCount()==2) {
-			return "a pair of";
+			return "一双";
 		}
 		return Util.intToString(gc.getLegCount());
 	}
@@ -277,12 +277,12 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				case BIPEDAL:
 				case QUADRUPEDAL:
 				case WINGED_BIPED:
-					return "leg";
+					return "腿";
 				case CEPHALOPOD:
-					return "tentacle";
+					return "触手";
 				case TAIL:
 				case TAIL_LONG:
-					return "tail";
+					return "尾巴";
 			}
 		}
 		return name;
@@ -297,12 +297,12 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				case BIPEDAL:
 				case QUADRUPEDAL:
 				case WINGED_BIPED:
-					return "legs";
+					return "腿";
 				case CEPHALOPOD:
-					return "tentacles";
+					return "触手";
 				case TAIL:
 				case TAIL_LONG:
-					return "tails";
+					return "尾巴";
 			}
 		}
 		return namePlural;
@@ -355,9 +355,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 			case CEPHALOPOD:
 				return FootType.TENTACLE.getFootName();
 			case TAIL:
-				return "fin";
+				return "鳍";
 			case TAIL_LONG:
-				return "tail";
+				return "尾巴";
 		}
 		return this.getFootType().getFootName();
 	}
@@ -373,9 +373,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 			case CEPHALOPOD:
 				return FootType.TENTACLE.getFootNamePlural();
 			case TAIL:
-				return "fins";
+				return "鳍";
 			case TAIL_LONG:
-				return "tail";
+				return "尾巴";
 		}
 		return this.getFootType().getFootNamePlural();
 	}
@@ -397,9 +397,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 			case TAIL:
 			case TAIL_LONG:
 				if (gc.isFeminine()) {
-					return Util.randomItemFrom(Util.newArrayListOfValues("masculine","strong"));
+					return Util.randomItemFrom(Util.newArrayListOfValues("阳刚","有力"));
 				} else {
-					return Util.randomItemFrom(Util.newArrayListOfValues("feminine", "strong", "slender"));
+					return Util.randomItemFrom(Util.newArrayListOfValues("阴柔", "有力", "修长"));
 				}
 		}
 		if (gc.isFeminine()) {
@@ -421,9 +421,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 			case CEPHALOPOD:
 				return FootType.TENTACLE.getToeSingularName();
 			case TAIL:
-				return "tip";
+				return "尾巴尖";
 			case TAIL_LONG:
-				return "tip";
+				return "尾巴尖";
 		}
 		return this.getFootType().getToeSingularName();
 	}
@@ -439,9 +439,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 			case CEPHALOPOD:
 				return FootType.TENTACLE.getToePluralName();
 			case TAIL:
-				return "tip";
+				return "尾巴尖";
 			case TAIL_LONG:
-				return "tip";
+				return "尾巴尖";
 		}
 		return this.getFootType().getToePluralName();
 	}
@@ -463,9 +463,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 			case TAIL:
 			case TAIL_LONG:
 				if (gc.isFeminine()) {
-					return Util.randomItemFrom(Util.newArrayListOfValues("masculine","strong"));
+					return Util.randomItemFrom(Util.newArrayListOfValues("阳刚","有力"));
 				} else {
-					return Util.randomItemFrom(Util.newArrayListOfValues("feminine", "strong", "slender"));
+					return Util.randomItemFrom(Util.newArrayListOfValues("阴柔", "有力", "修长"));
 				}
 		}
 		if (gc.isFeminine()) {
@@ -511,19 +511,19 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 
 		if(character.isFeral()) {
 			return "<p style='text-align:center;'>"
-						+ UtilText.parse(character, "[style.italicsDisabled(Nothing happens, for as [npc.sheIsFull] a feral [npc.race], [npc.name] cannot have [npc.her] leg configuration transformed!)]")
+						+ UtilText.parse(character, "[style.italicsDisabled(由于[npc.Name]是兽态[npc.race]，[npc.sheIsFull]无法转化腿部配置，所以无事发生！)]")
 					+ "</p>";
 		}
 		
 		if(character.getLegConfiguration()==legConfiguration && character.getLegType().equals(this)) {
 			return "<p>"
-						+ UtilText.parse(character, "[style.italicsDisabled(Nothing happens, as [npc.name] already [npc.has] [npc.a_legRace]'s lower body in the '"+legConfiguration.getName()+"' configuration...)]")
+						+ UtilText.parse(character, "[style.italicsDisabled(由于[npc.name]在腿部配置中已经拥有了[npc.a_legRace]的下半身，所以无事发生……)]")
 					+ "</p>";
 		}
 		
 		if(!character.getLegType().isLegConfigurationAvailable(legConfiguration)) {
 			return "<p>"
-					+ UtilText.parse(character, "[style.italicsDisabled(Nothing happens, as [npc.namePos] current lower body cannot be transformed into the '"+legConfiguration.getName()+"' configuration...)]")
+					+ UtilText.parse(character, "[style.italicsDisabled(由于[npc.namePos]的下半身无法转化为'"+legConfiguration.getName()+"'配置，所以无事发生……)]")
 				+ "</p>";
 		}
 		
@@ -532,20 +532,20 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 		feralStringBuilder.append("<p style='text-align:center;'>");
 			if(character.hasWings()) {
 				if(legConfiguration.isWingsOnLegConfiguration()) {
-					feralStringBuilder.append("[style.italicsFeral([npc.Her] [npc.wingSize], [npc.wings+] are now located on the sides of [npc.her] "+legConfiguration.getName()+" body!)]");
+					feralStringBuilder.append("[style.italicsFeral([npc.Her][npc.wingSize]、[npc.wings+]现在正位于[npc.her]"+legConfiguration.getName()+"的身体两侧！)]");
 				} else {
-					feralStringBuilder.append("[style.italicsFeral([npc.Her] [npc.wingSize], [npc.wings+] are now located on the back of [npc.her] upper body.)]");
+					feralStringBuilder.append("[style.italicsFeral([npc.Her][npc.wingSize]、[npc.wings+]现在正位于[npc.her]上半身的背部。)]");
 				}
 			} else {
 				if(legConfiguration.isWingsOnLegConfiguration()) {
-					feralStringBuilder.append("[style.italicsFeral(If [npc.she] [npc.verb(grow)] any wings, they will be located on the sides of [npc.her] "+legConfiguration.getName()+" body!)]");
+					feralStringBuilder.append("[style.italicsFeral(若[npc.she]长出翅膀，将会位于[npc.her]"+legConfiguration.getName()+"的身体两侧！)]");
 				} else {
-					feralStringBuilder.append("[style.italicsFeral(If [npc.she] [npc.verb(grow)] any wings, they will be located on the back of [npc.her] upper body.)]");
+					feralStringBuilder.append("[style.italicsFeral(若[npc.she]长出翅膀，将会位于[npc.her]的上半身。)]");
 				}
 			}
 			if(!legConfiguration.isAbleToGrowTail()) {
 				feralStringBuilder.append("<br/>");
-				feralStringBuilder.append("[style.italicsFeral(This leg configuration will prevent [npc.name] from growing a tail!)]");
+				feralStringBuilder.append("[style.italicsFeral(当前腿部配置不允许[npc.name]长出尾巴！)]");
 			}
 		feralStringBuilder.append("</p>");
 		
@@ -587,7 +587,7 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 		String feralRaceName = this.getRace().getFeralName(new LegConfigurationAffinity(legConfiguration, body.getSubspecies().getAffinity()), false);
 		String feralRaceNameDeterminer = UtilText.generateSingularDeterminer(feralRaceName);
 		StringBuilder feralStringBuilder = new StringBuilder();
-		String feralRaceNameWithDeterminer = feralRaceNameDeterminer+" "+feralRaceName;
+		String feralRaceNameWithDeterminer = feralRaceNameDeterminer+feralRaceName;
 		String raceColorString = this.getRace().getColour().toWebHexString();
 		boolean feral = true;
 		
@@ -621,8 +621,8 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				feralStringBuilder.append(
 						"<p>"
-							+ "[npc.NamePos] lower body transforms back into a regular, bipedal configuration, with [npc.her] genitals shifting back to their normal position between [npc.her] [npc.legs].<br/>"
-							+ "[npc.Name] now [npc.has] [style.boldTfGeneric(bipedal)] <b style='color:"+raceColorString+";'>"+this.getTransformName()+" legs</b>, which are covered in [npc.legFullDescription]."
+							+ "[npc.NamePos]的下半身变回了通常的两足配置，生殖器也回到了[npc.legs]间原本的位置。<br/>"
+							+ "[npc.Name]现在拥有[style.boldTfGeneric(两条)]<b style='color:"+raceColorString+";'>"+this.getTransformName()+"腿</b>，覆盖着[npc.legFullDescription]。"
 						+ "</p>");
 				break;
 			case ARACHNID:
@@ -634,16 +634,16 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				feralStringBuilder.append(
 						"<p>"
-							+ "Without warning, [npc.name] suddenly [npc.verb(lose)] all of the strength in [npc.her] [npc.legs], and [npc.she] [npc.verb(collapse)] to the ground with a startled cry."
-							+ " Before [npc.sheIs] able to react to this alarming development, [npc.her] lower body starts to rapidly transform..."
+							+ "没有任何预兆，[npc.name]的[npc.legs]便顿时没了力气，[npc.she]惊叫一声倒在地上。"
+							+ "还没等[npc.sheIs]对突如其来的事态做出反应，下半身便开始迅速转化起来……"
 						+ "</p>"
 						+ "<p>"
-							+ "Looking down, [npc.name] [npc.verb(watch)] in disbelief as [npc.her] [npc.legs] split and transform into eight long, segmented legs."
-							+ " The changes don't stop there, however, as [npc.her] lower body continues to rapidly morph into that of a huge, eight-legged "+feralRaceName+"."
-							+ " A horny [npc.moan] bursts out of [npc.her] mouth as [npc.her] genitals shift to be on the underside of [npc.her] massive arachnid body,"
-									+ " while [npc.her] anus "+(body.getLeg().getType().hasSpinneret()?"and spinneret are":"is")+" positioned near the tip of [npc.her] abdomen."
-							+ " [style.italicsSex(As [npc.her] genitals are only visible from below, [npc.she] [npc.do]n't feel embarrassed to have no clothing covering [npc.her] arachnid body.)]<br/>"
-							+ "[npc.Name] now [npc.has] the [style.boldTfGeneric(arachnid body)] of <b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>, which is covered in [npc.legFullDescription]."
+							+ "[npc.name]低头一看，难以置信地目睹着自己的[npc.legs]分散开来，变成了八条修长而分节的腿。"
+							+ "然而变化还未停止，[npc.her]的下半身继续迅速化形，成了八条腿的巨大"+feralRaceName+"的样子。"
+							+ "[npc.her]的生殖器转移到了其庞大的蛛形身体的下方，不禁漏出一声性奋的[npc.moan]，"
+									+ "而[npc.her]的肛门"+(body.getLeg().getType().hasSpinneret()?"和丝囊":"")+"则位于其腹部的尖端。"
+							+ "[style.italicsSex(由于[npc.her]的生殖器只有从下方才能看见，所以即使没有覆盖其蛛形身躯的衣物[npc.she]也不会感到尴尬。)]<br/>"
+							+ "[npc.Name]现在拥有<b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>的[style.boldTfGeneric(蛛形身躯)]，覆盖着[npc.legFullDescription]。"
 						+ "</p>");
 				break;
 			case AVIAN:
@@ -655,14 +655,14 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				feralStringBuilder.append(
 						"<p>"
-							+ "Without warning, [npc.name] suddenly [npc.verb(lose)] all of the strength in [npc.her] [npc.legs], and [npc.she] [npc.verb(collapse)] to the ground with a startled cry."
-							+ " Before [npc.sheIs] able to react to this alarming development, [npc.her] lower body starts to rapidly transform..."
+							+ "没有任何预兆，[npc.name]的[npc.legs]便顿时没了力气，[npc.she]惊叫一声倒在地上。"
+							+ "还没等[npc.sheIs]对突如其来的事态做出反应，下半身便开始迅速转化起来……"
 						+ "</p>"
 						+ "<p>"
-							+ "Looking down, [npc.name] [npc.verb(watch)] in disbelief as the entire of [npc.her] lower body rapidly morphs into that of a huge "+feralRaceName+"."
-							+ " A horny [npc.moan] bursts out of [npc.her] mouth as [npc.her] genitals and asshole shift to be located within a cloaca that's found on the rear-facing underside of [npc.her] massive avian body."
-							+ " [style.italicsSex(As [npc.her] genitals are only visible from below, [npc.she] [npc.do]n't feel embarrassed to have no clothing covering [npc.her] avian body.)]<br/>"
-							+ "[npc.Name] now [npc.has] the [style.boldTfGeneric(avian body)] of <b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>, which is covered in [npc.legFullDescription]."
+							+ "[npc.name]低头一看，难以置信地目睹着自己的整个下半身迅速化形为巨大的"+feralRaceName+"的样子。"
+							+ "[npc.her]的生殖器转移到泄殖腔的位置，位于其庞大的鸟类身躯下端向后，不禁漏出一声性奋的[npc.moan]。"
+							+ "[style.italicsSex(由于[npc.her]的生殖器只有从下方才能看见，所以即使没有覆盖其鸟类身躯的衣物[npc.she]也不会感到尴尬。)]<br/>"
+							+ "[npc.Name]现在拥有<b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>的[style.boldTfGeneric(鸟类身躯)]，覆盖着[npc.legFullDescription]。"
 						+ "</p>");
 				break;
 			case CEPHALOPOD:
@@ -672,15 +672,15 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				feralStringBuilder.append(
 						"<p>"
-							+ "Without warning, [npc.name] suddenly [npc.verb(lose)] all of the strength in [npc.her] [npc.legs], and [npc.she] [npc.verb(collapse)] to the ground with a startled cry."
-							+ " Before [npc.sheIs] able to react to this alarming development, [npc.her] lower body starts to rapidly transform..."
+							+ "没有任何预兆，[npc.name]的[npc.legs]便顿时没了力气，[npc.she]惊叫一声倒在地上。"
+							+ "还没等[npc.sheIs]对突如其来的事态做出反应，下半身便开始迅速转化起来……"
 						+ "</p>"
 						+ "<p>"
-							+ "Looking down, [npc.name] [npc.verb(watch)] in disbelief as [npc.her] [npc.legs] split and transform into eight long, strong tentacles."
-							+ " The changes don't stop there, however, as [npc.her] lower body continues to rapidly morph into that of a huge, eight-legged "+feralRaceName+"."
-							+ " A horny [npc.moan] bursts out of [npc.her] mouth as [npc.her] genitals and asshole shift to sit within a cloaca located in the central underside of [npc.her] new tentacles."
-							+ " [style.italicsSex(As [npc.her] cloaca is only visible from below, [npc.she] [npc.do]n't feel embarrassed to have no clothing covering [npc.her] tentacled body.)]<br/>"
-							+ "[npc.Name] now [npc.has] the [style.boldTfGeneric(tentacled body)] of <b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>, which is covered in [npc.legFullDescription]."
+							+ "[npc.name]低头一看，难以置信地目睹着自己的[npc.legs]分散开来，变成了八条长而粗壮的触手。"
+							+ "然而变化还未停止，[npc.her]的下半身继续迅速化形，成了八条腿的巨大"+feralRaceName+"的样子。"
+							+ "[npc.her]的生殖器转移到泄殖腔的位置，位于那一团触手的下端正中，不禁漏出一声性奋的[npc.moan]。"
+							+ "[style.italicsSex(由于[npc.her]的泄殖腔只有从下方才能看见，所以即使没有覆盖其触手身躯的衣物[npc.she]也不会感到尴尬。)]<br/>"
+							+ "[npc.Name]现在拥有<b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>的[style.boldTfGeneric(触手身躯)]，覆盖着[npc.legFullDescription]。"
 						+ "</p>");
 				break;
 			case TAIL:
@@ -690,9 +690,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				feralStringBuilder.append(
 						"<p>"
-							+ "[npc.NamePos] lower body transforms into that of "+feralRaceNameWithDeterminer+"'s tail, with [npc.her] genitals and asshole shifting to sit within a front-facing cloaca,"
-									+ " located in the equivalent place to where [npc.her] regular intercrural genitalia would be.<br/>"
-							+ "[npc.Name] now [npc.has] the [style.boldTfGeneric(tail)] of <b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>, which is covered in [npc.legFullDescription]."
+							+ "[npc.NamePos]的下半身变成了"+feralRaceNameWithDeterminer+"的尾巴样子，生殖器和肛门则坐落在前向的泄殖腔处，"
+									+ "与[npc.her]腿间生殖器常规的位置相似。<br/>"
+							+ "[npc.Name]现在拥有<b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>的[style.boldTfGeneric(尾巴)]，覆盖着[npc.legFullDescription]。"
 						+ "</p>");
 				break;
 			case TAIL_LONG:
@@ -702,9 +702,9 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				feralStringBuilder.append(
 						"<p>"
-							+ "[npc.NamePos] lower body transforms into that of a huge "+feralRaceName+"'s tail, with [npc.her] genitals and asshole shifting to sit within a front-facing cloaca,"
-									+ " located in the equivalent place to where [npc.her] regular intercrural genitalia would be.<br/>"
-							+ "[npc.Name] now [npc.has] the [style.boldTfGeneric(huge tail)] of <b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>, which is covered in [npc.legFullDescription]."
+							+ "[npc.NamePos]的下半身变成了巨大"+feralRaceNameWithDeterminer+"尾巴的样子，生殖器和肛门则坐落在前向的泄殖腔处，"
+									+ "与[npc.her]腿间生殖器常规的位置相似。<br/>"
+							+ "[npc.Name]现在拥有<b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>的[style.boldTfGeneric(巨型尾巴)]，覆盖着[npc.legFullDescription]。"
 						+ "</p>");
 				break;
 			case WINGED_BIPED:
@@ -716,17 +716,17 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 
 				feralStringBuilder.append(
 						"<p>"
-							+ "[npc.NamePos] lower body transforms back into a bipedal configuration, with [npc.her] genitals shifting back to their normal position between [npc.her] [npc.legs]."
-							+ " Letting out a surprised cry, [npc.name] [npc.verb(bend)] down and [npc.verb(stoop)] over as [npc.her] spine rapidly reshapes itself."
-							+ " The transformation is over within a matter of moments, leaving [npc.name] to naturally use [npc.her] [npc.arms] in place of forelegs so as to support [npc.her] newly-shaped body.<br/>"
-							+ "[npc.Name] now [npc.has] [style.boldTfGeneric(bipedal)] <b style='color:"+raceColorString+";'>"+this.getTransformName()+" legs</b>, which are covered in [npc.legFullDescription],"
-									+ " and [style.boldTfGeneric([npc.verb(use)] [npc.her] [npc.arms] as forelegs)]."
+							+ "[npc.NamePos]的下半身变回了通常的两足配置，生殖器也回到了[npc.legs]间原本的位置。"
+							+ "[npc.Name]发出一声尖叫，[npc.she]感觉到脊椎正不受控制地弓起，迅速变形着。"
+							+ "转化只持续了一段时间，[npc.Name]已经可以自然地将[npc.arms]当做前腿使用，来支撑[npc.her]截然不同的身躯。<br/>"
+							+ "[npc.Name]现在拥有[style.boldTfGeneric(两条)]<b style='color:"+raceColorString+";'>"+this.getTransformName()+"腿</b>，覆盖着[npc.legFullDescription]，"
+									+ "而[style.boldTfGeneric([npc.arms]也可以用作前腿使用)]。"
 						+ "</p>");
 				break;
 			case QUADRUPEDAL:
 				feralStringBuilder.append(
 						"<p>"
-							+ "An extremely unsettling, tingling feeling starts to spread down into [npc.namePos] [npc.legs+],");
+							+ "一股强烈的不安与刺痛感逐渐在[npc.namePos][npc.legs+]上传播开来，");
 				
 				if(applyEffects) {
 					applyExtraLegConfigurationTransformations(body, legConfiguration, legConfiguration.isLargeGenitals(), applyFullEffects);
@@ -734,18 +734,18 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				
 				feralStringBuilder.append(
-						" and [npc.she] [npc.verb(let)] out an alarmed cry as [npc.she] [npc.verb(lose)] [npc.her] balance and [npc.verb(tumble)] to the floor."
-							+ " Right before [npc.her] [npc.eyes], [npc.her] lower body shifts and transforms, with [npc.her] limbs pulling back into an intermediary mass of [npc.bodyMaterial],"
-								+ " before almost immediately pushing back out in a quadrupedal configuration."
+						"[npc.she]忽然失去平衡，倒在了地上，不禁慌乱地惊呼一声。"
+							+ "[npc.NamePos]的下半身就在眼前转化起来，肢体缩回了中间的[npc.bodyMaterial]之中，"
+								+ "接着又瞬间伸出，却已经变成了四足的配置。"
 						+ "</p>"
 						+ "<p>"
-							+ "As this is happening, [npc.her] [npc.ass+] rapidly expands and pushes out, quickly forming the body to which [npc.her] four new legs are anchored."
-							+ " Although it could be described as nothing less than extreme, the transformation is surprisingly pain-free, and the gasps and [npc.moans] that burst out from [npc.namePos] mouth are purely from shock and exertion."
+							+ "转化仍在继续，[npc.her][npc.ass+]忽然变大，向外突出出来，很快躯体部分就变化为与腿部相称的造型。"
+							+ "尽管过程十分惊悚，但意外的是，并没有任何痛感，[npc.name]连连[npc.moans]着，显然是受到了惊吓。"
 						+ "</p>"
 						+ "<p>"
-							+ "After just a few moments more, [npc.namePos] lower body has completely transformed into that of "+feralRaceNameWithDeterminer
-								+", with [npc.her] genitals and asshole shifting to sit in the same place as that of a feral "+feralRaceName+".<br/>"
-							+ "[npc.Name] now [npc.has] the [style.boldTfGeneric(lower body)] of <b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>, which is covered in [npc.legFullDescription(true)]."
+							+ "又过了一会儿，[npc.namePos]的下半身已经变得跟"+feralRaceNameWithDeterminer
+								+"完全一样，生殖器和肛门也转移到与兽态"+feralRaceName+"相同的位置。<br/>"
+							+ "[npc.Name]现在拥有<b style='color:"+raceColorString+";'>"+feralRaceNameWithDeterminer+"</b>样子的[style.boldTfGeneric(下半身)]，覆盖着[npc.legFullDescription(true)]。"
 						+ "</p>");
 				break;
 		}
@@ -759,7 +759,7 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				}
 				body.setHeight(newHeight);
 				String colouredHeightValue = "<span style='color:"+body.getHeight().getColour().toWebHexString()+";'>[npc.heightValue]</span>";
-				feralStringBuilder.append("<p>The size of [npc.namePos] new lower body has resulted in [npc.herHim] getting taller, so now when standing at full height [npc.she] [npc.verb(measure)] "+colouredHeightValue+".</p>");
+				feralStringBuilder.append("<p>[npc.namePos]的下半身变样之后，让[npc.herHim]更高了，挺直身子的身高是"+colouredHeightValue+"。</p>");
 				
 			} else if(body.getLegConfiguration().isTall() && !legConfiguration.isTall()) {
 				int newHeight = (int) (body.getHeightValue()/1.33f);
@@ -772,7 +772,7 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				newHeight = Math.max(newHeight, Height.NEGATIVE_TWO_MINIMUM.getMinimumValue()); // Do not reduce into tiny size
 				body.setHeight(newHeight);
 				String colouredHeightValue = "<span style='color:"+body.getHeight().getColour().toWebHexString()+";'>[npc.heightValue]</span>";
-				feralStringBuilder.append("<p>The reduced size of [npc.namePos] new lower body has resulted in [npc.herHim] getting shorter, so now when standing at full height [npc.she] [npc.verb(measure)] "+colouredHeightValue+".</p>");
+				feralStringBuilder.append("<p>[npc.namePos]的下半身变样之后，让[npc.herHim]更矮了，挺直身子的身高是"+colouredHeightValue+"。</p>");
 			}
 		}
 		
@@ -810,7 +810,7 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 		}
 		
 		feralStringBuilder.append("<p><i>"
-				+ "[style.boldTfGeneric(Every part)] of [npc.her] lower body has transformed into that of a "+(feral?"feral "+feralRaceName:"regular "+this.getRace().getName(false))+", meaning that [npc.she] now [npc.has]");
+				+ "[npc.her]下半身的[style.boldTfGeneric(各个部位)]都已经与"+(feral?"兽态"+feralRaceName:"常规"+this.getRace().getName(false))+"无异，也就是说[npc.she]现在拥有");
 		
 		List<String> partsList = new ArrayList<>();
 		// Tail:
@@ -833,81 +833,81 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 				partsList.add("animal-like "+body.getBreastCrotch().getName(null));
 			}
 		}
-		feralStringBuilder.append(Util.stringsToStringList(partsList, false)+".");
+		feralStringBuilder.append(Util.stringsToStringList(partsList, false)+"。");
 		
 		Penis penis = body.getPenis();
 		if(penis.getType()!=PenisType.NONE) {
 			if(feral) {
-				feralStringBuilder.append(" [npc.Her] cock has similarly transformed into that of a feral "+feralRaceName+"'s, and not only produces musky, animal-like cum, but is also an impressive "+Units.size(penis.getRawLengthValue())+" long.");
+				feralStringBuilder.append("[npc.Her]的阴茎变得跟兽态"+feralRaceName+"十分类似，不仅会产出类似动物的味道浓重的精液，而且格外地长，有"+Units.size(penis.getRawLengthValue())+"。");
 			} else {
-				feralStringBuilder.append(" [npc.Her] cock has similarly transformed into that of a regular "+this.getRace().getName(false)+", and is "+Units.size(penis.getRawLengthValue())+" long.");
+				feralStringBuilder.append("[npc.Her]的阴茎变得跟常规的"+this.getRace().getName(false)+"十分类似，有"+Units.size(penis.getRawLengthValue())+"长。");
 			}
 		}
 		
 		Vagina vagina = body.getVagina();
 		if(vagina.getType()!=VaginaType.NONE) {
 			if(feral) {
-				feralStringBuilder.append(" [npc.Her] now-musky pussy is now also identical to that of "+feralRaceNameWithDeterminer
-						+", and has shifted into being "+vagina.getOrificeVagina().getCapacity().getDescriptor()+" in order to accommodate a matching feral cock.");
+				feralStringBuilder.append("[npc.Her]气味浓厚的小穴已经与"+feralRaceNameWithDeterminer
+						+"的并无二致，并且变得"+vagina.getOrificeVagina().getCapacity().getDescriptor()+"，以适应相应的兽态阴茎。");
 			} else {
-				feralStringBuilder.append(" [npc.Her] now-"+vagina.getOrificeVagina().getCapacity().getDescriptor()+" pussy has similarly transformed into that of a regular.");
+				feralStringBuilder.append("[npc.Her]"+vagina.getOrificeVagina().getCapacity().getDescriptor()+"的小穴已经与常规的相差无几。");
 			}
 		}
 		feralStringBuilder.append("</i></p>");
 		
 		if(feral) {
-			feralStringBuilder.append("<p><i>Feeling as though it's only natural, [npc.she] [style.colourGood(no longer [npc.verb(get)] embarrassed)] about having [npc.her] [style.italicsFeral(animalistic genitals"
-					+(legConfiguration.isBipedalPositionedCrotchBoobs()?(body.getBreastCrotch().getShape()==BreastShape.UDDERS?" or udders":" or crotch-boobs"):"")
-					+ ")] on display!</i></p>");
+			feralStringBuilder.append("<p><i>[npc.she][style.colourGood(不再)]因为自己[style.italicsFeral(动物般的生殖器"
+					+(legConfiguration.isBipedalPositionedCrotchBoobs()?(body.getBreastCrotch().getShape()==BreastShape.UDDERS?"和腹乳":"和胯乳"):"")
+					+ ")]暴露在外而感到[style.colourGood(尴尬)]，因为这很自然！</i></p>");
 		}
 
 		if(body.getLeg().getType().hasSpinneret()) {
-			feralStringBuilder.append("<p>[npc.Her] abdomen has [style.italicsFeral(a spinneret)], which, along with creating webbing, [style.italicsSex(can be penetrated and used as a sexual orifice)]!</p>");
+			feralStringBuilder.append("<p>[npc.Her]的小腹部有着[style.italicsFeral(一套丝囊)]，不仅可以吐出结实的粘性网，[style.italicsSex(还能用来当作性交腔穴)]！</p>");
 		} else if(body.getTail().getType().hasSpinneret()) {
-			feralStringBuilder.append("<p>[npc.Her] tail has [style.italicsFeral(a spinneret)], which, along with creating webbing, [style.italicsSex(can be penetrated and used as a sexual orifice)]!</p>");
+			feralStringBuilder.append("<p>[npc.Her]的尾巴上有着[style.italicsFeral(一套丝囊)]，不仅可以吐出结实的粘性网，[style.italicsSex(还能用来当作性交腔穴)]！</p>");
 		}
 		
 		int landSpeed = body.getLeg().getType().getLandSpeedModifier() + legConfiguration.getLandSpeedModifier();
 		if(landSpeed>0) {
 			feralStringBuilder.append("<p style='text-align:center;'><i>"
-											+ "[npc.Her] new lower body is not as well-adapted to movement on land as a usual biped,"
-												+ " and as a result, [style.colourTerrible([npc.she] [npc.verb(move)] slower than usual)] [style.colourEarth(while on land)]!"
+											+ "[npc.Her]的下半身不再像曾经双足一般适应在陆地活动，"
+												+ "因而在[style.colourEarth(陆地上时)]，[style.colourTerrible([npc.she]移动得比平常更慢)]！"
 											+ "<br/>"
-											+ "[style.colourTerrible(+"+landSpeed+"%)] travel time while on land!"
+											+ "位于陆地时[style.colourTerrible(+"+landSpeed+"%)]移动时间！"
 										+ "</i></p>");
 		} else if(landSpeed<0) {
 			feralStringBuilder.append("<p style='text-align:center;'><i>"
-											+ "[npc.Her] new lower body is capable of speeds greater than that attainable by a usual biped,"
-												+ " and as a result, [style.colourExcellent([npc.she] [npc.verb(move)] faster than usual)] [style.colourEarth(while on land)]!"
+											+ "[npc.Her]的下半身相比曾经双足时可以获得更快的速度，"
+												+ "因而在[style.colourEarth(陆地上时)]，[style.colourExcellent([npc.she]移动得比平常更快)]！"
 											+ "<br/>"
-											+ "[style.colourExcellent("+landSpeed+"%)] travel time while on land!"
+											+ "位于陆地时[style.colourExcellent("+landSpeed+"%)]移动时间！"
 										+ "</i></p>");
 		}
 
 		int waterSpeed = body.getLeg().getType().getWaterSpeedModifier() + legConfiguration.getWaterSpeedModifier();
 		if(waterSpeed>0) {
 			feralStringBuilder.append("<p style='text-align:center;'><i>"
-											+ "[npc.SheIsFull] now a lot less capable at moving in water than a usual biped,"
-												+ " and as a result, [style.colourTerrible([npc.she] [npc.verb(move)] slower than usual)] [style.colourWater(while in water)]!"
+											+ "[npc.SheIsFull]相比曾经双足时更难在水中移动了，"
+												+ "因而在[style.colourWater(在水中)][style.colourTerrible([npc.she]移动得比平常更慢)]！"
 											+ "<br/>"
-											+ "[style.colourTerrible(+"+waterSpeed+"%)] travel time while in water!"
+											+ "位于水中时[style.colourTerrible(+"+landSpeed+"%)]移动时间！"
 										+ "</i></p>");
 		} else if(waterSpeed<0) {
 			feralStringBuilder.append("<p style='text-align:center;'><i>"
-											+ "[npc.SheIsFull] now in possession of a body that's well-suited to moving in water,"
-												+ " and as a result, [style.colourExcellent([npc.she] [npc.verb(move)] faster than usual)] [style.colourWater(while in water)]!"
+											+ "[npc.SheIsFull]相比曾经双足时更适合在水中移动了，"
+												+ "因而在[style.colourWater(在水中)][style.colourExcellent([npc.she]移动得比平常更快)]！"
 											+ "<br/>"
-											+ "[style.colourExcellent("+waterSpeed+"%)] travel time while in water!"
+											+ "位于水中时[style.colourExcellent("+landSpeed+"%)]移动时间！"
 										+ "</i></p>");
 		}
 		
 		if(legConfiguration==LegConfiguration.TAIL) {
 			feralStringBuilder.append("<p style='text-align:center;'><i>"
-											+ "While [style.colourTan(on land)], [npc.namePos] lower body will now [style.colourTfGeneric(automatically transform into a bipedal configuration)]!"
-											+ " While in this form, [npc.she] will suffer some negative side-effects."
+											+ "在[style.colourTan(陆地上时)]，[npc.namePos]的下半身会[style.colourTfGeneric(自动转化为双足配置)]！"
+											+ "该形态下[npc.she]会承受一些负面的副作用。"
 											+ "<br/>"
-											+ "Conversely, while [style.colourBlueLight(in water)], [npc.namePos] lower body will [style.colourTfGeneric(automatically transform back into its true tail-like form)]!"
-											+ " While in this form, [npc.she] will benefit from some positive side-effects."
+											+ "相反在[style.colourBlueLight(水中)]，[npc.namePos]的下半身会[style.colourTfGeneric(自动转化为鱼尾形态)]！"
+											+ "该状态下[npc.she]会获得一些正面的副作用。"
 										+ "</i></p>");
 		}
 		
@@ -1105,7 +1105,7 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 					Util.newArrayListOfValues(
 							InventorySlot.FOOT),
 					this.getRace(),
-					"Due to the shape of [npc.namePos] hoofs, only hoof-compatible clothing can be worn in this slot.",
+					"由于[npc.namePos]蹄子的形状，只有与蹄子兼容的服装能够装备至该栏位。",
 					Util.newArrayListOfValues(ItemTag.FITS_HOOFS, ItemTag.FITS_HOOFS_EXCLUSIVE));
 		}
 		if(this.getFootType()==FootType.TALONS) {
@@ -1113,7 +1113,7 @@ public abstract class AbstractLegType implements BodyPartTypeInterface {
 					Util.newArrayListOfValues(
 							InventorySlot.FOOT),
 					this.getRace(),
-					"Due to the shape of [npc.namePos] talons, only talon-compatible clothing can be worn in this slot.",
+					"由于[npc.namePos]利爪的形状，只有与利爪兼容的服装能够装备至该栏位。",
 					Util.newArrayListOfValues(ItemTag.FITS_TALONS, ItemTag.FITS_TALONS_EXCLUSIVE));
 		}
 		return null;

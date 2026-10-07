@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -30,9 +30,9 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Restart blowjob]]></title>
+	<title><![CDATA[重新口交]]></title>
 	<tooltip><![CDATA[
-		This feels too good to stop now!
+		现在这么爽，怎么能停下来！
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -40,9 +40,9 @@
 				[#sex.getNumberOfOrgasms(dale)==1]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Although he was initially against the idea of receiving a blowjob, Dale is now eager for you to suck his cock. With your [pc.lips+] no longer wrapped around his thick, dark dick, he pushes his flared head against your mouth and grunts under his breath, [dale.speechNoEffects(Keep going, [pc.name]...)]
+				虽然戴尔起初不愿意口交，但现在他却渴望你为他口交。你[pc.lips+]不再包裹着他那又粗又黑的鸡巴时，他用他那平平的龟头顶着你的嘴，低声咕哝道，[dale.speechNoEffects(继续，[pc.name]……)]
 				<br/><br/>
-				More than happy to do as he asks, you slide your [pc.tongue+] over his hot, throbbing cock before taking it into your mouth and continuing to give your donkey-boy lover an enthusiastic blowjob...
+				你非常乐意，[pc.tongue+]在他颤动的滚烫阴茎上舔动，随后将其含入口中，继续为你的情人热情口交……
 			]]></text>
 		</description>
 		<description>
@@ -50,9 +50,9 @@
 				[#sex.getNumberOfOrgasms(dale)!=1]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				With his initial hesitation now completely forgotten, Dale lets out a disappointed grunt as he feels that your [pc.lips+] are no longer wrapped around his thick cock. Grabbing his hot, dark-skinned dick in one hand, he pushes his wide, flared head against your mouth and groans, [dale.speechNoEffects(Don't stop now, [pc.name]...)]
+				戴尔完全忘记了最初的犹豫，当他感觉到你[pc.lips+]不再包裹着他粗大的阴茎时，他发出了失望的哼声。他用一只手抓住自己滚烫的肉棒，把平平的龟头对着你的嘴，咕哝道，[dale.speechNoEffects(别停，[pc.name]……)]
 				<br/><br/>
-				Happy to see how enthusiastic Dale is, you eagerly plant a wet kiss on the underside of his hot, musky shaft, before parting your [pc.lips] and taking his throbbing cock into your mouth...
+				看到戴尔如此热情，你很高兴，迫不及待地给他雄味浓重的滚烫阴茎来了个湿吻，随后分开唇瓣，将他颤动的阴茎含入口中……
 			]]></text>
 		</description>
 	</descriptions>

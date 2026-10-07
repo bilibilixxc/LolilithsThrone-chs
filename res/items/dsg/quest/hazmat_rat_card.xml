@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA['Printed by DSG Stationery Co.' is lightly embossed on the back.]]></authorTag>
+		<authorTag><![CDATA[“DSG文具公司印刷”几个字浮现在卡片背面。]]></authorTag>
 		
 		<value>100</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[HappyRat Gold+ discount card]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[HappyRat Gold+ discount cards]]></namePlural>
-		<description><![CDATA[A plastic card, bearing a golden, holographic icon of a smiling rat's face. The writing on the front identifies it as a 'HappyRat Gold+ discount card', which can be used at 'any Hazmat Rat vending machine'.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[乐鼠鼠金级+优惠卡]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乐鼠鼠金级+优惠卡]]></namePlural>
+		<description><![CDATA[一张塑料卡，正面有一个笑脸老鼠的金色全息图标。正面的文字标识它是一个“乐鼠鼠金级+优惠卡”，可以在任何“恶鼠”自动贩卖机上使用。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -25,12 +25,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Provides a [style.colourExcellent(50% discount)] at all [style.colourGreen(Hazmat Rat vending machines)]]]></line>
+			<line><![CDATA[在[style.colourGreen(“恶鼠”自动贩卖机)]上提供[style.colourExcellent(五折优惠)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			This plastic card is the same size and shape as a credit card, and bears a golden, holographic icon of a smiling rat's face. The writing on the front identifies it as a 'HappyRat Gold+ discount card', which can be used at 'any Hazmat Rat vending machine'.
+			这张塑料卡有与信用卡相同的大小和形状，正面有一个笑脸老鼠的金色全息图标。正面的文字标识它是一张“乐鼠鼠金级+优惠卡”，可以在任何“恶鼠”自动贩卖机上使用。
 		</p>
 		]]></applyEffects>
 		
@@ -40,11 +40,11 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the HappyRat card...
+		[npc.Name]仔细查看这张乐鼠鼠卡片……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off [npc.her] HappyRat card to [npc2.name], who is duly impressed by [npc.her] possession of it...
-		]]></otherUse>
+		[npc.Name]向[npc2.name]炫耀着[npc.her]的乐鼠鼠卡，而[npc2.name]对[npc.her]的卡感到印象深刻……
+	]]></otherUse>
 	</useDescriptions>
 
 	

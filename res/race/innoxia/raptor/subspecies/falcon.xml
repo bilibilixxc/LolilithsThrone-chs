@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_raptor</race>
 	<colour>innoxia_raptor</colour>
@@ -24,34 +24,34 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>The Sharpest Talons</bookName>
+	<bookName><![CDATA[极锐之爪]]></bookName>
 	<basicDescriptionId>RAPTOR_BASIC</basicDescriptionId>
 	<advancedDescriptionId>RAPTOR_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[falcon-morph]]></name>
-	<namePlural><![CDATA[falcon-morphs]]></namePlural>
-	<singularMaleName><![CDATA[falcon-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[falcon-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[falcon-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[falcon-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic falcon, known as a 'falcon-morph' when bipedal, and a 'falcon-taur' when the lower body is that of a feral falcon.]]></description>
+	<name><![CDATA[隼化形]]></name>
+	<namePlural><![CDATA[隼化形]]></namePlural>
+	<singularMaleName><![CDATA[隼男]]></singularMaleName>
+	<singularFemaleName><![CDATA[隼女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[隼男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[隼女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的隼，当下肢拟人时被称为隼化形，而当下肢呈现出鸮兽态时则称为半隼人。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[tengu]]></name>
-			<namePlural><![CDATA[tengu]]></namePlural>
-			<singularMaleName><![CDATA[tengu]]></singularMaleName>
-			<singularFemaleName><![CDATA[tengu]]></singularFemaleName>
-			<pluralMaleName><![CDATA[tengu]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[tengu]]></pluralFemaleName>
+			<name><![CDATA[天狗]]></name>
+			<namePlural><![CDATA[天狗]]></namePlural>
+			<singularMaleName><![CDATA[天狗]]></singularMaleName>
+			<singularFemaleName><![CDATA[天狗]]></singularFemaleName>
+			<pluralMaleName><![CDATA[天狗]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[天狗]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[falcon]]></feralName>
-		<feralNamePlural><![CDATA[falcons]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[falcon]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[falcon]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[falcons]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[falcons]]></feralPluralFemaleName>
+		<feralName><![CDATA[隼]]></feralName>
+		<feralNamePlural><![CDATA[隼]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[隼]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[隼]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[隼]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[隼]]></feralPluralFemaleName>
 		<legConfiguration>AVIAN</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>56</size>
@@ -64,8 +64,8 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] speed and agility helps [npc.herHim] to land particularly hard-hitting strikes in combat.
-	]]></statusEffectDescription>
+		[npc.NamePos]的速度和敏捷性有助于[npc.herHim]在战斗中造成超级强力的打击。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="5">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

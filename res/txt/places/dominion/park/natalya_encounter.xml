@@ -1,275 +1,275 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_START"><![CDATA[
 	<p>
-		As you enter yet another of Dominion's many parks, you see a curious scene unfolding before you. Several centaur-pulled carts are lined up nearby, and the naked, muscular centaurs who are responsible for hauling them are busily unloading what look to be at least a hundred saplings. A team of fox, dog, and squirrel-morphs are getting to work planting these trees, while a smartly-dressed [natalya.race] is impatiently trotting up and down the path a short distance away. Noticing that the centaurs have heavy metal collars clasped around their necks, you realise that they're slaves, and that the [natalya.race] must be their overseer.
+		当你进入御城区众多公园中的一个时，你看到了不同于平日的景象。半人马马拉车有序地停列在一旁，而负责拉动这些马车的一丝不挂、肌肉健硕的半人马们正在匆忙地从车中卸下树苗，起码有一百株。有另一队狐狸、狗狗和松鼠化形人正在接手种下这些树苗，与此同时一旁穿着得体的[natalya.race]在不远处的小路上不耐烦地徘徊。察觉到半人马脖子上套着的沉甸甸的金属项圈，你马上意识到他们是奴隶，并且那位[natalya.race]应该就是他们的监工。
 	</p>
 	<p>
-		As she trots over to stand beside one of the carts, you're able to see that while the slaves under her command are almost
+		当她小跑过去站到其中一辆马车旁边时，你可以看到，她指挥的奴隶几乎有
 		#IF(game.isMetricSizes())
-			 two and a half metres
+			2.5米
 		#ELSE
-			 eight feet
+			8英尺
 		#ENDIF
-		 tall, the lithe, lilac-skinned demon is barely pushing past
+		高，但这个轻盈、淡紫色皮肤的恶魔从头到脚的高度几乎没有超过
 		#IF(game.isMetricSizes())
-			 a hundred and seventy centimetres from head to hoof.
+			1.7米。
 		#ELSE
-			 five and a half feet from head to hoof.
+			5.5英尺。
 		#ENDIF
-		 In another contrast to her naked slaves, this [natalya.race] is dressed to impress, as on the upper, humanoid part of her body, a very smart feminine blazer and shirt are restraining her round, [natalya.cupSize]-cup breasts, while a large, black skirt conceals whatever genitalia she might have at the rear of her feral horse's body. Her silken, black hair is tied up into a smart bun, which is being held in place by a pair of royal-purple hair sticks. Perched on the bridge of her cute feminine nose, she's wearing a pair of black, thick-rimmed glasses, and as she realises that it's going to take a while for the carts to be fully unloaded, she rolls her grey-green eyes and audibly tuts, [natalya.speech(You boys sure are taking your time with this...)]
+		不同于她那些全裸的奴隶，这位[natalya.race]穿得吸引目光，她那作为半人马的人类的上半身穿着一件非常时髦的女性西装夹克，衣服下圆鼓丰满的[natalya.cupSize]罩杯的乳房在衣服上显现出明显的轮廓，而一条黑色的大裙子隐藏了她半马屁股后的生殖器，很难说是哪种。她乌黑的丝绸头发扎成一个漂亮的发髻，由一对紫色的皇家发棒固定。她那可爱的鼻梁上戴着一幅黑色厚边眼镜。当她意识到无论如何将马车完全卸货都要花上好一阵子时，她那灰绿色的眼睛翻起白眼，大声地咂嘴，[natalya.speech(你们就知道给我磨洋工……)]
 	</p>
 	<p>
-		Having not seen you, and with both her slaves and the team of planters not paying her any attention, the [natalya.race] suddenly moves around so that her rear end is pressed up against the corner of the cart behind her. Thinking that nobody is looking, the pretty [natalya.race] starts biting her lip and audibly panting in excitement. Staring longingly at the centaurs' huge, sheathed cocks and massive, dangling balls, she begins to lewdly grind her skirt-covered asshole up and down against the cart...
+		并没有注意到你，当她确认她的奴隶和种植工都没有往她这边看时，这位[natalya.race]突然调整姿势，将自己的臀部倚靠在马车的边角上，开始磨蹭。自以为没人注意自己，这位漂亮的[natalya.race]忍不住浅咬嘴唇，兴奋地喘起气来，你能隐约听到她的娇喘声。她渴望地盯着马人巨大的、收在套中的鸡巴，和巨大的、晃来晃去的睾丸，开始猥琐地把她那裹着裙子的屁眼在马车上上下摩擦……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_FILLY_START"><![CDATA[
 	<p>
-		As you enter yet another of Dominion's many parks, you see a curious scene unfolding before you. Several centaur-pulled carts are lined up nearby, and the naked, muscular centaurs who are responsible for hauling them are busily unloading what look to be at least a hundred saplings. A team of fox, dog, and squirrel-morphs are getting to work planting these trees, while the familiar, smartly-dressed figure of Mistress Natalya is pacing back and forth nearby. She notices you in the same moment that you see her, and so immediately trots over to you.
+		当你进入御城区众多公园中的一个时，你看到了不同于平日的景象。半人马马拉车有序地在附近一字排开，而负责拉车的赤裸、肌肉健硕的半人马们正在匆忙地从车中卸下树苗，看起来起码有一百株。有另一队狐狸、狗狗和松鼠化形人正在接手种下这些树苗，而熟悉的、穿着得体的娜塔莉亚主人正在附近来回踱步。她在你看到她的同时就注意到了你，所以立刻小跑过来。
 	</p>
 	<p>
 		#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-			[natalya.speech(Good [style.mule], I see that you're wearing your collar,)] she remarks, before snapping,
+			[natalya.speech(乖[style.mule]，我看到你还带着你的项圈。)]，她说。随后她急不可耐地说，
 		#ELSE
-			[natalya.speech(Bad [style.mule], I see that you're not wearing your collar,)] she growls, before snapping,
+			[natalya.speech(贱[style.mule]，你居然不戴你的项圈！)]，她咆哮着。随后她急不可耐地说，
 		#ENDIF
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 [natalya.speech(Your timing is excellent. I was just thinking how good it'd be to have some dirty [style.mule] slut give me a good rimjob. Follow me, [style.mule].)]
+			[natalya.speech(你来得正好。我正想让你这种下流的[style.mule]好好舔我的肛。跟我来，[style.mule]。)]
 		#ELSE
-			 [natalya.speech(Your timing is excellent, although it's a shame that your mouth appears to be inaccessible. I was just thinking how good it'd be to have some dirty [style.mule] slut give me a good rimjob, but a handjob will have to do. Follow me, [style.mule].)]
+			[natalya.speech(你来得正好，只可惜你的小嘴看起来没法服务了。我本打算让你这种下流的[style.mule]好好舔我的肛，不过现在只能让你给我手交了。跟我来，[style.mule]。)]
 		#ENDIF
 	</p>
 	<p>
-		Obediently following your Mistress behind a cluster of nearby bushes, you find that your position conceals the two of you from the rest of the park, offering you complete privacy. Wasting no time, the [natalya.race] hikes up her skirt, presenting you with both her puffy, ebony-skinned asshole and huge, rapidly-hardening horse-cock.
+		你顺从地跟着主人走到附近的灌木丛后面，你会发现你的位置将你们俩与公园的其他地方隔开，为你们提供了完全的隐私。没有浪费一点时间，[natalya.race]撩起她的裙子，向你展示她凸起的黑檀木色的屁眼，和巨大的，迅速硬化的肉棒。
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 Bucking her hips back towards you, she impatiently snaps, [natalya.speech(You know the drill, [style.mule]. Kiss my ass and then get your tongue in there!)]
+			她把屁股扭过来对准你，不耐烦地说，[natalya.speech(你知道规矩的，[style.mule]。先亲我的屁眼，然后再把你的舌头伸进去！)]
 		#ELSE
-			 Bucking her hips back towards you, she impatiently snaps, [natalya.speech(You know the drill, [style.mule]. Your mouth may be covered, but I'll accept you burying your face in my ass instead of a kiss. After that, drop down and start stroking my cock!)]
+			她把屁股扭过来对准你，不耐烦地说，[natalya.speech(你知道规矩的，[style.mule]。你的嘴是被遮住了，但我可以接受你把脸埋在我屁股里作为替代。然后，趴下，开始抚摸我的肉棒！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_START_FILLY_ANILINGUS"><![CDATA[
 	<p>
-		Performing the customary display of submission, you obediently lean in to plant a big, wet kiss on Natalya's puffy asshole. Knowing how quickly she can get annoyed, you don't waste any time and quickly move on to passionately licking and making out with her musky doughnut.
+		遵从你顺从的性格，你听话地将嘴唇贴在娜塔莉亚凸起的屁穴上，进行湿漉漉的大吻。你知道她很快就会恼羞成怒，所以你没有浪费任何时间，很快就开始热情地舔舐和亲热她那散发着麝香的甜甜圈。
 	</p>
 	<p>
-		[natalya.speech(Yes, [style.mule]! ~Mmm!~ That's it!)] she moans as your [pc.lips] press lewdly against her rear entrance. Darting out your [pc.tongue+], you start eagerly giving your Mistress a rimjob, causing her to let out a series of lewd, high-pitched moans...
+		[natalya.speech(是的，[style.mule]~就是这样！)]当你[pc.lips]淫荡地抵住她的后庭时，她发出了娇喘。你迫不及待地伸出[pc.tongue+]为主人舔肛，引得她发出一连串淫荡、高亢的呻吟声……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_START_FILLY_HANDJOB"><![CDATA[
 	<p>
-		Although not able to kiss it as per the customary display of submission, you obediently lean in to press your face against Natalya's puffy asshole. Knowing how quickly she can get annoyed, you don't waste any time and quickly move on to drop down beside her. Reaching up to take hold of her thick, throbbing horse-cock, you wrap your [pc.fingers] around her huge, hot shaft and give it a loving stroke. As a thick, musky spurt of precum oozes out of the flared head of her horse-like cock, she calls out, [natalya.speechNoEffects(~Ooh!~ Yes! Keep stroking it like that, [style.mule]! ~Mmm!~)]
+		虽然遵从你顺从的性格为主人亲吻，但你还是听话地凑上去，把脸贴在娜塔莉亚凸起的屁眼上。你知道她很快就会恼羞成怒，所以你没有浪费时间，很快就走到她身边坐下。你伸手握住她粗大、跳动的马勃，用[pc.fingers]缠住她巨大、火热的阴茎，爱怜地抚摸着。当一股浓稠、带着麝香味的精液从她马阴茎头部喷出时，她叫道：[natalya.speechNoEffects(~喔噢！~就是这样！继续这样摸，[style.mule]！~呜嗯！~)]。
 	</p>
 	<p>
-		Once again doing as you're told, you use your [pc.hands] to enthusiastically stroke your Mistress's cock. Running your touch down to the leaky head, you allow the slimy precum to drool out all over your [pc.fingers], before massaging it down the length of her throbbing shaft.
+		你再次听话地用[pc.hands]热情地抚摸主人的阴茎。你的手一直抚摸到阴茎头，让粘稠的精液流到你的手指上，然后再顺着他跳动的阴茎按摩。
 	</p>
 	<p>
-		[natalya.speechNoEffects(~Aah!~ Fuck! That's a good [style.mule]! ~Ooh!~ Keep going!)] Natalya moans as you settle into a steady rhythm of rubbing your [pc.hands] up and down the length of her musky precum-coated cock...
+		[natalya.speechNoEffects(啊！~ 干！真是个乖[style.mule]！~哦！~ 继续！)]娜塔莉亚呻吟着，你的[pc.hands]在她沾满麝香精液的阴茎上上下来回平稳地摩擦着……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_START_END_EARLY"><![CDATA[
 	<p>
-		You really don't want to see any more of this lewd [natalya.race]'s grinding, and so after turning away from the whole commotion, you set off into the park and continue on your way...
+		你实在不想再看这个淫荡的[natalya.race]的自娱自乐，于是转身离开了这个场景，走进公园继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_CAUGHT"><![CDATA[
 	<p>
-		Wanting to see what happens next, you watch the demonic centauress as she grinds her butt against the cart. Within moments she's letting out quiet moans, before moving on to start groping her [natalya.cupSize]-cup breasts.
+		你好奇接下来会发生什么，就继续偷看这个恶魔半人马用屁股磨蹭马车。不一会儿，她就发出了低声的呻吟，然后开始抓弄她[natalya.cupSize]罩杯的乳房。
 	</p>
 	<p>
-		As she bites her lip to suppress another horny moan, she just so happens to finally turn to look your way. As she sees that you've been watching her this whole time, she immediately drops her hands back to her sides and takes a flustered step away from the cart.
+		当她咬着嘴唇压抑着又一声淫荡的呻吟时，她刚好转过身来看着你。当你和她四目相对时，她立刻把双手放回两侧，慌乱地远离了马车。
 	</p>
 	<p>
-		[natalya.speech(What do you think you're doing?)] she angrily snaps at you. Trotting right up to where you're standing, she tries the turn the situation around by declaring, [natalya.speech(You dirty pervert! How dare you stare at me like that! You owe me an apology, and I'll have it from you right this instant!)]
+		[natalya.speech(你以为你在干什么？)]她愤怒地对你咆哮。试图掩盖不雅，她径直走到你站的地方，扯着嗓子夺理称：[natalya.speech(你这个肮脏的变态，竟敢这样盯着我！你欠我一个道歉！现在就给我道歉！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_CAUGHT_END_EARLY"><![CDATA[
 	<p>
-		Telling the [natalya.race] that she shouldn't act so lewd in a public place if she doesn't want to be watched, you turn away from her and [pc.walk] away. Ignoring the demon's flustered, angry response, you set off into the park and continue on your way...
+		你对[natalya.race]说，如果她不想被人看到，就不应该在公共场所做出如此下流的举动，然后潇洒地转身离开她[pc.walk]了。你无视恶魔半人马慌乱而愤怒的反应，走进公园继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_APOLOGY"><![CDATA[
 	<p>
-		Being a little caught off-guard by the [natalya.race]'s aggressive behaviour, you decide to just do as she says. Apologising for watching her grind her ass up against the cart, you try to put her at ease by pointing out that nobody else saw her doing it.
+		由于对[natalya.race]的挑衅行为有点措手不及，你决定照她说的做。你对看着她把屁股对着推车磨的事情表示歉意，并补充说没有其他人看到她这样做，试图让她冷静下来。
 	</p>
 	<p>
-		[natalya.speech(So that's what you were interested in, were you?)] she retorts. Flashing you a disgusted look, she pointedly asks, [natalya.speech(I bet you were imagining what my asshole looks like, weren't you? Admit it.)]
+		[natalya.speech(所以你确实对我心怀不轨，是吧？)]她反驳道。她向你投来厌恶的目光，指着你的脸说：[natalya.speech(我猜你还意淫我的肛门长什么样呢，我没说错吧？承认吧！)]
 	</p>
 	<p>
-		Seeing that she could potentially be backed up by half a dozen muscular centaurs, you decide that annoying this [natalya.race] would be a bad idea, and so simply go along with what she's saying. Admitting that you were imagining how her asshole looks, you apologise to her once again.
+		你余光看到她周围半打肌肉发达的半人马，觉得惹恼这个[natalya.race]不是个好主意，于是干脆顺着她的话说下去。你承认自己在脑中想象了她的屁眼，并再次向她道歉。
 	</p>
 	<p>
-		[natalya.speech(I knew it,)] she triumphantly declares. Much to your surprise, the disgusted sneer on her face quickly transforms into a devious grin, and after quickly licking her lips she orders, [natalya.speech(Follow me, pervert. I'll have you submit to me and show you your true place, and then you can give me a proper apology...)]
+		[natalya.speech(我就知道，)]她胜利般地宣布。让你始料未及的是，她脸上厌恶的冷笑很快就变成了狡黠的笑容，在快速舔了舔嘴唇后，她命令道：[natalya.speech(跟我来，小变态。我会让你臣服于我，让你认清你自己的地位，之后再给我一个有诚意的道歉……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_APOLOGY_END_EARLY"><![CDATA[
 	<p>
-		Feeling like this is getting out of hand, you tell the [natalya.race] that you need to be going, before turning away from her and [pc.walking] away. Ignoring the demon's flustered, angry response, you set off into the park and continue on your way...
+		你觉得事情有些失控，于是告诉[natalya.race]你得走了，然后转身离开了她，[pc.walking]了。你没有理会恶魔慌乱而愤怒的反应，而是走进公园，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_BUSHES"><![CDATA[
 	<p>
-		Deciding to obey, you tell the [natalya.race] that you'll do what she wants. After flashing you a smirk, she reaches into the nearby cart and produces a large carrier bag, before trotting off and leading you over to some nearby bushes. Following her around to the other side of the foliage, you find that your position conceals the two of you from the rest of the park, offering you complete privacy.
+		你决定服从，告诉[natalya.race]你会按她说的做。她对你得意地笑了一下，然后伸手从旁边的推车里拿出一个大提包，小跑着把你带到附近的灌木丛中。跟着她绕到灌木丛的另一侧，你会发现你的位置将你们俩与公园的其他地方隔开，为你们提供了完全的隐私。
 	</p>
 	<p>
-		[natalya.speech(This is what you wanted to see then?)] the [natalya.race] says, before reaching back and hiking up her skirt. As you're positioned behind her, you get an unobstructed line of sight to her now-exposed rear end, and by swishing her tail to one side, she grants you a view of her puffy, feral horse-anus. Instead of the pussy that you were expecting beneath this, however, she has a pair of huge, dangling balls and a massive, bestial horse-cock that's beginning to push out of its sheath. Matching the shade of the horse-like hair which covers her feral lower body, her animalistic genitalia are mostly dark black in colour, although there is a small amount of pale lilac mottling on her shaft. Bucking her hips a couple of times, the demon relaxes and contracts her ebony-skinned doughnut as she throws the carry bag to your feet and teases, [natalya.speech(Open it and take out what's inside.)]
+		[natalya.speech(这就是你想看的吧？)]这位[natalya.race]一边说，一边撩起她的裙子。你站在她身后，她裸露的后臀一览无余。她把尾巴摆向一边，向你展示她肉感的马肛门。然而，肛门的下方并不是你所期待的阴户，而是一对巨大的、悬垂着的睾丸和一根正从鞘中缓缓伸出的、野兽般的巨大马屌。与覆盖在她马半身的马鬃一样，她的马阴茎大部分呈深黑色，不过带有少许的淡紫色斑纹。这只恶魔摇晃了几下臀部，乌黑的肛门收放自如，她把提包扔到你的脚边，挑逗地说道，[natalya.speech(打开它，把里面的东西拿出来。)]
 	</p>
 	<p>
-		Doing as you're told once again, you open the bag to see that it contains a gigantic, [style.size(56)] ribbed dildo. Stomping her rear hoofs down against the grass, she pushes her hips back and demands, [natalya.speech(Submit to me, slut. Submit to me and call me 'Mistress Natalya', and then I'll allow you to shove my toy into my ass. After that, I think I'll empty my balls onto your face.)]
+		你再次按照吩咐打开手提袋，看到里面装着一个巨大的[style.size(56)]带肋螺纹假阳具。她将后蹄踩在草地上，臀部向后用力翘起，要求道：[natalya.speech(臣服于我吧，荡妇。臣服于我，叫我‘娜塔莉亚主人’，然后我就允许你把我的玩具塞进我的屁眼里。之后，我想我会允许你用脸端起我的蛋蛋。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_BUSHES_END_EARLY"><![CDATA[
 	<p>
-		Although you were happy to go along with things up until this point, Natalya's final order is too much for you. Saying that you're not into that kind of thing, you quickly [pc.step] back around to the other side of the bushes and [pc.walk] away. Ignoring the demon's flustered, angry response, you set off into the park and continue on your way...
+		虽然在此之前你都乐于顺从，但娜塔莉亚最后的命令让你无法忍受。你说自己不喜欢这种事，然后迅速[pc.step]到灌木丛的另一边，[pc.walk]了。无视恶魔慌乱而愤怒的反应，你走进公园，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_BUSHES_SUBMIT"><![CDATA[
 	<p>
-		Doing as you're told, you completely submit to the [natalya.race] and call her 'Mistress Natalya'. After briefly smirking at your surrender, she impatiently snaps, [natalya.speech(Go on then, bitch, shove that toy into my ass! Oh, and don't you <i>dare</i> touch my asshole! That's reserved for my fully trained [style.mules], and while I'm confident that I'll have you join their ranks some day, you're not there yet.)]
+		你完全臣服于[natalya.race]并按照吩咐称她为“娜塔莉亚主人”。在对你的屈服露出短暂的冷笑后，她不耐烦地说道：[natalya.speech(来吧，婊子，把那个玩具塞进我的屁眼里！哦，别<i>想</i>拿你的脏屌插我的屁眼！那是留给我训练有素的[style.mules]的，虽然我有信心你有朝一日能够加入她们的行列，但你还没到那一步。)]
 	</p>
 	<p>
-		With that, Natalya lifts her hips and relaxes her puffy, ebony-skinned asshole, presenting herself fully to you so that you can do as she says. As you lift the gigantic dildo up to her rear entrance, you suddenly notice the true, demonic nature of her asshole, for although it looks like a regular horse anus at first glance, you now see that its surface is beginning to glisten with clear, slimy lubricant.
+		说着，娜塔莉亚抬起臀部，放松她那膨胀凸起、乌黑的屁眼，将自己完全展现在你面前，让你可以按照她说的做。当你把巨大的假阳具举到她的后庭时，你突然发现她的恶魔原生的屁眼，虽然乍一看像普通的马肛门，但仔细一看它的表面开始闪烁着透明、粘稠的润滑液。
 	</p>
 	<p>
-		Pushing the tip of the dildo into her demonic hole, you manage to draw a lewd, high-pitched moan from between Natalya's lips. Panting and sighing, the [natalya.race] looks back over her shoulder and bites her lip as you force the first of the dildo's three bulbous ribs past the puffy rim of her asshole and into her slimy rear entrance. At this moment, the dildo reveals itself to be enchanted and starts vigorously vibrating, causing Natalya to let out another shuddering moan. Unable to cope with the pleasure, she impatiently pushes her hips back, forcing you to obscenely stretch out the lithe [natalya.race]'s puffy asshole as you shove the remaining two ribs of the dildo inside of her.
+		将假阳具顶端插入她的恶魔之洞，你成功地从娜塔莉亚的双唇间引出一声淫荡而高亢的呻吟。当你用力将假阳具三根鼓鼓的螺纹中的第一条顶过她屁眼的肿胀边缘，插入她黏糊糊的屁穴时，[natalya.race]一边喘息一边回头看你，咬着嘴唇。就在这时，假阳具被施了魔法，开始剧烈震动，让娜塔莉亚再次发出颤抖的呻吟。由于无法拒绝这种快感，她急不可耐地将臀部向后推，迫假阳具的剩余两根插入她的体内，[natalya.race]那淫荡的丰满肿胀的屁眼随之扩张变大。
 	</p>
 	<p>
-		By now, a thick stream of precum is drooling out of her massive, fully-erect horse-cock. Moaning in delight as her vibrating toy stimulated the insides of her asshole, she demands, [natalya.speech(Get down and stroke my cock, slut! ~Mmm!~ Fuck! I'm going to give you a facial you'll never forget!)]
+		此时，一股浓稠的精液正从她硕大、完全勃起的马鸡巴中喷涌而出。振动玩具刺激着她的屁眼内壁，她高兴地呻吟着，命令道：[natalya.speech(趴下，抚摸我的鸡巴，荡妇！~干！我要给你来个终生难忘的面部护理！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_BUSHES_SUBMIT_START_SEX"><![CDATA[
 	<p>
-		As Natalya's throbbing cock continues to leak musky precum all over the floor, you obediently drop down beside her and reach up to take hold of her thick, throbbing horse-cock. Wrapping your [pc.fingers] around her huge, hot shaft, you give it a loving stroke, and can't help but gasp in surprise as it instantly jumps up in excitement. In a further display of exhilaration, Natalya starts rapidly pawing at the ground with one of her front hoofs, and as a thick, musky spurt of precum oozes out of the flared head of her horse-like cock, she calls out, [natalya.speechNoEffects(~Ooh!~ Yes! Keep stroking it like that, slut! ~Mmm!~ You're forbidden from using anything but your hands! ~Aah!~ I'll train you into a good, obedient [style.mule]!)]
+              当娜塔莉亚跳动的阴茎不断将麝香味的精液喷洒在地上时，你顺从地趴在她身边，伸手握住她粗大、跳动的马鸡巴。用[pc.fingers]缠绕着她巨大而火热的阴茎，爱不释手地抚摸着，当它再次兴奋地跳起来时，你不禁惊呼出声。娜塔莉亚开始用一只前蹄在地上快速划动，一股浓稠、带着麝香味的精液从她的马阴茎头喷涌而出。她叫道：[natalya.speechNoEffects(~哦！~是的！继续这样摸，荡妇！~除了用手，你不能用任何东西！~我会把你训练成听话的[style.mule]！)]
 	</p>
 	<p>
-		Once again doing as you're told, you use your [pc.hands] to enthusiastically stroke your Mistress's cock. Running your touch down to the leaky head, you allow the slimy precum to drool out all over your [pc.fingers], before massaging it down the length of her throbbing shaft.
+		你继续用[pc.hands]热情地抚摸主人的阴茎。你的手一直抚摸到阴茎头，让粘稠的精液流到你的手指上，带着秽液按摩她那跳动的阴茎。
 	</p>
 	<p>
-		[natalya.speechNoEffects(~Aah!~ Fuck! You'll make a good [style.mule]! ~Ooh!~ Keep going!)] Natalya moans as you settle into a steady rhythm of rubbing your [pc.hands] up and down the length of her musky precum-coated cock...
+		[natalya.speechNoEffects(啊！~ 干！你会成为个乖[style.mule]的！~哦！~ 继续！)]娜塔莉亚呻吟着，你的[pc.hands]在她沾满麝香精液的阴茎上上下来回平稳地摩擦着……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_BUSHES_SUBMIT_POST_SEX"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_playerReceivedNatalyaFacial))
 		<p>
-			Now that Natalya has had her fun, she smirks down at you and arrogantly remarks, [natalya.speech(With a little more training, you'll make a fine [style.mule]. Now, remove my dildo for me; I want to hurry back and check on my boys.)]
+			从高潮中回味过来，她得意地笑着俯视你，傲慢地说道，[natalya.speech(再稍微训练一下，你就能成为出色的[style.mule]。现在，帮我取下假阳具；我要赶紧回去看看我的奴隶们。)]
 		</p>
 		<p>
-			Turning her feral horse-like body around, Natalya flicks her tail to one side and presents you with her puffy, horse-like asshole. The massive ribbed dildo is still buried deep inside of it, and as you move forwards, you hear that it's still incessantly buzzing away as it vibrates inside of your Mistress's butt. As you reach forwards and take hold of the base, Natalya lets out a deep moan and commands, [natalya.speech(Pull it out slowly, slut! ~Ooh!~ And remember that you're forbidden from touching my ass! ~Mmm!~ That will be a reward later on in your training!)]
+			娜塔莉亚将半马身体转过来，将尾巴甩向一边，向你展示她那肿胀的马屁眼。巨大的棱形假阳具还深埋在肛门里，当你靠近时，你看到它还在主人的屁眼里震动，不停地嗡嗡作响。当你向前伸手握住假阳具的底座时，娜塔莉亚发出了低沉的呻吟声，并命令你：[natalya.speech(轻点拔出来，荡妇！~噢！~ 别忘了你依然没有权限碰我的屁股！~呜嗯！~ 稍后在你的训练中我会奖励你的！)]
 		</p>
 		<p>
-			Eager to obey Natalya's order, you set to work on slowly pulling the huge dildo out of her ass. Her puffy rear entrance lewdly spreads out around each of the three thick ridges as you gently slide the massive toy out of her, causing a series of deeply erotic moans to drift out of her mouth. As the dildo finally slips free, you can't help but let out a hungry [pc.moan] of your own as you find yourself staring at your Mistress's puffy, glistening asshole.
+			你迫不及待地遵从娜塔莉亚的命令，慢慢地将巨大的假阳具从她的屁眼里拔出。当那巨大的假阳具一点一点从她体内滑出时，她蓬松的后庭淫荡地随着三条粗壮的螺纹张合扩缩，引得她口中发出一连串深情的呻吟。当假阳具终于抽出时，你不禁发出了自己饥渴的[pc.moan]，因为你发现自己忍不住盯着主人肿胀、闪闪发光，还未合上的屁眼看。
 		</p>
 	#ELSE
 		<p>
-			Although Natalya has had her fun, she is quite clearly displeased with your refusal to receive her facial, and arrogantly remarks, [natalya.speech(I'll work on your disobedience later, bitch. For now, just remove my dildo for me; I want to hurry back and check on my boys.)]
+			虽然娜塔莉亚玩得很开心，但她显然对你拒绝接受她的面部护理感到不满，并傲慢地说道：[natalya.speech(你不听话，我以后再收拾你，婊子。现在，帮我取下假阳具；我要赶紧回去看看我的奴隶们。)]
 		</p>
 		<p>
-			Turning her feral horse-like body around, Natalya flicks her tail to one side and presents you with her puffy, horse-like asshole. The massive ribbed dildo is still buried deep inside of it, and as you move forwards, you hear that it's still incessantly buzzing away as it vibrates inside of your Mistress's butt. As you reach forwards and take hold of the base, Natalya lets out a deep moan and commands, [natalya.speech(Pull it out slowly, slut! ~Ooh!~ And remember that you're forbidden from touching my ass! ~Mmm!~ Bad [pc.girls] like you aren't deserving of it!)]
+			娜塔莉亚将半马身体转过来，将尾巴甩向一边，向你展示她那肿胀的马屁眼。巨大的棱形假阳具还深埋在肛门里，当你靠近时，你看到它还在主人的屁眼里震动，不停地嗡嗡作响。当你向前伸手握住假阳具的底座时，娜塔莉亚发出了低沉的呻吟声，并命令你：[natalya.speech(轻点拔出来，荡妇！~噢！~ 别忘了你依然没有权限碰我的屁股！~呜嗯！~ 像你这样的坏[pc.girls]可配不上它！)]
 		</p>
 		<p>
-			Not wanting to annoy Natalya any more than you've already done so, you set to work on slowly pulling the huge dildo out of her ass. Her puffy rear entrance lewdly spreads out around each of the three thick ridges as you gently slide the massive toy out of her, causing a series of deeply erotic moans to drift out of her mouth. As the dildo finally slips free, you can't help but let out a hungry [pc.moan] of your own as you find yourself staring at your Mistress's puffy, glistening asshole.
+			你迫不及待地遵从娜塔莉亚的命令，慢慢地将巨大的假阳具从她的屁眼里拔出。当那巨大的假阳具一点一点从她体内滑出时，她蓬松的后庭淫荡地随着三条粗壮的螺纹张合扩缩，引得她口中发出一连串深情的呻吟。当假阳具终于抽出时，你不禁发出了自己饥渴的[pc.moan]，因为你发现自己忍不住盯着主人肿胀、闪闪发光，还未合上的屁眼看。
 		</p>
 	#ENDIF
 	<p>
-		Before you're tempted to touch it, Natalya quickly pulls her skirt back down to conceal her lower body, depriving you of the erotic sight of both her slutty asshole and massive horse-like cock. Grabbing the dildo from out of your [pc.hands], she returns it to the carrier bag and trots off, calling over her shoulder as she goes, [natalya.speech(Come on, bitch! Follow your Mistress!)]
+		在你想触摸它之前，娜塔莉亚便迅速拉下裙子，遮住下体，让你无法看到她淫荡的屁眼和粗大乌黑的马阴茎。她从你[pc.hands]中夺过假阳具，她把它放回提包，然后小跑着离开，边走边回头对着你喊道：[natalya.speech(快来，婊子！跟上你的主人！)]
 	</p>
 	<p>
-		There's little else for you to do except obey Natalya's command and follow her back to where you first saw her...
+		除了听从娜塔莉亚的命令回到一开始见面的地方外，你也没什么可以做的了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_BUSHES_SUBMIT_POST_SEX_END"><![CDATA[
 	<p>
-		As you trail along in your Mistress's wake, she purposefully swishes her tail back in your direction, wafting the heady, potent musk still being given off by her cock back in your direction. For the first time since meeting her, she turns to give you the briefest glimpse of a genuine smile, before trotting along and leading you back over to the carts.
+		当你跟在主人的身后时，她故意向你的方向摆动尾巴，将她的阴茎散发出的令人陶醉的浓烈麝香飘向你的方向。这是自从你认识她以来，她第一次转过身来对你露出一丝真诚的微笑。她小跑着带你回到马车旁。
 	</p>
 	<p>
-		As you head back to where you first saw your new Mistress, you see that Natalya's centaur slaves are obediently standing in front of the now-empty carts, stoically staring straight ahead as they await their owner's return. Quickly trotting over to them, your Mistress sets about strapping each of them into their harnesses. Exactly like she was doing to you just moments ago, Natalya makes a show of flicking her horse-like tail in their direction, and as one of the centaurs breathes in her musky scent, he starts restlessly pawing the ground. Putting an immediate stop to this excitable behaviour by flashing him a furious glare, the small [natalya.race] tightly buckles up his harness before turning back to address you, [natalya.speech([style.Mule]! My boys and I shall be on our way now, but before we go, I have something for you.)]
+		当你回到第一次见到新主人的地方时，你看到娜塔莉亚的半人马奴隶们正顺从地站在已经空了的推车前，一动不动地盯着前方，等待着主人的归来。主人迅速小跑过去，开始给每个奴隶套上马具。就像刚才对你做的那样，娜塔莉亚无意中朝它们的方向甩了甩马尾巴，当其中一只半人马呼吸到她的麝香气味时，开始不安分地在地上乱抓。[natalya.race]用愤怒的目光瞪了它一眼，奴隶便立即停下了他的行为。她紧紧地系好自己奴隶的马具，然后回头对你说：[natalya.speech([style.Mule]！我和我的奴隶们该上路了，在此之前，我有些东西要给你。)]
 	</p>
 	<p>
-		Reaching into one of her blazer's pockets, she produces a business card and carelessly tosses it for you to catch as she declares, [natalya.speech(The address at which you may find me is printed on that business card; I expect to see you there at some point in the future so that I may train you into one of my obedient [style.mules]. Do not disappoint me, bitch.)]
+		她把手伸进西装口袋，拿出一张名片，一边漫不经心地扔给你，一边说着，[natalya.speech(我的地址就印在那张名片上；我希望稍后能在那里见到你，好让我把你训练成我的一只乖[style.mules]。别让我失望，婊子。)]
 	</p>
 	<p>
-		With that, the haughty [natalya.race] trots off to the cart at the front of the queue, making a point of going the long way around so as to walk in front of each of her centaurs and flick her tail in their direction one last time. As she passes, you hear her tease under her breath, [natalya.speech(One of you will be getting some of this later...)]
+		就这样，傲慢的[natalya.race]在跑到队伍最前面的推车前，特意绕远路走到她的每只半人马前面，最后一次朝它们甩甩尾巴。当她经过时，你听到她小声地说道：[natalya.speech(你们其中一个乖宝宝能够得到这个……)]
 	</p>
 	<p>
-		Gracefully leaping into the back of the wagon, Natalya calls out for her slaves to get moving, and with a rumble of wheels and creak of leather, they turn around and speed off out of the park. Looking down at the business card in your [pc.hand], you read that their company, 'Dominion Express', is located in Dominion's Warehouse District, so if you wanted to seek out Natalya and continue your training under her, that's where you'd need to head...
+		娜塔莉亚优雅地跳上马车后座，呼唤她的奴隶们快走，伴随着隆隆的车轮声和皮革的咯吱声，他们掉转车头，飞快地驶出了公园。你低头看了看[pc.hand]中的名片，上面写着他们的公司“御城速递”，位于御城区的仓库区。如果你想找到娜塔莉亚并继续在她手下接受训练，你就得去那里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_END_PARK"><![CDATA[
 	<p>
-		With the recent memory of your time with your new Mistress at the forefront of your mind, you set off into the park and continue on your way...
+		带着与新主人相处的美好回忆，你踏上了前往公园的旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_FILLY_SEX_ANAL"><![CDATA[
 	<p>
-		Having had her fun, Natalya orders, [natalya.speech(Kiss my ass one last time, then we're done here, [style.mule].)]
+		心满意足后，娜塔莉亚命令你：[natalya.speech(再亲一口我的肛门作为结束吧，[style.mule]。)]
 	</p>
 	<p>
-		Doing as you're told, you plant one last, passionate kiss on your Mistress's musky, ebony-skinned doughnut, before [pc.stepping] back and allowing her to pull her skirt back down. Snapping her fingers, she commands, [natalya.speech(Follow me, [style.mule]. Let's see if my boys have finished their work.)]
+		你按照她的吩咐，在主人那散发着麝香、乌黑色皮肤的甜甜圈上留下最后一个热情的吻，然后退开，让她把裙子拉下来。她打了个响指，命令道：[natalya.speech(跟我来，[style.mule]，看看我的奴隶们干完活了没有。)]
 	</p>
 	<p>
-		Once more obediently doing as you're told, you fall in behind your Mistress as she returns to the spot where you first saw her.
+		你再一次乖乖地听话，跟在主人身后，回到你第一次见到她的地方。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_FILLY_SEX_HANDJOB"><![CDATA[
 	<p>
-		Having had her fun, Natalya throws a wet wipe down to you and orders, [natalya.speech(Clean my cock, then we're done here, [style.mule].)]
+		玩够了，娜塔莉亚把湿巾扔给你，然后命令道：[natalya.speech(把我的老二擦干净，我们就完事了，[style.mule]。)]
 	</p>
 	<p>
-		Doing as you're told, you tear open the packet and pull out the wet wipe, before dutifully managing to clean most, but not all, of the slimy, musky cum from off of her thick, softening shaft. Once done, you stand up and [pc.step] back, allowing her to pull her skirt back down. Snapping her fingers, she commands, [natalya.speech(Follow me, [style.mule]. Let's see if my boys have finished their work.)]
+		你按照吩咐撕开包装，拿出湿巾，然后尽职尽责地擦拭她粗壮而柔软的阴茎上大部分粘糊糊、带着麝香味的精液。擦完后，你站起来，[pc.step]后退，让她把裙子拉下来。她打了个响指，命令道：[natalya.speech(跟我来，[style.mule]，让我们一起看看小伙子们干完活没有。)]
 	</p>
 	<p>
-		Once more obediently doing as you're told, you fall in behind your Mistress as she returns to the spot where you first saw her.
+		你习惯性地听从命令，跟在主人身后，回到你第一次见到她的地方。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NATALYA_ENCOUNTER_FILLY_END"><![CDATA[
 	<p>
-		As you trail along in your Mistress's wake, she purposefully swishes her tail back in your direction, wafting the heady, potent musk still being given off by her cock back in your direction. As you head back to where you first saw your Mistress, you see that Natalya's centaur slaves are obediently standing in front of the now-empty carts, stoically staring straight ahead as they await their owner's return. Quickly trotting over to them, your Mistress sets about strapping each of them into their harnesses. Exactly like she was doing to you just moments ago, Natalya makes a show of flicking her horse-like tail in their direction, and as one of the centaurs breathes in her musky scent, he starts restlessly pawing the ground. Putting an immediate stop to this excitable behaviour by flashing him a furious glare, the small [natalya.race] tightly buckles up his harness before turning back to address you, [natalya.speech([style.Mule]! My boys and I shall be on our way now, but we expect to see you again soon. I'm sure some of my boys would love to have you service them.)]
+		你跟在主人的身后，她故意向你的方向摆动尾巴，让她的阴茎散发出的令人陶醉的浓烈麝香飘向你的方向。当你回到第一次见到主人的地方时，你看到娜塔莉亚的半人马奴隶们正顺从地站在已经空了的推车前，目光呆滞地注视着前方，等待着主人的归来。主人迅速小跑过去，开始给每个奴隶套上马具。就像刚才对你做的那样，娜塔莉亚朝它们的方向甩了甩马尾巴，当其中一只半人马呼吸到她的麝香气味时，开始不安分地在地上乱抓。[natalya.race]用愤怒的目光瞪了他一眼，他便立即停止了这种激动的行为。主人紧紧地系好自己奴隶的马具，然后回头对你说：[natalya.speech([style.Mule]！我和我的奴隶们要回去了，但我还期待着能在见到你。我很确定我的一些年轻力壮的小伙子会青睐你的服务的。)]
 	</p>
 	<p>
-		With that, the haughty [natalya.race] trots off to the cart at the front of the queue, making a point of going the long way around so as to walk in front of each of her centaurs and flick her tail in their direction one last time. As she passes, you hear her tease under her breath, [natalya.speech(One of you will be getting some of this later...)]
+		就这样，傲慢的[natalya.race]在跑到队伍最前面的推车前，特意绕远路走到她的每只半人马前面，最后一次朝它们的方向甩甩尾巴。当她经过时，你听到她小声地说：[natalya.speech(你们中的一个乖宝宝回去可以得到这个……)]
 	</p>
 	<p>
-		Gracefully leaping into the back of the wagon, Natalya calls out for her slaves to get moving, and with a rumble of wheels and creak of leather, they turn around and speed off out of the park. With your Mistress having departed, there's little else for you to do except continue on your way through the park...
+		娜塔莉亚优雅地跳上马车后座，呼唤她的奴隶们快走，伴随着隆隆的车轮声和皮革的吱呀声，他们掉转车头，飞快地离开了公园。主人已经离开，你除了继续穿过公园，就没什么可做的了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

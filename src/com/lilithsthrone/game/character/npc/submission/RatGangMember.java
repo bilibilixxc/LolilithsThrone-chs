@@ -110,7 +110,7 @@ public class RatGangMember extends NPC {
 			
 			setName(Name.getRandomTriplet(this.getSubspecies()));
 			this.setPlayerKnowsName(false);
-			this.setGenericName("gang-member");
+			this.setGenericName("帮派成员");
 			
 			Main.game.getCharacterUtils().randomiseBody(this, true);
 			
@@ -209,10 +209,10 @@ public class RatGangMember extends NPC {
 	public String getDescription() {
 		if(this.isSlave()) {
 			return (UtilText.parse(this,
-					"Having run afoul of the law while being a member of Vengar's gang, [npc.name] has ended up being enslaved, and is now no more than [npc.her] owner's property."));
+					"[npc.name]在文加帮派里混的时候犯了法，现在成了奴隶，不过是[npc.her]主人的财产而已。"));
 		} else {
 			return (UtilText.parse(this,
-					"[npc.Name] is a member of Vengar's gang, and has undoubtedly committed a large number of crimes against the residents of Submission."));
+					"[npc.Name]是文加帮派的一员，毫无疑问，对屈城区居民犯下了累累罪行。"));
 		}
 	}
 	

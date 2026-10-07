@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>25</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Squirrel Java]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Squirrel Javas]]></namePlural>
-		<description><![CDATA[A plastic bottle of what looks to be some kind of coffee. A label on the front shows a squirrel-girl fingering herself over the top of a bottle just like this one; her juices dripping down into the coffee to provide some extra cream.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[松鼠咖啡]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[松鼠咖啡]]></namePlural>
+		<description><![CDATA[一个装着某种咖啡的塑料瓶。瓶子正面的标签显示，一只松鼠女正在瓶口上自慰，她的汁液滴入咖啡中，为咖啡增添了一些额外的奶油。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A soothing wave of arcane energy washes over [npc.name]...
+				一股丝滑的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -52,10 +52,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Unscrewing the cap from the bottle of Squirrel Java, [npc.name] [npc.verb(bring)] it up to [npc.her] [npc.lips], before tilting [npc.her] head back and gulping down the liquid contained within. The coffee turns out to be far creamier than a typical blend, and after swallowing the last drop, [npc.nameIsFull] left with a sweet aftertaste lingering on [npc.her] [npc.tongue].
+		打开松鼠咖啡瓶子的瓶盖，[npc.name]将它送到[npc.her][npc.lips]前，然后仰起头，将其中的液体一饮而尽。这杯咖啡的奶香比典型的咖啡更浓郁，最后一滴咖啡咽下后，[npc.nameIsFull]口中留下了甜美的余味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Unscrewing the cap from the bottle of Squirrel Java, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] [npc2.lips] and [npc.verb(get)] [npc2.her] to gulp down the liquid contained within. The coffee turns out to be far creamier than a typical blend, and after swallowing the last drop, [npc2.nameIsFull] left with a sweet aftertaste lingering on [npc2.her] [npc2.tongue].
+		打开松鼠咖啡瓶子的瓶盖，[npc.name]将它送到[npc2.namePos][npc2.lips]前，并帮助[npc2.her]一口气喝下其中的液体。这杯咖啡的奶香比典型的咖啡更浓郁，最后一滴咖啡咽下后，[npc2.nameIsFull]口中留下了甜美的余味。
 		]]></otherUse>
 	</useDescriptions>
 

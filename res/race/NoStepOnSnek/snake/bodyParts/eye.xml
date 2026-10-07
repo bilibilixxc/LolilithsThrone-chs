@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <eye>
 	<race>NoStepOnSnek_snake</race>
-	<transformationName><![CDATA[snake]]></transformationName>
+	<transformationName><![CDATA[蛇]]></transformationName>
 	<coveringType>NoStepOnSnek_snake_eye</coveringType>
 	<defaultPairCount>1</defaultPairCount>
 	<defaultIrisShape>ROUND</defaultIrisShape>
 	<defaultPupilShape>VERTICAL</defaultPupilShape>
-	<name><![CDATA[eye]]></name>
-	<namePlural><![CDATA[eyes]]></namePlural>
+	<name><![CDATA[眼睛]]></name>
+	<namePlural><![CDATA[眼睛]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor><![CDATA[predatory]]></descriptor>
+		<descriptor><![CDATA[猎食性]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor><![CDATA[predatory]]></descriptor>
+		<descriptor><![CDATA[猎食性]]></descriptor>
 	</descriptorsFeminine>
 	<transformationDescription><![CDATA[
-		By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into snake-like eyes, with large irises and vertical pupils.
-		<br/>[npc.Name] now [npc.has] [style.boldSnake(snake-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].
-	]]></transformationDescription>
+		当[npc.she]犹豫地再次睁开双眼时，它们变成了一对大虹膜、竖瞳的蛇眼睛。
+		<br/>[npc.Name]现在拥有[style.boldSnake(蛇一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.eyePairs] snake-like eyes, the irises and pupils of which are larger than a regular human's. They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.eyePairs]蛇的眼睛，其瞳孔和虹膜都大于常人。[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。
+]]></bodyDescription>
 </eye>

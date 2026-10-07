@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Training Barn]]></name>
-	<tooltipDescription><![CDATA[The 'training' barn is lined on both sides by several dozen stalls, beside each one of which there's a steadily-humming milking machine.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the training barn at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[训练棚]]></name>
+	<tooltipDescription><![CDATA[训练棚的两侧列有数十个马厩，每个马厩旁都安装有嗡嗡作响的榨乳机器。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的训练棚里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>milking</svgName>
 	<colour>BASE_YELLOW_LIGHT</colour>

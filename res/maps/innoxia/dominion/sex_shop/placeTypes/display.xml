@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Display]]></name>
-	<tooltipDescription><![CDATA[A trio of sex dolls have been stuffed full of toys and ordered to perform a lewd display in this corner of the store.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[玩偶表演]]></name>
+	<tooltipDescription><![CDATA[三个性爱玩偶被塞满了玩具，并被命令在商店的这个角落进行淫秽表演。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GOLD</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

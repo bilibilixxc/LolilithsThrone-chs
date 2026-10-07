@@ -74,9 +74,9 @@ public class Epona extends NPC {
 	}
 	
 	public Epona(boolean isImported) {
-		super(isImported, new NameTriplet("Epona"), "Katsaros",
-				"Epona is the horse-girl in charge of organising the Gambling Den's 'Pregnancy Roulette'."
-						+ " Obsessed with breeding, she absolutely loves her job, and gets incredibly excited when a new round is about to start.",
+		super(isImported, new NameTriplet("伊波娜"), "卡萨罗斯",
+				"伊波娜是一位马女，负责组织赌场里的“怀孕轮盘赌”。"
+						+ "她沉迷于配种，所以也深爱着自己的工作，每当轮盘赌开始时，她都会兴奋得不得了。",
 				28, Month.MAY, 28,
 				15, Gender.F_P_V_B_FUTANARI, Subspecies.HORSE_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 30), WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE, true);

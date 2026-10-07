@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>100</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[rose]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[roses]]></namePlural>
-		<description><![CDATA[A single, colourful rose, which could be tucked into someone's hair as a decorative accessory. You imagine that if it were any other colour, it would smell just as sweet.]]></description>
+		<determiner><![CDATA[一朵]]></determiner>
+		<name><![CDATA[玫瑰]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[玫瑰]]></namePlural>
+		<description><![CDATA[一朵色彩斑斓的玫瑰，可以插在某人的头发上作为装饰。你料想：无论它是什么颜色，都不会影响它的香气。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>HAIR</slot>
@@ -50,27 +49,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(tuck)] the rose into [npc.her] [npc.hair(true)].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(tuck)] the rose into [npc2.namePos] [npc2.hair(true)].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the rose into [npc2.namePos] [npc2.hair(true)].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]把玫瑰插在[npc.her][npc.hair(true)]中。
+]]></self>
+    <other><![CDATA[
+[npc.Name]轻轻地把玫瑰插进[npc2.namePos]的[npc2.hair(true)]。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把玫瑰插进[npc2.namePos]的[npc2.hair(true)]里。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] the rose out of [npc.her] [npc.hair(true)].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] the rose out of [npc2.namePos] [npc2.hair(true)].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] the rose out of [npc2.namePos] [npc2.hair(true)].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]摘下了[npc.her][npc.hair(true)]里的玫瑰花。
+]]></self>
+    <other><![CDATA[
+  [npc.Name]把玫瑰从[npc2.namePos]的[npc2.hair(true)]里摘下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]突然夺走了[npc2.namePos]的[npc2.hair(true)]中的玫瑰。
+]]></otherRough>
   </displacementText>
   
 </clothing>

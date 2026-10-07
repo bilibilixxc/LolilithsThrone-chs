@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <torso>
 	<race>innoxia_goat</race>
 	
-	<transformationName><![CDATA[goat]]></transformationName>
+	<transformationName><![CDATA[山羊]]></transformationName>
 	
 	<coveringType>innoxia_goat_fur</coveringType>
 	
@@ -11,11 +11,11 @@
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with goat-like fur. Although it's relatively close-cropped and smooth over [npc.her] stomach and [npc.breasts], it's thicker on other parts of [npc.her] torso.
-		<br/>[npc.Name] now [npc.has] [style.boldGoat(goat-like)], [npc.skinFullDescription].
+		片刻后，转化来到末尾。[npc.she]身上的瘙痒终于停止，发出了解脱的叹息。山羊毛覆盖在[npc.her]的躯干上。腹部和[npc.breasts]的毛发相对来说紧实平整，其他部位的毛更加厚重。
+		<br/>[npc.Name]现在拥有[style.boldGoat(山羊般)][npc.skinFullDescription]。
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].
-	]]></bodyDescription>
+		[npc.Her]的躯干有着[npc.a_femininity(true)外观，并且是[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。
+]]></bodyDescription>
 </torso>

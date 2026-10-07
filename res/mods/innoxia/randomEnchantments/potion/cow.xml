@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- These 'potionEnchantment' files are used to populate the random effects of the 'Cultist's Mystery Potion' item -->
 <potionEnchantment>
 
@@ -42,7 +41,7 @@
 			e.g.
 				The example below will grant the potion the name "Youko's potion of the Milky Cow"
 				Instead, if you defined defaultPrepend="false", then the name would simply be "the Milky Cow" -->
-	<name defaultPrepend="true"><![CDATA[the Milky Cow]]></name>
+	<name defaultPrepend="true"><![CDATA[奶牛娘]]></name>
 	
 	
 	<!-- When a character consumes the 'Cultist's Mystery Potion' item, they can hear a ghostly voice in their head.
@@ -77,12 +76,12 @@
 		<conditional/>
 		<effect><![CDATA[
 			[#npc.setFemininity(75)]
-			#IF(npc.getMuscleValue()>25)
-				[#npc.setMuscle(25)]
-			#ENDIF
-			#IF(npc.getBodySizeValue()<75)
-				[#npc.setBodySize(75)]
-			#ENDIF
+#IF(npc.getMuscleValue()>25)
+	[#npc.setMuscle(25)]
+#ENDIF
+#IF(npc.getBodySizeValue()<75)
+	[#npc.setBodySize(75)]
+#ENDIF
 		]]></effect>
 	</potionEffects>
 	
@@ -103,7 +102,7 @@
 		]]></conditional>
 		<effect><![CDATA[
 			[#npc.setEarType(EAR_TYPE_COW_MORPH)]
-			[#npc.setTailType(TAIL_TYPE_COW_MORPH)]
+[#npc.setTailType(TAIL_TYPE_COW_MORPH)]
 		]]></effect>
 	</potionEffects>
 	
@@ -114,26 +113,26 @@
 		]]></conditional>
 		<effect><![CDATA[
 			#IF(npc.getBreastSize().getValue()<CUP_SIZE_HH.getValue())
-				[#npc.setCupSize(CUP_SIZE_HH)]
-			#ENDIF
-			[#npc.setNippleSize(NIPPLE_SIZE_FOUR_MASSIVE)]
-			[#npc.setAreolaeSize(AREOLAE_SIZE_FOUR_MASSIVE)]
-			[#npc.addNippleOrificeModifier(ORIFICE_MODIFIER_PUFFY)]
-			
-			#IF(npc.getBreastRawMilkStorageValue()<1000)
-				[#npc.setBreastMilkStorage(1000)]
-			#ENDIF
-			[##npc.fillMilkToMaxStorage()]
-			
-			#IF(npc.hasBreastsCrotch())
-				#IF(npc.getBreastCrotchSize().getValue()<CUP_SIZE_DD.getValue())
-					[#npc.setBreastCrotchSize(CUP_SIZE_DD)]
-				#ENDIF
-				#IF(npc.getBreastCrotchRawMilkStorageValue()<1000)
-					[#npc.setBreastCrotchMilkStorage(1000)]
-				#ENDIF
-				[##npc.fillMilkCrotchToMaxStorage()]
-			#ENDIF
+	[#npc.setCupSize(CUP_SIZE_HH)]
+#ENDIF
+[#npc.setNippleSize(NIPPLE_SIZE_FOUR_MASSIVE)]
+[#npc.setAreolaeSize(AREOLAE_SIZE_FOUR_MASSIVE)]
+[#npc.addNippleOrificeModifier(ORIFICE_MODIFIER_PUFFY)]
+
+#IF(npc.getBreastRawMilkStorageValue()<1000)
+	[#npc.setBreastMilkStorage(1000)]
+#ENDIF
+[##npc.fillMilkToMaxStorage()]
+
+#IF(npc.hasBreastsCrotch())
+	#IF(npc.getBreastCrotchSize().getValue()<CUP_SIZE_DD.getValue())
+		[#npc.setBreastCrotchSize(CUP_SIZE_DD)]
+	#ENDIF
+	#IF(npc.getBreastCrotchRawMilkStorageValue()<1000)
+		[#npc.setBreastCrotchMilkStorage(1000)]
+	#ENDIF
+	[##npc.fillMilkCrotchToMaxStorage()]
+#ENDIF
 		]]></effect>
 	</potionEffects>
 	
@@ -144,26 +143,26 @@
 		]]></conditional>
 		<effect><![CDATA[
 			#IF(npc.getBreastSize().getValue()<CUP_SIZE_N.getValue())
-				[#npc.setCupSize(CUP_SIZE_N)]
-			#ENDIF
-			[#npc.setNippleSize(NIPPLE_SIZE_FOUR_MASSIVE)]
-			[#npc.setAreolaeSize(AREOLAE_SIZE_FOUR_MASSIVE)]
-			[#npc.addNippleOrificeModifier(ORIFICE_MODIFIER_PUFFY)]
-			
-			#IF(npc.getBreastRawMilkStorageValue()<5000)
-				[#npc.setBreastMilkStorage(5000)]
-			#ENDIF
-			[##npc.fillMilkToMaxStorage()]
-			
-			#IF(npc.hasBreastsCrotch())
-				#IF(npc.getBreastCrotchSize().getValue()<CUP_SIZE_HH.getValue())
-					[#npc.setBreastCrotchSize(CUP_SIZE_HH)]
-				#ENDIF
-				#IF(npc.getBreastCrotchRawMilkStorageValue()<5000)
-					[#npc.setBreastCrotchMilkStorage(5000)]
-				#ENDIF
-				[##npc.fillMilkCrotchToMaxStorage()]
-			#ENDIF
+	[#npc.setCupSize(CUP_SIZE_N)]
+#ENDIF
+[#npc.setNippleSize(NIPPLE_SIZE_FOUR_MASSIVE)]
+[#npc.setAreolaeSize(AREOLAE_SIZE_FOUR_MASSIVE)]
+[#npc.addNippleOrificeModifier(ORIFICE_MODIFIER_PUFFY)]
+
+#IF(npc.getBreastRawMilkStorageValue()<5000)
+	[#npc.setBreastMilkStorage(5000)]
+#ENDIF
+[##npc.fillMilkToMaxStorage()]
+
+#IF(npc.hasBreastsCrotch())
+	#IF(npc.getBreastCrotchSize().getValue()<CUP_SIZE_HH.getValue())
+		[#npc.setBreastCrotchSize(CUP_SIZE_HH)]
+	#ENDIF
+	#IF(npc.getBreastCrotchRawMilkStorageValue()<5000)
+		[#npc.setBreastCrotchMilkStorage(5000)]
+	#ENDIF
+	[##npc.fillMilkCrotchToMaxStorage()]
+#ENDIF
 		]]></effect>
 	</potionEffects>
 	

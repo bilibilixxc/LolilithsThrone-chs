@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -38,9 +38,9 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Anal test]]></title>
+	<title><![CDATA[肛门检测]]></title>
 	<tooltip><![CDATA[
-		Test out the next dildo on the doll.
+		在玩偶上检测下一个假阳具。
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -48,7 +48,7 @@
 				[#sex.getNumberOfOrgasms(pc)==0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				With your mouth and pussy filled, there's only one orifice free for receiving a dildo. Realising what it is that the red doll is about to do, you lift yourself up off your knees and reach back to spread your ass cheeks. The huge, [units.sizeShort(45)]-long dildo which she retrieves is shaped like a realistic horse's penis, and has been coloured black at the base and bright red towards the flared head. Stepping around behind you, the doll places the dildo on the floor, before pushing the head between your ass cheeks and commanding, [doll.speech(Bounce up and down on it.)]
+				你的嘴和小穴都塞满了，只剩下一个孔可以接假阳具。意识到红色玩偶要做什么，你抬起膝盖，伸手分开你的屁股。她拿回来的那个巨大的、[units.sizeShort(45)]长的假阳具形状像一只逼真的马的阴茎，底部是黑色，外张的头部是鲜红色。玩偶走到你身后，把假阳具放在地板上，然后把阳具头推到你的屁股之间，命令道，[doll.speech(骑上它，反复插入拔出。)]
 			]]></text>
 		</description>
 		<description>
@@ -56,7 +56,7 @@
 				[#sex.getNumberOfOrgasms(pc)>0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Having saved the best for last, the doll grabs a truly gigantic ribbed dildo from off the table. Its bright pink, [units.sizeShort(56)] length is truly massive, and you can't help but feel a little nervous even as you obediently lift yourself up and allow the huge equine dildo to flop free from your ass. Replacing it with the gigantic ribbed dildo, the doll pushes the tip between your ass cheeks and once again commands in her emotionless voice, [doll.speech(Bounce up and down on this one too.)]
+				玩偶把最好的留到最后，从桌子上抓起一根巨大的螺纹假阳具。它呈亮粉色，[units.sizeShort(56)]长，非常巨大，你乖乖地抬起身子，让巨大的马形假阳具从你的屁股里抽出来，你还是忍不住感到有点紧张。玩偶用巨大的螺纹假阳具替换了它，将尖端推到你的屁股之间，再次用她冷酷的声音命令道， [doll.speech(也在这个上反复插入拔出。)]
 			]]></text>
 		</description>
 	</descriptions>

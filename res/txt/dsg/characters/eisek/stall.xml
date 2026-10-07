@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<htmlContent tag="TALK_MENU"><![CDATA[
 	#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_EISEK_MOB) && flags.hasFlag(FLAG_dsg_elis_eisek_mob_quest_persuade) && !flags.hasFlag(FLAG_dsg_elis_eisek_talk_post_mob_quest) && (game.getDayNumber() - flags.getSavedLong("elis_eisek_mob_quest_completion_date") >= 30))
 		<p>
-			As you approach the stall, you notice a sheep-girl speaking with Eisek. A pang of adrenaline rushes through you as you recognise her from the same mob that had been trying to drive the [eisek.race] out. Fearing the worst, you quicken your pace, but she leaves before you can do or say anything.
+			你走近摊位，注意到一个牧羊女在和艾瑟克说话。你认出她是同一群试图驱赶[eisek.race]的暴徒，肾上腺素的剧痛席卷了你。你担心最坏的情况发生，加快了步伐。但你还什么都没来得及做，她就离开了。
 		</p>
 		<p>
-			Catching sight of you, a smile grows across Eisek's face. [eisek.speech(Greetings, [pc.name],)] he says, [eisek.speech(The strangest thing happened just before you got here. Some members of that mob stopped by and... actually apologised to me. I assume you had something to do with that.)]
+			艾瑟克看到你，脸上露出了笑容。[eisek.speech([pc.name]，你好，)]他说，[eisek.speech(你来之前发生了一件怪事。那群暴徒中的一些人路过，然后……向我道歉了。我猜这事跟你有关。)]
 		</p>
 		<p>
-			Eisek chuckles when you mention that you didn't expect any of them to actually return, before asking, [eisek.speech(So, what can I do for my favourite doer of good deeds?)]
+			你说不希望他们中的任何一个真的回来。艾瑟克笑了起来，随后提问，[eisek.speech(那么，我能为我最喜欢的行善者做些什么呢？)]
 		</p>
 		[##flags.setFlag(FLAG_dsg_elis_eisek_talk_post_mob_quest, true)]
 	#ELSEIF(eisek.getAffection(pc) >= 15)
 		<p>
-			Catching sight of you as you approach, a smile grows across Eisek's face as he greets you, [eisek.speech(Ah, and what can I do for my favourite customer?)]
+			艾瑟克看到你走近，脸上绽开微笑，跟你打招呼，[eisek.speech(啊，我能为我最喜欢的顾客做些什么呢？)]
 		</p>
 	#ELSEIF(eisek.getAffection(pc) >= 30)
 		<p>
-			Catching sight of you as you approach, a broad smile grows across Eisek's face and you catch a glimpse of his tail twitching involuntarily as he greets you, [eisek.speech(My favourite customer? The day is brighter already.)]
+			艾瑟克看到你走近，脸上露出了灿烂的笑容，你瞥见他打招呼时情不自禁地摇尾巴，[eisek.speech(我最喜欢的顾客？你若安好，便是晴天。)]
 		</p>
 	#ELSE
 		<p>
-			Catching sight of you as you approach, a faint smile creeps across Eisek's face. [eisek.speech(Greetings, [pc.name],)] he says, [eisek.speech(What can I do for you?)]
+			艾瑟克瞥见你走近，脸上掠过淡淡的微笑。[eisek.speech([pc.name]，你好，)]他说，[eisek.speech(我能为你做些什么？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_DRAGONFALL_SPECIFIC -->
 	<!-- TODO: Break up this wall of text -->
@@ -35,379 +35,379 @@
 	
 	<htmlContent tag="TALK_DRAGONFALL_SPECIFIC"><![CDATA[
 	<p>
-		A puff of steam leaves Eisek's nostrils as you broach the subject of the Dragonfall again. He closes his eyes for a moment, thinking, before finally giving his response.
+	当你再次提出龙陨的话题时，艾森克鼻孔朝天哼了一声。他闭上眼睛思考了好一会儿，才给出回答。
 	</p>
 	<p>
-		[eisek.speech(Alright,)] he says, somewhat dejectedly, [eisek.speech(I suppose you have already heard something of it from that mob. Better that you learn the truth of the matter.)]
+		[eisek.speech(好吧，)]他哭丧着脸说。[eisek.speech(我猜你是在人群中听到了只言片语。你最好来了解一下真正的故事。)]
 	</p>
 	<p>
-		[eisek.speech(We dragons were not always as we are now; a scattered and isolated people wringing our survival from the land. Once, the dragons of old were proud servants of the elder lilin Lisophia. For her Glistering Hoard they performed all sorts of brute tasks, extorted the peasants on her land, plundered countless villages, and in return she not only made them strongest creatures in the realm but also let them keep their own hoards. They were proud of their lot in life, so proud that they could not see the winds of change blowing.)]
+		[eisek.speech(我们龙过去可不是现在这样，在这片大地上苟且偷生。古代的龙，效忠于莉琳·莉索菲亚，为她收集闪耀华美的宝藏。他们无恶不作，迫害百姓，烧杀抢掠。作为回报，她不仅使他们成为地方一霸，而且还让他们保留私人宝藏。他们安于现状，并为此感到自豪，以至于毫无变革之心。)]
 	</p>
 	<p>
-		[eisek.speech(Lisophia's greed knew no bounds, and after a time she decided she no longer wished to share. She demanded that the dragons of old surrender all of the treasure they had kept. Of course, this angered them, they fought back, and for that Lisophia's retribution was swift and terrible. My ancestors said very little about what happened and wrote down even less, so great was their shame, but I know that at the end of a great battle almost all the dragons of old were left with only a fraction of their former strength. What Lisopha gave she could just as easily take away, you see.)]
+		[eisek.speech(莉索菲亚的贪欲永无止。一段时间后，她变卦了。她要求古老的龙交出所有私人宝藏。当然，被激怒的龙进行了反击，然而莉索菲亚的回攻迅速而可怕。我的祖先几乎没有口耳相传下来发生了什么，文字记录更是难以保留。他们蒙受了巨大的屈辱。但我知道，那场伟大的战役结束时，几乎所有古代巨龙都力量存微。莉索菲亚轻易地夺走了她承诺好的东西，如你所知。)]
 	</p>
 	<p>
-		[eisek.speech(No longer afraid, mortal society rejected them for the crimes they committed in Lisophia's service, and the Lilin hated them for their arrogance. They and their children down the generations were forced to become outcasts. That is the Dragonfall. A millennia-long punishment for the hubris of my forebears and why those who know about it wish for us to remain outcasts.)]
+		[eisek.speech(没有生物再畏惧龙，整个社会因为龙族为莉索菲亚效劳期间犯下的罪行而排斥他们，而莉琳也厌恶他们的傲慢自大。从此，祖祖辈辈的龙被迫流亡于世。这就是龙陨。我的祖先因为过去的傲慢，承受了长达数千年的责罚，这也是知道这些事的人坚持驱逐我们的原因。)]
 	</p>
 	<p>
-		After a long silence, Eisek regains his speech, [eisek.speech(I... do not wish to talk about this any further. Let us change the subject.)]
+		一阵长久的沉默后，艾森克结束了他的长篇大论。[eisek.speech(我……我不想更深入地谈这个了，让我们换个话题吧。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_HIMSELF -->
 	
 	<htmlContent tag="TALK_HIMSELF"><![CDATA[
 	<p>
-		Wanting to know more about the [eisek.race], you ask him if he can tell you anything about himself.
+		为了更加了解[eisek.race]，你询问他能否告诉你一些关于他自己的事。
 	</p>
 	#IF(eisek.getAffection(pc) >= 15)
 		<p>
-			Since you've earned his trust, the [eisek.race] opens to you up a little, [eisek.speech(I come from Cimryth's Crag, a rocky little valley high in the mountains far to the west of here. My family has farmed there for a hundred years.)]
+			既然你已取得他的信任，[eisek.race]就向你透露了一些信息。[eisek.speech(我来自辛瑞姆斯山的峭壁，遥远西方的高山之间不起眼的峡谷。我的家庭在那劳农耕作了百年之久。)]
 		</p>
 		<p>
-			Expressing surprise that his farm is in the mountains, you ask Eisek how he can grow anything up there and how he can carry enough to sell all the way down. Trying not to sound too proud, he explains, [eisek.speech(Cimryth chose well when she decided where to settle my ancestors. Heat rises from the earth there, and ice never touches the ground. She brought soil from the foothills with her, and the greenhouses she designed took care of the rest. It is for this reason the Crag is named after her, and it is my honour to carry on in her tradition.)]
+			你震惊于山上竟然能够进行农耕，问艾瑟克，那上面的农作物是怎么生长的，以及他是如何把足够多的作物运下山售卖的。他极力掩饰自豪之情，向你解释道，[eisek.speech(辛瑞姆斯在安置我的祖先时挑了个好地方。那里的土地会冒出热气，而冰霜永远也达不到地面。她从山脚下带来土壤，剩下的问题都会由她设计的温室解决。正因此，那里的璧崖会以她的名字命名，能维持她的传统也是我的荣幸。)]
 		</p>
 		<p>
-			Eisek flexes his wings slightly before continuing, [eisek.speech(It is easy enough to carry my weight in goods on a downward glide from the Crag, and the thermals on the way back are strong.)]
+			艾瑟克稍稍弯曲了下翅膀，接着继续说道，[eisek.speech(从山上往下滑的话，我可以轻易带上和我一样重的东西，回来路上的上升气流也很强劲。)]
 		</p>
 		<p>
-			From the sounds of things, the [eisek.race] is doing much or even all of this on his own. When you ask him if he's got anyone helping him, his face darkens. [eisek.speech(I do not,)] he answers tersely. You decide not to pry further.
+			你听他述说着，觉得这[eisek.race]好像独自完成了大部分甚至所有这些活。当你问起是否有人为他提供帮助时，他的脸色阴沉下来。[eisek.speech(没有。)]他的回答简单直接。你决定不再继续深入。
 		</p>
 	#ELSE
 		<p>
-			Eisek opens his mouth to respond, but shuts it again just as quickly. A brief look of hesitation flashes across his face before he answers your question. [eisek.speech(My product comes from the mountains,)] he says carefully, [eisek.speech(On the first day of each month I bring it here and on the third day I leave.)]
+			艾瑟克刚想开口回答，却又立刻闭上了嘴。在回答你的问题前，他的脸上闪过一瞬的犹豫。[eisek.speech(我的商品来自群山之间，)]他谨慎地说，[eisek.speech(每个月的第一天我会带货到这来，第三天就走。)]
 		</p>
 		<p>
-			When you ask how he can grow anything in the mountains, his answer is only a cryptic, [eisek.speech(There are ways.)]
+			你向他问起山上是如何耕田种地的，他只给出含糊不清的回答，[eisek.speech(总是有方法的。)]
 		</p>
 		<p>
-			From the way he dodged your questions he evidently doesn't trust you enough yet.
+			从他的回答可以明显看出，他并不够信任你。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_BUSINESS -->
 	
 	<htmlContent tag="TALK_BUSINESS"><![CDATA[
 	<p>
-		Curious about the [eisek.race]'s business, you ask him how things are going on that front.
+		你对[eisek.race]的事感到好奇，询问他进展如何。
 	</p>
 	#IF(eisek.getAffection(pc) >= 15)
 		#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_EISEK_MOB))
 			#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_EISEK_STALL))
 				<p>
-					His eyes light up at the question. [eisek.speech(I cannot thank you enough, [pc.name]. With this new stall I am on equal footing with the other merchants, and since you drove away that crowd of hooligans I can actually focus on running it. Sales have really started to pick up and I have seen many new customers.)]
+					听到这个问题他的眼睛亮了起来。[eisek.speech(真的非常感谢你，[pc.name]。有了这个新摊位我终于能和其他商贩平起平坐了。自从你赶走了那群无赖，我终于能专心照顾我的生意，销售额蒸蒸日上，新顾客纷至踏来。)]
 				</p>
 				<p>
-					He studies you intently for a brief instant before continuing with a warm smile, [eisek.speech(Do not worry, you will always be my favourite.)]
+					他认真地打量了你一会儿，然后带着温暖的微笑继续说， [eisek.speech(别担心，你永远是我的最爱。)]
 				</p>
 			#ELSE
 				<p>
-					[eisek.speech(You have done me a great service in convincing that mob of the truth,)] he says, trying not to sound too excited, [eisek.speech(Without them to frighten away customers, I have been selling through my stock on some days.)]
+					[eisek.speech(你帮了我一个大忙，说服了那群人相信真相，)]他努力抑制着自己的兴奋，[eisek.speech(没有他们在这里吓走顾客，我的货物有时甚至都卖光了。)]
 				</p>
 				<p>
-					Surveying the other stalls in the avenue, he continues, half talking to himself as he does so, [eisek.speech(Perhaps I should use this time to make improvements to my stall... but who...)]
+					他边说边打量着大街上的其他摊位，似乎有些自言自语：[eisek.speech(也许我应该利用这段时间来改进我的摊位……但是找谁来帮忙呢……)]
 				</p>
 				<p>
-					Suddenly realising that he's thinking
+					你突然意识到他又在沉思，便
 					#IF(flags.hasFlag(FLAG_dsg_elis_eisek_asked_business))
-						 aloud again,
+						再次大声提醒，
 					#ELSE
-						 aloud,
+						大声提醒，
 					#ENDIF
-					 the [eisek.race] straightens up and says, [eisek.speech(But that can wait for some other time. More customers is always a good thing.)] He scratches his chin in thought before flashing you a cheeky grin. [eisek.speech(Though, you still talk the most.)]
+					[eisek.race]迅速调整了一下自己，然后说：[eisek.speech(不过这些事情可以留到其他时候再说。顾客越多总是好事。)]他边想边摸了摸下巴，然后对你露出了一个俏皮的笑容。[eisek.speech(不过，你还是和以前一样爱搭话。)]
 				</p>
 			#ENDIF
 		#ELSE
 			<p>
-				He ponders your question for a moment, looking off into the distance, before answering, [eisek.speech(Well enough, I suppose. I never planned to succeed through volume. Although...)]
+				他沉思了一会儿你的问题，目光远望，然后回答：[eisek.speech(我觉得还行吧。我从来没有打算靠销量来取胜。虽然……)]
 			</p>
 			<p>
-				The [eisek.race] pauses as he surveys the other stalls up and down the avenue, before stating, [eisek.speech(My stall could use some work... Hmm, but I cannot leave it undefended with that mob out there. It would be in ruins when I returned, that is for sure. And even if I did not, who is to say they will not destroy it regardless?)]
+				[eisek.race]边说边打量着大街上的其他摊位，接着说：[eisek.speech(我的摊位确实需要一些改进……嗯，但是我不能把它留在那里不管，否则那群人会把它毁掉的。我回来的时候肯定一片狼藉。即便我不走，谁又能保证他们不会无缘无故地破坏它呢？)]
 			</p>
 			<p>
-				As if suddenly aware that he's been thinking aloud, he snaps out of his trance and looks back at you, doing his best to hide his embarrassment. [eisek.speech(Ah, but I am sure you that did not come to hear me ramble. I am fortunate that not all of the locals are thick-skulled. They are not talkative like you, but they buy what I have to sell, and that is good enough for me.)]
+				他突然意识到自己在自言自语，迅速从沉思中清醒过来，看着你，尽力隐藏自己的尴尬。[eisek.speech(啊，但我确信你不是来听我絮叨的。我很幸运，并非所有的本地人都那么固执。他们虽然不像你这么健谈，但他们会买我的东西，这就够了。)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			The [eisek.race] responds with a dispassionate smoothness born of frequent practice, [eisek.speech(Well enough. Though I would much prefer to <i>do</i> business than merely talk about it. Perhaps this is something you can assist me with.)]
+			[eisek.race]营业式地平静回答：[eisek.speech(还可以。不过我更乐意<i>做</i>生意，而不仅仅是谈论生意。或许这是你可以帮帮我。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_FAMILY -->
 	
 	<htmlContent tag="TALK_FAMILY"><![CDATA[
 	<p>
-		You ask Eisek about the family he mentioned. The question seems to hit him off-balance and he initially pretends that he didn't hear it as his expression darkens.
+		你询问艾瑟克关于他提到的家庭。这个问题似乎让他措手不及，他最初装作没有听到，表情变得阴郁。
 		#IF (pc.hasTraitActivated(PERK_OBSERVANT))
-			 You notice him fiddling with a curious gold ring around his finger. A nervous tic perhaps?
+			你注意到他在用手玩弄着一枚奇特的金戒指，或许是紧张的表现？
 		#ENDIF
-		 When he finally does respond, he stares at the counter and says in a barely audible whisper, [eisek.speech(I do not wish to talk about that.)]
+		他最终回答了，盯着柜台，几乎听不见地低语道：[eisek.speech(我不想说。)]
 	</p>
 	<p>
-		Probably not a good idea to push further.
+		继续追问并不是好主意。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_WHY_ELIS -->
 	
 	<htmlContent tag="TALK_WHY_ELIS"><![CDATA[
 	<p>		
 		#IF(pc.isAdvancedRaceKnowledgeDiscovered(SUBSPECIES_dsg_dragon_subspecies_dragon))
-			From what you read about dragons,
+			根据你对龙族的了解，
 		#ELSE
-			From what you know about dragon stereotypes,
+			根据你对龙族的刻板印象，
 		#ENDIF
-		 they dislike strangers. With this on your mind, you ask Eisek how he came to run a stall in a town full of them, especially when some of them are so hostile.
+		他们不喜欢陌生人。有这个想法在脑海中，你询问艾瑟克是如何在一个满是他们的城镇中经营摊位的，尤其某些人如此这般敌视他。
 	</p>
 	<p>
-		The [eisek.race] lets out a rumbling chuckle as he responds, [eisek.speech(Ah yes, ironic, is it not? Well as much as we dragons value our solitude, there are some things we must rely on traders for. About three years ago, they stopped coming to the Crag and after a bad storm smashed up a few greenhouses last winter I had little other choice.)]
+		[eisek.race]发出一阵低沉的笑声，回应道： [eisek.speech(啊，是的，很讽刺，不是吗？虽然龙族热爱独处，但有些事还是必须依赖商人。大约三年前，他们不再前往峭壁，去年冬天，狂野的风暴又摧毁了几个温室，我别无选择。)]
 	</p>
 	<p>
-		He pauses for a moment, looking you over with a small smile before continuing, [eisek.speech(Thanks to you, my little gamble on civilisation has thus far worked out better than I had hoped.)]
+		他停顿了一下，微笑着上下打量你，然后继续说： [eisek.speech(多亏了你，到目前为止，我在文明世界的小冒险比我预计中成功得多。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_OTHER_DRAGONS -->
 	
 	<htmlContent tag="TALK_OTHER_DRAGONS"><![CDATA[
 	<p>
-		Wondering if Eisek is in contact with others of his race, you ask him if he's met any other dragons.
+		你想知道艾瑟克是否与他种族中的其他成员保持联系，问他是否见过其他龙。
 	</p>
 	<p>
-		[eisek.speech(Met? Only one. A family friend of sorts hailing from the desert,)], he replies, looking slightly misty-eyed at the recall of some private memory, [eisek.speech(She was a skilled glass-maker who once helped me repair a greenhouse. We have not spoken in... a long time. As for other dragons, I only know about the existence of them from the sight of their fields in bloom during the day or the glow of their kilns during the night. They were not so desperate as I was to make contact with strangers, however, and you would be wise to leave them alone should you encounter them in the wilds.)]
+		[eisek.speech(见没见过？只见过一条。一条来自沙漠的，算是家里朋友的龙。)]他回答，回忆起私人往事，他眼中泛起了一丝感伤， [eisek.speech(她是一个技艺高超的玻璃匠人，曾经帮我修复温室。我们已经……很长时间没有联系过了。至于其他的龙，我只是从白天他们开满花的田野和夜晚他们窑火的光芒中知道他们的存在。不过他们并不像我这样迫切地想接触陌生人，如果你在野外遇到他们，你最好离他们远一点，这才是明智之举。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- VENDOR -->
 	<htmlContent tag="VENDOR"><![CDATA[
 	<p>
-		[eisek.speech(The cream of the crop. You will not find better in the whole of this market.)]
+		[eisek.speech(品质臻选。市场里你找不到更好的货了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_ASK_ABOUT_MOB -->
 	<htmlContent tag="TALK_ASK_ABOUT_MOB"><![CDATA[
 	<p>
-		Something about the crowd you dispersed when you first met Eisek bothers you. They seemed rather organised for a random bunch of thugs, and to their credit, they did at least leave without a fight. You ask the [eisek.race] what they hoped to gain by driving him out.
+		你对当初遇见艾瑟克时驱散的那群人感到有些忧虑。他们似乎比散乱的暴徒更有组织性，好在是没打起来。你问[eisek.race]，为什么他们要赶他走。
 	</p>
 	<p>
-		Eisek meets your question with a steaming snort,
+		艾瑟克用一个充满蒸气的哼声回答你的问题，
 		#IF (flags.hasFlag(FLAG_dsg_elis_eisek_asked_about_mob))
-			 [eisek.speech(As I said before, the first one showed up maybe three months ago. I ignored him and he came back with friends. The town guards came two or three times, but harassment is hardly a serious crime. The ones that were taken away would be absent for the next day or so, but they would always come back, none the worse for wear. They were a nuisance more than anything and I was mostly concerned that they were scaring away customers. Well, that was before their friends came back with more friends...)]
+			[eisek.speech(正如我之前所说，第一个人大约在三个月前出现。我无视了他，他就带着狐朋狗友回来了。城镇守卫来过两三次，但是骚扰算不上是什么严重的犯罪。被带走的人会消失一两天，但他们总能毫发无伤地回来。他们更多的是一种骚扰，我主要担心他们会吓走顾客。当然，这是在他们的朋友带着更多的朋友回来之前……)]
 		#ELSE
-			 [eisek.speech(Oh them. The first one showed up maybe three months ago. I ignored him and he came back with friends. The town guards came two or three times, but harassment is hardly a serious crime. The ones that were taken away would be absent for the next day or so, but they'd always come back, none the worse for wear. They were a nuisance more than anything and I was mostly concerned that they were scaring away customers. Well, that was before their friends came back with more friends...)]
+			[eisek.speech(哦，那帮家伙。第一个人大约在三个月前出现。我无视了他，他就带着狐朋狗友回来了。城镇守卫来过两三次，但是骚扰算不上是什么严重的犯罪。被带走的人会消失一两天，但他们总能毫发无伤地回来。他们更多的是一种骚扰，我主要担心他们会吓走顾客。当然，这是在他们的朋友带着更多的朋友回来之前……)]
 		#ENDIF
 	</p>
 	<p>
-		As he trails off, you get the impression that the [eisek.race] is avoiding your
+		随着他话音落下，你发现[eisek.race] 
 		#IF (flags.hasFlag(FLAG_dsg_elis_eisek_asked_about_mob))
-			 question again.
+			又在回避你的问题。
 		#ELSE
-			 again.
+			又在回避你。
 		#ENDIF
-		 Eisek leans against the counter when you try to steer the conversation back to the crowd's motivation and quietly says, [eisek.speech(You heard them as well as I did. They think that I am like the dragons of old, from before the Dragonfall.)]
+		艾瑟克靠在柜台上，你试图再说回人群的动机，他低声回答：[eisek.speech(我们都听到了他们的理由。他们认为我是古龙，就是在龙陨之前的那些龙。)]
 	</p>
 	<p>
-		You're not really sure what the "dragons of old" really means or what a "Dragonfall" is. Do you press him for more information, focus on the matter at hand, or drop the subject entirely?
+		你不是很确定“古龙”到底是什么意思，也不知道什么是“龙陨”。是要追问更多信息，还是专注于当前的话题，或者完全放弃这个话题呢？
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TALK_ASK_ABOUT_MOB_CHANGE_SUBJECT"><![CDATA[
 	<p>
-		Feeling as though this is getting a little too heavy, you change the subject and direct the conversation back to Eisek's business. Leaning against the counter, he asks, [eisek.speech(So, would you like to buy some of my produce?)]
+		你感觉气氛有些沉重，决定转换话题，将谈话引导回到艾瑟克的生意上。他靠在柜台上，问道：[eisek.speech(那么，你想买点我的货吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- TALK_DRAGONFALL_VAGUE -->
 	
 	<htmlContent tag="TALK_DRAGONFALL_VAGUE"><![CDATA[
 	<p>
-		When you ask Eisek what he means by "dragons of old", he dodges your gaze and answers as quietly as before, [eisek.speech(My ancestors did things to their ancestors. Things I am not proud of.)]
+		当你问艾瑟克“古龙”是什么意思时，他回避了你的目光，和之前一样小声回答， [eisek.speech(我的祖先对他们的祖先做了一些事情。一些我并不为之感到骄傲的事。)]
 	</p>
 	<p>
-		He's obviously hiding something but it's unlikely you'll get any more out of him without earning his trust.
+		他很明显在掩藏什么，但在得到他的信任之前你已经不可能套出更多信息了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- MOB_QUEST_START -->
 	
 	<htmlContent tag="MOB_QUEST_START"><![CDATA[
 	<p>
-		From the sound of things, the mob will return sooner or later and you're not sure a verbal telling off will be enough next time. They did appear to be common townsfolk, however, and a search around town could reveal more about them, such as where they are gathering to organize. You tell Eisek as much.
+		听起来这群暴徒迟早会再次回来，而你并不确定下次遇上他们仅仅用言语警告他们是否就够了，他们看上去像是普通的镇民。然而，你可以在镇上四处寻找，了解更多关于他们的信息，比如他们在哪里聚集组织活动。你将这些想法告诉了艾瑟克。
 	</p>
 	<p>
-		[eisek.speech(So, if you find them, what will you do?)] he asks, trying to hide his concern, [eisek.speech(If you harm them for my sake, you will have proven their point.)]
+		[eisek.speech(那么，如果你找到他们，你打算怎么做？)]他问道，试图隐藏自己的担忧，[eisek.speech(如果你为了我而伤害他们，那你就证实了他们的观点。)]
 	</p>
 	<p>
-		You reassure the [eisek.race] that <i>when</i> you find them, it need not come to that. There may yet be other options. Although your words do not seem to have much effect, Eisek grudgingly agrees.
+		你向[eisek.race]保证<i>当</i>你找到他们时，情况不一定非要那样发展。或许还有其他的选择。虽然你的话似乎并没有对艾瑟克产生太大的效果，但他还是勉强同意了。
 	</p>
 	<p>
-		[eisek.speech(Very well...)] he pauses and looks down at the counter as if thinking of what to say next, [eisek.speech(But please be careful, I do not wish for any harm to come to you. I will await news of your... success.)]
+		[eisek.speech(好吧……)]他停顿了一下，低头看着柜台，好像在想接下来要说什么， [eisek.speech(但请你一定要小心，我不希望你受到任何伤害。我会等着你的……好消息。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- MOB_QUEST_COMPLETE -->
 	
 	<htmlContent tag="MOB_QUEST_COMPLETE"><![CDATA[
 	#IF(pc.isQuestFailed(QUEST_LINE_SIDE_EISEK_MOB))
 		<p>
-			You tell Eisek apologetically that you weren't able to convince the mob to leave him alone. A look of concern crosses his face and he asks, [eisek.race(Are you... were you... injured?)] 
+			你向艾瑟克道歉地说，你没有办法说服那群暴徒离开。他脸上流露出关切的神情，问你， [eisek.race(你……你……受伤了吗？)]
 		</p>
 		<p>
-			Although the [eisek.race] relaxes slightly when you tell him that your pride was wounded more than anything else, his face darkens. A small wisp of steam escapes from one side of his mouth. [eisek.speech(I see. At least we have that small comfort,)] he says simply, [eisek.speech(Regardless, you have my thanks for trying.)]
+			你告诉他其实你受到的伤害无伤大雅，更多的只是打击了你的自尊。虽然[eisek.race]放松了些，脸色却阴沉下来，嘴边逸出一小缕蒸汽，[eisek.speech(我明白了。至少我们还有这一点安慰，)]他简单地说道， [eisek.speech(不管怎样，谢谢你的尝试。)]
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_dsg_elis_eisek_mob_quest_persuade))
 		<p>
-			You tell Eisek that the mob won't be returning but he doesn't look convinced.
+			你告诉艾瑟克，那群暴徒不会再回来了，但他看上去并不相信。
 		</p>
 		<p>
-			[eisek.speech(Is that so? And how did you manage such a feat?)]
+			[eisek.speech(真的吗？你是怎么做到的？)]
 		</p>
 		<p>
-			You explain that since you'd learned so much about him, you were able to persuade the townsfolk into listening to the truth: that he isn't anything like his ancestors and isn't here to hurt anybody.
+			你解释说，由于你已经了解了很多关于他的事情，你能够说服镇民接受真相：他并不像他的先祖那样，也没有意图伤害任何人。
 		</p>
 		<p>
-			The [eisek.race]'s eyes widen slightly in surprise. He speaks haltingly, each word carefully chosen, [eisek.speech(I admit, I did not think you actually cared. Forgive me for doubting you.)]
+			[eisek.race]的眼睛因为惊讶略略睁大，他小心翼翼地斟词酌句，[eisek.speech(我承认，我以为你不是真的在乎。请原谅我对你的怀疑。)]
 		</p>
 		<p>
-			He then reaches under the counter and retrieves something. [eisek.speech(I have little in the way of rewarding you but perhaps these will do,)] he says as he places three bright yellow fruit covered in green, scale-like leaves on the counter,
+			接着他从柜台下拿出了一些东西，[eisek.speech(我没有多少东西可以感谢你，但也许这些可以，)]说着他把三个亮黄色、覆盖着绿色鳞片状叶子的水果放在柜台上，
 			#IF(!pc.getRace().equals(RACE_dsg_dragon))
-				 [eisek.speech(My orchards can produce very few of these now, but if you would like to... empathise with my kind further, they will help you. And if you should require more, I will keep some on hand, just for you.)]
+				[eisek.speech(我的果园现在几乎不能生产这些了，但如果你想要……更加理解我们这个种族，它们会有帮助。如果你以后还需要更多，我会专门为你保留一些。)]
 			#ELSE
-				 [eisek.speech(My orchards can produce very few of these now, but if you should find your form straying, they will help you. And if you should require more, I will keep some on hand, just for you.)]
+				[eisek.speech(我的果园现在几乎不能生产这些了，但如果你发现你的形态有所改变，它们会有帮助。如果你以后还需要更多，我会专门为你保留一些。)]
 			#ENDIF
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_dsg_elis_eisek_mob_quest_intimidate))
 		<p>
-			You tell Eisek that the mob won't be returning but he doesn't look convinced.
+			你告诉艾瑟克，那群暴徒不会再回来了，但他看上去并不相信。
 		</p>
 		<p>
-			[eisek.speech(Is that so? And how did you manage such a feat?)]
+			[eisek.speech(真的吗？你是怎么做到的？)]
 		</p>
 		<p>
-			You explain that you beat up the mob's strongest member in front of them and threatened the rest with a good thrashing. The [eisek.race]'s eyes narrow slightly as he hears this.
+			你告诉艾瑟克，你单凭自己的力量打败了暴徒里最厉害的那个，足够杀鸡儆猴。[eisek.race]听到这里，眯了眯眼睛。
 		</p>
 		<p>
-			[eisek.speech(So... you convinced them that I was not in fact a violent beast with feats of violence?)] he asks rhetorically. After pondering this for a moment, he continues flatly, [eisek.speech(It seems I have misjudged the ways of civilised folk. Forgive me. I do not mean to sound ungrateful.)]
+			[eisek.speech(所以……你用暴力说服他们我并不是一头暴力的野兽？)]他反问。他思考了片刻，平淡地继续说，[eisek.speech(看来我对文明种族的行为方式有所误解。原谅我。我并不是不感激。)]
 		</p>
 		<p>
-			With that, he places a sack of flames on the counter and states, [eisek.speech(For your trouble.)]
+			他说着，在柜台上放下了一袋火币，说道，[eisek.speech(感谢你的奔波。)]
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_dsg_elis_eisek_mob_quest_intimidate_arcane))
 		<p>
-			You tell Eisek that the mob won't be returning but he doesn't look convinced.
+			你告诉艾瑟克，那群暴徒不会再回来了，但他看上去并不相信。
 		</p>
 		<p>
-			[eisek.speech(Is that so? And how did you manage such a feat?)]
+			[eisek.speech(真的吗？你是怎么做到的？)]
 		</p>
 		<p>
-			You explain that you demonstrated your arcane prowess and defeated the mob's strongest member. That was enough to cow the townsfolk. The [eisek.race]'s eyes narrow slightly as he hears this.
+			你告诉艾瑟克，你用奥术打败了暴徒里最厉害的那个，足够杀鸡儆猴。[eisek.race]听到这里，眯了眯眼睛。
 		</p>
 		<p>
-			[eisek.speech(So... you convinced them that I was not in fact a violent beast with feats of violence?)] he asks rhetorically. After pondering this for a moment, he continues flatly, [eisek.speech(It seems I have misjudged the ways of civilised folk. Forgive me. I do not mean to sound ungrateful.)]
+			[eisek.speech(所以……你用暴力说服他们我并不是一头暴力的野兽？)]他反问。他思考了片刻，平淡地继续说，[eisek.speech(看来我对文明种族的行为方式有所误解。原谅我。我并不是不感激。)]
 		</p>
 		<p>
-			With that, he places a sack of flames on the counter and states, [eisek.speech(For your trouble.)]
+			他说着，在柜台上放下了一袋火币，说道，[eisek.speech(感谢你的奔波。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- LEAVE -->
 	
 	<htmlContent tag="LEAVE"><![CDATA[
 	#IF(eisek.getAffection(pc) >= 30)
 		<p>
-			The [eisek.race] tilts his head slightly as you bid him farewell. [eisek.speech(Leaving so soon? As you wish. I hope it will not be long before you visit again, I enjoy your company.)]
+			当你告别时，[eisek.race]微微垂首。[eisek.speech(这么快就走了？好吧。希望不久后你能再来，我喜欢你陪着。)]
 		</p>
 	#ELSEIF(eisek.getAffection(pc) >= 15)
 		<p>
-			The [eisek.race] bows his head slightly as you bid him farewell. [eisek.speech(Thank you for stopping by,)] he says, before quickly adding, [eisek.speech(Please come visit again.)]
+			当你告别时，[eisek.race]微微垂首。[eisek.speech(感谢你的拜访，)]然后迅速地补充道，[eisek.speech(请下次务必再来。)]
 		</p>
 	#ELSE
 		<p>
-			The [eisek.race] bows his head slightly as you bid him farewell. [eisek.speech(Thank you for stopping by.)]
+			当你告别时，[eisek.race]微微垂首。[eisek.speech(感谢你的拜访，)]他说。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- STALL_QUEST_START -->
 	
 	<htmlContent tag="STALL_QUEST_START"><![CDATA[
 	<p>
-		Thinking back to what Eisek accidentally let slip about improvements to his stall, you decide to ask him about it.
+		回想起艾瑟克无意中透露出的关于他摊位的升级，你决定问问他这件事。
 	</p>
 	<p>
-		[eisek.speech(Ah, you need not burden yourself with my idle thoughts. You have already done so much for me. I could never ask for such a thing from you,)] the [eisek.race] responds. He seems to be uncharacteristically flustered. Deflecting the question, however, is something you expected from him.
+		[eisek.speech(啊，你真的不需要为我的随性想法操心。你已经帮了我许多忙，我实在不忍心再向你要求更多了。)][eisek.race]回答。他看起来非常慌乱。然而，你预料到了他会回避你的问题。
 	</p>
 	<p>
-		The indirect approach, then. You change the subject. What sort of difficulties does he run into in the market? To this, Eisek is more open, and he reveals, [eisek.speech(The sun is not always a source of comfort. Tilling a field and standing here under it are quite different. And...)] He looks around the avenue before continuing, [eisek.speech(This stall is definitely not as eye catching as the others.)]
+		那么，就迂回一些吧。你转换了话题，询问他在市场经营时有遇到困难吗。对此，艾瑟克更加坦然，他透露道，[eisek.speech(阳光并不总是让人感到舒适。在田里劳作和站在这里是完全不同的。而且……)]他环顾四周，然后接着说，[eisek.speech(这个摊位绝对没有其他摊位有吸引力。)]
 	</p>
 	<p>
-		Finally having something to work with, you briefly glance at the crude sign and dull burlap currently decorating the stall. You reframe your original question as wanting to know what qualities his goods possess that are so important that he'd put them on a sign if he had one, hypothetically, of course.
+		终于获得了有用的信息，你瞥了一眼摊位上那块粗糙的招牌和暗淡的麻布。你重新问了一遍你最初的问题，想知道他的商品有哪些可以写到招牌上的重要的特色，当然，如果有的话。
 	</p>
 	<p>
-		[eisek.speech(Hmm...)] he rumbles, leaning forward slightly on the counter, [eisek.speech(They are brought down from the mountains, yes, from the clear alpine air. And I keep them cold while I am here, they stay fresh that way even when the summer sun beats down upon them.)]
+		[eisek.speech(嗯……)]他咕哝着，微微前倾身体倚在柜台上，[eisek.speech(它们是从山上带下来的，是的，从清新纯净的山野中。而且我摆摊的时候会注意保持冷藏它们，即使在夏日的阳光下，它们也能保持新鲜。)]
 	</p>
 	<p>
-		While his guard is still down, you slip in another question about what his favourite colour is to which he responds, [eisek.speech(Green. Is there... an aim behind this?)]
+		趁他还没提起戒心，你迅速插入另一个问题，询问他最喜欢的颜色是什么。他回答道，[eisek.speech(绿色。这……这是有什么目的吗？)]
 	</p>
 	<p>
-		You don't bother trying to worm your way out with a grand explanation and admit to only being curious. With this new information, it seems you have some shopping to do. First, you'll need to find some green fabric for a new tablecloth and an awning, as well as someone who can make a new sign for you. Perhaps there is a local merchant who can help?
+		你并没有尝试长篇大论地去解释脱身，承认你只是出于好奇。有了这些新信息，看来你需要购物了。首先，你需要找到一些绿色的布料来做新的桌布和遮篷，还要找人为你制作一个新的招牌。或许有本地商人可以帮忙？
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- STALL_QUEST_COMPLETE -->
 	
 	<htmlContent tag="STALL_QUEST_COMPLETE"><![CDATA[
 	<p>
-		Eisek can only open and shut his mouth like a fish as his gaze catches the materials you've triumphantly brought back. He finds his voice as you set the bolt of cloth, the folded up canvas, and wooden poles down on the counter.
+		艾瑟克看到你带回来的材料，他像鱼一样张合着嘴，目光凝固在你手中的物件上。当你把布料卷、折叠起来的帆布和木杆放在柜台上时，他终于找回了自己的声音。
 	</p>
 	<p>
-		[eisek.speech(So that strange line of questions earlier was for this?)] he asks. His tone is reserved, but the way his tail twitches when you show him the new sign gives away his excitement.
+		[eisek.speech(之前那些奇怪的问题，就是为了这个吗？)]他问。虽然他的语气有所保留，但当你向他展示新招牌时，颤动的尾巴出卖了他兴奋的内心。
 	</p>
 	<p>
-		With your quest nearly at an end, you come clean. Yes, those strange questions about signs and favourite colours were about getting him the improvements to his stall that he wanted, and there is nothing he can do to stop you now.
+		反正你的任务即将完成，你坦白了。是的，那些关于招牌和最喜欢的颜色的奇怪问题，都是为了给他的摊位添置他想要的东西，现在他已经无法阻止你了。
 	</p>
 	<p>
-		The next half hour is spent helping Eisek put up the awning and replace the fabric and signage covering the counter. When the two of you are done, the transformation is total and the stall stands on equal footing with all of its neighbours.
+		接下来的半个小时里，你帮助艾瑟克安装遮篷，更换柜台上的布料和招牌。当你们完成后，摊位焕然一新，与周围的摊位旗鼓相当了。
 	</p>
 	<p>
-		Standing at your side, Eisek asks in a much quieter voice than usual, [eisek.speech(Why did you do all this for me?)]
+		艾瑟克站在你身边，用一种比平时低得多的声音问道，[eisek.speech(你为什么要为我做这一切？)]
 	</p>
 	<p>
 		#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_SELFISH))
-			You keep the fact that you were really after any potential reward to yourself and decide on a suitably noble response.
+			你隐藏了自己是想追求可能的奖励的事实，做出了相当高尚的回答。
 		#ENDIF
-		 You tell him simply that after everything that's happened, he deserves to win for once. Not to just avoid losing, but to win. The [eisek.race] is silent, speechless for a few long minutes before he suddenly embraces you.
+		你简单地告诉他，经历了那么多事情后，他应该赢一次。不仅仅是为了避免失败，而是追求去赢。[eisek.race]沉默了好几分钟，然后突然拥抱了你。
 	</p>
 	<p>
-		[eisek.speech(I am glad that I chose this town, [pc.name],)] he says as his voice rumbles in his chest, [eisek.speech(I met you in it.)]
+		[eisek.speech(我很高兴我选择了这个城镇，[pc.name]，)]他说话时胸口深处发出隆隆的声音，[eisek.speech(因为我在这里遇到了你。)]
 	</p>
 	<p>
 		#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_CYNICAL))
-			You bear it for a few long seconds.
+			你忍受了几秒钟。
 		#ENDIF
-		 Then, just as suddenly, he releases you, leaving you in a cloud of steam as he turns away and coughs nervously. Returning to his side of the stall, he places a hefty sack of flames on the counter and clears his throat, [eisek.speech(~Ahem!~ Still, the fabric will need to be sewn up around the edges, but it is nothing I cannot manage on my own and... it would be wrong of me to profit from someone who has aided me so greatly. I will sell you my goods at cost. You have my sincerest thanks.)]
+		然后，他突然松开你，留下一团蒸汽，转身并紧张地咳嗽了一声。回到摊位的另一边，他把一个沉甸甸的火币钱袋放在柜台上，清了清喉咙，[eisek.speech(咳咳！布的边缘还需要缝一缝，但这对我来说不是什么大问题，而且……从一个如此慷慨帮助我的人那里获利是不对的。我会以成本价卖货给你。最诚挚地感谢你。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- SMALL_TALK -->
 	<!-- Imagine writing something you hate doing irl ha ha couldn't be me -->
@@ -415,74 +415,74 @@
 	
 	<htmlContent tag="SMALL_TALK"><![CDATA[
 	<p>
-		Having nothing in particular you wish to discuss with the [eisek.race], you decide to broach some lighter topics. Your conversation drifts aimlessly, but Eisek seems glad for the company and alternates between listening attentively and offering his own input.
+		在没什么特别要商量的事后，你决定跟[eisek.race]聊一些轻松的话题。你们的谈话没有明确的主题，但艾瑟克似乎很高兴有人陪伴，他时而认真聆听，时而发表自己的看法。
 	</p>
 	#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_SLIME_QUEEN) && !flags.hasFlag(FLAG_dsg_elis_eisek_small_talk_slime_queen))
 		<p>
-			Somehow you end up recounting your tale of your involvement in the Slime Queen's scheme to transform everyone in Submission. When you mention the miles of caverns and tunnels you had to navigate, Eisek comments, [eisek.speech(Hmm, it is difficult for me to imagine such darkness. I have never been more than a few minutes from the open sky. And some of these passages were built on purpose? Interesting.)]
+			不知不觉地，你讲到了你被卷入史莱姆女王试图转化屈城区所有人的阴谋的故事。当你提到你不得不穿越数英里的洞穴和隧道时，艾瑟克评论道，[eisek.speech(嗯……很难想象那种黑暗。我一直都待在露天环境里。这些通道中有些是特意建造的吗？真有趣。)]
 		</p>
 		<p>
 			#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_LEWD))
-				You almost lose yourself describing the raunchier parts of your experience but decide to stop when you see it's made your audience uncomfortable.
+				你差点就沉迷于描述你的经历中更为下流的部分，但你发觉这让你的听众感到不适，你决定停下来。
 			#ELSE
-				You decide to skip the raunchier parts of your experience fighting your way into the Slime Queen's lair.
+				你决定跳过描述你闯入史莱姆女王巢穴时更为下流的部分。
 			#ENDIF
-			 [eisek.speech(So...what did you do when you reached her?)] Eisek asks.
+			[eisek.speech(那么……你遇见女王后是怎么做的？)]艾瑟克问。
 		</p>
 		<p>
 			#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_SLIME_QUEEN, QUEST_SLIME_QUEEN_SIX_SUBMIT))
-				You admit that you ended up helping the Slime Queen evade further investigation. The [eisek.race] furrows his brow at your subterfuge. [eisek.speech(Open deception does not suit you, [pc.name], but I trust you had good cause to do so.)]
+				你承认你最终帮助了史莱姆女王逃避了进一步的调查。[eisek.race]皱了皱眉，[eisek.speech(你不该去公然行骗，[pc.name]，但我相信你有充分的理由这么做。)]
 			#ELSEIF(pc.hasQuestInLine(QUEST_LINE_SIDE_SLIME_QUEEN, QUEST_SLIME_QUEEN_SIX_FORCE))
-				You describe how you defeated the Slime Queen in single combat and forced her to give up her sinister conspiracy. [eisek.speech(An honourable end to an interesting tale, thank you for sharing it with me,)] the [eisek.race] says with a small smile.
+				你描述了你是如何在决斗中打败史莱姆女王并迫使她放弃她的邪恶计划的。[eisek.speech(一个光荣的结局，一则有趣的故事，谢谢你和我分享，)][eisek.race]带着微笑说道。
 			#ELSE
-				You describe how you simply convinced the Slime Queen to give up her nefarious plot. [eisek.speech(I would have expected no less from someone with your guile,)] the [eisek.race] says, practically beaming, [eisek.speech(An interesting tale, thank you for sharing it with me.)]
+				你描述了你是如何仅仅通过说服就让史莱姆女王放弃了她的邪恶计划的。[eisek.speech(你竟然如此机智，)][eisek.race]几乎是放声大笑道， [eisek.speech(一个有趣的故事，谢谢你和我分享。)]
 			#ENDIF
 		</p>
 		[##flags.setFlag(FLAG_dsg_elis_eisek_small_talk_slime_queen, true)]
 	#ELSEIF(pc.isQuestCompleted(QUEST_LINE_SIDE_HARPY_PACIFICATION) && !flags.hasFlag(FLAG_dsg_elis_eisek_small_talk_harpy_pacification))
 		<p>
-			You eventually end up telling him about how you once found yourself in a nest of angry harpies in Dominion.
+			你最终讲述了你在御城区遇到一窝愤怒的哈比的经历。
 		</p>
 		<p>
-			[eisek.speech(Yes... harpies,)] Eisek says, eyes slightly narrowed, [eisek.speech(Their kin used to try and stop me on my flights here. I see they defend their territory as zealously in civilisation as they do in the wilds. What did you do next? Escape?)] 
+			[eisek.speech(是的……哈比们，)]艾瑟克说，眼睛略微眯起，[eisek.speech(它们的亲戚曾经试图在我飞行的时候阻拦我。我看它们在文明社会中也和在野地里一样，热衷于保卫它们的领地。那么你接下来怎么做的？逃跑？)] 
 		</p>
 		<p>
-			You reply that you decided
+			你回答说你决定
 			#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_KIND))
-				 to do a public good 
+				为民除害。
 			#ELSE
-				 to take matters into your own [pc.hands]
+				亲自行动。
 			#ENDIF
-			 and put an end to the violence by taking down all three matriarchs and assuming control of their nests. It wasn't easy, but you succeeded. At your mention of success, the [eisek.race] raises his brow. [eisek.speech(And you did this on your own? An impressive feat, [pc.name].)]
+			通过击败所有三位族长并控制它们的巢穴来结束侵害。虽然不容易，但你成功了。[eisek.race]听到你说成功，挑起了眉毛。[eisek.speech(你独自做到了这一切？真是了不起啊，[pc.name]。)]
 		</p>
 		[##flags.setFlag(FLAG_dsg_elis_eisek_small_talk_harpy_pacification, true)]
 	#ELSEIF(pc.isQuestCompleted(QUEST_LINE_SIDE_VENGAR) && !flags.hasFlag(FLAG_dsg_elis_eisek_small_talk_vengar))
 		<p>
-			You see an opportunity to tell the tale of how you dealt with Vengar's gang and describe how the rat-boy's followers were extorting businesses. One in particular was being run into the ground with the fees, so you decided to do something about it.
+			你找到机会，讲述了如何处理了文加的帮派，并描述了鼠男的追随者是如何敲诈商家的。其中一个商户因为他们的勒索而濒临破产，所以你决定采取行动。
 		</p>
 		<p>
-			At the mention of Vengar's protection fees, Eisek tilts his head slightly in confusion. [eisek.speech(Protection fees? But what is wrong with fair payment for services rendered?)] he asks.
+			当提到文加的保护费时，艾瑟克微微歪着头，显得有些困惑。[eisek.speech(保护费？为提供的服务支付公平的报酬很合理吧？)]他问。
 		</p>
 		<p>
-			Hiding your amusement at the [eisek.race]'s naïveté, you clarify that the protection fees were a euphemism for threatening the business owner. Protection <i>from</i> Vengar's gang, as it were. Realising what you mean, Eisek responds, [eisek.speech(I see... Interesting, so they were criminal brutes and yet they avoided speaking directly... So, what did you do to them?)]
+			你努力抑制自己因为[eisek.race]的天真而产生的笑意，解释说保护费实际上是威胁商家的一种说法。实际上是保护<i>免受</i>文加帮派的侵扰。艾瑟克明白了你的意思，回应道， [eisek.speech(我明白了……很有趣，所以他们其实是一群罪犯，但却避免直接说出自己的意图……那么，你是怎么对付他们的？)]
 		</p>
 		<p>
-			You tell Eisek that you infiltrated Vengar's hideout and
+			你告诉艾瑟克，你潜入了文加的藏身处，并
 			#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_VENGAR, QUEST_VENGAR_TWO_CONFLICT))
-				 defeated him with the intent of taking over his gang but he was apprehended before you could do anything further. [eisek.speech(A pity. Perhaps you could have helped them change their ways. Even so, I am sure the other businesses of Submission rest easier now and I am glad you emerged unharmed.)]
+				打败了他，本想接管他的帮派，但还没来得及他就被逮捕了。[eisek.speech(真遗憾。或许你本可以帮助他们改过自新。不过，我相信屈城区的其他商贩现在可以安心了，而且我很高兴你没有受伤。)]
 			#ELSEIF(pc.hasQuestInLine(QUEST_LINE_SIDE_VENGAR, QUEST_VENGAR_TWO_COOPERATION))
-				 found out that he was actually wanting to turn to more legitimate business so you helped him smooth over the transition. [eisek.speech(Hmm, I would not have expected such pressures on a crime lord, or that he would be seeking such an exit. It is good that you helped him turn a new leaf.)]
+				发现他实际上是想去做更合法的生意，所以你帮助他顺利过渡。[eisek.speech(嗯……我没想到一个犯罪头目会有这样的道德压力，或者说他竟然会寻求这样的出路。帮助他改过自新是好事。)]
 			#ELSE
-				 decided to let the authorities handle the rest. [eisek.speech(A fair course of action. I am glad that you emerged unharmed.)]
+				决定让当局来处理剩下的事情。[eisek.speech(非常合适的做法。我很高兴你没有受伤。)]
 			#ENDIF
 		</p>
 		[##flags.setFlag(FLAG_dsg_elis_eisek_small_talk_vengar, true)]
 	#ELSE
 		<p>
-			Eventually though, you run out of things to talk about, and Eisek puts a graceful end to your little chat with a final, [eisek.speech([style.random(It is so.|Indeed.|It is as you say.|Please be more careful.|Perhaps.)])]
+			然而，最终你们还是谈完了所有的话题，艾瑟克以优雅的方式结束了你们的闲谈，[eisek.speech([style.random(确实如此。|确实。|的确。|请你多加小心。|或许吧。)])]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

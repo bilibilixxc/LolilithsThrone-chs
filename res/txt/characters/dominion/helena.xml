@@ -1,72 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Gifts -->
 	
 	<htmlContent tag="GIFT_CHOCOLATES"><![CDATA[
 	<p>
-		Thinking that this is the perfect moment in which to give Helena the gift you'd bought for her, you present her with both the box of chocolates as well as a flattering comment on her appearance.
+		你认为这是把你为海伦娜买的礼物送给她的最佳时机，于是你把一盒巧克力和对她外表的赞美之词都送给了她。
 	</p>
 	<p>
 		#IF(!helena.isSlutty())
-			Blushing a little at the sudden gesture, the beautiful matriarch elegantly takes the gift you're offering her, before softly commenting, [helena.speech(How kind of you, [pc.name]. I shall surely enjoy these later.)]
+			美丽的族长被这突如其来的举动弄得有些脸红，她优雅地接过你送给她的礼物，然后轻声说道：[helena.speech(你真好，[pc.name]。我等会一定会享用这些的。)]
 		#ELSE
-			Biting her lip and flashing you an excited glance, the beautiful matriarch elegantly takes the gift you're offering her, before suggestively commenting, [helena.speech(Perhaps we can enjoy these together later in my bedroom...)]
+			这位美丽的族长咬着嘴唇，向你投来兴奋的一瞥，优雅地接过你送给她的礼物，然后暗示性地说到：[helena.speech(也许我们稍后可以在我的卧室里一起享用这些礼物……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GIFT_PERFUME"><![CDATA[
 	<p>
-		Thinking that this is the perfect moment in which to give Helena the gift you'd bought for her, you present her with both the bottle of perfume as well as a flattering comment on her appearance.
+		你认为这是把你为海伦娜买的礼物送给她的最佳时机，于是你把香水和对她外表的赞美之词都送给了她。
 	</p>
 	<p>
 		#IF(!helena.isSlutty())
-			Blushing a little at the sudden gesture, the beautiful matriarch elegantly takes the gift you're offering her, before softly commenting, [helena.speech(How kind of you, [pc.name]. I shall happily add this to my collection.)]
+			面对突如其来的举动，这位美丽的族长不禁微微红了脸，她优雅地接过你赠送给她的礼物，然后轻声说道：[helena.speech(你真好，[pc.name]。我很乐意将这个加入我的收藏。)]
 		#ELSE
-			Biting her lip and flashing you an excited glance, the beautiful matriarch elegantly takes the gift you're offering her, before suggestively commenting, [helena.speech(I'll make sure to put this on for our next date...)]
+			这位美丽的族长咬着嘴唇，向你投来兴奋的一瞥，优雅地接过你送给她的礼物，然后暗示性地说到：[helena.speech(下次约会时我一定会用上这个……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GIFT_SINGLE_ROSE"><![CDATA[
 	<p>
-		Thinking that this is the perfect moment in which to give Helena the gift you'd bought for her, you present her with both the perfect rose as well as a flattering comment on her appearance.
+		你认为这是送给海伦娜你为她买的礼物的最佳时机，于是你送了她一束完美的玫瑰花，并且对她的外表表达了赞美。
 	</p>
 	<p>
 		#IF(!helena.isSlutty())
-			Blushing a little at the sudden gesture, the beautiful matriarch elegantly takes the flower which you're offering her, before softly commenting, [helena.speech(How kind of you, [pc.name]. I shall put this in a vase in my apartment.)]
+			面对突如其来的举动，这位美丽的族长不禁有些脸红，她优雅地接过你献给她的鲜花，然后轻声说道：[helena.speech(你真好，[pc.name]。我要把它插在我公寓的花瓶里。)]
 		#ELSE
-			Biting her lip and flashing you an excited glance, the beautiful matriarch elegantly takes the flower which you're offering her, before suggestively commenting, [helena.speech(I'll put this in my bedroom when we get there later tonight...)]
+			美丽的族长咬着嘴唇，向你投来兴奋的一瞥，优雅地接过你献给她的鲜花，然后暗示性地说到：[helena.speech(今晚到家后，我会把这个放在卧室里……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GIFT_ROSES"><![CDATA[
 	<p>
-		Thinking that this is the perfect moment in which to give Helena the gift you'd bought for her, you present her with both the bouquet of roses as well as a flattering comment on her appearance.
+		你认为这是把你为海伦娜买的礼物送给她的最佳时机，于是你把玫瑰花束和对她外表的赞美之词都送给了她。
 	</p>
 	<p>
 		#IF(!helena.isSlutty())
-			Blushing a little at the sudden gesture, the beautiful matriarch elegantly takes the flowers which you're offering her, before softly commenting, [helena.speech(How kind of you, [pc.name]. I shall put these in a vase in my apartment.)]
+			面对突如其来的举动，这位美丽的族长不禁有些脸红，她优雅地接过你献给她的鲜花，然后轻声说道：[helena.speech(你真好，[pc.name]。我要把它插在我公寓的花瓶里。)]
 		#ELSE
-			Biting her lip and flashing you an excited glance, the beautiful matriarch elegantly takes the flowers which you're offering her, before suggestively commenting, [helena.speech(I'll put these in my bedroom when we get there later tonight...)]
+			美丽的族长咬着嘴唇，向你投来兴奋的一瞥，优雅地接过你献给她的鲜花，然后暗示性地说到：[helena.speech(今晚到家后，我会把这个放在卧室里……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GIFT_TEDDY_BEAR"><![CDATA[
 	<p>
-		Thinking that this is the perfect moment in which to give Helena the gift you'd bought for her, you present her with the teddy bear as well as a flattering comment on her appearance.
+		你认为这是把你为海伦娜买的礼物送给她的最佳时机，于是你把泰迪熊送给了她，并对她的外表表达了赞美之情。
 	</p>
 	<p>
-		Frowning a little at what it is you're giving her, the beautiful matriarch sharply comments, [helena.speech(This really isn't my sort of thing, [pc.name]. I appreciate the gesture, but please do not offer me something like this again.)]
+		你给她的东西让她皱了一下眉头，美丽的族长尖锐地评论道：[helena.speech(这真的不是我的菜，[pc.name]。我很感谢你的好意，但请不要再给我这样的东西了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 </dialogue>

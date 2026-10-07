@@ -9,7 +9,7 @@ import com.lilithsthrone.game.character.GameCharacter;
  */
 public enum SlaveEvent {
 	
-	WASHED_BODY(SlaveEventType.MISCELLANEOUS, "Washed Body", "[npc.Name] had a wash and cleaned [npc.her] body.") {
+	WASHED_BODY(SlaveEventType.MISCELLANEOUS, "洗净身体", "[npc.Name]洗净了身体。") {
 		public void applyEffects(GameCharacter character) {
 			character.washAllOrifices(true);
 			character.cleanAllDirtySlots(true);
@@ -17,7 +17,7 @@ public enum SlaveEvent {
 		}
 	},
 	
-	WASHED_CLOTHES(SlaveEventType.MISCELLANEOUS, "Washed Clothes", "[npc.Name] washed [npc.her] clothes.") {
+	WASHED_CLOTHES(SlaveEventType.MISCELLANEOUS, "洗净衣物", "[npc.Name]洗了[npc.her]的衣物。") {
 		public void applyEffects(GameCharacter character) {
 			character.cleanAllDirtySlots(false); //TODO should they be cleaning slots?
 			character.cleanAllClothing(true, false);
@@ -25,23 +25,23 @@ public enum SlaveEvent {
 		}
 	},
 
-	MIDDAY_UPDATE(SlaveEventType.MISCELLANEOUS, "Midday Update", ""),
+	MIDDAY_UPDATE(SlaveEventType.MISCELLANEOUS, "正午更新", ""),
 	
-	DAILY_UPDATE(SlaveEventType.MISCELLANEOUS, "Daily Update", ""),
+	DAILY_UPDATE(SlaveEventType.MISCELLANEOUS, "每日更新", ""),
 
-	SLAVE_SEX(SlaveEventType.SEX, "[style.boldSex(Sex)]", "[npc.Name] had sex with another slave..."),
+	SLAVE_SEX(SlaveEventType.SEX, "[style.boldSex(Sex)]", "[npc.Name]和其他奴隶做爱了……"),
 	
-	SLAVE_BONDING(SlaveEventType.BONDING, "[style.boldAffection(Bonding)]", "[npc.Name] spent some time bonding with another slave..."),
+	SLAVE_BONDING(SlaveEventType.BONDING, "[style.boldAffection(羁绊)]", "[npc.Name]和另一个奴隶进行了交流……"),
 	
-	GAVE_BIRTH(SlaveEventType.SEX, "[style.boldExcellent(Gave birth)]", "Lilaya helped [npc.name] to give birth."),
+	GAVE_BIRTH(SlaveEventType.SEX, "[style.boldExcellent(Gave birth)]", "莉莱雅给[npc.name]接生了。"),
 
-	GAVE_BIRTH_INCUBATION(SlaveEventType.SEX, "[style.boldExcellent(Laid eggs)]", "Lilaya helped [npc.name] to lay the eggs [npc.she] was incubating."),
+	GAVE_BIRTH_INCUBATION(SlaveEventType.SEX, "[style.boldExcellent(Laid eggs)]", "莉莱雅帮[npc.name]产下了[npc.she]正在孵的卵。"),
 	
 	
 	// Jobs:
 
 //	JOB_CUM_MILKED("Cum Milked", "[npc.NamePos] [npc.cum+] was milked."),
-	JOB_MILK_MILKED(SlaveEventType.JOB, "Milked", ""),
+	JOB_MILK_MILKED(SlaveEventType.JOB, "产奶", ""),
 //	JOB_MILK_CROTCH_MILKED("Udders Milked", "[npc.Name] was milked of [npc.her] [npc.crotchMilk+]."),
 //	JOB_GIRLCUM_MILKED("Girlcum Milked", "[npc.NamePos] [npc.girlcum+] was milked."),
 	
@@ -56,11 +56,11 @@ public enum SlaveEvent {
 //
 //	JOB_OFFICE("Office Fun", "<i>Placeholder event.</i>"),
 	
-	JOB_TEST_SUBJECT(SlaveEventType.JOB, "Test Subject", "[npc.Name] was subjected to Lilaya's transformative experiments..."),
+	JOB_TEST_SUBJECT(SlaveEventType.JOB, "测试用具", "[npc.Name]被莉莱雅做了转化实验……"),
 	
-	JOB_PUBLIC_STOCKS(SlaveEventType.JOB, "Locked in Stocks", "[npc.Name] was locked into the public stocks in Slaver Alley..."),
+	JOB_PUBLIC_STOCKS(SlaveEventType.JOB, "锁在颈手枷上", "[npc.Name]被锁在了奴隶巷的公共颈手枷上……"),
 	
-	JOB_PROSTITUTE(SlaveEventType.JOB, "Prostitute", "[npc.Name] worked as a prostitute in Angel's Kiss."),
+	JOB_PROSTITUTE(SlaveEventType.JOB, "卖淫", "[npc.Name]在天使之吻当妓女。"),
 
 //	JOB_IDLE("Resting", "<i>Placeholder event.</i>"),
 	;

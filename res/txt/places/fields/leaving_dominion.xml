@@ -1,236 +1,236 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		For the first time since arriving in this altered reality, you find yourself needing to leave the city of Dominion and venture out into the other parts of what is known as Lilith's Realm. The wide boulevards which lead to the very centre of Dominion offer the easiest way to leave the city, and so with the aim of travelling to Elis, you make use of one of these roadways and set out on your journey.
+		自从来到这个被改变的现实世界以来，你第一次需要离开御城区，去莉莉丝王国的其他地方冒险。御城区市中心的主干道是离开城市最便捷的途径，为了前往伊利斯，你选择了其中一条道路，踏上了旅程。
 	</p>
 	<p>
-		It doesn't take long before you notice your surroundings changing, and after just ten minutes of travel the large, imposing buildings of the city centre have been left well and truly behind. Low density residential and commercial structures now line the sides of the streets, with many of them separated from the road by means of gardens or parking for centaur-drawn carriages. The density of the population also drastically decreases the further away from Dominion you travel, until you're left as one of only a handful of people who're out and about.
+		没过多久，你发现周围的环境发生了变化，短短十分钟的路程后，市中心气势恢宏的大型建筑已被远远抛在身后。现在，低密度的住宅和商业建筑鳞次栉比地分布在街道两旁，其中许多建筑通过花园或半人马马车停车场与道路隔开。离御城区越远，人口密度也急剧下降，直到你成为寥寥无几的外出者之一。
 	</p>
 	<p>
-		While a city from your old reality would sprawl over many miles in all directions, Dominion's suburbs are surprisingly small, and it only takes you fifteen minutes since leaving the centre before you catch your first glimpse of open fields. A further few minutes of [pc.walking] later and there are only small clusters of housing to be seen in amongst these large tracts of arable land.
+		你以前所在的城市会向四面八方蔓延数英里，而御城区的郊区却小得出奇，从市中心出发只花了十五分钟，你就看到了开阔的田野。再走几分钟后，在这些大片的耕地中就只能看到一小片一小片的房屋了。
 	</p>
 	<p>
-		Reaching a crossroads just a short way out of the city, you see a handy signpost pointing in the direction of Elis. Although you'd made sure of your route beforehand, it's reassuring to see that you're on the right track, but it's not the name of your destination which catches your attention and causes you to stop. Nailed into the wooden post before you, an advertisement of sorts declares:
+		在出城不远的一个十字路口，你看到了一个指向伊利斯方向的路标。虽然你已经确定了路线，但确认自己走在正确的道路上还是令人安心，在你面前的木柱上，钉着一个类似广告的东西引起了你注意并让你停下脚步：
 	</p>
 	<p style='text-align:center;'>
 		<i>
-			<b>Centaur Carriages Available!</b>
-			<br/>Tired of walking all the way to Elis? Then stop on by the Centaur Carriage Depot!
-			<br/>Replace your hours-long trek with a smooth and speedy centaur ride for prices as low as a hundred flames!
-			<br/>Follow the yellow arrows to find us; we're only a five minute walk away!
+			<b>可提供半人马马车！</b>
+			<br/>厌倦了一路步行到伊利斯吗？那就来人马车站吧！
+			<br/>用平稳、快速的人马取代数小时的长途跋涉，价格低至一百火币！
+			<br/>沿着黄色箭头找到我们，步行只需五分钟！
 		</i>
 	</p>
 	<p>
-		Due to the fading of its letters and the moss growing on the top of it, you can tell that this sign has been exposed to the elements for quite a few years. Although there's the risk that this 'Centaur Carriage Depot' is no longer in operation, there'd be nothing to lose by taking a short detour to see if it's still running. After all, even if you're not interested in making use of a carriage right now, it would still be good to know what options are available for any future travel arrangements you might need to make.
+		从字迹的褪色和上面长出的青苔可以看出，这个标志经受风吹雨打很多年了。虽然这个“人马车站”有可能已经停止运营，但绕道去看看它是否还在运行也不会有什么损失。毕竟，即使你现在对使用马车不感兴趣，了解一下将来可能需要的旅行有哪些选择也是有好处的。
 	</p>
 	<p>
-		Following the faded yellow arrows positioned beside the road, you set off north to see what you can find...
+		顺着路旁褪色的黄色箭头，你向北出发，看看能找到什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MOVING_NORTH"><![CDATA[
 	<p>
-		Just as the sign promised, it only takes five minutes of [pc.walking] before you see your promised destination, which takes the form of a pair of long, wooden barns that flank both sides of the road, with a sign suspended between them bearing the words 'Centaur Carriage Depot'. Although these buildings are still a couple more minutes of [pc.walking] away, you can already see from this distance that the depot has seen better days, with the roof of one of the barn-like structures looking to have half-collapsed.
+		和路标上所写的一样，只需[pc.walking]五分钟，你就看到了所写的目的地，它是一对长长的木制谷仓，位于道路两侧，中间悬挂着一个标牌，上面写着“人马车站”。虽然离这些建筑还 要[pc.walking]几分钟的路程，但从这里就可以看到，车站的状况十分糟糕，其中一个谷仓的屋顶已经坍塌了一半。
 	</p>
 	<p>
-		Having already come this far, you decide to finish your journey and take a closer look at the depot. Before reaching the buildings, however, the road you're on cuts through a small, dense thicket. As you reach this cluster of trees and bushes, you suddenly sense a malevolent presence which sends a chill
+		已经走了这么远，你决定结束旅程并仔细看看仓库。然而，在到达建筑物之前，你所要走的路上有一片茂密的小灌木丛。当你走到这片灌木丛前时，突然感觉到一股邪恶的气息，让你感到
 		#IF(pc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 down your spine.
+			脊背发凉。
 		#ELSE
-			 through your [pc.bodyMaterial].
+			一丝寒意通过你的[pc.bodyMaterial].
 		#ENDIF
 	</p>
 	<p>
-		 Preparing yourself for a possible ambush, you take on a defensive posture and get ready for a fight. Just as you thought, there does indeed seem to be someone nearby, for the bushes just up ahead start to rustle and move, before a shadowy figure begins to emerge!
+		为了防备可能的埋伏，你摆出防御姿态准备迎战。和你想象的一样，附近真的有人，前面的灌木丛开始沙沙作响并移开，然后出现一个朦胧的身影！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS"><![CDATA[
 	<p>
-		[meraxis.speech(Mwhahaha! As expected of my nemesis! You were able to detect my dark, devious deception, but that will- ~Aah!~)] the familiar voice of Meraxis calls out, followed by a high-pitched cry as her cloak gets snagged on the bushes and causes her to unceremoniously tumble down onto all fours before you.
+		[meraxis.speech(哇哈哈哈！不愧是我的宿敌！你能识破我阴险狡诈的诡计，但那会—— ~ 啊！~)]梅拉克西丝熟悉的声音响起，紧接着她发出一声高亢的尖叫，因为她的斗篷被灌木丛卡住了，导致她四脚朝天摔倒在你面前。
 	</p>
 	<p>
-		[meraxis.speech(P-Pretend that you didn't see that!)] she stutters as she hastily stands up and brushes the dirt off of her dress. This momentary pause in proceedings allows you to take note of the fact that Meraxis is once again wearing her 'dark siren' costume, complete with witch's hat, flowing cape, and purple-and-black striped stockings and gloves.
+		[meraxis.speech(假，假装你没看到！)]她一边结结巴巴地说着，一边匆忙站起身，掸去衣服上的尘土。你注意到，梅拉克西丝再次穿上了她的“暗夜塞壬”服装，配上女巫帽、飘逸的披风、紫黑条纹长袜和手套。
 		#IF(siren.isVisiblyPregnant())
-			 At that moment you suddenly notice that she's using one hand to cradle her conspicuously-swollen belly, and as she sees what it is you're looking at, she sighs,
+			这时，你突然注意到她正用一只手托着她明显隆起的肚子，她看到你视线的落点，叹了口气，
 			#IF(!siren.isCharacterReactedToPregnancy(pc))
 				#IF(siren.getPregnantLitter().isFather(pc))
-					 [siren.speech(Yeah, that's right, you ended up getting me pregnant... I <i>knew</i> you were gonna get me knocked up... B-But this doesn't mean you're not my nemesis anymore!)]
+					[siren.speech(对，没错，你还是让我怀孕了……我<i>就知道</i>你会把我肚子搞大……但，但是这并代表着你不是我的宿敌了！)]
 				#ELSE
 					#IF(siren.getPregnantLitter().isFather(lilaya))
-						 [siren.speech(Yeah, that's right, Lilaya ended up getting her own sister pregnant... I <i>knew</i> she was gonna get me knocked up...  I-I'm no less capable like this, by the way! I could still annihilate you with ease!)]
+						[siren.speech(对，没错，莉莱雅还是让她的妹妹怀孕了……我<i>就知道</i>她会把我肚子搞大……我，我的力量没有因此变弱，还有！我仍然可以轻松地消灭你！)]
 					#ELSE
-						 [siren.speech(Yeah, that's right, mommy ended up getting her own daughter pregnant... I <i>knew</i> she was gonna get me knocked up... I-I'm no less capable like this, by the way! I could still annihilate you with ease!)]
+						[siren.speech(对，没错，妈咪还是让她的女儿怀孕了……我<i>就知道</i>她会把我肚子搞大……我，我的力量没有因此变弱，还有！我仍然可以轻松地消灭你！)]
 					#ENDIF
 				#ENDIF
 			#ELSE
 				#IF(siren.getPregnantLitter().isFather(pc))
-					 [siren.speech(Yeah, that's right, I'm still pregnant, thanks to you... Getting your own sister pregnant... B-But this doesn't mean you're not my nemesis anymore!)]
+					[siren.speech(对，没错，我还是怀孕了，谢谢你啊……让自己的妹妹怀孕……但，但是这并代表着你不是我的宿敌了！)]
 				#ELSE
 					#IF(siren.getPregnantLitter().isFather(lilaya))
-						 [siren.speech(Yeah, that's right, I'm still pregnant, thanks to Lilaya... D-Don't think I'm any less capable like this! I could still destroy you with a snap of my fingers!)]
+						[siren.speech(对，没错，我还是怀孕了，都怪莉莱雅……别，别以为这样我的力量就衰弱了！我仍然可以弹指间毁灭你！)]
 					#ELSE
-						 [siren.speech(Yeah, that's right, I'm still pregnant, thanks to mommy... D-Don't think I'm any less capable like this! I could still destroy you with a snap of my fingers!)]
+						[siren.speech(对，没错，我还是怀孕了，都怪妈咪……别，别以为这样我的力量就衰弱了！我仍然可以弹指间毁灭你！)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
 		#ELSE
-			 As she clearly doesn't present any threat, you lower your guard and ask the [meraxis.race] if she's ok.
+			她显然不构成任何威胁，你放松警惕，询问[meraxis.race]是否还好。
 		#ENDIF
 	</p>
 	#IF(siren.isVisiblyPregnant())
 		<p>
-			Ignoring her idle threat, and concerned that her fall might have hurt her in some way, you ask the [meraxis.race] if she's ok.
+			你没有理会空洞的威胁，而是担心她可能摔伤了，于是问[meraxis.race]是否还好。
 		</p>
 	#ENDIF
 	<p>
-		[meraxis.speech(O-Of course I'm ok!)] she exclaims, before regaining her composure by striking a heroic pose and laughing, [meraxis.speech(Mwhahaha! You have foiled my most devious plans for an ambush, so in return I shall spare your life! Just let it be known that I was but seconds away from unleashing...)] at this moment the chuuni [meraxis.race] awkwardly pauses mid-sentence to change her pose, before smirking and exclaiming, [meraxis.speech(...the ultimate spell; cascade of cataclysm! Mwhahaha!)]
+		[meraxis.speech(当，当然，我还好！)]她惊叫着，然后又恢复了平静，摆出一个英雄的姿势，大笑起来，[meraxis.speech(哇哈哈哈！你挫败了我最狡猾的伏击计划，作为奖励，我将饶你不死！只要知道，我当时只差几秒就能释放……)]中二[meraxis.race]尴尬地停顿了一下，换了个姿势，然后一边坏笑一边叫嚣着，[meraxis.speech(……一个无比强大的法术：灾厄之瀑！哇哈哈哈！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_QUESTION"><![CDATA[
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			Being suitably impressed by the excellent name for Meraxis's ultimate spell, you strike a suitable counter-pose and declare, [pc.speech(Your ruinous powers shall not triumph this day! Now, reveal your dark secrets to me; why has Lyssieth released you from your bonds?)]
+			梅拉克西斯终极法术的名字非常好听，给你留下了深刻印象，你摆出了一个合适的反击姿势，并宣布道，[pc.speech(你的毁灭之力不会在今天取得胜利！现在，向我揭开你黑暗的秘密吧。为什么莉西丝要解除你的束缚？)]
 		#ELSE
-			Trying your best to endure Meraxis's ridiculous display, you attempt to find out what she's doing here by asking her why Lyssieth has allowed her to leave her palace.
+			你尽力忍受着梅拉克西丝可笑的表现，试图弄清她在这里做什么，问她为什么莉西丝允许她离开宫殿。
 		#ENDIF
 	</p>
 	<p>
-		[meraxis.speech(Mommy said I wasn't grounded any more, so-)] Meraxis instinctively replies, before shaking her head and correcting herself, [meraxis.speech(I-I mean, I was able to shatter the dark bindings which my devious mother placed upon me, and being suitably impressed by my display of awesome power, she gave me a most vital task to perform!)]
+		[meraxis.speech(‘妈咪’说我不再被禁足了，所以~)]梅拉克西丝本能地回答，然后摇摇头，纠正自己的错误，[meraxis.speech(我，我是说，我打破我那狡猾的母亲对我的黑暗束缚，她被我展现出的可怕力量所打动，给了我一个重要的任务去完成！)]
 	</p>
 	<p>
-		Stopping there, Meraxis waits for you to respond, and upon realising that she's going to just stand in silence until prompted to continue, you ask the [meraxis.race] what task she's been given to perform. Letting out another of her theatrical laughs, she continues, [meraxis.speech(Mwhahaha! My task is to provide you with assistance once you're in Elis! I wove the strands of fate so as to meet you before you got into the fields, however, as I must convey a grave warning. Now listen very carefully, for I shall say this only once!)]
+		梅拉克西斯停在那里，等待着你的回应，当你意识到她只是沉默地站着，直到被提示继续时，你便问[meraxis.race]要执行什么任务。她又发出一阵戏剧性的笑声，继续说道，[meraxis.speech(哇哈哈哈！我的任务是在你到达伊利斯后为你提供帮助！然而，我们的命运缠绕在一起以至于在你进入田野之前与你相遇，因为我必须传达一个重要的警告。仔细听好，我只说一次！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_INFO"><![CDATA[
 	<p>
-		[meraxis.speech(First, the dark power of arcane storms doesn't affect people very strongly out here away from the city's centre, so you don't need to worry about getting attacked by horny strangers during an arcane storm. That doesn't mean that you're safe, however; far from it!)] Meraxis exclaims, before taking on a more sombre, serious tone and warning, [meraxis.speech(Mommy was right about how bad things have become out in the fields... I was last out here several years ago, and at that time Lunette's raiding was only done on a small scale. Mommy thinks that the merging of the old Lunette into the one of this reality was what made things change, but whatever the case may be, it's a complete wasteland out here now...)]
+		[meraxis.speech(首先，奥术风暴的黑暗力量对远离城市中心的人影响不大，所以你不必担心在奥术风暴中被好色的陌生人袭击。但这并不意味着你就安全了，远非如此！)]梅拉克西丝的语气变得更加严肃，她警告道，[meraxis.speech(妈妈说得没错，田野里的情况已经变得如此糟糕……我上次来这里是几年前了，那时露内特的袭击只是小范围的，妈妈认为是旧露内特和新露内特的融合让情况发生了变化，但不管怎样，现在这里已经完全成了一片荒地……)]
 	</p>
 	<p>
-		The two barns of the Centaur Carriage Depot are within sight through the trees, and Meraxis points to them as she continues, [meraxis.speech(When I was here last there were a dozen or so carriage businesses operating out of there. Now there's just the one, and it doesn't look like they ever get any customers. The villages scattered throughout the fields are like that too; Lunette's centaurs have torn or burnt down most of them, and they treat anyone they find travelling through the fields as their prey. It's far worse than I thought it'd be...)]
+		穿过树林，人马车站的两个仓库就在眼前，梅拉克西丝指着它们继续说道，[meraxis.speech(我上次来的时候，这里有十几家马车生意。现在只有一家，而且看起来也没有顾客。散落在田野里的村庄也是如此；露内特的半人马已经拆毁或烧毁了大部分村庄，他们把在田野里发现的任何人都当成了猎物。这比我想象的要糟糕得多……)]
 	</p>
 	<p>
-		Shaking her head so as to clear her mind of the depressing chain of thought she's on, Meraxis continues, [meraxis.speech(Anyway, you shouldn't treat these centaurs lightly; they're extremely aggressive and dangerous, and you need to be careful when crossing the fields! I wouldn't want my nemesis being defeated by some oversized ponies!)]
+		梅拉克西丝摇摇头，让自己从一连串郁闷的思绪中清醒过来，继续说道，[meraxis.speech(总之，你不能对这些半人马掉以轻心，它们极具攻击性，也很危险，你在穿越田野时一定要小心！我可不想我的死对头被几匹小马打败！虽然他们可能看起来很高大就是了……)]
 	</p>
 	<p>
-		As you thank Meraxis for the warning, she holds up her hand in a gesture to silence you. Before you can make an objection to her behaviour, the chuuni [meraxis.race] performs some kind of matter-manipulation spell and seemingly pulls her huge scythe from out of mid-air. Pointing the arcane-bladed weapon at you, she declares, [meraxis.speech(Now that that's out of the way, the two of us shall duel! Prepare yourself, my nemesis, for I shall surely defeat you today!)]
+		你刚要感谢梅拉克西丝的提醒，她便举起手示意你闭嘴。在你对她的行为提出异议之前，中二[meraxis.race]施展了某种操纵物质的法术，从半空中抽出了她巨大的镰刀。她用带弧刃的武器指着你说，[meraxis.speech(既然话都说到这份上了，我们俩就来决斗吧！准备好吧，我的宿敌，今天我一定会打败你！)]
 	</p>
 	<p>
-		While she clearly wants to fight, you're sure that a simple 'no' will be enough to make Meraxis back down. Then again, if you think you have what it takes to beat her, you could always accept her offer of a duel...
+		虽然她显然想和你打一架，但你确信，回绝她也并不难。话又说回来，如果你认为自己有打败她的实力，你也可以接受她的决斗邀请……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_NO_DUEL"><![CDATA[
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			Knowing that you're the superior combatant, and therefore having no need to prove yourself to anyone, you refuse Meraxis's challenge by striking an extremely impressive, heroic pose and coolly stating, [pc.speech(You'd need to be a lot stronger before I'd consider duelling you. My supreme powers would destroy you in an instant!)]
+			你知道自己是最优秀的展示，不需要向任何人证明自己，所以拒绝了梅拉克西丝的挑战，做出了令人印象深刻的英雄姿势，并冷静地说，[pc.speech(在我考虑与你决斗之前，你需要变得更强。我的无上力量会瞬间毁灭你！)]
 		#ELSE
-			You really don't want to waste any time playing along with Meraxis and engaging her in combat, and so let her down by truthfully stating that you have neither the time nor inclination to duel her.
+			你真的不想浪费时间与梅拉克西丝玩闹般战斗，所以诚实地说你既没有时间也没有意愿与她决斗，她因此非常失望。
 		#ENDIF
 	</p>
 	<p>
-		[meraxis.speech(Eugh... Fine...)] Meraxis sighs, before pouting at you and performing another spell to make her scythe disappear into thin air. Placing her hands on her hips, Meraxis shifts her facial expression into a smug smirk, before gloating, [meraxis.speech(I don't need to prove myself anyway, I know that I'm the most powerful, and so does mommy. After all, she taught me how to teleport!)] 
+		[meraxis.speech(呃……好吧……)]梅拉克西丝叹了口气，对你撅起嘴，施展另一个法术让她的镰刀消失在稀薄的风中。她双手叉腰，表情变成了得意的傻笑，然后幸灾乐祸地说道， [meraxis.speech(反正我不需要证明自己，我知道我是最强大的，妈妈也是。毕竟，是她教的我传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_END"><![CDATA[
 	<p>
-		Sensing that Meraxis is about to show off her knowledge of how to teleport, you quickly say goodbye to her. With her grand exit interrupted by your farewell, Meraxis pouts a little and awkwardly replies, [meraxis.speech(Oh, yes, well, goodbye to you too, [pc.name]. I-I mean, farewell, my nemesis! We shall meet once more at Elis!)]
+		你感觉到梅拉克西丝即将展示她传送的知识，很快就和她告别了。当她的高谈阔论被你的告别打断时，梅拉西斯撅起嘴，尴尬地回答道，[meraxis.speech(哦，是的，好吧，你也再见，[pc.name]。我，我的意思是，再见，我的宿敌！我们会在伊利斯再见的！)]
 	</p>
 	<p>
-		With that, Meraxis casts her teleportation spell, and in a flash of purple light she disappears from sight, leaving you with little else to do except continue on your way...
+		说完，梅拉克西丝施展了她的传送法术，在一道紫色的闪光中，她从视线中消失了，除了继续前行，你几乎没有其他事情可做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Dialogue for post-duel when leaving dominion: -->
 	
 	<htmlContent tag="BACK_OUT"><![CDATA[
 	<p>
-		Not liking the idea of being transformed if you were to lose the duel, you tell Meraxis that you've had a change of mind and don't want to fight her after all.
+		如果你在决斗中输了，你可不希望被转化，你随即告诉梅拉克西丝你已经改变了主意，根本不想和她打架。
 	</p>
 	<p>
-		[meraxis.speech(Eugh... Fine...)] Meraxis sighs, before pouting at you and performing another spell to make her scythe disappear into thin air. Placing her hands on her hips, Meraxis shifts her facial expression into a smug smirk, before gloating, [meraxis.speech(I don't need to prove myself anyway, I know that I'm the most powerful, and so does mommy. After all, she taught me how to teleport!)] 
+		[meraxis.speech(呃……好吧……)]梅拉克西丝叹了口气，对你撅起嘴，施展另一个法术让她的镰刀消失在稀薄的风中。她双手叉腰，表情变成了得意的傻笑，然后幸灾乐祸地说道， [meraxis.speech(反正我不需要证明自己，我知道我是最强大的，妈妈也是。毕竟，是她教的我传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOST_END"><![CDATA[
 	<p>
-		After continuing to gloat in this manner for a few more moments, Meraxis takes a step back and places her hands on her hips, before revealing, [meraxis.speech(I didn't even need to prove myself by winning that duel; I know that I'm the most powerful, and so does mommy. After all, she taught me how to teleport!)] 
+		梅拉克西丝又继续幸灾乐祸了一会儿后，退后一步，双手叉腰，透露道，[meraxis.speech(我甚至不需要通过赢得那场决斗来证明自己；我知道我是最厉害的，‘妈咪’也是。毕竟，她教了我如何传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. There's no hard feelings between us because of this duel, right? Right. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，宣称，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。我们之间不会因为这场决斗而产生芥蒂，对吧？现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOST_END_SPIT"><![CDATA[
 	<p>
-		After continuing to shout at you in this manner for a few more moments, Meraxis takes a step back and places her hands on her hips, before sighing, [meraxis.speech(I'm disappointed in you, my nemesis. This is exactly why mommy trusts me with forbidden spells and not you. After all, she taught me how to teleport!)] 
+		梅拉克西丝继续对你喊了好一会儿后，退后一步，双手叉腰，叹了口气，[meraxis.speech(我的宿敌，我对你很失望。这就是为什么‘妈咪’相信我会使用禁忌法术，而不是你。毕竟，她教了我如何传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WON_NO_TF"><![CDATA[
 	<p>
-		Doing as you're asked, you listen as Meraxis places her hands on her hips and reveals, [meraxis.speech(Although you may have won that duel, I know that I'm really the most powerful, and so does mommy. After all, she taught me how to teleport!)] 
+		你按要求去做，听到梅拉克西丝将双手放在臀部上，透露，[meraxis.speech(虽然你可能赢了那场决斗，但我知道我真的是最强大的，‘妈咪’也是。无论如何，她教了我如何传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MONEY_END"><![CDATA[
 	<p>
-		Doing as you're asked, you listen as Meraxis places her hands on her hips and reveals, [meraxis.speech(Although you may have won that duel, I know that I'm really the most powerful, and so does mommy. After all, she taught me how to teleport!)] 
+		你按要求去做，听到梅拉克西丝将双手放在臀部上，透露，[meraxis.speech(虽然你可能赢了那场决斗，但我知道我真的是最强大的，‘妈咪’也是。无论如何，她教了我如何传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRANSFORMATION_END"><![CDATA[
 	<p>
-		Doing as you're asked, you listen as Meraxis places her hands on her hips and reveals, [meraxis.speech(Although you may have won that duel, I know that I'm really the most powerful, and so does mommy. After all, she taught me how to teleport!)] 
+		你按要求去做，听到梅拉克西丝将双手放在臀部上，透露，[meraxis.speech(虽然你可能赢了那场决斗，但我知道我真的是最强大的，‘妈咪’也是。无论如何，她教了我如何传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- End sex: -->
 	
 	<htmlContent tag="POST_SEX_END"><![CDATA[
 	<p>
-		Still furiously blushing, Meraxis places her hands on her hips and reveals, [meraxis.speech(Although you may have won that duel, I know that I'm really the most powerful, and so does mommy. After all, she taught me how to teleport!)] 
+		梅拉克西丝的脸仍然涨得通红，双手叉腰，说道：[meraxis.speech(虽然你可能赢了那场决斗，但我知道我真的是最强大的，‘妈咪’也是。无论如何，她教了我如何传送！)] 
 	</p>
 	<p>
-		Interpreting the look on your face as one of awe, Meraxis lets out another of her loud laughs and declares, [meraxis.speech(Mwhahaha! Yes, I <i>am</i> the greatest, aren't I? Anyway, I shall be departing for Elis now. Once you arrive, you'll be able to find me at 'The Red Dragon' tavern; it's close to the eastern gate. Mommy tasked me with securing you accommodation and a meeting with Minotallys, so come and find me as soon as you arrive and I'll get things sorted for you. Now, witness my power!)]
+		梅拉克西丝将你的表情解读为敬畏，又发出一声大笑，[meraxis.speech(哇哈哈哈！是的，我<i>是</i>最伟大的，不是吗？无论如何，我现在就要出发去伊利斯了。你到那儿之后，可以在靠近东门的红龙酒馆找到我。‘妈咪’吩咐我保障你的住宿并与米诺塔莉丝会面，所以你一到就来找我就行，我会帮你处理好一切的。现在，见证我的力量吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -91,7 +91,7 @@
 	<bookIconName>sharkicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Circling Sharks</bookName>
+	<bookName><![CDATA[巡游之鲨]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -104,38 +104,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[shark-morph]]></name>
-			<namePlural><![CDATA[shark-morphs]]></namePlural>
-			<singularMaleName><![CDATA[shark-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[shark-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[shark-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[shark-girls]]></pluralFemaleName>
+			<name><![CDATA[鲨化形]]></name>
+			<namePlural><![CDATA[鲨化形]]></namePlural>
+			<singularMaleName><![CDATA[鲨鱼男]]></singularMaleName>
+			<singularFemaleName><![CDATA[鲨鱼女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[鲨鱼男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[鲨鱼女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic shark, known as a 'shark-morph' when bipedal, and a 'nanaue' when the lower body is that of a typically-oversized feral shark.]]></description>
+	<description><![CDATA[一种人形的鲨鱼，当下肢为双足时称为“鲨鱼化形”，而下肢呈现出较大的兽态鲨鱼的样子时称为“纳纳威”。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[kojin]]></name>
-			<namePlural><![CDATA[kojin]]></namePlural>
-			<singularMaleName><![CDATA[kojin]]></singularMaleName>
-			<singularFemaleName><![CDATA[kojin]]></singularFemaleName>
-			<pluralMaleName><![CDATA[kojin]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[kojin]]></pluralFemaleName>
+			<name><![CDATA[鲛人]]></name>
+			<namePlural><![CDATA[鲛人]]></namePlural>
+			<singularMaleName><![CDATA[鲛人]]></singularMaleName>
+			<singularFemaleName><![CDATA[鲛人]]></singularFemaleName>
+			<pluralMaleName><![CDATA[鲛人]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[鲛人]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[shark]]></feralName>
-		<feralNamePlural><![CDATA[shark]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[shark]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[shark]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[shark]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[shark]]></feralPluralFemaleName>
+		<feralName><![CDATA[鲨鱼]]></feralName>
+		<feralNamePlural><![CDATA[鲨鱼]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[鲨鱼]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[鲨鱼]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[鲨鱼]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[鲨鱼]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -166,7 +166,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] shark-like body is quick and strong, and [npc.she] [npc.has] a primal urge to relentlessly pursue [npc.her] goals and desires.
+		[npc.NamePos]鲨鱼一般的身体敏捷而强壮，[npc.she]拥有不断追求目标和欲念的原始冲动。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-	<authorTag><![CDATA[A tag discreetly printed on the corner reads, "Envisioned for high-performing athletes, by GLIDE.".]]></authorTag>
+	<authorTag><![CDATA[角落悄悄印有一个标签，上面写着：“GLIDE为高水平运动员构想”。]]></authorTag>
 		<value>500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[nose guard]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[nose guards]]></namePlural>
-		<description><![CDATA[A protective hard plastic shell shaped into a mask designed for contact sports. Proprietary treatment technology has made it particularly impact-resistant.]]></description>
+		<determiner><![CDATA[一块]]></determiner>
+		<name><![CDATA[护鼻板]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[护鼻板]]></namePlural>
+		<description><![CDATA[一种用于接触性运动的防护硬塑料外壳，呈面具形状。专有的处理技术使其具有特别高的抗冲击性。]]></description>
 		<physicalResistance>1.0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>EYES</slot>

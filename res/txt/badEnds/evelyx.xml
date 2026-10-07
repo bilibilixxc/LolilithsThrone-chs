@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Pre-bad end stripping: -->
@@ -6,728 +6,729 @@
 	
 	<htmlContent tag="STRIP_FLAMES_TOP"><![CDATA[
 	<p>
-		Having willingly signed yourself into becoming her slave, you happily obey your new owner's command, and begin by giving her all [#SPECIAL_PARSE_0] of your flames. Although she takes care to not show too much emotion, as well as the fact that she must already be very wealthy from this farm's profits, Evelyx goes wide-eyed as she sees how rich you were. Letting out a very happy humming noise, she greedily snatches the money from you, before securely locking it away in a safe positioned beneath her desk. Giving you a happy smile, she gloats, [evelyx.speech(I'm a very, very wealthy succubus now, thanks to you. What a good, obedient slave cow you are, to have willingly signed yourself into my possession with so much money to your name! Good slave. Yes, <i>very</i> good slave.)]
-	</p>
-	]]>
-	</htmlContent>
+    自愿成为她的奴隶后，你很高兴能服从新主人的命令，把你所有的[#SPECIAL_PARSE_0]火币都奉献给她。尽管她努力抑制情感的流露，并且她肯定因为农场的生意赚了不少钱，但当艾弗利克斯看到你的财产总额时，她瞪大了眼睛。艾弗利克斯发出了愉悦的嗡嗡声，贪婪地抢走了所有的火币，将其锁在她办公桌下的安全保险箱中。她幸福地对你微笑，自鸣得意地说道：[evelyx.speech(多亏了你，现在我成了非常非常富有的魅魔。你真是个乖巧听话的奴隶牛，竟然自愿带着这么多财产在我的奴隶契约上签字！好奴隶。是的，<i>非常</i>优秀的奴隶。)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_FLAMES_RICH"><![CDATA[
 	<p>
-		Having willingly signed yourself into becoming her slave, you happily obey your new owner's command, and begin by giving her all [#SPECIAL_PARSE_0] of your flames. Although she takes care to not show too much emotion, as well as the fact that she must already be very wealthy from this farm's profits, Evelyx can't help but grin as she sees how rich you were. Letting out a happy humming noise, she greedily snatches the money from you, before securely locking it away in a safe positioned beneath her desk. Giving you an approving smirk, she gloats, [evelyx.speech(I'm a very wealthy succubus now, thanks to you. What a good, obedient slave cow you are, to have willingly signed yourself into my possession with so much money to your name! Good slave. Yes, <i>very</i> good slave.)]
-	</p>
-	]]>
-	</htmlContent>
+    自愿成为她的奴隶后，你很高兴能服从新主人的命令，把你所有的[#SPECIAL_PARSE_0]火币都奉献给她。尽管她努力抑制情感的流露，并且她肯定因为农场的生意赚了不少钱，但当艾弗利克斯看到你的财产总额时，她情不自禁地露出了笑容。艾弗利克斯发出了愉悦的嗡嗡声，贪婪地抢走了所有的火币，将其锁在她办公桌下的安全保险箱中。她给了你一个认可的嘲笑，自夸道：[evelyx.speech(多亏了你，现在我成了非常非常富有的魅魔。你真是个乖巧听话的奴隶牛，竟然自愿带着这么多财产在我的奴隶契约上签字！好奴隶。是的，<i>非常</i>优秀的奴隶。)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_FLAMES_LOTS"><![CDATA[
 	<p>
-		Having willingly signed yourself into becoming her slave, you happily obey your new owner's command, and begin by giving her all [#SPECIAL_PARSE_0] of your flames. Although she takes care to not show too much emotion, as well as the fact that she must already be very wealthy from this farm's profits, Evelyx can't help but let a slight smile settle on her face as she sees how much money you were carrying. Letting out an approving humming noise, she greedily snatches the flames from you, before securely locking them away in a safe positioned beneath her desk. Flashing you a smirk, she gloats, [evelyx.speech(What a good, obedient slave cow you are, to have willingly signed yourself into my possession with so much money to your name. Good slave.)]
-	</p>
-	]]>
-	</htmlContent>
+    自愿成为她的奴隶后，你很高兴能服从新主人的命令，把你所有的[#SPECIAL_PARSE_0]火币都奉献给她。尽管她努力抑制情感的流露，并且她肯定因为农场的生意赚了不少钱，但当艾弗利克斯看到你的财产总额时，她情不自禁地露出了笑容。艾弗利克斯发出了认可的嗡嗡声，贪婪地抢走了所有的火币，将其锁在她办公桌下的安全保险箱中。向你挤眉弄眼，她自夸道：[evelyx.speech(你真是个乖巧听话的奴隶牛，自愿带着这么多财产在我的奴隶契约上签字。好奴隶。)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_FLAMES_AVERAGE"><![CDATA[
 	<p>
-		Having willingly signed yourself into becoming her slave, you happily obey your new owner's command, and begin by giving her all [#SPECIAL_PARSE_0] of your flames. As she's already very wealthy form the profits of this farm, she doesn't seem at all impressed by how much money you had on you. Letting out a brief humming noise, she greedily snatches the flames from you, before securely locking them away in a safe positioned beneath her desk. Straightening back up, she gloats, [evelyx.speech(What a good, obedient slave cow you are, to have willingly signed yourself into my possession with this money to your name. Good slave.)]
-	</p>
-	]]>
-	</htmlContent>
+    自愿成为她的奴隶后，你很高兴能服从新主人的命令，把你所有的[#SPECIAL_PARSE_0]火币都奉献给她。由于农场的生意赚了不少钱，她似乎并不在乎你有多少钱。艾弗利克斯发出嗡嗡声，贪婪地抢走了所有的火币，将其锁在她办公桌下的安全保险箱中。重新站起身来，她自夸道：[evelyx.speech(你真是个乖巧听话的奴隶牛，自愿带着财产在我的奴隶契约上签字。好奴隶。)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_FLAMES_POOR"><![CDATA[
 	<p>
-		Having willingly signed yourself into becoming her slave, you happily obey your new owner's command, and begin by giving her all [#SPECIAL_PARSE_0] of your flames. As she's already very wealthy form the profits of this farm, she seems very disappointed by how little money you had on you. Letting out a disapproving humming noise, she nevertheless greedily snatches the flames from you, before securely locking them away in a safe positioned beneath her desk. Straightening back up, she gloats, [evelyx.speech(You're a good, obedient slave cow, to have willingly signed yourself into my possession, but I do wish that you'd been a little more wealthy.)]
-	</p>
-	]]>
-	</htmlContent>
+		你自愿成为她的奴隶，很高兴能服从新主人的命令，把你所有的[#SPECIAL_PARSE_0]火币都奉献给她。由于农场的生意赚了不少钱，她对你拥有的财产数量感到失望，不满地哼了一声。尽管如此，她还是贪婪地抢走了所有的火币，将其锁在她办公桌下的安全保险箱中。她重新站起身来，自夸道：[evelyx.speech(你是个乖巧听话的奴隶牛，自愿带着财产在我的奴隶契约上签字。但我希望你能更富有一点。)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_CLOTHING_START_SEALS"><![CDATA[
 	<p>
-		With that out of the way, you move on to stripping naked, before handing over all of your clothing, weapons, and items. The seals on your clothing do nothing to prevent Evelyx from getting her hands on them, as she simply channels some of her essences into each item and quickly strips them from your body.
-	]]>
-	</htmlContent>
+		在处理完事情之后，你开始脱光衣服，然后把所有的衣物、武器和物品交出去。你衣物上的封印并没有阻止艾弗利克斯触碰它们，她只需将一些自己的精华灌入每一件物品中，就能迅速地将它们从你身上剥离下来。
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_CLOTHING_START"><![CDATA[
 	<p>
-		With that out of the way, you move on to stripping naked, before handing over all of your clothing, weapons, and items.
-	]]>
-	</htmlContent>
+		在处理完事情之后，你开始脱光衣服，然后把所有的衣物、武器和物品交出去。
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_CLOTHING_TOP"><![CDATA[
-		 Laying your possessions out over the office floor, your owner fails to suppress an excited giggle before declaring, [evelyx.speech(Once I've pawned all of this off in Dominion, I'll be so rich! You really are a good slave cow, to have given me all this.)]
+		你将你的财物都摊在办公室地上，你的主人压抑不住兴奋地咯咯笑，[evelyx.speech(只要我把这些都在御城区典当掉，我就会变得超级富有！你真是一头好奴隶奶牛，把这么多东西都给了我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_CLOTHING_RICH"><![CDATA[
-		 Laying your possessions out over the office floor, your owner fails to suppress a delighted hum before declaring, [evelyx.speech(Once I've pawned all of this off in Dominion, I'll be very rich indeed. You really are a good slave cow, to have given me all this.)]
+		你将你的财物都摊在办公室地上，你的主人压抑不住欣喜的嗯哼声，[evelyx.speech(只要我把这些都在御城区典当掉，我就会变得非常富有。你真是一头好奴隶奶牛，把这么多东西都给了我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_CLOTHING_LOTS"><![CDATA[
-		 Laying your possessions out over the office floor, your owner fails to suppress an approving hum before declaring, [evelyx.speech(I'll earn a decent amount of flames once I've pawned all of this off in Dominion. You really are a good slave cow, to have given me all this.)]
+		你将你的财物都摊在办公室地上，你的主人压抑不住赞许的嗯哼声，[evelyx.speech(等我把这些都在御城区当掉后，我会得到一大笔火币。你真是一头好奴隶奶牛，把这么多东西都给了我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_CLOTHING_AVERAGE"><![CDATA[
-		 Laying your possessions out over the office floor, your owner fails to suppress a disapproving tut before declaring, [evelyx.speech(It'll barely be worth the hassle to pawn all of this off in Dominion. You are a good slave cow, but I do wish that you'd have had a few more possessions to your name.)]
+		你将你的财物都摊在办公室地上，你的主人没能抑制住不满的咂嘴声，[evelyx.speech(将这些东西全部典当到御城区甚至不值得这么麻烦。你是一头好奴隶奶牛，但我真希望你能拥有更多的财产。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STRIP_CLOTHING_POOR"><![CDATA[
-		 Laying your possessions out over the office floor, your owner fails to suppress a disgusted tut before declaring, [evelyx.speech(It's not even worth the hassle to pawn all of this rubbish off in Dominion. You are a good slave cow, but I do wish that you'd have had a few more possessions to your name. I'll have all of this junk thrown away once I'm done with you.)]
+		你将你的财物都摊在办公室地上，你的主人没能抑制住不住厌恶的咂嘴声，[evelyx.speech(这些破烂东西连拿到御城区当典当都不值得，真是麻烦。你是一头好奴隶奶牛，但我真希望你能拥有更多的财产。我受够你了，我会把这些废物全都扔掉。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Bad end content: -->
 	
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		Obediently following Evelyx, you trot along behind her as she strides out of her office and towards the locked door that sits at one end of the farm's long corridor. Unlocking this door, she leads you through it and down the short continuation of the corridor that's to be found on the other side. Coming to a halt in front of yet another wooden door, she turns to face you and commands, [evelyx.speech(Stay here for a minute, slave. I'd better not return to see that you've moved.)]
+		你顺从地跟在艾弗利克斯身后，随着她大步走出办公室，走向农场长廊一端上锁的门。打开门锁后，她带你穿过这扇门，沿着走廊的另一端继续向前走。在另一扇木门前停下后，她转过身来面对着你，命令道：[evelyx.speech(在这儿待一会儿，奴隶。我回来的时候，最好不要让我看到你动了。)]
 	</p>
 	<p>
-		Doing as you're told, you wait in front of this door as your owner heads off down the corridor. Not wanting to get in trouble, you remain perfectly still for the next several minutes, until finally Evelyx returns with another blue-skinned succubus at her side. Addressing this other succubus, she commands, [evelyx.speech(Lead my slave into the barn, sister, and show her to her new home.)]
+		你听话地在门前等着，你的主人沿着走廊走了。你不想惹麻烦，在接下来的几分钟里一动不动，直到最后艾弗利克斯带着另一个蓝皮肤的魅魔回来。她对着另一个魅魔命令道：[evelyx.speech(姐妹，把这奴隶拎到牛棚里，那就是她的新家。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_BARN"><![CDATA[
 	<p>
-		Hurrying to obey her sister, this other succubus hastily unlocks the door in front of you, before leading you into the barn beyond. Identical to the other three barns which you've worked in, this building constructed out of a mix of concrete and sheet metal, and is illuminated by the same kind of fluorescent lamps which are found throughout the rest of Evelyx's Dairy. Thankfully, this barn is also fitted with numerous air conditioning and heating units, which softly hum away as they work to make sure that the ambient temperature remains pleasantly warm for the slaves who are locked away in here. Underfoot, laminate wooden flooring helps to soften the overall appearance of the barn, as do the motivational posters of cow-girls which have been plastered all over the walls.
+		这只魅魔急忙地服从她的姐姐的命令，于是打开你面前的门然后把你带到远处的谷仓。与你工作过的其他三个谷仓一模一样，这座建筑由混凝土和金属板混合而成，照明的荧光灯与艾弗利克斯乳业的其他地方一样。值得庆幸的是，这个谷仓还安装了许多空调和供暖设备，它们在工作时轻轻地嗡嗡作响起来，以确保被锁在这里的奴隶的环境温度保持舒适温暖。在脚下的强化木地板有助于软化谷仓的整体外观，就像墙上贴满的女牛仔的励志海报一样。
 	</p>
 	<p>
-		Again in the exact same manner as the other barns, there are two long rows of milking stalls which run all the way down this one's considerable length. Following Evelyx's sister down the natural corridor which is formed between these stalls, you look to your left and right to see that these milking stalls are positioned so as to be facing the walls of the barn. As a result of this, the many dozens of cowtaur slaves who are being milked in here all have their exposed rear ends pointing towards you, and so you find yourself presented with dozens of feral cow-pussies.
+		和其他谷仓一样，这里有着两排长排的挤奶台，一直延伸到这个谷仓相当长的长度。跟着艾弗利克斯的妹妹走在牛棚之间形成的自然走廊上，你左右环顾，会发现这些挤奶台的位置是面向谷仓的墙壁的。因此，在这里被挤奶的许多牛奴都把她们裸露的屁股指向你，于是你发现自己面对着许多的兽穴。
 	</p>
 	<p>
-		Coming to a halt beside an empty stall, the succubus asks Evelyx in a nervous tone, [style.speechFeminine(Will this stall do, sister?)]
+		这只魅魔在一个空牛棚旁停了下来，紧张地请示艾弗利克斯问道，[style.speechFeminine(这个牛棚可以吗，姐姐大人？)]
 	</p>
 	<p>
-		[evelyx.speech(For now, yes,)] Evelyx replies, before ordering, [evelyx.speech(Get her locked in and attach those pumps. I don't want her milk going to waste.)]
+		[evelyx.speech(现在的话，是的。)]艾弗利克斯答道，然后继续下达命令。[evelyx.speech(把她锁起来，然后装上那些挤奶机。我不希望她的牛奶被浪费掉。)]
 	</p>
 	#IF(pc.isPregnant())
 		<p>
-			Hurrying to obey, Evelyx's sister instructs you to get into position in this stall, and once you've got into the half-standing, half-prone position which its padded surfaces support, she clasps a series of steel chains around your ankles. Turning on the arcane milking machine, she then proceeds to roughly attach the pumps to your
+			这只魅魔立刻服从她的姐姐的命令，指示你在这个牛棚里就位。当你进入里面在那软垫上面摆出一个半站立半俯卧的姿势，她就在你的脚踝上扣上一系列钢链，然后打开那个奥术挤奶机。接着她开始粗鲁地将挤奶机连接到你的
 			#IF(pc.hasBreastsCrotch())
-				 breasts and [pc.udders].
+				胸部和[pc.udders]。
 			#ELSE
-				 breasts.
+				胸部。
 			#ENDIF
-			 As your milk starts to spurt out and be sucked down your pumps' tubes, Evelyx glances at your belly and states, [evelyx.speech(I'll have trouble auctioning you off if you're already pregnant. Sister, I had you trained to deal with pregnancies for precisely this reason. Give her as many Mother's Milks as she needs, then get her to give birth. We'll send her kids off to my bottling factory near Dominion; I could do with some more cheap labour over there, and it seems fitting that her children will end up bottling their mother's milk.)]
+			当你的乳汁开始喷涌出来被吸进挤奶器的管子时，艾弗利克斯瞥了一眼你的肚子，说道，[evelyx.speech(如果你已经怀孕了，我很难把你拍卖掉。妹妹，我训练你去处理这种怀孕问题正是出于这个原因。去给她所需要的足够多的母乳，然后让她生孩子。我们会把她的孩子们送到我在御城区附近的装瓶厂，这样我就可以在那里雇佣一些更便宜的劳动力了。而且最终由她的孩子们给自己妈妈的乳汁装瓶也似乎很合适呢。)]
 		</p>
 		<p>
-			Having received her instructions, Evelyx's sister forces you to drink several bottles of the pregnancy-advancing potion known as Mother's Milk, and after your stomach has grown and distended to a colossal size, she starts to channel arcane energy into your body. The intensity of this treatment is enough to make your head spin, and although you try to remain conscious, you quickly feel yourself passing out...
+			收到她的指示后，艾弗利克斯的姐姐强迫你喝几瓶被称为“母乳”的促孕药。在你的腹部膨胀到巨大之后，她开始将奥术能量输送到你的身体中。这种治疗的强度足以让你头晕目眩，尽管你试图保持清醒，但你很快就觉得自己昏倒了……
 		</p>
 		<p>
-			...
+			……
 		</p>
 		<p>
-			You regain consciousness several hours later to find that both Evelyx and her sister are nowhere to be seen. What's more, your stomach has returned to its pre-pregnancy size, and although you feel alarmed and anxious to find out what happened to your children, the slave in the stall next to yours reassures you by revealing, [style.speechFeminine(Mistress and her sister took good care of everything. I heard that Mistress's bottling factory is run by a really kind cow-girl, so you don't have to worry about your kids working there.)]
+			几个小时后你恢复了意识，也发现艾弗利克斯和她的妹妹都不见了。更重要的是，你的腹部已经恢复到怀孕前的大小。尽管你感到震惊和焦虑，想知道你的孩子发生了什么事，但你旁边牛棚里的奴隶通过透露打消了你的疑虑。[style.speechFeminine(主人和她妹妹把一切都照顾得很好。我听说主人的装瓶厂是由一个非常善良的女牛仔经营的，所以你不用担心你的孩子在那里工作。)]
 		</p>
 		<p>
-			Having been at least a little reassured by this other slave's words, you settle into your stall and enjoy the familiar, relaxing feeling of the milking machine's pumps sucking away at your teats...
+			至少因为这个奴隶的话感到有点放心，你在你的棚间安定了下来，开始享受挤奶机的泵吮吸你的乳头的熟悉而放松的感觉……
 		</p>
 	#ELSE
 		<p>
-			Hurrying to obey, Evelyx's sister instructs you to get into position in this stall, and once you've got into the half-standing, half-prone position which its padded surfaces support, she clasps a series of steel chains around your ankles. Turning on the arcane milking machine, she then proceeds to roughly attach the pumps to your
+			这只魅魔立刻服从她的姐姐的命令，指示你在这个牛棚里就位。当你进入里面在那软垫上面摆出一个半站立半俯卧的姿势，她就在你的脚踝上扣上一系列钢链，然后打开那个奥术挤奶机。接着她开始粗鲁地将挤奶机连接到你的
 			#IF(pc.hasBreastsCrotch())
-				 breasts and [pc.udders].
+				胸部和[pc.udders]。
 			#ELSE
-				 breasts.
+				胸部。
 			#ENDIF
-			 As your milk starts to spurt out and be sucked down your pumps' tubes, Evelyx orders her sister, [evelyx.speech(Get a move on and contact the local herds. They need to know that I've got another slave for adoption. Oh, and if they take a fancy to you while you're there, be a good sister for me and let them fuck you. Anything to help calm them down always helps.)]
+			当你的乳汁开始喷涌出来被吸进挤奶器的管子时，艾弗利克斯对她的妹妹命令道，[evelyx.speech(行动起来，联系当地的牧群。他们得知道我又收养了一个奴隶。对了，如果你在那里的时候他们看上了你，那就做我的好妹妹，让他们操你。任何能让他们平静下来的事情都会有帮助的。)]
 		</p>
 		<p>
-			With a slightly nervous tone in her voice, Evelyx's sister agrees to do as she's told, before rushing out of the barn. Taking a moment to give your pussy one final glance, your owner follows in her sister's footsteps and exits the barn, leaving you to settle into your stall and enjoy the familiar, relaxing feeling of the milking machine's pumps sucking away at your teats...
+			艾弗利克斯乳的妹妹按照她所说的，带着一丝紧张的语气回应了一声然后冲出了谷仓。你的主人用了一点时间瞥了一眼你的小穴，就在她妹妹之后也走了出去离开谷仓，让你在你的棚间安置下来，开始享受挤奶机的泵吮吸你的乳头的熟悉而放松的感觉……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_BARN_END"><![CDATA[
 	<p>
-		Liking the start of your new life so far, you find yourself letting out a series of soft, moo-like moans as you're left locked up in your stall being milked. Having something new and exciting to talk about, all of the other cowtaur slaves in the barn start to loudly gossip amongst themselves about which one of Lunette's daughters is going to adopt you. Although you try to ask them what exactly they mean by that, these slaves seem to find it amusing to keep you in the dark, and simply tell you that it's something to be looked forward to, and that you'll find out what it involves soon enough.
+		目前为止，你很喜欢自己的新生活。当你被锁在牛棚里自己的隔间榨乳时，你会发出一连串轻柔、哞哞牛叫般的呻吟。你的到来是个充满新鲜感且令人兴奋的话题，牛棚里的半人牛奴隶常常高声谈论露内特的哪个女儿能收服你。尽管你试着问他们这到底是什么意思，但这些奴隶觉得把你蒙在鼓里很有趣，只是告诉你这很值得期待，你很快就会明白。
 	</p>
 	<p>
-		Almost four hours later, you hear the door to this slave barn being opened once again, and you turn your head to see that both Evelyx and her sister have returned. Walking up to your stall, your owner commands her sister, [evelyx.speech(Get to it then and clean her down. I want her looking her best for her auction.)]
+		大概四小时后，你再次听到奴隶谷仓的开门声。转过头，你看到艾弗利克斯和她的妹妹回来了。他们走到你的隔间前，你的主人命令她的妹妹，[evelyx.speech(开始吧，把她洗干净，我想在拍卖会上看到她最棒的样子。)]
 	</p>
 	#IF(game.isIncestEnabled())
 		<p>
-			Moving to obey, the blue-skinned succubus, who's brought several cloths and brushes with her in expectation of having to perform this duty, moves up beside you and sets about thoroughly cleaning your body. Leaving your pussy for last, she uses a wet cloth to wipe her sister's remaining cum from out of your cunt. Seeing what it is that she's doing, Evelyx allows a slight smirk to settle on her face as she asks, [evelyx.speech(What do you think you're doing? Is your big sister's cum not good enough for you? With this sort of behaviour, and coming back from the herds without having been fucked, I start to question your loyalty... If you don't want mother to find out about your bad behaviour, then I suggest that you show a little more enthusiasm.)]
+			这只蓝皮魅魔顺从地拿着几块布和刷子开始履行职责，她走到你旁边，彻底洗净了你的身子。你的小穴被留到最后清理，她用一块湿布擦拭着姐姐在你淫屄中残留的精液。看到她的动作，艾弗利克斯脸上挂起一丝微笑，问道，[evelyx.speech(你在想些什么？你大姐头的精液还不够美味吗？干了这种事，还能从畜群中平安归来，没有被操。我不得不对你的忠实度打个问号……如果你不想母亲发现你干的好事的话，我建议你再卖力点。)]
 		</p>
 		<p>
-			Clearly wanting to avoid getting on her mother's bad side, Evelyx's younger sister drops the cloth that she was using, before leaning forwards and starting to lick what remains of the cum from your hot pussy. Forcing herself to swallow, she uses her mouth to clean out your cunt, which proves to be very much to her big sister's liking, for after spending just a moment watching this lewd scene, she pulls up her skirt to allow her massive, orange, demonic cock to rise to full erection. Stepping forwards, she roughly pulls up her sister's mini skirt and tears off her thong, before prodding the wide, flared head of her monstrous shaft against her exposed cunt. Gripping her sister's hips, she drops her posh accent as she lustfully moans, [evelyx.speech(You really thought that you'd get away with bending over and teasing me with your hot little ass? ~Mmm!~ Go on, you little slut, beg for it!)]
+			显然很担心母亲会不高兴，艾弗利克斯的妹妹把抹布扔到一边，伸起上身舔舐你温热小穴里含着的精液。她强迫自己吞咽，用她的小嘴清理干净你的阴道。事实证明，这一举动很符合她姐姐的喜好，因为看了一会这淫靡的场景后，艾弗利克斯拉起了裙子，露出巨大的恶魔化橘色肉棒。已经完全勃起的肉棒弹跳着，艾弗利克斯向前走了两步，粗鲁地提起妹妹的超短裙，撕碎她的丁字内裤，然后把自己那巨大肉棒的喇叭形龟头对准她裸露的小穴。艾弗利克斯捏住她妹妹的嘴唇，她优雅的咬字堕落成了淫荡的呜咽，[evelyx.speech(你以为你弯下腰用火热的小屁股勾引我，就能避免受罚吗？~姆姆！~继续，你个小骚货，求我吧！)]
 		</p>
 		<p>
-			Pulling back from eating you out, the younger of the two blue-skinned succubi pants, [style.speechFeminine(Oh yes, Evelyx! ~Aah!~ Please, treat me like one of your cows and fuck me!)]
+			暂时停下对你的舔舐，蓝皮的魅魔妹妹喘着气，[style.speechFeminine(哦，是的，艾弗利克斯！~啊！~ 请像对待母牛那样对我，快操我！)]
 		</p>
 		<p>
-			More than happy to do as she asks, Evelyx rams her fat, demonic cock deep into her sister's pussy, and as the younger succubus continues to clean your cunt with her tongue, your owner starts roughly pounding her twat. With each of Evelyx's violent thrusts, her sister's face is pushed into your pussy, and thanks to this stimulation you very quickly find yourself staring to approach an orgasm. With her sister's tight cunt proving to be too much for her to endure, Evelyx quickly reaches her climax at the same time as you, and after letting out a desperate, passionate moan, she rams her hips forwards and empties her four, heavy balls into her sister's hot pussy. At the same moment, you feel your wet cunt start to spasm, and with a desperate squeal, you squirt all over the blue-skinned succubus's face.
+			艾弗利克斯非常乐意满足她的要求，她将那肥硕、恶魔般的肉棒深深挤进自己妹妹的淫穴，这只较年幼的魅魔不断地用舌头清理着你的小穴，你的主人开始粗暴地拍击着她的淫穴。随着艾弗利克斯每次狂暴地冲撞，她妹妹的脸被推到你的小穴上，在这种刺激下，你感觉自己即将达到高潮。妹妹狭窄的穴道使她难以忍受，艾弗利克斯和你同时达到了高潮。在发出一声充满欲望与激情的呻吟后，她将臀部向前一顶，然后射空了她那四颗沉重的睾丸，全部倾泻进她妹妹火热的穴道里。与此同时，你感到自己湿漉漉的小穴一阵痉挛，伴随着一声欲念的淫叫，你的淫水喷了蓝皮魅魔一脸。
 		</p>
 		<p>
-			Experiencing her own orgasm at the same moment, the younger of the two succubi behind you moans deeply into your [pc.pussy+], and after Evelyx slides her cock out of her cunt, she collapses down onto the floor as a quivering mess. After taking a moment to smirk down at her well-fucked sister, Evelyx steps forwards and unclasps the steel chains from around your ankles. Satisfied with how clean you're looking, she orders, [evelyx.speech(Follow me, slave; it's time to have you auctioned off.)]
+			魅魔妹妹也在经历自己的高潮，压在你[pc.pussy+]上呻吟着。艾弗利克斯从她的阴道里抽出肉棒，她身躯剧烈颤动，垮倒在地。艾弗利克斯自鸣得意地看着被操得很舒服的妹妹，向前走了两步，解开了你脚踝的镣铐，她很满意你现在的样子，并下达指令，[evelyx.speech(跟上，是时候拍卖你了。)]
 		</p>
 	#ELSE
 		<p>
-			Moving to obey, the blue-skinned succubus, who's brought several cloths and brushes with her in expectation of having to perform this duty, moves up beside you and sets about thoroughly cleaning your body. Leaving your pussy for last, she uses a wet cloth to wipe her sister's remaining cum from out of your cunt. Satisfied with how clean you're looking, her older sister finally orders, [evelyx.speech(Take off her chains, sister. It's time to have this slave auctioned off.)]
+			蓝皮魅魔顺从地带着几块抹布和刷子走到你旁边，开始彻彻底底地洗刷你的身体。最后轮到你的小穴，她用一块湿布擦拭着姐姐在你淫屄中残留的精液。对你洁净的身体非常满意，艾弗利克斯最终下令，[evelyx.speech(摘掉她的镣铐，妹妹。该去拍卖这个奴隶了。)]
 		</p>
 		<p>
-			One again hurrying to obey, Evelyx's younger sister quickly unclasps the steel chains from around your ankles. Not wanting to delay the proceedings any further, your owner addressing you as she commands, [evelyx.speech(Follow me, slave.)]
+			艾弗利克斯的妹妹再一次匆忙服从命令，快速解开你脚踝的镣铐。你的主人不想耽误拍卖，她指示你，[evelyx.speech(跟上，奴隶。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUCTION"><![CDATA[
 	<p>
 		#IF(game.isIncestEnabled())
-			Obediently following Evelyx, you leave her sister panting on the floor with cum oozing out of well-fucked cunt as you trot over to the barn's door.
+			你顺从地跟着艾弗利克斯，然后小跑着走向谷仓的门口，留下她淫穴里被射满精液的妹妹还在地上气喘吁吁。
 		#ELSE
-			Obediently following Evelyx, you trot along behind her as she strides back over to the barn's door.
+			她大步走向谷仓门口，你顺从地跟在艾弗利克斯身后。
 		#ENDIF
-		 Unlocking this door, Evelyx leads you out into the corridor beyond, and then quickly over to another wooden door that's positioned nearby. Stopping there, she turns to face you and explains, [evelyx.speech(Beyond here is the auction room. Once inside, you are to ignore the centaurs and step up onto the central platform. Stay silent and do only what I say. Do <i>not</i> show any kind of favouritism towards any of the centaurs. The last thing I want is for them to lose their temper and start fighting in here. Do you understand?)]
+		艾弗利克斯打开了这扇门，带着你走入远处的走廊，然后迅速走到附近的另一扇木门。她在木门前转过身来，对你解释说：[evelyx.speech(在这后面就是拍卖室了，一旦你进去，不要管这些半人马，直接走向中央平台，并且时刻保持沉默，记得按我说的做。<i>不要</i>对任何半人马表现出一丁点的善良。我最不想看到的就是他们在这里发脾气打架。你明白吗？)]
 	</p>
 	<p>
-		After you've quickly responded in the affirmative, Evelyx unlocks the door to this 'auction room' and leads you inside. Within the dimly-lit interior, you look around to see that the floor is covered in a rich, burgundy carpet, while dozens of large, taur-compatible sofas have been positioned so as to surround a raised, central platform, which unlike the rest of the dark room is brightly illuminated by means of several arcane spotlights. As you do as you were just told and trot up towards the central platform, you can't help but glance around at the numerous huge, demonic centauresses who are lounging about on the sofas.
+		在你迅速做出肯定的回答后，艾弗利克斯打开“拍卖室”的门，带你进去。在灯光昏暗的房间内，你环顾四周，发现地上铺着一层厚重的酒红色地毯，几十个半人马也能坐的大沙发被放置在一个凸起的中央平台周围，与黑暗房间的其他部分不同，中央平台被几个奥术聚光灯照亮了。你按照刚才告诉你的，小跑着向中央站台走去。你忍不住环顾四周，看到那些在沙发上懒洋洋地躺着的巨大的、恶魔般的半人马。
 	</p>
 	<p>
-		[style.speechFeminine(She looks like a good one! Get over here and let me get a feel of those tits!)] one of them excitedly declares.
+		[style.speechFeminine(她看起来是个好女人！过来，让我摸一下你的奶子！)]其中一个兴奋地说。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Show me your cunt so I can give you a quick fuck!)] another of them demands.
+		[style.speechFeminineStrong(让我看看你的小穴，我会把你操得爽翻天！)]她们中的另一个要求道。
 	</p>
 	<p>
-		Remembering what Evelyx said, you ignore these comments and step up onto the central platform. Remaining stationary, you listen as Evelyx addresses this herd of Lunette's daughters, [evelyx.speech(Thank you, ladies, for coming here today. Once again, I have a slave that's available for you to adopt and treat as your own. This particular slave is a special one, as I've found out that she's a relative of Lilaya's, and as such is of Lyssieth's lineage. Please take this into account when considering your bids.)]
+		你想起了艾弗利克斯的话，无视了这些言语，直接走上中央平台，静静的听着艾弗利克斯对露内特的女儿们讲话，[evelyx.speech(女士们，十分感谢你们今天来到这里。再说一次，我有个奴隶可以让你们收养，你们可以把她当作自己的奴隶一样对待。然而这个奴隶有一点特别的：我发现她是莉莱雅的亲戚，她是莉西丝的血脉。请您在出价时考虑到这一点。)]
 	</p>
 	<p>
-		[style.speechFeminineStrong(I'd like to give that elder bitch a good, hard fuck! That imp-breeder daughter of hers would get it too!)] one of the centauresses exclaims in response.
+		[style.speechFeminineStrong(我好想把那个老娘们给操一顿，还有她那些生小恶魔的女儿！)]其中一个半人马大声回应。
 	</p>
 	<p>
-		Hearing her sister say this, one of the other centauresses lets out a deep laugh and declares, [style.speechFeminine(Once mother's had us finish with the Fields, hopefully she'll have us go after Lyssieth next! I'd love to ruin that human-loving bitch's cunt with my fat cock!)]
+		听到她的姐姐这么说，另一位女半人马发出一声意味深长的笑声，[style.speechFeminine(一旦妈妈让我们完成了这场拍卖会，希望她会允许让我们去追莉西丝！我很想用我的大鸡巴毁掉那个人类母狗的阴道！)]
 	</p>
 	<p>
-		After that, the centauresses make several more comments about how they'd like to dominate Lyssieth and Lilaya, before agreeing among themselves that you'll make a fine substitute. Showing just the briefest of smirks as she hears how eager they are to adopt you, Evelyx cautiously waits for a gap in the conversation before declaring, [evelyx.speech(Let us start the bidding! While I will retain official ownership of this slave, by paying to adopt her you will effectively be her owner, and will be given ninety percent of all of her milk profits. As this slave is related to Lyssieth, I would value her as being worth at least five hundred thousand flames, so let's start with that.)]
+		在那之后，半人马又发表了几次评论，说她们多么想支配莉西丝和莉莱雅，最后一致认为你会是一个很好的替代者。当艾弗利克斯听到她们是多么渴望收养你时，露出了一瞬间阴谋得逞的奸笑，小心翼翼地等待着谈话的间隙，然后宣布：[evelyx.speech(我们开始出价吧！虽然我现在还保留这名奴隶的正式所有权，但如果你们通过付费来收养她，你将成为她真正的主人，并将获得她所有牛奶利润的90%。因为这个奴隶与莉西丝有亲戚关系，我估计她至少值五十万火币，所以让我们从这个价起拍。)]
 	</p>
 	<p>
-		Realising that Evelyx is exploiting a loophole in your contract to effectively sell you on to one of these centauresses, you can't help but feel a little cheated as they eagerly agree to start the bidding at half a million flames. As you realise that Evelyx has managed to prevent her farm from being destroyed by getting Lunette's daughters to invest their flames into it, the first of them offers the starting bid, and soon they're trying to out-bid one another in their efforts to 'adopt' you...
+		你意识到艾弗利克斯利用你合同中的漏洞，将你卖给了其中一个半人马。你不禁觉得自己被骗了，是一个小丑，被别人卖了还在说别人的好。紧接着，他们同意了以50万火币为底价的拍卖。你意识到艾弗利克斯想利用露内特的女儿，让她们把钱投入到这场拍卖中，防止她自己的农场被毁。她们中的第一个人给出了报价，很快他们就试图在“收养”你的努力中出价更高……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUCTION_END"><![CDATA[
 	<p>
-		Remembering to do as you were told, you stay still and try not to look at any one centauress in particular as they bid against one another to adopt you. Clearly eager to get the opportunity to effectively gain ownership of a close relative of Lyssieth's, Lunette's daughters soon increase the bidding to an astronomical figure. Their willingness and ability to blow such a huge sum of money on you is soon explained, as one of them loudly comments, [style.speechFeminineStrong(I got all this money from selling a group of runaway slaves I captured the other day!)]
+		你根据记忆，像被要求的那样站着不动并努力地不去看哪些母半人马，特别是当她们竞价购买你时。露内特的女儿们毫不掩饰对与莉西丝构建起密切而稳定的关系的机会的狂热，她们立刻将竞价推向了一个天文数字。你立刻理解了她们支付如此巨款的能力和意愿从何而来，正如其中一位炫耀的那样，[style.speechFeminineStrong(这笔钱是前几天我靠卖掉一群逃跑的奴隶赚来的！)]
 	</p>
 	<p>
-		[style.speechFeminine(It's easier to just take money from people travelling through the Fields!)] another boasts.
+		[style.speechFeminine(还是直接榨取经由田野的旅人们的钱比较容易！)]另一位自夸道。
 	</p>
 	<p>
-		Not wanting to be outdone by her sisters, the centauress who's currently winning the bidding brags, [owner.speech(You get the most from looting people's houses! I've got more money that I could ever possibly spend from doing that! This cow's going to be mine!)]
+		为了不被姐妹们抢过风头，目前出价最高的那位母半人马吹嘘道，[owner.speech(你从劫掠房屋中赚了一大笔钱！而我通过那种方式攫取了我几乎无法花光的财富！这头奶牛是我的啦！)]
 	</p>
 	<p>
-		Having said that, this centauress really puts her money where her mouth is, and over the course of the next several minutes, she continues to easily outbid all of her sisters. Despite Evelyx's warning to not show any kind of favouritism, as it becomes certain that she's going to be the one to adopt you, you can't help but glance across and take good look at her.
+		话一说完，这位女半人马便将她的钱投入了她的注入口(mouth实际含义存疑注意)，在接下来的几分钟内，她的出价持续地压制住了她所有的姐妹们。尽管艾弗利克斯警告过你不要表现出任何程度上的偏袒，但当她几乎已经确认将要领养你时，你仍忍不住将目光瞥了过去仔细看了看她。
 	</p>
 	<p>
-		Despite the fact that she's lying down on one of the sofas, you can tell from her huge figure that this centauress must be at least [owner.heightValue] tall when standing. With dark red skin, piercing yellow eyes, short black hair that's styled into a pixie cut, and a pair of long, black horns, she looks like a tauric, tomboyish version of the sort of stereotypical demon you'd seen back in your old reality.
+		虽然她躺在沙发上，你仍从她的巨大身形上估算出了当她站起来时大约高达[owner.heightValue]。她的皮肤呈暗红色，黄色的双眸中投射出锐利的眼神，再加上黑色的精灵短发和一对长长的黑角，这一切使她看上去像是一个符合你在过去的现实中见过的刻板印象中的恶魔的半人半兽假小子版。
 	</p>
 	<p>
-		Wearing practically nothing, this centauress's massive pair of [owner.cupSize]-cup breasts are left almost completely exposed, with her big, ebony nipples only just barely being covered up by a pair of black tape crosses. A pair of huge, two-handed battle-axes are resting against the sofa by her side, which thanks to the fact that she has four arms, she's obviously able to wield simultaneously. The last part of her which really catches your eye is the fat, [owner.cockLengthValue] demonic horse-cock and pair of massive, heavy balls that she's got between her legs. Despite that fact that it's got a thick sheath into which to retract, her shaft is fully exposed thanks to the semi-hard state that it's in right now, and you gulp as you realise that she's getting turned on at the thought of winning the bidding and getting to adopt you.
+		由于实际上和没穿没有区别，这位母半人马硕大的[owner.cupSize]罩杯胸部几乎完全暴露了出来，而她乌黑的巨大乳头仅仅是被两条交叉的黑色带子盖住了。一对巨大的双手战斧就放在沙发的侧面，由于她有四只手，显然双持对她来说没有困难。最后吸引你目光的是她胯下那肥大的[owner.cockLengthValue]恶魔马屌和一对硕大而沉重的卵子。尽管她的厚重的阴茎鞘足以完全收纳，但她的半硬阴茎仍然完全暴露了出来，当你意识到她是因为快要赢得这场竞价并能够将你带走才兴奋到扯旗时，你咽了一下口水。
 	</p>
 	<p>
-		Just as you find yourself gazing in admiration at the way her gigantic dick is coloured so as to fade from a dark red at the tip to a dull ebony at the base, this centauress looks up directly into your eyes. Clearly possessing a high level of arcane ability, she telepathically projects her thoughts into your mind, and you gulp as you hear her tease, [owner.thought(Like what you see, cow? I'll be ramming it deep into your cunt soon enough. Just be patient for a few more minutes...)]
+		就在你意识到你正陶醉于欣赏她那从暗红的头部慢慢变暗到深沉乌黑的根部的巨大阴茎时，这位母半人马的直勾勾地盯向了你的双眼。她显然拥有极高的奥术造诣，她利用心灵感应将她的想法投射入你的思维，当你听到她的挑逗时你咽了一下口水，[owner.thought(喜欢你看到的吗，小奶牛？我马上就要将它狠狠撞进你的淫穴了。你只需要耐心等待几分钟就好……)]
 	</p>
 	<p>
-		Flashing you an evil smirk, this centauress makes a bid that's far higher than what her sisters can afford. After a couple of minutes of trying, and failing, to convince your soon-to-be owner to let them have a chance, all of the other centauresses back out of the bidding, leaving this dark red-skinned, four-armed mountain to be declared by Evelyx as the winner. After paying the blue-skinned succubus a truly massive amount of flames, this centauress lets out a deep, hungry grunt, before leaping up onto your platform and landing with a ground-shaking boom right by your side. Reaching forwards with her four arms, she uses two to spread your ass cheeks, before using her others to give your pussy a forceful, dominant grope.
+		向你抛来一个邪恶而得意的狞笑后，这位母半人马提出了一个远超她姐妹们支付能力的高价。在经过了几分钟的尝试和失败后，在确信这位你接下来的主人确实给她们留下了挣扎的机会后，其他的母半人马们纷纷退出了竞价，留下这位暗红皮肤四手的坚如磐石的母半人马由艾弗利克斯宣布为最后的胜利者。在支付了这位蓝皮魅魔一笔确实的巨额火币之后，这位母半人马发出了一阵低沉而充满了饥渴的闷哼声，并紧接着一跃而起跳上了你所在的平台，且伴随着如同大地在震颤一般的隆隆声落在了你的身旁。她伸出四手，用其中一对掰开了你的屁股，并用剩下一对用力地爱抚你的小穴以彰显她的支配地位。
 	</p>
 	<p>
-		[owner.speech(This cunt's related to Lyssieth, huh?)] she growls as she continues to roughly molest your twat. Unable to prevent a horny moan from escaping your mouth, you bite your lip and whine as this centauress forcefully pushes her fingers into your [pc.pussy+] and gloats, [owner.speech(I own you now, bitch. You should feel honoured; I've led more raiding bands than I can count, and after I presented a hundred slaves to her, Lunette told me that it would only be a matter of time before she officially recognises me as one of her daughters. You understand that, you dumb cow? I'm practically a princess, and that's what you'll call me.)]
+		[owner.speech(这个小穴属于莉西丝，不是吗？)]在猥亵你的淫穴时她低吠道。由于你无法阻止自己发出淫荡的呜咽声，你只好咬紧嘴唇并转而发出哀鸣，而此时母半人马用力地将手指插入你[pc.pussy+]并嘲笑道，[owner.speech(我现在拥有你，婊子。你应当为此感到荣幸；我领导过不计其数的劫掠小队，而在向她呈上了一百位奴隶之后，露内特告诉我成为她的女儿之一只是时间问题。你懂吗，你这头蠢牛？我将事实上成为一名公主，到那时你也将如此尊称我。)]
 	</p>
 	<p>
-		Although they overhear every word of what's being said, none of your new owner's sisters object to what she's saying, letting you know that she really must be an important daughter of Lunette's. Realising that she's expecting an answer, you quickly reply, [pc.speech(Yes, Princess. Thank you for adopting me.)]
+		虽然她的姐妹们听到了她说的每一个字，但没有人站出来反对，你相信她真的将成为露内特的一位重要的女儿。意识到她正在等待你的答案，你立刻回复道，[pc.speech(是的公主。谢谢你领养我。)]
 	</p>
 	<p>
-		Letting out a deep, approving grunt, Princess continues roughly fingering your [pc.pussy+] as she asks, [owner.speech(Ready to get broken-in by my cock, slave? I'm going to be doing this to Lyssieth and her imp-fucking slut of a daughter one day, so consider yourself practice for that!)]
+		伴随着一阵低沉而充满认同的咕哝，公主继续一边粗暴地用手指拨弄你[pc.pussy+]一边问，[owner.speech(准备好被我的肉棒玩坏了吗，小奴隶？总有一天我也会对莉西丝和她娘的那些的荡妇做这个，所以你现在就给我练习一下！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MOUNTED"><![CDATA[
 	<p>
-		Before you can reply to [owner.namePos] insulting words about Lyssieth and Lilaya, she rears up and roughly mounts you right there on the raised platform before all of her sisters and Evelyx. Wasting no time with any kind of foreplay, she immediately thrusts her powerful hips forwards and slams her fat, demonic horse-cock deep into your horny cunt.
+		在你回应[owner.namePos]关于莉西丝和莉莱雅的侮辱性话语之前，她了站起来，然后在她所有的姐妹和艾弗利克斯面前粗暴地把你骑在那处高台上。她不浪费时间进行任何前戏就立即将她强大的臀部向前推，并将她那肥大的恶魔般的马肉棒深深地撞进你饥渴的小穴里。
 	</p>
 	<p>
-		[owner.speech(That's it, slave! ~Mmm!~ I own you now!)] she exclaims, and you can't help but let out a stream of erotic moans as she starts to ruthlessly slam her [owner.cock+] in and out of your [pc.pussy+] right there on the auction room's stage...
+		[owner.speech(就是这样，奴隶~嗯~！我现在拥有你！)]她喊叫道，当她就在拍卖室的舞台上开始无情地用她那[owner.cock+]猛烈撞击地抽插你[pc.pussy+]时，你忍不住发出一连串色情呻吟……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MOUNTED_END"><![CDATA[
 	<p>
-		Having had her fun with you, [owner.name] steps back slides her huge cock out of your well-fucked pussy. Looking at her musky cum practically gushing out of your despoiled cunt, she grunts in amusement, [owner.speech(My fat cock's turned your cunt into a real filthy mess, my dirty little slave.)]
+		和你度过一段快乐的时光后，[owner.name]后退一步，将她那硕大的肉棒从你欠操的小穴里滑出。她瞧见自己那令人着迷的精液，自你被蹂躏的小穴几乎喷涌而出，兴奋地嘟囔着，[owner.speech(我的大肉棒把你的小穴搞的一团糟，我下流的小奴隶。)]
 	</p>
 	<p>
-		With the show over, the rest of the Princess's sisters exit the auction room by means of a large door that heads straight out into the Fields. Calling out after them, Evelyx thanks Lunette's daughters for sparing her farm, before turning back towards Princess and saying, [evelyx.speech(I know that you've already adopted another slave, so you've been through this process before, but would you like to accompany me and witness your new slave's final housing?)]
+		随着拍卖结束，公主其余的姐妹通过一道直通田野的大门离开拍卖厅。艾弗利克斯在她们身后喊着，感谢露内特的女儿们光顾她的农场，然后转身对公主说，[evelyx.speech(我知道您已经收养了另一个奴隶，当然您之前也经历过流程，但您愿意陪着我一起见证您新奴隶最后的处置吗？)]
 	</p>
 	<p>
-		[owner.speech(Yeah, and anyway, it's been quite a few hours since I was here, so it's time to give my other slave another good, hard fuck,)] Princess replies, before happily trotting on ahead of you and Evelyx. Motioning for you to fall in behind her, the blue-skinned succubus hurries to catch up with Princess, whose cum is still dripping from her softening cock to leave a trail for the two of you to follow.
+		[owner.speech(是啊，不管怎样，我来这已经有一会儿了，是时候赏给我另一个奴隶一顿爆操了，)]公主回答，高兴地在你和艾弗利克斯前蹦跳着。她示意你们跟在后面，蓝皮魅魔急忙追上公主，精液从她疲软的肉棒上滴落，留下一道供你们跟随的痕迹。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BACK_HOME"><![CDATA[
 	<p>
-		Leading you back into the slave barn, Evelyx directs you to a different stall to the one which you were locked up in previously. The reason for this turns out to be that it's directly adjacent to the one in which Princess's other slave is being kept. After you've settled into position on the stall's padded supports, the blue-skinned succubus locks a steel chain to each of your ankles to prevent you from leaving.
+		将你牵回奴隶仓库后，艾弗利克斯引导你进入了与之前不同的一个隔间。这个隔间在公主的其它奴隶的隔壁。在确保你的姿势在隔间内护垫的支撑下固定好后，这位蓝皮魅魔用铁链锁住了你的脚踝以免你逃跑。
 	</p>
 	<p>
-		While this is happening, Princess rears up and mounts her other cowtaur slave, before slamming her fat cock deep into her drooling cunt. As she takes a moment to watch the centauress roughly pounding her slave's feral cow-pussy, Evelyx takes this opportunity to reveal to you, [evelyx.speech(That slave was Dale's predecessor. She was a good receptionist, but she started asking too many questions about this barn. It really wouldn't do to have the cows know about what goes on in here. Nobody would want to work for me if they knew that their eventual fate was to become a cock-sleeve for one of Lunette's daughters...)]
+		与此同时，公主后脚直立骑上了她的另一位半人牛奴隶，用她肥大的肉棒深深塞进那正在淌水的小穴。趁着她粗暴地冲击着她奴隶的野性牛穴的机会，艾弗利克斯告诉你，[evelyx.speech(那个奴隶曾是戴尔的前辈。过去她是一位优秀的接待员，但她不该过于关心这个仓库的。可千万不能让那些奶牛知道这里正在发生什么。如果让他们知道她们最终的命运只会是给一个露内特的女儿当肉棒套的话，就没人会替我工作了……)]
 	</p>
 	<p>
-		Leaving you with that knowledge, Evelyx exits the barn, before promptly returning with one of her sisters at her side. As the step up behind you, you see that the younger succubus has an arcane tattoo gun in her hands, and after waiting for Princess to pump what must be at least the third load of thick, musky cum into her other slave's cunt, Evelyx asks, [evelyx.speech(What would you like to call this slave? I'll have my sister here tattoo her name and number on her ass for you.)]
+		在教授了你这些知识后，艾弗利克斯离开了仓库，不久后她又回来了，身旁跟着她的一位妹妹。她们走到了你身后，你能看见那个年轻的魅魔手里握着一把奥术纹身枪。耐心等待公主在她奴隶小穴内射出了第三股粘稠麝香精液后，艾弗利克斯问道，[evelyx.speech(您希望怎么称呼这个奴隶？我会让我的妹妹为您在她屁股上纹上她的名字和编号。)]
 	</p>
 	<p>
-		Ramming her fat, demonic horse-cock deep into her slave's cunt, Princess grunts, [owner.speech(Slaves shouldn't have names. ~Mmm!~ I'll just call her 'cow' like I do with this one. ~Aah!~ Put that on her ass.)]
+		在将她肥大的恶魔马屌狂暴轰入奴隶小穴的同时，公主嘶吼道，[owner.speech(奴隶不配拥有姓名。~呣嗯嗯！~我只会叫她奶牛，就像我身下这个一样。~啊！~就在她屁股上这么纹。)]
 	</p>
 	<p>
-		Receiving an approving nod from Evelyx, the younger succubus quickly uses the arcane tattoo gun to
+		得到了艾弗利克斯的点头示意后，这位年轻魅魔用奥术纹身枪
 		#IF(pc.getTattooInSlot(IS_ANUS)!=null)
-			 erase the tattoo that you've already got, before permanently etching the text 'Cow #[#~~flags.getSavedLong('evelyx_player_number')]' in black ink on your ass.
+			抹去了你已有的纹身，并在你屁股上用黑墨永久蚀刻下了文字“奶牛 #[#~~flags.getSavedLong('evelyx_player_number')]”。
 		#ELSE
-			 permanently etch the text 'Cow #[#~~flags.getSavedLong('evelyx_player_number')]' in black ink on your ass.
+			在你屁股上用黑墨永久蚀刻下了文字“奶牛 #[#~~flags.getSavedLong('evelyx_player_number')]”。
 		#ENDIF
-		 The sensation of being tattooed isn't painful, but it still stings a little, and you find yourself letting out a few whines as the succubus carries out her work. Thankfully, the whole process only takes a few minutes, and as she turns the arcane tattoo gun off, her older sister informs Princess, [evelyx.speech(Your adopted slave is ready for you to use at any time. As agreed upon, I'll have ninety percent of her milk profits ready for you at the end of each month.)]
+		纹身的感觉并不能称得上是痛苦，但仍有轻微刺痛。在这个魅魔进行纹身工作时你发现你抑制不住发出了阵阵哀鸣。值得庆幸的是，整个过程只持续了数分钟。在她关掉手里的奥术纹身枪后，她的姐姐提醒公主，[evelyx.speech(您认领的奴隶已经准备好随时被享用了。正如我们之前约好的那样，我将会为您提供她月产乳量的百分之九十。)]
 	</p>
 	<p>
-		Noisily orgasming and dumping yet another huge amount of cum in her other slave, Princess finally slides her cock out from her thoroughly-fucked and despoiled cunt. Her insatiable lust isn't satisfied yet, however, and now that she's reduced her other slave to a quivering, moaning mess, she steps over and rears up on her hind legs, before mounting you once again. Exchanging glances with one another, Evelyx and her sister step back and give the two of you some room, and before you know it Princess's massive, demonic horse-cock is once again slamming deep into your cunt...
+		伴随着不加掩饰的剧烈高潮下公主将另一股巨量精液射进了她的另一个奴隶后，她最终还是将肉棒从那被彻底草烂得不成样子的小穴中抽离了出来。她的性欲永远无法得到满足，但既然现在她其它的奴隶都已经被糟蹋得不省人事，只能在地上抽抽着呻吟了，她走了过来后脚直立骑上了你。交换了眼神后艾弗利克斯和她的妹妹向后退去为你俩留出了一些空间，就在你意识到将要发生什么之前公主那硕大的恶魔马屌再一次狂暴轰入了你的小穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_1"><![CDATA[
 	<p>
-		The feeling of Princess's fat, demonic horse-cock being rammed deep into your cunt becomes very familiar to you over the course of the next few weeks, as she always arrives at least once, and often multiple times every day to rut both you her other slave. Having multiple loads of thick, musky cum pumped deep into your wombs every day, it's no surprise that both of your bellies are soon swollen with Princess's children. Although her other slave is well accustomed to this preference of hers by now, you're new to discover that Princess likes the look of a heavily pregnant belly, and she leaves the two of you in this state for almost a month before finally having Evelyx's sister deliver your children.
+		在接下来的几周中，你逐渐习惯了这种被公主的肥硕恶魔马屌狂暴轰入的感觉，毕竟她每天都要来至少一次，而且经常好几次地将你和另外的那个奴隶用肉棒向她的形状改造。由于子宫内每天都要被内射不知道多少股粘稠浓厚的精液，你并不奇怪你俩的肚子会被公主的孩子撑大。虽然另一个奴隶早就习惯于这种西瓜肚的姿态，但你仍对公主喜欢西瓜肚这点感到新鲜。在接下来的这个月里，公主将你俩留在了这里，直到艾弗利克斯的妹妹来给你俩接生。
 	</p>
 	<p>
-		After that, the whole process repeats itself, and while she keeps the two of you on sterility pills for a while, Princess eventually decides to breed you both again, and by the time that you've delivered your second set of twins, the days have blurred together into a haze of being milked and fucked. One day, however, something different happens to break this pattern, as Princess enters the barn with both Evelyx and a newly-adopted slave in tow. This new slave is locked into the other stall beside you, and after spending a good thirty minutes roughly pounding each of your hot cunts, Princess grunts and declares, [owner.speech(Now that I've got the three cows I was looking for, I can finally have my fun transforming you all!)]
+		在那之后，同样的事情不断上演。虽然有段时间公主给你俩喂过避孕药，但最后她还是决定让你俩再怀一胎。在你又生了一对双胞胎后，枯燥乏味的榨乳和被草的日常模糊了你对时间流逝的感知。直到有一天，有什么不同的事发生了，打破了这一循环。公主带着艾弗利克斯牵着她新认领的奴隶走进了仓库。这个新奴隶被锁进了你隔壁的另一个隔间。在用半小时愉快地蹂躏了你们仨饥渴的小穴后，公主朗声宣布道，[owner.speech(既然我已经集齐了我寻求的三个奴隶，我现在要转变你们三个找点乐子！)]
 	</p>
 	#IF(game.isNipplePenEnabled())
 		<p>
-			Producing a bottle containing some kind of transformative potion, Princess trots around in front of the ex-receptionist slave who was here before you were. Roughly pushing the neck of this bottle into her mouth, Princess forces her drink it all, and you watch in alarm as her already-massive breasts grow into absolutely huge mounds of flesh. Slapping her slave's gigantic tits, Princess produces yet another potion and forces her to drink that too, taunting as she does so, [owner.speech(I hope you're ready to have these fat tits of yours fucked!)]
+			制造了一瓶某种转化药水后，公主绕着比你先来的前接待员奴隶身边小跑了起来。公主粗暴地将瓶口推进她的嘴里，强迫她一饮而尽。你警惕地看着，她那原本就已经可以称得上是硕大的胸脯进一步成长成了绝对的肉山。在抽打了她奴隶的巨大乳头后，公主又制作了另一瓶药水并再次强迫她饮下，并嘲弄道，[owner.speech(我希望你这些肥乳头已经准备好被草了！)]
 		</p>
 		<p>
-			You soon see that Princess was talking quite literally, as within moments her slave's nipples have morphed and transformed into pairs of plump lips. After pushing her fingers into each of these newly-formed lipples to make sure that there's a fuckable channel behind them, Princess rears up and mounts the first of her slave's gigantic tits. Letting out a deep moan, she forcefully slams her huge, demonic horse-cock into her slave's breast, and you watch in fascinated shock as the slave's lip-like nipple sucks and chokes on Princess's hot shaft as though it were a real mouth. This exotic new way to fuck her slave proves to be more than Princess can endure, for she quickly lets out a deep, shuddering moan and pumps a massive load of musky, demonic cum into her slave's breast.
+			你立刻意识到公主所说的就是字面意思，因为不过片刻，她奴隶的乳头就已经变形成了一对乳头小穴，十分饱满。公主用手指深入，确认了这对新形成的乳头小穴里面已经形成了穴道，且大到足以容纳肉棒。她直立而起骑上了她奴隶的巨大乳房。伴随着一声低沉的呻吟，她将自己巨大的恶魔马屌用力插入了奴隶的乳房。你在一旁痴迷地看着，那奴隶的乳头小穴像一张嘴一样努力吮吸，但它对马屌来说还是有些太紧了。这种草法对公主来说过于新奇，她一下子没忍住，过早地发出了低沉而颤抖的呻吟，并泵出了一大股浓厚的恶魔精液塞满了奴隶的乳房。
 		</p>
 		<p>
-			Pulling out, your owner moves on to the slave's other breast, and after mounting and roughly pounding that one, she similarly pumps it full of her hot, slimy cum. After despoiling her slave's tits in this manner, Princess looks across at you, and with an evil smirk on her face, she trots forwards and asks,
+			将肉棒抽离，你的主人立刻草起了奴隶的另一个乳房，在经过了粗暴的蹂躏后，她泵出了另一股灼热的粘稠精液。在蹂躏完她奴隶的乳房后，公主将目光投向了你，她的脸上挂着狞笑，向你小跑而来并询问道，
 			#IF(game.isAnalContentEnabled())
-				 [owner.speech(So, cow, what should I turn you into? I've already got a tit-fucking cow, so you'll have to have your cunt turned into my perfect cock-sleeve. Or maybe I should make you my oral pet, hmm? Oh, or maybe even a filthy buttslut! You want to take it up your ass from now on? Or should I choke you with my fat cock and feed you my cum every day? So many choices... Perhaps I'll let you help me decide...)]
+				[owner.speech(所以，奶牛，我应该将你变成什么形状呢？我已经有一头草奶头的母牛了，因此我会把你的小穴变成我完美的肉棒套。或者也许我应该把你变成我的口交机器？哦！或许我应该把你变成一个肮脏的屁眼婊子！你现在想我改造你的菊花呢？还是想被我每天用大肉棒呛你，以精液为食呢？如此之多的选择……也许我应该听听你自己的意见……)]
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			With that, your owner moves directly over to you, and after giving your cum-stuffed cunt a rough, dominant grope, she trots forwards evilly smirks at you, before asking,
+			紧接着，你的主人径直向你走来，在粗暴地猥亵你的泡芙小穴以示控制地位后，她小跑着对着你狞笑，并问道，
 			#IF(game.isAnalContentEnabled())
-				 [owner.speech(So, cow, what should I turn you into? I'm thinking of turning your cunt into my perfect cock-sleeve. Or maybe I should make you my oral pet, hmm? Oh, or maybe even a filthy buttslut! You want to take it up your ass from now on? Or should I choke you with my fat cock and feed you my cum every day? So many choices... Perhaps I'll let you help me decide...)]
+				[owner.speech(所以，奶牛，我应该将你变成什么形状呢？我已经有一头草奶头的母牛了，因此我会把你的小穴变成我完美的肉棒套。或者也许我应该把你变成我的口交机器？哦！或许我应该把你变成一个肮脏的屁眼婊子！你现在想我改造你的菊花呢？还是想被我每天用大肉棒呛你，以精液为食呢？如此之多的选择……也许我应该听听你自己的意见……)]
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_1_PUSSY"><![CDATA[
 	<p>
-		After overcoming the shock at being given the opportunity to decide your fate, you meekly suggest to Princess that you'd love to make her happy by becoming her perfect cock-sleeve. Agreeing with your choice, the centauress roughly force-feeds you several bottles of transformative potions, and as you feel your cunt start to transform and reshape itself into a new form, Princess quickly mounts you and rams her fat horse-cock deep into it. Reaching down to roughly dig her fingers into your massive breasts, she hilts her cock deep into your transforming cunt and moans, [owner.speech(~Ooh!~ Fuck! I can feel your cunt transforming around my cock! ~Mmm!~ That's it, you dirty cow slut, you're becoming nothing more than my cock-sleeve!)]
+		你震惊于能决定自己的命运，于是你顺从地提议道为了取悦公主想成为她完美的阴茎套。满足于你的选择，那位母半人马粗鲁地强迫你喝下了几瓶转化药水，而你感到你的小穴开始变形重塑，变成了新的形状。公主马上骑上了你，将她的肥大马屌狂暴轰入。她的手顺势而下摸上了你的巨乳，而她的阴茎深深嵌入了你正在变形的小穴。她呻吟道，[owner.speech(~哦！~该死！我能感受到你的小穴在我的肉棒周围蠕动变形！~呣嗯嗯！~这太对了，你这个肮脏的婊子牛，除了我的阴茎套你什么都不是！)]
 	</p>
 	<p>
-		Keeping her cock rammed balls-deep in your quivering cunt, Princess continues to moan as both of you feel it transforming to be tentacled, ribbed, and to have extra internal muscles. After that, it rapidly transforms to be continuously drooling with girlcum, after which it puffs up and tightens to assume a cute, inexperienced appearance. Of course, that tightening doesn't last long, for as Princess feels your cunt squeezing down around her cock, she starts to roughly thrust her hips back and forth, quickly stretching you out and moulding your pussy to the perfect shape of her cock.
+		你的小穴实在太劲了，公主恨不得把蛋蛋都塞进你那同样因为快感而止不住颤抖的小穴。她持续地呻吟着，你俩都感受这你那小穴不断变得更加粗糙、变出更具有刺激性的条纹，甚至长出小触须和额外的肌肉。在那之后，你的小穴中淫液如潮水般涌出，并最终膨胀又收缩成一副可爱而未经人事的处女模样。当然，这个收缩的过程并没有持续多久，因为在公主感受到你的小穴收缩到开始挤压她的肉棒时，她开始更粗暴地抽查来扩张你的小穴，好将它塑造成完美适配她肉棒的模样。
 	</p>
 	<p>
-		As your transformations come to an end, Princess celebrates your cunt's new feel by pumping it full of a massive amount of hot, musky demonic-cum. After that, she declares that she's never felt a pussy as good as yours, and after declaring that you're now well and truly her personal cock-sleeve, she spends the next hour tirelessly pounding your cunt and stuffing it full of cum over and over again. Eventually, however, she remembers that she has
+		你的变形接近尾声，公主通过内射又一股灼热的浓厚恶魔精液的方式来祝贺你。之后，她说她从未尝过如此美妙的小穴，而现在你将成为她最棒的私人肉棒套。她在接下来的一个小时里不知疲惫地冲击着你的小穴，将它用精液一次又一次填满。不过最后她还是想起了她有
 		#IF(game.isNipplePenEnabled())
-			 another slave to transform, and leaves you to recover as she turns this last slave of hers into her
+                         另一个奴隶需要转化。于是她离开了你，让你得以休息，并将最后一个奴隶转化成了她的
 			#IF(game.isAnalContentEnabled())
-				 anal-obsessed buttslut.
+				肛交母狗。
 			#ELSE
-				 cum-loving oral pet.
+				咽精口宠。
 			#ENDIF
 		#ELSE
-			 two more slaves to transform, and leaves you to recover as she turns one into her cum-loving oral pet and the other into her anal-obsessed buttslut.
+			另外两个奴隶需要转化。于是她离开了你，让你得以休息，并将她俩分别转化成了咽精口宠和肛交母狗。
 		#ENDIF
 	</p>
 	<p>
-		With your transformations complete, Princess leaves, only to return later that day and spend hours fucking each of you over and over again...
+		在你们的转化结束后，公主离开了。在那一天晚些时候她又回来，将你们草了一遍又一遍……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_1_MOUTH"><![CDATA[
 	<p>
-		After overcoming the shock at being given the opportunity to decide your fate, you meekly suggest to Princess that you'd love to make her happy by becoming her oral-loving pet. Agreeing with your choice, the centauress roughly force-feeds you several bottles of transformative potions, and as you feel your throat start to transform and reshape itself into a new form, Princess quickly forces your head down and rams her fat horse-cock into your mouth. Stepping forwards, she hilts her cock deep into your transforming throat and moans, [owner.speech(~Ooh!~ Fuck! I can feel you transforming around my cock! ~Mmm!~ That's it, you dirty cow slut, you're becoming nothing more than my oral pet!)]
+		你震惊于能决定自己的命运，于是你顺从地提议道为了取悦公主想成为她完美的咽精口宠。满足于你的选择，那位母半人马粗鲁地强迫你喝下了几瓶转化药水，而你感到你的喉咙开始变形重塑，变成了新的形状。公主马上按下了你的头，将她的肥大马屌狂暴轰入。她的慢慢前进，而她的阴茎深深嵌入了你正在变形的喉咙。她呻吟道，[owner.speech(~哦！~该死！我能感受到你的喉咙在我的肉棒周围蠕动变形！~呣嗯嗯！~这太对了，你这个肮脏的婊子牛，除了我的口宠你什么都不是！)]
 	</p>
 	<p>
-		Keeping her cock rammed balls-deep in your mouth, Princess continues to moan as both of you feel it transforming to be tentacled, ribbed, and to have extra internal muscles. After that, it rapidly transforms to be continuously drooling saliva, after which your lips puff up, and then finally your throat constricts and tightens. Of course, that tightening doesn't last long, for as Princess feels your oesophagus squeezing down around her cock, she starts to roughly thrust her hips back and forth, quickly stretching you out and moulding your throat to the perfect shape of her cock.
+		你的嘴穴实在太劲了，公主恨不得把蛋蛋都塞进去。她持续地呻吟着，你俩都感受这你那喉咙不断变得更加粗糙、变出更具有刺激性的条纹，甚至长出小触须和额外的肌肉。在那之后，你的嘴中中唾液如潮水般涌出，你的嘴唇膨胀，喉咙则收缩。当然，这个收缩的过程并没有持续多久，因为在公主感受到你的食道收缩到开始挤压她的肉棒时，她开始更粗暴地抽查来扩张你的喉咙，好将它塑造成完美适配她肉棒的模样。
 	</p>
 	<p>
-		As your transformations come to an end, Princess celebrates your throat's new feel by pumping your stomach full of a massive amount of hot, musky demonic-cum. After that, she declares that she's never felt a mouth-pussy as good as yours, and after declaring that you're now well and truly her personal oral pet, she spends the next hour tirelessly fucking your face and stuffing you full of cum over and over again. Eventually, however, she remembers that she has
+		你的变形接近尾声，公主内射又一股灼热的浓厚恶魔精液以填满你的胃，并以这种方式来祝贺你。之后，她说她从未尝过如此美妙的嘴穴，而现在你将成为她最棒的私人口宠。她在接下来的一个小时里不知疲惫地冲击着你的脸，将它用精液一次又一次覆盖。不过最后她还是想起了她有
 		#IF(game.isNipplePenEnabled())
-			 another slave to transform, and leaves you to recover as she turns this last slave of hers into her
+                         另一个奴隶需要转化。于是她离开了你，让你得以休息，并将最后一个奴隶转化成了她的
 			#IF(game.isAnalContentEnabled())
-				 anal-obsessed buttslut.
+				肛交母狗。
 			#ELSE
-				 perfect cock-sleeve.
+				完美肉棒套。
 			#ENDIF
 		#ELSE
-			 two more slaves to transform, and leaves you to recover as she turns one into her perfect cock-sleeve and the other into her anal-obsessed buttslut.
+			另外两个奴隶需要转化。于是她离开了你，让你得以休息，并将她俩分别转化成了完美肉棒套和肛交母狗。
 		#ENDIF
 	</p>
 	<p>
-		With your transformations complete, Princess leaves, only to return later that day and spend hours fucking each of you over and over again...
+		在你们的转化结束后，公主离开了。在那一天晚些时候她又回来，将你们草了一遍又一遍……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_1_ANUS"><![CDATA[
 	<p>
-		After overcoming the shock at being given the opportunity to decide your fate, you meekly suggest to Princess that you'd love to make her happy by becoming her dirty little buttslut. Agreeing with your choice, the centauress roughly force-feeds you several bottles of transformative potions, and as you feel your asshole start to transform and reshape itself into a new form, Princess quickly mounts you and rams her fat horse-cock deep into it. Reaching down to roughly dig her fingers into your massive breasts, she hilts her cock deep into your transforming ass and moans, [owner.speech(~Ooh!~ Fuck! I can feel your butt transforming around my cock! ~Mmm!~ That's it, you dirty cow, you're becoming nothing more than my buttslut!)]
+		你震惊于能决定自己的命运，于是你顺从地提议道为了取悦公主想成为她肮脏的小肛交婊子。满足于你的选择，那位母半人马粗鲁地强迫你喝下了几瓶转化药水，而你感到你的菊穴开始变形重塑，变成了新的形状。公主马上骑上了你，将她的肥大马屌狂暴轰入。她的手顺势而下摸上了你的巨乳，而她的阴茎深深嵌入了你正在变形的菊花。她呻吟道，[owner.speech(~哦！~该死！我能感受到你的屁股在我的肉棒周围蠕动变形！~呣嗯嗯！~这太对了，你这个肮脏的婊子牛，除了我的肛交母狗你什么都不是！)]
 	</p>
 	<p>
-		Keeping her cock rammed balls-deep in your quivering asshole, Princess continues to moan as both of you feel it transforming to be tentacled, ribbed, and to have extra internal muscles. After that, it rapidly transforms to be continuously drooling with natural anal lubricant, after which the rim puffs up, and then finally it tightens to assume a cute, inexperienced appearance. Of course, that tightening doesn't last long, for as Princess feels your asshole squeezing down around her cock, she starts to roughly thrust her hips back and forth, quickly stretching you out and moulding your rear entrance to the perfect shape of her cock.
+		你的菊穴实在太劲了，公主恨不得把蛋蛋都塞进你那同样因为快感而止不住颤抖的屁眼里。她持续地呻吟着，你俩都感受这你那菊穴不断变得更加粗糙、变出更具有刺激性的条纹，甚至长出小触须和额外的肌肉。在那之后，你的肛门中润滑液如潮水般涌出，并最终膨胀又收缩成一副可爱而未经人事的处女模样。当然，这个收缩的过程并没有持续多久，因为在公主感受到你的菊穴收缩到开始挤压她的肉棒时，她开始更粗暴地抽查来扩张你的菊穴，好将它塑造成完美适配她肉棒的模样。
 	</p>
 	<p>
-		As your transformations come to an end, Princess celebrates the new feel of your asshole by pumping it full of a massive amount of hot, musky demonic-cum. After that, she declares that she's never felt an ass-pussy as good as yours, and after declaring that you're now well and truly her personal buttslut, she spends the next hour tirelessly pounding your ass and stuffing it full of cum over and over again. Eventually, however, she remembers that she has
+		你的变形接近尾声，公主通过内射又一股灼热的浓厚恶魔精液的方式来祝贺你。之后，她说她从未尝过如此美妙的菊穴，而现在你将成为她最棒的私人肛交母狗。她在接下来的一个小时里不知疲惫地冲击着你的屁股，将它用精液一次又一次填满。不过最后她还是想起了她有
 		#IF(game.isNipplePenEnabled())
-			 another slave to transform, and leaves you to recover as she turns this last slave of hers into her cum-loving oral pet.
-		#ELSE
-			 two more slaves to transform, and leaves you to recover as she turns one into her perfect cock-sleeve and the other into her cum-loving oral pet.
+                         另一个奴隶需要转化。于是她离开了你，让你得以休息，并将最后一个奴隶转化成了她的咽精口宠。
+                       	#ELSE
+			另外两个奴隶需要转化。于是她离开了你，让你得以休息，并将她俩分别转化成了完美肉棒套和咽精口宠。
 		#ENDIF
 	</p>
 	<p>
-		With your transformations complete, Princess leaves, only to return later that day and spend hours fucking each of you over and over again...
+		在你们的转化结束后，公主离开了。在那一天晚些时候她又回来，将你们草了一遍又一遍……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_2"><![CDATA[
 	<p>
-		Princess continues her regular visits for the next few months, making sure to thoroughly fuck your newly-transformed
+		接下来的几个月里，公主持续地进行着日常拜访，确保每天都确实草烂了你新变形的
 		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			 asshole almost every time.
+			菊穴。
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
-			 mouth almost every time.
+			口穴。
 		#ELSE
-			 pussy almost every time.
+			淫穴。
 		#ENDIF
-		 While the other slaves in the barn are all regularly used by their owners, the three of you are by far the most thoroughly-fucked, and with your transformed appearances, you end up being the focus of much of the barn's gossip.
+		虽然其它奴隶也会被各自的主人持续享用，但你们仨被草得最彻底，再加上你们转变过的外表，你们成为了仓库闲聊的中心。
 	</p>
 	<p>
-		One day, many months after becoming Evelyx's slave, Princess arrives at the barn in a particularly foul mood. While she's often angry and roughly uses the three of you to help her calm down, on this particular occasion she's in a state of rage unlike anything you've seen before.
+		在你成为艾弗利克斯奴隶的很多个月后的一天，公主又来看你了，但这次她的心情十分糟糕。虽然她总是很愤怒，以粗暴地蹂躏你们仨的方式来冷静，但这次情况不一样，她看上去愤怒得不同以往。
 		#IF(game.isNipplePenEnabled())
-			 Although she violently pounds the ex-receptionist's lipples and stuffs her massive breasts full of her cum,
+			虽然她狂暴地冲击着前接待员的乳头小穴，用精液填满她的乳房，
 		#ELSE
-			 Although she spends fifteen minutes violently pounding the ex-receptionist and stuffing her full of her cum,
+			虽然她花了十五分钟狂暴地冲击着前接待员，用精液将她灌成泡芙，
 		#ENDIF
-		 Princess's rage only seems to get worse, and as she moves on to roughly slam her fat cock
+		但公主的愤怒似乎不减反增，她紧接着来到你面前用她肥大的肉棒粗暴地冲入
 		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			 deep into your ass,
+			你菊穴的最深处，
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
-			 deep down your throat,
+			你喉咙的最深处，
 		#ELSE
-			 deep into your cunt,
+			你淫穴的最深处，
 		#ENDIF
-		 she starts to rant and rave, [owner.speech(Take it, you fucking cow! ~Mmm!~ What did she fucking mean, saying that I wasn't '<i>wealthy enough to lead the expected life of a recognised daughter</i>'?! ~Aah!~ Fuck! Take my cock, you dumb slave! This is all your fault for not making me enough money from your milk! ~Mmm!~ I'll fucking fix that soon enough!)]
+		她嘶吼咆哮着，[owner.speech(接住，你这该死的奶牛！~呣嗯嗯！~她他妈的是什么意思，说什么我还没‘<i>足够富有到能够过上期待中的一位受认可的女儿应当过上的生活</i>’？！~啊！~去他妈的！接好我的肉棒，你这白痴婊子！这都是你的错，都怪你产奶量太少不能让我赚到足够的钱！~呣嗯嗯！~我他妈的必须立刻修正这个错误！)]
 	</p>
 	<p>
-		Obviously having been told by Lunette that she wasn't ready to be officially recognised as one of her daughters, Princess takes out her frustration and rage on the three of you, and after hate-fucking you for what seems like hours, she finally starts to calm down. With cum pouring out of each of your ruined holes, the three of you can only pant and breathlessly moan as Princess reveals her plan...
+		很显然，露内特告诉她她还没有做好成为一名受认可女儿的准备，公主将她的失望与愤怒完全发泄到了你们仨的身上，在泄愤式地草了你们数个小时后，她终于冷静了下来。精液从你们仨被草得破破烂烂的穴里喷涌而出，而你们只能勉强喘息，或者上气不接下气地呻吟。而这时公主向你们揭露了她的计划……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_2_FLAVOUR"><![CDATA[
 	<p>
-		[owner.speech(Flavoured milk and girlcum sells for a lot more than the regular flavours,)] Princess declares, producing several transformative potion bottles. Starting off by forcing the ex-receptionist to drink several of them, she reveals,
-		#IF(pc.hasBreastsCrotch())
-			[owner.speech(You'll have honey-flavoured milk from your fat tits, blueberry-flavoured udder-milk, and just in case Evelyx ever starts milking your cunt, you'll have cherry-flavoured girlcum.)]
-		#ELSE
-			[owner.speech(You'll have honey-flavoured milk from your fat tits, and just in case Evelyx ever starts milking your cunt, you'll have cherry-flavoured girlcum.)]
-		#ENDIF
-	</p>
+	[owner.speech(风味牛奶和淫液比其它风味饮料卖得贵得多，)]公主这么说道，并制作了几瓶转化药水。她首先强迫前接待员喝下了其中一部分，并说道，
+	#IF(pc.hasBreastsCrotch())
+		[owner.speech(从此你肥大的人身乳房将产蜂蜜味的奶，牛身乳房则产蓝莓味的奶，而当艾弗利克斯榨取你的淫液时，那将是草莓味的。)]
+	#ELSE
+		[owner.speech(从此你肥大的乳房将产蜂蜜味的奶，而当艾弗利克斯榨取你的淫液时，那将是樱桃味的。)]
+	#ENDIF
+</p>
 	<p>
-		Moving on to you, Princess roughly forces you to drink yet more of the transformative potions she's brought along, before stepping back and revealing,
-		#IF(pc.hasBreastsCrotch())
-			 [owner.speech(As for you, you're going to have vanilla tit-milk, chocolate udder-milk, and strawberry-flavoured girlcum.)]
-		#ELSE
-			 [owner.speech(As for you, you're going to have vanilla milk and strawberry-flavoured girlcum.)]
-		#ENDIF
-	</p>
+	紧接着轮到你了，公主粗鲁地强迫你喝下了更多的药剂，后退了一步并说道，
+	#IF(pc.hasBreastsCrotch())
+		[owner.speech(至于你，你将产出香草味的人奶和巧克力味的牛奶，还有草莓味的淫液。)]
+	#ELSE
+		[owner.speech(至于你，你将产出香草味的奶和草莓味的淫液。)]
+	#ENDIF
+</p>
 	<p>
-		After that, Princess moves on to her last, and newest, slave. Making her drink the rest of her potions, she grunts and says, [owner.speech(I forgot what else I brought along, so I guess you'll just be a surprise.)]
-	</p>
+	之后，公主转向了她最后也是最新的奴隶，强迫她喝下了剩下的药剂，低沉地嘶吼着，[owner.speech(我忘记我还带了些什么了，因此你的风味将成为惊喜。)]
+</p>
 	<p>
-		Having transformed each of you to produce exotic-flavoured fluids, Princess's mood starts to brighten, and she declares that from now on the three of you will be making her a lot more money. With that, she rears up and mounts the slave to your left, and after giving her a long, hard fucking, she moves on to
-		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			 pound your asshole
-		#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
-			 fuck your face
-		#ELSE
-			 pound your pussy
-		#ENDIF
-		 and stuff you full of yet more of her cum. Finishing off by rutting her third slave, Princess trots off and leaves the three of you well and truly exhausted...
-	</p>
-	]]>
-	</htmlContent>
+	现在你们每一位都变得产出奇特风味的液体了，公主的心情也变好了许多，她进而宣布你们仨将为她赚更多的钱。说罢，她直立起来骑上你左侧的奴隶，在狠狠地草了她很长一段时间后，她转而冲撞起了你的
+	#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
+		屁股
+	#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
+		脸
+	#ELSE
+		小穴
+	#ENDIF
+	并将你狠狠灌成了泡芙。最后她又狠狠蹂躏了第三个奴隶，在确信你们三个实在变得破破烂烂之后扬长而去……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_2_HYPER"><![CDATA[
 	<p>
 		#IF(game.isNipplePenEnabled())
-			[owner.speech(The two of you need tits like this cow,)] Princess states after trotting around to the front of the ex-receptionist and slapping her gigantic tits. Flashing each of you an evil smirk in turn, she continues, [owner.speech(Actually, no, they need to be bigger than this. You three are going to be making more milk than all of the other slaves in here combined.)]
+			[owner.speech(你们两个需要像这头牛一样大的乳房，)]公主绕着前接待员小跑抽打她的乳房时这样说道。她向你们俩分别露出了邪恶的狞笑并继续道，[owner.speech(事实上，那还不够，你们的乳房得比这还大才行。你们三个将产出更多的奶，比其它所有奴隶加起来还要多的奶。)]
 		#ELSE
-			[owner.speech(The three of you need tits so big that they touch the floor,)] Princess states as she trots around in front of you and slaps each of your already-huge tits in turn. With an evil smirk on her face, she continues, [owner.speech(Actually, no, they need to be bigger than that. You three are going to be making more milk than all of the other slaves in here combined.)]
+			[owner.speech(你们仨的乳房得大到垂到地板上才行，)]公主在你面前小跑着转圈并抽打你已经非常巨大的乳房时说道。紧接着她露出了邪恶的狞笑并补充到，[owner.speech(事实上，那还不够，还得更大。你们三个将产出更多的奶，比其它所有奴隶加起来还要多的奶。)]
 		#ENDIF
 	</p>
 	<p>
-		With that, your owner produces a dozen transformative potion bottles, and moves between each one of you, feeding you these potions in turn. You can't help but let out a desperate, shuddering moan as
+		你的主人制作了十二瓶转化药剂，并轮流给你们喂下。当你的
 		#IF(pc.hasBreastsCrotch())
-			 both your breasts and udders
+			人乳房和牛乳房
 		#ELSE
-			 your breasts
+			乳房
 		#ENDIF
-		 expand to double in size, and then double again. Just as you think that they couldn't possibly get any larger, and with your back starting to really strain under their weight, Princess claps her hands and declares, [owner.speech(Excellent, that will serve as our starting point. I'll be back with more potions soon!)]
+		不断地变大又变大时，你无法抑制地发出了一声绝望而颤抖的呻吟。你的背仅仅是撑起乳房就快到达肌肉的极限了，就在你认为你的乳房不能变得更大时，公主拍了拍手说道，[owner.speech(太棒了，这是一个很好的起点。我马上就带来更多的药剂！)]
 	</p>
 	<p>
-		With that, she trots out of the barn, leaving the three of you bending forwards and panting from exertion as you struggle to handle the massive increase in weight on each of your chests. After fifteen minutes of being subjected to this discomfort, Princess returns with yet more transformative potions, and as she feeds them to each of you in turn, your
+		说罢，她便小跑出了仓库，仅留下你们三个保持着弯腰的姿势，挣扎着为撑起这对难以承受的胸脯而喘息。在你们强忍了十五分钟的不适后，公主带着更多变形药剂回来了，并再次轮流给你们喂下。你们的
 		#IF(pc.hasBreastsCrotch())
-			 breasts and udders
+			人乳房和牛乳房
 		#ELSE
-			 breasts
+			乳房
 		#ENDIF
-		 expand into an absolutely colossal size. Unable to look down over the top of them, you let out a surprised gasp as you feel the underside of your gargantuan tits touch the floor. The initial shock of having your breasts expanded to this size is soon replaced by a feeling of intense relief, as with your tits being supported by the floor, the strain on your back quickly disappears. Still not satisfied, Princess continues feeding all three of you potion after potion, until eventually each of your breasts are as large as your entire bodies. It's only at this stage, when each of you are completely immobilised by the sheer size and weight of your tits, does Princess declare that you're all finished.
+		膨胀成了真正的巨像。你现在已经无法看向下方了。当你感觉到你雄伟的乳房已经触及地板时，倒吸了一口冷气。经过了一开始的震惊后，你立马感到了放松，因为当你的乳房得到了地板的支撑后，你的背部不再那么痛苦了。但公主仍未满足，她不停地喂你们一瓶又一瓶药剂，直到你们三人的乳房和身体一样大为止。只有这时，当巨大而沉重的乳房彻底夺走你们的行动能力时，公主才宣布改造完成了。
 	</p>
 	<p>
-		Having completed her work, Princess's mood starts to brighten, and she declares that from now on the three of you will be making her a lot more money. With that, she rears up and mounts the slave to your left, and after giving her a long, hard fucking, she moves on to
+		做完之后，公主的心情一下子好了起来，她宣布从现在起你们会为她更多钱。说完，她直立起来骑上了你左边的奴隶，在狠狠地草了她很长一段时间后，她转而冲撞起了你的
 		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			 pound your asshole
+			屁股
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
-			 fuck your face
+			脸
 		#ELSE
-			 pound your pussy
+			小穴
 		#ENDIF
-		 and stuff you full of yet more of her cum. Finishing off by rutting her third slave, Princess trots off and leaves the three of you well and truly exhausted...
+		并将你狠狠灌成泡芙。最后她又狠狠蹂躏了第三个奴隶，在确信你们三个变得破破烂烂之后扬长而去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_2_MULTI"><![CDATA[
 	<p>
-		[owner.speech(The three of you need more tits in order to up your milk production,)] Princess states as she trots around in front of you and slaps each of your huge tits in turn. With an evil smirk on her face, she continues, [owner.speech(You three are going to be making more milk than all of the other slaves in here combined.)]
+		[owner.speech(你们三个需要更多的乳房以提升产奶量，)]公主在你面前跑圈并抽打你的乳房时说道。她邪媚一笑并补充道，[owner.speech(你们三个将产出比所有奴隶加起来还要多的奶。)]
 	</p>
 	<p>
-		With that, your owner produces a dozen transformative potion bottles, and moves between each one of you, feeding you these potions in turn. You can't help but let out a desperate, shuddering moan you transform to have three pairs of
+		说完，你的主人便生产了一打转化药水，并分别喂你们喝下。当你长出第三对
 		#IF(pc.hasBreastsCrotch())
-			 breasts and udders.
+			人乳房和牛乳房
 		#ELSE
-			 breasts.
+			乳房
 		#ENDIF
-		 Just as you think that it's over, Princess says that she's half-way done, and she continues feeding the three of you transformative potions until you've each got
+		时你不由自主地发出了一声绝望而颤抖的呻吟。就在你以为已经结束时，公主告诉你们这才做好了一半。她马不停蹄地喂你们药剂直到你们每个人都长满了
 		#IF(pc.hasBreastsCrotch())
-			 twelve tits and udders, each with four huge, puffy nipples on them.
+			六对人乳房和牛乳房，其中每个乳房上面都有四个巨大膨胀的乳头。
 		#ELSE
-			 twelve tits, each with four huge, puffy nipples on them.
+			六对乳房，其中每个乳房上面都有四个巨大膨胀的乳头。
 		#ENDIF
-		 Grabbing spare pumps from the milking machines to the side of each of your stalls, Princess hooks them up to your new teats, and only after she's turned each of your chests
+		公主找来了空闲的榨乳机，并放在了你们各自的隔间旁，她将吸嘴固定在你们新长出来的乳头上。看到你们的乳头
 		#IF(pc.hasBreastsCrotch())
-			 and udders
+			和牛乳头
 		#ENDIF
-		 into a tangled mess of dozens of breast pumps does she finally declare that you're all finished.
+		和固定在上面的机器纠缠到一起的样子时，公主才宣布一切都做好了。
 	</p>
 	<p>
-		Having completed her work, Princess's mood starts to brighten, and she declares that from now on the three of you will be making her a lot more money. With that, she rears up and mounts the slave to your left, and after giving her a long, hard fucking, she moves on to
+		完成这一切后，公主的心情明显变好了，她说你们以后会为她赚更多的钱。说完她便骑上了你左侧的奴隶，在狠狠地草了她很长一段时间后，她转而冲撞起了你的
 		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			 pound your asshole
+			屁股
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
-			 fuck your face
+			脸
 		#ELSE
-			 pound your pussy
+			小穴
 		#ENDIF
-		 and stuff you full of yet more of her cum. Finishing off by rutting her third slave, Princess trots off and leaves the three of you well and truly exhausted...
+		并将你狠狠灌成了泡芙。最后她又狠狠蹂躏了第三个奴隶，在确信你们三个变得破破烂烂之后扬长而去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_3"><![CDATA[
 	<p>
-		After many more months, the improvements Princess made to you and her other two slaves ends up making her very rich. Now and again during her daily visits to fuck you, she boasts about how many flames she's earning from the sale of your milk. One day, she bursts into the barn with a huge grin on her face, and after spending a good hour repeatedly blowing load after load of her hot, musky cum into each of you, she proudly declares, [owner.speech(You're now the slaves of a recognised daughter of Lunette! How does it feel, you dumb cows, to have the cum of royalty stuffed into your holes?)]
+		又过了很多个月后，公主对你和其它两位奴隶做的改良确实为攫取了巨大的财富。每天当她再一次进行她的每日一草时，她吹嘘着靠出售你们的乳汁赚了多少名声。一天，她冲进了仓库，嘴角几乎咧到了天上，在持续数小时不停地向你们灌注一股又一股她灼热而浓厚的精液后，她骄傲地宣布道，[owner.speech(你们现在是一位得道认证的露内特的女儿的奴隶了！你们感觉如何啊，你们这些纯牛，被皇家精液灌注的感觉如何？)]
 	</p>
 	<p>
-		Letting out a series of submissive, appreciative moans, the three of you flatter your owner and beg to be given another good, hard fucking. Being in an exceptionally good mood, she happily agrees to give you what you want, and after first reducing the ex-receptionist to a quivering, cum-stuffed wreck, she moves over to you and
+		发出了一连串顺从而赞赏的呻吟声后，你们三个谄媚着哀求主人继续狠狠地草你们。由于心情实在不错，她愉快地给了你们所求之物，在用精液掩埋住那被草傻了只能不停颤抖的前接待员后，她转而用她的大肉棒
 		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			 gives your ass a rough pounding, before emptying her balls deep inside of you multiple times.
+			狠狠突破了你的屁股，在里面几乎清空了她的精囊。
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
-			 gives your face a rough fucking, before emptying her balls deep inside of your stomach multiple times.
+			狠狠砸上了你的脸，在里面几乎清空了她的精囊。
 		#ELSE
-			 gives your cunt a rough pounding, before emptying her balls deep inside of your womb multiple times.
+			狠狠塞进了你的小穴，在里面几乎清空了她的精囊。
 		#ENDIF
-		 After that, she moves on to her last slave, and after roughly pounding her and stuffing her full of musky, demonic-cum, she gives each of your asses a sharp slap before happily trotting out of the barn.
+		在那之后，她转向了最后一个奴隶，在粗鲁冲撞了她，倾注了满满的浓厚恶魔精液后，她给了你们仨屁股一巴掌便小跑着离开了。
 	</p>
 	<p>
-		Yet more months pass after this, until one day, through your happy haze of milking and sex, you suddenly start to wonder exactly how long you've been here. When Princess arrives later that day to give each of you your daily fucking, you ask her how long you've been her slave for. Although she's tolerated questions in the past, her ever-increasing wealth, as well as the fact that she's become a recognised daughter of Lunette, has made her exceptionally arrogant and ruthless. A dark look flashes over her face as she hears you ask her a question, and after forcefully slapping your ass you for your insolence, she snorts, [owner.speech(I've noticed that you've been giving me insolent looks recently, and now you dare to ask questions of me?! I am a recognised daughter of Lunette, and you are nothing but my cock-sleeve! I'll teach you to disrespect me!)]
+		此后又过了很多个月的一天，你迷迷糊糊地享受着榨乳和做爱的快乐时，你突然好奇起了你到这里多久了。当公主晚些时候来仓库进行每日一草时，你询问了她你已经成为她的奴隶多久了。虽然她过去对你的提问十分容忍，但她增长的财富和她成为一位受露内特承认的女儿的事实使她的傲慢与残忍无限增长。当她听到你向她提问时，阴暗的神色从她的脸上浮现，她因你的无礼狠狠抽你的屁股，她嗤笑着，[owner.speech(我注意到你最近变得傲慢无礼了，现在你居然敢向我提问？！我是露内特承认的女儿，而你，除了我的肉棒套以外什么都不是！我要教你不敬的代价是什么！)]
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			With that, she quickly rears up and mounts you, before angrily ramming her fat cock deep into your ass.
+			说罢，她立刻直立而起骑到你身上，愤怒地冲撞你的屁股。
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_oral))
-			With that, she forces you to swallow her cock, before angrily ramming it deep down your throat.
+			说罢，她强迫你咽下了她的肉棒，愤怒地冲撞着你的喉咙。
 		#ELSE
-			With that, she quickly rears up and mounts you, before angrily ramming her fat cock deep into your cunt.
+			说罢，她立刻直立而起骑到你的身上，愤怒地冲撞着你的小穴。
 		#ENDIF
-		 Giving you the sort of brutal, rage-fuelled hate-fuck that you haven't experienced since she was denied recognition by her mother all those months ago, Princess pumps load after load of her musky, slimy cum deep inside of you. Neglecting her other two slaves, she continues to give you her full attention for the next hour, and after thoroughly abusing you in this manner, she finally steps back and grunts, [owner.speech(Simply fucking you into silence isn't enough. I know exactly what you need to make sure that you're never able to back-talk me again!)]
+		她极尽暴虐，以你从未体验过的虐待方式狂怒地蹂躏着你，这在她被她的母亲拒绝承认的那几个月里是不可想象的。公主将一股又一股浓厚粘稠的精液泵入了你的体内。完全不顾其它两位奴隶，她持续地全神贯注于你，持续地虐待了你又一个小时后，她终于退了下来并嘶吼道，[owner.speech(只是草到失声可太仁慈了。我知道要怎么做才能让你再也不敢想这样和我说话！)]
 	</p>
 	<p>
-		With that, Princess angrily gallops out of the barn, leaving you a quivering, broken mess, and her other two slaves whining in disappointment as they realise that they're not going to get the fucking they were hoping for. As you start to recover from this brutal fuck session, you start to wonder what Princess is going to do to you...
+		说罢，公主飞奔而出，只留下你脆弱地颤抖着，而另外两个奴隶则失望地哀鸣，只因她们意识到这次自己不会被草了。当你终于从这暴虐的猛草中慢慢恢复过来后，你开始好奇起了你将要面对什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_3_BONDAGE"><![CDATA[
 	<p>
-		An hour later, and you finally find out what Princess has planned for you. Kicking open the door to the slave barn, she quickly trots over to your stall, before reaching behind her and retrieving a large package from her back. Tearing this package open, she holds up the contents and laughs, [owner.speech(How do you like the look of your new uniform, cow?)]
+		一个小时后，你终于看到了公主打算怎样对待你。公主一脚将仓库大门踢开，小跑到你的隔间，从她的背后取出一个包裹。将包装撕开后，她取出了内容物并笑道，[owner.speech(你喜欢你的新制服吗，奶牛？)]
 	</p>
 	<p>
-		Your eyes widen as you take a look at what Princess is calling your new uniform. Being an almost-luminescent, garish shade of hot pink, the clothing in Princess's arms consists of several pieces of shiny, latex bondage gear. To begin with, and with much effort and pulling, she slides a skin-tight bodysuit over your torso, which has a pair of small holes cut out of the front to allow just your fat, puffy nipples and areolae to be left exposed. After that, she grabs hold of your latex-covered arms, before forcing them behind your back and locking them securely together into an arm-binder.
+		当你看清公主所说的制服时你睁大了双眼。这件衣服呈鲜艳到发光的花哨的艳粉色，手臂部位有几个发亮的树胶制束缚装置。为了让你穿上它，她使劲拉扯着将紧身衣套上你的躯干，其上在正面开有一对小洞，让你肥大膨胀的乳头和乳晕正好暴露了出来。之后，她抓紧了你树胶包裹住的双臂，将它们拉至身后用束缚衣稳稳地锁在了一起。
 	</p>
 	<p>
-		[owner.speech(Feeling comfortable, cow?)] Princess teases as she traces her fingers over your latex-covered body. Not wanting to anger her any further, you let out an approving moan, after which Princess moves on to the next stage of somewhat-awkwardly forcing your quadrupedal lower body into a specially-designed feral bodysuit.
+		[owner.speech(觉得舒服吗，奶牛？)]公主用手指摸索着你被树胶覆盖的躯体时调笑道。不想进一步惹怒她，你发出了赞赏的呻吟声。公主紧接着强迫你四足的下肢也穿进一件特别设计的野性的紧身衣中。
 		#IF(pc.hasBreastsCrotch())
-			 Just like with your breasts, there are small holes cut out of the bottom of this item of skin-tight clothing, allowing your fat teats to remain exposed.
+			正如同你的人乳房一样，兽装部分的紧身衣也在底部剪出了小洞，露出你肥大的牛乳头。
 		#ENDIF
-		 This latex clothing has a special sleeve into which your tail snugly fits, and beneath that, a metal zipper allows Princess to completely seal up your pussy and asshole. With one final piece of clothing in her hands, and with your entire body apart from your head encased in skin-tight, shiny pink latex, Princess gives you a particularly evil grin and cruelly sneers, [owner.speech(Enjoy this last moment, cow. Your world's about to get a lot darker and quieter. I'll only be undoing your zippers to have you fed and fucked, and for the rest of the time the only parts of you which people will be able to see will be your fat nipples as they get sucked on by your milking machine's pumps.)]
+		这件胶衣有一个特制的袖来容纳你的尾巴，在那之下是一个用来完全封住你小穴和菊花的拉链。你的身体完全覆盖在了紧身亮粉胶衣之下，除了你的头。公主拿着最后一片服饰，向你残忍地嗤笑道，[owner.speech(享受这一刻吧，奶牛。你的世界将变得无光而寂静。我只会在喂食和草你的时候解开拉链，在接下来的时间里人们只能看到你肥大的乳头被榨乳机器榨汁。)]
 	</p>
 	<p>
-		Holding up the last item of latex gear to reveal that it's a completely-enclosed hood, Princess quickly forces it over your head, and within moments, your world is turned into a muffled, dark pink. You feel Princess securely zipping this hood into place so that it's joined to your bodysuit around your neck, and then with that, she's finished. Apart from a pair of small holes which allow you to breathe through your nose, the only gaps in your skin-tight latex gear are those which leave your nipples exposed and able to be sucked on by the milking machine, but as Princess reattaches your pumps into place over them, you feel like those too are now encased and sealed off from the outside world.
+		公主举起了最后一片树胶制衣，向你展示它是一个全包围的头套。她强行将头套戴在了你的头上，从此你的世界被昏暗的粉色笼罩。你感觉公主拉上了拉链，将头罩稳稳地固定在了你的身上，与紧身衣链接到了一起，盖住了你的颈部。至此，她给你完全穿好了。除了一对供你鼻孔呼吸的小洞以外，紧身胶衣上仅有的洞口只有允许你的乳头裸露出来以供榨乳的那些。但是当公主重新连接上泵机的吸嘴时，你感觉那部分皮肤也被封了起来与外界隔绝。
 	</p>
 	<p>
-		Despite being made out of thin latex, the hood which you've been forced to wear has been enchanted in some manner so as to block out almost all of the noise from your surroundings. As such, you're only vaguely aware via a faint, muffled mumbling that Princess is saying something to you. Moments later, a sharp slap is delivered to your ass, and thanks to the thin nature of the latex, you feel the stinging blow every bit as keenly as you would have done had your ass been exposed. Although you instinctively try to let out a shocked squeal in response to this, your cry is dampened and almost completely silenced by your latex hood.
+		尽管头套由很薄的树胶制成，但它似乎被附魔了以将你与外界隔绝开来。你几乎听不见任何周围的声音。你只能隐隐约约感觉到一阵微弱的嘟哝声围绕在你的周围，以此判断公主在对你说着什么。过了一小会，你的屁股被猛地抽了一下，由于树胶如此之薄，那刺痛的触感就像你的屁股完全暴露在外时那样强烈。尽管你本能地想发出受惊的尖叫作为回应，树脂头套将其完全掩盖了起来。
 	</p>
 	<p>
-		Clearly happy with how your new uniform has turned out, you suddenly feel Princess unzipping the latex beneath your tail, exposing your cunt and asshole to the outside world. Moments later and she's reared up and mounted you, and you let out a stream of muffled, erotic moans as she ruthlessly pounds your sopping-wet cunt, before emptying her balls deep into your womb.
+		当你沉浸于对新装优秀体验的喜悦时，你突然感到公主解开了你尾巴下的拉链，将你的小穴和菊花暴露在外。片刻之后她直立而起骑在你的身上，残忍地抽插着你淫液外流的小穴，将几乎最后一滴都射进了你的子宫，使你发出了一连串被笼罩住的色情的呜咽声。
 		#IF(game.isAnalContentEnabled())
-			 After that, she pulls back and thrusts forwards once again, but this time she sinks her massive, demonic horse-cock into your asshole. After proceeding to spend a short while roughly pounding your butt, she unloads yet another massive quantity of hot, musky cum deep into your ass.
+			之后，她抽离并将那硕大的恶魔马屌转移向你的菊花。她剧烈地冲撞着你的屁股，肆意地释放着大量浓厚的灼热精液。
 		#ENDIF
-		 Repeating this several more times, and stuffing you absolutely full of cum, Princess finally pulls back and gets down off your back. It's at that moment that you realise that you'd always simply waited for your cum-stuffed holes to leak down onto the floor in the past, but as Princess grabs hold of your zipper, you realise that that's about to change. Sealing you up, she locks her musky cum inside your bodysuit, and you let out another silenced moan as you feel her hot cum being trapped inside your well-fucked
+		反复几次之后，她将你彻底填满了。公主满意地抽离并退了下来。在此之前你很享受溢满的精液从你的体内喷涌而出的感觉，但随着公主拉上了你的拉链的那刻，你意识到以后不再是这样了。随着出口被封印，浓厚的精液被锁在了你的胶衣里，发出了无声的呻吟，以表示你很享受精液被困在你
 		#IF(game.isAnalContentEnabled())
-			 holes.
+			两穴
 		#ELSE
-			 twat.
+			小穴
 		#ENDIF
+		里的感觉。
 	</p>
 	<p>
-		Not finished with you just yet, Princess moves around to your front, which you only discover as you suddenly feel her undoing the zipper that seals your mouth. Before you can say anything or make any kind of noise, Princess is ramming her cum-coated shaft down your throat, and you're forced to swallow several loads of her cum before she finally withdraws her softening shaft from your abused hole. Again, before you can say anything, she quickly zips you back up, sealing your mouth and leaving you only able to make the faintest, most muffled of moans.
+		公主仍没得到满足，她走到了你的面前。你意识到她解开了你嘴上的封印，但你还没来得及发出任何声音，便被公主精液覆盖着的肉棒填满了喉咙。在她的肉棒终于软了下来，从你被草烂的嘴穴中抽离前，你被迫咽下了一股又一股精液。再一次，在你可以发出任何声音前，她迅速拉上了拉链，将你的嘴封印了起来，留下你一人发出最虚弱无力的呜咽。
 	</p>
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p><i>
-		In this manner, you spend the rest of your life encased in bright-pink latex, being milked in Evelyx's slave barn. You're fucked over and over again by Princess, who never once loses her insatiable desire to sink her fat cock into your holes and stuff you full of her cum. If anything, your latex-bound form seems to have only made her desire you more, and from that moment on you're never fucked less than three times every day...
+		以这样的方式，你在艾弗利克斯的奴隶仓库中，穿着亮粉胶衣，榨乳渡过了你的余生。你被公主一遍又一遍地草，她不停地用她肥大的肉棒蹂躏你的各个穴，将它们填满精液，在这个过程中她无止尽的欲望永远无法得到满足。如果说还有什么值得一提的话，大概只有你被胶衣束缚的姿态只是让她更加渴望你，从那一天起你每天都没有被草少于三次了吧……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_3_BIMBO"><![CDATA[
 	<p>
-		An hour later, and you finally find out what Princess has planned for you. Kicking open the door to the slave barn, she quickly trots over to your stall, before lifting a tiny vial of bright-pink liquid up in front of you. Flashing you a particularly evil smirk, she laughs and reveals, [owner.speech(I had this very special little potion made for me by calling in a favour from an old and very powerful friend. I only asked for one vial, but she ended up making me two. I've long since used the first one as I'd planned; I had a very devious sister, you see, who was competing with me to be officially recognised by my mother. After slipping this potion into her food, she... Well, you'll find out what it does soon enough. I'd been wondering how best to use this other one for quite some time. Thanks to you, I can finally dispose of it in a way that doesn't seem like a waste.)]
-	</p>
+	一个小时后，你终于看到了公主打算怎样对待你。公主一脚将仓库大门踢开，小跑到你的隔间，将一小瓶亮粉色药剂举到你面前。向你露出了邪恶的狞笑，她说道，[owner.speech(我曾经请我一个年长而又强大的朋友帮忙制作了一小瓶药剂。我确实只求了一小瓶，但她最终给了我两瓶。我很久之前就按照计划用掉了第一瓶；我曾有一位非常狡猾的姐妹，她曾是我被母亲官方认可的有力竞争者。我偷偷往她的食物里下了一瓶这个药水，之后她……你之后会亲身体会到的。我一直在思考要把这一瓶用在哪里。真是感谢你，看来我不需要把它浪费掉了。)]
+</p>
 	<p>
-		With that, Princess produces a pair of long, rubber gloves and a full-face gas mask, and after putting them on, she takes extreme care to slowly break the vial's wax seal. Positioning the vial beneath your nose, she leans back and pulls out the stopper. The heady, sickly-sweet scent which rises out of this vial immediately causes your head to spin, and you can't help but let out a deep, horny moan as you feel your cunt starting to grow especially hot and needy. Although her voice is muffled through her mask, you're still able to hear Princess clearly enough as she asks, [owner.speech(Do you want to feel good, cow? Just open your mouth and tilt your head back for me...)]
-	</p>
+	说罢，公主变出了一双长橡胶手套和一副全覆盖防毒面具。将它们穿戴好后，她打起十二分小心地揭开了瓶口的封蜡。将小瓶放到你鼻子下后，她向后倾斜并打开了瓶塞。一股令人陶醉的甜到发齁的香味立刻从小瓶中涌出，使你感到天旋地转。你情不自禁地发出了低沉而淫靡的呻吟声，你的小穴变得异常发热而饥渴。尽管她的声音被面具遮蔽了，你仍然能清楚地辨认出公主是在问你，[owner.speech(你感觉如何，奶牛？现在张开你的嘴，为我倾斜你的头……)]
+</p>
 	<p>
-		Although your head is still spinning, you find yourself able to think that you really do want to feel good, and so you unquestioningly tilt your head back and open your mouth for Princess. A moment later, and the most delicious, strawberry-flavoured liquid you've ever tasted is being poured into your mouth, and without even stopping to think about it, you greedily swallow down every last drop. Immediately, your thoughts start to slow down, and while you're still completely aware of your surroundings, you can't quite remember where you are or how you got here. The only things which you know as you look around is that the pretty lady taking off her gas mask is some kind of queen or something, and that your pussy is absolutely desperate to have her fat, demonic cock shoved deep inside of it.
-	</p>
+	虽然你脑子里仍然很迷糊，但你感觉你的思维依然清晰，不过仅限于思考如何让你变得更舒服这方面。因此你毫不怀疑地倾斜你的头，为公主张开了你的嘴。片刻之后，你这辈子尝过的最美味的草莓味液体被倒进了你的嘴里。还没来得及思考，你的身体便先行一步，贪婪地咽下了每一滴液体。你的思维立刻慢了下来，尽管你仍然清楚地知道你周围的环境，但你无法确切地意识到你在哪里，又是如何过来的。你能知道的唯一一件事便是有一位美丽的女士正在褪下她的面具，而她看上去像一位女王或者类似的什么东西，而你的淫穴确实地渴望着她那肥大的恶魔肉棒插入最深处。
+</p>
 	<p>
-		[owner.speech(How's that, cow? Are you feeling good yet?)] the pretty lady asks. 
-	</p>
+	[owner.speech(你感觉如何，奶牛？现在有变得舒服起来吗？)]那美丽的女士问道。
+</p>
 	<p>
-		Tilting your head to one side as you try your hardest to understand what she's saying, you manage to comprehend that the word 'cow' is referring to you. Upon realising this, you let out a happy giggle and respond by drawling, [pc.speechNoEffects(Cow happy... Cow pussy, like, want cock... Umm... Pretty lady give big cock to cow...)]
-	</p>
+	你将你的头歪向一侧，努力地想要去理解她在说些什么。你成功地理解了“奶牛”一词是在指你。意念至此，你高兴地咯咯笑了起来，慢吞吞地回复道，[pc.speechNoEffects(奶牛，高兴……奶牛，小穴，喜欢，想要肉棒……呣……漂亮女士给奶牛大肉棒……)]
+</p>
 	<p>
-		For some reason that you can't understand, a big grin breaks out across the pretty lady's face as she hears you say this. Letting out a happy moo as she reaches forwards and gropes your huge tits, you do your best to try to understand what she's talking about as she gloats, [owner.speech(That potion really fucked you up, didn't it? Well, that's to be expected of something that was created by a lilin and named 'Bimbo-Xtreme'. You've turned out just like my meddlesome sister did. You won't be asking any more foolish questions of me after this, will you, cow?)]
-	</p>
+	出于一些你无法理解的原因，漂亮女士一听到你这话便咧开了夸张的笑容。她伸出手揉捻你的巨大乳头时你高兴地哞哞叫了起来。你尽你最大的努力试图理解她嘲弄的话，[owner.speech(这药剂真是把你玩坏了，不是吗？嗯，这是一种据说由一位莉琳发明的药剂，叫做‘爆乳痴女·X极限’。你现在变得像我那多管闲事的姐妹那样了。你再也不会问我你那些愚蠢的问题了，不是吗，奶牛？)]
+</p>
 	<p>
-		Completely and utterly lost by what the pretty lady is saying, you pout at her and whine, [pc.speechNoEffects(Cow, like, no think big words... Pretty lady cock... Cow want...)]
-	</p>
+	你完全被漂亮女士的话弄得晕头转向，只好向她噘噘嘴哀求道，[pc.speechNoEffects(奶牛，喜欢，不想长句……漂亮女士肉棒……奶牛想要……)]
+</p>
 	<p>
-		For some incomprehensible reason, the pretty lady laughs at your words, but before you can get upset at this, she trots around behind you and rears up to quickly mount you. As her fat, demonic horse-cock prods at your horny cunt, you find yourself letting out a series of airy, bubbly giggles, which soon turn into deep, passionate moans as her hot, thick shaft slams into your needy pussy and begins to give it the hard, rough fucking that you were craving. Much to your delight, the pretty lady continues rutting and pumping load after load of hot, musky cum into your twat for a long time, and after that, she makes you an even happier cow by
-		#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
-			 doing the same thing to your ass. Once both of your rear holes are stuffed full of cum, the nice, pretty lady allows you to take her cock down your throat, and you're made an extremely happy cow when she gives you several big, yummy loads of her delicious cum to swallow. 
-		#ELSE
-			 allowing you to take her cock down your throat, before giving you several big, yummy loads of her delicious cum to swallow. 
-		#ENDIF
-		 After that, the pretty lady makes the other cows happy, before leaving you with the nice feeling of having your nipples sucked on by this strange whirring thing...
-	</p>
+	出于一些你无法理解的原因，漂亮女士被你的言语逗笑了，但在你感到难过之前，她便小跑到你的身后，直立而起骑到你身上。她将她肥大的恶魔马屌刺入你淫荡蜜穴，而你欢快而愉悦地咯咯笑了起来。不过很快，随着她火辣的粗大肉棒如你所愿地在你饥渴的小穴里粗暴地抽查，你的笑声便化作了低沉而充满情欲的呻吟。令你更加愉悦的是，漂亮女士持续很长时间地将一股又一股灼热而浓厚的精液注入你的小穴。在那之后，让你成为一只更加快乐的奶牛的是，她
+	#IF(flags.hasFlag(FLAG_innoxia_evelyx_bad_end_anal))
+		对你的屁股做了同样的事。在她将你后面的双穴都用精液灌满之后，这位仁慈的漂亮女士允许你将她的肉棒深深咽进你的喉咙。而你因受赐几发大量的美味精液允你咽下而变得无上喜悦。
+	#ELSE
+		允许你将她的肉棒深深咽进你的喉咙，并赐予几发大量的美味精液允你咽下。
+	#ENDIF
+	此后，漂亮女士也宠幸了其它奶牛，留下你沉溺于乳头被嗡嗡作响的奇怪机器吮吸的快感之中……
+</p>
 	<p style='text-align:center;'>
-		...
-	</p>
+	……
+</p>
 	<p><i>
-		In this manner, you spend the rest of your life as an air-headed bimbo, being milked in the barn. You're fucked over and over again by Princess, who never once loses her insatiable desire to sink her fat cock into your holes and stuff you full of her cum. If anything, your mind-altering transformation seems to have only made her desire you more, and from that moment on you're made a very happy cow no less than three times every day...
+	以同样的方式，你作为脑袋空空的痴女，在仓库中被榨乳渡过了余生。你被公主草得更厉害了。她不停地用她肥大的肉棒蹂躏你的各个穴，将它们填满精液，在这个过程中她无止尽的欲望永远无法得到满足。如果说还有什么值得一提的话，大概只有你被扭曲的思维只是让她更加渴望你，从那一天起你每天都没有被草少于三次了吧……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="NEW_LIFE_3_FERAL"><![CDATA[
 	<p>
-		An hour later, and you finally find out what Princess has planned for you. Kicking open the door to the slave barn, she quickly trots over to your stall, and she comes to a halt in front of you, you see that she's carrying a small wooden box with latch that's secured by a heavy iron padlock. Taking out a small key and unlocking this padlock, Princess says, [owner.speech(There was a time, quite a few years ago now, when temporary feral transformations were a big craze. Everyone was experimenting with turning themselves into feral animals for a few days, and sometimes even weeks or months. Even demons can experience the transformation and turn into demonic feral horses, and I can tell you first-hand that you get a wild, primal lust to go with it, and the sex is incredible. Unfortunately, all good things come to an end, and after an incident where a pack of ferals attacked and raped a recognised daughter of Lisophia in public, feral transformations rapidly fell out of favour with the general population, to the point where it's quite a serious taboo to be seen in a feral form these days.)]
+		一个小时后，你终于明白公主演给你准备了什么。她踢开奴隶棚的门，迅速小跑到你的马厩前，停在你面前。你看到她手里拿着一个小木箱，箱子上有个用沉重铁锁锁住的扣子。她拿出一把小钥匙，打开了那个锁，公主说道：[owner.speech(几年前，暂时的兽态转化曾是热潮。每个人都在尝试把自己变成兽态，持续几天，有时甚至数周或数月。连恶魔也能经历这种转变，变成恶魔般的野马，而我可以告诉你，这种转变伴随着一种狂野而原始的欲望，性爱简直令人难以置信。不幸的是，所有美好的事物终究会结束。在一次事件中，一群兽态动物在公共场合袭击并侵犯了莉索菲亚的一位被承认的女儿，兽态转化迅速被公众所厌弃，甚至如今被视为一种相当严重的禁忌。)]
 	</p>
 	<p>
-		Getting the feeling like there's a point to Princess giving you this lengthy history on feral transformations, you nervously watch as she opens the wooden box that she's just unlocked. Within, sitting upon a padded, purple cushion, you see what appears to be a smooth, grey pebble. You very quickly discover that its mundane appearance hides some kind of arcane power, for as you look at it, a faint, pink shimmer suddenly sweeps across its surface. Flashing you an evil smirk as she sees you curiously looking at this item of hers, Princess explains, [owner.speech(Items capable of causing a feral transformation are particularly difficult and extremely expensive to have enchanted. As a result, almost all feral transformations are applied by spending time in contact with what came to be known as 'beast stones'. These stones could be used an unlimited number of times, but due to the difficult and finicky nature of the feral enchantment, they were typically made to be no smaller than an average-sized person. A few, however, were created by an exceptionally-talented lilin to be the size of a small pebble.)]
+		你感到公主给你讲述关于兽态转化的冗长历史似乎是有意义的，于是你紧张地注视着她打开刚刚解锁的木盒。盒子里，坐落在一个紫色绒垫上，映入眼帘的是一颗平滑的灰色石子。你很快发现，这看似平常的外表隐藏着某种神秘的力量，因为当你凝视它时，轻微的粉红色光辉突然划过其表面。公主看到你好奇地打量她的这个物品，露出一抹狡黠的微笑后，她解释道：[owner.speech(能够引发兽态转化的物品是特别难以获得和极其昂贵的。因此，几乎所有的兽态转化都是通过与被称为“兽石”的物品接触而实现的。这些石头可以无限次使用，但由于兽态附魔的复杂和苛刻，通常不会做得比一个普通人的大小更小。然而，确实有一些是由一位才华横溢的莉琳制作的，大小像小石子一样。)]
 	</p>
 	<p>
-		Realising what it is that Princess intends to do to you with what is clearly one of these pebble-sized 'beast stones', you nervously gulp and flash her a worried look. Letting out a sadistic laugh, Princess teases, [owner.speech(Yes, that's the expression I was looking for! After all, once you're a feral cow, I'm not going to be able to see you make faces like that again... And you haven't even heard the best part yet!)]
+		意识到公主接下来要用这块卵石大小的“野兽石”对你做什么，你紧张地咽了一下口水，向她露出了惊恐的表情。公主充满施虐欲望地笑了起来，嘲笑道，[owner.speech(对，这正是我想看到的表情！毕竟，一旦你变成完全的牛了，我就再也看不到你做出那样的脸了……而你甚至还没听到最棒的那部分！)]
 	</p>
 	<p>
-		Carefully picking up this beast stone and holding it with a level of respect that you've never seen from Princess before, she gloats, [owner.speech(Oh, how I do enjoy showing this off, even if it is to a dumb cow like you. This little thing is likely worth more than this entire farm, and that's not only because of its exceptional rarity, but also due to what it can do thanks to its small size... Which leads me to the best part.)]
+		公主以你从未见过的小心拿起了这块野兽石，并敬重地将它握住。她嘲弄道，[owner.speech(哦，我多么享受炫耀它的感觉，即使是向你这头蠢牛的时候。这块小东西比这整个农场还贵，而这不仅仅是因为它的稀有，更是因为由于它如此之小可以做到的事……而这，正是最棒的部分。)]
 	</p>
 	<p>
-		Trotting around behind you, Princess gives your exposed cunt a quick smack, causing you to let out a high-pitched squeal. Laughing as she roughly sticks her fingers into your drooling twat, she starts idly playing with your pussy as she reveals, [owner.speech(Every beast stone requires at least ten minutes of exposure before the transformation takes place. It's not an exact science, but roughly every ten minutes spent touching the stone gives a person four hours in their feral form. At least, that's the standard behaviour which everyone is aware of. I doubt more than a hundred people know of the special transformation which all beast stones can apply, but which can only be discovered with one this size.)]
+		绕着你转圈的同时，公主抽打着你暴露在外的小穴，使你高声尖叫。她一边笑着一边粗暴地将手指插入你淌水的淫穴，有一搭没一搭地玩弄着你的阴道并解释着，[owner.speech(每块野兽石在将人变形前都要求十分钟的接触。这并不是严谨的科学，但总的来说每接触十分钟，这块石头都会将人变成野兽四小时。至少这就是所有人都知道的常规用法。我打赌至少有一百人知道所有野兽石都能施加，但只有通过对这种大小的石头进行研究才能发现的一种特殊变形。)]
 	</p>
 	<p>
-		Delighting in taking her time to reveal what this special transformation is, which is what she was clearly referring to when she mentioned the 'best part', Princess lets out an excited moan and continues to finger your hot, wet cow-cunt for a few more moments, before excitedly sharing her secret, [owner.speech(Instead of four hours of feral transformation from ten minutes of touching the stone, you can get one <i>year</i> of it from just a single <i>minute</i> of its power. For this to happen, it needs more than to simply be touched... It needs to be <i>inside</i> of you!)]
+		公主对这种慢慢揭晓这种特殊变形究竟是什么感到愉悦，而这显然就是她之前提到过的“最棒的部分”。在手指拨弄你火辣而湿润的牛穴几分钟后，公主发出了兴奋的呻吟并揭露了真正的秘密，[owner.speech(并非通过接触十分钟得到四小时的变形，你可以维持一<i>年</i>的变形，而只需要接触一<i>分钟</i>。而要实现这一点，仅仅靠接触可不够……它需要你将石头<i>纳入体内</i>！)]
 	</p>
 	<p>
-		With that, Princess suddenly shoves her entire hand into your cunt, and as you let out a shuddering squeal, you realise that she wasn't just idly playing with your pussy, but rubbing the beast stone up and down between your labia in anticipation of doing this. Forcing the small, pebble-like object deep into your feral cow-cunt, Princess lets go of it, before sliding her hand back out from your sopping-wet, slightly-stretched pussy. Immediately, she then quickly rears up and mounts you, before ramming her thick, demonic horse-cock into your hot twat. Thrusting forwards, she makes good use of the wide, flared head of her animalistic shaft to push and force the beast stone as deep as possible into your cunt. Letting out a wild laugh, Princess taunts, [owner.speech(Enjoy your last minute of having that upper body of yours, cow. I'll miss the money that I was making from all of that milk which your fat tits were producing, but I'm sure that we can make some improvements to your udders to make up for it.)]
+		说到这，公主突然将她的整只手塞进了你的小穴，这使你颤抖着尖叫起来。你意识到她并不是简单地在有一搭没一搭地玩弄你的小穴，而是在用野兽石拨弄着你的阴唇，进而为现在这一刻做准备。在强行将那小小的卵石状物件深深塞入你的兽状牛穴后，公主松开了手，并从你向外喷涌着淫液，轻微扩张了的小穴中抽离出来。紧接着，她直立而起骑上了你，将她粗大的恶魔马屌狂暴轰入了你发热的小穴。在推进的过程中，她充分利用了自己马屌上宽大的喇叭状龟头将野兽石深深推进了你的小穴最深处。公主发出了野性的笑声并嘲讽道，[owner.speech(享受你拥有人形上半身的最后一分钟吧，母牛。我会怀念窝里用你肥大的乳房榨乳赚来的钱的，不过我确信我们可以通过改良你的牛乳房来弥补我的损失。)]
 	</p>
 	<p>
-		Starting to feel a deep, intense heat pulsate out from the beast stone that's lodged deep in your cunt, you find yourself unable to stop a deep, erotic moan from bursting out from between your lips. Reaching forwards over the top of you, Princess fastens a feminine wristwatch around one of your stall's supports, before adjusting it to make sure that you're able to clearly see its face. As the second hand ticks past the five o'clock mark, Princess grinds her cock into your cunt and teases, [owner.speech(When it gets to the top, it'll have been one minute. Let's enjoy these last moments of your upper body together, cow.)]
+		你开始感到一股沉重而强烈的热流从深深嵌入你小穴深处的野兽石中涌出。你无法抑制你的嘴唇发出沉重而淫乱的呻吟声。公主伸出手，越过你的头顶，将一枚女士腕表固定在你隔间附近的支架上，调整好以便于你能清晰地看到表面。在秒针走过五点钟标记时，公主将她的肉棒塞入你的小穴并嘲笑道，[owner.speech(当秒针指向12点时，就满一分钟了。让我们享受你还拥有你上半身的最后一分钟吧，奶牛。)]
 	</p>
 	<p>
-		With that, Princess reaches down and roughly grabs hold of your huge tits. Forcefully digging her fingers into your soft mounds of flesh, she lets out a mocking laugh as she starts groping and squeezing them. As the second hand reaches ten o'clock, she suddenly grabs hold of your head, and although the positioning is somewhat awkward for her, Princess manages to lean down and pull you into a frantic, passionate kiss. Breaking it off right at the moment that the second hand reaches twelve o'clock, she moans, [owner.speech(You might not remember who took your first kiss, but you'll always remember me as taking your last.)]
+		说罢，公主伸下手粗暴地抓住你的乳房。她用力地将她的手指深深埋进你柔软的肉堆之中，一边揉搓着挤出乳汁一边嘲笑着。当秒针指向十点时，她突然抓住你的头，虽然姿势很奇怪但公主还是弯下腰给了你一个热情而狂乱的吻。秒针指向十二点钟时这个吻结束了，而她呻吟道，[owner.speech(你也许不记得是谁夺走了你的初吻，但你会永远记得，是我夺走了你的最后一个吻。)]
 	</p>
 	<p>
-		At that exact moment, you suddenly feel another deep, powerful wave of energy shoot out from the beast stone that's lodged deep in your pussy. Immediately, an intense tingling sensation breaks out all across your upper body, and you feel your eyes widening in shock as your arms retract into your torso and completely disappear. A moment later, and your upper body starts to sink down, compact, and transform into what rapidly becomes a thick cow's neck. Finally, your face pushes out and undergoes an alarming reshaping process, leaving you a few seconds later with an entirely feral-looking cow's face. Letting out a delighted laugh, and with her fat cock still rammed deep in your cunt, Princess holds a mirror down towards your face as she taunts, [owner.speech(Go on, cow, get a good look at yourself! Unfortunately, there's no way to get rid of that intelligent look that can be seen in a feral's eyes, but other than that, you're one-hundred percent cow!)]
+		就在这时，你突然感觉深深嵌在你小穴里的野兽石释放了另一股沉重而充满能量的波动。突然，你的上半身充斥了刺痛感，你的双臂慢慢缩回躯干并最终消失，你的双眼震惊地瞪大了。不一会，你的上半身开始下沉，压缩，并最终形成了厚实的牛颈。最后，你的脸向外突出，经过了令人恐慌的变形并在数秒内彻底变成了一张牛脸。公主肆意地放声大笑，在肉棒仍然在不停抽插小穴的情况下，她举起一枚镜子让你看看你的样子并嘲弄道，[owner.speech(继续，母牛，看看你现在的样子！不幸的是，没有办法消除你眼中的灵性，不过除此之外你看上去就像一只百分之百的真牛了！)]
 	</p>
 	<p>
-		Looking in the mirror, you see that Princess is right. Where once your upper body connected to your lower feral cow's body, only a very normal-looking neck and head of a cow remain. Differentiating you from a dumb animal, however, there's still the same intelligent, sapient gleam to your otherwise cow-like eyes, which you feel only adds to the humiliation of what you've become. Although you're still able to speak, you feel an overwhelming urge to act like the beast you now appear as, and so you respond to Pincess by letting out a deep, long, [pc.speechNoEffects(Moooooo!)]
+		当你照镜子时，发现公主说得对。曾经连接着你上半身与下半身的兽态牛身体，现在只剩下一个非常普通的牛颈和牛头。然而，与你的愚蠢动物身份有所区别的是，你那双看似牛一般的眼睛中依然闪烁着智慧和聪明的光芒，这使你更加感到成为如今这个模样的羞辱。尽管你依然能够说话，可你内心却涌起一种强烈的冲动，想要表现得像现在这个看起来的野兽，于是你回应公主时，发出了一声深沉而持久的，[pc.speechNoEffects(哞！)]
 	</p>
 	<p>
-		[owner.speech(That's it, my sexy little cow, moo for me!)] Princess laughs, before pulling her hips back and thrusting her fat, throbbing cock deep into your cunt.
+		[owner.speech(就是这样，我性感的小牛。再给我哞一个！)]公主笑道，一边不停抽插着你的小穴。
 	</p>
 	<p>
-		The sensation of being fucked as a completely feral cow is unlike anything you've ever experienced before, and you find yourself overcome with the primal, animalistic lust which Princess previously mentioned as being part of the feral experience. The desperate, orgasmic moan which you try to let out escapes your feral cow's mouth as yet another heavy, prolonged, [pc.speechNoEffects(Moooooo!)]
+		作为一头真正的牛被草的感觉你从未体验过，而你立刻被公主此前提到过的那原始而兽性的欲望所征服了。那极端渴求的高潮的呻吟从你的牛嘴中漏出，并最终变成了另一声沉重而悠长的[pc.speechNoEffects(哞——！)]
 	</p>
 	<p>
-		[owner.speech(There's nothing better than this! ~Mmm!~ Fuck, I love fucking ferals! I should have done this to you a long time ago! ~Aah!~ Now moo for me, cow, moo!)] Princess exclaims in delight as she starts repeatedly slamming her fat cock in and out of your dripping cow-cunt. The more lewd moans which you allow to escape from your mouth as incomprehensible moos, the more turned on Princess becomes, until before you know it, her fat cock is twitching inside of you and pumping a huge load of demonic cum deep into your womb. Panting and moaning in delight, Princess leans down and taps the watch she attached to your stall earlier. As you look across to see that five minutes have passed since Princess inserted the beast stone into your pussy, she reminds you, [owner.speech(For every minute it's inside of you, the beast stone's giving you a full year of your feral form. You've already got five years to look forward to of this, and I've barely even started!)] 
+		[owner.speech(再也没有比这更棒的事了！~呣嗯嗯！~，我喜欢草动物！我早就该对你这么做了！~啊！~现在再为我哞一声，奶牛，哞！)]公主充满兴致地要求道，同时用她肥大的肉棒持续抽插着你涌水的牛穴。淫荡的呻吟从你的嘴中传出变成了无法理解的哞哞声，而你越这样哞，公主就越兴奋。她肥大的肉棒在你的小穴抽动着，并在你意识到之前，泵出了一大股恶魔精液，深深注入了你的子宫。充满兴致地喘息和呻吟着，公主倾下身子轻敲了一下她固定在隔间里的表。你看了过去，确认在公主将野兽石插入你的肉穴后已经过了五分钟了。她提醒道，[owner.speech(野兽石每在你体内存在一分钟，就会将你的野兽形态延长整整一年。你已经确定了为来五年都要保持这个样子了，而我要做的，才刚刚开始！)]
 	</p>
 	<p>
-		Clearly having some kind of intense fetish for fucking ferals, Princess continues rutting your cunt and pumping you full of her cum for well over another hour. Just as she slows down and you start to think that her seemingly-insatiable lust has finally met its match, she produces some kind of potion and quickly downs it. Regaining all of her energy, the centauress takes things from the top, and after another hour of having your cunt thoroughly pounded, she finally pulls back and allows her softening cock to slide free from your cum-stuffed pussy with a lewd, wet pop. Trotting around behind you, she then suddenly shoves her hand into your slimy, musky twat, and with her flared cock no longer there to keep it lodged in position, her precious beast stone is soon recovered, cleaned off, and placed back into its secure wooden box.
+		你确定公主有嗜好草动物的恋物癖。在接下来的一个小时里她持续蹂躏你的小穴并将其用精液灌满。就当她的动作慢下来时，你觉得她看似无止尽的欲望终归还是得到满足了。但此时她又配置了某种药剂并立刻喝了下去。她又充满了精力，这位母半人马又从头开始，狂暴轰入了你整整一个小时。最后她还是将肉棒从你被精液灌满的小穴内抽出，并发出了淫荡而湿润的(如同将热水壶的塞子拔出时发出的)砰声。她的肉棒终于软了下来自然垂下。在你身后小跑了一会，她突然将手伸进你充满粘稠浓厚液体的小穴。这次没有喇叭状的肉棒将野兽石固定在最深处，她因而得以将其取出，清洗干净，并放回她的保险小木盒中。
 	</p>
 	<p>
-		[owner.speech(Think you can manage over a century in this form?)] Princess sneers as she taps the watch to your side. After you've let out a brief moo in response, she teases, [owner.speech(Well, if we need to give you a few more centuries, I don't think that my beast stone would mind spending some more time in your pussy.)]
+		[owner.speech(你觉得你能以这种形态活过一个世纪吗？)]公主一边冷笑着，一边用手指敲了敲你身旁的手表。当你轻声呜了一声作为回应时，她调侃道，[owner.speech(好吧，如果我们需要再给你几个世纪，我想我的兽石不会介意在你的小穴上多待一段时间。)]
 	</p>
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p><i>
-		In this manner, you spend the rest of your life as a feral cow in Evelyx's barn, with your fat, heavy udders being milked the entire time. You're fucked over and over again by Princess, who never once loses her insatiable desire to sink her fat cock into your holes and stuff you full of her cum. In fact, her fetish for fucking ferals makes her desire you more than anyone else in her life, and from that moment on she makes sure to passionately rut you no less than three times every day...
+		以同样的方式，你作为一头真正的奶牛，被整天整天榨取你那肥大的牛乳房渡过了余生。你被公主草得更厉害了。她不停地用她肥大的肉棒蹂躏你的各个穴，将它们填满精液，在这个过程中她无止尽的欲望永远无法得到满足。如果说还有什么值得一提的话，大概只有她嗜好草动物的恋物癖让她渴望草你超过了她生命中的其它任何人，从那一天起她每天都要确保你被狠狠蹂躏了至少三次起步……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

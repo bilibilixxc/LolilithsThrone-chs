@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[table]]></deskName>
+	<deskName><![CDATA[桌子]]></deskName>
 	<title/>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>
@@ -15,14 +15,14 @@
 	<publicSex>
 		<isPublic><![CDATA[true]]></isPublic>
 		<startingDescription><![CDATA[
-			A number of the tavern's nearby patrons sit back and enjoy the show that you and [oglixElemental.name] are putting on for them...
+			酒馆的顾客坐下来欣赏你和[oglixElemental.name]为他们带来的表演……
 		]]></startingDescription>
 		<randomDescriptions enabled="true">
-			<description><![CDATA[A couple of nearby spectators loudly laugh and cheer at your lewd display.]]></description>
-			<description><![CDATA[You hear someone in the tavern wolf-whistling as they watch you and [oglixElemental.name] go at it.]]></description>
-			<description><![CDATA[Over the sound of laughter and drunken cheers, you somehow manage to hear someone nearby commenting on your performance.]]></description>
-			<description><![CDATA[Cheering and laughing, the crowd which has gathered around you encourage [oglixElemental.name] to give you a good, hard fuck.]]></description>
-			<description><![CDATA[You glance across to see a couple of drunks touching themselves as they watch you and [oglixElemental.name] having sex.]]></description>
+			<description><![CDATA[附近的几个观众看着你好色淫荡的表演，大声欢笑起来。]]></description>
+			<description><![CDATA[人们围观着你和[oglixElemental.name]的激情表演，你听见旅店某处的一声流氓哨。]]></description>
+			<description><![CDATA[在笑声和醉酒的欢呼声中，你不知怎么听到了附近有人在评论你的表演。]]></description>
+			<description><![CDATA[围在你周围的酒客欢呼着、大笑着，鼓励[oglixElemental.name]狠狠地干你一炮。]]></description>
+			<description><![CDATA[你瞥了一眼，看到几个醉汉一边看着你和[oglixElemental.name]做爱，一边自慰。]]></description>
 		</randomDescriptions>
 	</publicSex>
 	<characterInformationContainer>
@@ -120,11 +120,11 @@
 			<dirtyTalk>
 				<character id="pc">
 					<standard additionToDefault="false">
-						<line><![CDATA[Take your punishment, you bad [pc.girl]!]]></line>
-						<line><![CDATA[Remember this! Remember how good my cock feels!]]></line>
-						<line><![CDATA[This is your punishment!]]></line>
-						<line><![CDATA[You've been a bad [pc.girl]!]]></line>
-						<line><![CDATA[Don't ever forget this!]]></line>
+						<line><![CDATA[接受惩罚吧，你个坏[pc.girl]！]]></line>
+						<line><![CDATA[给我好好记住我的这根鸡巴有多棒！]]></line>
+						<line><![CDATA[这是对你的惩罚！]]></line>
+						<line><![CDATA[你是个坏[pc.girl]！]]></line>
+						<line><![CDATA[千万别忘了这点！]]></line>
 					</standard>
 				</character>
 			</dirtyTalk>

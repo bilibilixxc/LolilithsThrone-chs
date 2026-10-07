@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[HLF Insurgent]]></name>
+	<name><![CDATA[HLF叛军]]></name>
 	<statusEffect>dsg_set_hlf_insurgent</statusEffect>
 	<numberRequiredForCompleteSet>2</numberRequiredForCompleteSet>
 	<blockedSlotsCountingTowardsFullSet>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Alleyway prostitute: -->
@@ -20,7 +20,7 @@
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/encounters/fields/elis/alleyway_prostitute', 'START'))]
 			[#npc.applyPlayerPregnancyReactions()]
 		]]></preParsingEffects>
-		<title><![CDATA[Prostitute]]></title>
+		<title><![CDATA[妓女]]></title>
 		<author><![CDATA[Innoxia]]></author>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -32,9 +32,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You're not at all interested in having sex with a prostitute. Walk around [npc.herHim] and continue on your way.
+					你对与妓女做爱丝毫不感兴趣。绕过[npc.herHim]继续前行。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects/>
@@ -44,25 +44,25 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Dominant ([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You've already paid to have sex with [npc.name], and [npc.she] doesn't have the energy to fuck you again right now.]]></responseTooltip>
+				<responseTitle><![CDATA[支配([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你已经付钱和[npc.name]做爱了，[npc.she]没有经历再操你。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.getMoney()<npc.getProstitutePrice() && !flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Dominant ([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have [#npc.getProstitutePrice()] flames, so you can't afford to have sex with [npc.name].]]></responseTooltip>
+				<responseTitle><![CDATA[支配([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没有[#npc.getProstitutePrice()]个火币，付不起和[npc.name]的嫖资。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.getMoney()>=npc.getProstitutePrice() && !flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Dominant ([style.moneyFormat([#npc.getProstitutePrice()], span)])]]></responseTitle>
+				<responseTitle><![CDATA[支配([style.moneyFormat([#npc.getProstitutePrice()], span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Pay [npc.name] [#npc.getProstitutePrice()] flames to have dominant sex with [npc.herHim].
+					付[npc.name][#npc.getProstitutePrice()]个火币，来一场支配型性爱。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -93,25 +93,25 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Submissive ([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You've already paid to have sex with [npc.name], and [npc.she] doesn't have the energy to fuck you again right now.]]></responseTooltip>
+				<responseTitle><![CDATA[顺从([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你已经付钱和[npc.name]做爱了，[npc.she]没有经历再操你。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.getMoney()<npc.getProstitutePrice() && !flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Submissive ([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have [#npc.getProstitutePrice()] flames, so you can't afford to have sex with [npc.name].]]></responseTooltip>
+				<responseTitle><![CDATA[顺从([style.moneyFormatUncoloured([#npc.getProstitutePrice()], span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没有[#npc.getProstitutePrice()]个火币，付不起和[npc.name]的嫖资。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#pc.getMoney()>=npc.getProstitutePrice() && !flags.hasFlag(FLAG_innoxia_elis_alleyway_prostitute_sex)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Submissive ([style.moneyFormat([#npc.getProstitutePrice()], span)])]]></responseTitle>
+				<responseTitle><![CDATA[顺从([style.moneyFormat([#npc.getProstitutePrice()], span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Pay [npc.name] [#npc.getProstitutePrice()] flames to have submissive sex with [npc.herHim].
+					付[npc.name][#npc.getProstitutePrice()]个火币，来一场服从型性爱。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -143,9 +143,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[Question]]></responseTitle>
+				<responseTitle><![CDATA[质疑]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask [npc.name] why [npc.sheIs] working in the alleyways. After all, it would be far safer to work out in the main streets of Dominion...
+					问问[npc.name]为什么在小巷工作。毕竟在御城区的街上会安全得多……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_encounters_fields_elis_alleyway_prostitute_questioned]]></nextDialogue>
 				<effects><![CDATA[
@@ -156,9 +156,9 @@
 				<availabilityConditional><![CDATA[[#npc.hasFlag(NPC_FLAG_prostituteQuestioned) && flags.hasFlag(FLAG_prostitutionLicenseObtained) && !game.isSpaceForMoreProstitutes()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Angel's Kiss]]></responseTitle>
+				<responseTitle><![CDATA[天使之吻]]></responseTitle>
 				<responseTooltip><![CDATA[
-					There's no room available at Angel's Kiss for another npc...
+					天使之吻没有空房间给其他npc了……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 				<effects/>
@@ -168,9 +168,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[Angel's Kiss]]></responseTitle>
+				<responseTitle><![CDATA[天使之吻]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell [npc.name] that [npc.she] can get back on the right side of the law if [npc.she] agrees to come and work at Angel's Kiss.
+					告诉[npc.name]如果能到天使之吻工作，就能受到法律的保护。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_encounters_fields_elis_alleyway_prostitute_angels_kiss]]></nextDialogue>
 				<effects><![CDATA[
@@ -185,10 +185,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
-				<responseTitle><![CDATA[Attack]]></responseTitle>
+				<responseTitle><![CDATA[攻击]]></responseTitle>
 				<responseTooltip><![CDATA[
-					If you really wanted to, there's nothing stopping you from attacking [npc.name]. After all, as [npc.sheHas] run afoul of the law [npc.she] can be considered to be fair game!
-					<br/>[style.italicsBad(This will lead to permanently removing [npc.herHim] from the game!)]
+					如果你真的想攻击[npc.name]，也无可厚非。毕竟[npc.sheHas]也违反了法律。这可以被视为“合法”的。
+					<br/>[style.italicsBad([npc.Name]将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_encounters_fields_elis_alleyway_prostitute_attack]]></nextDialogue>
 				<effects/>
@@ -199,11 +199,11 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Remove (threaten)]]></responseTitle>
+				<responseTitle><![CDATA[移除(威胁)]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell [npc.name] that unless [npc.she] immediately leaves this area, you're going to tell the Enforcers where [npc.she] is.
+					告诉[npc.name]除非马上离开，否则会立刻去告诉执法者[npc.she]的位置。
 					#IF(npc.hasFlag(NPC_FLAG_genericNPCBetrayedByPlayer))
-						<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]
+						<br/>[style.italicsBad([npc.Name]将永远从游戏中移除。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_encounters_fields_elis_alleyway_prostitute_removal_threatened]]></nextDialogue>
@@ -222,13 +222,13 @@
 						GENERIC_NPC_REMOVAL
 					#ENDIF
 				]]></colour>
-				<responseTitle><![CDATA[Remove (#IF(pc.getMoney()>=flags.getProstituteFine())[style.moneyFormat([#flags.getProstituteFine()], span)]#ELSE[style.moneyFormatUncoloured([#flags.getProstituteFine()], span)]#ENDIF)]]></responseTitle>
+				<responseTitle><![CDATA[移除(#IF(pc.getMoney()>=flags.getProstituteFine())[style.moneyFormat([#flags.getProstituteFine()], span)]#ELSE[style.moneyFormatUncoloured([#flags.getProstituteFine()], span)]#ENDIF)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()>=flags.getProstituteFine())
-						Give [npc.name] enough money to pay off the Enforcers who are after [npc.herHim], which would allow [npc.herHim] to stop having to work in these dangerous alleyways.
-						<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]
+						给[npc.name]足够多的钱买通搜捕的执法者，这样[npc.herHim]就不用再在危险的巷子里工作了。
+						<br/>[style.italicsBad([npc.Name]将永远从游戏中移除。)]
 					#ELSE
-						You don't have [style.intToString([#flags.getProstituteFine()])] flames, so you can't afford to pay [npc.name] to leave this area.
+						你没有[style.intToString([#flags.getProstituteFine()])]个火币，没办法让[npc.name]离开这片区域。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=flags.getProstituteFine())innoxia_encounters_fields_elis_alleyway_prostitute_removal_paid#ELSEnull#ENDIF]]></nextDialogue>
@@ -257,8 +257,8 @@
 	<!-- After paying for sex: -->
 	
 	<scene id="after_sex_paid">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough fun with [npc.name]...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你已经和[npc.name]爽够了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/elis/alleyway_prostitute">AFTER_SEX_PAID</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -293,9 +293,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Knowing that you can now find [npc.name] at Angel's Kiss, you set off on your way once again...
+					得知你现在可以在天使之吻找到[npc.name]，你再次踏上了旅途……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects/>
@@ -315,9 +315,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Now that you've cleaned up this area of the town, you can continue on your way...
+					现在你清理了这片区域，你可以继续上路了……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects/>
@@ -335,9 +335,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Feeling happy to have been able to help out one of Elis's troubled citizens, you continue on your way...
+					你对能帮到伊利斯陷入困境的市民感到高兴，继续出发……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects/>
@@ -357,9 +357,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Teach this insolent whore a lesson!
+					给这个无礼的婊子一点教训！
 				]]></responseTooltip>
 				<nextDialogue/>
 				<combatVariables enabled="true">
@@ -370,8 +370,8 @@
 						<enemy leader="true"><![CDATA[npc]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[Readying yourself for the fight to come, you tell [npc.name] that [npc.sheIs] about to receive a sound beating.]]></combatant>
-						<combatant id="prostitute"><![CDATA[With a furious scowl on [npc.her] face, [npc.name] cries, [npc.speech(You'll regret this!)]]]></combatant>
+						<combatant id="pc"><![CDATA[做好战斗准备后，你告诉[npc.Name]，[npc.sheIs]要被痛打一顿了。]]></combatant>
+						<combatant id="prostitute"><![CDATA[[npc.Name]一脸愤怒的表情，[npc.her]喊道，[npc.speech(你会后悔的！)]]]></combatant>
 					</openingDescriptions>
 				</combatVariables>
 			</response>
@@ -392,11 +392,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[
-					Leave [npc.name] and carry on your way.
-					<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]
-				]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开[npc.name]，继续你的路程。
+<br/>[style.italicsBad([npc.Name]将永远从游戏中移除。)]
+]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -409,9 +408,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<responseTitle><![CDATA[
-					Sex
+					做爱
 				]]></responseTitle>
-				<responseTooltip><![CDATA[It's clear that [npc.name] wants you to fuck [npc.herHim], so maybe you should give [npc.herHim] what [npc.she] wants...]]></responseTooltip>
+				<responseTooltip><![CDATA[很显然，[npc.name]想让你操[npc.herHim]，或许你可以给[npc.herHim]想要的……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -435,9 +434,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<responseTitle><![CDATA[
-					Gentle sex
+					做爱(温柔)
 				]]></responseTitle>
-				<responseTooltip><![CDATA[It's clear that [npc.name] wants you to fuck [npc.herHim], so maybe you should give [npc.herHim] what [npc.she] wants...]]></responseTooltip>
+				<responseTooltip><![CDATA[很显然，[npc.name]想让你操[npc.herHim]，或许你可以给[npc.herHim]想要的……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -463,10 +462,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
 				<responseTitle><![CDATA[
-					Rough sex
+					做爱(粗暴)
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					It's clear that [npc.name] wants you to fuck [npc.herHim], so maybe you should give [npc.herHim] what [npc.she] wants...
+					很显然，[npc.name]想让你操[npc.herHim]，或许你可以给[npc.herHim]想要的……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
@@ -493,8 +492,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Feeling bad for beating [npc.name], you decide to submit to [npc.herHim] and offer [npc.herHim] the use of your body...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[对殴打[npc.Name]感到内疚，你决定顺从[npc.herHim]使用你的身体……]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 				</requiredFetishes>
@@ -522,8 +521,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(prostitute, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -535,8 +534,8 @@
 				<availabilityConditional><![CDATA[[#npc.isAbleToSelfTransform()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Transform [npc.herHim]]]></responseTitle>
-				<responseTooltip><![CDATA[Take a very detailed look at what [npc.name] can transform [npc.herself] into...]]></responseTooltip>
+				<responseTitle><![CDATA[转化[npc.herHim]]]></responseTitle>
+				<responseTooltip><![CDATA[仔细观察[npc.name]会将自己转化成什么样……]]></responseTooltip>
 				<nextDialogue><![CDATA[BODY_CHANGING_CORE]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.initTransformationMenu(prostitute)]
@@ -546,10 +545,10 @@
 				<availabilityConditional><![CDATA[[#npc.isAbleToSelfTransform()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Quick transformations]]></responseTitle>
+				<responseTitle><![CDATA[快速转化]]></responseTitle>
 				<responseTooltip><![CDATA[
-					As [npc.she] is able to transform [npc.herself], you have a few quick ideas in mind...
-					<br/><i>You'll return to these options once finished transforming [npc.herHim].</i>
+					[npc.she]能够转化自己，你脑海中闪过一些点子……
+					<br/><i>你完成[npc.herHim]的转化后将返回选项界面。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[QUICK_TRANSFORMATIONS_START]]></nextDialogue>
 				<effects><![CDATA[
@@ -562,14 +561,14 @@
 				<availabilityConditional><![CDATA[[#oglix.isBeerBitchBarrelAvailable()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[11]]></index>
-				<responseTitle><![CDATA[Beer-bitch]]></responseTitle>
+				<responseTitle><![CDATA[奶啤妓]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5, 14))
-						'The Crossed Blades' tavern is closed at this time of day, so you're currently unable to take [npc.name] there and offer [npc.herHim] to Oglix as a new beer-bitch...
-						<br/>[style.italicsMinorBad(The tavern is closed between the hours of [units.time(5)]-[units.time(14)])]
+						“十字利刃”现在打烊了，你无法把[npc.name]带去卖给奥格利克斯变成新的奶啤妓……
+						<br/>[style.italicsMinorBad(旅店在[units.time(5)]-[units.time(14)]关门)]
 					#ELSE
-						Take [npc.name] to 'The Crossed Blades' tavern and offer [npc.herHim] to Oglix as a new beer-bitch.
-						<br/>[style.italicsMinorBad([npc.Name] will be enslaved to Oglix and permanently locked into a barrel in her tavern.)]
+						把[npc.name]带去“十字利刃”，把[npc.herHim]卖给奥格利克斯做奶啤妓。
+						<br/>[style.italicsMinorBad([npc.Name]会成为奥格利克斯的奴隶并被永久锁在旅店的木桶里。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -588,8 +587,8 @@
 	</scene>
 	
 	<scene id="after_sex_victory">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough fun with [npc.name]...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你已经和[npc.name]爽够了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/elis/alleyway_prostitute">AFTER_SEX_VICTORY</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -599,10 +598,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Now that you've had your fun, you decide to leave [npc.name] and continue on your way...
-					<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]
+					你爽过了，决定离开[npc.Name]，继续上路……
+					<br/>[style.italicsBad([npc.Name]将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -614,8 +613,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[As you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[你打败了[npc.Name]，此时再也没什么能阻挡你把手伸向[npc.her]的衣服和道具……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(prostitute, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -627,14 +626,14 @@
 				<availabilityConditional><![CDATA[[#oglix.isBeerBitchBarrelAvailable()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[11]]></index>
-				<responseTitle><![CDATA[Beer-bitch]]></responseTitle>
+				<responseTitle><![CDATA[奶啤妓]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5, 14))
-						'The Crossed Blades' tavern is closed at this time of day, so you're currently unable to take [npc.name] there and offer [npc.herHim] to Oglix as a new beer-bitch...
-						<br/>[style.italicsMinorBad(The tavern is closed between the hours of [units.time(5)]-[units.time(14)])]
+						“十字利刃”现在打烊了，你无法把[npc.name]带去卖给奥格利克斯变成新的奶啤妓……
+						<br/>[style.italicsMinorBad(旅店在[units.time(5)]-[units.time(14)]关门)]
 					#ELSE
-						Take [npc.name] to 'The Crossed Blades' tavern and offer [npc.herHim] to Oglix as a new beer-bitch.
-						<br/>[style.italicsMinorBad([npc.Name] will be enslaved to Oglix and permanently locked into a barrel in her tavern.)]
+						把[npc.name]带去“十字利刃”，把[npc.herHim]卖给奥格利克斯做奶啤妓。
+						<br/>[style.italicsMinorBad([npc.Name]会成为奥格利克斯的奴隶并被永久锁在旅店的木桶里。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -665,8 +664,8 @@
 				<availabilityConditional><![CDATA[[#npc.isAttractedTo(pc) && npc.isWillingToRape()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[You're unable to stop [npc.name] from dominantly fucking you...]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[你无法阻止[npc.Name]支配性地操你……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariables enabled="true">
@@ -690,8 +689,8 @@
 				<availabilityConditional><![CDATA[[#npc.isAttractedTo(pc) && npc.isWillingToRape()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Eager sex]]></responseTitle>
-				<responseTooltip><![CDATA[You're unable to stop [npc.name] from dominantly fucking you...]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(渴求)]]></responseTitle>
+				<responseTooltip><![CDATA[你无法阻止[npc.Name]支配性地操你……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariables enabled="true">
@@ -717,8 +716,8 @@
 				<availabilityConditional><![CDATA[[#npc.isAttractedTo(pc) && npc.isWillingToRape()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Resist sex]]></responseTitle>
-				<responseTooltip><![CDATA[You're unable to stop [npc.name] from dominantly fucking you...]]></responseTooltip>
+				<responseTitle><![CDATA[抵抗做爱]]></responseTitle>
+				<responseTooltip><![CDATA[你无法阻止[npc.Name]支配性地操你……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariables enabled="true">
@@ -746,14 +745,14 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(npc.isAttractedTo(pc))
-						Refuse to submit to [npc.name] and wait for [npc.herHim] to leave before continuing on your way...
+						拒绝了[npc.name]想草你的请求，等[npc.herHim]离开后你继续行走……
 					#ELSE
-						Wait for [npc.name] to leave before continuing on your way...
+						等[npc.name]离开后你继续行走……
 					#ENDIF
-					<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]
+					<br/>[style.italicsBad([npc.Name]将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -766,10 +765,10 @@
 				<availabilityConditional><![CDATA[[#!npc.isWillingToRape() && npc.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Do as [npc.name] says and submit to [npc.herHim], allowing [npc.herHim] to dominantly fuck you...
-				]]></responseTooltip>
+						你按照[npc.name]所说的那样服从[npc.herHim]，允许[npc.herHim]支配你的一切……
+]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariables enabled="true">
@@ -793,8 +792,8 @@
 	</scene>
 	
 	<scene id="after_sex_defeat">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[[npc.Name] has had enough of the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[npc.Name]已经做够爱了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/elis/alleyway_prostitute">AFTER_SEX_DEFEAT</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -804,11 +803,11 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Now that [npc.name] has had [npc.her] fun, [npc.she] leaves you to regain your strength and continue on your way...
-					<br/>[style.italicsBad([npc.Name] will be permanently removed from the game.)]
-				]]></responseTooltip>
+					[npc.Name]爽过了，[npc.she]让你恢复体力，继续上路……
+					<br/>[style.italicsBad([npc.Name]将永远从游戏中移除。)]
+]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[

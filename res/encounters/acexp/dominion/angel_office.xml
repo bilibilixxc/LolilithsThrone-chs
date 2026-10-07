@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 
     <additionalPlaceTypeTriggers>
@@ -7,7 +7,7 @@
 
     <possibleEncounters>
         <encounter>
-            <name><![CDATA[Horny Angel]]></name>
+            <name><![CDATA[欲火焚身的安吉尔]]></name>
             <chanceToTrigger opportunisticEncounter="false"><![CDATA[
    				#IF(!game.isStarted() || flags.hasFlag(FLAG_acexp_horny_angel_found) || !flags.hasFlag(FLAG_angelsOfficeIntroduced) || !flags.hasFlag(FLAG_prostitutionLicenseObtained))
 	        		0

@@ -41,7 +41,7 @@ public class StormStreetAttackerDialogue {
 		return Main.game.getPlayer().getMainCompanion();
 	}
 	
-	public static final DialogueNode STORM_ATTACK = new DialogueNode("Attacked!", "", true) {
+	public static final DialogueNode STORM_ATTACK = new DialogueNode("敌袭！", "", true) {
 		@Override
 		public String getContent() {
 			// Storm attackers are different from alley attackers. They are not saved as persistent NPCs, so don't worry about giving any repeat-encounter descriptions.
@@ -51,15 +51,15 @@ public class StormStreetAttackerDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight", "Defend yourself against the unwanted advances of [npc.name]!", getMugger());
+				return new ResponseCombat("战斗", "在这场讨厌的遭遇中对抗[npc.name]，保护你自己！", getMugger());
 				
 			} else if (index == 2) {
-				return new Response("Offer money",
-						"Due to the ongoing arcane storm, [npc.name] isn't interested in your money, and only wants to have sex! You'll have to either fight [npc.herHim] or give [npc.herHim] what [npc.she] wants!",
+				return new Response("献上财物",
+						"[npc.Name]受到奥术风暴的影响，不想要钱，满脑子只想着和你做爱！你只能选择打倒[npc.herHim]或者满足[npc.herHim]的欲望！",
 						null);
 				
 			} else if (index == 3) {
-				return new ResponseSex("Offer body", "Offer your body to [npc.name] so that you can avoid a violent confrontation.",
+				return new ResponseSex("献出身体", "向[npc.name]献上你的身体，以此来避免发生一场暴力对抗。",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
 						null, null, null,
 						true, false,
@@ -83,23 +83,23 @@ public class StormStreetAttackerDialogue {
 				GameCharacter companion = getMainCompanion();
 				
 				if(!getMugger().isAttractedTo(Main.game.getPlayer())) {
-					return new Response("Offer threesome",
-							UtilText.parse(getMugger(), "You can tell that [npc.name] isn't at all interested in having sex with you, so wouldn't want to have a threesome..."),
+					return new Response("三人行",
+							UtilText.parse(getMugger(), "你看得出来，[npc.name]一点也不想和你做爱，所以也就不会想要和你三人行……"),
 							null);
 					
 				} else if(!getMugger().isAttractedTo(companion)) {
-					return new Response("Offer threesome",
-							UtilText.parse(getMugger(), "You can tell that [npc.name] isn't at all interested in having sex with [com.name], so wouldn't want to have a threesome..."),
+					return new Response("三人行",
+							UtilText.parse(getMugger(), "你看得出来，[npc.name]一点也不想和[com.name]做爱，所以这场三人行准是没戏了……"),
 							null);
 					
 				} else if(!companion.isAttractedTo(getMugger()) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response("Offer threesome",
-							UtilText.parse(getMugger(), "You can tell that [com.name] isn't at all interested in having sex with [npc.name], and you can't force [com.herHim] to do so..."),
+					return new Response("三人行",
+							UtilText.parse(getMugger(), "你看得出来[com.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[com.herHim]这么做……"),
 							null);
 					
 				} else {
-					return new ResponseSex("Offer threesome",
-							UtilText.parse(getMugger(), "Offer [npc.name] the opportunity to have sex with both you and [com.name] in order to avoid a violent confrontation."),
+					return new ResponseSex("三人行",
+							UtilText.parse(getMugger(), "让[npc.name]能够和你，还有[com.name]一起做爱，以此来避免一场暴力冲突。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -115,18 +115,18 @@ public class StormStreetAttackerDialogue {
 				GameCharacter companion = getMainCompanion();
 				
 				if(!getMugger().isAttractedTo(companion)) {
-					return new Response("Offer [com.name]",
-							UtilText.parse(getMugger(), "You can tell that [npc.name] isn't at all interested in having sex with [com.name]..."),
+					return new Response("献上[com.name]",
+							UtilText.parse(getMugger(), "很明显，[npc.name]对于和[com.name]做爱完全不感兴趣……"),
 							null);
 					
 				} else if(!companion.isAttractedTo(getMugger()) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response("Offer [com.name]",
-							UtilText.parse(getMugger(), "You can tell that [com.name] isn't at all interested in having sex with [npc.name], and you can't force [com.herHim] to do so..."),
+					return new Response("献上[com.name]",
+							UtilText.parse(getMugger(), "你看得出来[com.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[com.herHim]这么做……"),
 							null);
 					
 				} else {
-					return new ResponseSex("Offer [com.name]",
-							UtilText.parse(getMugger(), "Tell [npc.name] that [npc.she] can use [com.namePos] body in order to avoid a violent confrontation."),
+					return new ResponseSex("献上[com.name]",
+							UtilText.parse(getMugger(), "为了避免发生暴力冲突，你告诉[npc.name]，[npc.she]可以享用[com.namePos]的身体。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -149,10 +149,10 @@ public class StormStreetAttackerDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 		@Override
 		public String getDescription() {
-			return "You have defeated [npc.name]!";
+			return "你打败了[npc.name]！";
 		}
 		@Override
 		public String getContent() {
@@ -166,9 +166,9 @@ public class StormStreetAttackerDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue",
-						"Leave [npc.name] behind and continue on your way..."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]",
+				return new Response("继续",
+						"把[npc.name]甩在身后，继续你的旅程……"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]",
 						Main.game.getDefaultDialogue(false)){
 					@Override
 					public Colour getHighlightColour() {
@@ -181,8 +181,8 @@ public class StormStreetAttackerDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseSex("Sex",
-						"Well, [npc.she] <i>is</i> asking for it!",
+				return new ResponseSex("做爱",
+						"反正这<i>正是</i>[npc.she]想要的！",
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -193,8 +193,8 @@ public class StormStreetAttackerDialogue {
 						UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "AFTER_COMBAT_VICTORY_SEX", getMugger()));
 				
 			} else if (index == 3) {
-				return new ResponseSex("Gentle sex",
-						"Well, [npc.she] <i>is</i> asking for it!",
+				return new ResponseSex("做爱(温柔)",
+						"反正这<i>正是</i>[npc.she]想要的！",
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -206,8 +206,8 @@ public class StormStreetAttackerDialogue {
 						UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "AFTER_COMBAT_VICTORY_SEX_GENTLE", getMugger()));
 				
 			} else if (index == 4) {
-				return new ResponseSex("Rough sex",
-						"Well, [npc.she] <i>is</i> asking for it!",
+				return new ResponseSex("做爱(粗暴)",
+						"反正这<i>正是</i>[npc.she]想要的！",
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -219,8 +219,8 @@ public class StormStreetAttackerDialogue {
 						UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "AFTER_COMBAT_VICTORY_SEX_ROUGH", getMugger()));
 				
 			} else if (index == 5) {
-				return new ResponseSex("Submit",
-						"You're not really sure what to do now... Perhaps it would be best to let [npc.name] choose what to do next?",
+				return new ResponseSex("顺从",
+						"你不太确定现在该做什么……也许最好让[npc.name]来决定接下来做什么？",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 						null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true, false,
@@ -232,7 +232,7 @@ public class StormStreetAttackerDialogue {
 						AFTER_SEX_DEFEAT, UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "AFTER_COMBAT_VICTORY_SEX_SUBMIT", getMugger()));
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory", "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items..."){
+				return new ResponseEffectsOnly("物品栏", "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……"){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(getMugger(), InventoryInteraction.FULL_MANAGEMENT);
@@ -240,8 +240,8 @@ public class StormStreetAttackerDialogue {
 				};
 				
 			} else if (index == 8 && getMugger().isAbleToSelfTransform()) {
-				return new Response("Transform [npc.herHim]",
-						"Take a very detailed look at what [npc.name] can transform [npc.herself] into...",
+				return new Response("转化[npc.herHim]",
+						"仔细观察[npc.name]会将自己转化成什么样……",
 						BodyChanging.BODY_CHANGING_CORE){
 					@Override
 					public void effects() {
@@ -251,20 +251,20 @@ public class StormStreetAttackerDialogue {
 				};
 				
 			} else if (index == 9 && getMugger().isAbleToSelfTransform()) {
-				return new Response("Quick transformations",
-						"As [npc.she] is able to transform [npc.herself], you have a few quick ideas in mind..."
-								+ "(You'll return to these options once finished transforming [npc.herHim].)",
+				return new Response("快速转化",
+						"[npc.she]能够转化自己，你脑海中闪过一些点子……"
+								+ "(你完成[npc.herHim]的转化后将返回选项界面。)",
 						QuickTransformations.initQuickTransformations("misc/quickTransformations", getMugger(), AFTER_COMBAT_VICTORY));
 			
 			} else if (index == 11 && isCompanionDialogue()) {
 				GameCharacter companion = getMainCompanion();
 				
 				if(!companion.isAttractedTo(getMugger())) {
-					return new Response("Threesome", UtilText.parse(getMugger(), "[com.Name] isn't attracted to [npc.name], so wouldn't be willing to have sex with [npc.herHim]!"), null);
+					return new Response("三人行", UtilText.parse(getMugger(), "[com.Name]并没有被[npc.name]所吸引，所以将不会愿意和[npc.herHim]一起做爱！"), null);
 					
 				} else {
-					return new ResponseSex("Threesome",
-							UtilText.parse(getMugger(), companion, "Have dominant sex with [npc.name], and get [npc2.name] to join in with the fun."),
+					return new ResponseSex("三人行",
+							UtilText.parse(getMugger(), companion, "和[npc.name]来一场支配型性爱，同时让[npc2.name]也来爽一爽。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer(), companion),
@@ -279,14 +279,14 @@ public class StormStreetAttackerDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!Main.game.isNonConEnabled() && !getMugger().isAttractedTo(companion)) {
-					return new Response("Give to [com.name]", UtilText.parse(getMugger(), "[npc.Name] isn't attracted to [com.name], so wouldn't be willing to have sex with [npc.herHim]!"), null);
+					return new Response("给予[com.name]", UtilText.parse(getMugger(), "[npc.Name]没有被[com.name]所吸引，因此并不愿意和[npc.herHim]做爱！"), null);
 					
 				} else if(!companion.isAttractedTo(getMugger())) {
-					return new Response("Give to [com.name]", UtilText.parse(getMugger(), "[com.Name] isn't attracted to [npc.name], so wouldn't be willing to have sex with [npc.herHim]!"), null);
+					return new Response("给予[com.Name]", UtilText.parse(getMugger(), "[com.Name]并没有被[npc.name]所吸引，所以并不愿意和[npc.herHim]一起做爱！"), null);
 					
 				} else {
-					return new ResponseSex("Give to [com.name]",
-							UtilText.parse(getMugger(), "Tell [com.name] that [com.she] can have some fun with [npc.name] while you watch."),
+					return new ResponseSex("给予[com.name]",
+							UtilText.parse(getMugger(), "告诉[com.she]可以和[npc.name]找点乐子，你会旁观。"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(companion),
@@ -300,19 +300,19 @@ public class StormStreetAttackerDialogue {
 				GameCharacter companion = getMainCompanion();
 
 				if(!Main.game.isNonConEnabled() && !companion.isAttractedTo(getMugger())) {
-					return new Response("Offer [com.name]", UtilText.parse(getMugger(), "[com.Name] has no interest in having sex with [npc.name]!"), null);
+					return new Response("献上[com.name]", UtilText.parse(getMugger(), "[com.Name]没兴趣和[npc.name]做爱！"), null);
 					
 				} else if(!getMugger().isAttractedTo(companion)) {
-					return new Response("Offer [com.name]", UtilText.parse(getMugger(), "[npc.Name] has no interest in having sex with [com.name]!"), null);
+					return new Response("献上[com.name]", UtilText.parse(getMugger(), "[npc.Name]没兴趣和[com.name]做爱！"), null);
 					
 				} else if(!companion.isAttractedTo(getMugger()) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response("Offer [com.name]",
-							UtilText.parse(getMugger(), "You can tell that [com.name] isn't at all interested in having sex with [npc.name], and you can't force [com.herHim] to do so..."),
+					return new Response("献上[com.name]",
+							UtilText.parse(getMugger(), "你看得出来[com.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[com.herHim]这么做……"),
 							null);
 					
 				} else {
-					return new ResponseSex("Offer [com.name]",
-							UtilText.parse(getMugger(), "Tell [npc.name] that [npc.she] can use [com.name]."),
+					return new ResponseSex("献上[com.name]",
+							UtilText.parse(getMugger(), "告诉[npc.name][npc.she]可以使用[com.name]。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -335,10 +335,10 @@ public class StormStreetAttackerDialogue {
 	};
 	
 
-	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("Defeat", "", true) {
+	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("落败", "", true) {
 		@Override
 		public String getDescription() {
-			return "You have been defeated by [npc.name]!";
+			return "你被[npc.name]打败了！";
 		}
 
 		@Override
@@ -372,11 +372,11 @@ public class StormStreetAttackerDialogue {
 				boolean companionSex = getMugger().isAttractedTo(getMainCompanion()) && (companionHappyToHaveSex || getMugger().isWillingToRape());
 				
 				if (index == 1) {
-					return new ResponseSex("Sex",
+					return new ResponseSex("做爱",
 							UtilText.parse(getMugger(),
 									getMugger().isWillingToRape()
-										?"[npc.Name] forces [npc.herself] on you"+(companionSex?" and [com.name]":"")+"..."
-										:"Tell [npc.name] that you"+(companionSex?" and [com.name]":"")+" would like to have sex with [npc.herHim]."),
+										?"[npc.Name]把[npc.herself]强行压在了你身上"+(companionSex?" and [com.name]":"")+"……"
+										:"告诉[npc.name]你"+(companionSex?"和[com.name]":"")+"愿意和[npc.herHim]做爱。"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -394,11 +394,11 @@ public class StormStreetAttackerDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "START_DEFEATED_SEX_THREESOME", getMugger()));
 					
 				} else if (index == 2) {
-					return new ResponseSex("Eager Sex",
+					return new ResponseSex("做爱(渴求)",
 							UtilText.parse(getMugger(),
 									getMugger().isWillingToRape()
-										?"[npc.Name] forces [npc.herself] on you"+(companionSex?" and [com.name]":"")+"..."
-										:"Tell [npc.name] that you"+(companionSex?" and [com.name]":"")+" are more than happy to have sex with [npc.herHim]."),
+										?"[npc.Name]把[npc.herself]强行压在了你身上"+(companionSex?" and [com.name]":"")+"……"
+										:"告诉[npc.name]你"+(companionSex?"和[com.name]":"")+"非常乐意和[npc.herHim]做爱。"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -417,8 +417,8 @@ public class StormStreetAttackerDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "START_DEFEATED_SEX_THREESOME", getMugger()));
 					
 				} else if (index == 3 && Main.game.isNonConEnabled()) {
-					return new ResponseSex("Resist Sex",
-							UtilText.parse(getMugger(), "[npc.Name] forces [npc.herself] on you"+(companionSex?" and [com.name]":"")+"..."),
+					return new ResponseSex("抵抗做爱",
+							UtilText.parse(getMugger(), "[npc.Name]用[npc.herself]强行压住了你"+(companionSex?"和[com.name]":"")+"……"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -437,8 +437,8 @@ public class StormStreetAttackerDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "START_DEFEATED_SEX_THREESOME_RESIST", getMugger()));
 					
 				} else if (index == 4 && !getMugger().isWillingToRape()) {
-					return new Response("Refuse",
-							UtilText.parse(getMugger(), "Refuse to have sex with [npc.name] and continue on your way."),
+					return new Response("拒绝",
+							UtilText.parse(getMugger(), "拒绝和[npc.name]做爱，然后接着上路。"),
 							Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
@@ -451,11 +451,11 @@ public class StormStreetAttackerDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new ResponseSex("Sex",
+					return new ResponseSex("做爱",
 							UtilText.parse(getMugger(),
 									getMugger().isWillingToRape()
-										?"[npc.Name] forces [npc.herself] on you..."
-										:"Tell [npc.name] that you would like to have sex with [npc.herHim]."),
+										?"[npc.Name]强行压住了你……"
+										:"告诉[npc.name]你愿意同[npc.herHim]做爱。"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -466,11 +466,11 @@ public class StormStreetAttackerDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "START_DEFEATED_SEX", getMugger()));
 					
 				} else if (index == 2) {
-					return new ResponseSex("Eager Sex",
+					return new ResponseSex("做爱(渴求)",
 							UtilText.parse(getMugger(),
 									getMugger().isWillingToRape()
-										?"[npc.Name] forces [npc.herself] on you..."
-										:"Tell [npc.name] that you are more than happy to have sex with [npc.herHim]."),
+										?"[npc.Name]强行压住了你……"
+										:"告诉[npc.name]非常乐意和[npc.herHim]做爱。"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -482,8 +482,8 @@ public class StormStreetAttackerDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "START_DEFEATED_SEX", getMugger()));
 					
 				} else if (index == 3 && Main.game.isNonConEnabled()) {
-					return new ResponseSex("Resist Sex",
-							UtilText.parse(getMugger(), "[npc.Name] forces [npc.herself] on you..."),
+					return new ResponseSex("抵抗做爱",
+							UtilText.parse(getMugger(), "[npc.Name]强行压住了你……"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getMugger()),
@@ -495,8 +495,8 @@ public class StormStreetAttackerDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/stormStreetAttack", "START_DEFEATED_SEX_RESIST", getMugger()));
 					
 				} else if (index == 4 && !getMugger().isWillingToRape()) {
-					return new Response("Refuse",
-							UtilText.parse(getMugger(), "Refuse to have sex with [npc.name] and continue on your way."),
+					return new Response("拒绝",
+							UtilText.parse(getMugger(), "拒绝和[npc.name]做爱，你继续你的行程。"),
 							Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
@@ -510,10 +510,10 @@ public class StormStreetAttackerDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("返回", "", true) {
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你爽够了，可以走了，让[npc.name]自己歇会儿。";
 		}
 		@Override
 		public String getContent() {
@@ -526,9 +526,9 @@ public class StormStreetAttackerDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue",
-						"Leave [npc.name] behind and continue on your way."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]",
+				return new Response("继续",
+						"把[npc.name]甩在身后，继续你的旅程。"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]",
 						Main.game.getDefaultDialogue(false)){
 					@Override
 					public Colour getHighlightColour() {
@@ -541,7 +541,7 @@ public class StormStreetAttackerDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory", "There's nothing stopping you from helping yourself to [npc.namePos] clothing and items..."){
+				return new ResponseEffectsOnly("物品栏", "现在你可以随意拿取[npc.namePos]衣服和道具，谁也拦不了你……"){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(getMugger(), InventoryInteraction.FULL_MANAGEMENT);
@@ -552,14 +552,14 @@ public class StormStreetAttackerDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("Collapse", "", true) {
+	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("瘫软", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 15*60;
 		}
 		@Override
 		public String getDescription(){
-			return "You're completely worn out from [npc.namePos] dominant treatment, and need a while to recover.";
+			return "你在[npc.namePos]支配之下精疲力竭，你需要休息一会儿……";
 		}
 		@Override
 		public String getContent() {
@@ -568,9 +568,9 @@ public class StormStreetAttackerDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue",
-						"Continue on your way."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.name] from the game!)]",
+				return new Response("继续",
+						"继续走路。"
+								+ "<br/>[style.italicsBad([npc.name]将会从游戏中永久删除！)]",
 						Main.game.getDefaultDialogue(false)) {
 					@Override
 					public Colour getHighlightColour() {

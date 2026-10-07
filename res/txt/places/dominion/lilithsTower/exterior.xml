@@ -1,51 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- OUTSIDE -->
 	
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	<p>
-		A giant spire, built out of dark black stone, dominates Dominion's skyline. Finding yourself standing near the base, you notice an increase in the amount of Enforcers patrolling this area.
+		由暗黑色石头砌成的巨大尖塔主宰着御城区的天际线。你越靠近那座塔，就会发现巡逻的执法者越多。
 	</p>
 	<p>
-		An elaborate golden archway links the tower's grounds to the street that you're standing on. A single word inscribed into the metalwork reads 'Lilith', leaving you with little doubt as to the identity of the demon who lives here.
+		一座精致的金色拱门将塔院与你所站的街道连接起来。金属制品上刻有“莉莉丝”三个大字，这让你瞬间明白了住在这里的恶魔的身份。
 	</p>
 	#IF(pc.getOccupation()==OCCUPATION_TOURIST)
 		<p>
-			Puzzled by the appearance of the seat of the English government, you mutter to yourself, [pc.speech(
-			[game.random(Sure don't look like it did in the brochure...
-			| Wasn't there supposed to be a big clock somewhere... Maybe it's like a big sundial?)]
+			你对本该是英国政府所在地的出现感到困惑，喃喃自语道，[pc.speech(
+			[game.random(宣传册上肯定不是这样写的……
+			| 不是应该有个大钟在这吗？或者像一个大日晷的东西？)]
 			)]
 		</p>
 	#ENDIF
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			The arcane storm that's raging overhead has brought out a heavy presence of demon Enforcers in this area. Unaffected by the arousing power of the storm's thunder, these elite Enforcers keep a close watch on you as you pass through the all-but-deserted area. There's no way anyone would be able to assault you while under their watchful gaze, allowing you to continue on your way in peace...
+			头顶上肆虐的奥术风暴让这一地区出现了大量恶魔执法者。这些精英执法者们不受风暴雷霆催情之力的影响，在你穿过这片几乎荒无人烟的区域时一直密切注视着你。在他们的注视下，任何人都无法攻击你，你可以安心地继续前行……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LILITHS_DISTRICT_APPROACH -->
 	
 	<htmlContent tag="LILITHS_DISTRICT_APPROACH"><![CDATA[
 	<p>
-		You walk up to the archway, but as you approach, a pair of elite demon Enforcers seem to appear from out of nowhere, blocking your way. Even if you felt confident enough to beat them, you know that you'd stand no chance in combat against the sheer number of Enforcers that would quickly arrive as backup.
+		你走到拱门前，但当你走近时，一对精英恶魔执法者突然出现，挡住了你的去路。即使你有足够的信心打败他们，但你也知道，面对数量众多的执法者，你根本没有战斗的机会，他们很快就会赶来支援。
 	</p>
 	#IF(pc.getOccupation()==OCCUPATION_TOURIST)
 		<p>
-			Not wanting to leave this area empty-handed, you decide to take a picture for the folks back home. Making sure to get the Enforcers in the background, you pose for a selfie and smile for the camera. Suspicious of your activity, two of the Enforcers step forwards and ask what you're doing, to which you reply, [pc.speech(There's nothing to worry about. I'm an American.)]
+			你不想两手空空地离开这里，决定为家乡的人们拍一张照片。你摆出一个自拍的姿势，对着镜头微笑。两名执法者对你的活动产生了怀疑，上前询问你在做什么，你回复道：[pc.speech(没什么好担心的，我是美国人。)]
 		</p>
 		<p>
-			Slightly annoyed by the look of confusion on the Enforcers' faces, you briefly inform them that America is the greatest country in the world, before shaking your head at their ignorance and taking your leave...
+			执法者脸上的困惑让你有些恼火，你简单地告诉他们美国是世界上最伟大的国家，然后对他们的无知摇摇头，告辞离去……
 		</p>
 	#ENDIF
 	<p>
-		<b>Content for Lilith's Tower will be added much later, sometime around version 0.8.0.</b>
+		<b>莉莉丝之塔相关内容将在很晚的时候添加，大约在0.8.0版本左右。</b>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <colour>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -7,7 +7,7 @@
 	<metallic>false</metallic>
 	
 	<!-- The name of this colour. -->
-	<name><![CDATA[Gryphon Beak Orange]]></name>
+	<name><![CDATA[狮鹫喙橙黄]]></name>
 	
 	<!-- This colour's hex code, which is used when the game is set in the default 'dark' theme. -->
 	<!-- Pantone PMS 13-1145 TN TPG Orange Pop-->

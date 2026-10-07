@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>750</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[full chastity belt]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[full chastity belts]]></namePlural>
-		<description><![CDATA[A chastity belt, designed to deny access to both the wearer's vagina and anus.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[全封闭贞操带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[全封闭贞操带]]></namePlural>
+		<description><![CDATA[一条贞操带，防止穿戴者的阴道和肛门被插入。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>GROIN</slot>
@@ -59,26 +59,26 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] on the chastity belt and [npc.verb(clip)] the locks into place.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the chastity belt up around [npc2.namePos] groin, before clipping the locks into place.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the chastity belt up around [npc2.namePos] groin, before forcefully clipping the locks into place.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]穿上贞操带并上锁。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将贞操带穿在[npc2.namePos]腹股沟，然后锁上贞操带。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将贞操带穿在[npc2.namePos]腹股沟，然后锁上贞操带。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the chastity belt's locks and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the locks on [npc2.namePos] chastity belt and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] hastily [npc.verb(unfasten)] the locks on [npc2.namePos] chastity belt and [npc.verb(yank)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开贞操带扣子上的锁并脱下贞操带。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]解开[npc2.namePos]贞操带扣子上的锁并脱下贞操带。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]匆忙地解开[npc2.namePos]贞操带扣子上的锁并脱下贞操带。
+]]></otherRough>
 	</displacementText>
 </clothing>

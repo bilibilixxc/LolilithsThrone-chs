@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>20</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[iced doughnut]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[iced doughnuts]]></namePlural>
-		<description><![CDATA[A small ring of sweetened dough that's been fried and topped with plain icing.]]></description>
-		<useDescriptor>eat</useDescriptor>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[糖衣甜甜圈]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[糖衣甜甜圈]]></namePlural>
+		<description><![CDATA[一个油炸后顶上涂了一层简单糖衣的小圈形甜面团。]]></description>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -23,13 +23,13 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 20% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]20%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/5)]
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel as though [npc.she] [npc.has] more energy...
+				[npc.Name]开始感觉自己好像更有能量了……
 			</p>
 		]]></applyEffects>
 		
@@ -40,12 +40,10 @@
 	</coreAttributes>
 
 	<useDescriptions>
-		<selfUse><![CDATA[
-			[npc.Name] [npc.verb(lift)] the doughnut to [npc.her] mouth and [npc.verb(start)] eating it. It only takes a few moments for [npc.name] to completely consume the baked good, after which [npc.she] [npc.verb(let)] out a satisfied hum.
-		]]></selfUse>
+		<selfUse><![CDATA[[npc.Name]将甜甜圈塞到[npc.her]嘴里，然后开始吃了起来。只花了几秒钟，[npc.name]就吃光了，之后[npc.she]发出了满足的嗯声。]]></selfUse>
 		<otherUse><![CDATA[
-			[npc.Name] [npc.verb(lift)] the doughnut to [npc2.namePos] mouth and [npc.verb(get)] [npc2.herHim] to start eating it. It only takes a few moments for [npc2.name] to completely consume the baked good, after which [npc2.she] [npc2.verb(let)] out a satisfied hum.
-		]]></otherUse>
+[npc.Name]将甜甜圈塞到[npc2.namePos]的嘴里，然后开始喂[npc2.herHim]吃。只花了几秒钟，[npc2.name]就吃光了，[npc2.she]发出了满足的嗯声。
+]]></otherUse>
 	</useDescriptions>
 
 	

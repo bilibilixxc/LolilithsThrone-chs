@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
-		<authorTag><![CDATA[On the filler cap, slightly raised lettering reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在填充口的盖子上，有几个微微凸起的字：“执法者官方分配，由DSG锻造厂生产。”]]></authorTag>
 	
 		<value>7500</value> 
 		
@@ -10,35 +10,33 @@
 		
 		<twoHanded>true</twoHanded>
 		
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name><![CDATA[LSG-9000 coom gun]]></name>
+		<name><![CDATA[LSG-9000镇暴水炮]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[LSG-9000 coom guns]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[LSG-9000镇暴水炮]]></namePlural> 
 		
 		<description><![CDATA[
-		The final word in riot control, this weapon uses a water spell to propel a stream of water to conduct arcane lightning at any target its sights. The hoses and cup-like attachments give you the feeling that <i>any</i> liquid would do as long as there was enough of it.
-		]]></description> 
+这是一种用于骚乱控制的终极武器，它使用水系法术将一股水流发射出去，然后通过水流传导奥术闪电来攻击其瞄准的任何目标。软管和杯状附件让你感觉到只要有足够的液体，<i>任何</i>液体都可以使用。
+]]></description> 
 		
-		<attackDescriptor>Shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your coom gun.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用你的镇暴水炮射击[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity> 
 		
-		<equipText><![CDATA[
-		[npc.Name] [npc.verb(bring)] out the coom gun
-		#IF npc.getBreastRawStoredMilkValue()>=150 
-			#THEN and discretely [npc.verb(attach)] the cup attachments to [npc.her] [npc.nipplesD]. [npc.She] then [npc.verb(pull)] the sling over [npc.her] shoulder and [npc.verb(let)] out a small moan as the pumps draw [npc.her] [npc.milkD] through the hoses into the built-in tank.
-			[#npc.setBreastStoredMilk(npc.getBreastRawStoredMilkValue()-150)]
-		#ELSEIF npc.getPenisRawStoredCumValue()>=150
-			#THEN and discretely [npc.verb(slide)] the cup attachment over [npc.her] [npc.penisD]. [npc.She] then [npc.verb(pull)] the sling over [npc.her] shoulder and [npc.verb(let)] out a small groan as the pumps draw [npc.her] [npc.cumD] into the built-in tank.
-			[#npc.setPenisStoredCum(npc.getPenisRawStoredCumValue()-150)]
-		#ELSE and [npc.verb(allow)] the built-in tank to magically fill itself with arcane-enhanced water, since [npc.sheHasFull] no special ammunition to put in it, before pulling the sling over [npc.her] shoulder.
-		#ENDIF
-		]]></equipText>
+		<equipText><![CDATA[[npc.Name]拿出了那把镇暴水炮，
+#IF npc.getBreastRawStoredMilkValue()>=150 
+#THEN 悄悄地把杯状附件连接到[npc.her]的[npc.nipplesD]上。接着，[npc.she]把吊带套在了[npc.her]肩上，轻轻地发出一声呻吟，泵将[npc.her]的[npc.milkD]吸入内置的储液罐。
+[#npc.setBreastStoredMilk(npc.getBreastRawStoredMilkValue()-150)]
+#ELSEIF npc.getPenisRawStoredCumValue()>=150
+#THEN 悄悄地把杯状附件套到[npc.her]的[npc.penisD]上。接着，[npc.she]把吊带套在了[npc.her]肩上，轻轻地发出一声呻吟，泵将[npc.her]的[npc.cumD]吸入内置的储液罐。
+[#npc.setPenisStoredCum(npc.getPenisRawStoredCumValue()-150)]
+#ELSE 然后允许内置罐自动充满了魔法增幅的水，因为[npc.sheHasFull]没有特殊的弹药可放入，然后将吊带套在了[npc.her]肩上。
+#ENDIF]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] the stun gun away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将电击枪收起。]]></unequipText>
 		
 		<imageName>liqstungun_holstered.svg</imageName> 
 		
@@ -64,8 +62,8 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[Can apply attacker fluid effects on critical hit.]]></effect>
-			<effect><![CDATA[Dirties target inventory slots.]]></effect>
+			<effect><![CDATA[暴击时施加液体效果。]]></effect>
+			<effect><![CDATA[弄脏目标的物品栏栏位。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect><![CDATA[
@@ -165,77 +163,77 @@
 		
 		<onCriticalHitEffect><![CDATA[
 		#IF (npc.getBreastRawStoredMilkValue()>=150)
-			A jet of [npc.milkD] streams towards [npc2.name], followed by a crackling bolt of arcane lightning. [npc2.Name] barely has time to stare with a look of disbelief on [npc2.her] face before being hit! </br>[npc2.speech(What the fuck?!!)] [npc2.she] [npc2.verb(splutter)] as [npc2.she] succumbs to the effects of the lightning. [npc.Name] [npc.verb(moan)] as the pumps suck on [npc.her] [npc.nipples] for more special ammunition.
+			[npc.milkD]构成的激流向[npc2.name]身上射了过去，紧接着就是伴随着噼里啪啦声的奥术闪电。[npc2.Name]只能露出难以置信的神情，眼睁睁看着自己被击中！</br>[npc2.speech(什么玩意？！！)][npc2.she]被奥术闪电击中后，气急败坏地喊道。抽水器紧紧吸住[npc.her]的[npc.nipples]，源源不断地索取着弹药，让[npc.name][npc.moan]起来。
 			
 			[#npc.setBreastStoredMilk(npc.getBreastRawStoredMilkValue()-150)]
 			
-			[npc.Name] got a [style.boldExcellent(lucky shot)] right into [npc2.namePos] [npc2.mouth]
+			[npc.Name][style.boldExcellent(运气爆棚)]，射到了[npc2.namePos]的[npc2.mouth]上
 
 			#IF (npc2.getHighestZLayerCoverableArea(CA_MOUTH) != null)
-				 where [npc2.her] equipment prevents [npc2.her] from swallowing any.
+				，但[npc2.her]的装备挡住了水流，一点也没有进到嘴里。
 				[##npc2.addDirtySlot(npc2.getHighestZLayerCoverableArea(CA_MOUTH).getClothingType().getSlot())]
 			#ELSE
-				, causing [npc2.her] to swallow some of [npc.her] [npc.milk]!
+				，让[npc2.her]喝下了一些[npc.milk]！
 				[#npc2.ingestFluid(npc, npc.getSubspecies(), npc.getSubspecies(), npc.getMilkType(), ORIFICE_MOUTH, 150)]
 				[##npc2.addDirtySlot(IS_MOUTH)]
 			#ENDIF
 			
 			#IF (npc.getBreastRawStoredMilkValue()<150)
-				<br/><b>The pumps hiccup a bit on empty air.</b> [npc.Name] [npc.verb(realize)] [npc.sheHasFull] no special ammunition left. The gun automatically switches over to arcane water replenishment until [npc.she] can produce more.
+				<br/><b>抽水器吸入着空气，发出着“噗噗噗”的声音。</b>[npc.Name]才意识到特殊弹药已经用光了。水炮自动转为使用后备的奥术水流，直到[npc.she]生产出更多“弹药”。
 			#ENDIF
 			
 		#ELSEIF (npc.getPenisRawStoredCumValue()>=150)
-			A jet of [npc.cumD] streams towards [npc2.name], followed by a crackling bolt of arcane lightning. [npc2.Name] barely has time to stare with a look of disbelief on [npc2.her] face before being hit! [npc2.speech(What the fuck?!!)] [npc2.she] [npc2.verb(splutter)] as [npc2.she] succumbs to the effects of the lightning. [npc.Name] [npc.verb(groan)] as the pumps suck on [npc.her] [npc.penis] for more special ammunition.
+			[npc2.name]构成的激流向[npc2.name]身上射了过去，紧接着就是伴随着噼里啪啦声的奥术闪电。[npc2.Name]只能露出难以置信的神情，眼睁睁看着自己被击中！[npc2.speech(什么玩意？！！)][npc2.she]被奥术闪电击中后，气急败坏地喊道。抽水器紧紧吸住[npc.her]的[npc.penis]，源源不断地索取着弹药，让[npc.name]哼哼起来。
 			
 			[#npc.setPenisStoredCum(npc.getPenisRawStoredCumValue()-150)]
 			
-			[npc.Name] got a [style.boldExcellent(lucky shot)] right
+			[npc.Name][style.boldExcellent(运气爆棚)]，射到了
 			
 			#IF (RND.nextInt(100) <= 50)
-				 into [npc2.namePos] [npc2.mouth]
+				[npc2.namePos]的[npc2.mouth]上
 				#IF (npc2.getHighestZLayerCoverableArea(CA_MOUTH) != null)
-					 where [npc2.her] equipment prevents [npc2.her] from swallowing any.
+					，但[npc2.her]的装备挡住了水流，一点也没有进到嘴里。
 					[##npc2.addDirtySlot(npc2.getHighestZLayerCoverableArea(CA_MOUTH).getClothingType().getSlot())]
 				#ELSE
-					, causing [npc2.her] to swallow some of [npc.her] [npc.cum]!
+					，让[npc2.her]喝下了一些[npc.cum]！
 					[#npc2.ingestFluid(npc, npc.getSubspecies(), npc.getSubspecies(), npc.getCumType(), ORIFICE_MOUTH, 150)]
 					[##npc2.addDirtySlot(IS_MOUTH)]
 				#ENDIF						
 			#ELSE
-				 onto [npc2.her] groin
+				[npc2.her]的下体上
 				#IF (npc2.getHighestZLayerCoverableArea(CA_MOUND) != null && npc2.getHighestZLayerCoverableArea(CA_THIGHS) == null)
-					 where [npc2.her] equipment prevents any [npc.cum] from getting in.
+					，但[npc2.her]的装备挡住了[npc.cum]，一点也没有沾染到里面。
 					[##npc2.addDirtySlot(npc2.getHighestZLayerCoverableArea(CA_MOUND).getClothingType().getSlot())]
 				#ELSEIF (npc2.getHighestZLayerCoverableArea(CA_MOUND) == null && npc2.getHighestZLayerCoverableArea(CA_THIGHS) == null)
 					#IF (npc2.hasVagina())
-					 and into [npc2.her] [npc2.vaginaD] 
+					正中[npc2.her][npc2.vaginaD] 
 						#IF (npc2.hasHymen())
-							where [npc2.her] [style.colourExcellent(hymen)] prevents any [npc.cum] from getting very far.
+							，但[npc2.her]的[style.colourExcellent(处女膜)]则挡住了[npc.cum]，没有更进一步。
 						#ELSE
 							!
 							[#npc2.ingestFluid(npc, npc.getSubspecies(), npc.getSubspecies(), npc.getCumType(), ORIFICE_VAGINA, 150)]
 						#ENDIF
 					#ELSE
-						 where it makes a mess!
+						，弄得那里一团糟。
 						[##npc2.addDirtySlot(IS_GROIN)]
 					#ENDIF
 				#ELSE
-					 where it makes a mess.
+					，弄得那里一团糟。
 					[##npc2.addDirtySlot(IS_GROIN)]
 				#ENDIF
 			#ENDIF
 			
 			#IF (npc.getPenisRawStoredCumValue()<150)
-				<br/><b>The pumps hiccup a bit on empty air.</b> [npc.Name] [npc.verb(realize)] [npc.sheHasFull] no special ammunition left. The gun automatically switches over to arcane water replenishment until [npc.she] can produce more.
+				<br/><b>抽水器吸入着空气，发出着“噗噗噗”的声音。</b>[npc.Name]才意识到特殊弹药已经用光了。水炮自动转为使用后备的奥术水流，直到[npc.she]生产出更多“弹药”。
 			#ENDIF
 			
 		#ELSE
-			A jet of water streams towards [npc2.name], followed by a crackling bolt of arcane lightning. [npc2.Name] barely has time to stare with a look of disbelief on [npc2.her] face before succumbing to the effects of the lightning! [npc2.Name] [npc2.verb(shiver)] a bit as the water soaks into [npc2.her] [npc2.skinSkin]. 
+			一道水流射向[npc2.name]，紧接着就是伴随着噼里啪啦声的奥术闪电。[npc2.Name]只能露出难以置信的神情，眼睁睁看着自己被奥术闪电击中！[npc2.Name]的[npc2.skinSkin]被冷水打湿，身子微微一抖。
 			
 			#IF (npc.getBreastRawStoredMilkValue()>=150)
-				As if sensing the bounty stored in [npc.namePos] [npc.breastsD], <b>the gun's pumps start pulling [npc.her] [npc.milkD] through the hoses.</b> [npc.Name] [npc.verb(moan)] at the stimulation.
+				水炮的吸水器仿佛感受到了储存在[npc.namePos][npc.breastsD]的液体，<b>立刻用软管吸收着[npc.her][npc.milkD]。</b>[npc.Name]受到刺激后不禁呻吟起来。
 			#ELSEIF (npc.getPenisRawStoredCumValue()>=150)
-				As if sensing the bounty stored in [npc.namePos] [npc.ballsD], <b>the gun's pumps start pulling [npc.her] [npc.cumD] through the hoses.</b> [npc.Name] [npc.verb(groan)] at the stimulation.
+				水炮的吸水器仿佛感受到了储存在[npc.namePos][npc.ballsD]的液体，<b>立刻用软管吸收着[npc.her][npc.cumD]。</b>[npc.Name]受到刺激后不禁哼哼起来。
 			#ENDIF
 		#ENDIF
 		]]></onCriticalHitEffect>
@@ -263,37 +261,39 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-			Aiming [npc.her] stun gun at [npc2.name], [npc.she] [npc.verb(pull)] the trigger.
+		[npc.Name]用[npc.her]的电击枪瞄准[npc2.name]并扣动扳机。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
-		<missText><![CDATA[
-			Aiming [npc.her] stun gun at [npc2.name], [npc.she] [npc.verb(pull)] the trigger. 
-			#IF (npc.getBreastRawStoredMilkValue()>0)
-				A jet of [npc.milkD] streams towards [npc2.name], but it goes wide! The [npc.milk] splashes and sparks into a useless puddle on the ground. [npc.Name] [npc.verb(moan)] as the pumps suck on [npc.her] [npc.nipples] for more special ammunition.
-				
-				[#npc.setBreastStoredMilk(npc.getBreastRawStoredMilkValue()-150)]
-				
-				#IF (npc.getBreastRawStoredMilkValue()<150)
-					<b>The pumps hiccup a bit on empty air.</b> [npc.Name] [npc.verb(realize)] [npc.sheHasFull] has no special ammunition left. The gun automatically switches over to arcane water replenishment until [npc.she] can produce more.
-				#ENDIF
-				
-			#ELSE
-				#IF (npc.getPenisRawStoredCumValue()>0)
-					A jet of [npc.cumD] streams towards [npc2.name], but it goes wide! The [npc.cum] splashes and sparks into a useless puddle on the ground. [npc.Name] [npc.verb(moan)] as the pumps suck on [npc.her] [npc.penis] for more special ammunition.
-					
-					[#npc.setPenisStoredCum(npc.getPenisRawStoredCumValue()-150)]
-					
-					#IF (npc.getPenisRawStoredCumValue()<150)
-						<b>The pumps hiccup a bit on empty air.</b> [npc.Name] [npc.verb(realize)] [npc.sheHasFull] has no special ammunition left. The gun automatically switches over to arcane water replenishment until [npc.she] can produce more.
-					#ENDIF
-					
-				#ELSE
-					A jet of water streams towards [npc2.name], but it goes wide! The water splashes and sparks into a useless puddle on the ground.
-				#ENDIF
-			#ENDIF
-		]]></missText>
+		<missText><![CDATA[[npc.name]用电击枪瞄准着[npc2.name]，扣动了扳机。
+#IF (npc.getBreastRawStoredMilkValue()>0)
+一股[npc.milkD]喷射向[npc2.name]，但打偏了！[npc.milk]溅起，变成了地上的一滩液体。[npc.name]因为泵正在吸吮她的[npc.nipples]以获取更多特殊弹药而发出呻吟。
+
+[#npc.setBreastStoredMilk(npc.getBreastRawStoredMilkValue()-150)]
+
+#IF (npc.getBreastRawStoredMilkValue()<150)
+					<b>泵出现了一点问题。</b>[npc.name]意识到她没有特殊弹药了。枪自动切换到了奥术水补给，直到[npc.name]能够再次产生更多。
+#ENDIF
+
+#ELSE
+
+#IF (npc.getPenisRawStoredCumValue()>0)
+一股[npc.cumD]喷射向[npc2.name]，但偏了！[npc.cum]溅起，变成了地上的无用泥潭。[npc.name]因为泵正在吸吮她的[npc.penis]以获取更多特殊弹药而发出呻吟。
+
+[#npc.setPenisStoredCum(npc.getPenisRawStoredCumValue()-150)]
+
+#IF (npc.getPenisRawStoredCumValue()<150)
+						<b>泵出现了一点问题。</b>[npc.name]意识到她没有特殊弹药了。枪自动切换到了奥术水补给，直到[npc.name]能够再次产生更多。
+#ENDIF
+
+#ELSE
+
+一股水柱喷向[npc2.name]，但偏了！水溅到地上变成了无用的水坑。
+
+#ENDIF
+
+#ENDIF]]></missText>
 	</missDescriptions>
 	
 </weapon>

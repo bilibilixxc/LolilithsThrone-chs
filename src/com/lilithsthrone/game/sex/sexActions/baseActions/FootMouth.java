@@ -33,11 +33,11 @@ public class FootMouth {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Worship [npc2.feet(true)]";
+			return "崇拜[npc2.feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Press your [npc.lips] against [npc2.namePos] [npc2.feet] and start kissing and licking them.";
+			return "将[npc.lips]贴在[npc2.namePos][npc2.feet]上，开始亲吻和舔舐。";
 		}
 		@Override
 		public String getDescription() {
@@ -48,42 +48,42 @@ public class FootMouth {
 				if(Main.sex.getCharacterTargetedForSexAction(this).getLegType().getFootType().equals(FootType.HOOFS)) {
 					foundFootType = true;
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Eagerly(bringing)] [npc.her] head down to [npc2.namePos] hard hoofs, [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against them and [npc.verb(start)] passionately kissing and licking them.",
-							"[npc.Name] [npc.verb(drop)] [npc.her] head down to [npc2.namePos] [npc2.feet], before eagerly pressing [npc.her] [npc.lips+] against [npc2.namePos] hard hoofs and starting to [npc.gently] kiss and lick them."));
+							"[npc.name]急切地低下头，[npc.lips+]按在[npc2.namePos]坚硬的蹄子上，开始热情地亲吻舔舐。",
+							"[npc.Name]低头把[npc.lips+]急切地按在[npc2.namePos]坚硬的蹄子上，开始轻吻舔舐。"));
 					
 				} else if(Main.sex.getCharacterTargetedForSexAction(this).getLegType().getFootType().equals(FootType.TALONS)) {
 					foundFootType = true;
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Eagerly(bringing)] [npc.her] head down to [npc2.namePos] bird-like feet, [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.her] talons and [npc.verb(start)] passionately kissing and licking them.",
-							"[npc.Name] [npc.verb(drop)] [npc.her] head down to [npc2.namePos] bird-like feet, before eagerly pressing [npc.her] [npc.lips+] against [npc2.namePos] talons and starting to [npc.gently] kiss and lick them."));
+							"[npc.name]急切地低下头，[npc.lips+]按在[npc2.namePos]的鸟爪上，开始热情地亲吻舔舐。",
+							"[npc.Name]低头把[npc.lips+]急切地按在[npc2.namePos]的鸟爪上，开始轻吻舔舐。"));
 					
 				} else if(Main.sex.getCharacterTargetedForSexAction(this).getLegType().getFootType().equals(FootType.TENTACLE)) {
 					foundFootType = true;
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Eagerly(bringing)] [npc.her] head down to [npc2.namePos] tentacles, [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against them and [npc.verb(start)] passionately kissing and licking them.",
-							"[npc.Name] [npc.verb(drop)] [npc.her] head down to [npc2.namePos] tentacles, before eagerly pressing [npc.her] [npc.lips+] against them and starting to [npc.gently] kiss and lick them."));
+							"[npc.name]急切地低下头，[npc.lips+]按在[npc2.namePos]的触手上，开始热情地亲吻舔舐。",
+							"[npc.Name]低头把[npc.lips+]急切地按在[npc2.namePos]的触手上，开始轻吻舔舐。"));
 					
 				}
 			}
 			if(!foundFootType) {
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"[npc.Eagerly(bringing)] [npc.her] head down to [npc2.namePos] [npc2.feet+], [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against them and [npc.verb(start)] passionately kissing and licking them.",
-						"[npc.Name] [npc.verb(drop)] [npc.her] head down to [npc2.namePos] [npc2.feet+], before eagerly pressing [npc.her] [npc.lips+] against them and starting to [npc.gently] kiss and lick them."));
+						"[npc.name]急切地低下头，[npc.lips+]按在[npc2.namePos][npc2.feet+]上，开始热情地亲吻舔舐。",
+						"[npc.Name]低头把[npc.lips+]急切地按在[npc2.namePos][npc2.feet+]上，开始轻吻舔舐。"));
 			}
 
 			if(!isTargetedCharacterInanimate()) {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 					case SUB_RESISTING:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.name] [npc.do] this, and with tears running down [npc2.her] [npc2.face], [npc2.she] desperately [npc2.verb(beg)] for [npc.herHim] to stop.",
-							" With [npc2.a_sob+], [npc2.name] [npc2.verb(try)] to pull away from [npc.name], but, being unable to do so, all [npc2.she] can do is sob as [npc.name] [npc.verb(continue)] worshipping [npc2.her] [npc2.feet]."));
+							"[npc.name]这样做的时候，[npc2.Name]发出[npc2.a_sob+]，流着泪求[npc.herHim]住手。",
+							"[npc2.name]边发出[npc2.a_sob+]边试图挣脱[npc.name]，但无济于事，只能眼睁睁看着[npc.name]宠爱自己的[npc2.feet]，呜咽不已。"));
 						break;
 					default:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(start)] worshipping [npc2.her] [npc2.feet],"
-									+ " before [npc2.eagerly] pushing them into [npc.her] [npc.face] in order to encourage [npc.herHim] to keep on going.",
-							" In response to this, [npc2.name] [npc2.verb(start)] [npc2.eagerly] pushing [npc2.her] [npc2.feet] into [npc.namePos] [npc.face],"
-									+ " letting out [npc2.a_moan+] as [npc2.she] [npc2.verb(focus)] on the delightful feeling of having [npc2.her] [npc2.feet(true)] worshipped."));
+							"当[npc.name]开始宠爱[npc2.Name]的[npc2.feet]时，[npc2.Name]发出[npc2.a_moan+]，"
+									+ "紧接着又急切地把[npc2.feet]往[npc.her][npc.face]上按，鼓励[npc.herHim]继续。",
+							"于是，[npc2.name]开始急切地把[npc2.feet]往[npc.namePos][npc.face]上按，"
+									+ "因为自己的[npc2.feet(true)]得到宠爱，[npc2.she]感到十分愉快并发出[npc2.a_moan+]。"));
 						break;
 				}
 			}
@@ -100,16 +100,16 @@ public class FootMouth {
 				case SUB_NORMAL:
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(start)] [npc2.eagerly] sliding [npc2.her] [npc2.feet+] up and down over [npc.namePos] [npc.face] in response,"
-									+ " letting out [npc2.a_moan+] as [npc2.she] [npc2.verb(get)] [npc.herHim] to worship [npc2.her] [npc2.feet(true)].",
-							" [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+] as [npc2.she] [npc2.eagerly] [npc2.verb(slide)] [npc2.her] [npc2.feet+] up and down over [npc.namePos] [npc.face+].",
-							" [npc2.Moaning] in delight, [npc2.name] [npc2.eagerly] [npc2.verb(push)] [npc2.her] [npc2.feet+] against [npc.namePos] mouth as [npc2.she] [npc2.has] them worshipped."));
+							"于是[npc2.Name]开始用[npc2.her][npc2.feet+]急切地在[npc.namePos][npc.face]上来回磨蹭，"
+									+ "[npc2.she]感受到自己的[npc2.feet(true)]被疯狂爱上，潮水般的快感让[npc2.she]忍不住发出[npc2.a_moan+]。",
+							"[npc2.name]急切地用[npc2.feet+]来回磨蹭[npc.namePos][npc.face+]，一声[npc2.A_moan+]从[npc2.namePos][npc2.lips+]间爆发而出。",
+							"[npc2.name]愉快地呻吟着， 因为知道[npc.namePos]疯狂爱着[npc2.her][npc2.feet+]，就迫不及待地把脚往[npc.namePos]嘴上按。"));
 					break;
 				case SUB_RESISTING:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Desperately trying, and failing, to pull away from [npc.name], [npc2.name] [npc2.verb(let)] out [npc2.a_sob+] and weakly [npc2.verb(beg)] for [npc.herHim] to stop worshipping [npc2.her] [npc2.feet(true)].",
-							" [npc2.A_sob+] bursts out from between [npc2.namePos] [npc2.lips] as [npc2.she] weakly [npc2.verb(try)] to push [npc.namePos] [npc.face] away from [npc2.her] [npc2.feet].",
-							" [npc2.Sobbing] in distress, and with tears running down [npc2.her] [npc2.face], [npc2.name] weakly [npc2.verb(try)] to pull [npc2.her] [npc2.feet] away from [npc.namePos] [npc.face]."));
+							"[npc2.name]拼命想要挣脱[npc.name]，但没能成功，只得无力地恳求[npc.herHim]放过自己的脚，一边发出[npc2.a_sob+]。",
+							"[npc2.namePos][npc2.lips]间爆发出一阵[npc2.A_sob+]，[npc2.she]无力地尝试将[npc.namePos]的[npc.face]推离自己的[npc2.feet]。",
+							"[npc2.name]悲痛地[npc2.Sobbing]着，泪水从[npc2.face]上流下，[npc2.name]无力地尝试将[npc2.feet]远离[npc.namePos]的[npc.face]。"));
 					break;
 				case DOM_ROUGH:
 					boolean foundFootType = false;
@@ -117,31 +117,31 @@ public class FootMouth {
 						if(Main.sex.getCharacterTargetedForSexAction(action).getLegType().getFootType().equals(FootType.HOOFS)) {
 							foundFootType = true;
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(start)] [npc2.roughly] grinding [npc2.her] [npc2.feet+] up and down over [npc.namePos] [npc.face] in response,"
-											+ " not caring about the fact that using [npc2.her] hard hoofs in such a violent manner is extremely uncomfortable for [npc.herHim].",
-									" [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+] as [npc2.she] [npc2.roughly] [npc2.verb(rub)] [npc2.her] hard hoofs up and down over [npc.namePos] [npc.face+],"
-											+ " not caring in the least about how uncomfortable it must be for [npc.herHim].",
-									" [npc2.Moaning] in delight, [npc2.name] [npc2.eagerly] [npc2.verb(push)] [npc2.her] hard hoofs against [npc.namePos] mouth,"
-											+ " laughing derisively at [npc.herHim] as [npc2.she] [npc2.has] [npc2.her] [npc2.feet] worshipped."));
+									"[npc2.Name]开始粗暴地在[npc.namePos]的[npc.face]上来回磨蹭[npc2.her][npc2.feet+]作为回应，"
+											+ "不在意[npc2.her]如此粗暴地使用硬蹄子会让[npc.herHim]非常不舒服。",
+									"[npc2.name][npc2.roughly]用坚硬的蹄子来回磨蹭[npc.namePos][npc.face+]，一阵[npc2.A_moan+]从[npc2.namePos][npc2.lips+]间爆发而出。"
+											+ "丝毫不在意[npc.herHim]会有多不舒服。",
+									"高兴的[npc2.Moaning]，[npc2.name]饥渴地将[npc2.her]的硬蹄抵住[npc2.namePos]的嘴，"
+											+ "肆意嘲弄着[npc.herHim]，[npc2.she]崇拜着[npc2.her][npc2.feet]。"));
 							
 						} else if(Main.sex.getCharacterTargetedForSexAction(action).getLegType().getFootType().equals(FootType.TALONS)) {
 							foundFootType = true;
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(start)] [npc2.roughly] grinding [npc2.her] [npc2.feet+] up and down over [npc.namePos] [npc.face] in response,"
-											+ " not caring about the fact that [npc2.her] sharp talons keep on coming dangerously close to cutting [npc.herHim].",
-									" [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+] as [npc2.she] [npc2.roughly] [npc2.verb(rub)] [npc2.her] bird-like claws up and down over [npc.namePos] [npc.face+],"
-											+ " not caring in the least about how close [npc2.her] sharp talons come to cutting [npc.herHim].",
-									" [npc2.Moaning] in delight, [npc2.name] [npc2.eagerly] [npc2.verb(push)] [npc2.her] clawed, bird-like feet against [npc.namePos] mouth,"
-											+ " laughing derisively at [npc.herHim] as [npc2.she] [npc2.verb(draw)] dangerously close to cutting [npc.herHim] with [npc2.her] sharp talons."));
+									"[npc2.Name]开始粗暴地在[npc.namePos]的[npc.face]上来回磨蹭[npc2.her][npc2.feet+]作为回应，"
+											+ "[npc2.she]毫不在意自己锋利的爪子不停靠近，几乎要割伤[npc.name]。",
+									"[npc2.name][npc2.roughly]用鸟一般的爪子来回磨蹭[npc.namePos][npc.face+]，一阵[npc2.A_moan+]从[npc2.namePos][npc2.lips+]间爆发而出。"
+											+ "[npc2.she]丝毫不在意自己的爪子太过锋利，几乎要割伤[npc.name]。",
+									"高兴地[npc2.Moaning]，[npc2.name]饥渴地将[npc2.her]的像鸟一样的脚爪抵住[npc2.namePos]的嘴，"
+											+ "[npc2.she]肆意嘲弄着[npc.herHim]，锋利的爪子不断靠近，几乎快要割伤[npc.name]。"));
 							
 						}
 					}
 					if(!foundFootType) {
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(start)] [npc2.eagerly] sliding [npc2.her] [npc2.feet+] up and down over [npc.namePos] [npc.face] in response,"
-										+ " letting out [npc2.a_moan+] as [npc2.she] [npc2.verb(get)] [npc.herHim] to worship [npc2.her] [npc2.feet(true)].",
-								" [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+] as [npc2.she] [npc2.eagerly] [npc2.verb(slide)] [npc2.her] [npc2.feet+] up and down over [npc.namePos] [npc.face+].",
-								" [npc2.Moaning] in delight, [npc2.name] [npc2.eagerly] [npc2.verb(push)] [npc2.her] [npc2.feet+] against [npc.namePos] mouth as [npc2.she] [npc2.has] them worshipped."));
+								"于是[npc2.Name]开始用[npc2.her][npc2.feet+]急切地在[npc.namePos][npc.face]上来回磨蹭，"
+										+ "[npc2.she]感受到自己的[npc2.feet(true)]被疯狂爱上，潮水般的快感让[npc2.she]忍不住发出[npc2.a_moan+]。",
+								"[npc2.name]急切地用[npc2.feet+]来回磨蹭[npc.namePos][npc.face+]，一声[npc2.A_moan+]从[npc2.namePos][npc2.lips+]间爆发而出。",
+								"[npc2.name]愉快地呻吟着， 因为知道[npc.namePos]疯狂爱着[npc2.her][npc2.feet+]，就迫不及待地把脚往[npc.namePos]嘴上按。"));
 					}
 					break;
 			}
@@ -159,20 +159,20 @@ public class FootMouth {
 			SexPace.DOM_GENTLE) {
 		@Override
 		public String getActionTitle() {
-			return "Gently worship [npc2.feet(true)]";
+			return "崇拜[npc2.feet(true)](温柔)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Gently kiss and lick [npc2.namePos] [npc2.feet+].";
+			return "温柔地亲吻舔舐[npc2.namePos][npc2.feet+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"After planting a series of gentle kisses on [npc2.namePos] [npc2.feet], [npc.name] [npc.verb(proceed)] to start lovingly licking them, letting out a series of soft [npc.moans] in the process.",
-					"Gently kissing and licking [npc2.namePos] [npc2.toes+], [npc.name] [npc.verb(let)] out a little [npc.moan] as [npc.she] lovingly [npc.verb(worship)] [npc2.namePos] [npc2.feet(true)].",
-					"[npc.Name] [npc.verb(let)] out a little [npc.moan] as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] [npc2.feet], before starting to lovingly kiss and lick them."));
+					"在[npc2.namePos]的[npc2.feet]上留下一连串温柔地亲吻后，[npc.name]发出一连串轻柔的[npc.moans]声，开始充满爱意地舔舐它们。",
+					"[npc.Name]轻轻地亲吻舔舐[npc2.namePos][npc2.toes+]，怜爱地侍奉[npc2.namePos]的[npc2.feet(true)]，发出一声轻微的[npc.moan]。",
+					"[npc.Name]把自己[npc.lips+]贴在[npc2.namePos]的[npc2.feet]上，发出一声轻微的[npc.moan]，然后开始充满爱意地亲吻和舔舐。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -190,20 +190,20 @@ public class FootMouth {
 			SexPace.DOM_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Worship [npc2.feet(true)]";
+			return "崇拜[npc2.feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Continue licking and kissing [npc2.namePos] [npc2.feet+].";
+			return "继续舔吻[npc2.namePos][npc2.feet+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"After planting a series of passionate kisses on [npc2.namePos] [npc2.feet], [npc.name] [npc.verb(proceed)] to start enthusiastically licking them, letting out a series of [npc.moans+] in the process.",
-					"Passionately kissing and licking [npc2.namePos] [npc2.toes+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] happily [npc.verb(worship)] [npc2.namePos] [npc2.feet(true)].",
-					"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] [npc2.feet], before starting to eagerly kiss and lick them."));
+					"在[npc2.namePos]的[npc2.feet]上留下一连串狂热地亲吻后，[npc.name]发出一连串的[npc.moans+]，开始热情地舔舐它们。",
+					"[npc.name]激情地对着[npc2.namePos][npc2.toes+]又亲又舔，发出[npc.a_moan+]，愉悦地侍奉着[npc2.namePos]的[npc2.feet(true)]。",
+					"[npc.Name]把自己[npc.lips+]贴在[npc2.namePos]的[npc2.feet]上，发出[npc.a_moan+]，然后开始急切地亲吻和舔舐。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -221,20 +221,20 @@ public class FootMouth {
 			SexPace.DOM_ROUGH) {
 		@Override
 		public String getActionTitle() {
-			return "Roughly worship [npc2.feet(true)]";
+			return "崇拜[npc2.feet(true)](粗暴)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Roughly kiss and lick [npc2.namePos] [npc2.feet+].";
+			return "粗暴地亲吻舔舐[npc2.namePos][npc2.feet+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"After planting a series of forceful kisses on [npc2.namePos] [npc2.feet], [npc.name] [npc.verb(proceed)] to start roughly licking them, letting out a series of [npc.moans+] in the process.",
-					"Roughly kissing and licking [npc2.namePos] [npc2.toes+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] dominantly [npc.verb(worship)] [npc2.namePos] [npc2.feet(true)].",
-					"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] [npc2.feet], before starting to forcefully kiss and lick them."));
+					"在[npc2.namePos]的[npc2.feet]上留下一串强势的亲吻后，[npc.name]连声[npc.moans+]，开始粗暴地舔舐它们。",
+					"[npc.Name]支配性地崇拜着[npc2.namePos]的[npc2.feet(true)]，在粗暴地亲吻和舔舐[npc2.namePos][npc2.toes+]时发出[npc.a_moan+]。",
+					"[npc.Name]把[npc.her][npc.lips+]贴在[npc2.namePos]的[npc2.feet]上，发出了[npc.a_moan+]，然后开始激烈地亲吻和舔舐。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -252,20 +252,20 @@ public class FootMouth {
 			SexPace.SUB_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Worship [npc2.feet(true)]";
+			return "崇拜[npc2.feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Continue kissing and licking [npc2.namePos] [npc2.feet+].";
+			return "继续吻舔[npc2.namePos][npc2.feet+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"After planting a series of kisses on [npc2.namePos] [npc2.feet], [npc.name] [npc.verb(proceed)] to start licking them, letting out a series of [npc.moans+] in the process.",
-					"Kissing and licking [npc2.namePos] [npc2.toes+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(worship)] [npc2.namePos] [npc2.feet(true)].",
-					"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] [npc2.feet], before starting to kiss and lick them."));
+					"在[npc2.namePos]的[npc2.feet]上留下一连串亲吻后，[npc.name]发出一连串的[npc.moans+]，开始舔舐它们。",
+					"[npc.Name]崇拜着[npc2.namePos]的[npc2.feet(true)]，在亲吻和舔舐[npc2.namePos][npc2.toes+]时发出[npc.a_moan+]。",
+					"[npc.Name]把[npc.lips+]贴在[npc2.namePos]的[npc2.feet]上，发出[npc.a_moan+]，然后开始亲吻和舔舐。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -283,20 +283,20 @@ public class FootMouth {
 			SexPace.SUB_EAGER) {
 		@Override
 		public String getActionTitle() {
-			return "Eagerly worship [npc2.feet(true)]";
+			return "崇拜[npc2.feet(true)](渴求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Eagerly kiss and lick [npc2.namePos] [npc2.feet+].";
+			return "急切地亲吻舔舐[npc2.namePos][npc2.feet+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"After planting a series of passionate kisses on [npc2.namePos] [npc2.feet], [npc.name] [npc.verb(proceed)] to start enthusiastically licking them, letting out a series of [npc.moans+] in the process.",
-					"Passionately kissing and licking [npc2.namePos] [npc2.toes+], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] happily [npc.verb(worship)] [npc2.namePos] [npc2.feet(true)].",
-					"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] [npc2.feet], before starting to eagerly kiss and lick them."));
+					"在[npc2.namePos]的[npc2.feet]上留下一连串狂热地亲吻后，[npc.name]发出一连串的[npc.moans+]，开始热情地舔舐它们。",
+					"[npc.name]激情地对着[npc2.namePos][npc2.toes+]又亲又舔，发出[npc.a_moan+]，愉悦地侍奉着[npc2.namePos]的[npc2.feet(true)]。",
+					"[npc.Name]把[npc.lips+]贴在[npc2.namePos]的[npc2.feet]上，发出了[npc.a_moan+]，然后开始急切地亲吻和舔舐。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -314,39 +314,39 @@ public class FootMouth {
 			SexPace.SUB_RESISTING) {
 		@Override
 		public String getActionTitle() {
-			return "Resist worshipping [npc2.feet(true)]";
+			return "崇拜[npc2.feet(true)](抵抗)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try to pull your [npc.face] away from [npc2.namePos] [npc2.feet+].";
+			return "试图让你的[npc.face]远离[npc2.namePos][npc2.feet+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"[npc.Name] desperately [npc.verb(try)], and [npc.verb(fail)], to pull [npc.her] [npc.face+] away from [npc2.namePos] [npc2.feet+], letting out [npc.a_sob+] in the process.",
-					"[npc.A_sob+] bursts out from between [npc.namePos] [npc.lips] as [npc.she] weakly tries to push [npc2.namePos] [npc2.feet+] away from [npc.her] [npc.face].",
-					"[npc.Sobbing] in distress, [npc.name] weakly [npc.verb(struggle)] against [npc2.name] as [npc.she] [npc.verb(plead)] for [npc2.herHim] to take [npc2.her] [npc2.feet] away from [npc.her] [npc.face]."));
+					"[npc.Name]发出[npc.a_sob+]，绝望地试图将[npc.her][npc.face+]从[npc2.namePos][npc2.feet+]上拉开，但失败了。",
+					"[npc.namePos][npc2.lips]间爆发出一阵[npc.a_sob+]，[npc.she]无力地尝试将[npc2.namePos][npc2.feet+]推离自己的[npc.face]。",
+					"悲痛地[npc.Sobbing]，[npc.name]虚弱地反抗着，请求[npc2.name]放过[npc2.her]的[npc2.feet]。"));
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Totally ignoring [npc.namePos] protests, [npc2.name] gently, yet firmly, [npc2.verb(continue)] to push [npc2.her] [npc2.feet] against [npc.her] mouth, forcing [npc.herHim] to worship [npc2.her] [npc2.feet+].",
-							" Softly [npc2.moaning] in delight, [npc2.name] completely [npc2.verb(ignore)] [npc.namePos] protests and [npc2.verb(continue)] to push [npc2.her] [npc2.feet+] into [npc.her] [npc.face].",
-							" Not paying any attention to [npc.namePos] struggles, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc2.her] [npc2.feet+] against [npc.namePos] mouth."));
+							"完全无视[npc.namePos]的抗议，[npc2.name]温柔而坚定地将[npc2.her]的[npc2.foot]顶在[npc.her]的嘴上，迫使[npc.herHim]继续崇拜[npc2.her][npc2.foot+]。",
+							"完全无视[npc.namePos]的抗议，[npc2.name]高兴地轻轻[npc2.moaning]，继续把[npc2.her][npc2.feet+]推向[npc.her]的[npc.face]。",
+							"没有理会[npc2.namePos]的挣扎，[npc2.she]把[npc2.her][npc2.foots+]推到[npc.namePos]的嘴上，[npc2.name]发出[npc2.a_moon+]。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Totally ignoring [npc.namePos] protests, [npc2.name] dominantly [npc2.verb(push)] [npc2.her] [npc2.feet] against [npc.her] mouth, roughly forcing [npc.herHim] to worship [npc2.her] [npc2.feet+].",
-							" [npc2.Moaning+] in delight, [npc2.name] completely [npc2.verb(ignore)] [npc.namePos] protests and [npc2.verb(continue)] to roughly grind [npc2.her] [npc2.feet+] into [npc.her] [npc.face].",
-							" Not paying any attention to [npc.namePos] struggles, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] forcefully [npc2.verb(push)] [npc2.her] [npc2.feet+] against [npc.namePos] mouth."));
+							"完全无视[npc.namePos]的抗议，[npc2.name]支配地将[npc2.her]的[npc2.feet]顶在[npc.her]的嘴上，迫使[npc.herHim]继续崇拜[npc2.her][npc2.foot+]。",
+							"高兴地[npc2.Moaning+]，[npc2.name]完全无视[npc.namePos]的抗议，继续粗暴地用[npc2.her][npc2.foots+]在[npc.her][npc.face]上摩擦着。",
+							"没有理会[npc2.namePos]的挣扎，[npc2.she]激烈地把[npc2.her][npc2.foots+]推到[npc.namePos]的嘴上，[npc2.name]发出[npc2.a_moon+]。"));
 					break;
 				default: // DOM_NORMAL and in case anything goes wrong:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Totally ignoring [npc.namePos] protests, [npc2.name] firmly [npc2.verb(continue)] to push [npc2.her] [npc2.feet] against [npc.her] mouth, forcing [npc.herHim] to worship [npc2.her] [npc2.feet+].",
-							" [npc2.Moaning+] in delight, [npc2.name] completely [npc2.verb(ignore)] [npc.namePos] protests and [npc2.verb(continue)] to firmly push [npc2.her] [npc2.feet+] into [npc.her] [npc.face].",
-							" Not paying any attention to [npc.namePos] struggles, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc2.her] [npc2.feet+] against [npc.namePos] mouth."));
+							"完全无视[npc.namePos]的抗议，[npc2.name]继续坚决地将[npc2.her]的[npc2.feet]顶在[npc.her]的嘴上，迫使[npc.herHim]继续崇拜[npc2.her][npc2.foot+]。",
+							"高兴地[npc2.Moaning+]，[npc2.name]完全无视[npc.namePos]的抗议，继续坚决地用[npc2.her][npc2.foots+]在[npc.her][npc.face]上摩擦着。",
+							"没有理会[npc2.namePos]的挣扎，[npc2.she]把[npc2.her][npc2.foots+]推到[npc.namePos]的嘴上，[npc2.name]发出[npc2.a_moon+]。"));
 					break;
 			}
 			
@@ -363,11 +363,11 @@ public class FootMouth {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Stop worshipping [npc2.feet(true)]";
+			return "停止崇拜[npc2.feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Take your [npc.face] away from [npc2.namePos] [npc2.feet] and stop worshipping them.";
+			return "把你的[npc.face]从[npc2.namePos]的[npc2.feet]处移开并不再舔它们。";
 		}
 		@Override
 		public String getDescription() {
@@ -376,26 +376,26 @@ public class FootMouth {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"After planting one last, rough kiss on [npc2.namePos] [npc2.feet+], [npc.name] [npc.verb(lift)] [npc.her] head and [npc.verb(bring)] an end to [npc.her] worshipping.",
-							"Forcefully licking [npc2.namePos] [npc2.toes+] one last time, [npc.name] then [npc2.verb(pull)] back, putting an end to [npc.her] worship of [npc2.namePos] [npc2.feet+]."));
+							"在[npc2.namePos][npc2.feet+]上种下最后一个粗糙的吻后，[npc.name]抬起了头，结束对[npc.her]的崇拜。",
+							"[npc.name]强行舔舐了[npc2.namePos][npc2.toes+]最后一次，然后抽身而退，结束了对[npc2.namePos][npc2.feet+]的崇拜。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"After planting one last kiss on [npc2.namePos] [npc2.feet+], [npc.name] [npc.verb(lift)] [npc.her] head and [npc.verb(bring)] an end to [npc.her] worshipping.",
-							"Greedily licking [npc2.namePos] [npc2.toes+] one last time, [npc.name] then [npc2.verb(pull)] back, putting an end to [npc.her] worship of [npc2.namePos] [npc2.feet+]."));
+							"在[npc2.namePos][npc2.feet+]上种下最后一个吻后，[npc.name]抬起了头，结束对[npc.her]的崇拜。",
+							"[npc.name]贪婪地舔舐了[npc2.namePos][npc2.toes+]最后一次，然后抽身而退，结束了对[npc2.namePos][npc2.feet+]的崇拜。"));
 					break;
 			}
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case SUB_RESISTING:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] can't help but let out a relieved sob as [npc.name] moves away, before hopefully asking if [npc2.her] ordeal is now over.",
-							" With [npc2.a_sob+], [npc2.name] [npc2.verb(continue)] to struggle against [npc.name], tears streaming down [npc2.her] [npc2.face] as [npc2.she] [npc2.verb(beg)] to be left alone."));
+							"[npc.Name]挪开身体，[npc2.Name]不禁释然地抽噎了一声，然后满怀希望地询问这场磨难是否已经结束。",
+							"发出[npc2.a_sob+]，[npc2.name]仍然挣扎着试图摆脱[npc.name]，当[npc2.she]哀求对方放过自己时，眼泪忍不住像小溪一样从[npc2.her]的[npc2.face]上淌下。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] back, eager for more of [npc.her] attention.",
-							" [npc2.A_moan+] escapes from between [npc2.namePos] [npc2.lips+], betraying [npc2.her] lust for [npc.namePos] [npc.tongue+]."));
+							"当[npc.name]推开[npc2.her]时，[npc2.Name]发出[npc2.a_moan+]，渴求[npc.her]的更多“照顾”。",
+							"[npc2.namePos][npc2.lips+]间漏出一阵[npc2.A_moan+]，暴露了[npc2.she]对[npc.namePos][npc.tongue+]的渴望。"));
 					break;
 			}
 			
@@ -415,11 +415,11 @@ public class FootMouth {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Have [npc.feet(true)] worshipped";
+			return "被侍奉[npc.feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Get [npc2.name] to drop [npc2.her] head down to your [npc.feet] and start orally worshipping them.";
+			return "让[npc2.name]低头靠近你的[npc.feet]，开始用嘴侍奉它们。";
 		}
 		@Override
 		public String getDescription() {
@@ -430,39 +430,39 @@ public class FootMouth {
 				if(Main.sex.getCharacterPerformingAction().getLegType().getFootType().equals(FootType.HOOFS)) {
 					foundFootType = true;
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"With [npc.a_moan+], [npc.name] [npc.eagerly] [npc.verb(push)] [npc2.namePos] head down to [npc.her] hard hoofs, before getting [npc2.herHim] to kiss them and start orally worshipping [npc.her] [npc.feet+].",
-							"Pushing [npc2.namePos] head down to [npc.her] hard hoofs, [npc.name] can't help but [npc.moanVerb+] as [npc.she] [npc.verb(make)] [npc2.herHim] kiss and orally worship [npc.her] [npc.feet+]."));
+							"随着[npc.a_moon+]，[npc.name]急切地将[npc2.namePos]的头推向[npc.her]的硬蹄，让[npc2.herHim]亲吻它们，开始嘴巴崇拜[npc.her][npc.feet+]。",
+							"[npc.name]将硬蹄压向[npc2.namePos]的头部，让[npc2.name]亲吻并用嘴侍奉[npc.her][npc.feet+]，发出了一阵[npc.a_moan+]。"));
 					
 				} else if(Main.sex.getCharacterPerformingAction().getLegType().getFootType().equals(FootType.TALONS)) {
 					foundFootType = true;
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"With [npc.a_moan+], [npc.name] [npc.eagerly] [npc.verb(push)] [npc2.namePos] head down to [npc.her] bird-like feet, before getting [npc2.herHim] to kiss [npc.her] talons and start orally worshipping [npc.her] [npc.feet+].",
-							"Pushing [npc2.namePos] head down to [npc.her] bird-like feet, [npc.name] can't help but [npc.moanVerb+] as [npc.she] [npc.verb(make)] [npc2.herHim] kiss [npc.her] talons and orally worship [npc.her] [npc.feet+]."));
+							"[npc.Name]发出[npc.a_moan+], 急切地将[npc2.namePos]的头压向自己鸟状的脚上，让[npc2.herHim]亲吻爪子并侍奉[npc.feet+]。",
+							"[npc.Name]将[npc2.namePos]的头推向[npc.her]鸟状的脚，让[npc2.herHim]亲吻爪子并用嘴巴侍奉[npc.her][npc.feet+]，情不自禁发出[npc.moanVerb+]。"));
 					
 				} else if(Main.sex.getCharacterPerformingAction().getLegType().getFootType().equals(FootType.TENTACLE)) {
 					foundFootType = true;
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"With [npc.a_moan+], [npc.name] [npc.eagerly] [npc.verb(push)] [npc2.namePos] head down to [npc.her] tentacles, before getting [npc2.herHim] to kiss and start orally worshipping them.",
-							"Pushing [npc2.namePos] head down to [npc.her] tentacles, [npc.name] can't help but [npc.moanVerb+] as [npc.she] [npc.verb(make)] [npc2.herHim] kiss and orally worship them."));
+							"[npc.Name]发出[npc.a_moan+]，急切地将[npc2.namePos]的头推向[npc.her]的触手，让[npc2.namePos]亲吻并用嘴巴侍奉它们。",
+							"[npc.Name]将[npc2.namePos]的头推向[npc.her]的触手，让[npc2.name]亲吻并用嘴巴侍奉它们，发出[npc.moanVerb+]。"));
 				}
 			}
 			if(!foundFootType) {
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"With [npc.a_moan+], [npc.name] [npc.eagerly] [npc.verb(push)] [npc2.namePos] head down to [npc.her] [npc.feet], before getting [npc2.herHim] to kiss them and start orally worshipping them.",
-						"Pushing [npc2.namePos] head down to [npc.her] [npc.feet], [npc.name] can't help but [npc.moanVerb+] as [npc.she] [npc.verb(make)] [npc2.herHim] kiss and orally worship them."));
+						"[npc.Name]发出[npc.a_moan+]，急切地将[npc2.namePos]的头部推向[npc.her]的[npc.feet]，让[npc2.name]亲吻并开始用嘴巴侍奉它们。",
+						"[npc.name]将[npc.feet]压向[npc2.namePos]的头部，让[npc2.name]亲吻并用嘴侍奉它们，发出了一阵[npc.a_moan+]。"));
 			}
 
 			if(!isTargetedCharacterInanimate()) {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 					case SUB_RESISTING:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.name] [npc.eagerly] [npc.verb(push)] [npc.her] [npc.feet] against [npc2.her] mouth, and desperately [npc2.verb(try)] to pull away.",
-								" With [npc2.a_sob+], [npc2.name] [npc2.verb(struggle)] against [npc.name] as [npc.she] [npc.eagerly] [npc.verb(press)] [npc.her] [npc.feet+] against [npc2.her] mouth."));
+								"[npc.name]饥渴地将[npc.feet]压向[npc2.namePos]的嘴巴，[npc2.Name]发出[npc2.a_sob+]，绝望地尝试远离。",
+								"[npc.Name]急切地将[npc.feet+]压向[npc2.name]的嘴巴，[npc2.name]拼命反抗，发出一声[npc2.a_sob+]。"));
 						break;
 					default:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.eagerly] [npc2.verb(plant)] a series of kisses and licks on [npc.namePos] [npc.feet].",
-								" With [npc2.a_moan+], [npc2.name] [npc2.eagerly] [npc2.verb(start)] kissing and licking [npc.namePos] [npc.feet+]."));
+								"[npc2.name]发出一阵[npc2.a_moan+]，饥渴地亲吻并舔舐[npc.namePos]的[npc.feet]。",
+								"[npc2.name]发出[npc2.a_moan+]，急切地开始亲吻舔舐[npc.namePos][npc.feet+]。"));
 						break;
 				}
 			}
@@ -480,15 +480,15 @@ public class FootMouth {
 				case DOM_GENTLE:
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc.eagerly] [npc2.verb(lick)] and [npc2.verb(suck)] on [npc.namePos] [npc.toes+], letting out [npc2.a_moan+] as [npc2.she] [npc2.eagerly] [npc2.verb(worship)] [npc.her] [npc.feet+].",
-							" [npc2.A_moan+] bursts out from [npc2.namePos] mouth as [npc2.she] [npc2.verb(continue)] [npc.eagerly] licking and kissing [npc.namePos] [npc.feet+].",
-							" [npc2.Moaning] in delight, [npc2.name] [npc.eagerly] [npc2.verb(worship)] [npc.namePos] [npc.feet+] by planting a series of passionate kisses on them."));
+							"[npc2.Name]急切地舔舐吮吸[npc.namePos][npc.toes+]，饥渴地侍奉[npc.her][npc.feet+]，发出一阵[npc2.a_moan+]。",
+							"[npc2.namePos]的唇间迸发出一阵[npc2.A_moan+]，[npc2.she]急切地亲吻舔舐着[npc.namePos][npc.feet+]。",
+							"[npc2.name]兴奋地呻吟着，饥渴地捧着[npc.namePos][npc.feet+]，在上面留下了一串虔诚的吻。"));
 					break;
 				case SUB_RESISTING:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Failing to pull [npc2.her] [npc2.face] away from [npc.namePos] [npc.feet], [npc2.name] [npc2.verb(let)] out [npc2.a_sob+] as [npc2.she] weakly [npc2.verb(try)] to struggle free.",
-							" [npc2.A_sob+] bursts out from between [npc2.namePos] [npc2.lips] as [npc2.she] weakly [npc2.verb(try)] to push [npc.namePos] [npc.feet] away from [npc2.her] face.",
-							" [npc2.Sobbing] in distress, [npc2.name] [npc2.verb(try)], in vain, to pull [npc2.her] [npc2.face] away from [npc.namePos] [npc.feet+]."));
+							"[npc2.name]无法将[npc2.face]从[npc.namePos]的[npc.feet]边移开，[npc2.she]徒劳地挣扎着，发出[npc2.a_sob+]。",
+							"[npc2.namePos][npc2.lips]间爆发出一阵[npc2.A_sob+]，[npc2.she]无力地尝试将[npc.namePos]的[npc.feet]推离自己的脸。",
+							"[npc2.name]在痛苦中[npc2.Sobbing]着，徒劳地尝试将[npc2.face]从[npc.namePos][npc.feet+]中抽离。"));
 					break;
 			}
 		}
@@ -505,20 +505,20 @@ public class FootMouth {
 			SexPace.DOM_GENTLE) {
 		@Override
 		public String getActionTitle() {
-			return "Gentle [npc.feet(true)] worshipped";
+			return "被侍奉[npc.feet(true)](温柔)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Gently continue to push your [npc.feet+] into [npc2.namePos] [npc2.face].";
+			return "温柔地将你[npc.feet+]按向[npc2.namePos]的[npc2.face]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Gently pushing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] [npc.verb(let)] out a soft [npc.moan] as [npc.she] [npc.has] them orally worshipped.",
-					"With a soft [npc.moan], [npc.name] gently [npc.verb(push)] [npc.her] [npc.feet+] against [npc2.namePos] [npc2.lips+], giving [npc2.herHim] no option but to continue worshipping them.",
-					"Slowly pressing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] can't help but let out a soft [npc.moan] as [npc.she] [npc.has] them worshipped."));
+					"[npc.Name]温柔地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.face]，被侍奉时发出一阵柔软的[npc.moan]。",
+					"随着一阵柔软的[npc.moan]，[npc.Name]温柔地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.lips+]，除了侍奉不给[npc2.herHim]其他选择。",
+					"[npc.Name]缓慢地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.face]，被侍奉时不仅发出一阵柔软的[npc.moan]。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterReceivingResponse(this));
 			
@@ -536,20 +536,20 @@ public class FootMouth {
 			SexPace.DOM_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "[npc.Feet(true)] worshipped";
+			return "被侍奉[npc.Feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Continue to push your [npc.feet+] into [npc2.namePos] [npc2.face].";
+			return "继续将你[npc.feet+]按向[npc2.namePos]的[npc2.face]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"[npc.Eagerly] pushing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.has] them orally worshipped.",
-					"With [npc.a_moan+], [npc.name] [npc.eagerly] [npc.verb(push)] [npc.her] [npc.feet+] against [npc2.namePos] [npc2.lips+], giving [npc2.herHim] no option but to continue worshipping them.",
-					"[npc.Eagerly] pressing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] can't help but let out [npc.a_moan+] as [npc.she] [npc.has] them worshipped."));
+					"[npc.Name]急切地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.face]，被嘴巴侍奉时发出[npc.a_moan+]。",
+					"随着一阵[npc.a_moan+]，[npc.Name]急切地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.lips+]，让[npc2.herHim]除了继续侍奉外没有任何选择。",
+					"[npc.Name]急切地将[npc.her][npc.feet+]压向[npc2.namePos][npc2.face]，被嘴巴侍奉时不禁发出[npc.a_moan+]。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterReceivingResponse(this));
 			
@@ -567,20 +567,20 @@ public class FootMouth {
 			SexPace.DOM_ROUGH) {
 		@Override
 		public String getActionTitle() {
-			return "Rough [npc.feet(true)] worshipped";
+			return "被侍奉[npc.feet(true)](粗暴)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Roughly continue to push your [npc.feet+] into [npc2.namePos] [npc2.face].";
+			return "粗暴地将你[npc.feet+]按向[npc2.namePos]的[npc2.face]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"[npc.Eagerly] pushing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.has] them orally worshipped.",
-					"With [npc.a_moan+], [npc.name] [npc.eagerly] [npc.verb(push)] [npc.her] [npc.feet+] against [npc2.namePos] [npc2.lips+], giving [npc2.herHim] no option but to continue worshipping them.",
-					"[npc.Eagerly] pressing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] can't help but let out [npc.a_moan+] as [npc.she] [npc.has] them worshipped."));
+					"[npc.Name]急切地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.face]，被嘴巴侍奉时发出[npc.a_moan+]。",
+					"随着一阵[npc.a_moan+]，[npc.Name]急切地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.lips+]，让[npc2.herHim]除了继续侍奉外没有任何选择。",
+					"[npc.Name]急切地将[npc.her][npc.feet+]压向[npc2.namePos][npc2.face]，被嘴巴侍奉时不禁发出[npc.a_moan+]。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterReceivingResponse(this));
 			
@@ -598,20 +598,20 @@ public class FootMouth {
 			SexPace.SUB_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "[npc.Feet(true)] worshipped";
+			return "被侍奉[npc.Feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Continue to push your [npc.feet+] into [npc2.namePos] [npc2.face].";
+			return "继续将你[npc.feet+]按向[npc2.namePos]的[npc2.face]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Pushing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.has] them orally worshipped.",
-					"With [npc.a_moan+], [npc.name] [npc.verb(push)] [npc.her] [npc.feet+] against [npc2.namePos] [npc2.lips+], giving [npc2.herHim] no option but to continue worshipping them.",
-					"Pressing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] can't help but let out [npc.a_moan+] as [npc.she] [npc.has] them worshipped."));
+					"[npc.name]将[npc.feet+]压向[npc2.namePos]的[npc2.face]，让[npc2.name]用嘴侍奉它们，[npc.she]发出了一阵[npc.a_moan+]。",
+					"随着一阵[npc.a_moan+]，[npc.Name]将[npc.her][npc.feet+]压向[npc2.namePos][npc2.lips+]，让[npc2.herHim]除了继续侍奉外没有任何选择。",
+					"[npc.Name]将[npc.her][npc.feet+]压向[npc2.namePos][npc2.face]，在被侍奉时不禁发出一阵[npc.a_moan+]。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterReceivingResponse(this));
 			
@@ -629,20 +629,20 @@ public class FootMouth {
 			SexPace.SUB_EAGER) {
 		@Override
 		public String getActionTitle() {
-			return "Eager [npc.feet(true)] worshipped";
+			return "被侍奉[npc.feet(true)](渴求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Eagerly continue to push your [npc.feet+] into [npc2.namePos] [npc2.face].";
+			return "饥渴地将你[npc.feet+]按向[npc2.namePos]的[npc2.face]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"[npc.Eagerly] pushing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.has] them orally worshipped.",
-					"With [npc.a_moan+], [npc.name] [npc.eagerly] [npc.verb(push)] [npc.her] [npc.feet+] against [npc2.namePos] [npc2.lips+], giving [npc2.herHim] no option but to continue worshipping them.",
-					"[npc.Eagerly] pressing [npc.her] [npc.feet+] into [npc2.namePos] [npc2.face], [npc.name] can't help but let out [npc.a_moan+] as [npc.she] [npc.has] them worshipped."));
+					"[npc.Name]急切地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.face]，被嘴巴侍奉时发出[npc.a_moan+]。",
+					"随着一阵[npc.a_moan+]，[npc.Name]急切地将[npc.her][npc.feet+]推向[npc2.namePos][npc2.lips+]，让[npc2.herHim]除了继续侍奉外没有任何选择。",
+					"[npc.Name]急切地将[npc.her][npc.feet+]压向[npc2.namePos][npc2.face]，被嘴巴侍奉时不禁发出[npc.a_moan+]。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterReceivingResponse(this));
 			
@@ -660,39 +660,39 @@ public class FootMouth {
 			SexPace.SUB_RESISTING) {
 		@Override
 		public String getActionTitle() {
-			return "Resist [npc.feet(true)] worshipped";
+			return "被侍奉[npc.feet(true)](抵抗)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and pull your [npc.feet+] away from [npc2.namePos] [npc2.face+].";
+			return "试图让你[npc.feet+]远离[npc2.namePos][npc2.face+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"[npc.Name] desperately [npc.verb(try)], and [npc.verb(fail)], to pull [npc.her] [npc.feet] away from [npc2.namePos] [npc2.face], letting out [npc.a_sob+] in the process.",
-					"[npc.A_sob+] bursts out from between [npc.namePos] [npc.lips] as [npc.she] weakly tries to push [npc2.namePos] [npc2.face+] away from [npc.her] [npc.feet].",
-					"[npc.Sobbing] in distress, [npc.name] weakly [npc.verb(struggle)] against [npc2.name] as [npc.she] [npc.verb(plead)] for [npc2.herHim] to take [npc2.her] mouth away from [npc.her] [npc.feet]."));
+					"[npc.Name]发出[npc.a_sob+]，绝望地试图将[npc.her]的[npc.feet]从[npc2.namePos]的[npc2.face]上拉开，但失败了。",
+					"[npc.namePos][npc2.lips]间爆发出一阵[npc.a_sob+]，[npc.she]无力地尝试将[npc2.namePos][npc2.face+]推离自己的[npc.feet]。",
+					"[npc.Name]在痛苦中[npc.Sobbing]，虚弱地挣扎着，向[npc2.name]乞求把[npc2.her]的嘴从[npc.her][npc.feet]上移开。"));
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Totally ignoring [npc.namePos] protests, [npc2.name] gently, yet firmly, [npc2.verb(continue)] to worship [npc.her] [npc.feet+] by planting a series of licks and kisses on them.",
-							" Softly [npc2.moaning] in delight, [npc2.name] completely [npc2.verb(ignore)] [npc.namePos] protests and [npc2.verb(continue)] to orally worship [npc.her] [npc.feet+].",
-							" Not paying any attention to [npc.namePos] struggles, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(press)] [npc2.her] [npc2.lips+] against [npc.namePos] [npc.feet+]."));
+							"[npc2.name]完全无视[npc.namePos]的抗议，温柔而坚定地继续侍奉[npc.her][npc.feet+]，在其上留下了一串舔舐和亲吻。",
+							"[npc2.name]在愉悦中温柔地[npc2.moaning]，完全忽视[npc.namePos]的抗议，继续嘴巴侍奉[npc.her][npc.feet+]。",
+							"[npc2.name]完全不理[npc.namePos]的挣扎，将[npc2.her][npc2.lips+]抵向[npc.namePos][npc.feet+]，发出一阵[npc2.a_moan+]。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Totally ignoring [npc.namePos] protests, [npc2.name] dominantly [npc2.verb(continue)] to worship [npc.her] [npc.feet+] by planting a series of rough licks and kisses on them.",
-							" [npc2.Moaning+] in delight, [npc2.name] completely [npc2.verb(ignore)] [npc.namePos] protests and [npc2.verb(continue)] to forcefully worship [npc.her] [npc.feet+].",
-							" Not paying any attention to [npc.namePos] struggles, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] forcefully [npc2.verb(press)] [npc2.her] [npc2.lips+] against [npc.namePos] [npc.feet+]."));
+							"[npc2.name]完全忽视[npc.namePos]的抗议，继续支配地侍奉[npc.her][npc.feet+]，在其上留下一连串粗糙的舔舐和亲吻。",
+							"[npc2.name]在愉悦中[npc2.moaning+]，完全忽视[npc.namePos]的抗议，继续激烈地侍奉[npc.her][npc.feet+]。",
+							"[npc2.name]完全不理[npc.namePos]的挣扎，激烈地将[npc2.her][npc2.lips+]压向[npc.namePos][npc.feet+]，发出一阵[npc2.a_moan+]。"));
 					break;
 				default: // DOM_NORMAL and in case anything goes wrong:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Totally ignoring [npc.namePos] protests, [npc2.name] [npc.eagerly] [npc2.verb(continue)] to worship [npc.her] [npc.feet+] by planting a series of licks and kisses on them.",
-							" [npc2.Moaning+] in delight, [npc2.name] completely [npc2.verb(ignore)] [npc.namePos] protests and [npc2.verb(continue)] to orally worship [npc.her] [npc.feet+].",
-							" Not paying any attention to [npc.namePos] struggles, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(press)] [npc2.her] [npc2.lips+] against [npc.namePos] [npc.feet+]."));
+							"[npc2.name]完全忽视[npc.namePos]的抗议，继续急切地侍奉[npc.her][npc.feet+]，在其上留下一连串的亲吻和舔舐。",
+							"[npc2.name]在愉悦中[npc2.moaning+]，完全忽视[npc.namePos]的抗议，继续嘴巴侍奉[npc.her][npc.feet+]。",
+							"[npc2.name]完全不理[npc.namePos]的挣扎，将[npc2.her][npc2.lips+]抵向[npc.namePos][npc.feet+]，发出一阵[npc2.a_moan+]。"));
 					break;
 			}
 			
@@ -709,11 +709,11 @@ public class FootMouth {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Stop [npc.feet(true)] worshipped";
+			return "停止被侍奉[npc.feet(true)]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Pull your [npc.feet+] away from [npc2.namePos] [npc2.face+].";
+			return "将你[npc.feet+]抽离[npc2.namePos][npc2.face+]。";
 		}
 		@Override
 		public String getDescription() {
@@ -722,25 +722,25 @@ public class FootMouth {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"After roughly pushing [npc.her] [npc.feet+] into [npc2.namePos] face one last time, [npc.name] [npc.verb(pull)] them away and [npc.verb(put)] an end to [npc2.her] oral worshipping.",
-						"[npc.Name] [npc.verb(grind)] [npc.her] [npc.feet+] into [npc2.namePos] face one last time, before letting out an amused [npc.moan] and suddenly pulling them away from [npc2.her] mouth."));
+						"[npc.Name]最后一次粗暴地将[npc.her][npc.feet+]推向[npc2.namePos]的脸后，推开它们并结束了[npc2.her]的嘴巴侍奉。",
+						"[npc.Name]在[npc2.namePos]的脸上摩擦[npc.her][npc.feet+]，然后突然将它们移开[npc2.her]的嘴，发出一阵讥笑的[npc.moan]。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"After [npc.eagerly] pushing [npc.her] [npc.feet+] into [npc2.namePos] face one last time, [npc.name] [npc.verb(pull)] them away and [npc.verb(put)] an end to [npc2.her] oral worshipping.",
-						"[npc.Name] [npc.verb(push)] [npc.her] [npc.feet+] into [npc2.namePos] face one last time, before letting out [npc.a_moan+] and firmly pulling them away from [npc2.her] mouth."));
+						"[npc.Name]最后一次将[npc.her][npc.feet+]推向[npc2.namePos]的脸后，推开它们并结束了[npc2.her]的嘴巴侍奉。",
+						"[npc.Name]最后一次将[npc.feet+]压向[npc2.namePos]的脸，发出了[npc.a_moan+]，然后将它们从[npc2.her]的嘴边挪开。"));
 					break;
 			}
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case SUB_RESISTING:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						" [npc2.Name] [npc2.verb(let)] out a relieved sigh, which soon turns into [npc2.a_sob+] as [npc2.she] [npc2.verb(realise)] that [npc.name] [npc.has]n't finished with [npc2.herHim] just yet.",
-						" With [npc2.a_sob+], [npc2.name] [npc2.verb(continue)] to protest and struggle against [npc.name] as [npc.she] [npc.verb(hold)] [npc2.herHim] firmly in place."));
+						"[npc2.Name]松了一口气，但当[npc2.she]意识到[npc.name]还没满足时，又发出了一阵[npc2.a_sob+]。",
+						"[npc2.name]发出一阵[npc2.a_sob+]，继续反抗并挣扎着，但[npc.name]依然牢牢地将[npc2.she]固定在原位。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						" [npc2.A_moan+] escapes from between [npc2.namePos] [npc2.lips+], betraying [npc2.her] desire to continue licking and kissing [npc.her] [npc.feet]."));
+						"[npc2.namePos][npc2.lips+]间漏出一阵[npc2.A_moan+]，暴露了[npc2.she]还想继续亲吻舔舐[npc.namePos]的[npc.feet]的渴望。"));
 					break;
 			}
 			

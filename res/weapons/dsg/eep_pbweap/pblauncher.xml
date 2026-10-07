@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		
-		<authorTag><![CDATA[Underneath the scope rails, there is a small engraving that reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在瞄准镜导轨下方，雕刻着一行小字：“执法者官方分配，DSG铸造厂生产。”]]></authorTag>
 	
 		<value>9000</value> 
 		
@@ -10,23 +10,23 @@
 		
 		<twoHanded>true</twoHanded>
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name><![CDATA[pepper grenade launcher]]></name>
+		<name><![CDATA[胡椒榴弹发射器]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[pepper grenade launchers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[胡椒榴弹发射器]]></namePlural> 
 		
-		<description><![CDATA[Originally designed to disperse pepper oil more efficiently via airburst, it was soon found that the residual heat from the bursting charge turned the aerosolized oil into a small explosive cloud. Despite being a serious design flaw, the Enforcers asked that it not be fixed.]]></description> 
+		<description><![CDATA[最初的设计是为了通过空爆更有效地散播胡椒油，但很快就发现，爆裂装药产生的余热将气溶胶油变成了一小团爆炸云。尽管这是一个严重的设计缺陷，但执法者要求不要修复它。]]></description> 
 		
-		<attackDescriptor>shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your pepper grenade launcher.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用你的胡椒榴弹发射器射向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(bring)] out the grenade launcher, [npc.verb(slap)] in a fresh magazine, [npc.verb(pull)] the charging handle, and [npc.verb(turn)] the safety off.]]></equipText>
+		<equipText><![CDATA[[npc.Name]拿出榴弹发射器，插入一个新的弹匣，拉动了拉机柄，然后关闭了保险。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(take)] out the magazine, and [npc.verb(turn)] the safety on, [npc.verb(pull)] the charging handle, and [npc.verb(put)] the grenade launcher away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]取出了弹匣，将安全装置打开，拉了拉拉机柄，确认了膛室内没有剩余的弹药，然后收起了榴弹发射器。]]></unequipText>
 		
 		<imageName>pblauncher_nomag.svg</imageName> 
 		
@@ -71,9 +71,9 @@
 	<!-- Descriptions that are used when hitting an enemy. One of the hitText values will be randomly selected each time the attacker hits their target. Follow the same guidelines as equipText. -->
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The grenade disperses a fine orange mist near [npc2.name] before engulfing [npc2.her] aura in a fiery cloud.
+		[npc.Name]用准镜瞄准[npc2.name]，扣动了扳机。榴弹在[npc2.name]身旁留下一团橙色烟雾，随后一团烈火便包围了[npc2.her]。
 		#IF game.isSillyModeEnabled()
-			#THEN [npc.speech(That's a spicy meatball!)] [npc.name] [npc.verb(shout)].  
+			#THEN [npc.speech(尝尝辣肉丸吧！)][npc.name]喊道。
 			#ENDIF
 		]]></hitText>
 	</hitDescriptions>
@@ -81,7 +81,7 @@
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The shot goes wide! The grenade explodes well away from [npc2.name].
+		[npc.Name]用准镜瞄准[npc2.name]，扣动了扳机。子弹偏向了一边！榴弹在[npc2.name]远处炸开了。
 		]]></missText>
 	</missDescriptions>
 	

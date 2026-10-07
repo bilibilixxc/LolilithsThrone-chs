@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Look in the mods folder for a commented version of this. -->
 <outfit>
 	<coreAttributes>
-		<name><![CDATA[generic harpy (feminine)]]></name>
+		<name><![CDATA[一般哈比(女性化)]]></name>
 		
-		<description><![CDATA[Feminine harpy clothing.]]></description>
+		<description><![CDATA[女式哈比服]]></description>
 		
 		<femininity>FEMININE</femininity>
 		

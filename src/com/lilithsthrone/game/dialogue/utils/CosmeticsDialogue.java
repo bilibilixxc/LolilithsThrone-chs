@@ -65,58 +65,58 @@ public class CosmeticsDialogue {
 	
 	private static Response getMainResponse(int index) {
 		if(index == 1){
-			return new ResponseTrade("Trade", UtilText.parse(beautician, "Ask [npc.name] what cosmetics or jewellery [npc.she] has for sale."), beautician);
+			return new ResponseTrade("交易", UtilText.parse(beautician, "询问[npc.name][npc.she]卖什么化妆品或者珠宝。"), beautician);
 			
 		} else if (index == 2) {
 			if (Main.game.getCurrentDialogueNode()==BEAUTICIAN_COSMETICS) {
-				return new Response("Makeup", "You are already looking at what cosmetics are available...", null);
+				return new Response("妆容", "你正在查看有什么化妆品……", null);
 				
 			} else if(!Main.game.getPlayer().isAbleToWearMakeup()) {
-				return new Response("Makeup", UtilText.parse(beautician, "As your body is made of "+Main.game.getPlayer().getBodyMaterial().getName()+", [npc.name] is unable to apply any makeup!"), null);
+				return new Response("妆容", UtilText.parse(beautician, "由于你的身体由"+Main.game.getPlayer().getBodyMaterial().getName()+"构成，[npc.name]无法对你化妆！"), null);
 				
 			} else {
-				return new Response("Makeup",
-						UtilText.parse(beautician, "[npc.Name] can apply many different styles and colours of lipstick, nail polish, and other forms of makeup."),
+				return new Response("化妆",
+						UtilText.parse(beautician, "[npc.Name]可以涂上各种风格和颜色的口红、指甲油以及其他形式的妆容。"),
 						BEAUTICIAN_COSMETICS);
 			}
 			
 		} else if (index == 3) {
 			if (Main.game.getCurrentDialogueNode()==BEAUTICIAN_HAIR) {
-				return new Response("Hair", "You are already looking at what hair styles are available...", null);
+				return new Response("头发", "你正在查看有什么可用的发型……", null);
 				
 			} else {
-				return new Response("Hair",
-					UtilText.parse(beautician, "[npc.Name] is able to dye, style, cut, and even lengthen your [pc.hair]."),
+				return new Response("发型",
+					UtilText.parse(beautician, "[npc.Name]可以给你的[pc.hair]染色、做造型、修剪甚至延长。"),
 					BEAUTICIAN_HAIR);
 			}
 
 		} else if (index == 4) {
 			if (Main.game.getCurrentDialogueNode()==BEAUTICIAN_PIERCINGS) {
-				return new Response("Piercings", "You are already looking at what piercings are available...", null);
+				return new Response("穿孔", "你正在查看有什么可用的穿孔……", null);
 				
 			} else {
-				return new Response("Piercings",
-						UtilText.parse(beautician, "[npc.Name] is able to pierce many different parts of your body."),
+				return new Response("穿孔",
+						UtilText.parse(beautician, "[npc.Name]可以给你的身体各处做穿孔。"),
 						BEAUTICIAN_PIERCINGS);
 			}
 
 		}  else if (index == 5) {
 			if (Main.game.getCurrentDialogueNode()==BEAUTICIAN_EYES) {
-				return new Response("Eyes", "You are already looking at what changes to your eyes are available...", null);
+				return new Response("眼睛", "你正在查看有什么可以对你眼睛进行的调整……", null);
 				
 			} else {
-				return new Response("Eyes",
-						UtilText.parse(beautician, "[npc.Name] is able to recolour your eyes, although it's quite demanding on [npc.her] aura, and is therefore very expensive."),
+				return new Response("眼睛",
+						UtilText.parse(beautician, "[npc.Name]可以更换你眼睛的颜色，不过这对[npc.her]的灵气要求很高，从而也十分昂贵。"),
 						BEAUTICIAN_EYES);
 			}
 
 		} else if (index == 6) {
 			if (Main.game.getCurrentDialogueNode()==BEAUTICIAN_SKIN_COLOUR) {
-				return new Response("Coverings", "You are already looking at what changes to your coverings are available...", null);
+				return new Response("体表覆盖", "你正在查看有什么可以对你体表进行的调整……", null);
 				
 			} else {
-				return new Response("Coverings",
-						UtilText.parse(beautician, "[npc.Name] is able to recolour all types of body coverings, such as skin, fur, and feathers. This is quite demanding on [npc.her] aura, and is therefore very expensive."),
+				return new Response("体表",
+						UtilText.parse(beautician, "[npc.Name]可以更改你各种类型体表的颜色，包括皮肤、皮毛、羽毛等。不过这对[npc.her]的灵气要求很高，从而也十分昂贵。"),
 						BEAUTICIAN_SKIN_COLOUR){
 					@Override
 					public void effects() {
@@ -127,24 +127,24 @@ public class CosmeticsDialogue {
 			
 		} else if (index == 7) {
 			if (Main.game.getCurrentDialogueNode()==BEAUTICIAN_OTHER) {
-				return new Response("Miscellaneous", "You are already looking at what miscellaneous services are available...", null);
+				return new Response("杂项", "你正在查看有什么可用的杂项服务……", null);
 				
 			} else {
-				return new Response("Miscellaneous", UtilText.parse(beautician, "[npc.Name] offers other miscellaneous services, such as anal bleaching."), BEAUTICIAN_OTHER);
+				return new Response("杂项", UtilText.parse(beautician, "[npc.Name]提供各类杂项服务，例如肛门漂白。"), BEAUTICIAN_OTHER);
 			}
 			
 		} else if (index == 8) {
 			if (Main.game.getCurrentDialogueNode()==BEAUTICIAN_TATTOOS) {
-				return new Response("Tattoos", "You are already looking at what tattoos are available...", null);
+				return new Response("纹身", "你正在查看有什么可用的纹身……", null);
 				
 			} else {
-				return new Response("Tattoos",
-						UtilText.parse(beautician, "[npc.Name] is able to both apply and remove tattoos. She's even able to apply arcane-enchanted tattoos, but they look to be very expensive..."),
+				return new Response("纹身",
+						UtilText.parse(beautician, "[npc.Name]可以添加或移除纹身。[npc.her]甚至能添加附魔了奥术的纹身，但看上去不便宜……"),
 						BEAUTICIAN_TATTOOS);
 			}
 
 		} else if (index == 0) {
-			return new Response("Back", "You've had enough of changing your appearance for now.", returnToNode) {
+			return new Response("返回", "你已经对外表做了足够的调整了。", returnToNode) {
 				@Override
 				public void effects() {
 					Main.game.setResponseTab(0);
@@ -158,11 +158,11 @@ public class CosmeticsDialogue {
 	
 	private static String getMoneyRemainingString() {
 		return "<h6 style='text-align:center;'>"
-					+ "You currently have [style.moneyFormat([pc.money], span)]"
+					+ "你当前拥有[style.moneyFormat([pc.money], span)]"
 				+ "</h6>";
 	}
 
-	public static final DialogueNode BEAUTICIAN_START = new DialogueNode("Cosmetics", "", true) {
+	public static final DialogueNode BEAUTICIAN_START = new DialogueNode("化妆品", "", true) {
 		@Override
 		public String getContent() {
 			return "";
@@ -173,7 +173,7 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_COSMETICS = new DialogueNode("Cosmetics", "", true) {
+	public static final DialogueNode BEAUTICIAN_COSMETICS = new DialogueNode("化妆品", "", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -182,22 +182,22 @@ public class CosmeticsDialogue {
 			
 			UtilText.nodeContentSB.append(
 					CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "腮红", "腮红(也叫胭脂)被用来粉饰脸颊，以显得更加年轻或凸显颧骨。", true, true)
 							
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "口红", "口红被用来为嘴唇提供色彩、质地或保护。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "眼线", "眼线用于眼廓周围，有助于修饰眼型或突出不同的特征。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "眼影", "眼影用来让使用者的眼睛更加凸显迷人。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on your [pc.hands].", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "指甲油", "指甲油用于给[pc.hands]添加色彩或提供保护。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on your [pc.feet].", true, true));
+							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "脚趾甲油", "脚趾甲油用于给[pc.feet]添加色彩或提供保护。", true, true));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -215,7 +215,7 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_HAIR = new DialogueNode("Hair", "", true) {
+	public static final DialogueNode BEAUTICIAN_HAIR = new DialogueNode("头发", "", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -223,12 +223,12 @@ public class CosmeticsDialogue {
 			UtilText.nodeContentSB.append(getMoneyRemainingString());
 			
 			UtilText.nodeContentSB.append(
-				CharacterModificationUtils.getKatesDivHairLengths(true, "Hair Length", "Hair length determines what hair styles you're able to have. The longer the hair, the more styles are available.")
+				CharacterModificationUtils.getKatesDivHairLengths(true, "头发长度", "头发长度决定了你能做的发型种类。头发越长，发型种类就越丰富。")
 
-				+CharacterModificationUtils.getKatesDivHairStyles(true, "Hair Style", "Hair style availability is determined by your hair length.")
+				+CharacterModificationUtils.getKatesDivHairStyles(true, "发型", "发型是否可用取决于你的头发长度。")
 				
 				+CharacterModificationUtils.getKatesDivCoveringsNew(true, Main.game.getPlayer().getHairType().getRace(), Main.game.getPlayer().getCovering(Main.game.getPlayer().getHairCovering()).getType(),
-						"[pc.Hair] Colour", "All hair recolourings are permanent, so if you want to change your colour again at a later time, you'll have to visit Kate again.", true, true));
+						"[pc.Hair]颜色", "所有毛发的改变颜色都是永久的，如果你之后又想要改变颜色，那就必须再来找凯特。", true, true));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -246,7 +246,7 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_SKIN_COLOUR = new DialogueNode("Coverings", "-", true) {
+	public static final DialogueNode BEAUTICIAN_SKIN_COLOUR = new DialogueNode("体表覆盖", "-", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -286,7 +286,7 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_EYES = new DialogueNode("Eyes", "-", true) {
+	public static final DialogueNode BEAUTICIAN_EYES = new DialogueNode("眼睛", "-", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -296,21 +296,21 @@ public class CosmeticsDialogue {
 			UtilText.nodeContentSB.append(
 					CharacterModificationUtils.getKatesDivCoveringsNew(
 							true, Main.game.getPlayer().getEyeType().getRace(), Main.game.getPlayer().getEyeCovering(),
-							"Irises", "The iris is the coloured part of the eye that's responsible for controlling the diameter and size of the pupil.", true, true)
+							"虹膜", "虹膜指的是眼睛中染色的部分，负责控制瞳孔的直径和大小。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
 							true, Race.NONE,
 							Main.game.getPlayer().getBodyMaterial()!=BodyMaterial.FLESH
 								?BodyCoveringType.getMaterialBodyCoveringType(Main.game.getPlayer().getBodyMaterial(), BodyCoveringCategory.EYE_PUPIL)
 								:BodyCoveringType.EYE_PUPILS,
-							"Pupils", "The pupil is a hole located in the centre of the iris that allows light to strike the retina.", true, true)
+							"瞳孔", "瞳孔是位于虹膜中心的透明物体，以便光线打在视网膜上。", true, true)
 		
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
 							true, Race.NONE,
 							Main.game.getPlayer().getBodyMaterial()!=BodyMaterial.FLESH
 								?BodyCoveringType.getMaterialBodyCoveringType(Main.game.getPlayer().getBodyMaterial(), BodyCoveringCategory.EYE_SCLERA)
 								:BodyCoveringType.EYE_SCLERA,
-							"Sclerae", "The sclera is the (typically white) part of the eye that surrounds the iris.", true, true));
+							"巩膜", "巩膜是眼睛中虹膜周围的部分(一般是白色)。", true, true));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -328,7 +328,7 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_PIERCINGS = new DialogueNode("Piercings", "-", true) {
+	public static final DialogueNode BEAUTICIAN_PIERCINGS = new DialogueNode("穿孔", "-", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -353,7 +353,7 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_OTHER = new DialogueNode("Miscellaneous", "", true) {
+	public static final DialogueNode BEAUTICIAN_OTHER = new DialogueNode("杂项", "", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -364,20 +364,20 @@ public class CosmeticsDialogue {
 					CharacterModificationUtils.getKatesDivAnalBleaching()
 					
 					+(Main.game.isFacialHairEnabled()
-							? CharacterModificationUtils.getKatesDivFacialHair(true, "Facial hair", "The body hair found on your face." 
-									+ (Main.game.isFemaleFacialHairEnabled() ? "" : " Feminine characters cannot grow facial hair."))
+							? CharacterModificationUtils.getKatesDivFacialHair(true, "胡须", "面部可见的体毛。" 
+									+ (Main.game.isFemaleFacialHairEnabled() ? "" : "女性化角色无法长出面部毛发。"))
 							:"")
 					
 					+(Main.game.isPubicHairEnabled()
-							?CharacterModificationUtils.getKatesDivPubicHair(true, "Pubic hair", "The body hair found in the genital area; located on and around your sex organs and crotch.")
+							?CharacterModificationUtils.getKatesDivPubicHair(true, "阴毛", "生殖器附近的体毛；位于性器官和下体附近。")
 							:"")
 					
 					+(Main.game.isBodyHairEnabled()
-							?CharacterModificationUtils.getKatesDivUnderarmHair(true, "Underarm hair", "The body hair found in your armpits.")
+							?CharacterModificationUtils.getKatesDivUnderarmHair(true, "腋毛", "腋窝处的体毛。")
 							:"")
 					
 					+(Main.game.isAssHairEnabled()
-							?CharacterModificationUtils.getKatesDivAssHair(true, "Ass hair", "The body hair found around your asshole.")
+							?CharacterModificationUtils.getKatesDivAssHair(true, "肛毛", "肛门附近的体毛。")
 							:"")
 					);
 			
@@ -387,7 +387,7 @@ public class CosmeticsDialogue {
 						|| (Main.game.isAssHairEnabled() &&  Main.game.getPlayer().getAssHairType().getType()==bct)
 						|| (Main.game.isPubicHairEnabled() && Main.game.getPlayer().getPubicHairType().getType()==bct)) {
 					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivCoveringsNew(
-							true, Race.NONE, bct, "Body hair", "Your body hair.", true, true));
+							true, Race.NONE, bct, "体毛", "你的体毛。", true, true));
 					
 				}
 			}
@@ -408,7 +408,7 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_TATTOOS = new DialogueNode("Tattoos", "-", true) {
+	public static final DialogueNode BEAUTICIAN_TATTOOS = new DialogueNode("纹身", "-", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
@@ -422,16 +422,16 @@ public class CosmeticsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==11) {
-				return new Response("Confirmations: ",
-						"Toggle tattoo removal confirmations."
-							+ " When turned on, it will take two clicks to remove tattoos."
-							+ " When turned off, it will only take one click.",
+				return new Response("确认状态：",
+						"开启纹身去除确认。"
+							+ "启用时，需要点击两次才能移除纹身。"
+							+ "关闭时只需要一次点击。",
 							BEAUTICIAN_TATTOOS) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.tattooRemovalConfirmations)
-									?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-									:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "确认状态："+(Main.getProperties().hasValue(PropertyValue.tattooRemovalConfirmations)
+									?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>开启</span>"
+									:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>关闭</span>");
 					}
 					
 					@Override
@@ -449,10 +449,10 @@ public class CosmeticsDialogue {
 		}
 	};
 	
-	public static final DialogueNode BEAUTICIAN_TATTOOS_ADD = new DialogueNode("Tattoos", "-", true) {
+	public static final DialogueNode BEAUTICIAN_TATTOOS_ADD = new DialogueNode("纹身", "-", true) {
 		@Override
 		public String getLabel() {
-			return "Tattoos: "+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getTattooSlotName());
+			return "纹身："+Util.capitaliseSentence(CharacterModificationUtils.tattooInventorySlot.getTattooSlotName());
 		}
 		@Override
 		public String getContent() {
@@ -467,15 +467,15 @@ public class CosmeticsDialogue {
 			int value = CharacterModificationUtils.tattoo.getValue();
 			if (index == 1) {
 				if(Main.game.getPlayer().getMoney()<value) {
-					return new Response("Apply ("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "You don't have enough money to get a tattoo!", null);
+					return new Response("应用("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "你没有足够的钱用来纹纹身！", null);
 					
 				} else if(CharacterModificationUtils.tattoo.getType().equals(TattooType.getTattooTypeFromId("innoxia_misc_none"))
 						&& CharacterModificationUtils.tattoo.getWriting().getText().isEmpty()
 						&& CharacterModificationUtils.tattoo.getCounter().getType()==TattooCounterType.NONE) {
-					return new Response("Apply ("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "You need to select a tattoo type, add some writing, or add a counter in order to make a tattoo!", null);
+					return new Response("应用("+UtilText.formatAsMoneyUncoloured(value, "span")+")", "你需要选择纹身类型，添加一些文字或计数指示才能形成完整的纹身！", null);
 					
 				} else {
-					return new Response("Apply ("+UtilText.formatAsMoney(value, "span")+")", UtilText.parse(beautician, "Tell [npc.name] that you'd like [npc.herHim] to give you this tattoo."), BEAUTICIAN_TATTOOS) {
+					return new Response("应用("+UtilText.formatAsMoney(value, "span")+")", UtilText.parse(beautician, "告诉[npc.name]你想让[npc.herHim]帮你纹上这个纹身。"), BEAUTICIAN_TATTOOS) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(Main.game.getPlayer().incrementMoney(-value));
@@ -489,7 +489,7 @@ public class CosmeticsDialogue {
 				}
 			
 			} else if(index==2) {
-				return new Response("Save/Load", "Save/Load tattoo presets.", TATTOO_SAVE_LOAD) {
+				return new Response("保存/加载", "保存/加载纹身预设。", TATTOO_SAVE_LOAD) {
 					@Override
 					public void effects() {
 						initTattooSaveLoadDialogue(BEAUTICIAN_TATTOOS_ADD);
@@ -497,7 +497,7 @@ public class CosmeticsDialogue {
 				};
 			
 			} else if(index==0) {
-				return new Response("Back", "Decide not to get this tattoo and return to the main selection screen.", BEAUTICIAN_TATTOOS);
+				return new Response("返回", "取消纹身并回到选择菜单。", BEAUTICIAN_TATTOOS);
 			}
 			
 			return null;
@@ -544,7 +544,7 @@ public class CosmeticsDialogue {
 		return loadedTattoosMap;
 	}
 
-	public static final DialogueNode TATTOO_SAVE_LOAD = new DialogueNode("Save tattoo files", "", true) {
+	public static final DialogueNode TATTOO_SAVE_LOAD = new DialogueNode("保存纹身文件", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			initSaveLoadMenu();
@@ -559,18 +559,18 @@ public class CosmeticsDialogue {
 			
 			saveLoadSB.append(
 					"<div class='container-full-width' style='padding:0; margin:0 0 8px 0;'>"
-							+ "Only standard characters (letters and numbers) will work for save file names."
-							+ "<br/>Hover over each tattoo's icon to see the full details of what will be saved/loaded."
+							+ "只有标准字符(字母和数字)才能用于保存文件名。"
+							+ "<br/>悬停在纹身图标上以查看要保存/读取的详细信息。"
 							+(!Main.game.isInNewWorld()
-								?"<br/>If a name is [style.colourBad(red)], then you cannot load that tattoo due to an incompatibility with your selected body area, or due to the tattoo having special effects which aren't available to you yet!"
-								:"<br/>If a name is [style.colourBad(red)], then you cannot load that tattoo due to an incompatibility with your selected body area.")
+								?"<br/>若名称为[style.colourBad(红色)]，则代表由于与选择的身体部位不兼容而无法读取该纹身，或由于纹身拥有你目前无法获取的特殊效果！"
+								:"<br/>若名称为[style.colourBad(红色)]，则代表由于与选择的身体部位不兼容而无法读取该纹身。")
 					+ "</div>"
 					+ "<div class='container-full-width' style='padding:0; margin:0;'>"
 						+ "<div class='container-full-width' style='width:calc(75% - 16px); text-align:center; background:transparent;'>"
-							+ "Name"
+							+ "名字"
 						+ "</div>"
 						+ "<div class='container-full-width' style='width:calc(25% - 16px); text-align:center; background:transparent;'>"
-							+ "Save | Load | Delete"
+							+ "读档 | 存档 | 删除"
 						+ "</div>"
 					+ "</div>");
 
@@ -592,16 +592,16 @@ public class CosmeticsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Confirmations: ",
-						"Toggle confirmations being shown when you click to load, overwrite, or delete a saved tattoo."
-							+ " When turned on, it will take two clicks to apply any button press."
-							+ " When turned off, it will only take one click.",
+				return new Response("确认状态：",
+						"在点击读取、覆写或删除纹身时会进入确认状态。"
+							+ "启用时，需要进行两次点击才能使行为生效。"
+							+ "关闭时只需要一次点击。",
 						TATTOO_SAVE_LOAD) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
-								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "再次确认："+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
+								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>开启</span>"
+								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>关闭</span>");
 					}
 					
 					@Override
@@ -615,7 +615,7 @@ public class CosmeticsDialogue {
 				};
 
 			} else if (index == 0) {
-				return new Response("Back", "Back to the tattoo menu.", returnToNodeFromTattooSaveLoad);
+				return new Response("返回", "返回纹身菜单。", returnToNodeFromTattooSaveLoad);
 			}
 			
 			return null;
@@ -733,7 +733,7 @@ public class CosmeticsDialogue {
 				for (File child : directoryListing) {
 					if (child.getName().equals(name+".xml")){
 						if(!allowOverwrite) {
-							Main.game.flashMessage(PresetColour.GENERIC_BAD, "Name already exists!");
+							Main.game.flashMessage(PresetColour.GENERIC_BAD, "名称已存在！");
 							return;
 						}
 					}
@@ -783,7 +783,7 @@ public class CosmeticsDialogue {
 		if(dialogueNode!=null) {
 			Main.game.setContent(new Response("", "", dialogueNode));
 		}
-		Main.game.flashMessage(PresetColour.GENERIC_GOOD, "Tattoo saved!");
+		Main.game.flashMessage(PresetColour.GENERIC_GOOD, "纹身已保存！");
 	}
 
 	public static Tattoo loadTattoo(String name) {
@@ -831,7 +831,7 @@ public class CosmeticsDialogue {
 			}
 			
 		} else {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "File not found...");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "未找到文件……");
 		}
 	}
 	

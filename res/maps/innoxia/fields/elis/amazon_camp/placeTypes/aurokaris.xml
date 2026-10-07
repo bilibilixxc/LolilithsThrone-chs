@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Aurokaris's tent]]></name>
-	<tooltipDescription><![CDATA[Aurokaris has her tent in this area of the Amazons' camp.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Aurokaris's tent in the Amazons' camp]]></virginityLossDescription>
+	<name><![CDATA[奥罗卡利斯的帐篷]]></name>
+	<tooltipDescription><![CDATA[奥罗卡利斯在亚马逊人营地拥有一顶自己的帐篷。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在亚马逊人营地的奥罗卡利斯帐篷里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>tents</svgName>
 	<colour>RACE_COW_MORPH</colour>

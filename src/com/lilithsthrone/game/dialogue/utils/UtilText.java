@@ -518,14 +518,14 @@ public class UtilText {
 				&& Main.sex.getAllParticipants().contains(target)
 				&& target.isSpeechMuffled()) {
 			if(Main.sex.isOngoingActionsBlockingSpeech(target)) {
-				modifiedSentence = Util.replaceWithMuffle(modifiedSentence, 2);
+				modifiedSentence = Util.replaceWithMuffle(modifiedSentence, 5);
 			}
 			
 		} else {
 			if(includePersonalityEffects) {
 				if(target.hasFetish(Fetish.FETISH_BIMBO)) {
 					if(target.isFeminine()) {
-						modifiedSentence = Util.addBimbo(modifiedSentence, 6);
+						modifiedSentence = Util.addBimbo(modifiedSentence, 10);
 					} else {
 						modifiedSentence = Util.addBro(modifiedSentence, 6);
 					}
@@ -543,7 +543,7 @@ public class UtilText {
 				
 				// Apply speech effects:
 				if(target.isSpeechMuffled()) {
-					modifiedSentence = Util.addMuffle(modifiedSentence, 5);
+					modifiedSentence = Util.addMuffle(modifiedSentence, 8);
 					
 				} else if(Main.game.isInSex() && Main.sex.getAllParticipants().contains(target)) {
 					if(Main.sex.isCharacterEngagedInOngoingAction(target)) {
@@ -629,7 +629,7 @@ public class UtilText {
 	public static String parseNPCSpeech(String text, Femininity femininity, boolean bimbo, boolean stutter, boolean doll) {
 		modifiedSentence = text;
 		if (bimbo) {
-			modifiedSentence = Util.addBimbo(modifiedSentence, 6);
+			modifiedSentence = Util.addBimbo(modifiedSentence, 10);
 		}
 		if (stutter) {
 			modifiedSentence = Util.addStutter(modifiedSentence, 4);
@@ -643,30 +643,30 @@ public class UtilText {
 	
 	// "Temporary" methods until I refine the way DialogueNodes work:
 	public static String getRequirementsDescription(AbstractPerk perkRequired) {
-		return ("You require the perk '<b style='color:"+perkRequired.getPerkCategory().getColour().toWebHexString()+";'>"+perkRequired.getName(Main.game.getPlayer())+"</b>'.");
+		return ("你需要天赋“<b style='color:"+perkRequired.getPerkCategory().getColour().toWebHexString()+";'>"+perkRequired.getName(Main.game.getPlayer())+"</b>”。");
 	}
 	
 	public static String getRequirementsDescription(AbstractPerk perkRequired, Gender... gendersRequired) {
 		descriptionSB.setLength(0);
 		
-		descriptionSB.append("You require the perk '<b style='color:"+perkRequired.getPerkCategory().getColour().toWebHexString()+";'>"+perkRequired.getName(Main.game.getPlayer())+"</b>'");
+		descriptionSB.append("你需要天赋“<b style='color:"+perkRequired.getPerkCategory().getColour().toWebHexString()+";'>"+perkRequired.getName(Main.game.getPlayer())+"</b>”");
 		
 		if(gendersRequired.length==0) {
-			descriptionSB.append(".");
+			descriptionSB.append("。");
 		} else {
-			descriptionSB.append(", and need to be a ");
+			descriptionSB.append("，且需要成为");
 			
 			for(int i=0 ;i<gendersRequired.length; i++) {
 				if(i!=0) {
 					if(i==gendersRequired.length-1)
-						descriptionSB.append(", or ");
+						descriptionSB.append("，或");
 					else
-						descriptionSB.append(", ");
+						descriptionSB.append("，");
 				}
 				descriptionSB.append("<b style='color:"+gendersRequired[i].getColour().toWebHexString()+";'>"+gendersRequired[i].getName()+"</b>");
 			}
 			
-			descriptionSB.append(".");
+			descriptionSB.append("。");
 		}
 		
 		return descriptionSB.toString();
@@ -675,24 +675,24 @@ public class UtilText {
 	public static String getRequirementsDescription(CorruptionLevel corruptionNeeded, AbstractPerk... perkRequired) {
 		descriptionSB.setLength(0);
 		
-		descriptionSB.append("You require a corruption level of <b style='color:"+corruptionNeeded.getColour().toWebHexString()+";'>"+corruptionNeeded.getName()+"</b>");
+		descriptionSB.append("你需要堕落等级：<b style='color:"+corruptionNeeded.getColour().toWebHexString()+";'>"+corruptionNeeded.getName()+"</b>");
 		
 		if(perkRequired.length==0) {
-			descriptionSB.append(".");
+			descriptionSB.append("。");
 		} else {
-			descriptionSB.append(", or the perk"+(perkRequired.length>1?"s ":" "));
+			descriptionSB.append("，或者天赋"+(perkRequired.length>1?"":""));
 			
 			for(int i=0 ;i<perkRequired.length; i++) {
 				if(i!=0) {
 					if(i==perkRequired.length-1)
-						descriptionSB.append(", or ");
+						descriptionSB.append("，或");
 					else
-						descriptionSB.append(", ");
+						descriptionSB.append("，");
 				}
 				descriptionSB.append("<b style='color:"+perkRequired[i].getPerkCategory().getColour().toWebHexString()+";'>"+perkRequired[i].getName(Main.game.getPlayer())+"</b>");
 			}
 			
-			descriptionSB.append(".");
+			descriptionSB.append("。");
 		}
 		
 		return descriptionSB.toString();
@@ -725,7 +725,7 @@ public class UtilText {
 	public static String getInfinitySymbol(boolean largerFont) {
 		//"&#9854;";
 //		return "<span style='font-family:serif; font-weight:normal; font-size:1.25em;'>&#8734;</span>";
-		return "<span style='font-weight:normal; font-family:sans-serif; color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+"; "+(largerFont?"font-size:28px;":"")+"'>&#8734;</span>";
+		return "<span style='font-weight:normal; font-family:sans-serif; color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+"; "+(largerFont?"font-size:22px;":"")+"'>&#8734;</span>";
 	}
 
 	public static String applyGlow(String input) {
@@ -872,7 +872,7 @@ public class UtilText {
 	 * @return The word, with an appropriate determiner (either 'a' or 'an' ) added in front of it.
 	 */
 	public static String addDeterminer(String word) {
-		return generateSingularDeterminer(word)+" "+word;
+		return generateSingularDeterminer(word)+word;
 	}
 	
 	/**
@@ -885,10 +885,10 @@ public class UtilText {
 		if ((isVowel(word.charAt(0)) || word.charAt(0)=='x' || word.charAt(0)=='X')
 				 && !word.startsWith("Uni") && !word.startsWith("uni")
 				 && !word.startsWith("Used") && !word.startsWith("used")) {
-			return "an";
+			return "";
 			
 		} else {
-			return "a";
+			return "";
 		}
 	}
 
@@ -979,7 +979,7 @@ public class UtilText {
 		}
 		
 		if(strings.isEmpty()) {
-			return "<p><span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Dialogue for '"+tag+"' not found! (Make sure that the 'res' folder is in the same directory as the .jar or .exe.)</span></p>";
+			return "<p><span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>“"+tag+"”的对话未找到！(请保证“res”文件夹与.jar或.exe文件处于同一目录下)</span></p>";
 
 		} else {
 			return parse(new ArrayList<>(specialNPC), strings.get(Util.random.nextInt(strings.size())), true, parserTags);
@@ -1021,18 +1021,18 @@ public class UtilText {
 		}
 		
 		if(strings.isEmpty()) {
-			return "<p><span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>No dialogues found! (Make sure that the 'res' folder is in the same directory as the .jar or .exe.)</span></p>";
+			return "<p><span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>未找到任何对话！(请保证“res”文件夹与.jar或.exe文件处于同一目录下)</span></p>";
 
 		} else {
 			StringBuilder sb = new StringBuilder();
 			StringBuilder duplicationSB = new StringBuilder();
 			for(Entry<String, List<String>> s : strings.entrySet()) {
 				if(s.getValue().size()>1) {
-					duplicationSB.append("[style.italicsMinorBad(XML test duplication: tag '"+s.getKey()+"' is repeated "+s.getValue().size()+" times!)]<br/>");
+					duplicationSB.append("[style.italicsMinorBad(XML测试重复：标签“"+s.getKey()+"”重复"+s.getValue().size()+"次！)]<br/>");
 				}
 				for(String savedString : s.getValue()) {
 					sb.append("<p>"
-								+ "<b>Dialogue tag: "+s.getKey()+"</b>"
+								+ "<b>对话标签："+s.getKey()+"</b>"
 							+ "</p>"
 							+ parse(specialNPC, savedString, true)
 							+"<br/><br/>");
@@ -1558,8 +1558,8 @@ public class UtilText {
 
 	public static String convertToAmericanEnglish(String input) {
 		for(Entry<String, String> entry : americanEnglishConversions.entrySet()) {
-			input = input.replaceAll(entry.getKey()+"(\\s|\\.|,|s|e|i)", entry.getValue()+"$1");
-			input = input.replaceAll(Util.capitaliseSentence(entry.getKey())+"(\\s|\\.|,|s|e|i)", Util.capitaliseSentence(entry.getValue())+"$1");
+			//input = input.replaceAll(entry.getKey()+"(\\s|\\.|,|s|e|i)", entry.getValue()+"$1");
+			//input = input.replaceAll(Util.capitaliseSentence(entry.getKey())+"(\\s|\\.|,|s|e|i)", Util.capitaliseSentence(entry.getValue())+"$1");
 		}
 		
 		return input;
@@ -1580,7 +1580,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of what kind of wall is in the character's area (for having sex against)."){
+				"返回角色所在区域墙体的名字(用于性交时)。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				Cell cell = character.getCell();
@@ -1593,7 +1593,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of what kind of desk is in the character's area (for having sex over)."){
+				"防御角色锁在区域桌子的种类名(用于性交时)。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				Cell cell = character.getCell();
@@ -1605,8 +1605,8 @@ public class UtilText {
 				Util.newArrayListOfValues("moneyFormat"),
 				true,
 				false,
-				"(amount, tag)",
-				"Formats the supplied number as money, using the tag as the html tag."){
+				"(数量, 标签)",
+				"将提供的数字转化为金钱格式，使用tag作为html的标签。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				String secondArgument = "span";
@@ -1624,8 +1624,8 @@ public class UtilText {
 				Util.newArrayListOfValues("essenceFormat"),
 				true,
 				false,
-				"(amount, tag)",
-				"Formats the supplied number as essences, using the tag as the html tag."){
+				"(数量, 标签)",
+				"将提供的数字转化为精华点数的格式，使用tag作为html的标签。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				String secondArgument = "span";
@@ -1643,8 +1643,8 @@ public class UtilText {
 				Util.newArrayListOfValues("enchantmentCapacityFormat"),
 				true,
 				false,
-				"(amount, tag)",
-				"Formats the supplied number as enchantment capacity, using the tag as the html tag."){
+				"(数量, 标签)",
+				"将提供的数字转化为附魔上限，使用tag作为html的标签。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				String secondArgument = "span";
@@ -1665,8 +1665,8 @@ public class UtilText {
 						"parseInt"),
 				false,
 				false,
-				"(integer)",
-				"Formats the passed integer argument as a String.") {
+				"(整数)",
+				"将传入的整数转化为字符串格式。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Util.intToString(Long.valueOf(UtilText.parse(arguments)));
@@ -1681,8 +1681,8 @@ public class UtilText {
 						"moneyFormatNoColor"),
 				true,
 				false,
-				"(amount, tag)",
-				"Formats the supplied number as money, using the tag as the html tag."){
+				"(数量, 标签)",
+				"将提供的数字转化为金钱格式，使用tag作为html的标签。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return UtilText.formatAsMoneyUncoloured(arguments.split(", ")[0], arguments.split(", ")[1]);
@@ -1693,8 +1693,8 @@ public class UtilText {
 				Util.newArrayListOfValues("money"),
 				true,
 				false,
-				"(asWords)",
-				"Returns how much money the character has. Pass in true to format the integer into words (e.g. 100 -> one hundred).") {
+				"(是否汉字输出)",
+				"返回角色拥有的金钱。传入true则使用汉字显示数字(例如100 -> 一百)。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null && (arguments.equalsIgnoreCase("true"))) {
@@ -1708,8 +1708,8 @@ public class UtilText {
 				Util.newArrayListOfValues("random"),
 				true,
 				false,
-				"(text1 | text2 | text3)",
-				"Returns a random string from the supplied arguments. Nesting 'random' commands inside one another currently does not work.") {
+				"(文本1| 文本2| 文本3)",
+				"从提供的参数中随机选择一个字符串。嵌套使用'random'命令目前无效。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				List<String> strings = new ArrayList<>();
@@ -1728,10 +1728,10 @@ public class UtilText {
 				Util.newArrayListOfValues("name"),
 				true,
 				false,
-				"(prefix/real name)",
-				"Returns the name of the target, <b>automatically appending</b> 'the' to names that don't start with a capital letter."
-				+ " If a prefix is provided, the prefix will be appended (with an automatic addition of a space) to non-capitalised names."
-				+ " If a blank space or 'true' is set as the argument, the character's true name will be returned, ignoring whether or not the player knows it."){
+				"(前缀/真实名称)",
+				"返回对象的名称，对于非大写字母开头的名字，<b>自动添加“the”(汉化版中不会)</b>。"
+				+ "如果提供了前缀，那前缀将会被添加在名称前。"
+				+ "如果设置了空格或“true”作为参数，则会返回角色的真实姓名，而忽略玩家是否知道。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
@@ -1749,15 +1749,15 @@ public class UtilText {
 				} else {
 					if(isPlayer(target, character)) {
 						if(command.startsWith("N")) {
-							return "You";
+							return "你";
 						} else {
-							return "you";
+							return "你";
 						}
 					}
 					if(character.isPlayerKnowsName() || character.isPlayer()) {
 						return character.getName(true);
 					}
-					return character.getName("the");
+					return character.getName();
 				}
 			}
 		});
@@ -1766,32 +1766,32 @@ public class UtilText {
 				Util.newArrayListOfValues("namePos"),
 				true,
 				false,
-				"(prefix/real name)",
-				"Returns a possessive version of the name of the target, <b>automatically appending</b> 'the' to names that don't start with a capital letter."
-				+ " If you need the actual name (for player third-person reference, or to ignore knowledge of name), pass either ' ' or 'true' as an argument.") {
+				"(前缀/真实名称)",
+				"返回对象名称的所有格(汉化版中仅为名称)，对于非大写字母开头的名字，<b>自动添加“the”(汉化版中不会)</b>。"
+				+ "如果需要实际的名字(从玩家的第三人称视角，或无视玩家目前知识)，请将“ ”或者“true”作为参数传入。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					if(arguments.equals(" ") || arguments.equalsIgnoreCase("true")) {
-						return character.getNameIgnoresPlayerKnowledge()+"'s";
+						return character.getNameIgnoresPlayerKnowledge();
 					}
-					return character.getName(arguments) + "'s";
+					return character.getName(arguments);
 					
 				} else if(!speechTarget.isEmpty()) {
-					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR)+"'s";
+					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR);
 					
 				} else {
 					if(isPlayer(target, character)) {
 						if(command.startsWith("N")) {
-							return "Your";
+							return "你";
 						} else {						 
-							return "your";
+							return "你";
 						}
 					}
 					if(character.isPlayerKnowsName()) {
-						return character.getName(true) + "'s";
+						return character.getName(true);
 					}
-					return character.getName("the") + "'s";
+					return character.getName();
 				}
 			}
 		});
@@ -1800,28 +1800,28 @@ public class UtilText {
 				Util.newArrayListOfValues("nameIs"),
 				true,
 				false,
-				"(prefix/real name)",
-				"Returns a contractive version of the name of the target, <b>automatically appending</b> 'the' to names that don't start with a capital letter."
-				+ " If you need the actual player name for third-person reference, passin 'true' as an argument.") {
+				"(前缀/真实名称)",
+				"返回对象名称带缩写系动词(汉化版中仅为名称)，对于非大写字母开头的名字，<b>自动添加“the”(汉化版中不会)</b>。"
+				+ "如果需要以第三人称视角获得玩家的实际姓名，请将“true”作为参数传入。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					if(arguments.equals(" ") || arguments.equalsIgnoreCase("true")) {
-						return character.getNameIgnoresPlayerKnowledge()+"'s";
+						return character.getNameIgnoresPlayerKnowledge();
 					}
-					return character.getName(arguments) + "'s";
+					return character.getName(arguments);
 					
 				} else if(!speechTarget.isEmpty()) {
-					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR)+"'s";
+					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR);
 					
 				} else {
 					if(isPlayer(target, character)) {
-						return "you're";
+						return "你";
 					}
 					if(character.isPlayerKnowsName()) {
-						return character.getName(true) + "'s";
+						return character.getName(true);
 					}
-					return character.getName("the") + "'s";
+					return character.getName();
 				}
 			}
 		});
@@ -1830,27 +1830,27 @@ public class UtilText {
 				Util.newArrayListOfValues("nameIsFull"),
 				true,
 				false,
-				"(prefix/real name)",
-				"Returns a contractive version of the name of the target, <b>automatically appending</b> 'the' to names that don't start with a capital letter.") {
+				"(前缀/真实名称)",
+				"返回对象名称带系动词(汉化版中仅为名称)，对于非大写字母开头的名字，<b>自动添加“the”(汉化版中不会)</b>。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					if(arguments.equals(" ") || arguments.equalsIgnoreCase("true")) {
-						return character.getNameIgnoresPlayerKnowledge()+" is";
+						return character.getNameIgnoresPlayerKnowledge();
 					}
-					return character.getName(arguments) + " is";
+					return character.getName(arguments);
 					
 				} else if(!speechTarget.isEmpty()) {
-					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR)+" is";
+					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR);
 					
 				} else {
 					if(isPlayer(target, character)) {
-						return "you are";
+						return "你";
 					}
 					if(character.isPlayerKnowsName()) {
-						return character.getName(true) + " is";
+						return character.getName(true);
 					}
-					return character.getName("the") + " is";
+					return character.getName();
 				}
 			}
 		});
@@ -1859,28 +1859,28 @@ public class UtilText {
 				Util.newArrayListOfValues("nameHas"),
 				true,
 				false,
-				"(prefix/real name)",
-				"Returns a contractive version of the name of the target, <b>automatically appending</b> 'the' to names that don't start with a capital letter."
-				+ " If you need the actual player name for third-person reference, passin 'true' as an argument.") {
+				"(前缀/真实名称)",
+				"返回对象名称带缩写“have”或“has”(汉化版中仅为名称)，对于非大写字母开头的名字，<b>自动添加“the”(汉化版中不会)</b>。"
+				+ "如果需要以第三人称视角获得玩家的实际姓名，请将“true”作为参数传入。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					if(arguments.equals(" ") || arguments.equalsIgnoreCase("true")) {
-						return character.getNameIgnoresPlayerKnowledge()+"'s";
+						return character.getNameIgnoresPlayerKnowledge();
 					}
-					return character.getName(arguments) + "'s";
+					return character.getName(arguments);
 					
 				} else if(!speechTarget.isEmpty()) {
-					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR)+"'s";
+					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR);
 					
 				} else {
 					if(isPlayer(target, character)) {
-						return "you've";
+						return "你";
 					}
 					if(character.isPlayerKnowsName()) {
-						return character.getName(true) + "'s";
+						return character.getName(true);
 					}
-					return character.getName("the") + "'s";
+					return character.getName();
 				}
 			}
 		});
@@ -1889,27 +1889,27 @@ public class UtilText {
 				Util.newArrayListOfValues("nameHasFull"),
 				true,
 				false,
-				"(prefix/real name)",
-				"Returns a contractive version of the name of the target, <b>automatically appending</b> 'the' to names that don't start with a capital letter, followed by 'has' or 'have'.") {
+				"(前缀/真实名称)",
+				"返回对象名称带完整“have”或“has”(汉化版中仅为名称)，对于非大写字母开头的名字，<b>自动添加“the”(汉化版中不会)</b>。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					if(arguments.equals(" ") || arguments.equalsIgnoreCase("true")) {
-						return character.getNameIgnoresPlayerKnowledge()+" has";
+						return character.getNameIgnoresPlayerKnowledge();
 					}
-					return character.getName(arguments) + " has";
+					return character.getName(arguments);
 					
 				} else if(!speechTarget.isEmpty()) {
-					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR)+" has";
+					return parseSyntaxNew(specialNPCs, speechTarget, parseCapitalise?"PetName":"petName", target, ParseMode.REGULAR);
 					
 				} else {
 					if(isPlayer(target, character)) {
-						return "you have";
+						return "你";
 					}
 					if(character.isPlayerKnowsName()) {
-						return character.getName(true) + " has";
+						return character.getName(true);
 					}
-					return character.getName("the") + " has";
+					return character.getName();
 				}
 			}
 		});
@@ -1920,8 +1920,8 @@ public class UtilText {
 						"verbPerson"),
 				true,
 				false,
-				"(verb)",
-				"Returns a verb in the (probably) correct person for this character. A player might get 'wiggle' where an NPC would get 'wiggles'.") {
+				"(动词)",
+				"返回动词的正确形式(大概)。汉化版无意义。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (character.isPlayer()) {
@@ -1931,16 +1931,16 @@ public class UtilText {
 						||arguments.endsWith("sh")
 						||arguments.endsWith("ch")
 						||arguments.endsWith("o")){
-					return arguments + "es";
+					return arguments;
 				} else if (arguments.endsWith("y")
 						&&!arguments.endsWith("ay")
 						&&!arguments.endsWith("ey")
 						&&!arguments.endsWith("iy")
 						&&!arguments.endsWith("oy")
 						&&!arguments.endsWith("uy")) {
-					return arguments.substring(0, arguments.length()-1) + "ies";
+					return arguments;
 				}else {
-					return arguments + "s";
+					return arguments;
 				}
 			}
 		});
@@ -1952,7 +1952,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate present first person singular verb for this character's movement."){
+				"返回该角色移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getMovementVerbPresentFirstPersonSingular();
@@ -1966,7 +1966,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate present third person singular verb for this character's movement."){
+				"返回该角色移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getMovementVerbPresentThirdPersonSingular();
@@ -1980,7 +1980,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate present participle verb for this character's movement."){
+				"返回该角色移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getMovementVerbPresentParticiple();
@@ -1994,7 +1994,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate past participle verb for this character's movement."){
+				"返回该角色移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getMovementVerbPastParticiple();
@@ -2008,7 +2008,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate present first person singular verb for this character's individual movement action."){
+				"返回该角色进行一步移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getIndividualMovementVerbPresentFirstPersonSingular();
@@ -2022,7 +2022,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate present third person singular verb for this character's individual movement action."){
+				"返回该角色进行一步移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getIndividualMovementVerbPresentThirdPersonSingular();
@@ -2036,7 +2036,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate present participle verb for this character's individual movement action."){
+				"返回该角色进行一步移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getIndividualMovementVerbPresentParticiple();
@@ -2050,7 +2050,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the appropriate past participle verb for this character's individual movement action."){
+				"返回该角色进行一步移动时的合适动词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getLegConfiguration().getIndividualMovementVerbPastParticiple();
@@ -2062,7 +2062,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the surname of the target."){
+				"返回对象的姓氏。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getSurname();
@@ -2075,18 +2075,18 @@ public class UtilText {
 						"nameFull"),
 				true,
 				false,
-				"(prefix)",
-				"Returns the name of the target, <b>automatically appending</b> 'the' to names that don't start with a capital letter. If you want the basic form of the name, pass in a space as an argument."
-				+ " If a prefix is provided, the prefix will be appended (with an automatic addition of a space) to non-capitalised names."){
+				"(前缀)",
+				"返回对象的名字，对于非大写字母开头的名字，<b>自动添加“the”(汉化版中不会)</b>。如果你想使用名字的基础形式，请在参数中传入一个空格。"
+				+ "如果提供了前缀，那前缀将会被添加在名称前。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					if(arguments.equals(" ") || arguments.equalsIgnoreCase("true")) {
-						return character.getNameIgnoresPlayerKnowledge()+(character.getSurname().isEmpty()?"":" "+character.getSurname());
+						return character.getNameIgnoresPlayerKnowledge()+(character.getSurname().isEmpty()?"":"·"+character.getSurname());
 					}
-					return character.getName(arguments)+(character.getSurname().isEmpty()?"":" "+character.getSurname());
+					return character.getName(arguments)+(character.getSurname().isEmpty()?"":"·"+character.getSurname());
 				} else {
-					return character.getName(false)+(character.getSurname().isEmpty()?"":" "+character.getSurname());
+					return character.getName(false)+(character.getSurname().isEmpty()?"":"·"+character.getSurname());
 				}
 			}
 		});
@@ -2098,7 +2098,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the name that this character prefers to call the player by."){
+				"返回该角色希望被玩家称呼的名字。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getPetName(Main.game.getPlayer());
@@ -2110,8 +2110,8 @@ public class UtilText {
 						"petName"),
 				true,
 				false,
-				"(target)",
-				"Returns the pet name that this character prefers to call the target by. Target argument should be a parsing target tag, such as 'pc', 'npc2', 'lilaya', etc."){
+				"(对象)",
+				"返回该角色希望被对象称呼的爱称。对象的参数应当为一个解析对象的标签，如“pc”、“npc2”、“lilaya”等等。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractParserTarget parserTarget = findParserTargetWithTag(arguments.replaceAll("\u200b", ""));
@@ -2141,7 +2141,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns a brief descriptive overview of this character."){
+				"返回该角色简短的整体描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getDescription();
@@ -2154,7 +2154,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the age of this character."){
+				"返回该角色的年龄。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Util.intToString(character.getAgeValue());
@@ -2168,7 +2168,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's job."){
+				"返回该角色的职位。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isSlave()) {
@@ -2184,7 +2184,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's desired job."){
+				"返回该角色期望的职位。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getDesiredJobs().iterator().next().getName(character);
@@ -2198,7 +2198,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the twenty-four hour start time for this character's job. Does not work for slave jobs."){
+				"返回该角色职位开始工作的时间(24小时制)；奴隶的工作无法查询。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return String.valueOf(character.getHistory().getWorkHourStart());
@@ -2214,7 +2214,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the twenty-four hour end time for this character's job. Does not work for slave jobs."){
+				"返回该角色职位结束工作的时间(24小时制)；奴隶的工作无法查询。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return String.valueOf(character.getHistory().getWorkHourEnd());
@@ -2228,7 +2228,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the locale-adapted start time for this character's job. Does not work for slave jobs."){
+				"返回该角色职位开始工作的时间(本地时)；奴隶的工作无法查询。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Units.time(LocalTime.of(character.getHistory().getWorkHourStart(), 0, 0));
@@ -2244,7 +2244,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the locale-adapted end time for this character's job. Does not work for slave jobs."){
+				"返回该角色职位结束工作的时间(本地时)；奴隶的工作无法查询。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Units.time(LocalTime.of(character.getHistory().getWorkHourEnd(), 0, 0));
@@ -2258,10 +2258,10 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the day of the week start for this character's job. Does not work for slave jobs."){
+				"返回该角色职位开始工作的星期；奴隶的工作无法查询。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return character.getHistory().getStartDay().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+				return character.getHistory().getStartDay().getDisplayName(TextStyle.FULL, Locale.CHINESE);
 			}
 		});
 		
@@ -2274,10 +2274,10 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the day of the week end for this character's job. Does not work for slave jobs."){
+				"返回该角色职位结束工作的星期；奴隶的工作无法查询。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return character.getHistory().getEndDay().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+				return character.getHistory().getEndDay().getDisplayName(TextStyle.FULL, Locale.CHINESE);
 			}
 		});
 		
@@ -2286,8 +2286,8 @@ public class UtilText {
 						"gender"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the name of this character's gender, which is coloured if the argument is 'true'."){
+				"(是否上色)",
+				"返回该角色的性别(参数为true时带颜色)。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				Gender gender = character.getGender();
@@ -2297,13 +2297,13 @@ public class UtilText {
 				if(arguments!=null && Boolean.valueOf(arguments)) {
 					return "<span style='color:"+gender.getColour().toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName())
-											:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName())
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName())
+											:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName())
 							+"</span>";
 				}
 				return parseCapitalise
-						?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName())
-						:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName();
+						?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName())
+						:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName();
 			}
 		});
 		
@@ -2315,7 +2315,7 @@ public class UtilText {
 				true,
 				true,
 				"(coloured)",
-				"Returns the name of the gender that this character appears to be (which may not be their actual gender), which is coloured if the argument is 'true'."){
+				"返回该角色外表展示出来的性别(可能与真实性别不同)，如果参数为“true”则进行染色。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				Gender gender = character.getAppearsAsGender();
@@ -2325,13 +2325,13 @@ public class UtilText {
 				if(arguments!=null && Boolean.valueOf(arguments)) {
 					return "<span style='color:"+gender.getColour().toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName())
-											:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName())
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName())
+											:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName())
 							+"</span>";
 				}
 				return parseCapitalise
-						?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName())
-						:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+" ":"")+gender.getName();
+						?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName())
+						:(pronoun?UtilText.generateSingularDeterminer(gender.getName())+"":"")+gender.getName();
 			}
 		});
 
@@ -2341,7 +2341,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's sexual orientation."){
+				"返回该角色的性取向。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getSexualOrientation().getName();
@@ -2353,8 +2353,8 @@ public class UtilText {
 						"affection"),
 				true,
 				true,
-				"(target)",
-				"Prints out the name of this character's affection towards the target. e.g. lilaya.affection(pc) would print 'likes' by default"){
+				"(对象)",
+				"输出该角色对于对象的好感程度的名称。例如，lilaya.affection(pc)将会默认输出“喜爱”"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractParserTarget parserTarget = findParserTargetWithTag(arguments.replaceAll("\u200b", ""));
@@ -2363,7 +2363,7 @@ public class UtilText {
 					return character.getAffectionLevel(targetedCharacter).getDescriptor();
 				} catch(Exception ex) {
 					ex.printStackTrace();
-					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Error: affection command character argument not found! ("+arguments+")</i>";
+					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>错误：未找到“affection”指令的角色参数！("+arguments+")</i>";
 				}
 			}
 		});
@@ -2374,28 +2374,28 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Prints out the most important name of this character's relation towards their party's leader (it will cut off multiple relation names) for half of the time. The other half will return 'companion' or 'slave' (if applicable)."
-				+ " e.g. If the player's companion is their daughter, then 'npc.companion' would print 'daughter', otherwise 'companion' or 'slave' (if applicable)."){
+				"一半概率显示这个角色与他们的队伍领袖关系中最重要的关系名(多重关系将会被所见)。另一半概率只返回“同伴”或“奴隶”(如果适用)。"
+				+ "例如，如果玩家的同伴是他们的女儿，那么“npc.companion”将显示为“女儿”，否则是“同伴”或“奴隶”(如果适用)。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				try {
 					GameCharacter targetedCharacter = character.getPartyLeader();
 					if(targetedCharacter==null) {
-						return "companion";
+						return "同伴";
 					}
 					Set<Relationship> set = character.getRelationshipsTo(targetedCharacter);
 					if(set.size()>=1 && Math.random()<0.5f) {
 						return set.iterator().next().getName(character);
 					} else {
 						if(character.isSlave() && character.getOwner().equals(targetedCharacter) && Math.random()<0.5f) {
-							return "slave";
+							return "奴隶";
 						}
-						return "companion";
+						return "同伴";
 					}
 					
 				} catch(Exception ex) {
 					ex.printStackTrace();
-					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Error: relation command character argument not found! ("+arguments+")</i>";
+					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>错误：未找到“relation”指令的角色参数！("+arguments+")</i>";
 				}
 			}
 		});
@@ -2406,8 +2406,8 @@ public class UtilText {
 						"relationship"),
 				true,
 				true,
-				"(target)",
-				"Prints out the most important name of this character's relation towards the target (it will cut off multiple relation names). e.g. blaze.relation(crystal) would print 'brother'"){
+				"(对象)",
+				"输出该角色对于对象最重要的亲属关系的名称，(不会显示多个亲属关系名称)。例如blaze.relation(crystal)将会输出“兄弟”"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractParserTarget parserTarget = findParserTargetWithTag(arguments.replaceAll("\u200b", ""));
@@ -2417,13 +2417,13 @@ public class UtilText {
 					if(set.size()>=1) {
 						return set.iterator().next().getName(character);
 					} else {
-						return "no relation";
+						return "无亲缘关系";
 					}
 //					return character.getRelationshipStrTo(targetedCharacter);
 					
 				} catch(Exception ex) {
 					ex.printStackTrace();
-					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Error: relation command character argument not found! ("+arguments+")</i>";
+					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>错误：未找到“relation”指令的角色参数！("+arguments+")</i>";
 				}
 			}
 		});
@@ -2434,8 +2434,8 @@ public class UtilText {
 						"relationshipFull"),
 				true,
 				true,
-				"(target)",
-				"Prints out all of this character's relations towards the target. e.g. lilaya.relation(pc) might print 'half-sister and aunt'"){
+				"(对象)",
+				"输出该橘色对于对象的所有亲属关系的名称。例如lilaya.relation(pc)可能会输出“半亲姐妹和姨妈”"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractParserTarget parserTarget = findParserTargetWithTag(arguments.replaceAll("\u200b", ""));
@@ -2445,7 +2445,7 @@ public class UtilText {
 					
 				} catch(Exception ex) {
 					ex.printStackTrace();
-					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Error: relation command character argument not found! ("+arguments+")</i>";
+					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>错误：未找到“relation”指令的角色参数！("+arguments+")</i>";
 				}
 			}
 		});
@@ -2457,7 +2457,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'son' or 'daughter' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“儿子”或“女儿”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Relationship.Child.toString(character.getGender().getType());
@@ -2471,7 +2471,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'father' or 'mother' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“父亲”或“母亲”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Relationship.Parent.toString(character.getGender().getType());
@@ -2485,13 +2485,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'daddy' or 'mommy' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“爹地”或“妈咪”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "mommy";
+					return "妈咪";
 				} else {
-					return "daddy";
+					return "爹地";
 				}
 			}
 		});
@@ -2504,13 +2504,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'dad' or 'mom' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“爸爸”或“妈妈”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "mom";
+					return "妈妈";
 				} else {
-					return "dad";
+					return "爸爸";
 				}
 			}
 		});
@@ -2522,7 +2522,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'brother' or 'sister' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“兄弟”或“姐妹”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Relationship.Sibling.toString(character.getGender().getType());
@@ -2536,13 +2536,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'bro' or 'sis' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“兄弟”或“姐妹”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "sis";
+					return "姐妹";
 				} else {
-					return "bro";
+					return "兄弟";
 				}
 			}
 		});
@@ -2554,7 +2554,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'nephew' or 'niece' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“侄子”或“侄女”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Relationship.Nibling.toString(character.getGender().getType());
@@ -2568,13 +2568,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'master' or 'mistress' based on the character's femininity."){
+				"返回“主人”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "mistress";
+					return "主人";
 				} else {
-					return "master";
+					return "主人";
 				}
 			}
 		});
@@ -2587,13 +2587,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'sir' or 'ma'am' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“先生”或“女士”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "ma'am";
+					return "女士";
 				} else {
-					return "sir";
+					return "先生";
 				}
 			}
 		});
@@ -2605,13 +2605,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'lord' or 'lady' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“大人”或“小姐”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "lady";
+					return "小姐";
 				} else {
-					return "lord";
+					return "大人";
 				}
 			}
 		});
@@ -2623,13 +2623,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'hero' or 'heroine' based on the character's femininity."){
+				"返回“英雄”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "heroine";
+					return "英雄";
 				} else {
-					return "hero";
+					return "英雄";
 				}
 			}
 		});
@@ -2643,13 +2643,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'Mr.' or 'Miss' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“先生”或“女士”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "Miss";
+					return "女士";
 				} else {
-					return "Mr.";
+					return "先生";
 				}
 			}
 		});
@@ -2661,13 +2661,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns either 'boyfriend' or 'girlfriend' based on the character's femininity."){
+				"根据角色的女性化程度，可能返回“男朋友”或“女朋友”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "girlfriend";
+					return "女朋友";
 				} else {
-					return "boyfriend";
+					return "男朋友";
 				}
 			}
 		});
@@ -2679,16 +2679,16 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns 'mule', as the name of Natalya's slaves was changed from filly to mule in 0.4.10.10."){
+				"返回“骡子”，因为0.4.10.10版本娜塔莉亚的奴隶名称从小雌驹改为了骡子。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				try {
 					if(Main.game.getPlayer().getClothingInSlot(InventorySlot.NECK).getStickers().get("txt").equals("filly")) {
-						return "filly";
+						return "小雌驹";
 					}
 				} catch(Exception ex) {
 				}
-				return "mule";
+				return "骡子";
 			}
 		});
 
@@ -2699,16 +2699,16 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns 'mules', as the name of Natalya's slaves was changed from filly to mule in 0.4.10.10."){
+				"返回“骡子”，因为0.4.10.10版本娜塔莉亚的奴隶名称从小雌驹改为了骡子。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				try {
 					if(Main.game.getPlayer().getClothingInSlot(InventorySlot.NECK).getStickers().get("txt").equals("filly")) {
-						return "fillies";
+						return "小雌驹";
 					}
 				} catch(Exception ex) {
 				}
-				return "mules";
+				return "骡子";
 			}
 		});
 		
@@ -2720,13 +2720,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a random mean word to describe this person, based on their femininity.") {
+				"返回随机形容该角色的脏话，基于其女性化程度。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return UtilText.returnStringAtRandom("bitch", "slut", "cunt", "whore", "skank");
+					return UtilText.returnStringAtRandom("婊子", "荡妇", "淫妇", "妓女", "滥交女");
 				} else {
-					return UtilText.returnStringAtRandom("asshole", "bastard", "fuckface", "fucker");
+					return UtilText.returnStringAtRandom("蠢货", "混蛋", "混球", "丑逼");
 				}
 			}
 		});
@@ -2742,14 +2742,14 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a random mean word to describe this person, based on their femininity, with a mean descriptor before it.") {
+				"随机返回形容该角色的脏话，基于其女性化程度，并在前面加上一个描述词。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				String naughtyDescriptor = Util.randomItemFromValues("worthless", "dumb", "dirty", "filthy");
+				String naughtyDescriptor = Util.randomItemFromValues("一无是处", "愚蠢", "肮脏", "下贱");
 				if(character.isFeminine()) {
-					return naughtyDescriptor+" "+UtilText.returnStringAtRandom("bitch", "slut", "cunt", "whore", "skank");
+					return naughtyDescriptor+"的"+UtilText.returnStringAtRandom("婊子", "荡妇", "淫妇", "妓女", "滥交女");
 				} else {
-					return naughtyDescriptor+" "+UtilText.returnStringAtRandom("asshole", "bastard", "fuckface", "fucker");
+					return naughtyDescriptor+"的"+UtilText.returnStringAtRandom("蠢货", "混蛋", "混球", "丑逼");
 				}
 			}
 		});
@@ -2762,13 +2762,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a random mean pluralised word to describe this person, based on their femininity.") {
+				"返回随机形容该角色的脏话(复数)，基于其女性化程度。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return UtilText.returnStringAtRandom("bitches", "sluts", "cunts", "whores", "skanks");
+					return UtilText.returnStringAtRandom("婊子", "荡妇", "淫妇", "妓女", "滥交女");
 				} else {
-					return UtilText.returnStringAtRandom("assholes", "bastards", "fuckfaces", "fuckers");
+					return UtilText.returnStringAtRandom("蠢货", "混蛋", "混球", "操蛋的");
 				}
 			}
 		});
@@ -2784,14 +2784,14 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a random mean pluralised word to describe this person, based on their femininity, with a mean descriptor before it.") {
+				"随机返回形容该角色的脏话(复数)，基于其女性化程度，并在前面加上一个描述词。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				String naughtyDescriptor = Util.randomItemFromValues("worthless", "dumb", "dirty", "filthy");
+				String naughtyDescriptor = Util.randomItemFromValues("一文不值", "愚蠢", "肮脏", "下贱");
 				if(character.isFeminine()) {
-					return naughtyDescriptor+" "+UtilText.returnStringAtRandom("bitches", "sluts", "cunts", "whores", "skanks");
+					return naughtyDescriptor+"的"+UtilText.returnStringAtRandom("婊子", "荡妇", "淫妇", "妓女", "滥交女");
 				} else {
-					return naughtyDescriptor+" "+UtilText.returnStringAtRandom("assholes", "bastards", "fuckfaces", "fuckers");
+					return naughtyDescriptor+"的"+UtilText.returnStringAtRandom("蠢货", "混蛋", "混球", "操蛋的");
 				}
 			}
 		});
@@ -2803,13 +2803,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a random mean word to describe this person, based on their femininity.") {
+				"返回随机形容该角色的脏话，基于其女性化程度。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "babe";
+					return "宝贝儿";
 				} else {
-					return "hun";
+					return "臭男人";
 				}
 			}
 		});
@@ -2821,8 +2821,8 @@ public class UtilText {
 						"femininityRace"),
 				true,
 				true,
-				"(coloured)",
-				"Returns a full description of this characters race (including femininity). Pass in 'true' to colour the text."){
+				"(是否上色)",
+				"返回该角色种族(包括女性化程度)的完整描述。传入“true”以染色文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				boolean pronoun = parseAddPronoun;
@@ -2831,13 +2831,13 @@ public class UtilText {
 					return "<span style='color:"+character.getFemininity().getColour().toWebHexString()+";'>"
 							+ (parseCapitalise
 									?Util.capitaliseSentence(Femininity.getFemininityName(character.getFemininityValue(), pronoun))
-									:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+"</span>"
-							+ " <span style='color:"+character.getRaceStage().getColour().toWebHexString()+";'>" +character.getRaceStage().getName()+"</span>"
-							+ " <span style='color:"+character.getSubspecies().getColour(character).toWebHexString()+";'>" + getSubspeciesName(character.getSubspecies(),character) + "</span>";
+									:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+"</span>的"
+							+ "<span style='color:"+character.getRaceStage().getColour().toWebHexString()+";'>" +character.getRaceStage().getName()+"</span>"
+							+ "<span style='color:"+character.getSubspecies().getColour(character).toWebHexString()+";'>" + getSubspeciesName(character.getSubspecies(),character) + "</span>";
 				}
 				return (parseCapitalise
 						?Util.capitaliseSentence(Femininity.getFemininityName(character.getFemininityValue(), pronoun))
-						:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+" "+character.getRaceStage().getName()+" "+getSubspeciesName(character.getSubspecies(),character);
+						:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+"的"+character.getRaceStage().getName()+getSubspeciesName(character.getSubspecies(),character);
 			}
 			@Override
 			protected String applyDeterminer(String descriptor, String input) {
@@ -2852,8 +2852,8 @@ public class UtilText {
 						"femininityRaces"),
 				true,
 				true,
-				"(coloured)",
-				"Returns a full description of this characters pluralised race (including femininity). Pass in 'true' to colour the text."){
+				"(是否上色)",
+				"返回该角色种族(复数)(包括女性化程度)的完整描述。传入“true”以染色文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				boolean pronoun = parseAddPronoun;
@@ -2862,13 +2862,13 @@ public class UtilText {
 					return "<span style='color:"+character.getFemininity().getColour().toWebHexString()+";'>"
 							+ (parseCapitalise
 									?Util.capitaliseSentence(Femininity.getFemininityName(character.getFemininityValue(), pronoun))
-									:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+"</span>"
-							+ " <span style='color:"+character.getRaceStage().getColour().toWebHexString()+";'>" +character.getRaceStage().getName()+"</span>"
-							+ " <span style='color:"+character.getSubspecies().getColour(character).toWebHexString()+";'>" +  getSubspeciesNamePlural(character.getSubspecies(),character) + "</span>";
+									:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+"</span>的"
+							+ "<span style='color:"+character.getRaceStage().getColour().toWebHexString()+";'>" +character.getRaceStage().getName()+"</span>"
+							+ "<span style='color:"+character.getSubspecies().getColour(character).toWebHexString()+";'>" +  getSubspeciesNamePlural(character.getSubspecies(),character) + "</span>";
 				}
 				return (parseCapitalise
 						?Util.capitaliseSentence(Femininity.getFemininityName(character.getFemininityValue(), pronoun))
-						:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+" "+character.getRaceStage().getName()+" "+getSubspeciesNamePlural(character.getSubspecies(),character);
+						:Femininity.getFemininityName(character.getFemininityValue(), pronoun))+"的"+character.getRaceStage().getName()+""+getSubspeciesNamePlural(character.getSubspecies(),character);
 			}
 			@Override
 			protected String applyDeterminer(String descriptor, String input) {
@@ -2881,18 +2881,18 @@ public class UtilText {
 						"race"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the name of this characters race. Pass in 'true' to colour the text."){
+				"(是否上色)",
+				"返回该角色的种族名称。传入“true”以染色文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null && Boolean.valueOf(arguments)) {
 					boolean pronoun = parseAddPronoun;
 					parseAddPronoun = false;
-					String name = character.isRaceConcealed()?"unknown race":getSubspeciesName(character.getSubspecies(), character);
+					String name = character.isRaceConcealed()?"未知种族":getSubspeciesName(character.getSubspecies(), character);
 					return "<span style='color:"+(character.isRaceConcealed()?PresetColour.TEXT_GREY:character.getSubspecies().getColour(character)).toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
-									:(pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
+									:(pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
 							+"</span>";
 				}
 				return getSubspeciesName(character.getSubspecies(), character);
@@ -2905,18 +2905,18 @@ public class UtilText {
 						"racePlural"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the plural name of this characters race. Pass in 'true' to colour the text."){
+				"(是否上色)",
+				"返回该角色的种族名称(复数)。传入“true”以染色文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null && Boolean.valueOf(arguments)) {
 					boolean pronoun = parseAddPronoun;
 					parseAddPronoun = false;
-					String name = character.isRaceConcealed()?"unknown race":getSubspeciesNamePlural(character.getSubspecies(), character);
+					String name = character.isRaceConcealed()?"未知种族":getSubspeciesNamePlural(character.getSubspecies(), character);
 					return "<span style='color:"+(character.isRaceConcealed()?PresetColour.TEXT_GREY:character.getSubspecies().getColour(character)).toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
-									:(pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
+									:(pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
 							+"</span>";
 				}
 				return getSubspeciesNamePlural(character.getSubspecies(), character);
@@ -2929,18 +2929,18 @@ public class UtilText {
 						"feralRace"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the feral name of this characters race. Pass in 'true' to colour the text."){
+				"(是否上色)",
+				"返回该角色的兽态名称。传入“true”以染色文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null && Boolean.valueOf(arguments)) {
 					boolean pronoun = parseAddPronoun;
 					parseAddPronoun = false;
-					String name = character.isRaceConcealed()?"unknown race":character.getSubspecies().getFeralName(character.getBody());
+					String name = character.isRaceConcealed()?"未知种族":character.getSubspecies().getFeralName(character.getBody());
 					return "<span style='color:"+(character.isRaceConcealed()?PresetColour.TEXT_GREY:character.getSubspecies().getColour(character)).toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
-									:(pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
+									:(pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
 							+"</span>";
 				}
 				return character.getSubspecies().getFeralName(character.getBody());
@@ -2954,12 +2954,12 @@ public class UtilText {
 						"racePassive"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the name of this elemental's passive form. Pass in 'true' to colour the text. (Returns an error code if the target is not an Elemental.)"){
+				"(是否上色)",
+				"返回元素被动状态的名称。传入'true'以染色文本。(如果对象不是元素则返回一个错误代码。)"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(!character.isElemental()) {
-					return "[style.italicsBad(The 'passiveRace' command does not work on non-elementals!)]";
+					return "[style.italicsBad(“passiveRace”指令对于非元素生物不生效！)]";
 				}
 				Elemental elemental = ((Elemental)character);
 				String name = elemental.getPassiveForm()==null
@@ -2970,8 +2970,8 @@ public class UtilText {
 					parseAddPronoun = false;
 					return "<span style='color:"+(elemental.getPassiveForm()==null?elemental.getCurrentSchool().getColour():elemental.getPassiveForm().getColour(character)).toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
-									:(pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
+									:(pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
 							+"</span>";
 				}
 				return name;
@@ -2985,12 +2985,12 @@ public class UtilText {
 						"boundSchool"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the name of the arcane school to which this elemental is currently bound. Pass in 'true' to colour the text. (Returns an error code if the target is not an Elemental.)"){
+				"(是否上色)",
+				"返回该元素对应的奥术流派名。输入“true”可为文本着色。(如果目标不是元素，则返回错误代码。)"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(!character.isElemental()) {
-					return "[style.italicsBad(The 'boundSchool' command does not work on non-elementals!)]";
+					return "[style.italicsBad(“boundSchool”指令对于非元素生物不生效！)]";
 				}
 				Elemental elemental = ((Elemental)character);
 				String name = elemental.getCurrentSchool().getName();
@@ -2999,8 +2999,8 @@ public class UtilText {
 					parseAddPronoun = false;
 					return "<span style='color:"+elemental.getCurrentSchool().getColour().toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
-									:(pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
+									:(pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
 							+"</span>";
 				}
 				return name;
@@ -3012,8 +3012,8 @@ public class UtilText {
 						"raceStage"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the name of the 'stage' of characters race (partial, lesser, greater). Pass in 'true' to colour the text."){
+				"(是否上色)",
+				"返回角色种族“阶段”的名字(似、亚、纯)。传入“true”以染色文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null && Boolean.valueOf(arguments)) {
@@ -3022,8 +3022,8 @@ public class UtilText {
 					String name = character.getRaceStage().getName();
 					return "<span style='color:"+character.getRaceStage().getColour().toWebHexString()+";'>"
 							+ (parseCapitalise
-									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
-									:(pronoun?UtilText.generateSingularDeterminer(name)+" ":"")+name)
+									?Util.capitaliseSentence((pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
+									:(pronoun?UtilText.generateSingularDeterminer(name)+"":"")+name)
 							+"</span>";
 				}
 				return character.getRaceStage().getName();
@@ -3036,7 +3036,7 @@ public class UtilText {
 				false,
 				false,
 				"(tag)",
-				"Returns the description of this character's preferred body."){
+				"返回该角色体态的对应描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(!(character instanceof NPC)) {
@@ -3057,17 +3057,17 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the name of the character's BodyMaterial."){
+				"返回角色的身体材质(BodyMaterial)名"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getBodyMaterial()==BodyMaterial.FLESH) {
-					return "covered in";
+					return "覆盖着";
 				} else {
 					return UtilText.returnStringAtRandom(
-							"made from",
-							"composed entirely of",
-							"formed out of",
-							"made entirely from");
+							"成分为",
+							"完全组成自",
+							"形成自",
+							"成分完全为");
 				}
 			}
 		});
@@ -3079,7 +3079,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's BodyMaterial."){
+				"返回角色的身体材质(BodyMaterial)名"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getName();
@@ -3092,7 +3092,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's skin."){
+				"返回角色的皮肤描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getSkinNoun();
@@ -3105,7 +3105,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's skin."){
+				"返回人物皮肤的形容描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getSkinAdj();
@@ -3118,7 +3118,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's skin on nonhumanoid body parts."){
+				"返回角色非人类部位的皮肤的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getSkinAltNoun();
@@ -3131,7 +3131,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's skin on nonhumanoid body parts."){
+				"返回描述角色非人类身体部位皮肤的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getSkinAltAdj();
@@ -3144,7 +3144,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the material lining the character's orifices."){
+				"返回角色腔穴内壁的质地描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getOrificeNoun();
@@ -3157,7 +3157,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the material lining the character's orifices."){
+				"返回覆盖在角色腔穴上材质的形容性描述词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getOrificeAdj();
@@ -3170,7 +3170,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the material lining the character's orifices on nonhumanoid body parts."){
+				"返回角色非人类部位腔穴内壁的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getOrificeAltNoun();
@@ -3183,7 +3183,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the material lining the character's orifices on nonhumanoid body parts."){
+				"返回描述角色非人类身体部位腔穴内壁的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getOrificeAltAdj();
@@ -3196,7 +3196,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's hair."){
+				"返回角色的头发描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getHairNoun();
@@ -3209,7 +3209,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's hair."){
+				"返回描述角色头发的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getHairAdj();
@@ -3223,7 +3223,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's body hair."){
+				"返回角色体毛的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getHairBodyNoun();
@@ -3237,7 +3237,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's body hair."){
+				"返回描述角色体毛的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getHairBodyAdj();
@@ -3250,7 +3250,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's Hair on nonhumanoid body parts."){
+				"返回角色非人类部位毛发的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getHairAltNoun();
@@ -3263,7 +3263,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's hair on nonhumanoid body parts."){
+				"返回描述角色非人类身体部位毛发的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getHairAltAdj();
@@ -3276,7 +3276,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's fur."){
+				"返回角色的皮毛描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFurNoun();
@@ -3289,7 +3289,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's fur."){
+				"返回描述角色皮毛的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFurAdj();
@@ -3302,7 +3302,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's fur on nonhumanoid body parts."){
+				"返回角色非人类部位皮毛的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFurAltNoun();
@@ -3315,7 +3315,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's fur on nonhumanoid body parts."){
+				"返回描述角色非人类部位毛皮的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFurAltAdj();
@@ -3329,7 +3329,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's feathers."){
+				"返回角色羽毛的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFeatherNoun();
@@ -3343,7 +3343,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's feathers."){
+				"返回描述角色羽毛的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFeatherAdj();
@@ -3357,7 +3357,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's feathers on nonhumanoid body parts."){
+				"返回角色非人类部位羽毛的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFeatherAltNoun();
@@ -3371,7 +3371,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's fur on nonhumanoid body parts."){
+				"返回描述角色非人类部位毛皮的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getFeatherAltAdj();
@@ -3385,7 +3385,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's scales."){
+				"返回角色的鳞片描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getScaleNoun();
@@ -3399,7 +3399,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's scales."){
+				"返回描述角色鳞片的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getScaleAdj();
@@ -3413,7 +3413,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's scales on nonhumanoid body parts."){
+				"返回角色非人类部位鳞片的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getScaleAltNoun();
@@ -3427,7 +3427,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's scales on nonhumanoid body parts."){
+				"返回描述角色非人类身体部位鳞片的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getScaleAltAdj();
@@ -3440,7 +3440,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's shell."){
+				"返回角色的外壳描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getShellNoun();
@@ -3453,7 +3453,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's shell."){
+				"返回描述角色外壳的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getShellAdj();
@@ -3466,7 +3466,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's shell on nonhumanoid body parts."){
+				"返回角色非人类部位外壳的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getShellAltNoun();
@@ -3479,7 +3479,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's shell on nonhumanoid body parts."){
+				"返回描述角色非人类身体部位外壳的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getShellAltAdj();
@@ -3492,7 +3492,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's keratin."){
+				"返回角色的角质描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getKeratinNoun();
@@ -3505,7 +3505,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's keratin."){
+				"返回描述角色角质的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getKeratinAdj();
@@ -3518,7 +3518,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's keratin on nonhumanoid body parts."){
+				"返回角色非人类部位角质的描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getKeratinAltNoun();
@@ -3531,7 +3531,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns an adjectival descriptor of the character's keratin on nonhumanoid body parts."){
+				"返回描述角色非人类身体部位角质的形容词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyMaterial().getKeratinAltAdj();
@@ -3546,8 +3546,8 @@ public class UtilText {
 						"mas"),
 				true,
 				true,
-				"(coloured)",
-				"Returns the name of this character's femininity. Pass in 'true' as an argument to make the returned text coloured in the femininity's colour."){
+				"(是否上色)",
+				"返回该角色的女性化程度的名称。传入“true”作为参数，使返回的文本呈现女性化程度的颜色。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				Femininity fem =  Femininity.valueOf(character.getFemininityValue());
@@ -3566,7 +3566,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a single word descriptor of this character's body size."){
+				"返回角色体型的描述词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return BodySize.valueOf(character.getBodySizeValue()).getName(false);
@@ -3579,7 +3579,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a single word descriptor of this character's muscle mass."){
+				"返回角色肌肉量的描述词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Muscle.valueOf(character.getMuscleValue()).getName(false);
@@ -3592,7 +3592,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a single word descriptor of this character's body shape."){
+				"返回角色身体形态的描述词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getBodyShape().getName(false);
@@ -3605,7 +3605,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a single word descriptor of this character's height."){
+				"返回角色身高的描述词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return character.getHeight().getDescriptor();
@@ -3616,7 +3616,7 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the character's height in the long, localised format.") {
+				"以本地化的完整格式返回角色的身高。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Units.size(character.getHeightValue(), Units.ValueType.NUMERIC, Units.UnitType.LONG);
@@ -3629,21 +3629,21 @@ public class UtilText {
 						"heightUp"),
 				true,
 				true,
-				"target",
-				"Returns 'down' if this character is taller than the target, or 'up' if they are smaller than them."){
+				"对象",
+				"如果这个角色比目标更高，返回“down”；如果他们比目标更矮，返回“up”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractParserTarget parserTarget = findParserTargetWithTag(arguments.replaceAll("\u200b", ""));
 				try {
 					GameCharacter targetedCharacter = parserTarget.getCharacter(arguments.toLowerCase(), null);
 					if(targetedCharacter.getHeightValue()<character.getHeightValue()) {
-						return "down";
+						return "低头";
 					} else {
-						return "up";
+						return "抬头";
 					}
 				} catch(Exception ex) {
 					ex.printStackTrace();
-					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Error: heightDown character argument not found! ("+arguments+")</i>";
+					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>错误：未找到“heightDown”指令的角色参数！("+arguments+")</i>";
 				}
 			}
 		});
@@ -3654,7 +3654,7 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the character's weight in the long, localized format.") {
+				"以本地化的完整格式返回角色的体重。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Units.weight(character.getWeight() / 1000.0, Units.ValueType.NUMERIC, Units.UnitType.LONG);
@@ -3666,14 +3666,14 @@ public class UtilText {
 						"speech"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though the targeted character is saying it. Automatically applies any extra speech-modifying effects, such as drunken slurs, slovenly speech, sexual moans, etc."){
+				"(发言内容)",
+				"以目标角色说话的语气，解析其中包含的对话文本。自动添加所有影响说话的额外效果，例如醉话、口齿不清、浪叫声等。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseSpeech(arguments, character);
 				} else {
-					return parseSpeech("...", character);
+					return parseSpeech("……", character);
 				}
 			}
 		});
@@ -3684,14 +3684,14 @@ public class UtilText {
 						"masculineSpeech"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, masculine character is saying it."){
+				"(发言内容)",
+				"以常规男性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeech(arguments, Femininity.MASCULINE);
 				} else {
-					return parseNPCSpeech("...", Femininity.MASCULINE);
+					return parseNPCSpeech("……", Femininity.MASCULINE);
 				}
 			}
 		});
@@ -3706,14 +3706,14 @@ public class UtilText {
 						"masculinePlusSpeech"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, very masculine character is saying it."){
+				"(发言内容)",
+				"以常规的极其男性化的角色说话的语气，解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeech(arguments, Femininity.MASCULINE_STRONG);
 				} else {
-					return parseNPCSpeech("...", Femininity.MASCULINE_STRONG);
+					return parseNPCSpeech("……", Femininity.MASCULINE_STRONG);
 				}
 			}
 		});
@@ -3724,14 +3724,14 @@ public class UtilText {
 						"androgynousSpeech"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, androgynous character is saying it."){
+				"(发言内容)",
+				"以常规的中性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeech(arguments, Femininity.ANDROGYNOUS);
 				} else {
-					return parseNPCSpeech("...", Femininity.ANDROGYNOUS);
+					return parseNPCSpeech("……", Femininity.ANDROGYNOUS);
 				}
 			}
 		});
@@ -3742,14 +3742,14 @@ public class UtilText {
 						"feminineSpeech"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, feminine character is saying it."){
+				"(发言内容)",
+				"以常规女性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeech(arguments, Femininity.FEMININE);
 				} else {
-					return parseNPCSpeech("...", Femininity.FEMININE);
+					return parseNPCSpeech("……", Femininity.FEMININE);
 				}
 			}
 		});
@@ -3764,14 +3764,14 @@ public class UtilText {
 						"femininePlusSpeech"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, very feminine character is saying it."){
+				"(发言内容)",
+				"以常规极其女性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeech(arguments, Femininity.FEMININE_STRONG);
 				} else {
-					return parseNPCSpeech("...", Femininity.FEMININE_STRONG);
+					return parseNPCSpeech("……", Femininity.FEMININE_STRONG);
 				}
 			}
 		});
@@ -3782,14 +3782,14 @@ public class UtilText {
 						"masculineSpeechDoll"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, masculine character is saying it."){
+				"(发言内容)",
+				"以常规男性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeechDoll(arguments, Femininity.MASCULINE);
 				} else {
-					return parseNPCSpeechDoll("...", Femininity.MASCULINE);
+					return parseNPCSpeechDoll("……", Femininity.MASCULINE);
 				}
 			}
 		});
@@ -3804,14 +3804,14 @@ public class UtilText {
 						"masculinePlusSpeechDoll"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, very masculine character is saying it."){
+				"(发言内容)",
+				"以常规的极其男性化的角色说话的语气，解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeechDoll(arguments, Femininity.MASCULINE_STRONG);
 				} else {
-					return parseNPCSpeechDoll("...", Femininity.MASCULINE_STRONG);
+					return parseNPCSpeechDoll("……", Femininity.MASCULINE_STRONG);
 				}
 			}
 		});
@@ -3822,14 +3822,14 @@ public class UtilText {
 						"androgynousSpeechDoll"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, androgynous character is saying it."){
+				"(发言内容)",
+				"以常规的中性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeechDoll(arguments, Femininity.ANDROGYNOUS);
 				} else {
-					return parseNPCSpeechDoll("...", Femininity.ANDROGYNOUS);
+					return parseNPCSpeechDoll("……", Femininity.ANDROGYNOUS);
 				}
 			}
 		});
@@ -3840,14 +3840,14 @@ public class UtilText {
 						"feminineSpeechDoll"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, feminine character is saying it."){
+				"(发言内容)",
+				"以常规女性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeechDoll(arguments, Femininity.FEMININE);
 				} else {
-					return parseNPCSpeechDoll("...", Femininity.FEMININE);
+					return parseNPCSpeechDoll("……", Femininity.FEMININE);
 				}
 			}
 		});
@@ -3862,14 +3862,14 @@ public class UtilText {
 						"femininePlusSpeechDoll"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though a generic, very feminine character is saying it."){
+				"(发言内容)",
+				"以常规极其女性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCSpeechDoll(arguments, Femininity.FEMININE_STRONG);
 				} else {
-					return parseNPCSpeechDoll("...", Femininity.FEMININE_STRONG);
+					return parseNPCSpeechDoll("……", Femininity.FEMININE_STRONG);
 				}
 			}
 		});
@@ -3879,14 +3879,14 @@ public class UtilText {
 						"speechNoEffects"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though the targeted character is saying it. Cuts out *all* extra speech-modifying effects, such as drunken slurs, slovenly speech, sexual moans, etc."){
+				"(发言内容)",
+				"以目标角色说话的语气，解析其中包含的对话文本。但移除 *所有* 影响说话的额外效果，例如醉话、口齿不清、浪叫声等。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseSpeechNoEffects(arguments, character);
 				} else {
-					return parseSpeechNoEffects("...", character);
+					return parseSpeechNoEffects("……", character);
 				}
 			}
 		});
@@ -3896,14 +3896,14 @@ public class UtilText {
 						"speechNoExtraEffects"),
 				false,
 				false,
-				"(speech content)",
-				"Parses the containing dialogue as though the targeted character is saying it. Cuts out only the extra speech-modifying effects which are not a part of the character's personality, such as drunken slurs, sexual moans, etc."){
+				"(发言内容)",
+				"以目标角色说话的语气，解析其中包含的对话文本。但移除与角色性格不符的影响说话的额外效果，例如醉话、口齿不清、浪叫声等。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseSpeechNoExtraEffects(arguments, character);
 				} else {
-					return parseSpeechNoExtraEffects("...", character);
+					return parseSpeechNoExtraEffects("……", character);
 				}
 			}
 		});
@@ -3913,14 +3913,14 @@ public class UtilText {
 						"thought"),
 				false,
 				false,
-				"(thought content)",
-				"Parses the supplied text in the argument as though it's a thought of the character."){
+				"(思考内容)",
+				"以角色内心思考的形式解析作为参数传入的文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseThought(arguments, character);
 				} else {
-					return parseThought("...", character);
+					return parseThought("……", character);
 				}
 			}
 		});
@@ -3931,14 +3931,14 @@ public class UtilText {
 						"masculineThought"),
 				false,
 				false,
-				"(thought content)",
-				"Parses the containing dialogue as though a generic, masculine character is saying it."){
+				"(思考内容)",
+				"以常规男性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCThought(arguments, Femininity.MASCULINE);
 				} else {
-					return parseNPCThought("...", Femininity.MASCULINE);
+					return parseNPCThought("……", Femininity.MASCULINE);
 				}
 			}
 		});
@@ -3953,14 +3953,14 @@ public class UtilText {
 						"masculinePlusThought"),
 				false,
 				false,
-				"(thought content)",
-				"Parses the containing dialogue as though a generic, very masculine character is saying it."){
+				"(思考内容)",
+				"以常规的极其男性化的角色说话的语气，解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCThought(arguments, Femininity.MASCULINE_STRONG);
 				} else {
-					return parseNPCThought("...", Femininity.MASCULINE_STRONG);
+					return parseNPCThought("……", Femininity.MASCULINE_STRONG);
 				}
 			}
 		});
@@ -3971,14 +3971,14 @@ public class UtilText {
 						"androgynousThought"),
 				false,
 				false,
-				"(thought content)",
-				"Parses the containing dialogue as though a generic, androgynous character is saying it."){
+				"(思考内容)",
+				"以常规的中性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCThought(arguments, Femininity.ANDROGYNOUS);
 				} else {
-					return parseNPCThought("...", Femininity.ANDROGYNOUS);
+					return parseNPCThought("……", Femininity.ANDROGYNOUS);
 				}
 			}
 		});
@@ -3989,14 +3989,14 @@ public class UtilText {
 						"feminineThought"),
 				false,
 				false,
-				"(thought content)",
-				"Parses the containing dialogue as though a generic, feminine character is saying it."){
+				"(思考内容)",
+				"以常规女性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCThought(arguments, Femininity.FEMININE);
 				} else {
-					return parseNPCThought("...", Femininity.FEMININE);
+					return parseNPCThought("……", Femininity.FEMININE);
 				}
 			}
 		});
@@ -4011,14 +4011,14 @@ public class UtilText {
 						"femininePlusThought"),
 				false,
 				false,
-				"(thought content)",
-				"Parses the containing dialogue as though a generic, very feminine character is saying it."){
+				"(思考内容)",
+				"以常规极其女性化角色说话的语气解析其中包含的对话文本。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
 					return parseNPCThought(arguments, Femininity.FEMININE_STRONG);
 				} else {
-					return parseNPCThought("...", Femininity.FEMININE_STRONG);
+					return parseNPCThought("……", Femininity.FEMININE_STRONG);
 				}
 			}
 		});
@@ -4032,24 +4032,24 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a suitable variant of a 'sexual noise' that the target might make. For example, if they're feminine, they will moan, while if they are masculine, they will groan."
-				+ " This method takes into account if the target is resisting, and if they are, the returned noise will be something like 'sob' or 'cry'."){
+				"返回目标最可能发出的“淫叫声”变体。例如某女性化角色，则会呻吟(moan)，而男性化角色则是呻吟/哼唧(groan)。"
+				+ "该方法会判断目标是否抵抗，如果目标抵抗，将返回类似于“呜咽”或“哭泣”的声音。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(Main.game.isInSex()) {
 					if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("sob", "scream", "cry");
+							return returnStringAtRandom("呜咽", "尖叫", "哭喊");
 						} else {
-							return returnStringAtRandom("shout", "cry");
+							return returnStringAtRandom("叫喊", "哭喊");
 						}
 					}
 				}
 				
 				if(character.isFeminine()) {
-					return returnStringAtRandom("moan", "squeal", "gasp");
+					return returnStringAtRandom("呻吟", "浪叫", "喘息", "娇喘");
 				} else {
-					return returnStringAtRandom("groan", "grunt");
+					return returnStringAtRandom("呻吟", "咕哝");
 				}
 			}
 		});
@@ -4067,32 +4067,32 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a suitable variant of a 'sexual noise' that the target might make. For example, if they're feminine, they will moan, while if they are masculine, they will groan."
-				+ " This method takes into account if the target is resisting, and if they are, the returned noise will be something like 'sob' or 'cry'."
-				+ " <b>Expansion of 'moan' command:</b> This command will append a suitable descriptor before the 'moan' noise. e.g. 'lewd squeal', or 'eager grunt'."){
+				"返回目标最可能发出的“淫叫声”变体。例如某女性化角色，则会呻吟(moan)，而男性化角色则是呻吟/哼唧(groan)。"
+				+ "该方法会判断目标是否抵抗，如果目标抵抗，将返回类似于“呜咽”或“哭泣”的声音。"
+				+ "<b>扩展“呻吟”命令：</b>该命令将在“呻吟”之前附加一个合适的描述符。如“淫荡的尖叫”或“急切的喘息”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(Main.game.isInSex()) {
 					if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("miserable", "pathetic", "distressed") + " " + returnStringAtRandom("sob", "scream", "cry");
+							return returnStringAtRandom("可悲的", "可怜的", "痛苦的") + "" + returnStringAtRandom("呜咽", "尖叫", "哭喊");
 						} else {
-							return returnStringAtRandom("miserable", "pathetic", "distressed") + " " + returnStringAtRandom("shout", "cry");
+							return returnStringAtRandom("可悲的", "可怜的", "痛苦的") + "" + returnStringAtRandom("叫喊", "哭喊");
 						}
 						
 					} else if(Main.sex.getSexPace(character)==SexPace.DOM_GENTLE) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("soft", "gentle", "quiet") + " " + returnStringAtRandom("moan", "sigh", "gasp");
+							return returnStringAtRandom("轻柔的", "和缓的", "轻声") + "" + returnStringAtRandom("呻吟", "叹息", "喘息");
 						} else {
-							return returnStringAtRandom("soft", "gentle", "quiet") + " " + returnStringAtRandom("groan", "grunt");
+							return returnStringAtRandom("轻柔的", "和缓的", "轻声") + "" + returnStringAtRandom("呻吟", "咕哝");
 						}
 					}
 				}
 				
 				if(character.isFeminine()) {
-					return returnStringAtRandom("lewd", "high-pitched", "desperate") + " " + returnStringAtRandom("moan", "squeal", "cry", "gasp");
+					return returnStringAtRandom("淫荡的", "高声", "无法抑制的") + "" + returnStringAtRandom("呻吟", "浪叫", "叫喊", "喘息");
 				} else {
-					return returnStringAtRandom("deep", "low", "desperate") + " " + returnStringAtRandom("groan", "grunt");
+					return returnStringAtRandom("深沉的", "低声", "无法抑制的") + "" + returnStringAtRandom("呻吟", "咕哝");
 				}
 			}
 		});
@@ -4110,41 +4110,41 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a suitable variant of a 'sexual noise' that the target might make. For example, if they're feminine, they will moan, while if they are masculine, they will groan."
-				+ " This method takes into account if the target is resisting, and if they are, the returned noise will be something like 'sob' or 'cry'."){
+				"返回目标最可能发出的“淫叫声”变体。例如某女性化角色，则会呻吟(moan)，而男性化角色则是呻吟/哼唧(groan)。"
+				+ "该方法会判断目标是否抵抗，如果目标抵抗，将返回类似于“呜咽”或“哭泣”的声音。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isPlayer()) {
 					if(Main.game.isInSex()) {
 						if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 							if(character.isFeminine()) {
-								return returnStringAtRandom("sob", "scream", "cry");
+								return returnStringAtRandom("呜咽", "尖叫", "哭喊");
 							} else {
-								return returnStringAtRandom("shout", "cry");
+								return returnStringAtRandom("叫喊", "哭喊");
 							}
 						}
 					}
 					
 					if(character.isFeminine()) {
-						return returnStringAtRandom("moan", "squeal", "gasp");
+						return returnStringAtRandom("呻吟", "浪叫", "喘息", "娇喘");
 					} else {
-						return returnStringAtRandom("groan", "grunt");
+						return returnStringAtRandom("呻吟", "咕哝");
 					}
 				} else {
 					if(Main.game.isInSex()) {
 						if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 							if(character.isFeminine()) {
-								return returnStringAtRandom("sobs", "screams", "cries");
+								return returnStringAtRandom("呜咽", "尖叫", "哭喊");
 							} else {
-								return returnStringAtRandom("shouts", "cries");
+								return returnStringAtRandom("叫喊", "哭喊");
 							}
 						}
 					}
 					
 					if(character.isFeminine()) {
-						return returnStringAtRandom("moans", "squeals", "gasps");
+						return returnStringAtRandom("呻吟", "浪叫", "喘息", "娇喘");
 					} else {
-						return returnStringAtRandom("groans", "grunts");
+						return returnStringAtRandom("呻吟", "咕哝");
 					}
 				}
 			}
@@ -4171,56 +4171,56 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a suitable variant of a 'sexual noise' that the target might make. For example, if they're feminine, they will moan, while if they are masculine, they will groan."
-				+ " This method takes into account if the target is resisting, and if they are, the returned noise will be something like 'sob' or 'cry'."
-				+ " <b>Expansion of 'moan' command:</b> This command will append a suitable descriptor before the 'moan' noise. e.g. 'lewd squeal', or 'eager grunt'."){
+				"返回目标最可能发出的“淫叫声”变体。例如某女性化角色，则会呻吟(moan)，而男性化角色则是呻吟/哼唧(groan)。"
+				+ "该方法会判断目标是否抵抗，如果目标抵抗，将返回类似于“呜咽”或“哭泣”的声音。"
+				+ "<b>扩展“呻吟”命令：</b>该命令将在“呻吟”之前附加一个合适的描述符。如“淫荡的尖叫”或“急切的喘息”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isPlayer()) {
 					if(Main.game.isInSex()) {
 						if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 							if(character.isFeminine()) {
-								return returnStringAtRandom("miserably", "pathetically") + " " + returnStringAtRandom("sob", "scream", "cry");
+								return returnStringAtRandom("可悲地", "可怜地") + "" + returnStringAtRandom("呜咽", "尖叫", "哭喊");
 							} else {
-								return returnStringAtRandom("miserably", "pathetically") + " " + returnStringAtRandom("shout", "cry");
+								return returnStringAtRandom("可悲地", "可怜地") + "" + returnStringAtRandom("叫喊", "哭喊");
 							}
 							
 						} else if(Main.sex.getSexPace(character)==SexPace.DOM_GENTLE) {
 							if(character.isFeminine()) {
-								return returnStringAtRandom("softly", "gently", "quietly") + " " + returnStringAtRandom("moan", "sigh", "cry", "gasp");
+								return returnStringAtRandom("轻柔地", "和缓地", "轻声") + "" + returnStringAtRandom("呻吟", "叹息", "喊叫", "喘息");
 							} else {
-								return returnStringAtRandom("softly", "gently", "quietly") + " " + returnStringAtRandom("groans", "grunts");
+								return returnStringAtRandom("轻柔地", "和缓地", "轻声") + "" + returnStringAtRandom("呻吟", "咕哝");
 							}
 						}
 					}
 					
 					if(character.isFeminine()) {
-						return returnStringAtRandom("lewdly", "desperately") + " " + returnStringAtRandom("moan", "squeal", "cry", "gasp");
+						return returnStringAtRandom("淫荡地", "饥渴地") + "" + returnStringAtRandom("呻吟", "浪叫", "哭喊", "喘息");
 					} else {
-						return returnStringAtRandom("lewdly", "desperately") + " " + returnStringAtRandom("groan", "grunt");
+						return returnStringAtRandom("淫荡地", "饥渴地") + "" + returnStringAtRandom("呻吟", "咕哝");
 					}
 				} else {
 					if(Main.game.isInSex()) {
 						if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 							if(character.isFeminine()) {
-								return returnStringAtRandom("miserably", "pathetically", "desperately") + " " + returnStringAtRandom("sobs", "cries");
+								return returnStringAtRandom("可悲地", "可怜地", "绝望地") + "" + returnStringAtRandom("呜咽", "哭喊");
 							} else {
-								return returnStringAtRandom("miserably", "pathetically", "desperately") + " " + returnStringAtRandom("shouts", "cries");
+								return returnStringAtRandom("可悲地", "可怜地", "绝望地") + "" + returnStringAtRandom("叫喊", "哭喊");
 							}
 							
 						} else if(Main.sex.getSexPace(character)==SexPace.DOM_GENTLE) {
 							if(character.isFeminine()) {
-								return returnStringAtRandom("softly", "gently", "quietly") + " " + returnStringAtRandom("moans", "sighs", "gasps");
+								return returnStringAtRandom("轻柔地", "和缓地", "轻声") + "" + returnStringAtRandom("呻吟", "叹息", "喘息");
 							} else {
-								return returnStringAtRandom("softly", "gently", "quietly") + " " + returnStringAtRandom("groans", "grunts");
+								return returnStringAtRandom("轻柔地", "和缓地", "轻声") + "" + returnStringAtRandom("呻吟", "咕哝");
 							}
 						}
 					}
 					
 					if(character.isFeminine()) {
-						return returnStringAtRandom("lewdly", "desperately") + " " + returnStringAtRandom("moans", "squeals", "cries");
+						return returnStringAtRandom("淫荡地", "无法抑制地") + "" + returnStringAtRandom("呻吟", "浪叫", "喊叫");
 					} else {
-						return returnStringAtRandom("eagerly", "desperately") + " " + returnStringAtRandom("groans", "grunts", "cries");
+						return returnStringAtRandom("急切地", "无法抑制地") + "" + returnStringAtRandom("呻吟", "咕哝", "喊叫");
 					}
 				}
 			}
@@ -4235,25 +4235,25 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns a suitable variant of a 'sexual noise' that the target might make. For example, if they're feminine, they will make moans, while if they are masculine, they will make groans."
-				+ " This method takes into account if the target is resisting, and if they are, the returned noise will be something like 'sobs' or 'cries'."
-				+" <b>Provides an appropriate <i>noun</i> version of 'moans'.</b> (Use 'moansVerb' for the verb version.)"){
+				"返回目标最可能发出的“淫叫声”变体。例如某女性化角色，则会发出呻吟(moan)，而男性化角色则是发出呻吟/哼唧(groan)。"
+				+ "该方法会判断目标是否抵抗，如果目标抵抗，将返回类似于“呜咽”或“哭泣”的声音。"
+				+"<b>提供“呻吟”合适的<i>名词</i>形式。</b>(使用'moansVerb'作为动词形式。)"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(Main.game.isInSex()) {
 					if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("sobs", "cries");
+							return returnStringAtRandom("呜咽", "哭喊");
 						} else {
-							return returnStringAtRandom("shouts", "cries");
+							return returnStringAtRandom("叫喊", "哭喊");
 						}
 					}
 				}
 				
 				if(character.isFeminine()) {
-					return returnStringAtRandom("moans", "squeals", "gasps");
+					return returnStringAtRandom("呻吟", "浪叫", "喘息", "娇喘");
 				} else {
-					return returnStringAtRandom("groans", "grunts");
+					return returnStringAtRandom("呻吟", "咕哝");
 				}
 			}
 		});
@@ -4271,33 +4271,33 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns a suitable variant of a 'sexual noise' that the target might make. For example, if they're feminine, they will make moans, while if they are masculine, they will make groans."
-				+ " This method takes into account if the target is resisting, and if they are, the returned noise will be something like 'sobs' or 'cries'."
-				+ " <b>Expansion of 'moans' command:</b> This command will append a suitable descriptor before the 'moans' noise. e.g. 'lewd squeals', or 'eager grunts'."
-				+ " <b>Provides an appropriate <i>noun</i> version of 'moans'.</b> (Use 'moansVerb+' for the verb version.)"){
+				"返回目标最可能发出的“淫叫声”变体。例如某女性化角色，则会发出呻吟(moan)，而男性化角色则是发出呻吟/哼唧(groan)。"
+				+ "该方法会判断目标是否抵抗，如果目标抵抗，将返回类似于“呜咽”或“哭泣”的声音。"
+				+ "<b>扩展“呻吟”命令：</b>该命令将在“呻吟”之前附加一个合适的描述符。如“淫荡的尖叫”或“急切的喘息”。"
+				+ "<b>提供“呻吟”合适的<i>名词</i>形式。</b>(使用'moansVerb+'作为动词形式。)"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(Main.game.isInSex()) {
 					if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("miserable", "pathetic", "distressed") + " " + returnStringAtRandom("sobs", "cries");
+							return returnStringAtRandom("可悲的", "可怜的", "痛苦的") + "" + returnStringAtRandom("呜咽", "哭喊");
 						} else {
-							return returnStringAtRandom("miserable", "pathetic", "distressed") + " " + returnStringAtRandom("shouts", "cries");
+							return returnStringAtRandom("可悲地", "可怜地", "痛苦地") + "" + returnStringAtRandom("叫喊", "哭喊");
 						}
 						
 					} else if(Main.sex.getSexPace(character)==SexPace.DOM_GENTLE) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("soft", "gentle", "quiet") + " " + returnStringAtRandom("moans", "sighs", "gasps");
+							return returnStringAtRandom("轻柔的", "和缓的", "轻声") + "" + returnStringAtRandom("呻吟", "叹息", "喘息");
 						} else {
-							return returnStringAtRandom("soft", "gentle", "quiet") + " " + returnStringAtRandom("groans", "grunts");
+							return returnStringAtRandom("轻柔的", "和缓的", "轻声") + "" + returnStringAtRandom("呻吟", "咕哝");
 						}
 					}
 				}
 				
 				if(character.isFeminine()) {
-					return returnStringAtRandom("lewd", "high-pitched", "desperate") + " " + returnStringAtRandom("moans", "squeals", "gasps");
+					return returnStringAtRandom("淫荡的", "高声", "无法抑制的") + "" + returnStringAtRandom("呻吟", "浪叫", "喘息");
 				} else {
-					return returnStringAtRandom("deep", "eager", "desperate") + " " + returnStringAtRandom("groans", "grunts");
+					return returnStringAtRandom("深沉的", "急切的", "无法抑制的") + "" + returnStringAtRandom("呻吟", "咕哝");
 				}
 			}
 		});
@@ -4311,23 +4311,23 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method"){//TODO
+				"方法描述"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(Main.game.isInSex()) {
 					if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("sobbing", "crying");
+							return returnStringAtRandom("呜咽", "哭喊");
 						} else {
-							return returnStringAtRandom("shouting", "protesting");
+							return returnStringAtRandom("叫喊", "抗议");
 						}
 					}
 				}
 					
 				if(character.isFeminine()) {
-					return returnStringAtRandom("moaning", "squealing");
+					return returnStringAtRandom("呻吟", "浪叫");
 				} else {
-					return returnStringAtRandom("groaning", "grunting");
+					return returnStringAtRandom("呻吟", "咕哝");
 				}
 			}
 		});
@@ -4345,30 +4345,30 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method"){//TODO
+				"方法描述"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(Main.game.isInSex()) {
 					if(Main.sex.getSexPace(character)==SexPace.SUB_RESISTING) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("miserably", "pathetically", "desperately") + " " + returnStringAtRandom("sobbing", "crying");
+							return returnStringAtRandom("可悲地", "可怜地", "绝望地") + "" + returnStringAtRandom("呜咽", "哭喊");
 						} else {
-							return returnStringAtRandom("miserably", "pathetically", "desperately") + " " + returnStringAtRandom("shouting", "protesting");
+							return returnStringAtRandom("可悲地", "可怜地", "绝望地") + "" + returnStringAtRandom("叫喊", "哭喊");
 						}
 						
 					} else if(Main.sex.getSexPace(character)==SexPace.DOM_GENTLE) {
 						if(character.isFeminine()) {
-							return returnStringAtRandom("softly", "gently", "quietly") + " " + returnStringAtRandom("moaning", "sighing");
+							return returnStringAtRandom("轻柔地", "和缓地", "轻声") + "" + returnStringAtRandom("呻吟", "叹息");
 						} else {
-							return returnStringAtRandom("softly", "gently", "quietly") + " " + returnStringAtRandom("groaning", "grunting");
+							return returnStringAtRandom("轻柔地", "和缓地", "轻声") + "" + returnStringAtRandom("呻吟", "咕哝");
 						}
 					}
 				}
 				
 				if(character.isFeminine()) {
-					return returnStringAtRandom("lewdly", "eagerly", "desperately") + " " + returnStringAtRandom("moaning", "squealing");
+					return returnStringAtRandom("淫荡地", "急切地", "饥渴地") + "" + returnStringAtRandom("呻吟", "浪叫");
 				} else {
-					return returnStringAtRandom("lewdly", "eagerly", "desperately") + " " + returnStringAtRandom("groaning", "grunting");
+					return returnStringAtRandom("淫荡地", "急切地", "饥渴地") + "" + returnStringAtRandom("呻吟", "咕哝");
 				}
 			}
 		});
@@ -4381,36 +4381,36 @@ public class UtilText {
 						"sexPaceVerb"),
 				true,
 				false,
-				"(Alternative start string)",
-				"Returns an appropriate descriptor based on the pace of the character. The argument is used in place of a descriptor if the pace is SUB_NORMAL."){
+				"(可选起始字符)",
+				"基于角色的状态返回适当的描述词。输入的参数将会作为SUB_NORMAL状态下的替代描述词。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(Main.game.isInSex()) {
 					List<String> descriptors = new ArrayList<>();
 					switch(Main.sex.getSexPace(character)) {
 						case DOM_GENTLE:
-							descriptors = Util.newArrayListOfValues("gently", "softly", "lovingly");
+							descriptors = Util.newArrayListOfValues("温柔地", "轻轻地", "含情脉脉地");
 							break;
 						case DOM_NORMAL:
-							descriptors = Util.newArrayListOfValues("happily", "eagerly", "enthusiastically", "desperately");
+							descriptors = Util.newArrayListOfValues("开心地", "热切地", "热情地", "迫切地");
 							break;
 						case DOM_ROUGH:
-							descriptors = Util.newArrayListOfValues("roughly", "forcefully", "violently", "dominantly");
+							descriptors = Util.newArrayListOfValues("粗鲁地", "粗暴地", "猛烈地", "支配地");
 							break;
 						case SUB_EAGER:
-							descriptors = Util.newArrayListOfValues("happily", "eagerly", "enthusiastically", "desperately");
+							descriptors = Util.newArrayListOfValues("开心地", "热切地", "热情地", "迫切地");
 							break;
 						case SUB_NORMAL:
 							if(arguments!=null && !arguments.isEmpty()) {
 								return Util.capitaliseSentence(arguments); // Assume start of sentence, so capitalise.
 							} else if(Character.isUpperCase(command.charAt(0))) {
-								descriptors = Util.newArrayListOfValues("happily", "eagerly", "willingly"); // If start of sentence, need descriptor.
+								descriptors = Util.newArrayListOfValues("愉快地", "急切地", "欣然"); // If start of sentence, need descriptor.
 								break;
 							} else {
 								return "";
 							}
 						case SUB_RESISTING:
-							descriptors = Util.newArrayListOfValues("frantically", "desperately", "maniacally");
+							descriptors = Util.newArrayListOfValues("狂乱地", "不顾一切地", "狂躁地");
 							break;
 					}
 					
@@ -4426,12 +4426,12 @@ public class UtilText {
 					lastDescriptors[0] = returnString;
 
 					if(arguments!=null && !arguments.isEmpty()) {
-						return returnString+" "+arguments;
+						return returnString+arguments;
 					}
 					return returnString;
 				}
 					
-				return "eagerly";
+				return "急切地";
 			}
 		});
 		
@@ -4442,14 +4442,14 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.GENERIC){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return returnStringAtRandom("scent", "scent", "perfume");
+					return returnStringAtRandom("气味", "气息", "清香");
 				} else {
-					return returnStringAtRandom("musk", "musk", "aroma");
+					return returnStringAtRandom("麝香味", "气味", "芳香");
 				}
 			}
 		});
@@ -4463,14 +4463,14 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.GENERIC){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return returnStringAtRandom("feminine scent", "feminine perfume", "delicate scent");
+					return returnStringAtRandom("雌性气味", "雌性清香", "微妙的气息");
 				} else {
-					return returnStringAtRandom("masculine musk", "masculine aroma");
+					return returnStringAtRandom("雄性气味", "雄性芳香");
 				}
 			}
 		});
@@ -4483,13 +4483,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'girl' or 'guy' for this character."){
+				"返回该角色的正确性别版本“girl”或“guy”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "girl";
+					return "女人";
 				} else {
-					return "guy";
+					return "男人";
 				}
 			}
 		});
@@ -4501,7 +4501,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'girl' or 'boy' for this character."){
+				"返回该角色的正确性别版本“girl”或“boy”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
@@ -4519,13 +4519,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'girls' or 'boys' for this character."){
+				"返回该角色的正确性别版本“girls”或“boys”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return Gender.F_V_B_FEMALE.getNounYoung()+"s";
+					return Gender.F_V_B_FEMALE.getNounYoung();
 				} else {
-					return Gender.M_P_MALE.getNounYoung()+"s";
+					return Gender.M_P_MALE.getNounYoung();
 				}
 			}
 		});
@@ -4537,7 +4537,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'woman' or 'man' for this character."){
+				"返回该角色的正确性别版本“woman”或“man”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine())
@@ -4554,7 +4554,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'female' or 'male' for this character."){
+				"返回该角色的正确性别版本“female”或“male”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine())
@@ -4571,13 +4571,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'feminine' or 'masculine' for this character."){
+				"返回该角色的正确性别版本“女性化”或“男性化”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine())
-					return "feminine";
+					return "充满女人味";
 				else
-					return "masculine";
+					return "充满男人味";
 			}
 		});
 		
@@ -4588,13 +4588,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'filly' or 'colt' for this character."){
+				"返回该角色的正确性别版本“fillly”或“colt”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "filly";
+					return "小雌驹";
 				} else {
-					return "colt";
+					return "小雄驹";
 				}
 			}
 		});
@@ -4606,13 +4606,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'mare' or 'stallion' for this character."){
+				"返回该角色的正确性别版本“mare”或“stallion”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "mare";
+					return "母马";
 				} else {
-					return "stallion";
+					return "公马";
 				}
 			}
 		});
@@ -4623,8 +4623,8 @@ public class UtilText {
 						"masculineDescriptor"),
 				true,
 				true,
-				"(coloured)",
-				"Returns a one or two word descriptor of the femininity of the character. Pass in 'true' as an argument if you want the descriptor to be coloured."){
+				"(是否上色)",
+				"返回描述角色女性化程度的一两个描述词。如果希望输出彩色，请在参数中传入“true”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				
@@ -4632,26 +4632,26 @@ public class UtilText {
 				
 				switch(character.getFemininity()) {
 					case FEMININE_STRONG:
-						descriptor = UtilText.returnStringAtRandom("very feminine", "beautiful", "gorgeous");
+						descriptor = UtilText.returnStringAtRandom("充满女人味", "闭月羞花", "沉鱼落雁");
 						break;
 					case FEMININE:
-						descriptor = UtilText.returnStringAtRandom("pretty", "feminine", "cute");
+						descriptor = UtilText.returnStringAtRandom("漂亮", "有女人味", "可爱");
 						break;
 					case ANDROGYNOUS:
-						descriptor = UtilText.returnStringAtRandom("androgynous");
+						descriptor = UtilText.returnStringAtRandom("中性");
 						break;
 					case MASCULINE:
-						descriptor = UtilText.returnStringAtRandom("masculine", "handsome");
+						descriptor = UtilText.returnStringAtRandom("有男人味", "帅气");
 						break;
 					case MASCULINE_STRONG:
-						descriptor = UtilText.returnStringAtRandom("very masculine", "extremely handsome");
+						descriptor = UtilText.returnStringAtRandom("充满男人味", "英俊潇洒");
 						break;
 				}
 				
 				String determiner = "";
 				if(parseAddPronoun) {
 					parseAddPronoun = false;
-					determiner = UtilText.generateSingularDeterminer(descriptor)+" ";
+					determiner = UtilText.generateSingularDeterminer(descriptor);
 				}
 				
 				if(arguments.equals(" ") || arguments.equalsIgnoreCase("true")) {
@@ -4685,13 +4685,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender version of 'wife' or 'husband' for this character."){
+				"返回与角色性别相应的“妻子”或“丈夫”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.isFeminine()) {
-					return "wife";
+					return "妻子";
 				} else {
-					return "husband";
+					return "丈夫";
 				}
 			}
 		});
@@ -4703,13 +4703,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct version of 'has' for this character (has or have)."){
+				"返回与角色人称相应的“has”形式。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(isPlayer(target, character)) {
-					return "have";
+					return "";
 				} else {
-					return "has";
+					return "";
 				}
 			}
 		});
@@ -4721,13 +4721,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct version of 'is' for this character (is or are)."){
+				"返回与角色人称相应的“is”形式。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(isPlayer(target, character)) {
-					return "are";
+					return "";
 				} else {
-					return "is";
+					return "";
 				}
 			}
 		});
@@ -4739,13 +4739,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct version of 'does' for this character (do or does)."){
+				"返回与角色人称相应的“does”形式。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(isPlayer(target, character)) {
-					return "do";
+					return "";
 				} else {
-					return "does";
+					return "";
 				}
 			}
 		});
@@ -4757,13 +4757,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct version of 'was' for this character (was or were)."){
+				"返回与角色人称相应的“was”形式。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(isPlayer(target, character)) {
-					return "were";
+					return "";
 				} else {
-					return "was";
+					return "";
 				}
 			}
 		});
@@ -4778,13 +4778,13 @@ public class UtilText {
 						"hisHer"),
 				true,
 				true,
-				"(real pronoun)",
-				"Returns the correct gender-specific possessive pronoun for this character (your, her, his). By default, returns 'your' for player character."
-				+ " If you need the actual third-person player character pronoun, passin 'true' as an argument."){
+				"(实际代词)",
+				"返回此字符(your、her、his)的正确的特定于性别的所有格代词。默认情况下，为玩家角色返回“your”。"
+				+ "如果需要使用实际的第三人称玩家角色代词，请将“true”作为参数传入。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "your";
+					return "你";
 					
 				} else {
 					if(character.isFeminine()) {
@@ -4812,11 +4812,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method"){//TODO
+				"方法描述"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "yours";
+					return "你";
 				} else {
 					if(character.isFeminine()) {
 						return Gender.F_V_B_FEMALE.getPossessiveAlone();
@@ -4835,16 +4835,16 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method"){
+				"方法说明"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "yours";
+					return "你";
 				} else {
 					if(character.isPlayerKnowsName()) {
-						return character.getName(true) + "'s";
+						return character.getName(true);
 					}
-					return character.getName("the") + "'s";
+					return character.getName();
 				}
 			}
 		});
@@ -4857,13 +4857,13 @@ public class UtilText {
 						"himHer"),
 				true,
 				true,
-				"(real pronoun)",
-				"Returns the correct pronoun for this character (you, him, her). By default, returns 'you' for player character."
-				+ " If you need the regular third-person player character pronoun, pass in 'true' as an argument."){
+				"(实际代词)",
+				"返回此角色(your、her、his)的人称代词。默认情况下，为玩家角色返回“you”。"
+				+ "如果需要使用常规的第三人称玩家角色代词，请将 'true' 作为参数传入。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "you";
+					return "你";
 				} else {
 					if(character.isFeminine()) {
 						if(character.isPlayer()) {
@@ -4890,13 +4890,13 @@ public class UtilText {
 						"heShe"),
 				true,
 				true,
-				"(real pronoun)",
-				"Returns the correct pronoun for this character (you, she, he). By default, returns 'you' for player character."
-				+ " If you need the regular third-person player character pronoun, passin 'true' as an argument."){
+				"(实际代词)",
+				"返回此角色(your、her、his)的人称代词。默认情况下，为玩家角色返回“you”。"
+				+ "如果需要使用常规的第三人称玩家角色代词，请将 'true' 作为参数传入。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "you";
+					return "你";
 				} else {
 					if(character.isFeminine()) {
 						if(character.isPlayer()) {
@@ -4923,25 +4923,25 @@ public class UtilText {
 						"heSheIs"),
 				true,
 				true,
-				"(real pronoun)",
-				"Returns the correct gender-specific pronoun contraction for this character (you're, she's, he's). By default, returns 'you're' for player character."
-				+ " If you need the regular third-person player character pronoun contraction, passin 'true' as an argument."){
+				"(实际代词)",
+				"返回此角色(your、her、his)的正确的特定于性别的所有格代词。默认情况下，为玩家角色返回“your”。"
+				+ "如果需要使用常规的第三人称玩家角色代词缩略语，请将 'true' 作为参数传入。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "you're";
+					return "你";
 				} else {
 					if(character.isFeminine()) {
 						if(character.isPlayer()) {
-							return Gender.F_V_B_FEMALE.getSecondPerson() + "'s";
+							return Gender.F_V_B_FEMALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getFeminine() + "'s";
+							return GenderPronoun.SECOND_PERSON.getFeminine();
 						}
 					} else {
 						if(character.isPlayer()) {
-							return Gender.M_P_MALE.getSecondPerson() + "'s";
+							return Gender.M_P_MALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getMasculine() + "'s";
+							return GenderPronoun.SECOND_PERSON.getMasculine();
 						}
 					}
 				}
@@ -4956,25 +4956,25 @@ public class UtilText {
 						"heSheIsFull"),
 				true,
 				true,
-				"(real pronoun)",
-				"Returns the correct gender-specific pronoun contraction for this character (you are, she is, he is). By default, returns 'you are' for player character."
-				+ " If you need the regular third-person player character pronoun contraction, passin 'true' as an argument."){
+				"(实际代词)",
+				"返回此角色正确的特定于性别的(you are, she is, he is)的人称代词缩写。默认情况下，为玩家角色返回“you are”。"
+				+ "如果需要使用常规的第三人称玩家角色代词缩略语，请将 'true' 作为参数传入。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "you are";
+					return "你";
 				} else {
 					if(character.isFeminine()) {
 						if(character.isPlayer()) {
-							return Gender.F_V_B_FEMALE.getSecondPerson() + " is";
+							return Gender.F_V_B_FEMALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getFeminine() + " is";
+							return GenderPronoun.SECOND_PERSON.getFeminine();
 						}
 					} else {
 						if(character.isPlayer()) {
-							return Gender.M_P_MALE.getSecondPerson() + " is";
+							return Gender.M_P_MALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getMasculine() + " is";
+							return GenderPronoun.SECOND_PERSON.getMasculine();
 						}
 					}
 				}
@@ -4989,25 +4989,25 @@ public class UtilText {
 						"heSheHas"),
 				true,
 				true,
-				"(real pronoun)",
-				"Returns the correct gender-specific pronoun contraction for this character (you've, she's, he's). By default, returns 'you've' for player character."
-				+ " If you need the regular third-person player character pronoun contraction, passin 'true' as an argument."){
+				"(实际代词)",
+				"返回此角色正确的特定于性别的(you've, she's, he's)的人称代词缩写。默认情况下，为玩家角色返回“you've”。"
+				+ "如果需要使用常规的第三人称玩家角色代词缩略语，请将 'true' 作为参数传入。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments==null && isPlayer(target, character)) {
-					return "you've";
+					return "你";
 				} else {
 					if(character.isFeminine()) {
 						if(character.isPlayer()) {
-							return Gender.F_V_B_FEMALE.getSecondPerson() + "'s";
+							return Gender.F_V_B_FEMALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getFeminine() + "'s";
+							return GenderPronoun.SECOND_PERSON.getFeminine();
 						}
 					} else {
 						if(character.isPlayer()) {
-							return Gender.M_P_MALE.getSecondPerson() + "'s";
+							return Gender.M_P_MALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getMasculine() + "'s";
+							return GenderPronoun.SECOND_PERSON.getMasculine();
 						}
 					}
 				}
@@ -5023,23 +5023,23 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the correct gender-specific pronoun contraction for this character (you have, she has, he has). By default, returns 'you have' for player character."){
+				"返回此角色正确的特定于性别的(you have, she has, he has)的人称代词缩写。默认情况下，为玩家角色返回“you have”。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(isPlayer(target, character)) {
-					return "you have";
+					return "你";
 				} else {
 					if(character.isFeminine()) {
 						if(character.isPlayer()) {
-							return Gender.F_V_B_FEMALE.getSecondPerson() + " has";
+							return Gender.F_V_B_FEMALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getFeminine() + " has";
+							return GenderPronoun.SECOND_PERSON.getFeminine();
 						}
 					} else {
 						if(character.isPlayer()) {
-							return Gender.M_P_MALE.getSecondPerson() + " has";
+							return Gender.M_P_MALE.getSecondPerson();
 						} else {
-							return GenderPronoun.SECOND_PERSON.getMasculine() + " has";
+							return GenderPronoun.SECOND_PERSON.getMasculine();
 						}
 					}
 				}
@@ -5053,24 +5053,24 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns correct gender-specific reflexive pronoun for this character (yourself, herself, himself). By default, returns 'yourself' for player character."
-						+ " If you need the regular reflexive player character pronoun, passin 'true' as an argument."){
+				"返回此角色(yourself, herself, himself)的正确的特定于性别的反身代词。默认情况下，为玩家角色返回“yourself”。"
+						+ "如果需要使用常规的玩家反身代词，请将 'true' 作为参数传入。"){
 					@Override
 					public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 						if(arguments==null && isPlayer(target, character)) {
-							return "yourself";
+							return "你自己";
 						} else {
 							if(character.isFeminine()) {
 								if(character.isPlayer()) {
-									return Gender.F_V_B_FEMALE.getThirdPerson()+"self";
+									return Gender.F_V_B_FEMALE.getThirdPerson()+"自己";
 								} else {
-									return GenderPronoun.THIRD_PERSON.getFeminine()+"self";
+									return GenderPronoun.THIRD_PERSON.getFeminine()+"自己";
 								}
 							} else {
 								if(character.isPlayer()) {
-									return Gender.M_P_MALE.getThirdPerson()+"self";
+									return Gender.M_P_MALE.getThirdPerson()+"自己";
 								} else {
-									return GenderPronoun.THIRD_PERSON.getMasculine()+"self";
+									return GenderPronoun.THIRD_PERSON.getMasculine()+"自己";
 								}
 							}
 						}
@@ -5085,9 +5085,9 @@ public class UtilText {
 				true,
 				true,
 				"(inventorySlot, coloured)",
-				"Returns the name of the piece of clothing that's in the inventory slot passed in as the first argument."
-						+ " Possible arguments are the InventorySlot enum values."
-						+ " The second argument is a boolean for whether you want the clothing name to include its colour."){
+				"返回作为第一个参数传入的物品栏位上衣物的名称。"
+						+ "可能的参数应为InventorySlot枚举值。"
+						+ "第二个参数为布尔值，表示你是否希望衣物名称包含颜色描述。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
@@ -5109,7 +5109,7 @@ public class UtilText {
 							if(Boolean.valueOf(argument2)) {
 								return clothingInSlot.getName(pronoun);
 							} else {
-								return (pronoun?UtilText.generateSingularDeterminer(clothingInSlot.getName())+" ":"")+clothingInSlot.getName();
+								return (pronoun?UtilText.generateSingularDeterminer(clothingInSlot.getName())+"":"")+clothingInSlot.getName();
 							}
 						} catch(Exception ex) {
 							return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Clothingslot_not_found</i>";
@@ -5135,7 +5135,7 @@ public class UtilText {
 				true,
 				true,
 				"(bodyPart)",
-				"Returns the name of the highest piece of clothing that's blocking the area passed in as an argument. Possible arguments are the CoverableArea enum values."){
+				"返回遮挡了作为第一个参数传入的物品栏位的最上层衣物的名称。可能的参数应为CoverableArea枚举值。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
@@ -5174,7 +5174,7 @@ public class UtilText {
 				true,
 				true,
 				"(bodyPart)",
-				"Returns the name of the lowest piece of clothing that's blocking the area passed in as an argument. Possible arguments are the CoverableArea enum values."){
+				"返回遮挡了作为第一个参数传入的物品栏位的最下层衣物的名称。可能的参数应为CoverableArea枚举值。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null) {
@@ -5212,14 +5212,14 @@ public class UtilText {
 			commandsList.add(new ParserCommand(
 					Util.newArrayListOfValues(
 							gender.getType()==PronounType.FEMININE
-								?gender.getGenderName().getFeminine()
+								?gender.getGenderName().getFeminineId()
 								:(gender.getType()==PronounType.MASCULINE
-									?gender.getGenderName().getMasculine()
-									:gender.getGenderName().getNeutral())),
+									?gender.getGenderName().getMasculineId()
+									:gender.getGenderName().getNeutralId())),
 					true,
 					true,
 					"",
-					"Returns this gender name (based on user settings)."){
+					"返回性别名称(基于用户设置)。"){
 				@Override
 				public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 					return gender.getName();
@@ -5235,18 +5235,18 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns 'morning' in the morning, 'afternoon' in the afternoon, or 'evening' in the evening and night."){
+				"返回分别在“早晨”、“下午”、“夜晚”返回相应的结果。"){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				int hour = Main.game.getHourOfDay();
 				if(hour<4) {
-					return "evening";
+					return "夜晚";
 				} else if(hour<12) {
-					return "morning";
+					return "早晨";
 				}else if(hour<17) {
-					return "afternoon";
+					return "下午";
 				}
-				return "evening";
+				return "夜晚";
 			}
 		});
 		
@@ -5256,14 +5256,14 @@ public class UtilText {
 						"b"),
 				false,
 				false,
-				"(text to make bold)",
-				"Description of method"){//TODO
+				"(加粗文字)",
+				"方法描述"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null)
 					return "<b>"+arguments+"</b>";
 				else
-					return "<b>...</b>";
+					return "<b>……</b>";
 			}
 		});
 		
@@ -5274,14 +5274,14 @@ public class UtilText {
 						"i"),
 				false,
 				false,
-				"(text to italicise)",
-				"Description of method"){//TODO
+				"(倾斜文字)",
+				"方法描述"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null)
 					return "<i>"+arguments+"</i>";
 				else
-					return "<i>...</i>";
+					return "<i>……</i>";
 			}
 		});
 
@@ -5292,14 +5292,14 @@ public class UtilText {
 						"g"),
 				false,
 				false,
-				"(text to make glow)",
-				"Description of method"){//TODO
+				"(使文字发光)",
+				"方法描述"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(arguments!=null)
 					return applyGlow(arguments);
 				else
-					return applyGlow("...");
+					return applyGlow("……");
 			}
 		});
 		
@@ -5319,8 +5319,8 @@ public class UtilText {
 						commandNames,
 						false,
 						false,
-						"(text to colour)",
-						"Formats the argument text into coloured text."){
+						"(需要染色的文本)",
+						"将文本参数格式化为彩色文本。"){
 					@Override
 					public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 						if(arguments!=null) {
@@ -5353,7 +5353,7 @@ public class UtilText {
 								return "<span style='color:"+c.toWebHexString()+";'>"+arguments+"</span>";
 							}
 						} else {
-							return "<span style='color:"+c.toWebHexString()+";'>...</span>";
+							return "<span style='color:"+c.toWebHexString()+";'>……</span>";
 						}
 					}
 				});
@@ -5368,8 +5368,8 @@ public class UtilText {
 						commandNames,
 						false,
 						false,
-						"(text to make bold)",
-						"Formats the argument text into bold, coloured text."){
+						"(加粗文字)",
+						"将文本参数格式化为彩色加粗文本。"){
 					@Override
 					public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 						if(arguments!=null) {
@@ -5402,7 +5402,7 @@ public class UtilText {
 								return "<b style='color:"+c.toWebHexString()+";'>"+arguments+"</b>";
 							}
 						} else {
-							return "<b style='color:"+c.toWebHexString()+";'>...</b>";
+							return "<b style='color:"+c.toWebHexString()+";'>……</b>";
 						}
 					}
 				});
@@ -5418,8 +5418,8 @@ public class UtilText {
 						commandNames,
 						false,
 						false,
-						"(text to italicise)",
-						"Formats the argument text into italicised, coloured text."){
+						"(倾斜文字)",
+						"将文本参数格式化为彩色斜体文本。"){
 					@Override
 					public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 						if(arguments!=null) {
@@ -5452,7 +5452,7 @@ public class UtilText {
 								return "<i style='color:"+c.toWebHexString()+";'>"+arguments+"</i>";
 							}
 						} else {
-							return "<i style='color:"+c.toWebHexString()+";'>...</i>";
+							return "<i style='color:"+c.toWebHexString()+";'>……</i>";
 						}
 					}
 				});
@@ -5468,8 +5468,8 @@ public class UtilText {
 						commandNames,
 						false,
 						false,
-						"(text to glow)",
-						"Description of method"){//TODO
+						"(使文字发光)",
+						"方法描述"){//TODO
 					@Override
 					public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 						if(arguments!=null) {
@@ -5501,7 +5501,7 @@ public class UtilText {
 								return applyGlow(arguments, c);
 							}
 						} else {
-							return applyGlow("...");
+							return applyGlow("……");
 						}
 					}
 				});
@@ -5517,7 +5517,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the time of day, in hours and minutes.") {
+				"返回时间，以小时和分钟为单位。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				return Units.time(Main.game.getDateNow());
@@ -5529,8 +5529,8 @@ public class UtilText {
 						"time"),
 				true,
 				false,
-				"(hours to convert)",
-				"Returns the converted hours into a time reading. Decimal places correspond to fraction of hour as minutes (i.e. 6.5 is parsed as 06:30).") {
+				"(小时换算)",
+				"将换算后的小时数转为具体时间，小数位对应于小时的分钟数(即 6.5 会被解析为 06:30)。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (arguments == null || arguments.isEmpty()) {
@@ -5547,8 +5547,8 @@ public class UtilText {
 						"fluid"),
 				true,
 				false,
-				"(ml to convert)",
-				"Returns the converted fluid measurement in the small singular length unit. If no argument is given, returns the small singular length unit.") {
+				"(毫升体积换算)",
+				"返回转换后的体积，以较小的单位，单数形式。如果没有给出参数，返回较小的单位。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (arguments == null || arguments.isEmpty()) {
@@ -5563,13 +5563,13 @@ public class UtilText {
 						"size"),
 				true,
 				false,
-				"(cm to convert)",
-				"Returns the converted size in the localized, singular form. " +
-						"If no argument is given, returns the small singular length unit.") {
+				"(厘米长度单位换算)",
+				"返回转换后的长度，以本地化的单数形式。" +
+						"如果没有给出参数，则返回较短的长度单位。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (arguments == null || arguments.isEmpty()) {
-					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "centimetre" : "inch";
+					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "厘米" : "英寸";
 				}
 				return Units.size(Double.valueOf(arguments), Units.ValueType.NUMERIC, Units.UnitType.LONG_SINGULAR);
 			}
@@ -5581,13 +5581,13 @@ public class UtilText {
 						"sizePlural"),
 				true,
 				false,
-				"(cm to convert)",
-				"Returns the converted size in the long, localized form. " +
-						"If no argument is given, returns the small plural length unit.") {
+				"(厘米长度单位换算)",
+				"返回转换后的长度，以本地化的形式。" +
+						"如果没有给出参数，返回较短的复数长度单位。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (arguments == null || arguments.isEmpty()) {
-					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "centimetres" : "inches";
+					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "厘米" : "英寸";
 				}
 				return Units.size(Double.valueOf(arguments), Units.ValueType.NUMERIC, Units.UnitType.LONG);
 			}
@@ -5598,9 +5598,9 @@ public class UtilText {
 						"sizeShort"),
 				true,
 				false,
-				"(cm to convert)",
-				"Returns the converted size in the localized, singular form. " +
-						"If no argument is given, returns the small singular length unit.") {
+				"(厘米长度单位换算)",
+				"返回转换后的长度，以本地化的单数形式。" +
+						"如果没有给出参数，则返回较短的长度单位。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (arguments == null || arguments.isEmpty()) {
@@ -5616,13 +5616,13 @@ public class UtilText {
 						"largeSize"),
 				true,
 				false,
-				"(cm to convert)",
-				"Returns the converted size in the localized, singular text form. " +
-						"If no argument is given, returns the large singular length unit.") {
+				"(厘米长度单位换算)",
+				"返回转换后的长度，以本地化的单数形式。" +
+						"如果没有给出参数，返回较长的长度单位。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (arguments == null || arguments.isEmpty()) {
-					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "metre" : "foot";
+					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "米" : "英尺";
 				}
 				return Units.size(Double.valueOf(arguments), Units.ValueType.TEXT, Units.UnitType.LONG_SINGULAR);
 			}
@@ -5634,13 +5634,13 @@ public class UtilText {
 						"largeSizePlural"),
 				true,
 				false,
-				"(cm to convert)",
-				"Returns the converted size in the localized text form. " +
-						"If no argument is given, returns the large plural length unit.") {
+				"(厘米长度单位换算)",
+				"返回转化后的长度，以本地化的文本形式。" +
+						"如果没有给出参数，返回较长的复数长度单位。") {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if (arguments == null || arguments.isEmpty()) {
-					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "metres" : "feet";
+					return Main.getProperties().hasValue(PropertyValue.metricSizes) ? "米" : "英尺";
 				}
 				return Units.size(Double.valueOf(arguments), Units.ValueType.TEXT, Units.UnitType.LONG);
 			}
@@ -5655,11 +5655,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the main weapon equipped by the character in their primary arm row. Returns 'fists' if no weapon is equipped."){//TODO
+				"返回该角色第一对手臂上装备的主手武器的名称。如果没有武器则返回“拳头”。"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getMainWeapon(0)==null) {
-					return "fists";
+					return "拳头";
 				} else {
 					return character.getMainWeapon(0).getName();
 				}
@@ -5673,11 +5673,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the main weapon equipped by the character in their secondary arm row (for characters who have more than one pair of arms). Returns 'fists' if no weapon is equipped."){//TODO
+				"返回该角色第二对手臂上装备的主手武器的名称(仅限拥有超过一对手臂的角色)。如果没有武器则返回“拳头”。"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getMainWeapon(1)==null) {
-					return "fists";
+					return "拳头";
 				} else {
 					return character.getMainWeapon(1).getName();
 				}
@@ -5691,11 +5691,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the main weapon equipped by the character in their tertiary arm row (for characters who have more than one pair of arms). Returns 'fists' if no weapon is equipped."){//TODO
+				"返回该角色第三对手臂上装备的主手武器的名称(仅限拥有超过两对手臂的角色)。如果没有武器则返回“拳头”。"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getMainWeapon(2)==null) {
-					return "fists";
+					return "拳头";
 				} else {
 					return character.getMainWeapon(2).getName();
 				}
@@ -5712,11 +5712,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the offhand weapon equipped by the character in their primary arm row. Returns 'fists' if no weapon is equipped."){//TODO
+				"返回该角色第一对手臂上装备的副手武器的名称。如果没有武器则返回“拳头”。"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getOffhandWeapon(0)==null) {
-					return "fists";
+					return "拳头";
 				} else {
 					return character.getOffhandWeapon(0).getName();
 				}
@@ -5730,11 +5730,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the offhand weapon equipped by the character in their primary arm row (for characters who have more than one pair of arms). Returns 'fists' if no weapon is equipped."){//TODO
+				"返回该角色第二对手臂上装备的副手武器的名称(仅限拥有超过一对手臂的角色)。如果没有武器则返回“拳头”。"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getOffhandWeapon(1)==null) {
-					return "fists";
+					return "拳头";
 				} else {
 					return character.getOffhandWeapon(1).getName();
 				}
@@ -5748,11 +5748,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the offhand weapon equipped by the character in their tertiary arm row (for characters who have more than one pair of arms). Returns 'fists' if no weapon is equipped."){//TODO
+				"返回该角色第三对手臂上装备的副手武器的名称(仅限拥有超过两对手臂的角色)。如果没有武器则返回“拳头”。"){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getOffhandWeapon(2)==null) {
-					return "fists";
+					return "拳头";
 				} else {
 					return character.getOffhandWeapon(2).getName();
 				}
@@ -5921,7 +5921,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the descriptor of the length of this character's antennae.",
+				"返回该角色触须长度的描述词。",
 				BodyPartType.ANTENNA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -5936,7 +5936,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the number of rows of antennae this character has, in the form of a word ('one', 'three' instead of '1', '3' etc.)",
+				"返回该角色拥有的触须行数，以汉字的形式(即“一”、“二”而不是“1”、“2”。)",
 				BodyPartType.ANTENNA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -5951,7 +5951,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the number of antennae this character has in each antenna row, in the form of a word ('one', 'two' instead of '1', '2' etc.)",
+				"返回该角色每行触须的数量，以汉字的形式(即“一”、“二”而不是“1”、“2”。)",
 				BodyPartType.ANTENNA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -5966,7 +5966,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the determiner of the antennae this character has. Will be in the format of 'a pair of'.",
+				"返回该角色拥有触须所用的限定词。形式为“一对”等。",
 				BodyPartType.ANTENNA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -5984,11 +5984,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's armpit. Will almost always simply be 'armpit' or 'underarm'.",
+				"返回该角色腋窝的名称，基本总是“腋窝”或“腋下”。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return UtilText.returnStringAtRandom("armpit", "underarm");
+				return UtilText.returnStringAtRandom("腋窝", "腋下");
 			}
 		});
 		
@@ -6001,35 +6001,35 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's armpit, with a descriptive word appended to the front of it, based on underarm hair, arm furriness, and femininity.",
+				"返回该角色腋窝的名称，前缀有描述词，基于腋窝的毛发量、皮毛量和女性化程度。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				List<String> descriptors = new ArrayList<>();
 				if(character.getCovering(character.getArmCovering()).getModifier().isFurryModifier()) {
-					descriptors.add("furry");
+					descriptors.add("毛茸茸");
 				} else {
 					if(Main.game.isBodyHairEnabled() && character.getUnderarmHair()!=BodyHair.ZERO_NONE) {
-						descriptors.add("hairy");
+						descriptors.add("多毛");
 					} else {
-						descriptors.add("smooth");
+						descriptors.add("光滑");
 					}
 				}
 				if(character.isFeminine()) {
-					descriptors.add("feminine");
-					descriptors.add("sexy");
-					descriptors.add("hot");
+					descriptors.add("女性化");
+					descriptors.add("性感");
+					descriptors.add("色情");
 				} else {
-					descriptors.add("masculine");
+					descriptors.add("男性化");
 				}
 				if(character.getMuscleValue()>=Muscle.THREE_MUSCULAR.getMinimumValue()) {
-					descriptors.add("muscular");
+					descriptors.add("肌肉发达");
 				} else if(character.getMuscleValue()<Muscle.ONE_LIGHTLY_MUSCLED.getMinimumValue() && character.getBodySizeValue()>=BodySize.THREE_LARGE.getMinimumValue()){
-					descriptors.add("chubby");
+					descriptors.add("丰满");
 				}
 				return applyDescriptor(
 						Util.randomItemFrom(descriptors),
-						UtilText.returnStringAtRandom("armpit", "underarm"));
+						UtilText.returnStringAtRandom("腋窝", "腋下"));
 			}
 		});
 
@@ -6040,11 +6040,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's armpits. Will almost always simply be 'armpits' or 'underarms'.",
+				"返回该角色腋窝的名称，基本总是“腋窝”或“腋下”。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return UtilText.returnStringAtRandom("armpits", "underarms");
+				return UtilText.returnStringAtRandom("腋窝", "腋下");
 			}
 		});
 		
@@ -6057,29 +6057,29 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's armpits, with a descriptive word appended to the front of it, based on underarm hair, arm furriness, and femininity.",
+				"返回该角色腋窝的名称，前缀有描述词，基于腋窝的毛发量、皮毛量和女性化程度。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				List<String> descriptors = new ArrayList<>();
 				if(character.getCovering(character.getArmCovering()).getModifier().isFurryModifier()) {
-					descriptors.add("furry");
+					descriptors.add("毛茸茸");
 				} else {
 					if(character.getUnderarmHair()!=BodyHair.ZERO_NONE) {
-						descriptors.add("hairy");
+						descriptors.add("多毛");
 					} else {
-						descriptors.add("smooth");
+						descriptors.add("光滑");
 					}
 				}
 				if(character.isFeminine()) {
-					descriptors.add("feminine");
-					descriptors.add("sexy");
+					descriptors.add("女性化");
+					descriptors.add("性感");
 				} else {
-					descriptors.add("masculine");
+					descriptors.add("男性化");
 				}
 				return applyDescriptor(
 						Util.randomItemFrom(descriptors),
-						UtilText.returnStringAtRandom("armpits", "underarms"));
+						UtilText.returnStringAtRandom("腋窝", "腋下"));
 			}
 		});
 		
@@ -6089,16 +6089,16 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns a descriptor in the form of the character number of arms. i.e. If the character has 1 arm row it will return 'a pair of', for 2, 'two pairs of', and 3, 'three pairs of'.",
+				"返回对应的角色手臂数目的描述词。也就是说：如果该角色拥有一对手臂，则返回“一对”，两对则返回“两对”，三对则返回“三对”。",
 				BodyPartType.ARM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getArmRows()==1) {
-					return "a pair of";
+					return "一对";
 				} else if(character.getArmRows()==2) {
-					return "two pairs of";
+					return "两对";
 				} else {
-					return "three pairs of";
+					return "三对";
 				}
 			}
 		});
@@ -6109,7 +6109,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the total number of the character's hands, which will usually be 'two', 'four', or 'six'. (Sometimes 'no' for ferals!)",
+				"返回该角色手掌的数量，通常为“二”，“四”或“六”。(有些兽态身体会是“无”！)",
 				BodyPartType.ARM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6123,7 +6123,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6138,7 +6138,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6152,7 +6152,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6167,7 +6167,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6181,7 +6181,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6196,7 +6196,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6210,7 +6210,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6225,7 +6225,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ARM){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6241,7 +6241,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's ass size.",
+				"返回角色屁股尺寸的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6256,7 +6256,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's asshole capacity.",
+				"返回角色肛门容量的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6271,7 +6271,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's asshole depth.",
+				"返回角色肛门深度的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6286,7 +6286,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's asshole elasticity.",
+				"返回角色肛门弹性的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6301,7 +6301,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's asshole plasticity.",
+				"返回角色肛门可塑性的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6316,7 +6316,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's asshole wetness.",
+				"返回角色肛门湿润度的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6330,13 +6330,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ASS){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getGenitalArrangement()==GenitalArrangement.CLOACA
 						|| character.getGenitalArrangement()==GenitalArrangement.CLOACA_BEHIND) {
-					return "cloaca";
+					return "泄殖腔";
 				} else {
 					return character.getBody().getAss().getNameSingular(character);
 				}
@@ -6349,13 +6349,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.ASS){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getGenitalArrangement()==GenitalArrangement.CLOACA
 						|| character.getGenitalArrangement()==GenitalArrangement.CLOACA_BEHIND) {
-					return "slit-like cloaca";
+					return "狭缝状泄殖腔";
 				} else {
 					return applyDescriptor(character.getBody().getAss().getDescriptor(character), character.getBody().getAss().getNameSingular(character));
 				}
@@ -6373,7 +6373,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the covering of this character's hips (which is based on torso type).",
+				"返回该角色臀部表层的名称(基于躯干类型)。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6388,7 +6388,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the covering of this character's hips (which is based on torso type), plus a descriptor appended before it.",
+				"返回该角色臀部表层的名称(基于躯干类型)，前缀描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6403,11 +6403,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's hips.",
+				"返回该角色臀部的名称。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return "hips";
+				return "臀部";
 			}
 		});
 		
@@ -6420,11 +6420,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's hips, plus a size descriptor appened before it.",
+				"返回该角色臀部的名称，前缀尺寸描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return applyDescriptor(character.getHipSize().getDescriptor(), "hips");
+				return applyDescriptor(character.getHipSize().getDescriptor(), "臀部");
 			}
 		});
 		
@@ -6435,7 +6435,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's hip size.",
+				"返回该角色臀部尺寸的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6452,11 +6452,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns 'paizuri' if the character's breasts are large enough to give a proper tit-job, or 'naizuri' if they are too small.",
+				"根据该角色的乳房尺寸，返回“乳交”或者“乳头摩擦”。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return character.isBreastFuckablePaizuri()?"paizuri":"naizuri";
+				return character.isBreastFuckablePaizuri()?"乳交":"乳头摩擦";
 			}
 		});
 		
@@ -6471,7 +6471,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's breast size.",
+				"返回该角色乳房尺寸的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6490,7 +6490,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the shape of this character's breasts.",
+				"返回该角色乳房形状的名称。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6505,7 +6505,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the size of this character's nipples.",
+				"返回该角色乳头尺寸的名称。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6520,7 +6520,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the size of this character's areolae.",
+				"返回该角色乳晕尺寸的名称。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6541,7 +6541,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's cup size. (e.g. 'AA', 'B', 'DD')",
+				"返回该角色罩杯的名称。(如“AA”、“B”、“DD”)",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6559,7 +6559,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's nipple capacity.",
+				"返回该角色乳头容量的描述词。",
 				BodyPartType.ASS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6578,7 +6578,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's nipple depth.",
+				"返回该角色乳头深度的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6597,7 +6597,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's nipple elasticity.",
+				"返回该角色乳头弹性的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6616,7 +6616,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's nipple plasticity.",
+				"返回该角色乳头可塑性的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6631,14 +6631,14 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the number of this character's breast rows, formatted as a word + 'pairs of'. (e.g. 'pair of', 'three pairs of')",
+				"返回该角色乳房的行数，格式化为汉字+“对”。(如“一对”、“三对”)",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getBreastRows()==1) {
-					return "pair of";
+					return "一对";
 				} else {
-					return Util.intToString(character.getBreastRows())+" pairs of";
+					return Util.intToString(character.getBreastRows())+"对";
 				}
 			}
 		});
@@ -6650,7 +6650,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the total number of breasts that this character has. i.e. Breast rows * 2",
+				"返回该角色拥有的乳房总数。即乳房对数*2",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6664,7 +6664,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the number of nipples that this character has on each breast. Will usually just be one.",
+				"返回该角色每个乳房上的乳头数量。通常为一。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6679,7 +6679,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the total number of nipples that this character has. i.e. Breast rows * 2 * nipples per row",
+				"返回该角色拥有的乳头总数。即乳房对数*2*每个乳房的乳头数",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6693,7 +6693,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6708,7 +6708,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6723,7 +6723,7 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the name of the flavour of this character's milk.",
+				"返回该角色乳汁口味的名称。",
 				BodyPartType.MILK){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6743,11 +6743,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns 'pair', or 'set', based on whether the character's crotch boobs are udders or not",
+				"返回“对”或者“套”，基于该角色是胯乳还是腹乳",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return character.getBreastCrotchShape()==BreastShape.UDDERS?"set":"pair";
+				return character.getBreastCrotchShape()==BreastShape.UDDERS?"套":"对";
 			}
 		});
 		
@@ -6764,7 +6764,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6785,7 +6785,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6804,7 +6804,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6824,7 +6824,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6849,7 +6849,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's crotch-boob cup size. (e.g. 'AA', 'B', 'DD')",
+				"返回该角色胯乳罩杯的名称。(如“AA”、“B”、“DD”)",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6870,7 +6870,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's crotch-nipple capacity.",
+				"返回该角色胯乳乳头容量的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6891,7 +6891,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's crotch-nipple depth.",
+				"返回该角色胯乳乳头深度的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6912,7 +6912,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's crotch-nipple elasticity.",
+				"返回该角色胯乳乳头弹性的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6933,7 +6933,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's crotch-nipple plasticity.",
+				"返回该角色胯乳乳头可塑性的描述词。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6952,16 +6952,16 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the number of this character's crotch-boob rows, formatted as a word + 'pairs of'. (e.g. 'pair of', 'three pairs of')",
+				"返回该角色胯乳的行数，格式化为汉字+“对”。(如“一对”、“三对”)",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getBreastCrotchRows()==0) {
-					return "single";
+					return "单个";
 				} else if(character.getBreastCrotchRows()==1) {
-					return "pair of";
+					return "一对";
 				} else {
-					return Util.intToString(character.getBreastCrotchRows())+" pairs of";
+					return Util.intToString(character.getBreastCrotchRows())+"对";
 				}
 			}
 		});
@@ -6975,7 +6975,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the total number of breasts that this character has. i.e. Breast rows * 2",
+				"返回该角色拥有的乳房总数。即乳房对数*2",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -6993,7 +6993,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the number of nipples that this character has on each breast. Will usually just be one.",
+				"返回该角色每个乳房上的乳头数量。通常为一。",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7010,7 +7010,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the total number of nipples that this character has. i.e. Breast rows * 2 * nipples per row",
+				"返回该角色拥有的乳头总数。即乳房对数*2*每个乳房的乳头数",
 				BodyPartType.BREAST){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7026,7 +7026,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7043,7 +7043,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.BREAST){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7060,7 +7060,7 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the name of the flavour of this character's milk.",
+				"返回该角色乳汁口味的名称。",
 				BodyPartType.MILK){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7080,7 +7080,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7097,7 +7097,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's throat capacity.",
+				"返回角色喉咙容量的描述词。",
 				BodyPartType.FACE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7112,7 +7112,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's throat depth.",
+				"返回该角色喉咙深度的描述词。",
 				BodyPartType.FACE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7127,7 +7127,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's throat elasticity.",
+				"返回角色喉咙弹性的描述词。",
 				BodyPartType.FACE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7142,7 +7142,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's throat plasticity.",
+				"返回角色喉咙可塑性的描述词。",
 				BodyPartType.FACE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7157,7 +7157,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's throat wetness.",
+				"返回角色喉咙湿润度的描述词。",
 				BodyPartType.FACE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7172,7 +7172,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7186,7 +7186,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7200,7 +7200,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7215,7 +7215,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7229,7 +7229,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7244,7 +7244,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7258,7 +7258,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7273,7 +7273,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.FACE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7289,7 +7289,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"The determiner for the hair type of the character. Will usually be 'a head of'.",
+				"角色头发类型的限定词，通常是“一头”",
 				BodyPartType.HAIR){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7303,7 +7303,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's hair length.",
+				"返回该角色头发长度的描述词",
 				BodyPartType.HAIR){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7322,7 +7322,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the descriptor of the length of this character's horns.",
+				"返回该角色角长度的描述词",
 				BodyPartType.HORN){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7336,7 +7336,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the number of rows of horns this character has, in the form of a word ('one', 'three' instead of '1', '3' etc.)",
+				"返回该角色拥有的角行数，以汉字的形式(即“一”、“二”而不是“1”、“2”。)",
 				BodyPartType.HORN){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7350,7 +7350,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the number of horns this character has in each horn row, in the form of a word ('one', 'two' instead of '1', '2' etc.)",
+				"返回该角色每行角的数量，以汉字的形式(即“一”、“二”而不是“1”、“2”。)",
 				BodyPartType.HORN){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7364,7 +7364,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the determiner of the horns this character has. Will be in the format of 'a pair of'.",
+				"返回该角色拥有角所用的限定词。形式为“一对”等。",
 				BodyPartType.HORN){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7381,11 +7381,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's thighs. Will almost always simply be 'thighs'.",
+				"返回该角色股间的名称，基本总是“股间”。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return "thighs";
+				return "大腿";
 			}
 		});
 		
@@ -7396,11 +7396,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's thighs, with a descriptive word appended to the front of it, based on hip size.",
+				"返回该角色股间的名称，前缀有描述词，基于臀部尺寸。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return applyDescriptor(character.getHipSize().getDescriptor(), "thighs");
+				return applyDescriptor(character.getHipSize().getDescriptor(), "大腿");
 			}
 		});
 		
@@ -7409,10 +7409,10 @@ public class UtilText {
 						"foot"),
 				true,
 				true,
-				"(ignore clothing)",
-				"The singular name of this character's foot."
-					+ " If the character is wearing clothing which is restricting direct access to their foot, and this command is parsed during sex, it will return the name of the characters footwear."
-					+ " Pass in 'true' as an argument to ignore that sex behaviour, ensuring that the command will always return the singular name of this character's foot.",
+				"(忽略衣物)",
+				"该角色脚部的单数名称。"
+					+ "如果角色正在装备严格限制到脚部的服装，并且在性爱过程中该指令已完成，将返回角色脚部装备的名称。"
+					+ "传入值为真时忽略此性交行为，以确保该指令将永远返回单数的角色脚部名称",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7423,8 +7423,8 @@ public class UtilText {
 							AbstractClothing clothing = character.getHighestZLayerCoverableArea(CoverableArea.FEET);
 							return UtilText.returnStringAtRandom(
 									clothing.getSlotEquippedTo()==InventorySlot.FOOT
-										?"footwear"
-										:clothing.getName()+"-clad-"+character.getLegType().getFootNameSingular(character),
+										?"鞋子"
+										:"穿着"+clothing.getName()+"的"+character.getLegType().getFootNameSingular(character),
 									clothing.getName(),
 									clothing.getName());
 						} catch(Exception ex) {
@@ -7441,10 +7441,10 @@ public class UtilText {
 						"footD"),
 				true,
 				true,
-				"(ignore clothing)",
-				"The singular name of this character's foot, plus a descriptor appended to the front."
-					+ " If the character is wearing clothing which is restricting direct access to their foot, and this command is parsed during sex, it will return the name of the characters footwear."
-					+ " Pass in 'true' as an argument to ignore that sex behaviour, ensuring that the command will always return the singular name of this character's foot.",
+				"(忽略衣物)",
+				"该角色脚部的单数名称，前缀描述词。"
+					+ "如果角色正在装备严格限制到脚部的服装，并且在性爱过程中该指令已完成，将返回角色脚部装备的名称。"
+					+ "传入值为真时忽略此性交行为，以确保该指令将永远返回单数的角色脚部名称",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7455,8 +7455,8 @@ public class UtilText {
 							AbstractClothing clothing = character.getHighestZLayerCoverableArea(CoverableArea.FEET);
 							return UtilText.returnStringAtRandom(
 									clothing.getSlotEquippedTo()==InventorySlot.FOOT
-									?"footwear"
-									:clothing.getName()+"-clad-"+character.getLegType().getFootNameSingular(character),
+									?"鞋子"
+									:"穿着"+clothing.getName()+"的"+character.getLegType().getFootNameSingular(character),
 									clothing.getName(),
 									clothing.getName());
 						} catch(Exception ex) {
@@ -7472,10 +7472,10 @@ public class UtilText {
 						"feet"),
 				true,
 				true,
-				"(ignore clothing)",
-				"The plural name of this character's feet."
-					+ " If the character is wearing clothing which is restricting direct access to their feet, and this command is parsed during sex, it will return the name of the characters footwear."
-					+ " Pass in 'true' as an argument to ignore that sex behaviour, ensuring that the command will always return the plural name of this character's feet.",
+				"(忽略衣物)",
+				"角色脚部的复数名称。"
+					+ "如果角色正在装备严格限制到双脚的服装，并且在性爱过程中该指令已完成，将返回角色脚部装备的名称。"
+					+ "传入值为真时忽略此性交行为，以确保该指令将永远返回复数的角色脚部名称",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7486,8 +7486,8 @@ public class UtilText {
 							AbstractClothing clothing = character.getHighestZLayerCoverableArea(CoverableArea.FEET);
 							return UtilText.returnStringAtRandom(
 									clothing.getSlotEquippedTo()==InventorySlot.FOOT
-										?"footwear"
-										:clothing.getName()+"-clad-"+character.getLegType().getFootNamePlural(character),
+										?"鞋子"
+										:"穿着"+clothing.getName()+"的"+character.getLegType().getFootNamePlural(character),
 									clothing.getNamePlural(),
 									clothing.getNamePlural());
 						} catch(Exception ex) {
@@ -7504,10 +7504,10 @@ public class UtilText {
 						"feetD"),
 				true,
 				false,
-				"(ignore clothing)",
-				"The plural name of this character's feet, plus a descriptor appended to the front."
-					+ " If the character is wearing clothing which is restricting direct access to their feet, and this command is parsed during sex, it will return the name of the characters footwear."
-					+ " Pass in 'true' as an argument to ignore that sex behaviour, ensuring that the command will always return the plural name of this character's feet.",
+				"(忽略衣物)",
+				"该角色脚部的复数名称，前缀描述词。"
+					+ "如果角色正在装备严格限制到双脚的服装，并且在性爱过程中该指令已完成，将返回角色脚部装备的名称。"
+					+ "传入值为真时忽略此性交行为，以确保该指令将永远返回复数的角色脚部名称",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7518,8 +7518,8 @@ public class UtilText {
 							AbstractClothing clothing = character.getHighestZLayerCoverableArea(CoverableArea.FEET);
 							return UtilText.returnStringAtRandom(
 									clothing.getSlotEquippedTo()==InventorySlot.FOOT
-										?"footwear"
-										:clothing.getName()+"-clad-"+character.getLegType().getFootNamePlural(character),
+										?"鞋子"
+										:"穿着"+clothing.getName()+"的"+character.getLegType().getFootNamePlural(character),
 									clothing.getNamePlural(),
 									clothing.getNamePlural());
 						} catch(Exception ex) {
@@ -7535,10 +7535,10 @@ public class UtilText {
 						"toes"),
 				true,
 				true,
-				"(ignore clothing)",
-				"The plural name of this character's toes."
-					+ " If the character is wearing clothing which is restricting direct access to their feet, and this command is parsed during sex, it will return the name of the characters footwear."
-					+ " Pass in 'true' as an argument to ignore that sex behaviour, ensuring that the command will always return the plural name of this character's toes.",
+				"(忽略衣物)",
+				"该角色脚趾的复数名称。"
+					+ "如果角色正在装备严格限制到双脚的服装，并且在性爱过程中该指令已完成，将返回角色脚部装备的名称。"
+					+ "传入值为真时忽略此性交行为，以确保该指令将永远返回复数的角色指头名称",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7549,8 +7549,8 @@ public class UtilText {
 							AbstractClothing clothing = character.getHighestZLayerCoverableArea(CoverableArea.FEET);
 							return UtilText.returnStringAtRandom(
 									clothing.getSlotEquippedTo()==InventorySlot.FOOT
-										?"footwear"
-										:clothing.getName()+"-clad-"+character.getLegType().getFootNamePlural(character),
+										?"鞋子"
+										:"穿着"+clothing.getName()+"的"+character.getLegType().getFootNamePlural(character),
 									clothing.getNamePlural(),
 									clothing.getNamePlural());
 						} catch(Exception ex) {
@@ -7567,10 +7567,10 @@ public class UtilText {
 						"toesD"),
 				true,
 				false,
-				"(ignore clothing)",
-				"The plural name of this character's toes, plus a descriptor appended to the front."
-					+ " If the character is wearing clothing which is restricting direct access to their feet, and this command is parsed during sex, it will return the name of the characters footwear."
-					+ " Pass in 'true' as an argument to ignore that sex behaviour, ensuring that the command will always return the plural name of this character's toes.",
+				"(忽略衣物)",
+				"该角色脚趾的复数名称，加上前面的描述词。"
+					+ "如果角色正在装备严格限制到双脚的服装，并且在性爱过程中该指令已完成，将返回角色脚部装备的名称。"
+					+ "传入值为真时忽略此性交行为，以确保该指令将永远返回复数的角色指头名称",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7581,8 +7581,8 @@ public class UtilText {
 							AbstractClothing clothing = character.getHighestZLayerCoverableArea(CoverableArea.FEET);
 							return UtilText.returnStringAtRandom(
 									clothing.getSlotEquippedTo()==InventorySlot.FOOT
-										?"footwear"
-										:clothing.getName()+"-clad-"+character.getLegType().getFootNamePlural(character),
+										?"鞋子"
+										:"穿着"+clothing.getName()+"的"+character.getLegType().getFootNamePlural(character),
 									clothing.getNamePlural(),
 									clothing.getNamePlural());
 						} catch(Exception ex) {
@@ -7599,7 +7599,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's 'footjob' action, be it footjob, talonjob, hoofjob, etc.",
+				"返回该角色“足交”动作的名称，包括足交、爪交、蹄交等。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7613,7 +7613,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.LEG){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7629,14 +7629,14 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns 'spread(s) her/his legs' if the character has legs, or 'buck(s) her/his hips' if no legs.",
+				"如果角色有腿，则返回“张开她/他的双腿”；否则返回“翘起她/他的臀部”。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.hasLegs()) {
-					return UtilText.parse(character, "[npc.verb(spread)] [npc.her] [npc.legs]");
+					return UtilText.parse(character, "张开[npc.her]的[npc.legs]");
 				} else {
-					return UtilText.parse(character, "[npc.verb(buck)] [npc.her] [npc.hips]");
+					return UtilText.parse(character, "抬起[npc.her]的[npc.hips]");
 				}
 			}
 		});
@@ -7648,14 +7648,14 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns 'spreading her/his legs' if the character has legs, or 'bucking her/his hips' if no legs.",
+				"如果角色有腿，则返回“张开她/他的双腿”；否则返回“翘起她/他的臀部”。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.hasLegs()) {
-					return UtilText.parse(character, "spreading [npc.her] [npc.legs]");
+					return UtilText.parse(character, "张开[npc.her]的[npc.legs]");
 				} else {
-					return UtilText.parse(character, "bucking [npc.her] [npc.hips]");
+					return UtilText.parse(character, "抬起[npc.her]的[npc.hips]");
 				}
 			}
 		});
@@ -7673,11 +7673,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's urethra.",
+				"返回角色尿道的名称。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return "urethra";
+				return "尿道";
 			}
 		});
 		
@@ -7694,11 +7694,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's urethra, with a descriptor appended in front of it.",
+				"返回角色尿道前缀描述的名称。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return applyDescriptor(character.getPenisUrethraDescriptor(), "urethra");
+				return applyDescriptor(character.getPenisUrethraDescriptor(), "尿道");
 			}
 		});
 		
@@ -7711,7 +7711,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's penile urethra capacity.",
+				"返回角色阴茎尿道容量的描述词。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7728,7 +7728,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's penile urethra depth.",
+				"返回该角色阴茎尿道深度的描述词。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7745,7 +7745,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's penile urethra elasticity.",
+				"返回角色阴茎尿道弹性的描述词。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7762,7 +7762,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's penile urethra plasticity.",
+				"返回角色阴茎尿道可塑性的描述词。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7780,7 +7780,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the amount of cum that this character's balls store when full.",
+				"返回角色蛋蛋满溢时精液量的描述词。",
 				BodyPartType.CUM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7795,7 +7795,7 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the numerical value of the amount of cum that this character's balls store when full.",
+				"返回角色蛋蛋满溢时精液量的数值。",
 				BodyPartType.CUM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7810,7 +7810,7 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the name of the flavour of this character's cum.",
+				"返回该角色精液口味的名称。",
 				BodyPartType.CUM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7824,11 +7824,11 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the name of this character's precum.",
+				"返回角色先走液的名称。",
 				BodyPartType.CUM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return "precum";
+				return "先走液";
 			}
 		});
 		
@@ -7839,15 +7839,15 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the name of this character's precum, with a descriptor appended to the front.",
+				"返回角色先走液前缀描述的名称。",
 				BodyPartType.CUM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(!character.getCumModifiers().isEmpty()) {
-					return character.getCumModifiers().get(Util.random.nextInt(character.getCumModifiers().size())).getName() + " precum";
+					return character.getCumModifiers().get(Util.random.nextInt(character.getCumModifiers().size())).getName() + "先走液";
 				}
 				
-				return "precum";
+				return "先走液";
 			}
 		});
 		
@@ -7859,7 +7859,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TESTICLES){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7878,7 +7878,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TESTICLES){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7895,7 +7895,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.PENIS){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7916,7 +7916,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.PENIS){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7931,10 +7931,10 @@ public class UtilText {
 						"dickDescriptive"),
 				true,
 				true,
-				"(coloured)",
-				"Returns a description of the character's penis, in the format: 'size', 'girth', 'colour' 'feralRace'-cock."
-				+ "<br/>If the 'size' or 'girth' are average, those descriptors are omitted."
-				+ "<br/>Pass in 'true' if you want the output coloured.",
+				"(是否上色)",
+				"返回角色阴茎的描述词，格式：‘size’，‘girth’，‘colour’ ‘feralRace’的肉棒。"
+				+ "<br/>如果‘size’或‘girth’是平均尺寸，则省略描述词。"
+				+ "<br/>如果希望输出彩色，请输入“true”。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -7955,7 +7955,7 @@ public class UtilText {
 				// Girth:
 				if(character.getPenisGirth()!=PenetrationGirth.THREE_AVERAGE) {
 					if(sb.length()>0) {
-						sb.append(", ");	
+						sb.append("，");	
 					}
 					if(coloured) {
 						sb.append("<span style='color:"+character.getPenisGirth().getColour().toWebHexString()+";'>");
@@ -7968,20 +7968,20 @@ public class UtilText {
 
 				// Colour:
 				if(sb.length()>0) {
-					sb.append(", ");
+					sb.append("，");
 				}
 				sb.append(character.getCovering(character.getPenisCovering()).getColourDescriptor(character, coloured, false));
 				
 				// Race:
-				sb.append(" ");
+				sb.append("");
 				if(coloured) {
 					sb.append("<span style='color:"+character.getPenisRace().getColour().toWebHexString()+";'>");
 				}
 				if(character.getPenisRace()!=Race.HUMAN) {
-					sb.append(character.getPenisRace().getName(true)+"-cock");
+					sb.append(character.getPenisRace().getName(true)+"肉棒");
 					
 				} else {
-					sb.append("human cock");
+					sb.append("人类肉棒");
 				}
 				if(coloured) {
 					sb.append("</span>");
@@ -8001,7 +8001,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the length of the character's penis.",
+				"返回该角色阴茎长度的描述词。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8016,9 +8016,9 @@ public class UtilText {
 						"dickCircumference"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the circumference of the character's penis, in the metric or imperial units as defined in user settings."
-						+ " Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色阴茎的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8041,9 +8041,9 @@ public class UtilText {
 						"dickDiametre"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the diameter of the character's penis, in the metric or imperial units as defined in user settings."
-						+ " Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色阴茎的直径，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.PENIS){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8064,7 +8064,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.PENIS){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8081,7 +8081,7 @@ public class UtilText {
 				false,
 				false,
 				"(short)",
-				"Returns the localized, formatted size of the penis with long *singular* units ('centimetre'). Pass in true to return as short measurement ('cm').",
+				"返回本地对象，格式化阴茎长度，当长度为单数时(“厘米”)。传入值为真以返回一个单位缩写('cm')。",
 				BodyPartType.PENIS) {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8101,7 +8101,7 @@ public class UtilText {
 				false,
 				false,
 				"(short)",
-				"Returns the localized, formatted size of the penis with long *plural* units ('centimetres'). Pass in true to return as short measurement ('cm').",
+				"返回本地对象，格式化阴茎长度，当长度为复数时(“厘米”)。传入值为真以返回一个单位缩写('cm')。",
 				BodyPartType.PENIS) {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8121,7 +8121,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TAIL){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8136,7 +8136,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TAIL){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8153,7 +8153,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TAIL){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8170,7 +8170,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TAIL){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8185,7 +8185,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TENTACLE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8200,7 +8200,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.TENTACLE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8213,9 +8213,9 @@ public class UtilText {
 						"tentacleBaseCircumference"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the circumference of the character's tentacle, as measured at the base, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回返回从底部测量的角色触手的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.TENTACLE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8233,9 +8233,9 @@ public class UtilText {
 						"tentacleTipCircumference"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the circumference of the character's tentacle, as measured at the very tip, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回返回从顶端测量的角色触手的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.TENTACLE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8254,9 +8254,9 @@ public class UtilText {
 						"tentacleBaseDiametre"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the diameter of the character's tentacle, as measured at the base, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回返回从底部测量的角色触手的直径，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.TENTACLE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8275,9 +8275,9 @@ public class UtilText {
 						"tentacleTipDiametre"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the diameter of the character's tentacle, as measured at the very tip, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回返回从顶端测量的角色触手的直径，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.TENTACLE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8296,9 +8296,9 @@ public class UtilText {
 						"tentacleSize"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the length of the character's tentacle, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色触手的长度，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.TENTACLE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8317,9 +8317,9 @@ public class UtilText {
 						"tentaclePenetrationSize"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the length of the character's tentacle which is used in penetrations (80% of total length), in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色触手在用于穿透的长度(总长的80%)，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.TENTACLE){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8341,13 +8341,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name for the tip of the character's tail."
-					+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"返回角色尾巴尖的名称。"
+					+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getLegConfiguration()==LegConfiguration.TAIL_LONG) {
-					return "tip";
+					return "尾巴尖";
 				}
 				return character.getTailType().getTailTipNameSingular(character);
 			}
@@ -8360,13 +8360,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the plural name for the tip of the character's tail."
-					+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"返回角色尾巴尖的复数名称。"
+					+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getLegConfiguration()==LegConfiguration.TAIL_LONG) {
-					return "tips";
+					return "尾巴尖";
 				}
 				return character.getTailType().getTailTipNamePlural(character);
 			}
@@ -8381,13 +8381,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name for the tip of the character's tail, along with a descriptor prefix."
-					+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"返回角色尾巴尖含前缀描述词的名称。"
+					+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getLegConfiguration()==LegConfiguration.TAIL_LONG) {
-					return "pointed tip";
+					return "尖尖的尾巴尖";
 				}
 				return applyDescriptor(character.getTailType().getTailTipDescriptor(character), character.getTailType().getTailTipNameSingular(character));
 			}
@@ -8402,13 +8402,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the plural name for the tip of the character's tail, along with a descriptor prefix."
-					+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"返回角色尾巴尖复数的含前缀修饰词的名称。"
+					+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				if(character.getLegConfiguration()==LegConfiguration.TAIL_LONG) {
-					return "pointed tips";
+					return "尖尖的尾巴尖";
 				}
 				return applyDescriptor(character.getTailType().getTailTipDescriptor(character), character.getTailType().getTailTipNamePlural(character));
 			}
@@ -8421,7 +8421,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the number of tails this character has.",
+				"返回角色拥有的尾巴数量。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8436,7 +8436,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the maximum number of (Youko) tails this character can have.",
+				"返回角色可拥有的最大 (妖狐) 尾巴数量。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8451,8 +8451,8 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a single word descriptor for this tail's girth."
-					+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"返回角色尾巴周长的描述词。"
+					+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8468,10 +8468,10 @@ public class UtilText {
 						"tailBaseCircumference"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the circumference of the character's tail, as measured at the base, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch')."
-						+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"(复数单位)",
+				"返回返回从底部测量的角色尾巴的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。"
+						+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8499,10 +8499,10 @@ public class UtilText {
 						"tailTipCircumference"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the circumference of the character's tail, as measured at the very tip, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch')."
-						+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"(复数单位)",
+				"返回返回从顶端测量的角色尾巴的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。"
+						+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8531,10 +8531,10 @@ public class UtilText {
 						"tailBaseDiametre"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the diameter of the character's tail, as measured at the base, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch')."
-						+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"(复数单位)",
+				"返回返回从底部测量的角色尾巴的直径，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。"
+						+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8563,10 +8563,10 @@ public class UtilText {
 						"tailTipDiametre"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the diameter of the character's tail, as measured at the very tip, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch')."
-						+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"(复数单位)",
+				"返回返回从顶端测量的角色尾巴的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。"
+						+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8595,10 +8595,10 @@ public class UtilText {
 						"tailSize"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the length of the character's tail, in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch')."
-						+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"(复数单位)",
+				"返回角色尾巴的长度，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。"
+						+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8627,10 +8627,10 @@ public class UtilText {
 						"tailPenetrationSize"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the length of the character's tail which is used in penetrations (80% of total length), in the metric or imperial units as defined in user settings."
-						+ "  Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch')."
-						+ "<br/><b>Note:</b> If the character has the '"+LegConfiguration.TAIL_LONG.getName()+"' leg configuration, values related to that tail will be returned.",
+				"(复数单位)",
+				"返回角色尾巴在用于穿透的长度(总长的80%)，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。"
+						+ "<br/><b>提示：</b>如果角色拥有'"+LegConfiguration.TAIL_LONG.getName()+"'腿部配置，将返回与其尾巴相关联的值。",
 				BodyPartType.TAIL){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8665,11 +8665,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's vaginal urethra.",
+				"返回角色阴道尿道的名称。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return "urethra";
+				return "尿道";
 			}
 		});
 		
@@ -8688,11 +8688,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's vaginal urethra, with a descriptor appended in front of it.",
+				"返回角色阴道尿道前缀描述的名称。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return applyDescriptor(character.getVaginaUrethraDescriptor(), "urethra");
+				return applyDescriptor(character.getVaginaUrethraDescriptor(), "尿道");
 			}
 		});
 		commandsList.add(new ParserCommand(
@@ -8704,7 +8704,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vaginal urethra capacity.",
+				"返回角色阴道尿道容量的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8721,7 +8721,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vaginal urethra depth.",
+				"返回该角色阴道尿道深度的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8738,7 +8738,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vaginal urethra elasticity.",
+				"返回角色阴道尿道弹性的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8755,7 +8755,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vaginal urethra plasticity.",
+				"返回角色阴道尿道可塑性的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8771,7 +8771,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vagina capacity.",
+				"返回角色阴道容量的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8787,7 +8787,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vagina depth.",
+				"返回该角色阴道深度的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8803,7 +8803,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vagina elasticity.",
+				"返回角色阴道弹性的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8819,7 +8819,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vagina plasticity.",
+				"返回角色阴道可塑性的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8835,7 +8835,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's vagina wetness.",
+				"返回角色阴道湿润度的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8850,7 +8850,7 @@ public class UtilText {
 				false,
 				false,
 				"",
-				"Returns the name of the flavour of this character's girlcum.",
+				"返回该角色爱液口味的名称。",
 				BodyPartType.GIRL_CUM){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8864,7 +8864,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's labia size.",
+				"返回该角色阴唇尺寸的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8878,11 +8878,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"A name for the supplied character's labia.",
+				"返回角色阴唇的名称。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return "labia";
+				return "阴唇";
 			}
 		});
 		
@@ -8893,7 +8893,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"A name for the supplied character's labia, with a descriptor appended before it.",
+				"返回角色阴唇前缀描述的名称。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8904,7 +8904,7 @@ public class UtilText {
 					descriptors.add(character.getCovering(character.getVaginaCovering()).getPrimaryColour().getName());
 				}
 				
-				return Util.randomItemFrom(descriptors)+" labia";
+				return Util.randomItemFrom(descriptors)+"的阴唇";
 			}
 		});
 
@@ -8914,9 +8914,9 @@ public class UtilText {
 						"clitorisCircumference"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the circumference of the character's clitoris, in the metric or imperial units as defined in user settings."
-						+ " Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色阴蒂的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8937,9 +8937,9 @@ public class UtilText {
 						"clitorisDiametre"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the diameter of the character's clitoris, in the metric or imperial units as defined in user settings."
-						+ " Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色阴蒂的直径，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8959,7 +8959,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a desriptor of the size of the character's clitoris.",
+				"返回该角色阴蒂尺寸的描述词。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8974,7 +8974,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the localised, formatted size of the clitoris with long units.",
+				"返回本地对象，格式化阴蒂具有长单位的尺寸。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -8989,7 +8989,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the character's clitoris girth.",
+				"返回角色的阴蒂周长的描述词。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9004,7 +9004,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a name of the character's clitoris tip.",
+				"返回角色阴蒂尖的名称。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9019,7 +9019,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a plural of the character's clitoris tip.",
+				"返回角色阴蒂尖的复数名称。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9036,7 +9036,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a name of the character's clitoris tip, with a random descriptor appended to the front.",
+				"返回角色阴蒂尖端前缀描述的名称。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9053,7 +9053,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a plural name of the character's clitoris tip, with a random descriptor appended to the front.",
+				"返回角色阴蒂尖端前缀描述的复数名称。",
 				BodyPartType.CLIT){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9068,13 +9068,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a name for the toy inserted into this character's vagina.",
+				"返回角色插入阴道的玩具的名字。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractClothing toy = ToyVagina.getToyInVagina(character);
 				if(toy==null) {
-					return "toy";
+					return "玩具";
 				}
 				return toy.getName();
 			}
@@ -9089,13 +9089,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a name for the toy inserted into this character's vagina, with descriptor (describing the toy's colour, girth, or length).",
+				"返回插入该角色阴道玩具的名称，带有描述词(描述玩具的颜色、厚度或长度)。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractClothing toy = ToyVagina.getToyInVagina(character);
 				if(toy==null) {
-					return "toy";
+					return "玩具";
 				}
 				AbstractClothingType toyType = toy.getClothingType();
 				PenisLength length = PenisLength.getPenisLengthFromInt(toyType.getPenetrationSelfLength());
@@ -9113,11 +9113,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a name for the tip of the toy inserted into this character's vagina.",
+				"返回角色插入阴道的玩具尖端的名字。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return UtilText.returnStringAtRandom("head", "tip");
+				return UtilText.returnStringAtRandom("头部", "尖端");
 			}
 		});
 		
@@ -9130,16 +9130,16 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a name for the tip of the toy inserted into this character's vagina, with descriptor (describing the toy's colour).",
+				"返回插入该角色阴道玩具尖端的名称，带有描述词(描述玩具的颜色)。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractClothing toy = ToyVagina.getToyInVagina(character);
 				if(toy==null) {
-					return UtilText.returnStringAtRandom("head", "tip");
+					return UtilText.returnStringAtRandom("头部", "尖端");
 				}
 				String descriptor = toy.getColour(0).getName();
-				return applyDescriptor(descriptor, UtilText.returnStringAtRandom("head", "tip"));
+				return applyDescriptor(descriptor, UtilText.returnStringAtRandom("头部", "尖端"));
 			}
 		});
 
@@ -9149,10 +9149,10 @@ public class UtilText {
 						"toyPussyDescriptive"),
 				true,
 				true,
-				"(coloured)",
-				"Returns a description of the toy inside this character's vagina, in the format: 'size', 'girth', 'name'."
-				+ "<br/>If the 'size' or 'girth' are average, those descriptors are omitted."
-				+ "<br/>Pass in 'true' if you want the output coloured.",
+				"(是否上色)",
+				"返回角色插入阴道玩具的描述词，格式：‘size’，‘girth’，‘name’。"
+				+ "<br/>如果‘size’或‘girth’是平均尺寸，则省略描述词。"
+				+ "<br/>如果希望输出彩色，请输入“true”。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9161,7 +9161,7 @@ public class UtilText {
 				
 				AbstractClothing toy = ToyVagina.getToyInVagina(character);
 				if(toy==null) {
-					return UtilText.returnStringAtRandom("toy");
+					return UtilText.returnStringAtRandom("玩具");
 				}
 				AbstractClothingType toyType = toy.getClothingType();
 				
@@ -9181,7 +9181,7 @@ public class UtilText {
 				PenetrationGirth girth = PenetrationGirth.getGirthFromInt(toyType.getPenetrationSelfGirth());
 				if(character.getPenisGirth()!=PenetrationGirth.THREE_AVERAGE) {
 					if(sb.length()>0) {
-						sb.append(", ");	
+						sb.append("，");	
 					}
 					if(coloured) {
 						sb.append("<span style='color:"+girth.getColour().toWebHexString()+";'>");
@@ -9194,7 +9194,7 @@ public class UtilText {
 
 				// Colour:
 				if(sb.length()>0) {
-					sb.append(", ");
+					sb.append("，");
 				}
 				sb.append(toy.getDisplayName(coloured, false));
 				
@@ -9211,13 +9211,13 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the length of the toy inserted in this character's vagina, in the metric or imperial units as defined in user settings.",
+				"返回角色插入阴道玩具的长度，以用户设置中定义的公制或英制单位表示。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
 				AbstractClothing toy = ToyVagina.getToyInVagina(character);
 				if(toy==null) {
-					return UtilText.returnStringAtRandom("nonexistant");
+					return UtilText.returnStringAtRandom("不存在");
 				}
 				PenisLength length = PenisLength.getPenisLengthFromInt(toy.getClothingType().getPenetrationSelfLength());
 				return length.getDescriptor();
@@ -9230,9 +9230,9 @@ public class UtilText {
 						"toyPussyCircumference"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the circumference of the toy inserted in this character's vagina, in the metric or imperial units as defined in user settings."
-						+ " Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色插入阴道玩具的周长，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9256,9 +9256,9 @@ public class UtilText {
 						"toyPussyDiametre"),
 				true,
 				true,
-				"(pluralUnits)",
-				"Returns the diameter of the toy inserted in this character's vagina, in the metric or imperial units as defined in user settings."
-						+ " Pass in 'true' as an argument if you want the resulting units to be pluralised (i.e. 'inches' instead of 'inch').",
+				"(复数单位)",
+				"返回角色插入阴道玩具的直径，以用户设置中定义的公制或英制单位表示。"
+						+ "如果希望输出复数，请在参数传入“true”。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9281,7 +9281,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of the girth of the toy inserted in this character's vagina.",
+				"返回角色插入阴道的玩具周长的描述词。",
 				BodyPartType.VAGINA){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9302,7 +9302,7 @@ public class UtilText {
 				false,
 				false,
 				"(short)",
-				"Returns the localised, formatted size of the toy inserted in this character's vagina with long singular units ('centimetre'). Pass in true to return as short measurement ('cm').",
+				"返回本地对象，格式化自慰棒插入该角色阴道的长度，当长度为长单数时(“厘米”)。传入值为真以返回一个单位缩写('cm')。",
 				BodyPartType.VAGINA) {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9327,11 +9327,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of this character's spinneret. (Always returns 'spinneret'...)",
+				"返回角色丝囊的名称(总是返回“丝囊”……)",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return "spinneret";
+				return "丝囊";
 			}
 		});
 
@@ -9342,11 +9342,11 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name + descriptor of this character's spinneret. (Returns a descriptor + ' spinneret')",
+				"返回角色丝囊的名称+描述词。(返回描述词+‘丝囊’)",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-				return character.getSpinneretDescriptor() + " spinneret";
+				return character.getSpinneretDescriptor() + "丝囊";
 			}
 		});
 		
@@ -9356,7 +9356,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's spinneret capacity.",
+				"返回角色丝囊容量的描述词。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9370,7 +9370,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's spinneret depth.",
+				"返回该角色丝囊深度的描述词。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9384,7 +9384,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's spinneret elasticity.",
+				"返回角色丝囊弹性的描述词。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9398,7 +9398,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's spinneret plasticity.",
+				"返回角色丝囊可塑性的描述词。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9412,7 +9412,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a descriptor of this character's spinneret wetness.",
+				"返回角色丝囊湿润度的描述词。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9425,8 +9425,8 @@ public class UtilText {
 						"spinneretFullDescription"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Returns the Covering.getFullDescription() method for BodyCoveringType.SPINNERET.",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"返回BodyCoveringType.SPINNERET的Covering.getFullDescription()方法。",
 				BodyPartType.SPINNERET) {
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9441,8 +9441,8 @@ public class UtilText {
 						"spinneretColour"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Returns the Covering.getColourDescriptor() method for BodyCoveringType.SPINNERET.",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"返回BodyCoveringType.SPINNERET的Covering.getColourDescriptor()方法。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9459,8 +9459,8 @@ public class UtilText {
 						"spinneretPrimaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Returns the Covering.getPrimaryColourDescriptor() method for BodyCoveringType.SPINNERET.",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"返回BodyCoveringType.SPINNERET的Covering.getPrimaryColourDescriptor()方法。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9477,8 +9477,8 @@ public class UtilText {
 						"spinneretSecondaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Returns the Covering.getSecondaryColourDescriptor() method for BodyCoveringType.SPINNERET.",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"返回BodyCoveringType.SPINNERET的Covering.getSecondaryColourDescriptor()方法。",
 				BodyPartType.SPINNERET){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9497,7 +9497,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.WING){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9514,7 +9514,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the character's leg configuration.",
+				"返回角色腿部配置的名称。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9528,7 +9528,7 @@ public class UtilText {
 				true,
 				false,
 				"",
-				"Returns the number of legs this character has.",
+				"返回角色拥有的腿的数量。",
 				BodyPartType.LEG){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9545,7 +9545,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9559,8 +9559,8 @@ public class UtilText {
 						"irisesFullDescription"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9577,8 +9577,8 @@ public class UtilText {
 						"irisesColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9599,8 +9599,8 @@ public class UtilText {
 						"irisesPrimaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9621,8 +9621,8 @@ public class UtilText {
 						"irisesSecondaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9638,7 +9638,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Description of method",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9652,8 +9652,8 @@ public class UtilText {
 						"pupilsFullDescription"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9670,8 +9670,8 @@ public class UtilText {
 						"pupilsColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9692,8 +9692,8 @@ public class UtilText {
 						"pupilsPrimaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9714,8 +9714,8 @@ public class UtilText {
 						"pupilsSecondaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9730,8 +9730,8 @@ public class UtilText {
 						"scleraeFullDescription"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9748,8 +9748,8 @@ public class UtilText {
 						"scleraeColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9770,8 +9770,8 @@ public class UtilText {
 						"scleraePrimaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9792,8 +9792,8 @@ public class UtilText {
 						"scleraeSecondaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Description of method",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"方法描述",
 				BodyPartType.EYE){//TODO
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -9885,7 +9885,7 @@ public class UtilText {
 			} catch (ScriptException e) {
 				System.err.println("Scripting parsing error: "+command);
 				e.printStackTrace();
-				return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>(Error in script parsing!)</i>";
+				return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>(脚本解析出错！)</i>";
 			}
 			
 		} else if(Main.game!=null && Main.game.isStarted()) {
@@ -9960,7 +9960,7 @@ public class UtilText {
 			character = parserTarget.getCharacter(target.toLowerCase(), specialNPCs);
 		} catch(Exception ex) {
 			ex.printStackTrace();
-			return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Error: parserTarget.getCharacter() not found! ("+target+")</i>";
+			return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>错误：未找到parserTarget.getCharacter()！("+target+")</i>";
 		}
 		
 		// Commands with arguments:
@@ -9978,7 +9978,7 @@ public class UtilText {
 		parseAddPronoun = parseAddPronoun && cmd.isAllowsPronoun();
 		
 		if(parseAddPronoun) {
-			output = generateSingularDeterminer(output)+" "+output;
+			output = generateSingularDeterminer(output)+output;
 		}
 		if (parseCapitalise) {
 			return Util.capitaliseSentence(output);
@@ -10611,7 +10611,7 @@ public class UtilText {
 				} catch (ScriptException e) {
 					System.err.println("Conditional parsing (from Map) error: "+entry.getKey()+" | Size of variableCalls: "+parserVariableCalls.size());
 					e.printStackTrace();
-					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>(Error in conditional parsing!)</i>";
+					return "<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>(条件解析出错！)</i>";
 				}
 
 			} else {
@@ -10710,7 +10710,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the race that's associated with this body part. Race is *not* gender-specific (i.e. will return 'wolf-morph', not 'wolf-girl').",
+				"返回与此身体部件关联的种族名称。种族不带有性别特征(例如：会返回“狼化形”，而非“狼女”)。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10729,7 +10729,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the feral race that's associated with this body part. Race is *not* gender-specific (i.e. will return 'dog', not 'bitch').",
+				"返回与该身体部件有关的野生种族名称。种族不带有性别特征 (例如：会返回“狗”，而非“婊子”)。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10759,7 +10759,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the name of the 'skin' covering this body part. This could, in fact, be quite different from skin, for example: fur, keratin, scales, slime, etc.",
+				"返回覆盖这个部位的“皮肤”名字。实际上，可能会出现诸多差分，比如：皮毛、角质、鳞片、粘液等等。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10772,7 +10772,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the 'skin' covering this body part, just as the 'Skin' command does, but this adds a descriptor to the start (if one is available).",
+				"返回覆盖此身体部位的‘皮肤’，和‘Skin’指令相同，但这会在前缀添加一个描述词(如果有的话)。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10790,8 +10790,8 @@ public class UtilText {
 				getModifiedTags(tags, tagsPlural, "FullDescription"),
 				true,
 				true,
-				"true If you want this description's colour names to be coloured.",
-				"Returns a full description of this part.",
+				"如果你希望此描述的颜色名称呈现色彩，为真。",
+				"返回这个部位的完整描述。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10819,7 +10819,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns a full description of this part.",
+				"返回这个部位的完整描述。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10840,8 +10840,8 @@ public class UtilText {
 				getModifiedTags(tags, tagsPlural, "Colour", "Color"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Returns the colour of whatever 'skin' is covering this body part.",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"返回覆盖此身体部位的任何‘皮肤’的颜色。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10867,8 +10867,8 @@ public class UtilText {
 				getModifiedTags(tags, tagsPlural, "ColourPrimary", "ColorPrimary", "PrimaryColour", "PrimaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Returns the primary colour of whatever 'skin' is covering this body part.",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"返回覆盖此身体部位的任何‘皮肤’的主要颜色。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10894,8 +10894,8 @@ public class UtilText {
 				getModifiedTags(tags, tagsPlural, "ColourSecondary", "ColorSecondary", "SecondaryColour", "SecondaryColor"),
 				true,
 				true,
-				"true If you want this colour's name to be coloured.",
-				"Returns the secondary colour of whatever 'skin' is covering this body part.",
+				"若你希望此颜色名称呈现色彩，为真。",
+				"返回覆盖此身体部位的任何‘皮肤’的次要颜色。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10922,7 +10922,7 @@ public class UtilText {
 				true,
 				true,
 				"",
-				"Returns the hex code for the colour of whatever 'skin' is covering this body part.",
+				"返回覆盖此身体部位的任何‘皮肤’的颜色的Hex码。",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10937,9 +10937,9 @@ public class UtilText {
 				tags,
 				true,
 				true,
-				"(forceSingular)",
-				"Returns the basic, singular name for this body part. Pass in true as an argument to prevent this name from being automatically adjusted to its plural equivalent, if applicable."
-						+ " (e.g. A character with two horns would have the command 'horn(true)' output 'horn')",
+				"(强制单数)",
+				"返回此身体部位的基本单数名称。可将true作为参数传入可防止此名称自动调整为其复数形式。"
+						+ " (例：若一个角色有两个角，horn(true)命令就会输出‘角’)",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10960,9 +10960,9 @@ public class UtilText {
 				tagsPlural,
 				true,
 				true,
-				"(forcePlurality)",
-				"Returns the basic, plural name for this body part. Pass in true as an argument to prevent this name from being automatically adjusted to its singular equivalent, if applicable."
-						+ " (e.g. A character with a single udder would have the command 'crotchBoobs(true)' output 'udders')",
+				"(强制复数)",
+				"返回此身体部位的基本复数名称。可将true作为参数传入可防止此名称自动调整为其单数形式。"
+						+ " (例：若一个角色只有一个腹乳，crotchBoobs(true)命令就会输出“腹乳”)",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -10983,10 +10983,10 @@ public class UtilText {
 				getModifiedTags(tags, null, "+", "D"),
 				true,
 				true,
-				"(forceSingular)",
-				"Returns the singular name for this body part, with a descriptor appended to the start (if one is available)."
-						+ " Pass in true as an argument to prevent this name from being automatically adjusted to its plural equivalent, if applicable."
-						+ " (e.g. A character with two horns would have the command 'horn+(true)' output 'curved horn')",
+				"(强制单数)",
+				"返回此身体部位的单数名称，并在开头附加一个描述词(如果有的话)。"
+						+ "如果适用可将true作为参数传入可防止此名称自动调整为其复数形式。"
+						+ " (例：若一个角色有两个角，horn+(true)命令就会输出‘弯曲的角’)",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -11010,10 +11010,10 @@ public class UtilText {
 				getModifiedTags(null, tagsPlural, "+", "D"),
 				true,
 				true,
-				"(forcePlurality)",
-				"Returns the plural name for this body part, with a descriptor appended to the start (if one is available)."
-						+ " Pass in true as an argument to prevent this name from being automatically adjusted to its singular equivalent, if applicable."
-						+ " (e.g. A character with a single udder would have the command 'crotchBoobs+(true)' output 'big udders')",
+				"(强制复数)",
+				"返回此身体部位的复数名称，并在开头附加一个描述词(如果有的话)。"
+						+ "如果适用可将true作为参数传入可防止此名称自动调整为其单数形式。"
+						+ " (例：若一个角色只有一个乳房，crotchBoobs+(true)命令就会输出“大腹乳”)",
 				bodyPart){
 			@Override
 			public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -11132,7 +11132,7 @@ public class UtilText {
 		if(descriptor==null)
 			return name;
 		
-		return (descriptor.length() > 0 ? descriptor + " " : "") + name;
+		return (descriptor.length() > 0 ? descriptor + "" : UtilText.returnStringAtRandom("平平无奇的", "普通的", "平常的")) + name;
 	}
 	
 	/**
@@ -11144,7 +11144,7 @@ public class UtilText {
 		}
 		
 		return descriptor.length()>0
-				? descriptor + " "
+				? descriptor + ""
 				: UtilText.generateSingularDeterminer(input) + input;
 	}
 
@@ -11225,9 +11225,9 @@ public class UtilText {
 			sb.append(elements.get(i));
 
 			if(i == elements.size()-2) {
-				sb.append(" and ");
+				sb.append("和");
 			} else if(i != elements.size() - 1) {
-				sb.append(", ");
+				sb.append("，");
 			}
 		}
 		return sb.toString();

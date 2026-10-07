@@ -43,7 +43,7 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class RedLightDistrict {
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Red-light District", "Red-light District", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("红灯区", "红灯区", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -70,7 +70,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Angel's Kiss", "Step inside the large brothel named 'Angel's Kiss'.", PlaceType.ANGELS_KISS_ENTRANCE.getDialogue(false)){
+				return new Response("天使之吻", "走进大型妓院“天使之吻”。", PlaceType.ANGELS_KISS_ENTRANCE.getDialogue(false)){
 					@Override
 					public void effects() {
 						if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.angelIntroduced)) {
@@ -86,7 +86,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_ENTRANCE = new DialogueNode("Entrance", ".", false) {
+	public static final DialogueNode ANGELS_KISS_ENTRANCE = new DialogueNode("入口", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -125,7 +125,7 @@ public class RedLightDistrict {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.angelIntroduced)) {
 				if (index == 1) {
-					return new Response("Continue", "Angel leaves you alone to explore Angel's Kiss by yourself...", ANGELS_KISS_ENTRANCE){
+					return new Response("继续", "安吉尔留你自己探索天使之吻……", ANGELS_KISS_ENTRANCE){
 						@Override
 						public void effects() {
 							Main.game.getNpc(Angel.class).setLocation(WorldType.ANGELS_KISS_GROUND_FLOOR, PlaceType.ANGELS_KISS_OFFICE, false);
@@ -136,7 +136,7 @@ public class RedLightDistrict {
 				
 			} else {
 				if (index == 1) {
-					return new Response("Exit", "Exit the brothel and head back out into Dominion.", PlaceType.DOMINION_RED_LIGHT_DISTRICT.getDialogue(false)){
+					return new Response("离开", "离开妓院，回到御城区。", PlaceType.DOMINION_RED_LIGHT_DISTRICT.getDialogue(false)){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_RED_LIGHT_DISTRICT, false);
@@ -148,7 +148,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_CORRIDOR = new DialogueNode("Corridor", ".", false) {
+	public static final DialogueNode ANGELS_KISS_CORRIDOR = new DialogueNode("走廊", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -166,7 +166,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_STAIRS_UP = new DialogueNode("Staircase Up", ".", false) {
+	public static final DialogueNode ANGELS_KISS_STAIRS_UP = new DialogueNode("上楼", ".", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -181,7 +181,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Upstairs", "Go up the staircase to the first floor of the brothel.", PlaceType.ANGELS_KISS_STAIRCASE_DOWN.getDialogue(false)){
+				return new Response("上楼", "走上楼梯到达妓院的二楼", PlaceType.ANGELS_KISS_STAIRCASE_DOWN.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.ANGELS_KISS_FIRST_FLOOR, PlaceType.ANGELS_KISS_STAIRCASE_DOWN, false);
@@ -194,7 +194,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_STAIRS_DOWN = new DialogueNode("Staircase Down", ".", false) {
+	public static final DialogueNode ANGELS_KISS_STAIRS_DOWN = new DialogueNode("下楼", ".", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -209,7 +209,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Downstairs", "Go down the staircase to the ground floor of the brothel.", PlaceType.ANGELS_KISS_STAIRCASE_UP.getDialogue(false)){
+				return new Response("下楼", "走下楼梯回到妓院的一楼", PlaceType.ANGELS_KISS_STAIRCASE_UP.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.ANGELS_KISS_GROUND_FLOOR, PlaceType.ANGELS_KISS_STAIRCASE_UP, false);
@@ -222,7 +222,7 @@ public class RedLightDistrict {
 		}
 	};
 
-	public static final DialogueNode ANGELS_KISS_BEDROOM = new DialogueNode("Bedroom", ".", false) {
+	public static final DialogueNode ANGELS_KISS_BEDROOM = new DialogueNode("卧室", ".", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -304,8 +304,8 @@ public class RedLightDistrict {
 				if(charactersPresent.size()<=1){
 					if(charactersPresent.get(0).isSlave() && charactersPresent.get(0).getOwner().isPlayer()) {
 						if (index == 1) {
-								return new ResponseSex("Sex",
-										UtilText.parse(npc, "Have sex with [npc.name], with you as the dominant partner."),
+								return new ResponseSex("做爱",
+										UtilText.parse(npc, "跟[npc.name]做爱，你作为主导方。"),
 										true, false,
 										new SMGeneric(
 												Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -323,8 +323,8 @@ public class RedLightDistrict {
 										UtilText.parseFromXMLFile("places/dominion/redLightDistrict/angelsKiss", "BEDROOM_PROSTITUTE_SLAVE_SEX"));
 							
 						} else if (index == 2) {
-								return new ResponseSex("Submissive Sex",
-										UtilText.parse(npc, "Let [npc.name] take charge, allowing you to have submissive sex with [npc.herHim]."),
+								return new ResponseSex("服从型性爱",
+										UtilText.parse(npc, "让[npc.name]主导，跟你来一场服从型性爱。"),
 										true, false,
 										new SMGeneric(
 												Util.newArrayListOfValues(npc),
@@ -347,12 +347,12 @@ public class RedLightDistrict {
 					} else {
 						if (index == 1) {
 							if(Main.game.getPlayer().getMoney()<cost) {
-								return new Response("Sex ("+UtilText.formatAsMoney(cost, "span")+")",
-										UtilText.parse(npc, "You don't have "+cost+" flames, so you can't afford to have sex with [npc.name]."), null);
+								return new Response("做爱("+UtilText.formatAsMoney(cost, "span")+")",
+										UtilText.parse(npc, "你没有"+cost+"火币，付不起[npc.name]的嫖资。"), null);
 								
 							} else {
-								return new ResponseSex("Sex ("+UtilText.formatAsMoney(cost, "span")+")",
-										UtilText.parse(npc, "Pay "+cost+" flames to have sex with [npc.name], with you as the dominant partner."),
+								return new ResponseSex("做爱("+UtilText.formatAsMoney(cost, "span")+")",
+										UtilText.parse(npc, "付[npc.name]"+cost+"个火币，与[npc.herHim]来一场支配型性爱。"),
 										true, false,
 										new SMGeneric(
 												Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -377,12 +377,12 @@ public class RedLightDistrict {
 							
 						} else if (index == 2) {
 							if(Main.game.getPlayer().getMoney()<cost) {
-								return new Response("Submissive Sex ("+UtilText.formatAsMoney(cost, "span")+")",
-										UtilText.parse(npc, "You don't have "+cost+" flames, so you can't afford to have submissive sex with [npc.name]."), null);
+								return new Response("服从型性爱("+UtilText.formatAsMoney(cost, "span")+")",
+										UtilText.parse(npc, "你没有"+cost+"火币，所以付不起跟[npc.name]服从型性爱的钱。"), null);
 								
 							} else {
-								return new ResponseSex("Submissive Sex ("+UtilText.formatAsMoney(cost, "span")+")",
-										UtilText.parse(npc, "Pay "+cost+" flames to let [npc.name] take charge, allowing you to have submissive sex with [npc.herHim]."),
+								return new ResponseSex("服从型性爱("+UtilText.formatAsMoney(cost, "span")+")",
+										UtilText.parse(npc, "付给[npc.Name]"+cost+"火币，让[npc.herHim]主导跟你来一场服从型性爱。"),
 										true, false,
 										new SMGeneric(
 												Util.newArrayListOfValues(npc),
@@ -408,14 +408,14 @@ public class RedLightDistrict {
 						} else if (index == 5) {
 							int fineAmount = AlleywayProstituteDialogue.getModifiedFineAmount(npc);
 							if(Main.game.getPlayer().getMoney()<fineAmount) {
-								return new Response("Remove ("+UtilText.formatAsMoney(fineAmount, "span")+")",
-										UtilText.parse(npc, "You don't have "+Util.intToString(fineAmount)+" flames, so you can't afford to pay off [npc.namePos] debt."),
+								return new Response("移除("+UtilText.formatAsMoney(fineAmount, "span")+")",
+										UtilText.parse(npc, "你没有"+Util.intToString(fineAmount)+"火币，付不起[npc.namePos]的债务。"),
 										null);
 							} else {
 								return new Response(
-										"Remove ("+UtilText.formatAsMoney(fineAmount, "span")+")",
-										UtilText.parse(npc, "Even though [npc.name] no longer has an arrest warrant, [npc.she] still has to pay off [npc.herHis] fine. Give [npc.name] enough money to pay off the remainder, which would allow [npc.herHim] the freedom to leave the city."
-												+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+										"移除("+UtilText.formatAsMoney(fineAmount, "span")+")",
+										UtilText.parse(npc, "尽管[npc.name]已经不在逮捕令上了，但[npc.she]还是得交齐罚金。交给[npc.name]足够偿还剩下的款项的钱财，[npc.herHim]便可以一身轻松地离开这个城市了。"
+												+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 										ANGELS_KISS_PROSTITUTE_REMOVAL_PAID) {
 									@Override
 									public Colour getHighlightColour() {
@@ -429,7 +429,7 @@ public class RedLightDistrict {
 				
 			} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.prostitutionLicenseObtained) && Main.game.getPlayer().getWorldLocation()==WorldType.ANGELS_KISS_FIRST_FLOOR) {
 				if(index==1) {
-					return new Response("Sell body (Sub)", "Tell Angel that you've like to act as the submissive partner, and then wait around for a client to show up.", ANGELS_KISS_SELL_SELF_SUB){
+					return new Response("出卖身体(服从)", "告诉安吉尔你想做服从的一方，等待顾客出现。", ANGELS_KISS_SELL_SELF_SUB){
 						@Override
 						public void effects() {
 							NPC npc = new GenericSexualPartner(Gender.getGenderFromUserPreferences(false, false), Main.game.getPlayer().getWorldLocation(), Main.game.getPlayer().getLocation(), false);
@@ -454,7 +454,7 @@ public class RedLightDistrict {
 					};
 					
 				} else if(index==2) {
-					return new Response("Sell body (Dom)", "Tell Angel that you've like to act as the dominant partner, and then wait around for a client to show up.", ANGELS_KISS_SELL_SELF_DOM){
+					return new Response("出卖身体(支配)", "告诉安吉尔你想做支配的一方，等待顾客出现。", ANGELS_KISS_SELL_SELF_DOM){
 						@Override
 						public void effects() {
 							NPC npc = new GenericSexualPartner(Gender.getGenderFromUserPreferences(false, false), Main.game.getPlayer().getWorldLocation(), Main.game.getPlayer().getLocation(), false);
@@ -483,7 +483,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_PROSTITUTE = new DialogueNode("Bedroom", "Disentangle yourself from [npc.namePos] clutches.", false) {
+	public static final DialogueNode AFTER_SEX_PROSTITUTE = new DialogueNode("卧室", "挣脱[npc.namePos]的魔爪。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -508,7 +508,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_SELL_SELF_SUB = new DialogueNode("Bedroom", ".", true) {
+	public static final DialogueNode ANGELS_KISS_SELL_SELF_SUB = new DialogueNode("卧室", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -525,8 +525,8 @@ public class RedLightDistrict {
 			int payment = 2000;
 			
 			if (index == 1) {
-				return new ResponseSex("Sex ("+UtilText.formatAsMoney(2000, "span")+")",
-						"Accept the price of "+2000+" flames to have sex with [npc.name].",
+				return new ResponseSex("做爱("+UtilText.formatAsMoney(2000, "span")+")",
+						"同意以"+2000+"火币的价格跟[npc.name]做爱。",
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getActiveNPC()),
@@ -542,7 +542,7 @@ public class RedLightDistrict {
 				};
 				
 			} else if(index == 2) {
-				return new Response("Decline", "Tell [npc.name] that you're not interested in what [npc.sheHasFull] in mind...", ANGELS_KISS_SELL_SELF_DECLINE){
+				return new Response("拒绝", "告诉[npc.name]你对[npc.sheHasFull]的主意不感兴趣……", ANGELS_KISS_SELL_SELF_DECLINE){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(
@@ -558,7 +558,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_SELL_SELF_DOM = new DialogueNode("Bedroom", ".", true) {
+	public static final DialogueNode ANGELS_KISS_SELL_SELF_DOM = new DialogueNode("卧室", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -575,8 +575,8 @@ public class RedLightDistrict {
 			int payment = 2000;
 			
 			if (index == 1) {
-				return new ResponseSex("Sex ("+UtilText.formatAsMoney(2000, "span")+")",
-						"Accept the price of "+2000+" flames to have sex with [npc.name].",
+				return new ResponseSex("做爱("+UtilText.formatAsMoney(2000, "span")+")",
+						"同意以"+2000+"火币的价格跟[npc.name]做爱。",
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -590,7 +590,7 @@ public class RedLightDistrict {
 				};
 				
 			} else if(index == 2) {
-				return new Response("Decline", "Tell [npc.name] that you're not interested in what [npc.sheHasFull] in mind...", ANGELS_KISS_SELL_SELF_DECLINE){
+				return new Response("拒绝", "告诉[npc.name]你对[npc.sheHasFull]的主意不感兴趣……", ANGELS_KISS_SELL_SELF_DECLINE){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(
@@ -606,7 +606,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_SELL_SELF_DECLINE = new DialogueNode("Bedroom", ".", false, true) {
+	public static final DialogueNode ANGELS_KISS_SELL_SELF_DECLINE = new DialogueNode("卧室", "。", false, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -624,7 +624,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_SELL_SELF_DOM = new DialogueNode("Bedroom", "Disentangle yourself from [npc.namePos] clutches.", true) {
+	public static final DialogueNode AFTER_SEX_SELL_SELF_DOM = new DialogueNode("卧室", "挣脱[npc.namePos]的魔爪。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -639,7 +639,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Recover", "Recover from the exhausting sex you've just had.", ANGELS_KISS_BEDROOM){
+				return new Response("稍作休整", "经历了一场酣畅淋漓的性爱后，你需要恢复一下。", ANGELS_KISS_BEDROOM){
 					@Override
 					public void effects() {
 						Main.game.banishNPC(Main.game.getActiveNPC());
@@ -647,7 +647,7 @@ public class RedLightDistrict {
 				};
 
 			} else if (index == 2) {
-				return new Response("Wash", "Have a quick wash to clean yourself.", ANGELS_KISS_BEDROOM){
+				return new Response("清洗", "快速冲个澡清洁自己。", ANGELS_KISS_BEDROOM){
 					@Override
 					public void effects() {
 						Main.game.banishNPC(Main.game.getActiveNPC());
@@ -660,7 +660,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_SELL_SELF_SUB = new DialogueNode("Bedroom", "Disentangle yourself from [npc.namePos] clutches.", true) {
+	public static final DialogueNode AFTER_SEX_SELL_SELF_SUB = new DialogueNode("卧室", "挣脱[npc.namePos]的魔爪。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -675,7 +675,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Recover", "Recover from the exhausting sex you've just had.", ANGELS_KISS_BEDROOM){
+				return new Response("稍作休整", "经历了一场酣畅淋漓的性爱后，你需要恢复一下。", ANGELS_KISS_BEDROOM){
 					@Override
 					public void effects() {
 						Main.game.banishNPC(Main.game.getActiveNPC());
@@ -683,7 +683,7 @@ public class RedLightDistrict {
 				};
 
 			} else if (index == 2) {
-				return new Response("Wash", "Have a quick wash to clean yourself.", ANGELS_KISS_BEDROOM){
+				return new Response("清洗", "快速冲个澡清洁自己。", ANGELS_KISS_BEDROOM){
 					@Override
 					public void effects() {
 						Main.game.banishNPC(Main.game.getActiveNPC());
@@ -696,7 +696,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_BEDROOM_BUNNY = new DialogueNode("Bunny's Bedroom", "", false) {
+	public static final DialogueNode ANGELS_KISS_BEDROOM_BUNNY = new DialogueNode("兔兔的卧室", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -712,13 +712,13 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Enter", "Enter Bunny's room and say hello.", ANGELS_KISS_BEDROOM_BUNNY_ENTER);
+				return new Response("进入", "进入兔兔的房间打招呼。", ANGELS_KISS_BEDROOM_BUNNY_ENTER);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_BEDROOM_BUNNY_ENTER = new DialogueNode("Bunny's Bedroom", "", true) {
+	public static final DialogueNode ANGELS_KISS_BEDROOM_BUNNY_ENTER = new DialogueNode("兔兔的卧室", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -738,11 +738,11 @@ public class RedLightDistrict {
 			
 			if (index == 1) {
 				if(Main.game.getPlayer().getMoney()<cost) {
-					return new Response("Sex ("+UtilText.formatAsMoney(cost, "span")+")", "You don't have "+cost+" flames, so you can't afford to have sex with Bunny.", null);
+					return new Response("做爱("+UtilText.formatAsMoney(cost, "span")+")", "你没有"+cost+"火币，付不起钱跟兔兔做爱。", null);
 					
 				} else {
-					return new ResponseSex("Sex ("+UtilText.formatAsMoney(cost, "span")+")",
-							"Pay "+cost+" flames to have sex with Bunny.",
+					return new ResponseSex("做爱("+UtilText.formatAsMoney(cost, "span")+")",
+							"付"+cost+"火币跟兔兔做爱。",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -762,11 +762,11 @@ public class RedLightDistrict {
 				
 			} else if (index == 2) {
 				if(Main.game.getPlayer().getMoney()<threesomeCost) {
-					return new Response("Threesome ("+UtilText.formatAsMoney(threesomeCost, "span")+")", "You don't have "+threesomeCost+" flames, so you can't afford to have sex with both Bunny and Loppy at the same time.", null);
+					return new Response("三人行("+UtilText.formatAsMoney(threesomeCost, "span")+")", "你没有"+threesomeCost+"火币，付不起钱跟兔兔和耷耷一起做爱。", null);
 					
 				} else {
-					return new ResponseSex("Threesome ("+UtilText.formatAsMoney(threesomeCost, "span")+")",
-							"Pay "+threesomeCost+" flames to have sex with both Bunny and Loppy at the same time.",
+					return new ResponseSex("三人行("+UtilText.formatAsMoney(threesomeCost, "span")+")",
+							"付上"+threesomeCost+"火币，跟兔兔和耷耷一起做爱。",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -796,7 +796,7 @@ public class RedLightDistrict {
 				}
 				
 			} else if(index == 3) {
-				return new Response("Decline", "You're not really interested in paying for sex with Bunny right now...", PlaceType.ANGELS_KISS_CORRIDOR.getDialogue(false)){
+				return new Response("谢绝", "你现在没兴趣嫖兔兔……", PlaceType.ANGELS_KISS_CORRIDOR.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.ANGELS_KISS_FIRST_FLOOR, PlaceType.ANGELS_KISS_CORRIDOR, false);
@@ -813,7 +813,7 @@ public class RedLightDistrict {
 		}
 	};
 
-	public static final DialogueNode AFTER_SEX_BUNNY = new DialogueNode("Finished", "Disentangle yourself from Bunny's clutches.", false) {
+	public static final DialogueNode AFTER_SEX_BUNNY = new DialogueNode("结束", "挣脱兔兔的魔爪。", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -835,7 +835,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_BUNNY_THREESOME = new DialogueNode("Finished", "Disentangle yourself from Bunny's clutches.", false) {
+	public static final DialogueNode AFTER_SEX_BUNNY_THREESOME = new DialogueNode("结束", "挣脱兔兔的魔爪。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -853,7 +853,7 @@ public class RedLightDistrict {
 		}
 	};
 
-	public static final DialogueNode ANGELS_KISS_BEDROOM_LOPPY = new DialogueNode("Loppy's Bedroom", "", false) {
+	public static final DialogueNode ANGELS_KISS_BEDROOM_LOPPY = new DialogueNode("耷耷的卧室", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -869,12 +869,12 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Enter", "Enter Loppy's room and say hello.", ANGELS_KISS_BEDROOM_LOPPY_ENTER);
+				return new Response("进入", "进入耷耷的房间打招呼。", ANGELS_KISS_BEDROOM_LOPPY_ENTER);
 			}
 			return null;
 		}
 	};
-	public static final DialogueNode ANGELS_KISS_BEDROOM_LOPPY_ENTER = new DialogueNode("Loppy's Bedroom", "", true) {
+	public static final DialogueNode ANGELS_KISS_BEDROOM_LOPPY_ENTER = new DialogueNode("耷耷的卧室", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -895,11 +895,11 @@ public class RedLightDistrict {
 			
 			if (index == 1) {
 				if(Main.game.getPlayer().getMoney()<cost) {
-					return new Response("Sex ("+UtilText.formatAsMoney(cost, "span")+")", "You don't have "+cost+" flames, so you can't afford to have sex with Loppy.", null);
+					return new Response("做爱("+UtilText.formatAsMoney(cost, "span")+")", "你没有"+cost+"火币，付不起钱跟耷耷做爱。", null);
 					
 				} else {
-					return new ResponseSex("Sex ("+UtilText.formatAsMoney(cost, "span")+")",
-							"Pay "+cost+" flames to have sex with Loppy.",
+					return new ResponseSex("做爱("+UtilText.formatAsMoney(cost, "span")+")",
+							"付上"+cost+"火币跟耷耷做爱。",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -919,11 +919,11 @@ public class RedLightDistrict {
 				
 			} else if (index == 2) {
 				if(Main.game.getPlayer().getMoney()<dominantCost) {
-					return new Response("Submissive Sex ("+UtilText.formatAsMoney(dominantCost, "span")+")", "You don't have "+dominantCost+" flames, so you can't afford to have submissive sex with Loppy.", null);
+					return new Response("服从型性爱("+UtilText.formatAsMoney(dominantCost, "span")+")", "你没有"+dominantCost+"火币，没法跟耷耷来一场服从型性爱。", null);
 					
 				} else {
-					return new ResponseSex("Submissive Sex ("+UtilText.formatAsMoney(dominantCost, "span")+")",
-							"Pay "+dominantCost+" flames to let Loppy take charge and fuck you.",
+					return new ResponseSex("服从型性爱("+UtilText.formatAsMoney(dominantCost, "span")+")",
+							"付上"+dominantCost+"火币，让耷耷占据主导权上了你。",
 							true, true,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getNpc(Loppy.class)),
@@ -943,11 +943,11 @@ public class RedLightDistrict {
 				
 			} else if (index == 3) {
 				if(Main.game.getPlayer().getMoney()<threesomeCost) {
-					return new Response("Threesome ("+UtilText.formatAsMoney(threesomeCost, "span")+")", "You don't have "+threesomeCost+" flames, so you can't afford to have sex with both Loppy and Bunny at the same time.", null);
+					return new Response("三人行("+UtilText.formatAsMoney(threesomeCost, "span")+")", "你没有"+threesomeCost+"火币，付不起钱跟兔兔和耷耷一起做爱。", null);
 					
 				} else {
-					return new ResponseSex("Threesome ("+UtilText.formatAsMoney(threesomeCost, "span")+")",
-							"Pay "+threesomeCost+" flames to have sex with both Loppy and Bunny at the same time.",
+					return new ResponseSex("三人行("+UtilText.formatAsMoney(threesomeCost, "span")+")",
+							"付上"+threesomeCost+"火币，跟耷耷和兔兔一起做爱。",
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -977,7 +977,7 @@ public class RedLightDistrict {
 				}
 				
 			} else if(index == 4) {
-				return new Response("Decline", "You're not really interested in paying for sex with Loppy right now...", PlaceType.ANGELS_KISS_CORRIDOR.getDialogue(false)){
+				return new Response("谢绝", "你现在没兴趣嫖耷耷……", PlaceType.ANGELS_KISS_CORRIDOR.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.ANGELS_KISS_FIRST_FLOOR, PlaceType.ANGELS_KISS_CORRIDOR, false);
@@ -995,7 +995,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_LOPPY = new DialogueNode("Finished", "Disentangle yourself from Loppy's clutches.", false) {
+	public static final DialogueNode AFTER_SEX_LOPPY = new DialogueNode("结束", "挣脱耷耷的魔爪。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1018,7 +1018,7 @@ public class RedLightDistrict {
 	};
 
 	
-	public static final DialogueNode AFTER_SEX_LOPPY_THREESOME = new DialogueNode("Finished", "Disentangle yourself from Loppy's clutches.", false) {
+	public static final DialogueNode AFTER_SEX_LOPPY_THREESOME = new DialogueNode("结束", "挣脱耷耷的魔爪。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1036,7 +1036,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_OFFICE = new DialogueNode("Angel's Office", ".", false) {
+	public static final DialogueNode ANGELS_KISS_OFFICE = new DialogueNode("安吉尔的办公室", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1065,7 +1065,7 @@ public class RedLightDistrict {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.angelsOfficeIntroduced)) {
 				if (index == 1) {
-					return new Response("Continue", "Now that Angel's offered you her deal, you could ask some other questions...", ANGELS_KISS_OFFICE_CONTINUE) {
+					return new Response("继续", "既然安吉尔向你提出了她的交易，你可以问一些其他的问题……", ANGELS_KISS_OFFICE_CONTINUE) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.angelsOfficeIntroduced, true);
@@ -1076,17 +1076,17 @@ public class RedLightDistrict {
 				
 			} else {
 				if (index == 1) {
-					return new Response("Prostitution", "Ask Angel about the laws and regulations regarding prostitution in Dominion.", ANGELS_KISS_OFFICE_PROSTITUTION);
+					return new Response("卖淫", "问问安吉尔御城区有关卖淫的法律。", ANGELS_KISS_OFFICE_PROSTITUTION);
 					
 				} else if (index == 2) {
-					return new Response("Background", "Ask Angel about her background, and how she ended up owning Angel's Kiss.", ANGELS_KISS_OFFICE_BACKGROUND);
+					return new Response("了解过往", "打听安吉尔的过去，了解她是怎么拥有天使之吻的。", ANGELS_KISS_OFFICE_BACKGROUND);
 					
 				} else if (index == 3) {
 					if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.prostitutionLicenseObtained)) {
 						if(Main.game.getPlayer().getMoney()<5000) {
-							return new Response("License ("+UtilText.formatAsMoney(5000, "span")+")", "You don't have enough money to purchase a prostitution license!", null);
+							return new Response("许可证("+UtilText.formatAsMoney(5000, "span")+")", "你的钱不足以购入卖淫许可证！", null);
 						} else {
-							return new Response("License ("+UtilText.formatAsMoney(5000, "span")+")", "Agree to Angel's deal and purchase a prostitution license.", ANGELS_KISS_OFFICE_LICENSE_PURCHASE) {
+							return new Response("许可证("+UtilText.formatAsMoney(5000, "span")+")", "同意安吉尔的交易，买下卖淫许可证。", ANGELS_KISS_OFFICE_LICENSE_PURCHASE) {
 								@Override
 								public void effects() {
 									Main.game.getDialogueFlags().setFlag(DialogueFlagValue.prostitutionLicenseObtained, true);
@@ -1105,7 +1105,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_OFFICE_CONTINUE = new DialogueNode("Angel's Office", ".", false, true) {
+	public static final DialogueNode ANGELS_KISS_OFFICE_CONTINUE = new DialogueNode("安吉尔的办公室", "。", false, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1123,7 +1123,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_OFFICE_PROSTITUTION = new DialogueNode("Angel's Office", ".", false) {
+	public static final DialogueNode ANGELS_KISS_OFFICE_PROSTITUTION = new DialogueNode("安吉尔的办公室", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1138,7 +1138,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Prostitution", "You are already talking to Angel about prostitution.", null);
+				return new Response("卖淫", "你已经跟安吉尔谈过卖淫的事情了。", null);
 				
 			} else {
 				return ANGELS_KISS_OFFICE.getResponse(responseTab, index);
@@ -1146,7 +1146,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_OFFICE_BACKGROUND = new DialogueNode("Angel's Office", ".", false) {
+	public static final DialogueNode ANGELS_KISS_OFFICE_BACKGROUND = new DialogueNode("安吉尔的办公室", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1161,7 +1161,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 2) {
-				return new Response("Background", "You are already talking to Angel about her background.", null);
+				return new Response("了解过往", "你正在听安吉尔讲述她的过去。", null);
 				
 			} else {
 				return ANGELS_KISS_OFFICE.getResponse(responseTab, index);
@@ -1169,7 +1169,7 @@ public class RedLightDistrict {
 		}
 	};
 	
-	public static final DialogueNode ANGELS_KISS_OFFICE_LICENSE_PURCHASE = new DialogueNode("Angel's Office", ".", false) {
+	public static final DialogueNode ANGELS_KISS_OFFICE_LICENSE_PURCHASE = new DialogueNode("安吉尔的办公室", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1206,7 +1206,7 @@ public class RedLightDistrict {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Feeling happy to have been able to help out one of Dominion's troubled citizens, you continue on your way...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "你对能帮到御城区陷入困境的市民感到高兴，继续出发……", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}

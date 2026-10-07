@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>75</value> 
-		<determiner><![CDATA[a wedge of]]></determiner>
-		<name><![CDATA[Harvest Mouse's cheese]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Harvest Mouse's cheeses]]></namePlural>
-		<description><![CDATA[A wedge of holey cheese, wrapped in plastic and bearing a 'Harvest Mouse'-branded label. Another label on the underside of the cheese displays a graphic scene of a mouse-girl receiving a creampie while in the missionary position.]]></description> 
+		<determiner><![CDATA[一块]]></determiner>
+		<name><![CDATA[丰收鼠奶酪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[丰收鼠奶酪]]></namePlural>
+		<description><![CDATA[一块塑料包装、贴有“丰收鼠”标签的干酪。奶酪底部的另一个标签上显示了一个鼷鼠女以传教士体位接受性爱的画面。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/mouse/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/mouse/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">mouse_cheese.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,21 +25,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[mouse]]></potionDescriptor>
+		<potionDescriptor><![CDATA[鼷鼠]]></potionDescriptor>
 		<associatedRace>innoxia_mouse</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(3)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(3)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel [npc.her] arcane power increasing...
+				[npc.Name]开始感到[npc.her]的奥术力量增强……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_ARCANE, 3)]
 		]]></applyEffects>
@@ -55,10 +55,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			Tearing off the plastic wrapper, [npc.name] [npc.verb(take)] a big bite out of the wedge of Harvest Mouse's cheese. Happy to discover that it has a mild, delicious taste, [npc.she] quickly [npc.verb(finish)] it off, after which [npc2.she] [npc2.verb(let)] out a satisfied sigh.
+			撕掉塑料包装，[npc.name]大口咬下了丰收鼠芝士楔形块。高兴地发现它有着温和而美味的味道，[npc.she]很快就吃完了，之后[npc2.she]发出了满足的叹息。
 		]]></selfUse>
 		<otherUse><![CDATA[
-			Tearing off the plastic wrapper, [npc.name] [npc.verb(make)] [npc2.name] take a big bite out of the wedge of Harvest Mouse's cheese. Happy to discover that it has a mild, delicious taste, [npc2.name] quickly [npc2.verb(finish)] it off, after which [npc2.she] [npc2.verb(let)] out a satisfied sigh.
+			撕掉塑料包装，[npc.name]让[npc2.name]大口咬下丰收鼠芝士楔形块。高兴地发现它有着温和而美味的味道，[npc2.name]很快就吃完了，之后[npc2.she]发出了满足的叹息。
 		]]></otherUse>
 	</useDescriptions>
 

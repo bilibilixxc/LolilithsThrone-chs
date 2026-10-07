@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
 	<title/>
 	<wallName/>
@@ -17,39 +17,39 @@
 		<isPublic><![CDATA[true]]></isPublic>
 		<startingDescription><![CDATA[
 			#IF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn1)
-				The trainees to either side of you look across as [partner.name] steps up behind you, and as they realise that you're about to get fucked, they each bite their lips and let out excited squeals...
+				当[partner.name]走到你身后时，两边的学徒都看向你，他们意识到你即将被操，咬着嘴唇发出兴奋的叫声……
 			#ELSEIF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn2)
-				The heifers to either side of you look across as [partner.name] steps up behind you, and as they realise that you're about to get fucked, they each flash you a knowing grin and let out horny whines...
+				当[partner.name]走到你身后时，两边的小母牛都看向你，他们意识到你即将被操，便露出会心的微笑，发出淫荡的呜呜声……
 			#ELSE
-				The cows to either side of you look across as [partner.name] steps up behind you, and as they realise that you're about to get fucked, they each flash you a warm smile and let out soft moans...
+				当[partner.name]走到你身后时，两边的奶牛都看向你，他们意识到你即将被操，便露出温暖的微笑，轻声呻吟起来……
 			#ENDIF
 		]]></startingDescription>
 		<randomDescriptions enabled="false">
 			<description><![CDATA[
-				#IF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn1)
-					One of the neighbouring trainees excitedly shouts out some lewd words of encouragement.
-				#ELSEIF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn2)
-					One of the neighbouring heifers teases [partner.name] with some lewd words of encouragement.
+#IF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn1)
+					一旁的学徒兴奋地大喊一些淫秽话语。
+#ELSEIF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn2)
+					旁边的小母牛用一些淫秽话语挑逗[partner.name]。
 				#ELSE
-					One of the neighbouring cows offers [partner.name] some lewd words of encouragement.
+					旁边的奶牛用淫荡话语刺激[partner.name]。
+				#ENDIF
+]]></description>
+			<description><![CDATA[
+				#IF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn1)
+					旁边的学徒看着[partner.name]操你，发出色情的哼唧。
+				#ELSEIF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn2)
+					旁边的学徒小母牛看着[partner.name]操你，发出情欲的呻吟。
+				#ELSE
+					旁边的奶牛看着[partner.name]操你，发出温柔的呻吟。
 				#ENDIF
 			]]></description>
 			<description><![CDATA[
 				#IF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn1)
-					An adjacent trainee lets out an erotic whine as she watches [partner.name] fuck you.
+					邻近的学徒看着你为他们表演的淫秽节目，同步发出色情的尖叫声。
 				#ELSEIF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn2)
-					An adjacent heifer lets out an erotic moan as she watches [partner.name] fuck you.
+					邻近的小母牛看着你为它们表演的淫秽节目，同步发出淫荡的呻吟。
 				#ELSE
-					An adjacent cow lets out a gentle moan as she watches [partner.name] fuck you.
-				#ENDIF
-			]]></description>
-			<description><![CDATA[
-				#IF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn1)
-					The neighbouring trainees let out an erotic, synchronised squeal as they watch the lewd display you're putting on for them.
-				#ELSEIF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_dairyFarm_barn2)
-					The neighbouring heifers let out a lewd, synchronised moan as they watch the erotic display you're putting on for them.
-				#ELSE
-					The neighbouring cows let out a soft, synchronised moan as they watch the lewd display you're putting on for them.
+					邻近的奶牛看着你为它们表演的淫秽节目，同步发出轻轻的呻吟声。
 				#ENDIF
 			]]></description>
 			<description><![CDATA[]]></description>

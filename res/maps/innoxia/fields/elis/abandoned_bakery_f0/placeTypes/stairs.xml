@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[staircase]]></name>
-	<tooltipDescription><![CDATA[An old, creaky staircase links the ground and first floors of the abandoned bakery.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[on the stairs in the abandoned bakery in Elis]]></virginityLossDescription>
+	<name><![CDATA[楼梯]]></name>
+	<tooltipDescription><![CDATA[吱吱作响的老旧楼梯链接着废弃面包店的一楼和二楼。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯废弃面包店的楼梯上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREEN_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

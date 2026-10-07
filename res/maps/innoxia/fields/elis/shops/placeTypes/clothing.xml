@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[The Fashionable Moo]]></name>
-	<tooltipDescription><![CDATA[While there are several clothing stores found throughout Elis, this one stands out due to its owner's outgoing personality.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in 'The Fashionable Moo' clothing store]]></virginityLossDescription>
+	<name><![CDATA[哞求时尚]]></name>
+	<tooltipDescription><![CDATA[伊利斯有好几家服装店，但这家因为其主人的个性与众不同。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在哞求时尚服装店中]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ROSE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

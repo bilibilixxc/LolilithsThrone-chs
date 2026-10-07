@@ -15,7 +15,7 @@ import com.lilithsthrone.main.Main;
  */
 public class DreamLover {
 
-	public static final DialogueNode EXTERIOR = new DialogueNode("Dream Lover (Exterior)", "-", false) {
+	public static final DialogueNode EXTERIOR = new DialogueNode("梦中爱侣(外部)", "-", false) {
 
 		@Override
 		public String getAuthor() {
@@ -37,16 +37,16 @@ public class DreamLover {
 			if(responseTab==0) {
 				if (index == 1) {
 					if(!Main.game.isExtendedWorkTime()) {
-						return new Response("Enter", "Step inside 'Dream Lover'.", EXTERIOR_CLOSED);
+						return new Response("进入", "进入“梦中爱侣”。", EXTERIOR_CLOSED);
 					}
-					return new Response("Enter", "Step inside 'Dream Lover'.", ENTRY);
+					return new Response("进入", "进入“梦中爱侣”。", ENTRY);
 				}
 			}
 			return ShoppingArcadeDialogue.getFastTravelResponses(responseTab, index);
 		}
 	};
 
-	public static final DialogueNode EXTERIOR_CLOSED = new DialogueNode("Dream Lover (Exterior)", "-", false, true) {
+	public static final DialogueNode EXTERIOR_CLOSED = new DialogueNode("梦中爱侣(外部)", "-", false, true) {
 
 		@Override
 		public String getContent() {
@@ -62,14 +62,14 @@ public class DreamLover {
 		public Response getResponse(int responseTab, int index) {
 			if(responseTab==0) {
 				if (index == 1) {
-					return new Response("Enter", "'Dream Lover' is currently closed, so you'll have to back at another time if you wanted to do any shopping here.", null);
+					return new Response("进入", "“梦中爱侣”目前关门。如果你想在这里购物的话，得过一会再来。", null);
 				}
 			}
 			return ShoppingArcadeDialogue.getFastTravelResponses(responseTab, index);
 		}
 	};
 	
-	public static final DialogueNode ENTRY = new DialogueNode("Dream Lover", "-", true) {
+	public static final DialogueNode ENTRY = new DialogueNode("梦中爱侣", "-", true) {
 
 		@Override
 		public String getAuthor() {
@@ -97,7 +97,7 @@ public class DreamLover {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.ashleyIntroduced)) {
 				if (index == 1) {
-					return new Response("Explore", "Explore the shelves.", EXPLORE_SHELVES) {
+					return new Response("搜索", "搜索货架。", EXPLORE_SHELVES) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.ashleyIntroduced, true);
@@ -111,10 +111,10 @@ public class DreamLover {
 			} else {
 				
 				if (index == 1) {
-					return new ResponseTrade("Trade", "Wander around the shop and see what items there are for sale...", Main.game.getNpc(Ashley.class));
+					return new ResponseTrade("交易", "在店铺中闲逛，看看有什么好卖……", Main.game.getNpc(Ashley.class));
 					
 				} else if(index==2 && !Main.game.getDialogueFlags().values.contains(DialogueFlagValue.ashleyAttitude)) {
-					return new Response("Confront Ashley", "What's with this person's attitude? Walk up to the counter and confront them about it.", CONFRONT_ASHLEY) {
+					return new Response("跟艾什利对峙", "这个家伙什么态度？走到柜台跟他对峙。", CONFRONT_ASHLEY) {
 						@Override
 						public void effects() {
 							if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ashleySexToysDiscovered)) {
@@ -126,7 +126,7 @@ public class DreamLover {
 					};
 					
 				} else if (index == 0) {
-					return new Response("Leave", "Head back out to the Shopping Arcade.", EXTERIOR) {
+					return new Response("离开", "回到购物中心。", EXTERIOR) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/dreamLover", "EXIT"));
@@ -140,7 +140,7 @@ public class DreamLover {
 		}
 	};
 	
-	public static final DialogueNode EXPLORE_SHELVES = new DialogueNode("Dream Lover", "-", true, true) {
+	public static final DialogueNode EXPLORE_SHELVES = new DialogueNode("梦中爱侣", "-", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -155,7 +155,7 @@ public class DreamLover {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Confront Ashley", "What's with this person's attitude? Walk up to the counter and confront them about it.", CONFRONT_ASHLEY) {
+				return new Response("跟艾什利对峙", "这个家伙什么态度？走到柜台跟他对峙。", CONFRONT_ASHLEY) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/dreamLover", "SEX_TOY_DISCOVERY"));
@@ -165,7 +165,7 @@ public class DreamLover {
 				};
 				
 			} else if(index==2) {
-				return new Response("Keep quiet", "It's probably best to just ignore this person's strange attitude...", IGNORE_ASHLEY) {
+				return new Response("保持安静", "最好还是无视这个人奇怪的态度吧……", IGNORE_ASHLEY) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/dreamLover", "SEX_TOY_DISCOVERY"));
@@ -179,7 +179,7 @@ public class DreamLover {
 		}
 	};
 	
-	public static final DialogueNode CONFRONT_ASHLEY = new DialogueNode("Dream Lover", "-", true, true) {
+	public static final DialogueNode CONFRONT_ASHLEY = new DialogueNode("梦中爱侣", "-", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -197,7 +197,7 @@ public class DreamLover {
 		}
 	};
 	
-	public static final DialogueNode IGNORE_ASHLEY = new DialogueNode("Dream Lover", "-", true, true) {
+	public static final DialogueNode IGNORE_ASHLEY = new DialogueNode("梦中爱侣", "-", true, true) {
 
 		@Override
 		public String getAuthor() {

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Cells]]></name>
-	<tooltipDescription><![CDATA[The cells in the Enforcer station are where the town's criminals are kept while awaiting trial.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the cells in the Enforcer station in Elis]]></virginityLossDescription>
+	<name><![CDATA[监狱]]></name>
+	<tooltipDescription><![CDATA[小镇的犯罪者在执法局的牢房里候审。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯执法局的牢房里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN_DARK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>NoStepOnSnek_capybara</racialBody>
 	<applyRaceChanges/>
-	<name><![CDATA[capybara-morph]]></name>
-	<namePlural><![CDATA[capybara-morphs]]></namePlural>
+	<name><![CDATA[水豚化形]]></name>
+	<namePlural><![CDATA[水豚化形]]></namePlural>
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[capybara]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[水豚]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[capybaras]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[水豚]]></name>
 	</nameFeralPlural>
-	<defaultTransformName><![CDATA[capybara]]></defaultTransformName>
+	<defaultTransformName><![CDATA[水豚]]></defaultTransformName>
 	<colour>NoStepOnSnek_capybara</colour>
 	<disposition>CIVILIZED</disposition>
 	<racialClass>MAMMAL</racialClass>

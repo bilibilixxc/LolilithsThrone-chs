@@ -69,47 +69,47 @@ public class SMKrugerChair extends SexManagerDefault {
 	@Override
 	public String getPublicSexStartingDescription() {
 		return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
-				+ "The lionesses and zebra-girls sitting around the booth start to giggle and touch themselves as they watch you about to get fucked by Kruger..."
+				+ "围坐在展台周围的狮女和斑马女看着你即将被克鲁格操一边笑着一边抚摸着自己……"
 				+ "</p>";
 	}
 
 	@Override
 	public String getRandomPublicSexDescription() {
 		List<String> descriptions = Util.newArrayListOfValues(
-				"One of the lionesses lifts up her skirt, and, pulling her thong to one side, starts to finger herself while watching you and Kruger.",
-				"Two of the zebra-girls lean back on the sofa and start making out with one another.",
-				"You hear several of the lionesses who are watching you being to share some comments on your performance.",
-				"You hear one of the zebra-girls let out an erotic moan as she watches Kruger having fun with you.",
-				"The girls who are watching your performance continue to giggle and make lewd comments all around you.",
-				"You glance across to see several of the girls touching themselves as they watch you and Kruger go at it.",
-				"One of the zebra-girls cheers you on as you and Kruger carry on having sex in front of them.",
-				"One of the lionesses giggles and makes a lewd comment as you and Kruger carry on having sex in front of her.");
+				"有只狮女掀起裙子，把丁字裤撇到一旁，看着你和克鲁格扣了起来。",
+				"两个斑马女仰坐在沙发上，互相亲热了起来。",
+				"你听见有几个围观的狮女正在评价你的表现。",
+				"有个斑马女看着你跟克鲁格亲热，你忽然听见她口中冒出一声色情呻吟。",
+				"围观你表演的姑娘们围在一旁，嘻嘻哈哈地笑了起来，不时冒出些下流的评论。",
+				"你瞄了一眼，发现有几个女孩已经一边看者你和克鲁格一边抚摸起下体。",
+				"你继续在人群面前和克鲁格做爱，有个斑马女突然呼和起来。",
+				"你继续在人群面前和克鲁格做爱，有个狮女忽然嬉笑着评论起来。");
 		
 		if(Main.sex.getOrificesBeingPenetratedBy(Main.game.getNpc(Kruger.class), SexAreaPenetration.PENIS, Main.game.getPlayer()).contains(SexAreaOrifice.MOUTH)) {
-			descriptions.add("A lioness kneels down beside you, before pushing your head down on Kruger's cock, giggling to herself as she forces you to deepthroat his [kruger.cock+].");
-			descriptions.add("A pair of zebra-girls lean forwards to either side of you, and, taking hold of your head, help you to bob up and down on [kruger.cock+].");
-			descriptions.add("One of the lionesses leans forwards and snarls, [genericFemale.speech(That's right, bitch, know your place.)]");
-			descriptions.add("A lioness leans forwards and pushes your head down on Kruger's cock, snarling, [genericFemale.speech(Come on, slut, you can suck cock better than that.)]");
-			descriptions.add("One of the zebra-girls sits back on the sofa and cheers, [genericFemale.speech(Come on Kruger, fuck that bitch's face real good!)]");
-			descriptions.add("A zebra-girl leans in against Kruger, and, grinning down at you, she encourages him, [genericFemale.speech(Oh yeah, Kruger, you put that slut in [pc.her] place!)]");
+			descriptions.add("母狮跪在你面前，把你的头按在克鲁格的鸡巴上。她一边咯咯笑，一边强迫你吮吸克鲁格[kruger.cock+]。");
+			descriptions.add("一对斑马女来到了你的两侧，抓住你的脑袋在克鲁格[kruger.cock+]上做活塞运动。");
+			descriptions.add("其中一只母狮倾向前咆哮道，[genericFemale.speech(就是如此，烂货，认清你的地位。)]");
+			descriptions.add("一只母狮向前俯身，把你的头按在克鲁格的鸡巴上，咆哮着：[genericFemale.speech(来吧！荡妇！你的技术应该比这更好的！)]");
+			descriptions.add("其中一个斑马女坐回沙发，欢呼道：[genericFemale.speech(加油，克鲁格。狠狠地操那个婊子的嘴！)]");
+			descriptions.add("一个斑马女靠在克鲁格身边，笑着对他说：[genericFemale.speech(哦，看呐，克鲁格！你让那个荡妇无地自处了！)]");
 		}
 		
 		if(Main.sex.getOrificesBeingPenetratedBy(Main.game.getNpc(Kruger.class), SexAreaPenetration.PENIS, Main.game.getPlayer()).contains(SexAreaOrifice.VAGINA)) {
-			descriptions.add("A lioness steps up behind you, before taking hold of your shoulders and pushing down, giggling to herself as she forces Kruger's [kruger.cock+] deep into your [pc.pussy+].");
-			descriptions.add("A pair of zebra-girls step forwards to either side of you, and, taking a firm grip under your [pc.arms], pull you up and down in order to help Kruger's [kruger.cock+] slide in and out of your [pc.pussy+].");
-			descriptions.add("One of the lionesses leans forwards and snarls, [genericFemale.speech(You're just a slutty cock-sleeve, aren't you bitch?)]");
-			descriptions.add("A lioness leans forwards, and, taking hold of your [pc.hips+], pulls you down onto Kruger's cock, snarling, [genericFemale.speech(Come on, slut, take it <i>deep</i>.)]");
-			descriptions.add("One of the zebra-girls sits back on the sofa and cheers, [genericFemale.speech(Come on Kruger, fuck that bitch real good!)]");
-			descriptions.add("A zebra-girl leans in against Kruger, and, grinning across at you, she encourages him, [genericFemale.speech(Oh yeah, Kruger, you put that slut in [pc.her] place!)]");
+			descriptions.add("一只母狮走到你身后，咯咯笑着，抓住你的肩膀用力下压，将克鲁格[kruger.cock+]插入你[pc.pussy+]深处。");
+			descriptions.add("一对斑马女走到你的身边，然后抓住你的下半身上下抽动，以此来让克鲁格[kruger.cock+]在你[pc.pussy+]内进进出出。");
+			descriptions.add("其中一只母狮倾向前，咆哮道，[genericFemale.speech(你就是个放荡的鸡巴套子，对不对啊，婊子？)]");
+			descriptions.add("一只母狮向前一扑，抓住你[pc.hips+]并推倒在克鲁格的鸡巴上，然后咆哮道：[genericFemale.speech(来吧！荡妇！来插一把<i>深的</i>。)]");
+			descriptions.add("其中一个斑马女坐在沙发上欢呼道：[genericFemale.speech(来吧，克鲁格，狠狠地操那个婊子！)]");
+			descriptions.add("一个斑马女靠在克鲁格身边，笑着鼓励道：[genericFemale.speech(哦，看呐，克鲁格！你让那个荡妇无地自处了！)]");
 		}
 
 		if(Main.sex.getOrificesBeingPenetratedBy(Main.game.getNpc(Kruger.class), SexAreaPenetration.PENIS, Main.game.getPlayer()).contains(SexAreaOrifice.ANUS)) {
-			descriptions.add("A lioness steps up behind you, before taking hold of your shoulders and pushing down, giggling to herself as she forces Kruger's [kruger.cock+] deep into your [pc.asshole+].");
-			descriptions.add("A pair of zebra-girls step forwards to either side of you, and, taking a firm grip under your [pc.arms], pull you up and down in order to help Kruger's [kruger.cock+] slide in and out of your [pc.asshole+].");
-			descriptions.add("One of the lionesses leans forwards and snarls, [genericFemale.speech(You're just a filthy butt-slut, aren't you bitch?)]");
-			descriptions.add("A lioness leans forwards, and, taking hold of your [pc.hips+], pulls you down onto Kruger's cock, snarling, [genericFemale.speech(Come on, you dirty butt-slut, take it <i>deep</i>.)]");
-			descriptions.add("One of the zebra-girls sits back on the sofa and cheers, [genericFemale.speech(Come on Kruger, fuck that bitch's ass real good!)]");
-			descriptions.add("A zebra-girl leans in against Kruger, and, grinning across at you, she encourages him, [genericFemale.speech(Oh yeah, Kruger, you put that dirty butt-slut in [pc.her] place!)]");
+			descriptions.add("一只母狮走到你身后，咯咯笑着的，抓住你的肩膀用力下压，将克鲁格[kruger.cock+]插入你[pc.asshole+]深处。");
+			descriptions.add("一对斑马女走到你的身边，抓住你的下半身上下抽动，让克鲁格[kruger.cock+]在你[pc.asshole+]内进进出出。");
+			descriptions.add("其中一只母狮倾向前咆哮道，[genericFemale.speech(你就是个下流的荡妇，是不是啊，婊子？)]");
+			descriptions.add("一只母狮向前一扑，抓住你[pc.hips+]并推倒在克鲁格的鸡巴上，然后咆哮道：[genericFemale.speech(来吧！荡妇！来插一把<i>深的</i>。)]");
+			descriptions.add("其中一个斑马女坐在沙发上欢呼道：[genericFemale.speech(来吧，克鲁格，狠狠地操那婊子的屁股吧！)]");
+			descriptions.add("一个斑马女靠在克鲁格身边，笑着鼓励道：[genericFemale.speech(哦，看呐，克鲁格！你让这个荡妇摆正了自己的位置！)]");
 		}
 		
 		return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"

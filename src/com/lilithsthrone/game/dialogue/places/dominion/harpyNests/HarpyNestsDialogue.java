@@ -27,7 +27,7 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class HarpyNestsDialogue {
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Harpy Nests", "Harpy Nests", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("哈比之巢", "哈比之巢", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -39,7 +39,7 @@ public class HarpyNestsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Harpy Nests", "Travel up to the Harpy Nests.", PlaceType.HARPY_NESTS_ENTRANCE_ENFORCER_POST.getDialogue(false)){
+				return new Response("哈比之巢", "上去到哈比之巢。", PlaceType.HARPY_NESTS_ENTRANCE_ENFORCER_POST.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/harpyNests/generic", "OUTSIDE_ENTRY"));
@@ -53,7 +53,7 @@ public class HarpyNestsDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE_ENFORCER_POST = new DialogueNode("Enforcer post", ".", true) {
+	public static final DialogueNode ENTRANCE_ENFORCER_POST = new DialogueNode("执法者岗哨", ".", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -72,7 +72,7 @@ public class HarpyNestsDialogue {
 				return null;
 			}
 			if (index == 1) {
-				return new Response("To street level", "Travel back down to Dominion's streets.", PlaceType.DOMINION_HARPY_NESTS_ENTRANCE.getDialogue(false)){
+				return new Response("街道", "下去到御城区街道。", PlaceType.DOMINION_HARPY_NESTS_ENTRANCE.getDialogue(false)){
 					@Override
 					public void effects() {
 						if(Main.game.getPlayer().isAbleToFly()) {
@@ -83,7 +83,7 @@ public class HarpyNestsDialogue {
 						} else {
 							Main.game.getTextStartStringBuilder().append(
 									"<p>"
-										+ "Stepping into the same elevator you used to ride up to the Enforcer post, you soon find yourself travelling back down to street level."
+										+ "你再次进入将你带到执法者岗哨的电梯，很快就回到了街道上。"
 									+ "</p>");
 						}
 						
@@ -96,7 +96,7 @@ public class HarpyNestsDialogue {
 			
 			if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.hasHarpyNestAccess)) {
 				responses.add(
-						new Response("Request access", "Walk up to the desk and ask if you can visit the Harpy Nests.", ENTRANCE_ENFORCER_POST_ASK_FOR_ACCESS) {
+						new Response("请求通行", "到桌子前询问你能否进入哈比之巢。", ENTRANCE_ENFORCER_POST_ASK_FOR_ACCESS) {
 							@Override
 							public void effects() {
 								Main.game.getDialogueFlags().values.add(DialogueFlagValue.hasHarpyNestAccess);
@@ -107,12 +107,12 @@ public class HarpyNestsDialogue {
 			} else {
 				if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_HARPY_PACIFICATION)) {
 					responses.add(
-							new Response("Angry Harpies", "Ask one of the Enforcers about the recent troubles in the Harpy Nests.", ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS));
+							new Response("愤怒的哈比", "询问其中一个执法者哈比之巢最近出什么幺蛾子了。", ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS));
 					
 				} else {
 					if(Main.game.getPlayer().getQuest(QuestLine.SIDE_HARPY_PACIFICATION) == Quest.HARPY_PACIFICATION_REWARD && !Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_HARPY_PACIFICATION)) {
 						responses.add(
-								new Response("Report back", "Report to the Enforcer that you've calmed the three matriarchs down.", ENTRANCE_ENFORCER_POST_COMPLETED_PACIFICATION) {
+								new Response("报告", "向执法者报告你已经将三位族长平息下来了。", ENTRANCE_ENFORCER_POST_COMPLETED_PACIFICATION) {
 									@Override
 									public void effects() {
 										Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.SIDE_HARPY_PACIFICATION, Quest.SIDE_UTIL_COMPLETE));
@@ -123,7 +123,7 @@ public class HarpyNestsDialogue {
 						
 					} else if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_HARPY_PACIFICATION)){
 						responses.add(
-								new Response("Report back", "You haven't calmed the three matriarchs down yet!", null));
+								new Response("报告", "你还没能把三位族长都平息下来！", null));
 					}
 				}
 			}
@@ -132,7 +132,7 @@ public class HarpyNestsDialogue {
 					&& Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_LOLLIPOPS
 					&& !Main.game.getPlayer().hasItemType(ItemType.CANDI_CONTRABAND)) {
 				responses.add(
-						new Response("Candi's lollipops", "Ask a nearby Enforcer about collecting the box of lollipops which Candi has requested.", ENTRANCE_ENFORCER_POST_CANDIS_LOLLIPOPS) {
+						new Response("坎迪的棒棒糖", "询问附近的执法者，知不知道坎迪要求的那箱棒棒糖。", ENTRANCE_ENFORCER_POST_CANDIS_LOLLIPOPS) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addItem(Main.game.getItemGen().generateItem(ItemType.CANDI_CONTRABAND), false));
@@ -153,7 +153,7 @@ public class HarpyNestsDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE_ENFORCER_POST_ASK_FOR_ACCESS = new DialogueNode("Enforcer post", ".", true) {
+	public static final DialogueNode ENTRANCE_ENFORCER_POST_ASK_FOR_ACCESS = new DialogueNode("执法者岗哨", ".", true) {
 		@Override
 		public boolean isTravelDisabled() {
 			return !Main.game.getDialogueFlags().values.contains(DialogueFlagValue.hasHarpyNestAccess);
@@ -172,7 +172,7 @@ public class HarpyNestsDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS = new DialogueNode("Enforcer post", ".", true) {
+	public static final DialogueNode ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS = new DialogueNode("执法者岗哨", ".", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -184,7 +184,7 @@ public class HarpyNestsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Follow", "Do as the horse-boy asks and follow him.", ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS_NEXT) {
+				return new Response("跟随", "按照马男说的做，跟随他", ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS_NEXT) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().startQuest(QuestLine.SIDE_HARPY_PACIFICATION));
@@ -195,7 +195,7 @@ public class HarpyNestsDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS_NEXT = new DialogueNode("Enforcer post", ".", true, true) {
+	public static final DialogueNode ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS_NEXT = new DialogueNode("执法者岗哨", ".", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -207,7 +207,7 @@ public class HarpyNestsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Leave", "Having agreed to help pacify the Harpy Nests, you leave the horse-boy's office...", ENTRANCE_ENFORCER_POST) {
+				return new Response("离开", "你在同意帮助平息哈比之巢后，离开了马男的办公室……", ENTRANCE_ENFORCER_POST) {
 					@Override
 					public void effects() {
 						Main.game.appendToTextStartStringBuilder(UtilText.parseFromXMLFile("places/dominion/harpyNests/generic", "ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS_NEXT_LEAVE"));
@@ -218,7 +218,7 @@ public class HarpyNestsDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE_ENFORCER_POST_COMPLETED_PACIFICATION = new DialogueNode("Enforcer post", ".", false) {
+	public static final DialogueNode ENTRANCE_ENFORCER_POST_COMPLETED_PACIFICATION = new DialogueNode("执法者岗哨", ".", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -238,7 +238,7 @@ public class HarpyNestsDialogue {
 	};
 	
 
-	public static final DialogueNode ENTRANCE_ENFORCER_POST_CANDIS_LOLLIPOPS = new DialogueNode("Enforcer post", ".", false) {
+	public static final DialogueNode ENTRANCE_ENFORCER_POST_CANDIS_LOLLIPOPS = new DialogueNode("执法者岗哨", ".", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -261,7 +261,7 @@ public class HarpyNestsDialogue {
 		}
 	};
 	
-	public static final DialogueNode WALKWAY = new DialogueNode("Walkway", ".", false) {
+	public static final DialogueNode WALKWAY = new DialogueNode("通道", ".", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -284,8 +284,8 @@ public class HarpyNestsDialogue {
 			if(index == 1) {
 				if(Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_HARPY_PACIFICATION)) {
 					return new ResponseEffectsOnly(
-							"Look for trouble",
-							"Although you've pacified the harpy nests, you're sure that you can find a harpy who's looking for a confrontation..."){
+							"挑事",
+							"虽然你已经平息了哈比的巢穴，但你找到一只想打架的哈比肯定不难……"){
 								@Override
 								public int getSecondsPassed() {
 									return 30*60;
@@ -298,7 +298,7 @@ public class HarpyNestsDialogue {
 							};
 							
 				} else {
-					return AbstractEncounter.exploreArea("the walkways");
+					return AbstractEncounter.exploreArea("通道");
 				}
 			} else if (index == 2) {
 				return AbstractEncounter.useOffspringMap();
@@ -307,7 +307,7 @@ public class HarpyNestsDialogue {
 		}
 	};
 	
-	public static final DialogueNode WALKWAY_BRIDGE = new DialogueNode("Walkway Bridge", "", false) {
+	public static final DialogueNode WALKWAY_BRIDGE = new DialogueNode("桥路", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;

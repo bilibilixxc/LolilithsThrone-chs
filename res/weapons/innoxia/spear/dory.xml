@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>5000</value> 
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[dory]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[dories]]></namePlural>
-		<description><![CDATA[A long, wooden-shafted spear, almost [style.sizes(300)] from tip to butt. The arcane blade on the end has a leaf-like shape, while an arcane, spiked counterpart on the opposite end, known as a 'sauroter', acts as a counter-weight.]]></description> 
-		<attackDescriptor>skewer</attackDescriptor>
-		<attackTooltipDescription>Thrust your dory at [npc2.name] and skewer [npc2.herHim]!</attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name><![CDATA[希腊长矛]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[希腊长矛]]></namePlural>
+		<description><![CDATA[一把木柄长矛，从矛尖到矛头长度为[style.sizes(300)]。顶端的弧形奥术刀刃呈树叶状，而另一端的奥术尖刺则被称为 "σαυρωτήρ"，起着平衡的作用。]]></description> 
+		<attackDescriptor><![CDATA[穿刺]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用希腊长矛刺向[npc2.name]！]]></attackTooltipDescription>
 		<rarity>COMMON</rarity> 
 		<weaponSet/> 
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] dory as [npc.she] [npc.verb(ready)] [npc.herself] to use it in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] away [npc.her] dory.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]抓起[npc.her]的希腊长矛，准备用于战斗。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]放下了[npc.her]的希腊长矛。]]></unequipText>
 		<imageName>dory.svg</imageName> 
 		<imageEquippedName>dory.svg</imageEquippedName>
 		<damage>25</damage> 
@@ -50,29 +50,29 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Thrusting out with [npc.her] dory, [npc.name] [npc.verb(manage)] to stab [npc2.name] in the chest; the ethereal arcane blade passing through [npc2.her] torso to drain [npc2.her] energy!
-		]]></hitText>
+		[npc.Name]刺出希腊长矛，刺进[npc2.name]的胸膛；其虚幻的奥术枪头穿过了[npc2.her]的躯体，汲取其能量！
+]]></hitText>
 		<hitText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] dory, [npc.name] [npc.verb(manage)] to slash through [npc2.her] [npc2.arm] with the ethereal blade and drain [npc2.her] energy!
-		]]></hitText>
+		[npc.Name]向着[npc2.name]捅出希腊长矛，用虚幻的奥术枪头刺入了[npc2.her]的[npc2.arm]，汲取其能量！
+]]></hitText>
 		<hitText><![CDATA[
-		With a quick [npc.step] forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] dory, sinking the ethereal blade into [npc2.her] shoulder and causing [npc2.herHim] to lose some energy!
-		]]></hitText>
+		[npc.Name]前踏一步，用希腊长矛刺向[npc2.name]，虚幻的奥术枪头深深地埋进[npc2.her]的肩膀，令其失去了一些能量！
+]]></hitText>
 		<criticalHitText><![CDATA[
-		Expertly sidestepping around [npc2.namePos] attempt to block [npc.her] attack, [npc.name] [npc.verb(deal)] a devastating strike with [npc.her] dory!
-		]]></criticalHitText>
+		[npc.Name]精湛地横移一步，绕过了[npc2.namePos]的格挡，用希腊长矛对[npc2.her]造成了毁灭性的伤害！
+]]></criticalHitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] dory, [npc.name] [npc.verb(attempt)] to stab [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.name]用希腊长矛捅向[npc2.name]的胸部，但最后没有成功命中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] dory, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]向着[npc2.name]捅出希腊长矛，却没能命中目标，让[npc.she]恼火地大喊一声！
+]]></missText>
 		<missText><![CDATA[
-		With a quick [npc.step] forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] dory, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用希腊长矛猛地刺向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

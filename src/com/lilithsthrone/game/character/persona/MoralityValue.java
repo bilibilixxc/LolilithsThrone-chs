@@ -7,13 +7,13 @@ package com.lilithsthrone.game.character.persona;
  */
 public enum MoralityValue {// Excuse me? This is a thing? Why no Incest, Underage, etc..? Can we utilize this @Drake ?
 	
-	SURRENDER("Surrendering", "A stance on avoiding fighting to bitter end."),
+	SURRENDER("投降", "避免事情陷入糟糕结局的态度。"),
 	
-	VIOLENCE("Violence", "A stance on excessive violence."),
+	VIOLENCE("暴力", "滥用暴力的态度。"),
 	
-	DISHONESTY("Dishonesty", "A stance on lies, half-truths and various obscurities of information."),
+	DISHONESTY("欺诈", "在提供的信息上欺骗、半真半假、语焉不详的态度。"),
 	
-	SLAVERY("Slavery", "A stance on ownership of slaves.");
+	SLAVERY("奴役", "奴役他人的态度。");
 	
 	private String name;
 	private String description;

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[ankle boot]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[ankle boots]]></namePlural>
-		<description><![CDATA[A pair of feminine ankle boots, with the heel being raised off the ground in order to make the wearer taller, as well as to accentuate their calf muscles and the overall length of their legs.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[踝靴]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[踝靴]]></namePlural>
+		<description><![CDATA[一双女式踝靴，鞋跟很高，旨在增加穿者的身高，同时远观拉长小腿肌肉和腿部的整体长度。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>FOOT</slot> 
@@ -48,27 +48,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slip)] [npc.her] [npc.feet] into the ankle boots and [npc.verb(zip)] up the sides.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slip)] [npc2.namePos] [npc2.feet] into the ankle boots and [npc.verb(zip)] up the sides.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] [npc2.namePos] [npc2.feet] into the ankle boots and [npc.verb(zip)] up the sides.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]脚滑入踝靴，并拉上侧边的拉链。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的脚滑入踝靴，并拉上侧边的拉链。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的脚塞进踝靴，并拉上侧边的拉链。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unzip)] [npc.her] ankle boots and [npc.verb(slip)] them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unzip)] [npc2.namePos] ankle boots and [npc.verb(slip)] them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unzip)] [npc2.namePos] ankle boots and [npc.verb(yank)] them off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开[npc.her]踝靴的拉链，并脱下它们。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开[npc2.namePos]的踝靴的拉链，并脱下它们。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开[npc2.namePos]的踝靴的拉链，并猛力脱下它们。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

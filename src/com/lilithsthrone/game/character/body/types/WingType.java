@@ -28,17 +28,17 @@ public class WingType {
 			null,
 			Race.NONE,
 			false,
-			"none",
-			"wing",
-			"wings",
+			"无",
+			"翅膀",
+			"翅膀",
 			new ArrayList<>(),
 			new ArrayList<>(),
 			"#IF(npc.getLegConfiguration().isWingsOnLegConfiguration())"
-					+ "With a strong tugging sensation, [npc.her] [npc.wings] shrink away and disappear into the sides of [npc.her] [npc.legConfiguration] body."
+					+ "伴随着强烈的拉扯感，[npc.her]的[npc.wings]逐渐缩小，消失在[npc.legConfiguration]身体的两侧。"
 			+ "#ELSE"
-				+ "With a strong tugging sensation, [npc.her] [npc.wings] shrink away and disappear into [npc.her] back."
+				+ "伴随着强烈的拉扯感，[npc.her]的[npc.wings]逐渐缩小，从背上消失了。"
 			+ "#ENDIF"
-			+ "<br/>[npc.Name] now [npc.has] [style.boldTfGeneric(no wings)].",
+			+ "<br/>[npc.Name]现在[style.boldTfGeneric(没有翅膀)]。",
 			"") {
 	};
 
@@ -48,19 +48,19 @@ public class WingType {
 			BodyCoveringType.ANGEL_FEATHER,
 			Race.ANGEL,
 			true,
-			"angelic feathered",
-			"wing",
-			"wings",
-			Util.newArrayListOfValues("angelic", "feathered"),
-			Util.newArrayListOfValues("angelic", "feathered"),
+			"天使(覆羽)",
+			"翅膀",
+			"翅膀",
+			Util.newArrayListOfValues("天使", "羽毛覆盖"),
+			Util.newArrayListOfValues("天使", "羽毛覆盖"),
 			"#IF(npc.getLegConfiguration().isWingsOnLegConfiguration())"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], feathered, angelic wings push out from the sides of [npc.her] [npc.legConfiguration] body."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖着羽毛的[npc.wingSize]天使翅膀随之从[npc.her][npc.legConfiguration]身体的两侧长了出来。"
 			+ "#ELSE"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], feathered, angelic wings push out from [npc.her] shoulder blades."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖着羽毛的[npc.wingSize]天使翅膀随之从[npc.her]的肩胛骨位置长了出来。"
 			+ "#ENDIF"
 			+ "<br/>"
-			+ "[npc.Name] now [npc.has] [style.boldAngel(angelic, feathered wings)].",
-			"[npc.sheHasFull] a pair of [npc.wingSize], feathered, angelic wings, which are [npc.materialDescriptor] [npc.wingFullDescription(true)].") {
+			+ "[npc.Name]现在拥有[style.boldAngel(羽毛覆盖的天使翅膀)]。",
+			"[npc.sheHasFull]拥有一对羽毛覆盖的[npc.wingSize]天使翅膀，[npc.materialDescriptor][npc.wingFullDescription(true)]。") {
 	};
 
 	// Demons:
@@ -69,46 +69,46 @@ public class WingType {
 			BodyCoveringType.DEMON_COMMON,
 			Race.DEMON,
 			true,
-			"demonic leathery",
-			"wing",
-			"wings",
-			Util.newArrayListOfValues("demonic", "leathery"),
-			Util.newArrayListOfValues("demonic", "leathery"),
+			"恶魔(皮质)",
+			"翅膀",
+			"翅膀",
+			Util.newArrayListOfValues("恶魔", "皮质"),
+			Util.newArrayListOfValues("恶魔", "皮质"),
 			"#IF(npc.getLegConfiguration().isWingsOnLegConfiguration())"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], leathery, demonic wings push out from the sides of [npc.her] [npc.legConfiguration] body."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖有皮膜的[npc.wingSize]恶魔翅膀随之从[npc.her][npc.legConfiguration]身体的两侧长了出来。"
 			+ "#ELSE"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], leathery, demonic wings push out from [npc.her] shoulder blades."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖有皮膜的[npc.wingSize]恶魔翅膀随之从[npc.her]的肩胛骨位置长了出来。"
 			+ "#ENDIF"
 			+ "<br/>"
 			+ "#IF(npc.isShortStature())"
-				+ "[npc.Name] now [npc.has] [style.boldImp(impish, leathery wings)]."
+				+ "[npc.Name]现在拥有[style.boldImp(覆盖有皮膜的小恶魔翅膀)]。"
 			+ "#ELSE"
-				+ "[npc.Name] now [npc.has] [style.boldDemon(demonic, leathery wings)]."
+				+ "[npc.Name]现在拥有[style.boldDemon(覆盖有皮膜的恶魔翅膀)]。"
 			+ "#ENDIF",
-			"[npc.sheHasFull] a pair of [npc.wingSize], leathery, demonic wings, which are [npc.materialDescriptor] [npc.wingFullDescription(true)].") {
+			"[npc.sheHasFull]拥有一对覆盖有皮膜的[npc.wingSize]恶魔翅膀，[npc.materialDescriptor][npc.wingFullDescription(true)]。") {
 	};
 
 	public static final AbstractWingType DEMON_FEATHERED = new AbstractWingType(
 			BodyCoveringType.DEMON_FEATHER,
 			Race.DEMON,
 			true,
-			"demonic feathered",
-			"wing",
-			"wings",
-			Util.newArrayListOfValues("demonic", "feathered"),
-			Util.newArrayListOfValues("demonic", "feathered"),
+			"恶魔(覆羽)",
+			"翅膀",
+			"翅膀",
+			Util.newArrayListOfValues("恶魔", "羽毛覆盖"),
+			Util.newArrayListOfValues("恶魔", "羽毛覆盖"),
 			"#IF(npc.getLegConfiguration().isWingsOnLegConfiguration())"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], feathered, demonic wings push out from the sides of [npc.her] [npc.legConfiguration] body."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖着羽毛的[npc.wingSize]恶魔翅膀随之从[npc.her]的肩胛骨位置长了出来。"
 			+ "#ELSE"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], feathered, demonic wings push out from [npc.her] shoulder blades."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖着羽毛的[npc.wingSize]恶魔翅膀随之从[npc.her]的肩胛骨位置长了出来。"
 			+ "#ENDIF"
 			+ "<br/>"
 			+ "#IF(npc.isShortStature())"
-				+ "[npc.Name] now [npc.has] [style.boldImp(impish, feathered wings)]."
+				+ "[npc.Name]现在拥有[style.boldImp(羽毛覆盖的小恶魔翅膀)]。"
 			+ "#ELSE"
-				+ "[npc.Name] now [npc.has] [style.boldDemon(demonic, feathered wings)]."
+				+ "[npc.Name]现在拥有[style.boldDemon(羽毛覆盖的恶魔翅膀)]。"
 			+ "#ENDIF",
-			"[npc.sheHasFull] a pair of [npc.wingSize], feathered, demonic wings, which are [npc.materialDescriptor] [npc.wingFullDescription(true)].") {
+			"[npc.sheHasFull]拥有一对羽毛覆盖的[npc.wingSize]恶魔翅膀，[npc.materialDescriptor][npc.wingFullDescription(true)]。") {
 	};
 	
 	// Generic:
@@ -117,19 +117,19 @@ public class WingType {
 			BodyCoveringType.WING_LEATHER,
 			Race.NONE,
 			true,
-			"leathery",
-			"wing",
-			"wings",
-			Util.newArrayListOfValues("leathery"),
-			Util.newArrayListOfValues("leathery"),
+			"皮质",
+			"翅膀",
+			"翅膀",
+			Util.newArrayListOfValues("皮质"),
+			Util.newArrayListOfValues("皮质"),
 			"#IF(npc.getLegConfiguration().isWingsOnLegConfiguration())"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], leathery wings push out from the sides of [npc.her] [npc.legConfiguration] body."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖有皮膜的[npc.wingSize]翅膀随之从[npc.her][npc.legConfiguration]身体的两侧长了出来。"
 			+ "#ELSE"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], leathery wings push out from [npc.her] shoulder blades."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖有皮膜的[npc.wingSize]翅膀随之从[npc.her]的肩胛骨位置长了出来。"
 			+ "#ENDIF"
 			+ "<br/>"
-			+ "[npc.Name] now [npc.has] [style.boldTfGeneric(leathery wings)].",
-			"[npc.sheHasFull] a pair of [npc.wingSize], leathery wings, which are [npc.materialDescriptor] [npc.wingFullDescription(true)].") {
+			+ "[npc.Name]现在拥有[style.boldTfGeneric(覆盖有皮膜的翅膀)]。",
+			"[npc.sheHasFull]拥有一对覆盖有皮膜的[npc.wingSize]翅膀，[npc.materialDescriptor][npc.wingFullDescription(true)]。") {
 		@Override
 		public boolean isGeneric() {
 			return true;
@@ -140,19 +140,19 @@ public class WingType {
 			BodyCoveringType.FEATHERS,
 			Race.NONE,
 			true,
-			"feathered",
-			"wing",
-			"wings",
-			Util.newArrayListOfValues("feathered"),
-			Util.newArrayListOfValues("feathered"),
+			"羽毛",
+			"翅膀",
+			"翅膀",
+			Util.newArrayListOfValues("羽毛覆盖"),
+			Util.newArrayListOfValues("羽毛覆盖"),
 			"#IF(npc.getLegConfiguration().isWingsOnLegConfiguration())"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], feathered wings push out from the sides of [npc.her] [npc.legConfiguration] body."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖着羽毛的[npc.wingSize]翅膀随之从[npc.her][npc.legConfiguration]身体的两侧长了出来。"
 			+ "#ELSE"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], feathered wings push out from [npc.her] shoulder blades."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对覆盖着羽毛的[npc.wingSize]翅膀随之从[npc.her]的肩胛骨位置长了出来。"
 			+ "#ENDIF"
 			+ "<br/>"
-			+ "[npc.Name] now [npc.has] [style.boldTfGeneric(feathered wings)].",
-			"[npc.sheHasFull] a pair of [npc.wingSize], feathered wings, which are [npc.materialDescriptor] [npc.wingFullDescription(true)].") {
+			+ "[npc.Name]现在拥有[style.boldTfGeneric(羽毛覆盖的翅膀)]。",
+			"[npc.sheHasFull]拥有一对羽毛覆盖的[npc.wingSize]翅膀，[npc.materialDescriptor][npc.wingFullDescription(true)]。") {
 		@Override
 		public boolean isGeneric() {
 			return true;
@@ -163,19 +163,19 @@ public class WingType {
 			BodyCoveringType.WING_CHITIN,
 			Race.NONE,
 			true,
-			"insect",
-			"wing",
-			"wings",
-			Util.newArrayListOfValues("chitinous"),
-			Util.newArrayListOfValues("chitinous"),
+			"昆虫",
+			"翅膀",
+			"翅膀",
+			Util.newArrayListOfValues("几丁质"),
+			Util.newArrayListOfValues("几丁质"),
 			"#IF(npc.getLegConfiguration().isWingsOnLegConfiguration())"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], insect-like wings push out from the sides of [npc.her] [npc.legConfiguration] body."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对昆虫般的[npc.wingSize]翅膀随之从[npc.her][npc.legConfiguration]身体的两侧长了出来。"
 			+ "#ELSE"
-				+ "[npc.She] [npc.verb(bite)] [npc.her] [npc.lip] to try and suppress an unexpected moan of pleasure as a pair of [npc.wingSize], insect-like wings push out from [npc.her] shoulder blades."
+				+ "[npc.She]紧咬下唇，希望能压抑住始料未及的愉悦呻吟，一对昆虫般的[npc.wingSize]翅膀随之从[npc.her]的肩胛骨位置长了出来。"
 			+ "#ENDIF"
 			+ "<br/>"
-			+ "[npc.Name] now [npc.has] [style.boldTfGeneric(chitinous, insect-like wings)].",
-			"[npc.sheHasFull] a pair of [npc.wingSize], insect-like wings, which are [npc.materialDescriptor] [npc.wingFullDescription(true)].") {
+			+ "[npc.Name]现在拥有[style.boldTfGeneric(昆虫般的翅膀)]。",
+			"[npc.sheHasFull]拥有一对昆虫般的[npc.wingSize]翅膀，[npc.materialDescriptor][npc.wingFullDescription(true)]。") {
 		@Override
 		public boolean isGeneric() {
 			return true;

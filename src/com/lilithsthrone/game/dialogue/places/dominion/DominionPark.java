@@ -42,7 +42,7 @@ import com.lilithsthrone.utils.Util.Value;
  */
 public class DominionPark {
 	
-	public static final DialogueNode PARK = new DialogueNode("Park", ".", false) {
+	public static final DialogueNode PARK = new DialogueNode("公园", "。", false) {
 		@Override
 		public String getAuthor() {
 			return "Kumiko";
@@ -54,23 +54,23 @@ public class DominionPark {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "This area of Dominion is taken up by a gigantic park, filled with a lush amount of foliage, which makes the air here feel very fresh compared to the rest of the city."
-						+ " The park consists of several alternating areas of open lawn and woodland, connected by a series of winding paths."
-						+ " There's a small lake situated in one corner of the park, and adjacent to that, there's a small field of wild flowers."
-						+ " A couple of food stands have been set up in one area for people that didn't come prepared with a picnic."
+						+ "御城区的这一区域被一个巨大的公园所占据，公园里枝繁叶茂，与城市的其他地方相比，这里的空气非常清新。"
+						+ "公园由几块交替分布的草坪和林地组成，被一系列蜿蜒曲折的小径连接起来。"
+						+ "公园一角有一个小湖，湖边有一小块野花地。"
+						+ "在一个区域为没有准备野餐的人们设立了几个食品摊位。"
 					+ "</p>"
 					+ "<p>"
-						+ "The most noteworthy feature is at the very centre of the park, and takes the form of a huge statue of Lilith herself."
-						+ " The sultry smile carved into the white marble almost feels at though it's mocking you, and you can't help but feel as though you don't want to stick around here for long."
+						+ "最值得一提的是公园最中心的莉莉丝巨大雕像。"
+						+ "刻在白色大理石上的淫荡微笑几乎让你感觉它是在嘲笑你，你不禁觉得自己不想在这里久留。"
 					+ "</p>"
 					+ "<p>"
-						+ "For now, you don't have much reason to wander through this park, but if you had someone else with you, it would be a nice place to spend an afternoon; if you can ignore the statue, that is..."
+						+ "你现在没什么理由在这儿闲逛，但要是有其他人陪着你，这将是一个消磨下午时光的好地方；当然，是能忽略那座雕像的前提下……"
 					+ "</p>";
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Rose Garden", "There's a beautiful rose garden just off to your right. Walk over to it and take a closer look.", PARK_ROSE_GARDEN) {
+				return new Response("玫瑰园", "右手边有一个美丽的玫瑰园。走过去仔细看看吧。", PARK_ROSE_GARDEN) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addClothing(Main.game.getItemGen().generateClothing("innoxia_hair_rose", false), false));
@@ -82,7 +82,7 @@ public class DominionPark {
 		}
 	};
 	
-	public static final DialogueNode PARK_ROSE_GARDEN = new DialogueNode("Park", ".", false, true) {
+	public static final DialogueNode PARK_ROSE_GARDEN = new DialogueNode("公园", "。", false, true) {
 		@Override
 		public String getAuthor() {
 			return "Innoxia";
@@ -94,26 +94,26 @@ public class DominionPark {
 		@Override
 		public String getContent() {
 			return "<p>"
-					+ "You find your attention drawn towards a small rose garden that's positioned near the park's entrance."
-					+ " Walking over towards it, you see that someone's placed a little sign just in front of the border, which reads:"
+					+ "你发现自己的注意力被公园入口附近的一个小玫瑰园吸引住了。"
+					+ "走过去一看，你发现有人在边界前放了一块小牌子，上面写着："
 				+ "</p>"
 				+ "<p style='text-align:center;'>"
 					+ "<i>"
-						+ "<b>William's Rose Garden</b><br/>"
-						+ "Please feel free to help yourself to these roses!"
-						+ " I hope you or your partner gets as much happiness out of them as I do from growing them.<br/>"
-						+ "- William"
+						+ "<b>威廉的玫瑰园</b><br/>"
+						+ "请随意享用这些玫瑰！"
+						+ "我希望你或你的伴侣能像我一样，从种植它们中获得快乐。<br/>"
+						+ "——威廉"
 					+ "</i>"
 				+ "</p>"
 				+ "<p>"
-					+ "You look around, but don't see anyone nearby who could be this 'William' character."
-					+ " Focusing your attention back to his rose garden, you decide to do as his sign says, and after [pc.stepping] forwards, you pluck a single rose from the nearest bush."
+					+ "你环顾四周，但没发现附近有可能是这个“威廉”的人。"
+					+ "你将注意力重新集中到他的玫瑰园，决定按照他的标志行事，向前一步，从最近的花丛中摘下一朵玫瑰花。"
 				+ "</p>";
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Rose Garden", "You've already taken a rose from the garden.", null);
+				return new Response("玫瑰园", "你已经从花园里摘过玫瑰了。", null);
 			} else {
 				return null;
 			}
@@ -124,7 +124,7 @@ public class DominionPark {
 	// Natalya encounter:
 //	#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
 	
-	public static final DialogueNode NATALYA_ENCOUNTER_START = new DialogueNode("Suddenly Centaurs", "", true) {
+	public static final DialogueNode NATALYA_ENCOUNTER_START = new DialogueNode("突然半人马", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getDialogueFlags().setFlag(DialogueFlagValue.natalyaParkEncounter, true);
@@ -159,8 +159,8 @@ public class DominionPark {
 				if(index==1) {
 					if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
 						return new ResponseSex(
-								"Anilingus",
-								UtilText.parse(natalya, "Drop down behind Natalya and give her a rimjob."),
+								"吻肛",
+								UtilText.parse(natalya, "跪倒在娜塔莉亚身后，给她吻肛。"),
 								true,
 								false,
 								// This sex manager should be suitable
@@ -183,8 +183,8 @@ public class DominionPark {
 						
 					} else {
 						return new ResponseSex(
-								"Handjob",
-								UtilText.parse(natalya, "Drop down onto your knees beside Natalya and give her a handjob."),
+								"手交",
+								UtilText.parse(natalya, "跪在娜塔莉亚身旁，给她手交。"),
 								true,
 								false,
 								// This sex manager should be suitable
@@ -208,9 +208,9 @@ public class DominionPark {
 				
 			} else {
 				if(index==2) {
-					return new Response("Leave",
-							"You don't really want to see any more of this, and so turn around and continue on your way."
-								+ "<br/><i>You might encounter this character again somewhere else...</i>",
+					return new Response("离开",
+							"你看不下去了，转身继续着你的旅程。"
+								+ "<br/><i>你可能在其他位置再次遇到该角色……</i>",
 								NATALYA_ENCOUNTER_END_EARLY) {
 						@Override
 						public void effects() {
@@ -220,12 +220,12 @@ public class DominionPark {
 					
 				} else if(index==1) {
 					if(!Main.game.isAnalContentEnabled()) {
-						return new Response("Watch her",
-								"You don't really want to see any more of this..."
-										+ "<br/>[style.italicsMinorBad(This character's scenes involve anal content, and as such will be disabled for as long as your 'Anal Content' setting is turned off.)]",
+						return new Response("看着她",
+								"你真的不想再看到这些了……"
+										+ "<br/>[style.italicsMinorBad(这个角色的场景涉及肛门内容，只要你的“肛门内容”设置被关闭，这个场景就会被禁用。)]",
 								null);
 					}
-					return new Response("Watch her", "Watch the centauress as she grinds her asshole up against the edge of the cart...", NATALYA_ENCOUNTER_CAUGHT);
+					return new Response("一旁观看", "看着这个半人马把屁眼向着拖车的棱角上顶……", NATALYA_ENCOUNTER_CAUGHT);
 					
 				}
 			}
@@ -245,9 +245,9 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==2) {
-				return new Response("Leave",
-						"You don't think that you need to give this centauress an apology, so decide to simply turn around and continue on your way."
-							+ "<br/><i>You might encounter her again somewhere else...</i>",
+				return new Response("离开",
+						"你并不觉得自己要给这只女性半人马道歉，只是转身继续着你的旅程。"
+							+ "<br/><i>你可能会在别的地方再遇到她……</i>",
 							NATALYA_ENCOUNTER_END_EARLY) {
 					@Override
 					public void effects() {
@@ -256,7 +256,7 @@ public class DominionPark {
 				};
 				
 			} else if(index==1) {
-				return new Response("Apologise", "Tell her that you're sorry.", NATALYA_ENCOUNTER_APOLOGY);
+				return new Response("道歉", "告诉她你很抱歉。", NATALYA_ENCOUNTER_APOLOGY);
 				
 			}
 			return null;
@@ -275,9 +275,9 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==2) {
-				return new Response("Leave",
-						"You've already given this centauress an apology and don't want to give another, so decide to simply turn around and continue on your way."
-							+ "<br/><i>You might encounter her again somewhere else...</i>",
+				return new Response("离开",
+						"你已经给这只女性半人马道过歉了，并不想再次道歉，于是你转身继续你的旅程"
+							+ "<br/><i>你可能会在别的地方再遇到她……</i>",
 						NATALYA_ENCOUNTER_END_EARLY) {
 					@Override
 					public void effects() {
@@ -286,7 +286,7 @@ public class DominionPark {
 				};
 				
 			} else if(index==1) {
-				return new Response("Follow", "Do as this centauress says and follow her behind the bushes.<br/>[style.italicsSex(You get the feeling that you might see something quite lewd...)]", NATALYA_ENCOUNTER_BUSHES) {
+				return new Response("跟随", "按这个女性半人马说的做，跟她一起到灌木丛后面去。<br/>[style.italicsSex(你预感到可能会看到十分下流的场面……)]", NATALYA_ENCOUNTER_BUSHES) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Natalya.class).displaceClothingForAccess(CoverableArea.PENIS, null);
@@ -300,7 +300,7 @@ public class DominionPark {
 		}
 	};
 
-	public static final DialogueNode NATALYA_ENCOUNTER_BUSHES = new DialogueNode("Natalya's Demand", "", true) {
+	public static final DialogueNode NATALYA_ENCOUNTER_BUSHES = new DialogueNode("娜塔莉亚的命令", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -312,7 +312,7 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==2) {
-				return new Response("Leave", "Turn around and leave Natalya to get herself off without your help.", NATALYA_ENCOUNTER_END_EARLY) {
+				return new Response("离开", "转身离开，让娜塔莉亚自己解决问题，不提供帮助。", NATALYA_ENCOUNTER_END_EARLY) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/park/natalya_encounter", "NATALYA_ENCOUNTER_BUSHES_END_EARLY"));
@@ -321,8 +321,8 @@ public class DominionPark {
 				};
 				
 			} else if(index==1) {
-				return new Response("Submit",
-						"Do as the dominant [natalya.race] commands, and after calling her 'Mistress', kneel down behind her and shove the dildo into her puffy asshole...",
+				return new Response("屈服",
+						"听从那盛气凌人的[natalya.race]的命令，称呼她为“主人”，并且在她身后跪下，将假吊塞进她蓬松的尻穴中……",
 						NATALYA_ENCOUNTER_BUSHES_SUBMIT) {
 					@Override
 					public boolean isSexHighlight() {
@@ -353,7 +353,7 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Start stroking", "Do as Mistress Natalya commands and start stroking her thick horse-like cock.",
+				return new ResponseSex("开始撸管", "听从主人娜塔莉亚的命令，开始撸动她粗壮的马屌。",
 						true,
 						false,
 						new SMStanding(
@@ -437,7 +437,7 @@ public class DominionPark {
 		}
 	};
 
-	public static final DialogueNode NATALYA_ENCOUNTER_BUSHES_SUBMIT_POST_SEX = new DialogueNode("Finished", "Mistress Natalya has finished with you for now.", true) {
+	public static final DialogueNode NATALYA_ENCOUNTER_BUSHES_SUBMIT_POST_SEX = new DialogueNode("结束", "娜塔莉亚主人和你做完了。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -449,7 +449,7 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Mistress Natalya to see if her centaurs have finished their work yet.", NATALYA_ENCOUNTER_END) {
+				return new Response("跟随", "跟随主人娜塔莉亚，看看半人马有没有完成工作。", NATALYA_ENCOUNTER_END) {
 					@Override
 					public int getSecondsPassed() {
 						return 5*60;
@@ -500,7 +500,7 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Now that Mistress Natalya has left, all there is for you to do is continue on your way through the park...", PARK) {
+				return new Response("继续", "既然主人娜塔莉亚已经离开了，你只好继续在公园中走动……", PARK) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/park/natalya_encounter", "NATALYA_ENCOUNTER_END_PARK"));
@@ -513,7 +513,7 @@ public class DominionPark {
 	
 	// Mule:
 
-	public static final DialogueNode AFTER_FILLY_SEX_ANAL = new DialogueNode("Finished", "Mistress Natalya has finished with you for now.", true) {
+	public static final DialogueNode AFTER_FILLY_SEX_ANAL = new DialogueNode("结束", "娜塔莉亚主人和你做完了。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -525,7 +525,7 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Mistress Natalya to see if her centaurs have finished their work yet.", NATALYA_ENCOUNTER_FILLY_END) {
+				return new Response("跟随", "跟随主人娜塔莉亚，看看半人马有没有完成工作。", NATALYA_ENCOUNTER_FILLY_END) {
 					@Override
 					public int getSecondsPassed() {
 						return 5*60;
@@ -540,7 +540,7 @@ public class DominionPark {
 		}
 	};
 
-	public static final DialogueNode AFTER_FILLY_SEX_HANDJOB = new DialogueNode("Finished", "Mistress Natalya has finished with you for now.", true) {
+	public static final DialogueNode AFTER_FILLY_SEX_HANDJOB = new DialogueNode("结束", "娜塔莉亚主人和你做完了。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -571,7 +571,7 @@ public class DominionPark {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Now that Mistress Natalya has left, all there is for you to do is continue on your way through the park...", PARK);
+				return new Response("继续", "既然主人娜塔莉亚已经离开了，你只好继续在公园中走动……", PARK);
 			}
 			return null;
 		}

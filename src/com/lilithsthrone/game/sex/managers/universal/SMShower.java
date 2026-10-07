@@ -45,10 +45,10 @@ public class SMShower extends SexManagerDefault {
 
 	@Override
 	public String getSexTitle() {
-		return (!Main.sex.isConsensual() && Main.getProperties().hasValue(PropertyValue.nonConContent)?"Non-consensual ":"")
-				+(Main.sex.isPublicSex()?"Public ":"")
-				+(Main.sex.getAllParticipants(false).size()>1?"Sex: ":"Masturbation: ")
-				+" Shower";
+		return (!Main.sex.isConsensual() && Main.getProperties().hasValue(PropertyValue.nonConContent)?"非自愿":"")
+				+(Main.sex.isPublicSex()?"公开":"")
+				+(Main.sex.getAllParticipants(false).size()>1?"性爱:":"自慰:")
+				+"淋浴";
 	}
 	
 	@Override

@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[On the inside of each forearm pad, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在每个前臂垫的内侧，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。” ]]></authorTag>
 
 		<value>450</value> 
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一对]]></determiner>
 
-		<name><![CDATA[Enforcer's riot arm guards]]></name>
+		<name><![CDATA[执法者防暴护臂]]></name>
 
-		<namePlural pluralByDefault="true"><![CDATA[Enforcer's riot arm guards]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[执法者防暴护臂]]></namePlural> 
 
-		<description><![CDATA[A pair of metallic elbow pads and forearm guards attached to partial sleeves of ballistic fibres. They attach to the wearer's arms via adjustable straps]]></description> 
+		<description><![CDATA[一对金属肘部护具和前臂护腕连接到部分由防弹纤维制成的袖子上。它们通过可调节的带子固定在穿戴者的手臂上。]]></description> 
 
 		<physicalResistance>5</physicalResistance> 
 
@@ -66,27 +65,21 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the arm guards over [npc.her] forearms and [npc.verb(tighten)] the straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the arm guards over [npc2.namePos] forearms and [npc.verb(tighten)] the straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] forearms through the arm guards and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将护臂套在了[npc.her]的胳膊上并拉紧了带子。]]></self>
+		<other><![CDATA[
+[npc.Name]将护臂套在了[npc2.namePos]的胳膊上并拉紧了带子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将护臂穿过[npc2.namePos]的胳膊并仓促地拉紧了带子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] arm guards and [npc.verb(slip)] them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] arm guards and [npc.verb(slip)] them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] arm guards until they're loose enough and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]松开了[npc.her]胳膊上的带子并把护臂脱了下来。]]></self>
+		<other><![CDATA[
+[npc.Name]松开了[npc2.namePos]胳膊上的带子并把护臂脱了下来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]撕扯着[npc2.namePos]胳膊上的带子，在带子松动后将护臂一把扯下并扔到了一边。]]></otherRough>
 	</displacementText>
 	
 </clothing>

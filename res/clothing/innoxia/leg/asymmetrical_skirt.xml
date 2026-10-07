@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>800</value> 
 		
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
-		<name><![CDATA[asymmetrical skirt]]></name>
+		<name><![CDATA[不对称裙]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[asymmetrical skirts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[不对称裙]]></namePlural> 
 		
-		<description><![CDATA[An asymmetrical skirt, with elasticated waistband and knotted side tie. The cut is particularly short on one side, revealing all of the wearer's leg and thigh.]]></description> 
+		<description><![CDATA[一条不对称的裙子，带有有弹性的腰带和系在一侧的结。其中一侧的裁剪特别短，露出穿着者的整条腿。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

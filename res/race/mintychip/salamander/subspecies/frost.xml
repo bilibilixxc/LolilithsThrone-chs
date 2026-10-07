@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -121,7 +121,7 @@
 	<bookIconName>icon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Primal Salamanders</bookName>
+	<bookName><![CDATA[原初蝾螈]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -136,20 +136,20 @@
 	Formatting for bipeds (which should probably be left to be covered by the 'namesDefault' element) should usually follow the pattern of X-morph, X-boy, X-girl. -->
 	<nameAnthro>
 		<namesDefault> <!-- You must include this 'namesDefault' element, which will be used for any undefined legConfiguration names (for example, if the player somehow became a TAIL_LONG salamander). -->
-			<name><![CDATA[frost salamander-morph]]></name>
-			<namePlural><![CDATA[frost salamander-morphs]]></namePlural>
-			<singularMaleName><![CDATA[frost salamander-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[frost salamander-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[frost salamander-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[frost salamander-girls]]></pluralFemaleName>
+			<name><![CDATA[冰蝾螈化形]]></name>
+			<namePlural><![CDATA[冰蝾螈化形]]></namePlural>
+			<singularMaleName><![CDATA[冰蝾螈男]]></singularMaleName>
+			<singularFemaleName><![CDATA[冰蝾螈女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[冰蝾螈男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[冰蝾螈女]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="QUADRUPEDAL"> <!-- This is the usual naming pattern for quadrupeds, even if the names do get a little unwieldy at times... -->
-			<name><![CDATA[frost salamandertaur]]></name>
-			<namePlural><![CDATA[frost salamandertaurs]]></namePlural>
-			<singularMaleName><![CDATA[frost salamandertaur]]></singularMaleName>
-			<singularFemaleName><![CDATA[frost salamandertauress]]></singularFemaleName>
-			<pluralMaleName><![CDATA[frost salamandertaurs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[frost salamandertauresses]]></pluralFemaleName>
+			<name><![CDATA[半冰蝾螈人]]></name>
+			<namePlural><![CDATA[半冰蝾螈人]]></namePlural>
+			<singularMaleName><![CDATA[半冰蝾螈人]]></singularMaleName>
+			<singularFemaleName><![CDATA[半冰蝾螈人]]></singularFemaleName>
+			<pluralMaleName><![CDATA[半冰蝾螈人]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[半冰蝾螈人]]></pluralFemaleName>
 		</names>
 	</nameAnthro>
 	
@@ -157,24 +157,24 @@
 	See the 'res/race/NoStepOnSnek/snake/subspecies/snake.xml' file for an example in use. -->
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic frost salamander, known as a 'frost salamander-morph' when bipedal, and a 'frost salamandertaur' when the lower body is that of a typically-oversized feral frost salamander.]]></description>
+	<description><![CDATA[一种人形的冰蝾螈，两足行走时被称为“冰蝾螈化形”，而下半身是典型的超大兽态冰蝾螈时则为“半冰蝾螈人”。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault> <!-- You must include this 'namesDefault' element, which will be used for any undefined legConfiguration names (for example, if the player somehow became a TAIL_LONG salamander). -->
-			<name><![CDATA[hellfrost salamander-morph]]></name>
-			<namePlural><![CDATA[hellfrost salamander-morphs]]></namePlural>
-			<singularMaleName><![CDATA[hellfrost salamander-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[hellfrost salamander-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[hellfrost salamander-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[hellfrost salamander-girls]]></pluralFemaleName>
+			<name><![CDATA[地狱冰蝾螈化形]]></name>
+			<namePlural><![CDATA[地狱冰蝾螈化形]]></namePlural>
+			<singularMaleName><![CDATA[地狱冰蝾螈男]]></singularMaleName>
+			<singularFemaleName><![CDATA[地狱冰蝾螈女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[地狱冰蝾螈男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[地狱冰蝾螈女]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="QUADRUPEDAL"> <!-- This is the usual naming pattern for quadrupeds, even if the names do get a little unwieldy at times... -->
-			<name><![CDATA[hellfrost salamandertaur]]></name>
-			<namePlural><![CDATA[hellfrost salamandertaurs]]></namePlural>
-			<singularMaleName><![CDATA[hellfrost salamandertaur]]></singularMaleName>
-			<singularFemaleName><![CDATA[hellfrost salamandertauress]]></singularFemaleName>
-			<pluralMaleName><![CDATA[hellfrost salamandertaurs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[hellfrost salamandertauresses]]></pluralFemaleName>
+			<name><![CDATA[半地狱冰蝾螈人]]></name>
+			<namePlural><![CDATA[半地狱冰蝾螈人]]></namePlural>
+			<singularMaleName><![CDATA[半地狱冰蝾螈人]]></singularMaleName>
+			<singularFemaleName><![CDATA[半地狱冰蝾螈人]]></singularFemaleName>
+			<pluralMaleName><![CDATA[半地狱冰蝾螈人]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[半地狱冰蝾螈人]]></pluralFemaleName>
 		</names>
 	</nameHalfDemon>
 	
@@ -182,12 +182,12 @@
 	<feralAttributes>
 		<!-- As ferals can only be of one leg configuration, there is no need to define names based on a 'legConfiguration' attribute as done with half-demons and anthro names.
 		As such, just define your names like so: -->
-		<name><![CDATA[frost salamander]]></name>
-		<namePlural><![CDATA[frost salamanders]]></namePlural>
-		<singularMaleName><![CDATA[frost salamander]]></singularMaleName>
-		<singularFemaleName><![CDATA[frost salamander]]></singularFemaleName>
-		<pluralMaleName><![CDATA[frost salamanders]]></pluralMaleName>
-		<pluralFemaleName><![CDATA[frost salamanders]]></pluralFemaleName>
+		<name><![CDATA[冰蝾螈]]></name>
+		<namePlural><![CDATA[冰蝾螈]]></namePlural>
+		<singularMaleName><![CDATA[冰蝾螈]]></singularMaleName>
+		<singularFemaleName><![CDATA[冰蝾螈]]></singularFemaleName>
+		<pluralMaleName><![CDATA[冰蝾螈]]></pluralMaleName>
+		<pluralFemaleName><![CDATA[冰蝾螈]]></pluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -225,7 +225,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] salamander-like body is very fast which, along with a natural affinity for arcane ice, makes [npc.herHim] a formidable opponent.
+		[npc.namePos]蝾螈般的身体速度非常快，再加上对奥术寒冷的天生亲和力，使得[npc.herHim]成为一个可怕的对手。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

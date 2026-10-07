@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>1000</value>
 		<melee>false</melee>
 		<twoHanded>true</twoHanded>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[arcane shortbow]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[arcane shortbows]]></namePlural>
-		<description><![CDATA[This shortbow is infused with a potent arcane enchantment, which, once the string is drawn back, extracts an arcane essence out of the user's aura, before converting it into a bolt of energy to be fired at the target.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription>Shoot at [npc.name] with your shortbow.</attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name><![CDATA[奥术短弓]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[奥术短弓]]></namePlural>
+		<description><![CDATA[这把短弓有着强大的奥术附魔，一旦拉开弓弦，它就会从使用者的灵气中提取奥术精华，然后将其转化为能量箭矢射向目标。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用短弓射向[npc.Name]。]]></attackTooltipDescription>
 		<rarity>COMMON</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] shortbow.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] shortbow away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]给[npc.her]的奥术短弓注入奥术精华。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]放下了[npc.her]的奥术短弓。]]></unequipText>
 		<imageName>shortbow.svg</imageName> 
 		<imageEquippedName/>
 		<damage>25</damage>
@@ -53,26 +53,26 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Drawing back [npc.her] arcane shortbow and firing an ethereal arrow, [npc.name] [npc.verb(hit)] [npc2.name] right in the chest, causing [npc2.herHim] to gasp and stagger back from the blow.
-		]]></hitText>
+		[npc.Name]拉开奥术短弓并射出一道虚幻的箭矢，正中[npc2.name]胸部并让[npc2.herHim]喘息着向后踉跄。
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(use)] [npc.her] arcane shortbow to fire an ethereal arrow at [npc2.name], and [npc.verb(manage)] to [npc2.herHim] right in the chest!
-		]]></hitText>
+		[npc.Name]用[npc.her]奥术短弓对着[npc2.name]射出一发虚幻的箭矢，射在[npc2.herHim]的胸部上！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] arcane shortbow and [npc.verb(let)] loose, sending an ethereal arrow to cut through the air and hit [npc2.herHim] right in the chest!
-		]]></hitText>
+		[npc.Name]拉开奥术短弓瞄准[npc2.name]并松开弓弦，一支虚幻的箭矢呼啸着击中了[npc2.herHim]的胸部！
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Aiming and firing [npc.her] arcane shortbow, [npc.name] [npc.verb(miss)] [npc2.name]!
-		]]></missText>
+		[npc.Name]瞄准并用奥术短弓射击，[npc.Name]未命中[npc2.name]！
+]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(use)] [npc.her] arcane shortbow to fire an ethereal arrow at [npc2.name], but [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]用[npc.her]奥术短弓对着[npc2.name]射出一发虚幻的箭矢，但没有命中！
+]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] arcane shortbow and [npc.verb(let)] loose, but [npc.she] [npc.verb(end)] up missing [npc.her] target!
-		]]></missText>
+		[npc.Name]用[npc.her]的奥术短弓瞄准[npc2.name]并松开弓弦，但是[npc.she]最终还是没有击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

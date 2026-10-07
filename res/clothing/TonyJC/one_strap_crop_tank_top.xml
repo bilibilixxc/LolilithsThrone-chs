@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 	
-		<authorTag><![CDATA[The clothing's tag reads: 'Created by TonyJC, with implementation and editing by NeverLucky']]></authorTag>
+		<authorTag><![CDATA[衣服的标签上写着：“由TonyJC创作，NeverLucky负责实施和编辑”]]></authorTag>
 
 		<value>80</value>
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[one-strap crop top]]></name>
+		<name><![CDATA[单肩露脐背心]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[one-strap crop tops]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[单肩露脐背心]]></namePlural> 
 		
-		<description><![CDATA[A short tank top with only one shoulder strap.]]></description> 
+		<description><![CDATA[一件只有一个肩带的背心。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -74,51 +74,51 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc.her] [npc.arms] through the top's straps as [npc.she] [npc.verb(pull)] it down over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the top's straps as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the top's straps as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.arms]穿过单肩露脐背心的袖口，然后把它拉过[npc.her]的头。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]引导[npc2.namePos]把[npc2.arms]探出袖口，直到[npc.she]从领口探出了[npc2.her]的头。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地逼迫[npc2.namePos]把[npc2.arms]伸出单肩露脐背心的袖口，直到[npc.she]从领口探出[npc2.her]的头。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] top.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] top.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] top.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱掉了[npc.her]的露脐背心。
+]]></self>
+    <other><![CDATA[
+[npc.Name]脱下了[npc2.namePos]的露脐背心。
+]]></other>
+    <otherRough><![CDATA[
+ [npc.Name]粗暴地脱下[npc2.namePos]的露脐背心。
+]]></otherRough>
   </displacementText>
 	
   <replacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] top back down, covering [npc.her] torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] top back down, covering [npc2.her] torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] top back down, covering [npc2.her] torso.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的露脐背心向下拉，遮住了[npc.her]的上身。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的露脐背心向下拉，盖住了[npc2.her]的上半身。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地把[npc2.namePos]的露脐背心向下拉，遮住了[npc2.her]的上身。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] top up to just below [npc.her] chin, fully exposing [npc.her] torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] top up to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] top up to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
-    </otherRough>
+    <self><![CDATA[
+ [npc.Name]把[npc.her]的露脐背心向上拽，一直拽到脖颈处，[npc.her]的上半身完全暴露在外。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把[npc2.namePos]的背心向上拽，一直拽到脖颈处，令[npc2.her]的上半身完全暴露在外。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的背心向上拽，一直拽到脖颈处，[npc2.her]的上半身完全暴露在外。
+    ]]></otherRough>
   </displacementText>
   
 </clothing>

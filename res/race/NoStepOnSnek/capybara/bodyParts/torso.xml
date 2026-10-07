@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <torso>
 	<race>NoStepOnSnek_capybara</race>
-	<transformationName><![CDATA[capybara]]></transformationName>
+	<transformationName><![CDATA[水豚]]></transformationName>
 	<coveringType>NoStepOnSnek_capybara_fur</coveringType>
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with capybara-like fur. [npc.Her] new fur is a little shaggy around [npc.her] joints and generally somewhat sparse.
-		<br/>[npc.Name] now [npc.has] [style.boldCapybara(capybara-like)], [npc.skinFullDescription].
-	]]></transformationDescription>
+		片刻后，转化来到末尾。[npc.she]身上的瘙痒终于褪去，发出了解脱的叹息。水豚皮毛覆盖在[npc.her]的躯干上。新生的表皮在关节处有些粗糙，除此之外都很稀疏。
+		<br/>[npc.Name]现在拥有[style.boldCapybara(水豚般)][npc.skinFullDescription]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].
-	]]></bodyDescription>
+		[npc.Her]的躯干有着[npc.a_femininity(true)]外观，并且是[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。
+]]></bodyDescription>
 </torso>

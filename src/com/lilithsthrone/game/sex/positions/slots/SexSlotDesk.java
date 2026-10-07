@@ -13,139 +13,139 @@ import com.lilithsthrone.game.dialogue.utils.UtilText;
 public class SexSlotDesk {
 
 	public static final SexSlot OVER_DESK_ON_BACK = new SexSlot(
-			"Lying back",
-			"lying back",
-			"[npc.Name] [npc.verb(collapse)] back down onto the [pc.desk], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"平躺",
+			"平躺",
+			"[npc.Name]躺倒在[pc.desk]上，接着冒出[npc.a_moan+]，即将迎来高潮了。",
 			false,
 			SexSlotTag.OVER_DESK_BACK);
 	public static final SexSlot OVER_DESK_ON_BACK_TWO = new SexSlot(OVER_DESK_ON_BACK) {
 		@Override
 		public String getDescription() {
-			return "lying back (2nd)";
+			return "平躺(二)";
 		}
 	};
 	public static final SexSlot OVER_DESK_ON_BACK_THREE = new SexSlot(OVER_DESK_ON_BACK) {
 		@Override
 		public String getDescription() {
-			return "lying back (3rd)";
+			return "平躺(三)";
 		}
 	};
 	public static final SexSlot OVER_DESK_ON_BACK_FOUR = new SexSlot(OVER_DESK_ON_BACK) {
 		@Override
 		public String getDescription() {
-			return "lying back (4th)";
+			return "平躺(四)";
 		}
 	};
 
 	
 	public static final SexSlot OVER_DESK_ON_FRONT = new SexSlot(
-			"Bent over",
-			"bent over",
-			"[npc.Name] [npc.verb(collapse)] down onto the [pc.desk], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"屈身",
+			"屈身",
+			"[npc.Name]趴倒在[pc.desk]上，接着冒出[npc.a_moan+]，即将迎来高潮了。",
 			false,
 			SexSlotTag.OVER_DESK_FRONT);
 	public static final SexSlot OVER_DESK_ON_FRONT_TWO = new SexSlot(OVER_DESK_ON_FRONT) {
 		@Override
 		public String getDescription() {
-			return "bent over (2nd)";
+			return "屈身(二)";
 		}
 	};
 	public static final SexSlot OVER_DESK_ON_FRONT_THREE = new SexSlot(OVER_DESK_ON_FRONT) {
 		@Override
 		public String getDescription() {
-			return "bent over (3rd)";
+			return "屈身(三)";
 		}
 	};
 	public static final SexSlot OVER_DESK_ON_FRONT_FOUR = new SexSlot(OVER_DESK_ON_FRONT) {
 		@Override
 		public String getDescription() {
-			return "bent over (4th)";
+			return "屈身(四)";
 		}
 	};
 
 	
 	public static final SexSlot BETWEEN_LEGS = new SexSlot(
-			"Between legs",
-			"between legs",
+			"腿间",
+			"腿间",
 			null,
 			true,
 			SexSlotTag.OVER_DESK_BETWEEN_LEGS);
 	public static final SexSlot BETWEEN_LEGS_TWO = new SexSlot(BETWEEN_LEGS) {
 		@Override
 		public String getDescription() {
-			return "between legs (2nd)";
+			return "腿间(二)";
 		}
 	};
 	public static final SexSlot BETWEEN_LEGS_THREE = new SexSlot(BETWEEN_LEGS) {
 		@Override
 		public String getDescription() {
-			return "between legs (3rd)";
+			return "腿间(三)";
 		}
 	};
 	public static final SexSlot BETWEEN_LEGS_FOUR = new SexSlot(BETWEEN_LEGS) {
 		@Override
 		public String getDescription() {
-			return "between legs (4th)";
+			return "腿间(四)";
 		}
 	};
 
 	public static final SexSlot HUMPING = new SexSlot(
-			"Humping",
-			"humping",
-			"[npc.Name] wildly [npc.verb(buck)] [npc.her] [npc.hips] against [npc2.name], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"趴背",
+			"趴背",
+			"[npc.Name]粗暴地顶向[npc2.name]，接着冒出[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false) {
 		@Override
 		public String getName(GameCharacter target) {
 			GameCharacter partner = getCharacterInSlot(OVER_DESK_ON_FRONT);
 			if(partner==null) { partner = getCharacterInSlot(OVER_DESK_ON_BACK); }
-			if(partner!=null) { return "Humping "+UtilText.parse(partner, "[npc.name]"); }
-			return "Humping";
+			if(partner!=null) { return "趴在"+UtilText.parse(partner, "[npc.name]")+"的背上"; }
+			return "趴背";
 		}
 	};
 	public static final SexSlot HUMPING_TWO = new SexSlot(
-			"Humping",
-			"humping (2nd)",
-			"[npc.Name] wildly [npc.verb(buck)] [npc.her] [npc.hips] against [npc2.name], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"趴背",
+			"趴背(二)",
+			"[npc.Name]粗暴地顶向[npc2.name]，接着冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false) {
 		@Override
 		public String getName(GameCharacter target) {
 			GameCharacter partner = getCharacterInSlot(OVER_DESK_ON_FRONT_TWO);
 			if(partner==null) { partner = getCharacterInSlot(OVER_DESK_ON_BACK_TWO); }
-			if(partner!=null) { return "Humping "+UtilText.parse(partner, "[npc.name]"); }
-			return "Humping";
+			if(partner!=null) { return "趴在"+UtilText.parse(partner, "[npc.name]")+"的背上"; }
+			return "趴背";
 		}
 	};
 	public static final SexSlot HUMPING_THREE = new SexSlot(
-			"Humping",
-			"humping (3rd)",
-			"[npc.Name] wildly [npc.verb(buck)] [npc.her] [npc.hips] against [npc2.name], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"趴背",
+			"趴背(三)",
+			"[npc.Name]粗暴地顶向[npc2.name]，接着冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false) {
 		@Override
 		public String getName(GameCharacter target) {
 			GameCharacter partner = getCharacterInSlot(OVER_DESK_ON_FRONT_THREE);
 			if(partner==null) { partner = getCharacterInSlot(OVER_DESK_ON_BACK_THREE); }
-			if(partner!=null) { return "Humping "+UtilText.parse(partner, "[npc.name]"); }
-			return "Humping";
+			if(partner!=null) { return "趴在"+UtilText.parse(partner, "[npc.name]")+"的背上"; }
+			return "趴背";
 		}
 	};
 	public static final SexSlot HUMPING_FOUR = new SexSlot(
-			"Humping",
-			"humping (4th)",
-			"[npc.Name] wildly [npc.verb(buck)] [npc.her] [npc.hips] against [npc2.name], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"趴背",
+			"趴背(四)",
+			"[npc.Name]粗暴地顶向[npc2.name]，接着冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false) {
 		@Override
 		public String getName(GameCharacter target) {
 			GameCharacter partner = getCharacterInSlot(OVER_DESK_ON_FRONT_FOUR);
 			if(partner==null) { partner = getCharacterInSlot(OVER_DESK_ON_BACK_FOUR); }
-			if(partner!=null) { return "Humping "+UtilText.parse(partner, "[npc.name]"); }
-			return "Humping";
+			if(partner!=null) { return "趴在"+UtilText.parse(partner, "[npc.name]")+"的背上"; }
+			return "趴背";
 		}
 	};
 	
 	public static final SexSlot PERFORMING_ORAL = new SexSlot(
-			"Performing oral",
-			"performing oral",
-			"[npc.Name] [npc.verb(lower)] [npc.her] head down into [npc2.namePos] groin, before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"提供口交",
+			"提供口交",
+			"[npc.Name]低头凑近[npc2.namePos]的股间，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false) {
 		@Override
 		public boolean isStanding(GameCharacter target) {
@@ -153,8 +153,8 @@ public class SexSlotDesk {
 		}
 	};
 	public static final SexSlot PERFORMING_ORAL_TWO = new SexSlot(
-			"Performing oral",
-			"performing oral (2nd)",
+			"提供口交",
+			"提供口交(二)",
 			null,
 			false) {
 		@Override
@@ -163,8 +163,8 @@ public class SexSlotDesk {
 		}
 	};
 	public static final SexSlot PERFORMING_ORAL_THREE = new SexSlot(
-			"Performing oral",
-			"performing oral (3rd)",
+			"提供口交",
+			"提供口交(三)",
 			null,
 			false) {
 		@Override
@@ -173,8 +173,8 @@ public class SexSlotDesk {
 		}
 	};
 	public static final SexSlot PERFORMING_ORAL_FOUR = new SexSlot(
-			"Performing oral",
-			"performing oral (4th)",
+			"提供口交",
+			"提供口交(四)",
 			null,
 			false) {
 		@Override
@@ -185,26 +185,26 @@ public class SexSlotDesk {
 	
 
 	public static final SexSlot RECEIVING_ORAL = new SexSlot(
-			"Receiving oral",
-			"receiving oral",
-			"[npc.Name] [npc.verb(press)] [npc.herself] up close against [npc2.name], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"接受口交",
+			"接受口交",
+			"[npc.Name]紧紧地贴住[npc2.name]的[npc2.face]，接着冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			true);
 	public static final SexSlot RECEIVING_ORAL_TWO = new SexSlot(RECEIVING_ORAL) {
 		@Override
 		public String getDescription() {
-			return "receiving oral (2nd)";
+			return "接受口交(二)";
 		}
 	};
 	public static final SexSlot RECEIVING_ORAL_THREE =  new SexSlot(RECEIVING_ORAL) {
 		@Override
 		public String getDescription() {
-			return "receiving oral (3rd)";
+			return "接受口交(三)";
 		}
 	};
 	public static final SexSlot RECEIVING_ORAL_FOUR =  new SexSlot(RECEIVING_ORAL) {
 		@Override
 		public String getDescription() {
-			return "receiving oral (4th)";
+			return "接受口交(四)";
 		}
 	};
 }

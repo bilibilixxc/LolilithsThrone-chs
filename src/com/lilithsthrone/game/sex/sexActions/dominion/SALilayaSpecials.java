@@ -52,12 +52,12 @@ public class SALilayaSpecials {
 		@Override
 		public String getActionTitle() {
 			if(isAmazonsSecretActive(Main.sex.getCharacterTargetedForSexAction(this))) {
-				return "Pull back reminder";
+				return "提醒退开";
 			}
 			if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-				return "Condom check";
+				return "检查避孕套";
 			}
-			return "Pull out reminder";
+			return "提醒外射";
 		}
 		@Override
 		public String getActionDescription() {
@@ -82,26 +82,26 @@ public class SALilayaSpecials {
 		public String getDescription() {
 			if(isAmazonsSecretActive(Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-					return "While letting out desperate moans and lewd cries, [npc.name] [npc.verb(try)] to push [npc2.namePos] [npc2.hips] away from [npc.her] [npc.pussy],"
-							+ " making it clear that [npc.she] doesn't want [npc2.herHim] orgasming in this position due to the effects gained from drinking a bottle of 'Amazon's Secret'.";
+					return "[npc.name]发出迷乱的呻吟和淫荡的喊叫，尝试把[npc2.namePos]从[npc.her]的[npc.pussy]边推开，"
+							+ "显然是不想让[npc2.herHim]以这种姿势高潮，原因就是喝下的那瓶“亚马逊人的秘术”带来的效果。";
 					
 				} else {
-					return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow manages to formulate a sentence as [npc.she] cries out to [npc2.name],"
-							+" [npc.speech(Pull away before you orgasm! I know that you've drunk a bottle of Amazon's Secret, and I'm <b>not</b> getting pregnant!)]";
+					return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+							+"[npc.speech(趁着还没高潮赶紧拔出来！我知道你喝了‘亚马逊人的秘术’，我可<b>不想</b>怀孕！)]";
 				}
 				
 			} else {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-					return "While letting out desperate moans and lewd cries, [npc.name] [npc.verb(try)] to push [npc2.namePos] [npc2.hips] away from [npc.her] [npc.pussy],"
-							+ " making it clear that [npc.she] doesn't want [npc2.herHim] cumming inside of [npc.herHim].";
+					return "[npc.name]发出迷乱的呻吟和淫荡的喊叫，尝试把[npc2.namePos]从[npc.her]的[npc.pussy]边推开，"
+							+ "显然是不想让[npc2.herHim]射在里面。";
 					
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow manages to formulate a sentence as [npc.she] cries out to [npc2.name],"
-								+" [npc.speech(Your condom's on properly, isn't it? I'm <b>not</b> getting pregnant!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(避孕套没问题吧？我可<b>不想</b>怀孕！)]";
 					}
-					return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow manages to formulate a sentence as [npc.she] cries out to [npc2.name],"
-							+" [npc.speech(Just remember to pull out! I'm <b>not</b> getting pregnant!)]";
+					return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+							+"[npc.speech(记住要拔出去！我可<b>不想</b>怀孕！)]";
 				}
 			}
 				
@@ -135,29 +135,29 @@ public class SALilayaSpecials {
 		
 		@Override
 		public String getActionTitle() {
-			return "Prepare";
+			return "准备";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Prepare yourself for it.";
+			return "你能感觉到[npc2.name]马上就要高潮了。做好准备。";
 		}
 		
 		@Override
 		public String getDescription() {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case DOM_GENTLE:
-					return "[npc.Name] lets out a soft [npc.moan] of encouragement as [npc.she] prepares for [npc2.name] to reach [npc2.her] orgasm.";
+					return "[npc.Name]发出着轻声[npc.moan]，催动着氛围，准备迎接[npc2.name]高潮的到来。";
 				case DOM_NORMAL:
-					return "[npc.Name] lets out [npc.a_moan+] of encouragement as [npc.she] prepares for [npc2.name] to reach [npc2.her] orgasm.";
+					return "[npc.Name]发出一声[npc.a_moan+]，催动着情趣，准备迎接[npc2.name]高潮的到来。";
 				case DOM_ROUGH:
-					return "[npc.Name] lets out [npc.a_moan+] of encouragement as [npc.she] prepares for [npc2.name] to reach [npc2.her] orgasm.";
+					return "[npc.Name]发出一声[npc.a_moan+]，催动着情趣，准备迎接[npc2.name]高潮的到来。";
 				case SUB_EAGER:
-					return "[npc.Name] lets out [npc.a_moan+] of encouragement as [npc.she] prepares for [npc2.name] to reach [npc2.her] orgasm.";
+					return "[npc.Name]发出一声[npc.a_moan+]，催动着情趣，准备迎接[npc2.name]高潮的到来。";
 				case SUB_NORMAL:
-					return "[npc.Name] lets out [npc.a_moan+] of encouragement as [npc.she] prepares for [npc2.name] to reach [npc2.her] orgasm.";
+					return "[npc.Name]发出一声[npc.a_moan+]，催动着情趣，准备迎接[npc2.name]高潮的到来。";
 				case SUB_RESISTING:
-					return "[npc.Name] lets out [npc.a_moan+] as [npc.she] desperately tries to pull away from [npc2.name] before [npc2.she] [npc2.verb(orgasm)].";
+					return "[npc.Name]发出一声[npc.a_moan+]，努力想趁着[npc2.name]还没高潮，赶紧从身边退开。";
 			}
 			
 			return "";
@@ -175,12 +175,12 @@ public class SALilayaSpecials {
 		@Override
 		public String getActionTitle() {
 			if(isAmazonsSecretActive(Main.sex.getCharacterTargetedForSexAction(this))) {
-				return "Demand pull back";
+				return "要求退开";
 			}
 			if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-				return "Condom reassurance";
+				return "复查避孕套";
 			}
-			return "Demand pull out";
+			return "要求外射";
 		}
 
 		@Override
@@ -207,26 +207,26 @@ public class SALilayaSpecials {
 		public String getDescription() {
 			if(isAmazonsSecretActive(Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-					return "While letting out desperate moans and lewd cries, [npc.name] [npc.verb(try)] to push [npc2.namePos] [npc2.hips] away from [npc.her] [npc.pussy],"
-							+ " making it clear that [npc.she] doesn't want [npc2.herHim] orgasming in this position due to the effects gained from drinking a bottle of 'Amazon's Secret'.";
+					return "[npc.name]发出迷乱的呻吟和淫荡的喊叫，尝试把[npc2.namePos]从[npc.her]的[npc.pussy]边推开，"
+							+ "显然是不想让[npc2.herHim]以这种姿势高潮，原因就是喝下的那瓶“亚马逊人的秘术”带来的效果。";
 					
 				} else {
-					return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow manages to formulate a sentence as [npc.she] cries out to [npc2.name], "
-							+" [npc.speech(Hey, wait! If you orgasm like this, I could get pregnant!)]";
+					return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+							+"[npc.speech(等，等一下！你就这样去了的话，我可能会怀孕的！)]";
 				}
 				
 			} else {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-					return "While letting out desperate moans and lewd cries, [npc.name] [npc.verb(try)] to push [npc2.namePos] [npc2.hips] away from [npc.her] [npc.pussy],"
-							+ " making it clear that [npc.she] doesn't want [npc2.herHim] cumming inside of [npc.herHim].";
+					return "[npc.name]发出迷乱的呻吟和淫荡的喊叫，尝试把[npc2.namePos]从[npc.her]的[npc.pussy]边推开，"
+							+ "显然是不想让[npc2.herHim]射在里面。";
 					
 				} else {
 					if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow manages to formulate a sentence as [npc.she] cries out to [npc2.name],"
-								+" [npc.speech(That condom had better not break! I'm <b>not</b> getting pregnant!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(避孕套，希望没有破掉！我可<b>不想</b>怀孕！)]";
 					}
-					return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow manages to formulate a sentence as [npc.she] cries out to [npc2.name], "
-							+ "[npc.speech(Pull out! I'm <b>not</b> getting pregnant!)]";
+					return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+							+ "[npc.speech(拔出来！我<b>不想</b>怀孕！)]";
 				}
 			}
 		}
@@ -252,9 +252,9 @@ public class SALilayaSpecials {
 		@Override
 		public String getActionTitle() {
 			if(isAmazonsSecretActive(Main.sex.getCharacterTargetedForSexAction(this)) || !Main.sex.getCharacterTargetedForSexAction(this).hasPenisIgnoreDildo()) {
-				return "Impregnated?!";
+				return "怀孕了？！";
 			}
-			return "Creampied?!";
+			return "内射了？！";
 		}
 
 		@Override
@@ -277,15 +277,15 @@ public class SALilayaSpecials {
 		@Override
 		public String getDescription() {
 			if(isAmazonsSecretActive(Main.sex.getCharacterTargetedForSexAction(this)) || !Main.sex.getCharacterTargetedForSexAction(this).hasPenisIgnoreDildo()) {
-				return "[npc.Name] feels a deep, penetrating warmth spreading through her [lilaya.pussy+] and up into her womb. Violently shoving [npc2.name] away from her, she angrily screams, "
-						+ "[npc.speechNoEffects(What the fuck?! I told you to pull back!)]";
+				return "[npc.Name]感到一股暖流在她[lilaya.pussy+]深处扩散开来，一直进入了子宫之中。她一把推开了[npc2.name]，怒喝道，"
+						+ "[npc.speechNoEffects(搞什么鬼？！我不是让你退开了吗！)]";
 			}
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lilayaCondomBroke)) {
-				return "[npc.Name] feels [npc2.namePos] [npc2.cum] dripping out of her [lilaya.pussy+], and, frantically shoving [npc2.herHim] away from her, she cries out in distress, "
-						+" [npc.speechNoEffects(The condom broke! No! Fuck! I could get pregnant from this!)]";
+				return "[npc.Name]感觉到[npc2.namePos]的[npc2.cum]漏进了她[lilaya.pussy+]之中，忽然变了个人似的推开了[npc2.herHim]，哭喊起来，"
+						+"[npc.speechNoEffects(避孕套破了！怎么可能！操！我会怀上的！)]";
 			}
-			return "[npc.Name] feels [npc2.namePos] [npc2.cum] dripping out of her [lilaya.pussy+], and, violently shoving [npc2.herHim] away from her, she angrily screams, "
-					+ "[npc.speechNoEffects(What the fuck?! I told you to pull out!)]";
+			return "[npc.Name]感到[npc2.namePos]的[npc2.cum]流进了她[lilaya.pussy+]之中，一把推开了[npc2.herHim]，怒喝道，"
+					+ "[npc.speechNoEffects(搞什么鬼？！我告诉你要射在外面的！)]";
 		}
 
 		@Override

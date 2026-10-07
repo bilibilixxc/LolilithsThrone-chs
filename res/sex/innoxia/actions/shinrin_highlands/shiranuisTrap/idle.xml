@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -30,23 +30,19 @@
 	<applyEndEffects/>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Wait]]></title>
-	<tooltip><![CDATA[
-		As Shiranui is busy fucking Meraxis's throat, there's little for you to do except wait.
-	]]></tooltip>
+	<title><![CDATA[等待]]></title>
+	<tooltip><![CDATA[当不知火忙着操弄梅拉克西丝的喉咙时，你除了等待别无他法。]]></tooltip>
 	<descriptions>
 		<description>
 			<descriptionConditional><![CDATA[
 				[#npc.isPlayer()]
 			]]></descriptionConditional>
+			<text><![CDATA[不知火正操着梅拉克西丝的脸，你所能做的只有亲吻[meraxis.race]的脸颊，感受她的嘴被撑得鼓起来，因为她正将妖狐的[shiranui.cock+]吞入喉咙深处。]]></text>
 			<text><![CDATA[
-				As Shiranui fucks Meraxis's face, all you can do is kiss the [meraxis.race]'s cheek and feel her mouth bulging out as she takes the youko's [shiranui.cock+] down her throat.
+				不知火正专心对付梅拉克西丝，你插不上手，只能亲吻这只[meraxis.race]的脸颊。妖狐的肉棒在口中进出抽送，将脸颊一次次顶得鼓起。
 			]]></text>
 			<text><![CDATA[
-				With Shiranui focusing on Meraxis, you're left with nothing to do but kiss the [meraxis.race]'s cheek, which repeatedly bulges out as the youko's cock is thrust in and out of her mouth.
-			]]></text>
-			<text><![CDATA[
-				The ribbons which bind you keep your face pressed up against Meraxis's cheek as Shiranui fucks the [meraxis.race]'s face, leaving you with little to do but kiss Meraxis's cheek.
+				身上的缎带束缚着你，让你的脸紧紧贴在梅拉克西丝的颊侧。不知火正肆意肏弄着这[meraxis.race]的面庞，你动弹不得，只能顺势亲吻梅拉克西丝的脸颊。
 			]]></text>
 		</description>
 		
@@ -54,14 +50,12 @@
 			<descriptionConditional><![CDATA[
 				[#!npc.isPlayer()]
 			]]></descriptionConditional>
+			<text><![CDATA[她的脸紧贴在你的脸颊上，梅拉克西丝热情地亲吻着你，与此同时不知火正将她的[shiranui.cock+]插进你的喉咙深处。]]></text>
 			<text><![CDATA[
-				With her face pushed up against your cheek, Meraxis passionately kisses you even as Shiranui pushes her [shiranui.cock+] down your throat.
+				梅拉克西丝一边等不知火完事，一边溢出阵阵骚媚的娇喘，饥渴地吻上你的脸颊。
 			]]></text>
 			<text><![CDATA[
-				As she waits for Shiranui to finish focusing on you, Meraxis lets out a series of horny little moans and hungrily kisses your cheek.
-			]]></text>
-			<text><![CDATA[
-				The ribbons which bind Meraxis keep her face pressed up against your cheek as Shiranui fucks your face, leaving her with little to do but passionately kiss your cheek.
+				束缚梅拉克西丝的缎带将她的脸紧紧压在你的颊侧。不知火正肏弄你的脸，她什么也做不了，只能热情地亲吻你的脸颊。
 			]]></text>
 		</description>
 	</descriptions>

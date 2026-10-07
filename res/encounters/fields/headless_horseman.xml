@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<additionalPlaceTypeTriggers>
@@ -8,7 +8,7 @@
 	<possibleEncounters>
 		<!-- Warning: -->
 		<encounter>
-			<name><![CDATA[ominous warning]]></name>
+			<name><![CDATA[不祥之兆]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(game.getMonth()!=MONTH_OCTOBER || game.getDialogueFlags().getSavedLong("headless_horseman_year_warning")==game.getYear())
 					0
@@ -20,7 +20,7 @@
 		</encounter>
 		<!-- Actual encounter: -->
 		<encounter>
-			<name><![CDATA[headless horseman attack]]></name>
+			<name><![CDATA[无头骑士袭击]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(game.getMonth()!=MONTH_OCTOBER || game.isDayTime() || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true) || game.getDialogueFlags().getSavedLong("headless_horseman_year_warning")!=game.getYear() || game.getMinutesPassed()-game.getDialogueFlags().getSavedLong("headless_horseman_attack_minutes")<60*12)
 					0

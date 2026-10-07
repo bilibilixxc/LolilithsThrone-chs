@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<renderingPriority>70</renderingPriority>
 	<renderInEffectsPanel>true</renderInEffectsPanel>
@@ -6,9 +6,9 @@
 	<beneficial>NEUTRAL</beneficial>
 	<combatEffect>false</combatEffect>
 	<sexEffect>false</sexEffect>
-	<name><![CDATA[Latex Lover]]></name>
+	<name><![CDATA[大爱乳胶]]></name>
 	<description><![CDATA[
-		[npc.NameIsFull] currently wearing items of clothing made from skin-tight latex; the shiny, buttery-smooth material serves to enhance [npc.her] features and increase lust damage. However, due to its tightness, it's also making [npc.name] more horny...
+		[npc.NameIsFull]正穿着紧身乳胶制成的衣物；那油光发亮、手感细腻的材质让[npc.her]神态尽显，并且会提升性欲伤害。然而由于过于紧致也使得[npc.name]欲望高涨……
 	]]></description>
 	<imageName>set_latlov.svg</imageName>
 	<colourPrimary>CLOTHING_RED</colourPrimary> 

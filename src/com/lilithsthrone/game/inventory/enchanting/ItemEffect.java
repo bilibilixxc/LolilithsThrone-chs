@@ -275,7 +275,7 @@ public class ItemEffect implements XMLSaving {
 				&& getItemEffectType().getAssociatedRace()!=Race.DEMON) { // For debug demon TF options
 			
 			if(target.isDoll() && itemEffectType.getAssociatedRace()!=null) {
-				return UtilText.parse(target, "<p style='text-align:center;'>[style.colourDisabled(As [npc.sheIs] a sex doll, normal transformatives have no effect on [npc.name]...)]</p>");
+				return UtilText.parse(target, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.name]是性爱玩偶，普通的转化对[npc.her]不生效……)]</p>");
 			}
 			
 			if((target.getSubspeciesOverrideRace()==Race.DEMON || (!target.isAbleToHaveRaceTransformed() && target.getRace()!=Race.SLIME))

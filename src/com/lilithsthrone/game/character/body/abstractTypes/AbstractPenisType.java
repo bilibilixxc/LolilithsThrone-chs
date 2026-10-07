@@ -34,8 +34,8 @@ public abstract class AbstractPenisType implements BodyPartTypeInterface {
 	private boolean fromExternalFile;
 	
 	// Maps the name to weighting for use in random selection:
-	protected static final Map<String, Integer> BASE_NAMES_SINGULAR = Util.newHashMapOfValues(new Value<>("cock", 3), new Value<>("dick", 2), new Value<>("shaft", 1));
-	protected static final Map<String, Integer> BASE_NAMES_PLURAL = Util.newHashMapOfValues(new Value<>("cocks", 3), new Value<>("dicks", 2), new Value<>("shafts", 1));
+	protected static final Map<String, Integer> BASE_NAMES_SINGULAR = Util.newHashMapOfValues(new Value<>("肉棒", 2), new Value<>("屌", 2), new Value<>("鸡巴", 2), new Value<>("阴茎", 1));
+	protected static final Map<String, Integer> BASE_NAMES_PLURAL = Util.newHashMapOfValues(new Value<>("肉棒", 2), new Value<>("屌", 2), new Value<>("鸡巴", 2), new Value<>("阴茎", 1));
 	
 	private AbstractBodyCoveringType coveringType;
 	private AbstractRace race;
@@ -229,7 +229,7 @@ public abstract class AbstractPenisType implements BodyPartTypeInterface {
 	}
 	
 	public String getPenisHeadName(GameCharacter gc) {
-		return UtilText.returnStringAtRandom("head", "tip");
+		return UtilText.returnStringAtRandom("头部", "顶端");
 	}
 	
 	public String getPenisHeadDescriptor(GameCharacter gc) {
@@ -237,11 +237,11 @@ public abstract class AbstractPenisType implements BodyPartTypeInterface {
 			if(gc.getPenisModifiers().contains(mod)) {
 				switch(mod) {
 					case BLUNT:
-						return UtilText.returnStringAtRandom("blunt");
+						return UtilText.returnStringAtRandom("圆头的");
 					case FLARED:
-						return UtilText.returnStringAtRandom("wide", "flared", "flat");
+						return UtilText.returnStringAtRandom("展开的", "平头的");
 					case TAPERED:
-						return UtilText.returnStringAtRandom("tapered", "pointed");
+						return UtilText.returnStringAtRandom("锥形的", "尖头的");
 					case KNOTTED:
 					case PREHENSILE:
 					case RIBBED:
@@ -303,7 +303,7 @@ public abstract class AbstractPenisType implements BodyPartTypeInterface {
 			return name;
 		}
 		
-		if(name.endsWith("-")) {
+		if(!returnNames.containsKey(name)) {
 			if(Math.random()<0.25f) { // 25% chance to return this '-' name.
 				return UtilText.parse(gc, name + Util.getRandomObjectFromWeightedMap(returnNames));
 			} else {
@@ -345,7 +345,7 @@ public abstract class AbstractPenisType implements BodyPartTypeInterface {
 			return name;
 		}
 		
-		if(name.endsWith("-")) {
+		if(!returnNames.containsKey(name)) {
 			if(Math.random()<0.25f && (!Main.game.isInSex() || Main.sex.getAllParticipants().size()<=2)) { // 25% chance to return this '-' name, so long as not in threesome+ sex scene, as otherwise parsing is weird (e.g. "wolf-cocks" for wolf & non-wolf)
 				return UtilText.parse(gc, name + Util.getRandomObjectFromWeightedMap(returnNames));
 			} else {

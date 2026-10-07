@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tail>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[raptor]]></transformationName>
+	<transformationName><![CDATA[猛禽]]></transformationName>
 	
 	<coveringType>innoxia_raptor_feathers</coveringType>
 	
@@ -19,44 +19,44 @@
 		<tag>TAIL_NEVER_SUITABLE_FOR_PENETRATION</tag>
 	</tags>
 	
-	<determiner><![CDATA[plume of]]></determiner>
+	<determiner><![CDATA[簇]]></determiner>
 	<determinerPlural><![CDATA[plumes of]]></determinerPlural> 
 	
-	<name><![CDATA[tail feathers]]></name>
-	<namePlural><![CDATA[tail feathers]]></namePlural> 
+	<name><![CDATA[尾羽]]></name>
+	<namePlural><![CDATA[尾羽]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>raptor-like</descriptor>
+		<descriptor><![CDATA[猛禽般]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>raptor-like</descriptor>
+		<descriptor><![CDATA[猛禽般]]></descriptor>
 	</descriptorsFeminine>
 	
-	<tipName><![CDATA[end]]></tipName>
-	<tipNamePlural><![CDATA[ends]]></tipNamePlural>
+	<tipName><![CDATA[末端]]></tipName>
+	<tipNamePlural><![CDATA[末端]]></tipNamePlural>
 	<tipDescriptorsMasculine>
-		<descriptor>feathered</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
 	</tipDescriptorsMasculine>
 	<tipDescriptorsFeminine>
-		<descriptor>feathered</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
 	</tipDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
 		#IF(npc.getTailCount()==1)
-			 A plume of tail feathers sprouts from just above [npc.her] ass, with each feather quickly growing to be about [npc.tailLength] long. [npc.She] [npc.verb(discover)] that [npc.she] can quickly raise and lower [npc.her] new bird-like tail, which helps [npc.herHim] to keep [npc.her] balance.
-			<br/>[npc.Name] now [npc.has] a [style.boldRaptor(raptor's bird-like tail)], made out of [npc.tailFullDescription(true)].
+			一簇尾羽从尾椎处延伸而出，迅速散开至大概有[npc.tailLength]长。[npc.She]很快发现[npc.she]可以快速上下抖动[npc.her]新的鸟尾，这可以帮助[npc.her]保持平衡。
+			<br/>[npc.Name]现在拥有一簇[style.boldRaptor(猛禽的鸟尾)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ELSE
-			 [npc.TailCount] plumes of tail feathers sprout from just above [npc.her] ass, with each feather quickly growing to be about [npc.tailLength] long. [npc.She] [npc.verb(discover)] that [npc.she] can quickly raise and lower [npc.her] new bird-like tails, which helps [npc.herHim] to keep [npc.her] balance.
-			<br/>[npc.Name] now [npc.has] [npc.tailCount] [style.boldRaptor(raptor's bird-like tails)], made out of [npc.tailFullDescription(true)].
+			[npc.TailCount]簇尾羽从尾椎处延伸而出，迅速散开至大概有[npc.tailLength]长。[npc.She]很快发现[npc.she]可以快速上下抖动[npc.her]新的鸟尾，这可以帮助[npc.her]保持平衡。
+			<br/>[npc.Name]现在拥有[npc.tailCount]簇[style.boldRaptor(猛禽的鸟尾)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ENDIF
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		Growing out from just above [npc.her] ass, [npc.sheHasFull]
+		[npc.sheHasFull]的尾椎处延伸出
 		#IF(npc.getTailCount()==1)
-			 a #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF plume of [npc.tailColour(true)] tail-feathers, which [npc.she] can rapidly move up and down to help [npc.herHim] keep [npc.her] balance and to control [npc.her] path when in flight.
+			一簇#IF(npc.isTailFeral())[style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]的尾羽，能够随意上下移动帮助在飞行中保持平衡。
 		#ELSE
-			 [npc.tailCount] #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF plumes of [npc.tailColour(true)] tail-feathers, which [npc.she] can rapidly move up and down to help [npc.herHim] keep [npc.her] balance and to control [npc.her] path when in flight.
+			[npc.tailCount]簇#IF(npc.isTailFeral()) [style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]的尾羽，能够随意上下移动帮助在飞行中保持平衡。
 		#ENDIF
 	]]></bodyDescription>
 </tail>

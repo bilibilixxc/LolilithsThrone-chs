@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -6,21 +6,21 @@
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[wooden 'BONK!' bat]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[wooden 'BONK!' bats]]></namePlural>
-		<description><![CDATA[A smooth wooden club used to strike a ball as a form of sport. This particular bat has been enchanted to bonk the horny out of people.]]></description> 
+		<name><![CDATA[木制“邦！”球棒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[木制“邦！”球棒]]></namePlural>
+		<description><![CDATA[一种用来击球的光滑球棒。这种特制球棒经过附魔后，能把色色的念头从人身上敲掉。]]></description> 
 		
-		<attackDescriptor>bonk</attackDescriptor>
+		<attackDescriptor><![CDATA[邦！]]></attackDescriptor>
 		
-		<attackTooltipDescription><![CDATA[Send [npc2.name] to horny jail.]]></attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[把[npc2.name]送进色色监狱。]]></attackTooltipDescription>
 		
 		<rarity>LEGENDARY</rarity> 
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] wooden 'BONK!' bat in anticipation of sending some people to horny jail.]]></equipText>
+		<equipText><![CDATA[[npc.Name]准备好[npc.her]木制“邦！”球棒，打算把一些人送进色色监狱。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] away [npc.her] wooden 'BONK!' bat.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]把[npc.her]木制“邦！”球棒收了起来。]]></unequipText>
 		
 		<imageName>wooden_silly.svg</imageName> 
 		
@@ -46,8 +46,8 @@
 		</effects>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.colourMinorBad(-25)] [style.colourLust(lust)] on hit]]></effect>
-			<effect><![CDATA[[style.colourExcellent(Instantly defeats)] 0-lust enemies]]></effect>
+			<effect><![CDATA[命中后[style.colourMinorBad(-25)][style.colourLust(性欲)]]]></effect>
+			<effect><![CDATA[[style.colourExcellent(秒杀)]0性欲的敌人]]></effect>
 		</extraEffects>
 		
 		<onHitEffect><![CDATA[
@@ -82,25 +82,25 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(bonk)] [npc2.name] with [npc.her] wooden 'BONK!' bat in an attempt to send [npc2.herHim] straight to horny jail!
+		[npc.Name]用木制球棒“梆”的一声敲中了[npc2.name]，准备把[npc2.herHim]直接送进色色监狱！
 		]]></hitText>
 		<hitText><![CDATA[
-		Whacking [npc2.name] with [npc.her] wooden 'BONK!' bat, [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(bonk)] the horny right out of [npc2.herHim]!
+		[npc.Name]用[npc.her]木制“邦！”球棒“邦”的一下敲向[npc2.name]，[npc.she]一边咧嘴笑着，一边将色欲从[npc2.herHim]的身体里“邦”出来！
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(bonk)] [npc2.name] with [npc.her] wooden 'BONK!' bat, causing [npc2.herHim] to stagger back and stop being so outrageously horny!
-		]]></hitText>
+[npc.Name]用木制“邦！”球棒“邦”[npc2.name]，使得[npc2.herHim]向后踉跄，并且不再饥渴！
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] wooden 'BONK!' bat at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
+[npc.Name]用木质“邦！”球棒挥向[npc2.name]，但最终没有击中[npc2.herHim]！
+]]></missText>
+		<missText><![CDATA[
+		[npc.name]举起木质“邦！”球棒向着[npc2.name]重挥出去，却没能命中目标，恼火地大喊了一声！
 		]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] wooden 'BONK!' bat, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
-		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(swipe)] at [npc2.name] with [npc.her] wooden 'BONK!' bat, but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]快步前踏，挥舞着木质“邦！”球棒向[npc2.name]猛冲而去，却没能命中！
 		]]></missText>
 	</missDescriptions>
 	

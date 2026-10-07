@@ -19,15 +19,15 @@ public enum FluidTypeBase {
 			BodyCoveringType.URINE,
 			PresetColour.BASE_GOLD),
 	
-	CUM(Util.newArrayListOfValues("cum", "cream", "jism", "jizz", "seed", "spooge"),
+	CUM(Util.newArrayListOfValues("精液", "子种汁"),
 			BodyCoveringType.CUM,
 			PresetColour.CUM),
 	
-	GIRLCUM(Util.newArrayListOfValues("girlcum"),
+	GIRLCUM(Util.newArrayListOfValues("爱液", "淫液"),
 			BodyCoveringType.GIRL_CUM,
 			PresetColour.GIRLCUM),
 	
-	MILK(Util.newArrayListOfValues("milk"),
+	MILK(Util.newArrayListOfValues("乳汁", "奶水"),
 			BodyCoveringType.MILK,
 			PresetColour.MILK);
 	

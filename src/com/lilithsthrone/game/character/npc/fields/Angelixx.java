@@ -105,8 +105,8 @@ public class Angelixx extends NPC {
 	
 	public Angelixx(boolean isImported) {
 		super(isImported,
-				new NameTriplet("Angelixx"), "Loviennemartuilani",
-				"Although she appears as a young, innocent succubus, Angelixx is an extremely powerful and dangerous pawn of her mother, the elder lilin Lovienne.",
+				new NameTriplet("安吉莉克丝"), "洛维耶纳马尔图拉尼",
+				"安吉莉克丝虽然表面上是个年轻无邪的魅魔，但实际上是她母亲莉琳长老洛维耶纳的一枚极其强大又危险的棋子。",
 				52, Month.MAY, 17,
 				30, Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.GREATER,
 				new CharacterInventory(false, 10),
@@ -437,7 +437,7 @@ public class Angelixx extends NPC {
 		gangMember.equipClothing();
 		gangMember.setLocation(Main.game.getPlayerCell(), true);
 		gangMember.removePersonalityTrait(PersonalityTrait.MUTE);
-		adjectivesUsed.add(Main.game.getCharacterUtils().setGenericName(gangMember, "gang member", adjectivesUsed));
+		adjectivesUsed.add(Main.game.getCharacterUtils().setGenericName(gangMember, "帮派成员", adjectivesUsed));
 		
 		gangMember.unequipAllWeaponsIntoVoid(true);
 	}
@@ -447,13 +447,13 @@ public class Angelixx extends NPC {
 			adjectivesUsed = Util.newArrayListOfValues("knocked-out", "unconscious", "defeated");
 			Collections.shuffle(adjectivesUsed);
 		}
-		String adjective = "defeated";
+		String adjective = "落败";
 		if(adjectivesUsed.size()>0) {
 			adjective = adjectivesUsed.get(0);
 			adjectivesUsed.remove(0);
 		}
 		
-		gangMember.setGenericName(adjective+" "+(gangMember.isFeminine()?gangMember.getSubspecies().getSingularFemaleName(gangMember.getBody()):gangMember.getSubspecies().getSingularMaleName(gangMember.getBody())));
+		gangMember.setGenericName(adjective+"的"+(gangMember.isFeminine()?gangMember.getSubspecies().getSingularFemaleName(gangMember.getBody()):gangMember.getSubspecies().getSingularMaleName(gangMember.getBody())));
 	}
 	
 	public void setDefeatedNamesPostCombat() {
@@ -496,7 +496,7 @@ public class Angelixx extends NPC {
 		
 		victim.setLocation(Main.game.getPlayerCell(), true);
 		victim.removePersonalityTrait(PersonalityTrait.MUTE);
-		victim.setGenericName("captive");
+		victim.setGenericName("俘虏");
 	}
 
 	public void initGangMemberGuards() {
@@ -537,57 +537,57 @@ public class Angelixx extends NPC {
 	}
 	
 	private static List<String> diaryEntries = Util.newArrayListOfValues(
-		"A cat-girl pushed me out of the way today and called me a 'silly little girl'."
-			+ " Luckily my boys were nearby, and so I had them take her down an alley and double-team her."
-			+ " I ordered them to cum all over her and then asked her who the silly one was now."
+		"今天一个猫女把我推开了，还骂我小傻女。"
+			+ "幸运的是我的孩子们在附近，所以我让他们把她拖到一个小巷里并把她围了起来。"
+			+ "我命令他们射满她的身上并问她，现在谁看起来更傻呢？"
 			+"<br/>(01/14)",
-		"This evening I got hit on again at the bar. He was a big, handsome zebra-boy, and I kind of have a weakness for all horse-morphs, so I let him take me back to his grotty little apartment and rail me hard on his bed."
-			+ " His fat fucking cock stretched me out so good, and after giving me a creampie he made me suck him off."
-			+ " Fuck, I'm getting horny thinking about it... I think I'll call a slave to come and pound me on the bed..."
+		"今晚我又在酒吧被搭讪了。搭讪者是个帅气又大只的斑马男。所有的马化形都是我的弱点，所以我被他带回了邋遢的小公寓然后按在床上狠狠地操死了。"
+			+ "他妈的他那巨根把我撑得好爽，在中出我之后让我口交清洁干净。"
+			+ "操，光是回想也让我欲火焚身……或许我得叫个奴隶来爆干我……"
 			+"<br/>(02/14)",
-		"Saellatrix wants me to increase the number of kidnappings, but insists that they be loners who won't have friends or family to report their disappearance."
-			+ " My gang's doing all they can, doesn't she know how hard it is?! At this rate I'll have to go back to seducing people in the alleyways, and that'll seriously eat into the time I get to spend with my boys..."
+		"赛拉特里克斯想要我增加绑架的数目，但仍然坚持失踪者必须是无亲无故不会被报告的目标。"
+			+ "受不了一点，我的帮派已经很辛苦了，她怎么完全不懂呢？！按现在的速率我就又需要去小巷子里去诱惑那些独行者了，那会严重占用我与孩子们度过的时间……"
 			+"<br/>(03/14)",
-		"My good boys, Sleip and Nir, captured three refugees today! As a reward, I told them to come to my room at midnight, where I'd dressed up in their favourite lingerie and had a slave tie me to the bed."
-			+ " Fuck, they pounded me so hard for the rest of the night, I can barely walk this morning..."
+		"我的好孩子，斯雷普和尼尔，今天抓获了三个难民！作为奖励，我叫他们半夜来我的房间，我穿着他俩最喜欢的内衣裤并让一个奴隶把我绑在床上。"
+			+ "操，那晚他们把我干得好猛啊，今早我几乎走不动路了……"
 			+"<br/>(04/14)",
-		"As I was teleporting the refugees to Saellatrix's shop, one of them called me a stupid little bitch."
-			+ " Fuck, that pissed me off. I got my boys to double-penetrate her dirty little pussy while I carried on teleporting the others."
-			+ " By the time I'd finished, the bitch's cunt was a gaping, cum-filled mess. I promised her that this was just a taste of her new life, before teleporting her too..."
+		"我正把难民们传送到母亲的店中时，其中一人骂我是愚蠢的小贱人。"
+			+ "操，我这暴脾气。我当场就让孩子们给她的小脏逼来个双重插入，并继续传送其他人。"
+			+ "传送好后，这个小傻逼的小脏逼敞开着，精液满溢。我跟她保证这只是她新生活的开始，之后也把她传送走了……"
 			+"<br/>(05/14)",
-		"I went to the bank today, and the asshole in the lobby told me to go to the back of the queue. I told him who the fuck I am, and he realised his mistake."
-			+ " Too late! I got the stupid prick fired, and after making a potion that'd turn him into a big-titted, fertile horse-girl, I sent Sleip and Nir after him with instructions to leave 'her' as a naked, pregnant, cum-covered slut..."
+		"今天我去了银行，结果大厅里坐着的那个傻吊居然叫我去队伍后面排队，我告诉他老娘是他妈的谁，他才终于知道错了。"
+			+ "可惜太晚了！我给那个傻屌换了个工作。“她”现在被药水转化成了一个巨乳马女，斯雷普和尼尔扒光了那个傻屌，灌满了她刚长出来的子宫。相信全身泡过精液以后这个傻屌能学会做一个称职的荡妇……"
 			+"<br/>(06/14)",
-		"That centaur who made me his cock-sleeve yesterday ended up getting me pregnant with triplets... Eugh..."
-			+ " Horse-morphs are one thing, but pushing out demonic centaurs is really fucking tiring."
-			+ " I'll get some Mother's Milk later and get it over and done with. It kind of ruins my whole look when I'm pregnant anyway..."
+		"昨天把我当肉便器的半马人居然让我怀上了三胞胎……呃……"
+			+ "马化形是一回事，但挤出恶魔混血的半人马真他妈的累。"
+			+ "迟点我要拿些母亲的奶水然后快点把这逼事搞定。怀孕都让我走形了……"
 			+"<br/>(07/14)",
-		"Mother sent Saellatrix to see me today. That bitch kept on telling me to increase the number of kidnappings."
-			+ " She was so dominant and direct in her behaviour that I couldn't help but get turned on, and when she grew herself a fat cock, I couldn't resist!"
-			+ " She pinned me down and fucked me raw while my boys just stood there and watched..."
+		"母亲今天派赛拉特里克斯来见我了。那婊子继续催我增加绑架的数目。"
+			+ "她的支配与直接的行为让我忍不住起了性欲，之后她长出巨屌的时候，我根本抵挡不住！"
+			+ "她把我按在地上狠狠地操，而孩子们只是站在一旁看着……"
 			+"<br/>(08/14)",
-		"Some of my gang members have disappeared... It's got to be the Enforcers who got them, or maybe it's a rival gang?"
-			+ " Fuck, I'm not cut out for some kind of gang war! I'll seduce one of the Enforcers tonight and see what I can learn."
-			+ " Perhaps that big, hunky horse-boy who I've seen doing patrols?"
+		"我的一些帮派成员消失了……肯定是执法者抓住了他们，又或者可能是敌对帮派？"
+			+ "操了，我可不是打帮派战争的料！今晚我会诱惑一位执法者看看能知道些什么。"
+			+ "就选巡逻中见过的那个大只性感又迷人的马男吧？"
 			+"<br/>(09/14)",
-		"Tonight I found that big, handsome horse-boy Enforcer I'd seen doing patrols. He was harder to seduce than I expected, and I had to fall back on telepathy to get him aroused."
-			+ " Oh well, I got what I wanted in the end. He didn't have any information on who was responsible for attacking my gang, but I did get his massive, fat cock balls-deep in my hot little pussy..."
+		"晚我见到了巡逻中见过的那个大只帅气的马男。他比我想象的要难诱惑，我不得不使用心灵感应让他燃起性欲。"
+			+ "也行吧，反正最后我得到了我想要的。他完全没有关于袭击我帮派的人的任何信息，不过我好歹也让他那又粗又壮的鸡巴深深插入我的小热穴里了……"
 			+"<br/>(10/14)",
-		"I got mugged in the alleyway today! A couple of dog-boys demanded flames from me, and one of them had an Enforcer's pistol!"
-			+ " I know I could have beaten them, but I just couldn't move... After they took my flames, they said they'd give me their knots in exchange."
-			+ " Fuck, that got me wet, and so I let them rail me doggy-style right there on the floor..."
+		"我今天在巷子里被抢劫了！一对犬男要抢我的火币，其中一个还拿着执法者的枪！"
+			+ "我知道我完全可以打败他们，但我就是动不了……拿走火币后，他们说要用狗鞭回报我。"
+			+ "操，那可把我弄湿了，所以我也让他们就在地上当场狂暴后入我……"
 			+"<br/>(11/14)",
-		"I saw that assistant of Minotallys's today in the Farmer's Market. Alicorns really do it for me, so I ambushed him by the kissing booth stall and seduced him."
-			+ " Sure, I had to use arcane arousal *and* telepathy, but I got him in the end. We found a quiet spot behind a nearby building, where he insisted on starting by eating me out."
-			+ " He actually managed to get me to orgasm with just his tongue, and then a dozen or so more times when his fat horse-cock was balls-deep in my sloppy cunt..."
+		"今天在农贸市场看到了有人袭击了米诺塔莉丝的店。天角兽真的为了我做了这个，所以我在亲吻亭埋伏并诱惑了他。"
+			+ "当然，我得用奥术快感*和*心灵感应，好在我最后成功了。我们在附近建筑的后面找了个安静地，而他坚持先舔鲍鱼。"
+			+ "他确实成功地只用舌头就把我舔高潮了，之后他的粗壮的马鞭又深插我的小穴把我干高潮了十几二次吧……"
 			+"<br/>(12/14)",
-		"Mother called me back to Dominion today to see her, and I decided to take a carriage instead of teleporting."
-			+ " The big, hunky centaur who was pulling it was called 'Vronti', and I tried everything to get him to stop and fuck me raw with his massive horse-cock."
-			+ " I could barely get a word out of him, though. Fuck! I had a centaur rail me just now and I was thinking of Vronti the whole time..."
+		"母亲今天把我叫回御城区去见她，我决定坐马车替代传送过去。"
+			+ "拉着马车的大只性感结实的半人马叫“弗洛狄”，而我为了让他停车用巨马鞭操我用尽了一切办法。"
+			+ "但我甚至没法让他从嘴里撬出一个字。操！刚刚我让一个半人马大操特操我的时候还一直想着弗洛狄呢……"
 			+"<br/>(13/14)",
-		"Nir recruited a new member into the gang today. I don't normally pay much attention to new recruits, but this one's a big, dumb brute of a donkey-boy."
-			+ " I wanted him so badly that I let him pull me into that filthy bathroom at our HQ and fuck me hard up against the wall."
-			+ " His fat cock felt as good as I'd hoped, but the dumb, horny idiot tore my favourite pair of panties in two in his haste to get to my pussy..."
+		"尼尔今天在帮派里招收了一个新人。通常我不会太关心新成员，但这位可是个粗野的大笨驴男。"
+			+ "我太想要他了，就让他把我拉进总部的脏厕所然后把我按在墙上狂操。"
+			+ "他的粗屌就跟我想得那么好，但这个傻逼好色驴子在着急插入我的小穴的时候把我最喜欢的内裤撕成了两半……"
 			+"<br/>(14/14)"
 		);
 

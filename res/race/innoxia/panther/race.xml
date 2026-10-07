@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_panther</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[panther-morph]]></name>
-	<namePlural><![CDATA[panther-morphs]]></namePlural>
+	<name><![CDATA[豹化形]]></name>
+	<namePlural><![CDATA[豹化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[panther]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[豹]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[panthers]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[豹]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[panther]]></defaultTransformName>
+	<defaultTransformName><![CDATA[豹]]></defaultTransformName>
 	
 	<colour>innoxia_panther</colour>
 	

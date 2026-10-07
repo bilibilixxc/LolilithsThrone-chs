@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <penis>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛]]></transformationName>
 	<coveringType>PENIS</coveringType>
 	<pubicHairAllowed>false</pubicHairAllowed>
 	<testicleType>charisma_spider_testicle</testicleType>
 	<additionalTransformationEffect/>
 	<namesMasculine>
-		<name><![CDATA[spider-]]></name>
+		<name><![CDATA[蜘蛛]]></name>
 	</namesMasculine>
 	<namesPluralMasculine>
-		<name><![CDATA[spider-]]></name>
+		<name><![CDATA[蜘蛛]]></name>
 	</namesPluralMasculine>
 	<namesFeminine>
-		<name><![CDATA[spider-]]></name>
+		<name><![CDATA[蜘蛛]]></name>
 	</namesFeminine>
 	<namesPluralFeminine>
-		<name><![CDATA[spider-]]></name>
+		<name><![CDATA[蜘蛛]]></name>
 	</namesPluralFeminine>
 	<descriptors/>
 	<defaultPenetrationModifiers>
@@ -24,11 +24,11 @@
 		<modifier>TAPERED</modifier>
 	</defaultPenetrationModifiers>
 	<transformationDescription><![CDATA[
-		Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as a thick sheath suddenly grows around the base of [npc.her] shaft as it recedes into [npc.her] body. As [npc.she] [npc.verb(pant)] and [npc.verb(gasp)] for air, the tip of [npc.her] cock narrows down as it tapers into its new form.
-		<br/>[npc.She] now [npc.has] a [style.boldSpider(spider-like penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].
-		<br/>[npc.She] [npc.has] [style.boldSpider([npc.ballsCount]#IF(npc.isInternalTesticles()) internal#ENDIF balls)], [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldSpider(spider cum)].
-	]]></transformationDescription>
+		[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟。[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉棒根部附近忽然长出一个厚重的鞘壳，逐渐缩回体内。[npc.she]喘息着，渴求着空气，[npc.her]的龟头逐渐变细变窄成新的形态。
+		<br/>[npc.She]现在拥有一根[style.boldSpider(蜘蛛般的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。
+		<br/>[npc.She]拥有[style.boldSpider([npc.ballsCount]个#IF(npc.isInternalTesticles())体内#ENDIF睾丸)]，[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够产生[npc.cumColour(true)][style.boldSpider(蜘蛛精液)]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] spider cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].
+		[npc.She]有着[npc.a_cockGirth]的蜘蛛阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。
 	]]></bodyDescription>
 </penis>

@@ -38,7 +38,7 @@ public interface BodyPartInterface {
 				return getType().getName(gc);
 			}
 			
-			return (getType().getDescriptor(gc).length() > 0 ? getType().getDescriptor(gc) + " " : "") + getType().getName(gc);
+			return (getType().getDescriptor(gc).length() > 0 ? getType().getDescriptor(gc) + "" : "") + getType().getName(gc);
 		} else {
 			return getType().getName(gc);
 		}
@@ -50,7 +50,7 @@ public interface BodyPartInterface {
 			if(getType().getDescriptor(gc)==null)
 				return getType().getNameSingular(gc);
 			
-			return (getType().getDescriptor(gc).length() > 0 ? getType().getDescriptor(gc) + " " : "") + getType().getNameSingular(gc);
+			return (getType().getDescriptor(gc).length() > 0 ? getType().getDescriptor(gc) + "" : "") + getType().getNameSingular(gc);
 		} else {
 			return getType().getNameSingular(gc);
 		}

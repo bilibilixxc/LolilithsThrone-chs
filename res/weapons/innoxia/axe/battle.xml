@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>5000</value> 
 		<melee>true</melee>
 		<twoHanded>true</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[battle axe]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[battle axes]]></namePlural>
-		<description><![CDATA[A huge battle axe, designed specifically for use in combat. Despite its bulky appearance, it's remarkably lightweight, allowing the wielder to efficiently bring its blade, spike, and hook to bear on their target.]]></description> 
-		<attackDescriptor>chop</attackDescriptor>
-		<attackTooltipDescription>Swing your battle axe at [npc2.name]!</attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name><![CDATA[战斧]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[战斧]]></namePlural>
+		<description><![CDATA[一把巨大的战斧，专门设计用来战斗。尽管看似笨重，但实则格外轻便，使得握持者能够有效地将其利刃、尖刺和斧钩对准目标。]]></description> 
+		<attackDescriptor><![CDATA[劈砍]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[向着[npc2.name]挥舞战斧！]]></attackTooltipDescription>
 		<rarity>COMMON</rarity> 
 		<weaponSet/> 
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] battle axe as [npc.she] [npc.verb(get)] ready to use it in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] away [npc.her] battle axe.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]抓起[npc.her]的战斧，准备用于战斗。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]放下了[npc.her]的战斧。]]></unequipText>
 		<imageName>battle.svg</imageName> 
 		<imageEquippedName/>
 		<damage>40</damage> 
@@ -54,28 +54,28 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Swinging [npc.her] battle axe, [npc.name] [npc.verb(manage)] to strike [npc2.name] right in the chest; the ethereal arcane blade passing through [npc2.her] torso to drain [npc2.her] energy!
+		[npc.Name]挥舞战斧，狠狠地劈中[npc2.name]的胸膛；其虚幻的奥术利刃穿过了[npc2.her]的躯体，汲取其能量！
 		]]></hitText>
 		<hitText><![CDATA[
-		Swinging out at [npc2.name] with [npc.her] battle axe, [npc.name] [npc.verb(manage)] to slash through [npc2.her] [npc2.arm] with the ethereal blade and drain [npc2.her] energy!
+		[npc.Name]向着[npc2.name]挥出战斧，用虚幻的奥术利刃砍到了[npc2.her]的[npc2.arm]，汲取其能量！
 		]]></hitText>
 		<hitText><![CDATA[
-		With a quick [npc.step] forwards, [npc.name] [npc.verb(lunge)] at [npc2.name] with [npc.her] battle axe, sinking the ethereal blade into [npc2.her] shoulder and causing [npc2.herHim] to lose some energy!
+		[npc.Name]前踏一步，战斧向[npc2.name]汹涌而去，虚幻的奥术利刃深深地埋进[npc2.her]的肩膀，令其失去了一些能量！
 		]]></hitText>
 		<criticalHitText><![CDATA[
-		Expertly sidestepping around [npc2.namePos] attempt to block [npc.her] attack, [npc.name] [npc.verb(deal)] a devastating strike with [npc.her] battle axe!
+		[npc.Name]精湛地横移一步，绕过了[npc2.namePos]的格挡，用战斧对其造成了毁灭性的伤害！
 		]]></criticalHitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Swinging [npc.her] battle axe, [npc.name] [npc.verb(attempt)] to stab [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.Name]挥舞战斧，向着[npc2.name]的胸膛捅去，但最后没能命中！
 		]]></missText>
 		<missText><![CDATA[
-		Swinging out at [npc2.name] with [npc.her] battle axe, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]向着[npc2.name]挥出战斧，却没能命中目标，让[npc.she]恼火地大喊一声！
 		]]></missText>
 		<missText><![CDATA[
-		With a quick [npc.step] forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] battle axe, but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]前踏一步，战斧向[npc2.name]汹涌而去，却没能击中目标！
 		]]></missText>
 	</missDescriptions>
 	

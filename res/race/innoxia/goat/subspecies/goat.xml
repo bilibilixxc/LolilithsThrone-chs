@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_goat</race>
 	<colour>innoxia_goat</colour>
@@ -23,34 +23,34 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Bleating Headbutters</bookName>
+	<bookName><![CDATA[咩咩头槌]]></bookName>
 	<basicDescriptionId>GOAT_BASIC</basicDescriptionId>
 	<advancedDescriptionId>GOAT_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[goat-morph]]></name>
-	<namePlural><![CDATA[goat-morphs]]></namePlural>
-	<singularMaleName><![CDATA[goat-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[goat-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[goat-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[goat-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic goat, known as a 'goat-morph' when bipedal, and a 'goat-taur' when the lower body is that of a feral goat.]]></description>
+	<name><![CDATA[山羊化形]]></name>
+	<namePlural><![CDATA[山羊化形]]></namePlural>
+	<singularMaleName><![CDATA[山羊男]]></singularMaleName>
+	<singularFemaleName><![CDATA[山羊女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[山羊男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[山羊女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的山羊，当下肢为双足时称为“山羊化形”，而下肢呈现出山羊兽态时称为“半山羊人”。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[baphomet]]></name>
-			<namePlural><![CDATA[baphomets]]></namePlural>
-			<singularMaleName><![CDATA[baphomet]]></singularMaleName>
-			<singularFemaleName><![CDATA[baphomet]]></singularFemaleName>
-			<pluralMaleName><![CDATA[baphomets]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[baphomets]]></pluralFemaleName>
+			<name><![CDATA[巴风特]]></name>
+			<namePlural><![CDATA[巴风特]]></namePlural>
+			<singularMaleName><![CDATA[巴风特]]></singularMaleName>
+			<singularFemaleName><![CDATA[巴风特]]></singularFemaleName>
+			<pluralMaleName><![CDATA[巴风特]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[巴风特]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[goat]]></feralName>
-		<feralNamePlural><![CDATA[goat]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[buck]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[doe]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[bucks]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[does]]></feralPluralFemaleName>
+		<feralName><![CDATA[山羊]]></feralName>
+		<feralNamePlural><![CDATA[山羊]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[雄鹿]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[雌鹿]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[雄鹿]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[雌鹿]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>75</size>
@@ -63,7 +63,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] strong, tough body helps [npc.herHim] to endure physical blows as well as to put some extra power behind attacks of [npc.her] own.
+		[npc.NamePos]强健紧实的身体能帮助[npc.herHim]承受物理伤害，并为[npc.her]自身提供一定的攻击加成。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="10">MAJOR_PHYSIQUE</attribute>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	
 	<category>SPECIAL</category>
@@ -7,10 +7,10 @@
 	
 	<equipWeighting>10</equipWeighting>
 	
-	<name><![CDATA[Tail-constrict]]></name>
+	<name><![CDATA[蛇尾缠绕]]></name>
 	
 	<description><![CDATA[
-		Use [npc.her] strong, serpent-like tail to constrict [npc.her] target.
+		用[npc.her]强壮的蛇形尾巴缠绕目标。
 	]]></description>
 	
 	<damageType><![CDATA[
@@ -54,7 +54,7 @@
 	</availabilityCondition>
 	
 	<availabilityDescription><![CDATA[
-		Available to characters who have a '[#LEG_CONFIGURATION_TAIL_LONG.getName()]' leg configuration.
+		仅适用于有'[#LEG_CONFIGURATION_TAIL_LONG.getName()]'腿部的角色。
 	]]></availabilityDescription>
 	
 	<!-- Once started to constrict a target, the AI will become more and more interested in finishing the process off. -->
@@ -75,37 +75,37 @@
 	]]></criticalCondition>
 	
 	<criticalDescription><![CDATA[
-		Cannot critically hit.
+		无法暴击。
 	]]></criticalDescription>
 	
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] strong, serpent-like tail to constrict [npc2.name].
+		用[npc.her]强壮的蛇形尾巴缠绕[npc2.name]。
 	]]></movePredictionDescriptionWithTarget>
 	
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] strong, serpent-like tail to constrict [npc.her] target.
+		用[npc.her]强壮的蛇形尾巴缠绕目标。
 	]]></movePredictionDescriptionNoTarget>
 	
 	<performMove>
 		<execute><![CDATA[
-			[npc.Name] [npc.verb(lurch)] forwards and [npc.verb(coil)] [npc.her] strong, serpent-like tail around [npc2.name]!
+			[npc.Name]向前猛冲并用蛇形尾巴缠住[npc2.name]！
 			#IF(npc2.hasStatusEffect(SE_TAIL_RESTRAIN_3))
 				[##npc2.setHealth(0)]
-				<br/>[style.italicsTerrible([npc2.NameIsFull] now totally constricted by [npc.namePos] tail, and as such [npc2.is] completely defeated!)]
+				<br/>[style.italicsTerrible([npc2.NameIsFull]被[npc.namePos]的尾巴完全束缚，[npc2.her]被完全打败了！)]
 			#ELSEIF(npc2.hasStatusEffect(SE_TAIL_RESTRAIN_2))
 				[##npc2.removeStatusEffectCombat(SE_TAIL_RESTRAIN_2)]
 				[##npc2.addStatusEffect(SE_TAIL_RESTRAIN_3, 10)]
-				<br/>[style.italicsTerrible([npc2.NameIsFull] almost totally constricted by [npc.namePos] tail, and as such [npc2.is] near to being completely defeated!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] tail-constricted again, [npc2.she] will be instantly defeated!)]
+				<br/>[style.italicsTerrible([npc2.NameIsFull]几乎完全被[npc.namePos]的尾巴束缚，[npc2.her]马上要被打败了！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再继续被尾巴束缚，[npc2.she]将立刻被击败！)]
 			#ELSEIF(npc2.hasStatusEffect(SE_TAIL_RESTRAIN_1))
 				[##npc2.removeStatusEffectCombat(SE_TAIL_RESTRAIN_1)]
 				[##npc2.addStatusEffect(SE_TAIL_RESTRAIN_2, 10)]
-				<br/>[style.italicsBad([npc2.NameIsFull] seriously constricted by [npc.namePos] tail, and as such [npc2.is] struggling to fight back!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] tail-constricted again, this effect will become extremely serious!)]
+				<br/>[style.italicsBad([npc2.NameIsFull]被[npc.namePos]的尾巴束缚牢固，[npc2.her]正在奋力反抗！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再继续被尾巴束缚，束缚会更加严重！)]
 			#ELSE
 				[##npc2.addStatusEffect(SE_TAIL_RESTRAIN_1, 10)]
-				<br/>[style.italicsBad([npc2.NameIsFull] partially constricted by [npc.namePos] tail, and as such [npc2.her] ability to fight back is impaired!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] tail-constricted again, this effect will become more serious!)]
+				<br/>[style.italicsBad([npc2.NameIsFull]被被[npc.namePos]的尾巴缠住，[npc2.her]的反抗能力受限！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再继续被尾巴束缚，束缚会更加严重！)]
 			#ENDIF
 		]]></execute>
 		<critDescription><![CDATA[

@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[The tag sewn into the inside reads "Made for cool cats by DSG Tanning Corp".]]></authorTag>
+		<authorTag><![CDATA[内侧缝着一个标签印着“DSG制革公司，专为酷佬打造。”]]></authorTag>
 
 		<value>1200</value> 
 
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[women's leather jacket]]></name>
+		<name><![CDATA[女款皮夹克]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[women's leather jackets]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[女款皮夹克]]></namePlural> 
 
-		<description><![CDATA[A biker-style leather jacket in a feminine cut. Goes well with too much hair gel and a switchblade.]]></description> 
+		<description><![CDATA[一件女式剪裁的摩托车风格的皮夹克。穿着者常涂太多的发胶和随身佩戴弹簧刀。]]></description> 
 
 		<physicalResistance>2</physicalResistance> 
 
@@ -90,51 +89,49 @@
 	</coreAtributes>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] jacket.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] jacket.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] practically [npc.verb(rip)] off [npc2.namePos] jacket.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]脱下[npc.her]的夹克。
+]]></self>
+		<other><![CDATA[
+		[npc.Name]脱下[npc2.namePos]的夹克。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]几乎扯下了[npc2.namePos]的夹克。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] on [npc.her] jacket.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the jacket's sleeves and [npc.verb(pull)] the rest of it over [npc2.her] shoulders.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] [npc2.arms] through the jacket's sleeves and [npc.verb(yank)] the rest of it over [npc2.her] shoulders.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉上[npc.her]的夹克。
+]]></self>
+		<other><![CDATA[[npc.Name]引导[npc2.namePos][npc2.arms]穿过夹克的袖子，把夹克套在[npc2.her]的肩膀上。]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]强行拉着[npc2.namePos]的[npc2.arms]穿过夹克的袖子，把夹克套在[npc2.her]的肩膀上。
+		]]></otherRough>
 	</replacementText>
 
 	<replacementText type="UNZIPS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up [npc.her] jacket.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up [npc2.namePos] jacket.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(zip)] up [npc2.namePos] jacket.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉上[npc.her]的夹克拉链。
+]]></self>
+		<other><![CDATA[
+		[npc.Name]拉上[npc2.namePos]的夹克的拉链。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地拉上[npc2.namePos]的夹克的拉链。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] [npc.her] jacket.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] [npc2.namePos] jacket.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] the zipper on [npc2.namePos] jacket open.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]拉下[npc.her]的夹克的拉链。
+]]></self>
+		<other><![CDATA[
+		[npc.Name]拉开[npc2.namePos]的夹克的拉链。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]扣开[npc2.namePos]夹克上的拉链。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

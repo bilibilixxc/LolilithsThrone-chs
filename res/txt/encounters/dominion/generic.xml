@@ -1,149 +1,149 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="ALLEY_FIND_PACKAGE"><![CDATA[
 	<p>
-		As you walk down yet another narrow passage, you notice a brown paper package lying innocently beside a metal bin. It looks as though it's still sealed, and even from a casual glance you can tell that it isn't any old rubbish. You can't see any signs of a trap, and the package looks to be completely abandoned, so you decide to take a closer look.
+		当你走过又一条狭窄的小巷时，你注意到一个棕色的纸包裹无辜地躺在金属垃圾桶旁。即便只是匆匆一瞥，你也能看出那不是什么旧垃圾，它仍被完好封印着。你看不到任何陷阱的迹象，而且这个包裹看上去被完全遗弃了，因此你决定上前去检查一番。
 	</p>
 	<p>
-		You bend down to see that it's a square, medium-sized box, covered in brown packaging paper and sealed with sticky tape.  The label on the side has been smeared by some sort of liquid, leaving it totally illegible. A musky smell suddenly fills your nostrils, and you realise that the liquid is in fact sticky white cum. As you wonder what series of events led to this package being abandoned here, you notice that there's splatters of cum all over the floor and up part of the wall. There's no way to find out who the package was originally intended for, so, not wanting it to go to waste, you gingerly peel back the brown paper to reveal: 
+		你弯下腰去查看，那是个被棕色包裹纸包着，用胶带封好的方方正正的中型盒子。盒子侧面的标签被某种液体弄脏了，你分辨不出上面写了什么。直到一股麝香气味突然充满了你的鼻腔，你这才意识到那液体实际上是一些黏糊糊的白色精液。正当你思考着是什么原因令这个包裹被遗弃在这里时，你注意到墙上和地上到处都是飞溅的精液。事到如今已经无法知道这个包裹原本是给谁的了，为了不让它被浪费，你小心翼翼地剥开包裹纸，露出了里面的：
 	</p>
 	<p style='text-align:center;'>
 		<b>[#SPECIAL_PARSE_0]</b>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CANAL_FIND_PACKAGE"><![CDATA[
 	<p>
-		As you continue [pc.walking] down the side of the canal, you suddenly spot a small, plastic-wrapped cardboard box floating in the water. Due to the fact that it hasn't sunk to the bottom of the canal, you realise that it must still be fully sealed, and even from a casual glance you can tell that it isn't any old rubbish. You can't see any signs of a trap, and as the package looks to be completely abandoned, you decide to fish it out of the water and take a closer look at it.
+		当你继续沿着运河边[pc.walking]的时候，你突然发现水中漂浮着一个塑料包装的小纸箱。鉴于它并没有沉入河底，你判断出它应该是密封完好的，而且即便是不经意间的一瞥，你也能看出那并不是什么旧垃圾。你看不出会有的任何陷阱，而且它看起来已经被完全遗弃了，所以你决定把它捞上来一探究竟。
 	</p>
 	<p>
-		Pulling it up onto the shore, you bend down to see that while the plastic wrap has protected the package's contents from being water-damaged, the label fixed to the side has not been so lucky, and has been smeared to the point of being rendered totally illegible. With no sign of its owner, nor any clue as to who it was originally intended for, you decide that the best thing to do it to take it for yourself. Pulling off the plastic wrapper, you open the cardboard box to reveal: 
+		将它捞到岸边，你俯下身去查看。塑料包装完美地保护了里面的容器，但贴在上面的标签就没那么幸运了，上面的字已经糊成了一片，完全看不出写的是什么。既看不出它的主人是谁，也无从得知原本的去向，你认为它最好的归宿就是在你手里。所以你拉开塑料包装，打开了里面的小纸箱，露出了：
 	</p>
 	<p style='text-align:center;'>
 		<b>[#SPECIAL_PARSE_0]</b>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HARPY_NESTS_FIND_ITEM"><![CDATA[
 	<p>
-		As you travel down the winding walkways, you suddenly catch sight of a flash of pink on the path ahead. Walking up to the splash of colour, you look down to see:
+		你沿着蜿蜒的通道继续前进着，忽然注意到道路前方出现一道粉光。你连忙上前，低头一看：
 	</p>
 	<p style='text-align:center;'>
 		<b>[#SPECIAL_PARSE_0]</b>
 	</p>
 	<p>
-		Either due to being dropped by a harpy flying overhead, or perhaps having rolled off the edge of the platform above you, the [#SPECIAL_PARSE_1] seems to be completely abandoned, with no clue as to who its original owner might be. You suppose that there'd be no harm in taking it for yourself...
+		或许是哪个哈比从头顶飞过时遗落的，又或者是从上面的平台边缘掉落下来，[#SPECIAL_PARSE_1]看上去确实没人要了，也找不到任何原主人的线索。你觉得自己捡走应该并无大碍……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOMINION_STREET_FIND_HAPPINESS"><![CDATA[
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			Making your way down the wide, deserted streets of Dominion, you make sure to keep a look-out for any sign of danger. The bright flash of purple-hued arcane lightning occasionally illuminates your surroundings, and it's just as one of these happens to strike that you spot something strange up ahead.
-		</p>
+	你在御城区空无一人的宽阔街道上前行时，依然时常留意着任何危险的迹象。紫色调的奥术闪电不时将周围照亮，而正在这道闪电劈落而下时，你发现前方有一些奇怪的东西。
+</p>
 		<p>
-			About [unit.lSizes(5000)] in front of you, standing alone in the middle of the road, is a small, silver-furred fox. It appears to have spotted you at the exact same moment that you saw it, and, raising its head, it turns to face in your direction.
-		</p>
+	在你面前大约[unit.lSizes(5000)]，一只银白色皮毛的小狐狸孤零零地站在大街中央。它似乎在你发现它的时候同样注意到了你，于是抬起头，向你的方向看来。
+</p>
 		<p>
-			For a moment, the two of you remain motionless as you size one another up. It doesn't look as though the arcane storm is having any effect on the small animal, and, given the nature of this world, you can't help but wonder if it possesses some sort of heightened intellect, or arcane power.
-		</p>
+	一时间，你们两个都一动不动地互相打量着对方。看起来奥术风暴并没有对这只小动物产生任何影响，而考虑到这个世界的本质，你不禁怀疑它是否拥有某种超凡的智力或奥术之力。
+</p>
 		<p>
-			You don't have much time to ponder this matter further, however, as the fox suddenly starts trotting towards you. It doesn't display any malice or hint of aggression in its stride, and, not one to be intimidated by such a small, cute creature, you stand your ground and wait for it to approach.
-		</p>
+	不过你没时间继续思考这个问题了，因为那只狐狸突然向你小跑过来。它没有表现出任何恶意，步履中也没有丝毫攻击性，你可不会被这样一只小巧可爱的动物吓倒，于是你站在原地等待它靠近。
+</p>
 		<p>
-			As it gets closer, you see that its eyes are a marvellous shade of bright blue, and, kneeling down to encourage it to approach, you can't help but smile as it walks right up to you and nudges its head into your hands. Letting out a little laugh, you playfully stroke and scratch the silver fox's ears, before moving down to ruffle the soft fur around its neck. As you do so, you feel that there's a band of soft fabric around the animal's neck, and, tilting your head to take a closer look, you see that the fox is wearing a cute little collar. A round, metallic tag is attached to the front, and, tilting it to the light, you see that it reads:
-		</p>
+	等到它走得更近一些，你发现那狐狸的眼睛是一种奇妙的亮蓝色，你半跪下来，鼓励它继续上前。它走到你面前，用脑袋在你的[pc.hand]蹭了起来，你见状不禁露出了笑容。你发出一阵轻笑，俏皮地抚摸、抓挠着银狐的耳朵，然后又去揉搓脖子上柔软的绒毛。这时你突然感觉到这只动物的脖子上有一条柔软的布带，歪头仔细一看，你才发现它还戴着一个可爱的小项圈。项圈前挂着圆形的金属标签，对着光线看，上面写着：
+</p>
 		<p style='text-align:center'>
-			<i>Happiness;<br/>Please take good care of me!</i>
-		</p>
+	<i>欢欣<br/>请好好照顾我！</i>
+</p>
 		<p>
-			After a little while of stroking and playing with the silver fox, you stand back up and get ready to carry on your way. Much to your surprise, Happiness instantly moves to follow you, and, as you continue walking down Dominion's empty streets, the fox shows no sign of leaving your side...
-		</p>
+	又对着这只银狐抚摸玩耍了一会儿后，你站起身准备继续前行。没想到“欢欣”立刻跟上了你的脚步。你继续在御城区空无一人的街道上前进，而这只狐狸却也丝毫没有离开你身边的迹象……
+</p>
 		<p style='text-align:center'>
-			[style.italicsExcellent(You've found Happiness!)]
-		</p>
+	[style.italicsExcellent(你找到了“欢欣”！)]
+</p>
 	#ELSE
 		<p>
-			Making your way down the bustling, ever-busy streets of Dominion, you make sure to keep a look-out for anything of interest that may cross your path. Weaving your way through the throngs of shoppers and passersby, you suddenly spot something strange through a gap in the crowds up ahead.
-		</p>
+	你走在御城区繁忙热闹的大街上，四处搜寻着路上有趣的事情。你从购物者和路人的簇拥中穿梭而出，突然在前方人群的缝隙中发现了一个奇怪的东西。
+</p>
 		<p>
-			About [unit.lSizes(5000)] in front of you, standing alone in the middle of the road, is a small, silver-furred fox. It appears to have spotted you at the exact same moment that you saw it, and, raising its head, it turns to face in your direction.
-		</p>
+	在你面前大约[unit.lSizes(5000)]，一只银白色皮毛的小狐狸孤零零地站在大街中央。它似乎在你发现它的时候同样注意到了你，于是抬起头，向你的方向看来。
+</p>
 		<p>
-			For a moment, the two of you remain motionless as you size one another up. It doesn't look as though the small animal is in any way perturbed by the people hurrying all around it, and, given the nature of this world, you can't help but wonder if it possesses some sort of heightened intellect, or arcane power.
-		</p>
+	一时间，你们两个都一动不动地互相打量着对方。这只小动物看起来丝毫没有受到周围匆忙人群的干扰，考虑到这个世界的本质，你不禁怀疑它是否拥有某种超凡的智力或奥术之力。
+</p>
 		<p>
-			You don't have much time to ponder this matter, however, as the fox suddenly starts trotting towards you. It doesn't display any malice or hint of aggression in its stride, and, not one to be intimidated by such a small, cute creature, you stand your ground and wait for it to approach.
-		</p>
+	不过你没时间继续思考这个问题了，因为那只狐狸突然向你小跑过来。它没有表现出任何恶意，步履中也没有丝毫攻击性，你可不会被这样一只小巧可爱的动物吓倒，于是你站在原地等待它靠近。
+</p>
 		<p>
-			As it gets closer, you see that its eyes are a marvellous shade of bright blue, and, kneeling down to encourage it to approach, you can't help but smile as it walks right up to you and nudges its head into your hands. Letting out a little laugh, you playfully stroke and scratch the silver fox's ears, before moving down to ruffle the soft fur around its neck. As you do so, you feel that there's a band of soft fabric around the animal's neck, and, tilting your head to take a closer look, you see that the fox is wearing a cute little collar. A round, metallic tag is attached to the front, and, tilting it to the light, you see that it reads:
-		</p>
+	等到它走得更近一些，你发现那狐狸的眼睛是一种奇妙的亮蓝色，你半跪下来，鼓励它继续上前。它走到你面前，用脑袋在你的[pc.hand]蹭了起来，你见状不禁露出了笑容。你发出一阵轻笑，俏皮地抚摸、抓挠着银狐的耳朵，然后又去揉搓脖子上柔软的绒毛。这时你突然感觉到这只动物的脖子上有一条柔软的布带，歪头仔细一看，你才发现它还戴着一个可爱的小项圈。项圈前挂着圆形的金属标签，对着光线看，上面写着：
+</p>
 		<p style='text-align:center'>
-			<i>Happiness;<br/>Please take good care of me!</i>
-		</p>
+	<i>欢欣<br/>请好好照顾我！</i>
+</p>
 		<p>
-			After a little while of stroking and playing with the silver fox, you stand back up and get ready to carry on your way. Much to your surprise, Happiness instantly moves to follow you, and, as you continue walking down Dominion's bustling streets, the fox shows no sign of leaving your side...
-		</p>
+	又对着这只银狐抚摸玩耍了一会儿后，你站起身准备继续前行。没想到“欢欣”立刻跟上了你的脚步。你继续在御城区繁忙的街道上前进，而这只狐狸却也丝毫没有离开你身边的迹象……
+</p>
 		<p style='text-align:center'>
-			[style.italicsExcellent(You've found Happiness!)]
-		</p>
+	[style.italicsExcellent(你找到了“欢欣”！)]
+</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOMINION_STREET_PILL_HANDOUT_MOTHER"><![CDATA[
 	<p>
-		As you walk down Dominion's wide boulevard, an exceptionally happy-looking [#SPECIAL_PARSE_0] bounces up in front of you, blocking your way. After taking note of the fact that she looks to be having the time of her life, you observe that she has a large, rounded tummy, and is quite clearly heavily pregnant. Before you can ask her to move aside, she exclaims, in a voice just as bubbly and enthusiastic as you'd imagine, [genericFemale.speech(Isn't Mother's week just the most wonderful time of year?! I'm already expecting [#SPECIAL_PARSE_1]! I couldn't be happier!)]
-	</p>
+	你走在御城区宽阔的大道上，一个看上去喜气洋洋的[#SPECIAL_PARSE_0]突然从你面前蹦了出来。你注意到她似乎正高兴，原来是小腹已经圆圆地鼓起，显然已经怀孕好一段时间了。还没等你出口借道，她却叫了起来，正是你想象中活力四射的语气，[genericFemale.speech(母亲周就是一整年最美妙的时光了，对不对？！我这个可是[#SPECIAL_PARSE_1]！我真是太高兴了！)]
+</p>
 	<p>
-		With this unsolicited information now having been delivered to you, the [#SPECIAL_PARSE_0] reaches into the wicker basket which she's carrying, before grabbing a handful of little purple pills and forcefully thrusting them into your [pc.hands].
-		#IF(pc.isFeminine())
-			#IF(pc.isVisiblyPregnant())
-			 [genericFemale.speech(Already got a bun or two in the oven, I see! Well, once you've got them popped out, you can use these pills to make sure that you'll quickly get knocked up again!)]
-			#ELSE
-			 [genericFemale.speech(Here you go, hun! Pop one of these, and give one to the next stud who fucks you, and you're sure to become a mommy!)]
-			#ENDIF
+	那[#SPECIAL_PARSE_0]自顾自地说完之后，便伸进背后背着的柳条栏里，拿出一把紫色的药丸，强塞进你[pc.hands]里。
+	#IF(pc.isFeminine())
+		#IF(pc.isVisiblyPregnant())
+		[genericFemale.speech(我知道哦，已经有一两个仔了吧！等你生完之后，用上这些药，很快就能再怀上了！)]
 		#ELSE
-			 [genericFemale.speech(Here you go, stud! Get your next fuck to swallow one of these, and you do the same, and you're sure to make her into a mommy!)]
+		[genericFemale.speech(拿好了，宝贝！自己吃一颗，让干你的那个种马吃一颗，你铁定能当上妈妈！)]
 		#ENDIF
-	</p>
+	#ELSE
+		[genericFemale.speech(拿好了，种马！自己吃一颗，再喂你下一个要操的家伙一颗，让她当上妈妈轻而易举！)]
+	#ENDIF
+</p>
 	<p>
-		Before you can reply, the excitable [#SPECIAL_PARSE_0] suddenly catches sight of her next target, and as she darts away into the crowd, she calls out, [genericFemale.speech(There's no charge for the pills! Just make sure to use them!)]
-	</p>
+	你还没来得及回答，[#SPECIAL_PARSE_0]便迫不及待地寻找另一个目标，冲向人群中，大喊起来，[genericFemale.speech(药丸免费送咯！一定要记得用！)]
+</p>
 	<p>
-		With nothing to be done except pocketing the pills for another time, you continue on your way...
-	</p>
-	]]>
-	</htmlContent>
+	你除了将药丸塞进口袋备用外无事可做，便继续你的旅程……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOMINION_STREET_PILL_HANDOUT_FATHER"><![CDATA[
 	<p>
-		As you walk down Dominion's wide boulevard, a tall, handsome [#SPECIAL_PARSE_0] suddenly steps up in front of you, blocking your way. Before you can ask him to step aside, he grins, and in a deep, booming voice, declares, [genericMale.speech(Father's week is the best time of year, isn't it?! I've already knocked up a dozen or so mothers-to-be!)]
-	</p>
+	你走在御城区宽阔的大道上，一个看上去又高又帅的[#SPECIAL_PARSE_0]挡在了你的面前。没等你出口借道，他便笑了起来，用深沉而磁性的声音宣告道，[genericMale.speech(父亲周绝对是一年里最好的一段时光，不是吗？！我已经造就十几位准妈妈了！)]
+</p>
 	<p>
-		With this unsolicited information now having been delivered to you, the [#SPECIAL_PARSE_0] reaches into the bum bag which he's got strapped around his waist, before grabbing a handful of little purple pills and forcefully thrusting them into your [pc.hands].
-		#IF(pc.isFeminine())
-			#IF(pc.isCoverableAreaExposed(CA_PENIS) && pc.hasPenisIgnoreDildo())
-			 [genericMale.speech(Here you go, babe! I see you're packing, so just pop one of these before you give your next fuck a nice big creampie, and you're sure to become a father!)]
-			#ELSE
-			 [genericMale.speech(Here you go, babe! Just get your next fuck to pop one of these before he gives you a creampie, and you're sure to make him a father!
-				 I'd take the time to knock up you up myself, but I've got these pills to hand out!)]
-			#ENDIF
+	那[#SPECIAL_PARSE_0]自顾自地说完之后，便伸进腰间的挎包里，拿出一把紫色的小药丸，强塞进你[pc.hands]里。
+	#IF(pc.isFeminine())
+		#IF(pc.isCoverableAreaExposed(CA_PENIS) && pc.hasPenisIgnoreDildo())
+		[genericMale.speech(拿好了，宝贝！我看你已经迫不及待了，下次把对面灌成美美的泡芙之前，先吃一片，你铁定能当上爸爸！)]
 		#ELSE
-			 [genericMale.speech(Here you go, stud! Just pop one of these before you give your next fuck a nice big creampie, and you're sure to become a father!)]
+		[genericMale.speech(拿好了，宝贝！下次把对面灌成美美的泡芙之前，先吃一片，你铁定能当上爸爸！
+			我真想抽空让你也怀上，但我还得发药丸呢！)]
 		#ENDIF
-	</p>
+	#ELSE
+		[genericMale.speech(拿好了，种马！下次把对面灌成美美的泡芙之前，先吃一片，你铁定能当上爸爸！)]
+	#ENDIF
+</p>
 	<p>
-		Before you can reply, the boisterous [#SPECIAL_PARSE_0] suddenly catches sight of his next target, and as he strides away into the crowd, he calls out, [genericMale.speech(There's no charge for the pills! Just make sure to use them!)]
-	</p>
+	你还没来得及回答，[#SPECIAL_PARSE_0]便迫不及待地寻找另一个目标，大步跨进人群中，大喊起来，[genericMale.speech(药丸免费送！一定要记得用！)]
+</p>
 	<p>
-		With nothing to be done except pocketing the pills for another time, you continue on your way...
-	</p>
-	]]>
-	</htmlContent>
+	你除了将药丸塞进口袋备用外无事可做，便继续你的旅程……
+</p>
+	
+	]]></htmlContent>
 	
 </dialogue>

@@ -76,7 +76,7 @@ public class EnforcerHQDialogue {
 		Main.game.getNpc(Brax.class).setLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SLAVERY_ADMINISTRATION, true);
 	}
 
-	public static final DialogueNode EXTERIOR = new DialogueNode("Enforcer HQ", "Enforcer HQ", false) {
+	public static final DialogueNode EXTERIOR = new DialogueNode("执法者总部", "执法者总部", false) {
 		@Override
 		public int getSecondsPassed() {
 			return DominionPlaces.TRAVEL_TIME_STREET;
@@ -88,7 +88,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Enter", "Cross the grounds and enter the Enforcer HQ.", PlaceType.ENFORCER_HQ_ENTRANCE.getDialogue(false)){
+				return new Response("进入", "穿过场地进入执法者总部。", PlaceType.ENFORCER_HQ_ENTRANCE.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_ENTRANCE, false);
@@ -98,16 +98,16 @@ public class EnforcerHQDialogue {
 			} else if(index==2) {
 				if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_2) {
 					if(Main.game.getHourOfDay()<16 || Main.game.getHourOfDay()>=18) {
-						return new Response("Elle",
-								"Betray Wes by waiting for Elle to leave work and telling her everything..."
-									 +"<br/>You can only do this at the time when Elle is expected to leave work, which is [style.italicsMinorBad([units.time(16)]-[units.time(18)])].",
+						return new Response("埃勒",
+								"背叛韦斯，等埃勒下班后将一切都告诉她……"
+									 +"<br/>你只能在埃勒下班的时候做这件事，也就是[style.italicsMinorBad([units.time(16)]-[units.time(18)])]之间",
 								null);
 					}
 					
-					return new Response("Elle", "Betray Wes by waiting for Elle to leave work and telling her everything...", WesQuest.APPROACH_ELLE);
+					return new Response("埃勒", "背叛韦斯，等埃勒下班后将一切都告诉她……", WesQuest.APPROACH_ELLE);
 				}
 				if(Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_WES)) {
-					return new Response("Enter (Requisitions)", "Cross the grounds and enter the Enforcer HQ via the Enforcer entrance.", PlaceType.ENFORCER_HQ_ENFORCER_ENTRANCE.getDialogue(false)){
+					return new Response("进入(征用区)", "穿过场地，通过执法者入口进入总部。", PlaceType.ENFORCER_HQ_ENFORCER_ENTRANCE.getDialogue(false)){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_ENFORCER_ENTRANCE, false);
@@ -176,7 +176,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Exit", "Leave the Enforcer HQ.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)){
+				return new Response("离开", "离开执法者总部。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_ENFORCER_HQ, false);
@@ -264,7 +264,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode GUARDED_DOOR = new DialogueNode("Guarded door", "", true) {
+	public static final DialogueNode GUARDED_DOOR = new DialogueNode("有安保的门", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 20;
@@ -281,7 +281,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1 && isTravelDisabled()) {
-				return new Response("Step back", "You don't really see much option other than to do as the Enforcer says.", PlaceType.ENFORCER_HQ_WAITING_AREA.getDialogue(false)) {
+				return new Response("退开", "除了照执法者说的去做，你不觉得还有别的选择。", PlaceType.ENFORCER_HQ_WAITING_AREA.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "GUARDED_DOOR_STEP_BACK"));
@@ -306,7 +306,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Step back", "There's nothing else for you to do other than step back from the locked door...", CORRIDOR) {
+				return new Response("退开", "除了从锁着的门前退开，你不觉得还有别的选择……", CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "LOCKED_DOOR_STEP_BACK"));
@@ -337,7 +337,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1 && isTravelDisabled()) {
-				return new Response("Step back", "There's nothing else for you to do other than step back from the locked door...", CORRIDOR) {
+				return new Response("退开", "除了从锁着的门前退开，你不觉得还有别的选择……", CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "LOCKED_DOOR_STEP_BACK"));
@@ -350,7 +350,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode RECEPTION_DESK = new DialogueNode("Reception desk", "", true) {
+	public static final DialogueNode RECEPTION_DESK = new DialogueNode("前台", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -363,12 +363,12 @@ public class EnforcerHQDialogue {
 			
 			if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_3_WES) {
 				long days = 7-((Main.game.getMinutesPassed()-Main.game.getDialogueFlags().getSavedLong(WesQuest.QUEST_COMPLETION_MINUTES_TIMER_ID))/(60*24));
-				UtilText.addSpecialParsingString(Util.intToString((int) days)+" day"+(days==1?"":"s"), true);
+				UtilText.addSpecialParsingString(Util.intToString((int) days)+"天", true);
 				sb.append(UtilText.parseFromXMLFile("characters/dominion/wes", "RECEPTION_DESK_WES"));
 				
 			} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_3_ELLE) {
 				long days = 7-((Main.game.getMinutesPassed()-Main.game.getDialogueFlags().getSavedLong(WesQuest.QUEST_COMPLETION_MINUTES_TIMER_ID))/(60*24));
-				UtilText.addSpecialParsingString(Util.intToString((int) days)+" day"+(days==1?"":"s"), true);
+				UtilText.addSpecialParsingString(Util.intToString((int) days)+"天", true);
 				sb.append(UtilText.parseFromXMLFile("characters/dominion/wes", "RECEPTION_DESK_ELLE"));
 			}
 			
@@ -378,8 +378,8 @@ public class EnforcerHQDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.isWorkTime()) {
 				if(index==0) {
-					return new Response("Step back",
-							"As there's nobody here to talk to, there's nothing else to be done but step away from the desk.",
+					return new Response("退开",
+							"没有可以交谈的人，只能从台前退开。",
 							WAITING_AREA) {
 						@Override
 						public void effects() {
@@ -389,15 +389,15 @@ public class EnforcerHQDialogue {
 					
 				} else if(index==5) {
 					if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_2) {
-						return new Response("Anonymous tip", "You'll have to return while Candi is at work if you wanted to deposit the arcane recorder here.", null);
+						return new Response("匿名密报", "你需要等到坎迪工作时才能把奥术录像机存放在这里。", null);
 					}
 				}
 				return null;
 			}
 			
 			if(index==0) {
-				return new Response("Step back",
-						"Tell Candi that you'll be back later and step away from her desk, allowing her to continue applying her makeup.",
+				return new Response("退开",
+						"告诉坎迪你过会儿再来，然后从台前推开，让她继续化妆。",
 						WAITING_AREA) {
 					@Override
 					public void effects() {
@@ -416,8 +416,8 @@ public class EnforcerHQDialogue {
 			if(Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_BUYING_BRAX)) {
 				if(index==1) {
 					if(Main.game.getSecondsPassed()-Main.game.getDialogueFlags().getSavedLong(CandiReceptionist.CANDI_SEX_TIMER_ID)>60*60*12) {
-						return new ResponseSex("Help Candi",
-								"Agree to help Candi deal with her overwhelming horniness.",
+						return new ResponseSex("帮助坎迪",
+								"同意帮坎迪解决性欲过剩的问题。",
 								null, null, null, null, null, null,
 								true,
 								true,
@@ -437,8 +437,8 @@ public class EnforcerHQDialogue {
 						};
 						
 					} else {
-						return new Response("Help Candi",
-								"You've recently helped Candi to deal with her overwhelming horniness, but it's only going to be a matter of hours before she's begging to have sex with you again...",
+						return new Response("帮助坎迪",
+								"你最近已经帮过坎迪解决性欲过剩的问题了，但是下一次她乞求你跟她做爱不过也就是几个小时的事……",
 								null);
 					}
 				}
@@ -447,7 +447,7 @@ public class EnforcerHQDialogue {
 				if(Main.game.getNpc(Brax.class).isSlave() && Main.game.getNpc(Brax.class).getOwner().equals(Main.game.getNpc(CandiReceptionist.class))) {
 					if (index == 1) {
 						if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.feminisedBrax)) {
-							return new ResponseSex("Punish [brax.name]", "Have dominant sex with [brax.name].",
+							return new ResponseSex("惩罚[brax.name]", "与[brax.name]进行支配式性爱。",
 									false, false,
 									new SMStanding(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotStanding.STANDING_DOMINANT)),
@@ -463,7 +463,7 @@ public class EnforcerHQDialogue {
 							};
 							
 						} else if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.bimbofiedBrax)) {
-							return new ResponseSex("Punish [brax.name]", "Have dominant sex with [brax.name].",
+							return new ResponseSex("惩罚[brax.name]", "与[brax.name]进行支配式性爱。",
 									false, false,
 									new SMStanding(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotStanding.STANDING_DOMINANT)),
@@ -479,7 +479,7 @@ public class EnforcerHQDialogue {
 							};
 							
 						} else {
-							return new ResponseSex("Punish [brax.name]", "Have dominant sex with [brax.name].",
+							return new ResponseSex("惩罚[brax.name]", "与[brax.name]进行支配式性爱。",
 									false, false,
 									new SMStanding(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotStanding.STANDING_DOMINANT)),
@@ -497,7 +497,7 @@ public class EnforcerHQDialogue {
 						
 					} else if (index == 2) {
 						if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.feminisedBrax)) {
-							return new ResponseSex("Get punished by [brax.name]", "Get [brax.name] to take out [brax.his] frustration on you.", Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
+							return new ResponseSex("被[brax.name]惩罚", "让[brax.name]在你的身上释放怒火。", Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 									null, Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(), null, null, null,
 									true, false,
 									new SMBraxDoggy(
@@ -514,12 +514,12 @@ public class EnforcerHQDialogue {
 							};
 							
 						} else {
-							return new Response("Get punished by [brax.name]", "[brax.Name] is too submissive to punish you. If you want to have sex with [brax.him], you'll have to take charge.", null);
+							return new Response("被[brax.name]惩罚", "[brax.Name]已经过于顺从，无法再惩罚你。如果你想跟[brax.him]做爱，就必须主导。", null);
 						}
 						
 					} else if (index == 3) {
 						if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.feminisedBrax)) {
-							return new Response("Feminise [brax.name]", "Transform [brax.name] into a wolf-girl.", INTERIOR_SECRETARY_BRAX_FEMINISE){
+							return new Response("雌化[brax.name]", "将[brax.name]转化为狼女。", INTERIOR_SECRETARY_BRAX_FEMINISE){
 								@Override
 								public void effects() {
 									Main.game.getDialogueFlags().setFlag(DialogueFlagValue.seenBraxAfterQuest, true);
@@ -527,7 +527,7 @@ public class EnforcerHQDialogue {
 							};
 							
 						} else if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.bimbofiedBrax)) {
-							return new Response("Bimbofy [brax.name]", "Transform [brax.name] into a brain-dead bimbo.", INTERIOR_SECRETARY_BRAX_BIMBOFY){
+							return new Response("让[brax.name]变成无脑大胸", "将[brax.name]转化为脑子空空的无脑大胸。", INTERIOR_SECRETARY_BRAX_BIMBOFY){
 								@Override
 								public void effects() {
 									Main.game.getDialogueFlags().setFlag(DialogueFlagValue.seenBraxAfterQuest, true);
@@ -537,10 +537,10 @@ public class EnforcerHQDialogue {
 						
 					} else if (index == 4) {
 						if(!Main.game.getPlayer().isHasSlaverLicense()) {
-							return new Response("Buy [brax.name]", "As you don't have a slaver license, you're unable to own slaves, and so couldn't buy [brax.name] even if Candi was willing to sell [brax.herHim].", null);
+							return new Response("购买[brax.name]", "由于你没有贩奴许可，无法拥有奴隶，所以就算坎迪想卖[brax.name]你也买不了。", null);
 						}
 						if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_BUYING_BRAX)) {
-							return new Response("Buy [brax.name]", "Ask Candi if she'd be willing to sell [brax.name] to you.", BUYING_BRAX_INITIAL){
+							return new Response("购买[brax.name]", "询问坎迪是否愿意把[brax.name]卖给你。", BUYING_BRAX_INITIAL){
 								@Override
 								public void effects() {
 									Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().startQuest(QuestLine.SIDE_BUYING_BRAX));
@@ -552,7 +552,7 @@ public class EnforcerHQDialogue {
 						} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_START
 								|| Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_DELIVER_PERFUME) {
 							if(Main.game.getPlayer().hasItemType(ItemType.CANDI_PERFUMES)) {
-								return new Response("Deliver perfumes", "Give Candi the bottles of perfume which you collected from Kate.", BUYING_BRAX_PERFUME_DELIVERY){
+								return new Response("交出香水", "把你从凯特那边拿来的香水交给坎迪。", BUYING_BRAX_PERFUME_DELIVERY){
 									@Override
 									public void effects() {
 										Main.game.getPlayer().removeItemByType(ItemType.CANDI_PERFUMES);
@@ -562,13 +562,13 @@ public class EnforcerHQDialogue {
 								};
 								
 							} else {
-								return new Response("Deliver perfumes", "You need to collect Candi's perfumes from the shop 'Succubi's Secrets' in the Shopping Arcade before being able to deliver them to her!", null);
+								return new Response("交出香水", "你需要先从购物中心处“魅魔的秘密”拿到坎迪的香水，才能交给她！", null);
 							}
 							
 						} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_LOLLIPOPS
 								|| Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_DELIVER_LOLLIPOPS) {
 							if(Main.game.getPlayer().hasItemType(ItemType.CANDI_CONTRABAND)) {
-								return new Response("Deliver lollipops", "Give Candi the box of contraband lollipops which you retrieved from the Harpy Nests' Enforcer checkpoint.", BUYING_BRAX_LOLLIPOP_DELIVERY){
+								return new Response("交出棒棒糖", "把你从哈比之巢执法点取回来的违禁品棒棒糖交给坎迪。", BUYING_BRAX_LOLLIPOP_DELIVERY){
 									@Override
 									public void effects() {
 										Main.game.getPlayer().removeItemByType(ItemType.CANDI_CONTRABAND);
@@ -578,13 +578,13 @@ public class EnforcerHQDialogue {
 								};
 								
 							} else {
-								return new Response("Deliver lollipops", "You need to collect the box of lollipops from the Harpy Nests' Enforcer checkpoint before being able to deliver them to her!", null);
+								return new Response("交出棒棒糖", "你需要先从哈比之巢执法点取回来违禁品棒棒糖，才能交给她！", null);
 							}
 							
 						} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_LIPSTICK
 								|| Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_DELIVER_LIPSTICK) {
 							if(Main.game.getPlayer().hasItemType(ItemType.CANDI_HUNDRED_KISSES)) {
-								return new Response("Deliver lipstick", "Give Candi the box of 'A Hundred Kisses'.", BUYING_BRAX_LIPSTICK_DELIVERY){
+								return new Response("交出口红", "将那盒“百万之吻”交给坎迪。", BUYING_BRAX_LIPSTICK_DELIVERY){
 									@Override
 									public void effects() {
 										Main.game.getPlayer().removeItemByType(ItemType.CANDI_HUNDRED_KISSES);
@@ -596,7 +596,7 @@ public class EnforcerHQDialogue {
 								};
 								
 							} else {
-								return new Response("Deliver lipstick", "You need to collect the box of 'A Hundred Kisses' from the shop 'Ralph's Snacks' in the Shopping Arcade before being able to deliver them to her!", null);
+								return new Response("交出口红", "你需要先从购物中心处“拉尔夫小吃店”拿到那盒“百万之吻”，才能交给她！", null);
 							}
 						}
 					}
@@ -605,10 +605,10 @@ public class EnforcerHQDialogue {
 			} else if(Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_C_WOLFS_DEN && !Main.game.getDialogueFlags().values.contains(DialogueFlagValue.accessToEnforcerHQ)) {
 				if (index == 1) {
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_BIMBO)) {
-						return new Response("Greet Candi", "Like, ohmygosh, she's so pretty and stuff!", INTERIOR_SECRETARY_BIMBO);
+						return new Response("跟坎迪打招呼", "哎呀，天哪，她怎么这么漂亮呢！", INTERIOR_SECRETARY_BIMBO);
 						
 					} else {
-						return new Response("Greet Candi", "Get her attention by saying hello.", INTERIOR_SECRETARY,
+						return new Response("跟坎迪打招呼", "打声招呼，引起她的注意。", INTERIOR_SECRETARY,
 								null, null, null, null, null);
 					}
 				}
@@ -617,36 +617,36 @@ public class EnforcerHQDialogue {
 
 			if(index==5) {
 				if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_2) {
-					return new Response("Anonymous tip",
-							"Ask Candi if there's a way to anonymously submit evidence of criminal activity, so that you can deposit the arcane recorder containing the footage of Elle dealing with the gang.",
+					return new Response("匿名密报",
+							"询问坎迪是否能匿名提交犯罪证据，这样就能将内有埃勒与帮派交易录像的奥术录像机存放在这里了。",
 							WesQuest.CANDI_ELLE_EVIDENCE);
 				}
 				
 				if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_3_WES) {
 					if(Main.game.getMinutesPassed()-Main.game.getDialogueFlags().getSavedLong(WesQuest.QUEST_COMPLETION_MINUTES_TIMER_ID)<60*24*7) {
 						long days = 7-((Main.game.getMinutesPassed()-Main.game.getDialogueFlags().getSavedLong(WesQuest.QUEST_COMPLETION_MINUTES_TIMER_ID))/(60*24));
-						return new Response("Wes",
-								"It hasn't yet been a week since you anonymously handed in the arcane recorder, so you shouldn't ask to see Wes just yet..."
-									+ "<br/>You need to wait another [style.italicsMinorBad("+days+" day"+(days==1?"":"s")+")]!",
+						return new Response("韦斯",
+								"你将奥术录像机匿名提交还没有一个周，所以不应该去见韦斯……"
+									+ "<br/>你还需要再等[style.italicsMinorBad("+days+"天"+")]！",
 								null);
 						
 					} else {
-						return new Response("Wes",
-								"As it's now been more than a week since you anonymously handed in the arcane recorder, you could tell Candi that you're here to see Wes.",
+						return new Response("韦斯",
+								"你将奥术录像机匿名提交已经一周有余，可以告诉坎迪你是来见韦斯的了。",
 								WesQuest.INTRO_HQ_WES);
 					}
 					
 				} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_3_ELLE) {
 					if(Main.game.getMinutesPassed()-Main.game.getDialogueFlags().getSavedLong(WesQuest.QUEST_COMPLETION_MINUTES_TIMER_ID)<60*24*7) {
 						long days = 7-((Main.game.getMinutesPassed()-Main.game.getDialogueFlags().getSavedLong(WesQuest.QUEST_COMPLETION_MINUTES_TIMER_ID))/(60*24));
-						return new Response("Elle",
-								"It hasn't yet been a week since you anonymously handed in the arcane recorder, so you shouldn't ask to see Elle just yet..."
-									+ "<br/>You need to wait another [style.italicsMinorBad("+days+" day"+(days==1?"":"s")+")]!",
+						return new Response("埃勒",
+								"你将奥术录像机匿名提交还没有一个周，所以不应该去见埃勒……"
+									+ "<br/>你还需要再等[style.italicsMinorBad("+days+"天"+")]！",
 								null);
 						
 					} else {
-						return new Response("Elle",
-								"As it's now been more than a week since you anonymously handed in the arcane recorder, you could tell Candi that you're here to see Elle.",
+						return new Response("埃勒",
+								"你将奥术录像机匿名提交还没有一个周，所以不应该告诉坎迪你是来见埃勒的。",
 								WesQuest.INTRO_HQ_ELLE);
 					}
 				}
@@ -656,7 +656,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -666,7 +666,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("[brax.name]", "Tell her that you're here to see [brax.name].", INTERIOR_SECRETARY_BRAX){
+				return new Response("[brax.name]", "告诉她你是来找[brax.name]的。", INTERIOR_SECRETARY_BRAX){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().values.add(DialogueFlagValue.accessToEnforcerHQ);
@@ -674,8 +674,8 @@ public class EnforcerHQDialogue {
 				};
 
 			} else if (index == 0) {
-				return new Response("Step back",
-						"Tell Candi that you'll be back later and step away from her desk, allowing her to continue applying her makeup.",
+				return new Response("退开",
+						"告诉坎迪你过会儿再来，然后从台前推开，让她继续化妆。",
 						WAITING_AREA) {
 						@Override
 						public void effects() {
@@ -690,7 +690,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY_BRAX = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY_BRAX = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -700,8 +700,8 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Step back",
-						"Now that you've got what you were after, you can step away from Candi's desk, allowing the bimbo enforcer to continue applying her makeup.",
+				return new Response("退开",
+						"你已经得到了需要的东西，可以从前台退开，让这胸大无脑的执法者继续化妆了。",
 						WAITING_AREA) {
 						@Override
 						public void effects() {
@@ -713,7 +713,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY_BIMBO = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY_BIMBO = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -723,7 +723,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Like, [brax.name] and stuff", "Tell her that you're here to see [brax.name].", INTERIOR_SECRETARY_BRAX_BIMBO){
+				return new Response("[brax.name]啥的", "告诉她你是来找[brax.name]的。", INTERIOR_SECRETARY_BRAX_BIMBO){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().values.add(DialogueFlagValue.accessToEnforcerHQ);
@@ -731,8 +731,8 @@ public class EnforcerHQDialogue {
 				};
 
 			} else if (index == 0) {
-				return new Response("Step back",
-						"Tell Candi that you'll be back later and step away from her desk, allowing her to continue applying her makeup.",
+				return new Response("退开",
+						"告诉坎迪你过会儿再来，然后从台前推开，让她继续化妆。",
 						WAITING_AREA) {
 						@Override
 						public void effects() {
@@ -747,7 +747,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY_BRAX_BIMBO = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY_BRAX_BIMBO = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -757,8 +757,8 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Step back",
-						"Now that you've got what you were after, you can step away from Candi's desk, allowing the bimbo enforcer to continue applying her makeup.",
+				return new Response("退开",
+						"你已经得到了需要的东西，可以从前台退开，让这胸大无脑的执法者继续化妆了。",
 						WAITING_AREA) {
 						@Override
 						public void effects() {
@@ -770,7 +770,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY_BRAX_FEMINISE = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY_BRAX_FEMINISE = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -780,8 +780,8 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Bree",
-						"You and Candi force-feed [brax.name] his own potion, turning him into a wolf-girl named Bree.",
+				return new Response("布瑞",
+						"你和坎迪强行给[brax.name]灌下了他自己的药水，把他变成了一个叫做布瑞的狼女。",
 						INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED,
 						Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_GIVING),
 						Fetish.FETISH_TRANSFORMATION_GIVING.getAssociatedCorruptionLevel(),
@@ -791,7 +791,7 @@ public class EnforcerHQDialogue {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.feminisedBrax, true);
-						Main.game.getNpc(Brax.class).setName(new NameTriplet("Bree", "Bree", "Bree"));
+						Main.game.getNpc(Brax.class).setName(new NameTriplet("布瑞", "布瑞", "布瑞"));
 						
 						Main.game.getNpc(Brax.class).removeFetish(Fetish.FETISH_DOMINANT);
 						Main.game.getNpc(Brax.class).addFetish(Fetish.FETISH_SUBMISSIVE);
@@ -819,8 +819,8 @@ public class EnforcerHQDialogue {
 				};
 				
 			} if (index == 2) {
-				return new Response("Bree (futa)",
-						"You and Candi force-feed [brax.name] his own potion, turning him into a wolf-girl futanari named Bree.",
+				return new Response("布瑞(扶她)",
+						"你和坎迪强行给[brax.name]灌下了他自己的药水，把他变成了一个叫做布瑞的狼女扶她。",
 						INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED,
 						Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_GIVING),
 						Fetish.FETISH_TRANSFORMATION_GIVING.getAssociatedCorruptionLevel(),
@@ -830,7 +830,7 @@ public class EnforcerHQDialogue {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.feminisedBrax, true);
-						Main.game.getNpc(Brax.class).setName(new NameTriplet("Bree", "Bree", "Bree"));
+						Main.game.getNpc(Brax.class).setName(new NameTriplet("布瑞", "布瑞", "布瑞"));
 						
 						Main.game.getNpc(Brax.class).removeFetish(Fetish.FETISH_DOMINANT);
 						Main.game.getNpc(Brax.class).addFetish(Fetish.FETISH_SUBMISSIVE);
@@ -858,7 +858,7 @@ public class EnforcerHQDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Leave", "Change your mind and leave [brax.name] the way he is.",  WAITING_AREA) {
+				return new Response("离开", "改变主意，不要动[brax.name]。", WAITING_AREA) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "INTERIOR_SECRETARY_BRAX_FEMINISE_CHANGE_MIND"));
@@ -872,7 +872,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -882,7 +882,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Sex with [brax.name]", "Have sex with [brax.name].",
+				return new ResponseSex("跟[brax.name]做爱", "跟[brax.name]做爱。",
 						false, false,
 						new SMStanding(
 							Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotStanding.STANDING_DOMINANT)),
@@ -893,7 +893,7 @@ public class EnforcerHQDialogue {
 						UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED_SEX"));
 				
 			} else if(index==2) {
-				return new Response("Decline", "Decide against having sex with Bree.", WAITING_AREA) {
+				return new Response("拒绝", "决定还是不跟布瑞做爱。", WAITING_AREA) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED_NO_SEX"));
@@ -907,7 +907,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY_BRAX_BIMBOFY = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY_BRAX_BIMBOFY = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -917,7 +917,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Brandi", "Transform Bree into a brain-dead bimbo, called Brandi.", INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED,
+				return new Response("布兰迪", "将布瑞转化为脑子空空的无脑大胸，布兰迪。", INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED,
 						Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_GIVING),
 						Fetish.FETISH_TRANSFORMATION_GIVING.getAssociatedCorruptionLevel(),
 						null,
@@ -926,7 +926,7 @@ public class EnforcerHQDialogue {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().values.add(DialogueFlagValue.bimbofiedBrax);
-						Main.game.getNpc(Brax.class).setName(new NameTriplet("Brandi", "Brandi", "Brandi"));
+						Main.game.getNpc(Brax.class).setName(new NameTriplet("布兰迪", "布兰迪", "布兰迪"));
 						
 						Main.game.getNpc(Brax.class).addFetish(Fetish.FETISH_BIMBO);
 						
@@ -950,7 +950,7 @@ public class EnforcerHQDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Brandi (futa)", "Transform Bree into a brain-dead futanari bimbo, called Brandi.",
+				return new Response("布兰迪(扶她)", "将布瑞转化为脑子空空的无脑大胸扶她，布兰迪。",
 						INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED,
 						Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_GIVING),
 						Fetish.FETISH_TRANSFORMATION_GIVING.getAssociatedCorruptionLevel(),
@@ -960,7 +960,7 @@ public class EnforcerHQDialogue {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().values.add(DialogueFlagValue.bimbofiedBrax);
-						Main.game.getNpc(Brax.class).setName(new NameTriplet("Brandi", "Brandi", "Brandi"));
+						Main.game.getNpc(Brax.class).setName(new NameTriplet("布兰迪", "布兰迪", "布兰迪"));
 						
 						Main.game.getNpc(Brax.class).addFetish(Fetish.FETISH_BIMBO);
 						
@@ -985,7 +985,7 @@ public class EnforcerHQDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Leave", "Change your mind and leave Bree the way she is.", WAITING_AREA) {
+				return new Response("离开", "改变主意，不要动布瑞。", WAITING_AREA) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "INTERIOR_SECRETARY_BRAX_BIMBOFY_CHANGE_MIND"));
@@ -999,7 +999,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED = new DialogueNode("Enforcer HQ", "", true) {
+	public static final DialogueNode INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED = new DialogueNode("执法者总部", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1009,7 +1009,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Sex with Brandi", "Have sex with Brandi.",
+				return new ResponseSex("跟布兰迪做爱", "跟布兰迪做爱。",
 						true, false,
 						new SMStanding(
 							Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotStanding.STANDING_DOMINANT)),
@@ -1020,7 +1020,7 @@ public class EnforcerHQDialogue {
 						UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED_SEX"));
 
 			} else if(index==2) {
-				return new Response("Decline", "Decide against having sex with Brandi.",  WAITING_AREA) {
+				return new Response("拒绝", "决定还是不跟布兰迪做爱。",  WAITING_AREA) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED_NO_SEX"));
@@ -1034,7 +1034,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Finished", "Return to the Reception desk.", false) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("完事", "返回前台。", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().setLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_WAITING_AREA);
@@ -1052,7 +1052,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_CANDI = new DialogueNode("Finished", "Step back around to the other side of the reception desk.", true) {
+	public static final DialogueNode AFTER_SEX_CANDI = new DialogueNode("完事", "退回到前台的另一侧。", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "AFTER_SEX_CANDI");
@@ -1060,10 +1060,10 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
+				return new Response("离开",
 						Main.game.getNpc(CandiReceptionist.class).isSatisfiedFromLastSex()
-							?"Leave Candi to get herself cleaned up and back out into the waiting area."
-							:"Leave Candi to finish herself off and back out into the waiting area.",
+							?"让坎迪自己清理好身子，退回等待区。"
+							:"让坎迪自己解决，退回等待区。",
 						WAITING_AREA) {
 					@Override
 					public void effects() {
@@ -1075,7 +1075,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 	
-	public static final DialogueNode BUYING_BRAX_INITIAL = new DialogueNode("Reception desk", "", true) {
+	public static final DialogueNode BUYING_BRAX_INITIAL = new DialogueNode("前台", "", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "BUYING_BRAX_INITIAL");
@@ -1087,7 +1087,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 
-	public static final DialogueNode BUYING_BRAX_PERFUME_DELIVERY = new DialogueNode("Reception desk", "", true) {
+	public static final DialogueNode BUYING_BRAX_PERFUME_DELIVERY = new DialogueNode("前台", "", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "BUYING_BRAX_PERFUME_DELIVERY");
@@ -1099,7 +1099,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 
-	public static final DialogueNode BUYING_BRAX_LOLLIPOP_DELIVERY = new DialogueNode("Reception desk", "", true) {
+	public static final DialogueNode BUYING_BRAX_LOLLIPOP_DELIVERY = new DialogueNode("前台", "", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "BUYING_BRAX_LOLLIPOP_DELIVERY");
@@ -1111,7 +1111,7 @@ public class EnforcerHQDialogue {
 		}
 	};
 
-	public static final DialogueNode BUYING_BRAX_LIPSTICK_DELIVERY = new DialogueNode("Reception desk", "", true) {
+	public static final DialogueNode BUYING_BRAX_LIPSTICK_DELIVERY = new DialogueNode("前台", "", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "BUYING_BRAX_LIPSTICK_DELIVERY");
@@ -1121,8 +1121,8 @@ public class EnforcerHQDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getSecondsPassed()-Main.game.getDialogueFlags().getSavedLong(CandiReceptionist.CANDI_SEX_TIMER_ID)>60*60*12) {
-					return new ResponseSex("Help Candi",
-							"Agree to help Candi deal with her overwhelming horniness.",
+					return new ResponseSex("帮助坎迪",
+							"同意帮坎迪解决性欲过剩的问题。",
 							null, null, null, null, null, null,
 							true,
 							true,
@@ -1135,12 +1135,12 @@ public class EnforcerHQDialogue {
 							UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "START_SEX_CANDI"));
 					
 				} else {
-					return new Response("Help Candi", "You've recently helped Candi to deal with her overwhelming horniness, but it's only going to be a matter of hours before she's begging to have sex with you again...", null);
+					return new Response("帮助坎迪", "你最近已经帮过坎迪解决性欲过剩的问题了，但是下一次她乞求你跟她做爱不过也就是几个小时的事……", null);
 				}
 				
 			} else 
 				if(index==2) {
-					return new Response("Refuse", "Refuse to help Candi with her overwhelming horniness, before stepping back into the waiting area.", WAITING_AREA) {
+					return new Response("拒绝", "拒绝帮助坎迪解决性欲过剩的问题，退回等待区。", WAITING_AREA) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/enforcerHQ/generic", "HELP_CANDI_DENIED"));
@@ -1164,7 +1164,7 @@ public class EnforcerHQDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Exit", "Leave the Enforcer HQ.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)){
+				return new Response("离开", "离开执法者总部。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_ENFORCER_HQ, false);
@@ -1198,10 +1198,10 @@ public class EnforcerHQDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Ring bell",
+					return new Response("响铃",
 							Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_WES, Quest.WES_3_ELLE)
-								?"Ring the bell on the requisitions desk to get Elle's attention."
-								:"Ring the bell on the requisitions desk to get Wes's attention.",
+								?"按响请购台的铃铛，引起埃勒的注意。"
+								:"按响请购台的铃铛，引起韦斯的注意。",
 							WesQuest.REQUISITIONS_INTERACTION);
 				}
 			}

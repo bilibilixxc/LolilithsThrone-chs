@@ -1,234 +1,234 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="SLAVERY_ADMINISTRATION_EXTERIOR"><![CDATA[
 	<p>
-		A large metal sign, bearing the words 'Slavery Administration', is prominently displayed above the entrance to the building before you. Its clean, white-washed walls and heavy oak doors set this particular establishment apart from the rest of the stores in Slaver Alley.
+		一块大而醒目的金属招牌挂在你面前这座建筑的入口处，上面刻着“奴隶管理局”。洁白的粉刷墙壁及厚重的橡木门使这间特殊机构与奴隶巷中的其他商店区分开来。
 	</p>
 	<p>
-		Noticing a little information board attached to one side of the entrance, you walk up and read what it says. From what you can gather, it appears as though this is an official government building, in which all matters relating to the ownership of slaves, licenses, and businesses dealing in slave-trading are handled. A little piece of paper has been stuck to the bottom of the board, which reads; <i>'Slaver licenses are not being issued!'</i>
+		你注意到入口一侧有块小信息板，于是上前阅读。从你能够了解到的信息来看，这里似乎是一栋官方政府大楼，一切与奴隶所有权、许可以及奴隶贸易相关的事务都在这里办理。信息板底部贴了一小张纸，上面写着：<i>“贩奴许可暂停发放！”</i>
 	</p>
 	<p>
-		To one side of this information board, a dozen posters have been plastered over the side of the building. You could take a closer look at these posters,
+		你可以仔细看看信息板一旁的墙上贴的那些海报，
 		#IF(pc.isHasSlaverLicense())
-			 or, as you're in possession of a slaver license, you could enter the Slavery Administration building and make use of its services.
+			也可以直接进入奴隶管理局使用服务，因为你已拥有贩奴许可。
 		#ELSE
-			 or, even though it's doubtful that you'd be able to make use of any of its services, you could enter the Slavery Administration building.
+			或者直接进入奴隶管理局，尽管可能无法使用任何服务。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVERY_ADMINISTRATION_POSTERS"><![CDATA[
 	<p>
-		Deciding to take a closer look at the posters which are plastered over the wall of the Slavery Administration building, you [pc.step] over to stand in front of them. It immediately becomes apparent why these posters have been allowed to remain on the side of a government building, for all except one of them are declarations of victory for the state.
+		你决定仔细查看一下贴在奴隶管理局大楼墙上的海报，于是站到了海报前。你立刻明白了，为什么这些海报能够保留在政府建筑的一侧，因为除了其中一张，其他所有海报都是国家的胜利宣言。
 	</p>
 	<p>
-		As you cast your gaze over the posters, you find yourself looking at mug shots of dangerous-looking criminals. Their crimes are listed below their portraits, and range from theft and public disorder to #IF(game.isNonConEnabled())rape#ELSEassault#ENDIF and treason. The punishment for every one of these individuals is listed as lifetime enslavement, and as the capitalised words 'JUSTICE SERVED' have been stamped in purple letters over each one, you realise that these criminals have all been caught and enslaved.
+		你将目光落到海报上，才发现上面都是许多危险罪犯的照片。肖像下列满了对应的罪名，从盗窃、违反公共秩序，到#IF(game.isNonConEnabled())强奸#ELSE袭击#ENDIF和叛国罪。上面这些家伙的处罚均为终身奴役，而且每个上面都盖着厚重的紫色印章，写着“正义执行”，原来这些罪犯都已经绳之以法，受到了奴役。
 	</p>
 	<p>
-		The only poster which isn't of this format is one that displays an idyllic scene of a happy family living in the countryside. The writing beneath promises a better life for anyone willing to leave Dominion and take the voyage over the 'Endless Sea' to the land beyond.
+		唯一一个并非该样式的海报上面，竟是田园牧歌般的场面，一家人幸福地生活在乡村。下方的配字承诺，任何人只要自愿离开御城区，踏上“无尽之海”的航程，前往更远的土地，就肯定能过上更美好的生活。
 		#IF(game.isPlotDiscovered())
-			 Knowing that this land must be mainland Europe, you can't help but doubt that the emigrating citizens of Dominion will have a life there similar to the one shown on the poster.
+			你很清楚所谓土地就是欧洲大陆了，不禁怀疑移民到那里的御城区市民到底能否过上海报宣传的生活。
 		#ELSE
-			 Taking another look at the scene displayed upon the poster, you can't help but wonder what this promised land is like in reality.
+			你又瞧了一眼海报上的场景，不禁怀疑起所谓的土地是否真的存在。
 		#ENDIF
 	</p>
 	<p>
-		Having seen all there is, you [pc.step] away from the posters and wonder what to do next...
+		你全部看过之后，便从海报旁退开，思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVERY_ADMINISTRATION"><![CDATA[
 	#IF(pc.isHasSlaverLicense())
 		<p>
-			The heavy oak doors of the 'Slavery Administration' building are wide open, and, stepping through the inviting entranceway, you find yourself standing in a cavernous entrance hall. Rows of marble pillars line the edges of the room, with little wooden benches interspersed between them. Two doors are set into the wall opposite you, with signs labelling them as 'Holding pens' and 'Offices'. The only other piece of furniture to be seen is a long, black-marble desk, behind which the black-haired cat-boy, [finch.name], is grinning at you with mischievous eyes.
-		</p>
+	“奴隶管理局”大楼那厚重的橡木门洞开着，穿过温馨的玄关后，便来到了宽阔的入口大厅。房间的边缘竖着一排大理石柱子，柱子中间都夹着一张小木凳。对面的墙上有两扇门，门上贴着“保管室”和“办公室”的标志。此外唯一的家具则是一张长长的黑色大理石桌，桌子后面的那只黑发的猫男[finch.name]正面带笑容，用调皮的眼神看着你。
+</p>
 		<p>
-			[finch.speech(Ah, if it isn't my <i>favourite</i> customer, [pc.name]!)] he shouts, beckoning you over to the desk. [finch.speech(What can I help you with today?)]
-		</p>
+	[finch.speech(啊，这不是我<i>最爱</i>的顾客，[pc.name]吗！)]他大声喊道，招手示意你来桌前。[finch.speech(今天我有什么可以帮到您的吗？)]
+</p>
 		<p>
-			Walking forwards, you return [finch.namePos] greeting, [pc.speech(Hi, [finch.name].)]
-		</p>
+	你走上前去，向[finch.namePos]也打了个招呼，[pc.speech(嗨，[finch.name]。)]
+</p>
 		<p>
-			[finch.speech(As an owner of a slaver license, I'm pleased to offer you my services,)] he says, standing up to reveal his tiny feline cock. [finch.speech(I've got several slave collars for sale, each of which have all the required paperwork already completed.)]
-		</p>
+	[finch.speech(您是拥有贩奴许可的，我很高兴为您服务，)]他站起身来，那根并不大的猫肉棒展露在你面前。[finch.speech(我现在有几个奴隶项圈卖，每个都已经准备好了文件。)]
+</p>
 		<p>
-			As you come to a halt in front of the black marble desk, [finch.name] grins expectantly at you, [finch.speech(Or, if you'd like, we can discuss the management and handling of your property. Remember, any new slaves you capture will be delivered here first. All the costs of collection and transport are covered in the cost of each slave collar, so just let me know if you want to have your slaves moved elsewhere.)]
-		</p>
+	你在黑色大理石桌前停下，[finch.name]的笑容中满是期待，[finch.speech(或者说，如果您愿意，我们也可以讨论一下如何管理和处置您的财产。请记住，您捕获的任何新奴隶都将首先送来这里。收集和运输的所有费用已经包含在每个奴隶项圈的成本中，所以如果您想把奴隶转移到其他地方，就请告诉我。)]
+</p>
 		<p>
-			Thanking [finch.name], you wonder what you do next...
-		</p>
+	你谢过[finch.name]，思索起接下来该做什么……
+</p>
 	#ELSEIF(!game.getDialogueFlags().hasFlag(FLAG_finchIntroduced))
 		<p>
-			The heavy oak doors of the 'Slavery Administration' building are wide open, and, stepping through the inviting entranceway, you find yourself standing in a large, cavernous entrance hall. Rows of marble pillars line the edges of the room, with little wooden benches interspersed between them. Two doors are set into the wall opposite you, with signs labelling them as 'Holding pens' and 'Offices'. The only other piece of furniture to be seen is a long, black-marble desk, behind which a black-haired cat-boy is grinning at you with mischievous eyes.
-		</p>
+	“奴隶管理局”大楼那厚重的橡木门洞开着，穿过温馨的玄关后，便来到了宽阔的入口大厅。房间的边缘竖着一排大理石柱子，柱子中间都夹着一张小木凳。对面的墙上有两扇门，门上贴着“保管室”和“办公室”的标志。此外唯一的家具则是一张长长的黑色大理石桌，桌子后面是一只黑发的猫男，正面带笑容，用调皮的眼神看着你。
+</p>
 		<p>
-			[finch.speech(Welcome!)] he shouts, beckoning you over to the desk. [finch.speech(Can I help you with anything?)]
-		</p>
+	[finch.speech(欢迎欢迎！)]他大声喊道，招手示意你来桌前。[finch.speech(有什么可以帮忙的吗？)]
+</p>
 		<p>
-			Walking forwards, you return the cat-boy's greeting, [pc.speech(Hello, I was just looking around.)]
-		</p>
+	你走上前去，向那猫男也打了个招呼，[pc.speech(你好，我只是随便看看。)]
+</p>
 		<p>
-			[finch.speech(I'm afraid that there's not really much to see here. All the <i>fun</i> happens in the holding cells, and they're off-limits. Unless you've got a slaver license, there's really not much I can offer you, except for a good day!)] he says, standing up and bowing a little. [finch.speech(Oh, where are my manners?! I'm [finch.name], the manager of the Slavery Administration. I keep petitioning my superiors to have the name changed to something a little more <i>exciting</i>, but they're quite set in their ways.)]
-		</p>
+	[finch.speech(那我恐怕您在这里没什么好看的。真正的<i>趣事</i>都在暂留室里呢，闲杂人等不得进入。除非您手持贩奴许可，不然我很难帮到您，只能祝您今天过得愉快了！)]他说着之前能起身来，微微鞠了一躬。[finch.speech(哦，真是失礼？！我叫[finch.name]，奴隶管理局的经理。我一直在向上级请愿，希望能把名字改得更<i>刺激</i>一点，但他们还是跟木头一样。)]
+</p>
 		<p>
-			[pc.speech(I'm [pc.name],)] you answer, returning the cat-boy's disarming smile. As [finch.name] continues grinning at you, your eyes are drawn down to his groin, where you see that his choice of crotchless chaps and briefs have left his tiny cat-like cock completely exposed.
-		</p>
+	[pc.speech(我是[pc.name]，)]你回应道，也向那猫男还了一个善意的微笑。[finch.name]仍旧面带笑容，你不经意瞄了一眼他的下体，他穿着开档的短裤和内裤，让那并不算大的猫肉棒展露无遗。
+</p>
 		<p>
-			Noticing your downwards glance, [finch.name] lets out a little laugh, and you can't help but notice that there's a slightly unsettling edge to his voice, [finch.speech(I like having easy access! You never know when a disobedient slave needs to be put in their place...)]
-		</p>
+	[finch.name]注意到你的眼睛向下撇，轻声地笑了几下，你不禁注意到他的声音中略带了一丝不安，[finch.speech(我喜欢这么穿，这样比较方便！毕竟你永远猜不到什么时候会有不听话的奴隶，需要教训一下……)]
+</p>
 		<p>
-			Due to your lack of a slaver license, [finch.name] is unable to offer you any services. As he sits back down, concealing his exposed groin behind the desk once more, you wonder if you should ask him about how to obtain one.
-		</p>
+	由于你并没有贩奴许可，[finch.name]不能为你提供服务。他再次坐了下去，用桌子挡住了那一览无余的下体，你思索起来是否应该问问他如何才能拿到许可。
+</p>
 	#ELSE
 		<p>
-			The heavy oak doors of the 'Slavery Administration' building are wide open, and, stepping through the inviting entranceway, you find yourself standing in a large, cavernous entrance hall. Rows of marble pillars line the edges of the room, with little wooden benches interspersed between them. Two doors are set into the wall opposite you, with signs labelling them as 'Holding pens' and 'Offices'. The only other piece of furniture to be seen is a long, black-marble desk, behind which the black-haired cat-boy, [finch.name], is grinning at you with mischievous eyes.
-		</p>
+	“奴隶管理局”大楼那厚重的橡木门洞开着，穿过温馨的玄关后，便来到了宽阔的入口大厅。房间的边缘竖着一排大理石柱子，柱子中间都夹着一张小木凳。对面的墙上有两扇门，门上贴着“保管室”和“办公室”的标志。此外唯一的家具则是一张长长的黑色大理石桌，桌子后面的那只黑发的猫男[finch.name]正面带笑容，用调皮的眼神看着你。
+</p>
 		<p>
-			[finch.speech(Hello again!)] he shouts, beckoning you over to the desk. [finch.speech(Can I help you with anything?)]
-		</p>
+	[finch.speech(又见面了！)]他大声喊道，招手示意你来桌前。[finch.speech(有什么可以帮忙的吗？)]
+</p>
 		<p>
-			Walking forwards, you return [finch.namePos] greeting, [pc.speech(Hello, I was just looking around.)]
-		</p>
+	你走上前去，向[finch.namePos]也打了个招呼，[pc.speech(你好，我只是随便看看。)]
+</p>
 		<p>
-			[finch.speech(I'm afraid that there's not really much to see here. All the <i>fun</i> happens in the holding cells, and they're off-limits. Unless you've got a slaver license, there's really not much I can offer you, except for a good day!)] he says, standing up to reveal his tiny feline cock.
-		</p>
+	[finch.speech(那我恐怕您在这里没什么好看的。真正的<i>趣事</i>都在暂留室里呢，闲杂人等不得进入。除非您手持贩奴许可，不然我很难帮到您，只能祝您今天过得愉快了！)]他站起身来，那根并不大的猫肉棒展露在你面前。
+</p>
 		<p>
-			Due to your lack of a slaver license, [finch.name] is unable to offer you any services. Throwing a grin your way, he sits back down, concealing his exposed groin behind the desk once more.
-		</p>
+	由于你并没有贩奴许可，[finch.name]不能为你提供服务。他向你投来一抹灿烂的笑容，就再次坐了下去，用桌子挡住了那一览无余的下体。
+</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVERY_ADMINISTRATION_ASK_ABOUT_SLAVER_LICENSE"><![CDATA[
 	<p>
-		Walking up to [finch.namePos] desk, you ask, [pc.speech(How do I get a slaver license? Is there some kind of form I need to fill out?)]
+		你走到[finch.namePos]桌前，问道：[pc.speech(我要怎么获得贩奴许可？有什么表格要填吗？)]
 	</p>
 	<p>
-		[finch.Name] leans back in his chair, grinning up at you. [finch.speech(Yeah, there's a form to fill out, <i>and</i> a fee of five-thousand flames to pay, but slaver licenses aren't handed out to just anyone. If you're looking to apply for one, you're going to have to join the waiting list. Last time I looked, I think the estimated wait time for new applicants is just over four years...)]
+		[finch.Name]靠在椅背上，冲你咧嘴一笑。[finch.speech(是的，有一份表格要填，<i>还有</i>五千火币的费用要付，但贩奴许可不是随便发给谁的。如果你想申请，就得加入等待名单。上次我查了一下，新申请者的等待时间估计要四年多……)]
 	</p>
 	<p>
-		[pc.speech(Four years?!)] you exclaim in disbelief. [pc.speech(Is there no other way to get one?)]
+		[pc.speech(四年？！)]你难以置信地尖叫，[pc.speech(还有别的办法吗？)]
 	</p>
 	<p>
-		[finch.speech(Well, unless you can get a letter of recommendation from someone who's already got a slaver license, then no, there's no other way. And if you had that, you wouldn't be asking, would you?)]
+		[finch.speech(唔，除非你能从已经拿到贩奴许可的人那获得推荐信，否则就没有其他办法了。如果你有推荐信，你就不会问了，对吧？)]
 	</p>
 	<p>
-		[finch.Name] grins up at you, and you can't help but notice the slightly threatening look in his [finch.eyeColour] cat-like eyes. You thank him for the information and step away from the desk, determined to go and ask for a letter of recommendation from Lilaya, the one person you know that can help you out.
+		[finch.Name]冲你咧嘴一笑，你不禁注意到他猫一样的[finch.eyeColour]眼睛里略带威胁的神情。你感谢他提供的信息，离开了办公桌，决心去找莉莱雅要一封推荐信，你知道她是唯一能帮你的人
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED"><![CDATA[
 	<p>
-		Walking up to [finch.namePos] desk, you place the letter of recommendation down in front of him. [pc.speech(I got a letter of recommendation from my aunt, so can I get that license now?)]
+		你走到[finch.namePos]桌旁，把推荐信放在他面前。[pc.speech(我从姨妈那里拿到了一封推荐信，那么我现在可以拿到那个执照了吗？)]
 	</p>
 	<p>
-		[finch.speech(Hah! It's not quite as easy as that, this just means that you're on the priority list, not that-)] [finch.name] starts explaining, but as he reads the signature at the bottom of your letter, he stops talking.
+		[finch.speech(哈！没那么简单，这只是说你在优先名单上，而不是——)][finch.name]开始解释，但当他读到你的信底部的签名时，突然不再说话。
 	</p>
 	<p>
-		[pc.speech(Is something wrong?)] you ask, noticing that all the colour has drained from his face.
+		[pc.speech(有什么不对吗？)]你问道，注意到他脸上的血色已经全部消失。
 	</p>
 	<p>
-		[finch.speech(Your aunt is <i>Lilaya</i>?)] he asks, putting the letter to one side. [finch.speech(Why didn't you say so earlier?! If you've got the five-thousand flame fee, I'll process your license right now!)]
+		[finch.speech(你姨妈是<i>莉莱雅</i>？)]他问道，把那封信放在一旁，[finch.speech(为什么不早说？！如果你有五千火币，我马上就给你办执照！)]
 	</p>
 	<p>
-		[pc.speech(Oh, great!)] you cheerily reply, handing over the money. [pc.speech(You know Lilaya then?)]
+		[pc.speech(哦，太棒了！)]你高兴地回复，把钱递了上去。[pc.speech(你认识莉莱雅？)]
 	</p>
 	<p>
-		[finch.Name] pulls out a large stack of forms from under his desk, and as he starts filling them out, he replies, [finch.speech(Of course! Anyone in any sort of business which deals with demons should know of all the elder lilin's recognised children. Lilaya is an especially notable individual, as she's one of only two half-demons to ever have been recognised by her elder lilin mother. Anyway, it's going to take me about fifteen minutes to fill out these forms, so you can wait on one of the benches if you'd like.)]
+		[finch.Name]从桌子底下拿出一大叠表格，一边开始填写一边回答道：[finch.speech(当然！和恶魔打交道的人，要知道所有莉琳长老认可的孩子。莉莱雅是特别值得注意的一个，因为她是仅有的两个被她的长老莉琳母亲承认的半恶魔之一。总之，我大概需要十五分钟来填写这些表格，如果你愿意，可以在长椅上等着。)]
 	</p>
 	<p>
-		Thankful for Finch's knowledge of, and apparent respect for, your demonic aunt, you walk over to one of the wooden benches at the edge of the room and take a seat. True to his word, [finch.name] takes just under fifteen minutes to work his way through the pile of forms, and once he's finished, he calls you back over to his desk.
+		感谢芬奇对你的恶魔姨妈的了解和明显的尊重，你走到房间边上的一张木凳上坐下。[finch.Name]果然不负众望，只用了不到十五分钟就把一堆表格处理完毕，他把你叫回办公桌前。
 	</p>
 	<p>
-		[finch.speech(Right, I just need your name and signature here, here, and here,)] he says, pointing to three different places on the forms. [finch.speech(Once you're done, I'll talk you through the rules and regulations.)]
+		[finch.speech(好，我需要你在这里，这里和这里签名，)]他说道，指着表格上三个不同的地方，[finch.speech(你做完之后，我会和你讲讲规章制度。)]
 	</p>
 	<p>
-		Quickly skimming over the forms to make sure that you're not signing your life away by mistake, you then sign in the places that [finch.name] points to. Once you're done, the cat-boy files the papers away beneath his desk, before producing a little checklist, titled <i>'Slavery rules & regulations'</i>.
+		你快速浏览了一下表格，你确保你的命没有被错误地签掉，然后在[finch.name]指出的地方签名。签完字后，猫男把这些文件收到他的桌子下面，然后拿出一张小清单，标题是<i>“奴隶制规章制度”</i>。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED_RULES"><![CDATA[
 	<p>
-		[finch.speech(So, before you run off and try to enslave the first person you meet, you need to be aware of the basics,)] [finch.name] states, pointing down at the checklist in front of him. [finch.speech(First of all, slaves are meant to wear a piece of enchanted clothing in order to clearly designate them as someone else's property. Slave collars are most regularly used for this purpose, and can only be purchased from here, at the Slavery Administration building. Although some slave owners allow their slaves to work without wearing a piece of enslavement clothing, we strongly advise against this. Runaway slaves who don't have their collars on are almost impossible to track down without great expense, so if you decide to take theirs off, don't come crying to me when they run away!)]
+		[finch.speech(所以，在你跑去试图抓你的第一个奴隶之前，你需要了解一些基本知识，)][finch.name]说着，指了指面前的清单：[finch.speech(首先，奴隶必须穿戴一件附魔衣物，以明确表明他们是他人的财产。奴隶项圈最常用于此目的，只能在奴隶管理局这里购买。虽然有些奴隶主允许他们的奴隶在不穿奴役服的情况下工作，但我们强烈建议不要这样做。逃跑的奴隶如果不戴项圈，不花大价钱几乎是不可能找到他们的，所以如果你决定把他们的项圈摘下来，当他们逃跑的时候可别来找我哭诉！)]
 	</p>
 	<p>
-		[pc.speech(Understood,)] you reply, nodding for Finch to continue.
+		[pc.speech(明白。)]你回应，点头示意芬奇继续。
 	</p>
 	<p>
-		[finch.speech(Now, you won't need to worry about this if you're only planning on buying and selling slaves, but if you're hoping to enslave people, then there are some <i>strict</i> limitations. You can only enslave two sorts of people; those who are willing, and those who have been marked for enslavement by Enforcers. Slave collars have a special enchantment in them that detects if the wearer falls into either one of those categories, so don't try and run around making just anyone into your slave!)] 
+		[finch.speech(现在，如果你只打算买卖奴隶，就不需要担心这个问题，但如果你希望奴役别人，那么就会有一些<i>严格</i>限制。你只能奴役两种人：一种是自愿者，另一种是被执法者标记为奴役对象的人。奴隶项圈上有一种特殊的魔法，可以检测佩戴者是否属于这两种人中的一种，所以不要想着把任何人都变成你的奴隶！)] 
 	</p>
 	<p>
-		[pc.speech(That makes sense,)] you reply.
+		[pc.speech(这很合理。)]你回应。
 	</p>
 	<p>
-		[finch.speech(Good. Now, assuming you're interested in enslaving people, the last thing you need to be aware of is what happens once you make your slave-to-be wear the enslavement clothing. As soon as you fit whatever clothing it may be into place, the collar's special enchantment will activate,)] [finch.name] says, grinning, [finch.speech(and if they're a suitable enslavement target, they'll be teleported right into the holding cells in this very building! Now, normally teleportation spells are limited to only the most powerful of arcane users, so you might be shocked the first time you see it!)]
+		[finch.speech(很好。现在，假设你对奴役别人感兴趣，需要注意的最后一件事，明白你的奴隶穿上奴役服后会发生什么。只要你给他衣服穿上，项圈的特殊魔法就会启动，)][finch.name]说着，咧嘴一笑[finch.speech(如果他们是合适的奴役目标，就会被直接传送到这里的拘留室！一般来说，只有最强大的奥术师才能施展传送法术，所以你第一次看到时可能会吓一跳！)]
 	</p>
 	<p>
-		[pc.speech(So I have to come here and pick up everyone I enslave?)] you ask.
+		[pc.speech(所以我要来这里接走我奴役的人？)]你问道。
 	</p>
 	<p>
-		[finch.speech(That's right, but I'm sure someone as important as you can simply send a messenger to come and collect them from the comfort of your own home. Although this system is a little inconvenient for all involved, we had to implement it a few years ago to counteract some nasty illegal enslavement practices. With this new system, we're making sure that all new slaves go through the proper channels.)]
+		[finch.speech(没错，但我相信，像你这么重量级的人，只需派个信使来，就能在自己家里舒舒服服地把他们领走。虽然这个系统对所有相关人员来说都有些不便，但为了抵制一些肮脏的非法奴役行为，我们不得不在几年前实施。有了这个新系统，我们就能确保所有新奴隶都来自正规渠道。)]
 	</p>
 	<p>
-		[finch.Name] picks up the last piece of paper you signed and holds it out for you to take. [finch.speech(That's all there really is to it. With this license, you're able to buy and sell slaves in any manner you like. The only restriction is on enslavement, which, as I said, can only be done to those who are willing, or those who are wanted by the Enforcers. Oh, and on that last note, there's usually no point in trying to enslave any demons you run into, as Enforcers only sign off on an enslavement order for the most troublesome and destitute demons in the city. Any demon with even a shred of respectability could, for all any Enforcer knows, be a lilin's favoured son or daughter, and before they know it, they'd be the one ending up in my cells instead of the demon!)]
+		[finch.Name]拿出你签的最后一张纸，递给你。[finch.speech(这就是它的全部内容。有了这个许可证，你就可以以任何方式买卖奴隶。唯一的限制是奴役方式，正如我所说，只能奴役自愿者或执法者通缉的人。对了，最后一点，通常情况下，你没有必要试图奴役你遇到的任何恶魔，因为执法者只对城里最麻烦、最穷困潦倒的恶魔签发奴役令。任何一个恶魔，哪怕有一丝体面，都有可能是莉琳最宠爱的儿子或女儿，在他们意识到之前，是他们而非恶魔会被关进我的牢房！)]
 	</p>
 	<p>
-		[pc.speech(I see,)] you say, wondering if any demons prowling the alleyways of Dominion have been marked for enslavement.
+		[pc.speech(我知道了。)]你说，想知道在御城区小巷里徘徊的恶魔是否被标记奴役。
 	</p>
 	<p>
-		[finch.speech(Normally, non-demons wouldn't even be permitted to own demonic slaves, but as you're related to Lilaya herself, I've gone ahead and marked your license as the extended coverage type, meaning that you'll get no trouble from any Enforcers if you do end up owning some demon slaves,)] Finch states, giving you a friendly wink before leaning back and crossing his arms. [finch.speech(One last thing; if you get soft and want to set your slave free, you're going to need a 'Freedom Certification' to do so. That's basically an official document that allows you to declare one of your slaves as being freed. Now, they don't come cheap, as we can't have criminals coming along to easily buy their convicted friends out of their punishment. If you can cough up enough flames, then you can buy them from me.)]
+		[finch.speech(通常情况下，非恶魔是不允许拥有恶魔奴隶的，但由于你和莉莱雅是亲戚，我已经把你的执照标记为扩展覆盖类型，也就是说，如果你最终拥有了一些恶魔奴隶，执法者也不会找你的麻烦，)]芬奇说道，友好地对你眨了眨眼，然后向后靠，双臂交叉。[finch.speech(最后一件事，如果你心软了，想让你的奴隶获得自由，你需要一份‘自由证明’才行。这是一份官方文件，允许你宣布你的一个奴隶获得自由。现在这些证明并不便宜，我们不能让罪犯轻易买通他们被定罪的朋友，让他们免受惩罚。如果你能拿出足够的火币，就可以从我这里买到它们。)]
 	</p>
 	<p>
-		Thanking him for explaining things to you, you put your new slaver license safely away, but before you're able to turn and leave, the cat-boy has some final words, [finch.speech(Now that you've got that license, I can sell you some slave collars if you'd like. I've also got a few more fun things in stock...)]
+		感谢他向你解释了这些事情，你把新的贩奴许可安全地收好，但在你转身离开之前，猫男最后说了几句话：[finch.speech(既然你已经拿到了执照，如果你愿意，我可以卖给你一些奴隶项圈。我还有一些更有趣的东西……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_FREEDOM_TALK -->
 	
 	<htmlContent tag="SLAVE_FREEDOM_TALK"><![CDATA[
 	<p>
-		Wanting to know what sort of process you'd have to go through to set a slave free, you ask Finch if you're able to simply let your slaves go if you don't want them anymore.
-	</p>
+	你想知道如果想要将奴隶放归自由，需要走什么流程，于是问芬奇，如果自己不想要了，能不能直接让奴隶离开。
+</p>
 	<p>
-		[finch.speech(That's not how it works,)] the cat-boy replies, [finch.speech(If you let your slave go, they're still registered with us as being a slave, so if an Enforcer patrol bumps into them, they're going to have a collar clasped around their neck and returned to you, along with a bill for their time and effort. Anyway, unless you've managed to convince someone to enter into a willing slave contract, your slaves are going to be criminals or other scum. You really want to set people like that free?)]
-	</p>
+	[finch.speech(事情并非如此，)]那猫男回答道，[finch.speech(如果您放奴隶离开，那在我们这里他依然注册为奴隶，如果有执法者巡逻时撞见他，就会在他脖子上重新锁上项圈，送回给您，一同到来的还有偿还他们的时间和精力的账单。话说回来，除非您能说服别人自愿签订奴隶契约，否则那些奴隶可都是罪犯和人渣。您真的想让这种人获得自由吗？)]
+</p>
 	<p>
-		Finch lets out a disapproving grunt as you reply by saying that it's a possibility, but despite his reaction, he tells you what you want to know, [finch.speech(Getting a slave freed requires you to go through the courts and get a Freedom Certification issued to the slave in question. Unless your slave's an important demon, that process is going to take at least a year to get through, and at the end of it you're more likely than not to have your request for your slave's freedom rejected. The state can't afford to be letting criminals back onto the streets all the time, can it? What would happen to society if that were to happen...)]
-	</p>
+	你回答说这也并无可能，芬奇却并不赞同，咕哝起来，尽管反应如此，他还是告诉了你想知道的事情，[finch.speech(要让奴隶重获自由，您需要通过法庭为奴隶申请自由证明。除非那奴隶是个身份高贵的恶魔，否则这个过程至少需要一年，而且最后申请还很可能会被驳回。国家总不能老是让罪犯重返街头吧？要是果真如此，这个社会会变成个什么样子……)]
+</p>
 	<p>
-		While he's been explaining this to you, Finch has been repeatedly glancing over at a nearby dog-boy who's been loitering within earshot of your conversation. As this stranger turns around and leaves, Finch's final sentence trails off, and he lowers his voice and hisses, [finch.speech(You want to free your slaves? I can get all the paperwork done right here from behind my desk, <i>and</i> register everything as being one-hundred percent official and legit. Of course, skipping over the whole judicial process isn't exactly legal, but if you rat me out then you'll be even more screwed than I will be; you'll have Lilaya's mother, an elder lilin, pissed at you for bringing shame to her family...)]
-	</p>
+	芬奇在向你解释的同时，却不停地瞥向附近的一个犬男，他一直在你们谈话范围内徘徊。趁着这个陌生人转身离开，芬奇断断续续地说出了最后一句话，他压低声音嘶吼着，[finch.speech(你真的想放了奴隶？我其实暗地里就能把所有文书办好，<i>而且</i>一切都会是百分百官方合法。当然，跳过整个司法程序并不完全合法，但如果你出卖了我，你会比我更惨；你会让莉莱雅的母亲——那个莉琳长老——整个家族都蒙羞，她肯定会对你大发雷霆……)]
+</p>
 	<p>
-		Realising that this is the only realistic way in which you'll be able to set any of your slaves free, you ask Finch how much it'll cost you.
-	</p>
+	你意识到如果你想要释放奴隶，这是唯一现实可行的方案，于是便问芬奇要多少钱。
+</p>
 	<p>
-		[finch.speech(You're a sharp one,)] Finch replies with a big grin on his face. Still keeping his voice down to barely louder than a whisper, he reveals, [finch.speech(I've got to grease some palms every time I do this, so these Freedom Certifications aren't going to come cheap. It's going to be at least [#SPECIAL_PARSE_0] flames, and that's not even including my cut. I'm not running a charity here, so you can add about fifty percent on top of that.)]
-	</p>
+	[finch.speech(你是懂的，)]芬奇顿时满面春光。他还是尽量压低声音，向你托出道，[finch.speech(每次我都要给其他人一些好处，所以这个‘自由证明’可不便宜。至少要[#SPECIAL_PARSE_0]火币，这还不算我的分成。我不是来这做慈善的，所以至少得往上加五成。)]
+</p>
 	<p>
-		At that moment, Finch's eyes flick over to track another stranger who's just entered the building, and he raises his voice to a normal volume to say, [finch.speech(Yeah, so anyway, just let me know if you want to buy anything. Is there anything else I can do for you?)]
-	</p>
-	]]>
-	</htmlContent>
+	这时，芬奇的目光转向了另一个刚刚进入大楼的陌生人，他提高了声音，用正常的音量说道，[finch.speech(没错，所以说如果您想买什么东西，就直接告诉我。有什么可以帮忙的吗？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_FREEDOM_TALK_END"><![CDATA[
 	<p>
-		Knowing that you can now purchase Freedom Certifications from Finch, you wonder what to do next...
+		你知道了可以从芬奇那里购买自由证明后，思索起来接下来该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_FREEDOM_TALK_END_START_ACCOMMODATION_QUEST"><![CDATA[
 	<p>
-		Knowing that you can now purchase Freedom Certifications from Finch, you wonder whether you'd be able to convince any slaves to stay with you as your guest after freeing them. Of course, that would require Lilaya's permission to house guests in her mansion, so you make a mental note to bring that up with her before wondering what to do next...
+		你知道了可以从芬奇那里购买自由证明后，思索起来你能否劝说获取自由的奴隶作为房客留在身边。当然，这需要莉莱雅先允许你在她的宅邸里接收房客，所以在思考接下来该怎么做之前，先记了下来，之后要问问她这个事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

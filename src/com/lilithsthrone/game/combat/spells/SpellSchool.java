@@ -11,78 +11,78 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum SpellSchool {
 
-	EARTH("earth",
+	EARTH("大地",
 			"<p>"
-				+ "Spells in the school of Earth are focused on manipulating both solid objects and pure waves of force."
+				+ "大地学派的法术专注于操纵固态物体和纯粹的力的波动。"
 			+ "</p>"
 			+ "<p>"
-				+ "As with all schools of the arcane, the vast majority of Earth practitioners are demons, and can earn a considerable salary by using their telekinetic powers to aid with construction and heavy lifting."
-				+ " Perhaps due to these lucrative applications, the school of Earth is the most widely-practised and popular of all the arcane schools."
+				+ "和其它学派一样，大地学派施法者大都是恶魔。他们可以使用念力来搬运重物、建造建筑，从而赚取可观的薪水。"
+				+ "或许是由于其报酬丰厚的实用性，大地学派是学习最为广泛、最受欢迎的一种奥术学派。"
 			+ "</p>"
 			+ "<p>"
-				+ "A prerequisite to harnessing Earth spells is the ability to freely manipulate solid, non-organic matter."
-				+ " Easily learned by anyone possessing a demon-strength aura, and outlined in the introduction of all Earth spell books, this ability allows the practitioner to change the colour and material of any object."
+				+ "驾驭土系法术的先决条件是能够自由操纵固体、非有机物质。"
+				+ "在所有土系法术书的导论中都会提到一种能力，拥有恶魔水平灵气的生物都可以轻松掌握，那便是允许施法者改变任意物体的颜色和材质。"
 			+ "</p>",
-			"Dye clothing and reforge weapons at will.",
+			"随意染色衣物、重铸武器。",
 			PresetColour.BASE_BROWN),
 
-	WATER("water",
+	WATER("激流",
 			"<p>"
-				+ "Spells in the school of Water are focused on infusing liquids with arcane energy in order to manipulate their movement and temperature."
+				+ "激流学派的法术专注于向液体中注入奥术能量，从而操纵其温度和运动。"
 			+ "</p>"
 			+ "<p>"
-				+ "As with all schools of the arcane, the vast majority of Water practitioners are demons, and mainly use their spells to assist with the maintenance of waterways, and to repair and install plumbing."
-				+ " Despite the lack of glamour, a student of Water can complete these tasks in a fraction of the time that it would take a regular person to do manually, allowing them to earn a considerable amount of money for their work."
+				+ "和其他学派一样，激流学派施法者大都是恶魔。他们可以用法术协助维护航路、维修或安装管道。"
+				+ "尽管不太优雅，但激流学派的学徒只需一小会儿就能完成这些任务，比普通人靠人力快得多，从而也能从工作中赚取不少钱财。"
 			+ "</p>"
 			+ "<p>"
-				+ "Students of the school of Water are able to effortlessly manipulate all fluids, allowing them to enchant any fluid-related potions without needing to expend arcane essences."
+				+ "激流学派的学徒能够轻而易举地控制所有流体，这使得他们不需要消耗奥术精华就可以附魔液体相关的药水。"
 			+ "</p>",
-			"All fluid-related enchantments are free.",
+			"所有液体相关的附魔均免费。",
 			PresetColour.BASE_AQUA),
 	
-	AIR("air",
+	AIR("大气",
 			"<p>"
-				+ "The school of air focuses on spells that allow the caster to manipulate the temperature and movement of gases."
+				+ "大气学派的法术专注于操纵气体的温度和运动。"
 			+ "</p>"
 			+ "<p>"
-				+ "As with all schools of the arcane, the vast majority of Air practitioners are demons, but, with not many opportunities to use their spells in day-to-day business,"
-					+ " their numbers are considerably lower than those of the schools of Earth and Water."
-				+ " The only regular application of Air spells is to increase or decrease the temperature of rooms, allowing the occupants to escape the cold of winter or the heat of summer."
+				+ "和其他学派一样，大气学派施法者大都是恶魔。但他们却没有多少机会将法术用于日常事务，"
+					+ "其人数相比大地学派或激流学派可以说是少之又少。"
+				+ "风系法术唯一的常规用途就是调控房间的温度，这使得住户能够躲避冬日的严寒或者夏日的酷暑。"
 			+ "</p>"
 			+ "<p>"
-				+ "Students of the school of Air are able to effortlessly control the temperature of air around them, making sure that they're never too hot or too cold."
+				+ "大气学派的学徒能够轻而易举地控制周身空气的温度，从来不会觉得太冷或太热。"
 			+ "</p>",
-			"Passive "+Attribute.HEALTH_MAXIMUM.getName()+" and "+Attribute.MANA_MAXIMUM.getName()+" regeneration is doubled.",
+			Attribute.HEALTH_MAXIMUM.getName()+"和"+Attribute.MANA_MAXIMUM.getName()+"的被动恢复速度加倍。",
 			PresetColour.BASE_BLUE_LIGHT),
 	
-	FIRE("fire",
+	FIRE("烈火",
 			"<p>"
-				+ "The school of fire, much as its name would suggest, is purely focused on summoning arcane fire."
+				+ "烈火学派，正如其名，纯粹专注于召唤奥术火焰。"
 			+ "</p>"
 			+ "<p>"
-				+ "While arcane fire is employed in smelting and other heat-intensive industries, its many combat applications has given the school of Fire a rather poor reputation in demon society, which regards it as distasteful and crude."
-				+ " Due to this, the only demons who choose to study the school of Fire are those who are interested in arcane research, those who are directly involved in heat-intensive industries, or those who expect to do a lot of fighting."
+				+ "虽然奥术火焰在熔炼和其他与热量相关的行业中均有使用，但是其战斗方面的应用却让烈火学派在恶魔社会中声名狼藉，经常被认为是粗野且令人反感的。"
+				+ "因此选择研习烈火学派法术的也只有那些真正对奥术研究感兴趣的恶魔，在热量相关产业工作的恶魔，或者经常战斗的恶魔。"
 			+ "</p>"
 			+ "<p>"
-				+ "By sacrificing a portion of their health, students of the school of Fire are able to cast Fire spells even when out of aura."
+				+ "通过牺牲部分生命，烈火学派的学徒能够在灵气耗尽时继续释放火系法术。"
 			+ "</p>",
-			"When out of aura, fire spells will be cast at 1/4 spell cost by using "+Attribute.HEALTH_MAXIMUM.getName()+"."
-				+ " The 'darkness' status effect will also be negated.",
+			"灵气耗尽时，火系法术将会以1/4的消耗，消耗"+Attribute.HEALTH_MAXIMUM.getName()+"释放。"
+				+ "“黑暗”状态效果也会被无效化。",
 			PresetColour.BASE_ORANGE),
 
-	ARCANE("arcane",
+	ARCANE("奥术",
 			"<p>"
-				+ "Focused on harnessing the most pure form of arcane energy, the spells in the school of Arcane are concerned with either influencing a person's lust, or performing extremely powerful miscellaneous abilities."
+				+ "奥术系的法术专注于驾驭奥术能量最纯粹的形式，既可以影响他人的性欲，还可以施展各色强大的能力。"
 			+ "</p>"
 			+ "<p>"
-				+ "As the only publicly-available spells are the ones associated with influencing lust, the school of Arcane is overlooked by most demons, as their physical charms are more than adequate on this front."
-				+ " The vast majority of the students of the school of Arcane can be found in the ranks of the cult of Lilith, who view this school as the one favoured by Lilith herself."
+				+ "由于为大众所熟知的法术基本都与影响性欲有关，奥术学派并不被多数恶魔重视，因为他们身体的魅力在这方面就已经绰绰有余。"
+				+ "绝大多数奥术学派的学徒都身居莉莉丝异教，他们认为奥术学派是唯一被莉莉丝本人所青睐的学派。"
 			+ "</p>"
 			+ "<p>"
-				+ "Once a prospective student has a basic grasp of Arcane spells, they will find that they're able to feel the ebb and flow of the arcane currents woven throughout the world,"
-					+ " and will be able to accurately predict when the next arcane storm will break."
+				+ "一旦有哪个前途无量的学生掌握了基本的奥术系法术，他就会意识到自己能够感受到交织在整个世界中的奥术之潮的起伏，"
+					+ "并且能够精确地预知下一次奥术风暴将会在何时爆发。"
 			+ "</p>",
-			"Know the exact time until the next arcane storm breaks.",
+			"知晓下次奥术风暴爆发的准确时间。",
 			PresetColour.GENERIC_ARCANE);
 	
 	

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Attacked by melee centaur: -->
@@ -6,22 +6,22 @@
 	<htmlContent tag="START"><![CDATA[
 	<p>
 		#IF(pc.getLocationPlace().getPlaceType()==PLACE_TYPE_WORLD_MAP_GRASSLANDS)
-			While most of your surroundings consist of open, natural meadows, it's impossible to keep your distance from the many hills, ponds, and valleys which are scattered throughout this grassland wilderness.​ These terrain features are almost always home to a significant amount of long grasses, scattered shrubs, and dense, bramble-packed thickets, which provide excellent spots from which a malicious foe might spring an ambush.
+			虽然你的周围大多数都是开阔的自然草原，但避免不了这里散落的无数小山丘、池塘和山谷。​这些地形地貌几乎总是长着大量的长草、零散的灌木丛，以及茂密的荆棘灌木丛，为潜伏的敌人提供了绝佳的伏击点。
 		#ELSE
-			Although for the most part the landscape beside the road you're [pc.walking] down consists of wide open fields, you can never go far without passing some kind of small copse or thicket.​ These small clusters of trees are invariably home to many types of densely-packed shrubs and bushes, which provide excellent concealment for any potential foe that might be waiting to spring an ambush.
+			虽然你[pc.walking]的这条路两旁大部分都是开阔的田野，你仍然难以避开一些小树丛或灌木丛。​这些小片树木群无一不是长满了各种密集的灌木和树叶，为潜伏的敌人提供了绝佳的伏击点。
 		#ENDIF
 	</p>
 	<p>
-		Just as you feared, as you're cautiously passing a small, isolated patch of woodland, [attacker.a_fullRace(true)] suddenly launches out of the undergrowth to block your passage. With a manic grin on her face, she points her [attacker.mainWeapon] at you and shouts, [attacker.speech(Stop right there, you filthy scum! You're trespassing on the territory of 'Lunette's Marauders', and you're going to fucking pay for it!)]
+		就像你所担心的那样，当你小心翼翼地走过一个孤零零的小树林时，[attacker.a_fullRace(true)]突然从灌木丛里跳出来堵住你的去路。她一脸狂热的笑容，用[attacker.mainWeapon]指着你，[attacker.speech(停下来，你这肮脏的渣滓！你正在入侵‘露内特掠夺者’的地盘，你会为此付出代价的！)]
 	</p>
 	<p>
-		With her [attacker.hairColour] hair blowing in the breeze, this [attacker.race] locks her wild, [attacker.eyeColour] eyes on you and excitedly paws at this ground with one of her huge horse-like hoofs. As you look over her [attacker.skinColour] skin and [attacker.legColour] horse-hair, this demonic centauress, who stands at [attacker.heightValue], flexes her huge muscles in an attempt to intimidate you. Taking a bold step forwards, the marauder's crazed grin shifts into a terrifying snarl as she issues an ultimatum, [attacker.speech(You've got two choices! You can either pay the toll for travelling through my land, or submit to me and show me what a pathetic worm you are!)]
+		野蛮的[attacker.race][attacker.hairColour]头发随风飘扬，[attacker.eyeColour]的眼睛盯着你，兴奋地用蹄子刨着地面。你看着她[attacker.skinColour]的皮肤和[attacker.legColour]的马毛，站立约[attacker.heightValue]高的魔鬼半人马强壮的肌肉在颤抖，想要吓唬你。这个强盗大步向前，疯狂的笑容变成了可怕的咆哮，她发出了最后通牒，[attacker.speech(你只有两条路可走！要么为通过我的地界付通行费，要么屈服于我，向我展示你多么软弱可悲！)]
 	</p>
 	<p>
-		As she's clearly not afraid of a fight, you realise that you're going to have to either do as this sadistic [attacker.race] says or defeat her in combat before you can continue on your way...
+		很明显她并不惧怕战斗，你意识到： 你要么屈服于残忍的[attacker.race]，要么在战斗中打败她，才能继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Pay off: -->
@@ -29,18 +29,18 @@
 	<htmlContent tag="PAYMENT"><![CDATA[
 	<p>
 		#IF(pc.isCowardly())
-			Well and truly terrified at the prospect of this mighty [attacker.race] choosing to attack, you hastily grab [#SPECIAL_PARSE_0] flames and offer them to her. Pleading for her not to be violent, you flinch and cry out as she delivers a swift smack across the back of your head. Snatching the money from your trembling [pc.hands], she snarls, [attacker.speech(You pathetic scum... You're lucky that I'm in a hurry today, or else I would have taken the time to punish you for your cowardice...)]
+			你畏惧强大的[attacker.race]会攻击你，匆忙抓起[#SPECIAL_PARSE_0]火币递给她。恳求她不要使用暴力。你畏缩着，她猛击了一下你的后脑，你哀嚎出声。她咆哮着从你颤抖的[pc.hands]中抓过钱币，[attacker.speech(你这个可悲的贱民……今天我赶时间，否则我会好好惩罚你的懦弱……)]
 		#ELSEIF(pc.isBrave())
-			Unafraid of this mighty [attacker.race] or whatever violence she might choose to unleash, you tell her that you're in too much of a hurry to give her the beating she deserves. Grabbing [#SPECIAL_PARSE_0] flames, you ignore the look of absolute fury upon the marauder's face and offer them to her. Avoiding a swift swipe that she takes at the back of your head, you tell the [attacker.race] not to do anything she'll regret as you let her snatch the money from your [pc.hands]. Incensed by your lack of fear, she furiously stomps her hoofs on the ground and shouts, [attacker.speech(You fucking scum! How <i>dare</i> you speak to me in such a manner! You're lucky that I'm in a hurry today, or else I would have taken the time to punish you for your insolence!)]
+			你毫不畏惧强大的[attacker.race]。你回答要不是你今天忙，绝对会痛打她一顿。你抓起[#SPECIAL_PARSE_0]火币，无视劫掠者因愤怒而扭曲的面庞，递给她钱。她试图猛击你的后脑，你灵活地闪开。你告诉[attacker.race]别做会后悔的事，让她从你[pc.hands]中抓走钱币。她被你的无畏激怒了。她愤怒地在地上跺蹄，大喊，[attacker.speech(你个该死的贱民！你<i>如何敢</i>以这种方式跟我说话！今天我赶时间，否则我会好好惩罚你的傲慢！)]
 		#ELSE
-			Not wanting to engage this mighty [attacker.race] in combat, you tell her that you'll pay the toll if it means that you can avoid a fight. Grabbing [#SPECIAL_PARSE_0] flames, you offer them to the marauder and calmly let her snatch the money from your [pc.hands]. Seemingly incensed by your decision to pay her off, she furiously stomps her hoofs on the ground and shouts, [attacker.speech(You're lucky that I'm in a hurry today, or else I would have taken the time to give you a good beating!)]
+			你不想与强大的[attacker.race]战斗，告诉她，如果可以避免打斗，你就支付过路费。你抓起[#SPECIAL_PARSE_0]火币递给劫掠者，平静地让她从你[pc.hands]中抓走钱币。她被你选择付钱激怒了。她愤怒地在地上跺蹄，大喊，[attacker.speech(今天我很赶时间，否则我会花时间好好打你一顿！)]
 		#ENDIF
 	</p>
 	<p>
-		With that, the [attacker.race] turns around on the spot and gallops off, sending clods of mud flying through the air behind her as she swiftly crosses a nearby field and disappears behind a hill. Happy with your decision to hand over [#SPECIAL_PARSE_0] flames in order to avoid fighting such an angry character, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
+		[attacker.race]说完，原地转身，飞奔而去。她迅速穿过附近的田地，消失在小山后，只留身后扬起的泥沙和尘土。支付[#SPECIAL_PARSE_0]火币，就能避免与这种暴躁的人战斗，你很满意。你环顾四周，确定没有其他直接危险，然后准备继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Submit to her: -->
@@ -48,150 +48,150 @@
 	<htmlContent tag="SUBMIT"><![CDATA[
 	<p>
 		#IF(pc.hasFetish(FETISH_SUBMISSIVE))
-			Starting to feel turned on at the prospect of surrendering to this strong, dominant [attacker.race], you drop down onto the ground before her and tell her that you submit to her.
+			你对向强壮且支配欲强的[attacker.race]投降感到兴奋，你开始感到兴奋。你跪倒在她面前，告诉她你向她屈服。
 		#ELSE
-			Not wanting to hand over any of your money, and equally unwilling to fight this strong, dominant [attacker.race], you drop down onto the ground before her and tell her that you submit to her.
+			你不愿意交钱，也不愿意与这匹强壮且支配欲强的[attacker.race]战斗，于是你跪倒在她面前，告诉她你向她屈服。
 		#ENDIF
-		 The marauder lets out an angry huff as she looks down at you, and, after stepping forwards, she lifts one of her huge hoofs and uses it to kick you down onto your back. With her face turned up into a furious snarl, she shouts, [attacker.speech(You worthless [pc.insult]! You're almost not even worth my time... Then again, it is rather fun to utterly dominate pathetic worms like yourself...)]
+		强盗面对你的屈服，愤怒地哼了一声。她上前一步，踢了你一蹄，把你踢倒在地。她的脸因愤怒而扭曲变形，大喊道，[attacker.speech(你这个无价值的[pc.insult]！你根本是浪费我的时间……话说回来，彻底支配像你这样软弱的虫子确实很有趣……)]
 	</p>
 	<p>
-		As you look up at this sadistic centauress, she once again kicks out with her hoof and sends you sprawling back onto the ground before her. Letting out a deep, mocking laugh, she looks down at you with a crazed grin on her face and demands, [attacker.speech(Come on then, [pc.insult]! Show me how you submit to your betters! I'm going to enjoy fucking you!)]
+		你仰视这匹施虐的半人马，她又踢了你一蹄，把你踢倒在她面前。她露出疯狂的笑容，深沉且嘲弄地笑着，看着你吼道，[attacker.speech(来吧，[pc.insult]！展示给我看你是如何向强者屈服的！我会爱上支配你的感觉！)]
 	</p>
 	<p>
-		Given a moment in which to make a move, you quickly have to decide how best to submit to this demonic centauress...
+		你只有一点时间采取行动，你迅速决定好了如何向恶魔半人马表示你的屈服……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SUBMIT_GENERIC"><![CDATA[
 	<p>
-		Not wanting to do anything to offend her, you decide to simply drop your head down before this [attacker.race] and submissively grovel on the floor before her. Sharply exhaling, the marauder violently stomps her hoof on the ground in front of your face, sending dirt flying in all directions as she sneers, [attacker.speech(What a pathetic worm... You're so frightened of me that you can't do anything but bow and hope for mercy?!)]
+		你不想冒犯面前强大的[attacker.race]，决定谦卑地在她面前低下头，以最臣服的姿态匍匐在地。劫掠者粗暴地猛踢了一下你脸前的地面，泥土飞溅开来，她嗤之以鼻地说，[attacker.speech(真是可悲的虫子……你这么畏惧我，除了卑躬屈膝乞求怜悯，别无他法了吧？)]
 	</p>
 	<p>
-		Before you can reply, the [attacker.race] once again uses one of her strong forelegs to violently kick you back onto the ground. Reaching down, she roughly grabs hold of you, before pulling you to your [pc.feet] and delivering a swift smack to the back of your head. Laughing as she makes you flinch, the sadistic [attacker.race] gives you no time in which to make a move before grabbing your face and squeezing your cheeks. Licking her lips, she fixes her wild, crazed gaze upon you and snarls, [attacker.speech(You worthless cunt! I'll show you your true place!)]
+		还不等你回答，这[attacker.race]再次用强壮有力的前蹄粗暴地把你踢倒在地。接着她俯下身粗鲁地抓住你，用力拉你起身，狠狠给你的后脑来了一下。残忍的[attacker.race]看到你痛苦地畏缩，得意地大笑起来。你还没来得及动作，她就用力掐住你的脸颊，凶狠地盯着你的眼睛，咆哮道，[attacker.speech(你这个一无是处的贱人！我会让你知道谁才是这里的主宰！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SUBMIT_PUSSY"><![CDATA[
 	<p>
-		Knowing that you only have a moment in which to please her, you quickly expose your [pc.pussy+] and drop down onto all fours. Presenting the dominant centauress with your rear end, you look back over your shoulder and tell her that your [pc.pussy+] is free for her to use in any way she sees fit.
+		你意识到只有片刻来取悦她，迅速露出[pc.pussy+]，然后四肢着地跪下。你背对支配性很强的半人马，扭头告诉她，[pc.pussy+]可以任她使用。
 	</p>
 	<p>
-		[attacker.speech(Raise your ass, you filthy slut!)] the [attacker.race] demands, and as you obediently do so, she steps forwards over the top of you and mounts you.
+		[attacker.speech(屁股抬起来，你这个肮脏的荡妇！)]半人马命令道。你顺从地照做，她跨过你，俯上你的背。
 		#IF(attacker.hasPenis())
-			 Immediately, you feel the flat, flared head of her [attacker.penisSize], horse-like cock prodding at your [pc.labia+].
+			立刻，你感觉到她粗壮如马的[attacker.penisSize]阴茎平坦宽大的头部顶在你[pc.labia+]上。
 		#ELSE
-			 Using her self-transformative powers, she takes a moment in which to grow a demonic penis, and then immediately starts prodding the flat, flared head of her [attacker.penisSize], horse-like cock against your [pc.labia+].
+			她利用变形能力长出一根恶魔阴茎，然后立即开始用她粗壮如马的[attacker.penisSize]阴茎平坦宽大的头部摩擦你[pc.labia+]。
 		#ENDIF
-		 Grunting in amusement, the marauder wastes no time in any kind of foreplay, and quickly steps forwards, forcing her [attacker.cock+] into your [pc.pussy+].
+		半人马得意地哼哼，没有任何前戏就迅速探进，强行把她的[attacker.cock+]插入你[pc.pussy+]。
 	</p>
 	<p>
-		[attacker.speech(That's it, take it all, you fucking scum!)] the sadistic [attacker.race] shouts. Continuing to step forwards, she forcefully rams [style.size] after [style.size] into your [pc.pussy+], stuffing as much of her [attacker.penisGirth] cock inside of you as she possibly can. Pulling back, she starts violently rutting your [pc.pussy+], leaving you with no choice but to hold yourself steady and endure this brutal fucking until the [attacker.race] decides that she's had enough...
+		[attacker.speech(全吃下去，你这该死的混蛋！)]残暴的半人马大喊。她继续深入，强行一次次将她粗大的[attacker.penisGirth]阴茎挤进你[pc.pussy+]。然后抽出，开始激烈地反复贯穿你[pc.pussy+]，让你只能承受这野蛮的性交，直到半人马爽够……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SUBMIT_KISS_COCK"><![CDATA[
 	<p>
-		Knowing that you only have a moment in which to please her, you quickly crawl beneath this dominant centauress's body and position yourself so that your head is beneath her horse-like groin. Calling out, you ask her for permission to kiss her cock.
+		你知道只有一小会儿的时间取悦她，你迅速爬到这位支配的半人马身下，将你的头贴于她马匹般强壮有力的腹股沟之下。大声请求她准许你亲吻她的阴茎。
 	</p>
 	<p>
 		#IF(attacker.hasPenis())
-			[attacker.speech(Get on with it then, you worthless worm!)] the marauder snaps. As her [attacker.penisSize], horse-like cock pushes out of its sheath and stands to attention, she paws at the ground and spits, [attacker.speech(Get those whorish lips of yours to work!)]
+			[attacker.speech(快点开始，你这没用的虫子！)]劫掠者厉声道。她粗长的[attacker.penisSize]马阴茎从鞘中滑出，高高翘起。她抓挠着地面，唾沫飞溅，咆哮道，[attacker.speech(动起你那张淫荡的嘴，服侍我！)]
 		#ELSE
-			[attacker.speech(Does it look like I have a cock, you stupid fucking slut?)] the marauder snaps. Despite saying this, however, you look on as the [attacker.race] quickly uses her self-transformative powers to grow a demonic penis. Watching the [attacker.penisSize], horse-like cock take shape before your [pc.eyes], you stay still and wait for the demonic centauress to give you permission to kiss it. Impatiently pawing at the ground, she spits, [attacker.speech(Get on with it, you worthless worm! Get those whorish lips of yours to work!)]
+			[attacker.speech(你他妈瞎了眼吗，愚蠢的婊子？)]劫掠者大声嚷道。尽管如此，你还是目睹这个[attacker.race]迅速使用变形能力，长出一根粗壮的恶魔马阴茎。你眼看着它在你面前逐渐成型，一动不动，等待这个残暴的半人马允许你亲吻。她不耐烦地抓挠地面，唾沫飞溅，命令道，[attacker.speech(还不快点开始，你这没用的虫子！动起你那张淫荡的嘴，服侍我！)]
 		#ENDIF
 	</p>
 	<p>
-		Quickly moving to do as she commands, you open your mouth and plant a big, wet kiss on the flat, flared head of the [attacker.race]'s cock. Encouraged by the deep, growling moan which the marauder lets out, you part your [pc.lips+] and take the head of her [attacker.penisGirth] shaft into your mouth. As soon as you do this, the sadistic centauress steps forwards, forcing her throbbing dick deep down your throat and snarling, [attacker.speech(That's it! ~Mmm!~ Take it deep, you filthy slut!)]
+		你迅速服从她的命令，张开嘴唇，在[attacker.race]阴茎饱满的蘑菇头上亲吻。当半人马发出狂野低沉的呻吟时，你大胆张开嘴巴，将她的粗大马茎头部含入口中。就在那一刻，残忍的半人马猛地向前一挺腰，强行将她粗壮勃起的马茎插进你的喉咙，喘息道，[attacker.speech(就是这样！把它全吞下去，你这淫荡的婊子！)]
 	</p>
 	<p>
-		Continuing to step forwards, the sadistic [attacker.race] forcefully rams [style.size] after [style.size] down your throat, stuffing as much of her [attacker.penisGirth] cock inside of you as she possibly can. Pulling back, she starts violently fucking your face, leaving you with no choice but to hold yourself steady and endure this brutal fucking until the [attacker.race] decides that she's had enough...
+		残忍的[attacker.race]继续挺腰用力，一下将整根粗大马茎插入你的喉咙，力求到达你体内最深处。然后她后退身体，开始疯狂用力抽插你的嘴脸，你除了静静承受外别无选择，直到[attacker.race]玩够为止……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SUBMIT_KISS_PUSSY"><![CDATA[
 	<p>
-		Knowing that you only have a moment in which to please her, you quickly crawl around behind this dominant centauress's body and position yourself so that your head is close to her horse-like groin. Calling out, you ask her for permission to kiss her pussy.
+		你意识到你只有一小会儿时间取悦她。你迅速跪爬到这位强势支配你的半人马身后，头部贴于她马匹般强健有力的腹股沟，大声请求着她的恩准，乞求亲吻她神秘的花苞。
 	</p>
 	<p>
 		#IF(attacker.hasVagina())
-			[attacker.speech(Get on with it then, you worthless worm!)] the marauder snaps. As you lean forwards to plant a big, wet kiss on her [attacker.labia+], she paws at the ground and spits, [attacker.speech(Get that tongue of yours to work!)]
+			[attacker.speech(还磨蹭什么，快点开始，你这没用的虫子！)]劫掠者厉声道。你凑上前去，亲吻她外露的肥厚马穴阴唇，她的蹄子不耐烦地抓挠着地面，唾沫飞溅地怒吼着，[attacker.speech(动起你那舌头来，伺候我！)]
 		#ELSE
-			[attacker.speech(Does it look like I have a cunt, you stupid fucking slut?)] the marauder snaps. Despite saying this, however, you look on as the [attacker.race] quickly uses her self-transformative powers to grow a demonic vagina. Watching the horse-like pussy take shape before your [pc.eyes], you stay still and wait for the demonic centauress to give you permission to kiss it. Impatiently pawing at the ground, she spits, [attacker.speech(Get on with it, you worthless worm! Get that tongue of yours to work!)]
+			[attacker.speech(你瞎了眼吗，愚蠢的婊子？)]劫掠者大声嚷道。然而，你注视着这个[attacker.race]迅速施法，长出恶魔马穴。看着它在你面前成型，你静待这匹残忍的半人马允许你亲吻。她不耐烦地刨着地面，命令道，[attacker.speech(还不快开始，你这没用的虫子！给我用上你那舌头！)]
 		#ENDIF
 	</p>
 	<p>
-		Quickly moving to do as she commands, you open your mouth and press your [pc.lips+] against the [attacker.race]'s pussy. Darting out your [pc.tongue+], you lick her puffy, horse-like cunt as you greedily start eating her out. Despite your best efforts, however, the sadistic centauress doesn't seem to be getting what she wants from you, and snarls, [attacker.speech(You can do better than that, slut! I'll teach you how to properly service a horse cunt!)]
+		你迅速服从她的命令，伸出舌尖，在[attacker.race]神秘的花苞上舔弄。你贪婪地开始为她口交，但这匹施虐的半人马似乎仍不满意，她嘶吼道，[attacker.speech(你能做得更好！我来教你如何好好侍奉马穴！)]
 	</p>
 	<p>
-		With that, the centauress takes a sudden step back, slamming her cunt against your face and sending you sprawling out on your back behind her. Giving you no time in which to stand up, the [attacker.race] continues to move backwards, before dropping her hind legs and forcefully planting her huge, heavy horse's body onto your face. Completely smothering your mouth with her animalistic cunt, the marauder lets out a sadistic laugh and snarls, [attacker.speech(Get to it, you worthless whore! Eat me out like your life depends on it!)]
+		半人马说完，突然后退一步，马穴重重摔在你脸上，你被掀翻在她屁股后方。这匹[attacker.race]根本不给你站起的时间，她持续后退，放下支撑地面的后腿，巨大沉重的马身死死压在你脸上。劫掠者用兽马穴完全塞住你的嘴，发出残忍的大笑，咆哮道，[attacker.speech(动起来，你这没用的婊子！像你的命依赖于它而活那样地侍奉我！)]
 	</p>
 	<p>
-		Left with no other option but to do as the sadistic [attacker.race] says, you do your best to lick, kiss, and suck on the horse-like pussy that's completely smothering your mouth. Completely at the mercy of this dominant centauress, you realise that you're going to have to continue eating her out until she decides that she's had enough...
+		你面对这匹残忍的[attacker.race]的命令，别无选择，只能全力以赴地舔弄、亲吻、吮吸完全覆盖你嘴的马穴。完全在这匹强势半人马的支配之下，你意识到除非她满意了，否则你不得不一直如此侍奉她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SUBMIT_ASSHOLE"><![CDATA[
 	<p>
-		Knowing that you only have a moment in which to please her, you quickly expose your [pc.asshole+] and drop down onto all fours. Presenting the dominant centauress with your rear end, you look back over your shoulder and tell her that your [pc.asshole+] is free for her to use in any way she sees fit.
+		你意识到只有片刻来取悦她，迅速露出[pc.asshole+]，然后四肢着地跪下。你背对支配性很强的半人马，扭头告诉她，[pc.asshole+]可以任她使用。
 	</p>
 	<p>
-		[attacker.speech(Raise your hips, you filthy slut!)] the [attacker.race] demands, and as you obediently do so, she steps forwards over the top of you and mounts you.
+		[attacker.speech(屁股抬起来，你这个肮脏的荡妇！)]半人马命令道。你顺从地照做，她跨过你，俯上你的背。
 		#IF(attacker.hasPenis())
-			 Immediately, you feel the flat, flared head of her [attacker.penisSize], horse-like cock prodding at your [pc.asshole+].
+			立刻，你感觉到她粗壮如马的[attacker.penisSize]阴茎平坦宽大的头部顶在你[pc.asshole+]上。
 		#ELSE
-			 Using her self-transformative powers, she takes a moment in which to grow a demonic penis, and then immediately starts prodding the flat, flared head of her [attacker.penisSize], horse-like cock against your [pc.asshole+].
+			她利用变形能力长出一根恶魔阴茎，然后立即开始用她粗壮如马的[attacker.penisSize]阴茎平坦宽大的头部摩擦你[pc.asshole+]。
 		#ENDIF
-		 Grunting in amusement, the marauder wastes no time in any kind of foreplay, and quickly steps forwards, forcing her [attacker.cock+] into your [pc.asshole+].
+		半人马得意地哼哼，没有任何前戏就迅速探进，强行把她的[attacker.cock+]插入你[pc.asshole+]。
 	</p>
 	<p>
-		[attacker.speech(That's it, take it all, you fucking scum!)] the sadistic [attacker.race] shouts. Continuing to step forwards, she forcefully rams [style.size] after [style.size] into your [pc.asshole+], stuffing as much of her [attacker.penisGirth] cock inside of you as she possibly can. Pulling back, she starts violently rutting your [pc.ass+], leaving you with no choice but to hold yourself steady and endure this brutal fucking until the [attacker.race] decides that she's had enough...
+		[attacker.speech(全吃下去，你这该死的混蛋！)]残暴的半人马大喊。她继续深入，强行一次次将她粗大的[attacker.penisGirth]阴茎挤进你[pc.pussy+]。然后抽出，开始激烈地反复贯穿你[pc.asshole+]，让你只能承受这野蛮的性交，直到半人马爽够……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SUBMIT_KISS_ASSHOLE"><![CDATA[
 	<p>
-		Knowing that you only have a moment in which to please her, you quickly crawl around behind this dominant centauress's body and position yourself so that your head is close to her horse-like asshole. Calling out, you ask her for permission to kiss her puffy doughnut.
+		你明白只有一瞬间可以取悦她，迅速爬到主导半人马身后，头靠近她的马肛门。你大声请求她，可不可以亲吻她肥厚的“甜甜圈”。
 	</p>
 	<p>
-		[attacker.speech(Get on with it then, you worthless worm!)] the marauder snaps. As you lean forwards to plant a big, wet kiss on her [attacker.asshole+], she paws at the ground and spits, [attacker.speech(Get that tongue of yours to work!)]
+		[attacker.speech(快点，你这个无用的虫子！)]劫掠者厉声道。当你前倾身体在她[attacker.asshole+]亲下一个又湿又大的吻时，她在地上刨蹄子，唾骂。[attacker.speech(使出你的舌头来！)]
 	</p>
 	<p>
-		Quickly moving to do as she commands, you open your mouth and press your [pc.lips+] against the [attacker.race]'s asshole. Darting out your [pc.tongue+], you lick her puffy, horse-like butt as you greedily start performing anilingus.
+		你迅速照她的命令行动，张开嘴，把[pc.lips+]压在[attacker.race]的肛门上。你探出[pc.tongue+]，舔弄她肥厚的马式屁股，贪婪地开始口肛。
 		#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-			 Thanks to your training as one of Natalya's [style.mules], your skills seem to please the sadistic centauress, who moans, [attacker.speech(Fuck... ~Mmm!~ You're good at this, slut! Oh yeah... Give it to me!)]
+			得益于作为娜塔莉亚[style.mules]之一的训练，你的技巧似乎取悦了虐待狂半人马，她呻吟着，[attacker.speech(操……呜呜！你擅长这个，荡妇！噢，很棒！给我！)]
 		#ELSE
-			 Despite your best efforts, however, the sadistic centauress doesn't seem to be getting what she wants from you, and snarls, [attacker.speech(You can do better than that, slut! I'll teach you how to properly service a horse's ass!)]
+			然而，尽管你尽力了，虐待狂半人马似乎还没从你这里得到她想要的，咆哮着，[attacker.speech(你能做得更好，荡妇！我来教教你如何讨好马屁股！)]
 		#ENDIF
 	</p>
 	<p>
-		With that, the centauress takes a sudden step back, slamming her asshole against your face and sending you sprawling out on your back behind her. Giving you no time in which to stand up, the [attacker.race] continues to move backwards, before dropping her hind legs and forcefully planting her huge, heavy horse's body onto your face.
+		半人马说完，突然后退一步，肛门猛撞你的脸，把你扫倒在她身后的地上。[attacker.race]不给你站起来的时间，继续后退，弯下后腿，强行把她巨大沉重的马身压在你脸上。
 		#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-			 Completely smothering your mouth with her animalistic asshole, the marauder lets out a sadistic laugh and snarls, [attacker.speech(I can tell that you've been trained to service horse ass! ~Mmm!~ Come on, lick my butt and show me what you've got!)]
+			劫掠者用兽屁眼完全闷住你的嘴，发出嗜虐的笑声，咆哮着，[attacker.speech(我看得出你受过服务马屁股的训练！唔！来吧，舔我的屁股，让我看看你有什么本事！)] 
 		#ELSE
-			 Completely smothering your mouth with her animalistic asshole, the marauder lets out a sadistic laugh and snarls, [attacker.speech(Get to it, you worthless whore! Lick my ass like your life depends on it!)]
+			劫掠者用兽屁眼完全闷住你的嘴，发出嗜虐的笑声，咆哮着，[attacker.speech(来呀，你这个没用的婊子。像靠给人舔屁眼才能活一样乖乖舔我的屁股！)]
 		#ENDIF
 	</p>
 	<p>
-		Left with no other option but to do as the sadistic [attacker.race] says, you do your best to lick, kiss, and suck on the horse-like asshole that's completely smothering your mouth. Completely at the mercy of this dominant centauress, you realise that you're going to have to continue performing anilingus on her until she decides that she's had enough...
+		你别无选择，只能照这个虐待狂[attacker.race]说的做，你尽力舔弄、亲吻、吸吮完全闷住你嘴的马肛门。完全任由主导的半人马摆布，你意识到你不得不继续为她吻肛，直到她爽够……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_SUB"><![CDATA[
 	<p>
-		Finally reaching the point of satisfaction, the [attacker.race] lets out a deep sigh and takes a step back, putting an end to the ruthless fucking. Despite her energetic performance, she still has the energy to kick you down onto the ground and laugh, [attacker.speech(That wasn't half bad, slut! I'll give you permission to think about today when you touch yourself at night!)]
+		[attacker.race]满足了。她深深地叹了口气，后退了一步，结束了无情的侵犯。她尽管刚消耗了许多体力，但仍然有精力把你踢到地上，笑着说：[attacker.speech(还不错，荡妇！我允许你在晚上自摸的时候回味今天！)]
 	</p>
 	<p>
-		Flashing you one last manic grin, the sadistic centauress turns around on the spot and gallops off, sending clods of mud flying through the air behind her as she swiftly crosses a nearby field and disappears behind a hill. Picking yourself up, you get your things back in order and prepare to continue on your way...
+		施虐半人马向你最后一次狂笑。她原地转身疾驰而去，身后的泥土在空中飞扬。她迅速穿过附近的一块田地，消失在一座小山后面。你振作起来，收拾好你的东西，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	<!-- Expansion:
 	#IF(game.isNonConEnabled())
 		<p>
@@ -214,174 +214,175 @@
 	
 	<htmlContent tag="COMBAT_WON"><![CDATA[
 	<p>
-		The [attacker.race] staggers back, and although she tries to continue fighting, her legs give way from under her, causing her to collapse to the ground in utter defeat. [pc.Stepping] forwards, you approach the demonic centauress, who looks up and breathlessly snarls, [attacker.speech(You... You [pc.insult]... You'll pay for this...)]
+		[attacker.race]摇摇晃晃地后退，尽管她试图继续战斗，但她的腿已无力支撑，导致她彻底失败倒在地上。[pc.Stepping]向前一步，走向恶魔半人马，她抬起头来，气喘吁吁地咆哮道：[attacker.speech(你……你，[pc.insult]……你会为此付出代价的……)]
 	</p>
 	<p>
-		Despite her words, you sense that there's no real resistance left in this marauder. Sure enough, after letting out a deep sigh, she bites her lip and moans, [attacker.speech(What are you waiting for, you dumb [pc.insult]? Come fuck me already!)] 
+		尽管她嘴上这么说，你还是感觉到这个掠夺者没有真正反抗的意思。果然，她深深地叹了口气，咬着嘴唇，呻吟道：[attacker.speech(笨蛋，[pc.insult]，你还在等什么？来操我吧！)]
 	</p>
 	<p>
-		With what little strength she has left, the [attacker.race] stands up, and on trembling legs she moves around to present you with her
+		[attacker.race]用仅剩的一点力气站了起来，双腿颤巍着移向你，你看到她那
 		#IF(attacker.hasPenis())
 			#IF(attacker.hasVagina())
-				 rapidly-hardening, horse-like cock and similarly animalistic pussy.
+				迅速勃起，像马一样的阴茎和动物般的小穴。
 			#ELSE
-				 rapidly-hardening, horse-like cock.
+				迅速勃起，像马一样的阴茎。
 			#ENDIF
 		#ELSE
-			 puffy, horse-like pussy.
+			充血的，像马一样的小穴。
 		#ENDIF
-		 As she repeats her demand for you to fuck her, you wonder what to do about this demonic centauress...
+		她重复着让你操她的要求，你在想该如何处置这个恶魔半人马……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_END"><![CDATA[
 	<p>
-		Having no desire to have sex with this angry, dominant [attacker.race], you turn around and [pc.walk] off. Letting out a frustrated moan as she sees that you're leaving, the marauder calls out after you, [attacker.speech(My sisters will exact my revenge upon you! ~Mmm!~ You... You [pc.insult]!)]
+		你并不渴望和这个强势的[attacker.race]发生性关系，转身就[pc.walk]。当她看到你要离开时，发出一声沮丧的呻吟并喊道：[attacker.speech(我的姐妹们会向你报仇的！～嗯！～你……你[pc.insult]！)]
 	</p>
 	<p>
-		Ignoring her words, you leave the horny [attacker.race] behind and continue on your way...
+		你无视了她的话，将好色的[attacker.race]抛之身后继续着你的道路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX"><![CDATA[
 	<p>
-		Seeing no reason not to give the horny [attacker.race] what she wants, you [pc.step] up to her and tell her that you'll give her the fucking she's after. Letting out a deep, passionate moan as she hears you say this, the marauder pants, [attacker.speech(Yes... Come on, give it to me...)]
+		你没有理由不去满足这个好色的[attacker.race]的请求。你向她[pc.step]去并答应满足这个淫乱的要求。她听到你这样说，发出一声深沉而热烈的呻吟： [attacker.speech(是的……快点，把它给我……)]
 	</p>
 	<p>
-		Running your [pc.hands] over her sexy, muscular body, you wonder how best to have sex with this [attacker.race]...
+		你的[pc.hands]抚摸她肌肉紧致且性感的身体，琢磨着怎样更好的与[attacker.race]做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX_GENTLE"><![CDATA[
 	<p>
-		Seeing no reason not to give the horny [attacker.race] what she wants, you [pc.step] up to her and gently tell her that you'll give her what she's after. Letting out a deep, passionate moan as she hears you say this, the marauder pants, [attacker.speech(Yes... Come on, give it to me...)]
+		你没有理由不去满足这个好色的[attacker.race]的请求，你向她[pc.step]去，温柔地说你会满足她淫乱的要求。听到你这样说，她发出一声深沉而热烈的呻吟： [attacker.speech(是的……快点，把它给我……)]
 	</p>
 	<p>
-		Softly running your [pc.hands] over her sexy, muscular body, you wonder how best to have sex with this [attacker.race]...
+		你的[pc.hands]柔软地抚摸她肌肉紧致且性感的身体，琢磨着怎样更好的与[attacker.race]做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX_ROUGH"><![CDATA[
 	<p>
-		Seeing no reason not to give the horny [attacker.race] what she wants, you [pc.step] up to her and tell her that you'll give her the rough, hard fucking she's after. Letting out a deep, passionate moan as she hears you say this, the marauder pants, [attacker.speech(Yes... Come on, give it to me...)]
+		你没有理由不去满足这个好色的[attacker.race]的请求，你[pc.step]向她，说你会用更加粗暴剧烈的方式满足她的淫荡渴求。听到你这样说，她发出一声深沉而热烈的呻吟： [attacker.speech(是的……快点，把它给我……)]
 	</p>
 	<p>
-		Running your [pc.hands] over her sexy, muscular body, you give her rump a sharp slap and wonder how best to fuck this [attacker.race]...
+		你的[pc.hands]揉捏着她肌肉紧致且性感的身体，琢磨着怎样更好的与[attacker.race]做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SUBMIT"><![CDATA[
 	<p>
 		#IF(pc.hasFetish(FETISH_SUBMISSIVE))
-			Starting to feel turned on at the prospect of surrendering to this strong, dominant [attacker.race], you drop down onto the ground before her and tell her that you submit to her.
+			一想到要向这个强势的[attacker.race]投降，你就抑制不住兴奋。你屈膝跪地的面向她，告诉她你已经屈服了。
 		#ELSE
-			Despite besting her in combat, you decide that it would best for you to surrender to this strong, dominant [attacker.race], you drop down onto the ground before her and tell her that you submit to her.
+			尽管击败了她，但你还是决定向这个强势的[attacker.race]投降。你屈膝跪地的面向她，告诉她你已经屈服了。
 		#ENDIF
-			Caught off guard by your unexpected move, the marauder pants, [attacker.speech(What... You're doing what?! You... You pathetic [pc.insult]!)]
+			劫掠者被你的意外举动打了个措手不及，喘息道：[attacker.speech(什么……你在干什么？！你……你这个可悲的[pc.insult]！)]
 	</p>
 	<p>
-		Energised by the prospect of being able to dominate you, the [attacker.race] lets out an angry huff, before quickly stepping forwards and lifting one of her huge hoofs. Kicking you down onto the floor, the marauder's face turns up into a furious snarl, and she shouts, [attacker.speech(I can't believe anyone would be so pathetic as to submit to the person they've defeated! You worthless [pc.insult]! I'm going to take great pleasure in dominating you!)]
+		你意料之外的屈服使[attacker.race]手足无措，她怒吼一声并快步向前，抬起巨大的蹄子把你踹倒在地上。她吼道：[attacker.speech(我真不敢相信有人会如此可悲，竟然向手下败将屈服！不中用的[pc.insult]！我将以支配你为乐！)]
+
 	</p>
 	<p>
-		As you look up at this sadistic centauress, she once again kicks out with her hoof and sends you sprawling back onto the ground before her. Letting out a deep, mocking laugh, she looks down at you with a crazed grin on her face and demands, [attacker.speech(Come on then, [pc.insult]! Show me how you submit to your betters!)]
+		你抬头看着这个施虐半人马，她再一次用蹄子把你踢到她面前的地上。她发出一声深沉的嘲弄的笑声，低头看着你，脸上带着疯狂的笑容，命令道：[attacker.speech(来吧，[pc.insult]！让我看看屈服的你是怎么顺从你的支配者的！)]
 	</p>
 	<p>
-		Given a moment in which to make a move, you quickly have to decide how best to submit to this demonic centauress...
+		你得到了思考的时间，需要迅速决定怎样才能最好地屈服于这个恶魔半人马……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_DOM"><![CDATA[
 	<p>
-		Feeling satisfied from your dominant sex with the [attacker.race], you [pc.step] away from her and start to get your things back in order.
+		和[attacker.race]的支配型性爱让你感到满足，你从她身边[pc.step]开，着手整理凌乱的衣服。
 		#IF(attacker.isSatisfiedFromLastSex())
-			 Feeling just as happy as you are, the marauder lets out a deep sigh and moans, [attacker.speech(That wasn't half bad... You're lucky that you managed to please me, [pc.insult].)]
+			劫掠者也同样感到满足，她深深地叹了口气，呻吟道：[attacker.speech(这还不错……你很幸运能取悦我，[pc.insult]。)]
 		#ELSE
-			 Not feeling as happy as you are, the marauder lets out a frustrated sigh and moans, [attacker.speech(You could have at least tried to satisfy me... You [pc.insult]...)]
+			劫掠者并不像你一样感到满足，她沮丧的叹息着，抱怨道：[attacker.speech(你至少可以试着让我满意……[pc.insult]……)]
 		#ENDIF
 	</p>
 	<p>
-		Ignoring the [attacker.race]'s rude words, you brush yourself off and wonder what to do next. You could always help yourself to any items or cash that the marauder is carrying, or instead simply set off and continue on your way... 
+		无视劫掠者的粗鲁言语，你清理干净自己，琢磨着下一步该做什么。你可以拿走抢劫者携带的任何物品或现金，或者直接离开，继续你的路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_DOM_END"><![CDATA[
 	<p>
-		Leaving the demonic centauress behind, you once again continue on your way...
+		离开恶魔半人马，你继续着你的路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_TALK"><![CDATA[
 	<p>
-		Wanting to know if there are any of the [attacker.race]'s comrades roaming in the nearby area, you ask her where her camp is and how many other demonic centauresses are out looking for innocent victims to attack. Defiantly spitting on the ground, the marauder snarls, [attacker.speech(I'm not telling you anything, [pc.insult]! Either fuck me or fuck off.)]
+		你想知道是否有[attacker.race]的同伙在附近游荡，便询问她的营地在哪里？还有多少其他的恶魔半人马正在寻找并攻击无辜的受害者？劫掠者轻蔑地朝地上吐唾沫，咆哮道：[attacker.speech(我什么都不会告诉你，[pc.insult]！要么操我，要么滚蛋。)]
 	</p>
 	<p>
 		#IF(pc.hasFetish(FETISH_SADIST))
-			Slapping the [attacker.race] across the face, you repeat your question, but once again the [attacker.race] refuses to play along and snaps, [attacker.speech(Hit me all you like, I'm not telling you anything!)]
+			你扇了劫掠者一巴掌，重述着你的问题。但劫掠者再次拒绝配合，并厉声说：[attacker.speech(随便你怎么打我，我什么都不会告诉你的！)]
 		#ELSE
-			Trying a different approach, you promise the [attacker.race] a reward if [attacker.she] tells you what you want to know, but once again [attacker.she] refuses to play along and snaps, [attacker.speech(Your tricks won't work on me, I'm not telling you anything!)]
+			你试图换一种谈判方法，如果[attacker.race]愿意吐露一些你想知道的事情，你承诺给[attacker.she]一些好处。但[attacker.she]又一次拒绝配合，并咆哮道：[attacker.speech(你的把戏对我没用，我什么都不会告诉你的！)]
 		#ENDIF
 	</p>
 	<p>
-		As you're clearly not going to be able to find out anything from this uncooperative marauder, you give up on your line of questioning and wonder what to do with her...
+		很显然，你无法从这个不合作的掠夺者那里得到任何情报。你放弃了质询，思索着该如何处置她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Lost combat: -->
 	
 	<htmlContent tag="COMBAT_LOST"><![CDATA[
 	<p>
-		Unable to continue fighting any longer, you collapse to the ground, defeated. Immediately capitalising upon your sign of weakness, the [attacker.race] gallops forwards and roughly grabs hold of you.
+		你被击倒在地，无法再继续战斗了。[attacker.race]利用你的弱点，抓住这转瞬即逝的机会向前疾驰，粗暴地抓住你。
 		#IF(game.isNonConEnabled())
-			 With a sadistic grin on her face, she snarls, [attacker.speech(You're mine now, [pc.insult]! I'm going to make you pay for daring to fight back!)]
+			她的脸上浮现出施虐的狂笑：[attacker.speech(你现在是我的了，[pc.insult]！你要为你的反抗付出代价！)]
 		#ELSE
-			 With a sadistic grin on her face, she snarls, [attacker.speech(You're mine now, [pc.insult]! Ready for a good fuck?!)]
+			她的脸上浮现出施虐的狂笑：[attacker.speech(你现在是我的了，[pc.insult]！准备好享受这片刻欢愉了吗？！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_FUCKED"><![CDATA[
 	<p>
-		Before you can reply, the [attacker.race] lets out a wicked laugh and delivers a swift smack to the back of your head. Grinning in delight as she makes you flinch, the sadistic [attacker.race] gives you no time in which to make a move before grabbing your face and squeezing your cheeks. Licking her lips, she fixes her wild, crazed gaze upon you and snarls, [attacker.speech(You worthless cunt! I'll show you your true place!)]
+	你还没来得及回答，[attacker.race]就发出一声恶笑，迅速地在你后脑勺上打了一巴掌。看到你退缩，她开心地笑着。没有给你任何反应时间，施虐[attacker.race]抓住你的脸，捏了捏你的脸颊。她恢复了之前的野性，舔着嘴唇，用疯狂的目光盯着你，咆哮道：[attacker.speech(没用的荡妇！我会告诉你你真正的位置！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_FUCKED_RESIST"><![CDATA[
 	<p>
-		Realising that the [attacker.race] is seriously about to rape you, you try to ward her off by shouting and pleading for her to leave you alone. Letting out an evil cackle as she sees that you're not submitting to her, she steps forwards and delivers a swift smack to the back of your head. Grinning in delight as she makes you flinch, the sadistic [attacker.race] gives you no time in which to make a move before grabbing your face and squeezing your cheeks. Licking her lips, she fixes her wild, crazed gaze upon you and snarls, [attacker.speech(You worthless cunt! You can squirm and scream all you like; it's not going to stop me from showing you your true place!)]
+		你意识到[attacker.race]真的要强奸你，试图回避她通过大喊大叫或者恳求她别来烦你。当她看到你不服从时，发出一声邪恶的咯咯声。她走上前来，在你的后脑勺上迅速拍了一下。看到你退缩，她开心地笑着。没有给你任何反应时间，施虐[attacker.race]抓住你的脸，捏了捏你的脸颊。她恢复了之前的野性，舔着嘴唇，用疯狂的目光盯着你，咆哮道：[attacker.speech(你这个没用的婊子！我来让你明白你的地位，你喊破喉咙也没人救你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_CONTINUE"><![CDATA[
 	<p>
-		Although you've been defeated, you're not willing to submit to this sadistic [attacker.race]. As you tell her that you refuse to have sex with her, the marauder lets out an angry shout, before kicking you down and snarling, [attacker.speech(You dumb [pc.insult]! You're lucky that you're not worth my time!)]
+		虽然你被击败了，但你不愿意屈服于这个残忍的攻击者。当你告诉她你拒绝和她发生性关系时，掠夺者发出一声愤怒的喊叫，然后把你踢倒在地，咆哮：[attacker.speech(愚蠢的[pc.insult]！你该庆幸你不值得我浪费时间！)]
 	</p>
 	<p>
-		With that, the [attacker.race] turns around on the spot and gallops off, sending clods of mud flying through the air behind her as she swiftly crosses a nearby field and disappears behind a hill. brushing yourself down, you look around to make sure that there's no other immediate danger and then prepare to continue on your way...
+		说罢，[attacker.race]转身疾驰而去，迅速穿过附近的一片田地，消失在一座小山后面，她身后的泥土在空中飞扬。你整理好自己，环顾四周，确保没有其他的危险，然后准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_FUCKED_WILLING"><![CDATA[
 	<p>
-		Deciding that it would be best to submit to the marauder and let her do what she wants with you, you tell her that you're willing to have sex with her.
+		你认为屈服于掠夺者是明智之举。你同意和她做爱，让她对你为所欲为。
 	</p>
 	<p>
-		As she hears your submissive response, the [attacker.race] lets out a wicked laugh and delivers a swift smack to the back of your head. Grinning in delight as she makes you flinch, the sadistic [attacker.race] gives you no time in which to make a move before grabbing your face and squeezing your cheeks. Licking her lips, she fixes her wild, crazed gaze upon you and snarls, [attacker.speech(You worthless cunt! I'll show you your true place!)]
+		听到你顺从的回答，[attacker.race]发出一声邪恶的笑声，并迅速地在你的后脑勺上打了一巴掌。看到你退缩，她开心地笑着。没有给你任何反应时间，施虐[attacker.race]抓住你的脸，捏了捏你的脸颊。她恢复了之前的野性，舔着嘴唇，用疯狂的目光盯着你，咆哮道：[attacker.speech(你这个没用的婊子！我会让你认清你的地位！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

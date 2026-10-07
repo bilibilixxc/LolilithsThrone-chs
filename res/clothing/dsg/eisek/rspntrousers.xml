@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
-		<authorTag><![CDATA["Tailored by the DSG Textile Guild" is crudely sewn inside the left leg.]]></authorTag>
+		<authorTag><![CDATA[“DSG织厂定制”被粗糙地缝在左腿内部。]]></authorTag>
 		<value>100</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[roughspun trousers]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[roughspun trousers]]></namePlural>
-		<description><![CDATA[A pair of trousers made of roughspun wool. Its construction is so simple that it lacks even an elastic waistband and uses drawstrings instead. The fabric is worn and dangerously thin around the knees.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[粗纺长裤]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[粗纺长裤]]></namePlural>
+		<description><![CDATA[一条粗羊毛制成的长裤。它的结构非常简单，甚至没有弹性腰带，而是用抽绳代替。这种布料很破旧，膝盖周围薄得危险。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>MASCULINE</femininity>
 		<slot>LEG</slot>
@@ -71,51 +70,51 @@
 	</coreAtributes>
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] trousers down and [npc.verb(kick)] them off [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] trousers down and [npc.verb(slide)] them off [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] trousers down and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的裤子拉下来并从[npc.her]的[npc.feet]上踢开。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子拉下来并从[npc2.her]的[npc2.feet]上拿走。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]猛地将[npc2.namePos]的裤子拉下并甩到一边去。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into [npc.her] trousers before pulling them up to [npc.her] waist.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the trousers up [npc2.namePos] [npc2.legs] and [npc.verb(button)] them up around [npc2.her] waist.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] [npc2.legs] into the trousers and [npc.verb(yank)] them up around [npc2.her] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿进[npc.her]的长裤里并把它提到腰上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的长裤拉到腰上并系好前面的绳子。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]迫使[npc2.namePos]的[npc2.legs]穿进裤子里然后将裤子拽到[npc2.her]的腰上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] trousers down.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] trousers down.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] trousers down.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的长裤脱下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子拉下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子拽下。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up [npc.her] trousers.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up [npc2.namePos] trousers.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcefully [npc.verb(pull)] up [npc2.namePos] trousers.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉起[npc.her]的裤子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的裤子提起。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]用力将[npc2.namePos]的裤子拉起。
+]]></otherRough>
 	</replacementText>
 	
 </clothing>

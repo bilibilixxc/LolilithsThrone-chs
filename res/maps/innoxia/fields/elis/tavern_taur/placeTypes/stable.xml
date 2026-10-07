@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[stable]]></name>
-	<tooltipDescription><![CDATA[Behind a locked door, the stable to the rear of 'The Centaur's Sword' is rented out to amorous couples on an hourly rate.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the stable behind 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[马场]]></name>
+	<tooltipDescription><![CDATA[“半人马之剑”酒馆后边的马场就在一扇上锁的门后，按小时出租给情意绵绵的小情侣。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[半人马之剑后面的马场里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>RACE_HORSE_MORPH</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -24,15 +24,15 @@
 	<areasCummedIn/>
 	<areasCummedOn/>
 	<title><![CDATA[
-		Allow orgasm
+		允许高潮
 	]]></title>
 	<tooltip><![CDATA[
-		Give the horny doll permission to orgasm.
+		允许这个饥渴的玩偶高潮。
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
-				[doll.speechNoEffects(The test is almost complete, I just need you to orgasm,)] the doll states as she sees that you're about to climax. In her expressionless voice, she commands, [doll.speechNoEffects(Go on then, cum!)]
+				[doll.speechNoEffects(测试即将完成，我需要你高潮，)]玩偶看到你即将高潮时说道。她面无表情地命令道，[doll.speechNoEffects(来吧，高潮！)]
 			]]></text>
 		</description>
 	</descriptions>

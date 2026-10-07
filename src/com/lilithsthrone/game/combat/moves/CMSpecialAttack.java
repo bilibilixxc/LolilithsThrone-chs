@@ -34,7 +34,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
 public class CMSpecialAttack {
 	
 	public static AbstractCombatMove HORSE_KICK = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "hoof kick",
+            "蹄踢",
             1,
             2,
             1,
@@ -65,22 +65,22 @@ public class CMSpecialAttack {
         }
         @Override
         public Value<Boolean, String> isAvailableFromSpecialCase(GameCharacter source) {
-            return new Value<>(source.getLegType().getFootType().equals(FootType.HOOFS), "Available to characters with hoofs.");
+            return new Value<>(source.getLegType().getFootType().equals(FootType.HOOFS), "仅适用于拥有蹄子的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a powerful hoof-kick to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, false), target, false, isTargetAtMaximumLust(target)) + " damage."
-            				+ (source.isLegMovementHindered()?" [style.italicsMinorBad(Damage is reduced to 10% as [npc.her] clothing is hindering leg movement!)]":""));
+            		"对" + (target==null?"[npc.her]的目标":"[npc2.name]") + "发出一击有力的蹄踢，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, false), target, false, isTargetAtMaximumLust(target)) + "伤害。"
+            				+ (source.isLegMovementHindered()?"[style.italicsMinorBad(由于衣物阻碍了腿部运动，造成的伤害降低为原来的10%！)]":""));
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] strong legs to deliver a powerful kick to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage."
-            				+ " [style.italicsMinorBad(Damage is reduced to 10% if [npc.her] clothing hinders leg movement.)]");
+            		"[npc.Name]使用其强健的腿部向目标发出一记有力的踢击，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。"
+            				+ "[style.italicsMinorBad(如果衣物阻碍了腿部运动，造成的伤害将会降低为原来的10%。)]");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -95,19 +95,19 @@ public class CMSpecialAttack {
             
             return formatAttackOutcome(source, target,
             		(source.isLegMovementHindered()
-            				?"As [npc.her] clothing is restricting [npc.her] leg movement, [npc.name] [npc.verb(struggle)] to put any power behind [npc.her] kick, dealing minimal damage to [npc2.name]..."
-            				:"[npc.Name] [npc.verb(turn)] to one side, before kicking out and powerfully striking [npc2.name] with [npc.her] "+(source.getLegConfiguration()==LegConfiguration.QUADRUPEDAL?"hoofs":"hoof")+"!")
+            				?"由于衣物阻碍了腿部运动，[npc.name]难以用力，只能对[npc2.name]造成极小的伤害……"
+            				:"[npc.Name]侧过身去，接着就用蹄子朝[npc2.name]发出了一记有力的踢击！")
             			+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-            			?"[npc.Name] immediately strikes again in an attempt to break through [npc2.namePos] block!"+critDamageValue.getKey()
+            			?"[npc.Name]又迅速接上一下，试图突破[npc2.namePos]的格挡！"+critDamageValue.getKey()
             			:null),
-                	"[npc2.Name] took an additional " + getFormattedDamage(damageType, critDamageValue.getValue(), target, true, maxLust) + " damage!");
+                	"[npc2.Name]受到了额外" + getFormattedDamage(damageType, critDamageValue.getValue(), target, true, maxLust) + "伤害！");
         }
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
         	return Util.newArrayListOfValues(
-        			 "Hoof-kick fails to break "+(target!=null?UtilText.parse(target,"[npc.namePos]"):"the target's")+" shielding.");
+        			 "蹄踢未能突破"+(target!=null?UtilText.parse(target,"[npc.namePos]"):"目标")+"的护盾。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -121,7 +121,7 @@ public class CMSpecialAttack {
     };
 
 	public static AbstractCombatMove CAT_SCRATCH = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "scratch",
+            "抓挠",
             1,
             1,
             CombatMoveType.ATTACK,
@@ -146,23 +146,23 @@ public class CMSpecialAttack {
         }
         @Override
         public Value<Boolean, String> isAvailableFromSpecialCase(GameCharacter source) {
-            return new Value<>(source.getArmType().equals(ArmType.CAT_MORPH), "Available to characters with feline claws.");
+            return new Value<>(source.getArmType().equals(ArmType.CAT_MORPH), "仅适用于拥有猫类爪子的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             boolean isCrit = canCrit(turnIndex, source, target, enemies, allies);
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a vicious scratch to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " damage."
-            				+ (source.isArmMovementHindered()?" [style.italicsMinorBad(Damage is reduced to 50% as [npc.her] clothing is hindering arm movement!)]":""));
+            		"对" + (target==null?"[npc.her]的目标":"[npc2.name]") + "发出一记凶残的抓挠，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + "伤害。"
+            				+ (source.isArmMovementHindered()?"[style.italicsMinorBad(由于衣物阻碍了手臂运动，造成的伤害降低为原来的50%！)]":""));
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] feline claws to deliver a vicious scratch to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage."
-            				+ " [style.italicsMinorBad(Damage is reduced to 50% if [npc.her] clothing hinders arm movement.)]");
+            		"[npc.Name]用猫科的爪子向目标发出一记凶残的爪击，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。"
+            				+ "[style.italicsMinorBad(如果衣物阻碍了手臂运动，造成的伤害将会降低为原来的50%。)]");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -173,13 +173,13 @@ public class CMSpecialAttack {
             
             return formatAttackOutcome(source, target,
             		(source.isArmMovementHindered()
-            				?"As [npc.her] clothing is restricting [npc.her] arm movement, [npc.name] [npc.verb(struggle)] to land [npc.her] scratch attack, dealing only half damage to [npc2.name]..."
-            				:"Extending the claws on [npc.her] anthropomorphic cat-like hands, [npc.name] quickly [npc.verb(dash)] forwards, attempting to scratch [npc2.name]!")+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            				?"由于衣物阻碍了手臂运动，[npc.name]难以用力，只能对[npc2.name]造成一半的伤害……"
+            				:"[npc.Name]将爪子从[npc.her]猫般的人形手上伸缩出来，迅速冲向前去，试图向[npc2.name]抓去！")+damageValue.getKey(),
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-            			?"[npc.NamePos] scratch is particularly effective!"
+            			?"[npc.NamePos]的爪击格外有效！"
             			:null),
-                	"The duration of '"+StatusEffect.VULNERABLE.getName(target)+"' is doubled!");
+                	"“"+StatusEffect.VULNERABLE.getName(target)+"”的持续时间翻倍了！");
         }
         @Override
         public float getCritStatusEffectDurationMultiplier() {
@@ -187,7 +187,7 @@ public class CMSpecialAttack {
         }
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-            return Util.newArrayListOfValues((target!=null?UtilText.parse(target,"[npc.NameHasFull]"):"Defender has")+" no "+getDamageType(0, source).getNameColoured()+" shielding.");
+            return Util.newArrayListOfValues((target!=null?UtilText.parse(target,"[npc.NameHasFull]"):"防守者剩余")+"没有"+getDamageType(0, source).getNameColoured()+"护盾。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -196,7 +196,7 @@ public class CMSpecialAttack {
     };
 
 	public static AbstractCombatMove TAIL_SWIPE = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "tail swipe",
+            "扫尾",
             2,
             3,
             CombatMoveType.ATTACK,
@@ -224,21 +224,21 @@ public class CMSpecialAttack {
             return new Value<>(
             		(source.getTailType().isSuitableForAttack() && source.getTailLength(false)>=100)
             			|| source.getLegConfiguration()==LegConfiguration.TAIL_LONG,
-            		"Available to characters who have a suitable tail which is at least [units.sizeShort(100)] long, or a '"+LegConfiguration.TAIL_LONG.getName()+"' lower body.");
+            		"仅适用于拥有足够大小尾巴(长度至少[units.sizeShort(100)])或拥有“"+LegConfiguration.TAIL_LONG.getName()+"”下半身的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             boolean isCrit = canCrit(turnIndex, source, target, enemies, allies);
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a thunderous tail-smack to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " damage.");
+            		"对" + (target==null?"[npc.her] target":"[npc2.name]") + "挥出一记雷霆万钧的扫尾，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + "伤害。");
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] [npc.tailRace]-tail to deliver a thunderous smack to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage.");
+            		"[npc.Name]使用[npc.tailRace]尾巴向目标使出一记雷霆万钧的扫尾，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -248,12 +248,12 @@ public class CMSpecialAttack {
             Value<String, Integer> damageValue = damageType.damageTarget(source, target, getDamage(turnIndex, source, target, isCrit));
             
             return formatAttackOutcome(source, target,
-            		"[npc.Name] [npc.verb(turn)] to one side, using the momentum to smack [npc.her] huge [npc.tailRace]-tail straight into [npc2.name]!"+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            		"[npc.Name]侧过身去，接力扫出了[npc.her]巨大的[npc.tailRace]尾巴，直直向着[npc2.name]而去！"+damageValue.getKey(),
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-        				?"[npc.NamePos] tail swipe is particularly effective!"
+        				?"[npc.NamePos]的扫尾格外有效！"
             			:null),
-                    "The duration of '"+StatusEffect.DAZED.getName(target)+"' is doubled!");
+                    "“"+StatusEffect.DAZED.getName(target)+"”的持续时间翻倍了！");
         }
         @Override
         public float getCritStatusEffectDurationMultiplier() {
@@ -262,7 +262,7 @@ public class CMSpecialAttack {
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             return Util.newArrayListOfValues(
-            		(source!=null?UtilText.parse(source,"[npc.NamePos]"):"Attacker's")+" tail is at least '<span style='color:"+PenetrationGirth.FIVE_THICK.getColour().toWebHexString()+";'>"+PenetrationGirth.FIVE_THICK.getName()+"</span>'.");
+            		(source!=null?UtilText.parse(source,"[npc.NamePos]"):"攻击者")+"的尾巴至少需要达到“<span style='color:"+PenetrationGirth.FIVE_THICK.getColour().toWebHexString()+";'>"+PenetrationGirth.FIVE_THICK.getName()+"</span>”。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -274,7 +274,7 @@ public class CMSpecialAttack {
     };
 
 	public static AbstractCombatMove SQUIRREL_SCRATCH = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "squirrel scratch",
+            "松鼠抓挠",
             1,
             1,
             CombatMoveType.ATTACK,
@@ -299,22 +299,22 @@ public class CMSpecialAttack {
         }
         @Override
         public Value<Boolean, String> isAvailableFromSpecialCase(GameCharacter source) {
-            return new Value<>(source.getArmType().equals(ArmType.SQUIRREL_MORPH), "Available to characters who have squirrel claws.");
+            return new Value<>(source.getArmType().equals(ArmType.SQUIRREL_MORPH), "仅适用于拥有松鼠爪子的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a vicious scratch to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, false), target, false, isTargetAtMaximumLust(target)) + " damage."
-            				+ (source.isArmMovementHindered()?" [style.italicsMinorBad(Damage is reduced to 50% as [npc.her] clothing is hindering arm movement!)]":""));
+            		"对" + (target==null?"[npc.her]的目标":"[npc2.name]") + "发出一记凶残的抓挠，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, false), target, false, isTargetAtMaximumLust(target)) + "伤害。"
+            				+ (source.isArmMovementHindered()?"[style.italicsMinorBad(由于衣物阻碍了手臂运动，造成的伤害降低为原来的50%！)]":""));
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] sharp claws to deliver a vicious scratch to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage."
-            				+ " [style.italicsMinorBad(Damage is reduced to 50% if [npc.her] clothing hinders arm movement.)]");
+            		"[npc.Name]用锋利的爪子向目标发出一记凶残的爪击，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。"
+            				+ "[style.italicsMinorBad(如果衣物阻碍了手臂运动，造成的伤害将会降低为原来的50%。)]");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -331,17 +331,17 @@ public class CMSpecialAttack {
             
             return formatAttackOutcome(source, target,
             		(source.isArmMovementHindered()
-            				?"As [npc.her] clothing is restricting [npc.her] arm movement, [npc.name] [npc.verb(struggle)] to land [npc.her] scratch attack, dealing only half damage to [npc2.name]..."
-            				:"Extending the claws on [npc.her] anthropomorphic squirrel-like hands, [npc.name] quickly [npc.verb(dash)] forwards, attempting to scratch at [npc2.name]!")+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            				?"由于衣物阻碍了手臂运动，[npc.name]难以用力，只能对[npc2.name]造成一半的伤害……"
+            				:"[npc.Name]将爪子从[npc.her]松鼠般的人形手上伸缩出来，迅速冲向前去，试图向[npc2.name]抓去！")+damageValue.getKey(),
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-            			?"[npc.Name] rapidly [npc.verb(scratch)] [npc2.name] two more times!"
+            			?"[npc.Name]又迅速朝[npc2.name]抓了两下！"
             			:null),
-                	"[npc2.Name] took an additional "+getFormattedDamage(damageType, dealtCritDamage2, target, true, maxLust)+", and then another "+getFormattedDamage(damageType, dealtCritDamage3, target, true, maxLust)+" damage!");
+                	"[npc2.Name]受到了额外"+getFormattedDamage(damageType, dealtCritDamage2, target, true, maxLust)+"以及"+getFormattedDamage(damageType, dealtCritDamage3, target, true, maxLust)+"伤害！");
         }
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-            return Util.newArrayListOfValues((target!=null?UtilText.parse(target,"[npc.NameHasFull]"):"Defender has")+" no "+getDamageType(0, source).getNameColoured()+" shielding.");
+            return Util.newArrayListOfValues((target!=null?UtilText.parse(target,"[npc.NameHasFull]"):"防守者剩余")+"没有"+getDamageType(0, source).getNameColoured()+"护盾。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -350,7 +350,7 @@ public class CMSpecialAttack {
     };
 
 	public static AbstractCombatMove WOLF_SAVAGE = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "savage attack",
+            "狂野一击",
             6,
             3,
             CombatMoveType.ATTACK,
@@ -375,23 +375,23 @@ public class CMSpecialAttack {
         }
         @Override
         public Value<Boolean, String> isAvailableFromSpecialCase(GameCharacter source) {
-            return new Value<>(source.getArmType().getRace().equals(Race.WOLF_MORPH), "Available to characters who have a wolf-morph's arms.");
+            return new Value<>(source.getArmType().getRace().equals(Race.WOLF_MORPH), "仅适用于拥有狼化形手臂的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             boolean isCrit = canCrit(turnIndex, source, target, enemies, allies);
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a savage series of slashes to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " damage."
-            				+ (source.isArmMovementHindered()?" [style.italicsMinorBad(Damage is reduced to 50% as [npc.her] clothing is hindering arm movement!)]":""));
+            		"对" + (target==null?"[npc.her]的目标":"[npc2.name]") + "发出一连串狂野的爪击，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + "伤害。"
+            				+ (source.isArmMovementHindered()?"[style.italicsMinorBad(由于衣物阻碍了手臂运动，造成的伤害降低为原来的50%！)]":""));
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] sharp claws to deliver a savage series of slashes to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage."
-            				+ " [style.italicsMinorBad(Damage is reduced to 50% if [npc.her] clothing hinders arm movement.)]");
+            		"[npc.Name]用锋利的爪子向目标发出一连串狂野的爪击，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。"
+            				+ "[style.italicsMinorBad(如果衣物阻碍了手臂运动，造成的伤害将会降低为原来的50%。)]");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -402,13 +402,13 @@ public class CMSpecialAttack {
             
             return formatAttackOutcome(source, target,
             		(source.isArmMovementHindered()
-            				?"As [npc.her] clothing is restricting [npc.her] arm movement, [npc.name] [npc.verb(struggle)] to land [npc.her] savage slashes, dealing only half damage to [npc2.name]..."
-            				:"With a savage howl, [npc.name] [npc.verb(launch)] [npc.herself] at [npc2.name], managing to do considerable damage to [npc2.herHim] by raking at [npc2.her] body with [npc.her] sharp claws.")+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            				?"由于衣物阻碍了手臂运动，[npc.name]难以用力，只能对[npc2.name]造成一半的伤害……"
+            				:"[npc.Name]长嚎一声后便向[npc2.name]冲去，锋利的爪子掠过[npc2.her]的身体，造成了严重的伤害。")+damageValue.getKey(),
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-            			?"The ferocity of [npc.namePos] attack catches [npc2.name] off guard!"
+            			?"[npc.namePos]凶狠的攻击让[npc2.name]猝不及防！"
             			:null),
-                    "The duration of '"+StatusEffect.CRIPPLE.getName(target)+"' is doubled!");
+                    "“"+StatusEffect.CRIPPLE.getName(target)+"”的持续时间翻倍了！");
         }
         @Override
         public float getCritStatusEffectDurationMultiplier() {
@@ -417,7 +417,7 @@ public class CMSpecialAttack {
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
         	return Util.newArrayListOfValues(
-        			 "Used in the first turn of combat.");
+        			 "在战斗的第一回合使用。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -426,7 +426,7 @@ public class CMSpecialAttack {
     };
 
 	public static AbstractCombatMove ANTLER_HEADBUTT = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "antler headbutt",
+            "鹿角头槌",
             1,
             2,
             CombatMoveType.ATTACK,
@@ -451,21 +451,21 @@ public class CMSpecialAttack {
         }
         @Override
         public Value<Boolean, String> isAvailableFromSpecialCase(GameCharacter source) {
-            return new Value<>(source.getHornType().equals(HornType.REINDEER_RACK), "Available to characters who have antlers.");
+            return new Value<>(source.getHornType().equals(HornType.REINDEER_RACK), "仅适用于拥有多叉鹿角的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             boolean isCrit = canCrit(turnIndex, source, target, enemies, allies);
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a powerful headbutt to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " damage.");
+            		"对" + (target==null?"[npc.her]的目标":"[npc2.name]") + "使出一记大力头槌，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + "伤害。");
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] antlers to deliver a powerful headbutt to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage.");
+            		"[npc.Name]用鹿角向目标发出一记大力头槌，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -475,12 +475,12 @@ public class CMSpecialAttack {
             Value<String, Integer> damageValue = damageType.damageTarget(source, target, getDamage(turnIndex, source, target, isCrit));
             
             return formatAttackOutcome(source, target,
-            		"With a burst of energy, [npc.name] [npc.verb(leap)] forwards, ramming [npc.her] forehead into [npc2.namePos] body and whacking [npc2.herHim] with the sides of [npc.her] antlers."+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            		"[npc.Name]带着巨大的力量纵身一跃，用前额向着[npc2.namePos]的身体砸去，鹿角狠狠地重击了[npc2.herHim]。"+damageValue.getKey(),
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-            			? "[npc.NamePos] headbutt is particularly effective!"
+            			? "[npc.NamePos]的头槌格外有效！"
             			:null),
-                    "The duration of '"+StatusEffect.DAZED.getName(target)+"' is doubled!");
+                    "“"+StatusEffect.DAZED.getName(target)+"”的持续时间翻倍了！");
         }
         @Override
         public float getCritStatusEffectDurationMultiplier() {
@@ -488,7 +488,7 @@ public class CMSpecialAttack {
         }
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-            return Util.newArrayListOfValues((source!=null?UtilText.parse(source,"[npc.NameIsFull]"):"Attacker is")+" at least 50% taller than "+(target!=null?UtilText.parse(target,"[npc.name]"):"the target")+".");
+            return Util.newArrayListOfValues((source!=null?UtilText.parse(source,"[npc.NameIsFull]"):"攻击者")+"需要比"+(target!=null?UtilText.parse(target,"[npc.name]"):"目标")+"高至少50%。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -500,7 +500,7 @@ public class CMSpecialAttack {
     };
 
 	public static AbstractCombatMove COW_HEADBUTT = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "horn headbutt",
+            "角撞头槌",
             1,
             2,
             CombatMoveType.ATTACK,
@@ -525,21 +525,21 @@ public class CMSpecialAttack {
         }
         @Override
         public Value<Boolean, String> isAvailableFromSpecialCase(GameCharacter source) {
-            return new Value<>(source.hasHorns() && !source.getHornType().equals(HornType.REINDEER_RACK), "Available to characters who have horns.");
+            return new Value<>(source.hasHorns() && !source.getHornType().equals(HornType.REINDEER_RACK), "仅适用于拥有角的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             boolean isCrit = canCrit(turnIndex, source, target, enemies, allies);
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a powerful headbutt to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " damage.");
+            		"对" + (target==null?"[npc.her]的目标":"[npc2.name]") + "使出一记大力头槌，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + "伤害。");
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] horns to deliver a powerful headbutt to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage.");
+            		"[npc.Name]用角向目标发出一记大力头槌，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -549,12 +549,12 @@ public class CMSpecialAttack {
             Value<String, Integer> damageValue = damageType.damageTarget(source, target, getDamage(turnIndex, source, target, isCrit));
             
             return formatAttackOutcome(source, target,
-            		"With a burst of energy, [npc.name] [npc.verb(leap)] forwards, ramming [npc.her] forehead into [npc2.namePos] body and whacking [npc2.herHim] with the sides of [npc.her] horns."+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            		"[npc.Name]带着巨大的力量纵身一跃，用前额向着[npc2.namePos]的身体砸去，角狠狠地重击了[npc2.herHim]。"+damageValue.getKey(),
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-            			?"[npc.NamePos] headbutt is particularly effective!"
+            			? "[npc.NamePos]的头槌格外有效！"
             			:null),
-                    "The duration of '"+StatusEffect.DAZED.getName(target)+"' is doubled!");
+                    "“"+StatusEffect.DAZED.getName(target)+"”的持续时间翻倍了！");
         }
         @Override
         public float getCritStatusEffectDurationMultiplier() {
@@ -562,7 +562,7 @@ public class CMSpecialAttack {
         }
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-            return Util.newArrayListOfValues((source!=null?UtilText.parse(source,"[npc.NameIsFull]"):"Attacker is")+" at least 50% taller than "+(target!=null?UtilText.parse(target,"[npc.name]"):"the target")+".");
+            return Util.newArrayListOfValues((source!=null?UtilText.parse(source,"[npc.NameIsFull]"):"攻击者")+"需要比"+(target!=null?UtilText.parse(target,"[npc.name]"):"目标")+"高至少50%。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -574,7 +574,7 @@ public class CMSpecialAttack {
     };
     
     public static AbstractCombatMove BITE = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "feral bite",
+            "兽性撕咬",
             1,
             2,
             CombatMoveType.ATTACK,
@@ -629,33 +629,33 @@ public class CMSpecialAttack {
 //						BodyPartTag.FACE_SHARK_TEETH,
 						BodyPartTag.FACE_BEAK
 				)),
-				"Available to characters with an anthropomorphic face.");
+				"仅适用于拥有动物拟人面部的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             boolean isCrit = canCrit(turnIndex, source, target, enemies, allies);
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-            		"Deliver a feral bite to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " damage"
+            		"对" + (target==null?"[npc.her]的目标":"[npc2.name]") + "发出一记兽性的撕咬，造成"
+            				+ getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + "伤害"
             				+ (source.getFaceType().getTags().contains(BodyPartTag.FACE_VENOMOUS_TEETH)
-        						?" and applying 'poisoned' for 6 turns."
+        						?"并施加6回合“中毒”。"
         						:(source.getFaceType().getTags().contains(BodyPartTag.FACE_VENOMOUS_TEETH_LUST)
-                					?" and applying 'lust-poisoned' for 6 turns."
-                					:"."))
-            				+ (!source.isCoverableAreaExposed(CoverableArea.MOUTH)?" [style.italicsBad(Damage is reduced to 0% as [npc.her] clothing is blocking [npc.her] mouth!)]":""));
+                					?"并施加6回合“欲毒”。"
+                					:"。"))
+            				+ (!source.isCoverableAreaExposed(CoverableArea.MOUTH)?"[style.italicsBad(由于嘴部被衣物阻挡，伤害降低至0%！)]":""));
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, 
-            		"[npc.Name] can use [npc.her] anthropomorphic face to deliver a feral bite to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage"
+            		"[npc.Name]用动物拟人的面部向目标使出一记兽性的撕咬，造成" + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害"
             				+ (source.getFaceType().getTags().contains(BodyPartTag.FACE_VENOMOUS_TEETH)
-        						?" and applying 'poisoned' for 6 turns."
+        						?"并施加6回合“中毒”。"
         						:(source.getFaceType().getTags().contains(BodyPartTag.FACE_VENOMOUS_TEETH_LUST)
-                					?" and applying 'lust-poisoned' for 6 turns."
-                					:"."))
-            				+ " [style.italicsBad(Damage is reduced to 0% if [npc.her] clothing is blocking [npc.her] mouth.)]");
+                					?"并施加6回合“欲毒”。"
+                					:"。"))
+            				+ "[style.italicsBad(由于嘴部被衣物阻挡，伤害降低至0%！)]");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -666,21 +666,21 @@ public class CMSpecialAttack {
             
             return formatAttackOutcome(source, target,
             		(!source.isCoverableAreaExposed(CoverableArea.MOUTH)
-            				?"As [npc.her] clothing is covering [npc.her] mouth, [npc.nameIsFull] unable to do any damage with [npc.her] feral bite..."
-            				:"With a burst of energy, [npc.name] [npc.verb(leap)] forwards, trying to bite [npc2.name]!"
-            					+ " [npc.Her] [npc.mouth] clamps down on [npc2.her] [npc2.arm],"
-										+ " and [npc.she] [npc.verb(manage)] to cause some serious damage with [npc.her] "+(source.getFaceType()==FaceType.HARPY?"sharp beak":"animalistic teeth")+" before [npc2.she] [npc2.verb(pull)] free."
+            				?"由于嘴部被衣物阻挡，[npc.nameIsFull]无法使用兽性撕咬造成伤害……"
+            				:"[npc.Name]带着巨大的力量纵身一跃，试图咬住[npc2.name]！"
+            					+ "最终落在了[npc2.her]的[npc2.arm]上，"
+										+ "在对方挣脱前，用"+(source.getFaceType()==FaceType.HARPY?"锐利的喙":"野兽般的利齿")+"造成了严重的伤害。"
 	            				+ (source.getFaceType().getTags().contains(BodyPartTag.FACE_VENOMOUS_TEETH)
-	            						?" In the process of being bitten by [npc.namePos] venomous fangs, [npc2.namehasFull] been injected with poison!"
+	            						?"被[npc.namePos]毒性的尖牙咬住后，[npc2.namehasFull]的体内被注入了毒液！"
 	            						:(source.getFaceType().getTags().contains(BodyPartTag.FACE_VENOMOUS_TEETH_LUST)
-	                    					?" In the process of being bitten by [npc.namePos] venomous fangs, [npc2.namehasFull] been injected with lust-poison!"
+	                    					?"被[npc.namePos]毒性的尖牙咬住后，[npc2.namehasFull]的体内被注入了欲毒毒液！"
 	                    					:"")))
             			+damageValue.getKey(),
-            		"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+            		"[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
             		(isCrit
-            			?"[npc.NamePos] feral bite is particularly effective!"
+            			?"[npc.NamePos]的兽性撕咬格外有效！"
             			:null),
-                    "The duration of '"+StatusEffect.CRIPPLE.getName(target)+"' is doubled!");
+                    "“"+StatusEffect.CRIPPLE.getName(target)+"”的持续时间翻倍了！");
         }
         @Override
         public float getCritStatusEffectDurationMultiplier() {
@@ -688,7 +688,7 @@ public class CMSpecialAttack {
         }
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-            return Util.newArrayListOfValues((target!=null?UtilText.parse(target,"[npc.NameHasFull]"):"Defender has")+" less than 25% "+Attribute.HEALTH_MAXIMUM.getColouredName("span")+" remaining.");
+            return Util.newArrayListOfValues((target!=null?UtilText.parse(target,"[npc.NameHasFull]"):"防守者还剩")+"不到25%"+Attribute.HEALTH_MAXIMUM.getColouredName("span")+"。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -700,7 +700,7 @@ public class CMSpecialAttack {
     };
 
     public static AbstractCombatMove TALON_SLASH = new AbstractCombatMove(CombatMoveCategory.SPECIAL,
-            "talon slash",
+            "鸟爪挥击",
             1,
             1,
             10,
@@ -730,23 +730,23 @@ public class CMSpecialAttack {
         }
         @Override
         public Value<Boolean, String> isAvailableFromSpecialCase(GameCharacter source) {
-            return new Value<>(source.getLegType().getFootType().equals(FootType.TALONS), "Available to characters with talons.");
+            return new Value<>(source.getLegType().getFootType().equals(FootType.TALONS), "仅适用于拥有鸟类利爪的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-                    "Deliver a powerful slash attack with [npc.her] talons to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-                            + getFormattedDamage(damageType, getDamage(turnIndex, source, target, false), target, false, isTargetAtMaximumLust(target)) + " damage."
-                            + (source.isLegMovementHindered()?" [style.italicsMinorBad(Damage is reduced to 10% as [npc.her] clothing is hindering leg movement!)]":""));
+                    "用鸟类的利爪向" + (target==null?"[npc.her]的目标i":"[npc2.name]") + "发出一记有力的爪击，造成"
+                            + getFormattedDamage(damageType, getDamage(turnIndex, source, target, false), target, false, isTargetAtMaximumLust(target)) + "伤害。"
+                            + (source.isLegMovementHindered()?"[style.italicsMinorBad(由于衣物阻碍了腿部运动，造成的伤害降低为原来的10%！)]":""));
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source,
-                    "[npc.Name] can use [npc.her] sharp talons to deliver a powerful slash attack to [npc.her] target, dealing base "
-                            + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage."
-                            + " [style.italicsMinorBad(Damage is reduced to 10% if [npc.her] clothing hinders leg movement.)]");
+                    "[npc.Name]用锐利的鸟爪向目标发出一击有力的爪击，造成"
+                            + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + "基础伤害。"
+                            + "[style.italicsMinorBad(如果衣物阻碍了腿部运动，造成的伤害将会降低为原来的10%。)]");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -761,19 +761,19 @@ public class CMSpecialAttack {
 
             return formatAttackOutcome(source, target,
                     (source.isLegMovementHindered()
-                            ?"As [npc.her] clothing is restricting [npc.her] leg movement, [npc.name] [npc.verb(struggle)] to make effective use of [npc.her] talons, dealing minimal damage to [npc2.name]..."
-                            :"[npc.Name] [npc.verb(vault)] in the air, before landing with outstretched legs and powerfully slashing [npc2.name] with [npc.her] talons!")
+                            ?"由于衣物阻碍了腿部运动，[npc.name]难以利用利爪，只能对[npc2.name]造成极小的伤害……"
+                            :"[npc.Name]腾空而起，接着伸直利爪迅速降落，向着[npc2.name]发出了有力的爪击！")
                             +damageValue.getKey(),
-                    "[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+                    "[npc2.Name]受到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！",
                     (isCrit
-                            ?"[npc.Name] immediately [npc.verb(slash)] again after breaking through [npc2.namePos] block!"+critDamageValue.getKey()
+                            ?"[npc.Name]又迅速接上一下，试图突破[npc2.namePos]的格挡！"+critDamageValue.getKey()
                             :null),
-                    "[npc2.Name] took an additional " + getFormattedDamage(damageType, critDamageValue.getValue(), target, true, maxLust) + " damage!");
+                    "[npc2.Name]受到了额外" + getFormattedDamage(damageType, critDamageValue.getValue(), target, true, maxLust) + "伤害！");
         }
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             return Util.newArrayListOfValues(
-                    "Slashing with the talons breaks "+(target!=null?UtilText.parse(target,"[npc.namePos]"):"the target's")+" shielding.");
+                    "利爪的攻击突破了"+(target!=null?UtilText.parse(target,"[npc.namePos]"):"目标")+"的护盾。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {

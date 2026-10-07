@@ -1,378 +1,378 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- ROOM_ARTHUR_INSTALLATION -->
 
 	<htmlContent tag="ROOM_ARTHUR_INSTALLATION"><![CDATA[
 	<p>
-		Sensing that Lilaya's temper is about to flare up again, you quickly head over to the door which leads into the adjacent storeroom. Sure enough, by the time you've made your way across the lab, you hear Lilaya's voice raise into shouts and screams again. Finding yourself glad to not be in Arthur's position right now, you open the door and [pc.step] into the room beyond, where you find Rose waiting for you.
+		你感觉到莉莱雅又要发火了，于是迅速向通往隔壁储藏室的门走去。果然，当你穿过实验室时，你再次听到莉莱雅尖叫和大喊的声音。你暗自庆幸没和亚瑟处于同种境地。你打开门，[pc.step]出实验室，发现萝丝正在等你。
 	</p>
 	<p>
-		[rose.speech(Good [style.morning], [pc.name],)] the cat-girl maid says as she performs a curtsy. Gesturing to the stacks of cardboard boxes which fill this storeroom, she continue, [rose.speech(With your help, I should be able to get all of this cleared in no time. There's another storeroom a short distance down the hallway. We can move these boxes to there. Please grab one and follow me.)] 
+		[rose.speech([style.morning]好，[pc.name]，)]猫女仆边说边行了个屈膝礼。她指了指堆满储藏室的纸箱，继续说，[rose.speech(有了你的帮助，我应该很快就能把这里清理干净。走廊不远处还有一个储藏室，我们可以把这些箱子搬到那里去。请拿一个跟我来)] 
 	</p>
 	<p>
-		Doing as she says, you grab a box and follow Rose as she proceeds to lead you through another door and out into the ground floor's circular hallway. A short way down this hallway, you find yourself being led into a storage cupboard, in which Rose instructs you to place your box in the far corner. Over the next half an hour the two of you repeat this process several dozen more times, until finally only a bed, a couple of wardrobes, and the equipment that Arthur will need to carry out his experiments is left in the now-spacious storeroom. 
+		你按她说的拿起纸箱，跟着萝丝穿过另一扇门，来到一楼走廊。沿着走廊走了一小段路，你发现自己被带到了储藏室。萝丝指示你把盒子放在最里面的角落。接下来的半小时，你们俩一直在搬运这些纸箱，直到最后，宽敞的储藏室里只剩下一张床、几个衣柜和亚瑟进行实验所需的设备。
 	</p>
 	<p>
-		[rose.speech(All that's left is for me to quickly dust this room,)] Rose says as your task comes to an end.
+		[rose.speech(现在我只需要赶紧把房间里的灰尘打扫干净就可以了。)]你们搬完箱子后，萝丝说。
 	</p>
 	<p>
-		Leaving the cat-girl maid to her duty, you return to the lab to tell Arthur that his room is ready. Catching him on the receiving end of yet another of Lilaya's lectures, you have to wait until your demonic [lilaya.relation(pc)] is finished before giving him the good news. Placing her hands on her hips as she hears that Arthur's room is ready, Lilaya tuts, [lilaya.speech(It really is a great inconvenience to have to let you stay here, Arthur. Then again, I suppose that we can't afford for you to go missing again until we've found a way to help [pc.name]. Just try not to make too much noise in there while I'm working.)]
+		你让猫女仆去工作，然后回到实验室告诉亚瑟，他的房间已经准备好了。你正赶上他再次接受莉莱雅的训话，只好等你的恶魔[lilaya.relation(pc)]训完话后再告诉他这个好消息。莉莱雅听到亚瑟的房间准备好了，双手叉腰，嘟囔道，[lilaya.speech(让你待在这里真的很不方便，亚瑟。不过，我想在我们找到帮助[pc.name]的办法之前，我们不能让你再失踪了。记住在我工作的时候，尽量不要发出太大的声音。)]
 	</p>
 	<p>
-		With that, Lilaya dismisses the two of you with a wave of her hand, and so Arthur, with a very relieved look on his face, hurries to follow you into his newly-prepared room. As you enter, you see that Rose has already finished dusting, and after curtsying towards you, she addresses Arthur, [rose.speech(Your room is ready, sir. If there's anything you need, please use the bell-pull to call for me.)]
+		莉莱雅说完，挥挥手让你们俩离开，亚瑟这才松了一口气，赶紧跟着你们走进刚准备好的房间。你们进了门，看到萝丝已打扫完了，她向你们弯腰行礼后，对亚瑟说，[rose.speech(您的房间准备好了，先生。如果您有什么需要，请拉铃叫我。)]
 	</p>
 	<p>
-		With that, Rose exits the room, leaving you alone with Arthur. He lets out a deep sigh as he walks over to sit on his new bed, before looking up at you and smiling. [arthur.speech(I don't think I've said it properly yet, so thank you [pc.name], for rescuing me.)]
+		萝丝说完，退出了房间，留下你和亚瑟独处。他走过去坐在新床上，深深地叹了一口气，然后抬头看着你微笑。[arthur.speech(我想我还没有好好感谢你，[pc.name]，谢谢你救了我。)]
 	</p>
 	<p>
-		[pc.speech(You're welcome,)] you reply. [pc.speech(So do you think you can figure out how I was transported into your world? Lilaya told me that you're the best arcane researcher out there...)]
+		[pc.speech(不客气。)]你回答。[pc.speech(所以你知道我是怎么被传送到你的世界的吗？莉莱雅告诉我你是最好的奥术学者……)]
 	</p>
 	<p>
-		[arthur.speech(Lilaya said that, huh?)] Arthur says, leaning back and smiling. [arthur.speech(Well, I do have a certain theory, but when I told Lilaya about it, she wasn't too convinced. Considering my position, I don't really have a choice but to perform the experiments and research that she asks for, but I'm absolutely convinced that they'll get us no closer to unravelling your mystery. What I'd really like to do is get to talk to someone about my theory...)]
+		[arthur.speech(莉莱雅这么说的，哈？)]亚瑟躺倒笑着说。[arthur.speech(好吧，我确实有一套理论，不过我告诉莉莱雅时，她并不相信。考虑到现在这个情况，我没有选择只能按照她的要求进行实验和研究，但我很确定这些实验和研究对解开你的问题毫无帮助。我只想找个人谈谈我的理论……)]
 	</p>
 	<p>
-		[pc.speech(You could talk to me about it,)] you offer.
+		[pc.speech(你可以跟我谈谈。)]你回答。
 	</p>
 	<p>
-		[arthur.speech(Ah, well, thank you, but I wouldn't want to worry you, in case I turn out to be wrong,)] Arthur stammers, before quickly continuing, [arthur.speech(What I really meant is that I'd like to talk to someone who would be able to confirm or deny my theory absolutely. Someone with more understanding of the arcane than anyone you'd ever find wandering around in Dominion. Someone like a Lilin. But not just any Lilin; it needs to be one of the seven elders.)]
+		[arthur.speech(啊，好吧，谢谢你，但我不想让你担心，万一我错了呢，)]亚瑟结结巴巴地说了几句，很快又继续说，[arthur.speech(我的意思是，我要找一个能绝对证实或否认我的理论的人谈谈。一个比你在御城区四处游荡的人更了解奥术的人。就像一个莉琳。但不是普通的莉琳，必须是七位长老之一。)]
 	</p>
 	<p>
-		[pc.speech(An elder Lilin? Lilaya's mother wouldn't happen to be one of those, would she?)] you offer, remembering that Rose once told you that Lilaya's mother was the Lilin Lyssieth.
+		[pc.speech(莉琳长老？莉莱雅的母亲不会碰巧是其中之一吧？)]你说。你想到萝丝曾告诉过你，莉莱雅的母亲是莉琳莉西丝。
 	</p>
 	<p>
-		[arthur.speech(Not only is she an elder Lilin, but she's the very one who told me such a thing existed in the first place! It'd be near-impossible to get any other Lilin to talk with me, but I know Lyssieth will...)] Arthur explains, before suddenly blurting out, [arthur.speech(B-But please, <i>please</i> don't tell Lilaya that I'm looking to speak with her mother...)]
+		[arthur.speech(她不是唯一的莉琳长老， 但如果有谁会告诉我这样的事情存在那她肯定是第一个！要让其他莉琳跟我说话几乎是不可能的，但我知道莉西丝会……)]亚瑟解释，然后突然大声说，[arthur.speech(但，但请<i>请</i>不要告诉莉莱雅我要见她的母亲并和她谈……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_INSTALLATION_AGREE_TO_CONVINCE_LYSSIETH -->
 	
 	<htmlContent tag="ROOM_ARTHUR_INSTALLATION_AGREE_TO_CONVINCE_LYSSIETH"><![CDATA[
 	<p> 
-		[pc.speech(Ok, I'll find Lyssieth and see if I can convince her to meet with you,)] you say, [pc.speech(but if I'm to keep this from Lilaya, I'll need to know why.)] 
+		[pc.speech(好吧，我去找莉西丝，看看能不能说服她和你见面，)]你说，[pc.speech(但要我瞒着莉莱雅，我得知道原因。)] 
 	</p> 
 	<p>
-		Arthur smiles happily as he hears that you're willing to help, but as you demand an explanation, he lets out a heavy sigh, [arthur.speech(That's fair enough, I suppose. I'd have to explain the whole situation to you anyway, as it's the reason why Lyssieth isn't exactly easy to get hold of these days.)] 
+		亚瑟听到你愿意帮忙，开心地笑了，但当你要求他解释时，他重重地叹了口气，[arthur.speech(我想这很公平，我得向你解释一下整个情况，因为这就是为什么最近莉西丝不太容易找到的原因。)] 
 	</p> 
 	<p>
-		[pc.speech(Is this related to Lilaya's accusations which I witnessed earlier?)] 
+		[pc.speech(这与我之前目睹的莉莱雅的指控有关吗？)] 
 	</p> 
 	<p> 
-		[arthur.speech(Yes... You see, as I'm sure you already know, Lilaya and I used to work here together. After a time, we started dating, but it didn't last long...)] 
+		[arthur.speech(是的……我想你知道我和莉莱雅以前是同事，一段时间后，我们开始约会，但好景不长……)] 
 	</p> 
 	<p>
-		Arthur seems quite reluctant to continue, but after a moment of silence, he continues, [arthur.speech(At the time, Lyssieth used to visit very regularly, and would always make a fuss over Lilaya. Well, the last time Lyssieth visited, Lilaya was out on a rare errand, and, left alone with her in the lab... well... i-it's hard saying no to a Lilin... and after she told me she had a thing for humans...)] 
+		亚瑟似乎不太愿意继续说下去，但沉默片刻后，他继续说道，[arthur.speech(那时候，莉西丝经常来访，而且总是对莉莱雅大惊小怪。上次莉西丝来的时候，莉莱雅难得地出去办事了，实验室里只剩下她一个人……我很难拒绝一个莉琳……而且她告诉我她对人类很有好感……)] 
 	</p> 
 	<p>
-		[pc.speech(Ah,)] you sigh, seeing where this is going. 
+		[pc.speech(噢，)]你叹了口气，看出了事情会怎样发展。
 	</p> 
 	<p>
-		[arthur.speech(Mmm... Needless to say, Lilaya returned and caught us in the act,)] Arthur continues, casting his eyes to the floor, [arthur.speech(and you can imagine the rest... She still hasn't forgiven either of us for that. I mean, polyamory isn't exactly uncommon - hell, Lilaya herself was still sleeping with Rose at the time - but seeing as it was with her mother, as well as the fact that we'd done it behind her back...)] 
+		[arthur.speech(嗯……不用说，莉莱雅回来了而且逮个正着，)]亚瑟看向地面继续说， [arthur.speech(你可以想象剩下的……她至今都没有原谅我们俩。我是说，多角恋并不罕见。见鬼，莉莱雅自己当时还和萝丝搞在一起。但这毕竟是和她母亲，而且我们是背着她做的……)] 
 	</p> 
 	<p>
-		Arthur falls into silence for a moment again, before shaking his head and looking up at you. [arthur.speech(Anyway, that's the whole reason for Lilaya living alone like this. You see, Lyssieth only has a few recognised children, and amongst them, Lilaya was clearly her favourite. When Lilaya told her mother that she never wanted to see her again, Lyssieth really took it hard. Although she'd been appointed by Lilith to govern the undercity of Submission, she'd never really taken her duties seriously before, but after all this, she retreated to her official residence down there. I don't think she's been seen up here in Dominion since...)] 
+		亚瑟又沉默了一会儿，然后摇摇头，抬头看着你。[arthur.speech(总之，这就是莉莱雅独自生活的全部原因。你看，莉西丝只有几个公认的孩子，其中莉莱雅显然是她的最爱。当莉莱雅告诉母亲她再也不想见到她时，莉西丝真的很难过。虽然她被莉莉丝任命为屈城区的管理者，但她从未认真履行过自己的职责。我不认为她现在在御城区这里……)] 
 	</p> 
 	<p>
-		[pc.speech(So you want me to go down into Submission, find Lyssieth, and convince her to come and meet with you, all behind Lilaya's back? I can't betray her trust like that...)] 
+		[pc.speech(所以你想让我去屈城区找莉西丝，并说服她来见你，还全都背着莉莱雅？我不能这样辜负她的信任……)] 
 	</p> 
 	<p>
-		[arthur.speech(This is all to find out the truth behind why you appeared in this world,)] Arthur tries to remind you, but, upon seeing the serious expression on your face, he concedes, [arthur.speech(Bloody hell... Fine, I'll admit that I'm more than a little interested in it as well. Don't worry about going behind her back; I'll tell Lilaya about all of this. I'll need a little time to build up to it, however, so until then please don't mention anything about this to her.)] 
+		[arthur.speech(这一切都是为了找出你为什么会出现在这个世界的真相，)]亚瑟试图提醒你，但看到你脸上严肃的表情，他只好作罢，[arthur.speech(该死的……好吧，我承认我也对它有点兴趣。不用担心背着她，我会把这一切告诉莉莱雅的。不过，我需要一点时间来准备，所以在那之前，请不要对她提起这件事。)] 
 	</p> 
 	<p>
-		[pc.speech(Ok, but I won't bring Lyssieth here until you've told Lilaya,)] you firmly state. 
+		[pc.speech(好吧，但在你告诉莉莱雅之前我不会带莉西丝来这里。)]你坚定地说。
 	</p> 
 	<p>
-		[arthur.speech(Don't worry, by the time you've found and convinced her, I'll have let Lilaya know. Well, with that settled, I should get on with these experiments Lilaya's assigned to me. If there's ever anything you need, please don't hesitate to drop by and let me know; my door's always open to the person who saved me!)] 
-	 </p> 
-	]]>
-	</htmlContent>
+		[arthur.speech(别担心，等你找到并说服她的时候，我就会通知莉莱雅。好了，事情解决了，我该去做莉莱雅分配给我的实验了。如果你有什么需要，请随时来找我，我的大门永远向救过我的人敞开！)] 
+	</p> 
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR -->
 	
 	<htmlContent tag="ROOM_ARTHUR"><![CDATA[
 	<p> 
-		You find yourself standing in Arthur's Room, which, due to the occupant's need to carry out any experiments assigned to him, looks like a miniature version of Lilaya's lab. The walls are lined with cluttered tables, stacked bookcases, and cupboards full of all manner of scientific-looking apparatus. A solitary bed is positioned in one corner, but aside from that, there's no other indication that this room doubles as Arthur's sleeping quarters. 
+		你站在亚瑟的房间里，由于房间里的主人需要进行分配给他的实验，这里看起来就像是莉莱雅实验室的缩小版。墙边摆着凌乱的桌子、堆叠的书柜和装满各种科学仪器的橱柜。一张床孤零零地摆放在角落里，除此之外，没有其他迹象表明这个房间是亚瑟的卧室。
 	</p> 
 	<p> 
-		Busily performing one of the experiments that Lilaya has assigned to him, Arthur looks to be hard at work, although you don't think he'd mind if you asked him a few questions... 
+		亚瑟正在忙着进行莉莱雅分配给他的一项实验，看起来工作得很认真，不过你觉得他应该不介意你问他几个问题……
 	</p> 
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_LYSSIETH -->
 	
 	<htmlContent tag="ROOM_ARTHUR_LYSSIETH"><![CDATA[
 	<p> 
-		Wanting to know a little more about Lilaya's mother, you approach Arthur and get his attention, before asking him what he can tell you about Lyssieth.
+		你想了解更多关于莉莱雅母亲的信息，于是靠近亚瑟，引起了他的注意，然后问他能告诉你关于莉西丝的什么信息。
 	</p> 
 	<p> 
-		Arthur smiles a little at the question and recalls, [arthur.speech(In a lot of ways, she was exactly what you'd expect one of Lilith's daughters to be; confident, controlling, and immensely powerful. My first impression of her was one of incredible haughtiness and arrogance, but as I watched her interactions with Lilaya, I saw that she had a softer, more loving side...)] 
+		亚瑟听到这个问题，微微一笑，回忆道，[arthur.speech(在很多方面，她都和你想象中的莉莉丝的女儿一模一样：自信、控制欲强、无比强大。我对她的第一印象是不可思议的傲慢和自大，但当我观察她与莉莱雅的互动时，我发现她有更温柔、更有爱的一面……)] 
 	</p> 
 	<p> 
-		Arthur seems to get a little caught-up in his thoughts for a moment, before shaking his head and looking up at you. [arthur.speech(Of course, as you'd expect from a Lilin, she's practically dripping with sex appeal. She also has a thing for humans, which explains why most of her daughters are half-demons; if a Lilin's partner isn't corrupted into a demon before having sex, then their offspring end up like Lilaya. Not that that's a bad thing, of course, but society does typically treat human half-demons as being the lowest of all the demonic subspecies. That is of course, unless they've been recognised by their mother, like Lilaya has been.)] 
+		亚瑟似乎沉浸在自己的思绪中，过了一会儿才摇摇头，抬起头看着你。[arthur.speech(当然，正如你所知道的莉琳，她几乎是个性感尤物。她对人类也情有独钟，这也是为什么她的大多数女儿都是半恶魔。如果莉琳的伴侣在发生性关系之前没有堕落成恶魔，那么他们的后代就会像莉莱雅一样。当然，这并不是什么坏事，但社会通常会把人类半恶魔视为所有恶魔亚种中最低贱的。当然，除非他们像莉莱雅一样得到了母亲的认可。)] 
 	</p> 
 	<p> 
-		Arthur turns to one side to check on his experiment, making a satisfied humming noise before facing you once more and continuing, [arthur.speech(Sorry about that. Anyway, you should know that Lyssieth's love of humans even extends to the appearance she likes to take on the most. The Lilin can transform themselves into any race imaginable, you see, and Lyssieth likes to stay in the form of a human. She'd change her style almost every day, but no matter what appearance she took on, she'd always be so beautiful...)] 
+		亚瑟转过身去检查他的实验，满意地哼了一声，又转过来继续对你说：[arthur.speech(抱歉刚才那样。无论如何，你应该知道，莉西丝对人类的爱甚至延伸到她最喜欢呈现的外貌上。莉琳可以变成任何可以想象的种族，你懂的，莉西丝就喜欢保持人类的形态。她几乎每天都会改变她的风格，但无论她采取什么外貌，她总是那么美丽……)]
 	</p> 
 	<p> 
-		Again, Arthur seems to lose himself in his thoughts, and, having heard enough, you decide to take a step back and let him resume his experiments. 
+		亚瑟说完，似乎又陷入了沉思。你听够了，决定退后一步，让他继续做实验。
 	</p> 
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_LILAYA -->
 	
 	<htmlContent tag="ROOM_ARTHUR_LILAYA"><![CDATA[
 	<p>
-		You find yourself curious to know what Arthur's memories of Lilaya are like, so, stepping forwards, you ask, [pc.speech(I hope you don't mind me asking, but what was Lilaya like when you two were dating?)]
+		你想知道亚瑟记忆里的莉莱雅是怎样的，于是上前问，[pc.speech(我希望你不介意我问，你们约会的时候莉莱雅是什么样的？)]
 	</p>
 	<p>
-		[arthur.speech(Loving, but very controlling,)] Arthur replies with a sad smile. [arthur.speech(While she'd often spend entire evenings alone with Rose, she all but banned me from spending any time with anyone else. Not that I really had other people that I wanted to see, but it still felt a little stifling. I'm not trying to make excuses for what I did, but maybe that's partly why I... erm, you know... with Lyssieth... Anyway, returning to your question, Lilaya was much as she still is now; kind and friendly with people she knows, but nervous and confrontational around strangers. Like others with demonic blood, she's naturally gifted with the arcane, and also has quite a high sex drive...)]
+		[arthur.speech(很爱我，但她控制欲很强，)]亚瑟带着悲伤的微笑回答。[arthur.speech(虽然她总是和萝丝待在一起，但她禁止我和其他人在一起。我倒不是真的有其他想见的人，但还是觉得有点窒息。我并不是为自己找借口，但也许这就是我……呃，你知道……和莉西丝在一起的部分原因……总之，回到你的问题上，莉莱雅过去和现在一样，对熟人和善友好，但面对陌生人就会紧张和抗拒。和其他拥有恶魔血统的人一样，她天生具有奥术天赋，性欲也很旺盛……)]
 	</p>
 	<p>
-		Arthur blushes and clears his throat, before turning back to his experiments and stating, [arthur.speech(I need to get on with this now!)]
+		亚瑟红着脸清了清嗓子，然后转身继续做实验，[arthur.speech(我现在得去做事了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_HYPNO_WATCH_START -->
 	
 	<htmlContent tag="ROOM_ARTHUR_HYPNO_WATCH_START"><![CDATA[
 	<p>
-		The sight of the numerous arcane instruments and beakers of bubbling, brightly-coloured liquid that are scattered over every surface fills you with curiosity, and you can't help but ask,
+		看到到处都是无数神秘仪器和充满冒着气泡，颜色鲜艳的液体的烧杯，你充满了好奇，忍不住问，
 		#IF(pc.getName(false).equals("Eru") && pc.getSurname().equals("Chitanda"))
-			 [pc.speech(What sort of experiments are you working on? Watashi ki ni narimasu!)]
+			[pc.speech(你在做什么实验？私きになります！(我很好奇！))]
 		#ELSE
-			 [pc.speech(What sort of experiments are you working on?)]
+			[pc.speech(你在做什么实验？)]
 		#ENDIF
 	</p>
 	<p>
-		[arthur.speech(Nothing too interesting, really; Lilaya's tasked me to repeat one of her experiments that's related to detecting inter-dimensional particles. I've already told her that it doesn't hold up in theory, let alone practice, but she doesn't listen,)] Arthur sighs, before a mischievous look flashes across his face. [arthur.speech(You know... there is <i>something</i> a little more interesting that I could do. You see, back when I was working for Zaranix, one of his ideas was to get me to find an arcane method of changing a person's sexual orientation. At first I thought it might prove impossible, like all his other ideas, but after doing a little research into it, I think I might actually have found a way to enchant a certain item that could do the trick. I'd never have use for such an instrument myself, you understand, but in the name of scientific curiosity, I'd very much like to test my theory.)]
+		[arthur.speech(其实没什么有趣的；莉莱雅让我重复她的一个实验，与探测维度间粒子有关。我早告诉过她，这个实验在理论上就不可行，更别说实践了，但她完全听不进去，)]亚瑟叹了口气，然后脸上闪过一丝顽皮的神情。[arthur.speech(你知道的……我可以做<i>一些</i>更有趣的事情。你看，之前我为扎拉尼克斯干活的时候，他的一个想法是让我找到一种改变一个人性取向的奥术方法。最开始我以为这是不可能的，就和他的其他想法一样，不过研究一段时间后，我觉得我可能真的找到了办法，可以给某个东西附魔，从而达到目的。你知道，我自己是用不上这种仪器的，但为了科学求知，我很想验证一下我的理论。)]
 	</p>
 	<p>
-		Seeing where this conversation is headed, you muse, [pc.speech(Why do I get the feeling you're about to ask me to do something?)]
+		你看出了谈话的走向，陷入沉思，[pc.speech(为什么我感觉你要让我做什么？)]
 	</p>
 	<p>
-		[arthur.speech(Well, it's only a small errand. I just need a package collected from Vicky over at Arcane Arts. I would ask Lilaya to send Rose, but I can't afford the hour's worth of lecturing I receive every time I talk to her...)]
+		[arthur.speech(嗯，这只是个小差事。我只需要从到奥术艺术的维姬那里取一个包裹。我本想让莉莱雅找萝丝去，但每次和她说话都要听她说上一个小时，我可承受不起……)]
 	</p>
 	<p>
-		[pc.speech(Well, if it's just picking up a package, I could do that the next time I'm over in the Shopping Arcade,)] you offer.
+		[pc.speech(好吧，如果只是拿个包裹的话，下次我去购物中心的时候就可以拿了，)]你回道。
 	</p>
 	<p>
-		[arthur.speech(Excellent!)] Arthur exclaims, [arthur.speech(Thank you so much, [pc.name]! Now, I really should get on with this pointless experiment, or else Lilaya will have yet more ammunition to use against me...)]
+		[arthur.speech(很好！)]亚瑟高兴的叫道，[arthur.speech(非常感谢你，[pc.name]！现在，我要继续做这个毫无意义的实验了，不然莉莱雅就有理由来找我麻烦……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_HYPNO_WATCH_DELIVERY -->
 	
 	<htmlContent tag="ROOM_ARTHUR_HYPNO_WATCH_DELIVERY"><![CDATA[
 	<p>
-		Presenting the package to Arthur, you ask the question at the forefront of your mind, [pc.speech(Here's the package from Arcane Arts. I couldn't help but wonder, though, what's inside?)]
+		把包裹交给亚瑟时，你问了一个你觉得最重要的问题，[pc.speech(这是奥术艺术的包裹。不过，我还是想知道里面装的什么？)]
 	</p>
 	<p>
-		[arthur.speech(Ah! Thank you, [pc.name]! I hope you didn't have any trouble with Vicky; she can be a little overwhelming sometimes,)] Arthur says, taking the package from you and ringing the bell-pull in the corner of his room. [arthur.speech(As to what's inside, I'll show you right now!)]
+		[arthur.speech(啊！谢谢，[pc.name]！我希望你和维姬在一起没有遇到什么麻烦；她有时会有点让人受不了，)]亚瑟说着从你手中接过包裹，拉响了他房间角落里的拉铃。[arthur.speech(至于里面有什么，我现在就给你看！)]
 	</p>
 	<p>
-		Tearing off the tape that's holding the box together, Arthur quickly opens it up and reaches inside. Stepping closer to get a better look, you see him pull out a silver pocket-watch, with a long chain attached to the top. The hour and minute hands don't look as though they're moving, and the time that's shown is stuck at four minutes past ten.
+		撕开胶带，亚瑟迅速打开盒子，把手伸进里面。靠近一看，你会发现他拿出了一块银色怀表，上面挂着一条长链子。时针和分针看起来并没有动，显示的时间停留在十点四分。
 	</p>
 	<p>
-		[pc.speech(A broken pocket watch?)] You ask, a little unimpressed.
+		[pc.speech(一个坏的怀表？)]你有点不以为然地问。
 	</p>
 	<p>
-		Before Arthur can answer, there's a knock at the door, before Rose steps inside the room. [rose.speech(You called, sir?)]
+		亚瑟还没来得及回答，门就被敲响了，然后萝丝就走进了房间。[rose.speech(你叫我吗，先生？)]
 	</p>
 	<p>
-		[arthur.speech(Ah, yes, Rose! Could you please ask Lilaya to come up here? I need her help with a special experiment,)] Arthur asks, and Rose obediently steps back and hurries off to fetch her mistress.
+		[arthur.speech(啊，对，萝丝！能请莉莱雅过来一下吗？我需要她帮我做一个特别的实验。)]亚瑟问道，萝丝顺从地退后一步，快步去找她的主人。
 	</p>
 	<p>
-		Arthur hurriedly grabs several pages of notes, before placing them beside the watch on the table in front of you. Before he has any time to explain what his plan is, the door suddenly bursts open, and a very angry-looking Lilaya strides into the room. [lilaya.speech(What is it now Arthur?! Oh, [pc.name], you're here too!)]
+		亚瑟急忙抓起几页笔记，然后把它们放在你面前桌子上的怀表旁边。他还没来得及解释他的计划是什么，门突然被撞开了，一脸怒气的莉莱雅大步走进房间。[lilaya.speech(现在是什么时候，亚瑟？！哦，[pc.name]你也在这！)]
 	</p>
 	<p>
-		[arthur.speech(Well, Lilaya, you know I told you about that research I did into changing a person's sexual orientation? Well, I-)]
+		[arthur.speech(嗯，莉莱雅，你知道我跟你说过我研究过改变一个人的性取向吗？嗯，我——)]
 	</p>
 	<p>
-		[lilaya.speech(Yes, I remember,)] Lilaya interrupts, [lilaya.speech(and do you remember <i>me</i> telling <i>you</i> about how I thought it was irresponsible to want to go around changing people's nature like that?!)]
+		[lilaya.speech(对，我记得，)]莉莱雅打断了他的话，[lilaya.speech(那你还记得<i>我</i>跟<i>你</i>说过，我认为这样去改变别人的天性非常不负责任的吗？！)]
 	</p>
 	<p>
-		[arthur.speech(I don't intend to use it, Lilaya!)] Arthur objects, [arthur.speech(It's only for research purposes! If I could harness the arcane, I'd do it all myself... Please, all I need you to do is follow these instructions and enchant this watch.)]
+		[arthur.speech(我不打算用它，莉莱雅！)]亚瑟反对道，[arthur.speech(这只是为了研究！如果我能驾驭奥术，我就自己来了……求你了，我只需要你给这只表附魔。)]
 	</p>
 	<p>
-		[lilaya.speech(Eugh, fine... But you're writing up a full report on this, on top of the work I've already assigned to you,)] Lilaya sighs, before stepping over to the desk and starting to follow Arthur's instructions.
+		[lilaya.speech(呃，好吧……但你要在我已经分配给你的工作之外，再写一份完整的报告，)]莉莱雅叹了口气，然后走到桌前，开始按照亚瑟的指示操作。
 	</p>
 	<p>
-		After a few minutes, and several flashes of arcane energy, Lilaya's work is done, and you step forwards to see that the watch has undergone a drastic change. Now, instead of looking like a regular time-piece, the face of the watch is a swirling vortex of purple energy. Before you can take a closer look, Lilaya picks the watch up by the chain, and turns to Arthur. [lilaya.speech(So how does this thing work?)]
+		几分钟后，几道奥术能量闪过，莉莱雅的工作完成了，你走向前去，看到怀表已经发生了翻天覆地的变化。现在，怀表的表面不再是普通的表盘，而是一个充满紫色能量的漩涡。还没等你仔细看，莉莱雅就用链子把怀表拎了起来转向亚瑟。[lilaya.speech(那么这东西是如何工作的呢？)]
 	</p>
 	<p>
-		[arthur.speech(C-Careful, Lilaya!)] Arthur exclaims, averting his eyes from the watch. [arthur.speech(You just have to swing it back and forth in front of someone, and they should undergo a hypnotic-type effect, which, if my calculations are correct, will change their orientation. Oh, you should be able to channel arcane essences into it to change the desired orientation as well. We really need a test subject for this...)]
+		[arthur.speech(小，小心点，莉莱雅！)]亚瑟惊叫着把视线从怀表上移开。[arthur.speech(你只需在某人面前来回摆动它，他们就会产生催眠效果，如果我的计算正确的话，他们就会改变性取向。哦，你应该还能把奥术精华注入其中，改变所需的性取向。我们真的需要一个实验对象……)]
 	</p>
 	<p>
-		[lilaya.speech(Well, whatever the result is, we can always undo it, right? I want to be the one who uses it, as I'll be able to sense if anything starts to go wrong, and you can't be the test subject, Arthur, as you'll need to be the one to fix any unexpected effects...)] Lilaya muses, before both she and Arthur turn towards you. [lilaya.speech([pc.Name]! You're ok letting us test this on you, aren't you? I promise that I won't apply the full effect, so there's really nothing to worry about!)]
+		[lilaya.speech(好吧，不管结果如何，我们总能挽回的，对吧？我要成为使用它的人，因为我能够感觉到有什么地方会开始出错，而你不能成为试验品，亚瑟，因为你需要成为修复任何意外效果的人……)]莉莱雅喃喃自语，然后她和亚瑟都转身看着你。[lilaya.speech([pc.Name]！让我们在你身上做测试，你没问题吧？我保证不会使用全部效果，所以真的不用担心！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF -->
 	
 	<htmlContent tag="ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF"><![CDATA[
 	<p>
-		Reassured by the fact Lilaya and Arthur are both highly-competent arcane researchers, you step forwards. [pc.speech(Ok, ok... But this had better not be permanent. Seeing as I'm [pc.orientation], you'll probably need to set the watch to something other than that...)]
+		莉莱雅和亚瑟都是能力出众的奥术研究者，你觉得没什么好怕的，于是走上前去。[pc.speech(好吧，好吧……但最好不是永久性的。我是[pc.orientation]，你可能需要把怀表调个别的位置……)]
 	</p>
 	<p>
-		[arthur.speech(Don't worry, this process is completely reversible,)] Arthur says, before turning to Lilaya and ordering,
+		[arthur.speech(不用担心，这个过程是完全可逆的，)]亚瑟说，然后转向莉莱雅，
 	#IF(pc.getSexualOrientation()!=ORIENTATION_AMBIPHILIC)
-			 [arthur.speech(Ok, Lilaya, enchant the watch to try and change [pc.name] into being ambiphilic.)]
+			[arthur.speech(好吧，莉莱雅，给怀表附魔，试着让[pc.name]变成双性恋。)]
 		</p>
 		<p>
-			Holding the watch by the chain in one hand, Lilaya reaches up with her other, and, with a little flash of lilac, enchants the watch as Arthur instructs. The swirling purple face slowly shifts into a light purple, and, instructed by Arthur to keep focused on the watch, you fix your gaze on the mesmerising surface as Lilaya starts slowly swaying it back and forth. You feel your head rocking from side to side in time with each swing, and, starting to feel quite light-headed, you begin to find it very hard to remember what it is you're doing...
+			莉莱雅一手拿着表链，一手伸向怀表，随着丁香紫色的一道闪光亮起，她按照亚瑟的指示给怀表附了魔。漩涡状的紫色表面慢慢转变成浅紫色，在亚瑟的指示下，你将注意力集中在怀表上，当莉莱雅开始慢慢前后摇摆怀表时，你的视线也定格在那令人挪不开视线的表面上。你感觉自己的头随着每一次摆动而左右摇晃，开始感到头重脚轻，你开始发现自己很难记住自己在做什么……
 		</p>
 		<i><p>
-			[lilaya.speech(Perhaps we can leave the experiment for later,)] Lilaya moans, placing the watch to one side, before stepping forwards and planting a wet kiss on your lips.
+			[lilaya.speech(也许我们可以把实验留到以后再做。)]莉莱雅呻吟着，把怀表放到一边，然后走上前，在你的嘴唇上吻了一下。
 		</p>
 		<p>
-			[arthur.speech(We could all use a break,)] Arthur joins in, stepping around to take a firm hold of your waist.
+			[arthur.speech(我们，休息一下吧。)]亚瑟也加入进来，绕过来紧紧搂住你的腰。
 		</p>
 		<p>
-			[pc.speech(Mmm, yes...)] you moan, feeling a jolt of excitement as Arthur's hands run down to your groin. Leaning back into him, you pull your [lilaya.relation(pc)] forwards, passionately thrusting your tongue into her mouth as you reach down to help guide Arthur's fingers down to your groin...
+			[pc.speech(嗯……好啊……)]你呻吟着，当亚瑟的手伸向你的下体时，你感到一阵兴奋。你向后靠向他，将你的[lilaya.relationship(pc)]向前拉，热情地将舌头伸进她的嘴里，同时伸手帮助引导亚瑟的手指继续向下伸向你的下面……
 		</p>
 		<p>
-			[lilaya.speech(Wake up...)] Lilaya sighs...
+			[lilaya.speech(醒醒……)]莉莱雅叹了口气。
 		</p></i>
 	#ELSEIF(pc.isFeminine())
-			 [arthur.speech(Ok, Lilaya, enchant the watch to try and change [pc.name] into being androphilic.)]
+			[arthur.speech(好吧莉莱雅，给手表施魔法，试着让[pc.name]变成男性恋。)]
 		</p>
 		<p>
-			Holding the watch by the chain in one hand, Lilaya reaches up with her other, and, with a little flash of turquoise, enchants the watch as Arthur instructs. The swirling purple face slowly shifts into a deep shade of blue, and, instructed by Arthur to keep focused on the watch, you fix your gaze on the mesmerising surface as Lilaya starts slowly swaying it back and forth. You feel your head rocking from side to side in time with each swing, and, starting to feel quite light-headed, you begin to find it very hard to remember what it is you're doing...
+			莉莱雅一手拿着表链，一手伸向怀表，随着丁香紫色的一道闪光亮起，她按照亚瑟的指示给怀表附了魔。漩涡状的紫色表面慢慢转变成浅紫色，在亚瑟的指示下，你将注意力集中在怀表上，当莉莱雅开始慢慢前后摇摆怀表时，你的视线也定格在那令人挪不开视线的表面上。你感觉自己的头随着每一次摆动而左右摇晃，开始感到头重脚轻，你开始发现自己很难记住自己在做什么……
 		</p>
 		<i><p>
-			[arthur.speech(Perhaps we can leave the experiment for later,)] Arthur states, getting Lilaya to put the watch to one side, before leading her out of the room.
+			[arthur.speech(也许我们可以把实验留到以后再做。)]亚瑟说，让莉莱雅把怀表放到一边，然后带她走出房间。
 		</p>
 		<p>
-			[pc.speech(What's wrong? Is it not work- ~Aah!~)] you start to question, but Arthur confidently steps around behind you and takes a firm hold of your waist.
+			[pc.speech(怎么了，没有起作用吗~啊~)]你开始质疑，但亚瑟自信地绕到你身后，紧紧搂住你的腰。
 		</p>
 		<p>
-			[arthur.speech(I could see that look in your eyes...)] he says, and a jolt of excitement suddenly runs through you as you feel Arthur's hands run down to your groin.
+			[arthur.speech(我能看到你的眼神……)]他说，当你感觉到亚瑟的手伸向你的下体时，一股兴奋的感觉突然涌上心头。
 		</p>
 		<p>
-			[pc.speech(Mmm... Yes...)] you moan, turning your head and pressing your lips against Arthur's. Leaning back into him, you passionately thrust your tongue into his mouth as you reach down to help guide his fingers down to your groin...
+			[pc.speech(嗯……对……)]你呻吟着，转过头，把嘴唇贴在亚瑟的嘴唇上。你向后靠向他，热情地将舌头伸进他的嘴里，同时伸手帮助引导他的手指向下伸向你的下体……
 		</p>
 		<p>
-			[lilaya.speech(Wake up, [pc.name]...)] you hear Lilaya call from the other side of the door...
+			[lilaya.speech(醒醒，[pc.name]……)]你听到莉莱雅在门的另一侧呼唤……
 		</p></i>
 	#ELSE
-			 [arthur.speech(Ok, Lilaya, enchant the watch to try and change [pc.name] into being gynephilic.)]
+			[arthur.speech(好吧莉莱雅，给手表施魔法，试着让[pc.name]变成女性恋。)]
 		</p>
 		<p>
-			Holding the watch by the chain in one hand, Lilaya reaches up with her other, and, with a little flash of scarlet, enchants the watch as Arthur instructs. The swirling purple face slowly shifts into a deep shade of pink, and, instructed by Arthur to keep focused on the watch, you fix your gaze on the mesmerising surface as Lilaya starts slowly swaying it back and forth. You feel your head rocking from side to side in time with each swing, and, starting to feel quite light-headed, you begin to find it very hard to remember what it is you're doing...
+			莉莱雅一手拿着表链，一手伸向怀表，随着丁香紫色的一道闪光亮起，她按照亚瑟的指示给怀表附了魔。漩涡状的紫色表面慢慢转变成浅紫色，在亚瑟的指示下，你将注意力集中在怀表上，当莉莱雅开始慢慢前后摇摆怀表时，你的视线也定格在那令人挪不开视线的表面上。你感觉自己的头随着每一次摆动而左右摇晃，开始感到头重脚轻，你开始发现自己很难记住自己在做什么……
 		</p>
 		<i><p>
-			[lilaya.speech(Honestly, Arthur, we should leave this experiment for later,)] Lilaya states, putting the watch to one side, before leading Arthur out of the room.
+			[lilaya.speech(老实说，亚瑟，我们应该把这个实验留到以后再做。)]莉莱雅说着，把怀表放到一边，然后领着亚瑟走出了房间。
 		</p>
 		<p>
-			[pc.speech(What's wrong? Is it not work- ~Aah!~)] you start to question, but Lilaya suddenly steps around behind you, and with a little giggle, reaches forwards to wrap her arms around you.
+			[pc.speech(怎么了，没有效果吗~啊！~)]你刚想问，莉莱雅却突然绕到你身后，咯咯笑着伸手抱住了你。
 		</p>
 		<p>
-			[lilaya.speech(I could see that look in your eyes...)] she says, and a jolt of excitement suddenly runs through you as you feel your [lilaya.relation(pc)]'s hands run down to your groin.
+			[lilaya.speech(我能看到你的眼神……)]她说，当你感觉到[lilaya.relationship(pc)]的手伸向你的下体时，你突然感到一阵兴奋。
 		</p>
 		<p>
-			[pc.speech(Mmm... Yes...)] you moan, turning your head and pressing your lips against Lilaya's. Leaning back into her, you passionately thrust your tongue into her mouth as you reach down to help guide her fingers down to your groin...
+			[pc.speech(嗯……继续……)]你呻吟着，转过头，把嘴唇贴在莉莱雅的嘴唇上。你向后靠向她，热情地将舌头伸进她的嘴里，同时伸手将她的手指引向你的下体……
 		</p>
 		<p>
-			[lilaya.speech(Wake up, [pc.name]...)] Lilaya sighs...
+			[lilaya.speech(醒醒，[pc.name]……)]莉莱雅叹了口气。
 		</p></i>
 	#ENDIF
 	<p>
-		...
+		……
 	</p>
 	<p>
-		[lilaya.speech([pc.Name]! Wake up!)]
+		[lilaya.speech([pc.Name]！醒醒！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF_WAKE_UP -->
 	
 	<htmlContent tag="ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF_WAKE_UP"><![CDATA[
 	<p>
-		[lilaya.speech([pc.Name]? Wake up!)] Lilaya calls, and, with a blink, you suddenly snap out of the dream-like trance. You're standing just where you were when the experiment started, but Lilaya, now with a mildly-concerned expression on her face, has placed the watch to one side, and is holding you by the shoulders.
+		[lilaya.speech([pc.Name]？醒醒！)]莉莱雅喊道，你瞬间从梦幻般的恍惚中清醒过来。你站在实验开始时的位置，但莉莱雅，带着轻微担忧的神情，把怀表放到一边，用手扶住了你的肩膀。
 	</p>
 	<p>
-		[pc.speech(W-What was that?!)] you ask, trying to shake the vision you just had from your head. [pc.speech(It was so real! We were... well...)]
+		[pc.speech(那究竟是什么？！)]你问，试图摇掉你刚才的幻觉。[pc.speech(那感觉好真实！我们是……嗯……)]
 	</p>
 	<p>
-		[lilaya.speech(Good, you're ok,)] Lilaya says, releasing you and stepping back. [lilaya.speech(I stopped the test before the change in orientation became permanent, and, more importantly, before a surge of corruptive arcane energy seeped into your mind.)]
+		[lilaya.speech(好，你没事，)]莉莱雅说，松开你然后退后一步。[lilaya.speech(在你性取向的改变永久化之前，我停止了测试，更重要的是，防止了堕落的奥术能量侵入你的脑海。)]
 	</p>
 	<p>
-		[pc.speech(Wait... What?! Nobody mentioned anything about that!)]
+		[pc.speech(等等……什么？！没人提过这个！)]
 	</p>
 	<p>
-		[arthur.speech(I'm sorry, [pc.name], I didn't know that could be a side-effect,)] Arthur says, stepping forwards. [arthur.speech(It's a good job Lilaya was the one to carry out the test...)]
+		[arthur.speech(对不起，[pc.name]，我不知道可能有这副作用，)]亚瑟说，走上前来。[arthur.speech(真走运负责进行测试的人是莉莱雅……)]
 	</p>
 	<p>
-		[lilaya.speech(Well, at least you've come to no harm, [pc.name],)] Lilaya sighs in relief, [lilaya.speech(You see, just as you appeared to enter that strange trance, I felt a wave of corruptive energy surging forwards. If I hadn't stopped the test, not only would your sexual orientation have been permanently changed, but whatever vision you were witnessing would have undoubtedly played out in full; corrupting your mind in the process.)]
+		[lilaya.speech(嗯，至少你没受伤，[pc.name]，)]莉莱雅松了一口气，[lilaya.speech(你看，就在你似乎陷入那种奇怪的恍惚状态时，我感觉到一股堕落的能量涌了出来。如果我没有停止测试，你的性取向不仅会被永久改变，你刚才看到的幻觉也肯定会完全上演，从而腐化你的心灵。)]
 	</p>
 	<p>
-		[pc.speech(Thank you, Lilaya,)] you say, stepping forwards to give your [lilaya.relation(pc)] a loving hug, [pc.speech(you saved me again, huh?)]
+		[pc.speech(谢谢你，莉莱雅，)]你说，走上前给你的[lilaya.relation(pc)]一个充满爱意的拥抱，[pc.speech(你又救了我，是吧？)]
 	</p>
 	<p>
-		[lilaya.speech(Y-Yes, well, y-you're welcome,)] she stammers, clearly a little embarrassed to be hugged in front of Arthur. After a moment, she breaks off the hug, and, turning to pick up the watch, waves her hand over the face. The swirling vortex fades away, leaving the watch looking just like any other, and, satisfied with the result, Lilaya hands it to you. [lilaya.speech(I've removed the enchantment, so there's no fear of accidentally subjecting anyone else to those effects. I think you should keep hold of this. After all, now that you know what it feels like to be on the receiving end, I'm sure you have a greater respect for its power.)]
+		[lilaya.speech(嗯，嗯，好吧，你，你不用谢，)]她支支吾吾地说，显然是因为在亚瑟面前被拥抱而感到有些尴尬。过了一会儿，她挣脱拥抱，拿起怀表，然后在表面上挥了挥手。旋涡消失了，怀表看起来就像其他普通怀表一样，满意地，莉莱雅把它递给你。[lilaya.speech(我已经解除了魔法，所以不用担心会意外地使其他人受到这些影响。我觉得你应该保管好这个。毕竟，现在你知道了作为被施术者会是什么感觉，我相信你更会尊重它的力量。)]
 	</p>
 	<p>
-		You take the watch from Lilaya, nodding at her words before assuring her, [pc.speech(I'll take good care of it.)]
+		你接过莉莱雅递给你的怀表，点头同意，然后向她保证，[pc.speech(我会好好保管它的。)]
 	</p>
 	<p>
-		Turning to Arthur, Lilaya puts on a stern voice, [lilaya.speech(I expect a full report on my desk by this time tomorrow. And not a minute later!)]
+		转向亚瑟，莉莱雅用严厉的语气说，[lilaya.speech(我希望明天这个时候在我桌上看到一份完整的报告。一分钟都不要迟！)]
 	</p>
 	<p>
-		With that, Lilaya strides out of the room, leaving you alone with Arthur, who proceeds to glance over at you with a rather defeated-looking expression on his face. [arthur.speech(Well, it <i>does</i> work, at least... Sorry about all that, [pc.name]. Oh, and don't tell Lilaya, but I believe you should also have no trouble enchanting that watch to alter people's speech characteristics. I really should get on with this report now...)]
+		说完，莉莱雅大步走出房间，留下你和亚瑟单独在一起，他用一种相当沮丧的表情看着你。[arthur.speech(好吧，至少它<i>确实</i>有效……对于刚才的一切我很抱歉，[pc.name]。哦，不要告诉莉莱雅，但我相信你应该也能轻易地对那只怀表附魔来改变别人的那些特性。我现在真的得开始写这份报告了……)]
 	</p>
 	<p>
-		With the hypnotic, orientation-changing watch now in your possession, you leave Arthur to get on with his work and step out of his room...
+		拿着这只具有催眠和改变性取向功能的怀表，你离开亚瑟的房间，继续你的事……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED -->
 	
 	<htmlContent tag="ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED"><![CDATA[
 	<p>
-		Despite the fact that Lilaya and Arthur are both highly-competent arcane researchers, you really don't feel comfortable having them use you as a test subject.
+		尽管莉莱雅和亚瑟都是能力出众的奥术研究者，但让他们拿你当测试用具，你还是不放心，
 		#IF(pc.isConfident())
-			 Crossing your [pc.arms] and giving the pair a disapproving look, you scold them, [pc.speech(You shouldn't be testing potentially-dangerous items directly on people! What's wrong with you?!)]
+			于是把[pc.arms]横在胸前，用不赞同的眼神看向他们，[pc.speech(你们怎么能把有潜在危险的实验品直接用在人的身上！你们脑子有包吗？！)]
 		#ELSE
-			 Stepping back and holding up your [pc.hands] to stop the pair from advancing upon you, you say, [pc.speech(I don't want some potentially-dangerous item being tested on me!)]
+			于是后退一步，举起[pc.hands]，示意他们不要靠近，[pc.speech(我可不想别人在我身上用那些有潜在危险性的东西！)]
 		#ENDIF
 	</p>
 	<p>
-		[lilaya.speech(Tsk! Fine! We'll just have Rose help us,)] Lilaya tuts. With her previous misgivings about the hypno-watch seemingly forgotten in her excitement at getting to test out a new arcane device, she strides over to the bell-pull in one corner of Arthur's room and gives it a tug.
+		[lilaya.speech(啧，行吧，我们去找萝丝帮忙，)]莉莱雅不以为然。她很高兴能有机会测试一个新的奥术装置，甚至忘记了之前对催眠怀表的疑虑，她大步走到亚瑟房间角落的拉铃旁，轻轻拉了一下。
 	</p>
 	<p>
-		Just moments later, Rose enters the room, and after performing a polite curtsy, the cat-girl maid asks, [rose.speech(How may I help?)]
+		过了一会儿，萝丝走进房间，猫女仆礼貌地行了个屈膝礼，然后问道，[rose.speech(我能帮上什么忙？)]
 	</p>
 	<p>
-		After Lilaya has briefly explained the situation to her, Rose obediently agrees to let her Mistress use her as a test subject. Although she lowers her voice to a quiet whisper, you're able to just about overhear the dominant cat-girl as she leans in over Lilaya's neck and purrs, [rose.speech(You'll be getting some extra punishment for this tonight...)]
+		莉莱雅向她简单说明情况后，萝丝顺从地同意让主人把她当作试验品。虽然她把声音压得很低，但你还是能听到这只霸道的猫女靠在莉莱雅的脖子上发出了呼噜声，[rose.speech(等到了晚上，有你好看的……)]
 	</p>
 	<p>
-		Completely oblivious as to what's being said by Rose, Arthur steps towards your demonic [lilaya.relation(pc)] and bombastically declares, [arthur.speech(Don't worry, this process should be completely reversible! You just need to enchant the watch to try and change Rose into being... erm... androphilic, I guess?)]
+		亚瑟没听见萝丝说了什么，他走向你的恶魔[lilaya.relationship(pc)]，大声说，[arthur.speech(别担心，这个过程是完全可逆的！你只需要给怀表施魔法，试着让萝丝变成……呃……男性恋？)]
 	</p>
 	<p>
-		Throwing Arthur an unamused glare, Rose patiently waits as Lilaya moves her hand over the watch and channels her arcane energy into it. The swirling purple face slowly shifts into a deep shade of blue, and after the enchantment is complete, Lilaya has her maid gaze at the mesmerising surface as she starts slowly swaying it back and forth in front of her cat-like eyes. You watch in fascination as Rose's head starts involuntarily rocking from side to side in time with each swing, before her eyes suddenly droop down and she collapses to the floor with a soft thud.
+		萝丝没好气地瞪了亚瑟一眼，耐心地等着莉莱雅把手移到怀表上，并将奥术能量注入其中。漩涡状的紫色表面慢慢转变成深邃的蓝色，魔法完成后，莉莱雅让她的女仆注视着表面，开始在她猫一样的眼睛前慢慢地来回摇摆。你仔细看着萝丝的头开始不由自主地随着每一次摇摆左右摇摆，然后她的眼睛突然耷拉下来，整个人“砰”的一声倒在地上。
 	</p>
 	<p>
-		[lilaya.speech(Rose?!)] Lilaya cries, tossing the hypno-watch into Arthur's hands as she ducks down to shake the cat-girl's shoulders. Looking back at you with a fearful expression on her face, your [lilaya.relation(pc)] pleads, [lilaya.speech([pc.Name]! Help me!)]
+		[lilaya.speech(萝丝？！)]莉莱雅把催眠怀表扔回到亚瑟手中，急切地俯下身，低头摇晃着猫女的肩膀。你的[lilaya.relationship(pc)]害怕地回头看着你，恳求道，[lilaya.speech([pc.Name]！帮帮我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED_WAKE_ROSE -->
@@ -380,49 +380,49 @@
 	<htmlContent tag="ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED_WAKE_ROSE"><![CDATA[
 	<p>
 		#IF(pc.isConfident() || pc.isBrave() || pc.isKind())
-			You were already rushing forwards to help Rose the moment you saw her starting to look faint, and so just a second after Lilaya has shouted out for your help, you're already kneeling down to assist.
+			在看到萝丝开始晕倒的那一刻，你就准备冲上来了，所以，就在莉莱雅大声呼救后，你已经跪下来帮助她了。
 		#ELSE
-			Spurred into action by Lilaya's desperate cry, you rush over and kneel down beside her.
+			莉莱雅急切的哭喊声惊醒了你，你冲过去，跪在她身边。
 		#ENDIF
-		 Quickly checking to make sure that the cat-girl is still breathing, you start to move her delicate body into the recovery position, but as you do so, she suddenly lets out a soft sigh and begins to regain consciousness.
+		你迅速检查猫女是否还有呼吸，然后开始将她娇弱的身体移到复苏体位，但就在你这样做的时候，她突然发出一声轻轻的喘息，并开始恢复意识。<i>注：“复苏体位”是心肺复苏术成功，患者心跳正常并可以自主呼吸，但患者仍未恢复意识时应摆放的体位，也适用于其他意识中断的情况。</i>
 	</p>
 	<p>
-		[lilaya.speech(Rose?! Are you ok?!)] Lilaya worriedly asks as she sees Rose's eyes blinking open.
+		[lilaya.speech(萝丝？！你还好吗？！)]当萝丝睁开眼睛时，莉莱雅急切地问道。
 		#IF(!pc.isFeminine())
-			 Joining your [lilaya.relation(pc)] in looking down at the cat-girl, you're alarmed to see her gaze instantly locking onto your body, and from the desperate, hungry gleam in her [rose.eyes+], it almost looks as though she's about to pounce on you.
+			你和你的[lilaya.relationship(pc)]一起低头看向猫女，但是，你惊恐地发现她的视线瞬间锁定了你的身体，从她[rose.eyes+]中那急切而饥渴的眼神来看，她似乎下一秒就要扑向你了。
 		#ELSE
-			 Joining your [lilaya.relation(pc)] in looking down at the cat-girl, you're alarmed to see her gaze instantly locking onto Arthur's body, and from the desperate, hungry gleam in her [rose.eyes+], it almost looks as though she's about to pounce on him.
+			你和你的[lilaya.relationship(pc)]一起低头看向猫女，但是，你惊恐地发现她的目光瞬间锁定了亚瑟的身体，从她[rose.eyes+]中那急切而饥渴的眼神来看，她似乎下一秒就要扑向他了。
 		#ENDIF
 	</p>
 	<p>
-		Before she's able to take such a drastic action, however, the cat-girl closes her eyes and gives her head a little shake, and when she opens them again, you see that she's back to looking her normal self. Gazing lovingly up into Lilaya's eyes, she softly sighs, [rose.speech(I... I'm ok...)]
+		不过，在她采取过激的行动之前，猫女闭上了眼睛，轻轻摇了摇头，当她再次睁开眼睛时，你发现她又恢复了正常的样子。她深情地凝视着莉莱雅的眼睛，轻轻地说，[rose.speech(我……我还好。)]
 	</p>
 	<p>
-		[lilaya.speech(I'm so relieved!)] Lilaya cries out, before pulling Rose into a big hug and tightly squeezing her up against her body. After a moment of this, your passionate [lilaya.relation(pc)] helps Rose to her feet, before explaining, [lilaya.speech(I was able to stop the test before your change in orientation became permanent, and, more importantly, before a surge of corruptive arcane energy seeped into your mind.)]
+		[lilaya.speech(那太好了！)]莉莱雅哭喊着，然后一把拉过萝丝，紧紧地把她搂在怀里。过了一会儿，你热情的[lilaya.relationship(pc)]把萝丝扶了起来，解释道，[lilaya.speech(在你永久改变性取向之前，更重要的是，在一股堕落的奥术能量渗入你的大脑之前，我停止了测试。)]
 	</p>
 	<p>
-		[arthur.speech(Oh my! I didn't know that could be a side-effect,)] Arthur says, scratching his head as he steps forwards. [arthur.speech(It's a good job you were the one to carry out the test, Lilaya. I wouldn't have been able to sense something like that...)]
+		[arthur.speech(天哪！我不知道会有这种副作用！)]亚瑟上前一步，一边说，一边挠着头，[arthur.speech(幸好是你来进行测试，莉莱雅，如果是我，肯定不知道会发生这种事情……)]
 	</p>
 	<p>
-		[lilaya.speech(If this had done any permanent damage to my dear Rose, you'd have been in serious trouble!)] Lilaya shouts, turning her worry into fury as she angrily scowls at Arthur, [lilaya.speech(You absolutely cannot be trusted with something like this!)]
+		[lilaya.speech(要是你这破玩意儿伤到了我的宝贝萝丝，我饶不了你！)]莉莱雅的忧虑变成了愤怒，她恶狠狠地瞪了亚瑟一眼，[lilaya.speech(我就知道这种时候信不过你！)]
 	</p>
 	<p>
-		Snatching the watch from out of Arthur's grasp, she waves her hand over the face and takes a few seconds to channel her energy into removing the orientation-changing enchantment. The watch face's swirling vortex fades away, leaving it looking like a regular old broken pocket watch, and, satisfied with the result, Lilaya hands it to you, saying, [lilaya.speech(I've removed the enchantment, so there's no fear of accidentally subjecting anyone else to those effects. Now that you've seen how dangerous this can be, I'm sure you have a great respect for its power, so you can hold on to it and keep it safe.)]
+		她从亚瑟手中夺过怀表，在表面上挥了挥手，花了几秒钟的时间将能量导入其中，消除了这上面改变性取向的附魔。怀表表面的漩涡消失了，看起来就像一块普通的破怀表，莉莱雅满意地把怀表递给你，[lilaya.speech(我已经解除了附魔，所以不用担心会让其他人不小心受到影响。既然你已经看到了它的危险性，那你一定会认真对待它的力量，所以，我相信你可以保管好它。)]
 	</p>
 	<p>
-		You take the watch from Lilaya, nodding at her words before assuring her, [pc.speech(I'll take good care of it.)]
+		你从莉莱雅手中接过怀表，听完她的话后点了点头，向她保证，[pc.speech(我会保管好的。)]
 	</p>
 	<p>
-		Turning to Arthur, Lilaya angrily scowls at him once more, [lilaya.speech(I expect a full report on my desk by this time tomorrow! If it's one minute late, then I'll confiscate the rest of your research!)]
+		莉莱雅又转过头去，接着呵斥亚瑟，[lilaya.speech(我希望明天这个时候你能把完整的报告交到我桌上！如果晚一分钟，我就没收你剩下的研究成果！)]
 	</p>
 	<p>
-		With that, Lilaya grabs Rose by the arm and strides out of the room, leaving you alone with Arthur. Glancing at you with a rather defeated-looking expression on his face, he wearily sighs, [arthur.speech(Well, it <i>does</i> work, at least... Sorry about all that, [pc.name]. Oh, and don't tell Lilaya, but I believe you should also have no trouble enchanting that watch to alter people's speech characteristics. I really should get on with this report now...)]
+		说完，莉莱雅抓住萝丝的胳膊，大步走出房间，留下你和亚瑟独处。他瞥了你一眼，脸上的表情相当沮丧，随后，他疲惫地叹了口气，[arthur.speech(至少，它<i>确实</i>起作用了……抱歉了，[pc.name]。对了，别告诉莉莱雅，我相信你应该也能给那块怀表附魔，让它改变人们说话的特点。我该写报告了……)]
 	</p>
 	<p>
-		With the hypnotic, orientation-changing watch now in your possession, you leave Arthur to get on with his work and step out of his room...
+		你让亚瑟继续工作，拿着这块能改变性取向的催眠怀表，走出了他的房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Lightning globe quest: -->
 	
@@ -430,91 +430,91 @@
 	
 	<htmlContent tag="ROOM_ARTHUR_ARCANE_LIGHTNING_START"><![CDATA[
 	<p>
-		Thinking that Arthur is the right person to ask about the matter, you show him your arcane lightning globe, and explain to him how you found it in the Enforcer warehouse. His eyes light up as you place the arcane artefact on his desk, and he rudely interrupts the end of your tale to exclaim, [arthur.speech(Bloody hell! This looks to be some kind of container for arcane lightning! No, wait, it's not actually <i>creating</i> the lightning, is it?! You say those pig-headed Enforcers were holding on to this?)]
+		你觉得这件事问亚瑟正合适，给他展示你的奥术闪电球，并解释你是如何在执法者的仓库中找到它的。当你把这个奥术文物放在他的桌子上时，他的眼睛亮了起来，他粗鲁地打断了你故事的结尾，高声说，[arthur.speech(见鬼！这看起来像是某种奥术闪电的容器！不，等等，它实际上并没有<i>创造</i>闪电，是吧？你说那些顽固的执法者一直保留着这个吗？)]
 	</p>
 	<p>
-		Responding in the affirmative, you finish your tale of how you discovered it, before asking Arthur if he knows of any way to more reliably harness its power.
+		你肯定地回应，讲完了你是如何发现它的故事，然后问亚瑟他是否知道有什么方式可以更可靠地利用其力量。
 	</p>
 	<p>
-		[arthur.speech(Hmm, yes, well, that is the question, isn't it?)] he muses as he experimentally prods the globe's smooth glass surface. Smiling in delight as the arcane object lights up in response to his touch, Arthur grabs a nearby piece of paper and starts furiously scribbling down notes. Suddenly seeming to remember that you're still here, he clears his throat and offers, [arthur.speech(I'm certain that given enough time and arcane essences, I'd be able to extract the secrets of this object's power. Of course, performing such a procedure will certainly cause irreversible damage to it, but just think of the secrets we could discover! Why, I'll bet that I could formulate a spell nobody's ever seen before!)]
+		[arthur.speech(嗯，是啊，这就是问题所在，不是吗？)]他沉思着，实验性地触摸着球体光滑的玻璃表面。在奥术物体对他的触摸做出反应而点亮时，亚瑟满面笑容地拿起附近的一张纸，开始狂热地记下笔记。突然想起你好像还在这里，他清了清嗓子，提议说，[arthur.speech(我确定，只要有足够的时间和奥术精华，我就能提取出这个物体力量的秘密。当然，进行这样的程序肯定会对它造成不可逆转的损害，但想想我们能发现的秘密！哎，我敢打赌，我能制作出一个从未有人见过的咒语！)]
 	</p>
 	<p>
-		Asking Arthur what exactly he's asking for, you wait as he silently thinks for a few moments, before declaring, [arthur.speech(I'll need five hundred arcane essences. Also, the globe itself is almost certainly going to be destroyed in the process. Oh, and it's going to take me a couple of weeks to finish my research. I should be able to convince Lilaya to give me that long...)]
+		你问亚瑟他到底需要什么，在他沉默地思考时等待着，然后他宣布，[arthur.speech(我需要五百个奥术精华。此外，球体本身在解锁其秘密的过程中几乎肯定会被摧毁。哦，而且我需要几个星期才能完成我的研究。我应该能说服莉莱雅给我那么长时间……)]
 	</p>
 	<p>
-		With it now being your turn to think for a moment, you need to decide whether or not to agree to Arthur's proposal. You'll have to let him extract five hundred essences from your aura, and also agree to let him destroy the globe in the process of unlocking its secrets. In return, you'll gain a spell that you won't be able to find anywhere else...
+		现在轮到你思考一下了，你得决定是否同意亚瑟的提议。你必须让他从你的灵气中提取五百个精华，并且还要同意让他在解锁其秘密的过程中摧毁这个球体。作为回报，你将获得一个在其他任何地方都找不到的法术……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_ARTHUR_ARCANE_LIGHTNING_START_LEAVE"><![CDATA[
 	<p>
-		Not wanting to agree to Arthur's proposal right now, you tell him that the secrets of the arcane globe will have to remain a mystery for at least a while longer. Letting out a frustrated sigh, Arthur throws his hands up in the air and laments, [arthur.speech(But just think of the arcane research we could discover! Speaking of which, I have some very important matters to attend to, so if you'll excuse me...)]
+		你现在不想接受亚瑟的提议，你告诉他，奥术球的秘密至少在一段时间内还不能解开。亚瑟沮丧地叹了口气，举起双手哀叹道，[arthur.speech(还是想想我们能着手的奥术研究吧！说到这里，我有一些非常重要的事情要处理，所以如果你不介意的话……)]
 	</p>
 	<p>
-		Giving him some space, you pick up the arcane lightning globe and exit Arthur's room. [pc.Stepping] back out into the corridor, you wonder what to do next...
+		你表示理解，拿起奥术闪电球，走出亚瑟的房间。你回到了走廊上，思索接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ROOM_ARTHUR_ARCANE_LIGHTNING_PAYMENT -->
 	
 	<htmlContent tag="ROOM_ARTHUR_ARCANE_LIGHTNING_PAYMENT"><![CDATA[
 	<p>
-		Deciding that the loss of the arcane lightning globe is worth it in return for a unique spell, you give it to Arthur and tell him that you're happy to let him run his destructive experiments on it. Letting out a delighted, and slightly manic, laugh in response, Arthur asks, [arthur.speech(And do you have five hundred essences in that remarkable aura of yours?)]
+		决定以这个奥术闪电球的损失换取一个独特的法术是值得的，你把它给了亚瑟，并告诉他你很乐意让他对其进行破坏性的实验。听到这个回答，亚瑟发出了一声兴高采烈，稍微有点疯狂的笑，并问，[arthur.speech(你那不同寻常的灵气里有五百个精华吗？)]
 	</p>
 	<p>
-		Replying in the affirmative, you give Arthur permission to use one of the many arcane contraptions in his room to extract these essences. As he activates a curious, vacuum-like instrument and begins the process of extracting your essences, he muses, [arthur.speech(I wonder who made this lightning globe... You know, there's an arcane university in the city of Thinis. If I were a betting man, I'd wager that it was created by one of the professors there. After that, it's easy to imagine how the Enforcers would have confiscated it, believing it to be a dangerous weapon. They've always been like that, interfering with our research...)]
+		肯定地回答后，你给许可亚瑟使用他房间里的许多奥术装置之一来提取这些精华。当他激活一个类似于真空吸尘器的奇特仪器并开始提取你的精华时，他沉思地说，[arthur.speech(我想知道是谁做了这个闪电球……你知道，在提尼斯城有一所奥术大学。如果我是个愿意打赌的人，我会赌这是由那里的一位教授创造的。之后，很容易想象执法者将其没收，认为它是一种危险的武器。他们一直都是这样，干涉我们的研究……)]
 	</p>
 	<p>
-		At that moment, the essence extraction device lets out a high-pitched whistle. With his thoughts interrupted, Arthur turns off the instrument and claps his hands, before declaring, [arthur.speech(Right! Now I'll need about two weeks to really investigate this thoroughly. Come and see me again then, and if all's gone according to plan then I should have a spell waiting for you!)]
+		就在那时，提取精华的装置发出了一个高频哨声。亚瑟中断了他的思路，关闭了仪器，然后鼓掌，接着宣布，[arthur.speech(好了！现在我需要大约两周的时间来彻底研究这一切。到时再来找我，如果一切都按计划进行，那么我应该有一个法术等着你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_ARTHUR_ARCANE_LIGHTNING_PAYMENT_LEAVE"><![CDATA[
 	<p>
-		As he's very obviously impatient to be getting started on the research, you say goodbye to Arthur and head out of his room. [pc.Stepping] back out into the corridor, you wonder what to do next...
+		他显然已经迫不及待要开始研究了，于是你向亚瑟道别，走出了他的房间。你[pc.Stepping]回走廊，思考接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ROOM_ARTHUR_ARCANE_LIGHTNING_END -->
 	
 	<htmlContent tag="ROOM_ARTHUR_ARCANE_LIGHTNING_END"><![CDATA[
 	<p>
-		With two weeks having passed since you gave him your arcane lightning globe, you ask Arthur if he's finished his research. With a big grin on his face, he quickly replies, [arthur.speech(I certainly have! Oh, and it turned out far better than I could ever have hoped for! I've already shared my results with Lilaya, and she was so impressed that she said she'd consider forgiving me within the next decade!)]
+		自从你给了亚瑟你的奥术闪电球，两周过去了，你问他是否完成了研究。他脸上带着大大的笑容，迅速回答，[arthur.speech(当然完成了！哦，结果比我原本所希望的要好得多！我已经和莉莱雅分享了我的结果，她印象如此深刻，以至于她说她会考虑在接下来的十年里原谅我！)]
 	</p>
 	<p>
-		Walking over to a bookcase on the far side of his room, Arthur grabs a stack of what must be hundreds of papers, before pulling open a nearby drawer and grabbing a small object from out of it. Striding back over to you, he places the papers down on a nearby table and explains, [arthur.speech(It turns out that the globe's power originated from a sort of teleportation spell which was infused into its core. At a rate of many thousands of times per second, the globe was repeatedly and randomly teleporting a small amount of ordinary air particles through the stratosphere. By a series of incredibly complex arcane mechanisms, the teleportation spell's arcane power was then being infused into the resulting build-up of static electricity. As a result, it created arcane lightning!)]
+		走到他房间远处的一个书柜前，亚瑟拿起一叠可能有几百张的纸，然后打开附近的一个抽屉，从里面拿出一个小物体。走回到你身边，他把纸放在附近的一个桌子上，然后解释到，[arthur.speech(原来这个球的能量来自于一种被注入到其核心的传送法术。以每秒数千次的速度，这个球不断地随机传送一小部分普通的空气粒子穿过平流层。通过一系列极其复杂的奥术机制，传送法术的奥术能量然后被注入到由此产生的静电积聚中。结果，它产生了奥术闪电！)]
 	</p>
 	<p>
-		Wanting to know how to harness this power, you ask Arthur if he was able to make a spell from this discovered behaviour. With a big smile on his face, he leafs through the papers and pulls out a dozen of them, before placing them down in front of you and revealing, [arthur.speech(I not only managed to create the chain lightning spell which I was expecting, but I also managed to refine the equations for summoning arcane lightning into another, more powerful spell! This 'superbolt' spell is far more powerful than chain lightning, although it can only be concentrated into a single point... Anyway, all of the details that you need to learn these spells are written down right here. It's a good job that you've got such a remarkable aura; it would likely take a normal person many weeks or even months to learn these spells, but for you it should take no more than an hour or so.)]
+		想知道如何利用这种能量，你问亚瑟他是否能够从这发现中制造出一个法术。他脸上带着大大的笑容，翻过这沓纸，拿出其中的十几张，然后放在你面前，并透露，[arthur.speech(我不仅成功地创造了我预期的链式闪电法术，而且还成功地精炼了用于召唤奥术闪电的方程式，变成了另一个更强大的法术！这个‘闪电超弹’法术比链式闪电更强大，尽管它只能集中到一个点上……无论如何，你需要学习法术的所有细节都写在这里了。好在你有如此不同寻常的灵气；对于一个普通人来说，可能需要多达数周甚至数月的时间来学习这法术，但对你来说，应该只用一两个小时。)]
 	</p>
 	<p>
-		With that, Arthur returns to the other side of the room, giving you some time and space in which to read through the papers and learn these two spells...
+		说完后，亚瑟回到房间的另一侧，给你一些时间和空间来阅读这些纸张，并学习这两个法术……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_ARTHUR_ARCANE_LIGHTNING_END_FINAL"><![CDATA[
 	<p>
-		Just as Arthur predicted, it takes you less than an hour to read through and fully understand the papers' contents. Thanks to your exceptional arcane aura, you're able to intuitively comprehend what would doubtless prove to be an impenetrable wall of technical information to a normal person. Learning how to cast what Arthur's named 'chain lightning' and 'lightning superbolt', you quickly test these spells out by casting a weakened version of them in mid-air.
+		正如亚瑟预测的，你用不到一个小时就读完并理解了这些论文的内容。多亏你出色的奥术灵气，你能直观地理解无疑对于普通人来说是有如难以逾越的高墙一般的技术信息。学会了如何施放亚瑟命名为“链式闪电”和“闪电超弹”的法术后，你迅速通过在空中施放它们的弱化版本来测试这些法术。
 	</p>
 	<p>
-		[arthur.speech(All done then?)] Arthur asks as he sees that you've just cast each of the two spells. As you reply in the affirmative, he finally reveals what he'd taken out of the drawer earlier, and places the small object down on the table beside his research papers. Looking down at it, you see that this object is a metal ring, and in place of a gemstone it has what appears to be a miniaturised duplicate of the arcane lightning globe. Nodding his head as you look at it, Arthur gloats, [arthur.speech(I really am quite brilliant, aren't I? I was able to save the core essence of the globe, and implanted it inside that tiny crystal ball. Although the spells which it was once capable of were stripped away as a result of my research, it should be every bit as effective as it once was when being used in a regular manner.)]
+		[arthur.speech(都完成了吗？)]亚瑟在看到你刚刚施放了这两个法术后问道。当你肯定地回答后，他终于展示了他之前从抽屉里拿出来的东西，并将这个小物体放在他的研究论文旁边的桌子上。往下看，你看到这个物体是一个金属戒指，而在宝石的位置上，它有一个看似是奥术闪电球的微型复制品。当你看着它时，亚瑟点了点头，并自鸣得意地说，[arthur.speech(我真的是相当聪明，不是吗？我能够保存球体的核心精华，并将它植入到这个微型的水晶球里。虽然由于我的研究，它曾经能施放的法术被剥夺了，但当以常规方式使用它时，它应该与之前一样有效。)]
 	</p>
 	<p>
-		Beckoning for you to take it, Arthur pushes his glasses up onto the bridge of his nose and concludes, [arthur.speech(Thanks to my experiments, I've got enough raw data to keep me occupied for at least the next year. I'm not going to be able to produce any more practical applications from it, like those two spells, but it should make for some fine research publications once I'm done. Thank you for allowing me to experiment on that globe, [pc.name]. Now if you'll excuse me, I have to get back to work...)] 
+		亚瑟示意你拿走它，推了推眼镜，然后总结道，[arthur.speech(多亏我的实验，我得到了足够的原始数据，至少可以让我忙碌一年。从中无法产生像那两个法术那样更多的实用应用，但一旦我完成，它应该会成为不错的研究出版物。感谢你允许我对那个球体进行实验，[pc.name]。现在如果你能原谅我，我得回去工作了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_ARTHUR_ARCANE_LIGHTNING_END_FINAL_LEAVE"><![CDATA[
 	<p>
-		Thanking Arthur for the spells and for the arcane lightning ring, you say goodbye to him and head out of his room. [pc.Stepping] back out into the corridor, you wonder what to do next...
+		谢过亚瑟的法术和奥术闪电戒指后，你向他道别，然后走出他的房间。你[pc.Stepping]回走廊，思考接下来做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

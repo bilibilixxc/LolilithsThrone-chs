@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <penis>
 	<race>innoxia_pig</race>
 	
-	<transformationName><![CDATA[pig]]></transformationName>
+	<transformationName><![CDATA[猪]]></transformationName>
 	
 	<coveringType>PENIS</coveringType>
 	
@@ -11,17 +11,17 @@
 	<additionalTransformationEffect/>
 	
 	<namesMasculine>
-		<name><![CDATA[pig-]]></name>
+		<name><![CDATA[猪]]></name>
 	</namesMasculine>
 	<namesPluralMasculine>
-		<name><![CDATA[pig-]]></name>
+		<name><![CDATA[猪]]></name>
 	</namesPluralMasculine>
 	
 	<namesFeminine>
-		<name><![CDATA[pig-]]></name>
+		<name><![CDATA[猪]]></name>
 	</namesFeminine>
 	<namesPluralFeminine>
-		<name><![CDATA[pig-]]></name>
+		<name><![CDATA[猪]]></name>
 	</namesPluralFeminine>
 	
 	<descriptors/>
@@ -32,12 +32,12 @@
 	</defaultPenetrationModifiers>
 	
 	<transformationDescription><![CDATA[
-		Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as a thick sheath suddenly grows around the base of [npc.her] shaft, before the head suddenly tapers down.
-		<br/>[npc.She] now [npc.has] a [style.boldPig(pig-like penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].
-		<br/>[npc.She] [npc.has] [style.boldPig([npc.ballsCount]#IF(npc.isInternalTesticles()) internal#ELSE pig#ENDIF balls)], [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldPig(pig cum)].
-	]]></transformationDescription>
+		[npc.name]情不自禁地呻吟，感觉自己的阴茎转变为了新的形态。[npc.her]的阴茎突然向下缩进根部形成的厚厚的新鞘中，[npc.sheIs]被一股无法忍耐的快感彻底击垮了。
+		<br/>[npc.She]现在拥有一根[style.boldPig(猪的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。
+		<br/>[npc.She]有[style.boldPig([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内#ELSE猪#ENDIF睾丸)]，[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够产生[npc.cumColour(true)][style.boldPig(猪精液)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] pig cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].
-	]]></bodyDescription>
+		[npc.She]有[npc.a_cockGirth]的猪阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。
+]]></bodyDescription>
 </penis>

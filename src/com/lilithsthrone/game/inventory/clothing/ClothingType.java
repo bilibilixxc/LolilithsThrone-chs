@@ -1005,11 +1005,11 @@ public class ClothingType {
 	// WRIST
 
 	public static AbstractClothingType WRIST_WOMENS_WATCH = new AbstractClothingType(1000,
-			"a",
+			"一条",
 			false,
-			"feminine watch",
-			"feminine watches",
-			"A feminine-looking watch. Like others of its kind, its primary purpose is to keep track of the time.",
+			"女士手表",
+			"女士手表",
+			"一块女性化外观的手表，就像其他同类产品一样，其主要功能是记录时间。",
 			0,
 			Femininity.FEMININE,
 			InventorySlot.WRIST,
@@ -1037,33 +1037,33 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if (clothingOwner.isPlayer() && clothingRemover.isPlayer())
-				return "You place the watch on your wrist and fasten the strap.";
+				return "你把手表戴在手腕上，系紧表带。";
 			else
 				return UtilText.parse(clothingOwner,
-						"[npc.Name] places " + clothing.getName(true) + " on [npc.her] wrist and fastens the strap.");
+						"[npc.Name]把" + clothing.getName(true) + "戴在[npc.her]的手腕上，系紧表带。");
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if (clothingOwner.isPlayer() && clothingRemover.isPlayer())
-				return "You unfasten your watch's strap and take it off.";
+				return "你解开表带，摘下手表。";
 			else if (!clothingOwner.isPlayer() && !clothingRemover.isPlayer())
-				return UtilText.parse(clothingOwner, "[npc.Name] unfastens [npc.her] watch's strap and takes it off.");
+				return UtilText.parse(clothingOwner, "[npc.Name]解开[npc.her]的表带，摘下手表。");
 			else {
 				if (clothingOwner.isPlayer())
-					return "[npc.Name] unfastens your watch's strap and takes it off.";
+					return "[npc.Name]解开你的表带，摘下手表。";
 				else
-					return UtilText.parse(clothingOwner, "You unfasten the strap on [npc.namePos] watch and take it off.");
+					return UtilText.parse(clothingOwner, "你解开[npc.namePos]的表带，摘下手表。");
 			}
 		}
 	};
 	
 	public static AbstractClothingType WRIST_MENS_WATCH = new AbstractClothingType(1200,
-			"a",
+			"一件",
 			false,
-			"masculine watch",
-			"masculine watches",
-			"A masculine-looking watch. Like others of its kind, its primary purpose is to keep track of the time.",
+			"男士手表",
+			"女士手表",
+			"一块男性化外观的手表，就像其他同类产品一样，其主要功能是记录时间。",
 			0,
 			Femininity.MASCULINE,
 			InventorySlot.WRIST,
@@ -1090,33 +1090,33 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if (clothingOwner.isPlayer() && clothingRemover.isPlayer())
-				return "You place the watch on your wrist and fasten the strap.";
+				return "你把手表戴在手腕上，系紧表带。";
 			else
 				return UtilText.parse(clothingOwner,
-						"[npc.Name] places " + clothing.getName(true) + " on [npc.her] wrist and fastens the strap.");
+						"[npc.Name]把" + clothing.getName(true) + "戴在[npc.her]的手腕上，系紧表带。");
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if (clothingOwner.isPlayer() && clothingRemover.isPlayer())
-				return "You unfasten your watch's strap and take it off.";
+				return "你解开表带，摘下手表。";
 			else if (!clothingOwner.isPlayer() && !clothingRemover.isPlayer())
-				return UtilText.parse(clothingOwner, "[npc.Name] unfastens [npc.her] watch's strap and takes it off.");
+				return UtilText.parse(clothingOwner, "[npc.Name]解开[npc.her]的表带，摘下手表。");
 			else {
 				if (clothingOwner.isPlayer())
-					return "[npc.Name] unfastens your watch's strap and takes it off.";
+					return "[npc.Name]解开你的表带，摘下手表。";
 				else
-					return UtilText.parse(clothingOwner, "You unfasten the strap on [npc.namePos] watch and take it off.");
+					return UtilText.parse(clothingOwner, "你解开[npc.namePos]的表带，摘下手表。");
 			}
 		}
 	};
 	
 	public static AbstractClothingType WRIST_SUIT_CUFFS = new AbstractClothingType(100,
-			"a pair of",
+			"一对",
 			true,
-			"suit cuff",
-			"suit cuffs",
-			"A pair of suit cuffs, which are worn around the wrists.",
+			"西装袖口",
+			"西装袖口",
+			"一对西装袖口，系在手腕上。",
 			0,
 			null,
 			InventorySlot.WRIST,
@@ -1141,32 +1141,32 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You fasten the suit cuffs around your wrists.",
-					"You fasten the suit cuffs around [npc.namePos] wrists.",
+					"你把西装袖口系在手腕上。",
+					"你把西装袖口系在[npc.namePos]的手腕上。",
 					null,
-					"[npc.Name] fastens the suit cuffs around [npc.her] wrists.",
-					"[npc.Name] fastens the suit cuffs around your wrists.",
+					"[npc.Name]把西装袖口系在[npc.her]的手腕上。",
+					"[npc.Name]把西装袖口系在你的手腕上。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You unfasten your suit cuffs and take them off.",
-					"You unfasten [npc.namePos] suit cuffs and take them off.",
+					"你解开手腕上的西装袖口，取下它们。",
+					"你解开[npc.namePos]手腕上的西装袖口，取下它们。",
 					null,
-					"[npc.Name] unfastens [npc.her] suit cuffs and takes them off.",
-					"[npc.Name] unfastens your suit cuffs and takes them off.",
+					"[npc.Name]解开[npc.her]手腕上的西装袖口，取下它们。",
+					"[npc.Name]解开你手腕上的西装袖口，取下它们。",
 					null, null, null);
 		}
 	};
 	
 	public static AbstractClothingType WRIST_WRISTBANDS = new AbstractClothingType(100,
-			"a pair of",
+			"一对",
 			true,
-			"wristband",
-			"wristbands",
-			"A pair of wristbands, designed to worn around the wrists in order to absorb the wearer's sweat.",
+			"腕套",
+			"腕套",
+			"一对腕套，戴在手腕上，吸汗性很强。",
 			0,
 			null,
 			InventorySlot.WRIST,
@@ -1193,22 +1193,22 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You fasten the wristband around your wrists.",
-					"You fasten the wristband around [npc.namePos] wrists.",
+					"你把腕套戴在手腕上。",
+					"你把腕套戴在[npc.namePos]手腕上。",
 					null,
-					"[npc.Name] fastens the wristband around [npc.her] wrists.",
-					"[npc.Name] fastens the wristband around your wrists.",
+					"[npc.Name]把腕套戴在[npc.her]手腕上。",
+					"[npc.Name]把腕套戴在你手腕上。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You unfasten your wristband and take them off.",
-					"You unfasten [npc.namePos] wristband and take them off.",
+					"你褪下手腕上的腕套。",
+					"你褪下[npc.namePos]手腕上的腕套。",
 					null,
-					"[npc.Name] unfastens [npc.her] wristband and takes them off.",
-					"[npc.Name] unfastens your wristband and takes them off.",
+					"[npc.Name]褪下[npc.her]手腕上的腕套。",
+					"[npc.Name]褪下你手腕上的腕套。",
 					null, null, null);
 		}
 	};
@@ -1216,11 +1216,11 @@ public class ClothingType {
 	// BELT
 	
 	public static AbstractClothingType HIPS_CONDOMS = new AbstractClothingType(20,
-			"a",
+			"一件",
 			false,
-			"condom belt",
-			"condom belts",
-			"A strip of strong elastic fabric that hugs the wearer's hips. It doesn't really serve much use, but you could always tie used condoms to it...",
+			"避孕套腰带",
+			"避孕套腰带",
+			"一条紧贴穿戴者臀部的坚韧尼龙带。它没什么实际用途，但你可以把用过的避孕套系在上面……",
 			0,
 			null,
 			InventorySlot.HIPS,
@@ -1247,36 +1247,36 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if (clothingOwner.isPlayer() && clothingRemover.isPlayer()) {
-				return "You step into the belt before pulling it up to your waist.";
+				return "你穿进腰带，然后把它拉到腰部。";
 			} else {
-				return UtilText.parse(clothingOwner, "[npc.Name] steps into the belt before pulling it up to [npc.her] waist.");
+				return UtilText.parse(clothingOwner, "[npc.Name]穿进腰带，然后把它拉到腰部。");
 			}
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if (clothingOwner.isPlayer() && clothingRemover.isPlayer()) {
-				return "You pull down your belt and kick it off your [pc.feet].";
+				return "你解下腰带，然后一[pc.feet]踢开。";
 				
 			} else if (!clothingOwner.isPlayer() && !clothingRemover.isPlayer()) {
-				return UtilText.parse(clothingOwner, "[npc.Name] pulls down [npc.her] belt before kicking it off [npc.her] [npc.feet].");
+				return UtilText.parse(clothingOwner, "[npc.Name]解下腰带，然后一[npc.feet]踢开。");
 				
 			} else {
 				if (clothingOwner.isPlayer()) {
-					return UtilText.parse(clothingRemover, "[npc.Name] pulls your belt down and slides it off your [pc.feet].");
+					return UtilText.parse(clothingRemover, "[npc.Name]解下你的腰带，把它滑到你[pc.feet]边。");
 				} else {
-					return UtilText.parse(clothingOwner, "You pull [npc.namePos] belt down and slide it off [npc.her] [npc.feet].");
+					return UtilText.parse(clothingOwner, "你解开[npc.namePos]的腰带，把它滑到[npc.her][npc.feet]边。");
 				}
 			}
 		}
 	};
 	
 	public static AbstractClothingType HIPS_SUSPENDER_BELT = new AbstractClothingType(150,
-			"a",
+			"一条",
 			false,
-			"suspender belt",
-			"suspender belts",
-			"A circular band of soft, elastic nylon, to which are attached six straps; each of which is designed to hook onto a pair of stockings in order to keep them up.",
+			"吊袜腰带",
+			"吊袜腰带",
+			"由柔软的弹性尼龙制成的环形带子，上面有六条带子，每条带子都可以钩住一双长袜，使其向上翘起。",
 			0,
 			Femininity.FEMININE,
 			InventorySlot.HIPS,
@@ -1301,22 +1301,22 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You step into the suspender belt before pulling it up to your waist.",
-					"You get [npc.name] to step into the suspender belt before pulling it up to [npc.her] waist.",
+					"你穿进吊袜腰带，然后把它拉到腰部。",
+					"你让[npc.Name]穿进吊袜腰带，然后把它拉到[npc.her]的腰部。",
 					null,
-					"[npc.Name] steps into the suspender belt before pulling it up to [npc.her] waist.",
-					"[npc.Name] gets you to step into the suspender belt before pulling it up to your waist.",
+					"[npc.Name]穿进吊袜腰带，然后把它拉到[npc.her]的腰部。",
+					"[npc.Name]让你穿进吊袜腰带，然后把它拉到你的腰部。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull down your suspender belt and take it off.",
-					"You pull down [npc.namePos] suspender belt and take it off.",
+					"你解下吊袜腰带，脱下它。",
+					"你解下[npc.namePos]的吊袜腰带，脱下它。",
 					null,
-					"[npc.Name] pulls down [npc.her] suspender belt and takes it off.",
-					"[npc.Name] pulls down your suspender belt and takes it off.",
+					"[npc.Name]解下[npc.her]的吊袜腰带，脱下它。",
+					"[npc.Name]解下你的吊袜腰带，脱下它。",
 					null, null, null);
 		}
 	};
@@ -1655,11 +1655,11 @@ public class ClothingType {
 	// Enforcer:
 	
 	public static AbstractClothingType ENFORCER_SHIRT = new AbstractClothingType(1500,
-			"a",
+			"一件",
 			false,
-			"fancy-dress Enforcer's shirt",
-			"fancy-dress Enforcer's shirts",
-			"A fancy-dress version of an Enforcer's shirt, complete with an imitation stab-proof vest.",
+			"化装执法者制服",
+			"化装执法者制服",
+			"一件化装用的执法者制服，配有仿制的防刺背心。",
 			1f,
 			null,
 			InventorySlot.TORSO_UNDER,
@@ -1703,32 +1703,32 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull on the shirt and button it up.",
-					"You put the shirt onto [npc.name] and button it up.",
+					"你穿上制服，系好扣子。",
+					"你给[npc.Name]穿上制服，系好扣子。",
 					null,
-					"[npc.Name] pulls on the shirt and buttons it up.",
-					"[npc.Name] puts the shirt onto you and buttons it up.",
+					"[npc.Name]穿上制服，系好扣子。",
+					"[npc.Name]给你穿上制服，系好扣子。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You unbutton your shirt and pull it off.",
-					"You unbutton [npc.namePos] shirt and pull it off.",
+					"你解开扣子，脱下制服。",
+					"你解开扣子，脱下[npc.namePos]的制服。",
 					null,
-					"[npc.Name] unbuttons [npc.her] shirt and pulls it off.",
-					"[npc.Name] unbuttons your shirt and pull it off.",
+					"[npc.Name]解开扣子，脱下[npc.her]的制服。",
+					"[npc.Name]解开扣子，脱下你的制服。",
 					null, null, null);
 		}
 	};
 
 	public static AbstractClothingType ENFORCER_SHORTS = new AbstractClothingType(600,
-			"a pair of",
+			"一条",
 			true,
-			"fancy-dress Enforcer's shorts",
-			"fancy-dress Enforcer's shorts",
-			"A pair of fancy-dress Enforcer's shorts, complete with a utility belt.",
+			"化装执法者短裤",
+			"化装执法者短裤",
+			"一条化装执法者短裤，配备着多功能腰带。",
 			0,
 			null,
 			InventorySlot.LEG,
@@ -1776,32 +1776,32 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You step into the shorts before pulling them up to your waist.",
-					"You pull the shorts all the way up [npc.namePos] [npc.legs] to [npc.her] waist.",
+					"你穿进短裤，然后把它提到腰上。",
+					"你把短裤拉到[npc.namePos]的[npc.legs]根，然后提到腰上。",
 					null,
-					"[npc.Name] steps into the shorts before pulling them up to [npc.her] waist.",
-					"[npc.Name] pull the shorts all the way up your [pc.legs] to your waist.",
+					"[npc.Name]穿进短裤，然后把它提到腰上。",
+					"[npc.Name]把短裤拉到你的[pc.legs]根，然后提到腰上。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull down your shorts and kick them off your [pc.feet].",
-					"You pull [npc.namePos] shorts down and slide them off [npc.her] [npc.feet].",
+					"你脱下短裤，一[pc.feet]踢开。",
+					"你拉下[npc.namePos]的短裤，把它滑到[npc.her]的[npc.feet]边。",
 					null,
-					"[npc.Name] pulls [npc.her] shorts down and kicks them off [npc.her] [npc.feet].",
-					"[npc.Name] pulls your shorts down and slides them off your [pc.feet].",
+					"[npc.Name]脱下[npc.her]的短裤，然后一[npc.feet]踢开。",
+					"[npc.Name]脱下你的短裤，把它滑到你[pc.feet]边。",
 					null, null, null);
 		}
 	};
 	
 	public static AbstractClothingType ENFORCER_MINI_SKIRT = new AbstractClothingType(600,
-			"a",
+			"一件",
 			false,
-			"fancy-dress Enforcer's miniskirt",
-			"fancy-dress Enforcer's miniskirts",
-			"A fancy-dress Enforcer's skirt, complete with a utility belt, which is so short that it barely reaches down to mid-thigh.",
+			"化装执法者迷你短裙",
+			"化装执法者迷你短裙",
+			"一条化装执法者迷你短裙，配备着多功能腰带。它太短了甚至都没到大腿中部。",
 			0,
 			Femininity.FEMININE,
 			InventorySlot.LEG,
@@ -1836,34 +1836,34 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You step into the miniskirt before pulling it up to your waist.",
-					"You slide the miniskirt up [npc.namePos] [npc.legs] to rest around [npc.her] waist.",
+					"你穿进迷你短裙，然后把它拉到腰部。",
+					"你把迷你短裙拉到[npc.namePos]的[npc.legs]根，然后提到腰上。",
 					null,
-					"[npc.Name] steps into the miniskirt before pulling it up to [npc.her] waist.",
-					"[npc.Name] slides the miniskirt up your [pc.legs] to rest around your waist.",
+					"[npc.Name]穿进迷你短裙，然后把它拉到[npc.her]的腰部。",
+					"[npc.Name]把迷你短裙拉到你的[pc.legs]根，然后提到腰上。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull down your miniskirt and kick it off your [pc.feet].",
-					"You pull [npc.namePos] miniskirt down and slide it off [npc.her] [npc.feet].",
+					"你脱下迷你短裙，一[pc.feet]踢开。",
+					"你拉下[npc.namePos]的迷你短裙，把它滑到[npc.her]的[npc.feet]边。",
 					null,
-					"[npc.Name] pulls down [npc.her] miniskirt before kicking it off [npc.her] [npc.feet].",
-					"[npc.Name] pulls your miniskirt down and slides it off your [pc.feet].",
+					"[npc.Name]脱下[npc.her]的迷你短裙，一[npc.feet]踢开。",
+					"[npc.Name]脱下你的迷你短裙，从你的[pc.feet]下滑落。",
 					null, null, null);
 		}
 	};
 
 	
 	public static AbstractClothingType MILK_MAID_TORSO_DRESS = new AbstractClothingType(1500,
-			"a",
+			"一条",
 			false,
-			"Milk Maid's dress",
-			"Milk Maid's dresses",
-			"A milk maid's dress; consisting of shirt, skirt, and corset. The shirt is made of a light, comfortable material, which gets very transparent when wet."
-					+ " The corset, just like the skirt, is made of a soft fabric, and its strings can be pulled tight to flatter the wearer's figure and push their breasts slighter closer together.",
+			"挤奶女仆裙",
+			"挤奶女仆裙",
+			"挤奶女仆的连衣裙，由衬衫、裙子和紧身胸衣组成。衬衫是由轻便舒适的材料制成的，被打湿时会变得非常透明。"
+					+ "紧身胸衣和裙子一样，都是由柔软的织物制成的。胸衣上的细绳可以拉紧，以修饰穿着者的身材，并使胸部更加聚拢。",
 			0,
 			Femininity.FEMININE,
 			InventorySlot.TORSO_UNDER,
@@ -1915,16 +1915,16 @@ public class ClothingType {
 			Util.newArrayListOfValues(ItemTag.SOLD_BY_NYAN, ItemTag.DRESS, ItemTag.FITS_ARM_WINGS)){
 		@Override
 		public String getAuthorDescription() {
-			return "A tag sewn to the inside of the dress reads 'Made by Blue999'";
+			return "裙子里缝着的标签告诉你这是由“Blue999”制作的。";
 		}
 	};
 	
 	public static AbstractClothingType MILK_MAID_HEADBAND = new AbstractClothingType(400,
-			"a",
+			"一件",
 			false,
-			"Milk Maid's headband",
-			"Milk Maid's headbands",
-			"A frilly headband, with lots of decorative lace attached to the top.",
+			"挤奶女仆头饰",
+			"挤奶女仆头饰",
+			"一条多褶的女仆头饰，顶部有许多装饰蕾丝花边。",
 			0,
 			Femininity.FEMININE,
 			InventorySlot.HEAD,
@@ -1948,38 +1948,38 @@ public class ClothingType {
 			Util.newArrayListOfValues(ItemTag.SOLD_BY_NYAN)){
 			@Override
 			public String getAuthorDescription() {
-				return "A tag sewn to the inside of the headband reads 'Made by Blue999'";
+				return "发带里缝着的标签告诉你这是由“Blue999”制作的。";
 			}
 			
 			@Override
 			public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 				return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-						"You pull on the headband.",
-						"You push the headband onto [npc.namePos] head.",
+						"你戴上头饰。",
+						"你把头饰戴在[npc.namePos]的头上。",
 						null,
-						"[npc.Name] pulls the headband onto [npc.her] head.",
-						"[npc.Name] pushes the headband onto your head.",
+						"[npc.Name]把头饰戴在[npc.her]的头上。",
+						"[npc.Name]把头饰戴在你的头上。",
 						null, null, null);
 			}
 
 			@Override
 			public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 				return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-						"You take off your headband.",
-						"You take off [npc.namePos] headband.",
+						"你摘下你的头饰。",
+						"你摘下[npc.namePos]的头饰。",
 						null,
-						"[npc.Name] takes [npc.her] headband off.",
-						"[npc.Name] takes your headband off.",
+						"[npc.Name]摘下[npc.her]的头饰。",
+						"[npc.Name]摘下你的头饰。",
 						null, null, null);
 			}
 	};
 	
 	public static AbstractClothingType MILK_MAID_KERCHIEF = new AbstractClothingType(300,
-			"a",
+			"一条",
 			false,
-			"kerchief",
-			"kerchiefs",
-			"A triangular piece of cloth that covers the top of the wearer's head.",
+			"方巾",
+			"方巾",
+			"一块三角形的布，用于遮盖穿戴者的头部。",
 			0,
 			null,
 			InventorySlot.HEAD,
@@ -2005,22 +2005,22 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You place the kerchief on your head, before tying up the strings beneath your chin.",
-					"You place the kerchief on [npc.namePos] head, before tying up the strings beneath [npc.her] chin.",
+					"你将方巾戴在头上，然后在下巴那里打了个结。",
+					"你将方巾戴在[npc.namePos]的头上，然后在[npc.her]的下巴那里打了个结。",
 					null,
-					"[npc.Name] places the kerchief on [npc.her] head, before tying up the strings beneath [npc.her] chin.",
-					"[npc.Name] places the kerchief on your head, before tying up the strings beneath your chin.",
+					"[npc.Name]将方巾戴在[npc.her]的头上，然后在下巴那里打了个结。",
+					"[npc.Name]将方巾戴在你的头上，然后在下巴那里打了个结。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You take off your kerchief.",
-					"You take off [npc.namePos] kerchief.",
+					"你摘下你的方巾。",
+					"你摘下[npc.namePos]的方巾。",
 					null,
-					"[npc.Name] takes [npc.her] kerchief off.",
-					"[npc.Name] takes your kerchief off.",
+					"[npc.Name]摘下[npc.her]的方巾。",
+					"[npc.Name]摘下你的方巾。",
 					null, null, null);
 		}
 	};
@@ -2095,11 +2095,11 @@ public class ClothingType {
 //	};
 	
 	public static AbstractClothingType JOLNIR_HAT = new AbstractClothingType(400,
-			"a",
+			"一条",
 			false,
-			"J&oacute;lnir's hat",
-			"J&oacute;lnir's hats",
-			"A hat made in the same style as that worn by the Yule figure.",
+			"圣诞帽",
+			"圣诞帽",
+			"一顶帽子，是过圣诞节的人们戴的款式。",
 			0,
 			null,
 			InventorySlot.HEAD,
@@ -2125,33 +2125,33 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You put on J&oacute;lnir's hat.",
-					"You place J&oacute;lnir's hat onto [npc.namePos] head.",
+					"你戴上圣诞帽。",
+					"你把圣诞帽戴在[npc.namePos]的头上。",
 					null,
-					"[npc.Name] puts on J&oacute;lnir's hat.",
-					"[npc.Name] places J&oacute;lnir's hat onto your head.",
+					"[npc.Name]戴上圣诞帽。",
+					"[npc.Name]把圣诞帽戴在你的头上。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You take off J&oacute;lnir's hat.",
-					"You take off [npc.namePos] J&oacute;lnir's hat.",
+					"你脱下圣诞帽。",
+					"你脱下[npc.namePos]的圣诞帽。",
 					null,
-					"[npc.Name] takes J&oacute;lnir's hat off.",
-					"[npc.Name] takes your J&oacute;lnir's hat off.",
+					"[npc.Name]脱下圣诞帽。",
+					"[npc.Name]脱下你的圣诞帽。",
 					null, null, null);
 		}
 
 	};
 	
 	public static AbstractClothingType JOLNIR_COAT = new AbstractClothingType(750,
-			"a",
+			"一条",
 			false,
-			"J&oacute;lnir's coat",
-			"J&oacute;lnir's coats",
-			"A coat similar to the one worn by the Yule figure.",
+			"圣诞外套",
+			"圣诞外套",
+			"一件外套，是过圣诞节的人们穿的款式。",
 			0,
 			null,
 			InventorySlot.TORSO_OVER,
@@ -2185,32 +2185,32 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull on the coat.",
-					"You guide [npc.namePos] [npc.arms] through the coat's sleeves as you pull it on [npc.herHim].",
+					"你穿上外套。",
+					"你引导[npc.namePos][npc.arms]穿过外套的袖子，然后把它从[npc.herHim]的头上拉下来。",
 					null,
-					"[npc.Name] pulls on the coat.",
-					"[npc.Name] guides your [pc.arms] through the coat's sleeves as [npc.she] pulls it on you.",
+					"[npc.Name]穿上外套。",
+					"[npc.Name]引导你的[pc.arms]穿过外套的袖子，[npc.she]把它从你头上拉下来。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You take off your coat.",
-					"You pull off [npc.namePos] coat.",
+					"你脱下你的外套。",
+					"你脱下[npc.namePos]的外套。",
 					null,
-					"[npc.Name] takes [npc.her] coat off.",
-					"[npc.Name] pulls your coat off.",
+					"[npc.Name]脱下[npc.her]的外套。",
+					"[npc.Name]脱下你的外套。",
 					null, null, null);
 		}
 	};
 	
 	public static AbstractClothingType JOLNIR_DRESS = new AbstractClothingType(900,
-			"a",
+			"一条",
 			false,
-			"J&oacute;lnir's dress",
-			"J&oacute;lnir's dresses",
-			"A dress made to be in the same style as the clothing worn by the Yule figure.",
+			"圣诞连衣裙",
+			"圣诞连衣裙",
+			"一件连衣裙，是过圣诞节的人们穿的款式。",
 			0,
 			Femininity.FEMININE,
 			InventorySlot.TORSO_UNDER,
@@ -2259,54 +2259,54 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull on the J&oacute;lnir's dress, tidying the skirt down before moving the straps into a comfortable position on your shoulders.",
-					"You pull the J&oacute;lnir's dress over [npc.namePos] head and down around [npc.her] torso, tidying the skirt before moving the straps to sit comfortably on [npc.her] shoulders.",
+					"你穿上圣诞连衣裙，整理好裙子后，将带子移到肩膀上的舒适位置。",
+					"你把圣诞连衣裙拉过[npc.namePos]的头，套在[npc.her]身上，整理好裙子后，将带子在[npc.her]肩膀上动了动，以确保穿着舒适。",
 					null,
-					"[npc.Name] pulls on the J&oacute;lnir's dress, tidying the skirt down before moving the straps into a comfortable position on [npc.her] shoulders.",
-					"[npc.Name] pulls the J&oacute;lnir's dress over your head and down around your torso, tidying the skirt before moving the straps to sit comfortably on your shoulders.",
+					"[npc.Name]穿上圣诞连衣裙，整理好裙子后，将带子移到[npc.her]肩膀上的舒适位置。",
+					"[npc.Name]将圣诞连衣裙拉过你的头，套在你身上，整理好裙子后，将带子在你肩膀上移了移，确保穿着舒适。",
 					null, null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull your J&oacute;lnir's dress up over your head and take it off.",
-					"You pull [npc.namePos] J&oacute;lnir's dress up over [npc.her] head and take it off.",
+					"你拉起你的圣诞连衣裙从头顶脱下。",
+					"你将[npc.namePos]的圣诞连衣裙从[npc.her]的头顶拉起，然后脱掉。",
 					null,
-					"[npc.Name] pulls [npc.her] J&oacute;lnir's dress up over [npc.her] head and takes it off.",
-					"[npc.Name] pulls your J&oacute;lnir's dress up over your head and takes it off.",
+					"[npc.Name]将[npc.her]的圣诞连衣裙从头顶拉起，然后脱掉。",
+					"[npc.Name]将你的圣诞连衣裙从头顶拉起，然后脱掉。",
 					null, null, null);
 		}
 
 		@Override
 		public String displaceText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, DisplacementType dt, boolean rough) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull up the skirt of your J&oacute;lnir's dress.",
-					"You pull up the skirt of [npc.namePos] J&oacute;lnir's dress.",
+					"你拉起你圣诞连衣裙的下摆。",
+					"你拉起[npc.namePos]圣诞连衣裙的下摆。",
 					null,
-					"[npc.Name] pulls up the skirt of [npc.her] J&oacute;lnir's dress.",
-					"[npc.Name] pulls up the skirt of your J&oacute;lnir's dress.",
+					"[npc.Name]拉起[npc.her]圣诞连衣裙的下摆。",
+					"[npc.Name]拉起你圣诞连衣裙的下摆。",
 					null, null, null);
 		}
 
 		@Override
 		public String replaceText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, DisplacementType dt, boolean rough) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull your J&oacute;lnir's dress back down into its proper position.",
-					"You pull [npc.namePos] J&oacute;lnir's dress back down into its proper position.",
+					"你把圣诞连衣裙拉回正确位置。",
+					"你把[npc.namePos]的圣诞连衣裙拉回正确位置。",
 					null,
-					"[npc.Name] pulls [npc.her] J&oacute;lnir's dress back down into its proper position.",
-					"[npc.Name] your J&oacute;lnir's dress back down into its proper position.",
+					"[npc.Name]把[npc.her]的圣诞连衣裙拉回正确位置。",
+					"[npc.Name]把你的圣诞连衣裙拉回正确位置。",
 					null, null, null);
 		}
 	};
 	
 	public static AbstractClothingType JOLNIR_BOOTS = new AbstractClothingType(500,
-			"a pair of",
+			"一双",
 			true,
-			"J&oacute;lnir's boot",
-			"J&oacute;lnir's boots",
-			"A pair of boots, of the sort worn by the Yule figure.",
+			"圣诞靴",
+			"圣诞靴",
+			"一双靴子，是过圣诞节的人们穿的款式。",
 			0,
 			Femininity.MASCULINE,
 			InventorySlot.FOOT,
@@ -2334,32 +2334,32 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You push your [pc.feet] into the boots.",
-					"You push [npc.namePos] [npc.feet] into the boots.",
-					"You force the boots onto [npc.namePos] [npc.feet].",
-					"[npc.Name] pushes [npc.her] [npc.feet] into the boots.",
-					"[npc.Name] pushes your [pc.feet] into the boots.",
-					"[npc.Name] forces the boots onto your [pc.feet].", null, null);
+					"你将你的[pc.feet]穿进靴子中。",
+					"你将[npc.namePos]的[npc.feet]穿进靴子中。",
+					"你强行将[npc.namePos]的[npc.feet]穿进靴子中。",
+					"[npc.Name]将[npc.her]的[npc.feet]穿进靴子中。",
+					"[npc.Name]将你的[pc.feet]穿进靴子中。",
+					"[npc.Name]强行抓住你的[pc.feet]让你穿上靴子。", null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull off your boots.",
-					"You pull [npc.namePos] boots off.",
-					"You grab [npc.namePos] [npc.feet] and pull [npc.her] boots off.",
-					"[npc.Name] pulls off [npc.her] boots.",
-					"[npc.Name] pulls off your boots.",
-					"[npc.Name] grabs your [pc.feet] and pulls your boots off.", null, null);
+					"你脱下你的靴子。",
+					"你脱下[npc.namePos]的靴子。",
+					"你抓住[npc.namePos]的[npc.feet]然后脱下[npc.her]的靴子。",
+					"[npc.Name]脱下[npc.her]的靴子。",
+					"[npc.Name]脱下你的靴子。",
+					"[npc.Name]抓住你的[pc.feet]然后把你的靴子脱下。", null, null);
 		}
 	};
 	
 	public static AbstractClothingType JOLNIR_BOOTS_FEMININE = new AbstractClothingType(750,
-			"a pair of",
+			"一双",
 			true,
-			"J&oacute;lnir's heeled boot",
-			"J&oacute;lnir's heeled boots",
-			"A pair of boots, of the same style as those worn by the Yule figure.",
+			"圣诞高跟靴",
+			"圣诞高跟靴",
+			"一双靴子，是过圣诞节的人们穿的款式。",
 			0,
 			Femininity.FEMININE,
 			InventorySlot.FOOT,
@@ -2387,33 +2387,33 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You push your [pc.feet] into the boots.",
-					"You push [npc.namePos] [npc.feet] into the boots.",
-					"You force the boots onto [npc.namePos] [npc.feet].",
-					"[npc.Name] pushes [npc.her] [npc.feet] into the boots.",
-					"[npc.Name] pushes your [pc.feet] into the boots.",
-					"[npc.Name] forces the boots onto your [pc.feet].", null, null);
+					"你将你的[pc.feet]穿进靴子中。",
+					"你将[npc.namePos]的[npc.feet]穿进靴子中。",
+					"你强行将[npc.namePos]的[npc.feet]穿进靴子中。",
+					"[npc.Name]将[npc.her]的[npc.feet]穿进靴子中。",
+					"[npc.Name]将你的[pc.feet]穿进靴子中。",
+					"[npc.Name]强行抓住你的[pc.feet]让你穿上靴子。", null, null);
 		}
 
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			return getEquipDescriptions(clothingOwner, clothingRemover, rough,
-					"You pull off your boots.",
-					"You pull [npc.namePos] boots off.",
-					"You grab [npc.namePos] [npc.feet] and pull [npc.her] boots off.",
-					"[npc.Name] pulls off [npc.her] boots.",
-					"[npc.Name] pulls off your boots.",
-					"[npc.Name] grabs your [pc.feet] and pulls your boots off.", null, null);
+					"你脱下你的靴子。",
+					"你脱下[npc.namePos]的靴子。",
+					"你抓住[npc.namePos]的[npc.feet]然后脱下[npc.her]的靴子。",
+					"[npc.Name]脱下[npc.her]的靴子。",
+					"[npc.Name]脱下你的靴子。",
+					"[npc.Name]抓住你的[pc.feet]然后把你的靴子脱下。", null, null);
 		}
 	};
 
 	public static AbstractClothingType FINGER_LYSSIETHS_RING = new AbstractClothingType(50000,
 			"",
 			false,
-			"Lyssieth's Signet Ring",
-			"Lyssieth's Signet Rings",
-			"Beautifully crafted, and encrusted with precious gemstones, Lyssieth's Signet Ring commands the respect and loyalty of any member of her household."
-					+ " As expected of a symbol of a Lilin's authority, this item holds immense, albeit corruptive, power.",
+			"莉西丝的印章指环",
+			"莉西丝的印章指环",
+			"莉西丝的印章指环制作精美，镶嵌着珍贵的宝石，用以掌控着家族的尊重和忠诚。"
+					+ "作为莉琳的权力象征之一，这件物品拥有着巨大却腐败的权力。",
 			0,
 			Femininity.ANDROGYNOUS,
 			InventorySlot.FINGER,
@@ -2453,12 +2453,12 @@ public class ClothingType {
 		@Override
 		public String equipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if(rough) {
-				return UtilText.parse(clothingOwner, clothingRemover, "[npc.Name] roughly [npc.verb(force)] the signet ring onto [npc2.namePos] finger.");
+				return UtilText.parse(clothingOwner, clothingRemover, "[npc.Name]粗暴地强行把印章指环套进[npc2.namePos]的手指。");
 			} else {
 				if(clothingOwner.equals(clothingRemover)) {
-					return UtilText.parse(clothingOwner, clothingRemover, "[npc.Name] [npc.verb(slide)] the signet ring onto [npc.her] finger.");
+					return UtilText.parse(clothingOwner, clothingRemover, "[npc.Name]把印章指环戴在[npc.her]的手指上。");
 				} else {
-					return UtilText.parse(clothingOwner, clothingRemover, "[npc.Name] [npc.verb(slide)] the signet ring onto [npc2.namePos] finger.");
+					return UtilText.parse(clothingOwner, clothingRemover, "[npc.Name]把印章指环戴在[npc2.namePos]的手指上。");
 				}
 			}
 		}
@@ -2466,12 +2466,12 @@ public class ClothingType {
 		@Override
 		public String unequipText(GameCharacter clothingOwner, GameCharacter clothingRemover, InventorySlot slotToEquipInto, boolean rough, AbstractClothing clothing, boolean applyEffects) {
 			if(rough) {
-				return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] roughly [npc.verb(yank)] the signet ring off of [npc2.namePos] finger.");
+				return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]粗暴地将印章戒指从[npc2.namePos]手指上拽下来。");
 			} else {
 				if(clothingOwner.equals(clothingRemover)) {
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] [npc.verb(slide)] the signet ring off [npc.her] finger.");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]从[npc.her]手指上摘下印章指环。");
 				} else {
-					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name] [npc.verb(slide)] the signet ring off [npc2.namePos] finger.");
+					return UtilText.parse(clothingRemover, clothingOwner, "[npc.Name]从[npc2.namePos]手指上摘下印章指环。");
 				}
 			}
 		}

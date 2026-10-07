@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[chemise]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[chemises]]></namePlural>
-		<description><![CDATA[A silky, see-through chemise, of the sort usually worn as part of a sexy lingerie outfit. It isn't long enough to cover the wearer's groin.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[轻薄吊带连衣裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[轻薄吊带连衣裙]]></namePlural>
+		<description><![CDATA[一种丝滑透明的连衣裙，通常作为情趣内衣的一部分穿着。它的长度不足以覆盖穿着者的大腿根。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -50,27 +50,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] on the chemise.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the chemise onto [npc2.name].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the chemise onto [npc2.name].]]>
-	  </otherRough>
+		<self><![CDATA[
+		[npc.Name]穿上了轻薄吊带连衣裙。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]将轻薄吊带连衣裙套在[npc2.name]的身上。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地将轻薄吊带连衣裙套在[npc2.name]的身上。
+	]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] chemise.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the chemise off of [npc2.name].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(yank)] the chemise off of [npc2.name].]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]脱下了[npc.her]的轻薄吊带连衣裙。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]将[npc2.name]身上的轻薄吊带连衣裙脱了下来。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地将[npc2.name]身上的轻薄吊带连衣裙扯了下来。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

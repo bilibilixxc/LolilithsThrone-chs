@@ -372,11 +372,11 @@ public class InventoryController {
 					int lineHeight = 0;
 					StringBuilder tooltipDescriptionSB = new StringBuilder();
 					if (!requirements.isEmpty()) {
-						tooltipDescriptionSB.append("[style.boldBad(Locked:)] <i>"+requirements+"</i><br/>");
+						tooltipDescriptionSB.append("[style.boldBad(已上锁：)]<i>"+requirements+"</i><br/>");
 						lineHeight += 2;
 					} else {
 						if (!s.getAvailabilityText().isEmpty()) {
-							tooltipDescriptionSB.append("[style.boldGood(Unlocked:)] <i>"+s.getAvailabilityText()+"</i><br/>");
+							tooltipDescriptionSB.append("[style.boldGood(已解锁:)]<i>"+s.getAvailabilityText()+"</i><br/>");
 							lineHeight += 2;
 						}
 						
@@ -384,7 +384,7 @@ public class InventoryController {
 						for (ItemTag tag : s.getTagsApplied()) {
 							for (String tagTooltip : tag.getClothingTooltipAdditions()) {
 								if (!tagApplicationFound) {
-									tooltipDescriptionSB.append("[style.boldMinorGood(Effects added:)]<br/>");
+									tooltipDescriptionSB.append("[style.boldMinorGood(添加效果:)]<br/>");
 									tagApplicationFound = true;
 									lineHeight++;
 								}
@@ -397,7 +397,7 @@ public class InventoryController {
 						for (ItemTag tag : s.getTagsRemoved()) {
 							for (String tagTooltip : tag.getClothingTooltipAdditions()) {
 								if (!tagApplicationFound) {
-									tooltipDescriptionSB.append("[style.boldMinorBad(Effects removed:)]<br/>");
+									tooltipDescriptionSB.append("[style.boldMinorBad(移除效果:)]<br/>");
 									tagApplicationFound = true;
 									lineHeight++;
 								}
@@ -408,11 +408,11 @@ public class InventoryController {
 					}
 					TooltipInformationEventListener el = new TooltipInformationEventListener();
 					if (lineHeight>0) {
-						el.setInformation("Special Effects",
+						el.setInformation("特殊效果",
 								tooltipDescriptionSB.toString(),
 								(lineHeight*16));
 					} else {
-						el.setInformation("No Special Effects", "");
+						el.setInformation("无特殊效果", "");
 					}
 					MainController.addTooltipListeners(id, el);
 				}

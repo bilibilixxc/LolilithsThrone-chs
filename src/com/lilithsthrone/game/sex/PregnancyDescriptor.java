@@ -24,55 +24,55 @@ public enum PregnancyDescriptor {
 			sb.append("<p class='centre noPad'>");
 			if(characterBeingImpregnated.isPlayer() && cumInPussy){
 				if(characterProvidingCum==null) {
-					sb.append("You feel cum ");
+					sb.append("你感受到精液");
 					if(isSlime) {
-						sb.append("dispersing through your slimy body, seeking to impregnate your core");
+						sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 					} else {
-						sb.append("deep in your [pc.pussy+]");
+						sb.append("进入了[pc.pussy+]深处");
 					}
-					sb.append(", but because [style.boldSex(you're already pregnant, you don't have to worry about it)]!");
+					sb.append("，但由于[style.boldSex(你已经怀孕了，所以不必担心)]！");
 					
 				} else {
-					sb.append("You feel ");
+					sb.append("你感受到");
 					if(selfcest) {
-						sb.append("your own [npc.cum+]");
+						sb.append("自己[npc.cum+]");
 					} else {
-						sb.append("[npc2.namePos] [npc2.cum+]");
+						sb.append("[npc2.namePos][npc2.cum+]");
 					}
 					if(isSlime) {
-						sb.append(" dispersing through your slimy body, seeking to impregnate your core");
+						sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 					} else {
-						sb.append(" deep in your [pc.pussy+]");
+						sb.append("进入了[pc.pussy+]的深处");
 					}
-					sb.append(", but because [style.boldSex(you're already pregnant, you don't have to worry about it)]!");
+					sb.append("，但由于[style.boldSex(你已经怀孕了，所以不必担心)]！");
 				}
 				
 			} else {
 				if(characterProvidingCum==null) {
-					sb.append("[npc.NameIsFull] already pregnant, [style.boldSex(so there's no chance that ");
+					sb.append("[npc.NameIsFull]已经怀孕了，[style.boldSex(所以没有可能");
 					if(selfcest) {
-						sb.append("[npc.sheHasFull] knocked [npc.herself] up");
+						sb.append("再让自己怀上了");
 					} else {
-						sb.append("[npc.sheHasFull] been impregnated");
+						sb.append("再让[npc.she]受孕了");
 					}
-					sb.append(")]!");
+					sb.append(")]！");
 					
 				} else {
-					sb.append("[npc.NameIsFull] already pregnant, [style.boldSex(so there's no chance that ");
+					sb.append("[npc.NameIsFull]已经怀孕了，[style.boldSex(所以没有可能");
 					if(directSexInsemination) {
 						if(selfcest) {
-							sb.append("[npc.sheHasFull] knocked [npc.herself] up");
+							sb.append("再让自己怀上了");
 						} else {
-							sb.append("[npc2.nameHas] knocked [npc.herHim] up");
+							sb.append("[npc2.nameHas]再让[npc.herHim]怀上了");
 						}
 					} else {
 						if(selfcest) {
-							sb.append("[npc.sheHasFull] impregnated [npc.herself]");
+							sb.append("再让自己受孕了");
 						} else {
-							sb.append("[npc2.nameHas] impregnated [npc.herHim]");
+							sb.append("[npc2.nameHas]再让[npc.herHim]受孕了");
 						}
 					}
-					sb.append(")]!");
+					sb.append(")]！");
 				}
 			}
 			sb.append("</p>");
@@ -97,55 +97,55 @@ public enum PregnancyDescriptor {
 			sb.append("<p class='centre noPad'>");
 			if(characterBeingImpregnated.isPlayer() && cumInPussy){
 				if(characterProvidingCum==null) {
-					sb.append("You feel cum ");
+					sb.append("你感受到精液");
 					if(isSlime) {
-						sb.append("dispersing through your slimy body, seeking to impregnate your core");
+						sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 					} else {
-						sb.append("deep in your [pc.pussy+]");
+						sb.append("进入了[pc.pussy+]深处");
 					}
-					sb.append(", but because [style.boldSex(your womb is already filled with eggs, you don't have to worry about it)]!");
+					sb.append("，但由于[style.boldSex(你的子宫内装满了受精卵，所以不必担心)]！");
 					
 				} else {
-					sb.append("You feel ");
+					sb.append("你感受到");
 					if(selfcest) {
-						sb.append("your own [npc.cum+]");
+						sb.append("自己[npc.cum+]");
 					} else {
-						sb.append("[npc2.namePos] [npc2.cum+]");
+						sb.append("[npc2.namePos][npc2.cum+]");
 					}
 					if(isSlime) {
-						sb.append(" dispersing through your slimy body, seeking to impregnate your core");
+						sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 					} else {
-						sb.append(" deep in your [pc.pussy+]");
+						sb.append("进入了[pc.pussy+]的深处");
 					}
-					sb.append(", but because [style.boldSex(your womb is already filled with eggs, you don't have to worry about it)]!");
+					sb.append("，但由于[style.boldSex(你的子宫内装满了受精卵，所以不必担心)]！");
 				}
 				
 			} else {
 				if(characterProvidingCum==null) {
-					sb.append("[npc.NamePos] womb is already filled with eggs, [style.boldSex(so there's no chance that ");
+					sb.append("[npc.NamePos]的子宫内装满了受精卵，[style.boldSex(所以没有可能");
 					if(selfcest) {
-						sb.append("[npc.sheHasFull] knocked [npc.herself] up");
+						sb.append("再让自己怀上了");
 					} else {
-						sb.append("[npc.sheHasFull] been impregnated");
+						sb.append("再让[npc.she]受孕了");
 					}
-					sb.append(")]!");
+					sb.append(")]！");
 					
 				} else {
-					sb.append("[npc.NamePos] womb is already filled with eggs, [style.boldSex(so there's no chance that ");
+					sb.append("[npc.NamePos]的子宫内装满了受精卵，[style.boldSex(所以没有可能");
 					if(directSexInsemination) {
 						if(selfcest) {
-							sb.append("[npc.sheHasFull] knocked [npc.herself] up");
+							sb.append("再让自己怀上了");
 						} else {
-							sb.append("[npc2.nameHas] knocked [npc.herHim] up");
+							sb.append("[npc2.nameHas]再让[npc.herHim]怀上了");
 						}
 					} else {
 						if(selfcest) {
-							sb.append("[npc.sheHasFull] impregnated [npc.herself]");
+							sb.append("再让自己受孕了");
 						} else {
-							sb.append("[npc2.nameHas] impregnated [npc.herHim]");
+							sb.append("[npc2.nameHas]再让[npc.herHim]受孕了");
 						}
 					}
-					sb.append(")]!");
+					sb.append(")]！");
 				}
 			}
 			sb.append("</p>");
@@ -169,82 +169,82 @@ public enum PregnancyDescriptor {
 			
 			sb.append("<p class='centre noPad'>");
 			if(!cumInPussy) {
-				sb.append("Although [npc.namePos] womb is free, [style.boldSex(there's no chance that ");
+				sb.append("尽管[npc.namePos]的子宫内还没有其他物体，[style.boldSex(但却没有可能");
 				if(characterProvidingCum==null) {
 					if(selfcest) {
-						sb.append("[npc.sheHasFull] knocked [npc.herself] up");
+						sb.append("再让自己怀上了");
 					} else {
-						sb.append("[npc.sheHasFull] been impregnated");
+						sb.append("再让[npc.she]受孕了");
 					}
-					sb.append(")]!");
+					sb.append(")]！");
 					
 				} else {
 					if(directSexInsemination) {
 						if(selfcest) {
-							sb.append("[npc.sheHasFull] knocked [npc.herself] up");
+							sb.append("再让自己怀上了");
 						} else {
-							sb.append("[npc2.nameHas] knocked [npc.herHim] up");
+							sb.append("[npc2.nameHas]再让[npc.herHim]怀上了");
 						}
 					} else {
 						if(selfcest) {
-							sb.append("[npc.sheHasFull] impregnated [npc.herself]");
+							sb.append("再让自己受孕了");
 						} else {
-							sb.append("[npc2.nameHas] impregnated [npc.herHim]");
+							sb.append("[npc2.nameHas]再让[npc.herHim]受孕了");
 						}
 					}
-					sb.append(")]!");
+					sb.append(")]！");
 				}
 				
 			} else if(characterBeingImpregnated.isPlayer()){
 				if(characterProvidingCum==null) {
-					sb.append("Despite feeling cum ");
+					sb.append("虽然感受到了精液");
 					if(isSlime) {
-						sb.append("dispersing through your slimy body, seeking to impregnate your core");
+						sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 					} else {
-						sb.append("deep in your womb");
+						sb.append("进入了子宫深处");
 					}
-					sb.append(", you feel that [style.boldSex(you aren't going to get pregnant from this)].");
+					sb.append("，但你却感觉[style.boldSex(自己并不会因此怀孕)]。");
 					
 				} else {
-					sb.append("Despite feeling ");
+					sb.append("虽然感受到了");
 					if(selfcest) {
-						sb.append("your own [npc.cum+]");
+						sb.append("自己[npc.cum+]");
 					} else {
-						sb.append("[npc2.namePos] [npc2.cum+]");
+						sb.append("[npc2.namePos][npc2.cum+]");
 					}
 					if(isSlime) {
-						sb.append(" dispersing through your slimy body, seeking to impregnate your core");
+						sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 					} else {
-						sb.append(" deep in your womb");
+						sb.append("进入了子宫深处");
 					}
-					sb.append(", you feel that [style.boldSex(you aren't going to get pregnant from this)].");
+					sb.append("，但你却感觉[style.boldSex(自己并不会因此怀孕)]。");
 				}
 				
 			} else {
 				if(characterProvidingCum==null) {
-					sb.append("Despite having [npc.her] ");
+					sb.append("尽管[npc.her]");
 					if(isSlime) {
-						sb.append("slimy body");
+						sb.append("粘液构成的躯体");
 					} else {
-						sb.append("womb");
+						sb.append("的子宫");
 					}
 					if(selfcest) {
-						sb.append(" filled with [npc.her] own seed, [style.boldSex(there's no chance that [npc.nameHasFull] impregnated [npc.herself])].");
+						sb.append("装满了自己的子种汁，[style.boldSex(但却并没有可能让自己受孕)]。");
 					} else {
-						sb.append(" filled with cum, [style.boldSex(there's no chance that [npc.nameHasFull] been impregnated)].");
+						sb.append("装满了精液，[style.boldSex(但却并没有可能受孕)]。");
 					}
 					
 				} else {
-					sb.append("Despite having [npc.her] ");
+					sb.append("尽管[npc.her]");
 					if(isSlime) {
-						sb.append("slimy body");
+						sb.append("粘液构成的躯体");
 					} else {
-						sb.append("womb");
+						sb.append("的子宫");
 					}
 					if(selfcest) {
-						sb.append(" filled with [npc.her] own seed, [style.boldSex(there's no chance that [npc.nameHasFull] impregnated [npc.herself])].");
+						sb.append("装满了自己的子种汁，[style.boldSex(但却并没有可能让自己受孕)]。");
 					} else {
-						sb.append(" filled with [npc2.namePos] [npc2.cum+], [style.boldSex(there's no chance that [npc.nameHasFull] been impregnated)].");
+						sb.append("装满了[npc2.namePos][npc2.cum+]，[style.boldSex(但却并没有可能受孕)]。");
 					}
 				}
 			}
@@ -269,55 +269,55 @@ public enum PregnancyDescriptor {
 			
 			sb.append("<p class='centre noPad'>");
 			if(!cumInPussy) {
-				sb.append("Letting out a gasp,");
+				sb.append("伴随着一声喘息，");
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] [npc.is]n't already pregnant, there's a small chance [npc.she] [npc.is] now)]!");
+					sb.append("[npc.name]意识到[style.boldSex(若是自己还没有怀孕，那或许这次就有一点可能受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(there's a small chance [npc.she]'ll get pregnant from this)]!");
+					sb.append("[npc.name]意识到[style.boldSex(自己有一点可能要怀孕了)]！");
 				}
 				
 			} else if(characterBeingImpregnated.isPlayer()){
-				sb.append("You feel ");
+				sb.append("你感受到");
 				if(selfcest) {
-					sb.append("your own [npc.cum+]");
+					sb.append("自己[npc.cum+]");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append("cum");
+						sb.append("精液");
 					} else {
-						sb.append("[npc2.namePos] [npc2.cum+]");
+						sb.append("[npc2.namePos][npc2.cum+]");
 					}
 				}
 				if(isSlime) {
-					sb.append(" dispersing through your slimy body, seeking to impregnate your core");
+					sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 				} else {
-					sb.append(" deep in your womb");
+					sb.append("进入了子宫深处");
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(", and you realise that [style.boldSex(if you aren't already pregnant, there's a small chance you are now)]!");
+					sb.append("你意识到[style.boldSex(若是自己还没有怀孕，那或许这次就有一点可能受孕了)]！");
 				} else {
-					sb.append(", and you realise that [style.boldSex(there's a small chance you'll get pregnant)]!");
+					sb.append("你意识到[style.boldSex(自己有一点可能要怀孕了)]！");
 				}
 				
 			} else {
-				sb.append("After having [npc.her] ");
+				sb.append("在[npc.her]");
 				if(isSlime) {
-					sb.append("slimy body");
+					sb.append("粘液构成的躯体");
 				} else {
-					sb.append("womb");
+					sb.append("的子宫");
 				}
 				if(selfcest) {
-					sb.append(" filled with [npc.her] own seed,");
+					sb.append("充满了自己的子种汁后，");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append(" filled with cum,");
+						sb.append("充满了精液后，");
 					} else {
-						sb.append(" filled with [npc2.namePos] [npc2.cum+],");
+						sb.append("充满了[npc2.namePos][npc2.cum+]后，");
 					}
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] isn't already pregnant, there's a small chance [npc.she] is now)]!");
+					sb.append("[npc.name]意识到[style.boldSex(若是自己还没有怀孕，那或许这次就有一点可能受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(there's a small chance [npc.she]'ll get pregnant)]!");
+					sb.append("[npc.name]意识到[style.boldSex(自己有可能要怀孕了)]！");
 				}
 			}
 			sb.append("</p>");
@@ -341,55 +341,55 @@ public enum PregnancyDescriptor {
 			
 			sb.append("<p class='centre noPad'>");
 			if(!cumInPussy) {
-				sb.append("Letting out a gasp,");
+				sb.append("伴随着一声喘息，");
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] [npc.is]n't already pregnant, there's a chance [npc.she] [npc.is] now)]!");
+					sb.append("[npc.name]意识到[style.boldSex(若是自己还没有怀孕，那或许这次就有可能受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(there's a chance [npc.she]'ll get pregnant from this)]!");
+					sb.append("[npc.name]意识到[style.boldSex(自己有可能要怀孕了)]！");
 				}
 				
 			} else if(characterBeingImpregnated.isPlayer()){
-				sb.append("You feel ");
+				sb.append("你感受到");
 				if(selfcest) {
-					sb.append("your own [npc.cum+]");
+					sb.append("自己[npc.cum+]");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append("cum");
+						sb.append("精液");
 					} else {
-						sb.append("[npc2.namePos] [npc2.cum+]");
+						sb.append("[npc2.namePos][npc2.cum+]");
 					}
 				}
 				if(isSlime) {
-					sb.append(" dispersing through your slimy body, seeking to impregnate your core");
+					sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 				} else {
-					sb.append(" deep in your womb");
+					sb.append("进入了子宫深处，");
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(", and you realise that [style.boldSex(if you aren't already pregnant, there's a chance you are now)]!");
+					sb.append("你意识到[style.boldSex(若是自己还没有怀孕，那或许这次就有可能受孕了)]！");
 				} else {
-					sb.append(", and you realise that [style.boldSex(there's a chance you'll get pregnant)]!");
+					sb.append("你意识到[style.boldSex(自己有可能要怀孕了)]！");
 				}
 				
 			} else {
-				sb.append("After having [npc.her] ");
+				sb.append("在[npc.her]");
 				if(isSlime) {
-					sb.append("slimy body");
+					sb.append("粘液构成的躯体");
 				} else {
-					sb.append("womb");
+					sb.append("的子宫");
 				}
 				if(selfcest) {
-					sb.append(" filled with [npc.her] own seed,");
+					sb.append("充满了自己的子种汁后，");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append(" filled with cum,");
+						sb.append("充满了精液后，");
 					} else {
-						sb.append(" filled with [npc2.namePos] [npc2.cum+],");
+						sb.append("充满了[npc2.namePos][npc2.cum+]后，");
 					}
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] isn't already pregnant, there's a chance [npc.she] is now)]!");
+					sb.append("[npc.name]意识到[style.boldSex(若是自己还没有怀孕，那或许这次就有可能受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(there's a chance [npc.she]'ll get pregnant)]!");
+					sb.append("[npc.name]意识到[style.boldSex(自己有可能要怀孕了)]！");
 				}
 			}
 			sb.append("</p>");
@@ -413,55 +413,55 @@ public enum PregnancyDescriptor {
 			
 			sb.append("<p class='centre noPad'>");
 			if(!cumInPussy) {
-				sb.append("Letting out a gasp,");
+				sb.append("伴随着一声喘息，");
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] [npc.is]n't already pregnant, there's a high chance [npc.she] [npc.is] now)]!");
+					sb.append("[npc.name]意识到[style.boldSex(若是自己还没有怀孕，那或许这次就很有可能受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(there's a high chance [npc.she]'ll get pregnant from this)]!");
+					sb.append("[npc.name]意识到[style.boldSex(自己很有可能要怀孕了)]！");
 				}
 				
 			} else if(characterBeingImpregnated.isPlayer()){
-				sb.append("You feel ");
+				sb.append("你感受到");
 				if(selfcest) {
-					sb.append("your own [npc.cum+]");
+					sb.append("自己[npc.cum+]");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append("cum");
+						sb.append("精液");
 					} else {
-						sb.append("[npc2.namePos] [npc2.cum+]");
+						sb.append("[npc2.namePos][npc2.cum+]");
 					}
 				}
 				if(isSlime) {
-					sb.append(" dispersing through your slimy body, seeking to impregnate your core");
+					sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 				} else {
-					sb.append(" deep in your womb");
+					sb.append("进入了子宫深处，");
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(", and you realise that [style.boldSex(if you aren't already pregnant, there's a high chance you are now)]!");
+					sb.append("你意识到[style.boldSex(若是自己还没有怀孕，那或许这次就很有可能受孕了)]！");
 				} else {
-					sb.append(", and you realise that [style.boldSex(there's a high chance you'll get pregnant)]!");
+					sb.append("你意识到[style.boldSex(自己很有可能要怀孕了)]！");
 				}
 				
 			} else {
-				sb.append("After having [npc.her] ");
+				sb.append("在[npc.her]");
 				if(isSlime) {
-					sb.append("slimy body");
+					sb.append("粘液构成的躯体");
 				} else {
-					sb.append("womb");
+					sb.append("的子宫");
 				}
 				if(selfcest) {
-					sb.append(" filled with [npc.her] own seed,");
+					sb.append("充满了自己的子种汁后，");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append(" filled with cum,");
+						sb.append("充满了精液后，");
 					} else {
-						sb.append(" filled with [npc2.namePos] [npc2.cum+],");
+						sb.append("充满了[npc2.namePos][npc2.cum+]后，");
 					}
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] isn't already pregnant, there's a high chance [npc.she] is now)]!");
+					sb.append("[npc.Name]意识到[style.boldSex(若是自己还没有怀孕，那或许这次就很有可能受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(there's a high chance [npc.she]'ll get pregnant)]!");
+					sb.append("[npc.name]意识到[style.boldSex([npc.she]很有可能要怀孕了)]！");
 				}
 			}
 			sb.append("</p>");
@@ -485,55 +485,55 @@ public enum PregnancyDescriptor {
 			
 			sb.append("<p class='centre noPad'>");
 			if(!cumInPussy) {
-				sb.append("Letting out a gasp,");
+				sb.append("伴随着一声喘息，");
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] [npc.is]n't already pregnant, [npc.she] certainly [npc.is] now)]!");
+					sb.append("[npc.name]意识到[style.boldSex(若是自己还没有怀孕，那这次肯定就受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(it's a certainty that [npc.sheHas] been impregnated from this)]!");
+					sb.append("[npc.name]意识到[style.boldSex(自己肯定要怀孕了)]！");
 				}
 				
 			} else if(characterBeingImpregnated.isPlayer()){
-				sb.append("You feel ");
+				sb.append("你感受到");
 				if(selfcest) {
-					sb.append("your own [npc.cum+]");
+					sb.append("自己[npc.cum+]");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append("cum");
+						sb.append("精液");
 					} else {
-						sb.append("[npc2.namePos] [npc2.cum+]");
+						sb.append("[npc2.namePos][npc2.cum+]");
 					}
 				}
 				if(isSlime) {
-					sb.append(" dispersing through your slimy body, seeking to impregnate your core");
+					sb.append("在你粘液制成的身体中缓缓散开来，为了让你的核心受孕而进发着，");
 				} else {
-					sb.append(" deep in your womb");
+					sb.append("进入了子宫深处，");
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(", and you realise that [style.boldSex(if you aren't already pregnant, you certainly are now)]!");
+					sb.append("你意识到[style.boldSex(若是自己还没有怀孕，那这次肯定就受孕了)]！");
 				} else {
-					sb.append(", and you realise that [style.boldSex(it's a certainty that you've been impregnated)]!");
+					sb.append("你意识到[style.boldSex(自己肯定要怀孕了)]！");
 				}
 				
 			} else {
-				sb.append("After having [npc.her] ");
+				sb.append("在[npc.her]");
 				if(isSlime) {
-					sb.append("slimy body");
+					sb.append("粘液构成的躯体");
 				} else {
-					sb.append("womb");
+					sb.append("的子宫");
 				}
 				if(selfcest) {
-					sb.append(" filled with [npc.her] own seed,");
+					sb.append("充满了自己的子种汁后，");
 				} else {
 					if(characterProvidingCum==null) {
-						sb.append(" filled with cum,");
+						sb.append("充满了精液后，");
 					} else {
-						sb.append(" filled with [npc2.namePos] [npc2.cum+],");
+						sb.append("充满了[npc2.namePos][npc2.cum+]后，");
 					}
 				}
 				if(characterBeingImpregnated.hasStatusEffect(StatusEffect.PREGNANT_0)) {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(if [npc.she] isn't already pregnant, [npc.she] certainly is now)]!");
+					sb.append("[npc.name]意识到[style.boldSex(若是自己还没有怀孕，那这次肯定就受孕了)]！");
 				} else {
-					sb.append(" [npc.name] [npc.verb(realise)] that [style.boldSex(it's a certainty that [npc.sheHas] been impregnated)]!");
+					sb.append("[npc.name]意识到[style.boldSex(自己肯定要怀孕了)]！");
 				}
 			}
 			sb.append("</p>");

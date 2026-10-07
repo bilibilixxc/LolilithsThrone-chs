@@ -59,15 +59,15 @@ public class Astrapi extends NPC {
 	}
 	
 	public Astrapi(boolean isImported) {
-		super(isImported, new NameTriplet("Astrapi"), "Grigori",
-				"The younger sister of the only two centaurs brave enough to keep their Dominion-to-Elis transport business running, Astrapi has the body of a Greek goddess, and a fiery, indomitable personality to match.",
+		super(isImported, new NameTriplet("阿斯特拉皮"), "格里戈里",
+				"阿斯特拉皮是英勇无畏，维护御城区到伊利斯运输业务的半人马兄妹中的妹妹，她拥有希腊女神般的身体，以及与之相匹配的火热、不屈不挠的个性。",
 				29, Month.AUGUST, 15,
 				20, Gender.F_V_B_FEMALE, Subspecies.CENTAUR, RaceStage.PARTIAL_FULL,
 				new CharacterInventory(false, 10),
 				WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL,
 				true);
 
-		this.setGenericName("buff centauress");
+		this.setGenericName("壮实的半人马");
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
@@ -398,19 +398,19 @@ public class Astrapi extends NPC {
 				itemOwner.removeItem(item);
 				return new Value<>(false,
 						"<p>"
-							+ "Producing a "+item.getColour(0).getName()+" "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before handing it over to Astrapi."
-							+ " Seeing what it is you're trying to get her to swallow, she laughs and tosses the pill away, saying, "
-							+ " [astrapi.speech(I'm not interested in getting pregnant. Nice try, though!)]"
+							+ "你从物品栏中拿出一个"+item.getColour(0).getName()+""+item.getName(false, false)+"从塑料包装中取出后交给阿斯特拉皮。"
+							+ "看到你想让她吞下的是什么东西，她笑着把药片扔掉，说，"
+							+ "[astrapi.speech(我对怀孕不感兴趣。不过，很好的尝试！)]"
 						+ "</p>");
 				
 			} else {
 				itemOwner.useItem(item, this, false);
-				String returnText = "Producing a "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before handing it over to Astrapi."
-							+ " Seeing what it is you're trying to get her to swallow, she laughs and swallows the little "+ item.getColour(0).getName() +" pill, before saying,";
+				String returnText = "你从物品栏中拿出一个"+item.getName(false, false)+"，从塑料包装中取出后交给阿斯特拉皮。"
+							+ "看到你想让她吞下的是什么东西，她笑着吞下了那"+ item.getColour(0).getName() +"的小药片，说道，";
 				if(this.isVisiblyPregnant()) {
-					returnText += " [astrapi.speechNoEffects(~Mmm!~ Well, I mean, I'm clearly already pregnant, but whatever...)]";
+					returnText += "[astrapi.speechNoEffects(~嗯！~好吧，我是说，我很清楚自己已经怀孕了，但无所谓了……)]";
 				} else {
-					returnText += " [astrapi.speechNoEffects(~Mmm!~ Fine, you can go ahead and get me knocked up, if that's what'll make you happy...)]";
+					returnText += "[astrapi.speechNoEffects(~嗯！~很好，如果这能让你高兴的话，你可以继续，甚至搞大我的肚子……)]";
 				}
 				return new Value<>(true,
 						"<p>"

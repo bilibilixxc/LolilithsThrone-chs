@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Farmer's Market]]></name>
+	<name><![CDATA[农贸市场]]></name>
 	<colour>BASE_TAN</colour>
 	<sexBlockedReason/>
 	<furniturePresent>true</furniturePresent>

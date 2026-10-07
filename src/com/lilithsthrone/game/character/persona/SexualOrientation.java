@@ -9,11 +9,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @author Innoxia
  */
 public enum SexualOrientation {
-	ANDROPHILIC("androphilic", false, true, PresetColour.MASCULINE, SexualOrientationPreference.THREE_AVERAGE),
+	ANDROPHILIC("男性恋", false, true, PresetColour.MASCULINE, SexualOrientationPreference.THREE_AVERAGE),
 
-	AMBIPHILIC("ambiphilic", true, true, PresetColour.ANDROGYNOUS, SexualOrientationPreference.THREE_AVERAGE),
+	AMBIPHILIC("双性恋", true, true, PresetColour.ANDROGYNOUS, SexualOrientationPreference.THREE_AVERAGE),
 
-	GYNEPHILIC("gynephilic", true, false, PresetColour.FEMININE, SexualOrientationPreference.THREE_AVERAGE);
+	GYNEPHILIC("女性恋", true, false, PresetColour.FEMININE, SexualOrientationPreference.THREE_AVERAGE);
 
 	private String name;
 	private Colour colour;

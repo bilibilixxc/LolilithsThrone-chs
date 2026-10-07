@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the bottle reads 'Distilled by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[瓶底刻着细小的字迹，写着“DSG食品有限公司提纯”。]]></authorTag>
 		
 		<value>15</value> 
-		<determiner><![CDATA[a can of]]></determiner>
-		<name><![CDATA[Berry Soda]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Berry Sodas]]></namePlural>
-		<description><![CDATA[An aluminium can of berry-flavoured soda. The label on the can depicts an otter-boy in some swim trunks sitting on the bank of a river while drinking from a similar can.
-		]]></description> 
+		<determiner><![CDATA[一罐]]></determiner>
+		<name><![CDATA[浆果苏打水]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[浆果苏打水]]></namePlural>
+		<description><![CDATA[一罐听装的浆果口味苏打。罐头上的标签描绘了一个穿着泳裤的水獭男坐在河岸边，同时喝着一个类似的饮料。
+]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -31,15 +31,15 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 15% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(2)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM) * 0.15)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				An uplifting wave of arcane energy washes over [npc.name]...
+				一道振奋人心的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_HEALTH_MAXIMUM, 2)]
 		]]></applyEffects>
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After first opening the can, [npc.name] [npc.verb(bring)] the can of Berry Soda up to [npc.her] [npc.mouth]. A surprisingly authentic smell of nondescript berries rises from the opening, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the fizzy liquid, [npc.she] [npc.verb(feel)] much more refreshed.
+		在打开汽水罐后，[npc.name]将浆果口味苏打的汽水罐提到嘴边。一道出奇不意地道的浆果气味从开口处升腾而起，而当[npc.name]仰起头，开始喝下这股气泡饮料时，[npc.she]感到清爽无比。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After first removing the cork, [npc.name] [npc.verb(bring)] the bottle of Grog up to [npc2.namePos] waiting [npc2.lips]. A surprisingly authentic smell of nondescript berries rises from the opening, and as [npc2.she] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the fizzy liquid, [npc.she] [npc.verb(feel)] much more refreshed.
+		在拉开拉环后，[npc.name]将汽水罐端到了[npc2.name]等待[npc2.lips]前。一股出奇不意的浓郁浆果气味从罐口升腾而上，当[npc2.name]把头仰起，开始饮下这冒着气泡的液体时，[npc.she]感到自己焕然一新。
 		]]></otherUse>
 	</useDescriptions>
 

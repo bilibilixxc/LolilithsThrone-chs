@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 	
 	<scene id="ambush">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Junk Avalanche!]]></title>
+		<title><![CDATA[垃圾雪崩！]]></title>
 		<tooltip/>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">AMBUSH</content>
@@ -14,8 +14,8 @@
 			<response>				
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[No telling what was in that dust, you'll probably want a long bath after this.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[不知道这灰尘里有什么，你想好好地洗个澡。]]></responseTooltip>
 				<colour><![CDATA[TEXT]]></colour>
 				<nextDialogue stripContent="false"><![CDATA[dsg_places_fields_elis_eisek_sillymode_dungeon_entry]]></nextDialogue>
 				<secondsPassed/>
@@ -26,9 +26,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="entry">
+	<scene id="entry">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Dungeon Entry]]></title>
+		<title><![CDATA[地牢入口]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">ENTRY</content>
 		<secondsPassed minutes="false"><![CDATA[2]]></secondsPassed>
@@ -39,9 +39,9 @@
 		<responses/>
 	</scene>
 	
-	<scene id ="passage">
+	<scene id="passage">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Dungeon Passage]]></title>
+		<title><![CDATA[地牢通道]]></title>
 		<preParsingEffects><![CDATA[
 			[#flags.setFlag(FLAG_dsg_elis_eisek_sillymode_dungeon_trap_north, false)]
 			[#flags.setFlag(FLAG_dsg_elis_eisek_sillymode_dungeon_trap_east, false)]
@@ -67,9 +67,9 @@
 		<responses/>
 	</scene>
 	
-	<scene id ="boss">
+	<scene id="boss">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Dungeon Boss Room]]></title>
+		<title><![CDATA[地牢Boss房]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">BOSS</content>
 		<secondsPassed minutes="false"><![CDATA[2]]></secondsPassed>
@@ -80,9 +80,9 @@
 		<responses/>
 	</scene>
 	
-	<scene id ="treasure">
+	<scene id="treasure">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Treasure Room]]></title>
+		<title><![CDATA[藏宝阁]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">TREASURE</content>
 		<secondsPassed minutes="false"><![CDATA[2]]></secondsPassed>
@@ -94,9 +94,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Loot the chest]]></responseTitle>
+				<responseTitle><![CDATA[掠夺宝箱]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Open up the antique chest and take what's in it! Might as well take a chance and make this strange place worth your while.
+					打开古董箱，拿走里面的东西！或许碰碰运气让这个奇怪的地方更有价值。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					dsg_places_fields_elis_eisek_sillymode_dungeon_treasure_taking
@@ -108,9 +108,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="treasure_taking">
+	<scene id="treasure_taking">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Treasure Room]]></title>
+		<title><![CDATA[藏宝阁]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">TREASURE_TAKING</content>
 		<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -122,9 +122,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					A paltry sum, but at least the chest didn't try to eat you.
+					虽然微不足道，但至少箱子没有试图吃掉你。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					dsg_places_fields_elis_eisek_sillymode_dungeon_treasure_taken
@@ -137,9 +137,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="treasure_taken">
+	<scene id="treasure_taken">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Treasure Room (Looted)]]></title>
+		<title><![CDATA[藏宝阁(已被洗劫)]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">TREASURE_TAKEN</content>
 		<secondsPassed minutes="false"><![CDATA[5]]></secondsPassed>
@@ -150,9 +150,9 @@
 		<responses/>
 	</scene>
 	
-	<scene id ="trap">
+	<scene id="trap">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[It's A Trap!]]></title>
+		<title><![CDATA[这是一个陷阱！]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">TRAP</content>
 		<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -164,9 +164,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Disarm the trap]]></responseTitle>
+				<responseTitle><![CDATA[解除陷阱]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Try and disarm the trap. High physique grants higher chance. Slimes get a bonus, taurs get a penalty, while mastery of certain ice, wind, or earth spells guarantee success.
+					尝试解除陷阱。更高的体格会有更高的成功几率。史莱姆会获得加成，半兽身人会获得减益，而掌握寒冷，风或土法术能确保成功。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(pc.hasSpell(SPELL_TELEKENETIC_SHOWER) || pc.hasSpell(SPELL_VACUUM) || pc.hasSpell(SPELL_PROTECTIVE_GUSTS) || pc.hasSpell(SPELL_SOOTHING_WATERS) || pc.hasSpell(SPELL_RAIN_CLOUD))
@@ -196,9 +196,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Step back]]></responseTitle>
+				<responseTitle><![CDATA[返回]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You're not in the mood to be set on fire or risk burning the whole place down right now.
+					你没心情冒着烧掉整个地方的风险放火。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					dsg_places_fields_elis_eisek_sillymode_dungeon_passage
@@ -218,9 +218,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="trap_success">
+	<scene id="trap_success">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Trap Disarmed!]]></title>
+		<title><![CDATA[陷阱解除！]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">TRAP_SUCCESS</content>
 		<secondsPassed minutes="true"><![CDATA[30]]></secondsPassed>
@@ -232,9 +232,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Counterterrorists win.
+					反恐精英获胜。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					dsg_places_fields_elis_eisek_sillymode_dungeon_trap_triggered
@@ -247,9 +247,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="trap_failure">
+	<scene id="trap_failure">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Getting Hot In Here...]]></title>
+		<title><![CDATA[这里越来越热了……]]></title>
 		<preParsingEffects><![CDATA[			
 			[#game.getPlayerCell().getPlace().setPlaceType(PLACE_TYPE_dsg_fields_elis_eisek_sillymode_dungeon_trap_triggered)]
 			[#game.getPlayerCell().getPlace().setName(PLACE_TYPE_dsg_fields_elis_eisek_sillymode_dungeon_trap_triggered.getName())]
@@ -275,9 +275,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					At least you're unharmed.
+					至少你没有受伤。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					default
@@ -287,9 +287,9 @@
 		</responses>
 	</scene>
 	
-	<scene id ="trap_triggered">
+	<scene id="trap_triggered">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Trap (Disarmed)]]></title>
+		<title><![CDATA[陷阱(已失效)]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">TRAP_TRIGGERED</content>
 		<secondsPassed minutes="false"><![CDATA[5]]></secondsPassed>
@@ -302,9 +302,9 @@
 			
 	</scene>
 	
-	<scene id ="exit">
+	<scene id="exit">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Dungeon Exit]]></title>
+		<title><![CDATA[地牢出口]]></title>
 		<preParsingEffects/>
 		<content folderPath="txt/dsg/places/fields/elis/eisek_sillymode/dungeon">EXIT</content>
 		<secondsPassed minutes="false"><![CDATA[1]]></secondsPassed>
@@ -317,9 +317,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Exit]]></responseTitle>
+				<responseTitle><![CDATA[退出]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You've had just about enough of this silly place.
+					你受够这个无聊的地方了。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					dsg_places_fields_elis_eisek_sillymode_dungeon_exit_taken
@@ -332,9 +332,9 @@
 			
 	</scene>
 	
-	<scene id ="exit_taken">
+	<scene id="exit_taken">
 		<author><![CDATA[DSG]]></author>
-		<title><![CDATA[Fresh Air]]></title>
+		<title><![CDATA[新鲜空气]]></title>
 		<preParsingEffects><![CDATA[
 		[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_town, PLACE_TYPE_innoxia_fields_elis_town_eisek_sillymode_dungeon_entrance)]
 		[#game.getPlayerCell().getPlace().setPlaceType(PLACE_TYPE_innoxia_fields_elis_town_street)]		[#game.getPlayerCell().getPlace().setName(PLACE_TYPE_innoxia_fields_elis_town_street.getName())]
@@ -350,9 +350,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Eisek isn't going to believe this, nor anyone else for that matter.
+					艾瑟克不会相信，其他人也不会相信。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					default

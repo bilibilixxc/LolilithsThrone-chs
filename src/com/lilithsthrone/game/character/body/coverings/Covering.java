@@ -202,7 +202,7 @@ public class Covering implements XMLSaving {
 	
 	public static String getFormattedColour(Colour colour, String additionalName, boolean glowing, boolean capitalised) {
 		return (glowing
-					?spanStartGlowing(colour)+getGlowingDescriptor()+" "
+					?spanStartGlowing(colour)+getGlowingDescriptor()+""
 					:"<span style='color:"+colour.toWebHexString()+";'>")
 				+(capitalised?Util.capitaliseSentence(colour.getName()):colour.getName())
 				+additionalName
@@ -224,116 +224,116 @@ public class Covering implements XMLSaving {
 				case FRECKLED_FACE:
 					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised);
 				case HIGHLIGHTS:
-					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-highlighted", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "高光", secondaryGlowing, capitalised);
 				case OMBRE:
-					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+", fading into "+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"，渐淡为"+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised);
 				case MOTTLED:
-					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-mottled", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "斑驳", secondaryGlowing, capitalised);
 				case FRECKLED:
-					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-freckled", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "雀斑", secondaryGlowing, capitalised);
 				case SPOTTED:
-					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-spotted", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "斑点", secondaryGlowing, capitalised);
 				case MARKED:
-					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-marked", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "花纹", secondaryGlowing, capitalised);
 				case STRIPED:
-					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-striped", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "条纹", secondaryGlowing, capitalised);
 				case ORIFICE_ANUS:
-					return getFormattedColour(primaryColour, "-rimmed", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-interiored", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "边缘", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "内壁", secondaryGlowing, capitalised);
 				case ORIFICE_NIPPLE:
 					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)
 								+(gc.getNippleCapacity()==Capacity.ZERO_IMPENETRABLE
 									?""
-									:", "+getFormattedColour(secondaryColour, "-interiored", secondaryGlowing, capitalised));
+									:", "+getFormattedColour(secondaryColour, "内壁", secondaryGlowing, capitalised));
 				case ORIFICE_NIPPLE_CROTCH:
 					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)
 								+(gc.getNippleCrotchCapacity()==Capacity.ZERO_IMPENETRABLE
 									?""
-									:", "+getFormattedColour(secondaryColour, "-interiored", secondaryGlowing, capitalised));
+									:", "+getFormattedColour(secondaryColour, "内壁", secondaryGlowing, capitalised));
 				case ORIFICE_VAGINA:
-					return getFormattedColour(primaryColour, "-lipped", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-interiored", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "唇", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "内壁", secondaryGlowing, capitalised);
 				case ORIFICE_SPINNERET:
-					return getFormattedColour(primaryColour, "-rimmed", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-interiored", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "边缘", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "内壁", secondaryGlowing, capitalised);
 				case ORIFICE_MOUTH:
-					return getFormattedColour(primaryColour, "-lipped", primaryGlowing, capitalised)+", "+getFormattedColour(secondaryColour, "-interiored", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "唇", primaryGlowing, capitalised)+"，"+getFormattedColour(secondaryColour, "内壁", secondaryGlowing, capitalised);
 				case EYE_IRISES:
 					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised);
 				case EYE_IRISES_HETEROCHROMATIC:
-					return "heterochromatic " + getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+" and "+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"与"+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised) + "异色";
 				case EYE_PUPILS:
 					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised);
 				case EYE_PUPILS_HETEROCHROMATIC:
-					return "heterochromatic " + getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+" and "+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"与"+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised) + "异色";
 				case EYE_SCLERA:
 					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised);
 				case EYE_SCLERA_HETEROCHROMATIC:
-					return "heterochromatic " + getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+" and "+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised);
+					return getFormattedColour(primaryColour, "", primaryGlowing, capitalised)+"与"+getFormattedColour(secondaryColour, "", secondaryGlowing, capitalised) + "异色";
 			}
-			return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColourName+"</span>";
+			return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColourName+"</span>";
 		
 		} else {
 			switch(pattern) {
 				case NONE:
 				case FLUID:
 				case FRECKLED_FACE:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName;
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName;
 				case HIGHLIGHTS:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+", "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName+"-highlighted";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"，"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColourName+"高光";
 				case OMBRE:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+", fading into "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName+"";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"，渐淡为"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColourName+"";
 				case MOTTLED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+", "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName+"-mottled";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"，"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColourName+"斑驳";
 				case FRECKLED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+", "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName+"-freckled";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"，"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColourName+"雀斑";
 				case SPOTTED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+", "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName+"-spotted";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"，"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColourName+"斑点";
 				case MARKED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+", "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName+"-marked";
+					return (primaryGlowing?getGlowingDescriptor():"")+primaryColourName+"，"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColourName+"花纹";
 				case STRIPED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+", "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName+"-striped";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"，"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColourName+"条纹";
 				case ORIFICE_ANUS:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+"-rimmed";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"边缘";
 				case ORIFICE_NIPPLE:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName;
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName;
 				case ORIFICE_NIPPLE_CROTCH:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName;
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName;
 				case ORIFICE_VAGINA:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+"-lipped";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"唇";
 				case ORIFICE_MOUTH:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+" lips";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"唇";
 				case ORIFICE_SPINNERET:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+"-rimmed";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName+"边缘";
 				case EYE_IRISES:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName;
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName;
 				case EYE_IRISES_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+" and "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName;
+					return (primaryGlowing?getGlowingDescriptor():"")+primaryColourName+"与"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColourName+"异色";
 				case EYE_PUPILS:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName;
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName;
 				case EYE_PUPILS_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+" and "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName;
+					return (primaryGlowing?getGlowingDescriptor():"")+primaryColourName+"与"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColourName+"异色";
 				case EYE_SCLERA:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName;
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName;
 				case EYE_SCLERA_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName+" and "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColourName;
+					return (primaryGlowing?getGlowingDescriptor():"")+primaryColourName+"与"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColourName+"异色";
 			}
-			return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColourName;
+			return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColourName;
 		}
 	}
 	
 	public String getPrimaryColourDescriptor(boolean coloured) {
 		if(coloured) {
-			return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>";
+			return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>";
 		
 		} else {
-			return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName();
+			return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName();
 		}
 	}
 	
 	public String getSecondaryColourDescriptor(boolean coloured) {
 		if(coloured) {
-			return (secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span>";
+			return (secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span>";
 		
 		} else {
-			return (secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName();
+			return (secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName();
 		}
 	}
 	
@@ -348,7 +348,7 @@ public class Covering implements XMLSaving {
 		// For furry body hair, just call it 'fur'
 		if(modifier==CoveringModifier.FURRY && type.getCategory()==BodyCoveringCategory.BODY_HAIR) {
 			descriptor = "";
-			name = "fur";
+			name = "皮毛";
 		}
 		
 //		if(gc.getRace()==Race.SLIME) {
@@ -362,75 +362,75 @@ public class Covering implements XMLSaving {
 				case FLUID:
 				case FRECKLED_FACE:
 					if(primaryColour==PresetColour.COVERING_NONE) {
-						return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>";
+						return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>";
 					}
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name;
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name;
 				case HIGHLIGHTS:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" highlights</span>";
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+name+"，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"高光</span>";
 				case OMBRE:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", which gradually "+(type.isDefaultPlural()?"fade":"fades")+" into "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span>";
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name+"，渐淡为"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span>";
 				case MOTTLED:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" mottling</span>";
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+name+"，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"斑驳</span>";
 				case FRECKLED:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" freckles</span>";
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+name+"，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"雀斑</span>";
 				case SPOTTED:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" spots</span>";
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+name+"，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor():"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"斑点</span>";
 				case MARKED:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" markings</span>";
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+name+"，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor():"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"花纹</span>";
 				case STRIPED:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" stripes</span>";
+					return (primaryGlowing?getGlowingDescriptor()+spanStartGlowing(primaryColour):"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>"
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+name+"，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"条纹</span>";
 				case ORIFICE_ANUS:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"-rimmed anus</span>, with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" internal walls</span>";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"边缘的肛门</span>，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"内壁</span>";
 				case ORIFICE_NIPPLE:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+" nipples</span>"
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"乳头</span>"
 							+(gc.getNippleCapacity()==Capacity.ZERO_IMPENETRABLE
 								?""
-								:", with "+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" internal walls</span>");
+								:"，带有"+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"内壁</span>");
 				case ORIFICE_NIPPLE_CROTCH:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+" nipples</span>"
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"乳头</span>"
 							+(gc.getNippleCrotchCapacity()==Capacity.ZERO_IMPENETRABLE
 								?""
-								:", with "+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" internal walls</span>");
+								:"，带有"+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"内壁</span>");
 				case ORIFICE_VAGINA:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"-lipped pussy</span>, with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" internal walls</span>";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"唇的小穴</span>，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"内壁</span>";
 				case ORIFICE_SPINNERET:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"-rimmed spinneret</span>, with "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" internal walls</span>";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"边缘的丝囊</span>，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"内壁</span>";
 				case ORIFICE_MOUTH:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+" lips</span>, with a "
-							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+" throat</span>";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"的嘴唇</span>，带有"
+							+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"的喉咙</span>";
 				case EYE_IRISES:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span> irises";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>虹膜";
 				case EYE_IRISES_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span> and "
-						+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span> irises";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor():"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>与"
+						+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span>异色虹膜";
 				case EYE_PUPILS:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span> pupils";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>瞳孔";
 				case EYE_PUPILS_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span> and "
-						+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span> pupils";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor():"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>与"
+						+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span>异色瞳孔";
 				case EYE_SCLERA:
-					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span> sclerae";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+"":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>巩膜";
 				case EYE_SCLERA_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span> and "
-						+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+" ":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span> sclerae";
+					return (primaryGlowing?spanStartGlowing(primaryColour)+getGlowingDescriptor():"<span style='color:"+primaryColour.toWebHexString()+";'>")+primaryColour.getName()+"</span>与"
+						+(secondaryGlowing?spanStartGlowing(secondaryColour)+getGlowingDescriptor()+"":"<span style='color:"+secondaryColour.toWebHexString()+";'>")+secondaryColour.getName()+"</span>异色巩膜";
 			
 			}
 			
@@ -440,63 +440,63 @@ public class Covering implements XMLSaving {
 				case FLUID:
 				case FRECKLED_FACE:
 					if(primaryColour==PresetColour.COVERING_NONE) {
-						return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName();
+						return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName();
 					}
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name;
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name;
 				case HIGHLIGHTS:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" highlights";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name+"，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"高光";
 				case OMBRE:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", which gradually "+(type.isDefaultPlural()?"fade":"fades")+" into "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName();
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name+"，渐淡为"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName();
 				case MOTTLED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" mottling";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name+"，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"斑驳";
 				case FRECKLED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" freckles";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name+"，缀有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"雀斑";
 				case SPOTTED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" spots";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name+"，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"斑点";
 				case MARKED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" markings";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+name+"，带有"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColour.getName()+"花纹";
 				case STRIPED:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()
-							+(descriptor!=null && !descriptor.isEmpty()?", "+descriptor:"")+" "+name+", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" stripes";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()
+							+(descriptor!=null && !descriptor.isEmpty()?descriptor+"的":"")+""+name+"，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"条纹";
 				case ORIFICE_ANUS:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+"-rimmed anus, with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" internal walls";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"边缘的肛门，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"内壁";
 				case ORIFICE_NIPPLE:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" nipples"
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"乳头"
 							+(gc.getNippleCapacity()==Capacity.ZERO_IMPENETRABLE
 								?""
-								:", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" internal walls");
+								:"，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"内壁");
 				case ORIFICE_NIPPLE_CROTCH:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" nipples"
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"乳头"
 							+(gc.getNippleCrotchCapacity()==Capacity.ZERO_IMPENETRABLE
 								?""
-								:", with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" internal walls");
+								:"，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"内壁");
 				case ORIFICE_VAGINA:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+"-lipped pussy, with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" internal walls";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"唇的小穴，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"内壁";
 				case ORIFICE_SPINNERET:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+"-rimmed spinneret, with "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" internal walls";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"边缘的丝囊，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"内壁";
 				case ORIFICE_MOUTH:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" lips, with a "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" throat";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"嘴唇，带有"+(secondaryGlowing?getGlowingDescriptor()+"":"")+secondaryColour.getName()+"喉咙";
 				case EYE_IRISES:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" irises";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"虹膜";
 				case EYE_IRISES_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" and "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" irises";
+					return (primaryGlowing?getGlowingDescriptor():"")+primaryColour.getName()+"与"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColour.getName()+"异色虹膜";
 				case EYE_PUPILS:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" pupils";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"瞳孔";
 				case EYE_PUPILS_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" and "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" sclerae";
+					return (primaryGlowing?getGlowingDescriptor():"")+primaryColour.getName()+"与"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColour.getName()+"异色巩膜";
 				case EYE_SCLERA:
-					return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" pupils";
+					return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName()+"瞳孔";
 				case EYE_SCLERA_HETEROCHROMATIC:
-					return "heterochromatic "+(primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName()+" and "+(secondaryGlowing?getGlowingDescriptor()+" ":"")+secondaryColour.getName()+" sclerae";
+					return (primaryGlowing?getGlowingDescriptor():"")+primaryColour.getName()+"与"+(secondaryGlowing?getGlowingDescriptor():"")+secondaryColour.getName()+"异色巩膜";
 			}
 		}
-		return (primaryGlowing?getGlowingDescriptor()+" ":"")+primaryColour.getName();
+		return (primaryGlowing?getGlowingDescriptor()+"":"")+primaryColour.getName();
 	}
 	
 	private static String spanStartGlowing(Colour colour) {
@@ -504,7 +504,7 @@ public class Covering implements XMLSaving {
 	}
 	
 	private static String getGlowingDescriptor() {
-		return UtilText.returnStringAtRandom("glowing", "luminescent", "luminous", "fluorescent");
+		return UtilText.returnStringAtRandom("发光", "溢光", "闪光", "荧光");
 	}
 	
 	@Override

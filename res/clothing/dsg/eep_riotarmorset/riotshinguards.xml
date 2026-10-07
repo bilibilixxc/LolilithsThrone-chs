@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 		
-		<authorTag><![CDATA[On the inside of each shin pad, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在每个护胫板的内侧，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>450</value> 
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一对]]></determiner>
 
-		<name><![CDATA[Enforcer's riot shin guards]]></name>
+		<name><![CDATA[执法者防暴护腿]]></name>
 
-		<namePlural pluralByDefault="true"><![CDATA[Enforcer's riot shin guards]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[执法者防暴护腿]]></namePlural> 
 
-		<description><![CDATA[A set of metallic plates that protect the wearer's shins as well as the tops of their feet.]]></description> 
+		<description><![CDATA[一组金属板，用于保护穿戴者的胫部以及足部的顶端。]]></description> 
 
 		<physicalResistance>4</physicalResistance> 
 
@@ -68,27 +67,21 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the shinguards over [npc.her] lower [npc.legs] and [npc.verb(tighten)] the straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the shinguards over [npc2.namePos] lower [npc.legs] and [npc.verb(tighten)] the straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] [npc2.legs] through the shinguards and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将护腿套在了[npc.her]的小[npc.legs]并拉紧了带子。]]></self>
+		<other><![CDATA[
+			[npc.Name]将护腿套在了[npc2.namePos]的小[npc.legs]并拉紧了带子。]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]将护腿穿过[npc2.namePos]的[npc2.legs]并仓促地拉紧了带子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] shinguards and [npc.verb(slip)] them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] shinguards and [npc.verb(slip)] them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] shinguards until they're loose enough and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]松开了[npc.her]小[npc.legs]上的带子并把护腿脱了下来。]]></self>
+		<other><![CDATA[
+			[npc.Name]松开了[npc2.namePos]小[npc.legs]上的带子并把护腿脱了下来。]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]撕扯着[npc2.namePos][npc2.legs]上的带子，在带子松动后将护臂一把扯下并扔到了一边。]]></otherRough>
 	</displacementText>
 	
 </clothing>

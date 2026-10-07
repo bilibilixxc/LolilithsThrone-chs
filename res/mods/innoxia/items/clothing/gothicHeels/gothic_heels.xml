@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAtributes>
 		<value>600</value> 
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一双]]></determiner>
 		
-		<name><![CDATA[gothic heel]]></name>
+		<name><![CDATA[哥特高跟鞋]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[gothic heels]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[哥特高跟鞋]]></namePlural> 
 		
-		<description><![CDATA[A pair of decorative heels, complete with lacy trim and intricate patterning.]]></description> 
+		<description><![CDATA[一双装饰繁杂的高跟鞋，配有花边和复杂图案。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

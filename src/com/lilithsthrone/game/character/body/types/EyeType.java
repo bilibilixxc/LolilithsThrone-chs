@@ -29,15 +29,15 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"human",
-			"eye",
-			"eyes",
+			"人类",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			" By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into human eyes, with normally-proportioned irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了人类的眼睛，虹膜和瞳孔的比例适中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldHuman(human eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] normal, human eyes, with [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldHuman(人类的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]普通的人类眼睛，[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 	};
 
 	public static AbstractEyeType ANGEL = new AbstractEyeType(BodyCoveringType.EYE_ANGEL,
@@ -45,15 +45,15 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"angel",
-			"eye",
-			"eyes",
+			"天使",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			" By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into angelic eyes, with normally-proportioned irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了天使的眼睛，虹膜和瞳孔的比例适中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldAngel(angelic eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] angelic eyes, with [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldAngel(天使的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]天使的眼睛，[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.EYE_PERFECT_VISION);
@@ -65,21 +65,21 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.VERTICAL,
-			"demonic",
-			"eye",
-			"eyes",
+			"恶魔",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			"#IF(npc.isShortStature())"
-				+ "By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into impish eyes, with vertical pupils and large irises."
+				+ "[npc.she]战战兢兢地睁开眼时，发现已经变成了小恶魔的眼睛，虹膜偏大，纵向的瞳孔居于其中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldImp(impish eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)]."
+				+ "[npc.Name]现在拥有[style.boldImp(小恶魔的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。"
 			+ "#ELSE"
-				+ "By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into demonic eyes, with vertical pupils and large irises."
+				+ "[npc.she]战战兢兢地睁开眼时，发现已经变成了恶魔的眼睛，虹膜偏大，纵向的瞳孔居于其中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldDemon(demonic eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)]."
+				+ "[npc.Name]现在拥有[style.boldDemon(恶魔的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。"
 			+ "#ENDIF",
-			"[npc.SheHasFull] [npc.eyePairs] #IF(npc.isShortStature())impish#ELSEdemonic#ENDIF eyes, with [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+			"[npc.SheHasFull]拥有[npc.eyePairs]#IF(npc.isShortStature())小恶魔#ELSE恶魔#ENDIF的眼睛，[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(
@@ -93,14 +93,14 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"demonic-owl",
-			"eye",
-			"eyes",
+			"恶魔鸮",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into demonic, owl-like eyes, which provide [npc.herHim] with excellent night vision."
-				+ "<br/>[npc.Name] now [npc.has] [style.boldDemon(demonic-owl eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] demonic-owl eyes, with [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+			"[npc.she]犹豫着再度睁开眼睛，那双眼已经化作了恶魔似的鸮眼睛，为[npc.herHim]提供了出色的夜视能力。"
+				+ "<br/>[npc.Name]拥有了[style.boldDemon(恶魔似的鸮眼睛)]，还带有[style.boldGenericTF([npc.irisShape])]，[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]，[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]恶魔似的鸮眼睛，[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(
@@ -114,16 +114,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.VERTICAL,
-			"cat",
-			"eye",
-			"eyes",
+			"猫",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into cat-like eyes, with large irises and vertical pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了猫一般的眼睛，虹膜偏大，纵向的瞳孔居于其中。"
 					+ "<br/>"
-					+ "[npc.Name] now [npc.has] [style.boldCatMorph(cat-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] cat-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+					+ "[npc.Name]现在拥有[style.boldCatMorph(猫一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]猫一般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -135,16 +135,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.HORIZONTAL,
-			"cow",
-			"eye",
-			"eyes",
+			"牛",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into cow-like eyes, with large pupils and horizontal irises."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了牛一般的眼睛，虹膜偏大，横向的瞳孔居于其中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldCowMorph(cow-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] cow-like eyes, the irises and pupils of which are larger than a regular human's."
-			+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldCowMorph(牛一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]牛一般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+			+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -156,16 +156,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"dog",
-			"eye",
-			"eyes",
+			"犬",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into dog-like eyes, with large pupils and irises."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了犬一般的眼睛，虹膜和瞳孔都显得稍大。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldDogMorph(dog-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] dog-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldDogMorph(犬一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]犬一般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -177,16 +177,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.VERTICAL,
-			"fox",
-			"eye",
-			"eyes",
+			"狐狸",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into fox-like eyes, with large irises and vertical pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了狐狸般的眼睛，虹膜偏大，纵向的瞳孔居于其中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldFoxMorph(fox-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] fox-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldFoxMorph(狐狸般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]狐狸般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -198,16 +198,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"wolf",
-			"eye",
-			"eyes",
+			"狼",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into wolf-like eyes, with large irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了狼一般的眼睛，虹膜和瞳孔都显得稍大。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldWolfMorph(wolf-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] wolf-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldWolfMorph(狼一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]狼一般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -219,16 +219,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"squirrel",
-			"eye",
-			"eyes",
+			"松鼠",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into squirrel-like eyes, with large irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了松鼠般的眼睛，虹膜和瞳孔都显得稍大。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldSquirrelMorph(squirrel-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] squirrel-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldSquirrelMorph(松鼠般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]松鼠般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 	};
 
 	public static AbstractEyeType RAT_MORPH = new AbstractEyeType(BodyCoveringType.EYE_RAT,
@@ -236,16 +236,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"rat",
-			"eye",
-			"eyes",
+			"老鼠",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into rat-like eyes, with large irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了老鼠般的眼睛，虹膜和瞳孔都显得稍大。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldRatMorph(rat-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] rat-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldRatMorph(老鼠般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]老鼠般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 	};
 
 	public static AbstractEyeType RABBIT_MORPH = new AbstractEyeType(BodyCoveringType.EYE_RABBIT,
@@ -253,16 +253,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"rabbit",
-			"eye",
-			"eyes",
+			"兔子",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into rabbit-like eyes, with large irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了兔子般的眼睛，虹膜和瞳孔都显得稍大。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldRabbitMorph(rabbit-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] rabbit-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldRabbitMorph(兔子般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]兔子般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 	};
 
 	public static AbstractEyeType BAT_MORPH = new AbstractEyeType(BodyCoveringType.EYE_BAT,
@@ -270,16 +270,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"bat",
-			"eye",
-			"eyes",
+			"蝙蝠",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into bat-like eyes, with large irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，那双眼已经变成了蝙蝠般的眼睛，虹膜和瞳孔都显得稍大。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldBatMorph(bat-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] bat-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldBatMorph(蝙蝠般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]蝙蝠般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -291,16 +291,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.VERTICAL,
-			"alligator",
-			"eye",
-			"eyes",
+			"鳄鱼",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into alligator-like eyes, with large irises and vertical pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了鳄鱼般的眼睛，虹膜偏大，纵向的瞳孔居于其中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldAlligatorMorph(alligator-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] alligator-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldAlligatorMorph(鳄鱼般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]鳄鱼般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -312,16 +312,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.HORIZONTAL,
-			"horse",
-			"eye",
-			"eyes",
+			"马",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into horse-like eyes, with large irises and horizontal pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了马一般的眼睛，虹膜偏大，横向的瞳孔居于其中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldHorseMorph(horse-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] horse-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldHorseMorph(马一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]马一般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -333,16 +333,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.HORIZONTAL,
-			"reindeer",
-			"eye",
-			"eyes",
+			"驯鹿",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into reindeer-like eyes, with large irises and horizontal pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了驯鹿般的眼睛，虹膜偏大，横向的瞳孔居于其中。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldReindeerMorph(reindeer-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] reindeer-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldReindeerMorph(驯鹿般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]驯鹿般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 		@Override
 		public List<BodyPartTag> getTags() {
 			return Util.newArrayListOfValues(BodyPartTag.NIGHT_VISION);
@@ -354,16 +354,16 @@ public class EyeType {
 			1,
 			EyeShape.ROUND,
 			EyeShape.ROUND,
-			"harpy",
-			"eye",
-			"eyes",
+			"哈比",
+			"眼睛",
+			"眼睛",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into bird-like eyes, with large irises and pupils."
+			"[npc.she]战战兢兢地睁开眼时，发现已经变成了鸟一般的眼睛，虹膜和瞳孔都显得稍大。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldHarpy(bird-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].",
-			"[npc.SheHasFull] [npc.eyePairs] bird-like eyes, the irises and pupils of which are larger than a regular human's."
-				+ " They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.") {
+				+ "[npc.Name]现在拥有[style.boldHarpy(鸟一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。",
+			"[npc.SheHasFull]拥有[npc.eyePairs]鸟一般的眼睛，虹膜和瞳孔相比一般人类的都要大一些。"
+				+ "[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。") {
 	};
 	
 

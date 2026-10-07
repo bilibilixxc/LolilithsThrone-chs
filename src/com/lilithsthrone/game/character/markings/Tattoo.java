@@ -334,19 +334,19 @@ public class Tattoo extends AbstractCoreItem implements XMLSaving {
 		
 		if(!baseName.replaceAll("\u00A0"," ").equalsIgnoreCase(this.getType().getName().replaceAll("\u00A0"," "))) { // If this tattoo has a custom name, just display that:
 			return (withRarityColour
-						? " <span style='color: " + this.getRarity().getColour().toWebHexString() + ";'>" + baseName + "</span>"
+						? "<span style='color: " + this.getRarity().getColour().toWebHexString() + ";'>" + baseName + "</span>"
 						: baseName);
 //					+" tattoo";
 		}
 		
-		return Util.capitaliseSentence(this.getPrimaryColour().getName()) + " "
-				+ (withRarityColour?" <span style='color: " + this.getRarity().getColour().toWebHexString() + ";'>":"")
+		return Util.capitaliseSentence(this.getPrimaryColour().getName())
+				+ (withRarityColour?"<span style='color: " + this.getRarity().getColour().toWebHexString() + ";'>":"")
 					+ (this.getType()==TattooType.getTattooTypeFromId("innoxia_misc_none")
-						?"tattoo"
-						:baseName + " tattoo")
+						?"纹身"
+						:baseName + "纹身")
 				+ (withRarityColour?"</span>":"")
 				+(!this.getEffects().isEmpty()
-						? " "+getEnchantmentPostfix(withRarityColour, "b")
+						? getEnchantmentPostfix(withRarityColour, "b")
 						: "");
 	}
 	
@@ -354,26 +354,26 @@ public class Tattoo extends AbstractCoreItem implements XMLSaving {
 		if(!this.getEffects().isEmpty()) {
 			for(ItemEffect ie : this.getEffects()) {
 				if(ie.getSecondaryModifier() == TFModifier.CLOTHING_ENSLAVEMENT) {
-					return "of "+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_ENSLAVEMENT.getColour().toWebHexString()+";'>enslavement</"+tag+">":"enslavement");
+					return "("+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_ENSLAVEMENT.getColour().toWebHexString()+";'>奴役</"+tag+">":"奴役")+"附魔)";
 					
 				} else if(ie.getSecondaryModifier() == TFModifier.CLOTHING_SERVITUDE) {
-					return "of "+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_SERVITUDE.getColour().toWebHexString()+";'>servitude</"+tag+">":"servitude");
+					return "("+(coloured?"<"+tag+" style='color:"+TFModifier.CLOTHING_SERVITUDE.getColour().toWebHexString()+";'>仆役</"+tag+">":"仆役")+"附魔)";
 					
 				} else if(ie.getPrimaryModifier() == TFModifier.TF_MOD_FETISH_BEHAVIOUR || ie.getPrimaryModifier() == TFModifier.TF_MOD_FETISH_BODY_PART) {
-					return "of "+(coloured?"<"+tag+" style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+ie.getSecondaryModifier().getDescriptor()+"</"+tag+">":ie.getSecondaryModifier().getDescriptor());
+					return "("+(coloured?"<"+tag+" style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+ie.getSecondaryModifier().getDescriptor()+"</"+tag+">":ie.getSecondaryModifier().getDescriptor())+"附魔)";
 					
 				} else if(ie.getPrimaryModifier() == TFModifier.CLOTHING_ATTRIBUTE) {
 					String name = (this.isBadEnchantment()?this.getCoreEnchantment().getNegativeEnchantment():this.getCoreEnchantment().getPositiveEnchantment());
-					return "of "+(coloured?"<"+tag+" style='color:"+this.getCoreEnchantment().getColour().toWebHexString()+";'>"+name+"</"+tag+">":name);
+					return "("+(coloured?"<"+tag+" style='color:"+this.getCoreEnchantment().getColour().toWebHexString()+";'>"+name+"</"+tag+">":name)+"附魔)";
 					
 				} else if(ie.getSecondaryModifier() == TFModifier.CLOTHING_SEALING) {
-					return "of "+(coloured?"<"+tag+" style='color:"+PresetColour.SEALED.toWebHexString()+";'>sealing</"+tag+">":"sealing");
+					return "("+(coloured?"<"+tag+" style='color:"+PresetColour.SEALED.toWebHexString()+";'>封印</"+tag+">":"封印")+"附魔)";
 					
 				} else if(ie.getPrimaryModifier() == TFModifier.CLOTHING_CREAMPIE_RETENTION) {
-					return "of "+(coloured?"<"+tag+" style='color:"+PresetColour.CUM.toWebHexString()+";'>plugging</"+tag+">":"plugging");
+					return "("+(coloured?"<"+tag+" style='color:"+PresetColour.CUM.toWebHexString()+";'>封堵</"+tag+">":"封堵")+"附魔)";
 					
 				} else {
-					return "of "+(coloured?"<"+tag+" style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>transformation</"+tag+">":"transformation");
+					return "("+(coloured?"<"+tag+" style='color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>转化</"+tag+">":"转化")+"附魔)";
 				}
 			}
 		}

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[The Red Dragon]]></name>
-	<tooltipDescription><![CDATA[Positioned close to the eastern entrance of Elis, the tavern 'The Red Dragon' is always busy.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[outside of 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[红龙酒馆]]></name>
+	<tooltipDescription><![CDATA[在伊利斯东门附近的红龙酒馆总是很繁忙。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[红龙酒馆外]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -109,7 +109,7 @@
 	<bookIconName>dragonicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Mysterious Dragons</bookName>
+	<bookName><![CDATA[隐秘龙族]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -122,38 +122,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[wyvern-morph]]></name>
-			<namePlural><![CDATA[wyvern-morphs]]></namePlural>
-			<singularMaleName><![CDATA[wyvern-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[wyvern-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[wyvern-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[wyvern-girls]]></pluralFemaleName>
+			<name><![CDATA[翼龙化形]]></name>
+			<namePlural><![CDATA[翼龙化形]]></namePlural>
+			<singularMaleName><![CDATA[翼龙男]]></singularMaleName>
+			<singularFemaleName><![CDATA[翼龙女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[翼龙男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[翼龙女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic wyvern, known as a 'wyvern-morph' when bipedal, and a 'wyverntaur' when the lower body is that of a typically-oversized feral dragon. To be identified as a wyvern-morph, a character must be a dragon-morph with arm wings.]]></description>
+	<description><![CDATA[一种人形的翼龙，当下肢拟人时被称为“翼龙化形”，而当下肢呈现出龙兽态时则称为“半翼龙人”。要判定为“翼龙化形”，角色必须先为“龙化形”，且拥有翼手。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[typhon]]></name>
-			<namePlural><![CDATA[typhons]]></namePlural>
-			<singularMaleName><![CDATA[typhon]]></singularMaleName>
-			<singularFemaleName><![CDATA[typhon]]></singularFemaleName>
-			<pluralMaleName><![CDATA[typhons]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[typhons]]></pluralFemaleName>
+			<name><![CDATA[堤福俄斯]]></name>
+			<namePlural><![CDATA[堤福俄斯]]></namePlural>
+			<singularMaleName><![CDATA[堤福俄斯]]></singularMaleName>
+			<singularFemaleName><![CDATA[堤福俄斯]]></singularFemaleName>
+			<pluralMaleName><![CDATA[堤福俄斯]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[堤福俄斯]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[wyvern]]></feralName>
-		<feralNamePlural><![CDATA[wyverns]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[wyvern]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[wyverness]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[wyverns]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[wyvernesses]]></feralPluralFemaleName>
+		<feralName><![CDATA[翼龙]]></feralName>
+		<feralNamePlural><![CDATA[翼龙]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[翼龙]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[翼龙]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[翼龙]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[翼龙]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -184,7 +184,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] wyvern-like body is very powerful, and as a mythological creature [npc.she] [npc.has] a close arcane affinity with both the strengths and weaknesses that it brings.
+		[npc.NamePos]翼龙一般的身躯充满力量，[npc.she]作为神话生物，拥有紧密的奥术亲和力，既能发挥它的强大之处，也熟悉它的脆弱之处。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

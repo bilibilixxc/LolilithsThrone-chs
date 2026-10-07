@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>300</value> <!--10 flames = £1 ~ $1.5-->
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[heart-shaped barbells]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[heart-shaped barbells]]></namePlural>
-		<description><![CDATA[A pair of barbells which surround each nipple with a cute heart.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[心型乳钉]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[心型乳钉]]></namePlural>
+		<description><![CDATA[一对乳钉，让穿戴者的乳头周围有一个可爱的心型。]]></description>
 		
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -51,27 +50,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the heart-shaped barbells into [npc.her] nipple piercings.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the heart-shaped barbells into [npc2.namePos] nipple piercings.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(slide)] the heart-shaped barbells into [npc2.namePos] nipple piercings.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把心型乳钉戴在[npc.her]的乳头穿孔。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把心型乳钉戴在[npc2.namePos]的乳头穿孔。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把心型乳钉戴在[npc2.namePos]的乳头穿孔。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] heart-shaped barbells out of [npc.her] nipple piercings.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] heart-shaped barbells out of [npc2.her] nipple piercings.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] heart-shaped barbells out of [npc2.her] nipple piercings.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把[npc.her]的心型乳钉从[npc.her]的乳头穿孔中取下。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把[npc2.namePos]的心型乳钉从[npc2.her]的乳头穿孔中取下。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的心型乳钉从[npc2.her]的乳头穿孔中取下。
+]]></otherRough>
 	</displacementText>
   
 </clothing>

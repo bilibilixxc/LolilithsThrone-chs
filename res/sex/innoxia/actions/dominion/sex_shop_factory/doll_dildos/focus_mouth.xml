@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -30,16 +30,16 @@
 	<areasCummedOn/>
 	<title><![CDATA[
 		#IF(sex.getNumberOfOrgasms(pc)==0)
-			Face-fuck
+			面操
 		#ELSE
-			Massage dildo
+			假阳具按摩
 		#ENDIF
 	]]></title>
 	<tooltip><![CDATA[
 		#IF(sex.getNumberOfOrgasms(pc)==0)
-			Do as the doll commands and start pumping the dildo in and out of your throat.
+			按照玩偶的命令，开始将假阳具在你的喉咙里抽送。
 		#ELSE
-			Do as the doll commands and use your tongue to massage the underside of the dildo's shaft.
+			按照玩偶的命令，用你的舌头按摩假阳具柱身的末端。
 		#ENDIF
 	]]></tooltip>
 	<descriptions>
@@ -48,7 +48,7 @@
 				[#sex.getNumberOfOrgasms(pc)==0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Surrendering to the red doll's authority, you obediently take hold of the end of the dildo that's poking out between your plump, 'o'-shaped lips and pull it half-way out of your throat. A shiver of masochistic pleasure jolts through your silicone body as you take on the role of testing the doll's sex toys, and with an excited, muffled moan, you plunge the thick dildo back down your throat. Repeating this action, you start to rhythmically fuck your own face, drawing an approving nod from the red doll as a surge of intense arousal washes over you.
+				你屈服于红色玩偶的淫威，顺从地握住从你丰满的“O”形嘴唇之间伸出的假阳具的末端，并将其从喉咙中拔出一半。你现在就像是玩偶的性玩具测试员，一股受虐的快感使你的硅胶身体不自主地颤抖着，随着一声模糊不清的兴奋呻吟，你把粗大的假阳具重新塞回喉咙。你重复着这套动作，开始有节奏地操自己的脸，红色玩偶赞许地向你点头，使得你的全身涌过一阵强烈的快感。
 			]]></text>
 		</description>
 		<description>
@@ -56,7 +56,7 @@
 				[#sex.getNumberOfOrgasms(pc)>0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Submitting to the doll's command, you instantly start using your tongue to caress the underside of the huge, equine dildo that's hilted deep down your throat. The act of sliding your silicone tongue up and down the toy makes you wish that you were doing this to a real cock, and that you'd be rewarded with a blast of hot cum down your throat at the end of it. This intrusive thought briefly makes you question what's happening to you, but as you obediently continue massaging the silicone horse-cock you quickly sink into a blissful state of mind where all that matters is acting like a good, obedient sex doll.
+				你听从玩偶的命令，立即将假阳具的柱身深深地插入你的喉咙，同时开始用舌头舔弄巨大的马形假阳具的根部。你的硅胶舌头在玩具上来回滑动着，你幻想着自己是在对着一根真正的阴茎做这种事，最后你的喉咙会得到一股温暖的精液作为奖励。这种突然闯入的想法让你短暂地疑惑了一下自己身上发生了什么，但你很快就陷入了一种幸福的精神状态，继续顺从地按摩着硅胶马屌，专注于表现得像一个乖巧听话的性爱玩偶。
 			]]></text>
 		</description>
 	</descriptions>

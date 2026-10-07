@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[On the inside of the each boots' shanks, rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在每只靴子的胫处，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>300</value> 
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一双]]></determiner>
 
-		<name><![CDATA[Enforcer's jackboots]]></name>
+		<name><![CDATA[执法者的长筒军靴]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's jackboots]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者的长筒军靴]]></namePlural> 
 
-		<description><![CDATA[A pair of mid-calf hobnailed boots made from well-polished leather. The heels have a band of metal around the bottom that make a distinct clicking noise when knocked against each other. ]]></description> 
+		<description><![CDATA[一双长至小腿中部钉有平头钉的靴子，由光滑的皮革制成。鞋跟底部有一条金属带，当相互碰撞时会发出明显的咔嗒声。]]></description> 
 
 		<physicalResistance>1</physicalResistance> 
 
@@ -63,27 +62,20 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the jackboots.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.feet] into the jackboots.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(shove)] [npc2.namePos] [npc2.feet] into the jackboots.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿上了军靴。]]></self>
+		<other><![CDATA[[npc.Name]引导[npc2.namePos]的[npc2.feet]踩进靴子里。]]></other>
+		<otherRough><![CDATA[[npc.Name]将[npc2.namePos]的[npc2.feet]踩进靴子里。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] [npc.her] jackboots off [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slip)] [npc2.namePos] jackboots off [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] jackboots off [npc2.her] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]脱下了[npc.her][npc.feet]上的军靴。]]></self>
+		<other><![CDATA[
+			[npc.Name]把[npc2.namePos]靴子从[npc2.her]的[npc2.feet]上脱下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将靴子从[npc2.namePos]的[npc2.feet]上拽了下来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

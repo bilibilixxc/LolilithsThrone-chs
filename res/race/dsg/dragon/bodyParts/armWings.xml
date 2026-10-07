@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <arm>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_dragon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[dragon winged]]></transformationName>
+	<transformationName><![CDATA[龙(翼手)]]></transformationName>
 	
 	<!-- The id of the material covering this arm.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -32,61 +32,61 @@
 	
 	<!-- The singular and plural name of this arm type.
 	These should be left as 'arm' and 'arms' for standard arm types, and changed to 'wing' and 'wings' if your arm type are wings (such as those found on harpies or bat-morphs). -->
-	<name><![CDATA[wing]]></name>
-	<namePlural><![CDATA[wings]]></namePlural> 
+	<name><![CDATA[翼]]></name>
+	<namePlural><![CDATA[翼]]></namePlural> 
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's arm of this type.
 	Can be left blank. -->
 	<descriptorsMasculine>
-		<descriptor>scaly</descriptor>
-		<descriptor>scale-coated</descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
+		<descriptor><![CDATA[覆鳞]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor>scaly</descriptor>
-		<descriptor>scale-coated</descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
+		<descriptor><![CDATA[覆鳞]]></descriptor>
 	</descriptorsFeminine>
 	
 	<!-- Same naming formats as those for the arm type above, but these describe the arm's hands: -->
-	<handName><![CDATA[hand]]></handName>
-	<handNamePlural><![CDATA[hands]]></handNamePlural>
+	<handName><![CDATA[手]]></handName>
+	<handNamePlural><![CDATA[手]]></handNamePlural>
 	<handDescriptorsMasculine>
-		<descriptor>dragon-like</descriptor>
-		<descriptor>scaly</descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
 	</handDescriptorsMasculine>
 	<handDescriptorsFeminine>
-		<descriptor>soft</descriptor>
-		<descriptor>feminine</descriptor>
-		<descriptor>dragon-like</descriptor>
-		<descriptor>scaly</descriptor>
+		<descriptor><![CDATA[柔软]]></descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
 	</handDescriptorsFeminine>
 	
 	<!-- Same naming formats as those for the arm type above, but these describe the arm's fingers: -->
-	<fingerName><![CDATA[finger]]></fingerName>
-	<fingerNamePlural><![CDATA[fingers]]></fingerNamePlural>
+	<fingerName><![CDATA[指爪]]></fingerName>
+	<fingerNamePlural><![CDATA[指爪]]></fingerNamePlural>
 	<fingerDescriptorsMasculine>
-		<descriptor>talon-tipped</descriptor>
-		<descriptor>dragon-like</descriptor>
+		<descriptor><![CDATA[尖爪]]></descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
 	</fingerDescriptorsMasculine>
 	<fingerDescriptorsFeminine>
-		<descriptor>soft</descriptor>
-		<descriptor>feminine</descriptor>
-		<descriptor>talon-tipped</descriptor>
-		<descriptor>dragon-like</descriptor>
+		<descriptor><![CDATA[柔软]]></descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[尖爪]]></descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
 	</fingerDescriptorsFeminine>
 	
 	<!-- The description which is shown when a character transforms to obtain this arm type.
 	This description immediately follows a brief description of the arm type beginning to transform. -->
 	<transformationDescription><![CDATA[
-		Within a matter of moments, a layer of [npc.armFullDescription] has quickly grown over them, and, starting at [npc.her] hands in shock, [npc.she] [npc.verb(watch)] [npc.her] fingers narrowing down and growing longer and longer as a tough membrane of leathery skin starts to grow between them. [npc.She] [npc.verb(cry)] out in alarm as [npc.she] [npc.verb(feel)] [npc.her] bones snapping into a new form, and before [npc.her] very eyes, [npc.her] hands and arms have completely transformed into [style.boldDragon(huge, draconic wings)]. Where [npc.her] hands once were, two of [npc.her] fingers have shrunk down into the middle-joint of [npc.her] new appendages, with two small forefingers and an opposable thumb, each tipped with a sharp talon. At [npc.her] shoulders where [npc.her] new wings meet [npc.her] shoulder, her new scales smoothly transitions into the [npc.skin] that's covering the rest of [npc.her] torso.
-		<br/>As the transformation comes to an end, [npc.nameIsFull] left with huge [style.boldDragon(draconic wings)] in place of arms, which are [npc.materialDescriptor] [npc.armFullDescription].
+		顷刻之间，一层[npc.armFullDescription]已迅速覆盖了它们，[npc.she]看着[npc.her]的手指缩小，越来越长，它们之间开始长出一层坚韧的皮膜。当[npc.she]感觉[npc.her]的骨头断裂变成新的形态时，[npc.she]哭叫出声，在[npc.her]的眼前，[npc.her]的双手和双臂完全变成了[style.boldDragon(巨大的龙翼)]。在[npc.her]曾经的双手上，[npc.her]的两根手指已经缩进了[npc.her]新附属器官的中关节，有两根小食指和一根可对折的拇指，每根拇指的尖端都有一个利爪。在[npc.her]的肩膀处，[npc.her]的新翅膀与[npc.her]的肩膀相接，[npc.her]的新鳞片顺利过渡到覆盖[npc.her]的躯干其余部分的[npc.skin]。
+		<br/>转化结束后，[npc.nameIsFull]拥有的是巨大的[style.boldDragon(龙翼)]手臂，并[npc.materialDescriptor][npc.armFullDescription]。
 	]]></transformationDescription>
 	
 	<!-- How these arms are described in a character's description page. -->
 	<bodyDescription><![CDATA[
-	In place of arms and hands, [npc.she] [npc.has] [npc.armRows] huge draconic wings which are [npc.materialCompositionDescriptor] [npc.armFullDescription(true)].
+	代替手臂和手的是[npc.she]的[npc.has][npc.armRows]巨大的龙人翅膀，并[npc.materialCompositionDescriptor][npc.armFullDescription(true)] 。
 	#IF(!npc.isFeral())
-	 [npc.Her] hands are comprised of two forefingers and a thumb, each tipped with a sharp talon. Although slightly less dexterous than a five-digit hand, [npc.sheIs] still able to use them to form a hand-like grip.
+	[npc.her]的手由两个食指和一个拇指组成，每个食指和拇指的尖端都有一个利爪。虽然比五个手指的手稍微不那么灵巧一些，但是[npc.sheIs]仍能用它们达成类似手掌的抓握能力。
 	#ENDIF
 	]]></bodyDescription>
 	

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[tabi sock]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[tabi socks]]></namePlural>
-		<description><![CDATA[A pair of traditional Japanese cotton socks, designed to be worn with thonged footwear. They have fasteners at the back to secure them in place.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[分趾袜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[分趾袜]]></namePlural>
+		<description><![CDATA[一双日本传统的棉袜，非常适合和木屐一起穿。袜子后面有固定扣方便固定袜子。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>SOCK</slot> 
@@ -50,27 +50,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the tabi socks on to cover [npc.her] [npc.feet].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the tabi socks onto [npc2.namePos] [npc2.feet].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the tabi socks onto [npc2.namePos] [npc2.feet].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的脚塞进分趾袜中。
+]]></self>
+    <other><![CDATA[
+[npc.Name]给[npc2.namePos]的[npc2.feet]套上分趾袜。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的[npc2.feet]强行塞进分趾袜中。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] tabi socks.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] tabi socks.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] tabi socks.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下了[npc.her]的分趾袜。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的分趾袜脱下。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的分趾袜并粗暴地扯下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

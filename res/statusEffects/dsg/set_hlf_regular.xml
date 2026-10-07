@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<renderingPriority>70</renderingPriority>
 	<renderInEffectsPanel>true</renderInEffectsPanel>
@@ -6,9 +6,9 @@
 	<beneficial>BENEFICIAL</beneficial>
 	<combatEffect>false</combatEffect>
 	<sexEffect>false</sexEffect>
-	<name><![CDATA[HLF Regular]]></name>
+	<name><![CDATA[HLF正规军]]></name>
 	<description><![CDATA[
-		Wearing the uniform of an HLF Regular fills [npc.name] with the conviction to do what is necessary.
+		穿上HLF正规军制服，让[npc.name]充满做必要之事的信念。
 	]]></description>
 	<imageName>set_hlf_icon.svg</imageName>
 	<colourPrimary>CLOTHING_RED_DARK</colourPrimary> 

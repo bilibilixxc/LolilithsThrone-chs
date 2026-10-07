@@ -7,29 +7,29 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum PiercingType {
 	
-	EAR("ear",
-			"Ears are the most common area of the body that are pierced, and enable the equipping of earrings and other ear-related jewellery."),
+	EAR("耳朵",
+			"耳朵是最常见的穿孔部位，打耳洞以佩戴耳环和其他耳朵相关的首饰。"),
 	
-	NOSE("nose",
-			"Having a nose piercing allows you to equip jewellery such as nose rings or studs."),
+	NOSE("鼻子",
+			"给鼻子穿孔以佩戴鼻环或鼻钉。"),
 	
-	LIP("lip",
-			"Lip piercings allow you to wear lip rings."),
+	LIP("嘴唇",
+			"给嘴唇穿孔以佩戴唇环。"),
 	
-	TONGUE("tongue",
-			"Getting a tongue piercing will allow you to equip tongue bars."),
+	TONGUE("舌头",
+			"给舌头穿孔以佩戴舌钉。"),
 	
-	NAVEL("navel",
-			"Getting your navel (belly button) pierced allows you to equip navel-related jewellery."),
+	NAVEL("肚脐",
+			"给肚脐穿孔以佩戴肚脐相关的首饰。"),
 	
-	NIPPLE("nipple",
-			"Nipple piercings will allow you to equip nipple bars."),
+	NIPPLE("乳头",
+			"给乳头穿孔以佩戴乳环。"),
 	
-	VAGINA("vagina",
-			"Having a vagina piercing will allow you to equip vagina-related jewellery."),
+	VAGINA("阴部",
+			"给阴蒂穿孔以佩戴阴部相关的首饰。"),
 	
-	PENIS("penis",
-			"Having a penis piercing will allow you to equip penis-related jewellery.");
+	PENIS("阴茎",
+			"给阴茎穿孔以佩戴阴茎相关的首饰。");
 	
 	private String name;
 	private String description;

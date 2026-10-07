@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ear>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_shark</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[shark finned]]></transformationName>
+	<transformationName><![CDATA[鲨鱼(鳍状)]]></transformationName>
 	
 	<!-- The id of the material covering this ear.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -28,38 +28,38 @@
 	-->
 	
 	<!-- The singular and plural names of this ear type.-->
-	<name><![CDATA[ear fin]]></name>
-	<namePlural><![CDATA[ear fins]]></namePlural>
+	<name><![CDATA[耳鳍]]></name>
+	<namePlural><![CDATA[耳鳍]]></namePlural>
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's ear of this type.
 	Can be left blank. -->
 	<descriptorsMasculine>
-		<descriptor>shark-like</descriptor>
-		<descriptor>finned</descriptor>
+		<descriptor><![CDATA[鲨鱼般]]></descriptor>
+		<descriptor><![CDATA[鳍状]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>shark-like</descriptor>
-		<descriptor>finned</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[鲨鱼般]]></descriptor>
+		<descriptor><![CDATA[鳍状]]></descriptor>
 	</descriptorsFeminine>
 	
 	<!-- The description which is shown when a character transforms to obtain this ear type.
 	This description immediately follows a brief description of the ear type beginning to transform. -->
 	<transformationDescription><![CDATA[
-		They quickly begin to narrow and grow longer while shifting to sit higher up on [npc.her] head than normal human ears would until they resemble a pair of swept, pointed fins.
+		它们迅速开始变窄，变得更长，逐渐移到[npc.her]头部比普通人的耳朵更高的位置，直到它们变得像一对流线型、尖锐的鳍。
 		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-		 A layer of [npc.earFullDescriptionColour] quickly grows to cover them,
+		一层[npc.earFullDescriptionColour]迅速生长覆盖在它们上面，
 		#ELSE
-		 Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],
+		就像[npc.her]身体的其余部分一样，它们由[npc.earFullDescription]制成，
 		#ENDIF
-		 and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new shark-like ears back and forth.
-		<br/>[npc.Name] now [npc.has] [style.boldShark(large, shark-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].
-	]]></transformationDescription>
+		变形完成，[npc.she]试探地来回摆动[npc.her]新生的鲨鱼般的耳朵。
+		<br/>[npc.Name]现在拥有[style.boldShark(大的、鲨鱼般的耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。
+]]></transformationDescription>
 	
 	<!-- How this ear is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.She] [npc.has] a pair of upright,#IF(npc.isPiercedEar()) pierced,#ENDIF shark-like ears that resemble swept, pointed fins. They are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].
+		[npc.She]有着一对竖立的鲨鱼般的耳朵#IF(npc.isPiercedEar())，且已经打过孔#ENDIF，它们酷似流线型、尖锐的鳍，正长在[npc.her]头顶，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]。
 	]]></bodyDescription>
 	
 </ear>

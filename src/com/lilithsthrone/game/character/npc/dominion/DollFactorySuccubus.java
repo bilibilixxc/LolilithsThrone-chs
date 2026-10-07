@@ -54,7 +54,7 @@ public class DollFactorySuccubus extends NPC {
 	}
 	
 	public DollFactorySuccubus(boolean isImported) {
-		super(isImported, null, "Loviennemartuilani",
+		super(isImported, null, "洛维耶纳马尔图拉尼",
 				"",
 				Util.random.nextInt(50)+18, Util.randomItemFrom(Month.values()), 1+Util.random.nextInt(28),
 				25,
@@ -164,7 +164,7 @@ public class DollFactorySuccubus extends NPC {
 					PresetColour.CLOTHING_GOLD,
 					false,
 					new TattooWriting(
-							"Property of Saellatrix",
+							"赛拉特里克斯的财产",
 							PresetColour.CLOTHING_GOLD,
 							false),
 					new TattooCounter(
@@ -183,8 +183,8 @@ public class DollFactorySuccubus extends NPC {
 	@Override
 	public String getDescription() {
 		return UtilText.parse(this,
-				"Having been outplayed and utterly defeated in the game of demonic politics by her sister, Saellatrix, this succubus is now no more than a slave."
-				+ " Putting her to use, Saellatrix has ordered her to oversee the dolls who work in her factory.");
+				"在恶魔政治游戏中，她被自己的姐姐赛拉特里克斯击败，彻底败下阵来，这个魅魔现在不过是个奴隶。"
+				+ "为了利用她，赛拉特里克斯命令她监督在自己工厂工作的玩偶。");
 	}
 
 	@Override
@@ -263,20 +263,20 @@ public class DollFactorySuccubus extends NPC {
 							Main.sex.isMasturbation()
 							?UtilText.parse(this,
 										Main.sex.getNumberOfOrgasms(this)==1
-											?"Producing a glass bottle filled with purple liquid, the succubus pulls out the stopper and tosses it over her shoulder, before downing the contents in three big gulps."
-												+ " Her gigantic balls visibly swell as the rejuvenation potion does its work, and she happily moans,"
-												+ " [npc.speechNoEffects(~Ooh!~ Fuck! That's better! ~Mmm!~ I'm such a bad bitch... I just need to cum some more!)]"
-											:"Producing another glass bottle filled with yet more purple liquid, the succubus once again pulls out the stopper and tosses it over her shoulder, before downing the contents in three big gulps."
-												+ " Just like before, her gigantic balls visibly swell as the rejuvenation potion does its work, and she excitedly moans,"
-												+ " [npc.speechNoEffects(~Aah!~ Fuck! Just one more... ~Mmm!~ Mistress... I'm a bad dog... I just need to cum!)]")
+											?"那魅魔拿出一个装着紫色液体的玻璃瓶，拔掉瓶塞后朝身后一丢，将整瓶两三口便饮尽。"
+												+ "活力药剂立刻生效，她巨大的蛋蛋明显胀得更大了，她愉悦地呻吟起来，"
+												+ "[npc.speechNoEffects(~哦哦！~我操！好舒服！~唔嗯！~我真是个婊子……我好想再射一次！)]"
+											:"那魅魔又拿出一个装满了紫色液体的玻璃瓶，拔掉瓶塞后朝身后一丢，将整瓶两三口便饮尽。"
+												+ "与方才一样，活力药剂立刻生效，她巨大的蛋蛋明显胀得更大了，她激动地呻吟道，"
+												+ "[npc.speechNoEffects(~啊啊！~妈的！我还想来一次……~唔嗯！~主人……我就是只坏狗狗……我好想射出来！)]")
 							:UtilText.parse(this,
 									Main.sex.getNumberOfOrgasms(this)==1
-									?"Producing a glass bottle filled with purple liquid, the succubus pulls out the stopper and tosses it over her shoulder, before downing the contents in three big gulps."
-										+ " Her gigantic balls visibly swell as the rejuvenation potion does its work, and she happily moans,"
-										+ " [npc.speechNoEffects(~Ooh!~ Fuck! My balls feel so full! ~Mmm!~ Now I'm ready to pump another load in you, bitch!)]"
-									:"Producing another glass bottle filled with yet more purple liquid, the succubus once again pulls out the stopper and tosses it over her shoulder, before downing the contents in three big gulps."
-										+ " Just like before, her gigantic balls visibly swell as the rejuvenation potion does its work, and she excitedly moans,"
-										+ " [npc.speechNoEffects(~Aah!~ Fuck! Got another full load for you, bitch! ~Mmm!~ I'm going to fill you up real good...)]"));
+									?"那魅魔拿出一个装着紫色液体的玻璃瓶，拔掉瓶塞后朝身后一丢，将整瓶两三口便饮尽。"
+										+ "活力药剂立刻生效，她巨大的蛋蛋明显胀得更大了，她愉悦地呻吟起来，"
+										+ "[npc.speechNoEffects(~哦哦！~我操！一下子就满了！~唔嗯！~我准备好向你倾泻弹药了，婊子！)]"
+									:"那魅魔又拿出一个装满了紫色液体的玻璃瓶，拔掉瓶塞后朝身后一丢，将整瓶两三口便饮尽。"
+										+ "与方才一样，活力药剂立刻生效，她巨大的蛋蛋明显胀得更大了，她激动地呻吟道，"
+										+ "[npc.speechNoEffects(~啊啊！~妈的！又给你上了一梭子，骚货！~唔嗯！~我要把你给塞得满满的……)]"));
 				}
 			}
 		}

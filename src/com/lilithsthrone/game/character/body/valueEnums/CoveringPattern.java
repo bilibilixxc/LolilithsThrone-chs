@@ -11,43 +11,43 @@ import com.lilithsthrone.game.character.GameCharacter;
  * @author Innoxia
  */
 public enum CoveringPattern {
-	NONE(false, "plain"),
+	NONE(false, "单色"),
 	
-	FLUID(false, "fluid"),
+	FLUID(false, "液态"),
 	
-	ORIFICE_ANUS(true, "anus"),
-	ORIFICE_VAGINA(true, "vagina"),
-	ORIFICE_MOUTH(true, "mouth"),
-	ORIFICE_SPINNERET(true, "spinneret"),
-	ORIFICE_NIPPLE(true, "nipple") {
+	ORIFICE_ANUS(true, "肛门"),
+	ORIFICE_VAGINA(true, "阴道"),
+	ORIFICE_MOUTH(true, "嘴"),
+	ORIFICE_SPINNERET(true, "丝囊"),
+	ORIFICE_NIPPLE(true, "乳头") {
 		@Override
 		public boolean isNaturalSecondColour(GameCharacter owner) {
 			return owner!=null && owner.getNippleCapacity()!=Capacity.ZERO_IMPENETRABLE;
 		}
 	},
-	ORIFICE_NIPPLE_CROTCH(true, "teat") {
+	ORIFICE_NIPPLE_CROTCH(true, "乳头") {
 		@Override
 		public boolean isNaturalSecondColour(GameCharacter owner) {
 			return  owner!=null && owner.getNippleCrotchCapacity()!=Capacity.ZERO_IMPENETRABLE;
 		}
 	},
 
-	EYE_IRISES(false, "standard"),
-	EYE_IRISES_HETEROCHROMATIC(true, "heterochromatic"),
-	EYE_PUPILS(false, "standard"),
-	EYE_PUPILS_HETEROCHROMATIC(true, "heterochromatic"),
-	EYE_SCLERA(false, "standard"),
-	EYE_SCLERA_HETEROCHROMATIC(true, "heterochromatic"),
+	EYE_IRISES(false, "标准"),
+	EYE_IRISES_HETEROCHROMATIC(true, "异色"),
+	EYE_PUPILS(false, "标准"),
+	EYE_PUPILS_HETEROCHROMATIC(true, "异色"),
+	EYE_SCLERA(false, "标准"),
+	EYE_SCLERA_HETEROCHROMATIC(true, "异色"),
 
-	HIGHLIGHTS(true, "highlighted"),
-	STRIPED(true, "striped"),
-	SPOTTED(true, "spotted"),
-	MOTTLED(true, "mottled"),
-	MARKED(true, "marked"),
-	FRECKLED(true, "freckled"),
-	FRECKLED_FACE(false, "freckled (face)"),
+	HIGHLIGHTS(true, "高光"),
+	STRIPED(true, "条纹"),
+	SPOTTED(true, "斑点"),
+	MOTTLED(true, "斑驳"),
+	MARKED(true, "花纹"),
+	FRECKLED(true, "雀斑"),
+	FRECKLED_FACE(false, "有雀斑的脸"),
 	
-	OMBRE(true, "ombre");
+	OMBRE(true, "混色");
 	
 	
 	public static Map<CoveringPattern, Integer> allStandardCoveringPatterns = new HashMap<>();

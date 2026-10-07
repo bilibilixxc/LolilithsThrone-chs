@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -6,21 +6,21 @@
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[metal bat]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[metal bat]]></namePlural>
-		<description><![CDATA[A smooth metal club used to strike a ball as a form of sport. This particular bat has been enchanted for use as a weapon.]]></description> 
+		<name><![CDATA[金属球棒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[金属球棒]]></namePlural>
+		<description><![CDATA[一根用于击球的光滑金属球棒，这根球棒被附魔了，可当作武器。]]></description> 
 		
-		<attackDescriptor>whack</attackDescriptor>
+		<attackDescriptor><![CDATA[猛击]]></attackDescriptor>
 		
-		<attackTooltipDescription><![CDATA[Whack [npc2.name] with your metal bat.]]></attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用金属球棒猛击[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>COMMON</rarity> 
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] metal bat in anticipation of using it as a weapon.]]></equipText>
+		<equipText><![CDATA[[npc.Name]抄起[npc.her]的金属球棒准备把它当作武器使用。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] away [npc.her] metal bat.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]放下[npc.her]的金属球棒。]]></unequipText>
 		
 		<imageName>metal.svg</imageName> 
 		
@@ -62,25 +62,25 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] metal bat at [npc2.name], grinning as it connects with [npc2.her] body!
-		]]></hitText>
+		[npc.Name]挥舞金属球棒打向[npc2.name]，结结实实地砸在了[npc2.her]的身体上，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] metal bat, [npc.name] [npc.verb(grin)] as it strikes [npc2.herHim] on the [npc2.arm]!
-		]]></hitText>
+		[npc.Name]挥舞金属球棒打向[npc2.name]，结结实实地击中了[npc2.her]的[npc2.arm]，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swipe)] at [npc2.name] with [npc.her] metal bat, causing [npc2.herHim] to stagger back as [npc2.she] [npc2.verb(get)] whacked in the [npc2.arm]!
+		[npc.Name]用金属球棒猛击[npc2.name]，[npc2.her]的[npc.arm]受到重击，使得[npc2.herHim]向后踉跄！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] metal bat at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
+[npc.Name]用金属球棒挥向[npc2.name]，但最终没有击中[npc2.herHim]！
+]]></missText>
+		<missText><![CDATA[
+		[npc.name]举起金属球棒向着[npc2.name]重挥出去，却没能命中目标，恼火地大喊了一声！
 		]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] metal bat, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
-		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(swipe)] at [npc2.name] with [npc.her] metal bat, but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]快步前踏，挥舞着金属球棒向[npc2.name]猛冲而去，却没能命中！
 		]]></missText>
 	</missDescriptions>
 	

@@ -245,14 +245,14 @@ public class Combat {
 		if(Main.game.getPlayer().hasTrait(Perk.JOB_SOLDIER, true)) {
 			Main.game.getPlayer().addStatusEffect(StatusEffect.COMBAT_JOB_SOLDIER, 2);
 			combatContent.get(Main.game.getPlayer()).add(
-					"Any "+Attribute.HEALTH_MAXIMUM.getName()+" damage you deal in this first turn is [style.boldExcellent(doubled)] thanks to your"
-						+ " <b style='color:"+Perk.JOB_SOLDIER.getColour().toWebHexString()+";'>"+Perk.JOB_SOLDIER.getName(Main.game.getPlayer())+"</b> ability.");
+					"你在第一回合中造成的任意"+Attribute.HEALTH_MAXIMUM.getName()+"伤害都会[style.boldExcellent(加倍)]，这是由于你的"
+						+ "<b style='color:"+Perk.JOB_SOLDIER.getColour().toWebHexString()+";'>"+Perk.JOB_SOLDIER.getName(Main.game.getPlayer())+"</b>能力。");
 		}
 		
 		combatContent.get(Main.game.getPlayer()).add(
 				openingDescriptions!=null && openingDescriptions.containsKey(Main.game.getPlayer())
 					?openingDescriptions.get(Main.game.getPlayer())
-					:"You prepare to make a move...");
+					:"你准备好行动了……");
 		
 		String pregProtection = getPregnancyProtectionText(Main.game.getPlayer());
 		if(!pregProtection.isEmpty()) {
@@ -280,14 +280,14 @@ public class Combat {
 			if(combatant.hasTrait(Perk.JOB_SOLDIER, true)) {
 				combatant.addStatusEffect(StatusEffect.COMBAT_JOB_SOLDIER, 2);
 				combatContent.get(combatant).add(UtilText.parse(combatant,
-						"Any "+Attribute.HEALTH_MAXIMUM.getName()+" damage [npc.name] deals in this first turn is [style.boldExcellent(doubled)] thanks to [npc.her]"
-								+ " <b style='color:"+Perk.JOB_SOLDIER.getColour().toWebHexString()+";'>"+Perk.JOB_SOLDIER.getName(combatant)+"</b> ability."));
+						"第一个回合中，[npc.name]造成的任何"+Attribute.HEALTH_MAXIMUM.getName()+"伤害都会[style.boldExcellent(翻倍)]，这多亏了[npc.her]"
+								+ "<b style='color:"+Perk.JOB_SOLDIER.getColour().toWebHexString()+";'>"+Perk.JOB_SOLDIER.getName(combatant)+"</b>能力。"));
 			}
 			
 			combatContent.get(combatant).add(UtilText.parse(combatant,
 					openingDescriptions!=null && openingDescriptions.containsKey(combatant)
 						?openingDescriptions.get(combatant)
-						:"[npc.Name] prepares to make a move..."));
+						:"[npc.Name]准备行动……"));
 			
 			pregProtection = getPregnancyProtectionText(combatant);
 			if(!pregProtection.isEmpty()) {
@@ -303,13 +303,13 @@ public class Combat {
 		applyNewTurnShielding(Main.game.getPlayer());
 		Main.game.getPlayer().setRemainingAP(Main.game.getPlayer().getMaxAP(), null, null);
 		
-		combatTurnResolutionStringBuilder.append(getCharactersTurnDiv(Main.game.getPlayer(), getTurn()==0?"Preparation":"", combatContent.get(Main.game.getPlayer())));
+		combatTurnResolutionStringBuilder.append(getCharactersTurnDiv(Main.game.getPlayer(), getTurn()==0?"准备":"", combatContent.get(Main.game.getPlayer())));
 
 		Main.game.setInCombat(true);
 		
 		for(NPC npc : allCombatants) {
 			npc.calculateStatusEffects(0); // Calculate status effects to make sure combat SEs are initialised before selecting moves
-			combatTurnResolutionStringBuilder.append(getCharactersTurnDiv(npc, getTurn()==0?"Preparation":"", combatContent.get(npc)));
+			combatTurnResolutionStringBuilder.append(getCharactersTurnDiv(npc, getTurn()==0?"准备":"", combatContent.get(npc)));
 			
 			npc.resetSelectedMoves();
 			npc.resetDefaultMoves(); // Resetting to take into account any newly obtained moves. Does not do anything to player party members.
@@ -437,7 +437,7 @@ public class Combat {
 				itemsLooted.add("<b style='color:"+entry.getKey().getRarity().getColour().toWebHexString()+";'>"+entry.getKey().getName()+"</b>"+(entry.getValue()>1?" <b>(x"+entry.getValue()+")</b>":""));
 			}
 			if(!itemsLooted.isEmpty()) {
-				postCombatStringBuilder.append("<div class='container-full-width' style='text-align:center;'>You [style.boldGood(gained)] " + Util.stringsToStringList(itemsLooted, false) +"!</div>");
+				postCombatStringBuilder.append("<div class='container-full-width' style='text-align:center;'>你[style.boldGood(获得了)]" + Util.stringsToStringList(itemsLooted, false) +"！</div>");
 			}
 			// Apply essence drops:
 			boolean essenceDropFound = false;
@@ -455,22 +455,22 @@ public class Combat {
 										UtilText.parse(enemy,
 										"<p>"
 										+ "<i>"
-											+ "[npc.Name] staggers back, defeated, but before you have a chance to react to your victory, the world around you seems to somehow shift out of focus."
-											+ " The pants and gasps coming from [npc.her] mouth start to sound muffled and faint; as though you're listening to [npc.her] while submerged under water."
-											+ " After fruitlessly trying to shake your head clear, you look down at [npc.name] to see if [npc.sheIs] being affected by this peculiar phenomenon as well, but as you do, you feel your eyes going wide in shock."
+											+ "[npc.Name]踉踉跄跄地退后，败下阵来，但还没等你庆祝胜利的喜悦，周围的世界便模糊起来。"
+											+ "[npc.her]口中发出的喘息声也逐渐变弱，变成了闷响；就仿佛潜在水下听着[npc.her]说话一样。"
+											+ "你晃了晃脑袋，但并没有清醒过来，于是低头看向[npc.name]，是不是[npc.sheIs]也同样收到了影响，可随后你却惊讶地瞪大了眼睛。"
 										+ "</p>"
 										+ "<p>"
-											+ "A shimmering pink glow has materialised around [npc.her] body, just like the one you saw in Lilaya's lab when she ran her tests on you."
-											+ " Quickly realising that you're somehow able to see [npc.namePos] arcane aura, you watch, fascinated, as you see a sizable shard slowly start to break away from [npc.herHim]."
-											+ " The moment it finally splits from the rest of [npc.her] aura, the shard of energy suddenly launches itself directly at you."
+											+ "一股粉色的光芒在[npc.her]的身体周围浮现，就跟你在莉莱雅实验室做测试时的那个一模一样。"
+											+ "你很快就明白过来，你不知为何能够看到[npc.namePos]的奥术灵气了，于是着迷了似的，直勾勾地盯着一块不大不小的碎片缓缓从[npc.herHim]周围碎裂开来。"
+											+ "等到完全与灵气的其他部分脱离，那能量的碎片便突然仿佛有意识地向你飞来。"
 										+ "</p>"
 										+ "<p>"
-											+ "Slowed down and slightly dazed by the strange state you find yourself in, you have no chance to dodge, and as the shard makes contact with your chest, it pierces straight into your body."
-											+ " The world around you instantly snaps back into focus as it enters your body, and you find yourself sharply inhaling as you feel the energy merging with your own arcane aura."
+											+ "你被自己所处的奇妙状态拖慢了反应速度，头晕目眩，根本没有机会躲闪，当碎片接触到你的胸膛时，竟直直刺入了身体。"
+											+ "碎片进入身体的那一刻，你附近的世界便瞬间恢复了清晰，你这才反应过来自己用力地吸着气，那能量似乎融入了你自己的奥术灵气中。"
 										+ "</p>"
 										+ "<p>"
-											+ "Looking back down at [npc.name], you see no sign of the shimmering pink field that was surrounding [npc.herHim] a moment ago, and, what's more, [npc.she] seems completely oblivious to what you've just witnessed."
-											+ " You think that it would probably be best to go and ask Lilaya about what just happened, but first you'd better deal with this troublesome [npc.race]..."
+											+ "你又低头看向[npc.name]，前一秒还在身边忽隐忽现的粉色能量场已经没了踪迹，[npc.she]似乎完全没有看到你刚才目睹的一切。"
+											+ "你觉得最好还是去找莉莱雅，问问刚才发生了什么，但现在你要先想想该怎么处理这个麻烦的[npc.race]……"
 										+ "</i>"
 										+ "</p>"
 										+(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)?Main.game.getPlayer().startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY):"")));
@@ -480,23 +480,23 @@ public class Combat {
 										UtilText.parse(enemy,
 										"<p>"
 										+ "<i>"
-											+ "[npc.Name] staggers back, defeated, but before you have a chance to react to your victory, the world around you seems to somehow shift out of focus."
-											+ " The pants and gasps coming from [npc.her] mouth start to sound muffled and faint; as though you're listening to [npc.her] while submerged under water."
-											+ " After fruitlessly trying to shake your head clear, you look down at [npc.name] to see if [npc.sheIs] being affected by this peculiar phenomenon as well, but as you do, you feel your eyes going wide in shock."
+											+ "[npc.Name]踉踉跄跄地退后，败下阵来，但还没等你庆祝胜利的喜悦，周围的世界便模糊起来。"
+											+ "[npc.her]口中发出的喘息声也逐渐变弱，变成了闷响；就仿佛潜在水下听着[npc.her]说话一样。"
+											+ "你晃了晃脑袋，但并没有清醒过来，于是低头看向[npc.name]，是不是[npc.sheIs]也同样收到了影响，可随后你却惊讶地瞪大了眼睛。"
 										+ "</p>"
 										+ "<p>"
-											+ "A shimmering pink glow has materialised around [npc.her] body, just like the one you saw in Lilaya's lab when she ran her tests on you."
-											+ " Quickly realising that you're somehow able to see [npc.namePos] arcane aura, you watch, fascinated, as you see a sizable shard slowly start to break away from [npc.herHim]."
-											+ " The moment it finally splits from the rest of [npc.her] aura, the shard of energy suddenly launches itself directly at you."
+											+ "一股粉色的光芒在[npc.her]的身体周围浮现，就跟你在莉莱雅实验室做测试时的那个一模一样。"
+											+ "你很快就明白过来，你不知为何能够看到[npc.namePos]的奥术灵气了，于是着迷了似的，直勾勾地盯着一块不大不小的碎片缓缓从[npc.herHim]周围碎裂开来。"
+											+ "等到完全与灵气的其他部分脱离，那能量的碎片便突然仿佛有意识地向你飞来。"
 										+ "</p>"
 										+ "<p>"
-											+ "Slowed down and slightly dazed by the strange state you find yourself in, you have no chance to dodge, and as the shard makes contact with your chest, it pierces straight into your body."
-											+ " The world around you instantly snaps back into focus as it enters your body, and you find yourself sharply inhaling as you feel the energy merging with your own arcane aura."
+											+ "你被自己所处的奇妙状态拖慢了反应速度，头晕目眩，根本没有机会躲闪，当碎片接触到你的胸膛时，竟直直刺入了身体。"
+											+ "碎片进入身体的那一刻，你附近的世界便瞬间恢复了清晰，你这才反应过来自己用力地吸着气，那能量似乎融入了你自己的奥术灵气中。"
 										+ "</p>"
 										+ "<p>"
-											+ "Looking back down at [npc.name], you see no sign of the shimmering pink field that was surrounding [npc.herHim] a moment ago, and, what's more, [npc.she] seems completely oblivious to what you've just witnessed."
-											+ " You suddenly remember what Lilaya told you about absorbing essences, and how it's absolutely harmless for both parties involved."
-											+ " Breathing a sigh of relief, you turn your attention back to this troublesome [npc.race]..."
+											+ "你又低头看向[npc.name]，前一秒还在身边忽隐忽现的粉色能量场已经没了踪迹，[npc.she]似乎完全没有看到你刚才目睹的一切。"
+											+ "你忽然回忆起莉莱雅告诉你有关吸收精华的事情，而且这种行为对双方都没有任何损害。"
+											+ "你长舒一口气，将注意力又转移回这个麻烦的[npc.race]身上……"
 										+ "</i>"
 										+ "</p>"));
 							}
@@ -527,7 +527,7 @@ public class Combat {
 			int moneyLoss = (-enemyLeader.getLootMoney()/2)*enemies.size();
 			if(moneyLoss!=0 && enemyLeader.isLootingPlayerAfterCombat()) {
 				Main.game.getPlayer().incrementMoney(moneyLoss);
-				postCombatStringBuilder.append("<div class='container-full-width' style='text-align:center;'>You [style.boldBad(lost)] " + UtilText.formatAsMoney(Math.abs(Main.game.getPlayer().getMoney()==0?money:moneyLoss)) + "!</div>");
+				postCombatStringBuilder.append("<div class='container-full-width' style='text-align:center;'>你[style.boldBad(失去了)]" + UtilText.formatAsMoney(Math.abs(Main.game.getPlayer().getMoney()==0?money:moneyLoss)) + "！</div>");
 			}
 			
 			for(NPC enemy : enemies) {
@@ -544,14 +544,14 @@ public class Combat {
 					combatant.setElementalSummoned(false);
 					postCombatStringBuilder.append(UtilText.parse(combatant, combatant.getElemental(),
 							"<div class='container-full-width' style='text-align:center;'><i>"
-								+ "[npc.NamePos] elemental, <span style='colour:"+combatant.getElemental().getFemininity().getColour().toWebHexString()+";'>[npc2.name]</span>,"
-									+ " is completely drained of energy and is [style.italicsBad(dispelled)]!"
+								+ "[npc.NamePos]的元素体<span style='colour:"+combatant.getElemental().getFemininity().getColour().toWebHexString()+";'>[npc2.name]</span>"
+									+ "完全耗尽了能量，于是被[style.italicsBad(驱散)]了！"
 							+ "</i></div>"));
 				} else { 
 					postCombatStringBuilder.append(UtilText.parse(combatant, combatant.getElemental(),
 							"<div class='container-full-width' style='text-align:center;'><i>"
-								+ "[npc.NamePos] elemental, <span style='colour:"+combatant.getElemental().getFemininity().getColour().toWebHexString()+";'>[npc2.name]</span>,"
-									+ " is drained of energy and [style.italicsArcane(returns to [npc2.her] passive form)]!"
+								+ "[npc.NamePos]的元素体<span style='colour:"+combatant.getElemental().getFemininity().getColour().toWebHexString()+";'>[npc2.name]</span>"
+									+ "耗尽了能量，于是[style.italicsArcane(变回了被动形态)]！"
 							+ "</i></div>"));
 				}
 			}
@@ -576,15 +576,15 @@ public class Combat {
 							if(!anyWeaponsRecovered) {
 								postCombatStringBuilder.append("<div class='container-full-width' style='text-align:center;'><i>");
 								if(character.isPlayer()) {
-									postCombatStringBuilder.append("[style.boldGood(One-shot weapons recovered:)]");
+									postCombatStringBuilder.append("[style.boldGood(单发武器装填：)]");
 								} else {
-									postCombatStringBuilder.append(UtilText.parse(character, "[style.boldGood(One-shot weapons recovered by [npc.name]:)]"));
+									postCombatStringBuilder.append(UtilText.parse(character, "[style.boldGood([npc.name]单发武器装填：)]"));
 								}
 								postCombatStringBuilder.append("<br/>");
 								postCombatStringBuilder.append(Util.capitaliseSentence(weapon.getDisplayName(true)));
 								anyWeaponsRecovered = true;
 							} else {
-								postCombatStringBuilder.append(", "+Util.capitaliseSentence(weapon.getDisplayName(true)));
+								postCombatStringBuilder.append("，"+Util.capitaliseSentence(weapon.getDisplayName(true)));
 							}
 						}
 					}
@@ -603,15 +603,15 @@ public class Combat {
 							if(!anyWeaponsRecovered) {
 								postCombatStringBuilder.append("<div class='container-full-width' style='text-align:center;'><i>");
 								if(character.isPlayer()) {
-									postCombatStringBuilder.append("[style.boldGood(One-shot weapons recovered:)]");
+									postCombatStringBuilder.append("[style.boldGood(单发武器装填：)]");
 								} else {
-									postCombatStringBuilder.append(UtilText.parse(character, "[style.boldGood(One-shot weapons recovered by [npc.name]:)]"));
+									postCombatStringBuilder.append(UtilText.parse(character, "[style.boldGood([npc.name]单发武器装填：)]"));
 								}
 								postCombatStringBuilder.append("<br/>");
 								postCombatStringBuilder.append(Util.capitaliseSentence(weapon.getDisplayName(true)));
 								anyWeaponsRecovered = true;
 							} else {
-								postCombatStringBuilder.append(", "+Util.capitaliseSentence(weapon.getDisplayName(true)));
+								postCombatStringBuilder.append("，"+Util.capitaliseSentence(weapon.getDisplayName(true)));
 							}
 						}
 					}
@@ -676,15 +676,15 @@ public class Combat {
 	
 	private Response getEndCombatDialogue(boolean applyEffects, boolean playerVictory) {
 		if(playerVictory && getPlayerPostVictoryDialogue()!=null) {
-			return new Response("Victory", "You have won!", getPlayerPostVictoryDialogue());
+			return new Response("胜利", "你赢了！", getPlayerPostVictoryDialogue());
 		}
 		if(!playerVictory && getPlayerPostDefeatDialogue()!=null) {
-			return new Response("Defeat", "You have lost!", getPlayerPostDefeatDialogue());
+			return new Response("失败", "你输了！", getPlayerPostDefeatDialogue());
 		}
 		return enemyLeader.endCombat(applyEffects, playerVictory);
 	}
 
-	public final DialogueNode ITEM_USED = new DialogueNode("Combat", "Use the item.", true) {
+	public final DialogueNode ITEM_USED = new DialogueNode("战斗", "使用物品。", true) {
 		@Override
 		public String getLabel() {
 			return getCombatLabel();
@@ -701,7 +701,7 @@ public class Combat {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if (isEnemyPartyDefeated()) {
-					return new ResponseEffectsOnly("Victory", "<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>You are victorious!</span>"){
+					return new ResponseEffectsOnly("胜利", "<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>你赢了！</span>"){
 						@Override
 						public void effects() {
 							endCombat(true);
@@ -709,7 +709,7 @@ public class Combat {
 						}
 					};
 				} else {
-					return new Response("Continue", "Combat continues.", ENEMY_ATTACK){
+					return new Response("继续", "战斗继续。", ENEMY_ATTACK){
 						@Override
 						public void effects() {
 							endCombatTurn();//TODO test
@@ -727,7 +727,7 @@ public class Combat {
 		}
 	};
 
-	public final DialogueNode SUBMIT = new DialogueNode("Combat", "Submit", true) {
+	public final DialogueNode SUBMIT = new DialogueNode("战斗", "屈服", true) {
 
 		@Override
 		public String getLabel() {
@@ -743,36 +743,36 @@ public class Combat {
 		public String getContent() {
 			return UtilText.parse(enemyLeader,
 							"<p>"
-									+ "Are you certain you want to <b>submit</b> to [npc.name]? <b>This will cause you to lose the fight, allowing [npc.herHim] to do anything [npc.she] wants with you!</b>"
+									+ "你确定要向[npc.Name]<b>屈服</b>吗？<b>这将导致你战斗失败，[npc.herHim]可以对你为所欲为！</b>"
 							+ "</p>");
 		}
 		
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Submit",
+				return new Response("屈服",
 						UtilText.parse(enemyLeader,
-								"Submit to [npc.name]. <span style='color:" + PresetColour.GENERIC_TERRIBLE.toWebHexString() + ";'>This will cause you to lose the current combat!</span>"),
+								"向[npc.name]屈服。<span style='color:" + PresetColour.GENERIC_TERRIBLE.toWebHexString() + ";'>这将导致你输掉当前的战斗！</span>"),
 						SUBMIT_CONFIRM){
 					@Override
 					public void effects() {
 						StringBuilder sb = new StringBuilder();
 						
-						sb.append(getCharactersTurnDiv(Main.game.getPlayer(), "Submit",
+						sb.append(getCharactersTurnDiv(Main.game.getPlayer(), "屈服",
 								Util.newArrayListOfValues(UtilText.parse(enemyLeader,
-									"You kneel in front of [npc.name], lowering your head in submission as you mutter,"
-										+ " [pc.speech(I don't want to fight any more, I submit.)]"))));
+									"你在[npc.name]面前跪下，顺从地垂下了脑袋，咕哝道，"
+										+ "[pc.speech(我不想再打了，我投降。)]"))));
 
-						sb.append(getCharactersTurnDiv(enemyLeader, "Victory",
+						sb.append(getCharactersTurnDiv(enemyLeader, "胜利",
 								Util.newArrayListOfValues(UtilText.parse(enemyLeader,
-									"[npc.Name] lets out a triumphant laugh, before moving forwards to take advantage of your submission..."))));
+									"[npc.Name]放出得胜的大笑，上前去接受了你的屈服……"))));
 						
 						Main.game.getTextStartStringBuilder().append(sb.toString());
 					}
 				};
 				
 			} else if (index == 0) {
-				return new Response("Cancel", "Carry on fighting.", ENEMY_ATTACK);
+				return new Response("取消", "继续战斗。", ENEMY_ATTACK);
 				
 			}else {
 				return null;
@@ -784,7 +784,7 @@ public class Combat {
 			return DialogueNodeType.NORMAL;
 		}
 	};
-	public final DialogueNode SUBMIT_CONFIRM = new DialogueNode("Combat", "Submit", true) {
+	public final DialogueNode SUBMIT_CONFIRM = new DialogueNode("战斗", "屈服", true) {
 
 		@Override
 		public String getLabel() {
@@ -804,7 +804,7 @@ public class Combat {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Continue", UtilText.parse(enemyLeader, "You wait for [npc.name] to make a move.")){
+				return new ResponseEffectsOnly("继续", UtilText.parse(enemyLeader, "你等待[npc.Name]行动。")){
 					@Override
 					public void effects() {
 						endCombat(false);
@@ -824,7 +824,7 @@ public class Combat {
 		}
 	};
 
-	public final DialogueNode ENEMY_ATTACK = new DialogueNode("Combat", "The enemy strikes back at you.", true) {
+	public final DialogueNode ENEMY_ATTACK = new DialogueNode("战斗", "敌人向你发起反击。", true) {
 
 		@Override
 		public String getLabel() {
@@ -847,19 +847,19 @@ public class Combat {
 				return null;
 			}
 			if(index==0) {
-				return "Core moves";
+				return "核心动作";
 				
 			} else if(index==1) {
-				return "Basic moves";
+				return "基础动作";
 				
 			} else if(index==2) {
-				return "Special moves";
+				return "特殊动作";
 				
 			} else if(index==3) {
-				return "Spells";
+				return "法术";
 				
 			} else if(index==4) {
-				return "Commands";
+				return "命令";
 			}
 			return null;
 		}
@@ -875,7 +875,7 @@ public class Combat {
 			}
 			if(escaped) {
 				if (index == 1) {
-					return new ResponseEffectsOnly("Escaped!", "You got away!"){
+					return new ResponseEffectsOnly("逃脱！", "你逃走了！"){
 						@Override
 						public void effects() {
 							enemyLeader.applyEscapeCombatEffects();
@@ -893,7 +893,7 @@ public class Combat {
 				
 			} else if(isEnemyPartyDefeated()) {
 				if (index == 1) {
-					return new ResponseEffectsOnly("Victory", UtilText.parse(enemyLeader, "<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>You have defeated [npc.name]!</span>")){
+					return new ResponseEffectsOnly("胜利", UtilText.parse(enemyLeader, "<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>你打败了[npc.name]！</span>")){
 						@Override
 						public void effects() {
 							endCombat(true);
@@ -906,7 +906,7 @@ public class Combat {
 				
 			} else if(isAlliedPartyDefeated()) {
 				if (index == 1) {
-					return new ResponseEffectsOnly("Defeat", "You have been defeated!"){
+					return new ResponseEffectsOnly("败北", "你被打败了！"){
 						@Override
 						public void effects() {
 							endCombat(false);
@@ -919,10 +919,10 @@ public class Combat {
 				
 			} else if(Main.game.getPlayer().isStunned()) {
 				if (index == 1) {
-					return new Response("Stunned!", "You are unable to make an action this turn!", ENEMY_ATTACK){
+					return new Response("眩晕！", "本回合你无法行动！", ENEMY_ATTACK){
 						@Override
 						public void effects() {
-							combatContent.put(Main.game.getPlayer(), Util.newArrayListOfValues("You are stunned, and are unable to make a move!"));
+							combatContent.put(Main.game.getPlayer(), Util.newArrayListOfValues("你被眩晕了，无法做出动作！"));
 							endCombatTurn();
 						}
 					};
@@ -931,10 +931,10 @@ public class Combat {
 				
 			} else if(isCombatantDefeated(Main.game.getPlayer())) {
 				if (index == 1) {
-					return new Response("Watch", "You have been defeated, and can only watch as your allies fight on!", ENEMY_ATTACK){
+					return new Response("观战", "你已败了，便只能眼睁睁地看着伙伴继续战斗！", ENEMY_ATTACK){
 						@Override
 						public void effects() {
-							combatContent.put(Main.game.getPlayer(), Util.newArrayListOfValues("You have been defeated, and can only watch as your allies continue the fight!"));
+							combatContent.put(Main.game.getPlayer(), Util.newArrayListOfValues("你已败了，便只能眼睁睁地看着伙伴继续战斗！"));
 							endCombatTurn();
 						}
 					};
@@ -947,8 +947,8 @@ public class Combat {
 			pcAllies.add(Main.game.getPlayer());
 
 			if(index == 0) {
-				return new Response("End Turn",
-						Main.game.getPlayer().getRemainingAP()<=0?"Ends your current turn":"Ends your current turn. You still have unspent AP!",
+				return new Response("结束回合",
+						Main.game.getPlayer().getRemainingAP()<=0?"结束当前回合":"要结束当前回合吗？你还有未使用的行动点！",
 						ENEMY_ATTACK){
 					@Override
 					public void effects() {
@@ -979,32 +979,32 @@ public class Combat {
 					
 					if(index==9) {
 						if(Main.combat.isSubmitBlocked()) {
-							return new Response("Submit", "You cannot submit in this combat scene!", null);
+							return new Response("屈服", "这是一场无法放弃的战斗！", null);
 						} else {
-							return new Response("Submit",
+							return new Response("屈服",
 									(getEnemies(Main.game.getPlayer()).size()==1
-										?"Surrender this fight to your opponent, allowing them to do whatever they want to you."
-										:"Surrender this fight to your enemies, allowing them to do whatever they want to you."),
+										?"向对手投降，任人肆意摆弄为所欲为。"
+										:"向对手投降，任人肆意摆弄为所欲为。"),
 									SUBMIT);
 						}
 						
 					} else if(index==10) {
 						if (escapeChance == 0) {
-							return new Response("Escape", "You can't run from this fight!", null);
+							return new Response("逃跑", "这是你无法逃避的战斗！", null);
 							
 						} else if(!Main.game.getPlayer().isAbleToEscape()) {
-							return new Response("Escape", Main.game.getPlayer().getUnableToEscapeDescription(), null);
+							return new Response("逃跑", Main.game.getPlayer().getUnableToEscapeDescription(), null);
 							
 						} else {
-							return new Response("Escape",
-									"Try to escape.<br/><br/>"
+							return new Response("逃跑",
+									"试图逃跑。<br/><br/>"
 									+ (escapeChance==100 && Main.game.getPlayer().hasTrait(Perk.JOB_ATHLETE, true)
-										?"Thanks to your <b style='color:"+Perk.JOB_ATHLETE.getColour().toWebHexString()+";'>"
-													+Perk.JOB_ATHLETE.getName(Main.game.getPlayer())+"</b> ability, you are easily able to sprint away from this fight! "
+										?"你发动<b style='color:"+Perk.JOB_ATHLETE.getColour().toWebHexString()+";'>"
+													+Perk.JOB_ATHLETE.getName(Main.game.getPlayer())+"</b>的效果，从战斗中轻松地脱身了！"
 										:(escapeChance==100 && Main.game.getPlayer().getSubspecies()==Subspecies.CAT_MORPH_CHEETAH
-												?"Thanks to your cheetah-morph's body, you are easily able to sprint away from this fight! "
+												?"还好你有猎豹化形的躯体，轻而易举地就从战斗中脱身了！"
 												:""))
-									+"You have a "+escapeChance+"% chance to get away!",
+									+"你有"+escapeChance+"%机率逃脱！",
 									ENEMY_ATTACK){
 								@Override
 								public void effects() {
@@ -1025,7 +1025,7 @@ public class Combat {
 						
 					} else if(index<=8) {
 						return new Response("-",
-								"This is a free core combat move slot. You can add core combat moves when outside of combat by opening your phone menu and selecting the 'Combat Moves' action.",
+								"这是空闲的核心战斗动作栏位。在战斗外可以通过打开手机菜单，选择“战斗动作”，以添加核心战斗动作。",
 								null);
 					}
 					
@@ -1051,7 +1051,7 @@ public class Combat {
 					}
 					
 				} else if(responseTab==4) {
-					String costDescription = "<br/>[style.colourMinorGood(This is a free move, and does not cost any AP, nor end your turn.)]";
+					String costDescription = "<br/>[style.colourMinorGood(这是一项自由动作，不会消耗任何AP，也不会结束回合。)]";
 					//TODO set behaviour and recalculate moves
 					
 					for(int i=1; i<=CombatBehaviour.values().length; i++) {
@@ -1059,13 +1059,13 @@ public class Combat {
 							CombatBehaviour behaviour = CombatBehaviour.values()[i-1];
 							
 							if(targetedAlly.isPlayer()) {
-								return new Response(Util.capitaliseSentence(behaviour.getName()), "You cannot issue commands to yourself!", null);
+								return new Response(Util.capitaliseSentence(behaviour.getName()), "你不能对自己发号施令！", null);
 							}
 							return new Response(
 									Util.capitaliseSentence(behaviour.getName()),
 									(targetedAlly.getCombatBehaviour()==behaviour
 										?"[style.italicsMinorGood("+behaviour.getDescription(targetedAlly)+")]"
-												+ UtilText.parse(targetedAlly, "<br/>[style.italics(You can select this action again to make [npc.name] recalculate [npc.her] moves.)]")
+												+ UtilText.parse(targetedAlly, "<br/>[style.italics(你可以选择该动作，让[npc.name]重新决定行动。)]")
 										:behaviour.getOrderDescription(targetedAlly)+costDescription),
 									ENEMY_ATTACK) {
 								@Override
@@ -1108,15 +1108,15 @@ public class Combat {
 					// Change targets:
 					if(index==CombatBehaviour.values().length+1) {
 						if(targetedAlly.isPlayer()) {
-							return new Response("Cycle target", "You cannot issue commands to yourself!", null);
+							return new Response("循环选取", "你不能对自己发号施令！", null);
 						}
 						return new Response(
-								"Cycle target",
-								UtilText.parse(targetedAlly, "Tell [npc.name] to change [npc.her] target. [npc.She] is currently targeting [style.colourBad("
+								"循环选取",
+								UtilText.parse(targetedAlly, "告诉[npc.name]改变攻击对象。[npc.She]正在瞄准[style.colourBad("
 									+ (getPreferredTarget(targetedAlly)==null
-										?" whoever [npc.she] wants"
-										:UtilText.parse(getPreferredTarget(targetedAlly), " [npc.name]"))
-									+")].")
+										?"任意角色"
+										:UtilText.parse(getPreferredTarget(targetedAlly), "[npc.name]"))
+									+")]。")
 									+costDescription,
 								ENEMY_ATTACK) {
 							@Override
@@ -1165,18 +1165,18 @@ public class Combat {
 					// Clear target:
 					if(index==CombatBehaviour.values().length+2) {
 						if(targetedAlly.isPlayer()) {
-							return new Response("Clear target", "You cannot issue commands to yourself!", null);
+							return new Response("清空选取", "你不能对自己发号施令！", null);
 						}
 						if(getPreferredTarget(targetedAlly)==null) {
-							return new Response("Clear target", UtilText.parse(targetedAlly, "[npc.Name] is already targeting whoever [npc.she] wants!"), null);
+							return new Response("清空选取", UtilText.parse(targetedAlly, "[npc.Name]已经选好想选的目标了！"), null);
 						}
 						return new Response(
-								"Clear target",
-								UtilText.parse(targetedAlly, "Tell [npc.name] to target whoever [npc.she] wants. [npc.She] is currently targeting [style.colourBad("
+								"清空选取",
+								UtilText.parse(targetedAlly, "告诉[npc.name]随意选取角色。[npc.She]正在瞄准[style.colourBad("
 									+ (getPreferredTarget(targetedAlly)==null
-										?" whoever [npc.she] wants"
-										:UtilText.parse(getPreferredTarget(targetedAlly), " [npc.name]"))
-									+")].")
+										?"任意角色"
+										:UtilText.parse(getPreferredTarget(targetedAlly), "[npc.name]"))
+									+")]。")
 									+costDescription,
 								ENEMY_ATTACK) {
 							@Override
@@ -1213,8 +1213,8 @@ public class Combat {
 				}
 				
 			} else if(index==11) {
-				return new ResponseEffectsOnly("[style.colourGood(Target:)] "+(getTargetedAlliedCombatant().isPlayer()?"Yourself":Util.capitaliseSentence(getTargetedAlliedCombatant().getName())),
-						"You can cycle through your targeted allied combatant by either using this action, or clicking on their name on the right-hand side of the screen.") {
+				return new ResponseEffectsOnly("[style.colourGood(目标：)] "+(getTargetedAlliedCombatant().isPlayer()?"你自己":Util.capitaliseSentence(getTargetedAlliedCombatant().getName())),
+						"你可以使用该动作或点击屏幕左侧的名称，循环浏览目标盟友。") {
 					@Override
 					public void effects() {
 						List<GameCharacter> alliesPlusPlayer = Util.newArrayListOfValues(Main.game.getPlayer());
@@ -1237,8 +1237,8 @@ public class Combat {
 				};
 
 			} else if(index==12) {
-				return new ResponseEffectsOnly("[style.colourBad(Target:)] "+Util.capitaliseSentence(getTargetedCombatant().getName()),
-						"You can cycle through your targeted enemy combatant by either using this action, or clicking on their name on the right-hand side of the screen.") {
+				return new ResponseEffectsOnly("[style.colourBad(目标：)] "+Util.capitaliseSentence(getTargetedCombatant().getName()),
+						"你可以使用该动作或点击屏幕右侧的名称，循环浏览目标敌人。") {
 					@Override
 					public void effects() {
 						List<GameCharacter> playerEnemies = getEnemies(Main.game.getPlayer());
@@ -1260,10 +1260,10 @@ public class Combat {
 				};
 
 			} else if(index==14) {
-				return new Response("Reset",
+				return new Response("重置",
 						Main.game.getPlayer().getSelectedMoves().size()==0
-								?"You cannot reset your selected moves as you haven't selected any yet!"
-								:"Resets your selected moves, allowing you to choose different ones for this turn of combat.",
+								?"你还没有选择任何动作，所以无法重置！"
+								:"重置所选动作，让你可以为该回合选择其他行动。",
 							Main.game.getPlayer().getSelectedMoves().size()==0
 								?null
 								:ENEMY_ATTACK) {
@@ -1315,15 +1315,15 @@ public class Combat {
 		
 		if(move.getStatusEffects(Main.game.getPlayer(), moveTarget, isCrit)!=null && !move.getStatusEffects(Main.game.getPlayer(), moveTarget, isCrit).isEmpty()) {
 			for(Entry<AbstractStatusEffect, Integer> entry : move.getStatusEffects(Main.game.getPlayer(), moveTarget, isCrit).entrySet()) {
-				moveStatblock.append("Applies <b style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(moveTarget))+"</b>"
-						+ " for <b>"+entry.getValue()+(entry.getValue()==1?" turn":" turns")+"</b><br/>");
+				moveStatblock.append("施加<b style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(moveTarget))+"</b>"
+						+ "<b>"+entry.getValue()+ "回合" +"</b><br/>");
 			}
 		}
 		
 		StringBuilder critText = new StringBuilder();
-		critText.append("<br/>[style.colourCrit(Critical Requirement)]:");
+		critText.append("<br/>[style.colourCrit(暴击要求)]：");
 		for(String s : move.getCritRequirements(Main.game.getPlayer(), moveTarget, pcEnemies, pcAllies)) {
-			critText.append(" "+s);
+			critText.append(s);
 		}
 		
 		String predictionTooltip = move.getPrediction(selectedMoveIndex, Main.game.getPlayer(), moveTarget, pcEnemies, pcAllies);
@@ -1369,12 +1369,12 @@ public class Combat {
 			attacker.incrementHealth(-cloakOfFlamesDamage);
 			
 			if(attacker.isPlayer()) {
-				extraAttackEffects.add(UtilText.parse(target, "You take <b>"+cloakOfFlamesDamage+"</b> [style.boldFire(Fire Damage)] from [npc.namePos] [style.boldFire(Ring of Fire)]!"));
+				extraAttackEffects.add(UtilText.parse(target, "你受到了<b>"+cloakOfFlamesDamage+"</b>[style.boldFire(火焰伤害)]，由[npc.namePos]的[style.boldFire(火焰之环)]造成！"));
 			} else {
 				if(target.isPlayer()) {
-					extraAttackEffects.add(UtilText.parse(attacker, "[npc.Name] takes <b>"+cloakOfFlamesDamage+"</b> [style.boldFire(Fire Damage)] from your [style.boldFire(Ring of Fire)]!"));
+					extraAttackEffects.add(UtilText.parse(attacker, "[npc.Name]受到了<b>"+cloakOfFlamesDamage+"</b>[style.boldFire(火焰伤害)]，由你的[style.boldFire(火焰之环)]造成！"));
 				} else {
-					extraAttackEffects.add(UtilText.parse(attacker, target, "[npc1.Name] takes <b>"+cloakOfFlamesDamage+"</b> [style.boldFire(Fire Damage)] from [npc2.namePos] [style.boldFire(Ring of Fire)]!"));
+					extraAttackEffects.add(UtilText.parse(attacker, target, "[npc1.Name]受到了<b>"+cloakOfFlamesDamage+"</b>[style.boldFire(火焰伤害)]，由[npc2.namePos]的[style.boldFire(火焰之环)]造成！"));
 				}
 			}
 		}
@@ -1388,7 +1388,7 @@ public class Combat {
 			
 			addStatusEffectToApply(target, StatusEffect.RAIN_CLOUD_CLOUDBURST, 6);
 			
-			extraAttackEffects.add(UtilText.parse(target, "As [npc.name] is critically hit, the rain cloud above [npc.her] head grows in size, and suddenly erupts into a torrential cloudburst!"));
+			extraAttackEffects.add(UtilText.parse(target, "由于[npc.name]被暴击集中，[npc.her]头顶的雨云尺寸增大了，并且突然爆发出汹涌的云流！"));
 			
 			extraAttackEffects.add(Spell.getBasicStatusEffectApplication(target, false, Util.newHashMapOfValues(new Value<>(StatusEffect.RAIN_CLOUD_CLOUDBURST, 6))));
 			
@@ -1396,13 +1396,13 @@ public class Combat {
 		
 		if(attacker.isPlayer() && attacker.hasFetish(Fetish.FETISH_SADIST) && isCritical && isHit) {
 			extraAttackEffects.add(
-							"Thanks to your [style.boldFetish(sadist fetish)], the arousal you feel from critically hitting someone manifests as an arcane essence!<br/>"
+							"由于你的[style.boldFetish(施虐性癖)]，击中他人要害带来的快感化成了一份奥术精华！<br/>"
 							+Main.game.getPlayer().incrementEssenceCount(1, false));
 		}
 		
 		if(target.isPlayer() && target.hasFetish(Fetish.FETISH_MASOCHIST) && isCritical && isHit) {
 			extraAttackEffects.add(
-							"Thanks to your [style.boldFetish(masochist fetish)], the arousal you feel from getting critically hit manifests as an arcane essence!<br/>"
+							"由于你的[style.boldFetish(受虐性癖)]，被击中要害带来的快感化成了一份奥术精华！<br/>"
 							+Main.game.getPlayer().incrementEssenceCount(1, false));
 		}
 
@@ -1435,12 +1435,12 @@ public class Combat {
 		StringBuilder escapeDescription = new StringBuilder();
 		if(allEnemiesStunned) {
 			escaped = true;
-			escapeDescription.append("All of your enemies are stunned, so you're easily able to escape!");
+			escapeDescription.append("所有的敌人都被震慑，所以你轻松脱身了！");
 		} else if (Util.random.nextInt(100) < escapeChance) {
 			escaped = true;
-			escapeDescription.append("You successfully managed to escape!");
+			escapeDescription.append("你顺利脱身了！");
 		} else {
-			escapeDescription.append("You failed to escape!");
+			escapeDescription.append("你没能逃掉！");
 		}
 		escapeDescriptionMap.put(escapee, Util.newArrayListOfValues(escapeDescription.toString()));
 		
@@ -1461,12 +1461,12 @@ public class Combat {
 				predictionContent.put(combatant, new ArrayList<>());
 				if(escaped && !combatant.equals(escapee)) {
 					escapeDescriptionMap.put(combatant,
-							Util.newArrayListOfValues(UtilText.parse(combatant, "[npc.Name] manages to escape with you!")));
+							Util.newArrayListOfValues(UtilText.parse(combatant, "[npc.Name]逃离了！")));
 				}
 			} else {
 				if(escaped) {
 					escapeDescriptionMap.put(combatant,
-							Util.newArrayListOfValues(UtilText.parse(combatant, "[npc.Name] tries to block your escape, but fails!")));
+							Util.newArrayListOfValues(UtilText.parse(combatant, "[npc.Name]试图阻止你逃跑，但失败了！")));
 				}
 			}
 		}
@@ -1478,8 +1478,8 @@ public class Combat {
 					combatant.getElemental().returnToHome();
 					escapeDescription.append(UtilText.parse(combatant, combatant.getElemental(),
 							"<p style='text-align:center;'><i>"
-								+ "[npc.NamePos] elemental, <span style='colour:"+combatant.getElemental().getFemininity().getColour().toWebHexString()+";'>[npc2.name]</span>,"
-									+ " is drained of energy and [style.italicsArcane(returns to [npc2.her] passive form)]!"
+								+ "[npc.NamePos]的元素体<span style='colour:"+combatant.getElemental().getFemininity().getColour().toWebHexString()+";'>[npc2.name]</span>"
+									+ "耗尽了能量，于是[style.italicsArcane(变回了被动形态)]！"
 							+ "</i></p>"));
 				}
 			}
@@ -1500,12 +1500,12 @@ public class Combat {
 		if(character.isPlayer()) {
 			if (!activeCombatants.contains(character)) {
 				combatContent.put(character,
-						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>[npc.NameHasFull] been defeated!</span>")));
+						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>被击败了！</span>")));
 				return false;
 				
 			} else if(attemptedEscape) {
 				combatContent.put(character,
-						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>You fail to escape!</span>")));
+						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>你没能逃跑！</span>")));
 				return false;
 				
 			}
@@ -1513,12 +1513,12 @@ public class Combat {
 		} else if(allies.contains(character)) {
 			if (!activeCombatants.contains(character)) {
 				combatContent.put(character,
-						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>[npc.NameHasFull] been defeated!</span>")));
+						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>被击败了！</span>")));
 				return false;
 				
 			} else if(attemptedEscape) {
 				combatContent.put(character,
-						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>[npc.Name] fails to escape with you!</span>")));
+						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>[npc.Name]没能和你逃跑！</span>")));
 				return false;
 				
 			}
@@ -1526,14 +1526,14 @@ public class Combat {
 		} else {
 			if (!activeCombatants.contains(character)) {
 				combatContent.put(character,
-						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>[npc.NameHasFull] been defeated!</span>")));
+						Util.newArrayListOfValues(UtilText.parse(character, "<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>被击败了！</span>")));
 				return false;
 			}
 		}
 		
 		if(character.isStunned()) {
 			combatContent.put(character,
-					Util.newArrayListOfValues(UtilText.parse(character, "[npc.NameIsFull] stunned, and [npc.is] unable to make a move!")));
+					Util.newArrayListOfValues(UtilText.parse(character, "[npc.NameIsFull]被眩晕了，无法做出动作！")));
 
 			character.resetSelectedMoves();
 			return false;
@@ -1602,7 +1602,7 @@ public class Combat {
 							}
 							incrementWeaponsThrownDuringCombat(character, InventorySlot.mainWeaponSlots[i], weapon, -1);
 							if(thrownWeaponsRecoveredDescriptions.length()==0) {
-								thrownWeaponsRecoveredDescriptions.append("[style.boldGood(One-shot weapons recovered:)]");
+								thrownWeaponsRecoveredDescriptions.append("[style.boldGood(单发武器装填：)]");
 							}
 							thrownWeaponsRecoveredDescriptions.append("<br/>");
 							thrownWeaponsRecoveredDescriptions.append(weapon.getWeaponType().getOneShotEndTurnRecoveryDescription(character).trim());
@@ -1622,7 +1622,7 @@ public class Combat {
 							}
 							incrementWeaponsThrownDuringCombat(character, InventorySlot.offhandWeaponSlots[i], weapon, -1);
 							if(thrownWeaponsRecoveredDescriptions.length()==0) {
-								thrownWeaponsRecoveredDescriptions.append("[style.boldGood(One-shot weapons recovered:)]");
+								thrownWeaponsRecoveredDescriptions.append("[style.boldGood(单发武器装填：)]");
 							}
 							thrownWeaponsRecoveredDescriptions.append("<br/>");
 							thrownWeaponsRecoveredDescriptions.append(weapon.getWeaponType().getOneShotEndTurnRecoveryDescription(character).trim());
@@ -1633,7 +1633,7 @@ public class Combat {
         	resetWeaponsThrownDuringTurn(character);
         	combatContent.get(character).add(thrownWeaponsRecoveredDescriptions.toString());
         	
-			combatTurnResolutionStringBuilder.append(getCharactersTurnDiv(character, getTurn()==0?"Preparation":"", combatContent.get(character)));
+			combatTurnResolutionStringBuilder.append(getCharactersTurnDiv(character, getTurn()==0?"准备":"", combatContent.get(character)));
 			
 			character.resetSelectedMoves();
 		}
@@ -1676,22 +1676,22 @@ public class Combat {
 						predictionContent.put(character, Util.newArrayListOfValues(
 										UtilText.parse(character,
 												"[style.boldArcane("+(Util.capitaliseSentence(Perk.ARCANE_VAMPYRISM.getName(Main.game.getPlayer())))+":)]<br/>"
-														+Util.capitaliseSentence(Util.stringsToStringList(vampyres, false))+(vampyres.size()>1 || playerVampyre?" absorb":" absorbs")
-														+" half of [npc.namePos] remaining aura,"
+														+Util.capitaliseSentence(Util.stringsToStringList(vampyres, false))+"吸收了"
+														+"[npc.namePos]剩余灵气的一半，"
 														+ (enemies.contains(character)
 																?"[style.colourGood("
 																:"[style.colourBad(")
-														+" gaining "+manaAbsorbed+" aura)]!")));
+														+"获得了 "+manaAbsorbed+"灵气)]！")));
 					} else {
-						predictionContent.put(character, Util.newArrayListOfValues("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Defeated...</span>"));
+						predictionContent.put(character, Util.newArrayListOfValues("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>战败……</span>"));
 					}
 					
 				} else {
-					predictionContent.put(character, Util.newArrayListOfValues("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Defeated...</span>"));
+					predictionContent.put(character, Util.newArrayListOfValues("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>战败……</span>"));
 				}
 				
 			} else if(character.isStunned()) {
-				predictionContent.put(character, Util.newArrayListOfValues("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Stunned!</span>"));
+				predictionContent.put(character, Util.newArrayListOfValues("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>眩晕！</span>"));
 				
 			} else {
 				if(character.isPlayer()) {
@@ -1736,7 +1736,7 @@ public class Combat {
 		int apRemaining = character.getRemainingAP();
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append(" <b>(<span style='color:"+(apRemaining==0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD).toWebHexString()+";'>"+apRemaining+"</span>/"+character.getMaxAP()+" AP)</b>");
+		sb.append("<b>(<span style='color:"+(apRemaining==0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD).toWebHexString()+";'>"+apRemaining+"</span>/"+character.getMaxAP()+" AP)</b>");
 		
 		sb.append("<div class='container-full-width' style='text-align:center;'>");
 		
@@ -1789,13 +1789,13 @@ public class Combat {
 		
 		sb.append("<div class='container-full-width' style='text-align:center; box-sizing: border-box; border:6px solid "+PresetColour.BASE_WHITE.toWebHexString()+"; border-radius:5px;'>");
 
-			sb.append("<div class='container-full-width' style='margin:2px; padding:4px; width:100%; border-radius:5px; text-align:center;'><b>Planning</b></div>");
+			sb.append("<div class='container-full-width' style='margin:2px; padding:4px; width:100%; border-radius:5px; text-align:center;'><b>计划</b></div>");
 		
 			sb.append("<div class='container-half-width'>");
 				
-				sb.append("[style.boldGood(You)]"+ getTitleResources(Main.game.getPlayer()));
+				sb.append("[style.boldGood(你)]"+ getTitleResources(Main.game.getPlayer()));
 				if(predictionContent.get(Main.game.getPlayer()).isEmpty()) {
-					sb.append("<div class='container-half-width' style='margin:2px; padding:4px; width:100%; border-radius:5px; background:"+PresetColour.BACKGROUND.toWebHexString()+";'>[style.colourDisabled(No moves selected...)]</div>");
+					sb.append("<div class='container-half-width' style='margin:2px; padding:4px; width:100%; border-radius:5px; background:"+PresetColour.BACKGROUND.toWebHexString()+";'>[style.colourDisabled(没有选定行动……)]</div>");
 				} else {
 					for(String s : predictionContent.get(Main.game.getPlayer())) {
 						sb.append("<div class='container-half-width' style='margin:2px; padding:4px; width:100%; border-radius:5px; background:"+PresetColour.BACKGROUND.toWebHexString()+";'>"+s+"</div>");
@@ -1852,7 +1852,7 @@ public class Combat {
 					
 					appliedSe.setLastTimeAppliedEffect(Main.game.getSecondsPassed());
 					if(s.length()!=0) {
-						endTurnStatusEffectText.append("<p><b style='color: " + se.getColour().toWebHexString() + "'>" + Util.capitaliseSentence(se.getName(character)) + ":</b> " + s.toString()+ "</p>");
+						endTurnStatusEffectText.append("<p><b style='color: " + se.getColour().toWebHexString() + "'>" + Util.capitaliseSentence(se.getName(character)) + ":</b>" + s.toString()+ "</p>");
 					}
 				}
 				
@@ -1878,9 +1878,9 @@ public class Combat {
 	// Utility methods:
 	private String getCombatLabel() {
 		if(turn==0) {
-			return "Combat - Start";
+			return "战斗：开始";
 		} else {
-			return "Combat - Turn "+turn;
+			return "战斗：第"+turn+"回合";
 		}
 	}
 	
@@ -1984,7 +1984,7 @@ public class Combat {
 	
 	public String getPregnancyProtectionText(GameCharacter character) {
 			return (character.isVisiblyPregnant()
-					?UtilText.parse(character, "A powerful field of arcane energy is protecting [npc.namePos] pregnant belly, ensuring that no harm can come to [npc.her] unborn offspring.")
+					?UtilText.parse(character, "一股强大的奥术能量场保护了[npc.namePos]的孕肚，保证其未降生的后代不受任何损害。")
 					:"");
 	}
 

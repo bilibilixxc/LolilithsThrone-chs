@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>800</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[women's fashionable leather jacket]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[women's fashionable leather jacket]]></namePlural>
-		<description><![CDATA[A fashionable feminine leather jacket, able to be worn both open and, by means of a zip, closed.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[女士皮夹克]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[女士皮夹克]]></namePlural>
+		<description><![CDATA[一款时尚的女式皮夹克，既可以敞开穿着，也可以通过拉链闭合穿着。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_OVER</slot>
@@ -61,24 +61,24 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] on the leather jacket.
+			[npc.Name]穿上了皮夹克。
 		]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the leather jacket's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></other>
+[npc.Name]将皮夹克披在[npc2.namePos]身上并引导[npc2.namePos]的[npc2.arms]穿过皮夹克的袖子。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the leather jacket's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></otherRough>
+[npc.Name]将皮夹克在[npc2.namePos]身上并迫使[npc2.namePos]的[npc2.arms]穿过皮夹克的袖子。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc.her] leather jacket.
+			[npc.Name]将[npc.her]的皮夹克脱下。
 		]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc2.namePos] leather jacket.
-		]]></other>
+[npc.Name]将[npc2.namePos]的皮夹克脱下。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] leather jacket.
+			[npc.Name]抓住[npc2.namePos]的皮夹克并粗暴地扯下来。
 		]]></otherRough>
 	</displacementText>
 </clothing>

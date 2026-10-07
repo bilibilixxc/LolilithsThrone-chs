@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>350</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[keyhole jumper]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[keyhole jumpers]]></namePlural>
-		<description><![CDATA[A feminine jumper, with a section at the front cut out to reveal the wearer's cleavage.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[钥匙孔针织套衫]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[钥匙孔针织套衫]]></namePlural>
+		<description><![CDATA[一件女式针织套衫，前面的一部分被切开以露出穿着者的乳沟。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_OVER</slot>
@@ -73,25 +73,25 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] on the jumper.
-		]]></self>
+[npc.Name]穿上了针织套衫。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the jumper's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></other>
+[npc.Name]将针织套衫套在[npc2.namePos]身上并引导[npc2.namePos]的[npc2.arms]穿过针织套衫的袖子。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the jumper's sleeves as [npc.she] [npc.verb(pull)] it on [npc2.herHim].
-		]]></otherRough>
+[npc.Name]将针织套衫套在[npc2.namePos]身上并迫使[npc2.namePos]的[npc2.arms]穿过针织套衫的袖子。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc.her] jumper.
+			[npc.Name]将[npc.her]的针织套衫脱下。
 		]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(take)] off [npc2.namePos] jumper.
-		]]></other>
+[npc.Name]将[npc2.namePos]的针织套衫脱下。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] jumper.
-		]]></otherRough>
+			[npc.Name]抓住[npc2.namePos]的针织套衫并粗暴地扯下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

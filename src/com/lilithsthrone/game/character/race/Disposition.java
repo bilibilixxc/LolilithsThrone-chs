@@ -10,13 +10,13 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Disposition {
 
-	CIVILIZED("civilized", PresetColour.CLOTHING_GREEN, 1.0f),
+	CIVILIZED("有教养", PresetColour.CLOTHING_GREEN, 1.0f),
 	
-	NEUTRAL("neutral", PresetColour.CLOTHING_BLUE, 1.5f),
+	NEUTRAL("中性", PresetColour.CLOTHING_BLUE, 1.5f),
 	
-	UNPREDICTABLE("unpredictable", PresetColour.CLOTHING_ORANGE, 2.0f),
+	UNPREDICTABLE("不可预知", PresetColour.CLOTHING_ORANGE, 2.0f),
 	
-	SAVAGE("savage", PresetColour.CLOTHING_RED, 4.0f);
+	SAVAGE("狂野", PresetColour.CLOTHING_RED, 4.0f);
 
 	private String name;
 	private Colour colour;

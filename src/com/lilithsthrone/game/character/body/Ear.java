@@ -67,16 +67,16 @@ public class Ear implements BodyPartInterface {
 		}
 		
 		if (type.equals(getType())) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.ears] of [npc.a_earRace], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_earRace]的[npc.ears]了，所以无事发生……)]</p>");
 		}
 		
 		StringBuilder sb = new StringBuilder();
 
 		sb.append("<p>");
 		if(owner.isArmMovementHindered()) {
-			sb.append("[npc.NamePos] [npc.ears] start to involuntarily twitch and itch, and [npc.she] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)] them start to transform. ");
+			sb.append("[npc.namePos]的[npc.ears]不由自主地抽动与瘙痒着，在感觉到转化正在发生时，[npc.she]惊讶地喘了口气。");
 		} else {
-			sb.append("[npc.NamePos] [npc.ears] start to involuntarily twitch and itch, and, letting out a gasp, [npc.she] [npc.verb(reach)] up to rub at them as [npc.she] [npc.verb(feel)] them start to transform. ");
+			sb.append("[npc.namePos]的[npc.ears]不由自主地抽动与瘙痒着，在感觉到转化正在发生时，[npc.she]惊讶地喘了口气，伸手去揉。");
 		}
 		
 		// Parse existing content before transformation:
@@ -102,17 +102,17 @@ public class Ear implements BodyPartInterface {
 	
 	public String setPierced(GameCharacter owner, boolean pierced) {
 		if(this.pierced == pierced) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.pierced = pierced;
 		
 		if(pierced) {
 			if(owner.isPlayer()) {
-				return "<p>Your [pc.ears] are now [style.boldGrow(pierced)]!</p>";
+				return "<p>你的[pc.ears]现在已[style.boldGrow(穿孔)]！</p>";
 			} else {
 				return UtilText.parse(owner,
-						"<p>[npc.NamePos] [npc.ears] are now [style.boldGrow(pierced)]!</p>");
+						"<p>[npc.namePos]的[pc.ears]现在已[style.boldGrow(穿孔)]！</p>");
 			}
 			
 		} else {
@@ -125,13 +125,13 @@ public class Ear implements BodyPartInterface {
 			
 			if(owner.isPlayer()) {
 				return "<p>"
-							+ "Your [pc.ears] are [style.boldShrink(no longer pierced)]!"
+							+ "你的[pc.ears][style.boldShrink(不再有穿孔了)]！"
 						+ "</p>"
 						+piercingUnequip;
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.NamePos] [npc.ears] are [style.boldShrink(no longer pierced)]!"
+								+ "[npc.namePos]的[pc.ears][style.boldShrink(不再有穿孔了)]！"
 						+ "</p>"
 						+piercingUnequip);
 			}

@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- This one is linked to the 'dialogue/innoxia/places/fields/elis/generic.xml' dialogue node, 'tavern_alley'. -->
 	
 	<htmlContent tag="INITIAL_ENTRY"><![CDATA[
 	<p>
-		Deciding that you want to head inside 'The Crossed Blades', you approach the entrance to the tavern and push open the old, wooden door. Although the rusty hinges produce an ear-splitting screech in protest, this unpleasant noise is drowned out by the rowdy shouting, laughing, and cursing which fills the tavern's gloomy, smoky interior. [pc.Stepping] forwards and letting the door swing shut behind you, you pause for a moment to take in the scene before you.
+		你决定到这家“十字利刃”看看，于是走近酒馆入口，推开老旧的木门。虽然锈迹斑斑的铰链发出刺耳的尖叫声以示抗议，但酒馆阴暗、烟雾缭绕的室内充斥着的吵闹的叫喊声、嬉笑声和咒骂声，淹没了这难听的噪音。你[pc.Stepping]向前，让门在身后关上，停顿片刻，仔细打量眼前的景象。
 	</p>
 	<p>
-		The tavern's large, open-plan floorspace is filled with dozens of mismatched tables and chairs of varying shapes and sizes. Around these tables can be seen a mix of patrons every bit as diverse as the furniture they're seated upon, and apart from creating a huge amount of noise, this crowd can be seen to be drinking, eating, smoking, arguing, kissing, slapping, and, in just a couple of instances, drunkenly fucking. Although a few of the closest individuals stop and give you a look as you enter the tavern, their business is far more interesting than your entrance, and they quickly return to their previous conversation.
+		在酒馆宽敞的开放式空间里，摆满了几十张形状和大小各异、错落有致的桌椅。在这些桌子周围，可以看到各色各样的顾客，就像他们所坐的家具一样，除了制造出巨大的噪音外，你还看到这些人在喝酒、吃东西、抽烟、争吵、接吻、打架，还有几个人在醉醺醺地做爱。虽然在你进入酒馆时，有几个离你最近的人停下来向你使了个眼色，但他们正在做的事情远比你的到来有趣得多，他们很快又回到了之前的谈话中。
 	</p>
 	<p>
-		After you've taken a moment to look upon the wild scene before you, you move your gaze to the other parts of the tavern. Opposite to where you're standing, and separated from the entrance by several occupied tables, you see what looks to be the tavern's bar. You also note that around the edges of the large, open-plan floorspace, dimly-lit seating looks to be populated by a different sort of clientèle, who look far less happy and considerably more dangerous than the people who are seated at the tables.
+		你看了一会儿眼前的荒唐景象后，将目光移向酒馆的其他地方。在你所站位置的对面，与入口处隔着几张有人的桌子，那边似乎是酒馆的吧台。你还注意到，在开放式大空间的边缘，昏暗的座位上似乎坐着一位另类的客人，他看起来远没有其他的客人那么开心，似乎也更加危险。
 	</p>
 	<p>
-		Taking another [pc.step] forwards into the warm, smoky atmosphere of the tavern's gloomy interior, you wonder whether to head over to the bar to perhaps order a drink, or maybe instead to turn around and head back outside...
+		你又向前迈了几步，走进酒馆内阴暗、温暖而烟雾缭绕的氛围中，你不知道是该去吧台点一杯饮料，还是转身回到外面去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- All of these are linked to the 'dialogue/innoxia/places/fields/elis/tavern_alley.xml' dialogue nodes. -->
@@ -26,17 +26,17 @@
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		Finding yourself once again at the tavern's main entrance, you wonder whether to push open the old, wooden door and head back outside, or perhaps to turn around and return to the bar...
+		再次来到酒馆正门，你在思考是推开陈旧的木门回到外面，还是转身回到酒吧……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Deciding that you've had enough of the tavern's gloomy, smoky atmosphere, you push open the old, wooden door and, ignoring the screeching, grinding sound of the rusty hinges, [pc.step] back out into the relatively fresh air of Elis's alleyways...
+		你已经受够了酒馆里那阴沉沉、烟雾缭绕的氛围，于是推开老旧的木门，无视生锈铰链发出的刺耳摩擦声，[pc.step]回到空气相对清新的伊利斯小巷里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Tables: -->
@@ -44,239 +44,239 @@
 	<htmlContent tag="TABLES"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_oglix_introduced))
 		<p>
-			As you [pc.step] into the tavern, you hear a loud, womanly voice shouting out, [oglix.speech(You! Hey, you! Yeah, the [pc.race] who just came in! Get over here so I can say hello!)]
+			当你[pc.step]进酒馆时，你听到一个响亮的女人声音从里面传来，[oglix.speech(你，嘿，就是你！是啊，刚进来的那个[pc.race]！过来让我打个招呼！)]
 		</p>
 		<p>
-			Realising that you're the one that this voice is calling out for, you look over towards the source and see that it's coming from the tavern's bar. Your first thought as you see the person who's shouting out and waving at you is to wonder how you didn't immediately notice her upon your entry. Standing at
+			你意识到这个声音是在呼唤你，于是朝声音来源看去，发现声音来自酒馆的吧台。当你看到向你大声呼喊并挥手致意的人时，你的第一个想法就是奇怪自己怎么没有在进入酒馆时立即注意到她。她站的位置
 			#IF(game.isMetricSizes())
-				 well over two metres tall,
+				远远超过两米高，
 			#ELSE
-				 over seven feet tall,
+				超过七英尺高，
 			#ENDIF
-			 and with a remarkable shade of green skin, this black-haired woman looks startlingly similar to a generic orc from some kind of fantasy setting. Wearing a black, tie-up croptop, which is struggling to contain her massive pair of [oglix.cupSize]-cup breasts, and black hotpants, her arms, legs, and stomach are left fully exposed, allowing you to see that this orc-like woman is extremely muscular. Although she's lacking horns, wings, or a tail, you quickly deduce from her flawless skin, attractive features, and green skin-tone that she must be a succubus.
+			这位黑发女性的皮肤呈显著的绿色，看起来与某种奇幻场景中的兽人惊人地相似。她穿着一件黑色的绑带紧身上衣和黑色热裤，黑色上衣难以遮住她那对[oglix.cupSize]罩杯的巨乳，她的手臂、腿和腹部完全暴露在外，让你可以看到这个类似兽人的女人肌肉非常发达。虽然她没有角、翅膀或尾巴，但从她完美无瑕的皮肤、迷人的五官和绿色的肤色，你很快就能推断出她一定是个魅魔。
 		</p>
 		<p>
-			[oglix.speech(I haven't got all day!)] she booms in a loud voice which perfectly matches her huge, muscular appearance. Flashing you a big grin, she waves you forwards and jokes, [oglix.speech(I don't bite!)]
+			[oglix.speech(我没有一整天的时间！)]她的声音洪亮，与她魁梧、肌肉发达的外表完美匹配。她向你咧嘴一笑，挥手说笑，[oglix.speech(我可不咬人！)]
 		</p>
 	#ELSE
 		<p>
-			The tavern's large interior is absolutely packed full of tables and chairs, almost every one of which is occupied by several of the tavern's huge number of noisy, drunk patrons. As such, you have to squeeze and push past dozens of people as you [pc.walk] forwards, which not only slows your progress, but also causes many curses and angry looks to be thrown your way. Ignoring their reactions, you continue on your way through the tavern's smoky, gloomy interior...
+			酒馆内部偌大的空间里摆满了桌子和椅子，几乎每张桌子和椅子上都坐着几个酒馆里吵吵嚷嚷的醉鬼。因此，你在向前[pc.walk]时不得不挤过几十个人，这不仅拖慢了你的前进速度，还会招来许多咒骂和愤怒的目光。你不理会他们的反应，继续从阴暗的酒馆里那烟雾缭绕的氛围间挤过去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TABLES_EVENT"><![CDATA[
 	<p style='text-align:center;'><i>
-		As you pass by a table, you see that there's someone kneeling beneath it, and from the bobbing movement of their upper torso, it's quite obvious that they're performing oral...
+		你经过一张桌子，发现有人跪在桌子下面，从上半身点头的动作可以明显看出他们在口交……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TABLES_EVENT"><![CDATA[
 	<p style='text-align:center;'><i>
-		Your path takes you past a moaning [style.random(cat-girl|dog-girl|rat-girl|fox-girl|horse-girl|cow-girl)], who's sitting in her partner's lap with her skirt pulled up above her waist. You can't help but notice that she's not wearing any underwear, and her partner's thick cock is stuffed balls-deep inside her wet cunt...
+		你从一个[style.random(猫女|犬女|鼠女|狐女|马女|牛女)]身旁走过。她把裙子卷到腰部以上，坐在同伴的大腿上呻吟着。你忍不住看到，她里面什么也没穿，而她同伴粗大的鸡巴正抵在她湿漉漉的耻丘之上……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TABLES_EVENT"><![CDATA[
 	<p style='text-align:center;'><i>
-		You find yourself [pc.walking] past a couple of [style.random(cat-girls|dog-girls|rat-girls|fox-girls|horse-girls|cow-girls)], who, to the great amusement of the rest of their table's occupants, are passionately making out with one another...
+		你经过一对[style.random(猫女|狗女|老鼠女|狐狸女|马女|牛女)]情侣，并且发现她们彼此之间正在进行激烈性爱，这让桌子上的其他客人也感到兴致昂扬……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TABLES_EVENT"><![CDATA[
 	<p style='text-align:center;'><i>
-		One of the tables which you [pc.walk] past is occupied by a particularly rowdy group of [style.random(cat-boys|dog-boys|rat-boys|fox-boys|horse-boys|bull-boys)], who let out a deafening cheer as a passing [style.random(cat-girl|dog-girl|rat-girl|fox-girl|horse-girl|cow-girl)], who's quite clearly drunk, pulls up her top to flash them her huge tits...
+		你从一帮吵吵嚷嚷的[style.random(猫男|犬男|鼠男|狐男|马男|牛男)]旁边[pc.walk]过。他们正坐在桌子上，为路过的一个[style.random(猫女|犬女|鼠女|狐女|马女|牛女)]喝彩。她看起来醉得不行，拉起上衣向他们炫耀她巨大的乳头……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TABLES_EVENT"><![CDATA[
 	<p style='text-align:center;'><i>
-		A drunk [style.random(cat-boy|dog-boy|rat-boy|fox-boy|horse-boy|bull-boy)] shouts out an incomprehensible curse as you push pass, before collapsing face-first onto the table before him... 
+		你挤过去的时候，一个烂醉的[style.random(猫男|犬男|鼠男|狐男|马男|牛男)]大声咒骂了几句没人听得懂的脏话，然后脸朝下倒在面前的桌子上……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TABLES_EVENT"><![CDATA[
 	<p style='text-align:center;'><i>
-		You overhear a drunk [style.random(cat-girl|dog-girl|rat-girl|fox-girl|horse-girl|cow-girl)] loudly declaring to her table that she's going up to the bar to order another round of drinks as you pass her by... 
+		你路过的时候无意间听到一个醉酒的[style.random(猫女|狗女|老鼠女|狐狸女|马女|牛女)]在她的桌子上大声宣布她要去酒吧再喝一轮酒……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Bar: -->
 	
 	<htmlContent tag="BAR_INTRO"><![CDATA[
 	<p>
-		Seeing no harm in introducing yourself to this orc-like succubus, who you assume must be the owner of this tavern, you take a winding path past several noisy tables and head over to the long, wooden bar. As you approach, you notice that this green-skinned succubus has orange eyes, and is wearing a pair of gold earrings and a golden nose ring. As she stands up at full height and flashes you a toothy grin, you see two pairs of distinctive bumps pressing out from beneath her croptop, letting you know that she's not wearing a bra and has a couple of barbell piercings through her nipples.
+		你认为把自己介绍给这位兽人模样的魅魔没有什么坏处，她一定是这家酒馆的老板，于是你绕过几张嘈杂的桌子，以一种歪曲的路线走向长长的木制吧台。当你走近时，你注意到这只绿皮肤的魅魔有着橙色的眼睛，戴着一对金色耳环以及一个金色鼻环。她站得很高，看到你走近对你咧嘴一笑，你注意到两个独特的隆起从她的露腰短上衣里突出来，这也让你明白她没有穿胸罩以及她的乳头上有一对细杆穿孔。
 	</p>
 	<p>
-		[oglix.speech(I'm Oglix, the owner of this dump,)] the succubus booms in her loud, slovenly voice, before letting out a thunderous laugh and declaring, [oglix.speech(I haven't seen you in here before! I like to know the names of everyone who comes in here, so what's yours, [pc.race]?)]
+		[oglix.speech(我是奥格利克斯，这地方的老板，)]这位魅魔用她带有方言口音的大嗓门喊道，接着发出杠铃般的笑声，断言道，[oglix.speech(我以前从没在这见过你！我想知道每个来这里的客人的名字，所以你能告诉我你的名字吗，[pc.race]？)]
 	</p>
 	<p>
-		As you give Oglix your name, you suddenly notice that there's a swirling cloud of grey energy hovering a little way behind the succubus. Seeing what it is you're looking at, Oglix gestures towards this wisp and reveals, [oglix.speech(This is my elemental, Golix. Come on, say hello, Golix!)]
+		当你告诉奥格利克斯你的名字时，你突然注意到在魅魔身后不远处盘旋着一团灰色的能量漩涡。看到你在看什么，奥格利克斯朝这缕能量做了个手势，并透露道：[oglix.speech(这是我的元素体，戈利克斯。过来打个招呼！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_INTRO_ELEMENTAL"><![CDATA[
 	<p>
-		[oglixElemental.speech(Hello, [pc.name],)] the wisp dutifully says in a rather emotionless, feminine voice. After you've returned her greeting, Golix somewhat-alarmingly states, [oglixElemental.speech(I hope that mistress orders me to punish you. You're just the sort of [pc.race] I love to stuff with my fat cock.)]
+		[oglixElemental.speech(你好，[pc.name]，)]精灵恭敬地用毫无感情的女性声音说道。在你回礼后，戈利克斯有些惊人地说道：[oglixElemental.speech(我希望我主人命令我惩罚你。你就是那种我喜欢用大鸡巴塞满的[pc.race]。)]
 	</p>
 	<p>
-		[oglix.speech(Oh, don't mind her,)] Oglix says to reassure you, [oglix.speech(I only get Golix to punish people who deserve it. Sometimes the drink's too much for some, you see, and so now and again we get a brawl break out. I keep order in this place by having Golix here take on her active form and fuck whoever doesn't stop when I say so.)]
+		[oglix.speech(哦，别理她，)]奥格利克斯让你放心，[oglix.speech(我只让戈利克斯惩罚那些罪有应得的人。有时候有些人喝多了，你知道的，所以时不时就会发生斗殴。我让戈利克斯变成她的主动形态，来维持这里的秩序，谁不听话就操谁。)]
 	</p>
 	<p>
-		As if this wasn't alarming enough, you suddenly catch sight of another oddity behind the bar. Alongside the shelving which holds a vast quantity of rum, whiskey, and vodka, a huge wooden barrel has been half-set into the wall. A section has been cut out of this barrel, and hanging out so as to be completely exposed to the tavern, a pair of huge, [beerBitch.cupSize]-cup breasts, with a couple of milking pumps sucking on their massive, puffy nipples, are rather wildly bouncing up and down.
+		如果这还不够令人震惊的话，你会突然发现吧台后面还有一个奇怪的东西。在摆放着大量朗姆酒、威士忌和伏特加的货架旁，一个巨大的木桶被半嵌入墙中。这只木桶被凿出一截，悬挂在外面的一对巨大的，[beerBitch.cupSize]杯的奶子，在几个挤奶泵的吮吸下，硕大的、肉感的乳头上下跳动得相当疯狂。
 	</p>
 	<p>
-		[oglix.speech(Oh, that's just the beer-bitch,)] Oglix declares with a wave of her hand as she sees what it is you're looking at now.
+		[oglix.speech(哦，那不过是一个奶啤妓，)]奥格利克斯顺着你的目光看过去，挥了挥手说道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_INTRO_BEER_BITCH"><![CDATA[
 	<p>
-		Wanting more of an explanation than that, you ask Oglix what she means by the barrel's occupant being a 'beer-bitch'.
+		你想要了解得更详细一些，于是就问奥格利克斯她所说的酒桶里的人会变成一个“奶啤妓”是什么意思。
 	</p>
 	<p>
-		[oglix.speech(It means she's a worthless bitch who's only good for making beer,)] Oglix grunts, before reaching over to give the beer-bitch's tits a sharp slap. Grinning as a horny squeal bursts out from the other side of the barrel, the green-skinned succubus explains, [oglix.speech(Her milk's been transformed to be just the same as beer. She gets milked, her beer-milk gets cooled through the machine that's milking her, and then it's served to anyone who orders a pint. Oh, and her tits are bouncing like that because someone's fucking her.)]
+		[oglix.speech(这意思就是这没用的婊子只适合生产啤酒，)]奥格利克斯说着然后伸手狠狠地拍了一下奶啤妓的奶子。当木桶的另一端传来一声淫荡的尖叫时，绿皮魅魔咧嘴一笑，解释着，[oglix.speech(她的奶被改造成和啤酒一样。挤奶然后啤酒奶通过挤奶机冷却，最后提供给点啤酒的人。哦对了，她的奶子一直晃是有人在操她。)]
 	</p>
 	<p>
-		At that moment, you hear the sound of a loud grunt, followed by another of the beer-bitch's horny squeals, coming from the other side of the wooden barrel. With that, the pair of [beerBitch.cupSize]-cup tits stop bouncing, and Oglix states, [oglix.speech(Sounds like they just gave her a big creampie. You can have a go at fucking the beer-bitch too; I give out a token with every pint of beer that's sold, and if you trade in five tokens then you get to go around back and do what you want with her ass and cunt. So, you want to order a pint, [pc.name]?)]
+		这时，你听到木桶的另一边传来一声响亮的咕噜声，紧接着又是一声奶啤妓的淫荡尖叫。[beerBitch.cupSize]杯的一对奶子也随之停止了跳动，奥格利克斯说道：[oglix.speech(听起来他们刚给了她一个内射满满。你也可以去干那个奶啤妓；每卖出一品脱啤酒，我都会给你一个代币，如果你换了五个代币，你就可以绕到后面，对她的屁股和淫穴为所欲为。那么，你想来一品脱啤酒吗，[pc.name]？)]
 	</p>
 	<p>
-		Looking over at the milk that's being sucked out of the beer-bitch's nipples, you think to yourself that its colour and consistency do look exactly like regular beer. Beside the beer-bitch, you see a blackboard which lists several meals, including burgers, pies, and steak. Looking back over at Oglix, you wonder whether to order anything, or perhaps you could ask her a question or two...
+		你欣赏着奶啤妓乳头中溢出的甜美乳液，觉得它的颜色与粘稠感与真的啤酒别无二致。在奶啤妓旁边，你看到了一副写着提供餐点的黑板，包括汉堡、馅饼和牛排。回头看看奥格利克斯，你在思考着是否要点餐，或者你也可以问她一两个问题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR"><![CDATA[
 	<p>
-		Once again, you find yourself standing before the tavern's long, wooden bar. Oglix, the green-skinned succubus who owns this establishment, is standing close by, and after serving another customer, she catches sight of you and steps over to offer a greeting.
+		你再次发现自己站在酒馆长长的木制吧台前。这家酒馆的老板、绿皮肤的魅魔奥格利克斯就站在旁边，在招呼完另一位客人后，她看到了你并走过来向你问好。
 	</p>
 	#IF(oglix.isVisiblyPregnant())
 		#IF(oglix.isCharacterReactedToPregnancy(pc))
 			<p>
-				[oglix.speech(Hey, [pc.name], what can I get for you?)] she asks in her loud, slovenly voice. Reaching down to rub her visibly-pregnant belly, she lets out a deep laugh and grunts, [oglix.speech(I'm still carrying our kids around, as you can see. It's a real fucking nuisance, having a belly this big. You should buy a drink to make up for it!)]
+				[oglix.speech(嘿，[pc.name]，来点什么？)]她用她那响亮而模糊的声音问道。她伸手揉了揉明显怀孕的肚子，发出低沉的笑声和咕哝声，[oglix.speech(如你所见，我还在带着我们的孩子们到处跑。肚子这么大，真他妈麻烦。你应该买杯喝的补偿一下！)]
 			</p>
 		#ELSE
 			<p>
-				[oglix.speech(Hey, [pc.name]! Look, you got me pregnant!)] she bluntly booms in her loud, slovenly voice. Reaching down to rub her visibly-pregnant belly, she lets out a deep laugh and grunts, [oglix.speech(You got me knocked up real good. Before you ask, no, I don't need or want your help. That being said, it's a real fucking nuisance, having a belly this big. How about you buy a drink or ten to make up for it?!)]
+				[oglix.speech(嘿，[pc.name]！看，你让我怀孕了！)]她用慵懒的大嗓门直截了当地吼道。她伸手揉了揉明显怀孕的肚子，发出低沉的笑声和咕哝声，[oglix.speech(你把我肚子搞大了！在你问之前，不，我不需要也不想要你的帮助。话虽如此，但肚子这么大，真他妈的烦人。要不你买一两瓶酒补补？)]
 			</p>
 		#ENDIF
 		<p>
-			Before you can reply, the orc-like succubus suddenly reaches over the bar and grabs your [pc.hand(true)], before guiding it to her exposed belly and making you rub it. The smooth skin of her rounded tummy is warm to the touch, and you can't help but grin as you remember the events which led to Oglix getting knocked up.
+			你还没来得及回答，兽人般的魅魔突然把手伸过吧台，抓住你的[pc.hand(true)]，然后把你的手引向她裸露的腹部，让你揉搓。她圆润的小腹上光滑的皮肤触感温暖，你不禁咧嘴一笑，因为你想起了导致奥格利克斯怀孕的事情。
 		</p>
 		<p>
 			#IF(flags.hasFlag(FLAG_innoxia_oglix_flirted))
-				[oglix.speech(So, you going to order anything, or what?)] she asks, releasing your [pc.hand(true)]. Having already flirted with her today, it doesn't seem like Oglix will be receptive to more of your advances until tomorrow. Flashing you a toothy grin, the orc-like succubus waits to hear whether or not you were planning on ordering some food or drink...
+				[oglix.speech(所以，你要不要点些什么？)]奥格利克斯放开你的[pc.hand(true)]，问道。你今天已经和她调过情了，奥格利克斯明天才会接受你进一步的挑逗。兽人般的魅魔冲你咧嘴一笑，等着听你是否要点些食物或饮品……
 			#ELSE
-					[oglix.speech(Just because I'm pregnant, doesn't mean I'm not horny,)] Oglix bluntly states, before leaning forwards over the bar and giving you a clear view of her considerable cleavage. Licking her lips, she teases, [oglix.speech(You got a thing for fucking pregnant chicks? Come on, let's head back to my room and do it again...)]
+					[oglix.speech(怀孕不意味着我就清心寡欲了。)]奥格利克斯直率地说。她靠着吧台向前倾身，胸前沟壑尽显，接着舔了舔唇，引诱道：[oglix.speech(对操孕妇有兴趣吗？来吧，回我房间再干一场……)]
 				</p>
 				<p>
-					With the orc-like succubus continuing to give you a hungry look, you wonder what to say next...
+					兽人般的魅魔继续向你投来饥渴的目光，你思索接下来该说些什么……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			[oglix.speech(Hey, [pc.name], what can I get for you?)] she asks in her loud, slovenly voice. Reaching over to squeeze the nearby beer-bitch's tits, she lets out a deep laugh and grunts, [oglix.speech(Fancy a pint? Or did you want to order some grub? The menu's on the wall back there.)]
+			[oglix.speech(嘿，[pc.name]，来点什么？)]她用她那响亮而模糊的声音问道。她伸手捏了捏旁边啤酒妹的奶子，发出低沉的笑声和咕哝声：[oglix.speech(想喝一杯吗？还是想点些吃的？菜单就在后面的墙上。)]
 		</p>
 		<p>
-			Looking past the tall, muscular succubus, you see a blackboard which lists several meals, including burgers, pies, and steak.
+			越过高大、肌肉发达的魅魔，你会看到一块黑板，上面列出了几种餐点，包括汉堡、馅饼和牛排。
 			#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS))
 				#IF(flags.hasFlag(FLAG_innoxia_oglix_flirted))
-					 Having already flirted with Oglix today, it doesn't seem like she'd be receptive to more of your advances until tomorrow. Flashing you a toothy grin, the orc-like succubus waits to hear whether or not you were planning on ordering some food or drink...
+					今天已经和奥格利克斯调情过了，看来明天她才会接受你更多的挑逗。她向你咧嘴一笑，兽人般的魅魔正等着听你是否打算点些食物或饮料……
 				#ELSE
-						 Not waiting to hear your answer, Oglix leans forwards over the bar, giving you a clear view of her considerable cleavage as she teases, [oglix.speech(Of course, if you're hungry for something else, then I wouldn't mind fucking you...)]
+						不等你回答，奥格利克斯就把身体前倾，跨过吧台，让你清楚地看到她挑逗时露出的可观乳沟：[oglix.speech(当然，如果你对别的东西饥渴难耐，那我也不介意和你爱爱……)]
 					</p>
 					<p>
-						With the orc-like succubus giving you a hungry look, you wonder what to say next...
+						兽人般的魅魔向你投来饥渴的目光，你思索接下来该说些什么……
 				#ENDIF
 			#ELSE
-				 Flashing you a toothy grin, Oglix waits to hear whether or not you were planning on ordering some food or drink...
+				奥格利克斯冲你咧嘴一笑，等着听你是否要点些食物或饮品……
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_BACKGROUND"><![CDATA[
 	<p>
-		Wanting to know more about Oglix, you ask her how she came to own this tavern.
+		你想更多地了解奥格利克斯，便问她是如何拥有这家酒馆的。
 	</p>
 	<p>
-		[oglix.speech(What's this? Fancy a bit of smalltalk?)] the orc-like succubus grunts in amusement. Not giving you a chance to reply, she quickly continues, [oglix.speech(Nobody ever bothers to ask me stuff like that. There's not really much to tell, anyway. I came to Elis years ago, and after doing bounty hunting for a while, I thought my job'd be easier if the bounties came to me, so I set up this tavern to attract the sort of lowlife scum I was hunting.)]
+		[oglix.speech(什么？想聊聊天吗？)]兽人般的魅魔发出有趣的咕哝声。她没有给你回答的机会，很快继续说道：[oglix.speech(没人会问我这些问题。反正也没什么好说的。我几年前来到伊利斯，做了一段时间的赏金猎人。我想如果赏金猎人来找我，我的工作会更轻松。所以我开了这家酒馆，来吸引我猎杀的那些下等人渣。)]
 	</p>
 	<p>
-		At this moment, a nearby drunk, having overheard Oglix's words, takes offence at being described as a 'lowlife scum', and angrily demands that the green-skinned succubus retract her words. Reaching forwards over the bar, Oglix grabs this foolish customer by their shirt, and after effortlessly lifting them off the ground with just one of her muscular arms, she furiously grunts, [oglix.speech(You'd better watch your fucking mouth! You want Golix here to turn you into her cock-sleeve? No? Then shut it!)]
+这时，附近的一个醉汉无意中听到了奥格利克斯的话，他对奥格利克斯说他是“卑鄙的人渣”表示不满，愤怒地要求绿皮肤的魅魔收回她的话。奥格利克斯伸手越过吧台，抓住这位愚蠢顾客的衣服，仅用一只肌肉发达的手臂就毫不费力地将他们从地上提了起来，然后愤怒地哼了一声：[oglix.speech(你最好说话小心点。你想让戈利克斯把你变成她的鸡巴套？不想？那就闭嘴！)]
 	</p>
 	<p>
-		Throwing the hastily-apologising drunk down to the ground, Oglix turns back to you and continues her tale, [oglix.speech(Anyways, as I was saying, I set up this tavern to attract the scum I was hunting. After a while, I started making more money running this dump than I was by hunting bounties, so I gave that shit up and decided to stick at this.)]
+		把匆忙道歉的醉汉扔到地上，奥格利克斯转过身来继续讲她的故事：[oglix.speech(总之，就像我说的，我开这个酒馆是为了吸引我猎杀的人渣。过了一段时间，我经营这个垃圾场赚的钱开始比猎杀赏金赚的钱还多，所以我放弃了那个破工作，决定在这里继续干下去。)]
 	</p>
 	<p>
-		With her tale now at an end, the muscular, green-skinned succubus reaches back to slap the beer-bitch's tits and ask, [oglix.speech(So, you going to ask me any more questions, or order a pint?)]
+		她的故事结束了，这位肌肉发达、皮肤黝黑的魅魔伸手拍了拍啤酒妹的奶子，问道：[oglix.speech(那么，你是要问我更多的问题，还是点一品脱酒？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_LUNETTE"><![CDATA[
 	<p>
-		Wanting to hear Oglix's opinion on Lunette, you ask her what she thinks of the elder lilin.
+		你想听听奥格利克斯对露内特的看法，就问她对莉琳长老的看法。
 	</p>
 	<p>
-		[oglix.speech(I know what she's done, and what most people in Elis have to say of her,)] Oglix replies with a deep grunt. Narrowing her eyes, she warns, [oglix.speech(Lunette's my mum's mum, and I'm not going to say a bad word about family. Don't let me catch you mouthing off about her either; I'm not one for ignoring insults against me or any of my relatives.)]
+		[oglix.speech(我知道她的所作所为，也知道伊利斯大多数人对她的评价，)]奥格利克斯低沉地咕哝了一声。她眯起眼睛，发出警告，[oglix.speech(露内特是我妈妈的妈妈，我不会说家人的坏话。也别让我逮到你说她坏话的机会；我不会无视对我或我任何亲戚的侮辱。)]
 	</p>
 	<p>
-		[oglixElemental.speech(I got to fuck the last person who said something bad about Lunette,)] the feminine voice of Golix, the wisp-like elemental, suddenly chimes in. Looking over at the swirling cloud of grey energy, you can't help but feel a little uncomfortable as she continues, [oglixElemental.speech(I hope that mistress hears you insult Lunette. I'd love to be ordered to punish you. My fat cock would feel so good being rammed deep
+		[oglixElemental.speech(我会草死上一个说露内特坏话的人，)]缕状元素戈利克斯的女声突然响起。望着那团灰色的能量漩涡，你不禁感到有些不自在，因为她还在继续，[oglixElemental.speech(我希望女主人听到你侮辱露内特的话。我很乐意奉命惩罚你，我那肥大的鸡巴被深深插入
 		#IF(pc.hasVagina())
-			 into your filthy cunt.
+			你臭逼
 		#ELSEIF(game.isAnalContentEnabled())
-			 into your hot ass.
+			你骚尻
 		#ELSE
-			 down your throat.
+			你喉咙
 		#ENDIF
-		)]
+		的感觉一定很爽。)]
 	</p>
 	<p>
-		[oglix.speech(It's not going to come to that, Golix,)] Oglix firmly states, before looking you right in the eye and asking, [oglix.speech(Is it, [pc.name]?)]
+		[oglix.speech(这不会发生的，戈利克斯，)]奥格利克斯坚定地说道，然后看着你的眼睛问道，[oglix.speech(对吧，[pc.name]？)]
 	</p>
 	<p>
-		Deciding that it'd be best not to get on the wrong side of this muscular succubus, you tell her that you're not here to insult her grandmother. Nodding in approval, Oglix asks, [oglix.speech(So, you going to order a pint or what?)]
+		你决定最好不要和这个肌肉发达的魅魔交恶，你告诉她你不是来侮辱她的外祖母的。奥格利克斯点头表示同意，然后问道：[oglix.speech(所以，来一品脱啤酒吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_BEER_BITCH"><![CDATA[
 	<p>
-		Wanting to know more about Oglix's 'beer-bitch', you ask the orc-like succubus what the barrel-bound bitch did to deserve such a fate.
+		你想更多地了解奥格利克斯的“奶啤妓”，于是你问这个像兽人一样的魅魔，这个被木桶绑住的贱人到底做了什么，会遭此厄运。
 	</p>
 	<p>
-		[oglix.speech(People usually only ask what her beer tastes like, not about what she did to get into there,)] Oglix replies with an amused grunt. Reaching over to roughly squeeze the beer-bitch's [beerBitch.cupSize]-cup tits, she reveals, [oglix.speech(This cunt kept on stealing food from the kitchens. I caught her at least a dozen times, but no matter how much Golix punished her, she kept coming back and doing it. After a while I'd had enough. I got myself a slaver's license and had her enslaved by the Enforcers.)]
+		[oglix.speech(人们通常只问她的啤酒是什么味道，而不问她是怎么进去的。)]奥格利克斯好笑地咕哝着回答道。她伸手粗暴地捏了捏奶啤妓[beerBitch.cupSize]杯的奶子，并透露道：[oglix.speech(这婊子一直在厨房偷食物，我至少抓了她十几次，但不管戈利克斯怎么惩罚她，她还是继续偷。过了一段时间，我受够了，我给自己弄了个奴隶贩子的执照，把她交给执法者奴役了。)]
 	</p>
 	<p>
-		Now knowing what led to the beer-bitch being owned by Oglix, you ask the succubus what gave her the idea to transform her milk to be beer. 
+		现在你知道了奶啤妓被奥格利克斯拥有的原因了，你问这个魅魔是什么让她有了把牛奶变成啤酒的想法。
 	</p>
 	<p>
-		[oglix.speech(Well, I've always had a bit of a thing for transforming people,)] Oglix replies. Flashing you a toothy grin, she goes on to reveal, [oglix.speech(At first, I just transformed her to have big fucking tits and a sopping wet cunt. I had her locked up in some stocks and let anyone do what they wanted with her. That worked to drum up more business for a while, but after beer stopped being delivered from a few nearby villages, even a free fuck wasn't enough to draw in customers.)]
+		[oglix.speech(嘛，我一直对改造人有点兴趣，)]奥格瑞斯回答道。她向你咧嘴一笑，继续透露：[oglix.speech(起初，我只是把她改造出一个大奶子和湿漉漉的淫穴。我把她关在仓库里，任人摆布。这招还能招揽一段时间的生意，但自从附近几个村子停止运送啤酒后，即使是免费操逼也不足以吸引顾客了。)]
 	</p>
 	<p>
-		[oglixElemental.speech(Transforming the bitch's milk to be beer was my idea,)] Golix suddenly states. With a detectable note of satisfaction in her feminine voice, the wisp-like elemental brags, [oglixElemental.speech(Thanks to me, mistress's business was saved. When people heard that we had beer, everyone came to our tavern. We put all the other pubs in the alleyways out of business, and when their owners tried to complain, mistress let me punish them.)]
+		[oglixElemental.speech(把婊子的奶变成啤酒是我的主意，)]戈利克斯突然说道。在她柔美的嗓音中，可以察觉到一种满足感，这位宛如缕空的精灵吹嘘道，[oglixElemental.speech(多亏了我，主人的生意才得以保住。当人们听说我们有啤酒时，每个人都来我们的酒馆。我们让巷子里的其他酒馆都没了生意，当他们的老板想要抱怨时，主人就让我惩罚他们。)]
 	</p>
 	<p>
-		[oglix.speech(I only let you punish the ones who got violent towards me,)] Oglix clarifies. Continuing where her elemental left off, the succubus explains, [oglix.speech(I transformed the bitch's milk to be beer, and also gave her a load of fetish-altering potions. She loves being milked, fucked, and being locked up in that barrel, so it's a win-win.)]
+		[oglix.speech(我只是让你惩罚那些对我施暴的人，)]奥格利克斯澄清道。魅魔继续解释，[oglix.speech(我把这婊子的奶变成了啤酒，还给了她一大堆改变癖好的药水。她喜欢被挤奶、被操，还喜欢被关在桶里，所以这是双赢的结果。)]
 	</p>
 	#IF(!pc.hasQuest(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS))
 		<p>
-			Turning to look over at the relatively large amount of space beside the beer-bitch's barrel, Oglix says, [oglix.speech(I originally planned to add a few more beer-bitches, but I never got around to it. Elis doesn't have a slave market, and my license doesn't allow me to enslave criminals. Oh well, maybe one day I'll get the time to get the bitch some friends...)]
+			转头看了看啤酒桶旁边相对较大的空间，奥格利克斯说，[oglix.speech(我原本计划再添加几个奶啤妓，但一直没来得及。伊利斯没有奴隶市场，我的执照也不允许我奴役罪犯。哦，好吧，也许有一天我会有时间给这婊子找几个朋友……)]
 		</p>
 		<p>
-			Being in possession of the sort of slaver license which Oglix requires, you wonder whether to offer the succubus some help in expanding her range of beer-bitches. Then again, perhaps condemning criminals to a life of being milked and fucked is too much, even if their fetishes would be changed to make them love it...
+			你拥有奥格利克斯所需的奴隶许可证，不知道是否应该向这个魅魔提供一些帮助，以扩大她的奶啤妓规模。话又说回来，也许让罪犯过上被挤奶和被操的生活太过分了，即使他们的癖好会改变，让他们喜欢上这种生活……
 		</p>
 	#ELSEIF(!pc.isQuestCompleted(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS))
 		Turning to look over at the relatively large amount of space beside the beer-bitch's barrel, Oglix grunts, [oglix.speech(You know, [pc.name], I appreciate your offer of help, but it's taking you a long time to get those extra barrels I'm after...)]
@@ -290,1334 +290,1334 @@
 			 The beer-bitch is going to love her new friends!
 		#ENDIF)]
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_ELEMENTAL"><![CDATA[
 	<p>
-		Wanting to find out more about Golix, you ask Oglix how she came to obtain her elemental.
+		你想更多地了解戈利克斯，就问奥格利克斯她是如何得到自己的元素体的。
 	</p>
 	<p>
 		#IF(pc.isElementalSummoned())
-			[oglix.speech(Well, you clearly already know what elementals are, so I don't need to explain that,)] Oglix states as she looks across at your elemental.
+			[oglix.speech(你显然已经知道元素体是什么了，所以我没必要再解释了，)]奥格利克斯看着你的元素体说。
 		#ELSE
-			[oglix.speech(Well, elementals are just a physical manifestation of a person's subconscious, so I didn't have to do anything to obtain her; she's always been with me,)] Oglix states. 
+			[oglix.speech(元素只是一个人潜意识的具体表现，所以我不需要做任何事情就能得到她，她一直都在我身边，)]奥格利克斯说。
 		#ENDIF
-		 Flashing you another of her toothy grins, she then goes on to reveal, [oglix.speech(It was my mum who made me train in the arcane, but after I'd learned how to summon Golix, we kind of fell out and I ended up moving here to Elis.)]
+		她又向你咧嘴一笑，然后继续说道：[oglix.speech(是我妈妈让我接受奥术训练的，但在我学会如何召唤戈利克斯之后，我们就不和了，最后我搬到了伊利斯。)]
 	</p>
 	<p>
-		As the green-skinned succubus finishes her sentence, the wisp-like form of Golix suddenly floats over beside you, and in an almost-emotionless voice, states,
+		当绿皮魅魔说完这句话时，戈利克斯飘忽不定的身形突然飘到了你的身边，用近乎无情的声音说道：
 		#IF(oglixElemental.getTotalTimesHadSex(pc)>0)
-			[oglixElemental.speech(Every time I see you, I remember how good it felt to fill you with my fat cock. I'd very much like to punish you again, [pc.name].)]
+			[oglixElemental.speech(每次见到你，我都会想起用我的大鸡巴填满你的感觉有多棒，我很想再惩罚你一次，[pc.name]。)]
 		#ELSE
-			[oglixElemental.speech(Every time I see you, I imagine how good it'd feel to fill you with my fat cock. I'd very much like to punish you, [pc.name].)]
+			[oglixElemental.speech(每次见到你，我都会想象用我的大鸡巴填满你的感觉有多棒，我非常想惩罚你，[pc.name]。)]
 		#ENDIF
 	</p>
 	<p>
-		[oglix.speech(Oh, don't mind her,)] Oglix says to reassure you with a booming laugh, [oglix.speech(She won't do anything without my permission... Then again, if you'd like to get fucked by Golix, then just let me know. I wouldn't mind watching that... Just be warned, she likes it rough.)]
+		[oglix.speech(哦，别理她，)]奥格利克斯让你放松并露出笑容，[oglix.speech(没有我的允许，她什么都不会做……话又说回来，如果你想被戈利克斯操，就告诉我吧，我不介意看……只是要提醒你，她喜欢粗暴。)]
 	</p>
 	<p>
-		After swirling around in a little circle, which you interpret as a sign of happiness, Golix lets out a hungry moan, before returning to her mistress's side. Looking at you expectantly, Oglix waits to hear what you'll say next...
+		戈利克斯转了一个小圈，你把这理解为幸福的象征，发出了一声饥渴的呻吟，然后回到了主人身边。奥格利克斯满怀期待地看着你，等着听你接下来说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_VIP"><![CDATA[
 	<p>
-		Curious to find out what it takes to gain access to the VIP room, you ask Oglix what you'd need to do to become a VIP.
+		好奇想知道进入贵宾室需要什么条件，你询问奥格利克斯成为贵宾需要做些什么。
 	</p>
 	<p>
-		[oglix.speech(You don't want to be going in there,)] Oglix replies with a shake of her head. Realising that you're not going to be satisfied with that, she grunts and explains, [oglix.speech(That's where the leaders of the local gangs go. They don't like strangers, and together they're too much for even me to handle. So just forget about that room, ok?)]
+		[oglix.speech(你不会想进去的，)]奥格利克斯边摇头边回答到。意识到你不会对此感到满足，她哼了一声解释道，[oglix.speech(那是当地帮派头目们聚集的地方。他们不喜欢陌生人，而且他们加起来连我也应付不来。所以，忘了那个房间吧，好吗？)]
 	</p>
 	<p>
-		Sensing that the green-skinned succubus doesn't want to say anything more on the topic, you wonder what to do next...
+		感觉到那位绿皮肤的魅魔不想再就这个话题多说什么，你开始思考接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="BAR_QUEST_START"><![CDATA[
 	<p>
-		Liking the sound of Oglix's plans for expanding her range of beer-bitches, you tell her that you'd be willing to help in sourcing both the barrels and the slaves which would be required.
+		你很喜欢奥格利克斯扩充她的奶啤妓的计划，告诉她你非常乐意帮助采购所需的桶和奴隶。
 	</p>
 	<p>
-		[oglix.speech(You're serious?)] Oglix grunts in response. Hearing your positive reply, she continues, [oglix.speech(Well, I guess I'm not going to turn down an offer like this. Sure, you can help me get some more beer-bitches, but don't be expecting any kind of big reward at the end of it all, ok?)] 
+		[oglix.speech(你认真的？)]奥格利克斯咕哝着回应道。听到你肯定的回答，她继续说道：[oglix.speech(好吧，我想我不会拒绝这样的提议。当然，你可以帮我多找几个奶啤妓，但别指望最后会有什么丰厚的回报，好吗？)] 
 	</p>
 	<p>
-		Telling Oglix that it will be reward enough to have more of a choice in whose beer you get to order, you ask the green-skinned succubus if she has any ideas on where to find more barrels to house the future additions behind her bar.
+		你告诉奥格利克斯，要是对于奶啤的人选能有更多的选择就再好不过了，你问她对于绿皮魅魔有无兴趣，以及可以在哪里找到更多的桶来容纳她酒吧未来的新成员们。
 	</p>
 	<p>
-		[oglix.speech(Well, the only place I know of where we can get more barrels large enough to fit a person are those at the tavern, 'The Centaur's Sword'. They get mostly taurs in that place, and they drink so much that they have to order in extra large quantities of beer to keep up,)] Oglix reveals, before instructing, [oglix.speech(If you're really serious about helping, then go and ask Kheiron, who's the owner of that place, for four of the largest barrels he's got.)]
+		[oglix.speech(据我所知，只有在酒馆‘半人马之剑’才能买到足够装下一个人的大酒桶。那里的客人大多是半兽身人，他们喝得太多了，不得不订购额外的大量啤酒来满足他们的需求。)]奥格瑞斯透露说，然后又嘱咐道：[oglix.speech(如果你真的很想帮忙，那就去找那个地方的主人喀戎要四个最大的桶吧。)]
 	</p>
 	<p>
-		[oglixElemental.speech(He can sometimes be quite stubborn,)] Golix suddenly interjects, revealing that she must know Kheiron quite well. Floating over towards you, the elemental states, [oglixElemental.speech(If he refuses, or tries to ask for payment for them, tell him that Golix says to be a good horsie. He'll do what you ask of him after that.)]
+		[oglixElemental.speech(他有时很古板，)]戈利克斯突然插话，透露出她非常了解喀戎。飘向你的元素体说：[oglixElemental.speech(如果他拒绝，或试图索要报酬，就告诉他戈利克斯说要他做个好小马。之后他就会听你的话了。)]
 	</p>
 	<p>
-		Oglix laughs as she hears what it is her elemental is saying, before nodding her head and confirming, [oglix.speech(Yeah, that'll do it. Perhaps I'll tell you what that's all about some other time, but for now, just use that phrase on him. So, you going to head over there now, or do you want a drink first?)]
+		奥格利克斯听到她的元素体在说什么，先是笑了笑，然后点头确认：[oglix.speech(对，就这样。也许改天我会告诉你那是怎么回事。但现在，就用这句话对付他吧。你是现在就过去，还是先喝一杯？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_BEER"><![CDATA[
 	<p>
-		Feeling thirsty, and liking the look of [npc.namePos] tits, you tell Oglix that you'd like a pint of beer from her, before handing over the forty flames which is asked for. Flashing you a grin, the green-skinned succubus steps over and turns on the pump, causing a muffled, erotic moan to burst out from [npc.namePos] barrel. As the machine loudly sucks on the [npc.race]'s big, puffy nipples, Oglix uses the connected tap to pour out the resulting stream of cooled, beer-like milk into a pint glass.
+		你觉得有点口渴，又比较中意[npc.namePos]的乳头品相，于是就和奥格利克斯说你要一杯她的啤酒，然后就把40火币的酒钱递了上去。绿皮肤的魅魔对你咧嘴一笑，跨步走向酒桶，打开水泵，突然一声沉闷色情的呻吟从[npc.namePos]在的酒桶中传来。奥格利克斯趁着机器大声吮吸[npc.race]的肉感大乳头，打开了连接的水龙头，冷却好的奶啤倾倒而出，流入一品脱容量的酒杯中。
 	</p>
 	<p>
-		[oglix.speech(Here you go, one pint from the [npc.namePos] tits,)] Oglix grunts as she turns off the pump and gives [npc.namePos] [npc.cupSize]-cup tits a quick slap. Placing the full pint glass down on the bar in front of you, she gives you a toothy grin and grunts, [oglix.speech(Enjoy!)]
+		[oglix.speech(给你，[npc.namePos]乳头产的一杯啤酒，)]奥格利克斯关掉水泵对你说道，接着给了[npc.namePos]的[npc.cupSize]罩杯的乳头一巴掌。然后她把满满一品脱的杯子放在你面前的吧台上，咧嘴一笑，咕哝着：[oglix.speech(尽情享受吧！)]
 	</p>
 	<p>
-		Lifting the glass, you see that the fluid, which you know to be [npc.namePos] milk, looks and smells exactly like beer. As you prepare to take a drink, Oglix flicks a bottle cap your way and states, [oglix.speech(Here's a beer token. Collect five of them, and you can trade them in to fuck [npc.name].)]
+		你举起酒杯，发现这种液体——尽管你知道是[npc.namePos]的奶水——无论看起来还是闻起来都很像啤酒。当你准备喝一口时，奥格利克斯轻轻把一个瓶盖放到你面前，说道：[oglix.speech(这是一个啤酒代币，收集五个，你就可以用它们交换，操一次[npc.name]。)]
 	</p>
 	<p>
-		Nodding in response, you finally bring the glass to your [pc.lips], and as you start to drink [npc.namePos] milk, you thankfully discover that it tastes exactly the same as beer. Finding it to be much to your liking, you proceed to drink the entire pint.
+		你点头回应，把酒杯递到嘴边，总算是喝到了[npc.namePos]的奶水，谢天谢地，你发现它的味道真的和啤酒一模一样。你觉得它很合你的口味，就继续喝完了整整一品脱。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_VODKA"><![CDATA[
 	<p>
-		Feeling thirsty, but wanting a drink that's a little more conventional than a pint of beer-like milk, you tell Oglix that you'd like a glass of vodka, before handing over the hundred flames which is asked for. Pouring out a glass, the green-skinned succubus places it on the stained counter in front of you, grunting as she does so, [oglix.speech(Here you go, [pc.name]. Enjoy.)]
+		你有些口渴，但是比起一杯奶啤，你更想点杯寻常些的饮品，于是你就向奥格利克斯点了一杯伏特加，然后把100火币的酒钱递了上去。绿皮肤的魅魔为你倒了一杯酒，之后便将酒杯放在你面前带点污渍的吧台上，嘴里还咕哝道：[oglix.speech(给你，[pc.name]，尽情享受吧。)]
 	</p>
 	<p>
-		Relaxing and taking your time to drink your glass of vodka, you wonder whether to order another drink or to do something else...
+		悠闲惬意地喝上一杯伏特加后，你想着是要再点一杯还是去做些别的事……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_RUM"><![CDATA[
 	<p>
-		Feeling thirsty, but wanting a drink that's a little more conventional than a pint of beer-like milk, you tell Oglix that you'd like a glass of rum, before handing over the hundred and twenty flames which is asked for. Pouring out a glass, the green-skinned succubus places it on the stained counter in front of you, grunting as she does so, [oglix.speech(Here you go, [pc.name]. Enjoy.)]
+		你有些口渴，但是比起一杯奶啤，你更想点杯寻常些的饮品，于是你就向奥格利克斯点了一杯朗姆酒，然后把120火币的酒钱递了上去。绿皮肤的魅魔为你倒了一杯酒，之后便将酒杯放在你面前带点污渍的吧台上，嘴里还咕哝道：[oglix.speech(给你，[pc.name]，尽情享受吧。)]
 	</p>
 	<p>
-		Relaxing and taking your time to drink your glass of rum, you wonder whether to order another drink or to do something else...
+		悠闲惬意地喝上一杯朗姆酒后，你想着是要再点一杯还是去做些别的事……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_WHISKEY"><![CDATA[
 	<p>
-		Feeling thirsty, but wanting a drink that's a little more conventional than a pint of beer-like milk, you tell Oglix that you'd like a glass of whiskey, before handing over the hundred and twenty flames which is asked for. Pouring out a glass, the green-skinned succubus places it on the stained counter in front of you, grunting as she does so, [oglix.speech(Here you go, [pc.name]. Enjoy.)]
+		你有些口渴，但是比起一杯奶啤，你更想点杯寻常些的饮品，于是你就向奥格利克斯点了一杯威士忌，然后把120火币的酒钱递了上去。绿皮肤的魅魔为你倒了一杯酒，之后便将酒杯放在你面前带点污渍的吧台上，嘴里还咕哝道：[oglix.speech(给你，[pc.name]，尽情享受吧。)]
 	</p>
 	<p>
-		Relaxing and taking your time to drink your glass of whiskey, you wonder whether to order another drink or to do something else...
+		悠闲惬意地喝上一杯威士忌后，你想着是要再点一杯还是去做些别的事……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD"><![CDATA[
 	<p>
-		Taking another look at the food menu which is hanging on the wall behind the bar, you tell Oglix that you'd like to order [#SPECIAL_PARSE_0]. Grunting in confirmation, she taps the board where it says the price. Handing over [#SPECIAL_PARSE_1] flames, you wait while the green-skinned succubus steps over to the door of the tavern's kitchen, before loudly shouting your order into the room beyond.
+		你又看了一眼吧台后那面墙上挂着的菜单，然后告诉奥格利克斯你想点[#SPECIAL_PARSE_0]份。她咕哝着表示确认，然后轻轻敲了敲菜单上写着价格的地方。你递出[#SPECIAL_PARSE_1]火币，在等待的过程中，绿皮肤的魅魔走到酒馆厨房的门口，向远处的房间大声喊出你的点单。
 	</p>
 	<p>
-		Ten minutes later, and your food arrives. Although not the best-presented plate of food you've ever seen, you soon discover that it tastes good enough, and so you happily spend the next ten minutes eating your [#SPECIAL_PARSE_2]. After you're done, Oglix takes your plate and quite literally throws it into the kitchen, causing a loud smashing noise and a couple of curses to ring out through the door as it swings shut.
+		十分钟后，你点的食物到了。虽然不是你见过的品相最好的食物，但很快你就发现它尝起来味道足够好，所以你在接下来的十分钟里高兴地享用[#SPECIAL_PARSE_2]。在你吃完后，奥格利克斯收走盘子，然后把它扔进厨房里，字面意义上的扔，就在门摆动着关上时，厨房里传来巨大的破碎声和几句咒骂。
 	</p>
 	<p>
-		Leaning down on the counter, Oglix asks, [oglix.speech(So, is that all, or do you want to order something else?)]
+		奥格利克斯斜靠在柜台上，问道：[oglix.speech(就要这些？你还要再点些别的东西吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Punished by Golix: -->
 	
 	<htmlContent tag="BAR_PUNISHMENT"><![CDATA[
 	#IF(oglixElemental.getTotalTimesHadSex(pc)>0)
 		<p>
-			Finding yourself thinking about how good it felt to have Golix ramming her fat stone cock deep inside of you, you find yourself looking at the elemental and panting, [pc.speech(Please, I want you to punish me again...)]
+			你想到戈利克斯用她那肥大的石头鸡巴深深地插入你体内的感觉是多么美妙，望着元素体气喘吁吁，[pc.speech(求你了，我想让你再惩罚我一次……)]
 		</p>
 		<p>
-			[oglix.speech(Got a craving for Golix's cock, huh?)] Oglix laughs in her booming, slovenly voice. Flashing you a toothy grin, she continues, [oglix.speech(You're not the first who's come crawling back for more. Luckily for you, Golix seems to like you. Normally she's content to break someone just once, but for you, I think she's ready for another round. Isn't that right, Golix?)]
+			[oglix.speech(想吃戈利克斯的鸡巴吗？)]奥格利克斯用她那洪亮而邋遢的声音大笑起来。她向你咧嘴一笑，继续说道，[oglix.speech(你不是第一个爬回来要更多的人。幸运的是，戈利克斯似乎很喜欢你。通常她只满足于打倒别人一次，但对你，我想她已经准备好再来一次了。是吧，戈利克斯？)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to know how it feels to have Golix ramming her fat cock deep inside of you, you find yourself looking at the elemental and panting, [pc.speech(Please, I want you to punish me...)]
+			你想知道戈利克斯用她那肥大的阴茎深深插入你体内是什么感觉，看着元素体喘息着，[pc.speech(求求你，惩罚我……)]
 		</p>
 		<p>
-			[oglix.speech(Got a craving for Golix's cock, huh?)] Oglix laughs in her booming, slovenly voice. Flashing you a toothy grin, she continues, [oglix.speech(I think she's more than happy to give you what you want. Isn't that right, Golix?)]
+			[oglix.speech(想吃戈利克斯的鸡巴吗？)]奥格利克斯用她那洪亮、邋遢的声音大笑起来。她向你咧嘴一笑，继续说道：[oglix.speech(我想她很乐意满足你的要求，不是吗，戈利克斯？)]
 		</p>
 	#ENDIF
 	<p>
-		[oglixElemental.speech(Yes, mistress. I'd like to
+		[oglixElemental.speech(是的，主人，我很乐意
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 pound this slut's cunt and make her squeal,
+			操烂这个荡妇的骚逼，让她尖叫，
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 pound this slut's ass and make her squeal,
+			操烂这个荡妇的屁穴，让她尖叫，
 		#ELSE
-			 fuck this slut's face and make her choke,
+			操这个荡妇的脸，让她窒息，
 		#ENDIF
 		)]
-		 Golix replies, her usually-emotionless voice taking on a lustful tone.
+		戈利克斯回答道，她平日里不善言辞的声音也变得淫荡起来。
 	</p>
 	<p>
-		[oglix.speech(Go on then, Golix,)] Oglix commands, [oglix.speech(Punish this slut.)]
+		[oglix.speech(那就继续，戈利克斯，)]奥格利克斯命令道，[oglix.speech(惩罚这个荡妇。)]
 	</p>
 	<p>
-		Not needing to be told twice, the wisp-like elemental darts forwards over the counter, and in a burst of light, transforms into her active form. Suddenly, you find yourself standing not before a swirling cloud of grey energy, but before a beautiful, stone-skinned succubus. Every bit as tall, muscular, and busty as her mistress, Golix strikes an imposing figure. Completely naked, you're able to see that the elemental lacks feminine genitalia, and instead has a huge, [oglixElemental.cockValue] cock hanging between her legs...
+		无需多言，缕缕元素体飞快地越过柜台，在一阵光芒中变成了她的活动形态。突然间，你发现自己站在的不是一团灰色能量漩涡面前，而是一个美丽的石肤魅魔。戈利克斯和她的女主人一样高挑、肌肉发达、身材丰满，气势非凡。她全身赤裸，你可以看到她没有女性生殖器，取而代之的是一根巨大的[oglixElemental.cockValue]鸡巴挂在两腿之间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_PUNISHMENT_START"><![CDATA[
 	<p>
-		Wasting no time, Golix grabs you with both of her strong hands, and before you know what's happening, she's pushing you down over the nearest table, sending drinks flying in the process. Clearly knowing not to get on her bad side, the patrons whose table and drinks have just been taken from them back off and give Golix some space.
+		毫不浪费时间，戈利克斯用她那双有力的手抓住你，在你还没反应过来之前，她就把你推倒在最近的一张桌子上，让上面摆放的饮料四溅。显然知道不该触怒她，那些桌子和饮料刚被夺走的顾客退后，给戈利克斯腾出了些空间。
 	</p>
 	#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
 		<p>
-			[oglixElemental.speech(I'm going to break you,)] Golix growls in a hungry voice that's shifted to become every bit as strong and imposing as her physical appearance. Hefting her huge, stone cock in one hand, she uses her free one to gain access to your groin, before roughly stuffing her fingers into your [pc.pussy+] and grunting, [oglixElemental.speech(Squeal for me, slut.)]
+			[oglixElemental.speech(我会把你玩坏，)]戈利克斯用饥渴的声音咆哮着，她的声音已经变得和她强壮的外表一样威严。她一手握着巨大的石质阴茎，另一只手伸向你的下体，用力将手指插入你[pc.pussy+]，同时低语着，[oglixElemental.speech(我想听到你的尖叫声，骚货。)]
 		</p>
 		<p>
-			Whether you intended to obey or not, the sensation of having Golix's fingers suddenly shoved deep into your cunt forces you to let out a shocked squeal. Grunting in approval, the elemental withdraws her fingers, before sharply slapping your exposed pussy, causing you to let out another shocked yelp. Almost immediately, this is followed by the sudden feeling of the head of Golix's fat cock prodding against your [pc.labia+].
+			无论你是否有意默许了她的行为，戈利克斯的手指突然深深插入你小穴的感觉都使得你惊讶得叫出声来。在发出赞许的咕哝声后，元素体收回了她的手指，然后狠狠地拍打你暴露在外的小穴，使你再次发出惊叫。几乎就在同时，你突然感觉到戈利克斯粗大的龟头正顶在你[pc.labia+]上。
 		</p>
 		<p>
-			[oglixElemental.speech(You've been a bad [pc.girl],)] Golix grunts as she grabs hold of your [pc.hips+], [oglixElemental.speech(You need to be <i>punished</i>!)]
+			[oglixElemental.speech(你变成一个坏[pc.girl]了，)]戈利克斯咕哝着抓住你[pc.hips+]，[oglixElemental.speech(你需要接受<i>惩罚</i>！)]
 		</p>
 	#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
 		<p>
-			[oglixElemental.speech(I'm going to break you,)] Golix growls in a hungry voice that's shifted to become every bit as strong and imposing as her physical appearance. Hefting her huge, stone cock in one hand, she uses her free one to gain access to your ass, before roughly stuffing her fingers into your [pc.asshole+] and grunting, [oglixElemental.speech(Squeal for me, slut.)]
+			[oglixElemental.speech(我会把你玩坏，)]戈利克斯用饥渴的声音咆哮着，她的声音已经变得和她强壮的外表一样威严。她一手握着巨大的石质阴茎，另一只手伸向你的屁股，用力将手指插入你[pc.asshole+]，同时低语着，[oglixElemental.speech(我想听到你的尖叫声，骚货。)]
 		</p>
 		<p>
-			Whether you intended to obey or not, the sensation of having Golix's fingers suddenly shoved deep into your ass forces you to let out a shocked squeal. Grunting in approval, the elemental withdraws her fingers, before sharply slapping your exposed ass, causing you to let out another shocked yelp. Almost immediately, this is followed by the sudden feeling of the head of Golix's fat cock prodding against your [pc.asshole+].
+			不管你是否有意服从，戈利克斯的手指突然深深插入你屁股的感觉迫使你发出一声惊叫。在发出赞许的咕哝声后，元素体收回了她的手指，然后猛地拍打了一下你暴露在外的屁股，又让你发出一声惊叫。几乎就在同时，你突然感觉到戈利克斯肥大的鸡巴顶在了你[pc.asshole+]上。
 		</p>
 		<p>
-			[oglixElemental.speech(You've been a bad [pc.girl],)] Golix grunts as she grabs hold of your [pc.hips+], [oglixElemental.speech(You need to be <i>punished</i>!)]
+			[oglixElemental.speech(你变成一个坏[pc.girl]了，)]戈利克斯咕哝着抓住你[pc.hips+]，[oglixElemental.speech(你需要接受<i>惩罚</i>！)]
 		</p>
 	#ELSE
 		<p>
-			[oglixElemental.speech(I'm going to break you,)] Golix growls in a hungry voice that's shifted to become every bit as strong and imposing as her physical appearance. Stepping around in front of you, she hefts her huge, stone cock in one hand, while using her free one to grab
+			[oglixElemental.speech(我要操死你，)]戈利克斯用饥渴的声音咆哮着，她的声音已经变得和她的外表一样强壮和威严。她走到你面前，一只手握住她那巨大如石的阴茎，另一只手则抓住
 			#IF(pc.hasHair())
-				 a fistful of your [pc.hair.].
+				一撮你的[pc.hair]。
 			#ELSEIF(pc.hasHorns())
 				#IF(pc.getTotalHorns()>1)
-					 one of your [pc.horns].
+					一个你的[pc.horns]。
 				#ELSE
-					 your [pc.horn].
+					你的[pc.horn]。
 				#ENDIF
 			#ELSE
-				 hold of your head.
+				你的手。
 			#ENDIF
-			 Yanking your head back so that you're forced to look up at her, the dominant elemental grunts, [oglixElemental.speech(Open wide, slut.)]
+			她把你的头往后拉，让你不得不抬头看她，然后发出一声闷哼，[oglixElemental.speech(张大嘴，荡妇。)]
 		</p>
 		<p>
-			Whether you intended to obey or not, the sensation of having your head pulled back like that forces you to let out a shocked gasp. Grunting in approval, the elemental pushes the head of her fat cock past your [pc.lips+], before grunting, [oglixElemental.speech(You've been a bad [pc.girl]. You need to be <i>punished</i>!)]
+			无论你是否有意服从，头被这样向后拉的感觉都会迫使你发出一声惊天动地的喘息。元素体认可地哼了一声，将她肥大的鸡巴头顶过你[pc.lips+]，又哼了一声，[oglixElemental.speech(你是个坏[pc.girl]。你需要<i>惩罚</i>！)]
 		</p>
 	#ENDIF
 	<p>
-		Before you can respond, Golix forcefully rams her fat stone cock as deep as possible
+		还没等你反应过来，戈利克斯就用力将她那肥硕的石头鸡巴
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 into your [pc.pussy+],
+			在你[pc.pussy+]
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 into your [pc.asshole+],
+			在你[pc.asshole+]
 		#ELSE
-			 down your throat,
+			在你喉咙
 		#ENDIF
-		 before starting to roughly piston her hips back and forth in an almost-mechanical fashion. Using her considerable strength to keep you pinned to the table, the elemental is encouraged to show you no mercy by her mistress, Oglix, who you hear moaning, [oglix.speech(That's it, Golix! Fuck that bad [pc.girl] good and hard!)]
+		越插越深，然后开始以近乎机械的方式前后粗暴地摆动臀部。她的主人奥格利克斯用巨大的力量将你压在桌子上，并鼓励她对你毫不留情，你还能听到她的呻吟声，[oglix.speech(就是这样，戈利克斯！狠狠地操那个坏[pc.girl]！)]
 	</p>
 	<p>
-		Managing to catch a sideways glance at the muscular, green-skinned succubus, you see her drop a hand down towards her groin and start to touch herself. A considerable number of the tavern's patrons join the green-skinned succubus in watching the show you're putting on for them, and right there in front of everyone, you submit to Golix as she roughly pounds you over the table...
+		你瞥了一眼这位肌肉发达的绿皮肤魅魔，只见她将一只手伸到下面，触摸着自己的下体。酒馆里相当多的顾客和绿皮肤的魅魔一起观看你为他们表演的节目，就在众目睽睽之下，你屈从于戈利克斯，任由她粗暴地把你推倒在桌子上……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_PUNISHMENT_AFTER_SEX"><![CDATA[
 	<p>
-		[oglix.speech(That's enough, Golix,)] you hear Oglix calling out. Immediately, the elemental steps back, sliding her thick, stone cock out of your well-fucked
+		[oglix.speech(够了，戈利克斯。)]你听到奥格利克斯叫道。元素体立刻后退一步，从你被一顿好操的
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 pussy.
+			小穴中抽出石质鸡巴。
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 asshole.
+			肛门中抽出石质鸡巴。
 		#ELSE
-			 throat.
+			喉咙中抽出石质鸡巴。
 		#ENDIF
-		 With a snap of her mistress's fingers, Golix transforms back into her passive, wisp-like form of a swirling cloud of energy, leaving you panting for breath over the table.
+		主人一打响指，戈利克斯就变回被动态的能量云，纤细的云雾还打着转，而你在桌子上喘着粗气。
 	</p>
 	<p>
-		[oglix.speech(Show's over,)] Oglix calls out to the crowd that'd gathered to watch Golix fucking you. As the voyeurs start to disperse and return to their tables, you hastily get your things back in order and return to the bar...
+		[oglix.speech(表演结束了，)]奥格利克斯向围观戈利克斯和你做爱的人群大叫。旁观者开始散去并回到了他们的餐桌前，你匆忙整理好东西，回到酒吧……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_PUNISHMENT_AFTER_SEX_END"><![CDATA[
 	<p>
-		Staggering back over to the bar, you lean against the counter and let out a weary sigh.
+		你踉踉跄跄地回到吧台，靠在柜台上疲惫地喘了口气。
 	</p>
 	<p>
-		[golix.speech(I enjoyed punishing you, [pc.name],)] Golix states, her voice having reverted to take on its prior, emotionless tone.
+		[golix.speech(我很享受惩罚你，[pc.name]，)]戈利克斯说道，她的声音恢复了之前的那种没有感情的语调。
 	</p>
 	<p>
-		[oglix.speech(And I had a bit of fun watching,)] Oglix adds, flashing you another of her big, toothy grins. Leaning forwards over the bar, she asks, [oglix.speech(So, what can Golix and I do for you now, [pc.name]?)]
+		[oglix.speech(我看着也觉得有点好玩，)]奥格利克斯冲你呲牙大笑，补充道。她向前倾身过吧台，[oglix.speech(那么，戈利克斯和我现在能为你做些什么，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Fucking a beer bitch: -->
 	
 	<htmlContent tag="FUCK_BEER_BITCH"><![CDATA[
 	<p>
-		Feeling like you could do with some fun, you tell Oglix that you want to fuck [npc.name], before handing over five beer tokens. Flashing you a smirk, the green-skinned succubus steps over to open a small door at the far end of the bar, before motioning for you to go through and saying, [oglix.speech(Go on through, and take as long as you want. Have fun!)]
+		你觉得自己可以找点乐子，于是告诉奥格利克斯你想操[npc.Name]，递上五枚啤酒代币。绿皮肤的魅魔向你傻笑了一下，然后走过去打开了酒吧最里面的一扇小门，然后示意你过去，并说道：[oglix.speech(去吧，想玩多久就玩多久。玩得开心！)]
 	</p>
 	<p>
-		[pc.Stepping] through the door, you find yourself in a narrow, tiled corridor which runs behind the bar. Under the dim light of several ancient-looking arcane bulbs, you see the other 
+		[pc.Stepping]过这扇门，你置身于酒吧后面一条铺着瓷砖的狭窄走廊。在几盏看似古老的奥术灯的昏暗灯光下，你看到
 		#IF(oglix.getBeerBitches().size()>2)
-			 half of the barrels which contain the beer-bitches, each one of which has a section cut out of it so that the bitch contained within can have her rear end stuck out and fully exposed to you. As you approach [npc.name], you hear each one of the sluts desperately moaning inside their barrel at the prospect of being the one who's about to be fucked.
+			每个装着奶啤妓的木桶，都有半边被切掉了一段，这样里面的奶啤妓就可以把后臀伸出来，完全暴露在你面前。当你靠近[npc.Name]时，你能听到每个荡妇都在自己的桶里急切地呻吟，希望自己就是那个即将被操的人。
 		#ELSEIF(oglix.getBeerBitches().size()>1)
-			 half of the barrels which contain the two beer-bitches, both of which have a section cut out of them so that the bitches contained within can have their rear ends stuck out and fully exposed to you. As you approach [npc.name], you hear [npc.herHim] desperately moaning inside [npc.her] barrel at the prospect of being the one who's about to be fucked.
+			每个装着奶啤妓的木桶，都有半边被切掉了一段，这样里面的奶啤妓就可以把后臀伸出来，完全暴露在你面前。当你靠近[npc.Name]时，你能听到[npc.herHim]在自己的桶里急切地呻吟，因为自己就是那个即将被操的人。
 		#ELSE
-			 half of the barrel which contains the beer-bitch, which has a section cut out of it so that the bitch contained within can have her rear end stuck out and fully exposed to you. As you approach [npc.name], you hear [npc.herHim] desperately moaning inside [npc.her] barrel at the prospect of being about to be fucked.
+			每个装着奶啤妓的木桶，都有半边被切掉了一段，这样里面的奶啤妓就可以把后臀伸出来，完全暴露在你面前。当你靠近[npc.Name]时，你能听到[npc.herHim]在自己的桶里急切地呻吟，因为自己即将被操。
 		#ENDIF
 	</p>
 	<p>
-		Coming to a halt behind [npc.name],
+		你在[npc.name]身后驻足，
 		#IF(npc.hasVagina())
-			 you see girlcum practically drooling out of her sopping-wet
+			看到女孩的爱液几乎要从她湿漉漉的
 			#IF(npc.hasPenisIgnoresDildo())
-				 pussy as her [npc.cock+] stiffens into an erection,
+				小穴中流出，[npc.cock+]勃起，
 			#ELSE
-				 pussy,
+				小穴中流出，
 			#ENDIF
 		#ELSEIF(npc.hasPenisIgnoresDildo())
-			 you see her [npc.cock+] stiffening into an erection,
+			看到她[npc.cock+]勃起，
 		#ELSE
-			 you look down at her [npc.ass+],
+			看到她[npc.ass+]，
 		#ENDIF
-		 and you hear her moaning from inside the barrel, [npc.speech(Yes! Fuck me! Whoever's back there, just fuck me already!)]
+		还听到她于桶中的呻吟：[npc.speech(是的！操我！无论来这里的是谁，都快来操我吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FUCK_BEER_BITCH_START"><![CDATA[
 	<p>
-		Just as eager to get started as she is, you [pc.step] forwards and give [npc.namePos] [npc.ass+] a good grope, and as she desperately moans within her barrel, you prepare to start fucking her...
+		你和她一样迫不及待，上前狠狠地摸了摸[npc.namePos][npc.ass+]，当她在桶里拼命呻吟时，你准备开始操她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FUCK_BEER_BITCH_BACK_OUT"><![CDATA[
 	<p>
-		Deciding that you're not up for doing this after all, you turn around and head back out through the door, leaving [npc.name] whining and panting in frustrated disappointment.
+		你决定还是不干了，于是转身从门外走了出去，留下[npc.name]在懊恼失望地抱怨和喘气。
 	</p>
 	<p>
-		[oglix.speech(You're done already?)] Oglix calls out in surprise as she sees you return to the bar. As you tell her that you changed your mind, she shrugs and offers, [oglix.speech(Oh well, can I get you a drink?)]
+		[oglix.speech(干完了？)]奥格利克斯看到你回到酒吧，惊讶地叫了起来。你告诉她你改变主意了，她耸耸肩，[oglix.speech(那，喝点什么不？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FUCK_BEER_BITCH_AFTER_SEX"><![CDATA[
 	<p>
-		Having had your fun with [npc.name], you [pc.step] back and give her ass a final slap, causing her to let out a desperately horny moan. With the sex now at an end, there's little else to do but return to the bar...
+		与[npc.name]尽兴之后，你来到后面，最后拍了一下她的屁股，让她发出一声饥渴的淫荡呻吟。性爱已经结束，除了回到酒吧，你几乎无事可做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FUCK_BEER_BITCH_AFTER_SEX_END"><![CDATA[
 	<p>
-		Getting your things back in order, you turn around and head back out through the door.
+		把东西整理好后，你转身从门外走了出去。
 	</p>
 	<p>
-		[oglix.speech(Had fun?)] Oglix calls out as she sees you return to the bar. As you respond in the positive, she gives you a wink and reveals, [oglix.speech(I could hear that slut moaning the entire time. I hope you fucked her good and hard! Now, can I get you a drink?)]
+		[oglix.speech(爽了么？)]当奥格利克斯看到你回到酒吧时，她喊道。当你做出肯定的回答时，她向你眨了眨眼睛，并透露了一些信息，[oglix.speech(我能听到那个荡妇一直在呻吟。我希望你把她操得又爽又狠。要喝点什么吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Finishing barrel quest: -->
 	
 	<htmlContent tag="BARRELS_DELIVERED"><![CDATA[
 	<p>
-		Deciding that now's the time to report your success to Oglix, you tell her that you managed to secure Kheiron's promise to deliver four of his barrels, and that you were forced to use the phrase, 'Golix says to be a good horsie', to get him to help. Grunting in amusement, the green-skinned succubus comments to her elemental, [oglix.speech(You hear that, Golix? You've trained Kheiron well.)]
+		你决定现在是向奥格利克斯报告你的成功的时候了，你告诉她，你成功地获得了喀戎的承诺，他会送来四个酒桶，而且你不得不用“戈利克斯说要做匹乖小马”这句话来让他帮忙。绿皮肤的魅魔高兴地哼了一声，向她的元素体评论道，[oglix.speech(听到了吗，戈利克斯？你把喀戎训练得很好。)]
 	</p>
 	<p>
-		[golix.speech(Yes, he really is a good horsie,)] the wisp replies, [golix.speech(I'll have to reward him the next time I see him.)]
+		[golix.speech(是了，他真是匹乖小马，)]精灵回复，[golix.speech(下次见到他，我一定要好好奖励他。)]
 	</p>
 	<p>
-		[oglix.speech(From the sound of it, that's going to be a lot sooner than expected,)] Oglix says, tilting her head to one side as she tries to listen to something over the din of the tavern's rowdy patrons. Nodding her head, she turns to Golix and says, [oglix.speech(That was definitely some noise coming from the old stables around back. I guess the four barrels are being delivered right now. Go on out there and cut out some holes to prepare those barrels for some new beer-bitches.)]
+		[oglix.speech(听起来，这比预期的要快得多。)]奥格利克斯说，她把头偏向一边，试图在酒馆喧闹的顾客声中听些什么。她点点头，转向戈利克斯说道，[oglix.speech(后面的旧马厩里传出了一些声音。我猜那四个桶现在正在运送中。去那边凿几个洞，准备装新奶啤妓吧。)]
 	</p>
 	<p>
-		Obeying her mistress, the wisp-like elemental suddenly emits a burst of light as she transforms into her active form. Where a swirling cloud of grey energy was a moment before, now stands a beautiful, stone-skinned succubus. Every bit as tall, muscular, and busty as her mistress, the active form of Golix strikes an imposing figure. Completely naked, you're able to see that the elemental lacks feminine genitalia, and instead has a huge, [oglixElemental.cockValue] cock hanging between her legs.
+		遵从主人的吩咐，丝缕的元素体在变身为主动形态时突然发出一阵光芒。刚才还是一团灰色能量漩涡的地方，现在矗立着一个美丽的石肤魅魔。和她的主人一样高挑、肌肉发达、身材丰满，戈利克斯的主动形态令人印象深刻。她全身赤裸，你可以看到她没有女性生殖器，而是在两腿之间悬挂着一根巨大的[oglixElemental.cockValue]阴茎。
 	</p>
 	<p>
-		[oglix.speech(Oh, and you can take some time to have fun with your 'good horsie', just don't be too long, ok?)] Oglix calls out after her elemental as she strides off towards a nearby door. Golix's fat cock twitches in excitement as she hears this, and without a word she swiftly departs.
+		[oglix.speech(哦，你可以花点时间和你的‘乖小马’玩玩，但别太久，好吗？)]奥格利克斯一边喊着她的元素体，一边大步向附近的一扇门走去。戈利克斯闻言，粗大的鸡巴兴奋地抽动，然后一言不发地迅速离开了。
 	</p>
 	<p>
-		[oglix.speech(As for you, [pc.name],)] Oglix says, turning to face you, [oglix.speech(You should stick around in case the barrels turn out to be no good and I need you to go and find new ones.)]
+		[oglix.speech(至于你，[pc.name])]奥格利克斯说着面向你，[oglix.speech(你应该留下来，以防这些木桶不好用，我需要你去找新的。)]
 	</p>
 	<p>
-		After you've agreed to hang out at the bar until Golix returns, Oglix leans forwards over the bar and starts to engage you in small talk while her elemental gets to work out back...
+		在你们同意在酒吧逗留到戈利克斯回来之后，奥格利克斯向前靠在吧台上，开始和你们闲聊，而她的元素体则在后面工作……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BARRELS_DELIVERED_NEXT"><![CDATA[
 	<p>
-		After a few minutes of chatting with Oglix, you start to notice that the tone of her voice is subtly shifting and starting to sound a little more excited. A minute later, and she suddenly lets out a low, breathless moan. Realising that an explanation is required, she smirks and reveals, [oglix.speech(I've got a strong mental bond with Golix, what with her being my elemental and all. She's having a lot of fun with her 'good horsie' at the moment, which is getting me pretty turned on... Fuck...)]
+		与奥格利克斯聊了几分钟后，你开始注意到她的语调在微妙地变化，听起来开始有点兴奋。一分钟后，她突然发出了低沉、喘不过气来的呻吟声。她意识到自己需要解释一下现状，于是笑着说道，[oglix.speech(我和戈利克斯有很深的精神联系，因为她是我的元素体。她现在正和她的‘乖小马’玩得很开心，这让我也很兴奋……他妈的……)]
 	</p>
 	<p>
-		As she's not wearing a bra, you're able to clearly see Oglix's large nipples stiffening beneath the fabric of her croptop. After letting out another moan, more sensual and desperate than the last, Oglix shakes her head and tries to keep her mind occupied by explaining, [oglix.speech(You know, Kheiron has a pretty complicated relationship with me and Golix. It's funny, because Golix is literally just a physical manifestation of my subconscious, but that dumb centaur is madly in love with her, while at the same time hating my guts.)]
+		由于她没有戴胸罩，你可以清楚地看到奥格利克斯的大乳头在罩衫的布料下变得坚挺。奥格利克斯又发出了一声呻吟，比上一次更加性感饥渴，她摇了摇头，试图用解释来让自己保持清醒，[oglix.speech(要知道，喀戎与我和戈利克斯之间的关系相当复杂。这很有趣，因为戈利克斯简直就是我潜意识的具体表现，但那个愚蠢的半人马却疯狂地爱上了她，同时又对我恨之入骨。)]
 	</p>
 	<p>
-		Curious to find out more about this strange three-way relationship, you ask Oglix how that's even possible, if Golix is essentially just a part of her. Letting out a loud laugh, the orc-like succubus booms, [oglix.speech(Damned if I know! I've told Kheiron everything I've said to you, but that doesn't stop the big idiot from treating me like dirt while doing anything Golix asks. Oh, and by anything, I mean <i>anything</i>... Oh, and Kheiron's love of Golix isn't even the strangest part! The thing is, Golix loves him almost as much as he does her! And I hate that big, dumb horse! So how does that work?)]
+		你对这种奇怪的三角关系感到好奇，想再多了解一下，便询问奥格利克斯，如果戈利克斯本质上只是她的一部分，那这是如何实现的。绿皮魅魔放声大笑，她咆哮道，[oglix.speech(我他妈的哪知道！我已经告诉喀戎我对你说的一切，但这并没有阻止那个大傻瓜对我不屑一顾，同时却对戈利克斯言听计从。哦，顺便说一句，任何事情，我是指<i>任何事情</i>……哦，还有，喀戎对戈利克斯的爱甚至不是最奇怪的部分！事实上，戈利克斯对他的爱几乎和他对她的爱一样多！而我讨厌那个大笨马！这是怎么回事？)]
 	</p>
 	<p>
-		Not able to offer an answer, you concede that the relationship between Oglix, Golix, and Kheiron is possibly the strangest and hardest to explain that you've encountered. At that moment, you assume that the elemental lovebird must have just reached an orgasm, as Oglix suddenly grabs hold of the counter and tries to suppress a deep, shuddering moan. After taking a few moments to catch her breath, she grins and pants, [oglix.speech(Finally, she's done with him...)]
+		你无法回答，只好承认奥格利克斯、戈利克斯和喀戎之间的关系可能是你遇到过的最奇怪、最难解释的关系。这时，你猜想这只元素体爱情鸟一定刚刚达到高潮，因为奥格利克斯突然抓住了柜台，并努力压抑着低沉、颤抖的呻吟声。喘息片刻后，她咧开嘴笑了笑，然后嘘了一声，[oglix.speech(最终，她和他结束了……)]
 	</p>
 	<p>
-		Sure enough, a moment later and the familiar figure of Golix returns, her cock covered in a thick layer of what looks like a slimy mixture of cum and saliva. Revealing her strength via the ease with which she's carrying one of the huge barrels, the elemental shows her mistress that she's cut holes for a beer-bitch's tits and ass out of it. Nodding in approval, Oglix asks, [oglix.speech(Had fun out there with your horsie?)]
+		果然，片刻之后，戈利克斯熟悉的身影回来了，她的鸡巴上覆盖着一层厚厚的粘糊糊的精液和唾液混合物。她轻松地扛起一个巨大的木桶，向女主人展示她的力量，她已经在木桶上挖出了奶啤妓乳房和屁股的洞。奥格利克斯点头赞许，并问道：[oglix.speech(和你的小马在外面玩得开心吗？)]
 	</p>
 	<p>
-		[golix.speech(Yes, mistress,)] Golix replies, [golix.speech(He gags far less than he used to. It won't be long until I've finished training him.)]
+		[golix.speech(是的主人，)]戈利克斯回复[golix.speech(他插科打诨的次数比以前少多了。用不了多久，我就能完成对他的训练。)]
 	</p>
 	<p>
-		At her mistress's command, Golix then proceeds to use a blast of telekinetic force to knock out a hole in the wall beside the current beer-bitch, before placing the barrel half-way through this opening. Using telekinesis once again, she patches up the edges so as to make the barrel fit snugly in the gap, before beginning to repeat this process with the other three barrels. Before long, Golix has completely finished, and so transforms back into her wisp form, before telling Oglix in a voice loud enough for you to overhear, [golix.speech(Mistress, Kheiron said that he expects us to resume the daily meetings as a reward for giving us these barrels.)]
+		在主人的命令下，戈利克斯接着用念动力在现在的奶啤妓旁边的墙壁上打出一个洞，然后把木桶从这个洞口放进去一半。她再次用念动力修补了边缘，使木桶能紧贴在缝隙中，然后开始对其他三个木桶重复这一过程。没过多久，戈利克斯就完成了全部工作，于是变回了她的缕空形态，然后用足以让你听到的声音告诉奥格利克斯，[golix.speech(主人，喀戎说，他希望我们恢复每天的会议，作为给我们这些木桶的奖励。)]
 	</p>
 	<p>
-		[oglix.speech(Oh did he now?)] Oglix replies, before crossing her arms and frowning at Golix. Flashing her elemental a suspicious glance, she asks, [oglix.speech(And was that Kheiron's idea, or yours? No, don't answer, I know that you want it as much as he does... Fine... We can start doing those meetings again...)]
+		[oglix.speech(哦，他现在有吗？)]奥格利克斯回答道，然后双手交叉，皱着眉头看着戈利克斯。她狐疑地看了元素一眼，问道：[oglix.speech(那是喀戎的主意，还是你的主意？不，别回答，我知道你和他一样想要……好吧……我们又可以开始开那些会了……)]
 	</p>
 	<p>
-		Turning to look at you once again, Oglix smirks and offers, [oglix.speech(As a reward for getting these barrels for me, I'll let you tag along and watch these meetings between Kheiron and Golix. Sneak around to the old stables around the back of this tavern between six and seven in the morning if you want to see what all of this 'good horsie' talk is about. Oh, and don't be seen; Kheiron hates people knowing what Golix does to him.)]
+		奥格利克斯再次转过身来看着你，微笑着说道，[oglix.speech(作为你帮我弄到这些木桶的奖励，我让你跟在我后面，看喀戎和戈利克斯的会面。如果你想看看这些‘乖小马’是怎么一回事，就在早上六点到七点之间溜到酒馆后面的旧马厩去。哦，别被人看见；喀戎讨厌别人知道戈利克斯对他做了什么。)]
 	</p>
 	<p>
-		With the barrels now installed, and an unusual reward having been promised to you, all that's left to discuss is the matter of finding some new beer-bitches...
+		现在木桶已经安装完毕，你们也得到了不同寻常的奖励，剩下要讨论的就是寻找新的奶啤妓了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BARRELS_DELIVERED_END"><![CDATA[
 	<p>
-		Although there are now five barrels behind the bar, only one is currently occupied, which is a fact that you point out to Oglix. Telling her that you're willing to use your slaver license to obtain new beer-bitches for her, you ask her where she thinks you should go to hunt for promising candidates.
+		虽然吧台后面现在有五个酒桶，但目前只有一个有人，你向奥格利克斯指出了这一事实。你告诉她，你愿意用贩奴许可为她找新的奶啤妓，并问她认为应该去哪里寻找有前途的人选。
 	</p>
 	<p>
-		[oglix.speech(Probably best to go down the alleyways outside this tavern. There's loads of criminals prowling about out there, all of which deserve worse than becoming a beer-bitch,)] the muscular succubus replies, [oglix.speech(It doesn't really matter what they're like when you bring them to me; I'll get them properly transformed into a beer-bitch before giving them their new life.)]
+		[oglix.speech(最好还是去酒馆外面的小巷子里。那里有很多罪犯在游荡，他们都该成为奶啤妓，)]肌肉发达的魅魔回答道，[oglix.speech(你把它们带到我这里的时候，它们是什么样子并不重要；我会把它们好好改造成奶啤妓，然后再给它们新的生活。)]
 	</p>
 	<p>
-		After you've told Oglix that you'll be bringing her some new beer-bitches soon, she grins and leans forwards over the bar, giving you a clear view of her considerable cleavage as she teases, [oglix.speech(You've turned out to be pretty reliable. I like that. You know, I don't say this to just anyone, but I wouldn't mind fucking you some time.)]
+		在你告诉奥格利克斯你很快就会给她带来一些新的奶啤妓之后，她咧嘴一笑，身体前倾，越过吧台，让你清楚地看到她那可观的乳沟，她挑逗你，[oglix.speech(你变得非常可靠。我喜欢。你知道，我不会对任何人说这些，但我不介意和你上床。)]
 	</p>
 	<p>
-		With the orc-like succubus giving you a hungry look, you wonder what to say next...
+		兽人般的魅魔向你投来饥渴的目光，你思索接下来该说些什么……
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsMinorGood(After defeating muggers or prostitutes in the nearby alleyways, you'll now able to send up to four of them to Oglix to permanently become beer-bitches!)]
+		[style.italicsMinorGood(在附近的小巷中击败歹徒或妓女后，你可以送四个人给奥格利克斯，让她们永久成为奶啤妓！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- New bitch delivered: -->
 	
 	<htmlContent tag="BEER_BITCH_DELIVERED"><![CDATA[
 	<p>
-		Thinking that this [npc.race] deserves to spend the rest of [npc.her] days locked up in a barrel in Oglix's tavern, you grab hold of [npc.herHim] and half-pull, half-drag [npc.herHim] through the alleyways all the way to 'The Crossed Blades'. Not realising what's about to happen, and still worn out from your fight, [npc.name] doesn't put up much of a resistance, allowing you to lead [npc.herHim] through the entrance, past the noisy tables, and all the way to the bar.
+		你觉得这个[npc.race]余生都被困在奥格利克斯酒馆的木桶里也是自食其果，于是抓住[npc.herHim]，半拉半拖地穿过小巷，一直到了“十字利刃”。[npc.name]还没意识到即将发生什么，又因为刚刚战斗过没什么力气，并没有太多抵抗，任你领着进了门，穿过嘈杂的酒桌，一直到了吧台。
 	</p>
 	<p>
-		Seeing what it is that you've brought her, Oglix flashes you a delighted grin and asks, [oglix.speech(Is this slut going to be a new beer-bitch?)]
+		奥格利克斯看到你带来的家伙，朝你笑了笑，问道，[oglix.speech(就是这个骚货要做新的奶啤妓？)]
 	</p>
 	<p>
-		Replying in the positive, you push [npc.name] towards Oglix, who happily grabs hold of [npc.herHim] and uses her immense strength to pull [npc.herHim] right over the bar. Telling Golix to assume her active form and watch the bar while she's gone, Oglix turns to you and says, [oglix.speech(Come on, [pc.name], you can watch as I turn this slut into a beer-bitch!)]
+		你表示肯定，接着把[npc.name]推向了奥格利克斯，对方开开心心地抓住了[npc.herHim]，用自己的巨力把[npc.herHim]拉过了吧台。奥格利克斯让戈利克斯转为主动状态，帮她看着吧台，随后扭过头来说道，[oglix.speech(来呀，[pc.name]，你直接看着我把这婊子变成奶啤妓吧！)]
 	</p>
 	<p>
-		Not wanting to miss out on this, you head on around to the other side of the bar and follow Oglix as she pulls [npc.name] after her into the narrow corridor that runs behind the bar. Closing the door after you, you watch as the muscular, green-skinned succubus roughly tears off [npc.namePos] clothing and pins [npc.herHim] up against the wall. Finally realising that [npc.sheIs] in a bad situation, [npc.name] starts to struggle against Oglix, but the orc-like succubus is far too strong for [npc.herHim], and easily keeps [npc.herHim] pinned in place.
+		你并不想错过这个热闹，于是跟着奥格利克斯向吧台的另一端走去，而她则拉着身后的[npc.name]，进了吧台后面一处狭窄的走廊。你关上门，只见那壮硕的绿皮魅魔一把撕碎了[npc.namePos]的衣物，把[npc.herHim]按在了墙上。[npc.name]这才意识到事情不对劲，开始奋力挣扎，想从奥格利克斯手中逃走，但那兽人一样的魅魔实在是力气太大，轻轻松松就把[npc.herHim]按在了原地。
 	</p>
 	<p>
-		[oglix.speech(Hand me those potions over there, [pc.name],)] Oglix says, pointing to a couple of bottles that are sitting on a nearby shelf. Flashing you a rather evil-looking grin, she reveals, [oglix.speech(I made those in preparation for this. They'll get this slut turned into a beer-bitch real quick.)]
+		[oglix.speech(把那边的药水递给我，[pc.name]，)]奥格利克斯指着一旁架子上的几瓶药水说，接着向你投来一抹邪笑，解释道，[oglix.speech(是我为了这个专门做的。一瞬间就能把这骚货变成奶啤妓。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEER_BITCH_DELIVERED_TF_START"><![CDATA[
 	<p>
-		Handing Oglix the nearby potions, you watch as the muscular succubus forces [npc.name] to drink every drop. Grunting into [npc.her] [npc.ear(true)], Oglix teases, [oglix.speech(That's it, drink it all down... You'll be a horny beer-bitch before you know it, then you can enjoy your new life of being locked up in this barrel and getting milked and fucked all day.)]
+		你把旁边的药剂递给了奥格利克斯，看着那身材壮硕的魅魔把药水给[npc.name]全部灌了下去。奥格利克斯在[npc.her]的[npc.ear(true)]便低声调戏道，[oglix.speech(这就对了，全都喝下去……你会不知不觉间变成一个饥渴难耐的奶啤妓，接着就好好享受着被锁在木桶里，永远被榨乳和狠操的生活吧。)]
 	</p>
 	<p>
-		The response which [npc.name] starts to voice is suddenly cut off as the transformations start to take effect, and [npc.her] words morph into a desperately-horny moan 
+		[npc.name]刚要回应就忽然停了下来，转化开始起效，[npc.her]的言语逐渐变成了急不可耐的呻吟，
 		#IF(!npc.isFeminine())
-			 as [npc.her] body and face rapidly undergo a feminising transformation, before her
+			身体和面部也迅速女性化，接着
 		#ELSE
-			 as her
+			接着
 		#ENDIF
-		 breasts swell and expand to a massive size. Grabbing the [npc.race]'s tits in both hands, Oglix roughly squeezes them, causing their huge, puffy nipples to start leaking milk that looks exactly like beer.
+		胸部也胀得巨大。奥格利克斯两手抓住[npc.race]的奶子，狠狠地揉捏，那又大又软的乳头里顿时流出了啤酒一样的乳汁。
 	</p>
 	<p>
-		[oglix.speech(You liking this, slut?)] Oglix asks, trying to determine if the mental transformations have taken hold.
+		[oglix.speech(喜欢这个吗，荡妇？)]奥格利克斯问道，试图确定精神转化是否已经发生。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEER_BITCH_DELIVERED_TF_END"><![CDATA[
 	<p>
-		Much to the orc-like succubus's satisfaction, the [npc.race] lets out a submissive, horny squeal and exclaims, [npc.speech(Yes! Please, tie me up and milk me! Come on, fuck me while you do it! I <i>need</i> this!)]
+		让这个兽人般的魅魔高兴的是，[npc.name]服从而又性感地叫着，[npc.speech(是的！请！把我绑起来榨干我！来吧！狠狠地操我！这就是我<i>想</i>要的！)]
 	</p>
 	<p>
-		[oglix.speech(You'll get what you want, slut,)] Oglix replies, [oglix.speech(but first you're going to get a new name. From now on you're called '[#npc.getGenericName()]'. Get it? What's your name?)]
+		[oglix.speech(如你所愿，骚货，)]奥格利克斯回应道，[oglix.speech(不过你得先取个新名字。从此以后你就叫‘[#npc.getGenericName()]’了，明白吗？你叫什么？)]
 	</p>
 	<p>
-		[npc.speech(I'm [#npc.getGenericName()]!)] the [npc.race] obediently moans.
+		[npc.speech(我是[#npc.getGenericName()]！)][npc.her]顺从地说。
 	</p>
 	<p>
-		[oglix.speech(Good slut,)] Oglix grunts, [oglix.speech(Now, do you want to get locked up in this barrel and spend your days with your fat tits on display to the tavern as they're milked? You want to get fucked by strangers and live up to your new name, [#npc.getGenericName()]?)]
+		[oglix.speech(真淫荡，)]奥格利克斯低声道，[oglix.speech(好了，告诉我，你愿意被锁在酒桶里，漏出你那对大奶子被挤奶吗？你愿意随便被陌生人操，绝不辜负这个新名字吗，[#npc.getGenericName()]？)]
 	</p>
 	<p>
-		[npc.speech(Yes! Please, I want it!)] [npc.name] desperately begs, revealing that the potions have well and truly altered her mind and made her long to be bound in the barrel while being milked and fucked.
+		[npc.speech(是的！求求你！给我吧！)][npc.name]的渴求透露出药水确实改变了她的思想，让她渴望被绑在木桶里，一边挤奶一边被操。
 	</p>
 	<p>
-		Happy to give [npc.name] what she wants, Oglix prises open the barrel that's to become the [npc.race]'s new home, and with surprising care to make sure that she's in a comfortable position, the orc-like succubus pushes her new slave inside and locks the barrel shut behind her. With her ass hanging out of the rear of the barrel, and with Golix hooking up her tits to a milking machine, [npc.name] has very quickly ended up in exactly the same state as the original beer-bitch.
+		既然能让[npc.Name]如愿，奥格利克斯自然很开心，接着就打开了即将成为那[npc.race]新归宿的木桶，那兽人样子的魅魔小心翼翼地保证新努力姿势舒服，随后就把她推了进去，将木桶牢牢锁住。奴隶的屁股从木桶的后面漏出来，戈利克斯又把她的奶子连在挤奶机上，这样一来[npc.name]就与原来的奶啤妓别无二致了。
 	</p>
 	<p>
-		[oglix.speech(Comfortable in there, [npc.name]?)] Oglix asks, and after the [npc.race] has let out a muffled response in the positive, she teases, [oglix.speech(This is your new life, [npc.name]. Your beer-milk is going to make me lots of money, and with the amount of customers you'll help to attract, you're going to be fucked countless times every day by horny drunks.)]
+		[oglix.speech(里面还舒服吗，[npc.name]？)]奥格利克斯问完，那[npc.race]就开开心心地唔咕了一声，她继续调笑道，[oglix.speech(这就是你的全新生活了，[npc.name]。你的奶啤会让我大赚一笔的，还有新引来的一堆客人，之后每天你都会被来解决性欲的醉汉操上无数次的。)]
 	</p>
 	<p>
-		Giving [npc.namePos] ass a sharp slap, Oglix grins at you and asks, [oglix.speech(So, you want to be the first to fuck her like this, [pc.name]? Seeing as you were the one to bring her here, I think it's only fair to offer you the first go with her.)]
+		奥格利克斯狠狠地抽了一下[npc.namePos]的屁股，笑着问你，[oglix.speech(所以说，想不想做第一个这样操她的家伙，[pc.name]？毕竟是你带她来的，让你享受第一次才比较合适。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEER_BITCH_DELIVERED_FUCK"><![CDATA[
 	<p>
-		Deciding to take Oglix up on her offer, you tell her that you'd like to fuck [npc.name]. Flashing you a smirk, the green-skinned succubus steps past you and heads on over to the door at the far end of the corridor, and before heading back out to the bar, calls out, [oglix.speech(Take your time, [pc.name]. Enjoy breaking that [npc.name] in.)]
+		你决定接受奥格利克斯的建议，告诉她你想操[npc.name]。那绿皮魅魔闪过一抹窃笑，接着就朝着走廊尽头的门走去，等回到了吧台旁，她喊道，[oglix.speech(慢慢来，[pc.name]。享受调教[npc.name]的过程吧。)]
 	</p>
 	<p>
-		As Oglix makes her exit, you turn to look at the [npc.race]'s exposed ass, and as you [pc.step] up behind her,
+		奥格利克斯退后，把屁股展示给你看。接着你绕到她身后，
 		#IF(npc.hasVagina())
-			 you see girlcum practically drooling out of her sopping-wet pussy, and
+			看到爱液从她湿透的小穴中滴下。
 		#ELSEIF(npc.hasPenisIgnoresDildo())
-			 you see her [npc.cock+] stiffening into an erection, and
+			看到她[npc.cock+]勃起着。
 		#ENDIF
-		 you hear her moaning from inside the barrel, [npc.speech(Yes! Fuck me! Please, just fuck me already!)]
+		她在桶里呻吟说，[npc.speech(来，操我！现在就来操我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEER_BITCH_DELIVERED_DECLINE"><![CDATA[
 	<p>
-		Not interested in fucking [npc.name], you turn down Oglix's offer and tell her that you'll head back out to the bar with her. Shrugging off your refusal, the succubus grunts, [oglix.speech(Some drunk's going to have her first time then.)]
+		你并不想操[npc.name]，于是拒绝了奥格利克斯的建议，告诉她你想跟她一起回吧台。那魅魔听后也没什么反应，只是咕哝道，[oglix.speech(那看来第一次要让给某个醉汉了。)]
 	</p>
 	<p>
-		A few moments later, and you're back at the bar, looking over at [npc.namePos] [npc.cupSize]-cup tits as they're greedily sucked on by the milking machine. Turning to see what it is you're looking at, Oglix gives you a big, toothy grin and asks, [oglix.speech(You didn't want to fuck her, but perhaps you'd like a pint of her beer?)]
+		过了一会儿，你们就到了吧台旁，远远看着[npc.namePos][npc.cupSize]罩杯的奶子正被挤奶器狠狠地吮吸着。奥格利克斯扭头沿着你的目光看去，接着咧嘴笑了起来，问道，[oglix.speech(虽说你不想操她，但说不定想来杯她的啤酒呢？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Flirting with Oglix: -->
 	
 	<htmlContent tag="FLIRTING"><![CDATA[
 	<p>
-		With Oglix having expressed her desire to have sex with you, and wanting the same thing she does, you offer a couple of flirtatious remarks to the muscular, orc-like succubus. Lacking any form of subtlety, she lets out a deep, booming laugh as she hears what it is you're saying, before flashing you a toothy grin and reaching up to grab hold of her tie-up crop top. In one swift motion, Oglix pulls on her clothing's knot, causing the fabric to fall away and flash both you and any nearby patrons her massive, [oglix.cupSize]-cup breasts. Pushing out her chest to make her giant tits look even larger, she grunts in amusement, [oglix.speech(I'm not one for flirting. Like what you see? Then let's go back to my room so I can fuck you.)] 
+		奥格利克斯已经表达了她想和你做爱的愿望，而你也想和她做同样的事，于是你对这个肌肉发达、像兽人一样的魅魔说了几句调情的话。当她听到你说的话时，她没有任何含蓄，发出了低沉而洪亮的笑声，然后向你露出一个露齿的笑容，伸手抓住了她的领带式上衣。奥格利克斯一下子拉住了衣服的绳结，使布料掉了下来，让你和附近的顾客都看到了她[oglix.cupSize]罩杯的巨乳。她挺起胸膛，让自己的巨乳看起来更大，并发出愉悦的咕哝声[oglix.speech(我不喜欢调情。知道吗？那就回我房间去，让我干你。)] 
 	</p>
 	<p>
-		Finding your eyes drawn to Oglix's exposed chest, you see that on each of her huge, wide breasts she's got a massive, dark green nipple, surrounded by proportionally-huge areolae. Each of her nipples have been pierced, and through them she's wearing golden barbells. Shamelessly leaving her croptop untied, the tall, green-skinned succubus places a hand
+		你发现自己的目光被奥格利克斯裸露的胸部吸引住了，只见她巨大而宽阔的乳房上各有一个巨大的深绿色乳头，周围环绕着成比例的巨大乳晕。她的每个乳头上都有穿孔，穿孔处还戴着金色的乳钉。这位身材高挑、皮肤翠绿的魅魔厚颜无耻地解开上衣，将手放在
 		#IF(oglix.isVisiblyPregnant())
-			 on her pregnant belly and impatiently asks, [oglix.speech(So, you going to come around back to my room and get fucked or what? Don't tell me that the pregnancy is putting you off.)]
+			她的大肚子，不耐烦地问[oglix.speech(那么，你是要回我房间来做爱还是怎么着？别告诉我是怀孕让你不想干了。)]
 		#ELSE
-			 on her wide hips and impatiently asks, [oglix.speech(So, you going to come around back to my room and get fucked or what? I haven't got all day, you know.)]
+			她宽大的臀部上，不耐烦地问道，[oglix.speech(那么，你是要回我房间来做爱还是怎样？我可没那么多时间。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLIRTING_DECLINED"><![CDATA[
 	<p>
-		Having second thoughts, and not wanting to burn any bridges, you turn down Oglix's offer in the most diplomatic manner you can. Despite your efforts to prevent a souring of your relations, however, a furious look settles on the muscular succubus's face as she hears your rejection. Angrily tying up her croptop to conceal her breasts, she snaps,
+		考虑再三，你也不想殃及池鱼，于是以最圆滑的方式拒绝了奥格利克斯的好意。尽管你努力防止你们的关系恶化，但当肌肉发达的魅魔听到你的拒绝时，她的脸上还是露出了愤怒的表情。她怒气冲冲地系好遮住胸部的长裙，咆哮道，
 		#IF(oglix.isVisiblyPregnant())
-			 [oglix.speech(I knew it! You don't want to fuck me because I'm pregnant! Well, you're the one to blame for it, you know?!)]
+			[oglix.speech(我就知道！你不想跟我做爱是因为我怀孕了！那都怪你，知道吗？！)]
 		#ELSE
-			 [oglix.speech(Why are you wasting my time?!)]
+			[oglix.speech(你为什么要浪费我的时间？！)]
 		#ENDIF
 	</p>
 	<p>
-		As you start to reply, Oglix holds up a hand to silence you and shakes her head, before crossing her arms and grunting, [oglix.speech(Well, whatever. It's your loss. Now are you going to order a drink or what?)]
+		你刚要回答，奥格利克斯举起一只手让你闭嘴，然后摇了摇头，接着双手交叉，哼了一声，[oglix.speech(随便吧。这是你的损失。现在你要不要点一杯饮料？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLIRTING_BEDROOM"><![CDATA[
 	<p>
-		With Oglix offering you exactly what it is you wanted, you readily accept her offer. After licking her lips and flashing you a hungry grin, the muscular succubus, still with her breasts fully on display, turns to her elemental and calls out, [oglix.speech(Golix! Take on your active form and watch the bar for me while I'm fucking [pc.name].)]
+		奥格利克斯为你提供了想要的东西，你欣然接受了她的提议。她舔了舔嘴唇，对你露出饥渴的笑容，然后转过身来对着她的元素体喊道：[oglix.speech(戈利克斯！在我和[pc.name]做爱的时候，用你的主动形态帮我看着吧台。)]
 	</p>
 	<p>
-		[golix.speech(Yes, Mistress,)] Golix obediently replies, and in a brief flash of light, transforms from a swirling ball of floating energy into her stone-skinned succubus form.
+		[golix.speech(是的主人。)]戈利克斯顺从地回答道，并在短暂的闪光中从一个漂浮的能量漩涡球变成了她的石肤魅魔形态。
 	</p>
 	<p>
-		[oglix.speech(Follow me, [pc.name],)] Oglix commands, before walking out from behind the bar and striding over to the nearby door that's marked as leading into the 'VIP area'. As you cross the tavern, numerous patrons cast glances at Oglix's huge, green breasts as they bounce and sway in a hypnotic rhythm, before flashing you envious glares. Unlocking the door, the muscular succubus grunts, [oglix.speech(My room's back here. Hurry up, [pc.name], I'm getting wet at the thought of making you moan.)]
+		[oglix.speech(跟我来，[pc.name]，)]奥格利克斯命令道，然后从吧台后面走出来，大步走向旁边标有通往“贵宾区”的门。当穿过酒馆时，许多顾客都向奥格利克斯那对巨大的绿色乳房投去目光，它们随着催眠的节奏跳动摇摆，然后向你投来羡慕的目光。打开门锁，肌肉发达的魅魔咕哝着，[oglix.speech(我的房间在后面。快点，[pc.name]，一想到要让你呻吟，我就湿了。)]
 	</p>
 	<p>
-		Following in Oglix's footsteps, you're led down a short corridor and through another locked door, before finding yourself in what appears to be a very small, self-contained apartment. Locking the door after you, Oglix grabs you by the [pc.hand(true)], before leading you through the hallway and into her bedroom. As you enter, you can't help but look around in surprise as you see how girly the tall, muscular succubus's bedroom is. Light pink wallpaper, heart-shaped cushions, and stuffed toys sitting on shelves decorated with arcane fairy lights are not quite what you expected of Oglix's bedroom, given her lack of feminine mannerisms or appearance.
+		跟随着奥格利克斯的脚步，你被带进了一条不长的走廊，穿过另一扇上锁的门，然后来到了一间看似很小的独立公寓里。奥格利克斯在你锁门后抓住你的[pc.hand(true)]，然后带你穿过走廊，进入她的卧室。当你走进去时，你不禁惊讶地环顾四周，因为你看到这个身材高大、肌肉发达的魅魔的卧室是如此的少女。浅粉色的墙纸、心形的靠垫，还有摆放在架子上的毛绒玩具，架子上还装饰着神秘的仙女灯，这些都与你想象中的奥格利克斯的卧室不太一样，因为她没有女性化的举止或外表。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLIRTING_BEDROOM_SEX_START"><![CDATA[
 	<p>
-		[oglix.speech(Got something to say about how my room looks?)] the succubus grunts, having detected your surprise at the room's girly décor. This turns out to be a trap, however, for as you open your mouth to offer a reply, Oglix dominantly grabs hold of you and pulls you into a forceful kiss. Pressing her [oglix.lips+] against yours, the muscular succubus uses her considerable strength to pull you in tight against her body,
+		[oglix.speech(对我房间的样子有什么要说的吗？)]然而，这只是一个陷阱，因为当你张开嘴准备回答时，奥格利克斯霸道地抓住了你的手，把你拉进了一个强吻中。这个肌肉发达的魅魔将[oglix.lips+]紧紧贴在你的嘴唇上，用她巨大的力量迫使你与她紧紧相贴，
 		#IF(oglix.isVisiblyPregnant())
-			 and while making sure not to put too much pressure on her rounded belly, she squishes you into her [oglix.cupSize]-cup breasts.
+			在确保不会对她圆滚滚的肚子造成太大压力的同时，她把你挤进她[oglix.cupSize]杯的乳房里。
 		#ELSE
-			 squishing you into her [oglix.cupSize]-cup breasts in the process.
+			期间还把你挤进她[oglix.cupSize]杯的乳房里。
 		#ENDIF
 	</p>
 	<p>
-		Finding yourself powerless to do anything other than play along with what Oglix wants, you part your lips and allow her thick tongue to eagerly explore the insides of your mouth. Letting out muffled, erotic grunts, the orc-like succubus displays her dominance in an additional manner by forcefully groping your body as she grinds her huge, muscular body against yours. Clearly enjoying herself, she keeps this up for a good few minutes, before finally pulling back with a hungry moan and declaring, [oglix.speech(You taste good! Now let's see how good you are to fuck!)]
+		你发现自己无能为力，只能顺着奥格利克斯的意思做，于是你张开嘴唇，让她的粗舌急切地探索你的口腔内部。兽人般的魅魔发出色情的闷哼声，一边用巨大的肌肉摩擦你的身体，一边强行摸索你的身体，以显示她的支配力。她显然乐在其中，这样的动作持续了好几分钟，最后带着饥渴的呻吟声抽开身体，宣布道：[oglix.speech(你的味道很好！现在让我们看看你操起来有多舒服！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLIRTING_BEDROOM_SEX_START_DOM"><![CDATA[
 	<p>
-		Not wanting to be dominated by this muscular succubus, you take the initiative and tell her that you'll be taking charge from here. Oglix gives you a puzzled look for a moment, before letting out a deep, booming laugh and asking, [oglix.speech(What makes you think I'm going to submit to you?! You're not serious, are you?!)]
+		你不想被这个肌肉发达的魅魔支配，于是主动告诉她，从现在开始由你主导。奥格利克斯不解地看了你一会儿，然后发出低沉而洪亮的笑声，问道：[oglix.speech(你凭什么认为我会臣服于你？你不是认真的吧？！)]
 	</p>
 	<p>
-		Catching her off-guard, you take hold of the orc-like succubus's waist, and before she can react, you pull her into you and plant a quick kiss on her [oglix.lips+]. Immediately, her cheeks flush into a darker shade of green, and in an attempt to conceal her embarrassment, she steps back and declares,
+		你趁兽人魅魔不备，搂住她的腰，在她还没反应过来之前，把她拉到自己身上，在她[oglix.lips+]上快速亲了一口。她的脸颊立刻变成了深绿色，为了掩饰尴尬，她向后退了一步，并宣布道：
 		#IF(oglix.isVisiblyPregnant())
-			 [oglix.speech(You've done it now! Fine, I'll submit to you, but only if you can beat me in a wrestling match! Oh, and you'd better be careful of my tummy!)]
+			[oglix.speech(你现在做到了！好吧，我屈服了，但前提是你得在摔跤比赛中打败我！对了，你最好小心我的肚子！)]
 		#ELSE
-			 [oglix.speech(You've done it now! Fine, I'll submit to you, but only if you can beat me in a wrestling match!)]
+			[oglix.speech(你现在做到了！好吧，我屈服了，但前提是你得在摔跤比赛中打败我！)]
 		#ENDIF
 	</p>
 	<p>
-		Without giving you any chance to prepare, the tall, muscular succubus throws her entire body at you in a hasty attempt to smother you in her massive, [oglix.cupSize]-cup breasts. Although such a fate wouldn't be altogether to your disliking, you have other things planned, and so swiftly sidestep Oglix's charge. Thanks to your considerable skill in martial arts, you're able to use her weight against her to throw her down onto
+		这个高挑又肌肉发达的魅魔没有给你任何准备的机会，就把整个身体向你扑来，妄图用她巨大的[oglix.cupSize]罩杯乳房把你闷死。虽然你并不怎么讨厌这样，但你还有其他打算，因此迅速躲开了奥格利克斯的冲锋。多亏了你精湛的武艺，你可以利用她的体重将她摔
 		#IF(oglix.isVisiblyPregnant())
-			 her bed, making sure to cause her to land on her back so as to protect her pregnant belly.
+			在床上，确保让她仰面着床，以保护她的孕肚。
 		#ELSE
-			 her bed.
+			在床上。
 		#ENDIF
-		 Not giving the succubus any time in which to recover, and jump up onto the mattress and grab hold of her arms, causing the wooden frame to creak under your combined weight.
+		你不给魅魔任何恢复的时间，跳上床垫，抓住她的胳膊，使木架在你们的共同重量下发出咯吱咯吱的响声。
 	</p>
 	<p>
-		[oglix.speech(Hey! That's not fair!)] Oglix protests, but as she was the one to declare this to be a wresting match, and as she tried to get an unfair blow in, you show her no mercy, and in a few moves you've got her restrained in a full body lock. Grunting and heaving, the muscular succubus tries to wriggle free for a moment, before letting out a booming laugh and grunting in amusement, [oglix.speech(Fine, you got me... I guess I don't mind letting you take the lead. Now let me go...)]
+		[oglix.speech(嘿！那不公平！)]奥格利克斯提出抗议，但因为是她宣布这是一场摔跤比赛，而且她还试图打出不公平的一击，所以你对她毫不留情，没几下就把她全身锁住。肌肉发达的魅魔哼哼唧唧地起伏着，试图挣脱片刻，然后发出轰隆隆的笑声，兴致勃勃地咕哝道：[oglix.speech(好吧，你打倒我了……我想我不介意让你引领。现在放开我……)]
 	</p>
 	<p>
-		Releasing the green-skinned succubus, you move around so that you're over the top of her, and as she lets out a distinctly-horny moan, you wonder how best to fuck her...
+		你松开绿皮肤的魅魔，转身压在她身上。显而易见，魅魔发出了淫荡的呻吟，而你想知道怎么才能更好地操她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLIRTING_BEDROOM_AFTER_SEX"><![CDATA[
 	#IF(sex.isDom(oglix))
 		<p>
-			Having had her fun, Oglix pushes you back onto her bed and stands up, letting out a deeply-satisfied moan in the process. Stepping over into her en-suite bathroom, she starts washing herself off as you lie there panting for breath.
+			奥格利克斯爽够了，一把把你推到床上，站起身长出了一阵呻吟，显然是非常满意。接着她走进套间的浴室清理起来，而你则还躺在原处喘息着。
 		</p>
 	#ELSE
 		<p>
-			Having had your fun, you collapse back onto the bed as Oglix stands up and lets out a deeply-satisfied moan. Stepping over into her ensuite bathroom, she starts washing herself off as you lie there panting for breath.
+			你已经爽够了，便瘫倒在床上，奥格利克斯站起身长出了一阵呻吟，显然是非常满意。接着她走进套间的浴室清理起来，而你则还躺在原处喘息着。
 		</p>
 	#ENDIF
 	<p>
-		A few minutes later, the orc-like succubus steps back into her room, before smirking down at you and asking, [oglix.speech(So, did you have a good time?)]
+		过了几分钟，那兽人样貌的魅魔回到房间，低头对着你坏笑道，[oglix.speech(怎么样，爽吗？)]
 	</p>
 	<p>
-		Letting out a positive reply, you move to start getting your things back in order as you prepare to head back to the bar...
+		你表示确实很爽，这才开始穿戴衣物，准备回到吧台了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLIRTING_BEDROOM_AFTER_SEX_END"><![CDATA[
 	<p>
-		Leading you out of her bedroom, Oglix securely locks the door to her apartment behind her, before taking you back through the VIP door and over to the bar. As you arrive, you see Golix is sporting a massive erection, and she barely manages to suppress a moan as she asks in her otherwise-emotionless voice, [golix.speech(May I return to my other form now, Mistress?)]
+		奥格利克斯带着你离开了卧室，锁上了公寓的门，保证安全后才领着你出了VIP门，回到了吧台。到了吧台旁，你却看到戈利克斯下面硬得厉害，毫无情感的声音中依然抑制不住呻吟，[golix.speech(我可以变回其他形态了吗，主人？)]
 	</p>
 	<p>
-		Giving her elemental permission to return to her wisp-like form with a wave of her hand, Oglix leans forwards over the bar and gives you a sly grin as she asks, [oglix.speech(I bet you're thirsty after all that exercise. You want to order a drink?)]
+		奥格利克斯稍一摆手，允许元素体变回了元素形态，接着撑在吧台上，一脸坏笑地问道，[oglix.speech(运动完一定渴了吧，想点一杯吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Spectating Golix/Kheiron: -->
 	
 	<htmlContent tag="OLD_STABLES"><![CDATA[
 	<p>
-		Following Oglix's instructions, you check your phone to make sure that you've got the right time, before carefully sneaking down the narrow alley which runs alongside the tavern. Hearing voices up ahead, and recalling Oglix's warning to not be seen, you slowly creep forwards and peek around the corner. Before you, a small, cobblestone courtyard is flanked by a couple of old, wooden stables, which look to have been left derelict for quite some time. Standing over on the far side of the yard, you see the familiar figures of Oglix and Kheiron.
+		你按照奥格利克斯的指示，检查了一下手机，确保时间刚好，随后小心翼翼地潜入酒馆旁边的窄巷。你听到前方有声音，又想起奥格利克斯警告过不要被人看见，于是你缓慢向前爬行，在拐角处窥探。你面前是一个鹅卵石铺就的小院子，院子两侧是几间陈旧的木制马厩，看起来已经荒废了很长时间。在院子的远处，你看到了奥格利克斯和喀戎熟悉的身影。
 	</p>
 	<p>
-		[kheiron.speech(I didn't come here to see you, Oglix,)] you hear the muscular centaur huff as he impatiently stomps one of his huge hoofs on the hard ground.
+		[kheiron.speech(我不是来找你的，奥格利克斯。)]你听到这个肌肉发达的半人马一边哼哼，一边不耐烦地用一只巨大的蹄子跺着坚硬的地面。
 	</p>
 	<p>
-		[oglix.speech(You do realise that Golix <i>is</i> me, right?)] the green-skinned succubus responds in a mocking tone. Crossing her arms and rolling her eyes, she tuts, [oglix.speech(You really do live up to the stereotype of horse-morphs being big, dumb animals.)]
+		[oglix.speech(你知道戈利克斯<i>就是</i>我吧？)]绿皮肤的魅魔用嘲讽的语气回应道。她双手抱胸，翻着白眼，嘟囔道：[oglix.speech(你还真贴合马化形都是傻大个的刻板印象。)]
 	</p>
 	<p>
-		[kheiron.speech(She's nothing like you!)] Kheiron grunts, before demanding, [kheiron.speech(Golix and I have had enough of this. Let her take her active form already.)]
+		[kheiron.speech(她和你一点都不一样！)]喀戎哼了一声。接着他要求道：[kheiron.speech(戈利克斯和我已经受够了，让她恢复主动形态吧。)]
 	</p>
 	<p>
-		[oglix.speech(Eugh! Fine, but just know that I'm only playing along with this because otherwise Golix sulks all day,)] Oglix relents, before turning to the swirling cloud of energy that's floating beside her and saying, [oglix.speech(Go on, Golix. Have your fun with your good little horsie.)]
+		[oglix.speech(呃！行吧，不过你要知道，我配合你只是不这么做戈利克斯就会整天生闷气。)]奥格利克斯退让了，然后转向漂浮在她身边的能量漩涡云，说道：[oglix.speech(去吧，戈利克斯，和你的小马乖乖玩得开心点。)]
 	</p>
 	<p>
-		Having clearly been desperate to receive permission to do so, the wisp-like elemental immediately emits a burst of light as she transforms into her active form. A moment later, and the swirling cloud of grey energy had been replaced by a beautiful, stone-skinned succubus. Every bit as tall, muscular, and busty as her mistress, Golix strikes an imposing figure. Completely naked, you're able to once again see that the elemental lacks feminine genitalia, and instead has a huge, [oglixElemental.cockValue] cock hanging between her legs...
+		显然，戈利克斯迫切希望得到许可，因此，当她变身为主动形态时，缕空元素立刻发出一阵光芒。片刻之后，那团灰色的能量漩涡被一个美丽的石肤魅魔所取代。戈利克斯和她的主人一样高挑又肌肉发达，她身材丰满，气势非凡。因为全身赤裸，你可以再次看到她没有女性生殖器，取而代之的是一根巨大的[oglixElemental.cockValue]阴茎悬挂在她的双腿之间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_NEXT"><![CDATA[
 	<p>
-		Remaining hidden around the corner, you watch as Golix skips forwards into Kheiron's waiting arms, and as the two of them embrace one another, they share a desperately passionate kiss. After a few moments, the elemental pulls back from her lover, and in a voice uncharacteristically filled with emotion, she breathlessly pants, [golix.speech(I love you...)]
+		你躲在角落里，看着戈利克斯向前跳入喀戎等待着的怀抱，两人紧紧拥抱在一起，热烈地亲吻着。片刻之后，戈利克斯从她的爱人身边抽身而出，用异常激动的声音喘着粗气说着：[golix.speech(我爱你……)]
 	</p>
 	<p>
-		[kheiron.speech(I love you too,)] the centaur replies.
+		[kheiron.speech(我也爱你。)]半人马回答道。
 	</p>
 	<p>
-		[oglix.speech(Don't make me listen to all this lovey-dovey crap,)] Oglix grunts as she leans back against a nearby wall. Once again crossing her arms, she states, [oglix.speech(Just get on to the fucking. I've been working all through the night and need some sleep.)]
+		[oglix.speech(别让我听这些情情爱爱的废话。)]奥格利克斯一边咕哝着，一边靠在附近的墙上。她再次双手叉腰，说道，[oglix.speech(快他妈开始吧。我已经工作了一整夜，需要好好睡一觉。)]
 	</p>
 	<p>
-		[golix.speech(Yes, mistress,)] Golix replies, before turning to her lover and teasing, [golix.speech(I want you to be a good horsie for me. You know how much I love filling you with my cock...)]
+		[golix.speech(好的，主人。)]戈利克斯回应着，又转头去挑逗她的爱人，[golix.speech(我想让你成为我的好马儿，你知道我有多喜欢用我的鸡巴填满你……)]
 	</p>
 	<p>
-		Grabbing Golix and dominantly pulling her into his muscular chest, Kheiron squeezes the elemental's ass, before grunting, [kheiron.speech(And you know how much I'm not into that kind of stuff. I want to be on top this time.)]
+		喀戎抓起戈利克斯，霸道地将她拉到自己肌肉发达的胸前，捏了捏元素体的屁股，然后哼哼道：[kheiron.speech(你也知道我不喜欢那样，这次我要在上面。)]
 	</p>
 	#IF(!flags.hasFlag(FLAG_innoxia_oglix_kheiron_spectated))
 		<p>
-			[golix.speech(Please, this time I really want you to be my good horsie. Come on, let me collar you and fuck you. You know you love taking my cock once you've got it on,)] Golix whines, teasing one of her forefingers over her partner's chest. Biting her lip as she produces a dark brown collar, she promises,
+			[golix.speech(求你了，这次我真的想让你做我的好马儿。来吧，让我给你戴上项圈操你。你知道，一旦你感受到我的鸡巴，你就会爱上它。)]戈利克斯一边哀求着，一边用食指在伴侣的胸膛上挑逗着。她咬着嘴唇，拿出一个深棕色项圈，承诺道：
 			#IF(game.isAnalContentEnabled())
-				 [golix.speech(I'll let you mount me and rut my ass again soon. This time, though, I want you to be my good horsie...)]
+				[golix.speech(我很快就会再让你骑在我身上，蹂躏我的屁股了。不过这一次，我要你做我的好马儿……)]
 			#ELSE
-				 [golix.speech(I'll let you fuck my throat again soon. This time, though, I want you to be my good horsie...)]
+				[golix.speech(我很快会再让你操我的喉咙的。不过这次，我要你做我的好马儿……)]
 			#ENDIF
 		</p>
 		<p>
-			[kheiron.speech(Fine,)] the centaur sighs, before stretching out his neck and forcing himself to say the submissive words, [kheiron.speech(I'll be your good horsie...)]
+			[kheiron.speech(好吧，)]半人马叹了口气，然后伸长脖子，强迫自己说出顺从的话语，[kheiron.speech(我会当你的好马儿……)]
 		</p>
 	#ELSE
 		<p>
-			With the two lovebirds each wanting to be the one on top, you wonder who's going to get the upper hand...
+			这对爱侣都想骑在对方身上，你开始思考谁会占据上风……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_FINAL"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_oglix_kheiron_spectated))
 		<p>
-			Taking the initiative, Golix plants yet another kiss on her centaur lover's lips, before breathlessly panting, [golix.speech(Submit to me, my good little horsie. You know you want to make me happy...)]
+			戈利克斯主动在她的半人马爱人的嘴唇上又亲了一口，然后气喘吁吁地说道：[golix.speech(臣服于我吧，我的乖小马。你清楚自己想让我快乐……)]
 		</p>
 		<p>
-			[kheiron.speech(Fine,)] Kheiron grunts, before stretching out his neck and forcing himself to say the submissive words, [kheiron.speech(I'll be your good horsie...)]
+			[kheiron.speech(行吧。)]喀戎哼哼了一声，然后伸长脖子，强迫自己说出顺从的话，[kheiron.speech(我会当你的好马……)]
 		</p>
 	#ENDIF
 	<p>
-		Letting out a happy moan, Golix quickly fastens the dark brown collar around Kheiron's neck, before stepping back and giving him a big smile. Immediately, Kheiron's body language changes, and after bowing his head a little and letting out a submissive whine, he pants, [kheiron.speech(Please, Golix, I'd like to be your good horsie... Please fuck me...)]
+		戈利克斯发出一声快乐的呻吟，迅速将深棕色项圈系在喀戎的脖子上，然后退后一步，给了他一个大大的微笑。随即，喀戎的肢体语言发生了变化，他微微低下头，发出了一声顺从的呜咽，接着喘了起来：[kheiron.speech(求求你，戈利克斯，我会当你的乖马儿……请操我吧……)]
 	</p>
 	<p>
-		Stepping forwards, Golix dominantly grabs her lover's head, and after giving him another deep, passionate kiss, she pulls back and growls, [golix.speech(Fuck, I love you so much... Now tell me what you want me to do with my fat cock, my good little horsie...)]
+		戈利克斯向前跨出一步，霸道地抓住她爱人的头，又给了他一个深情的吻，然后她抽回身，咆哮道：[golix.speech(操，我太爱你了……现在告诉我，你想让我用我的大鸡巴做什么，我的乖小马……)]
 	</p>
 	<p>
 		#IF(game.isAnalContentEnabled())
-			Letting out a desperate moan, Kheiron quickly turns around and drops down onto all fours, before swishing his tail to one side and presenting Golix with his [kheiron.asshole+]. Turning his head back, he bites his lip and begs, [kheiron.speech(Please, fill my ass with your fat cock! Fuck me good and hard!)]
+			喀戎发出迷乱的呻吟，迅速转过身去，四肢着地，然后把尾巴摆到一边，把自己[kheiron.asshole+]呈现在戈利克斯面前。喀戎转过头来，咬着嘴唇哀求道：[kheiron.speech(求求你，用你的肥屌填满我的屁眼！狠狠地干我！)]
 		#ELSE
-			Letting out a desperate moan, Kheiron quickly drops down onto all fours before his lover, before opening his mouth and presenting Golix with his throat. Looking up into the elemental's grey eyes, he begs, [kheiron.speech(Please, fill my throat with your fat cock! Fuck my face good and hard!)]
+			喀戎发出迷乱的呻吟，迅速在爱人面前四肢着地，然后张开嘴巴，向戈利克斯献上自己的喉咙。他仰望着元素体灰色的眼睛，乞求道：[kheiron.speech(求求你，用你的肥屌填满我的喉咙！狠狠地干我的脸！)]
 		#ENDIF
 	</p>
 	<p>
-		As Golix prepares to give the centaur what he wants, you wonder whether you've seen enough, or if you should stick around and watch the show they're unknowingly putting on for you... 
+		戈利克斯准备如半人马所愿，而你思索自己是否已经看够了，还是继续坚持下去，看他们毫无察觉地为你上演的这出好戏……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_FINAL_WATCH"><![CDATA[
 	<p>
-		Deciding to stay and watch, you look on as Golix hefts her rapidly-hardening cock in one hand, while grinning at Kheiron and asking, [golix.speech(How do you want it, my good little horsie? Want me to give it to you hard and rough?)]
+		你决定留下来观看，一边看着戈利克斯用一只手握住她迅速勃起的阴茎，一边对喀戎咧嘴一笑，问道：[golix.speech(你想要怎样，我的小乖马？想让我狠狠地给你吗？)]
 	</p>
 	<p>
-		[kheiron.speech(Yes!)] Kheiron desperately moans, the power of his enchanted collar clearly turning him into a cock-hungry submissive masochist. Letting out an erotic groan, he begs, [kheiron.speech(Pound me good and hard! Show me no mercy!)]
+		[kheiron.speech(是！)]喀戎急切地呻吟着，附魔项圈的力量显然把他变成了一个渴求鸡巴的顺从受虐狂。他发出色情的呻吟，哀求道，[kheiron.speech(狠狠地捅我！不要对我手下留情！)]
 	</p>
 	<p>
-		[golix.speech(Good horsie!)] Golix exclaims, before
+		[golix.speech(乖马儿！)]戈利克斯叫着，
 		#IF(game.isAnalContentEnabled())
-			 stepping around to drop down behind Kheiron. Wasting no time, she quickly lines her huge, fat cock up to the centaur's [kheiron.asshole+], before thrusting her hips forwards and ramming her hard shaft as deep as possible into his ass. Letting out a horny squeal in unison with his surprised grunt, the elemental starts to roughly thrust her hips forwards and back as she passionately pounds his ass...
+			绕到喀戎身后。她没有浪费任何时间，迅速将自己巨大肥硕的肉棒对准半人马[kheiron.asshole+]，然后向前挺臀，将自己坚硬的肉棒尽可能深地插入他的菊穴。随着半人马惊讶的哼声，她发出一声淫荡的尖叫，开始粗暴地前后挺动臀部，激情地撞击半人马的屁股。
 		#ELSE
-			 quickly lining her huge, fat cock up to the centaur's [kheiron.lips+], and then thrusting her hips forwards and ramming her hard shaft as deep as possible down his throat. Letting out a horny squeal in unison with his gargled grunt, the elemental starts to roughly thrust her hips forwards and back as she passionately fucks his face...
+			迅速将自己巨大肥硕的肉棒对准半人马[kheiron.lips+]，然后向前挺臀，将坚硬的肉棒尽可能深地插入他的喉咙。伴随着他漱口般的咕哝声，元素体发出一声淫荡的尖叫，开始粗暴地前后挺动臀部，激情地干着他的脸……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_FINAL_KHEIRON_DOM"><![CDATA[
 	<p>
-		Stomping his powerful hoofs on the ground, Kheiron demonstrates his strength by dominantly sweeping his huge elemental lover up into a bridal carry. Trotting around the courtyard with her in his arms, he grunts, [kheiron.speech(This time, my love, you're mine!)]
+		喀戎用有力的蹄子在地上跺了跺，霸气地将他巨大的爱人以公主抱姿势举起，展示了他的力量。他抱着她在院子里小跑，咕哝道：[kheiron.speech(这一次，我的爱人，你是我的！)]
 	</p>
 	<p>
-		Letting out a playful laugh, Golix wraps her arms around her lover's neck, before pulling herself up to plant a deep, passionate kiss on his lips. Breaking off with a horny moan, you hear her relent, [golix.speech(Fine... I'll let you have your fun with me... Besides, I've secretly been dreaming of getting stuffed full of your fat horse-cock all day...)]
+		戈利克斯发出俏皮的笑声，双臂搂住爱人的脖子，然后抬起身子在他的嘴唇上深情一吻。随着一声淫荡的呻吟，你听到她松口了：[golix.speech(好吧……我会让你尽情享受……此外，我整天都在偷偷地幻想着被你那肥大的马屌塞满……)]
 	</p>
 	<p>
-		Letting out a wild, passionate grunt as he hears this, Kheiron gently lowers his lover back down, before asking, [kheiron.speech(And how were you dreaming of taking it?)]
+		听到这里，喀戎发出一声狂野而激情的咕哝，他轻轻地将爱人放回原处，然后问道：[kheiron.speech(那你是如何梦到它的呢？)]
 	</p>
 	<p>
-		After letting out a delighted moan as she looks down to see her lover's huge cock pushing out of its sheath and hardening into a massive erection, Golix 
+		戈利克斯低头看到爱人的巨大阴茎从鞘中挤出并勃起变硬时，她发出了一声愉悦的呻吟。
 		#IF(game.isAnalContentEnabled())
-			 drops down onto all fours, before lifting her ass and presenting Kheiron with her [golix.asshole+]. Turning her head back, she bites her lip and teases, [golix.speech(Like this! Come on, fill my ass and rut me like an animal!)]
+			戈利克斯四肢着地，然后抬起屁股，向喀戎展示她[golix.asshole+]。她仰起头，咬着嘴唇挑逗道：[golix.speech(像这样！来吧，填满我的屁眼，像动物一样交媾！)]
 		#ELSE
-			 drops down onto her knees, before shuffling forwards beneath Kheiron and planting a big, wet kiss on his animalistic shaft. Letting out a happy moan, she moves around so that she's facing the wide, flared head of her lover's horse-cock, before calling up to him, [golix.speech(Like this! I want a taste of this hot, fat cock of yours!)]
+			戈利克斯双膝跪下，在喀戎身下向前挪动，在他的兽屌上狠狠地湿吻了一下。她发出欢快的呻吟声，调整好位置，让自己正对着爱人宽大的龟头，然后向他喊道：[golix.speech(像这样！我想尝尝你这根又热又肥的大屌！)]
 		#ENDIF
 	</p>
 	<p>
-		As Kheiron grunts and prepares to give his lover what she wants, you wonder whether you've seen enough, or if you should stick around and watch the show they're unknowingly putting on for you... 
+		喀戎哼哼唧唧地准备如他的情人所愿，而你思索自己是否已经看够了，还是继续坚持下去，看他们毫无察觉地为你上演的这出好戏……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_FINAL_WATCH_KHEIRON_DOM"><![CDATA[
 	#IF(game.isAnalContentEnabled())
 		<p>
-			Deciding to stick around and watch the show, you look on as Kheiron steps forwards, and in one swift movement, positions himself over the top of Golix in order to mount her. Reaching back to grab the centaur's massive, animalistic cock, the elemental guides it to her waiting asshole and moans, [golix.speech(Come on, give it to me!)] 
+			你决定留下来看戏，你看着喀戎向前迈步，动作迅速地骑在戈利克斯身上。元素体向后伸手抓住半人马巨大的兽屌，将其引向她等待的屁眼，娇喘道：[golix.speech(来吧，把这给我！)] 
 		</p>
 		<p>
-			More than happy to oblige, her lover moves forwards, ramming his fat cock into her ass in the process. Letting out a deep, passionate grunt, he groans, [kheiron.speech(Fuck... You're so tight...)]
+			她的爱人非常乐意，便向前挺进，用他的肥屌狠狠地插入她的菊穴。他发出低沉而激情的哼声，呻吟道：[kheiron.speech(操……你好紧……)]
 		</p>
 		<p>
-			[golix.speech(~Aah!~ Not for long,)] Golix playfully squeals as her lover's thick horse-shaft slams deep into her back door, spreading and stretching out her rear entrance in the process. Keeping her hips raised, she pushes back against the penetration, forcing a significant amount of the massive cock into her ass.
+			[golix.speech(~啊哈！~ 不会太久的。)]戈利克斯俏皮地浪叫着，因为她的爱人粗大的马屌深深地插入了她的后门，在此期间，她的后庭被撑开又拉伸。戈利克斯抬起臀部，用力向后顶，迫使巨大的肉棒大多数没入她的屁股。
 		</p>
 		<p>
-			[kheiron.speech(Take it all,)] Kheiron heavily grunts, before starting to rhythmically pump his cock in and out of the elemental's ass. Looking on, you watch as his cock sinks deeper and deeper with each thrust, turning his lover into a moaning, panting cock-sleeve...
+			[kheiron.speech(全塞进去。)]喀戎重重地哼了一声，然后开始有节奏地在元素体的屁股里抽插。你看着他的鸡巴越插越深，把他的爱人变成了一个呻吟喘息的鸡巴套……
 		</p>
 	#ELSE
 		<p>
-			Deciding to stick around and watch the show, you look on as Kheiron steps forwards, and in one swift movement, pushes the head of his fat cock against Golix's lips. Happily opening wide to receive the centaur's massive, animalistic cock, the elemental guides it into her waiting mouth as she moans, [golix.speech(Come on, give it to me!)] 
+			你决定留下来看戏，你看着喀戎向前迈步，动作迅速地把肥屌抵在戈利克斯唇上。元素体愉悦地张大嘴巴迎接半人马巨大的兽屌，将其引向她等待的嘴巴，娇喘道：[golix.speech(来吧，把这给我！)] 
 		</p>
 		<p>
-			More than happy to oblige, her lover moves forwards, ramming his fat cock down her throat in the process. Letting out a deep, passionate grunt, he groans, [kheiron.speech(Fuck... You're so tight...)]
+			她的爱人非常乐意，便向前挺进，用他的肥屌狠狠地插入她的喉咙。他发出低沉而激情的哼声，呻吟道：[kheiron.speech(操……你好紧……)]
 		</p>
 		<p>
-			[golix.speech(~Mrph!~ ~Mmm!~)] the gargled, muffled response comes from Golix. Reaching up to fondle her lover's [kheiron.balls+], she continues making lewd noises as Kheiron's cock slams deep down her throat, spreading and stretching it out in the process. Desperate for more, the elemental leans forwards into the penetration, thereby forcing herself to swallow a significant amount of the massive cock.
+			[golix.speech(~嗯哼！~唔嗯！~)]戈利克斯发出漱口般的低沉回应。她伸手抚摸着爱人[kheiron.balls+]，继续发出淫荡的声音，因为喀戎的阴茎深深地插入了她的喉咙。在此期间，喉咙被撑开又拉长。元素体渴望被插得更深，于是迫使自己俯身吞下大段的巨大阴茎。
 		</p>
 		<p>
-			[kheiron.speech(Take it all,)] Kheiron heavily grunts, before starting to rhythmically pump his cock in and out of the elemental's throat. Looking on, you watch as his cock sinks deeper and deeper with each thrust, turning his lover into a gargling, choking cock-sleeve...
+			[kheiron.speech(全塞进去。)]喀戎重重地哼了一声，然后开始有节奏地在元素体的喉咙里抽插。你看着他的鸡巴越插越深，把他的爱人变成了一个咕噜噜发声的鸡巴套……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_FINAL_LEAVE"><![CDATA[
 	<p>
-		Deciding that you really don't want to see any more, you [pc.step] back and head off down the alleyway. The moans, grunts, and wet slapping sounds produced by Golix and Kheiron quickly fade off behind you as you return to the front of the tavern. Looking around at the empty courtyard in front of 'The Crossed Blades', you wonder where to go to next...
+		你决定不再看下去了，于是向后退了一步，向小巷[pc.step]去。当你回到酒馆门前时，戈利克斯和喀戎发出的呻吟声、哼哼声和湿漉漉的撞击声很快就在你身后消失了。你环顾 “十字利刃”前空无一人的庭院，思索接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_AFTER_WATCH"><![CDATA[
 	#IF(sex.isDom(golix))
 		<p>
-			Bringing an end to their coupling,
+			结束了他们的结合，
 			#IF(game.isAnalContentEnabled())
-				 Golix steps back and slides her fat cock out of Kheiron's well-fucked asshole, before roughly slapping his ass, and teasing, [golix.speech(What a good horsie!)]
+				戈利克斯退后一步，把她的大屌从戈利克斯被干得爽歪歪的屁眼里滑出来，狠狠往屁股上扇了一巴掌，挑逗道：[golix.speech(真是乖马儿！)]
 			#ELSE
-				 Golix steps back and slides her fat cock out of Kheiron's well-fucked throat, before teasing, [golix.speech(What a good horsie!)]
+				戈利克斯退后一步，把她的大屌从戈利克斯被干得爽歪歪的喉咙里抽出来，挑逗道：[golix.speech(真是乖马儿！)]
 			#ENDIF
 		</p>
 		<p>
-			[kheiron.speech(Yes, I'm your good horsie,)] Kheiron pants as he stands up on trembling legs.
+			[kheiron.speech(是的，我是你的好马。)]喀戎一边喘息一边用颤抖的双腿站了起来。
 		</p>
 		<p>
-			 Stepping forwards, Golix pulls her lover into yet another deep, passionate kiss, before pulling back and taking off his collar in one swift, well-practised movement. You see Kheiron's cheeks burning red with what you assume to be a mixture of shame and embarrassment as the collar's fetish-altering effects dissipate from the centaur's mind. As a way to compensate for his submission, the muscular centaur scoops his lover into his arms, before taking the dominant role in sharing one last kiss together.
+			戈利克斯走上前，拉住她的爱人，又是一个深情的吻，然后猛地抽开身，以迅雷不及掩耳之势摘下了他的项圈。当项圈改变性癖的效果从半人马的脑海中消散时，你看到喀戎的脸颊因羞愧和尴尬而烧得通红。为了补偿他的屈服，这个肌肉发达的半人马将他的爱人搂入怀中，主导了最后的亲吻。
 		</p>
 		<p>
-			[kheiron.speech(The things I do for you...)] the centaur grunts as he breaks off the kiss.
+			[kheiron.speech(为了你，我真是做了不少事情……)]半人马一边咕哝着，一边中断了这个吻。
 		</p>
 		<p>
-			Flashing him a coy smile, the elemental teases, [golix.speech(You know you love it... And maybe next time I'll let you be on top...)]
+			元素体向他腼腆一笑，挑逗道：[golix.speech(你清楚自己喜欢这个……也许下次我会让你在上面……)]
 		</p>
 		<p>
-			[oglix.speech(Ok, that's enough,)] Oglix calls out, before loudly yawning and stating, [oglix.speech(I need sleep. Come on, Golix.)]
+			[oglix.speech(好，现在就足够了。)]奥格利克斯大大地打了个哈欠，说道，[oglix.speech(我得睡了，戈利克斯快过来。)]
 		</p>
 	#ELSE
 		<p>
-			Bringing an end to their coupling,
+			结束了他们的结合，
 			#IF(game.isAnalContentEnabled())
-				 Kheiron steps back and slides his huge horse-cock out of Golix's well-fucked asshole, before trotting to one side and grunting, [kheiron.speech(Your ass always feels so good to fuck!)]
+				喀戎退后一步，把他巨大的马屌从戈利克斯被干得爽歪歪的屁眼里滑出来，然后小跑到一边，哼哼着：[kheiron.speech(你的屁股操起来总是很棒！)]
 			#ELSE
-				 Kheiron steps back and slides his huge horse-cock out of Golix's well-fucked throat, before trotting to one side and grunting, [kheiron.speech(Your throat always feels so good to fuck!)]
+				喀戎退后一步，把他巨大的马屌从戈利克斯被干得爽歪歪的喉咙里抽出来，然后小跑到一边，哼哼着：[kheiron.speech(你的喉咙操起来总是很棒！)]
 			#ENDIF
 		</p>
 		<p>
 			#IF(game.isAnalContentEnabled())
-				[golix.speech(And your cock always fills me so nicely,)]
+				[golix.speech(而且你的鸡巴总是能把我填得很爽。)]
 			#ELSE
-				[golix.speech(And your cock always tastes so delicious,)]
+				[golix.speech(而且你的鸡巴总是尝起来很棒。)]
 			#ENDIF
-			 Golix happily replies, before letting out a little laugh as her lover once again scoops her up into his arms.
+			戈利克斯高兴地回答，她的爱人再次把她搂进怀里，令她发出一阵轻笑。
 			#IF(game.isAnalContentEnabled())
-				 Repeating his earlier performance, Kheiron pulls the elemental into a deep, passionate kiss.
+				喀戎重演了之前的表现，拉着元素体深情一吻。
 			#ELSE
-				 Seemingly not bothered at all by the fact that his cum is coating Golix's lips, Kheiron pulls the elemental into a deep, passionate kiss.
+				喀戎似乎一点也不在意自己的精液涂满了戈利克斯的嘴唇，他拉着元素体深情地吻了下去。
 			#ENDIF
-			 Wrapping her arms around his neck, Golix gently kicks her legs back and forth as she uses her tongue to explore the insides of her lover's mouth. After a few moments of this, they break off their kiss, and as Kheiron puts her down, Golix teases, [golix.speech(Maybe next time we'll switch places and you can be my good little horsie again...)]
+			戈利克斯用双臂搂住他的脖子，轻轻地前后踢动双腿，用舌头探索爱人的口腔内部。这样亲吻了一会儿后，他们中断了亲吻，当喀戎把她放下来时，戈利克斯挑逗道：[golix.speech(也许下次我们可以换个体位，你可以再做我的乖小马……)]
 		</p>
 		<p>
-			[oglix.speech(Ok, I've seen enough,)] Oglix calls out, before loudly yawning and stating, [oglix.speech(I need sleep. Come on, Golix.)]
+			[oglix.speech(好，我也看够了。)]奥格利克斯大大地打了个哈欠，说道，[oglix.speech(我得睡了，戈利克斯快过来。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OLD_STABLES_AFTER_WATCH_END"><![CDATA[
 	<p>
-		Not wanting to be discovered, you quickly [pc.step] back and head off down the alleyway. A flash of light coming from behind you lets you know that Golix has returned to her passive, wisp-like form, and with Kheiron sure to be making his exit, you hurry to return to the front of the tavern before he has a chance to see you. Quickly returning to the empty courtyard in front of 'The Crossed Blades', you look around and wonder where to go to next...
+		你不想被人发现，赶紧后退，向小巷走去。从你身后闪过的一道光让你知道戈利克斯已经恢复了她那被动的雾状形态，而喀戎肯定也要离开了，你赶紧在他有机会看到你之前回到酒馆前面。你迅速回到“十字利刃”前空无一人的庭院，环顾四周，思索接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Kitchen: -->
 	
 	<htmlContent tag="KITCHEN"><![CDATA[
 	<p>
-		To one side of the bar, there's an old, wooden door which bears a crooked sign, reading: <i>'Kitchens - Staff Only!'</i>. [pc.Stepping] forwards, you cast a glance through the door's small, grimy window to see a rather unhygienic-looking assortment of worn tables, greasy ovens, and dented fridges. Food waste, dirty pans, and scrunched up packaging are strewn across almost every surface, while the floor and walls are splattered with all sorts of oils and sauces.
+		酒吧的一侧有一扇老旧的木门，门上挂着一个歪歪扭扭的牌子，上面写着：<i>“厨房——仅限员工使用！”</i>。你走到前面，透过门上灰暗的小窗，看到破旧的桌子、油腻的烤箱和凹陷的冰箱，看起来很不卫生。食物残渣、肮脏的平底锅和揉成一团的包装几乎散落在每一个表面，而地板和墙壁上则溅满了各种油渍和调味汁。
 	</p>
 	<p>
-		The people responsible for letting this kitchen get into such a state take the form of two young, busty succubi, who from the green shade of their skin are undoubtedly Oglix's daughters. Smoking and chatting to one another, these succubi are leaving all of the work to the third and final occupant of the room, who takes the form of a male human who looks to be in his late teens. Rushing around the kitchen in a state of overworked stress, this poor chef's work is made even harder by the fact that the two succubi cruelly attempt to trip him up or blow smoke in his face each time he's forced to pass them.
+		让厨房变成这样的人是两个年轻丰满的魅魔，从她们绿色的皮肤来看，无疑是奥格利克斯的女儿。这两个魅魔一边抽烟一边聊天，把所有的活儿都丢给了房间里的第三个也是最后一个人，他是一个看上去只有十来岁的男性人类。这个可怜的厨师在过度劳累的压力下在厨房里匆忙奔走，而每次他被迫经过这两个魅魔身边时，这两个魅魔都会残忍地试图绊倒他或向他脸上喷烟，这让他的工作变得更加艰难。
 	</p>
 	<p>
-		Turning away from the kitchen to face the equally-chaotic tavern, you duck as a carelessly-hurled bottle flies over your head to smash against a nearby wall. A sharp shout from Oglix produces an apologetic reply from the bottle's origin, and as the guilty party hurries to pick up the shards of glass, you [pc.step] past them and wonder where to go next...
+		从厨房转过身来，面对同样混乱的酒馆，你躲闪不及，一个不小心打翻的酒瓶从你头顶飞过，砸在附近的墙上。奥格利克斯一声尖锐的叫喊引来了酒瓶来源的道歉，当罪魁祸首匆忙捡起玻璃碎片时，你从他们身边走过……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Toilets: -->
 	
 	<htmlContent tag="TOILETS"><![CDATA[
 	<p>
-		Over in the far corner of the tavern, a door is signposted as containing the establishment's toilet facilities. [pc.Stepping] through this doorway, you find yourself entering a large, unisex bathroom. About a dozen stalls run down one side of the room, while on the other two, urinals and washbasins are fixed to the walls. As you might expect, these toilet facilities are not very well maintained, and you find yourself wondering when was the last time that they were cleaned.
+		在酒馆最里面的角落里，有一扇门，门上写着“厕所”。你走过这扇门，进入了一个宽敞的男女通用卫生间。房间的一侧有十几个隔间，另外两侧的墙上则固定着小便池和洗脸盆。正如你所预料的那样，这些厕所设施维护得不是很好，不知道它们上一次打扫是什么时候了。
 	</p>
 	<p>
-		Quite a few people are currently using the toilets, and as you move further forwards to allow them to enter or exit the room, you see that there are gloryholes drilled between every single one of the stalls. Wet gagging noises and deep grunts reveal that behind closed doors a couple of these gloryholes are already in use. Finding yourself standing in the middle of the room, you wonder what to do now that you're in here...
+		目前有不少人正在使用厕所，当你向前移动让他们进出房间时，你看到每个隔间之间都钻有寻欢洞。湿漉漉的吞吐声和低沉的咕哝声暗示着在紧闭的门后有几个寻欢洞已经在使用了。你站在房间中央，想着现在在这里该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_USE"><![CDATA[
 	<p>
-		Stepping into the cleanest empty stall which you can find, you turn and lock the door behind you, before making use of the toilet. After you've finished, you flush the toilet before making your way over to one of the sinks and washing your [pc.hands]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你走进一个最干净的空隔间，转身锁上身后的门，然后上厕所。如厕完毕后，你先冲了马桶，然后走到一个水池边洗净[pc.hands]。你从旁边的纸巾机拿起纸巾，迅速擦干后转身面向房间，思索接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_WASH"><![CDATA[
 	<p>
-		Feeling like you could do with having a quick clean, you step over to the sinks and thoroughly wash your [pc.hands], before splashing some water on your [pc.face]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你觉得自己可以做个快速清洁，于是走到水池边仔细洗了洗[pc.hands]，然后往[pc.face]上扑了些水。结束后，你从旁边的纸巾机抽出纸巾，迅速擦干皮肤，然后转身面向房间，下一步要做什么呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Seating: -->
 	
 	<htmlContent tag="SEATING"><![CDATA[
 	<p>
-		Around the edges of the tavern, dimly-lit seating areas are occupied by all manner of thuggish brutes and scheming gang members. As you pass by the sagging sofas and creaking chairs upon which they sit, hostile glares and muttered curses are thrown your way.
+		在酒馆的边缘，昏暗的座位区坐着各种歹毒的野蛮人和诡计多端的帮派成员。当你经过他们所坐的下垂的沙发和吱吱作响的椅子时，敌意的目光和低声的咒骂会向你投来。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_oglix_tavern_pacified))
-			As Oglix has recently brought an end to a brawl, these thugs scowl at you but seem reluctant to do anything else. It seems to be [style.italicsGood(safe)] to be moving through these dingy outskirts of the tavern, at least for the time being...
+			由于奥格利克斯最近结束了一场斗殴，这些暴徒对你不屑一顾，但似乎不愿意再做什么。至少目前看来，在酒馆这些喧闹的外围走动似乎是[style.italicsGood(安全)]的……
 		#ELSE
-			You can tell that it's [style.italicsBad(dangerous)] to be moving through these dingy outskirts of the tavern. It's only a matter of time before one of these thugs makes an excuse to start a fight with you...
+			你可以看出，在酒馆外这些嘈杂的地方走动是很[style.italicsBad(危险)]的。迟早会有一个暴徒找借口和你打起来的……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED"><![CDATA[
 	<p>
-		Just as you expected, as you continue to [pc.walk] through the dimly-lit seating area, [attacker.a_race] takes offence at your presence and stands up to block your way.
+		如你所料，穿过昏暗的座位区时，[attacker.a_race]对你感到不快，起身挡住你的去路。
 		#IF(attacker.getAlcoholLevelValue()>0.5)
-			 Clearly having had too much to drink, they slur,
+			对方显然是喝多了，说话口齿不清，
 		#ELSE
-			 Clearly just itching for a fight, they angrily growl,
+			对方显然只是想打架，愤怒地低吼，
 		#ENDIF
-		 [attacker.speech(What do you think you're doing?! You've disturbed my drink! How are you going to apologise?!)]
+		[attacker.speech(你以为自己在干嘛？！你打扰我喝酒了！你打算怎么道歉？！)]
 	</p>
 	<p>
-		With [attacker.name] blocking your way, it looks like you're going to have to take action...
+		[attacker.name]挡下了你的去路，看来你必须得采取行动了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_PAID_OFF"><![CDATA[
 	<p>
-		Wanting to avoid a fight, you suggest to the [attacker.race] that you could pay off [attacker.her] bar tab. Flashing you a devious grin, [attacker.she] demands, [attacker.speech(Hand over two hundred flames then!)]
+		为了避免打斗，你向[attacker.race]提议自己可以付清[attacker.her]的酒吧账单。[attacker.she]向你露出狡猾的笑容，要求道：[attacker.speech(那就交出两百个火币吧！)]
 	</p>
 	<p>
-		Committed to this course of action, you hand over the two hundred flames which this [attacker.race] is demanding. Although the menacing snarl remains on [attacker.her] face, the [attacker.race] is pacified by this payment, and as [attacker.she] sits back down, [attacker.she] growls, [attacker.speech(Go on then, get out of my face!)]
+		你决心采取这一行动，于是交出了这个[attacker.race]索要的两百火币。虽然[attacker.her]的脸上依然挂着狰狞的咆哮，但[attacker.race]还是被这笔钱安抚住了，[attacker.she]重新坐下来，咆哮道：[attacker.speech(那就走吧，从我面前滚开！)]
 	</p>
 	<p>
-		Not wanting to stick around and give [attacker.herHim] a chance to change [attacker.her] mind, you move forwards and continue on your way...
+		你不想在这里逗留，徒给[attacker.herHim]一个改变注意的机会，你向前走，继续你的路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_INTIMIDATE"><![CDATA[
 	<p>
-		This insolent fool clearly doesn't know who [attacker.sheIs] dealing with. Flashing [attacker.herHim] a menacing look, you
+		这个无礼的傻瓜显然不知道自己在和谁打交道，于是你投去威胁的眼神，
 		#IF(pc.getTrueRace()!=pc.getRace())
-			 quickly transform into your true, demonic form, before telling the [attacker.race] to sit down and shut up.
+			迅速变回自己真正的恶魔形态，叫[attacker.race]坐下并闭嘴。
 		#ELSE
-			 ask [attacker.herHim] if [attacker.she] really wants to pick a fight with a demon.
+			问[attacker.herHim]是不是真的想和恶魔打架。
 		#ENDIF
 	</p>
 	<p>
-		[attacker.speech(O-Ok, there's no need for violence,)] the [attacker.race] nervously stammers. Being suitably intimidated by your demonic form, [attacker.she] shuffles back and submissively sits down. Holding up [attacker.her] [attacker.hands], [attacker.she] apologises, [attacker.speech(Sorry for bothering you...)] 
+		[attacker.speech(行行，没必要动粗。)][attacker.race]紧张得结结巴巴。[attacker.she]被你的恶魔形态吓到了，只好退后并顺从地坐下。[attacker.her]举起[attacker.hands]，向你道歉：[attacker.speech(对不起，打扰您了……)]
 	</p>
 	<p>
-		With this pathetic [attacker.race] having been dealt with, you stride past [attacker.herHim] and continue on your way...
+		解决了这个可悲的[attacker.race]，你大步走过[attacker.herHim]身边，继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_BEG"><![CDATA[
 	<p>
 		#IF(pc.isCowardly())
-			Your cowardly nature gets the better of you, and before you know what you're doing, you're dropping down before the [attacker.race] and desperately begging for [attacker.her] forgiveness.
+			你懦弱的本性战胜了你，在你意识到自己在做什么之前，你就跪倒在[attacker.race]面前，拼命乞求[attacker.her]的原谅。
 		#ELSE
-			Feeling like this isn't a fight which you can win, you submissively drop down before the [attacker.race] and beg for [attacker.her] forgiveness.
+			你觉得这战斗未必会赢，于是顺从地跪倒在[attacker.race]面前，乞求[attacker.her]的原谅。
 		#ENDIF
-		 Letting out a triumphant laugh, the [attacker.race] sneers, [attacker.speech(How pathetic! You're a real worthless bitch, aren't you?)]
+		[attacker.race]发出胜利的笑声，冷笑道：[attacker.speech(真可悲！你的的确确是个一文不值的婊子，不是吗？)]
 	</p>
 	<p>
-		Dropping your head down, you agree with [attacker.her] assessment of your character, before again pleading for [attacker.herHim] to spare you.
+		你低下头，同意[attacker.her]对你性格的评价，然后再次恳求[attacker.herHim]饶了你。
 	</p>
 	<p>
-		[attacker.speech(Someone as pathetic as you isn't worth my time,)] the [attacker.race] replies with an amused growl. Sitting back down, [attacker.she] snaps, [attacker.speech(Get out of my sight!)]
+		[attacker.speech(像你这么可悲的人不值得我花时间。)][attacker.race]好笑地咆哮道。[attacker.she]坐好后，冷喝道：[attacker.speech(滚出我的视线！)]
 	</p>
 	<p>
-		Not wanting to anger [attacker.herHim], you thank the [attacker.race] for [attacker.her] mercy and crawl away from [attacker.herHim], before standing back up and continuing on your way...
+		你不愿再触怒[attacker.race]，于是谢过[attacker.her]的仁慈，从[attacker.herHim]身边爬开了，之后你才站起来，继续你的路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_START_ORAL"><![CDATA[
 	<p>
-		Giving the [attacker.race] a coy look, you sensually suggest that you could give [attacker.herHim] a very special type of apology. Either from the alcohol in [attacker.her] system or simply from a lack of understanding, the [attacker.race] grunts, [attacker.speech(What are you talking about?)]
+		你腼腆地看了一眼[attacker.race]，淫荡地建议你可以给[attacker.herHim]一个非常特别的道歉。不知是[attacker.her]体内的酒精作祟，还是根本就不理解，[attacker.race]咕哝道：[attacker.speech(你在说什么？)]
 	</p>
 	<p>
-		After you've bluntly stating that you're willing to get under [attacker.her] table and
+		你直截了当地表示愿意钻到[attacker.her]的桌子底下，
 		#IF(attacker.hasPenis())
-			 suck [attacker.her] cock,
+			唆[attacker.her]的鸡巴，
 		#ELSE
-			 eat [attacker.herHim] out,
+			为[attacker.herHim]舔阴，
 		#ENDIF
-		 the [attacker.race]'s eyes light up, and [attacker.she] sits down and motions for you to get on with it. Dropping down before [attacker.herHim], you shuffle beneath the table and
+		[attacker.race]眼睛一亮，坐了下来，示意你继续。你在[attacker.herHim]面前跪下，在桌子下面挪动着靠近，然后
 		#IF(attacker.hasPenis())
-			 get out [attacker.her] [attacker.cock+], before leaning in and preparing to start giving [attacker.herHim] a blowjob...
+			碰到[attacker.her][attacker.cock+]，俯身准备为[attacker.herHim]口交……
 		#ELSE
-			 gain access to [attacker.her] [attacker.pussy+], before leaning in and preparing to start eating [attacker.herHim] out...
+			碰到[attacker.her][attacker.pussy+]俯身准备为[attacker.herHim]口交……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_PEACEFUL_END"><![CDATA[
 	<p>
-		Having narrowly avoided a fight, you [pc.step] back into the safety of the main area of the tavern and continue on your way...
+		侥幸躲过一劫后，你[pc.step]回到酒馆主区的安全地带，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_AFTER_ORAL"><![CDATA[
 	#IF(attacker.hasPenis())
 		<p>
-			Letting [attacker.namePos] [attacker.cock+] slide out of your mouth, you start to crawl out from under the table. Blocking your exit with one of [attacker.her] [attacker.legs], the [attacker.race] grunts down to you, [attacker.speech(Where do you think you're going? Clean my cock off, slut.)]
+			你让[attacker.namePos][attacker.cock+]从你嘴里滑出，欲从桌子底下爬出来。[attacker.race]用一条[attacker.legs]挡住你的出口，向你咕哝道：[attacker.speech(你想去哪儿？把我的鸡巴清理干净，荡妇。)]
 		</p>
 		<p>
-			Leaning back in to the [attacker.race]'s crotch, you do as you're told and lick all of the cum and saliva off of [attacker.her] softening cock. Satisfied with your obedience, [attacker.name] lets out an approving grunt and orders, [attacker.speech(Now get out of my sight, bitch.)]
+			你听话地靠向[attacker.race]的胯部，舔掉[attacker.her]软下来的肉棒上的所有精液和唾液。[attacker.name]对你的服从感到满意，发出一声赞许的哼声，并命令道：[attacker.speech(现在从我眼前消失，婊子。)]
 		</p>
 	#ELSE
 		<p>
-			Pulling back from [attacker.namePos] [attacker.pussy+], you start to crawl out from under the table. Blocking your exit with one of [attacker.her] [attacker.legs], the [attacker.race] grunts down to you, [attacker.speech(Where do you think you're going? Give my cunt a kiss goodbye, slut.)]
+			你与[attacker.namePos][attacker.pussy+]拉开距离，欲从桌子底下爬出来。[attacker.race]用一条[attacker.legs]挡住你的出口，向你咕哝道：[attacker.speech(你想去哪儿？给我的小穴来个吻别吧，荡妇。)]
 		</p>
 		<p>
-			Leaning back in to the [attacker.race]'s crotch, you do as you're told and plant one last, wet kiss on [attacker.her] [attacker.labia+]. Satisfied with your obedience, [attacker.name] lets out an approving grunt and orders, [attacker.speech(Now get out of my sight, bitch.)]
+			你听话地靠向[attacker.race]的胯部，在[attacker.her][attacker.labia+]上留下最后一个湿吻。[attacker.name]对你的服从感到满意，发出赞许的咕哝声，并命令道：[attacker.speech(现在从我眼前消失，婊子。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_AFTER_ORAL_END"><![CDATA[
 	<p>
-		To the sound of laugher and drunken cheering, you crawl out from under the table and stand up. Not wanting to do anything to annoy [attacker.name], you do as [npc.she] commands and quickly [pc.step] away from the seating area, before heading out into the main floor of the tavern and preparing to continue on your way...
+		在笑声和醉汉的欢呼声中，你从桌子底下爬出来站起。你不想做任何惹恼[attacker.name]的事，于是按照[npc.she]的吩咐，迅速[pc.step]开座位区，然后走向酒馆的主区，准备继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_COMBAT_WON"><![CDATA[
 	<p>
-		The [attacker.race] staggers back against the table and collapses down, defeated. Although you'd noticed it while fighting, you're only now able to take stock of your surroundings, and see that your fight has been the spark to ignite a huge brawl which has broken out all through the tavern. Bottles, chairs, and even people are being hurtled through the air, and the sounds of smashing glass and splintering wood join with shouts, cries, and roars in a chaotic storm of senseless violence.
+		[attacker.race]踉跄后退，撞到桌子后跌倒在地，败下阵来。你战斗时就注意到了周遭的情况，但此刻才有空环顾四周。你这一架成了整个酒馆大乱斗的导火索，酒瓶、座椅甚至人都被掷来掷去在空中乱飞，玻璃破碎和木头四分五裂的声响与嘶吼、惨叫及怒号交织在一起，一场无谓的暴力与混乱正肆虐。
 	</p>
 	<p>
-		Having witnessed you defeat the [attacker.race], the nearby brawlers are choosing to give you a wide berth, which gives you an opportunity to
+		周围厮打的人目睹你战胜[attacker.race]后，纷纷选择对你敬而远之，这给了你
 		#IF(attacker.isAttractedTo(pc))
-			 have some fun if you were feeling like it...
+			找点乐子的机会。
 		#ELSE
-			 head over to a safer part of the tavern...
+			前往酒馆较安全区域的机会。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_COMBAT_WON_END"><![CDATA[
 	<p>
 		#IF(attacker.isAttractedTo(pc) || game.isNonConEnabled())
-			Deciding against doing anything further with the [attacker.race], you leave [attacker.herHim] behind and try to find somewhere safe to move to...
+			你决定不做任何进一步的事情，丢下[attacker.race]，试图找个安全点的地方……
 		#ELSE
-			Leaving the [attacker.race] behind, you try to find somewhere safe to move to...
+			你丢下[attacker.race]，试图找个安全点的地方……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_COMBAT_WON_SEX"><![CDATA[
 	<p>
-		Deciding to take advantage of [attacker.namePos] defeated state, you move up to [attacker.herHim] and take a dominant hold of [attacker.her] body. Letting out an erotic [attacker.moan], [attacker.she] desperately pants, [attacker.speech(Yes! Come on, fuck me!)]
+		你决定占落败的[attacker.name]便宜，便走到[attacker.her]身边，霸道地抓住[attacker.her]。[attacker.she]发出色情的[attacker.moan]，迷乱地喘息道：[attacker.speech(嗯！来吧，操我！)]
 	</p>
 	<p>
-		More than happy to do as [attacker.she] asks, you pull [attacker.name] into your [pc.arms], and right there in the middle of the chaotic brawl, you prepare to have some fun with [attacker.herHim]...
+		你非常乐意听从[attacker.name]的要求，便把[attacker.she]拉到你的怀里，就在混乱的斗殴中，你准备和[attacker.herHim]找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_COMBAT_WON_SUBMIT"><![CDATA[
 	<p>
-		Wanting to have some fun with [attacker.name], you move up to [attacker.herHim] and submissively suggest that the two of you could have some fun together. Letting out an erotic [attacker.moan] as [attacker.she] hears this, the [attacker.race] grabs hold of you and hungrily pants, [attacker.speech(Sounds good to me! I wanted to fuck you right from the start!)]
+		你想和[attacker.name]找点乐子，于是移到[attacker.herHim]跟前，顺从地建议你们两个可以一起找点乐子。[attacker.she]听到后发出了一声色情的[attacker.moan]，抓着你饥渴地叫道：[attacker.speech(听起来不错！我从一开始就想和你做爱！)]
 	</p>
 	<p>
-		More than happy to submit to [attacker.name], you let [attacker.herHim] pull you into [attacker.her] [attacker.arms], and right there in the middle of the chaotic brawl, you prepare to have some fun with [attacker.herHim]...
+		你非常乐意服从[attacker.name]，由着[attacker.herHim]把你拉到怀中，就在混乱的争斗中，你准备和[attacker.herHim]来找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_COMBAT_LOST"><![CDATA[
 	<p>
-		Unable to continue fighting for any longer, you stagger back against a nearby table and collapses down, defeated. Although you'd noticed it while fighting, you're only now able to take stock of your surroundings, and see that your fight has been the spark to ignite a huge brawl which has broken out all through the tavern. Bottles, chairs, and even people are being hurtled through the air, and the sounds of smashing glass and splintering wood join with shouts, cries, and roars in a chaotic storm of senseless violence.
+		由于无法再继续战斗下去，你踉踉跄跄地退到附近的一张桌子旁，瘫倒在地，败下阵来。虽然你在战斗时已经注意到了这一点，但直到现在你才能够审视一下周围的环境，发现刚才的战斗已经成为点燃整个酒馆大乱斗的导火索。酒瓶、椅子甚至人都被抛向空中，玻璃破碎声和木头碎裂声与叫喊声还有怒吼声交织在一起，形成了一场毫无意义的混乱暴力风暴。
 	</p>
 	<p>
-		Having witnessed your defeat at the hands of this [attacker.race], the nearby brawlers are choosing to give you a wide berth, which gives [attacker.name] the opportunity to
+		由于目睹了你败在这个[attacker.race]的手中，附近的斗殴者都选择对你敬而远之，这给[attacker.name]机会向你
 		#IF(attacker.isAttractedTo(pc))
-			 bluntly suggest, [attacker.speech(How about we fuck? You're hot, I'm horny, and in all of this chaos nobody's going to care if we do it right here.)]
+			单刀直入地提议道：[attacker.speech(我们做爱怎么样？你很性感，我也很饥渴，而且在这混乱的环境中，没人会在意我们在这里做的事。)]
 		#ELSE
-			 gloat, [attacker.speech(That'll teach you to try and fight me!)]
+			自鸣得意道：[attacker.speech(敢跟我我对抗？给你个教训！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(attacker.isAttractedTo(pc))
-			From the hungry look in [attacker.namePos] [attacker.eyes+] you can tell that [attacker.her] suggestion is completely sincere, and you gulp as you wonder how to reply...
+			[attacker.namePos][attacker.eyes+]里闪着饥渴的光，你可以看出[attacker.her]的建议是完全真诚的，你咽了咽口水，不知道该如何回答……
 		#ELSE
-			With that, [attacker.name] tuns around and rushes off into the melee, leaving you to catch your breath...
+			说罢，[attacker.name]转过身去，冲进混战中，留你平复呼吸……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_COMBAT_LOST_END"><![CDATA[
 	<p>
 		#IF(attacker.isAttractedTo(pc))
-			Tell the [attacker.race] that you have no interest in having sex with [attacker.herHim], you watch as [attacker.she] shrugs and rushes off into the melee. After taking a moment in which to recover some of your strength, you try to find somewhere safe to move to...
+			你告诉[attacker.race]自己没有兴趣和[attacker.herHim]做爱，看着[attacker.she]耸了耸肩，冲进了混战中。你花了一点时间恢复体力，试图找个安全的地方转移……
 		#ELSE
-			After taking a moment in which to recover some of your strength, you try to find somewhere safe to move to...
+			你花了一点时间恢复体力，试图找个安全的地方转移……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_COMBAT_LOST_SUBMIT"><![CDATA[
 	<p>
-		Liking the sound of what [attacker.sheIs] suggesting, you submissively tell [attacker.name] that you're happy to have some fun with [attacker.herHim]. Letting out an erotic [attacker.moan] as [attacker.she] hears this, the [attacker.race] grabs hold of you and hungrily pants, [attacker.speech(let's get to it, then! I wanted to fuck you right from the start!)]
+		你很喜欢[attacker.name]的建议，便顺从地告诉[attacker.sheIs]自己很乐意一起找点乐子。[attacker.race]听到这句话，发出一声色情的[attacker.moan]，抓着你饥渴地叫道：[attacker.speech(那我们就开始吧！我从一开始就想操你！)]
 	</p>
 	<p>
-		More than happy to submit to [attacker.name], you let [attacker.herHim] pull you into [attacker.her] [attacker.arms], and right there in the middle of the chaotic brawl, you prepare to have some fun with [attacker.herHim]...
+		你非常乐意服从[attacker.name]，由着[attacker.herHim]把你拉到怀中，就在混乱的争斗中，你准备和[attacker.herHim]来找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_AFTER_SEX"><![CDATA[
 	<p>
 		#IF(sex.isDom(pc))
-			Having had your fun, you bring an end to the sex.
+			你
 			#IF(attacker.isSatisfiedFromLastSex())
-				 Letting out a frustrated moan, [attacker.name] pants, [attacker.speech(I'm not satisfied from that, you know?)]
+				[attacker.name]发出欲求不满的呻吟，喘息道：[attacker.speech(我还没满足呢，你知道吗？)]
 			#ELSE
-				 Letting out a deeply satisfied moan, [attacker.name] pants, [attacker.speech(That was great...)]
+				[attacker.name]发出满足的沉吟，喘息道：[attacker.speech(刚刚好爽……)]
 			#ENDIF
 		#ELSE
-			Having had [attacker.her] fun, [attacker.name] brings an end to the sex. Grinning at you, [attacker.she] pants, [attacker.speech(That was great...)]
+			[attacker.name]已经爽够了，便结束了这次性爱。[attacker.she]朝你坏笑，喘息道：[attacker.speech(刚刚好爽……)]
 		#ENDIF
 	</p>
 	<p>
-		With the chaotic brawl still very much ongoing throughout the tavern, [attacker.name] quickly gets [attacker.her] clothing back in order, before giving you one last smirk and then rushing off into the melee. After taking a moment to catch your breath, you get your own things in order and prepare to continue on your way...
+		酒馆里混乱的纷闹还在继续，[attacker.name]迅速整理好衣服，然后对你露出最后一个冷笑，冲进了混战中。你喘息片刻后，整理好自己的东西，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_AFTER_SEX_END"><![CDATA[
 	<p>
-		Setting off through the tavern, you try to find somewhere safe to move to...
+		你穿过酒馆，试图找到一个安全的地方……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_BRAWL"><![CDATA[
 	<p>
-		Dodging drunken brawlers, knocked-over furniture, and the occasional flying bottle, you work your way through the tavern to an area which looks to be somewhat safe. Unfortunately, as you approach this space of relative calm, [attacker.name] jumps out in front of you and bellows, [attacker.speech(You'll do! Let's fight!)]
+		你躲开醉酒的斗殴者、被撞倒的家具和偶尔飞来的酒瓶，一路穿过酒馆，来到一个看起来还算安全的地方。不幸的是，当你接近这个相对平静的地方时，[attacker.name]跳到你面前，大叫道：[attacker.speech(你会做的！我们开打吧！)]
 	</p>
 	<p>
-		At that moment, you hear the unmistakable voice of Oglix booming out over the noise of the brawl, [oglix.speech(That's enough! Everyone stop fighting, right this instant! Anyone who continues is going to be publicly punished!)]
+		就在这时，你听到奥格利克斯那清晰无比的声音在争吵声中响起：[oglix.speech(够了！所有人都给我马上停手！谁再继续，谁就会受到公开惩罚！)]
 	</p>
 	<p>
-		Although the majority of the surrounding combatants stop fighting as they hear this, the [attacker.race] before you doesn't seem to care about Oglix's warning, and launches [attacker.herself] at you. Forced to defend yourself, you have no choice but to fight!
+		虽然周围的大多数战斗者听到这句话后都停止了战斗，但你面前的[attacker.race]似乎并不在意奥格利克斯的警告，还是向你冲来。迫于自卫，你只能选择战斗！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_BRAWL_WON"><![CDATA[
 	<p>
-		The [attacker.race] staggers back, defeated, right into the waiting arms of Oglix. Looking around, you see that the brawl has come to a complete end, and you and this [attacker.race] were the last two to have been fighting.
+		[attacker.race]踉踉跄跄地后退，败下阵来，直奔奥格利克斯等待着的怀抱。你环顾四周，发现争斗已经完全结束，而你和这个[attacker.race]是最后两个在战斗的人。
 	</p>
 	<p>
-		[oglix.speech(Looks like someone needs to be punished!)] Oglix growls, before hurling your attacker face-down over a nearby table. Glancing back over at you, she narrows her eyes and grunts, [oglix.speech(I saw that you were forced to defend yourself from [attacker.herHim], so you won't be punished, unlike [attacker.name] here...)]
+		[oglix.speech(来有人需要受到惩罚了！)]奥格利克斯咆哮着，然后把袭击者脸朝下扔到附近的桌子上。她回头瞥了你一眼，眯起眼睛哼了一声：[oglix.speech(我看到你是被迫自卫，所以你不会受到惩罚，不像这里的[attacker.name]……)]
 	</p>
 	<p>
-		Turning her attention back to the [attacker.race], who you've just heard is called '[attacker.name]', Oglix delivers a sharp slap to [attacker.her] rear end, before booming in a voice loud enough for the whole tavern to hear, [oglix.speech(A good, hard fuck from my elemental will put you in your place! Everyone! This is what happens to people who keep on fighting after I've said to stop! Golix, give [attacker.herHim] a good, hard fuck! I don't want [attacker.herHim] to forget this lesson!)]
+		奥格利克斯将注意力转移到[attacker.race]身上，你们刚刚听说其名为“[attacker.name]”，奥格利克斯猛地拍了一下[attacker.her]的后脑勺，然后用足以让整个酒馆都能听到的声音大声说道：[oglix.speech(我的元素体会狠狠地猛干你一顿，让你知道自己几斤几两！诸位，这就是在我叫停之后还继续战斗的人的下场！戈利克斯，给[attacker.herHim]猛干一顿！我不想让[attacker.herHim]忘记这个教训！)]
 	</p>
 	<p>
-		Looking over at the floating wisp which is Oglix's elemental, you see it suddenly emit a burst of blinding light, and then a moment later, you see that it's taken its active form, which is that of a stone-skinned, shemale succubus. Hefting her enormous stone cock, Golix
+		你看着奥格利克斯漂浮在空中的元素体，它突然发出一阵刺眼的光芒，片刻之后就变成了主动态，是一个石头肌肤的女雄魅魔。戈利克斯翘着巨大的石头鸡巴，
 		#IF(!attacker.hasVagina() && !game.isAnalContentEnabled())
-			 wastes no time in stepping around to the other side of the table and preparing to fuck [attacker.namePos] throat...
+			不浪费时间地走到桌子另一边，准备操[attacker.namePos]的喉咙……
 		#ELSE
-			 wastes no time in pulling [attacker.namePos] underwear down, before stepping forwards and preparing to fuck
+			不浪费时间地拔去[attacker.namePos]的内裤，准备走近[attacker.herHim]，
 			#IF(attacker.hasVagina())
-				 [attacker.herHim] over the table...
+				在桌子上操[attacker.herHim]……
 			#ELSE
-				 [attacker.her] ass...
+				操[attacker.her]的屁股……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_BRAWL_DONT_WATCH"><![CDATA[
 	<p>
-		Not wanting to watch, you [pc.step] away from the table at which [attacker.name] is to be punished and find a nearby table at which to sit and recover your energy from the fight. The desperate, horny moans of [attacker.name], and the wet, rhythmic slapping of Golix's cock as it slams into [attacker.herHim], can be heard even over the loud cheers and jeers of the spectating crowd.
+		你不想看，于是离开了[attacker.name]受罚的桌子，在附近找了张桌子坐下，恢复战斗的体力。[attacker.name]迷乱而淫荡的呻吟声，以及戈利克斯插入[attacker.herHim]时发出的湿润而有节奏的拍打声，即使在围观人群的欢呼声和嘲笑声中也清晰可闻。
 	</p>
 	<p>
-		After ten minutes, the public punishment sounds like it's come to an end, and you feel well-rested enough to continue on your way. Standing up, you look around to see that the tavern has mostly returned to its pre-brawl state, with the exception of the people lurking in the seating areas looking less hostile than they were before. Deciding that it's time to be going, you [pc.step] away from the table and wonder where to go next...
+		十分钟后，这场公开的惩罚听起来像是结束了。你充分休息好，准备继续。你站起身环顾四周，酒馆几乎恢复了平静，那些隐藏在座位上的人们似乎没有之前那么有敌意了。你决定上路，于是离开桌子，思考下一步该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_BRAWL_WATCH_ATTACKER_FUCKED"><![CDATA[
 	<p>
-		Joining both Oglix and the crowd of people who have gathered around to watch [attacker.namePos] punishment, you watch as Oglix rams her massive stone cock deep
+		你加入奥格利克斯和围观惩罚[attacker.name]的人群，看着戈利克斯将她巨大的石头鸡巴深深插入
 		#IF(attacker.hasVagina())
-			 into the [attacker.race]'s [attacker.pussy+],
+			[attacker.race][attacker.pussy+]，
 		#ELSEIF(game.isAnalContentEnabled())
-			 into the [attacker.race]'s [attacker.asshole+],
+			[attacker.race][attacker.asshole+]，
 		#ELSE
-			 down the [attacker.race]'s throat,
+			[attacker.race]的喉咙，
 		#ENDIF
-		  before starting to forcefully piston her hips back and forth in an almost-mechanical fashion. Roughly keeping her unfortunate partner pinned to the table, this elemental is encouraged to show no mercy by her mistress, Oglix, who moans, [oglix.speech(That's it, Golix! Fuck that bad [attacker.girl] good and hard!)]
+		然后激烈地以一种近乎机械的方式前后摆动臀部。奥格利克斯呻吟着说：[oglix.speech(就是这样，戈利克斯！狠狠猛干那个坏[attacker.girl]！)]戈利克斯把这不幸的[attacker.race]摁在桌子上，受到主人的鼓励，对其更是毫不留情。
 	</p>
 	<p>
-		Looking over at the muscular, green-skinned succubus, you see her drop a hand down towards her groin and start to touch herself as her elemental pounds the [attacker.race] over the table before you...
+		你看向这位肌肉发达的绿皮肤魅魔，只见她将一只手伸到下面，触摸着自己的下体。而她的元素体则在你面前的桌子上撞击[attacker.race]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_BRAWL_LOST"><![CDATA[
 	#IF(!game.isNonConEnabled() || !((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)) || (pc.isAbleToAccessCoverableArea(CA_MOUTH, true))))
 		<p>
-			Unable to continue fighting, you stagger back, defeated, and collapse down against a nearby table. Looking up, you see that instead of being able to take advantage of your defeated form, [attacker.name] has been grabbed by Oglix. Having a moment in which to take stock of your surroundings, you see that the brawl has come to a complete end, and that you and this [attacker.race] were the last two to have been fighting.
+			由于无法继续战斗，你踉跄后退，败下阵来，倒在附近的桌子上。抬头一看，你发现[attacker.name]趁你战败占便宜，而是被奥格利克斯抓住了。你稍稍打量了一下周围的环境，发现争斗已经完全结束，你和这个[attacker.race]是最后两个在战斗的人。
 		</p>
 		<p>
-			[oglix.speech(Looks like someone needs to be punished!)] Oglix growls, before hurling [attacker.name] face-down over a nearby table. Glancing back over at you, she narrows her eyes and grunts,
+			[oglix.speech(看来有人需要受到惩罚了！)]奥格利克斯咆哮着，然后把[attacker.name]脸朝下扔到附近的桌子上。她回头瞥了你一眼，眯起眼睛哼了一声：
 			#IF(!game.isNonConEnabled())
-				 [oglix.speech(I saw that you were forced to defend yourself from [attacker.herHim], so you won't be punished, unlike [attacker.name] here...)]
+				[oglix.speech(我看到你是被迫自卫，所以你不会受到惩罚，不像这里的[attacker.name]……)]
 			#ELSE
-				 [oglix.speech(I was planning on punishing whoever lost the fight, but with all that sealed clothing you've got on, there's no opportunity to have you fucked. As such, I'll just have to have [attacker.name] punished in your place...)]
+				[oglix.speech(我本打算惩罚打输的人，但你穿了这么多密封服，根本没机会让你被操。因此，我只能让[attacker.name]代替你接受惩罚了……)]
 			#ENDIF
 		</p>
 		<p>
-			Turning her attention back to the [attacker.race], who you've just heard is called '[attacker.name]', Oglix delivers a sharp slap to [attacker.her] rear end, before booming in a voice loud enough for the whole tavern to hear, [oglix.speech(A good, hard fuck from my elemental will put you in your place! Everyone! This is what happens to people who keep on fighting after I've said to stop! Golix, give [attacker.herHim] a good, hard fuck! I don't want [attacker.herHim] to forget this lesson!)]
+			奥格利克斯将注意力转移到[attacker.race]身上，你们刚刚听说其名为“[attacker.name]”，奥格利克斯猛地拍了一下[attacker.her]的后脑勺，然后用足以让整个酒馆都能听到的声音大声说道：[oglix.speech(我的元素体会狠狠地猛干你一顿，让你知道自己几斤几两！诸位，这就是在我叫停之后还继续战斗的人的下场！戈利克斯，给[attacker.herHim]猛干一顿！我不想让[attacker.herHim]忘记这个教训！)]
 		</p>
 		<p>
-			Looking over at the floating wisp which is Oglix's elemental, you see it suddenly emit a burst of blinding light, and then a moment later, you see that it's taken its active form, which is that of a stone-skinned, shemale succubus. Hefting her enormous stone cock, this elemental, who you've just heard been called 'Golix',
+			你看着奥格利克斯漂浮在空中的元素体，它突然发出一阵刺眼的光芒，片刻之后就变成了主动态，是一个石头肌肤的女雄魅魔。这个被称为“戈利克斯”的元素体翘着巨大的石头鸡巴，
 			#IF(!attacker.hasVagina() && !game.isAnalContentEnabled())
-				 wastes no time in stepping around to the other side of the table and preparing to fuck [attacker.namePos] throat...
+				不浪费时间地走到桌子另一边，准备操[attacker.namePos]的喉咙……
 			#ELSE
-				 wastes no time in pulling [attacker.namePos] underwear down, before stepping forwards and preparing to fuck
+				不浪费时间地拔去[attacker.namePos]的内裤，准备走近[attacker.herHim]，
 				#IF(attacker.hasVagina())
-					 [attacker.herHim] over the table...
+					在桌子上操[attacker.herHim]……
 				#ELSE
-					 [attacker.her] ass...
+					操[attacker.her]的屁股……
 				#ENDIF
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Unable to continue fighting, you stagger back, defeated, and find yourself stumbling right into the waiting arms of Oglix. Looking around, you see that the brawl has come to a complete end, and you and this [attacker.race] were the last two to have been fighting.
+			你无力再战，踉踉跄跄地后退，发现自己正跌跌撞撞地扑向等待着的奥格利克斯的怀抱。你环顾四周，发现争斗已经完全结束，你和这个[attacker.race]是最后两个在战斗的人。
 		</p>
 		<p>
-			[oglix.speech(Looks like someone needs to be punished!)] Oglix growls, before hurling you face-down over a nearby table. Glancing back over at [attacker.name], she narrows her eyes and grunts, [oglix.speech(I suggest that you get out of here, unless you want to hang around and get a punishment after I've finished with [pc.name] here...)]
+			[oglix.speech(看来有人需要受到惩罚了！)]奥格利克斯咆哮着，然后把你脸朝下扔到附近的桌子上。她回头瞥了[attacker.name]一眼，眯起眼睛哼了一声： [oglix.speech(我建议你离开这里，除非你想在我处理完这里的[pc.name]后继续待在这里接受惩罚……)]
 		</p>
 		<p>
-			Not needing to be told twice, [attacker.name] bolts out of the tavern, leaving Oglix to turn her attention back to you. Delivering a sharp slap to your rear end, she booms in a voice loud enough for the whole tavern to hear, [oglix.speech(A good, hard fuck from my elemental will put you in your place! Everyone! This is what happens to people who keep on fighting after I've said to stop! Golix, give [pc.herHim] a good, hard fuck! I don't want [pc.herHim] to forget this lesson!)]
+			无需再说第二遍，[attacker.name]就冲出了酒馆，让奥格利克斯把注意力转回到你身上。她狠狠地拍了一下你的屁股，用足以让整个酒馆都能听到的声音吼道：[oglix.speech(我的元素体狠狠地干你一下，你就会乖乖就范！诸位，这就是在我叫停之后还继续战斗的人的下场！戈利克斯，给[pc.herHim]猛干一顿！我不想让[pc.herHim]忘记这个教训！)]
 		</p>
 		<p>
-			Looking over at the floating wisp which is Oglix's elemental, you see it suddenly emit a burst of blinding light, and then a moment later, you see that it's taken its active form, which is that of a stone-skinned, shemale succubus. Hefting her enormous stone cock, this elemental, who you've just heard been called 'Golix',
+			你看着奥格利克斯漂浮在空中的元素体，它突然发出一阵刺眼的光芒，片刻之后就变成了主动态，是一个石头肌肤的女雄魅魔。这个被称为“戈利克斯”的元素体翘着巨大的石头鸡巴，
 			#IF(!pc.hasVagina() && !game.isAnalContentEnabled())
-				 wastes no time in stepping around to the other side of the table and preparing to fuck your throat...
+				不浪费时间地走到桌子另一边，准备操你的喉咙……
 			#ELSE
-				 wastes no time in gaining access to your
+				不浪费时间地碰上你
 				#IF(pc.hasVagina())
-					 [pc.pussy+], before stepping forwards and preparing to fuck you over the table...
+					[pc.pussy+]，准备走近来在桌上操你……
 				#ELSE
-					 [pc.asshole+], before stepping forwards and preparing to fuck you over the table...
+					[pc.asshole+]，准备走近来在桌上操你……
 				#ENDIF
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_BRAWL_LOST_FUCKED"><![CDATA[
 	<p>
-		Before you can object, Golix rams her fat stone cock as deep as possible
+		不等你拒绝，戈利克斯就尽可能深地将自己肥硕的石头鸡巴捅入你
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 into your [pc.pussy+],
+			[pc.pussy+]，
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 into your [pc.asshole+],
+			[pc.asshole+]，
 		#ELSE
-			 down your throat,
+			的喉咙，
 		#ENDIF
-		 before starting to forcefully piston her hips back and forth in an almost-mechanical fashion. Roughly keeping you pinned to the table, this elemental is encouraged to show you no mercy by her mistress, Oglix, who moans, [oglix.speech(That's it, Golix! Fuck that bad [pc.girl] good and hard!)]
+		然后开始以一种近乎机械的方式前后有力地摆动她的臀部。她的主人奥格利克斯呻吟着说：[oglix.speech(就是这样，戈利克斯！狠狠地操那个坏[pc.girl]！)]
 	</p>
 	<p>
-		Managing to catch a sideways glance at the muscular, green-skinned succubus, you see her drop a hand down towards her groin and start to touch herself as her elemental pounds you over the table...
+		你瞥了一眼这位肌肉发达的绿皮肤魅魔，只见她将一只手伸到下面，触摸着自己的下体。而此时，元素体粗暴地把你推倒在桌子上撞击……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_AFTER_SEX_WATCH"><![CDATA[
 	<p>
-		[oglix.speech(That's enough, Golix,)] Oglix calls out. Immediately, the elemental steps back, sliding her thick, stone cock out of [attacker.namePos] well-fucked
+		[oglix.speech(够了，戈利克斯。)]奥格利克斯喊道。随即，元素体后退一步，将她那粗大的石阴茎从被[attacker.namePos]干得爽歪歪的
 		#IF(attacker.hasVagina())
-			 pussy.
+			小穴里滑了出来。
 		#ELSEIF(game.isAnalContentEnabled())
-			 asshole.
+			菊穴里滑了出来。
 		#ELSE
-			 throat.
+			喉咙里滑了出来。
 		#ENDIF
-		 With a snap of her mistress's fingers, Golix transforms back into her passive, wisp-like form of a swirling cloud of energy. Stepping up to the punished [attacker.race], Oglix grunts, [oglix.speech(No hard feelings, [attacker.name]. I have to carry out punishments like this to keep order in my tavern. I hope that I'll see you here again soon.)]
+		主人打了个响指，戈利克斯就变回了她那被动的、宛如能量漩涡云团的飘渺形态。奥格利克斯走到受处罚的[attacker.race]面前，咕哝道：[oglix.speech(我没有恶意，[attacker.name]。为了维持酒馆的秩序，我不得不执行这样的惩罚。希望很快能在这里再见到你。)]
 	</p>
 	<p>
-		With that, the large, green-skinned succubus returns to the bar, leaving you, [attacker.name], and the crowd that'd gathered to watch to go your separate ways...
+		就这样，这个大块头的绿皮肤魅魔回到了酒吧，留下你与[attacker.name]还有围观的人群分道扬镳……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEATING_ATTACKED_AFTER_SEX_FUCKED"><![CDATA[
 	<p>
-		[oglix.speech(That's enough, Golix,)] Oglix calls out. Immediately, the elemental steps back, sliding her thick, stone cock out of your well-fucked
+		[oglix.speech(戈利克斯，足够了。)]奥格利克斯喊道。随即，元素体后退一步，将她那粗大的石阴茎从你被干得爽歪歪的
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 pussy.
+			小穴里滑了出来。
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 asshole.
+			菊穴里滑了出来。
 		#ELSE
-			 throat.
+			喉咙里滑了出来。
 		#ENDIF
-		 With a snap of her mistress's fingers, Golix transforms back into her passive, wisp-like form of a swirling cloud of energy. Stepping up to you, Oglix grunts, [oglix.speech(No hard feelings, [pc.name]. I have to carry out punishments like this to keep order in my tavern. I hope that I'll see you here again soon.)]
+		主人打了个响指，戈利克斯就变回了她那被动的、宛如能量漩涡云团的飘渺形态。奥格利克斯走到你面前，咕哝道：[oglix.speech(没有恶意，[pc.name]。为了维持酒馆的秩序，我不得不执行这样的惩罚。希望很快能在这里再见到你。)]
 	</p>
 	<p>
-		With that, the large, green-skinned succubus returns to the bar, leaving you to get your things back in order and continue on your way...
+		就这样，这个大块头的绿皮肤魅魔回到了酒吧，留下你收拾好自己的东西，继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -1625,57 +1625,57 @@
 	
 	<htmlContent tag="DICE_POKER"><![CDATA[
 	<p>
-		In the middle of the tavern's floor, half a dozen tables appear to have been reserved for the game of 'dice poker'. Rather surprisingly, considering the chaotic nature of this place, a nearby sign informs you that these games must be played in accordance with 'standard tournament rules', and any instances of cheating or deviating from the rules will be harshly punished.
+		在酒馆的地板中央，有半打桌子似乎是为“骰子扑克”游戏预留的。令人惊讶的是，考虑到这里的混乱性质，附近的一块告示牌告诉你，这些游戏必须按照“标准比赛规则”进行，任何作弊或偏离规则的行为都将受到严厉惩罚。
 	</p>
 	<p>
-		Looking around, you see that there are spaces at several of the tables, and you wonder whether to sit down and join in on a game...
+		环顾四周，你发现几张桌子上都有空位，是否要坐下来加入一场游戏……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VIP corridor: -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		This short, dimly-lit corridor leads to the VIP lounge.
+		走廊很短，很昏暗，一直通向贵宾休息室。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VIP locked door: -->
 	
 	<htmlContent tag="LOCKED_DOOR"><![CDATA[
 	<p>
-		With its black paint only slightly peeling around the edges, the door before you is in far better condition than all the other ones which you've seen in this establishment. The reason for this is explained by a brass plaque fixed to its surface, which reads: <i>'VIP area: No admittance without Oglix's permission'</i>.
+		你面前的这扇门的黑漆只是在边缘处略有剥落，比你在这家店里看到的其他所有门的状况都要好得多。其原因在于门上固定的一块黄铜牌匾，上面写着：<i>“贵宾区：未经奥格利克斯许可，禁止入内”</i>。
 	</p>
 	<p>
-		As you don't have Oglix's permission to access the VIP area, and as the door appears to be securely locked, there's very little else for you to do except turn around and head over to another part of the tavern...
+		由于你没有得到奥格利克斯的允许进入贵宾区，而且门似乎被牢牢锁住了，所以除了转身前往酒馆的另一个地方外，你几乎没有其他办法……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VIP room: -->
 	
 	<htmlContent tag="VIP"><![CDATA[
 	<p>
-		VIP lounge has several high-ranking gang members lounging about at the dozen or so tables.
-		If Wynter present, she greets you and offers a complimentary drink.
+		贵宾休息室的十几张桌子上坐着几位高级黑帮成员。
+		如果温特在场，她会向你问好，并提供一杯免费饮料。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Oglix's bedroom: -->
 	
 	<htmlContent tag="BEDROOM"><![CDATA[
 	<p>
-		Locked door with a sign declaring it to be Oglix's private quarters, and to never dare knock on it.
+		上锁的门上挂着一个牌子，上面写着这是奥格利克斯的私人住处，千万不要敲门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

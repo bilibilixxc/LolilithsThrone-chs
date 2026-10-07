@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>45</value> 
-		<determiner><![CDATA[a can of]]></determiner>
-		<name><![CDATA[Raptor energy drink]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Raptor energy drinks]]></namePlural>
-		<description><![CDATA[A brightly-coloured can of caffeinated, Raptor-branded energy drink. On the reverse label there's a graphic image of a wild-eyed eagle-girl pinning a timid-looking rabbit-boy down and riding his cock.]]></description> 
+		<determiner><![CDATA[一罐]]></determiner>
+		<name><![CDATA[猛禽能量饮料]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[猛禽能量饮料]]></namePlural>
+		<description><![CDATA[一罐色彩鲜艳的猛禽牌咖啡因能量饮料。反面标签上有一幅图案，一个眼神狂野的鹰女把一个胆小的兔男按倒在地，然后骑在他的肉棒上。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,13 +28,13 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(5)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_CRITICAL_DAMAGE.getFormattedValue(5)] to 'potion effects']]></line>
+			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(5)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_CRITICAL_DAMAGE.getFormattedValue(5)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful jolt of energy surges through [npc.namePos] body!
+				一股强大的能量冲击涌进[npc.namePos]的身体！
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_HEALTH_MAXIMUM, 5)]
 			[#npc.addPotionEffect(ATTRIBUTE_CRITICAL_DAMAGE, 5)]
@@ -52,10 +52,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			Popping open the cap, [npc.name] [npc.verb(bring)] the can of Raptor energy drink up to [npc.her] [npc.mouth]. A sweet, artificial smell rises from the opening, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the fizzy liquid, [npc.she] quickly [npc.verb(find)] [npc.herself] feeling full of energy.
+			打开瓶盖后，[npc.name]把猛禽能量饮料的罐子送到[npc.her]的嘴边。从罐口升起一股甜美的、人工的气味，当[npc.she]仰起头，开始喝这气泡丰富的液体时，[npc.she]很快发现到自己充满了能量。
 		]]></selfUse>
 		<otherUse><![CDATA[
-			Popping open the cap, [npc.name] [npc.verb(bring)] the can of Raptor energy drink up to [npc2.namePos] waiting [npc2.lips]. A sweet, artificial smell rises from the opening, and as [npc2.name] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the fizzy liquid, [npc2.she] quickly [npc2.verb(find)] [npc2.herself] feeling full of energy.
+			打开瓶盖后，[npc.name]把猛禽能量饮料的罐子送到[npc2.namePos]等待[npc2.lips]前。从罐口升起一股甜美的、人工的气味，当[npc2.name]仰起头，开始喝这气泡丰富的液体时，[npc2.she]很快发现到自己充满了能量。
 		]]></otherUse>
 	</useDescriptions>
 

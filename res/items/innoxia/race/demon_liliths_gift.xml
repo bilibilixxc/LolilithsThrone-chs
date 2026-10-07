@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>1500</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Lilith's Gift]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Lilith's Gifts]]></namePlural>
-		<description><![CDATA[A glass bottle, filled with bubbling pink liquid. On the bottle's label, there's an image of a succubus's perfectly-formed, heart-shaped ass. Her delicate hands are reaching down to pull apart her soft ass cheeks, fully exposing her tight asshole and dripping-wet pussy.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[莉莉丝的恩馈]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[莉莉丝的恩馈]]></namePlural>
+		<description><![CDATA[这是一瓶装满了冒泡的粉色液体的玻璃瓶。瓶子上的标签上有一张魅魔完美形状的、心形的臀部的图片。她的纤细手伸向下拉开她柔软的臀瓣，完全暴露出她紧致的肛门和滴水的小穴。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,9 +28,9 @@
 		<enchantmentEffectId>ATTRIBUTE_CORRUPTION</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_CORRUPTION.getFormattedValue(25)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_CORRUPTION.getFormattedValue(25)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -38,7 +38,7 @@
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A sickly wave of corruptive arcane energy washes over [npc.name]...
+				一股病态的腐化奥术能量波浪涌过[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_CORRUPTION, 25)]
 		]]></applyEffects>
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		The moment [npc.name] [npc.verb(pull)] the stopper out from the bottle of Lilith's Gift, [npc.sheIs] filled with a desperate need to drink the bubbling pink liquid contained within. Instantly, [npc.she] [npc.verb(bring)] the bottle to [npc.her] [npc.lips] and [npc.verb(gulp)] it all down, suppressing [npc.her] gag reflex as [npc.her] senses are overwhelmed by how sickeningly sweet it is.
-		]]></selfUse>
+		在[npc.name]拔出莉莉丝的恩馈瓶塞的瞬间，[npc.sheIs]立刻流露出喝下瓶中冒着诡异气泡的粉红液体的欲望。在[npc.she]将瓶子送到[npc.her][npc.lips]边的瞬间，[npc.her]立刻开始贪婪地吞咽下液体，并抑制着液体过分甜腻所带来的呕吐感觉。
+	]]></selfUse>
 		<otherUse><![CDATA[
-		Pulling out the stopper from the bottle of Lilith's Gift, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips]. Instantly, [npc2.she] [npc2.verb(gulp)] it all down, suppressing [npc2.her] gag reflex as [npc2.her] senses are overwhelmed by how sickeningly sweet it is.
+		[npc.Name]拔出莉莉丝的恩馈的瓶塞，然后将它送到静静等待的[npc2.namePos][npc2.lips]边。[npc2.she]立刻开始吞咽下瓶内的液体，并抑制着液体过分甜腻所带来的呕吐感觉。
 		]]></otherUse>
 	</useDescriptions>
 

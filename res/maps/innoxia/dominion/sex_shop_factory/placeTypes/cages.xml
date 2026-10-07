@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[cages]]></name>
-	<tooltipDescription><![CDATA[Dozens of cages, each large enough to hold twenty people, have been constructed in this area.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside the cages in the factory beneath Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[笼子]]></name>
+	<tooltipDescription><![CDATA[这里放了数十个笼子，每个笼子足以容纳20人。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[洛维耶纳奢侈品店下面工厂的笼子旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -133,7 +133,7 @@ public class DominionAlleywayAttacker extends NPC {
 			setName(Name.getRandomTriplet(this.getSubspecies()));
 			this.setPlayerKnowsName(false);
 			setDescription(UtilText.parse(this,
-					"[npc.Name] is a resident of Dominion, who, for reasons of [npc.her] own, prowls the back alleys in search of victims to prey upon."));
+					"[npc.Name]是个御城区居民，出于私人原因，[npc.her]潜行在背街小巷中寻找猎物。"));
 			
 			// PERSONALITY & BACKGROUND:
 			
@@ -243,25 +243,25 @@ public class DominionAlleywayAttacker extends NPC {
 		if(this.getHistory()==Occupation.NPC_PROSTITUTE) {
 			if(this.isSlave()) {
 				return (UtilText.parse(this,
-						"[npc.NamePos] days of whoring [npc.herself] out in the back alleys of Dominion are now over. Having run afoul of the law, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+						"[npc.NamePos]在御城区背街巷子里卖淫的日子结束了。[npc.sheIs]因触犯法律成为了奴隶，不过是[npc.her]主人的财产而已。"));
 			} else if(this.getLocationPlace().getPlaceType().equals(PlaceType.ANGELS_KISS_BEDROOM)){
 				return (UtilText.parse(this,
-						"You first found [npc.name] in the alleyways of Dominion, where [npc.she] was illegally selling [npc.her] body. You offered [npc.herHim] the chance to move and work out of Angel's Kiss; an offer which [npc.she] happily accepted."));
+						"你最初在御城区的小巷中遇见了非法卖淫的[npc.name]。你引荐[npc.herHim]去天使之吻工作，[npc.she]欣然接受。"));
 			} else {
 				return (UtilText.parse(this,
-						"[npc.Name] is a prostitute who whores [npc.herself] out in the backalleys of Dominion."));
+						"[npc.name]是卖淫者，在御城区后巷出卖身体。"));
 			}
 			
 		} else {
 			if(this.isSlave()) {
 				return (UtilText.parse(this,
-						"[npc.NamePos] days of prowling the back alleys of Dominion and mugging innocent travellers are now over. Having run afoul of the law, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+						"[npc.NamePos]在御城区的后巷游荡和抢劫无辜过路人的日子已经结束。[npc.sheIs]因触犯法律成为了奴隶，不过是[npc.her]主人的财产而已。"));
 			} else if(Main.game.getPlayer().getFriendlyOccupants().contains(this.getId())){
 				return (UtilText.parse(this,
-						"[npc.NamePos] days of prowling the back alleys of Dominion and mugging innocent travellers are now over. Having befriended [npc.herHim], you invited [npc.name] to move in with you and helped [npc.herHim] to start a new life."));
+						"[npc.name]在御城区后巷游荡、抢劫无辜过路人的日子已经结束。你与[npc.herHim]成为朋友，邀请[npc.name]搬到你家，帮助[npc.herHim]开始新生活。"));
 			} else {
 				return (UtilText.parse(this,
-						"[npc.Name] is a resident of Dominion, who prowls the back alleys in search of innocent travellers to prey upon."));
+						"[npc.Name]是御城区居民，在后巷潜行，捕食无辜的过路人。"));
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_shops_convenience -->
@@ -9,8 +9,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Enter the convenience store.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[进入便利店。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_convenience_enter]]></nextDialogue>
 			</response>
 		</responses>
@@ -31,9 +31,9 @@
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_elis_convenience_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Introduction]]></responseTitle>
+					<responseTitle><![CDATA[介绍]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Tell Ceridwen who you are.
+						告诉凯丽德温你是谁。
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_convenience_introduction]]></nextDialogue>
 				</response>
@@ -42,8 +42,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_convenience_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Trade]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look around Ceridwen's store and see what she's got for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[交易]]></responseTitle>
+					<responseTooltip><![CDATA[看看凯丽德温的商店有什么出售的……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[ceridwen]]></tradePartner>
@@ -54,12 +54,12 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_convenience_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[The Barn]]></responseTitle>
+					<responseTitle><![CDATA[随时粮仓]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_ceridwen_talk_name))
-							You've already asked Ceridwen about the story behind her convenience store's name today...
+							你今天已经问过凯丽德温便利店名字背后的故事了……
 						#ELSE
-							Ask Ceridwen for the story behind her convenience store's name, 'The Barn'.
+							问问凯丽德温便利店名字“随时粮仓”背后的故事。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -81,12 +81,12 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_convenience_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Suppliers]]></responseTitle>
+					<responseTitle><![CDATA[供应商]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_ceridwen_talk_sources))
-							You've already asked Ceridwen about how she sources all of her goods today...
+							你今天已经问过凯丽德温她是如何采购所有物品的了……
 						#ELSE
-							Ask Ceridwen how she sources all of the goods that she's got for sale.
+							问问凯丽德温卖的商品的来源。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -108,12 +108,12 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_convenience_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Mouse-morphs]]></responseTitle>
+					<responseTitle><![CDATA[鼷鼠化形]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_ceridwen_talk_mice))
-							You've already asked Ceridwen about why she only employs mouse-morphs today...
+							你今天已经问过凯丽德温为什么她只雇鼷鼠化形了……
 						#ELSE
-							Ask Ceridwen why she only employs mouse-morphs.
+							问问凯丽德温为什么只雇佣鼷鼠化形。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -136,10 +136,10 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_convenience_visited) && flags.hasFlag(FLAG_innoxia_ceridwen_side_quest_available)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Offer help]]></responseTitle>
+					<responseTitle><![CDATA[提供帮助]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Tell Ceridwen that you'd like to help her out in some way, and ask her if there's anything you can do that would allow her to go home and rest during the day.
-						<br/>[style.italicsMinorBad(This will be added soon!)]
+						告诉凯丽德温你想帮她，询问她是否有什么你能做的事能她回家休息。
+						<br/>[style.italicsMinorBad(不久后会添加！)]
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[null]]></nextDialogue>
 					<effects/>
@@ -149,8 +149,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_convenience_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[0]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Say goodbye to Ceridwen and exit her convenience store.]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[和凯丽德温告别，离开便利店。]]></responseTooltip>
 					<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_shops_street"/>
 					<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 					<effects><![CDATA[

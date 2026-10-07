@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>2500</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
-		<name><![CDATA[service dress skirt]]></name>
+		<name><![CDATA[军装礼服长裙]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[service dress skirts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[军装礼服长裙]]></namePlural> 
 		
-		<description><![CDATA[An officer's service dress skirt, complete with metal buttons. This style of uniform is worn only by Lyssieth's elite guards.]]></description> 
+		<description><![CDATA[一条带有金属纽扣的军装礼服裙子，这种制服只有莉西丝的精英卫兵才能穿戴。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

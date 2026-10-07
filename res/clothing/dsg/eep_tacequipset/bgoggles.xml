@@ -1,26 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	
 	
 	<coreAtributes>
 	
-		<authorTag><![CDATA[On the protective sleeve, rubberized ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在防护套内侧，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 	
 		
 		<value>1000</value> 
 		
 		
-		<determiner><![CDATA[a set of]]></determiner>
+		<determiner><![CDATA[一套]]></determiner>
 		
 		
-		<name><![CDATA[Enforcer's ballistic goggles]]></name>
+		<name><![CDATA[执法者战术护目镜]]></name>
 		
 		
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's ballistic goggles]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者战术护目镜]]></namePlural> 
 		
 		
-		<description><![CDATA[A pair of well-ventilated goggles with impact resistant polycarbonate lenses. When not in use, they can be slid into a protective sleeve. The headband has a lot of adjustment available to fit a variety of head sizes.]]></description> 
+		<description><![CDATA[一副通风良好的战术护目镜，带有抗冲击聚碳酸酯镜片。不使用时，可以将它们滑入保护套中。头带有很多调节功能，可以适应各种不同的头部尺寸。]]></description> 
 		
 		
 		<physicalResistance>2</physicalResistance> 
@@ -102,28 +101,22 @@
 	
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the ballistic goggles and [npc.verb(adjust)] the headband until they're comfortable.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the ballistic goggles onto [npc2.namePos] [npc2.face] and [npc.verb(help)] [npc2.her] [npc2.verb(adjust)] the headband until they're comfortable.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the ballistic goggles onto [npc2.namePos] [npc2.face] and [npc.verb(tighten)] the headband as much as possible.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]戴上护目镜并调整头带直到穿戴舒适。]]></self>
+		<other><![CDATA[
+[npc.Name]将护目镜贴在[npc2.namePos]的脸上，并帮助[npc2.her]调整头带直到佩戴舒适。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将护目镜按在[npc2.namePos]的脸上并用力绑紧了头带。]]></otherRough>
 	</replacementText>
 
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the headband on [npc.her] ballistic goggles and [npc.verb(take)] them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the headband on [npc2.namePos] ballistic goggles and [npc.verb(take)] them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] ballistic goggles from [npc2.her] [npc2.face].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]松开了[npc.her]的头带并将护目镜取下。]]></self>
+		<other><![CDATA[
+[npc.Name]松开了[npc2.namePos]护目镜上的头带并将其取下。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将护目镜从[npc2.namePos]的[npc2.face]上拽了下来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

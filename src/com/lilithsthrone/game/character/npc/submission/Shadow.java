@@ -84,7 +84,7 @@ public class Shadow extends NPC {
 	}
 	
 	public Shadow(boolean isImported) {
-		super(isImported, new NameTriplet("Shadow"), "Werlock",
+		super(isImported, new NameTriplet("影"), "沃洛克",
 				"",
 				23, Month.DECEMBER, 29,
 				15, Gender.F_V_B_FEMALE, Subspecies.RAT_MORPH, RaceStage.GREATER,
@@ -316,7 +316,7 @@ public class Shadow extends NPC {
 		ring.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.CRITICAL_DAMAGE, TFPotency.MAJOR_BOOST, 0));
 		ring.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.CRITICAL_DAMAGE, TFPotency.BOOST, 0));
 		
-		ring.setName("Shadow's Kiss");
+		ring.setName("影的吻");
 		
 		this.equipClothingFromNowhere(ring, true, this);
 		
@@ -333,22 +333,22 @@ public class Shadow extends NPC {
 	public String getDescription() {
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("As her adopted name, 'Shadow', suggests, this sneaky rat-girl is an unrivalled expert at sneaking around and remaining unseen when moving by cover of darkness."
-				+ " Her considerable stealth skills are greatly enhanced by the fact that she has pitch-black fur and ebony skin, making her nigh impossible to spot when in a poorly-illuminated area.");
+		sb.append("正如其寄名“影”所示，这个来无影去无踪的鼠女是个无与伦比的潜行好手，在黑暗的掩护下能够神不知鬼不觉地行动。"
+				+ "她优秀的潜行技能也有赖于那黢黑的皮毛和黑檀色的皮肤，光线不足的区域几乎不可能被发现。");
 
 		sb.append("<br/>"
-				+ "While her lust is not quite as insatiable as her companion, Silence, Shadow does often find herself feeling extremely horny,"
-					+ " and thinks nothing of using her finely-honed stealth abilities to ambush innocent people and force herself upon them at blade-point."
-				+ " From this indiscriminate targeting of those around her, combined with rumours of her previous employers being stabbed in the back, Shadow has a reputation for being underhanded and treacherous.");
+				+ "虽然她的性欲远远不如其同伴“默”那般贪得无厌，但影却也总觉得自己会感到嫉妒饥渴，"
+					+ "她会轻描淡写地利用自己精湛的隐身能力伏击无辜者，将他们逼入绝境。"
+				+ "这种不分青红皂白地将周围人列为目标的做法，再加上她以前的雇主被人背后捅刀子的传闻，让影背上了阴险狡诈的名声。");
 		
 		if(this.getHomeWorldLocation()==WorldType.BOUNTY_HUNTER_LODGE_UPSTAIRS) {
 			sb.append("<br/>"
-					+ "No longer a personal bodyguard for Vengar, Shadow is now a professional bounty hunter."
-					+ " Joined by her long-time companion, Silence, she can be found in Slaver Alley's 'Bounty Hunter Lodge'.");
+					+ "影不再是文加的贴身保镖，现在是一名职业赏金猎人。"
+					+ "她和长久以来的合作伙伴“默”一起，都能在奴隶巷的“赏金猎人小屋”找到。");
 		} else {
 			sb.append("<br/>"
-					+"Despite her ill repute, she has earned a place as a personal bodyguard for the dangerous gang leader, 'Vengar'."
-					+ " Joined by Silence, the one person she is unshakably loyal to, she is sworn to protect Vengar from any harm that might befall him.");
+					+"虽然声名狼藉，但她却地位不俗，是危险的帮派领袖“文加”的贴身保镖。"
+					+ "她和自己绝不会背叛的伙伴“默”一起，宣誓无论有如何的危险，都会保证文加平安。");
 		}
 		
 		return sb.toString();
@@ -424,8 +424,8 @@ public class Shadow extends NPC {
 				&& Main.combat.getAllCombatants(false).contains(Main.game.getNpc(Silence.class))
 				&& Main.combat.isCombatantDefeated(this)
 				&& !Main.combat.isCombatantDefeated(Main.game.getNpc(Silence.class))) {
-			return new Response("Silence",
-					"As she sees Shadow fall to the floor, Silence stumbles back, looking as though she's about to faint.",
+			return new Response("默",
+					"看到影倒在地上，默踉踉跄跄地后退，看来仿佛要晕倒了。",
 					RatWarrensDialogue.BODYGUARDS_COMBAT_SHADOW_DEFEATED){
 				@Override
 				public void effects() {
@@ -437,8 +437,8 @@ public class Shadow extends NPC {
 				&& Main.combat.getAllCombatants(false).contains(Main.game.getNpc(Silence.class))
 				&& !Main.combat.isCombatantDefeated(this)
 				&& Main.combat.isCombatantDefeated(Main.game.getNpc(Silence.class))) {
-			return new Response("Shadow",
-					"As she sees Silence fall to the floor, Shadow lets out a furious scream, looking as though she's about to completely lose her mind.",
+			return new Response("影",
+					"看到默倒在地上，影顿时怒喝一声，似乎快要失去理智一般。",
 					RatWarrensDialogue.BODYGUARDS_COMBAT_SILENCE_DEFEATED){
 				@Override
 				public void effects() {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- All of these are linked to the 'dialogue/innoxia/places/fields/elis/tavern_f0.xml' dialogue nodes. -->
@@ -7,818 +7,817 @@
 	
 	<htmlContent tag="FIRST_ENTRY"><![CDATA[
 	<p>
-		As this is your first time entering The Red Dragon, you stop at the entrance and take a look at your new surroundings. Before you, you see that the entire of the ground floor consists of one huge room, which is filled with numerous wooden tables and chairs, and which has a long bar running along the wall on the side opposite to where you've entered. Thanks to the large wooden floorboards and overhead beams, as well as the decorative, antiquated farm equipment which is displayed on the walls, this tavern's interior has a very rustic feel to it. The smell of alcohol and good, hearty food fills the air,
+		这是你第一次进入“红龙”酒馆，于是你在入口处停了下来，打量着周围的新环境。在你面前，整个一楼都是一个巨大的房间，里面摆满了许多木桌和木椅，与你进来的地方相对的一侧墙壁上还有一个长长的吧台。由于铺设了大片的木地板和木质顶梁，再加上墙壁上陈列的古老农具装饰，酒馆内部充满了乡村气息。空气中弥漫着酒精和美味食物的味道。
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			 and thanks to the fact that it's currently the busy time of the day, almost all of the tables are occupied by people drinking, eating, and making merry.
+			现在正是酒馆一天中最繁忙的时候，几乎所有的餐桌边上都坐满了喝酒、吃东西和狂欢的人们。
 		#ELSE
-			 but due to the fact that it's currently the quiet time of the day, only a few of the tables are occupied by people drinking, eating, and making merry.
+			现在是一天中最冷清的时候，只有几张桌子边上有人在喝酒、吃东西和寻欢作乐。
 		#ENDIF
 	</p>
 	<p>
-		Any further observation of the tavern's interior is brought to a swift and sudden end, for as you look over to your left, you see the familiar form of Meraxis happily skipping over towards you. As she approaches, she calls over to the bar, [meraxis.speech(Flash! [pc.NameIs] here! Come and say hello!)]
+		你对酒馆内部的进一步观察到此而止，因为当你向左侧望去时，你看到熟悉的梅拉克西丝正欢快地向你走来。当她走近时，她向吧台叫了一声，[meraxis.speech(弗拉什！[pc.NameIs]来了！过来打个招呼！)]
 	</p>
 	<p>
-		Looking over in the direction of the bar, you see a greater badger-morph step out from behind it. Wearing a stern expression, this badger-morph looks to be in his early forties, and as he strides over to where you and Meraxis are standing, you see that he's
+		你朝吧台的方向望去，看到一只纯獾化形从吧台后面走了出来。这个獾化形表情严肃，看上去四十出头，当他大步走到你和梅拉克西丝站的地方时，你看到他
 		#IF(game.isMetricSizes())
-			 about 180cm tall,
+			大概180cm高，
 		#ELSE
-			 just under six feet tall,
+			不到六英尺高，
 		#ENDIF
-		 and has a sturdy, muscular body. His [flash.topClothing(NIPPLES)] strains to contain his wide chest and thick biceps, and as he comes to a halt before you, he speaks in a deep, gruff voice which perfectly matches his physical appearance, [flash.speech(Took you long enough to get here. So you're the one Meraxis told me about, eh? I'm Flash, the owner of this place. You're not going to try and challenge me to a duel as well, are you?)]
+		他有着结实的肌肉，他的[flash.topClothing(NIPPLES)]紧紧包裹着他宽阔的胸膛和粗壮的肱二头肌，当他走到你面前停下时，他用低沉、粗鲁的声音说话，这与他健壮的外貌完全吻合，[flash.speech(早有耳闻，你就是梅拉克西丝口中的那个人？我是弗拉什，这家店的主人。你不会也想跟我决斗吧？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_ENTRY_INTRODUCTION"><![CDATA[
 	#IF(pc.hasTraitActivated(PERK_CHUUNI))
 		<p>
-			Letting out a suitably-intimidating laugh, you strike a heroic pose and reply, [pc.speech(I am [pc.name]; the most powerful being ever to have lived! Although Meraxis might have failed to defeat you in a duel, know that you stand no chance against me!)]
+			你恰到好处地发出了恐吓的笑声，摆出一副英雄登场的姿势，[pc.speech(我即是[pc.name]，世间最强大的存在！尽管梅拉克西丝也许会败在了你的手下，但你在我这里毫无胜算！)]
 		</p>
 		<p>
-			[flash.speech(Oh great, you're just like she is...)] Flash sighs, but before he can say anything else, Meraxis lets out one of her own laughs and interrupts him.
+			[flash.speech(哦，好好好，你们一个两个都这个德行……)]弗拉什叹了口气，但还没来得及说什么，梅拉克西斯就发出了她那独特的笑声，打断了他的话。
 		</p>
 		<p>
-			[meraxis.speech(Mwhahaha! You think that I would lose a duel?!)] she declares in a voice loud enough to make the tavern's nearby patrons turn their heads and look. Striking a pose to match yours, she continues, [meraxis.speech(Although a formidable opponent, I defeated Flash with ease! With the price of defeat being my eternal servitude to his dark desires, I was forced to unleash my full power, against which no mortal being can triumph!)]
+			[meraxis.speech(姆哈哈哈哈！你认为我真的会输给他？！)]她那中二病发作的声音吸引了附近的顾客转过头来观看。她摆了一个和你一样的姿势，继续说道，[meraxis.speech(虽然对手很强大，但我还是轻而易举地打败了弗拉什！我们的决斗以永远臣服于对方的黑暗欲望为代价，所以我不得不释放出我全部的力量，这是任何凡人都无法战胜的！)]
 		</p>
 	#ELSE
 		<p>
-			Telling Flash that you have no intention of challenging him to a duel, you introduce yourself as [pc.name], to which the badger-morphs replies, [flash.speech(Right, nice to meet you.)]
+			你告诉弗拉什你无意与他决斗，并自我介绍说你叫[pc.name]，獾化形回复了你，[flash.speech(好，很高兴见到你。)]
 		</p>
 		<p>
-			[meraxis.speech(You disappoint me, my nemesis; you should have challenged Flash to a duel, as I did!)] Meraxis declares in a voice loud enough to make the tavern's nearby patrons turn their heads and look. Striking a heroic pose, she continues, [meraxis.speech(Although a formidable opponent, I defeated him with ease! With the price of defeat being my eternal servitude to his dark desires, I was forced to unleash my full power, against which no mortal being can triumph!)]
+			[meraxis.speech(你太让我失望了，我的宿敌！你应该像我一样，向弗拉什发起决斗！)]梅拉克西丝那中二病发作的声音吸引了附近的顾客扭头张望。她摆出一个英雄登场般的姿势，继续说道，[meraxis.speech(虽然对手很强大，但我还是轻而易举地打败了弗拉什！我们的决斗以永远臣服于对方的黑暗欲望为代价，所以我不得不释放出我全部的力量，这是任何凡人都无法战胜的！)]
 		</p>
 	#ENDIF
 	<p>
-		[flash.speech(What do you mean, my 'dark desires'?)] Flash grunts in annoyance, before turning to you and explaining, [flash.speech(This little [meraxis.race] came barging into my tavern and challenged me to a fight in front of all my regulars. Like the damn fool I am, I accepted her terms and said that she'd have to work as one of my dish washers for a year if she lost. I didn't really care what she was demanding, as she looks so weak that I was sure the fight'd be over before it even began...)]
+		[flash.speech(你说的那什么黑暗欲望，怪吓人的，我可是正经人。)]弗拉什恼怒地哼了一声，然后转向你解释道，[flash.speech(这个小[meraxis.race]闯进我的酒馆，当着我所有常客的面向我挑战。我真傻，真的，我脑子一热就接受了她的条件，并说如果她输了，就得在我这里洗一年的碗。我并不在意她的要求，因为她看起来太弱了，我确信这什么决斗还没开始就已经结束了……)]
 	</p>
 	<p>
-		[meraxis.speech(That'll teach you to underestimate me!)] Meraxis interjects, before finishing the rest of the story by saying, [meraxis.speech(I demanded that Flash would have to surrender two rooms to me if he lost. To his credit, he dared not break our sinister contract, and after I swiftly annihilated him, he agreed to give me the two rooms which were promised!)]
+		[meraxis.speech(这不过是让你低估我的计谋！)]梅拉克西丝插话道，然后又说完了剩下的故事，[meraxis.speech(我要求弗拉什说，如果输了，就必须把两个房间让给我。值得称赞的是，他不敢违背我们之间的黑暗契约，在我迅速消灭他之后，他同意给我两个房间！)]
 	</p>
 	<p>
-		[flash.speech(I'm not one to break my word,)] Flash grunts, [flash.speech(And besides, it'd be a fool who'd betray a recognised daughter of an elder lilin. Anyway, now that I know that [pc.name] here is the one who'll be using the other room, I've got things to do. See you around, [pc.name], and don't cause any trouble in here.)]
+		[flash.speech(我说话当然要算数的。)]弗拉什气呼呼地说，[flash.speech(况且，我可惹不起莉琳长老承认的女儿。总之，我知道[pc.name]要用另一个房间了，对吧，我还有事要做。再见，[pc.name]，别在这里惹麻烦就行。)]
 	</p>
 	<p>
-		With that, Flash turns around and walks back over to the bar, leaving Meraxis to turn towards you and declare, [meraxis.speech(Mwhahaha! As you can see, my mission to secure accommodation for you has been a success! Now I shall introduce you to my new minions, and then I shall reveal the secret path to your room!)]
+		说完，弗拉什转身走回吧台，留下梅拉克西丝转过身来对你说，[meraxis.speech(姆哈哈哈哈！如你所见，我为你安排住宿的任务已经成功了！现在我要向你介绍我的新爪牙，然后我将为你揭开通往房间的秘密通道！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_ENTRY_MINIONS"><![CDATA[
 	<p>
-		Curious to find out what Meraxis means by her 'minions', and relying on her to show you to your room, you follow the chuuni [meraxis.race] as she skips across to one corner of the tavern. Several sofas and low coffee tables have been arranged in this area, and lounging about on a couple of these seats are half a dozen scantily-dressed succubi. As they see Meraxis approach they immediately start fawning over her, with the nearest one even asking if she would like to use her as a foot stool.
+		你很想知道梅拉克西丝所说的“爪牙”是什么意思，而且她会带你到你的房间，所以你跟着中二[meraxis.race]走到了酒馆的一角。这里摆放着几张沙发和矮茶几，其中几个座位上躺着六个衣着暴露的魅魔。当她们看到梅拉克西丝走近时，立刻开始向她献殷勤，离她最近的一个甚至问她是否愿意把她当作脚凳。
 	</p>
 	<p>
-		[meraxis.speech(Silence, minions!)] Meraxis declares, before doing a complete spin on the spot and striking a rather unbalanced-looking pose. Letting out a brief laugh, she introduces you by declaring, [meraxis.speech(This is [pc.name]; my arch-nemesis!)]
+		[meraxis.speech(安静，我的爪牙们！)]梅拉克西丝宣布道，然后在原地转了一圈，摆出一个看起来似乎站不稳的姿势。她发出短暂的笑声，向大家介绍道：[meraxis.speech(这就是[pc.name]，我的宿敌！)]
 	</p>
 	<p>
-		Taking Meraxis's words far too seriously, the succubi all start angrily glaring at you, before one of them asks the [meraxis.race] if she'd like them to attack you. Laughing in response, Meraxis defuses the situation by explaining, [meraxis.speech(I am the one fated to defeat [pc.name]! None of you would stand a chance against [pc.her] supreme might, so don't even try!)]
+		魅魔们拿梅拉克西丝的话当真了，她们都开始愤怒地瞪着你，甚至其中一个还问[meraxis.race]是否要攻击你。梅拉克西丝笑着解释说：[meraxis.speech(我才是命中注定要打败[pc.name]的人！你们没有人有机会战胜[pc.her]的无上力量，所以连试都不要试！)]
 	</p>
 	<p>
-		Turning towards you, Meraxis then explains, [meraxis.speech(My minions here witnessed my supreme power as I effortlessly defeated Flash in a duel outside this very tavern. Realising that I am none other than Lyssieth's recognised daughter, and seeing my ultimate arcane mastery for themselves, these succubi have pledged themselves to be my minions!)]
+		转过身来，梅拉克西丝向你解释道，[meraxis.speech(我的下属们目睹了我在酒馆外的决斗中毫不费力地击败了弗拉什，见证了我的无上力量。这些魅魔意识到我正是得到了莉西丝承认的女儿，并亲眼目睹了我的终极奥术，因此发誓要成为我的爪牙！)]
 	</p>
 	<p>
-		Looking back over towards these succubi, you realise that they must be wanting to move up Elis's social hierarchy by being associated with a recognised daughter of an elder lilin. Before you can ask them if this is their intention, however, Meraxis grabs hold of your [pc.arm(true)] and pulls you away, saying, [meraxis.speech(Come on, [pc.name], I shall reveal to you the hidden paths which lead to your new evil lair!)]
+		回过头看向这些魅魔，你意识到她们一定是想通过与莉琳长老的女儿交往来提升在伊利斯的社会等级。然而，还没等你问她们这是否是她们的意图，梅拉克西丝就抓住了你的[pc.arm(true)]并把你拉开，说道，[meraxis.speech(过来，[pc.name]，我将为你揭示通往你新的邪恶巢穴的秘密通道！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_ENTRY_ROOM"><![CDATA[
 	<p>
-		Internally translating Meraxis's words as meaning that she wants to show you to your new room, you allow her to pull you along after her as she crosses the tavern and heads towards a corridor that leads off from one side of the bar. Travelling down this short passageway, you're then led up a spiral staircase and down yet another corridor, before finally arriving at a locked door. Pointing down to the end of the corridor, Meraxis reveals, [meraxis.speech(My own dark lair is there; right next to yours. If I'm in there, it means I'm sleeping, which I usually do from about one to nine in the morning, so don't disturb me unless there's an emergency, ok?)]
+		你把梅拉克西丝的话理解为她想带你去你的新房间，于是任由她拉着你穿过酒馆，朝酒吧一侧的走廊走去。沿着这条不长的通道走下去，你被领上一个螺旋楼梯，然后再走过另一条走廊，最后来到一扇上锁的门前。梅拉克西丝指着走廊尽头说道，[meraxis.speech(我那暗黑的巢穴就在那边，就在你房间右边。我在我的巢穴里一般是在休眠，积蓄我的力量，从凌晨一点到早晨九点，要是没有什么要紧的事，不要惊扰暗黑塞壬，好吗？)]
 	</p>
 	<p>
-		Replying in the affirmative, you take the key which Meraxis then hands to you, before listening as the chuuni [meraxis.race] reveals, [meraxis.speech(I've also done the other thing mommy asked of me; I've gone and met Minotallys and told her that you want to meet her about the situation with Lunette. I know we've also got the plan of getting help from the youko, but we can think about that after your meeting with Minotallys. Just let me know when you're ready to go and meet with her!)]
+		你点点头，拿起梅拉克西丝递给你的钥匙，然后接着听这个中二病[meraxis.race]告诉你，[meraxis.speech(我还做了妈妈要求我做的另一件事，我去见了米诺塔莉丝，告诉她你想和她谈谈关于露内特的事情。我知道我们也有向妖狐寻求帮助的计划，但我们可以在你和米诺塔莉丝见面后再考虑这个问题。你打算去见她的话，过来告诉我一声就可以了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIRST_ENTRY_ROOM_END"><![CDATA[
 	<p>
-		Thanking Meraxis for all that she's done, you can't help but smile as the [meraxis.race] blushes a little and proclaims, [meraxis.speech(Yes, well, I <i>am</i> the greatest, so it's only natural for me to have got all of this sorted for you! Anyway, come and find me if you feel brave enough to challenge me to a duel, my nemesis! I shall surely deliver a crushing defeat upon you! Mwhahaha!)]
+		你感谢梅拉克西丝帮了你这么多的忙，随后，当嘴硬的[meraxis.race]红着脸辩解时，你忍不住笑了起来，[meraxis.speech(啊，那当然，我<i>就是</i>最强的，为你这种弱者安排这些是我作为强者的仁慈！总之，你要是有胆量来挑战我，我的宿敌，我一定会彻底把你击垮，让你一败涂地，姆哈哈哈哈哈哈！)]
 	</p>
 	<p>
-		With that, Meraxis spins around, and with a theatrical swish of her cloak, she runs off down the corridor, leaving you to unlock the door to your new room and head inside to take a look...
+		说完，就像戏剧或漫画里那样，梅拉克西丝转了一圈，把自己的斗篷甩起来，随后冲进了走廊，把你留在你的新房间里。你走了进去，四下环顾……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Place dialogues -->
 	
 	<htmlContent tag="BAR"><![CDATA[
 	<p>
-		Situated against the far wall, the long, wooden bar before you serves as the source of food and drink for the tavern's patrons. The shelves behind this bar are stocked full of a dazzling array of bottles and glasses, and right in the middle of them there's a large chalkboard which lists the meals that are being served today. At the bottom of this blackboard, a large sign clearly reads: 'Alcohol and Hot food <b>only</b> served between
+		靠着远处的墙壁，长条木制吧台是旅店顾客的食物和饮料来源。吧台后面的架子上摆满了琳琅满目的酒瓶和酒杯，架子正中有一块大黑板，上面列出了今天供应的餐点。在这块黑板的下方，一块大牌子上清楚地写着："酒水和热食<b>仅在</b>
 		#IF(game.getHourOfDay()<8)
-			 [style.colourMinorBad([units.time(8)]-[units.time(0)])].'
+			[style.colourMinorBad([units.time(8)]-[units.time(0)])]'
 		#ELSE
-			 [style.colourMinorGood([units.time(8)]-[units.time(0)])].'
-		#ENDIF
+			[style.colourMinorGood([units.time(8)]-[units.time(0)])]。'
+		#ENDIF之间供应。
 	</p>
 	<p>
 		#IF(game.getCharactersPresent().contains(flash))
 			#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-				As this is the busiest time of day, there are a couple of employees behind the bar, with Flash himself joining them in serving drinks to the customers.
+				现在是一天中最繁忙的时候，吧台后面有几名员工，弗拉什本人也和他们一起为顾客提供饮料。
 			#ELSE
-				As this is the busiest time of day, the only person working at the bar is Flash, who's in the middle of serving a customer.
+				现在是一天中最忙的时候，酒吧里只有弗拉什在工作，他正在招呼客人。
 			#ENDIF
-			 This greater badger-morph has a stern expression on his face, and as he turns to place a freshly-poured pint of beer on the counter, you estimate that he must be in his early forties. Standing at
+			当他转身把一品脱新倒的啤酒放在柜台上时，你估计他一定有四十出头了。身高
 			#IF(game.isMetricSizes())
-				 just under six feet tall,
+				大概六尺，
 			#ELSE
-				 about 180cm tall,
+				大概180cm，
 			#ENDIF
-			 Flash has a sturdy, muscular body, and as he looks around to see who's going to be his next customer, you see his [flash.topClothing(NIPPLES)] straining to contain his wide chest and thick biceps. If you wanted to order a drink or something to eat, you could quite easily get his attention.
+			弗拉什有着结实的肌肉，当他环顾四周，看看谁将成为他的下一位顾客时，你能看到他[flash.topClothing(NIPPLES)]正在努力收敛他宽阔的胸膛和粗壮的肱二头肌。如果你想点一杯饮料或吃点什么，很容易就能引起他的注意。
 		#ELSE
-			Due to the current hour, you suppose that Flash must be sleeping in his room upstairs, as there's only one badger-boy employee to be seen working behind the bar. He looks to be engaged in idle talk with one of the establishment's regular customers, although if you wanted to order a drink or something to eat, you could quite easily get his attention. However, due to the fact that the kitchen is closed at this time, and that alcohol isn't being served, your choices will be somewhat limited...
+			鉴于现在的时间，你猜弗拉什一定在楼上的房间里睡觉，这里只有一个獾男员工在吧台后面工作。他看起来正在和店里的一位老顾客闲聊，不过如果你想点一杯饮料或吃点什么，很容易就能引起他的注意。由于此时厨房已经关闭，也不提供酒水，你的选择将有限……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK"><![CDATA[
 	<p>
-		Wanting to pass some time, you engage Flash in conversation, asking him whether anything of note has happened in the local area recently. Although his stern expression doesn't soften, the badger-boy seems to be more than happy to talk with you, and tells you what's been happening in Elis over the past few days. While none of it is particularly interesting, you do enjoy spending your time talking with Flash, and so after he's exhausted his knowledge of local affairs, you move on to asking him what he thinks of the recent weather.
+		为了打发时间，你与弗拉什攀谈起来，问他最近当地是否发生了什么值得注意的事情。虽然獾男依然绷着脸，但他似乎非常乐意和你交谈，还告诉你过去几天伊利斯发生了什么事。虽然没什么趣事，但你确实喜欢和弗拉什聊天，所以在他讲完当地的事情后，你继续问他对最近天气的看法。
 	</p>
 	<p>
-		After you've finished discussing the weather, you move on to talking about a wide range of trivial matters, and in this manner the two of you continue idly talking with one another for quite some time. Although he's sometimes interrupted by a customer who wants to place an order, Flash always swiftly returns to continue your conversation, and before you know it you've spent fifteen minutes making small talk.
+		讨论完天气后，你们又谈论起各种各样的琐事，就这样，你们俩闲扯了好长一段时间。虽然弗拉什有时会被想要点单的客户打断，但他总是很快回来继续你们的谈话。等你反应过来，你们已经闲聊了15分钟。
 	</p>
 	<p>
-		The arrival of a large group of customers at the bar signals an end to your conversation, and after telling you that he enjoyed your talk, Flash steps over to start taking their orders, leaving you wondering what to do next...
+		如今顾客群涌来，聊天得结束了。弗拉什说聊得很开心，说罢，便走过去为客人点餐，留下你思考接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_MERAXIS"><![CDATA[
 	<p>
-		Wanting to know what Flash's opinion of Meraxis is, you get his attention and ask him what he thinks about the chuuni [meraxis.race]. Letting out a deep sigh, he grunts, [flash.speech(I guess she's not really too bad. I've only got myself to blame for agreeing to fight her. I had no idea she was the daughter of an elder lilin at the time...)]
+		你想听听弗拉什对梅拉克西丝有什么看法，于是上前和他打了个招呼，问他怎么看待那个中二[meraxis.race]。弗拉什深深地叹了口气，咕哝道，[flash.speech(我想她也不是个坏女孩，要怪只能怪我太蠢，什么也没想就同意了那什么‘决斗’，谁知道那家伙居然是莉琳长老承认的女儿……)]
 	</p>
 	<p>
-		Asking Flash what happened, you listen as he recalls, [flash.speech(Well, she burst into my tavern and starting shouting that she was here to challenge the owner, which would be me, to a duel. She looked so weak that most of the regulars at the bar burst out laughing, and they told her that she'd stand no chance against me. I'm not known to act in a reckless manner, but with all of my regulars telling me to deal with her, and Meraxis continuing to throw out challenges and insults at me, I foolishly agreed to fight her.)]
+		你问弗拉什当时究竟是怎么一回事，他和你描述回忆中的场景，[flash.speech(嗯，一开始是她突然冲进我的酒馆里，站在门口说要和这家店的主人，也就是我，来一场决斗。我那些常客看她那小身板不堪一击，当场哄堂大笑，告诉梅拉克西丝说她毫无胜算。唉，我那些朋友都知道我并不是个莽夫，只是那天常客们都怂恿我上去和那小姑娘打一架，加上她也在那里咄咄逼人地说些挑衅的话，我实在没忍住，就同意和她决斗了。)]
 	</p>
 	<p>
-		With the badger-boy now at the most interesting part of the story, you wait for him to quickly serve a waiting customer, and then listen as he continues, [flash.speech(So, she was demanding that I'd surrender two rooms to her if she won, and so I said she'd have to work as a dish washer for a year if she lost. We went outside to have this 'duel', and she suddenly pulled out a huge scythe from mid-air. That's when I knew I'd fucked up... Pardon my language... I thought I'd just grab her and shake her about a bit until she surrendered, but before I even knew what was happening she was swinging that huge thing at me and casting all manner of spells. I couldn't land even one hit on her before I was on my back...)]
+		在故事进入到高潮前，獾男迅速转头把客人的饮料递过去，然后回头接着讲：[flash.speech(她说如果她赢了，就要把我酒馆里的两个房间让给她。我说如果我赢了，你就得给我刷一年的盘子！然后我们就出去‘决斗’了，然后我就看到她从半空中召唤出一把贼他妈大的镰刀，我当时就知道，我完鸡巴蛋了……对不起，我有点激动了……我一开始设想的是抓住她，晃她两下，让她知道错了自己投降就好。结果呢？她一直挥舞着那个巨大的镰刀，还用着各种各样让人眼花缭乱的法术。这个b——本领高超的小家伙根本不让我近身。我连她一根头发都没碰到，就被放倒在地了……)]
 	</p>
 	#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
 		<p>
-			As she'd done this to secure accommodation for you, you can't help but feel somewhat responsible for Meraxis's behaviour. Asking Flash if the loss of two rooms is a serious problem for him, you're surprised to see a big smile break out across the badger-boy's face, and he chuckles as he replies, [flash.speech(Losing those two rooms is a small price to pay for what I've gained from all this. Sure, my ego took a beating and I lost a bit of respect from my regulars, but I was fortunate enough to have our duel witnessed by those succubi.)]
+			既然她是为了给你安排住处才这么做的，你不禁觉得自己对梅拉克西丝的行为多少有些责任。你问弗拉什失去两间客房对他来说是不是个大问题，没想到这位獾男脸上绽开了灿烂的笑容，他笑着回答道，「失去那两间房，和我从中得到的好处比起来，根本不算什么。当然啦，我的面子是受了点打击，也在老主顾那里丢了点威信，但我运气好啊——我们决斗的时候正好被那些魅魔给看到了。」
 		</p>
 		<p>
-			Flash motions over towards Meraxis's corner, and you look over to see what she calls her 'minions' lounging about on the sofas. Leaning down over the counter, Flash lowers his voice and reveals, [flash.speech(Those succubi are recognised daughters of one lilin or another, and they're not only what passes for the social elite here in Elis, but they're also filthy rich. They can be a little demanding on my staff, but between them they spend far more than I ever earned from renting those two rooms out upstairs.)]
+			弗拉什朝梅拉克西丝所在的角落示意，你顺着看过去，只见她所谓的“手下”正懒洋洋地瘫在沙发上。弗拉什俯身靠在柜台边，压低声音透露道，[flash.speech(那些魅魔都是某位莉琳认可的女儿，她们不仅是伊利斯这里算得上社交名流的人物，而且富得流油。她们对我的员工可能有点苛刻，但她们一起花掉的钱，远比我出租楼上两个房间赚到的还多。)]
 		</p>
 		<p>
-			Standing up straight again, Flash concludes, [flash.speech(So I don't harbour any ill-will towards Meraxis. She's not a bad girl, and so long as she thinks that she's the most important person in the room, she's surprisingly polite and well-mannered.)]
+			弗拉什重新站直身子，总结道，[flash.speech(所以我对梅拉克西丝并没有什么恶感。她不是个坏姑娘，只要她觉得自己是房间里最重要的人，她就会出奇地礼貌和有教养。)]
 		</p>
 	#ELSE
 		<p>
-			As she'd done this to secure accommodation for you, you can't help but feel somewhat responsible for Meraxis's behaviour. Asking Flash if the loss of two rooms is a serious problem for him, you're surprised to see a big smile break out across the badger-boy's face, and he chuckles as he replies, [flash.speech(Losing those two rooms is a small price to pay for what I've gained from all this. Sure, my ego took a beating and I lost a bit of respect from my regulars, but I was fortunate enough to have our duel witnessed by those succubi who became her 'minions', and they spent so much money here that I've earned far more than I would have done from renting those two rooms out upstairs.)]
+			既然她这么做是为了给你找住处，你不禁觉得自己对梅拉克西丝的行为负有一定责任。你问弗拉什，少了两间房对他来说是不是很大的损失，却意外地看到这个獾男脸上绽开了灿烂的笑容，他笑着回答道，[flash.speech(少那两间房对我来说不过是小小的代价，跟我从这件事里赚到的比起来根本不算什么。当然啦，我的面子是受了点损，在老主顾们面前也丢了点威信，不过我运气好，跟她决斗的时候正好被那些后来成了她“手下”的魅魔们看到了，她们在我这儿花了好大一笔钱，比我把楼上那两间房租出去赚的多多了。)]
 		</p>
 		<p>
-			You point out that Meraxis has lost her demonic following, and as such Flash doesn't have that income any more. With a smile still on his face, Flash responds, [flash.speech(As I just said, I've already earned enough to be satisfied with how everything turned out. The truth is that those two rooms were standing empty for most of the time anyway, so I'm not too bothered either way. Perhaps I'm being too lenient, but somehow I've got a soft spot for that silly demon. I'll get the rooms back one day, and at that point I think I'll miss having her around.)]
+			你指出梅拉克西丝已经失去了她的恶魔追随者，所以弗拉什也不再有那笔收入了。弗拉什脸上依然挂着笑容，回答道，[flash.speech(我刚才说了，我已经赚够了，对现在的结果挺满意的。说实话，那两个房间大部分时间都空着，所以怎样我都无所谓。也许是我太心软了，但不知怎么的，我对那个傻乎乎的恶魔有点舍不得。总有一天我会把房间收回来，到那时候我想我反而会怀念有她在身边的日子。)]
 		</p>
 	#ENDIF
 	<p>
-		At that moment, several customers step up to the bar and call for Flash to serve them. With your conversation having reached its end, the badger-boy gives you a nod and steps over to start taking their orders, leaving you wondering what to do next...
+		这时，几位顾客走到吧台前，对着弗拉什打招呼。你们的聊天到此为止，獾男向你点点头，然后走过去开始为他们点餐，你思考着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_LUNETTE"><![CDATA[
 	<p>
-		Curious to find out what Flash knows of Lunette, you get his attention and ask him if he's ever had dealings with the elder lilin or her demonic centaurs. Letting out a sigh, he replies, [flash.speech(Thankfully, I've never run into her or any of her thugs; I'd moved here to Elis long before she started to really get out of control.)]
+		你很想知道弗拉什对露内特了解多少，于是问他是否曾与莉琳长老或她的恶魔半人马打过交道。他叹了一口气，回答说：[flash.speech(值得庆幸的是，我从未遇到过她或她的打手；在她开始真正失控之前，我早就搬到了伊利斯。)]
 	</p>
 	<p>
-		Sensing a slightly angry tone in the badger-boy's voice, you push him a little and ask him what his opinion of Lunette is. Shaking his head, he grunts, [flash.speech(As everyone with any sense will tell you, she's pure evil. My extended family were driven out of our ancestral clan sett by her centaur thugs. Luckily, I was in a position here in Elis to get them jobs either here at the tavern or elsewhere in the town, but we'll never forgive or forget Lunette for what she's done.)]
+		你感觉到獾男的语气中略带怒气，便更进一步，问他对露内特有什么看法。他摇摇头，哼了一声：[flash.speech(有理智的人都会告诉你，她是个纯粹的恶魔。我的大家族被她的半人马暴徒赶出了祖先的领地。幸运的是，我在伊利斯为他们在酒馆或镇上其他地方找到了工作，但我们永远不会原谅或忘记露内特的所作所为。)]
 	</p>
 	<p>
-		As he talks, Flash's voice starts to sound angrier and angrier, and you decide that it would be best to drop the subject for now. As the badger-boy steps over to serve another customer, you wonder how many other people in Elis are victims of Lunette's indiscriminate raiding. Letting out a sigh and looking around the tavern, you wonder what to do next...
+		在他说话的过程中，弗拉什的声音听起来越来越愤怒，你决定最好暂时放弃这个话题。当獾男走过去招呼另一位客人时，你在想伊利斯还有多少人是露内特肆意搜刮的受害者。你叹了口气，环顾酒馆四周，思考接下来该干什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_MINOTALLYS"><![CDATA[
 	<p>
-		Wanting to know what Flash has to say about the town's mayor, you get his attention and ask him what he knows of Minotallys. Shrugging his shoulders, he reveals, [flash.speech(Truth be told, I don't really know much about her other than what's common knowledge. She's supposed to be kind and considerate, but whatever her personality's like, I can tell you that her policies of low taxation and limited regulation are very popular amongst those of us who run businesses. Of course, there's only so much she can do within the confines of the laws of the Realm, but I think that most of Elis's residents would agree that she's a strong force for good in this town.)]
+		你想知道弗拉什对镇长有什么看法，于是问他对米诺塔莉丝了解多少。他耸耸肩，透露道：[flash.speech(说实话，除了常识之外，我对她了解不多。她应该是个善良体贴的人，但不管她的性格如何，我可以告诉你，她的低税和有限监管政策在我们这些做生意的人中很受欢迎。当然，在王国法律允许的范围内，她能做的有限，但我想大多数伊利斯居民都会同意，她是这个小镇上一股强大的正义力量。)]
 	</p>
 	<p>
-		Curious to find out if Flash has ever met Minotallys, you ask him if his role as one of Elis's business owners has ever brought him into contact with her. Nodding his head, he confirms, [flash.speech(Yes, I've met her a few times during meetings for business owners, but as I said, I still don't know much about her. During those meetings it was mainly her assistant who was doing the talking, and I couldn't ask Minotallys any questions directly, so I didn't get to find out what she's really like.)]
+		你很想知道弗拉什是否见过米诺塔莉丝，于是问他，作为伊利斯的企业主之一，他是否接触过她。他点头确认：[flash.speech(是的，我在为企业主举行的会议上见过她几次，但正如我所说，我对她的了解仍然不多。在那些会议上，主要是她的助理在说话，我不能直接向米诺塔莉丝提出任何问题，所以我没有机会了解她的真实情况。)]
 	</p>
 	<p>
-		Asking Flash about Minotallys's assistant, you listen as he explains, [flash.speech(Yeah, 'Arion' is his name; he's an alicorn, and one who's particularly adept at harnessing the arcane from what I hear. There's no doubt that he's extremely intelligent and competent at his job, but he struck me as being a bit over-protective of Minotallys. He insisted that he was simply carrying out the instructions of his boss, but I wonder how much influence he really has over this town's management...)]
+		你向弗拉什打听米诺塔莉丝助手的情况，他解释说：[flash.speech(对，‘阿里昂’是他的名字；他是一匹天角兽，据我所知，他特别擅长驾驭奥术。毫无疑问，他非常聪明，工作能力也很强，但他给我的印象是有点过分保护米诺塔莉丝。他坚称自己只是在执行老板的指示，但我不知道他对这个小镇的管理到底有多大影响力……)]
 	</p>
 	<p>
-		At that moment a particularly demanding customer draws Flash's attention, and as your conversation was already coming to an end, he gives you a curt nod and steps over to deal with them, leaving you wondering what to do next...
+		这时，一位要求特别苛刻的顾客引起了弗拉什的注意，由于你们的谈话已经接近尾声，他礼貌地向你点了点头，然后走过去招呼他们……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_HISTORY"><![CDATA[
 	<p>
-		Wanting to find out about Flash's history, you catch his attention and ask him how he came to own this tavern. After spending a moment wondering where to start, the badger-boy says, [flash.speech(Well, I used to run a tavern similar to this one out in the Fields, a short distance from where my family's sett was. I eventually decided that I wanted to do something new, so I left my old tavern in the hands of one of my younger brothers and moved here to Elis.)]
+		你想了解弗拉什的历史，于是问他是如何拥有这家酒馆的。獾男思索了片刻，然后说道：[flash.speech(我以前在田野经营过一家类似的酒馆，离我家不远。我后来决定，想做一些新鲜事，所以我把我的老酒馆交给了我的一个弟弟，然后搬到了伊利斯。)]
 	</p>
 	<p>
-		After then being briefly interrupted by a customer asking for service, Flash steps back over to you and resumes his story, [flash.speech(I didn't intend to take over this place, but I guess fate wanted me to continue running a tavern... When I arrived in Elis, I decided to rent a room for a few days here in The Red Dragon, and it was while I was staying here that the owner, who was a tired old sheep-boy, revealed to me that he wanted to sell this place and go travelling. I decided to help him out and offered to buy this place from him, and a few days later I was the new owner and he was setting off on his travels.)]
+		在被一位要求提供服务的顾客短暂打断后，弗拉什回到你身边，继续讲述他的故事：[flash.speech(我本不想接手这个地方，但我猜命运希望我继续经营酒馆……当我来到伊利斯，我决定在红龙酒馆租一个房间住几天，就在我住在这里的时候，店主——一个疲惫的老绵羊男——向我透露，他想卖掉这个地方，然后去旅行。我决定帮他一把，主动向他提出买下这个地方，几天后，我就成了新主人，而他也踏上了旅行之路。)]
 	</p>
 	<p>
-		Curious to find out more about the tavern's previous owner, you ask Flash what this sheep-boy was like, to which he responds, [flash.speech(Well, as I say, he was getting on in years and seemed to be pretty fed up with running this place. I found out that he was a direct descendant of the sheep-boy who originally built this tavern several centuries ago. The story goes that this original sheep-boy was an ordinary farmer, and then one day a huge, red dragon appeared and offered him a great pile of golden treasure. All the farmer had to do in exchange was hand over his tools and teach this dragon how to farm, if you can believe that! Of course, the farmer agreed, and with his new fortune, he had this tavern built. That's how this place got its name, from the red dragon in the story.)]
+		你很想知道更多关于酒馆前任主人的信息，于是你问弗拉什这个绵羊男是个什么样的人，他回答说：[flash.speech(正如我所说的那样，他年事已高，似乎已经厌倦了经营这个地方。我发现他是几个世纪前最初建造这家酒馆的绵羊男的直系后裔。据说，最初的绵羊男只是一个普通农民，有一天，一条巨大的红龙出现了，向他献上了一大堆金银财宝。作为交换，农夫只需交出他的工具，教这条龙如何耕种，简直难以置信！农夫当然同意了，并用他新得到的财富建起了这家酒馆。这就是这个地方名字的由来，来自故事中的红龙。)]
 	</p>
 	<p>
-		Wanting to know what became of the tavern's previous owner, you ask Flash if he ever returned to Elis. Shaking his head, the badger-boy reveals, [flash.speech(He never returned, no. That was over five years ago now. He told me that he wanted to travel up into the mountains of the moon and try to find the red dragon who gave his ancestor his fortune. Dragons can live for a very long time, from what I understand, so I suppose it's not entirely unreasonable to think that this red dragon might still be alive up there. Well, whatever the case may be, there's been no word of the previous owner of this place, nor of the red dragon.)]
+		你想知道酒馆前主人的下落，便问弗拉什他是否曾回到过伊利斯。獾男摇摇头，说：[flash.speech(他再也没有回来，那已经是五年前的事了。他告诉我，他想去皎月山脉寻找给他祖先带来财富的红龙。据我所知，龙可以活很久，所以我想这条红龙可能还活着也不是没有道理的。唔，不管怎样，这里以前的主人和红龙都杳无音讯。)]
 	</p>
 	<p>
-		Thanking Flash for the information, you wonder what to do next...
+		你感谢弗拉什提供的信息……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_YOUKO"><![CDATA[
 	<p>
-		Wanting to find out if Flash knows anything about the youko who live in the Shinrin Highlands, you catch his attention and ask him if he's ever had dealings with them. Shaking his head, he replies, [flash.speech(Although it's very rare, we do sometimes get a youko or two passing through here, but they almost always keep to themselves. I've never been into the highlands, but from what I've heard from customers who have, then running into a youko can either be the best or worst thing to ever happen to you.)]
+		你想知道弗拉什是否了解住在心林高地的妖狐，于是问他是否与妖狐打过交道。他摇了摇头，回答道：[flash.speech(虽然非常罕见，但有时也会有一两只妖狐经过这里，但他们几乎总是独来独往。我从来没有去过高地，但我从去过高地的客人那里听说，碰上妖狐可能是最好的事，也可能是最糟糕的事。)]
+	</p>
+	<p>就在这时，一对要求苛刻的顾客打断了弗拉什的谈话，你不得不等待。獾男很快就处理好了他们的问题，回到你身边，继续说道：[flash.speech(抱歉。总之，就像我刚才说的，显然妖狐有时会向旅行者赠送礼物和知识，甚至为他们提供安全的休息场所。其他时候，他们会带着你在森林里狂奔，一直嘲弄和嘲笑你。几周前，有人从这里经过，他就曾遭受过这种待遇；他在这里的整个过程中没跟任何人说过一句话，但他的一个朋友告诉我，他被困在游子的森林里快两年了，只能靠折磨他的人扔给他的食物残渣度日。如果你想进入心林高地，我建议你不要去，除非你有向导……)]
 	</p>
 	<p>
-		At that moment a pair of demanding customers interrupt Flash, and you're forced to wait as the badger-boy quickly deals with them. Returning to you, he continues, [flash.speech(Sorry about that. Anyway, as I was saying, apparently the youko will sometimes bestow gifts and knowledge upon travellers, and even provide them with a safe place to rest. Other times, they'll lead you on a wild goose chase through the forest, taunting and laughing at you the whole time. Someone passed through here a few weeks ago who'd been on the receiving end of that; he didn't say a word to anyone the whole time he was here, but one of his friends he was with told me that he'd been trapped in the youko's forest for almost two years, and had to survive on scraps of food thrown to him by his tormentors. If you're thinking of going into the Shinrin Highlands, I'd advise you not to do it unless you've got a guide...)]
+		这时，又有一位顾客请弗拉什注意，他便走开去应付他们……
 	</p>
-	<p>
-		At that moment, another customer calls for Flash's attention, and he steps away to deal with them, leaving you wondering what to do next...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_TALK_JESS"><![CDATA[
 	<p>
-		Wanting to know what Flash can tell you about Jess, you call him over and ask him about the alluring fox-girl. Shaking his head, he grunts, [flash.speech(Sorry, but out of respect for her privacy, I can't tell you much about her. All I can say is that I've given her permission to work here, so long as she doesn't give this place a bad reputation.)]
+		你想知道弗拉什能告诉你什么关于婕斯的事情，于是把他叫了过来，向他打听这位诱人的狐女。他摇摇头，咕哝道：[flash.speech(对不起，出于对隐私的尊重，我不能告诉你太多关于她的事情。我只能说，我允许她在这里工作，只要她不给这里搞坏名声。)]
 	</p>
 	<p>
-		Pointing out that he's also given her a room upstairs, you ask Flash if he has a soft spot for fox-girls. Letting out a laugh, he replies, [flash.speech(No, it's nothing like that, and we don't have any familial relation to one another either. I just found myself in a position where I had to take responsibility for her. That's all there is to it.)]
+		你指出他还在楼上给她安排了一个房间，问他是不是对狐女有意思。他笑着回答说：[flash.speech(不，不是那样的，而且我们之间也没有亲戚关系。我只是觉得自己必须对她负责，仅此而已。)]
 	</p>
 	<p>
-		Realising that Flash isn't going to tell you anything about Jess, you suppose that the only information you'll be able to find out about her is that which she'll tell you directly. Thanking Flash for his time, you wonder what to do next...
+		你意识到弗拉什不会再告诉你关于婕斯的信息，要是你想进一步了解，只能指望婕斯自己告诉你。你感谢弗拉什抽出宝贵的时间，思索起接下来该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Ordering drinks: -->
 	
 	<htmlContent tag="BAR_DRINK_WATER"><![CDATA[
 	<p>
 		#IF(game.getCharactersPresent().contains(flash))
-			Feeling thirsty, you get Flash's attention and ask him for a glass of water. Grabbing a clean glass from under the bar, he quickly fills it with clean, cold water, before placing it down before you and grunting, [flash.speech(The water's free here. Just leave the glass on the bar once you've finished.)]
+			你觉得口渴，就向弗拉什打了声招呼，要了一杯水。弗拉什拿出一个干净的杯子，迅速倒满清澈冰凉的水，然后放在你面前说道：[flash.speech(水是免费的，喝完之后请把杯子留在吧台上。)]
 		#ELSE
-			Feeling thirsty, you get the badger-boy's attention and ask him for a glass of water. Grabbing a clean glass from under the bar, he quickly fills it with clean, cold water, before placing it down before you and saying, [style.speechMasculine(There's no charge for water here.)]
+			你觉得口渴，就向獾男招待打了声招呼，要了一杯水。他拿出一个干净的杯子，迅速倒满清澈冰凉的水，然后放在你面前说道：[style.speechMasculine(这里水是免费的。)]
 		#ENDIF
 	</p>
 	<p>
-		Bringing the glass up to your waiting [pc.lips], you quickly gulp down the cool, refreshing water. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你将迫不及待地将玻璃杯送到唇边，饮下清凉甘甜的水。把空杯放回吧台，你开始考虑要不要点些别的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_ORANGE_JUICE"><![CDATA[
 	<p>
 		#IF(game.getCharactersPresent().contains(flash))
-			Feeling thirsty, you get Flash's attention and ask him for a glass of orange juice. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a can of carbonated orange juice. Using his big, furry fingers to fold down the tab, he opens the can and pours the fizzy beverage into the glass, saying, [flash.speech(That'll be twenty flames. Just leave the glass on the bar once you've finished.)]
+			你觉得口渴，就向弗拉什打了声招呼，点了一杯橙汁。听到你的点单，弗拉什拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一瓶碳酸橙汁，接着用他粗大，兽态的手指拉下拉环，把碳酸橙汁倒进杯子里，说道：[flash.speech(一共20火币，喝完之后请把杯子留在吧台上。)]
 		#ELSE
-			Feeling thirsty, you get the badger-boy's attention and ask him for a glass of orange juice. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a can of carbonated orange juice. Using his big, furry fingers to fold down the tab, he opens the can and pours the fizzy beverage into the glass, saying, [style.speechMasculine(That'll be twenty flames, please.)]
+			你觉得口渴，就向獾男招待打了声招呼，点了一杯橙汁。听到你的点单，他拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一瓶碳酸橙汁，接着用他粗大，兽态的手指拉下拉环，把碳酸橙汁倒进杯子里，说道：[style.speechMasculine(一共20火币，谢谢。)]
 		#ENDIF
 	</p>
 	<p>
-		Handing over the twenty flames, you bring the glass up to your waiting [pc.lips] and quickly gulp down the cool, refreshing beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你递上20火币，把杯子送到嘴边，将冰凉清爽的饮料一饮而尽。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_BERRY_SODA"><![CDATA[
 	<p>
 		#IF(game.getCharactersPresent().contains(flash))
-			Feeling thirsty, you get Flash's attention and ask him for a glass of berry soda. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a can of berry soda. Using his big, furry fingers to fold down the tab, he opens the can and pours the fizzy beverage into the glass, saying, [flash.speech(That'll be twenty flames. Just leave the glass on the bar once you've finished.)]
+			你觉得口渴，就向弗拉什打了声招呼，点了一杯浆果汽水。听到你的点单，弗拉什拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一罐浆果汽水，接着用他粗大，兽态的手指拉下拉环打开罐头，把碳酸饮料倒进杯子里，说道：[flash.speech(一共20火币，喝完之后请把杯子留在吧台上。)]
 		#ELSE
-			Feeling thirsty, you get the badger-boy's attention and ask him for a glass of berry soda. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a can of berry soda. Using his big, furry fingers to fold down the tab, he opens the can and pours the fizzy beverage into the glass, saying, [style.speechMasculine(That'll be twenty flames, please.)]
+			你觉得口渴，就向獾男招待打了声招呼，点了一杯浆果汽水。听到你的点单，他拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一罐浆果汽水，接着用他粗大，兽态的手指拉下拉环打开罐头，把碳酸饮料倒进杯子里，说道：[style.speechMasculine(一共20火币，谢谢。)]
 		#ENDIF
 	</p>
 	<p>
-		Handing over the twenty flames, you bring the glass up to your waiting [pc.lips] and quickly gulp down the cool, refreshing beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你递上20火币，把杯子送到嘴边，将冰凉清爽的饮料一饮而尽。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_COLA"><![CDATA[
 	<p>
 		#IF(game.getCharactersPresent().contains(flash))
-			Feeling thirsty, you get Flash's attention and ask him for a glass of cola. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a bottle of fizzy cola. Using his big, furry fingers to operate a bottle opener, he pops off the cap and pours the brown beverage into the glass, saying, [flash.speech(That'll be twenty-five flames. Just leave the glass on the bar once you've finished.)]
+			你觉得口渴，就向弗拉什打了声招呼，点了一杯可乐。听到你的点单，弗拉什拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一瓶碳酸可乐，接着用他粗大，兽态的手指拧开瓶盖，把棕色饮料倒进杯子里，说道：[flash.speech(一共25火币，喝完之后请把杯子留在吧台上。)]
 		#ELSE
-			Feeling thirsty, you get the badger-boy's attention and ask him for a glass of cola. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a bottle of fizzy cola. Using his big, furry fingers to operate a bottle opener, he pops off the cap and pours the brown beverage into the glass, saying, [style.speechMasculine(That'll be twenty-five flames, please.)]
+			你觉得口渴，就向獾男招待打了声招呼，点了一杯冰咖啡。听到你的点单，他拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一瓶碳酸可乐，接着用他粗大，兽态的手指拧开瓶盖，把棕色饮料倒进杯子里，说道：[style.speechMasculine(一共25火币，谢谢。)]
 		#ENDIF
 	</p>
 	<p>
-		Handing over the twenty-five flames, you bring the glass up to your waiting [pc.lips] and quickly gulp down the cool, refreshing beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你递上25火币，把杯子送到嘴边，将冰凉清爽的饮料一饮而尽。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_COFFEE"><![CDATA[
 	<p>
 		#IF(game.getCharactersPresent().contains(flash))
-			Feeling thirsty, you get Flash's attention and ask him for a glass of cold-brew coffee. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a bottle of dark black coffee. Using his big, furry fingers to twist off the cap, he pours the caffeinated beverage into the glass, saying, [flash.speech(That'll be thirty flames. Just leave the glass on the bar once you've finished.)]
+			你觉得口渴，就向弗拉什打了声招呼，点了一杯冰咖啡。听到你的点单，弗拉什拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一瓶黑咖啡，接着用他粗大，兽态的手指拧开瓶盖，把咖啡饮料倒进杯子里，说道：[flash.speech(一共30火币，喝完之后请把杯子留在吧台上。)]
 		#ELSE
-			Feeling thirsty, you get the badger-boy's attention and ask him for a glass of cold-brew coffee. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a bottle of dark black coffee. Using his big, furry fingers to twist off the cap, he pours the caffeinated beverage into the glass, saying, [style.speechMasculine(That'll be thirty flames, please.)]
+			你觉得口渴，就向獾男招待打了声招呼，点了一杯冰咖啡。听到你的点单，他拿出一个干净的杯子，转身打开吧台后面的一个奥术冰箱，拿出一瓶黑咖啡，接着用他粗大，兽态的手指拧开瓶盖，把咖啡饮料倒进杯子里，说道：[style.speechMasculine(一共30火币，谢谢。)]
 		#ENDIF
 	</p>
 	<p>
-		Handing over the thirty flames, you bring the glass up to your waiting [pc.lips] and quickly gulp down the cool, refreshing beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你递上30火币，把杯子送到嘴边，将冰凉清爽的饮料一饮而尽。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_BEER"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a pint of beer. Grabbing a clean glass, he places it under the tap and pours the alcoholic beverage, 'Canine Crush', into it, before placing your pint down on the bar and saying, [flash.speech(That'll be forty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯啤酒。听到你的点单，弗拉什拿起一个干净的杯子放到水嘴下，倒了满满一杯“犬根宝”，然后把你的啤酒放在吧台上：[flash.speech(一共40火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the forty flames, you bring the glass up to your waiting [pc.lips] and quickly gulp down the cool, refreshing beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你递上40火币，把杯子送到嘴边，将冰凉清爽的饮料一饮而尽。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_CIDER"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a pint of cider. Grabbing a clean glass, he places it under the tap and pours the alcoholic beverage, 'Equine Cider', into it, before placing your pint down on the bar and saying, [flash.speech(That'll be forty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯苹果酒。听到你的点单，弗拉什拿起一个干净的杯子放到水嘴下，倒了满满一杯“马果酒”，然后把你的苹果酒放在吧台上：[flash.speech(一共40火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the forty flames, you bring the glass up to your waiting [pc.lips] and quickly gulp down the cool, refreshing beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你递上40火币，把杯子送到嘴边，将冰凉清爽的饮料一饮而尽。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_PERRY"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a pint of pear cider. Grabbing a clean glass, he opens one of the arcane fridges positioned beneath the bar and produces a bottle of 'Black Stripes Perry'. Using his big, furry fingers to operate a bottle opener, he pops off the cap and pours the alcoholic beverage into the glass, saying, [flash.speech(That'll be forty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯梨子酒。听到你的点单，弗拉什拿出一个干净的杯子，转身打开吧台后面的奥术冰箱，拿出一瓶黑纹梨酒，接着用他粗大，兽态的手指操作开瓶器打开瓶盖，把梨子酒倒进杯子里，说道：[flash.speech(一共20火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the forty flames, you bring the glass up to your waiting [pc.lips] and quickly gulp down the cool, refreshing beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你递上40火币，把杯子送到嘴边，将冰凉清爽的饮料一饮而尽。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_WINE_RED"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a glass of red wine. Grabbing a clean wine glass, he reaches back to the shelves positioned behind the bar and grabs a bottle of red wine. Using his big, furry fingers to operate a bottle opener, he removes the cork and pours the alcoholic beverage into the glass, saying, [flash.speech(That'll be sixty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯红酒。听到你的点单，弗拉什拿出一个干净的杯子，转身从吧台后面的架子上取下一瓶红酒。用他粗大，兽态的手指拧下瓶盖，把烈酒倒进杯子里，说道：[flash.speech(一共60火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the sixty flames, you bring the glass up to your waiting [pc.lips] and spend a few minutes slowly drinking the delicious beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你拿出60火币，把杯子递到嘴边，花了几分钟细细品味这美酒。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_WINE_WHITE"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a glass of white wine. Grabbing a clean wine glass, he opens one of the arcane fridges positioned beneath the bar and produces a bottle of white wine. Using his big, furry fingers to operate a bottle opener, he removes the cork and pours the alcoholic beverage into the glass, saying, [flash.speech(That'll be sixty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯白葡萄酒。听到你的点单，弗拉什拿出一个干净的杯子，转身从吧台后面的架子上取下一瓶白葡萄酒。用他粗大，兽态的手指拧下瓶盖，把烈酒倒进杯子里，说道：[flash.speech(一共60火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the sixty flames, you bring the glass up to your waiting [pc.lips] and spend a few minutes slowly drinking the delicious beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你拿出60火币，把杯子递到嘴边，花了几分钟细细品味这美酒。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_VODKA"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a glass of vodka. Grabbing a clean glass, he reaches back to the shelves positioned behind the bar and grabs a bottle of vodka. Using his big, furry fingers to unscrew the cap, he pours the alcoholic beverage into the glass, saying, [flash.speech(That'll be a hundred flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯伏特加。听到你的点单，弗拉什拿出一个干净的杯子，转身打开吧台后面的奥术冰箱，拿出一瓶伏特加，接着用他粗大，兽态的手指拧下瓶盖，把伏特加倒进杯子里，说道：[flash.speech(一共100火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the hundred flames, you bring the glass up to your waiting [pc.lips] and spend a few minutes slowly drinking the delicious, highly-alcoholic beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你拿出100火币，把杯子递到嘴边，花了几分钟细细品味这美味的烈酒。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_RUM"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a glass of rum. Grabbing a clean glass, he reaches back to the shelves positioned behind the bar and grabs a bottle of rum. Using his big, furry fingers to unscrew the cap, he pours the alcoholic beverage into the glass, saying, [flash.speech(That'll be a hundred and twenty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯朗姆酒。听到你的点单，弗拉什拿出一个干净的杯子，转身打开吧台后面的奥术冰箱，拿出一瓶朗姆酒，接着用他粗大，兽态的手指拧下瓶盖，把朗姆酒倒进杯子里，说道：[flash.speech(一共120火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the one hundred and twenty flames, you bring the glass up to your waiting [pc.lips] and spend a few minutes slowly drinking the delicious, highly-alcoholic beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你拿出120火币，把杯子递到嘴边，花了几分钟细细品味这美味的烈酒。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_WHISKEY"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a glass of whiskey. Grabbing a clean glass, he reaches back to the shelves positioned behind the bar and grabs a bottle of whiskey. Using his big, furry fingers to unscrew the cap, he pours the alcoholic beverage into the glass, saying, [flash.speech(That'll be a hundred and twenty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯威士忌。听到你的点单，弗拉什拿出一个干净的杯子，转身从吧台后面的架子上取下一瓶威士忌。用他粗大，兽态的手指拧下瓶盖，把烈酒倒进杯子里，说道：[flash.speech(一共120火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the one hundred and twenty flames, you bring the glass up to your waiting [pc.lips] and spend a few minutes slowly drinking the delicious, highly-alcoholic beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你拿出120火币，把杯子递到嘴边，花了几分钟细细品味这美味的烈酒。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_DRINK_CHAMPAGNE"><![CDATA[
 	<p>
-		Feeling thirsty, you get Flash's attention and ask him for a glass of champagne. Grabbing a clean champagne flute, he opens one of the arcane fridges positioned beneath the bar and produces a bottle of 'Pan's Flute'. Using his big, furry fingers to twist off the cork, he opens the bottle with a loud pop, before pouring the fizzy beverage into the glass, saying, [flash.speech(That'll be a hundred and sixty flames. Just leave the glass on the bar once you've finished.)]
+		你觉得口渴，就向弗拉什打了声招呼，点了一杯香槟。听到你的点单，弗拉什拿出一个干净的香槟酒杯，转身打开吧台后面的一个奥术冰箱，拿出一瓶潘笛香槟，接着用他粗大，兽态的手指拧下软木塞，伴随着一声“砰”的声响，酒杯打开了。然后将起泡的香槟倒入酒杯，说道：[flash.speech(一共160火币，喝完之后请把杯子留在吧台上。)]
 	</p>
 	<p>
-		Handing over the one hundred and sixty flames, you bring the glass up to your waiting [pc.lips] and spend a few minutes slowly drinking the delicious beverage. Leaving the now-empty glass on the bar, you wonder whether to order anything else...
+		你拿出160火币，把杯子递到嘴边，花了几分钟细细品味这美酒。然后你把空杯子放在吧台上，想着要不要点些其他东西……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Ordering food: -->
 	
 	<htmlContent tag="BAR_FOOD_BREAD"><![CDATA[
 	#IF(game.getCharactersPresent().contains(flash))
 		<p>
-			Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'bread basket', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be fifty flames.)]
-		</p>
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“小面包”，然后叫来弗拉什点菜。他在一个小记事本上记下，然后咕哝了一声：[flash.speech(一共五十火币。)]
+	</p>
 		<p>
-			Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One bread basket ready!)]
-		</p>
+		你交了钱，等了几分钟，你的订单被处理完毕，然后一个獾女从厨房门口走出来，喊道：[style.speechFeminine(小面包好了！)]
+	</p>
 		<p>
-			Pointing over at you, Flash watches as this badger-girl sets the bread basket down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
-		</p>
+		弗拉什指了指你，看着獾女将小面包放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
+	</p>
 		<p>
-			Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the freshly-baked bread rolls...
-		</p>
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这盘新鲜烤制的小面包……
+	</p>
 	#ELSE
 		<p>
-			Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'bread basket', you call over the badger-boy behind the bar and place your order. Nodding as you give him your order, he smiles and says, [style.speechMasculine(That'll be fifty flames, please.)]
-		</p>
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“小面包”，然后叫来弗拉什点菜。他微笑着点头道： [style.speechMasculine(五十火币，请。)]
+	</p>
 		<p>
-			Handing over the money, you wait as the badger-boy hurries into the kitchen, and then a minute later he returns carrying your order. Setting the bread basket down on the counter in front of you, he flashes you a smile and steps over to the next customer, leaving you to tuck in to the delicious bread rolls...
+			你交了钱，看着獾男匆匆走进厨房。一分钟后，他就端着你的餐品回来了。他将盘子放在你面前，微笑着对你点了点头，然后走向下一个客人，留下你享用这盘美味的小面包……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_NUTS"><![CDATA[
 	#IF(game.getCharactersPresent().contains(flash))
 		<p>
-			Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'mixed nuts', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be fifty flames.)]
-		</p>
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“混合坚果”，然后叫来弗拉什点菜。他在一个小记事本上记下，然后咕哝了一声：[flash.speech(一共五十火币。)]
+	</p>
 		<p>
-			Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of mixed nuts ready!)]
-		</p>
+		你交了钱，等了几分钟，你的订单被处理完毕，然后一个獾女从厨房门口走出来，喊道：[style.speechFeminine(混合坚果好了！)]
+	</p>
 		<p>
-			Pointing over at you, Flash watches as this badger-girl sets the bowl down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
-		</p>
+		弗拉什指了指你，看着獾女将碗放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
+	</p>
 		<p>
-			Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious assortment of mixed nuts...
-		</p>
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你品尝这盘美味的混合坚果……
+	</p>
 	#ELSE
 		<p>
-			Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'mixed nuts', you call over the badger-boy behind the bar and place your order. Nodding as you give him your order, he smiles and says, [style.speechMasculine(That'll be fifty flames, please.)]
-		</p>
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“混合坚果”，然后叫来弗拉什点菜。他微笑着点头道： [style.speechMasculine(五十火币，请。)]
+	</p>
 		<p>
-			Handing over the money, you wait as the badger-boy hurries into the kitchen, and then a minute later he returns carrying your order. Setting the bowl down on the counter in front of you, he flashes you a smile and steps over to the next customer, leaving you to tuck in to the delicious assortment of mixed nuts...
+			你交了钱，看着獾男匆匆走进厨房。一分钟后，他就端着你的餐品回来了。他将盘子放在你面前，微笑着对你点了点头，然后走向下一个客人，留下你享用这盘美味的混合坚果……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_FRIES"><![CDATA[
 	<p>
-		Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'curly fries', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be fifty flames.)]
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“扭扭薯条”，然后叫来弗拉什点菜。他在一个小记事本上记下，然后咕哝了一声：[flash.speech(一共五十火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of curly fries ready!)]
+		你交了钱，等了几分钟，你的订单被处理完毕，然后一个獾女从厨房门口走出来，喊道：[style.speechFeminine(扭扭薯条好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the bowl down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将碗放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious bowl of greasy, curly fries...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你品尝这盘美味的油油的扭扭薯条……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_SHRIMP"><![CDATA[
 	<p>
-		Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'shrimp cocktail', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be seventy-five flames.)]
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“鲜虾鸡尾酒”，然后叫来弗拉什点菜。他在一个小记事本上记下，然后咕哝了一声：[flash.speech(一共七十五火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of shrimp cocktail ready!)]
+		你交了钱，等了几分钟，你的订单被处理完毕，然后一个獾女从厨房门口走出来，喊道：[style.speechFeminine(鲜虾鸡尾酒好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the glass down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将杯子放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious shrimp cocktail...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你品尝美味的鲜虾鸡尾酒……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_PATE"><![CDATA[
 	#IF(game.getCharactersPresent().contains(flash))
 		<p>
-			Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'pâté and crackers', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be eighty flames.)]
-		</p>
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“肉酱酥脆饼干”，然后叫来弗拉什点菜。他在一个小记事本上记下，然后咕哝了一声：[flash.speech(一共八十火币。)]
+	</p>
 		<p>
-			Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of pâté and crackers ready!)]
-		</p>
+		你交了钱，等了几分钟，你的订单被处理完毕，然后一个獾女从厨房门口走出来，喊道：[style.speechFeminine(肉酱酥脆饼干好了！)]
+	</p>
 		<p>
-			Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
-		</p>
+		弗拉什指了指你，看着獾女将餐盘放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
+	</p>
 		<p>
-			Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious plate of meat pâté and crackers...
-		</p>
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你品尝这盘美味的肉酱酥脆饼干……
+	</p>
 	#ELSE
 		<p>
-			Feeling a little hungry, you decide to order something from the 'starters & sides' menu. Settling on the 'pâté and crackers', you call over the badger-boy behind the bar and place your order. Nodding as you give him your order, he smiles and says, [style.speechMasculine(That'll be eighty flames, please.)]
-		</p>
+		你觉得有点饿了，决定从“前菜和配菜”菜单上点些东西。你选中了“肉酱酥脆饼干”，然后叫来弗拉什点菜。他微笑着点头道： [style.speechMasculine(八十火币，请。)]
+	</p>
 		<p>
-			Handing over the money, you wait as the badger-boy hurries into the kitchen, and then a minute later he returns carrying your order. Setting the plate down on the counter in front of you, he flashes you a smile and steps over to the next customer, leaving you to tuck in to the delicious plate of meat pâté and crackers...
+			你交了钱，看着獾男匆匆走进厨房。一分钟后，他就端着你的餐品回来了。他将盘子放在你面前，微笑着对你点了点头，然后走向下一个客人，留下你享用这盘美味的肉酱酥脆饼干……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_FISH_CHIPS"><![CDATA[
 	<p>
-		Feeling quite hungry, you decide to order a meal from the main menu. Settling on the 'fish & chips', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be a hundred and fifty flames.)]
+		你感到相当饿，决定点一道主菜。你选好“炸鱼薯条”，喊来服务员弗拉什下单。他在小记事本上匆匆写下你的订单，咕哝道，[flash.speech(一共一百五火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of fish and chips ready!)]
+		你交了钱，下好订单等上几分钟，一只獾女从厨房走出来，大声宣布，[style.speechFeminine(炸鱼薯条好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将餐品放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious plate of freshly-cooked fish and chips...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你品尝这盘新鲜烹好的美味的炸鱼薯条……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_SAUSAGES"><![CDATA[
 	<p>
-		Feeling quite hungry, you decide to order a meal from the main menu. Settling on the 'sausages', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be a hundred and fifty flames.)]
+		你感到相当饿，决定点一道主菜。你选好“香肠”，喊来服务员弗拉什下单。他在小记事本上匆匆写下你的订单，咕哝道，[flash.speech(一共一百五火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of sausages ready!)]
+		你交了钱，下好订单等上几分钟，一只獾女从厨房走出来，大声宣布，[style.speechFeminine(香肠一份已经好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将餐品放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious plate of freshly-cooked, high-quality sausages...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这盘新鲜烹制的、高品质的香肠……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_BURGER"><![CDATA[
 	<p>
-		Feeling quite hungry, you decide to order a meal from the main menu. Settling on the 'burger', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be a hundred and fifty flames.)]
+		你感到相当饿，决定点一道主菜。你选好“汉堡”，喊来服务员弗拉什下单。他在小记事本上匆匆写下你的订单，咕哝道，[flash.speech(一共一百五火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One burger ready!)]
+		你交了钱，下好订单等上几分钟，一只獾女从厨房走出来，大声宣布，[style.speechFeminine(一份汉堡准备好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将餐品放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious burger...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这美味的汉堡……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_CHICKEN_PIE"><![CDATA[
 	<p>
-		Feeling quite hungry, you decide to order a meal from the main menu. Settling on the 'chicken pie', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be a hundred and eighty flames.)]
+		你感到相当饿，决定点一道主菜。你选好“鸡肉馅饼”，喊来服务员弗拉什下单。他在小记事本上匆匆写下你的订单，咕哝道，[flash.speech(总共是一百八十火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of chicken pie ready!)]
+		你交了钱，下好订单等上几分钟，一只獾女从厨房走出来，大声宣布，[style.speechFeminine(一份鸡肉馅饼准备好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将餐品放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious, freshly-cooked chicken pie...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这盘美味的、新鲜烹制的鸡肉馅饼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_STEAK"><![CDATA[
 	<p>
-		Feeling quite hungry, you decide to order a meal from the main menu. Settling on the 'steak', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be two hundred and fifty flames.)]
+		你感到相当饿，决定点一道主菜。你选好“牛排”，喊来服务员弗拉什下单。他在小记事本上匆匆写下你的订单，咕哝道，[flash.speech(总共是两百五十火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One steak ready!)]
+		你交了钱，下好订单等上几分钟，一只獾女从厨房走出来，大声宣布，[style.speechFeminine(一份牛排准备好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将餐品放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious, freshly-cooked steak...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这盘美味的、新鲜烹制的牛排……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_FRUIT_SALAD"><![CDATA[
 	<p>
-		Feeling a little hungry, you decide to order something from the dessert menu. Settling on the 'fruit salad', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be eighty flames.)]
+		你感到有点饿，决定点一道甜点。你选好“水果沙拉”，喊来服务员弗拉什下单。他在小记事本上匆匆写下你的订单，咕哝道，[flash.speech(总共是八十火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of fruit salad ready!)]
+		你交了钱，下好订单等上几分钟，一只獾女从厨房走出来，大声宣布，[style.speechFeminine(一份水果沙拉准备好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the bowl down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将碗放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the bowl of delicious, refreshing fruit salad...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这碗美味而清爽的水果沙拉……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HONEY_BREAD"><![CDATA[
 	#IF(game.getCharactersPresent().contains(flash))
 		<p>
-			Feeling a little hungry, you decide to order something from the dessert menu. Settling on the 'honey bread', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be eighty flames.)]
-		</p>
+		你有点饿，决定点一道甜点。你选好“蜂蜜小面包”，喊来服务员弗拉什下单。他在小记事本上匆匆写下你的订单，咕哝道，[flash.speech(总共是八十火币。)]
+	</p>
 		<p>
-			Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of honey bread ready!)]
-		</p>
+		你交了钱，下好订单等上几分钟，一只獾女从厨房走出来，大声宣布，[style.speechFeminine(一份蜂蜜小面包准备好了！)]
+	</p>
 		<p>
-			Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
-		</p>
+		弗拉什指了指你，看着獾女将餐盘放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
+	</p>
 		<p>
-			Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious plate of honey bread...
-		</p>
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这盘美味的蜂蜜小面包……
+	</p>
 	#ELSE
 		<p>
-			Feeling a little hungry, you decide to order something from the dessert menu. Settling on the 'honey bread', you call over the badger-boy behind the bar and place your order. Nodding as you give him your order, he smiles and says, [style.speechMasculine(That'll be eighty flames, please.)]
+			你感到有点饿，决定点一道甜点。你选好“蜂蜜小面包”，叫了吧台后面的獾男下单。他听你报出餐品，点头微笑着说，[style.speechMasculine(总共是八十火币，请支付。)]
 		</p>
 		<p>
-			Handing over the money, you wait as the badger-boy hurries into the kitchen, and then a minute later he returns carrying your order. Setting the plate down on the counter in front of you, he flashes you a smile and steps over to the next customer, leaving you to tuck in to the delicious plate of honey bread...
+			你交了钱，看着獾男匆匆走进厨房。一分钟后，他就端着你的餐品回来了。他将盘子放在你面前，微笑着对你点了点头，然后走向下一个客人，留下你享用这盘美味的蜂蜜小面包……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_BERRY_TRIFLE"><![CDATA[
 	<p>
-		Feeling a little hungry, you decide to order something from the dessert menu. Settling on the 'berry trifle', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be eighty flames.)]
+		你觉得有点饿了，决定从甜点菜单上点些东西。你选中了“浆果松饼”，然后叫来弗拉什点菜。他在一个小记事本上记下，然后咕哝了一声：[flash.speech(一共八十火币。)]
 	</p>
 	<p>
-		Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One order of berry trifle ready!)]
+		你交了钱，等了几分钟，你的订单被处理完毕，然后一个獾女从厨房门口走出来，喊道：[style.speechFeminine(浆果松饼好了！)]
 	</p>
 	<p>
-		Pointing over at you, Flash watches as this badger-girl sets the bowl down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
+		弗拉什指了指你，看着獾女将碗放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
 	</p>
 	<p>
-		Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the bowl of delicious berry trifle...
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你尽情享用这碗美味的浆果松饼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_FOOD_BROWNIE"><![CDATA[
 	#IF(game.getCharactersPresent().contains(flash))
 		<p>
-			Feeling a little hungry, you decide to order something from the dessert menu. Settling on the 'brownie', you call over Flash and place your order. Jotting your order down on a little notepad, he grunts, [flash.speech(That'll be eighty flames.)]
-		</p>
+		你觉得有点饿了，决定从甜点菜单上点些东西。你选中了“布朗尼”，然后叫来弗拉什点菜。他在一个小记事本上记下，然后咕哝了一声：[flash.speech(一共八十火币。)]
+	</p>
 		<p>
-			Handing over the money, you wait for a few minutes as your order is processed, before a badger-girl steps out from the kitchen door and calls out, [style.speechFeminine(One brownie ready!)]
-		</p>
+		你交了钱，等了几分钟，你的订单被处理完毕，然后一个獾女从厨房门口走出来，喊道：[style.speechFeminine(布朗尼好了！)]
+	</p>
 		<p>
-			Pointing over at you, Flash watches as this badger-girl sets the plate down on the counter in front of you, before grunting at her, [flash.speech(Thanks, sis.)]
-		</p>
+		弗拉什指了指你，看着獾女将餐盘放在你面前，然后对她嘟囔着说，[flash.speech(谢谢，姐姐。)]
+	</p>
 		<p>
-			Smiling at Flash, the badger-girl skips back into the kitchen, leaving you to tuck in to the delicious chocolate brownie...
-		</p>
+		那只獾女对着弗拉什笑了笑，跳跃着回到厨房，留下你享用这美味的巧克力布朗尼……
+	</p>
 	#ELSE
 		<p>
-			Feeling a little hungry, you decide to order something from the dessert menu. Settling on the 'brownie', you call over the badger-boy behind the bar and place your order. Nodding as you give him your order, he smiles and says, [style.speechMasculine(That'll be eighty flames, please.)]
-		</p>
+		你觉得有点饿了，决定从甜品菜单上点些东西。你选中了“布朗尼”，然后叫来弗拉什点菜。他微笑着点头道： [style.speechMasculine(八十火币，请。)]
+	</p>
 		<p>
-			Handing over the money, you wait as the badger-boy hurries into the kitchen, and then a minute later he returns carrying your order. Setting the plate down on the counter in front of you, he flashes you a smile and steps over to the next customer, leaving you to tuck in to the delicious chocolate brownie...
+			你交了钱，看着獾男匆匆走进厨房。一分钟后，他就端着你的餐品回来了。他将盘子放在你面前，微笑着对你点了点头，然后走向下一个客人，留下你享用这盘美味的巧克力布朗尼……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		Leading off from the far side of the tavern, this narrow corridor is clearly signposted as providing access to the toilets and stairs to the upper floor. Apart from some pictures of rural scenes and old farming implements hanging from the walls, this corridor is devoid of any furnishings.
+		这条狭窄的走廊自酒馆的另一侧延伸过来，走廊内的路标指向厕所和通往上层的楼梯，墙上挂着些田园风景画和老旧农具，除此之外没有任何陈设。
 	</p>
 	<p>
-		An emergency fire escape is situated beside a glass window at the end of the corridor, and to either side of that are the toilets and staircase. From here you could approach one of these two places, or head down the corridor and return to the main floor of the tavern.
+		走廊尽头的玻璃窗旁有应急防火梯，厕所和楼梯间位于其两侧。你可以前往厕所或楼梯，也可以沿着走廊回到酒馆主层。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		You find yourself standing beside one of the two entrances to this tavern, which takes the form of a sturdy wooden door. A thick doormat is recessed into the floor in front of this door, and bears the words: 'Please wipe your feet before entering'
+		你发现自己正站在酒馆的两个入口之一旁，入口是一扇坚固的木门。门前的地板上有一块厚厚的门垫，上面写着：“进门前请先擦脚”
 	</p>
 	<p>
-		Over to one side of this door there's a squat metal umbrella rack,
+		门的一侧有一个蹲式金属伞架，
 		#IF(game.getCurrentWeather()==WEATHER_RAIN)
-			 which, due to the fact that it's currently raining outside, is full of wet umbrellas.
+			外面正在下雨，这里到处都是湿漉漉的雨伞。
 		#ELSE
-			 which, due to the fact that it's not currently raining outside, only has a few umbrellas stored in it.
+			外面没有下雨，里面只存放了几把雨伞。
 		#ENDIF
-		 From here, you could either [pc.step] forwards into the main area of the tavern, or instead make use of the door to head back out into Elis. 
+		从这里，你可以进入酒馆的主区域，也可以从这扇门回到伊利斯。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_FAST_TRAVEL_ENTRANCE"><![CDATA[
 	<p>
-		Having finished your business in your room, you exit out into the corridor, and after locking your door behind you, you travel down through the tavern to the front entrance...
+		在房间里办完事后，你走出走廊，锁好房门，穿过酒馆来到前门……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Deciding that it's time for you to leave, you push open the door and head back outside, before continuing forwards into the street outside the tavern...
+		你决定是时候离开了，于是你推开门回到外面，然后继续向前走到酒馆外的街道上……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN"><![CDATA[
 	<p>
-		A modestly-sized beer garden is situated to the rear of the tavern, and it's within this outdoor area that you currently find yourself standing.
+		酒馆后方有一个面积不大的啤酒花园，你现在所站的位置就在这个户外区域。
 		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-			 Both the paved patio and the numerous wooden picnic tables which are located in this area are covered in a thick blanket of snow. The tavern's timber-framed wall forms the southern and eastern sides of this garden, while the other two are formed by large snow-capped hedgerows.
+			铺设好的庭院和许多木制野餐桌都覆盖着厚厚的积雪。酒馆的木结构围墙构成了花园的南面和东面，而另外两面则由大片白雪覆盖的树篱构成。
 		#ELSE
-			 Consisting of a paved patio adjoining a wide strip of neatly-mown lawn, this beer garden is home to numerous wooden picnic tables. The tavern's timber-framed wall forms the southern and eastern sides of this garden, while the other two are formed by large leafy hedgerows.
+			这个啤酒花园由一个铺好路面的庭院和一片修剪整齐的宽阔草坪组成，庭院里摆放着许多木制野餐桌。酒馆的木结构围墙构成了花园的南面和东面，另外两面则由枝繁叶茂的大树篱构成。
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getSeason()==SEASON_WINTER)
-			Due to the cold outdoor temperature, you're the only person who's currently out here. Apart from taking a moment to enjoy the peace of the outdoors and get a fresh breath of air, there's nothing for you to do out here except head back inside...
+			室外温度很低，目前只有你一个人在外面。除了享受一下户外的宁静，呼吸一下新鲜空气，你在外面什么也做不了，只能回到屋里……
 		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-			Due to the fact that it's raining, you're the only person who's currently out here. Apart from taking a moment to enjoy the soothing sound of the falling rain and get a fresh breath of air, there's nothing for you to do out here except head back inside...
+			由于下雨，目前只有你一个人在外面。除了花点时间享受一下淅淅沥沥的雨声，呼吸一下新鲜空气，你在外面什么也做不了，只能回到屋里……
 		#ELSEIF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			Due to the busy time of day, there are quite a lot of people out here sitting at the tables or standing around drinking. Although those around you seem to be having a good time, there's little for you to do out here except get a fresh breath of air and then head back inside...
+			由于一天中的繁忙时段，这里有很多人坐在桌边或站着喝酒。虽然你周围的人似乎都玩得很开心，但你在外面也没什么可做的，只能呼吸一下新鲜空气，然后回到屋里……
 		#ELSE
-			Due to the quiet time of day, there are only a few people out here sitting at the tables or standing around drinking. Although those around you seem to be having a good time, there's little for you to do out here except get a fresh breath of air and then head back inside...
+			由于时间比较安静，这里只有几个人坐在桌边或站着喝酒。虽然你周围的人看起来都玩得很开心，但除了呼吸一下新鲜空气，然后回到屋里，你在外面也没什么可做的……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN_DOOR"><![CDATA[
 	<p>
-		A glass conservatory connects the tavern's main floor to its beer garden, and it's within this area that you find yourself standing. Unlike the rest of the tavern, there's no place in here for customers to sit and drink, as almost all of the available space is filled with potted herbs and other edible plants.
+		酒馆的主楼和啤酒花园之间有一个玻璃温室相连，你现在所站的位置就在这个区域内。与酒馆的其他地方不同，这里没有供顾客坐下来喝酒的地方，因为几乎所有可用空间都摆满了盆栽香草和其他可食用植物。
 	</p>
 	<p>
-		A sign above the conservatory's glass doors informs you that the adjoining beer garden is available for all customers to enjoy,
+		温室玻璃门上方的指示牌告诉你，毗邻的啤酒花园可供所有顾客享用，
 		#IF(game.getSeason()==SEASON_WINTER)
-			 although due to the cold outdoor temperature, you can see the garden is completely deserted...
+			尽管由于室外气温较低，你看到花园完全荒废了……
 		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-			 although due to the rain, you can see the garden is completely deserted...
+			尽管由于下雨，你看到花园完全荒废了……
 		#ELSEIF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			 and due to the busy time of day, you can see that there are quite a lot of people out in there...
+			由于是一天中的繁忙时段，你可以看到有很多人在那里……
 		#ELSE
-			 although due to the quiet time of day, you can see that there are only a few people out in there...
+			尽管是一天中的安静时刻，你可以看到只有几个人在那里……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KITCHEN"><![CDATA[
 	<p>
-		Over to one side of the bar, a door carries a sign that reads 'Kitchen: Staff Only'. [pc.Stepping] over to this door, you look through its circular window and see that the tavern's kitchen looks to be both impressively clean and well organised.
+		吧台的一侧有一扇门，门上挂着“厨房：仅限员工使用”。走到这扇门前，你透过圆形窗户看到，酒馆的厨房看起来干净整洁、井井有条，令人印象深刻。
 	</p>
 	<p>
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			As it's currently the busy time of the day, there are several people working in the kitchen, and you watch them for a moment as they prepare ingredients, stir pots, and move food in and out of the ovens.
+			由于目前正是一天中忙碌的时候，厨房里有几个人在工作，你看了一会儿他们准备食材、搅拌锅子、在烤箱中放入或从中取出食物。
 		#ELSE
-			As it's currently the quiet time of the day, there's only one person working in the kitchen, and you watch them for a moment as they take their time preparing ingredients, stirring pots, and moving food in and out of the ovens.
+			由于目前是一天中最安静的时候，厨房里只有一个人在工作，你看着他们慢慢地准备食材、搅拌锅子、在烤箱中放入或从中取出食物。
 		#ENDIF
-		 Respecting the sign on the door, and not wanting to disturb the tavern's cooking staff, you soon decide to [pc.step] away from the door and return to the bar...
+		你尊重门上的标志，不想打扰酒馆的烹饪人员，于是没多久就决定离开门口，回到酒吧……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS"><![CDATA[
 	#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
 		<p>
 			#IF(game.getCharactersPresent().contains(meraxis))
-				As usual, Meraxis has occupied the sofa in this corner of the tavern, and has several of the local succubi fawning over her. She's so caught up in regaling her companions with one of her
+				和往常一样，梅拉克西丝占据了旅店角落里的沙发，身边围着几个对她百般奉承的本地魅魔。她正忙着向同伴们吹嘘自己
 				#IF(pc.hasTraitActivated(PERK_CHUUNI))
-					 impressive tales
+					令人叹服的冒险经历，
 				#ELSE
-					 exaggerated tales
+					添油加醋的冒险经历，
 				#ENDIF
-				 that she hasn't seen you approach, affording you the opportunity to turn around and leave. Then again, if you had things to talk to her about, you could always continue forwards and greet her.
+				完全没有注意到你走了过来，这倒给了你一个转身离开的机会。不过话说回来，如果你有什么事想找她聊聊，也可以继续走上前去跟她打个招呼。
 			#ELSE
-				Although the sofa in this corner of the tavern is Meraxis's favourite spot, neither she nor her succubi followers are anywhere to be seen at the moment. If you wanted to speak with her, you'll have to head upstairs and see if she's in her room.
+				虽然旅店角落里的沙发是梅拉克西丝最喜欢的位置，但此刻无论是她还是她那些魅魔拥趸都不见踪影。如果你想跟她说话，只能上楼去她房间看看了。
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
 			#IF(game.getCharactersPresent().contains(meraxis))
-				As usual, Meraxis has occupied the sofa in this corner of the tavern, but after the events at Wall's End, she no longer has any succubi fawning over her. Despite sitting alone, she's completely oblivious to her surroundings, as she's got her nose buried in what looks to be a book of spells. As such, she hasn't seen you approach, affording you the opportunity to turn around and leave. Then again, if you had things to talk to her about, you could always continue forwards and greet her.
+				和往常一样，梅拉克西丝占据了旅店角落里的沙发，但经历了墙之尽头的事件之后，她身边已经没有魅魔围着献殷勤了。尽管独自一人坐在那里，她却完全沉浸在自己的世界中，对周围的一切浑然不觉——她正把鼻子埋在一本看起来像是法术书的东西里。因此，她并没有注意到你走了过来，这倒给了你一个转身离开的机会。不过话说回来，如果你有什么事想找她聊聊，也可以继续走上前去跟她打个招呼。
 			#ELSE
-				Although the sofa in this corner of the tavern is Meraxis's favourite spot, she's nowhere to be seen at the moment. If you wanted to speak with her, you'll have to head upstairs and see if she's in her room.
+				虽然旅店角落里的沙发是梅拉克西丝最喜欢的位置，但此刻她不见踪影。如果你想跟她说话，只能上楼去她房间看看了。
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_APPROACH"><![CDATA[
 	#IF(pc.hasTraitActivated(PERK_CHUUNI))
 		<p>
 			#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-				As you approach Meraxis, you hear that she's just finished the story which she was telling to her minions, allowing you to make a dramatic entrance without interrupting her. [pc.Stepping] forwards so as to stand right in front of your nemesis, you strike an intimidating pose and ask, [pc.speech(What dark acts of sorcery have you prepared for me this time, my arch-nemesis?)]
+				当你走近梅拉克西丝时，你听到她刚好讲完了正在给手下们讲的故事，这让你得以在不打断她的情况下来一次华丽登场。你[pc.Stepping]上前，径直站到你的宿敌面前，摆出一个气势逼人的姿态，问道：[pc.speech(这一次你又准备了什么黑暗的魔法来对付我，我的头号宿敌？)]
 			#ELSE
-				As you approach Meraxis, she momentarily lowers her spell book and lets out a little sigh, allowing you to make a dramatic entrance without interrupting her. [pc.Stepping] forwards so as to stand right in front of your nemesis, you strike an intimidating pose and ask, [pc.speech(What dark acts of sorcery have you prepared for me this time, my arch-nemesis?)]
+				当你走近梅拉克西丝时，她暂时放下了法术书，轻轻叹了口气，这让你得以在不打断她的情况下来一次华丽登场。你[pc.Stepping]上前，径直站到你的宿敌面前，摆出一个气势逼人的姿态，问道：[pc.speech(这一次你又准备了什么黑暗的魔法来对付我，我的头号宿敌？)]
 			#ENDIF
 		</p>
 		#IF(siren.isVisiblyPregnant())
@@ -846,20 +845,20 @@
 			#ENDIF
 		#ELSE
 			<p>
-				[meraxis.speech(Mwhahaha!)] Meraxis laughs, before jumping up to her feet and matching your pose with one of her own. Flashing you a sinister smirk, she exclaims,
+				[meraxis.speech(姆哈哈哈哈哈！)]梅拉克西丝大笑起来，她很快站起来，摆出和你针锋相对的姿势。她露出一个狡黠的笑容，大声说道，
 				#IF(flags.hasFlag(FLAG_innoxia_meraxis_duel_daily_complete))
-					 [meraxis.speech(I would never reveal my secret techniques to you! Now, as much as I would love to challenge you to yet another duel, my awesome powers are at risk of being fully unleashed upon this world if I were to do so! To avoid a cataclysm the likes of which this universe has never seen, I shall need time to seal away my powers. We can duel again tomorrow... Unless there's something else you were here for?)]
+					[meraxis.speech(我独门招数的内在玄机岂可轻易泄露给你！现在，虽然我很想再和你来一场决斗，但如果我这么做的话，我的洪荒之力就有可能在这个世界上完全释放出来！为了避免这酿成宇宙中前所未有的大灾难，维护宇宙的和平，我需要时间来封印我的力量，我们可以明天再决斗……除非你还有别的事？)]
 				#ELSE
-					 [meraxis.speech(I would never reveal my secret techniques to you! Now, I formally challenge you to a duel; let us decide once and for all who the supreme ruler of this universe shall be! That is, unless there's something else you were here for?)]
+					[meraxis.speech(呱！我的独门秘术怎可轻易让你学去！来热烈地决斗吧，来角逐谁人才是主宰宇宙的第一霸主！还是说，你还有别的事要说？)]
 				#ENDIF
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
 			#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-				As you approach Meraxis, you hear that she's just finished the story which she was telling to her minions, allowing you to make your entrance without interrupting her. [pc.Stepping] forwards so as to catch her attention, you offer Meraxis a friendly greeting and ask her if she has a moment to talk.
+				当你走近梅拉克西丝时，你听到她刚好讲完了正在给手下们讲的故事，这让你得以在不打断她的情况下自然地走上前去。你[pc.Stepping]上前吸引她的注意，友好地向梅拉克西丝打了声招呼，问她是否有空聊聊。
 			#ELSE
-				As you approach Meraxis, she momentarily lowers her spell book and lets out a little sigh, allowing you to make your entrance without interrupting her. [pc.Stepping] forwards so as to catch her attention, you offer Meraxis a friendly greeting and ask her if she has a moment to talk.
+				当你走近梅拉克西丝时，她暂时放下了法术书，轻轻叹了口气，这让你得以在不打断她的情况下自然地走上前去。你[pc.Stepping]上前吸引她的注意，友好地向梅拉克西丝打了声招呼，问她是否有空聊聊。
 			#ENDIF
 		</p>
 		#IF(siren.isVisiblyPregnant())
@@ -887,287 +886,286 @@
 			#ENDIF
 		#ELSE
 			<p>
-				[meraxis.speech(Mwhahaha!)] Meraxis laughs, before jumping up to her feet and striking what she must think is an intimidating pose. Flashing you a sinister smirk, she exclaims,
+				[meraxis.speech(姆哈哈哈哈哈~)]梅拉克西丝大笑起来，她很快站起来，摆出一个她肯定以为很帅的姿势。她故作出一个反派应有的狡猾的笑容，说着，
 				#IF(flags.hasFlag(FLAG_innoxia_meraxis_duel_daily_complete))
-					 [meraxis.speech(I would never reveal my secret techniques to you! Now, as much as I would love to challenge you to yet another duel, my awesome powers are at risk of being fully unleashed upon this world if I were to do so! To avoid a cataclysm the likes of which this universe has never seen, I shall need time to seal away my powers. We can duel again tomorrow... Unless there's something else you were here for?)]
+					[meraxis.speech(你是来偷学我的必杀技的吗！现在，虽然我很想再和你来一场决斗，但如果我这么做的话，我的洪荒之力就有可能在这个世界上完全释放出来！为了避免这酿成宇宙中前所未有的大灾难，维护宇宙的和平，我需要时间来封印我的力量，我们可以明天再决斗……除非你还有别的事？)]
 				#ELSE
-					 [meraxis.speech(I would never reveal my secret techniques to you! Now, I formally challenge you to a duel; let us decide once and for all who the supreme ruler of this universe shall be! That is, unless there's something else you were here for?)]
+					[meraxis.speech(我可不会轻易泄露自己的杀手锏！我现在正式向你提起决斗，让我们看看究竟是谁更有资格主宰整个宇宙！还是说，你现在有别的事情要说？)]
 				#ENDIF
 			</p>
 		#ENDIF
 	#ENDIF
 	<p>
 		#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-			Both Meraxis and her succubi followers all wait to hear your response...
+			梅拉克西丝和她的魅魔手下们都在等待你的回答……
 		#ELSE
-			With a questioning look on her face, Meraxis waits to hear your response...
+			梅拉克西丝带着疑惑的表情，等待着你的回答……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_TALK_TAKAHASHI"><![CDATA[
 	#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
 		<p>
-			Recalling what Meraxis suggested to Lyssieth, you ask her if she's had any luck tracking down the youko who used to work for her in her Submission citadel. Shaking her head, the chuuni [meraxis.race] replies, [meraxis.speech(I must unfortunately report that my mystical divinations have not yet produced results. It was aeons ago that we first met, but thanks to my unparalleled memory I can say for certain that it was in this very tavern where Takahashi and I had our first, fateful encounter. I was hoping that she'd sense my malevolent presence and return to find me here, but alas, that has proven not to be the case...)]
+			回想起梅拉克西丝对莉西丝的建议，你问她追踪那个曾在屈城区堡垒为她效力的妖狐，有没有什么进展。这位中二病[meraxis.race]摇了摇头，回答道：[meraxis.speech(很遗憾，我必须报告，我那神秘的占卜术尚未产生结果。我们初次相遇已经是亿万年前的事了，但多亏了我无与伦比的记忆力，我可以确定就是在这家旅店，高桥与我有了那次命中注定的邂逅。我本以为她会感应到我邪恶的气息，回来找我，但可惜，事实并非如此……)]
 		</p>
 		<p>
-			As Takahashi was a candidate for being your guide to finding and securing assistance from the youko, you press Meraxis on the matter and ask her if she has any idea where Takahashi could have gone. Leaning back on the sofa, she sighs and says, [meraxis.speech(When the youko wish not to be found, you will never be able to track them down. All we can do is wait for a celestial portent to indicate that fate will lead us to her! Besides, mommy said that you should meet Minotallys before worrying about the youko...)]
+			既然高桥是你寻找并争取妖狐援助的向导人选，你便追问梅拉克西丝，问她是否知道高桥可能去了哪里。她靠在沙发上叹了口气，说道，[meraxis.speech(当妖狐不想被找到的时候，你永远也追踪不到她们。我们能做的只有等待天象指引，让命运带我们找到她！而且，妈妈说过，你应该先去见米诺塔莉丝，再操心妖狐的事情……)]
 		</p>
 		<p>
-			Seeing the smirks on her minions' faces as she uses the word 'mommy', Meraxis blushes and covers up her embarrassment by pointing at you and declaring, [meraxis.speech(Begone, my nemesis, unless you have something further you wish to say!)]
+			看到手下们在她说出“妈妈”这个词时脸上露出坏笑，梅拉克西丝脸红了，为了掩饰尴尬，她指着你宣称，[meraxis.speech(滚开，我的宿敌，除非你还有什么想说的！)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to know more about Meraxis's youko friend, you ask the chuuni [meraxis.race] what she can tell you about Takahashi.
+			你想多了解一下梅拉克西丝的妖狐朋友，于是问这位中二病[meraxis.race]她能告诉你关于高桥的什么事。
 		</p>
 		<p>
-			Leaning back on the sofa, she sighs and says, [meraxis.speech(She's a three-tailed youko, and is a follower of the trickster youko lilin. Even though she likes tricking and transforming others, and so most people don't trust her, she's my best friend, and I know that she'd have come to see me here if she was able to. I just hope that we can find her at my old hideout...)]
+			她靠在沙发上，叹了口气说道，[meraxis.speech(她是一只三尾妖狐，也是恶作剧妖狐莉琳的追随者。虽然她喜欢捉弄和转化别人，所以大多数人都不信任她，但她是我最好的朋友，我知道如果她能来的话，一定会来这里看我的。我只希望我们能在我以前的藏身处找到她……)]
 		</p>
 		<p>
-			You ask Meraxis if Takahashi has ever gone missing like this before.
+			你问梅拉克西丝，高桥以前有没有像这样失踪过。
 		</p>
 		<p>
-			[meraxis.speech(She's a free spirit, and sometimes leaves to get up to mischief, but in the past she'd always let me know when she'd be back. After you destroyed my fortress, I saw her once, and she said she was going back to the Shinrin Highlands for a while. She promised to seek me out and meet me here in Elis whenever I chose to come here, but I've heard nothing from her,)] Meraxis says. She seems a little upset by this, but after shaking her head, she confidently declares, [meraxis.speech(I'm sure we'll find her at my old hideout! If there's anything else you wanted to know about her, you can ask her directly then!)]
+			[meraxis.speech(她是个自由自在的人，有时候会跑出去搞些恶作剧，但以前她总会告诉我什么时候回来。在你摧毁了我的堡垒之后，我见过她一次，她说要回心林高地待一阵子。她答应我，等我来伊利斯的时候会来找我，可我一直没有她的消息，)]梅拉克西丝说道。她似乎有些不安，但摇了摇头后，她自信地宣称，[meraxis.speech(我相信我们一定能在我以前的藏身处找到她！如果你还有什么想了解她的，到时候可以直接问她本人！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_LEAVE"><![CDATA[
 	<p>
 		#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-			Not having anything more to discuss with Meraxis, you say goodbye and [pc.step] away from her and her minions, leaving them to continue talking with one another.
+			没有什么要和梅拉克西丝讨论的了，你向她道别，然后[pc.step]离开她和她的手下，留他们继续交谈。
 		#ELSE
-			Not having anything more to discuss with Meraxis, you say goodbye and [pc.step] away from her, leaving her to continue reading her spell book.
+			没有什么要和梅拉克西丝讨论的了，你向她道别，然后[pc.step]离开她，留她继续阅读她的法术书。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_DEMON_TF_START"><![CDATA[
 	<p>
-		Deciding that the time has come for Meraxis to become a full demon, you ask, [pc.speech(Have you thought any more about going through with the same demonic transformation as Lilaya?)]
+		你认为梅拉克西丝成为纯恶魔的时机已到，于是问道：[pc.speech(你考虑过和莉莱雅一样去恶魔转化吗？)]
 	</p>
 	<p>
-		[siren.speech(O-Of course I have,)] Meraxis replies, standing up from where she's sitting. Placing her hands on her hips, she boasts, [siren.speech(I'm not afraid of doing it, I just needed to seal my volatile arcane power so that the process doesn't destroy the universe! I-In fact, I'm ready to do it right now!)]
+		[siren.speech(当——当然有。)]梅拉克西丝腾地站起，叉着腰自吹自擂道，[siren.speech(我才没有怕呢，只是要封印我那不稳定的奥术力量，别把宇宙给毁灭罢了！事——事实上，我现在就准备好了！)]
 	</p>
 	<p>
-		As if to prove herself to you, the chuuni [meraxis.race] grabs your [pc.hand], before declaring, [meraxis.speech(Now I shall show you the true meaning of power! Hold on tight, lest you be transported into oblivion! Mwhahaha!)]
+		这个逞强的中二[meraxis.race]握住你的手，大声宣告，[meraxis.speech(现在我将向你揭露我力量的究极奥义！抓紧我的手，否则你将被传送到湮灭之地！姆哈哈哈哈哈！)]
 	</p>
 	<p>
-		At that moment, a bright flash of purple light envelops the two of you, and the next thing you know both you and Meraxis are standing in your mother's office. With this being exactly what you wanted, you smile as your little [siren.relation(pc)] releases her grip on your [pc.hand] and joins you in turning to face Lyssieth.
+		就在这时，一道耀眼的紫光闪过，笼罩你和梅拉克西丝，紧接着你们就站在了你们母亲的办公室里。这正是你想要的结果，你微笑着看着你的小[siren.relation(pc)]松开紧握着你[pc.hand]的手，与你一同面对莉西丝。
 	</p>
 	<p>
-		[lyssieth.speech(Oh, why if it isn't my dear [pc.name] and Meraxis. What's caused you to teleport into my office without announcing your arrival beforehand?)] the elder lilin asks, standing up and smiling at the two of you.
+		[lyssieth.speech(哦，这不是我亲爱的[pc.name]和梅拉克西丝吗？是什么原因让你们在没有事先通知的情况下传送到我的办公室呢？)]莉琳长老站起身，微笑着看着你们。
 	</p>
 	<p>
-		Releasing your hand, Meraxis points at the elder lilin, striking a heroic pose as she commands, [siren.speech(Mommy, I demand to be turned into a full demon! Summon my sister and proceed with the ritual!)]
+		梅拉克西丝松开你的手，指着莉琳长老，摆出一副英勇的姿势，要求道：[siren.speech(妈妈，我要变成纯恶魔！把姐姐召唤过来开始仪式吧！)]
 	</p>
 	<p>
-		Letting out a deep sigh, Lyssieth nevertheless consents, [lyssieth.speech(Very well... I did promise that I'd transform the two of you... Your sister will want to be present for this.)] 
+		莉西丝长叹一口气，还是同意了：[lyssieth.speech(行吧行吧……我答应过要转化你们两个……你姐姐会愿意过来的。)] 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_DEMON_TF_FINISHED"><![CDATA[
 	<p>
-		With an accompanying flash of purple light, you and Meraxis instantaneously reappear in the upstairs corridor of The Red Dragon. Seeing that you're right outside Meraxis's room, you ask her if she was intending to get some rest after what must have been an exhausting experience for her.
+		伴随着紫光一闪，你和梅拉克西丝瞬间又出现在红龙酒馆楼上的走廊。正好就在梅拉克西丝的房间门口，你便问她在经历了这么累的事之后是否打算休息一下。
 	</p>
 	#IF(game.isHourBetween(1, 9))
 		<p>
-			[meraxis.speech(You speak sense, my nemesis,)] Meraxis replies, before stifling a yawn and continuing, [meraxis.speech(I shall enter my dark slumber, from which I may not awaken for a thousand years!)]
+			[meraxis.speech(说的有道理，吾之宿敌。)]梅拉克西斯回答着，打了个哈欠，又继续说道，[meraxis.speech(吾将进入黑暗的沉眠，可能一千年都不会醒来！)]
 		</p>
 		<p>
-			After unlocking the door to her room, the chuuni [meraxis.race] turns to face you and mumbles, [meraxis.speech(Oh, and... Well, thanks, [pc.name]... I've kind of always wanted to be a demon, but I wasn't able to do it alone...)]
+			打开房间的门后，中二病[meraxis.race]转过身来面对你，小声嘟囔道：[meraxis.speech(还有……就是……谢谢你，[pc.name]……我一直都想变成恶魔来着，但靠我自己做不到……)]
 		</p>
 		<p>
-			Not wanting you to see her in this embarrassed state for too long, Meraxis quickly darts inside her room, and before you can even respond she slams the door shut after her. Smiling to yourself, you turn away from the locked door to her room and prepare to continue on your way...
+			梅拉克西丝不想让你看到她尴尬的样子太久，便迅速向房内跑去，你还没来得及反应，她就关上了门。你一笑置之，转身离开已上锁的门，准备继续前行……
 		</p>
 	#ELSE
 		<p>
 			#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-				[meraxis.speech(You dare try to trick me, my nemesis?)] Meraxis replies, before striking a heroic pose and continuing, [meraxis.speech(I shall not waste time by sleeping! I must go and show my minions my new form! Mwhahaha!)]
+				[meraxis.speech(你竟敢试图欺骗我，我的宿敌？)]梅拉克西丝回应道，然后摆出一个英雄般的姿态继续说：[meraxis.speech(我才不会把时间浪费在睡觉上！我要去向我的手下们展示我的新形态！唔哈哈哈！)]
 			#ELSE
-				[meraxis.speech(You dare try to trick me, my nemesis?)] Meraxis replies, before striking a heroic pose and continuing, [meraxis.speech(I shall not waste time by sleeping! I must go and practice poses in my new form! Mwhahaha!)]
+				[meraxis.speech(你竟敢试图欺骗我，我的宿敌？)]梅拉克西丝回应道，然后摆出一个英雄般的姿态继续说：[meraxis.speech(我才不会把时间浪费在睡觉上！我要用新形态练习摆造型！唔哈哈哈！)]
 			#ENDIF
 		</p>
 		<p>
-			Before leaving, however, the chuuni [meraxis.race] turns to face you and mumbles, [meraxis.speech(Oh, and... Well, thanks, [pc.name]... I've kind of always wanted to be a demon, but I wasn't able to do it alone...)]
+			不过在离开之前，这个中二病[meraxis.race]转过身面向你，小声嘟囔着，[meraxis.speech(噢，还有……嗯，谢谢你，[pc.name]……我其实一直都想变成恶魔来着，但靠我自己做不到……)]
 		</p>
 		<p>
-			Not wanting you to see her in this embarrassed state for too long, Meraxis quickly darts off down the corridor, and before you can even respond she disappears around the corner at the far end. Smiling to yourself, you prepare to continue on your way...
+			梅拉克西丝不想让你看到她尴尬的样子太久，便迅速向走廊跑去，你还没来得及反应，她就消失在走廊尽头的拐角处。你一笑置之，准备继续前行……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Lunexis bad end options -->
 	
 	<htmlContent tag="LUNEXIS_PLAN"><![CDATA[
 	<p>
-		Deciding that now's the time to get Meraxis involved in your plan to free your Mistress, you tell her that you have something very important to discuss with her.
+		你决定让梅拉克西丝参与到你释放主人的计划中来，便告诉她你有要事相告。
 	</p>
 	<p>
-		[meraxis.speech(Something important?)] she excitedly asks with a bright glint in her eye. Leaning forwards on her seat, she guesses, [meraxis.speech(Have you discovered a universe-shattering artefact? Or maybe Elis needs saving from a cataclysmic disaster!)]
+		[meraxis.speech(要事？)]她兴奋地问道，眼中闪烁着明亮的光芒。她靠在座位上，猜测道，[meraxis.speech(你发现了一件震撼宇宙的圣遗物？还是伊利斯需要我们自危难中拯救！)]
 	</p>
 	#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
 		<p>
-			Although you're happy to see how eager she is to find out what you've got in store for her, you don't want anyone else finding out about your plan. As such, you pointedly glance over to the succubi who are sitting beside the [meraxis.race] and tell her that you need to discuss it in secret.
+			虽然看到她如此急切地想知道你有什么计划让你颇为高兴，但你不想让其他人知道你的打算。因此，你刻意地瞥了一眼坐在这个[meraxis.race]身旁的魅魔们，告诉她你们需要私下讨论。
 		</p>
 		<p>
-			[meraxis.speech(Very well, I understand! Remain seated, my minions; I'll be right back!)] Meraxis declares, before standing up and following you as you lead her out into the privacy of the tavern's beer garden. Once there, the [meraxis.race] turns to face you and impatiently asks, [meraxis.speech(Well, what is it, [pc.name]? Is it about defeating Lunette?)]
+			[meraxis.speech(好吧，我明白了！坐着别动，我的手下们，我马上就回来！)]梅拉克西丝宣告道，随即站起身来跟着你走向旅店的露天花园。到了那里，这个[meraxis.race]转身面对你，不耐烦地问道：[meraxis.speech(怎么了，[pc.name]？是关于打败露内特的事吗？)]
 		</p>
 	#ELSE
 		<p>
-			Although you're happy to see how eager she is to find out what you've got in store for her, you don't want anyone else finding out about your plan. As such, you tell her that you can't reveal any more details in a public place such as this.
+			虽然看到她如此急切地想知道你有什么计划让你颇为高兴，但你不想让其他人知道你的打算。因此，你告诉她在这样的公共场合你没法透露更多细节。
 		</p>
 		<p>
-			[meraxis.speech(Very well, I understand!)] Meraxis declares, before standing up and following you as you lead her out into the privacy of the tavern's beer garden. Once there, the [meraxis.race] turns to face you and impatiently asks, [meraxis.speech(Well, what is it, [pc.name]? Is it about defeating Lunette?)]
+			[meraxis.speech(好吧，我明白了！)]梅拉克西丝宣告道，随即站起身来跟着你走向旅店的露天花园。到了那里，这个[meraxis.race]转身面对你，不耐烦地问道：[meraxis.speech(怎么了，[pc.name]？是关于打败露内特的事吗？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUNEXIS_PLAN_DELAY"><![CDATA[
 	<p>
-		Having second thoughts about leading Meraxis into the clutches of Lunexis, but also not wanting to betray your Mistress, you decide that now's not the time for this. Shaking your head, you tell the [meraxis.race] that you're not quite ready to reveal your secret after all.
+		你对把梅拉克西丝带入露内克西丝的魔掌有了新的想法，但又不想背叛你的主人，还是决定缄口不言。你摇了摇头，告诉梅拉克西丝你还没准备好揭开你的秘密。
 	</p>
 	<p>
-		[meraxis.speech(You think that you can hide your secrets from me?!)] Meraxis declares, before striking one of her wild poses and letting out a loud laugh. Pointing an accusatory finger at you, she declares,
+		[meraxis.speech(你以为你能在我面前隐藏秘密？！)]梅拉克西丝宣告道，然后摆出一个她标志性的夸张姿势，放声大笑。她用手指指着你，声明道：
 		#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-			 [meraxis.speech(I shall discover what you're hiding before long, my nemesis! For now, however, I must return to my minions. Until next time!)]
+			[meraxis.speech(我迟早会发现你在隐瞒什么的，我的宿敌！不过现在，我得先回到我的手下身边。下次再见！)]
 		#ELSE
-			 [meraxis.speech(I shall discover what you're hiding before long, my nemesis! Until next time!)]
+			[meraxis.speech(我迟早会发现你在隐瞒什么的，我的宿敌！下次再见！)]
 		#ENDIF
 	</p>
 	<p>
-		With that, Meraxis dashes off back into the tavern, leaving you to let out a sigh of relief and continue on your way...
+		说罢，梅拉克西丝又匆匆跑回酒馆，留下你独自松了一口气，继续旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="MERAXIS_ROOM_SEX"><![CDATA[
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			Striking an impressive pose, you point at Meraxis and declare, [pc.speech(My nemesis, I challenge you to the ultimate form of duel; let us discover who can last the longest in the bedroom!)]
+			你摆出一个帅气的姿势，指着梅拉克西丝，宣告道，[pc.speech(我的宿敌，我要邀请你进行一场终极的对决，我们今天就来比试谁在床上撑的时间更长！)]
 		#ELSE
-			Wanting to speak in terms that Meraxis will understand, you ask her if she'd want to join you for a special type of 'duel' in her bedroom.
+			你学着梅拉克西丝的口吻，问她是否愿意和你在她的卧室里来一场“决斗”。
 		#ENDIF
 	</p>
 	<p>
 		#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-			Meraxis's cheeks turn a bright shade of red as she hears you say this, and as her succubi 'minions' do their best to stifle their amused giggles, the chuuni [meraxis.race] stands up and loudly declares, [meraxis.speech(I will not back down from your challenge, my ultimate nemesis! You shall soon discover how foolish you were to challenge me in such a fashion!)]
+			梅拉克西丝听到你这么说，脸颊一下子涨得通红；当她的魅魔“手下”们拼命忍住好笑的咯咯声时，这个中二的[meraxis.race]站起身来，大声宣告，[meraxis.speech(我不会从你的挑战中退缩，我的终极宿敌！你很快就会发现自己竟敢以这种方式挑战我是多么愚蠢！)]
 		#ELSE
-			Meraxis's cheeks turn a bright shade of red as she hears you say this, and in order to conceal her embarrassment, the chuuni [meraxis.race] stands up and loudly declares, [meraxis.speech(I will not back down from your challenge, my ultimate nemesis! You shall soon discover how foolish you were to challenge me in such a fashion!)]
+			梅拉克西丝听到你这么说，脸颊一下子涨得通红，为了掩饰自己的尴尬，这个中二的[meraxis.race]站起身来，大声宣告，[meraxis.speech(我不会从你的挑战中退缩，我的终极宿敌！你很快就会发现自己竟敢以这种方式挑战我是多么愚蠢！)]
 		#ENDIF
 	</p>
 	<p>
-		Stepping forwards, Meraxis grabs you by the [pc.hand(true)] and hastily pulls you along after her as she heads towards the stairs which lead to the upper floor. After a quick ascent, the two of you head down the corridor and find yourselves standing before the door to Meraxis's room. Producing a key, the [meraxis.race] unlocks this door and pulls you inside, before locking it after you and declaring, [meraxis.speech(Now you are in my lair! You stand no chance against me in here!)] 
+		梅拉克西丝上前一步，抓住你[pc.hand(true)]，然后匆匆拉着你走上楼梯，穿过走廊，来到了她的房间。梅拉克西丝掏出钥匙打开门，把你拉了进来，然后把门关好，问你，[meraxis.speech(姆哈哈哈哈！你竟敢选择在我的领地向我挑战，你毫无胜算！)] 
 	</p>
 	<p>
-		Looking around at the interior of Meraxis's room, you immediately take note of how incredibly messy it is. All manner of arcane instruments and dangerous-looking weapons are haphazardly piled up on top of every piece of furniture, while the floor is strewn with dirty clothing and pieces of paper. Jumping onto her bed, Meraxis playfully kicks a pillow towards you and laughs, [meraxis.speech(Mwhahaha! So then, [pc.name], you dare to challenge a daughter of an elder lilin to... to...)]
+		你环顾着梅拉克西丝房间内的布置，你立刻就发现这里凌乱不堪。每件家具上都胡乱堆放着各种奥术仪器和看起来很危险的武器，地上散落着脏衣服和纸片。梅拉克西丝跳到床上，俏皮地踢了踢枕头，然后大笑起来，[meraxis.speech(所以，[pc.name]，你竟然敢挑战莉琳长老的女儿，你是要……要……)]
 	</p>
 	<p>
-		Despite her confident start, the shy [meraxis.race] blushes and stalls at this critical moment. Averting her eyes, she mutters, [meraxis.speech(S-So you want to... you know... have sex?)] 
+		说着，这个害羞的[meraxis.race]脸突然红了起来，说的话也变得结结巴巴，全然没有她一开始时的气势。她的眼神躲闪，用近乎听不清的声音咕哝着，[meraxis.speech(所，所以，你是要，要……你是……要和我做爱？)] 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_ROOM_SEX_AS_DOM"><![CDATA[
 	<p>
-		Realising that you're going to have to take the dominant role, you join Meraxis on her bed and pull her into a deep, passionate kiss. The cute [meraxis.race] practically falls into your [pc.arms], and after desperately returning your kiss for a few moments, she pulls back and breathlessly pants, [meraxis.speech(Come on then, [pc.name]... Let's do it...)] 
+		你意识到该由自己主导，于是把梅拉克西丝扑倒在床上，拉着她缠绵热吻。可爱的[meraxis.race]几乎整个人都缩在你怀中，她热情回吻了片刻，抽开唇，喘着粗气说：[meraxis.speech(来吧，[pc.name]……做吧……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_ROOM_SEX_AS_SUB"><![CDATA[
 	<p>
-		Not wanting to take the dominant role, you join Meraxis on her bed and tell her that you'll do whatever she likes. Regaining her confidence as she hears that you want to submit to her, she lets out another of her theatrical laughs, before suddenly moving forwards and pulling you into a deep, passionate kiss. After you've desperately returned her kiss for a few moments, she pulls back and eagerly pants, [meraxis.speech(Get ready, [pc.name]... I'll show you how it's done...)] 
+		你不想当支配者，于是和梅拉克西丝一同躺在床上，告诉她你任她采撷。她一听你想臣服于她，又恢复了自信，夸张地哈哈笑着拉你缠绵热吻。你热情回吻了片刻，她抽开唇，喘着粗气说：[meraxis.speech(准备好，[pc.name]……我会让你知道该怎么做……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_ROOM_AFTER_SEX"><![CDATA[
 	<p>
 		#IF(meraxis.isSatisfiedFromLastSex())
-			Letting out a deep sigh, Meraxis collapses back onto her bed and pants, [meraxis.speech(That was... So good...)]
+			梅拉克西丝长叹一口气，又瘫入床中，喘着粗气：[meraxis.speech(这真是……太棒了……)]
 		#ELSE
-			Letting out a frustrated sigh, Meraxis collapses back onto her bed and pants, [meraxis.speech(You didn't even... Managed to satisfy me...)]
+			梅拉克西丝长叹一口气，又瘫入床中，喘着粗气：[meraxis.speech(你甚至……没法满足我……)]
 		#ENDIF
 	</p>
 	<p>
-		Waiting for you to quickly clean yourself up and get your things back in order, the chuuni [meraxis.race] falls back into her usual manner of speaking and exclaims, [meraxis.speech(I must harness the power of the whirlpool and cleanse my body! I shall see you later, my nemesis!)]
+		等你迅速收拾好自己，把东西放回原处，中二病的[meraxis.race]又恢复了她一贯的说话方式，大声宣告道：[meraxis.speech(我需要借助漩涡之力，净化我的身体！再见了，吾之宿敌！)]
 	</p>
 	<p>
-		Realising that Meraxis means that she wants to wash herself in her ensuite bathroom, you head to the door of her room and take your leave...
+		你意识到梅拉克西丝的意思是她想在套间浴室里洗漱，于是你走向她的房门，就此离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MERAXIS_AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Heading back out into the corridor, you leave Meraxis's room behind and wonder what to do now...
+		你离开了梅拉克西丝的房间，走进走廊，思考接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="SEATING"><![CDATA[
 	<p>
-		Positioned along the far sides of the tavern, several sofas and low coffee tables have been arranged so as to provide a more relaxed seating area than those offered by the wooden tables and chairs.
+		酒馆的两侧摆放着几张沙发和咖啡桌，与木质桌椅相比，这里的座位更加宽敞。
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			 At this busy time of the day all of the available space is already taken, and so even if you wanted to sit down on one of the comfortable sofas you wouldn't be able to.
+			现在正是繁忙的时段，所有位子都已被占用了，因此即使你想，你也无法在舒适的沙发上落座。
 		#ELSE
-			 At this quiet time of the day there's plenty of available space on the comfortable sofas, although you're not sure if you want to spend any time sitting down and taking a rest.
+			现在正是冷清的时段，舒适的沙发上有很多空位，虽然你不确定是否要坐下来休息片刻。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		The staircase before you is signposted as leading up to the tavern's rooms for rent, and winds around in a clockwise fashion up to the first floor. While it's quite wide, the steps are rather steep, which seems to be the reason why an additional sign has been placed beneath the first one, reading: 'To avoid any further accidents, please don't run up or down the stairs!'
+		根据标识，你面前的楼梯通往酒馆的出租房间，它以顺时针方向蜿蜒至二楼。台阶虽然很宽，但坡度却很陡，因此第一级台阶前放着一块标语，上面写着：“为了避免事故发生，请勿在楼梯上奔跑！”
 	</p>
 	<p>
-		From here you could travel up to the tavern's first floor, or instead [pc.walk] down the corridor and head back into the tavern...
+		从这里，你可以去酒馆的二楼，或者沿着走廊[pc.walk]下去，回到酒馆……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS_UP"><![CDATA[
 	<p>
-		Deciding to head on up to the first floor, you climb the steep staircase and soon find yourself at the top...
+		你决定上到二楼，便爬上陡峭的楼梯，很快就到了顶层……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TABLES"><![CDATA[
 	<p>
-		Almost the entire of the ground floor of 'The Red Dragon' consists of one huge room, in which you currently find yourself standing. Thanks to the large wooden floorboards and overhead beams, as well as the decorative, antiquated farm equipment which is displayed on the walls, this tavern's interior has a very rustic feel to it.
+		“红龙酒馆”的整个底层几乎都是由一个巨大的房间组成，你现在发现自己身处其中。大木地板和头顶横梁，以及墙壁上展示的装饰性陈旧农场设备，为这家小酒馆的内部添了许多质朴感。
 	</p>
 	<p>
-		A large number of wooden tables and chairs fill most of the space before you,
+		大量木质桌椅占满了眼前的大部分空间，
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			 and thanks to the fact that it's currently the busy time of the day, almost all of these tables are occupied by people drinking, eating, and making merry.
+			现在正是一天中最繁忙的时候，几乎所有的餐桌上都坐满了喝酒、吃饭和狂欢的人们。
 		#ELSE
-			 and thanks to the fact that it's currently the quiet time of the day, only a few of these tables are occupied by people drinking, eating, and making merry.
-		#ENDIF
-		 The smell of alcohol and good, hearty food fills the air, making you look over to the bar and wonder whether you should order anything.
+			现在是一天中最安静的时候，只有几张桌子上的人在喝酒、吃东西，尽情欢乐。		#ENDIF
+		空气中弥漫着酒香和丰盛食物的味道，你不禁向吧台望去，思索着是否该点些什么。
 	</p>
 	#IF(game.getCharactersPresent().contains(jess))
 		<p>
 			#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-				The beautiful, orange-furred fox-girl, Jess, who looks to be in her early twenties, is sitting alone at one of the tables. As you pass, she turns towards you and leans forwards, flashing you her DD-cup cleavage as she seductively suggests, [jess.speech(Hey [pc.name], if you've got two-hundred and fifty flames, then I could give you some company again...)]
+				美丽的橙色毛发狐女婕斯看上去只有二十出头，正独自坐在一张桌子旁。当你经过时，她转过身来，身体前倾，一边向你展示她那D-D罩杯的乳沟，一边诱惑地暗示你：[jess.speech(嘿[pc.name]，如果你有二百五十火币，我可以再陪你……)]
 			#ELSE
-				A beautiful, orange-furred fox-girl, who looks to be in her early twenties, is sitting alone at one of the tables. As you pass, she turns towards you and leans forwards, flashing you her DD-cup cleavage as she seductively suggests, [jess.speech(Hey babe, I'm Jess! If you've got two-hundred and fifty flames, then I could give you some company...)]
+				一个美丽的橙色毛发狐女，看上去只有二十出头，正独自坐在一张桌子旁。当你经过时，她转过身来，身体前倾，一边向你展示她那D-D罩杯的乳沟，一边诱惑地暗示你： [jess.speech(嘿，宝贝，我是婕斯。如果你有两百五十火币，我可以陪陪你……)]
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Jess: -->
@@ -1177,280 +1175,280 @@
 		#IF(jess.isVisiblyPregnant())
 			#IF(!jess.isCharacterReactedToPregnancy(pc))
 				<p>
-					Wanting to spend some more time with Jess, you [pc.walk] over to her table and say hello. As she pushes her chair back a little to turn to greet you, you suddenly notice that she's got one of her paw-like hands resting on her [style.colourSex(pregnant belly)]. Flashing you a sly grin as she sees you looking down at her swollen bump, the fox-girl teases, [jess.speech(Yeah, you're the one who knocked me up... I guess those five thousand flames paid off for you, huh?)]
+					你想多陪陪婕斯，于是[pc.walk]到她的桌前，跟她打招呼。当她把椅子往后推一点转过身来跟你打招呼时，你突然发现她的一只爪子正放在她的[style.colourSex(孕肚)]上。当婕斯发现你低头看她胀鼓鼓的肚子时，她冲你狡黠一笑，调侃道：[jess.speech(是啊，是你把我肚子搞大的……我猜那五千火币给你带来了回报，是吧？)]
 				</p>
 			#ELSE
 				<p>
-					Wanting to spend some more time with Jess, you [pc.walk] over to her table and say hello. As she pushes her chair back a little to turn to greet you, you see that she's once again got one of her paw-like hands resting on her [style.colourSex(pregnant belly)]. Flashing you a sly grin as she sees you looking down at her swollen bump, the fox-girl teases, [jess.speech(Yeah, I'm still pregnant, thanks to you...)]
+					你想多陪陪婕斯，于是[pc.walk]到她的桌前，跟她打招呼。当她把椅子往后推一点转过身来跟你打招呼时，你发现她的一只爪子依然放在她的[style.colourSex(孕肚)]上。当婕斯发现你低头看她胀鼓鼓的肚子时，她挑逗道：[jess.speech(是啊，我还怀着呢，谢谢你……)]
 				</p>
 			#ENDIF
 			<p>
-				Grabbing hold of your hand, she pulls up her top and makes you stroke her rounded belly. After letting out a giggle as she feels you running your [pc.fingers] through her fluffy fur, Jess gets down to business by stating, [jess.speech(I may be carrying your kids, but my company's still not free, you know...)]
+				婕斯抓住你的手，拉起她的上衣，让你抚摸她圆润的腹部。当她感觉到你的[pc.fingers]穿过她蓬松的毛发时，她咯咯轻笑着，又开始说正事：[jess.speech(我可能怀着你的孩子，但我的陪伴仍然不是免费的，你知道吧……)]
 			</p>
 		#ELSE
 			<p>
-				Wanting to spend some more time with Jess, you [pc.walk] over to her table and say hello. Flashing you a sly grin, she rubs her fingers together and teases, [jess.speech(My company's not free, you know...)]
+				你想多陪陪婕斯，于是[pc.walk]到她的桌前，跟她打招呼。她冲你狡黠一笑，一边摩擦着手指，一边挑逗道：[jess.speech(我的陪伴可不是免费的，你知道吧……)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Liking the sound of what this pretty fox-girl is offering, you [pc.walk] over to her table and say hello. Flashing you a sly grin, she rubs her fingers together and teases, [jess.speech(Hey there, cutie! I already told you that my name's Jess, so it's only fair that you share yours.)]
+			你很喜欢这位漂亮的狐女提供的东西，于是[pc.walk]到她的桌前，跟她打招呼。她向你狡黠一笑，搓着手指挑逗道：[jess.speech(嘿，小可爱！我已经告诉过你我叫婕斯，所以你也应该告诉我你的名字。)]
 		</p>
 		<p>
-			After you've given Jess your name, she pouts at you and whines, [jess.speech(I'm sorry, [pc.name], but my company's in high demand around here. If you want to sit and chat, then it's going to cost you...)]
+			在你告诉婕斯你的名字后，她撅着嘴对你抱怨道：[jess.speech(抱歉，[pc.name]，在这里我的陪伴价格很高呢。要是你想坐下来聊天，那就得花点钱……)]
 		</p>
 	#ENDIF
 	<p>
-		Producing the two hundred and fifty flames which she's after, you pay the beautiful fox-girl and sit down at the table next to her. Jess's [jess.eyeColour] eyes light up as she sees the money, and after quickly seizing the flames and putting them away in her purse, she winks at you and asks, [jess.speech(So, [pc.name], what do ya want to talk about? Or maybe talk's not enough for you... If you've got another two hundred and fifty flames then the two of us can go find a quiet corner in which to get more intimate with one another...)]
+		你拿出美丽的狐女所要的250火币，然后在她旁边的桌子坐下。婕斯看到钱后，[jess.eyeColour]眼睛一亮，迅速把火币收进包里，然后对你眨了眨眼睛，问道：[jess.speech(那么，[pc.name]，你想谈些什么呢？也许你觉得谈谈还不够……要是你还有250火币，我们两个可以找个安静的角落，让彼此更加亲密……)]
 	</p>
 	<p>
-		Letting out a girly giggle, Jess moves her chair up closer to yours, before teasing her exceptionally-fluffy fox-tail over your lap. Biting her lip and fluttering her eyelids at you, the playful fox-girl waits to hear what it is you want to do with her...
+		婕斯少女般娇俏地咯咯笑着，把她的椅子挪得离你更近一些，然后在你的膝盖上逗她那毛茸茸的狐狸尾巴。顽皮的狐女咬着她的嘴唇，向你扑闪着眼睛，等待着听你想对她做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_TALK"><![CDATA[
 	<p>
-		Deciding to enjoy your time in Jess's company by making small talk, you ask her about her day and how she is. Happily responding in a very positive manner, the fox-girl quickly reverses the conversation and gets you to start talking to her about yourself. With a seemingly unlimited amount of patience, Jess gazes at you in adoration as you tell her about the recent events in your life, and whether or not it's because you've paid her to do so, she acts as though she's genuinely interested in your life.
+		你决定通过闲聊来享受与婕斯在一起的时光，你问她今天过得怎么样。狐女高兴地做出了热情的回应，然后她很快扭转了话题，让你聊聊你自己。婕斯似乎有无限的耐心，她崇拜地注视着你，听你讲述你生活中最近发生的事情，不管是不是因为你付钱让她这么做，她都表现得好像真的对你的生活很感兴趣。
 	</p>
 	<p>
-		As you talk, Jess curls her fluffy tail around to rest it in your lap, and briefly interrupts your conversation to say, [jess.speech(You can stroke it if you'd like; I've been told that it's very relaxing to do...)] 
+		你说话的时候，婕斯把毛茸茸的尾巴卷起来放在你的腿上，并打断道：[jess.speech(只要你想，你可以抚摸它。有人告诉我，抚摸它让人很放松……)]
 	</p>
 	<p>
-		This time you're absolutely convinced that your payment has nothing to do with Jess's offer, as you can see what looks like desperation in the fox-girl's pretty [jess.eyeColour] eyes as she flicks her fluffy tail towards your [pc.hands]. Giving her what she wants, you idly stroke her tail as you continue your conversation, and before you know it almost fifteen minutes have passed by...
+		这一次，你完全相信婕斯的提议与钱无关，毕竟狐女将毛茸茸的尾巴塞入你手中，漂亮的[jess.eyeColour]眼眸中闪过一丝迷乱。你如她所愿，悠闲地抚摸着她的尾巴，继续你们的谈话。在你意识到时间之前，十五分钟已经过去了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_TALK_HISTORY"><![CDATA[
 	<p>
-		Thanks to your repeated transactions with Jess, you've managed to build up a high level of trust with her, and so feeling that now is the right time to do so, you ask Jess about her history and what led to her working here in The Red Dragon. Letting out a wistful sigh as she hears you ask this, the pretty fox-girl allows a heavy silence to fall between the two of you, but just as you're about to tell her not to worry about it, she starts talking, [jess.speech(For most of my life I worked as a prostitute in Dominion's red light district. To say that life was hard would be a bit of an understatement; the brothel where I worked was one of the worst, and almost every night me and the other girls would suffer some kind of abuse...)]
+		由于多次的交易，你已经成功地与婕斯建立了高度的信任，因此你觉得现在正是合适的时机去问她的来历，以及她在红龙酒馆工作的原因。一听你这么问，这位漂亮的狐女伤感地叹了一口气，你们之间陷入了沉重的沉默，但就在你准备告诉她不用担心的时候，她开始说话了：[jess.speech(我生命中的大部分时间都在御城区的红灯区当妓女，在最糟糕的妓院里工作，几乎每天晚上我和其他女孩都会饱受虐待……)]
 	</p>
 	<p>
-		Not letting these painful memories get her down, Jess perks up and smiles at you as she continues, [jess.speech(I don't tell this story to just anyone, [pc.name], but as you've been so good to me I know that I can trust you. Anyway, one night I overheard the girl who I considered to be my only friend discussing how to rob me after work with one of her regular clients. I stuffed what little belongings I had into my bag and walked out the door, never to return...)]
+		婕斯没有被这些痛苦的回忆打倒，她振作起来，微笑着对你继续说：[jess.speech(我不会随便对别人说这个故事，[pc.name]，但因为你一直对我很好，我知道我可以信任你。总之，有一天晚上，我无意中听到那个被我视为唯一朋友的女孩和她的一个老客户密谋，在讨论如何在下班后抢劫我。我把身上仅有的一点东西都塞进包里，然后走出了那里，再也没有回来……)]
 	</p>
 	<p>
-		At that moment, the fox-girl lets out a genuine laugh, and admits, [jess.speech(Ok, I'm making it sound more theatrical than it really was; I grabbed my stuff and ran out into the street before those two could carry out their plan. At first I thought I'd head east like everyone else who's sick of Dominion; apparently there's a boat at the coast which takes you to a new land, but I've never been good around water. I thought I may as well try my luck in another city in the Realm, and at the flip of a coin I chose Elis to be my destination.)]
+		这时，狐女发出了真诚的笑声，承认道：[jess.speech(好吧，我做了艺术加工。我在那两个人实施计划之前，就拿起我的东西跑到街上去了。起初，我以为自己会像其他厌倦了御城区的人一样向东走，显然，海岸边有一艘船可以带你去新的地方，但我一向不擅长水性。我想不如去王国的另一座城市碰碰运气，于是我掷硬币选择了伊利斯作为目的地。)]
 	</p>
 	<p>
-		Interested in Jess's story, you ask her what her journey here was like, to which she sighs and replies, [jess.speech(Well, all this happened as Lunette's raiding was really getting crazy. I think I had to stop and offer freebies to her demonic centaurs five times... or was it six? Anyway, it was nothing I hadn't done before. The thing which really hurt was when they took all my money. I arrived at Elis with nothing but the clothes on my back... 'Course, those were soon coming off as I set about earning a living in the alleyways to the north of the town.)]
+		你对婕斯的故事很感兴趣，于是问她来这里的旅程是怎样的，她叹了口气回答说：[jess.speech(好吧，这一切都发生在露内特的突袭日益肆虐的时候。我想我不得不停下来让她的恶魔半人马白嫖五次……还是六次？不管怎么说，我以前又不是没这么做过。真正让我伤心的是他们拿走了我所有的钱。我来到伊利斯时，除了身上的衣服，一无所有……当然，当我开始在小镇北面的小巷里谋生时，衣服很快就被脱掉了。)]
 	</p>
 	<p>
-		Although she lets out a laugh as she says this, Jess's face quickly takes on a sad expression as she continues, [jess.speech(After a few nights of working and sleeping out rough in the alleyways, the Enforcers found me. Luckily for me, they're nowhere near as brutal as those in Dominion, and instead of enslaving me they gave me a fine and warned me not to be caught whoring myself out again. Unluckily for me, that fine took away everything I'd earned... At that point I got really desperate, and snuck in to the kitchen here at this tavern to try and steal some food.)]
+		虽然婕斯在说这话时发出了笑声，但脸上很快就露出了悲伤的表情，她继续说道：[jess.speech(在小巷里做了几个晚上、露宿了几个晚上之后，执法者找到了我。幸运的是，他们不像御城区的执法者那么残暴，他们没有奴役我，而是给我罚了一笔款，并警告我不要再被抓到在外面嫖娼。不走运的是，我被罚得倾家荡产……那时候我真的绝望了，偷偷溜进酒馆的厨房，想偷点吃的。)]
 	</p>
 	<p>
-		Feeling as though she's coming to the end of her story, you ask Jess if that's when she first met Flash. At the mention of his name, a big smile breaks out across the fox-girl's face, and she confirms, [jess.speech(That's right! One of the staff here saw me stealing some bread, and they chased me out through the tavern, right into the arms of the same Enforcers who'd fined me the day before. 'Course, Flash, being the big softie he really is, insisted on knowing what the Enforcers planned on doing to me. When they said I was going to be enslaved for a year or so, he said that he didn't want to press charges, and that he'd take responsibility for making sure I didn't cause trouble in the town again. After hearing what I'd been through, he offered me a deal; I don't do anything to give The Red Dragon a bad reputation, and he not only lets me work here, but also lets me rent a room <i>and</i> gives me three square meals a day. I guess I really landed on my feet here...)]
+		你觉得婕斯的故事即将进入尾声，便问这是不是她与弗拉什的初遇。一提到他的名字，狐女的脸上绽放出灿烂的笑容，她确认道：[jess.speech(没错！这里的一个员工看到我偷面包，就把我赶出酒馆，直接投入了前一天罚我钱的执法者的怀抱。当然了，弗拉什，他真的是个软心肠的人，坚持要知道执法者们打算对我做什么。当他们说我要被奴役一年左右时，他说他不想起诉我，还会负责确保我不再在镇上惹麻烦。听完我的遭遇后，他给了我一笔交易：我不做任何让‘红龙酒馆’声名狼藉的事，他不仅让我在这里工作，让我租房住，<i>还</i>给我提供一日三餐。我想，我真的在这里站稳了脚跟……)]
 	</p>
 	<p>
-		Having now discovered what led to Jess working here, you wonder what to do next...
+		知道婕斯在这里工作的原因之后，你思索起接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_TAIL_FLUFFED"><![CDATA[
 	<p>
-		Jess's tail is far fluffier and more voluminous than that of a regular fox-morph, and you find your attention being inexorably drawn towards it. Seeing what it is you're after, the fox-girl lets out a playful giggle, before demonstrating that she's got a high level of control over it by swishing the mass of soft, orange fur around in front of you. Biting her lip, she seductively teases, [jess.speech(So, you've got a thing for big, fluffy tails, have you? Go on then, you can touch my fluffy tail...)]
+		婕斯的尾巴比普通狐狸的尾巴更大更蓬松，你的注意力不可阻挡地被吸引到它身上。婕斯明白你想要的是什么，俏皮地咯咯轻笑一声，然后通过在你面前甩动柔软丰满的橙色皮毛来展示她对其的极佳控制力。她咬着嘴唇，媚惑地挑逗道：[jess.speech(所以说，你喜欢毛茸茸的大尾巴，是吗？来吧，你可以摸我松软的尾巴……)]
 	</p>
 	<p>
-		As you reach out and take hold of her tail, Jess inadvertently lets out a soft, sexual moan, revealing that she's just as excited about this contact as you are. Breathlessly encouraging you to stroke, tease, and huff her fluffy tail, Jess can't help but moan, [jess.speech(That's it... ~Mmm!~ You sure know how to please a vixen... ~Ooh!~ You know, I use special conditioner on my tail to get it to be so fluffy...)]
+		你伸手握住婕斯的尾巴，令她不经意间发出了轻柔而性感的呻吟，透露出她和你一样对这种接触感到兴奋。婕斯屏住呼吸，鼓励你抚摸、挑逗和舔舐她蓬松的尾巴，她情不自禁地呻吟道：[jess.speech(就是这样……~唔嗯！~你真会取悦狐狸精……~噢！~你知道吗，我在尾巴上使用了特殊的护发素，让它变得如此蓬松……)]
 	</p>
 	<p>
-		For the next ten minutes, you indulge yourself in Jess's fantastically-fluffy tail. Stroking its silky-soft length, fluffing it up, and running your [pc.fingers] through it, you both thoroughly enjoy yourself and give Jess what seems to be an almost orgasmic experience. All good things must come to an end, however, and as you finally feel as though you've played with her tail enough, you wonder what to do with Jess next...
+		在接下来的十分钟里，你尽情享受婕斯蓬松的尾巴。你抚过这丝绸般柔软的整根尾巴，把它弄蓬松，又以[pc.fingers]穿过它，你们俩都非常享受，更让婕斯似乎获得了近乎高潮的体验。不过，天下没有不散的筵席，你终于觉得玩够了婕斯的尾巴，思索起接下来该对婕斯做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_BEERS"><![CDATA[
 	<p>
-		Feeling like you'll enjoy yourself more if you were to share a drink with Jess, you offer to buy her something, to which the fox-girl excitedly demands, [jess.speech(I want a beer! You should have one too, [pc.name]!)]
+		你想和婕斯共饮一杯，于是提出请她买点东西，狐女兴奋地提出了要求，[jess.speech(我要啤酒！你也来啤酒吧[pc.name]！)]
 	</p>
 	<p>
-		Not wanting to let her down, you do as Jess suggests and order two pints of beer from the bar. Handing over eighty flames in exchange, you take the glasses back to your table, where you and Jess set about drinking your delicious, alcoholic beverages.
+		你不想让她失望，于是按照婕斯的建议，从吧台点了两品脱啤酒。你递上八十个火币，然后把杯子拿回你的桌子，和婕斯一起开始喝美味的酒精饮料。
 	</p>
 	<p>
-		[jess.speech(Thanks, [pc.name],)] Jess says, before smiling at you and using her long, flat tongue to lick the froth from her fox-like nose. Letting out a contented sigh, she asks, [jess.speech(So, what's your life been like back in Dominion?)]
+		[jess.speech(谢谢你，[pc.name]，)]婕斯说，对你微笑着，用她扁长的舌头舔了舔狐狸鼻子上的泡沫。她满足地叹了一口气，问道：[jess.speech(你在御城区的生活怎么样？)]
 	</p>
 	<p>
-		For the next fifteen minutes the two of you talk about all manner of topics, starting with life in Dominion and progressing through the weather, fashion, and how Elis compares to the capital city. Eventually, the two of you finish both your drinks and your conversation, leaving you wondering what to do with Jess now...
+		在接下来的十五分钟里，你们俩谈论了各种话题，从御城区的生活开始，到天气、时尚，以及伊利斯与首都的比较。最后，你们俩喝完了酒，也聊完了天，只剩下婕斯在这里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_INTIMATE"><![CDATA[
 	<p>
-		Wanting more than to just sit with Jess and make idle conversation, you hand her another two hundred and fifty flames and tell her that you'd like to get more intimate with her. Flashing you a delighted grin, she swiftly scoops the coins into her purse before standing up and taking hold of your [pc.hand(true)]. Seductively biting her lip at you, she teases, [jess.speech(Come on, let's find a quiet corner in which we can do some naughty things...)]
+		你不想只是和婕斯坐在一起闲聊，于是又递给她两百五十火币，告诉她你想和她更进一步。她向你露出欣喜的笑容，迅速地把硬币放进钱包，然后站起来握住你的[pc.hand(true)]。她诱惑地咬着嘴唇对你挑逗，[jess.speech(来吧，让我们找个安静的角落，做一些淘气的事情……)]
 	</p>
 	<p>
-		Wanting to find out what sot of naughty things she has in mind, you allow the horny fox-girl to lead you over to one of the seating areas at the sides of the tavern, before gently pushing you down onto an unoccupied sofa. Letting out a playful giggle, she slides down into your lap and whispers into your ear, [jess.speech(You know, I can use my tail to hide my lower body. If you wanted to get a feel of my hot little pussy, nobody's going to see... Then again, if you wanted more than just a feel of it, I can give you a very personal tour of my room for just two thousand flames...)]
+		你想知道她到底有什么淘气的想法，于是让这个好色的狐狸姑娘带着你来到酒馆两边的一个座位区，然后轻轻地把你推倒在一张没人的沙发上。她发出俏皮的咯咯笑声，滑到你的腿上，在你耳边低语，[jess.speech(我可以用尾巴遮住下面，如果你想摸摸我火辣的小穴，没人会看到……话又说回来，如果你想要的不只是摸摸而已……我可以带你参观参观我的房间，只需两千火币……)]
 	</p>
 	<p>
-		Pressing her [jess.cupSize]-cup breasts into your body, the hot fox-girl hikes up her microskirt and starts playfully grinding her exposed panties up and down over your [pc.leg(true)]. As Jess leans in towards you, you wonder what to do next...
+		将她[jess.cupSize]罩杯的乳房压向你的身体，这位火辣的狐女撩起她的超短裙，开始俏皮地在你的[pc.leg(true)]上来来回回磨擦她露出的内裤。婕斯向你靠近，你不知道接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_KISSING"><![CDATA[
 	<p>
-		Tilting your head to one side, you press your [pc.lips+] against Jess's mouth and start kissing her. Letting out a delighted, muffled moan in response, the sexy fox-girl presses her [jess.cupSize]-cup breasts against you as she leans in to passionately return your kiss. Grinding her groin down against your [pc.leg(true)], she briefly pulls back to breathlessly pant, [jess.speech(Come on, give my tits love too...)]
+		你把头歪向一边，用[pc.lips+]抵住婕斯的嘴，与之亲吻。这位性感的狐女发出了愉悦而低沉的呻吟声作为回应，她将自己的[jess.cupSize]杯乳房紧紧贴在你的身上，并俯身热情地回吻你。她用腹股沟顶着你的[pc.leg(true)]，她短暂地抽开几秒，喘着粗气道：[jess.speech(来吧，也给我的乳头一点爱……)]
 	</p>
 	<p>
-		Leaning forwards and continuing to desperately kiss you, Jess takes hold of your [pc.hands] and guides them up under her sweater. Giving her what she wants, you start groping and squeezing the fox-girls big boobs as she makes out with you in your lap.
+		婕斯向前倾身，继续迷乱地吻你，又握住你的[pc.hands]并将它们伸到自己的毛衣下面。你如她所愿，开始摸索和揉捏狐女的大胸，她则在你的大腿上和你亲热。
 	</p>
 	<p>
-		Caught up in your intimate embrace, the two of you spend the next fifteen minutes making out with one another in this manner, before you finally decide to pull back and do something else with Jess...
+		你们俩沉浸在亲密的拥抱中，接下来的十五分钟里，你们一直这样亲热着，最后你才决定抽身离开，和婕斯做一些别的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_GROPED"><![CDATA[
 	<p>
-		Deciding to take Jess up on her offer, you slip your [pc.hand(true)] down between her legs and start tracing your [pc.fingers] over her lacy thong. Letting out an excited squeal, Jess curls her fluffy fox-tail up so as to conceal her groin from the rest of the room. Leaning in to you, she teases, [jess.speech(Go on, shift them aside... ~Mmm!~ I want you to feel how wet I'm getting...)]
+		你决定接受婕斯的提议，将你的[pc.hand(true)]滑到她的两腿之间，开始用你的[pc.finger]在她的蕾丝丁字裤上划动。婕斯发出一声兴奋的尖叫，把蓬松的狐狸尾巴卷了起来，以便把她的腹股沟遮住。她凑到你身边，挑逗道：[jess.speech(来嘛，把它们移到一边去……~看看我有多湿……)]
 	</p>
 	<p>
-		More than happy to do as she asks, you shift Jess's lacy thong aside, before teasing your [pc.fingers] over her [jess.labia+]. Taking a moment to play with her sensitive little clit, and causing Jess to let out a series of horny little moans in the process, you slide your touch down and sink your [pc.fingers] into her wet cunt. Bucking her hips against you, Jess leans in to once again suggest, [jess.speech(I can let you do far more than this, you know... ~Aah!~ Just two thousand flames, and the two of us can be up in my room... ~Mmm!~ I'll let you fuck me however you like, [pc.name]...)]
+		你非常乐意按照她的要求去做，你将婕斯的蕾丝丁字裤移到一边，然后用你的[pc.fingers]在她[jess.labia+]上挑逗。你花了一点时间玩弄她敏感的小阴蒂，婕斯发出了一连串淫荡的呻吟声，你把你的手指向下滑去，把你的[pc.fingers]插入她湿润的阴户。婕斯用臀部顶着你，再次向你提出建议，[jess.speech(我可以让你做比这更多的事，只要……~啊！~只要两千火币就能在我房间里……~唔姆！~你想怎么操我都行，[pc.name]……)]
 	</p>
 	<p>
-		Continuing to play with Jess's wet pussy, you wonder whether to take her up on her offer...
+		你继续玩弄婕斯的湿润的小穴，思索是否接受她的提议……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_LEAVE"><![CDATA[
 	<p>
-		Deciding that you've had enough of Jess's company for now, you thank her for the enjoyable time and say goodbye. Playfully pouting at you, she teases, [jess.speech(I hope that next time we'll take things all the way up to my bedroom... See you around, [pc.name]!)]
+		你觉得婕斯已经陪伴你够久了，于是谢过她给你带来的愉快时光，与她告别。婕斯娇俏地对你噘嘴，撩拨道：[jess.speech(希望下次我们能在卧室里把所有事做完……再会，[pc.name]！)]
 	</p>
 	<p>
-		Smiling at the promiscuous fox-girl, you [pc.step] away form her table and wonder where to go to next...
+		你朝滥交的狐女微笑，从她桌旁[pc.step]开，思索起接下来要去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_ROOM"><![CDATA[
 	<p>
-		Finding yourself immensely turned on at the thought of having sex with Jess, you eagerly hand over the two thousand flames she's asked for. Flashing you a delighted smile, the fox-girl takes hold of your [pc.hand(true)] and teases, [jess.speech(Come on then, let me give you the full tour of my room...)]
+		一想到要和婕斯做爱，你就感到无比兴奋，于是迫不及待地把她要的2000火币递了过去。狐女笑颜如花，握住你的[pc.hand(true)]挑逗道：[jess.speech(来吧，让我带你好好参观一下我的房间……)]
 	</p>
 	<p>
-		Allowing her to lead you across the tavern and up the stairs, you soon find yourself at the door to Jess's bedroom. Producing a key from out of her purse, she unlocks the door and leads you inside, where you see that the fox-girl's room is painted in a very feminine shade of pink. The double-size bed looks to have been recently and smartly made with fresh, clean white sheets, while a wooden desk, wardrobe, and chest of drawers constitute the remainder of the room's furniture. Posters of scantily-clad fashion icons are hung up on the walls, with some of them even being enchanted so as to make their subjects move and blow you the occasional kiss.
+		在婕斯的带领下，你穿过酒馆，走上楼梯，很快就来到了她的卧室门前。她从包里拿出一把钥匙，打开门，带你走进去，你发现她的房间被粉刷得粉嫩嫩的。双人床看起来是最近才铺好的，床单洁白崭新，房间里还有木制书桌、衣柜和抽屉柜。墙上挂着衣着暴露的时尚偶像的海报，有些海报甚至有附魔，能让主人公动起来，偶尔还会向你献上香吻。
 	</p>
 	<p>
-		Locking the door behind you, Jess strides over the wooden floor to pull the blinds half-closed, granting the two of you complete privacy. Turning to seductively bite her lip at you, the fox-girl curls her tail up and strokes it as she asks, [jess.speech(So, [pc.name], do you want to take the lead, or would you rather submit to me?)]
+		婕斯在你身后锁上门，大步跨过木地板，拉上半遮半掩的百叶窗，让此地完全私密。狐女转过身来，诱惑地咬着嘴唇看着你，她卷起尾巴，一边摸着尾巴一边问道：[jess.speech(那么，[pc.name]，你是想占据主导地位，还是更愿意顺从我？)]
 	</p>
 	#IF(!jess.hasStatusEffect(SE_VIXENS_VIRILITY) && !jess.isVisiblyPregnant())
 		<p>
-			Not giving you any time in which to respond, she giggles and offers, [jess.speech(If risky sex is something you're interested in, I suppose I could be persuaded to take a breeder pill for five thousand flames... How about it? Want to try and knock me up?)]
+			婕斯不给你任何反应时间，咯咯笑着提议道：[jess.speech(如果你对高风险的性行为感兴趣，我想五千火币就能说服我服用繁育药……怎么样？想把我肚子搞大吗？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_START_SEX_AS_DOM"><![CDATA[
 	<p>
-		Wanting to be the one in charge, you tell Jess that she's going to submit to you. Letting out a horny moan as you say this, the fox-girl flashes you a seductive look as you [pc.step] forwards and pull her into a passionate kiss.
+		你想由自己主导，便让婕斯臣服于你。你说这话时，狐女发出一声淫荡的呻吟，你向前[pc.step]出一步，拉着她热情地亲吻时，她向你投来了诱惑的目光。
 	</p>
 	<p>
-		Running your [pc.hands] over her sexy body, you pull back from the kiss and wonder how you're going to fuck her...
+		你抚上她性感的身体，从亲吻中抽离开来，思索自己该怎么操她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_START_SEX_AS_SUB"><![CDATA[
 	<p>
-		Not wanting to be the one in charge, you tell Jess that you want to submit to her. Letting out a horny moan as you say this, the fox-girl flashes you a seductive look as she steps forwards and forcefully pulls you into a passionate kiss.
+		你不想由自己主导，便说你臣服于婕斯。你说这话时，狐女发出一声淫荡的呻吟，向你投来了诱惑的目光，她向前迈出一步，猛烈地拉着你激吻。
 	</p>
 	<p>
-		Running her hands over your body, Jess pulls back from the kiss as she wonders how she's going to fuck you...
+		婕斯抚上你的身体，从亲吻中抽离开来，思索自己该怎么操你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_ROOM_RISKY_SEX"><![CDATA[
 	<p>
-		Liking the sound of Jess being fertile and able to be impregnated, you pay her five thousand flames and tell her that she's soon going to be carrying your children. Playfully pouting at you, she produces a little pink pill from out of her bedside cabinet, and after popping it out of its packaging, she swallows it down in one quick gulp...
+		你想让婕斯因被你播种而怀孕，于是付给她五千火币，说她很快就要怀上你的孩子了。她调皮地朝你撅着嘴，从床头柜里拿出一颗粉红色的小药丸，把它从包装里弹了出来，马上一口吞了下去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_ROOM_RISKY_SEX_END"><![CDATA[
 	<p>
-		Sliding her furry hand over her stomach, the fox-girl winks at you and moans, [jess.speech(~Mmm!~ Come on then, [pc.name]... Do you want to take charge, or should I?)]
+		狐女用毛茸茸的手滑过自己的肚子，对你眨眨眼，呻吟道：[jess.speech(~唔嗯！~来嘛，[pc.name]……你想主导吗？还是让我来？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="JESS_AFTER_SEX"><![CDATA[
 	<p>
-		With your sexual encounter coming to an end, you and Jess pull back from one another. 
+		性爱即将结束，你和婕斯从对方身上抽回。
 		#IF(jess.isSatisfiedFromLastSex())
-			 Letting out a genuinely-satisfied sigh, the fox-girl lies back on her bed and remarks, [jess.speech(Wow... I almost feel like I should be the one paying you for that!)]
+			狐女真正满意地叹了一口气，躺在床上说，[jess.speech(哇……我几乎觉得应该是我付钱给你才对！)]
 		#ELSE
-			 Letting out a happy sigh, the fox-girl lies back on her bed and remarks, [jess.speech(I had a lot of fun there, [pc.name]...)]
+			狐女幸福地叹了口气，躺在床上说，[jess.speech(这太爽了，[pc.name]……)]
 		#ENDIF
 	</p>
 	<p>
-		Smiling at Jess, you get your things together and prepare to leave. Sitting up on her bed, the sexy fox-girl grins at you and says, [jess.speech(If you want to do this again some time, then you know where to find me... And how much it costs!)]
+		你对婕斯微笑，收拾好东西准备离开。性感的狐女从床上坐起来，咧嘴笑着对你说：[jess.speech(如果你想再来一次，那么你知道在哪找我……还有价钱！)]
 	</p>
 	<p>
-		Winking at you, Jess stands up and moves over to unlock her bedroom door, before saying, [jess.speech(I need to take a shower and get my bed cleaned. I'll see you around, [pc.name]...)]
+		婕斯对你眨了眨眼睛，站起身来打开她卧室的门锁，说道，[jess.speech(我要洗个澡，把床收拾一下。回头见，[pc.name]……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="JESS_AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Saying goodbye, you [pc.step] out of Jess's room and wonder where to go to next...
+		你与婕斯道别，[pc.step]出她的房间，思考起接下来要去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Toilets: -->
 	
 	<htmlContent tag="TOILETS"><![CDATA[
 	<p>
-		You find yourself standing before the door to the tavern's toilets, and subsequently find yourself with the rather limited options of either heading inside or turning around and returning to the corridor...
+		此刻，你正身处酒馆洗手间门前，因此摆在眼前的选项相当明显，要么进去，要么转身回到走廊……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_INTERIOR"><![CDATA[
 	<p>
-		Deciding to make use of the tavern's toilets, you push open the door and head inside. Consisting of several stalls and a few sinks, these facilities are very basic, although what they lack in appearance they fortunately make up for in their impressive level of cleanliness.
+		你决定使用酒馆的厕所后，推开门走了进去。这些厕所由几个隔间和几个水池组成，设施非常简陋，但幸运的是，它们在外观上的不足在清洁度上得到了弥补。
 	</p>
 	<p>
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			Due to the busy time of day there are a few other people in here, and so if you wanted to use one of the toilets it looks like you'll have to wait for a minute or two before one of the occupied stalls becomes available.
+			一天中的繁忙时段，这里还有一些其他人，因此，如果你想使用其中一个厕所，看来你得等上一两分钟，才会有一个被占用的厕位空出来。
 		#ELSE
-			Due to the quiet time of day there's nobody else in here, and so if you wanted to use one of the toilets there's nothing stopping you from entering one of the free stalls.
+			一天中的安静时段，这里没有其他人，所以如果你想使用其中一个厕所，进入其中一个隔间也不会受到任何阻碍。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_LEAVE"><![CDATA[
 	<p>
-		Having no further need of the tavern's toilet facilities, you swiftly head over to the door and make your exit...
+		你不再需要酒馆的厕所，于是迅速走向门口，离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_USE"><![CDATA[
 	<p>
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			After waiting for a couple of minutes, one of the stalls becomes available, and so after [pc.stepping] into it and locking the door behind you, you make use of the toilet.
+			等了几分钟，一个隔间空了出来，于是你进入隔间锁上门来上厕所。
 		#ELSE
-			[pc.Stepping] into one of the empty stalls, you turn and lock the door behind you, before making use of the toilet.
+			你走进空隔间，转身锁上门，然后上厕所。
 		#ENDIF
-		 After you've finished, you flush the toilet before making your way over to one of the sinks and washing your [pc.hands]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		解决完后，你冲了马桶，接着走到水槽前清洗了一下。从纸巾架上抽出纸巾，快速擦干自己。然后，你转过身面对整个房间，开始考虑接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_WASH"><![CDATA[
 	<p>
-		Feeling like you could do with having a quick clean, you step over to the sinks and thoroughly wash your [pc.hands], before splashing some water on your [pc.face]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你觉得自己可以做个快速清洁，于是走到水池边仔细洗了洗[pc.hands]，然后往[pc.face]上扑了些水。结束后，你从旁边的纸巾机抽出纸巾，迅速擦干皮肤，然后转身面向房间，下一步要做什么呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

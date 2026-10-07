@@ -84,7 +84,7 @@ public abstract class AbstractHairType implements BodyPartTypeInterface {
 		this.transformationName = transformationName;
 		
 		this.defaultPlural = false;
-		this.determiner = "a head of";
+		this.determiner = "一头";
 		this.name = name;
 		this.namePlural = namePlural;
 		
@@ -208,10 +208,10 @@ public abstract class AbstractHairType implements BodyPartTypeInterface {
 	@Override
 	public String getNameSingular(GameCharacter gc) {
 		if(gc.getBodyMaterial()==BodyMaterial.SLIME) {
-			return "slime-"+name;
+			return "粘液"+name;
 		}
 		if(gc.getBodyMaterial()==BodyMaterial.SILICONE) {
-			return "silicone-"+name;
+			return "硅胶"+name;
 		}
 		return name;
 	}
@@ -219,10 +219,10 @@ public abstract class AbstractHairType implements BodyPartTypeInterface {
 	@Override
 	public String getNamePlural(GameCharacter gc) {
 		if(gc.getBodyMaterial()==BodyMaterial.SLIME) {
-			return "slime-"+namePlural;
+			return "粘液"+namePlural;
 		}
 		if(gc.getBodyMaterial()==BodyMaterial.SILICONE) {
-			return "silicone-"+namePlural;
+			return "硅胶"+namePlural;
 		}
 		return namePlural;
 	}

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Ursa's tent]]></name>
-	<tooltipDescription><![CDATA[This purple tent is larger than all the others in the Amazons' camp, and it houses the queen, Ursa.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Ursa's tent in the Amazons' camp]]></virginityLossDescription>
+	<name><![CDATA[乌萨的帐篷]]></name>
+	<tooltipDescription><![CDATA[这顶紫帐篷比营地里其它所有帐篷都要大，它属于亚马逊女王乌萨。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在亚马逊人营地的乌萨帐篷里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

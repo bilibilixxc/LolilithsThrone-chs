@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>800</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[latex hood]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[latex hood]]></namePlural>
-		<description><![CDATA[A latex hood which completely encapsulates the wearer's head. Thanks to some trick of the arcane, this hood reshapes itself to fit the head of any wearer, no matter if they have an anthropomorphic muzzle, beak, or other such non-human facial configuration.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[乳胶头罩]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乳胶头罩]]></namePlural>
+		<description><![CDATA[一个能完全包裹住佩戴者头部的乳胶头罩。借助某种奥术技巧，这个头罩能自行重塑以适应任何佩戴者的头部，无论他们长着人形口鼻、鸟喙还是其他非人类的面部构造。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -20,7 +19,7 @@
 			<category id="ponytail" priority="1">
 				<categoryName><![CDATA[Ponytail]]></categoryName>
 				<sticker id="present" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Present]]></stickerName>
+					<stickerName><![CDATA[显示]]></stickerName>
 					<namePrefix/>
 					<descriptionModification/>
 					<imageName zLayer="-1" slot="HEAD">hood_stickers/ponytail.svg</imageName>
@@ -30,7 +29,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="absent" priority="2" defaultSticker="false" zLayer="1">
-					<stickerName><![CDATA[Absent]]></stickerName>
+					<stickerName><![CDATA[隐藏]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -44,7 +43,7 @@
 			<category id="eyes" priority="2">
 				<categoryName><![CDATA[Eye holes]]></categoryName>
 				<sticker id="present" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Present]]></stickerName>
+					<stickerName><![CDATA[赠送]]></stickerName>
 					<namePrefix/>
 					<descriptionModification/>
 					<imageName zLayer="1" slot="HEAD">hood_stickers/eyes.svg</imageName>
@@ -54,7 +53,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="absent" priority="2" defaultSticker="false" zLayer="1">
-					<stickerName><![CDATA[Absent]]></stickerName>
+					<stickerName><![CDATA[隐藏]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -71,7 +70,7 @@
 			<category id="mouth" priority="3">
 				<categoryName><![CDATA[Mouth holes]]></categoryName>
 				<sticker id="present" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Present]]></stickerName>
+					<stickerName><![CDATA[赠送]]></stickerName>
 					<namePrefix/>
 					<descriptionModification/>
 					<imageName zLayer="1" slot="HEAD">hood_stickers/mouth.svg</imageName>
@@ -81,7 +80,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="absent" priority="2" defaultSticker="false" zLayer="1">
-					<stickerName><![CDATA[Absent]]></stickerName>
+					<stickerName><![CDATA[隐藏]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -129,27 +128,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the latex hood onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the latex hood onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the latex hood onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将乳胶头罩戴在[npc.her]的头上。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]将乳胶头罩戴在[npc2.namePos]的头上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地将乳胶头罩套到[npc2.namePos]的头上。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] latex hood.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] latex hood.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] latex hood.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]脱下了[npc.her]的乳胶头罩。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]脱下[npc2.namePos]的乳胶头罩。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]猛地拉下[npc2.namePos]的乳胶头罩。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

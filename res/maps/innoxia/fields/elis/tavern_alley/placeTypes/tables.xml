@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[tables]]></name>
-	<tooltipDescription><![CDATA[Taking up most of the floor space in 'The Crossed Blades' tavern, numerous large wooden tables are where the more friendly patrons choose to sit and drink.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at one of the tables within 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[桌子]]></name>
+	<tooltipDescription><![CDATA[在十字利刃里，许多大木桌占据了酒馆的大部分空间，友好的顾客会选择坐在这里喝酒。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在十字利刃的一张桌子上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

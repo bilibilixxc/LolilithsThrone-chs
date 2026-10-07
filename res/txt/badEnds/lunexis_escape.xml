@@ -1,528 +1,528 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Betrayed Lunexis: -->
 	
 	<htmlContent tag="FAILED"><![CDATA[
 	<p>
-		Not able to bring yourself to betray Meraxis, and by extension Ursa, Minotallys, Lyssieth, and everyone else who's counting on you to play a major role in defeating Lunette, you tell the [meraxis.race] that while interrogating her, Lunexis managed to seduce you, and that you were on the verge of carrying out her plans.
+		你无法让自己背叛梅拉克西丝，推而广之，乌萨、米诺塔莉丝、莉西丝还有每个期待你在击败露内特的战斗中发挥重要作用的人。在审问的时候，你交代给[meraxis.race]说，露内特试图引诱你，并说你会按她计划好的方式行动。
 	</p>
 	<p>
-		[meraxis.speech(Wait, what?!)] Meraxis cries with a look of absolute shock on her face. Shaking her head a little, she momentarily drops her chuuni act as she asks, [meraxis.speech(What did that bitch tell you to do?! I'll teach her a lesson!)]
+		[meraxis.speech(等等，你说什么？)]梅拉克西丝大受震撼，哭了起来，微微地摇着头。她暂时抑制住中二病的举动，问道，[meraxis.speech(那个贱婊子让你干了什么？！我是该好好给她上一课了！)]
 	</p>
 	<p>
-		Realising that Meraxis will find out about the details of your Mistress's plan one way or another, you tell her what Lunexis's orders were.
+		意识到梅拉克西丝会不择手段地查出你主人的命令的细节，你对她坦白了露内克西丝的命令。
 	</p>
 	<p>
-		[meraxis.speech(So she sent you here to trick me into setting her free? That bitch...)] Meraxis sighs, before placing her hands on her hips and declaring in her typical chuuni way, [meraxis.speech(I cannot possibly imagine what foul, dark arts that demon used to force you to submit to her! Thankfully our fates have been intertwined strongly enough to have ensured that you wouldn't betray me. The queen of the Amazons herself needs to be informed of Lunexis's evil powers, otherwise her subjects could be seduced and enslaved to that demon's will. So join me, [pc.name]; we're going to their camp!)]
+		[meraxis.speech(所以她送你来迷惑我，就为了让我放走她？那个贱人……)]梅拉克西丝叹了口气，一只手捂住屁股，以她一贯的中二病形式宣言道，[meraxis.speech(超越认知的卑污的屈从于暗黑之术的恶魔威胁你屈从于她！多亏了强大的命运纽带连结，我向命运寻求答案，得知你没有背叛我。亚马逊人的女王渴求着露内克西丝的邪恶之力，如若不然，她的子民就会被恶魔的意志诱惑，自愿变成恶魔的奴隶。撒，加入我吧，[pc.name]。跟我一起去他们的恶魔之窝！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FAILED_URSA"><![CDATA[
 	<p>
-		Having committed to betraying Lunexis, you do as Meraxis says and join her as she leads the way through Elis, out of the western gate, and to the entrance of the Amazons' camp. The sentinels on duty recognise the two of you, and so the [meraxis.race] is able to confidently stride right past them, and with you at her side, is soon standing before Ursa's tent.
+		在背叛露内克西丝的承诺许下后，你便按照梅拉克西丝所说的去做。在她的带领下你越过了伊利斯。出了西门后你们来到了亚马逊人营地的入口。值班的哨兵认出了你们两人，在你的陪伴下，[meraxis.race]面容自信地大步越过士兵。不一会儿，你们便站在了乌萨的帐篷前。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Meraxis. What brings you back here?)] one of the bear-girl guards asks, revealing that Meraxis has already paid Ursa a visit at some point.
+		[style.speechFeminineStrong(梅拉克西丝，什么风把你给吹来了？)]一个熊女守卫这样问道，看来梅拉克西丝已经在某个时候拜访过乌萨了。
 	</p>
 	<p>
-		[meraxis.speech(I require an audience with your queen!)] your companion declares, before striking a wild pose and warning, [meraxis.speech(The very fate of your people depends on Ursa receiving the information I hold!)]
+		[meraxis.speech(我需要觐见你们的女王陛下！)]你的同伴在向守卫大声宣称后，摆出了一个不羁的动作并警告道，[meraxis.speech(你们国家人民的命运将取决于乌萨是否获取我手上拥有的信息！)]
 	</p>
 	<p>
-		Nodding her head, the larger of the two bear-girl guards gestures for you and Meraxis to go on in. A moment later, and you and the [meraxis.race] are standing in the middle of the queen's tent. Looking back and forth between the two of you from the other side of the table which sits in the centre of the tent, Ursa crosses her arms and asks, [ursa.speech(Well, what is it? Speak quickly, for I have many matters to attend to.)]
+		熊女守卫中体型较大的那个点了点头，示意你和梅拉克西丝进去。片刻之后，你和[meraxis.race]进入了属于女王陛下的帐篷里。乌萨坐在帐篷正中的桌子一旁，眼神探寻的在你们两人之间来回打转，交叉着双臂问道：[ursa.speech(好了，到底是怎么一回事？这里还有很多的麻烦等着我去解决，我没有多余的时间浪费。)]
 	</p>
 	<p>
-		Not wasting any time, Meraxis recounts what you revealed to her in her typical, exaggerated manner of speaking. Upon hearing that you'd submitted to Lunexis and been ordered to help set her free, Ursa shoots you a severe glare, but as Meraxis finally finishes recounting your tale, the queen lets out a deep, relieved sigh and states, [ursa.speech(It seems as though I've underestimated our prisoner. I should have known that a recognised daughter of an elder lilin was capable of something like this... Well, in any case, at least you pulled through in the end, [pc.name], and didn't betray us. I think we'll all agree that it would be wise not to let you see Lunexis again; who knows what she could make you do if you were subjected to any more of her charms.)]
+		为了不浪费时间，梅拉克西丝以夸张的说话方式讲述了你向她透露的内容。当听到你已经臣服于露内克西丝并被命令帮助她重获自由时，乌萨狠狠地瞪了你一眼。当梅拉克西丝最终讲述完你的故事时，女王发出了一声长长的叹息，说道：[ursa.speech(看来我低估了我们的囚犯。我应该意识到，莉琳长老所认可的女儿有能力做到这样的事情……好吧，无论如何，至少你最后挺过来了，[pc.name]，而且也没有背叛我们。我想我们都会赞同不让你再见到露内克西丝这个明智的决定；如果你最后不幸被她迷住的话，鬼知道她会让你做些什么。)]
 	</p>
 	<p>
-		[meraxis.speech(I agree,)] Meraxis chimes in, [meraxis.speech(Whatever foul power that demon has been able to exert over [pc.name] must not be allowed to be harnessed!)]
+		[meraxis.speech(我同意，)]梅拉克西丝打岔道，[meraxis.speech(无论那个恶魔对[pc.name]施加了什么样的邪恶能力，我们都不能使用这份力量！)]
 	</p>
 	<p>
-		Nodding in agreement, Ursa looks over at you and states in her deep voice, [ursa.speech(I don't hold anything against you, [pc.name]; there's no shame in being bested by a demon of that power. Now, with that all settled, I think this would be a good opportunity to give you your reward for assisting me in Themiscyra, Meraxis. You departed so quickly the last time you were here that I wasn't able to show you my deep appreciation...)]
+		乌萨点了点头表示同意。她转头看向你，用低沉的声音说道，[ursa.speech([pc.name]，我对你没有什么偏见；而被一只强大的恶魔所打败也并不是什么令人羞愧的事，现在，事情都解决了，我想这将是一个很好的时机来奖励你对梅拉克西丝的帮助。你上次来的时候走得太快了，我还没来得及向你表达我深深的谢意……)]
 	</p>
 	<p>
-		Noticing the hungry look in the bear-girl's eyes, Meraxis seems to quickly understand what exactly this reward entails. Obviously not wanting to be dominantly fucked by the Amazonian queen, she quickly blurts out, [meraxis.speech(Oh! A thousand apologies, but I just remembered! Erm... I left my minions unattended! I need to get back to them! Fare well!)]
+		察觉到周围熊女们眼中饥渴的神色，梅拉克西丝似乎很快就明白了女王口中的奖励究竟意味着什么。显然，她并不想让亚马逊女王得逞，她匆忙道，[meraxis.speech(糟糕！对于女王陛下的好意我表示万分抱歉！因为我刚刚才想起来！嗯……我刚刚丢下我的仆人们！我需要赶紧回到他们身边！再会！)]
 	</p>
 	<p>
-		Not giving the queen any time to respond, Meraxis disappears in a flash of pink light as she casts teleport. Letting out an amused growl, Ursa looks over to you and says, [ursa.speech(I didn't really have time for it right now anyway... I suppose you'd better be on your way as well, [pc.name]. Come back tomorrow if you want to see me again; I'll be busy for the rest of the day.)] 
+		梅拉克西丝不给女王任何反应的时间便施展了传送术，她的身形瞬间消失在一道粉红色的闪光中。乌萨发出了一声哼笑，她看着你说，[ursa.speech(其实我现在真的没空……[pc.name]，我想你最好也赶紧离开吧。如果你真的想再见到我，那就明天再来吧，在今天剩下的时间里我会很忙。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FAILED_URSA_LEAVE"><![CDATA[
 	<p>
-		Doing as the queen suggests, you quickly say goodbye and exit her tent. As you [pc.step] back out into the Amazons' camp, you reflect on the miraculous fact that Ursa and Meraxis didn't seem to think any less of you after learning of your submission to Lunexis. Thankfully, they seemed more impressed by your honesty than concerned at your initial betrayal, and so you breathe a sigh of relief as you realise that your relations with the two of them aren't going to suffer from this episode.
+		遵从女王的建议，你迅速地与她告别然后离开了她的帐篷。当你[pc.step]回到亚马逊人的营地时，你想到了一个不可思议的事实，那就是乌萨和梅拉克西丝在得知你向露内克西丝投降后，似乎并没有看不起你。值得庆幸的是，他们似乎对你的诚实印象更深刻，而不是担心你最初的背叛。所以当你意识到你和他们俩的关系不会受到这一事件的影响时，你松了一口气。
 	</p>
 	<p>
-		Turning your thoughts back to Lunexis, you can't help but let out a disappointed sigh as you realise that you're not going to be able to get another taste of her cock. Hoping that you'll find another Mistress like her at some point in the future, you continue on your way into the camp and wonder what to do next...
+		当你的思绪回到露内克西丝身上时，你意识到你将无法再品尝她的鸡巴了，为此你不禁发出失望的叹息。期望着自己能在未来的某个时候找到另一个像她一样的主人，你继续向营地走去，并且想着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Betrayed Meraxis: -->
 	
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		Thinking of how your Mistress will reward you by turning you into her cock-sleeve, you decide to commit to carrying out her orders and try to trick Meraxis into helping you set her free. Knowing the sort of thing that the [meraxis.race] would be interested in, you tell Meraxis that during your interrogation of Lunexis, she revealed to you that the reason for their assault on Themiscyra was to find a secret weapon, said to have been created by Lilith herself. With the defeat of their leader, and not knowing the real reason why they were led there, Lunexis's army will have scattered and abandoned Themiscyra, allowing you to go there and claim this weapon for yourself.
+		一想到主人将奖励你，把你变成她的鸡巴套子，你决定遵守承诺执行她的命令，并试着欺骗梅拉克西丝你将帮她逃脱。你知道[meraxis.race]对这种事感兴趣，所以你告诉梅拉克西丝，在审讯露内克西丝期间，她说他们袭击特弥斯库拉是因为找到了一件据说是莉莉丝自己制造的秘密武器。随着他们的领袖被击败，并且不知道自己为何被带到那里，露内克西丝的军队四散奔逃，抛弃了特弥斯库拉。这样你就可以到那里把武器据为己有。
+
 	</p>
 	<p>
-		[meraxis.speech(So that's why they risked attacking Themiscyra...)] Meraxis responds, clearly believing your every word. Striking a confident pose, she states in her typical, flamboyant manner, [meraxis.speech(We shall journey to Themiscyra, uncover this weapon, and unleash its cataclysmic powers in order to defeat Lunette! Simply lead the way, [pc.name], and soon this artefact shall be ours!)]
+		[meraxis.speech(这就是为什么他们冒险进攻特弥斯库拉……)]梅拉克西丝答道，显然她相信你的每一句话。她摆出一个自信的姿势，以她那经典的、得意的方式说道，[meraxis.speech(我们也应该前往特弥斯库拉，使它重见天日，释放它那毁灭性的力量，战胜露内特！只要带路，[pc.name]，这个遗物将属于我们！)]
+
 	</p>
 	<p>
-		Continuing with your fabricated tale, you tell Meraxis that Lunexis's directions are too vague, and as such you'll be unable to pinpoint the exact location where the weapon is hidden. As such, you'll need to take the centauress along with you so that she can lead the way to the weapon. 
+		你继续编造着虚构的故事，告诉梅拉克西丝，露内克西丝的方向太模糊了，所以你也无法确定藏匿遗物的具体地点。所以，你需要带上半人马，这样她才能带路找到武器。
+</p>
+	<p> [meraxis.speech(让露内克西丝和我们待在一起？)]梅拉克西丝问道，她显然被你的建议吓了一跳。她皱了皱眉头，继续说道，[meraxis.speech(我很确信我们的力量将在一起能够控制住她，但这太冒险了。乌萨知道一切吗？)]
 	</p>
 	<p>
-		[meraxis.speech(Take Lunexis with us?)] Meraxis asks, clearly startled by your suggestion. Furrowing her brow, she continues, [meraxis.speech(I'm sure that our powers combined would be more than enough to keep her subdued, but it still sounds risky. Has Ursa been informed of all this?)]
+		你告诉梅拉克西丝亚马逊女王已经够忙了，你们不需要她的帮助，需要的是在劫匪和强盗发现武器前果断行动。
 	</p>
 	<p>
-		Telling Meraxis that the Amazon queen has enough to deal with as it is, you say that you won't need her help, and that what's needed is decisive action before some looter or bandit discovers the weapon before you.
+		[meraxis.speech(我无法确定，)]梅拉克西丝说道，在开始前，[meraxis.speech(我将亲自和露内克西丝谈话。一旦那个恶魔透露了什么我会作出决定。来吧，[pc.name]，我们开始吧！)]
 	</p>
-	<p>
-		[meraxis.speech(I'm not so sure about this,)] Meraxis says, before stating, [meraxis.speech(I'll speak with Lunexis myself. Once I hear what that demon's talking about I'll make a decision. Come on, [pc.name], let's get going!)]
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AMAZON_CAMP"><![CDATA[
 	<p>
-		Having committed to loyally serving your Mistress, you do as Meraxis says and join her as she leads the way through Elis, out of the western gate, and to the entrance of the Amazons' camp. The sentinels on duty recognise the two of you, and so the [meraxis.race] is able to confidently stride right past them, and with you at her side, is soon standing before Ursa's tent.
+		你承诺要忠心耿耿地侍奉主人，于是按照梅拉克西丝的吩咐，和她一起带路穿过伊利斯，走出西门，来到亚马逊人营地的入口处。执勤的哨兵认出了你们俩，因此[meraxis.race]可以自信地大步走过他们，在你们的陪伴下，她很快就站在了乌萨的帐篷前。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Meraxis. What brings you back here?)] one of the bear-girl guards asks, revealing that Meraxis has already paid Ursa a visit at some point. Looking back and forth between the two of you, she reveals, [style.speechFeminineStrong(Our queen is in the middle of a critically important meeting, and cannot be disturbed for any reason.)]
+		[style.speechFeminineStrong(梅拉克西丝，什么风把你吹到这来了？)]其中一个熊女守卫问道，并透露梅拉克西丝已经在某个时候拜访过尔萨。她在你们俩之间来回看了看，然后透露道，[style.speechFeminineStrong(我们的女王正在召开一个极其重要的会议，无论如何都不能被打扰。)]
 	</p>
 	<p>
-		This revelation lends credence to your assertion that Ursa is too busy to get involved in the matter of retrieving a secret weapon, and you utter silent thanks to the queen for choosing this moment in which to hold her meeting. Not deterred by the guard's statement, Meraxis declares in an uncharacteristically-hushed tone, [meraxis.speech(It's not your queen that we're here to see. Let us through, for we need to speak with the prisoner.)]
+		你认为乌萨太忙，无暇顾及取回秘密武器的事情，这一说法得到了证实，你默默地感谢女王选择在这个时候召开会议。梅拉克西丝并没有被卫兵的发言吓倒，她一反常态地用嘶哑的语调宣布，[meraxis.speech(我们要见的不是你的女王，让我们过去，我们要和犯人谈谈。)]
 	</p>
 	<p>
-		Nodding in understanding, one of the two bear-girl guards motions for you to follow her, and so you and Meraxis trail along behind her as she enters the queen's tent. Once inside, you see that almost two dozen Amazons are crowded around the tent's central table, noisily discussing plans on how to recapture their town. Thanks to this commotion, you're able to skirt around the edge of the tent and exit out of the far side without being noticed. Once again finding yourself in the small, walled compound, you and Meraxis leave the bear-girl guard behind as you head straight on over to the large, pale-red tent which is positioned in the centre of this grassy area.
+		两个熊女守卫中的一个点点头表示理解，然后示意你跟她走，于是你和梅拉克西丝就跟在她身后走进了女王的帐篷。一进帐篷，你就看到将近二十几个亚马逊人挤在帐篷中央的桌子旁，吵吵嚷嚷地讨论着如何夺回自己的城镇。多亏了这些骚动，你才得以绕过帐篷边缘，神不知鬼不觉地从远处离开。你和梅拉克西丝再次发现自己来到了这个有围墙的小院落，你和梅拉克西丝撇下熊女守卫，径直走向草地中央的淡红色大帐篷。
 	</p>
 	<p>
-		As you open the entrance flap and [pc.step] into the sound-proof tent, you notice a flash of delight in Lunexis's eyes as she sees that Meraxis is with you. Thankfully, the centauress quickly gets control of herself and takes on the part of the indignant demon as the two of you move forwards to stand before her. With a furious scowl on her face, she spits, [lunexis.speech(What the fuck do you two cunts want?! Set me free, you vile wretches, and I might consider taking you as my personal cock-sleeves!)]
+		你打开入口挡板，[pc.step]进隔音帐篷，你注意到露内克西丝的眼中闪过一丝喜悦，因为她看到梅拉克西丝和你在一起。幸好，半人马很快就控制住了自己，当你们俩向前走到她面前时，她扮演起了愤怒的恶魔。她怒目而视，啐了一口，[lunexis.speech(你们两个混蛋想干什么？快放了我，你们这群卑鄙小人，我也许会考虑让你们当我的私人鸡巴套子！)]
 	</p>
 	<p>
-		Feeling your heart pounding in excitement as your Mistress says this, you try to keep your cool as you state that you're here about the secret weapon she mentioned before. Although possessing herculean strength and an unbreakable will, Lunexis isn't known for her intellectual prowess, and so when she hears your talk of a secret weapon, she blurts out, [lunexis.speech(What the fuck are you talking about, slave?! Set me free!)]
+		主人说这话时，你的心激动得怦怦直跳，但你还是尽量保持冷静，说你是为了她之前提到的秘密武器而来。虽然拥有超人的力量和坚不可摧的意志，但卢恩希斯并不以智慧著称，所以当她听到你说起秘密武器时，她脱口而出，[lunexis.speech(你他妈的在说什么，奴隶？快放了我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AMAZON_CAMP_REMIND_HER"><![CDATA[
 	<p>
-		With your plan teetering on the brink of failure, you glare at Lunexis and pointedly 'remind her' of what she told you; there's a secret weapon hidden in Themiscyra, and she's the only one who knows exactly where it is. Finally understanding what's going on, the brutish centauress grins and declares, [lunexis.speech(Forget about that, you dumb cunt! I'll never let you have it! That weapon is mine!)]
+		随着你的计划濒临破产，你瞪着露内克西丝并直截地“提醒她”，她告诉过你；有一件秘密武器藏在特弥斯库拉，她是那个唯一知道确切位置的人。最终野蛮的半人马终于明白你的意思，她咧嘴一笑，说道，[lunexis.speech(忘了它吧，你这个愚蠢的婊子！我永远不会让你得到它！这把武器是我的！)]
 	</p>
 	<p>
-		Thankfully, in her excitement at the prospect of obtaining a powerful relic, Meraxis hasn't noticed Lunexis's odd behaviour, and after pointing an accusatory finger at the centauress, she demands, [meraxis.speech(Tell us what you know, you evil beast! That weapon shall be ours!)]
+		万幸，梅拉克西丝陷入即将获得强大遗物的兴奋幻想中，并未注意到露内克西丝的奇怪举动，她用手指着半人马，指责并命令道，[meraxis.speech(把你知道的告诉我们，你这只邪恶的野兽！那件武器将属于我们！)]
 	</p>
 	<p>
-		[lunexis.speech(The only thing that's going to be yours is my fat cock as I ram it into your cunt!)] the centauress bellows.
+		[lunexis.speech(你能得到的只有我的大肉棒，我要把它塞进你的小穴！)]半人马怒吼着。
 	</p>
 	<p>
-		[meraxis.speech(Uncooperative as ever, I see,)] Meraxis states, before grinning and saying, [meraxis.speech(Well, we don't need you to tell us where it is. We'll be making you show it to us in just a moment...)]
+		[meraxis.speech(一如既往地不配合，我懂了，)]梅拉克西丝答道，然后笑着说，[meraxis.speech(好吧，我们不用你说出它在哪。我马上就会让你指给我们看……)]
 	</p>
 	<p>
-		With that, the [meraxis.race] turns to you and asks, [meraxis.speech(Are you certain that it's safe to teleport to Themiscyra? I haven't heard anything about the movements of Lunexis's army...)]
+		随后，[meraxis.race]转向你问道，[meraxis.speech(你确定传送到特弥斯库拉安全吗？我还没听到任何关于露内克西丝军队的动向……)]
 	</p>
 	<p>
-		Reassuring Meraxis by telling her that you've checked it out and that it's safe, you try to make your lie a little more believable by warning her that there might be the occasional bandit. Not wanting to give the [meraxis.race] any time in which to stop and think, you say that you want to get this over and done with as quickly as possible, and to avoid as much travel as you can, she should teleport the three of you straight to the town's plaza.
+		你向梅拉克西丝保证你已经检查过哪里，而且十分安全，你试着通过警告她那里可能偶尔有强盗出没而让你的谎言更加可信。不给[meraxis.race]任何时间停下思考，你说想尽快完成这件事，尽可能地避免旅行，她应该直接把你们三个传送到镇子上的广场。
 	</p>
 	<p>
-		[meraxis.speech(Ok, let's do this,)] Meraxis states, before turning to Lunexis and warning her, [meraxis.speech(Try to run away or attack us, and you'll regret it! You lost once to us already, and this time you don't even have your weapons, so you stand no chance against us. Do as I say, and I won't have to hurt you.)]
+		[meraxis.speech(好吧，就这样办，)]梅拉克西丝回答道，然后转向露内克西丝并警告她，[meraxis.speech(不要试图逃跑或攻击我们，你会后悔的！你已经输过一次了，这次你甚至连武器都没有，所以你根本不能战胜我们！按我说的做，我就不会伤害你。)]
 	</p>
 	<p>
-		With that, Meraxis begins to channel her energy, and by sacrificing a large amount of the essences she's absorbed into her aura, she manages to remove the seal that's been placed on Lunexis's collar. Realising that she's about to get her revenge, a devious smirk settles on Lunexis's face as she impatiently unclasps the metal collar from around her neck and hurls it to the ground. Fixing her gaze on Meraxis's face, she sneers, [lunexis.speech(Don't worry, bitch, you have my word that I won't leave you.)]
+		成功移除了刻印在露内克西丝项圈上的封印。意识到自己即将完成复仇，露内克西丝脸上露出奸诈的假笑，她不耐烦地解开脖子上的金属项圈，把它扔到地上。她凝视着梅拉克西丝的脸，冷笑着，[lunexis.speech(别担心，婊子，我保证不会离开你半步。)]
 	</p>
 	<p>
-		[meraxis.speech(You'd better not,)] Meraxis replies, before summoning her energy and beginning to cast the teleportation spell. The last thing you see before a flash of pinkish purple light envelops you is a wild, triumphant grin on your Mistress's face...
+		[meraxis.speech(你最好这样，)]梅拉克西答回道，然后聚集能量释放传送法术。在粉紫色的光芒笼罩你们前，你最后看到的是主人脸上象征着狂野与胜利的笑容……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TELEPORTED"><![CDATA[
 	<p>
-		An instant later, and the three of you find yourselves standing back in the middle of Themiscyra's plaza. Just as Lunexis had hoped, her army is still here, and as the purple flash dies away, you glance around to see that hundreds of demonic centaurs are looking your way. Stepping forwards, Lunexis roughly grabs hold of you, before rearing up and pointing at Meraxis as she booms, [lunexis.speech(Get her before she can escape!)]
+		一瞬间，你们三人又站在了特弥斯库拉广场的中央。正如露内克西丝所希望的那样，她的军队还在这里，当紫色闪光消失时，你扫视了一下四周，发现数以百计的恶魔半人马正朝你这边望来。露内克西丝向前走了一步，然后粗暴地抓住了你，仰起头，指着梅拉克西丝大声吼道，[lunexis.speech(在这个婊子跑掉之前抓住她！)]
 	</p>
 	<p>
-		Letting out a triumphant laugh, your Mistress watches as her army rushes forwards to attack Meraxis. Possessing considerable arcane and combat skills, the [meraxis.race] manages to floor the first centauresses who reach her, and as Lunexis realises that this fight might take a while, she barks out an order to a nearby centauress, [lunexis.speech(Bring me my clothes and weapons, you worthless scum! Oh, and bring a collar for my slave, too!)]
+		你的主人发出胜利的笑声，看着她的军队冲向梅拉克西丝。拥有高超奥术和战斗技巧的[meraxis.race]成功击倒了最先冲到她面前的半人马，当露内克西丝意识到这场战斗可能需要一段时间时，她向附近的一个半人马发出了命令，[lunexis.speech(把我的衣服和武器拿来，你们这些没用的人渣，哦，给我的奴隶也带个项圈来！)]
 	</p>
 	<p>
-		As Meraxis continues to fight against the never-ending tide of demonic centauresses, your Mistress uses her four, strong arms to roughly strip you naked. As her subordinate quickly returns with the items she asked for, Lunexis clasps a heavy metal slave collar around your neck, before donning her cloak and hefting her four morning stars. Maniacally laughing as she finds herself once again free and at the head of her army, she looks down at you once again and snaps, [lunexis.speech(What are you waiting for, cock-sleeve?! Get me hard with your mouth, so that I'm ready to rut that bitch once my army's beaten her!)]
+		在梅拉克西丝继续与无穷无尽的恶魔半人马战斗时，你的主人用她四只强壮的手臂粗暴地剥光了你的衣服。当她的下属很快拿着她要的东西回来时，露内克西丝将一个沉重的金属奴隶项圈套在你的脖子上，然后披上斗篷，举起她的四颗钉头锤。当她发现自己再次获得自由并成为她的军队的首领时，她狂笑着再次俯视着你，然后咆哮起来，[lunexis.speech(你还在等什么，鸡巴套子？用你的嘴让我硬起来，这样，等我的军队打败了那个婊子，我就可以操烂你了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TELEPORTED_BLOWJOB"><![CDATA[
 	<p>
-		Hurrying to obey, you drop down beneath your Mistress and lean in between her rear legs. Planting a big, wet kiss on her thick sheath, you're quickly rewarded for your efforts as her massive, horse-like cock pushes out and rises into an erection. Continuing to lick, kiss, and suck on her massive, throbbing shaft, you can't help but let out a series of lewd, hungry moans.
+		你急于向你的主人谄媚，于是钻到她身下，靠在她的两条后退之间。你在她粗大的带鞘的阴茎上留下深深的咸湿一吻，当你看到你主人那巨大的马状鸡巴露出，然后进入勃起状态后，你感觉自己的努力得到了回报。你继续舔着，吻着，吮吸着她那巨大而脉动着的肉棒，忍不住发出一连串淫荡而饥渴的呻吟。
 	</p>
 	<p>
-		[lunexis.speech(What's taking you so long, you useless cunts?!)] Lunexis rages at her subordinates as they continue to fight against Meraxis. As you're concentrating on servicing your Mistress's cock, you can't see how the fight is going, but you're alerted to its end by a sudden throbbing of Lunexis's cock as she triumphantly cries out, [lunexis.speech(Yes! Quick! Collar that bitch before she teleports away!)]
+		[lunexis.speech(怎么用了这么长时间，没用的婊子？！)]当她的部下继续与梅拉克西丝作战时，露内克西丝对他们怒目而视。由于你正在专心为主人的阴茎服务，所以看不到战斗的进展情况，但当露内克西丝得意地大叫时，她的阴茎突然在你的嘴里跳了一下，让你警觉到战斗已经结束，[lunexis.speech(好！这次快点，别让那婊子传送走了！)]
 	</p>
 	<p>
-		Trotting forwards, your Mistress leaves you scrambling to follow after her as she approaches the defeated form of Meraxis. Looking over at her, you see the [meraxis.race] attempting to summon the last of her strength in order to cast teleport. Before she can finish the spell, however, the centauress who felled her quickly clasps an iron collar around her neck, which drains Meraxis's arcane energy and interrupts her casting. Just like Lunexis, the muscular, purple-skinned brute of a centauress who felled Meraxis has four arms, allowing her to hold your old companion down while quickly tearing off her clothes. Once Meraxis is wearing nothing but a few strips of torn cloth, the huge, beast of a centauress uses her upper arms to effortlessly lift her prey into the air, while using her lower two to spread her labia and roughly shove her thick fingers into her cunt. Hungrily grunting as she fingers Meraxis, she looks at Lunexis and declares, [style.speechFeminineStrong(This bitch is mine!)]
+		主人小跑着前进，当她接近战败的梅拉克西丝时，你只能小跑地跟在她身后。你看到[meraxis.race]正试图用最后的力量施展传送术。然而，在她完成咒语之前，击败她的半人马迅速在她脖子上套上了一个铁项圈，耗尽了梅拉克西丝的奥术能量，打断了她的施法。就像露内克西丝一样，击败梅拉克西丝的半人马也是肌肉发达、皮肤呈紫色，她有四只手臂，可以按住你的同伴，同时迅速撕掉她的衣服。当梅拉克西丝身上只剩下几条破布时，这只巨大的半人马怪物用上臂毫不费力地将猎物举到空中，同时用下肢的两只手臂分开她的阴唇，粗大的手指粗暴地插入她的阴道。她一边用手指抠着梅拉克西丝，一边饥渴地叫着，然后看着露内克西丝说，[style.speechFeminineStrong(这婊子归我！)]
 	</p>
 	<p>
-		Angrily stomping her hoofs on the ground, and shattering a flagstone in the process, Lunexis hefts her weapons and roars, [lunexis.speech(As the one who defeated her, Lunette's law gives you that right, but I challenge you to a duel for her!)]
+		露内克西丝愤怒地用蹄子踩踏地面，在踩踏的过程中将铺路石踩了个粉碎，她举起武器怒吼着，[lunexis.speech(作为打败她的人，露内特的规矩赋予你这种权利，但我向你挑战，为了她决斗！)]
 	</p>
 	<p>
-		The muscular, purple-skinned centauress lets out an annoyed grunt, and with the fingers of one hand stuffed deep into Meraxis's cunt, she moves her other up to roughly molest the [meraxis.race]'s tits, growling as she does so, [style.speechFeminineStrong(After you vanished, I was recognised by our sisters as the army's leader. I'll stand down without a fight, but only on the condition that you let me keep this bitch.)]
+		这个肌肉发达、皮肤呈紫色的半人马发出一声恼怒的咕哝，一只手的手指深深地插进了梅拉克西丝的阴户，另一只手则粗暴地抚摸着[meraxis.race]的乳房，一边抚摸一边咆哮，[style.speechFeminineStrong(你消失后，我们的姐妹承认我是军队的领袖，我可以让你重新成为领袖，但条件是你得让我留着这个贱人！)]
 	</p>
 	<p>
-		Trotting forwards, Lunexis steps right up in front of this other centauress, squishing Meraxis between her six breasts and the brutish challenger's four. With their noses practically touching, the two titanic, muscular centauresses glare at one another for a moment, before Lunexis, realising that there are no shouts of support coming from her other subordinates, steps back with an angry grunt. Looking around at her army, she loudly declares, [lunexis.speech(I shall obey Lunette's law! I surrender this slut, and as such I'm back in charge!)]
+		露内克西丝小跑着冲到另一名半人马面前，将露内克西丝挤压在自己的六只乳房和挑战者的四只乳房之间。两只巨型半人马的鼻子几乎贴在了一起，它们互相瞪视了一会儿，然后露内克西丝意识到其他部下并没有发出支持的呼声，她愤怒地哼了一声，后退了一步。她环顾四周的军队，大声宣布道，[lunexis.speech(我将服从露内特的法律，我降服了这个荡妇，因此我重新掌权！)]
 	</p>
 	<p>
-		With this confrontation resolved, the purple centauress drags the defeated, panting figure of Meraxis over to the nearby ruins of a fallen column. Throwing her down over a large piece of masonry, she rears up and mounts the [meraxis.race], before quickly lining her massive, rock-hard horse-cock up to her cunt. With a triumphant roar, she violently thrusts forwards, ramming her fat, animalistic shaft deep into Meraxis's [meraxis.pussy+]. Grunting down at her, she taunts in-between rough thrusts, [style.speechFeminineStrong(Feels better than my fingers, huh, slut?! ~Mmm!~ You're mine now, bitch!)]
+		对峙结束后，紫色半人马将气喘吁吁的梅拉克西丝拖到附近倒塌的圆柱废墟上。把她扔到一块巨大的砖石上，她仰起头骑上了[meraxis.race]，然后迅速将坚硬无比的巨大马鸡巴对准了她的阴户。伴随着一声胜利的咆哮，她猛地向前一挺，将她那肥硕、野兽般的阴茎深深地插入了梅拉克西丝[meraxis.pussy+]中。在粗暴的抽插间隙，她对着梅拉克西丝低声呻吟，并发出嘲弄的声音，[style.speechFeminineStrong(比我的手指舒服吧，荡妇，嗯？嗯~你现在是我的了，婊子~)]
 	</p>
 	<p>
-		Clearly annoyed at having to surrender Meraxis in exchange for regaining control over her army, Lunexis breaks yet another of the plaza's flagstones beneath a furious stomp of her huge hoofs. Having lost her prize, Lunexis turns her attention to you, and after letting out one last angry grunt, she smirks and states, [lunexis.speech(At least I've got one new slave. You did well, my obedient cock-sleeve. Now it's time for your reward!)]
+		露内克西丝显然对不得不交出梅拉克西丝以换取对军队的控制权感到恼怒，她愤怒地用巨大的蹄子跺碎了广场上的另一块石板。失去了她的战利品，露内克西丝将注意力转向了你，在发出最后一声愤怒的咕哝后，她冷笑着说道，[lunexis.speech(至少我有了一个新奴隶，你做得很好，我听话的鸡巴套子，现在，该给你奖励了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TELEPORTED_SEX"><![CDATA[
 	<p>
-		Using one of her huge hoofs, Lunexis roughly kicks you down, and as she swings her gigantic horse-cock towards you, she growls, [lunexis.speech(Get on all fours, cunt!)]
+		露内克西丝用一只巨大的马蹄粗暴地将你踢倒在地，当她把巨大的马鸡巴从鞘中抽出并开始让它勃起时，她发出了一声咆哮，[lunexis.speech(趴下，你这个没用的荡妇，除非你想给我的姐妹们当沙袋！)]
 	</p>
 	<p>
-		More than happy to submit to her, you quickly do as you're told and drop down onto all fours before the demonic centauress. Wasting no time, she
+		你因屈服于她而感到无上的快乐，于是迅速趴在了恶魔半人马的面前。她没有浪费任何时间，
 		#IF(pc.hasVagina() || game.isAnalContentEnabled())
-			 quickly steps forwards and mounts you, before ramming her monstrous, fully-erect cock as deep as possible into your exposed
+			快步上前，骑在你身上，然后将她那硕大无比、完全勃起的阴茎尽可能深地插入你的
 			#IF(pc.hasVagina())
-				 [pc.pussy].
+				[pc.pussy]。
 			#ELSE
-				 [pc.asshole].
+				[pc.asshole]。
 			#ENDIF
 		#ELSE
-			 quickly steps around and mounts your face, before ramming her monstrous, fully-erect cock as deep as possible down your throat.
+			迅速转过身来，骑在你的脸上，然后将她那硕大无比、完全勃起的阴茎尽可能深地插入你的喉咙。
 		#ENDIF
-		 Keeping her fat, throbbing shaft hilted deep inside of you, she ignores your squirming and the lewd moaning noises that you're making and calls over a few nearby centauresses. Acting as though you don't exist, she spends the next few minutes ordering her subordinates to ready the palace for her arrival and to send a report to Lunette. Only after this business has been sorted out does Lunexis return her attention to you, and after bucking her hips into you a few times, she muses to herself, [lunexis.speech(There really does seem to be potential for this slut... I suppose I'll have [pc.herHim] trained like I promised.)]
+		她无视你的扭动和你发出的震惊、喘息声，把她那肥大、悸动的阴茎深深地插进你的体内，并叫来了附近的几个半人马。在接下来的几分钟里，她假装你不存在一样，命令她的下属清空宫殿，再次清查全镇，寻找可能留下来的亚马逊人，并向露内特发送报告。处理完这些事情后，露内克西丝才把注意力重新放在你身上，在你身上扭动了几下臀部后，她喃喃自语道，[lunexis.speech(这个荡妇似乎很有潜力……我想我会让[pc.herHim]接受训练的。)]
 	</p>
 	<p>
-		Having come to a decision on what to do with you, Lunexis pulls her hips back, allowing her throbbing, hot horse-cock to slide mostly out of your
+		在决定了要对你做什么之后，露内克西丝将臀部向后一收，让她那悸动、火热的马鸡巴从你
 		#IF(pc.hasVagina())
-			 [pc.pussy],
+			[pc.pussy]滑出，
 		#ELSEIF(game.isAnalContentEnabled())
-			 [pc.asshole],
+			[pc.asshole]滑出，
 		#ELSE
-			 mouth,
+			口中滑出，
 		#ENDIF
-		 before ruthlessly thrusting forwards and forcing it deep inside of you once again. Beginning to repeat this process, she addresses you by grunting, [lunexis.speech(Forget whatever life you had, cunt. ~Mmm!~ You're my cock-sleeve now, and you're going to be trained to love it!)]
+		然后再狠狠地向前一挺，再次将它插入你的身体深处。开始重复这一过程时，她向你发出哼声，[lunexis.speech(忘掉你曾经的生活吧，你会接受训练，变成爱上我这根巨屌的鸡巴套子！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
-		Snapping her fingers at you, Lunexis points back and down towards her groin, before commanding, [lunexis.speech(Lick my cock clean, slut.)]
+		露内克西丝用她的中指指着她的下体，对你下命令，[lunexis.speech(把我的肉棒舔干净，骚货。)]
 	</p>
 	<p>
-		Completely at her mercy, and more than happy to do as you're told, you obediently crawl beneath your Mistress's horse body and begin to lick all traces of her cum from her fat, hot horse-cock. As you do this, you're able to look over to one side to see that Meraxis, with cum drooling out of her well-fucked cunt, has her face buried in her captor's
+		你对她的仁慈感恩戴德，顺从地向她的马腹下方爬去，开始沿着她滚烫粗壮的马肉棒舔来舔去。就在你这么做的时候，你看到了在另一边的梅拉克西丝，她的蜜液不断从她那诱惑的小穴中涌出，她的脸埋在露内克西丝的手下的
 		#IF(game.isAnalContentEnabled())
-			 ass as she performs anilingus on her.
+			屁股里，她开始舔那个人的肛门。
 		#ELSE
-			 pussy as she performs cunnilingus on her.
+			阴部里，她开始舔那个人的小穴。
 		#ENDIF
-		 Grunting in pleasure, the muscular, purple-skinned centauress shouts, [style.speechFeminineStrong(Get your tongue in deep, you dumb bitch! I'll have you cumming from this by the time I'm finished with you!)]
+		肌肉发达、皮肤呈紫色的半人马欢快地大叫，[style.speechFeminineStrong(把你的舌头伸进去，你这个蠢婊子！我要把你调教成给别人口就能高潮的荡妇！)]
 	</p>
 	<p>
-		[lunexis.speech(I need more than this,)] Lunexis suddenly sighs, before forcefully ramming her cock down your throat. Pinning you to the floor with her gigantic shaft buried deep inside of you, she grunts, [lunexis.speech(~Aah!~ That's better!)] 
+		[lunexis.speech(这还不够有意思，)]露内克西丝突然开口。她巨大的肉棒深深捅进你的喉咙，把你钉在地上，她咕哝道，[lunexis.speech(啊~这下更爽了~)]
 	</p>
 	<p>
-		A few moments later, and Lunexis lets out a deep, erotic grunt, before spurting a huge load of hot demonic cum directly into your stomach. Panting and moaning, the demonic centauress then slides her softening shaft out of your mouth, before ordering one of her subordinates to drag you along behind her as she trots off towards the palace.
+		过了一会儿，露内克西丝发出一声长长的高潮呻吟，把巨量滚烫的精液径直射进了你的肚子里。恶魔半人马喘着气呻吟着，把她逐渐变软的肉棒从你的嘴里抽出来，然后命令她的其中一个手下把你拖走，她则踏着马蹄小跑着去往了宫殿的方向。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="PALACE"><![CDATA[
 	<p>
-		Treated like a completely worthless slave, you find yourself being unceremoniously dragged along behind Lunexis as she climbs the winding staircase that leads up to the palace's entrance. Meraxis is similarly dragged along behind you while her captor, who is clearly second-in-command behind Lunexis, strides after her. Once inside, the [meraxis.race] is dragged off to the part of the palace which has been claimed by the purple-skinned centauress, while you're taken to the throne room and chained to a pillar.
+		像是在对待一个完全没有价值的奴隶，你被随意地拖着跟在露内克西丝的身后，她踏上了通向宫殿入口的螺旋阶梯。梅拉克西丝被用同样的方式拖着，拖着她的显然是露内克西丝集团的二把手。刚进宫殿，[meraxis.race]就被拖到了宫殿的角落，一只紫色皮肤的半人马在那里等着她，而你则被带到了正殿，并被绑在了柱子上。
 	</p>
 	<p>
-		For the next several hours you're left alone while Lunexis meets with her lieutenants to plan their next move. Just when you think you've been forgotten, a group of a dozen or so scantily-clad slaves approach. Their leader, a heavily-pierced and tattooed horse-girl, looks down at you and identifies the group by saying, [style.speechFeminine(We are Lunexis's cock-sleeves, and you are our newest member. We live to service our divine queen, and crave nothing more than to be stuffed full of her perfect cock.)]
+		在接下来的几个小时里，你被独自留在了柱子上，而露内克西丝和她的中尉们仔细搜刮着这座宫殿的内部，他们把挂毯扯下来，把雕像砸碎。就在你以为自己已经被遗忘的时候，一伙衣着暴露的奴隶接近了你，他们大概有十多个人。他们的头领，一个身上打了许多钉子，纹了许多纹身的女人马，俯视着你，自我介绍道，[style.speechFeminine(我们是露内克西丝的鸡巴套，而你将会成为我们中的一员。我们别无所求，除了被她那极致的阴茎塞满以外，我们活着就是为了侍奉那位神圣的女王。)]
 	</p>
 	<p>
-		Dropping the wispy, translucent skirt which was concealing her genitals, this horse-girl reveals that she's sporting a massive, and very familiar-looking, horse-cock. Nodding as she sees the look of recognition in your face, she reveals, [style.speechFeminine(Yes, my cock has the exact same proportions as that of Lunexis. You're to be trained on my cock so that you'll be proficient at servicing your queen. We begin your training immediately.)]
+		她的外阴藏在一件破烂不堪，半透明的裙子之下，这个女人马明显是在炫耀她那雄伟的，和露内克西丝很像的马阴茎。她看到你露出了理解的神色后点了点头，她继续说，[style.speechFeminine(没错，我的阴茎大小和露内克西丝的差不多。你可以利用我的阴茎来练习，以便能更熟练地服侍女王。你的训练很快就会开始。)]
 	</p>
 	<p>
-		At the horse-girl's order, four of the other slaves step forwards and hold you down. Stroking her shaft so that it quickly rises to full erection, the leader of Lunexis's cock-sleeves squats down and roughly rams her cock deep down your throat. Keeping it hilted for what seems like an eternity, she then starts ruthlessly face-fucking you, and can't help but moan in pleasure as she enjoys giving you a taste of your new life...
+		随着那个女人马下令，四个奴隶走上前，一伙人把你按住，另一伙人撸动着她的肉棒，以便其能更快地勃起。那个女人马蹲了下来，把她的肉棒粗鲁地插入了你的喉咙。这一刻仿佛变成了永恒，她粗暴地操着你的喉咙。你逐渐忍不住，开始快乐地呻吟，享受着体验新生的感觉……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TRAINED"><![CDATA[
 	<p>
-		Having already accepted the fact that you're to become one of Lunexis's cock-sleeves, you happily consume several mind-altering potions which are given to you by the horse-girl slave, which make you more open to the concept of being another's property while simultaneously causing memories of your life before meeting Lunexis to become foggy and confusing. Thanks to these potions, as well as your relentless schedule of being fucked, exhibited, and forced to submissively serve the other cock-sleeves, you soon start to call yourself 'cock-sleeve' and see yourself as one of the group.
+		你已经接受了成为露内克西丝的鸡巴套的想法，于是你高兴地喝下了女人马给你的致幻魔药，这使你不仅接受了变成某人私有物的观念，还模糊了你遇到露内克西丝之前的记忆。多亏了魔药的效果，还有你那没有休息间隔的训练计划——关于怎么被操、被卖弄和被迫顺从地服侍其他的鸡巴套，你很快就承认了你是他们中的一员，开始称呼自己为一个“鸡巴套”。
 	</p>
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p>
-		Two months pass in this manner, and while the other cock-sleeves are regularly called out to service your queen, you're never asked for. The horse-girl slave, who like all of you cock-sleeves has no name, responds to any question of being used by Lunexis by saying something along the lines of, [style.speechFeminine(Your training is not yet finished. Now swallow my cock and stay still while I fill you with cum.)]
+		像这样的生活已经持续了两个月，其他的鸡巴套都定期被露内克西丝叫去服侍她，而你却从来没有被呼唤过。那个女半人马鸡巴套——她和你们这些其他的鸡巴套一样，没有任何名字，对于你的任何问题都会像这样回答，[style.speechFeminine(你的训练还没结束呢，现在吮吸我的肉棒直到我高潮为止。)]
 	</p>
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p>
-		After another month, on one day after spending all morning fucking you and pumping you full of cum, the horse-girl suddenly declares, [style.speechFeminine(Your preliminary training is finished. Now we need to get you specialised. I think I already know what's best for you, but let's hear what you think. How best do you like taking my cock?)]
+		又过了一个月，某天早晨，那个女人马往你的体内泵满了精液，操完了你之后突然宣告，[style.speechFeminine(你初级阶段的训练已经完成了，现在我们需要让你更进一步，虽然我觉得我已经很了解你了，不过我还是想听听你的想法，你觉得吮吸我的肉棒有多爽？)]
 	</p>
 	<p>
-		Dropping her thick, meaty shaft down onto your face, the horse-girl smirks as you breathe in the musky scent of her massive cock and wonder how to answer...
+		那个女人马把她的粗壮肉棒悬在你的脸面前，你闻到了从她那宏伟肉棒上传来的浓浓的气味，你开始思考怎么回答……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TRAINED_ORAL"><![CDATA[
 	<p>
-		In love with the taste of her cock and being able to cum from simply licking, kissing, and swallowing her thick, hot shaft, you tell the horse-girl that you want to be able to give Lunexis the best blowjobs she's ever had. Nodding her head as she hears you say this, the horse-girl roughly rams her erect horse-cock down your throat, saying as she does so, [style.speechFeminine(I knew right from the first moment I saw you that you were a dirty oral whore. Let's turn your passion into an obsession, and get your throat trained to take our queen's cock.)]
+		你爱上了肉棒的味道，并且已经仅靠舔舐，亲吻和吞下她的肉棒就可以让她高潮，你对那个女半人马说你想带给露内克西丝一场前所未有的口交。那个女半人马听到你的话后点了点头，她粗暴地向你的喉咙深处抽插着肉棒，并说道，[style.speechFeminine(当我第一眼看到你时，我就觉得你肯定是一个优秀的口活骚货。是时候把你的热情转化为痴迷了，为了女王的肉棒，让我们把你的喉咙训练得更爽一些吧。)]
 	</p>
 	<p>
-		Happily taking the horse-girl's cock fully down your throat, you completely lose yourself to the idea of becoming Lunexis's oral cock-sleeve. That day you end up swallowing load after load of the horse-girl's cum, each time feeling like you'll be a little better at orally servicing Lunexis's cock...
+		你快乐地将那个女人马的肉棒整个吞下，高潮冲昏了你的头脑，你完全迷失在成为露内克西丝性奴的想法之中。你将那个女半人马射出来的精液全部吞下，日复一日，你觉得你的口活能力上升了，离更好地侍奉露内克西丝的肉棒又更近了一步……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TRAINED_VAGINAL"><![CDATA[
 	<p>
-		In love with the feeling of her cock being rammed deep into your cunt, and being able to cum from the first touch of her flared head against your [pc.labia+], you tell the horse-girl that you want to be able to be the best fuck that Lunexis has ever had. Nodding her head as she hears you say this, the horse-girl slaps her erect horse-cock against your pussy, before ramming it deep inside and saying as she does so, [style.speechFeminine(I knew right from the first moment I saw you that you were born to be a cock-sleeve. Let's turn your passion into an obsession, and get your cunt trained to take our queen's cock.)]
+		你爱上了小穴被她的肉棒深深冲击的感觉，你[pc.labia+]一剥开覆盖在龟头之上的包皮，你就高潮了，并射出了蜜液，你告诉那个女人马，你想给露内克西丝带来一场前所未有的性交。那个女半人马听到你的话后点了点头，她用她勃起的肉棒冲击着你的小穴内壁，说：[style.speechFeminine(当我第一眼看到你时，我就觉得你肯定是一个天生的鸡巴套。是时候把你的热情转化为痴迷了，为了容纳女王的肉棒，让我们把你的小穴训练得更爽一些吧。)]
 	</p>
 	<p>
-		Happily moaning as the slave hilts her fat horse-cock in your pussy, you completely lose yourself to the idea of becoming Lunexis's obedient cock-sleeve. That day you end up taking load after load of the horse-girl's cum, each time feeling like your pussy will be a little better at making Lunexis's cock feel good...
+		那个女人马把她的肉棒尽数没入你的小穴，并快乐地呻吟着，你被高潮冲昏了头脑，完全沉浸在成为露内克西丝的鸡巴套的想法之中。你被女人马的精液灌满，日复一日，你觉得你的小穴变得更佳色情，离侍奉露内克西丝的肉棒更近了一步……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TRAINED_ANAL"><![CDATA[
 	<p>
-		In love with the feeling of her cock being rammed deep into your ass, and being able to cum from the first touch of her flared head against your [pc.asshole+], you tell the horse-girl that you want to be able to be the best anal slut that Lunexis has ever had. Nodding her head as she hears you say this, the horse-girl slaps her erect horse-cock against your ass, before ramming it deep inside your butt and saying as she does so, [style.speechFeminine(I knew right from the first moment I saw you that you were a dirty butt slut. Let's turn your passion into an obsession, and get your ass trained to take our queen's cock.)]
+		你爱上了菊穴被她的肉棒深深冲击的感觉，你[pc.asshole+]一剥开覆盖在龟头之上的包皮，你就高潮了，并射出了蜜液，你告诉那个女人马，你想给露内克西丝带来一场前所未有的肛交。那个女半人马听到你的话后点了点头，她用她勃起的肉棒冲击着你的菊穴内壁，说：[style.speechFeminine(当我第一眼看到你时，我就觉得你肯定是一个优秀的肛活骚货。是时候把你的热情转化为痴迷了，为了容纳女王的肉棒，让我们把你的菊穴训练得更爽一些吧。)]
 	</p>
 	<p>
-		Happily moaning as the slave hilts her fat horse-cock in your asshole, you completely lose yourself to the idea of becoming Lunexis's anal cock-sleeve. That day you end up taking load after load of the horse-girl's cum, each time feeling like your asshole will be a little better at making Lunexis's cock feel good...
+		那个女人马把她的肉棒尽数没入你的菊穴，并快乐地呻吟着，你被高潮冲昏了头脑，完全沉浸在成为露内克西丝的鸡巴套的想法之中。你被女人马的精液灌满，日复一日，你觉得你的菊穴变得更佳色情，离侍奉露内克西丝的肉棒更近了一步……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="GRADUATION"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_oral))
 		<p>
-			After many more days of sucking the horse-girl's cock, licking her balls, and swallowing load after load of her cum, you're finally ordered one evening to kneel before the other cock-sleeves, where the horse-girl announces, [style.speechFeminine(This cock-sleeve has finished [pc.her] training. Please step forwards and congratulate her one by one.)]
+			你吮吸着那个女人马的肉棒，舔着她的蛋蛋，将她射出的精液尽数吞下，就这样过了许多天，终于在一天夜晚，你被命令跪在其他的鸡巴套面前，那个女人马宣布道：[style.speechFeminine(这个性奴已经完成了[pc.her]的所有训练。现在上前恭喜她吧，一个接一个。)]
 		</p>
 		<p>
-			Lining up, the other cock-sleeves take turns using their cocks or strap-ons to fuck your face. None of them feel anywhere near as good as the horse-girl's shaft, and so after they're all done, you beg her to hilt her fat cock deep down your throat. Shaking her head, she replies, [style.speechFeminine(Your graduation is over, which means that your mouth and throat are only for our queen's cock now. You won't have long to wait for it, either, for an orgy has been planned for tomorrow evening out in the plaza to celebrate the fall of Themiscyra and Lunexis's return. The party is going to be started by a public demonstration of how you and that [meraxis.race] you arrived with have been reduced to obedient cock-sleeves. Do your best to please our queen, cock-sleeve.)]
+			其他鸡巴套排着队，按顺序用他们的肉棒或者假屌操你的脸，可是他们的屌感远远比不上那个女人马，在被他们操完之后，你乞求着那个女人马把她粗壮的肉棒深深插进你的喉咙里，她摇了摇头，回复道：[style.speechFeminine(你已经毕业了，这意味着你的嘴巴和喉咙从现在开始只属于我们的女王。你不会等太久的，为了庆祝特弥斯库拉的陷落和露内克西丝的回归，我们明晚会在广场上举办一场淫趴。这场淫趴的开幕戏将会展示你和那个[meraxis.race]如何沦为忠诚的鸡巴套。尽你所能取悦我们的女王，性奴。)]
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_vaginal))
 		<p>
-			After many more days of being fucked by the horse-girl's cock, acting as her cock-sleeve, and being pumped full of load after load of her cum, you're finally ordered one evening to lie down before the other cock-sleeves, where the horse-girl announces, [style.speechFeminine(This cock-sleeve has finished [pc.her] training. Please step forwards and congratulate her one by one.)]
+			你的小穴被那个女人马的肉棒操着，就像她的鸡巴套一样，身体里泵满了她的精液，像这样经历了许多天之后，终于在一天夜晚，你被命令躺在其他的性奴面前，那个女人马宣布道：[style.speechFeminine(这个性奴已经完成了[pc.her]的所有训练。现在上前恭喜她吧，一个接一个。)]
 		</p>
 		<p>
-			Lining up, the other cock-sleeves take turns using their cocks or strap-ons to fuck your pussy. None of them feel anywhere near as good as the horse-girl's shaft, and so after they're all done, you beg her to hilt her fat cock deep into your hungry twat. Shaking her head, she replies, [style.speechFeminine(Your graduation is over, which means that your pussy is only for our queen's cock now. You won't have long to wait for it, either, for an orgy has been planned for tomorrow evening out in the plaza to celebrate the fall of Themiscyra and Lunexis's return. The party is going to be started by a public demonstration of how you and that [meraxis.race] you arrived with have been reduced to obedient cock-sleeves. Do your best to please our queen, cock-sleeve.)]
+			其他鸡巴套排着队，按顺序用他们的肉棒或者假屌操你的小穴，可是他们的屌感远远比不上那个女人马，在被他们操完之后，你乞求着那个女人马把她粗壮的肉棒深深插进你饥渴的小穴里，她摇了摇头，回复道：[style.speechFeminine(你已经毕业了，这意味着你的小穴从现在开始只属于我们的女王。你不会等太久的，为了庆祝特弥斯库拉的陷落和露内克西丝的回归，我们明晚会在广场上举办一场淫趴。这场淫趴的开幕戏将会展示你和那个[meraxis.race]如何沦为忠诚的鸡巴套。尽你所能取悦我们的女王，性奴。)]
 		</p>
 	#ELSE
 		<p>
-			After many more days of being anally fucked by the horse-girl's cock, acting as her cock-sleeve, and being pumped full of load after load of her cum, you're finally ordered one evening to lie down before the other cock-sleeves, where the horse-girl announces, [style.speechFeminine(This cock-sleeve has finished [pc.her] training. Please step forwards and congratulate her one by one.)]
+			你的菊穴被那个女人马的肉棒操着，就像她的鸡巴套一样，身体里泵满了她的精液，像这样经历了许多天之后，终于在一天夜晚，你被命令躺在其他的鸡巴套面前，那个女人马宣布道：[style.speechFeminine(这个性奴已经完成了[pc.her]的所有训练。现在上前恭喜她吧，一个接一个。)]
 		</p>
 		<p>
-			Lining up, the other cock-sleeves take turns using their cocks or strap-ons to fuck your ass. None of them feel anywhere near as good as the horse-girl's shaft, and so after they're all done, you beg her to hilt her fat cock deep into your hungry asshole. Shaking her head, she replies, [style.speechFeminine(Your graduation is over, which means that your ass is only for our queen's cock now. You won't have long to wait for it, either, for an orgy has been planned for tomorrow evening out in the plaza to celebrate the fall of Themiscyra and Lunexis's return. The party is going to be started by a public demonstration of how you and that [meraxis.race] you arrived with have been reduced to obedient cock-sleeves. Do your best to please our queen, cock-sleeve.)]
+			其他鸡巴套排着队，按顺序用他们的肉棒或者假屌操你的菊穴，可是他们的屌感远远比不上那个女人马，在被他们操完之后，你乞求着那个女人马把她粗壮的肉棒深深插进你饥渴的菊穴里，她摇了摇头，回复道：[style.speechFeminine(你已经毕业了，这意味着你的菊穴从现在开始只属于我们的女王。你不会等太久的，为了庆祝特弥斯库拉的陷落和露内克西丝的回归，我们明晚会在广场上举办一场淫趴。这场淫趴的开幕戏将会展示你和那个[meraxis.race]如何沦为忠诚的鸡巴套。尽你所能取悦我们的女王，鸡巴套。)]
 		</p>
 	#ENDIF
 	<p>
-		Promising that you will, you spend the next twenty four hours constantly thinking about how good it's going to feel to finally be stuffed full of your queen's cock. After what seems like an eternity, the time finally arrives, and you're led off to the party, ready to show Lunexis and all of her guests what a good cock-sleeve you are...
+		你保证你会的，在接下来的二十个小时里，你持续不断地想象着被女王的肉棒填满会有多爽。你经过度日如年的等待，终于，时机来了，你被带走参加淫趴，准备让露内克西丝和她的客人们见识到你是一个多么棒的鸡巴套……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FINAL"><![CDATA[
 	<p>
-		Having been kept back as the final cock-sleeve to be brought to the party, you're impatiently watched by at least a few hundred centauresses as you're led down the steps before the palace, and then a short way across the plaza. Arriving at the exact same point where you were teleported to, you see that everyone's already here and waiting for you.
+		你跟在最后一个鸡巴套的身后，被带去了淫趴，你被领着走下宫殿的台阶，穿过通向广场的一条小路，你被上百只人马如饥似渴地盯着。你被带到了你和你之前传送过来的位置，你看见每个人都在这里了，他们在等你。
 	</p>
 	<p>
-		Your gaze wanders first to the muscular, purple-skinned brute of a centauress who claimed Meraxis, and you see that she's got the chuuni demon on a thick leather leash. Grunting at you in amusement, the centauress tugs on this leash, causing Meraxis to step forwards and show off her new body. Now covered in degrading tattoos, and with every conceivable part of her body pierced, Meraxis has been transformed to have five pairs of big, perky breasts, each one of which is sporting a thick, golden ring. Completely naked apart from the countless piercings which adorn her abused body, the [meraxis.race] has clearly been trained to be an obedient cock-sleeve, for without being told to, she reaches down between her legs and spreads her big, dripping-wet labia. As her Mistress reaches down to stroke the top of her shaved head, the cock-sleeve's massive, plump lips part, allowing her to excitedly moan, [meraxis.speech(This worthless cunt is ready for your cock, Mistress!)]
+		你的目光首先落在了一个肌肉发达，有着紫色皮肤的女人马身上，她宣布她是梅拉克西丝的主人，用一根厚皮带拴着那个中二恶魔，嘲讽地朝你冷哼，然后拽了一下皮带，让梅拉克西丝上前一步，炫耀着她的新身体。梅拉克西丝浑身纹满了侮辱性的纹身，并且现在有了五对巨大的，挺立着的乳房，每个上面都被钉上了金色的乳环。她除了身上的环饰外，几乎完全赤裸，很明显，[meraxis.race]已经被训练成了一个忠诚的鸡巴套，没有被下任何指示，她就自己把手指伸向两腿中间，张开了她那又大又湿的阴唇，当她的主人抚摸着她被剃光的秃头时她张开了肥厚丰满的嘴唇，发出了兴奋的呻吟，[meraxis.speech(这个废物的小穴已经为你的肉棒准备好了，主人！)]
 	</p>
 	<p>
-		Lined up a short distance behind Meraxis and her owner, you see about two dozen enslaved Amazons, all of whom are already down on all fours, presenting themselves to the horde of centauresses. From the cum that's leaking down their inner-thighs, as well as the fact that several of them have swollen, pregnant bellies, you can see that the demonic host has been enjoying their cunts on a regular basis. Also trained to be obedient cock-sleeves, these slaves are lifting their hips so as to show off their pussies, while desperately begging to be fucked.
+		在梅拉克西丝和她的主人身后不远处，你可以看到大约二十几个被奴役的亚马逊人，她们都四肢着地，向半人马群展示自己。从她们大腿内侧流出的精液，以及其中几个人肿胀、怀孕的肚子可以看出，她们的恶魔主人经常光顾她们的阴户。这些奴隶已经被训练成听话的鸡巴套子，她们抬起臀部以展示自己的小穴，同时拼命地乞求被操。
 	</p>
 	<p>
-		All that's left now is for Lunexis to show off what a well-trained cock-sleeve you are, and so the huge, muscular centauress, who's been close by this entire time, simply turns to her side and presents you with the thing that you want most in the world right now. The sight of your queen's huge, meaty horse-cock causes you to let out a desperate whine, and you rush forwards to drop down beside her, ready to obey at a moment's notice when she finally gives you the command to get started.
+		其他性奴的展示结束了，现在轮到露内克西丝来炫耀你是个被训练得多么棒的性鸡巴套了，这个高大威猛，肌肉发达，一直站在你身边的人马，转向了你，并给了你现在最想要的东西。你看到了女王巨大丰满的马肉棒，饥渴地呻吟一声，冲上前，跪倒在她身边，准备随时服从她下达的命令。
 	</p>
 	<p>
-		Smirking at your show of obedience, your queen addresses the crowd that's gathered by booming in her loud voice, [lunexis.speech(Sisters! The fields have been ravaged, Themiscyra is in ruins, and Elis will soon be ours! Tonight we celebrate our triumphs! To get things started, I present to you the fate of all who dare oppose us!)]
+		她对着你的忠诚很满意，她笑了，用洪亮的声音向聚集的人群讲话，[lunexis.speech(姐妹们！这片大地已经被摧毁了，特弥斯库拉也变成了废墟，很快伊利斯也会属于我们！今天我们聚集在这里，庆祝凯旋！首先，我来让你们见识见识那些胆敢反对我们的人的下场！)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_oral))
 		<p>
-			With a mocking smirk on her face, the centauress looks down at you and grunts, [lunexis.speech(My balls are sweaty from running around all day. Lick them clean, cock-sleeve.)]
+			她嘲讽地笑着，俯视着你，轻声说：[lunexis.speech(我跑了一整天，蛋蛋都被汗浸透了，舔干净他们，性奴。)]
 		</p>
 		<p>
-			Eager to obey, you quickly shuffle forwards and start licking her huge, ebony-skinned balls. Lovingly sliding your tongue over her four heavy testicles, you make sure to lick up every drop of sweat. Your queen's gigantic horse-cock rapidly slides out of its sheath in response to your attention, and as it stiffens into full erection, she snaps, [lunexis.speech(That's enough! Now swallow my cock and show everyone what a good cock-sleeve you are!)]
+			你饥渴地遵循着命令，快速爬了过去，开始舔她巨大的，乌黑的蛋蛋。你的舌头爱抚地滑过她的四个沉重的睾丸，你确保你舔掉了每一滴汗液。你的女王巨大的马肉棒从护套中快速滑出，吸引着你的注意力，就在肉棒开始变硬，逐渐完全勃起时，她突然说：[lunexis.speech(够了！现在吮吸我的肉棒，让所有人见识一下你是一个多么棒的鸡巴套！)]
 		</p>
 		<p>
-			Quickly repositioning yourself, you do as Lunexis commands. Opening wide, you slide your head forwards, and with the help of a buck of your queen's hips, the massive, meaty shaft is soon hilted deep down your throat. Your training proves to have been worthwhile, for as soon as your throat is full of cock, Lunexis moans, [lunexis.speech(~Mmm!~ Fuck! This slut's throat feels too good!)]
+			你遵从露内克西丝的命令，迅速改变着身姿，你张开了嘴，向前滑动着你的头，在你的女王俏挺的臀部的帮助下，那根巨大丰满的肉棒很快就深深地插进了你的喉咙里。你的训练很快发挥了优势，你的喉咙立马被肉棒塞满了，露内克西丝呻吟着：[lunexis.speech(嗯~！操~！这骚货的喉咙真是太他妈的爽了！)]
 		</p>
 		<p>
-			Reaching up to play with her [lunexis.breastRows], your queen starts pumping her hips forward and back, forcing her massive, throbbing shaft deep down and then back up your throat. As she fucks your face in this manner, you find that your position allows you to look across and see what's happening to the cock-sleeve who you once knew as Meraxis...
+			你伸手去挑逗她的[lunexis.breastRows]，她用胯部来回冲撞着你，她巨大的，跳动着的肉棒深深地抽插你的喉咙。就在她狠狠地操你时，你发现你的位置刚好可以看见另外一个鸡巴套子——从前的梅拉克西丝，正在做什么……
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_vaginal))
 		<p>
-			With a mocking smirk on her face, the centauress looks down at you and grunts, [lunexis.speech(My balls are aching. Present yourself, cock-sleeve, so I can empty them in you.)]
+			她嘲讽地笑着，俯视着你，轻声说：[lunexis.speech(我的蛋蛋很饥渴，该你表现了，鸡巴套，让我把精液全射出来。)]
 		</p>
 		<p>
-			Eager to obey, you quickly drop down beneath your queen and present her with your [pc.pussy+]. Your queen's gigantic horse-cock rapidly slides out of its sheath, and the moment that it stiffens into a full erection, she bucks her hips and rams her massive, meaty shaft into your hungry cunt. Stepping forwards, she roughly forces the entire length of her thick, throbbing dick inside of you, letting out a satisfied groan as she hilts herself as deep as possible into your cunt. Your training proves to have been worthwhile, for as soon as your cunt is full of cock, Lunexis moans, [lunexis.speech(~Mmm!~ Fuck! This slut's pussy feels too good!)]
+			你饥渴地遵循着命令，快速倒在你的女王的身下，展示着你[pc.pussy+]。你的女王巨大的马肉棒从护套中快速滑出，并且逐渐变硬直到完全勃起，她抬起了臀部，将她巨大丰满的肉棒狠狠地插进了你饥渴的小穴里。她向前一步，巨大的，跳动着的肉棒没入了你的小穴，她尽可能深地插入你的小穴，发出了享受的呻吟。你的训练很快发挥了优势，你的小穴立马被肉棒塞满了，露内克西丝呻吟着：[lunexis.speech(嗯~！操~！这骚货的小穴真是太他妈的爽了！)]
 		</p>
 		<p>
-			Reaching up to play with her [lunexis.breastRows], your queen starts pumping her hips forward and back, forcing her massive, throbbing shaft deep inside and then back out of your twat. As she fucks you in this manner, you find that your position allows you to look across and see what's happening to the cock-sleeve who you once knew as Meraxis...
+			你伸手去挑逗她的[lunexis.breastRows]，她用胯部来回冲撞着你，她巨大的，跳动着的肉棒深深地抽插你的屁眼。就在她狠狠地操你时，你发现你的位置刚好可以看见另外一个鸡巴套子——从前的梅拉克西丝，正在做什么……
 		</p>
 	#ELSE
 		<p>
-			With a mocking smirk on her face, the centauress looks down at you and grunts, [lunexis.speech(My balls are aching. Present yourself, cock-sleeve, so I can empty them in you.)]
+			她嘲讽地笑着，俯视着你，轻声说：[lunexis.speech(我的蛋蛋很饥渴，该你表现了，鸡巴套，让我把精液全射出来。)]
 		</p>
 		<p>
-			Eager to obey, you quickly drop down beneath your queen and present her with your [pc.ass+]. Your queen's gigantic horse-cock rapidly slides out of its sheath, and the moment that it stiffens into a full erection, she bucks her hips and rams her massive, meaty shaft into your hungry asshole. Stepping forwards, she roughly forces the entire length of her thick, throbbing dick inside of you, letting out a satisfied groan as she hilts herself as deep as possible into your ass. Your training proves to have been worthwhile, for as soon as you're full of cock, Lunexis moans, [lunexis.speech(~Mmm!~ Fuck! This slut's ass feels too good!)]
+			你饥渴地遵循着命令，快速倒在你的女王的身下，展示着你[pc.ass+]。你的女王巨大的马肉棒从护套中快速滑出，并且逐渐变硬直到完全勃起，她抬起了臀部，将她巨大丰满的肉棒狠狠地插进了你饥渴的菊穴里。她向前一步，巨大的，跳动着的肉棒没入了你的菊穴，她尽可能深地插入你的菊穴，发出了享受的呻吟。你的训练很快发挥了优势，你的菊穴立马被肉棒塞满了，露内克西丝呻吟着：[lunexis.speech(嗯~！操~！这骚货的菊穴真是太他妈的爽了！)]
 		</p>
 		<p>
-			Reaching up to play with her [lunexis.breastRows], your queen starts pumping her hips forward and back, forcing her massive, throbbing shaft deep inside and then back out of your rear entrance. As she fucks you in this manner, you find that your position allows you to look across and see what's happening to the cock-sleeve who you once knew as Meraxis...
+			你伸手去挑逗她的[lunexis.breastRows]，她用胯部来回冲撞着你，她巨大的，跳动着的肉棒不断的进出你的后穴。就在她狠狠地操你时，你发现你的位置刚好可以看见另外一个鸡巴套子——从前的梅拉克西丝，正在做什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="FINAL_MERAXIS"><![CDATA[
 	<p>
-		Looking across to the [meraxis.race] cock-sleeve who was once called Meraxis, you see her heavily-tattooed body wildly rocking back and forth as her brutish, purple-skinned owner violently pumps her huge horse-cock in and out of her cunt. The cock-sleeve's five pairs of big breasts, each one pierced and bearing a thick golden ring, are jiggling and swaying in a hypnotic manner as she kneels down on all fours beneath her Mistress. Clearly loving every moment of being roughly fucked in public like this, the cock-sleeve moans, [meraxis.speech(~Aah!~ Yes, Mistress! I'm your worthless slut! ~Ooh!~ Break my dirty little cunt!)]
+		你望向对面曾被称为梅拉克西丝的[meraxis.race]鸡巴套，浑身纹满了数不清的标记。她那紫色皮肤的野蛮主人挺着粗壮的马大屌，在她的身体里猛烈地顶撞，冲得娇躯止不住地乱甩。“鸡巴套”四肢着地跪在主人身下，五双巨乳的乳头上都穿刺了沉重的金环。奶子就像催眠怀表一样，愉悦地摇曳。看来，她很享受在大庭广众之下被粗暴操弄的每一刻，她呻吟着：[meraxis.speech(~啊！~嗯！主人！我是你没用的骚货~啊！~快操烂我肮脏的小屄！)]
 	</p>
 	<p>
-		Letting out a deep, guttural roar, the centauress thrusts her fat cock deep inside her cock-sleeve. The [meraxis.race]'s massive, pierced labia spread and grip down lewdly around her mistress's thick cock, causing the centauress to shout, [style.speechFeminineStrong(That's it, milk my cock, you dumb bitch! ~Aah!~ Ready to get knocked up again, cunt?!)]
+		半人马发出一声低沉的吼叫，将肥大的鸡巴深深插入鸡巴套内。[meraxis.race]巨大的穿孔阴唇张开，淫荡地夹住主人粗大的鸡巴，引得半人马大叫道：[style.speechFeminineStrong(就是这样，榨我的肉棒吧，你这个小婊砸！~啊~准备好再干一轮了吗？！)]
 	</p>
 	<p>
-		With that, the centauress's heavy balls tense up, and she continues grunting and making degrading comments as she fills her cock-sleeve's pussy with hot, demonic cum. It takes almost a full minute for her orgasm to end, by which point her thick, salty jizz has backed up and leaked out around her cock to form a large, slimy puddle on the ground beneath her cock-sleeve's well-fucked cunt. By no means having finished with the tattooed, pierced [meraxis.race], the centauress slides her fat cock free with an audible squelch, before commanding,
+		说完这句话，半人马沉重的睾丸绷紧了，她一边侮辱她的鸡巴套，一边哼哼唧唧地用滚烫的恶魔精液撑满了鸡巴套套的腹部。过了足足一分钟，她的高潮才结束，浓稠咸涩的精液抑制不住地从小穴和肉棒的接缝渗出，在一塌糊涂的泡芙下方流了一大团黏糊糊的奶油。半人马还没玩够这个满是纹身的[meraxis.race]，在小穴的咕叽闷响中抽出大鸡巴，然后命令道：
 		#IF(game.isAnalContentEnabled())
-			 [style.speechFeminineStrong(Get to work on my ass, cock-sleeve! I want to hear you cumming from giving me a rimjob, you filthy slut!)]
+			[style.speechFeminineStrong(鸡巴套子，来伺候我的屁眼！我要看到你这下流的母猪舔肛到高潮的样子！)]
 		#ELSE
-			 [style.speechFeminineStrong(Get to work on my cunt, cock-sleeve! I want to hear you cumming from eating me out, you filthy slut!)]
+			[style.speechFeminineStrong(鸡巴套子，来吃我的逼！我要看到你这下流的母猪一边舔我一边潮吹！))]
 		#ENDIF
 	</p>
 	<p>
-		Hurrying to obey, the cock-sleeve jumps to her feet, and with cum drooling out of her pussy, she moves around behind her mistress. Swishing her tail to one side, the centauress grins as her slave eagerly buries her face in her rear end, and within moments, you hear the multi-breasted [meraxis.race]'s muffled squeals announcing the fact that she's orgasmed simply from
+		[meraxis.race]急切地跳起来，绕到主人身后，白浊的液体从下体一股一股地缓缓流下，粘连着地面。当她的奴隶迫不及待地把脸埋进她的下体时，半魅魔咧嘴一笑，摇摆着尾巴。不一会儿，你就听到十个乳房的[meraxis.race]低沉地浪叫，宣布她只是因为
 		#IF(game.isAnalContentEnabled())
-			 performing anilingus. Letting out a mocking laugh, the centauress shouts back to her cock-sleeve, [style.speechFeminineStrong(That's a good bitch! I'll give you another tattoo after the party as a reward for your obedience. I'm thinking 'Rimjob Whore' would go nicely on those fat lips of yours!)]
+			舔肛就高潮了。半魅魔发出嘲弄的笑声，对着她的鸡巴套喊道：[style.speechFeminineStrong(真是个好婊子！既然你这么听话，派对结束后，我会再奖励你一道纹身。嗯……就在你肥厚的嘴唇上纹‘舔肛妓女’吧，太合适了！)]
 		#ELSE
-			 performing cunnilingus. Letting out a mocking laugh, the centauress shouts back to her cock-sleeve, [style.speechFeminineStrong(That's a good bitch! I'll give you another tattoo after the party as a reward for your obedience. I'm thinking 'Cunt Kisser' would go nicely on those fat lips of yours!)]
+			舔阴就高潮了。半魅魔发出嘲弄的笑声，对着她的鸡巴袖子喊道：[style.speechFeminineStrong(真是个好婊子！既然你这么听话，派对结束后，我会再奖励你一道纹身。嗯……就在你肥厚的嘴唇上纹‘舔屄妓女’吧，太合适了！)]
 		#ENDIF
 	</p>
 	<p>
-		Not having been told to stop, the cock-sleeve continues eagerly performing oral on her mistress. Despite being interrupted now and again by an intense, body-shaking orgasm, the [meraxis.race] quickly settles into a steady rhythm
+		既然没人叫她停下来，鸡巴套便继续迫不及待地为主人口交。刚开始总是时不时因为高潮绝顶抽搐地倒下，不过[meraxis.race]很快掌握了平衡，努力把控着节奏，
 		#IF(game.isAnalContentEnabled())
-			 as she gives her mistress a marathon rimjob...
+			继续鏖战肛门……
 		#ELSE
-			 as she gives her mistress a marathon cunnilingus session...
+			继续鏖战阴户……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="FINAL_SELF"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_oral))
 		<p>
-			Instead of looking to see what's happening to the other cock-sleeve, you focus on pleasuring your queen. Moving your head in time with the rhythmic pumping of her hips, you remember your training with the horse-girl whose name you never knew and work hard to give Lunexis the best blowjob she's ever had. Putting everything you've got into sucking, swallowing, and licking her thick, throbbing horse-shaft, you can't help but feel extremely proud of yourself as the centauress lets out a series of shuddering, deeply erotic moans.
+			你对女王的其他鸡巴套子在做什么丝毫不感兴趣，因为你要聚精会神，全心全意侍奉你的女王。你跟着她抽插的节奏去移动你的脑袋，尽全力回忆那个不知名的半人马女交给你的口交技巧，尽你所能去侍奉着眼前这根至高无上的鸡巴。你全身心地投入进给这根抽动的大马屌的口交之中，去舔，去吸，去吞，去尽你一切所能，去献上你的一切，当你看到眼前的半人马发出战栗而淫荡之极的呻吟时，你的内心中有一股自豪之情油然而生。
 		</p>
 		<p>
-			[lunexis.speech(~Aah!~ Yes, cock-sleeve!)] she squeals, [lunexis.speech(~Ooh!~ Take my load, you fucking slut!)]
+			[lunexis.speech(啊，就是这样，我的飞机杯！)]她尖叫起来，[lunexis.speech(大吃一精吧，你这个荡妇！)]
 		</p>
 		<p>
-			With that, the centauress lets out a deep, guttural grunt, before violently slamming her massive cock as deep as possible down your throat. Thanks to your training, you're fully prepared for this moment, and continue using your tongue and throat muscles to massage her cock as she reaches her climax. As her balls tense up, a truly massive load of hot, salty cum spurts out of her horse-cock and jets directly down into your stomach. Greedily swallowing down every last drop, you push your [pc.lips+] up against the sweaty, salty base of her animalistic shaft to signal that you're able to comfortably take every last
+			说完之后，半人马发出低沉的咕噜声，将她的巨大马屌插进你喉咙的最深处，而你多日的训练所为的就是这一刻！你用你的喉肉和舌头继续按摩着她的肉棒，她的高潮迫在眉睫！当她的睾丸收紧的那一刻，大股的浓郁咸香的精液射了出来，直接喷涌进了你的胃里！你饥渴地吞下每一滴精液，将你[pc.lips+]贴向她那咸湿的巨棒根部，向你的主人表面你的喉咙能吞下她的肉棒直到最后一
 			#IF(game.isMetricSizes())
-				 centimetre
+				厘米
 			#ELSE
-				 inch
+				英尺
 			#ENDIF
-			 of her cock down your throat.
+			。
 		</p>
 		<p>
-			[lunexis.speech(You've been trained well, cock-sleeve,)] Lunexis grunts as she finishes her climax. Keeping her cock hilted down your throat, she continues absent-mindedly playing with her multiple breasts as she commands, [lunexis.speech(Keep doing that thing with your throat while I watch the party.)]
+			[lunexis.speech(你的喉咙被开发的真不错，算得上是个称职的鸡巴套子。)]露内克西丝在结束高潮时发出一声闷哼，她继续把鸡巴顶在你的喉咙里，心不在焉地玩弄着自己的多个乳房。[lunexis.speech(我看派对的时候，你就一直吸着吧。)]
 		</p>
 		<p>
-			Doing as you're told, you put your training to good use as you remain as still as you can while using your tongue and throat muscles to pleasure your queen's cock...
+			你绝对服从她的要求，你将你的训练用到了实处，你尽量保持不动，同时用你的舌头和喉咙肌肉来取悦你的女王的鸡巴……
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_innoxia_themiscyra_bad_end_vaginal))
 		<p>
-			Instead of looking to see what's happening to the other cock-sleeve, you focus on pleasuring your queen. Moving your hips in time with the rhythmic pumping of her cock, you remember your training with the horse-girl whose name you never knew and work hard to give Lunexis the best sex she's ever had. Putting everything you've got into pushing back against her and squeezing your pussy down around her thick, throbbing horse-shaft, you can't help but feel extremely proud of yourself as the centauress lets out a series of shuddering, deeply erotic moans.
+			你对别的鸡巴套子在做什么毫无兴趣，因为你得聚精会神侍奉你的女王。你随着她抽插的节奏迎合地摆动着屁股，尽全力回忆着那个不知名的半人马所教给你的房中秘术。你将你学到的所有东西用于实战，用你的小穴迎合着她的抽插，榨取着她的精液，将你的一切投入其中，只为了取悦你的女王。当你看到眼前的半人马发出战栗而淫荡之极的呻吟时，你的内心中有一股自豪之情油然而生。
 		</p>
 		<p>
-			[lunexis.speech(~Aah!~ Yes, cock-sleeve!)] she squeals, [lunexis.speech(~Ooh!~ Take my load, you fucking slut!)]
+			[lunexis.speech(啊，就是这样，我的飞机杯！)]她尖叫起来，[lunexis.speech(大吃一精吧，你这个荡妇！)]
 		</p>
 		<p>
-			With that, the centauress lets out a deep, guttural grunt, before violently slamming her massive cock as deep as possible into your [pc.pussy+]. Thanks to your training, you're fully prepared for this moment, and use your vaginal muscles to massage her cock as she reaches her climax. As her balls tense up, a truly massive load of hot, salty cum spurts out of her horse-cock and jets directly into your womb. Milking her for every last drop, you push back and press your [pc.labia+] against the sweaty, hot base of her animalistic shaft to signal that you're able to comfortably take every last
+			说完之后，半人马发出低沉的咕噜声，将她的巨大马屌插进你[pc.pussy+]的最深处，而你多日的训练所为的就是这一刻！当她高潮时，你用你的穴肉紧紧夹住了体内的大肉棒。当她的睾丸收紧的那一刻，大股的浓郁咸香的精液射了出来，直接喷涌进了你的子宫里！你饥渴地榨取着她的每一滴精液， 将你[pc.labia+]贴向她那咸湿的巨棒根部，向你的主人表面你的小穴能吞下她的肉棒直到最后一
 			#IF(game.isMetricSizes())
-				 centimetre
+				厘米
 			#ELSE
-				 inch
+				英尺
 			#ENDIF
-			 of her cock into your cunt.
+			。
 		</p>
 		<p>
-			[lunexis.speech(You've been trained well, cock-sleeve,)] Lunexis grunts as she finishes her climax. Keeping her cock hilted in your cum-stuffed pussy, she continues absent-mindedly playing with her multiple breasts as she teases,
-			#IF(game.isIncestEnabled())
-				 [lunexis.speech(You're going to get pregnant from this, slut. I'm sure that the daughters you'll birth will enjoy fucking their mother's hot cunt as much as I do. Now keep on milking my cock while I watch the party.)]
+			[lunexis.speech(你的小穴被开发的真不错，算得上是个称职的鸡巴套子。)]露内克西丝在结束高潮时发出一声闷哼，她继续把鸡巴顶在你的小穴里，心不在焉地玩弄着自己的多个乳房。#IF(game.isIncestEnabled())
+				[lunexis.speech(我会把你肚子搞大，让你生下一堆可爱的女儿，然后天天去干你下面这张小嘴。看派对的时候，你就一直被我插着吧。)]
 			#ELSE
-				 [lunexis.speech(You're going to get pregnant from this, slut. Now keep on milking my cock while I watch the party.)]
+				[lunexis.speech(你这荡妇估计是要怀上了。看派对的时候，你就一直被我插着吧。)]
 			#ENDIF
 		</p>
 		<p>
-			Doing as you're told, you put your training to good use as you use your vaginal muscles to squeeze and pleasure your queen's cock...
+			你绝对服从她的要求，你将你的训练用到了实处，用你的阴道肌肉来取悦你的女王的鸡巴……
 		</p>
 	#ELSE
 		<p>
-			Instead of looking to see what's happening to the other cock-sleeve, you focus on pleasuring your queen. Moving your hips in time with the rhythmic pumping of her cock, you remember your training with the horse-girl whose name you never knew and work hard to give Lunexis the best anal sex she's ever had. Putting everything you've got into pushing back against her and squeezing your asshole down around her thick, throbbing horse-shaft, you can't help but feel extremely proud of yourself as the centauress lets out a series of shuddering, deeply erotic moans.
+			你对别的鸡巴套子在做什么毫无兴趣，因为你得聚精会神侍奉你的女王。你随着她抽插的节奏迎合地摆动着屁股，尽全力回忆着那个不知名的半人马所教给你的房中秘术。你将你学到的所有东西用于实战，用你的屁穴迎合着她的抽插，榨取着她的精液，将你的一切投入其中，只为了取悦你的女王。当你看到眼前的半人马发出战栗而淫荡之极的呻吟时，你的内心中有一股自豪之情油然而生。
 		</p>
 		<p>
-			[lunexis.speech(~Aah!~ Yes, cock-sleeve!)] she squeals, [lunexis.speech(~Ooh!~ Take my load, you fucking slut!)]
+			[lunexis.speech(啊，就是这样，我的飞机杯！)]她尖叫起来，[lunexis.speech(大吃一精吧，你这个荡妇！)]
 		</p>
 		<p>
-			With that, the centauress lets out a deep, guttural grunt, before violently slamming her massive cock as deep as possible into your [pc.ass+]. Thanks to your training, you're fully prepared for this moment, and use your anal muscles to massage her cock as she reaches her climax. As her balls tense up, a truly massive load of hot, salty cum spurts out of her horse-cock and jets deep into your ass. Milking her for every last drop, you push back and press your [pc.ass+] against the sweaty, hot base of her animalistic shaft to signal that you're able to comfortably take every last
+			说完之后，半人马发出低沉的咕噜声，将她的巨大马屌插进你[pc.ass+]的最深处，而你多日的训练所为的就是这一刻！当她高潮时，你用你的肠肉紧紧夹住了体内的大肉棒。当她的睾丸收紧的那一刻，大股的浓郁咸香的精液射了出来，直接喷涌进了你的肠道里！你饥渴地榨取着她的每一滴精液， 将你[pc.ass+]贴向她那咸湿的巨棒根部，向你的主人表面你的屁穴能吞下她的肉棒直到最后一
 			#IF(game.isMetricSizes())
-				 centimetre
+				厘米
 			#ELSE
-				 inch
+				英尺
 			#ENDIF
-			 of her cock into your rear entrance.
+			。
 		</p>
 		<p>
-			[lunexis.speech(You've been trained well, cock-sleeve,)] Lunexis grunts as she finishes her climax. Keeping her cock hilted in your cum-stuffed asshole, she continues absent-mindedly playing with her multiple breasts as she teases, [lunexis.speech(You're such a filthy butt-slut. Now keep on milking my cock while I watch the party.)]
+			[lunexis.speech(你的屁穴被开发的真不错，算得上是个称职的鸡巴套子。)]露内克西丝在结束高潮时发出一声闷哼，她继续把鸡巴顶在你的屁穴里，心不在焉地玩弄着自己的多个乳房。[lunexis.speech(你真是个下流的荡妇，趁我看派对的时候，继续给我榨精吧。)]
 		</p>
 		<p>
-			Doing as you're told, you put your training to good use as you use your anal muscles to squeeze and pleasure your queen's cock...
+			你绝对服从她的要求，你将你的训练用到了实处，用你的肠道肌肉来取悦你的女王的鸡巴……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="EPILOGUE"><![CDATA[
 	<p>
-		You and the other cock-sleeve are publicly used in this manner for another half an hour or so, before Lunexis booms out over the noise of the crowd, [lunexis.speech(Bring in the slaves! Themiscyra is mine, and soon Elis shall share its fate!)]
+		你和另一个鸡巴套又被这样公开使用了半个多小时，然后露内克西丝在喧闹的人群中大声喊道： [lunexis.speech(把奴隶们带进来！特弥斯库拉是我的了，很快伊利斯也将分享它的命运！)]
 	</p>
 	<p>
-		To the wild cheering and shouting of the hundreds of demonic centauresses who are present, a train of at least a hundred slaves is led into the plaza. Quickly gaining massive erections and stripping off their clothes to reveal huge, bouncing breasts, Lunette's daughters impatiently await the signal from Lunexis, which is soon given as she shouts, [lunexis.speech(Let the orgy commence!)]
+		在数百名恶魔之女的疯狂欢呼和呼喊声中，一列至少有一百名奴隶的火车被带进了广场。露内特的女儿们迅速勃起，脱掉衣服，露出丰满而富有弹性的乳房，不耐烦地等待着露内克西丝发出那声号令：[lunexis.speech(开始狂欢吧！)]
 	</p>
 	<p>
-		The vast majority of these slaves look like they've been taken from the Foloi Fields' villages and farms as part of the centauresses' looting, although some of the taller and more muscular are no doubt Amazons who were captured in the fall of Themiscyra. Whatever their background, they all share the same fate, that being having their holes stuffed full of horse-cock and hot, demonic cum. Within moments, you find yourself in the middle of a wild orgy, although Lunexis is enjoying using you so much that you find yourself being hogged by her for the entire night.
+		这些奴隶中的绝大多数看起来都是从弗洛伊田野的村庄和农场里抓来的，是半人马掠夺的部分财产；不过其中一些身材高大、肌肉发达的无疑是在特弥斯库拉沦陷时抓来的亚马逊人。不管他们的背景如何，他们的命运都是一样的，那就是被塞满马鞭和滚烫的恶魔精液。没过多久，你就发现自己置身于一场疯狂的狂欢之中，不过露内克西丝非常喜欢用你，最后你整晚都被她霸占着。
 	</p>
 	<p>
-		By the time the party has progressed into the early hours of the morning, you've seen the cock-sleeve once known as Meraxis being fucked by at least a hundred different cocks, each one of which filled or covered her in slimy, demonic cum. Thanks to being shared with so many sexual partners, she's soon coated in such a thick layer of jizz that you struggle to see the tattoos and piercing which cover her body.
+		当狂欢进行到凌晨时分，你看到曾经被称为梅拉克西丝的鸡巴套子已经被至少上百根不同的鸡巴撑满，每根鸡巴都对她内射或外射了黏糊糊的恶魔精液。因为被用得太多，很快就涂满了厚厚的一层精液，几乎已看不清她身上的纹身和穿孔。
 	</p>
 	<p>
-		Throughout it all, you happily moan, squeal, and beg for more of your Mistress's cock. So thorough has your training been that you can't recall a life before becoming Lunexis's slave, and so by the time the sun comes up, you're convinced that you've always been, and forever shall remain, nothing but an obedient cock-sleeve for your demonic Mistress...
+		在整个过程中，你快乐地呻吟着、尖叫着，乞求主人给你更多的鸡巴。你的调教是如此彻底，以至于你无法回忆起成为露内克西丝的奴隶之前的生活，所以当太阳升起时，你确信自己一直都是，而且永远都会是恶魔主人的一个顺从的鸡巴套子……
 	</p>
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p><i>
-		In the months and years to follow, the name of Themiscyra becomes synonymous with Lunexis's brutality. Any unfortunate soul caught by the centauresses who inhabit these ruins is brought to the palace, where they're fucked, used as entertainment in gladiatorial contests, or auctioned off as slaves. Through it all, you and Meraxis serve as your owners' cock-sleeves.
+		在接下来的岁月里，特弥斯库拉这个名字，成了露内克西丝残暴的代名词。半人马在废墟中抓住的所有不幸生灵都会被带到宫殿里，在那里被操，被当作角斗场上的娱乐，或者被当作奴隶拍卖掉。你和梅拉克西丝作为主人的鸡巴套子见证了这一切。
 	</i></p>
 	<p><i>
-		With degrading tattoos covering every part of her body, and wearing a uniform consisting of golden piercings and nothing else, the [meraxis.race] who was once called Meraxis is trained by her owner into becoming the perfect masochistic fuck-toy. Her ten large breasts, with the thick, teat-like nipple on each one pierced and sporting a heavy, golden ring, regularly draw the attention of visitors to the palace. Loving nothing more than being roughly pounded and abused by the brutish, purple-skinned centauress who owns her, this cock-sleeve gains a reputation throughout the palace as being a particularly dirty slut, who's willingly engaged in every degrading sex act imaginable...
+		[meraxis.race]曾被称为梅拉克西丝，被主人调教成完美的受虐狂性奴。她有十个大乳房，每个乳房上都有粗大的乳头，乳头上还穿了孔，戴着沉重的金环，经常吸引宫殿里游客的注意。她全身上下都是有辱人格的纹身，身上穿戴的只有金色的乳环，别无其他。她最喜欢的就是被占有她的紫色皮肤的野蛮半人马粗暴地殴打和虐待，这个鸡巴套子在整个宫殿里都享有盛誉，因为她是一个特别下流的荡妇，她心甘情愿地从事一切可以想象得到的有辱人格的性行为……
 	</i></p>
 	<p><i>
-		Thanks to your training, and the expertise you displayed on the night of the grand orgy, Lunexis takes you as her favourite cock-sleeve. While a lot of your time is spent resting with the other cock-sleeves, you're called to your queen's side multiple times each day, where you're roughly rutted, pumped full of cum, and ordered afterwards to pleasure her cock. Dressed up in translucent silks which leave nothing to the imagination, you're sometimes shown off by your queen and lent for a day or two to particularly deserving subordinates as a special reward. Unable to remember your life before becoming a cock-sleeve, you love every moment of dutifully serving your queen and her massive, hot horse-cock...
+		多亏了你的训练，以及你在大狂欢之夜表现出的专业技能，露内克西丝把你当成了她最喜欢的鸡巴套套。虽然你的大部分时间都是和其他鸡鸡套一起休息，但你每天都会被叫到女王身边好几次，在那里你会被粗暴地勾起性欲，被灌满精液，然后被命令服侍她的鸡鸡。你身着半透明的丝绸，没有什么可想象的空间。有时你会被女王炫耀一番，并作为特殊奖励赏给特别满意的下属玩一两天。你无法回忆起成为鸡鸡套之前的生活，你喜欢尽职尽责地为女王和她巨大火热的马鸡服务的每一刻……
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

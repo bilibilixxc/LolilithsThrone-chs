@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Yui's Home]]></name>
-	<tooltipDescription><![CDATA[You're kept in your Mistress's home and used as a fuck toy by her other slaves and paying clients.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in your Mistress's home]]></virginityLossDescription>
+	<name><![CDATA[唯的家]]></name>
+	<tooltipDescription><![CDATA[你被留在主人家里，被用作她的客户及其他奴隶的肉便器。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在你主人的家]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_WHITE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

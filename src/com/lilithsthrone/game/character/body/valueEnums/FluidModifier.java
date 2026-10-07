@@ -19,48 +19,48 @@ public enum FluidModifier {
 	
 	VISCOUS(PresetColour.BASE_PURPLE_DARK,
 			false,
-			"viscous",
-			"It's quite viscous, and slowly drips in large globules, much like thick treacle.",
-			"Gives this fluid a thick consistency, somewhere between liquid and solid."),
+			"粘稠",
+			"十分粘稠，会缓慢地成块滴落而下，如同浓厚的糖蜜一般。",
+			"使得该液体拥有固体和液体之间的粘稠度。"),
 	
 	STICKY(PresetColour.BASE_YELLOW_LIGHT,
 			false,
-			"sticky",
-			"It's quite sticky, and is difficult to fully wash off without soap.",
-			"Makes this fluid stick to anything it touches."),
+			"黏糊糊",
+			"十分黏糊，不使用肥皂就不能清洗干净。",
+			"使得该液体能够黏住接触的任何东西。"),
 	
 	SLIMY(PresetColour.BASE_BLUE_LIGHT,
 			false,
-			"slimy",
-			"It has a slimy, oily texture.",
-			"Gives this fluid a slimy feel to it."),
+			"粘滑",
+			"拥有粘滑、油质的质感。",
+			"使得该液体感觉像粘液。"),
 	
 	BUBBLING(PresetColour.BASE_LILAC_LIGHT,
 			false,
-			"bubbling",
-			"It fizzes and bubbles like a carbonated drink.",
-			"Makes this fluid bubble like a carbonated drink."),
+			"起泡",
+			"如碳酸饮料一般会起气泡。",
+			"使得该液体会像碳酸饮料一样起泡。"),
 	
 	// SPECIAL EFFECTS:
 
 	MUSKY(PresetColour.BASE_TAN,
 			true,
-			"musky",
-			"It has a strong, musky smell.",
-			"Musky cum and girlcum will apply 'marked by musk' to anyone who is covered in it during sex."),
+			"气味浓重",
+			"拥有强烈的淫味。",
+			"气味浓重的精液或爱液如果在性交中沾染在某人身上，则会使其获得“被淫味标记”的效果。"),
 	
 	
 	MINERAL_OIL(PresetColour.BASE_BLACK,
 			true,
-			"mineral oil",
-			"It is rich in minerals good for your skin but not for latex.",
-			"Fluids imbued with mineral oil will rapidly degrade condoms, causing them to break at the moment of orgasm."),
+			"矿物油",
+			"富含会滋润皮肤但腐蚀橡胶制品的矿物质。",
+			"混入矿物油的液体能够迅速融化避孕套，导致其在高潮时破裂。"),
 	
 	ALCOHOLIC(PresetColour.BASE_ORANGE,
 			true,
-			"strongly alcoholic",
-			"It has a high alcohol content, and will get those who consume it very drunk.",
-			"Strongly alcoholic fluids will greatly increase the intoxication level of anyone who consumes them.") {
+			"高度酒精",
+			"含有高度酒精，会使得喝下该液体的角色醉酒。",
+			"含高度酒精的液体会急剧增加喝下该液体角色的醉酒等级。") {
 		@Override
 		public String applyEffects(GameCharacter target, GameCharacter fluidProvider, float millilitres, FluidInterface fluid) {
 			return target.incrementAlcoholLevel(millilitres * 0.001f); //TODO factor in body size
@@ -69,9 +69,9 @@ public enum FluidModifier {
 
 	ALCOHOLIC_WEAK(PresetColour.BASE_ORANGE_LIGHT,
 			true,
-			"alcoholic",
-			"It has a low alcohol content, and will get those who consume it drunk.",
-			"Alcoholic fluids will increase the intoxication level of anyone who consumes them.") {
+			"含酒精",
+			"酒精含量较低，但也会使人醉酒。",
+			"含酒精的液体会增加饮用者的醉酒等级。") {
 		@Override
 		public String applyEffects(GameCharacter target, GameCharacter fluidProvider, float millilitres, FluidInterface fluid) {
 			return target.incrementAlcoholLevel(millilitres * 0.0001f); //TODO factor in body size
@@ -80,9 +80,9 @@ public enum FluidModifier {
 	
 	ADDICTIVE(PresetColour.BASE_PINK,
 			true,
-			"addictive",
-			"It is highly addictive, and anyone who drinks too much will quickly become dependent on it.",
-			"Addictive fluids will make anyone who consumes them become addicted to that particular type of fluid.") {
+			"成瘾性",
+			"有极高的成瘾性，无论谁只要喝了太多，就会迅速对其产生依赖。",
+			"成瘾性液体会让任何饮用它们的人对这种特定类型的液体上瘾。") {
 		@Override
 		public String applyEffects(GameCharacter target, GameCharacter fluidProvider, float millilitres, FluidInterface fluid) {
 			if(target==null || fluidProvider==null) {
@@ -96,9 +96,9 @@ public enum FluidModifier {
 			if(target.addAddiction(new Addiction(fluid.getType(), Main.game.getMinutesPassed(), fluidProvider.getId()))) {
 				return UtilText.parse(target,
 						"<p style='padding:0; margin:0; text-align:center;'>"
-							+ "Due to the addictive properties of "+(fluidProvider==null?"":(fluidProvider.equals(target)?"[npc.her]":UtilText.parse(fluidProvider, "[npc.namePos]")))+" "+fluid.getName(fluidProvider)
-								+", [npc.name] [npc.verb(find)] [npc.herself] [style.colourArcane(craving)]"
-								+ " <span style='color:"+fluid.getType().getRace().getColour().toWebHexString()+";'>"+fluid.getType().getRace().getName(fluidProvider.getBody(), fluid.isFeral(fluidProvider))+"</span> "+fluid.getName(fluidProvider)+"!"
+							+ "由于"+(fluidProvider==null?"":(fluidProvider.equals(target)?"[npc.her]的":UtilText.parse(fluidProvider, "[npc.namePos]的")))+""+fluid.getName(fluidProvider)
+								+"，[npc.name]发觉自己极其[style.colourArcane(渴望)]"
+								+ "<span style='color:"+fluid.getType().getRace().getColour().toWebHexString()+";'>"+fluid.getType().getRace().getName(fluidProvider.getBody(), fluid.isFeral(fluidProvider))+"</span>的"+fluid.getName(fluidProvider)+"！"
 						+ "</p>");
 				
 				
@@ -107,15 +107,15 @@ public enum FluidModifier {
 				if(appendAddiction) {
 					return UtilText.parse(target, fluidProvider,
 							"<p style='padding:0; margin:0; text-align:center;'>"
-								+ "[npc.NamePos] [style.colourArcane(craving)] for <span style='color:"+fluid.getType().getRace().getColour().toWebHexString()+";'>"
+								+ "[npc.NamePos]对于<span style='color:"+fluid.getType().getRace().getColour().toWebHexString()+";'>"
 									+fluid.getType().getRace().getName(fluidProvider.getBody(), fluid.isFeral(fluidProvider))
-								+"</span> "+fluid.getName(fluidProvider)
-									+" has been satisfied!"
+								+"</span>"+fluid.getName(fluidProvider)
+									+"的[style.colourArcane(渴求)]得到了满足！"
 								+ (curedWithdrawal
-									?" [npc.She] [npc.verb(feel)] deeply grateful to "+(fluidProvider==null?"":UtilText.parse(fluidProvider, "[npc.name]"))+" for providing [npc.herHim] with what [npc.she] needed most..."
+									?"[npc.She]感激着"+(fluidProvider==null?"":UtilText.parse(fluidProvider, "[npc.name]"))+"，能够提供给[npc.herHim]最需要的东西……"
 											+ (target.isSlave()?target.incrementObedience(5):"")
-									:" [npc.She] [npc.was]n't suffering from withdrawal, but [npc.she] still [npc.verb(feel)] thankful to "
-											+(fluidProvider==null?"":UtilText.parse(fluidProvider, "[npc.name]"))+" for feeding [npc.her] addiction...")
+									:"[npc.She]并没有受到戒断反应的影响，但仍旧感激"
+											+(fluidProvider==null?"":UtilText.parse(fluidProvider, "[npc.name]"))+"，能够缓解[npc.her]的瘾感……")
 							+ "</p>");
 				}
 				return "";
@@ -125,9 +125,9 @@ public enum FluidModifier {
 	
 	HALLUCINOGENIC(PresetColour.BASE_PINK_DEEP,
 			true,
-			"psychoactive",
-			"Anyone who ingests it suffers psychoactive effects, which can manifest in lactation-related hallucinations or sensitivity to hypnotic suggestion.",
-			"Psychoactive fluids will cause anyone who ingests them to experience a hallucinogenic trip, causing their view of sexual organs to be distorted as well as opening them up to the possibility of being hypnotically manipulated.") {
+			"致幻性",
+			"任何摄入该液体的角色都会受到致幻效果，表现为泌乳相关的幻觉或易受催眠暗示的影响。",
+			"拥有致幻性的液体会导致摄入的角色经历一段幻觉，使其性高潮的体验被扭曲，并且有可能被催眠操控。") {
 		@Override
 		public String applyEffects(GameCharacter target, GameCharacter fluidProvider, float millilitres, FluidInterface fluid) {
 			if(target.hasPerkAnywhereInTree(Perk.DOLL_PHYSICAL_3)) {
@@ -139,8 +139,8 @@ public enum FluidModifier {
 			if(appendPsychoactive) {
 				return UtilText.parse(target,
 						"<p style='padding:0; margin:0; text-align:center;'>"
-							+ "Due to the psychoactive properties of "+(fluidProvider==null?"":(fluidProvider.equals(target)?"[npc.her]":UtilText.parse(fluidProvider, "[npc.namePos]")))+" "+fluid.getName(fluidProvider)
-								+", [npc.name] [npc.verb(start)] <span style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>tripping out</span>!"
+							+ "由于"+(fluidProvider==null?"":(fluidProvider.equals(target)?"[npc.her]的":UtilText.parse(fluidProvider, "[npc.namePos]的")))+""+fluid.getName(fluidProvider)
+								+"致幻属性，[npc.name]<span style='color:"+PresetColour.PSYCHOACTIVE.toWebHexString()+";'>陷入幻觉</span>了！"
 						+ "</p>");
 			}
 			return "";

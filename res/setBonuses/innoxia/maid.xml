@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Hard-working Maid]]></name>
+	<name><![CDATA[辛勤女仆]]></name>
 	
 	<statusEffect>SET_MAID</statusEffect>
 	

@@ -40,12 +40,12 @@ public class PixShower {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Kiss";
+			return "接吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Turn your head back and kiss Pix.";
+			return "转头亲皮克斯。";
 		}
 
 		@Override
@@ -57,10 +57,10 @@ public class PixShower {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"You turn your head to one side and try to kiss Pix. For a brief moment, you manage to press your [pc.lips] against hers, but with a little giggle, she pulls back, leaving you kissing mid-air.",
-					"Looking back at Pix, you let out a desperate whine as you lean back to try to kiss her, but she pulls back just out of your reach, leaving you flushed and frustrated as your [pc.lips] meet nothing but empty air.",
-					"Leaning back into Pix, you turn your head to try and kiss her. Seeing what you're trying to do, she lets out a little laugh as she leans away from you, preventing your [pc.lips] from even coming close to hers.",
-					"Turning your head back to look at Pix, you try to kiss her, but as she sees what you're doing, she dodges away, laughing and leaving you feeling extremely foolish.");
+					"你把头转向一边，想要亲吻皮克斯。一瞬间你似乎已经跟她的[pix.lips]贴在了一起，但随着一声轻笑，她将身子一仰，你只亲到了一团空气。",
+					"你回头看向皮克斯，迫不及待地呜咽着，身子后仰，想要亲上去。但她却只是将你躲开，让你[pc.lips]留在了半空中。你懊恼不已，脸颊上也微微泛起了红。",
+					"你身子向后倚向皮克斯，转过头去想要亲她。她看到你的意图，只是轻笑几声轻松躲开了，你[pc.lips]没有碰到她分毫。",
+					"你扭头看向皮克斯，想要亲上去，但她却也看出你的意图，笑着躲开了，让你觉得自己像个傻瓜一样。");
 		}
 
 		@Override
@@ -78,12 +78,12 @@ public class PixShower {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Pinch nipples";
+			return "捏乳头";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Reach up and pinch your [npc.nipples+].";
+			return "向上摸索并捏你[npc.nipples+]。";
 		}
 
 		@Override
@@ -95,14 +95,14 @@ public class PixShower {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Feeling extremely frustrated, you start to reach up to your chest, hoping to give your [pc.nipples+] some attention."
-							+ " Pix sees what you're doing, however, and angrily swats your hands away from your breasts, causing you to let out a desperate whine.",
+					"你感到欲求不满，便向着胸部摸去，期望能刺激一下自己[pc.nipples+]。"
+							+ "而皮克斯一眼就看穿了你的行为，生气地把你的手从胸部拍开，惹得你急不可耐地呜咽起来。",
 							
-					"You try to reach up to play with your [pc.nipples+], but, due to how tired you are, your movements are extremely sluggish, and Pix quickly pulls your hands away from your chest before you're even half-way there.",
+					"你摸索上去想要玩弄自己[pc.nipples+]，但你已经精疲力尽，动作十分缓慢，还没等你伸过一半的距离，皮克斯便把你的手从胸部拿开了。",
 					
-					"Letting out a desperate whine, you try to reach up and grope your [pc.breasts], but Pix has other plans, and firmly yanks your hands away from your chest.",
+					"你迫切地呜咽起来，想要伸手揉搓自己的[pc.breasts]，但皮克斯却另有打算，扯着你的手远离了胸部。",
 					
-					"Desperately reaching up to try and play with your [pc.nipples+], your [pc.hands] don't even make it half-way to your chest before Pix firmly pulls your [pc.arms] back down to your sides.");
+					"你迫不及待地伸出[pc.hand]来，想要玩弄自己[pc.nipples+]，可还没等伸到一半，皮克斯就紧紧抓住你的[pc.arms]，按回到身体两边。");
 		}
 		
 		@Override
@@ -126,26 +126,26 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Masturbate";
+			return "自慰";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Reach down between your legs and start masturbating.";
+			return "摸索到股间并开始自慰。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Flushed and frustrated, you try to dart your [pc.hands] down between your [pc.legs], but Pix is far too quick for you in your current state,"
-							+ " and instantly pulls your arms behind your back, preventing you from stimulating yourself.",
+					"你又急又羞，伸出[pc.hands]就向着胯下过去，但皮克斯却比现在的你快上太多，"
+							+ "立马拉住你的手臂，塞到了背后，不允许你刺激自己。",
 							
-					"You try to reach down between your legs in order to masturbate, but Pix quickly grabs your wrists and pulls your arms behind your back.",
+					"你试图把手放在腿间开始自慰，但皮克斯迅速抓住你的手腕并把你的手压在你背后。",
 					
-					"With a desperate whine, you attempt to move your hands down between your legs."
-							+ " Letting out a little giggle as she sees what you're trying to do, Pix roughly grabs your wrists, yanking your hands away from your crotch before growling menacingly into your ear.",
+					"伴随着一声急不可耐的呜咽，你想伸手触碰股间。"
+							+ "皮克斯看到你的动作，嬉笑着拧住了你的手腕，把你的手从胯下拽了回来，然后在你耳边威胁地低声道。",
 					
-					"Desperately reaching down to try and stimulate yourself, your hands don't even get half-way to your crotch before Pix is pulling them away and giggling into your ear.");
+					"你迫不及待地伸出[pc.hand]来，想要稍微自己刺激，可还没等伸到一半，皮克斯就将其拉开，在你耳边嬉笑起来。");
 		}
 		
 		@Override
@@ -169,24 +169,24 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Dirty talk";
+			return "说骚话";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Talk dirty to Pix.";
+			return "对皮克斯说骚话。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"As you open your mouth to try and say something to Pix, she darts one of her [pix.hands+] up and presses it over your mouth, giggling into your ear as she tells you to stay quiet.",
+					"你刚一张嘴，正想对皮克斯说些什么，她直接立刻伸出[pix.hands+]捂住了你的嘴，在你的耳边响起了一阵银铃般的笑声，紧接着是让你保持安静的话语。",
 							
-					"You try to say something to Pix, but your words are instantly muffled as she darts a hand up to cover your mouth. Laughing over your shoulder, she tells you to stay quiet and be a good [pc.girl].",
+					"你正想对皮克斯说些什么，但她却立马伸手捂住了你的嘴，到嘴边的话语立刻变成一串闷响。她在你肩头笑着告诉你，请保持安静，当个乖孩子。",
 					
-					"Opening your mouth, you don't even get the chance to say a single word before Pix clasps one of her [pix.hands+] over your [pc.lips+].",
+					"你刚一张嘴，一个字还没来得及说出，皮克斯就啪的一下把[pix.hands+]盖在了你[pc.lips+]上。",
 					
-					"As you try to speak back to Pix, she quickly clasps [pix.a_hand+] over your mouth, laughing into your ear as she prevents you from talking.");
+					"你正准备回头对皮克斯说些什么，她就啪的一下把[pix.a_hand+]盖在了你的嘴上，在你耳边轻笑着，阻止了你说话。");
 		}
 
 		@Override
@@ -210,29 +210,29 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Struggle";
+			return "挣扎";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Try to struggle out of Pix's grasp.";
+			return "尝试挣脱皮克斯的控制";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Having had enough of Pix's 'fun', you desperately try to wriggle out of her grasp."
-							+ " Unfortunately, you're still completely exhausted from her workout, and she easily slams you back up against the wall of the shower,"
-							+ " playfully growling into your ear as you find your escape attempt coming to an abrupt end.",
+					"你已经受够了皮克斯的“乐趣”，不顾一切地扭动着身子，想要逃脱她的魔爪。"
+							+ "可惜你的身体还没有从锻炼的疲惫中恢复过来，她轻轻松松就将你压倒在了淋浴间的墙上，"
+							+ "玩味地在你耳边低哼着，你的逃脱计划戛然而止了。",
 							
-					"Summoning what little energy you have left, you desperately try to push Pix away from you."
-							+ " Letting out a little giggle, she easily overpowers you, pressing you up against the wall of the shower before softly growling into your ear.",
+					"你调动起全身仅剩的力量，绝望地想要将皮克斯推开。"
+							+ "她只是小小地嬉笑一声，就把你压在了淋浴间的墙上，微弱的低哼声在耳边回响。",
 					
-					"Twisting this way and that, you desperately try to push Pix away from you."
-							+ " Laughing at your somewhat feeble attempt, she easily slams you back up against the wall of the shower, softly growling over your shoulder as you pant from exertion.",
+					"你扭来扭去，不顾一切地想要把皮克斯推开。"
+							+ "她看到你虚弱的反抗，只是笑笑，便轻而易举地将你重新压倒在淋浴间的墙上，微弱的低哼声伴随着你的粗重的喘息在肩头回响。",
 					
-					"Pushing yourself off of the wall in front of you, you try to throw Pix off your back."
-							+ " With the state you're in, all you're able to do is make her stagger back a little, and with a threatening growl, she quickly slams you back up against the wall.");
+					"你努力把自己退离墙壁，想要将背后的皮克斯甩下来。"
+							+ "可以你现在的状态，顶多只能她踉跄后退一点，随后她便威胁地咆哮一声，迅速把你撞回了墙上。");
 		}
 		
 		@Override
@@ -260,24 +260,24 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Submit";
+			return "顺从";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Let Pix do what she wants with you.";
+			return "让皮克斯对你为所欲为吧";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Realising that you're in no state to resist Pix's 'fun', you gently lean back into the dominant dog-girl, allowing her to use you as she sees fit.",
+					"你意识到自己无法反抗皮克斯的“取乐”，索性向着那不饶人的犬女身上倒去，让她随心所欲地使用你。",
 							
-					"You decide to just let Pix use you however she wants, and gently lean back against her as she lets out an approving growl.",
+					"你决定不如让皮克斯随心所欲地使用你，便慢慢仰躺在她身上，引得她赞许地哼了一声。",
 					
-					"Leaning forwards against the wall of the shower, you surrender yourself to Pix, allowing her to do whatever she wants with you.",
+					"你将自己完全交给了皮克斯，向着面前淋浴间的墙上靠去，允许她为所欲为。",
 					
-					"Coming to the realisation that Pix is in full control of the situation, you lean forwards against the wall of the shower, deciding to let her do whatever she wants with you.");
+					"你终于意识到皮克斯已经完全掌控了现状，于是向着面前淋浴间的墙上靠去，决定任她随心所欲。");
 		}
 		
 		@Override
@@ -305,25 +305,25 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Grind down";
+			return "磨蹭";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Grind your [npc.pussy] down against Pix's hand.";
+			return "用你的[npc.pussy]顶着皮克斯的手摩擦。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Pushing your hips down against Pix's [pix.hand+], the dominant dog-girl lets out an enthusiastic [pix.moan], digging her [pix.fingers+] deep into your [pc.pussy+] as you gasp and shudder under the shower's running water.",
+					"你放低了腰身，抵住皮克斯[pix.hand+]，那气势汹汹的犬女也热切地[pix.moan]了一声，用自己[pix.fingers+]深深探入你[pc.pussy+]，欣赏着你在淋雨的流水之下喘息、颤抖。",
 					
-					"Leaning back into Pix for support, you grind your [pc.pussy+] down against her [pix.hand+], squealing in delight as she responds by digging her [pix.fingers+] deep into your [pc.pussy].",
+					"你把身子靠向了皮克斯，用[pc.pussy+]对着她[pix.hand+]磨蹭起来，愉悦的呻吟声脱口而出，她也回应着你，将[pix.fingers+]深深送入你的[pc.pussy]。",
 					
-					"Gently dropping your hips down onto Pix's hand, you try to encourage her to push a little deeper, and, much to your delight, you feel her respond by curling her [pix.fingers+] up before eagerly stroking your vaginal walls.",
+					"你慢慢地放低了身子，压住皮克斯的手，期待着她能更深一些，没想到的是她竟然还做出了回应，她轻轻弯曲[pix.fingers+]，急切地抚摸着阴道的肉壁。",
 					
-					"Pushing your [pc.pussy] down against Pix's hand, she responds by letting out an eager growl before curling her [pix.fingers] up inside of you."
-							+ " As she starts eagerly stroking in a 'come-hither' fashion, you lean back into the dominant dog-girl, moaning and shuddering as the hot water from the shower cascades all around you.");
+					"你将自己的[pc.pussy]压在皮克斯的手上，她则发出一声饥渴的咕哝声，将[pix.fingers]在你体内弯曲起来。"
+							+ "她抚摸的手法仿佛在说：“来吧，来吧。”你仰倒在那盛气凌人的犬女身上，感受着温热的水流流淌过身体，不住地呻吟、颤抖着。");
 		}
 	};
 	
@@ -344,7 +344,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Kiss";
+			return "亲吻";
 		}
 
 		@Override
@@ -355,13 +355,13 @@ public class PixShower {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Pix lets out a little giggle as she leans in over your shoulder, playfully biting down and nibbling at your ear as she continues to press you firmly against the wall of the shower.",
+					"皮克斯轻笑一声，越过了你的肩膀，饶有兴致地轻咬着你的耳朵，但却依然将你死死地压在淋浴间的墙壁上。",
 					
-					"With a playful laugh, Pix roughly pushes you up against the wall before leaning in over your shoulder to bite and nibble on your ear.",
+					"皮克斯玩味地一笑，忽然猛地把你按在墙上，越过肩头开始轻噬你的耳朵。",
 					
-					"As the hot water continues to rain down on both of you, Pix presses her [pix.face+] up against your neck, and, with a little [pix.moan], she starts using her [pix.tongue+] to playfully lick all over your shoulder.",
+					"温热的水流继续不断地打落在你们两个身上，皮克斯将[pix.face+]紧紧贴住你的脖子，随着一声[pix.moan]，她开始用[pix.tongue+]调皮地在你的肩膀上舔舐。",
 					
-					"Leaning in over your shoulder, Pix starts using her [pix.tongue+] to playfully lick and lap at your neck and ears.");
+					"皮克斯探过你的肩头，用她[pix.tongue+]饶有兴致地舔过你的脖子和耳朵。");
 		}
 	};
 	
@@ -380,7 +380,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Dirty talk";
+			return "说骚话";
 		}
 
 		@Override
@@ -393,14 +393,14 @@ public class PixShower {
 			UtilText.nodeContentSB.setLength(0);
 				
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Pressing you up against the wall, Pix softly growls into your ear, ",
-					"Firmly pressing into your back, Pix leans in over your shoulder and growls, "));
+					"皮克斯把你按在墙上，在你耳边低声道，",
+					"皮克斯死死地压住你的背部，在你的肩头咕哝道，"));
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"[npc.speech(Good [pc.girl]! I hope you're enjoying your reward as much as I am!)]",
-					"[npc.speech(Aww, you seem pretty tired! Funny the way that kinda worked itself out, y'know?)]",
-					"[npc.speech(Y'know, you're struggling far less than some of the guys I've rewarded in the past!)]",
-					"[npc.speech(Isn't this, like, super fun and stuff?! Well, it is for me!)]"));
+					"[npc.speech(乖[pc.girl]！真希望你喜欢这个奖励，就和我一样！)]",
+					"[npc.speech(哦——你累坏了吧！这么缓解一下也蛮有意思的对吧？)]",
+					"[npc.speech(我跟你说，你挣扎得比我之前奖励过的家伙可差远了！)]",
+					"[npc.speech(你不觉得，超有意思吗？！好吧，至少我觉得！)]"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -422,7 +422,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Grope breasts";
+			return "揉搓乳房";
 		}
 
 		@Override
@@ -436,36 +436,36 @@ public class PixShower {
 			
 			UtilText.nodeContentSB.append(
 					UtilText.returnStringAtRandom(
-					"Pix lifts [pix.a_hand+] up to your chest, and as she squeezes down on one of your [pc.breasts+], you hear her letting out a soft little giggle.",
+					"皮克斯举起[pix.a_hand+]摸索到你的胸部，对着你[pc.breasts+]其中一个揉捏起来，一串轻笑声从她的口中冒了出来。",
 					
-					"As water from the still-running shower falls down onto your naked body, Pix lifts [pix.a_hand+] up to your chest, and with a delighted growl, she starts roughly groping and squeezing at your [pc.breastRows] [pc.breasts].",
+					"淋浴中的水流依旧不断地拍打在你赤裸的身体上，皮克斯举起[pix.a_hand+]摸索到你的胸部，伴随着愉悦的哼声，她对着你那[pc.breastRows][pc.breasts]狠狠地揉搓了起来。",
 					
-					"Your [pc.breasts+], wet from the still-running shower, are the sudden focus of Pix's attention."
-					+ " Reaching one of her [pix.hands+] up to your chest, she eagerly starts squeezing and groping your mounds of flesh, growling softly into your ear as you fail to contain [pc.a_moan+].",
+					"你[pc.breasts+]早已被淋浴的水流打湿，顿时成为了皮克斯的焦点。"
+					+ "她伸出[pix.hands+]摸索到你的胸部，迫不及待地对着你胸前的肉团揉捏起来，你按捺不住发出[pc.a_moan+]，也引来了耳边一声轻哼。",
 					
-					"You let out [pc.a_moan+] as Pix reaches around and starts to grope and squeeze each of your [pc.breasts+] in turn."));
+					"皮克斯对着你[pc.breasts+]，一个一个地揉搓过去，惹得你连连发出[pc.a_moan+]。"));
 			
 			switch (Main.game.getPlayer().getBreastStoredMilk()) {
 				case ONE_TRICKLE:
-					UtilText.nodeContentSB.append(" A small trickle of [pc.milk] leaks out onto her fingertips as she squeezes down on your [pc.nipples+].");
+					UtilText.nodeContentSB.append("她揉捏着你[pc.nipples+]，几滴[pc.milk]漏了出来，沾染了指尖。");
 					break;
 				case TWO_SMALL_AMOUNT:
-					UtilText.nodeContentSB.append(" A small squirt of [pc.milk] leaks out onto her fingertips as she squeezes down on your [pc.nipples+].");
+					UtilText.nodeContentSB.append("她揉捏着你[pc.nipples+]，一小股[pc.milk]沾染在了指尖上。");
 					break;
 				case THREE_DECENT_AMOUNT:
-					UtilText.nodeContentSB.append(" A trickle of [pc.milk] runs out over her fingertips as she squeezes down on your [pc.nipples+].");
+					UtilText.nodeContentSB.append("她捏住你[pc.nipples+]，几滴[pc.milk]淌过了她的指尖。");
 					break;
 				case FOUR_LARGE_AMOUNT:
-					UtilText.nodeContentSB.append(" Your [pc.milk] starts to flow out over her [pix.fingers+], mixing with the shower's still-running water to run down over your [pc.breasts+].");
+					UtilText.nodeContentSB.append("你的[pc.milk]沿着她[pix.fingers+]流了下来，与冲刷着[pc.breasts+]的淋浴水流混杂在一起。");
 					break;
 				case FIVE_VERY_LARGE_DROOLING:
-					UtilText.nodeContentSB.append(" Your [pc.milk] starts drooling out over her [pix.fingers+], mixing with the shower's still-running water to run down over your [pc.breasts+].");
+					UtilText.nodeContentSB.append("你的[pc.milk]逐渐顺着她[pix.fingers+]淌下来，与冲刷着[pc.breasts+]的淋浴水流混杂在一起。");
 					break;
 				case SIX_EXTREME_AMOUNT_DRIPPING:
-					UtilText.nodeContentSB.append(" Your [pc.milk] starts pouring out over her [pix.fingers+], mixing with the shower's still-running water to run down over your [pc.breasts+]");
+					UtilText.nodeContentSB.append("你的[pc.milk]汩汩地顺着她[pix.fingers+]流下，与冲刷着[pc.breasts+]的淋浴水流混杂在一起。");
 					break;
 				case SEVEN_MONSTROUS_AMOUNT_POURING:
-					UtilText.nodeContentSB.append(" Your [pc.milk] starts pouring out in a heavy flow over her [pix.fingers+], mixing with the shower's still-running water to run down over your [pc.breasts+].");
+					UtilText.nodeContentSB.append("你的[pc.milk]不断地涌出，顺着她[pix.fingers+]不断流下，与冲刷着[pc.breasts+]的淋浴水流混杂在一起。");
 					break;
 				default:
 					break;
@@ -506,7 +506,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Stroke player's cock";
+			return "撸动玩家的肉棒";
 		}
 
 		@Override
@@ -518,14 +518,14 @@ public class PixShower {
 		public String getDescription() {
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(),
 					UtilText.returnStringAtRandom(
-					"Reaching around between your legs, Pix suddenly grabs your [pc.cock+], and as she starts stroking up and down its length, you find yourself letting out [pc.a_moan+] and leaning back into her.",
+					"皮克斯将[pix.hand]伸向你的股间，忽然捏住了[pc.cock+]，开始上下撸动起来，渐渐地你身子向后倒去，[pc.a_moan+]不断从口中发出。",
 					
-					"With one of her [pix.hands+], Pix reaches around between your [pc.legs+], and, taking hold of your [pc.cock+], she starts rapidly jerking you off under the running water of the shower.",
+					"皮克斯伸出一只[pix.hands+]向你[pc.legs+]之间，一把抓住了[pc.cock+]，开始就着流水激烈地撸起管来。",
 					
-					"You can't help but let out [pc.a_moan+] and lean back into Pix as she reaches around to grab your [pc.cock+], and, with long, deliberate strokes, starts jerking you off.",
+					"皮克斯伸出[pix.hand]握住了你[pc.cock+]，开始舒缓绵长地撸动起来，你按捺不住，一声[pc.a_moan+]脱口而出，身子也向皮克斯那边仰去。",
 					
-					"You let out a series of [pc.moans+] as Pix reaches around and grabs hold of your [pc.cock+]."
-							+ " As she growls softly into your ear, she starts eagerly jerking you off, causing your [pc.moans] to steadily increase in volume and intensity."));
+					"皮克斯握住了你[pc.cock+]，你禁不住连连发出[pc.moans+]。"
+							+ "她在你的耳边轻声低语着，同时开始上下撸动起来，害得你[pc.moans]得越来越明显。"));
 		}
 	};
 	
@@ -544,7 +544,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Start fingering";
+			return "开始指交";
 		}
 
 		@Override
@@ -560,8 +560,8 @@ public class PixShower {
 		@Override
 		public String getDescription() {
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(),
-					"You feel Pix press heavily into your back, and as she growls menacingly into your ear, she reaches around with [pix.a_hand+] to start stroking and probing at your outer labia."
-						+ " With [pc.a_moan+], you lean back into her, and as the sound of falling water echoes off the walls all around you, she suddenly thrusts her [pix.fingers+] up, penetrating your [pc.pussy+] in one swift strike.");
+					"你感觉得到皮克斯把身子紧紧贴在了你的背上，稍带疯狂的语调在你耳边低语着，随后便伸出[pix.a_hand+]开始挑弄爱抚你的大阴唇。"
+						+ "伴随着[pc.a_moan+]，你倚到了她的身上，飞落而下的水流的拍打声在狭窄的隔间中回响，她忽然将[pix.fingers+]一捅，轻盈的一下便插入了你[pc.pussy+]。");
 		}
 	};
 	
@@ -580,7 +580,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Gentle fingering";
+			return "指交(温柔)";
 		}
 
 		@Override
@@ -591,15 +591,15 @@ public class PixShower {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Pix pushes her [pix.fingers+] up into your [pc.pussy+], curling them back and stroking gently in a 'come-hither' motion as you softly moan and pant against the wall.",
+					"皮克斯将她[pix.fingers+]在你[pc.pussy+]中一勾，做出一个“来啊”的手势轻抚着内壁，引得你抵在墙上轻声喘息不断。",
 					
-					"Pushing her [pix.fingers+] up into your [pc.pussy+], Pix starts to gently pump back and forth, eliciting a series of soft moans from your [pc.lips] as you lean back into her for support.",
+					"皮克斯将[pix.fingers+]推入你[pc.pussy+]中，开始缓缓地抽插起来，惹得你口中不住轻声呻吟，身子也向后倒去，被她接了住。",
 					
-					"You let out [pc.a_moan+] as Pix gently pushes her [pix.fingers+] deep into your [pc.pussy+]."
-							+ " As you feel her palm push up against your outer labia, she curls her [pix.fingers] up, stroking your vaginal walls and causing you to let out another [pc.moan+].",
+					"皮克斯缓缓地将[pix.fingers+]送入你[pc.pussy+]的深处，让你不仅发出一声[pc.a_moan+]。"
+							+ "你感觉得到她的手掌已经跟你的阴唇紧密贴合在一起，她忽然勾起了[pix.fingers]，抚摸着阴道的肉壁，害得你又是一声[pc.moan+]。",
 					
-					"You let out [pc.a_moan+] and lean back into Pix for support as she starts to focus her efforts on fingering your [pc.pussy+]."
-							+ " As the sound of cascading water echoes all around, Pix curls her [pix.fingers+] up inside of you and starts eagerly stroking your vaginal walls.");
+					"皮克斯逐渐沉浸于在你[pc.pussy+]中翻弄手指的感觉，你发出[pc.a_moan+]，仰躺到了她的身上。"
+							+ "洒落的水声在四周回响，皮克斯在你的体内弯起了[pix.fingers+]，开始轻抚着你的阴道壁。");
 		}
 
 		@Override
@@ -622,7 +622,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Rough fingering";
+			return "指交(粗暴)";
 		}
 
 		@Override
@@ -633,15 +633,15 @@ public class PixShower {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Pix violently thrusts her [pix.fingers+] up into your [pc.pussy+], curling them back and roughly stroking in a 'come-hither' motion as you let out a series of [pc.moans+].",
+					"皮克斯粗暴地将[pix.fingers+]刺入了你[pc.pussy+]中，在里面摆出了“来啊”的手势，用力地抚摸着，惹得你连连发出[pc.moans+]。",
 					
-					"Roughly pushing her [pix.fingers+] up into your [pc.pussy+], Pix starts to violently pump back and forth, eliciting a series of [pc.moans+] from your [pc.lips] as you collapse back into her for support.",
+					"皮克斯硬生生地把[pix.fingers+]刺入了你[pc.pussy+]中，毫不顾忌地一抽一插起来，惹得你不免从[pc.lips]中连连漏出[pc.moans+]，向后瘫去，被她接了住。",
 					
-					"You let out [pc.a_moan+] as Pix roughly thrusts her [pix.fingers+] deep into your [pc.pussy+]."
-							+ " As you feel her palm slam up against your outer labia, she curls her [pix.fingers] up, desperately stroking your vaginal walls and causing you to let out another [pc.moan+].",
+					"皮克斯猛地将[pix.fingers+]深深刺入你[pc.pussy+]，让你不仅发出[pc.a_moan+]。"
+							+ "你感受到她的手掌不时就会跟你的阴唇来一场亲密接触，她忽然将[pix.fingers]弯了起来，急切地触摸着你的阴道肉壁，让你又是一声[pc.moan+]。",
 					
-					"You let out [pc.a_moan+] and collapse back into Pix for support as she slams her [pix.fingers] deep inside your [pc.pussy+]."
-							+ " As the sound of cascading water echoes all around, Pix roughly curls her [pix.fingers+] up inside of you and starts rapidly stroking your vaginal walls.");
+					"皮克斯的[pix.fingers]深插入了你[pc.pussy+]，你发出[pc.a_moan+]，向她的身上瘫软了下去。"
+							+ "溅落而下的水流声在周围回响着，皮克斯在你体内粗暴地勾起[pix.fingers+]，对着阴道内壁揉摸起来。");
 		}
 		
 		@Override
@@ -669,7 +669,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Clit play";
+			return "玩弄阴蒂";
 		}
 
 		@Override
@@ -680,17 +680,17 @@ public class PixShower {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Sinking her fingers into your [pc.pussy+], Pix lifts her thumb up to your clit."
-							+ " As she presses down and start rubbing your sensitive little button, you let out [pc.a_moan+] and lean back against her for support.",
+					"皮克斯将[pix.finger]缓缓插入了你[pc.pussy+]，而伸出的拇指则正对着你的阴核。"
+							+ "接着拇指便压了下来，对着你敏感的小豆豆揉弄起来，你发出[pc.a_moan+]，仰躺到了她的身上。",
 					
-					"Lifting her thumb up to your delicate clit, Pix presses down and starts rubbing at your little button."
-							+ " With a desperate cry, you lean back into her, your [pc.moans+] almost being drowned out by the sound of running water as she carries on playing with your feminine nub.",
+					"皮克斯竖起拇指对准了你脆弱的阴核，开始揉弄起来。"
+							+ "你忍不住叫了出来，仰躺到了她的身上，你[pc.moans+]声几乎完全被流水声所掩盖，她则继续玩弄着你那雌性的核。",
 					
-					"You gasp and buck back against Pix's hand as you feel her thumb press down on your clit."
-							+ " Leaning back into the dominant dog-girl, you grind yourself down against her hand, letting out [pc.moans+] as she carries on playing with your sensitive button.",
+					"你连连喘息着，感觉到皮克斯的拇指压住阴蒂后，主动向着手的方向顶去。"
+							+ "你躺倒在那高高在上的犬女怀里，发出了[pc.moans+]，用下体对着她的手磨蹭起来，她也不停对着那颗豆豆玩弄着。",
 					
-					"You squeal and lean back against Pix as she presses her thumb up against your sensitive little clit."
-							+ " As she carries on pumping her fingers in and out of your [pc.pussy+], you feel her focusing her efforts on rubbing at your sensitive button, and within moments, you're letting out a series of [pc.moans+].");
+					"皮克斯把拇指压在了你敏感的阴蒂上，害得你你尖声衣角，向后倒去。"
+							+ "她仍旧不停地用手指在你[pc.pussy+]里抽插，你感觉得到她正全神贯注地玩弄着你敏感的豆豆，没过多久，你便已经[pc.moans+]连连。");
 		}
 
 		@Override
@@ -715,7 +715,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Demand promise";
+			return "要求保证";
 		}
 
 		@Override
@@ -730,17 +730,17 @@ public class PixShower {
 
 		@Override
 		public String getDescription() {
-			return "Pix suddenly slams you up against the wall, and, leaning in over your shoulder, she starts softly growling into your ear, "
-						+"[npc.speechNoEffects(Y'know, I've got a little deal for you, so hear me out, ok?"
-						+ " So, like, what's going to happen here, is that when you feel close to getting off, you're gonna promise me that you're gonna come back and do more training in the future, ok?"
-						+ " And I mean a <i>real</i> promise!)]"
+			return "皮克斯忽然把你按在墙上，越过你的肩头，在你耳边轻声低吼道，"
+						+"[npc.speechNoEffects(听着，我想跟你来个交易，给我仔细听着好吗？"
+						+ "是这样的，你觉得自己要去了的时候，必须向我保证，今后你还会再来锻炼，明白吗？"
+						+ "我要的是<i>真正的</i>承诺！)]"
 					+ "<br/><br/>"
-					+ "You aren't really in any position to interrupt, so as Pix continues to press you up against the wall, you listen to her as she offers you her 'deal', "
-					+"[npc.speechNoEffects(Y'know, I can keep doing this all day, so when you're ready to cum for me, you're gonna promise that you're gonna come back to train, ok?!"
-					+ " And if you don't promise, I'm not gonna let you get off!"
-					+ " I sure hope you're listening, 'cause I'm like, totally serious here!)]"
+					+ "你也毫无打断她的余地，只好继续让皮克斯把你按在墙上，聆听她所谓的“交易”，"
+					+"[npc.speechNoEffects(我告诉你，如果我愿意，可以让这个持续一整天，所以如果你准备好高潮了，那就跟我保证，下次一定还会来锻炼，懂了？！"
+					+ "你要是不愿意松口，那你这辈子也别想去！"
+					+ "希望你都听明白了，因为，我可不是跟你开玩笑！)]"
 					+ "<br/><br/>"
-					+ "You try to respond, but Pix quickly slams one of her [pix.hands+] over your mouth, reminding you that you're only allowed to speak when you're about to orgasm.";
+					+ "你正想回应，皮克斯却立刻用一只[pix.hands+]堵住了你的嘴，提醒着你在快要高潮的时候，是不允许说话的。";
 		}
 
 		@Override
@@ -780,7 +780,7 @@ public class PixShower {
 
 		@Override
 		public String getDescription() {
-			return "With a satisfied sigh, Pix finally releases you, and you find yourself collapsing back into her arms, totally exhausted.";
+			return "皮克斯满足地长吁一声，终于把你放开，结果你却瘫倒在了她的怀里，一点力气也没有了。";
 		}
 
 		@Override
@@ -811,17 +811,17 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Prepare";
+			return "准备";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Prepare yourself for it.";
+			return "你能感觉到[npc2.name]马上就要高潮了。做好准备。";
 		}
 		
 		@Override
 		public String getDescription() {
-			return "You find yourself unable to make a move as Pix presses herself against your back; pinning you to the wall of the shower as she prepares to orgasm.";
+			return "皮克斯用全身的力量压住了你的背，让你一动也动不了；她在高潮前夕将你钉在了淋浴间的墙上。";
 		}
 	};
 	
@@ -840,57 +840,57 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Promise";
+			return "保证";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Promise Pix that you'll come back again.";
+			return "向皮克斯保证，你还会再来的。";
 		}
 
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("You can't take any more of Pix's teasing, and as a desperate heat starts to build in your groin, you let out [pc.a_moan+] and do as she asks, "
-										+ "[pc.speech(Ok! I promise to come back and train again! Please, just let me get off!)]."
+			UtilText.nodeContentSB.append("你受不了皮克斯的调戏了，一股难以抑制的热量开始在下体聚集，你发出一声[pc.a_moan+]，听从了她的要求，"
+										+ "[pc.speech(好吧！我保证下次还会来锻炼的！求你了，让我去吧！)]."
 										+ "<br/><br/>"
-										+ "Pix lets out a delighted cry in response, and before you know what's happening, she's darting both of her hands down between your legs and softly growling into your ear, "
-										+ "[pix.speech(Good [pc.girl]! Y'know, I think you deserve a little reward for being such a good little thing!)]");
+										+ "皮克斯愉悦地叫了一声，还没等你反应过来，她就如箭一般将双手塞进了你的股间，在你耳边低吟起来，"
+										+ "[pix.speech(真是乖孩子！听着，这么乖的小家伙应该得到些奖励才是！)]");
 			
 			UtilText.nodeContentSB.append("<br/><br/>");
 			// PENIS ORGASM:
 			
 			if(Main.game.getPlayer().hasPenisIgnoreDildo()){
 				
-				UtilText.nodeContentSB.append("You feel one of Pix's [pix.hands+] wrap around your [pc.cock+], and as she starts furiously jerking you off, she carries on telling you what a good [pc.girl] you've been.");
+				UtilText.nodeContentSB.append("你感到皮克斯用一只[pix.hands+]握住了你[pc.cock+]，随后便用力地撸动起来，她一刻不停地在你耳边诉说着，你有多么的听话。");
 				
 				// Describe cum amount:
-				UtilText.nodeContentSB.append(" You don't last more than a few seconds under her expert touch, and as you feel your [pc.balls+] tense up");
+				UtilText.nodeContentSB.append("在她精妙的手法之下，你没有挺过几秒，便感觉[pc.balls+]一紧");
 				switch (Main.game.getPlayer().getPenisOrgasmCumQuantity()) {
 					case ZERO_NONE:
-						UtilText.nodeContentSB.append(", you let out [pc.a_moan+] as you realise that you're not able to produce even one drop of cum.");
+						UtilText.nodeContentSB.append("，你这才发现自己竟然连一滴都没有了。顿时发出[pc.a_moan+]。");
 						break;
 					case ONE_TRICKLE:
-						UtilText.nodeContentSB.append(", you feel a small trickle of [pc.cum+] squirting");
+						UtilText.nodeContentSB.append("，你感到几滴[pc.cum+]挤了出来");
 						break;
 					case TWO_SMALL_AMOUNT:
-						UtilText.nodeContentSB.append(", you feel a small amount of [pc.cum+] squirting");
+						UtilText.nodeContentSB.append("，你感到有一些[pc.cum+]挤了出来");
 						break;
 					case THREE_AVERAGE:
-						UtilText.nodeContentSB.append(", you feel your [pc.cum+] squirting");
+						UtilText.nodeContentSB.append("，你感到[pc.cum+]挤了出来");
 						break;
 					case FOUR_LARGE:
-						UtilText.nodeContentSB.append(", you feel your [pc.cum+] shooting");
+						UtilText.nodeContentSB.append("，你感到[pc.cum+]射了出来");
 						break;
 					case FIVE_HUGE:
-						UtilText.nodeContentSB.append(", you feel your [pc.cum+] pouring");
+						UtilText.nodeContentSB.append("，你感到[pc.cum+]溢了出来");
 						break;
 					case SIX_EXTREME:
-						UtilText.nodeContentSB.append(", you feel your [pc.cum+] pouring");
+						UtilText.nodeContentSB.append("，你感到[pc.cum+]溢了出来");
 						break;
 					case SEVEN_MONSTROUS:
-						UtilText.nodeContentSB.append(", you feel your [pc.cum+] pouring");
+						UtilText.nodeContentSB.append("，你感到[pc.cum+]溢了出来");
 						break;
 					default:
 						break;
@@ -898,7 +898,7 @@ public class PixShower {
 				
 				// Describe where cum is going:
 				if(Main.game.getPlayer().getPenisOrgasmCumQuantity()!=CumProduction.ZERO_NONE){
-					UtilText.nodeContentSB.append(" out all over the wall in front of you. ");
+					UtilText.nodeContentSB.append("，溅到了面前的墙上。");
 				}
 				
 				UtilText.nodeContentSB.append("<br/><br/>");
@@ -908,16 +908,16 @@ public class PixShower {
 			
 			if (Main.game.getPlayer().getVaginaType()!=VaginaType.NONE) {
 				
-				UtilText.nodeContentSB.append("As Pix presses her [pix.breastRows] [pix.breasts+] into your back, you feel a desperate, shuddering heat crashing up from your [pc.pussy+]."
-						+ " With a little giggle, Pix suddenly thrusts two of her [pix.fingers+] deep into your [pc.pussy+], and you cry out in ecstasy as she uses her other hand to press down and rub against your sensitive little clit."
-						+ " With a final, ear-splitting scream, your climax crashes over you, and you find yourself collapsing back into Pix as you feel your legs giving out from under you.");
+				UtilText.nodeContentSB.append("皮克斯将自己[pix.breastRows][pix.breasts+]压在你的背上，你顿时感到一阵无可抵抗的热流冲向你[pc.pussy+]。"
+						+ "皮克斯轻笑一声，将两根[pix.fingers+]深深地送入了你[pc.pussy+]，又用另一只手对着你敏感的阴核揉搓起来，你在狂喜的快感中浪叫着。"
+						+ "伴随着最后一声刺破耳膜的尖叫，高潮向你袭来，你竟瘫倒在了皮克斯的怀里，双腿已经不听使唤了。");
 			}
 			
 			// MOUND ORGASM:
 			if (!Main.game.getPlayer().hasPenisIgnoreDildo() && Main.game.getPlayer().getVaginaType()==VaginaType.NONE) {
-				UtilText.nodeContentSB.append("With an ear-splitting scream and trembling legs, a crashing wave of pure ecstasy suddenly washes through you."
-						+ " The muscles within your genderless mound start to spasm and contract, and you let out a desperate scream as Pix reaches down and starts rubbing and flicking at your extremely sensitive crotch."
-						+ " With a final, ear-splitting scream, your climax crashes over you, and you find yourself collapsing back into Pix as you feel your legs giving out from under you.");
+				UtilText.nodeContentSB.append("随着一声刺破耳膜的尖叫，你的腿不住颤抖着，仿佛一阵阵纯粹的极乐感在冲刷着你。"
+						+ "皮克斯对着你格外敏感的胯部轻浮揉搓起来，你无性征的下体里，肌肉开始收缩痉挛，口中不禁冒出一声无法抗拒的尖叫。"
+						+ "伴随着最后一声刺破耳膜的尖叫，高潮向你袭来，你竟瘫倒在了皮克斯的怀里，双腿已经不听使唤了。");
 			}
 
 			return UtilText.nodeContentSB.toString();
@@ -948,25 +948,25 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Refuse";
+			return "拒绝";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stay quiet in the hopes that Pix doesn't notice you're about to reach your climax.";
+			return "不发一语，希望皮克斯没注意到你就要高潮了。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You feel a desperate heat rising in your groin, but, not wanting to promise Pix that you'll come back and see her again, you decide to keep quiet and orgasm without her help."
-					+ " As your climax builds and builds, you suddenly find yourself letting out a little [pc.moan]."
+			return "你感到下体泛起一股难以抑制的热流，但你却又不想向皮克斯保证，下次还会来见她，于是决定保持沉默，不用她做什么你照样可以高潮。"
+					+ "你正在逐步临近高潮，但忽然你发出了一小声[pc.moan]。"
 					+ "<br/><br/>"
-					+ "Betrayed by your inability to keep quiet, Pix realises what's going on, and with an angry growl, she grabs your [pc.arms], pinning them behind your back as she slams you into the wall, "
-					+ "[pix.speech(What did I say?! You're <i>not</i> orgasming until you promise to come back! Y'know, I can do this all day!)]"
+					+ "你暴露了，没能保持完全安静，皮克斯也瞬间明白过来，发出一声怒吼，揪住了你的[pc.arms]，反压在背上，把你按朝墙上按去，"
+					+ "[pix.speech(我刚刚怎么说的？！你不发誓就<i>不准</i>高潮！我告诉过你了，我这样一整天都没问题！)]"
 					+ "<br/><br/>"
-					+"She holds you there, pinned up against the wall, for several minutes, and try as you might, you're completely unable to break free."
-					+ " You even try desperately rubbing your crotch up against the wall of the shower, but it's no use, and you feel your climax slowly ebbing away, leaving you incredibly frustrated and horny."
-					+ " Only once it's clear that you've calmed down, does Pix finally release you, and, sliding her hands down over your body, she prepares to bring you to the edge once more...";
+					+"她把你钉在了墙上，一直持续了好几分钟，你无论如何挣扎也无法挣脱。"
+					+ "你甚至绝望到用下体摩擦淋浴间的墙面，但终归是徒劳无功，高潮感渐渐褪去了，你变得格外燥热难耐。"
+					+ "皮克斯确认你确实平静下来后，才终于将你放开，用[pix.hands]在你身上爱抚起来，将你带入另一场高潮的边缘……";
 		}
 
 		@Override
@@ -1000,18 +1000,18 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Prepare";
+			return "准备";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Prepare yourself for it.";
+			return "你能感觉到[npc2.name]马上就要高潮了。做好准备。";
 		}
 		
 		@Override
 		public String getDescription() {
-			return "Pix suddenly presses you up against the wall, and, leaning in over your shoulder, she growls into your ear, "
-					+"[npc.speech(Aww, you ready to cum? Promise that you're gonna come back to train, or else you're never gonna get off!)]";
+			return "皮克斯忽然把你压在墙上，越过你的肩头，在你耳边低吼道，"
+					+"[npc.speech(哦，要去了吗？赶紧发誓吧，你会再来的，不然就别想结束！)]";
 		}
 	};
 	
@@ -1030,7 +1030,7 @@ public class PixShower {
 		
 		@Override
 		public String getActionTitle() {
-			return "Orgasm";
+			return "高潮";
 		}
 
 		@Override
@@ -1040,12 +1040,12 @@ public class PixShower {
 
 		@Override
 		public String getDescription() {
-			return "You hear Pix letting out desperate little whines, and you realise that she's getting off on preventing you from orgasming."
-					+ " Sensing your chance to break free, you try pushing her off of you, but that only seems to increase the intensity of her moans,"
-					+ " and with an ear-splitting scream, she slams you forwards against the wall, grinding her naked [pix.pussy] up against your [pc.ass] as her orgasm washes over her."
+			return "你听到皮克斯的嘴角漏出了小声的呜咽，立刻明白过来，她单单靠着阻止你高潮，就要去了。"
+					+ "你意识到这是个重获自由的好机会，于是准备把她推开，但反而只是让她呻吟得更大声了，"
+					+ "随着一声刺破耳膜的尖叫，她把你按在了墙上，用[pix.pussy]紧紧压住你的[pc.ass]，感受着高潮的到来。"
 					+ "<br/><br/>"
-					+ "After a few moments, she finally recovers, and, straightening up, she happily sighs into your ear, "
-					+ "[pix.speech(Fuck... That was good!)]";
+					+ "过了一会儿，她才终于恢复，直起身子，在你耳边呼出一声愉悦的长叹，"
+					+ "[pix.speech(妈的……太爽了！)]";
 		}
 
 		@Override

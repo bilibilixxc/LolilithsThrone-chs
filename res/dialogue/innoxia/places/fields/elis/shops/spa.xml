@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_shops_spa -->
@@ -9,12 +9,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(9, 24))
-						Push open the door and enter 'Woolly Heaven'.
+						推开门进入“绵绵天堂”。
 					#ELSE
-						As 'Woolly Heaven' is currently closed, you'll have to come back at another time...
+						“绵绵天堂”现在不营业，你得换个时间再来……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -43,9 +43,9 @@
 					<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_elis_spa_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Introduction]]></responseTitle>
+					<responseTitle><![CDATA[介绍]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Tell Penelope who you are.
+						告诉佩内洛普你是谁。
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_introduction]]></nextDialogue>
 				</response>
@@ -54,8 +54,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_spa_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Cosmetics]]></responseTitle>
-					<responseTooltip><![CDATA[Ask Penelope about her cosmetic services...]]></responseTooltip>
+					<responseTitle><![CDATA[化妆包]]></responseTitle>
+					<responseTooltip><![CDATA[问问佩内洛普她的美容服务……]]></responseTooltip>
 					<nextDialogue><![CDATA[BEAUTICIAN_START]]></nextDialogue>
 					<effects><![CDATA[
 						[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'COSMETICS_START'))]
@@ -67,8 +67,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_spa_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Spa (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
-					<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) Give Penelope a hundred and fifty flames in exchange for access to the spa. #ELSE You can't afford to use the spa... #ENDIF]]></responseTooltip>
+					<responseTitle><![CDATA[水疗 (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
+					<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) 给佩内洛普150火币，换取水疗中心的使用权。#ELSE 你用不起水疗中心……#ENDIF]]></responseTooltip>
 					<nextDialogue><![CDATA[#IF(pc.getMoney()>=150)innoxia_places_fields_elis_shops_spa_relax#ELSEnull#ENDIF]]></nextDialogue>
 					<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 					<effects><![CDATA[
@@ -79,8 +79,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_spa_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Massage (#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)]]></responseTitle>
-					<responseTooltip><![CDATA[#IF(pc.getMoney()>=250) Give Penelope two hundred and fifty flames in exchange for receiving a massage. #ELSE You can't afford to get a massage... #ENDIF]]></responseTooltip>
+					<responseTitle><![CDATA[按摩 (#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)]]></responseTitle>
+					<responseTooltip><![CDATA[#IF(pc.getMoney()>=250) 给佩内洛普250火币，来接受按摩。#ELSE 你付不起按摩的钱…… #ENDIF]]></responseTooltip>
 					<nextDialogue><![CDATA[
 						#IF(pc.getMoney()>=250)
 							#IF(!flags.hasFlag(FLAG_innoxia_spa_sheep_introduced))
@@ -107,12 +107,12 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_spa_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Posters]]></responseTitle>
+					<responseTitle><![CDATA[海报]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_spa_talk_posters))
-							You've already asked Penelope about the posters which cover the walls today...
+							你今天已经向佩内洛普打听过墙上贴的海报了……
 						#ELSE
-							Ask Penelope about the posters of her which cover the walls.
+							向佩内洛普打听墙上贴的海报。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -134,12 +134,12 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_spa_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[5]]></index>
-					<responseTitle><![CDATA[Sheep focus]]></responseTitle>
+					<responseTitle><![CDATA[全是绵羊]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(flags.hasFlag(FLAG_innoxia_spa_talk_sheep))
-							You've already asked Penelope about why all of her employees are sheep-morphs today...
+							你今天已经向佩内洛普打听过为什么她所有的雇员都是绵羊化形了……
 						#ELSE
-							Ask Penelope why all of her employees are sheep-morphs.
+							问问佩内洛普为什么她所有的雇员都是绵羊化形。
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -162,8 +162,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_spa_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[0]]></index>
-					<responseTitle><![CDATA[Leave]]></responseTitle>
-					<responseTooltip><![CDATA[Say goodbye to Penelope and exit the spa.]]></responseTooltip>
+					<responseTitle><![CDATA[离开]]></responseTitle>
+					<responseTooltip><![CDATA[和佩内洛普告别，离开水疗中心。]]></responseTooltip>
 					<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_shops_street"/>
 					<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 					<effects><![CDATA[
@@ -210,8 +210,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Relax]]></responseTitle>
-				<responseTooltip><![CDATA[Take some time to relax in the spa...]]></responseTooltip>
+				<responseTitle><![CDATA[放松]]></responseTitle>
+				<responseTooltip><![CDATA[在水疗中心放松一段时间……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_relax_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.applyWash(true, false, SE_CLEANED_SPA, 240+120)]
@@ -240,8 +240,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Daphne]]></responseTitle>
-				<responseTooltip><![CDATA[The next sheep-girl enters the reception area...]]></responseTooltip>
+				<responseTitle><![CDATA[达芙妮]]></responseTitle>
+				<responseTooltip><![CDATA[下一个绵羊女进入接待区……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_intro_next]]></nextDialogue>
 				<effects/>
 			</response>
@@ -260,8 +260,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Farah]]></responseTitle>
-				<responseTooltip><![CDATA[The last of the three sheep-girls enters the reception area...]]></responseTooltip>
+				<responseTitle><![CDATA[法拉]]></responseTitle>
+				<responseTooltip><![CDATA[最后三个绵羊女进入接待区……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_intro_final]]></nextDialogue>
 				<effects/>
 			</response>
@@ -280,8 +280,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Penelope]]></responseTitle>
-				<responseTooltip><![CDATA[With the three sheep-girls introduced, Penelope lets you know what you'll be in for if you choose her...]]></responseTooltip>
+				<responseTitle><![CDATA[佩内洛普]]></responseTitle>
+				<responseTooltip><![CDATA[在介绍了三位绵羊女之后，佩内洛普让你知道如果你选择了她将会得到什么……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_intro_final_penelope]]></nextDialogue>
 				<effects/>
 			</response>
@@ -311,8 +311,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Belle]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Belle that you'd like to receive a massage from her.]]></responseTooltip>
+				<responseTitle><![CDATA[贝儿]]></responseTitle>
+				<responseTooltip><![CDATA[告诉贝儿你愿意接受她的按摩。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_belle_start]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.addStatusEffect(SE_CLEANED_MASSAGED, 260*60)]
@@ -323,8 +323,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Daphne]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Daphne that you'd like to receive a massage from her.]]></responseTooltip>
+				<responseTitle><![CDATA[达芙妮]]></responseTitle>
+				<responseTooltip><![CDATA[告诉达芙妮你愿意接受她的按摩]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_daphne_start]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.addStatusEffect(SE_CLEANED_MASSAGED, 260*60)]
@@ -335,8 +335,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Farah]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Farah that you'd like to receive a massage from her.]]></responseTooltip>
+				<responseTitle><![CDATA[法拉]]></responseTitle>
+				<responseTooltip><![CDATA[告诉法拉你愿意接受她的按摩。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_farah_start]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.addStatusEffect(SE_CLEANED_MASSAGED, 260*60)]
@@ -347,8 +347,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-					<responseTitle><![CDATA[Penelope (#IF(pc.getMoney()>=750)[style.moneyFormat(750, span)]#ELSE[style.moneyFormatUncoloured(750, span)]#ENDIF)]]></responseTitle>
-					<responseTooltip><![CDATA[#IF(pc.getMoney()>=750) Give Penelope an additional seven hundred and fifty flames in exchange for receiving a massage from her. #ELSE You can't afford to get a massage from Penelope... #ENDIF]]></responseTooltip>
+					<responseTitle><![CDATA[佩内洛普(#IF(pc.getMoney()>=750)[style.moneyFormat(750, span)]#ELSE[style.moneyFormatUncoloured(750, span)]#ENDIF)]]></responseTitle>
+					<responseTooltip><![CDATA[#IF(pc.getMoney()>=750) 给佩内洛普额外750火币接受她的按摩#ELSE 你付不起佩内洛普的按摩……#ENDIF]]></responseTooltip>
 					<nextDialogue><![CDATA[#IF(pc.getMoney()>=750)innoxia_places_fields_elis_shops_spa_massage_penelope_start#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-750))]
@@ -361,8 +361,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back ([style.moneyFormat(+250, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Penelope that you've changed your mind and don't want a massage after all...<br/>[style.italicsGood(You will be refunded your two hundred and fifty flames.)]]]></responseTooltip>
+				<responseTitle><![CDATA[返回([style.moneyFormat(+250, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[告诉佩内洛普你改主意了，现在不想按摩了……<br/>[style.italicsGood(你将获得退还的250火币。)]]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_back]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(250))]
@@ -393,8 +393,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Massage]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Belle that you just want her to continue with the massage.]]></responseTooltip>
+				<responseTitle><![CDATA[按摩]]></responseTitle>
+				<responseTooltip><![CDATA[告诉贝儿你只是想让她继续按摩。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_belle_continue_massage]]></nextDialogue>
 				<effects/>
 			</response>
@@ -405,14 +405,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormatUncoloured(100, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormatUncoloured(100, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<100)
-						You don't have enough money to pay for a special groin 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive a special groin 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive a special 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -423,18 +423,18 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormat(100, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormat(100, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Belle a hundred flames in exchange for receiving a special groin 'massage'.
+					给贝儿100火币来接受她的特殊腹股沟“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 						#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-							[style.italicsSex(This will result in Belle giving you a handjob and fingering you.)]
+							[style.italicsSex(这会导致贝儿给你手交并且指交你。)]
 						#ELSE
-							[style.italicsSex(This will result in Belle giving you a handjob.)]
+							[style.italicsSex(这会导致贝儿给你手交。)]
 						#ENDIF
 					#ELSE
-						[style.italicsSex(This will result in Belle fingering you.)]
+						[style.italicsSex(这会导致贝儿指交你。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -484,14 +484,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormatUncoloured(250, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormatUncoloured(250, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<250)
-						You don't have enough money to pay for an oral 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive an oral 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive an oral 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -502,14 +502,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormat(250, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormat(250, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Belle two hundred and fifty flames in exchange for receiving an oral 'massage'.
+					给贝儿250火币来接受她的口交“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						[style.italicsSex(This will result in Belle giving you a blowjob.)]
+						[style.italicsSex(这会导致贝儿给你口交。)]
 					#ELSE
-						[style.italicsSex(This will result in Belle eating you out.)]
+						[style.italicsSex(这会导致贝儿给你舔下体。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -559,8 +559,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for sex with Belle.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没钱和贝儿做爱。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -569,10 +569,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormat(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormat(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Belle five hundred flames in exchange for having sex with her.
-					<br/>[style.italicsSex(This will result in having sex with Belle.)]
+					给贝儿500火币来和她做爱。
+					<br/>[style.italicsSex(这会导致你和贝儿做爱。)]
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-500))]
@@ -604,8 +604,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Bondage ([style.moneyFormatUncoloured(750, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for bondage sex with Belle.]]></responseTooltip>
+				<responseTitle><![CDATA[绑缚([style.moneyFormatUncoloured(750, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没钱和贝儿玩束缚性爱。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -614,10 +614,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Bondage ([style.moneyFormat(750, span)])]]></responseTitle>
+				<responseTitle><![CDATA[束缚 ([style.moneyFormat(750, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Belle seven hundred and fifty flames in exchange for having bondage sex with her.
-					<br/>[style.italicsSex(This will result in binding Belle to the massage table and having sex with her.)]
+					给贝儿750火币来和她玩束缚性爱。
+					<br/>[style.italicsSex(这会导致你把贝儿绑在按摩桌上，然后和她做爱。)]
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-750))]
@@ -655,8 +655,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Belle has finished giving you your massage, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在贝儿给你按摩完了。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_BELLE_FINISHED'))]
@@ -668,8 +668,8 @@
 	</scene>
 	
 	<scene id="massage_belle_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Belle has finished giving you your special service...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[贝儿做完了你的特殊服务……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/shops/spa">MASSAGE_BELLE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -679,8 +679,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Belle has finished giving you your special service, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在，贝儿已经完成了你的特殊服务。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_BELLE_FINISHED_END'))]
@@ -702,8 +702,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Massage]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Daphne that you just want her to continue with the massage.]]></responseTooltip>
+				<responseTitle><![CDATA[按摩]]></responseTitle>
+				<responseTooltip><![CDATA[告诉达芙妮你只是想让她继续按摩。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_daphne_continue_massage]]></nextDialogue>
 				<effects><![CDATA[
 				]]></effects>
@@ -715,14 +715,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormatUncoloured(100, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormatUncoloured(100, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<100)
-						You don't have enough money to pay for a special groin 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive a special groin 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive a special 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -733,18 +733,18 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormat(100, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormat(100, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Daphne a hundred flames in exchange for receiving a special groin 'massage'.
+					给达芙妮100火币来接受她的特殊腹股沟“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 						#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-							[style.italicsSex(This will result in Daphne giving you a handjob and fingering you.)]
+							[style.italicsSex(这会导致达芙妮给你手交并且指交你。)]
 						#ELSE
-							[style.italicsSex(This will result in Daphne giving you a handjob.)]
+							[style.italicsSex(这会导致达芙妮给你手交。)]
 						#ENDIF
 					#ELSE
-						[style.italicsSex(This will result in Daphne fingering you.)]
+						[style.italicsSex(这会导致达芙妮指交你。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -794,14 +794,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormatUncoloured(250, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormatUncoloured(250, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<250)
-						You don't have enough money to pay for an oral 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive an oral 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive an oral 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -812,14 +812,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormat(250, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormat(250, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Daphne two hundred and fifty flames in exchange for receiving an oral 'massage'.
+					给达芙妮250火币来接受她的口交“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						[style.italicsSex(This will result in Daphne giving you a blowjob.)]
+						[style.italicsSex(这会导致达芙妮给你口交。)]
 					#ELSE
-						[style.italicsSex(This will result in Daphne eating you out.)]
+						[style.italicsSex(这会导致达芙妮给你舔下体。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -869,8 +869,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for sex with Daphne.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没钱和达芙妮做爱。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -879,11 +879,11 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormat(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormat(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Daphne five hundred flames in exchange for having sex with her.
-					<br/>[style.italicsSex(This will result in having sex with Daphne.)]
-				]]></responseTooltip>
+					给达芙妮1000火币来和她做爱。
+					<br/>[style.italicsSex(这将导致你与达芙妮发生服从型性爱。)]
+]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-500))]
 				]]></effects>
@@ -914,8 +914,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Pet-play ([style.moneyFormatUncoloured(750, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for pet-play sex with Daphne.]]></responseTooltip>
+				<responseTitle><![CDATA[宠物Play([style.moneyFormatUncoloured(750, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没钱和达芙妮玩宠物play。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -924,11 +924,11 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Pet-play ([style.moneyFormat(750, span)])]]></responseTitle>
+				<responseTitle><![CDATA[宠物Play([style.moneyFormat(750, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Daphne seven hundred and fifty flames in exchange for having pet-play sex with her.
-					<br/>[style.italicsSex(This will result in Daphne pretending to be a feral sheep and only being able to be fucked in the all-fours position.)]
-				]]></responseTooltip>
+					给佩内洛普750火币来和她玩宠物play。
+					<br/>[style.italicsSex(这将导致达芙妮假装成一只兽态绵羊，只能四肢着地被你操。)]
+]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#daphne.equipOutfitSheep()]
@@ -967,8 +967,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Daphne has finished giving you your massage, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在达芙妮给你按摩完了。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_DAPHNE_FINISHED'))]
@@ -980,8 +980,8 @@
 	</scene>
 	
 	<scene id="massage_daphne_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Daphne has finished giving you your special service...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[达芙妮做完了你的特殊服务……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/shops/spa">MASSAGE_DAPHNE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -991,8 +991,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Daphne has finished giving you your special service, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在，达芙妮已经完成了你的特殊服务。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_DAPHNE_FINISHED_END'))]
@@ -1014,8 +1014,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Massage]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Farah that you just want her to continue with the massage.]]></responseTooltip>
+				<responseTitle><![CDATA[按摩]]></responseTitle>
+				<responseTooltip><![CDATA[告诉法拉你只是想让她继续按摩。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_farah_continue_massage]]></nextDialogue>
 				<effects><![CDATA[
 				]]></effects>
@@ -1027,14 +1027,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormatUncoloured(100, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormatUncoloured(100, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<100)
-						You don't have enough money to pay for a special groin 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive a special groin 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive a special 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1045,18 +1045,18 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormat(100, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormat(100, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Farah a hundred flames in exchange for receiving a special groin 'massage'.
+					给法拉100火币来接受她的特殊腹股沟“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 						#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-							[style.italicsSex(This will result in Farah dominantly giving you a handjob and fingering you.)]
+							[style.italicsSex(这会导致法拉支配性地给你手交并且指交你。)]
 						#ELSE
-							[style.italicsSex(This will result in Farah dominantly giving you a handjob.)]
+							[style.italicsSex(这会导致法拉支配性地给你手交。)]
 						#ENDIF
 					#ELSE
-						[style.italicsSex(This will result in Farah dominantly fingering you.)]
+						[style.italicsSex(这会导致法拉支配性地指交你。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -1106,14 +1106,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormatUncoloured(250, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormatUncoloured(250, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<250)
-						You don't have enough money to pay for an oral 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive an oral 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive an oral 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1124,14 +1124,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormat(250, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormat(250, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Farah two hundred and fifty flames in exchange for receiving an oral 'massage'.
+					给法拉250火币来接受她的口交“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						[style.italicsSex(This will result in Farah dominantly giving you a blowjob.)]
+						[style.italicsSex(这会导致法拉支配性地给你口交。)]
 					#ELSE
-						[style.italicsSex(This will result in Farah dominantly eating you out.)]
+						[style.italicsSex(这会导致法拉支配性地给你舔下体。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -1181,8 +1181,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for sex with Farah.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没钱和法拉做爱。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -1191,10 +1191,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormat(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormat(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Farah five hundred flames in exchange for having sex with her.
-					<br/>[style.italicsSex(This will result in having sex with Farah.)]
+					给法拉500火币来和她做爱。
+					<br/>[style.italicsSex(这会导致你和法拉做爱。)]
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-500))]
@@ -1226,12 +1226,12 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Fertile sex ([style.moneyFormatUncoloured(750, span)])]]></responseTitle>
+				<responseTitle><![CDATA[受孕性爱([style.moneyFormatUncoloured(750, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(farah.isPregnant())
-						Farah is already pregnant, so she can't offer you the option of having fertile sex with her.
+						法拉已经怀孕了，所以你不能和她玩受孕性爱。
 					#ELSE
-						You don't have enough money to pay for fertile sex with Farah.
+						你没钱和法拉玩受孕性爱。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1242,10 +1242,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Fertile sex ([style.moneyFormat(750, span)])]]></responseTitle>
+				<responseTitle><![CDATA[受孕性爱([style.moneyFormat(750, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Farah seven hundred and fifty flames in exchange for having fertile sex with her.
-					<br/>[style.italicsSex(This will result in Farah taking a fertility pill, thereby giving you the chance to impregnate her during sex.)]
+					给法拉750火币和她玩受孕性爱。Give Farah seven hundred and fifty flames in exchange for having fertile sex with her.
+					<br/>[style.italicsSex(这会导致法拉吃下促孕药，从而让你有机会在做爱的时候使她怀孕。)]
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-750))]
@@ -1284,8 +1284,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Farah has finished giving you your massage, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在法拉给你按摩完了。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_FARAH_FINISHED'))]
@@ -1297,8 +1297,8 @@
 	</scene>
 	
 	<scene id="massage_farah_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Farah has finished giving you your special service...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[法拉做完了你的特殊服务……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/shops/spa">MASSAGE_FARAH_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1308,8 +1308,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Farah has finished giving you your special service, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在，法拉已经完成了你的特殊服务。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_FARAH_FINISHED_END'))]
@@ -1327,8 +1327,8 @@
 				[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_FARAH_AFTER_SEX_FERTILE_RESULT'))]
 			#ENDIF
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Farah has finished giving you your special service...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[法拉做完了你的特殊服务……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/shops/spa">MASSAGE_FARAH_AFTER_SEX_FERTILE</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1338,8 +1338,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Farah has finished giving you your special service, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在，法拉已经完成了你的特殊服务。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_FARAH_FINISHED_END'))]
@@ -1362,8 +1362,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Massage]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Penelope that you just want her to continue with the massage.]]></responseTooltip>
+				<responseTitle><![CDATA[按摩]]></responseTitle>
+				<responseTooltip><![CDATA[告诉佩内洛普你只是想让她继续按摩。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_continue_massage]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_PENELOPE_CONTINUE'))]
@@ -1376,14 +1376,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormatUncoloured(200, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormatUncoloured(200, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<200)
-						You don't have enough money to pay for a special groin 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive a special groin 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive a special 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1394,18 +1394,18 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormat(200, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormat(200, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope two hundred flames in exchange for receiving a special groin 'massage'.
+					给佩内洛普200火币来接受她的特殊腹股沟“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 						#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-							[style.italicsSex(This will result in Penelope submissively giving you a handjob and fingering you.)]
+							[style.italicsSex(这会导致佩内洛普支配性地给你手交并且指交你。)]
 						#ELSE
-							[style.italicsSex(This will result in Penelope submissively giving you a handjob.)]
+							[style.italicsSex(这会导致佩内洛普支配性地给你手交。)]
 						#ENDIF
 					#ELSE
-						[style.italicsSex(This will result in Penelope submissively fingering you.)]
+						[style.italicsSex(这会导致佩内洛普支配性地指交你。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -1455,14 +1455,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<500)
-						You don't have enough money to pay for an oral 'massage'.
+						你没有足够的钱付给口交“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive an oral 'massage'.
+						你没有生殖器，不能接受口交“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive an oral 'massage'.
+						你的腹股沟受限，不能接受口交“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1473,14 +1473,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormat(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormat(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope five hundred flames in exchange for receiving an oral 'massage'.
+					给佩内洛普500火币来接受她的口交“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						[style.italicsSex(This will result in Penelope submissively giving you a blowjob.)]
+						[style.italicsSex(这会导致佩内洛普服从地给你口交。)]
 					#ELSE
-						[style.italicsSex(This will result in Penelope submissively eating you out.)]
+						[style.italicsSex(这会导致佩内洛普服从地给你舔下体。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
@@ -1530,8 +1530,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormatUncoloured(1000, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for sex with Penelope.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormatUncoloured(1000, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没有足够的钱来支付与佩内洛普做爱的费用。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -1540,11 +1540,11 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormat(1000, span)])]]></responseTitle>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormat(1000, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope a thousand flames in exchange for having sex with her.
-					<br/>[style.italicsSex(This will result in having dominant sex with Penelope.)]
-				]]></responseTooltip>
+					给佩内洛普1000火币来和她做爱。
+					<br/>[style.italicsSex(这将导致你与佩内洛普发生支配型性爱。)]
+]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-1000))]
 				]]></effects>
@@ -1575,8 +1575,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Fashion show ([style.moneyFormatUncoloured(1500, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for fashion show sex with Penelope.]]></responseTooltip>
+				<responseTitle><![CDATA[舞台秀([style.moneyFormatUncoloured(1500, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没有足够的钱来支付与佩内洛普时装秀做爱的费用。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -1586,10 +1586,10 @@
 				<colour><![CDATA[GENERIC_SEX_AS_DOM]]></colour>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Fashion show ([style.moneyFormat(1500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[舞台秀([style.moneyFormat(1500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope one thousand five hundred flames in exchange for having fashion show sex with her.
-					<br/>[style.italicsSex(This will result in Penelope changing into an outfit of your choice and performing a mock fashion show, before either submissively or dominantly having sex with you.)]
+					给佩内洛普1500火币，让她和你来一场时装秀做爱。
+					<br/>[style.italicsSex(这会导致佩内洛普换上你选择的套装，模拟时装秀，然后以顺从或支配的方式与你做爱。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_fashion_show]]></nextDialogue>
 				<effects><![CDATA[
@@ -1600,8 +1600,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Reverse massage]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Penelope that you want to swap things around and give her a massage.]]></responseTooltip>
+				<responseTitle><![CDATA[反向按摩]]></responseTitle>
+				<responseTooltip><![CDATA[告诉佩内洛普，你想交换一下，给她做个按摩。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_continue_massage_reversal]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_PENELOPE_CONTINUE_REVERSAL'))]
@@ -1615,14 +1615,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormatUncoloured(200, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormatUncoloured(200, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<200)
-						You don't have enough money to pay for a special groin 'massage'.
+						你没有足够的钱付给特殊腹股沟“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive a special groin 'massage'.
+						你没有生殖器，不能接受特殊腹股沟“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive a special 'massage'.
+						你的腹股沟受限，不能接受特殊腹股沟“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1633,20 +1633,20 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Groin 'massage' ([style.moneyFormat(200, span)])]]></responseTitle>
+				<responseTitle><![CDATA[下体“按摩”([style.moneyFormat(200, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope two hundred flames in exchange for receiving a special groin 'massage'.
+					给佩内洛普200火币来接受她的特殊腹股沟“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 						#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-							[style.italicsSex(This will result in Penelope dominantly giving you a handjob and fingering you.)]
+							[style.italicsSex(这会导致佩内洛普支配性地给你手交并且指交你。)]
 						#ELSE
-							[style.italicsSex(This will result in Penelope dominantly giving you a handjob.)]
+							[style.italicsSex(这会导致佩内洛普支配性地给你手交。)]
 						#ENDIF
 					#ELSE
-						[style.italicsSex(This will result in Penelope dominantly fingering you.)]
+						[style.italicsSex(这会导致佩内洛普支配性地指交你。)]
 					#ENDIF
-				]]></responseTooltip>
+]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-200))]
@@ -1695,14 +1695,14 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormatUncoloured(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()<500)
-						You don't have enough money to pay for an oral 'massage'.
+						你没有足够的钱付给口交“按摩”。
 					#ELSEIF(!pc.hasPenisIgnoreDildo() && !pc.hasVagina())
-						As you do not have any genitals, you cannot receive an oral 'massage'.
+						你没有生殖器，不能接受口交“按摩”。
 					#ELSE
-						As you're unable to access your groin, you cannot receive an oral 'massage'.
+						你的腹股沟受限，不能接受口交“按摩”。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1713,16 +1713,16 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Oral 'massage' ([style.moneyFormat(500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[口交“按摩” ([style.moneyFormat(500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope five hundred flames in exchange for receiving an oral 'massage'.
+					给佩内洛普500火币来接受她的口交“按摩”。
 					<br/>
 					#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						[style.italicsSex(This will result in Penelope dominantly giving you a blowjob.)]
+						[style.italicsSex(这会导致佩内洛普支配地给你口交。)]
 					#ELSE
-						[style.italicsSex(This will result in Penelope dominantly eating you out.)]
+						[style.italicsSex(这会导致佩内洛普支配地给你舔下体。)]
 					#ENDIF
-				]]></responseTooltip>
+]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-500))]
 				]]></effects>
@@ -1770,8 +1770,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormatUncoloured(1000, span)])]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have enough money to pay for sex with Penelope.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormatUncoloured(1000, span)])]]></responseTitle>
+				<responseTooltip><![CDATA[你没有足够的钱来支付与佩内洛普做爱的费用。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -1780,10 +1780,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Sex ([style.moneyFormat(1000, span)])]]></responseTitle>
+				<responseTitle><![CDATA[做爱 ([style.moneyFormat(1000, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope a thousand flames in exchange for having sex with her.
-					<br/>[style.italicsSex(This will result in having submissive sex with Penelope.)]
+					给佩内洛普1000火币来和她做爱。
+					<br/>[style.italicsSex(这将导致你与佩内洛普发生服从型性爱。)]
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-1000))]
@@ -1815,12 +1815,12 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Double facial ([style.moneyFormatUncoloured(1500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[双人面交 ([style.moneyFormatUncoloured(1500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						You cannot access your mouth, and so cannot receive a double facial from Penelope.
+						你的嘴被限制，所以不能让佩内洛普给你双重面交。
 					#ELSE
-						You don't have enough money to pay for a double facial from Penelope.
+						你没钱付给佩内洛普让她给你双重面交。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1831,10 +1831,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Double facial ([style.moneyFormat(1500, span)])]]></responseTitle>
+				<responseTitle><![CDATA[双人面交 ([style.moneyFormat(1500, span)])]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Give Penelope one thousand five hundred flames in exchange for getting a double facial from her.
-					<br/>[style.italicsSex(This will result in Penelope dominantly making you suck her cock, before cumming and squirting over your face.)]
+					给佩内洛普1500火币来和她双重面交。
+					<br/>[style.italicsSex(这将导致佩内洛普支配性地让你为她口交，并且射在你脸上。)]
 				]]></responseTooltip>
 				<nextDialogue/><effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-1500))]
@@ -1881,8 +1881,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Penelope has finished giving you your massage, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在佩内洛普给你按摩完了。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_PENELOPE_FINISHED'))]
@@ -1902,8 +1902,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've finished giving Penelope a massage, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在你给佩内洛普按摩完了。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_PENELOPE_FINISHED_REVERSAL'))]
@@ -1923,10 +1923,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[At the ball]]></responseTitle>
+				<responseTitle><![CDATA[舞会盛装]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Penelope to wear her 'At the ball' outfit for her fashion show.
-					</br>[style.italicsPinkLight(Penelope will wear an elegant outfit consisting of a flowing ballgown, elbow-length gloves, and expensive jewellery.)]
+					建议佩内洛普穿着她的“舞会盛装”套装去时装秀。
+					</br>[style.italicsPinkLight(佩内洛普将穿一套优雅的套装，包括飘逸的舞裙、及肘手套以及昂贵的珠宝。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_fashion_show_show]]></nextDialogue>
 				<effects><![CDATA[
@@ -1938,10 +1938,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[About town]]></responseTitle>
+				<responseTitle><![CDATA[城市休闲装]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Penelope to wear her 'About town' outfit for her fashion show.
-					</br>[style.italicsPinkLight(Penelope will wear a stylish, casual outfit consisting of a blouse, cardigan, and tight-fitting jeans.)]
+					建议佩内洛普穿着她的“城市休闲装”套装去时装秀。
+					</br>[style.italicsPinkLight(佩内洛普将穿一套时尚休闲装，包括衬衫、开衫外套和紧身牛仔裤。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_fashion_show_show]]></nextDialogue>
 				<effects><![CDATA[
@@ -1953,10 +1953,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[Drunken alley]]></responseTitle>
+				<responseTitle><![CDATA[醉汉巷]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Penelope to wear her 'Drunken alley' outfit for her fashion show.
-					</br>[style.italicsPinkLight(Penelope will wear a daring, bright-pink outfit consisting of a clubbing dress, strappy sandals, and plenty of accessories.)]
+					建议佩内洛普穿着她的“醉汉巷”套装去时装秀。
+					</br>[style.italicsPinkLight(佩内洛普将穿一套大胆的亮粉色服装，包括夜店连衣裙、绑带凉鞋和繁复的饰品。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_fashion_show_show]]></nextDialogue>
 				<effects><![CDATA[
@@ -1968,10 +1968,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[Less is more]]></responseTitle>
+				<responseTitle><![CDATA[色即是空]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Penelope to wear her 'Less is more' outfit for her fashion show.
-					</br>[style.italicsPinkLight(Penelope will wear dark-purple lingerie consisting of a chemise, thong, and stockings with garter belt.)]
+					建议佩内洛普穿着她的“色即是空”套装去时装秀。
+					</br>[style.italicsPinkLight(佩内洛普将穿一套深紫色内衣，包括轻薄吊带连衣裙、丁字裤和吊带丝袜。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_fashion_show_show]]></nextDialogue>
 				<effects><![CDATA[
@@ -1983,10 +1983,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[Latex indulgence]]></responseTitle>
+				<responseTitle><![CDATA[乳胶癖]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Penelope to wear her 'Latex indulgence' outfit for her fashion show.
-					</br>[style.italicsPinkLight(Penelope will wear a bright-red latex outfit including a corset, stiletto heels, and an insertable dildo.)]
+					建议佩内洛普穿着她的“乳胶癖”套装去时装秀。
+					</br>[style.italicsPinkLight(佩内洛普将穿一套亮红色乳胶套装，包括紧身胸衣、细高跟鞋和插入式假阳具。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_penelope_fashion_show_show]]></nextDialogue>
 				<effects><![CDATA[
@@ -2006,9 +2006,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
+				<responseTitle><![CDATA[操她]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Fuck Penelope while she's wearing the outfit you've chosen for her.
+					让佩内洛普穿着你给她选好的套装，操她。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
@@ -2034,9 +2034,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Submit to Penelope and ask her to fuck you while she's wearing the outfit you've chosen for her.
+					屈服于佩内洛普，请求她穿着你给她选好的套装操你。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
@@ -2063,8 +2063,8 @@
 	</scene>
 	
 	<scene id="massage_penelope_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Penelope has finished giving you your special service...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[佩内洛普做完了你的特殊服务……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/shops/spa">MASSAGE_PENELOPE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2074,8 +2074,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Penelope has finished giving you your special service, there's nothing left to do except continue on out into the reception area.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在，佩内洛普已经完成了你的特殊服务。你除了继续前往接待区外，没什么可做的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_spa_massage_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/spa', 'MASSAGE_PENELOPE_FINISHED_END'))]

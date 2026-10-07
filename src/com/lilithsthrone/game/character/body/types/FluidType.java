@@ -50,8 +50,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_DOLL = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.DOLL,
-			Util.newArrayListOfValues("doll-"),
-			Util.newArrayListOfValues("doll-"),
+			Util.newArrayListOfValues("玩偶"),
+			Util.newArrayListOfValues("玩偶"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -66,8 +66,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_ANGEL = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.ANGEL,
-			Util.newArrayListOfValues("angel-"),
-			Util.newArrayListOfValues("angel-"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -78,8 +78,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_DEMON = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.DEMON,
-			Util.newArrayListOfValues("demon-", "demonic-"),
-			Util.newArrayListOfValues("demon-", "demonic-"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -90,8 +90,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_DOG_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.DOG_MORPH,
-			Util.newArrayListOfValues("dog-", "canine-"),
-			Util.newArrayListOfValues("bitch-", "canine-"),
+			Util.newArrayListOfValues("犬", "犬类"),
+			Util.newArrayListOfValues("犬", "犬类"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -102,8 +102,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_WOLF_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.WOLF_MORPH,
-			Util.newArrayListOfValues("wolf-", "lupine-"),
-			Util.newArrayListOfValues("wolf-", "lupine-"),
+			Util.newArrayListOfValues("狼"),
+			Util.newArrayListOfValues("狼"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -115,8 +115,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_FOX_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.FOX_MORPH,
-			Util.newArrayListOfValues("fox-", "vulpine-"),
-			Util.newArrayListOfValues("vixen-", "vulpine-"),
+			Util.newArrayListOfValues("狐狸"),
+			Util.newArrayListOfValues("狐狸"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -127,8 +127,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_CAT_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.CAT_MORPH,
-			Util.newArrayListOfValues("cat-", "feline-"),
-			Util.newArrayListOfValues("cat-", "feline-"),
+			Util.newArrayListOfValues("猫", "猫类"),
+			Util.newArrayListOfValues("猫", "猫类"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -139,8 +139,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_SQUIRREL_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.SQUIRREL_MORPH,
-			Util.newArrayListOfValues("squirrel-", "rodent-"),
-			Util.newArrayListOfValues("squirrel-", "rodent-"),
+			Util.newArrayListOfValues("松鼠", "啮齿动物"),
+			Util.newArrayListOfValues("松鼠", "啮齿动物"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -151,8 +151,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_RAT_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.RAT_MORPH,
-			Util.newArrayListOfValues("rat-", "rodent-"),
-			Util.newArrayListOfValues("rat-", "rodent-"),
+			Util.newArrayListOfValues("鼠", "啮齿动物"),
+			Util.newArrayListOfValues("鼠", "啮齿动物"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -163,8 +163,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_RABBIT_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.RABBIT_MORPH,
-			Util.newArrayListOfValues("rabbit-"),
-			Util.newArrayListOfValues("rabbit-"),
+			Util.newArrayListOfValues("兔子"),
+			Util.newArrayListOfValues("兔子"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -175,8 +175,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_BAT_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.BAT_MORPH,
-			Util.newArrayListOfValues("bat-"),
-			Util.newArrayListOfValues("bat-"),
+			Util.newArrayListOfValues("蝙蝠"),
+			Util.newArrayListOfValues("蝙蝠"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -187,8 +187,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_ALLIGATOR_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.ALLIGATOR_MORPH,
-			Util.newArrayListOfValues("alligator-", "reptilian-"),
-			Util.newArrayListOfValues("alligator-", "reptilian-"),
+			Util.newArrayListOfValues("鳄鱼", "爬行动物"),
+			Util.newArrayListOfValues("鳄鱼", "爬行动物"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -199,8 +199,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_HORSE_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.HORSE_MORPH,
-			Util.newArrayListOfValues("stallion-", "horse-", "equine-"),
-			Util.newArrayListOfValues("mare-", "horse-", "equine-"),
+			Util.newArrayListOfValues("马", "马类"),
+			Util.newArrayListOfValues("马", "马类"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -212,8 +212,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_REINDEER_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.REINDEER_MORPH,
-			Util.newArrayListOfValues("reindeer-"),
-			Util.newArrayListOfValues("reindeer-"),
+			Util.newArrayListOfValues("驯鹿"),
+			Util.newArrayListOfValues("驯鹿"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -225,8 +225,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_COW_MORPH = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.COW_MORPH,
-			Util.newArrayListOfValues("bull-", "bovine-"),
-			Util.newArrayListOfValues("cow-", "bovine-"),
+			Util.newArrayListOfValues("牛", "牛类"),
+			Util.newArrayListOfValues("牛", "牛类"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -238,8 +238,8 @@ public class FluidType {
 	public static AbstractFluidType CUM_HARPY = new AbstractFluidType(FluidTypeBase.CUM,
 			FluidFlavour.CUM,
 			Race.HARPY,
-			Util.newArrayListOfValues("harpy-", "avian-"),
-			Util.newArrayListOfValues("harpy-", "avian-"),
+			Util.newArrayListOfValues("哈比", "鸟"),
+			Util.newArrayListOfValues("哈比", "鸟"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -263,8 +263,8 @@ public class FluidType {
 	public static AbstractFluidType GIRL_CUM_DOLL = new AbstractFluidType(FluidTypeBase.GIRLCUM,
 			FluidFlavour.GIRL_CUM,
 			Race.DOLL,
-			Util.newArrayListOfValues("doll-"),
-			Util.newArrayListOfValues("doll-"),
+			Util.newArrayListOfValues("玩偶"),
+			Util.newArrayListOfValues("玩偶"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -281,8 +281,8 @@ public class FluidType {
 			Race.ANGEL,
 			null,
 			null,
-			Util.newArrayListOfValues("angelic"),
-			Util.newArrayListOfValues("angelic"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -292,8 +292,8 @@ public class FluidType {
 			Race.DEMON,
 			null,
 			null,
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -303,8 +303,8 @@ public class FluidType {
 			Race.DOG_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("canine"),
-			Util.newArrayListOfValues("canine"),
+			Util.newArrayListOfValues("犬类"),
+			Util.newArrayListOfValues("犬类"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -314,8 +314,8 @@ public class FluidType {
 			Race.WOLF_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("lupine"),
-			Util.newArrayListOfValues("lupine"),
+			Util.newArrayListOfValues("狼类"),
+			Util.newArrayListOfValues("狼类"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -325,8 +325,8 @@ public class FluidType {
 			Race.FOX_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("vulpine"),
-			Util.newArrayListOfValues("vulpine"),
+			Util.newArrayListOfValues("狐狸"),
+			Util.newArrayListOfValues("狐狸"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -336,8 +336,8 @@ public class FluidType {
 			Race.CAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("feline"),
-			Util.newArrayListOfValues("feline"),
+			Util.newArrayListOfValues("猫类"),
+			Util.newArrayListOfValues("猫类"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -347,8 +347,8 @@ public class FluidType {
 			Race.SQUIRREL_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("squirrel"),
-			Util.newArrayListOfValues("squirrel"),
+			Util.newArrayListOfValues("松鼠"),
+			Util.newArrayListOfValues("松鼠"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -358,8 +358,8 @@ public class FluidType {
 			Race.RAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("rat"),
-			Util.newArrayListOfValues("rat"),
+			Util.newArrayListOfValues("老鼠"),
+			Util.newArrayListOfValues("老鼠"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -369,8 +369,8 @@ public class FluidType {
 			Race.RABBIT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("rabbit"),
-			Util.newArrayListOfValues("rabbit"),
+			Util.newArrayListOfValues("兔子"),
+			Util.newArrayListOfValues("兔子"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -380,8 +380,8 @@ public class FluidType {
 			Race.BAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("bat"),
-			Util.newArrayListOfValues("bat"),
+			Util.newArrayListOfValues("蝙蝠"),
+			Util.newArrayListOfValues("蝙蝠"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -391,8 +391,8 @@ public class FluidType {
 			Race.ALLIGATOR_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("alligator"),
-			Util.newArrayListOfValues("alligator"),
+			Util.newArrayListOfValues("鳄鱼"),
+			Util.newArrayListOfValues("鳄鱼"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -402,8 +402,8 @@ public class FluidType {
 			Race.HORSE_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("equine"),
-			Util.newArrayListOfValues("equine"),
+			Util.newArrayListOfValues("马类"),
+			Util.newArrayListOfValues("马类"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -413,8 +413,8 @@ public class FluidType {
 			Race.REINDEER_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("reindeer"),
-			Util.newArrayListOfValues("reindeer"),
+			Util.newArrayListOfValues("驯鹿"),
+			Util.newArrayListOfValues("驯鹿"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -424,8 +424,8 @@ public class FluidType {
 			Race.COW_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("bovine"),
-			Util.newArrayListOfValues("bovine"),
+			Util.newArrayListOfValues("牛类"),
+			Util.newArrayListOfValues("牛类"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -435,8 +435,8 @@ public class FluidType {
 			Race.HARPY,
 			null,
 			null,
-			Util.newArrayListOfValues("avian"),
-			Util.newArrayListOfValues("avian"),
+			Util.newArrayListOfValues("鸟类"),
+			Util.newArrayListOfValues("鸟类"),
 			Util.newArrayListOfValues(
 					FluidModifier.SLIMY)) {
 	};
@@ -456,8 +456,8 @@ public class FluidType {
 	public static AbstractFluidType MILK_DOLL = new AbstractFluidType(FluidTypeBase.MILK,
 			FluidFlavour.MILK,
 			Race.DOLL,
-			Util.newArrayListOfValues("doll-"),
-			Util.newArrayListOfValues("doll-"),
+			Util.newArrayListOfValues("玩偶"),
+			Util.newArrayListOfValues("玩偶"),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(
@@ -474,8 +474,8 @@ public class FluidType {
 			Race.ANGEL,
 			null,
 			null,
-			Util.newArrayListOfValues("angelic"),
-			Util.newArrayListOfValues("angelic"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -484,8 +484,8 @@ public class FluidType {
 			Race.COW_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("bovine"),
-			Util.newArrayListOfValues("bovine"),
+			Util.newArrayListOfValues("牛类"),
+			Util.newArrayListOfValues("牛类"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -494,8 +494,8 @@ public class FluidType {
 			Race.DEMON,
 			null,
 			null,
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -504,8 +504,8 @@ public class FluidType {
 			Race.DOG_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("canine"),
-			Util.newArrayListOfValues("canine"),
+			Util.newArrayListOfValues("犬类"),
+			Util.newArrayListOfValues("犬类"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -514,8 +514,8 @@ public class FluidType {
 			Race.WOLF_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("lupine"),
-			Util.newArrayListOfValues("lupine"),
+			Util.newArrayListOfValues("狼类"),
+			Util.newArrayListOfValues("狼类"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -524,8 +524,8 @@ public class FluidType {
 			Race.FOX_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("vulpine"),
-			Util.newArrayListOfValues("vulpine"),
+			Util.newArrayListOfValues("狐狸"),
+			Util.newArrayListOfValues("狐狸"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -534,8 +534,8 @@ public class FluidType {
 			Race.CAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("feline"),
-			Util.newArrayListOfValues("feline"),
+			Util.newArrayListOfValues("猫类"),
+			Util.newArrayListOfValues("猫类"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -544,8 +544,8 @@ public class FluidType {
 			Race.SQUIRREL_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("squirrel"),
-			Util.newArrayListOfValues("squirrel"),
+			Util.newArrayListOfValues("松鼠"),
+			Util.newArrayListOfValues("松鼠"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -554,8 +554,8 @@ public class FluidType {
 			Race.RAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("rat"),
-			Util.newArrayListOfValues("rat"),
+			Util.newArrayListOfValues("老鼠"),
+			Util.newArrayListOfValues("老鼠"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -564,8 +564,8 @@ public class FluidType {
 			Race.RABBIT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("rabbit"),
-			Util.newArrayListOfValues("rabbit"),
+			Util.newArrayListOfValues("兔子"),
+			Util.newArrayListOfValues("兔子"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -574,8 +574,8 @@ public class FluidType {
 			Race.BAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("bat"),
-			Util.newArrayListOfValues("bat"),
+			Util.newArrayListOfValues("蝙蝠"),
+			Util.newArrayListOfValues("蝙蝠"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -584,8 +584,8 @@ public class FluidType {
 			Race.ALLIGATOR_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("alligator"),
-			Util.newArrayListOfValues("alligator"),
+			Util.newArrayListOfValues("鳄鱼"),
+			Util.newArrayListOfValues("鳄鱼"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -594,8 +594,8 @@ public class FluidType {
 			Race.HORSE_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("equine"),
-			Util.newArrayListOfValues("equine"),
+			Util.newArrayListOfValues("马类"),
+			Util.newArrayListOfValues("马类"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -604,8 +604,8 @@ public class FluidType {
 			Race.REINDEER_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("reindeer"),
-			Util.newArrayListOfValues("reindeer"),
+			Util.newArrayListOfValues("驯鹿"),
+			Util.newArrayListOfValues("驯鹿"),
 			Util.newArrayListOfValues()) {
 	};
 
@@ -614,8 +614,8 @@ public class FluidType {
 			Race.HARPY,
 			null,
 			null,
-			Util.newArrayListOfValues("avian"),
-			Util.newArrayListOfValues("avian"),
+			Util.newArrayListOfValues("鸟类"),
+			Util.newArrayListOfValues("鸟类"),
 			Util.newArrayListOfValues()) {
 	};
 	

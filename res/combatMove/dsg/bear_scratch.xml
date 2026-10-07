@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Five Claw Strike]]></name>
+	<name><![CDATA[五爪打击]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] claw-tipped digits to deliver a blow to [npc.her] target, dealing formattedDamageInflicted damage.
+		使用[npc.her]的爪尖向[npc.her]的目标发动一次打击，造成formattedDamageInflicted伤害。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -104,9 +104,9 @@
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
 		#IF(!game.isSillyModeEnabled())
-			Available to characters who have a bear arm type.
+			仅适用于拥有熊前肢的角色。
 		#ELSE
-			Available to characters who have the right to bear arms.
+			仅适用于拥有使用熊前肢能力的角色。
 		#ENDIF
 	]]></availabilityDescription>
 	
@@ -138,7 +138,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target's physique is less than one-third of the attacker's physique.
+		目标的体格要小于攻击者体格的三分之一。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -150,17 +150,17 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] bear claws to deliver a powerful blow to [npc2.name], dealing formattedDamageInflicted damage.
+		使用[npc.her]的熊掌向[npc2.name]发动强力打击，造成formattedDamageInflicted伤害。
 		#IF(npc.isArmMovementHindered())
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] arms are restricted!)]
+			[style.italicsTerrible(由于[npc.her]双臂受限，伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] bear claws to deliver a powerful blow to [npc.her] target, dealing formattedDamageInflicted damage.
+		使用[npc.her]的熊掌向[npc.her]的目标发动强力打击，造成formattedDamageInflicted伤害。
 		#IF(npc.isArmMovementHindered())
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] arms are restricted!)]
+			[style.italicsTerrible(由于[npc.her]双臂受限，伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionNoTarget>
 	
@@ -176,17 +176,17 @@
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
 			#IF(npc.isArmMovementHindered())
-				As [npc.her] arms are restricted, [npc.name] [npc.verb(fail)] to hit [npc2.name], and [npc.verb(end)] up doing no damage at all...
+				[npc.name]双臂受限，没能击中[npc2.name]，没有造成任何伤害……
 			#ELSE
-				[npc.Name] [npc.verb(lunge)] at [npc2.name] with [npc.her] claws and [npc.verb(leave)] five gashes in [npc2.namePos] aura!
+				[npc.Name]猛扑向[npc2.name]，用[npc.her]的爪子在[npc2.namePos]的灵气上撕开五道裂缝！
 			#ENDIF
 			formattedHealthDamage
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc.NamePos] strike was extremely effective!
+			[npc.NamePos]的爪击造成了超出预期的效果！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] been crippled by the attack!
+			[npc2.Name]已被攻击的效果削弱！
 		]]></critEffectDescription>
 	</performMove>
 	

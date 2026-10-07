@@ -386,7 +386,7 @@ public class Colour {
 		double desaturationValue = 0.5; // 0.7 is the default from Color.class's desaturate() method
 		double brightnessValue = 0.9; // 1.0 is the default from Color.class's desaturate() method
 		String id = getId();
-		return new Colour(isMetallic(), colour.deriveColor(0, desaturationValue, brightnessValue, 1.0), lightColour.deriveColor(0, desaturationValue, brightnessValue, 1.0), "dull "+getName()) {
+		return new Colour(isMetallic(), colour.deriveColor(0, desaturationValue, brightnessValue, 1.0), lightColour.deriveColor(0, desaturationValue, brightnessValue, 1.0), "暗"+getName()) {
 			@Override
 			public String getId() {
 				return id+"_DESAT";

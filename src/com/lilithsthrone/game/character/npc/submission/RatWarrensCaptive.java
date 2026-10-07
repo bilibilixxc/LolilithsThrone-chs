@@ -96,7 +96,7 @@ public class RatWarrensCaptive extends NPC {
 			
 			setName(Name.getRandomTriplet(this.getSubspecies()));
 			this.setPlayerKnowsName(false);
-			this.setGenericName("captive");
+			this.setGenericName("俘虏");
 
 			Main.game.getCharacterUtils().randomiseBody(this, true);
 			setStartingBody(false);
@@ -281,26 +281,26 @@ public class RatWarrensCaptive extends NPC {
 	public String getDescription() {
 		StringBuilder sb = new StringBuilder();
 		if(this.getHomeWorldLocation()==WorldType.RAT_WARRENS) {
-			sb.append("This woman is one of Murk's 'milkers', and is whored out to anyone who can afford her."
-					+ " While not being fucked by Murk or some stranger, this 'milker' earns her name by having her breasts milked by an arcane-powered machine.");
+			sb.append("这个女人是默克的一个“挤奶器”，而且只要付钱就能跟她做。"
+					+ "没有被默克或其他什么人操的时候，就会一直被奥术驱动的机器持续挤奶，这也是“挤奶器”名号的来由。");
 			
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ratWarrensMilkersBackground)) {
 				sb.append("<br/>"
-						+ "After asking Murk about the milkers, you discovered that they were originally kidnapped and forced to be milked against their will."
-						+ " Over time, however, the rat-boy totally broke their will to resist, to the point where they now desperately plead to get fucked by him...");
+						+ "向默克打听过后，你发现产奶工都是被绑架来的，违背其意愿进行着榨乳。"
+						+ "但是随着时间的过去，那个鼠男完全击碎了其反抗的意图，以至于如今摇尾乞怜，求着挨操了……");
 			}
 			
 		} else {
 			sb.append(UtilText.parse(this,
-					"This [npc.race] used to be one of Murk's 'milkers', and was whored out to anyone who can afford [npc.herHim]."
-						+ " While not being fucked by Murk or some stranger, this 'milker' used to earn [npc.her] name by having [npc.her] breasts milked by an arcane-powered machine."
+					"这个[npc.race]曾经是默克的“挤奶器”，而且只要付钱就能跟[npc.herHim]做。"
+						+ "没有被默克或其他什么人操的时候，就会一直被奥术驱动的机器持续挤奶，这也是“挤奶器”名号的来由。"
 						+ "<br/>"
-						+ "Claire informed you that [npc.she] was originally kidnapped by Murk and forced to be milked against [npc.her] will."
-						+ " Over time, however, the rat-boy totally broke [npc.her] will to resist,"
-							+ " to the point where [npc.she] was so desperate to continue being milked and fucked that the Enforcers had no other choice but to enslave [npc.herHim] to give [npc.herHim] the life [npc.she] craved."
+						+ "克莱尔告诉你[npc.she]最初是被默克绑架而来，违背其意愿进行着榨乳。"
+						+ "但是随着时间的过去，那个鼠男完全击碎了[npc.her]反抗的意图，"
+							+ "以至于如今哀求着想被挤奶被操，于是执法者也不得不奴役了[npc.herHim]，提供给[npc.herHim]期待的生活。"
 						+ "<br/>"
-						+ "Having agreed to take care of [npc.herHim], Claire signed possession of this slave over to you."
-						+ " It's now completely up to you whether you subject [npc.herHim] to the abusive treatment [npc.she] craves, or to instead choose to give [npc.herHim] a different type of life..."));
+						+ "你同意照顾[npc.herHim]后，克莱尔便将奴隶的所有权签字转交给了你。"
+						+ "现在要让[npc.herHim]沉浸于[npc.she]所期望的虐待中，还是给[npc.herHim]全新的生活，都取决于你了……"));
 		}
 		return sb.toString();
 	}

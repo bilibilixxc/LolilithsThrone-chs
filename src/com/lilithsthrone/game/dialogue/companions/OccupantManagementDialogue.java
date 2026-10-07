@@ -125,7 +125,7 @@ public class OccupantManagementDialogue {
 	
 	private static Response getSlaveryResponse(int index) {
 		if (index == 1) {
-			return new Response("Room List", "View the management screen for all rooms.", ROOM_MANAGEMENT) {
+			return new Response("房间列表", "查看全部房间的管理界面。", ROOM_MANAGEMENT) {
 				@Override
 				public void effects() {
 					Main.game.getDialogueFlags().setManagementCompanion(null);
@@ -133,7 +133,7 @@ public class OccupantManagementDialogue {
 			};
 			
 		} else if (index == 2) {
-			return new Response("Occupant List", "Enter the management screen for all slaves and friendly occupants.", SLAVE_LIST_MANAGEMENT) {
+			return new Response("入住者名单", "进入所有奴隶和友人住客的管理界面。", SLAVE_LIST_MANAGEMENT) {
 				@Override
 				public DialogueNode getNextDialogue() {
 					return OccupantManagementDialogue.getSlaveryManagementDialogue(dialogueToExitTo, Main.game.getDialogueFlags().getSlaveTrader());
@@ -146,10 +146,10 @@ public class OccupantManagementDialogue {
 			
 		} else if (index == 5) {
 			if(Main.game.getOccupancyUtil().getGeneratedBalance()==0) {
-				return new Response("Collect: "+UtilText.formatAsMoneyUncoloured(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"), "Your current balance is 0...",  null);
+				return new Response("收集："+UtilText.formatAsMoneyUncoloured(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"), "你当前的结余为0……",  null);
 				
 			} else if(Main.game.getOccupancyUtil().getGeneratedBalance()>0) {
-				return new Response("Collect: "+UtilText.formatAsMoney(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"), "Collect the money that you've earned through your slaves' activities.",  OCCUPANT_OVERVIEW) {
+				return new Response("收集："+UtilText.formatAsMoney(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"), "收集由使唤奴隶赚取的利润。",  OCCUPANT_OVERVIEW) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getCurrentDialogueNode();
@@ -162,11 +162,11 @@ public class OccupantManagementDialogue {
 				
 			} else {
 				if(Main.game.getPlayer().getMoney()<Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance())) {
-					return new Response("Pay: "+UtilText.formatAsMoneyUncoloured(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span"),
-							"You don't have enough money to pay off the accumulated debt from the upkeep of your slaves and rooms.",  null);
+					return new Response("支付: "+UtilText.formatAsMoneyUncoloured(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span"),
+							"你没有足够的钱来偿还维护奴隶和房间所积累的债务。",  null);
 				}
 				
-				return new Response("Pay: "+UtilText.formatAsMoney(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span", PresetColour.GENERIC_BAD), "Pay off the accumulated debt from the upkeep of your slaves and rooms.",  OCCUPANT_OVERVIEW) {
+				return new Response("支付: "+UtilText.formatAsMoney(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span", PresetColour.GENERIC_BAD), "还清因维护奴隶和房间而累积的债务。",  OCCUPANT_OVERVIEW) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getCurrentDialogueNode();
@@ -179,7 +179,7 @@ public class OccupantManagementDialogue {
 			}
 			
 		} else if (index == 0) {
-			return new Response("Back", "Exit the occupancy ledger.", dialogueToExitTo==null?Main.game.getDefaultDialogue():dialogueToExitTo) {
+			return new Response("返回", "退出住户名单。", dialogueToExitTo==null?Main.game.getDefaultDialogue():dialogueToExitTo) {
 				@Override
 				public void effects() {
 					Main.game.getDialogueFlags().setManagementCompanion(null);
@@ -192,7 +192,7 @@ public class OccupantManagementDialogue {
 		}
 	}
 	
-	public static final DialogueNode OCCUPANT_OVERVIEW = new DialogueNode("Slavery Overview", ".", true) {
+	public static final DialogueNode OCCUPANT_OVERVIEW = new DialogueNode("奴隶总览", "。", true) {
 		
 		@Override
 		public DialogueNodeType getDialogueNodeType() {
@@ -209,28 +209,28 @@ public class OccupantManagementDialogue {
 			// Overview:
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width' style='text-align:center;'>"
-						+ "<h6 style='color:"+PresetColour.GENERIC_EXPERIENCE.toWebHexString()+"; text-align:center;'>Totals</h6>"
+						+ "<h6 style='color:"+PresetColour.GENERIC_EXPERIENCE.toWebHexString()+"; text-align:center;'>总计</h6>"
 						+ "<div class='container-full-width' style='text-align:center; margin-bottom:0;'>"
 							+ "<div style='width:10%; float:left; font-weight:bold; margin:0; padding:0;'>"
-								+ "Slaves"
+								+ "奴隶"
 							+ "</div>"
 							+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-								+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Income</b>"
+								+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>收入</b>"
 							+"</div>"
 							+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-								+ "<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Upkeep</b>"
+								+ "<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>维护费</b>"
 							+"</div>"
 							+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Profit</b>"
+								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>利润</b>"
 							+"</div>"
 							+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-								+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Funds</b>"
+								+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>现收入</b>"
 							+"</div>"
 							+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-								+ "<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Payments</b>"
+								+ "<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>支付</b>"
 							+"</div>"
 							+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Balance</b>"
+								+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>收支</b>"
 							+"</div>"
 						+ "</div>"
 						+ "<div class='container-full-width inner' style='text-align:center;'>"
@@ -238,13 +238,13 @@ public class OccupantManagementDialogue {
 								+ Main.game.getPlayer().getSlavesOwned().size()
 							+ "</div>"
 							+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
-								+ UtilText.formatAsMoney(income)+"/day"
+								+ UtilText.formatAsMoney(income)+"/天"
 							+"</div>"
 							+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
-								+ UtilText.formatAsMoney(upkeep, "b", PresetColour.GENERIC_BAD)+"/day"
+								+ UtilText.formatAsMoney(upkeep, "b", PresetColour.GENERIC_BAD)+"/天"
 							+"</div>"
 							+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
-								+ UtilText.formatAsMoney(income-upkeep, "b", (income-upkeep<0?PresetColour.GENERIC_BAD:PresetColour.TEXT))+"/day"
+								+ UtilText.formatAsMoney(income-upkeep, "b", (income-upkeep<0?PresetColour.GENERIC_BAD:PresetColour.TEXT))+"/天"
 							+"</div>"
 							+ "<div style='width:15%; float:left; font-weight:bold; margin:0; padding:0;'>"
 								+ UtilText.formatAsMoney(Main.game.getOccupancyUtil().getGeneratedIncome(), "b")
@@ -263,31 +263,31 @@ public class OccupantManagementDialogue {
 			// Logs:
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width' style='text-align:center;'>"
-						+ "<h6 style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+"; text-align:center;'>Activity Log</h6>");
+						+ "<h6 style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+"; text-align:center;'>活动日志</h6>");
 			// Buttons:
 			for(int i=6; i>=0; i--) {
 				UtilText.nodeContentSB.append("<div id='SLAVE_DAY_"+i+"' class='normal-button' style='width:12%; margin:1%;"+(Main.game.getDayNumber()-i==dayNumber?"color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";":"")+"'>"
 						+ (i==0
-							?"Today"
+							?"今天"
 							:(i==1
-								?"Yesterday"
-								:Main.game.getDateNow().minusDays(i).getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH)))
+								?"昨天"
+								:Main.game.getDateNow().minusDays(i).getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.CHINESE)))
 						+ "</div>");
 			}
 			
 			// Headers:
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center; margin-bottom:0;'>"
 							+ "<div style='width:10%; float:left; font-weight:bold; margin:0; padding:0;'>"
-								+ "Time"
+								+ "时间"
 							+ "</div>"
 							+ "<div style='width:15%; float:left; font-weight:bold; margin:0; padding:0;'>"
-								+ "Slave"
+								+ "奴隶"
 							+ "</div>"
 							+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-								+ "Event"
+								+ "事件"
 							+"</div>"
 							+ "<div style='float:left; width:60%; font-weight:bold; margin:0; padding:0;'>"
-								+ "Description"
+								+ "描述"
 							+"</div>"
 						+ "</div>"
 						+ "<div class='container-full-width' style='text-align:center; margin-bottom:0;'>");
@@ -304,7 +304,7 @@ public class OccupantManagementDialogue {
 					}
 				}
 				if(filtered>0) {
-					UtilText.nodeContentSB.append("<div class='container-full-width inner' style='background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'>[style.italicsBad(Filtered events: "+filtered+")]</div>");
+					UtilText.nodeContentSB.append("<div class='container-full-width inner' style='background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'>[style.italicsBad(过滤事件: "+filtered+")]</div>");
 				}
 				for(SlaveryEventLogEntry entry : entries) {
 					if(count%2==0) {
@@ -331,7 +331,7 @@ public class OccupantManagementDialogue {
 				}
 			}
 			if(count==0) {
-				UtilText.nodeContentSB.append("<div class='container-full-width inner' style='background:"+PresetColour.BACKGROUND.toWebHexString()+";'>[style.colourDisabled(No events for this day...)]</div>");
+				UtilText.nodeContentSB.append("<div class='container-full-width inner' style='background:"+PresetColour.BACKGROUND.toWebHexString()+";'>[style.colourDisabled(这一天没有事件……)]</div>");
 			}
 			
 			UtilText.nodeContentSB.append("</div>"
@@ -342,11 +342,11 @@ public class OccupantManagementDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index==0) {
-				return "Room";
+				return "房间";
 			} else if(index==1) {
-				return "Filter (type)";
+				return "过滤(类型)";
 			} else if(index==2) {
-				return "Filter (slave)";
+				return "过滤(奴隶)";
 			}
 			return null;
 		}
@@ -360,7 +360,7 @@ public class OccupantManagementDialogue {
 					return getSlaveryResponse(index);
 				}
 				if(index==1) {
-					return new Response("Add all", "Add all types to the filter.", OCCUPANT_OVERVIEW) {
+					return new Response("添加所有", "将所有类型都添加至过滤。", OCCUPANT_OVERVIEW) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.GENERIC_GOOD;
@@ -372,7 +372,7 @@ public class OccupantManagementDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Clear all", "Remove all types from the filter.", OCCUPANT_OVERVIEW) {
+					return new Response("清除所有", "从过滤中移除所有类型。", OCCUPANT_OVERVIEW) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.GENERIC_BAD;
@@ -386,7 +386,7 @@ public class OccupantManagementDialogue {
 				}
 				if(index-3<SlaveEventType.values().length) {
 					SlaveEventType type = SlaveEventType.values()[index-3];
-					return new Response(type.getName(), "Click to filter events by this type:<br/><i>"+type.getDescription()+"</i>", OCCUPANT_OVERVIEW) {
+					return new Response(type.getName(), "通过点击过滤该类事件:<br/><i>"+type.getDescription()+"</i>", OCCUPANT_OVERVIEW) {
 						@Override
 						public Colour getHighlightColour() {
 							if(eventTypeFilterExclusions.contains(type)) {
@@ -412,7 +412,7 @@ public class OccupantManagementDialogue {
 					return getSlaveryResponse(index);
 				}
 				if(index==1) {
-					return new Response("Add all", "Add all slaves to the filter.", OCCUPANT_OVERVIEW) {
+					return new Response("添加所有", "将所有奴隶添加至过滤。", OCCUPANT_OVERVIEW) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.GENERIC_GOOD;
@@ -424,7 +424,7 @@ public class OccupantManagementDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Clear all", "Remove all slaves from the filter.", OCCUPANT_OVERVIEW) {
+					return new Response("清除所有", "从过滤中移除所有奴隶。", OCCUPANT_OVERVIEW) {
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.GENERIC_BAD;
@@ -446,7 +446,7 @@ public class OccupantManagementDialogue {
 						return null;
 					}
 					GameCharacter slaveInner = slave;
-					return new Response(UtilText.parse(slave, "[npc.Name]"), "Click to filter this slave in or out of displayed events.", OCCUPANT_OVERVIEW) {
+					return new Response(UtilText.parse(slave, "[npc.Name]"), "通过点击过滤该奴隶的时间是否显示。", OCCUPANT_OVERVIEW) {
 						@Override
 						public Colour getHighlightColour() {
 							if(slaveIdFilterExclusions.contains(slaveId)) {
@@ -471,7 +471,7 @@ public class OccupantManagementDialogue {
 	};
 	
 	
-	public static final DialogueNode ROOM_MANAGEMENT = new DialogueNode("Room Management", ".", true) {
+	public static final DialogueNode ROOM_MANAGEMENT = new DialogueNode("管理房间", "。", true) {
 
 		@Override
 		public DialogueNodeType getDialogueNodeType() {
@@ -489,7 +489,7 @@ public class OccupantManagementDialogue {
 			float obedienceChange = place.getHourlyObedienceChange();
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width' style='text-align:center;'>"
-						+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>Current Location</h6>"
+						+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>当前位置</h6>"
 						+ getRoomHeader()
 						+ getRoomEntry(!place.isAbleToBeUpgraded(), true, cell, charactersPresent, affectionChange, obedienceChange)
 					+"</div>");
@@ -507,7 +507,7 @@ public class OccupantManagementDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Back", "Return to the previous screen.", OCCUPANT_OVERVIEW);
+				return new Response("返回", "回到上一界面。", OCCUPANT_OVERVIEW);
 				
 			} else {
 				return null;
@@ -518,25 +518,25 @@ public class OccupantManagementDialogue {
 	private static String getRoomHeader() {
 		return "<div class='container-full-width' style='margin-bottom:0;'>"
 					+ "<div style='width:15%; float:left; font-weight:bold; margin:0; padding:0;'>"
-						+ "Room Name"
+						+ "房间名称"
 					+ "</div>"
 					+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
-						+ "Occupants"
+						+ "住户"
 					+ "</div>"
 					+ "<div style='float:left; width:10%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<b>Capacity</b>"
+						+ "<b>容量</b>"
 					+"</div>"
 					+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>Affection</b>"
+						+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>好感</b>"
 					+"</div>"
 					+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>Obedience</b>"
+						+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>服从</b>"
 					+"</div>"
 					+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Upkeep</b>"
+						+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>维护费</b>"
 					+"</div>"
 					+ "<div style='float:left; width:10%; font-weight:bold; margin:0; padding:0;'>"
-						+ "Actions"
+						+ "行动"
 					+"</div>"
 				+ "</div>";
 	}
@@ -561,7 +561,7 @@ public class OccupantManagementDialogue {
 			}
 		}
 		if(i==0) {
-			miscDialogueSB.append("<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>Empty</b>");
+			miscDialogueSB.append("<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>空闲</b>");
 		}
 		
 		miscDialogueSB.append("</div>"
@@ -570,11 +570,11 @@ public class OccupantManagementDialogue {
 						+"</div>"
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ "<span style='color:"+(affectionChange==0?PresetColour.BASE_GREY:(affectionChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(affectionChange>0?"+":"")
-								+decimalFormat.format(affectionChange)+"</span>/hour"
+								+decimalFormat.format(affectionChange)+"</span>/小时"
 						+"</div>"
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ "<span style='color:"+(obedienceChange==0?PresetColour.BASE_GREY:(obedienceChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(obedienceChange>0?"+":"")
-								+decimalFormat.format(obedienceChange)+"</span>/hour"
+								+decimalFormat.format(obedienceChange)+"</span>/小时"
 						+"</div>"
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ (disabled
@@ -583,7 +583,7 @@ public class OccupantManagementDialogue {
 										?UtilText.formatAsMoney(-place.getUpkeep(), "span", PresetColour.GENERIC_BAD)
 										:(place.getUpkeep()==0
 											?UtilText.formatAsMoney(-place.getUpkeep(), "span", PresetColour.TEXT_GREY)
-											:UtilText.formatAsMoney(-place.getUpkeep(), "span", PresetColour.GENERIC_GOOD))))+"/day"
+											:UtilText.formatAsMoney(-place.getUpkeep(), "span", PresetColour.GENERIC_GOOD))))+"/天"
 						+"</div>"
 						+ "<div style='float:left; width:10%; margin:0 auto; padding:0; display:inline-block; text-align:center;'>"
 							+ (disabled
@@ -659,14 +659,14 @@ public class OccupantManagementDialogue {
 	
 	public static Cell cellToInspect;
 	
-	public static final DialogueNode ROOM_UPGRADES = new DialogueNode("Room Management", ".", true) {
+	public static final DialogueNode ROOM_UPGRADES = new DialogueNode("管理房间", "。", true) {
 		@Override
 		public DialogueNodeType getDialogueNodeType() {
 			return DialogueNodeType.OCCUPANT_MANAGEMENT;
 		}
 		@Override
 		public String getLabel() {
-			return cellToInspect.getPlace().getName()+" Management";
+			return "管理"+cellToInspect.getPlace().getName();
 		}
 		@Override
 		public String getContent() {
@@ -674,25 +674,25 @@ public class OccupantManagementDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<div class='container-full-width' style='text-align:center;'>"
-							+ "<h6 style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+"; text-align:center;'>Overview (Total Values for this Room)</h6>"
+							+ "<h6 style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+"; text-align:center;'>总览(该房间的所有数据)</h6>"
 							+"<div class='container-full-width' style='margin-bottom:0;'>"
 								+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
-									+ "Name"
+									+ "名称"
 								+ "</div>"
 								+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
-									+ "Occupants"
+									+ "住户"
 								+ "</div>"
 								+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-									+ "<b>Capacity</b>"
+									+ "<b>容量</b>"
 								+"</div>"
 								+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-									+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>Affection</b>"
+									+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>好感</b>"
 								+"</div>"
 								+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-									+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>Obedience</b>"
+									+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>服从</b>"
 								+"</div>"
 								+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-									+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Upkeep</b>"
+									+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>维护费</b>"
 								+"</div>"
 							+ "</div>");
 			
@@ -705,7 +705,7 @@ public class OccupantManagementDialogue {
 					"<div class='container-full-width inner' style='margin-bottom:0;'>"
 							+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
 								+ "<form style='float:left; width:85%; margin:0; padding:0;'><input type='text' id='nameInput' value='"+ UtilText.parseForHTMLDisplay(cellToInspect.getPlace().getName())+ "' style='width:100%; margin:0; padding:0;'></form>"
-								+ "<div class='SM-button' id='rename_room_button' style='float:left; width:15%; height:28px; line-height:28px; margin:0; padding:0;'>"
+								+ "<div class='SM-button' id='rename_room_button' style='float:left; width:15%; height:22px; line-height:22px; margin:0; padding:0;'>"
 									+ "&#10003;"
 								+ "</div>"
 							+ "</div>"
@@ -720,7 +720,7 @@ public class OccupantManagementDialogue {
 				}
 			}
 			if(i==0) {
-				UtilText.nodeContentSB.append("<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>Empty</b>");
+				UtilText.nodeContentSB.append("<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>空闲</b>");
 			}
 			
 			UtilText.nodeContentSB.append(
@@ -730,16 +730,16 @@ public class OccupantManagementDialogue {
 							+"</div>"
 							+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 								+ "<span style='color:"+(affectionChange==0?PresetColour.BASE_GREY:(affectionChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(affectionChange>0?"+":"")
-									+decimalFormat.format(affectionChange)+"</span>/hour"
+									+decimalFormat.format(affectionChange)+"</span>/小时"
 							+"</div>"
 							+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 								+ "<span style='color:"+(obedienceChange==0?PresetColour.BASE_GREY:(obedienceChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(obedienceChange>0?"+":"")
-									+decimalFormat.format(obedienceChange)+"</span>/hour"
+									+decimalFormat.format(obedienceChange)+"</span>/小时"
 							+"</div>"
 							+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 								+ (place.getUpkeep()>0
 											?UtilText.formatAsMoney(-place.getUpkeep(), "span", PresetColour.GENERIC_BAD)
-											:UtilText.formatAsMoney(-place.getUpkeep(), "span", PresetColour.GENERIC_GOOD))+"/day"
+											:UtilText.formatAsMoney(-place.getUpkeep(), "span", PresetColour.GENERIC_GOOD))+"/天"
 							+"</div>"
 						+ "</div>"
 						+ "</div>");
@@ -747,7 +747,7 @@ public class OccupantManagementDialogue {
 			
 			// Normal upgrades:
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-											+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>Modifications</h6>"
+											+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>改造</h6>"
 											+ getRoomUpgradeHeader());
 			
 			List<AbstractPlaceUpgrade> coreUpgrades = new ArrayList<>();
@@ -764,7 +764,7 @@ public class OccupantManagementDialogue {
 			if(i==0) {
 				UtilText.nodeContentSB.append(
 						"<div class='container-full-width inner' style='background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'>"
-								+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>No Modifications Available</b>"
+								+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>无改造可用</b>"
 						+ "</div>");
 			}
 			
@@ -772,8 +772,8 @@ public class OccupantManagementDialogue {
 			
 			// Core upgrades:
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-					+ "<h6 style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+"; text-align:center;'>Core Modifications</h6>"
-					+"<p><i>Purchasing a [style.boldArcane(core modification)] will remove [style.boldBad(all)] other modifications in this room!</i></p>"
+					+ "<h6 style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+"; text-align:center;'>核心改造</h6>"
+					+"<p><i>购买[style.boldArcane(核心改造)]会移除当前房间余下的[style.boldBad(所有)]改造！</i></p>"
 					+ getRoomUpgradeHeader());
 
 			
@@ -791,7 +791,7 @@ public class OccupantManagementDialogue {
 			if(i==0) {
 				UtilText.nodeContentSB.append(
 						"<div class='container-full-width inner' style='background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'>"
-								+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>No Core Modifications Available</b>"
+								+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>无可用的关键修改</b>"
 						+ "</div>");
 			}
 			
@@ -805,11 +805,11 @@ public class OccupantManagementDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 5) {
 				if(Main.game.getOccupancyUtil().getGeneratedBalance()==0) {
-					return new Response("Collect: "+UtilText.formatAsMoneyUncoloured(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"), "Your current balance is 0...",  null);
+					return new Response("收集："+UtilText.formatAsMoneyUncoloured(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"), "你当前的结余为0……",  null);
 					
 				} else if(Main.game.getOccupancyUtil().getGeneratedBalance()>0) {
-					return new Response("Collect: "+UtilText.formatAsMoney(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"),
-							"Collect the money that you've earned through your slaves' activities.",  ROOM_UPGRADES) {
+					return new Response("收集："+UtilText.formatAsMoney(Main.game.getOccupancyUtil().getGeneratedBalance(), "span"),
+							"收集通过奴隶活动赚得的金钱。",  ROOM_UPGRADES) {
 						@Override
 						public DialogueNode getNextDialogue() {
 							return Main.game.getCurrentDialogueNode();
@@ -822,12 +822,12 @@ public class OccupantManagementDialogue {
 					
 				} else {
 					if(Main.game.getPlayer().getMoney()<Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance())) {
-						return new Response("Pay: "+UtilText.formatAsMoneyUncoloured(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span"),
-								"You don't have enough money to pay off the accumulated debt from the upkeep of your slaves and rooms.",  null);
+						return new Response("支付: "+UtilText.formatAsMoneyUncoloured(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span"),
+								"你没有足够的钱来偿还维护奴隶和房间所积累的债务。",  null);
 					}
 					
-					return new Response("Pay: "+UtilText.formatAsMoney(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span", PresetColour.GENERIC_BAD),
-							"Pay off the accumulated debt from the upkeep of your slaves and rooms.",  ROOM_UPGRADES) {
+					return new Response("支付: "+UtilText.formatAsMoney(Math.abs(Main.game.getOccupancyUtil().getGeneratedBalance()), "span", PresetColour.GENERIC_BAD),
+							"支付由维护奴隶和房间所积累的债务。",  ROOM_UPGRADES) {
 						@Override
 						public DialogueNode getNextDialogue() {
 							return Main.game.getCurrentDialogueNode();
@@ -840,7 +840,7 @@ public class OccupantManagementDialogue {
 				}
 				
 			} else if(index==0) {
-				return new Response("Back", "Return to the previous screen.", ROOM_UPGRADES) {
+				return new Response("返回", "回到上一界面。", ROOM_UPGRADES) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -855,25 +855,25 @@ public class OccupantManagementDialogue {
 	private static String getRoomUpgradeHeader() {
 		return "<div class='container-full-width' style='margin-bottom:0;'>"
 					+ "<div style='width:30%; float:left; font-weight:bold; margin:0; padding:0;'>"
-						+ "Upgrade"
+						+ "升级"
 					+ "</div>"
 					+ "<div style='float:left; width:10%; font-weight:bold; margin:0; padding:0;'>"
-						+ "Capacity"
+						+ "容量"
 					+"</div>"
 					+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<span style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>Affection</span>"
+						+ "<span style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>好感</span>"
 					+"</div>"
 					+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<span style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>Obedience</span>"
+						+ "<span style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>服从</span>"
 					+"</div>"
 					+ "<div style='float:left; width:10%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<span style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Upkeep</span>"
+						+ "<span style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>维护费</span>"
 					+"</div>"
 					+ "<div style='float:left; width:10%; font-weight:bold; margin:0; padding:0;'>"
-						+ "<span style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Cost</span>"
+						+ "<span style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>花费</span>"
 					+"</div>"
 					+ "<div style='float:left; width:10%; font-weight:bold; margin:0; padding:0;'>"
-						+ "Actions"
+						+ "行动"
 					+"</div>"
 				+ "</div>";
 	}
@@ -910,22 +910,22 @@ public class OccupantManagementDialogue {
 						+ "</div>"
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ (affectionChange>0
-									?"<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>+"+decimalFormat.format(affectionChange)+ "</b>/hour"
+									?"<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>+"+decimalFormat.format(affectionChange)+ "</b>/小时"
 									:(affectionChange<0
-											?"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>"+decimalFormat.format(affectionChange)+ "</b>/hour"
-											:"[style.colourDisabled(0)]/hour"))
+											?"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>"+decimalFormat.format(affectionChange)+ "</b>/小时"
+											:"[style.colourDisabled(0)]/小时"))
 						+"</div>"
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ (obedienceChange>0
-									?"<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>+"+decimalFormat.format(obedienceChange)+ "</b>/hour"
+									?"<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>+"+decimalFormat.format(obedienceChange)+ "</b>/小时"
 									:(obedienceChange<0
-											?"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>"+decimalFormat.format(obedienceChange)+ "</b>/hour"
-											:"[style.colourDisabled(0)]/hour"))
+											?"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>"+decimalFormat.format(obedienceChange)+ "</b>/小时"
+											:"[style.colourDisabled(0)]/小时"))
 						+"</div>"
 						+ "<div style='float:left; width:10%; margin:0; padding:0;'>"
 							+ (upgrade.getUpkeep()>0
 									?UtilText.formatAsMoney(upgrade.getUpkeep(), "b", PresetColour.GENERIC_BAD)
-									:UtilText.formatAsMoney(upgrade.getUpkeep(), "b", PresetColour.GENERIC_GOOD))+"/day"
+									:UtilText.formatAsMoney(upgrade.getUpkeep(), "b", PresetColour.GENERIC_GOOD))+"/天"
 						+"</div>"
 						+ "<div style='float:left; width:10%; margin:0; padding:0;'>"
 							+ (owned
@@ -1011,20 +1011,20 @@ public class OccupantManagementDialogue {
 		
 		if(owned) {
 			if(Main.game.getPlayer().getMoney()<upgrade.getRemovalCost()) {
-				purchaseAvailability.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>You cannot afford to remove this modification.</span>");
+				purchaseAvailability.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>你负担不起拆除改造。</span>");
 			}
 			
 		} else {
 			if(Main.game.getOccupancyUtil().getGeneratedBalance()<0) {
-				purchaseAvailability.append("<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>You cannot purchase any modifications while you are in debt!</b>");
+				purchaseAvailability.append("<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>你负债时不能支付任何改造！</b>");
 			}
 			
 			if(Main.game.getPlayer().getMoney()<upgrade.getInstallCost()) {
-				purchaseAvailability.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>You cannot afford this modification.</span>");
+				purchaseAvailability.append("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>你支付不起改造费用。</span>");
 			}
 			
 			if(!upgrade.getPrerequisites().isEmpty()) {
-				purchaseAvailability.append("You need to purchase the following first:");
+				purchaseAvailability.append("你需要先购买以下:");
 				for(AbstractPlaceUpgrade prereq : upgrade.getPrerequisites()) {
 					if(place.getPlaceUpgrades().contains(prereq)) {
 						purchaseAvailability.append("<br/><span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>"+prereq.getName()+"</span>");
@@ -1044,7 +1044,7 @@ public class OccupantManagementDialogue {
 	}
 	
 	
-	public static final DialogueNode SLAVE_LIST = new DialogueNode("Slave & Occupant Management", ".", true) {
+	public static final DialogueNode SLAVE_LIST = new DialogueNode("管理奴隶&友人住客", "。", true) {
 
 		@Override
 		public DialogueNodeType getDialogueNodeType() {
@@ -1058,7 +1058,7 @@ public class OccupantManagementDialogue {
 			if(Main.game.getDialogueFlags().getSlaveTrader()!=null) {
 				// Append for sale first:
 				UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-						+ "<h6 style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+"; text-align:center;'>Slaves For Sale</h6>"
+						+ "<h6 style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+"; text-align:center;'>奴隶出售</h6>"
 						
 						+ getSlaveryHeader());
 				int i=0;
@@ -1079,20 +1079,20 @@ public class OccupantManagementDialogue {
 					}
 				}
 				if(i==0) {
-					UtilText.nodeContentSB.append("<div class='container-full-width inner'><h4 style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>No slaves for sale!</h4></div>");
+					UtilText.nodeContentSB.append("<div class='container-full-width inner'><h4 style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>没有奴隶出售！</h4></div>");
 				}
 				UtilText.nodeContentSB.append("</div>");
 				
 			} else { // Show friendly occupants if not trading slaves:
 				UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-						+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>Friendly Occupants</h6>"
+						+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>友人住客</h6>"
 						
 						+ getOccupantHeader());
 				
 				if(Main.game.getPlayer().getFriendlyOccupants().isEmpty()) {
 					UtilText.nodeContentSB.append(
 							"<div class='container-full-width' style='text-align:center;'>"
-									+"<p style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>You do not have anyone living with you...</p>"
+									+"<p style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>没有人跟你住在一起……</p>"
 							+ "</div>");
 					
 				} else {
@@ -1122,13 +1122,13 @@ public class OccupantManagementDialogue {
 			
 			// Your slaves:
 			UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-					+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>Slaves Owned</h6>");
+					+ "<h6 style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+"; text-align:center;'>拥有的奴隶</h6>");
 					
 			//UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>");
 			//UtilText.nodeContentSB.append(  "<h6 style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+"'>Sorting</h6>");
 			String buttonStyle = "margin:2px; width:16%;";
 			UtilText.nodeContentSB.append("<div class='container-full-width inner' style='text-align:center'>");
-			UtilText.nodeContentSB.append("<div style='width:100%;font-weight:bold;margin-top:8px'>Sort By</div>");
+			UtilText.nodeContentSB.append("<div style='width:100%;font-weight:bold;margin-top:8px'>排序</div>");
 			
 			for(OccupantSortingMethod method : OccupantSortingMethod.values()) {
 				UtilText.nodeContentSB.append("<div id='SORT_SLAVES_BY_"+method.toString()+"' class='normal-button"+((sortingMethod==method)?" selected":"")+"' style='"+buttonStyle+"'>"+Util.capitaliseSentence(method.getName())+"</div>");
@@ -1145,8 +1145,8 @@ public class OccupantManagementDialogue {
 //			UtilText.nodeContentSB.append("<div class='container-full-width inner' style='text-align:center'>");
 //			UtilText.nodeContentSB.append("<div style='width:100%;font-weight:bold;margin-top:8px'>Order</div>");
 			UtilText.nodeContentSB.append("<div style='width:100%; height:0;'></div>");
-			UtilText.nodeContentSB.append("<div id='SORT_SLAVES_ASC' class='normal-button"+((!reverseSortSlaves)?" selected":"")+"' style='"+buttonStyle+"'>Ascending</div>");
-			UtilText.nodeContentSB.append("<div id='SORT_SLAVES_DESC' class='normal-button"+((reverseSortSlaves)?" selected":"")+"' style='"+buttonStyle+"'>Descending</div>");
+			UtilText.nodeContentSB.append("<div id='SORT_SLAVES_ASC' class='normal-button"+((!reverseSortSlaves)?" selected":"")+"' style='"+buttonStyle+"'>升序</div>");
+			UtilText.nodeContentSB.append("<div id='SORT_SLAVES_DESC' class='normal-button"+((reverseSortSlaves)?" selected":"")+"' style='"+buttonStyle+"'>降序</div>");
 			UtilText.nodeContentSB.append("</div>");
 			//UtilText.nodeContentSB.append("<div>");
 			
@@ -1155,7 +1155,7 @@ public class OccupantManagementDialogue {
 			if(Main.game.getPlayer().getSlavesOwned().isEmpty()) {
 				UtilText.nodeContentSB.append(
 						"<div class='container-full-width' style='text-align:center;'>"
-								+"<p style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>You do not own any slaves...</p>"
+								+"<p style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>你还没拥有任何奴隶……</p>"
 						+ "</div>");
 				
 			} else {
@@ -1221,11 +1221,11 @@ public class OccupantManagementDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index == 0) {
-				return UtilText.parse("[style.colourCompanion(Manage)]");
+				return UtilText.parse("[style.colourCompanion(管理)]");
 			} else if(index==1
 					&& (Main.game.getCurrentDialogueNode()==CompanionManagement.SLAVE_MANAGEMENT_JOBS
 						|| Main.game.getCurrentDialogueNode()==CompanionManagement.SLAVE_MANAGEMENT_PERMISSIONS)) {
-				return UtilText.parse("[style.colourBlueLight(Change slave)]");
+				return UtilText.parse("[style.colourBlueLight(更改奴隶)]");
 			}
 			return null;
 		}
@@ -1282,7 +1282,7 @@ public class OccupantManagementDialogue {
 					if(i==index) {
 						return new Response(
 								UtilText.parse(slave, "<span style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</span>"),
-								UtilText.parse(slave, "Select [npc.name], your [npc.raceFull(true)] slave."),
+								UtilText.parse(slave, "选择[npc.name]——你的[npc.raceFull(true)]奴隶。"),
 								Main.game.getCurrentDialogueNode()) {
 							@Override
 							public void effects() {
@@ -1302,7 +1302,7 @@ public class OccupantManagementDialogue {
 	};
 	
 
-	public static final DialogueNode SLAVE_LIST_MANAGEMENT = new DialogueNode("Slave Management", ".", true) {
+	public static final DialogueNode SLAVE_LIST_MANAGEMENT = new DialogueNode("奴隶管理", "。", true) {
 
 		@Override
 		public DialogueNodeType getDialogueNodeType() {
@@ -1318,9 +1318,9 @@ public class OccupantManagementDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index == 0) {
 				if(Main.game.getCurrentDialogueNode()==SLAVE_LIST_MANAGEMENT) {
-					return new Response("Back", "Exit the slave management screen.", dialogueToExitTo==null?OCCUPANT_OVERVIEW:dialogueToExitTo);
+					return new Response("返回", "退出奴隶管理界面。", dialogueToExitTo==null?OCCUPANT_OVERVIEW:dialogueToExitTo);
 				} else {
-					return new Response("Back", "Return to the management screen.", SLAVE_LIST_MANAGEMENT);
+					return new Response("返回", "返回到管理界面。", SLAVE_LIST_MANAGEMENT);
 				}
 			}
 			if(Main.game.getDialogueFlags().getSlaveTrader()==null) {
@@ -1333,22 +1333,22 @@ public class OccupantManagementDialogue {
 	private static String getSlaveryHeader() {
 		return "<div class='container-full-width' style='margin-bottom:0;'>"
 					+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
-					+ "Slave"
+					+ "奴隶"
 				+ "</div>"
 				+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
-					+ "Location"
+					+ "位置"
 				+ "</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>Affection</b>"
+					+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>好感</b>"
 				+"</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>Obedience</b>"
+					+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>服从</b>"
 				+"</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Value</b>"
+					+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>价值</b>"
 				+"</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "Actions"
+					+ "行动"
 				+"</div>"
 			+ "</div>";
 	}
@@ -1356,22 +1356,22 @@ public class OccupantManagementDialogue {
 	private static String getOccupantHeader() {
 		return "<div class='container-full-width' style='margin-bottom:0;'>"
 					+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
-					+ "Occupant"
+					+ "友人住客"
 				+ "</div>"
 				+ "<div style='width:20%; float:left; font-weight:bold; margin:0; padding:0;'>"
-					+ "Location"
+					+ "位置"
 				+ "</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>Affection</b>"
+					+ "<b style='color:"+PresetColour.AFFECTION.toWebHexString()+";'>好感</b>"
 				+"</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>Obedience</b>"
+					+ "<b style='color:"+PresetColour.OBEDIENCE.toWebHexString()+";'>服从</b>"
 				+"</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>Value</b>"
+					+ "<b style='color:"+PresetColour.CURRENCY_GOLD.toWebHexString()+";'>价值</b>"
 				+"</div>"
 				+ "<div style='float:left; width:15%; font-weight:bold; margin:0; padding:0;'>"
-					+ "Actions"
+					+ "行动"
 				+"</div>"
 			+ "</div>";
 	}
@@ -1383,7 +1383,7 @@ public class OccupantManagementDialogue {
 						+ "<div style='width:20%; float:left; margin:0; padding:0;'>"
 							+ "<b style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>"+slave.getName(true)+"</b><br/>"
 							+ "<span style='color:"+slave.getRace().getColour().toWebHexString()+";'>"
-								+Util.capitaliseSentence((slave.isPrependWingedToRaceName()?"winged ":"")+(slave.isFeminine()?slave.getSubspecies().getSingularFemaleName(slave.getBody()):slave.getSubspecies().getSingularMaleName(slave.getBody())))+"</span><br/>"
+								+Util.capitaliseSentence((slave.isPrependWingedToRaceName()?"有翼":"")+(slave.isFeminine()?slave.getSubspecies().getSingularFemaleName(slave.getBody()):slave.getSubspecies().getSingularMaleName(slave.getBody())))+"</span><br/>"
 							+ "<span style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(slave.getGender().getName())+"</span>"
 						+ "</div>"
 						+ "<div style='width:20%; float:left; margin:0; padding:0;'>"
@@ -1394,14 +1394,14 @@ public class OccupantManagementDialogue {
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ "<b style='color:"+affection.getColour().toWebHexString()+";'>"+slave.getAffection(Main.game.getPlayer())+ "</b>"
 							+ "<br/><span style='color:"+(affectionChange==0?PresetColour.BASE_GREY:(affectionChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(affectionChange>0?"+":"")
-								+decimalFormat.format(affectionChange)+"</span>/day"
+								+decimalFormat.format(affectionChange)+"</span>/天"
 							+ "<br/>"
 							+ "<span style='color:"+affection.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(affection.getName())+"</span>"
 						+"</div>"
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ "<b style='color:"+obedience.getColour().toWebHexString()+";'>"+slave.getObedienceValue()+ "</b>"
 							+ "<br/><span style='color:"+(obedienceChange==0?PresetColour.BASE_GREY:(obedienceChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(obedienceChange>0?"+":"")
-								+decimalFormat.format(obedienceChange)+"</span>/day"
+								+decimalFormat.format(obedienceChange)+"</span>/天"
 							+ "<br/>"
 							+ "<span style='color:"+obedience.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(obedience.getName())+"</span>"
 						+"</div>"
@@ -1414,8 +1414,8 @@ public class OccupantManagementDialogue {
 													?PresetColour.GENERIC_BAD
 													:PresetColour.TEXT))
 								:UtilText.formatAsMoney(slave.getValueAsSlave(true)))+"<br/>"
-							+ "<b>"+Util.capitaliseSentence(slave.getSlaveJob(Main.game.getHourOfDay()).getName(slave))+" (now)</b><br/>"
-							+ UtilText.formatAsMoney(SlaveJob.getFinalDailyIncomeAfterModifiers(slave))+"/day"
+							+ "<b>"+Util.capitaliseSentence(slave.getSlaveJob(Main.game.getHourOfDay()).getName(slave))+"(现在)</b><br/>"
+							+ UtilText.formatAsMoney(SlaveJob.getFinalDailyIncomeAfterModifiers(slave))+"/天"
 						+"</div>");
 
 		miscDialogueSB.append("<div style='float:left; width:15%; margin:0 auto; padding:0; display:inline-block; text-align:center;'>");
@@ -1494,12 +1494,12 @@ public class OccupantManagementDialogue {
 						+ "<div style='width:20%; float:left; margin:0; padding:0;'>"
 							+ "<b style='color:"+occupant.getFemininity().getColour().toWebHexString()+";'>"+occupant.getName(true)+"</b><br/>"
 							+ "<span style='color:"+occupant.getRace().getColour().toWebHexString()+";'>"
-								+Util.capitaliseSentence((occupant.isPrependWingedToRaceName()?"winged ":"")+(occupant.isFeminine()?occupant.getSubspecies().getSingularFemaleName(occupant.getBody()):occupant.getSubspecies().getSingularMaleName(occupant.getBody())))+"</span><br/>"
+								+Util.capitaliseSentence((occupant.isPrependWingedToRaceName()?"有翼":"")+(occupant.isFeminine()?occupant.getSubspecies().getSingularFemaleName(occupant.getBody()):occupant.getSubspecies().getSingularMaleName(occupant.getBody())))+"</span><br/>"
 							+ "<span style='color:"+occupant.getFemininity().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(occupant.getGender().getName())+"</span>"
 						+ "</div>"
 						+ "<div style='width:20%; float:left; margin:0; padding:0;'>"
 							+ (occupant.getWorldLocation()==WorldType.EMPTY
-								?"<b style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>At Work</b>"
+								?"<b style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>在工作</b>"
 										+",<br/>"
 										+ "<span style='color:"+WorldType.DOMINION.getColour().toWebHexString()+";'>"+WorldType.DOMINION.getName()+"</span>"
 								:"<b style='color:"+occupant.getLocationPlace().getColour().toWebHexString()+";'>"+occupant.getLocationPlace().getName()+"</b>"
@@ -1509,14 +1509,14 @@ public class OccupantManagementDialogue {
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ "<b style='color:"+affection.getColour().toWebHexString()+";'>"+occupant.getAffection(Main.game.getPlayer())+ "</b>"
 							+ "<br/><span style='color:"+(affectionChange==0?PresetColour.BASE_GREY:(affectionChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(affectionChange>0?"+":"")
-								+decimalFormat.format(affectionChange)+"</span>/day"
+								+decimalFormat.format(affectionChange)+"</span>/天"
 							+ "<br/>"
 							+ "<span style='color:"+affection.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(affection.getName())+"</span>"
 						+"</div>"
 						+ "<div style='float:left; width:15%; margin:0; padding:0;'>"
 							+ "<b style='color:"+obedience.getColour().toWebHexString()+";'>"+occupant.getObedienceValue()+ "</b>"
 							+ "<br/><span style='color:"+(obedienceChange==0?PresetColour.BASE_GREY:(obedienceChange>0?PresetColour.GENERIC_GOOD:PresetColour.GENERIC_BAD)).toWebHexString()+";'>"+(obedienceChange>0?"+":"")
-								+decimalFormat.format(obedienceChange)+"</span>/day"
+								+decimalFormat.format(obedienceChange)+"</span>/天"
 							+ "<br/>"
 							+ "<span style='color:"+obedience.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(obedience.getName())+"</span>"
 						+"</div>"
@@ -1524,13 +1524,13 @@ public class OccupantManagementDialogue {
 							+ "<b>"
 								+(occupant.hasJob() || !occupant.hasAnySlaveJobAssigned()
 									?Util.capitaliseSentence(occupant.getHistory().getName(occupant))
-									:Util.capitaliseSentence(occupant.getSlaveJob(Main.game.getHourOfDay()).getName(occupant))+" (now)")
+									:Util.capitaliseSentence(occupant.getSlaveJob(Main.game.getHourOfDay()).getName(occupant))+" (现在)")
 							+"</b>"
 							+ "<br/>"
 							+ UtilText.formatAsMoney(occupant.hasJob()
 									?PlaceUpgrade.LILAYA_GUEST_ROOM.getUpkeep()
 									:SlaveJob.getFinalDailyIncomeAfterModifiers(occupant))
-								+"/day"
+								+"/天"
 						+"</div>"
 							
 				+ "<div style='float:left; width:15%; margin:0 auto; padding:0; display:inline-block; text-align:center;'>"

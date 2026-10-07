@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Main floor]]></name>
-	<tooltipDescription><![CDATA[The majority of the floor area inside 'The Centaur's Sword' tavern is occupied by large, wooden tables.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the main floor area of 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[酒馆主层]]></name>
+	<tooltipDescription><![CDATA[半人马之剑的大部分面积都被大木桌占据着。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在半人马之剑的主楼区域]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

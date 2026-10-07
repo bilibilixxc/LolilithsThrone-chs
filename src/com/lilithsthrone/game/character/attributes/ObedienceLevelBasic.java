@@ -11,13 +11,13 @@ import com.lilithsthrone.utils.colours.PresetColour;
 public enum ObedienceLevelBasic {
 
 	/** -100 to -30*/
-	DISOBEDIENT("disobedient", -100, -30, PresetColour.AFFECTION_NEGATIVE_FIVE),
+	DISOBEDIENT("叛逆", -100, -30, PresetColour.AFFECTION_NEGATIVE_FIVE),
 
 	/** -30 to 30*/
-	NEUTRAL("neutral", -30, 30, PresetColour.AFFECTION_NEUTRAL),
+	NEUTRAL("中立", -30, 30, PresetColour.AFFECTION_NEUTRAL),
 
 	/** 30 to 100*/
-	OBEDIENT("obedient", 30, 100, PresetColour.AFFECTION_POSITIVE_FIVE);
+	OBEDIENT("服从", 30, 100, PresetColour.AFFECTION_POSITIVE_FIVE);
 	
 	
 	private String name;

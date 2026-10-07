@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>	
-	<name><![CDATA[Treasure Room]]></name>
-	<tooltipDescription><![CDATA[An antique wooden chest lies in the middle of this room.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the treasure room of a strange basement]]></virginityLossDescription>	
+	<name><![CDATA[藏宝室]]></name>
+	<tooltipDescription><![CDATA[一个古色古香的木箱摆在房间中央。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在一个奇怪地下室中的藏宝库里]]></virginityLossDescription>	
 	<sexBlockedFromCharacterPresent/>
 	<svgName>chest</svgName>	
 	<colour>BASE_WHITE</colour>

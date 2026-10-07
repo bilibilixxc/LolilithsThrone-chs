@@ -608,13 +608,13 @@ public abstract class AbstractStatusEffect {
 	public List<String> getPenetrationModifiersAsStringList(GameCharacter target, SexAreaPenetration penetration) {
 		List<String> modifiersList = new ArrayList<>();
 
-		String penetrationName = UtilText.parse(target, "[npc.NamePos] ")+penetration.getName(target);
+		String penetrationName = UtilText.parse(target, "[npc.NamePos]")+penetration.getName(target);
 		
 		if(!Main.sex.hasLubricationTypeFromAnyone(target, penetration)) {
-			modifiersList.add(penetrationName+" "+(penetration.isPlural()?"are":"is")+" [style.boldWetness1(dry)]!");
+			modifiersList.add(penetrationName+"很[style.boldWetness1(干燥)]！");
 			
 		} else {
-			modifiersList.add(penetrationName+" "+(penetration.isPlural()?"have":"has")+" been [style.boldWetness(lubricated)] by:");
+			modifiersList.add(penetrationName+"被[style.boldWetness(润滑)]：");
 			int i=0;
 			List<String> lubricants = new ArrayList<>();
 			for(GameCharacter lubricantProvider : Main.sex.getAllParticipants()) {
@@ -622,11 +622,11 @@ public abstract class AbstractStatusEffect {
 					if(i==0) {
 						lubricants.add(lubricantProvider==null
 								?Util.capitaliseSentence(lt.getName(lubricantProvider))
-								:UtilText.parse(lubricantProvider, "[npc.NamePos] "+lt.getName(lubricantProvider, true)));
+								:UtilText.parse(lubricantProvider, "[npc.NamePos]"+lt.getName(lubricantProvider, true)));
 					} else {
 						lubricants.add(lubricantProvider==null
 								?lt.getName(lubricantProvider)
-								:UtilText.parse(lubricantProvider, "[npc.namePos] "+lt.getName(lubricantProvider, true)));
+								:UtilText.parse(lubricantProvider, "[npc.namePos]"+lt.getName(lubricantProvider, true)));
 					}
 					i++;
 				}
@@ -639,19 +639,19 @@ public abstract class AbstractStatusEffect {
 				}
 				i++;
 			}
-			modifiersList.add(Util.stringsToStringList(lubricants, false)+".");
+			modifiersList.add(Util.stringsToStringList(lubricants, false)+"。");
 		}
 		
 		if(!Main.sex.getOngoingSexAreas(target, penetration).isEmpty()
 				&& !Collections.disjoint(Main.sex.getOngoingSexAreas(target, penetration).get(Main.sex.getCharacterOngoingSexArea(target, penetration).get(0)), Util.newArrayListOfValues(SexAreaPenetration.values()))) {
 
-			modifiersList.add("[style.boldSex(Arousal/turn:)]");
+			modifiersList.add("[style.boldSex(快感/回合:)]");
 
-			String targetName = target.isPlayer()?"You":UtilText.parse(target, "[npc.Name]");
-			modifiersList.add("+"+penetration.getBaseArousalWhenPenetrating()+" <b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>("+targetName+"</b> - [style.boldSex(Sex)])");
+			String targetName = target.isPlayer()?"你":UtilText.parse(target, "[npc.Name]");
+			modifiersList.add("+"+penetration.getBaseArousalWhenPenetrating()+"<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>("+targetName+"</b>-[style.boldSex(性爱)])");
 			
 			if(!Main.sex.hasLubricationTypeFromAnyone(target, penetration)) {
-				modifiersList.add(penetration.getArousalChangePenetratingDry()+ " <b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>("+targetName+"</b> - [style.boldBad(Dry)])");
+				modifiersList.add(penetration.getArousalChangePenetratingDry()+ "<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>("+targetName+"</b>-[style.boldBad(干燥)])");
 			}
 		}
 		return modifiersList;
@@ -725,25 +725,25 @@ public abstract class AbstractStatusEffect {
 	public List<String> getOrificeModifiersAsStringList(GameCharacter target, SexAreaOrifice orifice) {
 		List<String> modifiersList = new ArrayList<>();
 		
-		String targetName = target.isPlayer()?"You":UtilText.parse(target, "[npc.Name]");
+		String targetName = target.isPlayer()?"你":UtilText.parse(target, "[npc.Name]");
 
 		boolean orificePlural = orifice.isPlural();
-		String orificeName = UtilText.parse(target, "[npc.NamePos] ")+orifice.getName(target);
+		String orificeName = UtilText.parse(target, "[npc.NamePos]")+orifice.getName(target);
 
 		// Stretching:
 		if(Main.sex.getAreasCurrentlyStretching(target).contains(orifice)) {
 			if(Main.sex.getFirstOngoingSexAreaPenetration(target, orifice)==null) {
-				modifiersList.add(orificeName+" "+(orificePlural?"have":"has")+" been <b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>stretched</b>!");
+				modifiersList.add(orificeName+"被<b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>扩张了</b>！");
 				
 			} else {
-				modifiersList.add(orificeName+" "+(orificePlural?"are":"is")+" being <b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>stretched</b>!");
+				modifiersList.add(orificeName+"正在被<b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>扩张</b>！");
 			}
 			
 		} else if(Main.sex.getAreasTooLoose(target).contains(orifice)) {
-			modifiersList.add(orificeName+" "+(orificePlural?"are":"is")+" <b style='color:"+PresetColour.BASE_RED.toWebHexString()+";'>too loose</b>!");
+			modifiersList.add(orificeName+"<b style='color:"+PresetColour.BASE_RED.toWebHexString()+";'>太过松垮了</b>！");
 			
 		} else if(Main.sex.getAreasStretched(target).contains(orifice)) {
-			modifiersList.add(orificeName+" "+(orificePlural?"have":"has")+" been <b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>stretched</b>!");
+			modifiersList.add(orificeName+"被<b style='color:"+PresetColour.BASE_PINK_DEEP.toWebHexString()+";'>扩张了</b>！");
 			
 		}
 //		else {
@@ -754,22 +754,22 @@ public abstract class AbstractStatusEffect {
 		if(Main.game.isPenetrationLimitationsEnabled() && orifice.isInternalOrifice()) {
 			if(!Main.sex.getCharactersPenetratingTooDeep(target, orifice).isEmpty()) {
 				if(target.hasFetish(Fetish.FETISH_MASOCHIST) || target.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
-					modifiersList.add(orificeName+" "+(orificePlural?"are":"is")+" being penetrated [style.boldSex(too deeply)]!");
+					modifiersList.add(orificeName+"被插入得[style.boldSex(太深了)]！");
 				} else {
-					modifiersList.add(orificeName+" "+(orificePlural?"are":"is")+" being penetrated [style.boldTerrible(too deeply)]!");
+					modifiersList.add(orificeName+"被插入得[style.boldTerrible(太深了)]！");
 				}
 				
 			} else if(!Main.sex.getCharactersPenetratingFarTooShallow(target, orifice).isEmpty()) {
-				modifiersList.add(orificeName+" "+(orificePlural?"are":"is")+" being penetrated [style.boldPinkLight(too shallowly)]!");//[style.boldPinkLight(not being penetrated deep enough)]!");
+				modifiersList.add(orificeName+"被插入得[style.boldPinkLight(太浅了)]！");
 			}
 		}
 		
 		// Lubrication:
 		if(!Main.sex.hasLubricationTypeFromAnyone(target, orifice)) {
-			modifiersList.add(orificeName+" "+(orificePlural?"are":"is")+" [style.boldWetness1(dry)]!");
+			modifiersList.add(orificeName+"很[style.boldWetness1(干燥)]！");
 			
 		} else {
-			modifiersList.add(orificeName+" "+(orificePlural?"have":"has")+" been [style.boldWetness(lubricated)] by:");
+			modifiersList.add(orificeName+"被[style.boldWetness(润滑)]：");
 			int i=0;
 			List<String> lubricants = new ArrayList<>();
 			for(GameCharacter lubricantProvider : Main.sex.getAllParticipants()) {
@@ -777,11 +777,11 @@ public abstract class AbstractStatusEffect {
 					if(i==0) {
 						lubricants.add(lubricantProvider==null
 								?Util.capitaliseSentence(lt.getName(lubricantProvider))
-								:UtilText.parse(lubricantProvider, "[npc.NamePos] "+lt.getName(lubricantProvider, true)));
+								:UtilText.parse(lubricantProvider, "[npc.NamePos]"+lt.getName(lubricantProvider, true)));
 					} else {
 						lubricants.add(lubricantProvider==null
 								?lt.getName(lubricantProvider)
-								:UtilText.parse(lubricantProvider, "[npc.namePos] "+lt.getName(lubricantProvider, true)));
+								:UtilText.parse(lubricantProvider, "[npc.namePos]"+lt.getName(lubricantProvider, true)));
 					}
 					i++;
 				}
@@ -794,66 +794,66 @@ public abstract class AbstractStatusEffect {
 				}
 				i++;
 			}
-			modifiersList.add(Util.stringsToStringList(lubricants, false)+".");
+			modifiersList.add(Util.stringsToStringList(lubricants, false)+"。");
 		}
 		
 		// Arousal:
 		if(!Main.sex.getOngoingSexAreas(target, orifice).isEmpty()) {
-			modifiersList.add("[style.boldSex(Arousal/turn:)]");
+			modifiersList.add("[style.boldSex(快感/回合:)]");
 
-			modifiersList.add("+"+orifice.getBaseArousalWhenPenetrated()+" (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldSex(Sex)])");
+			modifiersList.add("+"+orifice.getBaseArousalWhenPenetrated()+"(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldSex(性爱)])");
 			
 			if(Main.sex.getAreasCurrentlyStretching(target).contains(orifice)) {
 				float arousalIncrement = orifice.getArousalChangePenetratedStretching();
 				if(target.hasFetish(Fetish.FETISH_MASOCHIST) || target.hasFetish(Fetish.FETISH_SIZE_QUEEN)) { // Positive for masochist and size queen:
 					arousalIncrement = Math.abs(arousalIncrement);
-					modifiersList.add((arousalIncrement>0?"+":"")+arousalIncrement+" (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldSex(Stretching)])");
+					modifiersList.add((arousalIncrement>0?"+":"")+arousalIncrement+"(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldSex(扩张)])");
 
 				} else {
-					modifiersList.add((arousalIncrement>0?"+":"")+arousalIncrement+" (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldBad(Stretching)])");
+					modifiersList.add((arousalIncrement>0?"+":"")+arousalIncrement+"(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldBad(扩张)])");
 				}
 			}
 			if(Main.sex.getAreasTooLoose(target).contains(orifice)) {
 				modifiersList.add((orifice.getArousalChangePenetratedTooLoose()>0?"+":"")
-						+orifice.getArousalChangePenetratedTooLoose()+" (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldBad(Too loose)])");
+						+orifice.getArousalChangePenetratedTooLoose()+"(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldBad(过松)])");
 			}
 			if(!Main.sex.hasLubricationTypeFromAnyone(target, orifice)) {
 				modifiersList.add((orifice.getArousalChangePenetratedDry()>0?"+":"")
-						+orifice.getArousalChangePenetratedDry()+" (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldBad(Dry)])");
+						+orifice.getArousalChangePenetratedDry()+"(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldBad(干燥)])");
 			}
 
 			if(Main.game.isPenetrationLimitationsEnabled() && orifice.isInternalOrifice()) {
 				if(!Main.sex.getCharactersPenetratingTooDeep(target, (SexAreaOrifice)orifice).isEmpty()) {
 					if(target.hasFetish(Fetish.FETISH_MASOCHIST) || target.hasFetish(Fetish.FETISH_SIZE_QUEEN)) { // Positive for masochist and size queen:
-						modifiersList.add("+2.5 (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldSex(Too deep)])");
+						modifiersList.add("+2.5(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldSex(过深)])");
 						
 					} else {
-						modifiersList.add("-10 (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldBad(Too deep)])");
+						modifiersList.add("-10(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldBad(过深)])");
 						
 					}
 					
 				} else if(!Main.sex.getCharactersPenetratingFarTooShallow(target, (SexAreaOrifice)orifice).isEmpty()) {
-					modifiersList.add("-2 (<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b> - [style.boldBad(Too shallow)])");
+					modifiersList.add("-2(<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>"+targetName+"</b>-[style.boldBad(过浅)])");
 				}
 			}
 			
 			for(GameCharacter penetrator : Main.sex.getOngoingSexAreas(target, orifice).keySet()) {
-				String penetratorName = penetrator.isPlayer()?"You":UtilText.parse(penetrator, "[npc.Name]");
+				String penetratorName = penetrator.isPlayer()?"你":UtilText.parse(penetrator, "[npc.Name]");
 				
 				if(!Main.sex.getOngoingSexAreas(target, orifice).isEmpty()) {
-					modifiersList.add("+"+getOrificeArousalPerTurnPartner(target, penetrator, orifice)+" (<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b> - [style.boldSex(Sex)])");
+					modifiersList.add("+"+getOrificeArousalPerTurnPartner(target, penetrator, orifice)+"(<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b>-[style.boldSex(性爱)])");
 					
 					if(Main.sex.getAreasCurrentlyStretching(target).contains(orifice)) {
 						modifiersList.add((orifice.getArousalChangePenetratingStretching()>0?"+":"")
-								+orifice.getArousalChangePenetratingStretching()+" (<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b> - [style.boldGood(Tight)])");
+								+orifice.getArousalChangePenetratingStretching()+"(<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b>-[style.boldGood(紧致)])");
 					}
 					if(Main.sex.getAreasTooLoose(target).contains(orifice)) {
 						modifiersList.add((orifice.getArousalChangePenetratingTooLoose()>0?"+":"")
-								+orifice.getArousalChangePenetratingTooLoose()+" (<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b> - [style.boldBad(Too loose)])");
+								+orifice.getArousalChangePenetratingTooLoose()+"(<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b>-[style.boldBad(过松)])");
 					}
 					if(!Main.sex.hasLubricationTypeFromAnyone(target, orifice)) {
 						modifiersList.add((orifice.getArousalChangePenetratingDry()>0?"+":"")
-								+orifice.getArousalChangePenetratingDry()+" (<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b> - [style.boldBad(Dry)])");
+								+orifice.getArousalChangePenetratingDry()+"(<b style='color:"+penetrator.getFemininity().getColour().toWebHexString()+";'>"+penetratorName+"</b>-[style.boldBad(干燥)])");
 					}
 				}
 			}
@@ -883,10 +883,10 @@ public abstract class AbstractStatusEffect {
 		StringBuilder sb = new StringBuilder();
 		sb.append(UtilText.parse(target,
 //				"<p style='text-align:center; margin:0; padding:0;'>"
-					"<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>[npc.NamePos]</b> [style.boldSex("+Util.capitaliseSentence(orifice.getName(target, true))+")]:"
-					+ "<br/>Capacity: "+Units.size(Units.round(orifice.getCapacity(target, true), 1))
+					"<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>[npc.NamePos]</b>[style.boldSex("+Util.capitaliseSentence(orifice.getName(target, true))+")]："
+					+ "<br/>容量: "+Units.size(Units.round(orifice.getCapacity(target, true), 1))
 					+ (Main.game.isPenetrationLimitationsEnabled()
-						?"<br/>Depth Comfortable / Uncomfortable: "+Units.size(Units.round(orifice.getMaximumPenetrationDepthComfortable(target), 1))+" / "+Units.size(Units.round(orifice.getMaximumPenetrationDepthUncomfortable(target), 1))
+						?"<br/>舒适深度/不适深度: "+Units.size(Units.round(orifice.getMaximumPenetrationDepthComfortable(target), 1))+" / "+Units.size(Units.round(orifice.getMaximumPenetrationDepthUncomfortable(target), 1))
 						:"")
 //				+ "</p>"
 				));
@@ -901,10 +901,10 @@ public abstract class AbstractStatusEffect {
 				boolean knotting = Objects.equals(Main.sex.getCharacterKnotting(character), target) && penetration==SexAreaPenetration.PENIS;
 				sb.append(UtilText.parse(character,
 //						"<p style='text-align:center; margin:0; padding:0;'>"//TODO toy length/diameter
-							"<b style='color:"+character.getFemininity().getColour().toWebHexString()+";'>[npc.NamePos]</b> [style.boldSex("+Util.capitaliseSentence(penetration.getName(character, true))+")]:"
-							+ "<br/>Diameter"+(knotting?"[style.boldSex(*2 from swollen knot)]":"")+": "+Units.size(Units.round(penetration.getDiameter(character, (penetration.getLength(character, true))-length)*(knotting?2:1), 1))
+							"<b style='color:"+character.getFemininity().getColour().toWebHexString()+";'>[npc.NamePos]</b>的[style.boldSex("+Util.capitaliseSentence(penetration.getName(character, true))+")]:"
+							+ "<br/>直径"+(knotting?"[style.boldSex(根部结处*2)]":"")+": "+Units.size(Units.round(penetration.getDiameter(character, (penetration.getLength(character, true))-length)*(knotting?2:1), 1))
 							+ (Main.game.isPenetrationLimitationsEnabled()
-									?"<br/>Inserted / Total length: "+Units.size(length)+" / "+Units.size(penetration.getLength(character, true))
+									?"<br/>可插入/总长度: "+Units.size(length)+" / "+Units.size(penetration.getLength(character, true))
 									:"")
 //						+ "</p>"
 						));
@@ -1228,24 +1228,24 @@ public abstract class AbstractStatusEffect {
 		List<String> names = new ArrayList<>();
 		
 		if(owner.hasBreasts() && owner.isCoverableAreaVisible(CoverableArea.NIPPLES)) {
-			names.add("breasts");
+			names.add("乳房");
 		} else if (owner.isFeminine() && owner.isCoverableAreaVisible(CoverableArea.NIPPLES)) {
-			names.add("nipples");
+			names.add("乳头");
 		}
 		if(owner.hasBreastsCrotch() && owner.isCoverableAreaVisible(CoverableArea.NIPPLES_CROTCH)) {
 			names.add(UtilText.parse(owner, "[npc.crotchBoobs]"));
 		}
 		if(owner.isCoverableAreaVisible(CoverableArea.ANUS)) {
-			names.add("asshole");
+			names.add("肛门");
 		}
 		if(owner.hasPenis() && owner.isCoverableAreaVisible(CoverableArea.PENIS)) {
-			names.add("cock");
+			names.add("阴茎");
 		}
 		if(owner.hasVagina() && owner.isCoverableAreaVisible(CoverableArea.VAGINA)) {
-			names.add("pussy");
+			names.add("阴部");
 		}
 		if(!owner.hasPenis() && !owner.hasVagina() && owner.isCoverableAreaVisible(CoverableArea.VAGINA)) {
-			names.add("genderless mound");
+			names.add("无性别的下体");
 		}
 		
 		return Util.stringsToStringChoice(names, false);

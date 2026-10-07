@@ -1,347 +1,347 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- HELENAS_NEST_EXTERIOR -->
 	
 	<htmlContent tag="HELENAS_NEST_EXTERIOR"><![CDATA[
 	<p>
-		Making your way down one of the many walkways that criss-cross Dominion's rooftops, you find yourself approaching an exceptionally large Harpy Nest. Spanning several buildings, and with an elaborate system of multi-level platforms built on top of each one, you instantly recognise this as a nest of particular importance.
+		沿着御城区屋顶上纵横交错的人行道一路前行，你会发现自己正在接近一个特别大的哈比之巢。它横跨几栋建筑，每栋建筑的顶部都建有一个精心设计的多层平台系统，你一眼就能认出这是一个特别重要的巢穴。
 	</p>
 	<p>
 		#IF(game.isDayTime())
-			The platforms are covered in countless groups of harpies; lounging around and talking amongst one another, their lazy behaviour is in stark contrast to those flying around in the skies above. Looking up, you see a multitude of colours dashing through the sky as yet more of this nest's residents swoop and dart around in the
+			平台上布满了数不清的哈比们；它们悠闲地躺着，互相交谈着，懒散的行为与天空中飞来飞去的哈比形成了鲜明的对比。抬头仰望，你会看到天空中闪烁着五彩斑斓的光芒，更多的哈比之巢居民在天空中飞来飞去。
 			#IF(game.isMorning())
-				 morning's cool air
+				清晨的凉爽气息
 			#ELSE
-				 afternoon's warm air
+				午后的温暖气息
 			#ENDIF
-			, their energetic dives and spiralling loops threatening to make your head spin if you try to watch them for too long.
+			，它们精力充沛地俯冲和盘旋，如果你看得太久，可能会头晕目眩。
 		#ELSE
-			The platforms are covered in countless groups of harpies; illuminated under soft white lights, you see them lounging around and talking amongst one another, their lazy behaviour in stark contrast to those flying around in the skies above. Looking up, you see a multitude of colours dashing through the sky as yet more of this nest's residents swoop and dart around in the cool night air; their feathers lit up by the arcane-powered lights that are covering this nest.
+			在柔和的白色灯光照耀下，平台上布满了数不清的哈比，它们悠闲地躺着，互相交谈着，懒洋洋的样子与天空中飞来飞去的哈比形成了鲜明的对比。抬头仰望，你会看到天空中五彩缤纷，更多的巢穴居民在凉爽的夜空中飞来飞去，它们的羽毛被覆盖在巢穴上的弧光照亮。
 		#ENDIF
 	</p>
 	<p>
-		Looking back down, you notice that there are little signs dotted around the edges of the platform. Walking up to the nearest one, you read the following words, written in flowing, ornate script;
+		再往下看，你发现平台边缘点缀着一些小标志。你走到最近的一个小标志前，读到了下面用流畅、华丽的字体书写的文字；
 	</p>
 	<p style='text-align:center;'>
 	<i>
-		<b>~[helena.name]'s Paradise~</b>
-		<br/>Visitors must be accompanied at all times.
+		<b>~[helena.name]的乐园~</b>
+		<br/>参观者必须始终有人陪同。
 		#IF(pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_E_REPORT_TO_HELENA))
-			<br/>Until further notice, [helena.name] is <b>not receiving any visitors</b>.
+			<br/>除非另行通知，[helena.name]<b>不接见任何参观者</b>。
 		#ELSE
-			<br/>Meeting with [helena.name] by appointment only.
+			<br/>与[helena.name]的会面需要提前预约。
 		#ENDIF
 	</i>
 	</p>
 	<p>
 		#IF(pc.getQuest(QUEST_LINE_MAIN)==QUEST_MAIN_1_E_REPORT_TO_HELENA)
-			Stepping back, you wonder if you should call over one of the nearby harpies. After all, you do have business with [helena.name], and you're sure that she'd want to hear about Scarlett as soon as possible...
+			你退后一步，考虑是否应该叫附近的哈比过来。毕竟，你和[helena.name]有生意来往，你肯定她想尽快听到斯嘉丽的消息……
 		#ELSE
 			#IF(!game.getNonCompanionCharactersPresent().contains(helena))
-				As Helena isn't even here at the moment, there's no point in trying to meet with her...
+				海伦娜现在根本不在这里，没必要去见她……
 			#ELSEIF(pc.isQuestFailed(QUEST_LINE_ROMANCE_HELENA))
-				Stepping back, you decide against calling over one of the nearby harpies. After all, Helena is so furious with you that she'd never agree to meeting with you...
+				你退后一步，决定不叫来附近的哈比。毕竟，海伦娜对你大发雷霆，她绝不会同意和你见面的……
 			#ELSEIF(pc.isQuestCompleted(QUEST_LINE_ROMANCE_HELENA))
-				As Helena is now on such good terms with you, you're sure that you could simply walk up to her and say hello without causing too much hassle...
+				既然海伦娜现在和你关系这么好，你肯定可以简单地走过去和她打个招呼，而不会造成太多麻烦……
 			#ELSE
-				Stepping back, you decide against calling over one of the nearby harpies. After all, you don't have any business with Helena.
+				你退后一步，决定不叫来附近的哈比。毕竟你与海伦娜没有任何生意来往。
 			#ENDIF
 		#ENDIF
 	</p>
 	#IF(game.getNonCompanionCharactersPresent().contains(scarlett))
 		<p>
 			#IF(pc.isQuestCompleted(QUEST_LINE_ROMANCE_HELENA))
-				Over on the far side of the nest, near to the stairs which lead up to Helena's platform, you spot the familiar figure of Scarlett relaxing on a sun-lounger in the middle of a dozen-or-so brightly-coloured harpies.
+				在巢穴的远处，通往海伦娜平台的楼梯附近，你看到了斯嘉丽熟悉的身影，她正躺在一张日光躺椅上，周围是十几只色彩鲜艳的哈比。
 				#IF(scarlett.isLikesPlayer())
-					 Knowing that she likes you far more than she does other people, you're sure that you'll receive a warm welcome if you were to head over and say hello to her...
+					你知道她喜欢你比喜欢其他人多得多，如果你想过去和她打招呼的话，你肯定会受到热烈欢迎……
 				#ELSE
-					 You could always head over and say hello, but you doubt that you'll get an amicable response from her...
+					你当然可以过去打个招呼，但你怀疑自己不会得到友好回应……
 				#ENDIF
 			#ELSE
-				Over in a nearby corner of the nest, you see the familiar figure of Scarlett sitting next to a couple of brightly-coloured harpies.
+				你在巢穴附近的角落看到了斯嘉丽熟悉的身影，她正坐在几只色彩鲜艳的哈比旁边。
 				#IF(pc.getQuest(QUEST_LINE_ROMANCE_HELENA) == QUEST_ROMANCE_HELENA_4_SCARLETTS_RETURN)
-					 Although you doubt that you'll get an amicable response from her, you need to go over to Scarlett and tell her that Helena wants to see her...
+					虽然你怀疑她是否会友善地回应你，但你还是得去找斯嘉丽，告诉她海伦娜想见她……
 				#ELSE
-					 You could always head over and say hello, but you doubt that you'll get an amicable response from her...
+					你当然可以过去打个招呼，但你怀疑自己不会得到友好的回应……
 				#ENDIF
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="HELENAS_NEST_EXTERIOR_STORM"><![CDATA[
 	<p>
-		Making your way down one of the many walkways that criss-cross Dominion's rooftops, you find yourself approaching an exceptionally large Harpy Nest. Spanning several buildings, and with an elaborate system of multi-level platforms built on top of each one, you instantly recognise this as a nest of particular importance.
+		沿着御城区屋顶上纵横交错的人行道一路前行，你会发现自己正在接近一个特别大的哈比之巢。它横跨几栋建筑，每栋建筑的顶部都建有一个精心设计的多层平台系统，你一眼就能认出这是一个特别重要的巢穴。
 	</p>
 	<p>
-		Due to the ongoing arcane storm, the nest is completely deserted; its residents having retreated down into the safety of the buildings below. As yet another flash of arcane lightning illuminates the platforms before you, you notice that there are little signs dotted around the edges of the nest. Walking up to the nearest one, you read, in flowing, ornate script, the following words;
+		由于持续不断的奥术风暴，巢穴已经空无一人；巢穴里的居民已经撤退到下面安全的建筑中。当又一道奥术闪电照亮你面前的平台时，你注意到巢穴边缘点缀着一些小标志。你走到最近的一个小标志前，读到了下面用流畅、华丽的字体书写的文字：
 	</p>
 	<p style='text-align:center;'>
 	<i>
-		<b>~[helena.name]'s Paradise~</b>
-		<br/>Visitors must be accompanied at all times.
+		<b>~[helena.name]的乐园~</b>
+		<br/>参观者必须始终有人陪同。
 		#IF(pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_E_REPORT_TO_HELENA))
-			<br/>Until further notice, [helena.name] is <b>not receiving any visitors</b>.
+			<br/>除非另行通知，[helena.name]<b>不接见任何参观者</b>。
 		#ELSE
-			<br/>Meeting with [helena.name] by appointment only.
+			<br/>与[helena.name]的会面需要提前预约。
 		#ENDIF
 	</i>
 	</p>
 	<p>
 		#IF(pc.getQuest(QUEST_LINE_MAIN) == QUEST_MAIN_1_E_REPORT_TO_HELENA)
-			You do have business with [helena.name], and you're sure that she'd want to hear about Scarlett as soon as possible, but you'll have to come back after the ongoing storm has passed...
+			你确实与[helena.name]有生意往来，你确信她会希望尽快听到斯嘉丽的消息，但你必须在持续的风暴过去后再来……
 		#ELSEIF(pc.isQuestFailed(QUEST_LINE_ROMANCE_HELENA))
-			There's not much point in waiting around for the storm to pass, as Helena is so furious with you that she'd never agree to meeting with you...
+			等待风暴过去也没什么意义，因为海伦娜对你大发雷霆，她绝不会同意和你见面……
 		#ELSEIF(pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_E_REPORT_TO_HELENA))
-			There's not much point in waiting around for the storm to pass, as [helena.name]'s not even here at the moment...
+			等待风暴过去也没什么意义，因为[helena.name]现在根本不在这里……
 		#ELSE
-			There's not much point in waiting around for the storm to pass, as you don't have any business with [helena.name]...
+			等待风暴过去也没什么意义，因为你与[helena.name]没有任何生意来往……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_EXTERIOR_SLEEPING"><![CDATA[
 	<p>
-		Making your way down one of the many walkways that criss-cross Dominion's rooftops, you find yourself approaching an exceptionally large Harpy Nest. Spanning several buildings, and with an elaborate system of multi-level platforms built on top of each one, you instantly recognise this as a nest of particular importance.
+		沿着御城区屋顶上纵横交错的人行道一路前行，你会发现自己正在接近一个特别大的哈比之巢。它横跨几栋建筑，每栋建筑的顶部都建有一个精心设计的多层平台系统，你一眼就能认出这是一个特别重要的巢穴。
 	</p>
 	<p>
-		Due to the current hour, the nest is completely deserted; its residents having retired to the comfort of the buildings below in order to get a good night's sleep. Taking a look around the deserted platform, you notice that there are little signs dotted around the edges of the nest. Walking up to the nearest one, you read, in flowing, ornate script, the following words;
+		由于现在的时间，巢穴完全空无一人；居民们都已经退居到下面的建筑物中，以获得一个宁静的夜晚。环顾一下这个空无一人的平台，你注意到巢穴边缘有小小的标志点缀其中。你走到最近的一个小标志前，读到了下面用流畅、华丽的字体书写的文字：
 	</p>
 	<p style='text-align:center;'>
 	<i>
-		<b>~[helena.name]'s Paradise~</b>
-		<br/>Visitors must be accompanied at all times.
+		<b>~[helena.name]的乐园~</b>
+		<br/>参观者必须始终有人陪同。
 		#IF(pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_E_REPORT_TO_HELENA))
-			<br/>Until further notice, [helena.name] is <b>not receiving any visitors</b>.
+			<br/>除非另行通知，[helena.name]<b>不接见任何参观者</b>。
 		#ELSE
-			<br/>Meeting with [helena.name] by appointment only.
+			<br/>与[helena.name]的会面需要提前预约。
 		#ENDIF
 	</i>
 	</p>
 	<p>
 		#IF(pc.getQuest(QUEST_LINE_MAIN) == QUEST_MAIN_1_E_REPORT_TO_HELENA)
-			You do have business with [helena.name], and you're sure that she'd want to hear about Scarlett as soon as possible, but you'll have to come back once she's awake, [style.colourMinorBad(between [units.time(6)] and [units.time(22)])]...
+			你确实和[helena.name]有生意往来，你肯定她想尽快知道斯嘉丽的情况，但你得等她醒了再来，[style.colourMinorBad(在[units.time(6)]到[units.time(22)]之间)]……
 		#ELSEIF(pc.isQuestFailed(QUEST_LINE_ROMANCE_HELENA))
-			There's not much point in waiting around for the nests' residents to wake up, as Helena is so furious with you that she'd never agree to meeting with you...
+			等巢穴里的居民醒过来也没什么意义，因为海伦娜对你大发雷霆，她绝不会同意和你见面……
 		#ELSEIF(pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_E_REPORT_TO_HELENA))
-			There's not much point in waiting around for the nests' residents to wake up, as [helena.name]'s not even here at the moment...
+			等巢穴里的居民醒过来也没什么意义，因为[helena.name]现在根本不在这里……
 		#ELSE
-			There's not much point in waiting around for the nests' residents to wake up, as you don't have any business with [helena.name]...
+			等巢穴里的居民醒来也没有什么意义，因为你与[helena.name]没有任何生意来往……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST"><![CDATA[
 	<p>
-		Moving forwards into the nest, you look around for a harpy who can take you to [helena.name]. You don't need to search for long, however, as the moment you pass the sign next to the entrance, a flustered-looking harpy swoops down to land right in front of you.
+		走进巢穴，你四处寻找能带你找到[helena.name]的哈比。不过你不用找太久，因为在你经过入口旁边的标志牌时，一只长着绒毛的哈比就俯冲下来，落在了你的面前。
 	</p>
 	<p>
-		[style.speechFeminine(Stop! Wait! Who are you?! You can't come in here!)] she shouts, frantically waving her pink-feathered wings in front of your face. [style.speechFeminine(You need an appointment if you want to see [helena.name]!)]
+		[style.speechFeminine(停下！等等！你是谁？！你不能进来！)]她大叫着，疯狂地在你面前挥舞着粉色羽毛的翅膀。[style.speechFeminine(如果你要见[helena.name]的话你必须要预约！)]
 	</p>
 	<p>
-		[pc.speech(My name's [pc.name], and I really need to talk to [helena.name],)] you reply, standing your ground. [pc.speech(I've got a message for her from Scarlett.)]
+		[pc.speech(我的名字是[pc.name]，我真的很需要和[helena.name]谈谈，)]你站在原地回答。[pc.speech(我有斯嘉丽给她的口信。)]
 	</p>
 	<p>
-		A few of the surrounding harpies, obviously listening in to your conversation, suddenly start whispering to one another. Caught off-guard at the mention of Scarlett's name, the harpy that you're dealing with trips over her words as she hurries to respond, [style.speechFeminine(S-Scarlett?! What- I mean, who- Wait, no, she's meant to be working down in Slaver Alley! You don't mean <i>that</i> Scarlett, do you?)]
+		周围几个哈比显然在偷听你们的谈话，突然开始窃窃私语。在提到斯嘉丽的名字时，你面对的哈比开始口齿不清，急忙回应到，[style.speechFeminine(斯，斯嘉丽？！什么，我是说，谁，等等，不，她应该在奴隶巷工作！你不是说的<i>那个</i>斯嘉丽，对吗？)]
 	</p>
 	<p>
-		[pc.speech(Yes, I mean that Scarlett,)] you reply, [pc.speech(As I said, I need to deliver a message from her to [helena.name].)]
+		[pc.speech(是的，我就是说的那个斯嘉丽，)]你回答到，[pc.speech(正如我所说的，我有一条她给[helena.name]的口信。)]
 	</p>
 	<p>
-		[style.speechFeminine(Well, I'm not supposed to let people in without an appointment,)] the harpy says, nervously flapping her wings as she struggles to decide what to do, [style.speechFeminine(Helena <i>is</i> in a good mood today, and I'm sure she'd want to know if Scarlett's causing more trouble... Come on then! Follow me!)]
+		[style.speechFeminine(没有预约我是不能让人进来的，)]哈比紧张地拍动着翅膀，纠结着决定该怎么做，说道，[style.speechFeminine(海伦娜今天<i>有</i>个好心情，我确信她会想知道斯嘉丽是否又惹麻烦了……那就走吧！跟我来！)]
 	</p>
 	<p>
-		With you hot on her heels, your guide hurries off into the nest, leading you though crowds of inquisitive harpies, over rickety rope bridges, and, finally, up several flights of wooden stairs. After a couple of minutes spent following the pink-feathered harpy in this manner, you eventually arrive at the tallest platform in the nest. Over on the far side, surrounded by a dozen or so other harpies, you see the white-feathered form of Helena sitting on a delicate wooden throne.
+		在你紧随其后的情况下，你的向导快速穿越了巢穴，领你穿过一群好奇的哈比，越过摇摇欲坠的绳索桥，最后上了几层木楼梯。在跟随这位粉色羽毛的哈比几分钟后，你终于来到了巢穴中最高的平台。在远处，被十几只其他哈比围绕着，你看到了白色羽毛的海伦娜坐在一把精致的木制王座上。
 	</p>
 	<p>
-		As your guide bows down to her superiors and starts to explain that you're here to deliver news of Scarlett, you take a good look at these harpies who comprise Helena's inner-circle. Each one of them has a unique colour to their feathers, and they are without exception nothing less than stunningly beautiful. Their flawless features and perfectly-postured bodies leave you with no doubt that they'd each be capable of becoming a matriarch of their own flock, if they so desired. Despite their alluring beauty, your vision doesn't linger on these harpies for too long, as your gaze is irresistibly drawn to the figure of Helena.
+		当你的向导向上级鞠躬并开始解释你是来传达关于斯嘉丽的消息时，你仔细观察了海伦娜身边一圈的哈比们。它们每个人的羽毛都有独特的颜色，毫无例外地都令人惊艳。他们都有着无瑕的容颜和完美的身材，你毫不怀疑，如果他们愿意，他们每个人都能成为自己群体的族长。尽管她们都十分诱人，但你的目光并没有在这些哈比身上停留太久，因为你的目光不可抗拒地被海伦娜的身影吸引住了。
 	</p>
 	<p>
-		Sitting upon a white wooden throne, which has been elegantly carved to depict flowing branches and leaves and then inlaid with pure gold, the matriarch of this harpy flock must surely be one of the most beautiful creatures to have ever existed. Your eyes are first drawn to the immaculate feathers which cover [helena.namePos] wings, head, and tail; their pure white brilliance seems almost to radiate a heavenly glow, and there's not a single one on her entire body which isn't perfectly preened and spotlessly clean. Her pale skin, much like her feathers, is absolutely flawless, and there isn't even the slightest hint of a blemish anywhere on her perfect, hourglass-shaped body. The white plunge-dress which she's wearing reveals a large portion of her D-cup cleavage, and you can't help but marvel at not only how perfectly-formed her breasts are, but also how they're significantly larger than those of most harpies. The sharp talons on the end of her bird-like feet are perfectly manicured, and you see them flexing a little as she dismisses your guide with a brief swish of one of her wings. As the matriarch's [helena.eyeColour] eyes lock on to yours, you find yourself gazing upon the inconceivably-beautiful face of Aphrodite reborn, which turns up into a heart-melting smile as she beckons you forwards with one of her feathered fingers.
+		那位坐在那把雕刻着流动的枝叶，镶嵌着纯金的雪白木质的宝座上的，这个哈比部族的族长，肯定是有史以来最美丽的生物之一。你的目光首先会被[helena.namePos]覆盖在翅膀、头部和尾部的完美无瑕的羽毛所吸引，而且她身上没有哪一处羽毛不是被精心梳理过的，一尘不染的。她苍白的皮肤，就像她的羽毛一样，绝对完美无瑕，她完美的身材上甚至没有一点瑕疵的痕迹，呈现出完美的沙漏形状。她身上的白色低领连衣裙露出了她D罩杯的大部分乳沟，你不禁惊叹她的乳房是如此完美，而且比大多数哈比的乳房都要大得多。她鸟爪的末端十分锋利，修剪得很整齐，当她轻轻挥动一只翅膀让你的向导离开时，你可以看到它们微微弯曲。当族长的[helena.eyeColour]双眸注视着你时，你会发现自己正凝视着那张仿佛阿佛洛狄忒在世一般美丽得难以想象的脸庞，当她用一根羽毛覆盖的手指招手示意你走近时，她的脸上露出一个令人心醉神迷的微笑。
 	</p>
 	<p>
-		[helena.speech(Welcome to my nest, [pc.name],)] Helena says in a soft, melodic voice which perfectly fits her beautiful appearance, [helena.speech(If I were not so pressed with prior engagements, I would insist upon giving you my full hospitality, but alas, my time is regrettably in very short supply. If you are here to deliver news of my dear Scarlett, then pray do tell without delay.)]
+		[helena.speech(欢迎来到我的巢穴，[pc.name]，)]海伦娜用轻柔的声音说到，这与她美丽的外表完美契合，[helena.speech(如果我没有那么多公务在身，我一定会盛情款待你，但可惜我的时间太少了。如果你是来告诉我亲爱的斯嘉丽的消息，只能麻烦你快点告诉我了。)]
 	</p>
 	<p>
-		Although she retains her regal posture and calm tone of voice, you notice another slight flex of Helena's talons as she mentions the name 'Scarlett', revealing the fact that she's impatient to find out what news you have of her...
+		虽然她仍保持着威严的姿态和平静的语调，但你注意到海伦娜在提到“斯嘉丽”这个名字时，爪子又微微弯曲了一下，这透露出一个事实，那就是她已经迫不及待地想知道你有关于她的什么消息了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST_SCARLETT -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_SCARLETT"><![CDATA[
 	<p>
-		Agreeing with Helena that it would be best not to delay, you set about telling her of Scarlett's failed business, and how she's run out of both money and slaves. As you reveal this information, you see the matriarch's talons digging down into the wooden platform in front of her throne, and before you can get to the part about Scarlett's request that you take her punishment for her, Helena holds up her wing to silence you. With her head-feathers bristling up in a clear display of anger, the beautiful matriarch somehow manages to keep her voice soft and calm as she turns towards one of the nearby harpies and asks, [helena.speech(Is what [pc.name] is saying true, Aello? I do recall giving you the responsibility of watching over Scarlett, and it seems rather perplexing to me that you'd neglect to report a failure of this magnitude.)]
+		你同意海伦娜的意见，认为最好不要拖延时间，于是你开始向她讲述斯嘉丽的失败生意，以及她是如何耗尽金钱和奴隶的。当你透露这些信息时，你看到族长的爪子正刨着她宝座前的木台，还没等你说到斯嘉丽请求你替她受罚的部分，海伦娜就举起翅膀让你闭嘴。美丽的族长头上的羽毛拂动着，显然是在发怒，但她还是设法让自己的声音保持柔和平静，她转向附近的一个哈比问道：[helena.speech([pc.name]说的是真的吗，埃洛？我记得我把照看斯嘉丽的责任交给了你，而你却忽略了报告这么大的失误，这让我很费解。)]
 	</p>
 	<p>
-		[style.speechFeminineStrong(My queen, please, I thought Scarlett would still have time to fix her mistake. I didn't want to bother you with-)] the harpy tries to explain, but she's cut off mid-sentence as Helena rises up from her throne and sharply sweeps her wings down to either side of her.
+		[style.speechFeminineStrong(我的女王，请原谅，我以为斯嘉丽还有时间来弥补她的错误。我不想打扰您……)]这只哈比尝试解释，但海伦娜从宝座上站起来，猛地将翅膀向两边一扫，她的话说到一半就被打断了。
 	</p>
 	<p>
-		[helena.speech(Why must I be burdened with such incompetent followers?)] the matriarch asks, starting to losing her noble composure as her voice takes on a distinctly icy tone, [helena.speech(I specifically told you to report any significant news of Scarlett to me at once. Obviously that was too much for your simple little bird-brain to comprehend.)]
+		[helena.speech(为什么你们这样无能的追随者老是给我带来困扰呢？)]族长问道，她的声音明显变得冰冷，开始失去高贵的镇定，[helena.speech(我特别嘱咐过你，一旦有斯嘉丽的重要消息，马上向我报告。很显然，你的小鸟脑袋是没法理解我说的话。)]
 	</p>
 	<p>
-		[style.speechFeminineStrong(Please, I'm sorry, I'll go and tell Scarlett-)] the harpy starts, but is again quickly silenced, this time by the loud scratching noise of Helena's sharp talons ripping up the floor beneath her.
+		[style.speechFeminineStrong(求你了，对不起，我现在就去告诉斯嘉丽——)]海伦娜锋利的爪子撕裂了她脚下的地板，发出巨大的抓挠声。
 	</p>
 	<p>
-		[helena.speech(Oh, that won't be necessary. I'm going to go and personally deal with Scarlett right now. Don't expect me to return any time soon; I need to take a long break away from the ceaseless ineptitude I'm expected to deal with on a daily basis,)] [helena.name] announces in a tone that's by now distinctly hostile. Turning towards the cobalt-blue-feathered harpy sitting closest to her throne, she commands, [helena.speech(Electra, you'll be in charge of the nest until I decide to return. Please do try not to let it turn to ruin in my absence.)]
+		[helena.speech(哦，没必要了。我现在就要亲自处理斯嘉丽。不要期望我很快就回来，我需要远离你们这些每天都要面对的无能家伙。)][helena.name]用一种明显带有敌意的语气宣布。她转过身，朝坐在离她的王座最近的那只钴蓝色羽毛的哈比发出命令，[helena.speech(伊莱克特拉，在我决定回来之前，你将负责管理巢穴。请尽量不要让它在我不在的时候变成废墟。)]
 	</p>
 	<p>
-		In her current state of anger, it seems as though [helena.name] has completely forgotten about your existence. Ignoring her followers' pleas to stay, she steps over to the edge of the platform and spreads her wings. You only have a moment in which to try and stop her from flying off, and you wonder if you should use this opportunity to offer to take Scarlett's punishment on her behalf...
+		在她目前的愤怒状态下，[helena.name]似乎已经完全忘记了你的存在。她无视追随者的挽留，走到平台边缘，张开翅膀。你只有一点时间来阻止她飞走，你不知道是否应该利用这个机会替她接受斯嘉丽的惩罚……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST_NO_PUNISHMENT -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_NO_PUNISHMENT"><![CDATA[
 	<p>
-		Deciding that it would be best to avoid [helena.namePos] wrath, you say nothing as she leaps off the edge of the platform, and simply watch as she wheels around in mid-air and flies off in the direction of Slaver Alley. You're confident that you did the right thing; after all, who knows what horrific punishment [helena.name] would have given you had you said something to stop her.
+		你决定最好避免让[helena.namePos]生气，所以当她跳下平台边缘时，你什么也没说，只是看着她在半空中转了一圈，向奴隶巷的方向飞去。你坚信自己做得对，毕竟，如果你出言阻止她，谁知道[helena.name]会给你什么可怕的惩罚。
 	</p>
 	<p>
-		[helena.NamePos] inner-circle of harpies pay you no heed as their matriarch soars off into the #IF(game.isDayTime())sky#ELSEnight#ENDIF. They're far too concerned with speculating as to what [helena.name] is going to do to Scarlett, and as you overhear some of their more frightful ideas, you suddenly remember that you still need the rude raven-harpy to tell you what happened to Arthur.
+		当[helena.NamePos]翱翔在#IF(game.isDayTime())天空#ELSE夜空#ENDIF时。她周围的哈比们并没有理会你，她们太专注于猜测[helena.name]会对斯嘉丽做什么，当你听到她们一些更可怕的想法时，你突然想起你还需要那个粗鲁的渡鸦哈比告诉你亚瑟发生了什么事。
 	</p>
 	<p>
-		It doesn't look like anyone's going to prevent you from leaving, so you quickly move to make your exit. You should probably hurry back to Scarlett's shop and find out what [helena.name] had in store for her...
+		看起来没有人会阻止你离开，你快速地离开了。你也许应该赶快回到斯嘉丽的店里，看看[helena.name]为她准备了什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_LEAVING"><![CDATA[
 	<p>
-		Heading back down the staircase to the nest's main platform, you leave your guide to hurry after you, fretting and flapping her wings as she pleads with you to try and calm [helena.name] down. Going back the same way that you came, it only takes a few moments before you're exiting [helena.name]'s nest, and after telling your worrisome harpy guide that you'll do your best, you leave her behind and head back out into the Harpy Nests once more...
+		你沿着楼梯回到巢穴的主平台，让你的向导在你后面匆匆赶路，她一边焦急地拍打着翅膀，一边恳求你试着让[helena.name]冷静下来。你原路返回，只用了片刻就离开了[helena.name]的巢穴，在对你那令人担忧的哈比向导说你会尽力而为后，你丢下她，再次回到了哈比之巢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT"><![CDATA[
 	<p>
-		[pc.speech(Wait!)] you cry out, [pc.speech(There's something else!)]
+		[pc.speech(等等！)]你叫道：[pc.speech(还有些别的事！)]
 	</p>
 	<p>
-		[helena.Name] lowers her wings and turns towards you, before asking in an icy tone, [helena.speech(And what, exactly, is so important to tell me that you thought it wise to shout?)]
+		[helena.Name]放下翅膀，转向你，然后用冰冷的语气问道，[helena.speech(到底是有什么重要的事情要告诉我，以至于你认为大喊大叫是明智之举？)]
 	</p>
 	<p>
-		[pc.speech(Well, Scarlett also asked me to tell you that I should take her punishment for her...)] you explain, your voice trailing off as [helena.name] strides towards you.
+		[pc.speech(斯嘉丽还让我告诉你，我应该替她接受惩罚……)]你解释道，话音刚落，[helena.name]大步向你走来。
 	</p>
 	<p>
-		[helena.speech(There's absolutely no way that Scarlett is going to avoid the punishment which I have planned for her, but seeing as you're so <i>desperate</i> for attention, it's only fair that I give you what you want,)] Helena says, before a deep red glow suddenly starts to pulsate around her wings. Before you get the chance to react to her unexpected ability to harness the arcane, she sweeps her wings down in a sharp, cutting motion. Caught off-guard, the powerful wave of arcane force summoned by this matriarch slams you to the ground. As you then try to stand back up, Helena slams a second wave of force down on top of you, pinning you to the floor as she calls out, [helena.speech(Aello! You have an opportunity to earn some of my forgiveness! Help me to show this insolent [pc.race] how we administer punishments in my nest!)]
+		[helena.speech(斯嘉丽绝对不可能逃掉我对她的惩罚，但看在你如此<i>急切</i>地博求关注的情况下，我给你想要的才是最公平的，)]海伦娜说，然后她的翅膀周围突然开始跳动起深红色的光芒。你还没来得及对她意想不到的奥术能力做出反应，她的翅膀就以一个尖锐的切割动作扫了下来。猝不及防下，这位族长释放出的强大奥术力量将你重重地摔在地上。当你试图重新站起来时，海伦娜又将第二波力量压在你身上，将你按在地上，同时她还发出了呼唤，[helena.speech(埃洛！你有一个机会赢得我的宽恕！帮我向这个无礼的[pc.race]展示一下，在我的巢穴里，我们是如何实施惩罚的！)]
 	</p>
 	<p>
-		The sound of mocking laughter echoes all around you as you suddenly feel a third wave of force pushing you over right into Aello's welcoming wings.
+		嘲笑的笑声在你四周响起，突然你感到第三波力量将你推到了埃洛迎接的翅膀上。
 		#IF(pc.isBipedal())
-			 As you're completely thrown off balance, the harpy has no problem at all in bending you down over her knee, and you can't help but let out a surprised gasp as you realise that your exposed ass is pointing up into the air.
+			当你完全失去平衡时，哈比毫不犹豫地把你压在她的膝盖上，当你意识到自己裸露的屁股正对着空中时，不禁发出一声惊讶的喘息。
 		#ELSE
-			 As you're completely thrown off balance, the harpy has no problem at all in manipulating your body such that your exposed ass is pointing up into the air.
+			当你完全失去平衡时，哈比会毫不费力地控制你的身体，让你露出的屁股指向空中。
 		#ENDIF
-		 Helena continues to demonstrate her arcane mastery, and you feel your [pc.arms] and [pc.legs] bound by an ethereal force as [helena.she] steps forwards and prepares to personally administer your punishment.
+		海伦娜继续展示着她对奥术的精通，你感到自己的[pc.arms]和[pc.legs]被一股虚无的力量束缚着，[helena.she]向前走了一步，准备亲自对你进行惩罚。
 	</p>
 	<p>
-		[helena.speech(Is this the sort of attention you were looking for, [pc.name]?)] the matriarch rhetorically asks, [helena.speech(I think twenty strikes will do nicely for you!)]
+		[helena.speech(这就是你想要的关注吗？[pc.name]？)]族长反问，[helena.speech(我想，打二十下对你来说足够了！)]
 	</p>
 	<p>
-		With that, [helena.name] raises her right wing high in the air, and with a swift downwards motion, she delivers the first slap down onto your raised ass. Normally, a harpy's touch would be quite weak; their delicate wings are more suited for swift, mid-flight movements rather than for administering forceful blows, but [helena.name]'s strike is anything but light.
+		[helena.name]将右翼高高举起，迅速向下一挥，将第一巴掌打在了你翘起的屁股上。通常情况下，哈比们的击打会相当虚弱——她们纤细的翅膀更适合在飞行途中迅速移动，而不是进行有力的击打，但[helena.name]的这一击却一点也不轻。
 		#IF(pc.hasFetish(FETISH_MASOCHIST))
-			 A crackle of arcane force accompanies her blow, and you can't help but let out a horny [pc.moan] as an intense, stinging pain shoot into your buttocks. Your masochistic cry
+			伴随着她这一击的是一阵噼里啪啦的奥术力量，当一阵强烈的疼痛刺激着你的臀部时，你情不自禁地发出了一声淫荡的[pc.moan]，你受虐癖的叫声
 		#ELSE
-			 A crackle of arcane force accompanies her blow, and you let out an involuntary cry as you feel a stinging pain shoot into your buttocks. Your exclamation
+			伴随着她这一击的是一阵噼里啪啦的奥术力量，你不由自主地发出了一声惨叫，因为你感觉到一股刺痛射入了你的臀部。你的惊呼声
 		#ENDIF
-		 is met by a chorus of mocking laughter from [helena.namePos] inner-circle of harpies, and you hear them encouraging their matriarch to show you no mercy as she raises her wing to strike again...
+		被[helena.namePos]内圈的哈比们发出的嘲弄笑声掩盖，你听到她们在鼓励族长不要对你留情，[helena.name]举起翅膀准备再次击打……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENDURE -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENDURE"><![CDATA[
 	<p>
-		You scrunch your [pc.eyes] shut and do your best to endure your punishment without complaint. Despite your best efforts to stay quiet, however, [helena.namePos] sharp blows occasionally force a little whimper out from between your [pc.lips], much to the amusement of the harpy onlookers.
+		你紧闭[pc.eyes]，尽力忍受惩罚，毫无怨言。尽管你竭力保持沉默，但[helena.namePos]尖锐的打击偶尔还是会迫使你[pc.lips]发出一声轻微的呜咽，这让围观的哈比感到非常有趣。
 	</p>
 	<p>
-		Although Helena had announced that you'd be receiving only twenty strikes, your public spanking seems to continue on forever. Time and again, the matriarch's wing-like hand relentlessly strikes down at your exposed cheeks, but just as you feel as though you can't possibly stand any more, she decides that you've had enough. Stepping back, she releases the arcane bonds which were restraining your [pc.arms] and [pc.legs], and as you reach back to rub at your tender [pc.ass], Aello pushes you away from her and teases, [style.speechFeminineStrong(That'll teach you to annoy our matriarch!)]
+		虽然海伦娜宣布你只会被打二十下，但你被当众打屁股的时间似乎永远都不会停止。族长的翅膀一次又一次无情地击打着你的屁股，但就在你觉得自己再也无法忍受更多的时候，她认为已经够了。她向后退了一步，松开了对你的[pc.arms]和[pc.legs]的奥术束缚，当你伸手去揉你娇嫩的[pc.ass]时，埃洛把你从她身边推开，并嘲笑道，[style.speechFeminineStrong(这是你惹我们的族长的教训！)]
 	</p>
 	<p>
-		With her voice once again taking on a softer tone, Helena looks down at you and says, [helena.speech(I must commend you on your resolve. Those who I punish in this fashion often have a tendency to cause quite the scene.)]
+		海伦娜的声音再次变得柔和，她低头看着你说，[helena.speech(我必须赞扬你的决心。被我用这种方式惩罚的人往往会引起很大的轰动。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_END"><![CDATA[
 	<p>
-		With that being said, the matriarch once again walks over to the edge of the platform. Spreading her white-feathered wings, she launches herself into the air, before wheeling around and flying off in the direction of Slaver Alley.
+		说罢，族长再次走到平台边缘。她展开白色羽翼，腾空而起，在半空中转了一圈，向奴隶巷的方向飞去。
 	</p>
 	<p>
-		With your public humiliation now at an end, [helena.namePos] inner-circle of harpies instantly lose interest in you. Gossiping amongst themselves, they start speculating as to what [helena.name] is going to do to Scarlett, and as you overhear some of their more frightful ideas, you suddenly remember that you still need the rude raven-harpy to tell you what happened to Arthur.
+		随着你在公众面前的羞辱结束，[helena.namePos]内圈的哈比立刻对你失去了兴趣。她们开始相互闲聊，猜测[helena.name]会对斯嘉丽做什么，当你听到她们一些更可怕的想法时，你突然想起你还需要那个粗鲁的渡鸦哈比告诉你亚瑟发生了什么事。
 	</p>
 	<p>
-		It doesn't look like anyone's going to prevent you from leaving, so you quickly move to make your exit. You should probably hurry back to Scarlett's shop and find out what [helena.name] had in store for her...
+		看起来没有人会阻止你离开，你快速地离开了。你也许应该赶快回到斯嘉丽的店里，看看[helena.name]为她准备了什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_STRUGGLE -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_STRUGGLE"><![CDATA[
 	<p>
-		Not at all happy with what Helena's punishment turned out to be, you let out a loud cry as her wing smacks down yet again on your exposed ass. Not giving you a moment's respite, she lifts her wing and delivers a third stinging blow to your [pc.ass+], causing you to squeal once more in pain. Each of her blows draws out a desperate wail from between your [pc.lips], and much to the amusement of the harpy onlookers, you fruitlessly kick and struggle about as Aello firmly holds you in position.
+		你对海伦娜的惩罚一点也不满意，当她的翅膀再次拍在你裸露的屁股上时，你发出了一声大叫。她没有给你片刻喘息的机会，抬起翅膀对你[pc.ass+]进行了第三次刺痛的打击，使你再次发出痛苦的尖叫。她的每一击都会从你[pc.lips]间引出一声绝望的哀嚎，让围观的哈比感到好笑，在埃洛牢牢地抓住你的时候，你徒劳地踢打和挣扎着。
 	</p>
 	<p>
-		Although Helena had announced that you'd be receiving only twenty strikes, your public spanking seems to continue on forever. Time and again, the matriarch's wing-like hand relentlessly strikes down at your exposed cheeks, and although you continue to struggle and shout throughout your whole ordeal, the matriarch only stops once she's decided that you've had enough. Stepping back, she releases the arcane bonds which were restraining your [pc.arms] and [pc.legs], and as you reach back to rub at your tender [pc.ass], Aello pushes you away from her and teases, [style.speechFeminineStrong(That'll teach you to annoy our matriarch!)]
+		虽然海伦娜宣布你只会被打二十下，但你被当众打屁股的时间似乎永远都不会停止。虽然你在整个过程中不断挣扎和喊叫，但族长只是在她认为你已经受够了的时候才停下来。她向后退了一步，松开了对你的[pc.arms]和[pc.legs]的奥术束缚，当你伸手去揉你娇嫩的[pc.ass]时，埃洛把你从她身边推开，并嘲笑道，[style.speechFeminineStrong(这是你惹我们的族长的教训！)]
 	</p>
 	<p>
-		With her voice once again taking on a softer tone, Helena looks down at you and says, [helena.speech(What a dreadful racket you made... I cannot recall anyone else ever kicking up as much of a fuss as you just did.)]
+		海伦娜的声音再次变得柔和，她低头看着你说，[helena.speech(你吵得真厉害……我不记得还有谁像你这样大吵大闹过。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENJOY -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_TAKE_PUNISHMENT_ENJOY"><![CDATA[
 	<p>
-		More than happy with what Helena's punishment turned out to be, you let out a lewd cry as [helena.namePos] wing smacks down yet again on your exposed ass. Not giving you a moment's respite, she lifts her wing and delivers a third stinging blow to your [pc.ass+], causing you to [pc.moan] in a delightful mixture of pleasure and pain, [pc.speech(Yes! Punish me!)]
+		你对海伦娜的惩罚非常满意，当[helena.namePos]翅膀再次拍打在你暴露的屁股上时，你发出了淫荡的叫声。她没有给你片刻喘息的机会，抬起翅膀对你[pc.ass+]进行了第三次刺痛的打击，让你在快乐和痛苦的交织中发出[pc.moan]，[pc.speech(对！狠狠惩罚我！)]
 	</p>
 	<p>
-		Looking across to one of her followers in confusion, Helena asks, [helena.speech(Is [pc.she]... <i>enjoying</i> this?)]
+		海伦娜疑惑地看向她的一位追随者，问道，[helena.speech([pc.she]是在……<i>享受</i>这个？)]
 	</p>
 	<p>
-		[style.speechFeminineStrong(I believe so,)] the harpy replies, [style.speechFeminineStrong(perhaps if you were to hit [pc.herHim] harder, [pc.she]'d understand that this is a punishment.)]
+		[style.speechFeminineStrong(我猜是的，)]哈比回答道，[style.speechFeminineStrong(也许如果你打[pc.herHim]打得更重一些，[pc.she]就会明白这是一种惩罚。)]
 	</p>
 	<p>
-		Helena clearly approves of her follower's suggestion, as the next blow that lands on your ass is far more powerful than the ones before, and despite your burning arousal, you can't help but let out a whimpering scream. Encouraged by your painful cry, and seemingly oblivious to the fact that you're still enjoying it, each of [helena.name]'s smacks grow harder and harder, drawing out desperate wails and pleasurable moans from between your [pc.lips].
+		海伦娜显然很赞同她的追随者的建议，因为接下来打在你屁股上的力度比之前的要大得多，尽管你已经欲火焚身，但还是忍不住发出了呜咽的尖叫声。受到你痛苦叫声的鼓励，而且似乎对你仍在享受这一事实视而不见，[helena.name]的每一下抽打都越来越用力，绝望的哀嚎和愉悦的呻吟混杂着从你[pc.lips]溢出。
 	</p>
 	<p>
-		Although Helena had announced that you'd be receiving only twenty strikes, your public spanking seems to be over in a flash. Stepping back, she releases the arcane bonds which were restraining your [pc.arms] and [pc.legs], and as you reach back to rub at your tender [pc.ass], Aello pushes you away from her and teases, [style.speechFeminineStrong(That'll teach you to annoy our matriarch!)]
+		虽然海伦娜宣布你只会被打二十下，但你的公开的打屁股似乎瞬间就结束了。退后一步，她松开对你的[pc.arms]和[pc.legs]的奥术束缚，当你伸手去揉你娇嫩的[pc.ass]时，埃洛推开你并且嘲笑到，[style.speechFeminineStrong(这是你惹我们的族长的教训！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT -->
 	
 	<htmlContent tag="HELENAS_NEST_MAIN_QUEST_TAKE_FLIGHT"><![CDATA[
 	<p>
-		Following in [helena.name]'s footsteps, you hurry to the edge of the platform. #IF(!pc.isAbleToFlyFromExtraParts())With a flap of your wings, you#ELSEYou#ENDIF leap off and take flight, following the speck of white in the distance as [helena.name] leads you back to Scarlett's shop.
+		你跟随着[helena.name]的脚步，匆匆来到平台边缘。#IF(!pc.isAbleToFlyFromExtraParts())扇动翅膀，你#ELSE你#ENDIF一跃而起飞到空中，跟着远处[helena.name]的那一抹白色飞回了斯嘉丽的商店。
 	</p>
 	<p>
-		Somewhere along the way, you lose sight of the harpy matriarch, and it takes you a little while to get your bearings again. Soon enough, however, you spot the familiar pattern of Slaver Alley's passages beneath you, and swoop down to land in front of Scarlett's shop.
+		在前进的路上，你不知何时失去了哈比族长的踪影，过了好一会儿你才恢复了方向感。不过很快，你就发现了脚下熟悉的奴隶巷通道，然后俯冲下来，落在斯嘉丽的店铺前。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- After completing her romance quest: -->
@@ -350,70 +350,70 @@
 	
 	<htmlContent tag="HELENAS_NEST"><![CDATA[
 	<p>
-		Wanting to pay Helena a visit, you set off across the nest towards the tall platform upon which you know the regal matriarch is likely to be sitting. Before you're able to get too far, however, the same flustered-looking harpy who led you to Helena the last time you were here swoops down in front of you and declares, [style.speechFeminine(H-Hold on! You may have permission to enter our nest, but I need to know where you're going!)]
+		你想去拜访一下海伦娜，于是穿过巢穴，向高处的平台走去，你知道这位高贵的族长很可能就坐在上面。然而，还没等你走多远，上次带你找到海伦娜的那只一脸慌张的粉色哈比就在你面前俯冲下来，大声说，[style.speechFeminine(站，站住！我知道你有通行许可，不过你得告诉我你要去哪？)]
 	</p>
 	<p>
-		After you've told the pink-feathered harpy that you're going to see Helena again, she insists on accompanying you on your way through the nest. Not seeing any harm in it, you let your guide lead you though crowds of inquisitive harpies, over rickety rope bridges, and, finally, up several flights of wooden stairs. After a couple of minutes spent following the pink-feathered harpy in this manner, you eventually arrive at the tallest platform in the nest. Over on the far side, surrounded by a dozen or so other harpies, you see the beautiful, white-feathered form of Helena sitting on her delicate wooden throne. After briefly announcing your arrival, the harpy who was acting as your guide quickly scurries aside, and with a flap of her pink wings, flies off down to a lower part of the nest.
+		在你告诉粉红羽毛的哈比你要再去见海伦娜后，她坚持要同你一起走。你觉得这样也没什么不好，就任由向导带着你穿过好奇的哈比人群，走过摇摇晃晃的绳桥，最后爬上几层木楼梯。就这样跟着粉红羽毛的哈比走了几分钟后，你最终来到了巢穴中最高的平台。在远处的平台上，在十几只其他哈比的簇拥下，你看到了披着洁白羽毛的海伦娜坐在她精致的木制宝座上。在向族长简短地告知了你的到来后，充当向导的哈比迅速窜到一旁，扇动着粉色的翅膀飞到了巢穴的低处。
 	</p>
 	<p>
 		#IF(helena.isSlutty())
 			#IF(!game.getDialogueFlags().hasFlag(FLAG_helenaSlutSeen))
-					Looking across to where the beautiful harpy matriarch is sitting, you find yourself almost not believing what you're seeing, as instead of her usual elegant white plunge dress,
+					你望向美丽的哈比族长，不可思议地瞪大了眼睛，因为她并没有像往常一样穿着优雅的白色羽绒服。
 					#IF(helena.isVisiblyPregnant())
-						 Helena is now wearing an incredibly slutty outfit, and what's more, she's also very clearly pregnant.
+						海伦娜现在穿着一身无比淫荡的衣服，更重要的是，她还很明显地怀有身孕。
 					#ELSE
-						 Helena is now wearing an incredibly slutty outfit.
+						海伦娜现在穿着一套无比淫荡的衣服。
 					#ENDIF
-					 Both her talons and the nails on the end of her feathered fingers are painted bright pink, which matches the colour of the glossy lipstick she's wearing. Her previously-unblemished white head feathers have been dyed with bleach-blonde highlights, and you notice too that she's taken to wearing thick black eyeliner and a noticeable amount of dark purple eye shadow.
+					她的爪子和长着羽毛的手指末端的指甲都涂成了亮粉色，这与她光亮的口红颜色相得益彰。她原本洁白无瑕的头羽被染成了漂白的金色，你还会注意到，她已经习惯画上浓黑的眼线，并涂上了明显的深紫色眼影。
 				</p>
 				<p>
-					Her big nipples are quite clearly visible as they push out against the tight white fabric of the tube top that's covering her large breasts, while her white micro skirt is so short that she shamelessly flashes her lacy black thong to anyone who peers down below her waistline. Instead of her usual fashionable dangle earrings, she's now wearing an assortment of trashy gold jewellery, which takes the form of hoop earrings, a nose ring, and a navel barbell. Around her neck, she's wearing a tight black velvet choker, and as she sees that it's you who's paying her a visit, she peers over the top of her gold aviator sunglasses
+					她硕大的乳头在白色紧身上衣的衬托下清晰可见，而她的白色超短裙则短得无法遮掩她腰部以下的蕾丝黑色丁字裤。她不再戴着往常时髦的吊坠耳环，而是戴上了各种闪闪发光的金饰，包括环形耳环、鼻环和肚脐环。她的脖子上戴着一条黑色天鹅绒吊坠，当她看到是你来拜访她时，她从金色飞行员太阳镜的上方窥视着你。
 			#ELSE
 				#IF(helena.isVisiblyPregnant())
-					Looking across to where the beautiful harpy matriarch is sitting, you find yourself thinking that her regal posturing is somewhat at odds with the slutty micro skirt and tube top combo that she's taken a habit of wearing. It's not her choice of outfit that draws your attention the most, however, for you very quickly find your gaze drawn to her clearly-pregnant belly. Flashing you a smile as she sees what it is you're staring at, Helena peers over the top of her gold aviator sunglasses
+					望着对面美丽的哈比，你觉得她高贵的姿态与她穿着的放荡的超短裙和抹胸上衣有些不协调。不过，最吸引你注意的并不是她的穿着，因为你很快就发现自己的目光被她明显怀孕的肚子吸引住了。看到你盯着她看，海伦娜向你绽放出一个微笑，并从她的金色飞行员太阳镜上方窥视着你。
 				#ELSE
-					Looking across to where the beautiful harpy matriarch is sitting, you find yourself thinking that her regal posturing is somewhat at odds with the slutty micro skirt and tube top combo that she's taken a habit of wearing. As she sees that it's you who's paying her a visit, she peers over the top of her gold aviator sunglasses
+					看着对面坐着的这位美丽的哈比，你觉得她高贵的姿态与她穿的放荡的超短裙和抹胸上衣组合有些格格不入。当她看到来拜访她的人是你时，她从金色飞行员太阳镜的上方窥视着你。
 				#ENDIF
 			#ENDIF
 			#IF(helena.isVisiblyPregnant())
 				#IF(!helena.isCharacterReactedToPregnancy(pc))
 					#IF(helena.getPregnantLitter().isFatherId(pc.getId()))
-						 and seductively teases, [helena.speech(You know, [pc.name], by giving me that lovely big creampie, you've ended up fertilising my eggs...)]
+						她用诱惑的声线调戏着你，[helena.speech(你知道吗，[pc.name]，你上次内射了我之后，我可是怀上了一肚子的蛋……)]
 					#ELSE
-						 and playfully teases, [helena.speech(Thanks to you, [pc.name], my dear Scarlett's managed to fertilise my eggs...)]
+						她用诱惑的声线调戏着你，[helena.speech(多亏了你，[pc.name]，斯嘉丽把我肚子搞大了……)]
 					#ENDIF
 				#ELSE
 					#IF(helena.getPregnantLitter().isFatherId(pc.getId()))
-						 and seductively teases, [helena.speech(Yes, [pc.name], I'm still carrying around the eggs you've fertilised...)]
+						她用诱惑的声线调戏着你，[helena.speech(就是你看到的那样，[pc.name]，拜你所赐，我还怀着孕……)]
 					#ELSE
-						 and playfully teases, [helena.speech(Yes, [pc.name], I'm still carrying around the eggs which my dear Scarlett's fertilised...)]
+						她用诱惑的声线调戏着你，[helena.speech(就是你看到的那样，[pc.name]，我还怀着斯嘉丽的蛋……)]
 					#ENDIF
 				#ENDIF
 				</p>
 				<p>
-					Ignoring the hushed whispering of the members of her inner-circle, the horny matriarch enticingly bites her lip and beckons you forwards. [pc.Stepping] up to where Helena is sitting, you find yourself caught a little off-guard as she grabs your [pc.hands] and guides them down to rub her clearly-swollen belly. After making this audacious move, the beautiful matriarch leans back in her throne and shamelessly teases,
+					这位饥渴的族长无视其他人的窃窃私语，诱人地咬着嘴唇，向你招手。你走到海伦娜坐着的地方，她突然抓住你的[pc.hands]，并拉着你的手去揉她明显肿胀的肚子。做出这个大胆的举动后，这位美丽的族长靠在她的宝座上，不知羞耻地挑逗着你。
 			#ELSE
 				#IF(game.getDialogueFlags().hasFlag(FLAG_helenaNestFucked))
-					 and seductively teases,
+					她用诱惑的声线调戏着你，
 				#ELSE
-					 and seductively teases,
+					她用诱惑的声线调戏着你，
 				#ENDIF
 			#ENDIF
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaNestFucked))
-				 [helena.speech(I'm still recovering from the time we spent together in my bedroom earlier, but if you're still hungry for my wet little pussy, perhaps you can return tomorrow and give it some more attention then...)]
+				[helena.speech(我需要从我们之前在我卧室里共度的欢愉中恢复过来，但如果你还对我湿漉漉的小骚穴饥渴难耐，也许你可以明天再来，到时再来喂饱它……)]
 			#ELSE
-				 [helena.speech(You know, [pc.name], I was hoping that you'd pay me a visit today. You see, my pussy keeps on getting wet whenever I think about you, and I was hoping that you could help me do something about it down in my bedroom...)]
+				[helena.speech(你知道吗，[pc.name]，我一直盼着你来。你看，每当我想到你，我的下面就会湿润，我希望你能和我在卧室里做点什么……)]
 			#ENDIF
 		#ELSE
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaNestTalkedTo))
-				As you look across to where the beautiful harpy matriarch is sitting, you see her flash you a delightful smile, before softly calling out, [helena.speech(Welcome back, [pc.name]. Unfortunately, I have no more time today in which to participate in idle conversation with you. If you were to return tomorrow, however, I'd love to spend some time chatting again.)]
+				当你望向美丽的哈比族长坐着的地方时，你看到她向你露出一个愉悦的微笑，然后轻轻地叫了一声，[helena.speech(欢迎回来，[pc.name]。很遗憾，我今天没有时间和你闲聊了。不过，如果你明天再过来，我很乐意再和你聊聊。)]
 			#ELSE
-				As you look across to where the beautiful harpy matriarch is sitting, you see her flash you a delightful smile, and as she beckons you forwards with one of her beautiful white wings, she softly calls out, [helena.speech(Welcome back, [pc.name]. What brings you here today?)]
+				当你望向美丽的哈比族长坐着的地方时，你看到她向你投来一个愉悦的微笑。她用一只美丽的白色翅膀向你招手，轻轻地呼唤着你，[helena.speech(欢迎回来，[pc.name]。什么风把你吹来了？)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_TALK -->
@@ -421,75 +421,75 @@
 	<htmlContent tag="HELENAS_NEST_TALK"><![CDATA[
 	#IF(helena.isSlutty())
 		<p>
-			Simply wanting to spend some time talking with Helena, you ask her how she is and if anything interesting has happened in her nest today. Gesturing for you to sit beside her, the slutty matriarch spreads her legs a little in order to purposefully flash you her lacy black thong, before crossing them and replying,
+			你只是想花点时间和海伦娜聊聊天，便问她最近怎么样，今天在她的巢穴里有没有发生什么有趣的事情。海伦娜示意你坐到她身边，这位放荡的族长稍稍张开双腿，故意向你展示她的黑色蕾丝丁字裤，然后交叉双腿回答道，
 			#IF(game.getDialogueFlags().hasFlag(FLAG_helenaNestFucked))
-				 [helena.speech(I'm very well, [pc.name], thank you for asking. As to anything interesting happening today, I think the most noteworthy event was having a good, hard fuck with you in my bedroom.)]
+				[helena.speech(我很好，[pc.name]，谢谢你的关心。至于今天发生的有趣的事情，我想最值得一提的就是，我们两个在我的卧室里狠狠地干了一炮。)]
 			#ELSE
-				 [helena.speech(I'm very well, [pc.name], thank you for asking. Unfortunately, nothing of particular interest has happened today, but I'm sure that a good, hard fuck with you in my bedroom could change that.)]
+				[helena.speech(我很好，[pc.name]，谢谢你的关心。今天比较无聊，没什么有意思的事情，不过，如果我们去卧室狠狠干一炮，我觉得那会很有意思。)]
 			#ENDIF
 		</p>
 		<p>
-			You can't help but notice how several of the harpies who constitute Helena's inner-circle start whispering to one another as they hear their matriarch saying this. As you sit down beside her, Helena shoots a devious glance at one of the harpies who seems to be spreading rumours and flatly states,
+			你注意到，海伦娜身边的几个哈比听到族长这么说，开始窃窃私语起来。当你在她身边坐下来时，海伦娜用狡黠的目光看了一眼其中一个似乎在散布谣言的哈比，然后断然说道：
 			#IF(scarlett.hasPenis())
-				 [helena.speech(Penelope, I really don't understand why you're getting so worked up. From what I've heard, you not only let my dear Scarlett fuck your ass every night, but that you've actually agreed to call her 'mistress' while she does so. Bearing that in mind, you should be the last person to be acting like a blushing maiden upon hearing that I'm intimately involved with [pc.name] here.)]
+				[helena.speech(佩内洛普，我真不明白你为什么这么激动。据我所知，你不仅每晚都让我亲爱的斯嘉丽操你的屁股，而且在她操你的时候，你还要叫她‘主人’。有鉴于此，我不明白为什么你会在听到我和[pc.name]谈论这种事之后，羞得像个不谙世事的少女一样？)]
 			#ELSE
-				 [helena.speech(Penelope, I really don't understand why you're getting so worked up. From what I've heard, you not only let my dear Scarlett sit on your face every night, but that you've actually agreed to call her 'mistress' while she does so. Bearing that in mind, you should be the last person to be acting like a blushing maiden upon hearing that I'm intimately involved with [pc.name] here.)]
+				[helena.speech(佩内洛普，我真不明白你为什么这么激动。据我所知，你不仅每晚都让我亲爱的斯嘉丽坐在你脸上，而且在她玩弄你的时候，你还要叫她‘主人’。有鉴于此，我不明白为什么你会在听到我和[pc.name]谈论这种事之后，羞得像个不谙世事的少女一样？)]
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Simply wanting to spend some time talking with Helena, you ask her how she is and if anything interesting has happened in her nest today. Gesturing for you to sit beside her, the regal matriarch replies, [helena.speech(I'm very well, [pc.name], thank you for asking. Unfortunately, nothing of particular interest has happened today, at least not when compared to the fun you had in helping me get my Boutique up and running.)]
+			你只是想花点时间和海伦娜聊聊天，便问她最近怎么样，今天在她的巢穴里有没有发生什么有趣的事情。这位高贵的族长示意你坐在她身边，然后回答说，[helena.speech(我很好，[pc.name]，谢谢你的关心。不幸的是，今天没有什么有意思的事情，至少比不上你帮我开张并经营精品店的乐趣。)]
 		</p>
 		<p>
-			You can't help but notice how several of the harpies who constitute Helena's inner-circle start whispering to one another as they hear their matriarch saying this. As you sit down beside her, Helena shoots an icy glance at one of the harpies who seems to be spreading rumours and flatly states, [helena.speech(Sophia, I really don't understand why you're getting so worked up. I seem to recall a day a few months ago when you were begging me to allow your friend to sit amongst us. It seems odd now that you should be the one most distressed to see a friend of mine being allowed to sit amongst us.)]
+			你不禁注意到，在海伦娜的附近，有几个哈比听到族长这么说后，开始窃窃私语。当你在她身边坐下时，海伦娜冷冷地瞥了其中一个似乎在散布谣言的哈比一眼，然后断然说道：[helena.speech(索菲亚，我真不明白你为什么这么激动。我记得几个月前的一天，你求我让你的朋友坐在我们中间，现在看到我的朋友被允许坐在我们中间，你感觉不爽了吗？这很奇怪啊。)]
 		</p>
 	#ENDIF
 	<p>
-		As the rest of the harpies start gossiping amongst themselves about this sudden revelation, you realise that talking with Helena in front of them is not going to be a simple affair. Nevertheless, you do your best to keep the conversation between the two of you flowing, and only have to stop now and then to let Helena stir up yet more discord amongst her gossiping followers.
+		当其他的哈比们开始因此转移八卦话题的方向时，你意识到在她们面前与海伦娜交谈并不是一件简单的事。尽管如此，你还是尽力让你们之间的谈话保持流畅，只是，海伦娜得时不时地停下来，在她的八卦追随者中挑起更多的不和。
 	</p>
 	<p>
 		#IF(helena.isSlutty() && !game.getDialogueFlags().hasFlag(FLAG_helenaNestFucked))
-			After half an hour, the regal matriarch seems to have run out of material with which to distract the other harpies, and says, [helena.speech(Conversing with you in this manner was most pleasing, [pc.name], but I'm afraid that I must bring this to an end. I have plenty of other matters to attend to in my nest, so unless you want to accompany me to my bedroom for a good fuck, then further conversation must wait until tomorrow.)]
+			半小时后，这位高贵的族长似乎已经没有八卦新闻可以用来分散其他哈比的注意力了，她说，[helena.speech(我很高兴能和你聊天，[pc.name]，但恐怕我必须停下来了。我的巢穴里还有很多其他事情要处理，所以除非你想陪我到卧室里来一炮，否则我们只能明天接着聊了。)]
 		#ELSE
-			After half an hour, the regal matriarch seems to have run out of material with which to distract the other harpies, and says, [helena.speech(Conversing with you in this manner was most pleasing, [pc.name], but I'm afraid that I must bring this to an end. I have plenty of other matters to attend to in my nest, so if you would like to spend more time talking with me, then it must wait until tomorrow.)]
+			半小时后，这位高贵的族长似乎已经没有八卦新闻可以用来分散其他哈比的注意力了，她说，[helena.speech(和你聊天很开心，[pc.name]，但恐怕我必须停下来了。我的巢穴里还有很多其他事情要处理，所以如果你想接着聊天，那就等到明天再来吧。)]
 		#ENDIF
 	</p>
 	<p>
-		With the rest of the harpies looking on, you wonder what to do next...
+		在其他哈比的注视下，你思考着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_APARTMENT_BEDROOM -->
 	
 	<htmlContent tag="HELENAS_NEST_APARTMENT_BEDROOM"><![CDATA[
 	<p>
-		Not being able to resist the temptation of having sex with the beautiful harpy matriarch again, you tell her that you'd love to spend some more time with her in her bedroom. Flashing you a hungry grin, she stands up and turns to her followers, before stating, [helena.speech(I shall be back in a short while. If any of you decide to sit upon my throne while I am gone, I'll have you act as the nest's public cumdump for a week.)]
+		你无法抵御与这位美丽的哈比族长再做一次的诱惑，于是告诉她，你很乐意与她在卧室里共度更多时光。她向你露出饥渴的笑容，随后站起身来，转向她的追随者们宣布道，[helena.speech(我很快就会回来。期间谁胆敢坐上我的王座，就准备好当一周巢穴的公共肉便器吧。)]
 	</p>
 	#IF(helena.hasFetish(FETISH_DOMINANT))
 		<p>
-			Ignoring the grovelling cries of her followers, Helena uses one of her flawless, white-feathered wings to gesture for you to follow her, before leading you down a hidden staircase behind her throne. A private elevator is located at the bottom of these steps, and as you follow Helena inside of it, she informs you that it leads directly down to the floor which her apartment is on. As the doors slide shut and the elevator lurches into motion, you suddenly find yourself being pinned against one wall by the horny harpy, and after planting a passionate, sloppy kiss on your [pc.lips], she draws back and teases, [helena.speech(I'm going to fuck you so hard...)] 
+			海伦娜无视追随者卑躬屈膝的呼喊，用她那完美无瑕的白羽翅膀示意你跟她走，把你领到王座后的隐藏楼梯。阶梯底部有一部私人电梯，她告诉你这可以直通她的公寓。你跟随海伦娜踏进电梯，电梯刚关上门、开始运行时，这个好色的哈比就把你紧按在电梯一侧，热烈而粗鲁地吻上你的[pc.lips]。她抽离后挑逗说，[helena.speech(我要狠狠地操你……)] 
 		</p>
 		<p>
-			At that moment, the doors ping and slide open, and you're left to follow in Helena's footsteps as she excitedly skips down the corridor towards the door to her apartment. Just a couple of minutes later, the two of you are entering her bedroom, and after turning to plant yet another dominant, wet kiss on your [pc.lips], Helena pushes you down onto her bed before darting off into her walk-in wardrobe.
+			这时，门“呯”的一声打开了，你跟随着海伦娜的脚步。她兴奋地穿过走廊，走到公寓门口。几分钟后，你们都进了卧室，海伦娜转身又给你的[pc.lips]一个霸道的湿吻，将你推倒在床，自己则飞快地跑进了她的步入式衣柜。
 		</p>
 		<p>
-			Thankfully, you aren't kept waiting for very long, as after just a few moments, the beautiful harpy returns. Holding her huge white wings up to conceal her body, she flashes you a sultry smile as she confidently strides forwards to stand before you. Sweeping her wings down to either side of her perfect body, she reveals the fact that she's wearing nothing but a cupless bra and skimpy crotchless thong. With her [helena.nipples+] and [helena.pussy+] fully on display, she teases, [helena.speech(Now, how should I fuck you today?)]
+			所幸你并未等太久，片刻后美丽的哈比就回来了。她高高举起巨大的白色翅膀来遮住身体，一边露出撩人的微笑，一边自信地大步走到你面前。接着把翅膀放到她完美身体的两侧，露出了身上仅有的无杯胸罩和开裆丁字裤。随着她[helena.breasts+]和[helena.pussy+]在你面前一览无遗，她挑逗道，[helena.speech(今天我该怎么操你呢？)]
 		</p>
 	#ELSE
 		<p>
-			Ignoring the grovelling cries of her followers, Helena uses one of her flawless, white-feathered wings to gesture for you to follow her, before leading you down a hidden staircase behind her throne. A private elevator is located at the bottom of these steps, and as you follow Helena inside of it, she informs you that it leads directly down to the floor which her apartment is on. As the doors slide shut and the elevator lurches into motion, you suddenly find yourself in the embrace of the horny harpy, and after planting a passionate, sloppy kiss on your [pc.lips], she draws back and teases, [helena.speech(I can't wait for the good, hard fucking you'll give me...)] 
+			海伦娜无视追随者卑躬屈膝的呼喊，用她那完美无瑕的白羽翅膀示意你跟她走，把你领到王座后的隐藏楼梯。阶梯底部有一部私人电梯，她告诉你这可以直通她的公寓。你跟随海伦娜踏进电梯，电梯刚关上门、开始运行时，这个好色的哈比就把你拥入怀中，热烈而粗鲁地吻上你的[pc.lips]。她抽离后挑逗说，[helena.speech(我等不及想被你狠狠地操了……)] 
 		</p>
 		<p>
-			At that moment, the doors ping and slide open, and you're left to follow in Helena's footsteps as she excitedly skips down the corridor towards the door to her apartment. Just a couple of minutes later, the two of you are entering her bedroom, and after turning to plant yet another desperate, wet kiss on your [pc.lips], Helena guides you over to her bed before darting off into her walk-in wardrobe.
+			这时，门“呯”的一声打开了，你跟随着海伦娜的脚步。她兴奋地穿过走廊，走到公寓门口。几分钟后，你们都进了卧室，海伦娜转身又给你的[pc.lips]一个霸道的湿吻，将你带到床上，自己则飞快地跑进了她的步入式衣柜。
 		</p>
 		<p>
-			Thankfully, you aren't kept waiting for very long, as after just a few moments, the beautiful harpy returns. Holding her huge white wings up to conceal her body, she flashes you a sultry smile as she confidently strides forwards to stand before you. Sweeping her wings down to either side of her perfect body, she reveals the fact that she's wearing nothing but a cupless bra and skimpy crotchless thong. With her [helena.nipples+] and [helena.pussy+] fully on display, she teases, [helena.speech(How would you like to fuck me today, [pc.name]?)]
+			所幸你并未等太久，片刻后美丽的哈比就回来了。她高高举起巨大的白色翅膀来掩盖身体，一边露出撩人的微笑，一边自信地大步走到你面前。接着把翅膀放到她完美身体的两侧，露出了身上仅有的无杯胸罩和开裆丁字裤。随着她[helena.nipples+]和[helena.pussy+]在你面前一览无遗，她挑逗道，[helena.speech(今天你想怎么操我呢，[pc.name]？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Meeting Scarlett in the nest: -->
@@ -498,120 +498,120 @@
 	
 	<htmlContent tag="HELENAS_NEST_MEETING_SCARLETT_HELENA_QUEST_COMPLETE"><![CDATA[
 	<p>
-		Wanting to talk to Scarlett, you move forwards onto the nest's wooden platform, before starting to make your way over to where the raven-harpy is relaxing on a sun-lounger. Before you've managed to cover even a quarter of the distance, however, a flustered-looking harpy suddenly dashes forwards and blocks your way. Being one of the harpies who works in Helena's Boutique, she immediately recognises you and
+		你想找斯嘉丽聊天，于是走上了巢穴的木制平台，向躺椅上休息的渡鸦哈比走去。然而，还没等你走完四分之一的路程，一只神色慌张的哈比突然冲了出来，挡住了你的去路。作为海伦娜精品店的哈比员工之一，她一眼就认出了你，并
 		#IF(game.getNonCompanionCharactersPresent().contains(helena))
-			 asks, [style.speechFeminineStrong(Oh, are you here to see Helena? Please, allow me to accompany you!)]
+			问道，[style.speechFeminineStrong(哦，您是来见海伦娜的吗？请允许我陪同您一起去！)]
 		#ELSE
-			 exclaims, [style.speechFeminineStrong(Oh, sorry, but Helena's not here at the moment! You'll have to come back at another time!)]
+			惊呼道，[style.speechFeminineStrong(哦，抱歉，海伦娜现在不在！您下次再来吧！)]
 		#ENDIF
 	</p>
 	<p>
-		After you've informed this overzealous harpy that you're not here to see Helena, but are actually here to talk to Scarlett, she apologetically steps to one side and bows her head, before stuttering, [style.speechFeminineStrong(S-Sorry for the misunderstanding!)]
+		你告诉这个过于热情的哈比，自己并非来拜见海伦娜，而是来找斯嘉丽聊天。她抱歉地退到一旁，低下头，然后结结巴巴地说，[style.speechFeminineStrong(抱……抱歉我误会了！)]
 	</p>
 	<p>
-		With your way to Scarlett now clear, you advance towards the small crowd of brightly-coloured harpies who are currently surrounding her.
+		现在通往斯嘉丽的道路已经畅通无阻了，你向正被一群色彩鲜艳的哈比环绕的她走去。
 		#IF(scarlett.isVisiblyPregnant())
-			 As you approach the raven-harpy and get a closer look at her, you see that her belly is visibly swollen, making it immediately obvious that she's pregnant. Noticing your approach, Scarlett absently-mindedly strokes one of her wing-like arms over her rounded tummy, while using the other to beckon you forwards as she
+			你走近渡鸦哈比并仔细观察她，发现她的肚子明显肿大，一看就知道是怀孕了。斯嘉丽注意到了你的靠近，她一边用翅膀般的手臂抚摸着自己圆滚滚的肚子，一边用另一只手向你招手。
 			#IF(!scarlett.isCharacterReactedToPregnancy(pc))
 				#IF(scarlett.getPregnantLitter().isFatherId(pc.getId()))
 					#IF(scarlett.isLikesPlayer())
-						 calls out, [scarlett.speech(Look what you did, [pc.name]! You got me pregnant...)]
+						她叫唤道，[scarlett.speech(看你做的好事，[pc.name]！你让我怀孕了……)]
 					#ELSE
-						 shouts out, [scarlett.speech(Look what you fucking did, [pc.name]! You got me pregnant! Do you know how fucking annoying this is?!)]
+						她怒喊道，[scarlett.speech(看看你他妈都干了些什么，[pc.name]！你把我肚子搞大了！你知道这他妈有多烦人吗？)]
 					#ENDIF
 				#ELSE
 					#IF(scarlett.isLikesPlayer())
-						 calls out, [scarlett.speech(Hi, [pc.name]! Look at this; one of my harpy friends got me pregnant...)]
+						她叫唤道，[scarlett.speech(嗨，[pc.name]！快看这个，我的哈比朋友让我怀孕了……)]
 					#ELSE
-						 shouts out, [scarlett.speech(What the fuck do you want, [pc.name]?! Can't you see I'm trying to relax after one of these harpy fucks went and got me pregnant?!)]
+						她怒喊道，[scarlett.speech(你他妈的想干什么，[pc.name]？！你没看见我被某个哈比搞怀孕之后正试着放松一下吗？！)]
 					#ENDIF
 				#ENDIF
 			#ELSE
 				#IF(scarlett.getPregnantLitter().isFatherId(pc.getId()))
 					#IF(scarlett.isLikesPlayer())
-						 calls out, [scarlett.speech(Hey, [pc.name]! I'm still pregnant with our kids...)]
+						她叫唤道，[scarlett.speech(嘿，[pc.name]！我肚里还有咱们的小宝宝呢……)]
 					#ELSE
-						 shouts out, [scarlett.speech(Yes, [pc.name], before you ask, I'm still pregnant with our kids, and it's fucking annoying!)]
+						她怒喊道，[scarlett.speech(是啊，[pc.name]，在你问之前，我还怀着我们的孩子，真他妈烦人！)]
 					#ENDIF
 				#ELSE
 					#IF(scarlett.isLikesPlayer())
-						 calls out, [scarlett.speech(Hey, [pc.name]! As you can see, I'm still pregnant...)]
+						她叫唤道，[scarlett.speech(嘿，[pc.name]！如你所见，我还怀着孕呢……)]
 					#ELSE
-						 and shouts, [scarlett.speech(What the fuck do you want, [pc.name]?! Can't you see I'm trying to relax?!)]
+						她怒喊道，[scarlett.speech(你他妈的想干什么，[pc.name]？！你没看见我正打算放松一下吗？！)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
 		#ELSE
-			 Noticing your approach, Scarlett uses one of her huge, black-feathered arm-wings to beckon you forwards as she
+			斯嘉丽注意到你的靠近，她用一只巨大的黑羽手臂向你招手，同时
 			#IF(scarlett.isLikesPlayer())
 				#IF(game.getDialogueFlags().hasFlag(FLAG_scarlettRelaxed))
-					 calls out, [scarlett.speech(Hey, [pc.name]! What's up?)]
+					她叫唤道，[scarlett.speech(嘿，[pc.name]！怎么啦？)]
 				#ELSE
-					 calls out, [scarlett.speech(Hey, [pc.name]! You want to come and relax with me for a while?)]
+					她叫唤道，[scarlett.speech(嘿，[pc.name]！你想和我一起放松一下吗？)]
 				#ENDIF
 			#ELSE
-				 shouts, [scarlett.speech(Come on then, [pc.name], tell me what you fucking want!)]
+				她怒喊道，[scarlett.speech(过来，[pc.name]，告诉我你他妈的想干什么！)]
 			#ENDIF
 		#ENDIF
 	</p>
 	#IF(scarlett.hasPenis())
 		<p>
-			Before you're able to reply, one of the harpies sitting on the floor next to Scarlett's sun-lounger interrupts by loudly whining, [style.speechFeminine(Scarlett! You said you'd mention my name to Helena if I let you fuck me today! Stop giving other people so much attention and just pound my little pussy already!)]
+			你还来不及反应就被打断了，一个坐在斯嘉丽躺椅旁边的地板上的哈比大声抱怨道，[style.speechFeminine(斯嘉丽！你说过今天我如果让你干，你就会向海伦娜提起我！别管别人了，快来操我的小穴吧！)]
 		</p>
 		<p>
-			Pushing this harpy out of the way, one of the other members of the small crowd shouts, [scarlett.speech(You'd rather fuck my ass, wouldn't you, Scarlett?! Come on, make me your butt-slut cock-sleeve!)]
+			你把这个哈比推开，小团体里的另一个哈比叫道，[scarlett.speech(你更想操我的屁股不是吗，斯嘉丽？！来吧，让我给你这个荡妇来个鸡巴套！)]
 		</p>
 		<p>
-			[scarlett.speech(Shut the fuck up!)] Scarlett shouts, which is enough to immediately silence the horny harpies. Aggressively snarling at the small crowd, she continues,
+			[scarlett.speech(闭上你的臭嘴！)]斯嘉丽大喊一声，让这些好色的哈比立刻鸦雀无声。她咄咄逼人地对着小团体咆哮，继续说道，
 			#IF(scarlett.isLikesPlayer())
 				#IF(game.getDayMinutes()<19*60)
-					 [scarlett.speech(Nobody's going to be getting a fucking unless they're willing to be my servant for the day. Now shut the fuck up so I can hear what [pc.name] wants to say!)]
+					[scarlett.speech(除非有人愿意当我的仆人，否则没人能和我做爱。现在他妈的闭嘴，让我听听[pc.name]想说什么！)]
 				#ELSE
-					 [scarlett.speech(I'm too fucking tired to be doing any fucking today! If you're good girls, I might choose one of you to fuck tomorrow. Now shut the fuck up so I can hear what [pc.name] wants to say!)]
+					[scarlett.speech(我今天好他妈累，不想再做什么爱！如果你们是好女孩，我明天可能会选你们中的一个来操。现在他妈的闭嘴，让我听听[pc.name]想说什么！)]
 				#ENDIF
 			#ELSE
 				#IF(game.getDayMinutes()<19*60)
 					#IF(scarlett.isAttractedTo(pc))
-						 [scarlett.speech(Nobody's going to be getting a fucking unless they're willing to be my servant for the day. That goes for you too, [pc.name], so if you want a taste of my cock, you're gonna have to submit!)]
+						[scarlett.speech(除非愿意当我一天的仆人，否则谁也别想和我做。你也一样，[pc.name]，想尝我的鸡巴就得乖乖听话！)]
 					#ELSE
-						 [scarlett.speech(Nobody's going to be getting a fucking unless they're willing to be my servant for the day. Oh, and don't you get any fucking ideas about asking to serve me, [pc.name]; I'm not fucking interested in you!)]
+						[scarlett.speech(除非愿意当我一天的仆人，否则谁也别想和我做。哦，别想方设法和我做，[pc.name]，我对你可没性趣！)]
 					#ENDIF
 				#ELSE
 					#IF(scarlett.isAttractedTo(pc))
-						 [scarlett.speech(I'm too fucking tired to be doing any fucking today! If you're good girls, I might choose one of you to fuck tomorrow. The same goes for you, [pc.name]; come back tomorrow if you want a taste of my cock!)]
+						[scarlett.speech(我今天好他妈累，不想再做什么爱！如果你们是好女孩，我明天可能会选你们中的一个来操。你也一样，[pc.name]，想尝我的鸡巴就明天再来！)]
 					#ELSE
-						 [scarlett.speech(I'm too fucking tired to be doing any fucking today! If you're good girls, I might choose one of you to fuck tomorrow. Oh, and don't you get any fucking ideas about asking to serve me, [pc.name]; I'm not fucking interested in you!)]
+						[scarlett.speech(我今天好他妈累，不想再做什么爱！如果你们是好女孩，我明天可能会选你们中的一个来操。哦，别想方设法和我做，[pc.name]，我对你可没性趣！)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Before you're able to reply, one of the harpies sitting on the floor next to Scarlett's sun-lounger interrupts by loudly whining, [style.speechFeminine(Scarlett! You said I'd be allowed to fuck you today! Please, I promise I'll make you feel good!)]
+			你还来不及反应就被打断了，一个坐在斯嘉丽躺椅旁边的地板上的哈比大声抱怨道，[style.speechFeminine(斯嘉丽！你说过我今天可以操你的！求你了，我保证会让你爽翻的！)]
 		</p>
 		<p>
-			Pushing this harpy out of the way, one of the other members of the small crowd shouts, [scarlett.speech(You'd rather have me eat you out, wouldn't you, mistress?! Please, let me worship your pussy!)]
+			你把这个哈比推开，小团体里的另一个哈比叫道，[scarlett.speech(你更想让我把你吃干抹净不是吗，主人？求你了，让我膜拜你的小穴吧！)]
 		</p>
 		<p>
-			[scarlett.speech(Shut the fuck up!)] Scarlett shouts, which is enough to immediately silence the horny harpies. Aggressively snarling at the small crowd, she continues,
+			[scarlett.speech(闭上你的臭嘴！)]斯嘉丽大喊一声，让这些好色的哈比立刻鸦雀无声。她咄咄逼人地对着小团体咆哮，继续说道，
 			#IF(scarlett.isLikesPlayer())
 				#IF(game.getDayMinutes()<19*60)
-					 [scarlett.speech(Nobody's going to be fucking me unless they're willing to be my servant for the day. Now shut the fuck up so I can hear what [pc.name] wants to say!)]
+					[scarlett.speech(除非有人愿意当我的仆人，否则没人能和我做爱。现在他妈的闭嘴，让我听听[pc.name]想说什么！)]
 				#ELSE
-					 [scarlett.speech(I'm too fucking tired to be fucked today! If you're good girls, I might choose one of you to pound my cunt tomorrow. Now shut the fuck up so I can hear what [pc.name] wants to say!)]
+					[scarlett.speech(我今天好他妈累，不想再做什么爱！如果你们是好女孩，我明天可能会选你们中的一个来操。现在他妈的闭嘴，让我听听[pc.name]想说什么！)]
 				#ENDIF
 			#ELSE
 				#IF(game.getDayMinutes()<19*60)
 					#IF(scarlett.isAttractedTo(pc))
-						 [scarlett.speech(Nobody's going to be fucking me unless they're willing to be my servant for the day. That goes for you too, [pc.name], so if you want a taste of my cunt, you're gonna have to submit!)]
+						[scarlett.speech(除非愿意当我一天的仆人，否则谁也别想和我做。你也一样，[pc.name]，想尝我的小穴就得乖乖听话！)]
 					#ELSE
-						 [scarlett.speech(Nobody's going to be fucking me unless they're willing to be my servant for the day.  Oh, and don't you get any fucking ideas about asking to serve me, [pc.name]; I'm not fucking interested in you!)]
+						[scarlett.speech(除非愿意当我一天的仆人，否则谁也别想和我做。哦，别想方设法和我做，[pc.name]，我对你可没性趣！)]
 					#ENDIF
 				#ELSE
 					#IF(scarlett.isAttractedTo(pc))
-						 [scarlett.speech(I'm too fucking tired to be fucked today! If you're good girls, I might choose one of you to pound my cunt tomorrow. The same goes for you, [pc.name]; come back tomorrow if you want a taste of my cunt!)]
+						[scarlett.speech(我今天好他妈累，不想再做什么爱！如果你们是好女孩，我明天可能会选你们中的一个来操我的逼。你也一样，[pc.name]，想尝我的小穴就明天再来！)]
 					#ELSE
-						 [scarlett.speech(I'm too fucking tired to be fucked today! If you're good girls, I might choose one of you to pound my cunt tomorrow.  Oh, and don't you get any fucking ideas about asking to serve me, [pc.name]; I'm not fucking interested in you!)]
+						[scarlett.speech(我今天好他妈累，不想再做什么爱！如果你们是好女孩，我明天可能会选你们中的一个来操我的逼。哦，别想方设法和我做，[pc.name]，我对你可没性趣！)]
 					#ENDIF
 				#ENDIF
 			#ENDIF
@@ -619,277 +619,277 @@
 	#ENDIF
 	<p>
 		#IF(scarlett.isLikesPlayer())
-			Having silenced her group of harpy followers, Scarlett waits to hear if you'd like to sit down and relax with her for an hour or so.
+			斯嘉丽让她的一群哈比追随者安静下来后，等待你的答复，不知你是否愿意坐下来和她一起放松一个多小时。
 			#IF(game.getDayMinutes()<19*60 && scarlett.isAttractedTo(pc))
-				 You could always take her up on the offer, or if you really wanted to, you could ask to submit and serve her for the day instead...
+				你可以接受提议，甚至只要你想，你可以请求臣服，为她服务一天……
 			#ELSE
-				 You could always take her up on the offer, or instead tell the raven-harpy that you need to be leaving right away...
+				你可以接受提议，或者告诉渡鸦哈比你马上就要走……
 			#ENDIF
 		#ELSE
 			#IF(!scarlett.isAttractedTo(pc))
-				As Scarlett is not attracted to you, there doesn't seem to be any hope of getting to have sex with her. There doesn't seem to be much for you to do here except turn around and leave...
+				斯嘉丽没被你吸引，看来你无望和她做爱了。你除了转身离开，似乎也无事可做……
 			#ELSEIF(game.getDayMinutes()<19*60)
-				It looks like if you wanted to have sex with Scarlett, you'll have to join the other harpies in acting as her servant for the day. Then again, you could always simply turn around and leave...
+				看来你只能充当斯嘉丽的一日仆人，就像那群哈比一样，才能与她做爱。不过，你也可以转头就走……
 			#ELSE
-				As it's too late in the evening for Scarlett to be interested in having you act as her servant, there's very little for you to do except turn around and leave...
+				夜色已深，斯嘉丽也因此失去让你当仆人的兴趣，所以你除了转身离开，似乎也无事可做……
 			#ENDIF
 		#ENDIF
 	</p>
 	#IF(game.getDayMinutes()>=19*60 && scarlett.isAttractedTo(pc))
 		<p>
-			[style.italicsMinorBad(If you wanted to act as Scarlett's servant, you'll have to come back and visit her another day before [units.time(19)]!)]
+			[style.italicsMinorBad(如果你想成为斯嘉丽的仆人，那你得改天在[units.time(19)]前来找她！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_MEETING_SCARLETT"><![CDATA[
 	<p>
-		Wanting to talk to Scarlett, you move forwards onto the nest's wooden platform, before starting to make your way over to where the raven-harpy is sitting. Before you've managed to cover even a quarter of the distance, however, a flustered-looking harpy suddenly dashes forwards and blocks your way. With a stern look on her face, she shouts,
+		你想找斯嘉丽聊天，于是走上了巢穴的木制平台，向渡鸦哈比坐着的地方走去。然而，还没等你走完四分之一的路程，一只神色慌张的哈比突然冲了出来，挡住了你的去路。她一脸严肃地喊道，
 		#IF(game.getNonCompanionCharactersPresent().contains(helena))
-			 [style.speechFeminineStrong(Hey! Stop! Nobody's allowed to see Helena without an appointment!)]
+			[style.speechFeminineStrong(嘿！站住！没有预约，谁也不能见海伦娜！)]
 		#ELSE
-			 [style.speechFeminineStrong(Hey! Stop! Helena's not even here at the moment, so there's no point in trying to get an appointment to see her!)]
+			[style.speechFeminineStrong(嘿！站住！海伦娜不在，现在预约参见也毫无意义！)]
 		#ENDIF
 	</p>
 	<p>
-		After you've informed this overzealous harpy that you're actually here to talk to Scarlett, she hesitantly steps to one side, before warning, [style.speechFeminineStrong(You'd better not just be saying this to try and sneak past me! I've got my eye on you!)]
+		你告诉这个过于热情的哈比，自己只是来找斯嘉丽聊天。她听后犹豫地走到一旁，警告道，[style.speechFeminineStrong(你说这话最好不是为了从我身边溜走，我已经盯上你了！)]
 	</p>
 	<p>
-		Assuring the harpy that you have no intention of 'sneaking past her', you continue on your way towards Scarlett. As you approach, you can't help but overhear one of the two brightly-coloured harpies sitting next to her loudly suggesting, [style.speechFeminine(You should come too, Scarlett! I'm telling you, she said that if we act as her servants for the day, she'll let us fuck her!)]
+		你向这个哈比保证你无意“从她身边溜走”，继续朝斯嘉丽走去。在你走近时，你无意间听到其中一只坐在她旁边的色彩鲜艳的哈比大声提议道，[style.speechFeminine(你也来吧，斯嘉丽！我跟你说，她说如果我们做她一天的仆人，就能让我们操她！)]
 	</p>
 	<p>
-		Letting out a scowl, Scarlett replies, [scarlett.speech(That bitch isn't worth it; she's a lousy fuck and doesn't even let you use her ass. I'd much rather- Hey! What the fuck are you doing here?!)]
+		斯嘉丽皱着眉头回答道，[scarlett.speech(那婊子不配，她就是个烂货，甚至连屁股不让你操，我宁愿……嘿，你他妈在这干嘛？)]
 	</p>
 	<p>
-		Having caught sight of you, Scarlett jumps to her feet and shoots you an angry glare, before continuing,
+		斯嘉丽一看见你就跳起来，她愤怒地瞪了你一眼，继续说，
 		#IF(scarlett.isAttractedTo(pc) && game.isAnalContentEnabled())
-			 [scarlett.speech(Just because you set me free, doesn't mean I owe you anything! Unless you're here to let me fuck your cute ass, then I'm not interested in whatever you're offering!)]
+			[scarlett.speech(你放我自由并不意味着我欠你什么！除非你是来让我操你那可爱的屁股的，否则我对你给的任何东西都不感兴趣！)]
 		#ELSE
-			 [scarlett.speech(Just because you set me free, doesn't mean I owe you anything! I'm not interested in whatever you're offering, so fuck off already!)]
+			[scarlett.speech(你放我自由并不意味着我欠你什么！我对你给的任何东西都不感兴趣，所以快滚吧！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_MEETING_SCARLETT_STEP_BACK_POST_QUEST"><![CDATA[
 	#IF(scarlett.isLikesPlayer())
 		<p>
-			Thinking that it would be best to continue on your way as quickly as possible, you tell Scarlett that you only dropped by to say hello, and that you need to leave straight away. Although a look of disappointment flashes across the raven-harpy's face, she refuses to show any sign of weakness in front of her harpy followers, and with a dismissive wave of her wing, she snaps, [scarlett.speech(Fine! Fuck off then!)]
+			你急着继续赶路，于是告诉斯嘉丽，你只是顺路过来，打个招呼就走。虽然渡鸦哈比的脸上闪过一丝失望，但她可不想在哈比追随者面前展现出任何脆弱，便不屑地挥了挥翅膀，冷声说道，[scarlett.speech(行！那你快滚吧！)]
 		</p>
 		<p>
-			As you turn around and set about doing just that, Scarlett betrays the fact that she likes you by shouting out after you, [scarlett.speech(Come and visit me again whenever you're in the area!)]
+			你转身就走，斯嘉丽赶忙在你身后叫喊，[scarlett.speech(你什么时候来这见我都行！)]而这无疑暴露出她对你的喜爱。
 		</p>
 	#ELSE
 		<p>
-			Not wanting to remain in this rude harpy's presence for a single moment longer, you tell Scarlett that you only dropped by to say hello, and that you need to leave straight away. A disgruntled sneer flashes across the raven-harpy's face, and with a dismissive wave of her wing, she snaps, [scarlett.speech(Fine! Fuck off then!)]
+			你一刻也不愿在粗鲁的哈比这停留，于是告诉斯嘉丽，你只是顺路过来，打个招呼就走。渡鸦哈比闪过不满的冷笑，不屑地挥了挥翅膀，冷声说道，[scarlett.speech(行！那你快滚吧！)]
 		</p>
 		<p>
-			As you turn around and set about doing just that, Scarlett can't resist shouting out after you, [scarlett.speech(Don't fucking bother coming back, cunt!)]
+			你转身就走，斯嘉丽忍不住在你身后叫喊，[scarlett.speech(你他妈的别再回来烦我，贱货！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_MEETING_SCARLETT_STEP_BACK"><![CDATA[
 	<p>
 		#IF(scarlett.isAttractedTo(pc) && game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			As it's obvious that Scarlett isn't willing to engage with you in conversation, and not wanting to take her up on her offer of 'fucking your cute ass', you turn around and quickly leave via the same way you arrived...
+			斯嘉丽明显不想搭理你，而你也不想接受她“操你可爱的屁股”的提议，于是你转身就走，原路返回……
 		#ELSE
-			As it's obvious that Scarlett isn't willing to engage with you in conversation, you turn around and quickly leave via the same way you arrived...
+			斯嘉丽明显不想搭理你，于是你转身就走，原路返回……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_SCARLETT_SEX"><![CDATA[
 	<p>
-		[pc.speech(So, what happens if I <i>am</i> here to let you 'fuck my cute little ass'?)] you tease, stepping up to Scarlett and playfully running your [pc.fingers] down the length of one of her black-feathered wings.
+		[pc.speech(那么，如果我在这里<i>是</i>让你‘操我可爱的小屁股’，会发生什么呢？)]你揶揄道，走到斯嘉丽面前，玩味地用[pc.fingers]顺着她的一只黑羽翅膀往下摸。
 	</p>
 	<p>
-		Clearly not expecting you to actually agree to her suggestion, Scarlett is momentarily thrown off-guard, and blankly stares at you for a couple of seconds before recovering and sneering, [scarlett.speech(Then I'll give you what you want, you dirty little buttslut!)]
+		斯嘉丽显然没想到你真的会同意她的提议，一时措手不及，愣愣地看了你几秒钟才回过神来，冷笑道，[scarlett.speech(那我就如你所愿，你个肮脏的屁穴荡妇！)]
 	</p>
 	<p>
-		Telling her two friends that she'll catch up with them later, Scarlett roughly grabs you by the [pc.hand], before impatiently leading you over to a nearby downwards staircase. Continuing to pull you along after her, she quickly descends this flight of stairs, which turns out to lead to a small, shaded sub-platform. Now that the two of you are concealed from the prying eyes of the rest of the nest's inhabitants, Scarlett quickly strips naked, presenting you with her tiny boobs and small, pale-skinned cock. Seeing what it is you're looking at, the harpy scowls, [scarlett.speech(You'll be getting a feel of it soon enough! Now get down on all fours and show me your ass, slut!)]
+		斯嘉丽告诉她的两个朋友她稍后回来，然后粗暴地抓住你的[pc.hand]，急切地把你带到附近的楼梯。她继续拉着你飞速下了楼，原来这通向一个阴暗的小平台。这里可没别人能看到了，斯嘉丽就很快脱光了衣服，露出她那对小巧的乳房和小巧的苍白阴茎。哈比发现了你盯着看的地方，蹙眉道，[scarlett.speech(你很快就能体验它了！现在现在四肢着地，露出你的屁股，荡妇！)]
 	</p>
 	<p>
-		Doing as you're told, you expose your ass and drop down onto all fours, presenting your naked asshole to Scarlett. Dropping down behind you, the impatient harpy instantly thrusts forwards, sinking her hard cock into your rear entrance and moaning, [scarlett.speechNoEffects(~Mmm!~ That's right, slut! Your ass is mine now!)]
+		你听话地趴下，把赤裸的肛门呈现在斯嘉丽面前。这个急不可耐的哈比在你身后落下，立刻将她坚硬的阴茎插入你的后庭，呻吟道，[scarlett.speechNoEffects(~嗯！~对了，婊子！你的屁股现在是我的啦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_SCARLETT_SEX_VAGINA"><![CDATA[
 	<p>
-		Desperate to get fucked by this rude raven-harpy, you step up to her and playfully run your [pc.fingers] down the length of one of her black-feathered wings, while seductively offering to let her fuck your pussy.
+		你渴望被这个粗鲁的渡鸦哈比操弄，便走到她面前，玩味地用[pc.fingers]顺着她的一只黑羽翅膀往下摸，同时诱惑她来操你的小穴。
 	</p>
 	<p>
-		Clearly not expecting you to be interested in having sex with her, Scarlett is momentarily thrown off-guard, and blankly stares at you for a couple of seconds before recovering and sneering, [scarlett.speech(Of course I want to fuck your cunt, you dumb slut!)]
+		斯嘉丽显然没想到你会有兴趣和她做爱，一时措手不及，愣愣地看了你几秒钟才回过神来，嗤之以鼻道，[scarlett.speech(我当然想操你，你个蠢荡妇！)]
 	</p>
 	<p>
-		Telling her two friends that she'll catch up with them later, Scarlett roughly grabs you by the [pc.hand], before impatiently leading you over to a nearby downwards staircase. Continuing to pull you along after her, she quickly descends this flight of stairs, which turns out to lead to a small, shaded sub-platform. Now that the two of you are concealed from the prying eyes of the rest of the nest's inhabitants, Scarlett quickly strips naked, presenting you with her tiny boobs and small, pale-skinned cock. Seeing what it is you're looking at, the harpy scowls, [scarlett.speech(You'll be getting a feel of it soon enough! Now get down on all fours and show me your dirty little pussy, bitch!)]
+		斯嘉丽告诉她的两个朋友她稍后回来，然后粗暴地抓住你的[pc.hand]，急切地把你带到附近的楼梯。她继续拉着你飞速下了楼，原来这通向一个阴暗的小平台。这里可没别人能看到了，斯嘉丽就很快脱光了衣服，露出她那对小巧的乳房和小巧的苍白阴茎。哈比发现了你盯着看的地方，蹙眉道，[scarlett.speech(你很快就能体验它了！现在现在四肢着地，露出你的小淫穴，贱人！)]
 	</p>
 	<p>
-		Doing as you're told, you drop down onto all fours and present your naked pussy to Scarlett. Dropping down behind you, the impatient harpy instantly thrusts forwards, sinking her hard cock into your [pc.pussy+] and moaning, [scarlett.speechNoEffects(~Mmm!~ That's right, slut! Your cunt is mine now!)]
+		你听话地趴下，把赤裸的阴部呈现在斯嘉丽面前。这个急不可耐的哈比在你身后落下，立刻将她坚硬的阴茎插入你[pc.pussy+]，呻吟道，[scarlett.speechNoEffects(~嗯！~对了，婊子！你的小穴现在是我的啦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_SCARLETT_SEX_ORAL"><![CDATA[
 	<p>
-		Desperate to get a taste of this rude raven-harpy's cock, you step up to her and playfully run your [pc.fingers] down the length of one of her black-feathered wings, while seductively offering to let her fuck your throat.
+		你急切地想尝尝这个粗鲁的渡鸦哈比的肉棒，便走到她面前，玩味地用[pc.fingers]顺着她的一只黑羽翅膀往下摸，同时诱惑她来捅你的喉咙。
 	</p>
 	<p>
-		Clearly not expecting you to be interested in having sex with her, Scarlett is momentarily thrown off-guard, and blankly stares at you for a couple of seconds before recovering and sneering, [scarlett.speech(Of course I want you to suck my cock, you dumb slut!)]
+		斯嘉丽显然没想到你会有兴趣和她做爱，一时措手不及，愣愣地看了你几秒钟才回过神来，嗤之以鼻道，[scarlett.speech(我当然想让你给我口交，你个蠢荡妇！)]
 	</p>
 	<p>
-		Telling her two friends that she'll catch up with them later, Scarlett roughly grabs you by the [pc.hand], before impatiently leading you over to a nearby downwards staircase. Continuing to pull you along after her, she quickly descends this flight of stairs, which turns out to lead to a small, shaded sub-platform. Now that the two of you are concealed from the prying eyes of the rest of the nest's inhabitants, Scarlett quickly strips naked, presenting you with her tiny boobs and small, pale-skinned cock. Seeing what it is you're looking at, the harpy scowls, [scarlett.speech(You'll be getting a taste of it soon enough! Now get down and open wide, bitch!)]
+		斯嘉丽告诉她的两个朋友她稍后回来，然后粗暴地抓住你的[pc.hand]，急切地把你带到附近的楼梯。她继续拉着你飞速下了楼，原来这通向一个阴暗的小平台。这里可没别人能看到了，斯嘉丽就很快脱光了衣服，露出她那对小巧的乳房和小巧的苍白阴茎。哈比发现了你盯着看的地方，蹙眉道，[scarlett.speech(你很快就会尝到它的！现在趴下，张大嘴，贱人！)]
 	</p>
 	<p>
-		Doing as you're told, you drop in front of Scarlett and open your mouth for her. Stepping forwards, the impatient harpy instantly thrusts forwards, pushing her hard cock past your [pc.lips+] and moaning, [scarlett.speechNoEffects(~Mmm!~ That's right, slut! Suck my fucking cock!)]
+		你听话地趴在斯嘉丽面前，张大嘴巴。急不可耐的哈比立刻向前跨出一步，将她坚硬的肉棒挺进你[pc.lips+]，呻吟道，[scarlett.speechNoEffects(~嗯！~对了，婊子！他妈的给我唆鸡巴！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_MEETING_SCARLETT_TO_SHOP -->
 	
 	<htmlContent tag="HELENAS_NEST_MEETING_SCARLETT_TO_SHOP"><![CDATA[
 	<p>
-		Ignoring Scarlett's rude comments, you tell her that Helena has asked for her presence back down in Slaver Alley. As she hears you say this, the raven-harpy's head and tail feathers droop down, and after letting out an anguished groan, she turns to her two friends and says a half-hearted goodbye. Looking back at you, she asks, [scarlett.speech(She's not planning on enslaving me again, is she?)]
+		你无视斯嘉丽的污言秽语，告诉她海伦娜要求她回奴隶巷。一听你这么说，渡鸦哈比的头和尾羽瞬间耷拉下来，发出痛苦的哼唧声后，心猿意马地向她的两个朋友告别。她回头看你，问道，[scarlett.speech(她没打算奴役我吧，对吧？)]
 	</p>
 	<p>
-		After you've reassured her that there's no chance of that, Scarlett steps past you, before running up to the edge of the nest's platform and launching herself into the air. With a flap of her arm-wings, she wheels around and swoops off in the direction of Slaver Alley.
+		你向斯嘉丽保证这绝无可能，她便从你身边冲向巢穴平台的边缘，腾空而起。她扇动着臂翼，在半空中转了个圈，向奴隶巷的方向俯冲而去。
 		#IF(pc.isPartyAbleToFly())
-			 If you wanted to, you could always fly after her and arrive back at Helena's shop moments after she does...
+			只要你想，你随时可以跟在她身后，紧随其后到达海伦娜的商店……
 		#ELSE
-			 With little else to do up here in the nest, you turn around and quickly leave via the same way you arrived...
+			你在巢穴里几乎无事可做，便转身原路返回……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_MEETING_SCARLETT_TO_SHOP_FLY_AFTER"><![CDATA[
 	<p>
-		Deciding that it would be a good idea to return to Helena's shop as quickly as possible, you follow Scarlett's lead and launch yourself into the air, before flying after the raven-harpy in the direction of Slaver Alley. After a short while you arrive at your destination, and after swooping down and landing in front of Helena's shop, you see through the window that Scarlett has managed to arrive before you.
+		你决定尽快返回海伦娜的商店，于是你跟随斯嘉丽的脚步，腾空而起，追着渡鸦哈比向奴隶巷的方向飞去。过了一会儿，你到达了目的地，俯冲而下降落在海伦娜的店门口后，你透过窗户看到斯嘉丽已经先你一步到达了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SCARLETT_SEX -->
 	
 	<htmlContent tag="AFTER_SCARLETT_SEX_VAGINA"><![CDATA[
 	<p>
-		Having had her fun, Scarlett takes a step back, before looking down at your quivering pussy and sneering, [scarlett.speech(You were a good fuck, you dirty little whore! Come back and see me again if you get hungry for my cock!)]
+		斯佳丽爽完后，退了一步，低头看着你颤抖的小穴冷笑道，[scarlett.speech(你干得很好，你这个肮脏的小婊子！如果你想要我的鸡巴了，就再来找我吧！)]
 	</p>
 	<p>
-		Quickly getting dressed again, Scarlett waits until you're ready to go, before leading you back up the stairs, pointing to the nest's exit, and commanding, [scarlett.speech(Go on, get out of here! I've got more stuff to do today than fucking some slut's dirty cunt.)]
+		斯嘉丽很快又穿好衣服，等你准备好才领着你走下楼梯。她指着巢穴出口命令道，[scarlett.speech(走吧，离开这里！比起操荡妇肮脏的小穴，我今天还得忙着干其他事！)]
 	</p>
 	<p>
-		With little else to do in Helena's nest, you do as Scarlett orders and quickly take your leave...
+		你在海伦娜的巢也无事可做，干脆就听斯嘉丽的话快快离开了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SCARLETT_SEX_ORAL"><![CDATA[
 	<p>
-		Having had her fun, Scarlett takes a step back, before looking down at you and sneering, [scarlett.speech(You're good at sucking cock, you dirty little whore! Come back and see me again if you ever want more!)]
+		斯佳丽爽完后，退了一步，低头看着你冷笑道，[scarlett.speech(你很会舔肉棒，真是个肮脏的小婊子！如果你还想要，可以再来找我！)]
 	</p>
 	<p>
-		Quickly getting dressed again, Scarlett waits until you're ready to go, before leading you back up the stairs, pointing to the nest's exit, and commanding, [scarlett.speech(Go on, get out of here! I've got more stuff to do today than having some slut suck my cock!)]
+		斯嘉丽很快又穿好衣服，等你准备好才领着你走下楼梯。她指着巢穴出口命令道，[scarlett.speech(走吧，离开这里！比起让荡妇给我口交，我今天还得忙着干其他事！)]
 	</p>
 	<p>
-		With little else to do in Helena's nest, you do as Scarlett orders and quickly take your leave...
+		你在海伦娜的巢也无事可做，干脆就听斯嘉丽的话快快离开了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SCARLETT_SEX"><![CDATA[
 	<p>
-		Having had her fun, Scarlett takes a step back, before looking down at your ass and sneering, [scarlett.speech(You were a good fuck, you dirty little buttslut! Come back and see me again if you get hungry for my cock!)]
+		斯佳丽爽完后，退了一步，低头看着你的肛门冷笑道，[scarlett.speech(你干得很好，你这个肮脏的屁穴荡妇！如果你想要我的鸡巴了，就再来找我吧！)]
 	</p>
 	<p>
-		Quickly getting dressed again, Scarlett waits until you're ready to go, before leading you back up the stairs, pointing to the nest's exit, and commanding, [scarlett.speech(Go on, get out of here! I've got more stuff to do today than fucking some slut's ass.)]
+		斯嘉丽很快又穿好衣服，等你准备好才领着你走下楼梯。她指着巢穴出口命令道，[scarlett.speech(走吧，离开这里！比起操荡妇的屁眼，我今天还得忙着干其他事！)]
 	</p>
 	<p>
-		With little else to do in Helena's nest, you do as Scarlett orders and quickly take your leave...
+		你在海伦娜的巢也无事可做，干脆就听斯嘉丽的话快快离开了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETT_RELAX -->
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETT_RELAX"><![CDATA[
 	<p>
-		Deciding to accept Scarlett's offer, you tell her that you'd love to spend some time relaxing in her company. The raven-harpy's face lights up as she hears you saying this, and she quickly turns to one of her followers to snap, [scarlett.speech(Hurry up and get another lounger for [pc.name]!)]
+		你决定接受斯嘉丽的邀请，告诉她你很愿意与她共度一段休闲时光。听到你的回答后，这位渡鸦哈比的脸庞焕发出喜悦的光芒，她迅速转向一位追随者，厉声说道，[scarlett.speech(快点再拿一把躺椅给[pc.name]！)]
 	</p>
 	<p>
-		Rushing off to do as she's told, the harpy quickly returns carrying another sun-lounger in her wing-like arms. Unfolding it and placing it down beside Scarlett, she throws a colourful beach-towel over the top of it, before gesturing for you to come and sit down on it. Seeing no reason not to comply,
+		哈比匆忙按吩咐去做，很快她就抱着另一把日光浴躺椅回来了。她展开躺椅，放在斯嘉丽身边，铺上一条多彩的沙滩巾后示意你过来坐。你没有不这样做的理由，
 		#IF(pc.isTaur())
-			 you step over the top of the lounger with your lower [pc.legRace]'s body, before lowering yourself down into a comfortable position.
+			便将[pc.legRace]跨过躺椅，躺到舒服的位置。
 		#ELSE
-			 you sit down and lie back on the lounger.
+			便坐了下来，躺到躺椅上。
 		#ENDIF
 	</p>
 	<p>
-		[scarlett.speech(If there's anything you want, just tell one of these sluts to get it for you,)] Scarlett says, before propping herself up on one wing and asking you how your day's been. Thankful for this opportunity to sit down and relax for a while, you happily engage Scarlett in conversation, and before you know it, you've spent almost an hour making small talk with her.
+		[scarlett.speech(无论你想要什么，都吩咐这些荡妇去帮你拿，)]斯嘉丽说，然后用一只翅膀撑起身子，问你今天过得怎样。你庆幸有这个放松片刻的机会，便高兴地与斯嘉丽攀谈起来，不知不觉中，你们已经闲聊了快一个小时。
 	</p>
 	<p>
-		Eventually realising the time, Scarlett stretches her wings and sits up on her lounger, before saying,
+		最终，斯嘉丽注意到了时间，她伸展了一下翅膀，从躺椅上坐了起来，说道，
 		#IF(scarlett.isAttractedTo(pc))
-			 [scarlett.speech(I was thinking that I might head down to my room and relax on my bed for a while. How about you join me, [pc.name]? I'm sure we could find all sorts of fun things to do in private...)]
+			[scarlett.speech(我想回房躺床上休息一会儿。不如和我一起，[pc.name]？我相信我们可以找到各种有趣的私下活动……)]
 		#ELSE
-			 [scarlett.speech(Sorry, [pc.name], but I just remembered that I've got to go and sort some stuff out for Helena. IF you'd like, you could drop by so we could hang out again tomorrow...)]
+			[scarlett.speech(抱歉，[pc.name]，但我刚想起来得帮海伦娜整理一些东西。如果你愿意的话，明天可以再顺道过来找我玩……)]
 		#ENDIF
 	</p>
 	#IF(scarlett.isAttractedTo(pc))
 		<p>
-			Realising that following Scarlett down to her room will undoubtedly result in having sex with her,
+			你意识到陪斯嘉丽回房间最终无疑会做爱，
 			#IF(pc.hasCompanions())
-				 you wonder if you should dismiss [com.name] and take her up on her offer,
+				便思索是否应该让[com.name]先行离开并接受她的提议，
 			#ELSE
-				 you wonder if you should take her up on her offer,
+				便思索是否应该接受她的提议，
 			#ENDIF
-			 or instead tell her that you need to leave...
+			亦或是和她说你要走了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETT_RELAX_APARTMENT"><![CDATA[
 	<p>
 		#IF(pc.hasCompanions())
-			Liking the sound of spending some private time with Scarlett, you tell [com.name] to go home, before telling the raven-harpy that you'd love to accompany her down to her room.
+			你喜欢与斯嘉丽共度私人时光，于是让[com.name]先回家，然后告诉渡鸦哈比，你很乐意陪她下楼回房间。
 		#ELSE
-			Liking the sound of spending some private time with Scarlett, you tell her that you'd love to accompany her down to her room.
+			你喜欢与斯嘉丽共度私人时光，你告诉她，你很乐意陪她下楼回房间。
 		#ENDIF
-		 Realising that they're going to miss out on the opportunity to have sex with Scarlett, the crowd of colourful harpies instantly start whining and pleading for her to fuck them instead of you. Not being one to put up with this sort of behaviour, Scarlett's cheeks flush bright red as she screams, [scarlett.speech(Shut the fuck up! I'm never going to fuck any of you if you keep on acting like a bunch of annoying fucking cunts!)]
+		这群五颜六色的哈比意识到自己将错过与斯嘉丽做爱的机会，立刻抱怨起来，恳求斯嘉丽别管你，去和她们做爱。斯嘉丽无法容忍这种行为，她脸颊涨得通红，尖叫道，[scarlett.speech(他妈的给我闭嘴！如果你们继续像一群烦人的傻逼一样，我就再也不跟你们上床了！)]
 	</p>
 	<p>
-		Cowed into silence by the raven-harpy's foul-mouthed outburst, the harpies submissively cast their gaze to the floor as Scarlett takes you by the [pc.hand] and leads you over to the nest's elevator. Pulling you inside, Scarlett tells you that as part of her duties as Helena's personal assistant, she's staying in one of the guest rooms in the matriarch's apartment, and that this elevator will take the two of you down to the correct floor. Clearly starting to get aroused at the thought of having sex with you, the raven-harpy turns to face you, and before you know what's happening, she's dominantly pinning you up against the wall and forcefully pulling you into a rough, passionate kiss.
+		哈比们被渡鸦哈比的粗口吓得噤若寒蝉，顺从地看向地板。斯嘉丽拉着你的[pc.hand]，走到巢穴的电梯前，牵着你走了进去。她说她作为海伦娜个人助理，住在族长公寓的一间客房里，这部电梯会带你们直达对应楼层。一想到要和你做爱，渡鸦哈比显然兴奋起来，她转身正对着你，你还来不及知道发生了什么，就被她霸道地按在墙上，粗暴而热烈地吻了起来。
 	</p>
 	<p>
-		After a few moments of having Scarlett's tongue thrust into your mouth, the elevator doors suddenly ping and slide open, and you suddenly find yourself being pulled along behind the raven-harpy as she strides down the corridor towards the door to Helena's apartment. Just a couple of minutes later, the two of you are entering the guest bedroom which is serving as Scarlett's residence, and after turning to lock the door behind her, the raven-harpy roughly pushes you down onto her bed and states, [scarlett.speech(Just because I like you, don't expect me to go easy on you, [pc.name]! I'm going to give you a good, rough fucking! Now, how do you want it?!)]
+		就在斯嘉丽用舌头深吻你片刻之后，电梯门突然“叮”一声开了，你发现自己正被面前这只渡鸦哈比急匆匆地拉着走过走廊，朝着海伦娜的公寓门走去。几分钟后，你们两人进入了斯嘉丽住所的客房，她转身锁上门，随即粗鲁地把你推倒在她的床上，然后说道，[scarlett.speech(别以为我喜欢你就会对你手下留情，[pc.name]！我要猛猛地操你！告诉我，你想怎样被干？！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETT_RELAX_LEAVE"><![CDATA[
 	#IF(scarlett.isAttractedTo(pc))
 		<p>
-			Not liking the sound of spending some time alone with Scarlett in her room, you tell the raven-harpy that you have other urgent matters to attend to today, and so you're going to have to immediately depart. Letting out a disappointed sigh, Scarlett leans back on her sun-lounger and says, [scarlett.speech(Fine... I didn't really want to go down to my bedroom anyway... See you later, [pc.name]!)]
+			你并不想去斯嘉丽的房间中和她独处，所以你告诉她今天你有其他紧急事务需要处理，必须马上离开。斯嘉丽失望地叹了口气，倚靠在日光躺椅上说道，[scarlett.speech(好吧……反正我也不是很想去卧室……回头见，[pc.name]！)]
 		</p>
 		<p>
-			Saying farewell to her, you leave Scarlett in the company of her colourful harpy followers, before making your way back to the entrance of Helena's nest...
+			你与斯嘉丽道别，留她和她那些五颜六色的哈比追随者们在一起，自己则回到了海伦娜巢穴的入口处……
 		</p>
 	#ELSE
 		<p>
-			With nothing else left for you to do except make your exit, you say farewell to Scarlett and leave her in the company of her colourful harpy followers, before making your way back to the entrance of Helena's nest...
+			你除了离开，也无事可做。你与斯嘉丽道别，留她和她那些五颜六色的哈比追随者们在一起，然后一路回到海伦娜巢穴的入口处……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETTS_SERVANT -->
@@ -897,303 +897,303 @@
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT"><![CDATA[
 	#IF(scarlett.isLikesPlayer())
 		<p>
-			Wanting to show Scarlett how much you appreciate the kindness she's shown towards you, you turn down her generous offer of being allowed to relax beside her as her equal and instead ask if she'd allow you to act as her servant for the day. Raising her eyebrows in surprise, the raven-harpy exclaims, [scarlett.speech(You want to act as my servant?! Well, I'm not going to say no or anything, but if you're choosing to do that, I'm going to have to treat you like all these other harpy sluts.)]
+			你为了向斯嘉丽表达感激之情，拒绝了她平等休息的慷慨提议，转而询问她是否允许你充当她的一日仆人。渡鸦哈比惊讶地扬起眉毛，惊叫道，[scarlett.speech(你想当我的仆人？好吧，我才不会拒绝，但如果你选择这么做，我就得一视同仁地像对待婊子一样对待你了。)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to earn the chance to have sex with her, you tell Scarlett that you want to act as her servant for the day. Raising her eyebrows in surprise, the raven-harpy exclaims, [scarlett.speech(You want to act as my servant?! Fine, but don't expect me to treat you any fucking differently than the rest of these harpy sluts!)]
+			你想赢得与她做爱的机会，便告诉斯嘉丽你想充当她的一日仆人。渡鸦哈比惊讶地扬起眉毛，惊叫道，[scarlett.speech(你想当我的仆人？好吧，但别指望我会给你什么特殊优待！)]
 		</p>
 	#ENDIF
 	<p>
 		#IF(pc.hasCompanions())
-			Telling [com.name] to go home, you kneel down beside Scarlett and tell her that you've got no problem with her treating you like all her other servants, before asking how you can assist her.
+			你让[com.name]回家，随后跪在斯嘉丽身边，告诉她一视同仁根本不是问题，询问有什么是你能做的。
 		#ELSE
-			Telling Scarlett that you've got no problem with her treating you like all her other servants, you kneel down beside her and ask how you can assist her.
+			你告诉斯嘉丽一视同仁根本不是问题，随后跪在她身边，询问有什么是你能做的。
 		#ENDIF
-		 Letting an evil smirk settle on her face, the raven-harpy uses one of her black-feathered wings to point over to the far side of the nest and sneers, [scarlett.speech(Seeing as you're so eager to act as my bitch, you can start by fetching me a drink!)]
+		渡鸦哈比脸上露出一丝邪恶的坏笑，用一只黑羽翅膀指着远处的巢穴，冷笑道，[scarlett.speech(既然你迫不及待想当我的婊子，那就先给我拿杯喝的吧！)]
 	</p>
 	<p>
-		Looking over in the direction the raven-harpy gestured towards, you see a number of tables and chairs clustered around a circular open-air bar. A significant number of harpies are crowded around this counter, and as you head over towards it, several of these harpies start throwing scathing insults your way. Not wanting to cause a disturbance for Scarlett or Helena to have to deal with, you ignore these rude harpies and focus on your task of getting a drink from one of the barmaids behind the counter.
+		你顺着渡鸦哈比指的方向望过去，看到一个摆放着许多桌椅的圆形露天吧台。哈比们熙熙攘攘地挤在这个柜台周围，其中几个哈比在你走近时向你投以污言秽语。你不想给斯嘉丽或海伦娜惹麻烦，便不理会这些粗鲁的哈比，而是专心于从柜台后面的女招待那里要了一杯饮料。
 	</p>
 	<p>
-		Much to your relief, the harpy who ends up serving you turns out to be relatively friendly, and after you've told her that you're here to get a drink for Scarlett, she gives you a glass of pink lemonade, along with the assurance that it's one of her favourite beverages. Quickly returning to where Scarlett is seated, you hand her the lemonade, and are relieved to hear her say, [scarlett.speech(Good job, bitch! Now get down and stay quiet!)]
+		让你松了一口气的是，最后为你服务的哈比还是比较友好的。在你表明是为斯嘉丽买饮料后，她递给你一杯粉红色的柠檬水，并保证这是她最喜欢的饮料之一。买完后，你迅速回到斯嘉丽的位置，把柠檬水递给她，听到她说，[scarlett.speech(干得好，贱人！现在趴下，保持安静！)]，你便放下心来。
 	</p>
 	<p>
-		Kneeling down beside her, you join Scarlett's harpy followers in waiting to hear what it is she's ask for next. After about twenty minutes of simply relaxing on her sun-lounger, Scarlett eventually finishes her lemonade. Carelessly throwing the empty glass to one side, she declares to nobody in particular, [scarlett.speech(I deserve to be pampered! Get off your fucking knees and treat me like a princess!)] 
+		你跪在她身边，和斯嘉丽的哈比追随者们一起等待着她的进一步要求。斯嘉丽在躺椅上休息了大约二十分钟后，终于喝完了她的柠檬水。她漫不经心地把空杯子扔到一边，对大家宣布道，[scarlett.speech(我应该被好好伺候！别他妈跪着了，把我当公主对待吧！)] 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE -->
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE"><![CDATA[
 	<p>
-		Being one of the first to react to Scarlett's demand, you stand up and offer to give the raven-harpy a back massage. Letting out an approving hum, Scarlett shamelessly strips out of her [scarlett.topClothing(BACK)] and rolls over to lie face-down on the sun-lounger. Spreading her wings and letting a couple of other harpies start to preen her black feathers, she snaps, [scarlett.speech(Come on then, bitch! Give me a fucking back massage!)]
+		你是最先对斯嘉丽的要求做出反应的人之一，你站起身来，主动为渡鸦哈比做背部按摩。斯嘉丽发出赞许的哼声，毫无羞耻地褪去身上的[scarlett.topClothing(BACK)]衣服，翻过身俯卧在日光躺椅上。接着她张开翅膀，让其他几只哈比梳理她的黑色羽毛，冷哼道，[scarlett.speech(过来，婊子！他妈的快给我的背按摩！)]
 	</p>
 	<p>
-		Quickly doing as you're ordered, you set about massaging Scarlett's back. Running your [pc.fingers+] up and down over her soft skin, you gently, but firmly, press down and begin to knead her stiff muscles. Soon enough, your touch is causing the raven-harpy to groan in pleasure, and after almost an hour of being pampered in this manner, she pushes you away and rolls over onto her back to state,
+		你迅速按照吩咐，开始按摩斯嘉丽的背部。你[pc.fingers+]在她柔软的肌肤上来回游走，轻柔却有力地按压揉捏她僵硬的肌肉。很快，你的抚摸让渡鸦哈比发出了愉悦的呻吟，在被你这样伺候了快一个小时后，她推开你，翻身躺下，说道，
 		#IF(scarlett.hasPenis())
-			 [scarlett.speech(You know, you're pretty fucking good at that massaging shit. If you'd like, you can have your reward now instead of waiting. Just get your fucking head down between my legs and suck my cock!)]
+			[scarlett.speech(你知道吗，你按摩的技术真他妈好。只要你愿意，现在无需等待就可以得到奖励。快把头低到我的两腿之间，给我口交吧！)]
 		#ELSE
-			 [scarlett.speech(You know, you're pretty fucking good at that massaging shit. If you'd like, you can have your reward now instead of waiting. Just get your fucking head down between my legs and service my cunt!)]
+			[scarlett.speech(你知道吗，你按摩的技术真他妈好。只要你愿意，现在无需等待就可以得到奖励。快把头低到我的两腿之间，来服务我的小穴吧！)]
 		#ENDIF
 	</p>
 	<p>
-		Watching as Scarlett drops her hand down between her bird-like legs to tease her feathered fingers over her groin, you wonder if you should accept her offer and take your reward now, or decline and wait for an opportunity to have more than just oral sex with her later on...
+		你看着斯嘉丽把手伸向她的鸟腿之间，用羽毛覆盖的手指在腹股沟上挑逗。你思索是接受她立刻奖励的提议，还是暂且拒绝，等以后有机会再和她做不只是口交的性爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE_HOLD_BACK"><![CDATA[
 	<p>
-		Thanking Scarlett for the opportunity, you tell her that you'd like to wait and receive your reward from her later on. Letting out a dismissive grunt, she extends her offer to the rest of harpies. Almost instantly, the harpy nearest to Scarlett's groin drops her head down between her legs, and after pulling off her
+		你感谢斯嘉丽给你这个机会，但想等会再从她那里领取奖励。她轻蔑地哼了一声，转头向其他哈比发出邀请。几乎就在一瞬间，离斯嘉丽腹股沟最近的哈比就把头垂到了她的双腿之间，拉下她的
 		#IF(scarlett.hasPenis())
-			 [scarlett.topClothing(PENIS)], she starts greedily sucking the raven-harpy's cock.
+			[scarlett.topClothing(PENIS)]，贪婪地吮吸起渡鸦哈比的肉棒。
 		#ELSE
-			 [scarlett.topClothing(VAGINA)], she starts greedily licking and kissing the raven-harpy's pussy.
+			[scarlett.topClothing(VAGINA)]，贪婪地舔舐亲吻起渡鸦哈比的小穴。
 		#ENDIF
 	</p>
 	<p>
-		While still receiving oral from this submissive harpy, Scarlett turns towards you and snaps, [scarlett.speech(Give me more of your massaging! ~Mmm!~ Do my shoulders now!)]
+		斯嘉丽还在享受这个顺从的哈比的口交，她转身对你冷声道，[scarlett.speech(再给我按摩吧！~嗯~现在来按摩肩膀！)]
 	</p>
 	<p>
-		While most of the nearby harpies take turns performing oral on her, you proceed to first massage Scarlett's shoulders, then each of her wings, and finally her head. By the time you've finished, the raven-harpy's
+		斯嘉丽身边的哈比正轮流为她口交，而你先从她的肩膀处开始按摩，接着是每只翅膀，最后轮到脑袋。等你完成按摩时，渡鸦哈比的
 		#IF(scarlett.hasPenis())
-			 cock has been sucked by no less than ten different harpies, and is covered in a slimy mixture of saliva and cum.
+			鸡巴已经被不下十个不同的哈比吸吮过，上面沾满了唾液和精液的粘稠混合物。
 		#ELSE
-			 pussy has been serviced by no less than ten different harpies, and is covered in a slimy mixture of saliva and girlcum.
+			阴部已经被不下十个不同的哈比服务过，里面充满了唾液和爱液的粘稠混合物。
 		#ENDIF
 	</p>
 	<p>
-		Noticing that the harpies in the rest of Helena's nest are starting to retire for the evening, Scarlett rudely uses the nearest harpy's skirt to wipe herself clean, before declaring that she's had enough for one day. Pulling her clothes back on, she states that it's time for her to choose who's going to be the one to spend the night with her. Immediately, the couple of harpies who didn't perform oral on Scarlett start to make their case for being the one to be chosen, and you wonder what you should say or do to get chosen over them...
+		斯嘉丽注意到海伦娜巢穴里的其他哈比都回去休息了，便粗鲁地扯起离她最近的哈比的裙子来清理自己，然后宣布她今天已经爽够了。她重新穿好衣服，说现在该选择来和她共度良宵的人了。随即，剩下没能为斯嘉丽口交的哈比为了被选中而使出浑身解数，你思索自己该说什么或做什么才能取代她们被选中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE_BLOWJOB"><![CDATA[
 	<p>
-		Not being able to resist the offer of getting to suck Scarlett's cock, you sink down onto your knees before her and prepare to get started. Smirking down at you, the raven-harpy sneers, [scarlett.speechNoEffects(Go on then, bitch! Take my underwear off and suck my fucking cock!)]
+		你无法拒绝斯嘉丽口交的邀请，便跪在她面前，准备口交。渡鸦哈比冲你冷笑道，[scarlett.speechNoEffects(继续吧，婊子！把我的内裤脱了，然后他妈的来给我唆鸡巴！)]
 	</p>
 	<p>
-		Hurrying to obey, you slide Scarlett's boy-shorts down the length of her
+		你赶紧服从命令，将斯嘉丽的男孩短裤拉下她
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 smooth legs, revealing her bird-like cloaca. Leaning forwards to plant a passionate kiss on it, you're delighted to see the harpy's cock respond to your touch by pushing out of its pussy-like slit and quickly rising to full erection.
+			光滑细腻的双腿，露出了鸟类泄殖腔。你向前倾身，热情地亲吻它，欣喜地看到哈比的阴茎回应了你的触碰，从阴道缝隙中挤出，迅速勃起。
 		#ELSE
-			 bird-like legs, revealing her [scarlett.cock+]. Leaning forwards to plant a passionate kiss on it, you're delighted to see the harpy's cock respond to your touch by quickly rising to full erection.
+			的鸟腿，露出了她[scarlett.cock+]。你向前倾身，热情地亲吻它，欣喜地看到哈比的阴茎回应了你的触碰，迅速勃起。
 		#ENDIF
-		 Sticking out your [pc.tongue+], you deliver a slow, wet lick up the length of Scarlett's [scarlett.cock+], before parting your [pc.lips+] and taking her into your mouth. As you start to give her an enthusiastic blowjob, she moans, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on sucking my fucking cock until I blow a load down your throat!)]
+		你伸出[pc.tongue]，缓慢而湿润地沿着斯嘉丽[scarlett.cock+]舔上去，然后分开[pc.lips]，将其含进嘴里，热情地为她口交。她呻吟道，[scarlett.speechNoEffects(~唔！~就是这样，婊子！~继续给我口交，在我把精液射进你的喉咙前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_BACK_MASSAGE_CUNNILINGUS"><![CDATA[
 	<p>
-		Not being able to resist the offer of getting to service Scarlett's pussy, you sink down onto your knees before her and prepare to get started. Smirking down at you, the raven-harpy sneers, [scarlett.speechNoEffects(Go on then, bitch! Take my underwear off and lick my fucking cunt!)]
+		你无法拒绝斯嘉丽口交的邀请，便跪在她面前，准备口交。渡鸦哈比低头冲你冷笑道，[scarlett.speechNoEffects(继续吧，婊子！把我的内裤脱了，然后他妈的来给我舔小穴！)]
 	</p>
 	<p>
-		Hurrying to obey, you slide Scarlett's boy-shorts down the length of her
+		你赶紧服从命令，将斯嘉丽的平角裤拉下她
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 smooth legs, revealing her bird-like cloaca.
+			光滑细腻的双腿，露出她的鸟类泄殖腔。
 		#ELSE
-			 bird-like legs, revealing her [scarlett.pussy+].
+			的鸟腿，露出了她[scarlett.pussy+]。
 		#ENDIF
-		 Leaning forwards to plant a passionate kiss on her sensitive little clit, you quickly proceed to use your [pc.tongue+] to deliver a slow, wet lick up the length of Scarlett's [scarlett.labia+]. Burying your head between the raven-harpy's legs, you start enthusiastically eating her out, causing her to moan, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on licking my fucking pussy until I squirt all over your face!)]
+		你身体前倾，给她敏感的小阴蒂一个深情的吻，随后你迅速地用你[pc.tongue+]缓慢而湿润地舔上斯嘉丽[scarlett.labia+]。你把头埋在渡鸦哈比双腿之间，热情地把她吃干抹净，引得她阵阵呻吟，[scarlett.speechNoEffects(~嗯！~就是这样，婊子！~他妈的继续舔我的小穴，在我喷得你满脸都是前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS -->
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS"><![CDATA[
 	<p>
-		Being one of the first to react to Scarlett's demand, you stand up and offer to groom the raven-harpy's wings. Letting out an approving hum, Scarlett spreads her wings and relaxes back on the sun-lounger. Taking hold of the wing nearest to you, you start to stroke and clean her black feathers, while a harpy opposite to you does the same with her other one. As several other harpies move forwards to start massaging her shoulders and feet, Scarlett snaps, [scarlett.speech(Come on then, bitches! Make me feel good!)]
+		你是最先对斯嘉丽的要求做出反应的人之一，你站起身来，主动为渡鸦哈比梳理翅膀。斯嘉丽发出赞许的哼声，舒展翅膀，放松地躺在躺椅上。你握住离你最近的那只翅膀，清理她的黑色羽毛，而你对面的一只哈比则梳理起另一只翅膀。其他几只哈比也纷纷上前按摩她的肩膀和双脚时，斯嘉丽冷哼道，[scarlett.speech(来吧，婊子们！让我爽一下！)]
 	</p>
 	<p>
-		Wanting to make Scarlett happy, you put all of your focus into grooming her huge wing-like arm. Running your [pc.fingers+] over her black feathers, you slowly work your way up the entire length of her wing. Soon enough, your touch is causing the raven-harpy to groan in pleasure, and after almost an hour of being pampered in this manner, she turns her head to look up at you and state,
+		你为了让斯嘉丽开心，便专心致志于梳理她巨大的翅膀上。你[pc.finger+]在她黑色的羽毛上滑过，沿着她的翅膀慢慢地向上抚摸。很快，你的抚摸让渡鸦哈比发出了愉悦的呻吟，在被你这样伺候了快一个小时后，她转头看向你，说道，
 		#IF(scarlett.hasPenis())
-			 [scarlett.speech(You know, you're pretty fucking good with your [pc.hands]. If you'd like, you can have your reward now instead of waiting. Just get your fucking [pc.fingers] down between my legs and jerk me off!)]
+			[scarlett.speech(你知道吗，你的手活技术真他妈好。只要你愿意，现在无需等待就可以得到奖励。快把[pc.fingers]放进我腿里，给我打飞机吧！)]
 		#ELSE
-			 [scarlett.speech(You know, you're pretty fucking good with your [pc.hands]. If you'd like, you can have your reward now instead of waiting. Just get your fucking [pc.fingers] down between my legs and finger my cunt!)]
+			[scarlett.speech(你知道吗，你的手活技术真他妈好。只要你愿意，现在无需等待就可以得到奖励。快把[pc.fingers]放进我腿里，给我指交吧！)]
 		#ENDIF
 	</p>
 	<p>
-		Watching as Scarlett drops her hand down between her bird-like legs to tease her feathered fingers over her groin, you wonder if you should accept her offer and take your reward now, or decline and wait for an opportunity to have full, penetrative sex with her later on...
+		你看着斯嘉丽把手伸向她的鸟腿之间，用羽毛覆盖的手指在腹股沟上挑逗。你思索是接受她立刻奖励的提议，还是暂且拒绝，等以后有机会再和她做全面的插入式性爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS_HOLD_BACK"><![CDATA[
 	<p>
-		Thanking Scarlett for the opportunity, you tell her that you'd like to wait and receive your reward from her later on. Letting out a dismissive grunt, she extends her offer to the rest of harpies. Almost instantly, the harpy nearest to Scarlett's groin shuffles forwards between her legs, and after pulling off her
+		你感谢斯嘉丽给你这个机会，但想等下次再从她那里领取奖励。她轻蔑地哼了一声，转头向其他哈比发出邀请。几乎就在一瞬间，离斯嘉丽腹股沟最近的哈比就把头垂到了她的双腿之间，拉下她的
 		#IF(scarlett.hasPenis())
-			 [scarlett.topClothing(PENIS)], she starts enthusiastically stroking the raven-harpy's cock.
+			[scarlett.topClothing(PENIS)]，亢奋地摸起渡鸦哈比的肉棒。
 		#ELSE
-			 [scarlett.topClothing(VAGINA)], she starts enthusiastically fingering the raven-harpy's pussy.
+			[scarlett.topClothing(VAGINA)]，亢奋地指交起渡鸦哈比的小穴。
 		#ENDIF
 	</p>
 	<p>
-		With this submissive harpy's fingers continuing to work their way
+		这只顺从的哈比卖力地用手指
 		#IF(scarlett.hasPenis())
-			 up and down her shaft,
+			在她的阴茎上下游走，
 		#ELSE
-			 in and out of her wet cunt,
+			在她湿漉漉的小穴里进进出出，
 		#ENDIF
-		 Scarlett turns towards you and snaps, [scarlett.speech(Do my other wing! ~Mmm!~ This harpy slut didn't do as good a job as you!)]
+		斯嘉丽转头对你叫道，[scarlett.speech(帮我梳理其他翅膀！~唔！~这哈比荡妇感觉做得不如你好啊！)]
 	</p>
 	<p>
-		While most of the nearby harpies take turns to 
+		斯嘉丽身边的哈比正轮流为她
 		#IF(scarlett.hasPenis())
-			 jerk her off,
+			打飞机，
 		#ELSE
-			 finger her,
+			指交，
 		#ENDIF
-		 you proceed to groom Scarlett's other wing, before being instructed to turn your attention to her head feathers. By the time you've finished, the raven-harpy's
+		你梳理起斯嘉丽的另一只翅膀，又按吩咐把注意力转向头部羽毛。等你梳理完毕，渡鸦哈比的
 		#IF(scarlett.hasPenis())
-			 cock has been milked by no less than ten different harpies, and is covered in a slimy layer of cum.
+			鸡巴已经被不下十个不同的哈比榨过，上面覆盖着一层黏糊糊的精液。
 		#ELSE
-			 pussy has been serviced by no less than ten different harpies, and is covered in a slimy layer of girlcum.
+			小穴已经被不下十个不同的哈比服务过，里面充满了黏糊糊的爱液。
 		#ENDIF
 	</p>
 	<p>
-		Noticing that the harpies in the rest of Helena's nest are starting to retire for the evening, Scarlett rudely uses the nearest harpy's skirt to wipe herself clean, before declaring that she's had enough for one day. Pulling her clothes back on, she states that it's time for her to choose who's going to be the one to spend the night with her. Immediately, the couple of harpies who didn't
+		斯嘉丽注意到海伦娜巢穴里的其他哈比都回去休息了，便粗鲁地扯起离她最近的哈比的裙子来清理自己，然后宣布她今天已经爽够了。她重新穿好衣服，说现在该选择来和她共度良宵的人了。随即，剩下没能为
 		#IF(scarlett.hasPenis())
-			 jerk Scarlett off
+			斯嘉丽打飞机的哈比
 		#ELSE
-			 finger Scarlett
+			斯嘉丽指交的哈比
 		#ENDIF
-		 start to make their case for being the one to be chosen, and you wonder what you should say or do to get chosen over them...
+		为了被选中而使出浑身解数，你思索自己该说什么或做什么才能取代她们被选中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS_HANDJOB"><![CDATA[
 	<p>
-		Not being able to resist the offer of getting to service Scarlett's cock, you sink down onto your knees before her and prepare to get started. Smirking down at you, the raven-harpy sneers, [scarlett.speechNoEffects(Go on then, bitch! Take my underwear off and start stroking my fucking cock!)]
+		你无法拒绝斯嘉丽口交的邀请，便跪在她面前，准备口交。渡鸦哈比冲你冷笑道，[scarlett.speechNoEffects(继续吧，婊子！把我的内裤脱了，然后他妈的来给我唆鸡巴！)]
 	</p>
 	<p>
-		Hurrying to obey, you slide Scarlett's boy-shorts down the length of her
+		你赶紧服从命令，将斯嘉丽的男孩短裤拉下她
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 smooth legs, revealing her bird-like cloaca. Teasing your [pc.fingers+] up and down the length of it, you're delighted to see the harpy's cock respond to your touch by pushing out of its pussy-like slit and quickly rising to full erection.
+			光滑细腻的双腿，露出了鸟类泄殖腔。你[pc.fingers+]来回挑逗着，欣喜地看到哈比的阴茎回应了你的触碰，从阴道缝隙中挤出，迅速勃起。
 		#ELSE
-			 bird-like legs, revealing her [scarlett.cock+]. Teasing your [pc.fingers+] up and down the length of it, you're delighted to see the harpy's cock respond to your touch by quickly rising to full erection.
+			的鸟腿，露出了她[scarlett.cock+]。你[pc.fingers+]来回挑逗着，欣喜地看到哈比的阴茎回应了你的触碰，迅速勃起。
 		#ENDIF
-		 Wrapping your [pc.hand] around Scarlett's [scarlett.cock+], you immediately start to give her an enthusiastic handjob, causing her to moan, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on jerking me off until I blow a load all over your fucking face!)]
+		你把[pc.hand]裹住斯嘉丽[scarlett.cock+]，立刻热情地为她手交，引得呻吟道，[scarlett.speechNoEffects(~唔！~就是这样，婊子！~继续给我打飞机，在我把精液射你一脸前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_GROOM_WINGS_FINGERING"><![CDATA[
 	<p>
-		Not being able to resist the offer of getting to service Scarlett's pussy, you sink down onto your knees before her and prepare to get started. Smirking down at you, the raven-harpy sneers, [scarlett.speechNoEffects(Go on then, bitch! Take my underwear off and stuff your fingers into my fucking cunt!)]
+		你无法拒绝斯嘉丽口交的邀请，便跪在她面前，准备口交。渡鸦哈比低头冲你冷笑道，[scarlett.speechNoEffects(继续吧，婊子！把我的内裤脱了，然后他妈的来给我舔小穴！)]
 	</p>
 	<p>
-		Hurrying to obey, you slide Scarlett's boy-shorts down the length of her
+		你赶紧服从命令，将斯嘉丽的男孩短裤拉下她
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 smooth legs, revealing her bird-like cloaca.
+			光滑细腻的双腿，露出她的鸟类泄殖腔。
 		#ELSE
-			 bird-like legs, revealing her [scarlett.pussy+].
+			的鸟腿，露出了她[scarlett.pussy+]。
 		#ENDIF
-		 Teasing your [pc.fingers+] up and down the length of her [scarlett.labia+], you home in on her sensitive little clit and give it a few delicate rubs. Moving your touch down, you then slide your [pc.fingers+] into the raven-harpy's wet pussy and start to enthusiastically finger her, causing her to moan, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on fingering my fucking pussy until I squirt all over your face!)]
+		你[pc.fingers+]在她[scarlett.labia+]上来回挑逗，又把目标转移到她敏感的小阴蒂上，细细地揉捏了几下。然后，将你[pc.fingers+]插入渡鸦哈比湿漉漉的小穴中，热情地用手指逗弄着，引得她连连呻吟，[scarlett.speechNoEffects(~嗯！~就是这样，婊子！~他妈的继续给我的小穴指交，在我喷得你满脸都是前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE -->
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE"><![CDATA[
 	<p>
-		Being one of the first to react to Scarlett's demand, you stand up and offer to give the raven-harpy a foot massage. Letting out an approving hum, Scarlett lies back on her sun-lounger and pointedly flexes her bird-like talons. Spreading her wings and letting a couple of other harpies start to preen her black feathers, she snaps, [scarlett.speech(Come on then, bitch! Get to work on my feet!)]
+		你是最先对斯嘉丽的要求做出反应的人之一，你站起身来，主动为渡鸦哈比做足部按摩。斯嘉丽发出赞许的哼声，仰卧在躺椅上，舒展鸟爪。接着她张开翅膀，让其他几只哈比梳理她的黑色羽毛，冷哼道，[scarlett.speech(那就来吧，婊子！给我的脚按摩！)]
 	</p>
 	<p>
-		Wanting to make Scarlett happy, you quickly drop down onto your knees and put all of your focus into massaging her bird-like feet. Running your [pc.fingers+] over her sharp talons, you slowly work your way up the length of her claw-like toes and begin kneading the muscles in her feet. Soon enough, your touch is causing the raven-harpy to groan in pleasure, and after almost an hour of being pampered in this manner, she tilts her head to look down at you and states,
+		你为了让斯嘉丽开心，赶紧跪下来，专注于按摩鸟爪。你[pc.fingers+]越过她锋利的爪子，轻柔缓慢地按摩爪趾，为她舒展足部肌肉。很快，你的揉捏就让渡鸦哈比高兴地呻吟起来，在被你这样伺候了快一个小时后，她歪头看向你，说道，
 		#IF(pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			 [scarlett.speech(You know, you're pretty fucking good at this massaging shit. If you'd like, you can have your reward now instead of waiting. Seeing as you like my fucking feet so much, how about you whip out your cock and let me jerk you off using my talons!)]
+			[scarlett.speech(你知道吗，你按摩的技术真他妈好。只要你愿意，现在无需等待就可以得到奖励。既然你他妈这么喜欢我的脚，不如把你的鸡巴掏出来，让我用爪子给你打飞机！)]
 		#ELSEIF(scarlett.hasPenis())
-			 [scarlett.speech(You know, you're pretty fucking good at this massaging shit. If you'd like, you can have your reward now instead of waiting. Just get your fucking head between my legs and suck my cock!)]
+			[scarlett.speech(你知道吗，你按摩的技术真他妈好。只要你愿意，现在无需等待就可以得到奖励。快把头低到我的两腿之间，给我口交吧！)]
 		#ELSE
-			 [scarlett.speech(You know, you're pretty fucking good at this massaging shit. If you'd like, you can have your reward now instead of waiting. Just get your fucking head between my legs and service my cunt!)]
+			[scarlett.speech(你知道吗，你按摩的技术真他妈好。只要你愿意，现在无需等待就可以得到奖励。快把头低到我的两腿之间，来服务我的小穴吧！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Doing your best to suppress an excited [pc.moan] as Scarlett lifts her feet and pushes them into your groin, you wonder if you should accept her offer and take your reward now, or decline and wait for an opportunity to have full, penetrative sex with her later on...
+			斯嘉丽抬起双脚并将其推向你的腹股沟，你竭力压抑着兴奋的[pc.moan]。你思索是接受她立刻奖励的提议，还是暂且拒绝，等以后有机会再和她做全面的插入式性爱……
 		#ELSE
-			Watching as Scarlett spreads her legs and teases her feathered fingers over her groin, you wonder if you should accept her offer and take your reward now, or decline and wait for an opportunity to have full, penetrative sex with her later on...
+			你看着斯嘉丽张开双腿，用羽毛覆盖的手指在腹股沟上挑逗。你思索是接受她立刻奖励的提议，还是暂且拒绝，等以后有机会再和她做全面的插入式性爱……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE_HOLD_BACK"><![CDATA[
 	<p>
-		Thanking Scarlett for the opportunity, you tell her that you'd like to wait and receive your reward from her later on. Letting out a dismissive grunt, she extends her offer to the rest of harpies. Almost instantly, the harpy nearest to Scarlett's groin drops her head down between her legs, and after pulling off her
+		你感谢斯嘉丽给你这个机会，但想等下次再从她那里领取奖励。她轻蔑地哼了一声，转头向其他哈比发出邀请。几乎就在一瞬间，离斯嘉丽腹股沟最近的哈比就把头垂到了她的双腿之间，拉下她的
 		#IF(scarlett.hasPenis())
-			 [scarlett.topClothing(PENIS)], she starts greedily sucking the raven-harpy's cock.
+			[scarlett.topClothing(PENIS)]，贪婪地吮吸起渡鸦哈比的肉棒。
 		#ELSE
-			 [scarlett.topClothing(VAGINA)], she starts greedily licking and kissing the raven-harpy's pussy.
+			[scarlett.topClothing(VAGINA)]，贪婪地舔舐亲吻起渡鸦哈比的小穴。
 		#ENDIF
 	</p>
 	<p>
-		While still receiving oral from this submissive harpy, Scarlett throws you a small bottle of clear nail polish, before snapping, [scarlett.speech(Paint my fucking talons, bitch! ~Mmm!~ And then give me some more of that fucking massaging!)]
+		斯嘉丽还在享受这个顺从的哈比的口交，她扔给你一小瓶透明指甲油，对你冷声道，[scarlett.speech(他妈的来给我涂指甲，婊子！~嗯！~然后再给我按摩吧！)]
 	</p>
 	<p>
-		While most of the nearby harpies take turns performing oral on her, you proceed to carefully paint Scarlett's talons, before continuing to massage her bird-like feet. By the time you've finished, the raven-harpy's
+		斯嘉丽身边的哈比正轮流为她口交，而你正仔细地给斯嘉丽的爪子涂指甲油，接着又去按摩她的鸟爪。等你完成按摩时，渡鸦哈比的
 		#IF(scarlett.hasPenis())
-			 cock has been sucked by no less than ten different harpies, and is covered in a slimy mixture of saliva and cum.
+			鸡巴已经被不下十个不同的哈比吸吮过，上面沾满了唾液和精液的粘稠混合物。
 		#ELSE
-			 pussy has been serviced by no less than ten different harpies, and is covered in a slimy mixture of saliva and girlcum.
+			阴部已经被不下十个不同的哈比服务过，里面充满了唾液和爱液的粘稠混合物。
 		#ENDIF
 	</p>
 	<p>
-		Noticing that the harpies in the rest of Helena's nest are starting to retire for the evening, Scarlett rudely uses the nearest harpy's skirt to wipe herself clean, before declaring that she's had enough for one day. Pulling her clothes back on, she states that it's time for her to choose who's going to be the one to spend the night with her. Immediately, the couple of harpies who didn't perform oral on Scarlett start to make their case for being the one to be chosen, and you wonder what you should say or do to get chosen over them...
+		斯嘉丽注意到海伦娜巢穴里的其他哈比都回去休息了，便粗鲁地扯起离她最近的哈比的裙子来清理自己，然后宣布她今天已经爽够了。她重新穿好衣服，说现在该选择来和她共度良宵的人了。随即，剩下没能为斯嘉丽口交的哈比为了被选中而使出浑身解数，你思索自己该说什么或做什么才能取代她们被选中……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE_BLOWJOB"><![CDATA[
 	<p>
-		Not being able to resist the offer of getting to suck Scarlett's cock, you gently lower Scarlett's feet to the floor and shuffle forwards between her bird-like legs. Smirking down at you, the raven-harpy sneers, [scarlett.speechNoEffects(Go on then, bitch! Take my underwear off and suck my fucking cock!)]
+		你无法抗拒斯嘉丽的口交邀请，便轻轻地把斯嘉丽的双脚放在地上，然后凑向她的双腿之间。渡鸦哈比低头冲你冷笑道，[scarlett.speechNoEffects(继续吧，婊子！把我的内裤脱了，然后他妈的来给我唆鸡巴！)]
 	</p>
 	<p>
-		Hurrying to obey, you slide Scarlett's boy-shorts down the length of her
+		你赶紧服从命令，将斯嘉丽的平角裤拉下她
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 smooth legs, revealing her bird-like cloaca. Leaning forwards to plant a passionate kiss on it, you're delighted to see the harpy's cock respond to your touch by pushing out of its pussy-like slit and quickly rising to full erection.
+			光滑细腻的双腿，露出了鸟类泄殖腔。你向前倾身，热情地亲吻它，欣喜地看到哈比的阴茎回应了你的触碰迅速勃起，就像从阴道缝中挤了出来一样。
 		#ELSE
-			 bird-like legs, revealing her [scarlett.cock+]. Leaning forwards to plant a passionate kiss on it, you're delighted to see the harpy's cock respond to your touch by quickly rising to full erection.
+			的鸟腿，露出了她[scarlett.cock+]。你向前倾身，热情地亲吻它，欣喜地看到哈比的阴茎回应了你的触碰，迅速勃起。
 		#ENDIF
-		 Sticking out your [pc.tongue+], you deliver a slow, wet lick up the length of Scarlett's [scarlett.cock+], before parting your [pc.lips+] and taking her into your mouth. As you start to give her an enthusiastic blowjob, she moans, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on sucking my fucking cock until I blow a load down your throat!)]
+		你伸出[pc.tongue]，缓慢而湿润地沿着斯嘉丽[scarlett.cock+]舔上去，然后分开[pc.lips]，将其含进嘴里，热情地为她口交。她呻吟道，[scarlett.speechNoEffects(~唔！~就是这样，婊子！~继续给我口交，在我把精液射进你的喉咙前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE_CUNNILINGUS"><![CDATA[
 	<p>
-		Not being able to resist the offer of getting to service Scarlett's pussy, you gently lower Scarlett's feet to the floor and shuffle forwards between her bird-like legs. Smirking down at you, the raven-harpy sneers, [scarlett.speechNoEffects(Go on then, bitch! Take my underwear off and lick my fucking cunt!)]
+		你无法拒绝斯嘉丽口交的邀请，便轻轻地把斯嘉丽的双脚放在地上，然后凑向她的双腿之间。渡鸦哈比低头冲你冷笑道，[scarlett.speechNoEffects(继续吧，婊子！把我的内裤脱了，然后他妈的来给我舔小穴！)]
 	</p>
 	<p>
-		Hurrying to obey, you slide Scarlett's boy-shorts down the length of her
+		你赶紧服从命令，将斯嘉丽的男孩短裤拉下她
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 smooth legs, revealing her bird-like cloaca.
+			光滑细腻的双腿，露出她的鸟类泄殖腔。
 		#ELSE
-			 bird-like legs, revealing her [scarlett.pussy+].
+			的鸟腿，露出了她[scarlett.pussy+]。
 		#ENDIF
-		 Leaning forwards to plant a passionate kiss on her sensitive little clit, you quickly proceed to use your [pc.tongue+] to deliver a slow, wet lick up the length of Scarlett's [scarlett.labia+]. Burying your head between the raven-harpy's legs, you start enthusiastically eating her out, causing her to moan, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on licking my fucking pussy until I squirt all over your face!)]
+		你身体前倾，给她敏感的小阴蒂一个深情的吻，随后你迅速地用你[pc.tongue+]缓慢而湿润地舔上斯嘉丽[scarlett.labia+]。你把头埋在渡鸦哈比双腿之间，热情地把她吃干抹净，引得她阵阵呻吟，[scarlett.speechNoEffects(~嗯！~就是这样，婊子！~他妈的继续舔我的小穴，在我喷得你满脸都是前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FOOT_MASSAGE_TALONJOB"><![CDATA[
 	<p>
-		Not being able to resist the offer of having Scarlett use her bird-like feet to jerk you off, you quickly expose your rapidly-hardening cock to her and plead for her to give you a talon-job. Smirking down at you, the raven-harpy cruelly grinds one of her feet down against your shaft and sneers, [scarlett.speechNoEffects(You like that, bitch?! Go on, stick your cock up between my talons and I'll give you what you want!)]
+		你无法拒绝斯嘉丽用鸟爪给你打飞机的提议，便立马把自己迅速勃起的阴茎暴露在她面前，并恳求她给你爪交。渡鸦哈比对着你冷笑，残忍地用她的一只脚爪磨着你的阴茎，冷笑道，[scarlett.speechNoEffects(你喜欢这样吗，婊子？来吧，把你的鸡巴插进我的爪子里，我会让你如愿以偿的！)]
 	</p>
 	<p>
-		Hurrying to obey, you take hold of Scarlett's feet and get her to clench her talons around your throbbing shaft. Satisfied that she's in a suitable position, you start to push your cock up and down between the harpy's talons. Letting out a delighted chuckle, Scarlett starts enthusiastically jerking you off and cries out, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! You like my fucking feet, don't you?! I'm gonna make you cum all over them!)]
+		你赶紧服从命令，握住斯嘉丽的双脚，使她的爪子能紧紧裹住你抽动的阴茎。你确定她调整好姿势后，便在哈比的爪子间上下套弄你的肉棒。斯嘉丽一边发出愉悦的咯咯声，一边热情地为你打飞机，浪叫道，[scarlett.speechNoEffects(~唔！~ 就是这样，婊子！你他妈喜欢我的脚对吗？我要让你射得我满脚都是！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SCARLETT_SERVANT_SEX -->
@@ -1201,272 +1201,272 @@
 	<htmlContent tag="AFTER_SCARLETT_SERVANT_SEX"><![CDATA[
 	#IF(scarlett.isLikesPlayer())
 		<p>
-			Having let you have your fun with her, Scarlett pushes you away and firmly says, [scarlett.speech(Ok, [pc.name], that's enough!)]
+			在你和斯嘉丽爽过之后，她把你推开，强硬地说道，[scarlett.speech(好了，[pc.name]，够了！)]
 		</p>
 		<p>
-			Letting her feelings for you get the better of her, she quickly follows this up by explaining, [scarlett.speech(I've got to give the rest of these harpy sluts some fun, so I can't do anything else with you today. Come back and see me tomorrow if you want to do this again!)]
+			她对你的感情占了上风，迅速解释道，[scarlett.speech(我还得给剩下的这些荡妇找点乐子，今天就不和你做别的了。如果你想要，明天再来找我！)]
 		</p>
 	#ELSE
 		<p>
-			Having let you have your fun with her, Scarlett pushes you away and snaps, [scarlett.speech(Ok, bitch, you've had enough!)]
+			在你和斯嘉丽爽过之后，她把你推开，厉声说道，[scarlett.speech(好了婊子，够了！)]
 		</p>
 		<p>
-			Seemingly feeling the need to explain herself to you, the rude harpy continues, [scarlett.speech(I've got to give the rest of these harpy sluts some fun, so I can't do anything else with you today, bitch. Come back and see me tomorrow if you want to do this again!)]
+			这个粗鲁的哈比似乎觉得有必要向你解释一下，继续说道，[scarlett.speech(我还得给剩下的这些荡妇找点乐子，今天就不和你这个婊子做什么别的了。如果你想要，明天再来找我！)]
 		</p>
 	#ENDIF
 	<p>
-		Having already received your reward from Scarlett, there's nothing much left for you to do except gather up your things and take your leave. As you set off towards the exit of Helena's nest, you can't help but overhear the rude raven-harpy ordering one of her followers to accompany her down to her room, letting you know that she's not going to be present in Helena's nest until tomorrow...
+		斯嘉丽已经给了你奖励，除了收拾东西离开，你也无事可做。你朝海伦娜巢穴的出口走去，无意间听到那个粗鲁的渡鸦哈比正命令她的一个追随者陪她回房间。你知道她明天才会再出现在海伦娜的巢里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD -->
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_KISS_FEET"><![CDATA[
 	<p>
-		Willing to do whatever it takes to be chosen over the other two harpies, you tell Scarlett that she should reward the most loyal and submissive of her followers, before dropping down in front of her and kissing her bird-like feet. Taken by surprise at your sudden move, the raven-harpy lets out a startled cry, before quickly getting a hold of herself and sadistically pushing one of her feet into your face. Forcing you to kiss the soles of her feet, she laughs, [scarlett.speech(Oh yes! You're a good bitch, aren't you, [pc.name]?!)]
+		你愿意不惜一切代价战胜其余两只哈比，便告诉斯嘉丽，她应该奖励她最忠诚、最顺从的追随者，说罢你便亲吻起她的鸟爪。渡鸦哈比被你的突然举动吓得发出一声惊叫，然后迅速收敛情绪，虐待狂般地把她的脚踩在你的脸上，强迫你亲吻她的脚底。她笑道，[scarlett.speech(哦，对了！你真是个乖婊子，不是吗，[pc.name]？！)]
 	</p>
 	<p>
-		Submissively replying in the affirmative, you continue to kiss Scarlett's bird-like talons until she eventually pulls away and declares, [scarlett.speech(Very well, [pc.name]! You have shown your obedience, so I shall choose you to accompany me to my room!)]
+		你顺从地回答说对，继续亲吻斯嘉丽的鸟爪，直到她拉开距离并宣布道，[scarlett.speech(非常好，[pc.name]！你很听话，所以我要选你陪我回房间！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_BOW_DOWN"><![CDATA[
 	<p>
-		Desperate to be chosen over the other two harpies, you tell Scarlett that she should reward the most loyal and submissive of her followers, before dropping to the floor and bowing down in front of her. Taken by surprise at your sudden move, the raven-harpy lets out a startled cry, before quickly getting a hold of herself and sadistically using one of her feet to push your face down against the ground. Cruelly continuing to grind her foot down on the back of your head, she laughs, [scarlett.speech(Oh yes! You're a good bitch, aren't you, [pc.name]?!)]
+		你渴望能从其余两个哈比中脱颖而出，便告诉斯嘉丽，她应该奖励她最忠诚、最顺从的追随者，说罢你便跪拜在地上。渡鸦哈比被你的突然举动吓得发出一声惊叫，然后迅速收敛情绪，虐待狂般地将你的脸踩在地上，残忍地用脚磨着你的后脑勺，她笑道，[scarlett.speech(哦，对了！你真是个乖婊子，不是吗，[pc.name]？！)]
 	</p>
 	<p>
-		Submissively replying in the affirmative, you continue to bow down before Scarlett until she eventually pulls away and declares, [scarlett.speech(Very well, [pc.name]! You have shown your obedience, so I shall choose you to accompany me to my room!)]
+		你顺从地回答说对，继续在斯嘉丽面前俯首称臣，直到她拉开距离并宣布道，[scarlett.speech(非常好，[pc.name]！你很听话，所以我要选你陪我回房间！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_BOW_DOWN_NOT_CHOSEN"><![CDATA[
 	<p>
-		Desperate to be chosen over the other two harpies, you tell Scarlett that she should reward the most loyal and submissive of her followers, before dropping to the floor and bowing down in front of her. Although your submissive move might have ordinarily been enough to impress Scarlett, one of the other harpies quickly one-ups you by dropping down and starting to kiss the raven-harpy's feet. With her attention quickly shifting to focus on this grovelling harpy, Scarlett dismisses you with a wave of her wing and says, [scarlett.speech(You'll have to do better next time if you want to impress me, [pc.name]! Now get out of my sight!)]
+		你渴望能从其余两个哈比中脱颖而出，便告诉斯嘉丽，她应该奖励她最忠诚、最顺从的追随者，说罢你便跪拜在地上。虽然此番顺从举动平日里足以打动斯嘉丽，但另一个哈比更胜一筹，她竟俯下身子亲吻起渡鸦哈比的脚。斯嘉丽的注意力很快就转移到了这只卑躬屈膝的哈比身上，她挥着翅膀打发你道，[scarlett.speech(想让我刮目相看的话，你下次就得做得更好，[pc.name]！现在从我眼前消失吧！)]
 	</p>
 	<p>
-		Snapping at the grovelling harpy to stand up, Scarlett grabs hold of her wing-like arm and leads her off in the direction of the nest's elevator. Not having done enough to impress the raven-harpy, you let out a disappointed sigh, and after standing up and getting your things in order, you head back over to the nest's entrance...
+		斯嘉丽呵斥着让这卑躬屈膝的哈比站起来，抓着她翅膀般的手臂往巢穴的电梯方向走去。你因没能给渡鸦哈比留下足够深刻的印象而失望地叹了一口气，站起来收拾好东西后，便向巢穴的入口走去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_FLATTER"><![CDATA[
 	<p>
-		Desperate to be chosen over the other two harpies, you start to flatter Scarlett and compliment her on her appearance. Not expecting you to say such nice things about her, the raven-harpy is momentarily stunned, but quickly gets a hold of herself and orders you to keep on going. Expressing your admiration for how pretty her feathers are, you move on to say how Scarlett is easily the most attractive harpy you've seen all day, causing her to triumphantly laugh, [scarlett.speech(That's right, suck up to me like the submissive bitch you are! You love acting like my servant, don't you, [pc.name]?!)]
+		你渴望能从其余两个哈比中脱颖而出，便开始奉承起斯嘉丽的外表。渡鸦哈比没想到你会说这么多漂亮话，竟一时愣住了。但她很快就恢复过来，命令你继续说下去。你称赞斯嘉丽漂亮的羽毛，说她是你迄今为止见过的最迷人的哈比，引得她得意洋洋地笑道，[scarlett.speech(没错，像个顺从的婊子一样拍我马屁！你喜欢做我的仆人，是不是，[pc.name]？！)]
 	</p>
 	<p>
-		Submissively replying in the affirmative, you continue to flatter Scarlett until she eventually holds up her wing to silence you and declare, [scarlett.speech(Very well, [pc.name]! You have shown your obedience, so I shall choose you to accompany me to my room!)]
+		你顺从地回答说对，继续奉承斯嘉丽，直到她最终举起翅膀让你闭嘴并宣布道，[scarlett.speech(非常好，[pc.name]！你很听话，所以我要选你陪我回房间！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_FLATTER_NOT_CHOSEN"><![CDATA[
 	<p>
-		Desperate to be chosen over the other two harpies, you start to flatter Scarlett and compliment her on her appearance. Although your submissive move might have ordinarily been enough to impress her, one of the other harpies quickly one-ups you by dropping to floor and bowing down to the raven-harpy. With her attention quickly shifting to focus on this grovelling harpy, Scarlett dismisses you with a wave of her wing and says, [scarlett.speech(You'll have to do better next time if you want to impress me, [pc.name]! Now get out of my sight!)]
+		你渴望能从其余两个哈比中脱颖而出，便开始奉承起斯嘉丽的外表。虽然此番顺从举动平日里足以打动斯嘉丽，但另一个哈比更胜一筹，她竟跪拜起渡鸦哈比。斯嘉丽的注意力很快就转移到了这个卑躬屈膝的哈比身上，她挥着翅膀打发你道，[scarlett.speech(想让我刮目相看的话，你下次就得做得更好，[pc.name]！现在从我眼前消失吧！)]
 	</p>
 	<p>
-		Snapping at the grovelling harpy to stand up, Scarlett grabs hold of her wing-like arm and leads her off in the direction of the nest's elevator. Not having done enough to impress the raven-harpy, you let out a disappointed sigh, and after standing up and getting your things in order, you head back over to the nest's entrance...
+		斯嘉丽呵斥着让这卑躬屈膝的哈比站起来，抓着她翅膀般的手臂往巢穴的电梯方向走去。你因没能给渡鸦哈比留下足够深刻的印象而失望地叹了一口气，站起来收拾好东西后，便向巢穴的入口走去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_CHOSEN"><![CDATA[
 	<p>
-		Realising that they've missed out on the opportunity to have sex with Scarlett, the other harpies instantly start whining and pleading for her to fuck them instead of you. Not being one to put up with this sort of behaviour, Scarlett's cheeks flush bright red as she screams, [scarlett.speech(Shut the fuck up! You can try and impress me again tomorrow, but for now, fuck off!)]
+		其他哈比意识到她们痛失与斯嘉丽做爱的机会，立刻抱怨起来，恳求斯嘉丽别管你，去和她们做爱。斯嘉丽无法容忍这种行为，她脸颊涨得通红，呵斥道，[scarlett.speech(他妈的给我闭嘴！明天再试着打动我吧，现在都给我滚开！)]
 	</p>
 	<p>
-		Cowed into silence by the raven-harpy's foul-mouthed outburst, the harpies submissively cast their gaze to the floor as Scarlett takes you by the [pc.hand] and leads you over to the nest's elevator. Pulling you inside, Scarlett tells you that as part of her duties as Helena's personal assistant, she's staying in one of the guest rooms in the matriarch's apartment, and that this elevator will take the two of you down to the correct floor. Clearly starting to get aroused at the thought of having sex with you, the raven-harpy turns to face you, and before you know what's happening, she's dominantly pinning you up against the wall and forcefully pulling you into a rough, passionate kiss.
+		哈比们被渡鸦哈比的粗口吓得噤若寒蝉，顺从地看向地板。斯嘉丽拉着你的[pc.hand]，走到巢穴的电梯前，牵着你走了进去。她说她作为海伦娜个人助理，住在族长公寓的一间客房里，这部电梯会带你们直达对应楼层。一想到要和你做爱，渡鸦哈比显然兴奋起来，她转身正对着你，你还来不及知道发生了什么，就被她霸道地按在墙上，粗暴而热烈地吻了起来。
 	</p>
 	<p>
-		After a few moments of having Scarlett's tongue thrust into your mouth, the elevator doors suddenly ping and slide open, and you suddenly find yourself being pulled along behind the raven-harpy as she strides down the corridor towards the door to Helena's apartment. Just a couple of minutes later, the two of you are entering the guest bedroom which is serving as Scarlett's residence, and after turning to lock the door behind her, the raven-harpy roughly pushes you down onto her bed and states,
+		就在斯嘉丽用舌头深吻你片刻之后，电梯门突然“叮”一声开了，你发现自己正被面前这只渡鸦哈比急匆匆地拉着走过走廊，朝着海伦娜的公寓门走去。几分钟后，你们两人进入了斯嘉丽住所的客房，她转身锁上门，随即粗鲁地把你推倒在她的床上，然后说道，
 		#IF(scarlett.isLikesPlayer())
-			 [scarlett.speech(Just because I like you, don't expect me to go easy on you, [pc.name]! I'm going to give you a good, rough fucking! Now, how do you want it?!)]
+			[scarlett.speech(别以为我喜欢你就会对你手下留情，[pc.name]！我要狠狠地操你！告诉我，你想怎样被干？！)]
 		#ELSE
-			 [scarlett.speech(Just because I've chosen you to be my partner, don't think that I like you, [pc.name]! I'm going to give you a good, rough fucking! Now, how do you want it?!)]
+			[scarlett.speech(不要因为我选择了你，就以为我喜欢你，[pc.name]！我要狠狠地操你！告诉我，你想怎样被干？！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_LEAVE -->
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about having sex with Scarlett, you tell the raven-harpy that you have other urgent matters to attend to today, and so you're going to have to immediately depart. Letting out an annoyed tut, Scarlett frowns at you and exclaims, [scarlett.speech(Fine! It's not like I wanted to fuck you anyway, [pc.name]! Get out of here!)]
+		你又改变了想法，便告诉她今天你有其他紧急事务需要处理，必须马上离开。斯嘉丽恼怒地啧了一声，皱着眉头叫道，[scarlett.speech(好吧，反正我也不想上你，[pc.name]！滚出去！)]
 	</p>
 	<p>
-		Saying farewell to her, you leave Scarlett in the company of her colourful harpy followers and set off towards the exit of the nest. As you leave, you can't help but overhear the rude raven-harpy ordering one of her followers to accompany her down to her room, letting you know that she's not going to be present in Helena's nest until tomorrow...
-	</p>
-	]]>
-	</htmlContent>
+			你与斯嘉丽道别，留她和她那些五颜六色的哈比追随者们在一起，自己则朝海伦娜巢穴的出口走去。期间你无意间听到那个粗鲁的渡鸦哈比正命令她的一个追随者陪她回房间。你知道她明天才会再出现在海伦娜的巢里……
+		</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX -->
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_NO_PREFERENCE"><![CDATA[
 	<p>
-		Not really knowing what it is that you want to do with Scarlett, you tell her that you have no particular preference in how she's going to fuck you. Smirking as she hears you say this, the raven-harpy steps forwards and teases, [scarlett.speech(Hmm, I wonder how best to fuck you...)]
+		你没想好自己想和斯嘉丽做什么，便告诉她你没有特殊性癖。一听到你这么说，渡鸦哈比走近你，坏笑着挑逗道，[scarlett.speech(嗯，让我想想怎样才能最好地操你……)]
 	</p>
 	<p>
-		Suddenly grabbing hold of your [pc.hips+], the dominant harpy pulls you into her body and growls, [scarlett.speech(I'm going to put you in your place, bitch!)]
+		这霸道的哈比突然抓住你[pc.hips+]，将你拉向她并咆哮道，[scarlett.speech(让我好好教训你，贱人！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX_BLOWJOB"><![CDATA[
 	<p>
-		Wanting to perform oral on Scarlett, you tell her that you'd like to suck her cock. Smirking as she hears you say this, the raven-harpy strips off her clothing and sits down on the edge of her bed, before snapping, [scarlett.speech(Come on then! Get down and suck my cock!)]
+		你想为斯嘉丽口交，就如此告诉她。听到你这么说，渡鸦哈比坏笑着脱去衣服，坐在床边，厉声道，[scarlett.speech(来吧！趴下给我口交！)]
 	</p>
 	<p>
-		Hurrying to obey, you drop down in front of Scarlett and shuffle forwards to bring your mouth right up next to her
+		你赶紧服从命令，俯身趴在斯嘉丽面前，挪动着把嘴凑到她的
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 bird-like cloaca. Leaning forwards to plant a passionate kiss on it, you're delighted to see the harpy's cock respond to your touch by pushing out of its pussy-like slit and quickly rising to full erection.
+			鸟类泄殖腔。你向前倾身，热情地亲吻它，欣喜地看到哈比的阴茎回应了你的触碰，从阴道缝隙中挤出，迅速勃起。
 		#ELSE
-			 [scarlett.cock+]. Leaning forwards to plant a passionate kiss on it, you're delighted to see the harpy's cock respond to your touch by quickly rising to full erection.
+			[scarlett.cock+]。你向前倾身，热情地亲吻它，欣喜地看到哈比的阴茎回应了你的触碰，迅速勃起。
 		#ENDIF
-		 Sticking out your [pc.tongue+], you deliver a slow, wet lick up the length of Scarlett's [scarlett.cock+], before parting your [pc.lips+] and taking her into your mouth. As you start to give her an enthusiastic blowjob, she moans, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on sucking my fucking cock until I blow a load down your throat!)]
+		你伸出[pc.tongue]，缓慢而湿润地沿着斯嘉丽[scarlett.cock+]舔上去，然后分开[pc.lips]，将其含进嘴里，热情地为她口交。她呻吟道，[scarlett.speechNoEffects(~唔！~就是这样，婊子！啊哈！~继续给我口交，在我把精液射进你的喉咙前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX_ANAL"><![CDATA[
 	<p>
-		Wanting to get anally fucked by Scarlett, you drop down onto all fours and shuffle around to expose yourself to her, before asking her to come and pound your ass. Smirking as she hears you say this, the raven-harpy strips off her clothing and jumps up onto her bed, before dropping down behind you and sneering, [scarlett.speech(Go on then, [pc.name]! Beg for my cock!)]
+		你想被斯嘉丽肛交，便趴着向她左右晃动屁股，叫她来捅你的肛门。听到你这么说，渡鸦哈比坏笑着脱掉衣服后跳上床，在你身后冷笑道，[scarlett.speech(来吧，[pc.name]！乞求我的鸡巴吧！)]
 	</p>
 	<p>
-		Doing as the dominant harpy asks, you beg for her to penetrate you and start fucking your ass. Satisfied by your submissive display, Scarlett suddenly grabs hold of your [pc.hips+], and without any form of foreplay, she instantly slams her [scarlett.cock+] into your [pc.asshole+], before starting to roughly fuck you and moan, [scarlett.speech(That's it, bitch! ~Aah!~ Take my fucking cock!)]
+		你按照这支配者哈比的要求，乞求她插入你的屁股。斯嘉丽对你的顺从很满意，突然抓住你[pc.hips+]，没有任何前戏就把[scarlett.cock]捅进你[pc.asshole+]，粗暴地进进出出，她发出呻吟，[scarlett.speech(就是这样，婊子！啊哈！~吸紧我的鸡巴！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX_VAGINAL"><![CDATA[
 	<p>
-		Wanting to get fucked by Scarlett, you drop down onto all fours and shuffle around to expose yourself to her, before asking her to come and pound your pussy. Smirking as she hears you say this, the raven-harpy strips off her clothing and jumps up onto her bed, before dropping down behind you and sneering, [scarlett.speech(Go on then, [pc.name]! Beg for my cock!)]
+		你想被斯嘉丽操，便趴着向她左右晃动，叫她来捅你的小穴。听到你这么说，渡鸦哈比坏笑着脱掉衣服后跳上床，趴在你身上冷笑道，[scarlett.speech(来吧，[pc.name]！乞求我的鸡巴吧！)]
 	</p>
 	<p>
-		Doing as the dominant harpy asks, you beg for her to sink her cock into your hot cunt and start fucking you. Satisfied by your submissive display, Scarlett suddenly grabs hold of your [pc.hips+], and without any form of foreplay, she instantly slams her [scarlett.cock+] into your [pc.pussy+], before starting to roughly fuck you and moan, [scarlett.speech(That's it, bitch! ~Aah!~ Take my fucking cock!)]
+		你按照这支配者哈比的要求，乞求她插入你的小穴。斯嘉丽对你的顺从很满意，突然抓住你[pc.hips+]，没有任何前戏就把[scarlett.cock]捅进你[pc.pussy+]，粗暴地进进出出，她发出呻吟，[scarlett.speech(就是这样，婊子！啊哈！~吸紧我的鸡巴！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX_CUNNILINGUS"><![CDATA[
 	<p>
-		Wanting to perform oral on Scarlett, you tell her that you'd like to eat her out. Smirking as she hears you say this, the raven-harpy quickly strips off her clothing and orders, [scarlett.speech(Get down on your back, bitch! I'm going to sit on your fucking face!)]
+		你想为斯嘉丽口交，就告诉她你想把她吃干抹净。听到你这么说，渡鸦哈比坏笑着迅速脱去衣服，命令道，[scarlett.speech(趴下吧，贱人！我要坐在你的贱脸上！)]
 	</p>
 	<p>
-		Hurrying to obey, you lie down on Scarlett's bed, and the instant your head hits the mattress, you find yourself looking up at the raven-harpy's
+		你赶紧服从命令躺上床，你的头刚碰到床垫，就发现上方是渡鸦哈比
 		#IF(scarlett.getGenitalArrangement()==GENITALS_CLOACA)
-			 bird-like cloaca
+			的鸟类泄殖腔
 		#ELSE
-			 [scarlett.pussy+]
+			[scarlett.pussy+]
 		#ENDIF
-		 as she steps over the top of you and plants herself down on your face. Grinding her [scarlett.labia+] down against your [pc.lips+], Scarlett demands that you get started, and seeing no reason to disobey, you immediately start enthusiastically licking and kissing her wet cunt, causing her to moan, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Keep on licking my fucking pussy until I squirt all over your face!)]
+		斯嘉丽坐上你的脸，用她[scarlett.labia+]磨蹭着你[pc.lips+]，命令你开始。你没有理由不从，便立即热情地舔吻她湿润的阴户，引得她连连呻吟，[scarlett.speechNoEffects(~嗯！~就是这样，婊子！~啊哈！~他妈的继续舔我的小穴，在我喷得你满脸都是前都不要停！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SCISSORING"><![CDATA[
 	<p>
-		Wanting to rub your pussy against Scarlett's, you tell her that you'd like to scissor with her on her bed. Smirking as she hears you say this, the raven-harpy quickly strips off her clothing and orders, [scarlett.speech(Get down on your back, bitch! I'm taking charge!)]
+		你想与斯嘉丽磨镜，便告诉她说想试试剪刀式体位。听到你这么说，渡鸦哈比坏笑着迅速脱去衣服，命令道，[scarlett.speech(趴下吧，贱人！我来主导！)]
 	</p>
 	<p>
-		Hurrying to obey, you lie down on Scarlett's bed, and the instant your head hits the mattress, the raven-harpy leaps up and kneels down next to your groin. Grabbing one of your legs, she lifts it up and shuffles forwards to get into a comfortable position, before starting to roughly grind her pussy against yours. Focusing on bumping her sensitive little clit up and down over your own [pc.clit+], the horny harpy is soon moaning, [scarlett.speechNoEffects(~Mmm!~ That's it, bitch! ~Aah!~ Fuck, move those fucking hips! Oh yeah, just like that!)]
+		你赶紧顺从地躺在斯嘉丽的床上，你的头刚碰到床垫，渡鸦哈比就一跃而起，跪在你的腹股沟旁。她抬起你的一条腿，摆好舒服的姿势，随后便用小穴粗暴地磨擦你的小穴。淫荡的哈比专心致志于用她敏感的小阴蒂与你[pc.clit+]上下撞击，很快就发出了呻吟，[scarlett.speechNoEffects(~唔！~就是这样，婊子！~嗯啊！~，屁股快他妈的扭起来！嗯~对了，就是这样！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX_FUCK_HER"><![CDATA[
 	<p>
-		Wanting more than just oral sex with Scarlett, you tell her that you'd like to fuck her pussy. Smirking as she hears you say this, the raven-harpy quickly strips off her clothing, before jumping up to lie down on her bed and ordering you, [scarlett.speech(Come on then, bitch! Get your fucking cock out!)]
-	</p>
+			你比口交更进一步，便告诉斯嘉丽你想操她的小穴。听到你这么说，这位渡鸦哈比坏笑着迅速脱去衣服，跳上床趴着，命令道，[scarlett.speech(来吧，婊子！把你的鸡巴掏出来！)]
+		</p>
 	<p>
-		Hurrying to obey, you expose your rapidly-hardening cock to Scarlett, before shuffling forwards between her bird-like legs and rubbing the [pc.cockHead+] up and down over her [scarlett.labia+]. Bucking her hips a little, the dominant harpy snaps, [scarlett.speechNoEffects(Come on, bitch! Give me your fucking cock!)]
-	</p>
+			你赶紧服从命令，露出迅速勃起的肉棒，挪动着穿过她的鸟腿，用[pc.cockHead+]上下摩擦她裸露[scarlett.labia+]。支配者哈比稍稍扭动臀部，厉声喝道，[scarlett.speechNoEffects(来吧，婊子！他妈的快把肉棒给我！)]
+		</p>
 	<p>
-		Once again doing as you're told, you thrust your hips forwards, sinking your [pc.cock+] into Scarlet's [scarlett.pussy+] and causing her to let out [scarlett.a_moan+]. Pulling back, you start thrusting in and out of her [scarlett.pussy+] as she lewdly screams, [scarlett.speechNoEffects(~Aah!~ Fuck! Yes, fuck me, [pc.name]! ~Ooh!~ Pound my hot little cunt!)]
-	</p>
-	]]>
-	</htmlContent>
+			你再次听话地挺动臀部，将你[pc.cock+]捅进斯嘉丽[scarlett.pussy+]里，引得她发出[scarlett.a_moan+]。你在斯嘉丽的浪叫声中不断进进出出[scarlett.pussy]，她呻吟道，[scarlett.speechNoEffects(~啊哈！~操！对，干我，[pc.name]！~噢！~操我的小穴！)]
+		</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_NEST_SCARLETTS_SERVANT_FINAL_REWARD_SEX_FUCK_HER_ASS"><![CDATA[
 	#IF(scarlett.isAssVirgin())
 		<p>
-			Wanting more than just oral sex with Scarlett, you tell her that you'd like to fuck her ass. Smirking as she hears you say this, the raven-harpy quickly strips off her clothing, before asking, [scarlett.speech(You know I'm still an anal virgin, right? You want to be the first one to pound my virgin butt?)]
+			你比口交更进一步，便告诉斯嘉丽你想操她的屁股。听到你这么说，渡鸦哈比渡鸦哈比坏笑着迅速脱去衣服，问道，[scarlett.speech(你知道我还有肛门童贞吧？难道说你想第一个操我的处女屁股吗？)]
 		</p>
 		<p>
-			Eagerly replying in the affirmative, you feel your cock getting hard at the thought of being the first one to fuck Scarlett's ass. Seeing your growing erection, Scarlett lets out an uncharacteristic giggle before leaping up onto her bed and dropping down on all fours. Lifting her tail-feathers to present herself to you, she looks back over her shoulder and reveals, [scarlett.speech(It's not like I'm precious about my virginity or anything, it's just that everyone's preferred to fuck my pussy so far. Come on then, show me how it feels to have a cock buried in my asshole!)]
+			你迫不及待地回以肯定，一想到自己是第一个操斯嘉丽屁股的人，你的肉棒就硬了起来。斯嘉丽看到你勃起的阴茎，发出了不寻常的咯咯声，然后跳上床趴着，抬起尾羽。她转过头，说，[scarlett.speech(我其实不是很在乎贞操什么的，只是至今每个人都喜欢操我的小穴。那来吧，让我尝尝被鸡巴捅屁眼是什么滋味！)]
 		</p>
 		<p>
-			Hurrying to obey, you drop down behind Scarlett, before shuffling forwards and rubbing the [pc.cockHead+] up and down over her exposed asshole. Bucking her hips a little, the dominant harpy snaps, [scarlett.speechNoEffects(Come on, bitch! Give me your fucking cock already!)]
+			你赶紧服从命令，在斯嘉丽身后落下，挪动着用[pc.cockHead+]上下摩擦她裸露的屁眼。支配者哈比稍稍扭动臀部，厉声喝道，[scarlett.speechNoEffects(来吧，婊子！他妈的快把肉棒给我！)]
 		</p>
 		<p>
-			Once again doing as you're told, you thrust your hips forwards, sinking your [pc.cock+] into Scarlet's virgin asshole and causing her to let out [scarlett.a_moan+]. Pulling back, you start thrusting in and out of her [scarlett.asshole+] as she lewdly screams, [scarlett.speechNoEffects(~Aah!~ Fuck! That feels so fucking good! ~Ooh!~ Yes, fuck me, [pc.name]! ~Ooh!~ Pound my fucking ass!)]
+			你再次听话地挺动臀部，将你[pc.cock+]捅进斯嘉丽的处女肛门里，引得她发出[scarlett.a_moan+]。你在斯嘉丽的浪叫声中不断进进出出[scarlett.asshole]，她呻吟道，[scarlett.speechNoEffects(~啊哈！~妈的！好他妈爽！~噢！~对，干我，[pc.name]！~噢！~操我的屁股！)]
 		</p>
 	#ELSE
 		<p>
-			Wanting more than just oral sex with Scarlett, you tell her that you'd like to fuck her ass again. Smirking as she hears you say this, the raven-harpy quickly strips off her clothing, before leaping up onto her bed and dropping down on all fours. Lifting her tail-feathers to present herself to you, she looks back over her shoulder and orders, [scarlett.speech(Come on then, bitch! Get your fucking cock out!)]
+			你比口交更进一步，便告诉斯嘉丽你想再操她的屁股。听到你这么说，渡鸦哈比渡鸦哈比坏笑着迅速脱去衣服，跳上床趴着，抬起尾羽。她转过头，命令道，[scarlett.speech(来吧，婊子！把你的鸡巴掏出来！)]
 		</p>
 		<p>
-			Hurrying to obey, you expose your rapidly-hardening cock to Scarlett, before dropping down behind her and rubbing the [pc.cockHead+] up and down over her exposed asshole. Bucking her hips a little, the dominant harpy snaps, [scarlett.speechNoEffects(Come on, bitch! Give me your fucking cock already!)]
+			你赶紧服从命令，露出迅速勃起的肉棒，在斯嘉丽身后落下，挪动着用[pc.cockHead+]上下摩擦她裸露的屁眼。支配者哈比稍稍扭动臀部，厉声喝道，[scarlett.speechNoEffects(来吧，婊子！他妈的快把肉棒给我！)]
 		</p>
 		<p>
-			Once again doing as you're told, you thrust your hips forwards, sinking your [pc.cock+] into Scarlet's [scarlett.asshole+] and causing her to let out [scarlett.a_moan+]. Pulling back, you start thrusting in and out of her [scarlett.asshole+] as she lewdly screams, [scarlett.speechNoEffects(~Aah!~ Fuck! Yes, fuck me, [pc.name]! ~Ooh!~ Pound my fucking ass!)]
+			你再次听话地挺动臀部，将你[pc.cock+]捅进斯嘉丽[scarlett.asshole+]里，引得她发出[scarlett.a_moan+]。你在斯嘉丽的浪叫声中不断进进出出[scarlett.asshole]，她呻吟道，[scarlett.speechNoEffects(~啊哈！~操！对，干我，[pc.name]！~噢！~操我的屁股！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX -->
 	
 	<htmlContent tag="AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX"><![CDATA[
 	<p>
-		Letting out a deeply-satisfied sigh, Scarlett collapses down on her bed, panting for breath. Lying down next to her, you also take this opportunity to catch your breath, and as you do so, the raven-harpy unexpectedly rolls over to throw one of her big wing-like arms over you. Flashing you a playful grin, she asks, [scarlett.speech(So, [pc.name], you're going to sleep over, aren't you?)]
+		斯嘉丽深深舒了一口气，心满意足地瘫倒在床上，大口喘着粗气。躺在她旁边的你也借此机会喘息，就在这时，令你没料到的是，渡鸦哈比突然翻过身来，用她那巨大、类似翅膀的手臂搂住了你。她向你投去一个俏皮的微笑，问道：[scarlett.speech(那么，[pc.name]，你今晚要在这里过夜吗？)]
 	</p>
 	<p>
 		#IF(game.isDayTime())
-			As it's still light outside, you're taken a little by surprise at Scarlett's willingness to spend the rest of the day in bed. Sensing your hesitation in offering an answer, the raven-harpy smugly states, [scarlett.speech(I like lazing around after a good, hard fuck. If you get hungry, one of the maids can bring us some fucking food. Come on, it wouldn't kill you to spend the night with me, would it?)]
+			外面天还亮着，你惊讶于斯嘉丽剩下的时间居然打算都在床上度过。渡鸦哈比察觉到你回答时的犹豫不决，得意洋洋地说道，[scarlett.speech(我喜欢在酣畅淋漓的性爱后悠闲地度过时光。如果你饿了，可以让女仆给我们带点食物。来嘛，和我共度一晚又不会要了你的命，不是吗？)]
 		#ELSE
-			Caught a little off guard, you take a moment to think of what to say. Before you can offer a reply, however, the raven-harpy smugly states, [scarlett.speech(I like lazing around after a good, hard fuck. If you get hungry, one of the maids can bring us some fucking food. Come on, it wouldn't kill you to spend the night with me, would it?)]
+			你被这突如其来的提议弄得有些措手不及，花了点时间来组织语言。还不等你答复，渡鸦哈比就得意洋洋地说道，[scarlett.speech(我喜欢在酣畅淋漓的性爱后悠闲地度过时光。如果你饿了，可以让女仆给我们带点食物。来嘛，和我共度一晚又不会要了你的命，不是吗？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX_LEAVE"><![CDATA[
 	<p>
-		Telling Scarlett that you have other pressing matters to attend to, you gather your things and get ready to leave. Propping herself up on one wing, the raven-harpy whines, [scarlett.speech(Fine... I guess if you've got other stuff that's more important than me, you can fuck off then...)]
+		你告知斯嘉丽你还有其他要紧事要做，然后收拾好东西准备离开。渡鸦哈比用一只翅膀支撑住自己，抱怨道，[scarlett.speech(行吧……要是你有比我还要紧的事情，你就滚蛋吧……)]
 	</p>
 	<p>
-		Despite her words, you surprisingly don't sense any malice in Scarlett's tone of voice, and so not having to worry about offending her, you gather up your things and prepare to leave. Before you're shown to the door by one of the apartment's harpy maids, Scarlett calls out, [scarlett.speech(Come back and visit again any time, [pc.name]!)]
+		你出乎意料于尽管她这么说，你也从她的语气中感受不到一丝恶意，因此你便不必担心冒犯到她，收拾好东西准备离开。在你被公寓里的一名哈比女仆带到门前时，斯嘉丽朝你喊道，[scarlett.speech(欢迎随时来玩，[pc.name]！)]
 	</p>
 	<p>
-		Telling the uncharacteristically-friendly harpy that you'll do just that, you swiftly exit Helena's apartment, before making use of the elevator to travel back up to her nest...
+		你告诉这只一反常态的哈比，你会这么做的。然后迅速离开海伦娜的房间，乘电梯回到她的巢穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX_SLEEP_OVER -->
 	
 	<htmlContent tag="AFTER_SCARLETT_SERVANT_FINAL_REWARD_SEX_SLEEP_OVER"><![CDATA[
 	<p>
-		After you've told Scarlett that of course you'll spend the night with her, she lets out a happy little exclamation and, rather curiously, suddenly starts pushing the edges of her duvet up against your body. As you start to move to slip under the covers and get comfortable, the raven-harpy snaps, [scarlett.speech(Stop fidgeting and stay still! I'm getting my bed ready!)]
+		你告诉斯嘉丽你当然会和她一起过夜。她兴奋地小声惊叹，然后很奇怪地把羽绒被的边缘推到你的身上。你钻进被窝刚刚感觉舒服一些，渡鸦哈比突然大叫，[scarlett.speech(别乱动！我正在准备床！)]
 	</p>
 	<p>
-		Not wanting to anger her, you do as Scarlett says and remain lying down on top of the covers. As the raven-harpy continues to push the edges of her fluffy duvet up all around you, you suddenly realise that she's forming a makeshift nest, with you in the very middle of it. Quickly finishing her task, Scarlett suddenly steps over the top of you, before perching down and sitting on you. Thankfully, she's far lighter than a human of an equivalent size would be, and as she spreads her wings out to cover your body, she sighs, [scarlett.speech(This is how I like to sleep... Just stay still, ok?)]
+		你为了不激怒她，如她所说躺在被子上面。渡鸦哈比继续将她蓬松的羽绒被边缘推到你的周围，你突然意识到你正在她搭的临时小巢中。斯嘉丽很快完成了工作。她突然跨过你的身体，坐到你身上。万幸，她比同体型的人类要轻得多。她展开翅膀覆盖你的身子，叹了口气，[scarlett.speech(我喜欢这样睡……保持安静，可以吗？)]
 	</p>
 	<p>
-		Scarlett's unusual sleeping arrangement turns out to be surprisingly comfortable, and you soon find yourself drifting off to sleep beneath the cover of her huge, black-feathered wings...
+		斯嘉丽特殊的睡眠安排出人意料地舒服，你很快就在她巨大的黑色羽毛翅膀的拢盖下睡着了……
 	</p>
 	<p>
-		The next thing you know, you're waking up the next morning in Scarlett's bed, and as you sit up and stretch your arms, you see that the raven-harpy is nowhere to be seen. A small, hastily-written note lying on a nearby bedside cabinet tells you that she had to leave early to help Helena with some business. With nothing else to be done here, you gather your things and swiftly exit Helena's apartment, before making use of the elevator to travel back up to her nest...
+		第二天早上，你在斯嘉丽的床上醒来，当你坐起来伸展双臂时，发现渡鸦哈比不见了踪影。旁边的床头柜上放着一张匆忙写就的小纸条，上面写着她不得不提前离开，去帮海伦娜处理一些事情。在这里没什么可做的，你收拾好东西，然后迅速离开海伦娜的公寓，乘电梯回到她的巢穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>20</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[sterility pill]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[sterility pills]]></namePlural>
-		<description><![CDATA[A small, blue pill, individually packaged in a foil and plastic wrapper. While the text printed on the foil identifies this pill as an 'Orally-Administered Reproduction Inhibitor', it's colloquially known as either a 'sterility pill' or 'slut pill', and temporarily reduces both fertility and virility when ingested.]]></description> 
+		<determiner><![CDATA[一颗]]></determiner>
+		<name><![CDATA[不育药]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[不育药]]></namePlural>
+		<description><![CDATA[一颗蓝色的小胶囊，单独包装在铝箔塑料包装中。铝箔纸上印有“口服生殖抑制剂”的字样，俗称“不育药”"或“荡妇药”，服用后可暂时降低生育力和生殖力。]]></description> 
 		
-		<useDescriptor>swallow</useDescriptor>
+		<useDescriptor><![CDATA[吞下]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -32,7 +32,7 @@
 			[##npc.removeStatusEffect(SE_VIXENS_VIRILITY)]
 			[##npc.removeStatusEffect(SE_BROODMOTHER_PILL)]
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				The little blue pill easily slides down [npc.namePos] throat, and after only a few moments [npc.she] [npc.verb(feel)] a cool throbbing sensation taking root deep within [npc.her] loins.
+				小蓝胶囊轻松地滑入[npc.namePos]喉咙，仅仅几秒钟后，[npc.she]感到一种凉爽的悸动感深深扎根在[npc.her]的腰部。
 			</p>
 		]]></applyEffects>
 		
@@ -45,10 +45,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the sterility pill out of its little foil wrapper, before quickly placing it in [npc.her] mouth and swallowing it down.
+		[npc.Name]从小小的箔纸包装中取出不育药，然后迅速将其放入口中并吞下。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the sterility pill out of its little foil wrapper, before bringing it up to [npc2.namePos] [npc2.lips], forcing it into [npc2.her] mouth, and making sure that [npc2.she] [npc2.verb(swallow)] it down.
+		[npc.Name]从小小的箔纸包装中取出不育药，然后把它送到[npc2.namePos]的[npc2.lips]处，强迫[npc2.she]吞入口中，并确保[npc2.she]将其咽下。
 		]]></otherUse>
 	</useDescriptions>
 

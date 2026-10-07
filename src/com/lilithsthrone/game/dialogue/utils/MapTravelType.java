@@ -16,9 +16,9 @@ import com.lilithsthrone.world.Cell;
  */
 public enum MapTravelType {
 
-	WALK_SAFE("Walk (safest)",
-			"Use the safest path to your destination.",
-			"Click once on the map to mark your desired end point, then click that end point again to travel there. You can queue up waypoints by holding shift while clicking.",
+	WALK_SAFE("步行 (最安全)",
+			"使用最安全的路径前往目的地。",
+			"在地图上点击，确认终点，然后再次点击前往那里。你可以通过按住shift键点击来规划路径点。",
 			PresetColour.GENERIC_MINOR_GOOD) {
 				@Override
 				public boolean isAvailable(Cell c, GameCharacter character) {
@@ -28,15 +28,15 @@ public enum MapTravelType {
 				@Override
 				public String getUnavailablilityDescription(Cell c, GameCharacter character) {
 					if(character.isCaptive()) {
-						return "You cannot use fast travel while you are a captive!";
+						return "当你是俘虏时你不能使用快速旅行！";
 					}
 					return "";
 				}
 			},
 	
-	WALK_DANGEROUS("Walk (fastest)",
-			"Use the fastest path to your destination.",
-			"Click once on the map to mark your desired end point, then click that end point again to travel there. You can queue up waypoints by holding shift while clicking.",
+	WALK_DANGEROUS("步行 (最快)",
+			"使用最快的路径前往目的地。",
+			"在地图上点击，确认终点，然后再次点击前往那里。你可以通过按住shift键点击来规划路径点。",
 			PresetColour.GENERIC_MINOR_BAD) {
 				@Override
 				public boolean isAvailable(Cell c, GameCharacter character) {
@@ -46,15 +46,15 @@ public enum MapTravelType {
 				@Override
 				public String getUnavailablilityDescription(Cell c, GameCharacter character) {
 					if(character.isCaptive()) {
-						return "You cannot use fast travel while you are a captive!";
+						return "当你是俘虏时你不能使用快速旅行！";
 					}
 					return "";
 				}
 			},
 	
-	FLYING("Fly",
-			"Fly to your destination.",
-			"Click once on the map to mark your desired end point, then click that end point again to travel there.",
+	FLYING("飞行",
+			"飞往目的地。",
+			"在地图上点击一次标记你的目的地，点击第二次则会前往那里。",
 			PresetColour.SPELL_SCHOOL_AIR) {
 				@Override
 				public boolean isAvailable(Cell c, GameCharacter character) {
@@ -64,21 +64,21 @@ public enum MapTravelType {
 				@Override
 				public String getUnavailablilityDescription(Cell c, GameCharacter character) {
 					if(character.isCaptive()) {
-						return "You cannot use fast travel while you are a captive!";
+						return "当你是俘虏时你不能使用快速旅行！";
 					}
 					if(!character.getWorldLocation().isFlightEnabled()) {
-						return "You cannot fly in this area!";
+						return "你不能在这个区域飞行！";
 					}
 					if(!character.isAbleToFly()) {
-						return "You are not able to fly!";
+						return "你还不能飞行！";
 					}
-					return "Not all of your companions are able to fly!";
+					return "不是所有你的同伴都能飞行！";
 				}
 			},
 	
-	TELEPORT("Teleport",
-			"Teleport to your destination.",
-			"Click once on the map to mark your desired end point, then click that end point again to travel there.",
+	TELEPORT("传送",
+			"传送前往目的地。",
+			"在地图上点击一次标记你的目的地，点击第二次则会前往那里。",
 			PresetColour.SPELL_SCHOOL_ARCANE) {
 				@Override
 				public boolean isAvailable(Cell c, GameCharacter character) {
@@ -99,21 +99,21 @@ public enum MapTravelType {
 				@Override
 				public String getUnavailablilityDescription(Cell c, GameCharacter character) {
 					if(character.isCaptive()) {
-						return "You cannot use fast travel while you are a captive!";
+						return "当你是俘虏时你不能使用快速旅行！";
 					}
 					if(!character.getWorldLocation().getTeleportPermissions().isOutgoing()) {
-						return "You cannot teleport out of the area '"+character.getWorldLocation().getName()+"'!";
+						return "你无法传送出区域'"+character.getWorldLocation().getName()+"'这个区域！";
 					}
 					if(c!=null && !c.getType().getTeleportPermissions().isIncoming()) {
-						return "You cannot teleport into the area '"+c.getType().getName()+"'!";
+						return "你无法传送进区域'"+c.getType().getName()+"'！";
 					}
 					if(c!=null && !c.getPlace().getPlaceType().getTeleportPermissions().isIncoming()) {
-						return "You cannot teleport into the tile '"+c.getPlace().getName()+"'!";
+						return "你无法传送进地块“"+c.getPlace().getName()+"”！";
 					}
 					if(!character.isAbleToTeleport()) {
 						return character.getUnableToTeleportDescription();
 					}
-					return "You require at least "+Spell.TELEPORT.getModifiedCost(character)+" aura to cast this spell!";
+					return "施法至少需要"+Spell.TELEPORT.getModifiedCost(character)+"灵气！";
 				}
 			};
 	

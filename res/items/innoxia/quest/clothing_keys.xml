@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>0</value> 
-		<determiner><![CDATA[a collection of]]></determiner>
-		<name><![CDATA[clothing keys]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[clothing keys]]></namePlural>
-		<description><![CDATA[A collection of small keys, each of which unlocks an item of clothing...]]></description> 
+		<determiner><![CDATA[一串]]></determiner>
+		<name><![CDATA[服装钥匙]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[服装钥匙]]></namePlural>
+		<description><![CDATA[一串小钥匙，每把都可以解锁一件衣物……]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,12 +23,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Tracks what clothing keys you currently own]]></line>
+			<line><![CDATA[记录你目前拥有的服装钥匙。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			These are the keys that you currently own which allow you to unlock sealed items of clothing without having to pay the essence cost of removal:
+			这些是你目前拥有的钥匙，可以用于打开衣物的封印，而无需支付移除所需的精华费用：
 			<br/>
 			[#pc.getFormattedUnlockKeys()]
 		</p>
@@ -40,10 +40,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at [npc.her] keys...
+		[npc.Name]仔细观察这串钥匙……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off [npc.her] keys to [npc2.name]...
+		[npc.Name]向[npc2.name]展示[npc.her]的钥匙……
 		]]></otherUse>
 	</useDescriptions>
 

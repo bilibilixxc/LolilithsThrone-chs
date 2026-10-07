@@ -77,9 +77,9 @@ public class Kazik extends NPC {
 	}
 	
 	public Kazik(boolean isImported) {
-		super(isImported, new NameTriplet("Kazik"), "Malinowski",
-				"Kazik owns and runs the jewellery store 'Golden Treasures' in Elis's Farmer's market."
-						+ " He's notable for the fact that he's a proficient arcane user, despite not having any racial affiliation for using the arcane.",
+		super(isImported, new NameTriplet("卡济克"), "马林诺夫斯基",
+				"卡济克在伊利斯农贸市场拥有并经营着一家名为“黄金宝藏”的珠宝店。"
+						+ "他的特点是精通奥术，尽管他的种族属性没有关于使用奥术的属性加成。",
 				27, Month.NOVEMBER, 11,
 				30,
 				Gender.M_P_MALE, Subspecies.getSubspeciesFromId("dsg_ferret_subspecies_ferret"), RaceStage.GREATER,
@@ -87,7 +87,7 @@ public class Kazik extends NPC {
 				WorldType.getWorldTypeFromId("innoxia_fields_elis_market"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_market_trinkets"),
 				true);
 
-		this.setGenericName("handsome ferret-boy");
+		this.setGenericName("帅气的貂男");
 		
 		if(!isImported) {
 			dailyUpdate();

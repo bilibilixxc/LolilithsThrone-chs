@@ -87,7 +87,7 @@ public class Population {
 		StringBuilder sb = new StringBuilder();
 		
 		if(includeDeterminer) {
-			sb.append(getDensity().getName()+" ");
+			sb.append(getDensity().getName()+"");
 		}
 		
 		if(isPluralPopulation()) {

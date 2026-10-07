@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Bathroom]]></name>
-	<tooltipDescription><![CDATA[This bathroom is quite small, and holds only a toilet and sink.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the bathroom at Angelixx's apartment]]></virginityLossDescription>
+	<name><![CDATA[浴室]]></name>
+	<tooltipDescription><![CDATA[这个浴室相当小，仅容纳一座马桶和一个洗手池。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在安吉莉克丝公寓的浴室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

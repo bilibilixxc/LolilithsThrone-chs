@@ -68,9 +68,9 @@ public class Oglix extends NPC {
 	}
 	
 	public Oglix(boolean isImported) {
-		super(isImported, new NameTriplet("Oglix"), "Lunettemartu",
-				"The owner of the tavern, 'The Crossed Blades', Oglix's green skin, bulging muscles, and considerable height almost make her look more like some kind of fantasy orc than a succubus."
-						+ " Her size, strength, and considerable arcane abilities make her respected and feared by even the toughest of thugs to be found in Elis.",
+		super(isImported, new NameTriplet("奥格利克斯"), "露内特马尔图",
+				"作为酒馆“十字利刃”的老板，奥格利克斯那绿色的皮肤，隆起的肌肉和相当高挑的身高让她看起来更像是某种幻想中的兽人，而不是魅魔。"
+						+ "她的体型，力量和强大的奥术能力使她受到伊利斯最强悍的暴徒的尊敬和畏惧。",
 				48, Month.AUGUST, 9,
 				35, Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.GREATER,
 				new CharacterInventory(false, 30),
@@ -376,8 +376,8 @@ public class Oglix extends NPC {
 	
 	public void initElemental() {
 		Elemental elemental = this.getElemental();
-		elemental.setName("Golix");
-		elemental.setSurname("Oglixkamu");
+		elemental.setName("戈利克斯");
+		elemental.setSurname("奥格里克斯卡姆");
 		
 		elemental.clearPersonalityTraits();
 		elemental.addPersonalityTrait(PersonalityTrait.BRAVE);
@@ -466,7 +466,7 @@ public class Oglix extends NPC {
 			bitch1.unequipAllClothingIntoVoid(true, true);
 			bitch1.equipClothingFromNowhere(Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_milking_breast_pumps"), PresetColour.CLOTHING_BROWN_DARK, false), InventorySlot.NIPPLE, true, bitch1);
 			bitch1.equipClothingFromNowhere(Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_torsoOver_beer_barrel"), false), true, bitch1);
-			bitch1.setGenericName("beer-bitch");
+			bitch1.setGenericName("奶啤妓");
 			try {
 				Main.game.addNPC(bitch1, false, true);
 				this.addSlave(bitch1);
@@ -552,7 +552,7 @@ public class Oglix extends NPC {
 		return Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_OGLIX_BEER_BARRELS) && getBeerBitches().size()<5;
 	}
 
-	private String[] beerBitchNames = new String[] {"beer-slut", "beer-cunt", "beer-whore", "beer-tits"};
+	private String[] beerBitchNames = new String[] {"啤酒姬", "奶啤姬", "啤酒妓", "啤酒奶子"};
 	
 	public void addBeerBitch(NPC bitch) {
 		bitch.setLocation(WorldType.getWorldTypeFromId("innoxia_fields_elis_tavern_alley"),

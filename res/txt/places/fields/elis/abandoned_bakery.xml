@@ -1,298 +1,298 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- ########## ENFORCER MISSION DIALOGUES: ########## -->
 
 	<htmlContent tag="MISSION_START"><![CDATA[
 	<p>
-		[pc.Stepping] out of the room, you and Ghost follow Hammer as he unlocks a door on your right and leads you into another corridor. A second door is unlocked, and then the three of you are standing outside in a narrow alley behind the Enforcer station.
+		你[pc.stepping]出房间，和幽灵跟在锤子身后，他打开了你右边的一扇门，带你进入另一条走廊。然后又打开一扇门，最后你们三人就站在了执法局后面的窄巷里。
 	</p>
 	<p>
-		[hammer.speech(It's quicker to get to the hideout this way,)] Hammer states as he removes a padlock from a barbed-wire gate at the end of the alley. Locking it behind you, he adds, [hammer.speech(We won't be seen by as many of the gang's lookouts by going this way as well.)]
+		[hammer.speech(这样去藏身处比较快，)]锤子一边说着一边从巷子尽头的铁丝网门上取下一把挂锁。在你身后锁上，然后继续说，[hammer.speech(我们走这条路也不会被帮派的哨兵看到。)]
 	</p>
 	<p>
-		Although the alleyways which you subsequently find yourself travelling through appear to be deserted at first glance, you soon spot a couple of shady-looking figures keeping watch from the shadows. Holding Hammer's hand and leaning into him to make it appear as though the two of them are a couple, Ghost lets out a surprisingly youthful giggle and teases her partner, [ghost.speech(Looking forward to having some fun tonight?)]
+		虽然你随后穿过的小巷看起来十分冷清，但你很快就发现了一对靠在一起的人影在暗处守望。幽灵牵着锤子的手，靠在他身上，像是一对情侣，她像年轻人一样发出了令人惊讶的傻笑，逗弄着她的同伴，[ghost.speech(期待今晚玩得开心吗？)]
 	</p>
 	<p>
-		Hammer pulls his cap down further over his eyes and lets out a deep grunt. The lookouts seem to have been fooled by the show Ghost has put on, for the three of you arrive at the Enforcer's hideout without causing any alarm to be raised.
+		锤子把帽子往下拉了拉，遮住眼睛，发出一声低沉的咕哝声。放哨的人似乎被幽灵的表演骗过了，因为你们三人来到执法者的藏身处，却没有引起任何警报。
 	</p>
 	<p>
-		Their hideout takes the form of a derelict building, and the Enforcers have led you to a rotten, graffiti-covered door situated to its rear. Following the two of them inside, you see that the staircase has collapsed and several large holes have been smashed in the walls. Revealing why this building was chosen as their hideout, Ghost states, [ghost.speech(The gang's HQ is across the street from this building. We've been observing them from here for a few weeks now; take a look through that hole over there. Oh, and stay away from the windows.)]
+		他们的藏身之处是一栋废弃的建筑，执法者带你来到建筑后面一扇满是涂鸦的破门前。你跟着他们进去，看见楼梯已经倒塌，墙壁上也被砸出了几个大洞。幽灵向你解释为什么要在这里藏身：[ghost.speech(帮派总部就在这栋建筑的街对面。我们在这里盯着他们好几周了，你可以去那个洞口看看。哦，离窗户远点。)]
 	</p>
 	<p>
-		Peeking through the hole which Ghost has pointed out, you find yourself looking out onto an unusually wide alleyway. Directly opposite from where you're positioned, you can quite clearly see the entire frontage of an old, abandoned bakery. A couple of tall, muscular figures are lighting up a couple of cigarettes outside the entrance. At first you assume that they're horse-boys, but as the orange glow from their lighter catches in their red and orange eyes, you realise that they're half-horse, half-demon nightmares. As they talk, one of them pumps his hips and makes some kind of joke, to which the other laughs and gives his companion a high-five. With their cigarettes still lit, they open the bakery's front door and disappear into the building.
+		你顺着幽灵所指的破洞望去，映入眼帘的是一条格外宽阔的巷子。在你所在的地方，你能清晰地看见一家废弃的老面包店，两个人高马大的壮汉正站在入口点烟。起初你以为他们是马男，但当打火机发出的橙色光芒映入他们红色和橙色的眼睛时，你才意识到他们是半马半恶魔梦魇。他们一个扭着屁股开玩笑，而另一个在放声大笑，与同伴击掌相庆。他们点上了烟，打开面包店的前门，消失在店里。
 	</p>
 	<p>
-		Hammer nods as you report what you've just seen, before saying, [hammer.speech(It's too early for Angelixx to show up yet; she usually doesn't make an appearance until around midnight. Those nightmares always arrive an hour or two before she does, though, so perhaps she'll be early tonight. We'd better get geared up right away.)]
+		当你报告刚才看到的情况时，锤子点了点头，说道：[hammer.speech(安吉莉克丝现在露面还为时过早，她通常要到午夜才会出现。不过，那些梦魇总是比她早到一两个小时，所以她今晚也许会早到。我们最好现在就做好准备。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_GEARED_UP"><![CDATA[
 	<p>
-		Pulling up a couple of loose floorboards in one corner of the room, Hammer lifts out a couple of large, black duffel bags. He and Ghost then quickly strip out of their civilian clothing, before pulling Enforcer gear out of the bags and putting it on.
+		锤子拉起房间角落边几块松动的地板，拿出几个黑色大行李袋。然后，他和幽灵迅速脱掉便装，再从包里拿出执法者装备穿上。
 	</p>
 	<p>
-		[ghost.speech(I'd rather be wearing trainers than these,)] Ghost complains as she pulls on a pair of sturdy-looking boots. As she does up the laces, she adds, [ghost.speech(They make my heels ache and it's hard for me to move silently in them...)]
+		[ghost.speech(我宁愿穿运动鞋，也不想穿这双鞋，)]幽灵抱怨着穿上一双看起来很结实的靴子。她一边系鞋带，一边补充，[ghost.speech(它们让我的脚后跟痛，穿着它们我很难安静地移动……)]
 	</p>
 	<p>
-		[hammer.speech(I don't recall you complaining about them when they saved your feet from those caltrops a couple of months back,)] Hammer grunts as he pulls on a heavy plate carrier and sets about doing up the straps.
+		[hammer.speech(几个月前它们把你的脚从那些铁蒺藜里救出来的时候我可没见你抱怨过它们，)]锤子嘟哝着套进重型插板防弹衣，开始整理侧围。
 	</p>
 	<p>
-		A couple of minutes later and the two Enforcers are fully kitted out in military-style gear. Ghost's setup look to be a little lighter than Hammer's, but they're both wearing boots, trousers, battle belts, and plate carriers. Fixing a dagger to one side of her belt, Ghost attaches a holster to the other, before sliding an old, worn-looking revolver into it. Hammer's choice of weaponry is a little less subtle, as he lifts a huge, 4-gauge shotgun from out of the space beneath the floorboards.
+		几分钟后，两名执法者就穿戴整齐，整装待发。幽灵的装备看起来比锤子的轻一些，但他们都穿上了靴子、裤子、战斗腰带和防弹衣。幽灵在腰带的一侧固定了一把匕首，在另一侧固定了一个枪套，然后将一把看起来很破旧的转轮手枪塞了进去。锤子选择的武器就没那么巧妙了，他从地板下面搬出一把巨大的四号口径霰弹枪。
 	</p>
 	<p>
-		[hammer.speech(Now we wait for the succubus to show up,)] Hammer states, before sitting on an upturned metal bucket and saying to you, [hammer.speech(Got any questions while we wait?)]
+		[hammer.speech(现在我们就等着魅魔出现了，)]锤子表示，然后坐在一个翻起的金属桶上对你说，[hammer.speech(在我们等人的时间里，还有什么问题吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_TALK_WEAPONS"><![CDATA[
 	<p>
-		Looking at the shotgun that Hammer has leant up against the wall beside him, you ask him if that's his normal choice of weapon.
+		你看着锤子靠在墙边的霰弹枪，问他这是不是他最常使用的武器。
 	</p>
 	<p>
-		[hammer.speech(Only on ops like this, where we can't risk being recognised,)] Hammer replies, [hammer.speech(This thing's a bit of relic; they were phased out of Enforcer service in the late eighties. They fire tear gas grenades, which are good enough, but the modern pepper grenade launcher is far more effective. See this marking on the side?)]
+		[hammer.speech(在这样的行动中，我们不能冒着被认出来的风险，)]锤子回答，[hammer.speech(这东西算古董了；八十年代执法者就淘汰了这种武器。它能发射催泪瓦斯弹，效果不错，但现代的胡椒榴弹发射器要更有效得多。看到侧面的标记了吗？)]
 	</p>
 	#IF(pc.hasWeaponType(WEAPON_dsg_hlf_weap_gbshotgun, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbsmg, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pboltrifle, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbrevolver, true))
 		<p>
 			#IF(pc.hasWeaponTypeEquipped(WEAPON_dsg_hlf_weap_gbshotgun))
-				Showing Hammer your own shotgun, which is exactly the same as his, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的霰弹枪，这把枪和他的完全一样，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ELSEIF(pc.hasWeaponTypeEquipped(WEAPON_dsg_hlf_weap_pbsmg))
-				Showing Hammer your pepperball submachine gun, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的胡椒弹冲锋枪，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ELSEIF(pc.hasWeaponTypeEquipped(WEAPON_dsg_hlf_weap_pboltrifle))
-				Showing Hammer your pepperball bolt-action rifle, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的栓动步枪，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ELSEIF(pc.hasWeaponTypeEquipped(WEAPON_dsg_hlf_weap_pbrevolver))
-				Showing Hammer your pepperball revolver, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的胡椒弹转轮手枪，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ELSEIF(pc.hasWeaponType(WEAPON_dsg_hlf_weap_gbshotgun, false))
-				Showing Hammer your own shotgun, which is exactly the same as his, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的霰弹枪，这把枪和他的完全一样，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ELSEIF(pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbsmg, false))
-				Showing Hammer your pepperball submachine gun, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的胡椒弹冲锋枪，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ELSEIF(pc.hasWeaponType(WEAPON_dsg_hlf_weap_pboltrifle, false))
-				Showing Hammer your pepperball bolt-action rifle, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的胡椒弹栓动步枪，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ELSEIF(pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbrevolver, false))
-				Showing Hammer your pepperball revolver, you compare the markings and see that they're identical. Letting out an amused grunt, the wolf-boy asks, [hammer.speech(You ever wonder what that symbol means?)]
+				你向锤子展示自己的胡椒弹转轮手枪，你比较了一下标记，发现它们是完全相同的。狼男好笑地咕哝了一声，问道，[hammer.speech(你有没有想过这个标记是什么意思？)]
 			#ENDIF
 		</p>
 		<p>
-			Taking a closer look at both your and Hammer's weapons, you see that they each bear an Enforcer's five-pointed star symbol, both of which have been scratched out. A new marking has been carved into each weapon, which both look like a striking arrow within a circle.
+			你仔细观察着你和锤子的武器，发现它们都有一个执法者的五角星标记，但这两个标记都被刮花了。每件武器上都刻着一个新的标记，看起来像是一个内有醒目箭头的圆圈。
 		</p>
 	#ELSE
 		<p>
-			You take a closer look at the side of the shotgun as Hammer holds it towards you. The Enforcer's five-pointed star symbol has been scratched out, and beside it a striking arrow within a circle has been carved into the metal.
+			锤子把霰弹枪举向你，你仔细看了看霰弹枪的侧机匣。执法者的五角星标记已被刮掉，旁边还刻着一个内有醒目箭头的圆圈标记。
 		</p>
 	#ENDIF
 	<p>
-		[hammer.speech(That's one of the symbols the HLF used,)] the wolf-boy reveals, [hammer.speech(The 'Human Liberation Front' got their hands on a lot of Enforcer gear back in the Fifth Human Rebellion. This one was used against us until the owner's jaw felt my fist. It went 'missing' from the evidence room many years ago, so it can't be traced back to us.)]
+		[hammer.speech(那是HLF的标志之一，)]狼男透露，[hammer.speech(‘人类解放阵线’在第五次人类叛乱中得到了很多执法者装备。这件装备被用来对付我们，直到装备主人的下巴被我的拳头打烂。多年前，它在证物室‘失踪’了，所以无法追溯到我们身上。)]
 	</p>
 	<p>
-		[ghost.speech(I prefer a more subtle approach,)] Ghost says as she unsheathes her dagger and shows off its wicked, poison-enchanted ethereal blade. Patting the revolver at her hip, she adds, [ghost.speech(When I can't get up close and personal, this does the trick. Like Hammer's shotgun, this was in the hands of the HLF; I picked it up off a particularly stubborn human on Green Grass Hill...)]
+		[ghost.speech(我更喜欢隐蔽一点的方法。)]幽灵一边说着，一边拔出匕首，炫耀着那邪恶的、附有毒药的奥术之刃。她拍了拍腰间的左轮手枪，补充道，[ghost.speech(当我不能近距离接触时，这把枪就有用了。和锤子的霰弹枪一样，这把枪也曾在HLF手中；我在绿草山地上从一个特别顽固的人类身上‘捡到’的……)]
 	</p>
 	<p>
-		[hammer.speech(We never recovered even half of the weapons that the HLF had,)] Hammer says,
+		[hammer.speech(我们甚至连HLF所拥有武器的一半都没找到，)]锤子说，
 		#IF(pc.hasWeaponType(WEAPON_dsg_hlf_weap_gbshotgun, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbsmg, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pboltrifle, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbrevolver, true))
-			 [hammer.speech(So I'm not particularly surprised to see that you've got one. There are thousands of these things in the hands of gangs all across the realm, so us using them tonight won't identify us as Enforcers. Oh, and don't worry about us confiscating that from you; I'm just glad to see that it's being used on the side of good. Better that than rotting in some evidence locker for decades...)]
+			[hammer.speech(所以我并不怎么惊讶于你也有一把武器。这些东西在王国各地的帮派手中有成千上万把，所以我们今晚使用这些武器并不能表明我们是执法者。哦，别担心我们会没收你的东西；我很高兴看到它被用来做好事。这总比在证据柜里生锈几十年要好……)]
 		#ELSE
-			 [hammer.speech(Thousands are thought to be in the hands of gangs all across the realm, so us using them tonight won't identify us as Enforcers.)]
+			[hammer.speech(这些东西在王国各地的帮派手中有成千上万把，所以我们今晚使用这些武器并不能表明我们是执法者。)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasWeaponType(WEAPON_dsg_hlf_weap_gbshotgun, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbsmg, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pboltrifle, true) || pc.hasWeaponType(WEAPON_dsg_hlf_weap_pbrevolver, true))
-			You point out that while your weapons might not identify you as Enforcers, both Hammer and Ghost are wearing what's clearly Enforcer gear. Surely that'll be enough to identify them to the gang members.
+			你指出虽然从你的武器来看无法将你当成执法者，但锤子和幽灵都明显穿着执法者的装备。这肯定足以让帮派成员认出他们了。
 		#ELSE
-			You point out that their weapons might not, but they're wearing what's clearly Enforcer gear. Surely that'll be enough to identify them to the gang members.
+			你指出虽然从武器上认不出来，但他们明显穿着执法者的装备。这肯定足以让帮派成员认出他们了。
 		#ENDIF
 	</p>
 	<p>
-		[ghost.speech(All the serious gangs are wearing SWORD gear,)] Ghost replies with a weary smirk on her face. [ghost.speech(Too many Enforcer quartermasters over the years have become very wealthy while marking down an abnormally high amount of equipment as being 'destroyed in the line of duty'. The gang we're going to be dealing with tonight will think that we're a serious rival operation from Dominion.)]
+		[ghost.speech(所有危险的帮派都穿着SWORD装备，)]幽灵带着疲惫的笑意回答，[ghost.speech(这些年来，有太多执法者的军需官在变得非常富有的同时，还将特别多的装备标注为‘因公务损坏’。我们今晚要对付的那帮人会认为我们是来自御城区的危险敌对帮派的行动。)]
 	</p>
 	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_WES))
 		<p>
-			[hammer.speech(I heard some fox in 1st Battalion put a stop to that in Dominion. Was a local boy from around here too. Good on him,)] Hammer says. Recognising the fact that he's talking about Wes, you tell the Enforcers that you helped the fox-boy he's talking about. Hammer gives an approving nod in response, before grunting, [hammer.speech(Good to hear that there's still at least one guy who's doing something about the corruption in Dominion.)]
+			[hammer.speech(我听说第一营的某个狐男在御城区阻止了这种行为。那小伙子也是在这附近出生的。他做的很好，)]锤子说。你意识到他是在说韦斯，便告诉执法者，是你帮助了他所说的那个狐男。锤子朝你赞赏地点了点头，然后咕哝了一声，[hammer.speech(很高兴能听到还有不止一个人在为对抗御城区中的堕落而采取行动。)]
 		</p>
 	#ENDIF
 	<p>
-		Thinking that it must be challenging to come up against gangs who have the same kit as them, you ask the Enforcers if the proliferation of SWORD equipment to gangs makes their job a lot harder.
+		你认为与拥有相同装备的帮派对抗一定很有挑战性，于是问执法者，SWORD装备在帮派中泛滥是否让他们的工作变得更加困难。
 	</p>
 	<p>
-		[hammer.speech(Hardware is one thing, training and experience are another,)] Hammer replies, [hammer.speech(Besides, the vast majority of gangs are motivated by money, which doesn't make them fight as hard as you might think.)]
+		[hammer.speech(硬件是一回事，训练和经验又是另一回事，)]锤子回答道，[hammer.speech(此外，帮派的人绝大多数都是拿钱办事，没有你想的那样拼命。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_TALK_GANG"><![CDATA[
 	<p>
-		Thinking that it would be best to know what you're likely to come up against once inside, you ask the Enforcers what to expect from the gang in terms of combat capabilities.
+		你认为最好先了解一下进去后可能遇到的情况，于是向执法者询问这伙人的战斗力如何。
 	</p>
 	<p>
-		[ghost.speech(They're just a bunch of amateurs,)] Ghost dismissively states, [ghost.speech(The only ones who might be more than that are those two nightmare you saw earlier, as well as Angelixx herself.)]
+		[ghost.speech(他们只是一群外行，)]幽灵不屑一顾地说，[ghost.speech(唯一比它们厉害的可能就只有你之前看到的那两个梦魇，以及安吉莉克丝本人。)]
 	</p>
 	<p>
-		[hammer.speech(The succubus is meant to be a coward, though,)] Hammer says, [hammer.speech(and those two bodyguards of hers aren't anything to be concerned about.)]
+		[hammer.speech(不过，魅魔注定是个懦夫，)]锤子说，[hammer.speech(还有她的那两个保镖也没什么好担心的。)]
 	</p>
 	<p>
-		[ghost.speech(True, there shouldn't be any difficulty,)] Ghost says, before turning to smile at you and say, [ghost.speech(Remember, you're not here to fight, you're here to get Lovienne off our backs if we're recognised. Leave the violence to us.)]
+		[ghost.speech(没错，应该不会有什么困难，)]幽灵回应，然后转身对你笑着继续说，[ghost.speech(记住，你不是来战斗的，如果我们被认出来的话，你要负责解决洛维耶纳，暴力就交给我们吧。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_TALK_SUCCUBUS"><![CDATA[
 	<p>
-		Wanting to know how they plan on dealing with Angelixx, you ask the two Enforcers what their plan is for when you encounter the succubus.
+		你想知道他们打算如何对付安吉莉克丝，于是问两个执法者，当你遇到魅魔时，他们有什么计划。
 	</p>
 	<p>
-		[hammer.speech(I'll shoot her,)] Hammer grunts, giving his mean-looking shotgun a pat as he does so. [hammer.speech(If that isn't enough, then I'll show her some SWORD close combat techniques.)]
+		[hammer.speech(我会朝她开火，)]锤子咕哝着，一边拍了拍他那把看起来火力充足的霰弹枪。[hammer.speech(如果这还不够，那我还能给她展示一些SWORD的擒拿格斗技巧)]
 	</p>
 	<p>
-		[ghost.speech(Leave the close combat to me,)] Ghost says with a sly smile on her face, before replying to your initial question, [ghost.speech(Angelixx won't be an issue; even if she turns out to not be a complete coward, we've taken down hundreds of demons before. She won't be an issue.)]
+		[ghost.speech(近身搏斗还是让我来吧，)]幽灵脸上带着狡猾的笑容说，然后回答你最初的问题，[ghost.speech(安吉莉克丝不是个问题；即使她不是个懦夫，我们以前也干掉过上百的恶魔。她不会是个问题。)]
 	</p>
 	<p>
-		[hammer.speech(Just don't let her talk too much,)] Hammer grunts, [hammer.speech(If she can't fight, she's bound to have some tricks up her sleeve. I'd wager that she's using telepathy or some other kind of arcane spell to control her gang. Don't let her get into your head.)]
+		[hammer.speech(别让她说太多就行，)]锤子咕哝道，[hammer.speech(如果她不会战斗，那她一定有什么诡计。我敢说，她一定在使用心灵感应或其他的法术来控制她的帮派。别让她控制你的思想。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_TALK_BACKUP"><![CDATA[
 	<p>
-		Wondering if the three of you are going to be enough to handle an entire gang, you ask Hammer and Ghost if they're going to call for the other SWORD Enforcers as soon as they start the operation.
+		你不知道你们三个人是否足以对付一整个帮派，于是问锤子和幽灵，他们是否打算一开始行动就召集其他SWORD。
 	</p>
 	<p>
-		[hammer.speech(I'll call for them if they're needed, not before,)] Hammer replies, [hammer.speech(The two of us will be more than enough to deal with a bunch of amateurs.)]
+		[hammer.speech(在之前，如果需要我会叫他们来，)]锤子回答，[hammer.speech(不过现在，我们两个对付一群外行绰绰有余。)]
 	</p>
 	<p>
-		[ghost.speech(It's probably for the best that the gang's increased vigilance forced us into leaving most of the squad behind,)] Ghost adds, [ghost.speech(If we were to start the op with everyone present then Angelixx might get spooked and teleport away before we get a chance to deal with her.)]
+		[ghost.speech(也许这样最好，帮派提高了警惕，我们不得不让大部分队员待命，)]幽灵补充，[ghost.speech(如果我们所有人都开始行动，那么安吉莉克丝可能会被吓到，在我们有机会对付她之前就传送走了。)]
 	</p>
 	<p>
-		[hammer.speech(Good point,)] Hammer grunts, before holding up a small, dark-purple orb for you to see and explaining, [hammer.speech(If the gang turns out to be more competent than we're expecting then I'll activate this resonance stone. Its counterpart is back at the Enforcer station, and if it's activated then the rest of the squad will be here within a couple of minutes.)]
+		[hammer.speech(说得好，)]锤子哼了一声，然后举起一个暗紫色的小球让你看，并解释， [hammer.speech(如果这伙人比我们预想的要厉害，我就会启动这块回声石，另一块在执法局，如果它被激活，小队的其他人就会在几分钟内赶到。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_TALK_HISTORY"><![CDATA[
 	<p>
-		Curious to find out what it's like to be a member of SWORD, you ask Hammer and Ghost what sort of duties they're expected to perform.
+		你想知道SWORD的成员是什么样的，于是问锤子和幽灵他们要执行什么样的任务。
 	</p>
 	<p>
-		[hammer.speech(The small-time criminals are for the Patrol officers, which leaves all the big boys and girls for us in SWORD to deal with,)] Hammer says, [hammer.speech(We go after organised crime, serious gangs, and criminals who are simply too dangerous or strong for the Patrol guys and gals to deal with.)]
+		[hammer.speech(小混混有巡逻队就够对付了，剩下的大人物都留给我们SWORD。)]锤子说，[hammer.speech(我们主要针对有组织犯罪的危险帮派，以及对巡逻队来说太危险或太强大的罪犯。)]
 	</p>
 	<p>
-		[ghost.speech(We're not just the muscle; we do a lot of the investigative work as well,)] Ghost adds, [ghost.speech(Of course, ORICL often has targets which we need to deal with, but most of the time we're gathering our own intelligence to act upon.)]
+		[ghost.speech(我们不只是执行任务，我们也做了很多调查工作。)]幽灵补充，[ghost.speech(当然，ORICL也会有需要我们处理的目标，不过大多数时候，我们都是自己收集情报并行动。)]
 	</p>
 	<p>
-		Wondering how often they go out on missions like this one, you ask the two Enforcers if they're behind a desk more often than not.
+		你想知道他们多长时间出去执行一次这样的任务，就问这两个执法者，他们是不是经常呆在办公桌后面。
 	</p>
 	<p>
-		[ghost.speech(Well, we do carry out a lot of ops, but most of our time is in the office or out on the streets gathering intel or pursuing different leads,)] Ghost replies, [ghost.speech(Our unit leans more into carrying out ops like this one, although I guess tonight's a special one; we normally number at least eight and use modern SWORD gear. Other units are more focused on solving serious crime, and others are bit too close to ORICL for comfort...)]
+		[ghost.speech(好吧，我们确实执行了很多任务，但我们大部分时间都在办公室或街上收集情报或追查线索，)]幽灵回答道，[ghost.speech(我们的队伍更倾向于执行像这样的行动，虽然我想今晚的行动很特别；我们通常至少有八个人，使用现代化的SWORD装备。其他队伍则更专注于解决严重犯罪问题，还有一些队伍与ORICL关系太密切，让人感觉不舒服……)]
 	</p>
 	<p>
-		[hammer.speech(Snatching people off the streets for saying something bad about Lilith isn't what I signed up for,)] Hammer grunts, [hammer.speech(ORICL should do their own dirty work...)]
+		[hammer.speech(我可不想因为别人说了莉莉丝的坏话就把他们抓起来， )]锤子咕哝着，[hammer.speech(ORICL应该自己干脏活……)]
 	</p>
 	<p>
-		[ghost.speech(Our unit's all on the same page on that one,)] Ghost says, before taking another look through the hole in the wall and sighing, [ghost.speech(No sign of Angelixx yet...)]
+		[ghost.speech(我们队伍在这一点上是一致的，)]幽灵说着，然后透过墙上的洞看了一眼，叹了口气，[ghost.speech(还没有安吉莉克丝的踪迹……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_WAIT"><![CDATA[
 	<p>
-		You get as comfortable as the derelict building will allow and wait for the operation to start. Hammer and Ghost take turns at the hole in the wall, keeping watch for any sign of the succubus, Angelixx. Although the three of you make some occassional small talk, nothing much is said for the rest of the evening.
+		你们在这栋废弃的建筑里养精蓄锐，等待行动开始。锤子和幽灵轮流守在墙上的洞口，留意魅魔安吉莉克丝的踪迹。虽然你们三人偶尔会闲聊几句，但整个晚上都没说什么话。
 	</p>
 	<p>
-		[hammer.speech(It's almost midnight,)] Hammer eventually grunts after taking a look at his watch. Tutting to himself, he grumbles, [hammer.speech(Angelixx is normally here by now... Maybe she called off the meeting tonight?)]
+		[hammer.speech(都快到午夜了，)]锤子瞟了一眼手表，咕哝了一声。他自言自语地抱怨道：[hammer.speech(安吉莉克丝这个点一般都在这里了……难道她今晚的会议取消了？)]
 	</p>
 	<p>
-		[ghost.speech(No, the usual number of gang members have shown up,)] Ghost says from her position at the hole in the wall, before suddenly hissing, [ghost.speech(Shit! She's already inside! I just saw her through the bedroom window!)]
+		[ghost.speech(不，出现的帮派成员与平日数量一致，)]幽灵站在墙洞处说，突然低声叫起来：[ghost.speech(干！她已经进去了！我刚才透过卧室的窗户看到她了！)]
 	</p>
 	<p>
-		[hammer.speech(Fuck, she must have gone in through the back,)] Hammer grunts as he leaps to his feet, [hammer.speech(Every other time she's used the front door. Of course she'd choose this night to change her habits...)]
+		[hammer.speech(操，她肯定是从后门进来的，)]锤子一边咕哝着，一边跳了起来，[hammer.speech(她每一次都走前门。她当然可以选择今晚改变习惯……)]
 	</p>
 	<p>
-		Pulling on their balaclavas and strapping their ballistic helmets into place, Ghost and Hammer quickly check their weapons and turn to face you.
+		幽灵和锤子迅速戴好防弹头盔，检查武器无误后转身面对你。
 	</p>
 	<p>
-		[hammer.speech(I'm going in through the front, Ghost'll take the back. Which one of us do you want to stick with?)] Hammer asks as he picks up a sledgehammer which had been resting against the wall.
+		[hammer.speech(我从前面进去，幽灵从后面进去，你想跟谁？)]锤子一边问，一边拿起靠在墙边的大锤。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_HAMMER"><![CDATA[
 	<p>
-		Thinking that it would be safer to be with the large wolf-boy and his fearsome-looking shotgun, you tell Hammer that you'll go with him. Giving you a brief nod, he opens the door and rushes across the street, while Ghost slips off down an alleyway to the side of the bakery.
+		你觉得和大个子狼男以及他那把看起来很可怕的霰弹枪在一起会比较安全，于是你告诉锤子，你和他一起去。他向你点了点头，便打开门冲向街对面，而幽灵则顺着面包店一侧的小巷溜走了。
 	</p>
 	<p>
-		[hammer.speech(Stand back,)] the wolf-boy grunts as the two of you come to a halt beside the bakery's front door. Giving the wolf-boy some space, you watch as he lifts his sledgehammer and swings it at a point just beside the door's handle. The heavy mass of metal turns a huge chunk of weathered wood into a shower of splinters. The force of the blow completely shatters the lock and slams the door wide open in the process.
+		[hammer.speech(退后，)]当你们俩停在面包店前门边时，狼男嘟哝着。你给了狼男一些空间，看着他举起大锤，抡向门把手。沉重的金属块把风化的木板砸成了碎片。巨大的冲击力将门锁完全震碎，门也随之被砸开。
 	</p>
 	<p>
-		Having served its purpose, the wolf-boy tosses his sledgehammer aside and lifts up his shotgun. Giving you the briefest of nods, he rushes into the building...
+		破门后，狼男便把大锤扔到一边，举起霰弹枪。他向你点了点头，就冲进了建筑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_START_GHOST"><![CDATA[
 	<p>
-		Thinking that it would be better to rely on Ghost and her combination of wicked-looking dagger and revolver, you tell the otter-girl that you'll go with her. Giving you a brief nod, Hammer opens the door and rushes across the street to the bakery's front door, while Ghost motions for you to follow her and slips off down an alleyway to one side of the building.
+		你觉得还是跟着幽灵和她那把看起来很邪恶的匕首与转轮手枪的组合比较好，于是你告诉水獭女，你和她一起去。锤子向你点了点头，便打开门冲向街对面的面包店前门，而幽灵则示意你跟着她，然后溜到建筑一侧的小巷里。
 	</p>
 	<p>
-		[ghost.speech(Stay quiet,)] the otter-girl whispers as you catch up with her. Doing your best to move stealthily, you follow Ghost as she sneaks through the shadows and around the corner to the rear of the bakery. Just as with the front of the building, the gang has neglected to post a sentry, and so Ghost is able to get to the back door without issue. Producing a lockpick, she has the door open in seconds, and uses a hand signal to gesture for you to follow her inside.
+		[ghost.speech(保持安静。)]幽灵在你跟上她时低声说道。你尽力隐蔽行动，跟着幽灵偷偷穿过阴影，绕过拐角，来到面包店的后门。和前面的情况一样，这伙人也没有放哨，因此幽灵可以顺利到达后门。她拿出开锁器，几秒钟就把门打开了，并用手势示意你跟她进去。
 	</p>
 	<p>
-		Sliding her dagger out of its sheath, the otter-girl silently slips into the shadowy interior...
+		水獭女从刀鞘中拔出匕首，悄无声息地溜进了阴暗的室内……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_COMBAT_WON"><![CDATA[
 	<p>
-		The gang members collapse to the floor, utterly defeated.
+		帮派成员瘫倒在地，被打败了。
 		#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
-			 Quickly stepping forwards, Hammer kicks their weapons away, and with another couple of kicks he makes sure that they're not getting up any time soon. Turning to look at you, he grunts, [hammer.speech(They'd do the same to us. Come on, we need to keep moving.)]
+			锤子冲上前，一脚踢开他们的武器，又是几脚确保他们不会再站起来。然后他转过身看着你，嘟哝着，[hammer.speech(他们也会这么对我们的。走吧，我们得继续推进。)]
 		#ELSE
-			 Quickly darting forwards, Ghost kicks their weapons away, and with a couple of swift stabs with her arcane dagger she makes sure that they're well and truly drained of energy. Turning to look at you, she smirks and says, [ghost.speech(It's better than they deserve. Come on, we need to keep moving.)]
+			幽灵迅速上前几步，一脚踢开他们的武器，又用她的奥术匕首迅速捅了几下，确保他们的能量被彻底耗尽。她才转过身来看着你，冷笑着说， [ghost.speech(这比他们应得的好的多。走吧，我们得继续推进。)]
 		#ENDIF
 	</p>
 	<p>
-		Knowing that you need to find and beat Angelixx as quickly as possible, you do as
+		你知道需要尽快找到并打败安吉莉克丝，于是你
 		#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
-			 Hammer says and follow him
+			按照锤子说的，跟着他
 			#IF(flags.hasFlag(FLAG_innoxia_ghost_following))
-				 and Ghost
+				和幽灵
 			#ENDIF
-			 further into the building...
+			进入建筑……
 		#ELSE
-			 Ghost says and follow her further into the building...
+			按照幽灵说的，跟着她进入建筑……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_COMBAT_LOST"><![CDATA[
 	<p>
-		You can't bring yourself to fight any more and back away from the conflict.
+		你无力再战，避开冲突现场。
 		#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
-			 Thankfully, Hammer is more than enough to defeat the gang members, and after a couple of rounds from his shotgun his opponents have collapsed to the floor.
+			所幸，锤子打败帮派成员绰绰有余，霰弹枪打出几发子弹，对手就倒在了地上。
 		#ELSE
-			 Thankfully, Ghost is more than enough to defeat the gang members, and after a couple of rounds from her revolver her opponents have collapsed to the floor.
+			所幸，幽灵足以打败这些帮派成员，转轮手枪射出几发子弹，对手就倒在了地上。
 		#ENDIF
 		#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
-			 Quickly stepping forwards, the wolf-boy kicks their weapons away, and with another couple of kicks he makes sure that they're not getting up any time soon. Turning to look at you, he grunts, [hammer.speech(They'd do the same to us. Come on, we need to keep moving.)]
+			狼男快步上前，一脚踢开武器，又踢了几脚，确保他们不会再站起来。他转过身看着你，哼了一声，[hammer.speech(他们也会这么对我们的。走吧，我们得继续推进。)]
 		#ELSE
-			 Quickly darting forwards, the otter-girl kicks their weapons away, and with a couple of swift stabs with her arcane dagger she makes sure that they're well and truly drained of energy. Turning to look at you, she smirks and says, [ghost.speech(It's better than they deserve. Come on, we need to keep moving.)]
+			水獭女快速向前飞奔，一脚踢开武器，用奥术匕首迅速捅了几下，确保彻底耗尽他们的能量。她转过身来看着你，笑着说，[ghost.speech(真是便宜他们了。走吧，我们得继续推进。)]
 		#ENDIF
 	</p>
 	<p>
-		Knowing that you need to find and beat Angelixx as quickly as possible, you do as
+		你知道需要尽快找到并打败安吉莉克丝，于是你
 		#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
-			 Hammer says and follow him
+			按照锤子说的，跟着他
 			#IF(flags.hasFlag(FLAG_innoxia_ghost_following))
-				 and Ghost
+				和幽灵
 			#ENDIF
-			 further into the building...
+			进入建筑……
 		#ELSE
-			 Ghost says and follow her further into the building...
+			按照幽灵说的，跟着她进入建筑……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!--! ########## PLACE TYPE DIALOGUES: ########## -->
@@ -301,13 +301,13 @@
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		Turning a corner in the alleyways, you find yourself standing before the abandoned bakery which served as the headquarters for Angelixx's gang. The front door, having been destroyed by Hammer at the start of their raid, has been replaced by several sheets of plywood held together by rusty nails and old planks of wood. Although someone has taken the trouble to put up this makeshift barrier, the building looks to be completely deserted.
+		你转过小巷的一个拐角，站在一家废弃的面包店前，这里曾是安吉莉克丝帮派的总部。前门在突袭开始时被锤子摧毁了，取而代之的是几张用生锈的钉子和旧木板固定在一起的胶合板。虽然有人费了很大的劲搭起了这道临时屏障，但这栋建筑看起来已经完全荒废了。
 	</p>
 	<p>
-		Knowing that it would be far more trouble than it's worth to try and gain entry to the abandoned bakery, you [pc.walk] past the building and continue on your way through the alleyways of Elis...
+		你知道要进入这家废弃的面包店很麻烦，所以你[pc.walk]过这座建筑，继续行走在伊利斯的小巷……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- GROUND FLOOR DIALOGUE: -->
@@ -315,570 +315,570 @@
 	<htmlContent tag="BACK_DOOR"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_sword_mission_back_door) && !flags.hasFlag(FLAG_innoxia_hammer_following))
 		<p>
-			Following Ghost into the building, you find yourself entering a small, dimly-lit pantry. The food and drink which were once stored in here are long gone, and in their place old, empty cans and ruined bags of flour are strewn across the shelves. What grabs your attention the most, however, is a massive, hulking alligator-boy. Thankfully his back is towards you, and so he hasn't seen you or Ghost.
+			你跟着幽灵进入建筑，进入了一个昏暗的小储藏室。曾经存放在这里的食物和饮料早已不见踪影，取而代之的是散落在货架上的旧空罐和毁坏的面粉袋。你注意到一个身材高大的鳄男。幸好他背对着你，所以没有看到你和幽灵。
 		</p>
 		<p>
-			[ghost.speech(Stay here,)] the small otter-girl whispers in your ear. Deciding to do as she says, you remain stationary and watch as the comparatively tiny Enforcer sneaks up on the gang member. With a nimble leap that you didn't think possible for a woman of her age, Ghost jumps up onto the guard's back, hooking her left arm around his neck and slamming his lower jaw upwards so as to prevent him from crying out. With the poison-bladed dagger in her right paw, she repeatedly drives it deep into her target, first into his throat, and then into his chest. The sudden, overwhelming violence of Ghost's attack completely overwhelms the massive alligator-boy, and he crumples to the ground with a heavy thud. Luckily for him, Ghost's blade is arcane in nature, and so you see that he's still breathing, although imagine that he isn't likely to regain consciousness any time soon after being struck so many times.
+			[ghost.speech(待在这里，)]小水獭女在你耳边低语。你决定照她说的做，静静地看着这个娇小的执法者悄悄地接近帮派成员。幽灵以一个你认为像她这样年纪的女人不可能做到的迅捷跳跃到守卫的背上，用左臂勾住他的脖子，猛地将他的下颚向上抬起，防止他叫出声来。她用右爪握住带毒的匕首，反复将匕首深深刺入目标体内，先是刺入他的喉咙，然后刺入他的胸膛。幽灵突如其来、势不可挡的猛烈攻击让身材魁梧的鳄男完全招架不住，重重地摔倒在地。幸运的是，幽灵的刀刃是奥术组成的，所以你看到他还有呼吸，不过可以想象，被击中这么多下，他很难恢复意识。
 		</p>
 		<p>
-			Nimbly jumping off the gang member's back as he falls to the floor, Ghost motions for you to catch up as she slips into the kitchen...
+			当帮派成员摔倒在地时，幽灵灵活地从他背上跳下，示意你跟上，然后溜进厨房……
 		</p>
 	#ELSE
 		<p>
-			You find yourself standing in the small, dimly-lit pantry that's situated behind the bakery's kitchen. The food and drink which were once stored in here are long gone, and in their place old, empty cans and ruined bags of flour are strewn across the shelves. The back door which
+			你站在面包房厨房后面光线昏暗的小储藏室里。曾经存放在这里的食物和饮料早已不见踪影，取而代之的是散落在货架上的旧空罐和破损的面粉袋。
 			#IF(flags.hasFlag(FLAG_innoxia_sword_mission_chose_hammer))
-				 Ghost
+				幽灵
 			#ELSE
-				 you and Ghost
+				你和幽灵
 			#ENDIF
-			 used to enter the bakery is found here.
+			进入面包店的后门就在这里。
 		</p>
 		<p>
-			Slumped down on the floor on one side of the room is a huge, muscular alligator-boy. Having been on the receiving end of Ghost's dagger, he's not likely to be getting up any time soon.
+			房间一侧的地上躺着一个身材魁梧、肌肉发达的鳄男。他被幽灵的匕首击倒，估计短时间内是站不起来了。
 		</p>
 		<p>
-			[ghost.speech(Come on, we need to go the other way,)] Ghost hisses, before turning to return to the kitchen...
+			[ghost.speech(走吧，我们得走另一条路，)]幽灵悄声说道，然后转身回到了厨房……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KITCHEN"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_sword_mission_kitchen) && !flags.hasFlag(FLAG_innoxia_hammer_following))
 		<p>
-			Following Ghost into the kitchen, you see more signs that this bakery has been out of commission for some time. The large ovens which must have once baked hundreds of loaves of bread a day are covered with cobwebs and a thick layer of dust. All of the metal bread racks and other pieces of kitchen furniture have been piled up in the middle of the long room, effectively creating an impassable barrier that splits the area in two.
+			你跟着幽灵进入厨房，看到了这家面包店已经停业一段时间的更多迹象。曾经每天烤制数百条面包的大烤炉上布满了蜘蛛网和厚厚的灰尘。所有的金属面包架和其他厨房家具都堆在长长的房间中间，形成了一道无法逾越的屏障，将整个区域一分为二。
 		</p>
 		<p>
-			What draws your attention the most, however, is the pair of gang members who are standing a short way in front of you. This encounter isn't going to be as straightforward as the last one, for both of them have seen you and Ghost enter the kitchen.
+			不过，最吸引你注意的是站在不远处的一对帮派成员。这次遭遇不会像上次那样直截了当，因为他们俩看到了你和幽灵进厨房。
 		</p>
 		<p>
-			[gangMember1.speech(Where did you come from?!)] the [gangMember1.raceFull(true)] demands.
+			[gangMember1.speech(你们从哪来的？！)][gangMember1.raceFull(true)]质问。
 		</p>
 		<p>
-			[gangMember2.speech(What did you do to Jaws? You're going to fucking pay!)] the [gangMember2.raceFull(true)] standing next to [gangMember1.herHim] shouts.
+			[gangMember2.speech(你对加瓦斯做了什么？你他妈会付出代价！)][gangMember2.raceFull(true)]站在[gangMember1.herHim]旁边喊道。
 		</p>
 		<p>
-			[ghost.speech(Leave this to me,)] Ghost says to you, [ghost.speech(they won't take me long...)]
+			[ghost.speech(交给我吧，)]幽灵对你说，[ghost.speech(他们不会花我太多时间……)]
 		</p>
 	#ELSEIF(flags.hasFlag(FLAG_innoxia_hammer_following) && !flags.hasFlag(FLAG_innoxia_ghost_following))
 		<p>
-			Following Hammer through the door, you find yourself entering the bakery's kitchen, where you see more signs that this business has been out of commission for some time. The large ovens which must have once baked hundreds of loaves of bread a day are covered with cobwebs and a thick layer of dust. All of the metal bread racks and other pieces of kitchen furniture have been removed, leaving this area looking very empty.
+			你跟着锤子进门，发现自己进入了面包店的厨房，在这里你看到了这家店已经停业一段时间的更多迹象。曾经每天烤制数百条面包的大烤炉上布满了蜘蛛网和厚厚的灰尘。所有的金属面包架和其他厨具都已被搬走，显得非常空旷。
 		</p>
 		<p>
-			As you look around the room, you see the familiar figure of Ghost standing beside one of the ovens. A couple of gang members are collapsed down, unconscious, at her feet, and as she turns to face you she reveals, [ghost.speech(I didn't expect you here yet. I've only just finished with these two.)]
+			你环顾房间，看到了幽灵熟悉的身影，她正站在其中一台烤箱旁。几个帮派成员倒在她的脚边，不省人事。她转身面对你，透露道，[ghost.speech(我没想到你会在这里。我才刚处理完这两个。)]
 		</p>
 		<p>
-			[hammer.speech(You used to be a lot quicker,)] Hammer grunts as he quickly steps over to his partner.
+			[hammer.speech(你以前动作快多了，)]锤子一边咕哝着，一边快步走到他的搭档身边。
 		</p>
 		<p>
-			[ghost.speech(Being quick isn't always a good thing,)] Ghost replies, and you can tell that she's smirking beneath her balaclava. She lowers her voice as Hammer approaches her, but not enough to prevent you from overhearing her tease, [ghost.speech(My place later, just like old times.)]
+			[ghost.speech(速度快并不总是好事，)]幽灵回答，即使她戴着面巾你也可以看出她在偷笑。当锤子靠近她时，她压低了声音，但你还是能听到她的调侃，[ghost.speech(我是后来的，就像以前一样。)]
 		</p>
 		<p>
-			Letting out a deep, rumbling growl, Hammer motions for you to follow as he moves in front of Ghost to take the lead...
+			锤子低声咆哮，示意你跟上，他移动到幽灵前面，率先走了出去……
 		</p>
 	#ELSE
 		<p>
-			You find yourself moving through the bakery's kitchen, where you see more signs that this business has been out of commission for some time. The large ovens which must have once baked hundreds of loaves of bread a day are covered with cobwebs and a thick layer of dust.
+			你正在面包店的厨房，在这里你看到了这家店已经停业一段时间的更多迹象。曾经每天烤制数百条面包的大烤炉上布满了蜘蛛网和厚厚的灰尘。
 			#IF(flags.hasFlag(FLAG_innoxia_sword_mission_chose_hammer))
-				 All of the metal bread racks and other pieces of kitchen furniture have been removed, leaving this area looking very empty.
+				所有的金属面包架和其他厨具都被搬走了，这个区域显得非常空旷。
 			#ELSE
-				 All of the metal bread racks and other pieces of kitchen furniture have been piled up in the middle of the long room, effectively creating an impassable barrier that splits the area in two.
+				所有的金属面包架和其他厨具都堆在长长的房间中间，形成了一道无法逾越的屏障，将整个区域一分为二。
 			#ENDIF
 		</p>
 		<p>
-			[ghost.speech(Come on, let's keep moving,)] Ghost hisses to you while nimbly moving forwards...
+			[ghost.speech(走吧，继续推进，)]幽灵灵活地向前移动，同时对你低语……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KITCHEN_NO_FIGHT"><![CDATA[
 	<p>
-		Deciding to do as Ghost says, you move back to give her some space as she prepares to fight the two gang members.
+		你决定按幽灵说的做，在她准备与两名帮派成员战斗时，你向后退了一步，给她留出一些空间。
 	</p>
 	<p>
-		[gangMember1.speech(Hah! You think you can beat us alone? You're so small an imp coul-)] the [gangMember1.name] starts to taunt, but [gangMember1.sheIs] silenced by three shots fired in quick succession from Ghost's revolver. The gelatin capsules burst in contact with [gangMember1.her] aura, splattering [gangMember1.herHim] with burning, stinging oil.
+		[gangMember1.speech(哈！你以为你一个人能打败我们？你这么小，一个小恶魔都䏍~)][gangMember1.name]刚开始嘲弄，就被幽灵转轮手枪连发的三枪镇住了。明胶弹在接触到[gangMember1.her]的灵气时爆裂，在[gangMember1.herHim]身上溅满了灼热刺痛的油。
 	</p>
 	<p>
-		[gangMember2.Name] manages to leap to one side and narrowly dodge two of the next three shots which Ghost fires at [gangMember2.herHim]. Although the single shot which connects with [gangMember2.her] aura isn't enough to down [gangMember2.herHim], Ghost rushes forwards with unexpected speed and plunges her dagger into [gangMember2.her] side. Nimbly darting between the two gang members, the small otter-girl stabs each of them dozens of times, before rolling to one side and raising her revolver to shoot them again.
+		[gangMember2.Name]设法跳到一边，险险地躲过了幽灵朝[gangMember2.herHim]射出的三枪中的两枪。虽然与[gangMember2.her]灵气链接的一枪不足以击倒[gangMember2.herHim]，但幽灵又以出乎意料的速度向前冲去，将匕首捅入[gangMember2.her]的侧腹。小水獭女灵活地从两名帮派成员之间闪过，在他们身上各刺了数刀，然后滚到一边，举起转轮手枪再次向他们射击。
 	</p>
 	<p>
-		No more shots ring out, however, as Ghost's two opponents collapse to the ground and lose consciousness. After checking her firearm and dagger to make sure that they've suffered no damage during the fight, the otter-girl smiles at you and, careful to avoid using Hammer's name, says, [ghost.speech(Let's get moving; we'll link up with our partner and finish clearing this level.)]
+		然而，幽灵的两个对手倒在地上失去知觉，枪声再没有响起。水獭女检查了她的枪支和匕首，确保它们没有在战斗中损坏。她对你微微一笑，很小心地没有叫出“锤子”的真名，说，[ghost.speech(快走吧。我们会联系伙伴来清理这层。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BARRICADE"><![CDATA[
 	<p>
-		Dozens of bread racks and other pieces of kitchen furniture have been wheeled to this location and jammed on top of one another to create an impassable barricade.
+		几十个面包架和其他厨具被推到这个地方，相互挤在一起，形成了一个无法通行的路障。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
-			[hammer.speech(I could tear this down, but it would take too much time,)] Hammer growls, [hammer.speech(Let's find another way around.)]
+			[hammer.speech(我可以把它拆掉，但这会浪费很多时间，)]锤子嘟哝，[hammer.speech(我们换条路吧。)]
 		#ELSE
-			[ghost.speech(We could tear this down, but it would take too much time,)] Ghost muses out loud, before turning to face you and saying, [ghost.speech(Let's find another way around.)]
+			[ghost.speech(我们可以把它拆掉，但这会浪费很多时间，)]幽灵大声地喃喃自语，然后转身对你说，[ghost.speech(我们换条路吧。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOOR"><![CDATA[
 	<p>
-		The wide, double-hinged door before you separates the bakery's kitchens and its shop floor.
+		眼前这扇宽大的双铰链门将面包店的厨房和店面隔开。
 		#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
 			#IF(flags.hasFlag(FLAG_innoxia_ghost_following))
-				 Hammer and Ghost quickly stack up next to this door without saying a word, before preparing to push it open and clear whatever might be waiting on the other side...
+				锤子和幽灵一言不发得迅速到这扇门边排成一队，准备推开它，清除门那边可能等待着的东西……
 			#ELSE
-				 Hammer quickly moves up next to this door without saying a word, before preparing to push it open and clear whatever might be waiting on the other side...
+				锤子一言不发地迅速走到这扇门边，准备推开它，清除门那边可能等待着的东西……
 			#ENDIF
 		#ELSE
-			 Ghost quickly moves up next to this door without saying a word, before preparing to push it open and clear whatever might be waiting on the other side...
+			幽灵一言不发地迅速走到这扇门边，准备推开它，清除门那边可能等待着的东西……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_FLOOR"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_sword_mission_shop_floor) && !flags.hasFlag(FLAG_innoxia_ghost_following))
 		<p>
-			Following Hammer into the building, you find yourself [pc.stepping] into the area which once served as the bakery's shop floor. The shelving units, tables, and chairs which were left here when the bakery was abandoned have either been pushed up against the far wall or used to smash the glass counter to pieces, leaving all of the floor area in this room clear of furniture.
+			你跟着锤子[pc.stepping]进建筑，发现这里曾经是面包店店面。面包店废弃的货架与桌椅要么被推到了远处的墙上，要么倒下来把玻璃柜台砸得粉碎，地上没有任何家具。
 		</p>
 		<p>
-			Four startled-looking gang members are standing a short distance away, and upon catching sight of you and Hammer, they pull out their weapons and get ready for a fight. The nearest one, a rough-looking cat-boy, spits on the floor and confidently strides towards you, growling as he does so, [style.speechMasculine(You don't know who you're fucking with. You're gonna pay for thi-)]
+			四个一脸惊愕的帮派成员站在不远处，一看到你和锤子，立马掏出武器准备开打。离你最近的一个长相粗犷的猫男朝地上吐了口唾沫，自信满满地大步向你走来，一边走还一边咆哮：[style.speechMasculine(你他妈不知道你在跟谁作对。你会为此付出代——)]
 		</p>
 		<p>
-			His speech is quickly and brutally interrupted as Hammer darts forwards with surprising speed and uses the butt of his shotgun to deliver a crushing blow to the side of the cat-boy's head. The gang member instantly crumples to the floor in an unconscious daze. Upon seeing his comrade being dealt with in such a swift and violent manner, one of the remaining three gang members turns and runs away.
+			然而他的话还没说完，锤子已经以迅雷不及掩耳之势冲到了猫男的面前，将霰弹枪的枪柄重重地砸在了他的脑袋上。那帮派成员顿时倒地，晕了过去。眼看着同伴被如此利落地解决，另外三个帮派成员中的一人扭头就跑。
 		</p>
 		<p>
-			The other two, [gangMember1.a_raceFull(true)] and [gangMember2.a_raceFull(true)] stand their ground, with the first one shouting in anger, [gangMember1.speech(You'll fucking pay for that!)] 
+			剩下的[gangMember1.a_raceFull(true)]和[gangMember2.a_raceFull(true)]坚守阵地，为首者愤怒地大喊道：[gangMember1.speech(你他妈会付出代价！)] 
 		</p>
 		<p>
-			A fight seems inevitable, and so you need to decide whether to assist Hammer or stand back and watch...
+			大战一触即发，你得决定是帮助锤子还是袖手旁观……
 		</p>
 	#ELSEIF(!flags.hasFlag(FLAG_innoxia_hammer_following))
 		#IF(game.getCharactersPresent().contains(hammer))
 			<p>
-				Moving quickly forwards, you and Ghost approach the one-eyed wolf-boy. Stepping over the two bodies at his feet, he grunts, [hammer.speech(Took your time. You used to be quicker.)]
+				你和幽灵快步走近独眼狼男。他跨过脚下的两人，咕哝道：[hammer.speech(看来这花了你不少时间，你以前动作快多了。)]
 			</p>
 			<p>
-				[ghost.speech(Being quick isn't always a good thing,)] Ghost replies, and you can tell that she's smirking beneath her balaclava. She lowers her voice as she steps past Hammer, but not enough to prevent you from overhearing her tease, [ghost.speech(My place later, just like old times.)]
+				[ghost.speech(速度快并不总是好事，)]幽灵回答，即使她戴着面巾你也可以看出她在偷笑。当锤子靠近她时，她压低了声音，但你还是能听到她的调侃，[ghost.speech(我是后来的，就像以前一样。)]
 			</p>
 			<p>
-				Letting out a deep, rumbling growl, Hammer motions for you to follow as he moves in front of Ghost to take the lead...
+				锤子低声咆哮，示意你跟上，他走到幽灵前面，率先走了出去……
 			</p>
 		#ELSE
 			<p>
-				Following Ghost, you find yourself moving through the area which once served as the bakery's shop floor. The shelving units, tables, and chairs which were left here when the bakery was abandoned have either been pushed up against the far wall or used to smash the glass counter to pieces, leaving all of the floor area in this room clear of furniture.
+				你跟着幽灵走进建筑，发现这里曾经是面包店店面。面包店废弃的货架与桌椅要么被推到了远处的墙上，要么倒下来把玻璃柜台砸得粉碎，地上没有任何家具。
 			</p>
 			<p>
-				On the far side of this area, you see the familiar, grey-furred form of Hammer. Standing over the bodies of a couple of gang members, he motions for the two of you to hurry to his location.
+				你们远远地看到锤子熟悉的灰色身影，他站在几个倒下的帮派成员旁，示意你们俩赶紧去他的位置。
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			You once again find yourself moving through the area which once served as the bakery's shop floor. The shelving units, tables, and chairs which were left here when the bakery was abandoned have either been pushed up against the far wall or used to smash the glass counter to pieces, leaving all of the floor area in this room clear of furniture.
+			你再次穿过曾经作为面包店店面的区域。面包店废弃的货架与桌椅要么被推到了远处的墙上，要么倒下来把玻璃柜台砸得粉碎，地上没有任何家具。
 		</p>
 		<p>
-			A couple of defeated gang members are sprawled out, unconscious, on the floor of this area. Letting out a deep grunt, Hammer says, [hammer.speech(We need to keep moving...)]
+			几个被打败的帮派成员躺在地板上不省人事。锤子重重地哼了一声，说道：[hammer.speech(我们得继续前进……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_FLOOR_NO_FIGHT"><![CDATA[
 	<p>
-		The Enforcers told you that they weren't expecting you to fight, and so you decide to sit this one out. [pc.Stepping] back, you watch as Hammer deals with these gang members.
+		执法者们不希望你参与战斗，于是你选择袖手旁观。你[pc.Stepping]到一边，看锤子处理那些帮派成员。
 	</p>
 	<p>
-		Raising his shotgun, the wolf-boy fires off a round which hits [gangMember1.name] squarely in the chest. A cloud of choking tear gas instantly bursts forth from the projectile, engulfing both of his opponents. [gangMember2.Name] tries to rush through the poison cloud, but a powerful kick from the one-eyed wolf-boy sends [gangMember2.herHim] sprawling back into the noxious fumes.
+		狼男举起霰弹枪发射了一发子弹，正中[gangMember1.name]胸部。一团呛人的催泪瓦斯瞬间从弹丸中迸发出来，吞噬了他的两个对手。[gangMember2.Name]试图冲过毒云，但独眼狼男一记有力的踢腿将[gangMember2.herHim]踢回了毒气中。
 	</p>
 	<p>
-		[hammer.speech(I only fired one, so it'll clear in a moment,)] Hammer grunts at you while the two gang members fall to the floor in a fit of choking coughs and gasps. Within a few more seconds, the two of them have passed out, and after waiting for the fumes to fade away Hammer steps forwards and kicks their weapons to one side of the room.
+		[hammer.speech(我只开了一枪，烟雾很快就会散去。)]锤子朝你咕哝了几句，两名帮派成员则在一阵呛咳和喘息声中倒在了地上。又过了几秒钟，他们两人已经不省人事。等烟雾散去后，锤子走上前去，把他们的武器踢到房间的一边。
 	</p>
 	<p>
-		[hammer.speech(Let's keep moving,)] the wolf-boy grunts at you.
+		[hammer.speech(继续前进。)]狼男对你嘟哝道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_sword_mission_exit) && !flags.hasFlag(FLAG_innoxia_ghost_following))
 		<p>
-			[pc.Stepping] over the remains of the bakery's front door, you follow Hammer into the building. The area immediately beyond the front entrance is enclosed by an internal wall to form a small antechamber, preventing you from seeing into the majority of the building's interior. Although you can't see them, you can hear several voices shouting out in alarm from somewhere beyond the archway that's immediately in front of you.
+			你[pc.Stepping]过面包店前门的残骸，跟着锤子走进了建筑。紧靠正门的地方被一堵内墙围了起来，形成了小前厅，让你无法看到建筑物内部的大部分。虽然你看不到他们，但你可以听到几个声音从紧靠你前面的拱门外的某个地方惊叫出来。
 		</p>
 		<p>
-			[hammer.speech(Stick with me!)] Hammer growls as he rushes into what appears to be the bakery's shop floor...
+			[hammer.speech(跟着我！)]锤子一边咆哮，一边冲进面包店的店面里……
 		</p>
 	#ELSE
 		<p>
-			You find yourself standing before the bakery's front entrance. This area is enclosed by an internal wall to form a small antechamber, preventing you from seeing into the majority of the building's interior. The front door has been well and truly destroyed by Hammer during his ingress, allowing you to see out into the alleyway beyond.
+			你站在面包店的正门口。这个区域被一堵内墙围住，形成了一个小前厅，使你无法看到建筑内部的大部分。前门被锤子在进入时彻底摧毁，让你可以看到外面的小巷。
 		</p>
 		<p>
-			[hammer.speech(Come on, we don't have time for this!)] Hammer growls, motioning for you to return the way you came.
+			[hammer.speech(快点，我们没时间了！)]锤子咆哮着，示意你原路返回。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		Before you stands a winding staircase that leads up to the next floor of the building. Taking a look back the way you came, Ghost states, [ghost.speech(We've covered all of this floor. The kidnapped refugees must be upstairs with Angelixx.)]
+		在你面前矗立着一个蜿蜒的楼梯，通往建筑的上层。幽灵回头看了一眼来时的路，说道：[ghost.speech(我们已经走完了这一层，被绑架的难民一定和安吉莉克丝在楼上。)]
 	</p>
 	<p>
-		[hammer.speech(If they're still here, that is,)] Hammer growls in a frustrated tone, [hammer.speech(I'm starting to think that they might already have been teleported out of here...)]
+		[hammer.speech(如果他们还在这里的话，)]锤子沮丧地咆哮道，[hammer.speech(我开始觉得他们可能已经被传送走了……)]
 	</p>
 	<p>
-		[ghost.speech(Let's hope that's not the case,)] Ghost replies, [ghost.speech(If they're still here then they'll have to be upstairs. Along with that bitch of a succubus...)]
+		[ghost.speech(希望不是这样，)]幽灵回答道，[ghost.speech(如果他们还在这里，那他们就在楼上。和那个魅魔婊子在一起……)]
 	</p>
 	<p>
-		Hammer grunts in agreement, before motioning for you to follow him up the stairs...
+		锤子咕哝着以示同意，然后示意你们跟他上楼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS_UP"><![CDATA[
 	<p>
-		The three of you head up the stairs, and after sweeping around a 180-degree turn, you make it to the next floor without incident. At the top of the stairs you see a short corridor, dimly lit by flickering arcane lights, which leads to a half-open door. Although the centre of the corridor looks to be well-trodden, the edges of the carpet are caked in dust, letting you know that nobody's bothered cleaning this place for some time.
+		你们三人沿着楼梯向上走，转过一个180度的弯道后顺利到达下一层。楼梯顶端有一条短短的走廊，被闪烁的奥术灯照亮，通向一扇半开的门。虽然走廊中央看起来很干净，但地毯的边缘却积满了灰尘，让你知道这里已经很久没有人来打扫了。
 	</p>
 	<p>
-		[hammer.speech(Our priority is to find Angelixx. Defeating her will cause the rest of the gang to scatter,)] Hammer growls as he sees the door ahead of you.
+		[hammer.speech(当务之急是找到安吉莉克丝，打败她能让帮派的其他人四散而逃。)]锤子看着面前的门咆哮道。
 	</p>
 	<p>
-		[ghost.speech(We should also check to see if we can find the kidnapped refugees,)] Ghost adds, before decisively saying, [ghost.speech(Let's get this over with.)]
+		[ghost.speech(我们还应该看看能不能找到被绑架的难民，)]幽灵补充道，然后果断地说：[ghost.speech(让我们做个了结吧。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- FIRST FLOOR DIALOGUE: -->
 	
 	<htmlContent tag="STAIRS_TOP"><![CDATA[
 	<p>
-		You find yourself once again at the top of the stairs. From here a short corridor, dimly lit by flickering arcane lights, leads to a half-open door. Although the centre of the corridor looks to be well-trodden, the edges of the carpet are caked in dust, letting you know that nobody's bothered cleaning this place for some time.
+		你再次来到了楼梯顶端。这是一条短短的走廊，被闪烁的奥术灯照亮，通向一扇半开的门。虽然走廊中央看起来很干净，但地毯的边缘却积满了灰尘，让你知道这里已经很久没有人来打扫了。
 	</p>
 	<p>
-		[hammer.speech(There's nothing down there,)] Hammer growls, [hammer.speech(We need to find Angelixx as quickly as possible.)]
+		[hammer.speech(下面什么都没有，)]锤子咆哮道，[hammer.speech(我们必须尽快找到安吉莉克丝。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		Flickering arcane lights dimly illuminate your way as you move forwards with Hammer and Ghost down the corridor. Although the centre of this passageway looks to be well-trodden, the edges of the carpet are caked in dust, letting you know that nobody's bothered cleaning this place for some time.
+		当你和锤子、幽灵一起沿着走廊向前走时，闪烁的奥术弧光昏暗地照亮了你的前路。虽然这条通道的中央看起来很干净，但地毯的边缘却积满了灰尘，让你知道这里已经很久没有人来打扫了。
 	</p>
 	<p>
-		Knowing that Angelixx must be up here somewhere, Hammer and Ghost prepare to clear any rooms which you come across...
+		锤子和幽灵知道安吉莉克丝一定就在这上面的某个地方，他们准备清理你们遇到的所有房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STORAGE"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_sword_mission_storage))
 		<p>
-			As you approach the half-open door which sits at the end of the corridor, Hammer and Ghost rush forwards to stack up on one side of it. Motioning for you to stay back, the otter-girl hisses, [ghost.speech(You don't need to fight. Leave this to us.)]
+			你们靠近了走廊尽头那扇半开的门，锤子和幽灵冲了上去，聚集在门前。水獭女示意你退后，嘶哑着嗓子说道：[ghost.speech(你不需要战斗，交给我们吧。)]
 		</p>
 		<p>
-			Making a hand signal to his partner, Hammer steps forwards and kicks the door wide open. Rushing inside with their weapons drawn, he and Ghost prepare to deal with any gang members who might be within. Seeing no harm in following the two of them into the room, you [pc.step] through the open doorway and take a quick look around.
+			锤子向搭档打了个手势，随后向前一步，一脚把门踹开。他和幽灵拔出武器冲了出去，准备对付任何可能在内的帮派成员。你觉得跟着他俩进入房间没什么坏处，便穿过了敞开的门扉，迅速环顾着四周。
 		</p>
 		<p>
-			This room, which once might have been a bedroom, has been converted into a storage space for the gang. Numerous crates, boxes, and barrels have been stacked up in here, and from the few containers which have been left open you're able to see that their contents range from wrapped food and bottles of drink to bags of clothing and other personal belongings which have no doubt been stolen. In the middle of the room, looking to have been dividing a pile of flames between themselves, are [gangMember1.a_raceFull(true)], [gangMember2.a_raceFull(true)], and [gangMember3.a_raceFull(true)].
+			这个房间曾经可能是间卧室，现在已经改造成了帮派的储藏室。这里堆放了许多板条箱、箱子和木桶，可以从少数几个打开的容器中可以看到里面的物品。从包装食物、饮料瓶到整包衣物和其他私人物品来看，毫无疑问，这些物品都是偷来的。在房间中央，[gangMember1.a_raceFull(true)]、[gangMember2.a_raceFull(true)]和[gangMember3.a_raceFull(true)]看起来正在分着一堆火币。
 		</p>
 		<p>
-			[gangMember1.speech(What was all that noise downstairs? We could hear-)] the [gangMember1.race] starts to shout as the door swings open, before realising that [gangMember1.she] and [gangMember1.her] companions are under attack.
+			[gangMember1.speech(楼下怎么吵吵闹闹的，我好像听到——)]那[gangMember1.race]大声嚷嚷，直到门被彻底打开，[gangMember1.she]才知道遭遇了敌袭。
 		</p>
 		<p>
-			Without a word, Hammer lifts his shotgun and aims it at the three gang members, while Ghost points her revolver at them and prepares to fire. You have a split second in which to decide whether to help the Enforcers or to stand back and watch...
+			锤子二话不说，举起猎枪瞄准了三名成员，而幽灵则用转轮手枪对准他们，准备开火。你有一瞬的时间来决定是要帮助执法者，还是袖手旁观……
 		</p>
 	#ELSE
 		<p>
-			This room, which once might have been a bedroom, has been converted into a storage space for the gang. Numerous crates, boxes, and barrels have been stacked up in here, and from the few containers which have been left open you're able to see that their contents range from wrapped food and bottles of drink to bags of clothing and other personal belongings which have no doubt been stolen. The trio of gang members who you found in here are collapsed down on the floor, unconscious.
+			这个房间曾经可能是间卧室，现在已经改造成了帮派的储藏室。这里堆放了许多板条箱、箱子和木桶，可以从少数几个打开的容器中可以看到里面的物品。从包装食物、饮料瓶到整包衣物和其他私人物品来看，毫无疑问，这些物品都是偷来的。你在这发现的那三个帮派成员倒在地上，不省人事。
 		</p>
 		#IF(flags.hasFlag(FLAG_innoxia_sword_mission_searched_storage))
 			<p>
-				You've already taken the flames which the gang members were in the process of diving between themselves, and so there's nothing else to do in here.
+				你已经拿走了帮派成员们正打算分赃的火币，所以没别的可做了。
 			</p>
 			<p>
-				[hammer.speech(Let's get out of here,)] Hammer grunts, [hammer.speech(We need to find Angelixx.)]
+				[hammer.speech(我们走吧，)]锤子咕哝道，[hammer.speech(我们得找到安吉莉克丝。)]
 			</p>
 		#ELSE
 			<p>
-				[ghost.speech(There's no time to search this place,)] Ghost hisses, before pointing at the pile of flames that the gang members were in the process of diving between themselves. Looking at you, she says, [ghost.speech(Might as well take the cash; it'd be a shame to leave it here for them to recover.)]
+				[ghost.speech(没时间搜索这里了，)]幽灵嘶声道，指着帮派成员间本打算分赃的那堆火币，望向了你，[ghost.speech(最好把那堆钱拿上，留这的话，等他们醒了拿回还是挺可惜的。)]
 			</p>
 			<p>
-				[hammer.speech(Be quick,)] Hammer grunts, [hammer.speech(We need to find Angelixx.)]
+				[hammer.speech(快点，)]锤子咕哝道，[hammer.speech(我们得找到安吉莉克丝。)]
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STORAGE_NO_FIGHT"><![CDATA[
 	<p>
-		Deciding to leave the fighting to the professionals, you stop in the doorway and watch them get to work. The first to strike is Hammer, and with a loud bang and a brief flash from the end of his shotgun, he fires a tear gas canister right into the chest of [gangMember1.name]. The canister explodes into a small cloud of poisonous fumes, which causes all three of the gang members to cough and splutter as they attempt to rush forwards and attack.
+		你决定把战斗留给专业人士，于是停在门口看着。首先出手的是锤子，砰的一声，霰弹枪末端闪过一道亮光，催泪瓦斯就这么直直地打进了[gangMember1.name]的胸口。催泪瓦斯炸开后，释放出一小团毒气，三名帮派成员刚想扑上去攻击，就被呛得咳嗽不已，口吐白沫。
 	</p>
 	<p>
-		Using the brief moment of chaos to line up her targets, Ghost empties the cylinder of her revolver in the space of just a few seconds, hitting each of the gang members twice. The gelatin capsules which her arcane firearm produces burst in contact with her targets' auras, splattering each of them with burning, stinging oil.
+		幽灵趁着短暂的混乱迅速瞄准目标，数秒内就将转轮手枪里的子弹全部倾泻而出，让每一个帮派成员都身中两枪。弹药在击中目标后瞬间爆裂，迸溅出灼热刺痛的油。
 	</p>
 	<p>
-		The combination of choking tear gas and stinging pepperball oil halts the gang members in their tracks. Reduced to stumbling, coughing wrecks, the gang members are no match for Ghost's dagger. Darting between the three of them with impressive speed, the small otter-girl stabs each of her targets multiple times, sending them crashing to the floor in an unconscious daze.
+		呛人的催泪瓦斯和刺鼻的胡椒油让帮派成员裹足不前，哪里挡得住幽灵的攻击，一个个跌跌撞撞，咳嗽连连。这个小个子水獭女拿着匕首，以惊人的速度在三人之间穿梭，把每一个目标都捅得晕头转向，最终摔倒在地。
 	</p>
 	<p>
-		[hammer.speech(Good work,)] Hammer grunts.
+		[hammer.speech(干得好，)]锤子咕哝道。
 	</p>
 	<p>
-		[ghost.speech(Let's save it for after we've defeated Angelixx,)] the otter-girl replies in a cheeky, jovial tone, before pointing at the pile of flames that the gang members were in the process of diving between themselves. Looking at you, she says, [ghost.speech(Might as well take the cash; it'd be a shame to leave it here for them to recover.)]
+		[ghost.speech(还是留到打败安吉莉克丝之后再说吧。)]水獭女嬉皮笑脸地回答道，然后指了指帮派成员掉落的火币，看着你说：[ghost.speech(不如把现金拿走吧，留给他们也太可惜了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STORAGE_SEARCH"><![CDATA[
 	<p>
-		Doing as Ghost suggests, you [pc.step] over to the crate which the gang members were using as a makeshift table. On its lid are three unequal piles of coins, which you merge into one larger stack before sliding the whole lot into your inventory.
+		你听话照做，[pc.step]到帮派成员用作临时桌子的箱子旁。箱盖上有三堆不等量的硬币，你先把它们合并成一大堆，然后把所有硬币都塞进你的物品栏。
 	</p>
 	<p>
-		[hammer.speech(Now let's get moving,)] Hammer says, before motioning towards the door and grunting, [hammer.speech(Angelixx is somewhere up here...)]
+		[hammer.speech(现在开始行动吧，)]锤子说道，朝门的方向做了个手势，[hammer.speech(安吉莉克丝就在这上面……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BATHROOM"><![CDATA[
 	<p>
-		Silently pushing open the door before you, Ghost reveals that the room beyond is a decently-sized bathroom. The walls are absolutely covered in graffiti, while the grimy floor tiles are smashed and cracked in several places. From the stains and debris which fill it, the bath looks like it hasn't been used or cleaned in at least a decade. While the toilet and wash hand basin do look to be kept in working order, they're not in much better shape than the bath.
+		幽灵悄悄推开你面前的门，发现里面的房间是一间中等大小的浴室。墙壁上到处都是涂鸦，地面上灰暗的瓷砖被砸碎并出现多道裂缝。从满地的污渍和碎屑来看，浴缸至少有十年没有使用或清洗过了。虽然马桶和洗手盆看起来还能正常使用，但它们的状况并不比浴缸好多少。
 	</p>
 	#IF(!flags.hasFlag(FLAG_innoxia_sword_mission_bathroom))
 		#IF(game.isNonConEnabled())
 			<p>
-				On the far side of the room, [victim.a_raceFull(true)] is being pressed back against the wall by [gangMember1.a_raceFull(true)], who's slamming his fat donkey-cock deep into the woman's cum-stuffed cunt. Sturdy-looking chains connected to the ceiling and floor have been attached to the woman's wrist and ankle restraints, while a ball-gag has been fitted into her mouth to prevent her from making too much noise. From the anguished look in her eyes and the distressed, muffled noises she's making, it's immediately obvious that the woman is one of the kidnapped refugees, and that the donkey-boy is a gang member who's taking advantage of her while he's got the chance.
+				在浴室里，[victim.a_raceFull(true)]正被[gangMember1.a_raceFull(true)]按在墙上，后者正将他那肥大的驴鸡巴深深地插入女人充满精液的小穴。她的手腕和脚踝上绑着连接天花板和地面的结实铁链，嘴里还塞着一个口球，防止她发出太大的声音。从她痛苦的眼神和发出的痛苦的闷哼声中，能看出，这个女人是被绑架的难民之一，而那个驴男则是趁机占她便宜的帮派成员。
 			</p>
 			<p>
-				[gangMember1.speech(Angelixx is waiting for you... You're the last to go,)] the donkey-boy grunts as he slams his fat cock balls-deep in the woman's pussy. Holding her hips, his balls tense up and he groans as he orgasms, [gangMember1.speech(~Mmm!~ You're not as tight as Angelixx, but you can still milk me dry, you slut!)]
+				[gangMember1.speech(安吉莉克丝在等着你……你是最后一个被运走的。)]男驴一边哼哼着，一边将他的大鸡巴深深地插入女人的小穴。他抱住她的臀部，睾丸绷紧，呻吟着达到高潮：[gangMember1.speech(~嗯！~你没有安吉莉克丝那么紧，但还是能把我榨干，真是个荡妇！)]
 			</p>
 			<p>
-				With a furious, icy glare in her [ghost.eyeColour] eyes, Ghost motions for you and Hammer to remain where you are, before darting forwards to save the woman...
+				幽灵[ghost.eyeColour]的眼中闪烁着愤怒而冰冷的光芒，她示意你和锤子留在原地，然后迅速跑向前去救那个女人……
 			</p>
 		#ELSE
 			<p>
-				On the far side of the room, [gangMember1.a_raceFull(true)] is standing with his back to you, his fat donkey-cock in one hand as he makes use of the toilet. Talking to himself, you overhear him say, [gangMember1.speech(Angelixx should be finished with teleporting the last of them by now... Maybe she'll let me fuck her tight cunt again before she goes...)]
+				在房间的另一侧，[gangMember1.a_raceFull(true)]正背对着你站着，拿着他的肥驴鸡巴上厕所。你无意中听到他自言自语地说： [gangMember1.speech(安吉莉克丝现在应该已经传送完最后一个人了……也许她走之前会让我再操操她那紧窄的屄……)]
 			</p>
 			<p>
-				With a dangerous-looking gleam in her [ghost.eyeColour] eyes, Ghost motions for you and Hammer to remain where you are, before darting forwards to take out this oblivious gang member...
+				幽灵的[ghost.eyeColour]眼睛里闪烁着危险的光芒，她示意你和锤子待在原地，然后飞快地向前冲去，干掉这个未察觉的帮派成员……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Slumped down on one side of the bathroom, the donkey-boy is still well and truly out of it.
+			驴男瘫倒在浴室里，仍然晕倒着。
 			#IF(game.isNonConEnabled())
-				 Flashing him a furious glare, Ghost spits, [ghost.speech(Scum like him deserve far worse...)]
+				幽灵怒视着他，啐了一口，[ghost.speech(像他这样的败类应该受到更严重的惩罚……)]
 			#ELSE
-				 Flashing him a cold glare, Ghost mutters, [ghost.speech(Lucky for you we didn't bring any enslavement collars...)]
+				幽灵冷冷地瞪了他一眼，喃喃自语着，[ghost.speech(算你走运，我们没带奴役项圈……)]
 			#ENDIF
 		</p>
 		<p>
-			[hammer.speech(There's nothing more in here,)] Hammer says, before turning to leave and motioning for you and Ghost to follow...
+			[hammer.speech(这里没有别的东西了，)]锤子说，然后转身离开，并示意你和 幽灵跟上……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BATHROOM_WAIT"><![CDATA[
 	#IF(game.isNonConEnabled())
 		<p>
-			Before you know it, Ghost has already silently crossed the bathroom, and as the donkey-boy fills his unwilling partner's womb with his cum, the otter-girl draws her dagger and lunges at his back. A startled gasp and a brief yelp later, and Ghost's target has been knocked unconscious by a dozen or so stabs from her arcane blade.
+			你还没反应过来，幽灵已经悄无声息地进入浴室，当驴男用精液填满他抗拒的性对象的子宫时，水獭女拔出匕首，朝他的后背猛扑过去。一声惊愕的喘息和短暂的尖叫过后，幽灵的目标已被她的奥术匕首击晕。
 		</p>
 		<p>
-			As the donkey-boy hits the floor, Hammer rushes forwards to help the woman. Making sure that the gang member is definitely unconscious, Ghost joins her parter in assisting the captive...
+			当驴男倒在地上时，锤子冲上前去帮助这名女人。在确定该帮派成员肯定已失去知觉后，幽灵和她的同伴一起帮助被俘虏的人……
 		</p>
 	#ELSE
 		<p>
-			Before you know it, Ghost has already silently crossed the bathroom, and as the donkey-boy finishes urinating, the otter-girl draws her dagger and lunges at his back. A startled gasp and a brief yelp later, and Ghost's target has been knocked unconscious by a dozen or so stabs from her arcane blade.
+			你还没反应过来，幽灵已经悄无声息地穿过浴室，当驴男尿完时，水獭女拔出匕首，朝他的后背猛扑过去。一声惊愕的喘息和短暂的惨叫过后，幽灵的目标已被她的奥术匕首击晕。
 		</p>
 		<p>
-			[ghost.speech(That's one more scum dealt with,)] the otter-girl says, before quickly moving back over to where you and Hammer are still standing by the door. 
+			[ghost.speech(又解决了一个败类，)]水獭女说，然后迅速回到门口和你们汇合。
 		</p>
 		<p>
-			[hammer.speech(There's nothing more in here,)] Hammer says, before turning to leave and motioning for you and Ghost to follow...
+			[hammer.speech(这里没有别的东西了，)]锤子说，然后转身离开，并示意你和 幽灵跟上……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BATHROOM_CAPTIVE"><![CDATA[
 	<p>
-		Removing the ball gag from the woman's mouth, Hammer tosses it into the bath, before starting to unfasten the restraints from around her wrists. Letting out a weary sob, the woman says in a hoarse voice, [victim.speech(Thank you... They... The others... The others were being teleported somewhere... You have to help them too...)]
+		锤子从女人的嘴里取下口塞，把它扔进浴缸，然后开始解开她手腕上的束缚。女人发出一声疲惫的啜泣，用嘶哑的声音说， [victim.speech(谢谢你……他们……其他人……其他人被传送到某个地方了……你得帮帮他们……)]
 	</p>
 	<p>
-		From what the donkey-boy said when you first entered the bathroom, it sounded like the others have already gone, but none of you say this to the woman. Quickly unfastening the woman's ankle restraints, Ghost stands up and asks, [ghost.speech(Can you walk? We need to find Angelixx and take her out. We don't have time to help.)]
+		从你刚进浴室时听到驴男的话，其他人好像已经被运走了，但你们谁也没对女人说这些。幽灵迅速解开女人的脚镣，然后站起来问道，[ghost.speech(你能走吗？我们得找到安吉莉克丝并带她走，我们没时间帮忙了。)]
 	</p>
 	<p>
-		[victim.speech(I can walk...)] the woman pants as she unclasps the choker from around her neck. Tossing it to the floor, she mutters as she leaves the room, [victim.speech(My place isn't far from here... I'll make it...)]
+		[victim.speech(我还能走……)]女人一边喘息着，一边解开了脖子上的项圈。把它扔到地上，她嘟哝着离开房间， [victim.speech(我家离这里不远……我会回去的……)]
 	</p>
 	<p>
-		[hammer.speech(I wish we could do more to help her, but taking out Angelixx is the priority,)] Hammer grunts, before motioning for you and Ghost to follow him out of the room...
+		[hammer.speech(我希望我们能帮她，但当务之急是除掉安吉莉克丝。)]锤子哼了一声，然后示意你和幽灵跟着他走出房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM"><![CDATA[
 	<p>
-		The door and walls before you have been covered in graffiti, with most of it alluding to the fact that the room beyond is where the 'slaves' are kept. Nodding to each other, Hammer and Ghost stack up beside this door, before motioning for you to follow but to keep your distance. Using hand signals, they count down from three, before Hammer kicks the door open and the two Enforcers rush inside.
+		你面前的门和墙壁上满是涂鸦，其中大部分都暗指门后的房间是关押“奴隶”的地方。锤子和幽灵互相点了点头，然后在这扇门旁排成一列，示意你跟上但保持距离。他们用手势从三开始倒数，然后锤子一脚把门踢开，两名执法者冲了进去。
 	</p>
 	<p>
-		Following Hammer and Ghost through the doorway, you find yourself entering a surprisingly large room. In fact, as you glance around to take in your surrounds, you see that one wall of the original room has been knocked down to merge it with another. Hanging from the ceiling via metal rings in over a dozen places, you see sturdy chains linked to heavy metal slave collars. Not one of these collars are in use, revealing that you're too late to save the kidnapped refugees who were being kept here.
+		你跟着锤子和幽灵穿过门口，进入了一个大得出奇的房间。事实上，当你环顾四周，打量周围环境时，你发现原来房间的一面墙已经被推倒，与另一个房间并在一起。天花板上通过金属环悬挂着十几个地方，你看到粗壮的铁链与沉重的金属奴隶项圈相连。这些项圈没有一个在使用，这说明你已经来不及救被关押在这里的被绑架难民了。
 	</p>
 	<p>
-		Illuminated by the dim arcane lights which hang down from the high ceiling, you see that there's only one other person in here, and she's standing over on the far side of the room. No more than [angelixx.heightValue] in height, making her slightly smaller than Ghost, and with a slender build to match her diminutive stature, the succubus Angelixx doesn't look like much of a threat. Unlike most succubi, her light skin tone is the same as that of a human, while her chest is almost completely flat. A pair of tiny, white feathered wings grow out of her back, and if it wasn't for the tiny, white horns growing out of her forehead, you might at first glance be forgiven for mistaking her for an angel.
+		你在从高高的天花板上垂下的昏暗奥术灯的照耀下看到这里只有一个人，她正站在房间的远处。她的身高不超过[angelixx.heightValue]，比幽灵略小，身材纤细，看起来并不具有威胁性。与大多数魅魔不同，她的肤色与人类相同，有着几乎完全平坦的胸部。她的背上长出一对小小的白色羽翼，如果不是她额头上长出的白色小角，你可能会误以为她是天使。
 	</p>
 	<p>
-		As the succubus turns to face you, you're able to see that she's taken on the appearance of a youthful eighteen year old. Her beautiful face, small size, and outfit choice of an oversized hoodie, leg warmers, and skater shoes gives her a very innocent look. Her blonde, twin-tailed hair swings around as her head turns, while her bright blue eyes quickly flick between Hammer, Ghost, and yourself. Just as you'd been warned, the succubus instantly tries to manipulate the three of you by crying out, [angelixx.speech(Thank goodness you're here! Please, I need your help!)] 
+		魅魔转过身来面对你，你看到她不过是十八岁少女的模样。她面容姣好，身材娇小，穿着大一号的连帽衫、暖腿套和滑板鞋，给人一种非常单纯无辜的感觉。她的金色双马尾摆来摆去，明亮的蓝眼睛在锤子、幽灵和你之间快速游移。就像你被警告的那样，魅魔立刻哭喊起来，试图骗过你们三个，[angelixx.speech(你们来了，真是谢天谢地！求你们了，我需要帮助！)] 
 	</p>
 	<p>
-		Although her acting is impeccable, and a normal, unprepared individual would more than likely be persuaded to stop in their tracks, the two Enforcers she's facing are seasoned professionals. Instantly firing off all four rounds from his shotgun in quick succession, Hammer envelops the succubus in a cloud of arcane tear gas. Before the choking poison can do its work, however, it's swept aside by a powerful blast of air as Angelixx casts
+		虽然她的演技无可挑剔，一个毫无准备的普通人很可能会被说服而停下脚步，但她面对的是两名经验丰富的执法者。锤子用霰弹枪迅速连续发射了四发子弹，将魅魔笼罩在一团奥术催泪瓦斯中。然而，催泪瓦斯还没发挥作用，就被一股强大的气流吹到了一边，因为安吉莉克丝
 		#IF(pc.hasSpell(SPELL_PROTECTIVE_GUSTS, true))
-			 the spell which you recognise as 'Protective Gusts' upon herself.
+			对自己施放了“护体之风”法术。
 		#ELSE
-			 a protective wind spell upon herself.
+			对自己释放了防御性风法术。
 		#ENDIF
-		 With Hammer's attack having been nullified, Ghost follows up with six shots from her revolver. Showing herself to be a master of defensive spells, Angelixx transforms her shield into
+		锤子的攻击无效后，幽灵用转轮手枪连开六枪。安吉莉克丝展示了自己的防御法术，她将护盾转变成
 		#IF(pc.hasSpell(SPELL_CLOAK_OF_FLAMES, true))
-			 'Cloak of Flames',
+			“火焰斗篷”，
 		#ELSE
-			 a fiery barrier,
+			一个火焰屏障，
 		#ENDIF
-		 causing the pepperball capsules to harmlessly burn away upon contact.
+		胡椒弹刚接触到法术屏障，便被无害烧毁。
 	</p>
 	<p>
-		Keeping up the act, the succubus desperately cries out, [angelixx.speech(You've made a mistake! I'm not Angelixx! I'm her twin, I came here to rescue the kidnapped refugees, but I was too late, just like you are! I can tell you where they're being taken, just please stop shooting me!)]
+		魅魔继续演戏，拼命喊叫，[angelixx.speech(你搞错了！我不是安吉莉克丝！我是她的双胞胎，我是来救被绑架的难民的，但我来晚了，就像你们一样！我可以告诉你们他们被带到哪里去了，只是请你们不要再向我开枪了！)]
 	</p>
 	<p>
-		The desperate tone in the succubus's voice is extremely convincing, and for a moment you wonder if she's telling the truth. Hammer seems to be wondering the same thing, for he lowers his shotgun and barks, [hammer.speech(Tell us then! Where are they being taken?)]
+		魅魔绝望的语气极具说服力，一时间让你怀疑她说的是不是真的。锤子似乎也在想同样的问题，因为他放下猎枪并喊道，[hammer.speech(那么告诉我们！他们被带到哪里去了？)]
 	</p>
 	<p>
-		From your position behind them, you see that the wolf-boy's response is just a ruse to buy time, as Ghost turns to one side to unsheathe her dagger in such a way that the succubus can't see. Hammer, too, turns to one side and uses his position to covertly reach down into one of his pockets.
+		从你在他们身后的位置，可以看出狼男的反应只是一个争取时间的诡计，因为幽灵转到一边，以魅魔看不到的方式拔出匕首。锤子也转到一边，利用他的位置隐蔽地把手伸进自己的一个口袋。
 	</p>
 	<p>
-		[angelixx.speech(I'll tell you all I know, please, just listen to me for a moment,)] the succubus pleads, doing all she can to look totally harmless and innocent...
+		[angelixx.speech(我会把我知道的全告诉你们，请你花时间听我说完，)]魅魔恳求着，竭力装出一副完全无害和无辜的样子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_ANGELIXX_ESCAPE"><![CDATA[
 	<p>
-		[angelixx.speech(Angelixx has taken them all to the underwater city of Lyonesse as gifts for Lirecea,)] the succubus claims, [angelixx.speech(I've got proof in the other room, please just trust me.)]
+		[angelixx.speech(安吉莉克丝把他们都运到了水下城市莱昂内斯，作为送给莉瑞恰的礼物，)]魅魔说，[angelixx.speech(我在另一个房间里有证据，请相信我。)]
 	</p>
 	<p>
-		[ghost.speech(The problem with lying, Angelixx, is that you don't know if the other person already knows the truth,)] Ghost says in an icy tone, [ghost.speech(We know you've been taking them to Dominion. You think you can operate in our territory and get away with it? You're finished.)]
+		[ghost.speech(安吉莉克丝，说谎的问题在于你不知道对方有没有找到真相，)]幽灵用冰冷的语气说，[ghost.speech(我们知道你把他们带到了御城区。你以为你能在我们的地盘上逍遥法外吗？你完蛋了。)]
 	</p>
 	<p>
-		For the first time since entering the room, a look of genuine distress crosses Angelixx's face, before she drops the innocent act and scowls at Ghost in a bitter tone, [angelixx.speech(You don't know who you're fucking with! Mother's promised to recognise me, and once I'm a recognised daughter I'll hunt you down! I'll make you wish you'd never come here!)]
+		从进入房间以来，安吉莉克丝的脸上第一次露出了真正的痛苦表情，然后她放下了装无辜的行为，用痛苦的语气蔑视着幽灵，[angelixx.speech(你不知道你他妈在跟谁作对！母亲保证过会承认我的，一旦我成为被承认的女儿，我就会追杀你！我会让你后悔来过这里！)]
 	</p>
 	<p>
-		With the succubus's attention now on his partner, Hammer pulls a concealed taser out of one of his bulky pockets. With the otter-girl gripping her dagger behind her back, the two Enforcers exchange a subtle hand signal, and you realise that they're about to rush Angelixx.
+		魅魔的注意力现在都集中在他的搭档身上，锤子从他的大口袋里掏出了隐藏的电击枪。水獭女紧握背后的匕首，两名执法者做了一个不易察觉的手势，你意识到他们即将冲向安吉莉克丝。
 	</p>
 	<p>
-		[sleip.speech(You picked the wrong gang to fuck with!)] a masculine voice suddenly growls from the doorway behind you.
+		[sleip.speech(你惹错帮派了！)]一个阳刚的声音突然从你身后的门口咆哮而出。
 	</p>
 	<p>
-		Turning around, you see that the two nightmares who were standing outside the bakery when you first arrived have finally shown up. Dropping his taser back into his pocket, Hammer swings his shotgun around to point at these new arrivals. Sensing her moment in which to escape, Angelixx starts casting her teleport spell, desperately calling out as she does so, [angelixx.speech(You'll get a special reward for this, boys! I'll come and find you later!)]
+		你转过身看到刚来时站在面包店外的两个梦魇终于出现了。锤子把电击枪收回口袋，抡起霰弹枪瞄准这两个新来的人。安吉莉克丝感觉到了逃跑的时机，她开始施放传送咒，一边拼命呼喊， [angelixx.speech(你们会得到特别奖励的，男孩们！我一会儿去找你们！)]
 	</p>
 	<p>
-		Not wanting her to escape so easily, Ghost rushes at Angelixx with a burst of speed that you'd never expect from someone of her age. Letting out a frightened little scream, Angelixx only just manages to teleport away in time, leaving Ghost's dagger to slice through thin air.
+		幽灵不想让她轻易逃脱，以她这个年纪的人难以想象的速度冲向安吉莉克丝。安吉莉克丝发出一声惊恐的尖叫，只来得及传送离开，让幽灵的匕首划破了一层空气。
 	</p>
 	<p>
-		With the succubus having escaped, it looks like you'll now have to deal with these nightmares...
+		魅魔逃走了，看来你们现在不得不面对这些梦魇了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_COMBAT_WON"><![CDATA[
 	<p>
-		Having proven themselves to be no match for you, Hammer, and Ghost, the nightmares slump to the floor in a daze.
+		在证明它们不是你、锤子和幽灵的对手后，梦魇们晕倒在地上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_COMBAT_LOST"><![CDATA[
 	<p>
-		Not wanting to fight any longer, you back away from the nightmares, leaving Hammer and Ghost to take them alone. Thankfully, the Enforcers prove to be more than a match for them, and just a moment later the two nightmares are slumping to the floor in a daze.
+		你不想再打下去了，便从梦魇身边退开，让锤子和幽灵去对付它们。所幸，事实证明了执法者完全能够轻松地制服他们。仅仅片刻之后，两个梦魇就晕倒在地。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_COMBAT_NO_FIGHT"><![CDATA[
 	<p>
-		You don't like the thought of having to fight these huge, demonic horse-morphs, and so you back away from them, leaving Hammer and Ghost to take them down. Thankfully, the Enforcers prove to be more than a match for them, and after taking a couple of tear gas canisters and half a dozen pepperball canisters, the two nightmares slump to the floor in a daze.
+		你不愿与这些巨大的恶魔马化形作战，便退到了一边，让锤子和幽灵去对付他们。所幸，事实证明了执法者完全能够轻松地制服他们。在挨了几发催泪弹和半打胡椒弹后，这两个梦魇蹒跚着晕眩倒地。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEDROOM_COMBAT_END"><![CDATA[
 	<p>
-		[hammer.speech(I can't believe that bitch managed to escape,)] Hammer angrily growls, before kicking at one of the empty collars lying on the floor and adding, [hammer.speech(We didn't even get here in time to save the kidnapped refugees...)]
+		[hammer.speech(真不敢相信那个贱人居然能成功逃走，)]锤子愤怒地咆哮着，然后踢了踢地上的一个空项圈，补充道，[hammer.speech(我们甚至来不及救被绑架的难民……)]
 	</p>
 	<p>
-		[ghost.speech(She won't be back here any time soon, so we achieved our main goal of clearing her gang out of Elis,)] Ghost says to put a positive spin on things. Sheathing her dagger, she steps over to an old table on one side of the room, before picking up what looks to be a flowery notebook and saying, [ghost.speech(Looks like Angelixx forgot her diary. Perhaps we'll get something useful out of this...)]
+		[ghost.speech(她很快就不会再回来了，所以我们完成了把她的帮派清除出伊利斯的主要目标，)]幽灵说要把事情往好的方面想。她收起匕首，走到房间里一张旧桌子前，拿起一本饰以花卉图案的笔记本说， [ghost.speech(看来安吉莉克丝忘带日记了，也许我们能从中找到一些有用的东西……)]
 	</p>
 	<p>
-		[hammer.speech(Fuck, looks like we made too much of a commotion,)] Hammer grunts as he looks out of the room's single window and down into the alleyway. Moving over to see what he's looking at, you count no less than half a dozen Enforcers preparing to enter the bakery. Speaking out loud for your benefit, the wolf-boy says, [hammer.speech(The Patrol crew are good guys and gals, but if they recognise us then everyone in Elis will know by morning. We haven't been recognised so far, and I'd prefer to keep it that way.)]
+		[hammer.speech(操，看来我们闹得太大了，)]锤子一边咆哮着，一边从房间的单扇窗户向巷子里张望。你走过去看他在看什么，发现有六个以上的执法者正准备进入面包店。狼男大声对你说， [hammer.speech(巡逻队的人都是好人，但如果他们认出我们，到早上伊利斯的每个人都会知道。到目前为止，我们还没有被认出来，所以我希望保持这种状态。)]
 	</p>
 	<p>
-		[ghost.speech(So how are we going to get out of here without being found?)] Ghost asks. You can tell from the tone of her voice that she's teasing Hammer, and knows that he's got a plan for your escape.
+		[ghost.speech(所以我们怎么才能在不被发现的情况下离开这里呢？)]幽灵问。从她的语气中你可以听出，她是在戏弄锤子，知道他已经为你计划好了逃跑路线。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_END"><![CDATA[
 	<p>
-		[hammer.speech(The adjoining building is also abandoned, and the back door leads into the perfect alleyway for us to use as an escape route,)] Hammer explains, [hammer.speech(We just need a way of getting into it...)]
+		[hammer.speech(周围的建筑也已经废弃，后门通向小巷，是我们绝佳的逃生路线，)]锤子解释着，[hammer.speech(只差进入的方法……)]
 	</p>
 	<p>
-		Reaching down into another of the bulky pockets in his trousers, he produces what looks very much like an explosive charge. Placing this device on one of the walls, he grabs hold of you and Ghost and firmly pulls the two of you out into the corridor. A moment later, a flash of orange light and a deafening roar bursts out from the bedroom, causing the whole building to shake while dust and pieces of plasterboard fall from the ceiling.
+		他把手伸进裤子的另一个大口袋，拿出一个看起来很像炸药的东西。他把这个东西装在墙上，然后抓住你和幽灵，把你们两个拉到走廊里。片刻之后，橙色的火光和震耳欲聋的轰鸣声从卧室里迸发出来，震动了整栋楼，灰尘和石膏板碎片从天花板上掉落下来。
 	</p>
 	<p>
-		[style.speechMasculineHeavy(That came from upstairs!)] you hear the voice of one of the Patrol Enforcers shouting from somewhere downstairs. Realising the need for speed, the three of you quickly rush back into the bedroom, where a centaur-sized hole has been blown clean through the wall.
+		[style.speechMasculineHeavy(是从楼上传来的！)]你听到一名巡逻队执法者的声音从楼下某处传来。你们三人意识到必须加快速度，迅速冲回卧室。卧室的墙壁上已经被炸出一个可以通过半人马的洞。
 	</p>
 	<p>
-		Hurrying through the hole that Hammer's device has created, you and Ghost follow the wolf-boy as he confidently leads you down a flight of stairs and into an alleyway. A few minutes of navigating through the narrow, twisting passages of northern Elis, and you soon find yourself passing through the same gate that Hammer unlocked on your way to the bakery.
+		你和幽灵赶紧穿过锤子的装置炸出的缺口，跟着自信满满的狼男走下楼梯，进入小巷。你在伊利斯北部狭窄曲折的小巷中穿行几分钟后，很快发现自己穿过了锤子在去面包店的路上打开的那扇门。
 	</p>
 	<p>
-		With the Enforcer station now in sight in the distance, Ghost turns to you and says, [ghost.speech(It's time for us to part ways. We didn't get recognised, so I guess we didn't need you after all, [pc.name].)]
+		幽灵看到远处的执法局，转身对你说， [ghost.speech(该分道扬镳了。我们没被认出来，所以我想还用不上你， [pc.name]。)]
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_sword_mission_fought))
-			[hammer.speech(Thanks for the backup in there, [pc.name]. You didn't have to fight, you know, but we appreciate it,)]
+			[hammer.speech(感谢你的支援，[pc.name]。你知道你没必要和我们一起战斗的，我们感激不尽，)]
 		#ELSE
-			[hammer.speech(Thanks for agreeing to come along with us, [pc.name],)]
+			[hammer.speech(谢谢你愿意和我们一起来，[pc.name]。)]
 		#ENDIF
-		 Hammer says, before grunting, [hammer.speech(Next it's our turn to help you. We'll get to work on preparing a defence plan for Elis first thing tomorrow.)]
+		锤子说完然后又嘟哝着，[hammer.speech(接下来轮到我们帮你了。明天一早，我们就着手准备伊利斯的防御计划。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MISSION_END_CONTINUE"><![CDATA[
 	<p>
-		With the operation now at an end, you say goodbye to Hammer and Ghost.
+		你在行动结束后向锤子和幽灵道别。
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_sword_mission_fought) && ghost.getAffection(pc)>=20)
 		#IF(flags.hasFlag(FLAG_innoxia_sword_mission_chose_hammer))
 			<p>
-				[hammer.speech(You know, you would have made a good Enforcer,)] Hammer says, [hammer.speech(I'd have liked to have had you around during the Fifth Human Rebellion... I'll have something for you when you next drop in at the station.)]
+				[hammer.speech(你得知道，你会是一个很好的执法者，)]锤子说，[hammer.speech(我真希望第五次人类叛乱时你在我身边……你下次来执法局的时候，我有东西给你。)]
 			</p>
 		#ELSE
 			<p>
-				[ghost.speech(You know, I think you'd have made a half-decent Enforcer,)] Ghost says in a serious tone, [ghost.speech(We could have used you during the Fifth Human Rebellion... Tell you what, I'll have something for you when you next drop in at the station.)]
+				[ghost.speech(你知道吗，我觉得你会是个不错的执法者，)]幽灵严肃地说，[ghost.speech(要是在第五次人类叛乱期间有你在……这样吧，你下次来局里的时候，我有东西给你。)]
 			</p>
 		#ENDIF
 	#ENDIF
 	<p>
-		Turning to her partner, the small otter-girl teases, [ghost.speech(So, my place?)]
+		小水獭女转身调侃道， [ghost.speech(所以，我的位置呢？)]
 	</p>
 	<p>
-		[hammer.speech(Just don't keep me up all night,)] the wolf-boy grunts.
+		[hammer.speech(只要别让我整晚睡不着就行，)]狼男嘟哝着。
 	</p>
 	<p>
-		With that, the two of them say goodbye to you and slip off into the darkness. Although they're not going to be awake at this time, you now need to head back to the town hall and tell Minotallys and Arion that you've managed to get the help of the SWORD Enforcers. Wondering what to do with the rest of the night, you set off into the streets of Elis...
+		就这样，他们两人向你道别，然后走进了黑暗中。虽然米诺塔莉丝和阿里昂此时还在睡觉，但你现在需要回到市镇议会，告诉他们你已经得到了SWORD的帮助。想着今晚剩下的时间该做些什么，你踏上了伊利斯的街道……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Wall's End]]></name>
-	<tooltipDescription><![CDATA[A circular cobblestone path links all of the stores within the Wall's End shopping precinct.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the 'Wall's End' shopping precinct]]></virginityLossDescription>
+	<name><![CDATA[墙之尽头]]></name>
+	<tooltipDescription><![CDATA[一条环形的鹅卵石通路将墙之尽头购物区的所有商店连接了起来。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在墙之尽头购物区里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

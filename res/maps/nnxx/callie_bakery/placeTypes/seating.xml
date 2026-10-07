@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Seating]]></name>
-	<tooltipDescription><![CDATA[A small seating area fills the small amount of space which isn't taken up by the store's counter.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the seating area in 'The Creamy Bakey']]></virginityLossDescription>
+	<name><![CDATA[座椅区]]></name>
+	<tooltipDescription><![CDATA[店铺柜台有限的空间内设置着一小块座椅区。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“奶油烘焙店”的座椅区内]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

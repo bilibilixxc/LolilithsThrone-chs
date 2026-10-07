@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[street]]></name>
-	<tooltipDescription><![CDATA[The streets of Elis are paved in cobblestones, and with the majority of the flanking buildings being of a timber-framed design, the entire town has a late-medieval look about it.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the streets of Elis]]></virginityLossDescription>
+	<name><![CDATA[街道]]></name>
+	<tooltipDescription><![CDATA[伊利斯的大街由卵石铺成，周围的建筑大多以原木作为框架，使整个小镇呈现出一种中世纪晚期的风貌。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的大街上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

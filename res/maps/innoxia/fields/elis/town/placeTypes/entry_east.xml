@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	
 	<!-- The region which this map is associated with.
@@ -10,14 +10,14 @@
 		i.e. The game will save this value as 'Eastern Road'
 	If you do not want this behaviour to be present, define the optional 'noCapitalisation' attribute as true, like so:
 		<name noCapitalisation="true"><![CDATA[eastern road]]></name> -->
-	<name><![CDATA[Eastern road]]></name>
+	<name><![CDATA[向东的路]]></name>
 	
 	<!-- The information displayed to the player in the tooltip when hovering over this place type in the map UI. -->
-	<tooltipDescription><![CDATA[This road leads out of the eastern gate of Elis, and after a few miles it links up with the well-maintained highway which runs alongside the river Hubur.]]></tooltipDescription>
+	<tooltipDescription><![CDATA[这条路从东门出伊利斯，延伸数英里后与胡布尔河畔维护良好的公路相接。]]></tooltipDescription>
 	
 	<!-- The description which is used when describing a character's virginity loss within this place type.
 	It should follow the generic format of "in/at/on X", with no initial capitalisation or ending punctuation. -->
-	<virginityLossDescription><![CDATA[on the eastern road leading out of Elis]]></virginityLossDescription>
+	<virginityLossDescription><![CDATA[在伊利斯向东的路上]]></virginityLossDescription>
 	
 	<!-- A reason why a character can't have sex in this location (only affects masturbation and sex with companions - sex scenes will still work if the dialogue allows for them).
 	This supports conditional statements, with 'npc' being the character who is being checked to see if they are able to have sex (this will almost certainly always be the player).

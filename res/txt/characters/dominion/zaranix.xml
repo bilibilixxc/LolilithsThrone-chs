@@ -1,61 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- AFTER_COMBAT_VICTORY -->
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY"><![CDATA[
 	<p>
-		Zaranix staggers back, reaching out to grab hold of the edge of a nearby table as he pants, [zaranix.speech(Please! No more!)]
+		扎拉尼克斯踉跄着后退，伸手抓住附近一张桌子的边沿。他喘息着说道，[zaranix.speech(停！不要再继续了！)]
 	</p>
 	<p>
-		It's quite clear that he's completely unable to continue fighting any longer, so, [pc.stepping] forwards, you make your demands known, [pc.speech(You're going to hand over Arthur now, understood?)]
+		你看出来他显然已经不可能再继续战斗了，[pc.stepping]上前一步大声喊道：[pc.speech(你除了交出亚瑟以外别无二选了，明白吗？)]
 	</p>
 	<p>
-		[zaranix.speech(F-Fine...)] he sighs, understanding that he has little choice in the matter, [zaranix.speech(You heard the [pc.race], Arthur, you're free to go...)]
+		[zaranix.speech(行、行，好吧……)]他长叹了一口气，明白了他在现在根本没得选。[zaranix.speech([pc.race]说你自由了，你可以走了……)]
 	</p>
 	<p>
-		Arthur, up until now having been hiding behind one of the laboratory's cabinets, slowly stands up and exclaims, [arthur.speech(Bloody hell! Well, you're certainly letting me go easily! Not that I should be complaining...)]
+		亚瑟从他刚刚藏身的柜子后面试探着站起来，大喊道：[arthur.speech(我操！你这就把我交出去了？不对，这可不是坏事……)]
 	</p>
 	<p>
-		[zaranix.speech(If it were anyone else, I'd have refused to let you go, but I just realised who this [pc.race] is,)] Zaranix says, stepping back and collapsing down into a nearby chair. [zaranix.speech(<i>[pc.SheIs]</i> the [pc.race] who's moved in with Lilaya... Yes, I know who you are. I may not get out much, but I still keep my ear close to the grapevine.)]
+		[zaranix.speech(如果是别人的话我可绝不会让你走，但我刚刚意识到[pc.race]是谁，)]扎拉尼克斯后退一步，瘫坐在身边的一把椅子里说道，[zaranix.speech(<i>[pc.SheIs]</i>，[pc.race]，是莉莱雅身边的人……没错，我很清楚你的身份。虽然我不常出门，但是我还是有不少方法打听到这些小道消息的。)]
 	</p>
 	<p>
-		By this time already half-way across the room towards the door, Arthur stops to once again exclaim, [arthur.speech(Bloody hell! So it's Lilaya who's behind this rescue? The last I heard, oh, what was it now... Oh yes! She was going to 'blast me into a million pieces, or banish me into an alternate dimension' the next time she saw me. I mean, considering that nobody's managed to travel between dimensions before, I couldn't quite take her threat seriously, but she <i>did</i> seem to be pretty angry. Maybe I'd be better off staying he-)]
+		你和亚瑟一起向门口走去，亚瑟突然停下来大喊[arthur.speech(我操！那不是说是莉莱雅让你来救的我？我上次……呃，现在是什么时间……哦对！上次她看到我的时候不是说要把我炸的拼不出全尸，还是要把我扔到另一个位面来着？我说，虽然还没有人能做到在位面间旅行，她的这条威胁不能太当真，但是她那时看起来<i>真的</i>很生气。我是不是应该留在……)]
 	</p>
 	<p>
-		[zaranix.speech(Be quiet Arthur!)] Zaranix shouts, [zaranix.speech(I may have wealth and a modicum of power in this city, but having never been recognised by my Lilin mother, I'd be a fool to stand against the wishes of a demon who has. And it's not just any demon! Hah! Lyssieth's precious little half-demon herself! So go on, get out of here!)]
+		[zaranix.speech(闭嘴，亚瑟！)]扎拉尼克斯呵斥道，[zaranix.speech(在御城区我可能还有点权力和财富，然而我可从来没获得过莉琳母亲的认可。要是和那些真正有地位的恶魔作对只能显得我像个傻子！那可不是随便哪个恶魔，是莉西丝心尖上的半恶魔女儿！行了，快点出去！从我这儿出去！)]
 	</p>
 	<p>
-		[arthur.speech(Well, when you put it like that... Maybe I'll see you around Zaranix. It wasn't too bad living here, all things considered,)] Arthur says, before turning to you and stating, [arthur.speech(I'll go on ahead, so I suppose I'll see you over at Lilaya's place.)]
+		[arthur.speech(好吧，既然你都这么说了……再见，扎拉尼克斯。住你这儿不算太糟，总的来说，)]说完后亚瑟转到你的方向[arthur.speech(我先走了，我们应该会在莉莱雅那边再见面吧。)]
 	</p>
 	<p>
-		With that, he steps past you and makes his hasty exit, leaving you alone in the lab with the defeated incubus. You wonder if you should take advantage of his weakened state, or simply turn around and leave...
+		说完后亚瑟便从你旁边走开急匆匆地走了出去。你看向被打败的淫梦魔，考虑着抢在他恢复前解决掉他，还是就这么离开 ……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_USE_HIM"><![CDATA[
 	<p>
-		[pc.speech(You made me go through a lot of trouble to find Arthur,)] you say, stepping towards the exhausted [zaranix.race], [pc.speech(I think you owe me an apology...)]
+		[pc.speech(你真是让我费了好大力气才找到亚瑟，)]你一边说着一边走向筋疲力尽的[zaranix.race]，[pc.speech(我说，你得好好地向我道歉才是……)]
 	</p>
 	<p>
-		Despite the fact that [zaranix.sheIs] a powerful demon, [zaranix.name] lets out a lewd little sigh as [zaranix.she] looks up into your [pc.eyes]. Your strong arcane aura is quite clearly having a profound effect on [zaranix.herHim], and as you approach, [zaranix.she] pleads, [zaranix.speech(Please! Let me make it up to you!)]
+		尽管毋庸置疑[zaranix.sheIs]是个强大的恶魔，[zaranix.name]色气地叹了口气[zaranix.she]抬头看向你的双眼[pc.eyes]。[zaranix.herHim]感受到向他走来的你散发出强力的奥术灵气，[zaranix.she]恳求道：[zaranix.speech(别这样，我会好好补偿你的。)]
 	</p>
 	<p>
-		Grinning down at [zaranix.name], you prepare to have some fun...
+		你低头对着[zaranix.name]咧嘴一笑，准备拿他找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SUBMIT"><![CDATA[
 	<p>
-		You weren't really expecting it to be so easy to convince [zaranix.name] to part with Arthur, and subsequently feeling a little guilty for fighting [zaranix.herHim] in [zaranix.her] own house, you decide to try and make it up to [zaranix.herHim]. Looking down at [zaranix.her] crotch and biting your [pc.lip], you let out a pleading little whine, [pc.speech(Sorry for all this trouble, [zaranix.name]... Perhaps you'd like me to do something for you...)]
-	</p>
+你没想到说服[zaranix.name]放走亚瑟会这么的简单，随后因为在[zaranix.her]自己的家里与[zaranix.herHim]战斗而感到有些内疚，你决定尝试弥补[zaranix.herHim]。低头看着[zaranix.her]的胯部，咬着你的[pc.lip]，你发出请求的呜咽，[pc.speech(对我为你造成的麻烦感到抱歉，[zaranix.name]……或许你想让我为你做点什么……)]
+</p>
 	<p>
-		[zaranix.Name] looks up at you, a big grin spreading across [zaranix.her] face as [zaranix.she] realises what it is you want. Standing up, [zaranix.she] steps over towards you, before running [zaranix.her] hands over your [pc.hips] and around to give your [pc.ass+] a firm squeeze. You can tell by the hungry look in [zaranix.her] eyes that your arcane aura is filling [zaranix.her] mind with lust, and, to confirm your suspicions, the [zaranix.race] leans forwards, before [zaranix.moaning], [zaranix.speech(There is one thing you can do... I want to hear you call out my name as I fuck you!)]
+		[zaranix.Name]抬头看着你，意识到你想要什么后，[zaranix.her]的脸上露出了灿烂的笑容，站起身朝你走来，然后用手摸过你的[pc.hips]，用力捏了捏你[pc.ass+]。从[zaranix.her]饥渴的眼神中可以看出，你的奥术灵气让[zaranix.her]心中充满了欲望。情况证实，只见[zaranix.race]身体前倾，发出[zaranix.moaning]，[zaranix.speech(有一件事你可以做的……我想听到你在我操你的时候喊我的名字！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_VICTORY -->
@@ -63,16 +63,16 @@
 	<htmlContent tag="AFTER_SEX_VICTORY"><![CDATA[
 	<p>
 		#IF(sex.getNumberOfOrgasms(zaranix) >= zaranix.getOrgasmsBeforeSatisfied())
-			[zaranix.Name] steps back and sinks down into a nearby chair, a happy smile on [zaranix.her] face as [zaranix.she] gazes up at you, [zaranix.speech(That was fun... I guess losing Arthur for that wasn't too bad a deal...)]
+			[zaranix.Name]完事后坐在了旁边的椅子上，她脸上露出开心的笑容，抬头望着你说，[zaranix.speech(这实在是太舒服了，我想为此失去了亚瑟也不算坏……)]
 		#ELSE
-			[zaranix.Name] steps back and sinks down to the floor, letting out [zaranix.a_moan+] as [zaranix.her] hands drop down between [zaranix.her] legs, [zaranix.speech(Ah! You didn't even satisfy me...)]
+			[zaranix.Name]完事后坐在了地上，她把双手伸入了两腿之间，发出呻吟声， [zaranix.speech(啊！你甚至不能满足我……)]
 		#ENDIF
 	</p>
 	<p>
-		Smirking down at the [zaranix.race] one last time, you turn around and take your leave. Retracing your steps through [zaranix.her] house, you soon find yourself back out in the streets of Demon Home. Now that Arthur's been rescued, you realise that you should probably head over to Lilaya's house to find out what your next step will be...
+		最后她露出了傻笑，你转身离开了。沿着你之前穿过她房子的足迹，你很快发现自己回到了恶魔之家的街道上。现在亚瑟已经获救，你觉得你可能现在应当前往莉莱雅的家看看下一步该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT -->
@@ -80,139 +80,139 @@
 	<htmlContent tag="AFTER_COMBAT_DEFEAT"><![CDATA[
 	#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, false))
 		<p>
-			You can't continue fighting any longer, and after letting out a defeated groan, you stagger backwards and slump down against one wall of Zaranix's lab. Glancing up at your conqueror, you see the imposing form of the huge incubus towering over you with a stern expression on his face.
-		</p>
+你再也无法继续战斗了，发出一声败北的呻吟后，你踉跄地向后退去，倚靠在扎拉尼克斯实验室的一面墙上。抬头看向你的征服者，你看到一个巨大的淫梦魔以严厉的表情屹立在你面前。
+</p>
 		<p>
-			[zaranix.speech(So, you thought you'd barge into my lab, pick a fight, and get away with it?!)] he scolds you, [zaranix.speech(Instead of simply throwing you out, I had plans to make you into a test subject, but seeing as you've got your mouth all blocked like that, I guess I'll have to forget that plan...)]
-		</p>
+[zaranix.speech(你以为你可以闯进我的实验室，挑起战斗，然后就这样逃走吗？！)]他责备着你，[zaranix.speech(我本打算不止简单的只是把你扔出去，而是把你变成一个测试用具，但既然你的嘴被堵住了，我想我得放弃那个计划了……)]
+</p>
 	#ELSEIF(game.isNonConEnabled())
 		<p>
-			You can't continue fighting any longer, and after letting out a defeated groan, you stagger backwards and slump down against one wall of Zaranix's lab. Glancing up at your conqueror, you see the imposing form of the huge incubus towering over you with a maniacal grin on his face.
+你再也无法继续战斗了，发出一声败北的呻吟后，你踉跄地向后退去，倚靠在扎拉尼克斯实验室的一面墙上。抬头看向你的征服者，你看到一个巨大的淫梦魔以狂热的笑容屹立在你面前。
+</p>
+		<p>
+			[zaranix.speech(所以，你以为你能闯进我的实验室，然后在挑起事端后逃之夭夭？哈！)]他边喊着边走到实验室的柜子前，在拿起一个小玻璃瓶后便再次转过身来，面对着你大声说道：[zaranix.speech(亚瑟和我需要一个试验品，你会很合适的！)]
 		</p>
 		<p>
-			[zaranix.speech(So, you thought you'd barge into my lab, pick a fight, and get away with it?! Hah!)] he shouts while stepping over to one of the lab's many cabinets. Grabbing a small glass bottle, he turns to face you once more and declares, [zaranix.speech(Well, Arthur and I were in need of a test subject, and you'll do nicely!)]
-		</p>
-		<p>
-			Before you can say anything, the huge incubus pulls the stopper out of the top of the bottle, and after quickly advancing upon you,
+			你还没来得及说话，这巨大的淫梦魔就把塞子从瓶口拔出，快速向你逼近，
 			#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, false))
-				 he kneels down and displaces your clothing so as to gain access to your mouth, after which he forces the rim of the bottle against your lips and demands,
+				他跪下把你的衣物挪开，以便接近你的嘴，然后把瓶口抵在你的嘴唇上，命令道，
 			#ELSE
-				 he kneels down and forces the rim against your lips, demanding,
+				他跪下身，把瓶口抵在你的嘴唇上，命令道，
 			#ENDIF
-			 [zaranix.speech(Come on, drink up! Arthur assures me that this particular concoction will transform you into the perfect little cock-sucker, and I can't wait to be the judge of that myself!)]
+			[zaranix.speech(来吧，全都喝光！亚瑟向我保证过这种特殊调配物会把你转化为一个完美的小口便器，我迫不及待想亲自上手评价一下了！)]
 		</p>
 		<p>
-			You still have a little energy left, and as you feel the first few drops of the potion seeping into your mouth, you realise that you could spit it out and try to throw the bottle to the floor. Then again, maybe it's best to just do as the demon says...
+			你还有点精力，所以当你感觉有几滴药水渗入你的嘴里时，你可以把它吐出，然后尝试把这瓶药扔向地板。话说回来，最好还是按照这恶魔说的去做……
 		</p>
 	#ELSE
 		<p>
-			You can't continue fighting any longer, and after letting out a defeated groan, you stagger backwards and slump down against one wall of Zaranix's lab. Glancing up at your conqueror, you see the imposing form of the huge incubus towering over you with a stern expression on his face.
+你再也无法继续战斗了，发出一声败北的呻吟后，你踉跄地向后退去，倚靠在扎拉尼克斯实验室的一面墙上。抬头看向你的征服者，你看到一个巨大的淫梦魔以严厉的表情屹立在你面前。
+</p>
+		<p>
+			[zaranix.speech(所以，你以为你闯进我实验室，又挑起争端之后还能逃之夭夭吗？！)]他责骂你，但又突然想到什么，问道，[zaranix.speech(与其让你轻易地被赶出去，不如让你自愿当测试用具来谢罪？)]
 		</p>
 		<p>
-			[zaranix.speech(So, you thought you'd barge into my lab, pick a fight, and get away with it?!)] he scolds you, before an idea suddenly seems to enter his mind and he asks, [zaranix.speech(Instead of simply being thrown out, how about you apologise by volunteering as a test subject?)]
-		</p>
-		<p>
-			Before you can say anything, the huge incubus grabs a glass bottle from out of a nearby cabinet, and after quickly advancing upon you, kneels down and playfully swirls around the liquid contained within.
+			你还没来得及说话，这巨大的淫梦魔就从附近的橱柜里抓起一个玻璃瓶，快速向你逼近，他跪下身，玩味地晃动瓶身，让里面的液体连连打转。
 			#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, false))
-				 Displacing your clothing so as to gain access to your mouth, he looks into your eyes and he states,
+				他脱下你的衣服，以便接近你的嘴，他看着你的眼睛说，
 			#ELSE
-				 Looking into your eyes, he states,
+				他看着你的眼睛说，
 			#ENDIF
-			 [zaranix.speech(Arthur assures me that this particular concoction will transform the drinker into the perfect little cock-sucker. I'm not going to force this on you, but if you feel even slightly sorry for what you've done, you can make it up to me by drinking this. After that, I'm sure you won't object to sucking my cock...)]
+			[zaranix.speech(亚瑟向我保证过这种特殊调配物会把喝的人转化为一个完美的小口便器。我不会强迫你，但如果你对自己的所作所为感到一丝抱歉，你可以喝这个来补偿我。在那之后，我确信你不会抗拒嗦我的鸡巴……)]
 		</p>
 		<p>
-			With both Zaranix and Arthur awaiting your response, you wonder whether to agree to drink the transformative liquid and then give the incubus a blowjob or instead simply get thrown out of the building...
+			扎拉尼克斯和亚瑟都在等着你的回答，你不知道是同意喝下转化液，然后给淫梦魔口交，还是被干脆利索地扔出这里……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_NO_MOUTH"><![CDATA[
 	<p>
-		With access to your mouth being blocked, Zaranix cannot make use of you as a test subject, and so instead of wasting any further time with you, he angrily reaches down and grabs your [pc.arm]. The grip of his big, strong hand is too much for you to escape from, and so left with little choice but to shuffle and crawl alongside Zaranix, you're quickly dragged back through the house and to the front door.
+		由于你的嘴巴被堵住了，扎拉尼克斯无法将你作为测试用具使用，因此他没有再在你身上浪费时间，而是愤怒地伸手抓住了你的[pc.arm]。你根本无法挣脱他粗壮有力的大手，只能在扎拉尼克斯身边摇摇晃晃地爬行，很快你就被拖回屋内，来到了前门。
 	</p>
 	<p>
-		[zaranix.speech(I wouldn't bother coming back, if I were you!)] he shouts as he throws you out into the street and slams the door behind you...
+		[zaranix.speech(如果我是你，就不会再回来了！)]他一边喊着，一边把你扔到街上，然后关上身后的门……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_REFUSE"><![CDATA[
 	<p>
-		Not at all interested in being transformed and then sucking Zaranix's cock, you flatly refuse to drink his potion. Before you can say anything further, the incubus angrily reaches down and grabs your [pc.arm]. The grip of his big, strong hand is too much for you to escape from, and so left with little choice but to shuffle and crawl alongside Zaranix, you're quickly dragged back through the house and to the front door.
+		你对转化然后给扎拉尼克斯口交一点兴趣都没有，断然拒绝喝他的药水。还没等你说下去，淫梦魔就愤怒地伸手抓住了你的[pc.arm]。他强壮的大手紧紧控制了你，你根本无法挣脱，只好拖着脚步爬到扎拉尼克斯身边，很快，你被他拽回了房子，来到前门。
 	</p>
 	<p>
-		[zaranix.speech(I wouldn't bother coming back, if I were you!)] he shouts as he throws you out into the street and slams the door behind you...
+		[zaranix.speech(如果我是你，就不会再回来了！)]他一边喊着，一边把你扔到街上，然后关上身后的门……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT_SPIT -->
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SPIT"><![CDATA[
 	<p>
-		There's no way you want to be transformed into Zaranix's 'perfect little cock-sucker'. Summoning the last of your energy, you twist your head to one side, spitting the few drops of the potion that entered your mouth to the floor, before grabbing the little glass bottle and hurling it to the other side of the room.
+		你绝对不想变成扎拉尼克斯的“小完美口交器”。你鼓起最后一丝力气，把头扭向一边，把嘴里的药水吐到地上，然后抓起小玻璃瓶扔到房间的另一边。
 	</p>
 	<p>
-		The sound of smashing glass is accompanied by a deep, booming roar as the now-furious incubus shouts, [zaranix.speech(You insolent #IF(pc.isFeminine())whore#ELSEbastard#ENDIF! You'll suck my cock, with or without that potion!)]
+		伴随着玻璃碎裂声的是一声低沉而洪亮的怒吼，愤怒的淫梦魔大声喊道，[zaranix.speech(你这个无礼的#IF(pc.isFeminine())婊子#ELSE混蛋#ENDIF！不管有没有药水，你都要给我口！)]
 	</p>
 	<p>
-		Grabbing you by the [pc.arm], Zaranix roughly drags you across the lab. Collapsing down in a nearby chair, he grabs you by the shoulders and pulls you forwards as he spreads his legs, bringing your face right up against his crotch and booming, [zaranix.speech(You're going to love my cock, slut!)]
+		扎拉尼克斯抓住你的[pc.arm]，粗暴地把你拖过实验室。你倒在旁边的椅子上，他抓住你的肩膀，把你往前拉，同时张开双腿，把你的脸紧紧贴在他的胯下，咆哮道，[zaranix.speech(你会爱上我的鸡巴的，荡妇！)]
 	</p>
 	<p>
-		Quickly undoing his trousers and pulling both them and his underwear down, he fully exposes his rapidly-hardening cock to you. Although a hefty [zaranix.cockLengthValues] in length, his girthy, [zaranix.cockColour] shaft is relatively plain for a demon, as its only uncommon attribute is being circled by a series of hard, fleshy ribs. As a bead of slimy precum starts to ooze from his urethra, the incubus grabs the back of your head and starts to pull your mouth towards his erect cock...
+		他快速地解开裤子，将裤子和内裤都拉了下来，迅速勃起的肉棒完全暴露在你面前。虽然他的[zaranix.cockLengthValues]很长，但他那粗壮的[zaranix.cockColour]阴茎对于一个恶魔来说却相对普通，因为它唯一不普通的地方就是被一系列坚硬的肉肋所环绕。淫梦魔的尿道口开始渗出一滴粘稠的精液，他抓住你的后脑勺，把你的嘴拽向他勃起的肉棒……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SPIT_SEX_START"><![CDATA[
 	<p>
-		You're far too exhausted from your fight to put up much of a resistance, and so quickly resigning yourself to your fate, you allow Zaranix to pull your face down into his groin. Pressing your [pc.lips+] against the head of his [zaranix.cock+], you obediently give it a big, wet kiss. Delighted by your submission, the incubus happily grunts, [zaranix.speech(That's it, slut. Keep on kissing it... Just like that...)]
+		你在战斗中精疲力竭，完全无法做出像样的抵抗。你很快便屈服于命运，任由扎拉尼克斯把你的脸拉到他胯下。他把你[pc.lips+]按在他[zaranix.cock+]的顶端，你乖乖热烈地湿吻起来。淫梦魔因为你的服从喜悦地咕哝着，[zaranix.speech(就是这样，荡妇。继续亲……就这样……)]
 	</p>
 	<p>
-		Doing as you're told, you plant a series of kisses on Zaranix's demonic cock, licking up his salty, oozing precum in the process. Following yet more of his instructions, you then move down and dart out your [pc.tongue+], before starting to lick the underside of his girthy shaft. It's only as you proceed to start kissing and licking his huge balls that you realise the incubus has let go of your head, but by this point you're so into what you're doing that you don't even consider pulling away.
+		你按命令下嘴，叭叭地亲着扎拉尼克斯的恶魔肉棒，舔净不断渗出的、咸咸的前走液。你还想做得更好，于是向下游移，拨弄着[pc.tongue+]，舐起粗肉棒的根来。你又开始舔弄他巨大的蛋蛋，这才发现淫梦魔不知何时放开了你的脑袋。但你并不想逃，只是专心致志地做起自己的事儿。
 	</p>
 	<p>
-		After he's made you spend a good few minutes kissing and licking his cock and balls, Zaranix seems ready for the main event, and after leaning back on his chair and spreading his legs, he commands, [zaranix.speech(Go on then, slut, take my cock down your throat. Show me what a good little cock-sucker you are...)]
+		你仔细地舔过扎拉尼克斯的肉棒和囊袋。他似乎想要来正戏了。只见他仰在椅子上岔开腿。命令道，[zaranix.speech(接着来，小骚货，把我的肉棒含进嗓子眼里。给我看看你有多会吸屌……)]
 	</p>
 	<p>
-		Feeling incredibly turned on and happy to obey, you lift your mouth up to the [zaranix.cockHead+] of Zaranix's cock, and after parting your [pc.lips+], you drop your head down and take his [zaranix.cock+] down your throat. Placing a hand on the back of your head, Zaranix lets out an approving grunt, which encourages you to start bobbing your head up and down and do your best to give him a good blowjob...
+		你感到无比兴奋，并乐于顺从，抬起嘴对准扎拉尼克斯鸡巴[zaranix.cockHead+]，你分开你[pc.lips+]，低下头将他[zaranix.cock+]含进喉咙。扎拉尼克斯把手放在你的后脑勺上，发出赞许的哼声，鼓励你上下晃动脑袋，尽最大努力为他口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SPIT_SEX_START_EAGER"><![CDATA[
 	<p>
-		Although you didn't like the idea of being transformed, you're excited as the prospect of getting to suck Zaranix's cock, and so you submissively let him pull your face down into his groin. Eagerly pressing your [pc.lips+] against the head of his [zaranix.cock+], you lovingly give it a big, wet kiss. Delighted by your enthusiasm, the incubus happily grunts, [zaranix.speech(That's it, slut. Keep on kissing it... Just like that...)]
+		虽然你不喜欢被转化的主意，但想到能给扎拉尼克斯口交还是让你兴奋不已，于是你顺从地让他把你的脸拉向他的下体。你迫不及待地将你[pc.lips+]紧紧贴在他[zaranix.cock+]头上，急切地给了他一个大大的湿吻。你的热情取悦了淫梦魔，他高兴地发出哼声，[zaranix.speech(就是这样，荡妇。继续亲它……就这样……)]
 	</p>
 	<p>
-		Not needing to be told what to do, you plant a series of passionate kisses on Zaranix's demonic cock, greedily licking up his salty, oozing precum in the process. Seeing that he doesn't need to give you any more instructions, Zaranix simply lets out a series of deep grunts as you then move down and dart out your [pc.tongue+], before starting to lick the underside of his girthy shaft. It's only as you proceed to start kissing and licking his huge balls that you realise the incubus has let go of your head, but the thought of pulling away doesn't even enter your mind for a moment.
+		不需要告诉你怎么做，你就会在扎拉尼克斯的恶魔鸡巴上留下一连串热情的吻，贪婪地舔舐着他咸咸的、渗出的先走液。扎拉尼克斯看到不需要再给你指示，只是发出了一连串低沉的闷哼，你向下移动，伸出你[pc.tongue+]，开始舔他粗壮的阴茎底部。当你开始亲吻和舔舐他巨大的睾丸时，你才意识到淫梦魔已经放开了你的脑袋，但你一时间甚至没有想到要抽身退开。
 	</p>
 	<p>
-		After you've spent a good few minutes kissing and licking his cock and balls, Zaranix seems ready for the main event, and after leaning back on his chair and spreading his legs, he commands, [zaranix.speech(Go on then, slut, take my cock down your throat. Show me what a good little cock-sucker you are...)]
+		在你花了几分钟时间亲吻和舔舐他的阴茎和睾丸后，扎拉尼克斯似乎已经准备好进行重头戏了，他靠在椅背上，张开双腿，命令道，[zaranix.speech(继续，荡妇，把我的鸡巴塞进你的喉咙里。让我看看你有多会吸鸡巴……)]
 	</p>
 	<p>
-		Feeling incredibly turned on and happy to obey, you lift your mouth up to the [zaranix.cockHead+] of Zaranix's cock, and after parting your [pc.lips+], you drop your head down and take his [zaranix.cock+] down your throat. Placing a hand on the back of your head, Zaranix lets out an approving grunt, which encourages you to start bobbing your head up and down and do your best to give him a good blowjob...
+		你感到无比兴奋，并乐于顺从，抬起嘴对准扎拉尼克斯鸡巴[zaranix.cockHead+]，你分开你[pc.lips+]，低下头将他[zaranix.cock+]含进喉咙。扎拉尼克斯把手放在你的后脑勺上，发出赞许的哼声，鼓励你上下晃动脑袋，尽最大努力为他口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SPIT_SEX_START_RESIST"><![CDATA[
 	<p>
-		Desperate not to have that thing in your mouth, you try to pull away from Zaranix's cock, but his grip on the back of your head is too strong, and after preventing your escape, he growls, [zaranix.speech(I see you're not going to play along, so we can skip the foreplay. Open wide, bitch!)]
+		你非常不想让扎拉尼克斯的鸡巴进入你的嘴里，试图远离它，但他抓你后脑勺的力气太大了。他阻止了你逃离，怒吼道， [zaranix.speech(我看你是不打算配合了，所以我们可以跳过前戏。嘴巴张大，贱人！)]
 	</p>
 	<p>
-		You're far too exhausted from your fight to put up much of a resistance, and feel totally powerless as the strong incubus pulls your head into his groin and forces the precum-coated head of his cock up against your [pc.lips+]. Pinching your nose, the incubus waits until you have to open your mouth to take a breath, and at that moment he roughly thrusts his hips and forces his hard cock into your mouth. With tears streaming down your face, you try to ignore the salty taste of the demon's precum as his girthy shaft forces its way past your tongue and down your throat.
+		强壮的淫梦魔将你的脑袋拉向他的下体，用沾满精液的阴茎头顶住你[pc.lips+]，你已经筋疲力尽，无力反抗，感到自己完全无能为力。淫梦魔捏住你的鼻子，等到你不得不张嘴呼吸时，他才粗暴地挺起臀部，将坚硬的鸡巴塞进你的嘴里。当恶魔的粗大阴茎穿过你的舌头，进入你的喉咙时，泪水从你的脸上流下来，你试图忽略恶魔先走液的咸味。
 	</p>
 	<p>
-		[zaranix.speech(Fuck, your throat feels good,)] Zaranix teases as he ignores your muffled, choking sobs. Using both hands, he starts forcefully bobbing your head up and down, and as he dominantly fucks your throat in this manner, he grunts, [zaranix.speech(That's it, slut... ~Mmm!~ You'll be swallowing my cum soon enough...)]
+		[zaranix.speech(操，你的喉咙真舒服，)]扎拉尼克斯玩弄着你，无视你低沉哽咽的啜泣声。他用双手用力上下摆动你的头，霸道地操着你的喉咙，发出闷哼，[zaranix.speech(就是这样，荡妇……~嗯！~你很快就能吞下我的精液……)]
 	</p>
 	<p>
-		Although your efforts are completely fruitless, you continue to do your best to try and resist as Zaranix continues to dominantly thrust his [zaranix.cock+] deep down your throat...
+		扎拉尼克斯继续强行将他[zaranix.cock+]深入你的喉咙，尽管你的反抗毫无结果，你仍然在竭尽全力……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT_SWALLOW -->
@@ -220,81 +220,81 @@
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SWALLOW"><![CDATA[
 	<p>
 		#IF(pc.hasFetish(FETISH_TRANSFORMATION_RECEIVING))
-			Loving the idea of being transformed, the thought of refusing this dominant incubus doesn't enter your head for even a moment. Opening wide to accept the neck of the bottle past your lips, you obediently take the thick, creamy liquid into your mouth.
+			你爱上了被改造的感觉，拒绝这个支配欲极强的淫梦魔的念头一刻也没有出现过。你张大嘴巴，接受瓶颈穿过嘴唇，顺从地将浓稠的乳白色液体吞入口中。
 		#ELSEIF(game.isNonConEnabled())
-			You decide that there's no point in resisting the dominant incubus, and so you obediently part your lips and take the thick, creamy liquid into your mouth.
+			你觉得反抗这个占主导地位的淫梦魔毫无意义，于是顺从地张开嘴唇，将浓稠的乳白色液体吞入口中。
 		#ELSE
-			Feeling as though being Zaranix's test subject is the least you could do, you obediently part your lips and take the thick, creamy liquid into your mouth.
+			你觉得成为扎拉尼克斯的测试用具是最起码的要求，于是顺从地张开嘴唇，把浓稠的乳白色奶油状液体吞进嘴里。
 		#ENDIF
-		 The potion turns out to have an extremely strong, salty taste to it, which is far from what anyone in their right mind could consider to be appetising. Scrunching your eyes shut and forcing yourself to start swallowing the unpleasant mixture, you quickly find yourself becoming accustomed to the taste, and by the time you've quickly downed the entire bottle, you're desperately licking and sucking every last drop from off of its rim.
+		这瓶药水原来有一股极其浓烈的咸味，任何正常人都不会认为它有什么食欲。你紧闭双眼，强迫自己开始吞咽这种难闻的混合物，很快你就发现自己已经习惯了这种味道，你很快喝下整瓶药水，并拼命舔吮瓶口上的每一滴药水。
 	</p>
 	<p>
-		As Zaranix takes the now-empty bottle away from your mouth, a fuzzy, warm feeling starts spreading across your face and up into your head. You suddenly find yourself thinking how utterly wonderful it would be if Zaranix gave you even more of that liquid to drink. Even better, you think, if there was an endless supply...
+		当扎拉尼克斯从你嘴边拿走已经空了的瓶子时，一种模糊而温暖的感觉开始在你脸上和脑子里蔓延开来。你突然发现自己在想，如果扎拉尼克斯能给你更多的液体喝，那该有多好。你想，如果有无穷无尽的供应，那该多好啊……
 	</p>
 	<p>
-		Perhaps you could convince Zaranix to enchant his cock so that he cums that delicious liquid...
+		也许你可以说服扎拉尼克斯给他的鸡巴附魔，让他射出美味的液体……
 	</p>
 	<p>
-		You'd happily wrap your fat, juicy, cock-sucking lips -<i>were they always this big?</i>- around his huge, thick cock if it meant you got to taste that again... You can't help but salivate at the thought, and absently-mindedly run your slimy tongue over your gigantic lips as you imagine getting to taste that same salty mixture again...
+		如果能再次品尝到他那又大又粗的阴茎，你会很乐意用你肥厚水润的嘴唇-<i>它们总是这么大吗？</i>-想到这里，你不禁垂涎欲滴，用粘糊糊的舌头在巨大的嘴唇上舔来舔去，想象着能再次品尝到那咸咸的混合物……
 	</p>
 	<i>[#pc.incrementLipSize(7)]</i>
 	<i>[#pc.incrementFaceWetness(7)]</i>
 	<p>
-		Now that you think about it, just getting to suck his cock would be reward enough! A desperate, overwhelming need to orally service Zaranix's huge demonic dick causes you to let out an incredibly lewd moan. You need to kiss his cock... You <i>need</i> his cock in your mouth... No, you <b><i>need</i></b> it thrusting as deep as possible down your throat!
-	</p>
+		你仔细想了想，你只要吸吮他的恶魔鸡巴就足够了！对扎拉尼克斯巨大恶魔阴茎口交的迫切，压抑的需求让你发出了令人难以置信的淫荡呻吟。你想要他的鸡巴……是你<i>需要</i>亲吻他的鸡巴……不，是你<b><i>需要</i></b>他的鸡巴，并迫不及待的要将它狠狠的塞进你的喉咙深处了！
+	</p>，
 	<i>[#pc.addFetish(FETISH_ORAL_GIVING)]</i>
 	<i>[#pc.incrementFaceDepth(2)]</i>
 	<p>
-		You can't help but continue to lick your massive, cock-sucking lips as you imagine the incubus hilting his shaft deep down your throat and giving you your delicious reward; a huge load of his salty, demonic cum... You'd swallow every drop and beg for more... You can't help it; you simply <i>need</i> to drink some cum!
+		当你想象着淫梦魔将他的阴茎插入你的喉咙深处，给你美味的回报时，你会情不自禁地继续舔舐你吸吮鸡巴的丰唇；他咸咸的、恶魔般的精液……你会吞下每一滴精液，并乞求更多……没办法，毕竟你真的<i>需要</i>尝尝精液！
 	</p>
 	<i>[#pc.addFetish(FETISH_CUM_ADDICT)]</i>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SWALLOW_START"><![CDATA[
 	<p>
-		With a triumphant smirk on [zaranix.her] face, Zaranix steps back and sits down on one of the lab's many chairs. Spreading [zaranix.her] legs, [zaranix.she] grins at you and teases, [zaranix.speech(I bet you want to put those new lips of yours to use, don't you, my little cock-sucker?)]
+		[zaranix.her]脸上带着胜利的微笑，后退一步，坐在实验室的一把椅子上。张开[zaranix.her]的双腿，对着你咧嘴一笑，挑逗道，[zaranix.speech(我敢打赌，你一定很想用用你的新嘴唇，是不是，我的小口便器？)]
 	</p>
 	<p>
-		You let out an intense, desperate whine as you gaze hungrily at the bulge in Zaranix's groin. Before you know what you're doing, you've dropped down in front of [zaranix.herHim] and are running your hands over [zaranix.her] groin. Your huge, juicy lips cause you to uncontrollably speak with a lisp as you plead, [pc.speechNoEffects(~Mmm!~ Plea<i>th</i>e! Need... cock!)]
+		当你饥渴地注视着扎拉尼克斯腹股沟的隆起时，你发出了迷乱饥渴的唔叫。在你意识到自己在做什么之前，你已经趴在了[zaranix.herHim]的面前，双手抚摸着[zaranix.her]的下体。你那巨大而饱满的嘴唇让你在恳求时不受控制地口齿不清，[pc.speechNoEffects(~唔嗯！~ 裘<i>求</i>！想要……肉棒！)]
 	</p>
 	<p>
-		[zaranix.speech(Hah!)] the [zaranix.race] booms, [zaranix.speech(Then get to it, cock-sucker!)]
+		[zaranix.speech(哈！)][zaranix.race]激动地说，[zaranix.speech(动起来，口便器！)]
 	</p>
 	<p>
-		Letting out a desperate, horny whine, you move as quickly as you can to undo Zaranix's trousers, before pulling both them and [zaranix.her] underwear down and fully exposing [zaranix.her] rapidly-hardening cock. Although a hefty [zaranix.cockLengthValues] in length, [zaranix.her] girthy, [zaranix.cockColour] shaft is relatively plain for a demon, as its only uncommon attribute is being circled by a series of hard, fleshy ribs. As a bead of slimy precum starts to ooze from [zaranix.her] urethra, you feel your saliva uncontrollably drooling from the corners of your mouth.
+		你发出一声迷乱而饥渴的低吼，以最快的速度解开了扎拉尼克斯的裤子，然后将裤子和[zaranix.her]的内衣都拉了下来，完全暴露出[zaranix.her]迅速勃起的阴茎。虽然[zaranix.her]的[zaranix.cockLengthValues]长度不小，但[zaranix.her]粗壮的[zaranix.cockColour]阴茎对于恶魔来说相对常见，因为它唯一不常见的特征就是被一系列坚硬的肉筋旋绕着。当[zaranix.her]的尿道口开始渗出一滴粘稠的先走液时，你感觉自己的口水不受控制地从嘴角流了下来。
 	</p>
 	<p>
-		[zaranix.speech(No sense in keeping you waiting; you'll be getting the floor wet at this rate!)] Zaranix laughs, before thrusting [zaranix.her] erect cock towards your face. Desperate to get started, you let out a series of horny little whines as you set about planting a series of passionate, wet kisses on Zaranix's demonic cock, greedily licking up [zaranix.her] salty, oozing precum in the process. The dominant demon simply lets out a series of deep grunts as you then move down and dart out your [pc.tongue+], before starting to lick the underside of [zaranix.her] girthy shaft. You then proceed to move your juicy lips down to start kissing and licking [zaranix.her] huge balls, and within a few moments, you've coated the demon's genitalia in a slimy layer of your slippery saliva.
+		[zaranix.speech(没必要让你久等，这样下去你会把地板弄湿的！)]扎拉尼克斯大笑起来，然后将[zaranix.her]勃起的阴茎朝你的脸上插去。你迫不及待地发出一连串淫荡的呻吟，开始对扎拉尼克斯的恶魔阴茎进行一系列热情的湿吻，贪婪地舔食[zaranix.her]咸咸的、渗出的精液。当你向下移动并伸出你[pc.tongue+]开始舔[zaranix.her]的阴茎底部时，这个恶魔发出了一连串低沉的咕哝声。然后，你继续向下移动多汁的嘴唇，开始亲吻和舔舐[zaranix.her]硕大的睾丸，不一会儿，你就在恶魔的鸡巴上舔上了一层黏糊糊、滑溜溜的唾液。
 	</p>
 	<p>
-		[zaranix.speech(This potion turned out to be a huge success,)] Zaranix teases, before leaning back on [zaranix.her] chair and spreading [zaranix.her] legs. Grinning down at you, [zaranix.she] commands, [zaranix.speech(Go on then, slut, take my cock down your throat. Show me what a good little cock-sucker you've turned into...)]
+		[zaranix.speech(这种药水最终获得了巨大成功，)]扎拉尼克斯挑逗道，然后靠在[zaranix.her]的椅子上，张开双腿。[zaranix.she]冲你咧嘴一笑，命令道，[zaranix.speech(来吧，荡妇，把我的鸡巴塞进你的喉咙里。让我看看你变成了一个多么乖巧的小口便器……)]
 	</p>
 	<p>
-		Feeling incredibly turned on and happy to obey, you lift your mouth up to the [zaranix.cockHead+] of Zaranix's cock, and after parting your huge, juicy lips, you drop your head down and take [zaranix.her] [zaranix.cock+] down your throat. Placing a hand on the back of your head, Zaranix lets out an approving grunt, which encourages you to start bobbing your head up and down as you desperately anticipate [zaranix.her] hot cum shooting deep down your throat...
+		你感到无比兴奋，并乐于服从，抬起嘴对准扎拉尼克斯[zaranix.cockHead+][zaranix.cock+]，分开巨大而饱满的嘴唇后，把头低下，把[zaranix.her][zaranix.cock+][zaranix.cock+]含进喉咙。扎拉尼克斯把手放在你的后脑勺上，发出赞许的咕哝声，这鼓励你开始上下晃动头部，因为你迫切地期待着[zaranix.her]滚烫的精液射入你的喉咙深处……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SWALLOW_ZARANIX_TF_START"><![CDATA[
 	<p>
-		Although your mind is almost totally fogged over with the desperate need to suck Zaranix's cock, you still can't help but feel slightly uncomfortable about how masculine he is. Momentarily shaking the overwhelming desire to suck cock out of your mind, you ask the dominant demon if he could use his self-transformative powers to take on a feminine form.
+		尽管你的脑子已经不清不楚，急切地想吮吸扎拉尼克斯的阴茎，但你还是有点膈应这男性化的外表。你暂时摆脱脑中吮吸阴茎的巨大欲望，讯问现在占主导地位的恶魔可不可以使用自身转化的能力变成女性化的形态。
 	</p>
 	<p>
-		[zaranix.speech(Oh, you want to see me as a succubus?)] Zaranix asks in a slightly annoyed tone, before rolling his eyes and sighing, [zaranix.speech(I suppose I'm a rare exception to the rule in that I'm a demon that prefers to stay as an incubus, but I don't particularly dislike my succubus form. Seeing as you've agreed to swallow that potion, I suppose it's only fair that I do something for you...)]
+		[zaranix.speech(哦，你希望我看起来像个魅魔吗？)]扎拉尼克斯略带恼怒地问道，翻了白眼，叹息说，[zaranix.speech(我想我是恶魔中罕见的更喜欢保持淫梦魔形态的存在，但我并非很讨厌我的魅魔形态。只是看到你同意喝下药水，我想我这样做对你才公平……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SWALLOW_ZARANIX_TF_END"><![CDATA[
 	<p>
-		As you watch, Zaranix's masculine features start to soften and become distinctly more feminine, and while she retains her muscles and short, black hair, she shrinks down a little and gains more mass around her hips, ass, and chest. Within a few moments, Zaranix has completely transformed into her tomboyish succubus form, and after clearing her throat, she teases, [zaranix.speech(You prefer me like this then? Do these get you turned on too?)]
+		看着看着，扎拉尼克斯阳刚的五官开始变得柔和，并明显变得更加女性化，虽然她还保留着肌肉和黑色短发，但她的身材却缩小了一些，臀部、屁股和胸部的肉更多了。不一会儿，扎拉尼克斯就完全变成了假小子魅魔形态。她清了清嗓子挑逗起来，[zaranix.speech(那你喜欢我这样吗？这些也能让你兴奋吗？)]
 	</p>
 	<p>
-		With that, the succubus unbuttons her shirt and reveals her breasts to you. While extremely small by succubus standards, they're still about a [zaranix.cupSize]-cup, and sport large, dark-purple nipples on each of their perky tips. Liking Zaranix's new form far more than the one she had before, you find yourself lustfully gazing first at her chest, and then down to her groin, where there's still a large bulge pressing out from beneath her trousers. Seeing what it is you're looking at, the succubus laughs and teases, [zaranix.speech(Still hungry for cock, huh? Well, I guess I should indulge you...)]
+		魅魔一边说，一边解开衬衫扣子，露出胸部。虽然以魅魔的标准来看太小了，但这还是有[zaranix.cupSize]罩杯，每个奶子上都挺立着暗紫色的大乳头。比起以前，你更喜欢扎拉尼克斯的新造型。便色眯眯地盯着她的胸看，然后视线下移到腹股沟，那里的裤子已大大凸起。魅魔意识到你的目光，巴笑着调侃道，[zaranix.speech(还想吃鸡巴吗，嗯？好好好，我想我应该放任你……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_DEFEAT -->
@@ -302,33 +302,33 @@
 	<htmlContent tag="AFTER_SEX_DEFEAT"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_zaranixTransformedPlayer))
 		<p>
-			Having had enough of using your mouth, Zaranix rather unceremoniously pushes you away and stands up, before stating, [zaranix.speech(I'd definitely call that potion a success! Those lewd, juicy lips of yours feel better than most pussies!)]
+			扎拉尼克斯用够了你的嘴，毫不客气地推开你站了起来，然后说道，[zaranix.speech(我肯定会说这药水很成功！你那淫荡饱满水润的嘴唇比大多数小穴都要舒服！)]
 		</p>
 		<p>
-			Before you can reply, the [zaranix.race] reaches down and pushes [zaranix.her] thumb into your mouth. Grinning as [zaranix.she] gets a good feel of your massive, cum-coated lips, [zaranix.she] turns [zaranix.her] head towards the door and calls out, [zaranix.speech(Arthur, get back in here! You can have a go at fucking [pc.her] face too; this potion was your creation, so it's only fitting that you get to enjoy it!)]
+			还没等你回答，[zaranix.race]就伸手把[zaranix.her]的拇指塞进了你的嘴里。当[zaranix.she]充分感受到你那涂满精液的巨大嘴唇时，[zaranix.she]咧嘴一笑，把[zaranix.her]的头转向门口，大声叫道，[zaranix.speech(亚瑟，快回来！你也可以在[pc.her]的脸上来一发；这药水是你的杰作，所以由你来享用再合适不过了！)]
 		</p>
 		<p>
-			Arthur, who you'd forgotten about until now, seemed to have hastily exited the room some time during your transformation, and after returning from his brief exile to the corridor, flatly states, [arthur.speech(No thank you, Zaranix. I created that potion to your specifications; it's not like I had any intention of using it.)]
+			在你进行转化的时候，亚瑟似乎匆忙离开了房间，从走廊短暂等待了片刻，刚刚才回来，他平淡地说道，[arthur.speech(不，谢谢你，扎拉尼克斯。那药水是我按照你的要求制作的，我没打算用它。)]
 		</p>
 	#ELSE
 		<p>
-			Having had enough of using your mouth, Zaranix rather unceremoniously pushes you away and stands up, before stating, [zaranix.speech(You're not half bad at sucking cock, slut!)]
+			扎拉尼克斯用够了你的嘴，毫不客气地推开你站了起来，然后说道，[zaranix.speech(你的口交技术还不赖嘛，荡妇！)]
 		</p>
 		<p>
-			Before you can reply, the [zaranix.race] reaches down and pushes [zaranix.her] thumb into your mouth. Grinning as [zaranix.she] gets a good feel of your cum-coated lips, [zaranix.she] turns [zaranix.her] head towards the door and calls out, [zaranix.speech(Arthur, get back in here! You can have a go at fucking [pc.her] face too!)]
+			还没等你回答，[zaranix.race]就伸手把[zaranix.her]的拇指塞进了你的嘴里。[zaranix.she]充分感受到你涂满精液的嘴唇，咧嘴一笑，把[zaranix.her]的头转向门口，叫道，[zaranix.speech(亚瑟，回来！你也可以在[pc.her]的脸上来一发！)]
 		</p>
 		<p>
-			Arthur, who you'd forgotten about until now, seemed to have hastily exited the room some time before you started sucking Zaranix's cock, and after returning from his brief exile to the corridor, flatly states, [arthur.speech(No thank you, Zaranix. I'd like to get back on with my work.)]
+			你刚想起亚瑟，他似乎匆忙离开了房间，然后，你吃起扎拉尼克斯的鸡巴来。过了一小会，他回到走廊，断然地说，[arthur.speech(不了，扎拉尼克斯，谢谢你。我想回去继续工作了。)]
 		</p>
 	#ENDIF
 	<p>
-		[zaranix.speech(Your loss,)] Zaranix huffs, before grabbing hold of your [pc.arm] and unceremoniously pulling you along beside [zaranix.herHim] as [zaranix.she] heads towards the door. Looking down at you, [zaranix.she] growls, [zaranix.speech(I'll forgive your earlier actions, but you're still trespassing, so I'll show you to the door.)]
+		[zaranix.speech(你的损失，)]扎拉尼克斯哼了一声，然后抓住你的[pc.arm]，毫不客气地把你拉到[zaranix.herHim]旁边，[zaranix.she]朝门口走去。看着你，咆哮着，[zaranix.speech(我原谅你之前的行为，但你仍然擅自闯入，所以我送你到门口。)]
 	</p>
 	<p>
-		Left with little choice but to shuffle and crawl alongside the dominant [zaranix.race], you're quickly dragged back through the house and to the front door. [zaranix.speech(I wouldn't bother coming back, unless you want another taste of my cock, slut!)] Zaranix laughs, before throwing you out into the street and slamming the door behind you...
+		你别无选择，只能挪爬到支配者zaranix.race]旁边，很快被拖进屋里，拽到前门。[zaranix.speech(别再回来了，小荡妇！除非你还想吃我的鸡巴！)]扎拉尼克哈哈大笑，把你扔到街上，砰地一声关上门……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

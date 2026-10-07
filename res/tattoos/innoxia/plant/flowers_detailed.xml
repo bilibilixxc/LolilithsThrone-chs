@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>1000</value> 
 		
-		<name><![CDATA[detailed flowers]]></name>
+		<name><![CDATA[精致的花朵]]></name>
 		
-		<description><![CDATA[This tattoo depicts a flowing series of intertwined flowers.]]></description> 
-		<bodyOverviewDescription><![CDATA[a floral-themed tattoo, depicting a flowing series of intertwined flowers]]></bodyOverviewDescription> 
+		<description><![CDATA[交织在一起的盛开的花朵。]]></description> 
+		<bodyOverviewDescription><![CDATA[以花卉为主题的纹身，描绘了一系列交织在一起的盛开花朵]]></bodyOverviewDescription> 
 		
 		<imageName>flowers_detailed.svg</imageName> 
 		

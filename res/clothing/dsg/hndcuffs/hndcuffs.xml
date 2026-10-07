@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 	
-		<authorTag><![CDATA["Official Enforcer Issue, MFD by DSG Threadworks" has been stamped into the left cuff.]]></authorTag>
+		<authorTag><![CDATA[左袖口印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 		
 		<value>450</value> 
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一副]]></determiner>
 		
-		<name><![CDATA[handcuffs]]></name>
+		<name><![CDATA[手铐]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[handcuffs]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[手铐]]></namePlural> 
 		
-		<description><![CDATA[A pair of nickel-plated steel handcuffs linked together with a short, sturdy chain commonly issued to Enforcers. Although relatively compact, they are enchanted to fit a variety of wrist sizes and types.]]></description> 
+		<description><![CDATA[一副镀镍钢制的手铐，通过一条短而坚固的链子相连，通常发给执法者使用。尽管尺寸较小，但它们经过附魔，可以适应各种粗细的手腕。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity>
 		
@@ -62,26 +62,26 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the handcuffs around [npc.her] wrists.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the handcuffs around [npc2.namePos] wrists.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the handcuffs around [npc2.namePos] wrists.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]把手铐拷在[npc.her]的手腕上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把手铐拷在[npc2.namePos]的手腕上。
+		]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地强行把手铐拷在[npc2.namePos]的手腕上。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unfasten)] the handcuffs from around [npc.her] wrists.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unfasten)] the handcuffs from around [npc2.namePos] wrists.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] the handcuffs from around [npc2.namePos] wrists.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把手铐从[npc.her]的手腕上解开。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把手铐从[npc2.namePos]的手腕上解开。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地用力解下[npc2.namePos]的手腕上的手铐。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

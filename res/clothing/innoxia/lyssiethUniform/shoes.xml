@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>1000</value> 
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一双]]></determiner>
 		
-		<name><![CDATA[service dress shoe]]></name>
+		<name><![CDATA[军装礼服皮鞋]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[service dress shoes]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[军装礼服皮鞋]]></namePlural> 
 		
-		<description><![CDATA[A pair of women's leather shoes, which are worn as part of Lyssieth's guards' uniform.]]></description> 
+		<description><![CDATA[一双女式皮鞋，是莉西丝卫兵制服的一部分。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

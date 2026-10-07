@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_deer</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[deer-morph]]></name>
-	<namePlural><![CDATA[deer-morphs]]></namePlural>
+	<name><![CDATA[鹿化形]]></name>
+	<namePlural><![CDATA[鹿化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[deer]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[鹿]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[deer]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[鹿]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[deer]]></defaultTransformName>
+	<defaultTransformName><![CDATA[鹿]]></defaultTransformName>
 	
 	<colour>innoxia_deer</colour>
 	

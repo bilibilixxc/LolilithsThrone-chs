@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- ENFORCER_ALLEYWAY_START -->
@@ -18,271 +18,273 @@
 	<p>
 		#IF(canal)
 			#IF(!game.isDayTime())
-				As you [pc.walk] down the side of the dark canal, you suddenly see the light of an arcane-powered flashlight shining out from around a bend in the waterway up ahead.
+				你沿着黑暗隧道的一边[pc.walk]下去，突然看到一束奥术驱能的手电筒的光从对面水路的拐弯处照出来。
 			#ELSE
-				As you [pc.walk] down the side of the canal, you suddenly hear a pair of voices drawing louder from around a bend in the waterway up ahead.
+				你沿着隧道的一边[pc.walk]下去，突然听到对面水路的拐弯处传来越来越大的二人声音。
 			#ENDIF
 		#ELSE
 			#IF(!game.isDayTime())
-				As you [pc.walk] down the dark alleyway, you suddenly see the light of an arcane-powered flashlight shining out from around the next corner.
+				你沿着黑暗小巷的一边[pc.walk]下去，突然看到一束奥术驱能的手电筒的光从前面拐角照出来。
 			#ELSE
-				As you [pc.walk] down the narrow alleyway, you suddenly hear a pair of voices drawing louder from around the next corner.
+				你沿着小巷的一边[pc.walk]下去，突然听到前面的拐角传来越来越大的二人声音。
 			#ENDIF
 		#ENDIF
 		#IF(playerEscaped)
-			 Preparing yourself for the worst, you get ready to defend yourself, and sure enough, as you recognise the two Enforcers who step around the corner as [npc.name] and [npc2.name], you realise that you're about to be attacked.
+			做好最坏的打算，你准备好防御。理所当然的是，你认出了来者是[npc.name]和[npc2.name]两个执法者，意识到自己马上就要被攻击了。
 		#ELSE
-			 Preparing yourself for the worst, you get ready to defend yourself, but as you recognise the two Enforcers who step around the corner as [npc.name] and [npc2.name], you realise that this encounter might not involve any hostilities.
+			做好最坏的打算，你准备好防御。但当你认出来者是[npc.name]和[npc2.name]两个执法者，意识到这次邂逅可能并没有什么敌意。
 		#ENDIF
 	</p>
 	#IF(playerEscaped)
 		<p>
-			[npc.speech(Hey! It's you again!)] [npc.name] exclaims, [npc.speech(You won't escape from us this time!)]
+			[npc.speech(嘿！又是你！)][npc.name]惊呼道，[npc.speech(这次你可逃不掉咯！)]
 		</p>
 		<p>
-			[npc2.speech(You'll pay for attacking us before!)] [npc2.name] shouts as [npc2.she] draws [npc2.her] baton and rushes forwards to assist [npc2.her] superior in attempting to take you down.
+			[npc2.speech(上次敢攻击我们，这次你会付出代价的！)][npc2.name]大喊着，并[npc2.she]挥舞着[npc2.her]的警棍冲上前，意图协助先[npc2.her]一步的伙伴击倒你。
 		</p>
 		<p>
-			It looks as though you're going to have to either defend yourself against these Enforcers, or choose to run away again...
+			似乎你只能选择要么防御这些执法者，要么再次逃跑……
 		</p>
 	#ELSEIF(foughtPlayer)
 		<p>
-			[npc.speech(Oh, it's you again,)] [npc.name] states as [npc.she] catches sight of you. Placing one hand on the baton at [npc.her] side, [npc.she] states, [npc.speech(You don't know how lucky you are to have had Lilaya come and rescue you; the typical punishment for resisting arrest and assaulting officers is slavery...)]
+			[npc.speech(哦，又是你啊。)][npc.name]一看到你就声明到，并把手放在身侧的警棍上。[npc.speech(你不明白被莉莱雅来所救是多幸运。拘捕和骚扰警官的典型惩罚是被奴役……)]
 		</p>
 		<p>
-			[npc2.speech(You'd better not try any of your bullshit again,)] [npc2.name] snarls, [npc2.speech(unless you're wanting us to give you another beating!)]
+			[npc2.speech(你最好别再打什么鬼点子了。)][npc2.name]怒吼道，[npc2.speech(除非你想让我们再揍你一顿！)]
 		</p>
 		<p>
-			[npc.speech(We're not interested in dealing with someone related to an Elder Lilin, so unless you've got some criminal activity to report, then stay out of our way,)] [npc.name] says.
+			[npc.speech(我们对处理和莉琳长老相关的人没兴趣。除非你需要报告什么犯罪行为，否则别挡我们的道！)][npc.name]对你说。
 		</p>
 		<p>
-			Knowing that you're under the protection of Lilaya, these two Enforcers clearly aren't interested in harassing you. You could simply continue on your way, or if you wanted to, you could always attempt to fight them again...
+			这俩执法者知道你处于莉莱雅的保护下，没兴趣骚扰你。你可以就这样继续旅程，或者如果你想惹事的话，也能故意找茬……
 		</p>
 	#ELSE
 		#IF(playerEnforcer)
 			#IF(game.getDialogueFlags().getSavedLong("impersonating_candi") > 0)
 				<p>
-					Upon seeing a familiar face, the two officers visibly relax, and [npc.name] greets you by saying,
+					一看到这张熟悉的脸，两位警官肉眼可见地放松。[npc.name]向你打招呼：
 					#IF(game.isDayTime())
-					 [npc.speech(Ah, Constable [candi.surname]. Out for a stroll?)]
+					[npc.speech(啊，[candi.surname]警员。出来散步吗？)]
 					#ELSE
-					 [npc.speech(Ah, Constable [candi.surname]. You're out here late. Taking a stroll?)]
+					[npc.speech(啊，[candi.surname]警员。这么晚了还在外面啊，是在散步吗？)]
 					#ENDIF
-					 Putting on your best [candi.Name] impression, you affirm that you are.
+					为了给人留下你最好的[candi.Name]印象，你以肯定向两人确认。
 				</p>
 				<p>
-					 [npc2.speech(Taking a break from vacuuming, I'm sure,)] the [npc2.name] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow.
+					[npc2.speech(肯定是从扫黑的工作中放松下。)][npc2.name]轻声喃喃自语，很快就被[npc2.her]的[npc.race]伙伴肘了一下。
 				</p>
 				<p>
-					 Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're still behind on our quota this week... If you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you'll think about it.
+
+					那[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会的。
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_claire") > 0)
 				<p>
-					Upon seeing a familiar face, the two officers visibly relax and briskly salute you. The [npc.name] greets you by saying,
+					一看到这张熟悉的脸，两位警官肉眼可见地放松。[npc.name]向你打招呼：
 					#IF(game.isDayTime())
-					 [npc.speech(Ah, Sergeant [claire.surname], [pc.sir]. Out for a stroll up top?)]
+					[npc.speech(啊，[claire.surname]警长，[pc.sir]。出来散步吗？)]
 					#ELSE
-					 [npc.speech(Ah, Sergeant [claire.surname], [pc.sir]. Out for a stroll up top? It's awfully late.)]
+					[npc.speech(啊，[claire.surname]警长，[pc.sir]。这么晚了还在外面啊，是在散步吗？)]
 					#ENDIF
-					 Putting on your best [claire.Name] impression, you affirm that you are.
+					为了给人留下你最好的[claire.Name]印象，你以肯定向两人确认。
 				</p>
 				<p>
-					 [npc2.speech(Must be nice to get proper breaks,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow. 
+					[npc2.speech(能适当放松真好啊。)][npc2.race]轻声喃喃自语，很快就被[npc2.her]的[npc.race]伙伴肘了一下。
 				</p>
 				<p>
-					Quickly changing the subject,  the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're still behind on our quota this week... If you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you will.
+					那[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会的。
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_brax") > 0)
 				<p>
-					Upon seeing a superior officer, the two officers visibly stiffen and give you a crisp salute. The [npc.race] greets you by saying, [npc.speech(Inspector [brax.surname], [pc.sir], everything is in order here.)] Putting on your best [brax.Name] impression, you tell the pair to be at ease.
+					一看见一位上级警官，两位警官肉眼可见地紧绷，并给你一个干脆的敬礼。那[npc.race]向你打招呼说，[npc.speech([brax.surname]督察，[pc.sir]，这里没什么问题！)]为了给人留下你最好的[brax.Name]印象，你告诉两人放轻松。
 				</p>
 				<p>
-					[npc2.speech(Office must get stuffy with all that pussy,)] the [npc2.name] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.name]'s elbow. 
+					[npc2.speech(办公室肯定被那傻逼搞得很闷吧。)][npc2.name]轻声喃喃自语，很快就被[npc2.her]的[npc.race]伙伴肘了一下。
 				</p>
 				<p>
-					Quickly changing the subject, the [npc.name] asks you for a favour, [npc.speech(We'll be around if you need us, [pc.sir], just let us know.)]
+					[npc.name]马上转换了话题，[npc.speech(如果你需要我们就会在你身边，[pc.sir]。告诉我们就行。)]
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_wes") > 0)
 				<p>
-					Upon seeing a familiar face, the two officers visibly relax and briskly salute you. The [npc.name] greets you by saying,
+					一看到这张熟悉的脸，两位警官肉眼可见地放松，并迅速向你敬礼。[npc.name]对你打着招呼，
 					#IF(game.isDayTime())
-					 [npc.speech(Ah, Quartermaster. Out for a stroll, [pc.sir]?)]
+					[npc.speech(啊，军需官。出来散步吗，[pc.sir]？)]
 					#ELSE
-					 [npc.speech(Ah, Quartermaster. Taking a stroll, [pc.sir]? It's awfully late.)]
+					[npc.speech(啊，军需官。是在散步吗，[pc.sir]？现在非常晚了。)]
 					#ENDIF
-					 Putting on your best [wes.Name] impression, you affirm that you are.
+					为了给人留下你最好的[wes.Name]印象，你以肯定向两人确认。
 				</p>
 				<p>
-					 [npc2.speech(Didn't know [pc.she] was even capable of taking breaks,)] the [npc2.name] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.name]'s elbow. 
+					[npc2.speech(也不知道[pc.she]有没有能力休息，)][npc2.name]轻声喃喃自语，很快就被[npc.name]肘了一下。
 				</p>
 				<p>
-					Quickly changing the subject, the [npc.name] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're behind on our quota this week... if you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you will.
+					[npc.name]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会的。
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_elle") > 0)
 				<p>
-					Upon seeing a familiar face, the two officers visibly relax and briskly salute you. The [npc.name] greets you by saying,
+					一看到这张熟悉的脸，两位警官肉眼可见地放松，并干脆地向你敬礼。[npc.name]对你打着招呼，
 					#IF(game.isDayTime())
-					 [npc.speech(Ah, Quartermaster. Out for a stroll, [pc.sir]?)]
+					[npc.speech(啊，军需官。出来散步吗，[pc.sir]？)]
 					#ELSE
-					 [npc.speech(Ah, Quartermaster. Taking a stroll, [pc.sir]? It's awfully late.)]
+					[npc.speech(啊，军需官。是在散步吗，[pc.sir]？现在非常晚了。)]
 					#ENDIF
-					 Putting on your best [elle.Name] impression, you affirm that you are.
+					为了给人留下你最好的[elle.Name]印象，你以肯定向两人确认。
 				</p>
 				<p>
-					 [npc2.speech(Armory must get real stuffy from all the fucking,)] the [npc2.name] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.name]'s elbow. 
+					[npc2.speech(军械库一定很他妈闷吧。)][npc2.name]轻声喃喃自语，很快就被[npc.name]肘了一下。
 				</p>
 				<p>
-					Quickly changing the subject, the [npc.name] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're behind on our quota this week... if you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you will and take note of the names on their vests.
+					[npc.name]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两位警官你会的。
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_nysa") > 0)
 				<p>
-					Upon seeing a superior officer, the two officers visibly stiffen and give you a crisp salute. The [npc.name] greets you by saying, [npc.speech(Commissioner, [pc.sir], everything is in order here.)] Putting on your best Nysa impression, you tell the pair to be at ease.
+					一看见一位上级警官，两位警官肉眼可见地紧绷，并给你一个干脆的敬礼。那[npc.race]向你打招呼说，[npc.speech(首长，[pc.sir]，这里一切井然有序。)]为了给人留下你最好的妮萨印象，你告诉两人放轻松。
 				</p>
 				<p>
-					[npc2.speech(Just our luck,)] the [npc2.name] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.name]'s elbow. 
+					[npc2.speech(偏偏这么倒霉。)][npc2.name]轻声喃喃自语，很快就被[npc.name]肘了一下。
 				</p>
 				<p>
-					Quickly changing the subject, the [npc.name] asks you for a favour, [npc.speech(We'll be around if you need us, [pc.sir], just let us know.)]
+					[npc.name]马上转换了话题，[npc.speech(如果你需要我们就会在你身边，[pc.sir]。告诉我们就行。)]
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_sean") > 0)
 				<p>
-					Upon seeing a familiar face, the two officers visibly relax, and the [npc.name] greets you by saying,
+					一看到这张熟悉的脸，两位警官肉眼可见地放松。[npc.name]向你打招呼：
 					#IF(game.isDayTime())
-					 [npc.speech(Ah, Constable [sean.surname]. Out for a stroll?)]
+					[npc.speech(啊，[sean.surname]警员。出来散步吗？)]
 					#ELSE
-					 [npc.speech(Ah, Constable [sean.surname]. You're out here late. Taking a stroll?)]
+					[npc.speech(啊，[sean.surname]警员。现在已经很晚了，你是在散步吗？)]
 					#ENDIF
-					 Putting on your best [sean.Name] impression, you affirm that you are.
+					为了给人留下你最好的[sean.Name]印象，你以肯定向两人确认。
 				</p>
 				<p>
-					 [npc2.speech(Probably trying to get into [candi.NamePos] pants again, I'm sure,)] the [npc2.name] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow.
+					[npc2.speech(我敢肯定这人又在试着爬进[candi.NamePos]的裤子里。)][npc2.name]轻声喃喃自语，很快就被[npc.name]肘了一下。
 				</p>
 				<p>
-					 Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're still behind on our quota this week... If you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you'll think about it.
+
+					那[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会的。
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("uniform_passable") > 0)
 				<p>
-					[npc.speech(Oh, it's you again,)] the [npc.race] calls out as [npc.she] catches sight of you, before quickly [npc.walking] over with [npc2.name] to stand right in front of you.
+					[npc.speech(哦，又是你啊。)][npc.race]一看到你就喊道，并迅速和[npc2.name][npc.walking]过来站在你面前。
 				</p>
 				<p>
-					Seeing that you're wearing an Enforcer uniform, the two officers visibly relax, and [npc.name] asks, [npc.speech(Hey, if you've seen sign of any criminals nearby, then it'd be appreciated if you'd let us handle them; we're running behind on our quota this week...)]
+					看到你穿着执法者制服，两位警官肉眼可见地放松，[npc.name]询问道，[npc.speech(嘿，如果你看到附近有任何违法行为，希望能让我们来处理。拜托了，这周的定额还远远不够……)]
 				</p>
 			#ELSEIF(game.getDialogueFlags().getSavedLong("uniform_passable") == 0)
 				<p>
-					Seeing that you're wearing an Enforcer uniform, the two officers visibly relax. [npc.Name] narrows [npc.her] eyes slightly at the state of your uniform and advises you, [npc.speech(Hey, I don't care much for the regs, but you better fix your uniform before sarge catches you. You know how it is, stickler for rules regardless of rank and all that.)] [npc2.Name], not sharing the same concern as [npc2.her] fellow officer asks, [npc2.speech(Oh yeah, if you've seen sign of any criminals nearby, then it'd be appreciated if you'd let us handle them; we're running behind on our quota this week...)]
+					看到你穿着执法者制服，两位警官肉眼可见地放松。[npc.Name]因为你制服的状态轻微眯了眯眼睛，并建议你，[npc.speech(嘿，我不在意规范，但你最好在警长抓到你之前修一下衣服。你知道的，不管等级高低，都要坚持规则。)][npc2.Name]则没有[npc2.her]的同事那么关心你，[npc2.speech(啊对了，如果你看到附近有任何犯罪的迹象，希望能让我们来处理。拜托了，这周的定额还远远不够……)]
 				</p>
 			#ELSE
 				<p>
-					Having seen you before in an Enforcer uniform, the two officers seem to still be treating you as though you're one of them, and [npc.name] asks, [npc.speech(Hey, if you've seen sign of any criminals nearby, then it'd be appreciated if you'd let us handle them; we're running behind on our quota this week...)]
+					由于之前见过你穿着执法者制服，两位警官依旧待你如同僚。[npc.name]询问道，[npc.speech(嘿，如果你看到附近有任何犯罪的迹象，希望能让我们来处理。拜托了，这周的定额还远远不够……)]
 				</p>
 			#ENDIF
 		#ELSEIF(pc.hasAnyEnforcerStatusEffect() && game.getDialogueFlags().getSavedLong("uniform_passable") < 0)
 			<p>
-				[npc.speech(Oh, it's you again,)] the [npc.race] calls out as [npc.she] catches sight of you, before quickly [npc.walking] over with [npc2.name] to stand right in front of you. A look of confusion briefly flashes across both officers' faces that quickly turns into barely-hidden anger.
+				[npc.speech(哦，又是你啊。)][npc.race]一见到你就喊道，并迅速和[npc2.name][npc.walking]过来站在你面前。短暂的困惑在两位警官的脸上闪过，迅速变成了几乎没有掩饰的怒火。
 			</p>
 			#IF (game.getDialogueFlags().getSavedLong("impersonating_candi") < 0)
 				<p>
-					[npc.speech(Hey! You're not Constable [candi.Surname]! I don't know how your got your [pc.hands] on [candi.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(嘿！你才不是[candi.Surname]警员！我不知道你是如何毛到[candi.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_claire") < 0)
 				<p>
-					[npc.speech(Hey! You're not Sergeant [claire.Surname]! I don't know how your got your [pc.hands] on [claire.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(嘿！你才不是[claire.Surname]警长！我不知道你是如何毛到[claire.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_brax") == -2)
 				<p>
-					[npc.speech(Nice try, but Inspector [brax.Surname] is off the force. I don't know how your got your [pc.hands] on [brax.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(不错的努力，但[brax.Surname]督察已经脱离部队了。我不知道你是如何毛到[brax.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_brax") < 0)
 			<p>
-				[npc.speech(Hey! You're not Inspector [brax.Surname]! I don't know how your got your [pc.hands] on [brax.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(嘿！你才不是[brax.Surname]督察！我不知道你是如何毛到[brax.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_wes") < -2)
 				<p>
-					[npc.speech(Nice try, but the Junior Quartermaster's had a career change. I don't know how your got your [pc.hands] on [wes.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(不错的努力，但这位初级军需官已经升职了。我不知道你是如何毛到[wes.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_wes") < 0)
 				<p>
-					[npc.speech(Hey! You're not our Quartermaster! I don't know how your got your [pc.hands] on [wes.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(嘿！你才不是我们的军需官！我不知道你是如何毛到[wes.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_elle") < -2)
 				<p>
-					[npc.speech(Nice try, but we have a new Senior Quartermaster. I don't know how your got your [pc.hands] on that stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(不错的努力，但我们已经换了一位初级军需官了。我不知道你是如何毛到那东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_elle") < 0)
 				<p>
-					[npc.speech(Hey! You're not our Quartermaster! I don't know how your got your [pc.hands] on [elle.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(嘿！你才不是我们的军需官！我不知道你是如何毛到[elle.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_nysa") < 0)
 				<p>
-					[npc.speech(Hey! You're not the Commissioner! I don't know how your got your [pc.hands] on her stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(嘿！你才不是首长！我不知道你是如何毛到她的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_sean") < 0)
 				<p>
-					[npc.speech(Hey! You're not Constable [sean.Surname]! I don't know how your got your [pc.hands] on [sean.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(嘿！你才不是[sean.Surname]警员！我不知道你是如何毛到[sean.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>
 			#ELSE
 				<p>
-					[npc.speech(You're not fooling anyone with that getup! I don't know where you got that equipment from, but you better hand it over, right now!)] [npc.name] snarls.
+					[npc.speech(你再也不能用那套衣服糊弄任何人了！我不知道你是如何毛到的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 				</p>	
 			#ENDIF
 			<p>
-				[npc2.speech(Better make sure [pc.she] isn't hiding anything else either,)] [npc2.name] huffs.
+				[npc2.speech(最好确保[pc.she]没藏着别的东西。)][npc2.name]生气地说。
 			</p>
 			<p style='text-align:center; margin-bottom:0; padding-bottom:0;'>
-				[style.italicsBad(It seems your disguise didn't work and you now have two pissed off Enforcers to deal with.)]
+				[style.italicsBad(看起来你的伪装失效了，并且还要面对两位暴怒的警官。)]
 			</p>
 		#ELSE
 			#IF(playerDemon)
 				<p>
-					[npc.speech(Oh, good [style.evening], [pc.maam],)] the [npc.race] calls out as [npc.she] catches sight of you, before quickly [npc.walking] over with [npc2.name] to stand right in front of you.
+					[npc.speech(哦，[style.evening]好啊，[pc.maam]。)][npc.race]一见到你就喊道，并迅速和[npc2.name][npc.walking]过来站在你面前。
 				</p>
 				<p>
-					Due to the fact that you're a demon, the two officers show you a great deal of respect, and they each stand to attention as [npc.name] explains, [npc.speech(We've had some more reports of criminal activity in this area, so if you've seen any suspicious characters nearby, then details on their whereabouts would be much appreciated.)]
+					因为你是位恶魔，两位警官对你展示了许多尊重。两个人一起立正，[npc.name]解释道，[npc.speech(我们持续接到了许多关于这片区域犯罪活动的报告，所以如果您在附近看到任何可疑人物，请告知他们的具体行踪，非常感谢。)]
 				</p>
 			#ELSEIF(pc.getRace()==RACE_HUMAN || !game.isDayTime())
 				<p>
-					[npc.speech(Oh, it's you again,)] the [npc.race] calls out as [npc.she] catches sight of you, before quickly [npc.walking] over with [npc2.name] to stand right in front of you.
+					[npc.speech(哦，又是你啊。)][npc.race]一看到你就喊道，并迅速和[npc2.name][npc.walking]过来站在你面前。
 				</p>
 				#IF(kindEncounter)
 					<p>
-						While [npc.she] clearly doesn't trust you to be on the right side of the law, [npc.name] tries to treat you in a kind manner as [npc.she] explains, [npc.speech(We're continuing to receive reports of criminal activity in this area,
+						尽管[npc.she]显然不相信你是什么好市民，[npc.name]也试着友善地和你解释道，[npc.speech(我们持续接到了许多关于这片区域犯罪活动的报告，
 						#IF(pc.getRace()==RACE_HUMAN)
-							 and as you're a human,
+							并且因为你是个人类，
 						#ELSE
-							 and as you're skulking around in the dark,
+							并且因为你在黑暗中鬼鬼祟祟，
 						#ENDIF
-						 we can't simply let you continue on your way without at least being searched. I'm going to have to ask that you turn around and face the wall so that we can give you a pat-down.)]
+						我们不能简单地放你继续走，至少需要搜个身。我需要请求你把身子转到墙壁那边并实行轻拍搜身。)]
 					</p>
 				#ELSE
 					<p>
-						Throwing you a suspicious glare, [npc.name] puts [npc.her] hand on the baton that's holstered at [npc.her] side, and in a commanding tone, [npc.she] explains, [npc.speech(We're continuing to receive reports of criminal activity in this area,
+						[npc.name]用怀疑的眼神看着你，把手放在了套在身侧的警棍上，并以命令地口吻向你解释，[npc.speech(我们持续接到了许多关于这片区域犯罪活动的报告，
 						#IF(pc.getRace()==RACE_HUMAN)
-							 and as you're a human,
+							并且因为你是个人类，
 						#ELSE
-							 and as you're skulking around in the dark,
+							并且因为你在黑暗中鬼鬼祟祟，
 						#ENDIF
-						 I'm thinking that there's a good chance that you're the one causing the trouble! Turn around and face the wall so that we can give you a pat-down.)]
+						我认为肯定是你在搞事！转过去然后接受搜身。)]
 					</p>
 				#ENDIF
 				<p>
-					It seems as though these Enforcers aren't going to let you go until they've given you a quick search. You could do as they say and face the wall, or try and resist their demands...
+					看起来执法者在快速搜身之前都不肯让你走，你可以遵守命令转向墙壁，或者试着抵抗他们……
 				</p>
 			#ELSE
 				<p>
-					[npc.speech(Oh, it's you again,)] the [npc.race] calls out as [npc.she] catches sight of you, before quickly [npc.walking] over with [npc2.name] to stand right in front of you.
+					[npc.speech(哦，又是你啊。)][npc.race]一看到你就喊道，并迅速和[npc2.name][npc.walking]过来站在你面前。
 				</p>
 				<p>
 					#IF(kindEncounter)
-						With a gentle smile on [npc.her] face, [npc.name] explains, [npc.speech(Sorry about this inconvenience, [pc.maam], but we're continuing to receive reports of criminal activity in this area. I can see that you're not the one we're after, but if you've seen any suspicious characters nearby, then details on their whereabouts would be much appreciated.)]
+						[npc.her]温和地微笑着，解释道，[npc.speech(抱歉造成不便，[pc.maam]，但我们持续接到了许多关于这片区域犯罪活动的报告。我能看出来你不是我们要找的人，但如果你在附近看到任何可疑人物，请告诉我他们的具体行踪，非常感谢。)]
 					#ELSE
-						Throwing you a suspicious glare, [npc.name] puts [npc.her] hand on the baton that's holstered at [npc.her] side, and in a commanding tone, [npc.she] explains, [npc.speech(Sorry about this inconvenience, [pc.maam], but we're continuing to receive reports of criminal activity in this area. I can see that you're not the one we're after, but if you've seen any suspicious characters nearby, then details on their whereabouts would be much appreciated.)]
+						[npc.name]用怀疑的眼神看着你，把手放在了套在身侧的警棍上，并以命令地口吻向你解释，[npc.she]解释道，[npc.speech(抱歉造成不便，[pc.maam]，但我们持续接到了许多关于这片区域犯罪活动的报告。我能看出来你不是我们要找的人，但如果你在附近看到任何可疑人物，请告诉我他们的具体行踪，非常感谢。)]
 					#ENDIF
 				</p>
 			#ENDIF
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_START"><![CDATA[
 	#VAR
@@ -296,282 +298,282 @@
 	<p>
 		#IF(canal)
 			#IF(!game.isDayTime())
-				As you [pc.walk] down the side of the dark canal, you suddenly see the light of an arcane-powered flashlight shining out from around a bend in the waterway up ahead.
+				你沿着黑暗隧道的一边[pc.walk]下去，突然看到一束奥术驱能的手电筒的光从对面水路的拐弯处照出来。
 			#ELSE
-				As you [pc.walk] down the side of the canal, you suddenly hear a pair of voices drawing louder from around a bend in the waterway up ahead.
+				你沿着隧道的一边[pc.walk]下去，突然听到一对越来越大的声音从对面水路的拐弯处传来。
 			#ENDIF
 		#ELSE
 			#IF(!game.isDayTime())
-				As you [pc.walk] down the dark alleyway, you suddenly see the light of an arcane-powered flashlight shining out from around the next corner.
+				你沿着黑暗小巷的一边[pc.walk]下去，突然看到一束奥术驱能的手电筒的光从前面拐角照出来。
 			#ELSE
-				As you [pc.walk] down the narrow alleyway, you suddenly hear a pair of voices drawing louder from around the next corner.
+				你沿着小巷的一边[pc.walk]下去，突然听到一对越来越大的声音从前面拐角传来。
 			#ENDIF
 		#ENDIF
-		 Preparing yourself for the worst, you get ready to defend yourself, but as you see that the two figures who step around the corner are wearing Enforcer uniforms, you realise that this encounter might not involve any hostilities. The one in the lead appears to be [npc.a_fullRace(true)], while the Enforcer who's following in [npc.her] footsteps looks to be [npc2.a_fullRace(true)].
+		做好最坏的打算，你准备好防御。但当你看到来者执法者制服时，意识到这次邂逅可能并没有什么敌意。领头的那位是一个[npc.a_fullRace(true)]，而紧跟其后的执法者则是一个[npc2.a_fullRace(true)]。
 	</p>
 	<p>
-		[npc.speech(Stop right there!)] the [npc.race] calls out as [npc.she] catches sight of you.
+		[npc.speech(就地站住！)][npc.race]一看到你就喊道。
 		#IF(pc.hasAnyEnforcerStatusEffect())
-			 Confident that your disguise will protect you, you calmly [pc.walk] forward until you're face-to-face with the pair of uniformed officers.
+			你自信于自己的伪装，认为能够保护你。于是冷静地[pc.walk]向前，直到与两位穿制服的警官面对面。
 		#ELSEIF(pc.isBrave() || pc.isConfident())
-			 Not one to be easily intimidated, you ignore what the Enforcer says and continue [pc.walking] forwards until you're face-to-face with the pair of uniformed officers.
+			你不是被吓大的，你无视执法者说的话，继续[pc.walking]向前，直到与两位穿制服的警官面对面。
 		#ELSEIF(pc.isCowardly())
-			 Scared at the prospect of what might happen if you disobey the Enforcer's order, you do as you're told and remain still as the pair of uniformed officers stride forwards to stand in front of you.
+			担心违背命令之后可能发生的事，你决定照做。你保持不动，直到两位穿制服的警官大步走到你面前。
 		#ELSE
-			 Not wanting to cause any trouble, you do as the Enforcer says and remain still as the pair of uniformed officers stride forwards to stand in front of you.
+			不想惹什么麻烦，你决定照做。你保持不动，直到两位穿制服的警官大步走到你面前。
 		#ENDIF
 	</p>
 	#IF(playerEnforcer)
 		
 		#IF(game.getDialogueFlags().getSavedLong("impersonating_candi") > 0)
 			<p>
-				Upon seeing a familiar face, the two officers visibly relax, and the [npc.race] greets you by saying,
+				一看到这张熟悉的脸，两位警官肉眼可见地放松。[npc.race]向你打招呼：
 				#IF(game.isDayTime())
-				 [npc.speech(Ah, Constable [candi.surname]. Wasn't expecting to see you out and about. Out for a stroll?)]
+				[npc.speech(啊，[candi.surname]警员。没想到会在外面见到你，出来散步吗？)]
 				#ELSE
-				 [npc.speech(Ah, Constable [candi.surname]. You're out here late. Taking a stroll?)]
+				[npc.speech(啊，[candi.surname]警员。这么晚了还在外面啊，是在散步吗？)]
 				#ENDIF
-				 Putting on your best [candi.Name] impression, you affirm that you are.
+				为了给人留下你最好的[candi.Name]印象，你以肯定向两人确认。
 			</p>
 			<p>
-				 [npc2.speech(Taking a break from vacuuming, I'm sure,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow.
+				[npc2.speech(肯定是从扫黑的工作中放松下。)][npc2.race]轻声喃喃自语，很快就被[npc2.her]的[npc.race]伙伴肘了一下。
 			</p>
 			<p>
-				 Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're behind on our quota this week... If you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you'll think about it and take note of the names on their vests.
+				[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会考虑的，并记下两人背心上的名字。
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_claire") > 0)
 			<p>
-				Upon seeing a familiar face, the two officers visibly relax and briskly salute you. The [npc.race] greets you by saying,
+				一看到这张熟悉的脸，两位警官肉眼可见地放松。[npc.race]向你打招呼：
 				#IF(game.isDayTime())
-				 [npc.speech(Ah, Sergeant [claire.surname]. Wasn't expecting to see you topside, [pc.sir]. Taking for a stroll?)]
+				[npc.speech(啊，[claire.surname]警长，没想到会在外面遇见你，[pc.sir]。出来散步吗？)]
 				#ELSE
-				 [npc.speech(Ah, Sergeant [claire.surname]. It's awfully late, [pc.sir]. Taking a stroll?)]
+				[npc.speech(啊，[claire.surname]警长，[pc.sir]。这么晚了还在外面啊，是在散步吗？)]
 				#ENDIF
-				 Putting on your best [claire.Name] impression, you affirm that you are.
+				为了给人留下你最好的[claire.Name]印象，你以肯定向两人确认。
 			</p>
 			<p>
-				 [npc2.speech(Must be nice to get proper breaks,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow. 
+				[npc2.speech(能适当放松真好啊。)][npc2.race]轻声喃喃自语，很快就被[npc2.her]的[npc.race]伙伴肘了一下。
 			</p>
 			<p>
-				Quickly changing the subject,  the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're behind on our quota this week... If you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you will and take note of the names on their vests.
+				那[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会的，并记下两人背心上的名字。
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_brax") > 0)
 			<p>
-				Upon seeing a superior officer, the two officers visibly stiffen and give you a crisp salute. The [npc.race] greets you by saying, [npc.speech(Inspector [brax.surname], [pc.sir], everything is in order here.)] Putting on your best [brax.Name] impression, you tell the pair to be at ease.
+				一看见一位上级警官，两位警官肉眼可见地紧绷，并给你一个干脆的敬礼。那[npc.race]向你打招呼说，[npc.speech([brax.surname]督察，[pc.sir]，这里没什么问题！)]为了给人留下你最好的[brax.Name]印象，你告诉两人放轻松。
 			</p>
 			<p>
-				[npc2.speech(Office must get stuffy with all that pussy,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow. 
-			</p>
+				[npc2.speech(办公室肯定被那傻逼搞得很闷吧。)][npc2.name]轻声喃喃自语，很快就被[npc2.her]的[npc.race]伙伴肘了一下。
+				</p>
 			<p>
-				Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(We'll be around if you need us, [pc.sir], just let us know.)] You take note of the names on their vests. You'll have to be careful to keep the act up around them.
+				[npc.race]马上转换了话题，[npc.speech(如果你需要我们就会在你身边，[pc.sir]。告诉我们就行。)]你记下两人背心上的名字。在他们身边，你需要细心演戏。
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_wes") > 0)
 			<p>
-				Upon seeing a familiar face, the two officers visibly relax and briskly salute you. The [npc.race] greets you by saying,
+				一看到这张熟悉的脸，两位警官肉眼可见地放松，并迅速向你敬礼。[npc.race]对你打着招呼，
 				#IF(game.isDayTime())
-				 [npc.speech(Ah, Quartermaster. Wasn't expecting to see you out and about, [pc.sir]. Taking for a stroll?)]
+				[npc.speech(啊，军需官。没想到会在外面遇到你，[pc.sir]。出来散步吗？)]
 				#ELSE
-				 [npc.speech(Ah, Quartermaster. It's awfully late, [pc.sir]. Taking a stroll?)]
+				[npc.speech((啊，军需官。现在非常晚了，[pc.sir]。是在散步吗？)]
 				#ENDIF
-				 Putting on your best [wes.Name] impression, you affirm that you are.
+				为了给人留下你最好的[wes.Name]印象，你以肯定向两人确认。
 			</p>
 			<p>
-				 [npc2.speech(Didn't know [pc.she] was even capable of taking breaks,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow. 
+				[npc2.speech(也不知道[pc.she]有没有能力休息，)][npc2.race]轻声喃喃自语，很快就被[npc.race]肘了一下。
 			</p>
 			<p>
-				Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're behind on our quota this week... if you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you will and take note of the names on their vests.
+				[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会的，并记下两人背心上的名字。
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_elle") > 0)
 			<p>
-				Upon seeing a familiar face, the two officers visibly relax and briskly salute you. The [npc.race] greets you by saying,
+				一看到这张熟悉的脸，两位警官肉眼可见地放松，并干脆地向你敬礼。[npc.race]对你打着招呼，
 				#IF(game.isDayTime())
-				 [npc.speech(Ah, Quartermaster. Wasn't expecting to see you out and about, [pc.sir]. Taking a stroll?)]
+				[npc.speech(啊，军需官。没想到会在外面遇到你，[pc.sir]。出来散步吗？)]
 				#ELSE
-				 [npc.speech(Ah, Quartermaster. It's awfully late, [pc.sir]. Taking a stroll?)]
+				[npc.speech(啊，军需官。现在非常晚了，[pc.sir]。是在散步吗？)]
 				#ENDIF
-				 Putting on your best [elle.Name] impression, you affirm that you are.
+				为了给人留下你最好的[elle.Name]印象，你以肯定向两人确认。
 			</p>
 			<p>
-				 [npc2.speech(Armory must get real stuffy from all the fucking,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow. 
+				[npc2.speech(军械库一定很他妈闷吧。)][npc2.race]轻声喃喃自语，很快就被[npc.race]肘了一下。
 			</p>
 			<p>
-				Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're behind on our quota this week... if you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you will and take note of the names on their vests.
+				[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会的，并记下两人背心上的名字。
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_nysa") > 0)
 			<p>
-				Upon seeing a superior officer, the two officers visibly stiffen and give you a crisp salute. The [npc.race] greets you by saying, [npc.speech(Commissioner, [pc.sir], everything is in order here.)] Putting on your best Nysa impression, you tell the pair to be at ease.
+				一看见一位上级警官，两位警官肉眼可见地紧绷，并给你一个干脆的敬礼。那[npc.race]向你打招呼说，[npc.speech(首长，[pc.sir]，这里一切井然有序。)]为了给人留下你最好的妮萨印象，你告诉两人放轻松。
 			</p>
 			<p>
-				[npc2.speech(Just our luck,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow. 
+				[npc2.speech(偏偏这么倒霉。)][npc2.race]轻声喃喃自语，很快就被[npc.race]肘了一下。
 			</p>
 			<p>
-				Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(We'll be around if you need us, [pc.sir], just let us know.)] You take note of the names on their vests.
+				[npc.race]马上转换了话题，[npc.speech(如果你需要我们就会在你身边，[pc.sir]。告诉我们就行。)]你记下两人背心上的名字。
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("impersonating_sean") > 0)
 			<p>
-				Upon seeing a familiar face, the two officers visibly relax, and the [npc.race] greets you by saying,
+				一看到这张熟悉的脸，两位警官肉眼可见地放松。[npc.race]向你打招呼：
 				#IF(game.isDayTime())
-				 [npc.speech(Ah, Constable [sean.surname]. Wasn't expecting to see you out and about. Taking a stroll?)]
+				[npc.speech(啊，[sean.surname]警员。没想到会在外面遇到你，出来散步吗？)]
 				#ELSE
-				 [npc.speech(Ah, Constable [sean.surname]. You're out here late. Taking a stroll?)]
+				[npc.speech(啊，[sean.surname]警员。现在已经很晚了，你是在散步吗？)]
 				#ENDIF
-				 Putting on your best [sean.Name] impression, you affirm that you are.
+				为了给人留下你最好的[sean.Name]印象，你以肯定向两人确认。
 			</p>
 			<p>
-				 [npc2.speech(Probably trying to get into [candi.NamePos] pants again, I'm sure,)] the [npc2.race] mutters under [npc2.her] breath, promptly earning [npc2.herHim] a prod from the [npc.race]'s elbow.
+				[npc2.speech(我敢肯定这人又在试着爬进[candi.NamePos]的裤子里。)][npc2.race]轻声喃喃自语，很快就被[npc.race]肘了一下。
 			</p>
 			<p>
-				 Quickly changing the subject, the [npc.race] asks you for a favour, [npc.speech(You'll have to excuse [npc.herHim], we're behind on our quota this week... If you could point out any nearby opportunities to us, it would really help us out.)] Once again mustering your acting ability, you tell the two officers you'll think about it and take note of the names on their vests.
+				[npc.race]马上转换了话题并请求你帮个忙，[npc.speech(请你原谅，我们这周的定额还没完成……如果你能告诉我们附近有什么业绩的机会的话，真的会帮我们一个大忙的。)]你再次调动演技，告诉两人你会考虑的，并记下两人背心上的名字。
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("uniform_passable") > 0)
 			<p>
-				Seeing that you're wearing an Enforcer uniform, the two officers visibly relax, and the [npc.race] introduces [npc.herself] by saying, [npc.speech(I'm [npc.name], and this here's [npc2.name]. I didn't think that there were any other Enforcers assigned in this area...)]
+				看到你穿着执法者制服，两位警官肉眼可见地放松，[npc.race]给他俩自我介绍道：[npc.speech(我是[npc.name]，这位是[npc2.name]。我不认为这个区域有其他的执法者被派了任务……)]
 			</p>
 			<p>
-				[npc2.speech(Those useless desk jockeys have probably gone and fucked up the map again,)] [npc2.name] declares, [npc2.speech(I swear this happens at least once a week!)]
+				[npc2.speech(那些坐办公室的臭傻逼肯定又发癫把地图看岔了。)][npc2.name]断言道，[npc2.speech(我敢说这种破事至少一周一次！)]
 			</p>
 			<p>
-				[npc.speech(Yeah, well, there's nothing we can do about it. Sarge will probably go apeshit,)] [npc.name] sighs, before asking you, [npc.speech(Hey, if you've seen sign of any criminals nearby, then I'd be appreciated if you'd let us handle them; we're running behind on our quota this week...)]
+				[npc.speech(啊也是，这种事我们可没办法。该轮到警长去生气。)][npc.name]叹着气，之后向你询问，[npc.speech(啊对了，如果你看到附近有任何犯罪的迹象，希望能让我们来处理。拜托了，这周的定额还远远不够……)]
 			</p>
 		#ELSEIF(game.getDialogueFlags().getSavedLong("uniform_passable") == 0)
 			<p>
-				Seeing that you're wearing an Enforcer uniform, the two officers visibly relax, and the [npc.race] introduces [npc.herself] by saying, [npc.speech(I'm [npc.name], and this here's [npc2.name]. I didn't think that there were any other Enforcers assigned in this area...)]
+				看到你穿着执法者制服，两位警官肉眼可见地放松，[npc.race]给他俩自我介绍道：[npc.speech(我是[npc.name]，这位是[npc2.name]。我不认为这个区域有其他的执法者被派了任务……)]
 			</p>
 			<p>
-				[npc2.speech(Those useless desk jockeys have probably gone and fucked up the map again,)] [npc2.name] declares, [npc2.speech(I swear this happens at least once a week!)]
+				[npc2.speech(那些坐办公室的臭傻逼肯定又发癫把地图看岔了。)][npc2.name]断言道，[npc2.speech(我敢说这种破事至少一周一次！)]
 			</p>
 			<p>
-				[npc.speech(Yeah, well, there's nothing we can do about it. Sarge will probably go apeshit,)] [npc.name] sighs, before narrowing [npc.her] eyes slightly at the state of your uniform. [npc.She] advises you, [npc.speech(Speaking of which, I don't really care for the regs, but you better fix your uniform before sarge catches you. You know how it is, stickler for rules regardless of rank and all that.)] [npc2.Name], apparently not sharing [npc.her] fellow officer's concern, asks you, [npc2.speech(Hey, if you've seen sign of any criminals nearby, then it'd be appreciated if you'd let us handle them; we're running behind on our quota this week...)]
+				npc.speech(啊也是，这种事我们可没办法。该轮到警长去生气。)][npc.name]叹着气，之后因为你制服的状态轻微眯了眯眼睛，并建议你，[npc.speech(嘿，我不在意规范，但你最好在警长抓到你之前修一下衣服。你知道的，不管等级高低，都要坚持规则。)][npc2.Name]则没有[npc2.her]的同事那么关心你，[npc2.speech(啊对了，如果你看到附近有任何犯罪的迹象，希望能让我们来处理。拜托了，这周的定额还远远不够……)]
 			</p>
 		#ENDIF
 		
 	#ELSEIF(pc.hasAnyEnforcerStatusEffect() && game.getDialogueFlags().getSavedLong("uniform_passable") < 0)
 		<p>
-			The [npc.race] introduces [npc.herself] by saying, [npc.speech(I'm [npc.name], and this here's [npc2.name]. I didn't think that...)] [npc.Name] trails off as [npc.she] notices something very off about your uniform. A look of confusion briefly flashes across both officers' faces that quickly turns into barely-hidden anger.
+			[npc.race]给他俩自我介绍道：[npc.speech(我是[npc.name]，这位是[npc2.name]。我不认为……)][npc.Name]的声音逐渐消失，因为[npc.she]注意到你的制服有些不对劲。短暂的困惑在两位警官的脸上闪过，迅速变成了几乎没有掩饰的怒火。
 		</p>
 		#IF (game.getDialogueFlags().getSavedLong("impersonating_candi") < 0)
 			<p>
-				[npc.speech(Hey! You're not Constable [candi.Surname]! I don't know how your got your [pc.hands] on [candi.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(嘿！你才不是[candi.Surname]警员！我不知道你是如何毛到[candi.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_claire") < 0)
 			<p>
-				[npc.speech(Hey! You're not Sergeant [claire.Surname]! I don't know how your got your [pc.hands] on [claire.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(嘿！你才不是[claire.Surname]警长！我不知道你是如何毛到[claire.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_brax") == -2)
 			<p>
-				[npc.speech(Nice try, but Inspector [brax.Surname] is off the force. I don't know how your got your [pc.hands] on [brax.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(不错的努力，但[brax.Surname]督察已经脱离部队了。我不知道你是如何毛到[brax.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_brax") < 0)
 		<p>
-			[npc.speech(Hey! You're not Inspector [brax.Surname]! I don't know how your got your [pc.hands] on [brax.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+			[npc.speech(嘿！你才不是[brax.Surname]督察！我不知道你是如何毛到[brax.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 		</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_wes") < -2)
 			<p>
-				[npc.speech(Nice try, but the Junior Quartermaster's had a career change. I don't know how your got your [pc.hands] on [wes.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(不错的努力，但这位初级军需官已经升职了。我不知道你是如何毛到[wes.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_wes") < 0)
 			<p>
-				[npc.speech(Hey! You're not our Quartermaster! I don't know how your got your [pc.hands] on [wes.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(嘿！你才不是我们的军需官！我不知道你是如何毛到[wes.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_elle") < -2)
 			<p>
-				[npc.speech(Nice try, but we have a new Senior Quartermaster. I don't know how your got your [pc.hands] on that stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(不错的努力，但我们已经换了一位初级军需官了。我不知道你是如何毛到那东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_elle") < 0)
 			<p>
-				[npc.speech(Hey! You're not our Quartermaster! I don't know how your got your [pc.hands] on [elle.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(嘿！你才不是我们的军需官！我不知道你是如何毛到[elle.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_nysa") < 0)
 			<p>
-				[npc.speech(Hey! You're not the Commissioner! I don't know how your got your [pc.hands] on her stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(嘿！你才不是首长！我不知道你是如何毛到她的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSEIF (game.getDialogueFlags().getSavedLong("impersonating_sean") < 0)
 			<p>
-				[npc.speech(Hey! You're not Constable [sean.Surname]! I don't know how your got your [pc.hands] on [sean.her] stuff, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(嘿！你才不是[sean.Surname]警员！我不知道你是如何毛到[sean.her]的东西的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>
 		#ELSE
 			<p>
-				[npc.speech(You're not fooling anyone with that getup! I don't know where you got that equipment from, but you better hand it over, right now!)] [npc.name] snarls.
+				[npc.speech(你再也不能用那套衣服糊弄任何人了！我不知道你是如何毛到的，但你最好现在递过来，立刻！)][npc.name]对你怒吼。
 			</p>	
 		#ENDIF
 		<p>
-			[npc2.speech(Better make sure [pc.she] isn't hiding anything else either,)] [npc2.name] huffs.
+			[npc2.speech(最好确保[pc.she]没藏着别的东西。)][npc2.name]生气地说。
 		</p>
 		<p style='text-align:center; margin-bottom:0; padding-bottom:0;'>
-			[style.italicsBad(It seems your disguise didn't work and you now have two pissed off Enforcers to deal with.)]
+			[style.italicsBad(看起来你的伪装失效了，并且还要面对两位暴怒的警官。)]
 		</p>
 	#ELSE
 		#IF(pc.getRace()==RACE_DEMON)
 			<p>
-				With a guilty look on [npc.her] face, [npc.name] introduces [npc.herself] by apologising, [npc.speech(I'm so sorry, [pc.maam], I didn't see that you were a demon when I called out for you to stop. I'm [npc.name], and this here's [npc2.name].)]
+				带着愧疚的神情，[npc.race]道歉并给他俩自我介绍，[npc.speech(很抱歉，[pc.maam]，我在叫您停下来的时候没有意识到您是一位恶魔。我是[npc.name]，这位则是[npc2.name]。)]
 			</p>
 			<p>
-				Clearly showing you a great deal more respect than [npc2.she] would to a non-demon, [npc2.name] steps in to explain, [npc2.speech(We've had reports of criminal activity in this area, and so we were expecting to run into trouble. If you've seen any suspicious characters nearby, then details on their whereabouts would be much appreciated.)]
+				[npc2.name]对你展现的尊敬显然远多于非恶魔，[npc2.she]上前解释道，[npc2.speech(我们持续接到了许多关于这片区域犯罪活动的报告，所以如果您在附近看到任何可疑人物，请告知他们的具体行踪，非常感谢。)]
 			</p>
 		#ELSEIF(pc.getRace()==RACE_HUMAN || !game.isDayTime())
 			#IF(kindEncounter)
 				<p>
-					With a gentle smile on [npc.her] face, [npc.name] introduces [npc.herself] by stating, [npc.speech(Good [style.evening], [pc.maam]. I'm [npc.name], and this here's [npc2.name].)]
+					脸上带着友善的微笑，[npc.race]边自我介绍边陈述，[npc.speech([style.evening]好，[pc.maam]。我是[npc.name]，这位则是[npc2.name]。)]
 				</p>
 				<p>
-					While [npc.she] clearly doesn't trust you to be on the right side of the law, [npc.name] tries to treat you in a kind manner as [npc.she] explains, [npc.speech(I'm sorry about this, but we've had reports of criminal activity in this area,
+					尽管[npc.she]显然不相信你是什么好市民，[npc.name]也试着友善地和你解释道，[npc.speech(很抱歉，但我们持续接到了许多关于这片区域犯罪活动的报告，
 					#IF(pc.getRace()==RACE_HUMAN)
-						 and as you're a human,
+						并且因为你是个人类，
 					#ELSE
-						 and as you're skulking around in the dark,
+						并且因为你在黑暗中鬼鬼祟祟，
 					#ENDIF
-					 we can't simply let you continue on your way without at least being searched. I'm going to have to ask that you turn around and face the wall so that we give you a pat-down.)]
+					我们不能简单地放你继续走，至少需要搜个身。我需要请求你把身子转到墙壁那边并实行轻拍搜身。)]
 				</p>
 			#ELSE
 				<p>
-					Throwing you a suspicious glare, [npc.name] puts [npc.her] hand on the baton that's holstered at [npc.her] side, and in a commanding tone, [npc.she] states, [npc.speech(I'm [npc.name], and this here's [npc2.name].)]
+					用怀疑的眼神看着你，[npc.race]把手放在了套在身侧的警棍上，并以严肃地向你自我介绍，[npc.speech(我是[npc.name]，这位是[npc2.name]。)]
 				</p>
 				<p>
-					Clearly not trusting you to be on the right side of the law, [npc2.name] aggressively steps forwards and explains, [npc2.speech(We've had reports of criminal activity in this area,
+					显然不相信你是什么好市民，[npc2.name]咄咄逼人地上前解释，[npc2.speech(我们持续接到了许多关于这片区域犯罪活动的报告，
 					#IF(pc.getRace()==RACE_HUMAN)
-						 and as you're a human,
+						并且因为你是个人类，
 					#ELSE
-						 and as you're skulking around in the dark,
+						并且因为你在黑暗中鬼鬼祟祟，
 					#ENDIF
-					 I'm thinking that there's a good chance that you're the one causing the trouble! Turn around and face the wall so that we can give you a pat-down.)]
+					我认为肯定是你在搞事！转过去然后接受搜身。)]
 				</p>
 			#ENDIF
 			<p>
-				It seems as though these Enforcers aren't going to let you go until they've given you a quick search. You could do as they say and face the wall, or try and resist their demands...
+				看起来执法者在快速搜身之前都不肯让你走，你可以遵守命令转向墙壁，或者试着抵抗他们……
 			</p>
 		#ELSE
 			<p>
 				#IF(kindEncounter)
-					With a gentle smile on [npc.her] face, [npc.name] introduces [npc.herself] by stating, [npc.speech(Good [style.evening], [pc.maam]. I'm [npc.name], and this here's [npc2.name].)]
+					脸上带着友善的微笑，[npc.race]边自我介绍边陈述，[npc.speech([style.evening]好，[pc.maam]。我是[npc.name]，这位则是[npc2.name]。)]
 				#ELSE
-					Throwing you a suspicious glare, [npc.name] puts [npc.her] hand on the baton that's holstered at [npc.her] side, and in a commanding tone, [npc.she] states, [npc.speech(I'm [npc.name], and this here's [npc2.name].)]
+					用怀疑的眼神看着你，[npc.race]把手放在了套在身侧的警棍上，并严肃地自我介绍，[npc.she]陈述道，[npc.speech(我是[npc.name]，这位是[npc2.name]。)]
 				#ENDIF
 			</p>
 			<p>
-				Stepping forwards, [npc2.name] explains, [npc2.speech(Sorry about this inconvenience, [pc.maam], but we've had reports of criminal activity in this area. I can see that you're not the one we're after, but if you've seen any suspicious characters nearby, then details on their whereabouts would be much appreciated.)]
+				[npc2.name]向前解释道，[npc2.speech(抱歉造成不便，[pc.maam]，但我们持续接到了许多关于这片区域犯罪活动的报告。我能看出来你不是我们要找的人，但如果你在附近看到任何可疑人物，请告诉我他们的具体行踪，非常感谢。)]
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_CONTRABAND_HEAVY"><![CDATA[
 	<p style='text-align:center;'>
-		[style.italicsTerrible(Your illegal items will be confiscated and you will be arrested if you allow the Enforcers to search you!)]
+		[style.italicsTerrible(如果你允许执法者进行搜查，你的非法物品将被没收并被逮捕！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_CONTRABAND_MEDIUM"><![CDATA[
 	<p style='text-align:center;'>
 		#IF(pc.hasItemType("innoxia_quest_special_pass_elle") || pc.hasItemType("innoxia_quest_special_pass"))
-			<i>Although you have [style.italicsBad(illegal items)], your Contractor Pass grants you [style.italicsExcellent(immunity)] from having them confiscated!</i>
+			<i>尽管你携带[style.italicsBad(非法物品)]，你的承包许可证让你获得[style.italicsExcellent(免受)]它们被没收的授权！</i>
 		#ELSE
-			[style.italicsBad(Your illegal items will be confiscated if you allow the Enforcers to search you!)]
+			[style.italicsBad(如果你允许执法者进行搜查，你的非法物品将被没收！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_START_CONTINUE_HAD_SEX"><![CDATA[
 	#VAR
@@ -581,22 +583,22 @@
 	#ENDVAR
 	
 	<p>
-		Having already had sex with them, there's nothing left for you to do except tell these two Enforcers that you don't have any criminal activity to report.
+		你已经和他们做爱了，除了告诉这两个执法者你没有任何犯罪行为之外，你就没什么可做的了。
 	</p>
 	<p>
-		Straightening [npc.her] uniform, [npc.name] flashes you a dirty smirk and teases, [npc.speech(You've certainly made my shift a most enjoyable one, so I hope that I end up running into you again...)]
+		[npc.name]整理好[npc.her]的制服，对你露出下流的笑容并调侃，[npc.speech(你让我的轮班变得非常愉快，希望下次还能遇到你……)]
 	</p>
 	<p>
-		Mimicking [npc2.her] superior, [npc2.name] smugly smirks at you, before setting off down the
+		[npc2.name]模仿[npc2.her]的上级对你得意的笑着，然后朝着
 		#IF(canal)
-			 canal's path
+			运河的小路走去
 		#ELSE
-			 alleyway
+			小巷的深处走去
 		#ENDIF
-		 with [npc.name] by [npc2.her] side. Watching the two of them disappear around a corner, you let out a deep sigh and prepare to continue on your way...
+		[npc.name]跟在[npc2.her]的身边。看着它们两人消失在拐角处，你深深地叹了口气，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_START_CONTINUE"><![CDATA[
 	#VAR
@@ -606,19 +608,19 @@
 	#ENDVAR
 	
 	<p>
-		Not wanting to spend any more time dealing with these Enforcers, you tell [npc.name] that you don't have any criminal activity to report.
+		你不想再花时间和这些执法者打交道，你告诉[npc.name]你没有任何犯罪行为。
 	</p>
 	<p>
-		Straightening [npc.her] uniform, the [npc.race] bids you farewell, before setting off down the
+		[npc.race]整理好[npc.her]的制服，然后向你告别，和[npc2.name]
 		#IF(canal)
-			 canal's path
+			沿着运河的小路走去
 		#ELSE
-			 alleyway
+			朝着小巷的深处走去
 		#ENDIF
-		 with [npc2.name] by [npc.her] side. Watching the two of them disappear around a corner, you let out a deep sigh and prepare to continue on your way...
+		。看着它们两人消失在拐角处，你深深地叹了口气，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_START_DEMONIC_SEDUCTION"><![CDATA[
 	#VAR
@@ -626,56 +628,56 @@
 	#ENDVAR
 	
 	<p>
-		Wanting to have a little fun, you [pc.step] up close to [npc.name] and offer [npc.herHim] a flirty comment on how good [npc.she] looks in [npc.her] uniform.
+		你想要找点乐子，[pc.step]上前靠近[npc.name]，挑逗地评论着[npc.herHim]穿的制服有多好看。
 	</p>
 	<p>
 		#IF(foughtPlayer)
-			Interpreting your move as one of aggression, [npc.name] quickly [npc.steps] back and commands, [npc.speech(Stop right there, [pc.Miss]! We don't want to have to fight you again!)]
+			[npc.name]将你的举动理解成攻击的前兆，快速退后并命令道，[npc.speech(站在那里别动，[pc.Miss]！我们不想再和你打一场了！)]
 		#ELSE
-			Clearly unsure of how to react to your sudden advances, [npc.name] clears [npc.her] throat and hesitantly states, [npc.speech([pc.Miss], please, we're on duty...)]
+			[npc.name]很明显弄不清如何应对你的突然向前，[npc.she]清了清喉咙，犹豫地说，[npc.speech(拜托了，[pc.Miss]，我们有任务在身……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasSpell(SPELL_ARCANE_AROUSAL))
-			Deciding to put your knowledge of the arcane to good use, you quickly cast arcane arousal on [npc.name], before [pc.stepping] forwards and once again brushing up against [npc.herHim]. Your spell causes the [npc.race] Enforcer to witness a series of extremely graphic visions of the two of you having sex, which, combined with the sensation of having you grind up against [npc.herHim], is enough to push [npc.herHim] over the edge.
+			你决定好好运用奥术知识。你快速对[npc.name]施放了奥术狂欲，随后[pc.stepping]上前，又一次蹭着[npc.herHim]。你的法术让这名[npc.race]执法者看到了一系列你们性交的极其刺激的图像，这些图像结合着你磨蹭着[npc.herHim]的触感，已经足够把[npc.herHim]送到高潮彼端。
 		#ELSEIF(pc.hasSpellUpgrade(SPELL_UPGRADE_TELEPATHIC_COMMUNICATION_3))
-			Deciding to put your knowledge of the arcane to good use, you quickly cast telepathic communication on yourself, before [pc.stepping] forwards and once again brushing up against [npc.name]. As you do so, you project a series of lewd suggestions into the [npc.race] Enforcer's mind, which, combined with the sensation of having you grind up against [npc.herHim], is enough to push [npc.herHim] over the edge.
+			你决定好好运用奥术知识。你快速对自己施放了心念沟通，随后[pc.stepping]上前，又一次蹭着[npc.herHim]。随着你这样做，你将一系列淫荡的建议投送到这名[npc.race]执法者的脑海中，这些图像结合着你磨蹭着[npc.herHim]的触感，已经足够把[npc.herHim]送到高潮彼端。
 		#ELSE
-			Not one to take no for an answer, you move forwards and once again brush up against [npc.name], before
+			没有人听到“不”作为回答，你向前移动，又一次蹭上了[npc.name]，随后
 			#IF(pc.isFeminine())
-				 pouting at [npc.herHim] and coyly asking why [npc.she] doesn't like you.
+				对着[npc.herHim]撅起了嘴，娇羞地问[npc.she]为什么不喜欢你。
 			#ELSE
-				 placing one [pc.hand] around [npc.her] waist and confidently asking why [npc.she] doesn't like you.
+				一只[pc.hand]环绕住[npc.her]的腰，自信地问[npc.she]为什么不喜欢你。
 			#ENDIF
-			 Your pointed question, combined with your hot body pressing up [npc.hers], turns out to be enough to push [npc.name] over the edge.
+			你直接的问题，结合着你贴合着[npc.hers]的身体的炽热皮肤，已经足够把[npc.name]送到高潮彼端。
 		#ENDIF
-		 Leaning forwards, the now-horny [npc.race] presses [npc.her] [npc.lips+] against yours, before desperately starting to make out with you. Much to your delight, you feel the [npc.race]'s hands start to grope your body as you pull [npc.herHim] in close and passionately kiss [npc.herHim], and after a few moments of thrusting your [pc.tongue+] into [npc.her] mouth, you pull back and allow [npc.herHim] to take a deep breath.
+		色迷迷的[npc.race]向前倾斜，将[npc.lips+]贴住你的，随后不顾一切地和你搞了起来。让你开心的是，在你拉近了[npc.herHim]并充满激情地亲吻着[npc.herHim]时，你感觉到[npc.race]的双手开始摸索着你的身体，你将[pc.tongue+]送进[npc.her]的嘴，唇舌交融一段时间后，你向后略微退却，让[npc.herHim]有机会深呼吸一口气。
 	</p>
 	#IF(npc2.isAttractedTo(pc))
 		<p>
-			[npc2.speech(What about me?)] [npc2.name] whines from off to one side. Turning to give the [npc2.race] a seductive smile, you beckon [npc2.herHim] forwards before leaning over to pull [npc2.herHim] into a deep, lustful kiss.
+			[npc2.speech(那我呢？)][npc2.name]的呜咽声从另一边传来。对着[npc2.race]魅惑地微笑着，你招手让[npc2.herHim]上前，随后身体前倾，给[npc2.herHim]一个充满性欲的深吻。
 		</p>
 		<p>
-			[npc.speech(It looks like [pc.sheIs] happy for the two of us to share [pc.herHim],)] [npc.name] comments,
+			[npc.speech(看来[pc.sheIs]很乐意让我们共享[pc.herHim]，)][npc.name]说道，
 			#IF(pc.hasBreasts())
-				  while reaching up to give your [pc.breasts+] a good grope.
+				同时伸出手，好好揉了一把你[pc.breasts+]。
 			#ELSE
-				  while reaching around to give your [pc.ass+] a good grope.
+				同时伸出手，好好揉了一把你[pc.ass+]。
 			#ENDIF
 		</p>
 		<p>
-			Having got exactly what it is that you wanted, you break off from your kiss with [npc2.name], before lustfully grinding up against both [npc2.herHim] and [npc2.her] superior. You can't help but grin as the two Enforcers let out a synchronised moan, and you seductively bite your lip as you wonder how you're going to fuck them...
+			你成功达成了你的目的，从[npc2.name]的亲吻中解脱出来，随后充满欲望地磨蹭着[npc2.herHim]和[npc2.her]两人。两位执法者同时发出的呻吟让你的嘴角不自觉地翘起，你一边诱惑地咬着嘴唇，一边盘算着该怎么操[npc.herHim]……
 		</p>
 	#ELSE
 		<p>
-			[npc.speech(Don't stop now,)] [npc.name] pants, before turning to [npc.her] subordinate and commanding, [npc.speech([npc2.Name], keep watch for any suspicious activity while I deal with this demon!)]
+			[npc.speech(不要停下，)][npc.name]喘息道，随后转向[npc.her]的下属并命令道，[npc.speech([npc2.Name]，继续去排查可疑举动，我来对付这个恶魔！)]
 		</p>
 		<p>
-			Having got exactly what it is that you wanted, you grab hold of [npc.name] and lustfully grind up against [npc.herHim]. You can't help but grin as your partner lets out a desperate [npc.moan], and you seductively bite your lip as you wonder how you're going to fuck [npc.herHim]...
+			你成功达成了目的，抓住了[npc.name]并充满欲望地磨蹭着[npc.herHim]。当你的伴侣发出绝望的[npc.moan]时你不禁微笑，你一边诱惑地咬着嘴唇，一边盘算着该怎么操[npc.herHim]……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_SEARCHED -->
@@ -684,218 +686,218 @@
 	#IF(pc.getRace()==RACE_HUMAN || (pc.getRace()!=RACE_DEMON && !game.isDayTime()))
 		<p>
 			#IF(pc.isBrave() || pc.isConfident())
-				Although you're not at all intimidated by these two Enforcers, you don't want to waste any time arguing or fighting against them, and so you decide that the best course of action is to just do as they say. Letting out an annoyed sigh, you turn around and face the wall, before telling [npc.name] to hurry up and get this over with.
+				虽然你一点也不害怕这两个执法者，但你也不想浪费时间和他们争论或对抗，所以你决定最好的办法就是照他们说的做。你恼怒地叹了口气，转过身面向墙壁，然后对[npc.name]说快点把事办完。
 			#ELSEIF(pc.isCowardly())
-				Absolutely terrified by what these two Enforcers might do if you choose to disobey their commands, you very quickly decide that the best course of action is to do exactly as they say. Letting out a worried sigh, you turn around and face the wall, before telling [npc.name] that you'll do whatever [npc.she] says.
+				如果你不服从这两个执法者的命令，他们可能会做出什么事情来，这绝对会让你感到害怕，所以你很快就决定，最好的办法就是按他们说的去做。你忧心忡忡地叹了口气，转过身面向墙壁，告诉[npc.name]你会听从命令。
 			#ELSE
-				You really don't want to do anything that would give these Enforcers a reason to arrest you, and so decide that the best course of action is to just do as they say. Letting out a sigh, you turn around and face the wall, before telling [npc.name] that [npc.she] can get started on searching you.
+				你真的不想做任何事情让这些执法者有理由逮捕你，所以决定最好的办法就是照他们说的做。你叹了一口气，转过身面向墙壁，然后告诉[npc.name][npc.she]可以搜你的身了。
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Not happy with the special treatment that you're getting, you turn around and face the wall, before looking back over your shoulder and demanding that [npc.name] subject you to the same sort of pat-down search as [npc.she]'d give to anyone else.
+			你不满意自己受到的特殊待遇，转过身面向墙壁，然后回过头要求[npc.name]对你进行和其他人一样的搜身检查。
 		</p>
 		<p>
-			[npc2.speech(I think [pc.sheIs] getting off to this!)] [npc2.name] laughs.
+			[npc2.speech(我觉得[pc.sheIs]喜欢上这样了！)][npc2.name]大笑。
 		</p>
 		<p>
-			[npc.speech(Yeah, well, let's see if [pc.she] changes [pc.her] tune if I find anything illegal on [pc.herHim],)] [npc.name]
+			[npc.speech(是啊，那么，如果我在[pc.herHim]上发现任何违法的东西，看看[pc.herHim]会不会改口。)][npc.name]
 			#IF(npc.isFeminine())
-				 huffs.
+				愠怒着。
 			#ELSE
-				 grunts.
+				咕哝着。
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_SUBORDINATE"><![CDATA[
 	#IF(pc.getRace()==RACE_HUMAN || (pc.getRace()!=RACE_DEMON && !game.isDayTime()))
 		<p>
 			#IF(pc.isBrave() || pc.isConfident())
-				Although you're not at all intimidated by these two Enforcers, you don't want to waste any time arguing or fighting against them, and so you decide that the best course of action is to just do as they say. Letting out an annoyed sigh, you turn around and face the wall, before asking [npc2.name] to be the one to give you the search.
+				虽然你一点也不害怕这两个执法者，但你也不想浪费时间和他们争论或对抗，所以你决定最好的办法就是照他们说的做。你恼怒地叹了口气，转过身面向墙壁，然后让[npc2.name]对你搜身。
 			#ELSEIF(pc.isCowardly())
-				Absolutely terrified by what these two Enforcers might do if you choose to disobey their commands, you very quickly decide that the best course of action is to do exactly as they say. Letting out a worried sigh, you turn around and face the wall, before nervously asking if it would be ok if [npc2.name] could be the one to give you the search.
+				如果你不服从这两个执法者的命令，他们可能会做出什么事情来，这绝对会让你感到害怕，所以你很快就决定，最好的办法就是按他们说的去做。你忧心忡忡地叹了口气，转过身面向墙壁，然后紧张地询问是否可以由[npc2.name]来给你搜身。
 			#ELSE
-				You really don't want to do anything that would give these Enforcers a reason to arrest you, and so decide that the best course of action is to just do as they say. Letting out a sigh, you turn around and face the wall, before asking if it would be ok if [npc2.name] could be the one to give you the search.
+				你真的不想做任何事情让这些执法者有理由逮捕你，所以决定最好的办法就是照他们说的做。你叹了一口气，转过身面向墙壁，然后询问是否可以由[npc2.name]来给你搜身。
 			#ENDIF
 		</p>
 		<p>
-			[npc.speech(Sure, why not?)] [npc.name] huffs, before stepping back and commanding [npc.her] subordinate, [npc.speech(Go on, [npc2.name], give [pc.herHim] a pat-down.)]
+			[npc.speech(可以，为什么不呢？)][npc.name]愠怒着，后退一步，指挥[npc.her]的下属：[npc.speech(去，[npc2.name]，给[pc.herHim]搜身。)]
 		</p>
 	#ELSE
 		<p>
-			Not happy with the special treatment that you're getting, you turn around and face the wall, before looking back over your shoulder and demanding that [npc2.name] subject you to the same sort of pat-down search as [npc2.she]'d give to anyone else.
+			你不满意自己受到的特殊待遇，转过身面向墙壁，然后回过头要求[npc2.name]对你进行和其他人一样的搜身检查。
 		</p>
 		<p>
-			[npc.speech(I think [pc.sheIs] getting off to this!)] [npc.name] laughs.
+			[npc.speech(我觉得[pc.sheIs]喜欢上这样了！)][npc.name]大笑。
 		</p>
 		<p>
-			[npc.speech(Yeah, well, let's see if [pc.she] changes [pc.her] tune if I find anything illegal on [pc.herHim],)] [npc.name]
+			[npc.speech(是啊，那么，如果我在[pc.herHim]上发现任何违法的东西，看看[pc.herHim]会不会改口。)][npc.name]
 			#IF(npc.isFeminine())
-				 huffs.
+				愠怒着。
 			#ELSE
-				 grunts.
+				咕哝着。
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_HEAVY_CONTRABAND"><![CDATA[
 	<p>
-		With [npc2.name] keeping watch to make sure that you don't try anything funny, [npc.name] [npc.steps] up behind you and starts to pat you down. Recognising some of your possessions as being [style.colourBlueDark(highly illegal)], [npc.name] quickly confiscates them
+		[npc2.name]监视着你不让你干出格的事情，同时[npc.name]从后面[npc.steps]靠近你并开始给你搜身。[npc.name]发现你的一些物品是[style.colourBlueDark(严重违法)]的，便迅速没收，
 		#IF(npc.getTrueLevel()>npc2.getTrueLevel())
-			 and securely stows them in [npc.her] inventory.
+			并把它们妥善地保管在[npc.her]的身边。
 		#ELSE
-			 and passes them to [npc2.name] to securely stow in [npc2.her] inventory.
+			并把它们递给[npc2.name]，妥善保管在[npc2.her]身边。
 		#ENDIF
 	</p>
 	<p style='text-align:center;'>
-		[style.boldTerrible(You have lost:)]<br/>
+		[style.boldTerrible(你失去了：)]<br/>
 		[#SPECIAL_PARSE_0]
 	</p>
 	<p>
-		Pressing you up against the wall, [npc.name] reaches down to [npc.her] waist to grab a pair of handcuffs, before stating, [npc.speech(It's illegal to be in possession of these items, so we're taking you in. Do not resist!)]
+		[npc.name]将你按在墙上，从腰上取下了一副手铐，随后正色道，[npc.speech(拥有这些东西是违法的，所以我们要逮捕你，不许抵抗！)]
 	</p>
 	<p>
-		Realising that you only have a moment in which to act before you're placed under arrest, you wonder whether you should try and fight back against these Enforcers and take your items back from them...
+		你意识到在被逮捕之前只有片刻的时间可以抵抗，考虑着自己是否应该反击这些执法者，并拿回自己的物品……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_CONTRABAND_DEMAND_STRIP"><![CDATA[
 	<p>
-		With [npc2.name] keeping watch to make sure that you don't try anything funny, [npc.name] [npc.steps] up behind you and starts to pat you down.
+		[npc2.name]监视着你不让你干出格的事情，同时[npc.name]从后面[npc.steps]靠近你并开始给你搜身。
 		#IF(pc.hasBreasts())
-			 Running [npc.her] [npc.hands] up and over your [pc.breasts+], [npc.she] lets out an amused grunt as [npc.she] gives them a firm squeeze.
+			[npc.she]用[npc.hands]抚摸过你[pc.breasts+]，一边用力捏了一下，一边发出一声愉悦地咕哝。
 		#ELSE
-			 Running [npc.her] [npc.hands] down over your ass, [npc.she] lets out an amused grunt as [npc.she] gives your cheeks a firm squeeze.
+			[npc.she]用[npc.hands]抚摸过你的屁股，[npc.she]一边用力捏了一下你的脸颊，一边发出一声愉悦地咕哝。
 		#ENDIF
-		 Before you're able to react to this sexual harassment, the [npc.race] suddenly finds some items that you aren't supposed to have, and grunts, [npc.speech(I'm going to have to confiscate these...)]
+		在你来得及对这种性骚扰作出反应之前，[npc.race]突然发现了一些你本不该拥有的物品，同时咕哝着，[npc.speech(我得把这些东西没收了……)]
 	</p>
 	<p>
-		With [npc2.name] keeping watch to make sure that you don't try anything funny, [npc.name] quickly confiscates your [style.colourBlueDark(illegal)] items
+		[npc2.name]监视着你不让你干出格的事情，[npc.name]快速地没收了你的[style.colourBlueDark(违法)]物品
 		#IF(npc.getTrueLevel()>npc2.getTrueLevel())
-			 and securely stows them in [npc.her] inventory.
+			并把它们妥善地保管在[npc.her]身边。
 		#ELSE
-			 and passes them to [npc2.name] to securely stow in [npc2.her] inventory.
+			并把它们递给[npc2.name]，妥善保管在[npc2.her]身边。
 		#ENDIF
 	</p>
 	<p style='text-align:center;'>
-		[style.boldTerrible(You have lost:)]<br/>
+		[style.boldTerrible(你失去了：)]<br/>
 		[#SPECIAL_PARSE_0]
 	</p>
 	<p>
-		Having carried out [npc.her] duty, [npc.name] starts groping your body and feeling you up once again, before grunting into your ear, [npc.speech(Naughty [pc.races] like you need to be taught a lesson. You'd like that, wouldn't you?)]
+		[npc.name]圆满完成任务，开始抚摸你的身体并再度开始感受你，随后对着你的耳朵呢喃，[npc.speech(调皮的小[pc.races]看起来需要上一课啊。你也很愿意吧，对不对？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_STRIP_DEMAND"><![CDATA[
 	<p>
-		With [npc2.name] keeping watch to make sure that you don't try anything funny, [npc.name] [npc.steps] up behind you and starts to pat you down.
+		[npc2.name]监视着你不让你干出格的事情，同时[npc.name]从后面[npc.steps]近你并开始给你搜身。
 		#IF(pc.hasBreasts())
-			 Running [npc.her] [npc.hands] up and over your [pc.breasts+], [npc.she] lets out an amused grunt as [npc.she] gives them a firm squeeze.
+			[npc.she]用[npc.hands]抚摸过你[pc.breasts+]，一边用力捏了一下，一边发出一声愉悦地咕哝。
 		#ELSE
-			 Running [npc.her] [npc.hands] down over your ass, [npc.she] lets out an amused grunt as [npc.she] gives your cheeks a firm squeeze.
+			[npc.she]用[npc.hands]抚摸过你的屁股，[npc.she]一边用力捏了一下你的脸颊，一边发出一声愉悦地咕哝。
 		#ENDIF
-		 Before you're able to react to this sexual harassment, the [npc.race] asks, [npc.speech(You're hiding something, aren't you?)]
+		在你来得及对这种性骚扰作出反应之前，[npc.race]问道，[npc.speech(你肯定在隐藏着什么东西，对不对？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_STRIP_DEMAND_PENIS_VAGINA"><![CDATA[
 	<p>
 		#IF(pc.isTaur())
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds [npc.her] groin into your animalistic rump. You let out a gasp as you feel the distinctive bulge of the [npc.race]'s [npc.cockSize] cock rubbing against your feral pussy, and to confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty pussy a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，用[npc.her]的胯部磨蹭着你野兽般的屁股。当你感受到这名[npc.race]的[npc.cockSize]的肉棒那棱角分明的轮廓磨蹭着你的兽态的阴部时，你轻轻喘息。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道，[npc.speech(脱掉你所有的衣服，把手放在墙上！我要把你下贱的小穴好好<i>搜索一番</i>！)]
 		#ELSE
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds [npc.her] groin into your [pc.assSize] ass. You let out a gasp as you feel the distinctive bulge of the [npc.race]'s [npc.cockSize] cock rubbing against your butt, and to confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty pussy a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，用[npc.her]的胯部磨蹭着你[pc.assSize]的屁股。当你感受到这名[npc.race]的[npc.cockSize]的肉棒那棱角分明的轮廓磨蹭着你的屁股时，你轻轻喘息。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道，[npc.speech(脱掉你所有的衣服，把手放在墙上！我要把你下贱的小穴好好<i>搜索一番</i>！)]
 		#ENDIF
 	</p>
 	<p>
-		Realising that submitting to [npc.namePos] demands will undoubtedly lead into [npc.herHim] fucking your pussy, you wonder if you should refuse to strip for [npc.herHim]. Then again, if you were feeling particularly horny, you could take things a step further and ask [npc2.name] to join in by putting your mouth to good use...
+		意识到如果服从[npc.namePos]的命令会毫无疑问地被[npc.herHim]狠狠地操，你考虑自己是否应该拒绝[npc.herHim]让你脱光的命令。又或者，如果你感觉自己极其富有欲望，你可以让事态更进一步，让[npc2.name]加入进来，并好好利用你的嘴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_STRIP_DEMAND_PENIS_ANUS"><![CDATA[
 	<p>
 		#IF(pc.isTaur())
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds [npc.her] groin into your animalistic rump. You let out a gasp as you feel the distinctive bulge of the [npc.race]'s [npc.cockSize] cock rubbing against your feral asshole, and to confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty ass a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，用[npc.her]的胯部磨蹭着你野兽般的屁股。你感受到[npc.race]的[npc.cockSize]的肉棒那棱角分明的轮廓磨蹭着你的兽态肛门，你轻轻喘息。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道：[npc.speech(脱光衣服，双手靠墙站好！我要给你的骚屁股来个彻底的<i>腔道搜查</i>！)]
 		#ELSE
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds [npc.her] groin into your [pc.assSize] ass. You let out a gasp as you feel the distinctive bulge of the [npc.race]'s [npc.cockSize] cock rubbing against your asshole, and to confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty ass a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，用[npc.her]的胯部磨蹭着你[pc.assSize]的屁股。你感受到这[npc.race]的[npc.cockSize]的肉棒那棱角分明的轮廓磨蹭着你的屁股，你轻轻喘息。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道：[npc.speech(脱光衣服，双手靠墙站好！我要给你的骚屁股来个彻底的<i>腔道搜查</i>！)]
 		#ENDIF
 	</p>
 	<p>
-		Realising that submitting to [npc.namePos] demands will undoubtedly lead into [npc.herHim] fucking your butt, you wonder if you should refuse to strip for [npc.herHim]. Then again, if you were feeling particularly horny, you could take things a step further and ask [npc2.name] to join in by putting your mouth to good use...
+		你意识到服从[npc.namePos]的要求肯定会导致[npc.herHim]操你的屁眼，你在考虑是否要拒绝为[npc.herHim]脱衣。如果你感到特别饥渴，似乎可以更进一步，请求[npc2.name]好好利用你的嘴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_STRIP_DEMAND_FINGER_VAGINA"><![CDATA[
 	<p>
 		#IF(pc.isTaur())
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds up against your animalistic rump. You let out a gasp as you feel the [npc.race]'s fingers tease down towards your groin, before starting to firmly rub up and down over your feral pussy. To confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty pussy a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，紧贴着你野兽般的屁股。你感受到[npc.race]的手指正上下挑逗着你的腹股沟，又猛然在你的兽态小穴上来回磨蹭，你不由轻轻喘息着。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道：[npc.speech(脱光衣服，双手靠墙站好！我要给你的骚穴来个彻底的<i>腔道搜查</i>！)]
 		#ELSE
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds up against your back. You let out a gasp as you feel the [npc.race]'s fingers tease down towards your groin, before starting to firmly rub up and down over your pussy. To confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty pussy a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，紧贴着你的后背。你感受到[npc.race]的手指正上下挑逗着你的腹股沟，又猛然在你的小穴上来回磨蹭，你不由轻轻喘息着。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道：[npc.speech(脱光衣服，双手靠墙站好！我要给你的骚穴来个彻底的<i>腔道搜查</i>！)]
 		#ENDIF
 	</p>
 	<p>
-		Realising that submitting to [npc.namePos] demands will undoubtedly lead into [npc.herHim] fingering your pussy, you wonder if you should refuse to strip for [npc.herHim]. Then again, if you were feeling particularly horny, you could take things a step further and ask [npc2.name] to join in by putting your mouth to good use...
+		意识到如果服从[npc.namePos]的命令无疑会导致你的小穴被[npc.herHim]狠狠地指交，你考虑自己是否应该拒绝[npc.herHim]让你脱光的命令。又或者，如果你感到特别饥渴，你可以让事态更进一步，让[npc2.name]加入进来，并好好用用你的嘴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_STRIP_DEMAND_FINGER_ANUS"><![CDATA[
 	<p>
 		#IF(pc.isTaur())
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds up against your animalistic rump. You let out a gasp as you feel the [npc.race]'s fingers tease down over your [pc.ass+], before starting to firmly rub up and down over your feral asshole. To confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty ass a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，磨蹭着你野兽般的屁股。当你感受到这名[npc.race]的手指在你[pc.ass+]上向下挑逗，然后开始狠狠地在你的兽态肛门上来回磨蹭，你轻轻喘息着。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道，[npc.speech(脱光衣服，双手靠墙站好！我要给你的骚屁股来个彻底的<i>腔道搜查</i>！)]
 		#ELSE
-			Not giving you any time in which to answer [npc.her] question, [npc.name] suddenly steps forwards and grinds up against your back. You let out a gasp as you feel the [npc.race]'s fingers tease down over your [pc.ass+], before starting to firmly rub up and down over your asshole. To confirm your suspicions of what this horny Enforcer wants from you, [npc.name] dominantly [npc.moansVerb], [npc.speech(Strip naked and put your hands up against the wall! I'm going to give your slutty ass a thorough <i>cavity search</i>!)]
+			[npc.name]丝毫不给你回答[npc.her]问题的机会，突然迈步向前，磨蹭着你的屁股。当你感受到这名[npc.race]的手指在你[pc.ass+]上向下挑逗，然后开始狠狠地在你的肛门上来回磨蹭，你轻轻喘息着。似乎是为了证实这名色情的执法者要对你干点什么的疑惑，[npc.name]充满支配性地[npc.moansVerb]道，[npc.speech(脱光衣服，双手靠墙站好！我要给你的骚屁股来个彻底的<i>腔道搜查</i>！)]
 		#ENDIF
 	</p>
 	<p>
-		Realising that submitting to [npc.namePos] demands will undoubtedly lead into [npc.herHim] fingering your ass, you wonder if you should refuse to strip for [npc.herHim]. Then again, if you were feeling particularly horny, you could take things a step further and ask [npc2.name] to join in by putting your mouth to good use...
+		意识到如果服从[npc.namePos]的命令无疑会导致你的屁股被[npc.herHim]狠狠地指交，你考虑自己是否应该拒绝[npc.herHim]让你脱光的命令。又或者，如果你感到特别饥渴，你可以让事态更进一步，让[npc2.name]加入进来，并好好用用你的嘴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_CONTRABAND"><![CDATA[
 	<p>
-		With [npc2.name] keeping watch to make sure that you don't try anything funny, [npc.name] [npc.steps] up behind you and starts to quickly pat you down. Quickly discovering that you're in possession [style.colourBlueDark(illegal)] items, [npc.name] confiscates them
+		[npc2.name]监视着你，确保你不会耍什么花招，[npc.name][npc.steps]到你身后，开始快速搜身。很快，[npc.name]发现你持有[style.colorBlueDark(违法)]物品，并将其没收
 		#IF(npc.getTrueLevel()>npc2.getTrueLevel())
-			 and securely stows them in [npc.her] inventory.
+			并把它们妥善地保管在[npc.her]身边。
 		#ELSE
-			 and passes them to [npc2.name] to securely stow in [npc2.her] inventory.
+			并把它们递给[npc2.name]，妥善保管在[npc2.her]身边。
 		#ENDIF
 	</p>
 	<p style='text-align:center;'>
-		[style.boldTerrible(You have lost:)]<br/>
+		[style.boldTerrible(你失去了：)]<br/>
 		[#SPECIAL_PARSE_0]
 	</p>
 	<p>
-		Finding no further evidence of wrongdoing, [npc.name] soon [npc.steps] back and says, [npc.speech(Ok, we'll be holding onto these items of yours, but other than that, there's no cause for us to take any further action against you. You can turn around again now.)]
+		[npc.Name]没有发现更多有关不法行为的证据，[npc.Name]退后一步然后说：[npc.speech(好吧，我们只会保留你的违法物品，没有理由对你采取更多的行动。你现在可以走了。)]
 	</p>
 	<p>
-		Doing as you're told, you turn around to face the two Enforcers once again. Placing [npc2.her] [npc2.hands] on [npc2.her] [npc2.hips], [npc2.name] states, [npc2.speech(If you don't have any criminals to report to us, we'll be on our way.)]
+		按照命令，你转身再次面对两个执法者。[npc2.her]双手叉腰开始说，[npc2.speech(如果你没有任何犯罪证据向我们报告，我们可就要走了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_STRIP_DEMAND_NONE"><![CDATA[
 	<p>
-		With [npc2.name] keeping watch to make sure that you don't try anything funny, [npc.name] [npc.steps] up behind you and starts to quickly pat you down.
+		[npc2.name]监视着你，确保你不会做出危险的举动，[npc.Name]走到你背后搜身。
 	</p>
 	<p>
-		Finding no evidence of any wrongdoing, [npc.name] soon [npc.steps] back and says, [npc.speech(Ok, it's clear that you're not carrying anything illegal, so you can turn around again.)]
+		[npc.Name]没有发现不法行为的任何证据，于是后退一步，转而对你说， [npc.speech(好吧，看来你并没有携带任何不法物品，现在你可以走了。)]
 	</p>
 	<p>
-		Doing as you're told, you turn around to face the two Enforcers once again. Placing [npc2.her] [npc2.hands] on [npc2.her] [npc2.hips], [npc2.name] states, [npc2.speech(If you don't have any criminals to report to us, we'll be on our way.)]
+		你听从命令转身面对两位执法者，[npc2.her]双手叉腰，[npc2.speech(如果你没有任何罪犯的线索向我们报告，我们就要离开这了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- getEnforcerSexResponse() -->
 	
@@ -907,29 +909,29 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name] and place your [pc.hands] up against the wall, before
+		你决定按照[npc.Name]说的做。你脱光了衣服，[pc.hands]靠在墙上，然后
 		#IF(pc.hasLegs())
-			 spreading your [pc.legs] and
+			张开双腿，
 		#ENDIF
-		 pushing your [pc.ass+] back out towards [npc.herHim]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race]
+		将[pc.ass+]冲向[npc.herHim]，你扭头看到[npc.race]正满怀期待地喘息，
 		#IF(npc.isWantingToEquipCondom(pc))
-			 rolling a dark purple condom down the length of [npc.her] [npc.cockSize], throbbing cock.
+			将一个紫色避孕套套在[npc.her]跳动的[npc.cockSize]巨大肉棒上。
 		#ELSE
-			 stroking [npc.her] [npc.cockSize], throbbing cock fully to attention.
+			抚摸[npc.her]立起的[npc.cockSize]巨大肉棒。
 		#ENDIF
 	</p>
 	<p>
 		#IF(kindEncounter)
-			[npc.speech(Like what you see?)] [npc.she] teases, before stepping forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.labia+].
+			[npc.speech(看起来怎么样？喜欢吗？)][npc.she]挑逗着走近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.labia+]处上下摩擦。
 		#ELSE
-			[npc.speech(Eyes front, slut!)] [npc.she] snaps, before stepping forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.labia+].
+			[npc.speech(眼睛朝前看，荡妇！)][npc.she]厉喝后朝你走近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.labia+]处上下摩擦。
 		#ENDIF
 	</p>
 	<p>
-		You open your mouth to reply, but just as you do so, the impatient [npc.race] suddenly grabs your [pc.hips+] and [npc.steps] forwards, pushing [npc.her] [npc.cock+] fully into your [pc.pussy+] in the process. The sudden penetration causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] starts thrusting [npc.her] [npc.cock+] in and out of your [pc.pussy+]...
+		你张嘴欲言，但就在这时，急不可耐的[npc.race]突然抓起你[pc.hips+]，[npc.steps]近一步，一路将[npc.her][npc.cock+]完全挺进你[pc.pussy+]。突如其来的插入让你发出了一阵[pc.a_moan+]，[npc.Name]紧接着在你[pc.pussy+]内抽插起[npc.her][npc.cock+]，又让你接连呻吟……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEX_START_PENIS_PUSSY_THREESOME"><![CDATA[
 	#VAR
@@ -937,35 +939,35 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name], but instead of placing your [pc.hands] up against the wall, you turn around and seductively ask whether [npc2.name] would like to join in with the search. Clearly eager to get in on the action, the [npc2.race] [npc2.steps] forwards, saying, [npc2.speech(Get down on all fours then! I'll use your mouth while [npc.name] here's fucking your pussy!)]
+		你决定服从命令，脱光衣服给[npc.Name]看，但你没有把[pc.hands]放在墙上，而是转过身，诱惑地问[npc2.name]是否愿意加入搜查。显然，[npc2.race]已经迫不及待地[npc2.steps]上前，一边说道：[npc2.speech(那就四肢着地趴下！等下[npc.name]操你的小穴，而我会好好享受你的嘴！)]
 	</p>
 	<p>
-		Once again doing as you're told, you drop down onto all fours, before pushing your [pc.ass+] back out towards [npc.name]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race] drop down behind you and pull out [npc.her]
+		你再次听话地四肢着地，然后把[pc.ass+]向[npc.name]的方向拱了过去。你朝后扭头，看到[npc.race]在你身后趴下，掏出
 		#IF(npc.isWantingToEquipCondom(pc))
-			 [npc.cockSize] cock, before quickly rolling a dark purple condom down its throbbing length.
+			那不断抽动的[npc.cockSize]肉棒，迅速套上一个深紫色的避孕套，
 		#ELSE
-			 [npc.cockSize], throbbing cock.
-		#ENDIF
+			那不断抽动的[npc.cockSize]肉棒，
+		#ENDIF你不禁发出了一声期待的[pc.moan]。
 	</p>
 	<p>
 		#IF(kindEncounter)
-			[npc.speech(Like what you see?)] [npc.she] teases, before shuffling forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.labia+].
+			[npc.speech(看起来怎么样？喜欢吗？)][npc.she]挑逗着挪近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.labia+]处上下摩擦。
 		#ELSE
-			[npc.speech(Eyes front, slut!)] [npc.she] snaps, before shuffling forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.labia+].
+			[npc.speech(眼睛朝前看，荡妇！)][npc.she]厉喝后朝你挪近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.labia+]处上下摩擦。
 		#ENDIF
 	</p>
 	<p>
-		You open your mouth to reply, but just as you do so, the impatient [npc.race] suddenly grabs your [pc.hips+] and shuffles forwards, pushing [npc.her] [npc.cock+] fully into your [pc.pussy+] in the process. The sudden penetration causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] starts thrusting [npc.her] [npc.cock+] in and out of your [pc.pussy+].
+		你张嘴欲言，但就在这时，急不可耐的[npc.race]突然抓起你[pc.hips+]，一路将[npc.her][npc.cock+]完全挺进你[pc.pussy+]。突如其来的插入让你发出了一阵[pc.a_moan+]，[npc.Name]紧接着在你[pc.pussy+]内抽插起[npc.her][npc.cock+]，又让你接连呻吟。
 	</p>
 	<p>
 		#IF(npc2.hasPenis())
-			While [npc.name] gets started on your rear, [npc2.name] drops down in front of you, before grabbing the back of your head and quickly forcing [npc2.her] [npc2.cock+] into your mouth. With little option put to orally pleasure the horny [npc2.race], you start bobbing your head up and down on [npc2.her] hot, throbbing shaft, while [npc2.her] partner continues pounding your [pc.pussy+]...
+			[npc.name]从你身后开始下手，同时[npc2.name]在你面前俯下身，抓着你的后脑勺，迅速将[npc2.her][npc2.cock+]塞进你的嘴里。你几乎别无选择，只能为了让饥渴的[npc2.race]获得口交快感而晃动你的头，含着[npc2.her]那颤动着的滚烫肉棒上上下下，而[npc2.her]的搭档则继续撞击你[pc.pussy+]……
 		#ELSE
-			While [npc.name] gets started on your rear, [npc2.name] drops down in front of you, before grabbing the back of your head and forcefully pushing [npc2.her] [npc2.pussy+] forwards against your mouth. With little option put to orally pleasure the horny [npc2.race], you start licking and kissing [npc2.her] hot, wet cunt, while [npc2.her] partner continues pounding your [pc.pussy+]...
+			[npc.name]从你身后开始下手，同时[npc2.name]在你面前俯下身，抓着你的后脑勺，用力将[npc2.her][npc2.pussy+]顶到你嘴边。你几乎别无选择，只能口交取悦饥渴的[npc2.race]，舔吻[npc2.her]湿漉漉的热穴，而[npc2.her]的搭档则继续撞击你[pc.pussy+]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Fucking ass: -->
 	
@@ -975,29 +977,29 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name] and place your [pc.hands] up against the wall, before
+		你决定按照[npc.Name]说的做。你脱光了衣服，[pc.hands]靠在墙上，然后
 		#IF(pc.hasLegs())
-			 spreading your [pc.legs] and
+			张开双腿，
 		#ENDIF
-		 pushing your [pc.ass+] back out towards [npc.herHim]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race]
+		将[pc.ass+]冲向[npc.herHim]，你扭头看到[npc.race]正满怀期待地喘息，
 		#IF(npc.isWantingToEquipCondom(pc))
-			 rolling a dark purple condom down the length of [npc.her] [npc.cockSize], throbbing cock.
+			将一个紫色避孕套套在[npc.her]跳动的[npc.cockSize]巨大肉棒上。
 		#ELSE
-			 stroking [npc.her] [npc.cockSize], throbbing cock fully to attention.
+			抚摸[npc.her]立起的[npc.cockSize]巨大肉棒。
 		#ENDIF
 	</p>
 	<p>
 		#IF(kindEncounter)
-			[npc.speech(Like what you see?)] [npc.she] teases, before stepping forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.asshole+].
+			[npc.speech(看起来怎么样？喜欢吗？)][npc.she]挑逗着走近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.asshole+]处上下摩擦。
 		#ELSE
-			[npc.speech(Eyes front, slut!)] [npc.she] snaps, before stepping forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.asshole+].
+			[npc.speech(眼睛朝前看，荡妇！)][npc.she]厉喝后朝你走近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.asshole+]处上下摩擦。
 		#ENDIF
 	</p>
 	<p>
-		You open your mouth to reply, but just as you do so, the impatient [npc.race] suddenly grabs your [pc.hips+] and [npc.steps] forwards, pushing [npc.her] [npc.cock+] fully into your [pc.ass+] in the process. The sudden penetration causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] starts thrusting [npc.her] [npc.cock+] in and out of your [pc.asshole+]...
+		你张嘴欲言，但就在这时，急不可耐的[npc.race]突然抓起你[pc.hips+]，一路将[npc.her][npc.cock+]完全挺进你[pc.ass+]。突如其来的插入让你发出了一阵[pc.a_moan+]，[npc.Name]紧接着在你[pc.asshole+]内抽插起[npc.her][npc.cock+]，又让你接连呻吟……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEX_START_PENIS_ASSHOLE_THREESOME"><![CDATA[
 	#VAR
@@ -1005,35 +1007,35 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name], but instead of placing your [pc.hands] up against the wall, you turn around and seductively ask whether [npc2.name] would like to join in with the search. Clearly eager to get in on the action, the [npc2.race] [npc2.steps] forwards, saying, [npc2.speech(Get down on all fours then! I'll use your mouth while [npc.name] here's fucking your ass!)]
+		你决定服从命令，脱光衣服给[npc.Name]看，但你没有把[pc.hands]放在墙上，而是转过身，诱惑地问[npc2.name]是否愿意加入搜查。显然，[npc2.race]已经迫不及待地[npc2.steps]上前，一边说道：[npc2.speech(那就四肢着地趴下！等下[npc.name]操你的屁股，而我会好好享受你的嘴！)]
 	</p>
 	<p>
-		Once again doing as you're told, you drop down onto all fours, before pushing your [pc.ass+] back out towards [npc.name]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race] drop down behind you and pull out [npc.her]
+		你再次听话地四肢着地，然后把[pc.ass+]向[npc.name]的方向拱了过去。你朝后扭头，看到[npc.race]在你身后趴下，掏出
 		#IF(npc.isWantingToEquipCondom(pc))
-			 [npc.cockSize] cock, before quickly rolling a dark purple condom down its throbbing length.
+			那不断抽动的[npc.cockSize]肉棒，迅速套上一个深紫色的避孕套，
 		#ELSE
-			 [npc.cockSize], throbbing cock.
-		#ENDIF
+			那不断抽动的[npc.cockSize]肉棒，
+		#ENDIF你不禁发出了一声期待的[pc.moan]。
 	</p>
 	<p>
 		#IF(kindEncounter)
-			[npc.speech(Like what you see?)] [npc.she] teases, before shuffling forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.asshole+].
+			[npc.speech(看起来怎么样？喜欢吗？)][npc.she]挑逗着贴近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.asshole+]处上下摩擦。
 		#ELSE
-			[npc.speech(Eyes front, slut!)] [npc.she] snaps, before shuffling forwards and rubbing the [npc.cockHead+] of [npc.her] [npc.cockGirth] cock up and down over your [pc.asshole+].
+			[npc.speech(眼睛朝前看，荡妇！)][npc.she]厉喝后朝你贴近，用[npc.her][npc.cockGirth]鸡巴的[npc.cockHead+]在你[pc.asshole+]处上下摩擦。
 		#ENDIF
 	</p>
 	<p>
-		You open your mouth to reply, but just as you do so, the impatient [npc.race] suddenly grabs your [pc.hips+] and shuffles forwards, pushing [npc.her] [npc.cock+] fully into your [pc.ass+] in the process. The sudden penetration causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] starts thrusting [npc.her] [npc.cock+] in and out of your [pc.asshole+].
+		你张嘴欲言，但就在这时，急不可耐的[npc.race]突然抓起你[pc.hips+]，将[npc.her][npc.cock+]一路挺进你[pc.ass+]。突如其来的插入让你发出了一阵[pc.a_moan+]，[npc.Name]紧接着在你[pc.asshole+]内抽插起[npc.her][npc.cock+]，又让你接连呻吟。
 	</p>
 	<p>
 		#IF(npc2.hasPenis())
-			While [npc.name] gets started on your rear, [npc2.name] drops down in front of you, before grabbing the back of your head and quickly forcing [npc2.her] [npc2.cock+] into your mouth. With little option put to orally pleasure the horny [npc2.race], you start bobbing your head up and down on [npc2.her] hot, throbbing shaft, while [npc2.her] partner continues pounding your [pc.ass+]...
+			[npc.name]从你身后开始下手，同时[npc2.name]在你面前俯下身，抓着你的后脑勺，迅速将[npc2.her][npc2.cock+]塞进你的嘴里。你几乎别无选择，只能为了让饥渴的[npc2.race]获得口交快感而晃动你的头，含着[npc2.her]那颤动着的滚烫肉棒上上下下，而[npc2.her]的搭档则继续撞击你[pc.ass+]……
 		#ELSE
-			While [npc.name] gets started on your rear, [npc2.name] drops down in front of you, before grabbing the back of your head and forcefully pushing [npc2.her] [npc2.pussy+] forwards against your mouth. With little option put to orally pleasure the horny [npc2.race], you start licking and kissing [npc2.her] hot, wet cunt, while [npc2.her] partner continues pounding your [pc.ass+]...
+			[npc.name]从你身后开始下手，同时[npc2.name]在你面前俯下身，抓着你的后脑勺，用力将[npc2.her][npc2.pussy+]顶到你嘴边。你几乎别无选择，只能口交取悦饥渴的[npc2.race]，舔吻[npc2.her]湿漉漉的热穴，而[npc2.her]的搭档则继续撞击你[pc.ass+]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Fingering pussy: -->
 	
@@ -1043,24 +1045,24 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name] and place your [pc.hands] up against the wall, before
+		你决定按照[npc.Name]说的做。你脱光了衣服，[pc.hands]靠在墙上，然后
 		#IF(pc.hasLegs())
-			 spreading your [pc.legs] and
+			张开双腿，
 		#ENDIF
-		 pushing your [pc.ass+] back out towards [npc.herHim]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race] [npc.step] forwards and press [npc.herself] up close against you. 
+		将你[pc.ass+]冲着[npc.herHim]。当你看到[npc.race]向前[npc.step]出一步并紧紧贴在你身上时，你不禁发出了一声期待的[pc.moan] 。
 	</p>
 	<p>
 		#IF(kindEncounter)
-			[npc.speech(I can tell that you're going to enjoy this,)] [npc.she] teases, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.labia+].
+			[npc.speech(我看得出来，你会喜欢的，)][npc.she]挑逗道，然后伸手在你[pc.labia+]上来回磨蹭[npc.her][npc.fingers+]。
 		#ELSE
-			[npc.speech(Eyes front, slut!)] [npc.she] snaps, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.labia+].
+			[npc.speech(眼睛朝前看，荡妇！)][npc.she]斩钉截铁地说，然后伸手在你[pc.labia+]上来回磨蹭[npc.her][npc.fingers+]。
 		#ENDIF
 	</p>
 	<p>
-		You open your mouth to reply, but just as you do so, the impatient [npc.race] suddenly pushes [npc.her] [npc.fingers+] into your [pc.pussy+] and starts rapidly fingering you. The sudden stimulation causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] alternates between rubbing your sensitive [pc.clit] and pushing [npc.her] [npc.fingers] deep into your [pc.pussy+]...
+		你张嘴欲言，但就在这时，不耐烦的[npc.race]突然将[npc.her][npc.fingers+]插入你[pc.pussy+]，飞速开始指交你。突如其来的刺激让你发出了一阵[pc.a_moan+]，[npc.Name]紧接着揉搓起你敏感的[pc.clit]，交替着将[npc.her][npc.fingers]探入你[pc.pussy+]深处，又让你接连呻吟……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEX_START_FINGER_PUSSY_THREESOME"><![CDATA[
 	#VAR
@@ -1068,30 +1070,30 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name], but instead of placing your [pc.hands] up against the wall, you turn around and seductively ask whether [npc2.name] would like to join in with the search. Clearly eager to get in on the action, the [npc2.race] [npc2.steps] forwards, saying, [npc2.speech(Get down on all fours then! I'll use your mouth while [npc.name] here's having fun with your pussy!)]
+		你决定服从命令，脱光衣服给[npc.Name]看，但你没有把[pc.hands]放在墙上，而是转过身，诱惑地问[npc2.name]是否愿意加入搜索。显然，[npc2.race]已经迫不及待，向前走去并说道：[npc2.speech(那就四肢着地趴下！我会好好享受你的嘴，而[npc.name]则会负责你的小穴！)]
 	</p>
 	<p>
-		Once again doing as you're told, you drop down onto all fours, before pushing your [pc.ass+] back out towards [npc.name]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race] drop down behind you before grabbing a handful of your [pc.ass+]. 
+		你再次听话地四肢着地，然后把[pc.ass+]向[npc.name]的方向拱了过去。当你看到[npc.race]在你身后趴下，一把抓住你[pc.ass+]时，你不禁发出了一声期待的[pc.moan]。
 	</p>
 	<p>
 		#IF(kindEncounter)
-			[npc.speech(I can tell that you're going to enjoy this,)] [npc.she] teases, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.labia+].
+			[npc.speech(我看得出来，你会喜欢的，)][npc.she]挑逗道，然后伸手在你[pc.labia+]上来回磨蹭[npc.her][npc.fingers+]。
 		#ELSE
-			[npc.speech(Eyes front, slut!)] [npc.she] snaps, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.labia+].
+			[npc.speech(眼睛朝前看，荡妇！)][npc.she]斩钉截铁地说，然后伸手在你[pc.labia+]上来回磨蹭[npc.her][npc.fingers+]。
 		#ENDIF
 	</p>
 	<p>
-		You open your mouth to reply, but just as you do so, the impatient [npc.race] suddenly pushes [npc.her] [npc.fingers+] into your [pc.pussy+] and starts rapidly fingering you. The sudden stimulation causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] alternates between rubbing your sensitive [pc.clit] and pushing [npc.her] [npc.fingers] deep into your [pc.pussy+].
+		你张嘴欲言，但就在这时，不耐烦的[npc.race]突然将[npc.her][npc.fingers+]插入你[pc.pussy+]，飞速开始指交你。突如其来的刺激让你发出了一阵[pc.a_moan+]，[npc.Name]紧接着揉搓起你敏感的[pc.clit]，交替着将[npc.her][npc.fingers]探入你[pc.pussy+]深处，又让你接连呻吟。
 	</p>
 	<p>
 		#IF(npc2.hasPenis())
-			While [npc.name] gets started on your rear, [npc2.name] drops down in front of you, before grabbing the back of your head and quickly forcing [npc2.her] [npc2.cock+] into your mouth. With little option put to orally pleasure the horny [npc2.race], you start bobbing your head up and down on [npc2.her] hot, throbbing shaft, while [npc2.her] partner continues stimulating your [pc.pussy+]...
+			[npc.name]从你身后开始下手，同时[npc2.name]在你面前俯下身，抓着你的后脑勺，迅速将[npc2.her][npc2.cock+]塞进你的嘴里。你几乎别无选择，只能为了让饥渴的[npc2.race]获得口交快感而晃动你的头，含着[npc2.her]那颤动着的滚烫肉棒上上下下，而[npc2.her]的搭档则继续刺激你[pc.pussy+]……
 		#ELSE
-			While [npc.name] gets started on your rear, [npc2.name] drops down in front of you, before grabbing the back of your head and forcefully pushing [npc2.her] [npc2.pussy+] forwards against your mouth. With little option put to orally pleasure the horny [npc2.race], you start licking and kissing [npc2.her] hot, wet cunt, while [npc2.her] partner continues stimulating your [pc.pussy+]...
+			[npc.name]从你身后开始下手，同时[npc2.name]在你面前俯下身，抓着你的后脑勺，用力将[npc2.her][npc2.pussy+]顶到你嘴边。你几乎别无选择，只能口交取悦饥渴的[npc2.race]，舔吻[npc2.her]湿漉漉的热穴，而[npc2.her]的搭档则继续刺激你[pc.pussy+]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Fingering ass & giving handjob: -->
 	
@@ -1102,39 +1104,39 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name] and place your [pc.hands] up against the wall, before
+		你决定按照[npc.Name]说的做。你脱光了衣服，[pc.hands]靠在墙上，然后
 		#IF(pc.hasLegs())
-			 spreading your [pc.legs] and
+			张开双腿，
 		#ENDIF
-		 pushing your [pc.ass+] back out towards [npc.herHim]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race] [npc.step] forwards and press [npc.herself] up close against you. 
+		将你[pc.ass+]冲着[npc.herHim]。当你看到[npc.race]向前[npc.step]出一步并紧紧贴在你身上时，你不禁发出了一声期待的[pc.moan] 。
 	</p>
 	<p>
 		#IF(analFingering)
 			#IF(kindEncounter)
-				[npc.speech(I can tell that you're going to enjoy this,)] [npc.she] teases, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.asshole+].
+				[npc.speech(我看得出你会很享受的。)][npc.she]挑逗道，接着伸手在你[pc.asshole+]上来回磨蹭[npc.her][npc.fingers+]。
 			#ELSE
-				[npc.speech(Eyes front, slut!)] [npc.she] snaps, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.asshole+].
+				[npc.speech(眼睛朝前看，荡妇！)][npc.she]喝道，接着伸手在你[pc.asshole+]上来回磨蹭[npc.her][npc.fingers+]。
 			#ENDIF
 		#ELSE
 			#IF(kindEncounter)
-				[npc.speech(Now that I'm able to take a closer look at you, I can see that there's no need for a cavity search after all,)] [npc.she] teases, [npc.speech(It would be a shame to stop now, though...)]
+				[npc.speech(现在我就能近距离观察你了，看得出来你根本不需要腔道搜查。)][npc.she]挑逗道，[npc.speech(不过，现在停下就太可惜了……)]
 			#ELSE
-				[npc.speech(Eyes front, slut!)] [npc.she] snaps, before teasing, [npc.speech(Now that I'm able to take a closer look at you, I can see that there's no need for a cavity search after all. It would be a shame to stop now, though...)]
+				[npc.speech(眼睛朝前看，荡妇！)][npc.she]厉声呵斥，又挑逗道，[npc.speech(现在我就能近距离观察你了，看得出来你根本不需要腔道搜查。不过，现在停下就太可惜了……)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		You can't help but feel extremely turned on by the situation you find yourself in, and before you know it, you're letting out [pc.a_moan+] and looking down at your fully-erect, [pc.cock+]. Obviously noticing what it is that's caught your attention, [npc.name] reaches around and takes hold of your [pc.cock+], before starting to slowly jerk you off.
+		你不禁对自己所处的环境感到异常兴奋，不知不觉中，你发出了[pc.a_moan+]，并低头看着自己完全勃起的[pc.cock+]。显然，[npc.name]注意到了你的勃起，伸手握住了你[pc.cock+]，然后开始舒缓绵长地撸动起来。
 	</p>
 	<p>
 		#IF(analFingering)
-			You open your mouth to say something in response to this unexpected move, but just as you do so, the [npc.race] suddenly pushes [npc.her] [npc.fingers+] into your [pc.asshole+] and starts rapidly fingering your ass. The sudden stimulation causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] focuses on simultaneously giving you a handjob and fingering your [pc.asshole+]...
+			面对这突如其来的举动，你张开嘴想说些什么，但就在这时，[npc.race]突然将[npc.fingers+]插入你[pc.asshole+]，并开始快速地指交你的菊穴。突如其来的刺激让你发出了一阵[pc.a_moan+]，紧接着[npc.name]开始同时给你打飞机，并指交你[pc.asshole+]……
 		#ELSE
-			You open your mouth to say something in response to this unexpected move, but just as you do so, the [npc.race] suddenly delivers a sharp slap to your [pc.ass+]. The sudden stimulation causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] focuses all of [npc.her] attention on giving you a handjob...
+			面对这突如其来的举动，你张开嘴想说些什么，但就在你张开嘴的同时，[npc.race]突然对你[pc.ass+]狠狠地扇了一巴掌。突如其来的刺激让你发出了一阵[pc.a_moan+]，紧接着[npc.name]把[npc.her]所有的注意力都集中在给你打手枪上，你又发出了几声[pc.a_moan+]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEX_START_FINGER_PENIS_THREESOME"><![CDATA[
 	#VAR
@@ -1143,65 +1145,65 @@
 	#ENDVAR
 	
 	<p>
-		Deciding to do as you're told, you strip naked for [npc.name], but instead of placing your [pc.hands] up against the wall, you turn around and seductively ask whether [npc2.name] would like to join in with the search. Clearly eager to get in on the action, the [npc2.race] [npc2.steps] forwards, saying,
+		你决定服从命令，脱光衣服给[npc.Name]看，但你没有把[pc.hands]放在墙上，而是转过身，诱惑地问[npc2.name]是否愿意加入搜索。显然，[npc2.race]已经迫不及待，向前走去并说道
 		#IF(analFingering)
-			 [npc2.speech(Get down on all fours then! I'll use your mouth while [npc.name] here's having fun with your ass!)]
+			[npc2.speech(那就四肢着地趴下！我会好好享受你的嘴，而[npc.name]则会和你的屁股找点乐子！)]
 		#ELSE
-			 [npc2.speech(Get down on all fours then! I'll use your mouth while [npc.name] here's having fun with your cock!)]
+			[npc2.speech(那就四肢着地趴下！我会好好享受你的嘴，而[npc.name]则会和你的鸡巴找点乐子！)]
 		#ENDIF
 	</p>
 	<p>
-		Once again doing as you're told, you drop down onto all fours, before pushing your [pc.ass+] back out towards [npc.name]. Looking back over your shoulder, you can't help but let out an expectant [pc.moan] as you see the [npc.race] drop down behind you and eagerly grab a handful of your [pc.ass+]. 
+		你再次听话地四肢着地，然后把[pc.ass+]向[npc.name]的方向拱了过去。当你看到[npc.race]在你身后趴下，迫不及待地抓住你[pc.ass+]时，你不禁发出了一声期待的[pc.moan] 。
 	</p>
 	<p>
 		#IF(analFingering)
 			#IF(kindEncounter)
-				[npc.speech(I can tell that you're going to enjoy this,)] [npc.she] teases, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.asshole+].
+				[npc.speech(我看得出你会很享受的。)][npc.she]挑逗道，接着伸手在你[pc.asshole+]上来回磨蹭[npc.her][npc.fingers+]。
 			#ELSE
-				[npc.speech(Eyes front, slut!)] [npc.she] snaps, before reaching down to rub [npc.her] [npc.fingers+] up and down over your [pc.asshole+].
+				[npc.speech(眼睛朝前看，荡妇！)][npc.she]喝道，接着伸手在你[pc.asshole+]上来回磨蹭[npc.her][npc.fingers+]。
 			#ENDIF
 		#ELSE
 			#IF(kindEncounter)
-				[npc.speech(Now that I'm able to take a closer look at you, I can see that there's no need for a cavity search after all,)] [npc.she] teases, [npc.speech(It would be a shame to stop now, though...)]
+				[npc.speech(现在我就能近距离观察你了，看得出来你根本不需要腔道搜查。)][npc.she]挑逗道，[npc.speech(不过，现在停下就太可惜了……)]
 			#ELSE
-				[npc.speech(Eyes front, slut!)] [npc.she] snaps, before teasing, [npc.speech(Now that I'm able to take a closer look at you, I can see that there's no need for a cavity search after all. It would be a shame to stop now, though...)]
+				[npc.speech(眼睛朝前看，荡妇！)][npc.she]厉声呵斥，又挑逗道，[npc.speech(现在我就能近距离观察你了，看得出来你根本不需要腔道搜查。不过，现在停下就太可惜了……)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(analFingering)
-			You open your mouth to say something in response to this unexpected move, but just as you do so, the [npc.race] suddenly pushes [npc.her] [npc.fingers+] into your [pc.asshole+] and starts rapidly fingering your ass. The sudden stimulation causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] focuses on simultaneously giving you a handjob and fingering your [pc.asshole+].
+			面对这突如其来的举动，你张嘴欲言，但就在这时，[npc.race]突然将[npc.fingers+]插入你[pc.asshole+]，并开始快速地指交你的菊穴。突如其来的刺激让你发出了一阵[pc.a_moan+]，紧接着[npc.name]集中精力同时给你打飞机和指交你[pc.asshole+]，又让你接连呻吟。
 		#ELSE
-			You open your mouth to say something in response to this unexpected move, but just as you do so, the [npc.race] suddenly delivers a sharp slap to your [pc.ass+]. The sudden stimulation causes you to let out [pc.a_moan+], which is followed by several more as [npc.name] focuses all of [npc.her] attention on giving you a handjob.
+			面对这突如其来的举动，你张嘴欲言，但就在这时，[npc.race]突然对你[pc.ass+]狠狠地扇了一巴掌。突如其来的刺激让你发出了一阵[pc.a_moan+]，紧接着[npc.name]聚精会神地给你手交，又让你接连呻吟。
 		#ENDIF
 	</p>
 	<p>
 		#IF(npc2.hasPenis())
-			Seeing that [npc2.her] partner has already got started, [npc2.name] drops down in front of you, before grabbing the back of your head and quickly forcing [npc2.her] [npc2.cock+] into your mouth. With little option put to orally pleasure the horny [npc2.race], you start bobbing your head up and down on [npc2.her] hot, throbbing shaft, while [npc2.her] partner continues stimulating both your [pc.cock+] and [pc.asshole+]...
+			眼见[npc2.her]的搭档已经开始了，[npc2.name]在你面前俯下身，抓着你的后脑勺，迅速将[npc2.her][npc2.cock+]塞进你的嘴里。你几乎别无选择，只能为了让饥渴的[npc2.race]获得口交快感而晃动你的头，含着[npc2.her]那颤动着的滚烫肉棒上上下下，而[npc2.her]的搭档则继续刺激你[pc.cock+]和[pc.asshole+]……
 		#ELSE
-			Seeing that [npc2.her] partner has already got started, [npc2.name] drops down in front of you, before grabbing the back of your head and forcefully pushing [npc2.her] [npc2.pussy+] forwards against your mouth. With little option put to orally pleasure the horny [npc2.race], you start licking and kissing [npc2.her] hot, wet cunt, while [npc2.her] partner continues
+			眼见[npc2.her]的搭档已经开始了，[npc2.name]在你面前俯下身，抓着你的后脑勺，用力将[npc2.her][npc2.pussy+]顶到你嘴边。你几乎别无选择，只能口交取悦饥渴的[npc2.race]，舔吻[npc2.her]湿漉漉的热穴，而[npc2.her]的搭档则继续
 		#ENDIF
 		#IF(analFingering)
-			 stimulating both your [pc.cock+] and [pc.asshole+]...
+			同时刺激你[pc.cock+]和[pc.asshole+]……
 		#ELSE
-			 playing with your [pc.cock+]...
+			逗弄你[pc.cock+]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_SEARCHED_STRIP_REFUSED -->
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_SEARCHED_STRIP_REFUSED"><![CDATA[
 	<p>
-		You really don't want to take this any further, and so you turn around and tell the Enforcers that you don't consent to a 'cavity search'. While clearly willing to take advantage of you, they don't seem interested in forcing you into doing anything, and so after stepping back, [npc.name] says, [npc.speech(Fine, we're not going to do this if you don't want it...)]
+		你真的不想再继续下去了，于是你转过身，告诉执法者你不同意“搜身”。虽然他们明显想占你便宜，但似乎没有兴趣强迫你做任何事，所以在退后一步后，[npc.name]说道，[npc.speech(好吧，如果你不愿意，我们就不这样做了……)]
 	</p>
 	<p>
-		[npc2.speech(I guess there's nothing more for us to do here,)] [npc2.name] states, [npc2.speech(If you haven't got any criminal activity to report, then we'll be on our way.)]
+		[npc2.speech(我想，我们在这里也没什么可做的了，)][npc2.name]表示， [npc2.speech(如果没有犯罪活动要报告，那我们就上路了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_AFTER_CAVITY_SEARCH_SEX -->
@@ -1209,16 +1211,16 @@
 	<htmlContent tag="ENFORCER_ALLEYWAY_AFTER_CAVITY_SEARCH_SEX"><![CDATA[
 	<p>
 		#IF(sex.getAllParticipants(false).size()==3)
-			Having had their fun, the two Enforcers stand up and get their uniforms back in order, leaving you panting and [pc.moaning] on the floor in front of them.
+			两名执法者餍足后，站起身重新整理好制服，任由你在眼前气喘吁吁地躺在地上[pc.moaning]。
 		#ELSE
-			Having had [npc.her] fun, [npc.name] stands up and get [npc.her] uniform back in order, leaving you panting and [pc.moaning] on the floor in front of [npc.herHim].
+			[npc.name]餍足后，站起身重新整理好制服，任由你在眼前气喘吁吁地躺在地上[pc.moaning]。
 		#ENDIF
 	</p>
 	<p>
-		After a couple of minutes, you feel as though you've recovered enough to stand up, and so after pushing yourself to your [pc.feet], you start to get your clothing back in order. With big smirks on their faces, the two Enforcers wait until you're ready to go, before [npc.name] asks, [npc.speech(So, now that you've proven to us that you're not up to no good, is there anything we can do to assist you? Perhaps you've got a criminal to report to us?)]
+		几分钟后，你觉得自己已经恢复到可以站起来的程度，于是你站起身整理自己的衣服。两个执法者脸上带着灿烂的笑容，一直等到你准备好了，[npc.name]才问道：[npc.speech(那么，既然你已经向我们证明了你不是来做坏事的，有什么我们可以帮你的吗？也许你有罪犯要向我们报告？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_DEMON_REVEAL -->
@@ -1226,82 +1228,82 @@
 	<htmlContent tag="ENFORCER_ALLEYWAY_DEMON_REVEAL"><![CDATA[
 	#IF(pc.hasTraitActivated(PERK_CHUUNI))
 		<p>
-			Deciding that it's time to reveal your dark secret, you place your [pc.hands] on your [pc.hips] and let out a suitably-intimidating laugh, before pointing at the two Enforcers and declaring, [pc.speech(Mwhahaha! You have no idea of who you're dealing with! Tremble before my might, you foolish mortals!)] 
+			你决定是时候揭开你的秘密了，于是双手叉腰，发出恐吓性的笑声，指着两个执法者宣布道：[pc.speech(哇哈哈哈！你们根本不知道自己在和谁打交道！在吾之威光下颤抖吧，蝼蚁之辈！)] 
 		</p>
 		<p>
-			[npc.speech(What are you going on about?)] [npc.name] asks in annoyance.
+			[npc.speech(你在扯什么？)][npc.name]恼火地问道。
 		</p>
 		<p>
-			[pc.speech(Silence!)] you shout, before smirking at the clueless Enforcers and proudly revealing, [pc.speech(You are speaking with none other than Lyssieth's own child! Grovel before me, you pitiful fools, and beg for my forgiveness!)]
+			[pc.speech(安静！)]你喊道，对着一筹莫展的执法者们冷笑，继续得意洋洋地说道，[pc.speech(你们现在面对的不是别人，乃是莉西丝的子嗣！在我面前卑躬屈膝吧，可悲的愚者，乞求我的宽恕吧！)]
 		</p>
 		<p>
 			#IF(pc.hasAnySpellInSchool(SPELL_SCHOOL_FIRE))
-				With a dramatic sweep of your [pc.hand], you use your knowledge of the school of fire to summon a series of mighty, blinding explosions in front of the two Constables.
+				你夸张地挥舞着[pc.hand]，显现你的烈火学派知识，在两名警员面前召唤出一连串威力巨大的爆炸法术。
 			#ELSEIF(pc.hasAnySpellInSchool(SPELL_SCHOOL_ARCANE))
-				With a dramatic sweep of your [pc.hand], you use your knowledge of the school of arcane to summon a series of swirling, purple flashes in front of the two Constables.
+				你夸张地挥舞着[pc.hand]，显现你的奥术学派知识，在两名警员面前召唤出一连串旋转的紫色闪光。
 			#ELSE
-				With a dramatic sweep of your [pc.hand], you assume your most impressive pose and flash a wicked smirk at the two Constables.
+				你夸张地挥舞着[pc.hand]，摆出最威风的姿势，对着两名警员露出邪恶的笑容。
 			#ENDIF
-			 Immediately following this, you harness your ability to self-transform, and with another maniacal laugh, you assume your true form of
+			紧接着，你狂笑着运用自我转化能力，展露出你的真身：
 			#IF(pc.isFeminine())
-				 a stunningly-beautiful succubus.
+				一个美艳绝伦的魅魔。
 			#ELSE
-				 an intimidating incubus.
+				一个令人生畏的淫梦魔。
 			#ENDIF
 		</p>
 		<p>
-			Just as you expected, the two Enforcers look upon your demonic form with a mixture of fear and awe cast upon their faces. Struggling to find the right words, [npc.name] stammers, [npc.speech(W-What?! Y-You're a <i>demon</i>?! But demons can't transform like that! How did y-)]
+			正如你所料，两名执法者看着你的恶魔形态，脸上既恐惧又敬畏。[npc.name]绞尽脑汁去组织语言，只能结结巴巴地说道：[npc.speech(什，什么？！你是<i>恶魔</i>？！但恶魔不可能这样转化！你怎么做——)]
 		</p>
 		<p>
-			[pc.speech(Silence, fool!)] you declare, before letting out a soft laugh and proudly boasting, [pc.speech(I am [pc.name], [pc.daughter] of Lyssieth and the mightiest demon to ever have existed! I can take on whatever form pleases me! Now beg for my forgiveness!)]
+			[pc.speech(安静，蠢货！)]你先是轻笑一声，然后骄傲地自夸道：[pc.speech(吾乃[pc.name]，莉西丝的[pc.daughter]，有史以来最强大的恶魔！我可以变成任何我喜欢的形态！现在乞求我的宽恕吧！)]
 		</p>
 		<p>
-			Suitably impressed and intimidated, the two Enforcers start apologising for wasting your time. Smugly smirking at them in triumphant glee, you quickly self-transform back into your previous form, before wondering what to do next...
+			这两名执法者似乎被你震惊到了，立马为耽误你的时间道歉。你得意地冲他们坏笑，很快就转化为原样，思索接下来要做什么……
 		</p>
 	#ELSE
 		<p>
-			Deciding that this whole business would be more easily resolved if you were to reveal your true form, you smirk at the Enforcers and ask them if they'd be treating you any differently if you were a demon.
+			你觉得如果自己展露出原形，整件事就更容易解决了，于是你对执法者坏笑了一下，问如果你是恶魔，他们会不会换一副面孔对你。
 		</p>
 		<p>
-			[npc.speech(What do you mean by that?)] [npc.name] suspiciously asks, [npc.speech(You aren't a demon, so the answer to your question is irrelevant.)]
+			[npc.speech(你的意思是？)][npc.name]怀疑地问，[npc.speech(你又不是恶魔，问这个干嘛。)]
 		</p>
 		<p>
-			With a smirk still on your face, you harness your ability to self-transform and assume your true form of
+			你的脸上依然挂着坏笑，运用自我转化能力，展露出你的真身：
 			#IF(pc.isFeminine())
-				 a stunningly-beautiful succubus.
+				一个美艳绝伦的魅魔。
 			#ELSE
-				 an intimidating incubus.
+				一个令人生畏的淫梦魔。
 			#ENDIF
 		</p>
 		<p>
-			[npc2.speech(Wait, what?!)] [npc2.name] exclaims, [npc2.speech(Demons can't transform like that!)]
+			[npc2.speech(等等，什么？！)][npc2.name]大惊，[npc2.speech(恶魔不可能这样转化！)]
 		</p>
 		<p>
-			Informing the Enforcers that your abilities come from being a direct [pc.daughter] of #IF(pc.getLilinMother()!=null)[#pc.getLilinMother().getName()]#ELSEa lilin#ENDIF herself, you again ask them if they're planning on treating you any differently now that you've revealed your demonic form. Just as expected, the two officers seem suitably impressed and intimidated, and they quickly start apologising for wasting your time. Smugly smirking at them in triumphant glee, you quickly self-transform back into your previous form, before wondering what to do next...
+			你告诉执法者，你有这能力是因为你是#IF(pc.getLilinMother()!=null)[#pc.getLilinMother().getName()]#ELSE莉琳#ENDIF的直系[pc.daughter]，再次问他们，既然你已经展露了恶魔形态，他们是否会换种方式对待你。不出所料，这两名警官似乎被你吓到了，立马为耽误你的时间道歉。你得意地冲他们坏笑，很快就恢复原样，思索接下来要做什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_BRIBE -->
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_BRIBE"><![CDATA[
 	<p>
-		Not at all happy with the idea of being searched by these Enforcers, you decide that the best course of action would be to offer them a bribe in order to leave you alone. With this idea in mind, you
+		你可不乐意被这些执法者搜身，最好的办法就是贿赂他们放过你。你立马实操这个想法，
 		#IF(pc.isConfident())
-			 confidently
+			自信地
 		#ENDIF
-		 ask [npc.name] if there's some sort of 'official' fine that you could pay as an alternative to being searched.
+		问[npc.name]是否可以跳过搜身，直接付什么“官方”罚款。
 	</p>
 	<p>
-		Picking up on what it is you mean by that, the [npc.race] grins and answers, [npc.speech(Sure there is, but it's going to cost you [#SPECIAL_PARSE_0] flames.)]
+		[npc.race]立马心领神会，坏笑着回答道：[npc.speech(当然有，但需要花[#SPECIAL_PARSE_0]火币。)]
 	</p>
 	<p>
-		Seeing no problem in paying that amount of money, you produce the [#SPECIAL_PARSE_0] flames and hand them over to [npc.name]. Splitting the money in half, [npc.she] quickly gives [npc2.name] [npc2.her] share, who then proceeds to turn [npc2.her] attention towards you and state, [npc2.speech(If you've got no criminal activity to report, then we'll be on our way...)]
+		你对支付这笔钱没有意见，于是递给[npc.Name][#SPECIAL_PARSE_0]火币。[npc.Name]把钱分成两半，很快分了半份钱给[npc2.name]。[npc2.name]把注意力转向你，说道：[npc2.speech(如果没有犯罪活动要报告，那我们就上路了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_SOVERIEGN_CITIZEN -->
@@ -1315,68 +1317,68 @@
 	
 	#IF(pc.getOccupation()==OCCUPATION_TOURIST)
 		<p>
-			[pc.speech(Now you listen here,)] you say, pointing your [pc.finger] first at [npc.name], and then at [npc2.name], [pc.speech(I doubt that you terrorists know the meaning of freedom, but let me tell you that I'm an American, and I'm not going to stand for a pair of jumped-up, tyrannical fascists telling me what to do! If you so much as <i>think</i> about trying to issue me another command, I'll be reporting you to the embassy! Nobody harasses an American citizen and gets away with it!)]
+			[pc.speech(你现在给我听好，)]你用[pc.finger]指着[npc.name]和[npc2.name]说，[pc.speech(我怀疑你们这些恐怖分子是否懂得自由的含义，但我要告诉你，我是一个美国人，我不会容忍两个跳梁小丑、暴虐的法西斯主义者对我指手画脚！如果你还<i>觉得</i>可以对我发号施令，我就把你告到大使馆去！没人能骚扰美国公民还逍遥法外！)]
 		</p>
 		<p>
-			Exchanging puzzled glances with one another, the two Enforcers draw their batons and advance towards you. Clearly not understanding that you're a citizen of the most powerful nation on Earth, [npc.name] growls, [npc.speech(I don't know what the hell you're talking about, but you're in Dominion's jurisdiction here, so you're going to do exactly what we say. Do you understand?!)]
+			两名执法者交换了一下疑惑的眼神，然后拔出警棍向你走来。显然不明白你是地球上最强大国家的公民，[npc.name]喊道，[npc.speech(我不知道你在说什么，但你现在是在御城区的管辖范围内，所以你得按我们说的做，听懂了吗？！)]
 		</p>
 		<p>
-			[pc.speech(I understand that you're making the worst mistake of your lives!)] you retort, [pc.speech(This will be an international scandal! You damn commie sons of bitches aren't going to get away with this!)]
+			[pc.speech(我明白，你们正在犯下一生中最严重的错误！)]你反驳着，[pc.speech(这将成为国际丑闻！你们这些该死的康米主义婊子养的东西是逃不掉的！)]
 		</p>
 		<p>
-			[npc2.speech(This is your last warning,)] [npc2.name] growls, [npc2.speech(Submit to a search or receive a beating. It's your choice.)]
+			[npc2.speech(最后警告一遍，)][npc2.name]咆哮着，[npc2.speech(接受搜查还是挨打。你只有这两个选择。)]
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(Excuse me, but actually, according to the Articles of Confederation, I am considered to be a Sovereign Citizen, and so cannot be subjected to your laws. You have absolutely no authority over me, and it is illegal for you to issue me any orders at all,)] you explain to these idiotic Enforcers.
+			[pc.speech(对不起，但实际上根据邦联条款，我被视为主权公民，因此不会受制于你们的法律。你们对我完全没有权力，同时向我发布任何命令都是非法的，)]你向这些白痴执法者解释。
 		</p>
 		<p>
-			Exchanging puzzled glances with one another, the two Enforcers draw their batons and advance towards you. Clearly not understanding that you're a Sovereign Citizen, [npc.name] growls, [npc.speech(I don't know what the hell you're talking about, but you're in Dominion's jurisdiction here, so you're going to do exactly what we say. Just the fact that you're walking
+			两名执法者交换了一下疑惑的眼神，然后拔出警棍向你走来。显然不明白你是主权公民，[npc.name]喊道，[npc.speech(我不知道你到底在说什么，但你现在是在御城区的管辖范围内，所以你得按我们说的做。你走在
 			#IF(canal)
-				 down the side of this canal
+				运河边上
 			#ELSE
-				 around these alleyways
+				小巷里
 			#ENDIF
-			 is suspicious behaviour, so-)]
+			的行为十分可疑，所以~)]
 		</p>
 		<p>
-			[pc.speech(Excuse me!)] you interrupt, [pc.speech(I was not <i>walking</i>, I was <i>travelling</i>! I am travelling
+			[pc.speech(抱歉！)]你打断他们，[pc.speech(我不是<i>走</i>，我是在<i>旅行</i>！我在
 			#IF(canal)
-				 beside the canal
+				运河边上
 			#ELSE
-				 through the alleyways
+				小巷里
 			#ENDIF
-			 as a Sovereign Citizen, and you cannot stop me!)]
+			旅行，作为一位主权公民，你们没有权力阻止我！)]
 		</p>
 		<p>
-			[npc2.speech(This is your last warning,)] [npc2.name] growls, [npc2.speech(Submit to a search or receive a beating. It's your choice.)]
+			[npc2.speech(最后警告一遍，)][npc2.name]咆哮着，[npc2.speech(接受搜查还是挨打。你只有这两个选择。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_REPORT -->
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_REPORT"><![CDATA[
 	<p>
-		Deciding to use this opportunity to get rid of [npc3.name], you tell the Enforcers that [npc3.sheIs] most definitely a criminal and is most likely lurking somewhere nearby.
+		你决定利用这个机会除掉[npc3.name]，你告诉执法者，[npc3.sheIs]绝对是个罪犯，很可能就潜伏在附近的某个地方。
 	</p>
 	<p>
-		[npc.speech(Right, so where exactly did you last see this '[npc3.name]'?)] [npc.name] asks.
+		[npc.speech(好吧，那么你最后一次看到这个‘[npc3.name]’到底是在哪里？)][npc.name]问道。
 	</p>
 	<p>
-		After you've told [npc.herHim] where exactly you last encountered the [npc3.race], [npc.name] states, [npc.speech(Most of the criminals hiding in these parts are repeat offenders, and this '[npc3.name]' is most likely one of them. It's going to be enslavement for them, and then they'll be auctioned off in Slaver Alley. It's a huge amount of paperwork for us to deal with, so if you've got a slaver license, you could help us out by tagging along and enslaving the criminal yourself. That way we'll just have to file a basic report instead of dealing with all the enslavement crap.)]
+		在你告诉[npc.herHim]上次遇到[npc3.race]的确切地点后，[npc.name]表示，[npc.speech(藏匿在这些地方的大多数罪犯都是惯犯，这个‘[npc3.name]’很可能就是其中之一。他们将被奴役，然后在奴隶巷被拍卖。我们需要处理大量的文书工作，所以如果你有奴隶执照，你可以帮助我们，跟在我们后面亲自奴役罪犯。这样我们就只需提交一份基本报告，而不用处理那些奴役的废话了。)]
 	</p>
 	<p>
 		#IF(pc.isHasSlaverLicense())
-			As you are in possession of a slaver license, you wonder whether you should do as the Enforcers suggest and join them in tracking down [npc3.name]. If you were to do so, you'll be able to obtain the [npc3.race] as your slave, but if you choose to part ways with the Enforcers, you can be sure that you'll never see [npc3.name] again...
+			由于你拥有贩奴许可，你在考虑是否应该按照执法者的建议，与他们一起追捕[npc3.name]。如果你这样做，你就能把[npc3.race]收为你的奴隶，但如果你选择与执法者分道扬镳，可以肯定的是你再也见不到[npc3.name]了……
 		#ELSE
-			As you aren't in possession of a slaver license, you're unable to join them in tracking down [npc3.name]. With no other option but to part ways with the Enforcers, you can be sure that you'll never see [npc3.name] again...
+			由于你没有贩奴许可，你无法与他们一起追踪[npc3.name]。除了与执法者分道扬镳，你别无选择，可以肯定的是，你再也见不到[npc3.name]了……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_REPORT_CONTINUE"><![CDATA[
 	#VAR
@@ -1387,28 +1389,28 @@
 	
 	<p>
 		#IF(pc.isHasSlaverLicense())
-			Deciding that you don't want [npc3.name] as a slave, you tell the Enforcers that you've got other things to do right now.
+			你想把[npc3.name]收作奴隶，便告诉执法者你现在还有事要做。
 		#ELSE
-			Without a Slaver licence, you're unable to claim [npc3.name] as your slave, and so you tell the Enforcers that you're unable to help them.
+			你没有贩奴许可，无法把[npc3.name]收作奴隶，只能告诉执法者你无能为力。
 		#ENDIF
 	</p>
 	<p>
-		[npc.speech(I guess that means more paperwork for us,)] [npc.name] grumbles.
+		[npc.speech(看来这意味着我们有更多的文书工作了。)][npc.name]嘟囔着。
 	</p>
 	<p>
-		[npc2.speech(Let's go and get this done,)] [npc2.name] says, [npc2.speech(At least it's going to contribute to our weekly arrest quota.)]
+		[npc2.speech(赶快出发去做吧。)][npc2.name]说，[npc2.speech(至少能给我们的周逮捕指标做点贡献。)]
 	</p>
 	<p>
-		You watch as the two Enforcers head off down the
+		你看着两个执法者往
 		#IF(canal)
-			 canal-side path
+			运河水道
 		#ELSE
-			 alleyway
+			小巷
 		#ENDIF
-		 in the direction of [npc3.namePos] last known whereabouts. Confident that they'll find and catch the [npc3.race], you turn away and prepare to continue on your way...
+		的[npc3.namePos]已知落脚点走去。你相信[npc3.race]一定会被逮捕，便转身继续你的旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_REPORT_HELP"><![CDATA[
 	#VAR
@@ -1418,136 +1420,136 @@
 	#ENDVAR
 	
 	<p>
-		Deciding that it would be a good idea to claim [npc3.name] as your slave, you tell the Enforcers that you'll tag along and take ownership of the [npc3.race].
+		你决定让[npc3.name]成为你的奴隶，并告诉执法者你将跟在后面并拥有[npc3.race]的所有权。
 	</p>
 	<p>
-		[npc.speech(Great, that'll mean less paperwork for us,)] [npc.name] sighs, before setting off in the direction of [npc3.namePos] last known whereabouts.
+		[npc.speech(很好，这意味着我们可以减少文书工作了，)][npc.name]叹了口气，然后向[npc3.namePos]最后已知的行踪方向出发。
 	</p>
 	<p>
-		[npc2.speech(Hang back a little and don't get in our way,)] [npc2.name] commands as [npc2.she] sets off after [npc2.her] superior.
+		[npc2.speech(退后一点，不要妨碍我们，)][npc2.name]命令道，同时[npc2.she]跟随着[npc2.her]的上级一起出发了。
 	</p>
 	<p>
-		Doing as you're told, you stay a short way behind the two Enforcers as they search the
+		你遵守命令，跟在两名执法者后面不远处，因为他们正在搜查
 		#IF(canal)
-			 nearby canal-side paths
+			运河水道附近
 		#ELSE
-			 nearby alleyways
+			小巷附近
 		#ENDIF
-		 for any sign of the criminal [npc3.race] that you've reported to them. Sure enough, after about fifteen minutes of searching, [npc.name] spots a shady figure loitering about in a dark recess, and calls out, [npc.speech(Stop right there!)]
+		寻找你向他们报告的罪犯[npc3.race]的踪迹。果然，经过大约十五分钟的搜索，[npc.Name]发现一个阴暗的身影在黑暗的凹处游荡，于是叫了起来[npc.speech(站住！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_REPORT_HELP_CHILD"><![CDATA[
 	#IF(npc3.isMute())
 		<p>
-			Looking past the two Enforcers, you see the familiar figure of your [npc3.daughter], [npc3.name]. From the shocked expression on [npc3.her] face, [npc3.she] looks as though [npc3.sheIs] trying to decide whether to run or not, but as [npc3.she] catches sight of you, [npc3.she] flashes you a pleading expression, clearly conveying the desire for you to come and help [npc3.herHim].
+			你的视线越过两名执法者，看到了[npc3.daughter][npc3.name]熟悉的身影。[npc3.her]表情惊愕，似乎正在决定要不要逃跑，而当[npc3.she]看到你时，[npc3.she]向你露出了恳求的表情，明显希望你来帮助[npc3.herHim]。
 		</p>
 		<p>
-			As you remain still, however, [npc3.name] realises that you no intention of coming to [npc3.her] aid, and in a moment of desperate panic, [npc3.she] tries to fight back against the two Enforcers. [npc3.Her] efforts quickly prove to be in vain, as a discharge of [npc2.namePos] arcane taser stuns your [npc3.daughter] and enables [npc.name] to wrestle [npc3.herHim] to the floor.
+			但你一动不动，[npc3.name]意识到你无意来帮助[npc3.her]。在绝望的恐慌中，[npc3.she]试图向两名执法者反击，但事实证明[npc3.her]的努力是徒劳的，[npc2.namePos]的奥术电击枪击晕了你的[npc3.daughter]，使[npc.name]能够将[npc3.herHim]扭倒在地。
 		</p>
 		<p>
-			[npc.speech(Pretty bold of [npc3.herHim] to try and fight back,)] [npc.name] remarks as [npc.she] holds [npc3.name] down.
+			[npc.speech([npc3.herHim]还敢反抗，真是胆大包天。)][npc.Name]按倒[npc3.name]，评价道。
 		</p>
 		<p>
-			[npc2.speech([npc3.Her] days of breaking the law are over,)] [npc2.name] chuckles as [npc2.she] hands you a steel enslavement collar. [npc2.speech(Clasp this around [npc3.her] neck and the enchantment will take care of the rest.)]
+			[npc2.speech([npc3.her]逍遥法外的日子结束了。)][npc2.name]递给你一个钢铁奴役项圈时，一边笑道，[npc2.speech(把这个戴在[npc3.her]的脖子上，剩下的交给附魔。)]
 		</p>
 		<p>
-			Taking the collar from [npc2.name], you advance towards your [npc3.daughter], who flashes you a teary-eyed glare of complete and utter betrayal.
+			你接过[npc2.name]递来的项圈，走近你的[npc3.daughter]，[npc3.her]正泪眼婆娑地瞪着你彻底又明显的背叛之举。
 		</p>
 	#ELSE
 		<p>
-			Looking past the two Enforcers, you see the familiar figure of your [npc3.daughter], [npc3.name]. From the shocked expression on [npc3.her] face, [npc3.she] looks as though [npc3.sheIs] trying to decide whether to run or not, but as [npc3.she] catches sight of you, [npc3.she] calls out, [npc3.speech([pc.Mom]! Help!)]
+			你的视线越过两名执法者，看到了[npc3.daughter][npc3.name]熟悉的身影。[npc3.her]表情惊愕，似乎正在决定要不要逃跑，而当[npc3.she]看到你时，[npc3.she]大叫道：[npc3.speech([pc.Mom]！救我！)]
 		</p>
 		<p>
-			As you remain still, however, [npc3.name] realises that you no intention of coming to [npc3.her] aid, and in a moment of desperate panic, [npc3.she] tries to fight back against the two Enforcers. [npc3.Her] efforts quickly prove to be in vain, as a discharge of [npc2.namePos] arcane taser stuns your [npc3.daughter] and enables [npc.name] to wrestle [npc3.herHim] to the floor.
+			但你一动不动，[npc3.name]意识到你无意来帮助[npc3.her]。在绝望的恐慌中，[npc3.she]试图向两名执法者反击，但事实证明[npc3.her]的努力是徒劳的，[npc2.namePos]的奥术电击枪击晕了你的[npc3.daughter]，使[npc.name]能够将[npc3.herHim]扭倒在地。
 		</p>
 		<p>
-			[npc.speech(This one's your [npc3.daughter], huh?)] [npc.name] remarks as [npc.she] holds [npc3.name] down.
+			[npc.speech(这家伙是你的[npc3.daughter]，嗯？)][npc.name]按倒[npc3.name]，评价道。
 		</p>
 		<p>
-			[npc2.speech(I suppose this is one way to discipline your kids,)] [npc2.name] chuckles as [npc2.she] hands you a steel enslavement collar. [npc2.speech(Clasp this around [npc3.her] neck and the enchantment will take care of the rest.)]
+			[npc2.speech(我想这也是管教孩子的一种方式。)][npc2.name]递给你一个钢铁奴役项圈，一边轻笑道，[npc2.speech(把这个戴在[npc3.her]的脖子上，剩下的交给附魔。)]
 		</p>
 		<p>
-			Taking the collar from [npc2.name], you advance towards your [npc3.daughter], who shouts, [npc3.speech(You [pc.bitch]! I can't believe you betrayed me like this! Fuck you!)]
+			你接过[npc2.name]递来的项圈，走近你的[npc3.daughter]，[npc3.her]大喊道：[npc3.speech(你个[pc.bitch]！真不敢相信你会这样背叛我！我操死你！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_REPORT_HELP_FRIEND"><![CDATA[
 	#IF(npc3.isMute())
 		<p>
-			Looking past the two Enforcers, you see the familiar figure of [npc3.name]. From the shocked expression on [npc3.her] face, [npc3.she] looks as though [npc3.sheIs] trying to decide whether to run or not, but as [npc3.she] catches sight of you, [npc3.she] flashes you a pleading expression, clearly conveying the desire for you to come and help [npc3.herHim].
+			你的视线越过两名执法者，看到了[npc3.name]熟悉的身影。[npc3.her]表情惊愕，似乎正在决定要不要逃跑，而当[npc3.she]看到你时，[npc3.she]向你露出了恳求的表情，明显希望你来帮助[npc3.herHim]。
 		</p>
 		<p>
-			As you remain still, however, [npc3.name] realises that you no intention of coming to [npc3.her] aid, and in a moment of desperate panic, [npc3.she] tries to fight back against the two Enforcers. [npc3.Her] efforts quickly prove to be in vain, as a discharge of [npc2.namePos] arcane taser stuns your one-time friend and enables [npc.name] to wrestle [npc3.herHim] to the floor.
+			但你一动不动，[npc3.name]意识到你无意来帮助[npc3.her]。在绝望的恐慌中，[npc3.she]试图向两名执法者反击，但事实证明[npc3.her]的努力是徒劳的，[npc2.namePos]的奥术电击枪击晕了你昔日的朋友，使[npc.name]能够将[npc3.herHim]扭倒在地。
 		</p>
 		<p>
-			[npc.speech(Pretty bold of [npc3.herHim] to try and fight back,)] [npc.name] remarks as [npc.she] holds [npc3.name] down.
+			[npc.speech([npc3.herHim]还敢反抗，真是胆大包天。)][npc.Name]按倒[npc3.name]，评价道。
 		</p>
 		<p>
-			[npc2.speech([npc3.Her] days of breaking the law are over,)] [npc2.name] chuckles as [npc2.she] hands you a steel enslavement collar. [npc2.speech(Clasp this around [npc3.her] neck and the enchantment will take care of the rest.)]
+			[npc2.speech([npc3.her]逍遥法外的日子结束了。)][npc2.name]递给你一个钢铁奴役项圈时，一边笑道，[npc2.speech(把这个戴在[npc3.her]的脖子上，剩下的交给附魔。)]
 		</p>
 		<p>
-			Taking the collar from [npc2.name], you advance towards the [npc3.race], who flashes you a teary-eyed glare of complete and utter betrayal.
+			你接过[npc2.name]递来的项圈，走近你的[npc3.race]，[npc3.her]正泪眼婆娑地瞪着你彻底又明显的背叛之举。
 		</p>
 	#ELSE
 		<p>
-			Looking past the two Enforcers, you see the familiar figure of [npc3.name]. From the shocked expression on [npc3.her] face, [npc3.she] looks as though [npc3.sheIs] trying to decide whether to run or not, but as [npc3.she] catches sight of you, [npc3.she] calls out, [npc3.speech([pc.Name]! Help me!)]
+			你的视线越过两名执法者，看到了[npc3.name]熟悉的身影。[npc3.her]表情惊愕，似乎正在决定要不要逃跑，而当[npc3.she]看到你时，[npc3.she]大叫道：[npc3.speech([pc.name]！救我！)]
 		</p>
 		<p>
-			As you remain still, however, [npc3.name] realises that you no intention of coming to [npc3.her] aid, and in a moment of desperate panic, [npc3.she] tries to fight back against the two Enforcers. [npc3.Her] efforts quickly prove to be in vain, as a discharge of [npc2.namePos] arcane taser stuns your one-time friend and enables [npc.name] to wrestle [npc3.herHim] to the floor.
+			但你一动不动，[npc3.name]意识到你无意来帮助[npc3.her]。在绝望的恐慌中，[npc3.she]试图向两名执法者反击，但事实证明[npc3.her]的努力是徒劳的，[npc2.namePos]的奥术电击枪击晕了你昔日的朋友，使[npc.name]能够将[npc3.herHim]扭倒在地。
 		</p>
 		<p>
-			[npc.speech(This one thought you were here to help, huh?)] [npc.name] remarks as [npc.she] holds [npc3.name] down.
+			[npc.speech(这家伙真以为你是来帮忙的，嗯？)][npc.name]按倒[npc3.name]，评价道。
 		</p>
 		<p>
-			[npc2.speech(I've got no sympathy for criminal scum like [npc3.herHim],)] [npc2.name] chuckles as [npc2.she] hands you a steel enslavement collar. [npc2.speech(Clasp this around [npc3.her] neck and the enchantment will take care of the rest.)]
+			[npc2.speech(我对[npc3.herHim]这种人渣罪犯可毫无怜悯之心。)][npc2.name]递给你一个钢铁奴役项圈时，一边轻笑道，[npc2.speech(把这个戴在[npc3.her]的脖子上，剩下的交给附魔。)]
 		</p>
 		<p>
-			Taking the collar from [npc2.name], you advance towards the [npc3.race], who shouts, [npc3.speech(You [pc.bitch]! I can't believe you betrayed me like this! Fuck you!)]
+			你接过[npc2.name]递来的项圈，走近[npc3.race]，[npc3.her]大喊道：[npc3.speech(你个[pc.bitch]！真不敢相信你会这样背叛我！我操死你！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCER_ALLEYWAY_REPORT_HELP_CRIMINAL"><![CDATA[
 	#IF(npc3.isMute())
 		<p>
-			Looking past the two Enforcers, you see the familiar figure of [npc3.name]. From the shocked expression on [npc3.her] face, [npc3.she] looks as though [npc3.sheIs] trying to decide whether to run or not, but as [npc3.she] catches sight of you, [npc3.she] flashes you an angry expression, clearly understanding that you're the reason why these Enforcers are here for [npc3.herHim].
+			你的视线越过两名执法者，看到了[npc3.name]熟悉的身影。[npc3.her]表情惊愕，似乎正在决定要不要逃跑，而当[npc3.she]看到你时，[npc3.she]向你露出了愤恨的表情，明显知道你就是执法者来找[npc3.herHim]的原因。
 		</p>
 		<p>
-			With a furious scowl on [npc3.her] face, [npc3.name] desperately tries to fight back against the two Enforcers, but [npc3.her] efforts quickly prove to be in vain, as a discharge of [npc2.namePos] arcane taser stuns the criminal and enables [npc.name] to wrestle [npc3.herHim] to the floor.
+			[npc3.name]怒容满面，[npc3.she]绝望地向两名执法者反击，但事实证明[npc3.her]的努力是徒劳的，[npc2.namePos]的奥术电击枪击晕了罪犯，使[npc.name]能够将[npc3.herHim]扭倒在地。
 		</p>
 		<p>
-			[npc.speech(Pretty bold of [npc3.herHim] to try and fight back,)] [npc.name] remarks as [npc.she] holds [npc3.name] down.
+			[npc.speech([npc3.herHim]还敢反抗，真是胆大包天。)][npc.Name]按倒[npc3.name]，评价道。
 		</p>
 		<p>
-			[npc2.speech([npc3.Her] days of breaking the law are over,)] [npc2.name] chuckles as [npc2.she] hands you a steel enslavement collar. [npc2.speech(Clasp this around [npc3.her] neck and the enchantment will take care of the rest.)]
+			[npc2.speech([npc3.her]逍遥法外的日子结束了。)][npc2.name]递给你一个钢铁奴役项圈时，一边笑道，[npc2.speech(把这个戴在[npc3.her]的脖子上，剩下的交给附魔。)]
 		</p>
 		<p>
-			Taking the collar from [npc2.name], you advance towards the [npc3.race], who flashes you an angry glare and continues to struggle against [npc.namePos] grip.
+			你接过[npc2.name]递来的项圈，走近[npc3.race]，[npc3.her]正愤恨地瞪着你，一边尝试挣脱[npc.namePos]的束缚。
 		</p>
 	#ELSE
 		<p>
-			Looking past the two Enforcers, you see the familiar figure of [npc3.name]. From the shocked expression on [npc3.her] face, [npc3.she] looks as though [npc3.sheIs] trying to decide whether to run or not, but as [npc3.she] catches sight of you, [npc3.she] calls out, [npc3.speech(These Enforcers are here because of you?! You'll pay for this!)]
+			你的视线越过两名执法者，看到了[npc3.name]熟悉的身影。[npc3.her]表情惊愕，似乎正在决定要不要逃跑，而当[npc3.she]看到你时，[npc3.she]大叫道：[npc3.speech(这些执法者是你引来的？！你会付出代价的！)]
 		</p>
 		<p>
-			With a furious scowl on [npc3.her] face, [npc3.name] desperately tries to fight back against the two Enforcers, but [npc3.her] efforts quickly prove to be in vain, as a discharge of [npc2.namePos] arcane taser stuns the criminal and enables [npc.name] to wrestle [npc3.herHim] to the floor.
+			[npc3.name]怒容满面，[npc3.she]绝望地向两名执法者反击，但事实证明[npc3.her]的努力是徒劳的，[npc2.namePos]的奥术电击枪击晕了罪犯，使[npc.name]能够将[npc3.herHim]扭倒在地。
 		</p>
 		<p>
-			[npc.speech(This one seriously thought [npc3.she] could beat us, huh?)] [npc.name] remarks as [npc.she] holds [npc3.name] down.
+			[npc.speech(这家伙真以为[npc3.she]能打败我们，嗯？)][npc.name]按倒[npc3.name]，评价道。
 		</p>
 		<p>
-			[npc2.speech(I've got no sympathy for criminal scum like [npc3.herHim],)] [npc2.name] chuckles as [npc2.she] hands you a steel enslavement collar. [npc2.speech(Clasp this around [npc3.her] neck and the enchantment will take care of the rest.)]
+			[npc2.speech(我对[npc3.herHim]这种人渣罪犯可毫无怜悯之心。)][npc2.name]递给你一个钢铁奴役项圈时，一边轻笑道，[npc2.speech(把这个戴在[npc3.her]的脖子上，剩下的交给附魔。)]
 		</p>
 		<p>
-			Taking the collar from [npc2.name], you advance towards the [npc3.race], who shouts, [npc3.speech(You [pc.bitch]! I'll never be your slave! Fuck you!)]
+			你接过[npc2.name]递来的项圈，走近[npc3.race]，[npc3.her]大喊道：[npc3.speech(你个[pc.bitch]！我才不当你的奴隶！我操死你！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENFORCER_ALLEYWAY_REPORT_HELP_REWARD -->
@@ -1560,39 +1562,39 @@
 	#ENDVAR
 	
 	<p>
-		As you lift the collar up to [npc3.namePos] neck, you see that the ring attached to the front starts to glow green; a clear indication that it's detecting the [npc3.race] as a potential enslavement target. Encouraged by the light, you finish what you started, and with a heavy metal 'clink', you clasp the collar around [npc3.her] neck.
+		你把项圈提到[npc.namePos]的脖子前，看到项圈前面的环开始发出绿光：这毫无疑问表明它把[npc3.race]当成了一个潜在的奴役目标。你受到绿光的鼓舞，准备完成捕获奴隶的预备工作。随着金属撞击发出“叮”的一声，你将项圈扣在了[npc3.her]的脖子上。
 	</p>
 	<p>
-		As the collar's arcane enchantment recognises its new wearer as being a criminal, ominous purple lettering starts to glow around the metal band, which reads:
+		项圈的奥术附魔识别出新的佩戴者是犯罪分子，金属带投射出不祥的紫色字母，写道：
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsArcane(Slave Registered.
-			<br/>Identification: [npc3.nameFull(true)]
-			<br/>Race: [npc3.Race])]
+		[style.italicsArcane(奴隶注册
+			<br/>身份：[npc3.nameFull(true)]
+			<br/>种族：[npc3.Race])]
 	</p>
 	<p>
-		Grinning at your new slave, you don't have time to say anything to [npc3.herHim], as with a bright purple flash, [npc3.she] suddenly disappears from sight. The last thing you see as [npc3.sheIs] whisked away is a face of absolute disbelief, and you can only imagine how angry [npc3.she]'ll be when you see [npc3.herHim] next.
+		你对着新奴隶笑了笑，还来不及对[npc3.herHim]说什么，一道亮紫色的亮光闪过，[npc.she]瞬间便从视线中消失了。[npc.sheIs]被传送走的那一瞬间，你看到的是她震惊于你的背叛的愤怒表情。你已经想象到下次见到[npc.herHim]时[npc.she]会有多生气。
 	</p>
 	<p>
-		From Finch's instructions, you know that <b>[npc3.sheHas] been teleported to the 'Slave Administration' building in Slaver Alley</b>, where [npc3.she]'ll be waiting for you to pick [npc3.herHim] up.
+		你听了芬奇的指示，知道<b>[npc3.sheHas]被传送到奴隶巷的“奴隶行政管理”大楼</b>，[npc3.she]会在那等你来接[npc3.herHim]。
 	</p>
 	<p>
-		[npc2.speech(Well, that was easier than I expected,)] [npc2.name] states.
+		[npc2.speech(好吧，这比我预想的要容易得多，)][npc2.name]指出。
 	</p>
 	<p>
-		[npc.speech(We don't even have to fill out all the enslavement paperwork, thanks to [pc.name] here,)] [npc.name] adds, before standing up and declaring, [npc.speech(We'd better get back to HQ to report this.)]
+		[npc.speech(我们甚至不用填写所有的奴役文书，多亏了这里的[pc.name]，)][npc.name]补充道，然后站起来宣布，[npc.speech(我们最好回去向总部报告一下。)]
 	</p>
 	<p>
-		Thanking you again for your help, the two Enforcers set off down the
+		两位执法者再次感谢了你的帮助，他们沿着
 		#IF(canal)
-			 canal-side path
+			运河水道
 		#ELSE
-			 alleyway
+			小巷
 		#ENDIF
-		 and soon disappear from sight. Brushing yourself off, you decide to follow their lead and continue on your way...
+		离开，很快就消失得无影无踪了。你把自己拾辍好，决定跟随他们的脚步继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_VICTORY -->
@@ -1605,40 +1607,40 @@
 	#ENDVAR
 	
 	<p>
-		Collapsing down onto the ground, [npc.name] pants, [npc.speech(You... You won't get away with this...)]
+		瘫倒在地，[npc.name]喘息着， [npc.speech(你……你逃不掉的……)]
 	</p>
 	<p>
-		Smirking down at the defeated Enforcers, you [pc.step] forwards and tell them that they never stood a chance against you. After hearing your victorious boast, [npc2.name] groans to [npc2.her] partner, [npc2.speech(We'll be sent off for remedial training because of this...)]
+		看着被打败的执法者，你笑着[pc.step]上前告诉他们，他们根本没有机会战胜你。听完你胜利的夸耀，[npc2.name]向[npc2.her]同伴呻吟着，[npc2.speech(我们会因此被送去接受额外的补习训练的……)]
 	</p>
 	<p>
-		Realising from what [npc2.name] has just said that this will likely be the last time you see either of these Enforcers, you wonder whether you should take advantage of their defeated state.
+		从[npc2.name]刚才所说的话中，你听出这很可能是你最后一次见到这两个执法者，你不知道要不要趁虚而入。
 		#IF((npc.isAttractedTo(pc) && npc2.isAttractedTo(pc)) || !game.isNonConEnabled())
-			 After all, from the lustful glances which the two of them keep throwing your way, you can tell that they're being heavily affected by your arcane aura, and wouldn't object to having sex with you right here
+			毕竟，他们俩不断投向你的眼神色迷迷的，你可以看出他们深受你奥术灵气的影响，不会反对就在
 			#IF(canal)
-				 beside the canal...
+				运河旁边和你做爱……
 			#ELSE
-				 in the alleyway...
+				小巷这里和你做爱……
 			#ENDIF
 		#ELSEIF(npc.isAttractedTo(pc))
-			 After all, from the lustful glances which [npc.name] keeps throwing your way, you can tell that [npc.sheIs] being heavily affected by your arcane aura, and wouldn't object to having sex with you right here
+			毕竟，从[npc.name]不断投向你的色迷迷的眼神中，你可以看出[npc.sheIs]深受你的奥术灵气影响，不会反对就在
 			#IF(canal)
-				 beside the canal...
+				运河旁边和你做爱……
 			#ELSE
-				 in the alleyway...
+				小巷这里和你做爱……
 			#ENDIF
 		#ELSEIF(npc2.isAttractedTo(pc))
-			 After all, from the lustful glances which [npc2.name] keeps throwing your way, you can tell that [npc2.sheIs] being heavily affected by your arcane aura, and wouldn't object to having sex with you right here
+			毕竟，从[npc2.name]不断投向你的色迷迷的眼神中，你可以看出[npc2.sheIs]深受你的奥术灵气影响，不会反对就在
 			#IF(canal)
-				 beside the canal...
+				运河旁边和你做爱……
 			#ELSE
-				 in the alleyway...
+				小巷这里和你做爱……
 			#ENDIF
 		#ELSE
-			 After all, while neither of them seem interested in having sex with you, they're really not in a position to stop you from taking advantage of them...
+			毕竟，虽然二位都对你没有性趣，但他们确实无法阻止你占便宜……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_CONTINUE"><![CDATA[
 	#VAR
@@ -1648,136 +1650,136 @@
 	#ENDVAR
 	
 	<p>
-		Deciding not to take advantage of their defeat, you turn your back on the two Enforcers and continue on your way down the 
+		你并没有趁人之危的打算。你转过身，不再看那两个执法者，继续走向
 		#IF(canal)
-			 canal-side path.
+			运河水道。
 		#ELSE
-			 alleyway.
+			小巷。
 		#ENDIF
-		 Knowing that you'll never have to see those particular two Enforcers ever again, you wonder where to head to next...
+		你知道你再也不会见到那两个执法者了。你思考着接下来要去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_RAPE_LEADER"><![CDATA[
 	<p>
-		Although [npc.she] clearly doesn't want to have sex with you, [npc.name] really isn't in any position to stop you from taking what you want. [pc.Stepping] up in front of the defeated [npc.race], you reach down and grab [npc.her] [npc.arm], before pulling [npc.herHim] to [npc.her] [npc.feet] and pressing yourself in against [npc.her] hot body.
+		虽然[npc.Name]看起来完全不想和你发生性关系，但[npc.she]也确实无法阻止你得到你想要的东西。你[pc.Stepping]到被打败的[npc.race]面前，伸手抓住[npc.her][npc.arm]，迫使[npc.herHim]跪倒在地，压在了[npc.her]火热的身体上。
 	</p>
 	<p>
-		[npc.speech(Stop! Get away from-)] [npc.she] starts to complain, but you cut the struggling Enforcer's complaint short by pressing your [pc.lips+] against [npc.her] mouth and forcing [npc.herHim] into a deep, passionate kiss. 
+		[npc.speech(住手！离我远——)][npc.she]想要抱怨，但你把你[pc.lips+]压在[npc.her]的嘴唇上，用一个热情的深吻堵住了后面的话。
 	</p>
 	<p>
-		After a moment of thrusting your [pc.tongue+] into [npc.her] mouth, you pull back,
+		将[pc.tongue+]伸入[npc.her]口中片刻后，你又将它缩了回来，
 		#IF(game.isInvoluntaryNTREnabled())
-			 and with a big grin on your face, you tell [npc2.name] to sit still and watch as you rape [npc2.her] partner...
+			然后满脸堆笑地告诉[npc2.name]，让[npc2.her]坐着别动，看着你强奸[npc2.her]的伙伴……
 		#ELSE
-			 and with a big grin on your face, you prepare to rape [npc.herHim]...
+			咧嘴大笑，准备强奸[npc.herHim]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SEX_LEADER"><![CDATA[
 	<p>
-		From the hungry look in [npc.her] [npc.eyes+], [npc.name] is clearly desperate to have sex with you, and with the feeling being mutual, you decide to give [npc.herHim] what [npc.she] wants. [pc.Stepping] up in front of the defeated [npc.race], you reach down and grab [npc.her] [npc.arm], before pulling [npc.herHim] to [npc.her] [npc.feet] and pressing yourself in against [npc.her] hot body.
+		从[npc.her][npc.eyes+]饥渴的眼神来看，[npc.name]显然急切地想要和你做爱，而这种感觉是相互的，你决定如[npc.she]所愿。[pc.Stepping]到被打败的[npc.race]面前，伸手抓住[npc.her]的[npc.arm]，然后将[npc.herHim]拉起来，将自己压在[npc.her]火热的身体上。
 	</p>
 	<p>
-		[npc.speech(Yes! Do what you want with-)] [npc.she] starts to [npc.moan], but you cut the horny Enforcer's sentence short by pressing your [pc.lips+] against [npc.her] mouth and pulling [npc.herHim] into a deep, passionate kiss. 
+		[npc.speech(是的！你想禾……)][npc.she]开始[npc.moan]，但你把自己[pc.lips+]贴在[npc.her]的嘴上，把[npc.herHim]拖进一个深情的吻中，打断了这个饥渴的执法者的话。
 	</p>
 	<p>
-		After a moment of thrusting your [pc.tongue+] into [npc.her] mouth, you pull back,
+		将[pc.tongue+]伸入[npc.her]口中片刻，你又将它缩了回来，
 		#IF(game.isInvoluntaryNTREnabled())
-			 and with a big grin on your face, you tell [npc2.name] to sit still and watch as you fuck [npc2.her] partner...
+			然后满脸堆笑地让[npc2.name]坐好，看着你强奸[npc2.her的伙伴……
 		#ELSE
-			 and with a big grin on your face, you prepare to fuck [npc.herHim]...
+			咧嘴大笑，准备强奸[npc.herHim]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_RAPE_SUBORDINATE"><![CDATA[
 	<p>
-		Although [npc2.she] clearly doesn't want to have sex with you, [npc2.name] really isn't in any position to stop you from taking what you want. [pc.Stepping] up in front of the defeated [npc2.race], you reach down and grab [npc2.her] [npc2.arm], before pulling [npc2.herHim] to [npc2.her] [npc2.feet] and pressing yourself in against [npc2.her] hot body.
+		虽然[[npc2.name]看起来完全不想和你发生性关系，但[npc2.she]也确实无法阻止你得到你想要的东西。你[pc.Stepping]到被打败的[npc2.race]面前，伸手抓住[npc2.her][npc2.arm]，迫使[npc2.herHim]跪倒在地，压在了[npc2.her]火热的身体上。
 	</p>
 	<p>
-		[npc2.speech(Stop! Get away from-)] [npc2.she] starts to complain, but you cut the struggling Enforcer's complaint short by pressing your [pc.lips+] against [npc2.her] mouth and forcing [npc2.herHim] into a deep, passionate kiss. 
+		[npc2.speech(住手！离我远——)][npc2.she]想要抱怨，但你把你[pc.lips+]压在[npc.2her]的嘴唇上，用一个热情的深吻堵住了后面的话。
 	</p>
 	<p>
-		After a moment of thrusting your [pc.tongue+] into [npc2.her] mouth, you pull back,
+		将[pc.tongue+]伸入[npc2.her]口中片刻后，你又将它缩了回来，
 		#IF(game.isInvoluntaryNTREnabled())
-			 and with a big grin on your face, you tell [npc.name] to sit still and watch as you rape [npc.her] partner...
+			然后满脸堆笑地让[npc.name]坐好，看着你强奸[npc.her的伙伴……
 		#ELSE
-			 and with a big grin on your face, you prepare to rape [npc2.herHim]...
+			咧嘴大笑，准备强奸[npc2.herHim]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SEX_SUBORDINATE"><![CDATA[
 	<p>
-		From the hungry look in [npc2.her] [npc2.eyes+], [npc2.name] is clearly desperate to have sex with you, and with the feeling being mutual, you decide to give [npc2.herHim] what [npc2.she] wants. [pc.Stepping] up in front of the defeated [npc2.race], you reach down and grab [npc2.her] [npc2.arm], before pulling [npc2.herHim] to [npc2.her] [npc2.feet] and pressing yourself in against [npc2.her] hot body.
+		从[npc2.her][npc2.eyes+]饥渴的眼神来看，[npc2.name]显然渴望与你发生性关系，而这种感觉是相互的，你决定如[npc2.her]所愿。[pc.Stepping]走到被打败的[npc2.race]面前，伸手抓住[npc2.her]的[npc2.arm]，然后将[npc2.herHim]拉倒，将自己压在[npc2.her]火辣的身体上。
 	</p>
 	<p>
-		[npc2.speech(Yes! Do what you want with-)] [npc2.she] starts to [npc2.moan], but you cut the horny Enforcer's sentence short by pressing your [pc.lips+] against [npc2.her] mouth and pulling [npc2.herHim] into a deep, passionate kiss. 
+		[npc2.speech(是的！你想禾……)][npc2.she]开始[npc2.moan]，但你把自己[pc.lips+]贴在[npc2.her]的嘴上，把[npc2.herHim]拖进一个深情的吻中，打断了这个饥渴的执法者的话。
 	</p>
 	<p>
-		After a moment of thrusting your [pc.tongue+] into [npc2.her] mouth, you pull back,
+		将[pc.tongue+]伸入[npc2.her]口中片刻后，你又将它缩了回来，
 		#IF(game.isInvoluntaryNTREnabled())
-			 and with a big grin on your face, you tell [npc.name] to sit still and watch as you fuck [npc.her] partner...
+			然后咧嘴一笑，告诉[npc.name]坐着别动，看着你和[npc.her]的搭档做爱……
 		#ELSE
-			 and with a big grin on your face, you prepare to fuck [npc2.herHim]...
+			然后咧嘴一笑，准备操[npc2.herHim]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_RAPE_THREESOME"><![CDATA[
 	<p>
-		Although it's clear that neither of the Enforcers want to have sex with you, they really aren't in any position to stop you from taking what you want. [pc.Stepping] up in front of the defeated officers, you reach down and grab each of them by the [npc.arm], before pulling them to their [npc.feet] and pressing yourself in against their hot bodies.
+		虽然看起来这两个执法者都不想和你发生性关系，但他们也确实无法阻止你得到你想要的东西。你[pc.Stepping]到被打败的警察面前，然后伸手抓住他们的[npc.arm]后压在了他们的身上。
 	</p>
 	<p>
-		[npc.speech(Stop! Get away from-)] [npc.name] starts to complain, but you cut the struggling Enforcer's complaint short by pressing your [pc.lips+] against [npc.her] mouth and forcing [npc.herHim] into a deep, passionate kiss. 
+		[npc.speech(住手！离我远——)][npc.Name]想要抱怨，但你把你[pc.lips+]压在[npc.her]的嘴唇上，用一个热情的深吻堵住了后面的话。
 	</p>
 	<p>
-		After a moment of thrusting your [pc.tongue+] into [npc.namePos] mouth, you switch over and pull [npc2.name] into an equally-amorous kiss. Only once you're satisfied with having had a decent taste of each of the Enforcers' lips do you pull back, before telling the two officers that it's pointless to try and resist what you're going to do to them...
+		将[pc.tongue+]伸入[npc.namePos]口中片刻后，你转过身来拉着[npc2.name]进行同样热情的亲吻。你满意地品尝了每一位执法者的嘴唇，抽回身，然后告诉两位警官，试图抗拒你要对他们做的事情都是毫无意义的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SEX_THREESOME"><![CDATA[
 	<p>
-		From the hungry look in each of their eyes, the two Enforcers are clearly desperate to have sex with you, and with the feeling being mutual, you decide to give them what they want. [pc.Stepping] up in front of the defeated officers, you reach down and grab each of them by the [npc.arm], before pulling them to their [npc.feet] and pressing yourself in against their hot bodies.
+		从他们饥渴的眼神中可以看出，这两名执法者显然急切地想要与你发生性关系，而你的感觉也是相互的，因此你决定满足他们的要求。[pc.Stepping]到被打败的警官面前，伸手抓住他们的[npc.arm]，然后把他们拉倒，把自己压在他们火辣的身体上。
 	</p>
 	<p>
-		[npc.speech(Yes! Do what you want with-)] [npc.name] starts to [npc.moan], but you cut the horny Enforcer's sentence short by pressing your [pc.lips+] against [npc.her] mouth and pulling [npc.herHim] into a deep, passionate kiss. 
+		[npc.speech(是的！你想禾……)][npc.Name]开始[npc.moan]，但你把自己[pc.lips+]贴在[npc.her]的嘴上，把[npc.herHim]拖进一个深情的吻中，打断了这个饥渴的执法者的话。
 	</p>
 	<p>
-		After a moment of thrusting your [pc.tongue+] into [npc.her] mouth, you switch over and pull [npc2.name] into an equally-amorous kiss. Only once you're satisfied with having had a decent taste of each of the Enforcers' lips do you pull back, before telling the two officers that they're going to enjoy what you've got planned for them...
+		将[pc.tongue+]伸入[npc.her]口中片刻，你转过身来，拉着[npc2.name]展开同样热烈的亲吻。你满意地品尝了每一位执法者的嘴唇，抽回身来，然后告诉两位警官，他们将享受到你为他们准备的一切……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SEX_SUBMIT"><![CDATA[
 	<p>
-		Suddenly feeling extremely submissive and guilty for what you've just done, you nervously [pc.step] forwards and offer the two Enforcers a sincere apology for having beaten them.
+		你突然为你所做的一切产生了非常大的负罪感和动摇感，于是紧张地走上前去，尽你最大的诚意，向两个执法者就此事道歉。
 	</p>
 	<p>
-		[npc.speech(Is this some kind of trick?)] [npc.name] distrustfully asks, before narrowing [npc.her] eyes and flashing you a suspicious glare.
+		[npc.speech(这是在耍什么把戏？)][npc.name]不信任地问道，然后眯起[npc.her]的眼睛，向你投来怀疑的目光。
 	</p>
 	<p>
-		Assuring the [npc.race] that you're sincere in your regret for having fought back and beaten both [npc.herHim] and [npc2.name], you take things one step further by meekly offering to do anything to show them that you're really sorry.
+		向[npc.race]保证，你对反击并击败[npc.herHim]和[npc2.name]表示的遗憾是真诚的，你还会更进一步，温顺地提出愿意做任何事来向他们表示你真的很抱歉。
 	</p>
 	<p>
 		#IF(npc.isAttractedTo(pc) && npc2.isAttractedTo(pc))
-			The arousing effect of your arcane aura seems to be having a profound effect on these defeated Enforcers, as after exchanging devious grins with one another, they rise to their feet and quickly advance upon you, before starting to grope and caress your body. Letting out a horny [pc.moan], you surrender yourself to these two Enforcers as they seek to use you to satisfy their lust...
+			你的奥术灵气的欲望效应似乎对这两个被打败的执法者产生了显著的影响，他们互相交换了狡猾的笑容后，站起身来快速向你走来，然后开始摸索和爱抚你的身体。你发出一声淫荡的[pc.moan]，向这两个执法者投降，因为他们想利用你来满足他们的欲望……
 		#ELSEIF(npc.isAttractedTo(pc))
-			The arousing effect of your arcane aura seems to be having a profound effect on [npc.name], as after rising to [npc.her] [npc.feet] and leaving [npc.her] partner behind, [npc.she] advances upon you and starts to grope and caress your body. Letting out a horny [pc.moan], you surrender yourself to the [npc.race] as [npc.she] seeks to use you to satisfy [npc.her] lust...
+			你的奥术灵气的欲望效应似乎对[npc.name]产生了显著的影响，[npc.she]站起身来，把[npc.her]的伙伴甩在身后，然后向你走来，开始摸索和爱抚你的身体。你发出淫荡的[pc.moan]声，你向[npc.race]投降，[npc.she]则试图利用你来满足[npc.her]的欲望……
 		#ELSE
-			The arousing effect of your arcane aura seems to be having a profound effect on [npc2.name], as after rising to [npc2.her] [npc2.feet] and leaving [npc2.her] partner behind, [npc2.she] advances upon you and starts to grope and caress your body. Letting out a horny [pc.moan], you surrender yourself to the [npc2.race] as [npc2.she] seeks to use you to satisfy [npc2.her] lust...
+			你的奥术灵气的欲望效应似乎对[npc2.name]产生了显著的影响，[npc2.she]站起身来，将[npc2.her]的伙伴抛在身后，然后向你走来，开始摸索和爱抚你的身体。你发出淫荡的[pc.moan]，[npc2.she]试图利用你满足[npc2.her]的欲望，同时你向[npc2.her]投降了……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT -->
@@ -1785,54 +1787,54 @@
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEARCHED"><![CDATA[
 	<p>
-		Unable to continue fighting any longer, you feel your [pc.legs] giving out from under you, and with a defeated sigh, you collapse down onto the ground.
+		你无法继续战斗了。你感觉到自己的[pc.legs]逐渐无力，只能发出一声不甘的叹息。最终，你倒在了地上。
 	</p>
 	<p>
-		[npc.speech(That'll teach you to try and fight back against us Enforcers!)] [npc.name] boasts as [npc.she] holsters [npc.her] baton and pistol. Looking over at [npc.her] subordinate, [npc.she] commands, [npc.speech(Give [pc.herHim] a thorough search.)]
+		[npc.speech(这就是对你胆敢反击我们执法者的教训！)][npc.Name]吹嘘道，把[npc.her]的警棍和手枪收回腰间。[npc.she]看着[npc.her]的下属，命令道：[npc.speech(好好搜搜[pc.herHim]的身。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEARCHED_CONTRABAND"><![CDATA[
 	<p>
-		[npc2.speech(Let's find out what you're hiding,)] [npc2.name] sneers as [npc2.she] [npc2.steps] forwards to loom over you. With [npc.name] keeping watch to make sure that you don't try anything funny, [npc2.name] starts to pat you down.
+		[npc2.speech(让我看看你在藏些什么。)][npc2.name]嘲笑着走上前逐渐逼近你。为了确保你不会耍什么小把戏，在[npc.Name]的监视下，[npc2.name]开始给你搜身。
 		#IF(npc2.isAttractedTo(pc))
 			#IF(pc.hasBreasts())
-				 Running [npc2.her] [npc2.hands] up and over your [pc.breasts+], [npc2.she] lets out an amused grunt as [npc2.she] gives them a firm squeeze.
+				[npc2.she]用[npc2.her][npc2.hands]在你[pc.breasts+]来回抚摸着，用力地捏了捏它们，饶有兴趣地咕噜了一声。
 			#ELSE
-				 Running [npc2.her] [npc2.hands] down over your ass, [npc2.she] lets out an amused grunt as [npc2.she] gives your cheeks a firm squeeze.
+				[npc2.she]用[npc2.her][npc2.hands]在你的屁股上来回抚摸着，又用力地捏了捏你的脸颊，饶有兴趣地咕噜了一声。
 			#ENDIF
-			 Before you're able to react to this sexual harassment, the [npc2.race] suddenly lets out a triumphant laugh as [npc2.she] suddenly finds some items that you aren't supposed to have.
+			你还没来得及对这样的性骚扰做出任何反应，[npc2.race]突然发出一声胜利的笑声——[npc2.she]不知为何找到了一些你本不应该带着的东西。
 		#ELSE
-			 Running [npc2.her] [npc2.hands] all over your body, [npc2.she] lets out a triumphant laugh as [npc2.she] suddenly finds some items that you aren't supposed to have.
+			[npc2.she]用[npc2.her][npc2.hands]在你的身体上来回抚摸着，突然发出一声胜利的笑声——[npc2.she]不知为何找到了一些你本不应该带着的东西。
 		#ENDIF
 	</p>
 	<p>
-		[npc2.speech(I'll be taking these,)] [npc2.she] grunts, before quickly confiscating your [style.colourBlueDark(illegal)] items and passing them to [npc.name] to securely stow in [npc.her] inventory.
+		[npc2.speech(我要拿走这些。)][npc2.she]咕哝着，迅速没收了你的[style.colourBlueDark(非法)]物品，转手让[npc.name]帮忙放进自己的背包，以保管[npc.her]的战利品。
 	</p>
 	<p style='text-align:center;'>
-		[style.boldTerrible(You have lost:)]<br/>
+		[style.boldTerrible(你失去了：)]<br/>
 		[#SPECIAL_PARSE_0]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_SEARCHED_NO_CONTRABAND"><![CDATA[
 	<p>
-		[npc2.speech(Let's find out what you're hiding,)] [npc2.name] sneers as [npc2.she] [npc2.steps] forwards to loom over you. With [npc.name] keeping watch to make sure that you don't try anything funny, [npc2.name] starts to pat you down.
+		[npc2.speech(让我们来看看你在隐藏什么，)][npc2.name]冷笑着，[npc2.she][npc2.steps]上前向。在[npc.name]的监视下，确保你不会耍什么花招，[npc2.name]拍了拍你。
 		#IF(npc2.isAttractedTo(pc))
 			#IF(pc.hasBreasts())
-				 Running [npc2.her] [npc2.hands] up and over your [pc.breasts+], [npc2.she] lets out an amused grunt as [npc2.she] gives them a firm squeeze.
+				[npc2.her]的[npc2.hands]在你的[pc.breasts+]上摸来摸去，发出一声愉悦的哼声，并且用力捏了捏。
 			#ELSE
-				 Running [npc2.her] [npc2.hands] down over your ass, [npc2.she] lets out an amused grunt as [npc2.she] gives your cheeks a firm squeeze.
+				[npc2.her]的[npc2.hands]向下摸着你的屁股，[npc2.she]用力捏你的屁股，发出有趣的咕哝声。
 			#ENDIF
-			 After subjecting you to this sexual harassment for a few more moments, the [npc2.race] lets out an annoyed sigh as [npc2.she] fails to find any illegal items in your possession.
+			在对你进行了片刻的性骚扰之后，[npc2.race]啧了一声，因为[npc2.she]没有在你身上找到任何非法物品。
 		#ELSE
-			 Running [npc2.her] [npc2.hands] all over your body, [npc2.she] lets out an annoyed sigh as [npc2.she] fails to find any illegal items in your possession.
+			[npc2.her]的[npc2.hands]在你身上摸了个遍，[npc2.she]恼怒地啧了一声，因为[npc2.she]没能在你身上找到任何非法物品。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_DEFEAT_END"><![CDATA[
 	#VAR
@@ -1845,129 +1847,129 @@
 		#IF(npc2.isAttractedTo(pc))
 			#IF(npc.isWillingToRape())
 				<p>
-					[npc.speech(Before we take this one in, how about we have some fun with [pc.herHim]?)] [npc.name] suggests.
+					[npc.speech(在这之前，让我们和[pc.herHim]一同找点乐子怎么样？)][npc.name]建议道。
 				</p>
 				<p>
-					Clearly liking the sound of this, [npc2.name] grabs hold of you by the [pc.arm] and pulls you to your [pc.feet], before starting to lustfully grope your exhausted body. As [npc.name] moves forwards to join in with [npc.her] partner's sexual harassment, you realise that you're going to be unable to stop these Enforcers from doing whatever they want with you...
+					[npc2.name]爱极了这种声音，于是抓住[pc.arm]扶你起来，抚慰着你透支的躯体。[npc.Name]也上前来，加入了同伴的性骚扰行为，你意识到自己已经无法阻止这些执法者对你肆意妄为……
 				</p>
 			#ELSE
 				<p>
-					[npc.speech(Before we take this one in, how about we have some fun with [pc.herHim]?)] [npc.name] suggests.
+					[npc.speech(在这之前，让我们和[pc.herHim]一同找点乐子怎么样？)][npc.name]建议道。
 				</p>
 				<p>
-					Clearly liking the sound of this, [npc2.name] grabs hold of you by the [pc.arm] and pulls you to your [pc.feet], before asking, [npc2.speech(You'd like that, wouldn't you, slut? You want to get fucked by us?)]
-				</p>
+					显然，[npc2.name]很喜欢这样的声音，他抓住你的[pc.arm]把你压到地上，然后问道：[npc2.speech(你会喜欢的，不是吗，荡妇？你想被我们操吗？)]
+			</p>
 				<p>
-					Realising that these Enforcers are giving you the option to say no, you wonder whether you should refuse to have sex with them, or instead agree to give them what they want...
+					你意识到[npc2.name]给了你拒绝的选择，你不知道是应该拒绝与他们发生性关系，还是同意满足他们的要求……
 				</p>
 			#ENDIF
 		#ELSE
 			#IF(npc.isWillingToRape())
 				<p>
-					[npc.speech(Before we take this one in, I'm going to have some fun with [pc.herHim]!)] [npc.name] declares.
+					[npc.speech(在这之前，让我们和[pc.herHim]一同找点乐子吧！)][npc.name]提议道。
 				</p>
 				<p>
-					Clearly not interested in joining in, [npc2.name] [npc2.steps] back and watches as [npc2.her] partner grabs hold of you by the [pc.arm] and pulls you to your [pc.feet]. Finding yourself pressed up close against [npc.name], you're unable to summon the strength to react as [npc.she] starts to lustfully grope your exhausted body. As the [npc.race]
-					#IF(pc.hasBreasts())
-						 gives your [pc.breasts+] a firm squeeze,
-					#ELSE
-						 gives your [pc.ass+] a firm squeeze,
-					#ENDIF
-					 you realise that you're going to be unable to stop [npc.herHim] from doing whatever [npc.she] wants with you...
-				</p>
+				显然，[npc2.name]对加入其中不感兴趣，她向后[npc.step]去，冷漠地看着[npc2.her]的下属把你拉起来。[npc.name]开始色迷迷地爱抚你那疲惫不堪的身体，你发现自己已经被[npc.she]紧紧地控制住了，更何况你根本没有力气去反抗。这个[npc.race]
+				#IF(pc.hasBreasts())
+					变本加厉地揉搓起了你[pc.breasts+]，
+				#ELSE
+					变本加厉地玩弄起了你[pc.ass+]，
+				#ENDIF
+				你意识到你已经无法阻止[npc.herHim]对你做任何[npc.she]想做的事……
+			</p>
 			#ELSE
 				<p>
-					[npc.speech(Before we take this one in, I'd like to have some fun with [pc.herHim]!)] [npc.name] declares.
+					[npc.speech(在这之前，我想和[pc.herHim]一同找点乐子！)][npc.name]提议道。
 				</p>
 				<p>
-					Clearly not interested in joining in, [npc2.name] [npc2.steps] back and watches as [npc2.her] partner grabs hold of you by the [pc.arm] and pulls you to your [pc.feet], before asking, [npc.speech(You'd like that, wouldn't you, slut? You want me to fuck you?)]
-				</p>
+				显然，[npc2.name]对加入其中不感兴趣，她向后[npc.step]去，冷漠地看着[npc2.her]的下属抓住你的[pc.feet]，把你按倒在地，[npc.race]大声喊道：[npc.speech(你喜欢这样吧，荡妇？你想让我操你吗？)]
+</p>
 				<p>
-					Realising that [npc.name] is giving you the option to say no, you wonder whether you should refuse to have sex with [npc.herHim], or instead agree to give [npc.herHim] what [npc.she] wants...
-				</p>
+				你意识到[npc.name]给了你拒绝的选择，你不知道是应该拒绝与[npc.herHim]发生性关系，还是同意满足[npc.herHim]的要求……
+			</p>
 			#ENDIF
 		#ENDIF
 	#ELSEIF(npc2.isAttractedTo(pc))
 		#IF(npc2.isWillingToRape())
 			<p>
-				[npc2.speech(Before we take this one in, I'm going to have some fun with [pc.herHim]!)] [npc2.name] declares.
+				[npc2.speech(在我们开始讨论这个问题之前，让我们先玩玩[pc.herHim]！)][npc2.name]大喊道。
 			</p>
 			<p>
-				Clearly not interested in joining in, [npc.name] [npc.steps] back and watches as [npc.her] subordinate grabs hold of you by the [pc.arm] and pulls you to your [pc.feet]. Finding yourself pressed up close against [npc2.name], you're unable to summon the strength to react as [npc2.she] starts to lustfully grope your exhausted body. As the [npc2.race]
+				显然，[npc.name]对加入其中不感兴趣，她向后[npc.step]去，冷漠地看着[npc.her]的下属把你拉起来。[npc2.name]开始色迷迷地爱抚你那疲惫不堪的身体，你发现自己已经被[npc2.she]紧紧地控制住了，更何况你根本没有力气去反抗，这个[npc2.race]
 				#IF(pc.hasBreasts())
-					 gives your [pc.breasts+] a firm squeeze,
+					变本加厉的揉搓起了你[pc.breasts+]，
 				#ELSE
-					 gives your [pc.ass+] a firm squeeze,
+					变本加厉的玩弄起了你[pc.ass+]，
 				#ENDIF
-				 you realise that you're going to be unable to stop [npc2.herHim] from doing whatever [npc2.she] wants with you...
+				你意识到你已经无法阻止[npc2.herHim]对你做任何[npc2.she]想做的事……
 			</p>
 		#ELSE
 			<p>
-				[npc2.speech(Before we take this one in, I'd like to have some fun with [pc.herHim]!)] [npc2.name] declares.
+				[npc2.speech(在我们开始讨论这个问题之前，让我们先玩玩[pc.herHim]！)][npc2.name]大喊道。
 			</p>
 			<p>
-				Clearly not interested in joining in, [npc.name] [npc.steps] back and watches as [npc.her] subordinate grabs hold of you by the [pc.arm] and pulls you to your [pc.feet], before asking, [npc2.speech(You'd like that, wouldn't you, slut? You want me to fuck you?)]
-			</p>
+				显然，[npc.name]对加入其中不感兴趣，她向后[npc.step]去，冷漠地看着[npc.her]的下属抓住你的[pc.feet]，在把你按倒在地后，[npc2.race]大声喊道：[npc2.speech(你喜欢这样吧，荡妇？你想让我操你吗？)]
+</p>
 			<p>
-				Realising that [npc2.name] is giving you the option to say no, you wonder whether you should refuse to have sex with [npc2.herHim], or instead agree to give [npc2.herHim] what [npc2.she] wants...
+				你意识到[npc2.name]给了你拒绝的选择，你不知道是应该拒绝与[npc2.herHim]发生性关系，还是同意满足[npc2.herHim]的要求……
 			</p>
 		#ENDIF
 	#ELSEIF(npc.getFoughtPlayerCount()>1)
 		<p>
-			Clearly not interested in taking advantage of you while in this defeated state, the two Enforcers start discussing amongst themselves what to do with you.
+			显然在这种战败的状态下，两个执法者无意对你做些什么，于是他们开始讨论处理你的方式。
 		</p>
 		<p>
-			[npc.speech(I can't be bothered to waste my time taking this one in,)] [npc.name] states, [npc.speech(And besides, if we keep on making Lilaya come and bail [pc.herHim] out, we're going to end up being the ones getting punished for it...)]
+			[npc.speech(我可没时间研究这种东西)][npc.name]接着说道： [npc.speech(还有，如果我们继续让莉莱雅来保释[pc.herHim]的话，最终受到惩罚的只会是我们……)]
 		</p>
 		<p>
-			[npc2.speech(Well, we've already given [pc.herHim] a punishment by beating [pc.herHim],)] [npc2.name] remarks, [npc2.speech(Let's just leave [pc.herHim] here...)]
+			[npc2.speech(好吧，我们已经打过[pc.herHim]了。我想这就算是[pc.herHim]的惩罚好了。)][npc2.name]接着说道：[npc2.speech(就让我们把[pc.herHim]留在这里吧……)]
 		</p>
 		<p>
-			Coming to an agreement, the two Enforcers step over your collapsed form and set off down the
+			在达成一致后，两名执法者跨过你倒下的身躯，沿着
 			#IF(canal)
-				 canal-side path
+				运河水道
 			#ELSE
-				 alleyway
+				小巷
 			#ENDIF
-			, but not before giving you a stern warning to never attack Enforcers again...
+			离开，但在此之前，你也被严厉警告到永远不要再攻击执法者……
 		</p>
 	#ELSEIF(npc.hasFlag(NPC_FLAG_knowsPlayerDemon))
 		<p>
-			Clearly not interested in taking advantage of you while in this defeated state, the two Enforcers start discussing amongst themselves what to do with you.
+			显然在这种战败的状态下，两个执法者无意对你做些什么，于是他们开始讨论处理你的方式。
 		</p>
 		<p>
-			[npc.speech(I'm not going to be the one responsible for taking a demon in,)] [npc.name] states, [npc.speech(This was before you joined us, [npc2.surname], but one time some troublesome demon was taken in and she turned out to be the daughter of one of the Elder Lilin. The guys who arrested her got demoted and had to go and personally apologise to her mother. I never saw them again...)]
+			[npc.speech(我可不想收押拘留一个恶魔，)][npc.name]正了正嗓子，[npc.speech(这是在你加入我们之前的事了，[npc2.surname]，有一次，曾经的一对同事抓到了一个麻烦的恶魔，结果发现她是一位莉琳长老的女儿。逮捕她的人不仅被降职了，还得亲自去向她母亲道歉。而且从那之后我再也没见过他们了……)]
 		</p>
 		<p>
-			[npc2.speech(Well, we've already given this one a punishment by beating [pc.herHim],)] [npc2.name] remarks, [npc2.speech(Let's just leave [pc.herHim] here...)]
+			[npc2.speech(好吧，毕竟我们已经殴打过[pc.herHim]了，就把这当做是惩罚好了。)][npc2.name接着说道：[npc2.speech(就让我们把[pc.herHim]留在这里吧……)]
 		</p>
 		<p>
-			Coming to an agreement, the two Enforcers step over your collapsed form and set off down the 
+			在达成一致后，两名执法者跨过你倒下的身躯，沿着
 			#IF(canal)
-				 canal-side path
+				运河水道
 			#ELSE
-				 alleyway
+				小巷
 			#ENDIF
-			, but not before giving you a stern warning to never attack Enforcers again...
+			离开，但在此之前，你也被严厉警告永远不要再攻击执法者……
 		</p>
 	#ELSE
 		<p>
-			Clearly not interested in taking advantage of you while in this defeated state, the two Enforcers move forwards to arrest you. With [npc.name] holding you down, [npc2.name] clasps a pair of handcuffs around your wrists, and after [npc2.sheIs] done, you suddenly find yourself being pulled to your [pc.feet].
+			显然在这种战败的状态下，两个执法者无意对你做些什么，于是他们上前逮捕了你。[npc.name]按住了你，然后[npc2.name]拿出一副手铐扣在了你的手腕上，随后你便被提了起来。
 		</p>
 		<p>
-			[npc.speech(Come on, move it! We've got a nice cosy cell for you back at the station!)] [npc.name] snaps, pulling you along as [npc.she] leads you down the 
+			[npc.speech(快走，我们在局里给你准备了一间舒适的牢房！)][npc.name]抢先一步抓着你，[npc.she]带着走向
 			#IF(canal)
-				 canal-side path.
+				运河水道。
 			#ELSE
-				 alleyway.
+				小巷。
 			#ENDIF
 		</p>
 		<p>
-			Unable to mount any resistance, the only thing you can do is try to keep up as the two Enforcers lead towards Dominion's Enforcer HQ...
+		你无法进行任何抵抗，唯一能做的就是努力跟上这两名执法者向御城区的执法者总部前进的步伐……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Responses: -->
 	
@@ -1975,117 +1977,117 @@
 	#IF(npc2.isAttractedTo(pc))
 		<p>
 			#IF(npc.isWillingToRape())
-				As the two Enforcers are clearly not at all interested in giving you a chance to say no, you decide that the best thing to do would be to just go along with this. Parting your [pc.lips] and letting [npc.name] kiss you, you grind up against [npc2.name] in order to show them that you're willing to have sex with them.
+				由于这两个执法者显然完全不想给你拒绝的机会，你决定最好还是顺从他们。于是你微张[pc.lips]让[npc.name]吻你，还磨蹭起[npc2.name]以表明你愿意和他们做爱。
 			#ELSE
-				Liking the sound of having sex with these two Enforcers, you tell them that you're willing to submit to whatever they want to do with you. Having obtained your consent, [npc.name] presses [npc.herself] up against you, before leaning in and pulling you into a passionate kiss. Not wanting [npc2.name] to feel left out, you move over a little so that you can lustfully grind up against [npc2.herHim].
+				你喜欢和这两个执法者做爱，便告诉他们，无论他们想对你做什么，你都愿意服从。在征得你的同意后，[npc.name]立马贴向你，俯身与你热情激吻。你不想让[npc2.name]感到被冷落，于是挪了一下身子，以便自己能淫荡地磨蹭[npc2.herHim]的身体。
 			#ENDIF
 		</p>
 		<p>
-			[npc2.speech(This slut's enjoying this!)] [npc2.name] declares, before giving your
+			[npc2.speech(这荡妇还挺享受！)][npc2.name]评价道，接着
 			#IF(pc.hasBreasts())
-				 [pc.breasts+] a good grope.
+				好好揉了一把你[pc.breasts+]。
 			#ELSE
-				 [pc.ass+] a good grope.
+				好好揉了一把你[pc.ass+]。
 			#ENDIF
 		</p>
 		<p>
-			Breaking off from the kiss, [npc.name] smirks at you and joins [npc.her] partner in feeling you up. Submitting to their dominant behaviour, you prepare to get fucked by these two Enforcers...
+			[npc.name]中断了亲吻，[npc.her]对着你傻笑，加入搭档一同与你肌肤相亲。你服从于他们的支配行为，准备好着被这两个执法者操……
 		</p>
 	#ELSE
 		<p>
 			#IF(npc.isWillingToRape())
-				As [npc.name] is clearly not at all interested in giving you a chance to say no, you decide that the best thing to do would be to just go along with this. Parting your [pc.lips] and letting the [npc.race] kiss you, you grind up against [npc.herHim] in order to show [npc.herHim] that you're willing to have sex with [npc.herHim].
+				由于[npc.Name]显然完全不想给你拒绝的机会，你决定最好还是顺从[npc.herHim]。于是你微张[pc.lips]让[npc.race]吻你，还磨蹭起[npc.herHim]以表明你愿意做爱。
 			#ELSE
-				Liking the sound of having sex with [npc.name], you tell [npc.herHim] that you're willing to submit to whatever [npc.she] wants to do with you. Having obtained your consent, the [npc.race] presses [npc.herself] up against you, before leaning in and pulling you into a passionate kiss.
+				你喜欢和[npc.Name]做爱，便告诉[npc.herHim]无论想做什么，你都愿意服从。在征得你的同意后，[npc.race]立马贴向你，俯身与你热情激吻。
 			#ENDIF
 		</p>
 		<p>
-			[npc2.speech(I'll keep watch,)] [npc2.name] mutters as [npc2.she] [npc2.steps] back.
+			[npc2.speech(我会一直看着的。)][npc2.name]喃喃自语着后退。
 		</p>
 		<p>
-			Breaking off from the kiss, [npc.name] smirks at you as [npc.she]
+			[npc.name]中断了亲吻，[npc.her]对着你傻笑，一边
 			#IF(pc.hasBreasts())
-				 reaches up to give your [pc.breasts+] a good grope.
+				摸向你[pc.breasts+]，好好揉搓了一番。
 			#ELSE
-				 reaches around to give your [pc.ass+] a good grope.
+				摸向你[pc.ass+]，好好揉搓了一番。
 			#ENDIF
-			 Submitting to [npc.her] dominant behaviour, you prepare to get fucked by this horny [npc.race]...
+			你服从于[npc.her]的支配行为，准备好被这饥渴的[npc.race]操……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_DEFEATED_SEX_EAGER"><![CDATA[
 	#IF(npc2.isAttractedTo(pc))
 		<p>
-			More than happy to be having sex with these two Enforcers, you let out an excited [pc.moan] before telling them that you'll willingly submit to whatever they want to do with you. Letting out a triumphant [npc.moan], [npc.name] presses [npc.herself] up against you, before leaning in and pulling you into a passionate kiss. Not wanting [npc2.name] to feel left out, you move over a little so that you can lustfully grind up against [npc2.herHim].
+			你非常高兴能和这两个执法者做爱，发出兴奋的[pc.moan]，接着还告诉他们，无论他们想对你做什么，你都会心甘情愿地服从。[npc.Name]发出胜利的[npc.moan]，立马贴向你，俯身与你热情激吻。你不想让[npc2.name]感到被冷落，于是挪了一下身子，以便自己能淫荡地磨蹭[npc2.herHim]的身体。
 		</p>
 		<p>
-			[npc2.speech(What a slut!)] [npc2.name] declares, before giving your
+			[npc2.speech(真是个荡妇！)][npc2.name]宣告道，接着
 			#IF(pc.hasBreasts())
-				 [pc.breasts+] a good grope.
+				好好揉了一把你[pc.breasts+]。
 			#ELSE
-				 [pc.ass+] a good grope.
+				好好揉了一把你[pc.ass+]。
 			#ENDIF
 		</p>
 		<p>
-			Breaking off from the kiss, [npc.name] smirks at you and joins [npc.her] partner in feeling you up. Eagerly submitting to their dominant behaviour, you look forwards to being fucked by these two Enforcers...
+			[npc.name]中断了亲吻，[npc.her]对着你坏笑，加入搭档一同与你肌肤相亲。你急切地服从他们的支配行为，期待着被这两个执法者操……
 		</p>
 	#ELSE
 		<p>
-			More than happy to be having sex with [npc.name], you let out an excited [pc.moan] before telling [npc.herHim] that you'll willingly submit to whatever [npc.she] wants to do with you. Letting out a triumphant [npc.moan], [npc.name] presses [npc.herself] up against you, before leaning in and pulling you into a passionate kiss.
+			你非常高兴能和[npc.Name]做爱，发出兴奋的[pc.moan]，接着还告诉[npc.herHim]，无论[npc.she]想对你做什么，你都会心甘情愿地服从。[npc.Name]发出胜利的[npc.moan]，立马贴向你，俯身与你热情激吻。
 		</p>
 		<p>
-			[npc2.speech(I'll keep watch,)] [npc2.name] mutters as [npc2.she] [npc2.steps] back.
+			[npc2.speech(我会一直看着的。)][npc2.name]喃喃自语着后退。
 		</p>
 		<p>
-			Breaking off from the kiss, [npc.name] smirks at you as [npc.she]
+			[npc.name]中断了亲吻，[npc.her]对着你坏笑，一边
 			#IF(pc.hasBreasts())
-				 reaches up to give your [pc.breasts+] a good grope.
+				摸向你[pc.breasts+]，好好揉搓了一番。
 			#ELSE
-				 reaches around to give your [pc.ass+] a good grope.
+				摸向你[pc.ass+]，好好揉搓了一番。
 			#ENDIF
-			 Eagerly submitting to [npc.her] dominant behaviour, you prepare to get fucked by this horny [npc.race]...
+			你急切地服从[npc.her]的支配行为，期待着被这饥渴的[npc.race]操……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_DEFEATED_SEX_RESIST"><![CDATA[
 	#IF(npc2.isAttractedTo(pc))
 		<p>
-			Not at all happy with what's happening, you summon what little strength you have left in a pathetic attempt to struggle free from [npc.namePos] grip. Letting out a threatening growl, the [npc.race] roughly presses [npc.herself] up against your body, before pulling you into a forceful kiss.
+			你一点也不满意眼前发生的一切，便拼尽仅剩的力气，试图挣脱[npc.namePos]的控制。[npc.race]发出威胁性的咆哮，粗暴地压在你身上，随后拉着你强吻。
 		</p>
 		<p>
-			[npc2.speech(This slut thinks [pc.she] can get out of this!)] [npc2.name] laughs, before giving your
+			[npc2.speech(这荡妇以为[pc.she]能脱身！)][npc2.name]笑道，接着
 			#IF(pc.hasBreasts())
-				 [pc.breasts+] an unwanted grope.
+				摸向你[pc.breasts+]，你一点也不想这样。
 			#ELSE
-				 [pc.ass+] an unwanted grope.
+				摸向你[pc.ass+]，你一点也不想这样。
 			#ENDIF
 		</p>
 		<p>
-			Breaking off from the kiss, [npc.name] smirks as you let out a desperate cry and shout for them to release you. Ignoring your plea, the [npc.race] joins [npc.her] partner in feeling you up even as you continue to struggle against [npc.herHim]...
+			[npc.name]中断了亲吻，你绝望地哭喊着让他们离开，而[npc.her]对着你坏笑。尽管你一直挣扎，但[npc.race]无视你的恳求，加入搭档一同与你肌肤相亲……
 		</p>
 	#ELSE
 		<p>
-			Not at all happy with what's happening, you summon what little strength you have left in a pathetic attempt to struggle free from [npc.namePos] grip. Letting out a threatening growl, the [npc.race] roughly presses [npc.herself] up against your body, before pulling you into a forceful kiss.
+			你一点也不满意眼前发生的一切，便拼尽仅剩的力气，试图挣脱[npc.namePos]的控制。[npc.race]发出威胁性的咆哮，粗暴地压在你身上，随后拉着你强吻。
 		</p>
 		<p>
-			[npc2.speech(I'll keep watch,)] [npc2.name] mutters as [npc2.she] [npc2.steps] back.
+			[npc2.speech(我会一直看着的。)][npc2.name]喃喃自语着后退。
 		</p>
 		<p>
-			Breaking off from the kiss, [npc.name] smirks at you as [npc.she]
+			[npc.name]中断了亲吻，[npc.her]对着你坏笑，一边
 			#IF(pc.hasBreasts())
-				 reaches up to give your [pc.breasts+] an unwanted grope.
+				摸向你[pc.breasts+]，揉搓了一番，你一点也不想这样。
 			#ELSE
-				 reaches around to give your [pc.ass+] an unwanted grope.
+				摸向你[pc.ass+]，揉搓了一番，你一点也不想这样。
 			#ENDIF
-			 Ignoring your desperate cries and demands to be released, the [npc.race] continues feeling you up as you struggle against [npc.herHim]...
+			[npc.race]无视你绝望的呼喊和被释放的要求，[npc.herHim]在你的挣扎中继续摸索你……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_COMBAT_DEFEAT_SEX_REFUSED -->
@@ -2099,62 +2101,62 @@
 	
 	<p>
 		#IF(npc2.isAttractedTo(pc))
-			Not at all happy with the idea of having sex with these two Enforcers, you tell them in no uncertain terms that they're to leave you alone.
+			你对于和这两个执法者做爱这件事根本不感兴趣。你毫不迟疑地告诉他们离你远点。
 		#ELSE
-			Not at all happy with the idea of having sex with [npc.name], you tell [npc.herHim] in no uncertain terms that [npc.sheIs] to leave you alone.
+			你对于和[npc.Name]做爱这件事根本不感兴趣。你毫不迟疑地告诉[npc.herHim]离你远点。
 		#ENDIF
-		 [npc2.Stepping] forwards to block off any chance of your escape, [npc2.name] snaps, [npc.speech(Fine, but we've still got to deal with the issue of your assault on a pair of Enforcers!)]
+		[npc2.name]上前一步，不给你任何逃跑的可能，厉声说道：[npc.speech(可以是可以，但我们还是要解决你袭击两位执法者这件事。)]
 	</p>
 	#IF(npc.getFoughtPlayerCount()>1)
 		<p>
-			[npc.speech(I can't be bothered to waste my time taking this one in,)] [npc.name] states, [npc.speech(And besides, if we keep on making Lilaya come and bail [pc.herHim] out, we're going to end up being the ones getting punished for it...)]
+			[npc.speech(我可没时间研究这种东西)][npc.name]接着说道，[npc.speech(还有，如果我们继续让莉莱雅来保释[pc.herHim]的话，最终受到惩罚的只会是我们……)]
 		</p>
 		<p>
-			[npc2.speech(Well, we've already given [pc.herHim] a punishment by beating [pc.herHim],)] [npc2.name] remarks, [npc2.speech(Let's just leave [pc.herHim] here...)]
+			[npc2.speech(好吧，我们已经打过[pc.herHim]了。我想这就算是[pc.herHim]的惩罚好了。)][npc2.name]接着说道：[npc2.speech(就让我们把[pc.herHim]留在这里吧……)]
 		</p>
 		<p>
-			Coming to an agreement, the two Enforcers step over your collapsed form and set off down the
+			在达成一致后，两名执法者跨过你倒下的身躯，沿着
 			#IF(canal)
-				 canal-side path
+				运河水道
 			#ELSE
-				 alleyway
+				小巷
 			#ENDIF
-			, but not before giving you a stern warning to never attack Enforcers again...
+			，但在此之前，你也被严厉警告到永远不要再攻击执法者……
 		</p>
 	#ELSEIF(npc.hasFlag(NPC_FLAG_knowsPlayerDemon))
 		<p>
-			[npc.speech(I'm not going to be the one responsible for taking a demon in,)] [npc.name] states, [npc.speech(This was before you joined us, [npc2.surname], but one time some troublesome demon was taken in and she turned out to be the daughter of one of the Elder Lilin. The guys who arrested her got demoted and had to go and personally apologise to her mother. I never saw them again...)]
+			[npc.speech(我可不想收押拘留一个恶魔，)][npc.name]正了正嗓子，[npc.speech(这是在你加入我们之前的事了，[npc2.surname]，有一次，曾经的一对同事抓到了一个麻烦的恶魔，结果发现她是一位莉琳长老的女儿。逮捕她的人不仅被降职了，还得亲自去向她母亲道歉。而且从那之后我再也没见过他们了……)]
 		</p>
 		<p>
-			[npc2.speech(Well, we've already given this one a punishment by beating [pc.herHim],)] [npc2.name] remarks, [npc2.speech(Let's just leave [pc.herHim] here...)]
+			[npc2.speech(好吧，毕竟我们已经殴打过[pc.herHim]了，就把这当做是惩罚好了。)][npc2.name接着说道：[npc2.speech(就让我们把[pc.herHim]留在这里吧……)]
 		</p>
 		<p>
-			Coming to an agreement, the two Enforcers step over your collapsed form and set off down the
+			在达成一致后，两名执法者跨过你倒下的身躯，沿着
 			#IF(canal)
-				 canal-side path
+				运河水道
 			#ELSE
-				 alleyway
+				小巷
 			#ENDIF
-			, but not before giving you a stern warning to never attack Enforcers again...
+			，但在此之前，你也被严厉警告到永远不要再攻击执法者……
 		</p>
 	#ELSE
 		<p>
-			Quickly moving forwards, the two Enforcers don't give you any chance to react as they quickly restrain and arrest you. With [npc.name] holding you in place, you're powerless to resist as [npc2.name] clasps a pair of handcuffs around your wrists.
+			两个执法者没有给你任何反应的机会。他们迅速上前把你按住，逮捕了你。在[npc.name]的控制下，你完全无力抵抗，只能看着[npc2.name]在你手腕上扣上了手铐。
 		</p>
 		<p>
-			[npc.speech(Come on, move it! We've got a nice cosy cell for you back at the station!)] [npc.name] snaps, pulling you along as [npc.she] leads you down the
+			[npc.speech(快走，我们在局里给你准备了一间舒适的牢房！)][npc.name]喝道，抓着你走向
 			#IF(canal)
-				 canal-side path.
+				运河水道。
 			#ELSE
-				 alleyway.
+				小巷。
 			#ENDIF
 		</p>
 		<p>
-			Unable to mount any resistance, the only thing you can do is try to keep up as the two Enforcers lead you towards Dominion's Enforcer HQ...
+			你根本无法抵抗，只能努力跟上这两名执法者的步伐，向御城区的执法者总部前进……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_DEMONIC_SEDUCTION -->
@@ -2162,24 +2164,24 @@
 	<htmlContent tag="AFTER_SEX_DEMONIC_SEDUCTION"><![CDATA[
 	<p>
 		#IF(sex.getAllParticipants(false).size()==3)
-			Having had your fun, you [pc.step] back from the two Enforcers and flash them a triumphant smirk. Seductively biting your [pc.lip], you ask them if they're satisfied with your performance.
+			餍足之后，你从两名执法者身边[pc.step]开，展露出胜利的微笑。你诱惑地咬着[pc.lip]，问他们对你的表现是否满意。
 		#ELSE
-			Having had your fun, you [pc.step] back from [npc.name] and flash [npc.herHim] a triumphant smirk. Seductively biting your [pc.lip], you ask [npc.herHim] if [npc.sheIs] satisfied with your performance.
+			餍足之后，你从[npc.name]身边[pc.step]开，向[npc.herHim]展露出胜利的坏笑。你诱惑地咬着[pc.lip]，问[npc.herHim]对你的表现是否满意。
 		#ENDIF
 	</p>
 	<p>
-		Panting for breath, [npc.name] lets a big smile settle on [npc.her] face as [npc.she] replies, [npc.speech(That was... Amazing...)]
+		[npc.name]喘着粗气，笑颜如花地回应道：[npc.speech(这真是……太棒了……)]
 	</p>
 	<p>
 		#IF(sex.getAllParticipants(false).size()==3)
-			After you've given the two of them some time in which to recover, the Enforcers get their uniforms back in order, before [npc.name] asks,
+			你给他们两人一些时间恢复，执法者们重新整理好了他们的制服，然后[npc.name]问道，
 		#ELSE
-			After you've given the [npc.race] some time in which to recover, [npc.she] gets [npc.her] uniform back in order and asks,
+			给[npc.race]一些恢复时间后，[npc.she]重新整理好[npc.her]的制服并问道，
 		#ENDIF
-		 [npc.speech(So, did you have any criminal activity to report to us? If not, we'll be on our way...)]
+		[npc.speech(你有什么犯罪活动要向我们报告吗？如果没有，我们就去忙自己的事了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_VICTORY -->
@@ -2187,21 +2189,21 @@
 	<htmlContent tag="AFTER_SEX_VICTORY"><![CDATA[
 	#IF(sex.getAllParticipants(false).size()==3)
 		<p>
-			Having had your fun, you [pc.step] back from the two Enforcers and flash them a triumphant smirk. Letting out an exhausted [npc.moan], [npc.name] whines, [npc.speech(Fuck... How did we end up like this?)]
+			你爽够了，从二位执法者身边[pc.step]开，向他们展露出胜利的坏笑。[npc.Name]精疲力尽地[npc.moan]，抱怨道：[npc.speech(操……怎么会变成这样？)]
 		</p>
 		<p>
-			[npc2.speech(I don't know...)] [npc2.name] pants as [npc2.she] tries to recover [npc2.her] breath.
+			[npc2.speech(我不知道啊……)][npc2.name]也喘着粗气平复呼吸。
 		</p>
 	#ELSE
 		<p>
-			Having had your fun, you [pc.step] back from [npc.name] and flash [npc.herHim] a triumphant smirk. Letting out an exhausted [npc.moan], [npc.name] whines, [npc.speech(Fuck... How did I end up like this?)]
+			你爽够了，从[npc.name]身边[pc.step]开，向[npc.herHim]展露出胜利的坏笑。[npc.Name]精疲力尽地[npc.moan]，抱怨道：[npc.speech(操……我怎么会变成这样？)]
 		</p>
 	#ENDIF
 	<p>
-		Having got exactly what it is that you wanted, you get your things in order, before [pc.stepping] back over to where the Enforcers are collapsed on the floor and wondering whether you should help yourself to some of their gear...
+		你成功达成了目的，收拾好东西后[pc.step]回到瘫倒的执法者旁边，思索要不要拿一些他们的装备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_DEFEAT -->
@@ -2209,13 +2211,13 @@
 	<htmlContent tag="AFTER_DEFEAT_SEX"><![CDATA[
 	<p>
 		#IF(sex.getAllParticipants(false).size()==3)
-			Having had their fun, the two Enforcers step back and leave you panting and [pc.moaning] on the floor. While you catch your breath, [npc.name] and [npc2.name] get their uniforms back in order, before stepping forwards and looming over your collapsed body.
+			两名执法者餍足退后，任由你气喘吁吁地躺在地上[pc.moaning]。在你喘息的时候，[npc.name]和[npc2.name]重新整理好制服，掠过你倒下的身体走开了。
 		#ELSE
-			Having had [npc.her] fun, [npc.name] steps back and leaves you panting and [pc.moaning] on the floor. While you catch your breath, the [npc.race] gets [npc.her] uniform back in order, before joining [npc2.name] in stepping forwards and looming over your collapsed body.
+			[npc.Name]餍足退后，任由你气喘吁吁地躺在地上[pc.moaning]。在你喘息的时候，[npc.race]重新整理好制服，然后和[npc2.name]一起掠过你倒下的身体走开了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_DEFEAT_SEX_CONTINUE"><![CDATA[
 	#VAR
@@ -2225,58 +2227,58 @@
 	#ENDVAR
 	
 	<p>
-		Moving around to block off any chance of your escape, [npc2.name] states, [npc.speech(We've still got to deal with the issue of your assault on a pair of Enforcers!)]
+		[npc2.name]四处走动，断绝你逃跑的任何机会，一边说道：[npc.speech(我们还得处理你袭击执法者的问题！)]
 	</p>
 	#IF(npc.getFoughtPlayerCount()>1)
 		<p>
-			[npc.speech(I can't be bothered to waste my time taking this one in,)] [npc.name] states, [npc.speech(And besides, if we keep on making Lilaya come and bail [pc.herHim] out, we're going to end up being the ones getting punished for it...)]
+			[npc.speech(我可没时间研究这种东西)][npc.name]接着说道： [npc.speech(还有，如果我们继续让莉莱雅来保释[pc.herHim]的话，最终受到惩罚的只会是我们……)]
 		</p>
 		<p>
-			[npc2.speech(Well, we've already given [pc.herHim] a punishment by beating [pc.herHim],)] [npc2.name] remarks, [npc2.speech(Let's just leave [pc.herHim] here...)]
+			[npc2.speech(好吧，我们已经打过[pc.herHim]了。我想这就算是[pc.herHim]的惩罚好了。)][npc2.name]接着说道：[npc2.speech(就让我们把[pc.herHim]留在这里吧……)]
 		</p>
 		<p>
-			Coming to an agreement, the two Enforcers step over your collapsed form and set off down the
+			在达成一致后，两名执法者跨过你倒下的身躯，沿着
 			#IF(canal)
-				 canal-side path
+				运河水道
 			#ELSE
-				 alleyway
+				小巷
 			#ENDIF
-			, but not before giving you a stern warning to never attack Enforcers again...
+			离开，但在此之前，你也被严厉警告永远不要再攻击执法者……
 		</p>
 	#ELSEIF(npc.hasFlag(NPC_FLAG_knowsPlayerDemon))
 		<p>
-			[npc.speech(I'm not going to be the one responsible for taking a demon in,)] [npc.name] states, [npc.speech(This was before you joined us, [npc2.surname], but one time some troublesome demon was taken in and she turned out to be the daughter of one of the Elder Lilin. The guys who arrested her got demoted and had to go and personally apologise to her mother. I never saw them again...)]
+			[npc.speech(我可不想收押拘留一个恶魔，)][npc.name]正了正嗓子，[npc.speech(这是在你加入我们之前的事了，[npc2.surname]，有一次，曾经的一对同事抓到了一个麻烦的恶魔，结果发现她是一位莉琳长老的女儿。逮捕她的人不仅被降职了，还得亲自去向她母亲道歉。而且从那之后我再也没见过他们了……)]
 		</p>
 		<p>
-			[npc2.speech(Well, we've already given this one a punishment by beating [pc.herHim],)] [npc2.name] remarks, [npc2.speech(Let's just leave [pc.herHim] here...)]
+			[npc2.speech(好吧，毕竟我们已经殴打过[pc.herHim]了，就把这当做是惩罚好了。)][npc2.name接着说道：[npc2.speech(就让我们把[pc.herHim]留在这里吧……)]
 		</p>
 		<p>
-			Coming to an agreement, the two Enforcers step over your collapsed form and set off down the
+			在达成一致后，两名执法者跨过你倒下的身躯，沿着
 			#IF(canal)
-				 canal-side path
+				运河水道
 			#ELSE
-				 alleyway
+				小巷
 			#ENDIF
-			, but not before giving you a stern warning to never attack Enforcers again...
+			离开，但在此之前，你也被严厉警告永远不要再攻击执法者……
 		</p>
 	#ELSE
 		<p>
-			Quickly moving forwards, the two Enforcers don't give you any chance to react as they quickly restrain and arrest you. With [npc.name] holding you in place, you're powerless to resist as [npc2.name] clasps a pair of handcuffs around your wrists.
+			两个执法者没有给你任何反应的机会。他们迅速上前把你按住，逮捕了你。在[npc.name]的控制下，你完全无力抵抗，只能看着[npc2.name]在你手腕上扣上了手铐。
 		</p>
 		<p>
-			[npc.speech(Come on, move it! We've got a nice cosy cell for you back at the station!)] [npc.name] snaps, pulling you along as [npc.she] leads you down the
+			[npc.speech(快走，我们在局里给你准备了一间舒适的牢房！)][npc.name]喝道，抓着你走向
 			#IF(canal)
-				 canal-side path.
+				运河水道。
 			#ELSE
-				 alleyway.
+				小巷。
 			#ENDIF
 		</p>
 		<p>
-			Unable to mount any resistance, the only thing you can do is try to keep up as the two Enforcers lead you towards Dominion's Enforcer HQ...
+			你根本无法抵抗，只能努力跟上这两名执法者的步伐，向御城区的执法者总部前进……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_DEFEAT_CELLS -->
@@ -2289,28 +2291,28 @@
 	#ENDVAR
 	
 	<p>
-		Still dazed from your defeat at the hands of these Enforcers, you're only vaguely aware of your surroundings as you're led
+		被这些执法者打败后，你仍然昏昏沉沉，只能模糊地意识到周围的环境，被带着
 		#IF(canal)
-			 away from the canal
+			离开运河，
 		#ELSE
-			 out of the alleyways
+			离开小巷，
 		#ENDIF
-		 and down Dominion's streets. Before you know it, you've arrived at Dominion's Enforcer HQ, and after being led inside and down a series of corridors, you're unceremoniously hurled into an empty cell.
+		来到御城区街道上。不知不觉中，你已经来到了御城区执法者总部，在被带着穿过一条条走廊后，你被毫不客气地扔进了一间空牢房。
 	</p>
 	<p>
-		As the barred door is locked behind you, [npc.name] calls out, [npc.speech(I hope you enjoy your new life as someone's slave! It's a fitting end for anyone who dares to attack us Enforcers! [npc2.Name], you can fill [pc.her] paperwork out; I'm off to get a coffee.)]
+		栅栏门在你身后锁上，[npc.name]叫道：[npc.speech(希望你享受当奴隶的新生活！胆敢攻击我们执法者，这结局倒挺般配！[npc2.name]，你可以来填[pc.her]的文件了，我去喝杯咖啡。)]
 	</p>
 	<p>
-		Having been left by [npc2.her] superior to handle the paperwork involved in arresting you, [npc2.name] lets out a weary sigh and trudges off to fetch the required forms. Just a minute later, and [npc2.she] returns to the door of your cell to start asking you a series of personal questions.
+		[npc2.name]被上司留下处理逮捕你的相关文书工作，[npc2.her]疲惫地叹了口气，步伐沉重地去拿程序文件。一分钟后，[npc2.she]回到你的牢房门口，开始审问起一连串私人问题。
 	</p>
 	<p>
-		Seeing no hope of escape at the moment, you play along and start off by answering the [npc2.race]'s request for your name and address. Upon hearing where it is that you claim to live, however, the Enforcer lowers [npc2.her] clipboard and snaps, [npc2.speech(You'd better not be bullshitting me! If I find out that you're lying about this, there's going to be hell to pay!)]
+		眼看逃生无望，你只好配合，先向[npc2.race]回答你的姓名和住址。然而，执法者一听你自称住在哪里时，放下了[npc2.her]的写字板，冷冷地说：[npc2.speech(你最好别跟我胡扯！要是让我发现你在撒谎，有你好受的！)]
 	</p>
 	<p>
-		Clearly unsure about how to proceed after learning that Lilaya's mansion is your fixed address, [npc2.name] runs off to seek the advice of [npc2.her] superior, leaving you with little else to do but wait in your cell...
+		在得知你定居在莉莱雅的宅邸后，[npc2.name]显然不知道该如何继续，于是跑去征求[npc2.her]上级的意见，只留下你在牢房里等待……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_CONTRABAND_CELLS -->
@@ -2323,50 +2325,50 @@
 	#ENDVAR
 	
 	<p>
-		Submitting to the Enforcers, you allow them to lock a pair of handcuffs around your wrists, before accompanying them
+		你向执法者屈服，任凭他们在你的手腕上锁上一副手铐，然后随他们
 		#IF(canal)
-			 away from the canal
+			离开运河，
 		#ELSE
-			 out of the alleyways
+			离开小巷，
 		#ENDIF
-		 and down Dominion's streets. Before you know it, you've arrived at Dominion's Enforcer HQ, and after being led inside and down a series of corridors, you're unceremoniously hurled into an empty cell.
+		来到御城区街道上。不知不觉中，你已经来到了御城区执法者总部，在被带着穿过一条条走廊后，你被毫不客气地扔进了一间空牢房。
 	</p>
 	<p>
-		As the barred door is locked behind you, [npc.name] calls out, [npc.speech(Possession of highly illegal items carries some tough sentences; I wouldn't be surprised if you end up serving a few years as a slave! [npc2.Name], you can fill [pc.her] paperwork out; I'm off to get a coffee.)]
+		栅栏门在你身后锁上，[npc.name]叫道：[npc.speech(持有严重违法物品会被判重刑，即使你最后被判去当几年奴隶，我也不会惊讶！[npc2.name]，你可以来填[pc.her]的文件了，我去喝杯咖啡。)]
 	</p>
 	<p>
-		Having been left by [npc2.her] superior to handle the paperwork involved in arresting you, [npc2.name] lets out a weary sigh and trudges off to fetch the required forms. Just a minute later, and [npc2.she] returns to the door of your cell to start asking you a series of personal questions.
+		[npc2.name]被上司留下处理逮捕你的相关文书工作，[npc2.her]疲惫地叹了口气，步伐沉重地去拿程序文件。一分钟后，[npc2.she]回到你的牢房门口，开始审问起一连串私人问题。
 	</p>
 	<p>
-		Seeing no hope of escape at the moment, you play along and start off by answering the [npc2.race]'s request for your name and address. Upon hearing where it is that you claim to live, however, the Enforcer lowers [npc2.her] clipboard and snaps, [npc2.speech(You'd better not be bullshitting me! If I find out that you're lying about this, there's going to be hell to pay!)]
+		眼看逃生无望，你只好配合，先向[npc2.race]回答你的姓名和住址。然而，执法者一听你自称住在哪里时，放下了[npc2.her]的写字板，冷冷地说：[npc2.speech(你最好别跟我胡扯！要是让我发现你在撒谎，有你好受的！)]
 	</p>
 	<p>
-		Clearly unsure about how to proceed after learning that Lilaya's mansion is your fixed address, [npc2.name] runs off to seek the advice of [npc2.her] superior, leaving you with little else to do but wait in your cell...
+		在得知你定居在莉莱雅的宅邸后，[npc2.name]显然不知道该如何继续，于是跑去征求[npc2.her]上级的意见，只留下你在牢房里等待……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_DEFEAT_CELLS_WAITING -->
 	
 	<htmlContent tag="AFTER_DEFEAT_CELLS_WAITING"><![CDATA[
 	<p>
-		Although you expected one of the two Enforcers who arrested you to quickly return, you end up being left alone in your cell for almost an hour. Eventually, however, you hear the sound of footsteps running down the corridor, before a dog-boy Enforcer that you haven't seen before stops outside the door to your cell and breathlessly pants, [style.speechMasculine(Sorry about having left you here for so long; I'll be releasing you right away!)]
+		虽然你期望逮捕你的两名执法者中的一人能很快回来，但你最终还是被独自留在牢房里近一个小时。终于，你听到了走廊上传来的脚步声，然后一个你从未见过的狗男执法者停在了你的牢房门外，气喘吁吁地喘着粗气，[style.speechMasculine(很抱歉把你留在这里这么久，我马上就放你出去！)]
 	</p>
 	<p>
-		With that, the Enforcer produces a set of keys and unlocks the door to your cell, before stepping inside and quickly removing your handcuffs. Once again apologising for how long you've been left in captivity, he asks you to accompany him so that he can lead you out of the Enforcer HQ.
+		就这样，执法者拿出一串钥匙，打开了你的牢房门，又走进牢房，迅速取下了你的手铐。他再次为囚禁你表示歉意，并请你跟他离开执法者总部。
 	</p>
 	<p>
-		Thankful for this sudden change in fortune, you do as the dog-boy says and allow him to accompany you down the HQ's corridors and out of the front entrance. Curious to know what's caused this sudden change in treatment, you ask the dog-boy why you've been released.
+		你对这突如其来的好运感到感激，按照狗男说的做，让他陪你穿过总部的走廊，走出前门。你很想知道究竟是什么让你的待遇变化得如此突然，于是你问狗男为什么自己会被释放。
 	</p>
 	<p>
-		Misinterpreting your question as an accusation of neglect, the dog-boy stammers, [style.speechMasculine(I-I'm so sorry! I only had confirmation that Lilaya had vouched for your release just five minutes ago! I hurried to set you free as soon as I could!)]
+		狗男把你的疑问误解为对你疏忽的指责，他结结巴巴地辩解道：[style.speechMasculine(我，我很抱歉！我五分钟前才确认莉莱雅担保释放你！我赶紧放了你！)]
 	</p>
 	<p>
-		With the mystery of your sudden release solved, you allow the dog-boy to hurry off back into the Enforcer HQ, before turning around and preparing to continue on your way...
+		你突然获释的谜团解开了，你让狗男匆匆返回执法者总部，自己转身准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

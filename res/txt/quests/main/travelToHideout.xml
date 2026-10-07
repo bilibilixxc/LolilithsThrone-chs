@@ -1,163 +1,163 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- All of these are linked to the 'dialogue/innoxia/quests/main/travelToHideout.xml' dialogue nodes. -->
 	
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		You tell Meraxis that the time has come for the two of you to set off and find Takahashi.
+		你告诉梅拉克西丝，是时候出发去找高桥了。
 	</p>
 	#IF(meraxis.isPregnant())
 		<p>
-			[meraxis.speech(Then what are we waiting for?!)] the chuuni [meraxis.race] excitedly asks. After leaping to her feet, she suddenly seems to lose her confidence, and she rubs her hand over her
+			[meraxis.speech(那我们还等什么？！)]这个中二病的[meraxis.race]兴奋地问道。她猛地跳起来，却突然间像是失去了底气，用手摸了摸自己
 			#IF(meraxis.isVisiblyPregnant())
-				 visibly-swollen belly and mumbles, [meraxis.speech(I kind of feel like I should deal with this before going on an adventure...)]
+				明显隆起的肚子，小声嘟囔道，[meraxis.speech(总觉得……在去冒险之前，我应该先把这个问题解决掉……)]
 			#ELSE
-				 flat tummy and mumbles, [meraxis.speech(I took a pregnancy test and... you got me pregnant, [pc.name]. I kind of feel like I should deal with this before going on an adventure...)]
+				平坦的小腹，小声嘟囔道，[meraxis.speech(我做了个验孕测试，然后……你把我搞大肚子了，[pc.name]。总觉得在去冒险之前，我应该先把这个问题解决掉……)]
 			#ENDIF
 		</p>
 		<p>
-			You tell Meraxis that the Shinrin Highlands can wait; it's best if she gets some rest and waits until the two of you can deal with her pregnancy before setting out on what could end up being a dangerous journey.
+			你告诉梅拉克西丝，心林高地可以之后再去；最好还是先休息一下，等你们俩处理好她怀孕的事情之后，再踏上这段可能充满危险的旅程。
 		</p>
 		<p>
-			[meraxis.speech(Wait?! No! Takahashi might be in trouble, and we've waited long enough,)] she declares, before saying,
+			[meraxis.speech(等等？！不！高桥可能有危险，我们已经等够久了，)] she declares, before saying,
 			#IF(meraxis.getPregnantLitter().getTotalLitterCount()>1)
-				 [meraxis.speech(You stay here, [pc.name]. Mommy always has some Mother's Milk, and she can help me to give birth. Our kids will be safe in Lyssieth's palace and my sisters will give them everything they need to sort themselves out!)]
+				[meraxis.speech(你留在这里，[pc.name]。妈咪那里总有一些母乳药剂，她能帮我生产。我们的孩子们在莉西丝的宫殿里会很安全，我的姐妹们会给他们所需的一切来安顿好自己！)]
 			#ELSE
-				 [meraxis.speech(You stay here, [pc.name]. Mommy always has some Mother's Milk, and she can help me to give birth. Our kid will be safe in Lyssieth's palace and my sisters will give them everything they need to sort themselves out!)]
+				[meraxis.speech(你留在这里，[pc.name]。妈咪那里总有一些母乳药剂，她能帮我生产。我们的孩子在莉西丝的宫殿里会很安全，我的姐妹们会给孩子所需的一切来安顿好自己！)]
 			#ENDIF
 		</p>
 		<p>
-			Not giving you a moment in which to object, Meraxis suddenly teleports away. Shaking your head, you sit down on the sofa and wait for her to return...
+			还没等你开口反对，梅拉克西丝就突然传送走了。你摇了摇头，坐到沙发上等她回来……
 		</p>
 	#ELSE
 		<p>
-			[meraxis.speech(Then what are we waiting for?!)] the chuuni [meraxis.race] excitedly asks. Leaping to her feet, she loudly proclaims, [meraxis.speech(Fear not, Takahashi, for we are on our way to rescue you!)]
+			[meraxis.speech(那我们还等什么？！)]这名中二病的[meraxis.race]兴奋地发问。她一跃而起，大声宣告，[meraxis.speech(无需畏惧，高桥，我们这就来救你！)]
 		</p>
 		<p>
-			You ask Meraxis if she's sure that Takahashi will need rescuing. After all, maybe she's just forgotten to check in with her, and is simply living in the Shinrin Highlands, waiting for Meraxis to come and find her.
+			你问梅拉克西丝，她确定高桥需要被营救吗？也许只是高桥忘了跟她联络，其实正待在心林高地，等着梅拉克西丝去找她呢。
 		</p>
 		<p>
-			[meraxis.speech(Takahashi has never failed to contact me before,)] Meraxis replies, [meraxis.speech(I find it hard to believe that she's really in trouble, but I can't think of another reason why she'd have kept me in the dark for so long. Hopefully we'll find her at my old hideout, and if not, then we should at least be able to find some clue as to her current whereabouts there. Come on, my nemesis, let's go!)]
+			[meraxis.speech(高桥从来没有失联过，)]梅拉克西丝回答道，[meraxis.speech(我很难相信她真的遇上了麻烦，但我实在想不出还有什么别的理由能让她这么久都不跟我联系。希望我们能在我以前的藏身处找到她，就算找不到，至少也应该能发现一些关于她下落的线索。走吧，我的宿敌，出发！)]
 		</p>
 		<p>
-			You're left to catch up as Meraxis energetically bounds over to the door and rushes outside. Following in her wake, you step outside and hurry to catch up as the cheerful chuuni [meraxis.race] turns to the right and skips down the road in a westward direction.
+			梅拉克西丝竭力地蹦跳到门口，冲了出去，你只好赶紧跟上。踏出门外，你加快脚步追上这个开朗的中二病[meraxis.race]，只见她向右一转，蹦蹦跳跳地沿着道路朝西边跑去。
 		</p>
 		<p>
-			[meraxis.speech(I wish we could just teleport there, but the youko's spells prevent teleportation from working in the Shinrin Highlands,)] she says as the two of you head towards the west gate, [meraxis.speech(That book you saw me reading earlier gave me some clues as to how their anti-teleportation spells work, so once we're at my hideout, I should be able to counteract them within a localised area. In other words, we'll be able to teleport back here after we've reclaimed my hideout.)]
+			[meraxis.speech(真希望我们能直接传送过去，但妖狐施展的法术让传送在心林高地失效了，)]你们朝西门走去时她说道，[meraxis.speech(你之前见我读的那本书，让我摸清了她们反传送法术的一些门道。等到了我的藏身处，我应该能在局部区域破除这些限制。换句话说，等夺回藏身处，我们就能传送回这里了。)]
 		</p>
 		<p>
-			Continuing down the road, the two of you are soon passing through the gate. You look over at the Amazon's camp as you [pc.walk] past it, but although you see many of the Amazons moving about between the tents, you don't spot Ursa or Aurokaris.
+			沿着大路继续前行，你们很快便穿过了城门。经过亚马逊人的营地时，你[pc.walk]着朝那边望了一眼，虽然能看到不少亚马逊人在帐篷之间来来往往，但并没有看到乌萨或奥罗卡利斯的身影。
 		</p>
 		<p>
-			After about fifteen minutes since you set out from The Red Dragon, Elis is getting smaller behind you, and the mountains to the west are looming up ahead. Between you and the snow-capped peaks in the far distance, lies a rolling landscape of forest-covered hills. Pointing to those hills, Meraxis proclaims, [meraxis.speech(Behold the Shinrin Highlands! My hideout isn't really too far away, but it'll still take us a few hours to get there.)]
+			从红龙酒馆出发大约一刻钟后，伊利斯已经在身后渐渐远去，西方的群山则在前方逐渐逼近。在你与远处白雪皑皑的山峰之间，是一片连绵起伏、森林密布的丘陵地带。梅拉克西丝指向那些山丘，高声宣布道，[meraxis.speech(看哪，这就是心林高地！我的藏身处其实不算太远，但走过去还是得花上几个小时。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_PREGNANCY_SORTED"><![CDATA[
 	<p>
-		It takes an hour for Meraxis to return. One moment you're waiting alone on the sofa, and the next, in a flash of purple light, the chuuni [meraxis.race] has appeared in front of you.
+		等了一个小时，梅拉克西丝终于回来了。上一秒你还独自坐在沙发上等着，下一秒，伴随着一道紫色的闪光，这位中二[meraxis.race]已经出现在你面前。
 	</p>
 	<p>
-		[meraxis.speech(Mommy sorted it all out!)] she happily exclaims as she pats her flat tummy. Despite having spent quite some time in this new world, you're still not completely used to how easily pregnancies can be dealt with, and for a moment you're stunned and not sure what to say. Taking this opportunity to point her finger at you and strike a heroic pose, Meraxis energetically shouts, [meraxis.speech(What are we waiting for?! Fear not, Takahashi, for we are on our way to rescue you!)]
+		「妈咪已经把一切都搞定啦！」她开心地拍着自己平坦的小腹说道。尽管你已经在这个新世界待了好一阵子，但对于怀孕这件事能如此轻描淡写地解决，你还是没能完全适应。你一时愣住了，不知该说什么好。梅拉克西丝趁机伸出手指指向你，摆出一个英雄般的姿势，竭力地喊道：「我们还在等什么？！高桥别怕，我们这就来救你了！」
 	</p>
 	<p>
-		Recovering from the shock of realising that Meraxis has just given birth, you ask her if she's feeling ok, and if she's sure that Takahashi will need rescuing. After all, maybe she's just forgotten to check in with her, and is simply living in the Shinrin Highlands, waiting for Meraxis to come and find her.
+		从梅拉克西丝刚刚生完孩子的震惊中回过神来，你问她身体是否还好，又问她是否确定高桥需要被救。毕竟，也许她只是忘了联系梅拉克西丝，只是在心林高地安安静静地过着日子，等着梅拉克西丝来找她呢。
 	</p>
 	<p>
-		[meraxis.speech(I'm fine, don't worry about me! And as for Takahashi; she's never failed to contact me before,)] Meraxis replies, [meraxis.speech(I find it hard to believe that she's really in trouble, but I can't think of another reason why she'd have kept me in the dark for so long. Hopefully we'll find her at my old hideout, and if not, then we should at least be able to find some clue as to her current whereabouts there. Come on, my nemesis, let's go!)]
+		「我没事，别担心我！至于高桥嘛，她以前从没失联过，」梅拉克西丝回答道，「虽然我也很难相信她真的遇到了麻烦，但我实在想不出还有什么理由能让她这么久都不跟我联系。希望我们能在我的旧藏身处找到她，即使找不到，至少也应该能发现一些关于她下落的线索。走吧，我的宿敌，出发！」
 	</p>
 	<p>
-		You're left to catch up as Meraxis energetically bounds over to the door and rushes outside. Following in her wake, you step outside and hurry to catch up as the cheerful chuuni [meraxis.race] turns to the right and skips down the road in a westward direction.
+		梅拉克西丝精力充沛地蹦到门口冲了出去，你只能紧紧跟上。跟着她的步伐走出屋外，你赶紧追上这位欢快的中二[meraxis.race]——她已经右转，蹦蹦跳跳地沿着道路向西而去。
 	</p>
 	<p>
-		[meraxis.speech(I wish we could just teleport there, but the youko's spells prevent teleportation from working in the Shinrin Highlands,)] she says as the two of you head towards the west gate, [meraxis.speech(That book you saw me reading earlier gave me some clues as to how their anti-teleportation spells work, so once we're at my hideout, I should be able to counteract them within a localised area. In other words, we'll be able to teleport back here after we've reclaimed my hideout.)]
+		[meraxis.speech(真希望我们能直接传送过去，但妖狐的法术让传送在心林高地无法生效，)]你们朝西门走去时她说道，[meraxis.speech(你之前看到我读的那本书，给了我一些关于她们反传送法术原理的线索。等到了我的藏身处，我应该就能在一片局部区域内解除法术。换句话说，等我们夺回藏身处之后，就可以传送回这里了。)]
 	</p>
 	<p>
-		Continuing down the road, the two of you are soon passing through the gate. You look over at the Amazon's camp as you [pc.walk] past it, but although you see many of the Amazons moving about between the tents, you don't spot Ursa or Aurokaris.
+		沿着大路继续前行，你们很快便穿过了城门。经过亚马逊人的营地时，你[pc.walk]着朝那边望了一眼，虽然能看到不少亚马逊人在帐篷之间来来往往，但并没有看到乌萨或奥罗卡利斯的身影。
 	</p>
 	<p>
-		After about fifteen minutes since you set out from The Red Dragon, Elis is getting smaller behind you, and the mountains to the west are looming up ahead. Between you and the snow-capped peaks in the far distance, lies a rolling landscape of forest-covered hills. Pointing to those hills, Meraxis proclaims, [meraxis.speech(Behold the Shinrin Highlands! My hideout isn't really too far away, but it'll still take us a few hours to get there.)]
+		从红龙酒馆出发大约一刻钟后，伊利斯已经在身后渐渐变小，西边的群山则在前方愈发高耸。在你们与远处白雪皑皑的山峰之间，横亘着一片林木葱郁的起伏丘陵。梅拉克西丝指着那些山丘高声说道，[meraxis.speech(看啊，那就是心林高地！我的藏身处其实不算太远，但走过去还是得花上几个小时。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="WORLD_MAP"><![CDATA[
 	<p>
-		Continuing west, you make your way through the fields which lie to the west of Elis, before reaching a point where the elevation and nature of the surrounding flora noticeably changes. Instead of a flat, open landscape, you find yourselves travelling up and down undulating terrain, which is sometimes punctuated by long, flat valleys in which rice fields and the occasional Japanese-style farmhouse is located.
+		继续向西前行，你们穿过伊利斯城西面的田野，来到一处地势和周围植被明显发生变化的地方。平坦开阔的景观不见了，取而代之的是起伏不定的丘陵地形，其间偶尔被狭长的平坦谷地所打断，谷地中分布着稻田和零星的日式农舍。
 	</p>
 	<p>
-		[meraxis.speech(Do not approach those dwellings, my nemesis!)] Meraxis warns when you encounter your first farm, [meraxis.speech(There's no telling if it's a benevolent or trickster youko who lives there. A follower of Kazuha would invite us in and treat us well, but if it's a servant of Kayo who lives there, then we'd receive nothing but misfortune.)]
+		[meraxis.speech(休要靠近那些居所，我的宿敌！)]梅拉克西丝在你们遇到第一座农舍时出言警告，[meraxis.speech(谁也说不准住在里面的是善良的妖狐还是恶作剧妖狐。要是一叶的追随者，自会邀我们进屋并好生款待；可要是住在里面的是加代的仆从，那我们只会招来一身霉运。)]
 	</p>
 	<p>
-		After a couple of hours spent trekking through the Shinrin Highlands, you ask Meraxis if
+		在心林高地跋涉了几个小时后，你问梅拉克西丝
 		#IF(pc.isAbleToFly())
-			 it'd be quicker for her to just grow her wings so that the two of you could simply fly to her hideout.
+			她直接展开翅膀，你们俩飞去她的藏身处会不会更快。
 		#ELSE
-			 she's planning on growing her wings and flying up to scout the way ahead.
+			她是否打算展开翅膀飞上去探探前方的路。
 		#ENDIF
-		 Shaking her head, she warns, [meraxis.speech(There's nothing inherently dangerous about flying over these lands, but for now I want to avoid being seen as much as possible. If my hideout has fallen into the wicked claws of a trickster youko, then I don't want her to have any warning that her doom approaches.)]
+		她摇了摇头，警告道，[meraxis.speech(在这片土地上空飞行本身并没有什么危险，但眼下我想尽可能不引人注目。要是我的藏身处落入了狡诈妖狐的魔爪，我可不想让她提前察觉大难临头。)]
 	</p>
 	<p>
-		After almost five hours have passed since you left Elis, Meraxis suddenly stops and declares, [meraxis.speech(Our journey is almost at an end! My hideout is located within the next valley, and so after we've conquered this last hill we shall arrive at our destination.)]
+		离开伊利斯近五个小时后，梅拉克西丝突然停下脚步，宣布道：[meraxis.speech(我们的旅程快到终点了！我的藏身处就在下一个山谷，只要翻过这最后一道山梁，我们便能抵达目的地！)]
 	</p>
 	<p>
-		At that moment, a feminine voice drifts to you on the breeze, [style.speechFeminine(Please heed my words, travellers. You must turn back.)]
+		就在这时，一个女性化的声音随着微风飘了过来，「请听我一言，旅人们。你们必须回头。」
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING"><![CDATA[
 	<p>
-		Spinning around to face the direction which the voice came from, you call out and demand that the owner of the voice show herself. Doing as you ask, a beautiful young woman, with long, white hair and four similarly-coloured tails swishing behind her, steps out from behind a tree. On top of her head, she has a pair of large, white-furred fox ears, which droop in a rather submissive manner as she courteously bows to you and Meraxis and introduces herself, [style.speechFeminine(I am Akinaga, and these are my lands which you are travelling through.)]
+		你猛然转身面向声音传来的方向，高声要求声音的主人现身。对方依言照做，一个美丽的年轻女子从树后走了出来。她有着一头银白色长发，身后四条同色的尾巴轻轻摇曳。头顶上长着一对大大的白色狐耳，略微耷拉着，透出几分顺从的意味。她恭敬地向你和梅拉克西丝鞠了一躬，自我介绍道：「我是秋永，你们正在穿越的这片土地属于我。」
 	</p>
 	<p>
-		[meraxis.speech(She must be a follower of Kazuha; a trickster youko would never have shown herself to us so readily,)] Meraxis whispers, before surprising you by returning the youko's bow in a gesture that's too polite for you to have expected to come from the chuuni [meraxis.race]. Addressing this stranger, she says, [meraxis.speech(I'm Meraxis, the dark siren, wielder of universe-shattering cosmic powers! Oh, and this is [pc.name]. One of my many secret lairs lies over this hill, and the two of us are on our way to see if my companion, Takahashi, is there.)]
+		[meraxis.speech(她一定是一叶的追随者；恶作剧妖狐绝不会这么轻易现身，)]梅拉克西丝低声说道。随后她做了一件令你意外的事——向妖狐规规矩矩地回了一礼，这份礼数可完全不像出自这位中二[meraxis.race]之手。她向这位陌生人说道：[meraxis.speech(我是梅拉克西丝，暗夜塞壬，执掌撼动宇宙的寰宇之力！噢，这位是[pc.name]。我诸多秘密巢穴之一就在这山丘之后，我们正打算去看看我的同伴高桥在不在那里。)]
 	</p>
 	<p>
-		[style.speechFeminine(Yes, I recognise you from when you used to pass through my territory many years ago,)] Akinaga reveals, before repeating her warning, [style.speechFeminine(I do not wish to see you come to harm, so please, turn back. A seven-tailed youko by the name of Shiranui has claimed the place where once you dwelt, and she has laid a potent spell over the area which will trap anyone who enters it within a realm of illusions. I believe that your friend, Takahashi, has wandered into this trap.)] 
+		「是的，我记得你，多年前你曾数次经过我的领地，」秋永说道，随即重复了她的警告，「我不希望看到你们受到伤害，所以拜托，请回头吧。一位名叫不知火的七尾妖狐已经占据了你们曾经居住的地方，她在那片区域布下了强大的法术，任何踏入其中的人都会被困在幻象领域之中。我相信你的朋友高桥已经误入了这个陷阱。」
 	</p>
 	<p>
-		[meraxis.speech(Those illusion spells don't scare me!)] Meraxis boasts, regaining her usual energetic manner of talking in the process. Continuing on, she declares, [meraxis.speech(All you need to do to break those spells is to destroy the arcane anchors within the realm of illusion. Takahashi should have known that as well... No matter! We're going to rescue her!)]
+		[meraxis.speech(那些幻象法术可吓不倒我！)]梅拉克西丝夸口道，语气间又恢复了往日的活力。她接着宣布：[meraxis.speech(要想破解那些法术，只需摧毁幻象王国里的奥术锚点就行。高桥应该也知道这点才对……不管了！我们这就去救她！)]
 	</p>
 	<p>
-		[style.speechFeminine(You are correct,)] the youko replies, before sighing and leaving you with these parting words, [style.speechFeminine(I see that you are committed to your path. Shiranui-sama is a servant of Kayo, and is both powerful and crafty. I believe that the anchors she uses take the form of fires which burn bright pink and cannot be extinguished with water, wind, or any other mundane means. If you do willingly venture into her realm in order to save your friend, look for objects which seem out of place beside these fires. By destroying those objects, the fires will extinguish and the spell will be broken. Good luck.)]
+		「你说得没错，」这位妖狐回答道，随后叹了口气，留下了这番临别之言：「看来你们心意已决。不知火大人是加代的仆从，既强大又狡猾。据我所知，她使用的锚点呈现为亮粉色的火焰，无法用水、风或任何其他普通手段熄灭。如果你们执意要踏入她的领域去拯救你们的朋友，就去寻找火焰旁边那些看起来格格不入的物品。摧毁那些物品，火焰就会熄灭，法术也将随之瓦解。祝你们好运。」
 	</p>
 	<p>
-		With that, a shimmer of light passes over Akinaga, and she turns into a mass of autumnal-coloured acer leaves, which blow away in a sudden, unnatural gust of wind.
+		话音刚落，一道微光掠过秋永的身躯，她化作一团秋色的枫叶，在一阵突如其来的、不自然的风中飘散而去。
 	</p>
 	<p>
-		[meraxis.speech(Hmm... That explains why Takahashi hasn't made contact with me,)] Meraxis tuts, before turning to you with a serious look on her face and saying, [meraxis.speech(A seven-tailed youko is incredibly powerful, but even for one of them, it will be hard to keep the illusion spell going if there are three of us trapped within it. While it might have been impossible for Takahashi to extinguish the fires, it should be relatively easy to do once the two of us get in there. We just need to remember what Akinaga said; break any unusual objects near the fires to extinguish them. The fires serve as anchors to keep the spell going, so without them, Shiranui's trap will fall apart and we'll be set free.)]
+		[meraxis.speech(嗯……这就解释了为什么高桥一直没联系我，)]梅拉克西丝咂了咂嘴，然后一脸严肃地转向你说道：[meraxis.speech(七尾妖狐实力极其强悍，但即使是她们，在我们三人都被困在里面的情况下，也很难一直维持这个幻象法术。虽然高桥一个人可能灭不掉那些火，但只要我们两个进去了，解决起来应该相对容易。我们只需牢记秋永说的话：打碎火焰附近任何不寻常的物品就能扑灭它们。这些火焰是维持法术运转的锚点，没了它们，不知火的陷阱就会彻底瓦解，我们也能重获自由。)]
 	</p>
 	<p>
-		You tell Meraxis that you understand, to which she happily nods and loudly declares in her usual, energetic manner, [meraxis.speech(Onwards! We're coming to save you, Takahashi!)]
+		你告诉梅拉克西丝你明白了。她开心地点点头，用平时那活力满满的劲头大声喊道：[meraxis.speech(出发！高桥，我们来救你了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT"><![CDATA[
 	<p>
-		The two of you continue on your way over the next hill, and from your elevated vantage point, you're able to get your first look at the place where Meraxis's hideout is located. Gazing down into the valley, all you can see is a swirling, impenetrable wall of mist.
+		你们俩继续翻过下一座山丘，从高处的有利位置，你第一次看到了梅拉克西丝藏身处所在的地方。俯瞰山谷，你只看到一道翻涌的、无法穿透的迷雾之墙。
 	</p>
 	<p>
-		[meraxis.speech(That's Shiranui's trap; once we enter that mist, there's no way out except via destroying the arcane anchors which keep the spell powered. These traps are favourites of the followers of Kayo, but it takes at least a six-tailed youko to properly set one up,)] Meraxis says, [meraxis.speech(A seven-tail like Shiranui should be able to support three anchors within her trap, so there'll be three fires to extinguish. What a foolish youko she is! Some trickster youko use blades of grass or small pebbles as their anchors, but by using fires, we'll easily be able to find Shiranui's anchors and extinguish them!)]
+		[meraxis.speech(那是不知火的陷阱；一旦我们踏入那片迷雾，唯一的出路就是摧毁维持法术运转的奥术锚点。加代的信徒们最喜欢用这种陷阱，但至少得有六尾妖狐的实力才能妥善布置出来。)]梅拉克西丝说道，[meraxis.speech(像不知火这样的七尾妖狐，应该能在陷阱里维持三个锚点，所以总共有三处火焰需要熄灭。真是个蠢妖狐！有些狡诈的妖狐会用草叶或小石子当锚点，但她居然用火焰，我们轻轻松松就能找到不知火的锚点并统统熄灭掉！)]
 	</p>
 	<p>
-		Committed to rescuing Takahashi, and with a clear plan of how to escape from within Shiranui's trap, the two of you travel down the side of the hill and enter the mist-wreathed valley. Behind the ghostly silhouettes of the trees which line the sides of the path you find yourself travelling down, a shadowy, feminine figure flits in and out of your peripheral vision.
+		怀着营救高桥的决心，加上已经有了明确的逃脱计划，你们俩沿着山坡走下，进入了被迷雾笼罩的山谷。在你们沿着小路前行时，路两旁树木的幽灵般的轮廓后面，一个朦胧的女性身影在你的余光中若隐若现。
 	</p>
 	<p>
-		[shiranui.speech(Two more rude trespassers caught in my net!)] an amused-sounding, feminine voice calls out from all around you. This morphs into a burst of sinister-sounding laughter, and then suddenly the shadowy figure can be seen peeking out at you from behind multiple trees all at once. Turning to face these shadowy threats, you and Meraxis stand back-to-back, ready for whatever will come your way.
+		[shiranui.speech(又有两个无礼的闯入者落入了我的网中！)]一个听起来颇为得意的女声从四面八方传来。随即，声音化为一阵阴森的笑声，紧接着那个朦胧的身影同时出现在好几棵树后，朝你们窥视着。面对这些暗影般的威胁，你和梅拉克西丝背靠背站好，准备迎接即将到来的一切。
 	</p>
 	<p>
-		[meraxis.speech(Stay focused, my nemesis! So long as we don't get split up we should be-)] Meraxis says from behind you, but her words are suddenly cut short. Spinning around, you see that the chuuni [meraxis.race] has vanished, and so too have all of the shadowy figures. A total silence, as thick and as heavy as the surrounding mists, completely envelops you, and although you remain ready for her to reappear, Shiranui doesn't show herself to you again.
+		[meraxis.speech(保持专注，我的宿敌！只要我们不走散就应该——)]梅拉克西丝在你身后喊道，但话音戛然而止。你猛地转过身，发现那个中二病[meraxis.race]已经消失不见，那些朦胧的身影也全都没了踪影。一片死寂如同周围的浓雾般沉重地将你笼罩，尽管你依然戒备着她再次现身，不知火却再也没有露面。
 	</p>
 	<p>
-		Thankfully, the beaten path which winds its way between the vague silhouettes of trees remains relatively clear of mist, allowing you to navigate through this illusionary realm. Hoping that Meraxis is not in danger, you set off down the path and begin your search for the fires which you need to extinguish in order to escape from this illusionary realm...
+		好在这条蜿蜒于朦胧树影之间的小路上雾气相对稀薄，让你得以在这幻象领域中辨清方向。你祈望着梅拉克西丝没有陷入危险，踏上小路，开始寻找那些需要熄灭才能逃离这片幻象领域的火焰……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

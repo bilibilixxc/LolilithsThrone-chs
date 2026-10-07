@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
-    <clothingAuthorTag><![CDATA[Small engraved lettering informs you that these piercings were made by 'Norin'.]]></clothingAuthorTag>
+    <clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
     <value>500</value> <!--10 flames = £1 ~ $1.5-->
-    <determiner><![CDATA[a pair of]]></determiner>
-    <name><![CDATA[chained nipple ring]]></name>
-    <namePlural pluralByDefault="true"><![CDATA[chained nipple rings]]></namePlural>
-    <description><![CDATA[A pair of nipple rings linked by a fine metal chain.]]></description>
+    <determiner><![CDATA[一条]]></determiner>
+    <name><![CDATA[乳链]]></name>
+    <namePlural pluralByDefault="true"><![CDATA[乳链]]></namePlural>
+    <description><![CDATA[一对有着金属链条相连的乳环。]]></description>
     
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -52,27 +51,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] a pair of chained nipple rings into [npc.her] [npc.nipples+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] a pair of chained nipple rings into [npc2.namePos] [npc2.nipples+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(slide)] a pair of chained nipple rings into [npc2.namePos] [npc2.nipples+], giving the chain a rough tug.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把乳链戴在[npc.her][npc.nipples+]。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把乳链戴在[npc2.namePos][npc2.nipples+]。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]把乳链戴在[npc2.namePos][npc2.nipples+]，然后用力扯了一下链条。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] a pair of chained nipple rings out of [npc.her] [npc.nipples+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] a pair of chained nipple rings out of [npc2.namePos] [npc2.nipples+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(give)] [npc2.NamePos] chained nipple rings a tough tug before sliding them out.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把[npc.her]的乳链从[npc.her][npc.nipples+]上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把乳链从[npc2.namePos][npc2.nipples+]上取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]用力扯了一下[npc2.namePos]的乳链然后才取下来。
+]]></otherRough>
   </displacementText>
   
   

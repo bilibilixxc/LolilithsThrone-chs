@@ -66,7 +66,7 @@ public class DaddyDialogue {
 	
 	// Util place dialogues:
 	
-	public static final DialogueNode PLACE_ENTRANCE_HALL = new DialogueNode("Entrance Hall", "", false) {
+	public static final DialogueNode PLACE_ENTRANCE_HALL = new DialogueNode("门厅", "", false) {
 		@Override
 		public String getContent() {
 			return "";
@@ -77,7 +77,7 @@ public class DaddyDialogue {
 		}
 	};
 	
-	public static final DialogueNode PLACE_LOUNGE = new DialogueNode("Lounge", "", false) {
+	public static final DialogueNode PLACE_LOUNGE = new DialogueNode("休息室", "", false) {
 		@Override
 		public String getContent() {
 			return "";
@@ -88,7 +88,7 @@ public class DaddyDialogue {
 		}
 	};
 	
-	public static final DialogueNode PLACE_KITCHEN = new DialogueNode("Kitchen", "", false) {
+	public static final DialogueNode PLACE_KITCHEN = new DialogueNode("厨房", "", false) {
 		@Override
 		public String getContent() {
 			return "";
@@ -99,7 +99,7 @@ public class DaddyDialogue {
 		}
 	};
 	
-	public static final DialogueNode PLACE_BEDROOM = new DialogueNode("Bedroom", "", false) {
+	public static final DialogueNode PLACE_BEDROOM = new DialogueNode("卧室", "", false) {
 		@Override
 		public String getContent() {
 			return "";
@@ -125,7 +125,7 @@ public class DaddyDialogue {
 		}
 	};
 	
-	public static final DialogueNode CONVINCING_LILAYA = new DialogueNode("Bedroom", "", true) {
+	public static final DialogueNode CONVINCING_LILAYA = new DialogueNode("卧室", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 10*60;
@@ -137,7 +137,7 @@ public class DaddyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Wait for Lilaya to change into her dress, and then set out for [daddy.namePos] place in Demon Home.", MEETING) {
+				return new Response("等待", "等待莉莱雅换好衣服，然后出发前往恶魔之家的[daddy.namePos]处。", MEETING) {
 					@Override
 					public int getSecondsPassed() {
 						return 30*60;
@@ -166,7 +166,7 @@ public class DaddyDialogue {
 	
 	// Main dialogues:
 	
-	public static final DialogueNode FIRST_ENCOUNTER = new DialogueNode("An unwelcome guest", "", true) {
+	public static final DialogueNode FIRST_ENCOUNTER = new DialogueNode("不受欢迎的客人", "", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -181,7 +181,7 @@ public class DaddyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Correct him", "Tell [daddy.name] that you are in fact related to Lilaya, and that you live here with her.", BLANK_DEFAULT_DIALOGUE) {
+				return new Response("纠正他", "告诉[daddy.name]，你和莉莱雅是亲戚，你和她住在这里。", BLANK_DEFAULT_DIALOGUE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Daddy.class).setPlayerKnowsName(true);
@@ -196,7 +196,7 @@ public class DaddyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Push past", "Refuse to answer this impudent incubus's question, and simply march straight past him and enter Lilaya's house.", BLANK_DEFAULT_DIALOGUE) {
+				return new Response("无视他", "拒绝回答这个无礼的淫梦魔的问题，直接从他身边走过，进入莉莱雅的家。", BLANK_DEFAULT_DIALOGUE) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Daddy.class).setPlayerKnowsName(true);
@@ -221,7 +221,7 @@ public class DaddyDialogue {
 		
 		@Override
 		public String getLabel() {
-			return "Meeting [daddy.name]";
+			return "与[daddy.name]见面";
 		}
 
 		@Override
@@ -257,8 +257,8 @@ public class DaddyDialogue {
 			if(Main.game.getPlayer().getQuest(QuestLine.SIDE_DADDY) == Quest.DADDY_MEETING
 					|| Main.game.getPlayer().getQuest(QuestLine.SIDE_DADDY) == Quest.DADDY_REFUSED) { // First dinner:
 				if(index==1) {
-					return new Response("Agree",
-							"It might be a good idea to get to know why [daddy.name] wants to meet Lilaya so badly before deciding upon what to tell [daddy.herHim].",
+					return new Response("同意",
+							"在决定跟[daddy.name]说什么前，不妨先了解一下[daddy.herHim]为什么这么想见莉莱雅。",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -275,8 +275,8 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Agree (flirt)",
-							"A date with [daddy.name] sounds like the perfect way to spend your evening!",
+					return new Response("同意(调情)",
+							"与[daddy.name]约会听起来是度过夜晚的完美方式！",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -295,12 +295,12 @@ public class DaddyDialogue {
 				} else if(index==3) {
 					boolean returning = Main.game.getPlayer().getQuest(QuestLine.SIDE_DADDY) == Quest.DADDY_REFUSED;
 					return new Response(
-							"Refuse",
+							"拒绝",
 							returning
-								? "Tell [daddy.name] that you've changed your mind, and don't want to go out for dinner with [daddy.herHim] after all.<br/>"
-									+ "[style.italicsMinorBad(You can still change your mind and return tomorrow or at any other later time.)]"
-								: "Refuse to go to dinner with [daddy.name], and tell him never to bother Lilaya again.<br/>"
-									+ "[style.italicsMinorBad(This will complete the quest, '"+QuestLine.SIDE_DADDY.getName()+"', but you can still return and restart it at any time.)]",
+								? "告诉[daddy.name]你改变主意了，不想和[daddy.herHim]一起出去吃饭了。<br/>"
+									+ "[style.italicsMinorBad(你仍然可以改变主意并且明天或之后的任何时间回来。)]"
+								: "拒绝和[daddy.name]共进晚餐，告诉他再也不要来打扰莉莱雅。<br/>"
+									+ "[style.italicsMinorBad(这将完成任务，'"+QuestLine.SIDE_DADDY.getName()+"'但你仍然可以随时返回并重新开启。)]",
 							BLANK_DEFAULT_DIALOGUE) {
 						@Override
 						public void effects() {
@@ -321,8 +321,8 @@ public class DaddyDialogue {
 				
 			} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_DADDY) == Quest.DADDY_REFUSED_2) {
 				if(index==1) {
-					return new Response("Accept",
-							"Tell [daddy.name] that you're willing to call [daddy.herHim] [daddy.mommy], and to convince Lilaya to come and meet [daddy.herHim].",
+					return new Response("接受",
+							"告诉[daddy.name]，你愿意喊[daddy.herHim][daddy.mommy]，并说服莉莱雅来见[daddy.herHim]。",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -339,8 +339,8 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Accept (flirt)",
-							"Flirtatiously tell [daddy.name] that you're willing to call [daddy.herHim] [daddy.mommy], and to convince Lilaya to come and meet [daddy.herHim].",
+					return new Response("接受(调情)",
+							"调情地告诉[daddy.name]，你愿意叫[daddy.herHim][daddy.mommy]，并说服莉莱雅来见[daddy.herHim]。",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -357,9 +357,9 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==3) {
-					return new Response("Refuse",
-								"Tell [daddy.name] that you aren't going to convince Lilaya to meet [daddy.herHim], and that you certainly aren't going to call [daddy.herHim] '[daddy.daddy]'.<br/>"
-										+ "<i>This will complete the quest, '"+QuestLine.SIDE_DADDY.getName()+"', but you can still return and restart it at any time.</i>",
+					return new Response("拒绝",
+								"告诉[daddy.name]，你不会说服莉莱雅去见[daddy.herHim]，当然也不会叫[daddy.herHim]“[daddy.daddy]”。<br/>"
+										+ "<i>这将完成任务，'"+QuestLine.SIDE_DADDY.getName()+"'但你仍然可以随时返回并重新开启。</i>",
 								BLANK_DEFAULT_DIALOGUE) {
 						@Override
 						public void effects() {
@@ -374,8 +374,8 @@ public class DaddyDialogue {
 				
 			} else if(isLilayaPresent() && !Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_DADDY)) {
 				if(index==1) {
-					return new Response("Help Lilaya",
-							"Help Lilaya by reminding her that she was accepting of the idea of having [daddy.name] as a father figure.",
+					return new Response("帮助莉莱雅",
+							"帮助莉莱雅，让她接受[daddy.name]成为她父亲的想法。",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -398,8 +398,8 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Help Lilaya (flirt)",
-							"Help Lilaya by reminding her that she was accepting of the idea of having [daddy.name] as a father figure, and then go a little further and start flirting with the two of them in order to set the tone of the evening.",
+					return new Response("帮助莉莱雅(调情)",
+							"帮助莉莱雅，提醒她接受让[daddy.name]成为她父亲的想法，然后再进一步，开始与他们两人调情，为今晚定下基调。",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -424,10 +424,10 @@ public class DaddyDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Dinner",
+					return new Response("晚餐",
 							isLilayaPresent()
-								?"Tell [daddy.name] that you and Lilaya would love to go out to dinner with [daddy.herHim] again."
-								:"Tell [daddy.name] that you'd love to go out to dinner with [daddy.herHim] again.",
+								?"告诉[daddy.name]，你和莉莱雅很想再和[daddy.herHim]一起出去吃饭。"
+								:"告诉[daddy.name]你很想再和[daddy.herHim]一起出去吃饭。",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -451,10 +451,10 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Dinner (flirt)",
+					return new Response("晚餐(调情)",
 							isLilayaPresent()
-								?"Tell [daddy.name] in a flirtatious manner that you and Lilaya would love to go out to dinner with [daddy.herHim] again."
-								:"Tell [daddy.name] in a flirtatious manner that you'd love to go out to dinner with [daddy.herHim] again.",
+								?"用调情的方式告诉[daddy.name]，你和莉莱雅很想再和[daddy.herHim]一起出去吃饭。"
+								:"用调情的方式告诉[daddy.name]，你很想再和[daddy.herHim]一起出去吃饭。",
 							DINNER) {
 						@Override
 						public void effects() {
@@ -478,10 +478,10 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==3) {
-					return new Response("Inside",
+					return new Response("进入",
 							isLilayaPresent()
-								?"Ask [daddy.name] if the three of you can just go inside and spend some time with one another in [daddy.her] apartment."
-								:"Ask [daddy.name] if the two of you can just go inside and spend some time with one another in [daddy.her] apartment.",
+								?"问问[daddy.name]，你们三个能不能进去，在[daddy.her]的公寓里待一会儿。"
+								:"问问[daddy.name]，你们俩能不能进去，在[daddy.her]的公寓里待一会儿。",
 							APARTMENT) {
 						@Override
 						public void effects() {
@@ -500,10 +500,10 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==4) {
-					return new Response("Inside (flirting)",
+					return new Response("进入(调情)",
 							isLilayaPresent()
-								?"Ask [daddy.name] in a flirtatious manner if the three of you can just go inside and spend some time with one another in [daddy.her] apartment."
-								:"Ask [daddy.name] in a flirtatious manner if the two of you can just go inside and spend some time with one another in [daddy.her] apartment.",
+								?"用调情的方式问[daddy.name]，你们三个人是否可以进去，在[daddy.her]的公寓里共度一段时光。"
+								:"用调情的方式问[daddy.name]，你们俩能不能进去，在[daddy.her]的公寓里共度一段时光。",
 							APARTMENT) {
 						@Override
 						public void effects() {
@@ -538,7 +538,7 @@ public class DaddyDialogue {
 		}
 	}
 	
-	public static final DialogueNode DINNER = new DialogueNode("Temptation", "", true) {
+	public static final DialogueNode DINNER = new DialogueNode("引诱", "", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -558,8 +558,8 @@ public class DaddyDialogue {
 				nextNode = FIRST_DINNER_TRANSFORM;
 			}
 			if(index==1) {
-				return new Response("Water",
-						"Refuse [daddy.namePos] offer of wine, and stick with drinking water in order to avoid getting drunk.",
+				return new Response("水",
+						"拒绝[daddy.namePos]的酒，坚持喝水以免喝醉。",
 						nextNode) {
 					@Override
 					public void effects() {
@@ -585,8 +585,8 @@ public class DaddyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Wine",
-						"Accept [daddy.namePos] offer of having a bottle of wine to drink this evening.",
+				return new Response("酒",
+						"接受[daddy.namePos]的提议，今晚喝一瓶酒。",
 						nextNode) {
 					@Override
 					public void effects() {
@@ -616,7 +616,7 @@ public class DaddyDialogue {
 		}
 	};
 
-	public static final DialogueNode FIRST_DINNER_TRANSFORM = new DialogueNode("Temptation", "", true, true) {
+	public static final DialogueNode FIRST_DINNER_TRANSFORM = new DialogueNode("引诱", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -631,9 +631,9 @@ public class DaddyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Incubus",
-						"Tell [daddy.name] that [daddy.sheIs] fine the way [daddy.sheIsFull] right now.<br/>"
-								+ "[style.italicsMasculine(This will get [daddy.name] to <b>permanently</b> stay as a "+GenderNames.Y_PENIS_N_VAGINA_N_BREASTS.getMasculine()+" incubus.)]",
+				return new Response("淫梦魔",
+						"告诉[daddy.name][daddy.sheIs]现在的样子就挺好。<br/>"
+								+ "[style.italicsMasculine(这会使得[daddy.name]<b>永久</b>保持一个"+GenderNames.Y_PENIS_N_VAGINA_N_BREASTS.getMasculine()+"淫梦魔的状态。)]",
 						FIRST_DINNER) {
 					
 					@Override
@@ -647,9 +647,9 @@ public class DaddyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Succubus",
-						"Convince [daddy.name] that [daddy.she] would have a far easier time seducing Lyssieth if [daddy.she] were to transform into a succubus.<br/>"
-								+ "[style.italicsFeminine(This will get [daddy.name] to <b>permanently</b> transform into a "+GenderNames.Y_PENIS_N_VAGINA_Y_BREASTS.getFeminine()+" succubus.)]",
+				return new Response("魅魔",
+						"劝说[daddy.name]，如果[daddy.she]想勾引莉西丝，转化成一个魅魔会简单得多。<br/>"
+								+ "[style.italicsFeminine(这会使得[daddy.name]<b>永久</b>转化为一个"+GenderNames.Y_PENIS_N_VAGINA_Y_BREASTS.getFeminine()+"魅魔。)]",
 						FIRST_DINNER) {
 					@Override
 					public void effects() {
@@ -668,9 +668,9 @@ public class DaddyDialogue {
 				};
 				
 			} else if(index==3 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.flirtingWithDaddy)) {
-				return new Response("Succubus (flirting)",
-						"Convince [daddy.name] that [daddy.she] would have a far easier time seducing Lyssieth if [daddy.she] were to transform into a succubus. After getting him to transform, start flirting with her.<br/>"
-								+ "[style.italicsFeminine(This will get [daddy.name] to <b>permanently</b> transform into a "+GenderNames.Y_PENIS_N_VAGINA_Y_BREASTS.getFeminine()+" succubus.)]",
+				return new Response("魅魔(调情)",
+						"说服[daddy.name]，如果[daddy.she]转化成魅魔，[daddy.she]会更容易勾引莉西丝。让他转化后，开始和她调情。<br/>"
+								+ "[style.italicsFeminine(这会使得[daddy.name]<b>永久</b>转化为一个"+GenderNames.Y_PENIS_N_VAGINA_Y_BREASTS.getFeminine()+"魅魔。)]",
 						FIRST_DINNER) {
 					@Override
 					public void effects() {
@@ -694,7 +694,7 @@ public class DaddyDialogue {
 		}
 	};
 	
-	public static final DialogueNode FIRST_DINNER = new DialogueNode("Temptation", "", true, true) {
+	public static final DialogueNode FIRST_DINNER = new DialogueNode("引诱", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -709,8 +709,8 @@ public class DaddyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Accept",
-						"Tell [daddy.name] that you're willing to call [daddy.herHim] [daddy.mommy], and to convince Lilaya to come and meet [daddy.herHim].",
+				return new Response("接受",
+						"告诉[daddy.name]，你愿意喊[daddy.herHim][daddy.mommy]，并说服莉莱雅来见[daddy.herHim]。",
 						DINNER_MID) {
 					@Override
 					public void effects() {
@@ -721,9 +721,9 @@ public class DaddyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Refuse",
-							"Tell [daddy.name] that you aren't going to convince Lilaya to meet [daddy.herHim], and that you certainly aren't going to call [daddy.herHim] '[daddy.daddy]'.<br/>"
-									+ "<i>This will complete the quest, '"+QuestLine.SIDE_DADDY.getName()+"', but you can still return and restart it at any time.</i>",
+				return new Response("拒绝",
+							"告诉[daddy.name]，你不会说服莉莱雅去见[daddy.herHim]，当然也不会叫[daddy.herHim]“[daddy.daddy]”。<br/>"
+									+ "<i>这将完成任务，'"+QuestLine.SIDE_DADDY.getName()+"'但你仍然可以随时返回并重新开启。</i>",
 							BLANK_DEFAULT_DIALOGUE) {
 					@Override
 					public void effects() {
@@ -738,7 +738,7 @@ public class DaddyDialogue {
 	};
 	
 
-	public static final DialogueNode DINNER_MID = new DialogueNode("Temptation", "", true, true) {
+	public static final DialogueNode DINNER_MID = new DialogueNode("引诱", "", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -753,10 +753,10 @@ public class DaddyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Dessert",
+				return new Response("甜点",
 						isLilayaPresent()
-							?"Tell [daddy.name] that you and Lilaya would love to order some dessert."
-							:"Tell [daddy.name] that you would love to order some dessert.",
+							?"告诉[daddy.name]你和莉莱雅想点一些甜点。"
+							:"告诉[daddy.name]你想点甜点。",
 						DINNER_END) {
 					@Override
 					public int getSecondsPassed() {
@@ -769,8 +769,8 @@ public class DaddyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("No dessert",
-						"Tell [daddy.name] that you're already full, and can't manage any dessert.",
+				return new Response("无甜点",
+						"告诉[daddy.name]你已经吃饱了，吃不下甜点了。",
 						DINNER_END) {
 					@Override
 					public int getSecondsPassed() {
@@ -784,27 +784,27 @@ public class DaddyDialogue {
 				
 			} else if(index==3) {
 				if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.flirtingWithDaddy)) {
-					return new Response("'Dessert'",
+					return new Response("“甜点”",
 							isLilayaPresent()
-								?"As you haven't got [daddy.name] or Lilaya into the mood by flirting with them this evening, any attempt to get some special 'dessert' from [daddy.name] would almost certainly end in embarrassed disaster."
-								:"As you haven't got [daddy.herHim] into the mood by flirting with [daddy.him] this evening, any attempt to get some special 'dessert' from [daddy.name] would almost certainly end in embarrassed disaster.",
+								?"由于你今晚没有和[daddy.name]或莉莱雅调情，所以任何想从[daddy.name]那里得到特别“甜点”的尝试几乎肯定会以灾难性的尴尬告终。"
+								:"由于你今晚还没有和[daddy.herHim]调情让[daddy.him]进入状态，任何想从[daddy.name]那里得到特别“甜点”的尝试几乎肯定会以灾难性的尴尬告终。",
 							null);
 				
 				} else if(Main.game.getPlayer().isTaur()) {
-					return new Response("'Dessert'",
-							"Due to your large lower body, there's no way you can fit under the table in order to perform oral sex on [daddy.name]...",
+					return new Response("“甜点”",
+							"由于你的下半身太大，你根本不可能钻到桌子底下为[daddy.name]口交……",
 							null);
 					
 				} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("'Dessert'",
-							"You cannot perform oral sex on [daddy.name] while your mouth is blocked!",
+					return new Response("“甜点”",
+							"你的嘴被堵住了，你不能为[daddy.name]口交！",
 							null);
 					
 				} else {
-					return new ResponseSex("'Dessert'",
+					return new ResponseSex("“甜点”",
 							isLilayaPresent()
-								?"You have a different kind of dessert in mind. Get Lilaya to drop down under the table with you and join you in sucking [daddy.namePos] cock in order to earn it."
-								:"You have a different kind of dessert in mind. Drop down under the table and start sucking [daddy.namePos] cock in order to earn it.",
+								?"你想吃的甜点可不一样。让莉莱雅和你一起趴到桌子下面，和你一起给[daddy.namePos]口交来品尝“甜点”。"
+								:"你的甜点与众不同。趴到桌子下面，开始为[daddy.namePos]口交。",
 							true,
 							true,
 							new SMDaddyDinnerOral(
@@ -844,7 +844,7 @@ public class DaddyDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_UNDER_TABLE_SEX = new DialogueNode("Waitress approaches", "", true, true) {
+	public static final DialogueNode AFTER_UNDER_TABLE_SEX = new DialogueNode("侍者接近", "", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -861,7 +861,7 @@ public class DaddyDialogue {
 		}
 	};
 	
-	public static final DialogueNode DINNER_END = new DialogueNode("Temptation", "", true, true) {
+	public static final DialogueNode DINNER_END = new DialogueNode("引诱", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().applyFoodConsumed();
@@ -879,10 +879,10 @@ public class DaddyDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.flirtingWithDaddy)) {
 				if(index==1) {
-					return new Response("Refuse",
+					return new Response("拒绝",
 							isLilayaPresent()
-								?"Tell [daddy.name] that you and Lilaya need to be getting home."
-								:"Tell [daddy.name] that you need to be getting home.",
+								?"告诉[daddy.name]，你和莉莱雅该回家了。"
+								:"告诉[daddy.name]你得回家了。",
 							BLANK_DEFAULT_DIALOGUE) {
 						@Override
 						public int getSecondsPassed() {
@@ -906,10 +906,10 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Accept",
+					return new Response("接受",
 							isLilayaPresent()
-								?"Tell [daddy.name] that you and Lilaya would love to go back to [daddy.her] place for some more fun..."
-								:"Tell [daddy.name] that you'd love to go back to [daddy.her] place for some more fun...",
+								?"告诉[daddy.name]，你和莉莱雅很想回[daddy.her]那里再玩玩……"
+								:"告诉[daddy.name]，你很想回到[daddy.her]的地方再找点乐子……",
 							AFTER_DINNER) {
 						@Override
 						public boolean isSexHighlight() {
@@ -929,10 +929,10 @@ public class DaddyDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Say goodbye",
+					return new Response("道别",
 							isLilayaPresent()
-								?"Thank [daddy.name] for the meal and tell [daddy.herHim] that you'll see [daddy.herHim] another time."
-								:"Thank [daddy.name] for the meal and tell [daddy.herHim] that you and Lilaya will see [daddy.herHim] another time.",
+								?"感谢[daddy.name]的款待，并告诉[daddy.herHim]你们下次再见。"
+								:"感谢[daddy.name]的款待，并告诉[daddy.herHim]你和莉莱雅下次再来看[daddy.herHim]。",
 							BLANK_DEFAULT_DIALOGUE) {
 						@Override
 						public int getSecondsPassed() {
@@ -970,7 +970,7 @@ public class DaddyDialogue {
 		
 		@Override
 		public String getLabel() {
-			return "[daddy.NamePos] apartment";
+			return "[daddy.NamePos]公寓";
 		}
 		
 		@Override
@@ -981,10 +981,10 @@ public class DaddyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Submit",
+				return new ResponseSex("顺从",
 						isLilayaPresent()
-							?"Do as you're told and join Lilaya on [daddy.namePos] bed before presenting yourselves to [daddy.herHim]."
-							:"Do as [daddy.name] says and get on [daddy.her] bed before presenting yourself to [daddy.herHim].",
+							?"照我说的做，先到[daddy.namePos]床上和莉莱雅会合，然后再去见[daddy.herHim]。"
+							:"按照[daddy.name]说的做，先上[daddy.her]的床，然后再向[daddy.herHim]展示自己。",
 						true,
 						true,
 						new SMGeneric(
@@ -1057,10 +1057,10 @@ public class DaddyDialogue {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Dominate",
+				return new ResponseSex("支配",
 						isLilayaPresent()
-							?"Tell [daddy.name] that that's not quite how this is going to work, before pushing [daddy.herHim] into [daddy.her] bedroom and joining Lilaya in taking [daddy.herHim] for a ride."
-							:"Tell [daddy.name] that that's not quite how this is going to work, before pushing [daddy.herHim] into [daddy.her] bedroom and getting ready to take [daddy.herHim] for a ride.",
+							?"告诉[daddy.name]，事情不是这样的，然后把[daddy.herHim]推进卧室，和莉莱雅一起骑在[daddy.herHim]身上。"
+							:"告诉[daddy.name]，事情不是这样的，然后把[daddy.herHim]推进卧室，准备骑在[daddy.herHim]身上。",
 						true,
 						true,
 						new SMGeneric(
@@ -1149,7 +1149,7 @@ public class DaddyDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_APARTMENT_SEX = new DialogueNode("Finished", "The evening of lust-filled sex comes to an end...", true, true) {
+	public static final DialogueNode AFTER_APARTMENT_SEX = new DialogueNode("结束", "淫荡的滥交夜晚来到了尽头……", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1164,10 +1164,10 @@ public class DaddyDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Say goodbye",
+				return new Response("道别",
 						isLilayaPresent()
-							?"Thank [daddy.name] for all the fun you had this evening and tell [daddy.herHim] that you and Lilaya will see [daddy.herHim] another time."
-							:"Thank [daddy.name] for all the fun you had this evening and tell [daddy.herHim] that you'll see [daddy.herHim] another time.",
+							?"感谢[daddy.name]今晚给你们带来的欢乐，并告诉[daddy.herHim]，你和莉莱雅下次再来看[daddy.herHim]。"
+							:"感谢[daddy.name]今晚给你们带来的所有乐趣，并告诉[daddy.herHim]，你们下次再来看[daddy.herHim]。",
 						BLANK_DEFAULT_DIALOGUE) {
 					@Override
 					public void effects() {
@@ -1196,7 +1196,7 @@ public class DaddyDialogue {
 		
 		@Override
 		public String getContent() {
-			return "[daddy.NamePos] apartment";
+			return "[daddy.NamePos]公寓";
 		}
 		
 		@Override
@@ -1209,12 +1209,12 @@ public class DaddyDialogue {
 			} else {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.talkedWithDaddy)) {
-						return new Response("Talk",
-								"You've already spent some time talking with [daddy.name].",
+						return new Response("交谈",
+								"你已经花了一些时间和[daddy.name]交谈了。",
 								null);
 					}
-					return new Response("Talk",
-							"Spend some time simply talking to [daddy.name] about [daddy.her] work and efforts to meet Lyssieth.",
+					return new Response("交谈",
+							"花一些时间和[daddy.name]简单谈谈[daddy.her]的工作和为见到莉西丝所做的努力。",
 							APARTMENT) {
 						@Override
 						public int getSecondsPassed() {
@@ -1229,10 +1229,10 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Seduce",
+					return new Response("诱惑",
 							isLilayaPresent()
-								?"Seduce [daddy.name] and Lilaya, start making out with them on the sofa, and then move on to have sex with them..."
-								:"Seduce [daddy.name], start making out with [daddy.herHim] on the sofa, and then move on to have sex with [daddy.herHim]...",
+								?"引诱[daddy.name]和莉莱雅，开始和他们在沙发上亲热，然后继续和他们做爱……"
+								:"勾引[daddy.name]，开始和[daddy.herHim]在沙发上亲热，然后继续和[daddy.herHim]做爱……",
 							APARTMENT) {
 						@Override
 						public int getSecondsPassed() {
@@ -1250,8 +1250,8 @@ public class DaddyDialogue {
 					};
 					
 				} else if(index==3) {
-					return new Response("Leave",
-							"Tell [daddy.name] that it was good to see [daddy.herHim] again, before getting up and taking your leave.",
+					return new Response("离开",
+							"在起身告辞之前，告诉[daddy.name]很高兴再次见到[daddy.herHim]。",
 							BLANK_DEFAULT_DIALOGUE) {
 						@Override
 						public int getSecondsPassed() {

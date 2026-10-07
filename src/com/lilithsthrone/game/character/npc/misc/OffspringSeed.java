@@ -166,34 +166,34 @@ public class OffspringSeed implements XMLSaving {
 		boolean motherHasSurname = mother.getSurname()!=null && !mother.getSurname().isEmpty();
 		
 		if(mother.getTrueSubspecies()==Subspecies.LILIN || mother.getTrueSubspecies()==Subspecies.ELDER_LILIN) {
-			this.setSurname(mother.getName(false)+"martuilani");
+			this.setSurname(mother.getName(false)+"马尔图拉尼");
 			
 		} else if(father!=null && (father.getTrueSubspecies()==Subspecies.LILIN || father.getTrueSubspecies()==Subspecies.ELDER_LILIN)) {
-			this.setSurname(father.getName(false)+"martuilani");
+			this.setSurname(father.getName(false)+"马尔图拉尼");
 
 		} else if(mother.getMother()!=null && (mother.getMother().getTrueSubspecies()==Subspecies.LILIN || mother.getMother().getTrueSubspecies()==Subspecies.ELDER_LILIN)) {
-			this.setSurname(mother.getMother().getName(false)+"martu");
+			this.setSurname(mother.getMother().getName(false)+"马尔图");
 
 		} else if(father!=null && father.getSurname()!=null && !father.getSurname().isEmpty()
-				&& (father.getSurname().endsWith("martuilani") || father.getSurname().endsWith("martusarri") || father.getSurname().endsWith("marturabitu"))
-				&& (!motherHasSurname || !(mother.getSurname().endsWith("martuilani") || mother.getSurname().endsWith("martusarri") || mother.getSurname().endsWith("marturabitu")))) {
+				&& (father.getSurname().endsWith("马尔图拉尼") || father.getSurname().endsWith("马尔图萨莉") || father.getSurname().endsWith("马尔图拉比图"))
+				&& (!motherHasSurname || !(mother.getSurname().endsWith("马尔图拉尼") || mother.getSurname().endsWith("马尔图萨莉") || mother.getSurname().endsWith("马尔图拉比图")))) {
 			// Handle daughters of lilin having offspring, which results in the 'martu' ending
-			if(father.getSurname().endsWith("martuilani")) {
-				this.setSurname(father.getSurname().replace("martuilani", "martu"));
-			} else if(father.getSurname().endsWith("martusarri")) {
-				this.setSurname(father.getSurname().replace("martusarri", "martu"));
-			} else if(father.getSurname().endsWith("marturabitu")) {
-				this.setSurname(father.getSurname().replace("marturabitu", "martu"));
+			if(father.getSurname().endsWith("马尔图拉尼")) {
+				this.setSurname(father.getSurname().replace("马尔图拉尼", "马尔图"));
+			} else if(father.getSurname().endsWith("马尔图萨莉")) {
+				this.setSurname(father.getSurname().replace("马尔图萨莉", "马尔图"));
+			} else if(father.getSurname().endsWith("马尔图拉比图")) {
+				this.setSurname(father.getSurname().replace("马尔图拉比图", "马尔图"));
 			}
 			
 		} else if(motherHasSurname) {
 			// Handle daughters of lilin having offspring, which results in the 'martu' ending
-			if(mother.getSurname().endsWith("martuilani")) {
-				this.setSurname(mother.getSurname().replace("martuilani", "martu"));
-			} else if(mother.getSurname().endsWith("martusarri")) {
-				this.setSurname(mother.getSurname().replace("martusarri", "martu"));
-			} else if(mother.getSurname().endsWith("marturabitu")) {
-				this.setSurname(mother.getSurname().replace("marturabitu", "martu"));
+			if(mother.getSurname().endsWith("马尔图拉尼")) {
+				this.setSurname(mother.getSurname().replace("马尔图拉尼", "马尔图"));
+			} else if(mother.getSurname().endsWith("马尔图萨莉")) {
+				this.setSurname(mother.getSurname().replace("马尔图萨莉", "马尔图"));
+			} else if(mother.getSurname().endsWith("马尔图拉比图")) {
+				this.setSurname(mother.getSurname().replace("马尔图拉比图", "马尔图"));
 			} else {
 				this.setSurname(mother.getSurname());
 			}

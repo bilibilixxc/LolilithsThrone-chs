@@ -87,7 +87,7 @@ public class Silence extends NPC {
 	}
 	
 	public Silence(boolean isImported) {
-		super(isImported, new NameTriplet("Silence"), "Wildeyes",
+		super(isImported, new NameTriplet("默"), "野眼",
 				"",
 				21, Month.MAY, 16,
 				15, Gender.F_V_B_FEMALE, Subspecies.RAT_MORPH, RaceStage.GREATER,
@@ -323,7 +323,7 @@ public class Silence extends NPC {
 		demonStoneNecklace.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.CRITICAL_DAMAGE, TFPotency.MAJOR_BOOST, 0));
 		demonStoneNecklace.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.CRITICAL_DAMAGE, TFPotency.BOOST, 0));
 		
-		demonStoneNecklace.setName("Shard of Lyxias");
+		demonStoneNecklace.setName("莉西亚斯的碎片");
 		
 		this.equipClothingFromNowhere(demonStoneNecklace, true, this);
 	}
@@ -332,21 +332,21 @@ public class Silence extends NPC {
 	public String getDescription() {
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("Having fur as white as snow, and skin as pale as a ghost, this albino rat-girl would strike an eye-catching figure even if not for the fact that her pink eyes emit a fierce luminescent glow."
-				+ " While her unusual eyes allude to the fact that she possesses exceptional arcane abilities, nobody has much of a chance of getting her to reveal the secrets of her past, for she is completely mute.");
+		sb.append("这是一只白化症的鼠女，其皮毛洁白如雪，皮肤苍白似鬼，若不是她粉红色的眼睛中总是散发着凶恶的荧光，她一定是个备受欢迎的人物。"
+				+ "虽然她异于常人的眼睛暗示着她拥有非凡的奥术能力，但却没人能让她道出过去的秘密，因为她完全是个哑巴。");
 
 		sb.append("<br/>"
-				+ "Thanks to this inability of hers to talk, she's been given the name 'Silence', but what she lacks in verbal communication she more than compensates for in her sexual appetite."
-				+ " Seemingly in a perpetual state of horniness, this lewd rat-girl can often be found riding a stranger's cock, or even more commonly, forcing them to perform oral on her.");
+				+ "也是由于她无法说话，被赐予了“默”一名，失去语言交流的能力换来的却是其高涨的性欲。"
+				+ "这个淫荡的鼠女似乎永远都那么饥渴，经常能看到她骑在陌生人的鸡巴上，或者更常见的，是强迫对方用嘴巴侍奉她。");
 
 		if(this.getHomeWorldLocation()==WorldType.BOUNTY_HUNTER_LODGE_UPSTAIRS) {
 			sb.append("<br/>"
-					+ "No longer a personal bodyguard for Vengar, Silence is now a professional bounty hunter."
-					+ " Joined by her long-time companion, Shadow, she can be found in Slaver Alley's 'Bounty Hunter Lodge'.");
+					+ "默不再是文加的贴身保镖，现在是一名职业赏金猎人。"
+					+ "她和长久以来的合作伙伴“影”一起，都能在奴隶巷的“赏金猎人小屋”找到。");
 		} else {
 			sb.append("<br/>"
-					+"Silence is a personal bodyguard for the dangerous gang leader, 'Vengar'."
-					+ " Joined by her long-time companion, Shadow, she is sworn to protect the rat-boy from any harm that might befall him.");
+					+"默是危险的帮派领袖“文加”的贴身保镖。"
+					+ "她和长久以来的合作伙伴“影”一起，宣誓无论有如何的危险，都会保证文加平安。");
 		}
 		
 		return sb.toString();

@@ -10,21 +10,21 @@ package com.lilithsthrone.game.sex.positions.slots;
 public class SexSlotBreedingStall {
 
 	public static final SexSlot BREEDING_STALL_FRONT = new SexSlot(
-			"Lying on stomach",
-			"lying on stomach",
-			"[npc.Name] [npc.spreadsHerLegs] and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"俯身",
+			"俯身",
+			"[npc.Name][npc.spreadsHerLegs]，发出[npc.a_moan+]，已经准备迎来高潮。",
 			false);
 
 	public static final SexSlot BREEDING_STALL_BACK = new SexSlot(
-			"Lying on back",
-			"lying on back",
-			"[npc.Name] [npc.spreadsHerLegs] and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"仰身",
+			"仰身",
+			"[npc.Name][npc.spreadsHerLegs]，发出[npc.a_moan+]，已经准备迎来高潮。",
 			false);
 	
 	public static final SexSlot BREEDING_STALL_FUCKING = new SexSlot(
-			"Standing",
-			"breeding",
-			"[npc.Name] [npc.verb(reach)] down and [npc.verb(grab)] [npc2.namePos] waist, before stepping forwards and driving [npc.her] [npc.cock] deep into [npc2.namePos] [npc2.pussy+]."
-				+ " Letting out [npc.a_moan+], [npc.she] [npc.verb(prepare)] to reach [npc.her] climax, and pump [npc2.namePos] womb full of [npc.cum+].",
+			"站立",
+			"配种",
+			"[npc.Name]伸出[npc.hand]抓住[npc2.namePos]的手腕，向前靠近后立刻将[npc.cock]深埋入[npc2.namePos][npc2.pussy+]中。"
+				+ "伴随着一声[npc.a_moan+]，[npc.she]已经准备好迎接高潮，在[npc2.namePos]的子宫中注满[npc.cum+]了。",
 			true);
 }

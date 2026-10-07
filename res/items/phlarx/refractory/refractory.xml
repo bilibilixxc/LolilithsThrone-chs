@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A note at the bottom of the label informs you that this product was imported by 'Phlarx Pharmaceuticals'.]]></authorTag>
+		<authorTag><![CDATA[标签底部的注释告诉你该产品由“Phlarx Pharmaceuticals”引进。]]></authorTag>
 		<value>2400</value>
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[sybaritic potion]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[sybaritic potions]]></namePlural>
-		<description><![CDATA[A tiny geometric glass bottle bearing a black label embossed with gold foil that reads 'Sybaritic Energizing Philter'. The fine print below issues a warning that it may cause imbibers to become distressed if not provided with prompt sexual relief.]]></description>
-		<useDescriptor>swallow</useDescriptor>
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[享乐药水]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[享乐药水]]></namePlural>
+		<description><![CDATA[一个小小的多面体玻璃瓶，上面贴着一个黑色标签，用金箔印着“享乐活力媚药”。下面的小字警告说，如果不及时提供性爱，饮用者可能会感到痛苦。]]></description>
+		<useDescriptor><![CDATA[吞下]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -24,25 +24,25 @@
 			<effect seconds="14400" conditional="[#!game.isInSex()]">DESPERATELY_HORNY</effect> <!-- applied for 4 hours -->
 		</statusEffects>
 		<effectTooltipLines>
-			<line><![CDATA[During [style.colourSex(sex)]:]]></line>
-			<line><![CDATA[[style.colourExcellent(Increases)] desired [style.colourLust(orgasms)] by [style.colourGood(3)]-[style.colourGood(5)]]]></line>
-			<line><![CDATA[Out of sex:]]></line>
+			<line><![CDATA[[style.colourSex(性爱场景)]中：]]></line>
+			<line><![CDATA[[style.colourExcellent(增加)][style.colourGood(3)]-[style.colourGood(5)]满足所需[style.colourLust(高潮数)]]]></line>
+			<line><![CDATA[性爱场景外：]]></line>
 		</effectTooltipLines>
 		<applyEffects><![CDATA[
 			#IF(game.isInSex())
 				<p style='margin-bottom:0; padding-bottom:0;'>
-					As the contents of the small bottle disappear between [npc.herPos] [npc.lips+], [npc.namePos] [npc.eyes] flash soft pink for an instant, before returning to [npc.irisColour]. With a sudden, [npc.moan+] and an excited shiver, [npc.herPos] movements intensify as if [npc.sheHasFull] been pent up for far too long.
+					小瓶子里的液体消失在[npc.namePos][npc.lips+]之间，[npc.herPos]的[npc.eyes]瞬间闪过一抹淡粉色，然后又变回了[npc.irisColour]。突然，[npc.name]发出[npc.moan+]和兴奋的颤抖，[npc.herPos]的动作变得越发激烈，仿佛[npc.sheHasFull]已经被压抑了很久。
 				</p>
 				[##
-					var boost = 3 + RND.nextInt(3); /* randomly select 3, 4, or 5 */
+					var boost = 3 + RND.nextInt(3); /* 随机选取3,4,5 */
 					sex.incrementNumberOfAdditionalOrgasms(npc, boost);
 				]
 				<p style='margin-bottom:0; padding-bottom:0;text-align:center;'>
-					[style.italicsExcellent([npc.NamePos] desired number of orgasms has been increased by [#~~boost]!)]
+					[style.italicsExcellent([npc.NamePos]达到满足所需要的高潮数增加了[#~~boost]！)]
 				</p>
 			#ELSE
 				<p style='margin-bottom:0; padding-bottom:0;'>
-					As the contents of the small bottle disappear between [npc.herPos] [npc.lips+], [npc.namePos] [npc.verb(feel)] a sensation similar to static electricity surging through [npc.her] body. Experiencing a rush of intense, stupefying arousal, [npc.she] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(find)] [npc.herself] struggling to think of anything but sex.
+					随着小瓶子里的液体消失在[npc.namePos][npc.lips+]之间，一种类似静电的感觉涌过了[npc.her]的身体。[npc.she]感受到一阵强烈的、令人神志不清的快感，[npc.she]发出[npc.a_moan+]，发觉自己除了性爱之外已经无法思考其它事情了。
 				</p>
 			#ENDIF
 		]]></applyEffects>
@@ -53,10 +53,10 @@
 	</coreAttributes>
 	<useDescriptions>
 		<selfUse><![CDATA[
-			[npc.Name] [npc.verb(remove)] the cap and [npc.verb(glance)] down at the refractory philter in [npc.herPos] palm. Before [npc.she] [npc.verb(realize)] what [npc.sheIsFull] doing, the bottle is inverted above [npc.herPos] mouth.
+			[npc.Name]拧开瓶盖，低头看着手中的媚药。还没等[npc.she]意识到自己在做什么，药瓶就已经倒置在了[npc.she]的口中。
 		]]></selfUse>
 		<otherUse><![CDATA[
-			[npc.Name] [npc.verb(remove)] the cap and quickly [npc.verb(press)] the refractory philter into [npc2.namePos] palm. Before [npc2.she] [npc2.verb(realize)] what [npc2.sheIsFull] doing, the bottle is inverted above [npc2.herPos] mouth.
+			[npc.Name]拧开瓶盖，迅速将媚药塞入[npc2.namePos]手中。还没等[npc2.name]意识到自己在做什么，药瓶就已经倒置在了[npc2.she]的口中。
 		]]></otherUse>
 	</useDescriptions>
 </item>

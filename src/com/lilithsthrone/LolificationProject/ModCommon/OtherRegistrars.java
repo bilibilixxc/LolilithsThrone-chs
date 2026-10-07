@@ -215,7 +215,7 @@ public class OtherRegistrars {
                 margin: 0;
                 height:24px;
                 text-align:center;
-                line-height:24px;
+                line-height:19px;
                 cursor:pointer;
             
                 float:left;

@@ -115,10 +115,10 @@ public class BodyChanging {
 	public static Response getBodyChangingResponse(int responseTab, int index) {
 		if (index == 0) {
 			if (isDebugMenu()) {
-				return new Response("Back", "Return to the previous screen.", DebugDialogue.DEBUG_MENU);
+				return new Response("返回", "回到上一界面。", DebugDialogue.DEBUG_MENU);
 
 			} else if (coreNode != null) {
-				return new Response("Back", "Return to the previous screen.", coreNode) {
+				return new Response("返回", "回到上一界面。", coreNode) {
 					@Override
 					public void effects() {
 						Main.game.setResponseTab(defaultResponseTab);
@@ -126,7 +126,7 @@ public class BodyChanging {
 				};
 
 			} else {
-				return new ResponseEffectsOnly("Back", "Return to the previous screen.") {
+				return new ResponseEffectsOnly("返回", "返回上一界面。") {
 					@Override
 					public void effects() {
 						Main.game.restoreSavedContent(false);
@@ -138,99 +138,99 @@ public class BodyChanging {
 		if (responseTab==0) {
 			if (index == 1) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_CORE) {
-					return new Response("Core", "You are already in this screen!", null);
+					return new Response("躯体", "你已在此界面中！", null);
 				}
-				return new Response("Core",
-						UtilText.parse(getTarget(), "Change core aspects of [npc.namePos] body."),
+				return new Response("躯体",
+						UtilText.parse(getTarget(), "改变[npc.namePos]身体的核心部分。"),
 						BODY_CHANGING_CORE);
 
 			} else if (index == 2) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_EYES) {
-					return new Response("Eyes", "You are already in this screen!", null);
+					return new Response("眼部", "你已处于该界面！", null);
 				}
-				return new Response("Eyes",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] eyes."),
+				return new Response("眼睛",
+						UtilText.parse(getTarget(), "改变[npc.namePos]眼睛"),
 						BODY_CHANGING_EYES);
 
 			} else if (index == 3) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_HAIR) {
-					return new Response("Hair", "You are already in this screen!", null);
+					return new Response("头发", "你已处于此界面！", null);
 				}
-				return new Response("Hair",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] hair."),
+				return new Response("头发",
+						UtilText.parse(getTarget(), "改变[npc.namePos]头发。"),
 						BODY_CHANGING_HAIR);
 
 			} else if (index == 4) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_HEAD) {
-					return new Response("Head", "You are already in this screen!", null);
+					return new Response("头部", "你已处于此界面！", null);
 				}
-				return new Response("Head",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] face and head."),
+				return new Response("头部",
+						UtilText.parse(getTarget(), "改变[npc.namePos]面容和头部。"),
 						BODY_CHANGING_HEAD);
 
 			} else if (index == 5) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_ASS) {
-					return new Response("Ass", "You are already in this screen!", null);
+					return new Response("屁股", "你已处于此界面！", null);
 				}
-				return new Response("Ass",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] ass."),
+				return new Response("屁股",
+						UtilText.parse(getTarget(), "改变[npc.namePos]屁股。"),
 						BODY_CHANGING_ASS);
 
 			} else if (index == 6) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_BREASTS) {
-					return new Response("Breasts", "You are already in this screen!", null);
+					return new Response("胸部", "你已处于此界面！", null);
 				} else if (!getTarget().hasNipples()) {
-					return new Response("Breasts",
-							UtilText.parse(getTarget(), "[npc.Name] [npc.do] not have any breasts!"),
+					return new Response("胸部",
+							UtilText.parse(getTarget(), "[npc.Name]没有乳房！"),
 							null);
 				}
-				return new Response("Breasts",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] breasts."),
+				return new Response("胸部",
+						UtilText.parse(getTarget(), "改变[npc.namePos]胸部。"),
 						BODY_CHANGING_BREASTS);
 
 			} else if (index == 7) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_VAGINA) {
-					return new Response("Vagina", "You are already in this screen!", null);
+					return new Response("阴道", "你已处于此界面！", null);
 				}
-				return new Response("Vagina",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] vagina."),
+				return new Response("阴道",
+						UtilText.parse(getTarget(), "改变[npc.namePos]阴道。"),
 						BODY_CHANGING_VAGINA);
 
 			} else if (index == 8) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_PENIS) {
-					return new Response("Penis", "You are already in this screen!", null);
+					return new Response("阴茎", "你已处于此界面！", null);
 				}
-				return new Response("Penis",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] penis."),
+				return new Response("阴茎",
+						UtilText.parse(getTarget(), "改变[npc.namePos]阴茎。"),
 						BODY_CHANGING_PENIS);
 
 			} else if (index == 9) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_SPINNERET) {
-					return new Response("Spinneret", "You are already in this screen!", null);
+					return new Response("丝囊", "你已处于此界面！", null);
 				} else if (!getTarget().hasSpinneret()) {
-					return new Response("Spinneret",
-							UtilText.parse(getTarget(), "[npc.Name] [npc.do] not have a spinneret!<br/><i>Spinnerets are gained via certain tail or leg types.</i>"),
+					return new Response("丝囊",
+							UtilText.parse(getTarget(), "[npc.Name]没有丝囊！<br/><i>丝囊只会在特定的尾巴或腿部类型中出现。</i>"),
 							null);
 				}
-				return new Response("Spinneret",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] spinneret."),
+				return new Response("丝囊",
+						UtilText.parse(getTarget(), "改变[npc.namePos]吐丝器。"),
 						BODY_CHANGING_SPINNERET);
 
 			} else if (index == 10) {
-				String title = getTarget().getBreastCrotchShape() == BreastShape.UDDERS?"Udders":"Crotch-boobs";
+				String title = getTarget().getBreastCrotchShape() == BreastShape.UDDERS?"腹乳":"胯乳";
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_BREASTS_CROTCH) {
-					return new Response(title, "You are already in this screen!", null);
+					return new Response(title, "你已处于此界面！", null);
 				}
 				return new Response(title,
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] [npc.crotchBoobs]."),
+						UtilText.parse(getTarget(), "改变[npc.namePos][npc.crotchBoobs]。"),
 						BODY_CHANGING_BREASTS_CROTCH);
 
 			} else if (index == 11) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_SAVE_LOAD) {
-					return new Response("Save/Load", "You are already in this screen!", null);
+					return new Response("保存/加载", "你已处于此界面！", null);
 				}
-				return new Response("Save/Load",
-						UtilText.parse(getTarget(), "Save or load transformation presets, allowing you to quickly switch your appearance."),
+				return new Response("保存/加载",
+						UtilText.parse(getTarget(), "保存或加载变形预设，让你迅速调整自己的外观。"),
 						BODY_CHANGING_SAVE_LOAD) {
 					@Override
 					public void effects() {
@@ -240,10 +240,10 @@ public class BodyChanging {
 
 			} else if (index == 12 && isDebugMenu()) {
 				if (Main.game.getCurrentDialogueNode() == BODY_CHANGING_MAKEUP) {
-					return new Response("Makeup (debug)", "You are already in this screen!", null);
+					return new Response("妆容(debug)", "你已处于此界面！", null);
 				}
-				return new Response("Makeup (debug)",
-						UtilText.parse(getTarget(), "Change aspects of [npc.namePos] makeup. (This transformation menu is only available in the debug screen.)"),
+				return new Response("妆容(debug)",
+						UtilText.parse(getTarget(), "改变[npc.namePos]妆容。(该转化菜单只出现在Debug界面。)"),
 						BODY_CHANGING_MAKEUP);
 
 			} else if (index == 13) {
@@ -264,9 +264,9 @@ public class BodyChanging {
 		} else if (responseTab == 1 && isDebugMenu()) {
 			if (index == 1) {
 				if (getTarget() == Main.game.getPlayer()) {
-					return new Response(Main.game.getPlayer().getName(), "You are the current target.", null);
+					return new Response(Main.game.getPlayer().getName(), "你已是当前目标。", null);
 				} else {
-					return new Response(Main.game.getPlayer().getName(), "Target yourself.", BODY_CHANGING_CORE) {
+					return new Response(Main.game.getPlayer().getName(), "以自己为目标。", BODY_CHANGING_CORE) {
 						@Override
 						public void effects() {
 							setTarget(Main.game.getPlayer(), isDebugMenu());
@@ -283,9 +283,9 @@ public class BodyChanging {
 			GameCharacter gc = Main.game.getCharactersPresent().get(index);
 			if (!gc.isUnique()) {
 				if (getTarget() == gc) {
-					return new Response(gc.getName(), gc.getName()+" is the current target.", null);
+					return new Response(gc.getName(), gc.getName()+"已是当前目标。", null);
 				} else {
-					return new Response(gc.getName(), "Change target to "+gc.getName(), BODY_CHANGING_CORE) {
+					return new Response(gc.getName(), "将目标改为"+gc.getName(), BODY_CHANGING_CORE) {
 						@Override
 						public void effects() {
 							setTarget(gc, isDebugMenu());
@@ -302,9 +302,9 @@ public class BodyChanging {
 			return null;
 		}
 		if (index == 0) {
-			return "Transform";
+			return "转化";
 		} else if (index == 1) {
-			return "Target";
+			return "目标";
 		}
 		return null;
 	}
@@ -464,26 +464,26 @@ public class BodyChanging {
 
 		sb.append("<div class='container-full-width' style='text-align:center;'>");
 			if(isDemonTFMenu()) {
-				sb.append("<i>[npc.Name] can harness the power of [npc.her] demonic form to self-transform aspects of [npc.her] "+area+".</i>");
+				sb.append("<i>[npc.Name]可以控制[npc.her]的恶魔之力来自我转化[npc.her]的"+area+"。</i>");
 
 			} else if(isSelfTFMenu()) {
-				sb.append("<i>[npc.Name] can harness [npc.her] innate powers to self-transform aspects of [npc.her] "+area+".</i>");
+				sb.append("<i>[npc.Name]可以利用[npc.her]的先天能力来改变[npc.her]的"+area+"。</i>");
 				if(target.isElemental()) {
-					sb.append("<br/>[style.italicsMinorBad(You can only transform [npc.name] into races which you've unlocked advanced knowledge of.)]");
+					sb.append("<br/>[style.italicsMinorBad(你只能将[npc.name]转化成已解锁了高阶知识的种族。)]");
 				}
 
 			} else if(isDebugMenu()) {
-				sb.append("<i>[npc.Name] can harness the power of the debugging tool to self-transform aspects of [npc.her] "+area+".</i>");
+				sb.append("<i>[npc.Name]可以控制debug之力来改变[npc.her]的"+area+"。</i>");
 
 			} else if(getTarget().isDoll()) {
-				sb.append("<i>With the D.E.C.K.'s cable plugged into the port on the rear of [npc.namePos] neck, you're able to customise [npc.her] "+area+"...</i>");
+				sb.append("<i>将D.E.C.K.的数据线插入[npc.namePos]后颈的接口中，之后你就能够自定义[npc.her]的 "+area+"了……</i>");
 
 			} else {
-				sb.append("<i>[npc.NamePos] morphable, slimy body [npc.verb(allow)] [npc.herHim] to self-transform aspects of [npc.her] "+area+".</i>");
+				sb.append("<i>[npc.NamePos]可化形的，粘液组成的身体使[npc.herHim]能够自我转化[npc.her]的"+area+"。</i>");
 				if(getTarget().isPlayer()) {
-					sb.append("<br/>[style.italicsMinorBad(You can only self-transform into races which you've unlocked advanced knowledge of.)]");
+					sb.append("<br/>[style.italicsMinorBad(你只能自我转化成已解锁了高阶知识的种族。)]");
 				} else {
-					sb.append("<br/>[style.italicsMinorBad(You can only transform [npc.name] into races which you've unlocked advanced knowledge of.)]");
+					sb.append("<br/>[style.italicsMinorBad(你只能将[npc.name]转化成已解锁了高阶知识的种族。)]");
 				}
 			}
 		sb.append("</div>");
@@ -491,7 +491,7 @@ public class BodyChanging {
 		return UtilText.parse(getTarget(), sb.toString());
 	}
 
-	public static final DialogueNode BODY_CHANGING_CORE = new DialogueNode("Core", "", true) {
+	public static final DialogueNode BODY_CHANGING_CORE = new DialogueNode("核心", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			SuccubisSecrets.initCoveringsMap(getTarget());
@@ -504,7 +504,7 @@ public class BodyChanging {
 			if (ScarlettsShop.isSlaveCustomisationMenu()) {
 				SuccubisSecrets.initCoveringsMap(getTarget());
 			}
-			UtilText.nodeContentSB.append(getSelfTransformDescription("body"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("身体"));
 
 			UtilText.nodeContentSB.append(
 					"<div style='clear:left;'>"
@@ -526,7 +526,7 @@ public class BodyChanging {
 							+CharacterModificationUtils.getBodySizeChoiceDiv()
 							+CharacterModificationUtils.getMuscleChoiceDiv()
 							+"<div class='container-full-width' style='text-align:center;'>"
-							+UtilText.parse(getTarget(), "[npc.NamePos] muscle and body size values give [npc.herHim] the body shape: "
+							+UtilText.parse(getTarget(), "[npc.NamePos]肌肉和体型数值塑造了[npc.herHim]这样的身体形态："
 							+"<b style='color:"+getTarget().getBodyShape().toWebHexStringColour()+";'>"+Util.capitaliseSentence(getTarget().getBodyShape().getName(false))+"</b>")
 							+"</div>"
 							+"</div>");
@@ -629,11 +629,11 @@ public class BodyChanging {
 			}
 
 			if (Main.game.isBodyHairEnabled() && (!getTarget().isDoll() || isDebugMenu())) {
-				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivUnderarmHair(false, "Underarm hair",
-						UtilText.parse(getTarget(), "Change the amount of hair in [npc.namePos] underarms."))
+				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivUnderarmHair(false, "腋毛",
+						UtilText.parse(getTarget(), "改变[npc.namePos]的腋下毛发量。"))
 
-						+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getUnderarmHairType().getType(), "Underarm hair colour",
-						UtilText.parse(getTarget(), "The colour of [npc.namePos] underarm hair."),
+						+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getUnderarmHairType().getType(), "腋毛颜色",
+						UtilText.parse(getTarget(), "[npc.namePos]腋毛颜色。"),
 						true, true));
 			}
 
@@ -661,12 +661,12 @@ public class BodyChanging {
 		}
 	};
 
-	public static final DialogueNode BODY_CHANGING_EYES = new DialogueNode("Eyes", "", true) {
+	public static final DialogueNode BODY_CHANGING_EYES = new DialogueNode("眼睛", "", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 
-			UtilText.nodeContentSB.append(getSelfTransformDescription("eyes"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("眼部"));
 
 			if (!getTarget().isDoll() || isDebugMenu()) {
 				UtilText.nodeContentSB.append(
@@ -688,18 +688,18 @@ public class BodyChanging {
 							+"</div>"
 
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false, getTarget().getEyeType().getRace(), getTarget().getCovering(getTarget().getEyeCovering()).getType(),
-							"Iris colour",
-							UtilText.parse(getTarget(), "The colour and pattern of [npc.namePos] irises."),
+							"虹膜颜色",
+							UtilText.parse(getTarget(), "[npc.namePos]虹膜的颜色与图案。"),
 							true, true)
 
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false, getTarget().getEyeType().getRace(), getTarget().getCovering(BodyCoveringType.EYE_PUPILS).getType(),
-							"Pupil colour",
-							UtilText.parse(getTarget(), "The colour and pattern of [npc.namePos] pupils."),
+							"瞳孔颜色",
+							UtilText.parse(getTarget(), "[npc.namePos]瞳孔的颜色与图案。"),
 							true, true)
 
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false, getTarget().getEyeType().getRace(), getTarget().getCovering(BodyCoveringType.EYE_SCLERA).getType(),
-							"Sclerae colour",
-							UtilText.parse(getTarget(), "The colour and pattern of [npc.namePos] sclerae."),
+							"巩膜颜色",
+							UtilText.parse(getTarget(), "[npc.namePos]巩膜的颜色和图案。"),
 							true, true));
 
 			return UtilText.nodeContentSB.toString();
@@ -731,7 +731,7 @@ public class BodyChanging {
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 
-			UtilText.nodeContentSB.append(getSelfTransformDescription("hair"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("头发"));
 
 			if (!getTarget().isDoll() || isDebugMenu()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getSelfTransformHairChoiceDiv(
@@ -744,11 +744,11 @@ public class BodyChanging {
 							+CharacterModificationUtils.getNeckFluffDiv()
 							+"</div>"
 
-							+CharacterModificationUtils.getSelfDivHairStyles("Hair Style", UtilText.parse(getTarget(), "Change [npc.namePos] hair style."))
+							+CharacterModificationUtils.getSelfDivHairStyles("Hair Style", UtilText.parse(getTarget(), "改变[npc.namePos]发型。"))
 
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false, getTarget().getHairRace(),
-							getTarget().getCovering(getTarget().getHairCovering()).getType(), "Hair colour",
-							UtilText.parse(getTarget(), "Change the colour of [npc.her] hair."), true, true));
+							getTarget().getCovering(getTarget().getHairCovering()).getType(), "发色",
+							UtilText.parse(getTarget(), "改变[npc.her]头发的颜色。"), true, true));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -774,12 +774,12 @@ public class BodyChanging {
 		}
 	};
 
-	public static final DialogueNode BODY_CHANGING_HEAD = new DialogueNode("Head", "", true) {
+	public static final DialogueNode BODY_CHANGING_HEAD = new DialogueNode("头部", "", true) {
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 
-			UtilText.nodeContentSB.append(getSelfTransformDescription("head and face"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("脑袋和面部"));
 
 			if (!getTarget().isDoll() || isDebugMenu()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getSelfTransformEarChoiceDiv(
@@ -819,8 +819,8 @@ public class BodyChanging {
 				if (getTarget().hasHorns()) {
 					UtilText.nodeContentSB.append(
 							CharacterModificationUtils.getKatesDivCoveringsNew(false, getTarget().getHornRace(),
-									getTarget().getCovering(getTarget().getHornCovering()).getType(), "Horn Colour",
-									UtilText.parse(getTarget(), "The colour of [npc.namePos] horns."),
+									getTarget().getCovering(getTarget().getHornCovering()).getType(), "角的颜色",
+									UtilText.parse(getTarget(), "[npc.namePos]角的颜色。"),
 									true, true));
 				}
 			}
@@ -849,25 +849,25 @@ public class BodyChanging {
 							+"</div>"
 
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false, getTarget().getMouthType().getRace(), getTarget().getCovering(BodyCoveringType.MOUTH).getType(),
-							"Lip & Throat colour",
+							"嘴唇和喉咙的颜色",
 							UtilText.parse(getTarget(),
-									"The natural colour of [npc.namePos] "+(getTarget().getFaceType() == FaceType.HARPY?"beak":"lips")+" (top options) and [npc.her] throat (bottom options)."
-											+"Lipstick can be used to conceal [npc.her] natural lip colour."),
+									"[npc.namePos]"+(getTarget().getFaceType() == FaceType.HARPY?"鸟喙":"嘴唇")+"(上方选项)和[npc.her]喉咙(下方选项)的原色。"
+											+"口红可以用来掩盖[npc.her]原本的嘴唇颜色。"),
 							true, true)
 
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false, getTarget().getTongueType().getRace(), getTarget().getCovering(BodyCoveringType.TONGUE).getType(),
-							"Tongue colour",
+							"舌头颜色",
 							(getTarget().isPlayer()
-									?"The colour of your tongue."
-									:UtilText.parse(getTarget(), "The colour of [npc.namePos] tongue.")),
+									?"你的舌头的颜色。"
+									:UtilText.parse(getTarget(), "[npc.namePos]舌头的颜色。")),
 							true, true));
 
 			if (Main.game.isFacialHairEnabled() && (!getTarget().isFeminine() || Main.game.isFemaleFacialHairEnabled())) {
-				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "Beard length",
-						UtilText.parse(getTarget(), "Change the length of [npc.namePos] beard."))
+				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivFacialHair(false, "胡须长度",
+						UtilText.parse(getTarget(), "改变[npc.namePos]胡须的长度。"))
 
-						+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getFacialHairType().getType(), "Beard colour",
-						UtilText.parse(getTarget(), "The colour of [npc.namePos] beard."),
+						+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getFacialHairType().getType(), "胡须颜色",
+						UtilText.parse(getTarget(), "[npc.namePos]胡须的颜色。"),
 						true, true));
 			}
 
@@ -895,13 +895,13 @@ public class BodyChanging {
 		}
 	};
 
-	public static final DialogueNode BODY_CHANGING_ASS = new DialogueNode("Ass", "", true) {
+	public static final DialogueNode BODY_CHANGING_ASS = new DialogueNode("屁股", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 
-			UtilText.nodeContentSB.append(getSelfTransformDescription("ass and hips"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("屁股和臀部"));
 
 			if (!getTarget().isDoll() || isDebugMenu()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getSelfTransformAssChoiceDiv(
@@ -932,16 +932,16 @@ public class BodyChanging {
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 							getTarget().getAssRace(),
 							getTarget().getCovering(BodyCoveringType.ANUS).getType(),
-							"Anus Colour",
-							UtilText.parse(getTarget(), "Change the colour of [npc.namePos] asshole."),
+							"肛门颜色",
+							UtilText.parse(getTarget(), "改变[npc.namePos]肛门的颜色。"),
 							true, true));
 
 			if (Main.game.isAssHairEnabled() && (!getTarget().isDoll() || isDebugMenu())) {
-				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivAssHair(false, "Ass hair",
-						UtilText.parse(getTarget(), "Change the amount of hair around [npc.namePos] anus."))
+				UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivAssHair(false, "肛毛",
+						UtilText.parse(getTarget(), "改变[npc.namePos]肛门周围的毛发量。"))
 
-						+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getAssHairType().getType(), "Ass hair colour",
-						UtilText.parse(getTarget(), "The colour of [npc.namePos] ass hair."),
+						+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getAssHairType().getType(), "肛毛颜色",
+						UtilText.parse(getTarget(), "[npc.namePos]肛毛的颜色。"),
 						true, true));
 			}
 
@@ -969,13 +969,13 @@ public class BodyChanging {
 		}
 	};
 
-	public static final DialogueNode BODY_CHANGING_BREASTS = new DialogueNode("Breasts", "", true) {
+	public static final DialogueNode BODY_CHANGING_BREASTS = new DialogueNode("胸部", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 
-			UtilText.nodeContentSB.append(getSelfTransformDescription("breasts"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("胸部"));
 
 			if (!getTarget().isDoll() || isDebugMenu()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getSelfTransformBreastChoiceDiv(
@@ -1026,15 +1026,15 @@ public class BodyChanging {
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 							getTarget().getBreastRace(),
 							getTarget().getCovering(BodyCoveringType.NIPPLES).getType(),
-							"Nipple Colour",
-							UtilText.parse(getTarget(), "Change the colour of [npc.namePos] nipples."),
+							"乳头颜色",
+							UtilText.parse(getTarget(), "改变[npc.namePos]乳头的颜色。"),
 							true, true)
 
 							+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 							Race.NONE,
 							getTarget().getCovering(BodyCoveringType.MILK).getType(),
-							"Milk Colour",
-							UtilText.parse(getTarget(), "Change the colour of [npc.namePos] [npc.milk]."),
+							"乳汁颜色",
+							UtilText.parse(getTarget(), "改变[npc.namePos][npc.milk]的颜色。"),
 							true, true));
 
 			return UtilText.nodeContentSB.toString();
@@ -1061,13 +1061,13 @@ public class BodyChanging {
 		}
 	};
 
-	public static final DialogueNode BODY_CHANGING_VAGINA = new DialogueNode("Vagina", "", true) {
+	public static final DialogueNode BODY_CHANGING_VAGINA = new DialogueNode("阴道", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 
-			UtilText.nodeContentSB.append(getSelfTransformDescription("vagina"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("阴道"));
 
 			//if (!getTarget().isDoll() || isDebugMenu()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getSelfTransformVaginaChoiceDiv(
@@ -1130,23 +1130,23 @@ public class BodyChanging {
 								+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 								getTarget().getVaginaRace(),
 								getTarget().getCovering(BodyCoveringType.VAGINA).getType(),
-								"Vagina Colour",
-								UtilText.parse(getTarget(), "Change the colour of [npc.namePos] vagina."),
+								"阴道颜色",
+								UtilText.parse(getTarget(), "改变[npc.namePos]阴道的颜色。"),
 								true, true)
 
 								+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 								Race.NONE,
 								getTarget().getCovering(BodyCoveringType.GIRL_CUM).getType(),
-								"Girlcum Colour",
-								UtilText.parse(getTarget(), "Change the colour of [npc.namePos] [npc.girlcum]."),
+								"爱液颜色",
+								UtilText.parse(getTarget(), "改变[npc.namePos][npc.girlcum]的颜色。"),
 								true, true));
 
 				if (Main.game.isPubicHairEnabled() && (!getTarget().isDoll() || isDebugMenu())) {
-					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "Pubic hair",
-							UtilText.parse(getTarget(), "Change the amount of hair around [npc.namePos] genitals."))
+					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "阴毛长度",
+							UtilText.parse(getTarget(), "改变[npc.namePos]生殖器周围的毛发量。"))
 
-							+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getPubicHairType().getType(), "Pubic hair colour",
-							UtilText.parse(getTarget(), "The colour of [npc.namePos] pubic hair."),
+							+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getPubicHairType().getType(), "阴毛颜色",
+							UtilText.parse(getTarget(), "[npc.namePos]阴毛的颜色。"),
 							true, true));
 				}
 			}
@@ -1181,7 +1181,7 @@ public class BodyChanging {
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 
-			UtilText.nodeContentSB.append(getSelfTransformDescription("penis"));
+			UtilText.nodeContentSB.append(getSelfTransformDescription("阴茎"));
 
 			//if (!getTarget().isDoll() || isDebugMenu()) {
 				UtilText.nodeContentSB.append(CharacterModificationUtils.getSelfTransformPenisChoiceDiv(
@@ -1226,22 +1226,22 @@ public class BodyChanging {
 								+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 								getTarget().getPenisRace(),
 								getTarget().getCovering(BodyCoveringType.PENIS).getType(),
-								"Penis Colour",
-								UtilText.parse(getTarget(), "Change the colour of [npc.namePos] penis."),
+								"阴茎颜色",
+								UtilText.parse(getTarget(), "改变[npc.namePos]阴茎的颜色。"),
 								true, true)
 
 								+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 								Race.NONE,
 								getTarget().getCovering(BodyCoveringType.CUM).getType(),
-								"Cum Colour",
-								UtilText.parse(getTarget(), "Change the colour of [npc.namePos] [npc.cum]."),
+								"精液颜色",
+								UtilText.parse(getTarget(), "改变[npc.namePos][npc.cum]的颜色。"),
 								true, true));
 				
 				if (Main.game.isPubicHairEnabled() && (!getTarget().isDoll() || isDebugMenu())) {
-					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "Pubic hair",
-							UtilText.parse(getTarget(), "Change the amount of hair around [npc.namePos] genitals."))
-							+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getPubicHairType().getType(), "Pubic hair colour",
-							UtilText.parse(getTarget(), "The colour of [npc.namePos] pubic hair."),
+					UtilText.nodeContentSB.append(CharacterModificationUtils.getKatesDivPubicHair(false, "阴毛",
+							UtilText.parse(getTarget(), "改变[npc.namePos]生殖器周围的毛发量。"))
+							+CharacterModificationUtils.getKatesDivCoveringsNew(false, Race.NONE, getTarget().getPubicHairType().getType(), "阴毛颜色",
+							UtilText.parse(getTarget(), "[npc.namePos]阴毛的颜色。"),
 							true, true));
 				}
 			}
@@ -1270,7 +1270,7 @@ public class BodyChanging {
 		}
 	};
 
-	public static final DialogueNode BODY_CHANGING_BREASTS_CROTCH = new DialogueNode("Crotch-boobs", "", true) {
+	public static final DialogueNode BODY_CHANGING_BREASTS_CROTCH = new DialogueNode("胯乳", "", true) {
 
 		@Override
 		public String getHeaderContent() {
@@ -1328,15 +1328,15 @@ public class BodyChanging {
 								+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 								getTarget().getBreastCrotchRace(),
 								getTarget().getCovering(BodyCoveringType.NIPPLES_CROTCH).getType(),
-								"Nipple Colour",
-								UtilText.parse(getTarget(), "Change the colour of [npc.namePos] [npc.crotchNipples]."),
+								"乳头颜色",
+								UtilText.parse(getTarget(), "改变[npc.namePos][npc.crotchNipples]的颜色。"),
 								true, true)
 
 								+CharacterModificationUtils.getKatesDivCoveringsNew(false,
 								Race.NONE,
 								getTarget().getCovering(BodyCoveringType.MILK).getType(),
-								"Milk Colour",
-								UtilText.parse(getTarget(), "Change the colour of [npc.namePos] [npc.milk]."),
+								"乳汁颜色",
+								UtilText.parse(getTarget(), "改变[npc.namePos][npc.milk]的颜色。"),
 								true, true));
 			}
 
@@ -1364,14 +1364,14 @@ public class BodyChanging {
 		}
 	};
 
-	public static final DialogueNode BODY_CHANGING_SPINNERET = new DialogueNode("Spinneret", "", true) {
+	public static final DialogueNode BODY_CHANGING_SPINNERET = new DialogueNode("丝囊", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(
-					getSelfTransformDescription("spinneret")
+					getSelfTransformDescription("吐丝孔")
 
 							+"<div style='clear:left;'>"
 							+CharacterModificationUtils.getSelfTransformSpinneretModifiersDiv()
@@ -1393,8 +1393,8 @@ public class BodyChanging {
 									?getTarget().getLegRace()
 									:getTarget().getTailRace(),
 							getTarget().getCovering(BodyCoveringType.SPINNERET).getType(),
-							"Spinneret Colour",
-							UtilText.parse(getTarget(), "Change the colour of [npc.namePos] spinneret."),
+							"丝囊颜色",
+							UtilText.parse(getTarget(), "改变[npc.namePos]丝囊的颜色。"),
 							true, true));
 			
 			return UtilText.nodeContentSB.toString();
@@ -1421,28 +1421,28 @@ public class BodyChanging {
 		}
 	};
 	
-	public static final DialogueNode BODY_CHANGING_MAKEUP = new DialogueNode("Makeup", "", true) {
+	public static final DialogueNode BODY_CHANGING_MAKEUP = new DialogueNode("妆容", "", true) {
 		@Override
 		public String getHeaderContent() {
-			return getSelfTransformDescription("makeup")
+			return getSelfTransformDescription("妆容")
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-					false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, true)
+					false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "腮红", "腮红(也叫胭脂)被用来粉饰脸颊，以显得更加年轻或凸显颧骨。", true, true)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-					false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, true)
+					false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "口红", "口红被用来为嘴唇提供色彩、质地或保护。", true, true)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-					false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, true)
+					false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "眼线", "眼线用于眼廓周围，有助于修饰眼型或突出不同的特征。", true, true)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-					false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, true)
+					false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "眼影", "眼影用来让使用者的眼睛更加凸显迷人。", true, true)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-					false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on your [pc.hands].", true, true)
+					false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "指甲油", "指甲油用于给[pc.hands]添加色彩或提供保护。", true, true)
 
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-					false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on your [pc.feet].", true, true);
+					false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "脚指甲油", "脚指甲有用来给你[pc.feet]上的脚指甲提供色彩和保护。", true, true);
 		}
 		
 		@Override
@@ -1482,9 +1482,9 @@ public class BodyChanging {
 				if(isPresetTransformationAvailable(loadedBody)) {
 					displayName = "<b>"+nameReadable+"</b>"
 							+ " (<span style='color:"+fem.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(fem.getNames().get(0))+"</span>"
-							+ " <span style='color:"+subspecies.getColour(null).toWebHexString()+";'>"+subspeciesName+"</span>)";
+							+ "<span style='color:"+subspecies.getColour(null).toWebHexString()+";'>"+subspeciesName+"</span>)";
 				} else {
-					displayName = "[style.boldDisabled("+nameReadable+")] [style.colourDisabled(("+Util.capitaliseSentence(fem.getNames().get(0))+" "+subspeciesName+"))]";
+					displayName = "[style.boldDisabled("+nameReadable+")][style.colourDisabled(("+Util.capitaliseSentence(fem.getNames().get(0))+""+subspeciesName+"))]";
 				}
 				presetTransformationsMap.put(name, new Value<>(displayName, loadedBody));
 			} catch(Exception ex) {
@@ -1502,7 +1502,7 @@ public class BodyChanging {
 		return presetTransformationsMap;
 	}
 
-	public static final DialogueNode BODY_CHANGING_SAVE_LOAD = new DialogueNode("Save transformation files", "", true) {
+	public static final DialogueNode BODY_CHANGING_SAVE_LOAD = new DialogueNode("保存转化文件", "", true) {
 		@Override
 		public String getContent() {
 			return "";
@@ -1514,18 +1514,18 @@ public class BodyChanging {
 			saveLoadSB.append(
 					"<div class='container-full-width' style='padding:0; margin:0 0 8px 0;'>"
 						+ "<p>"
-							+ "Only standard characters (letters and numbers) will work for save file names."
-							+ "<br/>Hover over each transformation preset's icon to see the body overview."
-							+ UtilText.parse(getTarget(), "<br/>If a name is [style.colourDisabled(greyed-out)], then [npc.name] [npc.do]n't have the ability to transform into that preset,"
-								+ " and you can hover over the greyed-out load button to find out why it's unavailable.")
+							+ "只有标准字符(字母和数字)才能用于保存文件名。"
+							+ "<br/>将指针悬停在每种变形的预设图标上来查看身体预览。"
+							+ UtilText.parse(getTarget(), "<br/>如果NPC的名字[style.colourDisabled(被涂灰)]，说明[npc.name]没有能力转化成预设的样子，"
+								+ "你可以将鼠标置于灰色加载按钮上知晓无法转变的原因。")
 						+ "</p>"
 					+ "</div>"
 					+ "<div class='container-full-width' style='padding:0; margin:0;'>"
 						+ "<div class='container-full-width' style='width:calc(75% - 16px); text-align:center; background:transparent;'>"
-							+ "Name"
+							+ "名字"
 						+ "</div>"
 						+ "<div class='container-full-width' style='width:calc(25% - 16px); text-align:center; background:transparent;'>"
-							+ "Save | Load | Delete"
+							+ "读档 | 存档 | 删除"
 						+ "</div>"
 					+ "</div>");
 
@@ -1547,16 +1547,16 @@ public class BodyChanging {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Confirmations: ",
-						"Toggle confirmations being shown when you click to load, overwrite, or delete a saved transformation."
-							+ " When turned on, it will take two clicks to apply any button press."
-							+ " When turned off, it will only take one click.",
+				return new Response("确认状态：",
+						"在点击读取、覆写或删除转化时会进入确认状态。"
+							+ "启用时，需要进行两次点击才能使行为生效。"
+							+ "关闭时只需要一次点击。",
 							BODY_CHANGING_SAVE_LOAD) {
 					@Override
 					public String getTitle() {
-						return "Confirmations: "+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
-								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>ON</span>"
-								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>OFF</span>");
+						return "再次确认："+(Main.getProperties().hasValue(PropertyValue.overwriteWarning)
+								?"<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>开启</span>"
+								:"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>关闭</span>");
 					}
 					
 					@Override
@@ -1570,7 +1570,7 @@ public class BodyChanging {
 				};
 
 			} else if (index == 0) {
-				return new Response("Back", "Back to the transformation menu.", BODY_CHANGING_CORE);
+				return new Response("返回", "返回到转化菜单。", BODY_CHANGING_CORE);
 
 			} else {
 				return null;
@@ -1693,7 +1693,7 @@ public class BodyChanging {
 				for (File child : directoryListing) {
 					if (child.getName().equals(name+".xml")){
 						if(!allowOverwrite) {
-							Main.game.flashMessage(PresetColour.GENERIC_BAD, "Name already exists!");
+							Main.game.flashMessage(PresetColour.GENERIC_BAD, "名称已存在！");
 							return;
 						}
 					}
@@ -1784,7 +1784,7 @@ public class BodyChanging {
 			}
 			
 		} else {
-			Main.game.flashMessage(PresetColour.GENERIC_BAD, "File not found...");
+			Main.game.flashMessage(PresetColour.GENERIC_BAD, "未找到文件……");
 		}
 	}
 
@@ -1801,9 +1801,9 @@ public class BodyChanging {
 		// Height limitation:
 		if(getTarget().isShortStature()!=body.isShortStature()) {
 			if(getTarget().isShortStature()) {
-				return UtilText.parse(getTarget(), "[npc.NameIsFull] too short to be able to transform into this form!");
+				return UtilText.parse(getTarget(), "[npc.NameIsFull]太矮小以至于无法转化成这个形态！");
 			} else {
-				return UtilText.parse(getTarget(), "[npc.NameIsFull] too tall to be able to transform into this form!");
+				UtilText.parse(getTarget(), "[npc.NameIsFull]太高了，无法转化成这个形态！");
 			}
 		}
 		
@@ -1845,7 +1845,7 @@ public class BodyChanging {
 			BodyMaterial matCurrent = getTarget().getBodyMaterial();
 			BodyMaterial matTarget = body.getBodyMaterial();
 			return UtilText.parse(getTarget(),
-					"[npc.Name] cannot transform into a body that has a different material than [npc.her] current one!"
+					"[npc.Name]无法转化成与[npc.her]当前身体不同材质的身体！"
 					+ "<br/>Current material: <span style='color:"+matCurrent.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(matCurrent.getName())+"</span>"
 					+ "<br/>Transformation target's material: <span style='color:"+matTarget.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(matTarget.getName())+"</span>");
 		}
@@ -1853,9 +1853,9 @@ public class BodyChanging {
 		// Feral limitations:
 		if(body.isFeral()!=getTarget().isFeral()) {
 			if(body.isFeral()) {
-				return UtilText.parse(getTarget(), "[npc.Name] cannot transform into a [style.colourFeral(feral body)] as [npc.her] current body isn't feral!");
+				return UtilText.parse(getTarget(), "[npc.Name]无法转化成[style.colourFeral(兽态身体)]，因为[npc.her]当前的身体并非兽态！");
 			}
-			return UtilText.parse(getTarget(), "[npc.Name] cannot transform into a [style.colourHuman(non-feral body)] as [npc.her] current body is feral!");
+			return UtilText.parse(getTarget(), "[npc.Name]无法转化成[style.colourHuman(非兽态身体)]，因为[npc.her]当前的身体是兽态！");
 		}
 
 		StringBuilder sb = new StringBuilder();
@@ -1896,7 +1896,7 @@ public class BodyChanging {
 			}
 			if (!availableRaces.contains(presetPart.getType().getRace())) {
 				if (sb.length() == 0) {
-					sb.append("[npc.NameIsFull] unable to transform into the associated race for the following parts:");
+					sb.append("[npc.NameIsFull]因为下列部位无法转化为该种族：");
 					sb.append("<br/>");
 				}
 				partsList.add(presetPart.getType().getName(getTarget()));
@@ -1904,31 +1904,31 @@ public class BodyChanging {
 		}
 		if(sb.length()>0) {
 			sb.append(Util.capitaliseSentence(Util.stringsToStringList(partsList, false)));
-			sb.append(".");
+			sb.append("。");
 			return UtilText.parse(getTarget(), sb.toString());
 		}
 
 		if(getTarget().isYouko()) { // Youko self-TF limitations:
 			if(body.getArm().getArmRows()!=getTarget().getArmRows()) {
-				sb.append("<br/>Arm row count");
+				sb.append("<br/>手臂对数");
 			}
 			if(body.getGenitalArrangement()!=getTarget().getGenitalArrangement()) {
-				sb.append("<br/>Genital arrangement");
+				sb.append("<br/>生殖器调整");
 			}
 			if(body.getTentacle().getType()!=getTarget().getTentacleType()) {
-				sb.append("<br/>Tentacle type");
+				sb.append("<br/>触手种类");
 			}
 			if(body.getWing().getType()!=getTarget().getWingType()) {
-				sb.append("<br/>Wing type");
+				sb.append("<br/>飞翼种类");
 			}
 			if(body.getEye().getEyePairs()!=getTarget().getEyePairs()) {
-				sb.append("<br/>Eye count");
+				sb.append("<br/>眼睛数量");
 			}
 			if(body.getHorn().getType()!=getTarget().getHornType()) {
-				sb.append("<br/>Horn type");
+				sb.append("<br/>角的种类");
 			}
 			if(body.getAntenna().getType()!=getTarget().getAntennaType()) {
-				sb.append("<br/>Antennae type");
+				sb.append("<br/>触角种类");
 			}
 			if(sb.length()>0) {
 				sb.insert(0, "Youkos' limited transformation powers prevent [npc.name] from transforming:");

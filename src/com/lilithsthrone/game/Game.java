@@ -235,7 +235,7 @@ import static com.lilithsthrone.game.character.GameCharacter.MINIMUM_AGE;
 public class Game implements XMLSaving {
 
 	public static final int FONT_SIZE_MINIMUM = 12;
-	public static final int FONT_SIZE_NORMAL = 18;
+	public static final int FONT_SIZE_NORMAL = 15;
 	public static final int FONT_SIZE_LARGE = 24;
 	public static final int FONT_SIZE_HUGE = 36;
 	
@@ -681,7 +681,7 @@ public class Game implements XMLSaving {
 				for (File child : directoryListing) {
 					if (child.getName().equals(exportFileName+".xml")){
 						if(!allowOverwrite) {
-							Main.game.flashMessage(PresetColour.GENERIC_BAD, "Name already exists!");
+							Main.game.flashMessage(PresetColour.GENERIC_BAD, "名称已存在！");
 							return;
 						} else {
 							overwrite = true;
@@ -746,7 +746,7 @@ public class Game implements XMLSaving {
 				Main.game.getOccupancyUtil().saveAsXML(game, doc);
 			}catch(Exception ex) {
 				System.err.println("SlaveryUtil saving failed!");
-				Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "SlaveryUtil failure"), false);
+				Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "SlaveryUtil失败"), false);
 			}
 
 			Element dateNode = doc.createElement("date");
@@ -758,7 +758,7 @@ public class Game implements XMLSaving {
 			XMLUtil.addAttribute(doc, dateNode, "minute", String.valueOf(Main.game.startingDate.getMinute()));
 		} catch(Exception ex) {
 			System.err.println("coreInfo saving failed!");
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "coreInfo failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "coreInfo失败"), false);
 		}
 
 		Main.game.dialogueFlags.saveAsXML(game, doc);
@@ -771,7 +771,7 @@ public class Game implements XMLSaving {
 			}
 		} catch(Exception ex) {
 			System.err.println("eventLog saving failed!");
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "eventLog failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "eventLog失败"), false);
 		}
 
 		try {
@@ -787,7 +787,7 @@ public class Game implements XMLSaving {
 			}
 		} catch(Exception ex) {
 			System.err.println("slaveryEventLog saving failed!");
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "slaveryEventLog failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "slaveryEventLog失败"), false);
 		}
 
 		// Add maps:
@@ -801,7 +801,7 @@ public class Game implements XMLSaving {
 			}
 		} catch(Exception ex) {
 			System.err.println("maps saving failed!");
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "maps failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "maps失败"), false);
 		}
 
 		// Add player:
@@ -811,7 +811,7 @@ public class Game implements XMLSaving {
 			Main.game.getPlayer().saveAsXML(characterNode, doc);
 		} catch(Exception ex) {
 			System.err.println("playerCharacter saving failed!");
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "playerCharacter failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "playerCharacter失败"), false);
 		}
 
 		// Add all NPCs:
@@ -824,7 +824,7 @@ public class Game implements XMLSaving {
 		} catch(Exception ex) {
 			System.err.println("NPC saving failed!");
 			ex.printStackTrace();
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "NPC failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "NPC失败"), false);
 		}
 
 		// Add all offspringSeed:
@@ -837,7 +837,7 @@ public class Game implements XMLSaving {
 		} catch(Exception ex) {
 			System.err.println("offspringSeed saving failed!");
 			ex.printStackTrace();
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail<b>", "offspringSeed failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效<b>", "offspringSeed失败"), false);
 		}
 
 		// Ending stuff:
@@ -861,17 +861,17 @@ public class Game implements XMLSaving {
 
 			if(!isAutoSave) {
 				if(overwrite) {
-					Main.game.addEvent(new EventLogEntry("[style.colourGood(Game saved)]", saveLocation), false);
-					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()), false, PresetColour.GENERIC_GOOD, "Save game overwritten!");
+					Main.game.addEvent(new EventLogEntry("[style.colourGood(游戏已保存)]", saveLocation), false);
+					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()), false, PresetColour.GENERIC_GOOD, "存档被覆盖！");
 				} else {
-					Main.game.addEvent(new EventLogEntry("[style.colourGood(Game saved)]", saveLocation), false);
-					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()), false, PresetColour.GENERIC_GOOD, "Game saved!");
+					Main.game.addEvent(new EventLogEntry("[style.colourGood(游戏已保存)]", saveLocation), false);
+					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()), false, PresetColour.GENERIC_GOOD, "游戏已保存！");
 				}
 			}
 		} catch(Exception ex) {
 			System.err.println("XML writing failed!");
 			ex.printStackTrace();
-			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Partial Save Fail</span>", "XML writing failure"), false);
+			Main.game.addEvent(new EventLogEntry("<style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>部分存档失效</span>", "XML写入失败"), false);
 		}
 
 		if(timeLog) {
@@ -2171,7 +2171,7 @@ public class Game implements XMLSaving {
 		Main.game.setRequestAutosave(false);
 		
 		DialogueNode startingDialogueNode = Main.game.getPlayerCell().getDialogue(false);
-		Main.game.addEvent(new EventLogEntry("[style.colourGood(Game loaded)]", "data/saves/"+Util.getFileName(file)+".xml"), false);
+		Main.game.addEvent(new EventLogEntry("[style.colourGood(读档成功)]", "data/saves/"+Util.getFileName(file)+".xml"), false);
 		Main.game.setStarted(true); // Set started before setting content so that it parses correctly (as the scripting engine is initialised fully in the setStarted() method).
 		Main.game.setContent(new Response("", startingDialogueNode.getDescription(), startingDialogueNode), false);
 		
@@ -2671,7 +2671,7 @@ public class Game implements XMLSaving {
 						if(npc.getSlavePermissionSettings().get(SlavePermission.PREGNANCY).contains(SlavePermissionSetting.PREGNANCY_ALLOW_BIRTHING)) {
 							npc.endPregnancy(true, false);
 							
-							List<String> events = Util.newArrayListOfValues(UtilText.parse(npc, "[npc.She] gave birth to:<br/>")+npc.getLastLitterBirthed().getBirthedDescription());
+							List<String> events = Util.newArrayListOfValues(UtilText.parse(npc, "[npc.She]生出了:<br/>")+npc.getLastLitterBirthed().getBirthedDescription());
 							SlaveryEventLogEntry entry = new SlaveryEventLogEntry(getHourOfDay(),
 									npc,
 									null,
@@ -2727,7 +2727,7 @@ public class Game implements XMLSaving {
 									case URETHRA_VAGINA:
 										break;
 								}
-								List<String> events = Util.newArrayListOfValues(UtilText.parse(npc, "[npc.She] completed [npc.her] "+areaEgged+" incubation and gave birth to:<br/>")+npc.getLastLitterIncubated().getBirthedDescription());
+								List<String> events = Util.newArrayListOfValues(UtilText.parse(npc, "[npc.She]在[npc.her]的"+areaEgged+"成功孵化并生出了:<br/>")+npc.getLastLitterIncubated().getBirthedDescription());
 								SlaveryEventLogEntry incubationBirthEntry = new SlaveryEventLogEntry(getHourOfDay(),
 										npc,
 										null,
@@ -2967,9 +2967,9 @@ public class Game implements XMLSaving {
 			if(oldHairLength != newHairLength) {
 				Main.game.getPlayer().addStatusEffectDescription(null,
 						"<p style='text-align:center; margin:0; padding:0;'>"
-							+ "Your [pc.hair] has grown enough to pass a new length threshold!"
+							+ "你的[pc.hair]长度已经增长到下一阶段！"
 							+ "<br/>"
-							+ "You now have <span style='color:"+newHairLength.getColour().toWebHexString()+";'>[pc.hairLength]</span> [pc.hair]!"
+							+ "你现在有着<span style='color:"+newHairLength.getColour().toWebHexString()+";'>[pc.hairLength]</span>的[pc.hair]！"
 						+ "</p>");
 			}
 		}
@@ -3129,7 +3129,7 @@ public class Game implements XMLSaving {
 	public String getNextStormTimeAsTimeString() {
 		long minutes = ((nextStormTimeInSeconds+gatheringStormDurationInSeconds)-getSecondsPassed())/60;
 		long hours = minutes/60;
-		return (hours/24)+" days, "+hours%24+" hours, "+minutes%60+" minutes";
+		return (hours/24)+"天"+hours%24+"小时"+minutes%60+"分钟";
 	}
 	
 	public Weather getWeather() {
@@ -3176,7 +3176,7 @@ public class Game implements XMLSaving {
 			if(response.isActionCorrupting() && !response.isAvailableFromFetishes()) {
 				Main.game.getPlayer().incrementAttribute(Attribute.MAJOR_CORRUPTION, response.getCorruptionNeeded().getCorruptionBypass());
 				corruptionGains = ("<p style='text-align:center;'>"
-						+ "<b>You have gained +"+response.getCorruptionNeeded().getCorruptionBypass()+"</b> <b style='color:"+Attribute.MAJOR_CORRUPTION.getColour().toWebHexString()+";'>corruption</b><b>!</b>"
+						+ "<b>你获得了+"+response.getCorruptionNeeded().getCorruptionBypass()+"</b><b style='color:"+Attribute.MAJOR_CORRUPTION.getColour().toWebHexString()+";'>堕落</b><b>！</b>"
 						+ "</p>");
 			};
 
@@ -3358,7 +3358,7 @@ public class Game implements XMLSaving {
 	//												+ textStartStringBuilder.toString() + pastDialogueSB.toString() + textEndStringBuilder.toString() + "</div>" : "")
 //										+ "</div>"
 									+ "</div>"
-									+"<div id='bottom-text'>Game saved!</div>"
+									+"<div id='bottom-text'>游戏已保存！</div>"
 									+ getResponsesDiv(currentDialogueNode, resetPointer)
 								+ "</div>"
 							+ "</body>";
@@ -3385,7 +3385,7 @@ public class Game implements XMLSaving {
 	//									+ textStartStringBuilder.toString() + pastDialogueSB.toString() + textEndStringBuilder.toString() + "</div>" : "")
 //									+ "</div>"
 								+ "</div>"
-								+"<div id='bottom-text'>Game saved!</div>"
+								+"<div id='bottom-text'>游戏已保存！</div>"
 								+ getResponsesDiv(currentDialogueNode, resetPointer)
 							+ "</div>"
 							+ "</body>";
@@ -3609,7 +3609,7 @@ public class Game implements XMLSaving {
 	//									+ textStartStringBuilder.toString() + pastDialogueSB.toString() + textEndStringBuilder.toString() + "</div>" : "")
 //							+ "</div>"
 						+ "</div>"
-						+"<div id='bottom-text'>Game saved!</div>"
+						+"<div id='bottom-text'>游戏已保存！</div>"
 						+ getResponsesDiv(currentDialogueNode, resetPointer)
 					+ "</div>"
 				+ "</body>";
@@ -3636,7 +3636,7 @@ public class Game implements XMLSaving {
 	//								+ textStartStringBuilder.toString() + pastDialogueSB.toString() + textEndStringBuilder.toString() + "</div>" : "")
 //								+ "</div>"
 							+ "</div>"
-						+"<div id='bottom-text'>Game saved!</div>"
+						+"<div id='bottom-text'>游戏已保存！</div>"
 						+ getResponsesDiv(currentDialogueNode, resetPointer)
 					+ "</div>"
 				+ "</body>";
@@ -3721,7 +3721,7 @@ public class Game implements XMLSaving {
 	
 	public String getDialogueTitle() {
 		if(isBadEnd()) {
-			return "<b style='color:"+PresetColour.GENERIC_BAD_END.toWebHexString()+";'>Bad End: "+Main.getProperties().badEndTitle+"</b>";
+			return "<b style='color:"+PresetColour.GENERIC_BAD_END.toWebHexString()+";'>坏结局:"+Main.getProperties().badEndTitle+"</b>";
 		}
 		return dialogueTitle;
 	}
@@ -4080,7 +4080,7 @@ public class Game implements XMLSaving {
 			} else {
 				fontSize-=overflow*0.025f;
 			}
-//			style = "style='font-size:"+fontSize+"em; line-height:10px; white-space:normal;'";
+//			style = "style='font-size:"+fontSize+"em; line-height:9px; white-space:normal;'";
 		}
 		style = "style='font-size:"+fontSize+"em;'";
 		
@@ -4295,7 +4295,7 @@ public class Game implements XMLSaving {
 											+ "</div>"
 										: "")
 						+ "</div>"
-						+"<div id='bottom-text'>Game saved!</div>"
+						+"<div id='bottom-text'>游戏已保存！</div>"
 						+ getResponsesDiv(currentDialogueNode)
 					+ "</div>"
 				+ "</body>";
@@ -4527,7 +4527,7 @@ public class Game implements XMLSaving {
 	public String getWeatherTimeRemainingAsTimeString() {
 		long minutes = weatherTimeRemainingInSeconds/60;
 		long hours = minutes/60;
-		return (hours/24)+" days, "+hours%24+" hours, "+minutes%60+" minutes";
+		return (hours/24)+"天"+hours%24+"小时"+minutes%60+"分钟";
 	}
 	
 	public void setWeatherInSeconds(Weather weather, int secondsRemaining) {
@@ -4677,17 +4677,17 @@ public class Game implements XMLSaving {
 
 	public String getDisplayDate(TemporalAccessor dateNow, boolean withYear) {
 		if(isBadEnd()) {
-			return UtilText.parse("[style.colourBad(Unknown date)]");
+			return UtilText.parse("[style.colourBad(未知日期)]");
 		}
 		if(isInNewWorld() && !getDialogueFlags().hasFlag(DialogueFlagValue.knowsDate)) {
-			return UtilText.parse("[style.colourMinorBad(Unknown date)]");
+			return UtilText.parse("[style.colourMinorBad(未知日期)]");
 		}
 		
 		String date = Units.date(dateNow, Units.DateType.LONG);
 		if(withYear) {
 			return date;
 		} else {
-			return date.substring(0, date.length()-5);
+			return date.substring(5, date.length());
 		}
 	}
 	
@@ -6025,7 +6025,7 @@ public class Game implements XMLSaving {
 		}
 		Main.game.getCharacterUtils().setGenericName(npc, genericName, excludedAdjectives);
 		
-		npc.setDescription("[npc.Name] is a complete stranger to you, who, after wandering in to use the toilet, found you offering to service [npc.her] #IF(npc.hasPenis())cock#ELSEpussy#ENDIF at a gloryhole...");
+		npc.setDescription("[npc.Name]对你来说完全是个陌生人，[npc.her]在闲逛之余来上厕所，发现你正在寻欢洞，可以给[npc.her]的#IF(npc.hasPenis())鸡巴#ELSE小穴#ENDIF提供服务……");
 		
 		if(Math.random()<0.4f) {
 			npc.setSexualOrientation(SexualOrientation.AMBIPHILIC);
@@ -6077,7 +6077,7 @@ public class Game implements XMLSaving {
 		npc.setRaceConcealed(true);
 		Main.game.getCharacterUtils().setGenericName(npc, genericName, Util.newArrayListOfValues());
 
-		npc.setDescription("[npc.Name] is a complete stranger to you, who, after wandering in to use the toilet, decided to service a gloryhole...");
+		npc.setDescription("[npc.Name]对你来说完全是个陌生人，[npc.her]在闲逛之余来上厕所，决定要在一个寻欢洞提供服务……");
 		
 		if(Math.random()<0.4f) {
 			npc.setSexualOrientation(SexualOrientation.AMBIPHILIC);
@@ -6188,8 +6188,8 @@ public class Game implements XMLSaving {
 	public void startGenericSex(GameCharacter character) {
 //		Main.game.setContent(new Response("", "", Main.game.getDefaultDialogue(false)));
 		Main.game.setContent(
-				new ResponseSex(UtilText.parse(character, "Sex with [npc.name]"),
-					UtilText.parse(character, "Start a generic sex scene with [npc.name]"),
+				new ResponseSex(UtilText.parse(character, "跟[npc.name]做爱"),
+					UtilText.parse(character, "与[npc.name]开始一场常规的性交"),
 					true,
 					true,
 					new SMGeneric(
@@ -6199,7 +6199,7 @@ public class Game implements XMLSaving {
 					null),
 					Main.game.getDefaultDialogue(false),
 					"<p>"
-						+ UtilText.parse(character, "You start having sex with [npc.name]")
+						+ UtilText.parse(character, "你开始跟[npc.name]做爱了")
 					+ "</p>"));
 	}
 	

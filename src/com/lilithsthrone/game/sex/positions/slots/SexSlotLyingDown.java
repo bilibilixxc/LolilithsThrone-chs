@@ -13,219 +13,219 @@ import com.lilithsthrone.main.Main;
 public class SexSlotLyingDown {
 
 	public static final SexSlot LYING_DOWN = new SexSlot(
-			"Lying on back",
-			"lying on back",
-			"With a buck of [npc.her] [npc.hips], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"平躺",
+			"平躺",
+			"[npc.Name]一挺腰，发出[npc.a_moan+]，即将迎来高潮。",
 			false,
 			SexSlotTag.LYING_DOWN);
 	public static final SexSlot LYING_DOWN_TWO = new SexSlot(LYING_DOWN) {
 		@Override
 		public String getDescription() {
-			return "lying on back (2nd)";
+			return "平躺(二)";
 		}
 	};
 	public static final SexSlot LYING_DOWN_THREE = new SexSlot(LYING_DOWN) {
 		@Override
 		public String getDescription() {
-			return "lying on back (3rd)";
+			return "平躺(三)";
 		}
 	};
 	public static final SexSlot LYING_DOWN_FOUR = new SexSlot(LYING_DOWN) {
 		@Override
 		public String getDescription() {
-			return "lying on back (4th)";
+			return "平躺(四)";
 		}
 	};
 
 	public static final SexSlot LYING_DOWN_FRONT = new SexSlot(
-			"Lying on front",
-			"lying on front",
-			"Continuing to lie down on [npc.her] stomach, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"俯卧",
+			"俯卧",
+			"[npc.name]保持着俯卧姿势，发出一声[npc.a_moan+]，即将迎来高潮。",
 			false,
 			SexSlotTag.LYING_DOWN_ON_FRONT);
 	public static final SexSlot LYING_DOWN_FRONT_TWO = new SexSlot(LYING_DOWN_FRONT) {
 		@Override
 		public String getDescription() {
-			return "lying on front (2nd)";
+			return "俯卧(二)";
 		}
 	};
 	public static final SexSlot LYING_DOWN_FRONT_THREE = new SexSlot(LYING_DOWN_FRONT) {
 		@Override
 		public String getDescription() {
-			return "lying on front (3rd)";
+			return "俯卧(三)";
 		}
 	};
 	public static final SexSlot LYING_DOWN_FRONT_FOUR = new SexSlot(LYING_DOWN_FRONT) {
 		@Override
 		public String getDescription() {
-			return "lying on front (4th)";
+			return "俯卧(四)";
 		}
 	};
 	
 	
 	public static final SexSlot COWGIRL = new SexSlot(
-			"Cowgirl",
-			"cowgirl",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down into [npc2.namePos] groin, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"骑乘位",
+			"骑乘位",
+			"[npc.Name]的[npc.legs]颤抖着，深深坐进了[npc2.namePos]的胯下，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.COWGIRL);
 	public static final SexSlot COWGIRL_TWO = new SexSlot(COWGIRL) {
 		@Override
 		public String getDescription() {
-			return "cowgirl (2nd)";
+			return "骑乘位(二)";
 		}
 	};
 	public static final SexSlot COWGIRL_THREE = new SexSlot(COWGIRL) {
 		@Override
 		public String getDescription() {
-			return "cowgirl (3rd)";
+			return "骑乘位(三)";
 		}
 	};
 	public static final SexSlot COWGIRL_FOUR = new SexSlot(COWGIRL) {
 		@Override
 		public String getDescription() {
-			return "cowgirl (4th)";
+			return "骑乘位(四)";
 		}
 	};
 
 	
 	
 	public static final SexSlot COWGIRL_REVERSE = new SexSlot(
-			"Reverse cowgirl",
-			"reverse cowgirl",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down into [npc2.namePos] groin, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"反骑乘",
+			"反骑乘",
+			"[npc.Name]的[npc.legs]颤抖着，深深坐进了[npc2.namePos]的胯下，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.COWGIRL_REVERSE);
 	public static final SexSlot COWGIRL_REVERSE_TWO = new SexSlot(COWGIRL_REVERSE) {
 		@Override
 		public String getDescription() {
-			return "reverse cowgirl (2nd)";
+			return "反骑乘(二)";
 		}
 	};
 	public static final SexSlot COWGIRL_REVERSE_THREE = new SexSlot(COWGIRL_REVERSE) {
 		@Override
 		public String getDescription() {
-			return "reverse cowgirl (3rd)";
+			return "反骑乘(三)";
 		}
 	};
 	public static final SexSlot COWGIRL_REVERSE_FOUR = new SexSlot(COWGIRL_REVERSE) {
 		@Override
 		public String getDescription() {
-			return "reverse cowgirl (4th)";
+			return "反骑乘(四)";
 		}
 	};
 
 	
 	/** Sitting looking down into the person's eyes. */
 	public static final SexSlot FACE_SITTING = new SexSlot(
-			"Frontal face-sitting",
-			"face-sitting",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"正向颜面骑乘",
+			"颜面骑乘",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING);
 
 	public static final SexSlot FACE_SITTING_TWO = new SexSlot(
-			"Frontal face-sitting",
-			"face-sitting (2nd)",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"正向颜面骑乘",
+			"颜面骑乘(二)",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING);
 
 	public static final SexSlot FACE_SITTING_THREE = new SexSlot(
-			"Frontal face-sitting",
-			"face-sitting (3rd)",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"正向颜面骑乘",
+			"颜面骑乘(三)",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING);
 
 	public static final SexSlot FACE_SITTING_FOUR = new SexSlot(
-			"Frontal face-sitting",
-			"face-sitting (4th)",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"正向颜面骑乘",
+			"颜面骑乘(四)",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING);
 
 	/** Sitting looking down at the person's lower body. */
 	public static final SexSlot FACE_SITTING_REVERSE = new SexSlot(
-			"Reverse face-sitting",
-			"reverse face-sitting",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"反向颜面骑乘",
+			"反向颜面骑乘",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING_REVERSE);
 
 	public static final SexSlot FACE_SITTING_REVERSE_TWO = new SexSlot(
-			"Reverse face-sitting",
-			"reverse face-sitting (2nd)",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"反向颜面骑乘",
+			"反向颜面骑乘(二)",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING_REVERSE);
 
 	public static final SexSlot FACE_SITTING_REVERSE_THREE = new SexSlot(
-			"Reverse face-sitting",
-			"reverse face-sitting (3rd)",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"反向颜面骑乘",
+			"反向颜面骑乘(三)",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING_REVERSE);
 
 	public static final SexSlot FACE_SITTING_REVERSE_FOUR = new SexSlot(
-			"Reverse face-sitting",
-			"reverse face-sitting (4th)",
-			"With trembling [npc.legs], [npc.name] [npc.verb(sink)] down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"反向颜面骑乘",
+			"反向颜面骑乘(四)",
+			"[npc.Name]的[npc.legs]颤抖着，深深地坐在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.FACE_SITTING_REVERSE);
 
 	/** Oral slots for if the targeted character is lying down on their front. */
 	public static final SexSlot RECEIVING_ORAL = new SexSlot(
-			"In front",
-			"in front",
-			"[npc.Name] [npc.verb(push)] [npc.her] groin into [npc2.namePos] face and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"身前",
+			"身前",
+			"[npc.Name]将下体顶在[npc2.namePos]的脸上，随着一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.RECEIVING_ORAL_FROM_PRONE_PARTNER);
 	public static final SexSlot RECEIVING_ORAL_TWO = new SexSlot(
-			"In front",
-			"in front (2nd)",
-			"[npc.Name] [npc.verb(push)] [npc.her] groin into [npc2.namePos] face and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"身前",
+			"身前(二)",
+			"[npc.Name]将下体顶在[npc2.namePos]的脸上，随着一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.RECEIVING_ORAL_FROM_PRONE_PARTNER);
 	public static final SexSlot RECEIVING_ORAL_THREE = new SexSlot(
-			"In front",
-			"in front (3rd)",
-			"[npc.Name] [npc.verb(push)] [npc.her] groin into [npc2.namePos] face and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"身前",
+			"身前(三)",
+			"[npc.Name]将下体顶在[npc2.namePos]的脸上，随着一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.RECEIVING_ORAL_FROM_PRONE_PARTNER);
 	public static final SexSlot RECEIVING_ORAL_FOUR = new SexSlot(
-			"In front",
-			"in front (4th)",
-			"[npc.Name] [npc.verb(push)] [npc.her] groin into [npc2.namePos] face and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"身前",
+			"身前(四)",
+			"[npc.Name]将下体顶在[npc2.namePos]的脸上，随着一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.RECEIVING_ORAL_FROM_PRONE_PARTNER);
 	
 	
 	public static final SexSlot LAP_PILLOW = new SexSlot(
-			"Lap pillow",
-			"lap pillow",
-			"Looking down into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"膝枕",
+			"膝枕",
+			"[npc.Name]望向[npc2.namePos]的[npc2.eyes]，口中冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.LAP_PILLOW);
 
 	public static final SexSlot LAP_PILLOW_TWO = new SexSlot(
-			"Lap pillow",
-			"lap pillow (2nd)",
-			"Looking down into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"膝枕",
+			"膝枕(二)",
+			"[npc.Name]望向[npc2.namePos]的[npc2.eyes]，口中冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.LAP_PILLOW);
 
 	public static final SexSlot LAP_PILLOW_THREE = new SexSlot(
-			"Lap pillow",
-			"lap pillow (3rd)",
-			"Looking down into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"膝枕",
+			"膝枕(三)",
+			"[npc.Name]望向[npc2.namePos]的[npc2.eyes]，口中冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.LAP_PILLOW);
 
 	public static final SexSlot LAP_PILLOW_FOUR = new SexSlot(
-			"Lap pillow",
-			"lap pillow (4th)",
-			"Looking down into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"膝枕",
+			"膝枕(四)",
+			"[npc.Name]望向[npc2.namePos]的[npc2.eyes]，口中冒出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.LAP_PILLOW);
 	
@@ -233,36 +233,36 @@ public class SexSlotLyingDown {
 	
 
 	public static final SexSlot SIXTY_NINE = new SexSlot(
-			"Sixty-nine",
-			"sixty-nine",
-			"With trembling [npc.legs], [npc.name] [npc.verb(allow)] [npc.her] crotch to drop down onto [npc2.namePos] face, letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"六九式",
+			"六九式",
+			"[npc.Name]的[npc.legs]颤抖着，将下体紧紧地压在[npc2.namePos]的脸上，发出一声[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false,
 			SexSlotTag.SIXTY_NINE);
 	public static final SexSlot SIXTY_NINE_TWO = new SexSlot(SIXTY_NINE) {
 		@Override
 		public String getDescription() {
-			return "sixty-nine (2nd)";
+			return "六九式(二)";
 		}
 	};
 	public static final SexSlot SIXTY_NINE_THREE = new SexSlot(SIXTY_NINE) {
 		@Override
 		public String getDescription() {
-			return "sixty-nine (3rd)";
+			return "六九式(三)";
 		}
 	};
 	public static final SexSlot SIXTY_NINE_FOUR = new SexSlot(SIXTY_NINE) {
 		@Override
 		public String getDescription() {
-			return "sixty-nine (4th)";
+			return "六九式(四)";
 		}
 	};
 	
 	
 	
 	public static final SexSlot MISSIONARY = new SexSlot(
-			"Missionary",
-			"between legs",
-			"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax, and, leaning down on top of [npc2.name], [npc.she] [npc.verb(gaze)] lustfully down into [npc2.her] [npc2.eyes+].",
+			"传教士体位",
+			"腿间",
+			"[npc.Name]即将迎来高潮，口中冒出一声[npc.a_moan+]，重重地压在[npc2.name]身上，淫靡地盯着[npc2.her][npc2.eyes+]。",
 			false,
 			SexSlotTag.MISSIONARY) {
 		@Override
@@ -271,7 +271,7 @@ public class SexSlotLyingDown {
 			if(partner==null) {
 				return super.getName(target);
 			}
-			return "Prone bone";
+			return "俯卧位";
 		}
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
@@ -279,7 +279,7 @@ public class SexSlotLyingDown {
 				return super.getOrgasmDescription(orgasmingCharacter, targetedCharacter);
 			}
 			if(Main.sex.getSexPositionSlot(targetedCharacter).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT)) {
-				return "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax, and, leaning down on top of [npc2.name], [npc.she] [npc.verb(gaze)] down at the back of [npc2.her] head.";
+				return "[npc.Name]即将迎来高潮，口中冒出一声[npc.a_moan+]，重重地压在[npc2.name]身上，低头凝视着[npc2.her]的后脑勺。";
 			}
 			return super.getOrgasmDescription(orgasmingCharacter, targetedCharacter);
 		}
@@ -287,7 +287,7 @@ public class SexSlotLyingDown {
 	public static final SexSlot MISSIONARY_TWO = new SexSlot(MISSIONARY) {
 		@Override
 		public String getDescription() {
-			return "between legs (2nd)";
+			return "腿间(二)";
 		}
 		@Override
 		public String getName(GameCharacter target) {
@@ -295,7 +295,7 @@ public class SexSlotLyingDown {
 			if(partner==null) {
 				return super.getName(target);
 			}
-			return "Prone bone";
+			return "俯卧位";
 		}
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
@@ -305,7 +305,7 @@ public class SexSlotLyingDown {
 	public static final SexSlot MISSIONARY_THREE = new SexSlot(MISSIONARY) {
 		@Override
 		public String getDescription() {
-			return "between legs (3rd)";
+			return "腿间(三)";
 		}
 		@Override
 		public String getName(GameCharacter target) {
@@ -313,7 +313,7 @@ public class SexSlotLyingDown {
 			if(partner==null) {
 				return super.getName(target);
 			}
-			return "Prone bone";
+			return "俯卧位";
 		}
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
@@ -323,7 +323,7 @@ public class SexSlotLyingDown {
 	public static final SexSlot MISSIONARY_FOUR = new SexSlot(MISSIONARY) {
 		@Override
 		public String getDescription() {
-			return "between legs (4th)";
+			return "腿间(四)";
 		}
 		@Override
 		public String getName(GameCharacter target) {
@@ -331,7 +331,7 @@ public class SexSlotLyingDown {
 			if(partner==null) {
 				return super.getName(target);
 			}
-			return "Prone bone";
+			return "俯卧位";
 		}
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
@@ -340,113 +340,113 @@ public class SexSlotLyingDown {
 	};
 	
 	public static final SexSlot MISSIONARY_ORAL = new SexSlot(
-			"Missionary oral",
-			"face between legs",
-			"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax, and, pressing [npc.her] [npc.face] into [npc2.namePos] groin, [npc.she] [npc.verb(prepare)] to reach [npc1.her] climax.",
+			"传教士体位口交",
+			"脸位于腿间",
+			"[npc.Name]即将迎来高潮，口中冒出一声[npc.a_moan+]，将[npc.face]深深埋入[npc2.namePos]胯下。",
 			false,
 			SexSlotTag.MISSIONARY_ORAL);
 	public static final SexSlot MISSIONARY_ORAL_TWO = new SexSlot(MISSIONARY_ORAL) {
 		@Override
 		public String getDescription() {
-			return "face between legs (2nd)";
+			return "脸位于腿间(二)";
 		}
 	};
 	public static final SexSlot MISSIONARY_ORAL_THREE = new SexSlot(MISSIONARY_ORAL) {
 		@Override
 		public String getDescription() {
-			return "face between legs (3rd)";
+			return "脸位于腿间(三)";
 		}
 	};
 	public static final SexSlot MISSIONARY_ORAL_FOUR = new SexSlot(MISSIONARY_ORAL) {
 		@Override
 		public String getDescription() {
-			return "face between legs (4th)";
+			return "脸位于腿间(四)";
 		}
 	};
 
 	
 	
 	public static final SexSlot MATING_PRESS = new SexSlot(
-			"Mating press",
-			"mating press",
-			"Looking down into [npc2.namePos] [npc2.eyes] and pressing [npc.her] weight down on top of [npc2.herHim], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"授种式",
+			"授种式",
+			"[npc.Name]低头看向[npc2.namePos]的[npc2.eyes]，随后就将全身的重量压在[npc2.herHim]身上，伴随着一声[npc1.a_moan+]，[npc1.she]即将迎来高潮。",
 			false,
 			SexSlotTag.MATING_PRESS);
 
 	public static final SexSlot MATING_PRESS_TWO = new SexSlot(
-			"Mating press",
-			"mating press (2nd)",
-			"Looking down into [npc2.namePos] [npc2.eyes] and pressing [npc.her] weight down on top of [npc2.herHim], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"授种式",
+			"授种式(二)",
+			"[npc.Name]低头看向[npc2.namePos]的[npc2.eyes]，随后就将全身的重量压在[npc2.herHim]身上，伴随着一声[npc1.a_moan+]，[npc1.she]即将迎来高潮。",
 			false,
 			SexSlotTag.MATING_PRESS);
 
 	public static final SexSlot MATING_PRESS_THREE = new SexSlot(
-			"Mating press",
-			"mating press (3rd)",
-			"Looking down into [npc2.namePos] [npc2.eyes] and pressing [npc.her] weight down on top of [npc2.herHim], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"授种式",
+			"授种式(三)",
+			"[npc.Name]低头看向[npc2.namePos]的[npc2.eyes]，随后就将全身的重量压在[npc2.herHim]身上，伴随着一声[npc1.a_moan+]，[npc1.she]即将迎来高潮。",
 			false,
 			SexSlotTag.MATING_PRESS);
 
 	public static final SexSlot MATING_PRESS_FOUR = new SexSlot(
-			"Mating press",
-			"mating press (4th)",
-			"Looking down into [npc2.namePos] [npc2.eyes] and pressing [npc.her] weight down on top of [npc2.herHim], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"授种式",
+			"授种式(四)",
+			"[npc.Name]低头看向[npc2.namePos]的[npc2.eyes]，随后就将全身的重量压在[npc2.herHim]身上，伴随着一声[npc1.a_moan+]，[npc1.she]即将迎来高潮。",
 			false,
 			SexSlotTag.MATING_PRESS);
 	
 	
 
 	public static final SexSlot SCISSORING = new SexSlot(
-			"Scissoring",
-			"scissoring",
-			"Desperately thrusting [npc.her] [npc.hips] forwards in order to grind [npc.her] groin against [npc2.nameHers], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"剪刀式体位",
+			"剪刀式体位",
+			"[npc.Name]迫不及待地挺腰送入[npc2.nameHers]的胯下，发出一声[npc1.a_moan+]，即将迎来了高潮。",
 			false,
 			SexSlotTag.SCISSORING);
 
 	public static final SexSlot SCISSORING_TWO = new SexSlot(
-			"Scissoring",
-			"scissoring (2nd)",
-			"Desperately thrusting [npc.her] [npc.hips] forwards in order to grind [npc.her] groin against [npc2.nameHers], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"剪刀式体位",
+			"剪刀式体位(二)",
+			"[npc.Name]迫不及待地挺腰送入[npc2.nameHers]的胯下，发出一声[npc1.a_moan+]，即将迎来了高潮。",
 			false,
 			SexSlotTag.SCISSORING);
 
 	public static final SexSlot SCISSORING_THREE = new SexSlot(
-			"Scissoring",
-			"scissoring (3rd)",
-			"Desperately thrusting [npc.her] [npc.hips] forwards in order to grind [npc.her] groin against [npc2.nameHers], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"剪刀式体位",
+			"剪刀式体位(三)",
+			"[npc.Name]迫不及待地挺腰送入[npc2.nameHers]的胯下，发出一声[npc1.a_moan+]，即将迎来了高潮。",
 			false,
 			SexSlotTag.SCISSORING);
 
 	public static final SexSlot SCISSORING_FOUR = new SexSlot(
-			"Scissoring",
-			"scissoring (4th)",
-			"Desperately thrusting [npc.her] [npc.hips] forwards in order to grind [npc.her] groin against [npc2.nameHers], [npc.name] [npc1.verb(let)] out [npc1.a_moan+] as [npc1.she] [npc1.verb(prepare)] to reach [npc1.her] climax.",
+			"剪刀式体位",
+			"剪刀式体位(四)",
+			"[npc.Name]迫不及待地挺腰送入[npc2.nameHers]的胯下，发出一声[npc1.a_moan+]，即将迎来了高潮。",
 			false,
 			SexSlotTag.SCISSORING);
 	
 	
 
 	public static final SexSlot BESIDE = new SexSlot(
-			"Beside",
-			"beside",
-			"With a buck of [npc.her] [npc.hips], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.",
+			"侧躺在身边",
+			"侧躺在身边",
+			"[npc.Name]一挺腰，发出[npc.a_moan+]，即将迎来高潮。",
 			false); // SexSlotTag.LYING_DOWN Removed in v0.4.11.2
 	public static final SexSlot BESIDE_TWO = new SexSlot(BESIDE) {
 		@Override
 		public String getDescription() {
-			return "beside (2nd)";
+			return "侧躺在身边(二)";
 		}
 	};
 	public static final SexSlot BESIDE_THREE = new SexSlot(BESIDE) {
 		@Override
 		public String getDescription() {
-			return "beside (3rd)";
+			return "侧躺在身边(三)";
 		}
 	};
 	public static final SexSlot BESIDE_FOUR = new SexSlot(BESIDE) {
 		@Override
 		public String getDescription() {
-			return "beside (4th)";
+			return "侧躺在身边(四)";
 		}
 	};
 }

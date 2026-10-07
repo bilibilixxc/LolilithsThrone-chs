@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[extinguished flame]]></name>
-	<tooltipDescription><![CDATA[The arcane flame, which was powering Shiranui's spell and keeping trespassers trapped within her realm, has been extinguished.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside one of the flames within Shiranui's trap]]></virginityLossDescription>
+	<name><![CDATA[熄灭的火焰]]></name>
+	<tooltipDescription><![CDATA[奥术火焰已经熄灭。它曾被用来催动不知火的法术，把闯入者困在她的领域里。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在不知火陷阱内的一簇火焰旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>flame</svgName>
 	<colour>BASE_GREY</colour>

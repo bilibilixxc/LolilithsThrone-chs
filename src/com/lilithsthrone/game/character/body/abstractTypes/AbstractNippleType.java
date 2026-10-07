@@ -118,11 +118,11 @@ public abstract class AbstractNippleType implements BodyPartTypeInterface {
 	@Override
 	public String getDeterminer(GameCharacter gc) {
 		if(gc.getBreastRows()==1) {
-			return "a pair of";
+			return "一对";
 		} else if(gc.getBreastRows()==2) {
-			return "two pairs of";
+			return "两对";
 		} else {
-			return "three pairs of";
+			return "三对";
 		}
 	}
 
@@ -135,16 +135,16 @@ public abstract class AbstractNippleType implements BodyPartTypeInterface {
 	public String getNameSingular(GameCharacter gc) {
 		switch(gc.getNippleShape()) {
 			case LIPS:
-				return  UtilText.returnStringAtRandom("lipple", "nipple-lip");
+				return  UtilText.returnStringAtRandom("唇化乳头", "乳唇");
 			case INVERTED:
 			case NORMAL:
 				if(gc.hasBreasts()) {
-					return UtilText.returnStringAtRandom("nipple", "teat");
+					return UtilText.returnStringAtRandom("乳头", "奶头");
 				} else {
-					return "nipple";
+					return "乳头";
 				}
 			case VAGINA:
-				return UtilText.returnStringAtRandom("nipple-cunt", "nipple-pussy");
+				return UtilText.returnStringAtRandom("乳头穴", "乳穴");
 		}
 		return "";
 	}
@@ -153,16 +153,16 @@ public abstract class AbstractNippleType implements BodyPartTypeInterface {
 	public String getNamePlural(GameCharacter gc) {
 		switch(gc.getNippleShape()) {
 			case LIPS:
-				return  UtilText.returnStringAtRandom("lipples", "nipple-lips");
+				return  UtilText.returnStringAtRandom("唇化乳头", "乳唇");
 			case INVERTED:
 			case NORMAL:
 				if(gc.hasBreasts()) {
-					return UtilText.returnStringAtRandom("nipples", "teats");
+					return UtilText.returnStringAtRandom("乳头", "奶头");
 				} else {
-					return "nipples";
+					return "乳头";
 				}
 			case VAGINA:
-				return UtilText.returnStringAtRandom("nipple-cunts", "nipple-pussies");
+				return UtilText.returnStringAtRandom("乳头穴", "乳穴");
 		}
 		return "";
 	}
@@ -170,16 +170,16 @@ public abstract class AbstractNippleType implements BodyPartTypeInterface {
 	public String getNameCrotchSingular(GameCharacter gc) {
 		switch(gc.getNippleCrotchShape()) {
 			case LIPS:
-				return  UtilText.returnStringAtRandom("lipple", "nipple-lip");
+				return  UtilText.returnStringAtRandom("唇化乳头", "乳唇");
 			case INVERTED:
 			case NORMAL:
 				if(gc.hasBreasts()) {
-					return UtilText.returnStringAtRandom("nipple", "teat");
+					return UtilText.returnStringAtRandom("乳头", "奶头");
 				} else {
-					return "nipple";
+					return "乳头";
 				}
 			case VAGINA:
-				return UtilText.returnStringAtRandom("nipple-cunt", "nipple-pussy");
+				return UtilText.returnStringAtRandom("乳头穴", "乳穴");
 		}
 		return "";
 	}
@@ -187,16 +187,16 @@ public abstract class AbstractNippleType implements BodyPartTypeInterface {
 	public String getNameCrotchPlural(GameCharacter gc) {
 		switch(gc.getNippleCrotchShape()) {
 			case LIPS:
-				return  UtilText.returnStringAtRandom("lipples", "nipple-lips");
+				return  UtilText.returnStringAtRandom("唇化乳头", "乳唇");
 			case INVERTED:
 			case NORMAL:
 				if(gc.hasBreasts()) {
-					return UtilText.returnStringAtRandom("nipples", "teats");
+					return UtilText.returnStringAtRandom("乳头", "奶头");
 				} else {
-					return "nipples";
+					return "乳头";
 				}
 			case VAGINA:
-				return UtilText.returnStringAtRandom("nipple-cunts", "nipple-pussies");
+				return UtilText.returnStringAtRandom("乳头穴", "乳穴");
 		}
 		return "";
 	}

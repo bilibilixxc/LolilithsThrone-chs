@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <enchantment>
 
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
@@ -21,7 +21,7 @@
 		#ENDIF
 	]]></spawnWeighting>
 	
-	<namePrefix><![CDATA[Sissy's]]></namePrefix>
+	<namePrefix><![CDATA[小娘炮的]]></namePrefix>
 	<namePostfix/>
 	<nameOverride/>
 	

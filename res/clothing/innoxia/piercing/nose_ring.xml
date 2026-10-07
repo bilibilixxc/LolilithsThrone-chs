@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>100</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[nose ring]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[nose rings]]></namePlural>
-		<description><![CDATA[A simple nose ring. The little disc found on one end rests inside the nostril, holding it in place, while the rest of the ring is on display.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[鼻环]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[鼻环]]></namePlural>
+		<description><![CDATA[一个简单的鼻环。一端的小圆盘位于鼻孔内，固定在那里，而环的其余部分则可见。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>PIERCING_NOSE</slot> 
@@ -40,27 +40,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the ring into [npc.her] [npc.nose] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the ring into [npc2.namePos] [npc2.nose] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] the ring into [npc2.namePos] [npc2.nose] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把鼻环戴在[npc.her]的[npc.nose]穿孔。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把鼻环戴在[npc2.namePos]的[npc2.nose]穿孔。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把鼻环戴在[npc2.namePos]的[npc2.nose]穿孔。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] ring out of [npc.her] [npc.nose] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] ring out of [npc2.her] [npc2.nose] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] ring out of [npc2.her] [npc2.nose] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把[npc.her]的鼻环从[npc.her]的[npc.nose]穿孔中取下。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把[npc2.namePos]的鼻环从[npc2.her]的[npc2.nose]穿孔中取下。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的鼻环从[npc2.her]的[npc2.nose]穿孔中取下。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

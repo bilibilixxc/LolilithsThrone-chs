@@ -1,1523 +1,1524 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	<p>
-		Once more you find yourself standing outside Zaranix's home. Much like all the other buildings in this area of the city, the incubus's residence takes the form of a grand, regency-style town-house. Unlike the majority of the surrounding buildings, however, there's a modestly sized private garden adjoined to the right-hand side of the property. A tall, cast-iron fence separates this garden from the street in which you're standing.
+		你又来到了扎拉尼克斯家门口。和这座城市里的其他建筑一样，这位淫梦魔的住所也是一栋宏伟的摄政时期风格的城市别墅。不过，与周围大多数建筑不同的是，它的右侧毗邻着一个面积不大的私人花园。一道高大的铸铁栅栏将花园与你所站的街道隔开。
 	</p>
 	<p>
-		Since your first visit, the security seems to have been increased, and you can see the faint shimmer of an arcane barrier above the garden's fence, making any entry from that direction impossible. Similarly, the front door has been replaced by a far sturdier-looking one, and you imagine that even the strongest of demons would have difficulty in breaking it down.
+		自从你第一次来访后，这里的安保措施似乎有所加强，你可以看到花园的栅栏上方闪烁着微弱的魔法屏障，任何从这个方向进入的人都不可能进来。同样，前门也换成了一扇看起来坚固得多的门，你可以想象，即使是最强壮的恶魔也很难攻破它。
 	</p>
 	#IF(!game.isExtendedWorkTime())
 		<p>
-			Due to the unsociable hour, you're certain that Amber will not come to answer the door if you were to knock it. It might be best to return at a more reasonable time, such as between [style.colourMinorBad([units.time(6)] and [units.time(22)])]...
+			你来的不是时候，如果你现在去敲门，安柏是不会来开门的。你最好在一个更适合造访的时间回来，比如等到[style.colourMinorBad([units.time(6)]-[units.time(22)])]再过来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="OUTSIDE_RETURN"><![CDATA[
 	#IF(game.isExtendedWorkTime())
 		<p>
-			As you left Zaranix on relatively amicable terms, you don't think that there would be any trouble in simply knocking the front door...
+			由于你上次是在相对友好的氛围中和扎拉尼克斯道别的，你认为直接上去敲门应该不会惹上什么麻烦……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_KNOWS_AMBER"><![CDATA[
 	<p>
-		As Zaranix didn't seem to be too hostile towards you when you last visited, you decide that there'd be no harm in knocking on his door once more. Hoping for the best, you step forwards and take hold of the ornate brass door knocker, before delivering a sharp rap to alert those inside of your presence.
+		你上次来的时候，扎拉尼克斯似乎对你并没有什么敌意，所以你决定再敲敲他家门也无妨。抱着期待，你走上前去，握住华丽的黄铜门把手，然后猛地敲了敲。
 	</p>
 	<p>
-		After just a few moments, you hear the sound of a lock being slid back, before the heavy oaken door swings inwards to reveal the fiery-haired form of Zaranix's maid, Amber. A fearsome snarl instantly breaks out across her face as she recognises you, and you see her knuckles turning white as she grips the edge of the door in anger. Her glowing amber eyes lock onto yours, and she growls, [amber.speech(You fucking <i>bitch</i>! How <i>dare</i> you show your face here again?! What the fuck do you want this time?!)]
+		片刻之后，你听到门锁被推开的声音，然后厚重的橡木门向内打开，你看到了扎拉尼克斯那个头发亮光的女仆，安柏。当她认出你时，她的脸上立刻露出了可怕的表情，你看到她愤怒地抓住了门的边缘，手上的青筋似乎都要炸裂开来。她闪烁着琥珀色光芒的眼睛紧紧盯着你，怒喝道，[amber.speech(挨千刀的<i>婊子</i>？！你<i>怎么敢</i>再出现在这里？！这次你他妈又想干什么？！)]
 	</p>
 	<p>
-		Despite her angry words, it doesn't look like she's going to slam the door on your face. Her willingness to listen to what it is you have to say takes you a little by surprise, and, not wanting to waste the opportunity, you explain, [pc.speech(I wanted to pay Zaranix another visit. There were some things I wanted to ask him.)]
+		尽管她似乎很生气，但看起来她并不打算把门摔在你脸上。你觉得她愿意听你说话这件事已经很让人意外了，于是你接着说，[pc.speech(我想再去拜访一下扎拉尼克斯。我有些事情想问他。)]
 	</p>
 	<p>
-		As her tail swishes from side to side with impatience, Amber narrows her piercing, luminescent-amber eyes and glares at you in an intimidating manner as she responds, [amber.speech(You're lucky that you're under the protection of Lilaya, bitch. If you weren't, I'd have had the Enforcers enslave you, and you'd be nothing more than my worthless cumdump right now.)] Amber releases her grip on the door and crosses her arms, still snarling at you as she continues, [amber.speech(But we can't all have our own way, can we? As it so happens, Zaranix has instructed me to allow you in. That name of Lilaya's sure does carry some weight in certain circles.)]
+		安柏的尾巴不耐烦地左右摆动着，她眯起那双琥珀色的炯炯有神的眼睛，慑人心魄地盯着你，[amber.speech(能被莉莱雅庇护算你走了狗屎运，婊子，要不然，你早就变成被我操到冒白浆的性奴了。)]安柏放开那只抓在门上的手，双臂交叉，咆哮道，[amber.speech(不是冤家不对头，你还是回来了。扎拉尼克斯告诉我放你进来，看在莉莱雅的份上。)]
 	</p>
 	<p>
-		[pc.speech(So, can you let me in then?)] you ask, hoping that Amber will step back and allow you pass.
+		[pc.speech(所以，那你会放我进去吗？)]你等着她从门口推开。
 	</p>
 	<p>
-		[amber.speech(Not so fast, bitch,)] Amber says, her voice dripping with malice. [amber.speech(I can't disobey my master's wishes, but if you want to get on my good side - which you should - then before stepping foot in this house, you'll drop to your knees and beg for me to forgive you for all you've done.)]
+		[amber.speech(贱婊子，你想得美！)]她的语气变得凶狠，[amber.speech(我不能违背主人的意愿，但如果你想讨好我——你应该这么做——那么在踏进这间屋子之前，你就得跪下来求我原谅你所做的一切。)]
 	</p>
 	<p>
-		Knowing that Zaranix has instructed Amber to let you inside, you could refuse and simply push your way past the angry maid. Then again, maybe it would be a good idea to just do as Amber says and apologise... 
+		你知道扎拉尼克斯已经指示安柏放你进去，你可以不理她，从她旁边直接走进去。但是，你也可以照安柏的话去做并向她道歉，这样也许更加明智……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR"><![CDATA[
 	<p>
-		As Zaranix didn't seem to be too hostile towards you when you last visited, you decide that there'd be no harm in knocking on his door once more. Hoping for the best, you step forwards and take hold of the ornate brass door knocker, before delivering a sharp rap to alert those inside of your presence.
+		你上次来的时候，扎拉尼克斯似乎对你并没有什么敌意，所以你决定再敲敲他家门也无妨。抱着期待，你走上前去，握住华丽的黄铜门把手，然后猛地敲了敲。
 	</p>
 	<p>
-		After just a few moments, you hear the sound of a lock being slid back, before the heavy oak door swings inwards to reveal one of the most striking succubi you've ever seen. Her gorgeous face and perfectly proportioned body are covered in pitch-black ebony skin, but it's not her voluptuous figure which your eyes are drawn to. Styled into loose waves, and giving off a luminescent, yellowy-orange glow, it's her extraordinary amber hair, which reaches down to just above her ass, that you find yourself gazing at. As her eyes fixate themselves onto yours, you see that her irises are the exact same glowing-amber shade as her hair, giving this demon a truly remarkable appearance. Seeing who it is at her master's front door, she snarls, [amber.speech(You're the bitch that took my master's slave, aren't you? How <i>dare</i> you show your face here again?! What the fuck do you want this time?!)]
+		片刻之后，你听到门锁被推开的声音，然后厚重的橡木门向内打开，露出了你见过的最吸引人的魅魔之一。她姣好的面容和完美匀称的身材被漆黑的黑檀色皮肤所覆盖，但你的目光并没有被她丰满的身材所吸引。她的头发被打理成松散的波浪形，散发出黄橙橙的荧光，她的琥珀色秀发垂至臀部上方，让人目不转睛。当她的眼睛注视着你的时候，你会发现她的虹膜和她的头发一样都是琥珀色的，这让这个恶魔的外表更加出众。她看到来的人是你，于是怒喝道，[amber.speech(你就是那个抢走我主人奴隶的婊子，是不是？！你<i>怎么敢</i>再出现在这里？！这次你他妈又想干什么？！)]
 	</p>
 	<p>
-		Despite her angry words, it doesn't look like she's going to slam the door on your face. Her willingness to listen to what it is you have to say takes you a little by surprise, and, not wanting to waste the opportunity, you explain, [pc.speech(I wanted to pay Zaranix another visit. There were some things I wanted to ask him.)]
+		尽管她似乎很生气，但看起来她并不打算把门摔在你脸上。你觉得她愿意听你说话这件事已经很让人意外了，于是你接着说，[pc.speech(我想再去拜访一下扎拉尼克斯。我有些事情想问他。)]
 	</p>
 	<p>
-		As her tail swishes from side to side with impatience, the maid narrows her piercing, luminescent-amber eyes and glares at you in an intimidating manner as she responds, [amber.speech(You're lucky that you're under the protection of Lilaya, bitch. If you weren't, I'd have had the Enforcers enslave you, and you'd be nothing more than my worthless cumdump right now.)] Stepping forwards and crossing her arms, the succubus snarls at you as she continues, [amber.speech(But we can't all have our own way, can we? As it so happens, Zaranix has instructed me to allow you in. That name of Lilaya's sure does carry some weight in certain circles.)]
+		女仆的尾巴不耐烦地左右摆动着，她眯起那双琥珀色的炯炯有神的眼睛，慑人心魄地盯着你，[amber.speech(能被莉莱雅庇护算你走了狗屎运，婊子，要不然，你早就变成被我操到冒白浆的性奴了。)]魅魔向前跨出一步，双手交叉，咆哮道，[amber.speech(不是冤家不对头，你还是回来了。扎拉尼克斯告诉我放你进来，看在莉莱雅的份上。)]
 	</p>
 	<p>
-		[pc.speech(So, can you let me in then?)] you ask, hoping that she'll step back and allow you pass.
+		[pc.speech(所以，那你会放我进去吗？)]你等着她从门口推开。
 	</p>
 	<p>
-		[amber.speech(Not so fast, bitch,)] she says, her voice dripping with malice, [amber.speech(I can't disobey my master's wishes, but if you want to get on my good side - which you should - then before stepping foot in this house, you'll drop to your knees and beg for me to forgive you for all that you've done. Oh, and you'll address me as 'Mistress Amber' if you know what's good for you.)]
+		[amber.speech(贱婊子，你想得美！)]她的语气变得凶狠，[amber.speech(我不能违背主人的意愿，但如果你想讨好我——你应该这么做——那么在踏进这间屋子之前，你就得跪下来求我原谅你所做的一切。哦，如果你还算长了脑子，就称呼我为‘安柏主人’。)]
 	</p>
 	<p>
-		Knowing that Zaranix has instructed 'Mistress' Amber to let you inside, you could refuse and simply push your way past. Then again, maybe it would be a good idea to just do as Amber says and apologise... 
+		你知道扎拉尼克斯已经指示“主人”安柏放你进去，你可以拒绝她并直接走进去。但是，你也可以照安柏的话去做并向她道歉，这样也许更加明智……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_REPEAT"><![CDATA[
 	<p>
-		Deciding to pay Zaranix's household another visit, you step forwards and take hold of the ornate brass door knocker, before delivering a sharp rap to alert those inside of your presence.
+		你决定再次拜访扎拉尼克斯的家，于是走上前去，握住华丽的黄铜门把手，然后猛地敲了一下，向里面的人提醒你的到来。
 	</p>
 	<p>
-		After just a few moments, you hear the familiar sound of a lock being slid back, before the heavy oaken door swings inwards to reveal the fiery-haired form of Zaranix's maid, Amber. A look of disgust instantly breaks out across her face as she recognises you, and you see her tail swish to one side in annoyance as she crosses her arms. Her glowing amber eyes lock onto yours, and she growls, [amber.speech(What is it this time, bitch?!)]
+		过了一会儿，你听到了熟悉的拉开门栓的声音，随后厚重的橡木门向内打开，露出了扎拉尼克斯的女仆安柏的面孔。当她认出你时，脸上立刻露出厌恶的神情，你看到她的尾巴恼怒地摆动着，双手交叉。她那闪着琥珀色光芒的眼睛紧紧盯着你，随后，她咆哮道，[amber.speech(这次你又想做什么，婊子？！)]
 	</p>
 	<p>
-		Despite her angry tone, you know that Amber's been instructed by Zaranix to let you inside. With that in mind, you answer, [pc.speech(I'm here to visit Zaranix again.)]
+		尽管她的语气很生气，但你知道安柏会奉扎拉尼克斯之命让你进去的。考虑到这一点，你回答道，[pc.speech(我来再见一见扎拉尼克斯。)]
 	</p>
 	<p>
-		Amber narrows her piercing, luminescent-amber eyes and glares at you in an intimidating manner as she responds, [amber.speech(You really don't know how lucky you are to be under the protection of Lilaya... As per my master's instructions, I'll let you in, sure. <i>However</i>, if you know what's good for you, then you'll drop to your knees and apologise for wasting my time first.)]
+		琥珀眯起那双琥珀色的美丽眼睛，威胁的视线如针一样扎在你的身上，[amber.speech(竟然能得到莉莱雅的保护，你真的不知道你有多走运……按照我主人的指示，我当然会让你进来。<i>不过</i>，如果你识相的话，就先跪下来，先为浪费了我的时间道歉。)]
 	</p>
 	<p>
-		You could refuse Amber's demand and simply push your way past her, but, then again, maybe it would be a good idea to just do as Amber says and apologise... 
+		你可以拒绝安柏的要求，直接推开她走进去，但话又说回来，也许照安柏的话去做会是个好主意……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_APOLOGISE"><![CDATA[
 	<p>
-		Amber's threatening manner is too much for you to bear, and, dropping down on your knees in front of her, you deliver your apology, [pc.speech(Sorry, Mistress Amber! I didn't mean to get you angry... Please forgive me!)]
+		安柏那咄咄逼人的态度让你不安，你跪下来，乞求她的原谅，[pc.speech(对不起，安柏主人……我不是有意要让你生气的……原谅我吧！)]
 	</p>
 	<p>
-		[amber.speech(How pathetic,)] Amber snarls, lifting up her right foot and pushing the heel into your chest. [amber.speech(You're such a little bitch, aren't you?)]
+		[amber.speech(可怜虫，)]安柏的声音丝毫没有低下来，她抬起右脚，把鞋跟抵在你的胸口，[amber.speech(你绝对是个小婊子，对吧？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_APOLOGISE_MOUTH_BLOCKED"><![CDATA[
 	<p>
-		Before you can respond, the fiery-haired maid suddenly pushes her leg forwards, and, unable to keep your balance, you find yourself being kicked backwards down the couple of steps that lead up to the front door. Laughing out loud, Mistress Amber snarls down at you, [amber.speech(Stupid bitch, having your mouth blocked like that. I wanted to get you to lick my shoes in front of everyone here. Oh well. Heel.)]
+		还没等你反应过来，这位发型独特的女仆突然用脚把你向后推去，你无法保持平衡，倒在通往前门的几级台阶上。安柏主人大声笑着，吼道，[amber.speech(笨婊子，闭着嘴在那里等什么？过来，当着路人的面舔我的鞋。)]
 	</p>
 	<p>
-		As the fiery-haired maid snaps her fingers at her side, you move to do as you're told. Looking down at the ground and trying your best to ignore Mistress Amber's piercing gaze, you crawl back up the couple of steps to her side.
+		当这位发型独特的女仆打响指催促你时，你低着头，不敢直视她的眼睛，听话地爬上台阶。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_APOLOGISE_NO_FOOT"><![CDATA[
 	<p>
-		Before you can respond, the fiery-haired maid suddenly pushes her leg forwards, and, unable to keep your balance, you find yourself being kicked backwards down the couple of steps that lead up to the front door. Laughing out loud, Mistress Amber snarls down at you, [amber.speech(Stupid bitch. Heel.)]
+		还没等你反应过来，这位有着一头闪耀长发的女仆突然把腿往前一推，你无法保持平衡，被踢倒在通往门口的几级台阶上。安柏主人大声笑着，[amber.speech(笨婊子，上来吧！)]
 	</p>
 	<p>
-		As the fiery-haired maid snaps her fingers at her side, you move to do as you're told. Looking down at the ground and trying your best to ignore Mistress Amber's piercing gaze, you crawl back up the couple of steps to her side.
+		当这位女仆在她身边打响指时，你便乖乖听话，低头看着地面，尽量不与安柏主人刺眼的目光交汇，爬上几级台阶来到她身边。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_APOLOGISE_MOUTH_FREE"><![CDATA[
 	<p>
-		Before you can respond, the fiery-haired maid suddenly pushes her leg forwards, and, unable to keep your balance, you find yourself being kicked backwards down the couple of steps that lead up to the front door. Laughing out loud, Mistress Amber steps forwards, reaching down to grab
+		还没等你反应过来，这位一头亮发的女仆突然将腿向前一推，你无法保持平衡，被踢倒在通往门口的几级台阶上。安柏主人笑出了声，她向前走了几步，伸手
 		#IF(pc.getHairLength()>6)
-			 a fistful of your [pc.hair+],
+			一把抓住你[pc.hair+]，
 		#ELSE
-			 the back of your neck,
+			抓住你的后颈，
 		#ENDIF
-		 before dragging you out into the street in front of her master's home. Glaring down at you as you shuffle about on your knees, Mistress Amber sneers, [amber.speech(Now, you're going to show everyone here what a useless bitch you are!)]
+		然后把你拖到她主人家门前的街上。安柏主人冷笑着瞪着跪在地上瑟瑟发抖的你，[amber.speech(现在，你要让每个路过的人都看清楚，你是个多么没用的婊子！)]
 	</p>
 	<p>
-		Letting you go, Mistress Amber moves around in front of you, before raising her foot and pushing her heel into your face. [amber.speech(Lick it, bitch.)]
+		放开你后，安柏主人走到你面前，然后抬起脚，将脚跟踩到你的脸上。[amber.speech(舔吧，婊子。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRY"><![CDATA[
 	<p>
-		[pc.speech(I have nothing to apologise for, Amber,)] you state. [pc.speech(So if you'll kindly step aside, I have business with your master.)]
+		[pc.speech(我没什么好道歉的，安柏。)]你冷冷地说，[pc.speech(所以，劳烦您靠边站，我有话要和你主人说。)]
 	</p>
 	<p>
-		Amber grits her teeth, but, bound by her master's instructions, she steps back and allows you to step inside. With a furious snarl, she slams the door behind you as you enter, and, pushing her way past you, she looks back over her shoulder as she growls, [amber.speech(If you cause any trouble, I <i>will</i> get the Enforcers involved; Lilaya's protection be damned!)] With that, she strides off into the house, leaving you alone in the entrance hall.
+		安柏咬牙切齿地瞪着你，但主人已经给她下了命令，她只得退后一步，让你走了进去。你进门之后，她砰的一声关上了你身后的门，然后推了你一把，从你旁边走了过去，一边回头看你一边威胁道，[amber.speech(要是你犯了法，我就有机会<i>找执法者</i>把你抓起来，给我当奴隶，莉莱雅来了也不好使，听明白了吗，婊子！)]就这样，她大步流星地走进了房子，把你一个人留在了门厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRY_MOUTH_BLOCKED"><![CDATA[
 	<p>
-		Mistress Amber grins evilly down at you as she raises her foot and kicks your [pc.arms] out from under you. [amber.speech(Stupid bitch. Push yourself up and crawl inside like the worthless worm that you are.)]
+		安柏主人朝你邪魅一笑，抬起脚将你[pc.arms]从身下踢开。[amber.speech(笨婊子，挺起身子，像虫子一样爬进去吧。)]
 	</p>
 	<p>
-		You let out a sigh, but, not wanting to anger your Mistress, you do as she says, and crawl forwards into the entrance hall. With a derisive laugh, Mistress Amber shuts the door behind you as you make your humiliating entry, and, stepping past you, she turns to look down at you as she growls, [amber.speech(If you cause any trouble, I <i>will</i> get the Enforcers involved; Lilaya's protection be damned! Do you understand, bitch?)]
+		你叹了一口气，但又不想激怒主人，只好照她说的做，爬着进入入口大厅。当你屈辱地走进去时，你听见了安柏主人的嘲笑声。她关上了你身后的门，走过你身边时，她转过身低头看向你，[amber.speech(要是你犯了法，我就有机会<i>找执法者</i>把你抓起来，给我当奴隶，莉莱雅来了也不好使，听明白了吗，婊子？)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber.)] you reply, eager to get this over and done with.
+		[pc.speech(明白了，安柏主人。)]你急于脱身，于是便顺从地回答了她。
 	</p>
 	<p>
-		[amber.speech(Good bitch. Now, I'm not going to waste my time escorting you around the house, so you'd better be on your best behaviour in my absence. Let yourself out when you're ready to leave.)] With that, she strides off into the house, leaving you alone in the entrance hall.
+		[amber.speech(好婊子，现在，我可不想浪费时间陪你在房子里转来转去，所以我不在的时候，你最好乖乖听话，逛够了就自己滚出去吧。)]就这样，她大步流星地走进了房子，把你一个人留在了门厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRY_APOLOGISE"><![CDATA[
 	<p>
-		[pc.speech(You're being completely unreasonable here, Amber,)] you say, standing up and shaking your head at the fiery-haired maid. [pc.speech(I've already apologised, I'm <i>not</i> going to lick your shoes!)]
+		[pc.speech(别发癫了，安柏，)]你对着头发闪着光的女仆摇了摇头，[pc.speech(我已经道过歉了，<i>不打算</i>舔你的鞋子！)]
 	</p>
 	<p>
-		[amber.speech(Don't you <i>dare</i> take that tone with me, you worthless bitch!)] Amber spits, her eyes glowing with an intense fury as you disobey her command.
+		[amber.speech(你居然<i>敢</i>这么和我说话，垃圾婊子！)]安柏因你的抗拒而火冒三丈，朝你啐了一口。
 	</p>
 	<p>
-		[pc.speech(Just let me inside,)] you sigh, stepping forwards.
+		[pc.speech(让我进去，我不想再说一遍。)]你叹了口气，走上前去。
 	</p>
 	<p>
-		Amber snarls, but, bound by her master's orders, she steps back, allowing you to enter Zaranix's home. With a furious snarl, she slams the door behind you as you enter, and, pushing her way past you, she looks back over her shoulder as she growls, [amber.speech(If you cause any trouble, I <i>will</i> get the Enforcers involved; Lilaya's protection be damned!)] With that, she strides off into the house, leaving you alone in the entrance hall.
+		安柏看上去已经气到要发疯了，但是她不敢违抗主人的命令，于是后退一步，让你进入了扎拉尼克斯家。她恶狠狠地发着牢骚，在你进门之后，砰的一声关上了身后的门，然后从你旁边挤过去，回头看向你，[amber.speech(要是你犯了法，我就有机会<i>找执法者</i>把你抓起来，给我当奴隶，莉莱雅来了也不好使，听明白了吗，婊子！)]就这样，她大步流星地走进了房子，把你一个人留在了门厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRY_RELUCTANT_LICKING"><![CDATA[
 	<p>
-		[pc.speech(Was that to your liking, Mistress Amber?)] you ask, trying to push the thought of what you've just done out of your head as you look up at the fiery-haired maid.
+		[pc.speech(你喜欢这样吗，安柏主人？)]你问道，抬起头看着这位头发如火焰般闪耀的女仆，试图把刚才的想法从脑子里赶走。
 	</p>
 	<p>
-		[amber.speech(I suppose.)] Amber grins evilly down at you as she raises her foot one last time and pushes her shoe against your [pc.lips+]. [amber.speech(Good bitch. Now crawl inside like the worthless worm that you are.)]
+		[amber.speech(也许吧。)]安柏邪魅一笑，抬起脚，把脚抵在你[pc.lips+]上。[amber.speech(好婊子，我允许你像虫子一样爬进去。)]
 	</p>
 	<p>
-		You let out a sigh, but, not wanting to anger Amber, you do as she says, and crawl forwards into the entrance hall. With a derisive laugh, Amber shuts the door behind you as you make your humiliating entry, and, stepping past you, she turns to look down at you as she growls, [amber.speech(If you cause any trouble, I <i>will</i> get the Enforcers involved; Lilaya's protection be damned! Do you understand, bitch?)]
+		你叹了一口气，但又不想激怒安柏，便只好照她说的做，爬着进了玄关。当你屈辱地爬进去时，安柏大笑起来，在你身后关上了门。她走过你身边时，转过身来低头看了你一眼，[amber.speech(要是你犯了法，我就有机会<i>找执法者</i>把你抓起来，给我当奴隶，莉莱雅来了也不好使，听明白了吗，婊子？)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber.)] you reply, eager to get this over and done with.
+		[pc.speech(明白了，安柏主人。)]你急于脱身，于是便顺从地回答了她。
 	</p>
 	<p>
-		[amber.speech(Good bitch. Now, I'm not going to waste my time escorting you around the house, so you'd better be on your best behaviour in my absence. Let yourself out when you're ready to leave.)] With that, she strides off into the house, leaving you alone in the entrance hall.
+		[amber.speech(好婊子，现在，我可不想浪费时间陪你在房子里转来转去，所以我不在的时候，你最好乖乖听话，逛够了就自己滚出去吧。)]就这样，她大步流星地走进了房子，把你一个人留在了门厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRY_EAGER_LICKING"><![CDATA[
 	<p>
-		[pc.speech(Mistress Amber... Please... I don't want to...)] you meekly whimper, reluctant to lick the filthy soles of Mistress Amber's shoes.
+		[pc.speech(安柏主人……求你了……我不想这样……)]你温顺地恳求着，不愿意去舔安柏主人肮脏的鞋子。
 	</p>
 	<p>
-		[amber.speech(<i>Bad</i> bitch,)] Mistress Amber spits, glaring evilly down at you as she raises her foot one last time to roughly push her shoe against your [pc.lips+]. [amber.speech(You can kiss it instead.)]
+		[amber.speech(<i>坏</i>婊子，)]安柏主人啐了你一口，眼神里折射出狡猾的光芒，她将鞋子狠狠抵在了你[pc.lips+]上，[amber.speech(饶了你，亲一口就行。)]
 	</p>
 	<p>
-		[pc.speech(Thank you, Mistress Amber!)] you cry out, happy that your Mistress isn't going to force you to lick her soles. Obediently doing as you're told, you plant a loving kiss on Mistress Amber's shoe, before leaning back and looking up at her. [pc.speech(May I enter now, Mistress Amber?)]
+		[pc.speech(谢谢你，安柏主人！)]你很高兴安柏主人没有强迫你舔她的鞋底，于是听话地在鞋上亲了一下，然后向后靠去，抬头看向她。[pc.speech(我可以进去了吗，主人？)]
 	</p>
 	<p>
-		Having had her fun, Amber snaps her fingers at her side. [amber.speech(Fine. Heel.)]
+		安柏似乎玩够了，于是打了个响指，[amber.speech(好了，滚过来吧。)]
 	</p>
 	<p>
-		You do as you're told, looking down at the ground and trying your best to ignore the fading laughter of the succubi as they move off and carry on with their business. Crawling alongside Amber, you're quickly led back up the couple of steps to Zaranix's front door.
+		你听话地低头看着地面，尽量不去理会附近魅魔那渐渐远去的嘲笑声，继续跟在安珀后面爬行，你很快被领上了几级台阶，来到了前门。
 	</p>
 	<p>
-		[amber.speech(Come on then, bitch. Crawl inside like the worthless worm that you are.)]
+		[amber.speech(像虫子一样爬进来吧。)]
 	</p>
 	<p>
-		You let out a happy little cry, and, rushing to obey Mistress Amber, you do as she says and crawl forwards into the entrance hall. With a derisive laugh, Mistress Amber shuts the door behind you as you make your humiliating entry, and, stepping past you, she turns to look down at you as she growls, [amber.speech(If you cause any trouble, I <i>will</i> get the Enforcers involved; Lilaya's protection be damned! Do you understand, bitch?)]
+		你发出一声欢快的叫声，急忙顺从安柏主人的意思，按照她说的爬进了入口大厅。当你屈辱地爬进去时，安柏大笑起来，在你身后关上了门。她走过你身边时，转过身来低头看了你一眼，[amber.speech(要是你犯了法，我就有机会<i>找执法者</i>把你抓起来，给我当奴隶，莉莱雅来了也不好使，听明白了吗，婊子？)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! I'll be good, Mistress Amber!)] you quickly reply, eager to obey.
+		[pc.speech(好的，主人，我会听话！)]你急切地回答，向她表明了你顺从的态度。
 	</p>
 	<p>
-		[amber.speech(Good bitch. Now, I'm not going to waste my time escorting you around the house, so you'd better be on your best behaviour in my absence. Let yourself out when you're ready to leave.)] With that, she strides off into the house, leaving you alone in the entrance hall.
+		[amber.speech(好婊子，现在，我可不想浪费时间陪你在房子里转来转去，所以我不在的时候，你最好乖乖听话，逛够了就自己滚出去吧。)]就这样，她大步流星地走进了房子，把你一个人留在了门厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRY_SOLES_LICKING"><![CDATA[
 	<p>
-		[amber.speech(What a good bitch you are,)] Mistress Amber sneers, glaring evilly down at you as she raises her foot one last time to roughly push the sole of her shoe against your [pc.lips+]. [amber.speech(You're very lucky to be allowed to clean the grim from my shoes, aren't you?)]
+		[amber.speech(真是个好婊子，)]安柏主人冷笑着，恶狠狠地瞪着你，她抬起脚，粗暴地用鞋底抵住你的[pc.lips+]。[amber.speech(能有机会用舌头清理我的鞋子，你可真是走运，对吧？)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you cry out, desperately licking the bottom of Mistress Amber's shoe, before she steps back and moves to one side.
+		[pc.speech(是的，主人！)]你拼命舔着安柏主人的鞋底，直到她退后一步，走到一边。
 	</p>
 	<p>
-		[amber.speech(Come on then, bitch. Crawl inside like the worthless worm that you are,)] Mistress Amber commands.
+		[amber.speech(像虫子一样爬进来吧。)]安柏主人命令道。
 	</p>
 	<p>
-		You let out a happy little cry, and, rushing to obey your Mistress, you do as she says and crawl forwards into the entrance hall. With a derisive laugh, Mistress Amber shuts the door behind you as you make your humiliating entry, and, stepping past you, she turns to look down at you as she growls, [amber.speech(If you cause any trouble, I <i>will</i> get the Enforcers involved; Lilaya's protection be damned! Do you understand, bitch?)]
+		你发出一声欢快的叫声，急忙顺从安柏主人的意思，按照她说的爬进了入口大厅。当你屈辱地爬进去时，安柏大笑起来，在你身后关上了门。她走过你身边时，转过身来低头看了你一眼，[amber.speech(要是你犯了法，我就有机会<i>找执法者</i>把你抓起来，给我当奴隶，莉莱雅来了也不好使，听明白了吗，婊子？)]
+
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! I'll be good, Mistress Amber!)] you quickly reply, eager to obey.
+		[pc.speech(好的，主人，我会听话！)]你急切地回答，向她表明了你顺从的态度。
 	</p>
 	<p>
-		[amber.speech(Good bitch. Now, I'm not going to waste my time escorting you around the house, so you'd better be on your best behaviour in my absence. Let yourself out when you're ready to leave.)] With that, she strides off into the house, leaving you alone in the entrance hall.
+		[amber.speech(好婊子，现在，我可不想浪费时间陪你在房子里转来转去，所以我不在的时候，你最好乖乖听话，逛够了就自己滚出去吧。)]就这样，她大步流星地走进了房子，把你一个人留在了门厅。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_LICKING_RELUCTANT"><![CDATA[
 	<p>
-		Not seeing any alternative, you hesitantly
+		你看上去别无选择，于是犹豫地
 		#IF(pc.isTaur())
-			 lie down on your lower [pc.legRace]'s body
+			伏下你[pc.legRace]的身体，
 		#ELSE
-			 drop down onto all fours
+			趴下来，
 		#ENDIF
-		 as the maid commands. Sensing your reluctance, the succubus growls down to you, [amber.speech(Come on, bitch, I haven't got all day!)]
+		像女仆命令的那样做。魅魔看到了你眼神中的不情愿，于是俯下身来，[amber.speech(快点过来，婊子，没时间等你。)]
 	</p>
 	<p>
-		Still feeling uneasy about what it is you're expected to do, you falter a little as you slowly drop your face down towards her feet.
+		你仍然对自己要做的事情感到不安，当你慢慢地把脸贴向她的双脚时，你有点动摇了。
 	</p>
 	<p>
-		[amber.speech(What are you doing?!)] the succubus angrily shouts, [amber.speech(You're to answer, 'Yes, Mistress Amber!', and immediately obey my commands! Now let's try it again shall we?! 'Come on, bitch, I haven't got all day!')]
+		[amber.speech(你在干什么？！)]魅魔尖叫道，[amber.speech(你要先回答‘好的，安柏主人’然后立刻滚过来！现在，我们再来一遍？！‘快点过来，婊子，没时间等你’。)]
 	</p>
 	<p>
-		You let out a humiliated whimper as you do as you're told, and answer Amber in the proper manner, [pc.speech(Yes, Mistress Amber!)]
+		你发出了屈辱的低吟，颤抖地小声咕哝道，[pc.speech(好的，安柏主人。)]
 	</p>
 	<p>
-		An evil, mocking laugh drifts down to you, and, still in full sight of the street behind you, you drop your mouth down to Amber's feet. The black high heels that she's wearing are in keeping with the rest of her maid's uniform, with a little lacy white bow adorning each one. Deciding to choose her right foot, you bring your [pc.lips+] down to the black leather, breathing in the faint, warm scent of sweat as your nose draws near to her white cotton stockings.
+		你听到了嘲弄的笑声从身后的街道上传来。你把嘴凑到了安柏的脚边。她穿的黑色高跟鞋与女仆装的其他部分一致，每只鞋上都有一个花边白色小蝴蝶结。你决定舔她的右脚，将[pc.lips+]贴在了黑色皮革上，当你的鼻子靠近她的白色棉质丝袜时，她那淡淡的、温暖的汗味飘进了你的鼻子里。
 	</p>
 	<p>
-		[amber.speech(Lick it, bitch,)] Amber snarls, eager to see you humiliate yourself. [amber.speech(You wouldn't want to make me angry, now, would you?)]
+		[amber.speech(舔啊，婊子。)]安柏急切地想要羞辱你，[amber.speech(你不想让我生气，对吧？)]
 	</p>
 	<p>
-		Deciding that it's best to do this quickly and get it over with, you press your [pc.lips] down against the tip of Amber's shoe, before pushing forwards and dragging your [pc.tongue+] up and over her feminine footwear. The bitter, tangy taste of leather, dirt, and shoe polish overwhelms your taste buds, and you struggle to stop yourself from gagging as you draw back, wiping your tongue on your shoulder as you try to remove the horrible taste from your mouth.
+		你决定最好速战速决，于是将[pc.lips]压在安柏的鞋尖上，然后向前推，将[pc.tongue+]向上拖，在她的鞋子上来回摩擦。皮革、污垢和鞋油的苦涩味道淹没了你的味蕾，你一边努力阻止自己咽口水，一边舔舐肩膀来擦拭舌头，试图去除口中的恐怖味道。
 	</p>
 	<p>
-		[amber.speech(Hahaha! How pathetic!)] Amber laughs, lifting her foot and using your [pc.arm] to wipe the saliva clean from her shoe, before turning to call out to a group of passing succubi. [amber.speech(Do you girls want to see something fun?)]
+		[amber.speech(哈哈哈！可怜虫！)]安柏笑着抬起脚，用你[pc.arm]把鞋上的唾液擦干净，然后转身向一群路过的魅魔喊道。[amber.speech(女孩们，来看点有意思的吗？)]
 	</p>
 	<p>
-		The succubi turn towards Amber, and upon seeing your submissive form, they burst out laughing. Amber turns back to you and snarls, [amber.speech(Lick it again, bitch. Slowly, this time.)]
+		魅魔们转向安柏，看到你顺从的样子，她们大笑起来。琥珀转过头对你咆哮，[amber.speech(再舔一遍，婊子，这次慢一点！)]
 	</p>
 	<p>
-		Just wanting to get this experience over with, you do as Amber commands, and, ignoring the giggles and mocking taunts of the group of succubi that quickly surrounds you, you slowly drag your [pc.tongue] once more up the length of Amber's shoe. Once you're done, Amber makes you repeat the motion with her other shoe, laughing along with the group of demons as they cruelly taunt you.
+		你只想快点结束，于是你选择无视那群围上来的魅魔的咯咯笑声和嘲弄奚落声，按照安柏的吩咐，慢慢地将你的[pc.tongue]再一次放到她的鞋子上。完成之后，安柏换了只脚接着让你舔，并和那群恶魔一起毫不留情地奚落你。
 	</p>
 	<p>
-		Having had her fun, Amber snaps her fingers at her side. [amber.speech(Heel.)]
+		玩够之后，安柏命令道，[amber.speech(过来。)]
 	</p>
 	<p>
-		You do as you're told, looking down at the ground and trying your best to ignore the fading laughter of the succubi as they move off and carry on with their business. Crawling alongside Amber, you're quickly led back up the couple of steps to Zaranix's front door.
+		你听话地低头看着地面，尽量不去理会魅魔们渐渐远去的笑声，继续与安珀并肩爬行。你很快被领上了台阶，来到了前门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_EAGER_LICKING"><![CDATA[
 	<p>
-		Eager to show your submission to the dominant maid, you immediately move to do as you're commanded. [pc.speech(Yes, Mistress Amber!)] You happily cry, and, in full sight of the street behind you, you drop your face down towards her feet.
+		你急于服侍这个充满支配欲的女仆，于是立刻按她说的做，[pc.speech(是，主人！)]你高兴地喊着，趴在主人的脚边，全然不顾街上的人投向你的目光。
 	</p>
 	<p>
-		[amber.speech(What an obedient bitch! Come on now, get started! I haven't got all day!)] Mistress Amber laughs, pushing her heel into your face.
+		[amber.speech(真是顺从的婊子！开始吧，我一整天都没脱鞋子！)]安柏主人说着，把高跟鞋贴在了你的脸上。
 	</p>
 	<p>
-		As an evil, mocking laugh drifts down from above, you lower your mouth to Amber's feet. The black high heels that she's wearing are in keeping with the rest of her maid's uniform, with a little lacy white bow adorning each one. Deciding to start with her right foot, you bring your [pc.lips+] down to the black leather, letting out a little moan in anticipation as you breathe in the warm, faintly sweaty scent of her white cotton stockings.
+		嘲弄的笑声传到了你的耳边，而你顾不得这些，把嘴凑到了安柏的脚边。她穿的黑色高跟鞋与女仆装的其他部分是成套的，每只鞋上都缀着一个花边白色小蝴蝶结。你决定从她的右脚开始，将[pc.lips+]凑到她的脚上，贪婪地嗅着她温暖的白色棉袜上淡淡的汗味，同时发出了期待的呻吟。
 	</p>
 	<p>
-		[amber.speech(Lick it, bitch.)] Amber snarls, eager to see you humiliate yourself. [amber.speech(You're enjoying this, aren't you, you filthy slut?)]
+		[amber.speech(舔吧，婊子。)]安柏讥笑着，急于看到你更加下贱的样子，[amber.speech(你喜欢这个，对吧，肮脏的婊子！)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you enthusiastically reply, before pressing your [pc.lips] down against the tip of her shoe. Pushing forwards, you eagerly drag your [pc.tongue+] up and over her feminine footwear, relishing the bitter, tangy taste of leather, dirt, and shoe polish that immediately strikes your taste buds. Pulling back, you start once more from the tip of Mistress Amber's shoe, licking up and down as you seek to clean every [unit.size] of the delicious black leather.
+		[pc.speech(是的，主人！)]你热情地回答，然后将[pc.lips]向下贴在她的鞋尖上。你迫不及待地将[pc.tongue+]伸到她的鞋子上，津津有味地品尝着皮革、污垢和鞋油混合起来的酸涩味道，这种味道立即冲垮了你的味蕾，越是舔舐，越是痴迷于这种味道和感觉。随后，你将舌头拉回来，再次从安柏主人的鞋尖开始，上下舔舐，试图将每一寸美味的黑色皮革都舔干净。
 	</p>
 	<p>
-		[amber.speech(Hahaha! How pathetic!)] Mistress Amber laughs, lifting her foot and using your [pc.arm] to wipe the saliva clean from her shoe, before turning to call out to a group of passing succubi. [amber.speech(Do you girls want to see something fun?)]
+		[amber.speech(哈哈哈，真是下贱到家了！)]安柏主人笑着抬起脚，用你的[pc.arm]把鞋上的唾液擦干净，然后转身向一群路过的魅魔喊道。[amber.speech(女孩们，想看些有意思的吗？)]
 	</p>
 	<p>
-		The succubi turn towards Mistress Amber, and upon seeing your submissive form, they burst out laughing. Amber turns back to you and snarls, [amber.speech(Lick it again, bitch. Slowly, this time.)]
+		魅魔们转头看向安柏主人，当看到你顺从的样子后，她们突然大笑起来。安柏回头命令着你，[amber.speech(再舔一次，这次要慢慢舔，让路过的人都看清楚你这副模样！)]
 	</p>
 	<p>
-		You happily do as the fiery maid commands, and, as the crowd of succubi giggle and taunt you, you slowly lick and kiss your Mistress's shoe. The sadistic succubus joins in with the other girls, cruelly mocking you as you lick her shoe to a spotlessly clean finish. Pulling her foot back, she then pushes her left shoe towards your face, and you submissively set about licking that one clean as well.
+		你高兴地听从着主人的命令，在魅魔的嘲笑和奚落声中，你慢慢地舔舐、亲吻着主人的鞋子。当你把主人的鞋子舔得一尘不染后，这个虐待狂魅魔和其他女孩一起毫不留情地嘲笑你。她把脚收回来，然后把她的左脚推到你的面前，你顺从地开始舔起另一只鞋子。
 	</p>
 	<p>
-		After a short while, you've polished both of Mistress Amber's heels to a shiny finish, and she lets out a spiteful, derisive laugh, [amber.speech(Hahaha! I can't believe how pathetic you are! I bet you want more, don't you bitch?! What do you say girls, should this slut clean my soles as well?)]
+		不大一会儿，你就把安珀主人的两只高跟鞋都舔得锃亮，她发出了一阵唾弃、嘲笑的笑声，[amber.speech(哈哈哈，真不敢相信你这么下贱！我打赌，你还想要更多，是不是？你们说呢，姑娘们？要不要让这个荡妇把我的鞋底也舔干净？)]
 	</p>
 	<p>
-		The crowd of succubi laugh and cry out in assent. You look up at Mistress Amber to see a manic smile break out across her face, and she lifts her shoe up to present the grimy sole to your face. [amber.speech(Get to it, bitch!)]
+		一众魅魔大笑着叫好。你抬起头，看着安柏主人，只见她脸上露出狂躁的笑容，她抬起鞋子，将沾满污垢的鞋底贴在你的脸上。[amber.speech(舔它，婊子！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_SOLES_LICKING"><![CDATA[
 	<p>
-		As Mistress Amber pushes the filthy sole of her heel into your face, you obediently dart out your tongue and start eagerly licking and kissing the undersides of the sadistic maid's shoes. The salty, grimy taste of dirt fills your mouth as you submissively clean the soles, moaning in delight as both Mistress Amber and the crow of succubi continue to sneer and call you degrading names.
+		安柏主人把她肮脏的鞋跟顶到你脸上，你顺从地伸出舌头，热切地对这个施虐狂女仆的鞋底又亲又舔。在你顺从的清理黑皮鞋的鞋底时，又咸又脏的味道弥漫了你的口腔。安柏主人和魅魔冷笑着，还用侮辱性词汇称呼你，这让你更兴奋了，你不禁高兴地呻吟着。
 	</p>
 	<p>
-		After you've finished with the first shoe, Mistress Amber quickly switches you to the next. Pushing the dirty underside of her other heel into your face, she snarls, [amber.speech(Pathetic bitch! Come on, you can do better than that!)]
+		在你清理完这只鞋子后，安柏主人快速地放下脚，把另一只的鞋底伸到你脸上。她龇牙咆哮：[amber.speech(可悲的婊子，来吧，你能做的更好！)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you reply, letting out whimpering little moans as you obediently lick all the dirt from the soles of her shoes.
+		[pc.speech(遵命，安柏主人！)]你回答。发出近乎呻吟的呜咽声，你乖巧地舔着她的鞋子。
 	</p>
 	<p>
-		Once she's satisfied that you've done enough, Mistress Amber lifts her foot a little higher, before forcing the heel into your mouth. After obediently sucking it clean, you lick your lips as Amber pulls back, before forcing you to perform the same treatment on the heel of her other shoe.
+		一旦安柏满足了，她就会把脚抬高一点，强行把脚后跟塞进你的嘴里。你乖乖吸干净鞋子，舔了舔嘴唇。安柏后退一步，要求你如法炮制，把另一只鞋子也舔干净。
 	</p>
 	<p>
-		Finally, you're done, and as Mistress Amber steps back, you feel thoroughly pleased with your work. Both of her shoes are now spotlessly clean, and, having had her fun, the fiery-haired maid snaps her fingers at her side. [amber.speech(Heel.)]
+		最后，你终于做完了，当安柏主人退后时，你看了看，对自己的工作感到非常满意。她的两只鞋现在都干净得一尘不染，这位发色明亮的女仆在尽兴之后，伸手打了个响指。[amber.speech(过来。)]
 	</p>
 	<p>
-		You do as you're told, looking down at the ground and trying your best to ignore the fading laughter of the succubi as they move off and carry on with their business. Crawling alongside Amber, you're quickly led back up the couple of steps to Zaranix's front door.
+		你听话地低头看着地面，尽量不去理会附近魅魔那渐渐远去的嘲笑声，继续跟在安珀后面爬行，你很快被领上了几级台阶，来到了前门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PLACE TILES -->
 	
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		The entrance hall to Zaranix's home, while nothing compared to that of Lilaya's, is nonetheless very impressive. A huge crystal chandelier casts its bright, arcane-powered light over the entire area, and fine paintings in golden frames hang on each of the surrounding walls.
+		扎拉尼克斯家的门厅虽然比不上莉莱雅家，但也非常气派。一盏巨大的水晶吊灯散发着明亮的奥术光芒，笼罩着整个大厅，四周的墙壁上挂满了金色边框的精美油画。
 	</p>
 	<p>
-		The main door to Zaranix's home is made from thick, sturdy oak, and while it would be impossible to break it down, you're already inside, so there's nothing stopping you from simply unlocking it and taking your leave.
+		扎拉尼克斯家的大门是用厚实坚固的橡木制成的，虽然不可能把它砸开，但你已经在里面了，所以你可以直接开锁离开。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		Before you, a wide, red-carpeted staircase leads up to the first floor of Zaranix's house. On either side, a corridor leads to other parts of the house, and behind you, the entrance hall offers an opportunity to make your exit.
+		在你面前的是一条铺着红色地毯的宽阔楼梯，通往扎拉尼克斯家的一楼。两侧的走廊通向房子的其他部分，在你身后是门厅，你可以从那里离开。
 	</p>
 	<p>
-		Much like the rest of the house, the walls surrounding you are home to several fine paintings. Well-crafted cabinets, cushioned chairs, and little wooden tables are strategically dotted about here and there, but not so much so as to make the area seem cluttered.
+		就像房子里的其他地方一样，四周的墙壁上挂着几幅精美的画作。精致的橱柜、软垫座椅和小巧的木桌巧妙地散布在各个角落，但数量恰到好处，不至于让这个区域显得杂乱无章。
 	</p>
 	<p>
-		You could use the stairs here to gain access to the first floor, where both Zaranix and his succubus maid, Kelly, are to be found.
+		你可以利用这里的楼梯进入二楼，在那里你可以找到扎拉尼克斯和他的魅魔女仆，凯丽。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		You find yourself comparing the corridors of Zaranix's home to those of Lilaya's. While they're just as well-furnished as those of your aunt's house, being home to numerous fine paintings, cushioned chairs, and well-crafted cabinets, they're not quite as wide nor high. Where once you might have been deeply impressed by the extravagant luxury of this incubus's mansion, you now find yourself thinking that it's not quite as grand as the one you live in.
+		你把扎拉尼克斯家的走廊和莉莱雅家的走廊作了比较。虽然这些走廊和你姨妈家的一样，都摆放着许多精美的油画、软垫椅和精心制作的橱柜，但却没有那么宽，也没有那么高。以前，你可能会被这个淫梦魔豪宅的奢华所折服，而现在，你却觉得它还不如你住的房子宏伟。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN_ENTRY"><![CDATA[
 	<p>
-		A gravel path snakes through the entirety of Zaranix's garden, but, finding that the stones crunch loudly underfoot, you opt to walk on the small grass verge instead so as to remain as quiet as possible. To either side of the path, numerous flowerbeds and small glass structures are home to an incredible variety of plant-life, much of which is quite clearly alien to your old world.
+		一条碎石小路蜿蜒穿过扎拉尼克斯的整个花园。如果有人走在石头上，脚下就会发出嘎吱嘎吱的响声。你为了尽可能保持安静，选择在小草坪上行走。小路两旁有许多花坛和小型玻璃房，里面种着种类繁多的植物，其中许多显然与你的旧世界格格不入。
 	</p>
 	<p>
-		Although small enough not to pose a threat, you see several, tentacle-like varieties squirming and twisting about with a mind of their own; the brightly coloured flower in the centre of each one looking unmistakably like a vagina. Inspecting yet more of the flora as you move along, you notice that some of these tentacled plants have penis-like endings, and you spend a moment reflecting on the fact that even the plant-life in this world is sexual in nature. From the variety of herbs, plants, and flowers, and the evidence of careful cultivation techniques, it appears as though this garden is less for show, and more for the practical purpose of gathering arcane ingredients.
+		尽管这些植物很小，不会对你构成威胁，但你还是看到了几种触手状的植物在蠕动和扭动，它们有自己的思维；每种触手状植物中心的鲜艳花朵看起来都非常像个阴道。你边走边观察这些植物，注意到其中一些触手状植物有类似阴茎的末端，你不禁陷入沉思，原来这个世界上的植物也有性征这方面。从草药、植物和花卉的种类以及精心栽培的技术来看，这个花园似乎不是为了炫耀，更多是为了收集一些奥术组分。
 	</p>
 	<p>
-		The faint shimmer of an arcane barrier can faintly be seen above the garden's fence, resulting in the only means of exit being to travel back through Zaranix's house to the front door.
+		花园围栏之上，奥术屏障的微光若隐若现，这使你只能从扎拉尼克斯家的大门离开。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN"><![CDATA[
 	<p>
-		A gravel path snakes through the entirety of Zaranix's garden, but, finding that the stones crunch loudly underfoot, you opt to walk on the small grass verge instead so as to remain as quiet as possible. To either side of the path, numerous flowerbeds and small glass structures are home to an incredible variety of plant-life, much of which is quite clearly alien to your old world.
+		一条碎石小路蜿蜒穿过扎拉尼克斯的整个花园。如果有人走在石头上，脚下就会发出嘎吱嘎吱的响声。你为了尽可能保持安静，选择在小草坪上行走。小路两旁有许多花坛和小型玻璃房，里面种着种类繁多的植物，其中许多显然与你的旧世界格格不入。
 	</p>
 	<p>
-		Although small enough not to pose a threat, you see several, tentacle-like varieties squirming and twisting about with a mind of their own; the brightly coloured flower in the centre of each one looking unmistakably like a vagina. Inspecting yet more of the flora as you move along, you notice that some of these tentacled plants have penis-like endings, and you spend a moment reflecting on the fact that even the plant-life in this world is sexual in nature. From the variety of herbs, plants, and flowers, and the evidence of careful cultivation techniques, it appears as though this garden is less for show, and more for the practical purpose of gathering arcane ingredients.
+		尽管这些植物很小，不会对你构成威胁，但你还是看到了几种触手状的植物在蠕动和扭动，它们有自己的思维；每种触手状植物中心的鲜艳花朵看起来都非常像个阴道。你边走边观察这些植物，注意到其中一些触手状植物有类似阴茎的末端，你不禁陷入沉思，原来这个世界上的植物也有性征这方面。从草药、植物和花卉的种类以及精心栽培的技术来看，这个花园似乎不是为了炫耀，更多是为了收集一些奥术组分。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN_ROOM"><![CDATA[
 	<p>
-		Connected to the garden by means of a pair of sliding glass doors, the room you find yourself standing in appears to be some sort of utility room. A row of cupboards and cabinets line one of the walls, while a long counter-top runs the length of the opposite one.
+		你所处的房间通过滑动玻璃门与花园相隔，似乎是个杂物间。其中一面墙上摆放着一排橱柜，对面则是长长的台面。
 	</p>
 	<p>
-		A wooden door, opposite to the glass ones that provide access to the garden, connects this room to the rest of the house, and you wonder if you should proceed into the main building itself, or go back out into the garden.
+		与玻璃门相对的是一扇木门，它将这个房间与屋子的其他部分相连，你在考虑是继续进入主建筑，还是回到花园里去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KATHERINE_PRESENT"><![CDATA[
 	<p>
-		As you walk down the corridor, an ivory-skinned succubus, wearing a light pink maid's uniform, suddenly stands up from behind a cabinet. She doesn't notice you at first, and continues to swipe her little feather-duster over the top of the wooden furniture, happily humming away as she works.
+		当你走过走廊时，一个穿着浅粉色女仆服、象牙色皮肤的魅魔突然从柜子后面站了起来。
+		她一开始并没有注意到你，而是继续在木制家具的顶端挥舞着她的小羽毛掸子，一边工作一边开心地哼着歌。
 	</p>
 	<p>
-		Before you have a chance to say anything, she looks up and catches sight of you. Letting out a little cry, she curtsies as she greets you, [katherine.speech(Ah! [pc.Miss] [pc.name]! Mistress Amber informed me of your visit. I'm Katherine, at your service!)]
+		你还来不及说话，她便抬起头来看到了你。她发出了一小声惊叫，向你行了个屈膝礼：[katherine.speech(啊！[pc.name][pc.Miss]！安柏主人告诉了我您的到访。我是凯瑟琳，随时为您服务！)]
 	</p>
 	<p>
-		As the maid stands up, you see her lustful gaze roaming up and down your body. Biting her lip, she steps towards you, and with more than a little lust in her voice, she moans, [katherine.speech(If there's <i>anything</i> I can do for you, just let me know. Master Zaranix only has time for Amber these days... N-Not that I'm complaining, but... Well... My sister and I get lonely, you understand...)]
+		女仆说罢起身，你发现她淫荡的目光在你身上游移。她咬着嘴唇向你走来，声音中多了几分情欲，呻吟道：[katherine.speech(如果您有<i>任何</i>需要我帮忙的地方，请务必告诉我。扎拉尼克斯大人现在只有时间陪安柏女士……不，不是在抱怨，但……嗯……我和姐妹会感到有些寂寞，您明白吗……)]
 	</p>
 	<p>
-		Katherine giggles, and, as she bats her eyelids at you, drops the little feather duster that she's holding. [katherine.speech(Oops!)] she cries, pretending that it was by accident. Bending over right in front of you, she makes a show of flashing her crotchless pink thong in your direction, granting you an unobstructed view of her [katherine.pussy+]. Obviously desperate for you to fuck her, you wonder if you should make a move on this horny maid...
+		凯瑟琳咯咯笑了起来，一边眨了眨眼睛，手中的小羽毛掸也掉落而下。[katherine.speech(哦！)]她叫了一声，假装是不小心的。她在你面前弯下腰，露出她的开裆粉色丁字裤，让你一览无余地看到她[kelly.pussy+]。显然，她急切地想让你上她，你思索要不要对这个饥渴的女仆采取行动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KATHERINE_PRESENT_REPEAT"><![CDATA[
 	<p>
-		Up ahead, you see the ivory-skinned maid, Katherine, busily dusting one of the corridor's picture frames. As you approach, you see that the maid glances at you out of the corner of her eye. Instead of turning and acknowledging your presence, however, Katherine pretends not to have seen you, and suddenly bends over to dust the skirting board. The horny maid makes a show of flashing her crotchless pink thong in your direction, granting you an unobstructed view of her [katherine.pussy+].
+		你看到象牙色皮肤的女仆凯瑟琳就站在前面，她正在忙着给走廊上的一个相框掸掉灰尘。当你走近时，你看到女仆用眼角的余光瞥了你一眼。然而，凯瑟琳并没有转过身来和你打招呼，而是假装没看见你，突然弯下腰去掸踢脚板上的灰尘。这位好色的女仆故意向你展示了她开裆的粉红色丁字裤，她[katherine.pussy+]暴露在你的视线之下。
 	</p>
 	<p>
-		Turning her head to look back at you, Katherine lets out a little cry as she rather-unconvincingly pretends to have only just noticed you. Standing up to face you, she curtsies and bites her lip to suppress a needy moan. [katherine.speech([pc.Miss] [pc.name]! How pleasant to see you again! If there's <i>anything</i> I can help you with, just let me know!)]
+		凯瑟琳扭头看了你一眼，发出一声轻微的惊叫，假装刚刚才注意到你。她站起来面对你，弯下腰和你打招呼，从她那舔舐嘴唇的动作和已经快要压抑不住的娇喘中，你能看出她已经欲火焚身。[katherine.speech([pc.name][pc.Miss]！很高兴能再次见到您！如果您有<i>任何</i>的需求，请告诉我！)]
 	</p>
-	<p> Obviously desperate for you to fuck her, you wonder if you should make a move on this horny maid...
+	<p> 这位好色的女仆就差把欠操两个字写在脸上了，你在思考要不要满足她一下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KATHERINE_SEX"><![CDATA[
 	<p>
-		Deciding to take up Katherine's transparent offer of sex, you step forwards, grinning as you let your gaze wander up and down over the maid's perfect body. [pc.speech(Well, there is one thing that a horny little succubus like you could do for me.)] 
+		你决定满足凯瑟琳那昭然若揭的欲望，于是上前一步，目光在女仆完美的身材上游离。[pc.speech(好啊，我觉得，像你这样饥渴的小恶魔，能为我做的只有一件事了吧。)] 
 	</p>
 	<p>
-		Katherine lets out an excited squeal as she gazes into your eyes, and you see them filled with a desperate, burning lust. Bounding forwards, she suddenly wraps her arms around your back, and with a desperate moan, presses her [katherine.lips+] against yours. You reciprocate the gesture, and after spending a few moments sliding your tongues into one another's mouths, you pull back, grinning...
+		凯瑟琳发出一声兴奋的尖叫，她凝视着你的眼睛，你看到她的眼睛里充满了急切而炽热的欲望。她猛地向前一扑，突然用双臂搂住你，发出一声期待的呻吟，将她[katherine.lips+]紧紧贴在你的唇上。你回吻她，两个人的舌头纠缠了片刻后，你放开了她，微微一笑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KATHERINE_SEX_SUB"><![CDATA[
 	<p>
-		Not willing to take the dominant role, but with a deep desire to have sex with this horny succubus, you smile coyly at her. [pc.speech(Katherine... Erm... If you're feeling a little horny, perhaps you could use me? I mean, I-)]
+		你不想做主动的一方，但你确实对这个淫荡的魅魔产生了深深的——性趣。于是，你羞怯地对她笑了笑，[pc.speech(凯瑟琳……呃……如果你觉得有点饥渴难耐，也许我是说，我可以为你排解一下……)]
 	</p>
 	<p>
-		Katherine lets out an excited squeal, interrupting your sentence as she bounds forwards and wraps her arms around your back. With a desperate moan, she quickly presses her [katherine.lips+] against yours. You reciprocate the gesture, but only spend a few moments sliding your tongues into one another's mouths before Katherine pulls back, moaning, [katherine.speech(Oh yes! Fuck... I'm so fucking horny! I <i>need</i> you!)]
+		凯瑟琳发出一声兴奋的尖叫，打断了你的话，她向前一跃，双手环过你的后背。随着一声急切的呻吟，她迅速将[katherine.lips+]贴到了你的唇上。你也做出了回应，但你们的舌头只在彼此的嘴里缠绵了片刻，凯瑟琳就呻吟着抽回了手，[katherine.speech(哦，当然了！啊……我已经按耐不住了！我<i>想要</i>你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KATHERINE_SEX_DECLINED"><![CDATA[
 	<p>
-		You're not really interested in Katherine's transparent offer of sex right now. [pc.speech(Thank you, Katherine, but there's nothing I need from you at the moment.)]
+		你决定无视她那昭然若揭的欲望，假装什么都不知道。[pc.speech(谢谢你，凯瑟琳，不过我暂时不需要你帮忙。)]
 	</p>
 	<p>
-		[katherine.speech(Aww! Well, if you change your mind, you know where to find me!)] Katherine smiles, before turning away and continuing with her work.
+		[katherine.speech(啊……好吧，如果你需要我，你知道去哪里找我的。)]凯瑟琳微笑着看了看你，然后转过身，继续做她的工作。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_KATHERINE_SEX"><![CDATA[
 	<p>
-		Katherine lets out a deeply satisfied sigh as you pull away from her, [katherine.speech(~Aaah!~ Fuck... That was great!)]
+		你与凯瑟琳拉开距离，只听她满足地深深叹息：[katherine.speech(~啊！~操……太爽了！)]
 	</p>
 	<p>
-		As you gather your things and prepare to move on, Katherine slumps back against the nearest wall, her hand slipping down between her legs as she slowly strokes herself. [katherine.speech(~Mmm!~ That was so good...)]
+		你收拾好东西准备继续前进，而凯瑟琳靠在最近的墙上，手滑落到两腿之间，慢慢地抚摸着自己：[katherine.speech(~嗯！~真不错……)]
 	</p>
 	<p>
-		Deciding to leave Katherine to bask in her post-sex afterglow, you turn around and continue down the corridor.
+		你转身沿着走廊离去，留下凯瑟琳沉浸在性爱的余韵中。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_KATHERINE_SEX_NO_ORGASM"><![CDATA[
 	<p>
-		Katherine lets out a disappointed whine as you pull away from her, [katherine.speech(Aww! I didn't even get to cum!)]
+		你与凯瑟琳拉开距离，只听她失落地哀鸣道：[katherine.speech(啊！我甚至一次都没去！)]
 	</p>
 	<p>
-		As you gather your things and prepare to move on, Katherine slumps back against the nearest wall, her hand slipping down between her legs as she seeks to finish herself off. [katherine.speech(Y-You carry on... ~Mmm!~ This won't take me long... ~Aaah!~)]
+		就在你收拾好东西准备走人时，凯瑟琳突然往旁边的墙壁上一靠，双手滑入腿间，想要把自己玩弄到高潮：[katherine.speech(你，你继续啊……~嗯！~不会太久的……~嗯啊！~)]
 	</p>
 	<p>
-		Doing as the unsatisfied maid suggests, you turn around and continue down the corridor.
+		你按照那个欲求不满的女仆的建议，转身沿着走廊离开了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM"><![CDATA[
 	<p>
-		The door to this room is locked, and there's no sound of anyone within. Knowing that it's sure to just be a dull and uninteresting dead-end, you decide against trying to force the door open, and turn around to continue on your exploration of Zaranix's home.
+		这个房间的门是锁着的，里面也没有人的声音。你知道这肯定只是一个毫无意义的死胡同，所以决定不再试图强行开门，而是转身继续探索扎拉尼克斯的家。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE"><![CDATA[
 	<p>
-		You find yourself standing in Zaranix's grand drawing room. Several sofas and chairs are tastefully arranged around a low table in the centre of the room, while numerous bookcases and cabinets line the floral-wallpapered walls. The high ceiling is home to an exceptionally extravagant chandelier, while the floor underfoot is covered in thick, cream-coloured carpet.
+		你正置身于扎拉尼克斯那富丽堂皇的客厅中。大厅中央的矮桌旁摆放着几张沙发和椅子，墙壁上贴着碎花壁纸，贴靠着许多书柜和橱柜。高高的天花板上挂着一盏异常奢华的吊灯，脚下铺着厚厚的乳白色地毯。
 	</p>
 	<p>
-		Amber is present in this room, and, being occupied with busily dusting and polishing several ornamental objects in a display cabinet, she hasn't noticed your entry. You could walk up to her and say hello, but, knowing her fiery temperament, she's sure to demand something of you...
+		安柏就在这个房间里，她似乎正在忙着擦拭展示柜里几件装饰品的灰尘，并没有注意到你的到来。你可以走上前去和她打招呼，但你也熟知她的火爆脾气，她肯定会对你有所要求……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_GREETING"><![CDATA[
 	<p>
-		Deciding that you'd like to say hello to the fiery-haired succubus, you start to walk towards her. As you draw near, she turns her head to one side, and, obviously having heard your approach, she then turns to face you.
-	]]>
-	</htmlContent>
+		你决定跟这个头发如火焰般闪耀的魅魔打个招呼，于是走了过去。你一靠近，她就转过头来，很明显，她听见了你的脚步声。
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_GREETING_BAD_WEATHER"><![CDATA[
-		[amber.speech(Well, if it isn't the worthless bitch. If it wasn't for this awful weather, I'd have considered taking you out for a walk. It looks as though I'll have to find another way to put you in your place.)]
+		[amber.speech(呦，这不是那个没用的婊子吗？要不是天气很烂，我还想带你出去散散步呢。看来我得另想办法让你认清地位了。)]
 	</p>
 	<p>
-		Amber places her feather duster down on a nearby cabinet, before walking over to one of the sofas. Glaring at you with her luminescent amber eyes, she snaps her fingers at the floor. [amber.speech(Come over here and get down on the floor. I need a break, and you're going to be my foot stall.)]
+		安柏把鸡毛掸子放在旁边的柜子上，然后走到一张沙发前。她用琥珀色的眼睛瞪着你，然后对着地板打了个响指。[amber.speech(过来趴下，我得歇会，你就来当我的脚垫好了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_GREETING_GOOD_WEATHER"><![CDATA[
-		[amber.speech(Well, if it isn't the worthless bitch. As the weather outside is acceptable at the moment, I think I'll take you for a walk.)]
+		[amber.speech(呦，这不是那个没用的婊子吗？现在外面的天气还不错，我想我该带你出去走走。)]
 	</p>
 	<p>
-		Before you can respond, the fiery maid snaps her fingers at the floor, before snarling at you, [amber.speech(Come over here and get down on all fours. A bit of public humiliation will do you good.)]
+		不等你说什么，女仆便朝地面打了个响指，对你呵斥道，[amber.speech(跪着爬过来，我觉得当着路人面羞辱你一番是个不错的主意。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FOOT_STALL"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you reply, obediently walking over to where the fiery demon is standing, before
+		[pc.speech(好的，安柏主人。)]你顺从地走到这个暴躁的恶魔面前，在她面前
 		#IF(pc.isTaur())
-			 lying down on your lower [pc.legRace]'s body
+			伏下了你[pc.legRace]身体。
 		#ELSE
-			 dropping down onto all fours
+			趴了下来。
 		#ENDIF
-		 in front of her.
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Amber says, collapsing down onto the sofa. Lifting her legs up, she then roughly drops her feet down onto your back, before commanding, [amber.speech(Now stay still while I relax.)]
+		[amber.speech(好婊子。)]安柏躺倒在沙发上，抬起双腿，然后粗暴地把脚放到你的背上，命令道，[amber.speech(我休息的时候，你不许动。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you reply once more, holding yourself steady as the sadistic succubus uses you as her foot rest.
+		[pc.speech(好的，主人。)]你再次回答，当这个虐待狂魅魔把你当成她的脚凳时，你尽全力稳住了自己。
 	</p>
 	#IF(game.isFootContentEnabled())
 		<p>
-			After a few minutes of relative peace, Mistress Amber moves her feet off your back, and, dropping them down in front of your face, she snarls, [amber.speech(That's enough easy work for you. Take my shoes off and give me a foot massage, bitch.)]
+			几分钟后，安柏主人把脚从你的背上挪开，伸到你面前，吼道，[amber.speech(这对你太简单了，婊子。现在，把我的鞋子脱下来，按摩一下我的脚。)]
 		</p>
 	#ELSE
 		<p>
-			After a few minutes of relative peace, Mistress Amber moves her feet off your back, and after quickly standing up, she triumphantly sneers, [amber.speech(Good bitch. Come back when the weather's nice, and I'll take you for a little walk outside. For now, however, get out of my sight.)]
+			几分钟后，安柏主人把脚从你的背上挪开，然后迅速站起来，发出自鸣得意的笑声，[amber.speech(好婊子，天气好的时候再来，我带你到外面散散步。不过现在，先从我眼前消失吧。)]
 		</p>
 		<p>
-			[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you say, quickly standing up and moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having pleased your Mistress, you wonder what you should do next.
+			[pc.speech(好的，主人，谢谢你！)]你迅速站起身，向门口走去。你回头看了一眼这个头发发光的魅魔，只见她拿起羽毛掸继续打扫卫生。在取悦了主人之后，你在想接下来该做些什么。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_DECLINED_FOOT_STALL"><![CDATA[
 	<p>
-		[pc.speech(I'm not going to be your foot stool, Amber,)] you reply, crossing your arms and frowning at the demanding succubus.
+		[pc.speech(我可不想做你的脚垫，安柏。)]你双手抱胸，蹙着眉看着这个苛刻的魅魔回答道。
 	</p>
 	<p>
-		[amber.speech(Useless bitch!)] Amber growls, before turning back to continue with her work. [amber.speech(Don't disturb me again, unless you've decided to act like the worthless bitch you are.)]
+		[amber.speech(没用的婊子！)]安柏咒骂着，转过身继续工作，[amber.speech(要是你不打算像个可怜的婊子一样过来讨好我，那就给我滚一边去，别来烦我。)]
 	</p>
 	<p>
-		Letting out a sigh, you step back from the fiery-haired succubus, before wondering what to do next.
+		你叹了口气，离开这个头发如火焰般闪耀的魅魔，思考接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FOOT_MASSAGE_REFUSED"><![CDATA[
 	<p>
-		[pc.speech(Sorry, Mistress Amber, but that's a little too much for me...)] you say, averting your eyes from the succubus's furious glare as you refuse to obey her command.
+		[pc.speech(抱歉，主人安柏，但这对我太超前了……)]你拒绝服从魅魔的命令，避免与她愤怒的目光相接。
 	</p>
 	<p>
-		[amber.speech(Worthless bitch!)] Amber growls, before kicking you in the side and standing up. [amber.speech(Get out of my sight, and don't bother disturbing me again until you've decided to act like the worthless bitch you are.)]
+		[amber.speech(贱货！)]安柏怒吼着把你一脚踢开，猛然起身，[amber.speech(滚出我的视线，不要再打扰我，除非你决定像个没用的婊子一样。)]
 	</p>
 	<p>
-		As Mistress Amber moves off to continue with her work, you stand up and move towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having failed your Mistress, you wonder what you should do next.
+		[pc.speech(好的，谢谢你，主人！)]你说着，迅速站起身，向门口走去。你回头看了一眼这个发型引人注目的魅魔，只见她拿起鸡毛掸子继续打扫卫生。在扫了主人的兴之后，你在想接下来该做些什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FOOT_MASSAGE"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you quickly respond, before reaching down and taking hold of her right foot. Taking care to be extra gentle, you delicately slide her high heel off, before placing it to one side. Gently lowering her foot, you then repeat the gesture with her left, leaving her feet covered only by her white cotton stockings.
+		[pc.speech(好的，主人！)]你俯下身，端起了她的右脚，仿佛对待贵重的工艺品一样，小心翼翼地脱去了她的高跟鞋，放在一边。你对她的左脚做了同样的事情，现在，她穿着棉袜的双足摆在了你的眼前。
 	</p>
 	<p>
-		[amber.speech(Come on then, bitch, get started already!)] Amber snaps, swiping her right foot across to deliver a quick kick to your [pc.arm].
+		[amber.speech(继续，婊子，该开始了！)]安柏厉声喝道，用右脚踢了踢你的[pc.arm]。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Sorry, Mistress Amber!)] you cry, quickly moving your [pc.hands] down to take hold of the foot that just whacked into you.
+		[pc.speech(好的，对不起，主人！)]你迅速把[pc.hands]移到下面，接住了刚刚踢你的那只脚。
 	</p>
 	<p>
-		Slowly moving your [pc.fingers] over the soft cotton of her stockings, you apply a gentle pressure to Mistress Amber's slender foot as you start your massage. Working your way up from the heel, you press your fingertips up against her high arches, smiling with delight as you hear your Mistress let out a heavy, satisfied sigh. Continuing with your upwards movement, you start to massage Mistress Amber's toes, lovingly working your [pc.fingers] over each one as you seek to leave no part of her foot untouched.
+		你[pc.fingers]在她柔软的棉袜上慢慢移动，轻轻地按压主人安柏那纤细的脚。从脚跟开始向上，用指尖按压她高高的足弓，当听到主人发出一声沉重而满足的叹息时，你欣慰地笑了出来，继续向上移动，开始按摩安柏主人的脚趾。你用你[pc.fingers]在她的每根脚趾上爱怜地抚摸，力求不放过她脚上的任何一个部位。
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Amber sighs, the noticeably softer tone of her voice revealing how much she's enjoying your attention. [amber.speech(Now move on to my left.)]
+		[amber.speech(好婊子。)]安柏叹了口气，柔和的语调暴露出她享受在你的按摩当中，[amber.speech(现在，换左脚。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber.)] you say, gently lowering her right foot, before taking hold of her left and starting to repeat the process. Working your way up from her heel, you slowly and lovingly apply a steady pressure to each part of her foot, before finishing with her little cotton-covered toes.
+		[pc.speech(好的，主人！)]你轻轻放下她的右脚，然后握住她的左脚，开始重复这个过程。从她的脚后跟开始，你慢慢地、充满爱意地对她脚上的每一个部位进行按摩，直到按到她那被棉袜包裹的脚趾结束。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FOOT_MASSAGE_MOUTH_BLOCKED"><![CDATA[
 	<p>
-		[amber.speech(What a good bitch.)] Amber says, grinning down at you. [amber.speech(It's a shame I can't get to your mouth. I <i>was</i> going to let you suck on my toes, but oh well. Put my shoes back on. I'm done with you now.)]
+		[amber.speech(真是个好婊子。)]安柏低下头，看向你，[amber.speech(真遗憾，我本来想让你舔我的脚趾的，不过也还不错。把鞋穿上，我玩够了。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you reply, quickly doing as your Mistress says and slipping her shoes back on to her feet.
+		[pc.speech(好的，主人！)]你迅速按主人所说，把鞋子穿回她的脚上。
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Amber says once you're all done, before standing up and stepping over to the other side of the room. [amber.speech(Come back when the weather's nice, and I'll take you for a little walk outside. For now, however, get out of my sight.)]
+		[amber.speech(真听话。)]安柏在你做完这些后，走向了另一个房间，[amber.speech(天气好的时候再来，我带你去外面散散步。不过，现在你该滚开了。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you say, quickly standing up and moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having pleased your Mistress, you wonder what you should do next.
+		[pc.speech(好的，谢谢你，主人！)]你说着，迅速站起身，向门口走去。你回头看了一眼这个发型引人注目的魅魔，只见她拿起鸡毛掸子继续打扫卫生。在取悦了主人之后，你在想接下来该做些什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FOOT_MASSAGE_MOUTH_FREE"><![CDATA[
 	<p>
-		[amber.speech(What a good bitch,)] Amber says, grinning down at you. [amber.speech(I think you've earned a reward. You may remove my stockings and continue with your mouth.)]
+		[amber.speech(真是个好婊子。)]安柏低下头，看向你，[amber.speech(我觉得该给你来点奖励了，我允许你脱下我的袜子，用你的嘴来给我按摩一下。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FOOT_MASSAGE_ORAL"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you happily reply.
+		[pc.speech(好的，主人，谢谢你！)]你高兴地回答。
 	</p>
 	<p>
-		Moving your [pc.hands] down to your Mistress's right foot once more, you slowly slide your fingers up the length of her slender leg, until you reach the top of her stocking at her mid-thigh. Tucking the tips of your thumbs into the elastic rim, you start to pull the white cotton stocking down, revealing the flawless ebony skin of Mistress Amber's perfect, long legs. Reaching down to take hold of the fabric between her toes, you start to pull, and quickly manage to free your Mistress's right foot from the confines of the white cotton. 
+		你把[pc.hands]伸向主人的右脚，手指沿着她修长的腿慢慢向上滑动，直到大腿中部的绵袜顶端。你将拇指尖塞进松紧带的边缘，把白色棉袜向下拉。主人完美修长的双腿上无瑕的肌肤，一寸一寸地从棉袜的束缚中解放出来，从大腿到小腿，直到脚踝，脚跟，脚趾。她的玉足终于呈现在了你的眼前。
 	</p>
 	<p>
-		Suddenly, Mistress Amber darts her foot up to your hand, and, in one swift movement, uses her toes to pinch the stocking from your grasp. Before you can react, she then pushes her foot into your face, smothering your mouth and nose with the soft cotton. [amber.speech(You like that, bitch? Go on, sniff it! I want you to enjoy your reward!)]
+		突然间，主人把脚伸到了你手上，用脚趾夹走了你手上的棉袜，在你来不及反应过来的一刹那，她的脚伸向了你的脸，用柔软的白色棉袜闷住了你的口鼻。[amber.speech(你喜欢这个，对吧，婊子？闻吧，这是我赏给你的！)]
 	</p>
 	<p>
-		As Mistress Amber laughs, you do as she commands, and breathe in. The slightly sweaty, still-warm fabric of your Mistress's stocking presses against your face as you take in a deep breath. Your sense of smell is instantly overwhelmed with the scent of the succubi's mild foot odour, and you let out a happy little whine as Mistress Amber pushes her foot into your face, before pulling back and letting the stocking fall to the floor.
+		你倾听着主人安柏的笑声，按照她的命令吸了一口气。当你深吸一口气时，那块被汗水浸湿，仍然温热着的布料贴在了你的脸上，你的嗅觉立刻被魅魔的淡淡脚臭味所淹没，意识伴随着感官的刺激而恍惚，发出了快乐的呻吟声。就在这时，安柏收回了脚，棉袜掉到了地上。
 	</p>
 	<p>
-		[amber.speech(Now get started,)] Mistress Amber snaps.
+		[amber.speech(现在，该开始了。)]安柏下了命令。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you reply, quickly moving your [pc.hands] down yet again to take hold of the succubus's right foot. Her soft, ebony skin has the slightest touch of damp to it, and as you lift her slender foot to your mouth, the accompanying scent of sweat rises up to overwhelm your sense of smell. Deciding to start with her heel, just as you did with the massage, you slowly press your lips to the side of Mistress Amber's foot, planting a wet kiss on her soft skin, before moving down to focus your attention on her sole. Running your tongue over the slightly thicker skin on the underside of her heel, your mouth is instantly filled with the salty, sweaty taste of a foot that's been imprisoned in shoes and stockings all day.
+		[pc.speech(好的，主人！)]你迅速将[pc.hands]伸向魅魔的右脚，握住了它。玉足上柔软的皮肤略带一丝潮湿的汗液，当你把她纤细的脚抬到嘴边时，浓郁的汗味扑面而来。你决定从她的脚跟开始，就像按摩时一样，慢慢地将嘴唇贴在主人的脚上，在她柔软的皮肤上留下湿乎乎的吻，然后向下移动，关照她的足底。你用舌头舔过她脚后跟底部稍厚的皮肤，那被棉袜和鞋子囚禁了一整天的足臭迅速涌入你的鼻腔，伴随着舌尖咸咸的味道，刺激着你的感官。
 	</p>
 	<p>
-		[amber.speech(That's right, bitch. Keep it up,)] Amber snaps, the tone of amusement in her voice completely lost on you as you focus all of your attention on worshipping the foot in front of your face. Working your way up, you run your tongue along the inside of her arches, making sure to savour every [unit.size] of her soft ebony skin.
+		[amber.speech(就这样，婊子，继续舔。)]安柏冷冷地说，你听不出她语气中的情绪，因为你的所有注意力都被眼前这只脚所吸引，浓郁的足臭味将你的感官腐蚀，使这味道直冲你的大脑，令你无法思考其他的事情。你的舌头沿着她的足弓内侧一路向上，确保细细品味她每一[unit.size]柔软的黑檀色肌肤。
 	</p>
 	<p>
-		Despite taking your time to apply the same level of attention to every part of her foot, it doesn't take you long to reach the finale. Mistress Amber's little ebony toes, painted in the same amber colour as her striking hair and eyes, stretch a little in anticipation as you press your lips against them. Starting with her pinky, you take the little toe into your mouth, gently sucking on it for a moment, before sliding your tongue between the gap to the next toe, and then moving your oral attention on to that one. In this manner, you work your way along Mistress Amber's foot, until you finally take her big toe into your mouth. Sucking and kissing her rounded digit, you savour the taste of your Mistress, before finally pulling back and planting one last kiss on the ridge of her slender, elegant foot.
+		尽管你的舌头仔细地舔舐着她脚上的每一寸肌肤，贪婪地嗅着她脚上的每一缕足臭，但不知不觉间，你的舌头还是来到了她的脚趾上。安柏主人的脚趾和她引人注目的头发，摄人心魄的眼睛一样，都被涂成了琥珀色。当你把嘴唇贴在她的脚趾上时，她分开脚趾，让脚趾之间的味道散发出来，令你心神荡漾。你将她的小脚趾含入口中，轻轻地吮吸着，品味着，陶醉于其馥郁的味道和软绵的口感，然后将舌头从趾缝间滑向下一个脚趾。就这样，你沿着主人的脚一路舔下去，直到最后，将她的大脚趾含在嘴里，一边吮吸，一边用舌头纠缠着脚趾的每一寸皮肤，细细品尝着主人脚上的味道。你恋恋不舍地放开她的脚趾，在她纤细优雅的脚背上留下最后一吻。
 	</p>
 	<p>
-		[amber.speech(Very good, bitch. Now get started on my left,)] Amber snaps, shifting about on the sofa a little as she thrusts her left foot towards you.
+		[amber.speech(太棒了，婊子，再来关照下左脚。)]安柏哼了一声，在沙发上挪了挪位置，然后把左脚伸向你。
 	</p>
 	<p>
-		Repeating the motions all over again, you quickly strip the white cotton stocking from Mistress Amber's left foot, and, following her instructions, you once again breathe in the warm, sweaty scent of her garment, before getting started on the main course. Running your tongue over her perfect ebony skin, you kiss, lick, and nuzzle against every part of her foot, finishing off by sucking each one of her little amber-painted toes.
+		你再次重复这些动作，迅速从主人的左脚上脱下白色棉袜，按照她的指示，呼吸她温暖湿润的袜子上淡淡的汗味，然后开始享用你的正餐。你用舌头舔过她完美的肌肤，亲吻、舔舐、轻咬她脚上的每一个部位，最后吮吸她每一个琥珀色趾甲的脚趾。
 	</p>
 	<p>
-		Before too long, you've finished your work, and Mistress Amber lifts her feet as she instructs you to put her stockings and shoes back on. Taking care to be extra gentle, you push your Mistress's right foot into her stocking, before pulling the fabric up to her mid-thigh. Picking up her high-heel, you guide her foot back into it, before repeating the process with her left.
+		没过多久，你就完成了你的工作，安柏主人抬起她的双脚，示意你为她穿上袜子和鞋子。你小心翼翼地将主人的右脚放进棉袜里，然后将袜子拉到大腿中部，动作格外轻柔。随后，拿起她的高跟鞋，引导她的脚重新穿上，然后再去服务她的左脚。
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Amber finally says once you're all done, before standing up and stepping over to the other side of the room. [amber.speech(Come back when the weather's nice, and I'll take you for a little walk outside. For now, however, get out of my sight.)]
+		[amber.speech(真听话。)]安柏在你做完这些后，走向了另一个房间，[amber.speech(天气好的时候再来，我带你去外面散散步。不过，现在你该滚开了。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you say, quickly standing up and moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having pleased your Mistress, you wonder what you should do next.
+		[pc.speech(好的，谢谢你，主人！)]你说着，迅速站起身，向门口走去。你回头看了一眼这个发型引人注目的魅魔，只见她拿起鸡毛掸子继续打扫卫生。在取悦了主人之后，你在想接下来该做些什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FOOT_MASSAGE_ORAL_REFUSED"><![CDATA[
 	<p>
-		[pc.speech(Sorry, Mistress Amber, but that's a little too much for me...)] you say, averting your eyes from the succubus's furious glare as you refuse to obey her command.
+		[pc.speech(抱歉，主人安柏，但这对我太超前了……)]你拒绝服从魅魔的命令，避免与她愤怒的目光相接。
 	</p>
 	<p>
-		[amber.speech(Worthless bitch!)] Amber growls, before kicking you in the side. [amber.speech(Put my shoes back on! I'm done with you now.)]
+		[amber.speech(贱货！)]安柏怒吼着把你一脚踢开，[amber.speech(把鞋给我穿上，我受够你了！)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you reply, quickly doing as your Mistress says and slipping her shoes back on to her feet.
+		[pc.speech(好的，主人！)]你迅速按主人所说，把鞋子穿回她的脚上。
 	</p>
 	<p>
-		[amber.speech(Now get out of my sight, and don't bother disturbing me again until you've decided to act like the worthless bitch you are!)] Mistress Amber snaps, before standing up and moving off to continue with her work. You wait until she's stepped away before standing up yourself and moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having failed your Mistress, you wonder what you should do next.
+		[amber.speech(滚出我的视线，别再来打扰我，除非你想通决定乖乖当个废物婊子！)]安柏主人冷声喝道，接着背过身去继续工作。你一直等到她走开，才向门口走去。你回头看了一眼这个头发如火焰般闪耀的魅魔，只见她拿起羽毛掸继续打扫房间。你辜负了主人的期望，思索起接下来该做什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_BEG_FOR_SEX"><![CDATA[
 	<p>
-		[pc.speech(Mistress Amber, um, I was thinking of something else...)] you say, casting your eyes to the floor as you shuffle your feet on the spot.
+		[pc.speech(安柏主人，我，我在想……)]你低下头，不敢直视安柏的眼睛。
 	</p>
 	<p>
-		[amber.speech(Oh, were you now?!)] Amber snarls, stepping forwards and grabbing your [pc.arm]. [amber.speech(And what would that be? This had better be worth my time, bitch!)]
+		[amber.speech(嗯？！你要做什么？)]安柏边呵斥边上前抓住你[pc.arm]。[amber.speech(最好别浪费我的时间，小婊子！)]
 	</p>
 	<p>
-		[pc.speech(Mistress Amber, I was thinking that perhaps... Well, seeing as I've been a good bitch recently, perhaps you could... Umm...)] you say, trying to work up the courage to ask your Mistress the question that's on your mind. Taking a deep breath, you look up at the fiery-haired succubus and blurt out, [pc.speech(Mistress Amber! Please, can you fuck me?)]
+		[pc.speech(安柏主人，我在想也许……就是说，那个，呃，我已经当了有一段时间的好婊子了，你能不能……呃……)]你鼓起勇气，深吸了一口气，看向你那头发闪闪发光的主人，[pc.speech(安柏主人！求你了，能不能操我？)]
 	</p>
 	<p>
-		A huge, sadistic grin breaks out across your Mistress's face, and, tightening her grip on your [pc.arm], she violently pulls you forwards into her chest. Before you can react, Mistress Amber reaches up to grab the back of your head with her free hand, before dominantly pressing lips against yours. Instantly, she forces her tongue into your mouth, thrusting it down your throat as she starts roughly making out with you.
+		主人的脸上绽放出狰狞的笑容，她紧紧抓住你的[pc.arm]，猛地将你向前拉到她的胸前。在你做出反应之前，安柏主人伸手抓住你的后脑勺，然后霸道地将嘴唇贴了上来。瞬间，她那长长的舌头便伸进你的嘴里，插入你的喉咙，开始粗暴地和你亲热起来。
 	</p>
 	<p>
-		Almost as quickly as she began, Mistress Amber suddenly pulls back, before gazing into your eyes. [amber.speech(You have been a good bitch recently, I'll admit. Perhaps you do deserve a good rough fucking as a reward. I'll need to hear you beg for it first, though. On your knees, bitch!)]
+		片刻之后，安柏主人的动作戛然而止，她注视着你的双眼，[amber.speech(我承认，你最近一直在当一个乖婊子，也许我该狠狠操你一顿作为奖赏，但是，我想先听听你会怎么样下贱地求我操你，跪下，婊子！)]
 	</p>
 	<p>
-		You instantly do as you're told, and, dropping down onto your knees before your Mistress, you gaze up at her. [pc.speech(Please, Mistress Amber! I'm your good bitch, please fuck me!)]
+		你立刻照做，跪在了你的主人面前，抬头看向她。[pc.speech(安柏主人，我是您的好婊子，请您随意使用我下贱的身体吧！)]
 	</p>
 	<p>
-		Letting out a sadistic laugh, Mistress Amber raises her right foot, before placing it on your shoulder and roughly pressing down. Your face is quickly forced down against the floor, and you let out a little whine as your Mistress growls down at you, [amber.speech(That's right, bitch; face down, ass up! You're lucky to have a Mistress as kind as I am, aren't you bitch? Not every owner would give their bitch a reward like this.)]
+		安柏主人发出了施虐狂愉悦的笑声，抬起右脚放在你的肩膀上，粗暴地向下压。你的脸被压在了地上，随着主人的呵斥，你发出了一声娇喘，[amber.speech(没错，婊子，就该这样！脸朝下，屁股撅起来！有我这么好的主人是你的福气，对吧，婊子？不是每个主人都会给自己的小婊子这样的奖励。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you cry out, lifting your ass up into the air as your Mistress moves around to your rear end. As she drops down onto her knees behind you, she roughly grabs hold of your [pc.hips+], before violently pulling you back into her groin. You feel the [amber.cockSize] bulge of her thick cock pressing against your [pc.ass+], and you can't help but let out a desperate, pleading moan.
+		[pc.speech(是的，安柏主人！)]当主人转到你身后时，你把屁股撅得高高的。她跪在你身后，粗暴地抓住你[pc.hips+]，猛地把你拉向她的下体。你感觉到她高高鼓起的[amber.cockSize]阴茎抵在你[pc.ass+]上，于是，你情不自禁地发出急切的呻吟声，哀求她用肉棒填满你的身体。
 	</p>
 	<p>
-		[amber.speech(Good bitch. I'll get you <i>really</i> moaning soon enough!)] Mistress Amber snarls, delivering a sharp, stinging slap to your [pc.ass+] as she prepares to fuck you.
+		[amber.speech(好婊子，我会把你<i>干到</i>叫不出声来！)]安柏狠狠给你[pc.ass+]来了一巴掌，然后俯下身，准备狠狠操你一顿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AMBER_LOUNGE_POST_CONSENSUAL_SEX"><![CDATA[
 	<p>
-		Mistress Amber roughly pushes you to the floor, laughing down at you as she stands up. [amber.speech(Good bitch. You enjoyed your reward, didn't you?)]
+		安柏粗暴地把你推倒在地，自己站了起来。她俯视着你，笑道，[amber.speech(好婊子，你喜欢我给你的奖励，对吧？)]
 	</p>
 	<p>
-		You look up at the fiery maid to see a sadistic smirk on her face. Smiling up at your Mistress, you push yourself up onto your knees as you quickly respond, [pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)]
+		你抬头看了看这位性格泼辣的女仆，只见她脸上挂着一丝施虐的笑意。你对着主人微笑，迅速挺起身子，跪了下来，[pc.speech(是的，谢谢你，主人！)]
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Mistress Amber says, before getting her things in order and stepping over to the other side of the room. [amber.speech(Come back when the weather's nice, and I'll take you for a little walk outside. For now, however, get out of my sight.)]
+		[amber.speech(好婊子。)]安柏收拾好自己的东西，走到了房间的另外一边，[amber.speech(天好的时候再来吧，我带你出去遛遛弯，现在，你该滚了。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you so much, Mistress Amber!)] you say, quickly standing up, grabbing your things, and moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having been given your Mistress's reward, you wonder what you should do next.
+		[pc.speech(好的，主人，非常感谢你，主人！)]你说着，迅速站起身，拿起自己的东西，向门口走去。你回头看了一眼这个头发发光的魅魔，只见她拿起羽毛掸继续打扫卫生。得到主人的奖赏之后，你思考着接下来该做些什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FURIOUS"><![CDATA[
 	<p>
-		[pc.speech(Oh, fuck off already, Amber.)] you say, not in the mood for the sadistic Succubus's outrageous demands.
+		[pc.speech(哦，滚蛋吧你，安柏。)]你说，没心情听这个施虐狂魅魔的无理要求。
 	</p>
 	<p>
-		[amber.speech(You fucking <i>bitch</i>!)] Amber screams, her hair and eyes glowing with a furious intensity as she steps towards you. [amber.speech(How <i>dare</i> you speak to me like that?! Drop down on your knees, <i>right this instant</i>, and beg for my forgiveness! You're lucky I'm in such a good mood today; I think I'll just let you off with a rough fucking to put you in your place!)]
+		[amber.speech(操你妈的<i>婊子</i>！)]安柏尖叫着，头发和眼睛都闪着愤怒的光芒，一步步向你走来，[amber.speech(你<i>竟敢</i>这样对我说话？！跪下，<i>立刻马上</i>，求我原谅你！你该庆幸我今天心情这么好，那我就狠操你一顿来让你明白自己的地位吧！)]
 	</p>
 	<p>
-		Amber looks absolutely livid - far angrier than you've seen her before - and you wonder if you should do as she says in order to calm her down...
+		安柏看起来气急败坏——比你以前见过的她要愤怒得多——你思索要不要为了让她冷静而按照做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FURIOUS_NO_APOLOGY"><![CDATA[
 	<p>
-		[pc.speech(Well, that's definitely not happening,)] you say, crossing your [pc.arms] and frowning at Amber.
+		[pc.speech(两个字，没门。)]你叉起[pc.arms]，蹙着眉看向安柏。
 	</p>
 	<p>
-		[amber.speech(You worthless, pathetic bitch! You're <i>so</i> fucking lucky you're Lilaya's little bitch,)] Amber snaps, before turning her back to you. [amber.speech(Don't you <i>dare</i> disturb me again, unless you've decided to act like the worthless worm you are.)]
+		[amber.speech(可怜的贱货！你以为你当了<i>莉莱雅</i>的小婊子，我就不敢动你了？)]安柏背过身去，咒骂着你，[amber.speech(别再<i>惹我</i>，除非你想通了，想要像小可怜虫一样跪下，朝你的主人摇尾乞怜！)]
 	</p>
 	<p>
-		Letting out a sigh, you step back from the fiery-haired succubus, looking on as she grabs her feather duster and angrily resumes cleaning. Turning towards the door, you wonder what to do next.
+		你叹了口气，走开了，安柏拿起她的羽毛掸，气鼓鼓地干活去了。你来到门口，思考接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_FURIOUS_APOLOGY"><![CDATA[
 	<p>
-		You weren't expecting Amber to react in such a furious manner to your words. Not wanting to push her any further, you drop to your knees. [pc.speech(I'm so sorry, Mistress Amber! I don't know what came over me!)]
+		你没想到安柏会对你的话做出如此愤怒的反应。你不想再逼她，于是跪了下来。[pc.speech(对不起，安珀主人，我只是一时犯了傻，请原谅我！)]
 	</p>
 	<p>
-		[amber.speech(Get down on all fours, you worthless worm!)] Amber snaps as she steps around behind you. Letting out a little whimper, you do as you're told, pushing your [pc.ass+] up into the air as you fall forwards onto your [pc.hands] and knees.
+		[amber.speech(趴下，你这可怜虫！)]安柏边说边绕到你身后。你发出一声轻微的呜咽，然后照她说的做，把[pc.ass+]翘起，同时向前趴下，用[pc.hands]和膝盖着地。
 	</p>
 	<p>
-		[pc.speech(I really am sorry, Mistress Amber! I di- ~Aaah!~)] Your apology is cut short as the furious succubus delivers a stinging slap to your [pc.ass+]. Turning your head, you see Mistress Amber raising her hand once more, and you scrunch your eyes shut as you prepare for the incoming blow.
+		[pc.speech(真的很抱歉，安珀主人，我错了~啊！)]你的道歉被打断了，因为愤怒的魅魔在你[pc.ass+]上狠狠地扇了一巴掌。转过头，你看到安柏再次举起了手，你紧闭双眼，准备迎接即将到来的打击。
 	</p>
 	<p>
-		[pc.speech(~Aaah!~)] you cry as Mistress Amber ruthlessly slaps your [pc.ass] with full force. [pc.speech(I-I'm sorry, Mistress Amber!)]
+		[pc.speech(~啊！)]当你的主人用全力打在你的[pc.ass]时，你哭喊着，[pc.speech(我，我非常抱歉，安柏主人！)]
 	</p>
 	<p>
-		[amber.speech(You fucking <i>bitch</i>! I'll teach you to insult me!)] Amber snarls, before dropping to her knees behind you and grabbing hold of your [pc.hips+]. Shuffling forwards, she grinds her groin against your [pc.ass+], and you feel the [amber.penisSize] bulge of her thick cock rubbing up against you as she starts to grow hard. [amber.speech(I'm going to give you such a rough fucking, you'll be sore for weeks!)]
+		[amber.speech(你这该死的<i>婊子</i>！我要告诉你冒犯我的下场是什么！)]安柏咆哮着，然后跪在你身后，抓住你[pc.hips+]。她向前挪动，用下体磨蹭你[pc.ass+]，当她的下体开始变硬时，你感觉到了她粗大的阴茎在衣服上形成的[amber.penisSize]隆起，随后，她更用力地在你身上摩擦。[amber.speech(我要狠狠操你一顿，让你几个星期直不起腰来！)]
 	</p>
 	<p>
-		You start to let out another whimper, but your pathetic mewling is cut short as Mistress Amber delivers another sharp slap to your [pc.ass+]. [amber.speech(Fucking <i>bitch</i>!)]
+		你又呜咽了起来，但你的悲鸣声很快被打断了，因为安柏主人又狠狠地扇了下你[pc.ass+]。[amber.speech(该死的<i>婊子</i>！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AMBER_LOUNGE_POST_SEX"><![CDATA[
 	<p>
-		Mistress Amber roughly pushes you to the floor, laughing down at you as she stands up. [amber.speech(Fucking bitch. That'll teach you to insult me. Now apologise again, you worthless worm.)]
+		安柏主人用力把你按在地上，随后站起身来，嘲弄着你，[amber.speech(该死的婊子，下次长点记性，别再冒犯我。现在，给我道歉，你这可怜虫。)]
 	</p>
 	<p>
-		You look up at the fiery maid to see a sadistic smirk on her face. Averting your eyes from her evil gaze, you push yourself up onto your knees and so as you're told. [pc.speech(Sorry, Mistress Amber...)]
+		你抬头看向这位性格泼辣的女仆，只见她脸上挂着一丝施虐的冷笑。你避开了她那邪恶的目光，按照她的吩咐跪了起来：[pc.speech(对不起，安柏主人……)]
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Amber says, before getting her things in order and stepping over to the other side of the room. [amber.speech(Come back when the weather's nice, and I'll take you for a little walk outside. For now, however, get out of my sight.)]
+		[amber.speech(好婊子。)]安柏收拾好自己的东西，走到了房间的另外一边，[amber.speech(天好的时候再来吧，我带你出去遛遛弯，不过现在，从我的视线里滚出去。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you say, quickly standing up, grabbing your things, and moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having earned your Mistress's forgiveness, you wonder what you should do next.
+		[pc.speech(好的，安柏主人，感谢您，安柏主人！)]你说着，迅速站起身，拿起自己的东西，向门口走去。你回头看了一眼这个发色明亮的魅魔，只见她拿起掸子继续打扫卫生。在取得主人的原谅后，你思索着接下来该做点什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_LOSES_IT"><![CDATA[
 	<p>
-		[pc.speech(Well, that's definitely not happening,)] you say, crossing your [pc.arms] and frowning at Amber.
+		[pc.speech(两个字，没门。)]你叉起[pc.arms]，蹙着眉看向安柏。
 	</p>
 	<p>
-		[amber.speech(You worthless, pathetic bitch! You're <i>so</i> fucking lucky you're Lilaya's little bitch,)] Amber snaps, before turning her back to you. [amber.speech(Don't you <i>dare</i> disturb me again, unless you've decided to act like the worthless worm you are.)]
+		[amber.speech(可怜的贱货！你以为你当了<i>莉莱雅</i>的小婊子，我就不敢动你了？)]安柏背过身去，咒骂着你，[amber.speech(别再<i>惹我</i>，除非你想通了，想要像小可怜虫一样跪下，朝你的主人摇尾乞怜！)]
 	</p>
 	<p>
-		You <i>really</i> aren't in the mood for this right now, and shake your head as you scold the rude maid, [pc.speech(Knock it off, Amber. Just because Zaranix doesn't give you the good fucking you need, doesn't mean you get to take it out on me.)]
+		你<i>真的</i>对她的态度感到生气，于是摇了摇头，斥责这个无礼的女仆，[pc.speech(别闹了，安柏，是因为扎拉尼克斯没把你操爽了，所以你才在我身上撒气吗？)]
 	</p>
 	<p>
-		The glow of Amber's extraordinary hair suddenly seems to increase in intensity, and her eyes burn with an incandescent rage as she screeches, [amber.speech(You fucking <i>bitch</i>!)]
+		安柏头发的光芒似乎突然变得更加强烈，她眼中的怒火再也无法抑制，她发出尖锐的怒骂声，[amber.speech(你这贱<i>婊子</i>！)]
 	</p>
 	<p>
-		Barely giving you a moment to react, Amber launches herself at you in a blind fury, determined to beat you into submission.
+		刹那间，安柏朝你冲了过来，看来是决心要把你打至跪地了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOSS"><![CDATA[
 	<p>
-		You can't carry on fighting any longer, and with a defeated sigh, you collapse back onto one of the lounge's sofas. Amber instantly steps forwards, reaching down to grab your [pc.arm] before roughly pulling you forwards.
+		你无法继续战斗了，叹了一口气，倒在了休息室的沙发上。安柏立刻走上前，伸手抓住你的[pc.arm]，然后粗暴地把你拽了起来。
 	</p>
 	<p>
-		As you fall down onto the floor on your [pc.hands] and knees, the furious succubus snarls, [amber.speech(Stupid bitch! How <i>dare</i> you sit on my master's sofa!)]
+		当你摔在地上，用你的[pc.hands]和膝盖撑起身体时，怒气冲冲的魅魔咆哮道，[amber.speech(蠢婊子！你<i>怎么敢</i>坐在主人的沙发上！)]
 	</p>
 	<p>
-		[pc.speech(Just sto- ~Aah!~)] your response is cut short as Amber stoops down and delivers a stinging slap to your [pc.ass+].
+		[pc.speech(停下，停——啊~)]你的声音戛然而止，因为安柏弯下腰，在你[pc.ass+]上狠狠扇了一巴掌。
 	</p>
 	<p>
-		[amber.speech(Silence, bitch!)] Amber screams, dropping to her knees behind you. [amber.speech(It's time for a good, rough fuck to put you in your place!)]
+		[amber.speech(闭嘴，婊子！)]安柏跪在你身后，发出气愤的尖叫声，[amber.speech(我要狠狠操烂你这个不知天高地厚的婊子，好让你明白自己的地位！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOSS_SEX"><![CDATA[
 	<p>
-		[amber.speech(You fucking <i>bitch</i>! I'll teach you to insult me!)] Amber snarls, sharply swatting your [pc.ass+] once more, before roughly grabbing hold of your [pc.hips+]. Shuffling forwards, she grinds her groin against your [pc.ass+], and you feel the [amber.penisSize] bulge of her thick cock rubbing up against you as she starts to grow hard. [amber.speech(I'm going to give you such a rough fucking, you'll be sore for weeks!)]
+		[amber.speech(你这该死的<i>婊子</i>！我要告诉你冒犯我的下场是什么！)]安柏咆哮着，再次用力拍打、揉捏起你[pc.ass+]。她向前挪动，用下体磨蹭你[pc.ass+]，当她的下体开始变硬时，你感觉到了她粗大的阴茎在衣服上形成的[amber.penisSize]隆起，随后，她更用力地在你身上摩擦。[amber.speech(我要狠狠操你一顿，让你几个星期直不起腰来！)]
 	</p>
 	<p>
-		You start to let out a whimper, but the protest you were about to make is cut short as Amber delivers another sharp slap to your [pc.ass+]. [amber.speech(Fucking <i>bitch</i>!)]
+		你呜咽了起来，但你的悲鸣声很快被打断了，因为安柏主人又狠狠地扇了下你[pc.ass+]。[amber.speech(该死的<i>婊子</i>！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_AMBER_SEX_LOSS"><![CDATA[
 	<p>
-		Panting from exertion, you collapse to the floor in front of Amber. Looking up at the fiery-haired maid, you see her glaring down at you as she snarls, [amber.speech(Now apologise!)]
+		你累得气喘吁吁，瘫倒在安柏面前的地板上。抬起头，你看到这位发色明亮的女仆正瞪着你，咆哮着，[amber.speech(现在，给我道歉！)]
 	</p>
 	<p>
-		Left with little choice in the matter, you do as you're told. [pc.speech(Sorry, Amber...)]
+		落到如此境地，你也别无选择，只好按她说的做，[pc.speech(对不起，安柏……)]
 	</p>
 	<p>
-		[amber.speech(Stupid bitch!)] Amber growls, before swiping her hand down sharply on your [pc.ass+]. [amber.speech(You will refer to me as 'Mistress Amber', or else I'll <i>really</i> make you sorry!)]
+		[amber.speech(蠢婊子！)]安柏怒喝一声，挥手狠狠抽了你[pc.ass+]一巴掌。[amber.speech(你最好称我为‘安柏主人’，否则，别怪我<i>真的</i>不留情面！)]
 	</p>
 	<p>
-		Swallowing your pride, you look down at the floor at you do as you're told. [pc.speech(Sorry, Mistress Amber.)]
+		你舍弃掉你的自尊心，低头看向地板，顺从于她。[pc.speech(我很抱歉，安柏主人。)]
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Mistress Amber says, before standing up and moving off to continue with her cleaning.
+		[amber.speech(好婊子。)]安柏主人说完后站了起来，接着去打扫屋子了。
 	</p>
 	<p>
-		Quickly gathering your things, you move towards the door, wondering what to do now...
+		你匆忙收拾好自己的东西，来到门前，思考接下来该怎么做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_VICTORY"><![CDATA[
 	<p>
-		Amber collapses back on one of the lounge's sofas, completely unable to continue fighting. Stepping towards her, you see her hands suddenly slip down between her legs, and, with no regard to your presence, she reaches under her maid's dress and starts touching herself.
+		安柏倒在休息室的一张沙发上，已经筋疲力竭，无力和你继续战斗。你站在她面前，发现她的手迅速滑向了她的两腿之间，旁若无人地开始将手伸进女仆裙的里面，玩弄起自己的下面。
 	</p>
 	<p>
-		[amber.speech(You... Fucking bitch...)] She starts to moan. [amber.speech(Fuck! Just... So horny... F-Fuck me already!)]
+		[amber.speech(你这个……天杀的婊子……)]她的话语近乎呻吟，再无之前的气势，[amber.speech(妈的！我只是……下面好痒……快，快来操我！)]
 	</p>
 	<p>
-		The arousing effect of being in the presence of your potent arcane aura is obviously the cause of the sadistic maid's sudden desire for you to have sex with her. You wonder if you should indulge her wishes, or turn around and leave her to think about how wrong she was to attack one of her master's guests.
+		显然，你奥术灵气的欲望效应，让这个虐待狂女仆突然很想和你做爱。你在想是应该满足她的愿望，还是转过身去让她好好反思一下，攻击客人是多么愚蠢的行为。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_VICTORY_LEAVE"><![CDATA[
 	<p>
-		You don't really want to have sex with Amber, and, simply satisfied with having beaten her, you look down on her pitiful form as she shamelessly masturbates in front of you. [pc.speech(You really shouldn't attack Zaranix's guests like that, should you Amber?)]
+		你并不想和安柏做爱，击败她足以让你满足。你俯视着她可怜的样子，看着她在你面前无羞耻地自慰：[pc.speech(你真不该像这样攻击扎拉尼克斯的客人，对吗安柏？)]
 	</p>
 	<p>
-		[amber.speech(N-No... ~Aaah!~ I-I was told to treat... ~Mmm!~ Treat you as a guest...)] Amber admits, blushing from both her overwhelming arousal and shame at having disobeyed her master's wishes.
+		[amber.speech(没……~啊哈！~我被要求要像~唔！~像客人一样对待你……)]安柏承认道，她既因情欲上头而脸红，又因违背主人的意愿而羞愧。
 	</p>
 	<p>
-		[pc.speech(Well, you need to think about how bad you've been, so I'll take my leave now.)] you state, turning towards the door. Amber makes an affirmative moan in response, and, leaving her to satisfy herself, you wonder what you should now...
+		[pc.speech(好了，你需要好好反思自己有多糟糕，所以我现在就告辞了。)]你说完就走了。安柏发出了肯定的呻吟声作为回应，让她自慰去吧，你思索现在要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_VICTORY_SEX"><![CDATA[
 	<p>
-		Reaching down, you take hold of Amber's arm, before pulling her to her feet before you. [pc.speech(Well, I wouldn't want to leave you after you've made such a passionate request...)]
+		你伸手抓住安柏的胳膊，把她拽了起来。[pc.speech(嗯，如果你这么热情地请求我，那多玩一玩也不错……)]
 	</p>
 	<p>
-		Amber lets out a deep moan as she locks her glowing amber eyes to yours, and, stepping forwards, she desperately presses her [amber.lips+] against yours. All too eager to have some fun with the temporarily pacified succubus, your reciprocate the gesture, slipping your [pc.tongue] into her mouth as you start passionately kissing one another.
+		安柏漏出绵长的呻吟，琥珀色的眸子凝视着你，[amber.lips+]急切贴向你的唇。你与魅魔同样急切，于是你也做出了回应，将自己的[pc.tongue]伸进她的嘴里，与之热情激吻。
 	</p>
 	<p>
-		After a moment, you break off the kiss, before taking a stern tone, [pc.speech(<i>I'm</i> the one in charge here, understood?)]
+		片刻后，你结束了这一吻，用苛责的声音告诉安柏，[pc.speech(<i>我</i>才是该占主导地位的那个人，明白了吗？)]
 	</p>
 	<p>
-		[amber.speech(Yes! Yes, just please! Fuck me!)] Amber moans, biting her lip and whining in desperation.
+		[amber.speech(明白，明白了！请，请快点来操我！)]安柏喘息着，咬住嘴唇，发出急切的呜呜声。
 	</p>
 	<p>
-		Grinning at your defeated foe, you wrap your [pc.arms] around her back, before pulling her into your embrace...
+		你对着落败的敌人咧嘴一笑，用你的[pc.arms]环上她的后背，径直把她拉入怀抱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_VICTORY_SEX_SEB"><![CDATA[
 	<p>
-		Although you've come out on top after your fight with Amber, you're suddenly left feeling extremely awkward at having reduced the normally sadistic maid to a lust-filled wreck. Leaning down towards her, you reach out and shake her arm. [pc.speech(A-Amber? Are you ok? I think I went too far...)]
+		虽然你在与安柏的战斗中占了上风，但你突然感到非常尴尬，因为你把这个平时虐待狂一样的女仆变成了一个欲火焚身的废人。你向她俯下身，伸手摇了摇她的胳膊。[pc.speech(安，安柏？你还好吗？我可能做得有些过火了……)]
 	</p>
 	<p>
-		Amber's eyes lock on to yours, and beneath her lustful glare, you detect a glimmer of her usual sadistic self. Moving her hand out from beneath her dress, she sighs. [amber.speech(Y-Yes... I was just t-testing you... bitch...)]
+		安柏的眼睛紧紧地盯着你，在她充满欲望的视线下，你捕捉到了一丝她那一贯的虐待狂的影子。她叹了口气，把手从裙子下面伸了出来。[amber.speech(当——当然……我不过是想，想测试一下你……婊子……)]
 	</p>
 	<p>
-		You breathe a sigh of relief, happy that Amber isn't completely overwhelmed with her arousal. You moment of solace is quickly brought to an end, however, as Amber quickly stands up and shakes her head. [amber.speech(That's right... bitch... Eugh! What came over me?! Stupid bitch!)]
+		看来安柏并没有彻底被性奋冲昏头脑，你松了一口气。不过你的安慰很快就结束了，因为安柏很快就站起身，摇了摇头：[amber.speech(没错……婊子……唉！我是怎么了？！贱逼！)]
 	</p>
 	<p>
-		Alarmed at the speed in which Amber has recovered, you're unable to make a move as she quickly steps forwards and grabs you by the [pc.arms]. [amber.speech(You're going to make this up to me, aren't you bitch? You <i>knew</i> I'd get horny after all this, didn't you?! Now you're going to have to take responsibility!)]
+		安柏恢复的速度之快让你大吃一惊，你还来不及做出任何动作，她就迅速上前抓住了你的[pc.arms]。[amber.speech(你会补偿我的，是不是，婊子？你<i>早就</i>知道我会因此欲火焚身，是不是？！现在你得为此负责了！)]
 	</p>
 	<p>
-		As Amber grinds herself up against you, you feel the [amber.cockSize] bulge of thick [amber.cock] pressing against your [pc.leg]. Not wanting to make her angry, you relent. [pc.speech(Yes, Mistress Amber! Y-You can use me for your relief if you'd like.)]
+		随着安柏在你身上磨蹭，你感觉到安柏那[amber.cockSize]粗大的[amber.cock]顶到了你的[pc.leg]。你不想惹她生气，于是选择了妥协。[pc.speech(是，安柏主人！你，你可以随意用我来发泄欲望。)]
 	</p>
 	<p>
-		[amber.speech(That's right, <i>bitch</i>! INow you're going to pay for all that you've done!)] Mistress Amber snarls, before throwing you down onto all fours and dropping to her knees behind you. Grabbing hold of your [pc.hips+], she shuffles forwards, grinding her [amber.penisSize] bulge up against your [pc.ass+] as she snarls, [amber.speech(I'm going to give you such a rough fucking, you'll be sore for weeks!)]
+		[amber.speech(很好，<i>婊子</i>！现在该为你刚才愚蠢的行为付出代价了！)]安柏咆哮着，然后跪在你身后，抓住你[pc.hips+]。她向前挪动，用下体磨蹭你[pc.ass+]，当她的下体开始变硬时，你感觉到了她粗大的阴茎在衣服上形成的[amber.penisSize]隆起，随后，她更用力地在你身上摩擦。[amber.speech(我要狠狠操烂你这婊子，让你几个星期直不起腰来！)]
 	</p>
 	<p>
-		You start to let out a whimper, but your pathetic mewling is cut short as Mistress Amber delivers a stinging sharp slap to your [pc.ass+]. [amber.speech(Fucking <i>bitch</i>!)]
+		你开始发出呜咽声，但当安珀主人在你[pc.ass+]上狠狠地扇了一巴掌之后，你那可怜的呜咽声就被打断了。[amber.speech(该死的<i>婊子</i>！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_AMBER_SEX_VICTORY"><![CDATA[
 	<p>
-		Amber steps back, letting out a heavy sigh as she catches her breath. [amber.speech(Fuck... T-That was... Eugh! Y-You're going to forget this ever happened, ok?!)] Shaking her head, she quickly gathers her things and gets her maid's uniform back in order.
+		安柏后退了一步，一边喘气一边发出沉重的叹息：[amber.speech(操……那、那是……呃！你、你就当这一切都没发生过，好吗？！)]她摇了摇头，迅速收拾好自己的东西，重新整理好女仆装。
 	</p>
 	<p>
-		Smirking at Amber's attempt to pretend as though she didn't have a good time, you similarly get your own things together, before heading to the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning.
+		看着安柏装作不开心的样子，不禁哂笑，同样收拾好自己的东西，向门口走去。你回头看了一眼这个头发如火焰般闪耀的魅魔，只见她拿起鸡毛掸子继续打扫卫生。
 	</p>
-	<p> It doesn't look as though there's going to be any long-lasting effects from your fight. After all, Amber had been instructed by Zaranix to treat you as a guest, so, having started the fight, she was the one who was mostly in the wrong. Letting out a satisfied sigh, you wonder what you should do now...
+	<p> 看来你们的战斗并不会造成什么深远影响，毕竟扎拉尼克斯指示安柏要把你当作客人对待。打架是她先挑起的，所以她才是错方。你满意地叹了口气，思索现在要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_AMBER_SEX_SUB_VICTORY"><![CDATA[
 	<p>
-		Mistress Amber roughly pushes you to the floor, laughing down at you as she stands up. [amber.speech(Fucking bitch. That'll teach you to insult me. Now apologise, you worthless worm.)]
+		安柏主人用力把你按在地上，随后站起身来，嘲弄着你，[amber.speech(该死的婊子，下次长点记性，别再冒犯我。现在，给我道歉，你这可怜虫。)]
 	</p>
 	<p>
-		You look up at the fiery maid to see a sadistic smirk on her face. Averting your eyes from her evil gaze, you push yourself up onto your knees and so as you're told. [pc.speech(Sorry, Mistress Amber...)]
+		你抬头看向这位性格泼辣的女仆，只见她脸上挂着一丝施虐的冷笑。你避开了她那邪恶的目光，按照她的吩咐跪了起来：[pc.speech(对不起，安柏主人……)]
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Amber says, before getting her things in order and stepping over to the other side of the room. [amber.speech(Come back when the weather's nice, and I'll take you for a little walk outside. For now, however, get out of my sight.)]
+		[amber.speech(好婊子。)]安柏收拾好自己的东西，走到了房间的另外一边，[amber.speech(天好的时候再来吧，我带你出去遛遛弯，不过现在，从我的视线里滚出去。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you say, quickly standing up, grabbing your things, and moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning.
+		[pc.speech(好的，谢谢你，主人！)]你说着，迅速站起身，抓起东西向门口走去。你回头看了一眼这个头发如火焰般闪耀的魅魔，只见她拿起鸡毛掸子继续打扫卫生。
 	</p>
 	<p>
-		It doesn't look as though there's going to be any long-lasting effects from your fight. After all, Amber had been instructed by Zaranix to treat you as a guest, so, having started the fight, she was the one who was mostly in the wrong. Letting out a satisfied sigh, you wonder what you should do now...
+		看来你们的战斗并不会造成什么深远影响，毕竟扎拉尼克斯指示安柏要把你当作客人对待。打架是她先挑起的，所以她才是错方。你满意地叹了口气，思索现在要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_WALKIES"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you quickly reply, moving towards your Mistress before dutifully dropping down onto all fours in front of her.
+		[pc.speech(好的，安柏主人！)]你很快应声，伏下身子，尽职尽责地爬向你的主人，在她面前四肢着地，趴在地上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_DECLINED_WALK"><![CDATA[
 	<p>
-		[pc.speech(I'm not really in the mood for a walk right now...)] you say, stepping away from Amber.
+		[pc.speech(我现在不太想散步……)]你从安柏身边走开。
 	</p>
 	<p>
-		[amber.speech(Then why are you wasting my time, bitch?! Get out of my sight, and don't bother disturbing me again until you've decided to act like the worthless bitch you are!)] Amber snaps, before turning her back on you and moving off to continue with her work. You wait until she's stepped away before moving towards the door. Glancing back at the fiery-haired succubus, you see her picking up her feather duster as she resumes her cleaning. Having decided against going for a walk with Amber, you wonder what you should do next.
+		[amber.speech(那你为什么要浪费我的时间，婊子！滚出我的视线，别再来打扰我，除非你终于想通了，想要像个废物婊子一样跪在我脚边！)]安柏冷冷地说完这些，然后背对着你继续工作。你一直等到她走开，才向门口走去。你回头看了一眼这个头发发光的魅魔，只见她拿起羽毛掸继续打扫房间。你在决定不和安柏一起去散步之后，开始思索下一步该做什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_WALKIES_ATTACHES_COLLAR"><![CDATA[
 	<p>
-		[amber.speech(Good bitch. Now hold still,)] Mistress Amber snaps, before turning around and opening the top drawer of a nearby cabinet. From within, she produces a light pink collar and matching leather leash, before turning back to face you with an evil grin on her face.
+		[amber.speech(好婊子，现在别动。)]安柏主人转身打开了旁边柜子最上面的抽屉。她从里面拿出一个浅粉色项圈和配套的皮绳，然后转过身来面对你，脸上露出诡媚的笑容。
 	</p>
 	<p>
-		[amber.speech(We can't have you going outside without being marked as my property, now, can we bitch?)] Amber sneers, before bending down to fasten the collar around your neck. Instantly, you feel [style.colourArcane(a powerful enchantment)] within the collar start to take effect, and you let out a whimpering little moan as you realise that it's making you both hornier and more submissive. At the same time, you feel the collar [style.colourBad(sealing)] itself onto you.
+		[amber.speech(你是我的东西，我得在你出门之前给你标记好，对吧，婊子？)]安柏冷笑一声，然后弯下腰将项圈系在你的脖子上。瞬间，你感觉到项圈中的[style.colorArcane(强大附魔)]开始生效，你发出呜咽和呻吟，心底顺从和饥渴的感觉瞬间被唤起。与此同时，你感觉到项圈[style.colorBad(封印)]在了你脖子上。
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Mistress Amber says, clipping the leash to the metal ring at the front of your new collar. With a sudden, sharp yank of the leash, Mistress Amber pulls you towards a free-standing mirror in one corner of the lounge. [amber.speech(Take a look at yourself, bitch. You're completely pathetic, aren't you?!)]
+		[amber.speech(好婊子。)]安柏主人说着，将皮带扣在你新项圈前端的金属环上。她突然猛地一拉皮带，把你拽向休息室一角的一面镜子。[amber.speech(看看你自己，是不是很下贱啊，婊子？)]
 	</p>
 	<p>
-		You look up to see that your Mistress is right. Down on all fours, wearing a pink collar and leash, you look every bit Mistress Amber's property. Peering closer into the mirror, you see that there's a little name tag on your collar, which reads 'Amber's Bitch'. [pc.speech(Yes, Mistress Amber. I'm your pathetic bitch.)]
+		你抬头一看，发现主人说得没错。你四肢着地，戴着粉色项圈和皮带，哪里像是一个正常人。不管你此前是多么强大，多么有地位，此时的你，无论是外貌，还是内心，都已经完全接受了成为安柏主人私产的事实。你仔细照照镜子，发现项圈上有一个小名牌，上面写着“安柏的婊子”。[pc.speech(是的，主人，我是你下贱的婊子！)]
 	</p>
 	#IF(game.isLevelDrainContentEnabled())
 		<p>
-			[amber.speech(Good bitch,)] your Mistress says, before giving your leash a cruel yank and ordering you to sit. As you do as you're told, the fiery-haired succubus gleefully stares down at you, before revealing one final aspect of your subservient relationship with her, [amber.speech(As you're now my pet bitch, I'm going to have to start working on getting you properly trained for your new role. It simply wouldn't do to have you getting more powerful than your owner now, would it?)]
+			[amber.speech(好婊子！)]你的主人狠狠地拽了一下你的皮带，命令你坐下。当你乖乖听话时，这个魅魔兴高采烈地盯着你看，随后，她要向你揭示你彻底屈从为她的奴隶的最后一步。[amber.speech(既然你现在是我的宠物婊子，我就得好好训练你，让你适应新的角色。你是我的宠物，比你的主人强大很不合理，不是吗？)]
 		</p>
 		<p>
-			Pausing for you to give a response, your Mistress smiles as you reply, [pc.speech(No, Mistress Amber.)]
+			主人停顿了一下，等待你的回答，而你回答，[pc.speech(是这样，主人。)]
 		</p>
 		<p>
-			[amber.speech(That's right,)] she continues, [amber.speech(and that's why, for as long as you're wearing your collar to show your submission to me, I'm going to start using a very special power on you. For every time I make you orgasm, I'm going to permanently drain some of your power. As weak and pathetic as you are, I can't imagine that it will take more than a few sessions of dominating you before I've turned you into a truly powerless nobody. You'd like that, wouldn't you, bitch?)]
+			[amber.speech(那就对了。)]她继续说，[amber.speech(所以只要你戴着项圈向我表示服从，我就会对你使用一种特殊的法术，每高潮一次，你的一部分力量就会流失，我想，用不了几次，你就会变成一个彻头彻尾的废物了，而你喜欢这个，对吧，婊子？)]
 		</p>
 		<p>
-			By now completely committed to being Mistress Amber's bitch, you dutifully reply, [pc.speech(Yes, Mistress Amber. Please, take all my power for yourself.)]
+			现在，你已经全身心堕落为安柏主人的母狗，所以你毫不犹豫，恭恭敬敬地回答，[pc.speech(是的，主人，我所有的力量都属于您！)]
 		</p>
 	#ENDIF
 	<p>
-		[amber.speech(Good bitch. Now, heel,)] your Mistress says, yanking the lead once more as she leads you towards the lounge door. You obediently do as she says, crawling along beside the sadistic succubus as she leads you out of the lounge, down the corridor, and out of the front door into the street beyond.
+		[amber.speech(好婊子，过来吧。)]主人一边说着，一边再次拽着你的手，带你走向休息室的大门。你顺从地按照她说的做，跟在这个虐待狂魅魔身后，爬过休息室，走廊，爬到了大门口。
 	</p>
 	#IF(game.isLevelDrainContentEnabled())
 		<p style='text-align:center;'>
-			[style.italicsBad(While you're wearing her collar, Amber will now drain one level from you every time you orgasm in sex with her!)]
+			[style.italicsBad(你戴着安柏的项圈。你在与她性交时，每高潮一次便会流失一级。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_WALKIES_WITH_COLLAR"><![CDATA[
 	<p>
-		[amber.speech(Good bitch. I see you're still wearing your collar. <i>Very</i> good bitch,)] Mistress Amber says. Turning towards a nearby cabinet, she quickly retrieves a light pink leash from the top drawer, before stepping towards you and clipping it to the metal ring at the front of your collar. With a sudden, sharp yank of the leash, Mistress Amber pulls you towards a free-standing mirror in one corner of the lounge. [amber.speech(You look as completely pathetic as the last time we did this, don't you bitch?)]
+		[amber.speech(我很高兴看到你还带着<i>我给你的项圈</i>，真是个听话的好婊子，)]安柏主人说着，转身走向附近的一个柜子，迅速从最上面的抽屉里拿出一条浅粉色的皮带，然后走向你，把它扣在你项圈前面的金属环上。你的主人突然猛地一拉皮带，把你拉向休息室一角的镜子前面。[amber.speech(你看上去还是一副可怜虫的模样，对吧，小婊子？)]
 	</p>
 	<p>
-		You look up to see that your Mistress is right. Down on all fours, wearing your special collar and leash, you look every bit Mistress Amber's property. Peering closer into the mirror, you read the familiar words 'Amber's Bitch' on little name tag attached to the front of your collar. [pc.speech(Yes, Mistress Amber. I look pathetic.)]
+		你抬起头，和镜子里那个因屈从于主人而感到兴奋的，戴着象征你作为安柏私产的项圈，跪在地上摇尾乞怜的那家伙对视，不由得赞同了你主人的话。你靠近镜子，看了看项圈上那行熟悉的字：“安柏的婊子”。[pc.speech(是的，主人，我是您脚下的可怜虫。)]
 	</p>
 	<p>
-		[amber.speech(Good bitch. Now, heel,)] your Mistress says, yanking the lead once more as she leads you towards the lounge door. You obediently do as she says, crawling along beside the sadistic succubus as she leads you out of the lounge, down the corridor, and out of the front door into the street beyond.
+		[amber.speech(好婊子，过来吧。)]主人一边说着，一边再次拽住你的手，带你走向休息室的大门。你顺从地在她身后爬行，你们两个走出休息室、走廊和前门，来到了外面的街道上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_WALKIES_WITHOUT_COLLAR"><![CDATA[
 	<p>
-		[amber.speech(Good bitch. However, it looks like I can't give you one of my special collars... <i>Bad bitch,</i>)] Mistress Amber says. Turning towards a nearby cabinet, she quickly retrieves a special light pink leash from the top drawer. One end is fashioned into a small loop, which Mistress Amber holds in one hand, and the other is formed into a large noose. Stepping towards you, Mistress Amber places the noose around your neck, and with a rough tug, tightens it around your neck. With a sudden, sharp yank, Mistress Amber then pulls you towards a free-standing mirror in one corner of the lounge. [amber.speech(You look so pathetic, don't you bitch?)]
+		[amber.speech(好婊子，但是，你看上去没有带我给你的项圈……<i>坏婊子</i>。)]你的主人说着，转身走向旁边的一个柜子，迅速从最上面的抽屉里取出一条特制的浅粉色皮带。绳索的一端被编成一个小环，安柏主人用一只手握住它，把另一端穿过去，做成了一个绳套。主人走向你，把绳套套在你的脖子上，然后粗暴地一拉，绳套在你的脖子上勒紧。然后，安柏主人突然猛地一拉，将你拉向休息室一角的一面独立镜子。[amber.speech(你看上去还是一副可怜虫的模样，对吧，小婊子？)]
 	</p>
 	<p>
-		You look up to see that your Mistress is right. Down on all fours, wearing your special leash, you look every bit Mistress Amber's property. [pc.speech(Yes, Mistress Amber. I look pathetic.)]
+		你抬头看向镜子，发现主人说得没错。你四肢着地，戴着特殊的皮带，看起来完全是安柏主人的财产。[pc.speech(是的，主人，我是你脚下的可怜虫。)]
 	</p>
 	<p>
-		[amber.speech(Good bitch. Now, heel,)] your Mistress says, yanking the lead once more as she leads you towards the lounge door. You obediently do as she says, crawling along beside the sadistic succubus as she leads you out of the lounge, down the corridor, and out of the front door into the street beyond.
+		[amber.speech(好婊子，过来吧。)]主人一边说着，一边再次拽住你的手，带你走向休息室的大门。你顺从地在这个施虐狂魅魔身后爬行，你们两个走出休息室、走廊和前门，来到了外面的街道上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_HOME"><![CDATA[
 	<p>
-		You obediently follow your Mistress's continued instructions to heel, and crawl along beside her as you walk down the busy streets towards Zaranix's house. Enduring the humiliating giggles and stares from the many people that you pass, you eventually reach your destination. Mistress Amber leads you up the couple of steps to the front door, and after quickly unlocking it, she pulls you inside.
+		你顺从地追随主人的牵引，爬行在她身旁，沿着繁华的街道向扎拉尼克斯家走去。你忍受着许多过路人的耻笑和注视，终于到达目的地。安柏主人带着你走上台阶，打开前门，径直拉着你走了进去。
 	</p>
 	<p>
-		[amber.speech(Bitch, heel,)] your Mistress states, before striding down the corridor with you obediently crawling by her side. After just a few moments, you find yourself being pulled inside the lounge. Coming to an abrupt halt, Mistress Amber promptly removes your leash before smirking down at you and derisively sneering, [amber.speech(What a pathetic bitch. Perhaps I'll take you for more walkies another time.)]
+		[amber.speech(婊子，跟上。)]你的主人说，一边大步走进走廊，你顺从地爬在她身边。过了一会儿，你发现自己被拉进了休息室。安柏主人突然停下脚步，迅速解开了你的牵绳，冷笑着讥讽道：[amber.speech(真是个可怜的母狗。也许下次我会带你多遛遛。)]
 	</p>
 	<p>
-		With that, the fiery-haired succubus turns on her heel, before marching over to return the leash to the top drawer of a nearby cabinet. Completely ignoring you, she then continues with her housework, leaving you to push yourself up onto your feet and wonder what to do next...
+		说罢，这个头发如火焰般闪耀的魅魔转身就走，大步流星地把牵绳放回了柜子最上面的抽屉里。她完全无视你的存在，继续做家务活，留你一个人站起来，思索接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_WALKIES_BEGIN"><![CDATA[
 	<p>
-		With a tight grip on your leash, Mistress Amber sets off into the streets of Demon Home. Crawling along by her side, you're forced to endure the humiliating comments, giggles, and stares of the many people you pass along the way. Some of them even follow you for a little while, watching you place one [pc.hand] in front of the other as you obey your Mistress's command to heel.
+		安柏主人紧紧拽着你的皮带，来到了恶魔之家的街道。你顺从地跟在安柏的身后，四肢并用地在街道上爬行。周围的人尖锐的目光刺在你的身上，他们对你指指点点，人群中不时爆发一阵惊呼或是讥笑声，大胆些的人，甚至直接跟在了你的身后。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_HUMILIATION"><![CDATA[
 	<p>
-		After a little while, you hear your Mistress let out a happy little laugh, before yanking your leash as she starts to hurry forwards. Snapping at you to hurry up, she then looks straight ahead and calls out, [amber.speech(Hey girls! Fancy seeing all of you here!)]
+		过了一会儿，你听到主人发出一阵开心的笑声，然后拽住你的皮带，开始向前赶路。她呵斥你快点，然后看向了前方，挥了挥手，[amber.speech(女孩们！很高兴能在这里见到你们！)]
 	</p>
 	<p>
-		Looking up, you see a group of five succubi lounging about on a wooden bench to one side of the street. As you approach, the nearest one of the group turns towards Mistress Amber and waves. [genericFemale.speech(Heya Amber! How're you doing? We were just thinkin' about going down to the Shopping Arcade, did y'wanna come?)] Looking down at you with an amused smirk on her face, the succubus continues, [genericFemale.speech(Nice pet. You gonna bring [pc.herHim] along too?)]
+		抬起头，你看到五个魅魔坐在街道另一侧的木凳上。当你们走近时，距离最近的一个魅魔转过身来向你的主人挥手。[genericFemale.speech(嗨呀，安柏！你最近怎么样？我们正打算去商店街逛逛，一起来吗？)]魅魔低头看了看你，露出了一抹感兴趣的笑容，[genericFemale.speech(不错的宠物，要不要带上[pc.herHim]一起？)]
 	</p>
 	<p>
-		[amber.speech(Sorry girls, but I'm only out for a quick walk. I need to return and get back to work within the hour,)] Mistress Amber says, before looking down at you. [amber.speech(I could give you all a show before I leave though. This bitch is still in training, but [pc.she]'s obedient enough for most of the time. Want to see [pc.herHim] demonstrate what a good bitch [pc.she] is?)]
+		[amber.speech(不好意思啦，我只是出来稍微遛个弯，过一会我还得工作呢。)]主人说着，低下头看向你，[amber.speech(不过在我离开之前，我可以给大家展示一下我的小婊子。这家伙还在训练中，不过大部分时间[pc.her]都很听话。想看[pc.herHim]展示一下自己是个多乖的婊子吗？)]
 	</p>
 	<p>
-		The succubi all start giggling, and the leader grins down at you with a smile almost as sadistic as your Mistress's. [genericFemale.speech(Hell yes! You always get all the fun, Amber... I wish I had a pet bitch...)]
+		魅魔们都开始咯咯地笑起来，领头的魅魔朝你笑了笑，那施虐的笑容几乎和你的主人一样，[genericFemale.speech(当然啦！你总能给大家整来点乐子，安柏……我也想养一只宠物婊子……)]
 	</p>
 	#IF(game.isFootContentEnabled())
 		<p>
-			[amber.speech(Very well. Bitch, lick my shoes clean for me!)] Mistress Amber snaps, pulling on your lead to guide your face down to her feet.
+			[amber.speech(很好，婊子，把我的鞋子舔干净！)]安柏主人呵斥着你，用手把你的头按到她的鞋子上。
 		</p>
 		<p>
-			You could do as you're told, and obediently lick Mistress Amber's shoes in front of her friends. Then again, you could always refuse...
+			你可以按她说的做，当着她朋友的面顺从地舔你主人的鞋子，当然，如果你不想，你是可以拒绝的……
 		</p>
 	#ELSE
 		<p>
-			[amber.speech(Very well. Bitch, beg like a dog then bow down to my friends!)] Mistress Amber snaps, pulling on your lead to guide you to face her succubi friends.
+			[amber.speech(很好。婊子，像狗一样乞求，然后向我的朋友们鞠躬！)]安柏主人冷哼一声，拉着你的手，引导你转过身面对她的魅魔朋友们。
 		</p>
 		<p>
-			You could do as you're told, and obediently beg like a dog in front of Mistress Amber's friends. Then again, you could always refuse...
+			你可以按她说的做，像狗一样跪下来，顺从地对着你主人的朋友们乞求，当然，如果你不想这样，你也可以拒绝……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_HUMILIATION_REFUSE"><![CDATA[
 	<p>
-		[pc.speech(Mistress Amber... I don't want to do that...)] you say, looking down at the floor to avoid her furious gaze.
+		[pc.speech(安柏主人……我不想那么做……)]你低头看向地板，不敢和安柏充满怒火的眼神交汇。
 	</p>
 	<p>
-		[amber.speech(Stupid bitch!)] Amber snarls, roughly yanking on your lead, before turning to her friends. [amber.speech(As I said, [pc.she]'s still in training. Perhaps I'll have broken [pc.herHim] in properly by the next time we see you.)]
+		[amber.speech(傻逼！)]安柏粗暴地扯住你的牵绳，又面对她的朋友说，[amber.speech(之前说过的，[pc.she]还在调教。也许下次见面时，我就会把[pc.herHim]玩坏了。)]
 	</p>
 	<p>
-		[genericFemale.speech(Yeah, no worries, Amber!)] the leader of the succubi says, before glaring down at you with a look of utter disgust on her face. [genericFemale.speech(You should be thankful that Amber's spending her time trying to train you. Worthless bitch.)]
+		[genericFemale.speech(行，没问题，安柏！)]为首的魅魔说，又满是厌恶地瞪着你，[genericFemale.speech(你该感谢安柏花时间来调教你，贱货。)]
 	</p>
 	<p>
-		[amber.speech(Well, see you later girls. Have a good time shopping!)] Mistress Amber says, before roughly yanking your lead and snapping down at you. [amber.speech(Heel.)]
+		[amber.speech(好了，再见，姑娘们。购物愉快！)]安柏主人说，接着粗暴地拽住你的牵绳，朝你厉声怒喝，[amber.speech(过来。)]
 	</p>
 	<p>
-		You do as Mistress Amber says, and crawl alongside her as she leads you away from the group of succubi. [amber.speech(Stupid bitch! Trying to humiliate me in front of my friends like that! We're going straight home!)]
+		你乖乖照做，爬到安柏主人身边，由她带你离开，[amber.speech(蠢婊子！居然想让我在朋友面前丢脸！我们直接回家！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_HUMILIATION_RELUCTANT"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you say, leaning down and kissing the tip of her right shoe.
+		[pc.speech(好的，主人！)]你趴下来，亲吻主人右脚的鞋子。
 	</p>
 	<p>
-		The group of succubi all instantly start giggling and chattering amongst themselves as they watch you humiliate yourself. Despite your desire to obey your Mistress, you're still a little reluctant to really commit to licking her shoes, and so you simply make do with kissing them instead.
+		当那些魅魔看到你如此下贱后，她们开始咯咯笑着聊起天来。你虽然很想顺从你的主人，但对舔她的鞋子还是有些许抗拒的，所以你只是在上面亲了亲。
 	</p>
 	<p>
-		[amber.speech(Come on bitch, put that tongue of yours to use!)] Amber snaps, sensing your hesitation.
+		[amber.speech(继续，婊子，要用舌头舔。)]安柏看出了你的犹豫，继续发号施令。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you reply, dutifully starting to lick her shoes. You still aren't really comfortable doing this, however, and after passing your tongue over the tart, salty surface a couple of times, you revert back to your kissing.
+		[pc.speech(好的，主人！)]你尽职尽责地舔舐着她的鞋子，但是你确实不太喜欢这个，所以你在带着酸涩和咸味的鞋面上舔了两下之后，又继续去亲吻她的鞋子。
 	</p>
 	<p>
-		[amber.speech(Well, that will do I suppose. Put some more effort into it next time, bitch,)] Mistress Amber snarls, before yanking your lead and ordering you to stop. Turning towards her friends, her voice takes on a friendly tone as she says goodbye, [amber.speech(Well, see you later girls. Have a good time shopping!)]
+		[amber.speech(好吧，也还行，下次用点心舔，婊子。)]安柏主人呵斥你，然后拽住你的手，命令你停下。她转过身，向她的朋友们道别，语气仿佛换了个人一样，[amber.speech(好吧，下次见了，姑娘们，购物愉快！)]
 	</p>
 	<p>
-		The succubi say their farewells to Mistress Amber, and you soon find yourself crawling alongside the fiery maid once more as she leads you down the streets of Demon Home. [amber.speech(Bad bitch! I want you to put some more effort into it the next time I order you to do something!)] she snaps, before continuing, [amber.speech(Now, heel. We're going straight home!)]
+		魅魔们向安珀道别后，你再次跟在这位暴躁的女仆旁边爬行，她带着你走在恶魔之家的街道上。[amber.speech(坏婊子，下次再让你做什么，不许偷懒了！)]她训了你几句，然后接着说，[amber.speech(跟上，我们回家。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_HUMILIATION_RELUCTANT_NO_FOOT"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you say, before raising your arms and assuming a dog-like begging posture.
+		[pc.speech(好的，安柏主人，)]你回答，然后举起双臂，摆出狗一样的乞求的姿势。
 	</p>
 	<p>
-		The group of succubi all instantly start giggling and chattering amongst themselves as they watch you humiliate yourself. Despite your desire to obey your Mistress, you're still a little reluctant to really commit to this command, and so you quickly move on to bowing down to her friends.
+		这群魅魔看着你自取其辱的样子，立刻咯咯笑起来，还叽叽喳喳地说个不停。尽管你想服从主人的命令，但还是有点不情愿，所以你很快就转而向主人的朋友们鞠躬行礼。
 	</p>
 	<p>
-		[amber.speech(That's it, bitch, now tell them what a worthless cunt you are!)] Amber snaps, sensing your hesitation.
+		[amber.speech(就是这样，婊子，现在快说你是个多么没用的贱逼！)]安柏察觉到你的犹豫，立刻厉声道。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you reply, before half-heartedly stating, [pc.speech(I'm Mistress Amber's worthless bitch...)]
+		[pc.speech(是的，安柏主人。)]你心猿意马地说着，[pc.speech(我是安柏主人的贱货……)]
 	</p>
 	<p>
-		[amber.speech(Well, that will do I suppose. Put some more effort into it next time, bitch,)] Mistress Amber snarls, before yanking your lead and ordering you to stop. Turning towards her friends, her voice takes on a friendly tone as she says goodbye, [amber.speech(Well, see you later girls. Have a good time shopping!)]
+		[amber.speech(好吧，也还行，下次用点心舔，婊子。)]安柏主人呵斥你，然后拽住你的手，命令你停下。她转过身，向她的朋友们道别，语气仿佛换了个人一样，[amber.speech(好吧，下次见了，姑娘们，购物愉快！)]
 	</p>
 	<p>
-		The succubi say their farewells to Mistress Amber, and you soon find yourself crawling alongside the fiery maid once more as she leads you down the streets of Demon Home. [amber.speech(Bad bitch! I want you to put some more effort into it the next time I order you to do something!)] she snaps, before continuing, [amber.speech(Now, heel. We're going straight home!)]
+		魅魔们向安珀道别后，你再次跟在这位暴躁的女仆旁边爬行，她带着你走在恶魔之家的街道上。[amber.speech(坏婊子，下次再让你做什么，不许偷懒了！)]她训了你几句，然后接着说，[amber.speech(跟上，我们回家。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_HUMILIATION_EAGER"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you happily exclaim, before leaning down and planting a loving kiss on the tip of her right shoe.
+		[pc.speech(好的，主人！)]你兴奋地叫了起来，趴在主人的鞋子前面，在她右脚的鞋子上留下深深一吻。
 	</p>
 	<p>
-		The group of succubi all instantly start giggling and chattering amongst themselves as they watch you humiliate yourself. Their behaviour does nothing to diminish your desire to obey your Mistress, and so you quickly move on from kissing to greedily licking her shoes. Running your [pc.tongue+] over her high heels, you savour the salty, grimy taste of Mistress Amber's footwear as you show her what an obedient bitch you are.
+		这群魅魔看着你那副下贱的样子，立刻开始咯咯笑了起来，在旁边叽叽喳喳地说个不停。她们的行为丝毫没有减少你服侍主人的欲望，你很快伸出舌头，贪婪地舔她的鞋子。你[pc.tongue+]自主人的高跟鞋上划过，贪婪地汲取上面每一缕咸味，每一点灰尘，最下贱的婊子见了你也会甘拜下风。
 	</p>
 	<p>
-		[amber.speech(Good bitch! Don't forget the other one, now!)] Amber laughs, moving her right foot back before thrusting her left towards you.
+		[amber.speech(好婊子，这只也舔舔！)]安柏大笑起来，收回右脚，把左脚踢在你的脸上。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you reply, before dutifully switching over to the as-yet untouched shoe. Quickly darting out your tongue to deliver a slow, wet lick over the tart, salty surface, you start kissing and nuzzling into Mistress Amber's shoe.
+		[pc.speech(好的，主人！)]你尽职尽责地舔起了这只鞋子，饥渴而用力地舔舐着鞋子咸涩的表面，在上面又蹭又吻，安柏主人鞋子的表面被你侍奉得相当湿滑。
 	</p>
 	<p>
-		[amber.speech(Very good, bitch. That's enough,)] Mistress Amber snaps, before yanking your lead and turning towards her friends. [amber.speech(Well, I hope you enjoyed the show, girls. Have a good time shopping, I'll see you later!)]
+		[amber.speech(太棒了，婊子，够了！)]安柏主人说完，拉起你的手，转身走向她的朋友们。[amber.speech(怎么样，我希望你们看得足够过瘾，女孩们。购物愉快，我们之后再见！)]
 	</p>
 	<p>
-		The succubi say their farewells to Mistress Amber, and you soon find yourself crawling alongside the fiery maid once more as she leads you down the streets of Demon Home. [amber.speech(Good bitch! My friends seemed very impressed with your performance!)] she says, before continuing, [amber.speech(Now, heel. It's time to go home.)]
+		在魅魔们和安柏主人道别后，你再次跟在主人的脚边，爬行在恶魔之家的街道上。[amber.speech(好婊子，你那下贱的行为让她们都看呆了！)]她继续说道，[amber.speech(现在，快点跟上，我们该回家了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_HUMILIATION_EAGER_NO_FOOT"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you happily exclaim, before raising your arms and assuming a dog-like begging posture.
+		[pc.speech(好的，安柏主人，)]你高兴地叫道，然后举起双臂，摆出狗一样的乞求的姿势。
 	</p>
 	<p>
-		The group of succubi all instantly start giggling and chattering amongst themselves as they watch you humiliate yourself. Their behaviour does nothing to diminish your desire to obey your Mistress, and so you quickly move on to bowing down to her friends. Dropping your head down low to the ground, you do your best to put on a show of complete subservience in order to display to Mistress Amber's friends what an obedient bitch you are.
+		这群魅魔看着你那副下贱的样子，立刻开始咯咯笑了起来，在旁边叽叽喳喳地说个不停。她们的行为丝毫没有减少你服侍主人的欲望，所以你很快就开始向她的朋友们弯下腰行礼。你把头低低地垂在地上，尽力做出一副完全顺从的样子，以便向安柏主人的朋友们展示你是多么听话的母狗。
 	</p>
 	<p>
-		[amber.speech(Good bitch! Now tell them what a worthless cunt you are!)] Amber laughs.
+		[amber.speech(好婊子！现在告诉她们，你不过是个没用的废物婊子！)]安柏大笑起来。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you reply, before dutifully stating, [pc.speech(I'm Mistress Amber's worthless bitch, and obey absolutely any command she gives me!)]
+		[pc.speech(好的，安柏主人！)]你听话地告诉她的朋友们，[pc.speech(我是安柏主人下贱的废物婊子，绝对服从安柏主人给我下达的一切指令！)]
 	</p>
 	<p>
-		[amber.speech(Very good, bitch. That's enough,)] Mistress Amber snaps, before yanking your lead and turning towards her friends. [amber.speech(Well, I hope you enjoyed the show, girls. Have a good time shopping, I'll see you later!)]
+		[amber.speech(太棒了，婊子，够了！)]安柏主人说完，拉起你的手，转身走向她的朋友们。[amber.speech(怎么样，我希望你们看得足够过瘾，女孩们。购物愉快，我们之后再见！)]
 	</p>
 	<p>
-		The succubi say their farewells to Mistress Amber, and you soon find yourself crawling alongside the fiery maid once more as she leads you down the streets of Demon Home. [amber.speech(Good bitch! My friends seemed very impressed with your performance!)] she says, before continuing, [amber.speech(Now, heel. It's time to go home.)]
+		在魅魔们和安柏主人道别后，你再次跟在主人的脚边，爬行在恶魔之家的街道上。[amber.speech(好婊子，你那下贱的行为让她们都看呆了！)]她继续说道，[amber.speech(现在，快点跟上，我们该回家了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PEACEFUL"><![CDATA[
 	<p>
-		Nothing of any real note occurs during your walk, and, other than the occasional yank of your lead and command to heel, Mistress Amber remains quiet as she enjoys her time outside.
+		在散步的过程中，没有发生什么特别的事情，除了偶尔拉一下你的牵引绳和命令你跟上之外，安珀主人一言不发，只是在悠闲地享受她的户外时光。
 	</p>
 	<p>
-		After a little while, you realise that she's leading you in a meandering circuit of Demon Home, and that the last turn you took has put you on course for a speedy return to Zaranix's house. To confirm your suspicions, Amber breaks the pleasant silence, and sighs. [amber.speech(Good bitch. It's time to go home.)]
+		过了一会儿，你意识到她正带着你在恶魔之家兜圈子，转过最后一个弯，你们又回到了扎拉尼克斯家。安柏打破了这悠闲而沉默的氛围，叹了口气。[amber.speech(该回家了，好婊子。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PUNISHMENT"><![CDATA[
 	<p>
-		Through no real fault of your own, you can sense that Mistress Amber is in a particularly bad mood today. She keeps on making tutting sounds under her breath, and every now and then she snaps at a passerby to move out of her way - a command that the unfortunate citizen invariably hurries to obey.
+		你可以感觉到，安柏主人今天心情特别不好，但这并不是你的错。她口中不停地发出啧啧的声音，时不时地呵斥路人让开——不幸的市民总是只能赶紧听从她的命令。
 	</p>
 	<p>
-		After a short while, Mistress Amber's temper suddenly boils over, and she turns on you with a furious tone in her voice, [amber.speech(Stupid bitch! I thought I told you to heel! I'll teach you for lagging behind!)]
+		过了一小会儿，安柏主人的怒意突然爆发，她用愤怒的语气向你发难，[amber.speech(笨婊子！我让你跟上，你怎么又落在后面了！我该给你点教训了！)]
 	</p>
 	<p>
-		You let out a little cry as your Mistress roughly yanks you forwards on your lead, and, stumbling over your [pc.hands] and feet, you fall to the floor in front of her. [pc.speech(Sorry, Mistress Amber! I didn't mean t- ~Aaah!~)]
+		当你的主人粗暴地往前拽你的牵引绳时，你发出了细微的哭喊声。你用四肢跌跌撞撞地向前爬过去，最终跌倒在她面前的地板上。[pc.speech(对不起，安柏主人！我不是想——啊！~)]
 	</p>
 	<p>
-		Your apology is cut short as you feel a stinging slap land on your [pc.ass+]. Turning your head, you see Mistress Amber kneeling over you, and, in full sight of the street, she starts swatting your [pc.ass] with full force. You squirm and cry out as your Mistress vents her frustration on your poor behind, and it doesn't take long before a small crowd has gathered to witness the unfortunate situation that you find yourself in.
+		你的道歉戛然而止，因为你感到一记刺痛的掌掴落在了你[pc.ass+]上。转过头，你看到女主人安珀跪在你身后，在众目睽睽之下，她开始全力抽打你的[pc.ass]。当女主人在你可怜的屁股上发泄她的不满时，你扭动着身体哭喊着，没过多久，在你身边就聚集起一小群人，目睹着你的不幸遭遇。
 	</p>
 	<p>
-		After several minutes of administering the humiliating and painful punishment, Mistress Amber finally rises to her feet, and, looking down at you, she snarls, [amber.speech(Stupid bitch! Maybe now you'll do as you're told!)]
+		在实施了几分钟羞辱和痛苦的惩罚之后，安柏主人终于站了起来，她低头看着你，咆哮着，[amber.speech(笨婊子！希望下次你能长点记性，我要你怎么做，你就得怎么做！)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Sorry, Mistress Amber!)] you cry, pushing yourself up onto all fours before hurrying forwards to your Mistress's side. The crowd around you starts to disperse, and with a short pull of your leash, Mistress Amber continues down the street.
+		[pc.speech(明白，安柏主人，对不起！主人！)]你哭喊着，四肢用力站起来，然后匆忙跑到主人身边。周围的人群开始散去，安柏主人拉了拉你的皮带，继续沿着街道走下去。
 	</p>
 	<p>
-		[amber.speech(Good bitch,)] Mistress Amber says, breaking the silence between you. The tone in her voice is considerably softer than it was before, and you can't help but feel relieved that your Mistress appears to be feeling better. [amber.speech(Let's go home.)]
+		[amber.speech(好婊子，)]安柏主人打破了你们之间的沉默。她的语气比之前柔和了许多，你不禁为主人心情好转而感到欣慰。[amber.speech(那我们回家吧。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_AMBER_FUCKS"><![CDATA[
 	<p>
-		As you walk, you notice that Mistress Amber keeps on glancing down at you out of the corner of her eye. She starts breathing a little heavier, and as you hear her let out an almost-inaudible moan, you realise that she's getting immensely turned on by parading you about in public like this.
+		你发现，安柏主人走路的时候一直用眼角的余光瞥着你。她的呼吸开始变得有些粗重，你听到她发出细微的呻吟声，意识到她因为在大庭广众之下把你带在身边，而感到无比兴奋。
 	</p>
 	<p>
-		Just as you're wondering what she's going to do about her building lust, Mistress Amber suddenly pulls you to one side of the street, and, still in full view of all the people around you, half-moans, half-growls, [amber.speech(You bitch... Purposefully swaying your ass like that to tempt me... Well, I'll show you! Raise your ass and present yourself! I'm going to fuck you right here in the street!)]
+		就在你琢磨着她会怎么处理自己高涨的性欲时，安柏主人突然把你拉到了路边，并在众目睽睽之下，用夹杂着饥渴呻吟声的语气呵斥你，[amber.speech(你这婊子……屁股撅那么高，在我眼前摇来摇去，你在勾引我吗……好吧，我满足你！屁股抬高，衣服拉下去！我要在大街上操你一顿！)]
 	</p>
 	<p>
-		You look up at Mistress Amber to see her glowing amber-coloured eyes burning with passion. She's obviously serious about her demand, and you wonder if you should as she says, and present yourself to be fucked right here in full view of the street, or say no to her.
+		你抬头看向安珀主人，只见她那双琥珀色的眼睛里燃烧着难以压抑的欲望。她显然是认真的，你在想自己是应该听她的话，在众目睽睽之下和你的主人来一炮，还是拒绝她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_AMBER_FUCKS_START"><![CDATA[
 	<p>
-		You obediently shuffle around to present your rear-end to Mistress Amber. Lifting your [pc.hips+] up into the air, you wiggle your [pc.ass+] from side-to-side a little. [pc.speech(Is this to your liking, Mistress Amber?)]
+		你顺从地挪了挪，把你的屁股朝向安柏主人，将[pc.hips+]高高撅起，把你[pc.ass+]晃来晃去。[pc.speech(你喜欢我这样做吗，主人？)]
 	</p>
 	<p>
-		Unable to control her urges any longer, your Mistress drops down onto her knees behind you. Reaching down to roughly squeeze your [pc.ass+], she then delivers a quick slap to one of your cheeks, moaning as she does so. [amber.speech(Yes, good bitch! Oh, I'm going to fuck you so hard!)]
+		你的主人再也控制不住自己的冲动，跪倒在你身后。她伸手粗暴地捏了一把你[pc.ass+]，然后很快抽了两下你的屁股蛋，边拍打边呻吟起来。[amber.speech(做得好，小婊子！啊，我要操烂你这诱人的屁股！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_AMBER_FUCKS_REFUSED"><![CDATA[
 	<p>
-		You don't really want to have sex with Mistress Amber out in public like this, and, filled with unease, you back away from her a little. [pc.speech(Sorry Mistress Amber... I don't think that's a good idea...)]
+		你并不想这样在大庭广众之下与安柏主人发生性关系，于是你不安地向后退了一点：[pc.speech(对不起，安柏主人……我认为那不是一个好主意……)]
 	</p>
 	<p>
-		[amber.speech(Stupid bitch!)] Mistress Amber snaps. [amber.speech(Fine! We're heading home then!)]
+		[amber.speech(傻逼！)]安柏主人厉声道，[amber.speech(行！我们这就回家！)]
 	</p>
 	<p>
-		With that, your Mistress roughly yanks on your lead, leaving you to scramble forwards on all fours as you rush to catch up with her.
+		说罢，主人粗暴地拽住了你的绳子，让你爬着追上她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_AMBER_FUCKS_POST_SEX"><![CDATA[
 	<p>
-		With one last rough squeeze of your [pc.ass+], Mistress Amber stands up. As she gathers her things, the crowd that gathered to watch her impressive performance starts to dissipate. [amber.speech(Good bitch. Fuck... I needed that...)]
+		最后，安柏主人狠狠捏了捏你[pc.ass+]，站了起来。当她收拾东西时，围观这场精彩表演的人群逐渐散去。[amber.speech(好婊子，操……爽飞了……)]
 	</p>
 	<p>
-		You can't help but smile at your Mistress's praise, and, making sure that you've got your own things in order, you crawl forwards to her side. [pc.speech(Yes, Mistress Amber. I'm happy to have helped, Mistress Amber.)]
+		听到主人的夸奖，你不禁笑了起来，在确认自己的东西已经收拾妥当后，你爬到主人脚边。[pc.speech(能为您排解欲望是我的荣幸，主人。)]
 	</p>
 	<p>
-		Smirking down at you, your Mistress sighs. [amber.speech(Good bitch. It's time to go home.)]
+		你的主人微笑着看着你，轻声说，[amber.speech(走吧，乖婊子，该回家了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS"><![CDATA[
 	<p>
-		The first half of your walk passes without incident, but as you turn a corner to start on your journey back to Zaranix's house, Mistress Amber suddenly lets out a happy little cry. With a quick tug of your lead, she starts leading you across the street, but due to the crowds of people all around you, you aren't quite sure what it is that she's seen.
+		前半段时间平安无事，但当你们拐过一个弯，准备返回扎拉尼克斯家时，安柏主人突然欢快地尖叫起来。她拉着你穿过街道，但周围人山人海，你不太确定她看到了什么。
 	</p>
 	<p>
-		[amber.speech(Hurry up, bitch,)] Mistress Amber snaps, yanking on your lead yet again. [amber.speech(I don't want to miss her.)]
+		[amber.speech(快点婊子。)]安柏主人厉声道，扯着你往前，[amber.speech(我可不想错过她。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_SNIFFING"><![CDATA[
 	<p>
-		Looking up, you notice that you're being led towards a couple who look very similar to you and your Mistress. [npc1.A_fullRace(true)], holding the leash of [npc2.a_fullRace(true)], is looking at the goods on display in a shop window.
+		你定睛一看，发现一个[npc1.A_fullRace(true)]正牵着[npc2.a_fullRace(true)]的牵引绳，好似你与主人。[npc1.A_fullRace(true)]正在欣赏商店橱窗里的商品，你现在正被带往那里。
 	</p>
 	<p>
-		As you draw near, Mistress Amber calls out to the [npc1.race], [amber.speech([npc1.Name]! Fancy seeing you here!)]
+		一接近[npc1.race]，安柏主人大叫着：[amber.speech([npc1.Name]！真没想到在这里见到你！)]
 	</p>
 	<p>
-		The [npc1.race], who must be [npc1.name], spins around, looking this way and that for the origin of the voice that just called out to [npc1.herHim]. Catching sight of Mistress Amber, a big smile breaks out on [npc1.her] face, and [npc1.she] skips over towards you. [npc1.speech(Amber! Oh, you're taking your pet out for a walk too, I see.)]
+		想必这个[npc1.race]就是[npc1.name]，[npc1.herHim]转过身来，四处寻找声音来源。[npc1.she]一看到安柏主人，脸上露出灿烂的笑容，[npc1.she]蹦蹦跳跳地向你们走来：[npc1.speech(安柏！哦，你也带你的宠物出来散步呢，看到了。)]
 	</p>
 	<p>
-		Mistress Amber comes to a halt in front of [npc1.name], and the two share a quick hug before stepping back from one another. [amber.speech(That's right, I wanted to get some fresh air, and I thought I'd take my bitch out with me. I don't remember you owning [npc2.a_race]. Is that a new pet of yours?)]
+		安柏主人在[npc1.name]面前停下脚步，两人迅速拥抱了一下：[amber.speech(没错，我想呼吸一下新鲜空气，所以带上我的宠物一起出来。我不记得你以前有[npc2.a_race]，是新宠物吗？)]
 	</p>
 	<p>
-		[npc1.speech(Yeah, I thought I'd treat myself, so I went and bought [npc2.name] here from Slaver Alley just the other day! [npc2.She]'s a little more excitable than my other slaves, and can't seem to stop humping them. It's getting to be a bit of a problem...)]
+		[npc1.speech(对，我想给自己一个奖励，前几天就去奴隶巷买了[npc2.name]！[npc2.She]比我其他的奴隶要更容易兴奋，不停发情，都有些造成问题了……)]
 	</p>
 	<p>
-		[amber.speech(You always were far too soft, [npc1.name]. You have to be hard on those beneath you, or else they'll never respect you. Anyway, how are things with you? I haven't seen you around here for ages...)]
+		[amber.speech(你总是太心软，[npc1.name]。你得对下面的人严格一些，否则他们永远不懂尊重。不管怎样，你近来可好？我好久没见到你了……)]
 	</p>
 	<p>
-		As Mistress Amber talks with [npc1.name], your counterpart, [npc2.name], starts trying to crawl around behind you and sniff your crotch. You back away from [npc2.herHim] in an attempt to show that you're not interested, but [npc2.she] doesn't take the hint, and suddenly pulls forwards, causing [npc1.name] to stumble a little as [npc1.she] tries to keep [npc1.her] pet under control.
+		安柏主人与[npc1.name]畅谈时，[npc2.name]在你身后绕来绕去，还嗅你的胯部。你毫无兴趣，从[npc2.herHim]那里退开，但[npc2.she]并没有心领神会，反而突然向前冲，结果让[npc1.name]控制不稳，稍微绊了一下。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_SNIFFING_MOUNTING"><![CDATA[
 	<p>
-		[npc1.speech([npc2.Name]! Bad! Bad [npc2.girl]!)] [npc1.Name] cries, leaning down to gently smack [npc1.her] pet on the nose. [npc1.speech(See what I mean, Amber? [npc2.She]'s so horny all the time! Sorry about [npc2.herHim] bothering your pet...)]
+		[npc1.speech([npc2.Name]！坏！坏[npc2.girl]！)][npc1.Name]叫着，俯身轻轻挂了一下[npc1.her]宠物的鼻子，[npc1.speech(我说什么来着，安柏？[npc2.She]无时无刻都在发情！抱歉[npc2.herHim]来招惹你的宠物……)]
 	</p>
 	<p>
-		You look up at Mistress Amber to see an evil smile break out across her face. [amber.speech(Not at all, [npc1.name]! In fact, perhaps my bitch here could help you out a little. I'll let your pet have a go at humping [pc.herHim], if you'd like. That should calm '[npc2.name]' down enough until you get [npc2.herHim] home.)]
+		你抬头看向安柏主人，只见她脸上露出了邪恶的笑容：[amber.speech(没事，[npc1.name]！实际上，也许我的小贱人可以帮你一点忙。你愿意的话，可以让你的宠物去和[pc.herHim]交配，这样应该足以让[npc2.name]回家之前就安静下来。)]
 	</p>
 	<p>
-		[npc1.speech(Oh, thanks, Amber! Yeah, that'd be great! [npc2.She] gets a lot more docile after [npc2.she]'s emptied [npc2.her] balls into something!)] [npc1.Name] happily replies, starting to loosen [npc1.her] grip on the leash.
+		[npc1.speech(哦，安柏，感谢！是啊，太棒了！[npc2.She]在射精进什么东西之后就会变得温顺很多！)][npc1.Name]高兴地回答，松开[npc1.her]对绳子的牵制。
 	</p>
 	<p>
-		Mistress Amber smiles at her friend, before turning to glare down at you. [amber.speech(Present yourself, bitch!)]
+		安柏主人朝友人微笑，又瞪向你：[amber.speech(婊子，露出来！)]
 	</p>
 	<p>
-		If you don't want to be mounted by [npc2.name], you'd better say something to Mistress Amber, and quickly!
+		如果你不想委身于[npc2.name]，你最好对安柏主人说些什么，要快！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_SNIFFING_ORAL"><![CDATA[
 	<p>
-		[npc1.speech([npc2.Name]! Bad! Bad [npc2.girl]!)] [npc1.Name] cries, leaning down to gently smack [npc1.her] pet on the nose. [npc1.speech(See what I mean, Amber? [npc2.She]'s so horny all the time! Sorry about [npc2.herHim] bothering your pet...)]
+		[npc1.speech([npc2.Name]！坏！坏[npc2.girl]！)][npc1.Name]叫着，俯身轻轻挂了一下[npc1.her]宠物的鼻子，[npc1.speech(我说什么来着，安柏？[npc2.She]无时无刻都在发情！抱歉[npc2.herHim]来招惹你的宠物……)]
 	</p>
 	<p>
-		You look up at Mistress Amber to see an evil smile break out across her face. [amber.speech(Not at all, [npc1.name]! In fact, perhaps my bitch here could help you out a little. My bitch's ass is off-limits, but I'll let your pet use [pc.her] mouth if you'd like? That should calm '[npc2.name]' down enough until you get [npc2.herHim] home.)]
+		你抬头看向安柏主人，只见她脸上露出了邪恶的笑容：[amber.speech(没事，[npc1.name]！实际上，也许我的小贱人可以帮你一点忙。我家婊子的屁股是禁区，但如果你愿意，我可以让你的宠物用[pc.her]的嘴？这样应该足以让[npc2.name]回家之前就冷静下来。)]
 	</p>
 	<p>
-		[npc1.speech(Oh, thanks, Amber! Yeah, that'd be great! [npc2.She] gets a lot more docile after [npc2.she]'s emptied [npc2.her] balls into something!)] [npc1.Name] happily replies, starting to loosen [npc1.her] grip on the leash.
+		[npc1.speech(哦，安柏，感谢！是啊，太棒了！[npc2.She]在射精进什么东西之后就会变得温顺很多！)][npc1.Name]高兴地回答，松开[npc1.her]对绳子的牵制。
 	</p>
 	<p>
-		Mistress Amber smiles at her friend, before turning to glare down at you. [amber.speech(Open wide, bitch!)]
+		安柏主人朝友人微笑，又瞪向你：[amber.speech(婊子，张大嘴！)]
 	</p>
 	<p>
-		If you don't want to suck [npc2.name]'s cock, you'd better say something to Mistress Amber, and quickly!
+		如果你不想给[npc2.name]口交，你最好对安柏主人说些什么，要快！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_SNIFFING_NO_SEX"><![CDATA[
 	<p>
-		[npc1.speech([npc2.Name]! Bad! Bad [npc2.girl]!)] [npc1.Name] cries, leaning down to gently smack [npc1.her] pet on the nose. [npc1.speech(See what I mean, Amber? [npc2.She]'s so horny all the time! Sorry about [npc2.herHim] bothering your pet...)]
+		[npc1.speech([npc2.Name]！坏！坏[npc2.girl]！)][npc1.Name]叫着，俯身轻轻挂了一下[npc1.her]宠物的鼻子，[npc1.speech(我说什么来着，安柏？[npc2.She]无时无刻都在发情！抱歉[npc2.herHim]来招惹你的宠物……)]
 	</p>
 	<p>
-		You look up at Mistress Amber as she lets out a little sigh. [amber.speech(Don't worry about it, [npc1.name]! I'd love to have helped you out, but my bitch is all locked up. You'll just have to let '[npc2.name]' here have a go at one of your slaves when you get back home.)]
+		只见安柏主人轻叹了口气：[amber.speech([npc1.name]，别担心！我很想帮你，但我的婊子被上锁了。等你回家后，就让这位‘[npc2.name]’去找你的奴隶发泄吧。)]
 	</p>
 	<p>
-		[npc1.speech(Yeah... I'd better get [npc2.herHim] back there now... It was fun talking to you again, Amber. See you soon!)] [npc1.Name] says, sharply tugging on [npc1.her] leash as [npc1.she] pulls [npc2.name] away from you.
+		[npc1.speech(是啊……最好现在就带[npc2.herHim]回去……安柏，刚刚聊得很愉快，下次见！)][npc1.Name]说着扯起[npc1.her]的牵引绳，带[npc2.name]远去。
 	</p>
 	<p>
-		[amber.speech(Bye, [npc1.name]!)] Mistress Amber calls after her friend, before turning to you. [amber.speech(Bitch, heel. We're going home.)]
+		[amber.speech(拜，[npc1.name]！)]安柏主人叫喊道，又转向你，[amber.speech(过来婊子，我们回家。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_REFUSE"><![CDATA[
 	<p>
-		Unwilling to let [npc2.name] have [npc2.her] way with you, you back off, before looking up at Mistress Amber and letting out a whine. [pc.speech(Mistress Amber, please, I don't want to do this...)]
+		你不愿意让[npc2.name]对你为所欲为，连连退开，你抬头哀求安柏主人：[pc.speech(求你了，安柏主人，我不想……)]
 	</p>
 	<p>
-		Mistress Amber glares down at you, her glowing amber eyes burning with fury. [amber.speech(Bad bitch! <i>Very</i> bad bitch!)]
+		安柏主人怒视你，闪光的琥珀色眸子好似要喷出火：[amber.speech(坏婊子！<i>非常</i>坏的婊子！)]
 	</p>
 	<p>
-		Sharply yanking your leash, Mistress Amber then turns to her friend. [amber.speech(I'm so sorry, [npc1.name]. Bitch here is still being trained.)]
+		安柏主人猛地一扯牵绳，转身对朋友说：[amber.speech(抱歉，[npc1.name]，这婊子还在调教中。)]
 	</p>
 	<p>
-		[npc1.speech(No worries, Amber!)] [npc1.name] laughs, before tugging on [npc1.her] pet's leash. [npc1.speech(Come on [npc2.name]! You can have some fun with your toys back home!)]
+		[npc1.speech(没事，安柏！)][npc1.name]笑着拉起[npc1.her]的宠物牵绳：[npc1.speech(回来吧[npc2.name]！你可以回家找小玩具玩！)]
 	</p>
 	<p>
-		Mistress Amber says her farewells to her friend, before turning back towards you. [amber.speech(Bad bitch! You're to do <i>exactly</i> what I say next time, understood?!)]
+		安柏主人与好友告别后又看向你：[amber.speech(坏婊子！下次你一定要乖乖<i>照做</i>，懂了吗？！)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you reply, casting your eyes down to the ground before you.
+		[pc.speech(好的，安柏主人，)]你低头看着地面，回答道。
 	</p>
 	<p>
-		[amber.speech(Stupid bitch! I can't believe you humiliated me in front of my friend like that! We're going straight home!)]
+		[amber.speech(蠢婊子！不敢相信你会让我在朋友面前丢脸！我们直接回家！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_START"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you say, turning to present your [pc.ass+] to [npc2.name].
+		[pc.speech(好的，安柏主人。)]你说，把[pc.ass+]露给[npc2.name]看。
 	</p>
 	<p>
-		[npc1.speech(Go on then, [npc2.boy]!)] [npc1.name] says cheerily. [npc1.speech(You can fuck Amber's bitch! Go on!)]
+		[npc1.speech(继续吧，[npc2.boy]！)][npc1.name]欢欣鼓舞，[npc1.speech(你可以操安柏的婊子！继续！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_START_CLOTHING"><![CDATA[
 	<p>
-		[npc2.Name] lets out a happy [npc2.moan], and, with little concern for your comfort, roughly pulls your clothing aside to reveal your [pc.ass+]. Not wasting a single moment, [npc2.she] instantly bounds forwards, climbing on top of you as [npc2.she] mounts you right there in full view of the busy street.
+		[npc2.Name]发出一声快乐的[npc2.moan]，不管不顾地扯开你的衣服，露出了你[pc.ass+]。[npc2.she]立刻爬上你的身体，就在繁忙的街道上，当众骑在你身上。
 	</p>
 	<p>
-		Down on all fours, you're left to hold up both your and your partner's weight as you prepare to be fucked. You feel the [npc2.race]'s [npc2.cock+] poking against your [pc.ass+], and realise that it's only going to be a matter of seconds before [npc2.she]'s humping you in front of your Mistress, [npc1.name], and anyone else who happens to stop and watch...
+		你四肢着地，被迫支撑起自己和身上的重量，准备接受交配，你感觉[npc2.race][npc2.cock+]在你[pc.ass+]上轻触。距离[npc2.she]在你的主人、[npc1.name]以及任何可能停下来观看的人面前交配，只剩下几秒钟的时间了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_START_EXPOSED"><![CDATA[
 	<p>
-		[npc2.Name] lets out a happy [npc2.moan], and, nuzzling [npc2.her] face up against your [pc.ass+], [npc2.she] delivers a quick, wet lick to your exposed [pc.ass+]. Not wasting a single moment, [npc2.she] then instantly bounds forwards, climbing on top of you as [npc2.she] mounts you right there in full view of the busy street.
+		[npc2.Name]发出一声快乐的[npc2.moan]，将脸贴向你[pc.ass+]，迅速舔舐起你裸露的[pc.ass]。[npc2.she]立刻爬上你的身体，就在繁忙街道的众目睽睽之下骑上了你。
 	</p>
 	<p>
-		Down on all fours, you're left to hold up both your and your partner's weight as you prepare to be fucked. You feel the [npc2.race]'s [npc2.cock+] poking against your [pc.ass+], and realise that it's only going to be a matter of seconds before [npc2.she]'s humping you in front of your Mistress, [npc1.name], and anyone else who happens to stop and watch...
+		你四肢着地，被迫支撑起自己和身上的重量，准备接受交配，你感觉[npc2.race][npc2.cock+]在你[pc.ass+]上轻触。距离[npc2.she]在你的主人、[npc1.name]以及任何可能停下来观看的人面前交配，只剩下几秒钟的时间了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_START_ORAL"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress Amber,)] you say, turning to move your face towards [npc2.name]'s [npc2.ass].
+		[pc.speech(好的，安柏主人。)]你说，把头转向[npc2.name]的[npc2.ass]。
 	</p>
 	<p>
-		[npc1.speech(Go on then, [npc2.boy]!)] [npc1.name] says cheerily. [npc1.speech(You can use Amber's bitch! Go on, fuck [pc.her] face!)]
+		[npc1.speech(继续吧，[npc2.boy]！)][npc1.name]欢欣鼓舞，[npc1.speech(你可以用安柏的婊子泄欲！继续，操[pc.her]的脸！)]
 	</p>
 	<p>
-		Not needing to be told twice, [npc2.name] crawls around into such a position so that [npc2.her] right hip is bumping against your face. Suddenly, [npc2.she] then lifts [npc2.her] right [npc2.leg] up, before hooking it over your neck to rest on your shoulders. The weight of [npc2.her] [npc2.leg] causes you to dip your head down a little, bringing your mouth to within just [unit.sizes] of [npc2.her] [npc2.cock+].
+		[npc2.name]无需多言就调整好位置，把右臀对准你的脸。[npc2.her]又突然抬起右[npc2.leg]，勾过你的脖子，搭在你的肩膀上。[npc2.leg]的重量令你稍微低头，使你的嘴与[npc2.her][npc2.cock+]只距离[unit.sizes]。
 	</p>
 	<p>
-		[npc2.She]'s already rock-hard, and you know that it's only going to be a matter of seconds before [npc2.she] thrusts [npc2.her] [npc2.cock+] into your mouth, right here in front of your Mistress, [npc1.name], and anyone else who happens to stop and watch...
+		[npc2.her][npc2.cock+]已经梆硬，只需几秒钟就会将其插入你的口中——就在你的主人、[npc1.name]以及任何可能停下来观看的人面前……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_POST_SEX"><![CDATA[
 	<p>
-		Dropping down off your back, [npc2.name] lets out a very satisfied sigh as [npc2.she] turns and admires the mess that [npc2.she]'s made of you. With a slow, wet lick to your [pc.ass+], [npc2.she] then quickly moves off and returns to [npc1.name]'s side.
+		[npc2.name]转过身来欣赏被弄得一团糟的你，从你的背上起开，发出满意的低吟。[npc2.she]缓慢地舔了舔你[pc.ass+]，濡湿一片，立马迅速离开，回到[npc1.name]的身边。
 	</p>
 	<p>
-		[npc1.speech(Good [npc2.boy]! You sure showed that bitch who's boss, didn't you?)] [npc1.Name] happily says, leaning down to pat [npc2.name] on the head.
+		[npc1.speech(好[npc2.boy]！你让那个贱人知道谁才是老大了，对吧？)][npc1.name]高兴地说，俯身拍了拍[npc2.name]的头。
 	</p>
 	<p>
-		[amber.speech(Now that these two are done, I'd better be heading back,)] Mistress Amber says to her friend. [amber.speech(I'll see you another time, [npc1.name]! Oh, and do as told you with [npc2.name]. You need to show [npc2.herHim] who's in charge before [npc2.she] starts getting too rebellious.)]
+		[amber.speech(既然这两个家伙已经完事，我也该回去了。)]安柏主人对她的朋友说，[amber.speech(改天见，[npc1.name]！对了，按我告诉你的去对[npc2.name]，在[npc2.she]变得太叛逆之前，你得让[npc2.herHim]知道谁才是老大。)]
 	</p>
 	<p>
-		[npc1.speech(I will, Amber! Thanks for all the advice, I'll see you soon!)] [npc1.Name] says, tugging on [npc2.name]'s lead as [npc1.she] starts walking off down the street.
+		[npc1.speech(我会的，安柏！谢谢你的建议，下次见！)][npc1.Name]说着，拽着[npc2.name]往街上走去。
 	</p>
 	<p>
-		Smirking down at you, your Mistress sighs. [amber.speech(Good bitch. You liked getting fucked by my friend's pet, didn't you?)]
+		你的主人坏笑着对你轻声说：[amber.speech(乖婊子，你喜欢被我友人的宠物操对吧？)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you quickly reply, smiling up at the sadistic succubus.
+		[pc.speech(是的，安柏主人，谢谢你，安柏主人！)]你高兴地笑对施虐狂魅魔。
 	</p>
 	<p>
-		[amber.speech(Good bitch. It's time to go home.)]
+		[amber.speech(走吧，乖婊子，该回家了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKIES_PET_FUCKS_POST_SEX_ORAL"><![CDATA[
 	<p>
-		Unhooking [npc2.her] [npc2.leg] from behind your neck, [npc2.name] lets out a very satisfied sigh as [npc2.she] turns and admires the mess that [npc2.she]'s made of you. With a slow, wet lick to your cheek, [npc2.she] then quickly moves off and returns to [npc1.name]'s side.
+		[npc2.name]转过身来欣赏被弄得一团糟的你，松开[npc2.her]绕着你脖子的[npc2.leg]，发出满意的低吟。[npc2.she]缓慢地舔了舔你的脸颊，濡湿你的脸，立马迅速离开，回到[npc1.name]的身边。
 	</p>
 	<p>
-		[npc1.speech(Good [npc2.boy]! You sure showed that bitch who's boss, didn't you?)] [npc1.Name] happily says, leaning down to pat [npc2.name] on the head.
+		[npc1.speech(好[npc2.boy]！你让那个贱人知道谁才是老大了，对吧？)][npc1.name]高兴地说，俯身拍了拍[npc2.name]的头。
 	</p>
 	<p>
-		[amber.speech(Now that these two are done, I'd better be heading back,)] Mistress Amber says to her friend. [amber.speech(I'll see you another time, [npc1.name]! Oh, and do as told you with [npc2.name]. You need to show [npc2.herHim] who's in charge before [npc2.she] starts getting too rebellious.)]
+		[amber.speech(既然这两个家伙已经完事，我也该回去了。)]安柏主人对她的朋友说，[amber.speech(改天见，[npc1.name]！对了，按我告诉你的去对[npc2.name]，在[npc2.she]变得太叛逆之前，你得让[npc2.herHim]知道谁才是老大。)]
 	</p>
 	<p>
-		[npc1.speech(I will, Amber! Thanks for all the advice, I'll see you soon!)] [npc1.Name] says, tugging on [npc2.name]'s lead as [npc1.she] starts walking off down the street.
+		[npc1.speech(我会的，安柏！谢谢你的建议，下次见！)][npc1.Name]说着，拽着[npc2.name]往街上走去。
 	</p>
 	<p>
-		Smirking down at you, your Mistress sighs. [amber.speech(Good bitch. You liked getting fucked by my friend's pet, didn't you?)]
+		你的主人坏笑着对你轻声说：[amber.speech(乖婊子，你喜欢被我友人的宠物操对吧？)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber! Thank you, Mistress Amber!)] you quickly reply, smiling up at the sadistic succubus.
+		[pc.speech(是的，安柏主人，谢谢你，安柏主人！)]你高兴地笑对施虐狂魅魔。
 	</p>
 	<p>
-		[amber.speech(Good bitch. It's time to go home.)]
+		[amber.speech(走吧，乖婊子，该回家了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

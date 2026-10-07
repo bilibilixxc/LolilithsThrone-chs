@@ -216,14 +216,14 @@ public class NPCOffspring extends NPC {
 		if(rel.isEmpty())
 			return "";
 
-		return UtilText.parse(this, " You are [npc.hisHer] ") + getRelationshipStr(rel, Main.game.getPlayer().getGender().getType()) + ".";
+		return UtilText.parse(this, "你是[npc.hisHer]的") + getRelationshipStr(rel, Main.game.getPlayer().getGender().getType()) + "。";
 	}
 
 	private static String getMatingDescription(GameCharacter self, GameCharacter partner, String what) {
-		String result = what + " with " + partner.getName("a");
+		String result = what + "和" + partner.getName("a");
 		String rel = partner.getRelationshipStrTo(self);
 		if(!rel.isEmpty())
-			return result + ", your " + rel;
+			return result + "(你的" + rel + ")";
 		else
 			return result;
 	}
@@ -238,24 +238,24 @@ public class NPCOffspring extends NPC {
 
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("[npc.Name] is your [npc.daughter], who you "+
+		sb.append("[npc.Name]是你"+
 				(this.getMother()!=null && this.getMother().isPlayer()
-						? getMatingDescription(getMother(), getFather(), "mothered")
-						: getMatingDescription(getFather(), getMother(), "fathered")
-				)+"."
+						? getMatingDescription(getMother(), getFather(), "身为母亲")
+						: getMatingDescription(getFather(), getMother(), "身为父亲")
+				)+"生出的[npc.daughter]。"
 				+ getRelationshipFromPlayer()
-				+ " [npc.She] was conceived on "+Units.date(this.getConceptionDate(), Units.DateType.LONG)+", and "
+				+ "[npc.She]于"+Units.date(this.getConceptionDate(), Units.DateType.LONG)+"开始孕育，"
 				+(daysToBirth==0
-					?"later that same day "
-					:daysToBirth>1?Util.intToString(daysToBirth)+" days later ":Util.intToString(daysToBirth)+" day later ")
+					?"且在同一天"
+					:daysToBirth>1?Util.intToString(daysToBirth)+"天后":Util.intToString(daysToBirth)+"天后")
 				+(this.getMother()!=null && this.getMother().isPlayer()
-					?(this.getIncubator()!=null && !this.getIncubator().isPlayer()?this.getIncubator().getName():"you")+" gave birth to [npc.herHim]."
-					:" [npc.she] was born."));
+					?(this.getIncubator()!=null && !this.getIncubator().isPlayer()?this.getIncubator().getName():"你")+"便将其分娩而出。"
+					:"[npc.she]便降生了。"));
 
 		if(this.isSlave() && this.isDoll()) {
-			sb.append(" After enslaving [npc.herHim], you had [npc.herHim] permanently transformed into an obedient sex doll at Lovienne's Luxuries.");
+			sb.append("在你奴役了[npc.herHim]之后，你将[npc.herHim]在洛维耶纳奢侈品店永久地转化成了一个唯命是从的性爱玩偶。");
 		} else {
-			sb.append(" You first encountered [npc.herHim] prowling the alleyways of Dominion, and, through some arcane-influenced instinct, you both recognised your relationship at first sight.");
+			sb.append("你们第一次相遇时，[npc.herHim]正在御城区的小巷游荡，由于某种受奥术影响的天性，你们两个第一眼就认出了对方。");
 		}
 		
 		return UtilText.parse(this, sb.toString());

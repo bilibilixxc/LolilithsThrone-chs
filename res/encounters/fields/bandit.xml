@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<additionalPlaceTypeTriggers>
@@ -10,7 +10,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[bandit ambush]]></name>
+			<name><![CDATA[匪徒伏击]]></name>
 			<chanceToTrigger opportunisticEncounter="true"><![CDATA[
 				4
 			]]></chanceToTrigger>

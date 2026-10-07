@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -8,25 +8,25 @@
 		
 		<twoHanded>true</twoHanded>
 		
-		<determiner><![CDATA[the]]></determiner>
+		<determiner><![CDATA[​]]></determiner>
 		
-		<name><![CDATA[Dark Siren's Scythe]]></name>
+		<name><![CDATA[暗夜塞壬的镰刀]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Dark Siren's Scythes]]></namePlural>
+		<namePlural pluralByDefault="false"><![CDATA[暗夜塞壬的镰刀]]></namePlural>
 		
-		<description><![CDATA[A huge, arcane-bladed metal scythe. Enchanted by 'The Dark Siren' herself, this scythe holds tremendous power, and feels as light as a feather to the one who wields it. Such power comes at a cost, however, and each strike drains a huge amount of arcane essences from the wielder...]]></description> 
+		<description><![CDATA[一把巨大的奥术刀刃金属镰刀。这把镰刀由 "暗夜塞壬 "亲自附魔，拥有巨大的力量，但挥舞它的人却感觉轻如鸿毛。然而，这种力量是有代价的，每一次挥舞都会消耗持镰者大量的奥术精华……]]></description> 
 		
-		<attackDescriptor>reap</attackDescriptor>
+		<attackDescriptor><![CDATA[收割]]></attackDescriptor>
 		
-		<attackTooltipDescription>Swing your scythe at [npc2.name].</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[向[npc2.name]挥舞镰刀。]]></attackTooltipDescription>
 		
 		<rarity>LEGENDARY</rarity> 
 		
 		<weaponSet>DARK_SIREN</weaponSet> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] hold of the Dark Siren's Scythe as [npc.she] [npc.verb(ready)] [npc.herself] to use it in combat.]]></equipText>
+		<equipText><![CDATA[[npc.Name]抓起暗夜塞壬的镰刀，准备用于战斗。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] away the Dark Siren's Scythe.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]放下暗夜塞壬的镰刀。]]></unequipText>
 		
 		<imageName>scythe.svg</imageName> 
 		
@@ -79,27 +79,27 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] scythe at [npc2.name], letting out an evil laugh as the ethereal blade unleashes a tremendous burst of arcane energy upon contacting [npc2.her] body!
-		]]></hitText>
+		[npc.Name]朝[npc2.name]挥动镰刀，虚幻的刀刃一接触到[npc2.her]的身体就爆发出巨大的奥术能量，[npc.Name]不禁发出一阵邪恶的笑声！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] scythe at [npc2.name], grinning in delight as the ethereal blade delivers a cataclysmic blast of energy upon contacting with [npc2.her] body!
-		]]></hitText>
-		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] at [npc2.name] with [npc.her] scythe, laughing in maniacal glee as [npc2.her] body's contact with the ethereal blade triggers a tremendous burst of arcane energy!
-		]]></hitText>
+		[npc.Name]朝[npc2.name]挥动镰刀，虚幻的刀刃一接触到[npc2.her]的身体就爆发出灾难性的能量，[npc.Name]愉悦地咧嘴大笑！
+]]></hitText>
+		<hitText><![CDATA[		
+[npc.Name]朝[npc2.name]挥动镰刀，虚幻的奥术利刃深深地捅进[npc2.her]的肩膀，令其失去了一些能量！
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] scythe at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+[npc.Name]用镰刀挥向[npc2.name]，但最终没有击中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Swinging at [npc2.name] with [npc.her] scythe, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]向着[npc2.name]挥出镰刀，却没能命中目标，让[npc.she]恼火地大喊一声！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(swing)] at [npc2.name] with [npc.her] scythe, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用镰刀猛地挥向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

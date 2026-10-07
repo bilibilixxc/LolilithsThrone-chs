@@ -82,9 +82,9 @@ public class DominionExpressCentaur extends NPC {
 
 			List<String> names;
 			if(this.isFeminine()) {
-				names = Util.newArrayListOfValues("horny centauress", "lustful centauress", "desperate centauress");
+				names = Util.newArrayListOfValues("情欲高涨的女半人马", "欲望强烈的女半人马", "急切渴求的女半人马");
 			} else {
-				names = Util.newArrayListOfValues("horny centaur", "lustful centaur", "desperate centaur");
+				names = Util.newArrayListOfValues("情欲高涨的半人马", "欲望强烈的半人马", "急切渴求的半人马");
 			}
 			this.setGenericName(Util.randomItemFrom(names));
 			setName(Name.getRandomTriplet(this.getSubspecies()));
@@ -208,7 +208,7 @@ public class DominionExpressCentaur extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return UtilText.parse(this, "[npc.Name] is a slave at Dominion Express, and works hard every day to transport goods all over the city.");
+		return UtilText.parse(this, "[npc.Name]是御城速递公司的奴隶，每天都努力工作，将货物运送到整个城市各处。");
 	}
 	
 	@Override
@@ -286,8 +286,8 @@ public class DominionExpressCentaur extends NPC {
 				String itemName = item.getName();
 				return new Value<>(false,
 						UtilText.parse(user, target,
-							"[npc.Name] [npc.verb(take)] out "+UtilText.generateSingularDeterminer(itemName)+" "+itemName+" from [npc.her] inventory and [npc.verb(try)] to give it to [npc2.name],"
-								+ " but [npc2.she] dismisses it with an angry shout, [npc2.speech(Put that away, you stupid slut!)]"));
+							"[npc.Name]从物品栏里拿出"+UtilText.generateSingularDeterminer(itemName)+itemName+"，准备递给[npc2.name]，"
+								+ "但[npc2.she]却怒吼一声将其推开，[npc2.speech(把那东西收起来，你这骚货是傻吗！)]"));
 			}
 		}
 		return super.getItemUseEffects(item, itemOwner, user, target);
@@ -304,14 +304,14 @@ public class DominionExpressCentaur extends NPC {
 				}
 				if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 					return UtilText.parse(equipper, target,
-							"[npc.Name] [npc.verb(direct)] [npc.her] spinneret at [npc2.namePos] [npc2.cock], but, sensing what [npc.sheIs] about to do, [npc2.name] [npc2.verb(slap)] it away and [npc2.verb(growl)],"
-							+ " [npc2.speech(I'm not wearing a condom for this!)]");
+							"[npc.Name]将[npc.her]的丝囊对准了[npc2.namePos]的[npc2.cock]，但当[npc2.name]意识到[npc.sheIs]的意图后，立刻将其拍开，低声吼叫着，"
+							+ "[npc2.speech(我可不会戴套的！)]");
 				}
 				return UtilText.parse(equipper, target,
-						"[npc.Name] [npc.verb(hold)] out a condom to [npc2.name], but instead of setting about rolling it down over [npc2.her] [npc2.cock] as [npc.she]'d hoped,"
-								+ " [npc2.name] [npc2.verb(let)] out an annoyed growl and [npc2.verb(tear)] the packet in two!"
-						+ " With yet another growl, [npc2.she] states,"
-						+ " [npc2.speech(I'm not wearing a condom for this!)]");
+						"[npc.name]向[npc2.name]掏出一个安全套，但并没有像[npc.she]希望的那样，把避孕套捋到[npc2.her]的[npc2.cock]上，"
+								+ "[npc2.name]恼羞成怒地咆哮，将包裹撕成了两半！"
+						+ "[npc2.she]再次发出一声咆哮，"
+						+ "[npc2.speech(我可不会戴套的！)]");
 			}
 		}
 		return null;

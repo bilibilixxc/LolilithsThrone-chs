@@ -33,7 +33,7 @@ public class GenericFemaleNPC extends NPC {
 	}
 	
 	public GenericFemaleNPC(boolean isImported) {
-		super(isImported, new NameTriplet("unknown female"), null, "Unknown.",
+		super(isImported, new NameTriplet("某女性"), null, "未知。",
 				25, Month.JUNE, 15,
 				1, Gender.getGenderFromUserPreferences(Femininity.FEMININE), Subspecies.HUMAN, RaceStage.HUMAN,
 				new CharacterInventory(false, 0), WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL, true);
@@ -42,7 +42,7 @@ public class GenericFemaleNPC extends NPC {
 	@Override
 	public void loadFromXML(Element parentElement, Document doc, CharacterImportSetting... settings) {
 		loadNPCVariablesFromXML(this, null, parentElement, doc, settings);
-		this.setName(new NameTriplet("unknown female"));
+		this.setName(new NameTriplet("某女性"));
 	}
 	
 	@Override

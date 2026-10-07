@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<htmlContent tag="OCTOPUS_BASIC"><![CDATA[
 	<p>
-		Octopus-morphs are almost exclusively found in the larger bodies of water Lilith's Realm, although the odd individual may sometimes wash up around the canals of Dominion. Their distinctively octopus-like lower half is usually enough to identify a person as an octopus-morph.
+		章鱼化形几乎只出现在莉莉丝王国的大型水体中，不过有时也会有个别章鱼化形出现在御城区的运河附近。章鱼化形独特的章鱼状下半身通常足以让人认出他们。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="OCTOPUS_ADVANCED"><![CDATA[
 	<p>
-		While the individual personalities of octopus-morphs vary greatly from one individual to another, they have a reputation for being both curious and highly intelligent.
+		尽管章鱼化形的个性因人而异，但它们却以好奇和高智商著称。
 	</p>
 	<p>
-		All octopus-morphs have the lower body of an octopus, meaning that in place of legs, they have eight prehensile tentacles. This aquatic form of theirs makes them very reluctant to stray far from water, and so octopus-morphs are almost never encountered in any inland location.
+		所有章鱼化形都有章鱼的下半身，也就是说，它们没有腿，却有八条伸缩触手。章鱼的这种水生形态使它们非常不愿意远离水域，因此在任何内陆地区几乎都不会遇到章鱼化形。
 	</p>
 	<p>
-		Like most other races, octopus-morphs get affected by arcane storms. However, due to the fact that most of them live far away from Dominion's epicentre of such storms, they typically only experience mild effects.
+		和大多数其他种族一样，章鱼化形也会受到奥术风暴的影响。不过，由于他们中的大多数人都生活在远离御城区风暴中心的地方，他们通常只会受到轻微的影响。
 	</p>
 	<p>
-		An octopus-morph's offspring will be a mixture of octopus-morphs and offspring of their partner's race.
+		章鱼化形的后代将是章鱼化形和其伴侣种族后代的混合体。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

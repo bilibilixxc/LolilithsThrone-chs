@@ -10,21 +10,21 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum PenetrationGirth {
 
-	ZERO_THIN(0, -0.8f, "thin", PresetColour.GENERIC_SIZE_ONE),
+	ZERO_THIN(0, -0.8f, "细小", PresetColour.GENERIC_SIZE_ONE),
 	
-	ONE_SLENDER(1, -0.4f, "slender", PresetColour.GENERIC_SIZE_TWO),
+	ONE_SLENDER(1, -0.4f, "纤细", PresetColour.GENERIC_SIZE_TWO),
 	
-	TWO_NARROW(2, -0.2f, "narrow", PresetColour.GENERIC_SIZE_THREE),
+	TWO_NARROW(2, -0.2f, "较细", PresetColour.GENERIC_SIZE_THREE),
 	
-	THREE_AVERAGE(3, 0, "averagely-girthed", PresetColour.GENERIC_SIZE_FOUR),
+	THREE_AVERAGE(3, 0, "平均直径", PresetColour.GENERIC_SIZE_FOUR),
 	
-	FOUR_GIRTHY(4, 0.2f, "girthy", PresetColour.GENERIC_SIZE_FIVE),
+	FOUR_GIRTHY(4, 0.2f, "较粗", PresetColour.GENERIC_SIZE_FIVE),
 	
-	FIVE_THICK(5, 0.4f, "thick", PresetColour.GENERIC_SIZE_SIX),
+	FIVE_THICK(5, 0.4f, "粗大", PresetColour.GENERIC_SIZE_SIX),
 	
-	SIX_CHUBBY(6, 0.6f, "chubby", PresetColour.GENERIC_SIZE_SEVEN),
+	SIX_CHUBBY(6, 0.6f, "粗壮", PresetColour.GENERIC_SIZE_SEVEN),
 	
-	SEVEN_FAT(7, 0.8f, "fat", PresetColour.GENERIC_SIZE_EIGHT);
+	SEVEN_FAT(7, 0.8f, "极粗", PresetColour.GENERIC_SIZE_EIGHT);
 	
 	
 	private int value;

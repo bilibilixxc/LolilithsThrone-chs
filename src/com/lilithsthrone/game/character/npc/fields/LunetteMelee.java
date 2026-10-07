@@ -64,8 +64,8 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class LunetteMelee extends NPC {
 
-	private static List<String> defaultNamePrefixes = Util.newArrayListOfValues("angry", "furious", "wrathful");
-	private static String defaultName = "marauder";
+	private static List<String> defaultNamePrefixes = Util.newArrayListOfValues("愤怒的", "狂怒的", "盛怒的");
+	private static String defaultName = "掠夺者";
 	
 	public LunetteMelee() {
 		this(defaultNamePrefixes, defaultName, false);
@@ -91,9 +91,9 @@ public class LunetteMelee extends NPC {
 			// RACE & NAME:
 			this.setStartingBody(true);
 			
-			this.setGenericName(Util.randomItemFrom(namePrefixes)+" "+name);
+			this.setGenericName(Util.randomItemFrom(namePrefixes)+""+name);
 			setName(Name.getRandomTriplet(this.getSubspecies()));
-			this.setSurname("Lunettemartu");
+			this.setSurname("露内特马尔图");
 			this.setPlayerKnowsName(false);
 			
 			// INVENTORY:
@@ -253,7 +253,7 @@ public class LunetteMelee extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return UtilText.parse(this, "This demonic centaur is a member of the faction 'Lunette's Marauders', and loves nothing more than to break anything and anyone who gets in [npc.her] way.");
+		return UtilText.parse(this, "这个恶魔半人马是“露内特掠夺者”派系的一员，热衷于摧毁挡路的一切人和物。");
 	}
 	
 	@Override

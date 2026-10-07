@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="start">
@@ -7,7 +7,7 @@
 			[#attacker.setLocation(pc)]
 			[#flags.setFlag(FLAG_innoxia_fields_centaur_attacker_talked, false)]
 		]]></preParsingEffects>
-		<title><![CDATA[Marauder Attack]]></title>
+		<title><![CDATA[掠夺者来袭]]></title>
 		<author><![CDATA[Innoxia]]></author>
 		<content folderPath="txt/encounters/fields/centaur_melee">START</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -18,9 +18,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Refuse to pay the centauress and prepare to defend yourself!
+					拒绝向半人马付钱，准备自卫！
 				]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -32,8 +32,8 @@
 						<enemy leader="true"><![CDATA[attacker]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[You tell the centauress that she's not going to get any of your money and prepare to defend yourself.]]></combatant>
-						<combatant id="attacker"><![CDATA[The marauder's face scrunches up in rage, and she screams, [attacker.speech(You insolent [pc.insult]! I'll make you wish you'd never been born!)]]]></combatant>
+						<combatant id="pc"><![CDATA[你告诉半人马她拿不到一分钱，准备自卫。]]></combatant>
+						<combatant id="attacker"><![CDATA[掠夺者的脸因愤怒而扭曲，她尖叫起来：[attacker.speech(你这个无耻的[pc.insult]！我会让你生不如死！)]]]></combatant>
 					</openingDescriptions>
 				</combatVariables>
 			</response>
@@ -41,8 +41,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Pay up (#IF(pc.getMoney()>=attacker.getPaymentDemand())[style.moneyFormat([#attacker.getPaymentDemand()], span)]#ELSE[style.moneyFormatUncoloured([#attacker.getPaymentDemand()], span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=attacker.getPaymentDemand()) Hand over the [style.intToString([#attacker.getPaymentDemand()])] flames which the marauder is asking for. #ELSE You can't afford to pay off the marauder... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[留下买路钱(#IF(pc.getMoney()>=attacker.getPaymentDemand())[style.moneyFormat([#attacker.getPaymentDemand()], span)]#ELSE[style.moneyFormatUncoloured([#attacker.getPaymentDemand()], span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=attacker.getPaymentDemand())交出掠夺者要的[style.intToString([#attacker.getPaymentDemand()])]个火币。#ELSE你付不起……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=attacker.getPaymentDemand())innoxia_encounters_fields_centaur_melee_payment#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString([#attacker.getPaymentDemand()])]', true)]
@@ -54,9 +54,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Submit to the marauder and beg for mercy.
+					向掠夺者屈服，乞求怜悯。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_encounters_fields_centaur_melee_submit]]></nextDialogue>
 				<effects><![CDATA[
@@ -82,11 +82,11 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Satisfied with the payment you've given her, the marauder takes her leave, allowing you to continue on your way...
-					<br/>[style.italicsBad(The centauress will be permanently removed from the game.)]
-				]]></responseTooltip>
+					掠夺者对给出的报酬很满意，便告辞离去，放你离开……
+					<br/>[style.italicsBad(该半人马将永远从游戏中移除。)]
+]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -108,9 +108,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Grovel]]></responseTitle>
+				<responseTitle><![CDATA[跪下]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Grovel on the floor and wait to see what the centauress will decide to do with you.
+					跪在地上，等待半人马会怎么处置你。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -147,12 +147,12 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Present pussy]]></responseTitle>
+				<responseTitle><![CDATA[露出小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina())
-						You do not have a vagina to present to the marauder...
+						你没有小穴给掠夺者……
 					#ELSE
-						You cannot gain access to your vagina, so cannot present it to the marauder...
+						你的阴道被限制了，没办法献给掠夺者
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -163,11 +163,11 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Present pussy]]></responseTitle>
+				<responseTitle><![CDATA[露出小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Expose your vagina and present it to the marauder so that she can rut you.
+					露出小穴，让掠夺者对你发情。
 					#IF(!attacker.hasPenis())
-						<br/>[style.italicsSexDom(The centauress will grow a demonic cock with which to fuck you!)]
+						<br/>[style.italicsSexDom(半人马会长出恶魔般的肉棒操你！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -213,8 +213,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Kiss cock]]></responseTitle>
-				<responseTooltip><![CDATA[You cannot gain access to your mouth, so cannot kiss the marauder's cock...]]></responseTooltip>
+				<responseTitle><![CDATA[亲吻肉棒]]></responseTitle>
+				<responseTooltip><![CDATA[你的嘴被限制，无法亲吻掠夺者的鸡巴……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -223,11 +223,11 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Kiss cock]]></responseTitle>
+				<responseTitle><![CDATA[亲吻肉棒]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Crawl underneath the marauder and kiss her cock.
+					爬到掠夺者身下亲吻她的鸡巴。
 					#IF(!attacker.hasPenis())
-						<br/>[style.italicsSexDom(The centauress will grow a demonic cock for you to kiss!)]
+						<br/>[style.italicsSexDom(半人马会长出恶魔般的肉棒给你亲！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -273,8 +273,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Kiss pussy]]></responseTitle>
-				<responseTooltip><![CDATA[You cannot gain access to your mouth, so cannot kiss the marauder's pussy...]]></responseTooltip>
+				<responseTitle><![CDATA[亲吻小穴]]></responseTitle>
+				<responseTooltip><![CDATA[你的嘴被限制，无法亲吻掠夺者的小穴……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -283,11 +283,11 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Kiss pussy]]></responseTitle>
+				<responseTitle><![CDATA[亲吻小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Crawl underneath the marauder and kiss her pussy.
+					爬到掠夺者身下亲吻她的小穴。
 					#IF(!attacker.hasVagina())
-						<br/>[style.italicsSexDom(The centauress will grow a demonic pussy for you to kiss!)]
+						<br/>[style.italicsSexDom(半人马会长出恶魔般的淫穴给你亲！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -333,9 +333,9 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Present asshole]]></responseTitle>
+				<responseTitle><![CDATA[露出肛门]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You cannot gain access to your asshole, so cannot present it to the marauder...
+					你的屁股被限制，没办法把屁穴献给掠夺者……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
@@ -345,11 +345,11 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Present asshole]]></responseTitle>
+				<responseTitle><![CDATA[露出肛门]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Expose your asshole and present it to the marauder so that she can fuck your ass.
+					露出屁穴以便掠夺者操你的屁眼。
 					#IF(!attacker.hasPenis())
-						<br/>[style.italicsSexDom(The centauress will grow a demonic cock with which to fuck you!)]
+						<br/>[style.italicsSexDom(半人马会长出恶魔般的肉棒操你！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -395,8 +395,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Kiss asshole]]></responseTitle>
-				<responseTooltip><![CDATA[You cannot gain access to your mouth, so cannot kiss the marauder's asshole...]]></responseTooltip>
+				<responseTitle><![CDATA[亲吻肛门]]></responseTitle>
+				<responseTooltip><![CDATA[你的嘴被限制，无法亲吻掠夺者的屁穴……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -405,9 +405,9 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Kiss asshole]]></responseTitle>
+				<responseTitle><![CDATA[亲吻肛门]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Crawl underneath the marauder and kiss her asshole.
+					爬到掠夺者身下亲吻她的屁穴。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
@@ -454,8 +454,8 @@
 				[#pc.addStatusEffect(SE_innoxia_centaur_melee_seal, 14400)]
 			#ENDIF
 		-->
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The marauder has had her fun with you, and with a cruel laugh she kicks you away from her...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[掠夺者已经玩腻了，她残忍地一笑，一脚把你踢开……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -465,10 +465,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					As the marauder has left, there's nothing else for you to do except continue on your way...
-					<br/>[style.italicsBad(The centauress will be permanently removed from the game.)]
+					既然掠夺者已经离开，你也只能继续赶路……
+					<br/>[style.italicsBad(该半人马将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -492,10 +492,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide against doing anything further with the marauder and continue on your way...
-					<br/>[style.italicsBad(The centauress will be permanently removed from the game.)]
+					你决定不和掠夺者扯上关系，于是继续赶路……
+					<br/>[style.italicsBad(该半人马将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -509,8 +509,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[Take advantage of your victory to have dominant sex with the centauress.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[乘胜追击，和掠夺者来一场支配型性爱。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -532,8 +532,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Gentle sex]]></responseTitle>
-				<responseTooltip><![CDATA[Take advantage of your victory to have gentle, dominant sex with the centauress.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(温柔)]]></responseTitle>
+				<responseTooltip><![CDATA[乘胜追击，和掠夺者来一场温柔的支配型性爱。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -557,8 +557,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rough sex]]></responseTitle>
-				<responseTooltip><![CDATA[Take advantage of your victory to have rough, dominant sex with the centauress.]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(粗暴)]]></responseTitle>
+				<responseTooltip><![CDATA[乘胜追击，和掠夺者来一场粗暴的支配型性爱。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -585,9 +585,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide to submit to the marauder.
+					向掠夺者屈服。
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_encounters_fields_centaur_melee_submit]]></nextDialogue>
 				<effects><![CDATA[
@@ -604,8 +604,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've defeated the centauress, there's nothing stopping you from helping yourself to her clothing and items...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[你打败了半人马，此时再也没什么能阻挡你把手伸向[attacker.her]的衣服和道具……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(attacker, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -616,12 +616,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Question]]></responseTitle>
+				<responseTitle><![CDATA[质疑]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_fields_centaur_attacker_talked))
-						You've already tried to question the centauress, and she's proven to be completely uncooperative...
+						你尝试问半人马问题，但她完全不合作……
 					#ELSE
-						Ask the marauder where she came from and why she's attacking innocent travellers.
+						问掠夺者从哪里来，为什么要袭击无辜的游客。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -640,8 +640,8 @@
 	</scene>
 	
 	<scene id="after_sex_dom">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough fun with the marauder...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你已经和掠夺者爽够了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/centaur_melee">AFTER_SEX_DOM</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -651,10 +651,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Now that you've had your fun, you decide to leave the marauder and continue on your way...
-					<br/>[style.italicsBad(The centauress will be permanently removed from the game.)]
+					你爽过了，决定离开掠夺者，继续上路……
+					<br/>[style.italicsBad(该半人马将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -668,8 +668,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[As you've defeated the centauress, there's nothing stopping you from helping yourself to her clothing and items...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[你打败了半人马，此时再也没什么能阻挡你把手伸向[attacker.her]的衣服和道具……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(attacker, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -699,8 +699,8 @@
 				<availabilityConditional><![CDATA[[#game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[You're unable to stop the centauress from dominantly fucking you...]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[你无法阻止半人马支配性地操你……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -727,8 +727,8 @@
 				<availabilityConditional><![CDATA[[#game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Resist]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to submit to the centauress and try to resist as she dominantly fucks you...]]></responseTooltip>
+				<responseTitle><![CDATA[抵抗]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝服从半人马，并尝试在她操你时反抗……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -758,10 +758,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Refuse to submit to the centauress and wait for her to leave before continuing on your way...
-					<br/>[style.italicsBad(The centauress will be permanently removed from the game.)]
+					拒绝向半人马屈服，等待[attacker.herHim]离开后继续上路……
+					<br/>[style.italicsBad(该半人马将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -775,9 +775,9 @@
 				<availabilityConditional><![CDATA[[#!game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Do as the centauress says and submit to her, allowing her to dominantly fuck you...
+					你按照半人马所说的那样服从她，允许她支配你的一切……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>

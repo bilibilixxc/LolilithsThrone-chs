@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Daisho]]></name>
+	<name><![CDATA[成对武士刀]]></name>
 	
 	<statusEffect>SET_DAISHO</statusEffect>
 	

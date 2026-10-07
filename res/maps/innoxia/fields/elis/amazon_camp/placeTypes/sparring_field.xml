@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Sparring field]]></name>
-	<tooltipDescription><![CDATA[To keep their impressive martial skills maintained, the Amazons use this area in which to spar with one another.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the sparring field in the Amazons' camp]]></virginityLossDescription>
+	<name><![CDATA[格斗场]]></name>
+	<tooltipDescription><![CDATA[为了维持他们高超的战斗技艺，亚马逊人利用这片区域相互格斗。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在亚马逊人营地的格斗场里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

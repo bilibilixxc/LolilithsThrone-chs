@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>450</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[lowback bodysuit]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[lowback bodysuits]]></namePlural> 
-		<description><![CDATA[A bodysuit with a scooped low back and removable straps.]]></description> 
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[露背紧身衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[露背紧身衣]]></namePlural> 
+		<description><![CDATA[一件低腰和可拆卸背带的紧身衣。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>STOMACH</slot> 
@@ -18,10 +18,10 @@
 			<category id="straps" priority="1">
 				<categoryName><![CDATA[Shoulder Straps]]></categoryName>
 				<sticker id="attached" priority="1" defaultSticker="true" zLayer="-1">
-					<stickerName><![CDATA[Attached]]></stickerName>
+					<stickerName><![CDATA[固定]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="3"><![CDATA[ The shoulder straps are currently attached to the body suit.]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[肩带已固定在连体衣上。]]></descriptionModification>
 					<imageName>lowback_body_straps.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -29,10 +29,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="removed" priority="0" defaultSticker="false" zLayer="1">
-					<stickerName><![CDATA[Removed]]></stickerName>
+					<stickerName><![CDATA[取下]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="3"><![CDATA[ The shoulder straps have been removed from the body suit.]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[已从连体衣取下肩带。]]></descriptionModification>
 					<imageName/>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -111,71 +111,57 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(step)] into the lowback bodysuit and [npc.verb(pull)] it up to cover [npc.her] torso, before sliding the straps into place around [npc.her] shoulders.
+			[npc.Name]穿上露背紧身衣，轻轻提拉，恰好遮住了身体的上半部分，再把带子固定到[npc.her]的肩膀处。
 		]]></self>
-		<other><![CDATA[
-			[npc.Name] [npc.verb(get)] [npc2.name] to [npc2.step] into the lowback bodysuit and [npc.verb(pull)] it up to cover [npc2.her] torso, before sliding the straps into place around [npc2.her] shoulders.
-		]]></other>
-		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(force)] [npc2.name] to [npc2.step] into the lowback bodysuit and [npc.verb(yank)] it up to cover [npc2.her] torso, before sliding the straps into place around [npc2.her] shoulders.
-		]]></otherRough>
+		<other><![CDATA[[npc.Name]让[npc2.name][npc2.step]进低背连体衣，然后拉上衣服，盖住[npc2.her]的躯干，接着将吊带系在[npc2.her]的肩膀上。
+]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地强迫[npc2.name][npc2.step]进低背连体衣，然后粗鲁地拽上，覆盖[npc2.her]的躯干，接着将吊带系在[npc2.her]的肩膀上。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(slide)] [npc.her] bodysuit's straps from off of [npc.her] shoulders before tugging it all the way down [npc.her] [npc.legs] and [npc.stepping] out of it.
+			[npc.Name]从肩膀处轻轻地滑下[npc.her]紧身衣的带子，并且顺着[npc.her][npc.legs]一路脱下。
 		]]></self>
-		<other><![CDATA[
-			[npc.Name] [npc.verb(slide)] the straps of [npc2.namePos] bodysuit from off of [npc2.her] shoulders before tugging it all the way down [npc2.her] [npc2.legs] and making [npc2.herHim] [npc2.step] out of it.
-		]]></other>
-		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(yank)] the straps of [npc2.namePos] bodysuit from off of [npc2.her] shoulders before forcefully tugging it all the way down [npc2.her] [npc2.legs] and making [npc2.herHim] [npc2.step] out of it.
-		]]></otherRough>
+		<other><![CDATA[[npc.Name]把[npc2.namePos]连体衣的吊带从[npc2.her]肩膀上滑下来，然后将它完全拉下[npc2.her]的[npc2.legs]，让[npc2.herHim][npc2.step]出来。
+]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地把[npc2.namePos]连体衣的吊带从[npc2.her]肩膀上猛力拉下，然后用力把它完全拉下[npc2.her]的[npc2.legs]，让[npc2.herHim][npc2.step]出来。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="SHIFTS_ASIDE">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(slide)] the lower part of [npc.her] bodysuit back into its correct position so that [npc.her] groin is covered.
+			[npc.Name]将[npc.her]紧身衣的下部分整理到正确的位置，使其能够遮住[npc.her]的腹股沟。
 		]]></self>
-		<other><![CDATA[
-			[npc.Name] [npc.verb(slide)] the lower part of [npc2.namePos] bodysuit back into its correct position so that [npc2.her] groin is covered.
-		]]></other>
-		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(yank)] the lower part of [npc2.namePos] bodysuit back into its correct position so that [npc2.her] groin is covered.
-		]]></otherRough>
+		<other><![CDATA[[npc.Name]把[npc2.namePos]连体衣的下半部拽到正确的位置，以便覆盖[npc2.her]的腹股沟。
+]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地将[npc2.namePos]连体衣的下半部猛力拉回正确的位置，以便覆盖[npc2.her]的腹股沟。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="SHIFTS_ASIDE">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(slide)] the lower part of [npc.her] bodysuit to one side in order to gain access to [npc.her] groin.
+			[npc.Name]将[npc.her]的紧身衣的下半部分滑到一侧，以便露出[npc.her]的腹部和大腿内侧。
 		]]></self>
-		<other><![CDATA[
-			[npc.Name] [npc.verb(slide)] the lower part of [npc2.namePos] bodysuit to one side in order to gain access to [npc2.her] groin.
-		]]></other>
-		<otherRough><![CDATA[
-			[npc.Name] impatiently [npc.verb(yank)] the lower part of [npc2.namePos] bodysuit to one side in order to gain access to [npc2.her] groin.
-		]]></otherRough>
+		<other><![CDATA[[npc.Name]把[npc2.namePos]连体衣的下半部拽到一边，以便进入[npc2.her]的腹股沟。
+]]></other>
+		<otherRough><![CDATA[[npc.Name]不耐烦地将[npc2.namePos]连体衣的下半部猛力拉到一边，以便进入[npc2.her]的腹股沟。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="PULLS_DOWN">
-		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] the top part of [npc.her] bodysuit up into its correct position.
-		]]></self>
-		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] the top part of [npc2.namePos] bodysuit up into its correct position.
-		]]></other>
-		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(yank)] the top part of [npc2.namePos] bodysuit up into its correct position.
-		]]></otherRough>
+		<self><![CDATA[[npc.Name]把[npc.her]的连体衣的上半部拉到了正确的位置。
+]]></self>
+		<other><![CDATA[[npc.Name]将[npc2.namePos]连体衣的上半部拉到合适的位置。
+]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地将[npc2.namePos]连体衣的上半部猛力拉到合适的位置。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="PULLS_DOWN">
-		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] down the top half of [npc.her] bodysuit.
-		]]></self>
-		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] down the top half of [npc2.namePos] bodysuit.
-		]]></other>
-		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] down the top half of [npc2.namePos] bodysuit.
-		]]></otherRough>
+		<self><![CDATA[[npc.Name]将[npc.her]连体衣的上半部拉下来。
+]]></self>
+		<other><![CDATA[[npc.Name]把[npc2.namePos]连体衣的上半部拉下来。
+]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地拉下[npc2.namePos]连体衣的上半部。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

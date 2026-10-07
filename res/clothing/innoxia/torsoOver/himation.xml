@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 	<value>250</value>
-	<determiner><![CDATA[a]]></determiner>
-	<name><![CDATA[himation]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[himations]]></namePlural>
-	<description><![CDATA[A large, rectangular piece of woollen cloth which is wrapped around the body and worn like a cloak. The excess fabric is then pulled up over the wearer's head to make a hood.]]></description>
+	<determiner><![CDATA[一件]]></determiner>
+	<name><![CDATA[希马申长袍]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[希马申长袍]]></namePlural>
+	<description><![CDATA[一块大而长方形的羊毛布料，围绕身体包裹，像披风一样穿着。多余的布料然后被拉到头上，形成一个兜帽。]]></description>
 	<physicalResistance>0</physicalResistance>
 	<femininity>FEMININE</femininity>
 	<equipSlots>
@@ -132,49 +131,49 @@
 	</coreAttributes>
 
 	<replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(drape)] the cloak over [npc.her] shoulders, before tying the cord around [npc.her] neck.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(drape)] the cloak over [npc2.namePos] shoulders, before tying the cord around [npc2.her] neck.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(drape)] the cloak over [npc2.namePos] shoulders, before firmly tying the cord around [npc2.her] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把长袍披在[npc.her]的肩膀上，然后把带子系在[npc.her]的脖子上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把长袍披在了[npc2.namePos]的肩上，并把带子系在[npc2.her]的脖子上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把长袍套在[npc2.namePos]的肩上，并紧紧地把带子系在[npc2.her]的脖子上。
+]]></otherRough>
 	</replacementText>
 	<displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the cord around [npc.her] neck, before taking off [npc.her] cloak.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the cord around [npc2.namePos] neck, before taking off [npc2.her] cloak.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(untie)] the cord around [npc2.namePos] neck, before pulling off [npc2.her] cloak.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]系在脖子上的带子，然后脱下了[npc.her]的长袍。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把[npc2.namePos]脖子上的带子解开，并脱下了[npc2.her]的长袍。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把[npc2.namePos]脖子上系的带子扯开，并把[npc2.her]的长袍拽了下来。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText slot="TORSO_OVER" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(drape)] the cloak over [npc.her] shoulders, before tying the cord around [npc.her] neck.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(drape)] the cloak over [npc2.namePos] shoulders, before tying the cord around [npc2.her] neck.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(drape)] the cloak over [npc2.namePos] shoulders, before firmly tying the cord around [npc2.her] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把长袍披在[npc.her]的肩膀上，然后把带子系在[npc.her]的脖子上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把长袍披在了[npc2.namePos]的肩上，并把带子系在[npc2.her]的脖子上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把长袍套在[npc2.namePos]的肩上，并紧紧地把带子系在[npc2.her]的脖子上。
+]]></otherRough>
 	</replacementText>
 	<displacementText slot="TORSO_OVER" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the cord around [npc.her] neck, before taking off [npc.her] cloak.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the cord around [npc2.namePos] neck, before taking off [npc2.her] cloak.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(untie)] the cord around [npc2.namePos] neck, before pulling off [npc2.her] cloak.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]系在脖子上的带子，然后脱下了[npc.her]的长袍。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把[npc2.namePos]脖子上的带子解开，并脱下了[npc2.her]的长袍。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把[npc2.namePos]脖子上系的带子扯开，并把[npc2.her]的长袍拽了下来。
+]]></otherRough>
 	</displacementText>
 
 </clothing>

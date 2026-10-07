@@ -240,9 +240,9 @@ public abstract class AbstractArmType implements BodyPartTypeInterface {
 	@Override
 	public String getDeterminer(GameCharacter gc) {
 		if(gc.getArmRows()==1) {
-			return "a pair of";
+			return "一对";
 		} else {
-			return Util.intToString(gc.getArmRows())+" pairs of";
+			return Util.intToString(gc.getArmRows())+"对";
 		}
 	}
 
@@ -322,7 +322,7 @@ public abstract class AbstractArmType implements BodyPartTypeInterface {
 							InventorySlot.TORSO_OVER,
 							InventorySlot.TORSO_UNDER),
 					Race.HARPY,
-					"Due to the fact that [npc.nameHasFull] bird-like wings instead of arms, only specialist clothing can be worn in this slot.",
+					"由于[npc.nameHasFull]用类似鸟的翅膀代替了手臂，只有特定服装能够装备至该栏位。",
 					Util.newArrayListOfValues(
 						ItemTag.FITS_FEATHERED_ARM_WINGS,
 						ItemTag.FITS_FEATHERED_ARM_WINGS_EXCLUSIVE,
@@ -338,7 +338,7 @@ public abstract class AbstractArmType implements BodyPartTypeInterface {
 							InventorySlot.TORSO_OVER,
 							InventorySlot.TORSO_UNDER),
 					Race.BAT_MORPH,
-					"Due to the fact that [npc.nameHasFull] leathery wings instead of arms, only specialist clothing can be worn in this slot.",
+					"由于[npc.nameHasFull]以皮膜覆盖的翅膀代替了手臂，只有特定服装能够装备至该栏位。",
 					Util.newArrayListOfValues(
 						ItemTag.FITS_LEATHERY_ARM_WINGS,
 						ItemTag.FITS_LEATHERY_ARM_WINGS_EXCLUSIVE,

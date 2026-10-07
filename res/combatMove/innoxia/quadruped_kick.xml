@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Hindquarters kick]]></name>
+	<name><![CDATA[后向蹶踢]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] hind legs to deliver a powerful kick to [npc.her] target, dealing formattedDamageInflicted damage.
+		用[npc.her]的后蹄对目标进行猛烈一踢，造成formattedDamageInflicted伤害。
 	]]></description>
 	
 	<!-- The name of the icon which should be used to represent this combat move. The icon must be an svg file, and must be placed in the same folder as this XML file. -->
@@ -133,7 +133,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have the 'quadrupedal' leg configuration.
+		仅适用于有四足动物式腿部的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -160,7 +160,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target's health is less than 50%.
+		目标生命值少于50%
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -172,17 +172,17 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] hind legs to deliver a powerful kick to [npc2.name], dealing formattedDamageInflicted damage.
+		用[npc.her]的后腿向[npc2.name]发动猛烈一踢，造成formattedDamageInflicted伤害。
 		#IF(npc.isLegMovementHindered())
-			 [style.italicsMinorBad(Damage is reduced by 50% as [npc.her] clothing is hindering leg movement!)]
+			[style.italicsMinorBad(由于[npc.her]的衣服阻碍了腿部运动，伤害降低了50%！)]
 		#ENDIF
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] hind legs to deliver a powerful kick to [npc.her] target, dealing formattedDamageInflicted damage.
+		用[npc.her]的后腿对目标进行猛烈一踢，造成formattedDamageInflicted伤害。
 		#IF(npc.isLegMovementHindered())
-			 [style.italicsMinorBad(Damage is reduced by 50% as [npc.her] clothing is hindering leg movement!)]
+			[style.italicsMinorBad(由于[npc.her]的衣服阻碍了腿部运动，伤害降低了50%！)]
 		#ENDIF
 	]]></movePredictionDescriptionNoTarget>
 	
@@ -198,17 +198,17 @@
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
 			#IF(npc.isLegMovementHindered())
-				As [npc.her] clothing is restricting [npc.her] legs' movement, [npc.name] [npc.verb(struggle)] to put any power behind [npc.her] kick, and as a result only [npc.verb(deal)] half damage to [npc2.name]...
+				[npc.her]的衣物限制了腿部移动。[npc.name]很难在踢腿后发力，只能对[npc2.name]造成一半的伤害……
 			#ELSE
-				[npc.Name] [npc.verb(spin)] around on the spot, before kicking out with [npc.her] hind legs and powerfully striking [npc2.name] with [npc.her] rear [npc.feet]!
+				[npc.Name]迅速转身，用[npc.feet]狠狠地踢了[npc2.name]！
 			#ENDIF
 			formattedHealthDamage
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc.NamePos] kick was extremely effective!
+			[npc.NamePos]的一踢造成了超出预期的效果！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] been dazed by the attack!
+			[npc2.Name]已被攻击的效果削弱！
 		]]></critEffectDescription>
 	</performMove>
 	

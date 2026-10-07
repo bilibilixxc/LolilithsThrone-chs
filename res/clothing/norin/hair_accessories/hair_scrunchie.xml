@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Small embroidered lettering informs you that this scrunchie was made by 'Norin'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[小小的刺绣字样告诉你这个发带是由'Norin'制作的。]]></clothingAuthorTag>
 		<value>200</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[scrunchie]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[scrunchies]]></namePlural> 
-		<description><![CDATA[An elastic fabric scrunchie, typically used to tie hair back. It could also be placed around a tail, or onto someone's wrist.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[发带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[发带]]></namePlural> 
+		<description><![CDATA[一条弹性束发带，通常用于将头发束起。它也可以缠在尾巴上，或套在手腕上。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<equipSlots>
@@ -53,7 +52,7 @@
 		<incompatibleSlots slot="TAIL"/>
 		<incompatibleSlots slot="WRIST"/>
 		
-		<primaryColours values ="ALL"/> 
+		<primaryColours values="ALL"/> 
 		<primaryColoursDye/>
 		<secondaryColours/>
 		<secondaryColoursDye/>
@@ -67,8 +66,8 @@
 			<pattern>cow_patterned</pattern>
 		</defaultPatterns>
   
-		<patternPrimaryColours values ="ALL"/>
-		<patternSecondaryColours values ="ALL"/>
+		<patternPrimaryColours values="ALL"/>
+		<patternSecondaryColours values="ALL"/>
 		<patternTertiaryColours/>
 		
 		<itemTags> 
@@ -79,72 +78,72 @@
 	
 	
 	<displacementText slot="HAIR" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the scrunchie from out of [npc.her] [npc.hairSkin+].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the scrunchie from out of [npc2.NamePos] [npc2.hairSkin+].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tug)] the scrunchie from out of [npc2.NamePos] [npc2.hairSkin+].]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]将发带从[npc.her][npc.hairSkin+]上取下。
+]]></self>
+		<other><![CDATA[
+[npc.her]将[npc.her][npc2.hairSkin+]从发带中拉出来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.her]将[npc2.namePos][npc2.hairSkin+]从发带中拽出来。
+]]></otherRough>
 	</displacementText>
 	<replacementText slot="HAIR" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(gather)] [npc.her] [npc.hairSkin+] and [npc.verb(pull)] it through the scrunchie.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(gather)] [npc2.NamePos] [npc2.hairSkin+] and [npc.verb(pull)] it through the scrunchie.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(gather)] [npc2.NamePos] [npc2.hairSkin+] and [npc.verb(tug)] it through the scrunchie.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]聚集起[npc.her][npc.hairSkin+]，然后把它穿过发圈。
+]]></self>
+		<other><![CDATA[
+[npc.Name]聚集起[npc2.namePos][npc2.hairSkin+]，然后把它穿过发圈。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]收拾起[npc2.NamePos][npc2.hairSkin+]，然后将它穿过发带。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText slot="TAIL" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the scrunchie off from around [npc.her] [npc.tail+].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the scrunchie off from around [npc2.NamePos] [npc2.tail+].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tug)] the scrunchie off from around [npc2.NamePos] [npc2.tail+].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.her]将发带从[npc.her][npc.tail+]上摘下。
+]]></self>
+		<other><![CDATA[
+[npc.her]将发带从[npc2.namePos][npc2.tail+]上摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.her]将发带从[npc2.namePos][npc2.tail+]上摘下。
+]]></otherRough>
 	</displacementText>
 	<replacementText slot="TAIL" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the scrunchie down around [npc.her] [npc.tail+].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the scrunchie down around [npc2.namePos] [npc2.tail+].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(push)] the scrunchie down around [npc2.namePos] [npc2.tail+].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.her]将发带从[npc.her][npc.tail+]上拉下。
+]]></self>
+		<other><![CDATA[
+[npc.her]将发带从[npc2.namePos][npc2.tail+]上拉下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.her]粗暴地将发带从[npc2.namePos][npc2.tail+]上拽下。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the scrunchie off from around [npc.her] wrist.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the scrunchie off from around [npc2.NamePos] wrist.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(tug)] the scrunchie off from around [npc2.NamePos] wrist.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.her]将发带从[npc.her]的手腕上取下来。
+]]></self>
+		<other><![CDATA[
+[npc.her]将发带从[npc2.namePos]的手腕上摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地从[npc2.NamePos]手腕上拽下发带。
+]]></otherRough>
 	</displacementText>
 	<replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the scrunchie down around [npc.her] wrist.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] the scrunchie down around [npc2.namePos] wrist.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(push)] the scrunchie down around [npc2.namePos] wrist.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.her]将发带从[npc.her]的手腕上拉下。
+]]></self>
+		<other><![CDATA[
+[npc.her]将发带从[npc2.namePos]的手腕上拉下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将发圈戴到[npc2.namePos]的手腕上。
+]]></otherRough>
 	</replacementText>
 	
 </clothing>

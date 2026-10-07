@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a bag of]]></determiner>
-		<name><![CDATA[Bone Crunchers]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Bone Crunchers]]></namePlural>
-		<description><![CDATA[A brown paper bag, containing half a dozen pieces of roasted bone. Although the juicy marrow is all that most normal people would eat, an image on the back of the bag shows a buff hyena-girl using her strong jaws to crunch and swallow every last piece of them.]]></description> 
+		<determiner><![CDATA[一袋]]></determiner>
+		<name><![CDATA[烤骨头]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[烤骨头]]></namePlural>
+		<description><![CDATA[一个牛皮纸袋，里面装着半打烤骨。虽然多汁的骨髓是大多数正常人都会吃的，但袋子背面的图片显示，一个水灵灵的鬣狗女正用她强壮的下巴将每一块骨头都咬碎吞下。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -33,7 +33,7 @@
 			3) Rendering the item icon on top of those two.
 			4) Finally, rendering the highlights of the background on top of everything. -->
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/mods/innoxia/race/hyena/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/mods/innoxia/race/hyena/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">hyena_bone_crunchers.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -41,21 +41,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[hyena]]></potionDescriptor>
+		<potionDescriptor><![CDATA[鬣狗]]></potionDescriptor>
 		<associatedRace>innoxia_hyena</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
 		]]></applyEffects>
@@ -69,19 +69,19 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the top of the brown paper bag and [npc.verb(breathe)] in the rich, meaty smell of its contents. Unable to resist the delicious-looking pieces of roasted bone found inside, [npc.she]
+		[npc.Name]打开褐色纸袋的顶部，然后深吸里面浓郁的肉味。无法抗拒袋内那些美味的烤骨头，[npc.she]
 		#IF(npc.getFaceType()==FACE_TYPE_innoxia_hyena_face)
-			 [npc.verb(start)] using [npc.her] powerful hyena jaws to crunch each of them into pieces, and in a matter of moments [npc.has] completely devoured the entire bag.
+			[npc.her]开始使用强大的鬣狗下颌咬碎每一块，不一会儿就吃光了整袋。
 		#ELSE
-			 [npc.verb(start)] eagerly sucking the delicious marrow out of each of them, and in a matter of moments [npc.has] completely devoured the entire bag.
+			[npc.her]开始迫不及待地吮吸每一块美味的骨髓，不一会儿就吃光了整袋。
 		#ENDIF
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the top of the brown paper bag and [npc.verb(hold)] it out to [npc2.name], allowing [npc2.herHim] to breathe in the rich, meaty smell of its contents. Unable to resist the delicious-looking pieces of roasted bone found inside, [npc2.she]
+		[npc.Name]打开褐色纸袋的顶部，将其递给[npc2.name]，让[npc2.herHim]能够闻到里面浓郁的肉味。无法抗拒袋内那些美味的烤骨头，[npc2.she]
 		#IF(npc.getFaceType()==FACE_TYPE_innoxia_hyena_face)
-			 [npc2.verb(start)] using [npc2.her] powerful hyena jaws to crunch each of them into pieces, and in a matter of moments [npc2.has] completely devoured the entire bag.
+			开始使用[npc2.her]强大的鬣狗下颌咬碎每一块，仅仅几刹那，[npc2.has]就完全吃光了整袋内容。
 		#ELSE
-			 [npc2.verb(start)] eagerly sucking the delicious marrow out of each of them, and in a matter of moments [npc2.has] completely devoured the entire bag.
+			迫不及待地吮吸每一块美味的骨髓，仅仅几刹那，[npc2.has]就完全吃光了整个袋子。
 		#ENDIF
 		]]></otherUse>
 	</useDescriptions>

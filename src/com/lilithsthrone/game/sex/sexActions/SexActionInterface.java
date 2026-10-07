@@ -170,7 +170,7 @@ public interface SexActionInterface {
 	 */
 	public default Map<String, Boolean> getAdditionalOngoingAvailableMap() {
 		if(getActionType()==SexActionType.START_ADDITIONAL_ONGOING) {
-			throw new NullPointerException("getAdditionalOngoingAvailableMap() should not be returning null for a SexAction of type 'SexActionType.START_ADDITIONAL_ONGOING'. (Occurring in SexAction '"+getActionTitle()+"')");
+			throw new NullPointerException("getAdditionalOngoingAvailableMap()不应该对类型为SexAction的操作返回null'SexActionType.START_ADDITIONAL_ONGOING'. (Occurring in SexAction '"+getActionTitle()+"')");
 		}
 		return null;
 	}
@@ -538,7 +538,7 @@ public interface SexActionInterface {
 		if(this.isSadisticAction()) {
 			if(!characterTargeted.getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive() && !characterTargeted.hasPerkAnywhereInTree(Perk.DOLL_LUST_1)) {
 				sb.append("<p style='text-align:center'>"
-							+ "[style.colourBad([npc2.Name] [npc2.verb(find)] this sadistic action to be a huge turn-off!)]"
+							+ "[style.colourBad([npc2.Name]觉得施虐行为很扫兴！)]"
 							+ characterTargeted.incrementLust(-15, false)
 						+"</p>");
 			}
@@ -1349,9 +1349,9 @@ public interface SexActionInterface {
 	default String getArousalHitWarning() {
 		if(this.isSadisticAction()) {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_MASOCHIST).isPositive()) {
-				return "<br/>[style.colourBad(As [npc2.name] doesn't have a positive desire towards the '"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"' fetish, [npc2.she] will find this action to be a huge turn-off!)]";
+				return "<br/>[style.colourBad([npc2.name]没有“"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"”性癖，[npc2.she]只会觉得这种行为很扫兴！)]";
 			} else {
-				return "<br/>[style.colourSex(As [npc2.name] has a positive desire towards the '"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"' fetish, [npc2.she] finds such sadistic actions to be a turn-on!)]";
+				return "<br/>[style.colourSex(由于[npc2.name]拥有“"+Fetish.FETISH_MASOCHIST.getName(Main.sex.getCharacterTargetedForSexAction(this))+"”性癖，所以[npc2.she]会觉得施虐行为很助兴！)]";
 			}
 		}
 		return "";
@@ -1607,14 +1607,14 @@ public interface SexActionInterface {
 						for(AbstractFetish f : fetishesRequired){
 							if(Main.game.getPlayer().hasFetish(f)) {
 								SB.append("<br/>"
-										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Associated Fetish</span>"
-										+ " (<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>owned</span>): "
+										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>相关性癖</span>"
+										+ "(<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>拥有</span>): "
 										+ Util.capitaliseSentence(f.getName(Main.game.getPlayer())));
 								
 							} else {
 								SB.append("<br/>"
-										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Associated Fetish</span>"
-										+ " (<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>not owned</span>): "
+										+"<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>相关性癖</span>"
+										+ "(<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>未拥有</span>): "
 										+ Util.capitaliseSentence(f.getName(Main.game.getPlayer())));
 							}
 						}
@@ -1623,13 +1623,13 @@ public interface SexActionInterface {
 					if(corruptionBypass!=null) {
 						if(isCorruptionWithinRange()) {
 							SB.append("<br/>"
-									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Associated Corruption</span>"
-									+ " (<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>within range</span>): "
+									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>相关堕落</span>"
+									+ "(<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>范围内</span>): "
 									+ Util.capitaliseSentence(corruptionBypass.getName()));
 						} else {
 							SB.append("<br/>"
-									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Associated Corruption</span>"
-									+ " (<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>out of range</span>): "
+									+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>相关堕落</span>"
+									+ "(<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>范围外</span>): "
 									+ Util.capitaliseSentence(corruptionBypass.getName()));
 						}
 					}
@@ -1638,7 +1638,7 @@ public interface SexActionInterface {
 						if(Main.sex.getCharacterTargetedForSexAction(SexActionInterface.this).isSizeDifferenceShorterThan(Main.sex.getCharacterPerformingAction())
 								|| Main.sex.getCharacterTargetedForSexAction(SexActionInterface.this).isSizeDifferenceTallerThan(Main.sex.getCharacterPerformingAction())) {
 							SB.append("<br/>"
-									+"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Size-difference is blocking swap!</span>");
+									+"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>体型差距阻止了交换！</span>");
 						}
 					}
 					

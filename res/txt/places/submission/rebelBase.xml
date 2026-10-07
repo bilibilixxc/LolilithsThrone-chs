@@ -1,187 +1,187 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		This area joins the hidden cave with the Bat Caverns outside. The air is heavy but not unpleasant. The way back was once hidden by a tight fitting stone panel and a clever arcane password lock, but you have since defeated these measures. The remaining light from outside and the dim glow from the inside are just enough for you to find your way.
+		这片区域连接着隐藏的洞穴和外面的蝙蝠洞窟。这里空气十分沉重，但没有那种让人感到不快的气氛。回去的路曾经被一块严丝合缝的石板和一把巧妙的密码锁锁住了，但你已经破解了这些措施。洞外的余光和洞内的微光刚好能让你找到正确的方向。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		Although made of the same stone and afflicted with the same damp as the Bat Caverns, the wooden supports along the walls are clear signs that this cave is artificial. Although you see what look like hooks for placing lanterns or torches nailed into each support, the sodden wood has been more or less taken over by bioluminescent mushrooms and wood ears, conveniently lighting the way.
+		虽然这里与蝙蝠洞窟同样是由石头构成且同样潮湿，但墙壁上的木质支撑物却清楚地表明，这个洞穴是人造的。虽然你可以看到每个支撑物上都钉着看似用于放置灯笼或火把的钩子，但这些潮湿的木头或多或少已经被有着生物光的蘑菇和木耳占据，但这也方便照亮前进的道路。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLEEPING_AREA"><![CDATA[
 	<p>
-		From the bunkbeds scattered about the room, you guess that it was once used as a sleeping area. Some of the beds have been knocked over and all are unusable rotting husks covered in bioluminescent mushrooms. Piled high in the middle of the room are mysteriously stained pieces of fabric that might have been clothing at one point but are now home to yet more mushrooms.
+		从房间里散落的双层床来看，你猜测这里曾经被用作睡眠区。有些床铺被推翻了，不过所有的床铺上都长满了有着生物光的蘑菇，所以它们都没法用来休息了。房间中央堆放着一些沾满污渍的布料，这些布料曾经可能是衣服，但现在却成为了蘑菇们的家。
 	</p>
 	<p>
-		You notice several waterproof footlockers next to some of the beds. They're pretty beaten up, but they might still be sealed. There is also what remains of someone's journal lying on one of the beds.
+		你注意到一些床铺旁边有几个防水储柜。虽然它们已经破旧不堪，但依然有可能仍处于密封状态。在其中一张床上还放着某人的日记残骸.
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLEEPING_AREA_CACHE_OPEN"><![CDATA[
 	<p>
-		You rummage through the footlockers and find sets of uniforms, boots, and armbands of some sort that you don't recognize.
+		你翻找了一会，然后找到了几套制服与靴子和你不认识的臂章。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLEEPING_AREA_JOURNAL_OPEN"><![CDATA[
 	<p>
-		You try to gingerly open the journal, but as you'd expect for paper that's spent who knows how long in a damp cave, most of the pages immediately crumble into illegible pieces. There's no way you can remove this journal from its resting place without destroying it. The light provided by the surrounding mushrooms is just enough for you to read some of the intact pages:
+		你试着轻轻打开日记本，但正如你所预料的那样，在潮湿的山洞里不知呆了多久的纸张，大部分的内容立即碎成了难以辨认的碎片。你不可能在不毁坏这本日记的情况下把它安稳的拿出来。不过周围的蘑菇所提供的光线刚好够你阅读一些完好的页面：
 	</p>
 	<p align=right>
 		<i>
-			8th August 1988
+			一九八八年八月八日
 		</i>
 	</p>
 	<p>
 		<i>
-			The day of reckoning is here! At last the demons and their running dogs will answer for millennia of injustice. Already we're driving the Enforcers back into their holes, and they'll never emerge from them if we can help it. The adjutant would prefer that humans supplant the demons at the top, but that kind of thinking won't get us any allies among the non-humans. The hearts and minds of the people are what we need to win. We'll all crawl out from under the corpse of this corrupt society and then the Realm will be free!
+			清算之日降临了！恶魔和他们的走狗终于要为千年来的不公付出代价了！我们已经开始把执法者赶回他们的老巢，如果能做到的话，他们永远都无法从那里出来了。副官更希望人类能取代恶魔的地位，但这种想法会让我们失去所有非人类盟友的支持。得民心者得天下。这个满是腐败，贪婪，污秽的社会，我们终将从它的残尸下爬出，然后王国将获得自由！
 		</i>
 	</p>
 	<p align=right>
 		<i>
-			4th November 1989
+			一九八九年十一月四日
 		</i>
 	</p>
 	<p>
 		<i>
-			We've kept Dominion under siege since our liberation began and have taken the outer boroughs, but the inner boroughs are a tough nut to crack even with our numbers advantage. Command issued these collars imbued with angelic enchantments for interrogating prisoners as part of our initial assault kits and they've proven useful, but the adjutant has started taking advantage of how docile and compliant they make the wearer. He's using some of the prisoners to relieve himself, or as he puts it, "recreational procreation". I don't agree with his methods, but I can't argue with the results. More of his children swell our ranks every day, human and non-human. They're definitely the most gung-ho of any of us, I guess because they know only what we've told them, and well... neither they nor anyone else needs to know who their parents are or how they came to be.
+			自解放以来，我们一直围困着御城区并占领了外城区，但内城区很难攻克，即使我们占据了绝对的人数优势。指挥部给我们配发了这些项圈，上面有天使的魔法，可以用来审讯囚犯，这也是我们最初突击装备的一部分，事实证明它们很有用，但副官已经开始利用这些项圈来让佩戴者变得温顺听话。他将一些囚犯当做便器使用，用他的话说就是“娱乐性生育”。我不同意他的方法，但我不能反对他的成果。每天都有大量他的孩子涌入我们的队伍，有人类的，也有非人类的。这些家伙绝对是我们当中最狂热的那批，我猜是因为他们很天真，或者一无所知，只是被动的接受和了解我们想让他们知道的事。而且……他们和其他人都不需要知道他们的父母是谁，也不需要知道他们是怎么来的。
 		</i>
 	</p>
 	<p align=right>
 		<i>
-			20th December 1989
+			一九八九年十二月二十日
 		</i>
 	</p>
 	<p>
 		<i>
-			I always knew that our cause was just, but today a literal angel has returned to aid us! Of course I'd heard the rumors from the old guard that they helped get this whole rebellion started, but I never ever thought I'd see one. Astrea is her name and I admit, she's more than just a pretty face. She's just the shot in the arm that we needed and under her we've broken the Thinis salient at last! I am a little bit concerned though. She and the adjutant agree on more things than I'd like, namely what our post-Lilith society should look like. I think non-humans have earned their place at the table, why can't they see that? Haven't they fought just as hard against the demons as us? Haven't we all had enough of races stepping on each other? And, another thing. A lot of the officers are starting to copy the adjutant's treatment of prisoners, to let off steam or so they say. This is going to come back to bite us when we win.
+			我一直都知道我们的事业是正义的，但今天，一个真正的天使来帮助我们了。我当然听过守旧派的传言，说他们帮助发动了这场叛乱，但我从没想过自己会见到天使。她的名字叫艾斯特莱雅，我必须要承认，她不仅只是来振奋士气的花瓶，而是我们真正需要的强心剂，在她的领导下，我们终于攻破了提尼斯！不过我还是有点担心。她和副官在很多事情上意见一致，比如推翻莉莉丝之后的社会应该是什么样的，我认为非人类已经赢得了自己的一席之地，为什么他们看不到这一点呢？难道他们没有和我们一样努力对抗恶魔吗？难道我们还没受够种族间的相互踩踏吗？还有一件事，很多军官都开始模仿副官对待囚犯的方式，他们说是这是为了发泄怒气，但我想等我们赢了之后，他们会反咬一口的。
 		</i>
 	</p>
 	<p align=right>
 		<i>
-			15th March 1991
+			一九九一年三月十五日
 		</i>
 	</p>
 	<p>
 		<i>
-			It... is not easy for me to put down on paper what I am thinking right now. Last night during the block meeting, Astrea accused me and those who share my opinion on non-humans of being demon sympathizers. And of course the loudest accuser was the adjutant, just because I don't participate in his...recruitment activities. Well, it's true. I don't slap and choke and rape prisoners even if almost all of the other officers do. The collars do the work well enough. There is something wrong with these "angels". Every night that Astrea and the adjutant spend together, he gets more animalistic in his hate for non-humans and in his lust for rape. She is not an angel, she can't be. And if she is, I want nothing to do with them. We are being sent away from here to train insurgents, but I am not going. The other accused and I have agreed, we're leaving this rebellion to start our own. To what end, I don't know, but I can't be a part of this one, not anymore.
+			对我而言……把我现在的想法写在纸上并不容易。昨晚在街区会议上，艾斯特莱雅指责我和那些和我一样对非人类有相同看法的人是魔鬼的同情者。当然，最大声的指责者是副官，只因为我没有参加他的……兵源扩招计划。这倒是真的，我不会打人，掐脖子，强奸犯人。即使几乎所有的军官都这么做，我想项圈的作用已经够强了，这些“天使”一定有问题，艾斯特莱雅和副官在一起的每一个夜晚都会让副官变得更加兽性大发，对非人类的憎恨和强奸的欲望都在增加。她绝对不是天使，她也不可能是天使。就算她真的是天使，我也不想和这些家伙有任何瓜葛。我们随后被派去训练叛乱分子，但我是不会去的，我和其他几个同僚们已经达成一致，我们要离开这个叛军组织并自立门户，至于自立门户之后要干什么，说实话，我不知道。但我知道的是，我再也不能再参与这场叛乱了，再也不能了。
 		</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLEEPING_AREA_SEARCHED"><![CDATA[
 	<p>
-		From the bunk-beds scattered about the room, you guess that it was once used as a sleeping area. Some of the beds have been knocked over and all are unusable rotting husks covered in bioluminescent mushrooms. Piled high in the middle of the room are mysteriously stained pieces of fabric that might have been clothing at one point but are now home to yet more mushrooms.
+		从房间里散落的双层床来看，你猜测这里曾经被用作睡眠区。有些床铺被推翻了，不过所有的床铺上都长满了有着生物光的蘑菇，所以它们都没法用来休息了。房间中央堆放着一些沾满污渍的布料，这些布料曾经可能是衣服，但现在却成为了蘑菇们的家。
 	</p>
 	<p>
-		The waterproof footlockers now sit empty and what's left would give even Rose a real challenge. There is also what remains of someone's journal lying on one of the beds.
+		防水储柜现在已经空空如也了，剩下的东西你让萝丝来都不一定整干净。在其中的一张床上还放着某人的日记。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMMON_AREA"><![CDATA[
 	<p>
-		This room appears to have been some kind of common area, although the single table and a few chairs would have made for spartan accommodations even if they weren't covered in glowing lichen. The table has been split in two, right down the middle, either intentionally or from too much weight.
+		这个房间似乎曾是某个公共区域，尽管这里只有一张桌子和几把椅子，不过即使它们没有被发光的地衣覆盖，也会让人觉得十分简陋。桌子从中间一分为二，这可能是故意为之，也可能单纯是因为太重了。
 	</p>
 	<p>
-		Looking over to the far corner of the room, you see a heavy metal cabinet. The paint is flaking off and there's a huge dent in it, but it might still contain something of worth.
+		往房间的角落里望去，你看到了一个沉重的金属柜，上面油漆已经剥落，同时在上面还有一个巨大的凹痕，里面可能还有点值钱的东西。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMMON_AREA_CACHE_OPEN"><![CDATA[
 	<p>
-		[pc.Walking] over to the cabinet, and by having to apply more than a little force, you manage to pull the door open and find within:
+		[pc.Walking]走到柜子面前，在使出吃奶的力气之后终于拉开了柜门，你扫视了一下里面的东西：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMMON_AREA_SEARCHED"><![CDATA[
 	<p>
-		This room appears to have been some kind of common area, although the single table and a few chairs would have made for spartan accommodations even if they weren't covered in glowing lichen. The table has been split in two, right down the middle either intentionally or from too much weight.
+		这个房间似乎曾是某个公共区域，尽管这里只有一张桌子和几把椅子，不过即使它们没有被发光的地衣覆盖，也会让人觉得十分简陋。桌子从中间一分为二，这可能是故意为之，也可能单纯是因为太重了。
 	</p>
 	<p>
-		The cabinet in the far corner is now empty and there isn't anything left worth taking.
+		角落的柜子已经空空如也了，里面没有任何值得拿走的东西了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARMORY"><![CDATA[
 	<p>
-		You can't be sure what this room was used for, given that half of it has caved in. Poking out from rubble, there are two large metal containers. The containers have burst open from the pressure exerted by the rubble but you see glimpses of plastic bags inside.
+		你无法确定这个房间是用来做什么的，因为它有一半已经塌陷了。瓦砾中探出两个大金属容器，而由于瓦砾的影响，这些容器已经爆裂开了，但你可以看到里面有类似于塑料袋的东西。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARMORY_CACHE_OPEN"><![CDATA[
 	<p>
-		Approaching the rubble-entombed metal containers, you're able to shift aside some of the rocks and pull several plastic bags free from the debris. Tearing these bags open, you find:
+		走近被瓦砾掩埋的金属容器，你移开一些石块，从瓦砾中取出几个塑料袋。在撕开塑料袋后，你看见了：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARMORY_CACHE_OPEN_FIREBOMBS"><![CDATA[
 	<p>
 		#IF(pc.getOccupation() == OCCUPATION_SOLDIER)
-			Having seen quite a few in improvised weapons training,
+			一些在简易武器训练中见过的装备，
 		#ELSE
-			 Having seen them in use during riots on the news,
+			一些在新闻中看到过暴乱时使用的装备，
 		#ENDIF
-		 you instantly recognise the disposable firebombs as being an arcane parody of Molotov cocktails. You don't have a way to get more and you doubt any honest shop would want to carry something so obviously illegal, but perhaps a shopkeep with less scruples has the means to provide you with a supply of them...	
+		你认出了这些一次性燃烧弹，这种东西是对自制燃烧弹的奥术模仿。你没有办法弄到更多这样的玩意，而且你怀疑任何一家正经的商店都不愿意经营如此明显非法的东西，但也许一个不那么正经的店主有办法为你提供这些东西……	
 	</p>
 	#IF(game.getDialogueFlags().hasFlag(FLAG_axelExplainedVengar))
 	<p>
-		[roxy.NamePos] shop would probably be a good place to start.
+		[roxy.NamePos]的商店可能是一个不错的开端。
 	</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARMORY_SEARCHED"><![CDATA[
 	<p>
-		You can't be sure what this room was used for, given that half of it has caved in.
+		你无法确定这个房间是用来做什么的，因为它有一半已经塌陷了。
 	</p>
 	<p>
-		The metal containers and plastic bags are now empty, leaving nothing else but rubble in this room.
+		金属容器和塑料袋已经空空如也了，房间里也只剩下一地瓦砾。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REBEL_BASE_CAVED_IN_ROOM"><![CDATA[
 	<p>
-		It's impossible to even hazard a guess as to what this room was once used for, as it's completely buried beneath hundreds of tonnes of rubble. There's no sign of anything buried beneath the rock which almost completely fills this room, and so there's really little else to do but turn around and continue your search elsewhere...
+		你甚至无法猜测这个房间曾经是用来做什么的，因为它完全被埋在了数百吨的碎石之下。在几乎完全填满这个房间的岩石之下没有任何埋藏东西的迹象，所以除了转身到别处继续搜索之外你也没有其他的什么办法了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REBEL_BASE_COLLAPSE"><![CDATA[
 	<p>
-		As you make your way back out, you hear an ominous cracking sound from deep within the hidden cave. The rotting supports have finally given way! The cave's unsupported ceiling starts to collapse, bringing down a hundred thousand tonnes of rock with it.
+		当你往回走时，你听到隐蔽的洞穴深处传来不祥的破裂声。腐烂的支架终于承受不住了！没有支撑的洞顶开始坍塌，数万吨的岩石也随之倾泻而下。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REBEL_BASE_ESCAPE"><![CDATA[
 	<p>
-		You run as fast as your [pc.legs] will carry you and manage to reach safety just in time. A thunderous boom echoes throughout the Bat Caverns, and you thankfully manage to dart to one side just in time to avoid the cloud of dust and debris which is expelled from out of the collapsing cave's entrance.
+		你用自己的[pc.leg]玩命狂奔，终于在被掩埋之前及时到达了安全地带。轰隆隆的巨响回荡在整个蝙蝠洞窟，幸亏你及时闪到一边，才躲过从坍塌洞口喷射而出的尘土和碎石。
 	</p>
 	<p>
-		The sudden cave-in thankfully doesn't show any sign of spreading out into the Bat Caverns, and after a few moments have passed both the noise and vibrations have completely faded away. All that's left to remind you of the cave's existence is the metal handle, which is lodged half-way up the huge pile of rubble that spews out of the place where the hidden door once sat.
+		幸运的是，突如其来的塌方并没有向蝙蝠洞窟外扩散的迹象，在等待片刻之后，噪音和震动都完全消失了。提醒你洞穴存在的只剩下那个金属拉杆了，它就插在从暗门曾经所在位置喷出的一大堆碎石上。
 	</p>
 	<p>
-		By some sort of a miracle you've managed to escape completely unharmed, although there's now no way back into the hidden cave...
+		你奇迹般逃离了那里，毫发无损，不过现在已经没办法回到那个隐藏洞穴了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

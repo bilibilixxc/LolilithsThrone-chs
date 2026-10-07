@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <enchantment>
 	<positiveEnchantment><![CDATA[true]]></positiveEnchantment>
 	<applyDefaultSeal><![CDATA[false]]></applyDefaultSeal>
@@ -8,7 +8,7 @@
 	]]></spawnWeighting>
 	
 	<namePrefix/>
-	<namePostfix><![CDATA[of the phoenix]]></namePostfix>
+	<namePostfix><![CDATA[不死鸟之]]></namePostfix>
 	<nameOverride/>
 	
 	<conditionalPreParsing/>

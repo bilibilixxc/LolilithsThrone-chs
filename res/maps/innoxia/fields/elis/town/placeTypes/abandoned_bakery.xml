@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[abandoned bakery]]></name>
-	<tooltipDescription><![CDATA[An abandoned bakery sits deep within the narrow alleyways of northern Elis.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[near the abandoned bakery in Elis]]></virginityLossDescription>
+	<name><![CDATA[破败的面包店]]></name>
+	<tooltipDescription><![CDATA[伊利斯北部狭窄的小巷深处的一家废弃的面包店。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[伊利斯废弃面包店附近]]></virginityLossDescription>
 	<sexBlockedReason/>
 	<sexBlockedFromCharacterPresent>false</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>

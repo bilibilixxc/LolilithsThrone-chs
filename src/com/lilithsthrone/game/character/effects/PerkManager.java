@@ -784,7 +784,7 @@ public enum PerkManager {
 		
 
 		treeSB.append("<div class='container-full-width' style='padding:8px; text-align:center;'>"
-		+ "<h6 style='text-align:center;'>Active Traits</h6>");
+		+ "<h6 style='text-align:center;'>生效特性</h6>");
 		
 		treeSB.append(
 				"<div id='OCCUPATION_" + Perk.getIdFromPerk(character.getHistory().getAssociatedPerk())
@@ -810,7 +810,7 @@ public enum PerkManager {
 		
 		treeSB.append("<div class='container-full-width' style='text-align:center;'>");
 		if(includePointsRemaining) {
-			treeSB.append("<h6 style='text-align:center;'>Perk Points Available: ");
+			treeSB.append("<h6 style='text-align:center;'>可用天赋点: ");
 			treeSB.append(character.getPerkPoints());
 			StringBuilder extraPerkPoints = new StringBuilder();
 			for(PerkCategory category : PerkCategory.values()) {
@@ -820,7 +820,7 @@ public enum PerkManager {
 				}
 			}
 			if(extraPerkPoints.length()>0) {
-				treeSB.append("<br/>Category-specific points: "+extraPerkPoints.toString());
+				treeSB.append("<br/>特定分类天赋点:"+extraPerkPoints.toString());
 			}
 			treeSB.append("</h6>");
 		}

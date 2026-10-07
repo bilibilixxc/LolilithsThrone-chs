@@ -1,57 +1,57 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- Item/clothing/weapon found: -->
 	
 	<htmlContent tag="ITEM_FOUND"><![CDATA[
 	<p>
-		As you travel down the dark, twisting alleyways of northern Elis, you suddenly hear an alarming scream and a shout coming from somewhere up ahead. As there's no other way to go, you continue forwards towards the origin of this noise, but after turning a couple of corners and finding yourself in the area from which the cries must have originated, you find the alleyway to be completely deserted.
+		当你行进在伊利斯北部幽暗曲折的小巷中时，突然听到前方某处传来一阵惊天动地的尖叫声。由于没有其他路可走，你继续朝声音的来源前进，但转过几个弯后，你发现自己已经来到了呼喊声的源头，巷子里却空无一人。
 	</p>
 	<p>
-		Although you stop for a moment to listen for any further noises, you're not able to hear anything out of the ordinary, and so decide to continue on your way. As you [pc.step] forwards to do so, however, you suddenly spot something lying on the floor to one side of the cobblestone path. Assuming that the people whose cries you heard must have dropped it, you [pc.step] over to where this item is lying and see:
+		你停下来听了一会儿，但并没有听到任何异常的声音，于是决定继续向前。然而，就在你向前[pc.step]的时候，你突然发现鹅卵石小路一侧的地上躺着一个东西。你觉得应该是发出哭声的人把它弄掉了，于是[pc.step]过去看了看：
 	</p>
 	<p style='text-align:center;'>
 		<b>[#SPECIAL_PARSE_0]</b>
 	</p>
 	<p>
-		Although you look up and down the alleyway to see if the owner is coming back for it, there's absolutely no sign of anybody nearby. Looking back down at the item, you wonder whether or not to take it...
+		你在巷子里来回张望，想看看失主是否会回来取走它，但附近完全没有任何人的踪迹。你低头看着那件东西，不知道该不该拿走它……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_FOUND"><![CDATA[
 	<p>
-		Although the alleyways are completely deserted, the dilapidated, multi-story structures which tilt precariously overhead are home to countless people, as can be evidenced by the flickering lights, drunken laughter, and whorish moaning which emanate from their upper-story windows. As you pass by a particularly shabby building, one of the crooked windows on its top floor is flung open with a loud creak, and then a second later a stream of climactic squeals and desperate grunts burst out from this opening.
+		虽然小巷里空无一人，但从楼上窗户里传出的闪烁的灯光、醉酒的笑声和猥琐的呻吟声可以看出，这些岌岌可危的破旧多层建筑里住着无数人。当你路过一栋特别破旧的楼房时，顶楼一扇歪斜的窗户“吱呀”一声被推开。紧接着，从这扇窗户里传出一阵阵兴奋的尖叫声和难耐的咕哝声。
 	</p>
 	<p>
-		Your attention is naturally drawn for a moment to this unexpected event, and as you look up towards the origin of these sexual sounds, you suddenly see that an item of clothing has been carelessly discarded and thrown out of the window. As it falls to the ground in front of your path, you see:
+		你的注意力自然被这突如其来的事情吸引了片刻，当你抬头朝这些性爱声音的源头望去时，突然发现一件衣服被人不小心丢弃，扔出了窗外。当它掉落在你前方的地面上时，你看到了：
 	</p>
 	<p style='text-align:center;'>
 		<b>[#SPECIAL_PARSE_0]</b>
 	</p>
 	<p>
-		Either unaware or unconcerned that they've just lost something, the pair up in the room above continue to moan and grunt away, leaving you to consider whether or not to take this item of clothing...
+		上面房间里的那对夫妇不知道是没意识到还是不关心他们刚刚丢了什么东西，继续呻吟和咕哝着，你在考虑是否要拿走这件衣服……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WEAPON_FOUND"><![CDATA[
 	<p>
-		As you continue to travel down the dark, twisting alleyways of Elis, you suddenly hear a muffled series of shouts, cries, and the breaking of glass coming from behind a nearby, tightly-shut wooden door. Pausing to see how this situation evolves, you watch as this door suddenly explodes open with a deafening bang, and then from out of this doorway a cloaked, feminine figure leaps into the alleyway. After scrambling for a moment to gain her footing, this mysterious character bolts off down the cobblestone pathway before you.
+		当你继续沿着伊利斯黑暗曲折的小巷前行时，突然听到附近一扇紧闭的木门后面传来一连串低沉的喊叫声、哭泣声和玻璃的破碎声。你停下脚步，静观事态的发展，眼看着这扇门突然被一声震耳欲聋的巨响炸开，然后从门缝里蹿出一个披着斗篷的女性身影。在慌忙站稳脚跟后，这个神秘人物便沿着你面前的鹅卵石小路飞奔而去。
 	</p>
 	<p>
-		Following hot on the cloaked figure's heels, a trio of burly wolf-boys burst out from the doorway, before sprinting after their quarry. Not one of these three characters seem to have noticed you, and in their haste to catch the fleeing, feminine figure, they leave the door to their room wide open. As the sound of their shouts and heavy footfalls fade into the distance, you [pc.walk] forwards and pass by the open doorway. Looking inside, you see an overturned table and chairs in the middle of a dingy, smoke-filled room, while scatted all over the floor are a great deal of playing cards and the remains of several shattered glasses.
+		紧跟着斗篷女的脚步，三个身材魁梧的狼人从门口冲了出来，向他们的猎物冲去。这三个狼人似乎没有一个注意到你，他们急于抓住那个逃跑的女性身影，却让房间的门敞开着。当他们的喊叫声和沉重的脚步声渐渐消失在远处时，你[pc.walk]向前，经过敞开的门口，向里面望去——你看到在一个阴暗、烟雾缭绕的房间中央有一张被掀翻的桌椅，而地上散落着大量扑克牌和几只杯子的碎片。
 	</p>
 	<p>
-		As you turn away from this room and prepare to continue on your way, you suddenly spot something lying in the gutter just up ahead, and you [pc.walk] forwards to see:
+		当你转身离开这个房间准备继续前行时，突然发现前面的水沟里躺着什么东西。你[pc.walk]上前一看：
 	</p>
 	<p style='text-align:center;'>
 		<b>[#SPECIAL_PARSE_0]</b>
 	</p>
 	<p>
-		Realising that either the cloaked figure or one of the wolf-boys must have dropped it, you wonder whether to pick this weapon up or leave it behind...
+		你意识到一定是那个斗篷女或其中一个狼人掉了它，你不知道是该捡起这件武器还是把它留下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

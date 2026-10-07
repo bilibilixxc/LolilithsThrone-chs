@@ -156,24 +156,24 @@ public abstract class AbstractHornType implements BodyPartTypeInterface {
 	public String getDeterminer(GameCharacter gc) {
 		if(gc.getHornRows()==1) {
 			if(gc.getHornsPerRow()==1) {
-				return "a solitary";
+				return "单根";
 			} else if(gc.getHornsPerRow()==2) {
-				return "a pair of";
+				return "一对";
 			} else if(gc.getHornsPerRow()==3) {
-				return "a trio of";
+				return "三根";
 			} else {
-				return "a quartet of";
+				return "四根";
 			}
 			
 		} else {
 			if(gc.getHornsPerRow()==1) {
-				return Util.intToString(gc.getHornRows())+" vertically-aligned";
+				return Util.intToString(gc.getHornRows())+"根竖直排列的";
 			} else if(gc.getHornsPerRow()==2) {
-				return Util.intToString(gc.getHornRows())+" pairs of";
+				return Util.intToString(gc.getHornRows())+"对";
 			} else if(gc.getHornsPerRow()==3) {
-				return Util.intToString(gc.getHornRows())+" trios of";
+				return Util.intToString(gc.getHornRows())+"组";
 			} else {
-				return Util.intToString(gc.getHornRows())+" quartets of";
+				return Util.intToString(gc.getHornRows())+"组";
 			}
 		}
 	}

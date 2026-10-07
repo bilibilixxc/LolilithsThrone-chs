@@ -133,23 +133,23 @@ public class Subspecies {
 			"innoxia_race_human_bread_roll",
 			"statusEffects/race/raceHuman",
 			"statusEffects/race/raceBackground",
-			"human",
-			"humans",
-			"man",
-			"woman",
-			"men",
-			"women",
+			"人类",
+			"人类",
+			"男人",
+			"女人",
+			"男人",
+			"女人",
 			null,
 			Nocturnality.DIURNAL,
-			"Humans have a much higher resistance to the arousing effects of the arcane than any other race.",
+			"人类对于快感和奥术的抵抗能力远高于其他种族。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 0f),
 					new Value<>(Attribute.RESISTANCE_LUST, 5f)),
 			null,
-			"Concerning Humans",
-			"Concerning Humans",
+			"心系人类",
+			"心系人类",
 			"HUMAN_BASIC",
 			"HUMAN_ADVANCED",
 			Race.HUMAN,
@@ -163,7 +163,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_HUMAN,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"A typical human.",
+			"一个普通的人类。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN),
@@ -189,16 +189,16 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceAngel",
 			"statusEffects/race/raceBackground",
-			"angel",
-			"angels",
-			"angel",
-			"angel",
-			"angels",
-			"angels",
+			"天使",
+			"天使",
+			"天使",
+			"天使",
+			"天使",
+			"天使",
 			null,
 			Nocturnality.DIURNAL,
-			"As an angel, [npc.nameIsFull] highly resistant to the arousing effects of the arcane, and [npc.is] particularly adept at fighting demons."
-					+ " [npc.Her] natural instinct to protect humans, however, leaves [npc.her] quite vulnerable to them...",
+			"作为一名天使，[npc.nameIsFull]对奥术造成的欲望效应具有高抵抗力，且善于与恶魔作战。"
+					+ "[npc.her]拥有保护人类的本能，然而，这使[npc.her]难以抵御来自人类的伤害……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 0f),
 					new Value<>(Attribute.MAJOR_ARCANE, 15f),
@@ -207,8 +207,8 @@ public class Subspecies {
 					new Value<>(Attribute.getRacialDamageAttribute(Race.DEMON), 50f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.HUMAN), -50f)),
 			null,
-			"The Protectors",
-			"The Protectors",
+			"守护者",
+			"守护者",
 			"ANGEL_BASIC",
 			"ANGEL_ADVANCED",
 			Race.ANGEL,
@@ -222,7 +222,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 2)),
 			PresetColour.RACE_ANGEL,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"A typical angel.",
+			"一个普通的天使。",
 			null,
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
@@ -233,21 +233,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"fallen angel",
-					"fallen angels",
-					"fallen angel",
-					"fallen angel",
-					"fallen angels",
-					"fallen angels"};
+					"堕天使",
+					"堕天使",
+					"堕天使",
+					"堕天使",
+					"堕天使",
+					"堕天使"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "fallen angel", false, false),
-					applyNonBipedNameChange(body, "fallen angel", false, true),
-					applyNonBipedNameChange(body, "fallen angel", false, false),
-					applyNonBipedNameChange(body, "fallen angel", true, false),
-					applyNonBipedNameChange(body, "fallen angel", false, true),
-					applyNonBipedNameChange(body, "fallen angel", true, true)
+					applyNonBipedNameChange(body, "堕天使", false, false),
+					applyNonBipedNameChange(body, "堕天使", false, true),
+					applyNonBipedNameChange(body, "堕天使", false, false),
+					applyNonBipedNameChange(body, "堕天使", true, false),
+					applyNonBipedNameChange(body, "堕天使", false, true),
+					applyNonBipedNameChange(body, "堕天使", true, true)
 				};
 			}
 			
@@ -277,15 +277,15 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceElderLilin",
 			"statusEffects/race/raceBackground",
-			"elder lilin",
-			"elder lilin",
-			"elder lilin",
-			"elder lilin",
-			"elder lilin",
-			"elder lilin",
+			"莉琳长老",
+			"莉琳长老",
+			"莉琳长老",
+			"莉琳长老",
+			"莉琳长老",
+			"莉琳长老",
 			null,
 			Nocturnality.CATHEMERAL,
-			"[npc.NameIsFull] one of the seven elder lilin, and [npc.is] one of the most powerful beings in existence. [npc.She] can transform [npc.her] body into any form [npc.she] [npc.verb(desire)], and [npc.has] absolute mastery over the arcane.",
+			"[npc.NameIsFull]是七位莉琳长老之一，也是现存者中最有力量的一位，[npc.She]可以把[npc.her]的身体转化成[npc.she]想要的任何形式，还能完全掌控奥术。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 1000f),
 					new Value<>(Attribute.MAJOR_ARCANE, 1000f),
@@ -293,10 +293,10 @@ public class Subspecies {
 					new Value<>(Attribute.HEALTH_MAXIMUM, 1000f),
 					new Value<>(Attribute.MANA_MAXIMUM, 1000f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlimited)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>",
-					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Immune to race transformations</b>"),
-			"Lilith's Spawn",
-			"Lilith's Spawns",
+					"[style.boldExcellent(无限制)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化</b>",
+					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>免疫种族转化</b>"),
+			"莉莉丝的子嗣",
+			"莉莉丝的子嗣",
 			"ELDER_LILIN_BASIC",
 			"ELDER_LILIN_ADVANCED",
 			Race.DEMON,
@@ -310,7 +310,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_LILIN,
 			SubspeciesPreference.ONE_LOW,
-			"One of the seven elder lilin.",
+			"七位莉琳长老之一。",
 			null,
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
@@ -348,15 +348,15 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceLilin",
 			"statusEffects/race/raceBackground",
-			"lilin",
-			"lilin",
-			"lilin",
-			"lilin",
-			"lilin",
-			"lilin",
+			"莉琳",
+			"莉琳",
+			"莉琳",
+			"莉琳",
+			"莉琳",
+			"莉琳",
 			null,
 			Nocturnality.CATHEMERAL,
-			"[npc.Name] is a lilin, and as such is far more powerful than a regular demon. [npc.She] can transform [npc.her] body into any form [npc.she] desires, and has a vast amount of arcane power.",
+			"[npc.Name]是位莉琳，远比寻常恶魔更为强大。[npc.She]可以将躯体随心所欲地转化成[npc.she]期望的姿态，且拥有着庞大的奥术之力。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 500f),
 					new Value<>(Attribute.MAJOR_ARCANE, 500f),
@@ -364,10 +364,10 @@ public class Subspecies {
 					new Value<>(Attribute.HEALTH_MAXIMUM, 500f),
 					new Value<>(Attribute.MANA_MAXIMUM, 500f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlimited)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>",
-					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Immune to race transformations</b>"),
-			"Lilith's Brood",
-			"Lilith's Broods",
+					"[style.boldExcellent(无限制)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化</b>",
+					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>免疫种族转化</b>"),
+			"莉莉丝的血脉",
+			"莉莉丝的血脉",
 			"LILIN_BASIC",
 			"LILIN_ADVANCED",
 			Race.DEMON,
@@ -381,7 +381,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_LILIN,
 			SubspeciesPreference.ONE_LOW,
-			"A lilin.",
+			"一位莉琳。",
 			null,
 			null, null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
@@ -419,15 +419,15 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceDemon",
 			"statusEffects/race/raceBackground",
-			"demon",
-			"demons",
-			"incubus",
-			"succubus",
-			"incubi",
-			"succubi",
+			"恶魔",
+			"恶魔",
+			"淫梦魔",
+			"魅魔",
+			"淫梦魔",
+			"魅魔",
 			null,
 			Nocturnality.CATHEMERAL,
-			"Due to the fact that demons are very easily able to harness arcane power, [npc.namePos] spell-casting abilities are truly a terrifying force to behold!",
+			"由于恶魔能轻松地驾驭奥术之力，[npc.namePos]的施法能力可怕到无人能敌！",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 25f),
 					new Value<>(Attribute.MAJOR_ARCANE, 30f),
@@ -436,10 +436,10 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_LUST, 25f),
 					new Value<>(Attribute.DAMAGE_SPELLS, 75f)),
 			Util.newArrayListOfValues(
-					"[style.boldDemon(Demonic)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>",
-					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Immune to race transformations</b>"),
-			"Demonic Origins",
-			"Demonic Origins'",
+					"[style.boldDemon(恶魔)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自体转变</b>",
+					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>免疫种族转化</b>"),
+			"恶魔族的起源",
+			"恶魔族的起源",
 			"DEMON_BASIC",
 			"DEMON_ADVANCED",
 			Race.DEMON,
@@ -453,7 +453,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.RACE_DEMON,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"A typical demon.",
+			"一个普通的恶魔。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.THREE),
 					new Value<>(WorldRegion.FIELD_CITY, SubspeciesSpawnRarity.THREE),
@@ -474,7 +474,7 @@ public class Subspecies {
 
 				switch(legConfiguration) {
 					case BIPEDAL:
-						return "demon";
+						return "恶魔";
 					case ARACHNID:
 					case CEPHALOPOD:
 					case QUADRUPEDAL:
@@ -484,10 +484,10 @@ public class Subspecies {
 					case WINGED_BIPED:
 						return r==Race.HUMAN || r==Race.DEMON
 								?Race.DEMON.getFeralName(new LegConfigurationAffinity(legConfiguration, getAffinity()), false)
-								:"demonic-"+r.getName(body, true);
+								:"恶魔"+r.getName(body, true);
 				}
 			}
-			return "demon";
+			return "恶魔";
 		}
 		@Override
 		public String applySpeciesChanges(GameCharacter target, Body body) {
@@ -609,15 +609,15 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceDemon",
 			"statusEffects/race/raceBackground",
-			"half-demon",
-			"half-demons",
-			"half-incubus",
-			"half-succubus",
-			"half-incubi",
-			"half-succubi",
+			"半恶魔",
+			"半恶魔",
+			"半淫梦魔",
+			"半魅魔",
+			"半淫梦魔",
+			"半魅魔",
 			null,
 			Nocturnality.CATHEMERAL,
-			"Half-demons are almost as capable as regular demons at harnessing arcane power, and as a result, [npc.namePos] spell-casting abilities are exceptionally powerful!",
+			"半恶魔在驾驭奥术之力方面与普通恶魔无异，因而[npc.namePos]释放魔法的能力同样异乎寻常！",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 10f),
 					new Value<>(Attribute.MAJOR_ARCANE, 20f),
@@ -626,10 +626,10 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_LUST, 20f),
 					new Value<>(Attribute.DAMAGE_SPELLS, 60f)),
 			Util.newArrayListOfValues(
-					"<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>Limited self-transformations</b>",
-					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>Immune to race transformations</b>"),
-			"Demonic Half-breeds",
-			"Demonic Half-breeds'",
+					"<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化受限</b>",
+					"<b style='color: "+ PresetColour.GENERIC_GOOD.toWebHexString()+ ";'>免疫种族转化</b>"),
+			"恶魔混血",
+			"恶魔混血",
 			"HALF_DEMON_BASIC",
 			"HALF_DEMON_ADVANCED",
 			Race.DEMON,
@@ -643,7 +643,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 2)),
 			PresetColour.RACE_HALF_DEMON,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"The result of copulation between a demon and a non-demonic partner.",
+			"是恶魔与非恶魔配偶交配的结果",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TWO),
@@ -773,15 +773,15 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceImp",
 			"statusEffects/race/raceBackground",
-			"imp",
-			"imps",
-			"imp",
-			"imp",
-			"imps",
-			"imps",
+			"小恶魔",
+			"小恶魔",
+			"小恶魔",
+			"小恶魔",
+			"小恶魔",
+			"小恶魔",
 			null,
 			Nocturnality.CATHEMERAL,
-			"[npc.NamePos] impish body has a deep, insatiable craving for sex. Due to imps' uncouth mannerisms and reputation as being on the very bottom rung of society, [npc.she] [npc.verb(find)] it difficult to seduce others...",
+			"[npc.NamePos]的小恶魔躯体对性有着深沉且永不满足的渴望。由于小恶魔举止粗鲁，又在社会的最底层，[npc.she]难以诱惑他人……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, -5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -791,8 +791,8 @@ public class Subspecies {
 			Util.newArrayListOfValues(
 					"[style.boldDemon(Demonic)] <b style='color: " + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'> self-transformations</b>",
 					"<b style='color: " + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Immune to race transformations</b>"),
-			"Impish Fiends",
-			"Impish Fiends'",
+			"无法无天的小恶魔",
+			"无法无天的小恶魔'",
 			"IMP_BASIC",
 			"IMP_ADVANCED",
 			Race.DEMON,
@@ -806,7 +806,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_IMP,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"A typical imp.",
+			"一个普通的小恶魔。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN)),
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
@@ -876,15 +876,15 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceImpAlpha",
 			"statusEffects/race/raceBackground",
-			"alpha-imp",
-			"alpha-imps",
-			"alpha-imp",
-			"alpha-imp",
-			"alpha-imps",
-			"alpha-imps",
+			"阿尔法小恶魔",
+			"阿尔法小恶魔",
+			"阿尔法小恶魔",
+			"阿尔法小恶魔",
+			"阿尔法小恶魔",
+			"阿尔法小恶魔",
 			null,
 			Nocturnality.CATHEMERAL,
-			"[npc.NamePos] impish body has a deep, insatiable craving for sex. Due to imps' uncouth mannerisms and reputation as being on the very bottom rung of society, [npc.she] [npc.verb(find)] it difficult to seduce others...",
+			"[npc.NamePos]的小恶魔躯体对性有着深沉且永不满足的渴望。由于小恶魔举止粗鲁，又在社会的最底层，[npc.she]难以诱惑他人……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 0f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -894,8 +894,8 @@ public class Subspecies {
 			Util.newArrayListOfValues(
 					"[style.boldDemon(Demonic)] <b style='color: " + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'> self-transformations</b>",
 					"<b style='color: " + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Immune to race transformations</b>"),
-			"Impish Fiends",
-			"Impish Fiends'",
+			"无法无天的小恶魔",
+			"无法无天的小恶魔'",
 			"IMP_BASIC",
 			"IMP_ADVANCED",
 			Race.DEMON,
@@ -909,7 +909,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_IMP,
 			SubspeciesPreference.ONE_LOW,
-			"A more powerful form of imp, standing at over [style.sizes(107)] tall.",
+			"小恶魔一种更加强力的形态，站立约有[style.sizes(107)]高。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN)),
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
@@ -985,19 +985,19 @@ public class Subspecies {
 			"innoxia_race_cow_bubble_cream",
 			"statusEffects/race/raceCowMorph",
 			"statusEffects/race/raceBackground",
-			"cattle-morph",
-			"cattle-morphs",
-			"bull-boy",
-			"cow-girl",
-			"bull-boys",
-			"cow-girls",
+			"牛化形",
+			"牛化形",
+			"牛男",
+			"牛女",
+			"牛男",
+			"牛女",
 			new FeralAttributes(
-					"cattle",
-					"cattle",
-					"bull",
-					"cow",
-					"bulls",
-					"cows",
+					"牛",
+					"牛",
+					"公牛",
+					"母牛",
+					"公牛",
+					"母牛",
 					LegConfiguration.QUADRUPEDAL,
 					160,
 					0,
@@ -1005,7 +1005,7 @@ public class Subspecies {
 					1,
 					4, false),
 			Nocturnality.DIURNAL,
-			"Although [npc.namePos] body possesses a great strength and toughness, [npc.her] mind isn't exactly the quickest...",
+			"尽管[npc.namePos]的身躯力大无穷，坚韧无比，但头脑却并不是那么灵敏……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 30f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -1014,8 +1014,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 10f),
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, 2f)),
 			null,
-			"Milking Cows",
-			"Milking Cows'",
+			"挤牛奶",
+			"挤牛奶'",
 			"COW_MORPH_BASIC",
 			"COW_MORPH_ADVANCED",
 			Race.COW_MORPH,
@@ -1028,7 +1028,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 1),
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_COW_MORPH, SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic cow, known as a 'cattle-morph' when bipedal, and a 'cowtaur'/'bulltaur' when the lower body is that of a feral cow or bull.",
+			"一种人形的牛，当下肢为双足时称为“牛化形”，而下肢呈现出牛兽态时称为“半公牛人”或“半母牛人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.THREE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TEN),
@@ -1039,19 +1039,19 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			return new String[] {
-					"minotaur",
-					"minotaurs",
-					"minotaur",
-					"minotaur",
-					"minotaurs",
-					"minotaurs"};
+					"米诺陶洛斯",
+					"米诺陶洛斯",
+					"米诺陶洛斯",
+					"米诺陶洛斯",
+					"米诺陶洛斯",
+					"米诺陶洛斯"};
 		}
 		@Override
 		protected String applyNonBipedNameChange(Body body, String baseName, boolean applyFeminineForm, boolean plural) {
 			if(body.getLegConfiguration()==LegConfiguration.QUADRUPEDAL) {
 				return applyFeminineForm
-						?("cowtaur"+(plural?"s":""))
-						:("bulltaur"+(plural?"s":""));
+						?("半母牛人"+(plural?"":""))
+						:("半公牛人"+(plural?"":""));
 			}
 			return super.applyNonBipedNameChange(body, baseName, applyFeminineForm, plural);
 		}
@@ -1071,19 +1071,19 @@ public class Subspecies {
 			"innoxia_race_dog_canine_crunch",
 			"statusEffects/race/raceDogMorph",
 			"statusEffects/race/raceBackground",
-			"dog-morph",
-			"dog-morphs",
-			"dog-boy",
-			"dog-girl",
-			"dog-boys",
-			"dog-girls",
+			"犬化形",
+			"犬化形",
+			"犬男",
+			"犬女",
+			"犬男",
+			"犬女",
 			new FeralAttributes(
-					"dog",
-					"dogs",
-					"dog",
-					"bitch",
-					"dogs",
-					"bitches",
+					"犬",
+					"犬",
+					"犬",
+					"婊子",
+					"犬",
+					"婊子",
 					LegConfiguration.QUADRUPEDAL,
 					70,
 					0,
@@ -1091,8 +1091,8 @@ public class Subspecies {
 					5,
 					1, false),
 			Nocturnality.DIURNAL,
-			"[npc.Name] always [npc.has] lots of energy, and [npc.she] [npc.verb(get)] excited about new things very easily."
-					+ " [npc.She] also [npc.has] an instinctive desire to display [npc.her] dominance over innocent cat-morphs...",
+			"[npc.Name]总是能量满满，且极易因新鲜事物而兴奋起来。"
+					+ "[npc.she]还有着一种来源于本能的欲望，想对无辜的猫化形展示其支配地位……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 10f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -1100,8 +1100,8 @@ public class Subspecies {
 					new Value<>(Attribute.HEALTH_MAXIMUM, 5f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.CAT_MORPH), 5f)),
 			null,
-			"Canine Culture",
-			"Canine Cultures",
+			"犬类文化",
+			"犬类文化",
 			"DOG_MORPH_BASIC",
 			"DOG_MORPH_ADVANCED",
 			Race.DOG_MORPH,
@@ -1114,7 +1114,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 1),
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_DOG_MORPH, SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic dog, known as a 'dog-morph' when bipedal, and a 'dogtaur' when the lower body is that of an oversized feral dog.",
+			"一种人形的狗，当下肢似人时称为“犬化形”，而当下肢呈现出大型兽态犬的样子时称为“半犬人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN),
@@ -1129,21 +1129,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"hellhound",
-					"hellhounds",
-					"hellhound",
-					"hellhound",
-					"hellhounds",
-					"hellhounds"};
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", true, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", true, true)
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", true, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", true, true)
 				};
 			}
 			
@@ -1165,19 +1165,19 @@ public class Subspecies {
 			"innoxia_race_dog_canine_crunch",
 			"statusEffects/race/raceDogMorph",
 			"statusEffects/race/raceBackground",
-			"border collie-morph",
-			"border collie-morphs",
-			"border collie-boy",
-			"border collie-girl",
-			"border collie-boys",
-			"border collie-girls",
+			"边牧化形",
+			"边牧化形",
+			"边牧男",
+			"边牧女",
+			"边牧男",
+			"边牧女",
 			new FeralAttributes(
-					"border collie",
-					"border collies",
-					"border collie dog",
-					"border collie bitch",
-					"border collie dogs",
-					"border collie bitches",
+					"边牧",
+					"边牧",
+					"边牧犬",
+					"边牧婊子",
+					"边牧犬",
+					"边牧婊子",
 					LegConfiguration.QUADRUPEDAL,
 					65,
 					0,
@@ -1185,8 +1185,8 @@ public class Subspecies {
 					5,
 					1, false),
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] more intelligent than an average dog-morph, and [npc.has] strong urges to try and herd people around."
-					+ " [npc.She] also [npc.has] an instinctive desire to display [npc.her] dominance over innocent sheep-morphs...",
+			"[npc.NameIsFull]相比一般的犬化形更加聪明，并且总有一种强烈冲动，想将周围人聚集在一起。"
+					+ "[npc.She]还有着一种来源于本能的欲望，想对无辜的绵羊化形展示其支配地位……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 10f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -1195,8 +1195,8 @@ public class Subspecies {
 					new Value<>(Attribute.HEALTH_MAXIMUM, 5f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.getRaceFromId("innoxia_sheep")), 25f)),
 			null,
-			"Canine Culture",
-			"Canine Cultures",
+			"犬类文化",
+			"犬类文化",
 			"DOG_MORPH_BASIC",
 			"DOG_MORPH_ADVANCED",
 			Race.DOG_MORPH,
@@ -1209,9 +1209,9 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 1),
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_DOG_MORPH, SubspeciesPreference.TWO_AVERAGE,
-			"A particularly energetic and intelligent dog-morph, which resembles an anthropomorphised border collie."
-							+ " They are known as 'border collie-morphs' when bipedal, and 'border collie-taurs' when the lower body is that of an oversized feral border collie."
-							+ " To be identified as a border collie-morph, a character must be a dog-morph that has either upright or folded ears, and fluffy, black fur with white markings.",
+			"一种格外聪明也活力四射的犬化形，呈现出人形边境牧羊犬的外貌。"
+							+ "当下肢似人时称为“边牧化形”，而当下肢呈现出大型兽态边牧的样子时则称为“半边牧人”。"
+							+ "若要被判定为边牧化形，角色必须是犬化形，且拥有上竖耳或折耳，并且拥有松软的黑色皮毛，带有白色花纹。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.THREE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.FIVE),
@@ -1236,21 +1236,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"hellhound",
-					"hellhounds",
-					"hellhound",
-					"hellhound",
-					"hellhounds",
-					"hellhounds"};
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", true, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", true, true)
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", true, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", true, true)
 				};
 			}
 			
@@ -1282,19 +1282,19 @@ public class Subspecies {
 			"innoxia_race_dog_canine_crunch",
 			"statusEffects/race/raceDogMorphDobermann",
 			"statusEffects/race/raceBackground",
-			"dobermann",
-			"dobermanns",
-			"dobermann-boy",
-			"dobermann-girl",
-			"dobermann-boys",
-			"dobermann-girls",
+			"杜宾化形",
+			"杜宾化形",
+			"杜宾男",
+			"杜宾女",
+			"杜宾男",
+			"杜宾女",
 			new FeralAttributes(
-					"dobermann",
-					"dobermanns",
-					"dobermann dog",
-					"dobermann bitch",
-					"dobermann dogs",
-					"dobermann bitches",
+					"杜宾化形",
+					"杜宾化形",
+					"杜宾犬",
+					"杜宾婊子",
+					"杜宾犬",
+					"杜宾婊子",
 					LegConfiguration.QUADRUPEDAL,
 					70,
 					0,
@@ -1302,8 +1302,8 @@ public class Subspecies {
 					5,
 					1, false),
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] always ready to defend those [npc.she] [npc.verb(call)] [npc.her] friend, and, thanks to [npc.her] powerful body, [npc.sheIs] able to do just that."
-					+ " [npc.She] also [npc.has] an instinctive desire to display [npc.her] dominance over innocent cat-morphs...",
+			"[npc.NameIsFull]时刻准备着保卫[npc.she]的每一位朋友，借助着[npc.her]强健的体魄，通常都能够如愿。"
+					+ "[npc.she]还有着一种来源于本能的欲望，想对无辜的猫化形展示其支配地位……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 15f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -1311,8 +1311,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 15f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.CAT_MORPH), 5f)),
 			null,
-			"Canine Culture",
-			"Canine Cultures",
+			"犬类文化",
+			"犬类文化",
 			"DOG_MORPH_BASIC",
 			"DOG_MORPH_ADVANCED",
 			Race.DOG_MORPH,
@@ -1326,9 +1326,9 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_DOG_MORPH,
 			SubspeciesPreference.TWO_AVERAGE,
-			"A dog-morph which resembles an anthropomorphised dobermann."
-				+ " They are known as 'dobermanns' when bipedal, and 'dobermanntaurs' when the lower body is that of an oversized feral dobermann."
-				+ " To be identified as a dobermann, a character must be a dog-morph that has short, black fur, with either brown, dark-brown, or tan markings.",
+			"一种犬化形，呈现出人形杜宾犬的外貌。"
+				+ "当下肢似人时称为“杜宾化形”，而当下肢呈现出大型兽态杜宾的样子时称为“半杜宾人”。"
+				+ "若要被判定为杜宾化形，角色必须是犬化形，且拥有黑色的短皮毛，带棕色、深棕色、棕褐色的花纹。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.FIELD_CITY, SubspeciesSpawnRarity.THREE)),
@@ -1364,21 +1364,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"hellhound",
-					"hellhounds",
-					"hellhound",
-					"hellhound",
-					"hellhounds",
-					"hellhounds"};
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", true, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", true, true)
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", true, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", true, true)
 				};
 			}
 			
@@ -1409,19 +1409,19 @@ public class Subspecies {
 			"innoxia_race_dog_canine_crunch",
 			"statusEffects/race/raceDogMorph",
 			"statusEffects/race/raceBackground",
-			"german-shepherd-morph",
-			"german-shepherd-morphs",
-			"german-shepherd-boy",
-			"german-shepherd-girl",
-			"german-shepherd-boys",
-			"german-shepherd-girls",
+			"德牧化形",
+			"德牧化形",
+			"德牧男",
+			"德牧女",
+			"德牧男",
+			"德牧女",
 			new FeralAttributes(
-					"german-shepherd",
-					"german-shepherds",
-					"german-shepherd dog",
-					"german-shepherd bitch",
-					"german-shepherd dogs",
-					"german-shepherd bitches",
+					"德牧",
+					"德牧",
+					"德牧犬",
+					"德牧婊子",
+					"德牧犬",
+					"德牧婊子",
 					LegConfiguration.QUADRUPEDAL,
 					70,
 					0,
@@ -1429,7 +1429,7 @@ public class Subspecies {
 					5,
 					1, false),
 			Nocturnality.DIURNAL,
-			"[npc.NameHasFull] a primitive, wolf-like appearance, and possesses levels of strength and intelligence above that of most other dog-morphs.",
+			"[npc.NameHasFull]拥有相对原始的狼一般的外貌，相比于其他大多数犬化形都更有力量，更加聪慧。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 15f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -1437,8 +1437,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 5f),
 					new Value<>(Attribute.HEALTH_MAXIMUM, 5f)),
 			null,
-			"Canine Culture",
-			"Canine Cultures",
+			"犬类文化",
+			"犬类文化",
 			"DOG_MORPH_BASIC",
 			"DOG_MORPH_ADVANCED",
 			Race.DOG_MORPH,
@@ -1452,9 +1452,9 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_DOG_MORPH,
 			SubspeciesPreference.TWO_AVERAGE,
-				"A strong, intelligent, and loyal subspecies of dog-morph, which resembles an anthropomorphised German-shepherd."
-					+ " They are known as 'German-shepherd-morphs' when bipedal, and 'German-shepherd-taurs' when the lower body is that of an oversized feral German-shepherd."
-					+ " To be identified as a German-shepherd-morph, a character must be a dog-morph that has upright ears, and fluffy, black fur with tan markings.",
+				"一种强壮、聪慧且忠诚的犬化形亚种，呈现出人形德牧犬的外貌。"
+					+ "当下肢似人时称为“德牧化形”，而当下肢呈现出大型兽态德牧的样子时称为“半德牧人”。"
+					+ "要被判定为德牧化形，角色必须是犬化形，且拥有上竖的耳朵，以及棕褐色花纹的黑色皮毛。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.THREE),
@@ -1478,21 +1478,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"hellhound",
-					"hellhounds",
-					"hellhound",
-					"hellhound",
-					"hellhounds",
-					"hellhounds"};
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬",
+					"地狱猎犬"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", false, false),
-					applyNonBipedNameChange(body, "hellhound", true, false),
-					applyNonBipedNameChange(body, "hellhound", false, true),
-					applyNonBipedNameChange(body, "hellhound", true, true)
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", false, false),
+					applyNonBipedNameChange(body, "地狱猎犬", true, false),
+					applyNonBipedNameChange(body, "地狱猎犬", false, true),
+					applyNonBipedNameChange(body, "地狱猎犬", true, true)
 				};
 			}
 			
@@ -1521,19 +1521,19 @@ public class Subspecies {
 			"innoxia_race_wolf_meat_and_marrow",
 			"statusEffects/race/raceWolfMorph",
 			"statusEffects/race/raceBackground",
-			"wolf-morph",
-			"wolf-morphs",
-			"wolf-boy",
-			"wolf-girl",
-			"wolf-boys",
-			"wolf-girls",
+			"狼化形",
+			"狼化形",
+			"狼男",
+			"狼女",
+			"狼男",
+			"狼女",
 			new FeralAttributes(
-					"wolf",
-					"wolves",
-					"wolf",
-					"wolf",
-					"wolves",
-					"wolves",
+					"狼",
+					"狼",
+					"狼",
+					"狼",
+					"狼",
+					"狼",
 					LegConfiguration.QUADRUPEDAL,
 					80,
 					0,
@@ -1541,7 +1541,7 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.NOCTURNAL,
-			"[npc.NamePos] wolf-like body is very strong, and [npc.she] often [npc.verb(get)] powerful urges to try and dominate people [npc.she] [npc.verb(meet)].",
+			"[npc.NamePos]狼一般的身躯格外有力，经常拥有一种强烈的冲动，想要支配见到的任何人。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 20f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -1550,8 +1550,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_UNARMED, 25f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.getRaceFromId("innoxia_sheep")), 25f)),
 			null,
-			"Prowling Lupines",
-			"Prowling Lupines'",
+			"潜行之狼",
+			"潜行之狼",
 			"WOLF_MORPH_BASIC",
 			"WOLF_MORPH_ADVANCED",
 			Race.WOLF_MORPH,
@@ -1565,7 +1565,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_WOLF_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic wolf, known as a 'wolf-morph' when bipedal, and a 'wolftaur' when the lower body is that of a typically-oversized feral wolf.",
+			"一种人形的狼，当下肢似人时成为“狼化形”，而下肢呈现出大型兽态狼的样子时称为“半狼人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TWO),
@@ -1576,28 +1576,28 @@ public class Subspecies {
 		@Override
 		public String getName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && (body ==null || (!body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL))) {
-				return "awoo-morph";
+				return "嗷呜化形";
 			}
 			return super.getName(body);
 		}
 		@Override
 		public String getNamePlural(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && (body ==null || (!body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL))) {
-				return "awoo-morphs";
+				return "嗷呜化形";
 			}
 			return super.getNamePlural(body);
 		}
 		@Override
 		public String getSingularMaleName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && body !=null && !body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL) {
-				return "awoo-boi";
+				return "嗷呜小子";
 			}
 			return super.getSingularMaleName(body);
 		}
 		@Override
 		public String getSingularFemaleName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && body !=null && !body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL) {
-				return "awoo-girl";
+				return "嗷呜女";
 			}
 			return super.getSingularFemaleName(body);
 		}
@@ -1619,21 +1619,21 @@ public class Subspecies {
 		}
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"vargr",
-					"vargar",
-					"vargr",
-					"vargr",
-					"vargar",
-					"vargar"};
+					"座狼",
+					"座狼",
+					"座狼",
+					"座狼",
+					"座狼",
+					"座狼"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "vargr", false, false),
-					applyNonBipedNameChange(body, "vargr", false, true),
-					applyNonBipedNameChange(body, "vargr", false, false),
-					applyNonBipedNameChange(body, "vargr", true, false),
-					applyNonBipedNameChange(body, "vargr", false, true),
-					applyNonBipedNameChange(body, "vargr", true, true)
+					applyNonBipedNameChange(body, "座狼", false, false),
+					applyNonBipedNameChange(body, "座狼", false, true),
+					applyNonBipedNameChange(body, "座狼", false, false),
+					applyNonBipedNameChange(body, "座狼", true, false),
+					applyNonBipedNameChange(body, "座狼", false, true),
+					applyNonBipedNameChange(body, "座狼", true, true)
 				};
 			}
 			
@@ -1654,19 +1654,19 @@ public class Subspecies {
 			"innoxia_race_fox_chicken_pot_pie",
 			"statusEffects/race/raceFoxMorph",
 			"statusEffects/race/raceBackground",
-			"fox-morph",
-			"fox-morphs",
-			"fox-boy",
-			"fox-girl",
-			"fox-boys",
-			"fox-girls",
+			"狐化形",
+			"狐化形",
+			"狐男",
+			"狐女",
+			"狐男",
+			"狐女",
 			new FeralAttributes(
-					"fox",
-					"foxes",
-					"fox",
-					"vixen",
-					"foxes",
-					"vixens",
+					"狐狸",
+					"狐狸",
+					"狐狸",
+					"雌狐",
+					"狐狸",
+					"雌狐",
 					LegConfiguration.QUADRUPEDAL,
 					45,
 					0,
@@ -1674,7 +1674,7 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NameIsFull] very sly and nimble, and [npc.sheIs] able to use [npc.her] heightened senses to detect opportune moments in which to attack.",
+			"[npc.NameIsFull]敏捷又狡猾，[npc.sheIs]能够利用敏锐的感官检测到任何能够攻击的机会。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -1682,8 +1682,8 @@ public class Subspecies {
 					new Value<>(Attribute.ENERGY_SHIELDING, 1f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f)),
 			null,
-			"Skulking Vulpines",
-			"Skulking Vulpines",
+			"隐匿之狐",
+			"隐匿之狐",
 			"FOX_MORPH_BASIC",
 			"FOX_MORPH_ADVANCED",
 			Race.FOX_MORPH,
@@ -1697,7 +1697,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_FOX_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic fox, known as a 'fox-morph' when bipedal, and a 'foxtaur' when the lower body is that of a typically-oversized feral fox.",
+			"一种人形的狐狸，当下肢似人时称为“狐化形”，而下肢呈现出大型兽态狐狸的样子时称为“半狐人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TEN),
@@ -1725,19 +1725,19 @@ public class Subspecies {
 			"innoxia_race_fox_chicken_pot_pie",
 			"statusEffects/race/raceFoxMorph",
 			"statusEffects/race/raceBackground",
-			"arctic fox-morph",
-			"arctic fox-morphs",
-			"arctic fox-boy",
-			"arctic fox-girl",
-			"arctic fox-boys",
-			"arctic fox-girls",
+			"北极狐化形",
+			"北极狐化形",
+			"北极狐男",
+			"北极狐女",
+			"北极狐男",
+			"北极狐女",
 			new FeralAttributes(
-					"arctic fox",
-					"arctic foxes",
-					"arctic fox",
-					"arctic vixen",
-					"arctic foxes",
-					"arctic vixens",
+					"北极狐",
+					"北极狐",
+					"雄北极狐",
+					"雌北极狐",
+					"雄北极狐",
+					"雌北极狐",
 					LegConfiguration.QUADRUPEDAL,
 					30,
 					0,
@@ -1745,8 +1745,8 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.NOCTURNAL,
-			"[npc.NameIsFull] very sly and nimble, and [npc.sheIs] able to use [npc.her] heightened senses to detect opportune moments in which to attack."
-					+ " As [npc.sheIsFull] adapted to arctic conditions, [npc.sheIs] also better able to resist incoming cold damage.",
+			"[npc.NameIsFull]敏捷又狡猾，[npc.sheIs]能够利用敏锐的感官检测到任何能够攻击的机会。"
+					+ "由于[npc.sheIsFull]适应了北极的环境，所以能够很好地抵抗袭来的寒冷伤害。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -1755,8 +1755,8 @@ public class Subspecies {
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f),
 					new Value<>(Attribute.RESISTANCE_ICE, 5f)),
 			null,
-			"Skulking Vulpines",
-			"Skulking Vulpines",
+			"隐匿之狐",
+			"隐匿之狐",
 			"FOX_MORPH_BASIC",
 			"FOX_MORPH_ADVANCED",
 			Race.FOX_MORPH,
@@ -1770,7 +1770,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_FOX_MORPH_ARCTIC,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic fox with white fur, known as an 'arctic fox-morph' when bipedal, and an 'arctic foxtaur' when the lower body is that of a typically-oversized feral fox.",
+			"一种人形的狐狸，带有白色皮毛，当下肢似人时称为“北极狐化形”，而下肢呈现出大型兽态狐狸的样子时称为“半北极狐人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.SNOW, SubspeciesSpawnRarity.THREE)),
@@ -1810,19 +1810,19 @@ public class Subspecies {
 			"innoxia_race_fox_chicken_pot_pie",
 			"statusEffects/race/raceFoxMorph",
 			"statusEffects/race/raceBackground",
-			"fennec-morph",
-			"fennec-morphs",
-			"fennec-boy",
-			"fennec-girl",
-			"fennec-boys",
-			"fennec-girls",
+			"耳廓狐化形",
+			"耳廓狐化形",
+			"耳廓狐男",
+			"耳廓狐女",
+			"耳廓狐男",
+			"耳廓狐女",
 			new FeralAttributes(
-					"fennec-fox",
-					"fennec-foxes",
-					"fennec-fox",
-					"fennec-vixen",
-					"fennec-foxes",
-					"fennec-vixens",
+					"耳廓狐",
+					"耳廓狐",
+					"耳廓狐",
+					"耳廓雌狐",
+					"耳廓狐",
+					"耳廓雌狐",
 					LegConfiguration.QUADRUPEDAL,
 					20,
 					0,
@@ -1830,7 +1830,7 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NameIsFull] very sly and nimble, and [npc.sheIs] able to use [npc.her] heightened senses to detect opportune moments in which to attack.",
+			"[npc.NameIsFull]敏捷又狡猾，[npc.sheIs]能够利用敏锐的感官检测到任何能够攻击的机会。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -1838,8 +1838,8 @@ public class Subspecies {
 					new Value<>(Attribute.ENERGY_SHIELDING, 1f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f)),
 			null,
-			"Skulking Vulpines",
-			"Skulking Vulpines",
+			"隐匿之狐",
+			"隐匿之狐",
 			"FOX_MORPH_BASIC",
 			"FOX_MORPH_ADVANCED",
 			Race.FOX_MORPH,
@@ -1853,8 +1853,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_FOX_MORPH_FENNEC,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic fox with distinctive large ears, and with either tan, dirty blonde, or bleach-blonde fur."
-					+ " They are known as a 'fennec-morph' when bipedal, and a 'fennectaur' when the lower body is that of a typically-oversized feral fennec fox.",
+			"一种人形的狐狸，耳朵格外大，带有棕褐色、灰金色或亮金色的皮毛。"
+					+ "当下肢似人时称为“耳廓狐化形”，而下肢呈现出大型兽态耳廓狐的样子时称为“半耳廓狐人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.DESERT, SubspeciesSpawnRarity.THREE),
@@ -1907,19 +1907,19 @@ public class Subspecies {
 			"innoxia_race_fox_chicken_pot_pie",
 			"statusEffects/race/raceFoxMorph",
 			"statusEffects/race/raceBackground",
-			"youko",
-			"youko",
-			"youko-boy",
-			"youko-girl",
-			"youko-boys",
-			"youko-girls",
+			"妖狐",
+			"妖狐",
+			"妖狐男",
+			"妖狐女",
+			"妖狐男",
+			"妖狐女",
 			new FeralAttributes(
-					"youko-fox",
-					"youko-foxes",
-					"youko-fox",
-					"youko-vixen",
-					"youko-foxes",
-					"youko-vixens",
+					"妖狐狐狸",
+					"妖狐狐狸",
+					"雄妖狐",
+					"雌妖狐",
+					"雄妖狐",
+					"雌妖狐",
 					LegConfiguration.QUADRUPEDAL,
 					50,
 					0,
@@ -1930,8 +1930,8 @@ public class Subspecies {
 			"",
 			null,
 			null,
-			"Nine-tails",
-			"Nine-tails'",
+			"九尾狐",
+			"狐之九尾",
 			"YOUKO_BASIC",
 			"YOUKO_ADVANCED",
 			Race.FOX_MORPH,
@@ -1945,7 +1945,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.RACE_FOX_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic fox, which one of the two youko lilin has transformed so as to have arcane-imbued tails.",
+			"一种人形狐狸，由两位妖狐莉琳中的其中一位转化而成，拥有充盈着奥术的尾巴。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.YOUKO_FOREST, SubspeciesSpawnRarity.THREE)),
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
@@ -1984,9 +1984,9 @@ public class Subspecies {
 		@Override
 		public String getStatusEffectDescription(GameCharacter character) {
 			if(character.getMaxTailCount()==1) {
-				return UtilText.parse(character, "[npc.NameIsFull] a youko, and although [npc.she] only [npc.has] one arcane tail, [npc.sheIsFull] still a competent spell caster.");
+				return UtilText.parse(character, "[npc.NameIsFull]是一只妖狐，虽然[npc.she]只有一条奥术尾巴，[npc.sheIsFull]却仍是个合格的施法者。");
 			} else {
-				return UtilText.parse(character, "[npc.NameIsFull] a youko, and by serving one of the youko lilin [npc.she] [npc.has] obtained [npc.tailMaxCount] arcane tail"+(character.getMaxTailCount()==1?"":"s")+".");
+				return UtilText.parse(character, "[npc.NameFull]是一只妖狐，因侍奉一位妖狐莉琳，获得了[npc.tailMaxCount]条奥术尾巴。");
 			}
 		}
 
@@ -2061,19 +2061,19 @@ public class Subspecies {
 			"innoxia_race_fox_chicken_pot_pie",
 			"statusEffects/race/raceFoxMorph",
 			"statusEffects/race/raceBackground",
-			"arctic youko",
-			"arctic youko",
-			"arctic youko-boy",
-			"arctic youko-girl",
-			"arctic youko-boys",
-			"arctic youko-girls",
+			"北极妖狐",
+			"北极妖狐",
+			"北极妖狐男",
+			"北极妖狐女",
+			"北极妖狐男",
+			"北极妖狐女",
 			new FeralAttributes(
-					"arctic youko-fox",
-					"arctic youko-foxes",
-					"arctic youko-fox",
-					"arctic youko-vixen",
-					"arctic youko-foxes",
-					"arctic youko-vixens",
+					"北极妖狐狐狸",
+					"北极妖狐狐狸",
+					"北极妖狐雄狐",
+					"北极妖狐雌狐",
+					"北极妖狐雄狐",
+					"北极妖狐雌狐",
 					LegConfiguration.QUADRUPEDAL,
 					40,
 					0,
@@ -2083,8 +2083,8 @@ public class Subspecies {
 			Nocturnality.CATHEMERAL,
 			"",
 			null,
-			null, "Nine-tails",
-			"Nine-tails'",
+			null, "狐之九尾",
+			"狐之九尾",
 			"FOX_MORPH_BASIC",
 			"FOX_MORPH_ADVANCED",
 			Race.FOX_MORPH,
@@ -2098,7 +2098,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.RACE_FOX_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic arctic fox, which one of the two youko lilin has transformed so as to have arcane-imbued tails.",
+			"一种人形北极狐，由两位妖狐莉琳中的其中一位转化而成，拥有充盈着奥术的尾巴。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.YOUKO_FOREST, SubspeciesSpawnRarity.TWO)),
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
@@ -2141,9 +2141,9 @@ public class Subspecies {
 		@Override
 		public String getStatusEffectDescription(GameCharacter character) {
 			if(character.getMaxTailCount()<9) {
-				return UtilText.parse(character, "[npc.NameIsFull] an arctic fox-morph, [npc.his] service to a particular Lilin having afforded [npc.him] [npc.tailMaxCount] arcane tail"+(character.getMaxTailCount()==1?"":"s")+".");
+				return UtilText.parse(character, "[npc.NameIsFull]是一只北极狐化形，通过为某位莉琳效力从而得到了[npc.tailMaxCount]根奥术之尾。");
 			} else {
-				return UtilText.parse(character, "[npc.NameIsFull] an arctic fox-morph, [npc.his] vast number of arcane tails a sign of [npc.her] unending devotion to a particular Lilin.");
+				return UtilText.parse(character, "[npc.NameIsFull]是一只北极狐化形，其数条奥术之尾预示着[npc.her]已经向某位莉琳献出了无休无止的忠诚。");
 			}
 		}
 
@@ -2202,19 +2202,19 @@ public class Subspecies {
 			"innoxia_race_fox_chicken_pot_pie",
 			"statusEffects/race/raceFoxMorph",
 			"statusEffects/race/raceBackground",
-			"fennec-youko",
-			"fennec-youko",
-			"fennec-youko-boy",
-			"fennec-youko-girl",
-			"fennec-youko-boys",
-			"fennec-youko-girls",
+			"耳廓妖狐",
+			"耳廓妖狐",
+			"耳廓妖狐男",
+			"耳廓妖狐女",
+			"耳廓妖狐男",
+			"耳廓妖狐女",
 			new FeralAttributes(
-					"fennec-youko-fox",
-					"fennec-youko-foxes",
-					"fennec-youko-fox",
-					"fennec-youko-vixen",
-					"fennec-youko-foxes",
-					"fennec-youko-vixens",
+					"耳廓妖狐狐狸",
+					"耳廓妖狐狐狸",
+					"耳廓妖狐雄狐",
+					"耳廓妖狐雌狐",
+					"耳廓妖狐雄狐",
+					"耳廓妖狐雌狐",
 					LegConfiguration.QUADRUPEDAL,
 					30,
 					0,
@@ -2224,8 +2224,8 @@ public class Subspecies {
 			Nocturnality.CATHEMERAL,
 			"",
 			null,
-			null, "Nine-tails",
-			"Nine-tails'",
+			null, "狐之九尾",
+			"狐之九尾",
 			"FOX_MORPH_BASIC",
 			"FOX_MORPH_ADVANCED",
 			Race.FOX_MORPH,
@@ -2239,7 +2239,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.RACE_FOX_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic fennec fox, which one of the two youko lilin has transformed so as to have arcane-imbued tails.",
+			"一种人形耳廓狐，由两位妖狐莉琳中的其中一位转化而成，拥有充盈着奥术的尾巴。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.YOUKO_FOREST, SubspeciesSpawnRarity.ONE)),
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
@@ -2291,9 +2291,9 @@ public class Subspecies {
 		@Override
 		public String getStatusEffectDescription(GameCharacter character) {
 			if(character.getMaxTailCount()<9) {
-				return UtilText.parse(character, "[npc.NameIsFull] a fox-morph, [npc.his] service to a particular Lilin having afforded [npc.him] [npc.tailMaxCount] arcane tail"+(character.getMaxTailCount()==1?"":"s")+".");
+				return UtilText.parse(character, "[npc.NameIsFull]是一只狐化形，通过为某位莉琳效力从而得到了[npc.tailMaxCount]根奥术之尾。");
 			} else {
-				return UtilText.parse(character, "[npc.NameIsFull] a fox-morph, [npc.his] vast number of arcane tails a sign of [npc.her] unending devotion to a particular Lilin.");
+				return UtilText.parse(character, "[npc.NameIsFull]是一只狐化形，其数条奥术之尾预示着[npc.her]已经向某位莉琳献出了无休无止的忠诚。");
 			}
 		}
 		@Override
@@ -2346,19 +2346,19 @@ public class Subspecies {
 			"innoxia_race_cat_kittys_reward",
 			"statusEffects/race/raceCatMorph",
 			"statusEffects/race/raceBackground",
-			"cat-morph",
-			"cat-morphs",
-			"cat-boy",
-			"cat-girl",
-			"cat-boys",
-			"cat-girls",
+			"猫化形",
+			"猫化形",
+			"猫男",
+			"猫女",
+			"猫男",
+			"猫女",
 			new FeralAttributes(
-					"cat",
-					"cats",
-					"tomcat",
-					"cat",
-					"tomcats",
-					"cats",
+					"猫",
+					"猫",
+					"公猫",
+					"母猫",
+					"公猫",
+					"母猫",
 					LegConfiguration.QUADRUPEDAL,
 					25,
 					0,
@@ -2366,8 +2366,8 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NamePos] body is incredibly agile, and [npc.she] [npc.verb(possess)] lightning reflexes."
-					+ " [npc.She] also [npc.has] an instinctive desire to display [npc.her] dominance over innocent harpies and rodent-morphs...",
+			"[npc.NamePos]的身体尤其敏捷，反应如闪电般迅速。"
+					+ "[npc.She]还有着一种来源于本能的欲望，想对无辜的哈比和啮齿类化形展示其支配地位……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -2377,8 +2377,8 @@ public class Subspecies {
 					new Value<>(Attribute.getRacialDamageAttribute(Race.RAT_MORPH), 5f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.SQUIRREL_MORPH), 5f)),
 			null,
-			"Curious Kitties",
-			"Curious Kitties",
+			"好奇小猫咪",
+			"好奇小猫咪",
 			"CAT_MORPH_BASIC",
 			"CAT_MORPH_ADVANCED",
 			Race.CAT_MORPH,
@@ -2392,7 +2392,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_CAT_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic cat, known as a 'cat-morph' when bipedal, and a 'cat-taur' when the lower body is that of a typically-oversized feral cat.",
+			"一种人形的猫，当下肢拟人时被称为“猫化形”，而当下肢呈现出经典的大型兽态猫的样子时则称为“半猫人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN),
@@ -2407,28 +2407,28 @@ public class Subspecies {
 		@Override
 		public String getName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && (body ==null || (!body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL))) {
-				return "catte-morph";
+				return "喵化形";
 			}
 			return super.getName(body);
 		}
 		@Override
 		public String getNamePlural(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && (body ==null || (!body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL))) {
-				return "catte-morphs";
+				return "喵化形";
 			}
 			return super.getNamePlural(body);
 		}
 		@Override
 		public String getSingularMaleName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && body !=null && !body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL) {
-				return "catte-boi";
+				return "喵喵小子";
 			}
 			return super.getSingularMaleName(body);
 		}
 		@Override
 		public String getSingularFemaleName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && body !=null && !body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL) {
-				return "catte-girl";
+				return "喵喵女";
 			}
 			return super.getSingularFemaleName(body);
 		}
@@ -2447,15 +2447,15 @@ public class Subspecies {
 			"innoxia_race_cat_kittys_reward",
 			"statusEffects/race/raceCatMorph",
 			"statusEffects/race/raceBackground",
-			"lynx-morph",
-			"lynx-morphs",
-			"lynx-boy",
-			"lynx-girl",
-			"lynx-boys",
-			"lynx-girls",
+			"猞猁化形",
+			"猞猁化形",
+			"猞猁男",
+			"猞猁女",
+			"猞猁男",
+			"猞猁女",
 			new FeralAttributes(
-					"lynx",
-					"lynxes",
+					"猞猁",
+					"猞猁",
 					LegConfiguration.QUADRUPEDAL,
 					60,
 					0,
@@ -2463,8 +2463,8 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NamePos] body is incredibly agile, and [npc.she] [npc.verb(possess)] lightning reflexes."
-					+ " [npc.She] also [npc.has] an instinctive desire to display [npc.her] dominance over innocent harpies and rodent-morphs...",
+			"[npc.NamePos]的身体尤其敏捷，反应如闪电般迅速。"
+					+ "[npc.She]还有着一种来源于本能的欲望，想对无辜的哈比和啮齿类化形展示其支配地位……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 10f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -2474,8 +2474,8 @@ public class Subspecies {
 					new Value<>(Attribute.getRacialDamageAttribute(Race.RAT_MORPH), 5f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.SQUIRREL_MORPH), 5f)),
 			null,
-			"Curious Kitties",
-			"Curious Kitties",
+			"好奇小猫咪",
+			"好奇小猫咪",
 			"CAT_MORPH_BASIC",
 			"CAT_MORPH_ADVANCED",
 			Race.CAT_MORPH,
@@ -2489,8 +2489,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_CAT_MORPH_LYNX,
 			SubspeciesPreference.TWO_AVERAGE,
-			"An anthropomorphic lynx, known as a 'lynx-morph' when bipedal, and a 'lynxtaur' when the lower body is that of a typically-oversized feral lynx."
-				+ " To be identified as a Lynx-morph, a character must be a cat-morph that has fluffy fur, tufted ears, a short tail, and side-fluff hair type.",
+			"一种人形的猞猁，当下肢为双足时称为“猞猁化形”，而下肢呈现出大型兽态猞猁的样子时称为“半猞猁人”"
+				+ "若要被判定为猞猁化形，角色必须是猫化形，并且拥有松软的皮毛，较短的尾巴和脸颊绒。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.THREE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.THREE),
@@ -2546,19 +2546,19 @@ public class Subspecies {
 			"innoxia_race_cat_kittys_reward",
 			"statusEffects/race/raceCatMorph",
 			"statusEffects/race/raceBackgroundCheetah",
-			"cheetah-morph",
-			"cheetah-morphs",
-			"cheetah-boy",
-			"cheetah-girl",
-			"cheetah-boys",
-			"cheetah-girls",
+			"猎豹化形",
+			"猎豹化形",
+			"猎豹男",
+			"猎豹女",
+			"猎豹男",
+			"猎豹女",
 			new FeralAttributes(
-					"cheetah",
-					"cheetahs",
-					"cheetah",
-					"cheetah",
-					"cheetahs",
-					"cheetahs",
+					"猎豹",
+					"猎豹",
+					"猎豹",
+					"猎豹",
+					"猎豹",
+					"猎豹",
 					LegConfiguration.QUADRUPEDAL,
 					80,
 					0,
@@ -2566,15 +2566,15 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NameIsFull] extremely fast, and in short bursts, is capable of running at speeds far greater than any other race.",
+			"[npc.NameIsFull]极其迅捷，只需短短数秒便能够加速到其他种族无法企及的速度。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 0f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 25f)),
-			Util.newArrayListOfValues("[style.boldExcellent(100%)] chance of escape vs non-cheetah-morphs"),
-			"Curious Kitties",
-			"Curious Kitties",
+			Util.newArrayListOfValues("从非猎豹化形处逃走的概率为[style.boldExcellent(100%)]"),
+			"好奇小猫咪",
+			"好奇小猫咪",
 			"CAT_MORPH_BASIC",
 			"CAT_MORPH_ADVANCED",
 			Race.CAT_MORPH,
@@ -2588,8 +2588,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_CAT_MORPH_CHEETAH,
 			SubspeciesPreference.TWO_AVERAGE,
-				"An anthropomorphic cheetah, known as a 'cheetah-morph' when bipedal, and a 'cheetahtaur' when the lower body is that of a typically-oversized feral cheetah."
-					+ " To be identified as a cheetah-morph, a character must be a cat-morph that has short, spotted fur and not identified as other feline morphs.",
+				"一种人形的猎豹，当下肢为双足时称为“猎豹化形”，而下肢呈现出大型兽态雪貂的样子时称为“半猎豹人”"
+					+ "若要被判定为猎豹化形，角色必须是猫化形，并且拥有较短的斑点皮毛，并且不能被认定为其他猫类化形。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.SAVANNAH, SubspeciesSpawnRarity.THREE),
@@ -2660,19 +2660,19 @@ public class Subspecies {
 			"innoxia_race_cat_kittys_reward",
 			"statusEffects/race/raceCatMorph",
 			"statusEffects/race/raceBackground",
-			"caracal-morph",
-			"caracal-morphs",
-			"caracal-boy",
-			"caracal-girl",
-			"caracal-boys",
-			"caracal-girls",
+			"狞猫化形",
+			"狞猫化形",
+			"狞猫男",
+			"狞猫女",
+			"狞猫男",
+			"狞猫女",
 			new FeralAttributes(
-					"caracal",
-					"caracals",
-					"caracal",
-					"caracal",
-					"caracals",
-					"caracals",
+					"狞猫",
+					"狞猫",
+					"狞猫",
+					"狞猫",
+					"狞猫",
+					"狞猫",
 					LegConfiguration.QUADRUPEDAL,
 					50,
 					0,
@@ -2680,8 +2680,8 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.NOCTURNAL,
-			"[npc.NamePos] body is incredibly agile, and [npc.she] [npc.verb(possess)] lightning reflexes."
-					+ " [npc.She] also [npc.has] an instinctive desire to display [npc.her] dominance over innocent harpies and rodent-morphs...",
+			"[npc.NamePos]的身体尤其敏捷，反应如闪电般迅速。"
+					+ "[npc.She]还有着一种来源于本能的欲望，想对无辜的哈比和啮齿类化形展示其支配地位……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -2691,8 +2691,8 @@ public class Subspecies {
 					new Value<>(Attribute.getRacialDamageAttribute(Race.RAT_MORPH), 5f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.SQUIRREL_MORPH), 5f)),
 			null,
-			"Curious Kitties",
-			"Curious Kitties",
+			"好奇小猫咪",
+			"好奇小猫咪",
 			"CAT_MORPH_BASIC",
 			"CAT_MORPH_ADVANCED",
 			Race.CAT_MORPH,
@@ -2706,8 +2706,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_CAT_MORPH_CARACAL,
 			SubspeciesPreference.TWO_AVERAGE,
-				"An anthropomorphic caracal, known as a 'caracal-morph' when bipedal, and a 'caracaltaur' when the lower body is that of a typically-oversized feral caracal."
-					+ " To be identified as a caracal-morph, a character must be a cat-morph with tufted ears.",
+				"一种人形的狞猫，当下肢似人时成为“狞猫化形”，而下肢呈现出大型兽态狞猫的样子时称为“半狞猫人”。"
+					+ "要被判定为狞猫化形，角色必须是猫化形，且耳朵上有簇生绒毛。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.SAVANNAH, SubspeciesSpawnRarity.THREE),
@@ -3141,19 +3141,19 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"horse-morph",
-			"horse-morphs",
-			"horse-boy",
-			"horse-girl",
-			"horse-boys",
-			"horse-girls",
+			"马化形",
+			"马化形",
+			"马男",
+			"马女",
+			"马男",
+			"马女",
 			new FeralAttributes(
-					"horse",
-					"horses",
-					"stallion",
-					"mare",
-					"stallions",
-					"mares",
+					"马",
+					"马",
+					"公马",
+					"母马",
+					"公马",
+					"母马",
 					LegConfiguration.QUADRUPEDAL,
 					175,
 					0,
@@ -3162,7 +3162,7 @@ public class Subspecies {
 					1,
 					true),
 			Nocturnality.DIURNAL,
-			"While [npc.namePos] body possesses remarkable strength and speed, [npc.sheIs] not the sharpest tool in the shed, and [npc.verb(struggle)] more than most when it comes to harnessing the arcane.",
+			"尽管[npc.namePos]的身体力大无比，速度极快，但[npc.sheIs]却并不是世上最聪明的种族，并且在驾驭奥术时也通常十分艰难。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 25f),
 					new Value<>(Attribute.MAJOR_ARCANE, -5f),
@@ -3171,8 +3171,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 25f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 25f)),
 			null,
-			"Equine Encyclopedia",
-			"Equine Encyclopedias",
+			"马类百科全书",
+			"马类百科全书",
 			"HORSE_MORPH_BASIC",
 			"HORSE_MORPH_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3186,7 +3186,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_HORSE_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic, bipedal horse.",
+			"一种人形的双足马类。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TEN),
@@ -3210,21 +3210,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"nightmare",
-					"nightmares",
-					"nightmare",
-					"nightmare",
-					"nightmares",
-					"nightmares"};
+					"梦魇",
+					"梦魇",
+					"梦魇",
+					"梦魇",
+					"梦魇",
+					"梦魇"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "nightmare", false, false),
-					applyNonBipedNameChange(body, "nightmare", false, true),
-					applyNonBipedNameChange(body, "nightmare", false, false),
-					applyNonBipedNameChange(body, "nightmare", true, false),
-					applyNonBipedNameChange(body, "nightmare", false, true),
-					applyNonBipedNameChange(body, "nightmare", true, true)
+					applyNonBipedNameChange(body, "梦魇", false, false),
+					applyNonBipedNameChange(body, "梦魇", false, true),
+					applyNonBipedNameChange(body, "梦魇", false, false),
+					applyNonBipedNameChange(body, "梦魇", true, false),
+					applyNonBipedNameChange(body, "梦魇", false, true),
+					applyNonBipedNameChange(body, "梦魇", true, true)
 				};
 			}
 			
@@ -3244,19 +3244,19 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"unicorn-morph",
-			"unicorn-morphs",
-			"unicorn-boy",
-			"unicorn-girl",
-			"unicorn-boys",
-			"unicorn-girls",
+			"独角兽化形",
+			"独角兽化形",
+			"独角兽男",
+			"独角兽女",
+			"独角兽男",
+			"独角兽女",
 			new FeralAttributes(
-					"unicorn",
-					"unicorns",
-					"unicorn-stallion",
-					"unicorn-mare",
-					"unicorn-stallions",
-					"unicorn-mares",
+					"独角兽",
+					"独角兽",
+					"雄独角兽",
+					"雌独角兽",
+					"雄独角兽",
+					"雌独角兽",
 					LegConfiguration.QUADRUPEDAL,
 					175,
 					0,
@@ -3265,7 +3265,7 @@ public class Subspecies {
 					1,
 					true),
 			Nocturnality.DIURNAL,
-			"Although physically weaker than a regular horse-morph, [npc.nameHasFull] a special bond with the arcane, and [npc.is] able to cast many spells before exhausting [npc.her] aura.",
+			"虽然体质略差于常规的马化形，但[npc.nameHasFull]拥有特殊的奥术纽带，能够在[npc.her]灵气衰竭前施放许多法术。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 20f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -3274,8 +3274,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 5f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f)),
 			null,
-			"Equine Encyclopedia",
-			"Equine Encyclopedias",
+			"马类百科全书",
+			"马类百科全书",
 			"HORSE_MORPH_BASIC",
 			"HORSE_MORPH_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3289,7 +3289,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 3)),
 			PresetColour.RACE_UNICORN,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic, bipedal horse, who has a single magical horn growing from their forehead.",
+			"一种人形的双足马类，前额上长有一根充满魔法的独角。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.FIELD_CITY, SubspeciesSpawnRarity.THREE),
@@ -3315,21 +3315,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"unicorn-nightmare",
-					"unicorn-nightmares",
-					"unicorn-nightmare",
-					"unicorn-nightmare",
-					"unicorn-nightmares",
-					"unicorn-nightmares"};
+					"独角兽梦魇",
+					"独角兽梦魇",
+					"独角兽梦魇",
+					"独角兽梦魇",
+					"独角兽梦魇",
+					"独角兽梦魇"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "unicorn-nightmare", false, false),
-					applyNonBipedNameChange(body, "unicorn-nightmare", false, true),
-					applyNonBipedNameChange(body, "unicorn-nightmare", false, false),
-					applyNonBipedNameChange(body, "unicorn-nightmare", true, false),
-					applyNonBipedNameChange(body, "unicorn-nightmare", false, true),
-					applyNonBipedNameChange(body, "unicorn-nightmare", true, true)
+					applyNonBipedNameChange(body, "独角兽梦魇", false, false),
+					applyNonBipedNameChange(body, "独角兽梦魇", false, true),
+					applyNonBipedNameChange(body, "独角兽梦魇", false, false),
+					applyNonBipedNameChange(body, "独角兽梦魇", true, false),
+					applyNonBipedNameChange(body, "独角兽梦魇", false, true),
+					applyNonBipedNameChange(body, "独角兽梦魇", true, true)
 				};
 			}
 			
@@ -3351,19 +3351,19 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"pegasus-morph",
-			"pegasus-morphs",
-			"pegasus-boy",
-			"pegasus-girl",
-			"pegasus-boys",
-			"pegasus-girls",
+			"天马化形",
+			"天马化形",
+			"天马男",
+			"天马女",
+			"天马男",
+			"天马女",
 			new FeralAttributes(
-					"pegasus",
-					"pegasuss",
-					"pegasus-stallion",
-					"pegasus-mare",
-					"pegasus-stallions",
-					"pegasus-mares",
+					"天马",
+					"天马",
+					"公天马",
+					"母天马",
+					"公天马",
+					"母天马",
 					LegConfiguration.QUADRUPEDAL,
 					175,
 					0,
@@ -3372,7 +3372,7 @@ public class Subspecies {
 					1,
 					true),
 			Nocturnality.DIURNAL,
-			"Although physically weaker than a regular horse-morph, [npc.nameIsFull] a lot more agile, allowing [npc.herHim] to strike at [npc.her] enemies' weak points.",
+			"虽然体质略差于常规的马化形，但[npc.nameHasFull]行动更加敏捷，总能够击敌于弱点。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 15f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -3380,8 +3380,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 10f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 30f)),
 			null,
-			"Equine Encyclopedia",
-			"Equine Encyclopedias",
+			"马类百科全书",
+			"马类百科全书",
 			"HORSE_MORPH_BASIC",
 			"HORSE_MORPH_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3395,7 +3395,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_PEGASUS,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic, bipedal horse, who has a pair of feathered wings growing from their back.",
+			"一种人形的双足马类，背上长有一双羽毛覆盖的翅膀。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.THREE),
@@ -3419,21 +3419,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"pegasus-nightmare",
-					"pegasus-nightmares",
-					"pegasus-nightmare",
-					"pegasus-nightmare",
-					"pegasus-nightmares",
-					"pegasus-nightmares"};
+					"天马梦魇",
+					"天马梦魇",
+					"天马梦魇",
+					"天马梦魇",
+					"天马梦魇",
+					"天马梦魇"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "pegasus-nightmare", false, false),
-					applyNonBipedNameChange(body, "pegasus-nightmare", false, true),
-					applyNonBipedNameChange(body, "pegasus-nightmare", false, false),
-					applyNonBipedNameChange(body, "pegasus-nightmare", true, false),
-					applyNonBipedNameChange(body, "pegasus-nightmare", false, true),
-					applyNonBipedNameChange(body, "pegasus-nightmare", true, true)
+					applyNonBipedNameChange(body, "天马梦魇", false, false),
+					applyNonBipedNameChange(body, "天马梦魇", false, true),
+					applyNonBipedNameChange(body, "天马梦魇", false, false),
+					applyNonBipedNameChange(body, "天马梦魇", true, false),
+					applyNonBipedNameChange(body, "天马梦魇", false, true),
+					applyNonBipedNameChange(body, "天马梦魇", true, true)
 				};
 			}
 			
@@ -3459,19 +3459,19 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"alicorn-morph",
-			"alicorn-morphs",
-			"alicorn-boy",
-			"alicorn-girl",
-			"alicorn-boys",
-			"alicorn-girls",
+			"天角兽化形",
+			"天角兽化形",
+			"天角兽男",
+			"天角兽女",
+			"天角兽男",
+			"天角兽女",
 			new FeralAttributes(
-					"alicorn",
-					"alicorns",
-					"alicorn-stallion",
-					"alicorn-mare",
-					"alicorn-stallions",
-					"alicorn-mares",
+					"天角兽",
+					"天角兽",
+					"公天角兽",
+					"母天角兽",
+					"公天角兽",
+					"母天角兽",
 					LegConfiguration.QUADRUPEDAL,
 					175,
 					0,
@@ -3480,7 +3480,7 @@ public class Subspecies {
 					1,
 					true),
 			Nocturnality.DIURNAL,
-			"Possessing both feathered wings and a unicorn horn, [npc.nameIsFull] classified as a powerful alicorn, and [npc.verb(find)] it almost effortlessly trivial to cast spells.",
+			"[npc.nameIsFull]拥有羽翼和独角，被归类为强大的天角兽，施法几乎不费吹灰之力。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 15f),
 					new Value<>(Attribute.MAJOR_ARCANE, 15f),
@@ -3489,8 +3489,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 10f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 50f)),
 			null,
-			"Equine Encyclopedia",
-			"Equine Encyclopedias",
+			"马类百科全书",
+			"马类百科全书",
 			"HORSE_MORPH_BASIC",
 			"HORSE_MORPH_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3504,7 +3504,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 3)),
 			PresetColour.RACE_ALICORN,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic, bipedal horse, who has both a pair of feathered wings growing from their back, as well as a single magical horn growing from their forehead.",
+			"一种人形的双足马类，背上长有一双羽毛覆盖的翅膀，而前额上长有一根充满魔法的独角。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.ONE),
 					new Value<>(WorldRegion.FIELD_CITY, SubspeciesSpawnRarity.ONE)),
@@ -3529,21 +3529,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"alicorn-nightmare",
-					"alicorn-nightmares",
-					"alicorn-nightmare",
-					"alicorn-nightmare",
-					"alicorn-nightmares",
-					"alicorn-nightmares"};
+					"天角兽梦魇",
+					"天角兽梦魇",
+					"天角兽梦魇",
+					"天角兽梦魇",
+					"天角兽梦魇",
+					"天角兽梦魇"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "alicorn-nightmare", false, false),
-					applyNonBipedNameChange(body, "alicorn-nightmare", false, true),
-					applyNonBipedNameChange(body, "alicorn-nightmare", false, false),
-					applyNonBipedNameChange(body, "alicorn-nightmare", true, false),
-					applyNonBipedNameChange(body, "alicorn-nightmare", false, true),
-					applyNonBipedNameChange(body, "alicorn-nightmare", true, true)
+					applyNonBipedNameChange(body, "天角兽梦魇", false, false),
+					applyNonBipedNameChange(body, "天角兽梦魇", false, true),
+					applyNonBipedNameChange(body, "天角兽梦魇", false, false),
+					applyNonBipedNameChange(body, "天角兽梦魇", true, false),
+					applyNonBipedNameChange(body, "天角兽梦魇", false, true),
+					applyNonBipedNameChange(body, "天角兽梦魇", true, true)
 				};
 			}
 			
@@ -3573,15 +3573,15 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"centaur",
-			"centaurs",
-			"centaur",
-			"centauress",
-			"centaurs",
-			"centauresses",
+			"半人马",
+			"半人马",
+			"半人马",
+			"半人马",
+			"半人马",
+			"半人马",
 			null,
 			Nocturnality.DIURNAL,
-			"Thanks to having the lower body of a horse, [npc.nameIsFull] capable of running at great speed, and [npc.is] also capable of dealing significant physical damage.",
+			"得益于拥有马的下半身，[npc.nameIsFull]能以极快的速度奔跑，还能借此造成巨大的物理伤害。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 35f),
 					new Value<>(Attribute.MAJOR_ARCANE, -5f),
@@ -3590,8 +3590,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 25f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 50f)),
 			null,
-			"Centaurs & More",
-			"Centaurs & More",
+			"不止半人马",
+			"不止半人马",
 			"CENTAUR_BASIC",
 			"CENTAUR_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3605,7 +3605,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_CENTAUR,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"Anyone who has the feral, quadrupedal lower body of a horse is classified as a centaur.",
+			"任何拥有兽态四足下肢的马类都会被分类为半人马。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TEN),
@@ -3641,12 +3641,12 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			return new String[] {
-					"demonic-centaur",
-					"demonic-centaurs",
-					"demonic-centaur",
-					"demonic-centauress",
-					"demonic-centaurs",
-					"demonic-centauresses"};
+					"恶魔半人马",
+					"恶魔半人马",
+					"恶魔半人马",
+					"恶魔半人马",
+					"恶魔半人马",
+					"恶魔半人马"};
 		}
 		@Override
 		public int getSubspeciesWeighting(Body body, AbstractRace race) {	
@@ -3662,15 +3662,15 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"pegataur",
-			"pegataurs",
-			"pegataur",
-			"pegatauress",
-			"pegataurs",
-			"pegatauresses",
+			"半天马人",
+			"半天马人",
+			"半天马人",
+			"半天马人",
+			"半天马人",
+			"半天马人",
 			null,
 			Nocturnality.DIURNAL,
-			"Although physically weaker than a regular centaur, [npc.nameIsFull] a lot more agile, allowing [npc.herHim] to avoid incoming damage.",
+			"虽然体质略差于常规的半人马，但[npc.nameHasFull]行动更加敏捷，总能够击敌于弱点。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 30f),
 					new Value<>(Attribute.MAJOR_ARCANE, 5f),
@@ -3678,8 +3678,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 10f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f)),
 			null,
-			"Centaurs & More",
-			"Centaurs & More",
+			"不止半人马",
+			"不止半人马",
 			"CENTAUR_BASIC",
 			"CENTAUR_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3693,7 +3693,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_PEGATAUR,
 			SubspeciesPreference.ONE_LOW,
-			"Anyone who has the feral, winged, quadrupedal lower body of a horse is classified as a pegataur.",
+			"任何拥有马型兽态的四足下半身，且带有羽翼和独角的人，都被归类为半天马人。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.THREE),
@@ -3730,12 +3730,12 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			return new String[] {
-					"demonic-pegataur",
-					"demonic-pegataurs",
-					"demonic-pegataur",
-					"demonic-pegatauress",
-					"demonic-pegataurs",
-					"demonic-pegatauresses"};
+					"恶魔半天马人",
+					"恶魔半天马人",
+					"恶魔半天马人",
+					"恶魔半天马人",
+					"恶魔半天马人",
+					"恶魔半天马人"};
 		}
 		@Override
 		public int getSubspeciesWeighting(Body body, AbstractRace race) {
@@ -3757,15 +3757,15 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"unitaur",
-			"unitaurs",
-			"unitaur",
-			"unitauress",
-			"unitaurs",
-			"unitauresses",
+			"半独角兽人",
+			"半独角兽人",
+			"半独角兽人",
+			"半独角兽人",
+			"半独角兽人",
+			"半独角兽人",
 			null,
 			Nocturnality.DIURNAL,
-			"Although physically weaker than a regular horse-morph, [npc.nameHasFull] a special bond with the arcane, and [npc.is] able to cast many spells before exhausting [npc.her] aura.",
+			"虽然体质略差于常规的半人马，但[npc.nameHasFull]拥有特殊的奥术纽带，能够在[npc.her]灵气衰竭前施放许多法术。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 25f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -3774,8 +3774,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 5f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f)),
 			null,
-			"Centaurs & More",
-			"Centaurs & More",
+			"不止半人马",
+			"不止半人马",
 			"CENTAUR_BASIC",
 			"CENTAUR_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3789,7 +3789,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_UNICORN,
 			SubspeciesPreference.ONE_LOW,
-			"Anyone who has the feral, quadrupedal lower body of a horse, along with a single unicorn horn, is classified as a unitaur.",
+			"任何拥有兽态四足下肢和独角的马类，都被归类为半独角兽人。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.THREE),
@@ -3827,12 +3827,12 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			return new String[] {
-					"demonic-unitaur",
-					"demonic-unitaurs",
-					"demonic-unitaur",
-					"demonic-unitauress",
-					"demonic-unitaurs",
-					"demonic-unitauresses"};
+					"恶魔半独角兽人",
+					"恶魔半独角兽人",
+					"恶魔半独角兽人",
+					"恶魔半独角兽人",
+					"恶魔半独角兽人",
+					"恶魔半独角兽人"};
 		}
 		@Override
 		public int getSubspeciesWeighting(Body body, AbstractRace race) {
@@ -3850,15 +3850,15 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"alitaur",
-			"alitaurs",
-			"alitaur",
-			"alitauress",
-			"alitaurs",
-			"alitauresses",
+			"半天角兽人",
+			"半天角兽人",
+			"半天角兽人",
+			"半天角兽人",
+			"半天角兽人",
+			"半天角兽人",
 			null,
 			Nocturnality.DIURNAL,
-			"Possessing both feathered wings and a unicorn horn, [npc.nameIsFull] classified as a powerful alicorn, and [npc.verb(find)] it almost effortlessly trivial to cast spells.",
+			"[npc.nameIsFull]拥有羽翼和独角，被归类为强大的天角兽，施法几乎不费吹灰之力。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 25f),
 					new Value<>(Attribute.MAJOR_ARCANE, 15f),
@@ -3867,8 +3867,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 10f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 50f)),
 			null,
-			"Centaurs & More",
-			"Centaurs & More",
+			"不止半人马",
+			"不止半人马",
 			"CENTAUR_BASIC",
 			"CENTAUR_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3882,7 +3882,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 2)),
 			PresetColour.RACE_ALICORN,
 			SubspeciesPreference.ONE_LOW,
-			"Anyone who has the feral, winged, quadrupedal lower body of a horse, along with a single unicorn horn, is classified as an alitaur.",
+			"任何拥有兽态四足下肢，且拥有翅膀和独角的马类，都被归类为半天角兽人。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.ONE),
 					new Value<>(WorldRegion.FIELD_CITY, SubspeciesSpawnRarity.ONE)),
@@ -3921,12 +3921,12 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			return new String[] {
-					"demonic-alitaur",
-					"demonic-alitaurs",
-					"demonic-alitaur",
-					"demonic-alitauress",
-					"demonic-alitaurs",
-					"demonic-alitauresses"};
+					"恶魔半天角兽人",
+					"恶魔半天角兽人",
+					"恶魔半天角兽人",
+					"恶魔半天角兽人",
+					"恶魔半天角兽人",
+					"恶魔半天角兽人"};
 		}
 		@Override
 		public int getSubspeciesWeighting(Body body, AbstractRace race) {
@@ -3952,19 +3952,19 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorphZebra",
 			"statusEffects/race/raceBackgroundZebra",
-			"zebra-morph",
-			"zebra-morphs",
-			"zebra-boy",
-			"zebra-girl",
-			"zebra-boys",
-			"zebra-girls",
+			"斑马化形",
+			"斑马化形",
+			"斑马男",
+			"斑马女",
+			"斑马男",
+			"斑马女",
 			new FeralAttributes(
-					"zebra",
-					"zebras",
-					"zebra-stallion",
-					"zebra-mare",
-					"zebra-stallions",
-					"zebra-mares",
+					"斑马",
+					"斑马",
+					"公斑马",
+					"母斑马",
+					"公斑马",
+					"母斑马",
 					LegConfiguration.QUADRUPEDAL,
 					130,
 					0,
@@ -3973,8 +3973,8 @@ public class Subspecies {
 					1,
 					true),
 			Nocturnality.DIURNAL,
-			"While [npc.namePos] body possesses an impressive level of both strength and speed, [npc.sheIs] not the sharpest tool in the shed, and [npc.verb(struggle)] more than most when it comes to harnessing the arcane."
-					+ " [npc.She] also [npc.has] a high resistance to both natural and arcane heat.",
+			"尽管[npc.namePos]的身体力大无比，速度极快，但[npc.sheIs]却并不是世上最聪明的种族，并且在驾驭奥术时也通常十分艰难。"
+					+ "[npc.She]对于天然火焰和奥术火焰都有极高的抗性。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 25f),
 					new Value<>(Attribute.MAJOR_ARCANE, -5f),
@@ -3984,8 +3984,8 @@ public class Subspecies {
 					new Value<>(Attribute.CRITICAL_DAMAGE, 20f),
 					new Value<>(Attribute.RESISTANCE_FIRE, 5f)),
 			null,
-			"Equine Encyclopedia",
-			"Equine Encyclopedias",
+			"马类百科全书",
+			"马类百科全书",
 			"HORSE_MORPH_BASIC",
 			"HORSE_MORPH_ADVANCED",
 			Race.HORSE_MORPH,
@@ -3999,8 +3999,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.BASE_BLACK,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic horse with black-and-white striped fur, known as a 'zebra-morph' when bipedal, and a 'zebrataur' when the lower body is that of a feral zebra."
-					+" To be identified as a zebra-morph, a character must be a horse-morph that has black-and-white striped hair, with a zebra-morph's tail.",
+			"一种人形的马，长着黑白色条纹的皮毛，当下肢似人时称为“斑马化形”，而下肢呈现出大型兽态斑马的样子时称为“半斑马人”。"
+					+ "若要被判定为斑马化形，角色必须是马化形，并且拥有黑白条纹的皮毛，以及斑马化形的尾巴。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.SAVANNAH, SubspeciesSpawnRarity.FIVE),
@@ -4031,21 +4031,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"zebra-nightmare",
-					"zebra-nightmares",
-					"zebra-nightmare",
-					"zebra-nightmare",
-					"zebra-nightmares",
-					"zebra-nightmares"};
+					"斑马梦魇",
+					"斑马梦魇",
+					"斑马梦魇",
+					"斑马梦魇",
+					"斑马梦魇",
+					"斑马梦魇"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "zebra-nightmare", false, false),
-					applyNonBipedNameChange(body, "zebra-nightmare", false, true),
-					applyNonBipedNameChange(body, "zebra-nightmare", false, false),
-					applyNonBipedNameChange(body, "zebra-nightmare", true, false),
-					applyNonBipedNameChange(body, "zebra-nightmare", false, true),
-					applyNonBipedNameChange(body, "zebra-nightmare", true, true)
+					applyNonBipedNameChange(body, "斑马梦魇", false, false),
+					applyNonBipedNameChange(body, "斑马梦魇", false, true),
+					applyNonBipedNameChange(body, "斑马梦魇", false, false),
+					applyNonBipedNameChange(body, "斑马梦魇", true, false),
+					applyNonBipedNameChange(body, "斑马梦魇", false, true),
+					applyNonBipedNameChange(body, "斑马梦魇", true, true)
 				};
 			}
 			
@@ -4074,19 +4074,19 @@ public class Subspecies {
 			"innoxia_race_horse_sugar_carrot_cube",
 			"statusEffects/race/raceHorseMorph",
 			"statusEffects/race/raceBackground",
-			"donkey-morph",
-			"donkey-morphs",
-			"donkey-boy",
-			"donkey-girl",
-			"donkey-boys",
-			"donkey-girls",
+			"驴化形",
+			"驴化形",
+			"驴男",
+			"驴女",
+			"驴男",
+			"驴女",
 			new FeralAttributes(
-					"donkey",
-					"donkeys",
-					"donkey-stallion",
-					"donkey-mare",
-					"donkey-stallions",
-					"donkey-mares",
+					"驴",
+					"驴",
+					"公驴",
+					"母驴",
+					"公驴",
+					"母驴",
 					LegConfiguration.QUADRUPEDAL,
 					120,
 					0,
@@ -4095,8 +4095,8 @@ public class Subspecies {
 					1,
 					true),
 			Nocturnality.DIURNAL,
-			"While [npc.namePos] body possesses an impressive level of both strength and endurance, [npc.she] [npc.verb(struggle)] more than most when it comes to harnessing the arcane."
-					+ " [npc.She] also [npc.has] an innate knowledge of how best to fight against canines.",
+			"尽管[npc.namePos]的身体力大无比，耐力极佳，但[npc.sheIs]在驾驭奥术时通常十分艰难。"
+					+ "[npc.She]还拥有天生的知识，能够有力地对抗犬类。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 25f),
 					new Value<>(Attribute.MAJOR_ARCANE, -5f),
@@ -4109,8 +4109,8 @@ public class Subspecies {
 					new Value<>(Attribute.getRacialDamageAttribute(Race.WOLF_MORPH), 25f),
 					new Value<>(Attribute.getRacialDamageAttribute(Race.FOX_MORPH), 25f)),
 			null,
-			"Equine Encyclopedia",
-			"Equine Encyclopedias",
+			"马类百科全书",
+			"马类百科全书",
 			"HORSE_MORPH_BASIC",
 			"HORSE_MORPH_ADVANCED",
 			Race.HORSE_MORPH,
@@ -4124,8 +4124,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.CLOTHING_DESATURATED_BROWN,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic donkey, known as a 'donkey-morph' when bipedal, and a 'donkeytaur' when the lower body is that of a feral donkey."
-					+" To be identified as a donkey-morph, a character must be a horse-morph that has tall, upright ears.",
+			"一种人形的驴，当下肢似人时称为“驴化形”，而当下肢呈现出大型兽态驴的样子时称为“半驴人”。"
+					+ "若要被判定为驴化形，角色必须是马化形，并且拥有较高的上竖耳朵。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TEN),
@@ -4158,21 +4158,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"donkey-nightmare",
-					"donkey-nightmares",
-					"donkey-nightmare",
-					"donkey-nightmare",
-					"donkey-nightmares",
-					"donkey-nightmares"};
+					"驴梦魇",
+					"驴梦魇",
+					"驴梦魇",
+					"驴梦魇",
+					"驴梦魇",
+					"驴梦魇"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "donkey-nightmare", false, false),
-					applyNonBipedNameChange(body, "donkey-nightmare", false, true),
-					applyNonBipedNameChange(body, "donkey-nightmare", false, false),
-					applyNonBipedNameChange(body, "donkey-nightmare", true, false),
-					applyNonBipedNameChange(body, "donkey-nightmare", false, true),
-					applyNonBipedNameChange(body, "donkey-nightmare", true, true)
+					applyNonBipedNameChange(body, "驴梦魇", false, false),
+					applyNonBipedNameChange(body, "驴梦魇", false, true),
+					applyNonBipedNameChange(body, "驴梦魇", false, false),
+					applyNonBipedNameChange(body, "驴梦魇", true, false),
+					applyNonBipedNameChange(body, "驴梦魇", false, true),
+					applyNonBipedNameChange(body, "驴梦魇", true, true)
 				};
 			}
 			
@@ -4202,19 +4202,19 @@ public class Subspecies {
 			"innoxia_race_reindeer_sugar_cookie",
 			"statusEffects/race/raceReindeerMorph",
 			"statusEffects/race/raceBackground",
-			"reindeer-morph",
-			"reindeer-morphs",
-			"reindeer-boy",
-			"reindeer-girl",
-			"reindeer-boys",
-			"reindeer-girls",
+			"驯鹿化形",
+			"驯鹿化形",
+			"驯鹿男",
+			"驯鹿女",
+			"驯鹿男",
+			"驯鹿女",
 			new FeralAttributes(
-					"reindeer",
-					"reindeers",
-					"reindeer-bull",
-					"reindeer-cow",
-					"reindeer-bulls",
-					"reindeer-cows",
+					"驯鹿",
+					"驯鹿",
+					"公驯鹿",
+					"母驯鹿",
+					"公驯鹿",
+					"母驯鹿",
 					LegConfiguration.QUADRUPEDAL,
 					130,
 					0,
@@ -4222,7 +4222,7 @@ public class Subspecies {
 					1,
 					4, false),
 			Nocturnality.DIURNAL,
-			"[npc.NamePos] body is very well suited to resisting both natural and arcane cold, and is also particularly strong and hardy.",
+			"[npc.NamePos]的身体非常适合地狱自然和奥术寒冷，并且十分坚韧强壮。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 25f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -4231,8 +4231,8 @@ public class Subspecies {
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, 2f),
 					new Value<>(Attribute.RESISTANCE_ICE, 5f)),
 			null,
-			"Reindeer Migrations",
-			"Reindeer Migrations",
+			"驯鹿的迁徙",
+			"驯鹿的迁徙",
 			"REINDEER_MORPH_BASIC",
 			"REINDEER_MORPH_ADVANCED",
 			Race.REINDEER_MORPH,
@@ -4246,7 +4246,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_REINDEER_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic reindeer, known as a 'reindeer-morph' when bipedal, and a 'reindeertaur' when the lower body is that of a feral reindeer.",
+			"一种人形的驯鹿，当下肢为双足时称为“驯鹿化形”，而下肢呈现出兽态驯鹿的样子时称为“半驯鹿人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.ONE),
 					new Value<>(WorldRegion.SNOW, SubspeciesSpawnRarity.FIVE)),
@@ -4268,15 +4268,15 @@ public class Subspecies {
 			"innoxia_race_alligator_gators_gumbo",
 			"statusEffects/race/raceGatorMorph",
 			"statusEffects/race/raceBackground",
-			"alligator-morph",
-			"alligator-morphs",
-			"alligator-boy",
-			"alligator-girl",
-			"alligator-boys",
-			"alligator-girls",
+			"鳄化形",
+			"鳄化形",
+			"鳄男",
+			"鳄女",
+			"鳄男",
+			"鳄女",
 			new FeralAttributes(
-					"alligator",
-					"alligators",
+					"鳄鱼",
+					"鳄鱼",
 					LegConfiguration.QUADRUPEDAL,
 					false,
 					180,
@@ -4285,7 +4285,7 @@ public class Subspecies {
 					0,
 					1, false),
 			Nocturnality.NOCTURNAL,
-			"[npc.NamePos] body is incredibly tough, and [npc.she] [npc.verb(possess)] lightning reflexes, as well as the strength required to make the most of any sudden attacks.",
+			"[npc.NamePos]的身体极其坚韧，且反应迅速，其力量也足以在多数情况下发动突然袭击。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 30f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -4294,8 +4294,8 @@ public class Subspecies {
 					new Value<>(Attribute.CRITICAL_DAMAGE, 25f),
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, 5f)),
 			null,
-			"Rasselin' Gators",
-			"Rasselin' Gators",
+			"和鳄鱼搏斗",
+			"和鳄鱼搏斗",
 			"ALLIGATOR_MORPH_BASIC",
 			"ALLIGATOR_MORPH_ADVANCED",
 			Race.ALLIGATOR_MORPH,
@@ -4309,7 +4309,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_ALLIGATOR_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic alligator, known as an 'alligator-morph' when bipedal, and an 'alligatortaur' when the lower body is that of a typically-oversized feral alligator.",
+			"一种人形的鳄鱼，当下肢似人时成为“鳄鱼化形”，而下肢呈现出大型兽态鳄鱼的样子时称为“半鳄鱼人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.RIVER, SubspeciesSpawnRarity.TWO)),
@@ -4331,15 +4331,15 @@ public class Subspecies {
 			"innoxia_race_squirrel_round_nuts",
 			"statusEffects/race/raceSquirrelMorph",
 			"statusEffects/race/raceBackground",
-			"squirrel-morph",
-			"squirrel-morphs",
-			"squirrel-boy",
-			"squirrel-girl",
-			"squirrel-boys",
-			"squirrel-girls",
+			"松鼠化形",
+			"松鼠化形",
+			"松鼠男",
+			"松鼠女",
+			"松鼠男",
+			"松鼠女",
 			new FeralAttributes(
-					"squirrel",
-					"squirrels",
+					"松鼠",
+					"松鼠",
 					LegConfiguration.QUADRUPEDAL,
 					15,
 					0,
@@ -4347,15 +4347,15 @@ public class Subspecies {
 					4,
 					1, false),
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] very agile and alert, and [npc.is] capable of leaping great distances with [npc.her] powerful [npc.legs].",
+			"[npc.NameIsFull]十分机敏灵巧，其强壮的[npc.legs]能够跳出很长一段距离。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 0f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 10f)),
 			null,
-			"Chasing Squirrels",
-			"Chasing Squirrels'",
+			"追逐松鼠",
+			"追逐松鼠",
 			"SQUIRREL_MORPH_BASIC",
 			"SQUIRREL_MORPH_ADVANCED",
 			Race.SQUIRREL_MORPH,
@@ -4369,7 +4369,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_SQUIRREL_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic squirrel, known as a 'squirrel-morph' when bipedal, and a 'squirreltaur' when the lower body is that of an oversized feral squirrel.",
+			"一种人形的松鼠，当下肢似人时称为“松鼠化形”，而当下肢呈现出大型兽态松鼠的样子时称为“半松鼠人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.THREE),
@@ -4395,15 +4395,15 @@ public class Subspecies {
 			"innoxia_race_rat_brown_rats_burger",
 			"statusEffects/race/raceRatMorph",
 			"statusEffects/race/raceBackground",
-			"rat-morph",
-			"rat-morphs",
-			"rat-boy",
-			"rat-girl",
-			"rat-boys",
-			"rat-girls",
+			"鼠化形",
+			"鼠化形",
+			"鼠男",
+			"鼠女",
+			"鼠男",
+			"鼠女",
 			new FeralAttributes(
-					"rat",
-					"rats",
+					"老鼠",
+					"老鼠",
 					LegConfiguration.QUADRUPEDAL,
 					15,
 					0,
@@ -4411,7 +4411,7 @@ public class Subspecies {
 					6,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NamePos] body is very hardy, and [npc.she] [npc.has] both a high resistance to, and affinity with, arcane poison.",
+			"[npc.NamePos]的身体能够适应极端的恶劣环境，并且对于奥术毒素抗性极佳，亲和力也很强。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 0f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -4419,8 +4419,8 @@ public class Subspecies {
 					new Value<>(Attribute.DAMAGE_POISON, 15f),
 					new Value<>(Attribute.RESISTANCE_POISON, 5f)),
 			null,
-			"Causing Mischief",
-			"Causing Mischiefs",
+			"纷乱之源",
+			"纷乱之源",
 			"RAT_MORPH_BASIC",
 			"RAT_MORPH_ADVANCED",
 			Race.RAT_MORPH,
@@ -4434,7 +4434,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_RAT_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic rat, known as a 'rat-morph' when bipedal, and a 'rat-taur' when the lower body is that of an oversized feral rat.",
+			"一种人形的老鼠，当下肢拟人时被称为“鼠化形”，而当下肢呈现出大型兽态老鼠的样子时则称为“半鼠人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.TEN),
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN),
@@ -4458,15 +4458,15 @@ public class Subspecies {
 			"innoxia_race_rabbit_bunny_carrot_cake",
 			"statusEffects/race/raceRabbitMorph",
 			"statusEffects/race/raceBackground",
-			"rabbit-morph",
-			"rabbit-morphs",
-			"rabbit-boy",
-			"rabbit-girl",
-			"rabbit-boys",
-			"rabbit-girls",
+			"兔化形",
+			"兔化形",
+			"兔男",
+			"兔女",
+			"兔男",
+			"兔女",
 			new FeralAttributes(
-					"rabbit",
-					"rabbits",
+					"兔子",
+					"兔子",
 					LegConfiguration.QUADRUPEDAL,
 					20,
 					0,
@@ -4474,8 +4474,8 @@ public class Subspecies {
 					5,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NameIsFull] very agile and alert, and [npc.is] capable of short bursts of incredible speed."
-					+ " [npc.Her] body, whether [npc.she] [npc.verb(like)] it or not, is also adapted for producing as many offspring as possible.",
+			"[npc.NameIsFull]十分机敏灵巧，短时间内能够爆发出极快的速度。"
+					+ "[npc.Her]的身体会尽可能多地生育后代，无论[npc.she]是否愿意。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -4484,8 +4484,8 @@ public class Subspecies {
 					new Value<>(Attribute.FERTILITY, 50f),
 					new Value<>(Attribute.VIRILITY, 50f)),
 			null,
-			"Bunny Litters",
-			"Bunny Litters'",
+			"兔子产仔",
+			"兔子产仔",
 			"RABBIT_MORPH_BASIC",
 			"RABBIT_MORPH_ADVANCED",
 			Race.RABBIT_MORPH,
@@ -4499,7 +4499,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_RABBIT_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic rabbit, known as a 'rabbit-morph' when bipedal, and a 'rabbit-taur' when the lower body is that of an oversized feral rabbit.",
+			"一种人形的兔子，当下肢拟人时被称为“兔化形”，而当下肢呈现出大型兽态兔子的样子时则称为“半兔人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TEN),
@@ -4518,21 +4518,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"jackalope",
-					"jackalopes",
-					"jackalope",
-					"jackalope",
-					"jackalopes",
-					"jackalopes"};
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "jackalope", false, false),
-					applyNonBipedNameChange(body, "jackalope", false, true),
-					applyNonBipedNameChange(body, "jackalope", false, false),
-					applyNonBipedNameChange(body, "jackalope", true, false),
-					applyNonBipedNameChange(body, "jackalope", false, true),
-					applyNonBipedNameChange(body, "jackalope", true, true)
+					applyNonBipedNameChange(body, "加卡洛普", false, false),
+					applyNonBipedNameChange(body, "加卡洛普", false, true),
+					applyNonBipedNameChange(body, "加卡洛普", false, false),
+					applyNonBipedNameChange(body, "加卡洛普", true, false),
+					applyNonBipedNameChange(body, "加卡洛普", false, true),
+					applyNonBipedNameChange(body, "加卡洛普", true, true)
 				};
 			}
 			
@@ -4553,15 +4553,15 @@ public class Subspecies {
 			"innoxia_race_rabbit_bunny_carrot_cake",
 			"statusEffects/race/raceRabbitLopMorph",
 			"statusEffects/race/raceBackground",
-			"lop-rabbit-morph",
-			"lop-rabbit-morphs",
-			"lop-rabbit-boy",
-			"lop-rabbit-girl",
-			"lop-rabbit-boys",
-			"lop-rabbit-girls",
+			"垂耳兔化形",
+			"垂耳兔化形",
+			"垂耳兔男",
+			"垂耳兔女",
+			"垂耳兔男",
+			"垂耳兔女",
 			new FeralAttributes(
-					"lop-rabbit",
-					"lop-rabbits",
+					"垂耳兔",
+					"垂耳兔",
 					LegConfiguration.QUADRUPEDAL,
 					20,
 					0,
@@ -4569,8 +4569,8 @@ public class Subspecies {
 					5,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NameIsFull] very agile and alert, and [npc.is] capable of short bursts of incredible speed."
-					+ " [npc.Her] body, whether [npc.she] [npc.verb(like)] it or not, is also adapted for producing as many offspring as possible.",
+			"[npc.NameIsFull]十分机敏灵巧，短时间内能够爆发出极快的速度。"
+					+ "[npc.Her]的身体会尽可能多地生育后代，无论[npc.she]是否愿意。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
@@ -4579,8 +4579,8 @@ public class Subspecies {
 					new Value<>(Attribute.FERTILITY, 50f),
 					new Value<>(Attribute.VIRILITY, 50f)),
 			null,
-			"Bunny Litters",
-			"Bunny Litters'",
+			"兔子产仔",
+			"兔子产仔",
 			"RABBIT_MORPH_BASIC",
 			"RABBIT_MORPH_ADVANCED",
 			Race.RABBIT_MORPH,
@@ -4594,8 +4594,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_RABBIT_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic rabbit which has floppy ears instead of the usual upright ones."
-					+ " Known as a 'lop-rabbit-morph' when bipedal, and a 'lop-rabbit-taur' when the lower body is that of an oversized feral lop-rabbit.",
+			"一只的人形兔，拥有下垂的耳朵而不是常见的竖立耳朵。"
+					+ "当下肢拟人时称为“垂耳兔化形”，而当下肢呈现出大型兽态垂耳兔的样子时称为“半垂耳兔人”。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.DOMINION, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.TEN),
@@ -4619,21 +4619,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"jackalope",
-					"jackalopes",
-					"jackalope",
-					"jackalope",
-					"jackalopes",
-					"jackalopes"};
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普",
+					"加卡洛普"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "jackalope", false, false),
-					applyNonBipedNameChange(body, "jackalope", false, true),
-					applyNonBipedNameChange(body, "jackalope", false, false),
-					applyNonBipedNameChange(body, "jackalope", true, false),
-					applyNonBipedNameChange(body, "jackalope", false, true),
-					applyNonBipedNameChange(body, "jackalope", true, true)
+					applyNonBipedNameChange(body, "加卡洛普", false, false),
+					applyNonBipedNameChange(body, "加卡洛普", false, true),
+					applyNonBipedNameChange(body, "加卡洛普", false, false),
+					applyNonBipedNameChange(body, "加卡洛普", true, false),
+					applyNonBipedNameChange(body, "加卡洛普", false, true),
+					applyNonBipedNameChange(body, "加卡洛普", true, true)
 				};
 			}
 			
@@ -4654,15 +4654,15 @@ public class Subspecies {
 			"innoxia_race_bat_fruit_bats_salad",
 			"statusEffects/race/raceBatMorph",
 			"statusEffects/race/raceBackground",
-			"bat-morph",
-			"bat-morphs",
-			"bat-boy",
-			"bat-girl",
-			"bat-boys",
-			"bat-girls",
+			"蝙蝠化形",
+			"蝙蝠化形",
+			"蝙蝠男",
+			"蝙蝠女",
+			"蝙蝠男",
+			"蝙蝠女",
 			new FeralAttributes(
-					"bat",
-					"bats",
+					"蝙蝠",
+					"蝙蝠",
 					LegConfiguration.WINGED_BIPED,
 					30,
 					0,
@@ -4675,16 +4675,16 @@ public class Subspecies {
 				}
 			},
 			Nocturnality.NOCTURNAL,
-			"Due to their unique echolocation ability, all bat-morphs have a natural desire to talk as much as possible."
-					+ " Due to this, [npc.name] continuously [npc.verb(play)] out conversations in [npc.her] head, allowing [npc.herHim] to think up new and exciting ways to seduce people before having ever met them.",
+			"由于独特的回声定位能力，所有的蝙蝠化形都有尽可能多说话的天性。"
+					+ "正因如此，[npc.Name]会在脑海中不断预演对话，在与人见面前，就能想出新奇的方式吸引对方。", 
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 0f),
 					new Value<>(Attribute.DAMAGE_LUST, 15f)),
 			null,
-			"Flying Foxes",
-			"Flying Foxes'",
+			"飞狐",
+			"飞狐'",
 			"BAT_MORPH_BASIC",
 			"BAT_MORPH_ADVANCED",
 			Race.BAT_MORPH,
@@ -4698,7 +4698,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_BAT_MORPH,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic, bipedal bat.",
+			"一种人形的双足蝙蝠。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TWO),
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.THREE),
@@ -4730,15 +4730,15 @@ public class Subspecies {
 			"innoxia_race_harpy_bubblegum_lollipop",
 			"statusEffects/race/raceHarpy",
 			"statusEffects/race/raceBackground",
-			"harpy",
-			"harpies",
-			"harpy",
-			"harpy",
-			"harpies",
-			"harpies",
+			"哈比",
+			"哈比",
+			"哈比",
+			"哈比",
+			"哈比",
+			"哈比",
 			new FeralAttributes(
-					"bird-of-paradise",
-					"birds-of-paradise",
+					"天堂鸟",
+					"天堂鸟",
 					LegConfiguration.AVIAN,
 					30,
 					0,
@@ -4752,15 +4752,15 @@ public class Subspecies {
 				}
 			},
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] obsessed with [npc.her] appearance, and wouldn't think it unusual for someone to want to spend at least half of their waking hours preening themselves in order to look as attractive as possible.",
+			"[npc.NameIsFull]痴迷于自己的外表，为了尽可能地看起来有吸引力，[npc.she]认为花费一半醒着的时间来打扮自己也是很正常的。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 0f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 5f),
 					new Value<>(Attribute.DAMAGE_LUST, 15f)),
 			null,
-			"All About Harpies",
-			"All About Harpies'",
+			"哈比全知道",
+			"哈比全知道",
 			"HARPY_BASIC",
 			"HARPY_ADVANCED",
 			Race.HARPY,
@@ -4774,7 +4774,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_HARPY,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"An anthropomorphic, bipedal bird. Typically only possessing non-human arms, legs, eyes, ears, and hair.",
+			"一种人形的双足鸟类。一般只有手臂、腿部、眼睛、耳朵和毛发为非人类样貌。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.WOODLAND, SubspeciesSpawnRarity.FIVE),
@@ -4791,49 +4791,49 @@ public class Subspecies {
 		@Override
 		public String getName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && (body ==null || (!body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL))) {
-				return "birb";
+				return "啾";
 			}
 			return super.getName(body);
 		}
 		@Override
 		public String getNamePlural(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && (body ==null || (!body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL))) {
-				return "birbs";
+				return "啾";
 			}
 			return super.getNamePlural(body);
 		}
 		@Override
 		public String getSingularMaleName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && body !=null && !body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL) {
-				return "birb";
+				return "啾";
 			}
 			return super.getSingularMaleName(body);
 		}
 		@Override
 		public String getSingularFemaleName(Body body) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled() && body !=null && !body.isFeral() && body.getLegConfiguration()==LegConfiguration.BIPEDAL) {
-				return "birb";
+				return "啾";
 			}
 			return super.getSingularFemaleName(body);
 		}
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"fury",
-					"furies",
-					"fury",
-					"fury",
-					"furies",
-					"furies"};
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "fury", false, false),
-					applyNonBipedNameChange(body, "fury", false, true),
-					applyNonBipedNameChange(body, "fury", false, false),
-					applyNonBipedNameChange(body, "fury", true, false),
-					applyNonBipedNameChange(body, "fury", false, true),
-					applyNonBipedNameChange(body, "fury", true, true)
+					applyNonBipedNameChange(body, "怒兽", false, false),
+					applyNonBipedNameChange(body, "怒兽", false, true),
+					applyNonBipedNameChange(body, "怒兽", false, false),
+					applyNonBipedNameChange(body, "怒兽", true, false),
+					applyNonBipedNameChange(body, "怒兽", false, true),
+					applyNonBipedNameChange(body, "怒兽", true, true)
 				};
 			}
 			
@@ -4841,7 +4841,7 @@ public class Subspecies {
 		}
 		@Override
 		public String getNonBipedRaceName(Body body) {
-			return "harpy";
+			return "哈比";
 		}
 		@Override
 		public int getSubspeciesWeighting(Body body, AbstractRace race) {
@@ -4862,15 +4862,15 @@ public class Subspecies {
 			"innoxia_race_harpy_bubblegum_lollipop",
 			"statusEffects/race/raceHarpy",
 			"statusEffects/race/raceBackground",
-			"raven-harpy",
-			"raven-harpies",
-			"raven-harpy",
-			"raven-harpy",
-			"raven-harpies",
-			"raven-harpies",
+			"渡鸦哈比",
+			"渡鸦哈比",
+			"渡鸦哈比",
+			"渡鸦哈比",
+			"渡鸦哈比",
+			"渡鸦哈比",
 			new FeralAttributes(
-					"raven",
-					"ravens",
+					"渡鸦",
+					"渡鸦",
 					LegConfiguration.AVIAN,
 					60,
 					0,
@@ -4882,15 +4882,15 @@ public class Subspecies {
 				}
 			},
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] obsessed with [npc.her] appearance, and wouldn't think it unusual for someone to want to spend at least half of their waking hours preening themselves in order to look as attractive as possible.",
+			"[npc.NameIsFull]痴迷于自己的外表，为了尽可能地看起来有吸引力，[npc.she]认为花费一半醒着的时间来打扮自己也是很正常的。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 0f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 5f),
 					new Value<>(Attribute.DAMAGE_LUST, 15f)),
 			null,
-			"All About Harpies",
-			"All About Harpies'",
+			"哈比全知道",
+			"哈比全知道",
 			"HARPY_BASIC",
 			"HARPY_ADVANCED",
 			Race.HARPY,
@@ -4904,7 +4904,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.BASE_BLACK,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic, bipedal raven, with dark black feathers. Typically only possessing non-human arms, legs, eyes, ears, and hair.",
+			"一种人形的双足渡鸦，羽毛为漆黑色。一般只有手臂、腿部、眼睛、耳朵和毛发为非人类样貌。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.WOODLAND, SubspeciesSpawnRarity.FIVE),
@@ -4930,21 +4930,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"fury",
-					"furies",
-					"fury",
-					"fury",
-					"furies",
-					"furies"};
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "fury", false, false),
-					applyNonBipedNameChange(body, "fury", false, true),
-					applyNonBipedNameChange(body, "fury", false, false),
-					applyNonBipedNameChange(body, "fury", true, false),
-					applyNonBipedNameChange(body, "fury", false, true),
-					applyNonBipedNameChange(body, "fury", true, true)
+					applyNonBipedNameChange(body, "怒兽", false, false),
+					applyNonBipedNameChange(body, "怒兽", false, true),
+					applyNonBipedNameChange(body, "怒兽", false, false),
+					applyNonBipedNameChange(body, "怒兽", true, false),
+					applyNonBipedNameChange(body, "怒兽", false, true),
+					applyNonBipedNameChange(body, "怒兽", true, true)
 				};
 			}
 			
@@ -4974,15 +4974,15 @@ public class Subspecies {
 			"innoxia_race_harpy_bubblegum_lollipop",
 			"statusEffects/race/raceHarpy",
 			"statusEffects/race/raceBackground",
-			"swan-harpy",
-			"swan-harpies",
-			"swan-harpy",
-			"swan-harpy",
-			"swan-harpies",
-			"swan-harpies",
+			"天鹅哈比",
+			"天鹅哈比",
+			"天鹅哈比",
+			"天鹅哈比",
+			"天鹅哈比",
+			"天鹅哈比",
 			new FeralAttributes(
-					"swan",
-					"swans",
+					"天鹅",
+					"天鹅",
 					LegConfiguration.AVIAN,
 					100,
 					0,
@@ -4994,15 +4994,15 @@ public class Subspecies {
 				}
 			},
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] obsessed with [npc.her] appearance, and wouldn't think it unusual for someone to want to spend at least half of their waking hours preening themselves in order to look as attractive as possible.",
+			"[npc.NameIsFull]痴迷于自己的外表，为了尽可能地看起来有吸引力，[npc.she]认为花费一半醒着的时间来打扮自己也是很正常的。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 0f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 5f),
 					new Value<>(Attribute.DAMAGE_LUST, 15f)),
 			null,
-			"All About Harpies",
-			"All About Harpies'",
+			"哈比全知道",
+			"哈比全知道",
 			"HARPY_BASIC",
 			"HARPY_ADVANCED",
 			Race.HARPY,
@@ -5016,7 +5016,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.BASE_WHITE,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic, bipedal swan, with white feathers and either ebony or grey leg skin. Typically only possessing non-human arms, legs, eyes, ears, and hair.",
+			"一种人形的双足天鹅，拥有白色的羽毛，以及黑檀色或灰色的腿部皮肤。一般只有手臂、腿部、眼睛、耳朵和毛发为非人类样貌。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.FIVE),
 					new Value<>(WorldRegion.RIVER, SubspeciesSpawnRarity.FIVE),
@@ -5038,21 +5038,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"fury",
-					"furies",
-					"fury",
-					"fury",
-					"furies",
-					"furies"};
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽",
+					"怒兽"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "fury", false, false),
-					applyNonBipedNameChange(body, "fury", false, true),
-					applyNonBipedNameChange(body, "fury", false, false),
-					applyNonBipedNameChange(body, "fury", true, false),
-					applyNonBipedNameChange(body, "fury", false, true),
-					applyNonBipedNameChange(body, "fury", true, true)
+					applyNonBipedNameChange(body, "怒兽", false, false),
+					applyNonBipedNameChange(body, "怒兽", false, true),
+					applyNonBipedNameChange(body, "怒兽", false, false),
+					applyNonBipedNameChange(body, "怒兽", true, false),
+					applyNonBipedNameChange(body, "怒兽", false, true),
+					applyNonBipedNameChange(body, "怒兽", true, true)
 				};
 			}
 			
@@ -5199,15 +5199,15 @@ public class Subspecies {
 			"innoxia_race_harpy_bubblegum_lollipop",
 			"statusEffects/race/raceHarpy",
 			"statusEffects/race/raceBackgroundPhoenix",
-			"phoenix-harpy",
-			"phoenix-harpies",
-			"phoenix-harpy",
-			"phoenix-harpy",
-			"phoenix-harpies",
-			"phoenix-harpies",
+			"不死鸟哈比",
+			"不死鸟哈比",
+			"不死鸟哈比",
+			"不死鸟哈比",
+			"不死鸟哈比",
+			"不死鸟哈比",
 			new FeralAttributes(
-					"phoenix",
-					"phoenixes",
+					"不死鸟",
+					"不死鸟",
 					LegConfiguration.AVIAN,
 					90,
 					0,
@@ -5220,8 +5220,8 @@ public class Subspecies {
 				}
 			},
 			Nocturnality.DIURNAL,
-			"While just as obsessed with [npc.her] looks as other harpies, [npc.nameIsFull] also naturally talented at harnessing the arcane, allowing [npc.herHim] to learn and cast spells with relative ease."
-				+ " In particular, [npc.she] [npc.has] an exceptionally high affinity with arcane fire...",
+			"[npc.NameIsFull]与其他哈比一样痴迷于自己的外表，[npc.herHim]还拥有操控奥术的天赋，可以相对轻松地学习和施放法术。"
+				+ "特别是[npc.she]对奥术火焰有着异常高的亲和力……",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.MAJOR_ARCANE, 10f),
@@ -5230,8 +5230,8 @@ public class Subspecies {
 					new Value<>(Attribute.RESISTANCE_FIRE, 5f),
 					new Value<>(Attribute.DAMAGE_LUST, 15f)),
 			null,
-			"All About Harpies",
-			"All About Harpies'",
+			"哈比全知道",
+			"哈比全知道",
 			"HARPY_BASIC",
 			"HARPY_ADVANCED",
 			Race.HARPY,
@@ -5245,8 +5245,8 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.BASE_ORANGE,
 			SubspeciesPreference.ONE_LOW,
-			"An anthropomorphic, bipedal, mythological bird, whose feathers are either glowing red, orange, or yellow, or are actually made out of arcane fire."
-					+ " They are extremely rare and typically only possess non-human arms, legs, eyes, ears, and hair.",
+			"一种存在于神话中的鸟类，人形双足，羽毛通常为散发着光芒的红色、橘色或黄色，或者就直接由奥术火焰构成。"
+					+ "这个种族十分稀有，一般只有手臂、腿部、眼睛、耳朵和毛发为非人类样貌。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.VOLCANO, SubspeciesSpawnRarity.THREE)),
 			Util.newHashMapOfValues(
@@ -5269,21 +5269,21 @@ public class Subspecies {
 		@Override
 		public String[] getHalfDemonName(Body body) {
 			String[] names = new String[] {
-					"phoenix-fury",
-					"phoenix-furies",
-					"phoenix-fury",
-					"phoenix-fury",
-					"phoenix-furies",
-					"phoenix-furies"};
+					"不死鸟怒兽",
+					"不死鸟怒兽",
+					"不死鸟怒兽",
+					"不死鸟怒兽",
+					"不死鸟怒兽",
+					"不死鸟怒兽"};
 			
 			if(body !=null && !body.getHalfDemonSubspecies().isNonBiped()) {
 				names = new String[] {
-					applyNonBipedNameChange(body, "phoenix-fury", false, false),
-					applyNonBipedNameChange(body, "phoenix-fury", false, true),
-					applyNonBipedNameChange(body, "phoenix-fury", false, false),
-					applyNonBipedNameChange(body, "phoenix-fury", true, false),
-					applyNonBipedNameChange(body, "phoenix-fury", false, true),
-					applyNonBipedNameChange(body, "phoenix-fury", true, true)
+					applyNonBipedNameChange(body, "不死鸟怒兽", false, false),
+					applyNonBipedNameChange(body, "不死鸟怒兽", false, true),
+					applyNonBipedNameChange(body, "不死鸟怒兽", false, false),
+					applyNonBipedNameChange(body, "不死鸟怒兽", true, false),
+					applyNonBipedNameChange(body, "不死鸟怒兽", false, true),
+					applyNonBipedNameChange(body, "不死鸟怒兽", true, true)
 				};
 			}
 			
@@ -5319,23 +5319,23 @@ public class Subspecies {
 			"innoxia_race_slime_biojuice_canister",
 			"statusEffects/race/raceSlime",
 			"statusEffects/race/raceBackgroundSlime",
-			"slime",
-			"slimes",
-			"slime-boy",
-			"slime-girl",
-			"slime-boys",
-			"slime-girls",
+			"史莱姆",
+			"史莱姆",
+			"史莱姆男",
+			"史莱姆女",
+			"史莱姆男",
+			"史莱姆女",
 			null,
 			Nocturnality.DIURNAL,
-			"Due to [npc.her] soft, slimy body, [npc.nameIsFull] almost completely immune to physical damage, but [npc.sheIs] also unable to inflict any significant damage while unarmed."
-					+ " [npc.She] can also morph [npc.her] body at will, allowing [npc.herHim] to take on any form that [npc.she] [npc.verb(desire)].",
+			"[npc.nameIsFull]借助其柔软粘滑的身体，能够完全免疫物理伤害，但从而在徒手时也无法造成太多伤害。"
+					+ "[npc.She]也能随意变化形体，随心所欲地成为任何想成为的形态。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 0f),
 					new Value<>(Attribute.MAJOR_ARCANE, 0f),
 					new Value<>(Attribute.MAJOR_CORRUPTION, 25f)),
 			Util.newArrayListOfValues(),
-			"Slimy Fun",
-			"Slimy Funs",
+			"史莱姆趣闻",
+			"史莱姆趣闻",
 			"SLIME_BASIC",
 			"SLIME_ADVANCED",
 			Race.SLIME,
@@ -5349,7 +5349,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 0)),
 			PresetColour.RACE_SLIME,
 			SubspeciesPreference.FOUR_ABUNDANT,
-			"Someone who is made completely of slime, with a sold core suspended in the place where their heart should be.",
+			"完全由粘液构成的生物，原本心脏的位置悬浮着一颗固态的核心。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.SUBMISSION, SubspeciesSpawnRarity.TEN)),
 			Util.newHashMapOfValues(
@@ -5378,12 +5378,12 @@ public class Subspecies {
 				AbstractSubspecies coreSubspecies = character.getBody().getFleshSubspecies();
 				if(character.getSubspeciesOverrideRace()==Race.DEMON) {
 					return UtilText.parse(character,
-							"Due to [npc.her] soft, slimy body, [npc.nameIsFull] almost completely immune to physical damage, but [npc.she] is also unable to inflict any serious unarmed damage."
-							+ " [npc.Her] slime core is pulsating with an immense power, revealing the fact that [npc.sheIs] a true demonic slime.");
+							"[npc.nameIsFull]借助其柔软粘滑的身体，能够完全免疫物理伤害，但从而在徒手时也无法造成太严重的伤害。"
+							+ "[npc.Her]的史莱姆核心在强大的力量下脉动着，这意味着[npc.sheIs]是一只真正的恶魔史莱姆。");
 				} else if(coreSubspecies==Subspecies.DEMON) {
 					return UtilText.parse(character,
-							"Due to [npc.her] soft, slimy body, [npc.nameIsFull] almost completely immune to physical damage, but [npc.she] is also unable to inflict any serious unarmed damage."
-							+ " Although [npc.she] [npc.verb(appear)] to be a demon, [npc.sheIs] just mimicking their appearance...");
+							"[npc.nameIsFull]借助其柔软粘滑的身体，能够完全免疫物理伤害，但从而在徒手时也无法造成太严重的伤害。"
+							+ "尽管[npc.she]看上去像个恶魔，但只不过是拟态了外形而已……");
 				}
 			}
 			return super.getStatusEffectDescription(character);
@@ -5398,9 +5398,9 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getName(body);
 			} else if(coreSubspecies==Subspecies.DEMON && body.getSubspeciesOverride()==null) {
-				return coreSubspecies.getName(body)+"-mimic-slime";
+				return coreSubspecies.getName(body)+"拟态史莱姆";
 			}
-			return coreSubspecies.getName(body)+"-slime";
+			return coreSubspecies.getName(body)+"史莱姆";
 		}
 		
 		@Override
@@ -5412,9 +5412,9 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getNamePlural(body);
 			} else if(coreSubspecies==Subspecies.DEMON && body.getSubspeciesOverride()==null) {
-				return coreSubspecies.getName(body)+"-mimic-slimes";
+				return coreSubspecies.getName(body)+"拟态史莱姆";
 			}
-			return coreSubspecies.getName(body)+"-slimes";
+			return coreSubspecies.getName(body)+"史莱姆";
 		}
 
 		@Override
@@ -5426,9 +5426,9 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getSingularMaleName(body);
 			} else if(coreSubspecies==Subspecies.DEMON && body.getSubspeciesOverride()==null) {
-				return coreSubspecies.getSingularMaleName(body)+"-mimic-slime";
+				return coreSubspecies.getSingularMaleName(body)+"拟态史莱姆";
 			}
-			return coreSubspecies.getSingularMaleName(body)+"-slime";
+			return coreSubspecies.getSingularMaleName(body)+"史莱姆";
 		}
 
 		@Override
@@ -5440,9 +5440,9 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getSingularFemaleName(body);
 			} else if(coreSubspecies==Subspecies.DEMON && body.getSubspeciesOverride()==null) {
-				return coreSubspecies.getSingularFemaleName(body)+"-mimic-slime";
+				return coreSubspecies.getSingularFemaleName(body)+"拟态史莱姆";
 			}
-			return coreSubspecies.getSingularFemaleName(body)+"-slime";
+			return coreSubspecies.getSingularFemaleName(body)+"史莱姆";
 		}
 
 		@Override
@@ -5454,9 +5454,9 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getPluralMaleName(body);
 			} else if(coreSubspecies==Subspecies.DEMON && body.getSubspeciesOverride()==null) {
-				return coreSubspecies.getSingularMaleName(body)+"-mimic-slimes";
+				return coreSubspecies.getSingularMaleName(body)+"拟态史莱姆";
 			}
-			return coreSubspecies.getSingularMaleName(body)+"-slimes";
+			return coreSubspecies.getSingularMaleName(body)+"史莱姆";
 		}
 
 		@Override
@@ -5468,9 +5468,9 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getPluralFemaleName(body);
 			} else if(coreSubspecies==Subspecies.DEMON && body.getSubspeciesOverride()==null) {
-				return coreSubspecies.getSingularFemaleName(body)+"-mimic-slimes";
+				return coreSubspecies.getSingularFemaleName(body)+"拟态史莱姆";
 			}
-			return coreSubspecies.getSingularFemaleName(body)+"-slimes";
+			return coreSubspecies.getSingularFemaleName(body)+"史莱姆";
 		}
 
 		@Override
@@ -5514,22 +5514,22 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceDoll",
 			"statusEffects/race/raceBackgroundDoll",
-			"doll",
-			"dolls",
-			"doll",
-			"doll",
-			"dolls",
-			"dolls",
+			"玩偶",
+			"玩偶",
+			"玩偶",
+			"玩偶",
+			"玩偶",
+			"玩偶",
 			null,
 			Nocturnality.CATHEMERAL,
-			"[npc.NameIsFull] an extremely realistic-looking, autonomous sex doll, created from arcane-infused silicone at the shop 'Lovienne's Luxuries'."
-					+ " [npc.Her] artificial body and the nature of [npc.her] arcane-powered automation grants [npc.herHim] numerous characteristics.",
+			"[npc.NameIsFull]是一个外形极其逼真的自动性爱玩偶，是在“洛维耶纳的奢侈品店”中由注入奥术的硅胶制成。"
+					+ "[npc.Her]人工造就的身体和奥术驱动的自动原理使[npc.herHim]特性多变。",
 			Util.newHashMapOfValues(),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Doll-specific perk tree)]",
-					"[style.boldGood(Perks grant numerous effects)]"),
-			"The Ultimate Toy",
-			"The Ultimate Toys",
+					"[style.boldExcellent(玩偶独有天赋树)]",
+					"[style.boldGood(天赋能够带来大量效果)]"),
+			"终极玩具",
+			"终极玩具",
 			"DOLL_BASIC",
 			"DOLL_ADVANCED",
 			Race.DOLL,
@@ -5543,7 +5543,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.ARCANE, 1)),
 			PresetColour.RACE_DOLL,
 			SubspeciesPreference.ZERO_NONE,
-			"A lifelike silicone doll, which has been enchanted so as to be able to move, speak, and obey commands.",
+			"一个栩栩如生的硅胶玩偶，已经注入附魔，能够移动、说话、遵从指令。",
 			null,
 			Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
@@ -5571,7 +5571,7 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getName(body);
 			}
-			return coreSubspecies.getName(body)+"-doll";
+			return coreSubspecies.getName(body)+"玩偶";
 		}
 		
 		@Override
@@ -5583,7 +5583,7 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getNamePlural(body);
 			}
-			return coreSubspecies.getName(body)+"-dolls";
+			return coreSubspecies.getName(body)+"玩偶";
 		}
 
 		@Override
@@ -5595,7 +5595,7 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getSingularMaleName(body);
 			}
-			return coreSubspecies.getSingularMaleName(body)+"-doll";
+			return coreSubspecies.getSingularMaleName(body)+"玩偶";
 		}
 
 		@Override
@@ -5607,7 +5607,7 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getSingularFemaleName(body);
 			}
-			return coreSubspecies.getSingularFemaleName(body)+"-doll";
+			return coreSubspecies.getSingularFemaleName(body)+"玩偶";
 		}
 
 		@Override
@@ -5619,7 +5619,7 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getPluralMaleName(body);
 			}
-			return coreSubspecies.getSingularMaleName(body)+"-dolls";
+			return coreSubspecies.getSingularMaleName(body)+"玩偶";
 		}
 
 		@Override
@@ -5631,7 +5631,7 @@ public class Subspecies {
 			if(coreSubspecies==Subspecies.HUMAN) {
 				return super.getPluralFemaleName(body);
 			}
-			return coreSubspecies.getSingularFemaleName(body)+"-dolls";
+			return coreSubspecies.getSingularFemaleName(body)+"玩偶";
 		}
 
 		@Override
@@ -5676,23 +5676,23 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceElemental",
 			"statusEffects/race/raceBackgroundFire",
-			"fire elemental",
-			"fire elementals",
-			"fire elemental",
-			"fire elemental",
-			"fire elementals",
-			"fire elementals",
+			"火元素",
+			"火元素",
+			"火元素",
+			"火元素",
+			"火元素",
+			"火元素",
 			null,
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] a summoned elemental, currently bound to the school of Fire.",
+			"[npc.NameIsFull]是召唤而来的元素体，当前绑定于烈火学派。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 15f),
 					new Value<>(Attribute.DAMAGE_FIRE, 50f),
 					new Value<>(Attribute.RESISTANCE_FIRE, 50f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlimited)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>"),
-			"Fire Elementals",
-			"Fire Elementals'",
+					"[style.boldExcellent(无限制)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化</b>"),
+			"火元素",
+			"火元素",
 			"ELEMENTAL_FIRE_BASIC",
 			"ELEMENTAL_FIRE_ADVANCED",
 			Race.ELEMENTAL,
@@ -5705,7 +5705,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 1),
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.SPELL_SCHOOL_FIRE,
-			SubspeciesPreference.FOUR_ABUNDANT, "An arcane elemental bound to the school of Fire.", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
+			SubspeciesPreference.FOUR_ABUNDANT, "绑定于烈火学派的奥术元素体。", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
 		@Override
 		public int getSubspeciesOverridePriority() {
@@ -5766,23 +5766,23 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceElemental",
 			"statusEffects/race/raceBackgroundEarth",
-			"earth elemental",
-			"earth elementals",
-			"earth elemental",
-			"earth elemental",
-			"earth elementals",
-			"earth elementals",
+			"土元素",
+			"土元素",
+			"土元素",
+			"土元素",
+			"土元素",
+			"土元素",
 			null,
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] a summoned elemental, currently bound to the school of Earth.",
+			"[npc.NameIsFull]是召唤而来的元素体，当前绑定于大地学派。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 50f),
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 50f),
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, 50f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlimited)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>"),
-			"Earth Elementals",
-			"Earth Elementals'",
+					"[style.boldExcellent(无限制)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化</b>"),
+			"土元素",
+			"土元素",
 			"ELEMENTAL_EARTH_BASIC",
 			"ELEMENTAL_EARTH_ADVANCED",
 			Race.ELEMENTAL,
@@ -5795,7 +5795,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 1),
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.SPELL_SCHOOL_EARTH,
-			SubspeciesPreference.FOUR_ABUNDANT, "An arcane elemental bound to the school of Earth.", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
+			SubspeciesPreference.FOUR_ABUNDANT, "绑定于大地学派的奥术元素体。", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
 		@Override
 		public int getSubspeciesOverridePriority() {
@@ -5854,23 +5854,23 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceElemental",
 			"statusEffects/race/raceBackgroundWater",
-			"water elemental",
-			"water elementals",
-			"water elemental",
-			"water elemental",
-			"water elementals",
-			"water elementals",
+			"水元素",
+			"水元素",
+			"水元素",
+			"水元素",
+			"水元素",
+			"水元素",
 			null,
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] a summoned elemental, currently bound to the school of Water.",
+			"[npc.NameIsFull]是召唤而来的元素体，当前绑定于激流学派。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 15f),
 					new Value<>(Attribute.DAMAGE_ICE, 50f),
 					new Value<>(Attribute.RESISTANCE_ICE, 50f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlimited)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>"),
-			"Water Elementals",
-			"Water Elementals'",
+					"[style.boldExcellent(无限制)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化</b>"),
+			"水元素",
+			"水元素",
 			"ELEMENTAL_WATER_BASIC",
 			"ELEMENTAL_WATER_ADVANCED",
 			Race.ELEMENTAL,
@@ -5883,7 +5883,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 3),
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.SPELL_SCHOOL_WATER,
-			SubspeciesPreference.FOUR_ABUNDANT, "An arcane elemental bound to the school of Water.", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
+			SubspeciesPreference.FOUR_ABUNDANT, "绑定于激流学派的奥术元素体。", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
 		@Override
 		public int getSubspeciesOverridePriority() {
@@ -5941,23 +5941,23 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceElemental",
 			"statusEffects/race/raceBackgroundAir",
-			"air elemental",
-			"air elementals",
-			"air elemental",
-			"air elemental",
-			"air elementals",
-			"air elementals",
+			"风元素",
+			"风元素",
+			"风元素",
+			"风元素",
+			"风元素",
+			"风元素",
 			null,
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] a summoned elemental, currently bound to the school of Air.",
+			"[npc.NameIsFull]是召唤而来的元素体，当前绑定于大气学派。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 5f),
 					new Value<>(Attribute.DAMAGE_POISON, 50f),
 					new Value<>(Attribute.RESISTANCE_POISON, 50f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlimited)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>"),
-			"Air Elementals",
-			"Air Elementals'",
+					"[style.boldExcellent(无限制)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化</b>"),
+			"风元素",
+			"风元素",
 			"ELEMENTAL_AIR_BASIC",
 			"ELEMENTAL_AIR_ADVANCED",
 			Race.ELEMENTAL,
@@ -5970,7 +5970,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 5),
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.SPELL_SCHOOL_AIR,
-			SubspeciesPreference.FOUR_ABUNDANT, "An arcane elemental bound to the school of Air.", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
+			SubspeciesPreference.FOUR_ABUNDANT, "绑定于大气学派的奥术元素体。", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
 		@Override
 		public int getSubspeciesOverridePriority() {
@@ -6028,23 +6028,23 @@ public class Subspecies {
 			null,
 			"statusEffects/race/raceElemental",
 			"statusEffects/race/raceBackgroundArcane",
-			"arcane elemental",
-			"arcane elementals",
-			"arcane elemental",
-			"arcane elemental",
-			"arcane elementals",
-			"arcane elementals",
+			"奥术元素",
+			"奥术元素",
+			"奥术元素",
+			"奥术元素",
+			"奥术元素",
+			"奥术元素",
 			null,
 			Nocturnality.DIURNAL,
-			"[npc.NameIsFull] a summoned elemental, currently bound to the school of Arcane.",
+			"[npc.NameIsFull]是召唤而来的元素体，当前绑定于奥术学派。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 15f),
 					new Value<>(Attribute.DAMAGE_LUST, 50f),
 					new Value<>(Attribute.RESISTANCE_LUST, 50f)),
 			Util.newArrayListOfValues(
-					"[style.boldExcellent(Unlimited)] <b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'> self-transformations</b>"),
-			"Arcane Elementals",
-			"Arcane Elementals'",
+					"[style.boldExcellent(无限制)]<b style='color: "+ PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+ ";'>自我转化</b>"),
+			"奥术元素",
+			"奥术元素",
 			"ELEMENTAL_ARCANE_BASIC",
 			"ELEMENTAL_ARCANE_ADVANCED",
 			Race.ELEMENTAL,
@@ -6057,7 +6057,7 @@ public class Subspecies {
 					new Value<>(PerkCategory.LUST, 5),
 					new Value<>(PerkCategory.ARCANE, 5)),
 			PresetColour.SPELL_SCHOOL_ARCANE,
-			SubspeciesPreference.FOUR_ABUNDANT, "An arcane elemental bound to the school of Arcane.", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
+			SubspeciesPreference.FOUR_ABUNDANT, "绑定于奥术学派的奥术元素体。", null, Util.newHashMapOfValues(), null, Util.newArrayListOfValues(
 					SubspeciesFlag.HIDDEN_FROM_PREFERENCES)) {
 		@Override
 		public int getSubspeciesOverridePriority() {

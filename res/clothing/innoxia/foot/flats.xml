@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[flat]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[flats]]></namePlural>
-		<description><![CDATA[Styled on women's ballet shoes, these feminine, slip-on flats have a very thin heel and a low-cut front.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[平底鞋]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[平底鞋]]></namePlural>
+		<description><![CDATA[以女士芭蕾鞋为灵感的女款平底鞋，鞋跟非常薄，低口设计。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>FOOT</slot> 
@@ -46,27 +46,21 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] [npc.her] [npc.feet] into the flats.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] [npc2.namePos] [npc2.feet] into the flats.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(push)] [npc2.namePos] [npc2.feet] into the flats.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将[npc.her]的双脚穿入平底鞋中。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]让[npc2.namePos]将[npc2.feet]穿入平底鞋中。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos]的[npc2.feet]强行塞进平底鞋中。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] off [npc.her] flats.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] off [npc2.namePos] flats.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] flats.]]>
-		</otherRough>
+		<self><![CDATA[[npc.Name]脱下了[npc.her]的平底鞋。]]></self>
+		<other><![CDATA[[npc.Name]帮[npc2.namePos]脱下平底鞋。]]></other>
+		<otherRough><![CDATA[[npc.Name]粗暴地拽下[npc2.namePos]的平底鞋。]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -77,8 +77,8 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"Leave Lyssieth's palace and head back out into Submission.",
+				return new Response("离开",
+						"离开莉西丝的宫殿，回到屈城区。",
 						!Main.game.getDialogueFlags().hasFlag("innoxia_elizabeth_routine_started")
 							?ENTRANCE_LEAVING_FIRST_TIME
 							:ENTRANCE_LEAVING) {
@@ -111,8 +111,8 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Say goodbye to Elizabeth and continue on your way...",
+				return new Response("继续",
+						"和伊丽莎白道别，继续往前走……",
 						PlaceType.SUBMISSION_LILIN_PALACE_CAVERN.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -271,7 +271,7 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Enter", "Knock on the door and then enter Lyssieth's office.", LYSSIETH_OFFICE_ENTER) {
+				return new Response("进入", "敲门并进入莉西丝的办公室。", LYSSIETH_OFFICE_ENTER) {
 					@Override
 					public void effects() {
 						conversationIndex = 0;
@@ -291,8 +291,8 @@ public class LyssiethPalaceDialogue {
 					&& Main.game.getCharactersPresent().contains(Main.game.getNpc(DarkSiren.class))
 					&& Main.game.getNpc(Lilaya.class).getRaceStage()==RaceStage.GREATER
 					&& Main.game.getNpc(DarkSiren.class).getRaceStage()!=RaceStage.GREATER) {
-				return new Response("Demon",
-						"Tell Meraxis that she should go through with the process of becoming a full demon.<br/>[style.italicsDemon(This will permanently transform Meraxis into a full demon!)]",
+				return new Response("恶魔",
+						"告诉梅拉克西丝，她应该向完全的恶魔转化。<br/>[style.italicsDemon(这将永久使梅拉克西丝转化为完全的恶魔！)]",
 						MERAXIS_DEMON_TF_START) {
 					@Override
 					public Colour getHighlightColour() {
@@ -305,7 +305,7 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==0) {
-				return new Response("Leave", "Step out of the office.", PlaceType.LYSSIETH_PALACE_CORRIDOR.getDialogue(false)) {
+				return new Response("离开", "走出办公室。", PlaceType.LYSSIETH_PALACE_CORRIDOR.getDialogue(false)) {
 						@Override
 						public void effects() {
 							if(Main.game.getCharactersPresent().contains(Main.game.getNpc(DarkSiren.class))) {
@@ -353,11 +353,11 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Ready", "Having just been corrupted into loving incest, Meraxis is ready to have sex with the three of you and be turned into a demon.", MERAXIS_DEMON_TF_ORIFICE_SELECTION);
+				return new Response("准备好了", "梅拉克西丝自甘堕落沉迷乱伦后，已经准备好跟你们三个一起做爱，转化成恶魔了。", MERAXIS_DEMON_TF_ORIFICE_SELECTION);
 				
 			} else if(index==2) {
-				return new Response("Step outside",
-						"You don't want to have sex with your mother and sisters. Step outside into Meraxis's office and wait for the three of them to finish.",
+				return new Response("走到外面",
+						"你不想和你的妈妈和姐妹做爱。于是走向外面，进入了梅拉克西丝的办公室，等待着他们三个做完。",
 						MERAXIS_DEMON_TF_WAIT_IN_OFFICE){
 					@Override
 					public void effects() {
@@ -408,8 +408,8 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Demonic Meraxis",
-						"Meraxis steps out from Lyssieth's office, allowing you to see how she's changed.",
+				return new Response("恶魔梅拉克西丝",
+						"梅拉克西丝走出来莉西丝的办公室，让你看看她的变化。",
 						MERAXIS_DEMON_TF_WAIT_IN_OFFICE_FINISHED) {
 						@Override
 						public void effects() {
@@ -437,8 +437,8 @@ public class LyssiethPalaceDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("innoxia_meraxis_demon_tf_teleported"))) {
 				if(index==1) {
-					return new Response("Teleported",
-							"You and Meraxis teleport back to The Red Dragon tavern in Elis.",
+					return new Response("传送",
+							"你和梅拉克西丝传送回了伊利斯的红龙酒馆。",
 							DialogueManager.getDialogueFromId("innoxia_places_fields_elis_tavern_f0_meraxis_post_demon_tf")) {
 							@Override
 							public void effects() {
@@ -501,7 +501,7 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lunette", conversationIndex==1?"You're already asking Lyssieth about her sister.":"Ask Lyssieth about her sister, Lunette.", conversationIndex==1?null:LYSSIETH_OFFICE_TALK) {
+				return new Response("露内特", conversationIndex==1?"你已经问过莉西丝她妹妹的事情了。":"询问莉西丝她妹妹露内特的事情。", conversationIndex==1?null:LYSSIETH_OFFICE_TALK) {
 					@Override
 					public void effects() {
 						conversationIndex = 1;
@@ -511,7 +511,7 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Family", conversationIndex==2?"You're already asking Lyssieth about her family.":"Ask Lyssieth about her daughters, sisters, and mother.", conversationIndex==2?null:LYSSIETH_OFFICE_TALK) {
+				return new Response("家族", conversationIndex==2?"你已经问过莉西丝家族的事情了。":"询问莉西丝她女儿、姐妹和母亲的事情。", conversationIndex==2?null:LYSSIETH_OFFICE_TALK) {
 					@Override
 					public void effects() {
 						conversationIndex = 2;
@@ -523,7 +523,7 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==3) {
-				return new Response("Archangels", conversationIndex==3?"You're already asking Lyssieth about the archangels.":"Ask Lyssieth about the archangels.", conversationIndex==3?null:LYSSIETH_OFFICE_TALK) {
+				return new Response("大天使", conversationIndex==3?"你已经问过莉西丝大天使的事情了。":"询问莉西丝大天使的事情。", conversationIndex==3?null:LYSSIETH_OFFICE_TALK) {
 					@Override
 					public void effects() {
 						conversationIndex = 3;
@@ -534,7 +534,7 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==4) {
-				return new Response("Humans", conversationIndex==4?"You're already asking Lyssieth about why she's so fond of humans.":"Ask Lyssieth why she is so fond of humans.", conversationIndex==4?null:LYSSIETH_OFFICE_TALK) {
+				return new Response("人类", conversationIndex==4?"你已经问过莉西丝她为何如此痴迷于人类了。":"询问莉西丝为何如此痴迷于人类。", conversationIndex==4?null:LYSSIETH_OFFICE_TALK) {
 					@Override
 					public void effects() {
 						conversationIndex = 4;
@@ -544,8 +544,8 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==5) {
-				return new Response("Recap", conversationIndex==5?"You're already asking Lyssieth to go over the events which caused your world to be warped into this new reality "
-						:"Ask Lyssieth to briefly go over the events which caused your world to be warped into this new reality.", conversationIndex==5?null:LYSSIETH_OFFICE_TALK) {
+				return new Response("回顾", conversationIndex==5?"你已经让莉西丝回顾过整个事件了，是如何将你原本的世界扭曲成了如今的样子"
+						:"请莉西丝短暂回顾一下整个事件，是如何将你原本的世界扭曲成了如今的样子。", conversationIndex==5?null:LYSSIETH_OFFICE_TALK) {
 					@Override
 					public void effects() {
 						conversationIndex = 5;
@@ -555,7 +555,7 @@ public class LyssiethPalaceDialogue {
 				};
 
 			} else if(index==6) {
-				return new Response("Dominant sex", "Tell Lyssieth that you're going to dominantly fuck her.", SEX_REPEAT_CHOICES) {
+				return new Response("支配型性爱", "告诉莉西丝你想作为主导者上了她。", SEX_REPEAT_CHOICES) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.GENERIC_SEX_AS_DOM;
@@ -570,7 +570,7 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==7) {
-				return new Response("Submissive sex", "Tell Lyssieth that you'd like to submit to her and have her dominantly fuck you.", SEX_REPEAT_CHOICES) {
+				return new Response("服从型性爱", "告诉莉西丝你想向她屈服，让她作为主导方上了你。", SEX_REPEAT_CHOICES) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.GENERIC_SEX;
@@ -586,13 +586,13 @@ public class LyssiethPalaceDialogue {
 				
 			} else if(index==8 && Main.game.getPlayer().getSubspeciesOverrideRace()!=Race.DEMON) {
 				if(!Main.game.getPlayer().hasStatusEffect(StatusEffect.CORRUPTION_PERK_5)) {
-					return new Response("Become a demon", "You are not corrupt enough to be turned into a demon...<br/>[style.italicsBad(Requires corruption of at least 95.)]", null);
+					return new Response("成为恶魔", "你还不够堕落，无法转变为恶魔……<br/>[style.italicsBad(需要腐化度至少达到95。)]", null);
 					
 				} else if(Main.game.getPlayer().getLegConfiguration()!=LegConfiguration.BIPEDAL) {
-					return new Response("Become a demon", "You need to have a bipedal leg configuration for Lyssieth to be able to turn you into a demon...", null);
+					return new Response("成为恶魔", "你的腿部需要时双足，才能让莉西丝将你变为恶魔……", null);
 					
 				} else {
-					return new Response("Become a demon", "Tell Lyssieth that you want her to turn you into a demon.", DEMON_TF) {
+					return new Response("成为恶魔", "告诉莉西丝你想让她将你变为恶魔。", DEMON_TF) {
 						@Override
 						public void effects() {
 							conversationIndex = 0;
@@ -603,15 +603,15 @@ public class LyssiethPalaceDialogue {
 				
 			} else if(index==11) { // Teleport
 				if(Main.game.getDialogueFlags().hasFlag("innoxia_child_of_lyssieth") && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lilayaReactedToPlayerAsDemon)) {
-					return new Response("Lilaya's lab", "Lyssieth is unwilling to face her daughter until you've broken the news to her that you're now a full demon. You'll have to make your own way back to the lab...", null);
+					return new Response("莉莱雅的实验室", "莉西丝不愿意面对她女儿，除非你坦白自己已经是全恶魔。你必须自己走回实验室……", null);
 				}
 
 				if((Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.waitingOnLilayaPregnancyResults) || Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.waitingOnLilayaBirthNews))
 						&& Main.game.getNpc(Lilaya.class).getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()) {
-					return new Response("Lilaya's lab", "Lyssieth is unwilling to teleport you into her daughter's lab until Lilaya's pregnancy situation is resolved...", null);
+					return new Response("莉莱雅的实验室", "在莉莱雅孕期结束之前，莉西丝不愿意将你传送到她女儿的实验室……", null);
 				}
 				
-				return new Response("Lilaya's lab", "Ask Lyssieth to teleport you back to Lilaya's laboratory.", LAB_TELEPORT) {
+				return new Response("莉莱雅的实验室", "请求莉西丝将你传送回莉莱雅的实验室。", LAB_TELEPORT) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB);
@@ -619,7 +619,7 @@ public class LyssiethPalaceDialogue {
 				};
 			}
 			if(index==0) {
-				return new Response("Leave", "Step back out of Lyssieth's office.", SIREN_OFFICE_LEAVE) {
+				return new Response("离开", "退出莉西丝的办公室。", SIREN_OFFICE_LEAVE) {
 						@Override
 						public void effects() {
 							conversationIndex = 0;
@@ -699,7 +699,7 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Step back out of [siren.namePos] office.", PlaceType.LYSSIETH_PALACE_CORRIDOR.getDialogue(false)) {
+				return new Response("离开", "退出[siren.namePos]的办公室。", PlaceType.LYSSIETH_PALACE_CORRIDOR.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setNearestLocation(WorldType.LYSSIETH_PALACE, PlaceType.LYSSIETH_PALACE_CORRIDOR, false);
@@ -721,8 +721,8 @@ public class LyssiethPalaceDialogue {
 			GameCharacter subCharacter = dominantRepeatSex?Main.game.getNpc(Lyssieth.class):Main.game.getPlayer();
 			
 			if(index==1) {
-				return new ResponseSex("Use pussy",
-						"Tell Lyssieth that you want to use her pussy.",
+				return new ResponseSex("使用小穴",
+						"告诉莉西丝你想使用她的小穴。",
 						true,
 						true,
 						new SMLyssiethSex(
@@ -750,8 +750,8 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Grow cock",
-						"Tell Lyssieth that you want her to grow a cock.",
+				return new ResponseSex("长出肉棒",
+						"告诉莉西丝你想让她长出肉棒。",
 						true,
 						true,
 						new SMLyssiethSex(
@@ -782,8 +782,8 @@ public class LyssiethPalaceDialogue {
 				};
 
 			} else if(index==3 && Main.game.getDialogueFlags().hasFlag("innoxia_child_of_lyssieth")) {
-				return new ResponseSex("Use pussy (lilin)",
-						"Tell Lyssieth that you want her to take on her lilin form, and that you want to use her pussy.",
+				return new ResponseSex("使用小穴(莉琳)",
+						"告诉莉西丝你想让她转化为莉琳形态，然后使用她的小穴。",
 						true,
 						true,
 						new SMLyssiethSex(
@@ -813,8 +813,8 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==4 && Main.game.getDialogueFlags().hasFlag("innoxia_child_of_lyssieth")) {
-				return new ResponseSex("Grow cock (lilin)",
-						"Tell Lyssieth that you want her to take on her lilin form, and that she should grow a cock.",
+				return new ResponseSex("长出肉棒(莉琳)",
+						"告诉莉西丝你想让她转化为莉琳形态，然后让她长出肉棒。",
 						true,
 						true,
 						new SMLyssiethSex(
@@ -862,7 +862,7 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Step back out of Lyssieth's office.", SIREN_OFFICE_LEAVE) {
+				return new Response("离开", "退出莉西丝的办公室。", SIREN_OFFICE_LEAVE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LYSSIETH_PALACE, PlaceType.LYSSIETH_PALACE_SIREN_OFFICE);
@@ -884,10 +884,10 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Insist", "Seize upon Lyssieth's hesitation to convince her to do as you ask.", DEMON_TF_CONTINUE);
+				return new Response("绝不松口", "在莉西丝犹豫时步步紧逼，劝她按照你的要求做。", DEMON_TF_CONTINUE);
 				
 			} else if(index==2){
-				return new Response("Relent", "Don't push it any further, and tell Lyssieth that you don't want to force her to do something she doesn't want to do.", DEMON_TF_CHANGE_MIND) {
+				return new Response("表示理解", "不再继续要求，告诉莉西丝你也不想强迫她做不愿做的事情。", DEMON_TF_CHANGE_MIND) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/submission/lyssiethsPalace", "DEMON_TF_RELENT"));
@@ -908,9 +908,9 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Certain",
-						"Tell Lyssieth that you are certain about wanting to <b>permanently</b> become a demon, and that you understand she'll need to fuck you in order to do this..."
-								+ "<br/>[style.italicsSex(Lyssieth will grow a cock and use it during sex...)]",
+				return new Response("确信",
+						"告诉莉西丝你已经想好了，想要<b>永久</b>变为恶魔，也理解为了达到目的，必须要她上了你才行……"
+								+ "<br/>[style.italicsSex(莉西丝将会长出肉棒，并在性爱中使用……)]",
 						DEMON_TF_START) {
 					@Override
 					public Colour getHighlightColour() {
@@ -930,9 +930,9 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Certain (pussy only)",
-						"Tell Lyssieth that you are certain about wanting to <b>permanently</b> become a demon, and that you understand she'll need to fuck you in order to do this..."
-								+ "<br/>[style.italicsSex(Tell Lyssieth not to grow a cock for this...)]",
+				return new Response("确信(只用小穴)",
+						"告诉莉西丝你已经想好了，想要<b>永久</b>变为恶魔，也理解为了达到目的，必须要她上了你才行……"
+								+ "<br/>[style.italicsSex(告诉莉西丝不用长出肉棒……)]",
 						DEMON_TF_START) {
 					@Override
 					public Colour getHighlightColour() {
@@ -955,7 +955,7 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==3){
-				return new Response("Change mind", "Tell Lyssieth that you've changed your mind, and that you don't want her to turn you into a demon.", DEMON_TF_CHANGE_MIND) {
+				return new Response("改变主意", "告诉莉西丝你改变主意了，并不想让她把你变成恶魔。", DEMON_TF_CHANGE_MIND) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/submission/lyssiethsPalace", "DEMON_TF_CONTINUE_CHANGE_MIND"));
@@ -989,11 +989,11 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Submit",
+				return new ResponseSex("顺从",
 						(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lyssiethNoCockDemonTF)
-								?"Do as Lyssieth says and drop to your knees so that you can start eating her out."
-								:"Do as Lyssieth says, and stroke her cock until it's fully erect, before dropping to your knees and giving her a blowjob.")
-							+ "<br/>[style.italicsFeminine(Lyssieth will make you more feminine when she orgasms!)]",
+								?"按照莉西丝说的，跪下来给她舔阴。"
+								:"按照莉西丝说的，先将她的肉棒撸到勃起，再跪下来给她口交。")
+							+ "<br/>[style.italicsFeminine(莉西丝高潮时会让你变得更加女性化！)]",
 						true,
 						false,
 						new SMLyssiethDemonTF(
@@ -1015,15 +1015,15 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Dominate",
-						"Refuse to do as Lyssieth says, and force her to be the one to perform oral on you.<br/>"
+				return new ResponseSex("支配",
+						"拒绝莉西丝的要求，强迫她来给你口交。<br/>"
 						+ (!Main.game.getPlayer().isFeminine()
-								?"[style.italicsMasculine(Lyssieth will make you more masculine when she orgasms!)]"
-								:"[style.italicsDisabled(This will have no extra feminising effect.)]")
+								?"[style.italicsMasculine(莉西丝高潮时会让你变得更加男性化！)]"
+								:"[style.italicsDisabled(不会造成女性化程度改变。)]")
 						+(!Main.game.getPlayer().hasPenis() && !Main.game.getPlayer().hasVagina()
 								?(Main.game.getPlayer().isFeminine()
-										?"<br/>[style.italicsTfSexual(Lyssieth will give you a demonic vagina.)]"
-										:"<br/>[style.italicsTfSexual(Lyssieth will give you a demonic cock.)]")
+										?"<br/>[style.italicsTfSexual(莉西丝将会赐予你恶魔阴道。)]"
+										:"<br/>[style.italicsTfSexual(莉西丝将会赐予你恶魔阴茎。)]")
 								:""),
 						true,
 						true,
@@ -1068,7 +1068,7 @@ public class LyssiethPalaceDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_DEMON_TF_SEX = new DialogueNode("Finished", "Thanks to Lyssieth, you are now a demon!", true) {
+	public static final DialogueNode AFTER_DEMON_TF_SEX = new DialogueNode("结束", "多亏了莉西丝，你现在是恶魔了！", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Lyssieth.class).setAffection(Main.game.getPlayer(), 75));
@@ -1082,7 +1082,7 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Reassure", "Lyssieth seems to be a little worried about how her half-demon daughters are going to react when seeing you. Reassure her that it will all be fine.", AFTER_DEMON_TF_SEX_SURNAMES) {
+				return new Response("安慰", "莉西丝似乎有点担心，自己的半恶魔女儿看到你的样子会有些反应。你安慰她说不会有事的。", AFTER_DEMON_TF_SEX_SURNAMES) {
 					@Override
 					public void effects() {
 						// Resolve Lilaya pregnancy so that her reactions aren't too complicated:
@@ -1110,16 +1110,16 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Take surname", "Tell Lyssieth that you will take her name, and be known as '[pc.name] Lyssiethmartuilani'.", AFTER_DEMON_TF_SEX_SURNAME) {
+				return new Response("改变姓氏", "告诉莉西丝，你会继承她的姓氏，从今往后你将被称为“[pc.name]·莉西丝马尔图拉尼”。", AFTER_DEMON_TF_SEX_SURNAME) {
 					@Override
 					public void effects() {
-						Main.game.getPlayer().setSurname("Lyssiethmartuilani");
+						Main.game.getPlayer().setSurname("莉西丝马尔图拉尼");
 						Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/submission/lyssiethsPalace", "AFTER_DEMON_TF_SEX_TAKE_SURNAME"));
 					}
 				};
 				
 			} else if(index==2) {
-				return new Response("Keep surname", "Tell Lyssieth that you will keep your current name.", AFTER_DEMON_TF_SEX_SURNAME) {
+				return new Response("保留姓氏", "告诉莉西丝你要保留自己现在的姓氏。", AFTER_DEMON_TF_SEX_SURNAME) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/submission/lyssiethsPalace", "AFTER_DEMON_TF_SEX_DO_NOT_TAKE_SURNAME"));
@@ -1145,8 +1145,8 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Exit",
-						"Step out of Lyssieth's office and into the adjoining office-cum-waiting room.",
+				return new Response("离开",
+						"离开莉西丝的办公室，来到相连的办公室兼等候室。",
 						AFTER_DEMON_TF_SIREN_OFFICE_LEAVE) {
 					@Override
 					public void effects() {
@@ -1183,7 +1183,7 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Head out into the corridors of Lyssieth's palace.", PlaceType.LYSSIETH_PALACE_CORRIDOR.getDialogue(false)) {
+				return new Response("离开", "去往莉西丝宫殿的走廊。", PlaceType.LYSSIETH_PALACE_CORRIDOR.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setNearestLocation(WorldType.LYSSIETH_PALACE, PlaceType.LYSSIETH_PALACE_CORRIDOR, false);
@@ -1206,10 +1206,10 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Meraxis",
+				return new Response("梅拉克西丝",
 						Main.game.getNpc(DarkSiren.class).getHomeWorldLocation()==WorldType.LYSSIETH_PALACE
-							?"Lilaya tells your other sister to step into the office."
-							:"Wait for Lyssieth to teleport back into the office with Meraxis.",
+							?"莉莱雅告诉你其他的姐妹进入办公室。"
+							:"等待莉西丝跟梅拉克西丝一起传送回办公室。",
 						LILAYA_DEMON_TF_MERAXIS_CHOICE) {
 						@Override
 						public void effects() {
@@ -1236,7 +1236,7 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Transform both", "Convince Meraxis to go ahead with the full demon transformation.", LILAYA_DEMON_TF_SEX_CHOICE) {
+				return new Response("同时转化", "说服梅拉克西丝接受纯恶魔转化。", LILAYA_DEMON_TF_SEX_CHOICE) {
 					@Override
 					public void effects() {
 						((Lyssieth)Main.game.getNpc(Lyssieth.class)).setLilinBody();
@@ -1250,8 +1250,8 @@ public class LyssiethPalaceDialogue {
 				};
 				
 			} else if(index==2) {
-				return new Response("Just Lilaya",
-						"Tell Meraxis that she doesn't need to be transformed if she doesn't feel comfortable about it.<br>[style.italics(You can change your mind later and convince Meraxis to be transformed into a full demon.)]",
+				return new Response("仅限莉莱雅",
+						"告诉梅拉克西丝如果不愿意的话，也不必转化。<br>[style.italics(你可以随后改变注意，说服梅拉克西丝转化为纯恶魔。)]",
 						LILAYA_DEMON_TF_SEX_CHOICE) {
 					@Override
 					public void effects() {
@@ -1294,13 +1294,13 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Ready", "Having just been corrupted into loving incest, Lilaya is ready to have sex with her mother and yourself and be turned into a demon.", LILAYA_DEMON_TF_ORIFICE_SELECTION);
+				return new Response("准备好了", "莉莱雅自甘堕落沉迷乱伦后，已经准备好跟你和她的母亲一起做爱，转化成恶魔了。", LILAYA_DEMON_TF_ORIFICE_SELECTION);
 				
 			} else if(index==2) {
-				return new Response("Step outside",
+				return new Response("走到外面",
 						isMeraxisBeingTransformed()
-							?"You don't want to have sex with your mother and sisters. Step outside into Meraxis's office and wait for the three of them to finish."
-							:"You don't want to have sex with your mother and sister. Step outside into Meraxis's office and wait for the two of them to finish.",
+							?"你并不想跟母亲和姐妹一起做爱，于是走向外面，进入了梅拉克西丝的办公室，在外面等她们三个结束。"
+							:"你并不想跟母亲和姐妹一起做爱，于是走向外面，进入了梅拉克西丝的办公室，在外面等她们两个结束。",
 						LILAYA_DEMON_TF_WAIT_IN_OFFICE){
 					@Override
 					public void effects() {
@@ -1344,12 +1344,12 @@ public class LyssiethPalaceDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-					return new Response("Fuck pussy", "As you are unable to access your cock, you're not able to fuck Lilaya's pussy...", null);
+					return new Response("操小穴", "因为你不能使用你的鸡巴，所以你没法操莉莱雅的小穴……", null);
 				}
-				return new ResponseSex("Fuck pussy",
-						"Tell your sister that you're going to be the one to fuck her pussy, while your mother fucks her ass from behind."
+				return new ResponseSex("操小穴",
+						"告诉你的姐妹，你想操她的小穴，你妈妈在后面操她的屁股。"
 						+ (!Main.game.getPlayer().hasPenisIgnoreDildo()
-								?"<br/>[style.italicsTfSex(You will grow a demonic cock with which to fuck her.)]"
+								?"<br/>[style.italicsTfSex(你会长出恶魔肉棒操她。)]"
 								:""),
 						true,
 						false,
@@ -1397,12 +1397,12 @@ public class LyssiethPalaceDialogue {
 					return null;
 				}
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-					return new Response("Fuck ass", "As you are unable to access your cock, you're not able to fuck Lilaya's ass...", null);
+					return new Response("操屁眼", "因为你不能使用自己的鸡巴，所以你没法操莉莱雅的屁眼……", null);
 				}
-				return new ResponseSex("Fuck ass",
-						"Tell your sister that you're going to be the one to fuck her ass from behind, while your mother fucks her pussy."
+				return new ResponseSex("操屁股",
+						"告诉你的姐妹，你想在后面操她的屁股，你妈妈操她的小穴。"
 						+ (!Main.game.getPlayer().hasPenisIgnoreDildo()
-								?"<br/>[style.italicsTfSex(You will grow a demonic cock with which to fuck her.)]"
+								?"<br/>[style.italicsTfSex(你会长出恶魔肉棒操她。)]"
 								:""),
 						true,
 						false,
@@ -1447,10 +1447,10 @@ public class LyssiethPalaceDialogue {
 				
 			} else if(index==6) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Give cunnilingus", "As your mouth is blocked, you're not able to lick Lilaya's pussy...", null);
+					return new Response("提供舔阴", "你的嘴被锁住了，你不能舔莉莱雅的小穴……", null);
 				}
-				return new ResponseSex("Give cunnilingus",
-						"Tell your sister that you want to lick her pussy, while your mother fucks her ass from behind.",
+				return new ResponseSex("提供舔阴",
+						"告诉你的姐妹你想舔她的小穴，你的母亲在后面操她的屁股。",
 						true,
 						false,
 						new SMLilayaDemonTF(
@@ -1486,11 +1486,11 @@ public class LyssiethPalaceDialogue {
 				
 			} else if(index==7) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Give blowjob", "As your mouth is blocked, you're not able to suck Lilaya's cock...", null);
+					return new Response("献上口交", "你的嘴被锁住了，你不能嗦莉莱雅的肉棒……", null);
 				}
-				return new ResponseSex("Give blowjob",
-						"Tell your sister that you want her to suck her cock, while your mother fucks her pussy from behind."
-								+ "<br/>[style.italicsTfSex(Lilaya will grow a demonic cock for you to suck.)]",
+				return new ResponseSex("给人口交",
+						"告诉姐妹你想吮吸她的肉棒，你的母亲在后面操她的小穴。"
+								+ "<br/>[style.italicsTfSex(莉莱雅会长出恶魔肉棒给你吸。)]",
 						true,
 						false,
 						new SMLilayaDemonTF(
@@ -1535,10 +1535,10 @@ public class LyssiethPalaceDialogue {
 				
 			} else if(index==8 && Main.game.isAnalContentEnabled()) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Give anilingus", "As your mouth is blocked, you're not able to lick Lilaya's ass...", null);
+					return new Response("提供吻肛", "你的嘴被锁住了，你不能舔莉莱雅的肛门……", null);
 				}
-				return new ResponseSex("Give anilingus",
-						"Tell your sister that you want to lick her ass, while your mother fucks her pussy.",
+				return new ResponseSex("提供吻肛",
+						"告诉你的姐妹你想舔她的屁股，你的母亲操她的小穴。",
 						true,
 						false,
 						new SMLilayaDemonTF(
@@ -1575,8 +1575,8 @@ public class LyssiethPalaceDialogue {
 			} else if(index==11
 					&& !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)
 					&& !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-				return new ResponseSex("Use [pc.fingers]",
-						"As your penis and mouth are blocked, you'll have to make do with fingering your sister's pussy, while your mother fucks her ass.",
+				return new ResponseSex("使用[pc.fingers]",
+						"你的阴茎和嘴都被锁住，不得不指交你姐妹的小穴，你的母亲操她的屁股。",
 						true,
 						false,
 						new SMLilayaDemonTF(
@@ -1635,18 +1635,18 @@ public class LyssiethPalaceDialogue {
 			if(isMeraxisBeingTransformed()) {
 				if(index==1) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						return new Response("Fuck pussy",
+						return new Response("操小穴",
 								Main.game.getNpc(DarkSiren.class).isVaginaVirgin()
-									?"As you are unable to access your penis, you're not able to take Meraxis's virginity..."
-									:"As you are unable to access your penis, you're not able to fuck Meraxis's pussy...",
+									?"因为你无法控制自己的阴茎，所以你没法夺走梅拉克西丝的贞操……"
+									:"因为你不能使用自己的阴茎，所以你没法操梅拉克西丝的小穴……",
 								null);
 					}
-					return new ResponseSex("Fuck pussy",
+					return new ResponseSex("操小穴",
 							(Main.game.getNpc(DarkSiren.class).isVaginaVirgin()
-								?"Tell your sister that you're going to be the one to take her virginity, while your mother fucks her ass from behind, and Lilaya uses her mouth."
-								:"Tell your sister that you're going to be the one to fuck her pussy, while your mother fucks her ass from behind, and Lilaya uses her mouth.")
+								?"告诉你的姐妹，你会夺取她的童贞，你的母亲会在后面操她的屁股，莉莱雅会使用她的嘴。"
+								:"告诉你的姐妹，你想操她的小穴，你的母亲在后面操她的屁股，莉莱雅使用她的嘴。")
 							+ (!Main.game.getPlayer().hasPenisIgnoreDildo()
-									?"<br/>[style.italicsTfSex(You will grow a demonic cock with which to fuck her.)]"
+									?"<br/>[style.italicsTfSex(你会长出恶魔肉棒操她。)]"
 									:""),
 							true,
 							false,
@@ -1700,14 +1700,14 @@ public class LyssiethPalaceDialogue {
 						return null;
 					}
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						return new Response("Fuck ass", "As you are unable to access your penis, you're not able to fuck Meraxis's ass...", null);
+						return new Response("操屁眼", "因为你不能使用自己的阴茎，所以你没法操梅拉克西丝的屁眼……", null);
 					}
-					return new ResponseSex("Fuck ass",
+					return new ResponseSex("操屁股",
 							(Main.game.getNpc(DarkSiren.class).isAnalVirgin()
-								?"Tell your sister that you're going to be the one to take her anal virginity, while your mother fucks her pussy, and Lilaya uses her mouth."
-								:"Tell your sister that you're going to be the one to fuck her ass, while your mother fucks her pussy, and Lilaya uses her mouth.")
+								?"告诉你的姐妹，你会夺取她的肛门童贞，你的母亲会操她的小穴，莉莱雅会使用她的嘴。"
+								:"告诉你的姐妹你会操她的屁股，你的母亲会操她的小穴，莉莱雅会使用她的嘴。")
 							+ (!Main.game.getPlayer().hasPenisIgnoreDildo()
-									?"<br/>[style.italicsTfSex(You will grow a demonic cock with which to fuck her.)]"
+									?"<br/>[style.italicsTfSex(你会长出恶魔肉棒操她。)]"
 									:""),
 							true,
 							false,
@@ -1758,12 +1758,12 @@ public class LyssiethPalaceDialogue {
 					
 				} else if(index==3) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						return new Response("Receive cunnilingus", "As you are unable to access your pussy, you're not able to get Meraxis to eat you out...", null);
+						return new Response("被舔阴", "你的小穴不可触及，所以梅拉克西丝没法舔你的下体……", null);
 					}
-					return new ResponseSex("Receive cunnilingus",
-							"Tell your sister that you're going to use her mouth, while your mother fucks her pussy, and Lilaya pounds her ass."
+					return new ResponseSex("被舔阴",
+							"告诉你的姐妹，你想使用她的嘴，让你母亲操她的小穴。莉莱雅撅起了屁股。"
 									+ (!Main.game.getPlayer().hasVagina()
-											?"<br/>[style.italicsTfSex(You will grow a demonic pussy for her to lick.)]"
+											?"<br/>[style.italicsTfSex(你会长出恶魔小穴给她舔。)]"
 											:""),
 							true,
 							false,
@@ -1817,12 +1817,12 @@ public class LyssiethPalaceDialogue {
 					
 				} else if(index==4) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						return new Response("Receive blowjob", "As you are unable to access your penis, you're not able to get Meraxis to give you a blowjob...", null);
+						return new Response("被口交", "你无法控制自己的阴茎，所以梅拉克西丝不能给你口交……", null);
 					}
-					return new ResponseSex("Receive blowjob",
-							"Tell your sister that you're going to use her mouth, while your mother fucks her pussy, and Lilaya pounds her ass."
+					new ResponseSex("被口交",
+							"告诉你的姐妹，你想使用她的嘴，让你母亲操她的小穴。莉莱雅撅起了屁股。"
 									+ (!Main.game.getPlayer().hasPenisIgnoreDildo()
-											?"<br/>[style.italicsTfSex(You will grow a demonic cock with which to fuck her.)]"
+											?"<br/>[style.italicsTfSex(你会长出恶魔肉棒操她。)]"
 											:""),
 							true,
 							false,
@@ -1879,8 +1879,8 @@ public class LyssiethPalaceDialogue {
 				}  else if(index==5
 						&& !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)
 						&& !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					return new ResponseSex("Kneel in front",
-							"As you are unable to gain access to your genitals, you'll just have to kneel in front of Meraxis and find some other way of having fun while Lilaya and Lyssieth fuck her.",
+					return new ResponseSex("跪在前面",
+							"你的生殖器被限制，只能跪在梅拉克西丝身前，当莉莱雅和莉西丝操她时用其他的方式爽一爽。",
 							true,
 							false,
 							new SMLilayaDemonTF(
@@ -1928,7 +1928,7 @@ public class LyssiethPalaceDialogue {
 				
 			} else {
 				if(index==1) {
-					return new Response("Lyssieth", "Look across at Lyssieth and see how she's reacting.", LILAYA_DEMON_TF_FINISHED_REACTION) {
+					return new Response("莉西丝", "看着对面的莉西丝，看看她的反应。", LILAYA_DEMON_TF_FINISHED_REACTION) {
 							@Override
 							public void effects() {
 								Main.game.getNpc(Lyssieth.class).setStartingBody(false);
@@ -1954,8 +1954,8 @@ public class LyssiethPalaceDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lyssieth",
-						"Look across at Lyssieth and see how she's reacting.",
+				return new Response("莉西丝",
+						"看着对面的莉西丝，看看她的反应。",
 						LILAYA_DEMON_TF_FINISHED_REACTION) {
 						@Override
 						public void effects() {
@@ -1997,11 +1997,11 @@ public class LyssiethPalaceDialogue {
 			if(index==1) {
 				return new Response(
 						isMeraxisBeingTransformed()
-							?"Demonic sisters"
-							:"Demonic Lilaya",
+							?"恶魔姐妹"
+							:"恶魔莉莱雅",
 						isMeraxisBeingTransformed()
-							?"Step back into Lyssieth's office and see how Lilaya and Meraxis have changed."
-							:"Step back into Lyssieth's office and see how Lilaya has changed.",
+							?"返回莉西丝的办公室，看看莉莱雅和梅拉克西丝的变化。"
+							:"返回莉西丝的办公室，看看莉莱雅的变化。",
 						LILAYA_DEMON_TF_FINISHED_REACTION) {
 						@Override
 						public void effects() {
@@ -2036,8 +2036,8 @@ public class LyssiethPalaceDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("innoxia_meraxis_demon_tf_teleported"))) {
-					return new Response("Teleported",
-							"You and Meraxis teleport back to The Red Dragon tavern in Elis.",
+					return new Response("传送",
+							"你和梅拉克西丝传送回了伊利斯的红龙酒馆。",
 							DialogueManager.getDialogueFromId("innoxia_places_fields_elis_tavern_f0_meraxis_post_demon_tf")) {
 							@Override
 							public void effects() {
@@ -2055,11 +2055,11 @@ public class LyssiethPalaceDialogue {
 				} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.meraxisRepeatDemonTF)) {
 					return new Response(
 							Main.game.getNpc(DarkSiren.class).getHomeWorldLocation()==WorldType.LYSSIETH_PALACE
-								?"Meraxis's office"
-								:"Continue",
+								?"梅拉克西丝的办公室"
+								:"继续",
 							Main.game.getNpc(DarkSiren.class).getHomeWorldLocation()==WorldType.LYSSIETH_PALACE
-								?"You and Meraxis head back out into the office-cum-waiting room."
-								:"You find yourself back in the office-cum-waiting room.",
+								?"你和梅拉克西丝回到了办公兼等候室。"
+								:"你发现自己回到了办公兼等候室。",
 							LILAYA_DEMON_TF_END) {
 							@Override
 							public void effects() {
@@ -2077,7 +2077,7 @@ public class LyssiethPalaceDialogue {
 						};
 						
 				} else {
-					return new Response("Lilaya's Lab", "You and Lilaya are returned to her lab.", LILAYA_DEMON_TF_END) {
+					return new Response("莉莱雅的实验室", "你和莉莱雅回到了她的实验室。", LILAYA_DEMON_TF_END) {
 							@Override
 							public void effects() {
 								// Reset offspring to full demons:

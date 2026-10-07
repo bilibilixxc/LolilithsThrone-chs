@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA["MFD by DSG Tarp and Awning Co." is burned into one section.]]></authorTag>
+		<authorTag><![CDATA[“DSG遮阳篷公司制造”几个字烧灼在某一段杆子上。]]></authorTag>
 		
 		<value>550</value> 
-		<determiner><![CDATA[a set of]]></determiner>
-		<name><![CDATA[foldable awning poles]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[foldable awning poles]]></namePlural>
-		<description><![CDATA[Originally destined to become the haft of several battleaxes, this set of wooden poles has been re-purposed to hold up an awning instead.]]></description> 
+		<determiner><![CDATA[一套]]></determiner>
+		<name><![CDATA[可折叠遮阳篷杆]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[可折叠遮阳篷杆]]></namePlural>
+		<description><![CDATA[这套木杆原本注定要成为战斧的斧柄，现在却被改造来支撑遮阳篷。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -25,12 +25,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[One of [style.colourGood(three)] items that you need to fix up Eisek's stall.]]></line>
+			<line><![CDATA[修复艾瑟克的摊位所需的[style.colourGood(三件)]物品之一。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			The wooden poles are joined together with metal hinges and locking tubes allowing it to either unfold to a longer size or fold to a more compact size for travel.
+			这些木头杆子通过金属铰链和锁套接合在一起，能够展开后提供更长的支撑或紧凑折叠后方便旅行携带。
 		</p>
 		]]></applyEffects>
 		
@@ -40,10 +40,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unfold)] the set of wooden poles and [npc.verb(take)] a closer look while resisting the urge to swing it around like a quarterstaff...
+		[npc.Name]将这套木杆折叠起来后，仔细凑近瞧了一瞧，内心不断涌起想要拿起来当棍子耍两下的冲动……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unfold)] the set of wooden poles for [npc2.name] to take a closer look at...
+		[npc.Name]展开了这套木杆，方便[npc2.name]仔细查看……
 		]]></otherUse>
 	</useDescriptions>
 

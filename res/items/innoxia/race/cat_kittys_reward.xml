@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>30</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Kitty's Reward]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Kitty's Rewards]]></namePlural>
-		<description><![CDATA[A small, square food tin with a ring-pull lid. A label on the side shows a greater cat-girl devouring a plate of what looks to be this can's contents; some sort of tinned salmon.]]></description> 
+		<determiner><![CDATA[一罐]]></determiner>
+		<name><![CDATA[猫咪的奖励]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[猫咪的奖励]]></namePlural>
+		<description><![CDATA[一个小方形食品罐，带有拉环盖。罐子侧面的标签上画着一只纯猫女吃掉了一个看起来像是这罐头制的罐头三文鱼的盘子里的食物。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/cat/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/cat/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">cat_kittys_reward.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,21 +25,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[feline]]></potionDescriptor>
+		<potionDescriptor><![CDATA[猫类]]></potionDescriptor>
 		<associatedRace>CAT_MORPH</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(3)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(3)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel [npc.her] arcane power increasing...
+				[npc.Name]开始感到[npc.her]的奥术力量增强……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_ARCANE, 3)]
 		]]></applyEffects>
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(pull)] back the ring-pull and [npc.verb(peel)] off the lid to the can of Kitty's Reward. A rich, fishy smell accompanies the sight of what looks to be tinned salmon, and [npc.she] [npc.verb(find)] [npc.herself] unable to resist the tasty-looking meat. [npc.She] quickly [npc.verb(wolf)] down the can's contents, finding that it was as delicious as it looked.
+		[npc.Name]拉开易拉罐上的拉环，然后剥掉猫咪的奖励的易拉罐的盖子。一股浓郁的鱼腥味伴随着看到了似乎是罐装三文鱼的景象，[npc.she]意识到[npc.herself]无法抵挡这美味的肉食。[npc.She]迅速将罐头内的内容吞下，发现味道和外表一样美味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(pull)] back the ring-pull and [npc.verb(peel)] off the lid to the can of Kitty's Reward, before offering it to [npc2.name]. A rich, fishy smell accompanies the sight of what looks to be tinned salmon, and [npc2.name] [npc2.verb(find)] [npc2.herself] unable to resist the tasty-looking meat. [npc2.She] quickly [npc2.verb(wolf)] down the can's contents, finding that it was as delicious as it looked.
+		[npc.Name]拉开易拉罐上的拉环，然后剥掉猫咪的奖励的易拉罐的盖子，然后把它递给[npc2.name]。一股浓郁的鱼腥味伴随着看到了似乎是罐装三文鱼的景象，[npc2.name]意识到[npc2.herself]无法抵挡这美味的肉食。[npc2.She]迅速将罐头内的内容吞下，发现味道和外表一样美味。
 		]]></otherUse>
 	</useDescriptions>
 

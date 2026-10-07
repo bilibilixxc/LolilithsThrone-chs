@@ -170,15 +170,15 @@ public class BatCavernSlimeAttacker extends NPC {
 		}
 		if(this.isSlave()) {
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of getting high on mushrooms and attacking innocent travellers in the Bat Caverns are now over."
-							+ " Having been enslaved as punishment for [npc.her] lawless behaviour, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+					"[npc.NamePos]在蝙蝠洞窟里嗑蘑菇，袭击无辜路人的日子已经结束。"
+							+ "由于其非法行径，作为惩罚而被奴役，[npc.sheIs]现在是一名奴隶，只不过是其主人的财产。"));
 		} else if(Main.game.getPlayer().getFriendlyOccupants().contains(this.getId())){
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of getting high on mushrooms and attacking innocent travellers in the Bat Caverns are now over."
-					+ " Having befriended [npc.herHim], you invited [npc.name] to move in with you and helped [npc.herHim] to start a new life."));
+					"[npc.NamePos]在蝙蝠洞窟里嗑蘑菇，袭击无辜路人的日子已经结束。"
+					+ "你跟[npc.name]交了朋友，并且邀请[npc.herHim]跟你住在一起，帮助[npc.herHim]开始一段全新的生活。"));
 		} else {
 			return (UtilText.parse(this,
-					"[npc.Name] is a resident of the bat caverns, and loves nothing more than getting high on mushrooms, attacking innocent travellers, and having sex."));
+					"[npc.Name]是蝙蝠洞窟的居民，并以嗑蘑菇，袭击路过的无辜路人和做爱为乐。"));
 		}
 	}
 	

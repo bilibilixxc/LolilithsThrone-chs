@@ -136,7 +136,7 @@ public class AbstractPlaceType {
 
 		this.wallsPresentOverride = false;
 		this.wallsPresent = false;
-		this.wallName = "wall";
+		this.wallName = "墙壁";
 		
 		this.sexBlockedReason = "";
 		this.sexBlockedFromCharacterPresent = true;
@@ -194,7 +194,7 @@ public class AbstractPlaceType {
 					StringBuilder sb = new StringBuilder();
 					for(String s : nameSplit) {
 						sb.append(Util.capitaliseSentence(s));
-						sb.append(" ");
+						sb.append("");
 					}
 					this.name = sb.toString();
 				}
@@ -329,7 +329,7 @@ public class AbstractPlaceType {
 					this.furniturePresentOverride = false;
 					this.furniturePresent = false;
 					this.deskNameOverride = false;
-					this.deskName = "desk";
+					this.deskName = "桌子";
 				}
 				
 				if(coreElement.getOptionalFirstOf("loiteringEnabled").isPresent()) {
@@ -351,7 +351,7 @@ public class AbstractPlaceType {
 					this.wallsPresentOverride = false;
 					this.wallsPresent = false;
 					this.wallNameOverride = false;
-					this.wallName = "wall";
+					this.wallName = "墙壁";
 				}
 				
 				this.globalMapTile = Boolean.valueOf(coreElement.getMandatoryFirstOf("globalMapTile").getTextContent().trim());

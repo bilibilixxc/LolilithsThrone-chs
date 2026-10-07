@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>200</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Black Rat's Rum]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Black Rat's Rums]]></namePlural>
-		<description><![CDATA[A glass bottle of 'Black Rat's Rum', filled with orange-coloured alcohol. The label on the front shows an image of a black-furred rat-boy wearing a thief's mask, who's pinning a rat-girl against a wall as he fucks her from behind.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[黑鼠朗姆酒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[黑鼠朗姆酒]]></namePlural>
+		<description><![CDATA[一个装满橙色酒液的 "黑鼠朗姆酒 "玻璃瓶。正面的标签上有一个戴着小偷面具的黑毛老鼠男的图像，他正把一个老鼠女按在墙上，从后面操她。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 50% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]50%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 			[#npc.incrementAlcoholLevel(0.5)]
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Black Rat's Rum, before tilting [npc.her] head back and gulping down the alcoholic liquid. Quickly polishing off the entire bottle, [npc.nameIsFull] left with a faint, musky aftertaste in [npc.her] mouth.
+		[npc.Name]拧开黑鼠朗姆酒瓶的瓶盖，然后仰起头，狂饮这烈酒。迅速喝光整瓶后，[npc.nameIsFull]的口中留下了一丝微弱的雄性余味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Black Rat's Rum, before bringing it up to [npc2.namePos] waiting [npc2.lips] and getting [npc2.herHim] to gulp down the alcoholic liquid. Quickly polishing off the entire bottle, [npc2.nameIsFull] left with a faint, musky aftertaste in [npc2.her] mouth.
+		[npc.Name]拧开黑鼠朗姆酒瓶的瓶盖，然后把它送到[npc2.namePos]等待[npc2.lips]前，让[npc2.herHim]狂饮这烈酒。迅速喝光整瓶后，[npc2.nameIsFull]的口中留下了一丝微弱的雄性余味。
 		]]></otherUse>
 	</useDescriptions>
 

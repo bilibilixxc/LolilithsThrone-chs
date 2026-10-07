@@ -100,11 +100,11 @@ public class Lilaya extends NPC {
 	}
 	
 	public Lilaya(boolean isImported) {
-		super(isImported, new NameTriplet("Lilaya"), "Lyssiethmartusarri",
-				"Along with your twin cousins, your aunt Lily was the only family you'd ever known."
-						+ " Although she still exists in this world, she isn't your aunt any more, and in this reality, she's a half-demon called 'Lilaya'."
-						+ " Whereas your old aunt was a researcher at the city museum, Lilaya is a privately-funded researcher of the arcane."
-						+ " Due to her demonic appearance and the fact that she's the daughter of the Lilin Lyssieth, people usually regard Lilaya with a mixture of fear and respect.",
+		super(isImported, new NameTriplet("莉莱雅"), "莉西丝马尔图萨莉",
+				"除了你的双胞胎表亲，你的莉莉姨妈就是你唯一的亲人了。"
+						+ "虽然她依然存在于这个世界上，但她已经不再是你的姨妈了。现在，她是一个叫“莉莱雅”的半恶魔。"
+						+ "你曾经的姨妈是市立博物馆的研究者，而莉莱雅则是一位私人资助的奥术研究者。"
+						+ "由于她的恶魔外表以及她是莉琳·莉西丝的女儿之一，人们通常对莉莱雅既害怕又尊敬。",
 				48, Month.DECEMBER, 28, // Note that Lilaya's age is always set to 22 years older than the player in CharacterCreation.applyGameStart(), so the age of 48 here doesn't mean much.
 				25,
 				Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.PARTIAL_FULL,
@@ -551,21 +551,21 @@ public class Lilaya extends NPC {
 				itemOwner.removeItem(item);
 				return new Value<>(false,
 						"<p>"
-							+ "Producing a "+item.getColour(0).getName()+" "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before bringing it up to Lilaya's mouth."
-							+ " Seeing what it is you're trying to get her to swallow, she furrows her eyebrows and smacks the pill out of your [pc.hand], sending it flying off under one of the lab tables."
-							+ " In a sharp tone, she admonishes you, "
+							+ "你从物品栏中拿出一个"+item.getColour(0).getName()+item.getName(false, false)+"，从塑料包装中取出，然后递到了莉莱雅嘴边。"
+							+ "她看到你要为她吃下的东西，顿时皱起了眉头，把药片从你[pc.hand]中拍掉了，落在了某张实验桌下。"
+							+ "她用尖锐的语气告诫你，"
 							+ (this.hasPenis()
-									?" [lilaya.speech(I don't care if you're trying to make my cum more virile! I'm <i>not</i> swallowing anything that would make me more fertile!)]"
-									:" [lilaya.speech(I'm <i>not</i> swallowing anything that would make me more fertile! You're <i>not</i> going to cum inside of me anyway, so why would you even try that?!)]")
+									?"[lilaya.speech(我不管你是不是为了我的精液的活力！我是<i>绝对不可能</i>吃下那种会让我更容易怀孕的东西的！)]"
+									:"[lilaya.speech(我<i>绝对不可能</i>吃这种更容易让我怀孕的东西！你不是<i>不会</i>射在里面的吗，为什么还要这么做？！)]")
 						+ "</p>");
 				
 			} else {
 				itemOwner.useItem(item, this, false);
 				return new Value<>(true,
 						"<p>"
-							+ "Producing a "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before pushing it into Lilaya's mouth."
-							+ " She lets out a delighted moan as she happily swallows the little "+ item.getColour(0).getName() +" pill,"
-								+ " [lilaya.speechNoEffects(~Mmm!~ That's right, make my demonic womb nice and fertile! I don't hate getting pregnant anymore...)]"
+							+ "你从物品栏中拿出一个"+item.getName(false, false)+"，打开塑料包装后塞到莉莱雅嘴里。"
+							+ "她愉悦地呻吟了一声，欣然咽下了那"+ item.getColour(0).getName() +"的小药片，"
+								+ "[lilaya.speechNoEffects(~姆嗯！~对了对了，要让我的恶魔子宫健康又强大！怀孕已经不再需要憎恶了……)]"
 						+ "</p>");
 			}
 		}
@@ -582,17 +582,17 @@ public class Lilaya extends NPC {
 			if(att==Attribute.FERTILITY && value>0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me more fertile?! What were you thinking?!)]"
-							+ " Lilaya angrily exclaims, before letting out a deep sigh and muttering,"
-							+ " [lilaya.speech(Whatever... It's not like it's ever going to make a difference...)]"
+							+ "[lilaya.speech(等等……我这下更容易怀孕了？！你怎么想的？！)]"
+							+ "莉莱雅生气地大叫起来，过了一会儿又长叹一声，嘟哝道，"
+							+ "[lilaya.speech(罢了……反正也没区别……)]"
 						+ "</p>"));
 				
 			} else if(att==Attribute.FERTILITY && value<0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me less fertile?! Thank you, [pc.name]!)]"
-							+ " Lilaya happily exclaims, before sighing,"
-							+ " [lilaya.speech(It's not like it's ever going to make a difference anyway, but the thought is nice...)]"
+							+ "[lilaya.speech(等等……我更不容易怀孕了？！太感谢你了[pc.name]！)]"
+							+ "莉莱雅高兴地大叫起来，随后却又叹道，"
+							+ "[lilaya.speech(不过也没有什么区别，但你的想法是好的……)]"
 						+ "</p>"));
 			}
 		}
@@ -610,17 +610,17 @@ public class Lilaya extends NPC {
 			if(att==Attribute.FERTILITY && value>0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me more fertile?! What were you thinking?!)]"
-							+ " Lilaya angrily exclaims, before letting out a deep sigh and muttering,"
-							+ " [lilaya.speech(Whatever... It's not like it's ever going to make a difference...)]"
+							+ "[lilaya.speech(等等……我这下更容易怀孕了？！你怎么想的？！)]"
+							+ "莉莱雅生气地大叫起来，过了一会儿又长叹一声，嘟哝道，"
+							+ "[lilaya.speech(罢了……反正也没区别……)]"
 						+ "</p>"));
 				
 			} else if(att==Attribute.FERTILITY && value<0) {
 				sb.append(UtilText.parse(this,
 						"<p>"
-							+ "[lilaya.speech(Wait... That made me less fertile?! Thank you, [pc.name]!)]"
-							+ " Lilaya happily exclaims, before sighing,"
-							+ " [lilaya.speech(It's not like it's ever going to make a difference anyway, but the thought is nice...)]"
+							+ "[lilaya.speech(等等……我更不容易怀孕了？！太感谢你了[pc.name]！)]"
+							+ "莉莱雅高兴地大叫起来，随后却又叹道，"
+							+ "[lilaya.speech(不过也没有什么区别，但你的想法是好的……)]"
 						+ "</p>"));
 			}
 		}
@@ -642,16 +642,16 @@ public class Lilaya extends NPC {
 	public String getDirtyTalkNoPenetration(GameCharacter target, boolean isPlayerDom){
 		List<String> speech = new ArrayList<>();
 
-		speech.add("Fuck, why do demons always have to feel so horny?! All I ever think about is fucking you or Rose!");
-		speech.add("I'm sure I can collect some valuable data from this...");
+		speech.add("操，为什么恶魔总是这么饥渴？！我满脑子想的都是和你或者萝丝做爱！");
+		speech.add("我肯定能从中收集到一些有价值的数据……");
 		
 		if(Main.game.isIncestEnabled()) {
 			if(Main.game.getDialogueFlags().hasFlag("innoxia_child_of_lyssieth")) {
-				speech.add("Horny for your new half-sister, hmm?");
-				speech.add("There's nothing wrong with demonic siblings fucking one another...");
+				speech.add("对你新的半亲姐妹饥渴难耐吗，嗯？");
+				speech.add("兄弟姐妹之间的性交对恶魔来说并没有什么不对……");
 			} else {
-				speech.add("I wonder if you ever did this with your real aunt?");
-				speech.add("Wait, you still see me as your aunt, right? I guess I can go along with that...");
+				speech.add("不知道你有没有和你的真姨妈这样做过？");
+				speech.add("等等，你还是把我看作你的姨妈，对吧？我想我可以同意……");
 			}
 		}
 		
@@ -668,70 +668,70 @@ public class Lilaya extends NPC {
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Pull my hair!", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("拉住我的头发！", PresetColour.CLOTHING_BLACK, false),
 						null));
 		this.addTattoo(InventorySlot.TORSO_UNDER,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Slap my ass!", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("扇我的屁股！", PresetColour.CLOTHING_BLACK, false),
 						null));
 		this.addTattoo(InventorySlot.ANUS,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Buttslut whore", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("屁穴妓女", PresetColour.CLOTHING_BLACK, false),
 						new TattooCounter(TattooCounterType.ANUS_FUCKED, TattooCountType.TALLY, PresetColour.CLOTHING_BLACK, false, this)));
 		this.addTattoo(InventorySlot.CHEST,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Fuck my fat fucking tits", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("操我的大奶头", PresetColour.CLOTHING_BLACK, false),
 						new TattooCounter(TattooCounterType.NIPPLES_FUCKED, TattooCountType.TALLY, PresetColour.CLOTHING_BLACK, false, this)));
 		this.addTattoo(InventorySlot.GROIN,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Free fuck", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("免费操干", PresetColour.CLOTHING_BLACK, false),
 						new TattooCounter(TattooCounterType.PUSSY_FUCKED, TattooCountType.TALLY, PresetColour.CLOTHING_BLACK, false, this)));
 		this.addTattoo(InventorySlot.STOMACH,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Kiarillex's cum claimed this womb", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("奇亚里莱克斯的专属子宫", PresetColour.CLOTHING_BLACK, false),
 						null));
 		this.addTattoo(InventorySlot.LEG,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Sex slave", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("性奴", PresetColour.CLOTHING_BLACK, false),
 						null));
 		this.addTattoo(InventorySlot.FOOT,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Cum on my feet", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("射在我的脚上", PresetColour.CLOTHING_BLACK, false),
 						new TattooCounter(TattooCounterType.CUM_TAKEN_FEET, TattooCountType.TALLY, PresetColour.CLOTHING_BLACK, false, this)));
 		this.addTattoo(InventorySlot.NECK,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Owned by Kiarillex", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("属于奇亚里莱克斯", PresetColour.CLOTHING_BLACK, false),
 						null));
 		this.addTattoo(InventorySlot.VAGINA,
 				new Tattoo(
 						"innoxia_misc_none",
 						PresetColour.CLOTHING_BLACK,
 						false,
-						new TattooWriting("Cum dump cunt", PresetColour.CLOTHING_BLACK, false),
+						new TattooWriting("储精垃圾场", PresetColour.CLOTHING_BLACK, false),
 						new TattooCounter(TattooCounterType.CUM_TAKEN_PUSSY, TattooCountType.TALLY, PresetColour.CLOTHING_BLACK, false, this)));
 		
 		// Increment stats for tattoo counters:

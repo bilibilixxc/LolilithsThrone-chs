@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_tavern_alley_exit -->
@@ -12,8 +12,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Exit]]></responseTitle>
-				<responseTooltip><![CDATA[Push open the tavern's door and head back outside.]]></responseTooltip>
+				<responseTitle><![CDATA[退出]]></responseTitle>
+				<responseTooltip><![CDATA[推开酒馆的门，向外面走去。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_tavern_alley"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -44,8 +44,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_oglix_introduced)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Bar]]></responseTitle>
-				<responseTooltip><![CDATA[Head over to the bar and greet the green-skinned succubus.]]></responseTooltip>
+				<responseTitle><![CDATA[酒吧]]></responseTitle>
+				<responseTooltip><![CDATA[去到吧台，跟绿皮肤的魅魔打个招呼。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_intro]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -73,8 +73,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Elemental]]></responseTitle>
-				<responseTooltip><![CDATA[Look over at Oglix's elemental as it greets you.]]></responseTooltip>
+				<responseTitle><![CDATA[元素体]]></responseTitle>
+				<responseTooltip><![CDATA[看着奥格利克斯的元素体，它向你打招呼。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_intro_elemental]]></nextDialogue>
 			</response>
 		</responses>
@@ -89,8 +89,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Beer-bitch]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Oglix what she means by this [beerBitch.race] being a 'beer-bitch'.]]></responseTooltip>
+				<responseTitle><![CDATA[奶啤妓]]></responseTitle>
+				<responseTooltip><![CDATA[询问奥格利克斯她说这个[beerBitch.race]是“奶啤妓”是什么意思。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_intro_beer_bitch]]></nextDialogue>
 			</response>
 		</responses>
@@ -134,13 +134,13 @@
 		<travelDisabled>false</travelDisabled>
 		<responseTabs>
 			<tab index="0"><![CDATA[
-				Talk
+				交谈
 			]]></tab>
 			<tab index="1"><![CDATA[
-				Drinks
+				饮品
 			]]></tab>
 			<tab index="2"><![CDATA[
-				Food
+				食物
 			]]></tab>
 		</responseTabs>
 		<responses>
@@ -149,12 +149,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Background]]></responseTitle>
+				<responseTitle><![CDATA[背景]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_oglix_talk_background))
-						You've already asked Oglix about how she came to own this tavern today. You should wait until tomorrow to talk to her about this again.
+						你已经向奥格利克斯询问过她是怎么拥有这家旅店的。如果你还想问，得明天再来。
 					#ELSE
-						Ask Oglix about how she came to own this tavern.
+						问问奥格利克斯她是怎么拥有这家旅店的。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -177,12 +177,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Lunette]]></responseTitle>
+				<responseTitle><![CDATA[露内特]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_oglix_talk_lunette))
-						You've already asked Oglix about her thoughts on Lunette. You should wait until tomorrow to talk to her about this again.
+						你已经问过奥格利克斯怎么看待露内特了。如果你还想谈这个，需要明天再来。
 					#ELSE
-						Ask Oglix what she thinks about Lunette.
+						询问奥格利克斯她怎么看待露内特。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -205,12 +205,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Beer-bitch]]></responseTitle>
+				<responseTitle><![CDATA[奶啤妓]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_oglix_talk_beer_bitch))
-						You've already asked Oglix about her beer-bitch today. You should wait until tomorrow to talk to her about this again.
+						你已经向奥格利克斯打听过她的奶啤妓了。如果你还想谈这个，需要明天再来。
 					#ELSE
-						Ask Oglix about her beer-bitch.
+						向奥格利克斯打听她的奶啤妓。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -234,12 +234,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Elemental]]></responseTitle>
+				<responseTitle><![CDATA[元素体]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_oglix_talk_elemental))
-						You've already asked Oglix about her elemental today. You should wait until tomorrow to talk to her about this again.
+						你今天已经问过奥格利克斯她的元素体了。如果你还想谈这个，需要明天再来。
 					#ELSE
-						Ask Oglix about her elemental, Golix.
+						问问奥格利克斯关于她的元素体，戈利克斯。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -264,12 +264,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_oglix_talk_vip_unlocked)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[VIP room]]></responseTitle>
+				<responseTitle><![CDATA[VIP房间]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_oglix_talk_vip))
-						You've already asked Oglix about the VIP room today. You should wait until tomorrow to talk to her about this again.
+						你今天已经问过奥格利克斯贵宾室的事了。如果你还想谈这个，需要明天再来。
 					#ELSE
-						Ask Oglix what it takes to gain access to the VIP room.
+						问问奥格利克斯如何进入贵宾室。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -289,13 +289,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Beer-bitch (5 tokens)]]></responseTitle>
+				<responseTitle><![CDATA[奶啤妓 (5代币)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)>=5)
-						Trade in five of your beer tokens to fuck the beer-bitch.
-						<br/><i>Beer tokens in your inventory: [style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
+						花五个啤酒代币操奶啤妓。
+						<br/><i>你物品栏里的啤酒代币：[style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
 					#ELSE
-						You need at least five beer tokens to fuck the beer-bitch...
+						你需要至少五个啤酒代币才能操奶啤妓……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -314,13 +314,13 @@
 				<availabilityConditional><![CDATA[[#oglix.getBeerBitches().size()>1]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[[beerBitch2.Name] (5 tokens)]]></responseTitle>
+				<responseTitle><![CDATA[[beerBitch2.Name] (5代币)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)>=5)
-						Trade in five of your beer tokens to fuck [beerBitch2.name].
-						<br/><i>Beer tokens in your inventory: [style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
+						花五个啤酒代币操[beerBitch2.name]。
+						<br/><i>你物品栏里的啤酒代币：[style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
 					#ELSE
-						You need at least five beer tokens to fuck [beerBitch2.name]...
+						你需要至少五个啤酒代币才能操[beerBitch2.name]……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -339,13 +339,13 @@
 				<availabilityConditional><![CDATA[[#oglix.getBeerBitches().size()>2]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[[beerBitch3.Name] (5 tokens)]]></responseTitle>
+				<responseTitle><![CDATA[[beerBitch3.Name] (5代币)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)>=5)
-						Trade in five of your beer tokens to fuck [beerBitch3.name].
-						<br/><i>Beer tokens in your inventory: [style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
+						花五个啤酒代币操[beerBitch3.name]。
+						<br/><i>你物品栏里的啤酒代币：[style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
 					#ELSE
-						You need at least five beer tokens to fuck [beerBitch3.name]...
+						你需要至少五个啤酒代币才能操[beerBitch3.name]……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -364,13 +364,13 @@
 				<availabilityConditional><![CDATA[[#oglix.getBeerBitches().size()>3]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[[beerBitch4.Name] (5 tokens)]]></responseTitle>
+				<responseTitle><![CDATA[[beerBitch4.Name] (5代币)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)>=5)
-						Trade in five of your beer tokens to fuck [beerBitch4.name].
-						<br/><i>Beer tokens in your inventory: [style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
+						花五个啤酒代币操[beerBitch4.name]。
+						<br/><i>你物品栏里的啤酒代币：[style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
 					#ELSE
-						You need at least five beer tokens to fuck [beerBitch4.name]...
+						你需要至少五个啤酒代币才能操[beerBitch4.name]……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -389,13 +389,13 @@
 				<availabilityConditional><![CDATA[[#oglix.getBeerBitches().size()>4]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[[beerBitch5.Name] (5 tokens)]]></responseTitle>
+				<responseTitle><![CDATA[[beerBitch5.Name] (5代币)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)>=5)
-						Trade in five of your beer tokens to fuck [beerBitch5.name].
-						<br/><i>Beer tokens in your inventory: [style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
+						花五个啤酒代币操[beerBitch5.name]。
+						<br/><i>你物品栏里的啤酒代币：[style.boldGood([#pc.getItemCount(ITEM_innoxia_quest_oglix_beer_token)])]</i>
 					#ELSE
-						You need at least five beer tokens to fuck [beerBitch5.name]...
+						你需要至少五个啤酒代币才能操[beerBitch5.name]……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -416,18 +416,18 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[11]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Golix punishment]]></responseTitle>
+				<responseTitle><![CDATA[戈利克斯惩罚]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)) || (pc.isAbleToAccessCoverableArea(CA_MOUTH, true)))
-						Ask Oglix if she can tell Golix to give you a punishment...
+						问问奥格利克斯能不能让戈利克斯“惩罚”你……
 					#ELSE
-						You need to be able to offer Golix your
+						你需要向戈利克斯提供你的
 						#IF(game.isAnalContentEnabled())
-							 pussy, ass, or mouth,
+							小穴，菊穴或口穴，
 						#ELSE
-							 pussy or mouth,
+							小穴或口穴，
 						#ENDIF
-						 and as access to these areas is blocked, you cannot receive a punishment...
+						由于这些地方被限制，你无法接受“惩罚”……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -445,9 +445,9 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<colour><![CDATA[QUEST_SIDE]]></colour>
 				<index><![CDATA[12]]></index>
-				<responseTitle><![CDATA[More Barrels]]></responseTitle>
+				<responseTitle><![CDATA[更多啤酒桶]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Oglix that you think it's a good idea to get more barrels and expand her range of beer-bitches, before offering to help her source them.
+					告诉奥格利克斯她应该多买几个桶，并且扩张她的奶啤妓业务。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					innoxia_places_fields_elis_tavern_alley_bar_empty_responses
@@ -462,12 +462,12 @@
 				<availabilityConditional><![CDATA[[#pc.hasQuest(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS) && !pc.isQuestCompleted(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[12]]></index>
-				<responseTitle><![CDATA[Report back]]></responseTitle>
+				<responseTitle><![CDATA[回报]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getQuest(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS)==QUEST_OGLIX_BEER_BARRELS_2)
-						Report back to Oglix that Kheiron decided to be 'a good horsie' for Golix, and that four barrels are to be delivered to her.
+						回报奥格利克斯，喀戎准备好做戈利克斯的“乖小马”了，并且会给她带来四个桶。
 					#ELSE
-						You need to get Kheiron to agree to send more barrels to Oglix before you can report back to her!
+						你需要让喀戎同意送更多的桶给奥格利克斯。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -483,12 +483,12 @@
 				<availabilityConditional><![CDATA[[#pc.isQuestCompleted(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[12]]></index>
-				<responseTitle><![CDATA[Flirt]]></responseTitle>
+				<responseTitle><![CDATA[调情]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_oglix_flirted))
-						You've already flirted with Oglix once today, and from the look in her eyes, you can tell that she's not in the mood for any more of it.
+						你今天已经和奥格利克斯调情过了，从她的眼神中可以看出她没有心情再调情了。
 					#ELSE
-						Having bluntly expressed her desire to fuck you, it would probably only take a little bit of flirting to get Oglix to invite you to her bedroom...
+						她直截了当地表达了想操你的渴望，也许只需要一点点调情奥格利克斯就会邀请你去她的卧室……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -506,8 +506,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Beer-bitch (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of beer from the beer-bitch's tits. #ELSE You can't afford a pint of beer from the beer-bitch's tits... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[奶啤妓 (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱奶啤妓奶子里的啤酒。#ELSE 你喝不起奶啤妓奶子里的啤酒……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -525,7 +525,7 @@
 				<responseTitle><![CDATA[
 					[beerBitch2.Name] (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)
 				]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of beer from [beerBitch2.namePos] tits. #ELSE You can't afford a pint of beer from [beerBitch2.namePos] tits... #ENDIF]]></responseTooltip>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱[beerBitch2.namePos]奶子里的啤酒。#ELSE 你喝不起[beerBitch2.namePos]奶子里的啤酒……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -543,7 +543,7 @@
 				<responseTitle><![CDATA[
 					[beerBitch3.Name] (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)
 				]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of beer from [beerBitch3.namePos] tits. #ELSE You can't afford a pint of beer from [beerBitch3.namePos] tits... #ENDIF]]></responseTooltip>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱[beerBitch3.namePos]奶子里的啤酒。#ELSE 你喝不起[beerBitch3.namePos]奶子里的啤酒……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -561,7 +561,7 @@
 				<responseTitle><![CDATA[
 					[beerBitch4.Name] (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)
 				]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of beer from [beerBitch4.namePos] tits. #ELSE You can't afford a pint of beer from [beerBitch4.namePos] tits... #ENDIF]]></responseTooltip>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱[beerBitch4.namePos]奶子里的啤酒。#ELSE 你喝不起[beerBitch4.namePos]奶子里的啤酒……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -579,7 +579,7 @@
 				<responseTitle><![CDATA[
 					[beerBitch5.Name] (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)
 				]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of beer from [beerBitch5.namePos] tits. #ELSE You can't afford a pint of beer from [beerBitch5.namePos] tits... #ENDIF]]></responseTooltip>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱[beerBitch5.namePos]奶子里的啤酒。#ELSE 你喝不起[beerBitch5.namePos]奶子里的啤酒……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -594,8 +594,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Vodka (#IF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100) Order a glass of vodka. #ELSE You can't afford a glass of vodka... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[伏特加 (#IF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100) 点一杯伏特加。#ELSE 你喝不起伏特加…… #ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=100)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -607,8 +607,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Rum (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) Order a glass of rum. #ELSE You can't afford a glass of rum... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[朗姆酒 (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) 点一杯朗姆酒。#ELSE 你喝不起朗姆酒……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=120)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -620,8 +620,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Whiskey (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) Order a glass of whiskey. #ELSE You can't afford a glass of whiskey... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[威士忌 (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) 点一杯威士忌。#ELSE 你喝不起威士忌……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=120)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -635,14 +635,14 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fish & chips (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) Order a serving of fish and chips from the main menu. #ELSE You can't afford a serving of fish and chips from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[炸鱼薯条 (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) 在主菜单上点一份炸鱼薯条。#ELSE 你买不起炸鱼薯条…… #ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=150)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('some fish and chips', true)]
+					[#game.addSpecialParsingString('一些炸鱼薯条', true)]
 					[#game.addSpecialParsingString('[style.intToString(150)]', false)]
-					[#game.addSpecialParsingString('fish and chips', false)]
+					[#game.addSpecialParsingString('炸鱼薯条', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'BAR_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-150))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('dsg_race_otter_fish_and_chips').applyEffect(pc, pc))]
@@ -651,14 +651,14 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sausages (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) Order a serving of sausages from the main menu. #ELSE You can't afford a serving of sausages from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[香肠 (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) 从主菜单上点一份香肠。#ELSE 你买不起香肠…… #ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=150)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('some sausages', true)]
+					[#game.addSpecialParsingString('一些香肠', true)]
 					[#game.addSpecialParsingString('[style.intToString(150)]', false)]
-					[#game.addSpecialParsingString('sausages', false)]
+					[#game.addSpecialParsingString('香肠', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'BAR_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-150))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('dsg_race_ferret_sausages').applyEffect(pc, pc))]
@@ -667,14 +667,14 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Burger (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) Order a burger from the main menu. #ELSE You can't afford a burger from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[汉堡 (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) 从主菜单上点一份汉堡。#ELSE 你买不起汉堡…… #ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=150)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('a burger', true)]
+					[#game.addSpecialParsingString('一份汉堡', true)]
 					[#game.addSpecialParsingString('[style.intToString(150)]', false)]
-					[#game.addSpecialParsingString('burger', false)]
+					[#game.addSpecialParsingString('汉堡', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'BAR_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-150))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('innoxia_race_rat_brown_rats_burger').applyEffect(pc, pc))]
@@ -683,14 +683,14 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Chicken pie (#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180) Order a chicken pie from the main menu. #ELSE You can't afford a chicken pie from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[鸡肉派 (#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180) 从主菜单上点一份鸡肉派。#ELSE 你买不起鸡肉派……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=180)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('a chicken pie', true)]
+					[#game.addSpecialParsingString('一份鸡肉派', true)]
 					[#game.addSpecialParsingString('[style.intToString(180)]', false)]
-					[#game.addSpecialParsingString('chicken pie', false)]
+					[#game.addSpecialParsingString('鸡肉派', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'BAR_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-180))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('innoxia_race_fox_chicken_pot_pie').applyEffect(pc, pc))]
@@ -699,14 +699,14 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Steak (#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=250) Order a steak from the main menu. #ELSE You can't afford a steak from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[牛排 (#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=250) 从主菜单上点一份牛排。#ELSE 你买不起牛排……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=250)innoxia_places_fields_elis_tavern_alley_bar_empty_responses#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
-					[#game.addSpecialParsingString('a steak', true)]
+					[#game.addSpecialParsingString('一份牛排', true)]
 					[#game.addSpecialParsingString('[style.intToString(250)]', false)]
-					[#game.addSpecialParsingString('steak', false)]
+					[#game.addSpecialParsingString('牛排', false)]
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'BAR_FOOD'))]
 					[#game.appendToTextStartStringBuilder(pc.incrementMoney(-250))]
 					[#game.appendToTextStartStringBuilder(itemGen.generateItem('innoxia_race_wolf_meat_and_marrow').applyEffect(pc, pc))]
@@ -757,8 +757,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Punished]]></responseTitle>
-				<responseTooltip><![CDATA[Oglix commands her elemental to fuck you...]]></responseTooltip>
+				<responseTitle><![CDATA[受罚]]></responseTitle>
+				<responseTooltip><![CDATA[奥格利克斯命令她的元素体操你……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_tavern_alley_after_brawl_fucked]]></id>
@@ -815,8 +815,8 @@
 		<preParsingEffects><![CDATA[
 			[#oglix.getElemental().returnToHome()]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Golix decides that you've had enough punishment and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[戈利克斯认为你的惩罚足够了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_alley">BAR_PUNISHMENT_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -825,8 +825,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[With Golix having had her fun, you're left wondering what to do next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[戈利克斯爽够了，下一步干什么……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_empty_responses]]></nextDialogue>
 				<effects><![CDATA[
@@ -846,8 +846,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Get started]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] up to [npc.namePos] ass and prepare to fuck [npc.herHim]...]]></responseTooltip>
+				<responseTitle><![CDATA[开始]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.step]到[npc.namePos]后面准备操[npc.herHim]……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_tavern_alley_beer_bitch]]></id>
@@ -872,8 +872,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Back out]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you find yourself in position to start fucking [npc.name], you're having second thoughts about the whole thing...]]></responseTooltip>
+				<responseTitle><![CDATA[反悔]]></responseTitle>
+				<responseTooltip><![CDATA[你发现可以开始操[npc.Name]了，你对整件事又有了新的想法……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_empty_responses]]></nextDialogue>
 				<effects><![CDATA[
@@ -884,8 +884,8 @@
 	</scene>
 	
 	<scene id="fuck_beer_bitch_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough of fucking [npc.name] for now...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你操够[npc.Name]了……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_alley">FUCK_BEER_BITCH_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -894,8 +894,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Return to bar]]></responseTitle>
-				<responseTooltip><![CDATA[Having had your fun, you [pc.step] back around to the other side of the bar...]]></responseTooltip>
+				<responseTitle><![CDATA[回到酒吧]]></responseTitle>
+				<responseTooltip><![CDATA[你爽够了，来到酒吧的另一边……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_empty_responses]]></nextDialogue>
 				<effects><![CDATA[
@@ -918,8 +918,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Small talk]]></responseTitle>
-				<responseTooltip><![CDATA[Deciding to do as Oglix says and stick around for a while, you engage in small talk with her...]]></responseTooltip>
+				<responseTitle><![CDATA[闲谈]]></responseTitle>
+				<responseTooltip><![CDATA[按照奥格利克斯说的在附近逛一会儿，与她闲聊……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_barrels_delivered_next]]></nextDialogue>
 				<effects/>
 			</response>
@@ -935,8 +935,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[New bitches]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Oglix where you can go to find new candidates for becoming beer-bitches.]]></responseTooltip>
+				<responseTitle><![CDATA[新婊子]]></responseTitle>
+				<responseTooltip><![CDATA[问问奥格利克斯能去哪找到奶啤妓的新人选。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_barrels_delivered_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.setQuestProgress(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS, QUEST_SIDE_UTIL_COMPLETE))]
@@ -966,8 +966,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Potions]]></responseTitle>
-				<responseTooltip><![CDATA[Give Oglix the potions and watch as she transforms [npc.name] into a horny beer-bitch...]]></responseTooltip>
+				<responseTitle><![CDATA[药水]]></responseTitle>
+				<responseTooltip><![CDATA[给奥格利克斯药水，看这样她把[npc.Name]转化为一个蜂蜜奶啤妓……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_new_beer_bitch_delivered_end]]></nextDialogue>
 				<effects><![CDATA[
@@ -988,8 +988,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
-				<responseTooltip><![CDATA[Take up Oglix's offer of being the first to fuck the new '[#npc.getGenericName()]'...]]></responseTooltip>
+				<responseTitle><![CDATA[操她]]></responseTitle>
+				<responseTooltip><![CDATA[接受奥格利克斯的提议，成为第一个使用新“[#npc.getGenericName()]”的……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_alley_fuck_beer_bitch]]></nextDialogue>
 				<effects><![CDATA[
@@ -999,8 +999,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Turn down Oglix's offer of being the first to fuck the '[#npc.getGenericName()]'...]]></responseTooltip>
+				<responseTitle><![CDATA[回绝]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝奥格利克斯的提议，不去使用“[#npc.getGenericName()]”……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_empty_responses]]></nextDialogue>
 				<effects><![CDATA[
@@ -1025,8 +1025,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Bedroom]]></responseTitle>
-				<responseTooltip><![CDATA[Accept Oglix's offer to show you to her bedroom, where no doubt she'll want to dominantly fuck you...]]></responseTooltip>
+				<responseTitle><![CDATA[卧室]]></responseTitle>
+				<responseTooltip><![CDATA[接受奥格利克斯的提议到她的卧室，毫无疑问，她会想在那里支配性地操你……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_flirting_bedroom]]></nextDialogue>
 				<effects><![CDATA[
 					#IF(oglix.getAffection(pc)<=45)
@@ -1039,8 +1039,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Turn down Oglix's offer to show you to her bedroom. This will no doubt annoy her...]]></responseTooltip>
+				<responseTitle><![CDATA[回绝]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝奥格利克斯带你去她卧室的提议，这无疑会惹恼她……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_empty_responses]]></nextDialogue>
 				<effects><![CDATA[
@@ -1064,8 +1064,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[Oglix lets out another hungry moan and prepares to start dominantly fucking you...]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[奥格利克斯又发出一声饥渴的呻吟，准备支配性地操你……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1092,8 +1092,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Take charge]]></responseTitle>
-				<responseTooltip><![CDATA[Get Oglix to surrender the dominant role to you and fuck her.]]></responseTooltip>
+				<responseTitle><![CDATA[做主]]></responseTitle>
+				<responseTooltip><![CDATA[让奥格利克斯把支配权给你，反过来操她。]]></responseTooltip>
 				<requiredPerks>
 					<perk><![CDATA[MARTIAL_ARTIST]]></perk>
 				</requiredPerks>
@@ -1125,8 +1125,8 @@
 	
 	<scene id="flirting_after_sex">
 		<preParsingEffects/>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Oglix has had enough and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[奥格利克斯已经被满足了，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_alley">FLIRTING_BEDROOM_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1135,8 +1135,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Return to bar]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Oglix back to the bar.]]></responseTooltip>
+				<responseTitle><![CDATA[回到酒吧]]></responseTitle>
+				<responseTooltip><![CDATA[跟着奥格利克斯回到酒吧。]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_bar_empty_responses]]></nextDialogue>
 				<effects><![CDATA[
@@ -1166,8 +1166,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Watch]]></responseTitle>
-				<responseTooltip><![CDATA[Watch as Oglix allows Golix to have her fun with Kheiron...]]></responseTooltip>
+				<responseTitle><![CDATA[旁观]]></responseTitle>
+				<responseTooltip><![CDATA[看着奥格利克斯让戈利克斯与喀戎爽爽……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_old_stables_next]]></nextDialogue>
 				<effects/>
@@ -1188,8 +1188,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Kheiron collared]]></responseTitle>
-				<responseTooltip><![CDATA[Carry on watching as Golix fastens the collar around Kheiron's neck...]]></responseTooltip>
+				<responseTitle><![CDATA[喀戎被捕]]></responseTitle>
+				<responseTooltip><![CDATA[继续看着戈利克斯把项圈系在喀戎的脖子上……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_old_stables_final]]></nextDialogue>
 			</response>
@@ -1200,8 +1200,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Kheiron submits]]></responseTitle>
-				<responseTooltip><![CDATA[It looks like Kheiron is going to submit and get collared by Golix again...]]></responseTooltip>
+				<responseTitle><![CDATA[喀戎服从]]></responseTitle>
+				<responseTooltip><![CDATA[看来喀戎又要屈服于戈利克斯了……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_old_stables_final]]></nextDialogue>
 			</response>
@@ -1211,8 +1211,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Kheiron dominates]]></responseTitle>
-				<responseTooltip><![CDATA[It looks like Kheiron is going to insist on being the one on top this time...]]></responseTooltip>
+				<responseTitle><![CDATA[喀戎支配]]></responseTitle>
+				<responseTooltip><![CDATA[看来喀戎这次要坚持在上面了……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_old_stables_final_kheiron_dom]]></nextDialogue>
 			</response>
@@ -1232,12 +1232,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Watch]]></responseTitle>
+				<responseTitle><![CDATA[旁观]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isAnalContentEnabled())
-						Watch as Golix fucks Kheiron's ass...
+						看着戈利克斯操喀戎的屁穴……
 					#ELSE
-						Watch as Golix fucks Kheiron's throat...
+						看着戈利克斯操喀戎的喉穴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -1291,9 +1291,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You don't want to stick around to see what's next...
+					你不想留下来接着看了……
 				]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
@@ -1318,12 +1318,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Watch]]></responseTitle>
+				<responseTitle><![CDATA[旁观]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isAnalContentEnabled())
-						Watch as Kheiron fucks Golix's ass...
+						看着喀戎操戈利克斯的屁穴……
 					#ELSE
-						Watch as Kheiron fucks Golix's throat...
+						看着喀戎操戈利克斯的喉穴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -1389,9 +1389,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You don't want to stick around to see what's next...
+					你不想留下来接着看了……
 				]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
@@ -1407,8 +1407,8 @@
 	</scene>
 	
 	<scene id="old_stables_after_watch">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Golix decides that Kheiron has had enough and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[戈利克斯觉得喀戎已被满足，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_alley">OLD_STABLES_AFTER_WATCH</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1417,9 +1417,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You don't want to stick around to be seen by Kheiron, so decide to quickly leave...
+					你不想留在这里被喀戎看到，决定迅速离开……
 				]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
@@ -1457,19 +1457,19 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Toilet]]></responseTitle>
-				<responseTooltip><![CDATA[Use the toilet.]]></responseTooltip>
+				<responseTitle><![CDATA[盥洗室]]></responseTitle>
+				<responseTooltip><![CDATA[使用厕所。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_toilets_use]]></nextDialogue>
 				<effects/>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wash]]></responseTitle>
+				<responseTitle><![CDATA[清洗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the sinks to wash your hands and face.
-					<br/>[style.italicsGood(This will clean your head, eyes, mouth, neck, hair, fingers, hands, and wrists, as well as any clothing worn in these slots.)]
-				]]></responseTooltip>
+					用水槽洗脸洗手。
+					<br/>[style.italicsGood(这会清理你的头部、眼睛、嘴巴、脖子、头发、手指、手掌和手腕，以及在这些栏位穿着的衣物。)]
+]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_toilets_wash]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.applyLimitedWash(IS_HEAD, IS_EYES, IS_MOUTH, IS_NECK, IS_HAIR, IS_FINGER, IS_HAND, IS_WRIST)]
@@ -1522,10 +1522,10 @@
 			[#game.setActiveNPC(attacker)]
 			#IF(RND.nextInt(100)<50)
 				[#attacker.setAlcoholLevel(0.6)]
-				[#attacker.setGenericName('angry drunk')]
+				[#attacker.setGenericName('愤怒的醉鬼')]
 			#ELSE
 				[#attacker.setAlcoholLevel(0.3)]
-				[#attacker.setGenericName('angry thug')]
+				[#attacker.setGenericName('愤怒的暴徒')]
 			#ENDIF
 		]]></preParsingEffects>
 		<content folderPath="txt/places/fields/elis/tavern_alley">SEATING_ATTACKED</content>
@@ -1537,8 +1537,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Seeing no alternative, you choose to defend yourself against this angry [attacker.race].]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[别无选择，你只能自卫，对抗这个愤怒的[attacker.race]。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_oglix_tavern_brawl, true)]
@@ -1551,8 +1551,8 @@
 						<enemy leader="true"><![CDATA[attacker]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[Refusing to apologise in such a demeaning way, you tell the [attacker.race] that [attacker.sheIs] making a mistake as you prepare to defend yourself.]]></combatant>
-						<combatant id="attacker"><![CDATA[Flashing you a wicked smirk, the [attacker.race] sneers, [attacker.speech(I'll get an apology out of you, one way or another!)]]]></combatant>
+						<combatant id="pc"><![CDATA[你拒绝以这种有损尊严的方式道歉，你告诉[attacker.race]，[attacker.sheIs]在你准备自卫时犯了一个错误。]]></combatant>
+						<combatant id="attacker"><![CDATA[[attacker.race]向你露出邪恶的冷笑，[attacker.speech(无论如何，我都会让你道歉的！)]]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 				</combatVariables>
@@ -1561,8 +1561,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Settle tab (#IF(pc.getMoney()>=200)[style.moneyFormat([#200], span)]#ELSE[style.moneyFormatUncoloured([#200], span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=200) Offer [style.intToString([#200])] flames to pay off the [attacker.race]'s bar tab as an apology. #ELSE You can't afford to pay off the [attacker.race]'s bar tab... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[结账 (#IF(pc.getMoney()>=200)[style.moneyFormat([#200], span)]#ELSE[style.moneyFormatUncoloured([#200], span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=200) 付[style.intToString([#200])]火币给[attacker.race]买单以表歉意。#ELSE 你没钱给[attacker.race]买单……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=200)innoxia_places_fields_elis_tavern_alley_seating_attacked_peaceful_end#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.incrementMoney(-200))]
@@ -1573,12 +1573,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Intimidate]]></responseTitle>
+				<responseTitle><![CDATA[恐吓]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getTrueRace()==RACE_DEMON)
-						Use your demonic nature to intimidate the [attacker.race] into sitting back down and apologising to you.
+						利用你的恶魔本性恐吓[attacker.race]，让[attacker.herHim]坐下来向你道歉。
 					#ELSE
-						You need to be a demon in order to intimidate the [attacker.race] into sitting back down and apologising to you...
+						你需要变成恶魔才能恐吓[attacker.race]坐下来给你道歉……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1600,8 +1600,8 @@
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 				</requiredFetishes>
 				<corruptionLevel><![CDATA[THREE_DIRTY]]></corruptionLevel>
-				<responseTitle><![CDATA[Beg for forgiveness]]></responseTitle>
-				<responseTooltip><![CDATA[Bow down before the [attacker.race] and beg for [attacker.her] forgiveness.]]></responseTooltip>
+				<responseTitle><![CDATA[乞求宽恕]]></responseTitle>
+				<responseTooltip><![CDATA[跪在[attacker.race]前面祈求[attacker.her]的原谅。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_seating_attacked_peaceful_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'SEATING_ATTACKED_BEG'))]
@@ -1614,12 +1614,12 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Offer oral]]></responseTitle>
+				<responseTitle><![CDATA[提供口交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						You cannot access your mouth, and so cannot offer to perform oral on the [attacker.race] as an apology...
+						你的嘴被限制，没法给[attacker.race]以表歉意……
 					#ELSE
-						You can tell that the [attacker.race] is not attracted to you, so an offer to perform oral on [attacker.herHim] wouldn't be a good idea...
+						[attacker.race]没有被你吸引，给[attacker.herHim]口似乎不是一个好主意……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1630,15 +1630,15 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Offer oral]]></responseTitle>
+				<responseTitle><![CDATA[提供口交]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Offer to get down under the [attacker.race]'s table and
+					爬下[attacker.race]的桌子，
 					#IF(attacker.hasPenis())
-						 suck [attacker.her] cock.
+						嗦[attacker.her]的牛子。
 					#ELSEIF(attacker.hasVagina())
-						 eat [attacker.herHim] out.
+						给[attacker.herHim]来点“口技”。
 					#ELSE
-						 perform oral on [attacker.herHim].
+						给[attacker.herHim]口。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -1698,9 +1698,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Having pacified the [attacker.race], you're left to head back into the tavern...
+					你安抚了[attacker.race]，回到酒馆……
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_alley_tables]]></nextDialogue>
 				<effects><![CDATA[
@@ -1713,8 +1713,8 @@
 	</scene>
 	
 	<scene id="seating_attacked_after_oral">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The [attacker.race] has had enough and brings an end to your oral session...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[[attacker.race]已经被满足，结束了你的“口头表达”……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_alley">SEATING_ATTACKED_AFTER_ORAL</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1723,9 +1723,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					With the [attacker.race] having got what [attacker.she] wanted, you're left to head back into the tavern...
+					[attacker.race]满意了，你回到了酒馆……
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_alley_tables]]></nextDialogue>
 				<effects><![CDATA[
@@ -1750,14 +1750,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[
-					#IF(attacker.isAttractedTo(pc) || game.isNonConEnabled())
-						Decide against doing anything further with the [attacker.race] and find somewhere safe to move to...
-					#ELSE
-						Leave the [attacker.race] behind and find somewhere safe to move to...
-					#ENDIF
-				]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(attacker.isAttractedTo(pc) || game.isNonConEnabled())
+    决定不再对[attacker.race]做任何进一步的事情，并前往安全的地方……
+#ELSE
+    把[attacker.race]甩下，前往安全的地方……
+#ENDIF
+]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_seating_attacked_brawl]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'SEATING_ATTACKED_COMBAT_WON_END'))]
@@ -1769,12 +1768,12 @@
 				<availabilityConditional><![CDATA[[#!attacker.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isNonConEnabled())
-						You can tell that [attacker.name] isn't at all interested in having sex with you, and with so many people all around, it'd be impossible to get away with raping [attacker.herHim]...
+						看得出[attacker.name]对和你做爱不感兴趣，况且这里这么多人，强奸[attacker.herHim]不太可能……
 					#ELSE
-						You can tell that [attacker.name] isn't at all interested in having sex with you...
+						看得出[attacker.name]对和你做爱不感兴趣……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -1783,8 +1782,8 @@
 				<availabilityConditional><![CDATA[[#attacker.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[Take advantage of your victory to have dominant sex with the [attacker.race].]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[乘胜追击，和[attacker.race]来一场支配型性爱。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_tavern_alley_after_combat]]></id>
@@ -1811,16 +1810,16 @@
 				<availabilityConditional><![CDATA[[#!attacker.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[You can tell that [attacker.name] isn't at all interested in having sex with you...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[看得出[attacker.name]没有兴趣和你做爱……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#attacker.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Feeling bad for beating the [attacker.race], you decide to submit to [attacker.herHim] and offer [attacker.herHim] the use of your body...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[对殴打[attacker.race]感到内疚，你决定顺从[attacker.herHim]使用你的身体……]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 				</requiredFetishes>
@@ -1864,16 +1863,16 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(attacker.isAttractedTo(pc))
-						Decline
+						回绝
 					#ELSE
-						Continue
+						继续
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(attacker.isAttractedTo(pc))
-						Tell the [attacker.race] that you have no interest in having sex with [attacker.herHim]...
+						告诉[attacker.race]你没兴趣和[attacker.herHim]做爱……
 					#ELSE
-						With the [attacker.race] having got [attacker.her] apology, you're left to fend for yourself in the midst of the chaotic brawl...
+						随着[attacker.race]得到了道歉，你只能在混乱的殴打中自求多福了……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_seating_attacked_brawl]]></nextDialogue>
@@ -1887,8 +1886,8 @@
 				<availabilityConditional><![CDATA[[#attacker.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[You decide that it's best to submit to [attacker.herHim] and let [attacker.herHim] use your body...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[你觉得最好顺从[attacker.herHim]使用你的身体……]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 				</requiredFetishes>
@@ -1918,8 +1917,8 @@
 	</scene>
 	
 	<scene id="seating_attacked_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The sex comes to an end...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[性爱结束了……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_alley">SEATING_ATTACKED_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1928,9 +1927,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					With the [attacker.race] having got what [attacker.she] wanted, you're left to fend for yourself in the midst of the chaotic brawl...
+					[attacker.race]如愿以偿，你只能在混乱的殴打中自求多福了……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_seating_attacked_brawl]]></nextDialogue>
 				<effects><![CDATA[
@@ -1951,10 +1950,10 @@
 			[#game.setActiveNPC(attacker)]
 			#IF(RND.nextInt(100)<50)
 				[#attacker.setAlcoholLevel(0.75)]
-				[#attacker.setGenericName('drunken fighter')]
+				[#attacker.setGenericName('醉酒的打手')]
 			#ELSE
 				[#attacker.setAlcoholLevel(0.4)]
-				[#attacker.setGenericName('angry brawler')]
+				[#attacker.setGenericName('愤怒的打手')]
 			#ENDIF
 		]]></preParsingEffects>
 		<content folderPath="txt/places/fields/elis/tavern_alley">SEATING_ATTACKED_BRAWL</content>
@@ -1966,8 +1965,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[The [attacker.race] only seems interested in having a good fight. Defend yourself from [attacker.herHim]!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[[attacker.race]似乎只想好好打一架，保护你自己！]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_oglix_tavern_brawl, false)]
@@ -1981,8 +1980,8 @@
 						<enemy leader="true"><![CDATA[attacker]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[Telling the [attacker.race] that [attacker.sheIs] making a mistake, you prepare to defend yourself from [attacker.herHim].]]></combatant>
-						<combatant id="attacker"><![CDATA[Letting out a wild laugh, the [attacker.race] declares, [attacker.speech(I just want a good fight!)]]]></combatant>
+						<combatant id="pc"><![CDATA[告诉[attacker.race][attacker.sheIs]犯了一个错误，你就准备抵御[attacker.herHim]。]]></combatant>
+						<combatant id="attacker"><![CDATA[发出一阵狂笑，[attacker.race]宣布，[attacker.speech(我只想好好打一架！)]]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 				</combatVariables>
@@ -2009,8 +2008,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Decide not to watch Oglix's elemental fucking [attacker.race] and instead continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[决定不管观赏奥格利克斯的元素体操[attacker.race]，你继续上路……]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_alley_tables]]></nextDialogue>
 				<effects><![CDATA[
@@ -2024,8 +2023,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Watch]]></responseTitle>
-				<responseTooltip><![CDATA[Watch Oglix's elemental fuck the [attacker.race]...]]></responseTooltip>
+				<responseTitle><![CDATA[旁观]]></responseTitle>
+				<responseTooltip><![CDATA[观赏奥格利克斯的元素体操[attacker.race]……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_tavern_alley_after_brawl_watch]]></id>
@@ -2111,8 +2110,8 @@
 				<availabilityConditional><![CDATA[[#game.isNonConEnabled() && ((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)) || (pc.isAbleToAccessCoverableArea(CA_MOUTH, true)))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Punished]]></responseTitle>
-				<responseTooltip><![CDATA[Oglix commands her elemental to fuck you...]]></responseTooltip>
+				<responseTitle><![CDATA[受罚]]></responseTitle>
+				<responseTooltip><![CDATA[奥格利克斯命令她的元素体操你……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_tavern_alley_after_brawl_fucked]]></id>
@@ -2167,8 +2166,8 @@
 				<availabilityConditional><![CDATA[[#!game.isNonConEnabled() || !((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)) || (pc.isAbleToAccessCoverableArea(CA_MOUTH, true)))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Decide not to watch Oglix's elemental fucking [attacker.race] and instead continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[决定不管观赏奥格利克斯的元素体操[attacker.race]，你继续上路……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_alley_tables]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_alley', 'SEATING_ATTACKED_BRAWL_DONT_WATCH'))]
@@ -2181,8 +2180,8 @@
 				<availabilityConditional><![CDATA[[#!game.isNonConEnabled() || !((pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)) || (game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)) || (pc.isAbleToAccessCoverableArea(CA_MOUTH, true)))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Watch]]></responseTitle>
-				<responseTooltip><![CDATA[Watch Oglix's elemental fuck the [attacker.race]...]]></responseTooltip>
+				<responseTitle><![CDATA[旁观]]></responseTitle>
+				<responseTooltip><![CDATA[观赏奥格利克斯的元素体操[attacker.race]……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_tavern_alley_after_brawl_watch]]></id>
@@ -2243,8 +2242,8 @@
 			[#oglix.getElemental().returnToHome()]
 			[#oglix.returnToHome()]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Oglix's elemental decides that [attacker.name] has had enough punishment and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[奥格利克斯的元素体认为[attacker.name]的惩罚足够了，结束了性爱……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2253,8 +2252,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[With the brawl now at an end, it's time to move on...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[殴打已经结束，是时候继续前进了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_tables]]></nextDialogue>
 				<effects/>
 			</response>
@@ -2267,8 +2266,8 @@
 			[#oglix.getElemental().returnToHome()]
 			[#oglix.returnToHome()]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Oglix's elemental decides that you've had enough punishment and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[奥格利克斯的元素体认为你的惩罚足够了，结束了性爱……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2277,8 +2276,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[With the brawl now at an end, it's time to move on...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[殴打已经结束，是时候继续前进了……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_tables]]></nextDialogue>
 				<effects/>
 			</response>
@@ -2322,8 +2321,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[[pc.Step] back]]></responseTitle>
-				<responseTooltip><![CDATA[Not able to get through this door, there's little else for you to do but [pc.step] back into the tavern...]]></responseTooltip>
+				<responseTitle><![CDATA[[pc.Step]回去]]></responseTitle>
+				<responseTooltip><![CDATA[过不去这扇门，你只能回到酒馆……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_alley_tables]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setNearestLocation(PLACE_TYPE_innoxia_fields_elis_tavern_alley_tables)]

@@ -56,20 +56,20 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 					default:
-						return Main.sex.getCharacterPerformingAction().isFeminine()?"Horny moan":"Horny groan";
+						return Main.sex.getCharacterPerformingAction().isFeminine()?"饥渴地呻吟":"饥渴地哼唧";
 					case DOM_ROUGH:
-						return "Rough growl";
+						return "狂野咆哮";
 					case SUB_RESISTING:
-						return "Protesting cry";
+						return "抗议地哀叫";
 				}
 			}
 			switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 				default:
-					return "Dirty talk";
+					return "说骚话";
 				case DOM_ROUGH:
-					return "Rough talk";
+					return "侮辱";
 				case SUB_RESISTING:
-					return "Beg to stop";
+					return "乞求停下";
 			}
 		}
 
@@ -78,20 +78,20 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 					default:
-						return "As your mouth is blocked, you can't talk dirty to [npc2.name], but you <i>can</i> still make a horny "+(Main.sex.getCharacterPerformingAction().isFeminine()?"moan":"groan")+" for [npc2.herHim].";
+						return "因为你的嘴被堵上了，你没法对[npc2.name]说骚话，但是<i>还能</i>发出一些情欲的"+(Main.sex.getCharacterPerformingAction().isFeminine()?"呻吟":"低吟") + "。";
 					case DOM_ROUGH:
-						return "As your mouth is blocked, you can't make any rough sexual comments to [npc2.name], but you <i>can</i> still growl at [npc2.herHim].";
+						return "因为你的嘴被堵上了，你没法对[npc2.name]说什么很过分的淫语，但是<i>还能</i>发出一些低吼。";
 					case SUB_RESISTING:
-						return "As your mouth is blocked, you can't beg for [npc2.herHim] to stop using you, but you <i>can</i> still make protesting cries of discomfort.";
+						return "因为你的嘴被堵上了，你没法乞求[npc2.name]停下来，但是<i>还能</i>发出一些抗拒的叫喊表示自己的不满。";
 				}
 			}
 			switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 				default:
-					return "Talk dirty to [npc2.name].";
+					return "对[npc2.name]说骚话。";
 				case DOM_ROUGH:
-					return "Talk rough to [npc2.name].";
+					return "对[npc2.name]说过分的话。";
 				case SUB_RESISTING:
-					return "Beg for [npc2.herHim] to stop using you.";
+					return "求求[npc2.herHim]别操了。";
 			}
 		}
 
@@ -101,29 +101,29 @@ public class PlayerTalk {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 					default:
 						return UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, all [npc.she] can do in place of talking dirty to [npc2.name] is let out a series of horny, muffled [npc.moans].",
-								"With [npc.her] mouth being currently blocked, [npc.nameIsFull] only able to make a series of muffled, lewd [npc.moans] to let [npc2.name] know that [npc.sheIs] enjoying [npc.herself].",
-								"Wanting to let [npc2.name] know that [npc.sheIs] enjoying [npc.herself], but having [npc.her] mouth blocked, [npc.name] [npc.verb(make)] do with letting out a series of incredibly lewd, muffled [npc.moans].",
-								"Although [npc.her] mouth is blocked, [npc.nameIsFull] still able to let out a series of horny, muffled [npc.moans], letting [npc2.name] know that [npc.sheIs] enjoying [npc.herself].");
+								"[npc.namePos]的嘴被堵住了，[npc.she]没法对[npc2.name]说骚话，只能发出一连串模糊而淫靡的[npc.moans]。",
+								"[npc.nameIsFull]的嘴巴现在被封住了，只能发出一连串模糊而下流的[npc.moans]，让[npc2.name]知道[npc.sheIs]现在十分享受。",
+								"[npc.Name]想让[npc2.name]知道自己现在很享受，但嘴巴却被封住了，只得发出一串模糊而又极其下流的[npc.moans]。",
+								"尽管[npc.nameIsFull]的嘴巴被封住了，但还是能发出一连串模糊而淫靡的[npc.moans]，让[npc2.name]知道[npc.sheIs]现在很享受。");
 					case DOM_ROUGH:
 						return UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, all [npc.she] can do in place of talking rough to [npc2.name] is let out a series of aggressive, muffled growls.",
-								"With [npc.her] mouth being currently blocked, [npc.nameIsFull] only able to make a series of muffled, rough growls to let [npc2.name] know that [npc.sheIs] still firmly in charge.",
-								"Wanting to let [npc2.name] know that [npc.sheIs] still in charge, but having [npc.her] mouth blocked, [npc.name] [npc.verb(make)] do with letting out a series of menacing, muffled growls.",
-								"Although [npc.her] mouth is blocked, [npc.nameIsFull] still able to let out a series of deep, muffled growls, letting [npc2.name] know that [npc.sheIs] still in charge.");
+								"[npc.namePos]的嘴被堵住了，[npc.she]没法侮辱[npc2.name]，只能发出一连串模糊而嚣张的[npc.moans]。",
+								"[npc.her]的嘴被堵住了。[npc.nameIsFull]只能靠发出一连串低沉粗哑的咆哮让[npc2.name]知道[npc.sheIs]仍牢牢掌握着一切。",
+								"[npc.Name]想要让[npc2.name]知道[npc.sheIs]仍然掌握着局势，但由于嘴被堵住，[npc.sheIs]只能发出一连串威吓的粗哑咆哮。",
+								"[npc.her]虽然被堵住嘴，但仍然成功发出一连串低沉粗哑的咆哮，让[npc2.name]知道[npc.sheIs]仍然掌握着局势。");
 					case SUB_RESISTING:
 						return UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, all [npc.she] can do in place of begging for mercy is to let out a series of pathetic whines and muffled cries.",
-								"With [npc.her] mouth being currently blocked, [npc.nameIsFull] only able to make a series of muffled sobs and distressed whines to let [npc2.name] know that [npc.she] [npc.verb(want)] to be let go.",
-								"Wanting to let [npc2.name] know that [npc.she] desires to be released, but having [npc.her] mouth blocked, [npc.name] [npc.verb(make)] do with letting out a series of distressed sobs and muffled cries.",
-								"Although [npc.her] mouth is blocked, [npc.nameIsFull] still able to let out a series of distressed whines and muffled sobs, letting [npc2.name] know that [npc.she] [npc.verb(want)] this to stop.");
+								"因为[npc.namePos]的嘴被堵住了，[npc.she]除了求饶外唯一能做的就只有发出一连串可怜的呜咽与低沉的啜泣。",
+								"因为[npc.her]的嘴目前被堵住了，[npc.nameIsFull]只能靠发出一连串低沉的啜泣与痛苦的呜咽来让[npc2.name]知道[npc.she]想被放走。",
+								"由于[npc.her]嘴被堵住了，[npc.Name]只能靠发出一连串痛苦的呜咽和低沉的抽泣来让[npc2.name]知道[npc.she]渴望被放。",
+								"即使[npc.her]嘴被堵住了，[npc.nameIsFull]仍然成功地发出一连串痛苦的呜咽与低沉的啜泣来让[npc2.name]知道[npc.she]希望现在这件事停下来。");
 				}
 			}
 			
 			if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
 				return UtilText.returnStringAtRandom(
-						"Not wanting to wake [npc2.name] up, [npc.name] quietly [npc.verb(tease)], ",
-						"Making sure to keep [npc.her] voice down so as to not wake [npc2.name] up, [npc.name] [npc.verb(whisper)], ")
+						"[npc.name]不想吵醒[npc2.name]，悄悄地玩笑道，",
+						"[npc.name]压低声音以免吵醒[npc2.name]，轻声低语道，")
 						+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 			}
 			
@@ -132,18 +132,18 @@ public class PlayerTalk {
 				switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 					case SUB_EAGER:
 						return UtilText.returnStringAtRandom(
-								"Turning your head to look back at [npc2.name], [npc.a_moan+] escapes from between your [npc.lips+], ",
-								"You turn your head to look back at [npc2.name], letting out [npc.a_moan+] before calling out, ")
+								"你往后转头去看[npc2.name]，[npc.lips+]中传出一阵[npc.a_moan+]，",
+								"你转过头去看[npc2.name]，发出[npc.a_moan+]随后大喊，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					case SUB_RESISTING:
 						return UtilText.returnStringAtRandom(
-								"Desperately trying to crawl away from [npc2.name], [npc2.she] grabs your [npc.hips] and pulls you back as you [npc.sob], ",
-								"Trying to crawl away from [npc2.name], [npc2.she] holds you firmly in place as you let out [npc.a_sob+], ")
+								"你绝望地尝试去躲开[npc2.name]，然而[npc2.she]抓住你的[npc.hips]并在你[npc.sob]时一把把你拉回，",
+								"你尝试躲开[npc2.name]，然而[npc2.she]在你发出[npc.a_sob+]时紧紧地抓住了你，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					default: 
 						return UtilText.returnStringAtRandom(
-								"Turning your head to look back at [npc2.name], [npc.a_moan] escapes from between your [npc.lips+], ",
-								"You turn your head to look back at [npc2.name], letting out [npc.a_moan] before calling out, ")
+								"你转过头去看[npc2.name]，[npc.a_moan]从你的[npc.lips+]中传出，",
+								"你转过头去看[npc2.name]，发出[npc.a_moan]后大喊，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 				}
 				
@@ -152,18 +152,18 @@ public class PlayerTalk {
 				switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 					case DOM_GENTLE:
 						return UtilText.returnStringAtRandom(
-								"You look down at [npc2.name] as [npc2.she] kneels beneath you, ",
-								"Looking down at [npc2.name], you sigh, ")
+								"你俯视着跪在你身下的[npc2.name]，",
+								"你俯视着[npc2.name]，叹了一口气，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					case DOM_ROUGH:
 						return UtilText.returnStringAtRandom(
-								"You grin down at [npc2.name] as [npc2.she] kneels beneath you, ",
-								"Looking down at [npc2.name], you growl, ")
+								"你看着跪在你身下的[npc2.name]，对[npc2.she]咧嘴笑笑，",
+								"你俯视着[npc2.name]，咆哮道，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					default: 
 						return UtilText.returnStringAtRandom(
-								"You look down at [npc2.name] as [npc2.she] kneels beneath you, ",
-								"Looking down at [npc2.name], you [npc.moan], ")
+								"你俯视着跪在你身下的[npc2.name]，",
+								"你俯视着[npc2.name]，[npc.moan]，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 				}
 				
@@ -172,18 +172,18 @@ public class PlayerTalk {
 				switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 					case SUB_EAGER:
 						return UtilText.returnStringAtRandom(
-								"You glance up at [npc2.name] as you [npc.moan] up to [npc2.herHim], ",
-								"Looking up at [npc2.name] standing above you, you [npc.moan] up to [npc2.herHim], ")
+								"你一边抬起眼看[npc2.name]，一边对[npc2.herHim][npc.moan]，",
+								"你看着上边的[npc2.name]，对[npc2.herHim][npc.moan]起来，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					case SUB_RESISTING:
 						return UtilText.returnStringAtRandom(
-								"You glance up at [npc2.name] before letting out [npc.a_sob+], ",
-								"Looking up at [npc2.name] standing above you, you let out [npc.a_sob+], ")
+								"你抬眼看[npc2.name]，发出[npc.a_sob+]，",
+								"你抬头看着在你之上的[npc2.name]，发出[npc.a_sob+]，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					default: 
 						return UtilText.returnStringAtRandom(
-								"You glance up at [npc2.name] as you speak up to [npc2.herHim], ",
-								"Looking up at [npc2.name] standing above you, you speak up to [npc2.herHim], ")
+								"你抬眼看着[npc2.name]，开口对[npc2.herHim]说话，",
+								"你抬头看着上面的[npc2.name]，开口对[npc2.herHim]说话，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 				}
 				
@@ -191,18 +191,18 @@ public class PlayerTalk {
 				switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 					case DOM_GENTLE:
 						return UtilText.returnStringAtRandom(
-								"You look back at [npc2.name] as [npc2.she] lies beneath you, and speak down to [npc2.herHim], ",
-								"Looking back at [npc2.name] as [npc2.she] lies beneath you, you speak down to [npc2.herHim], ")
+								"[npc2.name]躺在你身下，你回过头去看[npc2.she]，并对[npc2.herHim]说，",
+								"[npc2.name]躺在你下面，你回过头看[npc2.she]，并对[npc2.herHim]说，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					case DOM_ROUGH:
 						return UtilText.returnStringAtRandom(
-								"You look back at [npc2.name] as [npc2.she] lies beneath you, and growl down to [npc2.herHim], ",
-								"Looking back at [npc2.name] as [npc2.she] lies beneath you, you growl down to [npc2.herHim], ")
+								"[npc2.name]躺在你下面，你回过头看[npc2.she]，并对[npc2.herHim]咆哮，",
+								"[npc2.name]躺在你下面，你回过头看[npc2.she]，并对[npc2.herHim]咆哮，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					default: 
 						return UtilText.returnStringAtRandom(
-								"You look back at [npc2.name] as [npc2.she] lies beneath you, and [npc.moanVerb] down to [npc2.herHim], ",
-								"Looking back at [npc2.name] as [npc2.she] lies beneath you, you [npc.moanVerb] down to [npc2.herHim], ")
+								"[npc2.name]躺在你下面，你回过头看[npc2.she]，并对[npc2.herHim][npc.moanVerb]，",
+								"[npc2.name]躺在你下面，你回过头看[npc2.she]，对[npc2.herHim][npc.moanVerb]，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 				}
 				
@@ -211,28 +211,28 @@ public class PlayerTalk {
 				switch(Main.sex.getSexPace(Main.game.getPlayer())) {
 					case DOM_GENTLE:
 						return UtilText.returnStringAtRandom(
-								"You let out a soft [npc.moan], ",
-								"You gently sigh, ")
+								"你发出轻柔的[npc.moan]，",
+								"你温柔地叹了口气，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					case DOM_ROUGH:
 						return UtilText.returnStringAtRandom(
-								"You let out a rough growl before speaking out loud, ",
-								"You make a threatening growling noise before speaking, ")
+								"你粗暴地咆哮，随后大声说，",
+								"你威胁地咆哮，而后说道，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					case SUB_EAGER:
 						return UtilText.returnStringAtRandom(
-								"A desperate [npc.moan] escapes from between your [npc.lips+], ",
-								"You let out a desperate [npc.moan] before addressing [npc2.name], ")
+								"一阵渴望的[npc.moan]从你的[npc.lips+]滑出，",
+								"你发出迷乱的[npc.moan]，随后对[npc2.name]说，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					case SUB_RESISTING:
 						return UtilText.returnStringAtRandom(
-								"A protesting whine escapes from between your [npc.lips+] as you struggle against [npc2.name], ",
-								"You let out a distressed whining noise as you try to shuffle away from [npc2.name], ")
+								"你反抗着[npc2.name]，[npc.lips+]中流出抗议的呜咽声，",
+								"你发出沉闷的呜咽，想从[npc2.name]身边逃离，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 					default: // DOM_NORMAL, SUB_NORMAL:
 						return UtilText.returnStringAtRandom(
-								"[npc.A_moan] escapes from between your [npc.lips+], ",
-								"You let out [npc.a_moan] before addressing [npc2.name], ")
+								"一声[npc.A_moan]从[npc.lips+]间爆发而出，",
+								"你发出一声[npc.a_moan]，对着[npc2.name]说道，")
 								+ Main.sex.getDirtyTalk(Main.game.getPlayer());
 				}
 			
@@ -260,39 +260,39 @@ public class PlayerTalk {
 			switch(sexPace) {
 				case DOM_GENTLE:
 					return(
-							"[npc2.Name] frowns as you beg for [npc2.herHim] to use your "+areaDescription+", and firmly replies, "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，眉头紧皱，不容置疑地回应道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(I don't think so. Don't ask for that again.)]",
-											"[npc2.speech(Don't tell me to use your "+areaDescription+", and don't ask me for that again.)]"));
+											"[npc2.speech(那可不行。别再说了。)]",
+											"[npc2.speech(别再叫我用你的"+areaDescription+"了，之后不准再说。)]"));
 					
 				case DOM_NORMAL:
 					return(
-							"[npc2.Name] frowns as you beg for [npc2.herHim] to use your "+areaDescription+", and with a menacing tone in [npc2.her] voice, [npc2.she] growls at you, "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，眉头一皱，气势汹汹地向你低吟道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Don't try and tell me to use your "+areaDescription+"! Keep those suggestions to yourself next time!)]",
-											"[npc2.speech(I'll use whatever part of you I feel like! Don't ask me for that again!)]"));
+											"[npc2.speech(别以为能让我用你的"+areaDescription+"！把这些胡话留给你自己吧！)]",
+											"[npc2.speech(我愿意怎么用你就怎么用！别再说了！)]"));
 					
 				case DOM_ROUGH:
 					return(
-							"[npc2.Name] frowns as you beg for [npc2.herHim] to use your "+areaDescription+", and with a menacing snarl, [npc2.she] snaps back, "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，眉头紧皱，[npc2.she]气势汹汹地立刻反驳道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Shut up, you filthy whore! I'm not listening to some slut who begs to have [npc.her( )] "+areaDescription+" used!)]",
-											"[npc2.speech(I'll use whatever part of you I feel like, you fucking slut! Don't ask me for that again!)]"));
+											"[npc2.speech(闭嘴，你个贱货！你这种骚婊子想要"+areaDescription+"挨操，我偏就不听！)]",
+											"[npc2.speech(你的身子我想用哪儿就用哪儿，你个臭婊子！别再说了！)]"));
 					
 				case SUB_NORMAL:
 				case SUB_EAGER:
 					return(
-							"[npc2.Name] frowns as you beg for [npc2.herHim] to use your "+areaDescription+", and with a disappointed whine, [npc2.she] replies, "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，眉头一皱，失望地咕哝了一声，回应道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(I don't really want to use your "+areaDescription+" though...)]",
-											"[npc2.speech(But I don't want to use your "+areaDescription+"...)]"));
+											"[npc2.speech(我一点也不想用你的"+areaDescription+"……)]",
+											"[npc2.speech(可是我不想用你的"+areaDescription+"啊……)]"));
 					
 				case SUB_RESISTING:
 					return(
-							"[npc2.Name] lets out [npc.a_sob] as you beg for [npc2.herHim] to use your "+areaDescription+", and, struggling against you, [npc2.she] cries out, "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，[npc.a_sob]着拼命反抗，哭喊道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Please, I don't want to! Let me go already!)]",
-											"[npc2.speech(No! Get your "+areaDescription+" away from me!)]"));
+											"[npc2.speech(求你了，我不想啊！快放了我！)]",
+											"[npc2.speech(不要！把你的"+areaDescription+"拿开！)]"));
 					
 			}
 			
@@ -300,39 +300,39 @@ public class PlayerTalk {
 			switch(sexPace) {
 				case DOM_GENTLE:
 					return(
-							"[npc2.Name] grins as you beg for [npc2.herHim] to use your "+areaDescription+", before softly [npc2.moaning], "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，顿时眉开眼笑，轻声[npc2.moaning]着，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Well, if that's what you really want, I'll use your "+areaDescription+", sure...)]",
-											"[npc2.speech(You want me to use your "+areaDescription+", hmm? Well, if you insist...)]"));
+											"[npc2.speech(哎呀，如果你真这么想，那当然，我就用用你的"+areaDescription+"……)]",
+											"[npc2.speech(想让我用你的"+areaDescription+"，哼……既然你这么坚持……)]"));
 					
 				case DOM_NORMAL:
 					return(
-							"[npc2.Name] grins as you beg for [npc2.herHim] to use your "+areaDescription+", before [npc2.moaning], "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，顿时眉开眼笑，[npc2.moaning]着，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Mmm, if that's what you want, I'll use your "+areaDescription+"!)]",
-											"[npc2.speech(You want me to use your "+areaDescription+", huh?! That's fine with me!)]"));
+											"[npc2.speech(姆嗯，既然你想要，那我就用用你的"+areaDescription+"！)]",
+											"[npc2.speech(想让我用你的"+areaDescription+"，嗯？我倒是不介意！)]"));
 					
 				case DOM_ROUGH:
 					return(
-							"[npc2.Name] grins as you beg for [npc2.herHim] to use your "+areaDescription+", before snarling, "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，顿时眉开眼笑，咆哮道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(What a filthy slut! Desperate to have your "+areaDescription+" fucked, huh?! Well, I don't mind going along with that!)]",
-											"[npc2.speech(You dirty whore, begging to have your "+areaDescription+" used! I'll give you what you want, slut!)]"));
+											"[npc2.speech(真是个贱货！忍不住想让"+areaDescription+"挨操了是吧？！行，我倒是愿意玩玩！)]",
+											"[npc2.speech(你个下流的妓女，求着我用你的"+areaDescription+"！那就让你如愿以偿，骚婊子！)]"));
 					
 				case SUB_NORMAL:
 				case SUB_EAGER:
 					return(
-							"[npc2.Name] grins as you beg for [npc2.herHim] to use your "+areaDescription+", before [npc2.moaning], "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，顿时眉开眼笑，[npc2.moaning]着，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Mmm, yes, I'll use your "+areaDescription+"...)]",
-											"[npc2.speech(Of course I'll use your "+areaDescription+"!)]"));
+											"[npc2.speech(姆嗯，好啊，那我就用用你的"+areaDescription+"吧……)]",
+											"[npc2.speech(我当然可以用你的"+areaDescription+"了！)]"));
 					
 				case SUB_RESISTING:
 					return(
-							"[npc2.Name] lets out [npc.a_sob] as you beg for [npc2.herHim] to use your "+areaDescription+", and, struggling against you, [npc2.she] cries out, "
+							"[npc2.Name]看到你恳求[npc2.herHim]去使用你的"+areaDescription+"，[npc.a_sob]着拼命反抗，哭喊道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Please, I don't want to! Let me go already!)]",
-											"[npc2.speech(No! Get your "+areaDescription+" away from me!)]"));
+											"[npc2.speech(求你了，我不想啊！快放了我！)]",
+											"[npc2.speech(不要！把你的"+areaDescription+"拿开！)]"));
 					
 			}
 		}
@@ -344,39 +344,39 @@ public class PlayerTalk {
 			switch(sexPace) {
 				case DOM_GENTLE:
 					return(
-							"[npc2.Name] frowns as you beg to use [npc2.her] "+areaDescription+", and firmly replies, "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，眉头紧皱，不容置疑地回应道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(I don't think so. Don't ask for that again.)]",
-											"[npc2.speech(Don't ask me to use my "+areaDescription+", and don't ask me for that again.)]"));
+											"[npc2.speech(那可不行。别再说了。)]",
+											"[npc2.speech(别再求着要用我的"+areaDescription+"了，之后不准再说。)]"));
 					
 				case DOM_NORMAL:
 					return(
-							"[npc2.Name] frowns as you beg to use [npc2.her] "+areaDescription+", and with a menacing tone in [npc2.her] voice, [npc2.she] growls at you, "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，眉头紧皱，气势汹汹地向你低吟道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Don't try and tell me to use my "+areaDescription+"! Keep those suggestions to yourself next time!)]",
-											"[npc2.speech(I'll use whatever parts I feel like! Don't ask me for that again!)]"));
+											"[npc2.speech(别以为能用我的"+areaDescription+"！把这些胡话留给自己吧！)]",
+											"[npc2.speech(我想用哪里我说了算！别再说了！)]"));
 					
 				case DOM_ROUGH:
 					return(
-							"[npc2.Name] frowns as you beg to use [npc2.her] "+areaDescription+", and with a menacing snarl, [npc2.she] snaps back, "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，眉头紧皱，[npc2.she]气势汹汹地立刻反驳道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Shut up, you filthy whore! I'm not listening to some slut who begs to get some "+areaDescription+" action!)]",
-											"[npc2.speech(I'll use whatever parts I feel like, you fucking slut! Don't ask me for that again!)]"));
+											"[npc2.speech(闭嘴，你个贱货！你这种骚婊子想用"+areaDescription+"？我偏就不听！)]",
+											"[npc2.speech(我想用哪儿就用哪儿，你个臭婊子！别再说了！)]"));
 					
 				case SUB_NORMAL:
 				case SUB_EAGER:
 					return(
-							"[npc2.Name] frowns as you beg to use [npc2.her] "+areaDescription+", and with a disappointed whine, [npc2.she] replies, "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，眉头一皱，失望地咕哝了一声，回应道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(I don't really want to use my "+areaDescription+" though...)]",
-											"[npc2.speech(But I don't want to use my "+areaDescription+"...)]"));
+											"[npc2.speech(可我一点也不想让你用"+areaDescription+"……)]",
+											"[npc2.speech(可是我不想让你用"+areaDescription+"啊……)]"));
 					
 				case SUB_RESISTING:
 					return(
-							"[npc2.Name] lets out [npc.a_sob] as you beg to use [npc2.her] "+areaDescription+", and, struggling against you, [npc2.she] cries out, "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，[npc.a_sob]着拼命反抗，哭喊道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Please, I don't want to! Let me go already!)]",
-											"[npc2.speech(No! Get your "+areaDescription+" away from me!)]"));
+											"[npc2.speech(求你了，我不想啊！快放了我！)]",
+											"[npc2.speech(不要！把你的"+areaDescription+"拿开！)]"));
 					
 			}
 			
@@ -384,39 +384,39 @@ public class PlayerTalk {
 			switch(sexPace) {
 				case DOM_GENTLE:
 					return(
-							"[npc2.Name] grins as you beg to use [npc2.her] "+areaDescription+", before softly [npc2.moaning], "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，顿时眉开眼笑，轻声[npc2.moaning]着，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Sure thing, I'll use my "+areaDescription+"!)]",
-											"[npc2.speech(Of course I'll use my "+areaDescription+"! Come here...)]"));
+											"[npc2.speech(没问题啊，那就用我的"+areaDescription+"吧！)]",
+											"[npc2.speech(我当然可以用上"+areaDescription+"了！那就来吧……)]"));
 					
 				case DOM_NORMAL:
 					return(
-							"[npc2.Name] grins as you beg to use [npc2.her] "+areaDescription+", before [npc2.moaning], "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，顿时眉开眼笑，[npc2.moaning]着，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Sure thing, I'll use my "+areaDescription+"!)]",
-											"[npc2.speech(Of course I'll use my "+areaDescription+"!)]"));
+											"[npc2.speech(没问题啊，那就用我的"+areaDescription+"吧！)]",
+											"[npc2.speech(没问题啊，那就用我的"+areaDescription+"吧！)]"));
 					
 				case DOM_ROUGH:
 					return(
-							"[npc2.Name] grins as you beg to use [npc2.her] "+areaDescription+", before snarling, "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，顿时眉开眼笑，咆哮道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(What a filthy slut! Desperate for a taste of my "+areaDescription+", huh?! Well, I don't mind going along with that!)]",
-											"[npc2.speech(You dirty whore, begging for a taste of my "+areaDescription+"! I'll give you what you want, slut!)]"));
+											"[npc2.speech(真是个贱货！忍不住想尝尝我"+areaDescription+"的滋味了吧？！行，我倒是愿意玩玩！)]",
+											"[npc2.speech(你个下流的妓女，求着想尝一番我"+areaDescription+"的味道！那就让你如愿以偿，骚婊子！)]"));
 					
 				case SUB_NORMAL:
 				case SUB_EAGER:
 					return(
-							"[npc2.Name] grins as you beg to use [npc2.her] "+areaDescription+", before [npc2.moaning], "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，顿时眉开眼笑，[npc2.moaning]着，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Sure thing, I'll use my "+areaDescription+"!)]",
-											"[npc2.speech(Of course I'll use my "+areaDescription+"!)]"));
+											"[npc2.speech(没问题啊，那就用我的"+areaDescription+"吧！)]",
+											"[npc2.speech(没问题啊，那就用我的"+areaDescription+"吧！)]"));
 					
 				case SUB_RESISTING:
 					return(
-							"[npc2.Name] lets out [npc.a_sob] as you beg to use [npc2.her] "+areaDescription+", and, struggling against you, [npc2.she] begs, "
+							"[npc2.Name]看到你求着要用[npc2.her]的"+areaDescription+"，[npc.a_sob]着拼命反抗，哀求道，"
 									+UtilText.returnStringAtRandom(
-											"[npc2.speech(Please, I don't want to! Let me go already!)]",
-											"[npc2.speech(No! Get your "+areaDescription+" away from me!)]"));
+											"[npc2.speech(求你了，我不想啊！快放了我！)]",
+											"[npc2.speech(不要！把你的"+areaDescription+"拿开！)]"));
 					
 			}
 		}
@@ -433,15 +433,15 @@ public class PlayerTalk {
 
 		@Override
 		public String getActionTitle() {
-			return "Offer pussy";
+			return "献上小穴";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Thrust your hips out in an attempt to entice [npc2.name] into using your pussy.";
+				return "撅起屁股，努力引诱[npc2.name]使用你的小穴。";
 			}
-			return "Tell [npc2.name] that you'd like [npc2.herHim] to use your pussy.";
+			return "告诉[npc2.name]，你想让[npc2.herHim]使用你的小穴。";
 		}
 
 		@Override
@@ -460,21 +460,21 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to thrusting [npc.her] [npc.hips] out at [npc2.name] in an attempt to get [npc2.herHim] to use [npc.her] [npc.pussy+].",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply making a suggestive move with [npc.her] [npc.hips] in order to entice [npc2.name] into using [npc.her] [npc.pussy+].")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力朝[npc2.herHim]扭起[npc.hips]，让[npc2.herHim]来使用自己[npc.pussy+]。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能扭起[npc.hips]，来吸引[npc2.name]使用自己[npc.pussy+]。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, use my pussy!)]",
-										"[npc.speech(Use my little pussy, please!)]")
+										"[npc.speech(求求你，求求你玩弄我的小穴！)]",
+										"[npc.speech(玩弄我的小穴……求你了！)]")
 								+"<br/><br/>");
 			}
 			
 			UtilText.nodeContentSB.append(getOfferResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, null, SexAreaOrifice.VAGINA)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"pussy"));
+					"小穴"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -500,15 +500,15 @@ public class PlayerTalk {
 
 		@Override
 		public String getActionTitle() {
-			return "Request pussy";
+			return "寻求小穴";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Move closer to [npc2.namePos] pussy in an attempt to show [npc2.herHim] that that's what you want.";
+				return "更贴近[npc2.namePos]的小穴，来示意[npc2.herHim]你想要什么。";
 			}
-			return "Tell [npc2.name] that you'd like to use [npc2.her] pussy.";
+			return "告诉[npc2.name]你想使用[npc2.her]的小穴。";
 		}
 
 		@Override
@@ -529,21 +529,21 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to trying to move closer to [npc2.namePos] [npc2.pussy+] in an attempt to show [npc2.herHim] that that's what [npc.sheIs] interested in.",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply moving closer to [npc2.namePos] [npc2.pussy+] as [npc.she] [npc.verb(try)] to indicate that that's what [npc.she] [npc.verb(want)].")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力靠近[npc2.namePos][npc2.pussy+]，示意[npc2.herHim]自己对什么感兴趣。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能靠近[npc2.namePos][npc2.pussy+]，来示意自己想要什么。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, I want to use your pussy!)]",
-										"[npc.speech(I want to use your pussy, please!)]")
+										"[npc.speech(求你了，我想操你的穴！)]",
+										"[npc.speech(我想用用你的小穴，让我用嘛！)]")
 								+"<br/><br/>");
 			}
 			
 			UtilText.nodeContentSB.append(getRequestResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, null)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"pussy"));
+					"小穴"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -569,15 +569,15 @@ public class PlayerTalk {
 		
 		@Override
 		public String getActionTitle() {
-			return "Offer ass";
+			return "献上屁股";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Thrust your hips back in an attempt to entice [npc2.name] into using your ass.";
+				 return "撅起屁股，努力引诱[npc2.name]使用你的屁股。";
 			}
-			return "Tell [npc2.name] that you'd like [npc2.herHim] to use your ass.";
+			return "告诉[npc2.name]，你想让[npc2.herHim]使用你的屁股。";
 		}
 
 		@Override
@@ -595,21 +595,21 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to thrusting [npc.her] [npc.hips] back at [npc2.name] in an attempt to get [npc2.herHim] to use [npc.her] [npc.ass+].",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply making a suggestive backwards move with [npc.her] [npc.hips] in order to entice [npc2.name] into using [npc.her] [npc.ass+].")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力朝[npc2.herHim]扭起[npc.hips]，让[npc2.herHim]来使用自己[npc.ass+]。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能向后扭起[npc.hips]，来吸引[npc2.name]使用自己[npc.ass+]。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, use my ass!)]",
-										"[npc.speech(Use my ass, please!)]")
+										"[npc.speech(来嘛！来使用我的屁股！)]",
+										"[npc.speech(用用我的屁股，求求你了！)]")
 								+"<br/><br/>");
 			}
 			
 			UtilText.nodeContentSB.append(getOfferResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, null, SexAreaOrifice.ANUS)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"ass"));
+					"屁股"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -650,15 +650,15 @@ public class PlayerTalk {
 
 		@Override
 		public String getActionTitle() {
-			return "Request anal";
+			return "寻求肛门";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Move closer to [npc2.namePos] ass in an attempt to show [npc2.herHim] that that's what you want.";
+				return "更贴近[npc2.namePos]的屁股，来示意[npc2.herHim]你想要什么。";
 			}
-			return "Tell [npc2.name] that you'd like to use [npc2.her] asshole.";
+			return "告诉[npc2.name]你想使用[npc2.her]的屁眼。";
 		}
 
 		@Override
@@ -677,21 +677,21 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to trying to move closer to [npc2.namePos] [npc2.ass+] in an attempt to show [npc2.herHim] that that's what [npc.sheIs] interested in.",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply moving closer to [npc2.namePos] [npc2.ass+] as [npc.she] [npc.verb(try)] to indicate that that's what [npc.she] [npc.verb(want)].")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力靠近[npc2.namePos][npc2.ass+]，示意[npc2.herHim]自己对什么感兴趣。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能靠近[npc2.namePos][npc2.ass+]，来示意自己想要什么。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, I want to use your ass!)]",
-										"[npc.speech(I want to use your asshole, please!)]")
+										"[npc.speech(求你了，我想用用你的屁股！)]",
+										"[npc.speech(我想用你的屁眼，求你了！)]")
 								+"<br/><br/>");
 			}
 			
 			UtilText.nodeContentSB.append(getRequestResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, null)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"ass"));
+					"屁股"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -727,12 +727,12 @@ public class PlayerTalk {
 		
 		@Override
 		public String getActionTitle() {
-			return "Offer oral";
+			return "提供口交";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Tell [npc2.name] that you'd like [npc2.herHim] to use your mouth.";
+			return "告诉[npc2.name]，你想让[npc2.herHim]使用你的嘴。";
 		}
 
 		@Override
@@ -747,16 +747,16 @@ public class PlayerTalk {
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+			UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 							+UtilText.returnStringAtRandom(
-									"[npc.speech(Please, use my mouth!)]",
-									"[npc.speech(Use my mouth, please!)]")
+									"[npc.speech(来嘛，用我的嘴！)]",
+									"[npc.speech(用我的嘴，求你了！)]")
 							+"<br/><br/>");
 			
 			UtilText.nodeContentSB.append(getOfferResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, null, SexAreaOrifice.MOUTH)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"mouth"));
+					"嘴"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -794,15 +794,15 @@ public class PlayerTalk {
 		
 		@Override
 		public String getActionTitle() {
-			return "Request oral";
+			return "要求口交";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Move closer to [npc2.namePos] mouth in an attempt to show [npc2.herHim] that that's what you want.";
+				return "更贴近[npc2.namePos]的嘴，来示意[npc2.herHim]你想要什么。";
 			}
-			return "Tell [npc2.name] that you want to use [npc2.her] mouth.";
+			return "告诉[npc2.name]你想使用[npc2.her]的嘴。";
 		}
 
 		@Override
@@ -821,21 +821,21 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to trying to move closer to [npc2.namePos] [npc2.face] in an attempt to show [npc2.herHim] that [npc.sheIs] interested in using [npc2.her] mouth.",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply moving closer to [npc2.namePos] [npc2.face] as [npc.she] [npc.verb(try)] to indicate that [npc.sheIs] [npc.verb(want)] to use [npc2.her] mouth.")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力靠近[npc2.namePos]的[npc2.face]，示意[npc2.herHim]自己对什么感兴趣。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能靠近[npc2.namePos]的[npc2.face]，来示意自己想要什么。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, I want you to use your mouth!)]",
-										"[npc.speech(Use your mouth, please!)]")
+										"[npc.speech(求你了，我想用你的嘴！)]",
+										"[npc.speech(用用你的嘴，求求你了！)]")
 								+"<br/><br/>");
 			}
 			
 			UtilText.nodeContentSB.append(getRequestResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, null)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"mouth"));
+					"嘴"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -873,15 +873,15 @@ public class PlayerTalk {
 		
 		@Override
 		public String getActionTitle() {
-			return "Offer nipple-sex";
+			return "献上乳头性交";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Thrust your chest out in an attempt to entice [npc2.name] into using your [npc.nipples+].";
+				return "挺起胸部，努力引诱[npc2.name]来操你[npc.nipples+]。";
 			}
-			return "Tell [npc2.name] that you'd like [npc2.herHim] to use your [npc.nipples+].";
+			return "告诉[npc2.name]，你想让[npc2.herHim]使用你[npc.nipples+]。";
 		}
 
 		@Override
@@ -900,14 +900,14 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to thrusting [npc.her] chest out at [npc2.name] in an attempt to get [npc2.herHim] to use [npc.her] [npc.nipples+].",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply making a suggestive move with [npc.her] [npc.chest] in order to entice [npc2.name] into using [npc.her] [npc.nipples+].")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力朝[npc2.name]摇起胸部，让[npc2.herHim]来使用那[npc.nipples+]。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能摇起[npc.chest]，来吸引[npc2.name]使用那[npc.nipples+]。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, fuck my nipples!)]",
-										"[npc.speech(Fuck my nipples, please!)]")
+										"[npc.speech(来嘛。来操我的乳头！)]",
+										"[npc.speech(操我的乳头嘛，求你了！)]")
 								+"<br/><br/>");
 			}
 									
@@ -950,15 +950,15 @@ public class PlayerTalk {
 		
 		@Override
 		public String getActionTitle() {
-			return "Offer paizuri";
+			return "献上乳交";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Thrust your chest out in an attempt to entice [npc2.name] into fucking your [npc.breasts+].";
+				return "挺起胸部，努力引诱[npc2.name]来操你[npc.breasts+]。";
 			}
-			return "Tell [npc2.name] that you'd like [npc2.herHim] to fuck your [npc.breasts+].";
+			return "告诉[npc2.name]，你想让[npc2.herHim]使用你[npc.breasts+]。";
 		}
 
 		@Override
@@ -979,21 +979,21 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to thrusting [npc.her] chest out at [npc2.name] in an attempt to get [npc2.herHim] to use [npc.her] [npc.breasts+].",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply making a suggestive move with [npc.her] [npc.chest] in order to entice [npc2.name] into using [npc.her] [npc.breasts+].")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力朝[npc2.name]摇起胸部，让[npc2.herHim]来使用那[npc.breasts+]。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能摇起[npc.chest]，来吸引[npc2.name]使用那[npc.breasts+]。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, fuck my tits!)]",
-										"[npc.speech(Fuck my breasts, please!)]")
+										"[npc.speech(求你了，操我的奶子！)]",
+										"[npc.speech(操我的胸部好不好！)]")
 								+"<br/><br/>");
 			}
 			
 			UtilText.nodeContentSB.append(getOfferResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, null, SexAreaOrifice.BREAST)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"breasts"));
+					"胸部"));
 			
 			return UtilText.nodeContentSB.toString();
 		}
@@ -1029,15 +1029,15 @@ public class PlayerTalk {
 		
 		@Override
 		public String getActionTitle() {
-			return "Offer naizuri";
+			return "献上贫乳乳交";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-				return "Thrust your chest out in an attempt to entice [npc2.name] into grinding [npc2.her] [npc2.cock] up against your chest.";
+				return "挺起胸部，努力引诱[npc2.name]把[npc2.cock]插进来。";
 			}
-			return "Tell [npc2.name] that you'd like [npc2.herHim] to grind [npc2.her] [npc2.cock] up against your chest.";
+			return "告诉[npc2.name]，你想让[npc2.her]把[npc2.cock]插入胸部。";
 		}
 
 		@Override
@@ -1058,21 +1058,21 @@ public class PlayerTalk {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
 				UtilText.nodeContentSB.append(
 						UtilText.returnStringAtRandom(
-								"As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to thrusting [npc.her] chest out at [npc2.name] in an attempt to get [npc2.herHim] to use it.",
-								"With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply making a suggestive move with [npc.her] [npc.chest] in order to entice [npc2.name] into using it.")
+								"因为[npc.namePos]的嘴被锁住了，[npc.she]只得努力朝[npc2.name]摇起胸部，让[npc2.herHim]来使用它。",
+								"因为嘴被堵住了，所以[npc.name]说不出想法，只能摇起[npc.chest]，来吸引[npc2.name]使用它。")
 						+"<br/><br/>");
 			} else {
-				UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+				UtilText.nodeContentSB.append("你摆出最为可怜的表情，哀求[npc2.name]，"
 								+UtilText.returnStringAtRandom(
-										"[npc.speech(Please, grind your cock up against my chest!)]",
-										"[npc.speech(Grind on my chest, please!)]")
+										"[npc.speech(来嘛，来用肉棒蹭我的胸部！)]",
+										"[npc.speech(蹭蹭我的胸，求你了！)]")
 								+"<br/><br/>");
 			}
 			
 			UtilText.nodeContentSB.append(getOfferResponse(
 					((NPC)Main.sex.getCharacterTargetedForSexAction(this)).getSexBehaviourDeniesRequests(Main.game.getPlayer(), new SexType(SexParticipantType.NORMAL, null, SexAreaOrifice.BREAST)),
 					Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)),
-					"chest"));
+					"胸部"));
 			
 			return UtilText.nodeContentSB.toString();
 		}

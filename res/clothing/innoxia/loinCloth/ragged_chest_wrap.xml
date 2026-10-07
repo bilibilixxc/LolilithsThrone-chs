@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>5</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[ragged chest wrap]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[ragged chest wraps]]></namePlural>
-		<description><![CDATA[A thick strip of ragged, tattered cloth, that's been shaped in such a way so as to be wrapped around the chest in order to support a pair of breasts.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[破烂裹胸布]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[破烂裹胸布]]></namePlural>
+		<description><![CDATA[一块厚实的破布，已经磨损破烂，被剪裁成一种可以包裹在胸部以提供支撑。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot>
@@ -19,10 +19,10 @@
 			<category id="strp" priority="1">
 				<categoryName><![CDATA[Strap]]></categoryName>
 				<sticker id="shldr" priority="1" defaultSticker="true" zLayer="-1">
-					<stickerName><![CDATA[Shoulder]]></stickerName>
+					<stickerName><![CDATA[肩膀]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="3"><![CDATA[ A single loop has been incorporated into the crude design, which is meant to be slung over one shoulder.]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[简陋的设计中加入了一个环，用以挂在一个肩膀上。]]></descriptionModification>
 					<imageName>ragged_chest_wrap_strap.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -30,7 +30,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="1">
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -82,27 +82,27 @@
 	</coreAttributes>
 	
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the ragged chest wrap down over [npc.her] head and [npc.verb(fit)] it into place over [npc.her] [npc.breasts].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the ragged chest wrap down over [npc2.namePos] head and [npc.verb(fit)] it into place over [npc2.her] [npc2.breasts].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the ragged chest wrap down over [npc2.namePos] head and [npc.verb(fit)] it into place over [npc2.her] [npc2.breasts].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将破烂裹胸布拉下头部，将其合适地安置在[npc.breasts]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将破烂裹胸布拉下[npc2.namePos]的头部，将其合适地安置在[npc2.her]的[npc2.breasts]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将破烂裹胸布拽下[npc2.namePos]的头部，将其待在[npc2.her]的[npc2.breasts]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] ragged chest wrap.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] ragged chest wrap.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] ragged chest wrap.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下了[npc.her]的破烂裹胸布。
+]]></self>
+    <other><![CDATA[
+[npc.Name]脱下了[npc2.namePos]的破烂裹胸布。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地拽下了[npc2.namePos]的破烂裹胸布。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

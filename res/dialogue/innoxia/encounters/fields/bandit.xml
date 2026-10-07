@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="start">
@@ -7,7 +7,7 @@
 			[#attacker.setLocation(pc, true)]
 			[#flags.setFlag(FLAG_innoxia_fields_bandit_talked, false)]
 		]]></preParsingEffects>
-		<title><![CDATA[Bandit Attack]]></title>
+		<title><![CDATA[匪徒来袭]]></title>
 		<author><![CDATA[Innoxia]]></author>
 		<content folderPath="txt/encounters/fields/bandit">START</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -18,8 +18,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to pay the bandit and prepare to defend yourself!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝向强盗付钱，准备自卫！]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<combatVariables enabled="true">
@@ -30,8 +30,8 @@
 						<enemy leader="true"><![CDATA[attacker]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[Refusing to hand over your money, you tell the bandit that [attacker.sheIs] making a mistake as you prepare to defend yourself.]]></combatant>
-						<combatant id="attacker"><![CDATA[Flashing you a wicked smirk, the bandit sneers, [attacker.speech(I'll make you pay, one way or another!)]]]></combatant>
+						<combatant id="pc"><![CDATA[你拒绝交出钱，告诉强盗[attacker.sheIs]摊上事了，准备自卫。]]></combatant>
+						<combatant id="attacker"><![CDATA[强盗向你露出邪恶的冷笑，讥讽道：[attacker.speech(你会付钱的，无论如何！)]]]></combatant>
 					</openingDescriptions>
 				</combatVariables>
 			</response>
@@ -39,8 +39,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Pay up (#IF(pc.getMoney()>=attacker.getPaymentDemand())[style.moneyFormat([#attacker.getPaymentDemand()], span)]#ELSE[style.moneyFormatUncoloured([#attacker.getPaymentDemand()], span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=attacker.getPaymentDemand()) Hand over the [style.intToString([#attacker.getPaymentDemand()])] flames which the bandit is asking for. #ELSE You can't afford to pay off the bandit... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[留下买路钱 (#IF(pc.getMoney()>=attacker.getPaymentDemand())[style.moneyFormat([#attacker.getPaymentDemand()], span)]#ELSE[style.moneyFormatUncoloured([#attacker.getPaymentDemand()], span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=attacker.getPaymentDemand())交出强盗要的[style.intToString([#attacker.getPaymentDemand()])]个火币。#ELSE你付不起……#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[#IF(pc.getMoney()>=attacker.getPaymentDemand())innoxia_encounters_fields_bandit_payment#ELSEnull#ENDIF]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.addSpecialParsingString('[style.intToString([#attacker.getPaymentDemand()])]', true)]
@@ -52,17 +52,17 @@
 				<availabilityConditional><![CDATA[[#!attacker.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Offer body]]></responseTitle>
-				<responseTooltip><![CDATA[You can tell that [attacker.name] isn't at all interested in having sex with you. You'll either have to hand over your money, or prepare for a fight!]]></responseTooltip>
+				<responseTitle><![CDATA[献出身体]]></responseTitle>
+				<responseTooltip><![CDATA[看得出[attacker.name]没有兴趣和你做爱，你要么交钱，要么准备战斗！]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#attacker.isAttractedTo(pc)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Offer body]]></responseTitle>
+				<responseTitle><![CDATA[献出身体]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell the bandit that you can't afford to pay, and instead offer them the use of your body...
+					告诉强盗你付不起，可以用你的身体替代……
 				]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
@@ -101,10 +101,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Satisfied with the payment you've given [attacker.herHim], the bandit takes [attacker.her] leave, allowing you to continue on your way...
-					<br/>[style.italicsBad(The bandit will be permanently removed from the game.)]
+					强盗对给出的报酬很满意，便告辞离去，放你离开……
+					<br/>[style.italicsBad(该强盗将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -118,8 +118,8 @@
 	<!-- After submitting for sex: -->
 	
 	<scene id="after_sex_sub">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The bandit has had [attacker.her] fun with you, and with a satisfied sigh [attacker.she] [attacker.steps] back and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[强盗已经和你爽够了，随着[attacker.she]满意的呻吟结束了性爱……]]></tooltip>
 		<content folderPath="txt/encounters/fields/bandit">AFTER_SEX_SUB</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -129,10 +129,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					As the bandit has left, there's nothing else for you to do except continue on your way...
-					<br/>[style.italicsBad(The bandit will be permanently removed from the game.)]
+					既然强盗已经离开，你也只能继续赶路了……
+					<br/>[style.italicsBad(该强盗将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -156,10 +156,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide against doing anything further with the bandit and continue on your way...
-					<br/>[style.italicsBad(The bandit will be permanently removed from the game.)]
+					你决定不和强盗扯上关系，于是继续赶路……
+					<br/>[style.italicsBad(该强盗将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -174,8 +174,8 @@
 				<availabilityConditional><![CDATA[[#attacker.isPostCombatNoSex()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[You can tell that [attacker.name] isn't at all interested in having sex with you...]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[看得出[attacker.name]没有兴趣和你做爱……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -185,19 +185,19 @@
 				<responseTitle><![CDATA[
 					#IF(attacker.isPostCombatWantsSex())
 						#IF(attacker.isPostCombatRapePlay())
-							Rape-play
+							强奸play
 						#ELSE
-							Sex
+							做爱
 						#ENDIF
 					#ELSE
-						Rape
+						强奸
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(attacker.isPostCombatWantsSex())
-						Take advantage of your victory to have dominant sex with the bandit.
+						乘胜追击，和强盗来一场支配型性爱。
 					#ELSE
-						Take advantage of your victory to rape the bandit.
+						乘胜追击，强奸强盗！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -223,8 +223,8 @@
 				<availabilityConditional><![CDATA[[#attacker.isPostCombatNoSex()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Gentle sex]]></responseTitle>
-				<responseTooltip><![CDATA[You can tell that [attacker.name] isn't at all interested in having sex with you...]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(温柔)]]></responseTitle>
+				<responseTooltip><![CDATA[看得出[attacker.name]没有兴趣和你做爱……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -234,19 +234,19 @@
 				<responseTitle><![CDATA[
 					#IF(attacker.isPostCombatWantsSex())
 						#IF(attacker.isPostCombatRapePlay())
-							Rape-play (gentle)
+							强奸play(温柔)
 						#ELSE
-							Gentle sex
+							做爱(温柔)
 						#ENDIF
 					#ELSE
-						Rape [attacker.herHim] (gentle)
+						强奸[attacker.herHim](温柔)
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(attacker.isPostCombatWantsSex())
-						Take advantage of your victory to have gentle, dominant sex with the bandit.
+						乘胜追击，和强盗来一场温柔的支配型性爱。
 					#ELSE
-						Take advantage of your victory to rape the bandit.
+						乘胜追击，强奸强盗！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -274,8 +274,8 @@
 				<availabilityConditional><![CDATA[[#attacker.isPostCombatNoSex()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rough sex]]></responseTitle>
-				<responseTooltip><![CDATA[You can tell that [attacker.name] isn't at all interested in having sex with you...]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(粗暴)]]></responseTitle>
+				<responseTooltip><![CDATA[看得出[attacker.name]没有兴趣和你做爱……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
@@ -285,19 +285,19 @@
 				<responseTitle><![CDATA[
 					#IF(attacker.isPostCombatWantsSex())
 						#IF(attacker.isPostCombatRapePlay())
-							Rape-play (rough)
+							强奸play(粗暴)
 						#ELSE
-							Rough sex
+							做爱(粗暴)
 						#ENDIF
 					#ELSE
-						Rape [attacker.herHim] (rough)
+						强奸[attacker.herHim](粗暴)
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(attacker.isPostCombatWantsSex())
-						Take advantage of your victory to have rough, dominant sex with the bandit.
+						乘胜追击，和强盗来一场粗暴的支配型性爱。
 					#ELSE
-						Take advantage of your victory to roughly rape the bandit.
+						乘胜追击，强奸强盗！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -326,16 +326,16 @@
 				<availabilityConditional><![CDATA[[#!attacker.isAttractedTo(pc) || attacker.hasFlag(NPC_FLAG_genericNPCBetrayedByPlayer)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[You can tell that [attacker.name] isn't at all interested in having sex with you...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[看得出[attacker.name]没有兴趣和你做爱……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#attacker.isAttractedTo(pc) && !attacker.hasFlag(NPC_FLAG_genericNPCBetrayedByPlayer)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Feeling bad for beating the bandit, you decide to submit to [attacker.herHim] and offer [attacker.herHim] the use of your body...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[对殴打强盗感到内疚，你决定顺从[attacker.herHim]使用你的身体……]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 				</requiredFetishes>
@@ -363,8 +363,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've defeated the bandit, there's nothing stopping you from helping yourself to [attacker.her] clothing and items...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[你打败了强盗，此时再也没什么能阻挡你把手伸向[attacker.her]的衣服和道具……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(attacker, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -375,12 +375,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Question]]></responseTitle>
+				<responseTitle><![CDATA[质疑]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_fields_bandit_talked))
-						You've already tried to question the bandit, and [attacker.sheHas] proven to be completely uncooperative...
+						你尝试问劫匪问题，但[attacker.sheHas]完全不合作……
 					#ELSE
-						Ask the bandit where [attacker.she] came from and why [attacker.sheIs] attacking innocent travellers.
+						问强盗从哪里来，为什么要袭击无辜的游客。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -399,8 +399,8 @@
 	</scene>
 	
 	<scene id="after_sex_dom">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough fun with the bandit...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你已经和强盗爽够了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/bandit">AFTER_SEX_DOM</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -410,10 +410,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Now that you've had your fun, you decide to leave the bandit and continue on your way...
-					<br/>[style.italicsBad(The bandit will be permanently removed from the game.)]
+					你爽过了，决定离开强盗，继续上路……
+					<br/>[style.italicsBad(该强盗将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -426,8 +426,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[As you've defeated the bandit, there's nothing stopping you from helping yourself to [attacker.her] clothing and items...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[你打败了强盗，此时再也没什么能阻挡你把手伸向[attacker.her]的衣服和道具……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(attacker, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -457,8 +457,8 @@
 				<availabilityConditional><![CDATA[[#attacker.isAttractedTo(pc) && attacker.isWillingToRape()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[You're unable to stop the bandit from dominantly fucking you...]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[你无法阻止强盗支配性地操你……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariables enabled="true">
@@ -485,14 +485,14 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_NPC_REMOVAL]]></colour>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(attacker.isAttractedTo(pc))
-						Refuse to submit to the bandit and wait for [attacker.herHim] to leave before continuing on your way...
+						拒绝向强盗屈服，等待[attacker.herHim]离开后继续上路……
 					#ELSE
-						Wait for [attacker.name] to leave before continuing on your way...
+						等待[attacker.herHim]离开后继续上路……
 					#ENDIF
-					<br/>[style.italicsBad(The bandit will be permanently removed from the game.)]
+					<br/>[style.italicsBad(该强盗将永远从游戏中移除。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -505,9 +505,9 @@
 				<availabilityConditional><![CDATA[[#attacker.isAttractedTo(pc) && !attacker.isWillingToRape()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Do as the bandit says and submit to [attacker.herHim], allowing [attacker.herHim] to dominantly fuck you...
+					按照强盗所说的那样服从[attacker.herHim]，允许[attacker.herHim]支配你的一切……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>

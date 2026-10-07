@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[boxing rings]]></name>
-	<tooltipDescription><![CDATA[Punch bags and free weights surround a couple of boxing rings.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the gym, 'Pix's Playground']]></virginityLossDescription>
+	<name><![CDATA[拳击台]]></name>
+	<tooltipDescription><![CDATA[拳击袋和自由重量器材围绕着拳击台。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“皮克斯操练场”健身房内]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREEN_DARK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

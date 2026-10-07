@@ -82,8 +82,8 @@ public class Penelope extends NPC {
 	}
 	
 	public Penelope(boolean isImported) {
-		super(isImported, new NameTriplet("Penelope"), "Fear",
-				"A beautiful border collie-girl, who is the owner and manager of Elis's spa; 'Woolly Heaven'.",
+		super(isImported, new NameTriplet("佩内洛普"), "菲尔",
+				"伊利斯“绵绵天堂”水疗中心的老板是一位美丽的边境牧羊犬女。",
 				29, Month.FEBRUARY, 21, 
 				15, Gender.F_P_V_B_FUTANARI, Subspecies.DOG_MORPH_BORDER_COLLIE, RaceStage.GREATER,
 				new CharacterInventory(false, 10),

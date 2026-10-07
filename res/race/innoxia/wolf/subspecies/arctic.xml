@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>WOLF_MORPH</race>
 	<colour>BASE_WHITE</colour>
@@ -32,48 +32,48 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Prowling Lupines</bookName>
+	<bookName><![CDATA[潜行之狼]]></bookName>
 	<basicDescriptionId>WOLF_MORPH_BASIC</basicDescriptionId>
 	<advancedDescriptionId>WOLF_MORPH_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[arctic wolf-morph]]></name>
-			<namePlural><![CDATA[arctic wolf-morphs]]></namePlural>
-			<singularMaleName><![CDATA[arctic wolf-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[arctic wolf-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[arctic wolf-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[arctic wolf-girls]]></pluralFemaleName>
+			<name><![CDATA[北极狼化形]]></name>
+			<namePlural><![CDATA[北极狼化形]]></namePlural>
+			<singularMaleName><![CDATA[北极狼男]]></singularMaleName>
+			<singularFemaleName><![CDATA[北极狼女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[北极狼男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[北极狼女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	<nameAnthroSillyMode>
 		<namesDefault>
-			<name><![CDATA[snow awoo-morph]]></name>
-			<namePlural><![CDATA[snow awoo-morphs]]></namePlural>
-			<singularMaleName><![CDATA[snow awoo-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[snow awoo-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[snow awoo-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[snow awoo-girls]]></pluralFemaleName>
+			<name><![CDATA[雪嗷呜化形]]></name>
+			<namePlural><![CDATA[雪嗷呜化形]]></namePlural>
+			<singularMaleName><![CDATA[雪嗷呜男]]></singularMaleName>
+			<singularFemaleName><![CDATA[雪嗷呜女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[雪嗷呜男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[雪嗷呜女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthroSillyMode>
-	<description><![CDATA[An anthropomorphic arctic wolf, known as an 'arctic wolf-morph' when bipedal, and an 'arctic wolftaur' when the lower body is that of a typically-oversized feral arctic wolf.]]></description>
+	<description><![CDATA[一种人形的北极狼，当下肢拟人时被称为北极狼化形，而当下肢呈现出北极狼兽态时则称为半北极狼人。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[arctic-vargr]]></name>
-			<namePlural><![CDATA[arctic-vargrs]]></namePlural>
-			<singularMaleName><![CDATA[arctic-vargr]]></singularMaleName>
-			<singularFemaleName><![CDATA[arctic-vargr]]></singularFemaleName>
-			<pluralMaleName><![CDATA[arctic-vargrs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[arctic-vargrs]]></pluralFemaleName>
+			<name><![CDATA[北极座狼]]></name>
+			<namePlural><![CDATA[北极座狼]]></namePlural>
+			<singularMaleName><![CDATA[北极座狼]]></singularMaleName>
+			<singularFemaleName><![CDATA[北极座狼]]></singularFemaleName>
+			<pluralMaleName><![CDATA[北极座狼]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[北极座狼]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[arctic wolf]]></feralName>
-		<feralNamePlural><![CDATA[arctic-wolves]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[arctic wolf]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[arctic wolf]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[arctic-wolves]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[arctic-wolves]]></feralPluralFemaleName>
+		<feralName><![CDATA[北极狼]]></feralName>
+		<feralNamePlural><![CDATA[北极狼]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[北极狼]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[北极狼]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[北极狼]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[北极狼]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>70</size>
@@ -85,7 +85,7 @@
 		<fingerActionsAvailable>false</fingerActionsAvailable>
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
-	<statusEffectDescription><![CDATA[[npc.NamePos] arctic wolf-like body is both strong and highly resistant to the cold. [npc.She] also often [npc.verb(get)] powerful urges to try and dominate people [npc.she] [npc.verb(meet)].]]></statusEffectDescription>
+	<statusEffectDescription><![CDATA[[npc.NamePos]北极狼一般的身躯既强健有力，又能抵御严寒，经常拥有一种强烈的冲动，想要支配见到的任何人。]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="15">MAJOR_PHYSIQUE</attribute>
 		<attribute value="10">RESISTANCE_ICE</attribute>

@@ -1,113 +1,113 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="ENSLAVEMENT_SUCCESS_COLLAR"><![CDATA[
 	<p>
-		As you lift the collar up to [npc.namePos] neck, you see that the ring attached to the front starts to glow green; a clear indication that it's detecting your [npc.daughter] as a potential enslavement target. Encouraged by the light, you finish what you started, and with a heavy metal 'clink', you clasp the collar around [npc.namePos] neck.
+		你把项圈提到[npc.namePos]的脖子上，看到项圈前面的环开始发出绿光：这毫无疑问表明它把你的[npc.daughter]当成了一个潜在的奴役目标。你看到绿光，准备完成捕获奴隶的预备工作。随着金属撞击发出“叮”的一声，你将项圈扣在了[npc.namePos]的脖子上。
 	</p>
 	<p>
-		As the collar's arcane enchantment recognises its new wearer as being a criminal, ominous purple lettering starts to glow around the metal band, which reads:
+		项圈的奥术附魔识别出新的佩戴者是犯罪分子，金属带投射出不祥的紫色字母，写道：
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsArcane(Slave Registered.
-			<br/>Identification: [npc.nameFull(true)]
-			<br/>Race: [npc.Race])]
+		[style.italicsArcane(奴隶注册。
+			<br/>身份：[npc.nameFull(true)]
+			<br/>种族：[npc.Race])]
 	</p>
 	<p>
 		#IF(npc.isMute())
-			Finally realising what's going on, [npc.name] looks up at you with fear in [npc.her] [npc.eyes] and lets out an almost inaudible whine.
+			[npc.name]终于意识到发生了什么。[npc.her]抬起头来看着你，[npc.eyes]里充满了恐惧，发出几不可闻的呜咽声。
 		#ELSE
-			Finally realising what's going on, [npc.name] looks up at you with fear in [npc.her] [npc.eyes] and exclaims in shock, [npc.speech(Wait, [npc.pcName]! This isn't a slave collar is it?!)]
+			[npc.name]终于意识到发生了什么。[npc.her]抬起头来看着你，[npc.eyes]里充满了恐惧，惊呼道，[npc.speech(等等，[npc.pcName]，那不会是奴隶项圈吧？)]
 		#ENDIF
 	</p>
 	<p>
-		Grinning at your [npc.daughter], you don't have time to offer a response, as with a bright purple flash, [npc.she] suddenly disappears from sight. The last thing you see as [npc.sheIs] whisked away is a face of shocked betrayal, and you can only imagine how angry [npc.she]'ll be when you see [npc.herHim] next.
+		你对着[npc.daughter]笑了笑，来不及做出更多回应。因为随着一道亮紫色的闪光，[npc.she]瞬间便从视线中消失了。[npc.sheIs]被传送走的那一瞬间，你看到的是她震惊于你的背叛的愤怒表情。你已经想象到下次见到[npc.herHim]时[npc.she]会有多生气。
 	</p>
 	<p>
-		From Finch's instructions, you know that <b>[npc.sheHas] been teleported to the 'Slave Administration' building in Slaver Alley</b>, where [npc.she]'ll be waiting for you to pick [npc.herHim] up.
+		你听过芬奇的指导，知道<b>[npc.sheHas]被传送到奴隶巷的“奴隶行政管理”大楼</b>，[npc.she]会在那等你来接[npc.herHim]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENSLAVEMENT_SUCCESS"><![CDATA[
 	<p>
-		As you bring the [#SPECIAL_PARSE_0] closer to [npc.name], you feel [#SPECIAL_PARSE_1] start to steadily hum; a clear indication that your [npc.daughter] is being detected as a potential enslavement target. Encouraged by this, you decide to finish what you started, and quickly force [npc.name] to wear the enslaving clothing.
+		当你将[#SPECIAL_PARSE_0]伸向[npc.name]时，你手上的[#SPECIAL_PARSE_1]正在发出有规律地嗡嗡声。这也代表着你的[npc.daughter]正在被检测为可行地奴役对象。你决定将工作完成下去，并迅速强迫[npc.name]配合你的工作。
 	</p>
 	<p>
-		As the arcane enchantment recognises its new wearer as being a criminal, ominous purple lettering is projected into the air, which reads:
+		这个东西上的奥术附魔识别出新的装备者是犯罪分子，于是投射出不祥的紫色字母，写道：
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsArcane(Slave Registered.
-			<br/>Identification: [npc.nameFull(true)]
-			<br/>Race: [npc.Race])]
+		[style.italicsArcane(奴隶注册。
+			<br/>身份： [npc.nameFull(true)]
+			<br/>种族： [npc.Race])]
 	</p>
 	<p>
 		#IF(npc.isMute())
-			Finally realising what's going on, [npc.name] looks up at you with fear in [npc.her] [npc.eyes] and lets out an almost inaudible whine.
+			[npc.name]终于意识到发生了什么，她抬起头来看着你，[npc.her][npc.eyes]里充满了恐惧，并发出一声几乎听不见的呜咽。
 		#ELSE
-			Finally realising what's going on, [npc.name] looks up at you with fear in [npc.her] [npc.eyes] and exclaims in shock, [npc.speech(Wait, [npc.pcName]! You're not enslaving me, are you?!)]
+			[npc.name]终于意识到发生了什么，她抬起头来看着你，[npc.her][npc.eyes]里充满了恐惧，惊呼道，[npc.speech(等等，[npc.pcName]！那是奴役我的装备么？不要！求你放过我！！)]
 		#ENDIF
 	</p>
 	<p>
-		Grinning at your [npc.daughter], you don't have time to offer a response, as with a bright purple flash, [npc.she] suddenly disappears from sight. The last thing you see as [npc.sheIs] whisked away is a face of shocked betrayal, and you can only imagine how angry [npc.she]'ll be when you see [npc.herHim] next.
+		你对着[npc.daughter]笑了笑，来不及做出更多回应。因为随着一道亮紫色的闪光，[npc.she]瞬间便从视线中消失了。[npc.sheIs]被传送走的那一瞬间，你看到的是她震惊于你的背叛的愤怒表情。你已经想象到下次见到[npc.herHim]时[npc.she]会有多生气。
 	</p>
 	<p>
-		From Finch's instructions, you know that <b>[npc.sheHas] been teleported to the 'Slave Administration' building in Slaver Alley</b>, where [npc.she]'ll be waiting for you to pick [npc.herHim] up.
+		你听过芬奇的指导，知道<b>[npc.sheHas]被传送到奴隶巷的“奴隶行政管理”大楼</b>，[npc.she]会在那等你来接[npc.herHim]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENSLAVEMENT_FAIL_ALREADY_SLAVE"><![CDATA[
 	<p>
-		Holding the [#SPECIAL_PARSE_0] in one [pc.hand], you take a step towards [npc.name]. [npc.She] lets out a sigh as [npc.she] sees what you're about to do, and says, [npc.speech(If you're trying to enslave me, it won't work... I'm already a slave...)]
+		你用一只[pc.hand]拿着[#SPECIAL_PARSE_0]，然后向[npc.name]靠了过去。当[npc.she]看到你要做什么时，[npc.she]发出了一声叹息，然后说道：[npc.speech(如果你想奴役我，那是行不通的……我已经是奴隶了……)]
 	</p>
 	<p>
-		Ignoring [npc.her] warning, you force the item of clothing onto [npc.name], before stepping back and waiting to see if anything happens. True to [npc.her] words, however, the [#SPECIAL_PARSE_0]'s arcane enchantment recognises [npc.name] as already being a slave, which is evidenced by glowing green lettering that's projected into the air, reading:
+		你无视[npc.her]的警告，强行将衣服穿到了[npc.name]的身上，然后退后一步，等待观察是否会发生什么。然而，正如[npc.her]所言，[#SPECIAL_PARSE_0]的奥术魔法识别出[npc.name]已经是一名奴隶，这一点可以从投射到空中的绿色发光字体上得到证明，上面写着：
 	</p>
 	<p style='text-align:center;'>
-		[style.boldGreen(Slave already registered!)]
+		[style.boldGreen(奴隶已注册！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENSLAVEMENT_FAIL_NOT_WANTED_DEMON"><![CDATA[
 	<p>
-		Holding the [#SPECIAL_PARSE_0] in one [pc.hand], you take a step towards [npc.name]. [npc.She] lets out a mocking laugh as [npc.she] sees what you're about to do, and sneers, [npc.speech(If you're trying to enslave me, it's no use! No Enforcer would ever sign off on a demon's enslavement warrant!)]
+		你一只[pc.hand]拿着[#SPECIAL_PARSE_0]，向[npc.name]靠过去。[npc.she]看到你的举动，冷笑了两声，嘲笑道：[npc.speech(你想奴役我的话，那可是行不通的！可没有哪个执法者敢在恶魔的奴役令上签字！)]
 	</p>
 	<p>
-		Ignoring [npc.her] warning, you force the [#SPECIAL_PARSE_0] onto [npc.name], before stepping back and waiting to see if anything happens. True to [npc.her] words, however, the [#SPECIAL_PARSE_0]'s arcane enchantment doesn't recognise [npc.name] as being a criminal, which is evidenced by glowing red lettering that's projected into the air, reading:
+		你无视[npc.her]的警告，强行将衣服穿到[npc.name]身上，退后一步静静观察。然而，正如[npc.her]所言，[#SPECIAL_PARSE_0]的奥术附魔鉴定出[npc.name]并不是罪犯。空中投射出发光的红色字体：
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsBad(Target not wanted for enslavement!)]
+		[style.italicsBad(无法奴役该目标！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENSLAVEMENT_FAIL_NOT_WANTED"><![CDATA[
 	<p>
-		Holding the [#SPECIAL_PARSE_0] in one [pc.hand], you take a step towards [npc.name]. [npc.She] lets out a mocking laugh as [npc.she] sees what you're about to do, and sneers, [npc.speech(If you're trying to enslave me, it's no use! I haven't been targeted by the Enforcers for anything!)]
+		你用一只[pc.hand]拿着[#SPECIAL_PARSE_0]，然后向[npc.name]靠了过去。当[npc.she]看到你要做什么时，[npc.she]冷笑了一声，然后嘲笑道：[npc.speech(你想奴役我的话，那可是行不通的！我可没有被执法者通缉！)]
 	</p>
 	<p>
-		Ignoring [npc.her] warning, you force the [#SPECIAL_PARSE_0] onto [npc.name], before stepping back and waiting to see if anything happens. True to [npc.her] words, however, the [#SPECIAL_PARSE_0]'s arcane enchantment doesn't recognise [npc.name] as being a criminal, which is evidenced by glowing red lettering that's projected into the air, reading:
+		你无视[npc.her]的警告，强行将衣服穿到了[npc.name]的身上，然后退后一步，等待观察是否会发生什么。然而，正如[npc.her]所言，[#SPECIAL_PARSE_0]的奥术魔法识别出[npc.name]已经是一名奴隶，这一点可以从投射到空中的红色发光字体上得到证明，上面写着：
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsBad(Target not wanted for enslavement!)]
+		[style.italicsBad(不被通缉的奴役目标！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ENSLAVEMENT_FAIL_NO_LICENSE"><![CDATA[
 	<p>
-		Holding the [#SPECIAL_PARSE_0] in one [pc.hand], you take a step towards [npc.name]. Forcing the item of clothing onto [npc.herHim], you step back, looking down at a face filled with fear. Despite the fact that [npc.sheIs] a wanted criminal, the [#SPECIAL_PARSE_0]'s arcane enchantment recognises the fact that you don't have a slaver license, which is evidenced by glowing red lettering that's projected into the air, reading:
+		你用一只[pc.hand]拿着[#SPECIAL_PARSE_0]，向[npc.race]走了一步。强行给[npc.herHim]穿上衣服，你后退一步，低头看到一张充满恐惧的脸。尽管[npc.sheIs]是通缉犯，[#SPECIAL_PARSE_0]的奥术魔法识别出你事实上并没有贩奴许可，这一点可以从投射到空气中的红色发光字看出，上面写着：
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsBad(Invalid owner! Slaver license required!<br/>
-		Please contact the nearest Enforcer and inform them that this target is a wanted criminal!)]
+		[style.italicsBad(持有人无效！需要贩奴许可！<br/>
+		请联系最近的执法者，告知他们此目标是通缉犯！)]
 	</p>
 	<p>
-		[npc.Name] lets out a relieved sigh as [npc.she] sees that [npc.sheHas] avoided being enslaved. Not wanting to waste your time trying to hunt down an Enforcer who could deal with this [npc.race], you make a disappointed tutting noise as you step back and wonder what to do next...
+		[npc.race]松了一口气，因为[npc.she]意识到自己避免了被奴役的后果。你不想浪费时间去寻找另一个可以对付[npc.race]的执法者，当你退后一步并思考下一步该怎么做时，忍不住发出失望的声音……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

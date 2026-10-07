@@ -1,315 +1,314 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		The wide, red-carpeted staircase behind you leads down to the ground floor of Zaranix's house.
-		 To either side of you, a corridor leads off into other parts of the building, and you wonder which way you should go...
+		你身后是铺着红地毯的宽阔楼梯，通往扎拉尼克斯家的一楼。
+		你的两侧各有一条走廊通向建筑的其他部分，你不知道自己该往哪边走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		Much like those found on the ground floor, these corridors are home to numerous fine paintings, cushioned chairs, and well-crafted cabinets.
-		 Where once you might have been deeply impressed by the extravagant luxury of this incubus's mansion, you now find yourself thinking that it's not quite as grand as Lilaya's.
+		和一楼的走廊一样，这些走廊里也摆放着许多精美的油画、软垫椅和精心制作的橱柜。
+		要是以前，你还可能被这个淫梦魔豪宅的奢华深深折服，但这和莉莱雅的豪宅比起来就相形见绌得多了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_KELLY_NOT_SUBDUED"><![CDATA[
 	<p>
-		[style.italicsBad(You can hear the faint sound of humming coming from further down the corridor, and you realise that one of Zaranix's maids must be busy cleaning down there!
-		 If you wanted to avoid confrontation, it would be best to look for another route to take.)]
+		[style.italicsBad(你隐隐约约听到，走廊深处传来微弱的嗡嗡声。一定是扎拉尼克斯的女仆在那边打扫卫生！如果你不想惹上麻烦，就得另辟蹊径。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KELLY_SUBDUED"><![CDATA[
 	<p>
-		The ivory-skinned succubus, Kelly, is slumped down against the wall.
-		 Her pink maid's dress is hiked up around her waist, and she lets out moan after lewd moan as with one hand she fingers herself, while the other strokes up and down the length of her throbbing cock.
+		那个象牙白色皮肤的魅魔，凯丽，斜靠在墙上。
+		她的粉色女仆裙在腰间撩起，她一边发出一声又一声淫荡的呻吟，一边用一只手抚摸自己，另一只手则上下抚摸自己跳动的阴茎。
 	</p>
 	<p>
-		It doesn't look like there are any other maids around to interrupt, so you could go ahead and have a little fun with her...
+		看起来周围没有其他女仆来打扰，所以你可以去和她玩玩……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KELLY_ENCOUNTER"><![CDATA[
 	<p>
-		As you walk down the corridor, an ivory-skinned succubus, wearing a light pink maid's uniform, suddenly stands up from behind a cabinet.
-		 She doesn't notice you at first, and continues to swipe her little feather-duster over the top of the wooden furniture, happily humming away as she works.
+		当你走过走廊时，一个穿着浅粉色女仆服、象牙色皮肤的魅魔突然从柜子后面站了起来。
+		她一开始并没有注意到你，而是继续在木制家具的顶端挥舞着她的小羽毛掸子，一边工作一边开心地哼着歌。
 	</p>
 	<p>
-		Before you have a chance to take any action, however, she looks up and catches sight of you.
-		 [kelly.speech(Ah! Sorry, [pc.maam]! I didn't know we were expecting guests! My name is Kelly, at your service!)]
+		然而，在你准备做任何行动之前，她抬起头，看到了你。
+		[kelly.speech(啊！抱歉！[pc.maam]！我不知道有客人要来，我叫凯丽，随时为您服务！)]
 	</p>
 	<p>
-		The maid curtsies as she says this, but as she stands up, the initial surprise of finding you wandering the corridors of her master's home wears off, and her eyes narrow down as she looks you up and down.
-		 [kelly.speech(Wait a moment... I would have been told if guests were expected...)]
+		女仆在说这话时行了一个屈膝礼，但随着她站起来，最初发现你在她主人家闲逛的惊喜已经消失，她的眼睛眯成一条缝，上下打量着你。
+		[kelly.speech(等等……如果有客人要来，我应该会被告知……)]
 	</p>
 	<p>
-		The realisation that you're an intruder suddenly dawns on her, and she gasps,
-		 [kelly.speech(Eek! That must mean you're a thief! Thief! Thief!)]
+		她突然意识到你是个不速之客，不禁惊呼起来，
+		[kelly.speech(啊！这意味着你是个小偷！小偷！)]
 	</p>
 	<p>
-		Although she cries out in alarm, her shouts seem to be more of an accusation than a call for help, and she suddenly launches herself at you, all too eager to show you what she does to uninvited guests in her master's house.
+		虽然她惊慌失措地大喊大叫，但她的喊声似乎更像是一种控诉，而不是求救，突然她向你扑来，迫不及待地要向你展示她是如何对待主人家的不速之客的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KELLY_ENCOUNTER_REPEAT"><![CDATA[
 	<p>
-		As you walk down the corridor, an ivory-skinned succubus, wearing a light pink maid's uniform, suddenly stands up from behind a cabinet.
-		 You instantly recognise her as Kelly, and, once again, she doesn't notice you at first, and continues to swipe her little feather-duster over the top of the wooden furniture, happily humming away as she works.
+		当你走过走廊时，一个穿着浅粉色女仆服、象牙色皮肤的魅魔突然从柜子后面站了起来。
+		你一眼就认出她是凯丽，并且，她又一次没有注意到你，依旧是在木制家具的顶端挥舞着她的小羽毛掸子，一边工作一边开心地哼着歌。
 	</p>
 	<p>
-		Before you have a chance to take any action, she looks up and catches sight of you.
-		 [kelly.speech(It's you again! How do you keep on getting in here?! You'll pay for this, you thief! Thief! Thief!)]
+		你还没来得及采取任何行动，她就抬头看到了你。
+		[kelly.speech(怎么又是你！你又是怎么闯进来的？！你会为此付出代价，小偷！小偷！小偷！)]
 	</p>
 	<p>
-		Although she cries out in alarm, her shouts seem to be more of an accusation than a call for help, and she suddenly launches herself at you, all too eager to show you what she does to uninvited guests in her master's house.
+		虽然她惊慌失措地大喊大叫，但她的喊声似乎更像是一种控诉，而不是求救，突然她向你扑来，迫不及待地要向你展示她是如何对待主人家的不速之客的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KELLY_SEX"><![CDATA[
 	<p>
-		It doesn't look like any of the other maids of the household will interrupt you, so you decide to take this opportunity to have a little fun with Kelly.
-		 Stepping over to where she's sunk down against the wall, you reach forwards and take hold of her arm, before pulling her to her feet.
-		 Denied the freedom to get herself off, the horny maid looks up into your eyes, and you see them filled with a desperate, burning lust.
+		看起来在这里其他女仆不会打扰你，所以你决定趁这个机会和凯丽找点乐子。
+		你走到她靠墙坐下的地方，握住她的胳膊，然后把她拉起来。
+		这位饥渴的女仆被剥夺了释放的自由，她抬起头看着你的眼睛，你看到她的眼睛里充满了急切而炽热的欲望。
 	</p>
 	<p>
-		She pushes herself off from the wall, wrapping her arms around your back and desperately pressing her [kelly.lips+] against yours.
-		 You reciprocate the gesture, and after spending a few moments of sliding your tongues into one another's mouths, you pull back, grinning...
+		她把自己从墙边推离，双臂环绕在你的背上，迫切地把她[kelly.lips+]贴在你的嘴上。
+		你回应了这个举动，与她进行了一个激烈的舌吻，你们分开，相视一笑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KELLY_SEX_SUBMIT"><![CDATA[
 	<p>
-		Not willing to take the dominant role, but with a deep desire to have sex with the now-very-horny succubus, you walk up to where Kelly's collapsed against the wall, and sigh,
-		 [pc.speech(Kelly... Erm... If you're feeling a little horny, perhaps you could use me? I mean, I-)]
+		你不愿意当支配方的角色，但又很想和这个淫荡的魅魔做爱，你走到凯丽靠墙坐下的地方，小声说道，
+		[pc.speech(凯丽……呃唔……如果你想要，你要不要用用我？我是说，我——)]
 	</p>
 	<p>
-		Despite the fact that you're a stranger in her master's house, Kelly looks up at you with an intense, burning passion in her eyes.
-		 Sliding her hand out from under her dress, she jumps to her feet, interrupting your sentence as she grabs your head and pulls you into a desperate kiss.
+		尽管你是她主人屋子里的一个陌生人，但凯丽还是抬起头看着你，眼神中充满了强烈而炽热的欲望。
+		她从裙底拿出手，急切地跳起来，抓住你的头发狠狠吻你。
 	</p>
 	<p>
-		You reciprocate the gesture, but only spend a few moments sliding your tongues into one another's mouths before Kelly pulls back, moaning,
-		 [kelly.speech(Oh yes! Fuck... I'm so fucking horny! I <i>need</i> you!)]
+		你回应了这个举动，但只亲吻了片刻，凯丽就退了出去，呻吟道，
+		[kelly.speech(哦，好棒！操……我太他妈想要了！我<i>想要</i>你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM"><![CDATA[
 	<p>
-		The door to this room is locked, and there's no sound of anyone within.
-		 Knowing that it's sure to just be a dull and uninteresting dead-end, you decide against trying to force the door open, and turn around to continue on your exploration of Zaranix's home.
+		这个房间的门是锁着的，里面也没有人的声音。
+		你知道这肯定只是一个毫无意义的死胡同，所以决定不再试图强行开门，而是转身继续探索扎拉尼克斯的家。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ZARANIX_ROOM"><![CDATA[
 	<p>
-		All the other doors that you've passed so far have been pretty nondescript and uninteresting, but as you come to the end of this particular corridor, you see a curious purple flash shine out from beneath the one in front of you.
-		 Moments later, you hear the voices of two people within, with the first being particularly loud and booming,
-		 [zaranix.speech(Damn it, Arthur! How many times is this now?! If I wanted a standard transformative potion, I'd go and buy one!)]
+		你前面路过的房间都很不起眼，让人没有任何兴趣，直到你走到这条走廊的尽头，你看到一道奇异的紫色闪光从你面前的那扇门下面闪了出来。
+		几分钟后，你听到里面有两个人的声音，第一个人的声音特别洪亮，
+		[zaranix.speech(该死的！亚瑟！这是第几次了？！如果我需要的是一个普通的转化药水，我可以直接去买一个！)]
 	</p>
 	<p>
-		[arthur.speech(Bloody hell, Zaranix, I mean, how many times do I have to repeat myself? It's just not possible to make a potion that can transform people into demons!)]
+		[arthur.speech(见鬼，扎拉尼克斯，我得重复多少次？不可能有一种药水能把人变成恶魔的！)]
 	</p>
 	<p>
-		You feel your heart skip a beat as you hear that reply.
-		 Even if it wasn't for the fact that Zaranix addressed him by name, you've met Arthur numerous times at Lily's museum, and that second voice is undoubtedly his.
-		 Stepping closer to the door, you hear Zaranix continue,
-		 [zaranix.speech(Bah! There must be a way! If anyone can find it, it's you!)]
+		听到这个回答，你感到心跳加速。
+		就算扎拉尼克斯没有直呼其名，你也在莉莉的博物馆里见过亚瑟无数次，那第二个声音无疑就是他的。
+		你走近门边，听到扎拉尼克斯继续说道，
+		[zaranix.speech(呸！一定有办法的，如果有人能找到，那一定是你！)]
 	</p>
 	<p>
-		[arthur.speech(Well, I don't see why you couldn't have just hired me, instead of going to all that trouble to set me up and get me enslaved! Honestly, I don't know why I try at all!)]
+		[arthur.speech(哼，我不明白你为什么不能直接雇佣我，而要费那么大的劲来设局把我陷害并奴役我！说实话，我真不知道为什么我还要继续干！)]
 	</p>
 	<p>
-		[zaranix.speech(As if you'd have agreed to work for me! Hah! And just to remind you, if you don't try your best, I'll have to hand you over to Amber. I'm sure she'd put you to good use!)]
+		[zaranix.speech(说的好像你会同意给我工作一样！哈！还有，提醒你一下，如果你不好好干，我就得把你交给安柏。我相信她会好好利用你的！)]
 	</p>
 	<p>
-		[arthur.speech(Bloody hell. I'm afraid that she's far more than I can handle. No, you keep that delightful little succubus to yourself, and I'll carry on trying to make the impossible, possible.)]
+		[arthur.speech(他妈的。我可应付不了她。不，你留着那个可爱的小魅魔吧，我会继续努力让不可能成为可能。)]
 	</p>
 	<p>
-		[zaranix.speech(Good,)]
-		 Zaranix grunts, signalling the end of their conversation.
+		[zaranix.speech(很好，)]
+		扎拉尼克斯咕哝了一声，表示他们的谈话结束了。
 	</p>
 	<p>
-		It doesn't sound like either one of them is going to leave this room any time soon, so, reaching out to take hold of the door's handle, you push it open and step inside...
+		听起来他们都不打算马上离开这个房间，所以你伸手握住门把手，推开门走了进去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ZARANIX_ROOM_ENTRY"><![CDATA[
 	<p>
-		Well-lit by several ceiling-mounted, arcane-powered lights, and with a series of large windows set into the opposite wall, the spacious room that you find yourself stepping into is particularly well-illuminated.
-		 Numerous bookcases and shelves line the walls to either side of you, and within the main body of the room itself, a number of long tables are being used to hold piles of books, racks of glass bottles, and boxes full of all sorts of raw alchemical ingredients.
-		 As you enter, you find yourself thinking that this room looks very much like a small-scale version of Lilaya's laboratory, and, in another striking similarity to your aunt's lab, the sole occupants are this house's master and slave.
+		几盏安装在天花板上的奥术电灯照亮了整个房间，对面的墙壁上还镶嵌着一扇扇大窗户，整个宽敞的房间显得格外明亮。
+		两侧的墙上摆放着许多书架和书架，而在房间的正中央，一些长桌用来摆放一堆书籍、玻璃瓶架和装满各种原始炼金成分的箱子。
+		当你进入房间时，你发现自己觉得这个房间非常像缩小版的莉莱雅实验室，而与你姨妈的实验室更相似的是，这间房子里唯一的住户也是主人和奴隶。
 	</p>
 	<p>
-		Upon seeing you enter the room, the tall, purple-skinned figure of Zaranix turns towards you, and he shouts out,
-		 [zaranix.speech(Who the hell are you?!)]
+		你走进房间，紫色皮肤的高个子扎拉尼克斯转身看你，他大声喊道，
+		[zaranix.speech(你他妈是谁？！)]
 	</p>
 	<p>
-		As you look over towards him, you can't help but let out a gasp.
-		 This world's version of Arthur, standing right beside the imposing incubus, looks <i>exactly</i> the same as the one you used to know.
-		 His lanky, pale-skinned body, his bright blue eyes, and his mop of messy, dark-brown hair are all exactly as you remember them.
-		 In fact, the only difference between this Arthur and the one from your world appears to be in his choice of clothing.
-		 Instead of his usual tweed suit, this Arthur is wearing a lab coat and a pair of safety goggles, revealing the fact that, just like Lilaya, he's not a historian in this world, but an arcane researcher.
+		当你看向他时，不禁倒吸一口凉气。
+		这个世界的亚瑟，站在威风凛凛的淫梦魔身边，看起来<i>完全</i>和你曾经认识的一模一样。
+		他瘦长的身躯，苍白的皮肤，明亮的蓝眼睛，还有一头凌乱的深棕色头发，都和你的记忆一致。
+		事实上，这个亚瑟和你记忆中的那个亚瑟唯一的不同之处只在于他的服装选择。
+		这个亚瑟没有穿他常穿的斜纹西装，而是穿着一件实验室外套和一副护目镜，可以看出他和莉莱雅一样，在这个世界里并不是历史学家，而是一名奥术学者。
 	</p>
 	<p>
-		[zaranix.speech(Well?! Explain yourself!)]
-		 Zaranix calls out once more, striding towards you with an angry look on his face.
+		[zaranix.speech(快点！解释清楚！)]
+		扎拉尼克斯又叫了一声，带着愤怒的表情朝你大步走来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ZARANIX_ROOM_ENTRY_REPEAT"><![CDATA[
 	<p>
-		Well-lit by several ceiling-mounted, arcane-powered lights, and with a series of large windows set into the opposite wall, the spacious room that you find yourself stepping into is particularly well-illuminated.
-		 Numerous bookcases and shelves line the walls to either side of you, and within the main body of the room itself, a number of long tables are being used to hold piles of books, racks of glass bottles, and boxes full of all sorts of raw alchemical ingredients.
-		 As you enter, you find yourself thinking that this room looks very much like a small-scale version of Lilaya's laboratory, and, in another striking similarity to your aunt's lab, the sole occupants are this house's master and slave.
+		几盏安装在天花板上的奥术电灯照亮了整个房间，对面的墙壁上还镶嵌着一扇扇大窗户，整个宽敞的房间显得格外明亮。
+		两侧的墙上摆放着许多书架和书架，而在房间的正中央，一些长桌用来摆放一堆书籍、玻璃瓶架和装满各种原始炼金成分的箱子。
+		当你进入房间时，你发现自己觉得这个房间非常像缩小版的莉莱雅实验室，而与你姨妈的实验室更相似的是，这间房子里唯一的住户也是主人和奴隶。
 	</p>
 	<p>
-		Upon seeing you enter the room, the tall, purple-skinned figure of Zaranix turns towards you, and he shouts out,
-		 [zaranix.speech(You again?! Back for more, cock-sucker?!)]
+		看到你走进房间，紫色皮肤的高个子扎拉尼克斯转身朝你走来，并大声喊道，
+		[zaranix.speech(你又回来了？想要吃更多吗，婊子？)]
 	</p>
 	<p>
-		This world's version of Arthur is, once again, standing right beside the imposing incubus, and looks <i>exactly</i> the same as the one you used to know.
-		 His lanky, pale-skinned body, his bright blue eyes, and his mop of messy, dark-brown hair are all exactly as you remember them.
-		 In fact, the only difference between this Arthur and the one from your world appears to be in his choice of clothing.
-		 Instead of his usual tweed suit, this Arthur is wearing a lab coat and a pair of safety goggles, revealing the fact that, just like Lilaya, he's not a historian in this world, but an arcane researcher.
+		这个世界的亚瑟，又一次站在威风凛凛的淫梦魔身边，看起来<i>完全</i>和你曾经认识的一模一样。
+		他瘦长的身躯，苍白的皮肤，明亮的蓝眼睛，还有一头凌乱的深棕色头发，都和你的记忆一致。
+		事实上，这个亚瑟和你记忆中的那个亚瑟唯一的不同之处只在于他的服装选择。
+		这个亚瑟没有穿他常穿的斜纹西装，而是穿着一件实验室外套和一副护目镜，可以看出他和莉莱雅一样，在这个世界里并不是历史学家，而是一名奥术学者。
 	</p>
 	<p>
-		[zaranix.speech(So, you've got a taste for my cock, have you?! Don't worry, I'll be giving you what you want right after I teach you another lesson!)]
-		 Zaranix calls out once more, striding towards you with an angry look on his face.
+		[zaranix.speech(你又想尝尝我的鸡巴了，是吗？别担心，等我再给你上一课，你就会如愿以偿了！)]
+		扎拉尼克斯又叫了一声，带着愤怒的表情朝你大步走来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ZARANIX_ROOM_NO_EXPLANATION"><![CDATA[
 	<p>
-		Deciding that it's probably better not to tell this strange demon about Lilaya, you simply stand your ground and demand,
-		 [pc.speech(I'm here for Arthur. Hand him over, and I'll be on my way.)]
+		你决定还是不把莉莱雅的事告诉这个奇怪的恶魔，于是就站在原地要求，
+		[pc.speech(我来找亚瑟，把他交出来，我就走。)]
 	</p>
 	<p>
-		Zaranix lets out a short, booming laugh,
-		 [zaranix.speech(Hah! I think not! And how did you even get up here?! I would have been informed if there was a guest, which means you've forced your way in here!)]
+		扎拉尼克斯发出一声短促而洪亮的笑声，
+		[zaranix.speech(哈！不可能！你是怎么上来的？！如果有客人的话，我早就知道了，这说明你是硬闯进来的！)]
 	</p>
 	<p>
-		The incubus's tone grows angrier and angrier, and you see him clench his fist as he comes to a halt in front of you.
-		 [zaranix.speech(I'll show you what I do to trespassers!)]
+		淫梦魔的语气越来越愤怒，你看到他握紧拳头，在你面前停了下来。
+		[zaranix.speech(我会让你看看我是如何对待擅闯者的！)]
 	</p>
 	<p>
-		Before you have an opportunity to respond, Zaranix launches himself at you, forcing you to defend yourself!
+		你还没来得及做出反应，扎拉尼克斯就向你发起了攻击，迫使你进行自卫！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ZARANIX_ROOM_EXPLANATION"><![CDATA[
-	<p>
-		Deciding that it's probably best if you can resolve all of this without resorting to violence, you explain how your aunt is the half-demon Lilaya,
-			 and, deciding to leave out the part where you were transported into this world, you tell him how she's in need of Arthur's help.
-		 You recite your journey up until this point, noticing that each time you mention the name 'Lilaya', Zaranix's angry expression transforms more and more into one of defeat.
-		 After a short while, you come to the end of your tale, and after telling the incubus how you managed to find out where Arthur was from Scarlett, you bring your story to an end,
-		 [pc.speech(And so if I could buy Arthur from you, both my aunt and I would be extremely grateful. Without him, she's not going to be able to solve this problem of hers.)]
+	<p>，
+		你决定最好能在不使用暴力的情况下解决这一切，你解释说你的姨妈是半恶魔莉莱雅，
+			并且，你决定略去你被传送到这个世界的部分，告诉他她需要亚瑟的帮助。
+		你叙述了你的旅程，每次提到“莉莱雅”的名字时，扎拉尼克斯的愤怒表情逐渐变成了一种挫败的表情。
+		过了一会儿，你讲完了你的故事，告诉淫梦魔你是如何通过斯嘉丽找到亚瑟在哪里的，然后结束了你的故事。
+		[pc.speech(所以如果我能从你这里买到亚瑟，我和我姨妈都会非常感激。没有他，她将无法解决她的问题。)]
 	</p>
 	<p>
-		[zaranix.speech(Hah!)] Zaranix half-laughs, half-sighs.
-		 [zaranix.speech(So <i>you're</i> the [pc.race] who's moved in with Lilaya? Yes, I know who you are. I may not get out much, but I still keep my ear close to the grapevine.)]
+		[zaranix.speech(哈！)]扎拉尼克斯半笑半叹。
+		[zaranix.speech(所以<i>你</i>就是和莉莱雅住在一起的那个[pc.race]？是的，我知道你是谁。虽然我不常出去，但我依旧很关注这些消息。)]
 	</p>
 	<p>
-		[arthur.speech(Bloody hell! Lilaya wants my help does she?)]
-		 Arthur interjects.
-		 [arthur.speech(The last I heard, oh, what was it now... Oh yes! She was going to 'blast me into a million pieces, or banish me into an alternate dimension' the next time she saw me.
-			 I mean, considering that nobody's managed to travel between dimensions before, I couldn't quite take her threat seriously, but she <i>did</i> seem to be pretty angry.
-			 Maybe I'd be better off staying he-)]
+		[arthur.speech(活见鬼了！莉莱雅想要我帮助她？！)]
+		亚瑟插话道。
+		[arthur.speech(我最后一次听她说话，哦，是什么来着……哦，对了！她说下次再见到我要‘把我炸成一百万块，或者把我放逐到另一个维度’。
+			我意思是，考虑到以前没有人成功地在维度之间旅行，我不能完全认真对待她的威胁，但她似乎<i>确实</i>非常生气。
+			也许我还是待在这里比较好——)]
 	</p>
 	<p>
-		[zaranix.speech(Be quiet, Arthur!)]
-		 Zaranix shouts.
-		 [zaranix.speech(You really do drone on!)]
+		[zaranix.speech(亚瑟！安静！)]
+		扎拉尼克斯大喊。
+		[zaranix.speech(你真的很聒噪！)]
 	</p>
 	<p>
-		Turning back towards you, the incubus continues,
-		 [zaranix.speech(Today's your lucky day I suppose... You'll be getting what you're after.
-			 I may have wealth and a modicum of power in this city, but having never been recognised by my Lilin mother, I'd be a fool to stand against the wishes of a demon who has.
-			 And it's not just any demon! Hah! Lyssieth's precious little half-demon herself!)]
+		扭头朝着你，淫梦魔继续说，
+		[zaranix.speech(今天算你走运吧……你会得到你想要的。
+			虽然我在这个城市有财富和一些权力，但从未被我混血的莉琳母亲承认过，如果违背一个得到承认的恶魔的意愿，那我就是个傻瓜。
+			而且，这可不是普通的恶魔！哈！莉西丝那位宝贝的小半恶魔本人！)]
 	</p>
 	<p>
-		With a defeated sigh, Zaranix steps over to a nearby chair, before sinking down into it and looking over to Arthur.
-		 [zaranix.speech(You won't need to trouble yourself with these experiments anymore, I suppose.
-			 If truth be told, you'd already convinced me making a demonic transformative wasn't going to happen after your first day here.
-			 It's a moot point now anyway. Lilaya wants you back, so go on, you're free.)]
+		扎拉尼克斯叹了口气，走到附近的一把椅子前，然后坐下来，看向亚瑟。
+		[zaranix.speech(我猜你不再需要为这些实验费心了。
+			说实话，你来这里的第一天，你就已经说服了我，制造恶魔转化是不可能的。
+			不过现在也没有什么好争论的了。莉莱雅想要你回去，所以走吧，你自由了。)]
 	</p>
 	<p>
-		[arthur.speech(Well, bloody hell! Maybe I'll see you around, Zaranix. It wasn't too bad living here, all things considered!)]
-		 Arthur says, before turning to you.
-		 [arthur.speech(I'll go on ahead, so I suppose I'll see you over at Lilaya's place!)]
+		[arthur.speech(好吧，该死的！也许以后我还会再见到你，扎拉尼克斯。考虑这一切，住在这里还不算太糟糕！)]
+		亚瑟说着，然后转向你。
+		[arthur.speech(我先走一步，在莉莱雅那里等你！)]
 	</p>
 	<p>
-		With that, he steps past you and makes his exit, leaving you alone in the lab with the gloomy-looking incubus.
+		说完，他从你身边走过，离开了实验室，将你留在那里，和那位沮丧的淫梦魔独处。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ZARANIX_ROOM_EXPLANATION_THANKS"><![CDATA[
 	<p>
-		You thank Zaranix for being so reasonable, before turning around and exiting his lab.
-		 Making your way back through his house, you soon find yourself stepping back out into Demon Home.
-		 Letting out a deep sigh of relief now that you've finally got all this business with Arthur resolved, you wonder if you should head over to Lilaya's house straight away...
+		你感谢扎拉尼克斯的通情达理，然后转身离开了他的实验室。
+		穿过他的房子，你很快就又走回了恶魔之家。
+		解决完亚瑟的事情，你终于放下了心，你在想要不要马上回莉莱雅的家……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ZARANIX_ROOM_EXPLANATION_THANK_ZARANIX -->
 	
 	<htmlContent tag="ZARANIX_ROOM_EXPLANATION_SEXY_THANKS"><![CDATA[
 	<p>
-		You weren't really expecting it to be so easy to convince Zaranix to part with Arthur, and, feeling more than a little grateful for how reasonable he's been, you decide that you'd better repay him. Looking down at his crotch and biting your [pc.lip], you let out a pleading little whine, [pc.speech(I'd like to show you my thanks...)]
+		你没想到说服扎拉尼克斯放了亚瑟会这么的简单，你对他的通情达理感到非常感激，决定要好好报答他。你咬着[pc.lip]看向他的胯部，你发出请求的呜咽，[pc.speech(让我来好好感谢你吧……)]
 	</p>
 	<p>
-		Looking up at you with a grin, Zaranix spreads his legs a little wider. [zaranix.speech(Well, if I can get at least a little compensation for losing my slave, I'll gladly take it!)]
+		扎拉尼克斯抬起头，笑眯眯地看着你，他把双腿张开了一些。[zaranix.speech(嗯，我很乐意为失去奴隶获得一点补偿。)]
 	</p>
 	<p>
-		Letting out a happy little sigh, you drop to your knees in front of the huge incubus, before looking up into his eyes and moaning, [pc.speech(Thank you, Zaranix!)]
+		你高兴地轻叹一口气，跪在高大的淫梦魔面前，然后抬头看着他的眼睛，呻吟道，[pc.speech(感谢你，扎拉尼克斯！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ZARANIX_ROOM_EXPLANATION_SEXY_THANKS_START"><![CDATA[
 	<p>
-		Clearly impatient to get started, Zaranix quickly undoes his trousers, and after pulling both them and his underwear down, he exposes his rapidly-hardening cock to you. Although a hefty [zaranix.cockLengthValues] in length, his girthy, [zaranix.cockColour] shaft is relatively plain for a demon, as its only uncommon attribute is being circled by a series of hard, fleshy ribs. As a bead of slimy precum starts to ooze from his urethra, the incubus teases, [zaranix.speech(Go on, have a taste...)]
+		扎拉尼克斯显然迫不及待地要开始了，他迅速脱掉裤子，在把裤子和内裤都拉下来之后，他把迅速勃起的阴茎放在你面前。虽然他的[zaranix.cockLengthValues]长度很长，但[zaranix.cockColour]粗壮阴茎相对于其他恶魔来说却比较普通，它唯一不常见的特征就是环绕着坚硬的肉质突起。当他的尿道口开始渗出一些粘稠的先走液时，淫梦魔调戏道，[zaranix.speech(去吧，去尝一尝……)]
 	</p>
 	<p>
-		Letting out a breathless sigh, you obligingly lean forwards and start kissing and licking his girthy purple cock. As your [pc.tongue+] slides over the hard, fleshy ribs which encircle his erect length, Zaranix grunts, [zaranix.speech(Don't hold back; I know you'll like the taste of my balls too...)]
+		你发出一声窒息的喘息，顺从地倾身，开始亲吻和舔舐他那粗壮的紫色阴茎。当你[pc.tongue+]滑过环绕着他勃起的坚硬的肉质突起时，扎拉尼克斯发出了一声闷哼，[zaranix.speech(别客气，我知道你也会喜欢我蛋蛋的味道的……)]
 	</p>
 	<p>
-		Moving your head down, you show Zaranix that he's right by spending a couple of minutes licking and kissing his huge, heavy balls. Eventually, however, the two of you are keen to move onto the main event, and so after once again lifting your head up, you part your [pc.lips+] and take the incubus's hot cock into your mouth. Lewd, wet gagging noises are soon filling the room as you bob your head up and down and eagerly give Zaranix a blowjob...
+		你低下头，用几分钟的时间舔吻扎拉尼克又大又重的蛋蛋，向他证明他是对的。最后，你们俩都想进入正题，于是再次抬起头，分开[pc.lips+]把淫梦魔火热的阴茎含进嘴里。当你上下晃动头部，迫不及待地为扎拉尼克斯吹箫时，淫荡、黏糊糊的吞咽声很快就充满了整个房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_THANKING_ZARANIX -->
 	
 	<htmlContent tag="ZARANIX_ROOM_EXPLANATION_SEXY_THANKS_POST_SEX"><![CDATA[
 	<p>
-		You shuffle back from Zaranix's lap, grinning up at him. [pc.speech(That was fun!)]
+		你从扎拉尼克斯的腿上下来，咧嘴朝他微笑。[pc.speech(这真的很有趣！)]
 	</p>
 	<p>
-		[zaranix.speech(Well, I can't say that I'm too happy at having lost Arthur, but that performance certainly makes me feel a little better about it,)] Zaranix says, looking down at you. [zaranix.speech(perhaps we'll meet again some time. You'd better be on your way.)]
+		[zaranix.speech(嗯，失去了亚瑟，我不能说我有多高兴，但那场表演确实让我感觉好了一点，)]扎拉尼克斯低头看着你说。[zaranix.speech(也许我们会再见面的，你现在该走了。)]
 	</p>
 	<p>
-		Standing up, you thank Zaranix one last time, before turning around and exiting his lab. Making your way back through his house, you soon find yourself stepping back out into Demon Home. Letting out a deep sigh of relief now that you've finally got all this business with Arthur resolved, you wonder if you should head over to Lilaya's house straight away...
+		站起身来，你最后一次感谢扎拉尼克斯，然后转身离开了他的实验室。穿过他的房子，你很快就又走回了恶魔之家。解决完亚瑟的事情，你终于放下了心，你在想要不要马上回莉莱雅的家……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 </dialogue>

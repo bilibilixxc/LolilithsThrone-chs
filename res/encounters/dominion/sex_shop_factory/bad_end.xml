@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<additionalPlaceTypeTriggers>
@@ -15,7 +15,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[Angelixx appears]]></name>
+			<name><![CDATA[安吉莉克丝出现了]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(pc.isDoll())
 					18

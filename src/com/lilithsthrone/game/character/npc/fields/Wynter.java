@@ -57,9 +57,9 @@ public class Wynter extends NPC {
 	}
 	
 	public Wynter(boolean isImported) {
-		super(isImported, new NameTriplet("Wynter"), "Minotallysmartu",
-				"Wynter is the security guard for the convenience store, 'The Barn', in Elis's shopping precinct."
-					+ " After drinking too much and starting a highly-destructive brawl in the tavern, 'The Crossed Blades', she now also has to work there as a waitress in the VIP lounge until she's earned enough to pay for the damage she caused.",
+		super(isImported, new NameTriplet("温特"), "米诺塔莉丝马尔图",
+				"温特是伊利斯的购物区便利店“随时粮仓”的保安。"
+					+ "她在“十字利刃”喝多了，与人斗殴，结果造成了严重损失。以至于现在她还在贵宾休息室当服务员，直到赚够钱来赔偿。",
 				27, Month.MAY, 22,
 				30, Gender.F_V_B_FEMALE, Subspecies.RABBIT_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 30),
@@ -252,7 +252,7 @@ public class Wynter extends NPC {
 		ring.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.MANA_MAXIMUM, TFPotency.MAJOR_BOOST, 0));
 		ring.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.MANA_MAXIMUM, TFPotency.MAJOR_BOOST, 0));
 		this.equipClothingFromNowhere(ring, true, this);
-		ring.setName("Wynter's Treasure");
+		ring.setName("温特的宝藏");
 		
 		this.setPiercedEar(true);
 		this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_piercing_ear_hoops", PresetColour.CLOTHING_SILVER, false), true, this);

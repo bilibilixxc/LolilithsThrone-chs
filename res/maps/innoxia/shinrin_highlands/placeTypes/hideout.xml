@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Meraxis's Hideout]]></name>
-	<tooltipDescription><![CDATA[Taking the form of a single-story, Japanese-style building, Meraxis's base of operations in the Shinrin Highlands is kept hidden thanks to an illusion spell that's maintained by her friend, Takahashi.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[near Meraxis's hideout]]></virginityLossDescription>
+	<name><![CDATA[梅拉克西丝的藏身处]]></name>
+	<tooltipDescription><![CDATA[梅拉克西丝的据点位于心林高地，是一栋单层的日式风格建筑。多亏了好友高桥施加的幻象法术，据点才得以完美隐藏。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于梅拉克西丝的藏身处附近]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>false</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND_SHINRIN_HIGHLANDS</backgroundColour>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<additionalPlaceTypeTriggers>
@@ -8,7 +8,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[succubus overseer appears]]></name>
+			<name><![CDATA[魅魔监督员出现了]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(!pc.isDoll() && saellatrix.isAnySistersAvailable() && !saellatrix.isAnySisterPresent() && flags.hasFlag(FLAG_innoxia_doll_factory_main_area_discovered))
 					25

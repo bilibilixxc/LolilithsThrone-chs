@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -142,7 +142,7 @@
 	<bookIconName>coatlicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Mysterious Dragons</bookName>
+	<bookName><![CDATA[隐秘龙族]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -155,54 +155,54 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[coatl-morph]]></name>
-			<namePlural><![CDATA[coatl-morphs]]></namePlural>
-			<singularMaleName><![CDATA[coatl-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[coatl-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[coatl-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[coatl-girls]]></pluralFemaleName>
+			<name><![CDATA[羽蛇化形]]></name>
+			<namePlural><![CDATA[羽蛇化形]]></namePlural>
+			<singularMaleName><![CDATA[羽蛇男]]></singularMaleName>
+			<singularFemaleName><![CDATA[羽蛇女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[羽蛇男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[羽蛇女]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="TAIL_LONG">
-			<name><![CDATA[coatl-morph]]></name>
-			<namePlural><![CDATA[coatl-morphs]]></namePlural>
-			<singularMaleName><![CDATA[coatl-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[coatl-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[coatl-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[coatl-girls]]></pluralFemaleName>
+			<name><![CDATA[羽蛇化形]]></name>
+			<namePlural><![CDATA[羽蛇化形]]></namePlural>
+			<singularMaleName><![CDATA[羽蛇男]]></singularMaleName>
+			<singularFemaleName><![CDATA[羽蛇女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[羽蛇男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[羽蛇女]]></pluralFemaleName>
 		</names>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic coatl, known as a 'coatl-morph' when bipedal, and a 'coatl-naga' when the lower body is that of a typically-oversized feral coatl. To be identified as a coatl-morph, a character must be a dragon-morph with a coatl face, forked tongue, head feathers, internal ears, a normal dragon tail, and feathered wings.]]></description>
+	<description><![CDATA[一种人形的羽蛇，当下肢拟人时被称为“羽蛇化形”，而当下肢呈现出龙兽态时则称为“羽蛇娜迦”。要判定为“羽蛇化形”，角色必须先为“龙化形”，且拥有羽蛇目、分叉舌、冠羽、内耳、寻常龙尾和细长羽毛组成的翅膀。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[quetzalcoatl]]></name>
-			<namePlural><![CDATA[quetzalcoatls]]></namePlural>
-			<singularMaleName><![CDATA[quetzalcoatl]]></singularMaleName>
-			<singularFemaleName><![CDATA[quetzalcoatl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[quetzalcoatls]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[quetzalcoatls]]></pluralFemaleName>
+			<name><![CDATA[羽蛇神]]></name>
+			<namePlural><![CDATA[羽蛇神]]></namePlural>
+			<singularMaleName><![CDATA[羽蛇神]]></singularMaleName>
+			<singularFemaleName><![CDATA[羽蛇神]]></singularFemaleName>
+			<pluralMaleName><![CDATA[羽蛇神]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[羽蛇神]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="TAIL_LONG">
-			<name><![CDATA[quetzalcoatl]]></name>
-			<namePlural><![CDATA[quetzalcoatls]]></namePlural>
-			<singularMaleName><![CDATA[quetzalcoatl]]></singularMaleName>
-			<singularFemaleName><![CDATA[quetzalcoatl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[quetzalcoatls]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[quetzalcoatls]]></pluralFemaleName>
+			<name><![CDATA[羽蛇神]]></name>
+			<namePlural><![CDATA[羽蛇神]]></namePlural>
+			<singularMaleName><![CDATA[羽蛇神]]></singularMaleName>
+			<singularFemaleName><![CDATA[羽蛇神]]></singularFemaleName>
+			<pluralMaleName><![CDATA[羽蛇神]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[羽蛇神]]></pluralFemaleName>
 		</names>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[coatl]]></feralName>
-		<feralNamePlural><![CDATA[coatl]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[coatl]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[coatl]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[coatl]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[coatl]]></feralPluralFemaleName>
+		<feralName><![CDATA[羽蛇]]></feralName>
+		<feralNamePlural><![CDATA[羽蛇]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[羽蛇]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[羽蛇]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[羽蛇]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[羽蛇]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -234,7 +234,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] coatl-like body is very powerful, and as a mythological creature [npc.she] [npc.has] a close arcane affinity with both the strengths and weaknesses that it brings.
+		[npc.NamePos]羽蛇一般的身躯充满力量，作为神话生物，[npc.she]与奥术的特殊亲和力紧密相连，既拥有它的强大之处，也熟悉它的脆弱之处。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

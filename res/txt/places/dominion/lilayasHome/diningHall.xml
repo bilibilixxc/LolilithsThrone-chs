@@ -1,106 +1,105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- AFTER_BATH_SEX -->
 	
 	<htmlContent tag="ROOM_DINING_HALL_ORDER_MEAL"><![CDATA[
 	<p>
-		Feeling a little hungry, you decide to make use of this dining hall and get something to eat.
+		你觉得有点饿了，于是决定在这个餐厅吃点东西.
 		#IF(pc.isTaur())
-			 Having had taur-compatible chairs placed around the long, wooden table in the centre of the room, you [pc.step] over to one of them and sit down.
+			在房间中央的长木桌周围摆放着牛头人都能坐下的椅子，你[pc.step]了过去并挑了一张椅子坐了下来.
 		#ELSE
-			 [pc.Stepping] around to the head of the long, wooden table in the centre of the room, you allow [npc.name] to dutifully pull the chair out for you, before taking a seat.
+			[pc.Stepping]来到房间中间的长木桌处，在让[npc.name]毕恭毕敬的为你拉开椅子后，你坐了上去.
 		#ENDIF
 	</p>
 	<p>
-		Knowing that there are enough ingredients in the kitchen for your slaves to make anything you desire, you wonder what to order... 
+		你清楚地知道厨房里有着充足的食材，而且你的奴隶们可以做出任何你想要的东西，但现在唯一的问题是你不知道该点些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_DINING_HALL_RECEIVE_MEAL"><![CDATA[
 	<p>
-		Calling [npc.name] over to your side, you tell [npc.herHim] that [npc.she]'ll be acting as your
+		你将[npc.name]叫到你的身边，然后告诉[npc.herHim]你想让[npc.she]充当你的
 		#IF(npc.isFeminine())
-			 waitress,
+			专属女服务员，
 		#ELSE
-			 waiter,
+			专属服务员，
 		#ENDIF
-		before informing [npc.herHim] of what you want to eat.
+		在告知[npc.herHim]你想吃什么东西之前，
 		#IF(npc.getObedienceBasic()==OBEDIENCE_BASIC_DISOBEDIENT && npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-			 Although [npc.she] insolently tells you how much [npc.she] hates doing this sort of work, [npc.she] has no choice but to take your order. Scowling at you as [npc.she] departs, #IF(npc.isSlave())your slave#ELSE[npc.name]#ENDIF hurries off to the kitchen to relay your choice to the chef.
+			[npc.she]愤愤地告诉你[npc.she]有多讨厌做这种工作，但毕竟[npc.she]别无选择，只能接受你的命令。当[npc.she]离开时，#IF(npc.isSlave())你的奴隶#ELSE[npc.name]#ENDIF朝你吐了下舌头，然后匆忙跑去厨房向厨师转达你的选择。
 		#ELSE
-			 After taking your order, #IF(npc.isSlave())your slave#ELSE[npc.name]#ENDIF hurries off to the kitchen to relay your choice to the chef.
+			在收到指令后，#IF(npc.isSlave())你的奴隶#ELSE[npc.name]#ENDIF匆忙跑去厨房向厨师转达你的选择。
 		#ENDIF
 	</p>
 	<p>
-		Although your meal is freshly prepared for you, the top-of-the-range arcane ovens which are installed in the kitchen allow your selected dish to be ready within ten minutes. Bringing you your food on a silver platter, [npc.name] places it before you, and then after pouring you a drink [npc.she] [npc.steps] back and waits while you tuck in.
-	</p>
+		虽然你的饭菜是现点的，但厨房里安装的顶级奥术烤箱可以在十分钟内将你选择的菜肴烤好。[npc.name]用银盘为你端来食物，然后将其放在你的面前后为你倒上了一杯饮料，随后[npc.she]向后退了几步，并静候着你接下来的用餐时光。	</p>
 	<p>
-		Soon enough you've finished every last bite, and as [npc.name] clears the dishes away, you wonder whether to order some 'dessert' from [npc.herHim]...
+		很快，你吃完了最后一口饭菜，当[npc.name]收拾餐具时，你在想是否要向[npc.herHim]点些“甜点”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_DINING_HALL_RECEIVE_MEAL_DESSERT_COCK"><![CDATA[
 	<p>
-		Starting to feel a different sort of hunger, you reach across to give [npc.namePos] groin a grope as [npc.she] leans forwards to pick up your plate. Smirking as you feel [npc.her] shaft twitch in response to your touch, you tell #IF(npc.isSlave())your slave#ELSE[npc.name]#ENDIF to go to the kitchen and have the chef turn [npc.her] cock into a dessert for you to enjoy.
+		当[npc.Name]向前倾身拿起你的盘子时，一种与众不同的饥渴感席卷你的全身，你伸手摸了摸[npc.namePos]的腹股沟。当你感觉到[npc.her]的阴茎在你的抚摸下抽动时，你微笑着告诉#IF(npc.isSlave())你的奴隶#ELSE[npc.name]#ENDIF，让其去厨房找厨师把[npc.her]的阴茎加工一下，在做成甜点之后供你享用。
 	</p>
 	<p>
-		Doing as [npc.sheIs] told, [npc.name] picks up your plate and hurries away to the kitchen. A short while later [npc.she] returns, and you lick your [pc.lips] in anticipation as you see that [npc.her] cock is covered in whipped cream, [style.random(chocolate|caramel|strawberry)] sauce, and [style.random(sprinkles|has a cherry perched on top)].
+		[npc.sheIs]听从你的吩咐，[npc.Name]在拿起你的盘子后便匆匆跑向厨房。过了一会儿，[npc.she]回来了，你看到[npc.her]的鸡巴上沾满了鲜奶油、[style.random(巧克力|焦糖|草莓)]酱和[style.random(糖霜|一颗樱桃)]时，你期待地舔了舔自己[pc.lips]。
 	</p>
 	<p>
 		#IF(npc.isTaur())
-			[npc.Stepping] over to stand beside you, [npc.name] lifts [npc.her] hind leg so as to present you with [npc.her] cream-covered cock.
+			[npc.Stepping]过来站在你身边，随后[npc.Name]抬起[npc.her]的后腿，向你展示[npc.her]那沾满奶油的鸡巴。
 		#ELSE
-			Sitting down on the table before you, [npc.name] spreads [npc.her] [npc.legs+] and presents you with [npc.her] cream-covered cock.
+		[npc.Name]在你面前的桌子上坐下，然后张开[npc.her][npc.legs+]，向你展示[npc.her]那沾满奶油的鸡巴。
 		#ENDIF
-		 Unable to resist, you slowly lick the sweet, sugary coating off of [npc.her] hard shaft. Soon enough, you're wrapping your [pc.lips+] around [npc.her] [npc.cock+] and [pc.moaning] in delight as you give [npc.herHim] a blowjob...
+		你无法抗拒，慢慢地舔去了[npc.her]那硬挺肉棒上甜美的糖衣。很快，你便用[pc.lips+]裹住[npc.her][npc.cock+]，发出一声欢愉的[pc.moaning]，开始给[npc.herHim]口交了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_DINING_HALL_RECEIVE_MEAL_DESSERT_PUSSY"><![CDATA[
 	<p>
-		Starting to feel a different sort of hunger, you reach across to give [npc.namePos] groin a grope as [npc.she] leans forwards to pick up your plate. Smirking as [npc.she] lets out a surprised gasp, you tell #IF(npc.isSlave())your slave#ELSE[npc.name]#ENDIF to go to the kitchen and have the chef turn [npc.her] pussy into a dessert for you to enjoy.
+		当[npc.Name]向前倾身拿起你的盘子时，一种与众不同的饥渴感席卷你的全身，你伸手摸了摸[npc.namePos]的下体。当你感觉到[npc.her]的小穴在你的抚摸下抽动时，你微笑着告诉#IF(npc.isSlave())你的奴隶#ELSE[npc.name]#ENDIF，让其去厨房找厨师把[npc.her]的小穴加工一下，在做成甜点之后供你享用。
 	</p>
 	<p>
-		Doing as [npc.sheIs] told, [npc.name] picks up your plate and hurries away to the kitchen. A short while later [npc.she] returns, and you lick your [pc.lips] in anticipation as you see that [npc.her] [npc.pussy] is covered in whipped cream, [style.random(chocolate|caramel|strawberry)] sauce, and [style.random(sprinkles|has a cherry perched on top)].
+		[npc.sheIs]听从你的吩咐，[npc.name]在拿起你的盘子后便匆匆跑向厨房。过了一会儿，[npc.she]回来了，你看到[npc.her]的[npc.pussy]上沾满了鲜奶油、[style.random(巧克力|焦糖|草莓)]酱和[style.random(糖霜|点缀着一颗樱桃)]时，你期待地舔了舔自己[pc.lips]。
 	</p>
 	<p>
 		#IF(npc.isTaur())
-			[npc.Stepping] over to stand in front of you, [npc.name] turns around and backs up so as to present you with [npc.her] cream-covered cunt.
+			[npc.Stepping]过来站在你身边，随后[npc.Name]抬起[npc.her]的后腿，向你展示[npc.her]那沾满奶油的小穴。
 		#ELSE
-			Sitting down on the table before you, [npc.name] spreads [npc.her] [npc.legs+] and presents you with [npc.her] cream-covered cunt.
+		[npc.Name]在你面前的桌子上坐下，然后张开[npc.her][npc.legs+]，向你展示[npc.her]那沾满奶油的小穴。
 		#ENDIF
-		 Unable to resist, you slowly lick the sweet, sugary coating off of [npc.her] [npc.labia+]. Soon enough, you're pressing your [pc.lips+] against [npc.her] [npc.pussy+] and [pc.moaning] in delight as you eat [npc.herHim] out...
+		你无法抗拒，慢慢地舔去了[npc.her][npc.labia+]上甜美的糖衣。接着，你便将[pc.lips+]压向了[npc.her][npc.pussy+]，发出一声欢愉的[pc.moaning]，开始给[npc.herHim]口交了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_DINING_HALL_RECEIVE_MEAL_DESSERT_ASS"><![CDATA[
 	<p>
-		Starting to feel a different sort of hunger, you reach across to give [npc.namePos] ass a slap as [npc.she] leans forwards to pick up your plate. Smirking as [npc.she] lets out a surprised gasp, you tell #IF(npc.isSlave())your slave#ELSE[npc.name]#ENDIF to go to the kitchen and have the chef turn [npc.her] butt into a dessert for you to enjoy.
+		当[npc.Name]向前倾身拿起你的盘子时，一种与众不同的饥渴感席卷你的全身，你伸手打了下[npc.namePos]的翘臀。当你发现[npc.her]发出一声惊讶的呻吟时，你微笑着告诉#IF(npc.isSlave())你的奴隶#ELSE[npc.name]#ENDIF，让其去厨房找厨师把[npc.her]的屁股加工一下，在做成甜点之后供你享用。
 	</p>
 	<p>
-		Doing as [npc.sheIs] told, [npc.name] picks up your plate and hurries away to the kitchen. A short while later [npc.she] returns, and you lick your [pc.lips] in anticipation as you see that [npc.her] rear end is covered in whipped cream, [style.random(chocolate|caramel|strawberry)] sauce, and [style.random(sprinkles|has a cherry perched on top)].
+		[npc.sheIs]听从你的吩咐，[npc.name]在拿起你的盘子后便匆匆跑向厨房。过了一会儿，[npc.she]回来了，你看到[npc.her]的屁股上沾满了鲜奶油、[style.random(巧克力|焦糖|草莓)]酱和[style.random(糖霜|点缀着一颗樱桃)]时，你期待地舔了舔自己[pc.lips]。
 	</p>
 	<p>
 		#IF(npc.isTaur())
-			[npc.Stepping] over to stand in front of you, [npc.name] turns around and backs up so as to present you with [npc.her] cream-covered ass.
+			[npc.Stepping]过来站在你身边，随后[npc.name]转了过去，向你展示[npc.her]那沾满奶油的屁股。
 		#ELSE
-			Lying down face-first on the table before you, [npc.name] lifts [npc.her] [npc.hips+] and presents you with [npc.her] cream-covered ass.
+		[npc.Name]面朝下趴在桌子上，然后撅起[npc.her][npc.hips+]，向你展示[npc.her]那沾满奶油的屁股。
 		#ENDIF
-		 Unable to resist, you slowly lick the sweet, sugary coating off of [npc.her] [npc.ass+]. Soon enough, you're pressing your [pc.lips+] against [npc.her] [npc.asshole+] and [pc.moaning] in delight as you perform anilingus on [npc.herHim]...
+		你无法抗拒，慢慢地舔去了[npc.her][npc.ass+]上甜美的糖衣。很快，你便用[pc.lips+]抵住[npc.her][npc.asshole+]，发出一声欢愉的[pc.moaning]，开始给[npc.herHim]吻肛了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM_DINING_HALL_AFTER_SEX"><![CDATA[
 	<p>
-		Having enjoyed your dessert, you stand up and get your things back in order. As [npc.name] returns to [npc.her] place at the edge of the room, you look around and wonder what to do next...
+		你享用完甜点后，起身整理了一下。当[npc.name]回到[npc.her]在房间角落的位置后， 你环顾四周，想着接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

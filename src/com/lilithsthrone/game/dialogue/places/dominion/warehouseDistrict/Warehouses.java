@@ -55,12 +55,12 @@ public class Warehouses {
 			if((Main.game.getPlayer().hasItemType(ItemType.NATALYA_BUSINESS_CARD) || Main.game.getPlayer().hasItemType(ItemType.NATALYA_BUSINESS_CARD_STAMPED))
 					&& !Main.game.getPlayer().isQuestFailed(QuestLine.ROMANCE_NATALYA)) {
 				if(!Main.game.isExtendedWorkTime() && !Main.game.getPlayer().isQuestCompleted(QuestLine.ROMANCE_NATALYA)) {
-					responses.add(new Response("Dominion Express",
-									"Dominion Express is currently closed to visiting members of the public. If you wanted to meet with Natalya again, you'll have to return here between the hours of [unit.time(6)]-[unit.time(22)].",
+					responses.add(new Response("御城速递",
+									"御城速递现在不接待来访公众。若想再见到娜塔莉亚，需要在[unit.time(6)]-[unit.time(22)]之间再来。",
 									null));
 				} else {
-					responses.add(new Response("Dominion Express",
-									"Enter the main warehouse of Natalya's delivery company, Dominion Express.",
+					responses.add(new Response("御城速递",
+									"进入娜塔莉亚的快递公司“御城速递”的主仓库。",
 									DominionExpress.INITIAL_ENTRANCE) {
 								@Override
 								public void effects() {
@@ -74,13 +74,13 @@ public class Warehouses {
 			if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.RELATIONSHIP_NYAN_HELP, Quest.RELATIONSHIP_NYAN_1_STOCK_ISSUES)) {
 				if(!Main.game.isExtendedWorkTime()) {
 					responses.add(new Response(WorldType.TEXTILES_WAREHOUSE.getName(),
-									"A sign near the entrance to the warehouse which houses '"+WorldType.TEXTILES_WAREHOUSE.getName()+"' declares that it's only open during the hours of [unit.time(6)]-[unit.time(22)]."
-										+ " As such, you'll have to come back later if you wanted to head inside...",
+									"“"+WorldType.TEXTILES_WAREHOUSE.getName()+"”的仓库入口旁挂着一个标签，上面表示只在[unit.time(6)]-[unit.time(22)]开门。"
+										+ "如果你想进去，最好晚点再来……",
 									null));
 					
 				} else {
 					responses.add(new Response(WorldType.TEXTILES_WAREHOUSE.getName(),
-							"Enter the warehouse which houses the business '"+WorldType.TEXTILES_WAREHOUSE.getName()+"'.",
+							"进入存放业务的仓库'"+WorldType.TEXTILES_WAREHOUSE.getName()+"'。",
 							KaysWarehouse.INITIAL_ENTRY) {
 						@Override
 						public void effects() {

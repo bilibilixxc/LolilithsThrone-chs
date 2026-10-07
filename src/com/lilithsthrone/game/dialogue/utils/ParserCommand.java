@@ -57,7 +57,7 @@ public abstract class ParserCommand {
 	}
 	
 	public String getArgumentExample() {
-		return "Example argument";
+		return "示例参数";
 	}
 
 	public String getExampleBeforeParse(String target, String arguments) {
@@ -75,7 +75,7 @@ public abstract class ParserCommand {
 			return name;
 		}
 		
-		return (descriptor.length() > 0 ? descriptor + (descriptor.charAt(descriptor.length()-1)=='-'?"":" ") : "") + name;
+		return (descriptor.length() > 0 ? descriptor+"的" : UtilText.returnStringAtRandom("平平无奇的", "普通的", "平常的")) + name;
 	}
 	
 	/**

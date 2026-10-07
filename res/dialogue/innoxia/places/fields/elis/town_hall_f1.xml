@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 	
 	<!-- Place type id: innoxia_fields_elis_town_hall_f1_assistant_room -->
@@ -45,12 +45,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Knock]]></responseTitle>
+				<responseTitle><![CDATA[敲门]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(minotallys))
-						Knock on the door to get Minotallys's attention.
+						敲门引起米诺塔莉丝的注意。
 					#ELSE
-						Minotallys isn't in her office at the moment...
+						米诺塔莉丝现在不在办公室……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -78,12 +78,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[History]]></responseTitle>
+				<responseTitle><![CDATA[历史]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_talk_history))
-						You've already spent some time today asking Minotallys about her history of ruling Elis...
+						你已经问过米诺塔莉丝关于她统治伊利斯的历史了……
 					#ELSE
-						Ask Minotallys about her history of ruling Elis.
+						问问米诺塔莉丝她统治伊利斯的历史。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -105,12 +105,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Arion]]></responseTitle>
+				<responseTitle><![CDATA[阿里昂]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_talk_arion))
-						You've already spent some time today asking Minotallys about her relationship with Arion...
+						你今天已经问过米诺塔莉丝她和阿里昂的关系了……
 					#ELSE
-						Ask Minotallys about her relationship with Arion.
+						问问米诺塔莉丝她和阿里昂的关系。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -132,12 +132,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Work]]></responseTitle>
+				<responseTitle><![CDATA[工作]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_talk_work))
-						You've already spent some time today asking Minotallys about the nature of her work...
+						你今天已经问过米诺塔莉丝她工作的本质了……
 					#ELSE
-						Ask Minotallys about the nature of her work.
+						问问米诺塔莉丝她工作的本质。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -159,12 +159,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Lilith]]></responseTitle>
+				<responseTitle><![CDATA[莉莉丝]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_talk_lilith))
-						You've already spent some time today asking Minotallys about her opinion of Lilith...
+						你今天已经问过米诺塔莉丝对莉莉丝的看法了……
 					#ELSE
-						Ask Minotallys about her opinion of Lilith.
+						询问米诺塔莉丝对莉莉丝的看法。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -186,12 +186,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Drink milk]]></responseTitle>
+				<responseTitle><![CDATA[喝奶]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_talk_milk))
-						You've already drunk your daily offering of Minotallys's milk...
+						你已经喝过每日供应的米诺塔莉丝乳汁了……
 					#ELSE
-						Accept Minotallys's offer and drink the glass of what is quite clearly her breast milk.
+						接受米诺塔莉丝的好意，喝下这杯明显是从她乳房挤出的乳汁。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -214,12 +214,12 @@
 				<availabilityConditional><![CDATA[[#pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_E_THEMISCYRA_ATTACK)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[SWORD help]]></responseTitle>
+				<responseTitle><![CDATA[SWORD援助]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getQuest(QUEST_LINE_MAIN)==QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN)
-						Tell Minotallys and Arion that you've got the help of the SWORD Enforcers.
+						告诉米诺塔莉丝和阿里昂，你已经得到SWORD执法者的帮助了。
 					#ELSE
-						You haven't got the help of the SWORD Enforcers yet...
+						你还没能得到SWORD执法者的帮助……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -234,8 +234,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye and exit Minotallys's office.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[道别并离开米诺塔莉丝的办公室。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_town_hall_f1_corridor]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setNearestLocation(WORLD_TYPE_innoxia_fields_elis_town_hall_f1, PLACE_TYPE_innoxia_fields_elis_town_hall_f1_corridor)]
@@ -298,8 +298,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Downstairs]]></responseTitle>
-				<responseTooltip><![CDATA[Head down the staircase to the ground floor of the town hall.]]></responseTooltip>
+				<responseTitle><![CDATA[下楼]]></responseTitle>
+				<responseTooltip><![CDATA[沿楼梯下到市镇议会一楼。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_hall_f0_stairs"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[

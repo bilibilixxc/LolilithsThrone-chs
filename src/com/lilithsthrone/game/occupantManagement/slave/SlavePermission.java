@@ -16,7 +16,7 @@ public enum SlavePermission {
 
 
 	BEHAVIOUR(PresetColour.BASE_TEAL,
-			"Behaviour",
+			"行为",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.BEHAVIOUR_SLUTTY,
 					SlavePermissionSetting.BEHAVIOUR_SEDUCTIVE,
@@ -26,7 +26,7 @@ public enum SlavePermission {
 			true),
 	
 	GENERAL(PresetColour.TRANSFORMATION_GENERIC,
-			"General",
+			"通用",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.GENERAL_SILENCE,
 					SlavePermissionSetting.GENERAL_CRAWLING,
@@ -35,7 +35,7 @@ public enum SlavePermission {
 			false),
 	
 	SEX(PresetColour.GENERIC_SEX,
-			"Sex",
+			"做爱",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.SEX_LUBE_PILL,
 					SlavePermissionSetting.SEX_MASTURBATE,
@@ -49,7 +49,7 @@ public enum SlavePermission {
 			false),
 
 	PILLS(PresetColour.BASE_PURPLE_LIGHT,
-			"Pills",
+			"药片",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.PILLS_NO_PILLS,
 					SlavePermissionSetting.PILLS_PROMISCUITY_PILLS,
@@ -63,7 +63,7 @@ public enum SlavePermission {
 	},
 
 	PREGNANCY(PresetColour.BASE_PINK,
-			"Pregnancy",
+			"妊娠",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.PREGNANCY_MOTHERS_MILK,
 					SlavePermissionSetting.PREGNANCY_ALLOW_BIRTHING,
@@ -76,7 +76,7 @@ public enum SlavePermission {
 	},
 	
 	DIET(PresetColour.BODY_SIZE_TWO,
-			"Diet",
+			"饮食",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.FOOD_DIET_EXTREME,
 					SlavePermissionSetting.FOOD_DIET,
@@ -91,7 +91,7 @@ public enum SlavePermission {
 	},
 
 	EXERCISE(PresetColour.MUSCLE_TWO,
-			"Exercise",
+			"锻炼",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.EXERCISE_FORBIDDEN,
 					SlavePermissionSetting.EXERCISE_REST,
@@ -106,7 +106,7 @@ public enum SlavePermission {
 	},
 	
 	CLEANLINESS(PresetColour.BASE_BLUE_LIGHT,
-			"Cleanliness",
+			"清洁",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.CLEANLINESS_WASH_CLOTHES,
 					SlavePermissionSetting.CLEANLINESS_WASH_BODY,
@@ -114,7 +114,7 @@ public enum SlavePermission {
 			false),
 	
 	SLEEPING(PresetColour.BASE_PURPLE_LIGHT,
-			"Sleeping",
+			"睡眠",
 			Util.newArrayListOfValues(
 					SlavePermissionSetting.SLEEPING_DEFAULT,
 					SlavePermissionSetting.SLEEPING_NIGHT,

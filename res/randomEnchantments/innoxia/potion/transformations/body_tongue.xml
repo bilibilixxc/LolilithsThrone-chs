@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -12,7 +12,7 @@
 	
 	<conditionalPreParsing/>
 	
-	<name defaultPrepend="true"><![CDATA[Tongue-twisting]]></name>
+	<name defaultPrepend="true"><![CDATA[灵活舌头]]></name>
 	
 	<applicationSpeechStart replaceAll="false"><![CDATA[
 		Giving you a really freaky tongue would be fun!

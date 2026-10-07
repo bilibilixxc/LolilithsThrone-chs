@@ -11,11 +11,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Muscle {
 	
-	ZERO_SOFT("soft", 0, 20, PresetColour.MUSCLE_ZERO),
-	ONE_LIGHTLY_MUSCLED("lightly muscled", 20, 40, PresetColour.MUSCLE_ONE),
-	TWO_TONED("toned", 40, 60, PresetColour.MUSCLE_TWO),
-	THREE_MUSCULAR("muscular", 60, 80, PresetColour.MUSCLE_THREE),
-	FOUR_RIPPED("ripped", 80, 100, PresetColour.MUSCLE_FOUR);
+	ZERO_SOFT("肌肉松弛", 0, 20, PresetColour.MUSCLE_ZERO),
+	ONE_LIGHTLY_MUSCLED("稍有肌肉", 20, 40, PresetColour.MUSCLE_ONE),
+	TWO_TONED("略有肌肉", 40, 60, PresetColour.MUSCLE_TWO),
+	THREE_MUSCULAR("肌肉紧致", 60, 80, PresetColour.MUSCLE_THREE),
+	FOUR_RIPPED("肌肉发达", 80, 100, PresetColour.MUSCLE_FOUR);
 
 	private String name;
 	private int minimumMuscle;
@@ -52,7 +52,7 @@ public enum Muscle {
 	
 	public String getName(boolean withDeterminer) {
 		if(withDeterminer) {
-			return UtilText.generateSingularDeterminer(name) + " " + name;
+			return UtilText.generateSingularDeterminer(name) + "" + name;
 		} else {
 			return name;
 		}

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1200</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[equine dildo]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[equine dildos]]></namePlural>
-		<description><![CDATA[A huge dildo, formed out of self-cleaning, arcane-cured silicone into the shape of a horse penis. True to the animal's anatomy, this dildo's [units.sizeShort(45)] length is sectioned into three parts; the balls and sheath at the base; a section of shaft in the middle; and a wide, flared head at the tip.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[马形假阳具]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[马形假阳具]]></namePlural>
+		<description><![CDATA[一个巨大的假阳具，由自清洁的神秘固化硅胶制成，形状模仿马的阴茎。忠实于动物的解剖结构，这款假阳具的[units.sizeShort(45)]长被分为三个部分；底部是雄壮的睾丸和包皮；中间是一段阳物的轴身；顶端则是一个宽大而平的头部。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -23,7 +22,7 @@
 			<category id="colour" priority="1">
 				<categoryName><![CDATA[Colours]]></categoryName>
 				<sticker id="one" priority="1" defaultSticker="true" zLayer="-1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[One]]></stickerName>
+					<stickerName><![CDATA[一个]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -34,7 +33,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="two" priority="2" defaultSticker="true" zLayer="-1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Two (hard)]]></stickerName>
+					<stickerName><![CDATA[两个(坚硬)]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -45,7 +44,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="two_soft" priority="2" defaultSticker="true" zLayer="-1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Two (soft)]]></stickerName>
+					<stickerName><![CDATA[两个(柔软)]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -56,7 +55,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="three" priority="3" defaultSticker="false" zLayer="-1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Three (hard)]]></stickerName>
+					<stickerName><![CDATA[三个(坚硬)]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -67,7 +66,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="three_soft" priority="3" defaultSticker="false" zLayer="-1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Three (soft)]]></stickerName>
+					<stickerName><![CDATA[三个(柔软)]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -169,75 +168,75 @@
 	
 	
 	<replacementText slot="VAGINA" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the huge equine dildo into [npc.her] [npc.vagina+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the huge equine dildo into [npc2.namePos] [npc2.vagina+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the huge equine dildo into [npc2.namePos] [npc2.vagina+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将巨大马形假阳具塞进[npc.her][npc.vagina+]。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]把巨大马形假阳具插进[npc2.namePos][npc2.vagina+]。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]把巨大马形假阳具捅进[npc2.namePos][npc2.vagina+]。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText slot="VAGINA" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the huge equine dildo out of [npc.her] [npc.vagina+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the huge equine dildo out of [npc2.namePos] [npc2.vagina+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] huge equine dildo and [npc.verb(yank)] it out of [npc2.her] [npc2.vagina+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把巨大马形假阳具从[npc.her][npc.vagina+]拔出。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把巨大马形假阳具从[npc2.namePos][npc2.vagina+]拔出。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的巨大马形假阳具并从[npc2.her][npc2.vagina+]里扯出。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText slot="ANUS" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the huge equine dildo into [npc.her] [npc.anus+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the huge equine dildo into [npc2.namePos] [npc2.anus+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the huge equine dildo into [npc2.namePos] [npc2.anus+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把巨大马形假阳具塞进[npc.her][npc.anus+]。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把巨大马形假阳具插进[npc2.namePos][npc2.anus+]。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]把巨大马形假阳具捅进[npc2.namePos][npc2.anus+]。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText slot="ANUS" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the huge equine dildo out of [npc.her] [npc.anus+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the huge equine dildo out of [npc2.namePos] [npc2.anus+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] huge equine dildo and [npc.verb(yank)] it out of [npc2.her] [npc2.anus+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把巨大马形假阳具从[npc.her][npc.anus+]拔出。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把巨大马形假阳具从[npc2.namePos][npc2.anus+]拔出。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的巨大马形假阳具并从[npc2.her][npc2.anus+]扯出。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the huge equine dildo into [npc.her] [npc.mouth+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the huge equine dildo into [npc2.namePos] [npc2.mouth+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the huge equine dildo into [npc2.namePos] [npc2.mouth+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把巨大马形假阳具塞进[npc.her][npc.mouth+]。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把巨大马形假阳具插进[npc2.namePos][npc2.mouth+]。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]把巨大马形假阳具捅进[npc2.namePos][npc2.mouth+]。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the huge equine dildo out of [npc.her] [npc.mouth+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the huge equine dildo out of [npc2.namePos] [npc2.mouth+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] [npc2.namePos] huge equine dildo and [npc.verb(yank)] it out of [npc2.her] [npc2.mouth+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把巨大马形假阳具从[npc.her][npc.mouth+]拔出。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把巨大马形假阳具从[npc2.namePos][npc2.mouth+]拔出。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的巨大马形假阳具并从[npc2.her][npc2.mouth+]扯出。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

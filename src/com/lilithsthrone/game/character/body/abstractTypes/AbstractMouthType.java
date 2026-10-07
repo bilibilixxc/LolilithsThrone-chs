@@ -60,10 +60,10 @@ public abstract class AbstractMouthType implements BodyPartTypeInterface {
 				null,
 				Util.newArrayListOfValues(""),
 				Util.newArrayListOfValues(""),
-				Util.newArrayListOfValues("lip"),
-				Util.newArrayListOfValues("lips"),
+				Util.newArrayListOfValues("嘴唇"),
+				Util.newArrayListOfValues("嘴唇"),
 				Util.newArrayListOfValues(""),
-				Util.newArrayListOfValues("soft", "delicate"),
+				Util.newArrayListOfValues("柔软", "精致"),
 				null,
 				Util.newArrayListOfValues());
 	}
@@ -112,18 +112,18 @@ public abstract class AbstractMouthType implements BodyPartTypeInterface {
 		this.lipDescriptorsFeminine = lipDescriptorsFeminine;
 		
 		if(mouthBodyDescription==null || mouthBodyDescription.isEmpty()) {
-			this.mouthBodyDescription = "[npc.SheHasFull] [npc.lipSize], [npc.mouthColourPrimary(true)] [npc.lips]"
+			this.mouthBodyDescription = "[npc.SheHasFull]有着[npc.lipSize]、[npc.mouthColourPrimary(true)][npc.lips]"
 						+ "#IF(npc.isWearingLipstick())"
-							+ "#IF(npc.isPiercedLip()), which have been pierced, and#ELSE, which#ENDIF"
-							+ " are currently [npc.materialCompositionDescriptor]"
+							+ "#IF(npc.isPiercedLip())，已经打上穿孔，并且#ELSE，#ENDIF"
+							+ "现在[npc.materialCompositionDescriptor]"
 							+ "#IF(npc.isHeavyMakeup(BODY_COVERING_TYPE_MAKEUP_LIPSTICK) && game.isLipstickMarkingEnabled())"
-								+ " a [style.colourPinkDeep(heavy layer)] of"
+								+ "[style.colourPinkDeep(一层浓重的)]"
 							+ "#ENDIF"
-							+ " [#npc.getLipstick().getFullDescription(npc, true)]."
+							+ "[#npc.getLipstick().getFullDescription(npc, true)]。"
 						+ "#ELSE"
-							+ "#IF(npc.isPiercedLip()), which have been pierced#ENDIF."
+							+ "#IF(npc.isPiercedLip())，已经打上穿孔#ENDIF。"
 						+ "#ENDIF"
-						+ " [npc.Her] throat is [npc.mouthColourSecondary(true)] in colour.";
+						+ "[npc.Her]的喉咙颜色为[npc.mouthColourSecondary(true)]。";
 		} else {
 			this.mouthBodyDescription = mouthBodyDescription;
 		}
@@ -185,7 +185,7 @@ public abstract class AbstractMouthType implements BodyPartTypeInterface {
 						lipNames.add(e.getTextContent());
 					}
 				} else {
-					this.lipNames.add("lip");
+					this.lipNames.add("嘴唇");
 				}
 				
 				this.lipNamesPlural = new ArrayList<>();
@@ -194,7 +194,7 @@ public abstract class AbstractMouthType implements BodyPartTypeInterface {
 						lipNamesPlural.add(e.getTextContent());
 					}
 				} else {
-					this.lipNamesPlural.add("lips");
+					this.lipNamesPlural.add("嘴唇");
 				}
 				
 
@@ -261,7 +261,7 @@ public abstract class AbstractMouthType implements BodyPartTypeInterface {
 	@Override
 	public String getNameSingular(GameCharacter gc) {
 		if(names==null || names.isEmpty()) {
-			return UtilText.returnStringAtRandom("mouth");
+			return UtilText.returnStringAtRandom("嘴巴");
 		}
 		return Util.randomItemFrom(names);
 	}
@@ -269,7 +269,7 @@ public abstract class AbstractMouthType implements BodyPartTypeInterface {
 	@Override
 	public String getNamePlural(GameCharacter gc) {
 		if(namesPlural==null || names.isEmpty()) {
-			return UtilText.returnStringAtRandom("mouths");
+			return UtilText.returnStringAtRandom("嘴巴");
 		}
 		return Util.randomItemFrom(namesPlural);
 	}

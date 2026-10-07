@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>150</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[yoga pants]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[yoga pants]]></namePlural>
-		<description><![CDATA[A pair of very tight yoga pants, made from a stretchable and thin fabric.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[瑜伽裤]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[瑜伽裤]]></namePlural>
+		<description><![CDATA[一条非常轻薄贴身的瑜伽裤。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>LEG</slot>
@@ -64,27 +64,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(step)] into the yoga pants, before pulling them up to fit around [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(get)] [npc2.name] to step into the yoga pants, before pulling them up to fit around [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step into the yoga pants, before yanking them up to fit around [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]穿上瑜伽裤，然后把裤子提到[npc.her]的腰部。
+    ]]></self>
+    <other><![CDATA[
+[npc.Name]让[npc2.name]踏入瑜伽裤，然后拉上以合适[npc2.her]的腰部。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强迫[npc2.name]踩进瑜伽裤，然后猛地将它们拉上围上[npc2.her]的腰部。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc.her] yoga pants, before slipping them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc2.namePos] yoga pants, before slipping them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] yoga pants, before yanking them off.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把[npc.her]的瑜伽裤拉下并脱掉。
+    ]]></self>
+    <other><![CDATA[
+[npc.Name]拉下[npc2.namePos]的瑜伽裤，然后将它脱掉。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地拉下[npc2.namePos]的瑜伽裤，随后用力将它们拽掉。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

@@ -75,7 +75,7 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Wait in the lounge while Nyan and [nyanmum.name] get ready.", DATE_START_WAIT);
+				return new Response("等待", "在休息室等待，直到妮安和[nyanmum.name]准备好。", DATE_START_WAIT);
 			}
 			return null;
 		}
@@ -99,7 +99,7 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Restaurant", "Accompany Nyan and [nyanmum.name] to the restaurant.", DATE_RESTAURANT_1_ARRIVED);
+				return new Response("餐厅", "陪妮安和[nyanmum.name]前往餐厅。", DATE_RESTAURANT_1_ARRIVED);
 			}
 			return null;
 		}
@@ -123,7 +123,7 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Share bottle", "Agree to share the bottle with Nyan and [nyanmum.name].", DATE_RESTAURANT_2_PLAYER_DRINK) {
+				return new Response("共享美酒", "同意与妮安和[nyanmum.name]共享这瓶酒。", DATE_RESTAURANT_2_PLAYER_DRINK) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/nyansApartment/firstDoubleDate", "DATE_RESTAURANT_2_SHARE"));
@@ -132,7 +132,7 @@ public class NyanFirstDoubleDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Water", "Order a bottle of water for yourself.", DATE_RESTAURANT_2_PLAYER_DRINK) {
+				return new Response("水", "给自己点一瓶水。", DATE_RESTAURANT_2_PLAYER_DRINK) {
 					@Override
 					public void effects() {
 						dateBill+=25;
@@ -142,7 +142,7 @@ public class NyanFirstDoubleDate {
 				};
 				
 			} else if(index==3) {
-				return new Response("Beer", "Order a beer for yourself.", DATE_RESTAURANT_2_PLAYER_DRINK) {
+				return new Response("啤酒", "给自己点一扎啤酒。", DATE_RESTAURANT_2_PLAYER_DRINK) {
 					@Override
 					public void effects() {
 						dateBill+=50;
@@ -167,7 +167,7 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Order", "Place your orders and wait for the starters to arrive.", DATE_RESTAURANT_3_STARTERS) {
+				return new Response("点餐", "点餐并等待开胃菜送上来。", DATE_RESTAURANT_3_STARTERS) {
 					@Override
 					public void effects() {
 						dateBill+=1100;
@@ -176,7 +176,7 @@ public class NyanFirstDoubleDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Order (candle)", "Place your orders and wait for the starters to arrive. Also ask if you could have a romantic candle lit on your table.", DATE_RESTAURANT_3_STARTERS) {
+				return new Response("点餐(蜡烛)", "点餐并等待开胃菜送上来。同时请求在你们的桌子上点燃浪漫的蜡烛。", DATE_RESTAURANT_3_STARTERS) {
 					@Override
 					public void effects() {
 						dateBill+=1100;
@@ -208,7 +208,7 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Respond", "Tell [nyanmum.name] all about yourself.", DATE_RESTAURANT_4_MAIN_MEAL);
+				return new Response("回复", "向[nyanmum.name]坦白你的一切。", DATE_RESTAURANT_4_MAIN_MEAL);
 			}
 			return null;
 		}
@@ -233,9 +233,9 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Agree",
-						"Agree to be both Nyan's and [nyanmum.namepos] [pc.girlfriend]."
-								+ "<br/>[style.italicsMinorGood(This will permanently result in both Nyan and [nyanmum.name] being your girlfriends...)]",
+				return new Response("同意",
+						"同意成为妮安和[nyanmum.namepos]的[pc.girlfriend]。"
+								+ "<br/>[style.italicsMinorGood(这将使妮安和[nyanmum.name]都永远成为你的女朋友……)]",
 						DATE_5_END) {
 					@Override
 					public Colour getHighlightColour() {
@@ -249,9 +249,9 @@ public class NyanFirstDoubleDate {
 				};
 				
 			} else if(index==2) {
-				return new Response("Refuse",
-						"Tell [nyanmum.name] that you're only interested in dating her daughter."
-						+ "<br/>[style.italicsMinorBad(This is a permanent choice, and you will not get the opportunity to date [nyanmum.name] again...)]",
+				return new Response("拒绝",
+						"告诉[nyanmum.name]，你只想和她的女儿约会。"
+						+ "<br/>[style.italicsMinorBad(这是永久性的选择，你将再也没机会和[nyanmum.name]约会……)]",
 						DATE_5_END) {
 					@Override
 					public Colour getHighlightColour() {
@@ -289,10 +289,10 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave ("+UtilText.formatAsMoney(dateBill, "span")+")",
+				return new Response("离开("+UtilText.formatAsMoney(dateBill, "span")+")",
 						Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumGirlfriend)
-							?"Pay the bill and accompany Nyan and [nyanmum.name] back to their apartment."
-							:"Pay the bill and accompany Nyan back to her apartment building.",
+							?"付账然后陪妮安和[nyanmum.name]回到他们的公寓。"
+							:"付账然后陪妮安回到她的公寓。",
 						DATE_END_RETURN) {
 					@Override
 					public void effects() {
@@ -341,7 +341,7 @@ public class NyanFirstDoubleDate {
 		public Response getResponse(int responseTab, int index) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumGirlfriend)) {
 					if(index==1) {
-						return new Response("Lounge", "Do as [nyanmum.name] says and wait in the lounge...", POST_DATE_APARTMENT_LOUNGE) {
+						return new Response("休息室", "按照[nyanmum.name]的话去休息室等待……", POST_DATE_APARTMENT_LOUNGE) {
 							@Override
 							public void effects() {
 								kinky = false;
@@ -350,7 +350,7 @@ public class NyanFirstDoubleDate {
 						};
 						
 					} else if(index==2) {
-						return new Response("Lounge (kinky)", "Tell [nyanmum.name] that you like the sound of her 'kinky idea', before doing as she says and waiting in the lounge...", POST_DATE_APARTMENT_LOUNGE) {
+						return new Response("休息室(调皮)", "告诉[nyanmum.name]你喜欢她的“调皮想法”，听她的话在休息室乖乖等待……", POST_DATE_APARTMENT_LOUNGE) {
 							@Override
 							public void effects() {
 								kinky = true;
@@ -361,7 +361,7 @@ public class NyanFirstDoubleDate {
 					
 				} else {
 					if(index==1) {
-						return new Response("Bedroom", "Head into Nyan's bedroom...", POST_DATE_APARTMENT_BEDROOM) {
+						return new Response("卧室", "进入妮安的卧室……", POST_DATE_APARTMENT_BEDROOM) {
 							@Override
 							public int getSecondsPassed() {
 								return 5*60;
@@ -390,7 +390,7 @@ public class NyanFirstDoubleDate {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Bedroom", "Head into [nyanmum.namePos] bedroom...", POST_DATE_APARTMENT_BEDROOM);
+				return new Response("卧室", "进入[nyanmum.namePos]的卧室……", POST_DATE_APARTMENT_BEDROOM);
 			}
 			return null;
 		}

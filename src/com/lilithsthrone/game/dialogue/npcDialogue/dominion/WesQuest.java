@@ -58,7 +58,7 @@ public class WesQuest {
 		workTalkIds = Util.newArrayListOfValues("1", "2", "3", "4", "5");
 	}
 	
-	public static final DialogueNode WES_QUEST_START = new DialogueNode("A Sudden Interruption", "", true) {
+	public static final DialogueNode WES_QUEST_START = new DialogueNode("突如其来的打断", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			((Wes)Main.game.getNpc(Wes.class)).applyDisguise();
@@ -75,7 +75,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Agree", "Agree to meet this mysterious Enforcer outside of the Shopping Arcade's antiques shop.", WES_QUEST_START_END) {
+				return new Response("同意", "同意跟这个神秘的执法者在购物中心的古董店外见面。", WES_QUEST_START_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("characters/dominion/wes", "WES_QUEST_AGREE"));
@@ -83,7 +83,7 @@ public class WesQuest {
 				};
 				
 			} else if(index==2) {
-				return new Response("Question", "Ask the mysterious Enforcer why he wants to see you.", WES_QUEST_START_END) {
+				return new Response("疑问", "问这个神秘的执法者为什么想见你。", WES_QUEST_START_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("characters/dominion/wes", "WES_QUEST_QUESTION"));
@@ -112,7 +112,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way through Dominion...", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false));
+				return new Response("继续", "继续你在御城区的旅程……", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false));
 			}
 			return null;
 		}
@@ -141,7 +141,7 @@ public class WesQuest {
 				
 			} else {
 				if(index==1) {
-					return new Response("Question", "Ask Wes for more details on what he wants you to do.", WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION);
+					return new Response("疑问", "问韦斯他想让你做什么，有没有更多细节。", WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION);
 				}
 			}
 			return null;
@@ -160,12 +160,12 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Agree", "Agree to do as Wes asks and collect evidence of his superior officer's corruption...", WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION_END);
+				return new Response("同意", "同意韦斯的请求，收集他长官贪污腐败的证据……", WES_QUEST_SHOPPING_ARCADE_MEETING_QUESTION_END);
 				
 			} else if(index==2) {
-				return new Response("Refuse",
-						"Tell Wes that you don't want to get involved in something like this."
-								+ "<br/>[style.italicsMinorGood(You will be able to change your mind and seek out Wes to help him again later.)]",
+				return new Response("拒绝",
+						"告诉韦斯你不想牵扯进这种事情里。"
+								+ "<br/>[style.italicsMinorGood(之后如果改变了主意，还可以找到韦斯帮助他。)]",
 								WES_QUEST_SHOPPING_ARCADE_MEETING_FAIL);
 			}
 			return null;
@@ -192,7 +192,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way through the Shopping Arcade...", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false)) {
+				return new Response("继续", "继续你在购物中心的旅程……", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.wesQuestMet, true);
@@ -224,14 +224,14 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way through the Shopping Arcade...", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false));
+				return new Response("继续", "继续你在购物中心的旅程……", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false));
 			}
 			return null;
 		}
 	};
 	
 
-	public static final DialogueNode ELLE_SEARCH = new DialogueNode("Finding Elle", "", true) {
+	public static final DialogueNode ELLE_SEARCH = new DialogueNode("寻找埃勒", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Vector2i playerLoc = Main.game.getPlayer().getLocation();
@@ -253,7 +253,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Enter cave", "Enter the cave and take a look around...", ELLE_SEARCH_CAVE);
+				return new Response("进入洞窟", "进入洞窟并且环顾四周……", ELLE_SEARCH_CAVE);
 			}
 			return null;
 		}
@@ -275,7 +275,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Start recording", "Remain hidden behind the crates and start recording Elle's dealings...", ELLE_SEARCH_CAVE_RECORDING);
+				return new Response("开始录像", "藏在板条箱后，录下埃勒的交易现场……", ELLE_SEARCH_CAVE_RECORDING);
 			}
 			return null;
 		}
@@ -297,7 +297,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Leave your hiding place and set out into the Bat Caverns...", ELLE_SEARCH_CAVE_LEAVE);
+				return new Response("离开", "离开你的藏身处，进入蝙蝠洞窟……", ELLE_SEARCH_CAVE_LEAVE);
 			}
 			return null;
 		}
@@ -380,7 +380,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Explain", "Reveal to Elle everything that Wes told you and show her the evidence on the arcane recorder.", APPROACH_ELLE_EXPLAIN);
+				return new Response("解释", "告诉埃勒韦斯让你做的一切，并且展示奥术录像机中的证据。", APPROACH_ELLE_EXPLAIN);
 			}
 			return null;
 		}
@@ -407,13 +407,13 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way...", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false));
+				return new Response("继续", "继续你的旅程……", Main.game.getPlayer().getLocationPlace().getPlaceType().getDialogue(false));
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode INTRO_HQ_WES = new DialogueNode("Meeting Wes", "", true) {
+	public static final DialogueNode INTRO_HQ_WES = new DialogueNode("会见韦斯", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().setLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_WAITING_AREA);
@@ -429,13 +429,13 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Wait for Wes to show up.", INTRO_HQ_WES_ARRIVE);
+				return new Response("等待", "等韦斯现身。", INTRO_HQ_WES_ARRIVE);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode INTRO_HQ_WES_ARRIVE = new DialogueNode("Meeting Wes", "", true, true) {
+	public static final DialogueNode INTRO_HQ_WES_ARRIVE = new DialogueNode("会见韦斯", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getNpc(Wes.class).addSlave(Main.game.getNpc(Elle.class));
@@ -456,13 +456,13 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Wes into the Enforcer HQ.", INTRO_HQ_WES_OFFICE);
+				return new Response("跟随", "跟着韦斯进入执法者总部。", INTRO_HQ_WES_OFFICE);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode INTRO_HQ_WES_OFFICE = new DialogueNode("Meeting Wes", "", true, true) {
+	public static final DialogueNode INTRO_HQ_WES_OFFICE = new DialogueNode("会见韦斯", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Vector2i playerLoc = Main.game.getPlayer().getLocation();
@@ -488,13 +488,13 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Requisitions", "Head over to the requisitions area to see what Wes can offer you.", INTRO_HQ_WES_REQUISITIONS);
+				return new Response("军需处", "前往军需处，看看韦斯能给你提供什么。", INTRO_HQ_WES_REQUISITIONS);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode INTRO_HQ_WES_REQUISITIONS = new DialogueNode("Meeting Wes", "", true, true) {
+	public static final DialogueNode INTRO_HQ_WES_REQUISITIONS = new DialogueNode("会见韦斯", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().setLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_REQUISITIONS, false);
@@ -515,7 +515,7 @@ public class WesQuest {
 		}
 	};
 	
-	public static final DialogueNode INTRO_HQ_ELLE = new DialogueNode("Meeting Elle", "", true) {
+	public static final DialogueNode INTRO_HQ_ELLE = new DialogueNode("会见埃勒", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().setLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_WAITING_AREA);
@@ -531,13 +531,13 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Wait for Elle to show up.", INTRO_HQ_ELLE_ARRIVE);
+				return new Response("等待", "等待埃勒现身。", INTRO_HQ_ELLE_ARRIVE);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode INTRO_HQ_ELLE_ARRIVE = new DialogueNode("Meeting Elle", "", true, true) {
+	public static final DialogueNode INTRO_HQ_ELLE_ARRIVE = new DialogueNode("会见埃勒", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getNpc(Elle.class).addSlave(Main.game.getNpc(Wes.class));
@@ -563,13 +563,13 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Elle into the Enforcer HQ.", INTRO_HQ_ELLE_OFFICE);
+				return new Response("跟随", "跟随埃勒进入执法者总部。", INTRO_HQ_ELLE_OFFICE);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode INTRO_HQ_ELLE_OFFICE = new DialogueNode("Meeting Elle", "", true, true) {
+	public static final DialogueNode INTRO_HQ_ELLE_OFFICE = new DialogueNode("会见埃勒", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Vector2i playerLoc = Main.game.getPlayer().getLocation();
@@ -595,13 +595,13 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Requisitions", "Head over to the requisitions area to see what Elle can offer you.", INTRO_HQ_ELLE_REQUISITIONS);
+				return new Response("军需处", "前往军需处，看看埃勒能给你提供什么。", INTRO_HQ_ELLE_REQUISITIONS);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode INTRO_HQ_ELLE_REQUISITIONS = new DialogueNode("Meeting Elle", "", true, true) {
+	public static final DialogueNode INTRO_HQ_ELLE_REQUISITIONS = new DialogueNode("会见埃勒", "", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getPlayer().setLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_REQUISITIONS, false);
@@ -641,7 +641,7 @@ public class WesQuest {
 			
 			if(Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_WES, Quest.WES_3_ELLE)) {
 				if(index==0) {
-					return new Response("Leave", "Tell Elle that you've got to be going now and head back out into the corridor.", PlaceType.ENFORCER_HQ_CELLS_CORRIDOR.getDialogue(false)) {
+					return new Response("离开", "告诉埃勒你现在必须走了，然后回到走廊。", PlaceType.ENFORCER_HQ_CELLS_CORRIDOR.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_INTERACTION_LEAVE"));
@@ -650,16 +650,16 @@ public class WesQuest {
 					};
 					
 				} else if(index==1) {
-					return new ResponseTrade("Trade", "Buy some gear from Elle.", Main.game.getNpc(Elle.class));
+					return new ResponseTrade("交易", "从埃勒处买一些装备。", Main.game.getNpc(Elle.class));
 					
 				} else if(index==2) {
 					if(Main.game.getCurrentDialogueNode()==REQUISITIONS_BACKGROUND) {
-						return new Response("Background", "You're already asking Elle about herself!", null);
+						return new Response("背景", "你已经问过埃勒她自己的事情了！", null);
 					}
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestTalked)) {
-						return new Response("Background", "You've already spent some time asking Elle about herself...<br/>[style.italicsMinorBad(You can only do this once per day.)]", null);
+						return new Response("背景", "你已经跟埃勒谈过她自己了……<br/>[style.italicsMinorBad(每天只能一次。)]", null);
 					}
-					return new Response("Background", "Ask Elle about herself.<br/>[style.italicsMinorGood(You can do this once per day.)]", REQUISITIONS_BACKGROUND) {
+					return new Response("背景", "问问埃勒她自己的事情。<br/>[style.italicsMinorGood(每天可以问一次。)]", REQUISITIONS_BACKGROUND) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.wesQuestTalked, true);
@@ -669,12 +669,12 @@ public class WesQuest {
 					
 				} else if(index==3) {
 					if(Main.game.getCurrentDialogueNode()==REQUISITIONS_WORK) {
-						return new Response("Work", "You're already asking Elle about how her work is going!", null);
+						return new Response("工作", "你已经问过埃勒最近工作如何了！", null);
 					}
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestTalkedAlt)) {
-						return new Response("Work", "You've already spent some time asking Elle about how her work is going...<br/>[style.italicsMinorBad(You can only do this once per day.)]", null);
+						return new Response("工作", "你已经问过埃勒最近工作如何了……<br/>[style.italicsMinorBad(每天只能一次。)]", null);
 					}
-					return new Response("Work", "Ask Elle about how her work is going.<br/>[style.italicsMinorGood(You can do this once per day.)]", REQUISITIONS_WORK) {
+					return new Response("工作", "问问埃勒最近工作如何。<br/>[style.italicsMinorGood(每天可以问一次。)]", REQUISITIONS_WORK) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.wesQuestTalkedAlt, true);
@@ -684,9 +684,9 @@ public class WesQuest {
 					
 				} else if(index==4) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestFlirted)) {
-						return new Response("Flirt", "You've already spent some time flirting with Elle today...<br/>[style.italicsMinorBad(You can only do this once per day.)]", null);
+						return new Response("调情", "你今天已经与埃勒调情过了……<br/>[style.italicsMinorBad(一天只能调情一次。)]", null);
 					}
-					return new Response("Flirt", "Flirt with Elle.<br/>[style.italicsMinorGood(You can do this once per day.)]", REQUISITIONS_FLIRT_ELLE) {
+					return new Response("调情", "与埃勒调情。<br/>[style.italicsMinorGood(你一天只能与埃勒调情一次。)]", REQUISITIONS_FLIRT_ELLE) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.wesQuestFlirted, true);
@@ -697,7 +697,7 @@ public class WesQuest {
 				
 			} else {
 				if(index==0) {
-					return new Response("Leave", "Tell Wes that you've got to be going now and head back out into the corridor.", PlaceType.ENFORCER_HQ_CELLS_CORRIDOR.getDialogue(false)) {
+					return new Response("离开", "告诉韦斯你现在必须走了，然后回到走廊。", PlaceType.ENFORCER_HQ_CELLS_CORRIDOR.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_INTERACTION_LEAVE"));
@@ -709,16 +709,16 @@ public class WesQuest {
 					};
 					
 				} else if(index==1) {
-					return new ResponseTrade("Trade", "Buy some gear from Wes.", Main.game.getNpc(Wes.class));
+					return new ResponseTrade("交易", "从韦斯处买一些装备。", Main.game.getNpc(Wes.class));
 					
 				} else if(index==2) {
 					if(Main.game.getCurrentDialogueNode()==REQUISITIONS_BACKGROUND) {
-						return new Response("Background", "You're already asking Wes about himself!", null);
+						return new Response("背景", "你已经问过韦斯他自己的事情了！", null);
 					}
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestTalked)) {
-						return new Response("Background", "You've already spent some time asking Wes about himself...<br/>[style.italicsMinorBad(You can only do this once per day.)]", null);
+						return new Response("背景", "你已经跟韦斯谈过他自己了……<br/>[style.italicsMinorBad(每天只能一次。)]", null);
 					}
-					return new Response("Background", "Ask Wes about himself.<br/>[style.italicsMinorGood(You can do this once per day.)]", REQUISITIONS_BACKGROUND) {
+					return new Response("背景", "问问韦斯他自己的事情。<br/>[style.italicsMinorGood(每天可以问一次。)]", REQUISITIONS_BACKGROUND) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.wesQuestTalked, true);
@@ -731,12 +731,12 @@ public class WesQuest {
 					
 				} else if(index==3) {
 					if(Main.game.getCurrentDialogueNode()==REQUISITIONS_WORK) {
-						return new Response("Work", "You're already asking Wes about how his work is going!", null);
+						return new Response("工作", "你已经问过韦斯最近工作如何了！", null);
 					}
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestTalkedAlt)) {
-						return new Response("Work", "You've already spent some time asking Wes about how his work is going...<br/>[style.italicsMinorBad(You can only do this once per day.)]", null);
+						return new Response("工作", "你已经问过韦斯最近工作如何了……<br/>[style.italicsMinorBad(每天只能一次。)]", null);
 					}
-					return new Response("Work", "Ask Wes about how his work is going.<br/>[style.italicsMinorGood(You can do this once per day.)]", REQUISITIONS_WORK) {
+					return new Response("工作", "问问韦斯最近工作如何。<br/>[style.italicsMinorGood(每天可以问一次。)]", REQUISITIONS_WORK) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.wesQuestTalkedAlt, true);
@@ -749,12 +749,12 @@ public class WesQuest {
 					
 				} else if(index==4) {
 					if(!Main.game.getNpc(Wes.class).isAttractedTo(Main.game.getPlayer())) {
-						return new Response("Flirt", "As Wes is not attracted to you, you can tell that trying to flirt with him wouldn't end well...", null);
+						return new Response("调情", "韦斯没有被你吸引，你能想到与他调情不会有好结果……", null);
 					}
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestFlirted)) {
-						return new Response("Flirt", "You've already spent some time flirting with Wes today...<br/>[style.italicsMinorBad(You can only do this once per day.)]", null);
+						return new Response("调情", "你今天已经与韦斯调情过了……<br/>[style.italicsMinorBad(你一天只能调情一次。)]", null);
 					}
-					return new Response("Flirt", "Flirt with Wes.<br/>[style.italicsMinorGood(You can do this once per day.)]", REQUISITIONS_FLIRT_WES) {
+					return new Response("调情", "与韦斯调情。<br/>[style.italicsMinorGood(你一天可以调情一次。)]", REQUISITIONS_FLIRT_WES) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.wesQuestFlirted, true);
@@ -767,9 +767,9 @@ public class WesQuest {
 					
 				} else if(index==5) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestSex)) {
-						return new Response("Elle", "You've already spent some time with Elle today...<br/>[style.italicsMinorBad(You can only do this once per day.)]", null);
+						return new Response("埃勒", "你今天已经跟陪过埃勒一段时间了……<br/>[style.italicsMinorBad(每天只能一次。)]", null);
 					}
-					return new Response("Elle", "Ask Wes if you can spend some time with Elle.<br/>[style.italicsMinorGood(You can do this once per day.)]", WES_ELLE_OFFICE) {
+					return new Response("埃勒", "询问韦斯你能不能陪埃勒一会儿。<br/>[style.italicsMinorGood(每天可以一次。)]", WES_ELLE_OFFICE) {
 						@Override
 						public boolean isSexHighlight() {
 							return true;
@@ -907,7 +907,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Office tour", "Tell Elle that you'd love to take a 'tour' around her office...", REQUISITIONS_FLIRT_ELLE_OFFICE) {
+				return new Response("参观办公室", "告诉埃勒你想去她办公室“参观”一下……", REQUISITIONS_FLIRT_ELLE_OFFICE) {
 					@Override
 					public boolean isSexHighlight() {
 						return true;
@@ -920,7 +920,7 @@ public class WesQuest {
 				};
 				
 			} if(index==2) {
-				return new Response("Decline", "Tell Elle that you don't have time to take a tour around her office...", REQUISITIONS_FLIRT_ELLE_DECLINED) {
+				return new Response("拒绝", "告诉埃勒你没时间去参观她的办公室……", REQUISITIONS_FLIRT_ELLE_DECLINED) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Elle.class).incrementAffection(Main.game.getPlayer(), -5));
@@ -959,7 +959,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Take charge", "Dominantly have sex with Elle.",
+				return new ResponseSex("主导", "跟埃勒来一场支配型性爱。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -975,7 +975,7 @@ public class WesQuest {
 						UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_FLIRT_ELLE_OFFICE_SEX_START_AS_DOM"));
 				
 			} else if(index==2) {
-				return new ResponseSex("Submit", "Let Elle take charge and be dominantly fucked by her.",
+				return new ResponseSex("顺从", "放任埃勒做主，让她支配你。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getNpc(Elle.class)),
@@ -1011,7 +1011,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Step out into the corridor and continue on your way...", EnforcerHQDialogue.CORRIDOR_PLAIN) {
+				return new Response("继续", "回到走廊，继续你的旅程……", EnforcerHQDialogue.CORRIDOR_PLAIN) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_CELLS_CORRIDOR, false);
@@ -1040,7 +1040,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Office tour", "Suggest to Wes that he give you a 'tour' around his office...", REQUISITIONS_FLIRT_WES_OFFICE) {
+				return new Response("参观办公室", "暗示韦斯你想去他办公室“参观”一番……", REQUISITIONS_FLIRT_WES_OFFICE) {
 					@Override
 					public boolean isSexHighlight() {
 						return true;
@@ -1055,11 +1055,11 @@ public class WesQuest {
 			} else if(index==2) {
 				int progress = (int) Main.game.getDialogueFlags().getSavedLong("wes_background_progress");
 				if(progress<5) {
-					return new Response("Group tour",
-							"You need to get to know Wes better before he'd feel comfortable bringing Elle along for a 'tour' around his office...",
+					return new Response("一齐参观",
+							"你需要跟韦斯关系更好一些，他才会愿意跟埃勒一起去“参观”他的办公室……",
 							null);
 				}
-				return new Response("Group tour", "Suggest to Wes that he bring Elle along for a 'tour' around his office...", REQUISITIONS_FLIRT_WES_OFFICE_THREESOME) {
+				return new Response("一齐参观", "暗示韦斯带着埃勒一起去他办公室“参观”一番……", REQUISITIONS_FLIRT_WES_OFFICE_THREESOME) {
 					@Override
 					public boolean isSexHighlight() {
 						return true;
@@ -1073,7 +1073,7 @@ public class WesQuest {
 				};
 				
 			} else if(index==3) {
-				return new Response("Finish", "Having had your fun with Wes, decide not to take things any further with him...", REQUISITIONS_FLIRT_WES_FINISH);
+				return new Response("结束", "跟韦斯玩乐一番后，你决定不再跟他继续了……", REQUISITIONS_FLIRT_WES_FINISH);
 				
 			}
 			return null;
@@ -1107,7 +1107,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Take charge", "Dominantly have sex with Wes.",
+				return new ResponseSex("主导", "跟韦斯来一场支配型性爱。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -1118,7 +1118,7 @@ public class WesQuest {
 						UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_FLIRT_WES_OFFICE_SEX_START_AS_DOM"));
 				
 			} else if(index==2) {
-				return new ResponseSex("Submit", "Let Wes take charge and be dominantly fucked by him.",
+				return new ResponseSex("顺从", "放任韦斯做主，让他支配你。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getNpc(Wes.class)),
@@ -1149,7 +1149,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Step out into the corridor and continue on your way...", EnforcerHQDialogue.CORRIDOR_PLAIN) {
+				return new Response("继续", "回到走廊，继续你的旅程……", EnforcerHQDialogue.CORRIDOR_PLAIN) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_CELLS_CORRIDOR, false);
@@ -1172,7 +1172,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Take charge", "Dominantly have sex with Wes and Elle.",
+				return new ResponseSex("主导", "跟韦斯和埃勒来一场支配型性爱。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(
@@ -1191,7 +1191,7 @@ public class WesQuest {
 						UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_DOM"));
 				
 			} if(index==2) {
-				return new ResponseSex("Dominate Elle", "Join Wes in dominantly fucking Elle.",
+				return new ResponseSex("支配埃勒", "跟韦斯一起支配埃勒。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(
@@ -1210,7 +1210,7 @@ public class WesQuest {
 						UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_JOINT_DOM"));
 				
 			} else if(index==3) {
-				return new ResponseSex("Join Elle", "Let Wes take charge and join Elle in being dominantly fucked by him.",
+				return new ResponseSex("加入埃勒", "让韦斯主导，跟埃勒一起被他支配。",
 						true, true,
 						new SMAllFours(
 								Util.newHashMapOfValues(
@@ -1229,7 +1229,7 @@ public class WesQuest {
 						UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_JOINT_SUB"));
 				
 			} else if(index==4) {
-				return new ResponseSex("Submit", "Let Elle and Wes take charge and be dominantly fucked by them.",
+				return new ResponseSex("顺从", "放任埃勒和韦斯做主，让他们支配你。",
 						true, true,
 						Main.game.getPlayer().isTaur()
 							?new SMAllFours(
@@ -1255,7 +1255,7 @@ public class WesQuest {
 						UtilText.parseFromXMLFile("characters/dominion/wes", "REQUISITIONS_FLIRT_WES_OFFICE_THREESOME_AS_SUB"));
 				
 			} else if(index==5) {
-				return new ResponseSex("Elle's revenge", "Let Elle take charge and join Wes in being dominantly fucked by her.",
+				return new ResponseSex("埃勒的复仇", "让埃勒主导，跟韦斯一起被她支配。",
 						true, true,
 						new SMLyingDown(
 								Util.newHashMapOfValues(
@@ -1296,7 +1296,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Step out into the corridor and continue on your way...", EnforcerHQDialogue.CORRIDOR_PLAIN) {
+				return new Response("继续", "回到走廊，继续你的旅程……", EnforcerHQDialogue.CORRIDOR_PLAIN) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_CELLS_CORRIDOR, false);
@@ -1319,7 +1319,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Take charge", "Dominantly have sex with Elle.",
+				return new ResponseSex("主导", "跟埃勒来一场支配型性爱。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -1335,7 +1335,7 @@ public class WesQuest {
 						UtilText.parseFromXMLFile("characters/dominion/wes", "WES_ELLE_OFFICE_START_AS_DOM"));
 				
 			} else if(index==2) {
-				return new ResponseSex("Submit", "Let Elle take charge and be dominantly fucked by her.",
+				return new ResponseSex("顺从", "放任埃勒做主，让她支配你。",
 						true, true,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getNpc(Elle.class)),
@@ -1371,7 +1371,7 @@ public class WesQuest {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Step out into the corridor and continue on your way...", EnforcerHQDialogue.CORRIDOR_PLAIN) {
+				return new Response("继续", "回到走廊，继续你的旅程……", EnforcerHQDialogue.CORRIDOR_PLAIN) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_CELLS_CORRIDOR, false);

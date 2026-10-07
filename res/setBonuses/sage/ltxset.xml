@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Latex Lover]]></name>
+	<name><![CDATA[大爱乳胶]]></name>
 	<statusEffect>sage_set_latlov</statusEffect>
 	<numberRequiredForCompleteSet>3</numberRequiredForCompleteSet>
 	<blockedSlotsCountingTowardsFullSet>

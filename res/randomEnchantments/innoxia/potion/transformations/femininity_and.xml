@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <potionEnchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	
@@ -12,7 +12,7 @@
 	
 	<conditionalPreParsing/>
 	
-	<name defaultPrepend="true"><![CDATA[Androgyny]]></name>
+	<name defaultPrepend="true"><![CDATA[雌雄同体]]></name>
 	
 	<applicationSpeechStart replaceAll="false"><![CDATA[
 		It's so fun when nobody knows if you're a girl or a guy!

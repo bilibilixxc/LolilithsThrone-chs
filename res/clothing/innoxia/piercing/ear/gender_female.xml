@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>200</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[female glyph earring]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[female glyph earrings]]></namePlural>
-		<description><![CDATA[Freely-moving hinged icons of a female glyph hang from these earrings.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[女性符号耳环]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[女性符号耳环]]></namePlural>
+		<description><![CDATA[这些耳环上悬挂着自由活动的铰链式女性符号图标。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>PIERCING_EAR</slot> 
@@ -18,7 +18,7 @@
 			<category id="glyph_shape" priority="1">
 				<categoryName><![CDATA[Glyph shape]]></categoryName>
 				<sticker id="circle" priority="1" defaultSticker="true" zLayer="-1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Circle]]></stickerName>
+					<stickerName><![CDATA[环形]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -29,7 +29,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="heart" priority="2" defaultSticker="true" zLayer="-1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Heart]]></stickerName>
+					<stickerName><![CDATA[心形]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -71,27 +71,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the earrings into [npc.her] [npc.ears].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the earrings into [npc2.namePos] [npc2.ears].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(clip)] the earrings into [npc2.namePos] [npc2.ears].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将耳环戴在[npc.her]的[npc.ears]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将耳环戴在[npc2.namePos]的[npc2.ears]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将耳环穿在[npc2.namePos]的[npc2.ears]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] earrings and [npc.verb(take)] them out.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] earrings and [npc.verb(take)] them out.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] earrings and roughly [npc.verb(pull)] them out.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的耳环摘了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的耳环摘了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的耳环扯了下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

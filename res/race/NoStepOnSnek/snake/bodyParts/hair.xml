@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <hair>
 	<race>NoStepOnSnek_snake</race>
-	<transformationName><![CDATA[snake]]></transformationName>
+	<transformationName><![CDATA[蛇]]></transformationName>
 	<coveringType>NoStepOnSnek_snake_hair</coveringType>
 	<tags>
 		<tag>HAIR_HANDLES_IN_SEX</tag>
 	</tags>
-	<determiner><![CDATA[a head of]]></determiner>
-	<name><![CDATA[hair]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[hairs]]></namePlural>
+	<determiner><![CDATA[一头]]></determiner>
+	<name><![CDATA[头发]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[头发]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor>coarse</descriptor>
+		<descriptor><![CDATA[粗糙哦]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>coarse</descriptor>
+		<descriptor><![CDATA[粗糙]]></descriptor>
 	</descriptorsFeminine>
 	<transformationDescription><![CDATA[
-		The transformation only lasts a matter of moments, leaving [npc.herHim] with coarse hair.
-		<br/>[npc.Name] now [npc.has] [npc.hairColour] [style.boldSnake(snake hair)].
+		转化仅持续了很短的时间，便得到了粗糙的头发。
+		<br/>[npc.Name]现在拥有[npc.hairColour][style.boldSnake(蛇毛发)]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.hairDeterminer] [npc.hairLength], [npc.hairColour(true)] hair
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.hairDeterminer]的[npc.hairLength]发
+]]></bodyDescription>
 </hair>

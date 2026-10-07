@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[bar]]></name>
-	<tooltipDescription><![CDATA[The long bar in 'Lights Out' can seat up to twenty patrons at once.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the bar in 'Lights Out']]></virginityLossDescription>
+	<name><![CDATA[酒吧]]></name>
+	<tooltipDescription><![CDATA[“影液”酒吧里的长吧台可以同时容纳20名顾客。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于“影液”酒吧的吧台]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

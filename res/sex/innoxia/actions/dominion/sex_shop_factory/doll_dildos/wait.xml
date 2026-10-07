@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -23,9 +23,9 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Wait]]></title>
+	<title><![CDATA[等待]]></title>
 	<tooltip><![CDATA[
-		Obediently wait for the doll's next command.
+		乖顺等候玩偶的下一条命令。
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -33,7 +33,7 @@
 				[#sex.getNumberOfOrgasms(pc)==0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Kneeling down on the floor in front of the red doll, you obediently stay still and wait to see which toy she'll test on you first...
+				你跪在红色玩偶面前的地板上，乖乖地静止不动，等着看她先给你测试哪个玩具……
 			]]></text>
 		</description>
 		<description>
@@ -41,7 +41,7 @@
 				[#sex.getNumberOfOrgasms(pc)>0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				With toys stuffed in each of your three orifices, you try to ignore the feeling of your slick juices trickling down your thigh as you obediently stay still and wait for the red doll's next command...
+				你的三个腔穴里都塞满了玩具，你试图忽略滑腻的汁液顺着大腿往下流的感觉，顺从地一动不动，等待着红玩偶的下一条命令……
 			]]></text>
 		</description>
 	</descriptions>

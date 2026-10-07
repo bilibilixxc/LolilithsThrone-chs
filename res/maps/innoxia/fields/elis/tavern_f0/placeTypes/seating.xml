@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[seating area]]></name>
-	<tooltipDescription><![CDATA[Sofas and coffee tables are arranged so as to form several cosy seating areas.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the seating area at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[座位区]]></name>
+	<tooltipDescription><![CDATA[沙发和咖啡桌摆放成了几个舒适的座位区。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“红龙酒馆”的座位区]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1200</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[dangle chain earrings]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[dangle chain earrings]]></namePlural>
-		<description><![CDATA[A pair of dangle chain earrings. Each one is comprised of a solid metal half-loop which fits into the wearer's piercing, to which are attached a pair of fine metal chains and solid metal bars.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[吊链耳坠]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[吊链耳坠]]></namePlural>
+		<description><![CDATA[一对由一个实心金属半环组成吊链耳环。可以插入穿孔中，上面连接着一对细金属链和实心金属条。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>PIERCING_EAR</slot> 
@@ -43,27 +43,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the dangle chain earrings into [npc.her] [npc.ears].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the dangle chain earrings into [npc2.namePos] [npc2.ears].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] the dangle chain earrings into [npc2.namePos] [npc2.ears].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]把吊链耳坠戴在[npc.her]的[npc.ears]上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]将吊链耳坠戴在[npc2.namePos][npc2.ears]上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]强行将吊链耳坠戴在[npc2.namePos][npc2.ears]上。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] dangle chain earrings out of [npc.her] [npc.ears].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] dangle chain earrings out of [npc2.her] [npc2.ears].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] [npc2.namePos] dangle chain earrings out of [npc2.her] [npc2.ears].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的吊链耳坠从[npc.her]的[npc.ears]上取下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将吊链耳坠从[npc2.namePos]的[npc2.ears]里摘下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强行将吊链耳坠从[npc2.namePos]的[npc2.ears]上摘下。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

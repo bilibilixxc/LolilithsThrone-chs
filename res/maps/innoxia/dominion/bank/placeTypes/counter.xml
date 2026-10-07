@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Counter]]></name>
-	<tooltipDescription><![CDATA[The counters at the Bank of Dominion are staffed by bank employees, who are able to help customers with all matters relating to their accounts.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the counters in the Bank of Dominion]]></virginityLossDescription>
+	<name><![CDATA[柜台]]></name>
+	<tooltipDescription><![CDATA[御城区银行的柜台都有银行职员，他们可以帮助客户处理与账户有关的所有事务。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在御城区银行的柜台前]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

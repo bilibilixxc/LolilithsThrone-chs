@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>150</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[ear tag]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[ear tags]]></namePlural>
-		<description><![CDATA[A rectangular, plastic tag, typically worn in a pierced ear by domestic animals so that they can be quickly and easily identified.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[耳部标签]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[耳部标签]]></namePlural>
+		<description><![CDATA[一个亮黄色的塑料标签，通常被家畜佩戴在耳洞中以便快速、轻松地识别。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>PIERCING_EAR</slot>
@@ -42,27 +42,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the tag into [npc.her] [npc.ear].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the tag into [npc2.namePos] [npc2.ear].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(clip)] the tag into [npc2.namePos] [npc2.ear].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把标签穿在[npc.her]的[npc.ear]上。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把标签穿在[npc2.namePos]的[npc2.ear]上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把标签穿在[npc2.namePos]的[npc2.ear]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] tag and [npc.verb(take)] it out of [npc.her] [npc.ear] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] tag and [npc.verb(take)] it out of [npc2.her] [npc2.ear] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] tag and roughly [npc.verb(yank)] it out of [npc2.her] [npc2.ear] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的标签并从[npc.her]的[npc.ear]穿孔中取出。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的标签并从[npc2.her]的[npc2.ear]穿孔中取出。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]解开[npc2.namePos]的标签并粗暴地从[npc2.her]的[npc2.ear]穿孔中扯下来。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

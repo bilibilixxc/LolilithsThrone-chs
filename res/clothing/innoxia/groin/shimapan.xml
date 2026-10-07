@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>100</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[striped panties]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[striped panties]]></namePlural>
-		<description><![CDATA[A pair of distinctly feminine panties, made from soft cotton. They are sometimes referred to as 'shima-pantsu', or 'shimapan' (striped panties).]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[条纹内裤]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[条纹内裤]]></namePlural>
+		<description><![CDATA[一条由柔软的棉布制成的女性内裤，有时被称为“蓝(或其他颜色)白内裤”或“蓝白碗”(条纹内裤)。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>GROIN</slot>
@@ -59,27 +59,27 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the striped panties, before pulling them up to cover [npc.her] private parts.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the striped panties up [npc2.namePos] [npc2.legs] to cover [npc2.her] private parts.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the striped panties up [npc2.namePos] [npc2.legs] to cover [npc2.her] private parts.]]>
-	  </otherRough>
+		<self><![CDATA[
+      [npc.Name]穿上条纹内裤，然后用内裤盖住[npc.her]的隐私部位。
+    ]]></self>
+		<other><![CDATA[
+[npc.Name]将条纹内裤拉上[npc2.namePos]的[npc2.legs]，遮盖[npc2.her]的私密部位。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将条纹内裤拉上[npc2.namePos]的[npc2.legs]，遮盖住[npc2.her]的私密部位。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] striped panties down and [npc.verb(kick)] them off [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] down [npc2.namePos] striped panties and [npc.verb(pull)] them off [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] striped panties and [npc.verb(yank)] them off [npc2.her] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的条纹内裤拉下来，然后用[npc.her]的[npc.feet]将它们踢掉。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉下[npc2.namePos]的条纹内裤，然后将它们从[npc2.her]的[npc2.feet]上拿走。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的条纹内裤拉下，然后用力将它们从[npc2.her]的[npc2.feet]上脱下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

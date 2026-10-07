@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Wall's End]]></name>
-	<tooltipDescription><![CDATA[Carrying the name of 'Wall's End', this open-air shopping precinct contains the sort of businesses which aren't suitable for the farmer's market.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the shopping precinct in Elis]]></virginityLossDescription>
+	<name><![CDATA[墙之尽头]]></name>
+	<tooltipDescription><![CDATA[冠以墙之尽头之名，这片露天购物区进行着不适合农贸市场的交易。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的购物区里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

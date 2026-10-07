@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>400</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[gemstone barbell]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[gemstone barbells]]></namePlural>
-		<description><![CDATA[A slightly curved bar with a metallic sphere on one end and a pretty gemstone on the other. Its design is such that it would be possible to comfortably fit it into either a navel piercing or a 'clitoral hood' or 'Christina' vaginal piercing.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[宝石穿钉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[宝石穿钉]]></namePlural>
+		<description><![CDATA[一个稍微弯曲的杆，一端有一个金属球体，另一端有一颗漂亮的宝石。它的设计可以舒适地将其戴在肚脐穿孔或“阴蒂包皮”亦或者是“阴蒂穿孔”中。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<equipSlots>
@@ -53,51 +53,51 @@
 	</coreAttributes>
 
 	<replacementText slot="PIERCING_STOMACH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the gemstone barbell into [npc.her] navel piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the gemstone barbell into [npc2.namePos] navel piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(slide)] the gemstone barbell into [npc2.namePos] navel piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将宝石穿钉插入[npc.her]的肚脐穿孔。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将宝石穿钉插入[npc2.namePos]的肚脐穿孔。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将宝石穿钉穿进[npc2.namePos]的肚脐穿孔。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText slot="PIERCING_STOMACH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] gemstone barbell out of [npc.her] navel piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] gemstone barbell out of [npc2.her] navel piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] gemstone barbell out of [npc2.her] navel piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的宝石穿钉从[npc.her]的肚脐穿孔中摘下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的宝石穿钉从[npc2.her]的肚脐穿孔中摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的宝石穿钉从[npc2.her]的肚脐穿孔上拔出来。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText slot="PIERCING_VAGINA" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the gemstone barbell into [npc.her] vaginal piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the gemstone barbell into [npc2.namePos] vaginal piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(slide)] the gemstone barbell into [npc2.namePos] vaginal piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把宝石穿钉戴在[npc.her]的阴蒂穿孔。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将宝石穿钉穿进[npc2.namePos]的阴蒂穿孔。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将宝石穿钉穿进[npc2.namePos]的阴蒂穿孔。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText slot="PIERCING_VAGINA" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] gemstone barbell out of [npc.her] vaginal piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] gemstone barbell out of [npc2.her] vaginal piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] gemstone barbell out of [npc2.her] vaginal piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的宝石穿钉从[npc.her]的阴蒂穿孔中摘下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的宝石穿钉从[npc2.her]的阴蒂穿孔中取下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的宝石穿钉从[npc2.her]的[npc2.ear]的阴蒂穿孔中拔出。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

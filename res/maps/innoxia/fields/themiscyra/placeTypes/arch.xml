@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Themiscyra Arch]]></name>
-	<tooltipDescription><![CDATA[The entrance to the town of Themiscyra takes the form of a huge, stone archway.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beneath the Themiscyra Arch]]></virginityLossDescription>
+	<name><![CDATA[特弥斯库拉拱门]]></name>
+	<tooltipDescription><![CDATA[有一座巨大的石砌拱门是特弥斯库拉镇的入口。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在特弥斯库拉的拱门下]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

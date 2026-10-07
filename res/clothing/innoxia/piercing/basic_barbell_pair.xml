@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>120</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[basic barbell]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[basic barbells]]></namePlural>
-		<description><![CDATA[Each of these basic barbells consists of a thin cylinder of metal, with an unscrewable sphere on either end. They could be slid into place through either a pair of pierced nipples or 'industrial' ear piercings.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[基础细杆穿钉]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[基础细杆穿钉]]></namePlural>
+		<description><![CDATA[每个基本的杆状耳环都由一根金属圆柱体组成，两端都有可拧下的球形物。它们可以穿过已穿孔的乳头或“工业”耳环。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -53,51 +53,51 @@
 	</coreAttributes>
 
   <replacementText slot="PIERCING_NIPPLE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbells into [npc.her] nipple piercings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbells into [npc2.namePos] nipple piercings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] the barbells into [npc2.namePos] nipple piercings.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将穿钉戴在[npc.her]的乳头穿孔。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将穿钉戴在[npc2.namePos]的乳头穿孔里。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将穿钉插入[npc2.namePos]的乳头穿孔里。
+]]></otherRough>
   </replacementText>
 
   <displacementText slot="PIERCING_NIPPLE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] barbells out of [npc.her] nipple piercings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] barbells out of [npc2.her] nipple piercings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] barbells out of [npc2.her] nipple piercings.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的细杆穿钉从[npc.her]的乳头穿孔上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]将[npc2.namePos]的穿钉从[npc2.her]的乳头穿孔中取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的穿钉从[npc2.her]的乳头穿孔中取下。
+]]></otherRough>
   </displacementText>
 
   <replacementText slot="PIERCING_EAR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbells into [npc.her] [npc.ear]'s industrial piercings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the barbells into [npc2.namePos] [npc2.ear]'s industrial piercings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] the barbells into [npc2.namePos] [npc2.ear]'s industrial piercings.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]将穿钉戴在[npc.her][npc.ear]上的工业穿孔。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将穿钉戴在[npc2.namePos]的[npc2.ear]的工业穿孔。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将细杆穿钉插入[npc2.namePos][npc2.ear]的工业穿孔。
+]]></otherRough>
   </replacementText>
 
   <displacementText slot="PIERCING_EAR" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] barbells out of [npc.her] [npc.ear]'s industrial piercings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] barbells out of [npc2.her] [npc2.ear]'s industrial piercings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] barbells out of [npc2.her] [npc2.ear]'s industrial piercings.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的穿钉从[npc.her][npc.ear]的工业穿孔上取下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的穿钉从[npc2.her]的[npc2.ear]的工业穿孔中取下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的穿钉从[npc2.her]的[npc2.ear]的工业穿孔中拔出。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

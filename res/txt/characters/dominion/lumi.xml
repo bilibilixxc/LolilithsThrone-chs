@@ -1,363 +1,363 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="LUMI_APPEARS"><![CDATA[
 	<p>
-		You find yourself walking through labyrinthine alleyways, with not a soul in sight. Back-doors and steaming vents line the dark brick walls, and you must often navigate around overflowing bins and stacks of empty crates in order to make any progress. These less-travelled parts of Dominion have a dangerous feel to them, and you can't shake the feeling that you're being followed.
-	</p>
+ 你发现自己正走在迷宫般的小巷中，周围没有任何人。各种后门和喷吐蒸汽的通风口在巷道暗色的砖墙上排列开来，而你必须挤过成堆的箱子和空板条箱才能在其中穿行。御城区人迹罕至的区域总有一种危险的气息，而那种被人跟踪的感觉对你而言挥之不去。
+ </p>
 	<p>
-		As you find yourself walking down yet another narrow passage, you hear a high-pitched tinkling noise coming from somewhere behind you, as though someone's just stepped on broken glass. Quickly turning to face the origin of the sound, you see nothing but a deserted alleyway, with not a soul in sight. Shrugging, you continue on your way.
-	</p>
+ 当你走过另一个狭窄的通道时，你听到尖锐的碎裂声从你身后某处传来，就好像有人踩到了碎玻璃。你迅速转身面向声音的源头，但你面前只是一条空荡荡的小巷，没有一个人影。你耸了耸肩，继续前进。
+ </p>
 	<p>
-		A few moments later, you hear yet another sound coming from behind you, though this time, it's one of quick, barely-audible footsteps. Whoever it is that's making these noises is definitely doing their best to try and remain silent, but, despite their efforts, you're now convinced that someone is stalking you.
-	</p>
-	]]>
-	</htmlContent>
+ 几分钟后，你听到另一个声音从你身后传来，不过这一次，那是个转瞬即逝的细微脚步声。无论发出声音的人是谁，对方一定是在尽可能保持安静。不过，即便对方如此谨慎，你还是很确信自己被跟踪了。
+ </p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_APPEARS_EVADE"><![CDATA[
 	<p>
-		Not wanting to stick around to discover who this mysterious stalker could be, you turn and hurry down a particularly narrow passageway. Reaching the far end, you look back to see a little shadowy figure rush past the opening.
+		你并不想为发现那个神秘跟踪者的身份而在此久留，于是你转身并快速走进一条特别狭窄的通路。当你走到底的时候，你转身看到一个小小的暗影从路口冲了过去。
 	</p>
 	<p>
-		It looks like you've evaded your pursuer, and you turn around to continue on your way.
+		看起来你已经摆脱了你的追捕者，你转身继续前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_APPEARS_FIRST_ENCOUNTER"><![CDATA[
 	<p>
-		You aren't going to run from the first hint of danger, and decide that you'll turn the tables on the person who's been tailing you for all this time.
+		你可不会在危险迹象一出现的时候就逃跑，于是你决定反过来对付那个一直跟踪你的人。
 	</p>
 	<p>
-		[pc.speech(Oh no! It looks like I've got lost again!)]
-		 You sigh, trying to lull your pursuer into a sense of false security.
+		[pc.speech(哦不！我好像又迷路了！)]
+		你叹了口气，试着让你的跟踪者产生虚假的安全感。
 	</p>
 	<p>
-		Continuing forwards down the narrow alleyway, you soon come to a sharp T-junction; the perfect spot where you'll be able to hide. Striding forwards, you take the turn to your left, and, being certain that your stalker must have lost sight of you, you squat down behind a stack of wooden crates and prepare to spring your ambush.
+		沿着狭窄的小巷继续向前，你很快就遇到了一个角度刁钻的T字路口；这是你得以藏身的绝佳位置。你大步向前走向左侧，而且，非常确信你消失在了跟踪者的视野中，你蹲在一堆木箱后面，准备发动伏击。
 	</p>
 	<p>
-		Just as you'd planned, you soon hear the sounds of chinking bottles and scuffed footsteps as your assailant follows your trail. You can't help but grin and gloat at the thought of what you're going to do once you get your [pc.hands] on them. The sound of footsteps suddenly dies away, and you prepare for the mysterious stalker to silently sneak right past your hiding place.
+		如你所料，你很快就听见了瓶子碰撞在一起的叮当声和追击者的脚步声。一想到对方任你摆布的场景，你情不自禁地坏笑起来。脚步声突然消失了，你准备着看到你神秘的跟踪者经过你的躲藏点。
 	</p>
 	<p>
-		Except nobody is coming.
+		然而没有任何人经过。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_APPEARS_FIRST_ENCOUNTER_WAITING"><![CDATA[
 	<p>
-		[pc.thought(Wait, how long has it been? Why aren't they coming?)]
-		 You think to yourself, confused at how easily your perfect plan has been foiled. The only explanation that you're able to think of is that whoever was silently chasing you decided to give up and leave before stumbling upon your ambush.
+		[pc.thought(等下，已经过去多久了？为什么对方还不经过？)]
+		你在心里这么想着，你的完美计划被轻易识破了，这让你感到困惑。你能想到的唯一解释就是，那个悄无声息的跟踪者在发现你的埋伏之前就决定放弃并离开了。
 	</p>
 	<p>
-		Letting out a sigh, you stand up and quickly stretch, hopping back and forth a few times on your feet in order to get your limbs back in shape. Looking up and down the length of the alley, you don't see any sign of life, or of any suspicious activity whatsoever.
+		你叹了口气，站起身来，迅速伸展你的身体，来回跳了几下，好让你僵硬的四肢恢复过来。你四处打量着这条小巷，却看不到任何生命迹象，也看不到任何可疑的活动。
 	</p>
 	<p>
-		[pc.speech(I've wasted enough time here, I'd better lea-)]
-		 You start to say, but you're suddenly cut short by a flash of movement that rushes past you from behind. Your eyes catch up with what looks to be a humanoid with a big, white fluffy tail just as she reaches the end of the alleyway.
+		[pc.speech(我已经在这浪费了够多的时间了，我还是离开——)]
+		正当你这么说着的时候，却突然被一个从你身后冲过你的闪动打断了。当她冲到小巷尽头时，你的眼睛可以辨认出那是一个类人生物，有着又大又白的毛绒尾巴。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MAX_MONEY_STOLEN"><![CDATA[
 	<p>
-		You reflexively check your belongings, and quickly discover that [style.boldTerrible(you're missing seven-hundred flames!)]
+		你条件反射般地检查你的随身物品，很快就发现[style.boldTerrible(你失去了700火币！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ALL_MONEY_STOLEN"><![CDATA[
 	<p>
-		You reflexively check your belongings, and quickly discover that [style.boldTerrible(all of your money has been stolen!)]
+		你条件反射般地查看你的随身物品，很快就发现[style.boldTerrible(你所有的钱都被偷了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_LET_THEM_ESCAPE"><![CDATA[
 	<p>
-		Deciding that you have better things to do than chasing some thief through the alleyways, you tell yourself that being a few flames lighter won't do you much harm, and, with a shrug, you continue on your way, reminding yourself to stay alert for any possible thieves in the future.
+		你觉得比起在小巷里抓小偷，还有更重要的事情要做，所以你告诉你自己，钱包轻上那么几个火币的重量也没什么大不了的，于是，你耸耸肩，继续前进的同时也提醒自己要在将来提防任何可能的小偷。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_CHASE"><![CDATA[
 	<p>
-		[pc.speech(Hey! Come back here, you thief!)]
-		 You shout as you start running after the white, fluffy tail.
-		 The humanoid thief unsurprisingly ignores your command, and you see them quickly dash off down the right-hand turn at the end of the alley.
+		[pc.speech(嘿！给我回来，你这小偷！)]
+		当你开始追着那个又大又白的毛绒尾巴时，你大声喊道。
+		那个类人生物小偷毫无悬念地无视了你的命令，而且你看到对方快速冲进巷子尽头右手边的转弯处。
 	</p>
 	<p>
 		#IF game.isDayTime()
 		#THEN
-			Running after them, you take the same right-hand turn, and immediately find yourself confronted with one of Dominion's bustling streets. Quickly scanning the crowd, you manage to spot a flash of the fugitive's white furry tail as they dart and weave through the throngs of people with alarming agility. Following in their wake, you end up bumping into numerous people, pushing them aside and excusing yourself while doing your best not to fall behind.
+			你追着对方进入右侧的转弯处，并立刻发现自己面对着御城区的一条繁华街道。你迅速扫视人群，看到了逃跑者那条白色毛绒尾巴一闪而过，对方以惊人的敏捷性在人群中穿梭。你紧随其后，却不得已撞在无数路人的身上，为了不更丢，你一边把路人推开，一边向他们道歉。
 		#ELSE
-			Running after them, you take the same right-hand turn, and immediately find yourself confronted with one of Dominion's streets. As it's night-time, the area is far less busy than it would be during the day, and you easily spot the fugitive, lit by the ornate street-lights, running off down the path before you.
+			你追着对方进入右侧的转弯处，并立刻发现自己面对着御城区的一条街道。因为此时是夜晚，这个地区远没有白天那么繁忙，你很轻松地发现了逃跑者，在华丽的路灯的照亮下，逃入了你面前的小路。
 		#ENDIF
 	</p>
 	<p>
-		The escapee turns their head in mid-sprint, and, catching sight of you still in full pursuit, their eyes go wide, and they immediately turn back to focus on the way ahead. From what you saw in that moment, the thief has a rather feminine face with a small, pointy nose and puffy jowls, as if they were holding something in their mouth. You suspect that something to be your stolen money, and you're not sure whether to be amused by this animalistic behaviour, or disgusted by the fact that your money is now sure to be covered in saliva.
+		逃跑者在奔跑中转过头来，当对方看到你仍紧追其后时，睁大了眼睛，然后立即转身专注于前方的道路。你在那个瞬间看到，小偷有一张相当女性化的脸，并且有着小而尖的鼻子和鼓胀的面颊，就好像嘴里含着什么东西。你怀疑那东西就是你被偷走的钱，你不确定自己现在是被这种动物般的行为逗乐了，还是对你的钱绝对正覆盖在唾液中的事实感到恶心。
 	</p>
 	<p>
-		With you hot on their heels, the small figure suddenly darts back into a nearby alleyway, obviously hoping to shake you off their tail. Unfortunately for this opportunistic thief, you're determined to catch them, no matter what it takes, and turn to follow them down the dark passage.
+		就在你穷追不舍的时候，这个小身影突然反身窜入附近的一条小巷，显然是想甩掉你。对这个投机取巧的小偷来说很不幸，你已经下定决心，不管付出何种代价都要抓住对方了，于是你转身跟着小偷穿过黑暗的通道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_CHASE_CONTINUE"><![CDATA[
 	<p>
-		As you enter the alleyway, your eyes quickly settle on the unmistakable figure of the fluffy-tailed thief, desperately trying to climb a twelve-foot-high wall. As you hurry forwards, she loses her grip, and falls back onto her butt. It looks like it's a dead-end for your fluffy fugitive, and a win for you.
+		当你进入到小巷中时，你的目光很快就锁定了那个有着毛茸茸尾巴的小偷的身影，对方正拼了命的想要爬上一堵三米半高的墙。当你匆匆向前时，她对墙面的抓握松动了，屁股着地摔了下来。看起来你这位毛茸茸的逃跑者已经无处可逃了，你获得了胜利。
 	</p>
 	<p>
-		Now that you have a moment to take a good look at the thief, you see that she has a small, human body, covered in light skin. The only non-human parts that she has are a fluffy white wolf tail and two perky wolf ears perched on top of her head, which twitch backwards as they hear you approach. Just like her tail and ears, her long, messy hair is a brilliant white colour, and falls all the way down to her small, round butt, which is sure to be well-bruised from the fall she just took. As she jumps to her feet and spins around to face you, you see that she has small, B-cup breasts, and, standing at full height, she can't measure more than five-foot-two.
+		现在你有机会好好打量一下这个小偷了，你可以看到她拥有一个覆盖着浅色皮肤的小小人类身体。她身上唯一非人类的部位时一条毛茸茸的白色狼尾巴和两个耸立在她脑袋上的尖狼耳，当它听到你走近时，她的耳朵向后抽动。和她的尾巴与耳朵一样，她那又长又乱的头发也是亮白色的，一直垂到她又小又圆的屁股上，而那屁股肯定在刚才被摔得伤痕累累。当她跃起，并转过身来面对你时，你发现她的乳房很小，只有B罩杯，而且，当她站着的时候，她的身高不超过1米6。
 	</p>
 	<p>
-		The small [lumi.race] blushes as she realises that she's caught, and, you see that her cheeks are still swollen from the coin purse she's holding in her mouth. Her emerald-green eyes lock onto yours, and, from a mix of shame and anger, tears start to well up in them. You can't help but think how cute she looks, but, reminding yourself that she's a thief, you step forwards and take on a stern tone as you call out to her.
+		当她意识到自己已经被抓住后，这个小小的[lumi.race]脸红了，而且你发现她的脸颊依然因为含着你的零钱包而鼓着。她那翠绿色的眼睛听着你，羞愧与愤怒交织在其中，泪水开始涌上她的眼眶。你情不自禁地觉得她很可爱，但是，你提醒自己她是个小偷，于是，你走上前去，用严厉的语气朝她喊话。
 	</p>
 	<p>
-		[pc.speech(So, the little thief's run has finally come to an end.)] You say, with hands on hips.
+		[pc.speech(所以，小小毛贼可算是无处可逃了。)]你说着，双手叉腰。
 	</p>
 	<p>
-		[lumi.speech(Mmmph mphh mph!)] The girl tries to reply, and blushes even harder from embarrassment as she seems to only just remember that she's got her mouth full. Quickly raising [lumi.her] hands in front of [lumi.her] face, she suddenly spits out a handful of coins, your coins. Now finally able to speak, she replies, [lumi.speech(W-What do you want?!)]
+		[lumi.speech(嗯呜呜，嗯呜，嗯！)]那个女孩试着回应你，但却因尴尬脸红得更厉害了，因为她似乎才刚刚想起她嘴里正塞着东西。她迅速地把[lumi.her]的双手放在脸上，她一下子吐出一把硬币，你的硬币。现在她可算能开口说话了，她说道，[lumi.speech(你，你想干嘛？！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="LUMI_COMBAT_PC_OPENING"><![CDATA[
 	<p>
-		[pc.speech(What do I want? Well, my money first of all, and then to teach a lesson to a certain naughty wolf-girl.)]
-		 You tell her, taking a proper stance to fight.
+		[pc.speech(我想干嘛？好吧，首先我想要回我的钱，然后我想给你这个调皮的狼女好好地上一课。)]
+		你一边说着，一边摆好战斗姿势。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_COMBAT_LUMI_OPENING"><![CDATA[
 	<p>
-		[lumi.speech(I knew it! I knew you wanted to hurt me, l-like all the others!)]
-		 The wolf-girl replies, before suddenly jumping back down into a squatting position.
-		 Not giving you a chance to react, [lumi.she] suddenly pounces forwards, hurling herself at you!
+		[lumi.speech(我就知道！我就知道你想要伤害我，我——就像其他人那样！)]
+		狼女回应道，然后突然跳回了蹲下的姿势。
+		不容你作出反应，[lumi.she]突然向前冲去，扑向了你！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_PLAYER_LOSS"><![CDATA[
 	<p>
-		You can't carry on fighting any longer, and you feel your legs giving out beneath you as you collapse to the ground, defeated. Taking this chance, the opportunistic wolf-girl shoves the coins back into her mouth, before darting past you and running off down the alleyway. 
+		你无法再继续战斗了，当你倒在地上时你感觉你的腿脱力了，你被打败了。这个投机取巧的狼女抓住了这个机会，把硬币塞回了嘴里，然后从你身边飞奔而过，进入了小巷中。
 	</p>
 	<p>
-		With seemingly bottomless stamina, the little wolf-girl sprints off at full tilt, and, exhausted from your fight, you know that you have no chance of catching her. You resign yourself to simply resting until you've recovered enough strength to stand back up and carry on your way. As you set off, you try to forget about the money that was stolen from you.
+		那个小小的狼女似乎有着永不见底的耐力，她全速冲刺着，而你却在战斗中精疲力竭，你知道你不可能抓住她。于是你让你自己单纯地休息一会儿，知道你的力量恢复到足以站起来并继续前进。当你出发时，你试着忘掉那些被偷走的钱。
 	</p>
 	<p>
-		After putting up a fight, you can be sure that you won't be bothered by that particular wolf-girl ever again...
+		经过这场战斗，你可以确定那个狼女不会再找你麻烦了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_PLAYER_WIN"><![CDATA[
 	<p>
-		Beaten down, the wolf-girl staggers back and leans against the nearest wall. As she sinks down to the ground, breathing heavily, you're left with no doubt in your mind that she's completely unable to continue fighting.
+		被你击败后，这个狼女摇摇晃晃地背靠在最近的墙壁上。当她滑坐在地面上、气喘吁吁时，你很确信她完全无法继续战斗了。
 	</p>
 	<p>
-		With [lumi.her] fall, the stolen money falls from [lumi.her] hands and scatters on the ground. As one of the coins rolls forwards to bump against your [pc.foot], you wonder what you should do now...
+		随着[lumi.her]的倒下，偷来的钱从[lumi.her]手中掉落，散落在地上。其中一枚硬币向前滚动，撞到了你的[pc.foot]，你不知道现在该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_PLAYER_WIN_RECOVER_MONEY"><![CDATA[
 	<p>
-		You quietly start to gather up the stolen coins. Most of them were dropped at your feet, but a few are lying beside the defeated wolf-girl. As you step forwards to collect them, you take a glance at the half-unconscious thief to make sure that she's ok.
+		你静静地开始收集遭窃的硬币。它们中的绝大多数都落在你的脚下，但是也有一些落在了狼女的身边。当你走上前去捡起它们时，你顺便扫了一眼半昏迷的小偷，确保她没事。
 	</p>
 	<p>
-		As you do so, she suddenly opens an eye, which flicks over to peek at your bent down form as you reach for another coin. Taking this opportunity, she jumps to her feet with surprising flexibility, and, darting past you, sprints off down the alleyway at full tilt. You suddenly find yourself alone and wondering how she managed to run off that quickly after taking such a beating. Shrugging, you finish collecting the last couple of coins and prepare to leave.
+		正当你做着正事的时候，她突然睁开一只眼睛，在你弯腰去捡硬币时瞥了一眼。她抓住机会，以惊人的灵活性跳了起来，从你身边飞奔而去，全速冲入小巷。你突然发现自己变成孤身一人了，而且想知道她是怎么能在挨了一这么顿打之后还能如此快速地溜走的。你耸耸肩，捡起最后几个硬币，准备离开。
 	</p>
 	<p>
-		After putting up a fight, you can be sure that you won't be bothered by that particular wolf-girl ever again...
+		经过这场战斗后，你可以肯定那个狼女不会再找你的麻烦了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_PLAYER_WIN_TAKE_ADVANTAGE"><![CDATA[
 	<p>
-		The fight has gotten you riled up, and, looking down at the helpless wolf-girl before you, the thought of using her as sexual relief is foremost on your mind. Stepping forwards, you allow a devilish grin to settle on your face, and prepare to take advantage of the defeated thief.
+		这场战斗让你兴奋起来，当你低头看着面前无助的狼女时，你首先想到的是用她缓解你的性欲。你走上前去，一个恶魔般的微笑浮现在你的脸上，你准备好好利用这个被击败的小偷。
 	</p>
 	<p>
-		[pc.speech(Oh, this is going to be good!)]
-		 You laugh, bending down to grab the wolf-girl's shoulders before pinning her to the ground. Shaken out of her daze by the sudden physical contact, the thief opens her eyes and looks up at you. At first, she simply seems to be surprised, but as she sees the hungry grin on your face, her eyes fill with panic. 
+		[pc.speech(哦，一定会很赞的！)]
+		你笑着，弯下腰抓住狼女的肩膀，把她按倒在地。突然的身体接触让这名小偷从恍惚之中惊醒，她睁开眼睛抬头看着你。起初，她只是感到惊讶，但当她看到你脸上饥渴的坏笑时，她的眼中充满了恐慌。
 	</p>
 	<p>
-		[lumi.speech(W-What are you doing? Let me go!)] She shouts as she starts to struggle against you. Tears quickly well up in her eyes as she discovers that you've totally immobilised her, and her struggles and cries quickly start to get more frantic and desperate.
+		[lumi.speech(你，你在做什么？放开我！)]她一边大喊着一边抵抗着你。当她发现自己动弹不得时，泪水很快就涌上她的眼眶，她的挣扎和哭泣立刻变得更加疯狂与绝望。
 	</p>
 	<p>
-		[pc.speech(Don't worry, I'll make this as enjoyable as possible... For me, that is!)] You sneer as you pin the little wolf-girl to the floor. Unable to hold back any longer, you quickly drop your lips down to hers, intent on putting her whining to an end by forcing her into a kiss.
+		[pc.speech(别担心，我会让这一切变得尽可能令人愉悦的……对我而言啦！)]你冷笑着把小小的狼女按在地上。你再也按捺不住，急迫地把你的嘴唇贴在她嘴唇上，想用一个吻来结束她的牢骚。
 	</p>
 	<p>
-		[lumi.speech(Nooo! Let me go! Let me go, let me go, lemmegolemmegolemmego!)] She shouts, struggling more and more and kicking out into mid-air as she tries to wriggle out of your grasp, but to no avail.
+		[lumi.speech(不——！放开我！放开我，放开我，放开我放开我放开我！)]她叫喊着，挣扎得越来越厉害，她的腿在半空中踢来踢去，试图挣开你的控制，但无济于事。
 	</p>
 	<p>
-		You lean in and forcibly kiss her, tightening your grip on her arms as you hold her in place. The small [lumi.race] stops struggling and shouting, shocked from having her first kiss stolen. Tears quickly well up in her eyes as she stares at you in fear.
+		你倾身向前并用力吻她，紧紧地抓着她的手臂，把她控制在原地。小小的[lumi.race]停止了挣扎与叫喊，因她的初吻被夺走而陷入震惊。当她惊恐地盯着你时，泪水很快涌上她的眼睛。
 	</p>
 	<p>
-		Taking this opportunity, you [pc.moanVerb] as you look hungrily into her eyes, [pc.speech(This will be a fitting punishment for you!)]
+		抓住了这个机会，你在饥渴地看着她的眼睛时[pc.moanVerb]，[pc.speech(这对你而言会是个恰当的惩罚！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
-		As you step back from the [lumi.race], she sinks to the floor, tears running down her face. She doesn't say anything, nor does she make any move. She just stays immobile, staring blankly off into space.
+		当你从这个[lumi.race]身边走开时，她坐倒在地，眼泪顺着她的脸颊流下。她什么也没说，什么也没做。她只是一动不动地、茫然地望着天空。
 	</p>
 	<p>
-		You gather your belongings and walk away, leaving the traumatized [lumi.race] behind you. After what just happened, you can be sure that you won't be bothered by that particular wolf-girl ever again...
+		你收拾好你的东西并走开了，扔下了受创的[lumi.race]。在发生了刚刚的那一切之后，你可以肯定，那个狼女不会再来打扰你了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_CAUGHT_TALK"><![CDATA[
 	<p>
-		[pc.speech(Calm down, little pup, I'm not going to hurt you, I just want to talk.)]
-		 You say, trying to reassure the frightened wolf-girl.
+		[pc.speech(冷静点，小狗狗，我不想伤害你，我只是想和你聊聊。)]
+		你这么说着，试图安抚受惊的狼女。
 	</p>
 	<p>
-		[lumi.speech(R-Really? You won't try to hurt me? You promise?)]
-		 She mutters, her [lumi.tail] starting to wag lightly behind [lumi.her] back as her angry expression softens into one of concern.
+		[lumi.speech(真，真的吗？你不会伤害我？你保证？)]
+		她低声说道，她的[lumi.tail]开始在[lumi.her]背后轻轻摇晃，同时，她愤怒的表情变成了某种担忧的表情。
 	</p>
 	<p>
-		[pc.speech(Yes, I promise.)] You smile, caught off guard by how cute [lumi.she] is.
+		[pc.speech(对，我保证。)]你微笑着，对[lumi.she]的可爱猝不及防 。
 	</p>
 	<p>
-		With those words, the wolf-girl lets out a relieved sigh, before suddenly dropping down onto [lumi.her] knees as her adrenaline rush comes to an end. Wanting to spend a moment talking with this unusual thief, you walk towards her and crouch down so as to be on the same level. [pc.speech(Now tell me, why do you steal?)]
+		有了你的这番话，狼女松了一口气，当她的肾上腺素激增结束时，[lumi.her]膝盖着地，跪了下来。你想花点时间与这位不同寻常的小偷聊一聊，于是你走向她，蹲了下来，这样你和她的高度就一致了。[pc.speech(现在你可以告诉我为什么要行窃了吗？)]
 	</p>
 	<p>
-		[lumi.speech(Because I'm hungry, and people are mean!)] She huffs, [lumi.speech(A-At first I tried stealing food from m-mar... morch...)]
+		[lumi.speech(因为我很饿，而人们都很小气！)]她生气地说，[lumi.speech(最，最初，我试着偷走食物，从上……呃，上人……)]
 	</p>
 	<p>
-		[pc.speech(Merchants?)]
+		[pc.speech(商人？)]
 	</p>
 	<p>
-		[lumi.speech(Y-Yes, merchants... But those meanies in blue uniforms caught me and scolded me for trying to eat, they said I had to pay with these shiny things...)] She looks at your money in [lumi.her] hands. [lumi.speech(And I need so many...)]
+		[lumi.speech(对对，商人……但是那些穿蓝色制服的坏蛋抓住了我，因为我想吃东西而责骂我，他们说我必须用这种闪亮的东西付钱……)]她看向[lumi.her]手中放着的、你的钱。[lumi.speech(而且我需要好多……)]
 	</p>
 	<p>
-		[pc.speech(So many? What do you mean? Food isn't that expensive.)]
+		[pc.speech(好多？你是什么意思？食物没有这么贵啊。)]
 	</p>
 	<p>
-		[lumi.speech(Uh? I give them all of the shiny things, I take the food and I leave, but then I have no more shiny things, so I have to steal again!)]
+		[lumi.speech(嗯？我把所有闪亮的东西都给他们了，然后我拿走食物就离开了，但是我没有更多闪亮的东西了，所以我不得不去再偷！)]
 	</p>
 	<p>
-		[pc.thought(She means she never takes her change when she pays? No wonder she needs to steal all the time,)] you think to yourself, [pc.thought(Those merchants are taking advantage of her...)]
+		[pc.thought(她的意思是她付钱的时候从来不拿走找钱，难怪她总是需要去行窃，)]你这么想着，[pc.thought(这些商人在占她便宜……)]
 	</p>
 	<p>
-		[pc.speech(You know, when you give all your money to the merchants, they should be giving you some of your money back.)] You explain, trying not to sound too condescending. [pc.speech(It only costs about ten or fifteen of these coins to buy a sandwich... Seeing as you don't know all this, I'd guess you're not from Dominion, right?)]
+		[pc.speech(你要知道，当你把所有的钱都给商人后，他们应该找回一些钱给你。)]你解释着，试图让自己听上去没那么居高临下。[pc.speech(买一个三明治只需要10到15个这样的硬币……鉴于你对此并不了解，你不是御城区人，对吧？)]
 	</p>
 	<p>
-		Her ears twitch at your question. [lumi.speech(Uh? How do you know that?)] She replies, [lumi.speech(I-I lived in a forest before, but mean fox-ladies drove me out, saying it was their territories, and they threatened me with magic, so I ran as fast as I could and I ended up here...)]
+		听到你的问题，她的耳朵抽动起来。[lumi.speech(嗯？你怎么会知道？)]她回答道，[lumi.speech(我，我之前住在森林里，但是恶毒的狐狸女士们把我赶走，说那里是她们的地盘，还用魔法威胁我，所以我拼命地跑，最后来到这里……)]
 	</p>
 	<p>
-		[pc.speech(Were you alone? You're the only person I've seen acting like this in Dominion.)] You ask, thinking about what [lumi.she] just told you. It's certainly not common to see such feral behaviour here in Dominion, and the fact that [lumi.she] doesn't know the basics about money, combined with her limited vocabulary, tells you that she must have come from an isolated, solitary part of this 'forest'.
+		[pc.speech(你是一个人吗？我还是第一次在御城区看到你这样的人。)]你问道，思考着[lumi.she]刚刚告诉你的事。很显然，这种野生的行为在御城区并不常见，[lumi.she]不了解关于钱的基本知识，再加上她有限的词汇量，你感觉她一定来自这个“森林”中的某个与世隔绝的地方。
 	</p>
 	<p>
-		[lumi.speech(Yes, I lived alone, I never really knew my parents, I just barely remember that I was small, then my body grew super fast and then I hugged my mum and left her.)] She explains.
+		[lumi.speech(对啊，我是一个人生活，我从来都没有真正认识过我的父母，我只记得我很小，然后我的身体长得很快，然后我拥抱了我的妈妈，离开了她。)]她解释道。
 	</p>
 	<p>
 		#IF !pc.getLittersBirthed().isEmpty()
 		#THEN
-			You know that feeling all too well, to have your children leave before you even have the time to say hello and hold them close to you.
+			这种感受你再熟悉不过，在你有机会和你的孩子打招呼或者抱紧他们之前，他们就离开了。
 		#ELSE
-			You don't really know what to say. You imagine it would be hard as a mother to have your children leave before having the time to take them into your arms.
+			你真的不知道该说什么。你可以想象，作为一个母亲，在还没来得及把孩子拥入你的怀抱前，就让他们离开，这是一件多么困难的事情。
 		#ENDIF
-		 Shaking those thought from your head, you sigh, [pc.speech(Anyway, about what you did...)]
+		你摇摇头，让这些想法从头脑中散去，你叹息道，[pc.speech(不管怎样，关于你的所作所为……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_CAUGHT_TALK_GIVE_MONEY"><![CDATA[
 	<p>
-		Sensing that the wolf-girl has quickly grown comfortable with your presence, you reach out to give her head a gentle pat, before giving her soft ears a stroke. [pc.speech(You can keep the money.)]
+		你察觉到这个狼女已经很快对你的存在感到舒适了，于是你伸出手轻轻拍了一下她的脑袋，然后抚摸了一下她柔软的耳朵。[pc.speech(钱你可以留着。)]
 	</p>
 	<p>
-		The little wolf-girl fails to contain a small moan as the pleasure from your petting completely overwhelms her. Quickly realising what she's just done, she clasps her hands over her mouth and pretends as though nothing just happened, although the fact that her fluffy tail is pointing straight up into the air gives her feelings away. From behind her hands, the wolf-girl mutters a barely audible question. [lumi.speech(W-What can I ~mmh~ keep?)]
+		这个小小的狼女忍不住发出一声呻吟，因为她淹没在了你的爱抚给她带来的快乐中。她很快就意识到自己刚刚做了什么，用双手捂住嘴，假装无事发生，即便她毛茸茸的尾巴正直直地指向空中，暴露了她的感受。狼女在她手的后面，用细不可闻的声音问道。[lumi.speech(我，我可以留着~嗯嗯~什么？)]
 	</p>
 	<p>
-		Giving her ears one last stroke, you gently boop [lumi.her] nose. [pc.speech(The money you took from me, silly. You can keep it, but I'll tell you how to use it)]
+		在给了她的耳朵最后一摸后，你温柔地戳了戳[lumi.her]的鼻子。[pc.speech(当然是你从我这拿走的钱啦，傻瓜。你可以留着它们，但我会告诉你该怎么用。)]
 	</p>
 	<p>
-		Her big [lumi.eyeColour] eyes light up at what you just said, and [lumi.she] gazes up at you in disbelief. [lumi.speech(Really? You... You'd really give all of this to me? Even if I... I took it from you? You're not kidding?)]
+		听到你的话后，她大大的[lumi.eyeColour]眼睛亮了起来，而且难以置信地抬头看着你。[lumi.speech(真的吗？你……你真的要把它们都给我吗？即使是我……是我从你那里拿走的？你没有在开玩笑吗？)]
 	</p>
 	<p>
-		Playfully laughing at [lumi.her] reaction, you assure her that you mean everything you told her and that your flames are now [lumi.hers] to use how [lumi.she] pleases. You then go on to explain the concept of money and how buying and selling food and other items works. The wolf-girl often tilts [lumi.her] head in confusion as you explain these entirely new concepts to her, but you can tell that [lumi.she]'s absorbing every word, and is completely fascinated by your teachings.
+		你调皮地对她的反应大笑起来，你向她保证你对她所说的一切都是真的，你的火币现在都是[lumi.hers]了，并且可以随意使用。然后你继续解释钱的概念，以及如何购买食物和其他东西。当你向她解释这些全新的概念时，这个狼女经常困惑地歪着[lumi.her]的头，但你可以看出[lumi.she]正全神贯注地听着你讲的每一个字，她完全被你的教导所迷住了。
 	</p>
 	<p>
-		Once you've finished, the wolf-girl smiles.
-		[lumi.speech(Thank you so much! Uhm...)]
+		当你讲完后，狼女笑了。
+		[lumi.speech(太感谢你了！嗯……)]
 	</p>
 	<p>
-		[pc.speech(Call me [pc.Name],)] you tell her, realizing that you haven't exchanged names yet.
+		[pc.speech(叫我[pc.Name]，)]你说道，你意识到你们还没交换过名字。
 	</p>
 	<p>
-		[lumi.speech([pc.Name]... [pc.Name], [pc.Name]... I like your name! I'm [lumi.Name]!)] [lumi.She] says with a big smile on [lumi.her] face. Before you can reply, [lumi.she] quickly drops down onto all fours, lowering her torso to the ground and wiggling her butt in the air a few times, before suddenly pouncing forwards, [lumi.her] [lumi.arms] stretched out towards you. Caught off guard, you reflexively try to back off, but the wolf-girl's movement is way too sudden and unexpected, and you suddenly find yourself falling onto your back, with Lumi's arms wrapped tightly around you as she gives you a big hug.
+		[lumi.speech([pc.Name]……[pc.Name]，[pc.Name]……我喜欢你的名字，我是[lumi.Name]！)][lumi.She]带着一个大大的笑脸说。在你做出回应之前，[lumi.she]迅速地四肢着地，将躯干降到地面上，然后抬起屁股，在半空中扭动了几下，突然向前扑去，她朝你张开[lumi.her]的[lumi.arms]。你猝不及防，本能地想要后退，但狼女的动作太突然、太出乎意料，你发现自己仰面躺在地上，卢米紧紧地搂着你，给了你一个大大的拥抱。
 	</p>
 	<p>
-		Thankfully, the floor in this part of the alleyway seems clean enough, and so you're content to spend the next few minutes lying on the ground, with [lumi.Name] snuggled against you. It's hard to imagine that this cute, trusting wolf-girl is the same thief that just minutes ago was wildly sprinting off with your money.
+		谢天谢地，这段小巷的地面足够干净，所以你可以心满意足地花上几分钟来躺在地上，伴随着[lumi.Name]的依偎。很难想象这个可爱又轻信他人的狼女就是那个在几分钟前疯狂地想偷你钱的那个小偷。
 	</p>
 	<p>
-		After some time has passed, you reach up to scratch her head to get her attention. [pc.speech(Alright you little pup, I have other things to be getting on with.)]
+		过了一段时间后，你伸手去挠她的脑袋来引起她的注意。[pc.speech(好了，你这只小狗狗，我还有别的事情要做。)]
 	</p>
 	<p>
-		[lumi.Name] quickly lets you go and you both push yourselves up onto your feet. [lumi.She] looks at you with a gleeful stare, and exclaims, [lumi.speech(I like you, [pc.Name]! You're the first to be really kind to me in a long time! I hope I'll see you again!)]
+		[lumi.Name]立刻放开了你，你们两个一起站了起来。[lumi.She]高兴地看着你，说道，[lumi.speech(我喜欢你，[pc.Name]！你是这么长时间以来第一个对我这么好的人！我希望能再见到你！)]
 	</p>
 	<p>
-		With that, Lumi puts [lumi.her] coins back into [lumi.her] mouth, stacking them in [lumi.her] jowls like a rodent before running off in the direction of the Shopping Arcade. You wonder if the merchants will raise any objection to be getting paid with coins coated in saliva.
+		然后，卢米再一次把[lumi.her]硬币塞进嘴里，把它们堆在[lumi.her]面颊下面，就好像啮齿动物一样，然后跑向购物中心的方向。你想知道商人们会不会反对用带有唾液的硬币来支付商品。
 	</p>
 	<p>
-		You decide that it's also time for you to go. You may have lost some flames, but in exchange, you met a curious, cute little [lumi.race]. As this seems to be the area in which she's made her home, if you ever wanted to meet her again, all you'd have to do would be to wander around through these alleyways...
+		你决定是时候离开了。你可能失去了一些火币，但作为交换，你遇到了一个好奇又可爱的小[lumi.race]。由于她似乎把这个地方当成了她的家，所以如果你想再见到她，你只需要在这些小巷里闲逛……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_CAUGHT_TALK_ASK_FOR_MONEY_BACK"><![CDATA[
 	<p>
-		[pc.speech(Listen, I can see that you're not a mean girl, but stealing is bad, ok?)] You tell the wolf-girl, putting a hand on [lumi.her] shoulder. [pc.speech(I can't force you not to do it, but you should know that other people won't be as kind or understanding as I am.)]
+		[pc.speech(听着，我知道你不是一个刻薄的女孩子，但是偷窃是不好的，知道吗？)]你告诉狼女，把手放在[lumi.her]肩上。[pc.speech(我不能逼你放弃偷窃，但是你应该知道，其他人并不像我这样善良或宽容。)]
 	</p>
 	<p>
-		The wolf-girl pouts and looks at the ground as she receives her scolding. Putting on a gentler and more reassuring tone, you continue, [pc.speech(Look at me. I will take my money back now, ok?)]
+		狼女撅着嘴，看着地面，接受了对她的批评。你换了一种更温和、更舒缓的语气继续说，[pc.speech(看着我，我现在要把我的钱拿回来，好吗？)]
 	</p>
 	<p>
-		She looks at you with sad eyes, her shoulders drooped as she reluctantly hands over your coins. In a barely audible whimper, she mutters, [lumi.speech(H-Here... I'm... I'm sorry...)]
+		她用悲伤的眼神看着你，她的肩膀耷拉着，不情愿地把你的硬币递给你。在一种细不可闻的呜咽声中，她轻声说：[lumi.speech(给，给你……我……我很抱歉……)]
 	</p>
 	<p>
-		You feel a prickling sensation in your chest, as you hear the sincerity and sadness in the wolf-girl's voice, you get a twinge of regret about scolding her. Reminding yourself that it was for her own good, you compassionately pat [lumi.her] head, before taking back what is yours. [pc.speech(Thank you, little thief. So, what is your name?)]
+		当你听到这个狼女真挚而悲伤的声音后，你感到胸口一阵刺痛，你对刚才的责骂感到一阵后悔。但你提醒自己是为了她好，你同情地拍了拍[lumi.her]的脑袋，然后取回了属于你的东西。[pc.speech(谢谢你，小毛贼，那么，你叫什么名字？)]
 	</p>
 	<p>
-		[lumi.speech(M-Me? I'm... I'm [lumi.Name].)] [lumi.She] says, hesitantly.
+		[lumi.speech(我，我？我……我叫[lumi.Name]。)][lumi.She]犹豫地说。
 	</p>
 	<p>
-		[pc.speech(Nice to meet you [lumi.Name], I wish we'd have met in better circumstances... I'm [pc.Name].)] You reply, stopping your head-petting in order to safely put your money back where it belongs. [pc.speech(As you've been so reasonable, how about I treat you to dinner some time?)]
+		[pc.speech(很高兴认识你，[lumi.Name]，我希望我们能在更好的情况下相遇……我是[pc.Name]。)]你回复道，不再抚摸她的脑袋，以便把钱安全地放回它们该放的地方。[pc.speech(既然你这么通情达理，改天我请你吃饭怎么样？)]
 	</p>
 	<p>
-		Lumi's eyes instantly brighten and [lumi.her] [lumi.ears] stand fully erect. It looks like the magic keyword to make [lumi.her] feel better is 'dinner'. [lumi.speech(You... You'd really do that? Yes! I'd love to!)] [lumi.She] shouts, [lumi.her] [lumi.tail] wiggling excitingly behind [lumi.her] back as she gazes into your eyes.
+		卢米的眼睛瞬间亮了起来，[lumi.her]的[lumi.ears]也完全竖起。[lumi.speech(你……你真的要这么做？是的！我很乐意！)][lumi.She]大喊出声，当她凝视着你的时候，[lumi.her]的[lumi.tail]在背后激动地晃动着。
 	</p>
 	<p>
-		[pc.speech(Alright, it's settled then! I'll see you around, and stay out of trouble!)] You say, before turning to leave.
+		[pc.speech(好了，那就这么定啦！我们回头见，别惹麻烦！)]你说着，转身离开了。
 	</p>
 	<p>
-		[lumi.speech(I like you, [pc.Name]! I hope I'll see you again!)] Lumi shouts, before darting off past you and disappearing down the alleyway. As this seems to be the area in which she's made her home, if you ever wanted to meet this cute wolf-girl again, all you'd have to do would be to wander around through this area...
+		[lumi.speech(我喜欢你，[pc.Name]！希望我们能再见！)]卢米大喊道，然后从你身边飞奔而去，消失在了小巷里。因为她似乎把这里当作她的家，如果你想再见到这个可爱的狼女，你只需要在这个地区闲逛……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LUMI_CAUGHT_TALK_THREATEN"><![CDATA[
 	<p>
-		[pc.speech(This is not acceptable. At all. You're lucky I decided not to give you a beating, but you'd better believe that I won't spare you a second time if you ever do this again. Now, give me my money!)] You shout, scowling in anger as you assertively reach out your hand.
+		[pc.speech(这是不能接受的。完全不能。你很幸运，我并不打算打你一顿，但是你最好记住，要是你再这么做，我不会饶你第二次。现在，把我的钱给我！)]你喊道，怒气冲冲地皱着眉头，果断地伸出手。
 	</p>
 	<p>
-		The wolf-girl's gaze instantly drops to the ground, and tears start visibly welling in [lumi.her] eyes as she mutters, [lumi.speech(I knew it... I knew you wouldn't be nice to me either...)] 
+		狼女的目光立刻落在了地上，当她小声说话时，眼泪从[lumi.her]眼中涌出，[lumi.speech(我就知道……我就知道你也不会对我好……)]
 	</p>
 	<p>
-		The wolf-girl's voice starts trembling as she realises that you're not the friendly person she took you for. Stepping towards you, she puts your money in your palm, before quickly dashing past you, sobbing uncontrollably and disappearing into the backalleys of Dominion.
+		狼女的声音开始颤抖，因为她意识到你并没有她想象中的那么友好。她朝你走来，把你的钱放在你的手掌中，然后迅速跑过你的身侧，一边不能自已地抽泣着，一边消失在了御城区的小巷中。
 	</p>
 	<p>
-		With that, you're left alone with your money in the alleyway. You tell yourself that it's best not to try and make friends with thieves, and, putting your money safely away, you move to continue on your way. After what just happened, you can be sure that you won't be bothered by that particular wolf-girl ever again...
+		这下，巷子里就只剩下你一个人，还有钱了。你告诉自己，最好别和小偷交朋友。然后，你把你的钱安全地保管起来，继续前进。在发生了刚刚的这一切之后，你可以肯定，那个狼女再也不会来打扰你了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

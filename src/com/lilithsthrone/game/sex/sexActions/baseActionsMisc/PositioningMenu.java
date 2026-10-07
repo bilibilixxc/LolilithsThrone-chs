@@ -440,7 +440,7 @@ public class PositioningMenu {
 				}
 			}
 			if(!(domsAcceptable && subsAcceptable)) {
-				return new Value<Boolean, String>(false, "You need to have at least one dominant and one submissive character in non-spectator slots.");
+				return new Value<Boolean, String>(false, "在非观众栏位中，你需要至少有一名支配者和一名服从者。");
 			}
 		}
 
@@ -453,10 +453,10 @@ public class PositioningMenu {
 		sb.append("<div class='container-half-width'>");
 			sb.append("<p style='text-align:center;'>");
 			if(Main.sex.getDominantParticipants(true).size()>0) {
-				sb.append("[style.boldDominant(Dominants)]</b>");
+				sb.append("[style.boldDominant(支配方)]</b>");
 					for(GameCharacter c : Main.sex.getDominantParticipants(true).keySet()) {
 						sb.append(UtilText.parse(c,
-								"<br/><b style='color:"+c.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b><b>:</b> "
+								"<br/><b style='color:"+c.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b><b>:</b>"
 										+(positioningSlots.get(c)==SexSlotGeneric.MISC_WATCHING
 											?"[style.colourDisabled("+Util.capitaliseSentence(positioningSlots.get(c).getDescription())+")]"
 											:Util.capitaliseSentence(positioningSlots.get(c).getDescription()))));
@@ -474,10 +474,10 @@ public class PositioningMenu {
 		sb.append("<div class='container-half-width'>");
 			sb.append("<p style='text-align:center;'>");
 			if(Main.sex.getSubmissiveParticipants(true).size()>0) {
-				sb.append("[style.boldSubmissive(Submissives)]</b>");
+				sb.append("[style.boldSubmissive(服从方)]</b>");
 					for(GameCharacter c : Main.sex.getSubmissiveParticipants(true).keySet()) {
 						sb.append(UtilText.parse(c,
-								"<br/><b style='color:"+c.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b><b>:</b> "
+								"<br/><b style='color:"+c.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b><b>:</b>"
 										+(positioningSlots.get(c)==SexSlotGeneric.MISC_WATCHING
 											?"[style.colourDisabled("+Util.capitaliseSentence(positioningSlots.get(c).getDescription())+")]"
 											:Util.capitaliseSentence(positioningSlots.get(c).getDescription()))));
@@ -499,7 +499,7 @@ public class PositioningMenu {
 				charactersToMoveToSpectators.add(e.getKey());
 				sb.append(
 						"[style.colourBad("+UtilText.parse(e.getKey(),
-								"[npc.NamePos] selected position slot, '"+Util.capitaliseSentence(e.getValue().getDescription())+"', is now unavailable, and as such, [npc.sheHasFull] been moved to a spectator slot!")
+								"[npc.namePos]所选的姿势栏位“"+Util.capitaliseSentence(e.getValue().getDescription())+"”现在不可用，因此[npc.sheHasFull]被移到了旁观者的位置！")
 						+")]");
 			}
 		}
@@ -511,10 +511,10 @@ public class PositioningMenu {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode POSITIONING_MENU = new DialogueNode("Positioning Selection", "", true) {
+	public static final DialogueNode POSITIONING_MENU = new DialogueNode("选择位置", "", true) {
 		@Override
 		public String getLabel() {
-			return "Positioning Selection: "+position.getName();
+			return "体位选择: "+position.getName();
 		}
 		@Override
 		public String getContent() {
@@ -548,7 +548,7 @@ public class PositioningMenu {
 				} else {
 					UtilText.nodeContentSB.append(
 							"<p style='text-align:center;'>"
-									+ "<b>Projected outcome:</b><br/>"
+									+ "<b>计划输出：</b><br/>"
 									+"<i>"+position.getDescription(positioningSlots)+"</i>"
 							+ "</p>");
 				}
@@ -563,7 +563,7 @@ public class PositioningMenu {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 0) {
-				return new ResponseEffectsOnly("Back", "Decide against changing position."){
+				return new ResponseEffectsOnly("返回", "决定不改变体位了。"){
 					@Override
 					public void effects() {
 						Main.game.restoreSavedContent(false);
@@ -573,9 +573,9 @@ public class PositioningMenu {
 			} else if(index==1) {
 				Value<Boolean, String> acceptableValue = isSlotsAcceptable();
 				if(!acceptableValue.getKey()) {
-					return new Response("Accept", acceptableValue.getValue(), null);
+					return new Response("接受", acceptableValue.getValue(), null);
 				}
-				return new ResponseEffectsOnly("Accept", "Move into the selected position."){
+				return new ResponseEffectsOnly("接受", "移动成选好的体位。"){
 					@Override
 					public boolean isSexPositioningHighlight() {
 						return true;
@@ -587,12 +587,12 @@ public class PositioningMenu {
 						Main.mainController.openPhone();
 						
 						positioningSB.append(
-								"Wanting to switch into a new position, "
+								"想要换个新体位，"
 									+(Main.sex.isMasturbation()
-										?"you move around until you've assumed the posture you had in mind..."
+										?"你动来动去，直到摆出想要的姿势……"
 										:(Main.sex.getAllParticipants(false).size()==2
-											?UtilText.parse(Main.sex.getTargetedPartner(Main.game.getPlayer()), "you manoeuvre [npc.name] into [npc.her] new place...")
-											:"you manoeuvre your partners into their new places...")));
+											?UtilText.parse(Main.sex.getTargetedPartner(Main.game.getPlayer()), "你把[npc.name]挪到了新的位置……")
+											:"你将对象挪到了他们的新位置上……")));
 
 						SexActionUtility.POSITION_SELECTION.applyEffects();
 						Main.sex.endSexTurn(SexActionUtility.POSITION_SELECTION);
@@ -605,8 +605,8 @@ public class PositioningMenu {
 				
 			} else if(index==2) {
 				return new Response(
-						"Target: <b style='color:"+targetedCharacter.getFemininity().getColour().toWebHexString()+";'>"+UtilText.parse(targetedCharacter, "[npc.Name]")+"</b>",
-						"This is the character you're currently choosing a slot for.",
+						"目标：<b style='color:"+targetedCharacter.getFemininity().getColour().toWebHexString()+";'>"+UtilText.parse(targetedCharacter, "[npc.Name]")+"</b>",
+						"这是你当前选择的角色位置。",
 						POSITIONING_MENU){
 					@Override
 					public void effects() {
@@ -640,7 +640,7 @@ public class PositioningMenu {
 				}
 				
 				if(targetedCharacter.equals(characterInSlot)) {
-					return new Response(Util.capitaliseSentence(slot.getDescription()), UtilText.parse(targetedCharacter, "[npc.NameIsFull] already in this slot..."), null);
+					return new Response(Util.capitaliseSentence(slot.getDescription()), UtilText.parse(targetedCharacter, "[npc.NameIsFull]已经在这个栏位了……"), null);
 				}
 				
 				if(!position.isSlotUnlocked(targetedCharacter, slot, positioningSlots).getKey()) {
@@ -648,12 +648,12 @@ public class PositioningMenu {
 				}
 
 				if(!Main.sex.getInitialSexManager().isSlotAvailable(targetedCharacter, slot)) {
-					return new Response(Util.capitaliseSentence(slot.getDescription()), UtilText.parse(targetedCharacter, "[npc.Name] cannot access this slot in this sex scene..."), null);
+					return new Response(Util.capitaliseSentence(slot.getDescription()), UtilText.parse(targetedCharacter, "[npc.Name]在性交场景下无法控制该栏位……"), null);
 				}
 				
 				if(characterInSlot!=null && !Main.sex.getInitialSexManager().isSlotAvailable(characterInSlot, Main.sex.getSexPositionSlot(targetedCharacter))) {
 					return new Response(Util.capitaliseSentence(slot.getDescription()),
-							UtilText.parse(characterInSlot, targetedCharacter, "[npc.Name] cannot access [npc2.namePos] slot in this sex scene, so [npc2.name] cannot swap with [npc.herHim]..."),
+							UtilText.parse(characterInSlot, targetedCharacter, "[npc.Name]在性交场景下无法到达[npc2.namePos]的栏位，所以[npc2.name]不能与[npc.herHim]换位置……"),
 							null);
 				}
 				
@@ -663,9 +663,9 @@ public class PositioningMenu {
 							:Util.capitaliseSentence(slot.getDescription()),
 						characterInSlot!=null && slot!=SexSlotGeneric.MISC_WATCHING
 							?UtilText.parse(targetedCharacter, characterInSlot,
-									"[npc2.NameIsFull] already assigned to this slot, so by selecting [npc.name] to take this slot, you will swap the two of them around."
-									+ " (Resulting in [npc2.name] being in the '"+positioningSlots.get(targetedCharacter).getDescription()+"' slot.)")
-							:UtilText.parse(targetedCharacter, "Assign [npc.name] to this slot."),
+									"[npc2.NameIsFull]已经被分配到这个栏位了，只要选择[npc.Name]到该栏位，就可以将他们俩换位置。"
+									+ " (导致[npc2.name]处于“"+positioningSlots.get(targetedCharacter).getDescription()+"”栏位。)")
+							:UtilText.parse(targetedCharacter, "分配[npc.name]到该栏位。"),
 						POSITIONING_MENU){
 					@Override
 					public void effects() {
@@ -722,7 +722,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.STANDING.getName())+"' core position.";
+			return "打开定位菜单查看所有与'"+Util.capitaliseSentence(SexPosition.STANDING.getName())+"'核心位置相关的性动作。";
 		}
 
 		@Override
@@ -790,7 +790,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.AGAINST_WALL.getName())+"' core position.";
+			return "打开定位菜单查看所有与'"+Util.capitaliseSentence(SexPosition.AGAINST_WALL.getName())+"'核心位置相关的性动作。";
 		}
 
 		@Override
@@ -866,7 +866,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.SITTING.getName())+"' core position.";
+			return "打开定位菜单查看所有与'"+Util.capitaliseSentence(SexPosition.SITTING.getName())+"'核心位置相关的性动作。";
 		}
 
 		@Override
@@ -952,7 +952,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.OVER_DESK.getName())+"' core position.";
+			return "打开定位菜单查看所有与'"+Util.capitaliseSentence(SexPosition.OVER_DESK.getName())+"'核心位置相关的性动作。";
 		}
 
 		@Override
@@ -1020,7 +1020,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.ALL_FOURS.getName())+"' core position.";
+			return "打开定位菜单查看所有与'"+Util.capitaliseSentence(SexPosition.ALL_FOURS.getName())+"'核心位置相关的性动作。";
 		}
 
 		@Override
@@ -1088,7 +1088,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.LYING_DOWN.getName())+"' core position.";
+			return "打开定位菜单查看所有与'"+Util.capitaliseSentence(SexPosition.LYING_DOWN.getName())+"'核心位置相关的性动作。";
 		}
 
 		@Override
@@ -1156,7 +1156,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.STOCKS.getName())+"' core position.";
+			return "打开定位菜单查看所有与"+Util.capitaliseSentence(SexPosition.STOCKS.getName())+"核心位置相关的性动作。";
 		}
 
 		@Override
@@ -1224,7 +1224,7 @@ public class PositioningMenu {
 
 		@Override
 		public String getActionDescription() {
-			return "Open the positioning menu for all sex positions related to the '"+Util.capitaliseSentence(SexPosition.MILKING_STALL.getName())+"' core position.";
+			return "打开定位菜单查看所有与'"+Util.capitaliseSentence(SexPosition.MILKING_STALL.getName())+"'核心位置相关的性动作。";
 		}
 
 		@Override

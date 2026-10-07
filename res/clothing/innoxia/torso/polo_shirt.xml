@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[polo shirt]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[polo shirts]]></namePlural> 
-		<description><![CDATA[A short-sleeved, collared shirt made from knitted cotton.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[polo衫]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[polo衫]]></namePlural> 
+		<description><![CDATA[一件由针织棉制成的短袖领衬衫。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>MASCULINE</femininity> 
 		<slot>TORSO_UNDER</slot> 

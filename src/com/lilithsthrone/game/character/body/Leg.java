@@ -68,14 +68,14 @@ public class Leg implements BodyPartInterface {
 		if(this.getFootStructure()==footStructure) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[style.colourDisabled(Nothing happens, as [npc.namePos] [npc.feet] are already [npc.footStructure]...)]"
+						+ "[style.colourDisabled(由于[npc.namePos]的[npc.feet]已经是[npc.footStructure]了，所以无事发生……)]"
 					+ "</p>");
 		}
 		
 		if(!type.getFootType().getPermittedFootStructures(owner.getLegConfiguration()).contains(footStructure)) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[style.colourDisabled(Nothing happens, as [npc.namePos] [npc.feet] cannot transform to be "+footStructure.getName()+"...)]"
+						+ "[style.colourDisabled(由于[npc.namePos]的[npc.feet]无法被转化为"+footStructure.getName()+"，所以无事发生……)]"
 					+ "</p>");
 		}
 
@@ -85,24 +85,24 @@ public class Leg implements BodyPartInterface {
 		StringBuilder sb = new StringBuilder();
 
 		sb.append("<p>"
-				+ "[npc.Name] [npc.verb(let)] out a shocked gasp as [npc.she] suddenly [npc.verb(feel)] an intense heat shoot down into [npc.her] [npc.legs] and [npc.feet]."
-				+ " Staggering and swaying, [npc.she] almost [npc.verb(lose)] [npc.her] balance as the structure of [npc.her] feet transforms and changes.</br>");
+				+ "[npc.Name]忽然感到[npc.legs]和[npc.feet]处迸发出一阵强烈的热量，不禁震惊地倒吸一口凉气。"
+				+ "随着脚部结构的变化，[npc.she]一个踉跄，差点失去了平衡。</br>");
 		
 		switch(footStructure) {
 			case NONE:
-				sb.append("After just a moment, [npc.sheIs] left with [style.boldTfGeneric(no [npc.feet])]!");
+				sb.append("片刻过后，[npc.sheIs]便[style.boldTfGeneric(没有[npc.feet])]了！");
 				break;
 			case DIGITIGRADE:
-				sb.append("After just a moment, [npc.sheIs] left with [style.boldTfGeneric(digitigrade [npc.feet])], meaning that [npc.she] now [npc.verb(walk)] on [npc.her] toes, with [npc.her] heel being permanently raised.");
+				sb.append("片刻过后，[npc.sheIs]得到了[style.boldTfGeneric(趾行的[npc.feet])]，这意味着[npc.she]现在用脚趾行走，脚跟总是高高抬起。");
 				break;
 			case PLANTIGRADE:
-				sb.append("After just a moment, [npc.sheIs] left with [style.boldTfGeneric(plantigrade [npc.feet])], meaning that [npc.she] now [npc.verb(walk)] with [npc.her] feet flat on the ground.");
+				sb.append("片刻过后，[npc.sheIs]得到了[style.boldTfGeneric(跖行的[npc.feet])]，这意味着[npc.she]现在用脚掌在地面上行走。");
 				break;
 			case UNGULIGRADE:
-				sb.append("After just a moment, [npc.sheIs] left with [style.boldTfGeneric(unguligrade [npc.feet])], meaning that [npc.she] now [npc.verb(walk)] on [npc.her] [npc.toes], with the rest of [npc.her] foot being permanently raised.");
+				sb.append("片刻过后，[npc.sheIs]得到了[style.boldTfGeneric(蹄行的[npc.feet])]，这意味着[npc.she]现在用[npc.toes]行走，而脚的其他部分则总是高高抬起。");
 				break;
 			case ARACHNOID:
-				sb.append("After just a moment, [npc.sheIs] left with [style.boldTfGeneric(arachnoid [npc.feet])], meaning that [npc.she] now [npc.verb(walk)] on the ends of [npc.her] segmented arachnoid legs.");
+				sb.append("片刻过后，[npc.sheIs]得到了[style.boldTfGeneric(蛛形的[npc.feet])]，这意味着[npc.she]现在用蛛形的节肢末端行走。");
 				break;
 			case TENTACLED:
 				break;
@@ -179,7 +179,7 @@ public class Leg implements BodyPartInterface {
 		}
 		
 		if(type == getType()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.legs] of [npc.a_legRace], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_legRace]的[npc.legs]了，所以无事发生……)]</p>");
 		}
 		
 		
@@ -187,7 +187,7 @@ public class Leg implements BodyPartInterface {
 		
 		sb.append(
 				"<p>"
-					+ "[npc.NamePos] [npc.legs] start to wobble and feel weak, and [npc.she] almost [npc.verb(lose)] [npc.her] balance as they start to transform. ");
+					+ "转化开始后，[npc.NamePos]的[npc.legs]晃动起来，变得越来越虚弱，[npc.she]差点没保持住平衡。");
 		
 		// Parse existing content before transformation:
 		String s = UtilText.parse(owner, sb.toString());
@@ -205,7 +205,7 @@ public class Leg implements BodyPartInterface {
 		if(!type.isLegsReplacedByTentacles() && type.getDefaultFootStructure(this.getLegConfiguration())!=FootStructure.NONE) {
 			sb.append(
 					"<p>"
-						+ "The transformation has left the structure of [npc.her] [npc.feet] as [style.boldTFGeneric("+this.footStructure.getName()+")]! "+this.footStructure.getDescription()
+						+ "转化让[npc.her][npc.feet]的结构变为了[style.boldTFGeneric("+this.footStructure.getName()+")]！"+this.footStructure.getDescription()
 					+ "</p>");
 		}
 		
@@ -267,30 +267,30 @@ public class Leg implements BodyPartInterface {
 		}
 		
 		if(owner.getLegConfiguration()!=LegConfiguration.TAIL_LONG) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(As [npc.name] [npc.do] not have a "+LegConfiguration.TAIL_LONG+" lower-body, nothing seems to happen...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.name]没有"+LegConfiguration.TAIL_LONG+"下肢，所以无事发生……)]</p>");
 		}
 		
 		if(lengthChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The length of [npc.namePos] [npc.tail] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.tail]的长度没有变化……)]</p>");
 		}
 		
-		String heightPercentageDescription = " (length is "+((int)(owner.getLegTailLengthAsPercentageOfHeight()*100))+"% of [npc.namePos] height)";
+		String heightPercentageDescription = "(长度为身高的"+((int)(owner.getLegTailLengthAsPercentageOfHeight()*100))+"%)";
 		if(lengthChange>0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up within [npc.her] [npc.tail+]."
-						+ " Without any further warning of what's to come, [npc.her] [npc.tail] suddenly [style.boldGrow(grows longer)]."
+						+ "[npc.Name]感觉到[npc.her][npc.tail+]里逐渐升起一股强烈的搏动感，不禁发出[npc.a_moan+]。"
+						+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的[npc.tail]突然[style.boldGrow(伸长了)]。"
 						+ "<br/>"
-						+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+						+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 					+ "</p>");
 				
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up within [npc.her] [npc.tail+]."
-						+ " Without any further warning of what's to come, [npc.her] [npc.tail] suddenly [style.boldShrink(shortens)]."
+						+ "[npc.Name]感觉到[npc.her][npc.tail+]里逐渐升起一股强烈的搏动感，不禁发出[npc.a_moan+]。"
+						+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的[npc.tail]突然[style.boldShrink(缩短了)]。"
 						+ "<br/>"
-						+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+						+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 					+ "</p>");
 		}
 	}

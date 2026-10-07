@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<authorTag><![CDATA['MFD by DSG Threadworks' has been printed onto the inside of the bandolier's backing.]]></authorTag>
+		<authorTag><![CDATA[“DSG织厂生产”被印在子弹带背带的内侧。]]></authorTag>
 		<value>500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendColourName="true"><![CDATA[canvas bandolier]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[canvas bandoliers]]></namePlural>
-		<description><![CDATA[A messenger-style bandolier made from heavy cotton fabric with nine pouches designed for long and thin magazines.]]></description>
+		<determiner><![CDATA[一款]]></determiner>
+		<name appendColourName="true"><![CDATA[帆布子弹带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[帆布子弹带]]></namePlural>
+		<description><![CDATA[一款由厚重棉布制成的信使风格的子弹带，有九个专为细长弹匣设计的袋子。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -52,27 +51,27 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the bandolier and securely [npc.verb(tighten)] the strap around [npc.her] shoulder.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(put)] the [npc.verb(wrap)] the bandolier around [npc2.name] and [npc.verb(tighten)] the strap around [npc2.her] shoulder.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(shove)] the bandolier onto [npc2.name] and [npc.verb(yank)] the strap around [npc2.her] shoulder.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]戴上了子弹带，然后牢固地将带子固定在[npc.her]的肩膀上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将子弹带绑在[npc2.name]身上，并将带子系紧在[npc2.her]的肩膀上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将子弹带猛地推到[npc2.name]身上，然后猛力拉紧了围绕[npc2.her]肩膀的肩带。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the bandolier's strap from [npc.her] shoulder and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the bandolier's strap from [npc2.namePos] shoulder and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tears)] the bandolier from [npc2.namePos] torso.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了子弹带的肩带，然后把它取下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]肩膀上子弹带的肩带，并将其取下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]从[npc2.namePos]躯干上扯下子弹带。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

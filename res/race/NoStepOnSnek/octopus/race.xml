@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>NoStepOnSnek_octopus</racialBody>
 	<applyRaceChanges/>
-	<name><![CDATA[octopus-morph]]></name>
-	<namePlural><![CDATA[octopus-morphs]]></namePlural>
+	<name><![CDATA[章鱼化形]]></name>
+	<namePlural><![CDATA[章鱼化形]]></namePlural>
 	<nameFeral>
-		<name legConfiguration="CEPHALOPOD"><![CDATA[octopus]]></name>
+		<name legConfiguration="CEPHALOPOD"><![CDATA[章鱼]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="CEPHALOPOD"><![CDATA[octopuses]]></name>
+		<name legConfiguration="CEPHALOPOD"><![CDATA[章鱼]]></name>
 	</nameFeralPlural>
-	<defaultTransformName><![CDATA[octopus]]></defaultTransformName>
+	<defaultTransformName><![CDATA[章鱼]]></defaultTransformName>
 	<colour>NoStepOnSnek_octopus</colour>
 	<disposition>UNPREDICTABLE</disposition>
 	<racialClass>FISH</racialClass>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- AUNT_HOME_PLAYERS_ROOM_QUICK_SHOWER -->
@@ -6,74 +6,74 @@
 	<htmlContent tag="START_SHOWER_SEX_AS_DOM"><![CDATA[
 	#IF([#SPECIAL_PARSE_0]==1)
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against [npc.name] and tell [npc.herHim] that now's the perfect time for you to fuck [npc.herHim].
+			你暂时还不想这么快冲完澡，于是将湿漉漉的身子紧紧贴住[npc.name]，告诉[npc.herHim]现在可正是干[npc.herHim]的绝佳时机。
 		</p>
 		<p>
 			#IF(npc.isAttractedTo(pc))
-				Clearly feeling just as horny as you are, the [npc.race] lets out [npc.a_moan+] and leans in to plant a submissive kiss on your [pc.lips+]. With the shower's warm water cascading over your naked bodies, the two of you embrace one another and prepare to indulge in your lust...
+				那[npc.race]显然也一样饥渴，只是发出几声[npc.a_moan+]便将身体靠过来，在你[pc.lips+]上留下了服从的一吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，你们二人相拥起来，准备好服从于欲望……
 			#ELSE
-				Although [npc.sheIs] not attracted to you, the [npc.race] doesn't really have a choice in the matter, and lets out an anguished sigh as you lean in to plant a kiss on [npc.her] [npc.lips+]. With the shower's warm water cascading over your naked bodies, you embrace your slave and prepare to indulge in your lust...
+				尽管那[npc.race]并没有怎么被你吸引，但[npc.sheIs]确实也别无他法，只得痛苦地叹一口气，让你附身在[npc.her][npc.lips+]上留下了一吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，你抱住奴隶的身子，准备好沉湎于欲望中……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against your slaves and tell them that now's the perfect time for you to fuck them.
+			你暂时还不想这么快冲完澡，于是将湿漉漉的身子紧紧贴在奴隶们身上，告诉他们现在可正是干他们的绝佳时机。
 		</p>
 		<p>
 			#IF(npc.isAttractedTo(pc) && npc2.isAttractedTo(pc) && ([#SPECIAL_PARSE_0]==2 || npc3.isAttractedTo(pc)) && ([#SPECIAL_PARSE_0]<4 || npc4.isAttractedTo(pc)))
-				Clearly feeling just as horny as you are, your slaves let out a chorus of excited moans, before all leaning in to plant a series of submissive kisses on your [pc.lips+] and [pc.breasts+]. With the shower's warm water cascading over your naked bodies, you all slide up against one another and prepare to indulge in your lust...
+				你的奴隶显然也一样即可，顿时响起嘈杂而兴奋的呻吟声，他们全都将身体靠过来，在你[pc.lips+]和[pc.breasts+]上留下了一个又一个表示服从的吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，你们贴在一起，准备好服从于欲望……
 			#ELSEIF(!npc.isAttractedTo(pc) && !npc2.isAttractedTo(pc) && ([#SPECIAL_PARSE_0]==2 || !npc3.isAttractedTo(pc)) && ([#SPECIAL_PARSE_0]<4 || !npc4.isAttractedTo(pc)))
-				Although none of your slaves are attracted to you, they don't really have a choice in the matter, and they let out a series of anguished sighs as you lean in to plant a kiss on each of their lips. With the shower's warm water cascading over your naked bodies, you embrace your reluctant slaves and prepare to indulge in your lust...
+				尽管你的奴隶没有一个受到你吸引，但也都别无他法，一声声痛苦的叹息在你耳边响起，你对着他们每个人的嘴唇都亲了一下。淋浴温暖的水流沿着裸露的身躯汩汩流下，你抱住这群不情愿的奴隶，准备好沉湎于欲望中……
 			#ELSE
-				Although you can sense some hesitation, your slaves don't really have a choice in the matter, and you remind them of their place by leaning in to plant a dominant kiss on each of their lips. With the shower's warm water cascading over your naked bodies, you embrace your slaves and prepare to indulge in your lust...
+				尽管你能感到有些人稍显犹豫，但作为奴隶他们别无他法，你重新声明了他们的地位，便对着每一双嘴唇都留下了支配的一吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，你抱住这群奴隶，准备好沉湎于欲望中……
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="START_SHOWER_SEX_AS_SUB"><![CDATA[
 	#IF([#SPECIAL_PARSE_0]==1)
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against [npc.name] and tell [npc.herHim] that now's the perfect time for [npc.herHim] to do whatever [npc.she] wants with you.
-		</p>
+	你暂时还不想这么快冲完澡，于是将湿漉漉的身子紧紧贴住[npc.name]，告诉[npc.herHim]可以对你想做什么就做什么，这是绝佳的机会。
+</p>
 		<p>
-			Clearly feeling just as horny as you are, the [npc.race] lets out [npc.a_moan+] and leans in to plant a dominant kiss on your [pc.lips+]. With the shower's warm water cascading over your naked bodies, the two of you embrace one another and prepare to indulge in your lust...
-		</p>
+	那[npc.race]显然也跟你一样饥渴，只是发出几声[npc.a_moan+]便将身体靠过来，在你[pc.lips+]上留下了支配的一吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，你们二人相拥起来，准备好服从于欲望……
+</p>
 	#ELSEIF([#SPECIAL_PARSE_0]==2)
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against [npc.name] and [npc2.name] and tell them that now's the perfect time for them to do whatever they want with you.
-		</p>
+	你暂时还不想这么快冲完澡，于是将湿漉漉的身子紧紧贴住[npc.name]和[npc2.name]，告诉他们可以对你想做什么就做什么，这是绝佳的机会。
+</p>
 		<p>
-			Clearly feeling just as horny as you are, your slaves let out a pair of excited moans, before leaning in to plant a series of dominant kisses on your [pc.lips+] and [pc.breasts+]. With the shower's warm water cascading over your naked bodies, your two slaves slide up against you and prepare to take full advantage of your submission...
-		</p>
+	你的奴隶们显然也跟你一样饥渴，顿时响起嘈杂而兴奋的呻吟声，他们全都将身体靠过来，在你[pc.lips+]和[pc.breasts+]上留下了一个又一个表示支配的吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，两个奴隶将你夹在中间，期待着你完全服从在他们脚下……
+</p>
 	#ELSE
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against your slaves and tell them that now's the perfect time for them to do whatever they want with you.
-		</p>
+	你暂时还不想这么快冲完澡，于是将湿漉漉的身子紧紧贴住你的奴隶们，告诉他们可以对你想做什么就做什么，这是绝佳的机会。
+</p>
 		<p>
-			Clearly feeling just as horny as you are, your slaves let out a chorus of excited moans, before leaning in to plant a series of dominant kisses on your [pc.lips+] and [pc.breasts+]. With the shower's warm water cascading over your naked bodies, your slaves slide up against you and prepare to take full advantage of your submission...
-		</p>
+	你的奴隶们显然也跟你一样饥渴，顿时响起嘈杂而兴奋的呻吟声，他们全都将身体靠过来，在你[pc.lips+]和[pc.breasts+]上留下了一个又一个表示支配的吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，奴隶们将你夹在中间，期待着你完全服从在他们脚下……
+</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SHOWER_SEX -->
 	
 	<htmlContent tag="AFTER_SHOWER_SEX"><![CDATA[
 	<p>
-		#IF(sex.getAllParticipants(false).size()==2)
-			Having had your fun, you tell [npc.name] to quickly wash you off, and after [npc.sheHas] done so, you turn off the tap and get your slave to dry you off.
-		#ELSE
-			Having had your fun, you tell your slaves to quickly wash you off, and after they've done so, you turn off the tap and get your slaves to dry you off.
-		#ENDIF
-	</p>
+	#IF(sex.getAllParticipants(false).size()==2)
+		爽过之后，你让[npc.name]赶紧帮你洗干净，结束后你关掉水龙头，又让奴隶帮忙擦干了身体。
+	#ELSE
+		爽过之后，你让奴隶们赶紧帮你洗干净，结束后你关掉水龙头，又让他们帮忙擦干了身体。
+	#ENDIF
+</p>
 	<p>
-		Satisfied with the fun that you were able to have while taking your shower, you get dressed and prepare to head back into your room...
-	</p>
-	]]>
-	</htmlContent>
+	你在淋浴时能够如此享受一番，已经觉得非常满足，穿好衣服就准备回房间了……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_PLAYERS_ROOM_BATH -->
@@ -81,57 +81,57 @@
 	<htmlContent tag="START_BATH_SEX_AS_DOM"><![CDATA[
 	#IF([#SPECIAL_PARSE_0]==1)
 		<p>
-			Not wanting to finish your bath just yet, you slide your wet body up against [npc.name] and tell [npc.herHim] that now's the perfect time for you to fuck [npc.herHim].
+			你暂时还不想这么快洗完澡，于是将湿漉漉的身子紧紧贴住[npc.name]，告诉[npc.herHim]现在可正是干[npc.herHim]的绝佳时机。
 		</p>
 		<p>
 			#IF(npc.isAttractedTo(pc))
-				Clearly feeling just as horny as you are, the [npc.race] lets out [npc.a_moan+] and leans in to plant a submissive kiss on your [pc.lips+]. With the bath's warm water enveloping your naked bodies, the two of you embrace one another and prepare to indulge in your lust...
+				那[npc.race]显然也一样饥渴，只是发出几声[npc.a_moan+]便将身体靠过来，在你[pc.lips+]上留下了服从的一吻。浴缸的温水浸没着你赤裸的身体，你们二人相拥起来，准备好服从于欲望……
 			#ELSE
-				Although [npc.sheIs] not attracted to you, the [npc.race] doesn't really have a choice in the matter, and lets out an anguished sigh as you lean in to plant a kiss on [npc.her] [npc.lips+]. With the bath's warm water enveloping your naked bodies, you embrace your slave and prepare to indulge in your lust...
+				尽管那[npc.race]并没有怎么被你吸引，但[npc.sheIs]确实也别无他法，只得痛苦地叹一口气，让你附身在[npc.her][npc.lips+]上留下了一吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，你抱住奴隶的身子，准备好沉湎于欲望中……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Not wanting to finish your bath just yet, you slide your wet body up against your slaves and tell them that now's the perfect time for you to fuck them.
+			你暂时还不想这么快洗完澡，于是将湿漉漉的身子紧紧贴在奴隶们身上，告诉他们现在可正是干他们的绝佳时机。
 		</p>
 		<p>
 			#IF(npc.isAttractedTo(pc) && npc2.isAttractedTo(pc) && ([#SPECIAL_PARSE_0]==2 || npc3.isAttractedTo(pc)) && ([#SPECIAL_PARSE_0]<4 || npc4.isAttractedTo(pc)))
-				Clearly feeling just as horny as you are, your slaves let out a chorus of excited moans, before all leaning in to plant a series of submissive kisses on your [pc.lips+] and [pc.breasts+]. With the bath's warm water enveloping your naked bodies, you all slide up against one another and prepare to indulge in your lust...
+				你的奴隶显然也一样即可，顿时响起嘈杂而兴奋的呻吟声，他们全都将身体靠过来，在你[pc.lips+]和[pc.breasts+]上留下了一个又一个表示服从的吻。淋浴温暖的水流沿着裸露的身躯汩汩流下，你们贴在一起，准备好服从于欲望……
 			#ELSEIF(!npc.isAttractedTo(pc) && !npc2.isAttractedTo(pc) && ([#SPECIAL_PARSE_0]==2 || !npc3.isAttractedTo(pc)) && ([#SPECIAL_PARSE_0]<4 || !npc4.isAttractedTo(pc)))
-				Although none of your slaves are attracted to you, they don't really have a choice in the matter, and they let out a series of anguished sighs as you lean in to plant a kiss on each of their lips. With the bath's warm water enveloping your naked bodies, you embrace your reluctant slaves and prepare to indulge in your lust...
+				尽管你的奴隶没有一个受到你吸引，但也都别无他法，一声声痛苦的叹息在你耳边响起，你对着他们每个人的嘴唇都亲了一下。浴缸的温水浸没着你赤裸的身体，你抱住这群不情愿的奴隶，准备好沉湎于欲望中……
 			#ELSE
-				Although you can sense some hesitation, your slaves don't really have a choice in the matter, and you remind them of their place by leaning in to plant a dominant kiss on each of their lips. With the bath's warm water enveloping your naked bodies, you embrace your slaves and prepare to indulge in your lust...
+				尽管你能感到有些人稍显犹豫，但作为奴隶他们别无他法，你重新声明了他们的地位，便对着每一双嘴唇都留下了支配的一吻。浴缸的温水浸没着你赤裸的身体，你抱住这群奴隶，准备好沉湎于欲望中……
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="START_BATH_SEX_AS_SUB"><![CDATA[
 	#IF([#SPECIAL_PARSE_0]==1)
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against [npc.name] and tell [npc.herHim] that now's the perfect time for [npc.herHim] to do whatever [npc.she] wants with you.
+			你暂时还不想这么快洗完澡，于是将湿漉漉的身子紧紧贴住[npc.name]，告诉[npc.herHim]可以对你想做什么就做什么，这是绝佳的机会。
 		</p>
 		<p>
-			Clearly feeling just as horny as you are, the [npc.race] lets out [npc.a_moan+] and leans in to plant a dominant kiss on your [pc.lips+]. With the bath's warm water enveloping your naked bodies, the two of you embrace one another and prepare to indulge in your lust...
+			那[npc.race]显然也跟你一样饥渴，只是发出几声[npc.a_moan+]便将身体靠过来，在你[pc.lips+]上留下了支配的一吻。浴缸的温水浸没了你裸露的身躯，你们二人相拥起来，准备好服从于欲望……
 		</p>
 	#ELSEIF([#SPECIAL_PARSE_0]==2)
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against [npc.name] and [npc2.name] and tell them that now's the perfect time for them to do whatever they want with you.
+			你暂时还不想这么快洗完澡，于是将湿漉漉的身子紧紧贴住[npc.name]和[npc2.name]，告诉他们可以对你想做什么就做什么，这是绝佳的机会。
 		</p>
 		<p>
-			Clearly feeling just as horny as you are, your slaves let out a pair of excited moans, before leaning in to plant a series of dominant kisses on your [pc.lips+] and [pc.breasts+]. With the bath's warm water enveloping your naked bodies, your two slaves slide up against you and prepare to take full advantage of your submission...
+			你的奴隶们显然也跟你一样饥渴，顿时响起嘈杂而兴奋的呻吟声，他们全都将身体靠过来，在你[pc.lips+]和[pc.breasts+]上留下了一个又一个表示支配的吻。浴缸的温水浸没了你裸露的身躯，两个奴隶将你夹在中间，期待着你完全服从在他们脚下……
 		</p>
 	#ELSE
 		<p>
-			Not wanting to finish your shower just yet, you slide your wet body up against your slaves and tell them that now's the perfect time for them to do whatever they want with you.
+			你暂时还不想这么快洗完澡，于是将湿漉漉的身子紧紧贴住你的奴隶们，告诉他们可以对你想做什么就做什么，这是绝佳的机会。
 		</p>
 		<p>
-			Clearly feeling just as horny as you are, your slaves let out a chorus of excited moans, before leaning in to plant a series of dominant kisses on your [pc.lips+] and [pc.breasts+]. With the bath's warm water enveloping your naked bodies, your slaves slide up against you and prepare to take full advantage of your submission...
+			你的奴隶们显然也跟你一样饥渴，顿时响起嘈杂而兴奋的呻吟声，他们全都将身体靠过来，在你[pc.lips+]和[pc.breasts+]上留下了一个又一个表示支配的吻。浴缸的温水浸没了你裸露的身躯，奴隶们将你夹在中间，期待着你完全服从在他们脚下……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_BATH_SEX -->
@@ -139,16 +139,16 @@
 	<htmlContent tag="AFTER_BATH_SEX"><![CDATA[
 	<p>
 		#IF(sex.getAllParticipants(false).size()==2)
-			Having had your fun, you tell [npc.name] to quickly wash you off, and after [npc.sheHas] done so, you pull the plug and get your slave to dry you off.
+			爽过之后，你让[npc.name]赶紧帮你洗干净，结束后，你放掉浴缸的水，又让奴隶帮忙擦干了身体。
 		#ELSE
-			Having had your fun, you tell your slaves to quickly wash you off, and after they've done so, you pull the plug and get your slaves to dry you off.
+			爽过之后，你让奴隶们赶紧帮你洗干净，结束后，你放掉浴缸的水，又让他们帮忙擦干了身体。
 		#ENDIF
 	</p>
 	<p>
-		Satisfied with the fun that you were able to have while taking your bath, you get dressed and prepare to head back into your room...
+		你在沐浴时能够如此享受一番，已经觉得非常满足。穿好衣服后，你准备回房间了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Sex in player's room: -->
@@ -156,126 +156,126 @@
 	<htmlContent tag="BED_SEX_START"><![CDATA[
 	#IF([#SPECIAL_PARSE_0])
 		<p>
-			Before you can react, [npc.name] lowers [npc.herself] down over the top of you, pressing [npc.her] [npc.lips+] against yours and pulling you into a passionate kiss. Breaking it off a moment later, [npc.her] [npc.hands] start to roam down and grope your body as your horny slave [npc.moans], [npc.speech(Don't worry, [pc.name], I'll make this good for you as well...)]
+			还没等你反应过来，[npc.name]就倒在了你身的上，将[npc.her][npc.lips+]贴在你的嘴唇上，拉着你热烈地亲吻。片刻之后，[npc.her]的[npc.hands]开始向下游移，在你的淫荡奴隶[npc.moans]中摸索你的身体，[npc.speech(别担心，[pc.name]，我也会让你快活起来的……)]
 		</p>
 	#ELSE
 		<p>
-			[#SPECIAL_PARSE_1] had obviously conspired to wait until you'd gone to sleep before pinning you down and having their way with you. Before you can react to the situation, [npc.name] lowers [npc.herself] down over the top of you, pressing [npc.her] [npc.lips+] against yours and pulling you into a passionate kiss. Leaning in on one side of you, [npc2.name] [npc2.moans], [npc2.speech(Don't worry, [pc.name], we'll make this good for you as well...)]
+			显然，[#SPECIAL_PARSE_1]已经串通好了，要等你睡着后再把你按倒在地，然后大干你一场。还没等你反应过来，[npc.name]就压倒在了你的身上，把[npc.her][npc.lips+]贴在你的嘴唇上，拉着你热烈地亲吻。靠在你的一边，[npc2.name][npc2.moans]道，[npc2.speech(别担心，[pc.name]，我们会让你满意的……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BED_SEX_START_SLEEP"><![CDATA[
 	#IF([#SPECIAL_PARSE_0])
 		<p>
-			Before you can react, [npc.name] lowers [npc.herself] down over the top of you, pressing [npc.her] [npc.lips+] against yours and pulling you into a passionate kiss. Breaking it off a moment later, [npc.her] [npc.hands] start to roam down and grope your body as your horny slave [npc.moans], [npc.speech(Don't worry, [pc.name], I'll make this good for you as well...)]
+			还没等你反应过来，[npc.name]就倒在了你身的上，将[npc.her][npc.lips+]贴在你的嘴唇上，拉着你热烈地亲吻。片刻之后，[npc.her]的[npc.hands]开始向下游移，在你的淫荡奴隶[npc.moans]中摸索你的身体，[npc.speech(别担心，[pc.name]，我也会让你快活起来的……)]
 		</p>
 	#ELSE
 		<p>
-			[#SPECIAL_PARSE_1] had obviously conspired to wait until you'd gone to sleep before pinning you down and having their way with you. Before you can react to the situation, [npc.name] lowers [npc.herself] down over the top of you, pressing [npc.her] [npc.lips+] against yours and pulling you into a passionate kiss. Leaning in on one side of you, [npc2.name] [npc2.moans], [npc2.speech(Don't worry, [pc.name], we'll make this good for you as well...)]
+			显然，[#SPECIAL_PARSE_1]已经串通好了，要等你睡着后再把你按倒在地，然后大干你一场。还没等你反应过来，[npc.name]就压倒在了你的身上，把[npc.her][npc.lips+]贴在你的嘴唇上，拉着你热烈地亲吻。靠在你的一边，[npc2.name][npc2.moans]道，[npc2.speech(别担心，[pc.name]，我们会让你满意的……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_WAKE_UP_SEX"><![CDATA[
 	#IF(pc.isAsleep())
 		#IF([#SPECIAL_PARSE_0])
 			<p>
-				Having had [npc.her] fun with you, [npc.name] gently shuffles back and slips off your bed. Letting out a very satisfied sigh, [npc.she] teases, [npc.speech(I knew you wouldn't wake up...)]
+				[npc.name]和你玩得很开心，轻轻地往后一退，从你的床上滑了下来。发出一声非常满意的叹息，挑逗道，[npc.speech(我就知道你醒不过来……)]
 			</p>
 			<p>
-				Completely unaware of what's happening, you snuggle down into your pillow and let out a soft sigh. Being such a deep sleeper, you aren't even close to waking up, and remain totally oblivious to [npc.namePos] presence as [npc.she] quietly slips away.
+				你完全不知道发生了什么，依偎在枕头上，轻轻地发出轻柔的喘息。由于睡得很沉，你甚至还没有一点醒过来的迹象，当[npc.she]悄悄溜走时，你仍然完全没有意识到[npc.namePos]的存在。
 			</p>
 			<p>
-				...
+				……
 			</p>
 			<p>
-				Some time later, you naturally wake up, and after letting out a yawn and sleepily opening your eyes, you realise that something's not quite right. Your body still feels tired, and with the evidence of fresh sexual fluids on your sheets, you realise that someone must have fucked you in your sleep.
+				过了一段时间，你自然而然地醒了过来，打了个哈欠，睡眼惺忪地睁开眼睛后，你意识到有些不对劲。你的身体仍然感觉疲惫，床单上还有新鲜的爱液，你意识到一定有人在你睡觉时操了你。
 			</p>
 			<p>
-				Getting out of bed, you wonder whether to do something about your night-time visitor, or to instead simply let [npc.herHim] be...
+				下床后，你在想是要对夜袭者做些什么，还是干脆不管[npc.herHim]了？
 			</p>
 		#ELSE
 			<p>
-				Having their fun with you, [#SPECIAL_PARSE_1] gently shuffle back and slip off your bed. Letting out a very satisfied sigh, [npc.name] teases, [npc.speech(I knew [pc.she] wouldn't wake up...)]
+				[npc.name]和你玩得很开心，[#SPECIAL_PARSE_1]轻轻地往后退，从你的床上滑下来。发出一声非常满意的叹息，调侃道，[npc.speech(我就知道[pc.she]不会醒过来……)]
 			</p>
 			<p>
-				Completely unaware of what's happening, you snuggle down into your pillow and let out a soft sigh. Being such a deep sleeper, you aren't even close to waking up, and remain totally oblivious to [#SPECIAL_PARSE_1] presence as they quietly slip away.
+				你完全不知道发生了什么，依偎在枕头上，轻轻地喘息着。由于睡得很沉，你甚至完全没有醒过来的迹象，最后[#SPECIAL_PARSE_1]悄悄地溜走了也完全没有被你注意到。
 			</p>
 			<p>
-				...
+				……
 			</p>
 			<p>
-				Some time later, you naturally wake up, and after letting out a yawn and sleepily opening your eyes, you realise that something's not quite right. Your body still feels tired, and with the evidence of fresh sexual fluids on your sheets, you realise that you've been fucked while sleeping.
+				过了一段时间，你自然而然地醒了过来，打了个哈欠，睡眼惺忪地睁开眼睛后，你意识到有些不对劲。你的身体仍然感觉疲惫，床单上还有新鲜的爱液，你意识到自己在睡觉的时候被人操了。
 			</p>
 			<p>
-				Getting out of bed, you wonder whether to do something about your night-time visitors, or to instead simply let them be...
+				下床后，你不知道是该对夜袭者做些什么，还是说当什么都没发生……
 			</p>
 		#ENDIF
 	#ELSE
 		#IF([#SPECIAL_PARSE_0])
 			<p>
-				Having had [npc.her] fun with you, [npc.name] allows you to collapse back onto your bed. Letting out a very satisfied sigh, [npc.she] [npc.moans], [npc.speech(See, that was fun for both of us, wasn't it?)]
+				[npc.name]和你玩得很开心，[npc.her]让你躺回床上，并发出一声非常满足的叹息，[npc.speech(你看，这对我们俩来说都很有趣，不是吗？)]
 			</p>
 			<p>
-				Interpreting your heavy breathing as a positive sign, [npc.name] smiles and asks, [npc.speech(Weren't you meant to be waking up at this time anyway?)]
+				[npc.name]把你沉重的喘息理解为一个积极的信号，微笑着问道，[npc.speech(话说回来，你是不是应该在这个时候醒来了？)]
 			</p>
 			<p>
-				Realising that [npc.sheIs] right, you decide that you'd better get out of bed, and so, after a minute of lying back and catching your breath, you do just that. With a sigh and stretch of your [pc.arms], you allow [npc.name] to assist you as you gather your things, and with one final stretch, you get ready to set out once more...
+				你意识到[npc.sheIs]是对的，于是便决定最好还是下床，在躺下喘息了差不多一分钟后，你就下床了。你叹了口气，伸展了一下[pc.arms]，让[npc.name]帮你收拾东西，最后伸了个懒腰，准备再次出发……
 			</p>
 		#ELSE
 			<p>
-				Having had their fun with you, [#SPECIAL_PARSE_1] allow you to collapse back onto your bed. Letting out a very satisfied sigh, [npc.name] [npc.moans], [npc.speech(See, that was fun for all of us, wasn't it?)]
+				和你玩够了之后，[#SPECIAL_PARSE_1]让你倒在床上。[npc.name]发出一声非常满足的叹息， [npc.moans]道，[npc.speech(看，这对我们所有人来说都很有趣，不是吗？)]
 			</p>
 			<p>
-				Interpreting your heavy breathing as a positive sign, [npc2.name] smiles and asks, [npc2.speech(Weren't you meant to be waking up at this time anyway?)]
+				[npc2.name]把你沉重的喘息理解为一个积极的信号，微笑着问道，[npc2.speech(话说回来，你是不是应该在这个时候醒来了？)]
 			</p>
 			<p>
-				Realising that [npc2.sheIs] right, you decide that you'd better get out of bed, and so, after a minute of lying back and catching your breath, you do just that. With a sigh and stretch of your [pc.arms], you allow [#SPECIAL_PARSE_1] to assist you as you gather your things, and with one final stretch, you get ready to set out once more...
+				你意识到[npc2.sheIs]是对的，于是便决定最好还是下床，在躺下喘息了差不多一分钟后，你就下床了。你叹了口气，伸展了一下[pc.arms]，让[#SPECIAL_PARSE_1]帮你收拾东西，最后伸了个懒腰，准备再次出发……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REFUSE_SLAVE_SEX"><![CDATA[
 	#IF([#SPECIAL_PARSE_0])
 		<p>
-			You really aren't in the mood for having sex with [npc.name] right now, and so you put a swift end to [npc.her] plans by firmly telling [npc.herHim] to stop.
+			你现在真的没心情和[npc.Name]做爱，所以你言简意赅地让[npc.herHim]停下，迅速终止了[npc.her]的计划。
 		</p>
 		<p>
-			[npc.speech(Fine...)] [npc.she] reluctantly
+			[npc.speech(好吧……)][npc.she]不情愿地
 			#IF(npc.isFeminine())
-				 whines.
+				哀号道。
 			#ELSE
-				 grunts.
+				咕哝道。
 			#ENDIF
 		</p>
 		<p>
-			Not wanting to give your slave another opportunity to pounce on you, you quickly get out of bed. With a sigh and stretch of your [pc.arms], you allow [#SPECIAL_PARSE_1] to assist you as you gather your things, and with one final stretch, you get ready to set out once more...
+			你不想再让你的奴隶有机会扑向你，于是你迅速下了床。你叹了口气，伸展一下[pc.arms]，让[#SPECIAL_PARSE_1]帮你收拾东西，你最后再伸展了一下，准备再次出发……
 		</p>
 	#ELSE
 		<p>
-			You really aren't in the mood for having sex with [#SPECIAL_PARSE_1] right now, and so you put a swift end to their plans by firmly telling them to stop.
+			你现在真的没心情和[#SPECIAL_PARSE_0]做爱，所以你言简意赅地让它停下，迅速终止了这个计划。
 		</p>
 		<p>
-			[npc.speech(Fine...)] [npc.name] reluctantly
+			[npc.speech(好吧……)][npc.Name]不情愿地
 			#IF(npc.isFeminine())
-				 whines.
+				哀号道。
 			#ELSE
-				 grunts.
+				咕哝道。
 			#ENDIF
 		</p>
 		<p>
-			[npc2.speech(There's always next time...)] [npc2.name] says.
+			[npc2.speech(总会有下一次的……)][npc2.name]说道。
 		</p>
 		<p>
-			Not wanting to give your slaves another opportunity to pounce on you, you quickly get out of bed. With a sigh and stretch of your [pc.arms], you allow them to assist you as you gather your things, and with one final stretch, you get ready to set out once more...
+			你不想再让你的奴隶有机会扑向你，于是你迅速下了床。你叹了口气，伸展一下[pc.arms]，让它帮你收拾东西，你最后再伸展了一下，准备再次出发……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

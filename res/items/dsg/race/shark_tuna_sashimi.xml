@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the plate reads 'Packed by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[盘底刻着细小的字迹，写着“DSG食品有限公司包装”。]]></authorTag>
 		
 		<value>300</value> 
-		<determiner><![CDATA[a plate of]]></determiner>
-		<name><![CDATA[Tuna Sashimi]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Tuna Sashimi]]></namePlural>
-		<description><![CDATA[A plate of tuna-belly sashimi with wasabi and decorative greens, all underneath a glass cover. The label on the cover depicts a bikini-clad shark-girl with a fishing rod over her shoulder and a toothy grin on her face.]]></description> 
+		<determiner><![CDATA[一盘]]></determiner>
+		<name><![CDATA[金枪鱼刺身]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[金枪鱼刺身]]></namePlural>
+		<description><![CDATA[一盘金枪鱼腹刺身，搭配芥末和装饰性蔬菜，所有这些都在一个玻璃罩下。罩子上的标签描绘了一个穿比基尼的鲨鱼女，肩上背着钓鱼竿，脸上露出一个露齿的微笑。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -24,21 +24,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[shark]]></potionDescriptor>
+		<potionDescriptor><![CDATA[鲨鱼]]></potionDescriptor>
 		<associatedRace>dsg_shark</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
 		]]></applyEffects>
@@ -52,19 +52,19 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] the glass cover and [npc.verb(marvel)] at the exquisite marbling of the fatty tuna meat. Unable to resist the delicious looking seafood inside, [npc.she]
+		[npc.Name]移开玻璃罩，并对金枪鱼腹部肥美的大理石纹路赞叹不已。在无法抵挡内部美味的诱惑下，[npc.she]
 		#IF(npc.getFaceType()==FACE_TYPE_dsg_shark_face)
-			 [npc.verb(tip)] the plate towards [npc.her] cavernous shark mouth and ungracefully dumps the contents inside, swallowing it all without much difficulty... or chewing.
+			将盘子倾斜到[npc.her]的巨大鲨鱼嘴巴前，不太优雅地将里面的食物倾倒进去，毫不费力地将所有食物都吞咽下去……甚至不需要咀嚼。
 		#ELSE
-			 [npc.verb(savor)] every wasabi-tinged bite, and in a matter of moments [npc.has] completely emptied the plate.
+			品尝每一口有芥末味的食物，很快就[npc.has]把盘子里的东西全部吃光了。
 		#ENDIF
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] glass cover from the plate and [npc.verb(hold)] it out to [npc2.name], allowing [npc2.herHim] to marvel at the exquisite marbling of the fatty tuna meat. Unable to resist the delicious-looking seafood inside, [npc2.she]
+		[npc.Name]取下盘子上的玻璃盖，将盘子拿给[npc2.name]，让[npc2.herHim]欣赏那块油脂丰富的金枪鱼肉的华丽纹理。无法抵挡盘子里美味的海鲜内容，[npc2.she]很快就开始享用了，[npc2.she]
 		#IF(npc.getFaceType()==FACE_TYPE_dsg_shark_face)
-			 [npc2.verb(tip)] the plate towards [npc2.her] cavernous shark mouth and ungracefully dumps the contents inside, swallowing it all without much difficulty... or chewing.
+			将盘子倾斜朝向[npc2.her]深不可测的鲨鱼嘴里，粗鲁地将里面的食物倒了进去，完全不费吹灰之力地吞咽下去……几乎没有咀嚼。
 		#ELSE
-			 [npc2.verb(savor)] every wasabi-tinged bite, and in a matter of moments [npc2.has] completely emptied the plate.
+			品尝每一口富含芥末味的食物，只用了片刻，[npc2.has]把盘子里的食物全部都吃光了。
 		#ENDIF
 		]]></otherUse>
 	</useDescriptions>

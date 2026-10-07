@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -36,17 +36,17 @@
 	<areasCummedIn/>
 	<areasCummedOn/>
 	<title><![CDATA[
-		[style.colourFetish(Butt slut)]
+		[style.colourFetish(屁穴荡妇)]
 	]]></title>
 	<tooltip><![CDATA[
 		#IF(sex.getOngoingCharactersUsingAreas(meraxis, ORIFICE_ANUS, PENETRATION_TONGUE).contains(pc))
-			Make Meraxis admit to you that she's a dirty buttslut as you make her cum from anilingus.
+			让梅拉克西丝向你承认她是个下流的屁穴荡妇，同时让她从吻肛中达到高潮。
 		#ELSEIF(sex.getOngoingCharactersUsingAreas(meraxis, ORIFICE_ANUS, PENETRATION_PENIS).contains(pc))
-			Make Meraxis admit to you that she's a dirty buttslut as you make her cum from anal.
+			让梅拉克西丝向你承认她是个下流的屁穴荡妇，同时让她从肛交中达到高潮。
 		#ELSE
-			Make Meraxis admit to you that she's a dirty buttslut as you make her cum from being hotdogged.
+			让梅拉克西丝向你承认她是个下流的屁穴荡妇，同时让她从插臀中达到高潮。
 		#ENDIF
-		<br/>[style.italicsSex(Meraxis will gain the '[#FETISH_ANAL_RECEIVING.getName(meraxis)]' fetish from this!)]
+		<br/>[style.italicsSex(梅拉克西丝因此会获得“[#FETISH_ANAL_RECEIVING.getName(meraxis)]”性癖！)]
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -54,47 +54,47 @@
 				[#sex.getOngoingCharactersUsingAreas(meraxis, ORIFICE_ANUS, PENETRATION_TONGUE).contains(pc)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Sensing that Meraxis is on the verge of orgasming, you pull back and stop licking her asshole to tease, [pc.speech(You want to cum from this?)]
+				你感到梅拉克西丝已经濒临高潮了，于是停止舔她的肛门，调戏着她，[pc.speech(你想被这个弄到高潮吗？)]
 				<br/><br/>
-				Driven to the point of climax, and then suddenly having you stop giving her anilingus, Meraxis desperately tries to push her ass back against your face as she squeals, [meraxis.speechNoEffects(Yes! ~Aah!~ Why did you stop?! Come on, I'm so close! ~Mmm!~ Give it to me!)]
+				在快感积累直至到达顶峰前，你的舌头突然停了下来，这让梅拉克西丝几近疯狂，她一边尖叫，一边用她的屁股拼命摩擦你的脸，[meraxis.speechNoEffects(啊哈~为什么~为什么突然停下了？！快来，我，我就要去了！嗯姆~快，快给我！)]
 				<br/><br/>
-				Realising that you have the opportunity to permanently impact Meraxis's attitude towards receiving anal, you lean forwards and plant a big, wet kiss on her [meraxis.asshole+]. Smirking at the desperate moan she lets out in response to your touch, you make your demand, [pc.speech(Tell me that you're a dirty little buttslut, and I'll let you cum.)]
+				你意识到此时正是绝佳的机会，可以永久性地改变梅拉克西丝对接受肛交的态度，于是上去给了她[meraxis.asshole+]一个湿吻。看着她因你的寸止调戏而发出了急切的呻吟，你冷笑着提出了你的要求，[pc.speech(告诉我，你是一个淫秽的屁穴荡妇，不然，我不会让你高潮的。)]
 				<br/><br/>
-				[meraxis.speechNoEffects(What?! I... You're so perverted, [pc.name]...)] she whines, but as you lean in and give her asshole another lick, she relents and cries out, [meraxis.speechNoEffects(Fine! I... I'm a dirty little buttslut! Now let me cum!)]
+				[meraxis.speechNoEffects(什，什么？！我……你，你太变态啦，[pc.name]……)]她抱怨着，不过当你上去舔了舔她的肛门之后，她再也忍不住了。梅拉克西丝将她的自尊心抛在脑后，屈服于你的吻肛，高声喊道， [meraxis.speechNoEffects(好啦！我！我说就是……我，我是，我是屁穴荡妇！我是不知廉耻的屁穴荡妇，让，让我高潮吧！)]
 				<br/><br/>
-				Burying your face in her ass, you continue where you left off, and greedily lick, kiss, and nuzzle into Meraxis's asshole. Letting out a series of increasingly-louder squeals, the [meraxis.race] screams, [meraxis.speechNoEffects(~Aah!~ I'm cumming!)]
-			]]></text>
+				你再次将脸埋进梅拉克西丝的柔软臀部之中，继续舔舐起她的肛门，身下的[meraxis.race]发出了越来越高亢的娇喘声，她尖叫道，[meraxis.speechNoEffects(~啊！我要去了！)]
+]]></text>
 		</description>
 		<description>
 			<descriptionConditional><![CDATA[
 				[#sex.getOngoingCharactersUsingAreas(meraxis, ORIFICE_ANUS, PENETRATION_PENIS).contains(pc)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Sensing that Meraxis is on the verge of orgasming, you slide your [pc.cock+] out of her ass, before rubbing the [pc.cockHead+] over her asshole and teasing, [pc.speech(You want to cum from this?)]
+				你感到梅拉克西丝已经濒临高潮了，于是将你[pc.cock+]停在她的屁股里，调戏着她，[pc.speech(你想被这个弄到高潮吗？)]
 				<br/><br/>
-				Driven to the point of climax, and then suddenly having you stop fucking her ass, Meraxis desperately tries to push her asshole back against your cock as she squeals, [meraxis.speechNoEffects(Yes! ~Aah!~ Why did you stop?! Come on, I'm so close! ~Mmm!~ Give it to me!)]
+				在快感积累直至到达顶峰前，你的鸡巴突然停了下来，这让梅拉克西丝几近疯狂，她一边尖叫，一边用她的屁股拼命向后顶你的鸡巴，[meraxis.speechNoEffects(啊哈~为什么~为什么突然停下了？！快来，我，我就要去了！嗯姆~快，快给我！)]
 				<br/><br/>
-				Realising that you have the opportunity to permanently impact Meraxis's attitude towards receiving anal, you push forwards and slide just the tip of your [pc.cock+] into her [meraxis.asshole+]. Smirking at the desperate moan she lets out in response to your limited penetration, you make your demand, [pc.speech(Tell me that you're a dirty little buttslut, and I'll let you cum.)]
+				你意识到此时正是绝佳的机会，可以永久性地改变梅拉克西丝对接受肛交的态度，于是向前一推，她迎合着你，而你却狡猾地将[pc.cock+]的顶端滑过她[meraxis.asshole+] 。看着她因你的寸止调戏而发出了急切的呻吟，你冷笑着提出了你的要求，[pc.speech(告诉我，你是一个淫秽的屁穴荡妇，不然，我不会让你高潮的。)]
 				<br/><br/>
-				[meraxis.speechNoEffects(What?! I... You're so perverted, [pc.name]...)] she whines, but as you pull back and start to slide your cock out of her ass, she relents and desperately cries out, [meraxis.speechNoEffects(Fine! I... I'm a dirty little buttslut! Now let me cum!)]
+				[meraxis.speechNoEffects(什，什么？！我……你，你太变态啦，[pc.name]……)]她抱怨着，不过当你把肉棒拿开，用肉棒抽了两下她的屁股之后，她再也忍不住了。梅拉克西丝将她的自尊心抛在脑后，屈服于你的肉棒，高声喊道， [meraxis.speechNoEffects(好啦！我！我说就是……我，我是，我是屁穴荡妇！我是不知廉耻的屁穴荡妇，让，让我用你的肉棒高潮吧！)]
 				<br/><br/>
-				Pushing forwards and driving your [pc.cock+] back into her ass, you continue where you left off, and dominantly pump your [pc.cock+] in and out of Meraxis's asshole. Letting out a series of increasingly-louder squeals, the [meraxis.race] screams, [meraxis.speechNoEffects(~Aah!~ I'm cumming!)]
-			]]></text>
+				你向前一顶，让你[pc.cock+]没入她的屁股蛋中间，准备好从刚才中断的地方继续。你略一用力，让你[pc.cock+]重新回到了梅拉克西丝饥渴的屁穴之中，身下的[meraxis.race]发出了越来越高亢的娇喘声，她尖叫道，[meraxis.speechNoEffects(~啊！我要去了！)]
+]]></text>
 		</description>
 		<description>
 			<descriptionConditional><![CDATA[
 				[#sex.getOngoingCharactersUsingAreas(meraxis, ORIFICE_ASS, PENETRATION_PENIS).contains(pc)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Sensing that Meraxis is on the verge of orgasming, you stop sliding your [pc.cock+] over her ass, before teasing, [pc.speech(You want to cum from this?)]
+				你感到梅拉克西丝已经濒临高潮了，于是将你[pc.cock+]停在她的屁股里，调戏着她，[pc.speech(你想被这个弄到高潮吗？)]
 				<br/><br/>
-				Driven to the point of climax, and then suddenly having you stop hotdogging her ass, Meraxis desperately tries to push back against your cock as she squeals, [meraxis.speechNoEffects(Yes! ~Aah!~ Why did you stop?! Come on, I'm so close! ~Mmm!~ Give it to me!)]
+				在快感积累直至到达顶峰前，你的鸡巴突然停了下来，这让梅拉克西丝几近疯狂，她一边尖叫，一边用她的屁股拼命向后顶你的鸡巴，[meraxis.speechNoEffects(啊哈~为什么~为什么突然停下了？！快来，我，我就要去了！嗯姆~快，快给我！)]
 				<br/><br/>
-				Realising that you have the opportunity to permanently impact Meraxis's attitude towards receiving anal, you push forwards and slide just the tip of your [pc.cock+] over her [meraxis.ass+]. Smirking at the desperate moan she lets out in response to your touch, you make your demand, [pc.speech(Tell me that you're a dirty little buttslut, and I'll let you cum.)]
+				你意识到此时正是绝佳的机会，可以永久性地改变梅拉克西丝对接受肛交的态度，于是向前一推，她迎合着你，而你却狡猾地将[pc.cock+]的顶端滑过她的[meraxis.ass+] 。看着她因你的寸止调戏而发出了急切的呻吟，你冷笑着提出了你的要求，[pc.speech(告诉我，你是一个淫秽的屁穴荡妇，不然，我不会让你高潮的。)]
 				<br/><br/>
-				[meraxis.speechNoEffects(What?! I... You're so perverted, [pc.name]...)] she whines, but as you pull back and slap your hard cock against her ass a couple of times, she relents and desperately cries out, [meraxis.speechNoEffects(Fine! I... I'm a dirty little buttslut! Now let me cum!)]
+				[meraxis.speechNoEffects(什，什么？！我……你，你太变态啦，[pc.name]……)]她抱怨着，不过当你把肉棒拿开，用肉棒抽了两下她的屁股之后，她再也忍不住了。梅拉克西丝将她的自尊心抛在脑后，屈服于你的肉棒，高声喊道， [meraxis.speechNoEffects(好啦！我！我说就是……我，我是，我是屁穴荡妇！我是不知廉耻的屁穴荡妇，让，让我用你的肉棒高潮吧！)]
 				<br/><br/>
-				Pushing forwards and driving your [pc.cock+] up between her ass cheeks, you continue where you left off, and dominantly slide your [pc.cock+] back and forth over Meraxis's asshole. Letting out a series of increasingly-louder squeals, the [meraxis.race] screams, [meraxis.speechNoEffects(~Aah!~ I'm cumming!)]
+				你向前一顶，让你[pc.cock+]没入她的屁股蛋中间，准备好从刚才中断的地方继续。你略一用力，让你[pc.cock+]重新回到了梅拉克西丝饥渴的屁股之间，身下的[meraxis.race]发出了越来越高亢的娇喘声，她尖叫道，[meraxis.speechNoEffects(~啊！我要去了！)]
 			]]></text>
 		</description>
 	</descriptions>

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
-		<authorTag><![CDATA[On the filler cap, slightly raised lettering reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在填充口的盖子上，有几个微微凸起的字："执法者官方分配，由DSG锻造厂生产。"]]></authorTag>
 	
 		<value>7500</value> 
 		
@@ -10,27 +10,25 @@
 		
 		<twoHanded>true</twoHanded>
 		
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name><![CDATA[arcane liquid stun gun]]></name>
+		<name><![CDATA[奥术流体电击枪]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[arcane liquid stun guns]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[奥术流体电击枪]]></namePlural> 
 		
-		<description><![CDATA[
-		The final word in riot control, this weapon uses a water spell to propel a stream of water to conduct arcane lightning at any target its sights. You guess that it could be filled with <i>any</i> liquid if suitably modified.
-		]]></description> 
+		<description><![CDATA[这是镇暴的终极武器，它使用水系法术将水流射向目标，并在瞄准的任何目标上释放奥术闪电。你寻思，如果适当修改，它可能可以装满<i>任何</i>液体。]]></description> 
 		
-		<attackDescriptor>Shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your stun gun.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用电击枪射击[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity> 
 		
 		<equipText><![CDATA[
-		[npc.Name] [npc.verb(bring)] out the stun gun and pull the sling over [npc.her] shoulder. The arcane-enhanced water sloshes around inside as the built-in tank magically fills itself.
+		[npc.Name]拿出电击枪，将吊带挎在肩上。内置的水罐自动灌满了水，经过奥术强化的水在其中荡来荡去。
 		]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] the stun gun away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将电击枪收起。]]></unequipText>
 		
 		<imageName>liqstungun_holstered.svg</imageName> 
 		
@@ -56,14 +54,14 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.boldLust("Lustful Distraction")] on critical hit.]]></effect>
+			<effect><![CDATA[暴击附带[style.boldLust(“情迷欲乱”)]效果。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect/>
 		
 		<onCriticalHitEffect><![CDATA[
 		#IF !npc2.hasStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION)
-		#THEN [##npc2.addStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION, 6)] [npc2.Name] [npc2.is] [style.boldLust(feeling the lingering effects of the arcane lightning.)]
+		#THEN [##npc2.addStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION, 6)][npc2.Name][style.boldLust(感受到了奥术闪电的余响。)]
 		#ENDIF
 		]]></onCriticalHitEffect>
 		
@@ -89,13 +87,13 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Aiming [npc.her] stun gun at [npc2.name], [npc.she] [npc.verb(pull)] the trigger. A jet of water streams towards [npc2.name], followed by a crackling bolt of arcane lightning. [npc2.Name] barely has time to stare with a look of disbelief on [npc2.her] face before succumbing to the effects of the lightning! [npc2.Name] [npc2.verb(shiver)] a bit as the water soaks [npc2.her] [npc2.skinSkin].
+		[npc.she]将电击枪对准[npc2.name]，按动了扳机。一道水流直冲[npc2.name]而去，随后便是一道劈啪作响的奥术闪电。[npc2.Name]只能露出难以置信的神情，眼睁睁看着自己被奥术闪电击中！[npc2.Name]的[npc2.skinSkin]被冷水打湿，身子微微一抖。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Aiming [npc.her] stun gun at [npc2.name], [npc.she] [npc.verb(pull)] the trigger. A jet of water streams towards [npc2.name], but it goes wide! The water splashes and sparks into a useless puddle on the ground.
+		[npc.she]将电击枪对准[npc2.name]，按动了扳机。一道水流直冲[npc2.name]而去，但最后偏向了一边！只在地面上留下了一滩无用的水洼。
 		]]></missText>
 	</missDescriptions>
 	

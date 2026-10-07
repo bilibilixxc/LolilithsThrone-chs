@@ -74,8 +74,8 @@ public class Dale extends NPC {
 	}
 	
 	public Dale(boolean isImported) {
-		super(isImported, new NameTriplet("Dale"), "Lane",
-				"Dale is the receptionist at Evelyx's Dairy.",
+		super(isImported, new NameTriplet("戴尔"), "雷恩",
+				"戴尔是艾弗利克斯乳业的接待员。",
 				28, Month.JANUARY, 2,
 				15,
 				Gender.M_P_MALE, Subspecies.HORSE_MORPH_DONKEY, RaceStage.GREATER,
@@ -345,81 +345,81 @@ public class Dale extends NPC {
 			if(Main.game.getPlayer().hasHymen()) {
 				sb.append("<p>");
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
-						sb.append("As [npc.name] slowly pushes [npc.her] [npc.cock+] into your [pc.pussy+], you can't help but let out a desperate, shuddering wail."
-									+ " Being so enamoured with the idea of being a pure virgin, you don't know what on Earth possessed you to offer him your virginity in a place like this,"
-										+ " but as [npc.namePos] [npc.cock+] claims your precious virginity, you don't have any time to reflect on your choice."
-									+ " The only thing that's on your mind is the agonising pain of having your hymen torn by the [npc.cockGirth] donkey-dick that's been pushed into your now-despoiled cunt.");
+						sb.append("当[npc.Name]缓缓将[npc.her]的[npc.cock+]顶入你[pc.pussy+]时，你不由自主地发出一声绝望，颤抖的哀号。"
+									+ "你如此迷恋成为一个贞洁处女的想法，你不知道到底是什么东西在这样的地方拿走了你的童贞，"
+										+ "[npc.namePos][npc.cock+]夺走了你宝贵的童贞，你没时间反思自己的选择。"
+									+ "你的脑海中只剩下[npc.cockGirth]驴一样大的屌撕裂你的处女膜，攻占你的阴户时带来的痛苦。");
 					} else if(Main.game.getPlayer().hasFetish(Fetish.FETISH_MASOCHIST)) {
-						sb.append("As [npc.name] slowly pushes [npc.her] [npc.cock+] into your [pc.pussy+] to tear your hymen and claim your virginity, you can't help but let out a lewd, masochistic scream."
-								+ " The agonising pain of having your hymen torn by [npc.namePos] [npc.cockGirth] donkey-dick completely overwhelms you, and you can't help but squeal and moan in a delightful haze of overwhelming ecstasy.");
+						sb.append("[npc.name]缓缓将[npc.cock+]顶入你[pc.pussy+]，撕裂处女膜并夺取你的童贞，你不由自主地发出一声受虐狂般的淫叫。"
+								+ "[npc.namePos]的[npc.cockGirth]驴一般大的屌撕裂你处女膜时的剧痛彻底压垮了你，你不由自主地在狂喜之中尖叫呻吟着。");
 					} else {
-						sb.append("As [npc.name] slowly pushes [npc.her] [npc.cock+] into your [pc.pussy+] to claim your virginity, you can't help but let out a desperate, shuddering wail."
-								+ " The agonising pain of having your hymen torn by [npc.namePos] [npc.cockGirth] donkey-dick completely overwhelms you, and you squirm about in discomfort as you try to endure this painful experience.");
+						sb.append("[npc.Name]缓缓将[npc.cock+]顶入你[pc.pussy+]，夺取你的童贞，你不由自主地发出一声狂乱，颤抖的哀号。" 
+								+ "[npc.namePos][npc.cockGirth]的驴屌将你的处女膜撕裂，那股剧痛彻底压垮了你，你难受地扭动着，试图忍过这种痛苦。"); 
 					}
 				sb.append("</p>");
 				
 			} else {
 				sb.append("<p>");
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
-						sb.append("As [npc.name] slowly pushes [npc.her] [npc.cock+] into your [pc.pussy+], you can't help but let out a desperate, shuddering wail."
-								+ " Being so enamoured with the idea of being a pure virgin, you don't know what on Earth possessed you to agree to this,"
-									+ " but as [npc.namePos] [npc.cock+] claims your precious virginity, you don't have any time to reflect on your choice."
-								+ " The only thing that's on your mind is the fact that you've being broken in by the [npc.cockGirth] donkey-dick that's been pushed into your now-despoiled cunt.");
+						sb.append("[npc.Name]缓缓将[npc.her][npc.cock+]顶入你[pc.pussy+]，你不由自主地发出一声狂乱，颤抖的哀号。"
+								+ "你如此迷恋成为一个贞洁处女的想法，不知道到底是什么东西占据了你的思维，让你同意这样做，"
+									+ "[npc.namePos][npc.cock+]夺走了你宝贵的童贞，你没时间反思自己的选择。"
+								+ "你脑海中唯一剩下的只有你被[npc.cockGirth]的驴屌破处，小穴被糟蹋的事实。");
 					} else {
-						sb.append("As [npc.namePos] [npc.cock+] is slowly pushed into your [pc.pussy+] to claim your virginity, you can't help but let out a desperately lewd [pc.moan]."
-								+ " [npc.NamePos] [npc.cockGirth] donkey-dick is giving you an intense pleasure unlike any you've felt before, and you can't help but continue to scream and [pc.moan] in a delightful haze of overwhelming ecstasy.");
+						sb.append("[npc.Name]缓缓将[npc.her][npc.cock+]顶入你[pc.pussy+]，夺取你的童贞，你不由自主地发出一声狂乱而淫荡的[pc.moan]。"
+								+ "[npc.namePos]的[npc.cockGirth]驴一般大的屌给予你一种前所未有的强烈快感，你不由自主地在狂喜之中不停尖叫和[pc.moan]。");
 					}
 				sb.append("</p>");
 			}
 			
 			sb.append("<p>"
-						+ "Upon hearing your ear-splitting wail, [npc.name] instantly stops thrusting forwards, and in a worried tone [npc.she] asks,"
-						+ " [npc.speechNoExtraEffects(Are you ok, [pc.name]? We can stop if this is too much for you...)]"
+						+ "[npc.name]听到你震耳欲聋的哀号，立刻停止前顶，担忧地问，"
+						+ "[npc.speechNoExtraEffects(你还好吗，[pc.name]？如果你承受不住，我们就先停一停……)]"
 					+ "</p>");
 			
 			sb.append("<p>");
 				if(Main.game.getPlayer().hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
-					sb.append("Although you can't help but shed a tear as you realise that you've lost your precious, pure virginity, you're comforted by the fact that [npc.name] seems to be genuinely concerned about you.");
+					sb.append("尽管你在意识到你失去了自己宝贵，纯洁的贞操时不禁潸然落泪，[npc.name]似乎真的很关心却让你感到很欣慰。");
 				} else {
-					sb.append("Although you can't help but wince as a pang of pain shoots up from your cock-filled pussy, you're comforted by the fact that [npc.name] seems to be genuinely concerned about you.");
+					sb.append("尽管从你那被肉棒塞满的小穴升起的痛感让你萌生退意， [npc.name]似乎真诚的关心却让你感到很欣慰。");
 				}
-				sb.append(" After taking a moment to catch your breath, you realise that there's no going back from this, and so you pant, [pc.speechNoExtraEffects(I'm fine... You can keep going...)]");
+				sb.append(" 在休息一会，调整好呼吸之后，你明白此刻木已成舟，所以你喘息着说，[pc.speechNoExtraEffects(我没事……你可以继续了……)]");
 			sb.append("</p>");
 			
 			sb.append("<p>"
-						+ "[npc.speechNoExtraEffects(Ok, I'll take it real slow,)] [npc.name] responds, and you try to suppress your whimpers as [npc.she] resumes where [npc.she] left off and slowly pushes [npc.her] huge donkey-cock into your cunt."
-						+ " As [npc.she] fills your freshly popped cherry with [npc.her] throbbing shaft, [npc.name] reassures you with a soft grunt,"
-						+ " [npc.speechNoExtraEffects(You're doing really well for your first time... You'll get into the swing of it in a moment...)]"
+						+ "[npc.speechNoExtraEffects(好吧，我会慢慢来，)][npc.name]回答，[npc.she]从上次中断的地方继续，缓缓将[npc.her]硕大的驴屌顶入你的小穴时，你尽力忍住了呜咽。"
+						+ "[npc.Name]用搏动的肉棒塞满你刚破处的小穴，又用柔和的咕哝宽慰着你，"
+						+ "[npc.speechNoExtraEffects(你的第一次已经表现得很不错了……用不了多久你就会适应……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Sure enough, after [npc.nameHas] pulled [npc.her] cock back out of your pussy, the pain starts to fade away,"
-							+ " and you find yourself letting out a lewd moan as you concentrate on the feeling of [npc.her] flat, flared head pushing its way into your broken-in pussy as [npc.she] gently thrusts forwards once again..."
+						+ "理所当然地，[npc.her]把肉棒拔出你的小穴，疼痛就开始褪去，"
+							+ "你专注于[npc.her]扁平，外展的柱头一路顶入被撕裂的小穴，[npc.she]又一次开始打桩的感觉，你发出一声淫荡的呻吟……"
 					+ "</p>");
 			
 		} else if(penetrated == SexAreaOrifice.ANUS) {
 			sb.append("<p>");
-				sb.append("As [npc.name] slowly pushes [npc.her] [npc.cock+] into your [pc.asshole+] to claim your virginity, you can't help but let out a desperate, shuddering wail."
-						+ " The uncomfortable sensation of having [npc.namePos] [npc.cockGirth] donkey-dick slowly forcing its way inside of you causes you to squirm about in discomfort.");
+				sb.append("[npc.Name]缓缓将[npc.cock+]顶入你[pc.asshole+]，夺取你的童贞，你不由自主地发出一声绝望，颤抖的哀号。"
+						+ "[npc.namePos][npc.cockGirth]的驴屌在你的身体内缓缓打开通道的不适感使你不舒服地扭动身体。");
 			sb.append("</p>");
 			
 			sb.append("<p>"
-						+ "Upon hearing your distressed cry, [npc.name] instantly stops thrusting forwards, and in a worried tone [npc.she] asks,"
-						+ " [npc.speechNoExtraEffects(Are you ok, [pc.name]? We can stop if this is too much for you...)]"
+						+ "[npc.name]听见你的痛叫，马上停下了前顶的动作，用担忧的语气问道，"
+						+ "[npc.speechNoExtraEffects(你还好吗，[pc.name]？如果你承受不住，我们就先停一停……)]"
 					+ "</p>");
 			
 			sb.append("<p>");
-				sb.append("Although you can't help but wince as a pang of pain shoots up from your cock-filled ass, you're comforted by the fact that [npc.name] seems to be genuinely concerned about you.");
-				sb.append(" After taking a moment to catch your breath, you realise that there's no going back from this, and so you pant, [pc.speechNoExtraEffects(I'm fine... You can keep going...)]");
+				sb.append("尽管从你那被肉棒塞满的屁穴升起的痛感让你萌生退意， [npc.name]似乎真诚的关心却让你感到很欣慰。");
+				sb.append(" 在休息一会，调整好呼吸之后，你明白此刻木已成舟，所以你喘息着说，[pc.speechNoExtraEffects(我没事……你可以继续了……)]");
 			sb.append("</p>");
 			
 			sb.append("<p>"
-						+ "[npc.speechNoExtraEffects(Ok, I'll take it real slow,)] [npc.name] responds, and you try to suppress your whimpers as [npc.she] resumes where [npc.she] left off and slowly pushes [npc.her] huge donkey-cock into your back door."
-						+ " As [npc.she] fills your ass with [npc.her] throbbing shaft, [npc.name] reassures you with a soft grunt,"
-						+ " [npc.speechNoExtraEffects(You're doing really well for your first time... You'll get into the swing of it in a moment...)]"
+						+ "[npc.speechNoExtraEffects(好吧，我会慢慢来，)][npc.name]回答，[npc.she]从上次中断的地方继续，缓缓将[npc.her]硕大的驴屌顶入你的后门时，你尽力忍住了呜咽。"
+						+ "[npc.name]用搏动的肉棒塞满你的屁穴，又用柔和的咕哝宽慰着你，"
+						+ "[npc.speechNoExtraEffects(你的第一次已经表现得很不错了……用不了多久你就会适应……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Sure enough, after [npc.nameHas] pulled [npc.her] cock back out of your asshole, the pain starts to fade away,"
-							+ " and you find yourself letting out a lewd moan as you concentrate on the feeling of [npc.her] flat, flared head pushing its way into your broken-in butt as [npc.she] gently thrusts forwards once again..."
+						+ "理所当然地，[npc.her]把肉棒拔出你的屁穴，疼痛就开始褪去，"
+							+ "你专注于[npc.her]扁平，外展的柱头一路顶入你已遭攻入的屁穴。[npc.she]又一次开始打桩，你发出一声淫荡的呻吟……"
 					+ "</p>");
 		}
 		
@@ -429,32 +429,32 @@ public class Dale extends NPC {
 	@Override
 	public String getSpecialPlayerPureVirginityLoss(GameCharacter penetratingCharacter, SexAreaPenetration penetrating) {
 		return "<p style='text-align:center;'>"
-					+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>Broken Virgin</b>"
+					+ "<b style='color:"+PresetColour.GENERIC_TERRIBLE.toWebHexString()+";'>失格处女</b>"
 				+ "</p>"
 				+ "<p>"
-					+ "As [npc.name] once again begins to stuff your cunt with [npc.her] hot donkey-cock, the sudden realisation of what's just happened hits you like a sledgehammer."
+					+ "正当[npc.name]再度开始用[npc.her]灼热的驴屌捅插你的小穴时，突然意识到正在发生的现实一切如同重锤一般砸在你身上。"
 				+ "</p>"
 				+ "<p style='text-align:center;'>"
-					+"[pc.thought(I-I've lost my virginity?!"
-					+ "<br/>Like... Like <b>this</b>?!)]"
+					+ "[pc.thought(我，我就这样失贞了？！"
+					+ "<br/>就……就像<b>这样</b>？！)]"
 				+ "</p>"
 				+ "<p>"
-					+ "You don't know what's worse, losing the virginity that you prized so highly, or the fact that you're actually enjoying it."
-					+ " As your [pc.labia+] spread lewdly around the hot, thick [npc.cock] slowly sliding in and out of you, you start convincing yourself that this is all you're good for."
+					+ "你不知道哪个更糟糕；是失去了这样看重的第一次，还是自己反而乐在其中。"
+					+ "你[pc.labia+]淫靡地包裹着那又热又粗，缓缓抽插着你的[npc.cock]，你开始劝说自己，这是你唯一的长处。"
 				+ "</p>"
 				+ "<p style='text-align:center;'>"
-					+ "[pc.thought(If I'm not a virgin, that makes me a slut..."
-					+ "<br/>Just a slut to be fucked and pumped full of cum..."
-					+ "<br/>I wonder if all cocks are as good as [npc.namePos]...)]"
+					+ "[pc.thought(如果我不再是处女，那我就是个骚货了……"
+					+ "<br/>只是个活该被操，被注满精液的婊子罢了……"
+					+ "<br/>我好奇是不是所有的鸡巴都像[npc.namePos]的那么给力……)]"
 				+ "</p>"
 				+ "<p>"
-					+ "You're vaguely aware of [npc.namePos] reassuring comments fading away as [npc.she] starts to focus [npc.her] attention on fucking you."
-					+ " With a desperate moan,"
+					+ "你隐约感觉到[npc.namePos]似乎不再说让你安心的话，而是将[npc.she]的精神逐渐集中到了操你上面。"
+					+ "随着一声渴求的呻吟，"
 					+ (Main.game.getPlayer().hasLegs()
-						?" you spread your legs and"
-						:" you")
-					+ " resign yourself to the fact that you're now nothing more than a"
-					+ " <b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>broken virgin</b>..."
+						?"你张开双腿并"
+						:"你")
+					+ "只能接受现实，听之任之。现在的你什么都不是，只是个"
+					+ "<b style='color:"+StatusEffect.FETISH_BROKEN_VIRGIN.getColour().toWebHexString()+";'>失格处女</b>……"
 				+ "</p>";
 	}
 }

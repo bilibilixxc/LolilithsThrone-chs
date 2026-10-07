@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>10000</value>
-		<determiner><![CDATA[the]]></determiner>
-		<name><![CDATA[Slime Queen's Tiara]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Slime Queen's Tiaras]]></namePlural>
-		<description><![CDATA[Worn by the Slime Queen, this tiara consists of a thin band of metal, studded with precious gemstones.]]></description>
+		<determiner><![CDATA[ ]]></determiner>
+		<name><![CDATA[史莱姆女王的冕冠]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[史莱姆女王的冕冠]]></namePlural>
+		<description><![CDATA[由史莱姆女王佩戴，这座冕冠由一条薄金属带组成，镶有宝贵的宝石。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>HEAD</slot>
@@ -53,27 +52,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the tiara onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the tiara onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the tiara onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将冕冠戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将冕冠戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将冕冠戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] tiara.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] tiara.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] tiara.]]>
-    </otherRough>
+    <self><![CDATA[
+			[npc.Name]摘下[npc.her]的冕冠。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的冕冠摘下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的冕冠。
+]]></otherRough>
   </displacementText>
   
 </clothing>

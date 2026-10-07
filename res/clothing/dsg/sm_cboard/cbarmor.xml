@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA["MFD by DSG Stationery Co. from 99% post-consumer material" is printed on the back.]]></authorTag>
+		<authorTag><![CDATA[背后印着“DSG文具公司生产，99%可回收材料”。]]></authorTag>
 
 		<value>150</value> 
 
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[cardboard cuirass]]></name>
+		<name><![CDATA[硬纸板胸甲]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[cardboard cuirasses]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[硬纸板胸甲]]></namePlural> 
 
-		<description><![CDATA[An extended cuirass made from cardboardium alloy with ailettes added for additional protection. Light and relatively nimble thanks to its partial articulation, its actual protective qualities leave something to be desired.]]></description>
+		<description><![CDATA[一种由复合硬纸板制成的加长胸甲，添加了护肩以提供额外的保护。由于其部分铰接，重量轻且相对灵活，但其实际保护性能有待改进。]]></description>
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -101,51 +100,51 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] head between the cardboard plates and [npc.verb(let)] the armour sit on [npc.her] shoulders.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] between the cardboard plates and [npc.verb(let)] the armour sit on [npc2.her] shoulders.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(shove)] [npc2.namePos] between the cardboard plates and [npc.verb(secure)] the armour sit on [npc2.her] shoulders.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的头套在纸板之间，并让纸板胸甲搭在[npc.her]的肩膀上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将纸板在[npc2.namePos]身上调整，让盔甲搭在[npc2.her]的肩膀上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]推进硬纸板中间，并将纸板胸甲固定在[npc2.her]的肩上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(lift)] the armour from [npc.her] shoulders.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(lift)] the armour from [npc2.namePos] shoulders.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(toss)] the armour from [npc2.namePos] shoulders.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]从[npc.her]的肩上取下纸板胸甲。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将纸板胸甲从[npc2.namePos]的肩膀上移走。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的胸甲从肩膀上扔到了一边。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_DOWN">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the lower section of [npc.her] cardboard cuirass back down.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the lower section of [npc.her] cardboard cuirass back down.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(flip)] the lower section of [npc.her] cardboard cuirass back down.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]硬纸板胸甲的护裆拉低。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc.her]硬纸板胸甲的护裆拉低。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc.her]的硬纸板胸甲的翻了起来。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(lift)] the lower section of [npc.her] cardboard cuirass back down.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(lift)] the lower section of [npc2.namePos] cardboard cuirass back down.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(flip)] the lower section of [npc2.namePos] cardboard cuirass back down.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]硬纸板胸甲的下半部分提起。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]纸板胸甲的下部向下拉。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的硬纸板胸甲的翻了起来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

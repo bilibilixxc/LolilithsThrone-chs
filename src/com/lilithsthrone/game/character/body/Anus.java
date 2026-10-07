@@ -76,20 +76,20 @@ public class Anus implements BodyPartInterface {
 		String wetnessDescriptor = orificeAnus.getWetness(owner).getDescriptor();
 		if(Main.game.isInSex() && Main.sex.getAllParticipants().contains(owner)) {
 			if(Main.sex.hasLubricationTypeFromAnyone(owner, SexAreaOrifice.ANUS)) {
-				wetnessDescriptor = "wet";
+				wetnessDescriptor = "湿润";
 			}
 		}
 		descriptorList.add(wetnessDescriptor);
 		if(owner.getAssHair().getValue()>=BodyHair.FOUR_NATURAL.getValue() && Main.game.isAssHairEnabled()) {
-			descriptorList.add("hairy");
+			descriptorList.add("多毛");
 		}
 		
 		if(owner.isAnusFeral()) {
 			descriptorList.add(Util.randomItemFrom(Util.newArrayListOfValues(
-					"feral",
+					"兽态",
 					owner.getAssRace().getName(owner.getBody(), true)+"-",
-					"bestial",
-					"animalistic")));
+					"兽性",
+					"似兽")));
 		} else {
 			descriptorList.add(type.getDescriptor(owner));
 		}
@@ -123,18 +123,18 @@ public class Anus implements BodyPartInterface {
 	
 	public String setAssBleached(GameCharacter owner, boolean bleached) {
 		if(this.bleached == bleached) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.bleached = bleached;
 		
 		if(bleached) {
 			return UtilText.parse(owner,
-					"<p>[style.boldTfSex([npc.NamePos] asshole is now bleached!)]</p>");
+					"<p>[style.boldTfSex([npc.NamePos]的肛门已经被漂白了！)]</p>");
 			
 		} else {
 			return UtilText.parse(owner,
-					"<p>[style.boldTfSex([npc.NamePos] asshole is no longer bleached!)]</p>");
+					"<p>[style.boldTfSex([npc.NamePos]的肛门已经不再被漂白了！)]</p>");
 		}
 	}
 
@@ -154,37 +154,37 @@ public class Anus implements BodyPartInterface {
 		String transformation = "";
 
 		if(!this.getType().isAssHairAllowed()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(As [npc.namePos] anus type prevents [npc.herHim] from growing any hair around [npc.her] asshole, nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.namePos]的肛门类型不允许在[npc.her]的肛门附近生长毛发，所以无事发生……)]</p>");
 		}
 		
 		if(getAssHair() == assHair) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 			
 		} else {
 			switch(assHair) {
 				case ZERO_NONE:
-					transformation = UtilText.parse(owner, "<p>There is no longer any trace of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.namePos] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.namePos]肛穴的周边已经不再有"+getAssHairType(owner).getFullDescription(owner, true)+"的痕迹了。</p>");
 					break;
 				case ONE_STUBBLE:
-					transformation = UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a stubbly patch of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.her] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.Name]的肛穴周边有一小块"+getAssHairType(owner).getFullDescription(owner, true)+"。</p>");
 					break;
 				case TWO_MANICURED:
-					transformation = UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a well-manicured patch of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.her] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.Name]的肛穴周边有一小片打理整齐的"+getAssHairType(owner).getFullDescription(owner, true)+"。</p>");
 					break;
 				case THREE_TRIMMED:
-					transformation = UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a trimmed patch of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.her] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.Name]的肛穴周边有一小片打理过的"+getAssHairType(owner).getFullDescription(owner, true)+"。</p>");
 					break;
 				case FOUR_NATURAL:
-					transformation = UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a natural amount of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.her] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.Name]的肛穴周边有一小片自然生长的"+getAssHairType(owner).getFullDescription(owner, true)+"。</p>");
 					break;
 				case FIVE_UNKEMPT:
-					transformation = UtilText.parse(owner, "<p>[npc.Name] now [npc.has] an unkempt bush of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.her] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.Name]的肛穴周边有一小片蓬乱的"+getAssHairType(owner).getFullDescription(owner, true)+"。</p>");
 					break;
 				case SIX_BUSHY:
-					transformation = UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a thick, bushy mass of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.her] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.Name]的肛穴周边有一小片茂密的"+getAssHairType(owner).getFullDescription(owner, true)+"。</p>");
 					break;
 				case SEVEN_WILD:
-					transformation = UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a wild, bushy mass of "+getAssHairType(owner).getFullDescription(owner, true)+" around [npc.her] asshole.</p>");
+					transformation = UtilText.parse(owner, "<p>[npc.Name]的肛穴周边有一小片繁密茂盛的"+getAssHairType(owner).getFullDescription(owner, true)+"。</p>");
 					break;
 			}
 		}

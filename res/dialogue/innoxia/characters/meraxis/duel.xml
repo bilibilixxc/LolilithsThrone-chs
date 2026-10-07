@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Remember to set one of the following prior to using these dialogues:
@@ -20,9 +20,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Nothing]]></responseTitle>
+				<responseTitle><![CDATA[什么都不做]]></responseTitle>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
-				<responseTooltip><![CDATA[Tell Meraxis that you don't want any reward; the satisfaction of beating her will be enough.]]></responseTooltip>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，你不想要任何奖励；打败她的满足感就足够了。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_reward_selected</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'REWARD_NONE'))]
@@ -31,9 +31,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Money]]></responseTitle>
+				<responseTitle><![CDATA[钱]]></responseTitle>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
-				<responseTooltip><![CDATA[Tell Meraxis that if you win you want her to give you all the money she has on her.]]></responseTooltip>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，如果你赢了，你希望她把身上所有的钱都给你。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_reward_selected</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'REWARD_MONEY'))]
@@ -43,9 +43,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Transform]]></responseTitle>
+				<responseTitle><![CDATA[要求进行转化]]></responseTitle>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
-				<responseTooltip><![CDATA[Tell Meraxis that if you win she'll be the one who's transformed, and must permanently transform a part of herself in the manner of your choosing.]]></responseTooltip>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，如果你赢了，她就要接受转化，她必须按照你选择的方式永久转化自己的一部分。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_reward_selected</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'REWARD_TRANSFORM'))]
@@ -55,14 +55,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
 				<colour><![CDATA[GENERIC_COMBAT]]></colour>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that if you win she'll have to have sex with you.
+					告诉梅拉克西丝，如果你赢了，她就必须和你做爱。
 					#IF(flags.hasFlag(FLAG_innoxia_meraxis_any_sex_unlocked))
-						 Although she'll undoubtedly make a fuss of refusing this proposition, you know that she'll be eager to grant you a sexual favour should you win...
+						毫无疑问的，她一定会小题大做地拒绝这个提议，但你知道，如果你赢了，她会迫不及待地答应你的性要求……
 					#ELSE
-						 Although she'll definitely refuse this proposition, you think that you'll be able to at least get her to perform a small sexual favour...
+						虽然她肯定会拒绝你的提议，但你认为至少可以让她帮你一个小忙……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_reward_selected</nextDialogue>
@@ -75,8 +75,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Back out]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis that you've changed your mind and don't want to fight her after all.]]></responseTooltip>
+				<responseTitle><![CDATA[反悔]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，你改变主意了，现在不想和她打了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_meraxis_duel_place_dominion) || flags.hasFlag(FLAG_innoxia_meraxis_duel_place_hideout))
 						default
@@ -132,8 +132,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Having declared what you want your reward to be, you're ready to fight Meraxis!]]></responseTooltip>
+				<responseTitle><![CDATA[开始决斗]]></responseTitle>
+				<responseTooltip><![CDATA[在宣布了你想要的奖励后，你现在可以与梅拉克西丝战斗了！]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<combatVariables enabled="true">
@@ -153,7 +153,7 @@
 						<enemy leader="true"><![CDATA[meraxis]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="meraxis"><![CDATA[Meraxis swirls her scythe around in a large circle, before pointing it at you and declaring, [meraxis.speech(Prepare to be vanquished! I, the Dark Siren, shall soon be victorious!)]]]></combatant>
+						<combatant id="meraxis"><![CDATA[梅拉克西丝把镰刀转了一个大圈，然后指向你宣布道：[meraxis.speech(准备被征服吧！我，暗夜塞壬，将会取得胜利！)]]]></combatant>
 					</openingDescriptions>
 				</combatVariables>
 			</response>
@@ -178,8 +178,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Drink]]></responseTitle>
-				<responseTooltip><![CDATA[You have no choice but to drink the transformative potion!]]></responseTooltip>
+				<responseTitle><![CDATA[喝]]></responseTitle>
+				<responseTooltip><![CDATA[你别无选择，只能喝下这瓶神奇的药水！]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_lost_transform</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'LOST_DRINK'))]
@@ -223,8 +223,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Spit]]></responseTitle>
-				<responseTooltip><![CDATA[Spit out the transformative fluid. By breaking your agreement with Meraxis in this manner, you can be sure that she'll be very annoyed with you!]]></responseTooltip>
+				<responseTitle><![CDATA[吐出]]></responseTitle>
+				<responseTooltip><![CDATA[吐出转化液，但如果你以这种方式破坏了与梅拉克西丝的约定，她一定会非常恼火！]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_lost_spit</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(meraxis.incrementAffection(pc, -25))]
@@ -242,8 +242,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait for Meraxis to finish gloating so that you can continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等到梅拉克西丝幸灾乐祸完后，你就可以继续出发了……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -278,8 +278,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait for Meraxis to finish scolding you so that you can continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等梅拉克西丝骂完你之后，你就可以继续出发了……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -324,8 +324,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to what Meraxis has to say.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听梅拉克西丝怎么说。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -370,8 +370,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave it]]></responseTitle>
-				<responseTooltip><![CDATA[You don't want Meraxis to be upset, so you decide to let her keep her money.]]></responseTooltip>
+				<responseTitle><![CDATA[不拿钱]]></responseTitle>
+				<responseTooltip><![CDATA[你不想让梅拉克西丝不高兴，所以决定让她留着那些钱。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_money_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_MONEY_LEAVE'))]
@@ -381,8 +381,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Take money]]></responseTitle>
-				<responseTooltip><![CDATA[You have no sympathy for someone who was planning on transforming you if you'd lost the duel! Ignore Meraxis's pleas and take her money.]]></responseTooltip>
+				<responseTitle><![CDATA[拿钱]]></responseTitle>
+				<responseTooltip><![CDATA[如果你输了决斗，那么对方就会改造你，你可不会同情对面！不要理会梅拉克西丝的恳求，直接收下她的钱。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_money_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_MONEY_TAKE'))]
@@ -404,8 +404,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to what Meraxis has to say.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听梅拉克西丝怎么说。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -463,8 +463,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Nothing]]></responseTitle>
-				<responseTooltip><![CDATA[Decide against transforming Meraxis after all.]]></responseTooltip>
+				<responseTitle><![CDATA[什么都不做]]></responseTitle>
+				<responseTooltip><![CDATA[最终还是决定不改造梅拉克西丝。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_transform_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_TRANSFORM_NOTHING'))]
@@ -474,13 +474,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Small ass]]></responseTitle>
+				<responseTitle><![CDATA[变回小屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her ass back to the small size she used to have.
+					告诉梅拉克西丝，把她的屁股变回原来的小屁股。
 					#IF(meraxis.isAssChanged())
-						<br/>[style.italicsTfSex(Meraxis will regain her small ass and girly hips from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝将因此恢复她的小屁股和少女般的臀部。)]
 					#ELSE
-						<br/>[style.italicsMinorBad(Meraxis's ass is already small! This option will be available after your next victorious duel if you choose to increase Meraxis's ass size now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝的屁股已经是最小的了！如果你现在选择增大梅拉克西丝的屁股，下一次决斗胜利后就可以使用该选项了。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -500,13 +500,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Big ass]]></responseTitle>
+				<responseTitle><![CDATA[变成大屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her ass and hips into a much larger size.
+					告诉梅拉克西丝把她的屁股和臀部变大。
 					#IF(meraxis.isAssChanged())
-						<br/>[style.italicsMinorBad(Meraxis's ass is already large! This option will be available after your next victorious duel if you choose to decrease Meraxis's ass size now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝的屁股已经很大了！如果你现在选择减小梅拉克西丝的屁股尺寸，那么在下一次决斗胜利后就可以使用该选项了。)]
 					#ELSE
-						<br/>[style.italicsTfSex(Meraxis will gain a large ass and very wide hips from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝将因此拥有一个非常大且翘的臀部。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -527,13 +527,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Small breasts]]></responseTitle>
+				<responseTitle><![CDATA[变成小奶子]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her breasts back to the small ones she used to have.
+					告诉梅拉克西丝把她的乳房变回原来的小乳房。
 					#IF(meraxis.isBreastsChanged())
-						<br/>[style.italicsTfSex(Meraxis will shrink down to having AA-cup breasts, along with big nipples and areolae from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝的胸部会缩小到AA杯，同时乳头和乳晕也会因此变大。)]
 					#ELSE
-						<br/>[style.italicsMinorBad(Meraxis already has AA-cups! This option will be available after your next victorious duel if you choose to increase Meraxis's breast size now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝已经拥有了AA罩杯的胸部！如果你现在选择增大梅拉克西丝的胸部，那么在下一次决斗胜利后就可以使用该选项了。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -553,13 +553,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Big breasts]]></responseTitle>
+				<responseTitle><![CDATA[变成大奶子]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her breasts to make them much bigger.
+					告诉梅拉克西丝改造她的乳房，让它们变得更大。
 					#IF(meraxis.isBreastsChanged())
-						<br/>[style.italicsMinorBad(Meraxis's breasts are already big! This option will be available after your next victorious duel if you choose to shrink Meraxis's breast size now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝的胸部已经很大了！如果你现在选择缩小梅拉克西丝的胸部大小，那么下次决斗胜利后就可以使用该选项了。)]
 					#ELSE
-						<br/>[style.italicsTfSex(Meraxis will gain DD-cup breasts, along with large nipples and areolae from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝将因此获得DD罩杯，同时乳头和乳晕也会因此变大。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -581,9 +581,9 @@
 				<availabilityConditional><![CDATA[[#!meraxis.isLactating()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Start lactating]]></responseTitle>
+				<responseTitle><![CDATA[变成泌乳的胸部]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her breasts so that she's lactating.<br/>[style.italicsTfSex(Meraxis will gain [style.fluid(250)] of milk storage from this.)]
+					告诉梅拉克西丝改造她的乳房，让她开始泌乳。<br/>[style.italicsTfSex(梅拉克西丝的母乳上限将增加[style.fluid(250)]。)]
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_transform_end</nextDialogue>
 				<effects><![CDATA[
@@ -599,9 +599,9 @@
 				<availabilityConditional><![CDATA[[#meraxis.isLactating()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Stop lactating]]></responseTitle>
+				<responseTitle><![CDATA[让胸部不再泌乳]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her breasts so that she's no longer lactating.<br/>[style.italicsTfSex(Meraxis will return to having [style.fluid(0)] of milk storage from this.)]
+				告诉梅拉克西丝改造她的乳房，让她停止泌乳。<br/>[style.italicsTfSex(梅拉克西丝的母乳上限将恢复为[style.fluid(0)]。)]
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_transform_end</nextDialogue>
 				<effects><![CDATA[
@@ -615,13 +615,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Normal mouth]]></responseTitle>
+				<responseTitle><![CDATA[变成正常的嘴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her mouth back to how it used to be.
+					告诉梅拉克西丝把她的嘴变回原来的样子。
 					#IF(meraxis.isMouthChanged())
-						<br/>[style.italicsTfSex(Meraxis will regain average lips, a normal sized tongue, and a wet throat from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝将因此恢复普通的嘴唇、正常大小的舌头和湿润的喉咙。)]
 					#ELSE
-						<br/>[style.italicsMinorBad(Meraxis already has her normal mouth! This option will be available after your next victorious duel if you choose to give Meraxis the 'Lewd mouth' transformation now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝已经有了正常的嘴巴！如果你现在选择让梅拉克西丝转化"淫荡口穴"，下一次决斗胜利后就可以使用该选项了。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -641,13 +641,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Lewd mouth]]></responseTitle>
+				<responseTitle><![CDATA[淫荡的口腔]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her lips, throat, and tongue to make her look like a lewd oral-obsessed slut.
+					告诉梅拉克西丝改造她的嘴唇、喉咙和舌头，让她看起来像个淫荡的口交荡妇。
 					#IF(meraxis.isMouthChanged())
-						<br/>[style.italicsMinorBad(Meraxis already has a lewd mouth! This option will be available after your next victorious duel if you choose to return Meraxis's mouth to normal now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝的嘴巴已经很淫荡了！如果你现在选择将梅拉克西丝的嘴巴恢复正常，那么在下一次决斗胜利后，就可以使用此选项了。)]
 					#ELSE
-						<br/>[style.italicsTfSex(Meraxis will gain huge, puffy lips, a long tongue, and a sopping-wet throat from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝会因此长出丰厚的嘴唇，细长的舌头和每时每刻都湿润着的喉咙。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -668,13 +668,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Cute pussy]]></responseTitle>
+				<responseTitle><![CDATA[变成可爱小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her pussy into a cute-looking one.
+					告诉梅拉克西丝，把她的阴部变成非常可爱的样子。
 					#IF(meraxis.isPussyChanged())
-						<br/>[style.italicsTfSex(Meraxis will regain tiny labia, along with making her pussy extremely tight and wet from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝将重新获得小阴唇，同时使她的阴部变得异常紧致和湿润。)]
 					#ELSE
-						<br/>[style.italicsMinorBad(Meraxis already has what she considers to be a cute pussy! This option will be available after your next victorious duel if you choose to give Meraxis the 'Lewd pussy' transformation now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝已经拥有了她所认为可爱的阴部！如果你现在选择让梅拉克西丝变为"淫荡骚穴"，那么下一次决斗胜利后就可以使用该选项了。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -695,13 +695,13 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Lewd pussy]]></responseTitle>
+				<responseTitle><![CDATA[淫荡的小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her pussy into one that looks especially lewd.
+					告诉梅拉克西丝，把她的阴部变成非常淫荡的样子。
 					#IF(meraxis.isPussyChanged())
-						<br/>[style.italicsMinorBad(Meraxis already has a lewd pussy! This option will be available after your next victorious duel if you choose to give Meraxis the 'Cute pussy' transformation now.)]
+						<br/>[style.italicsMinorBad(梅拉克西丝已经有了淫荡的阴部！如果你现在选择让梅拉克西丝变为"可爱小穴"，那么下一次决斗胜利后就可以使用该选项了。)]
 					#ELSE
-						<br/>[style.italicsTfSex(Meraxis will gain large labia, along with making her pussy slightly loose and sloppy from this.)]
+						<br/>[style.italicsTfSex(梅拉克西丝的阴唇会变大，同时阴部也会因此变得略微松弛。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -724,10 +724,10 @@
 				<availabilityConditional><![CDATA[[#!meraxis.isVaginaSquirter()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Squirter]]></responseTitle>
+				<responseTitle><![CDATA[变成潮吹体质]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her pussy so that it squirts female ejaculate whenever she orgasms.
-					<br/>[style.italicsTfSex(Meraxis will become a squirter from this.)]
+					告诉梅拉克西丝改造她的小穴，好让她在高潮时喷水。
+					<br/>[style.italicsTfSex(梅拉克西丝将因此而获得“潮吹”特性。)]
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_transform_end</nextDialogue>
 				<effects><![CDATA[
@@ -741,10 +741,10 @@
 				<availabilityConditional><![CDATA[[#meraxis.isVaginaSquirter()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Stop squirting]]></responseTitle>
+				<responseTitle><![CDATA[取消潮吹特质]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to transform her pussy so that it no longer squirts female ejaculate whenever she orgasms.
-					<br/>[style.italicsTfSex(Meraxis will no longer be a squirter after this.)]
+					告诉梅拉克西丝改造她的小穴，让她在高潮时不再喷水。
+					<br/>[style.italicsTfSex(梅拉克西丝将因此而失去“潮吹”特性。)]
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_transform_end</nextDialogue>
 				<effects><![CDATA[
@@ -766,8 +766,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to what Meraxis has to say.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听梅拉克西丝怎么说。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -812,10 +812,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hold hands]]></responseTitle>
+				<responseTitle><![CDATA[牵手]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that you'd like to hold her hand and take a walk together.
-					<br/>[style.italicsSex(This action leads into being able to increase Meraxis's affection towards you, as well as fingering and handjobs.)]
+					告诉梅拉克西丝，你想牵着她的手和她一起散步。
+					<br/>[style.italicsSex(这个决定可以增加梅拉克西丝对你的好感，还可以进行指交和手交。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_characters_meraxis_duel_won_sex_hold_hands]]></nextDialogue>
 				<effects/>
@@ -823,14 +823,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Hug]]></responseTitle>
+				<responseTitle><![CDATA[拥抱]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that you'd like to hug her.
-					<br/>[style.italicsSex(This action leads into being able to increase Meraxis's affection towards
+					告诉梅拉克西丝，你想拥抱她。
+					<br/>[style.italicsSex(这一举动导致能够增加梅拉克西丝对
 					#IF(game.isAnalContentEnabled())
-						 you, as well as ass groping and anal actions.
+						你的好感度，并可解锁对其屁股及肛门的操作。
 					#ELSE
-						 you.
+						你的好感度。
 					#ENDIF
 					)]
 					]]></responseTooltip>
@@ -840,14 +840,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Kiss]]></responseTitle>
+				<responseTitle><![CDATA[接吻]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that you'd like to kiss her.
+					告诉梅拉克西丝，你想吻她。
 					#IF(meraxis.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_TWO_LIKE))
-						<br/>[style.italicsMinorBad(Meraxis needs an affection level of at least '[#AFFECTION_POSITIVE_TWO_LIKE.getName()]' towards you before she'd agree to let you kiss her!)]
-						<br/><i>Her current affection towards you is '[#meraxis.getAffectionLevel(pc).getName()]'.</i>
+						<br/>[style.italicsMinorBad(梅拉克西丝需要至少拥有'[#AFFECTION_POSITIVE_TWO_LIKE.getName()]'点好感才会同意让你吻她！)]
+						<br/><i>她目前对你的好感是[#meraxis.getAffectionLevel(pc).getName()]'.</i>
 					#ELSE
-						<br/>[style.italicsSex(This action leads into being able to increase Meraxis's affection towards you, as well as oral sex.)]
+						<br/>[style.italicsSex(此举可增加梅拉克西丝对你的好感度，并可进行口交操作。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -862,14 +862,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Flash boobs]]></responseTitle>
+				<responseTitle><![CDATA[看奶子]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that you'd like to see her naked boobs.
+					告诉梅拉克西丝，你想看看她的奶子。
 					#IF(meraxis.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_THREE_CARING))
-						<br/>[style.italicsMinorBad(Meraxis needs an affection level of at least '[#AFFECTION_POSITIVE_THREE_CARING.getName()]' towards you before she'd agree to flash you her boobs!)]
-						<br/><i>Her current affection towards you is '[#meraxis.getAffectionLevel(pc).getName()]'.</i>
+						<br/>[style.italicsMinorBad(美拉西斯需要至少拥有'[#AFFECTION_POSITIVE_THREE_CARING.getName()]'点好感才会允许你看她的奶子！)]
+						<br/><i>她目前对你的好感是'[#meraxis.getAffectionLevel(pc).getName()]'.</i>
 					#ELSE
-						<br/>[style.italicsSex(This action leads into being able to increase Meraxis's affection towards you, as well as breast-related sex.)]
+						<br/>[style.italicsSex(此举可增加梅拉克西丝对你的好感，以及与乳房有关的性爱操作。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -884,16 +884,16 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Flash pussy]]></responseTitle>
+				<responseTitle><![CDATA[看小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that you'd like to see her naked pussy.
-					#IF(meraxis.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
-						<br/>[style.italicsMinorBad(Meraxis needs an affection level of at least '[#AFFECTION_POSITIVE_FOUR_LOVE.getName()]' towards you before she'd agree to flash you her pussy!)]
-						<br/><i>Her current affection towards you is '[#meraxis.getAffectionLevel(pc).getName()]'.</i>
+					告诉梅拉克西丝，你想看看她的小穴。
+					#IF(meraxis.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_THREE_CARING))
+						<br/>[style.italicsMinorBad(美拉西斯需要至少拥有'[#AFFECTION_POSITIVE_FOUR_LOVE.getName()]'点好感才会允许你看她的小穴！)]
+						<br/><i>她目前对你的好感是'[#meraxis.getAffectionLevel(pc).getName()]'.</i>
 					#ELSE
-						<br/>[style.italicsSex(This action leads into being able to increase Meraxis's affection towards you, as well as vaginal sex.)]
+						<br/>[style.italicsSex(此举可增加梅拉克西丝对你的好感，以及与小穴相关的性爱操作。)]
 					#ENDIF
-				]]></responseTooltip>
+							]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(meraxis.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
 						null
@@ -906,8 +906,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Nothing]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis that you don't want a sexual favour from her after all. You can tell from how she's acting that she'll be disappointed by this.]]></responseTooltip>
+				<responseTitle><![CDATA[什么都不做]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，你并不想要她的性爱服务。你可以从她的表现中看出她会对此感到失望。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_NOTHING'))]
@@ -931,8 +931,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Compliment]]></responseTitle>
-				<responseTooltip><![CDATA[Simply tell Meraxis how pretty she is.]]></responseTooltip>
+				<responseTitle><![CDATA[赞美]]></responseTitle>
+				<responseTooltip><![CDATA[只是告诉梅拉克西丝她有多漂亮。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_HOLD_HANDS_FINISHED'))]
@@ -942,11 +942,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Grope]]></responseTitle>
+				<responseTitle><![CDATA[摸摸胯下]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Let Meraxis guide your hand down between her legs and grope her.
+					让梅拉克西丝引导你的手伸进她的两腿之间并抚摸她。
 					#IF(!flags.hasFlag(FLAG_innoxia_meraxis_handjobs_unlocked))
-						 [style.italicsSex(This will unlock fingering and handjob actions with Meraxis for the next time you're in this situation!)]
+						[style.italicsSex(这将在下次遇到这种情况时解锁与梅拉克西丝的指交和手交操作！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
@@ -965,9 +965,9 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_handjobs_unlocked)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Finger her]]></responseTitle>
+				<responseTitle><![CDATA[指奸她]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Meraxis doesn't feel comfortable enough to let you finger her!
+					梅拉克西丝感觉不够舒服，不让你指交她！
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
@@ -975,8 +975,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_handjobs_unlocked)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Finger her]]></responseTitle>
-				<responseTooltip><![CDATA[Slide your [pc.hand] down into Meraxis's panties and start fingering her.]]></responseTooltip>
+				<responseTitle><![CDATA[指交她]]></responseTitle>
+				<responseTooltip><![CDATA[你将你的[pc.hand]放在梅拉克西丝的内裤里，然后开始了对她的指交。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1012,14 +1012,14 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_handjobs_unlocked) || !pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Fingered]]></responseTitle>
+				<responseTitle><![CDATA[被指奸]]></responseTitle>
 				<responseTooltip><![CDATA[
-					#IF(!pc.hasVagina())
-						You don't have a vagina, so Meraxis couldn't finger you even if she wanted to!
-					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-						You can't gain access to your vagina, so Meraxis couldn't finger you even if she wanted to!
+					#IF(!pc.hasPenis())
+						你没有小穴，所以梅拉克西丝就算想给你指交也做不到！
+					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+						你的小穴被挡住了，所以就算梅拉克西丝想给你指交都做不到！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to finger you!
+						梅拉克西丝不愿意给你指交！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1028,8 +1028,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_handjobs_unlocked) && pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Fingered]]></responseTitle>
-				<responseTooltip><![CDATA[Guide Meraxis's hand down to your groin and get her to start fingering you.]]></responseTooltip>
+				<responseTitle><![CDATA[被指奸]]></responseTitle>
+				<responseTooltip><![CDATA[引导梅拉克西丝的手伸向你的腹股沟，让她开始对你指交。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1077,14 +1077,14 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_handjobs_unlocked) || !pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Handjob]]></responseTitle>
+				<responseTitle><![CDATA[手交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so Meraxis couldn't give you a handjob even if she wanted to!
+						你没有阴茎，所以梅拉克西丝就算想给你打飞机也做不到！
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						You can't gain access to your penis, so Meraxis couldn't give you a handjob even if she wanted to!
+						你的阴茎被锁住了，所以就算梅拉克西丝想给你打飞机都做不到！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to give you a handjob!
+						梅拉克西丝不愿意给你打飞机！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1093,8 +1093,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_handjobs_unlocked) && pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Handjob]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to give you a handjob.]]></responseTooltip>
+				<responseTitle><![CDATA[手交]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝给你打飞机。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1144,8 +1144,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_FINGERING</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1157,8 +1157,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_FINGERED</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1170,8 +1170,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_HANDJOB</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1194,8 +1194,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Compliment]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis how cute she is.]]></responseTooltip>
+				<responseTitle><![CDATA[赞美]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝她有多可爱。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_HUG_FINISHED'))]
@@ -1205,11 +1205,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Grab ass]]></responseTitle>
+				<responseTitle><![CDATA[摸摸屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Reach down and give Meraxis's ass a good grope.
+					伸手摸摸梅梅拉克西丝的屁股。
 					#IF(!flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked) && game.isAnalContentEnabled())
-						 [style.italicsSex(This will unlock anal actions with Meraxis for the next time you're in this situation!)]
+						[style.italicsSex(这将在下次遇到这种情况时解锁与梅拉克西丝的肛门操作！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
@@ -1228,12 +1228,12 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && (!flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked) || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Anilingus]]></responseTitle>
+				<responseTitle><![CDATA[吻肛]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						You can't gain access to your mouth, so can't perform anilingus on Meraxis even if she'd let you!
+						你的嘴被挡住了，即使梅拉克西丝愿意，你也无法吻肛！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to let you perform anilingus on her!
+						梅拉克西丝不愿意让你对她进行吻肛！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1242,8 +1242,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked) && pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Anilingus]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to turn around and hike up her dress so that you can perform anilingus on her.]]></responseTooltip>
+				<responseTitle><![CDATA[吻肛]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝转过身来，撩起她的裙子，这样你就可以舔肛了。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1279,14 +1279,14 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && (!flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked) || !pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Hotdogging]]></responseTitle>
+				<responseTitle><![CDATA[尻交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis so couldn't hotdog Meraxis even if she'd let you!
+						你没有肉棒，所以即使梅拉克西丝让你做尻交你也做不了！
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						You can't gain access to your penis, so can't hotdog Meraxis even if she'd let you!
+						你的肉棒被挡住了，即使梅拉克西丝愿意，你也无法对她进行尻交！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to let you hotdog her!
+						梅拉克西丝不愿意你对她进行尻交！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1295,8 +1295,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked) && pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Hotdogging]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to turn around and hike up her dress so that you can slide your cock up and down between her ass cheeks.]]></responseTooltip>
+				<responseTitle><![CDATA[尻交]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝转过身来，撩起她的裙子，这样你就可以用鸡巴在她的屁股之间来回磨蹭了。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1350,14 +1350,14 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && (!flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked) || !pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Anal]]></responseTitle>
+				<responseTitle><![CDATA[肛交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis so couldn't fuck Meraxis's ass even if she'd let you!
+						你没有鸡巴，即使梅拉克西丝让你干，你也干不了她的屁股！
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						You can't gain access to your penis, so can't fuck Meraxis's ass even if she'd let you!
+						你的鸡巴被挡住了，即使梅拉克西丝愿意，你也无法操她的屁股！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to let you fuck her ass!
+						梅拉克西丝不愿意你操她的屁股！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1366,8 +1366,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked) && pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Anal]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to turn around and hike up her dress so that you can fuck her ass.]]></responseTooltip>
+				<responseTitle><![CDATA[肛交]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝转过身来，撩起她的裙子，这样你就可以操她的屁股了。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1405,8 +1405,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_ANILINGUS</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1418,8 +1418,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_HOTDOGGING</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1431,8 +1431,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_ANAL</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1455,8 +1455,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Compliment]]></responseTitle>
-				<responseTooltip><![CDATA[Put an end to the kiss and compliment Meraxis on how pretty she is.]]></responseTooltip>
+				<responseTitle><![CDATA[赞美]]></responseTitle>
+				<responseTooltip><![CDATA[结束亲吻，并称赞梅拉克西丝很漂亮。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_KISS_FINISHED'))]
@@ -1466,11 +1466,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Make out]]></responseTitle>
+				<responseTitle><![CDATA[接吻]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Start passionately kissing Meraxis.
+					开始与梅拉克西丝热吻。
 					#IF(!flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked))
-						 [style.italicsSex(This will unlock oral actions with Meraxis for the next time you're in this situation!)]
+						[style.italicsSex(这将在下次遇到这种情况时解锁口部动作！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
@@ -1490,12 +1490,12 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Cunnilingus]]></responseTitle>
+				<responseTitle><![CDATA[舔阴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						You can't gain access to your mouth, so can't perform cunnilingus on Meraxis even if she'd let you!
+						你无法自由使用嘴巴，所以尽管梅拉克西丝允许你也无法给她舔阴！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to let you perform cunnilingus on her!
+						梅拉克西丝不愿意让你舔弄她的阴部！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1504,8 +1504,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) && pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Cunnilingus]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to hike up her dress so that you can perform cunnilingus on her.]]></responseTooltip>
+				<responseTitle><![CDATA[舔阴]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝撩起裙子，这样你就可以舔阴了。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1541,14 +1541,14 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) || !pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Receive cunnilingus]]></responseTitle>
+				<responseTitle><![CDATA[接受舔阴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina())
-						You don't have a vagina, so Meraxis couldn't perform cunnilingus on you even if she wanted to!
+						你没有阴道，所以梅拉克西丝就算想也没法给你舔阴！
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-						You can't gain access to your vagina, so Meraxis couldn't perform cunnilingus on you even if she wanted to!
+						你无法接触到自己的阴道，所以即使梅拉克西丝想也没法给你舔阴！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to perform cunnilingus on you!
+						梅拉克西丝不愿意给你舔阴！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1557,8 +1557,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) && pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Receive cunnilingus]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to drop down and start eating you out.]]></responseTooltip>
+				<responseTitle><![CDATA[接受舔阴]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝跪下来含住你的下面。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1600,14 +1600,14 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) || !pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
+				<responseTitle><![CDATA[口交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so Meraxis couldn't give you a blowjob even if she wanted to!
+						你没有鸡巴，即使梅拉克西丝愿意，也没法给你口交！
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						You can't gain access to your penis, so Meraxis couldn't give you a blowjob even if she wanted to!
+						你的鸡巴被挡住了，即使梅拉克西丝愿意，也没法给你口交！
 					#ELSE
-						Meraxis doesn't feel comfortable enough to give you a blowjob!
+						梅拉克西丝不愿意给你口交！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1616,8 +1616,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) && pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to drop down and start sucking your cock.]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝西跪下来含住你的鸡巴。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1655,8 +1655,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_CUNNILINGUS</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1668,8 +1668,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_CUNNILINGUS_RECEIVE</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1681,8 +1681,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_BLOWJOB</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1709,8 +1709,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Compliment]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis how sexy her breasts are.]]></responseTooltip>
+				<responseTitle><![CDATA[赞美]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝她的胸部很性感。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_FLASH_BREASTS_FINISHED'))]
@@ -1720,11 +1720,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Start playing]]></responseTitle>
+				<responseTitle><![CDATA[开始玩]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to start playing with her breasts for you.
+					让梅拉克西丝为你挑弄自己的胸部。
 					#IF(!flags.hasFlag(FLAG_innoxia_meraxis_paizuri_unlocked))
-						 [style.italicsSex(This will unlock breast-related sex actions with Meraxis for the next time you're in this situation!)]
+						[style.italicsSex(这将在下次遇到这种情况时解锁胸部动作！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
@@ -1743,16 +1743,16 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_paizuri_unlocked)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Masturbate]]></responseTitle>
-				<responseTooltip><![CDATA[Meraxis doesn't feel comfortable enough to let you masturbate to the sight of her breasts!]]></responseTooltip>
+				<responseTitle><![CDATA[自慰]]></responseTitle>
+				<responseTooltip><![CDATA[梅拉克西丝不愿意让你看着她的胸部自慰！]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_paizuri_unlocked)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Masturbate]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis to continue playing with her breasts while you masturbate to the sight of them.]]></responseTooltip>
+				<responseTitle><![CDATA[自慰]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝继续玩弄自己的胸部，你会边看边自慰。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1780,12 +1780,12 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_paizuri_unlocked) || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Kiss breasts]]></responseTitle>
+				<responseTitle><![CDATA[吸奶]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_meraxis_paizuri_unlocked))
-						Meraxis doesn't feel comfortable enough to let you kiss her breasts!
+						梅拉克西丝不愿意让你亲吻她的胸部！
 					#ELSE
-						You can't gain access to your mouth, so cannot kiss Meraxis's breasts!
+						你无法自由使用嘴巴，所以无法亲吻梅拉克西丝的胸部！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1794,8 +1794,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_paizuri_unlocked) && pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Kiss breasts]]></responseTitle>
-				<responseTooltip><![CDATA[Start kissing Meraxis's breasts.]]></responseTooltip>
+				<responseTitle><![CDATA[吸奶]]></responseTitle>
+				<responseTooltip><![CDATA[开始亲吻梅拉克西丝的胸部。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1834,11 +1834,11 @@
 				<responseTitle><![CDATA[[meraxis.Paizuri]]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so couldn't fuck Meraxis's breasts even if she'd let you!
+						你没有鸡鸡，所以就算梅拉克西丝献出胸脯，那也是无鸡之谈！
 					#ELSEIF(!flags.hasFlag(FLAG_innoxia_meraxis_paizuri_unlocked))
-						Meraxis doesn't feel comfortable enough to let you fuck her breasts!
+						梅拉克西丝不愿意让你操她的胸部！
 					#ELSE
-						You can't gain access to your penis, so cannot fuck Meraxis's breasts even if she'd let you!
+						你摸不到你的鸡鸡，所以就算梅拉克西丝献出胸脯，那也是无鸡之谈！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1848,7 +1848,7 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[[meraxis.Paizuri]]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to drop down and let you fuck her breasts.]]></responseTooltip>
+				<responseTooltip><![CDATA[让梅拉克西丝趴下，让你操她的奶子。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1886,8 +1886,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_MASTURBATION_BREASTS</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1899,8 +1899,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_BREASTS_KISSING</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1912,8 +1912,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_BREAST_FUCK</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1938,8 +1938,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Compliment]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis how sexy her pussy is.]]></responseTooltip>
+				<responseTitle><![CDATA[赞美]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝她的蜜穴很诱人。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_FLASH_PUSSY_FINISHED'))]
@@ -1949,11 +1949,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Start playing]]></responseTitle>
+				<responseTitle><![CDATA[开始玩]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis to start playing with her pussy for you.
+					命令梅拉克西丝玩弄蜜穴给你看。
 					#IF(!flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked))
-						 [style.italicsSex(This will unlock pussy-related sex actions with Meraxis for the next time you're in this situation!)]
+						[style.italicsSex(将在下次解锁阴部性行为！)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_won_sex_end</nextDialogue>
@@ -1972,14 +1972,14 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) || !pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Intercrural]]></responseTitle>
+				<responseTitle><![CDATA[腿交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so couldn't fuck Meraxis's thighs even if she'd let you!
+						你没有阴茎，所以就算梅拉克西丝献出双股，那也是无鸡之谈！
 					#ELSEIF(!flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked))
-						Meraxis doesn't feel comfortable enough to let you fuck her thighs!
+						梅拉克西丝不想让你操她的双股！
 					#ELSE
-						You can't gain access to your penis, so cannot fuck Meraxis's thighs even if she'd let you!
+						你摸不到你的阴茎，所以就算梅拉克西丝献出双股，那也是无鸡之谈！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1988,8 +1988,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) && pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Intercrural]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis to push her legs together so that you can slide your cock under her pussy and fuck her thighs.]]></responseTooltip>
+				<responseTitle><![CDATA[腿交]]></responseTitle>
+				<responseTooltip><![CDATA[命令梅拉克西丝合拢她的双腿，这样你就能把肉棒滑到她的阴部下面，操她的大腿。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -2043,14 +2043,14 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) || !pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
+				<responseTitle><![CDATA[操她]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so couldn't fuck Meraxis even if she'd let you!
+						你没有阴茎，所以就算梅拉克西丝允许，那也是无鸡之谈！
 					#ELSEIF(!flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked))
-						Meraxis doesn't feel comfortable enough to let you fuck her!
+						梅拉克西丝不愿意让你操她！
 					#ELSE
-						You can't gain access to your penis, so cannot fuck Meraxis even if she'd let you!
+						你摸不到你的阴茎，所以就算梅拉克西丝允许，那也是无鸡之谈！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -2059,8 +2059,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) && pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to present her pussy to you so that you can fuck her.]]></responseTooltip>
+				<responseTitle><![CDATA[操她]]></responseTitle>
+				<responseTooltip><![CDATA[让梅拉克西丝对你张开阴户，这样你就可以同她负距离接触了。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -2096,16 +2096,16 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) || pc.isTaur() || !pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Scissor]]></responseTitle>
+				<responseTitle><![CDATA[剪刀式体位]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina())
-						You don't have a vagina, so couldn't scissor with Meraxis even if she'd let you!
+						你没有小穴，即使梅拉克西丝愿意也没法和你剪刀式体位！
 					#ELSEIF(!flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked))
-						Meraxis doesn't feel comfortable enough to let you scissor with her!
+						梅拉克西丝不愿意和你剪刀式体位
 					#ELSEIF(pc.isTaur())
-						Due to the configuration of your lower body, you're unable to get into a suitable position in which to scissor with Meraxis!
+						你下半身的构造不允许你和梅拉克西丝进行剪刀式体位！
 					#ELSE
-						You can't gain access to your pussy, so cannot scissor with Meraxis even if she'd let you!
+						你够不到你的小穴，即使梅拉克西丝愿意也没法和你剪刀式体位！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -2114,8 +2114,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) && !pc.isTaur() && pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Scissor]]></responseTitle>
-				<responseTooltip><![CDATA[Get Meraxis to lie back and spread her legs so that you can scissor with her.]]></responseTooltip>
+				<responseTitle><![CDATA[剪刀式体位]]></responseTitle>
+				<responseTooltip><![CDATA[你让梅拉克西丝躺好，张开她的双腿，跟她玩剪刀式体位。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -2153,8 +2153,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_INTERCRURAL</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2166,8 +2166,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_FUCK</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2179,8 +2179,8 @@
 		<preParsingEffects><![CDATA[
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/characters/meraxis/duel', 'WON_SEX_POST_END'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Meraxis looks like she's about to explode from embarrassment...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[梅拉克西丝看起来尴尬得快要爆炸了……]]></tooltip>
 		<content folderPath="txt/characters/meraxis/duel">WON_SEX_POST_SCISSOR</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -2199,8 +2199,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to what Meraxis has to say.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听梅拉克西丝怎么说。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Bondage Bench]]></name>
-	<tooltipDescription><![CDATA[In the middle of the basement, a leather-padded bondage bench offers the ideal platform upon which to immobilise a submissive bitch.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[while strapped to the bondage bench in Yui's basement]]></virginityLossDescription>
+	<name><![CDATA[拘束凳]]></name>
+	<tooltipDescription><![CDATA[地下室的中央，放着一张带皮革软垫的拘束凳，这是固定顺从的骚受最理想的平台。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[被绑在唯的地下室的拘束凳上时]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

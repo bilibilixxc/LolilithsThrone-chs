@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[toy machines]]></name>
-	<tooltipDescription><![CDATA[A long, automated production line is busy at work creating all sorts of different sex toys.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the back of Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[玩具生产线]]></name>
+	<tooltipDescription><![CDATA[一条长长的自动化生产线正在制造各种不同的性玩具。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店后面]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>CLOTHING_PINK_HOT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

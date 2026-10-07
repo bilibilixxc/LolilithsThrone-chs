@@ -67,10 +67,10 @@ public class Finch extends NPC {
 	}
 	
 	public Finch(boolean isImported) {
-		super(isImported, new NameTriplet("Finch"), "Moreno",
-				"Finch is the manager of Slaver Alley's 'Slave Administration' building."
-						+ " Although he acts friendly enough, you can't help but wonder if his disarming disposition is just for show."
-						+ " After all, would the manager of Dominion's 'Slave Administration' really have got to that position just by being nice?",
+		super(isImported, new NameTriplet("芬奇"), "莫雷诺",
+				"芬奇奴隶巷的“奴隶行政管理”建筑中的经理。"
+						+ "尽管他表现得足够友善，你却还是忍不住想这副毫无防备的样子是不是假装的。"
+						+ "毕竟，难道要让人相信只靠友善就能当上御城区奴隶行政管理的经理吗？",
 				27, Month.SEPTEMBER, 29,
 				10,
 				Gender.M_P_MALE,
@@ -317,15 +317,15 @@ public class Finch extends NPC {
 	@Override
 	public String getTraderDescription() {
 		return "<p>"
-					+ "[finch.speech(Looking for the good stuff, huh?)] [finch.name] says, winking at you as he hands you a 'slaver-exclusive' sales brochure,"
-					+ " [finch.speech(Let me know what you fancy!)]"
+					+ "[finch.speech(是在淘金，对吧？)][finch.name]对你眨眨眼睛，并递给你一张“独家奴隶”销售手册，"
+					+ "[finch.speech(让我知道你喜欢什么吧！)]"
 				+ "</p>"
 				+ (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.finchFreedomTalk)
 					?"<p>"
-						+ "As you start to look through the brochure, [finch.name] lowers his voice and adds,"
-						+ " [finch.speech(Oh, and don't forget that you can buy Freedom Certifications from me."
-							+ " They're pre-signed and have the official seal, so all you need to do is fill out the name of your slave and sign it."
-							+ " They're carrying an arcane enchantment that instantly registers your slave as being freed, so there's nothing more to it than that...)]"
+						+ "在你开始浏览手册的时候，[finch.name]压低声音补充道。"
+						+ "[finch.speech(哦，别忘了你可以向我购买自由证书。"
+							+ "它们是预签署并印章的，所以你所需要做的就是填写你的奴隶的名字并签名。"
+							+ "它们携带着一种能够马上登记你的奴隶为自由状态的奥术附魔，除此之外没有什么需要注意的了……)]"
 					+ "</p>"
 					:"");
 	}

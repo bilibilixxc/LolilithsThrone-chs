@@ -90,8 +90,8 @@ public class Sterope extends NPC {
 	}
 	
 	public Sterope(boolean isImported) {
-		super(isImported, new NameTriplet("Sterope"), "Hippos",
-				"Sterope is an Enforcer Constable who works as the receptionist at the station in Elis.",
+		super(isImported, new NameTriplet("斯特罗普"), "希波",
+				"斯特罗普是一名在伊利斯车站担任接待员的执法警员。",
 				33, Month.DECEMBER, 2,
 				15,
 				Gender.F_V_B_FEMALE, Subspecies.HORSE_MORPH, RaceStage.PARTIAL,
@@ -366,7 +366,7 @@ public class Sterope extends NPC {
 						null,
 						false,
 						new TattooWriting(
-								"Break this bitch!",
+								"让这个婊子崩溃！",
 								PresetColour.CLOTHING_BLACK,
 								false),
 						null));
@@ -513,7 +513,7 @@ public class Sterope extends NPC {
 		
 		centaur.setLocation(this, false);
 		centaur.setPlayerKnowsName(false);
-		centaur.setGenericName(UtilText.parse(centaur, "dominant [npc.race]"));
+		centaur.setGenericName(UtilText.parse(centaur, "支配者[npc.race]"));
 		centaur.setSexualOrientation(SexualOrientation.AMBIPHILIC);
 		
 		centaur.clearPersonalityTraits();
@@ -607,7 +607,7 @@ public class Sterope extends NPC {
 		if(this.hasClothing(clothing)) {
 			return new Value<>(true, "");
 		}
-		return new Value<>(false, "You can only equip Sterope's sex toys onto her!");
+		return new Value<>(false, "你只能在她身上装备斯特罗普的性玩具！");
 	}
 	
 	public void stripForStables() {
@@ -631,7 +631,7 @@ public class Sterope extends NPC {
 		AbstractClothing bridle = Main.game.getItemGen().generateClothing("innoxia_feral_bridle", mainColour, PresetColour.CLOTHING_SILVER, PresetColour.CLOTHING_WHITE, false);
 		bridle.clearEffects();
 		bridle.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_MOD_FETISH_BEHAVIOUR, TFModifier.TF_MOD_FETISH_BONDAGE_VICTIM, TFPotency.MAJOR_BOOST, 0));
-		bridle.setName("Bridle of Bondage");
+		bridle.setName("缰绳捆绑");
 		target.equipClothingFromNowhere(bridle, true, equipper);
 		
 		// Saddle:
@@ -639,52 +639,52 @@ public class Sterope extends NPC {
 				ClothingType.getClothingTypeFromId("innoxia_feral_saddle"), Util.newArrayListOfValues(mainColour, PresetColour.CLOTHING_SILVER, PresetColour.CLOTHING_PINK_LIGHT, PresetColour.CLOTHING_WHITE), null);
 		saddle.clearEffects();
 		saddle.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_MOD_FETISH_BEHAVIOUR, TFModifier.TF_MOD_FETISH_SUBMISSIVE, TFPotency.MAJOR_BOOST, 0));
-		saddle.setName("Saddle of Submission");
+		saddle.setName("屈城区之鞍");
 		target.equipClothingFromNowhere(saddle, true, equipper);
 		
 		// Horseshoes:
 		AbstractClothing horseshoes = Main.game.getItemGen().generateClothing("innoxia_feral_horse_shoe", PresetColour.CLOTHING_SILVER, false);
 		horseshoes.clearEffects();
 		horseshoes.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_MOD_FETISH_BEHAVIOUR, TFModifier.TF_MOD_FETISH_MASOCHIST, TFPotency.MAJOR_BOOST, 0));
-		horseshoes.setName("Horseshoes of Hurt");
+		horseshoes.setName("马蹄铁之殇");
 		target.equipClothingFromNowhere(horseshoes, true, equipper);
 		
 		// Tail bandage:
 		AbstractClothing bandage = Main.game.getItemGen().generateClothing("innoxia_feral_bandage", mainColour, false);
 		bandage.clearEffects();
 		bandage.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_MOD_FETISH_BEHAVIOUR, TFModifier.TF_MOD_FETISH_EXHIBITIONIST, TFPotency.MAJOR_BOOST, 0));
-		bandage.setName("Bandage of Betrayal");
+		bandage.setName("背叛创可贴");
 		target.equipClothingFromNowhere(bandage, true, equipper);
 	}
 	
 	public void wearNippleClamps() {
 		AbstractClothing clamps = Main.game.getItemGen().generateClothing("norin_clover_clamps_clover_clamps", PresetColour.CLOTHING_SILVER, false);
-		clamps.setName("Sterope's punishment clamps");
+		clamps.setName("斯特罗普的惩戒夹");
 		this.equipClothingFromNowhere(clamps, true, this);
 	}
 	
 	public void wearRingGag() {
 		AbstractClothing gag = Main.game.getItemGen().generateClothing("innoxia_bdsm_ringgag", PresetColour.CLOTHING_SILVER, PresetColour.CLOTHING_PINK_HOT, PresetColour.CLOTHING_SILVER, false);
-		gag.setName("Sterope's oral trainer");
+		gag.setName("斯特罗普的口交训练");
 		this.equipClothingFromNowhere(gag, true, this);
 	}
 	
 	public void wearBlindfold() {
 		AbstractClothing blindfold = Main.game.getItemGen().generateClothing("innoxia_bdsm_blindfold", PresetColour.CLOTHING_PINK_HOT, PresetColour.CLOTHING_SILVER, null, false);
-		blindfold.setName("Sterope's blindfold");
+		blindfold.setName("斯特罗普的眼罩");
 		this.equipClothingFromNowhere(blindfold, true, this);
 	}
 	
 	public void wearDildo() {
 		AbstractClothing dildo = Main.game.getItemGen().generateClothing("norin_dildos_realistic_dildo", PresetColour.CLOTHING_PINK_HOT, false);
 		dildo.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SEXUAL, TFModifier.CLOTHING_VIBRATION, TFPotency.MAJOR_BOOST, 0));
-		dildo.setName("Sterope's cunt filler");
+		dildo.setName("斯特罗普的阴道填充物");
 		this.equipClothingFromNowhere(dildo, true, this);
 	}
 	
 	public void wearAnalBeads() {
 		AbstractClothing beads = Main.game.getItemGen().generateClothing("norin_anal_beads_anal_beads", PresetColour.CLOTHING_PINK_HOT, false);
-		beads.setName("Sterope's anal beads");
+		beads.setName("斯特罗普的肛珠");
 		this.equipClothingFromNowhere(beads, true, this);
 	}
 	

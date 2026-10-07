@@ -101,9 +101,9 @@ public class Lunexis extends NPC {
 	}
 	
 	public Lunexis(boolean isImported) {
-		super(isImported, new NameTriplet("Lunexis"), "Lunettemartuilani",
-				"One of Lunette's recognised daughters, Lunexis is particularly strong, dominant, and brutal."
-						+ " Delighting in destruction, chaos, and mayhem, she is used by her elder lilin mother as a living weapon, who tasks her with destroying towns and villages which have displeased her.",
+		super(isImported, new NameTriplet("露内克西丝"), "露内特马尔图拉尼",
+				"露内克西丝作为露内特出名的女儿之一，非常的强大，支配与残酷。"
+						+ "莉琳长老将她当作行走兵器，让她摧毁令她不快的城镇和村庄，在毁灭与骚乱中享受快乐。",
 				517, Month.JANUARY, 15,
 				35,
 				null, null, null,
@@ -112,7 +112,7 @@ public class Lunexis extends NPC {
 				true);
 		
 		if(!isImported) {
-			this.setGenericName("four-armed demonic-centauresses");
+			this.setGenericName("四肢跪地的恶魔半人马雌性");
 			this.setPlayerKnowsName(false);
 		}
 	}
@@ -131,7 +131,7 @@ public class Lunexis extends NPC {
 			this.setPiercedPenis(true);
 			this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_piercing_penis_ring", PresetColour.CLOTHING_GOLD, false), true, this);
 			this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_wrist_thin_bangles", PresetColour.CLOTHING_GOLD, false), InventorySlot.TAIL, true, this);
-			this.setSurname("Lunettemartuilani");
+			this.setSurname("露内特马尔图拉尼");
 		}
 	}
 	
@@ -432,11 +432,11 @@ public class Lunexis extends NPC {
 	}
 	
 	private void addRandomRaider(Cell cell, boolean leader) {
-		List<String> defaultNamePrefixes = Util.newArrayListOfValues("angry", "furious", "wrathful", "looting", "pillaging");
-		String defaultName = "raider";
+		List<String> defaultNamePrefixes = Util.newArrayListOfValues("愤怒的", "狂怒的", "盛怒的", "四处劫掠的", "打家劫舍的");
+		String defaultName = "劫掠者";
 		if(leader) {
-			defaultNamePrefixes = Util.newArrayListOfValues("commanding", "dominant");
-			defaultName = "raider";
+			defaultNamePrefixes = Util.newArrayListOfValues("颐指气使的", "霸道的");
+			defaultName = "劫掠者";
 		}
 		try {
 			NPC npc;
@@ -461,19 +461,19 @@ public class Lunexis extends NPC {
 		int totalCells = raidersCells.size() + raidersClearedCells.size();
 		
 		if(raidersCells.size() > (totalCells/4)*3) { // 75%+ dangerous
-			sb.append("Although you've defeated the raiders who were looting this part of Themiscyra, [style.colourBad(there are still many more)] to be found throughout the town...");
+			sb.append("尽管你击退了洗劫特弥斯库拉地区的袭击者，你发现整个镇中[style.colourBad(还能看到很多)]……");
 			
 		} else if(raidersCells.size() > totalCells/2) { // 50%+ dangerous
-			sb.append("You've defeated many groups of raiders within Themiscyra, although [style.colourMinorBad(there are still more)] to be found throughout the town...");
+			sb.append("你击退了几波洗劫特弥斯库拉地区的袭击者，但你发现整个镇中[style.colourMinorBad(还有很多袭击者)]……");
 			
 		} else if(raidersCells.size() > totalCells/4) { // 25%+ dangerous
-			sb.append("You've defeated the majority of the raiders who are looting Themiscyra, and now [style.colourMinorGood(there aren't too many more)] to be found...");
+			sb.append("你击退了绝大多数洗劫特弥斯库拉地区的袭击者，现在整个镇中[style.colourMinorGood(已经看不到多少了)]……");
 			
 		} else { // 0%+ dangerous
 			if(raidersCells.size()==0) {
-				sb.append("You've defeated all of the looting raiders, and are now recognised, by Aurokaris at least, as the [style.colourExcellent(Hero"+(Main.game.getPlayer().isFeminine()?"ine":"")+" of Themiscyra)]!");
+				sb.append("你已经击败了所有劫掠者，现在被视作了特弥斯库拉的英雄(至少奥罗卡利斯这么认为)！");
 			} else {
-				sb.append("You've defeated the vast majority of the raiders who are looting Themiscyra; [style.colourGood(there are now only one or two groups left)] to defeat...");
+				sb.append("你已经击败了劫掠特弥斯库拉的绝大部分掠夺者；[style.colourGood(只需要再击败几个就够了)]……");
 			}
 		}
 		
@@ -646,7 +646,7 @@ public class Lunexis extends NPC {
 			}
 			pentagram.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_MAJOR_ATTRIBUTE, TFModifier.CORRUPTION, TFPotency.MINOR_BOOST, 0));
 			pentagram.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.RESISTANCE_LUST, TFPotency.MINOR_DRAIN, 0));
-			pentagram.setName("Cock-sleeve's Reward");
+			pentagram.setName("鸡巴套的报酬");
 			meraxis.equipClothingFromNowhere(pentagram, true, meraxis);
 			
 			meraxis.setPiercedNipples(true);
@@ -663,7 +663,7 @@ public class Lunexis extends NPC {
 							"innoxia_animal_hoof",
 							PresetColour.CLOTHING_PURPLE,
 							false,
-							new TattooWriting("Hoof Cleaner", PresetColour.CLOTHING_PURPLE, false),
+							new TattooWriting("洁蹄人", PresetColour.CLOTHING_PURPLE, false),
 							null));
 			meraxis.addTattoo(InventorySlot.HORNS,
 					new Tattoo(
@@ -677,14 +677,14 @@ public class Lunexis extends NPC {
 							"innoxia_animal_hoof",
 							PresetColour.CLOTHING_PURPLE_DARK,
 							false,
-							new TattooWriting("Step On Me!", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
+							new TattooWriting("踩我！", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
 							null));
 			meraxis.addTattoo(InventorySlot.NECK,
 					new Tattoo(
 							"innoxia_symbol_lines",
 							PresetColour.CLOTHING_PURPLE,
 							false,
-							new TattooWriting("Choke Me!", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
+							new TattooWriting("扼住我！", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
 							new TattooCounter(TattooCounterType.SEX_SUB, TattooCountType.NUMBERS, PresetColour.CLOTHING_PURPLE, false, meraxis)));
 			meraxis.addTattoo(InventorySlot.WRIST,
 					new Tattoo(
@@ -700,7 +700,7 @@ public class Lunexis extends NPC {
 							"innoxia_symbol_tribal",
 							PresetColour.CLOTHING_PINK_HOT,
 							false,
-							new TattooWriting("~Fill Me Up~", PresetColour.CLOTHING_PINK_HOT, false, TattooWritingStyle.ITALICISED),
+							new TattooWriting("~填满我~", PresetColour.CLOTHING_PINK_HOT, false, TattooWritingStyle.ITALICISED),
 							new TattooCounter(TattooCounterType.CUM_TAKEN, TattooCountType.NUMBERS, PresetColour.CLOTHING_PINK_HOT, false, meraxis)));
 			meraxis.addTattoo(InventorySlot.CHEST,
 					new Tattoo(
@@ -709,14 +709,14 @@ public class Lunexis extends NPC {
 							PresetColour.CLOTHING_PURPLE_ROYAL,
 							PresetColour.CLOTHING_PURPLE,
 							false,
-							new TattooWriting("~Slap My Tits~", PresetColour.CLOTHING_PINK_HOT, false, TattooWritingStyle.ITALICISED),
+							new TattooWriting("~抽我奶子~", PresetColour.CLOTHING_PINK_HOT, false, TattooWritingStyle.ITALICISED),
 							new TattooCounter(TattooCounterType.UNIQUE_SEX_PARTNERS, TattooCountType.NUMBERS, PresetColour.CLOTHING_PINK_HOT, false, meraxis)));
 			meraxis.addTattoo(InventorySlot.NIPPLE,
 					new Tattoo(
 							"innoxia_knot_spiral",
 							PresetColour.CLOTHING_RED_BURGUNDY,
 							false,
-							new TattooWriting("~Pinch & Pull~", PresetColour.CLOTHING_RED, false, TattooWritingStyle.ITALICISED),
+							new TattooWriting("~随便扯吧~", PresetColour.CLOTHING_RED, false, TattooWritingStyle.ITALICISED),
 							null));
 			meraxis.addTattoo(InventorySlot.HAND,
 					new Tattoo(
@@ -743,7 +743,7 @@ public class Lunexis extends NPC {
 							PresetColour.CLOTHING_PURPLE,
 							PresetColour.CLOTHING_PURPLE,
 							false,
-							new TattooWriting("Foal Factory", PresetColour.CLOTHING_PURPLE, false),
+							new TattooWriting("马驹的产房", PresetColour.CLOTHING_PURPLE, false),
 							new TattooCounter(TattooCounterType.OFFSPRING_BIRTHED, TattooCountType.NUMBERS, PresetColour.CLOTHING_PURPLE, false, meraxis)));
 			meraxis.addTattoo(InventorySlot.FINGER,
 					new Tattoo(
@@ -757,7 +757,7 @@ public class Lunexis extends NPC {
 							"innoxia_knot_trinity",
 							PresetColour.CLOTHING_PURPLE,
 							false,
-							new TattooWriting("Trip Me Up!", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
+							new TattooWriting("绑住我！", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
 							null));
 			meraxis.addTattoo(InventorySlot.LEG,
 					new Tattoo(
@@ -784,7 +784,7 @@ public class Lunexis extends NPC {
 							PresetColour.CLOTHING_BLACK,
 							PresetColour.CLOTHING_PINK_HOT,
 							false,
-							new TattooWriting("~Knock Me Up~", PresetColour.CLOTHING_PINK_HOT, false, TattooWritingStyle.ITALICISED),
+							new TattooWriting("~搞大我的肚子~", PresetColour.CLOTHING_PINK_HOT, false, TattooWritingStyle.ITALICISED),
 							new TattooCounter(TattooCounterType.PREGNANCY, TattooCountType.TALLY, PresetColour.CLOTHING_PINK_HOT, false, meraxis)));
 			meraxis.addTattoo(InventorySlot.ANUS,
 					new Tattoo(
@@ -793,14 +793,14 @@ public class Lunexis extends NPC {
 							PresetColour.CLOTHING_RED_VERY_DARK,
 							PresetColour.CLOTHING_PURPLE,
 							false,
-							new TattooWriting("Rough Anal Only!", PresetColour.CLOTHING_RED, false, TattooWritingStyle.BOLD),
+							new TattooWriting("只准暴力肛交！", PresetColour.CLOTHING_RED, false, TattooWritingStyle.BOLD),
 							new TattooCounter(TattooCounterType.CUM_TAKEN_ANUS, TattooCountType.NUMBERS, PresetColour.CLOTHING_RED, false, meraxis)));
 			meraxis.addTattoo(InventorySlot.VAGINA,
 					new Tattoo(
 							"innoxia_animal_hoof",
 							PresetColour.CLOTHING_PURPLE_DARK,
 							false,
-							new TattooWriting("Break This Cunt!", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
+							new TattooWriting("用烂这条缝！", PresetColour.CLOTHING_PURPLE, false, TattooWritingStyle.BOLD),
 							new TattooCounter(TattooCounterType.CUM_TAKEN_PUSSY, TattooCountType.NUMBERS, PresetColour.CLOTHING_PURPLE, false, meraxis)));
 		// Increment stats for tattoo counters:
 			applyTrainingSexCounts(meraxis, new SexType(SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS), 1);
@@ -826,7 +826,7 @@ public class Lunexis extends NPC {
 						"innoxia_symbol_tribal",
 						PresetColour.CLOTHING_PINK,
 						false,
-						new TattooWriting(Main.game.isAnalContentEnabled()?"Rimjob Whore":"Cunt Kisser", PresetColour.CLOTHING_PINK, false),
+						new TattooWriting(Main.game.isAnalContentEnabled()?"吻肛妓":"舔穴姬", PresetColour.CLOTHING_PINK, false),
 						null));
 	}
 	

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Elis tourism board]]></name>
-	<tooltipDescription><![CDATA[This particular office is signposted as being home to the 'Elis tourism board'.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the office of the 'Elis tourism board' in the town hall]]></virginityLossDescription>
+	<name><![CDATA[伊利斯旅游局]]></name>
+	<tooltipDescription><![CDATA[这个办公室被特别标明属于伊利斯旅游局。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在市镇议会中的伊利斯旅游局办公室里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>office</svgName>
 	<colour>BASE_BLUE_STEEL</colour>

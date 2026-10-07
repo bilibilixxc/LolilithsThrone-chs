@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[bar]]></name>
-	<tooltipDescription><![CDATA[Positioned in the centre of the floor, the circular bar at 'The Centaur's Sword' is able to accommodate numerous tauric customers at once.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the bar in 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[酒吧]]></name>
+	<tooltipDescription><![CDATA[“半人马之剑”酒馆将圆形吧台置于中央，得以同时容纳多位半兽身人顾客。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在半人马之剑的吧台前。]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

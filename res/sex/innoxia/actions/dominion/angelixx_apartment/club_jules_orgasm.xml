@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 
 	<!-- TODO this is currently unused -->
@@ -45,12 +45,12 @@
 	
 	<title><![CDATA[
 		#IF(flags.hasFlag(FLAG_innoxia_angelixx_club_jules_targeting_player))
-			Finish in [pc.namePos] pussy
+			在[pc.namePos]的小穴内完事
 		#ELSE
-			Finish in Angelixx's pussy
+			在安吉莉克丝的小穴内完事
 		#ENDIF
 	]]></title>
-	<tooltip><![CDATA[Cum deep in one of these slut's pussies.]]></tooltip>
+	<tooltip><![CDATA[把精液深填于这荡妇的小穴。]]></tooltip>
 	
 	<descriptions>
 		<description>
@@ -58,11 +58,11 @@
 				[#flags.hasFlag(FLAG_innoxia_angelixx_club_jules_targeting_player)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				You present yourself to Jules. Angelixx guides his cock to your cunt before kissing you.
+				你向朱尔斯展示自己。安吉莉克丝将他的鸡巴引向你的小穴，然后亲吻你。
 				
-				<br/><br/>The zebra-boy rams his dick into your cunt, and with a deep grunt he thrusts into you as deep as he can.
+				<br/><br/>斑马男将肉棒捅入你的小穴，闷哼着尽力深入。
 				
-				<br/><br/>He cums hard and stuffs your cunt/womb full of his seed.
+				<br/><br/>他猛地喷射，让你的小穴与子宫塞满了他的种子。
 			]]></text>
 		</description>
 		<description>
@@ -70,11 +70,11 @@
 				[#!flags.hasFlag(FLAG_innoxia_angelixx_club_jules_targeting_player)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				You present Angelixx to Jules. You guide his cock to Angelixx's cunt, before kissing the succubus.
+				你向朱尔斯献上安吉莉克丝，将他的鸡巴引向安吉莉克丝的小穴，然后亲吻魅魔。
 				
-				<br/><br/>The zebra-boy rams his dick into Angelixx's cunt, and with a deep grunt he thrusts into her as deep as he can. "Tight as ever, slut."
+				<br/><br/>斑马男将肉棒捅入安吉莉克丝的小穴，闷哼着尽力深入。“真紧啊，荡妇。”
 				
-				<br/><br/>He cums hard and stuffs the succubus's cunt/womb full of his seed.
+				<br/><br/>他猛地喷射，让魅魔的小穴与子宫塞满了他的种子。
 			]]></text>
 		</description>
 	</descriptions>

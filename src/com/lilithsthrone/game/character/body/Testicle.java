@@ -125,7 +125,7 @@ public class Testicle implements BodyPartInterface {
 
 	public String setTesticleSize(GameCharacter owner, int testicleSize) {
 		if(owner!=null && !owner.hasPenisIgnoreDildo()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		int oldSize = this.testicleSize;
@@ -137,20 +137,20 @@ public class Testicle implements BodyPartInterface {
 		}
 		
 		if (sizeChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] [npc.balls] [npc.do]n't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.balls]的大小没有变化……)]</p>");
 			
 		} else if (sizeChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a lewd moan as [npc.she] [npc.verb(feel)] [npc.her] [npc.balls] suddenly swell and [style.boldGrow(grow larger)].<br/>"
-						+ "[npc.She] now [npc.has] [style.boldSex(" + owner.getTesticleSize().getDescriptor() + " [pc.balls])]!"
+						+ "[npc.Name]发出一声淫荡的呻吟，感到[npc.her]的[npc.balls]忽然涨了起来，[style.boldGrow(变得更大)]了。<br/>"
+						+ "[npc.She]现在拥有[style.boldSex(" + owner.getTesticleSize().getDescriptor() + "的[pc.balls])]！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a surprised gasp as [npc.she] [npc.verb(feel)] [npc.her] [npc.balls] suddenly [style.boldShrink(shrink)].<br/>"
-						+ "[npc.She] now has [style.boldSex(" +owner.getTesticleSize().getDescriptor()+ " [npc.balls])]!"
+						+ "[npc.Name]倒吸一口凉气，感到[npc.balls]忽然[style.boldShrink(缩了下去)]。<br/>"
+						+ "[npc.She]现在拥有[style.boldSex(" +owner.getTesticleSize().getDescriptor()+ "的[npc.balls])]！"
 					+ "</p>");
 		}
 	}
@@ -168,7 +168,7 @@ public class Testicle implements BodyPartInterface {
 		}
 		
 		if(owner.getTesticleCount() == testicleCount || !owner.hasPenisIgnoreDildo()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		boolean removingTesticles = this.testicleCount > testicleCount;
@@ -177,15 +177,15 @@ public class Testicle implements BodyPartInterface {
 		if(removingTesticles) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads down into [npc.namePos] [npc.balls], and [npc.she] [npc.verb(let)] out a shocked cry as [npc.she] [npc.verb(feel)] some of them shrinking away and [style.boldShrink(disappearing)].<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric([npc.a_balls])]."
+						+ "一股刺痒感蔓延至[npc.namePos]的[npc.balls]，[npc.she]忽然惊呼一声，感到有些[npc.balls]缩了下去，最后[style.boldShrink(消失)]了。<br/>"
+						+ "过了一会儿，[npc.sheIs]最终得到了[style.boldTfGeneric([npc.a_balls])]。"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads down into [npc.namePos] [npc.balls], and [npc.she] [npc.verb(let)] out a little cry as [npc.she] [npc.verb(feel)] them [style.boldGrow(multiplying)].<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric([npc.a_balls])]."
+						+ "一股刺痒感蔓延至[npc.namePos]的[npc.balls]，[npc.she]忽然轻呼一声，感到有的[npc.balls]开始[style.boldGrow(增殖起来)]。<br/>"
+						+ "过了一会儿，[npc.sheIs]最终得到了[style.boldTfGeneric([npc.a_balls])]。"
 					+ "</p>");
 		}
 	}
@@ -204,7 +204,7 @@ public class Testicle implements BodyPartInterface {
 		}
 		
 		if(owner.isInternalTesticles() == internal || !owner.hasPenisIgnoreDildo()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 
 		this.internal = internal;
@@ -212,16 +212,16 @@ public class Testicle implements BodyPartInterface {
 		if(internal) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] [npc.her] [npc.balls] tightening and [style.boldShrink(withdrawing)] up into [npc.her] groin,"
-							+ " and [npc.she] [npc.verb(let)] out a shocked cry as [npc.she] [npc.verb(feel)] them shift up to sit inside [npc.her] body.<br/>"
-						+ "[npc.Her] [npc.balls+] [style.boldTfGeneric(are now internal)]."
+						+ "[npc.Name]感觉自己的[npc.balls]紧紧收缩了一下，便[style.boldShrink(退回)]了腹股沟内部，"
+							+ "[npc.she]意识到[npc.balls]现在已经坐落在身体内部，不禁惊呼一声。<br/>"
+						+ "[npc.Her][npc.balls+][style.boldTfGeneric(现在位于体内)]。"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] [npc.her] internal [npc.balls] slackening and [style.boldGrow(dropping down)], and [npc.she] [npc.verb(let)] out a deep [npc.moan] as they settle down into an external sack.<br/>"
-						+ "[npc.Her] [npc.balls+] [style.boldTfGeneric(are now external)]."
+						+ "[npc.Name]感觉位于体内的[npc.balls]忽然一松，[style.boldGrow(垂落下来)]，安稳地待在了外部的囊袋之中，[npc.she]这才长长地[npc.moan]一声。<br/>"
+						+ "[npc.Her][npc.balls+][style.boldTfGeneric(现在位于体外)]。"
 					+ "</p>");
 		}
 	}
@@ -249,25 +249,25 @@ public class Testicle implements BodyPartInterface {
 		}
 		
 		if(cumChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The amount of [npc.cum] which [npc.name] [npc.is] able to produce doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]能够产出的[npc.cum]量没有变化……)]</p>");
 		}
 		
 		String cumDescriptor = getCumStorage().getDescriptor();
 		if(cumChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] a strange bubbling and churning taking place deep within [npc.her] [npc.balls],"
-							+ " and [npc.she] can't help but let out [npc.a_moan+] as a small squirt of precum suddenly drools out from [npc.her] [npc.cock];"
-								+ " clear evidence that [npc.her] [npc.cum] production has [style.boldGrow(increased)].<br/>"
-						+ "[npc.SheIsFull] now able to produce [style.boldSex(" + cumDescriptor + " [npc.cum])]!"
+						+ "[npc.Name]感觉到[npc.balls]深处催生出一股奇怪的躁动翻腾的感觉，"
+							+ "忽然一小股先走液从[npc.her]的[npc.cock]中流了出来，害得[npc.she]不禁发出了[npc.a_moan+]；"
+								+ "这意味着[npc.her]的[npc.cum]产量[style.boldGrow(增加)]了。<br/>"
+						+ "[npc.SheIsFull]现在能够产生[style.boldSex(" + cumDescriptor + "[npc.cum])]！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] a strange sucking sensation taking place deep within [npc.her] [npc.balls],"
-							+ " and [npc.she] can't help but let out a shocked gasp as [npc.she] [npc.verb(realise)] that [npc.sheIs] feeling [npc.her] [npc.cum] production [style.boldShrink(drying up)].<br/>"
-						+ "[npc.SheIsFull] now able to produce [style.boldSex(" + cumDescriptor + " [npc.cum])]!"
+						+ "[npc.Name]感觉到[npc.balls]深处催生出一股奇怪的吸取感，"
+							+ "[npc.she]忽然禁不住倒吸了一口凉气，意识到[npc.her]的[npc.cum]产量竟有些[style.boldShrink(枯涸)]了。<br/>"
+						+ "[npc.SheIsFull]现在能够产生[style.boldSex(" + cumDescriptor + "[npc.cum])]！"
 					+ "</p>");
 		}
 	}
@@ -302,14 +302,14 @@ public class Testicle implements BodyPartInterface {
 				storedCumSB.append("<p style='text-align:center;'>[style.italicsCum(");
 			}
 			storedCumSB.append(UtilText.returnStringAtRandom(
-					Units.fluid(cumChange, Units.UnitType.LONG)+" of [npc.cum+] squirts out of [npc.her] [npc.cock+].",
-					Units.fluid(cumChange, Units.UnitType.LONG)+" of [npc.cum+] shoots out of [npc.her] [npc.cock+].",
-					Units.fluid(cumChange, Units.UnitType.LONG)+" of [npc.cum+] spurts out of [npc.her] [npc.cock+]."));
+					Units.fluid(cumChange, Units.UnitType.LONG)+"[npc.cum+]从[npc.her][npc.cock+]中挤出。",
+					Units.fluid(cumChange, Units.UnitType.LONG)+"[npc.cum+]从[npc.her][npc.cock+]中射出。",
+					Units.fluid(cumChange, Units.UnitType.LONG)+"[npc.cum+]从[npc.her][npc.cock+]中喷出。"));
 			if(withFormatting) {
 				storedCumSB.append(")]");
 			}
 			if(this.cumStored==0) {
-				storedCumSB.append("<br/><i>[npc.Name] now [npc.has] no more [npc.cum] stored in [npc.her] [npc.balls]!</i>");
+				storedCumSB.append("<br/><i>[npc.Name]的[npc.balls]现在不再储存[npc.cum]了！</i>");
 			}
 			if(withFormatting) {
 				storedCumSB.append("</p>");
@@ -354,25 +354,25 @@ public class Testicle implements BodyPartInterface {
 		}
 		
 		if (regenerationChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos] rate of [npc.cum] regeneration doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]的[npc.cum]再生速率没有变化……)]</p>");
 		}
 		
 		String regenerationDescriptor = getCumProductionRegeneration().getName();
 		if (regenerationChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] an alarming bubbling and churning taking place deep within [npc.her] [npc.balls],"
-							+ " and [npc.she] can't help but let out [npc.a_moan+] as a small squirt of precum suddenly drools out from [npc.her] [npc.cock];"
-								+ " clear evidence that [npc.her] [npc.cum] regeneration has [style.boldGrow(increased)].<br/>"
-						+ "[npc.Her] rate of [npc.cum] regeneration is now [style.boldSex(" + regenerationDescriptor + ")] ("+Units.fluid(cumRegeneration)+"/day)!"
+						+ "[npc.Name]感觉到[npc.balls]深处催生出一股令人不安的躁动翻腾的感觉，"
+							+ "忽然一小股先走液从[npc.her]的[npc.cock]中流了出来，害得[npc.she]不禁发出了[npc.a_moan+]；"
+								+ "这意味着[npc.her]的[npc.cum]再生速率[style.boldGrow(增加)]了。<br/>"
+						+ "[npc.Her]的[npc.cum]再生速率现在[style.boldSex(" + regenerationDescriptor + ")]("+Units.fluid(cumRegeneration)+"/天)！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] strange sucking sensation taking place deep within [npc.her] [npc.balls],"
-							+ " and [npc.she] can't help but let out a shocked gasp as [npc.she] [npc.verb(realise)] that [npc.sheIs] feeling [npc.her] [npc.cum] regeneration [style.boldShrink(decreasing)].<br/>"
-						+ "[npc.Her] rate of [npc.cum] regeneration is now [style.boldSex(" + regenerationDescriptor + ")] ("+Units.fluid(cumRegeneration)+"/day)!"
+						+ "感觉到[npc.balls]深处催生出一股奇怪的吸取感，"
+							+ "[npc.she]忽然禁不住倒吸了一口凉气，意识到[npc.her]的[npc.cum]再生速率竟然[style.boldShrink(下降)]了。<br/>"
+						+ "[npc.Her]的[npc.cum]再生速率现在[style.boldSex(" + regenerationDescriptor + ")]("+Units.fluid(cumRegeneration)+"/天)！"
 					+ "</p>");
 		}
 	}
@@ -397,26 +397,26 @@ public class Testicle implements BodyPartInterface {
 		}
 		
 		if (expulsionChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos] rate of [npc.cum] expulsion doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]的[npc.cum]射出量没有变化……)]</p>");
 		}
 		
 		String expulsionDescriptor = getCumExpulsion().getDescriptor();
 		if (expulsionChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] suddenly [npc.verb(feel)] a strange tightening and building up of pressure deep within [npc.her] [npc.balls],"
-								+ " and [npc.she] can't help but let out [npc.a_moan+] as a small amount of precum powerfully squirts out from [npc.her] [npc.cock];"
-									+ " clear evidence that [npc.her] [npc.cum] expulsion has [style.boldGrow(increased)].<br/>"
-						+ "[npc.She] will now expel [style.boldSex(" + UtilText.generateSingularDeterminer(expulsionDescriptor) + " "+expulsionDescriptor+")] amount of stored cum at each orgasm!"
+						+ "[npc.Name]忽然感觉到[npc.balls]深处催生出一股奇怪的收缩感和压迫感，"
+								+ "忽然一小股先走液从[npc.her]的[npc.cock]中喷射而出，让[npc.she]不禁发出一声[npc.a_moan+]；"
+									+ "这意味着[npc.her]的[npc.cum]射出量[style.boldGrow(增加)]了。<br/>"
+						+ "[npc.She]现在每次高潮时射出存储的[style.boldSex("+expulsionDescriptor+")]精液！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] suddenly [npc.verb(feel)] a strange loosening and reduction of pressure deep within [npc.her] [npc.balls],"
-							+ " and [npc.she] can't help but let out [npc.a_moan+] as a small amount of precum weakly dribbles out from [npc.her] [npc.cock];"
-								+ " clear evidence that [npc.her] [npc.cum] expulsion has [style.boldShrink(decreased)].<br/>"
-						+ "[npc.She] will now expel [style.boldSex(" + UtilText.generateSingularDeterminer(expulsionDescriptor) + " "+expulsionDescriptor+")] amount of stored cum at each orgasm!"
+						+ "[npc.Name]忽然感觉到[npc.balls]深处催生出一股奇怪的松弛感，压力也有所下降，"
+							+ "忽然一小股先走液从[npc.her]的[npc.cock]中流淌而出，让[npc.she]不禁发出一声[npc.a_moan+]；"
+								+ "这意味着[npc.her]的[npc.cum]射出量[style.boldShrink(减少)]了。<br/>"
+						+ "[npc.She]现在每次高潮时射出存储的[style.boldSex("+expulsionDescriptor+")]精液！"
 					+ "</p>");
 		}
 	}

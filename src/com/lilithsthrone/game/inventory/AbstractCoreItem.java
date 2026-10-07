@@ -160,7 +160,7 @@ public abstract class AbstractCoreItem implements XMLSaving {
 	}
 
 	public String getDisplayName(boolean withRarityColour) {
-		return Util.capitaliseSentence(UtilText.generateSingularDeterminer(name))+ " "+ (withRarityColour ? ("<span style='color: " + rarity.getColour().toWebHexString() + ";'>" + name + "</span>") : name);
+		return Util.capitaliseSentence(UtilText.generateSingularDeterminer(name))+ ""+ (withRarityColour ? ("<span style='color: " + rarity.getColour().toWebHexString() + ";'>" + name + "</span>") : name);
 	}
 	
 	public String getDisplayNamePlural(boolean withRarityColour) {

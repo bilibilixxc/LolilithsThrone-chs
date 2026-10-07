@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[penetration ruler]]></name>
+		<name><![CDATA[插入刻度尺]]></name>
 		
-		<description><![CDATA[A simple depiction of a ruler, with markings showing how much pleasure the owner is receiving from being penetrated to that depth.]]></description> 
+		<description><![CDATA[一个简单的刻度尺图形，上面有标记，显示所有者从被插入到该深度时所获得的快感程度。]]></description> 
 		
-		<bodyOverviewDescription><![CDATA[a simple depiction of a ruler, with markings showing how much pleasure the owner is receiving from being penetrated to that depth]]></bodyOverviewDescription> 
+		<bodyOverviewDescription><![CDATA[一个简单的刻度尺图形，上面有标记，显示所有者从被插入到该深度时所获得的快感程度。]]></bodyOverviewDescription> 
 		
 		<availabilityRequirements unique="false"/>
 		

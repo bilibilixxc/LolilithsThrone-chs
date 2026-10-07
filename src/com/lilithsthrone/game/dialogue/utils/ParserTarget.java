@@ -140,7 +140,7 @@ public class ParserTarget {
 			"style",
 			"game",
 			"util"),
-			"Returns the same as 'pc', but should be used for style methods such as style.bold or style.italics or conditional methods such as game.isArcaneStorm.") {
+			"与“pc”返回一样的值，但应该在style方法中使用，如style.bold、style.italics，或者说有条件的方法例如game.isArcaneStorm。") {
 				@Override
 				public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) {
 					return Main.game.getPlayer();
@@ -151,7 +151,7 @@ public class ParserTarget {
 			"unit",
 			"units",
 			"game"),
-			"Returns the same as 'pc', but should be used for unit methods such as unit.size.") {
+			"与“pc”返回一样的值，但应该在unit方法中使用，如unit.size。") {
 		@Override
 		public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) {
 			return Main.game.getPlayer();
@@ -160,7 +160,7 @@ public class ParserTarget {
 
 	public static AbstractParserTarget ITEM = new AbstractParserTarget(Util.newArrayListOfValues(
 			"item"),
-			"The 'active' item. <b>Should only be used within a parsing event which directly refers to an item, such as a weapon's name, a clothing's displacement text, or an item's usage text.</b>") {
+			"“选中”的物品。<b>应仅在解析事件中直接引用物品时使用，例如武器名称、衣物移开文本或物品使用说明。</b>") {
 		@Override
 		public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) {
 			throw new NullPointerException();
@@ -170,7 +170,7 @@ public class ParserTarget {
 	public static AbstractParserTarget PC = new AbstractParserTarget(Util.newArrayListOfValues(
 			"pc",
 			"player"),
-			"The player character.") {
+			"玩家角色。") {
 				@Override
 				public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) {
 					return Main.game.getPlayer();
@@ -191,11 +191,11 @@ public class ParserTarget {
 			"npc4",
 			"npc5",
 			"npc6"),
-			"The currently 'active' NPC.<br/>"
-			+"<b>The tag 'npc' can be extended with a number, starting at 1, to signify which npc in the scene it is referring to!</b> e.g. 'npc1' is the first npc, 'npc2' is the second, etc.<br/>"
-			+ "If in <b>combat</b>, it returns your opponent.<br/>"
-			+ "If in <b>sex</b>, it returns your partner.<br/>"
-			+ "<b>Otherwise</b>, it returns the most important NPC in the scene.") {
+			"当前 “活动” 的 NPC.<br/>"
+			+"<b>'npc'标签可以后接从1开始的数字，以表示是场景中的哪一位npc！</b>例如：'npc1'是第一位npc，'npc2'是第二位，等等。<br/>"
+			+ "如果在<b>战斗</b>中，会返回你的敌人。<br/>"
+			+ "如果在<b>性交</b>中，会返回你的性交对象。<br/>"
+			+ "<b>其他情况</b>，则返回以场景中最重要的npc。") {
 				@Override
 				public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) throws NullPointerException {
 					if(specialNPCList!=null && !specialNPCList.isEmpty()) {
@@ -250,8 +250,8 @@ public class ParserTarget {
 			"com4",
 			"com5",
 			"com6"),
-			"The companions of the player.<br/>"
-			+"<b>The tag 'com' can be extended with a number, starting at 1, to signify which companion it is referring to!</b> e.g. 'com1' is the first companion, 'com2' is the second, etc.") {
+			"玩家的盟友。<br/>"
+			+"<b>'com'标签可以后接从1开始的数字，以表示某一位盟友！</b>例如：'com1'是第一位盟友，'com2'是第二位，等等。") {
 				@Override
 				public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) throws NullPointerException {
 					if(Main.game.getPlayer().getCompanions().size()>=1) {
@@ -281,8 +281,8 @@ public class ParserTarget {
 			"ncom4",
 			"ncom5",
 			"ncom6"),
-			"The non-unique npcs who are in the player's cell and who are not members of the player's party.<br/>"
-			+"<b>The tag 'ncom' can be extended with a number, starting at 1, to signify which npc it is referring to!</b> e.g. 'ncom1' is the first npc, 'ncom2' is the second, etc.") {
+			"非玩家团队，且在玩家栏中的非特殊npc。<br/>"
+			+"<b>'ncom'可以后接从1开始的数字，以表示某一位npc！</b>例如：'ncom1'是第一个Npc，'ncom2'是第二个，等等。") {
 				@Override
 				public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) throws NullPointerException {
 					if(!Main.game.getNonCompanionCharactersPresent().isEmpty()) {
@@ -306,7 +306,7 @@ public class ParserTarget {
 	public static AbstractParserTarget ELEMENTAL = new AbstractParserTarget(Util.newArrayListOfValues(
 			"el",
 			"elemental"),
-			"The player's elemental. <b>Should only ever be used when you know for certain that the player's elemental has been created!</b>") {
+			"玩家的元素。<b>只有在确认元素被创造后方可使用！</b>") {
 		@Override
 		public GameCharacter getCharacter(String tag, List<GameCharacter> specialNPCList) {
 			if(!Main.game.getPlayer().hasDiscoveredElemental()) {

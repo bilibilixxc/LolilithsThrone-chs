@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_raptor</race>
 	<colour>BASE_BROWN_DARK</colour>
@@ -38,34 +38,34 @@
 	<iconName displaySize="80">eagle</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>The Sharpest Talons</bookName>
+	<bookName><![CDATA[极锐之爪]]></bookName>
 	<basicDescriptionId>RAPTOR_BASIC</basicDescriptionId>
 	<advancedDescriptionId>RAPTOR_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[eagle-morph]]></name>
-	<namePlural><![CDATA[eagle-morphs]]></namePlural>
-	<singularMaleName><![CDATA[eagle-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[eagle-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[eagle-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[eagle-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic eagle, known as a 'eagle-morph' when bipedal, and a 'eagle-taur' when the lower body is that of a feral eagle.]]></description>
+	<name><![CDATA[鹰化形]]></name>
+	<namePlural><![CDATA[鹰化形]]></namePlural>
+	<singularMaleName><![CDATA[鹰男]]></singularMaleName>
+	<singularFemaleName><![CDATA[鹰女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[鹰男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[鹰女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的鹰，当下肢拟人时被称为鹰化形，而当下肢呈现出鹰兽态时则称为半鹰人。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[tengu]]></name>
-			<namePlural><![CDATA[tengu]]></namePlural>
-			<singularMaleName><![CDATA[tengu]]></singularMaleName>
-			<singularFemaleName><![CDATA[tengu]]></singularFemaleName>
-			<pluralMaleName><![CDATA[tengu]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[tengu]]></pluralFemaleName>
+			<name><![CDATA[天狗]]></name>
+			<namePlural><![CDATA[天狗]]></namePlural>
+			<singularMaleName><![CDATA[天狗]]></singularMaleName>
+			<singularFemaleName><![CDATA[天狗]]></singularFemaleName>
+			<pluralMaleName><![CDATA[天狗]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[天狗]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[eagle]]></feralName>
-		<feralNamePlural><![CDATA[eagles]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[eagle]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[eagle]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[eagles]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[eagles]]></feralPluralFemaleName>
+		<feralName><![CDATA[鹰]]></feralName>
+		<feralNamePlural><![CDATA[鹰]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[鹰]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[鹰]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[鹰]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[鹰]]></feralPluralFemaleName>
 		<legConfiguration>AVIAN</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>90</size>
@@ -78,7 +78,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] speed and power helps [npc.herHim] to land particularly hard-hitting strikes in combat.
+		[npc.NamePos]的速度和力量有助于[npc.herHim]在战斗中造成超级强力的打击。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="15">MAJOR_PHYSIQUE</attribute>

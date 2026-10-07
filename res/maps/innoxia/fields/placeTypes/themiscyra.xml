@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Themiscyra]]></name>
-	<tooltipDescription><![CDATA[Hidden away deep in the Foloi forests, the town of Themiscyra is home to an all-female population, who are known as the Amazons.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[near Themiscyra]]></virginityLossDescription>
+	<name><![CDATA[特弥斯库拉]]></name>
+	<tooltipDescription><![CDATA[隐藏在弗洛伊森林深处的特弥斯库拉是亚马逊人的家园，其人口完全由女性组成。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[特弥斯库拉附近]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>false</sexBlockedFromCharacterPresent>
 	<colour>BASE_CRIMSON</colour><!--BASE_BLUE_LIGHT-->
 	<backgroundColour>MAP_BACKGROUND_GREEN_DARK</backgroundColour>

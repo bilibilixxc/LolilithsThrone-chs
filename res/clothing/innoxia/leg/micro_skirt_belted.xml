@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[belted microskirt]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[belted microskirts]]></namePlural>
-		<description><![CDATA[Consisting of little more than a belt holding up a narrow band of tight-fitting fabric, this microskirt is so short that it leaves its wearer's private parts completely exposed.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[腰带超短裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[腰带超短裙]]></namePlural>
+		<description><![CDATA[这条超短裙仅由一条腰带系着窄窄的紧身布料组成，短到让穿着者的私处完全暴露在外。]]></description> 
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>LEG</slot>
@@ -34,27 +34,22 @@
 	</coreAttributes>
 	
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(step)] into the microskirt and [npc.verb(pull)] it up around [npc.her] waist, before tightening the belt to hold it in place.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(get)] [npc2.name] to step into the microskirt, before pulling it up around [npc2.her] waist and then tightening the belt to hold it in place.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step into the microskirt, before yanking it up around [npc2.her] waist and then cruelly tightening the belt to hold it in place.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]穿上超短裙，把裙子提到[npc.her]的腰部，然后扣上前面的腰带。]]></self>
+    <other><![CDATA[
+[npc.Name]让[npc2.name]踏入超短裙，然后拉上以合适[npc2.her]的腰部，最后系好腰带。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强迫[npc2.name]踩进超短裙，然后猛地将它们拉上[npc2.her]的腰部并系紧腰带。]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the belt holding up [npc.her] microskirt, before slipping it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the belt holding up [npc2.namePos] microskirt, before slipping it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] the belt holding up [npc2.namePos] microskirt, before yanking it off.]]>
-    </otherRough>
+    <self><![CDATA[[npc.Name]解开超短裙上的腰带，然后脱下它。
+]]></self>
+    <other><![CDATA[[npc.Name]解开[npc2.namePos]超短裙上的腰带，然后脱下它。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地解开[npc2.namePos]的超短裙，然后从[npc2.her]的身上扯下。
+]]></otherRough>
   </displacementText>
   
 </clothing>

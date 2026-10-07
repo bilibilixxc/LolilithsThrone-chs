@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -8,25 +8,25 @@
 		
 		<twoHanded>false</twoHanded>
 		
-		<determiner><![CDATA[the]]></determiner>
+		<determiner><![CDATA[​]]></determiner>
 		
-		<name><![CDATA[arcane lightning ring]]></name>
+		<name><![CDATA[奥术闪电戒指]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[arcane lightning rings]]></namePlural>
+		<namePlural pluralByDefault="false"><![CDATA[奥术闪电戒指]]></namePlural>
 		
-		<description><![CDATA[Arthur was able to extract the remaining power of the arcane lightning globe into a smaller crystal, which has been fitted onto this ring. Just like its previous iteration, this tiny crystal globe quickly fills with a crackling, swirling maelstrom of arcane lightning when equipped.]]></description> 
+		<description><![CDATA[亚瑟将奥术闪电球的剩余能量提取到一个更小的水晶中，并将其安装在这枚戒指上。和之前的版本一样，这个小水晶球在装备后会迅速充满噼啪作响的奥术闪电漩涡。]]></description> 
 		
-		<attackDescriptor>lightning strike</attackDescriptor>
+		<attackDescriptor><![CDATA[闪电打击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Fire a bolt of arcane lightning at [npc2.name].</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[向[npc2.name]发射一道奥术闪电。]]></attackTooltipDescription>
 		
 		<rarity>QUEST</rarity> 
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(focus)] on [npc.her] arcane lightning ring and [npc.verb(prepare)] to unleash its power.]]></equipText>
+		<equipText><![CDATA[[npc.Name]聚焦[npc.her]的奥术闪电简戒指，随时准备释放它的威能。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] away the arcane lightning ring.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]收起奥术闪电戒指。]]></unequipText>
 		
 		<imageName>lightning_globe_ring_inactive.svg</imageName> 
 		
@@ -76,20 +76,20 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Harnessing the power of the arcane lightning ring, [npc.name] [npc.verb(unleash)] a blast of bright pink lightning directly at [npc2.name]!
+		奥术闪电戒指威光闪耀，忽的迸发出一道明亮的粉色闪电，直奔[npc2.name]面门而去！
 		]]></hitText>
 		<hitText><![CDATA[
 		#IF(npc.isFeral())
-			Using the power of the arcane lightning ring, [npc.name] [npc.verb(launch)] a dazzling strike of arcane lightning directly at [npc2.name]!
+			[npc.name]借助奥术闪电戒指，释放出一道耀眼的奥术闪电直袭[npc2.name]！
 		#ELSE
-			Using the power of the arcane lightning ring, [npc.name] [npc.verb(launch)] a dazzling strike of arcane lightning directly at [npc2.name]!
+			[npc.name]借助奥术闪电戒指。忽的，冰晶法球迸发光芒，一道耀眼的奥术闪电袭向[npc2.name]！
 		#ENDIF
 		]]></hitText>
 		<hitText><![CDATA[
 		#IF(npc.isFeral())
-			A bright pink flash of arcane lightning streaks out from [npc.namePos] arcane lightning ring, hitting [npc2.name] directly in the chest!
+			一道亮粉色的奥术闪电从[npc.namePos]的戒指中迸射而出，直接命中了[npc2.name]的胸口！
 		#ELSE
-			A bright pink flash of arcane lightning streaks out from [npc.namePos] outstretched [npc.hand], hitting [npc2.name] directly in the chest!
+			一道亮粉色的奥术闪电从[npc.namePos]的[npc.hand]中迸射而出，直接命中了[npc2.name]的胸口！
 		#ENDIF
 		]]></hitText>
 	</hitDescriptions>
@@ -97,13 +97,13 @@
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		Harnessing the power of the arcane lightning ring, [npc.name] [npc.verb(unleash)] a blast of bright pink lightning, but [npc.verb(end)] up missing [npc2.name]!
+		[npc.name]借助奥术闪电戒指之威释放出一道亮粉色闪电，但却没能击中[npc2.name]。
 		]]></missText>
 		<missText><![CDATA[
-		Launching a dazzling strike of arcane lightning at [npc2.name], [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]对着[npc2.name]射出一道耀眼的奥术闪电，但却未能命中。[npc.she]不由得发出一声遗憾的叹息。
 		]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(unleash)] a blast of bright pink lightning at [npc2.name], but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]跨出一个箭步，对着[npc2.name]射出一道耀眼的奥术闪电，但可惜未能命中。
 		]]></missText>
 	</missDescriptions>
 	

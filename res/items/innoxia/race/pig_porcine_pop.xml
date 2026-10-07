@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>18</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Porcine Pop]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Porcine Pops]]></namePlural>
-		<description><![CDATA[A small glass bottle filled with a dark brown liquid. The list of ingredients on the back of the bottle's label reveals this to be a sort of cola, albeit one with an extraordinarily high sugar content.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[猪可可乐]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[猪可可乐]]></namePlural>
+		<description><![CDATA[一个小玻璃瓶，里面装满了深棕色的液体。从瓶子标签背面的配料表可以看出，这是一种可乐，含糖量特别高。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A soothing wave of arcane energy washes over [npc.name]...
+				一股丝滑的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -53,10 +53,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After first popping off the cap, [npc.name] [npc.verb(bring)] the glass bottle of Porcine Pop up to [npc.her] [npc.mouth]. Tilting [npc.her] head back, [npc.she] [npc.verb(start)] drinking the cool, fizzy cola, and despite its overwhelmingly sweet taste, [npc.she] [npc.verb(manage)] to quickly finish the entire bottle.
+		首先起开瓶盖后，[npc.name]把猪可可乐的玻璃瓶送到[npc.her]的嘴边。仰起头，[npc.she]开始喝这冰凉、气泡丰富的可乐，尽管它有着极其甜腻的味道，[npc.she]还是设法很快地喝完了整瓶。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After first popping off the cap, [npc.name] [npc.verb(bring)] the glass bottle of Porcine Pop up to [npc2.namePos] waiting [npc2.lips]. Tilting [npc2.her] head back, [npc2.she] [npc2.verb(start)] drinking the cool, fizzy cola, and despite its overwhelmingly sweet taste, [npc2.she] [npc2.verb(manage)] to quickly finish the entire bottle.
+		首先弹开瓶盖后，[npc.name]把猪可可乐的玻璃瓶送到[npc2.namePos]等待[npc2.lips]前。仰起头，[npc2.she]开始喝这冰凉、气泡丰富的可乐，尽管它有着极其甜腻的味道，[npc2.she]还是设法很快地喝完了整瓶。
 		]]></otherUse>
 	</useDescriptions>
 

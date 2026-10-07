@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>MAIN_FUR</category>
 	
 	<nameTransformation><![CDATA[wool (face)]]></nameTransformation>
 	
-	<determiner><![CDATA[a layer of]]></determiner>
+	<determiner><![CDATA[一层]]></determiner>
 	
-	<name><![CDATA[wool]]></name>
+	<name><![CDATA[羊毛]]></name>
 	
-	<namePlural pluralByDefault="false"><![CDATA[wool]]></namePlural> 
+	<namePlural pluralByDefault="false"><![CDATA[羊毛]]></namePlural> 
 	
 	<naturalCoveringModifiers>
 		<modifier>SMOOTH</modifier>

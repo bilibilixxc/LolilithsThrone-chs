@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1400</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[women's winter coat]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[women's winter coats]]></namePlural>
-		<description><![CDATA[A stylish women's winter coat, worn both for keeping warm and to look good while doing it.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[女式冬季大衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[女式冬季大衣]]></namePlural>
+		<description><![CDATA[一件时尚的女士冬季大衣，既能保暖，又能让穿着者看起来时尚动人。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_OVER</slot>

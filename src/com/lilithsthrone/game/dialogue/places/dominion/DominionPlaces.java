@@ -78,15 +78,15 @@ public class DominionPlaces {
 
 		if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.DOMINION_NYAN_APARTMENT) {
 			mommySB.append("<p>"
-							+ "[style.boldPinkLight(Nyan's Apartment:)]<br/>"
+							+ "[style.boldPinkLight(妮安的公寓：)]<br/>"
 							+ (Main.game.getNpc(Nyan.class).getWorldLocation()==WorldType.NYANS_APARTMENT
-								?"Nyan lives in this area, and so if you wanted to, you could head over to her apartment building and pay her a visit..."
-								:"Nyan lives in this area, although you know that she'll be at work at this hour, so there's not much point in heading over to her apartment building...")
+								?"妮安就住在这片区域，如果你想的话，可以去她的公寓拜访她……"
+								:"妮安就住在这片区域，不过你知道她这个时候在工作，所以没必要去她的公寓楼……")
 						+ "</p>");
 		}
 		
 		if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.DOMINION_CALLIE_BAKERY) {
-			mommySB.append("<p>[style.boldBrown(The Creamy Bakey:)]</p>");
+			mommySB.append("<p>[style.boldBrown(奶油烘焙店：)]</p>");
 			mommySB.append(UtilText.parseFromXMLFile("nnxx/callie_bakery", "EXTERIOR"));
 		}
 		
@@ -95,29 +95,29 @@ public class DominionPlaces {
 				mommySB.append(
 						UtilText.parse(npc,
 								"<p>"
-									+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Mommy's House:</b><br/>"
+									+ "<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>“妈咪”的家：</b><br/>"
 									+ (Main.game.getCurrentWeather()==Weather.MAGIC_STORM
-										?"Mommy's house is located down this street, but due to the ongoing arcane storm, her usual bench is currently unoccupied."
-												+ " If you wanted to interact with her, you'd better come back after the storm has passed..."
-										:"Mommy's house is located down this street, and as you look over towards it, you see her sitting on her usual bench outside."
-											+ " Still wearing her 'Rental Mommy' t-shirt, she's quite clearly still open for business as usual...")
+										?"“妈咪”的房子就在这条街上，但由于正在肆虐的奥术风暴，她经常坐的那条长凳现在空无一人。"
+												+ "如果你想和她互动，最好等风暴过去后再回来……"
+										:"妈咪的房子就在这条街的尽头，当你望向房子时，你能看到她坐在外面她常坐的那条长凳上。"
+											+ "她仍然穿着“租赁妈咪”T恤衫，显然是如常开张了……")
 								+ "</p>"));
 				break;
 			}
 			if(Main.game.getPlayer().getFriendlyOccupants().contains(npc.getId())) {
 				occupantSB.append("<p>");
 				occupantSB.append(UtilText.parse(npc,
-								"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>[npc.NamePos] Apartment:</b><br/>"
-									+ "After moving out from Lilaya's home, [npc.name] has ended up living in an apartment building near to this location."));
+								"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>[npc.NamePos]的公寓：</b><br/>"
+									+ "[npc.name]从莉莱雅家搬出去后，最终住进了这附近的一栋公寓。"));
 
 				if(npc.isAsleep()) {
 					occupantSB.append(UtilText.parse(npc,
-							" If you wanted to, you could pay the [npc.race] a visit, but as [npc.sheIs] currently [style.colourSleep(sleeping)] you'll have to wake [npc.herHim] up..."));
+							"你如果想的话，就可以去看望[npc.race]。但因为[npc.sheIs]目前[style.colourSleep(在睡觉)]，你得叫醒[npc.herHim]……"));
 				} else {
-					occupantSB.append(UtilText.parse(npc, " If you wanted to, you could pay the [npc.race] a visit..."));
+					occupantSB.append(UtilText.parse(npc, "你如果想的话，就可以去看望[npc.race]……"));
 				}
 				occupantSB.append("<br/>");
-				occupantSB.append(UtilText.parse(npc, "<i>[npc.Name] sleeps between the hours of [style.time("+npc.getSleepStartHour()+")]-[style.time("+npc.getSleepEndHour()+")]</i>"));
+				occupantSB.append(UtilText.parse(npc, "<i>[npc.Name]在[style.time("+npc.getSleepStartHour()+")]-[style.time("+npc.getSleepEndHour()+")]之间睡觉</i>"));
 				occupantSB.append("</p>");
 				break;
 			}
@@ -125,8 +125,8 @@ public class DominionPlaces {
 			if(npc instanceof Cultist) {
 				cultistSB.append(
 						"<p>"
-							+ "<b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Cultist's Chapel:</b><br/>"
-							+ UtilText.parse(npc, "You remember that [npc.namePos] chapel is near here, and if you were so inclined, you could easily find it again...")
+							+ "<b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>狂信者的小礼拜堂：</b><br/>"
+							+ UtilText.parse(npc, "你记得[npc.namePos]地小教堂就在附近，如果你愿意，可以很容易地再次找到它……")
 						+ "</p>");
 				break;
 			}
@@ -134,13 +134,13 @@ public class DominionPlaces {
 			if(npc instanceof ReindeerOverseer) {
 				reindeerSB.append(
 						"<p>"
-							+ "<b style='color:"+PresetColour.RACE_REINDEER_MORPH.toWebHexString()+";'>Reindeer Workers:</b><br/>"
+							+ "<b style='color:"+PresetColour.RACE_REINDEER_MORPH.toWebHexString()+";'>驯鹿监工:</b><br/>"
 							+ (Main.game.getCurrentWeather()==Weather.MAGIC_STORM
-								?UtilText.parse(npc, "The reindeer-morphs have all taken shelter from the ongoing arcane storm."
-										+ " If you wanted to speak with their overseer, you'd need to come back after the storm has passed.")
-								:UtilText.parse(npc, "A large group of reindeer-morphs are hard at work shovelling snow."
-										+ " Their leader, [npc.a_race], is shouting out orders and travelling to-and-fro between the workers to make sure that the job is being done to [npc.her] satisfaction."
-										+ " Although the workers look to be far too busy to stop and talk, you'd probably be able to catch a word with the overseer if you wanted to."))
+								?UtilText.parse(npc, "这些驯鹿化形正在躲避逼近的奥术风暴。"
+										+ "如果想跟监工对话，最好等到风暴过去。")
+								:UtilText.parse(npc, "一大群驯鹿化形，正在努力除雪。"
+										+ "领头的[npc.a_race]，正在大喊着命令，在工人中间来回穿梭，确保工作成果能让[npc.her]满意。"
+										+ "尽管这些工人忙到没功夫停下来说话，但如果想的话，你还是可以跟监工聊上几句。"))
 						+ "</p>");
 				break;
 			}
@@ -151,16 +151,16 @@ public class DominionPlaces {
 		AbstractClothing collar = Main.game.getPlayer().getClothingInSlot(InventorySlot.NECK);
 		if(collar!=null && collar.getClothingType().getId().equals("innoxia_neck_filly_choker")) {
 			mommySB.append("<p>");
-				mommySB.append("[style.boldPinkLight([style.Mule] Choker:)]<br/>");
-				mommySB.append("By wearing your [style.mule] choker, you're signalling to any passing centaur slaves from Dominion Express that you're available to sexually service them.");
+				mommySB.append("[style.boldPinkLight([style.Mule]项圈：)]<br/>");
+				mommySB.append("你戴着[style.mule]项圈，相当于对御城速递的半人马奴隶传达着一个信息，你可以为他们提供性服务。");
 				if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
-					mommySB.append(" As there's an ongoing arcane storm, however, there's [style.colourMinorBad(zero chance)] that you'll encounter any of them...");
+					mommySB.append("然而由于奥术风暴将至，你[style.colourMinorBad(没有可能)]遇见半人马……");
 				} else if(!Main.game.isExtendedWorkTime()) {
-					mommySB.append(" As they're not out at work at this time, however, there's [style.colourMinorBad(zero chance)] that you'll encounter any of them...");
+					mommySB.append("然而由于现在不是工作时间，你[style.colourMinorBad(没有可能)]遇见半人马……");
 				} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					mommySB.append(" As you aren't able to access your mouth, however, there's [style.colourMinorBad(zero chance)] that any of them will approach you...");
+					mommySB.append("然而由于你无法使用自己的嘴巴，他们[style.colourMinorBad(没有可能)]向你走来……");
 				} else {
-					mommySB.append(" Although Dominion is a huge city, there are a significant number of centaur slaves who work at Dominion Express, meaning that there's at least a [style.colourMinorGood(small chance)] that you'll run into one...");
+					mommySB.append("尽管御城区十分广袤，但御城速递的半人马奴隶也人数众多，这就意味着你[style.colourMinorGood(有一点可能)]遇见其中一个……");
 				}
 			mommySB.append("</p>");
 		}
@@ -194,87 +194,87 @@ public class DominionPlaces {
 				int dateCost = 4000;
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanWeekendDated)) {
 					if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumDateCompleted)) {
-						mommyResponses.add(new Response("Double date ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"You've already taken Nyan out for a date this weekend. You'll have to wait until next weekend before taking her and [nyanmum.name] out for a double date...",
+						mommyResponses.add(new Response("双人约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"你这个周末已经带妮安出去约会过了。你需要等到下周末才能带她和[nyanmum.name]出去双重约会……",
 								null));
 					} else {
-						mommyResponses.add(new Response("Double date ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"You've already taken Nyan and [nyanmum.name] out for a date this weekend. You'll have to wait until next weekend before taking them out again...",
+						mommyResponses.add(new Response("双人约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"你这个周末已经带妮安和[nyanmum.name]出去约会过了。你需要等到下周末……",
 								null));
 					}
 					
 				} else if((Main.game.getDayOfWeek()==DayOfWeek.FRIDAY || Main.game.getDayOfWeek()==DayOfWeek.SATURDAY) && (Main.game.isHourBetween(20, 23))) {
 					if(Main.game.getNpc(Nyan.class).getWorldLocation()!=WorldType.NYANS_APARTMENT) {
-						mommyResponses.add(new Response("Double date ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"Nyan and [nyanmum.name] are not at home at the moment. You'll have to come back after their work day ends...",
+						mommyResponses.add(new Response("双人约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"妮安和[nyanmum.name]现在不在家。你需要等工作日结束再来……",
 								null));
 						
 					} else if(Main.game.getPlayer().getMoney()<dateCost) {
-						mommyResponses.add(new Response("Double date ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"'The Oaken Glade' is a very expensive place to go on a date. You need at least "+Util.intToString(dateCost)+" flames before asking Nyan and [nyanmum.name] out to a date there.",
+						mommyResponses.add(new Response("双人约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"“橡木林荫”看起来是个高消费的约会地点。你想和妮安还有[nyanmum.name]在这约会，至少要有"+Util.intToString(dateCost)+"火币。",
 								null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						mommyResponses.add(new Response("Double date ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"You're not going to be able to go out on a date to a restaurant if you're not able to eat anything!"
-									+ "<br/>[style.italicsMinorBad(You need to be able to access your mouth in order to take Nyan and [nyanmum.name] out on a date...)]",
+						mommyResponses.add(new Response("双人约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"你吃不了东西，所以不能去餐厅约会！"
+									+ "<br/>[style.italicsMinorBad(你需要能够使用自己的嘴巴，才能带妮安和[nyanmum.name]出去约会……)]",
 								null));
 						
 					} else {
-						mommyResponses.add(new Response("Double date ("+UtilText.formatAsMoney(dateCost, "span")+")",
-								"Pick Nyan and [nyanmum.name] up from their apartment building and take them out on a date to the restaurant, 'The Oaken Glade'.",
+						mommyResponses.add(new Response("双人约会 ("+UtilText.formatAsMoney(dateCost, "span")+")",
+								"去公寓接妮安和[nyanmum.name]，然后一起去“橡木林荫”餐厅约会。",
 								Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumGirlfriend)
 									?NyanDateFinalRepeat.DOUBLE_DATE_START
 									:NyanFirstDoubleDate.DATE_START));
 					}
 					
 				} else {
-					mommyResponses.add(new Response("Double date ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-							"You cannot take Nyan and [nyanmum.name] out for a date at this time..."
-								+ "<br/><i>It needs to be either a "
+					mommyResponses.add(new Response("双人约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+							"你现在不能带妮安和[nyanmum.name]出去约会……"
+								+ "<br/><i>你需要在"
 								+ (Main.game.getDayOfWeek()==DayOfWeek.FRIDAY
-									?"[style.italicsMinorGood(Friday)]"
-									:"[style.italicsMinorBad(Friday)]")
-								+" or "
+									?"[style.italicsMinorGood(星期五)]"
+									:"[style.italicsMinorBad(星期五)]")
+								+"或"
 								+ (Main.game.getDayOfWeek()==DayOfWeek.SATURDAY
-									?"[style.italicsMinorGood(Saturday)]"
-									:"[style.italicsMinorBad(Saturday)]")
-								+", and between the hours of "
+									?"[style.italicsMinorGood(星期六)]"
+									:"[style.italicsMinorBad(星期六)]")
+								+"，而且在"
 								+ (Main.game.isHourBetween(20, 23)
 									?"[style.italicsMinorGood([unit.time(20)]-[unit.time(23)])]"
 									:"[style.italicsMinorBad([unit.time(20)]-[unit.time(23)])]")
-								+" in order to take Nyan and [nyanmum.name] out for a date!",
+								+"才能带妮安和[nyanmum.name]出去约会！",
 							null));
 				}
 				
 			} else {
 				int dateCost = 2500;
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanWeekendDated)) {
-					mommyResponses.add(new Response("Date Nyan ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-							"You've already taken Nyan out for a date this weekend. You'll have to wait until next weekend before taking her out again...",
+					mommyResponses.add(new Response("跟妮安约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+							"你这个周末已经带妮安出去约会过了。你需要等到下周末……",
 							null));
 					
 				} else if((Main.game.getDayOfWeek()==DayOfWeek.FRIDAY || Main.game.getDayOfWeek()==DayOfWeek.SATURDAY)
 						&& (Main.game.getHourOfDay()>=18 && Main.game.getHourOfDay()<23)) {
 					if(Main.game.getNpc(Nyan.class).getWorldLocation()!=WorldType.NYANS_APARTMENT) {
-						mommyResponses.add(new Response("Date Nyan ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"Nyan is out at work at the moment. You'll have to come back after her work day ends...",
+						mommyResponses.add(new Response("跟妮安约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"妮安现在在工作。你需要等工作日结束再来……",
 								null));
 						
 					} else if(Main.game.getPlayer().getMoney()<dateCost) {
-						mommyResponses.add(new Response("Date Nyan ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"'The Oaken Glade' looked to be a very expensive place to go on a date. You need at least "+Util.intToString(dateCost)+" flames before asking Nyan out to a date there.",
+						mommyResponses.add(new Response("跟妮安约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"“橡木林荫”看起来是个高消费的约会地点。你想和妮安在这约会，至少要有"+Util.intToString(dateCost)+"火币。",
 								null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						mommyResponses.add(new Response("Date Nyan ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-								"You're not going to be able to go out on a date to a restaurant if you're not able to eat anything!"
-									+ "<br/>[style.italicsMinorBad(You need to be able to access your mouth in order to take Nyan out on a date...)]",
+						mommyResponses.add(new Response("跟妮安约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+								"你吃不了东西，所以不能去餐厅约会！"
+									+ "<br/>[style.italicsMinorBad(你需要能够使用自己的嘴巴，才能带妮安出去约会……)]",
 								null));
 						
 					} else {
-						mommyResponses.add(new Response("Date Nyan ("+UtilText.formatAsMoney(dateCost, "span")+")",
-								"Pick Nyan up from her apartment building and take her out on a date to the restaurant, 'The Oaken Glade'.",
+						mommyResponses.add(new Response("跟妮安约会 ("+UtilText.formatAsMoney(dateCost, "span")+")",
+								"去妮安的公寓接她，然后一起去“橡木林荫”餐厅约会。",
 								Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumDateCompleted)
 									?NyanDateFinalRepeat.SOLO_DATE_START
 									:(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanRestaurantDateCompleted) && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumInterviewPassed)
@@ -283,21 +283,21 @@ public class DominionPlaces {
 					}
 					
 				} else {
-					mommyResponses.add(new Response("Date Nyan ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
-							"You cannot take Nyan out for a date at this time..."
-								+ "<br/><i>It needs to be either a "
+					mommyResponses.add(new Response("跟妮安约会 ("+UtilText.formatAsMoneyUncoloured(dateCost, "span")+")",
+							"你现在还不能带妮安去约会……"
+								+ "<br/><i>你需要在"
 								+ (Main.game.getDayOfWeek()==DayOfWeek.FRIDAY
-									?"[style.italicsMinorGood(Friday)]"
-									:"[style.italicsMinorBad(Friday)]")
-								+" or "
+									?"[style.italicsMinorGood(星期五)]"
+									:"[style.italicsMinorBad(星期五)]")
+								+"或"
 								+ (Main.game.getDayOfWeek()==DayOfWeek.SATURDAY
-									?"[style.italicsMinorGood(Saturday)]"
-									:"[style.italicsMinorBad(Saturday)]")
-								+", and between the hours of "
+									?"[style.italicsMinorGood(星期六)]"
+									:"[style.italicsMinorBad(星期六)]")
+								+"，而且在"
 								+ (Main.game.getHourOfDay()>=18 && Main.game.getHourOfDay()<23
 									?"[style.italicsMinorGood([unit.time(18)]-[unit.time(23)])]"
 									:"[style.italicsMinorBad([unit.time(18)]-[unit.time(23)])]")
-								+" in order to take Nyan out for a date!",
+								+"才能带妮安出去约会！",
 							null));
 				}
 			}
@@ -327,9 +327,9 @@ public class DominionPlaces {
 					}
 				}
 				
-				mommyResponses.add(new Response("The Creamy Bakey",
-						"Head over to the nearby bakery, 'The Creamy Bakey', and take a look inside."
-								+ "<br/><i>The bakery is open from [style.italicsMinorGood([unit.time("+hourOpen+")]-[unit.time("+hourClose+")])].</i>",
+				mommyResponses.add(new Response("奶油烘焙店",
+						"去附近的面包店“奶油烘焙”看看吧。"
+								+ "<br/><i>这家面包店[style.italicsMinorGood([unit.time("+hourOpen+")]-[unit.time("+hourClose+")])]开门营业。</i>",
 								initNode) {
 					@Override
 					public void effects() {
@@ -338,16 +338,16 @@ public class DominionPlaces {
 				});
 				
 			} else {
-				mommyResponses.add(new Response("The Creamy Bakey",
-						"The nearby bakery, 'The Creamy Bakey', is closed at this time of day."
-								+ "<br/><i>You'll have to come back between"
+				mommyResponses.add(new Response("奶油烘焙店",
+						"附近的面包房，“奶油烘焙店”，在这个时间点不营业。"
+								+ "<br/><i>你得在"
 								+ (Main.game.isHourBetween(hourOpen, hourClose)
-										?" [style.italicsMinorGood([unit.time("+hourOpen+")]-[unit.time("+hourClose+")])],"
-										:" [style.italicsMinorBad([unit.time("+hourOpen+")]-[unit.time("+hourClose+")])],")
+										?"[style.italicsMinorGood([unit.time("+hourOpen+")]-[unit.time("+hourClose+")])]，"
+										:"[style.italicsMinorBad([unit.time("+hourOpen+")]-[unit.time("+hourClose+")])]，")
 								+ (Main.game.getDayOfWeek()!=DayOfWeek.SUNDAY
-										?" [style.italicsMinorGood(Monday to Saturday)]"
-										:" [style.italicsMinorBad(Monday to Saturday)]")
-								+ ".</i>",
+										?"[style.italicsMinorGood(周一到周六)]"
+										:"[style.italicsMinorBad(周一到周六)]")
+								+ "再来。</i>",
 						null));
 			}
 		}
@@ -355,9 +355,9 @@ public class DominionPlaces {
 		for(NPC npc : characters) {
 			if(npc instanceof RentalMommy) {
 				if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
-					mommyResponses.add(new Response("Mommy", "'Mommy' is not sitting on her usual bench, and you suppose that she's waiting out the current storm inside her house.", null));
+					mommyResponses.add(new Response("妈咪", "“妈咪”没像以往一样坐在长凳上，你猜她可能是在家里躲避当前的风暴。", null));
 				} else {
-					mommyResponses.add(new Response("Mommy", "You see 'Mommy' sitting on the wooden bench outside her house. Walk up to her and say hello.", RentalMommyDialogue.ENCOUNTER) {
+					mommyResponses.add(new Response("妈咪", "你看见“妈咪”坐在屋外的木制长凳上，走过去和她打招呼。", RentalMommyDialogue.ENCOUNTER) {
 						@Override
 						public void effects() {
 							Main.game.setActiveNPC(npc);	
@@ -377,8 +377,8 @@ public class DominionPlaces {
 						UtilText.parse(npc, "[npc.Name]"),
 						UtilText.parse(npc,
 								Main.game.getPlayer().getCompanions().contains(npc)
-									?"Head back over to [npc.namePos] apartment."
-									:"Head over to [npc.namePos] apartment building and pay [npc.herHim] a visit."),
+									?"转头回[npc.namePos]的公寓。"
+									:"转头回[npc.namePos]的公寓拜访[npc.herHim]。"),
 						OccupantDialogue.OCCUPANT_APARTMENT) {
 					@Override
 					public void effects() {
@@ -388,7 +388,7 @@ public class DominionPlaces {
 			}
 			
 			if(npc instanceof Cultist) {
-				cultistResponses.add(new Response("Chapel", UtilText.parse(npc, "Visit [npc.namePos] chapel again."), CultistDialogue.ENCOUNTER_CHAPEL_REPEAT) {
+				cultistResponses.add(new Response("小教堂", UtilText.parse(npc, "再次拜访[npc.namePos]的小教堂。"), CultistDialogue.ENCOUNTER_CHAPEL_REPEAT) {
 						@Override
 						public void effects() {
 							Main.game.setActiveNPC(npc);
@@ -398,11 +398,11 @@ public class DominionPlaces {
 			
 			if(npc instanceof ReindeerOverseer) {
 				if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
-					reindeerResponses.add(new Response("Overseer",
-							"The reindeer-morph workers are currently sheltering from the ongoing arcane storm. You'll have to come back later if you wanted to speak to the overseer.",
+					reindeerResponses.add(new Response("监工",
+							"驯鹿化形工人们正在躲避肆虐的奥术风暴。你如果想和监工说话，只能稍后再来。",
 							null));
 				} else {
-					reindeerResponses.add(new Response("Overseer", UtilText.parse(npc, "Walk up to [npc.name] and say hello."), ReindeerOverseerDialogue.ENCOUNTER_START) {
+					reindeerResponses.add(new Response("监工", UtilText.parse(npc, "走过去和[npc.name]打招呼。"), ReindeerOverseerDialogue.ENCOUNTER_START) {
 							@Override
 							public void effects() {
 								Main.game.setActiveNPC(npc);
@@ -423,32 +423,32 @@ public class DominionPlaces {
 	private static String getRandomStreetEvent() {
 		int extraText = Util.random.nextInt(100) + 1;
 		if (extraText <= 3) {
-			return ("<p><i>A particularly large and imposing incubus cuts his way through the crowd, holding the leashes of three greater cat-girl slaves."
-					+ " Each one is completely naked, and as they pass, you can clearly see their cunts drooling with excitement.</i></p>");
+			return ("<p><i>一个身材高大、威风凛凛的淫梦魔穿过人群，牵着三个纯猫女奴隶。"
+					+ "她们每个都一丝不挂，你经过时可以清楚地看到她们的淫穴在兴奋地流着水</i></p>");
 		} else if (extraText <= 6) {
-			return ("<p><i>To one side, you see a pair of dog-boy Enforcers questioning a shady-looking cat-boy."
-					+ " As you pass, the cat-boy tries to make a break for it, but is quickly tackled to the floor."
-					+ " The Enforcers place a pair of restraints around his wrists before dragging him down a nearby alleyway.</i></p>");
+			return ("<p><i>在一侧，你看到一对狗男执法者正在审问一个面目可憎的猫男。"
+					+ "当你经过时，猫男试图逃跑，但很快就被扑倒在地上。"
+					+ "执法者在他的手腕上套上了一副手铐，然后把他拖到附近的一条小巷里。</i></p>");
 		} else if (extraText <= 9) {
-			return ("<p><i>A huge billboard covers the entire face of one of the buildings across the street."
-					+ " On it, there's an advertisement for the tournament, 'Risk it all', promising great rewards for anyone strong enough to beat the challenge."
-					+ " Underneath, the words 'Applications opening soon!' are displayed in bold red lettering.</i></p>");
+			return ("<p><i>一个巨大的广告牌覆盖了街对面一栋建筑的整个正面。"
+					+ "上面有一则“孤注一掷”的比赛广告，承诺任何有实力战胜挑战的人都能获得丰厚的奖励。"
+					+ "下面用醒目的红色字体写着“申请即将开始！”。</i></p>");
 		} else if (extraText == 10) {
-			return ("<p><i>A greater cat-girl is handing out leaflets just in front of you, and as you pass, she shoves one into your hands."
-					+ " You look down to see that it's just an advertisement for the drink '"+ ItemType.getItemTypeFromId("innoxia_race_cat_felines_fancy").getName(false)+ "'.</i></p>");
+			return ("<p><i>一个纯猫女在你的前面发传单，当你经过时，她把一张传单塞到你的手里。"
+					+ "你低头一看，这只是饮料的广告：“"+ ItemType.getItemTypeFromId("innoxia_race_cat_felines_fancy").getName(false)+ "”。</i></p>");
 		} else if (extraText == 11) {
-			return ("<p><i>A greater wolf-boy is handing out leaflets just in front of you, and as you pass, he shoves one into your hands."
-					+ " You look down to see that it's just an advertisement for the drink '"+ ItemType.getItemTypeFromId("innoxia_race_wolf_wolf_whiskey").getName(false)+ "'.</i></p>");
+			return ("<p><i>一个纯狼男在你的前面发传单，当你经过时，他把一张传单塞到你的手里。"
+					+ "你低头一看，这只是饮料的广告：“"+ ItemType.getItemTypeFromId("innoxia_race_wolf_wolf_whiskey").getName(false)+ "”。</i></p>");
 		} else if (extraText == 12) {
-			return ("<p><i>A greater dog-girl is handing out leaflets just in front of you, and as you pass, she shoves one into your hands."
-					+ " You look down to see that it's just an advertisement for the drink '"+ ItemType.getItemTypeFromId("innoxia_race_dog_canine_crush").getName(false)+ "'.</i></p>");
+			return ("<p><i>一个纯狗女在你的前面发传单，当你经过时，她把一张传单塞到你的手里。"
+					+ "你低头一看，这只是饮料的广告：“"+ ItemType.getItemTypeFromId("innoxia_race_dog_canine_crush").getName(false)+ "”。</i></p>");
 		} else if (extraText == 13) {
-			return ("<p><i>A greater horse-boy is handing out leaflets just in front of you, and as you pass, he shoves one into your hands."
-					+ " You look down to see that it's just an advertisement for the drink '"+ ItemType.getItemTypeFromId("innoxia_race_horse_equine_cider").getName(false)+ "'.</i></p>");
+			return ("<p><i>一个纯马男在你的前面发传单，当你经过时，他把一张传单塞到你的手里。"
+					+ "你低头一看，这只是饮料的广告：“"+ ItemType.getItemTypeFromId("innoxia_race_horse_equine_cider").getName(false)+ "”。</i></p>");
 		} else if (extraText == 14) {
-			return ("<p><i>A cheering crowd has gathered to one side of the street, and as you glance across, a momentary gap in the crowd allows you to catch a glimpse of what's happening."
-					+ " A greater dog-girl is on all fours, and is being double penetrated by a greater horse-boy's pair of massive horse-cocks."
-					+ " The girl's juices are leaking down her legs and her tongue lolls from her mouth as the gigantic members thrust in and out of her stretched holes.</i></p>");
+			return ("<p><i>欢呼的人群聚集在街道的一侧，当你瞥向对面时，人群中瞬间出现的空隙让你瞥见了正在发生的事情。"
+					+ "一个纯狗女四脚着地，被一个纯马男的一对巨大的马鸡巴双重插入。"
+					+ "女孩的“汁水”顺着双腿流下，巨大的肉棒在她被撑大的小穴中进进出出，她的舌头也从口中舔出。</i></p>");
 		}
 		return "";
 	}
@@ -459,9 +459,9 @@ public class DominionPlaces {
 		if(Main.game.getSavedEnforcers(WorldType.DOMINION).isEmpty()) {
 			if(isCloseToEnforcerHQ()) {
 				sb.append("<p style='text-align:center;'><i>");
-					sb.append("Due to the close proximity of Dominion's [style.colourBlueDark(Enforcer HQ)], there is a [style.italicsBad(high chance)] of encountering [style.colourBlueDark(Enforcer patrols)] in this area!");
+					sb.append("这一区域由于靠近御城区的[style.colourBlueDark(执法者总部)]，有[style.italicsBad(很高概率)]遇到[style.colourBlueDark(执法者巡逻队)]！");
 					if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
-						sb.append("<br/>However, due to the ongoing arcane storm, there's no chance of encountering any patrols at the moment...");
+						sb.append("<br/>然而，由于持续的奥术风暴，目前不可能遇到巡逻队……");
 					}
 				sb.append("</i></p>");
 			}
@@ -470,11 +470,11 @@ public class DominionPlaces {
 			sb.append("<p style='text-align:center;'><i>");
 			
 				if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
-					sb.append("Due to the ongoing [style.italicsArcane(arcane storm)], there's [style.italicsGood(no chance)] of encountering any of these [style.colourBlueDark(Enforcer patrols)]:");
+					sb.append("由于[style.italicsArcane(奥术风暴)]正在肆虐，你[style.italicsGood(根本没机会)]遇见[style.colourBlueDark(执法者巡逻队)]:");
 				} else if(isCloseToEnforcerHQ()) {
-					sb.append("Due to the close proximity of Dominion's [style.colourBlueDark(Enforcer HQ)], there is a [style.italicsBad(high chance)] of encountering one of these [style.colourBlueDark(Enforcer patrols)]:");
+					sb.append("这一区域由于靠近御城区的[style.colourBlueDark(执法者总部)]，有[style.italicsBad(很高概率)]遇到[style.colourBlueDark(执法者巡逻队)]其中之一的：");
 				} else {
-					sb.append("There is a [style.italicsMinorBad(small chance)] of running into one of these [style.colourBlueDark(Enforcer patrols)]:");
+					sb.append("有[style.italicsMinorBad(较低概率)]遭遇其中一支[style.colourBlueDark(执法者巡逻队)]：");
 				}
 				for(List<String> enforcerIds : Main.game.getSavedEnforcers(WorldType.DOMINION)) {
 					sb.append("<br/>");
@@ -496,7 +496,7 @@ public class DominionPlaces {
 		return sb.toString();
 	}
 	
-	public static final DialogueNode STREET = new DialogueNode("Dominion Streets", "", false) {
+	public static final DialogueNode STREET = new DialogueNode("御城区街道", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -579,7 +579,7 @@ public class DominionPlaces {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return AbstractEncounter.exploreArea("the alleyways");
+				return AbstractEncounter.exploreArea("小巷");
 			} else if(index == 2) {
 				return AbstractEncounter.useOffspringMap();
 			}
@@ -588,7 +588,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode DARK_ALLEYS = new DialogueNode("Dark Alleyways", "", false) {
+	public static final DialogueNode DARK_ALLEYS = new DialogueNode("Dark 小巷", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -611,7 +611,7 @@ public class DominionPlaces {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return AbstractEncounter.exploreArea("the alleyways");
+				return AbstractEncounter.exploreArea("小巷");
 			} else if(index == 2) {
 				return AbstractEncounter.useOffspringMap();
 			}
@@ -619,7 +619,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode BACK_ALLEYS_CANAL = new DialogueNode("Canal Crossing", ".", false) {
+	public static final DialogueNode BACK_ALLEYS_CANAL = new DialogueNode("运河交汇处", "。", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -643,7 +643,7 @@ public class DominionPlaces {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return AbstractEncounter.exploreArea("the alleyways");
+				return AbstractEncounter.exploreArea("小巷");
 			} else if(index == 2) {
 				return AbstractEncounter.useOffspringMap();
 			}
@@ -651,7 +651,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode BOULEVARD = new DialogueNode("Dominion Boulevard", ".", false) {
+	public static final DialogueNode BOULEVARD = new DialogueNode("御城区主干道", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -706,23 +706,23 @@ public class DominionPlaces {
 		String randomMalePerson = Util.randomItemFrom(possibleSubspecies).getSingularMaleName(null);
 		
 		List<String> strings = Util.newArrayListOfValues(
-				"A rough-looking "+randomMalePerson+" unrolls a large scroll, before clearing his throat and calling out,"
-						+ " [maleNPC.speech(By decree of Lilith, and in the interests of Dominion's security,"
-							+ " any human seen walking the streets outside of daylight hours may legally be subjected to a full body search from any Enforcer.)]",
-					Util.capitaliseSentence(UtilText.addDeterminer(randomFemalePerson))+" holds up an official-looking piece of paper, complete with a red wax seal, and declares,"
-						+ " [femaleNPC.speech(A reward of two-hundred-thousand flames has been issued for any information leading to the arrest of the person or persons responsible"
-							+ " for distributing illegal newspapers in the districts beneath the Harpy Nests!)]",
-					"A rather wild-looking succubus, dressed in a very Halloween-esque witch's costume, points to different members of the crowd as she screams,"
-						+ " [femaleNPC.speech(I count no less than three demons in the crowd who are without a cultist's uniform!"
-							+ " What would Lilith say if she could see this now?!)]",
-					Util.capitaliseSentence(UtilText.addDeterminer(randomMalePerson))+" relays several boring, mundane pieces of news to the crowd."
-							+ " There's nothing that is of any interest to you, and you eventually turn away, having felt as though you just wasted your time.",
-					Util.capitaliseSentence(UtilText.addDeterminer(randomFemalePerson))+" relays several boring, mundane pieces of news to the crowd."
-							+ " There's nothing that is of any interest to you, and you eventually turn away, having felt as though you just wasted your time.",
-					Util.capitaliseSentence(UtilText.addDeterminer(randomMalePerson))+" is currently reading out a list of advertisements for shops in the local area."
-							+ " There's really nothing of interest to be heard, and you soon find yourself turning away and moving on.",
-					Util.capitaliseSentence(UtilText.addDeterminer(randomFemalePerson))+" is currently reading out a list of advertisements for shops in the local area."
-							+ " There's really nothing of interest to be heard, and you soon find yourself turning away and moving on.");
+				"一个面相不善的"+randomMalePerson+"展开一个大卷轴，清了清嗓子喊道，"
+						+ "[maleNPC.speech(奉莉莉丝敕谕，为了御城区的安全，"
+							+ "在白天以外的时间，任何在街上行走的人都可能被执法者依法进行全身搜查。)]",
+					Util.capitaliseSentence(UtilText.addDeterminer(randomFemalePerson))+"举起一张盖有红色蜡印的官方文件公布着什么，"
+						+ "[femaleNPC.speech(悬赏二十万火币，以奖励任何提供线索者，"
+							+ "缉拿在哈比之巢下的地区散发非法报纸的嫌疑人！)]",
+					"一个穿着万圣节女巫服、外表狂野的魅魔，一边尖叫一边指着人群中的各色人等，"
+						+ "[femaleNPC.speech(我数了一下，人群中至少有三个恶魔没有穿狂信者制服！"
+							+ "莉莉丝如果看到这些会怎么说？！)]",
+					Util.capitaliseSentence(UtilText.addDeterminer(randomMalePerson))+"正向群众传播几条无聊的琐碎新闻。"
+							+ "没有任何你感兴趣的东西，你最终转身离去，觉得自己只是在浪费时间。",
+					Util.capitaliseSentence(UtilText.addDeterminer(randomFemalePerson))+" 正向群众传播几条无聊的琐碎新闻。"
+							+ "没有任何你感兴趣的东西，你最终转身离去，觉得自己只是在浪费时间。",
+					Util.capitaliseSentence(UtilText.addDeterminer(randomMalePerson))+"正在宣读当地商店的广告清单。"
+							+ "没有任何你感兴趣的东西，你很快发现自己只是在浪费时间，转身离开。",
+					Util.capitaliseSentence(UtilText.addDeterminer(randomFemalePerson))+"正在宣读当地商店的广告清单。"
+							+ "没有任何你感兴趣的东西，你很快发现自己只是在浪费时间，转身离开。");
 		
 		List<Integer> availableIndexes = new ArrayList<>();
 		for(int i=0; i<strings.size(); i++) {
@@ -734,7 +734,7 @@ public class DominionPlaces {
 		if(availableIndexes.isEmpty()) {
 			viewedAllNews = true;
 			return "<p style='text-align:center;'>"
-						+ "[style.italicsDisabled(You've listened to everything that's being said...)]"
+						+ "[style.italicsDisabled(你已经全都听过了……)]"
 					+ "</p>";
 			
 		} else {
@@ -747,7 +747,7 @@ public class DominionPlaces {
 		}
 	}
 	
-	public static final DialogueNode DOMINION_PLAZA = new DialogueNode("Lilith's Plaza", "", false) {
+	public static final DialogueNode DOMINION_PLAZA = new DialogueNode("莉莉丝的广场", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			viewedNewsIndexes.clear();
@@ -765,15 +765,15 @@ public class DominionPlaces {
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
 				if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
-					return new Response("News", "Due to the ongoing arcane storm, there's nobody here at the moment...", null);
+					return new Response("新闻", "因为奥术风暴正在肆虐，现在没人在这儿……", null);
 					
 				} else if(viewedAllNews) {
-					return new Response("News", "You've listened to everything that's being said...", null);
+					return new Response("新闻", "你已经全都听过了……", null);
 					
 				} else {
 					return new Response(
-							"News",
-							"Decide to stay a while and listen to one of the orators...", DOMINION_PLAZA_NEWS){
+							"新闻",
+							"决定在此逗留片刻，聆听一位演说者……", DOMINION_PLAZA_NEWS){
 								@Override
 								public void effects() {
 									Main.game.getTextEndStringBuilder().append("<p>"
@@ -787,7 +787,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode DOMINION_PLAZA_NEWS = new DialogueNode("Lilith's Plaza", ".", false, true) {
+	public static final DialogueNode DOMINION_PLAZA_NEWS = new DialogueNode("莉莉丝的广场", "。", false, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -799,7 +799,7 @@ public class DominionPlaces {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append("<p>"
-					+ "You decide to stay and listen to one of the many orators who are addressing the crowds..."
+					+ "你决定留下来聆听众多正向人群发表演说的演说者中的一位……"
 					+ "</p>");
 			
 			return UtilText.nodeContentSB.toString();
@@ -832,7 +832,7 @@ public class DominionPlaces {
 				return null;
 				
 			} else if(index==1) {
-				return new Response("Helena's Nest", "Use the elevator in the hotel to travel directly up to Helena's nest.", HelenaHotel.HOTEL_TRAVEL_TO_NEST) {
+				return new Response("海伦娜的巢", "使用旅馆电梯，直达海伦娜的巢。", HelenaHotel.HOTEL_TRAVEL_TO_NEST) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HELENAS_NEST);
@@ -847,7 +847,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode STREET_SHADED = new DialogueNode("Dominion Streets (Shaded)", ".", false) {
+	public static final DialogueNode STREET_SHADED = new DialogueNode("御城区街道(阴暗)", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -874,7 +874,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode CANAL = new DialogueNode("Dominion Canals", ".", false) {
+	public static final DialogueNode CANAL = new DialogueNode("御城区运河", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -898,7 +898,7 @@ public class DominionPlaces {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return AbstractEncounter.exploreArea("the canals");
+				return AbstractEncounter.exploreArea("运河");
 			} else if(index == 2) {
 				return AbstractEncounter.useOffspringMap();
 			}
@@ -906,7 +906,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode CANAL_END = new DialogueNode("Dominion Canals", ".", false) {
+	public static final DialogueNode CANAL_END = new DialogueNode("御城区运河", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -931,7 +931,7 @@ public class DominionPlaces {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return AbstractEncounter.exploreArea("the canals");
+				return AbstractEncounter.exploreArea("运河");
 			} else if(index == 2) {
 				return AbstractEncounter.useOffspringMap();
 			}
@@ -941,7 +941,7 @@ public class DominionPlaces {
 
 	// Entrances and exits:
 
-	public static final DialogueNode CITY_EXIT_SEWERS = new DialogueNode("Submission Entrance", "Enter the undercity of Submission.", false) {
+	public static final DialogueNode CITY_EXIT_SEWERS = new DialogueNode("屈城区入口", "进入屈城区地下城。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -956,7 +956,7 @@ public class DominionPlaces {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Submission", "Enter the undercity of Submission.", CITY_EXIT_SEWERS_ENTERING_SUBMISSION){
+				return new Response("屈城区", "进入屈城区下城。", CITY_EXIT_SEWERS_ENTERING_SUBMISSION){
 					@Override
 					public void effects() {
 						if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_SLIME_QUEEN)) {
@@ -974,7 +974,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode CITY_EXIT_SEWERS_ENTERING_SUBMISSION = new DialogueNode("Enforcer Checkpoint", "Enter the undercity of Submission.", false) {
+	public static final DialogueNode CITY_EXIT_SEWERS_ENTERING_SUBMISSION = new DialogueNode("执法者检查点", "进入屈城区地下城。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1002,7 +1002,7 @@ public class DominionPlaces {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.visitedSubmission)) {
 				if (index == 1) {
-					return new Response("Confirm", "Confirm to the cat-girl that this is indeed your first time visiting Submission.", CITY_EXIT_SEWERS_ENTERING_SUBMISSION_FIRST_TIME) {
+					return new Response("肯定", "向猫女肯定这确实是你第一次来屈城区。", CITY_EXIT_SEWERS_ENTERING_SUBMISSION_FIRST_TIME) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Claire.class).setPlayerKnowsName(true);
@@ -1034,7 +1034,7 @@ public class DominionPlaces {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Continue on your way through the Enforcer Post.", Main.game.getDefaultDialogue(false)){
+				return new Response("继续", "继续穿过执法者岗哨。", Main.game.getDefaultDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.visitedSubmission, true);
@@ -1061,10 +1061,10 @@ public class DominionPlaces {
 			if (index == 1) {
 				if(Main.game.getPlayer().isAbleToFly()) {
 					if(!Main.game.getPlayer().isPartyAbleToFly()) {
-						return new Response("Bat Caverns", "As your party members are unable to fly, you cannot use the shaft to travel down to the Bat Caverns...", null);
+						return new Response("蝙蝠洞窟", "由于你的队伍成员无法飞行，所以不能使用这口竖井进入蝙蝠洞窟……", null);
 						
 					} else {
-						return new Response("Bat Caverns", "Fly down the shaft to return to the Bat Caverns.", CITY_EXIT_BAT_CAVERNS_FLY_DOWN) {
+						return new Response("蝙蝠洞窟", "从竖井飞进蝙蝠洞窟。", CITY_EXIT_BAT_CAVERNS_FLY_DOWN) {
 							@Override
 							public void effects() {
 								Main.game.getPlayer().setLocation(WorldType.BAT_CAVERNS, PlaceType.BAT_CAVERN_SHAFT, false);
@@ -1073,7 +1073,7 @@ public class DominionPlaces {
 					}
 					
 				} else {
-					return new Response("Bat Caverns", "As you are unable to fly, you cannot use the shaft to travel down to the Bat Caverns...", null);
+					return new Response("Bat Caverns", "由于你无法飞行，所以不能使用这口竖井进入蝙蝠洞窟……", null);
 				}
 			}
 			return null;
@@ -1095,7 +1095,7 @@ public class DominionPlaces {
 		}
 	};
 	
-	public static final DialogueNode CITY_EXIT = new DialogueNode("Dominion Exit", "", false) {
+	public static final DialogueNode CITY_EXIT = new DialogueNode("御城区出口", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1106,17 +1106,17 @@ public class DominionPlaces {
 		public String getContent() {
 			if(Main.game.getPlayer().isDiscoveredWorldMap()) {
 				return "<p>"
-						+ "A pair of elite demon Enforcers are keeping a close watch on everyone who enters or leaves the city."
-						+ " Now that you have a map, as well as business out there in the world beyond Dominion, there's nothing stopping you from leaving right now."
+						+ "一对精英恶魔执法者正在这里密切地监视着进出城市的所有人。"
+						+ "现在你有了地图，御城区的任务也结束了，没什么能阻止你出去旅行了。"
 					+ "</p>";
 				
 			} else {
 				return "<p>"
-							+ "A pair of elite demon Enforcers are keeping a close watch on everyone who enters or leaves the city."
-							+ " Although there's nothing stopping you from heading out into the world beyond, you have no reason to leave Dominion at the moment, and, without a map, you imagine that it would be quite easy to get lost."
+							+ "一对精英恶魔执法者正在这里密切地监视着进出城市的所有人。"
+							+ "虽然没有什么可以阻止你去外面的世界，但你现在没理由离开御城区，而且你没有地图，很容易迷路。"
 						+ "</p>"
 						+ "<p>"
-							+ "Your quest to find out how to return to your old world will no doubt eventually lead you to places other than Dominion, but for now, your business is within the city itself."
+							+ "你在寻找返回旧世界的方法，毫无疑问，这最终会把你引向御城区之外。但暂时，你在这座城市里还有任务要完成。"
 						+ "</p>";
 			}
 		}
@@ -1125,7 +1125,7 @@ public class DominionPlaces {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getPlayer().isDiscoveredWorldMap()) {
-					return new ResponseEffectsOnly("World travel", "Exit Dominion and head out into the wide world...") {
+					return new ResponseEffectsOnly("世界旅行", "退出御城区，向着更广阔的天地行进……") {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.WORLD_MAP, Main.game.getPlayer().getGlobalLocation(), false);
@@ -1134,7 +1134,7 @@ public class DominionPlaces {
 					};
 					
 				} else {
-					return new Response("World travel", "You don't know what the rest of the world looks like, and, for now, your business is within the city.", null);
+					return new Response("世界旅行", "你尚未知晓世界的全貌，并且暂时，在这个城市里还有事要做。", null);
 				}
 
 			} else {

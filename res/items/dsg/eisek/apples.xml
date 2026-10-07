@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint wax stamp on the peel reads "Grown by the dragons of the DSG Farmer's Guild."]]></authorTag>
+		<authorTag><![CDATA[外皮上一处轻微的火漆印写着“由DSG农民工会的巨龙培育”]]></authorTag>
 		<value>8</value>
-		<determiner><![CDATA[some]]></determiner>
-		<name><![CDATA[apples]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[apples]]></namePlural>
-		<description><![CDATA[Fruit from a carefully cultivated highland apple tree. The peel has a glossy shine to it, as if it has been polished.]]></description>
-		<useDescriptor>eat</useDescriptor>
+		<determiner><![CDATA[一些]]></determiner>
+		<name><![CDATA[苹果]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[苹果]]></namePlural>
+		<description><![CDATA[被精心照料的高原苹果树结出的果实。表皮光泽闪耀，如同被抛光过一般。]]></description>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -24,18 +24,16 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.boldGood(Increases)] [style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])] and [style.boldHealth([#ATTRIBUTE_ENERGY_SHIELDING.getName()])] by 5 for 1 hour.]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[每小时[style.boldGood(增加)]5个[style.boldPoison([#ATTRIBUTE_RESISTANCE_POISON.getName()])]和[style.boldHealth([#ATTRIBUTE_ENERGY_SHIELDING.getName()])]。]]></line>
 		</effectTooltipLines>
 		
-		<applyEffects><![CDATA[
-			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/5)]
+		<applyEffects><![CDATA[			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/5)]
 			[##npc.removeStatusEffect(SE_dsg_item_fruit_buff)]
 			[##npc.addStatusEffect(SE_dsg_item_fruit_buff_plus, 3600)]
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(feel)] vaguely healthier...
-			</p>
-		]]></applyEffects>
+				[npc.Name]感到稍微健康了些……
+			</p>]]></applyEffects>
 		
 		<itemTags>
 			<tag>SOLD_BY_EISEK</tag>
@@ -44,12 +42,8 @@
 	</coreAttributes>
 
 	<useDescriptions>
-		<selfUse><![CDATA[
-			[npc.Name] [npc.verb(find)] the apple surprisingly easy to bite into and [npc.verb(start)] eating it eagerly. It doesn't take long to consume the whole thing.
-		]]></selfUse>
-		<otherUse><![CDATA[
-			[npc.Name] [npc.verb(find)] the tangerine surprisingly easy to bite into and [npc.verb(start)] feeding it to [npc2.name] eagerly. It doesn't take long to consume the whole thing.
-		]]></otherUse>
+		<selfUse><![CDATA[[npc.Name]发现这个苹果出乎意料地好嚼，迫不及待地吃了起来。不久就吃完了整个苹果。]]></selfUse>
+		<otherUse><![CDATA[[npc.Name]发现这个橙子出乎意料地好嚼，迫不及待地喂给了[npc2.name]。不久就吃完了整个橙子。]]></otherUse>
 	</useDescriptions>
 
 	

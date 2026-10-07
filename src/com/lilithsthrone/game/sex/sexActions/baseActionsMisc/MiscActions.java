@@ -41,28 +41,28 @@ public class MiscActions {
 		@Override
 		public String getActionTitle() {
 			if(!isOppositeDom() || isCharacterImmune()) {
-				return "[style.colourDisabled(Level drain: "
+				return "[style.colourDisabled(等级流失:"
 						+(Main.sex.playerLevelDrain
-							?"ON)]"
-							:"OFF)]");
+							?"开启)]"
+							:"关闭)]");
 			}
-			return "[style.colourSex(Level drain:)] "
+			return "[style.colourSex(等级流失:)] "
 					+(Main.sex.playerLevelDrain
-						?"[style.colourMinorGood(ON)]"
-						:"[style.colourMinorBad(OFF)]");
+						?"[style.colourMinorGood(开启)]"
+						:"[style.colourMinorBad(关闭)]");
 		}
 		@Override
 		public String getActionDescription() {
 			return UtilText.parse(Main.sex.getCharacterOrgasming(),
-					"'"+Util.capitaliseSentence(Perk.ORGASMIC_LEVEL_DRAIN.getName(Main.game.getPlayer()))+"' perk effect:<br/>"
-							+ "Toggle whether or not you're going to drain [npc.namePos] level when [npc.she] orgasms."
+					"“"+Util.capitaliseSentence(Perk.ORGASMIC_LEVEL_DRAIN.getName(Main.game.getPlayer()))+"”天赋效果：<br/>"
+							+ "选择是否在[npc.name]高潮时流失[npc.her]的等级。"
 							+(!isOppositeDom()
-								?" [style.italicsMinorBad(You can only drain opposite partners (sub/dom)!)]"
-								:" You can only use this ability to drain opposite partners (sub/dom).")
+								?"[style.italicsMinorBad(你只能流失另一方对象的等级(服从或支配)！)]"
+								:" 你只能对另一方对象使用该能力(服从或支配)。")
 							+(isCharacterImmune()
 								?(Main.sex.getCharacterOrgasming().isImmuneToLevelDrain()
-									?"<br/>[style.italicsTerrible([npc.Name] cannot have [npc.her] level drained!)]"
-									:"<br/>[style.italicsTerrible(You cannot level drain during a bad end!)]")
+									?"<br/>[style.italicsTerrible([npc.Name]无法被等级流失！)]"
+									:"<br/>[style.italicsTerrible(在坏结局中无法使用等级流失！)]")
 								:""));
 		}
 		@Override

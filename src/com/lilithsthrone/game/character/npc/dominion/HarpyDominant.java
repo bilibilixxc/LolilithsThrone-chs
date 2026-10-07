@@ -59,9 +59,9 @@ public class HarpyDominant extends NPC {
 	}
 	
 	public HarpyDominant(boolean isImported) {
-		super(isImported, new NameTriplet("Diana"), "Zima",
-				"One of the more notable harpy matriarchs, Diana is the leader of a flock of harpies."
-						+ " As cruel as harpies come, Diana rules her flock with an iron fist, harshly punishing any harpies that try to challenge her dominance.",
+		super(isImported, new NameTriplet("狄安娜"), "齐马",
+				"狄安娜是一位更为尊贵的哈比族长，一群哈比的首领。"
+						+ "狄安娜是典型的凶残的哈比，通过铁拳统治着族群，任何胆敢挑战她权威的哈比，都会受到严惩。",
 				33, Month.OCTOBER, 2,
 				7, Gender.F_V_B_FEMALE, Subspecies.HARPY, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HARPY_NEST_RED, true);
@@ -324,8 +324,8 @@ public class HarpyDominant extends NPC {
 		if(user.isPlayer() && !target.isPlayer() && (item.getItemType().equals(ItemType.FETISH_UNREFINED) || item.getItemType().equals(ItemType.FETISH_REFINED))) {
 			return new Value<>(false,
 					"<p>"
-						+ "You try to give [npc.name] your "+item.getName()+", but [npc.she] takes one look at it and laughs,"
-						+ " [npc.speechNoEffects(You pathetic little thing! Do you seriously expect me to drink some potion of yours?! Idiot!)]"
+						+ "你想把"+item.getName()+"交给[npc.name]，但[npc.she]却只是瞧了一眼，便笑道，"
+						+ "[npc.speechNoEffects(你个可怜又可悲的小家伙！你不会真的觉得我会喝了你的药水吧？！蠢货！)]"
 					+ "</p>");
 		}
 		

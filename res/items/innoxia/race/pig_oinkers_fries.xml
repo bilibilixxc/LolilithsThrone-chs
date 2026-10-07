@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>15</value> 
-		<determiner><![CDATA[a box of]]></determiner>
-		<name><![CDATA[Oinkers Fries]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Oinkers Fries']]></namePlural>
-		<description><![CDATA[A cardboard box stuffed full of greasy, curly fries. The branding on the front of the packet declares it to be from the fast food outlet, 'Oinkers!', while on the back some text worryingly declares that the fat content is 'less than 50%'.]]></description> 
+		<determiner><![CDATA[一盒]]></determiner>
+		<name><![CDATA[哼哼炸薯条]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[哼哼炸薯条]]></namePlural>
+		<description><![CDATA[一个塞满了油腻的扭扭薯条的纸盒。包装正面的商标宣称它来自快餐经销商“哼哼！”，而背面印的文字则令人担忧地宣称脂肪含量“低于50%”。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/pig/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/pig/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="75">pig_oinkers_fries.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,22 +25,22 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[pig]]></potionDescriptor>
+		<potionDescriptor><![CDATA[猪]]></potionDescriptor>
 		<associatedRace>innoxia_pig</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId> <!-- 'RACE' is a special value, and when defined, this item will use the defined 'associatedRace' to give the player enchantment options for making a TF elixir for that race. -->
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
-			<line><![CDATA[If body size is less than [style.colourBodySizeThree('large')], increases body size by 1]]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)]到“药剂效果”]]></line>
+			<line><![CDATA[若体型不足[style.colourBodySizeThree(“大型”)]，将体型增加一级]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel heavier...
+				[npc.Name]开始感到体重更加沉重……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
 			#IF(npc.getBodySizeValue()<60)
@@ -59,10 +59,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(start)] quickly devouring the curly fries, and within moments [npc.sheIs] left with an empty box and an unhealthy, greasy taste filling [npc.her] mouth.
+		[npc.Name]迅速开始吃掉卷曲薯条，片刻之间，只剩下一个空盒子和一股不健康的、油腻的味道弥漫在[npc.her]的口中。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(present)] [npc2.name] with the box of curly fries and [npc.verb(get)] [npc2.herHim] to eat them. Stuffing them in [npc2.her] mouth, it only takes a few moments before [npc2.nameIs] left with an empty box and an unhealthy, greasy taste filling [npc2.her] mouth.
+		[npc.Name]拿着卷曲薯条的盒子，把它递给[npc2.name]，并让[npc2.herHim]吃掉。将它们塞进[npc2.her]的嘴巴，只过了几分钟，[npc2.nameIs]只剩下一个空盒子，口中弥漫着不健康、油腻的味道。
 		]]></otherUse>
 	</useDescriptions>
 

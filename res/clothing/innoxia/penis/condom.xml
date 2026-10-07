@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>20</value>
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[condom]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[condoms]]></namePlural>
-    <description><![CDATA[A sheath-shaped rubbery barrier device, designed to fit over a penis and prevent any semen from entering the body of a sexual partner.]]></description>
+    <determiner><![CDATA[一个]]></determiner>
+    <name><![CDATA[避孕套]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[避孕套]]></namePlural>
+    <description><![CDATA[一种鞘状橡胶计生物品，设计用于套在阴茎上，防止任何精液进入性对象体内。]]></description>
 
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
@@ -63,27 +62,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(tear)] open the packet and [npc.verb(roll)] the condom down the length of [npc.her] [npc.penis].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(tear)] open the packet and [npc.verb(roll)] the condom down the length of [npc2.namePos] [npc2.penis].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] impatiently [npc.verb(tear)] open the packet and [npc.verb(force)] the condom down the length of [npc2.namePos] [npc2.penis].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]撕开了避孕套的包装，然后将避孕套套在[npc.her]的[npc.penis]上并向下捋到合适的长度。
+]]></self>
+    <other><![CDATA[
+[npc.Name]撕开了避孕套的包装，然后将避孕套套在[npc2.namePos]的[npc2.penis]上并向下捋到合适的长度。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]撕扯开了避孕套的包装，然后将避孕套强行套在[npc2.namePos]的[npc2.penis]上并向下捋到合适的长度。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slip)] off [npc.her] condom and [npc.verb(throw)] it away.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slip)] off [npc2.namePos] condom and [npc.verb(throw)] it away.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] impatiently [npc.verb(pull)] off [npc2.namePos] condom and [npc.verb(throw)] it away.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]取下了[npc.her]的避孕套并扔到了一边。
+]]></self>
+    <other><![CDATA[
+[npc.Name]取下了[npc2.namePos]的避孕套并扔到了一边。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]扯下了[npc2.namePos]的避孕套并扔到了一边。
+]]></otherRough>
   </displacementText>
 
 

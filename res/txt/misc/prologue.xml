@@ -1,918 +1,918 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="INTRO_FEMALE"><![CDATA[
 	<p>
-		As the two of you talk about your sexual backgrounds, you find yourself increasingly unable to control your arousal, and from the desperate look in [prologueFemale.namePos] eyes, she's having the same problem as you are. Stepping forwards, she half-speaks, half-moans, [prologueFemale.speech(All this talk's got me pretty turned on... I don't usually do things like this, but everyone's busy around the stage right now. I'm sure one of the rooms around here is empty, if you want to have some fun...)]
+		在你们两人讨论各自的性史时，你越发难以控制不断高涨的情欲。对上[prologueFemale.namePos]渴求的眼神，你发现她和你一样深受其害。她在讲话的间隙轻喘着，向前迈了两步，贴近了你，[prologueFemale.speech(我们的话题让我欲火焚身……我不常做这种事，但现在舞台周围的大家都很忙。如果你渴望发生些愉悦的事情，我敢肯定附近有空房间……)]
 	</p>
 	<p>
-		[prologueFemale.Name] is right; everyone who's present for the event seems to be clustered around the stage on the far side of the room. There'd be nothing stopping you and her from sneaking off and having a little fun in one of the empty rooms...
+		[prologueFemale.Name]说得对，参加活动的所有人都聚在远离房间的舞台处。这儿没人能阻止你们悄悄溜进空房间，发生些愉悦的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_MALE"><![CDATA[
 	<p>
-		As the two of you talk about your sexual backgrounds, you find yourself increasingly unable to control your arousal, and from the desperate look in [prologueMale.namePos] eyes, he's having the same problem as you are. Stepping forwards, he half-speaks, half-groans, [prologueMale.speech(All this talk's got me pretty turned on... I don't usually do things like this, but everyone's busy around the stage right now. I'm sure one of the rooms around here is empty, if you want to have some fun...)]
+		在你们两人讨论各自的性史时，你越发难以控制不断高涨的情欲。对上[prologueMale.namePos]渴求的眼神，你发现他和你一样深受其害。他在讲话的间隙轻喘着，向前迈了两步，贴近了你，[prologueMale.speech(我们的话题让我欲火焚身……我不常做这种事，但现在舞台周围的大家都很忙。如果你渴望发生些愉悦的事情，我敢肯定附近有空房间……)]
 	</p>
 	<p>
-		[prologueMale.Name] is right; everyone who's present for the event seems to be clustered around the stage on the far side of the room. There'd be nothing stopping you and him from sneaking off and having a little fun in one of the empty rooms...
+		[prologueMale.Name]说得对，参加活动的所有人都聚在远离房间的舞台处。这儿没人能阻止你们悄悄溜进空房间，发生些愉悦的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_EMPTY_ROOM_FEMALE"><![CDATA[
 	<p>
-		Grinning at [prologueFemale.name], you reach down and take hold of her hand, before leading her off towards a quiet, shaded doorway nearby. [pc.speech(This looks like it'll be empty...)]
+		[prologueFemale.name]微笑着，你伸手向下，握住她的手，随后将她引向附近一条安静又阴暗的走廊。[pc.speech(这里看起来没有人……)]
 	</p>
 	<p>
-		[prologueFemale.Name] giggles at your observation, before skipping forwards and moaning into your ear, [prologueFemale.speech(~Mmm!~ This is going to be good!)]
+		[prologueFemale.Name]看着你四下张望，咯咯笑了起来。她欢快地向前跳了几步，在你耳边轻语，[prologueFemale.speech(~嗯嗯！~ 接下来会发生很舒服的事！)]
 	</p>
 	<p>
-		Ignoring the sign which reads 'Staff Only', you push the heavy oaken door ajar and peer inside, smiling to yourself as you discover that the room beyond is pitch black; proof that it's completely empty. Pulling [prologueFemale.name] inside, you flick the lights on as you close the door behind you.
+		忽略了写着“仅限员工入内”的标志，你推开沉重的橡木拱门向内窥视，房间里黑漆漆的，空无一人。你笑了起来。拉着[prologueFemale.name]走进房间，你关上门，顺手打开了灯。
 	</p>
 	<p>
-		The room that you find yourself in appears to be some sort of office, and from the numerous ceiling-height bookshelves lining the walls, the rich mahogany desk, and the pair of expensive-looking leather sofas, you guess that it belongs to someone very important.
+		你发现自己置身于一间办公室。高耸的天花板上架满了书，一张雕花精美的红木书桌，以及一对昂贵而奢华的皮质沙发，无一不在诉说着房间主人的高贵身份。
 	</p>
 	<p>
-		[prologueFemale.speech(I've never been fucked in an office as nice as this one before,)] [prologueFemale.name] giggles again, before stepping forwards and pressing her full, plump lips against yours. Instantly, she slides her tongue into your mouth, reaching up to take hold of your head as you passionately start to kiss one another...
+		[prologueFemale.speech(我从来没在这么棒的办公室里被人操过。)][prologueFemale.name]又轻笑道，她靠近，浑圆丰满的嘴唇贴向你。不过片刻，她把舌头探进你的嘴，你激情回吻，她伸出手搂住你的头……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_EMPTY_ROOM_MALE"><![CDATA[
 	<p>
-		Grinning at [prologueMale.name], you allow him to reach down and take hold of your hand, before being led off towards a quiet, shaded doorway nearby. [prologueMale.speech(This looks like it'll be empty...)]
+		[prologueMale.name]露出一个微笑，你允许他伸手向下，握住你的一只手，随后让他将你引向附近一条安静又阴暗的走廊。[prologueMale.speech(这里看起来没有人……)]
 	</p>
 	<p>
-		You can't help but smile at his observation, before skipping forwards and [pc.moaning] into his ear, [pc.speech(~Mmm!~ This is going to be good!)]
+		看着他观察周围，你情不自禁地发出轻笑，随后向前跳去，在他耳边呻吟道，[pc.speech(~嗯嗯！~ 接下来会发生很舒服的事！)]
 	</p>
 	<p>
-		Ignoring the sign which reads 'Staff Only', [prologueMale.name] pushes the heavy oaken door ajar and peers inside, smiling to himself as you both see that the room beyond is pitch black; proof that it's completely empty. Pulling you inside, he flicks the lights on before closing the door behind you.
+		忽略了写着“仅限员工入内”的标志，[prologueMale.name]推开沉重的橡木拱门向内窥视，房间里黑漆漆的，空无一人。他笑了起来。拉着你走进房间，他关上门，顺手打开了灯。
 	</p>
 	<p>
-		The room that you find yourself in appears to be some sort of office, and from the numerous ceiling-height bookshelves lining the walls, the rich mahogany desk, and the pair of expensive-looking leather sofas, you guess that it belongs to someone very important.
+		你发现自己置身于一间办公室。高耸的天花板上架满了书，一张雕花精美的红木书桌，以及一对昂贵而奢华的皮质沙发，无一不在诉说着房间主人的高贵身份。
 	</p>
 	<p>
-		[prologueMale.speech(I've never fucked anyone in an office as nice as this one before,)] [prologueMale.name] grins, before stepping forwards and pressing his lips against yours. Instantly, he pushes his tongue into your mouth, reaching around to squeeze your [pc.ass+] as you passionately start to kiss one another...
+		[prologueMale.speech(我之前从未在这么棒的办公室里操过别人，)][prologueMale.name]又轻笑道，随后走上前来将他的嘴唇贴向你。一瞬间的功夫他就将舌头伸入你的嘴里，在你激情地回吻时伸手摸索并揉捏着你[pc.ass+]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<!-- Sex with female character: -->
 	
 	<htmlContent tag="INTRO_EMPTY_ROOM_SEX_FEMALE_AS_MALE_START_DOM"><![CDATA[
 	#IF(pc.isFeminine() && !pc.isPenisBulgeVisible() && !pc.isTesticleBulgeVisible())
 		<p>
-			You pull [prologueFemale.name] into your [pc.breasts], desperately [pc.moaning] into her mouth as you dominantly grope and fondle [npc.her] body. Her own hands drop down between your legs, and as she discovers that you've got a cock, she breaks off the kiss and lets out an excited giggle. Pulling something out of her purse, she pushes it into your hands and says, [prologueFemale.speech(I'm on the pill, so don't worry about getting me knocked up. If you really want to be sure, though, you can wear this...)]
+			你将[prologueFemale.name]拉入你的[pc.breasts]，饥渴地[pc.moaning]着，霸道地摸索并爱抚着她的身体。她的双手滑落到你的腿间，当她发现你长着阴茎时，她中断了亲吻，发出了兴奋的咯咯声。她从自己的钱包里拿出什么东西塞进了你手里，然后说，[prologueFemale.speech(我吃过避孕药了，所以不用担心我会怀孕。不过如果你想更保险一些，你可以戴上这个……)]
 		</p>
 	#ELSE
 		<p>
-			You pull [prologueFemale.name] into your [pc.breasts], desperately [pc.moaning] into her mouth as you dominantly grope and fondle [npc.her] body. Breaking off the kiss for a moment, she pulls something out of her purse, before pushing it into your hands and saying, [prologueFemale.speech(I'm on the pill, so don't worry about getting me knocked up. If you really want to be sure, though, you can wear this...)]
+			你将[prologueFemale.name]拉入你的[pc.breasts]，饥渴地[pc.moaning]着，霸道地摸索并爱抚着她的身体。她略微中断了一下接吻，从自己的钱包里拿出什么东西塞进了你手里，随后说道：[prologueFemale.speech(我吃过避孕药了，所以不用担心我会怀孕。不过如果你想更保险一些，你可以戴上这个……)]
 		</p>
 		<p>
-			You look down to see that you've just been given a condom, still sealed in its small square packet...
+			你向下看着给你的避孕套，它仍被密封在小小的方形包装内……
 		</p>
 	#ENDIF
 	<div class='container-full-width' style='text-align:center;'>
-		<i>If you'd like to use the condom, open your inventory (by pressing 'i') and select it from the menu.
-		<br/>(Your penis will need to be exposed before it can be used!)</i>
+		<i>如果你想使用避孕套，请打开物品栏(按下“i”键)并且从菜单中选中物品。
+		<br/>(使用之前需要保证阴茎暴露在外！)</i>
 	</div>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_EMPTY_ROOM_SEX_FEMALE_AS_FEMALE_START_DOM"><![CDATA[
 	<p>
-		You pull [prologueFemale.name] into your [pc.breasts], desperately [pc.moaning] into her mouth as you dominantly grope and fondle [npc.her] body...
+		你将[prologueFemale.name]拉入你的[pc.breasts]，饥渴地[pc.moaning]着，霸道地摸索并爱抚着她的身体……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_EMPTY_ROOM_SEX_FEMALE_AS_MALE_START_SUB"><![CDATA[
 	#IF(pc.isFeminine() && !pc.isPenisBulgeVisible() && !pc.isTesticleBulgeVisible())
 		<p>
-			Not wanting to be the one to take the lead, you lean into [prologueFemale.namePos] [prologueFemale.breasts], before letting out a desperate [pc.moan] and begging her to fuck you. Smirking at your submissively display, [prologueFemale.name] presses her lips against yours, before thrusting her tongue into your mouth as she dominantly gropes and fondles your body. Her hands drop down between your legs, and as she discovers that you've got a cock, she breaks off the kiss and lets out an excited giggle. Pulling something out of her purse, she pushes it into your hands and says, [prologueFemale.speech(I'm on the pill, so don't worry about getting me knocked up. If you really want to be sure, though, you can wear this...)]
+			你不想成为主动的那个人，便靠向[prologueFemale.namePos]的[prologueFemale.breasts]，饥渴地发出[pc.moan]，乞求她来操你。[prologueFemale.name]对你服从的样子露出坏笑，将嘴唇压向你，随后将她的舌头插入你的嘴里，主导性地摸索并爱抚着你的身体。她的双手滑落到你的腿间，当她发现你长着阴茎时，她中断了亲吻，发出了兴奋的咯咯声。她从自己的钱包里拿出什么东西塞进了你手里，然后说，[prologueFemale.speech(我吃过避孕药了，所以不用担心我会怀孕。不过如果你想更保险一些，你可以戴上这个……)]
 		</p>
 	#ELSE
 		<p>
-			Not wanting to be the one to take the lead, you lean into [prologueFemale.namePos] [prologueFemale.breasts], before letting out a desperate [pc.moan] and begging her to fuck you. Smirking at your submissively display, [prologueFemale.name] presses her lips against yours, before thrusting her tongue into your mouth as she dominantly gropes and fondles your body. Breaking off the kiss for a moment, she pulls something out of her purse, before pushing it into your hands and saying, [prologueFemale.speech(I'm on the pill, so don't worry about getting me knocked up. If you really want to be sure, though, you can wear this...)]
+			你不想成为主动的那个人，便靠向[prologueFemale.namePos]的[prologueFemale.breasts]，饥渴地发出[pc.moan]，乞求她来操你。[prologueFemale.name]对你服从的样子露出坏笑，将嘴唇压向你，随后将她的舌头插入你的嘴里，主导性地摸索并爱抚着你的身体。她略微中断了一下接吻，从自己的钱包里拿出什么东西塞进了你手里，随后说道：[prologueFemale.speech(我吃过避孕药了，所以不用担心我会怀孕。不过如果你想更保险一些，你可以戴上这个……)]
 		</p>
 		<p>
-			You look down to see that you've just been given a condom, still sealed in its small square packet...
+			你向下看着给你的避孕套，它仍被密封在小小的方形包装内……
 		</p>
 	#ENDIF
 	<div class='container-full-width' style='text-align:center;'>
-		<i>If you'd like to use the condom, open your inventory (by pressing 'i') and select it from the menu.<br/>
-		(Your penis will need to be exposed before it can be used!)</i>
+		<i>如果你想使用避孕套，请打开物品栏(按下“i”键)并且从菜单中选中物品。<br/>
+		(使用之前需要保证阴茎暴露在外！)</i>
 	</div>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_EMPTY_ROOM_SEX_FEMALE_AS_FEMALE_START_SUB"><![CDATA[
 	<p>
-		Not wanting to be the one to take the lead, you lean into [prologueFemale.namePos] [prologueFemale.breasts], before letting out a desperate [pc.moan] and begging her to fuck you. Smirking at your submissively display, [prologueFemale.name] presses her lips against yours, before thrusting her tongue into your mouth as she dominantly gropes and fondles your body...
+		你不想成为主动的那个人，便靠向[prologueFemale.namePos]的[prologueFemale.breasts]，饥渴地发出呻吟声，乞求她来操你。[prologueFemale.name]对你服从的样子露出坏笑，将嘴唇压向你，随后将她的舌头插入你的嘴里，主导性地摸索并爱抚着你的身体……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Sex with male character: -->
 	
 	<htmlContent tag="INTRO_EMPTY_ROOM_SEX_MALE_START_DOM"><![CDATA[
 	<p>
-		Deciding to take charge, you dominantly pull [prologueMale.name] into your torso, before thrusting your tongue into his mouth as you grope and fondle his body. Breaking off the kiss for a moment, [prologueMale.name] pulls something out of his pocket, before pushing it into your hands and saying, [prologueMale.speech(I'd rather you didn't, but if you want to, you can wear this.)]
+		决定掌握主动权，你主导性地将[prologueMale.name]拉向你的身体，随后将舌头插入他的嘴里，与此同时你摸索并爱抚着他的身体。略微中断了一下接吻，他从自己的口袋里拿出什么东西塞进了你手里，随后说道：[prologueMale.speech(我希望你别戴套，但是你想的话也可以戴上。)]
 	</p>
 		#IF(pc.hasPenis())
-		  #IF(pc.isFeminine() && !pc.isPenisBulgeVisible() && !pc.isTesticleBulgeVisible())
-		    You look down to see that you've just been given a condom, still sealed in its small square packet. It's a good thing that you always keep a condom in your purse as well, so that you've got one for both [prologueMale.name] and yourself if need be.
-		  #ELSE
-			You look down to see that you've just been given a pair of condoms, still sealed in their small square packets.
-		  #ENDIF
+		#IF(pc.isFeminine() && !pc.isPenisBulgeVisible() && !pc.isTesticleBulgeVisible())
+		你低头一看，发现刚刚给了你一个避孕套，还密封在小方包里面。好在你的包里也总是放着一个安全套，这样在需要的时候，你就可以给[prologueMale.Name]和你自己都准备一个了。
 		#ELSE
-			You look down to see that you've just been given a condom, still sealed in its small square packet.
+			你低头一看，原来是一对避孕套，还密封在小方包里面。
+		#ENDIF
+		#ELSE
+			你低头一看，发现刚刚给了你一个避孕套，还封在小方包里面。
 		#ENDIF
 	</p>
 	<div class='container-full-width' style='text-align:center;'>
 		#IF(pc.hasPenis())
-			<i>If you'd like to use the condoms, open your inventory (by pressing 'i') and select them from the menu.<br/>([prologueMale.namePos] penis will need to be exposed before it can be equipped onto him, and the same applies for if you want to equip one yourself!)</i>
+			<i>如果你想使用避孕套，请打开物品栏(按下“i”键)并且从菜单中选中物品。<br/>(给[prologueMale.namePos]装备之前需要保证阴茎暴露在外，对于你也遵循同样的要求！)</i>
 		#ELSE
-			<i>If you'd like to use the condom, open your inventory (by pressing 'i') and select it from the menu.<br/>([prologueMale.namePos] penis will need to be exposed before it can be used!)</i>
+			<i>如果你想使用避孕套，请打开物品栏(按下“i”键)并且从菜单中选中物品。<br/>(给[prologueMale.namePos]装备之前需要保证阴茎暴露在外！)</i>
 		#ENDIF
 	</div>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTRO_EMPTY_ROOM_SEX_MALE_START_SUB"><![CDATA[
 	<p>
-		You allow [prologueMale.name] to pull you into his strong, masculine torso, desperately moaning into his mouth as he dominantly gropes and fondles your body. Breaking off the kiss for a moment, he pulls something out of his pocket, before pushing it into your hands and saying, [prologueMale.speech(I'd rather not, but if you want me to, I can wear this.)]
+		在你的允许下，[prologueMale.name]将你用力拉向他那强壮而富有男人味的躯体，在他主导性地摸索并爱抚你的身体时，你对着他的嘴拼命地发出呻吟声。略微中断了一下接吻，他从自己的口袋里拿出什么东西塞进了你手里，随后说道：[prologueMale.speech(我希望别戴套，但是你想的话，我能戴上它。)]
 	</p>
 		#IF(pc.hasPenis())
-		  #IF(pc.isFeminine() && !pc.isPenisBulgeVisible() && !pc.isTesticleBulgeVisible())
-		    You look down to see that you've just been given a condom, still sealed in its small square packet. It's a good thing that you always keep a condom in your purse as well, so that you've got one for both [prologueMale.name] and yourself if need be.
-		  #ELSE
-			You look down to see that you've just been given a pair of condoms, still sealed in their small square packets.
-		  #ENDIF
+		#IF(pc.isFeminine() && !pc.isPenisBulgeVisible() && !pc.isTesticleBulgeVisible())
+		你低头一看，发现刚刚给了你一个避孕套，还密封在小方包里面。好在你的包里也总是放着一个安全套，这样在需要的时候，你就可以给[prologueMale.Name]和你自己都准备一个了。
 		#ELSE
-			You look down to see that you've just been given a condom, still sealed in its small square packet.
+			你低头一看，原来是一对避孕套，还密封在小方包里面。
+		#ENDIF
+		#ELSE
+			你低头一看，发现刚刚给了你一个避孕套，还封在小方包里面。
 		#ENDIF
 	</p>
 	<div class='container-full-width' style='text-align:center;'>
 		#IF(pc.hasPenis())
-			<i>If you'd like to use the condoms, open your inventory (by pressing 'i') and select them from the menu.<br/>([prologueMale.namePos] penis will need to be exposed before it can be equipped onto him, and the same applies for if you want to equip one yourself!)</i>
+			<i>如果你想使用避孕套，请打开物品栏(按下“i”键)并且从菜单中选中物品。<br/>(给[prologueMale.namePos]装备之前需要保证阴茎暴露在外，对于你也遵循同样的要求！)</i>
 		#ELSE
-			<i>If you'd like to use the condom, open your inventory (by pressing 'i') and select it from the menu.<br/>([prologueMale.namePos] penis will need to be exposed before it can be used!)</i>
+			<i>如果你想使用避孕套，请打开物品栏(按下“i”键)并且从菜单中选中物品。<br/>(给[prologueMale.namePos]装备之前需要保证阴茎暴露在外！)</i>
 		#ENDIF
 	</div>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SEX_CLOTHING_MANAGEMENT_TIP"><![CDATA[
 	<div class='container-full-width' style='text-align:center;'>
-		<i>You can click on both your and [npc.namePos] clothing (in the bottom-left and bottom-right of the screen) to manage clothing during sex!</i>
+		<i>你可以点击你或[npc.namePos]的衣物(在屏幕的左下方和右下方)来管理做爱时身上的衣物！</i>
 	</div>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX_FEMALE_SATISFIED"><![CDATA[
 	<p>
-		[prologueFemale.Name] sinks down onto one of the leather sofas with a sigh, [prologueFemale.speech(Fuck... That was good... I'm going to need some time to rest...)]
+		[prologueFemale.Name]呼出一口气陷进一张真皮沙发中。[prologueFemale.speech(干……这真是太爽了……我需要休息一会！)]
 	</p>
 	<p>
-		Grinning down at her as her breasts heave up and down from exertion, you reply, [pc.speech(Yeah, that was good. I'll go on ahead, I'll catch up with you later!)]
+		她的乳房随着剧烈地喘息上下涌动，你笑着回应道，[pc.speech(是啊，那真的好爽。我要先走了，稍后联系你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX_FEMALE_NOT_SATISFIED"><![CDATA[
 	<p>
-		[prologueFemale.Name] sinks down onto one of the leather sofas with a sigh, [prologueFemale.speech(Fuck... That really wasn't satisfying at all... I'm going to finish myself off...)]
+		[prologueFemale.Name]叹了一口气陷进一张真皮沙发中。[prologueFemale.speech(干……这真的一点都满足不了我……我要自己弄出来……)]
 	</p>
 	<p>
-		Grinning down at her as she starts frantically fingering herself, you reply, [pc.speech(Yeah, sure. I'll catch up with you later!)]
+		她疯狂地用手指抽插着自己，你笑着回应道，[pc.speech(是啊，当然，稍后联系你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX_MALE_SATISFIED"><![CDATA[
 	<p>
-		[prologueMale.Name] sinks down onto one of the leather sofas with a sigh, [prologueMale.speech(Fuck... That was good... I'm going to need some time to rest...)]
+		[prologueMale.Name]呼出一口气陷进一张真皮沙发中。[prologueFemale.speech(干……这真是太爽了……我需要休息一会！)]
 	</p>
 	<p>
-		Grinning down at him as his chest heaves up and down from exertion, you reply, [pc.speech(Yeah, that was good. I'll go on ahead, I'll catch up with you later!)]
+		他的胸口随着剧烈地喘息上下起伏，你笑着回应道，[pc.speech(是啊，那真的好爽。我要先走了，稍后联系你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX_MALE_NOT_SATISFIED"><![CDATA[
 	<p>
-		[prologueMale.Name] sinks down onto one of the leather sofas with a sigh, [prologueMale.speech(Fuck... That really wasn't satisfying at all... I'm going to finish myself off...)]
+		[prologueMale.Name]叹了一口气陷进一张真皮沙发中，[prologueFemale.speech(干……这真的一点都满足不了我……我要自己弄出来……)]
 	</p>
 	<p>
-		Grinning down at him as he starts frantically masturbating, you reply, [pc.speech(Yeah, sure. I'll catch up with you later!)]
+		他开始疯狂地自慰起来，你笑着回应道，[pc.speech(是啊，当然。稍后联系你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
-		Leaving your partner behind, you step out of the office, before heading off towards the stage. As you approach the large crowd that's gathered before it, you see your aunt Lily off to one side, pacing impatiently back and forth. From the way she's frantically wringing her hands and glancing this way and that, you can tell that she's been flustered by something.
+		在将其留在原地后，你迈步走出办公室向舞台走去。在靠近人群聚集的展台处，你看到莉莉姨妈在舞台一侧的下方不耐烦地来回踱步。从她焦躁扭动的双手和向四处不断扫视的目光里你能看出她正在因什么事情而慌张。
 	</p>
 	<p>
-		[pc.speech(Hi, Lily!)] you call out, walking towards her.
+		[pc.speech(嗨，莉莉！)]你喊着朝她走去。
 	</p>
 	<p>
-		[lilaya.speech([pc.Name]! There you are! I've been looking everywhere for you,)] your aunt calls out, bounding over towards you and sighing with relief. [lilaya.speech(I really need your help!)]
+		[lilaya.speech([pc.Name]！你来了！我在到处找你。)]你的姨妈叫着冲向你，放松地叹了口气。[lilaya.speech(我太需要你的帮忙了！)]
 	</p>
 	<p>
-		Giving her a reassuring smile, you reply, [pc.speech(Don't worry, Lily, I can help. Is this about the opening being delayed?)]
+		你露出让人安心的微笑，回应道：[pc.speech(别担心，莉莉，是要推迟开幕式吗？)]
 	</p>
 	<p>
-		[lilaya.speech(Yes! This is to do with the delay! Arthur's gone missing, and I can't start without him! Everyone's crowding me asking questions, so I can't go out and look for him myself.	 Please, please <i>please</i> can you go and find him for me?)]
+		[lilaya.speech(是的！就是为了解决这个问题才推迟的！亚瑟不见了，活动不能在他缺席的情况下开幕！现在几乎所有人都挤到我身边问东问西的，所以我不能离开这里去亲自找他。拜托，拜托<i>拜托</i>，你能帮我去找到他吗？)]
 	</p>
 	<p>
-		Lily's puppy-dog eyes always were too much for you to say no to, and you find yourself agreeing to do as she asks, [pc.speech(Ok, Lily, I'll find him for you, don't worry.)]
+		莉莉像小奶狗般可怜的眼睛让你说不出一个不字，你毫不犹豫就答应了她的请求：[pc.speech(好的，莉莉姨妈，我会帮你找到他的，别担心。)]
 	</p>
 	<p>
-		As Lily starts thanking you, someone calls out from behind her, asking her to return to the stage. Thanking you once more, she then rushes off, leaving you to do as you said you would...
+		就在莉莉感谢你时，有人在她身后喊着，让她回到舞台。她最后道了声谢，跑着离开了，留你一人完成刚说的承诺……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_SECOND_THOUGHTS_FEMALE"><![CDATA[
 	<p>
-		In a sudden moment of clarity, you realise that what you're about to do isn't a very good idea, and you step away from [prologueFemale.name]. [pc.speech(I'm sorry, but on second thoughts, I don't think this a good idea. Anyway, I'm sure the presentation will be starting soon...)]
+		脑袋瞬间的清明让你意识到，将要做的事情并非是个好主意，你从[prologueFemale.name]身边走开。[pc.speech(我很抱歉，但是仔细想想，我不觉得这是个好主意。总之，我觉得开幕致辞很快就要开始了……)]
 	</p>
 	<p>
-		[prologueFemale.speech(Eugh... Fine...)] [prologueFemale.name] sighs, before collapsing down onto one of the leather sofas. [prologueFemale.speech(You go on ahead then, I need a moment to calm down.)]
+		[prologueFemale.speech(呃……好吧……)][prologueFemale.name]叹了口气，瘫在其中一张真皮沙发上。[prologueFemale.speech(你先走吧，我需要一点时间让自己平静下来。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_SECOND_THOUGHTS_MALE"><![CDATA[
 	<p>
-		In a sudden moment of clarity, you realise that what you're about to do isn't a very good idea, and you step away from [prologueMale.name]. [pc.speech(I'm sorry, but on second thoughts, I don't think this a good idea. Anyway, I'm sure the presentation will be starting soon...)]
+		脑袋瞬间的清明让你意识到，将要做的事情并非是个好主意，你从[prologueMale.name]身边走开。[pc.speech(我很抱歉，但是仔细想想，我不觉得这是个好主意。总之，我觉得开幕致辞很快就要开始了……)]
 	</p>
 	<p>
-		[prologueMale.speech(Eugh... Fine...)] [prologueMale.name] sighs, before collapsing down onto one of the leather sofas. [prologueMale.speech(You go on ahead then, I need a moment to calm down.)]
+		[prologueMale.speech(呃……好吧……)][prologueMale.name]叹了口气，瘫在其中一张真皮沙发上。[prologueMale.speech(你先走吧，我需要一点时间让自己平静下来。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_SECOND_THOUGHTS"><![CDATA[
 	<p>
-		Leaving your partner behind, you step out of the office, before heading off towards the stage. As you approach the large crowd that's gathered before it, you see your aunt Lily off to one side, pacing impatiently back and forth. From the way she's frantically wringing her hands and glancing this way and that, you can tell that she's been flustered by something.
+		在将其留在原地后，你迈步走出办公室向舞台走去。在靠近人群聚集的展台处，你看到莉莉姨妈在舞台一侧的下方不耐烦地来回踱步。从她焦躁扭动的双手和向四处不断扫视的目光里你能看出她正在因什么事情而慌张。
 	</p>
 	<p>
-		[pc.speech(Hi, Lily!)] you call out, walking towards her.
+		[pc.speech(嗨，莉莉！)]你喊着朝她走去。
 	</p>
 	<p>
-		[lilaya.speech([pc.Name]! There you are! I've been looking everywhere for you,)] your aunt calls out, bounding over towards you and sighing with relief. [lilaya.speech(I really need your help!)]
+		[lilaya.speech([pc.Name]！你来了！我在到处找你。)]你的姨妈叫着冲向你，放松地叹了口气。[lilaya.speech(我太需要你的帮忙了！)]
 	</p>
 	<p>
-		Giving her a reassuring smile, you reply, [pc.speech(Don't worry, Lily, I can help. Is this about the opening being delayed?)]
+		你露出让人安心的微笑，回应道：[pc.speech(别担心，莉莉，是要推迟开幕式吗？)]
 	</p>
 	<p>
-		[lilaya.speech(Yes! This is to do with the delay! Arthur's gone missing, and I can't start without him! Everyone's crowding me asking questions, so I can't go out and look for him myself. Please, please <i>please</i> can you go and find him for me?)]
+		[lilaya.speech(是的！就是为了解决这个问题才推迟的！亚瑟不见了，活动不能在他缺席的情况下开幕！现在几乎所有人都挤到我身边问东问西的，所以我不能离开这里去亲自找他。拜托，拜托<i>拜托</i>，你能帮我去找到他吗？)]
 	</p>
 	<p>
-		Lily's puppy-dog eyes always were too much for you to say no to, and you find yourself agreeing to do as she asks, [pc.speech(Ok, Lily, I'll find him for you, don't worry.)]
+		莉莉像小奶狗般可怜的眼睛让你说不出一个不字，你毫不犹豫就答应了她的请求：[pc.speech(好的，莉莉姨妈，我会帮你找到他的，别担心。)]
 	</p>
 	<p>
-		As Lily starts thanking you, someone calls out from behind her, asking her to return to the stage. Thanking you once more, she then rushes off, leaving you to do as you said you would...
+		就在莉莉感谢你时，有人在她身后喊着，让她回到舞台。她最后道了声谢，跑着离开了，留你一人完成刚说的承诺……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NO_FEMALE"><![CDATA[
 	<p>
-		Keeping your growing arousal under control, you step away from [prologueFemale.name]. [pc.speech(I don't think that's a good idea. Anyway, I'm sure the presentation will be starting soo-)]
+		你控制住高涨的情欲，从[prologueFemale.name]身边走开。[pc.speech(我很抱歉，我不觉得这是个好主意。总之，我觉得开幕致辞很快就要开——)]
 	</p>
 	<p>
-		[lilaya.speech([pc.Name]! There you are! I've been looking everywhere for you,)] a very familiar voice calls out, cutting your sentence short, [lilaya.speech(sorry if I'm interrupting, but I really need your help!)]
+		[lilaya.speech([pc.Name]！你在这！我在到处找你。)]非常耳熟的喊声打断了你的对话，[lilaya.speech(很抱歉打断你们谈话，但是我真的需要你的帮助！)]
 	</p>
 	<p>
-		Turning towards the unmistakable voice of your aunt Lily, you give her a reassuring smile. [pc.speech(Don't worry, Lily, you're not interrupting. Is this about the opening being delayed?)]
+		你听出是莉莉姨妈，于是转过头去，露出让人安心的微笑。[pc.speech(放心，莉莉，你没有打扰到我们。是要推迟开幕式吗？)]
 	</p>
 	<p>
-		[prologueFemale.speech(I see you're going to be busy, perhaps I'll catch you later,)] [prologueFemale.name] says, before walking off and leaving you alone with your aunt.
+		[prologueFemale.speech(看起来你有事情要忙，也许我们能待会再聊。)][prologueFemale.name]说着走出房间，留你独自面对你的姨妈。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NO_MALE"><![CDATA[
 	<p>
-		Keeping your growing arousal under control, you step away from [prologueMale.name]. [pc.speech(I don't think that's a good idea. Anyway, I'm sure the presentation will be starting soo-)]
+		你控制住高涨的情欲，从[prologueMale.name]身边走开。[pc.speech(我很抱歉，我不觉得这是个好主意。总之，我觉得开幕致辞很快就要开——)]
 	</p>
 	<p>
-		[lilaya.speech([pc.Name]! There you are! I've been looking everywhere for you,)] a very familiar voice calls out, cutting your sentence short, [lilaya.speech(sorry if I'm interrupting, but I really need your help!)]
+		[lilaya.speech([pc.Name]！你在这！我在到处找你。)]非常耳熟的喊声打断了你的对话，[lilaya.speech(很抱歉打断你们谈话，但是我真的需要你的帮助！)]
 	</p>
 	<p>
-		Turning towards the unmistakable voice of your aunt Lily, you give her a reassuring smile. [pc.speech(Don't worry, Lily, you're not interrupting. Is this about the opening being delayed?)]
+		你听出是莉莉姨妈，于是转过头去，露出让人安心的微笑。[pc.speech(放心，莉莉，你没有打扰到我们。是要推迟开幕式吗？)]
 	</p>
 	<p>
-		[prologueMale.speech(I see you're going to be busy, perhaps I'll catch you later,)] [prologueMale.name] says, before walking off and leaving you alone with your aunt.
+		[prologueMale.speech(看起来你有事情要忙，也许我们能待会再聊。)][prologueMale.name]说着走出房间，留你独自面对你的姨妈。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NO"><![CDATA[
 	<p>
-		[lilaya.speech(Erm... goodbye!)] Lily awkwardly calls out, completely oblivious as to what was going on, before turning back to you. [lilaya.speech(Yes! This is to do with the delay! Arthur's gone missing, and I can't start without him! Everyone's crowding me asking questions, so I can't go out and look for him myself. Please, please <i>please</i> can you go and find him for me?)]
+		[lilaya.speech(呃……再见！)]莉莉尴尬地说着，看起来她完全明白本来要发生的事情，随后转向你。[lilaya.speech(是的！就是为了解决这个问题才推迟的！亚瑟不见了，活动不能在他缺席的情况下开幕！现在几乎所有人都挤到我身边问东问西的，所以我不能离开这里去亲自找他。拜托，拜托<i>拜托</i>，你能帮我去找到他吗？)]
 	</p>
 	<p>
-		Lily's puppy-dog eyes always were too much for you to say no to, and you find yourself agreeing to do as she asks, [pc.speech(Ok, Lily, I'll find him for you, don't worry.)]
+		莉莉像小奶狗般可怜的眼睛让你说不出一个不字，你毫不犹豫就答应了她的请求：[pc.speech(好的，莉莉姨妈，我会帮你找到他的，别担心。)]
 	</p>
 	<p>
-		As Lily starts thanking you, someone calls out from behind her, asking her to return to the stage. Thanking you once more, she then rushes off, leaving you to do as you said you would...
+		就在莉莉感谢你时，有人在她身后喊着，让她回到舞台。她最后道了声谢，跑着离开了，留你一人完成刚说的承诺……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_2"><![CDATA[
 	<p>
-		Having agreed to help Lily by finding Arthur, you set off into the museum. The steady hum of voices from the entrance hall quickly fades away into silence as you delve deep into the museum's deserted rooms and corridors. It's a lot larger in here than you anticipated, and before long you realise that you've become hopelessly lost. As you step into yet another cavernous hall lined with glass cabinets and ancient stonework, you thankfully see a map of the museum on the far side of the room. Muttering thanks to whoever put that there, you quickly make your way towards it, hoping to find a route out of here.
+		答应下帮助莉莉去寻找亚瑟，你走进博物馆。大厅入口处持续的嘈杂声，随着你深入博物馆内的清冷房间与走廊，快速退入寂静。这里比你预期得还要更大，不久后你发现自己完全迷路了。在踏入另一个洞穴般的展厅时，你很高兴能够看到一张博物馆的地图挂在房间远处的一角。低声地对将它放这里的那人道谢，你大步走向它，期望能够找到离开这里的路线。
 	</p>
 	<p>
-		The sound of your footfalls echoing off the walls are suddenly interrupted as a seductive female voice sounds in your ear, [style.speechFeminineStrong(Looking for something?)]
+		你回荡在展厅里的脚步声，被突兀地出现在你耳朵里的魅惑女声打断，[style.speechFeminineStrong(在找什么？)]
 	</p>
 	<p>
-		You let out a startled cry and spin around to face the direction of the voice, almost jumping out of your skin as you end up face-to-face with your own reflection. A gigantic ceiling-height mirror stands against the wall, its silver edges finely decorated with hundreds of tiny figures. The woman who spoke must be hiding behind it, as there's nothing else nearby that could conceal a person.</p>
+		你发出惊愕的尖叫，将脸转去声音传来的方向，结果只看到自己的镜像时，差点魂都被吓飞。一面顶到天花板的巨大镜子靠墙而立，镜子的银色边框精美地装饰着成百上千的微小人像。说话的女人一定藏在它后面，因为这里没别的地方能藏下一个人了。</p>
 	<p>
-		[style.speechFeminineStrong(Aww, did I scare the poor little thing?)] the woman speaks again, her voice definitely coming from behind the mirror. She seems to be putting on her most sultry tone as she continues, [style.speechFeminineStrong(Perhaps you should come back here so I can calm you down...)]
+		[style.speechFeminineStrong(啊，我刚刚吓到这个可怜的小东西了吗？)]女人又开口说话，她的声音绝对是从镜子后面传来的。她用最撩人的语调继续说道：[style.speechFeminineStrong(也许你能到后面来，让我抚慰你……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_3A"><![CDATA[
 	<p>
-		You aren't entirely sure that it's the right thing to do, but you decide to accept the mysterious woman's invitation. You boldly stroll towards the mirror, duly impressed with your confident reflection as you close in on her hiding place.
+		你不知道这么做是否正确，但是你决定接受这位神秘女人的邀请。你勇敢地往镜子后方漫步，在靠近她藏身的位置时，自己自信镜像让你印象深刻。
 	</p>
 	<p>
-		[style.speechFeminineStrong(That's right, darling, come back here and see what I've got for you.)]
+		[style.speechFeminineStrong(就是这样，亲爱的，到后面来，看看我给你准备了什么好东西。)]
 	</p>
 	<p>
-		You vaguely consider the possibility that this could be a prank being played at your expense, but you find yourself too curious to turn back now. Reaching the mirror, you step over the rope barrier and lean forwards to take a look behind.
+		你隐约有种这是个拿你开玩笑的恶作剧的想法，但是你太好奇了，不想就这样转身走开。你靠近镜子，跨过绳索护栏，前倾身体看向后面。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_3B"><![CDATA[
 	<p>
-		A deserted museum after dark, an ominous mirror, and an unknown person hiding in the shadows? You distinctly remember seeing this horror film before. You turn back the way you came and start running.
+		天黑后的冷清博物馆，一面不详的镜子，以及一名未知的人藏身在阴影里？你清楚地回想起看过类似的恐怖电影。你转回身开始跑了起来。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Where do you think <i>you're</i> going?)]
+		[style.speechFeminineStrong(<i>你要</i>跑去哪里？)]
 	</p>
 	<p>
-		You're only a few steps away as the door slams shut, and as you reach for the handle, you hear the distinct sound of a key turning in the lock. You knew it! You're the [pc.girl] who dies first! On the edge of despair, your mind suddenly shifts into a different gear. Nobody ever expects the victim to go on the attack! You turn back towards the mirror and start to run at it, certain that the would-be murderer would never expect your bold move. You quickly close the distance across the room, steeling yourself for the worst as you valiantly leap over the rope barrier and look behind the mirror.
+		大门在你离出口仅剩几步时轰然关闭，你伸手抓向把手，却清晰地听到钥匙将门锁死的声音。你突然感觉自己恐怕要变成恐怖电影里最早死的那个[pc.girl]了！但就在这绝望之际，你突然冒出一个大胆的想法：”它一定不会想到受害者敢反击！“于是你掉头朝镜子跑去。你迅速穿过房间拉近距离，绷紧全身以戒备最糟情况的发生。你越过绳索护栏，看向镜子后方，确信那个坏蛋没有预料到你大胆的行动。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_4"><![CDATA[
 	<p>
-		You reel back in shock as you unwittingly step straight into a thick cobweb. You desperately pull the sticky webbing from your face, opening your eyes to find...
+		你因为震惊而后仰着，因为你踏入了一片浓密的蛛网中。你疯狂地将粘人的蛛网从脸上扯下，睁开你的眼睛看到……
 	</p>
 	<p>
-		<i>There's nobody there.</i>
+		<i>根本就没人在这！</i>
 	</p>
 	<p>
-		Your over-active imagination runs wild, and you feel your heart hammering as you break out in a cold sweat. A shiver runs down your spine, and before any more signs of your unease present themselves, the woman suddenly breaks the silence.
+		你过剩的想象力开始失控，你浑身冷汗心脏怦怦直跳。毛骨悚然的感觉顺着你的脊椎往下蔓延，在你出现更多不安的迹象前，那女人突然打破了沉默。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Foolish human!)]
+		[style.speechFeminineStrong(愚蠢的凡人！)]
 	</p>
 	<p>
-		You physically jump into the air as she shouts from right behind you!
+		她在你身后发出喊声，将你吓得几乎蹦到空中！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_5"><![CDATA[
 	<p>
-		You feel that the time to panic has definitely arrived, and you let out a scream of sheer terror. As your startled wail echoes around the room, you dart forwards, spinning around to face your elusive tormentor. Once again, there's nobody there. With your back to the mirror, you scan the room once more before reaching for your phone. You need to call for help, right now.
+		你被这突然出现的恐怖情节吓得吓得毛骨悚然，忍不住尖叫出声，惊恐的哀嚎在房间里回荡。你猛然向前冲去，扭头寻找着那个折磨着你，但又不见踪影的家伙，可仍然一个人也没有。你背靠着镜子，又一次扫过房间，便伸手摸向手机。很明显，你需要他人的帮助。
 	</p>
 	<p>
-		Before you're even halfway to your pocket, the room in front of you is suddenly illuminated by a flash of purple light. As you see your shadow being cast onto the wall before you, you feel a pair of slender hands grab your shoulders.
+		但你的手还未伸到一半，面前的房间就突然被一道紫色的闪光照亮。你看见自身的阴影被映照在面前的墙上，接着感觉到有一双修长的手正抓着你的肩膀。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Time to come play with Lilith!)]
+		[style.speechFeminineStrong(来和莉莉丝玩玩吧！)]
 	</p>
 	<p>
-		Before you can react, you're violently pulled backwards. Instead of crashing into the mirror behind you, you feel yourself falling, and as your head hits the hard ground, your vision cuts to black...
+		还未反应过来，你就感觉自己被巨力向后拖去。你穿过镜身，但却未撞碎镜面。你感觉自己在不停地坠落。当头撞到坚硬的地面时，你的眼前变得一片漆黑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_1"><![CDATA[
 	<p>
-		[pc.speech(~Ow!~)] you groan as you reach up to rub your throbbing head. As you do, you become aware that you're lying on something cold and hard. Pushing yourself up into a sitting position, you quickly scrunch your eyes shut as jolts of pain shoot through your skull. As you hold your head, trying to stop it from spinning, you start to hear voices speaking all around you.
+		[pc.speech(~噢！~)]你伸手揉了揉抽痛的头。与此同时，你发觉自己正躺在某种阴冷又坚硬的东西上面。你想强行坐起身来，但痛彻头颅的剧痛让你迅速闭上眼睛。你撑着自己的头，想让它好受一点，就在这时，你听到周围似乎有人在七嘴八舌地说着什么。
 	</p>
 	<p>
-		[style.speechMasculineStrong(Oh shit, [pc.sheIs] alive!)] someone says.
+		[style.speechMasculineStrong(哦，干，[pc.sheIs]还活着！)]有人说道。
 	</p>
 	<p>
-		[style.speechMasculine(You idiot, don't get that close! Didn't you see [pc.herHim] just fall out of mid-air?! [pc.sheIs] obviously an arcane user! We need to get out of here!)] a rather worried-sounding man replies.
+		[style.speechMasculine(你个傻逼，别靠那么近！你们没看到[pc.herHim]刚从半空中掉下来！？很明显[pc.sheIs]会魔法！我们最好赶紧离开这里！)]一名听起来相当焦虑的男人回答道。
 	</p>
 	<p>
-		The harsh tone of a woman's voice cuts them off, [style.speechFeminine(Shut up, both of you! Honestly, I don't know why I bring you two along... Anyway, take a look at [pc.herHim], don't you see something wrong with what you just said?)]
+		严厉的女声打断了他们的话：[style.speechFeminine(你们两个，给我闭嘴！事实上，我都不知道带上你们两人干嘛……总之，看看[pc.herHim]，不觉得和你们刚刚说的有些地方不一样么？)]
 	</p>
 	<p>
-		[style.speechMasculineStrong(Umm...)] the two voices say in unison.
+		[style.speechMasculineStrong(嗯……)]另外两个声音同时开口。
 	</p>
 	<p>
-		[style.speechFeminine(You two don't have a brain between you... [pc.SheIs] human, get it? Since when could a human use that kind of arcane power? Hell, only a Lilin could just appear out of thin air like that. This little runt obviously pissed off a lilin, or messed with some artefact [pc.she] didn't understand. In other words, [pc.sheIs] fair game, so just hold [pc.herHim] still until the storm starts.)]
+		[style.speechFeminine(你们两人一起都凑不出一个脑子来……[pc.SheIs]是个人类，明白么？人类什么时候能用那种奥术力量了？天啊，只有莉琳能像那样从空中出现。这个小家伙明显是惹恼了莉琳或者乱动了[pc.she]不了解的遗物了。换句话说，[pc.sheIs]是个好猎物，把[pc.herHim]按住别动，等风暴开始就行了。)]
 	</p>
 	<p>
-		As the people reach the end of their conversation, you're surprised to find that most of the pain in your head has already faded away. You open your eyes to see what's going on, but as you do, you're suddenly grabbed by two pairs of strong hands.
+		那些人的谈话接近尾声的时候，你惊奇地发现脑袋里的头痛已经消失不见。你睁开双眼打量着发生了什么事情，但是刚睁开眼睛，你就被一双有力的手抓住。
 	</p>
 	<p>
-		[pc.speech(Hey, what the hell?! Let me g- ~Mrph~!)] you cry, but your objections are cut short as the woman presses her hand firmly down over your mouth.
+		[pc.speech(嘿，什么鬼？放我肘——~呜~！)]你叫喊着，但是很快你发出的抗议就被那女人用手牢牢捂住。
 	</p>
 
 	<p>
-		You kick and squirm as you desperately try to wriggle out of the strange people's grasp. As you struggle, you catch brief glimpses of your three tormentors, and as you do, your eyes open wide in shock. You stop squirming and go limp, your mind completely unable to process what it's seeing.
+		你又踢又闹，疯狂地想要挣脱陌生人的束缚。在你挣扎的同时，你短短地瞥到几眼那三位折磨你的人的样貌，你的眼睛因震惊而大大睁开。你停止扭动身躯，瘫倒在地，你的大脑无法理解所看到的这一切。
 	</p>
 
 	<p>
-		While the men looked to be normal people on first glance, as you take a closer look, you see that something's not quite right. Their arms and legs are covered in a layer of coarse hair, and instead of feet, they each have a pair of horse-like hoofs. Their ears are also similar to that of a horse's, and sit high up on their heads, and a horse-like tail swishes behind each of them.
+		尽管抓住你的人第一眼看过去像是正常人，但是仔细看过去时，你觉得有些地方不太对劲。他们的手臂和腿覆盖着一层粗糙的毛发，没有正常的脚掌而是一副马蹄一样的蹄子。他们长在头顶的耳朵也很像马的，还有像马尾一样的尾巴在他们身后挥舞。
 	</p>
 
 	<p>
-		As alarming as the two mens' appearances are, they're nothing compared to the woman in front of you. While the men are in possession of horse-like features, the woman could better be described as a cat possessing human-like features. She's completely covered in a fine layer of black fur, and every part of her body, including her face, has somehow transformed into that of an anthropomorphic cat-girl. Her long tail swishes excitedly behind her, and as she brushes a strand of loose fur-like hair behind her upright cat-ears, she looks down at you with an evil grin on her face.
+		这两名男子的外貌虽然令人震惊，但跟你面前的女人相比，完全不算什么。尽管他们有想马一样的特征，但是那个女人更像拥有人类特征的猫。她全身覆盖着一层黑色的柔顺毛发，她的每一处身体包括脸部都被转化成拟人化猫女的样子。她的长尾巴在身后激动地摇摆着，直立的猫耳后方留有一股类似动物毛发的头发，她正向下看着你脸上露出邪恶的笑容。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_1_STRUGGLE"><![CDATA[
 	<p>
-		You start to struggle again, kicking and thrashing wildly as you try to free yourself. The cat-girl simply laughs, and in one swift movement she pounces forwards, slamming you to the floor as she straddles your chest.
+		你又开始挣扎起来，用力地踢着蹬着尝试让自己脱困。猫女轻轻一笑，干净利落地向前扑去，跨在你的胸口将你压倒在地。
 	</p>
 	<p>
-		She leans down, her cat-like pupils dilating as she pushes your head to the ground and delivers a long, slow lick up your cheek.
+		她弯下身子，猫瞳扩张着将你的头按在地上，用舌头缓缓地舔着你的脸颊。
 		#IF pc.isFeminine()
-		#THEN [style.speechFeminineStrong(Mmmm, you taste good, my little prey. We'll just wait for the thunder to start, and then you'll be begging for my boys here to fuck your tight little pussy.)]
-		#ELSE [style.speechFeminineStrong(Mmmm, you taste good, my little prey. We'll just wait for the thunder to start, and then you'll be begging for my boys here to fuck your tight little ass.)]
+		#THEN [style.speechFeminineStrong(嗯嗯，我的小猎物，你尝起来好棒。我们只用等到雷声响起，那时候你就会求着我的小弟们来操你的小紧逼了。)]
+		#ELSE [style.speechFeminineStrong(嗯嗯，我的小猎物，你尝起来好棒。我们只用等到雷声响起，那时候你就会求着我的小弟们来操你的小紧屁眼了。)]
 		#ENDIF
 	</p>
 	<p>
-		The cat-girl sits back up, still holding her paw-like hands over your mouth, and points up to the sky. The two horse-boys have completely immobilised you, and being unable to do anything about your current situation, you look up to see what the cat-girl is pointing at.
+		猫女坐起，仍用她猫爪一般的手捂住你的嘴巴，向上指着天空。两个马男将你完全固定住，对现在的状况你无能为力，只能向上看猫女指的地方。
 	</p>
 	<p>
-		High above you, a roiling mass of dark black storm clouds are blotting out the evening sky. There's a strange pink tint around the edge of each one, and as the cat-girl stares down at you, you see a flash of the same pink tint glowing deep within her cat-like pupils. She seems content to simply hold you still, waiting for the storm to break, and seeing no way to gain your freedom, you take a moment to glance around and take in your surroundings.
+		在你的头顶，一团翻滚的深黑风暴云体强占在夜空之中。它们的边缘有着奇怪的粉色渐变，猫女向下看着你时，你能看到她的猫瞳深处也闪烁着同样的粉色。她满足于将你牢牢困住，等待着风暴到来。发觉自己无法脱身，你花一点时间环顾四周，观察周围环境。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_1_BY_THE_POWER_OF_HATING_FURRIES"><![CDATA[
 	<p>
-		[pc.thought(Fucking furries! Why do they always have to ruin everything?!)]
+		[pc.thought(去他妈的福瑞！为什么他们总要把一切都毁掉？！)]
 	</p>
 	<p>
-		You violently jerk your arm away from the horse-boy's grip, and, leaning to one side, use it to deliver a punch square in the jaw of the other one. He falls back, dazed, as you quickly turn back and strike the first horse-boy with all your might, right in the solar plexus. Like his friend, he instantly falls back, the wind completely knocked out of him.
+		你剧烈地将手臂从马男的掌心里抽出，将它倾斜的摆向另一侧，给另一只马男的下巴一击正拳。他头晕目眩地向后躺倒，你快速转身用尽全身力气打向第一只马男，正中太阳穴。他马上就和他的朋友一样躺倒在地，骤风一般的攻击将他彻底地击败。
 	</p>
 	<p>
-		Having dealt with the two guys holding you down, you turn to whom you assume is their ringleader. Unfortunately, it seems as though you chose the wrong people to target first. As you turn to face the grinning cat-girl, she lets out a mocking laugh, and in one swift movement she pounces forwards, slamming you to the floor as she straddles your chest.
+		处理完压着你的两个家伙之后，你转向大概是他们头头的那位。不幸的是，你好像选错了首先解决的对象。在你转身面对猫女时，她发出嘲讽的笑声，干净利落地向前扑去，跨在你的胸口将你压倒在地
 	</p>
 	<p>
-		[pc.speech(Aah!)]
+		[pc.speech(啊！)]
 	</p>
 	<p>
-		Before you have the chance to strike back at her, she quickly pins your arms to the floor with her knees, and you suddenly feel a row of sharp claws pressing against your neck. You realise that you have no chance against that, and as you feel the little daggers gently pressing into your skin, you stop struggling.
+		在你有机会回击之前，她迅速地用双膝将你手臂定在地面，你突然感到一排锋利的爪子按在你的脖子上。你意识到自己对这种状况没有任何办法，当你感到细小的尖爪轻轻按入你的皮肤时，你停止了挣扎。
 	</p>
 	<p>
-		Seeing that you've surrendered, she grins and leans down, her cat-like pupils dilating as she pushes your head to the ground and delivers a long, slow lick up your cheek.
+		看到你已投降，她笑着俯下身子，猫瞳扩张着将你的头按在地上，用舌头缓缓地舔着你的脸颊。
 		#IF(pc.isFeminine())
-			 [style.speechFeminineStrong(~Mmm!~ You taste good, my little prey. We'll just wait for the thunder to start, and then you'll be begging for my boys here to fuck your tight little pussy.)]
+			[style.speechFeminineStrong(~嗯嗯！~我的小猎物，你尝起来好棒。我们只用等到雷声响起，那时候你就会求着我的小弟们来操你的小紧逼了。)]
 		#ELSE
-			 [style.speechFeminineStrong(~Mmm!~ You taste good, my little prey. We'll just wait for the thunder to start, and then you'll be begging for my boys here to fuck your tight little ass.)]
+			[style.speechFeminineStrong(~嗯嗯！~我的小猎物，你尝起来好棒。我们只用等到雷声响起，那时候你就会求着我的小弟们来操你的小紧屁眼了。)]
 		#ENDIF
 	</p>
 	<p>
-		The cat-girl sits back, still holding her claws against your throat, and points up to the sky. As she does this, you see that the horse-boys have recovered and moved back to either side of you. The cat-girl has you pinned down and completely immobilised, and, being unable to do anything about your current situation, you look up to see what she's pointing at.
+		猫女坐起，仍用她的爪子抵着你的喉咙，向上指着天空。在这时，你看到那两个马男已经恢复过来各自来到你的身侧。猫女将你完全固定住，对现在的状况你无能为力，只能向上看猫女指的地方。
 	</p>
 	<p>
-		High above you, a roiling mass of dark black storm clouds are blotting out the evening sky. There's a strange pink tint around the edge of each one, and as the cat-girl stares down at you, you see a flash of the same pink tint glowing deep within her cat-like pupils. She seems content to simply hold you still, waiting for the storm to break, and seeing no way to gain your freedom, you take a moment to glance around and take in your surroundings.
+		在你的头顶，一团翻滚的深黑风暴云体强占在夜空之中。它们的边缘有着奇怪的粉色渐变，猫女向下看着你时，你能看到她的猫瞳深处也闪烁着同样的粉色。她满足于将你牢牢困住，等待着风暴到来。发觉自己无法脱身，你花一点时间环顾四周，观察周围环境。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_1_BY_THE_POWER_OF_LOVING_FURRIES"><![CDATA[
 	<p>
-		[pc.thought(Furries are real?! This is amazing!)]
+		[pc.thought(真的有福瑞？！太棒了！)]
 	</p>
 	<p>
-		Despite your excitement upon discovering that furries are no longer simply a fantasy, you're still not entirely comfortable with what's going on. As you come to your senses, you start to struggle again, kicking and thrashing wildly as you try to free yourself. The cat-girl simply laughs, and in one swift movement she pounces forwards, slamming you to the floor as she straddles your chest.
+		尽管你激动地发现福瑞不只存在于幻想之中，你对目前的处境仍感到不太舒服。你回过神后，又开始挣扎起来，用力地踢着蹬着尝试让自己脱困。猫女轻轻一笑，干净利落地向前扑去，跨在你的胸口将你压倒在地。
 	</p>
 	<p>
-		She leans down, her cat-like pupils dilating as she pushes your head to the ground and delivers a long, slow lick up your cheek.
+		她弯下身子，猫瞳扩张着将你的头按在地上，用舌头缓缓地舔着你的脸颊。
 		#IF(pc.isFeminine())
-			 [style.speechFeminineStrong(~Mmm!~ You taste good, my little prey. We'll just wait for the thunder to start, and then you'll be begging for my boys here to fuck your tight little pussy.)]
+			[style.speechFeminineStrong(~嗯嗯！~我的小猎物，你尝起来好棒。我们只用等到雷声响起，那时候你就会求着我的小弟们来操你的小紧逼了。)]
 		#ELSE
-			 [style.speechFeminineStrong(~Mmm!~ You taste good, my little prey. We'll just wait for the thunder to start, and then you'll be begging for my boys here to fuck your tight little ass.)]
+			[style.speechFeminineStrong(~嗯嗯！~我的小猎物，你尝起来好棒。我们只用等到雷声响起，那时候你就会求着我的小弟们来操你的小紧屁眼了。)]
 		#ENDIF
 	</p>
 	<p>
-		The cat-girl sits back up, still holding her paw-like hands over your mouth, and points up to the sky. The two horse-boys have completely immobilised you, and being unable to do anything about your current situation, you look up to see what the cat-girl is pointing at.
+		猫女坐起，仍用她猫爪一般的手捂住你的嘴巴，向上指着天空。两个马男将你完全固定住，对现在的状况你无能为力，只能向上看猫女指的地方。
 	</p>
 	<p>
-		High above you, a roiling mass of dark black storm clouds are blotting out the evening sky. There's a strange pink tint around the edge of each one, and as the cat-girl stares down at you, you see a flash of the same pink tint glowing deep within her cat-like pupils. She seems content to simply hold you still, waiting for the storm to break, and seeing no way to gain your freedom, you take a moment to glance around and take in your surroundings.
+		在你的头顶，一团翻滚的深黑风暴云体强占在夜空之中。它们的边缘有着奇怪的粉色渐变，猫女向下看着你时，你能看到她的猫瞳深处也闪烁着同样的粉色。她满足于将你牢牢困住，等待着风暴到来。发觉自己无法脱身，你花一点时间环顾四周，观察周围环境。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_1_STRUGGLE_END"><![CDATA[
 	<p>
-		You're lying in the middle of a deserted street, and a series of old-fashioned street lamps are illuminating the area around you in a soft amber glow. You notice that the entire road is paved with clean, whitish-blue paving stones, and with the numerous wooden benches and small, leafy trees that are dotted about the place, you realise that this street is entirely pedestrianised. There's no sign of any cars or passersby that could come to your aid, and the imposing, neo-classical frontages of the surrounding buildings offer no hope of any help, as all their windows and curtains are tightly shut.
+		你躺在一条荒无人烟的街道上，身旁那一排老式路灯投下了昏黄的灯光。你发现整条路都铺上了干净的淡蓝色铺路石，数不清的木长凳和小树则点缀着周围，显然这一整条街都是步行街。街上没有会出现能援助你的行人或车辆的征兆，周围那些宏伟的新古典建筑物则紧闭着门窗。
 	</p>
 	<p>
-		[pc.thought(How am I going to get out of this?!)]
+		[pc.thought(这下我怎么出去啊？！)]
 	</p>
 	<p>
-		Just as you're on the edge of losing all hope, an oddly-familiar voice suddenly rings out from somewhere behind you.
+		就在你濒临崩溃之时，你的背后传出了一阵诡异又熟悉的声音。
 	</p>
 	<p>
-		[lilaya.speech(Do you <i>really</i> have to play your silly little games right here in the middle of the street? You know, some people don't really care for that sort of thing, and by the looks of it, your little friend under there may just be one of them.)]
+		[lilaya.speech(你<i>真</i>要在大街上玩你那些愚蠢的小游戏吗？你也知道有些人就是不在乎那些东西，看起来你那位小朋友估计也是其中之一啊。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_2"><![CDATA[
 	<p>
-		The cat-girl spins around, turning to see who's talking. Her claws press against your throat, preventing you from using this opportunity to attempt to escape.
+		那猫女猛地转身，想知道是谁在放话。她的爪子紧紧扼住你的咽喉，防止你趁机溜走。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Well, perhaps <i>some</i> people would like to come on out and join in. There's plenty of roo-)] the cat-girl's voice cuts off as you hear the mysterious woman's footfalls getting closer.
+		[style.speechFeminineStrong(好吧，看来<i>有人</i>想出个头跟你落得同样下场呢。可还有很多——)]猫女的声音忽然中断了，你只听见那个神秘女人的脚步声逐渐靠近。
 	</p>
 	<p>
-		[style.speechMasculine(Oh shit! Run!)] The horse-boys quickly dart off, abandoning their leader.
+		[style.speechMasculine(完几把蛋！快跑！)]两个马男箭一般飞冲出去，把他们的头儿丢在了身后。
 	</p>
 	<p>
-		The cat-girl quickly starts stuttering out excuses as you hear the mysterious woman walking closer, [style.speechFeminineStrong(L-look, w-we were only playing! Anyway, if [pc.she] didn't want to have some fun, why's [pc.she] outside just before a storm's about to break?!)]
+		猫女听到那神秘女人的脚步声愈靠愈近，顿时结结巴巴地道歉道，[style.speechFeminineStrong(那，那个，我，我们只是玩玩而已！毕竟，如果[pc.she]没这个意思，[pc.she]为啥要在风暴将至的时候跑出来呢？！)]
 	</p>
 	<p>
-		[lilaya.speech(Well, it's really none of my business, but now that your little friends have run off, what's to stop <i>[pc.herHim]</i> from having a little fun with <i>you</i>?)] the woman replies, and this time, you're certain that you recognise her voice.
+		[lilaya.speech(嗯，这就不关我事了，不过你的小伙伴可都跑光了，还有什么能阻止<i>[pc.herHim]</i>跟<i>你</i>玩玩呢？)]那女人回答道，这时候，你敢肯定自己认识她的声音。
 	</p>
 	<p>
-		You feel the cat-girl's grip loosening around your throat, and, taking advantage of the fact that she's been distracted, you pull your arms out from under her knees, grab her wrists and throw her off of you. Quickly jumping to your feet, you turn to face your tormentor, only to see her running off down a nearby alleyway.
+		你感觉到猫女的爪子稍微松开了你的喉咙，于是趁着她分心，你从她的膝盖下把手臂抽了出来，一把抓住她的手腕，将她扯了开来。你连忙起身，转身看向那个流氓，只见她早已朝着巷子深处逃去了。
 	</p>
 	<p>
-		[lilaya.speech(You're welcome...)] you hear your saviour say as she starts to walk off.
+		[lilaya.speech(不用客气……)]你听见了救星的声音，她似乎也准备离开了。
 	</p>
 	<p>
-		[pc.thought(Wait... That voice... Lily?!)]
+		[pc.thought(等等……这个声音……莉莉？！)]
 	</p>
 	<p>
-		You spin around, certain that your mysterious benefactor is none other than your aunt Lily. Even as she walks away, you can tell that it's her. The way she walks, her long, black hair, even her usual attire are all how they should be. Even though you've often criticised her for never wearing anything other than her plain black skirt, white shirt and black heels, right now you've never been happier to see them.
+		你赶忙转身，确信这个神秘的大善人就是你的姨妈莉莉，不可能有别人。尽管她已经转过身，但你还是能认出来，这就是她。她走路的方式，黑长直的秀发，甚至是日常穿的衣服，就该是如此。虽然你经常怪她整天就只会穿那套普普通通的黑裙子、白衬衫、黑高跟，但此刻你见到这一身却不能再高兴了。
 	</p>
 	<p>
-		[pc.speech(Lily! Oh Lily, I'm so glad you're here! Those... <i>people</i>, they were about to... well... I'm just glad you're here now!)] You run to catch up with your aunt, wrapping your arms around her and pulling her into a loving hug. As you press into her back, you notice what feels to be a large, lumpy backpack digging into your chest, but due to the dim street-light, you didn't see it.
+		[pc.speech(莉莉！哎呀，莉莉，你在这里实在是太好了！那些……<i>人</i>，他们准备……好吧……总之你在这里实在太好了！)]你跑上前去，张开双臂，一下子就亲昵地抱住了她。可在你靠着她的后背时，却感觉到胸口一直顶着个鼓鼓囊囊的包，但由于街道昏暗，你没能看清是什么。
 	</p>
 	<p>
-		[lilaya.speech(W-What the hell are you doing?!)] Lily exclaims, wriggling free as she pushes you away from her. [lilaya.speech(I-It's not like I was <i>trying</i> to save you! J-Just say thanks and go find some cover before the storm breaks!)]
+		[lilaya.speech(你，你干什么呢？！)]莉莉大叫一声，挣脱开来后，把你推开了。[lilaya.speech(我，我不是<i>有意</i>要救你的！你说句谢谢，然后趁风暴还没开始找个地方躲一下就得了！)]
 	</p>
 	<p>
-		You don't quite understand her reaction. She usually loves it when you hug her like that, but as Lily turns around, you realise that something is wrong. It's still Lily, sort of, but she's got a few extra parts that you certainly don't remember her having before. As she steps back from you, she ends up directly beneath the glow of one of the street lights, and as you get a good look at her, you feel your jaw dropping.
+		你不太明白她为何作此反应。她之前都很喜欢你这么抱她的，可是当莉莉转过身时，你意识到有什么地方不对劲。面前的还是莉莉，一定程度上是，但她的身上多了许多部位，你可不记得之前有这些。她缓缓后退，最终到了路灯的光芒之下，你这才得以清楚地看见她，接着你惊掉了下巴。
 	</p>
 	<p>
-		Just one glance at her face is enough to convince you that this is Lily, but instead of being in her fifties, she now looks to be in her late thirties. What's more worrying than her regression of age, however, is that fact that there are a pair of low, swept-back horns growing out from her forehead. A thin, spaded tail, which you hadn't noticed in the dark, curls around behind her, rising up to draw attention to a pair of large, bat-like wings that suddenly unfurl from her back. Her chest is another area that's different, and you see that Lily now has a massive pair of E-cup breasts, quite unlike the more modestly-sized ones she used to have.
+		只是朝脸上瞄一眼，你就能保证她就是莉莉，只不过不再是五十多岁，而更像是不到四十。而比回溯的年龄更令人担心的是，她的前额长了一对伸向后方的长角。一根纤细，尖端是个桃心的尾巴在她的身后弯曲着，随着尾巴向上看，便是一双蝙蝠一样的巨大翅膀，从身后伸展开来。她的胸部也不一样了，莉莉现在顶着一对E罩杯的巨乳，与之前并不太突出的那对大相径庭。
 	</p>
 	<p>
-		[lilaya.speech(Stop staring!)] Lily commands. [lilaya.speech(I-I'll banish you to another dimension! Or... um... Freeze you and leave you lying out here! What do you want?!)]
+		[lilaya.speech(别再盯着看了！)]莉莉命令道。[lilaya.speech(我，我可要把你放逐到另一个位面了！或者……嗯……把你冻住之后丢在这里！你到底要怎样？！)]
 	</p>
 	<p>
-		She clearly doesn't recognise you, and seems quite shocked by your actions. You notice that she's blushing profusely, and you wonder if that's the result of your sudden hug or the way you've been staring at her. As you try to think of something to say, Lily raises her hand, and as she does so, a swirling vortex of snow and ice materialises around her arm.
+		她明显不认识你，而且似乎被你的行为吓到了。你注意到她脸红得像个苹果，估计是你突然抱住她或者一直盯着她导致的。你正想说些什么，莉莉举起了手，随后她的手臂附近生成了一股冰雪漩涡。
 	</p>
 	<p>
-		You don't really want to be frozen by this demonic version of your aunt, so you quickly blurt out everything you know about what's just happened.
+		你可不想被这个恶魔化的姨妈给冻住，于是一口气将所知的来龙去脉都告诉了她。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_2_A"><![CDATA[
 	<p>
-		You quickly describe all the events at the museum, finishing with how you woke up here just moments before she arrived. When you mention that the mysterious woman in the mirror called herself 'Lilith', you see Lily frown and shuffle about on her feet. Apart from that minor display of emotion, she listens to your tale with a stony expression on her face. As you explain to her that she's supposed to be your aunt, she lowers her hand and banishes the swirling vortex that she'd summoned around her arm.
+		你迅速讲述了博物馆中发生的事情，最后讲到你在此处醒来，再之后她就出现了。当你提到镜子里自称“莉莉丝”的神秘女人时，你注意到莉莉皱了皱眉，双脚也不安地挪来挪去。除了这一点小小的情感流露之外，她听你讲故事时的表情很凝重。而你向她解释她应该是你的姨妈时，她这才放下手，驱散了在手臂上召唤出的漩涡。
 	</p>
 
 	<p>
-		[lilaya.speech(But that's just a theory...)] she mutters, barely loud enough to be audible. She then raises her voice as she continues, [lilaya.speech(From what you've said, it sounds as though you're claiming to be from an alternate universe. While <i>theoretically</i> possible, there's never been a recorded case of inter-dimensional travel actually working. As unlikely as your story sounds, there <i>is</i> one way we can test the truth, right here, right now. If you're from another universe, you shouldn't be infused with the arcane, so when this storm finally breaks...)]
+		[lilaya.speech(可那不过只是个理论……)]她嘟哝着，堪堪能够听见。接着她提高声音继续道，[lilaya.speech(从你讲的经历来看，你来自于另一个宇宙。尽管<i>理论上</i>可行，但从前还没有记载过任何成功的跨位面旅行。虽说你的故事很难以置信，但确实<i>有</i>一个方法能验证真假，立刻，当场。如果你真的来自于另一个宇宙，就不应该能被灌输奥术，所以等到风暴降临时……)]
 	</p>
 
 	<p>
-		Suddenly, the entire street is illuminated in a bright flash of pink as a bolt of lightning streaks across the sky. Lily grins as she finishes her sentence, [lilaya.speech(You shouldn't be affected by the arcane thunder!)]
+		霎时间，一束闪电划空而过，整条街道都被一抹亮粉色所照亮。莉莉说完后就笑了起来，[lilaya.speech(你就不应该被奥术雷霆所影响！)]
 	</p>
 
 	<p>
-		A moment later, the deep rumble of thunder starts echoing down the street. At first, it sounds just like any old thunder strike that you've heard a hundred times before, but instead of fading away into silence, it builds and builds until the very ground itself seems to shake from its intensity. Just as you're wondering how long this is going to last, the rumbling sound suddenly bursts into a cacophony of moans and squeals, as though a thousand women are suddenly brought to a crashing orgasm all around you. The sound is so unexpected and so sudden, that you forget for a moment that it's caused by this strange arcane thunder, and you turn this way and that, looking around for the source of the sound.
+		过了一会儿，低沉的雷声便在街道上回响。起初，听起来只像是曾经听过无数次的普通雷声，但它并没有沉寂下去，而是越来越强，直到大地都似乎因其剧烈摇晃。正当你想知道这会持续多久时，轰隆声中突然爆发出刺耳的呻吟与尖叫，仿佛周围有成千上万的女性突然达到了崩溃的高潮。这声音意外又突然，让你一时忘记了这是由这股奇怪的奥术雷霆引起的，你转来转去，环顾四周寻找着声音的来源。
 	</p>
 
 	<p>
-		After a few seconds, the noise starts to fade away, quickly dropping to a whisper before silence envelops the dimly-lit street once again. You turn back to Lily and see that a very concerned expression has fallen over her face.
+		几秒钟后，声音开始减弱，很快变为耳语，随后，灯光昏暗的街道再次陷入寂静。你回头看着莉莉，发现她脸上露出了十分担忧的神情。
 	</p>
 
 	<p>
-		[lilaya.speech(This is impossible... Well... Not <i>impossible</i>, but there's no way...)] she whispers, before addressing you in her normal voice, [lilaya.speech(So you don't have any sudden desire to try and fuck me?)]
+		[lilaya.speech(这不可能……好吧，也不是<i>不可能</i>，但这不应该……)]她轻声说着，接着又对你用正常的声音说道，[lilaya.speech(所以，你没有忽然感到一股欲望，想要干我？)]
 	</p>
 
 	<p>
-		[pc.speech(Uuuum... That's a bit of a weird question, but... no?)] you answer, before suddenly realising that you might have offended this demonic version of your aunt. [pc.speech(I mean, you're obviously extremely attractive and anyone would be lucky to have you, but you're my aunt! Well, sort of, anyway...)]
+		[pc.speech(额嗯……这问题有点奇怪，不过……没有吧？)]你答道，很快又意识到自己好像有点冒犯了这位恶魔化的姨妈。[pc.speech(我是说，你当然很有吸引力，能与你共度是每个人的运气，可你是我的姨妈啊！好吧，算是吧……)]
 	</p>
 
 	<p>
-		You see Lily blushing at your flattering, and, looking back on it, slightly inappropriate, response. [lilaya.speech(Y-You're not meant to say that sort of thing! C-Can't you see that I'm a... Eugh!)] She turns around, stomping her foot on the ground as she starts walking away. [lilaya.speech(Just come with me, and don't embarrass yourself any more!)] she says, motioning for you to follow her.
+		你发现莉莉听了你的奉承脸一下子红了，而且现在回想起来，这段话确实不太恰当。[lilaya.speech(你，你不应该说这种话的！难，难道你看不出来我是……呃啊！)]她扭过头去，狠狠地跺了几下脚，向远处走去，[lilaya.speech(跟我来就好了，别再让你自己出丑了！)]她一边说，一边示意你跟上她。
 	</p>
 
 	<p>
-		You do as she says, and quickly rush forwards to her side. You glance across to see that her cheeks are still burning red, and you think that you're embarrassing her far more than you are yourself. You keep that thought to yourself, however, and let Lily lead the way, ignoring several more crashes of arcane thunder as you thank your lucky stars that she was there to save you.
+		你听了她的话，连忙赶到她身边。你瞥了一眼，看到她的脸颊仍然红彤彤的，你觉得你让她出丑得好像更多一些。然而，你把这个想法深埋在心底，任由莉莉领路，在内心感谢着这位拯救你于水火中的救星时，数次奥术雷霆的爆响声仿佛都没有影响到你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_3"><![CDATA[
 	<p>
-		Nothing ever seemed to embarrass your real aunt, but it seems like this version of Lily is the complete polar opposite. Almost everything you've said to her so far has resulted in her blushing or stuttering over her words, and as you let her lead you through the unfamiliar streets of this strange city, you decide that you won't be the first to speak and risk saying the wrong thing yet again. As a result, the rest of the walk proceeds in silence, allowing you to observe several differences between this city and the one you used to call home.
+		对于你真正的姨妈，似乎什么都不可能让她觉得尴尬，但这个版本的莉莉似乎完全相反。到目前为止，你对她说什么都会害她脸红或结巴，所以在她带领你穿过这座陌生城市的陌生街道时，你决定不再先开口，避免再次说错话。于是接下来的一段路都在寂静中结束，但也让你能留心观察到这座城市与曾经称之为家的城市之间的一些差异。
 	</p>
 	<p>
-		Every single street seems to be pedestrianised, and there isn't a single car to be seen anywhere. The street lights are curiously different from the ones you're used to seeing, and instead of producing the usual dull fluorescent glow, tiny little balls of energetic light dance within glass globes, casting a steady, albeit slightly flickering, orange glow over the street's clean paving stones. The buildings on either side all adhere to old-fashioned designs that look very similar to pictures you've seen of Victorian architecture. When combined with the style of street-lights, a casual observer could easily be confused into believing that they'd been transported back to an alternate version of mid-nineteenth century central London. As you look closer, however, the fashion trends being displayed in shop-fronts and on advertisement billboards make it quite clear that this 'alternate dimension' must be of the same time period that you're familiar with.
+		所有的街道似乎都是步行街，到处都看不到一辆车。路灯与常见的路灯有些奇特的不同点，路灯内不再是平常的暗淡荧光，而是有许多充满活力的小光球在玻璃罩内跳舞，投射出稳定但略有闪烁的橙色光芒，洒在干净的铺路石上。两边的建筑都遵循老式的设计，看上去与你见过的维多利亚时期建筑的图片非常相似。与路灯的风格结合在一起时，稍不留意就会误以为回到了十九世纪中叶，伦敦市中心的异界版本。然而仔细观察后，店面和广告牌上展示的流行趋势清楚地表明，这“另一个位面”必然跟你熟悉的那个处于同一时代。
 	</p>
 	<p>
-		[lilaya.speech(Right, here we are,)] Lily suddenly says, snapping you out of your trance. [lilaya.speech(You're going to come inside and let me run a few little tests on you, ok? After all, I <i>did</i> save you back there,)] she finishes, walking up a short external staircase to a rather imposing-looking front door.
+		[lilaya.speech(好了，我们到了，)]莉莉忽然开口，把你从恍惚中拽了回来。[lilaya.speech(你只要进去，然后让我给你做点小测试，好吗？毕竟，我当时<i>可是</i>救了你，)]她说完后，便走上一个小台阶，到了一扇雄伟的前门前。
 	</p>
 
 	<p>
-		You decide not to mention the fact that Lily said earlier that she 'wasn't trying to save you', and instead answer as you always do when your aunt holds you to ransom like this, [pc.speech(Ok, Lily, I guess you're right,)] you sigh, following her up the steps. [pc.speech(I hope these 'little tests' aren't anything I should worry about...)]
+		你决定还是不要提到莉莉之前说过的她“并不是有意要救你的”，于是还是跟之前你姨妈让你做乱七八糟事情时一样答应了下来，[pc.speech(好的，莉莉，我应该听你的，)]你叹了口气，跟着她上了楼梯。[pc.speech(希望这些‘小测试’没什么好担心的……)]
 	</p>
 
 	<p>
-	Lily knocks on the door and turns back to you, sighing, [lilaya.speech(Of course they're nothing to worry about! Oh, and stop calling me 'Lily'! Maybe back in <i>your</i> world, I was your aunt and was called that, but <i>here</i>, I'm not your aunt, and my name is 'Lilaya'. S-So call me that!)]
+	莉莉敲了敲门，然后转头看向你，叹息道，[lilaya.speech(当然没什么好担心的了！哦，还有别再叫我‘莉莉’！或许在<i>你的</i>世界，我还是你的姨妈，而且叫这个名字，但是在<i>这儿</i>，我不是你什么姨妈，而且我叫‘莉莱雅’。所，所以用这个名字！)]
 	</p>
 
 	<p>
-		As 'Lilaya' says this, she quickly turns away to face the door, and you let out a sigh as you think, [pc.thought(Damn, she's even getting embarrassed about telling me her own name? Does she never speak to people or something?)]
+		“莉莱雅”说着，赶紧转过头去，面对着大门，你叹了口气，想道，[pc.thought(真是的，她告诉我个名字都这么害羞吗？她是没跟别人说过话吗？)]
 	</p>
 
 	<p>
-		You don't have to see her face to know that she's blushing again, and, not wanting to make matters worse for her, you decide to try and put her at ease by introducing yourself, [pc.speech(Well, I'm [pc.name], by the way. It seems quite strange to be telling you that, though. I mean, I've known you forever!)]
+		你看不到她的脸，所以也不知道她是不是又脸红了，而且你也不想再把事情搞得更糟糕了，你决定让她放松下来，好好介绍一下你自己，[pc.speech(好吧，对了，我叫[pc.name]。虽然跟你说这个很奇怪。我是说，我早就认识你了！)]
 	</p>
 
 	<p>
-		Before you get to hear Lilaya's response, the door before you suddenly opens, casting a warm glow out onto the street behind you. Whoever opened the door must have moved to one side, and as Lilaya enters, you follow in her footsteps, looking to greet the person who's let you inside.
+		还没等你听到莉莱雅的回答，面前的门突然打开了，温暖的光芒投射到你身后的街道上。开门的人应该已经让到了一旁，莉莱雅进去后，你跟随她的脚步，准备向让你进去的那人打个招呼。
 	</p>
 
 	<p>
-		[rose.speech(Welcome home, Mistress!)] a young woman's voice sounds from behind the door as you enter. [rose.speech(Did you have a nice evenin- ~eek!~ A stranger! Mistress?!)]
+		[rose.speech(欢迎回家，主人！)]进屋的时候，一个年轻女性的声音从门后传来。[rose.speech(今晚过得愉——~噫！~一个陌生人！主人？！)]
 	</p>
 
 	<p>
-		As you step inside, you see a rather panic-stricken girl, who appears to be in her late teens, desperately looking at Lilaya for guidance. She's wearing a complete French-Maid's uniform, and you're rather shocked that this world's version of your aunt can afford to hire a personal maid. Like the other people you've seen so far, she seems to be some kind of human-animal hybrid, and has a pair of sleek cat-ears, covered in pinkish-red fur, sitting amongst her red, fur-like hair. A cat-like tail, covered in the same reddish fur as her feline ears, is sticking straight up behind her, and her green, cat-like eyes glance nervously between you and Lilaya as she hops back and forth on her feet.
+		踏进屋子后，你看到一个惊慌失措的女孩，看上去只有十来岁，正焦急地看着莉莱雅，寻求指引。她身着全套法式女仆制服，你震惊于这个世界的姨妈竟然能雇得起私人女仆。她和你迄今为止见过的其他人一样，似乎是某种人与动物的混血，在她毛茸茸的红色头发中，长着一对覆盖着品红色毛发的优雅猫耳。一条猫一样的尾巴在她身后笔直地竖起，覆盖着和她猫耳一样的品红毛发。她急得双脚跳来跳去，猫一样的绿色眼睛在你和莉莱雅之间紧张地扫来扫去。
 	</p>
 
 	<p>
-		Lilaya makes a soothing hushing sound before patting her on the head. [lilaya.speech(Shh, it's alright, Rose, [pc.sheIs] a guest of mine, you can calm down,)] she says, before pulling Rose into a surprisingly intimate hug. [lilaya.speech(Why don't you go make us some tea, you can bring it down to us in the lab.)]
+		莉莱雅安抚地嘘了一声，轻轻拍了拍她的脑袋。[lilaya.speech(嘘，没事的，萝丝，[pc.sheIs]是我的客人，不用惊慌，)]她说完，就抱着萝丝来了一个意想不到的深拥。[lilaya.speech(快去泡些茶吧，带去实验室就好。)]
 	</p>
 
 	<p>
-		[rose.speech(Yes, Mistress! Right away, Mistress!)] Rose replies, and as Lilaya releases her, she quickly closes the door behind you and rushes off to another part of the house.
+		[rose.speech(好的，主人！这就去，主人！)]萝丝回复道，等莉莱雅松开她后，迅速关上身后的门，冲向房子的另一边。
 	</p>
 
 	<p>
-		As the excitable maid makes her exit, you find yourself standing in the most extravagantly furnished town-house that you've ever seen. A huge crystal chandelier hangs from the double-height ceiling, casting its warm light over a grand, red-carpeted staircase that leads to the upper floor. Fine paintings and marble busts line the walls of the entrance hall, and you find your jaw dropping for the second time this evening.
+		那个一惊一乍的女仆离开后，你才注意到自己站在一座迄今见过布置最奢华的联排别墅里。双层高的天花板上悬挂着一盏巨大的水晶吊灯，将温暖的灯光投射在铺着红地毯的通向楼上的宏伟楼梯上。入口大厅的墙壁上挂满了精美的画作，各处摆着大理石半身像，你今晚又一次惊掉了下巴。
 	</p>
 
 	<p>
-		[lilaya.speech(So I take it that your real aunt doesn't live in a place like this?)] Lilaya asks, smirking at your stunned expression. [lilaya.speech(Anyway, come with me. My lab's this way,)] she says, walking over to a side-corridor.
+		[lilaya.speech(我明白了，所以你真正的姨妈并不住在这种地方？)]莉莱雅看到你震惊的表情，呵呵一笑，问道。[lilaya.speech(总之，跟我来吧。我的实验室走这儿，)]她说着，向着一条外廊走去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_4"><![CDATA[
 	<p>
-		You hurry to follow Lilaya as she leads the way to her lab. As you walk down a long corridor at her side, you get the chance to ask her the question at the forefront of your mind.
+		你连忙跟上莉莱雅，让她带你走向实验室。跟着她走过一段漫长的走廊时，你终于有机会问一些一直萦绕在你脑中的问题了。
 	</p>
 	<p>
-		[pc.speech(So, Lilaya, do you have any idea what's going on?)]
+		[pc.speech(所以，莉莱雅，你知道到底发生什么事了吗？)]
 	</p>
 	<p>
-		You see her face scrunch up into a thoughtful frown as she answers, [lilaya.speech(Well, after seeing your immunity to the arcane thunder, I'm convinced that you're telling the truth, but...)] Lilaya stops and turns to face you. [lilaya.speech(Inter-dimensional travel is far above and beyond any arcane skill I've ever heard of. Perhaps with some tests, we can discover more...)] She turns around and opens the door behind her, stepping through into her lab.
+		你只见她的脸庞揉成了一副沉思的皱眉状，回答道：[lilaya.speech(这个嘛，见识过你免疫奥术雷霆后，我已经相信了你说的是事实，可是……)]莉莱雅停下脚步，转身面向你。[lilaya.speech(跨位面旅行已经完全超出了我听说过的奥术能力。或许可以做几个测试，就能知道更多了……)]她又转回去，打开身后的门走进了实验室。
 	</p>
 	<p>
-		You follow Lilaya into what appears at first to be a huge library. The walls are covered in shelving, holding what must be hundreds, if not thousands, of ancient-looking leather-bound tomes. Most of the room, however, is occupied by a series of long tables, each covered in strange glass vials, odd-looking instruments, and bottles of glowing liquids.
+		你跟着莉莱雅进入了房间内，第一眼看上去还以为是个巨大的图书馆。墙面前全都是书架，上面摆着成百上千看上去就很古老的皮革装订大部头。房间的大部分则被各色长桌占据，每个上面都摆满了奇怪的玻璃容器、诡异的设备和一瓶瓶发光的液体。
 	</p>
 	<p>
-		Lilaya grabs a white lab coat that's hanging beside the door, and although she slips it on, she doesn't bother to button it up, causing the bottom to bellow out a little as she strides over to the other side of the room. Where she comes to a halt, you see that there's a large pentagram marked out on the floor in white chalk. She then produces a pair of safety goggles from a nearby desk, and, after putting them on, she motions for you to come over to her.
+		莉莱雅抓起挂在门边的白色实验服，穿上之后也没有费心扣上扣子，导致她从房间的一边大步走向另一边时，实验服下摆飘来飘去的。她停下步伐后，你注意到地上用粉笔画出了一个巨大的五角星。然后她从附近的桌子上拿起一副安全护目镜戴了上去，示意你到她这来。
 	</p>
 	<p>
-		[pc.speech(Wow, so what is it you do here? You -well, my other aunt, I mean- used to be a researcher at the city museum, but it doesn't look like you share her profession.)]
+		[pc.speech(哇哦，所以你在这研究什么的？你——好吧，我是说我另一个姨妈——之前也是城市博物馆的研究员，不过她可没有你这么专业。)]
 	</p>
 	<p>
-		Lilaya drags a chair into the middle of the chalked-out pentagram and starts fiddling with a series of strange-looking spotlights at each of the five corners. As she adjusts her instruments, she motions for you to sit and answers your question, [lilaya.speech(So, the other 'me' is a researcher too? I spend most of my time in here, finding new ways to harness the arcane and infuse it into every-day objects. Mommy provides-)] Lilaya cuts her sentence short, obviously saying more than she meant to, before quickly trying to change the topic, [lilaya.speech(L-Look, just sit down there and keep still while I calibrate these!)]
+		莉莱雅拽过一把椅子摆到了粉笔画出的五角星中间，开始捣鼓起五个角落处奇怪的聚光灯来。在她调整仪器的时候，她让你坐了下来，然后回答了你的问题，[lilaya.speech(所以说，另一个‘我’也是个研究员？我一天中基本都在这，为了寻找驾驭奥术并将其导入日常物件的全新方式。妈咪给我——)]莉莱雅突然停了下来，显然是说多了一些事情，她立马调整了话题，[lilaya.speech(总，总之，在我校准的时候乖乖坐在这儿！)]
 	</p>
 
 	<p>
-		You do as she says, not wanting to press the matter and give her another cause to feel embarrassed. As she works, you see her little spaded tail working like a third limb, rising up to twist dials and slide levers as she busily finishes calibrating the strange instruments.
+		你照着她说的做了，只是不想逼得太紧，再让她尴尬了。当她忙着校准这些奇怪的仪器时，你看到她那个顶端桃心的尾巴就像第三只手一样，帮忙扭转表盘和拉动控制杆。
 	</p>
 
 	<p>
-		After a few moments she seems to be satisfied with her adjustments, and steps out of the chalked area, before turning to smile at you. [lilaya.speech(Right, all set! Don't worry, this doesn't hurt or anything, it's just going to let me know a little bit more about you. Are you ready?)] she asks, and you quickly answer in the affirmative.
+		过了一阵子，看起来她一切就绪，从粉笔画出的范围内走了出去，随后转身向你微笑道。[lilaya.speech(好，都设置好了！别担心，不会疼的，只是为了让我多了解你一些。你准备好了吗？)]她问道，你则立马肯定地回答了。
 	</p>
 
 	<p>
-		Lilaya brings her hand up, conjuring a swirling vortex of strange pink lights around her arm as she prepares to run her test. Magic quite clearly exists in this world, and you make a mental note to ask Lilaya more about it after she's finished her test, but for now, you sit still like she asked. The pink lights rapidly grow stronger, and with a sudden thrust forwards, they shoot from Lilaya's arm, darting towards the five floodlight-like instruments and causing them to emit a blinding pink flash.
+		莉莱雅准备好测试后，举起手，在手臂周围召唤出一阵散发着奇怪粉色光芒的旋涡。这个世界中，显然是存在魔法的，你在脑内记下测试结束后要多问问莉莱雅这个的事情，不过现在你还是按照她说的安稳地坐着。粉色的光芒逐渐变得愈加耀眼，忽然旋涡从莉莱雅的手臂上飞出，向着那五个泛光灯似的一起射去，爆发出一阵刺眼的粉色闪光。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_5"><![CDATA[
 	<p>
-		You blink once, then twice, then try rubbing your eyes. No matter what you do, all you can see is a pulsating pink glow. You start to panic as you realise that you've been blinded by Lilaya's test.
+		你眨了一下眼，又眨了一下，接着开始揉起眼睛。但无论你做什么，你只能看到脉动的粉色亮光。你忽然慌了，你被莉莱雅的实验弄瞎了。
 	</p>
 	<p>
-		[pc.speech(Erm, Lilaya?! I can't see!)] you call out.
+		[pc.speech(嗯，莉莱雅？！我看不见了！)]你大叫道。
 	</p>
 	<p>
-		Thankfully, Lilaya quickly responds with some good news, [lilaya.speech(O-Oh, s-sorry! I should have m-mentioned that! E-Erm... Don't worry, it'll pass in j-just a few moments!)] She sounds incredibly nervous, and you wonder what's happened to embarrass her this time.
+		所幸的是，莉莱雅很快就带着好消息回应了，[lilaya.speech(哦，哦，抱，抱歉！我应该提，提前告诉你的！呃，嗯……别担心，再，再过一会儿就好了！)]她听上去格外紧张，不知道又是什么事情让她这么尴尬。
 	</p>
 	<p>
-		True to her word, after a few moments the blindness starts to recede. Slowly at first, you start to make out the figure of Lilaya standing in front of you. After a few more blinks, your vision is completely back to normal, and you see that you're surrounded by a faint pink mist. You look up to see that Lilaya is holding her hands up at arms-length in front of her, as though she's trying to block part of her view of you. Her cheeks look like they're about to burst into flames, so red they've gone, and it's at that moment you notice a cool breeze blowing over your chest.
+		确实如她所说，过了一会儿，眼前的阴翳开始消散。起初，你渐渐地能辨认出站在面前的莉莱雅的身形。又眨了几下眼睛后，你的视野完全恢复正常，只看见自己被一团淡粉色的迷雾包裹。你看到莉莱雅双手举在身前，就好像要把你从她的视线中挡住。她的脸颊像是刚被火烧过一样，红得发紫，这时候你才感受到一阵清风抚胸而过。
 	</p>
 	<p>
-		As you look down, Lilaya makes a little startled cry and somehow manages to blush even more, [lilaya.speech(~Eek!~ S-sorry! I-I didn't know that would happen!)]
+		你低头一看，莉莱雅惊叫一声，脸似乎变得更红了，[lilaya.speech(~噫！~ 抱，抱歉！我，我不知道会这样的！)]
 	</p>
 	<p>
-		Now it's your turn to blush, as you look down to see that all of your clothes have disappeared. You quickly push your legs together, moving your hands to cover yourself up as you try to hide your naked body from Lilaya's sight. It's at this moment that the door to the lab swings open, and you and Lilaya turn to see Rose entering the room, carrying a tray with a couple of cups of tea on it. She looks across at the two of you, and suddenly there are three blushing people in the room.
+		现在轮到你脸红了，低头过后，只见你所有的衣服都消失不见了。你立马夹紧双腿，用手遮住自己，避免莉莱雅看到你的裸体。正当这时，实验室的门忽然被推开了，你和莉莱雅齐刷刷地转头，看见萝丝端着托盘，带着几杯茶进了房间。她朝你们俩看了看，现在屋子里有三个面红耳赤的家伙了。
 	</p>
 	<p>
-		[lilaya.speech(Rose! Quick, d-do something!)] Lilaya shouts, frantically hopping up and down on the spot. [lilaya.speech([pc.NamePos] c-clothes have gone!)]
+		[lilaya.speech(萝丝！快点，帮，帮帮忙！)]莉莱雅着急地在原地上蹿下跳，大声喊道。[lilaya.speech([pc.NamePos]的衣、衣服不见了！)]
 	</p>
 	<p>
-		Rose quickly places the tray of tea down on one of the tables, and, obeying her mistress's command, points up at one of the room's many chandeliers. Immediately, you and Lilaya both turn your heads up to look at what the cat-girl maid is pointing at. There, hanging from the light-fixture above you, you see some of the clothes that you were wearing just moments ago. Glancing around, you see the other pieces of your outfit similarly scattered throughout the lab.
+		萝丝连忙把托盘放在一张桌子上，遵从着主人的命令，指向了众多吊灯中的其中一盏。你和莉莱雅双双抬头，向着那个猫女仆指向的位置看去。在那里，悬挂在头顶的灯具上，正有几件你不久前还穿着的衣服。你扫向周围，发现剩下的衣服同样散落在实验室各处。
 	</p>
 	<p>
-		[rose.speech(I'll retrieve your clothing now,)] Rose states, casting her gaze back down at the floor as her cheeks continue to burn bright red, [rose.speech(this will only take a moment.)]
+		[rose.speech(我这就把您的衣服拿回来，)]萝丝红着脸颊说完，就直勾勾地盯着地面，[rose.speech(一会儿就好。)]
 	</p>
 	<p>
-		As Rose hurries to fetch a ladder, Lilaya turns her gaze back towards you. [lilaya.speech(This is amazing...)] she says, looking at the strange pink mist that's hovering all around you.  [lilaya.speech(I thought you wouldn't have any arcane aura at all, but... well... yours is easily as powerful as a demon's!)]
+		萝丝跑去拿梯子的时间，莉莱雅又将目光向你这边投来。[lilaya.speech(太妙了……)]她看着悬浮在你身旁的奇怪粉色雾气，说道。[lilaya.speech(我本来以为你没有奥术灵气，可是……好吧……你的奥术灵气已经比得上恶魔了！)]
 	</p>
 	<p>
-		[pc.speech(Uum... So is that good?)] you venture, shifting uncomfortably as you try to conceal more of your naked body.
+		[pc.speech(嗯……所以这是好事吗？)]你为了挡住更多赤裸的身体，身体不舒服地扭动了一下，小心地问道。
 	</p>
 	<p>
-		[lilaya.speech(Well, only people with weak auras are affected by the arcane thunder, so having one that you'd normally find on a demon is kind of good in that regard,)] she explains. [lilaya.speech(But if you've got an aura like a demon... Then you should be able to harness the arcane like a demon!)]
+		[lilaya.speech(这个，只有灵气虚弱的生物才会被奥术雷霆影响，所以这么想的话，有个跟恶魔一样强大的灵气当然是好事，)]她解释道。[lilaya.speech(不过既然你有比肩恶魔的灵气……那你应该也能像恶魔一样驾驭奥术！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_6"><![CDATA[
 	<p>
-		[pc.speech(So I'm a... <i>demon</i>?! Like you?!)] you ask, not quite believing what Lilaya's saying.
+		[pc.speech(所以我是个……<i>恶魔</i>？！跟你一样？！)]你不太相信莉莱雅的解释，连忙问道。
 	</p>
 	<p>
-		[lilaya.speech(W-What do you mean, l-like me? C-Can't you see that I'm only a... a <i>half</i>-demon?)] Lilaya says, sounding more than a little upset. Before you can offer any sort of apology, she waves it off with one hand before turning around to search a nearby desk for something. She shouts back at you as she pulls open drawers and shifts piles of paperwork aside, [lilaya.speech(A-Anyway, you're not an <i>actual</i> demon. I mean, not having horns or anything is kind of a giveaway there! You mentioned that Lilith had something to do with this, and if that's the case, then she's probably the one who's given you an aura this strong. Oh, I guess you don't know, but Lilith is the ruler of this world. She's the most powerful demon to ever have existed, so if she's involved, this could be interesting! Anyway, seeing as you've got this aura, I want to test to see if you're able to use the arcane like a demon can. ~Aha! Found it!~)]
+		[lilaya.speech(你，你什么意思，跟，跟我一样？难，难道你看不出来我只是……只是个<i>半</i>恶魔吗？)]莉莱雅听着很沮丧。还没等你道歉，她便摆摆手，转身又去附近的书桌上找东西了。她拉开一个抽屉，从里面搬出一沓文书，转头朝你喊道，[lilaya.speech(总，总之，你不算是<i>真正的</i>恶魔。我是说，并没有角啊或者其他什么乱七八糟的！你提到莉莉丝跟这件事有关系，如果真是如此，那可能就是她给予了你如此强烈的灵气。哦，估计你还不知道吧，莉莉丝是这个世界的主宰。她是迄今为止存在过的最为强大的恶魔，如果和她有关，那可就有意思了！不管怎么说，你的体内出现了灵气，那我想测试一下，看看你能不能像恶魔一样使用奥术。啊哈！找到了！~)]
 	</p>
 	<p>
-		Just as Lilaya finds what she's looking for, Rose similarly finishes with her task, and, climbing back down the ladder she erected to retrieve your clothing, she starts moving towards you. Averting her gaze from your naked form, she folds your clothing neatly in her arms, before bowing her head a little and presenting them to you. As you take back your clothing, you groan as you see that there's something terribly wrong. Although all of your clothing is accounted for, the arcane power that caused them to teleport up onto the chandelier appears to have also shrunk them. Holding them up in your hands, they look to be at least several sizes too small.
+		莉莱雅找到她要找的东西时，萝丝同样完成了她的任务，从为了给你取衣服而支起来的梯子上爬下来，向你走来。她努力将目光从你赤裸的身体上移开，把你的衣服整齐地叠好，抱在怀里，然后微微低头，递给了你。你拿回衣服后，却咕哝了一声，因为你发现有什么事情非常不对劲。虽然你所有的衣服都在手，但导致它们传送到吊灯上的奥术力量似乎也把它们缩小了。拿在手里看起来至少小了好几个尺寸。
 	</p>
 	<p>
-		[pc.speech(Erm... Lilaya? Your test has kind of... well, shrunk everything...)] you groan.
+		[pc.speech(额嗯……莉莱雅？你的测试好像……把东西都变小了……)]你抱怨道。
 	</p>
 	<p>
-		[lilaya.speech(So? Just put it on! I'm not looking, I promise!)] Lilaya responds, barely reacting to your predicament.
+		[lilaya.speech(怎么了？穿上就是了！我保证不会看的！)]莉莱雅好像对你的窘境没有任何反应。
 	</p>
 	<p>
-		Sensing that you don't know what to do, Rose bows her head a little once more, and addresses you, [rose.speech([pc.Sir], please forgive the interruption, but I assume that you're not aware of the fact that the arcane causes clothing to adjust to fit to your body. If you start pulling them on, your clothes will fit themselves to you.)]
+		萝丝忽然意识到你有些不知所措，于是稍稍低下头，凑近了告诉你说，[rose.speech([pc.Sir]，抱歉打扰，不过您可能没有意识到奥术已经让衣物可以适应您的身体了。只要开始穿，衣物就会自动调整到适合您的大小。)]
 	</p>
 	<p>
-		[lilaya.speech(T-Thank you, Rose,)] Lilaya says, clearly flustered by her inability to identify the problem you were having. [lilaya.speech(If you could just wait by the door for a few moments, I'll need you again in a minute.)]
+		[lilaya.speech(多，多谢，萝丝，)]莉莱雅显然是因为没能意识到你的难处而有些慌张。[lilaya.speech(你要不在门那边稍候一会儿吧，一分钟之内我还有事情找你。)]
 	</p>
 	<p>
-		As the two women turn their backs on you, you start to quickly pull on your clothes again. Just like Rose said, they shift to fit to your body, and you wonder what else is magical in this world. Once you're done, you inform your host that you've finished, and she turns around, smiling, before quickly moving over to you.
+		两位女士转身背对过去，你也赶紧开始穿起衣服。就跟萝丝说的一样，衣服自动适应了你的身体，你对这个世界的魔法越来越好奇了。结束后，你告诉主人家已经可以了，她便转过身来，微笑着向你走来。
 	</p>
 	<p>
-		[lilaya.speech(Right, so let's try out this demonstone! Just hold out your hand, yes, like that,)] Lilaya instructs. [lilaya.speech(Now, when I place it on your palm, just let the energy flow into you. Don't worry, you can draw it back out at any time, but for now, just let it in...)]
+		[lilaya.speech(好了，那试试这块魔石吧！只要握在手里，对，就这样，)]莉莱雅指导道。[lilaya.speech(好了，当我把魔石放在你的手掌上时，只需要让能量流淌进体内。别担心，你随时都可以收手，不过现在，只需要让能量进去……)]
 	</p>
 	<p>
-		Lilaya flicks a switch on one of the spotlights, and the pink mist vanishes from sight. Stepping forwards, you see that she's holding a strange shard of crystal, and you look on in wonder as you see its surface glittering and swirling with [#SPECIAL_PARSE_0]. She takes hold of your wrist with one hand, and with the other, places this 'demonstone' into your open palm. As its surprisingly cool surface comes into contact with your skin, you feel a gentle pulsing force pushing against you, trying to push its way in. You do as Lilaya instructed, and with surprising ease, you allow the demonstone to melt down into arcane energy and enter your body.
+		莉莱雅打开其中一盏聚光灯的开关，粉红色的雾气便从视线中消失了。你向前走去，只见她拿着一块奇怪的水晶碎片，你惊讶地发现它的表面闪闪发光，周围有[#SPECIAL_PARSE_0]萦绕。她用一只手握住你的手腕，另一只手将这块“魔石”放入你张开的手掌中。魔石意外冰凉的表面接触到你的皮肤时，你感觉到一股温和的、脉动着的力量，试图冲入你的体内。你按照着莉莱雅的指示，并且出乎意料地轻松，就让魔石融化成奥术能量，进入了你的身体。
 	</p>
 	<p>
-		As a soothing warmth spreads up your arm, it feels like you've done this a thousand times before. You instinctively know that you're able to harness its power into what you'd once have called magic, and that it's the same sort of arcane power that's found in that strange thunderstorm, and, indeed, all throughout this world. Eager to try out this new power, you twist your hand, and a swirling vortex of [#SPECIAL_PARSE_1] immediately materialises around your arm. With another motion, you dispel it, and look up to see Lilaya beaming at you in excitement.
+		一股舒缓的暖流蔓延到了你的手臂上，这种感觉就像你曾经做过无数次一样。你本能地知道自己能够将它的力量运用到曾经所谓的魔法中，而且这和那场奇怪的雷暴中发现的神秘力量是完全一样的，事实上，整个世界的力量都大抵如此。你急切地想要尝试一下，于是一摆手，[#SPECIAL_PARSE_1]漩涡立即在你手臂的周围显现出来。你又一挥手，便驱散了它。你抬头便看到莉莱雅兴奋地微笑着看着你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_7"><![CDATA[
 	<p>
-		[lilaya.speech(Haha! Yes, I <i>knew</i> it!)] Lilaya exclaims. [lilaya.speech(If you had contact with Lilith, then your aura... Well... Where's that book gone?!)]
+		[lilaya.speech(哈哈！就是这样，我就<i>知道</i>！)]莉莱雅惊叫了出来。[lilaya.speech(如果你跟莉莉丝有关系，那么那个灵气……对了……那本书去哪儿了？！)]
 	</p>
 	<p>
-		Lilaya rushes off to one of the bookcases, pulling out old tomes and piling them up on one of the tables. You're left standing there, feeling more than a little alarmed with everything that's going on.
+		莉莱雅冲向一个书架，把上面古旧的书籍一本本拿下来，在桌子上堆成了个小山。你就站在原地，有些担忧地看着面前发生的一切。
 	</p>
 	<p>
-		[pc.speech(Erm... Did you want this thing back?)] you ask, knowing that if you concentrate, you can draw the energy back out of your arm to re-form the demonstone that Lilaya gave you.
+		[pc.speech(嗯……这个你要拿回去吗？)]你知道自己可以将能量从手臂中逼出，重新构成莉莱雅给你的那块魔石，所以提问。
 	</p>
 	<p>
-		[lilaya.speech(What? Oh, no, that's fine, you keep it!)] Lilaya exclaims, still piling books up on the table. [lilaya.speech(You should be able to cast [#SPECIAL_PARSE_0] while you've got that absorbed! If you want to permanently learn how to cast spells, you'll need to reference a spell tome. I know I've got a spare tome somewhere around here. I'll get Rose to deliver it to you once I find it!)]
+		[lilaya.speech(什么东西？哦，不用，没事的，拿着就好！)]莉莱雅高声说，手上还是不停地往桌子上堆着书。[lilaya.speech(你把那个吸收之后，现在应该能释放[#SPECIAL_PARSE_0]了！如果想要永久学会怎么释放法术，你可能得参考一本法术书。我印象中这儿还有本没用过的。等我找到就派萝丝去送给你！)]
 	</p>
 	<p>
-		[pc.speech(Ok, thanks Lilaya. So... What now?)] you ask.
+		[pc.speech(好吧，谢谢你莉莱雅。所以……现在干什么？)]你问。
 	</p>
 	<p>
-		[lilaya.speech(This is all just the beginning!)] Lilaya calls out, stopping what she's doing and turning to face you. [lilaya.speech(Look, once I've got through all this, we'll need to run more tests! Inter-dimensional travel! And you've somehow been <i>given</i> a demon's aura! You're the most amazing discovery since, well, <i>ever</i>! I'd like it if you'd stay here so I can keep an eye on you. After all, it's not like you have anywhere else to go, right?)]
+		[lilaya.speech(这才刚刚开始呢！)]莉莱雅停止了手上的工作，扭头看向你。[lilaya.speech(听着，等我搞定这个，就来多做几个测试！跨位面旅行！还有你不知道怎么被<i>授予</i>了恶魔的灵气！你真是个奇迹，我从来……好吧，<i>有史以来</i>最惊艳的！我希望你能留在这让我好好研究一下。毕竟你应该也没有别处可去，对吧？)]
 	</p>
 	<p>
-		For the first time since arriving in this strange new world, you realise that you know nobody here, you have no money on you, and you're mostly clueless as to how this whole place works. Thankfully, Lilaya seems to be just as kind to you as your real aunt was, and you happily accept her offer of letting you stay with her.
+		自从到达这个陌生的新世界以来，你第一次注意到你在这里谁也不认识，身无分文，而且对这个世界是如何运作的几乎一无所知。所幸莉莱雅似乎对你和你真正的姨妈一样友善，于是你欣然接受了她让你和她住在一起的提议。
 	</p>
 	<p>
-		[lilaya.speech(Rose? You can show [pc.name] to a suitable room now,)] Lilaya says, before sitting down to consult the books she's gathered.
+		[lilaya.speech(萝丝？你能不能给[pc.name]找个合适的房间，)]莉莱雅说，坐下来开始翻阅刚刚取下来的书。
 	</p>
 	<p>
-		[rose.speech(Yes, Mistress. Please come with me,)] Rose says, and you hurry to follow her as she leaves the lab.
+		[rose.speech(明白了，主人。请跟着我来，)]萝丝说完，你便跟着她离开了实验室。
 	</p>
 	<p>
-		You turn back to thank Lilaya once more, but you see that she's already busy flipping through pages and taking notes, and you decide against disturbing her. Falling into line behind Rose, you let her lead the way through the house as she takes you up to your new room.
+		你过转身又想向莉莱雅道谢，但却发现她已经在忙着翻页和做笔记，便决定不打扰她了。你紧跟着萝丝，让她领你穿过屋子，走向新房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_8"><![CDATA[
 	<p>
-		As you follow Rose up to your new room, she starts filling you in on some important details about this world.
+		当你跟着萝丝前去自己的新房间的路上，她交代了几项关于这个世界的重要信息。
 	</p>
 	<p>
-		[rose.speech(Mistress obviously wants you to stay safe while you're here, and from what I understand, you know nothing about this world. While staying here, you're free to come and go as you please, but there are certain things you should know about Dominion.)]
+		[rose.speech(主人显然希望你留在这的时候能保证安全，据我所知，你对于这个世界还一窍不通。待在这里的时候，你可以随意出入，但是关于御城区有几件事情你必须知道。)]
 	</p>
 	<p>
-		[pc.speech(Dominion?)] you ask.
+		[pc.speech(御城区？)]你问道。
 	</p>
 	<p>
-		[rose.speech(That's the name of this city. I think you've already seen that it's a bad idea to go outside during an arcane storm. While <i>you</i> might not be affected, everyone else <i>is</i>. Well, that is, apart from demons and those who've trained to harness the arcane. So anyway, all those other people turn into sex-crazed maniacs during an arcane storm, and they won't care if you're immune or not, they'll still try to fuck you.)]
+		[rose.speech(是这个城市的名字。我相信你已经见识过奥术风暴的时候待在外边是个多么糟糕的主意。虽然<i>你</i>可能不受影响，但其他人<i>都会</i>。好吧，当然除了那些恶魔和学过驾驭奥术的家伙。总之，奥术风暴的时候那些人都会变成性饥渴的疯子，他们可不会管你免疫不免疫，他们就是想干你。)]
 	</p>
 	<p>
-		[pc.speech(Err... Don't the police do anything about that?)] you ask, slightly taken aback at Rose's warning.
+		[pc.speech(呃……难道警察不做点什么吗？)]你被萝丝的警告吓了一跳。
 	</p>
 	<p>
-		[rose.speech(You mean the Enforcers? Why would they? Once the arcane seeps into a person's mind, they'll happily consent to anything,)] Rose replies, [rose.speech(So if you don't like it, then don't go outside during a storm. Oh, and don't wander off down alleyways. Although the main streets are safe, the less-travelled parts of Dominion are often home to the more... unsavoury sorts of people.)]
+		[rose.speech(你是说那些执法者？为什么要做呢？奥术控制脑子后，他们也会欣然应允这些事，)]萝丝回答道，[rose.speech(所以你要是不喜欢的话，风暴的时候就不要出去。哦，还有就是不要在巷子里乱逛。虽然街道上很安全，但是御城区那些人迹罕至的地方就是……不三不四的家伙的温床。)]
 	</p>
 	<p>
-		By this time, Rose has led you up the grand staircase in the entrance hall and down a long corridor. She suddenly stops by one of the doors, and, opening it, steps through. You follow her inside, and find yourself standing in a lavishly decorated bedroom. A king-sized bed sits on one side of the room, flanked by a pair of finely-crafted drawers. An impressively-sized wardrobe and bookcase stand in the opposite corners, and between them, there's another door. On the far side of the room, a row of windows overlook a well-tended garden courtyard, and as you see a pink flash illuminate the neatly clipped hedgerows and colourful flower beds, you notice that no sound of the accompanying thunder manages to penetrate into the room.
+		此时，萝丝已经带你走上门厅的大楼梯，沿着一条悠长的走廊继续走着。她突然停在一扇门前，打开门走了进去。你跟着她进去后，发现自己正站在一间装饰豪华的卧室里。房间的一侧摆着一张特大号的床，两侧是一对工艺精美的抽屉柜。一个巨大的衣柜和书架立在另一边的角落，而其中则夹着另一扇门。在房间的另一侧，一排窗户俯瞰着精心照料的花园；这时你看到一抹粉红色的闪光照亮了修剪整齐的树篱和色彩缤纷的花坛，而你注意到随之而来的雷声却没有透入房间。
 	</p>
 	<p>
-		[rose.speech(This is your room,)] Rose says, before walking over to the door next to the wardrobe, [rose.speech(and in here is your bathroom. If you leave your dirty clothes out here when you take a shower or bath, I'll have them cleaned by the time you're finished.)]
+		[rose.speech(这就是您的房间，)]萝丝说完，便走到衣柜旁的门前，[rose.speech(这里是您的浴室。如果您淋浴或泡澡时把脏衣服留在外面，我会在您结束前帮忙清洗干净。)]
 	</p>
 	<p>
-		[pc.speech(Thanks,)] you say, not really knowing quite how to react to the fact that you're now living in what looks like a palace. [pc.speech(So, Lilaya's pretty important then, huh? I mean, this place is huge! Does she share these gardens with those other houses?)]
+		[pc.speech(多谢，)]你不太知道能住在如同宫殿一般的地方到底应该作何反应。[pc.speech(所以，莉莱雅在这里不是一般人物是吗？我是说，这地方也太大了！她是跟别人家共用这个花园吗？)]
 	</p>
 	<p>
-		Rose sees you looking out the windows at the courtyard garden, [rose.speech(Everything you can see from here is owned by Mistress. And yes, seeing as you're completely unaware of who she is, Lilaya is a recognised daughter of Lyssieth; one of the seven elder Lilin.)]
+		萝丝看到你正透过窗户看向庭院的花园，[rose.speech(您在这里能看到的一草一木都是主人所有。还有，没错，似乎您也完全不了解她的身份，莉莱雅是莉西丝——七位莉琳长老之一——亲自承认的女儿。)]
 	</p>
 	<p>
-		Seeing the blank expression on your face, Rose sighs and continues, [rose.speech(The Lilin are the daughters of Lilith herself, and the most powerful and important of all of them are the seven elders. While the Lilin have numerous offspring, only a few are ever publicly acknowledged, and those that are, like Lilaya, are considered to be at the very pinnacle of the social hierarchy.)] Rose pauses for a moment to make sure that you're following along, before continuing, [rose.speech(Oh, and I heard you call Lilaya a demon earlier. Please don't say anything like that to her again. You see, the vast, vast majority of all the Lilins' recognised children are full demons, which makes my Mistress very self-conscious about being 'only' a half-demon. While it's not usually a slave's place to speak to someone like this, I hope you understand that I'm only telling you what Lilaya would want you to know. If there's nothing else, I shall return to my duties now. I'll be back in about half an hour to give you any further instructions that Lilaya might have.)]
+		萝丝看到你茫然的表情，叹了口气继续道，[rose.speech(莉琳就是莉莉丝本人的女儿，其中最强大最重要的就是七位长老。虽然莉琳拥有无数的子嗣，但也只有几个才能获得公开承认，而那些人——就比如莉莱雅——就已经处于社会阶层的顶端了。)]萝丝停顿了一会儿，等你跟上节奏，继续说，[rose.speech(哦，我听到您之前叫过莉莱雅恶魔。之后请不要再对她这么说了。其实，莉琳被承认的子女中绝大多数都是纯粹的恶魔，这让主人对于自己‘只是’个半恶魔的事情非常敏感。虽然作为奴隶我不应该对其他人这样说话，但我希望您能理解，我只是在告诉您莉莱雅想让您知道的事情。如果没有其他事情，我就继续回去工作了。半个小时后我会再过来，吩咐一些莉莱雅其他的指示。)]
 	</p>
 	<p>
-		[pc.speech(Wait, did you just say you're a <i>slave</i>?)]
+		[pc.speech(等一下，你刚才是不是说自己是个<i>奴隶</i>？)]
 	</p>
 	<p>
-		[rose.speech(Mistress allows me to perform my duties without wearing a slave collar. Sorry if there was any confusion.)] Rose curtsies to you and exits the room, leaving you in a state of shock.
+		[rose.speech(主人允许我不戴着奴隶项圈工作。如果让您误解了那很抱歉。)]萝丝向你屈膝行礼，退出了房间，只留下你一人陷入震惊。
 	</p>
 	<p>
-		[pc.thought(They have slavery in this world?! And my aunt is apparently demon nobility, who owns at least one slave herself?! This is all just so unbelievable...)]
+		[pc.thought(这个世界有奴隶制？！我的姨妈还是个恶魔贵胄，还拥有至少一名奴隶？！简直难以置信……)]
 	</p>
 	<p>
-		You walk over to your new bed and fall back onto it. The events of the past few hours finally have a chance to catch up with you, and you sink down onto the comfortable mattress, letting out a deep sigh as you try to sort out in your mind what's going on. Just as you feel yourself drifting off to sleep, a sudden knock at the door brings you back to your senses.
+		你走到新的床铺边，躺倒在了上面。过去几个小时惊心动魄的经历终于到了头，你陷在舒适的床垫里，深深地叹了口气，试图理清到底发生了什么。正当你感觉自己要睡着了的时候，突然的敲门声让你回过神来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INTRO_NEW_WORLD_9"><![CDATA[
 	<p>
-		[pc.speech(Come in!)] you shout, and Rose quickly opens the door and steps inside.
+		[pc.speech(请进！)]你喊了一声，萝丝迅速打开门走了进来。
 	</p>
 	<p>
-		She curtsies to you before stepping back to pick something up she'd left outside. A moment later, she steps back into your room, carrying one of those strange floodlight-like instruments from Lilaya's lab.
+		她先是屈膝行礼，然后退出去拿了放在外面的东西。过了一会儿，她有走进你的房间，抱着一个从莉莱雅实验室拿来的那个泛光灯样子的仪器。
 	</p>
 	<p>
-		[rose.speech(Good evening, Mistress would like to monitor your aura as you sleep, so she needs to put this in here,)] Rose explains, setting up the instrument in one corner of your room as she continues speaking, [rose.speech(Mistress also said that you can come back to the lab whenever you're ready for your next test. There's no rush, so if you wanted to go out and get some other clothing, or explore Dominion, then you can do all that first. Oh, and on the subject of clothing, Mistress also tasked me to warn you about the dangers of enchanted clothing, weapons, and tattoos. If you go out and buy some of these, please be aware that there's a limit to how many arcane enchantments a person can handle at once. Push yourself past your enchantment stability, and the arcane will very quickly start to drain your energy, as well as to remove any inhibitions you have regarding degrading sexual acts... So don't buy too much, and be careful.)]
+		[rose.speech(晚安，主人想要在您睡觉的时候监测您的灵气，所以要把这个放在这里，)]萝丝解释道，然后把仪器摆在了房间一角，接着说道，[rose.speech(主人还说您随时可以到实验室接受下一场测试。无需着急，所以如果想出去买些衣服，或者探索一下御城区，您也可以先做这些事情。哦，说起衣服，主人还吩咐我警告您，那些附魔衣物、武器、纹身也尤其危险。如果要出去买这些东西的话，请一定要注意您能同时驾驭的奥术附魔上限。如果打破了附魔的稳定，奥术很快就会抽干您的能量，并会令您对那些有辱人格的性行为毫无抵抗力……所以不要买太多，切记小心。)]
 	</p>
 	<p>
-		[pc.speech(Ah, well, that's not really a problem right now. That is to say, I can't really go shopping; I don't think my credit card's going to work here,)] you explain.
+		[pc.speech(啊，好吧，现在应该不是大问题。毕竟，我也没法去购物；我不觉得信用卡能在这儿用，)]你解释道。
 	</p>
 	<p>
-		[rose.speech(Well, I don't know what a credit card is, but if you're trying to say you've got no money, then Mistress already thought of that.)]
+		[rose.speech(嗯，虽然我不知道什么是信用卡，但如果您是指身上没有钱，那主人早已帮您安排好了。)]
 	</p>
 	<p>
-		Rose finishes installing the equipment and walks over to you, and you see that she's carrying a small purse in her hand. She holds it out for you to take, and as she places it into your palm, you notice that it's heavier than you expected, and you can hear the sound of metal coins clinking over one another as you place the purse to one side.
+		萝丝安装完设备，走到了你身边。你注意到她手里拿着一个小钱包。她把钱包递给了你，用手掌接住时，你意识到这钱包比你想象的要重。你把钱包揣在兜里，金属硬币相互碰撞的声音传入了耳朵。
 	</p>
 	<p>
-		[rose.speech(There are five-thousand flames in there, which should be more than enough to get some new clothes or whatever else it is you need. Mistress advises that you rest through this storm and go out shopping tomorrow; after all, the stores are usually only open between six in the morning to ten at night, so you might not even make it there before closing time. Mistress and I usually work through those hours as well, so the two of us will be retiring to our rooms soon. Oh, and please remember what I said about the alleyways being dangerous.)]
+		[rose.speech(这里面有五千火币，应该足够换一套新衣服或者做其他您想做的事情。主人建议您先休息一下，等到风暴平息，明天再去购物；毕竟商店通常都是早晨六点到晚上十点才开门，等你赶到可能已经关门了。主人和我一般也是这个时间工作，之后就会回到各自的房间。哦，记住我告诉过您的，小巷很危险。)]
 	</p>
 	<p>
-		Rose turns and steps out of the room once more, and you see her bending down to retrieve something else that she's brought up with her. As she enters the room, you see that she's carrying a large, leather-bound book, with a pile of papers balanced on the top. [rose.speech(Here's the spell tome that Mistress said she'd give to you. These papers are copies of her research notes, which she said should give you all the information you'd need about arcane spells.)]
+		萝丝转过身，再次离开了房间，你看到她弯下腰拿起了剩下带来的东西。她回到房间里后，你发现她拿着一本革制封面的大部头，上面还摆着一沓纸张。[rose.speech(这就是主人说过要给你的法术书。这些纸是她的研究笔记，据她所说应该会告诉你需要的关于奥术魔法的一切。)]
 	</p>
 	<p>
-		[pc.speech(Thank you Rose,)] You say, smiling at the cat-girl as she places the items down on your bedside table. Rose turns towards you and curtsies, before making her exit once again.
+		[pc.speech(谢谢你萝丝，)]你朝着猫女笑了笑，她则把这些东西都放在了你的床头柜上。萝丝转向你，屈膝行礼，又一次离开了。
 	</p>
 	<p>
-		You spend the next half-hour copying down Lilaya's research notes into your phone, and once that's finished, you wonder what you should do next. The arcane storm seems to still be raging outside, and you think that it'd probably be best to get a good night's rest before wandering back out into the streets of Dominion...
+		在接下来的半个小时里，你将莉莱雅的研究笔记都抄录到了手机上，完成后，你思索起来下一步应该做什么。屋外奥术风暴似乎仍在肆虐，最好还是先好好休息一晚，然后去御城区的街道上漫步……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

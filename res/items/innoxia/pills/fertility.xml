@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		
@@ -12,13 +12,13 @@
 		
 		<!-- What's appended before the item's name in an instance of "Innoxia has X Breeder Pill", where X is the determiner. This will usually be either "a" or "an", but for other items may be different.
 		An example might be: "Innoxia is holding X scissors", where X (the determiner) would now need to be "a pair of". -->
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一片]]></determiner>
 		
 		<!-- The name of this item. -->
-		<name><![CDATA[breeder pill]]></name>
+		<name><![CDATA[繁育药]]></name>
 		
 		<!-- The plural name of this item. If pluralByDefault's "false" is changed to "true", then the game will always the plural name when referring to this item. -->
-		<namePlural pluralByDefault="false"><![CDATA[breeder pills]]></namePlural>
+		<namePlural pluralByDefault="false"><![CDATA[繁育药]]></namePlural>
 		
 		<!-- The description/lore of this item.
 			You can use 'npc' to access the character who's the owner of this item, but if you do you should do an npc null check first (as this item may be on the ground with no owner), like so:
@@ -31,10 +31,10 @@
 					 It's worth [style.moneyFormat([#thisItem.getValue()], span)]!
 				]]></description> 
 		-->
-		<description><![CDATA[A small, light-purple pill, individually packaged in a foil and plastic wrapper. While the text printed on the foil identifies this pill as an 'Orally-Administered Reproduction Enhancer', it's colloquially known as a 'breeder pill', and temporarily boosts both fertility and virility when ingested.]]></description> 
+		<description><![CDATA[这是一颗小巧的浅紫色药丸，单独包装在铝箔和塑料中。铝箔纸上印有“口服生殖增强剂”的字样，它在口服后会短暂地增加生育能力和生殖力，因此在俚语中被称为“繁育药”。]]></description> 
 		
 		<!-- How the item is used. This should be a single verb, and is used as the title of the action when using it. -->
-		<useDescriptor>swallow</useDescriptor>
+		<useDescriptor><![CDATA[吞下]]></useDescriptor>
 		
 		<!-- 'true' if this item can be used during sex. Most items have this set to 'true'. -->
 		<sexUse>true</sexUse>
@@ -121,7 +121,7 @@
 		It should probably only be used to describe what happens in the <applyEffects> element.
 		No characters are passed in as parsing arguments, so you should NOT use any character-specific parsing elements (such as [npc.name]). -->
 		<effectTooltipLines>
-			<line><![CDATA[[style.colourExcellent(Disables)] 'menopause' effect]]></line>
+			<line><![CDATA[[style.colourExcellent(去除)]“绝经”效果]]></line>
 		</effectTooltipLines>
 		
 		<!-- This is what is called and parsed every time this item is used on someone.
@@ -131,24 +131,24 @@
 		<applyEffects><![CDATA[
 			[##npc.removeStatusEffect(SE_PROMISCUITY_PILL)]
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				The small pill easily slides down [npc.her] throat, and within moments [npc.she] [npc.verb(feel)]
+				这颗小胶囊轻松地滑进了[npc.her]的喉咙，片刻之间，[npc.she]开始感到
 				#IF(npc.hasVagina())
-					 a soothing, warm glow spreading out from [npc.her] ovaries into [npc.her] lower torso. [npc.Her] mind fogs over with an overwhelming desire to feel potent sperm spurting deep into [npc.her] 
+					一股温暖宁静的感觉从[npc.her]的卵巢散发到下半身，[npc.her]的思维被一股强烈的渴望所笼罩，希望能够被强壮的精子深深地注入[npc.her]的
 					#IF(npc.isVisiblyPregnant())
-						 pussy,
+						小穴，
 					#ELSE
-						 womb,
+						子宫，
 					#ENDIF
-					 and before [npc.she] can stop it, a horny whimper escapes from between [npc.her] [npc.lips].
+					然后，在[npc.she]能够阻止之前，一阵兴奋的呻吟从[npc.her][npc.lips]间溜了出来。
 					#IF(npc.hasPenisIgnoreDildo())
-						 At the same time, [npc.her] manhood begins to throb with need, and [npc.she] [npc.verb(feel)]
+						与此同时，[npc.her]的男根开始蠕动，[npc.she]感到
 					#ENDIF
 				#ENDIF
 				#IF(npc.hasPenisIgnoreDildo())
-					 an overpowering desire to sink deep into a fertile female's cunt and fill her with [npc.cum+].
+					一种强烈的欲望，想要深深插入到一个有生育能力的女性的小穴里，让她充满[npc.cum+]。
 				#ENDIF
 				#IF(!npc.hasPenisIgnoreDildo() && !npc.hasVagina())
-					a desperate heat in [npc.her] genderless mound.
+					一股热浪在[npc.her]无性的下体翻腾着。
 				#ENDIF
 			</p>
 		]]></applyEffects>
@@ -168,10 +168,10 @@
 	-->
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the breeder pill out of its little foil wrapper, before quickly placing it in [npc.her] mouth and swallowing it down.
+		[npc.Name]从小小的箔纸包装中取出繁育药，然后迅速将其放入口中并吞下。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the breeder pill out of its little foil wrapper, before bringing it up to [npc2.namePos] [npc2.lips], forcing it into [npc2.her] mouth, and making sure that [npc2.she] [npc2.verb(swallow)] it down.
+		[npc.Name]从小小的箔纸包装中取出繁育药，然后把它送到[npc2.namePos]的[npc2.lips]处，强迫[npc2.she]吞入口中，并确保[npc2.she]将其咽下。
 		]]></otherUse>
 	</useDescriptions>
 

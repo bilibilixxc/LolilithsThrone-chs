@@ -160,16 +160,16 @@ public class GenericOrgasms {
 		
 		sb.append("<p>");
 		if(characterOrgasming.isPlayer()) {
-			sb.append("As [npc.name] [npc.verb(reach)] [npc.her] climax, [npc.she] can't help but [npc.verb(let)] out an extremely loud, shuddering [npc.moan]."
-					+ " Within moments, your mind has gone blank, and as you lose [npc.herself] to the overwhelming strength of [npc.her] orgasm, you unwittingly [npc.verb(find)] [npc.herself] making an extremely lewd facial expression."
-					+ " As [npc.her] [npc.tongue+] lolls out of [npc.her] mouth, [npc.she] [npc.verb(feel)] [npc.her] cheeks flushing, and can't stop [npc.herself] from rolling [npc.her] [npc.eyes] upwards."
-					+ " With this expression of exaggerated ecstasy temporarily stuck on [npc.her] face, [npc.name] [npc.verb(let)] out yet another desperate [npc.moan] and [npc.verb(prepare)] to experience the full force of [npc.her] incoming orgasm.");
+			sb.append("[npc.name]迎来高潮，[npc.she]情不自禁地发出了一声极其响亮、颤抖的[npc.moan]。"
+					+ "刹那间，你的大脑一片空白，你失去了自我控制，被一阵阵冲刷而来的快感淹没，你无意之间发现自己露出了超级高潮脸。"
+					+ "[npc.tongue+]搭出来，脸颊涨得通红，止不住地翻起白眼。"
+					+ "[npc.Name]脸上挂着夸张的狂喜表情，又发出迷乱的[npc.moan]，准备经受即将到来的高潮的全部冲击。");
 			
 		} else {
-			sb.append("As [npc.name] [npc.verb(reach)] [npc.her] climax, [npc.she] [npc.verb(let)] out an extremely loud, shuddering [npc.moan]."
-					+ " Within moments, [npc.sheHas] lost [npc.herself] to the overwhelming strength of [npc.her] orgasm, and [npc.she] unwittingly [npc.verb(find)] [npc.herself] making an extremely lewd facial expression."
-					+ " As [npc.her] [npc.tongue+] lolls out of [npc.her] mouth, [npc.she] [npc.verb(feel)] [npc.her] cheeks flushing, and can't stop [npc.herself] from rolling [npc.her] [npc.eyes] upwards."
-					+ " With this expression of exaggerated ecstasy temporarily stuck on [npc.her] face, [npc.name] [npc.verb(let)] out yet another desperate [npc.moan] and [npc.verb(prepare)] to experience the full force of [npc.her] incoming orgasm.");
+			sb.append("[npc.name]迎来了高潮，发出极其大声、还在颤抖着的[npc.moan]。"
+					+ "刹那间，大脑一片空白，[npc.her]失去了自我控制，被一阵阵冲刷而来的快感淹没，[npc.her]无意之间发现自己露出了超级高潮脸。"
+					+ "[npc.tongue+]搭出来，脸颊涨得通红，止不住地翻起白眼。"
+					+ "[npc.Name]脸上挂着夸张的狂喜表情，又发出迷乱的[npc.moan]，准备经受即将到来的高潮的全部冲击。");
 		}
 		sb.append("</p>");
 		
@@ -179,16 +179,16 @@ public class GenericOrgasms {
 	private static String getPenisOrgasmModifierDescriptionPostfix(GameCharacter targetedCharacter) {
 		if(targetedCharacter.isAsleep()) {
 			return UtilText.returnStringAtRandom(
-					", but despite this extra stimulation, [npc2.she] doesn't wake up.",
-					", but [npc2.she] still [npc.verb(remain)] totally asleep.");
+					"，但即便有着这额外的刺激，[npc2.she]也没有醒来。",
+					"，但[npc2.she]仍然熟睡着。");
 			
 		} else if(isCharacterTotallyImmobilised(targetedCharacter)) {
 			return UtilText.returnStringAtRandom(
-					", but despite this extra stimulation, [npc2.she] doesn't react in any way whatsoever.",
-					", but [npc2.she] [npc.verb(remain)] totally silent and immobile.");
+					"，但即便有着这额外的刺激，[npc2.she]也没有做出任何反应。",
+					"，但[npc2.she]仍然保持安静且一动不动。");
 			
 		} else {
-			return ", which causes [npc2.herHim] to let out [npc2.a_moan+].";
+			return "，引得[npc2.herHim]连连发出[npc2.a_moan+]。";
 		}
 	}
 	
@@ -207,34 +207,34 @@ public class GenericOrgasms {
 				if(Main.sex.getCreampieLockedBy().containsKey(characterOrgasming)) {
 					GameCharacter lockingCharacter = Main.sex.getCreampieLockedBy().get(characterOrgasming).getKey();
 					Class<? extends BodyPartInterface> bodypart = Main.sex.getCreampieLockedBy().get(characterOrgasming).getValue();
-					String orgasmPreventionDesc = "pull out";
+					String orgasmPreventionDesc = "拔出";
 					if(Main.sex.getOngoingSexAreas(characterOrgasming, SexAreaPenetration.PENIS, lockingCharacter).contains(SexAreaPenetration.PENIS)) {
-						orgasmPreventionDesc = "pull [npc.her] [npc.cock+] away from [npc2.namePos]"; // frotting variation
+						orgasmPreventionDesc = "将[npc.her][npc.cock+]从[npc2.namePos]体内拔出"; // frotting variation
 					}
 					
 					if(bodypart == Torso.class) {
 						genericOrgasmSB.append(UtilText.parse(characterOrgasming, lockingCharacter,
-								"With [npc2.name] pressing [npc2.herself] tightly against [npc.herHim], [npc.nameIsFull] unable to "+orgasmPreventionDesc+", and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] to orgasm."));
+								"[npc.nameIsFull]被[npc2.name]紧紧贴在身上，无法"+orgasmPreventionDesc+"，只得发出[npc.a_moan+]，游走于高潮的边缘。"));
 						
 					} else if(bodypart == Arm.class) {
 						genericOrgasmSB.append(UtilText.parse(characterOrgasming, lockingCharacter,
-								"With [npc2.namePos] [npc2.arms] wrapped tightly around [npc.her] lower back, [npc.nameIsFull] unable to "+orgasmPreventionDesc+", and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] to orgasm."));
+								"[npc.nameIsFull]被[npc2.namePos]的[npc2.arms]箍住后腰，无法"+orgasmPreventionDesc+"，只得发出[npc.a_moan+]，游走于高潮的边缘。"));
 						
 					} else if(bodypart == Leg.class) {
 						genericOrgasmSB.append(UtilText.parse(characterOrgasming, lockingCharacter,
-								"With [npc2.namePos] [npc2.legs] locked tightly around [npc.her] lower back, [npc.nameIsFull] unable to "+orgasmPreventionDesc+", and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] to orgasm."));
+								"[npc.nameIsFull]被[npc2.namePos]的[npc2.legs]箍住后腰，无法"+orgasmPreventionDesc+"，只得发出[npc.a_moan+]，游走于高潮的边缘。"));
 						
 					} else if(bodypart == Tail.class) {
 						genericOrgasmSB.append(UtilText.parse(characterOrgasming, lockingCharacter,
-								"With [npc2.namePos] [npc2.tail] wrapped tightly around [npc.her] lower back, [npc.nameIsFull] unable to "+orgasmPreventionDesc+", and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] to orgasm."));
+								"[npc.nameIsFull]被[npc2.namePos]的[npc2.tail]箍住后腰，无法"+orgasmPreventionDesc+"，只得发出[npc.a_moan+]，游走于高潮的边缘。"));
 						
 					} else if(bodypart == Tail.class) {
 						genericOrgasmSB.append(UtilText.parse(characterOrgasming, lockingCharacter,
-								"With [npc2.namePos] [npc2.wingSize] [npc2.wings] wrapped tightly around [npc.her] body, [npc.nameIsFull] unable to "+orgasmPreventionDesc+", and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] to orgasm."));
+								"[npc.nameIsFull]被[npc2.namePos][npc2.wingSize]的[npc2.wings]箍住身子，无法"+orgasmPreventionDesc+"，只得发出[npc.a_moan+]，游走于高潮的边缘。"));
 						
 					} else if(bodypart == Tentacle.class) {
 						genericOrgasmSB.append(UtilText.parse(characterOrgasming, lockingCharacter,
-								"With [npc2.namePos] [npc2.tentacles] wrapped tightly around [npc.her] lower back, [npc.nameIsFull] unable to "+orgasmPreventionDesc+", and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(start)] to orgasm."));
+								"[npc.nameIsFull]被[npc2.namePos]的[npc2.tentacles]箍住后腰，无法"+orgasmPreventionDesc+"，只得发出[npc.a_moan+]，游走于高潮的边缘。"));
 					}
 				}
 			}
@@ -259,13 +259,13 @@ public class GenericOrgasms {
 						break;
 					case ANUS:
 						genericOrgasmSB.append(UtilText.parse(Util.newArrayListOfValues(characterOrgasming, characterPenetrated, characterTargeted),
-								"With half of [npc.her] load being pumped into [npc2.namePos] [npc2.asshole+], and still in the middle of [npc.her] orgasm, [npc.name] suddenly [npc.verb(pull)] out,"
-										+ " before quickly moving over to [npc3.name] and lining the [npc.cockHead+] of [npc.her] [npc.cock+] up to [npc3.her] [npc3.asshole+]."));
+								"[npc.Name]才半数射入[npc2.namePos][npc2.asshole+]，尚在高潮冲击中，却突然拔了出来，"
+										+ "然后快速移动到[npc3.name]身旁，将[npc.cock+][npc.cockHead+]顶入[npc3.her][npc3.asshole+]。"));
 						break;
 					case VAGINA:
 						genericOrgasmSB.append(UtilText.parse(Util.newArrayListOfValues(characterOrgasming, characterPenetrated, characterTargeted),
-								"With half of [npc.her] load being pumped into [npc2.namePos] [npc2.pussy+], and still in the middle of [npc.her] orgasm, [npc.name] suddenly [npc.verb(pull)] out,"
-										+ " before quickly moving over to [npc3.name] and lining the [npc.cockHead+] of [npc.her] [npc.cock+] up to [npc3.her] [npc3.pussy+]."));
+								"[npc.Name]才半数射入[npc2.namePos][npc2.pussy+]，尚在高潮冲击中，却突然拔了出来，"
+										+ "然后快速移动到[npc3.name]身旁，将[npc.cock+][npc.cockHead+]顶入[npc3.her][npc3.pussy+]。"));
 						break;
 				}
 			}
@@ -277,17 +277,17 @@ public class GenericOrgasms {
 				switch(mod) {
 					case FLARED:
 						if(characterOrgasming.hasPenisModifier(mod)) {
-							modifiers.add(" wide, flared head of [npc.namePos] [npc.cock] swells up, and [npc.she] [npc.verb(feel)] [npc.her] [npc.balls+] tightening as [npc.she] [npc.verb(start)] to cum.");
+							modifiers.add("[npc.namePos][npc.cock]肥厚平坦的顶部充血胀大，[npc.she]感觉[npc.balls+]骤然缩紧，要开始射精了。");
 						}
 						break;
 					case KNOTTED:
 						if(characterOrgasming.hasPenisModifier(mod)) {
-							modifiers.add(" thick knot at the base of [npc.namePos] [npc.cock] swells up, and [npc.she] [npc.verb(feel)] [npc.her] [npc.balls+] tightening as [npc.she] [npc.verb(start)] to cum.");
+							modifiers.add("[npc.namePos][npc.cock]根部肥厚的结充血膨大，[npc.she]感觉到[npc.balls+]缩紧，准备射精。");
 						}
 						break;
 					case TENTACLED:
 						if(characterOrgasming.hasPenisModifier(mod)) {
-							modifiers.add(" little tentacles lining [npc.namePos] [npc.cock] start frantically wriggling, and [npc.she] [npc.verb(feel)] [npc.her] [npc.balls+] tightening as [npc.she] [npc.verb(start)] to cum.");
+							modifiers.add("[npc.namePos][npc.cock]上连着的小触手疯狂扭动，[npc.balls+]骤然缩紧，精液窜出。");
 						}
 						break;
 					case BARBED:
@@ -310,17 +310,17 @@ public class GenericOrgasms {
 				if(!ongoingProstateStimulators.isEmpty() && !isCharacterTotallyImmobilised(ongoingProstateStimulators.get(0))) {
 					if(ongoingProstateStimulators.get(0).equals(characterOrgasming)) {
 						genericOrgasmSB.append(UtilText.parse(ongoingProstateStimulators.get(0),
-								" At this moment, [npc.name] [npc.verb(curl)] [npc.her] [npc.fingers+] up inside [npc.her] "+(characterOrgasming.hasVagina()?"[npc.pussy+]":"[npc.asshole+]")+","
-									+ " before rapidly stroking and massaging [npc.her] prostate in an attempt to milk as much [npc.cum] out of [npc.herself] as possible."
-									+ " Immediately, [npc.her] body reacts to this added stimulation, and the "));
+								"这时，[npc.name]弯曲[npc.fingers+]，深入[npc.her]"+(characterOrgasming.hasVagina()?"[npc.pussy+]":"[npc.asshole+]")+"，"
+									+ "快速地抚摸按摩[npc.her]的前列腺，尝试从自己身上尽可能榨取更多[npc.cum]。"
+									+ "[npc.her]的身体立刻对刺激有了反应，"));
 					} else {
 						genericOrgasmSB.append(UtilText.parse(ongoingProstateStimulators.get(0), characterOrgasming,
-								" At this moment, [npc.name] [npc.verb(curl)] [npc.her] [npc.fingers+] up inside [npc2.namePos] "+(characterOrgasming.hasVagina()?"[npc2.pussy+]":"[npc2.asshole+]")+","
-									+ " before rapidly stroking and massaging [npc2.her] prostate in an attempt to milk as much [npc2.cum] out of [npc2.herHim] as possible."
-									+ " Immediately, [npc2.her] body reacts to this added stimulation, and the "));
+								"这时，[npc.name]弯曲[npc.fingers+]，深入[npc2.namePos]"+(characterOrgasming.hasVagina()?"[npc2.pussy+]":"[npc2.asshole+]")+"，"
+									+ "快速地抚摸按摩[npc2.her]的前列腺，尝试从[npc2.herHim]身上尽可能榨取更多[npc2.cum]。"
+									+ "[npc2.her]的身体立刻对刺激有了反应，"));
 					}
 				} else {
-					genericOrgasmSB.append(" The");
+					genericOrgasmSB.append("");
 				}
 				genericOrgasmSB.append(modifiers.get(Util.random.nextInt(modifiers.size())));
 				
@@ -328,19 +328,19 @@ public class GenericOrgasms {
 				if(!ongoingProstateStimulators.isEmpty() && !isCharacterTotallyImmobilised(ongoingProstateStimulators.get(0))) {
 					if(ongoingProstateStimulators.get(0).equals(characterOrgasming)) {
 						genericOrgasmSB.append(UtilText.parse(ongoingProstateStimulators.get(0),
-								" At this moment, [npc.name] [npc.verb(curl)] [npc.her] [npc.fingers+] up inside [npc.her] "+(characterOrgasming.hasVagina()?"[npc.pussy+]":"[npc.asshole+]")+","
-										+ " before rapidly stroking and massaging [npc.her] prostate in an attempt to milk as much [npc.cum] out of [npc.herself] as possible."
-										+ " Immediately, [npc.her] body reacts to this added stimulation, and with a twitch of [npc.her] [npc.cock+],"
-											+ " [npc.she] [npc.verb(feel)] [npc.her] [npc.balls+] tightening as [npc.she] [npc.verb(start)] to cum."));
+								"这时，[npc.name]弯曲[npc.her][npc.fingers+]，深入[npc.her]"+(characterOrgasming.hasVagina()?"[npc.pussy+]":"[npc.asshole+]")+"，"
+										+ "快速地抚摸按摩[npc.her]的前列腺，尝试从自己身上尽可能榨取更多[npc.cum]。"
+										+ "[npc.her]的身体立刻对刺激有了反应，[npc.cock+]抽动着，"
+											+ "[npc.balls+]骤然缩紧，精液窜出。"));
 					} else {
 						genericOrgasmSB.append(UtilText.parse(ongoingProstateStimulators.get(0), characterOrgasming,
-								" At this moment, [npc.name] [npc.verb(curl)] [npc.her] [npc.fingers+] up inside [npc2.namePos] "+(characterOrgasming.hasVagina()?"[npc2.pussy+]":"[npc2.asshole+]")+","
-									+ " before rapidly stroking and massaging [npc2.her] prostate in an attempt to milk as much [npc2.cum] out of [npc2.herHim] as possible."
-									+ " Immediately, [npc2.her] body reacts to this added stimulation, and with a twitch of [npc2.her] [npc2.cock+],"
-										+ " [npc2.she] [npc2.verb(feel)] [npc2.her] [npc2.balls+] tightening as [npc2.she] [npc2.verb(start)] to cum."));
+								"这时，[npc.name]弯曲[npc.fingers+]，深入[npc2.namePos]"+(characterOrgasming.hasVagina()?"[npc2.pussy+]":"[npc2.asshole+]")+"，"
+									+ "快速地抚摸按摩[npc2.her]的前列腺，尝试从[npc2.herHim]身上尽可能榨取更多[npc2.cum]。"
+									+ "[npc2.her]的身体立刻对刺激有了反应，[npc2.cock+]抽动几下，"
+										+ "感到[npc2.balls+]骤然缩紧，开始射精。"));
 					}
 				} else {
-					genericOrgasmSB.append(" [npc.NamePos] [npc.cock+] twitches, and [npc.she] [npc.verb(feel)] [npc.her] [npc.balls+] tightening as [npc.she] [npc.verb(start)] to cum.");
+					genericOrgasmSB.append("[npc.NamePos][npc.cock+]颤动着，[npc.balls+]骤然缩紧，精液窜出。");
 				}
 			}
 			
@@ -356,56 +356,56 @@ public class GenericOrgasms {
 				if(contactingArea.isOrifice()) {
 					if(immobile) {
 						if(sleeping) {
-							genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] asleep as [npc.her] [npc.cock+] rubs against [npc2.namePos] "+((SexAreaOrifice) contactingArea).getName(characterTargeted));
+							genericOrgasmSB.append("[npc.Name]还在睡，而且[npc.her][npc.cock+]蹭着[npc2.namePos]的"+((SexAreaOrifice) contactingArea).getName(characterTargeted));
 						} else {
-							genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] completely motionless as [npc.her] [npc.cock+] rubs against [npc2.namePos] "+((SexAreaOrifice) contactingArea).getName(characterTargeted));
+							genericOrgasmSB.append("[npc.Name]还是完全没反应，而且[npc.her][npc.cock+]蹭着[npc2.namePos]的"+((SexAreaOrifice) contactingArea).getName(characterTargeted));
 						}
 						
 					} else {
 						switch((SexAreaOrifice) contactingArea) {
 							case ARMPITS:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(pull)] [npc.her] [npc.cock+] away from [npc2.namePos] [npc2.armpit+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.armpit+]中抽出[npc.cock+]");
 								break;
 							case ANUS:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.asshole+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.asshole+]拔出[npc.cock+]");
 								break;
 							case ASS:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out from between [npc2.namePos] ass cheeks");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos]的屁股蛋里抽出[npc.her][npc.cock+]");
 								break;
 							case BREAST:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out from between [npc2.namePos] [npc2.breasts+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.breasts+]间抽出[npc.cock+]");
 								break;
 							case BREAST_CROTCH:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out from between [npc2.namePos] [npc2.crotchBoobs+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.crotchBoobs+]间抽出[npc.cock+]");
 								break;
 							case MOUTH:
 								if(!Main.sex.getCreampieLockedBy().containsKey(characterOrgasming)) {
 									GameCharacter primary = PenisMouth.getPrimaryBlowjobPerformer(characterOrgasming);
-									genericOrgasmSB.append(UtilText.parse(characterOrgasming, primary, "[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] mouth"));
+									genericOrgasmSB.append(UtilText.parse(characterOrgasming, primary, "[npc.Name]从[npc2.namePos]嘴里抽出[npc.cock+]"));
 								} else {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] mouth");
+									genericOrgasmSB.append("[npc.Name]从[npc2.namePos]嘴里抽出[npc.cock+]");
 								}
 								break;
 							case NIPPLE:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.nipple+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.nipple+]中抽出[npc.cock+]");
 								break;
 							case NIPPLE_CROTCH:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.crotchNipple+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.crotchNipple+]中抽出[npc.cock+]");
 								break;
 							case THIGHS:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out from between [npc2.namePos] thighs");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos]的大腿缝中抽出[npc.cock+]");
 								break;
 							case URETHRA_PENIS:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.penisUrethra+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.penisUrethra+]中抽出[npc.cock+]");
 								break;
 							case URETHRA_VAGINA:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.vaginaUrethra+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.vaginaUrethra+]中抽出[npc.cock+]");
 								break;
 							case VAGINA:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.pussy+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.pussy+]中抽出[npc.cock+]");
 								break;
 							case SPINNERET:
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.spinneret+]");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.spinneret+]中抽出[npc.cock+]");
 								break;
 							case TUSSY:
 								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] [npc2.tussy+]");
@@ -416,51 +416,51 @@ public class GenericOrgasms {
 					if(!characterOrgasming.getPenisModifiers().isEmpty() && !immobile) {
 						switch(characterOrgasming.getPenisModifiers().get(Util.random.nextInt(characterOrgasming.getPenisModifiers().size()))) {
 							case BARBED:
-								genericOrgasmSB.append(", before reaching down and sliding [npc.her] [npc.hand] up and down over [npc.her] sensitive little barbs.");
+								genericOrgasmSB.append("，然后伸[npc.hand]在[npc.her]敏感的小倒刺上捋来抚去。");
 								break;
 							case BLUNT:
-								genericOrgasmSB.append(", before reaching down and starting to furiously masturbate; [npc.her] [npc.hand] running up the length of [npc.her] [npc.cock] to rub and tease [npc.her] blunt head.");
+								genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来，[npc.hand]从根到头撸动着[npc.cock]，挑逗着钝头。");
 								break;
 							case FLARED:
-								genericOrgasmSB.append(", before reaching down and starting to furiously masturbate; [npc.her] [npc.hand] running up the length of [npc.her] [npc.cock] to rub and tease [npc.her] wide, flared head.");
+								genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来，[npc.hand]从根到头撸动着[npc.cock]，挑逗着宽大的平头。");
 								break;
 							case KNOTTED:
-								genericOrgasmSB.append(", before reaching down and starting to furiously masturbate; [npc.her] [npc.hand] sliding down the length of [npc.her] [npc.cock] to grip and rub at [npc.her] swollen knot.");
+								genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来，[npc.hand]从根到头撸动着[npc.cock]，磨蹭着膨大的结。");
 								break;
 							case PREHENSILE:
-								genericOrgasmSB.append(", before reaching down and starting to furiously masturbate;"
-										+ " [npc.her] [npc.hand] sliding down the length of [npc.her] prehensile [npc.cock] as [npc.she] [npc.verb(curl)] it back against [npc.her] [npc.fingers].");
+								genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来；"
+										+ "[npc.hand]上下套弄灵活可控的[npc.cock]，将它弯起来抵着[npc.fingers]。");
 								break;
 							case RIBBED:
-								genericOrgasmSB.append(", before reaching down and sliding [npc.her] [npc.hand] up and down over the bumpy ribs that line [npc.her] [npc.cock].");
+								genericOrgasmSB.append("，然后伸[npc.hand]在[npc.cock]凹凸不平的螺纹上搓来搓去。");
 								break;
 							case SHEATHED:
-								genericOrgasmSB.append(", before reaching down and starting to furiously masturbate;"
-											+ " [npc.her] [npc.hand] sliding down the length of [npc.her] [npc.cock] to bump against [npc.her] sheath, before rising back up to [npc.her] [npc.cockHead+].");
+								genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来；"
+											+ "[npc.hand]上下套弄着[npc.cock]，带下了鞘，然后又撸回到[npc.cockHead+]上。");
 								break;
 							case TAPERED:
-								genericOrgasmSB.append(", before reaching down and starting to furiously masturbate; [npc.her] [npc.hand] running up the length of [npc.her] [npc.cock] to rub and tease [npc.her] tapered head.");
+								genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来，[npc.hand]从根到头撸动着[npc.cock]，挑逗着锥头。");
 								break;
 							case TENTACLED:
-								genericOrgasmSB.append(", before reaching down and sliding [npc.her] [npc.hand] up and down over the squirming tentacles that line the sides of [npc.her] [npc.cock].");
+								genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来，[npc.hand]在[npc.cock]侧面蠕动的小触手上搓来搓去。");
 								break;
 							case VEINY:
-								genericOrgasmSB.append(", before reaching down and sliding [npc.her] [npc.hand] up and down over [npc.her] veiny [npc.cock].");
+								genericOrgasmSB.append("，然后伸向下体，[npc.hand]上下套弄着脉状[npc.cock]。");
 								break;
 							case OVIPOSITOR:
-								genericOrgasmSB.append(", before reaching down and sliding [npc.her] [npc.hand] up and down over [npc.her] [npc.cock+].");
+								genericOrgasmSB.append("，然后伸向下体，[npc.hand]上下套弄着那[npc.cock+]。");
 								break;
 						}
 						
 					} else {
 						if(immobile) {
 							if(sleeping) {
-								genericOrgasmSB.append(".");
+								genericOrgasmSB.append("。");
 							} else {
-								genericOrgasmSB.append(", performing the role of inanimate sex doll with absolute perfection.");
+								genericOrgasmSB.append("，完美演绎着一个无生命的性爱玩偶。");
 							}
 						} else {
-							genericOrgasmSB.append(", before reaching down and starting to furiously masturbate; [npc.her] [npc.hand] running up the length of [npc.her] [npc.cock] to rub and tease [npc.her] [npc.cockHead].");
+							genericOrgasmSB.append("，然后摸向下体，疯狂自慰起来，[npc.hand]从根到头撸动着[npc.cock]，挑逗着[npc.cockHead]。");
 						}
 					}
 					
@@ -469,53 +469,53 @@ public class GenericOrgasms {
 						case CLIT:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] asleep as [npc.her] [npc.cock+] rubs against [npc2.namePos] [npc2.pussy+].");
+									genericOrgasmSB.append("[npc.Name]还在睡，而且[npc.her][npc.cock+]蹭着[npc2.namePos][npc2.pussy+]。");
 								} else {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] completely motionless as [npc.her] [npc.cock+] rubs against [npc2.namePos] [npc2.pussy+], performing the role of inanimate sex doll with absolute perfection.");
+									genericOrgasmSB.append("[npc.Name]继续一动不动，而且[npc.her][npc.cock+]蹭着[npc2.namePos][npc2.pussy+]，完美演绎着一个无生命的性爱玩偶。");
 								}
 							} else {
-								genericOrgasmSB.append("[npc.Name] [npc.verb(take)] [npc.her] [npc.cock+] away from [npc2.namePos] [npc2.pussy+], before reaching down and starting to furiously masturbate;"
-										+ " [npc.her] [npc.hand] running up the length of [npc.her] [npc.cock] to rub and tease [npc.her] [npc.cockHead].");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos][npc2.pussy+]中抽出[npc.cock+]，然后抚向下体，疯狂自慰起来，"
+										+ "[npc.hand]从根到头撸动着[npc.cock]，挑逗着[npc.cockHead]。");
 							}
 							break;
 						case FINGER:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] asleep as");
+									genericOrgasmSB.append("[npc.Name]还在睡，而且");
 								} else {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] completely motionless as");
+									genericOrgasmSB.append("[npc.Name]还是完全没反应，而且");
 								}
 								if(immobileTarget) {
 									if(sleepingTarget) {
-										genericOrgasmSB.append(" [npc2.name] also [npc2.verb(sleep)] with [npc2.her] [npc2.fingers+] wrapped around [npc.namePos] [npc.cock+].");
+										genericOrgasmSB.append("[npc2.name]也睡着，[npc2.fingers+]环着[npc.namePos][npc.cock+]。");
 									} else {
-										genericOrgasmSB.append(" [npc2.name] similarly [npc.verb(stay)] totally still with [npc2.her] [npc2.fingers+] wrapped around [npc.namePos] [npc.cock+].");
+										genericOrgasmSB.append(" [npc2.name]同样一动不动，[npc2.fingers+]环着[npc.namePos][npc.cock+]。");
 									}
 								} else {
 									genericOrgasmSB.append(
 											UtilText.returnStringAtRandom(
-													" [npc2.name] [npc2.verb(continue)] to stroke [npc.her] [npc.cock+].",
-													selfTargeting?null:" [npc2.name] [npc2.verb(continue)] giving [npc.herHim] a handjob through [npc.her] orgasm.",
-													" [npc2.name] [npc2.verb(continue)] stroking [npc.her] [npc.cock+] through [npc.her] orgasm."));
+													"[npc2.name]继续磨蹭[npc.cock+]。",
+													selfTargeting?null:"[npc2.name]继续给[npc.herHim]手冲，直到[npc.her]高潮。",
+													"[npc2.name]在高潮时继续磨蹭着[npc.her][npc.cock+]。"));
 								}
 							} else {
 								genericOrgasmSB.append(
 										UtilText.returnStringAtRandom(
-												" [npc.Name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(buck)] [npc.her] [npc.hips+] forwards",
-												" Letting out [npc.a_moan+], [npc.name] [npc.verb(buck)] [npc.her] [npc.hips+] forwards",
-												" Bucking [npc.her] [npc.hips] forwards, [npc.name] [npc.verb(let)] out [npc.a_moan+]"));
+												"[npc.Name]发出[npc.a_moan+]，向前拱[npc.hips+]",
+												"[npc.Name]一边发出[npc.a_moan+]，一边向前拱[npc.hips+]",
+												"向前拱着[npc.hips]，[npc.Name]发出[npc.a_moan+]"));
 								if(immobileTarget) {
 									if(sleepingTarget) {
-										genericOrgasmSB.append(" as [npc2.name] [npc2.verb(remain)] asleep with [npc2.her] [npc2.fingers+] wrapped around [npc.namePos] [npc.cock+].");
+										genericOrgasmSB.append("[npc2.name]还在睡，[npc2.fingers+]环着[npc.namePos][npc.cock+]。");
 									} else {
-										genericOrgasmSB.append(" as [npc2.name] [npc2.verb(remain)] frozen in place with [npc2.her] [npc2.fingers+] wrapped around [npc.namePos] [npc.cock+].");
+										genericOrgasmSB.append("[npc2.name]纹丝不动，[npc2.fingers+]环着[npc.namePos][npc.cock+]。");
 									}
 								} else {
 									genericOrgasmSB.append(
 											UtilText.returnStringAtRandom(
-													" as [npc2.name] [npc2.verb(continue)] to stroke [npc.her] [npc.cock+].",
-													selfTargeting?null:" as [npc2.name] [npc2.verb(continue)] giving [npc.herHim] a handjob through [npc.her] orgasm.",
-													" as [npc2.name] [npc2.verb(continue)] stroking [npc.her] [npc.cock+] through [npc.her] orgasm."));
+													"[npc2.name]继续磨蹭着[npc.her][npc.cock+]。",
+													selfTargeting?null:"[npc2.name]继续给[npc.herHim]手冲，直到[npc.her]高潮。",
+													"而且[npc2.name]在高潮时继续磨蹭着[npc.her][npc.cock+]。"));
 								}
 							}
 							break;
@@ -528,33 +528,33 @@ public class GenericOrgasms {
 						case FOOT:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] asleep");
+									genericOrgasmSB.append("[npc.Name]还在睡");
 								} else {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] completely motionless");
+									genericOrgasmSB.append("[npc.Name]还是完全没反应");
 								}
 							} else {
-								genericOrgasmSB.append(" Bucking [npc.her] [npc.hips], [npc.name] [npc.verb(let)] out [npc.a_moan+]");
+								genericOrgasmSB.append("拱起[npc.hips]，[npc.Name]发出[npc.a_moan+]");
 							}
 							if(immobileTarget) {
 								if(sleepingTarget) {
-									genericOrgasmSB.append(" as [npc2.namePos] [npc2.feet+] remain in place around [npc.her] [npc.cock+].");
+									genericOrgasmSB.append("[npc2.namePos][npc2.feet+]包围着[npc.her][npc.cock+]。");
 								} else {
-									genericOrgasmSB.append(" as [npc2.name] [npc2.verb(hold)] [npc2.her] [npc2.feet+] in place around [npc.namePos] [npc.cock+].");
+									genericOrgasmSB.append("[npc2.name]用[npc2.feet+]包围着[npc.namePos][npc.cock+]。");
 								}
 							} else {
-								genericOrgasmSB.append(" as [npc2.name] [npc2.verb(continue)] stimulating [npc.her] [npc.cock+] with [npc2.her] [npc2.feet+].");
+								genericOrgasmSB.append("[npc2.name]继续用[npc2.feet+]刺激着[npc.her][npc.cock+]。");
 							}
 							break;
 						case TONGUE:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] asleep as [npc.her] [npc.cock+] rubs against [npc2.namePos] [npc2.lips+].");
+									genericOrgasmSB.append("[npc.Name]还在睡，而且[npc.her][npc.cock+]蹭着[npc2.namePos][npc2.lips+]。");
 								} else {
-									genericOrgasmSB.append("[npc.Name] [npc.verb(remain)] completely motionless as [npc.her] [npc.cock+] rubs against [npc2.namePos] [npc2.lips+], performing the role of inanimate sex doll with absolute perfection.");
+									genericOrgasmSB.append("[npc.Name]继续一动不动，而且[npc.her][npc.cock+]蹭着[npc2.namePos][npc2.lips+]，完美演绎着一个无生命的性爱玩偶。");
 								}
 							} else {
-								genericOrgasmSB.append("[npc.Name] [npc.verb(slide)] [npc.her] [npc.cock+] out of [npc2.namePos] mouth, before reaching down and starting to furiously masturbate;"
-										+ " [npc.her] [npc.hand] running up the length of [npc.her] [npc.cock] to rub and tease [npc.her] [npc.cockHead].");
+								genericOrgasmSB.append("[npc.Name]从[npc2.namePos]嘴里抽出[npc.cock+]，然后抚向下体，疯狂自慰起来，"
+										+ "[npc.hand]从根到头撸动着[npc.cock]，挑逗着[npc.cockHead]。");
 							}
 							break;
 					}
@@ -580,12 +580,12 @@ public class GenericOrgasms {
 			if(!ongoingProstateStimulators.isEmpty() && !isCharacterTotallyImmobilised(ongoingProstateStimulators.get(0))) {
 				if(ongoingProstateStimulators.get(0).equals(characterOrgasming)) {
 					genericOrgasmSB.append(UtilText.parse(ongoingProstateStimulators.get(0),
-							" At this moment, [npc.name] [npc.verb(curl)] [npc.her] [npc.fingers+] up inside [npc.her] "+(characterOrgasming.hasVagina()?"[npc.pussy+]":"[npc.asshole+]")+","
-									+ " before rapidly stroking and massaging [npc.her] prostate in an attempt to milk as much [npc.cum] out of [npc.herself] as possible."));
+							"这时，[npc.name]弯曲[npc.fingers+]，深入[npc.her]"+(characterOrgasming.hasVagina()?"[npc.pussy+]":"[npc.asshole+]")+"，"
+									+ "快速地抚摸按摩[npc.her]的前列腺，尝试从[npc.herself]尽可能榨取更多[npc.cum]。"));
 				} else {
 					genericOrgasmSB.append(UtilText.parse(ongoingProstateStimulators.get(0), characterOrgasming,
-							" At this moment, [npc.name] [npc.verb(curl)] [npc.her] [npc.fingers+] up inside [npc2.namePos] "+(characterOrgasming.hasVagina()?"[npc2.pussy+]":"[npc2.asshole+]")+","
-								+ " before rapidly stroking and massaging [npc2.her] prostate in an attempt to milk as much [npc2.cum] out of [npc2.herHim] as possible."));
+							"这时，[npc.name]弯曲[npc.her][npc.fingers+]，深入[npc2.namePos]"+(characterOrgasming.hasVagina()?"[npc2.pussy+]":"[npc2.asshole+]")+"，"
+								+ "快速地抚摸按摩[npc2.her]的前列腺，尝试从[npc2.herHim]尽可能榨取更多[npc2.cum]。"));
 				}
 			}
 			
@@ -603,7 +603,7 @@ public class GenericOrgasms {
 							// ...
 							String orificeName =
 								(contactingArea == SexAreaOrifice.SPINNERET
-									?"spinneret"
+									?"丝囊"
 									:(contactingArea == SexAreaOrifice.VAGINA
 										?"[npc2.pussy]"
 										:(contactingArea == SexAreaOrifice.ANUS
@@ -617,7 +617,7 @@ public class GenericOrgasms {
 																	:"urethra"))))));
 							String orificeNamePlusDescriptor =
 									(contactingArea == SexAreaOrifice.SPINNERET
-										?"web-spinning orifice"
+										?"的丝囊穴"
 										:(contactingArea == SexAreaOrifice.VAGINA
 											?"[npc2.pussy+]"
 											:(contactingArea == SexAreaOrifice.ANUS
@@ -632,9 +632,9 @@ public class GenericOrgasms {
 							
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append(" Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] hilted deep inside of [npc2.namePos] "+orificeNamePlusDescriptor+".");
+									genericOrgasmSB.append("[npc2.name]还在睡着，[npc.name]继续把[npc.cock+]深深送入[npc2.namePos]"+orificeNamePlusDescriptor+"。");
 								} else {
-									genericOrgasmSB.append(" Remaining completely motionless, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] hilted deep inside of [npc2.namePos] "+orificeNamePlusDescriptor+".");
+									genericOrgasmSB.append("眼看没有反应，[npc.name]继续把[npc.cock+]深入[npc2.namePos]"+orificeNamePlusDescriptor+"。");
 								}
 								
 							} else if(characterOrgasming.hasPenisModifier(PenetrationModifier.KNOTTED)) {
@@ -642,54 +642,54 @@ public class GenericOrgasms {
 									if(!isSecondaryCreampieTarget) {
 										GameCharacter secondaryTarget = getSecondaryCreampieTarget(characterTargeted, (SexAreaOrifice) contactingArea);
 										if(!Main.game.isPenetrationLimitationsEnabled() || characterOrgasming.isFullPenetrationTooShort(SexAreaPenetration.PENIS, characterTargeted, (SexAreaOrifice)contactingArea)) {
-											genericOrgasmSB.append(" Pushing forwards, [npc.name] [npc.verb(hilt)] [npc.her] [npc.cock+] fully inside of [npc2.namePos] "+orificeNamePlusDescriptor+".");
+											genericOrgasmSB.append("[npc.name]向前送腰，[npc.cock+]完全刺入[npc2.namePos]"+orificeNamePlusDescriptor+"。");
 											if(Objects.equals(Main.sex.getCharacterKnotting(characterOrgasming), secondaryTarget)) {
-												genericOrgasmSB.append(" Wanting to save [npc.her] rapidly-swelling knot for "+(UtilText.parse(characterOrgasming, secondaryTarget, "[npc2.namePos] "+orificeNamePlusDescriptor))+","
-																+ " [npc.she] [npc.verb(hold)] back from pushing it inside of [npc2.name], and [npc.verb(make)] do with just grinding it against [npc2.her] "+orificeName+".");
+												genericOrgasmSB.append("想要把[npc.her]迅速肿大的结留着给"+(UtilText.parse(characterOrgasming, secondaryTarget, "[npc2.namePos]"+orificeNamePlusDescriptor))+"，"
+																+ "[npc.she]抑制住顶到[npc2.name]里面的想法，只是浅浅磨蹭着"+orificeName+"。");
 											} else {
-												genericOrgasmSB.append(" Not wanting to get locked inside of [npc2.herHim], [npc.she] [npc.verb(hold)] back from pushing [npc.her] rapidly-swelling knot inside of [npc2.namePos] "+orificeName+".");
+												genericOrgasmSB.append("[npc.she]不想被锁在[npc2.namePos]体内，于是抑制住了把正在迅速膨大的结撞进[npc2.herHim]"+orificeName+"内的冲动。");
 											}
 											
 										} else if(characterOrgasming.isWantingToFullyPenetrate(characterTargeted, SexAreaPenetration.PENIS)) {
-											genericOrgasmSB.append(" Pushing forwards, [npc.name] [npc.verb(feel)] [npc.her] [npc.cock+] bottoming out in [npc2.namePos] "+orificeNamePlusDescriptor+".");
+											genericOrgasmSB.append("[npc.Name]向前送腰，感觉[npc.cock+]捅到了[npc2.namePos]"+orificeNamePlusDescriptor+"最里面。");
 											if(Objects.equals(Main.sex.getCharacterKnotting(characterOrgasming), secondaryTarget)) {
-												genericOrgasmSB.append(" Desperate to sink [npc.her] rapidly-swelling knot into something, [npc.name] [npc.verb(look)] over at "
-														+(UtilText.parse(characterOrgasming, secondaryTarget, "[npc2.namePos] "+orificeNamePlusDescriptor))+" and [npc.verb(let)] out an excited [npc.moan].");
+												genericOrgasmSB.append("迷乱地把迅速肿大的结埋进什么里，[npc.Name]看向"
+														+(UtilText.parse(characterOrgasming, secondaryTarget, "[npc2.namePos]"+orificeNamePlusDescriptor))+"，发出兴奋的[npc.moan]。");
 											} else {
-												genericOrgasmSB.append(" [npc.She] [npc.verb(let)] out a disappointed [npc.moan] as [npc.she] [npc.verb(realise)]"
-														+ " that [npc.her] rapidly-swelling knot isn't going to fit inside of [npc2.namePos] "+orificeName+".");
+												genericOrgasmSB.append("[npc.She]发出失望的[npc.moan]，意识到"
+														+ "迅速膨大的结没法撞进[npc2.namePos]的"+orificeName+"。");
 											}
 											
 										} else {
-											genericOrgasmSB.append(" Not wanting to cause [npc2.her] any discomfort, [npc.name] [npc.verb(hold)] back from fully hilting [npc.her] [npc.cock] in [npc2.namePos] "+orificeNamePlusDescriptor+".");
+											genericOrgasmSB.append("[npc.Name]不想让[npc2.namePos]不舒服，便忍住了，没把整根[npc.cock]顶进[npc2.her]"+orificeNamePlusDescriptor+"里。");
 										}
 										
 									} else {
 										if(Objects.equals(Main.sex.getCharacterKnotting(characterOrgasming), characterTargeted)) {
-											genericOrgasmSB.append(" Pushing forwards, [npc.name] [npc.verb(ram)] the now-fully swollen knot at the base of [npc.her] [npc.cock+] against [npc2.namePos] "+orificeNamePlusDescriptor+"."
-													+ " By now it's so engorged that it seems almost impossible to push it inside, but with a determined [npc.moan], [npc.name] violently [npc.verb(thrust)] forwards,"
-														+ " and with an accompanying cry from [npc2.name], [npc.she] [npc.verb(manage)] to force [npc.her] fat knot into [npc2.her] "+orificeNamePlusDescriptor+".");
+											genericOrgasmSB.append("[npc.Name]向前送腰，冲撞着[npc.cock+]根部现在完全膨大的结，完全操进[npc2.namePos]"+orificeNamePlusDescriptor+"。"
+													+ "现在它完全充血硬起，几乎不可能挤进去。但[npc.name]边充满决心地[npc.moan]，边猛地向前顶入，"
+														+ "[npc.she]下了蛮力，肥厚的结恣意挺进[npc2.her]"+orificeNamePlusDescriptor+"，[npc2.name]轻颤着喊出声来。");
 										} else {
-											genericOrgasmSB.append(" Not wanting to get locked inside of [npc2.herHim], [npc.she] [npc.verb(hold)] back from pushing [npc.her] rapidly-swelling knot inside of [npc2.namePos] "+orificeName+".");
+											genericOrgasmSB.append("[npc.she]不想被锁在[npc2.namePos]体内，于是抑制住了把正在迅速膨大的结撞进[npc2.herHim]"+orificeName+"内的冲动。");
 										}
 									}
 									
 								} else {
 									if(Objects.equals(Main.sex.getCharacterKnotting(characterOrgasming), characterTargeted)) {
-										genericOrgasmSB.append(" Pushing forwards, [npc.name] [npc.verb(ram)] the knot at the base of [npc.her] [npc.cock+] against [npc2.namePos] "+orificeNamePlusDescriptor+"."
-												+ " It's already started to swell up so much that [npc.she] [npc.do]n't manage to get it inside on the first thrust,"
-													+ " but after pulling back and slamming [npc.her] [npc.hips] forwards, [npc.she] [npc.verb(manage)] to push the thick knot into [npc2.her] "+orificeNamePlusDescriptor+".");
+										genericOrgasmSB.append("[npc.name]向前挺身，把[npc.cock+]根部膨大的结猛塞进[npc2.namePos]"+orificeNamePlusDescriptor+"。"
+												+ "它早已肿胀过头，[npc.she]初次探进时没能成功操进里面，"
+													+ "[npc.she]悻悻缩回下体，又猛地挺腰，[npc.hips]向前，努力撑开[npc2.her]"+orificeNamePlusDescriptor+"，粗大的结没入深处。");
 									} else {
-										genericOrgasmSB.append(" Not wanting to get locked inside of [npc2.herHim], [npc.she] [npc.verb(hold)] back from pushing [npc.her] rapidly-swelling knot inside of [npc2.namePos] "+orificeName+".");
+										genericOrgasmSB.append("[npc.she]不想被锁在[npc2.namePos]体内，于是抑制住了把正在迅速膨大的结撞进[npc2.herHim]"+orificeName+"内的冲动。");
 									}
 								}
 								
 							} else {
 								if(cumTarget==OrgasmCumTarget.INSIDE_SWITCH_DOUBLE && isSecondaryCreampieTarget) { 
-									genericOrgasmSB.append(" Thrusting [npc.her] [npc.cock+] into [npc2.namePos] "+orificeNamePlusDescriptor+","
-											+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to finish orgasming inside of [npc2.herHim].");
+									genericOrgasmSB.append("把[npc.cock+]没入[npc2.namePos]"+orificeNamePlusDescriptor+"，"
+											+ "[npc.name]发出[npc.a_moan+]，准备在[npc2.herHim]体内高潮。");
 								} else {
-									genericOrgasmSB.append(" Ramming [npc.her] [npc.cock+] deep into [npc2.namePos] "+orificeNamePlusDescriptor+", [npc.name] [npc.verb(let)] out [npc.a_moan+] as it starts to twitch inside of [npc2.herHim].");
+									genericOrgasmSB.append("[npc.name]把[npc.cock+]埋进[npc2.namePos]"+orificeNamePlusDescriptor+"，边发出[npc.a_moan+]，边在[npc2.herHim]里面抽动。");
 								}
 							}
 							
@@ -698,34 +698,34 @@ public class GenericOrgasms {
 								switch(mod) {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Name] [npc.verb(continue)] to make small, thrusting movements, raking [npc.her] barbs back against the inner walls of [npc2.namePos] "+orificeName
-													+(immobileTarget?".":" and causing [npc2.herHim] to let out [npc2.a_moan+]."));
+											modifiers.add("[npc.Name]继续轻柔地操干着，倒刺扎入[npc2.namePos]"+orificeName+"的内壁"
+													+(immobileTarget?"。":"让[npc2.herHim]发出了[npc2.a_moan+]。"));
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.isPlayer() && !sleeping) {
-												modifiers.add(" You feel the wide, flared head of your [npc.cock] swell up, making a seal with which to trap your [npc.cum] deep within [npc2.her] "+orificeName+".");
+												modifiers.add("你感觉到自己宽大的平头[npc.cock]胀起来，封住了[npc2.her]"+orificeName+"深处你的[npc.cum]。");
 											} else {
-												modifiers.add(" The wide, flared head of [npc.namePos] [npc.cock] swells up, making a seal with which to trap [npc.her] [npc.cum] deep within [npc2.namePos] "+orificeName+".");
+												modifiers.add("[npc.namePos]宽大的平头[npc.cock]胀起来，封住了[npc2.namePos]"+orificeName+"深处的[npc.cum]。");
 											}
 										}
 										break;
 									case RIBBED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.isPlayer() && !sleeping) {
-												modifiers.add(" You feel your ribbed [npc.cock] bumping against the inner walls of [npc2.her] "+orificeName+penisModPostfix);
+												modifiers.add("你感到自己有螺纹的[npc.cock]在[npc2.name]"+orificeName+"的包裹下有力地泵动"+penisModPostfix);
 											} else {
-												modifiers.add(" The ribbed length of [npc.namePos] [npc.cock] bumps against the inner walls of [npc2.namePos] "+orificeName+penisModPostfix);
+												modifiers.add("[npc.namePos]的[npc.cock]螺纹刮蹭着[npc2.namePos]"+orificeName+"的内壁"+penisModPostfix);
 											}
 										}
 										break;
 									case TENTACLED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.isPlayer() && !sleeping) {
-												modifiers.add(" You feel the wriggling tentacles lining your [npc.cock] start to massage the inner walls of [npc2.her] "+orificeName+penisModPostfix);
+												modifiers.add("你感到[npc.cock]外侧扭曲蠕动的触手肆意揉弄着[npc2.her]的"+orificeName+penisModPostfix);
 											} else {
-												modifiers.add(" The wriggling tentacles lining [npc.namePos] [npc.cock] start to massage the inner walls of [npc2.namePos] "+orificeName+penisModPostfix);
+												modifiers.add("[npc.namePos][npc.cock]外侧扭曲蠕动的触手肆意揉弄着[npc2.namePos]的"+orificeName+penisModPostfix);
 												
 											}
 										}
@@ -748,13 +748,13 @@ public class GenericOrgasms {
 							if(!immobile && characterOrgasming.hasPenisModifier(PenetrationModifier.KNOTTED)) {
 								if(cumTarget!=OrgasmCumTarget.INSIDE_SWITCH_DOUBLE || isSecondaryCreampieTarget) {
 									if(Objects.equals(Main.sex.getCharacterKnotting(characterOrgasming), characterTargeted)) {
-										genericOrgasmSB.append(" Keeping [npc.her] [npc.hips] pushed tightly against [npc2.namePos] "+orificeName+", [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.her] knot swells up to its full size.");
+										genericOrgasmSB.append("[npc.hips]与[npc2.namePos]的"+orificeName+"紧密贴合，[npc.name]发出[npc.a_moan+]，结完全充血胀开，不能再大。" );
 										if(immobileTarget) {
-											genericOrgasmSB.append(" [npc.She] then [npc.verb(buck)] back a little, causing [npc2.name] to be pulled along with [npc.herHim];");
+											genericOrgasmSB.append("[npc.She]又蹭出一点，拖着[npc2.name]走；");
 										} else {
-											genericOrgasmSB.append(" [npc.She] then [npc.verb(buck)] back a little, and [npc2.name] [npc2.verb(let)] out a startled cry as [npc2.sheIs] pulled along with [npc.herHim];");
+											genericOrgasmSB.append("[npc.She]又蹭出一点，[npc2.name]被拖走，惊叫出声；");
 										}
-										genericOrgasmSB.append(" evidence that [npc.her] [npc.cock] is now firmly locked inside [npc2.her] "+orificeNamePlusDescriptor+".");
+										genericOrgasmSB.append("显而易见，[npc.cock]正牢牢锁在[npc2.her]那"+orificeNamePlusDescriptor+"内。");
 									}
 								}
 							}
@@ -763,43 +763,43 @@ public class GenericOrgasms {
 						case ARMPITS:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append(" Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] pressed up against [npc2.namePos] armpit.");
+									genericOrgasmSB.append("[npc.name]还在睡，[npc.cock+]夹在[npc2.namePos]的腋窝间。");
 								} else {
-									genericOrgasmSB.append(" Remaining completely motionless, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] pressed up against [npc2.namePos] armpit.");
+									genericOrgasmSB.append("[npc.name]仍然完全一动不动，[npc.cock+]夹在[npc2.namePos]腋窝间。");
 								}
 							} else {
-								genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] thrusting [npc.her] [npc.cock+] up against [npc2.namePos] armpit, letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+								genericOrgasmSB.append("[npc.Name][npc.cock+]在[npc2.namePos]的腋窝内打转，[npc.she]感受着它的抽搐，发出[npc.a_moan+]。");
 							}
 							for(PenetrationModifier mod : PenetrationModifier.getPenetrationModifiers()) {
 								switch(mod) {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] movements cause the barbs lining the sides of [npc.her] [npc.cock] to rake against [npc2.namePos] [npc2.arm+]"+penisModPostfix);
+											modifiers.add("[npc.Her]的动作更让[npc.cock]两侧的倒刺扎入[npc2.namePos][npc2.arm+]"+penisModPostfix);
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] flared head swells up and lewdly rubs against [npc2.namePos] [npc2.arm]"+penisModPostfix);
+											modifiers.add("平平的顶部肿胀起来，淫靡地刮蹭着[npc2.namePos]的[npc2.arm]"+penisModPostfix);
 										}
 										break;
 									case KNOTTED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] [npc2.arm+]"+penisModPostfix);
+											modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会撞到[npc2.namePos][npc2.arm+]"+penisModPostfix);
 										}
 										break;
 									case PREHENSILE:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] bends it around [npc2.namePos] [npc2.arm+] on each thrust"+penisModPostfix);
+											modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，每次插入都会伸到[npc2.namePos][npc2.arm+]附近"+penisModPostfix);
 										}
 										break;
 									case RIBBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc2.namePos] [npc2.arm+] on every thrust"+penisModPostfix);
+											modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos][npc2.arm+]"+penisModPostfix);
 										}
 										break;
 									case TENTACLED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] [npc2.arm+]"+penisModPostfix);
+											modifiers.add("柱身上的小触手扭动着，按摩[npc2.namePos][npc2.arm+]"+penisModPostfix);
 										}
 										break;
 									case BLUNT:
@@ -815,43 +815,43 @@ public class GenericOrgasms {
 						case ASS:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append(" Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] [npc2.assSize] ass cheeks.");
+									genericOrgasmSB.append("[npc.name]还在睡，[npc.cock+]夹在[npc2.namePos][npc2.assSize]的屁股蛋间。");
 								} else {
-									genericOrgasmSB.append(" Remaining completely motionless, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] [npc2.assSize] ass cheeks.");
+									genericOrgasmSB.append("[npc.name]仍然完全一动不动，[npc.cock+]夹在[npc2.namePos][npc2.assSize]的屁股蛋间。");
 								}
 							} else {
-								genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] thrusting [npc.her] [npc.cock+] between [npc2.namePos] [npc2.assSize] ass cheeks, letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+								genericOrgasmSB.append("[npc.Name][npc.cock+]继续在[npc2.namePos][npc2.assSize]的屁股蛋间操弄，[npc.she]发出[npc.a_moan+]，感受着肉棒的颤动。");
 							}
 							for(PenetrationModifier mod : PenetrationModifier.getPenetrationModifiers()) {
 								switch(mod) {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] movements cause the barbs lining the sides of [npc.her] [npc.cock] to rake against [npc2.namePos] [npc2.ass]"+penisModPostfix);
+											modifiers.add("[npc.Her]的动作更让[npc.cock]两侧的倒刺扎入[npc2.namePos][npc2.ass]"+penisModPostfix);
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] flared head swells up, causing [npc2.namePos] cheeks to be parted ever wider"+penisModPostfix);
+											modifiers.add("平平的顶部肿胀起来，将[npc2.namePos]的细缝操得更宽"+penisModPostfix);
 										}
 										break;
 									case KNOTTED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] [npc2.asshole]"+penisModPostfix);
+											modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会扩张[npc2.namePos]的[npc2.asshole]"+penisModPostfix);
 										}
 										break;
 									case PREHENSILE:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] bends it down over [npc2.namePos] back on each thrust"+penisModPostfix);
+											modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，每次插入都会伸到[npc2.namePos]后背附近"+penisModPostfix);
 										}
 										break;
 									case RIBBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc2.namePos] [npc2.asshole] on every thrust"+penisModPostfix);
+											modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos]的[npc2.asshole]"+penisModPostfix);
 										}
 										break;
 									case TENTACLED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] [npc2.asshole]"+penisModPostfix);
+											modifiers.add("柱身上的小触手扭动着，按摩[npc2.namePos][npc2.asshole]"+penisModPostfix);
 										}
 										break;
 									case BLUNT:
@@ -868,44 +868,44 @@ public class GenericOrgasms {
 							if(characterTargeted.hasBreasts()) {
 								if(immobile) {
 									if(sleeping) {
-										genericOrgasmSB.append(" Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] [npc2.breasts+].");
+										genericOrgasmSB.append("[npc2.name]还在睡，用[npc2.breasts+]夹着[npc.her][npc.cock+]。");
 									} else {
-										genericOrgasmSB.append(" Remaining completely motionless, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] [npc2.breasts+].");
+										genericOrgasmSB.append("[npc2.name]一动不动，保持[npc2.breasts+]夹住[npc.Name][npc.cock+]的姿势。");
 									}
 								} else {
-									genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] thrusting [npc.her] [npc.cock+] between [npc2.namePos] [npc2.breasts+], letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+									genericOrgasmSB.append("[npc.Name][npc.cock+]继续在[npc2.namePos][npc2.breasts+]间操弄，[npc.she]发出[npc.a_moan+]，感受着肉棒的颤动。");
 								}
 								
 								for(PenetrationModifier mod : PenetrationModifier.getPenetrationModifiers()) {
 									switch(mod) {
 										case BARBED:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] movements cause the barbs lining [npc.her] [npc.cock] to rake against the sides of [npc2.namePos] breasts"+penisModPostfix);
+												modifiers.add("[npc.Her]的动作更让[npc.cock]两侧的倒刺扎入[npc2.namePos]胸部"+penisModPostfix);
 											}
 											break;
 										case FLARED:
 											if(characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] flared head swells up and rubs lewdly against [npc2.namePos] [npc2.breasts+]"+penisModPostfix);
+												modifiers.add("平平的顶部肿胀起来，淫靡地刮蹭着[npc2.namePos]的[npc2.breasts+]"+penisModPostfix);
 											}
 											break;
 										case KNOTTED:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] [npc2.breasts+]"+penisModPostfix);
+												modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会扩开些[npc2.namePos][npc2.breasts+]"+penisModPostfix);
 											}
 											break;
 										case PREHENSILE:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] curls it around alternating sides of [npc2.namePos] breasts"+penisModPostfix);
+												modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，将它弯曲，交替抚触着[npc2.namePos]胸部两侧"+penisModPostfix);
 											}
 											break;
 										case RIBBED:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc2.namePos] [npc2.breasts+] on every thrust"+penisModPostfix);
+												modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos][npc2.breasts+]"+penisModPostfix);
 											}
 											break;
 										case TENTACLED:
 											if(characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] [npc2.breasts+]"+penisModPostfix);
+												modifiers.add("柱身上的小触手扭动着，按摩[npc2.namePos][npc2.breasts+]"+penisModPostfix);
 											}
 											break;
 										case BLUNT:
@@ -920,45 +920,45 @@ public class GenericOrgasms {
 							} else {
 								if(immobile) {
 									if(sleeping) {
-										genericOrgasmSB.append(" Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] resting on [npc2.namePos] flat chest.");
+										genericOrgasmSB.append("[npc.name]还在睡，[npc.cock+]歇在[npc2.namePos]的平胸上。");
 									} else {
-										genericOrgasmSB.append(" Remaining completely motionless, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] resting on [npc2.namePos] flat chest.");
+										genericOrgasmSB.append("[npc.name]仍然完全一动不动，[npc.cock+]歇在[npc2.namePos]的平胸上。");
 									}
 								} else {
-									genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] grinding [npc.her] [npc.cock+] against [npc2.namePos] flat chest, letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+									genericOrgasmSB.append("[npc.Name][npc.cock+]在[npc2.namePos]的平胸上打转，[npc.she]感受着它的抽搐，发出[npc.a_moan+]。");
 								}
 								
 								for(PenetrationModifier mod : PenetrationModifier.getPenetrationModifiers()) {
 									switch(mod) {
 										case BARBED:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] movements cause the barbs lining [npc.her] [npc.cock] to rake sharply over [npc2.namePos] torso"+penisModPostfix);
+												modifiers.add("[npc.Her]的动作更让[npc.cock]上面的倒刺尖利地扎入[npc2.namePos]的身体"+penisModPostfix);
 											}
 											break;
 										case FLARED:
 											if(characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] flared head swells up and rubs lewdly against [npc2.namePos] torso"+penisModPostfix);
+												modifiers.add("平平的顶部肿胀起来，淫靡地刮蹭着[npc2.namePos]的身体"+penisModPostfix);
 											}
 											break;
 										case KNOTTED:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] torso"+penisModPostfix);
+												modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会撞到[npc2.namePos]的身体"+penisModPostfix);
 											}
 											break;
 										case PREHENSILE:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] curls it this way and that as [npc.she] grinds against [npc2.namePos] chest"
+												modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，弯曲它来蹭[npc2.namePos]的胸部"
 														+penisModPostfix);
 											}
 											break;
 										case RIBBED:
 											if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps over [npc2.namePos] torso on every thrust"+penisModPostfix);
+												modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos]的身体"+penisModPostfix);
 											}
 											break;
 										case TENTACLED:
 											if(characterOrgasming.hasPenisModifier(mod)) {
-												modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] torso"+penisModPostfix);
+												modifiers.add("柱身上的小触手扭动着，按摩[npc2.namePos]的身体"+penisModPostfix);
 											}
 											break;
 										case BLUNT:
@@ -975,44 +975,44 @@ public class GenericOrgasms {
 						case BREAST_CROTCH:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append(" Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] [npc2.crotchBoobs+].");
+									genericOrgasmSB.append("[npc.name]还在睡，[npc.cock+]夹在[npc2.namePos][npc2.crotchBoobs+]间。");
 								} else {
-									genericOrgasmSB.append(" Remaining completely motionless, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] [npc2.crotchBoobs+].");
+									genericOrgasmSB.append("[npc.name]仍然完全一动不动，[npc.cock+]夹在[npc2.namePos][npc2.crotchBoobs+]间。");
 								}
 							} else {
-								genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] thrusting [npc.her] [npc.cock+] against [npc2.namePos] [npc2.crotchBoobs+], letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+								genericOrgasmSB.append("[npc.Name][npc.cock+]在[npc2.namePos][npc2.crotchBoobs+]间打转，[npc.she]感受着它的抽搐，发出[npc.a_moan+]。");
 							}
 							
 							for(PenetrationModifier mod : PenetrationModifier.getPenetrationModifiers()) {
 								switch(mod) {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] movements cause the barbs lining [npc.her] [npc.cock] to rake against the sides of [npc2.namePos] [npc2.crotchBoobs]"+penisModPostfix);
+											modifiers.add("[npc.Her]的动作更让[npc.cock]两侧的倒刺扎入[npc2.namePos][npc2.crotchBoobs]"+penisModPostfix);
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] flared head swells up and rubs lewdly against [npc2.namePos] [npc2.crotchBoobs+]"+penisModPostfix);
+											modifiers.add("平平的顶部肿胀起来，淫靡地刮蹭着[npc2.namePos]的[npc2.crotchBoobs+]"+penisModPostfix);
 										}
 										break;
 									case KNOTTED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] [npc2.crotchBoobs+]"+penisModPostfix);
+											modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会扩开些[npc2.namePos][npc2.crotchBoobs+]"+penisModPostfix);
 										}
 										break;
 									case PREHENSILE:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] curls it around alternating sides of [npc2.namePos] [npc2.crotchBoobs]"+penisModPostfix);
+											modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，将它弯曲，交替抚触着[npc2.namePos][npc2.crotchBoobs]"+penisModPostfix);
 										}
 										break;
 									case RIBBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc2.namePos] [npc2.crotchBoobs+] on every thrust"+penisModPostfix);
+											modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos]的[npc2.crotchBoobs+]"+penisModPostfix);
 										}
 										break;
 									case TENTACLED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] [npc2.crotchBoobs+]"+penisModPostfix);
+											modifiers.add("柱身上的小触手扭动着，按摩[npc2.namePos]的[npc2.crotchBoobs+]"+penisModPostfix);
 										}
 										break;
 									case BLUNT:
@@ -1031,51 +1031,51 @@ public class GenericOrgasms {
 								if(immobile) { // Doesn't make sense if characterTargeted is resisting...
 									if(sleeping) {
 										genericOrgasmSB.append(UtilText.parse(Util.newArrayListOfValues(characterOrgasming, characterTargeted, primary),
-												" [npc.NamePos] [npc.cock+] slides out of [npc3.namePos] throat at the last moment,"
-														+ " and [npc.she] [npc.verb(remain)] asleep as [npc2.name] [npc2.verb(lean)] forwards and [npc2.verb(take)] it in [npc2.her] mouth."));
+												" [npc.NamePos]的[npc.cock+]在最后一刻从[npc3.namePos]喉咙里滑出，"
+														+ "[npc2.name]俯身，动作很小地开始享受[npc.she]的小嘴，没有惊动[npc.she]。"));
 									} else {
 										genericOrgasmSB.append(UtilText.parse(Util.newArrayListOfValues(characterOrgasming, characterTargeted, primary),
-												" Feeling [npc.her] [npc.cock+] sliding out of [npc3.namePos] throat at the last moment,"
-														+ " [npc.name] obediently [npc.verb(remain)] motionless as [npc2.name] [npc2.verb(lean)] forwards and [npc2.verb(take)] it in [npc2.her] mouth."));
+												"[npc.her]感觉精关一紧，把[npc.cock+]从[npc3.name]喉咙里拔出，"
+														+ "[npc2.name]俯身插进[npc.she]的小嘴，对毫无反应的[npc.she]为所欲为。"));
 									}
 									
 								} else {
 									genericOrgasmSB.append(UtilText.parse(Util.newArrayListOfValues(characterOrgasming, characterTargeted, primary),
-											" Not wanting [npc3.herHim] to be the one to bear the brunt of [npc.her] orgasm, [npc.name] [npc.verb(draw)] [npc.her] [npc.cock+] from out of [npc3.namePos] throat."));
+											"[npc.Name]才不想让[npc3.namePos]第一个高潮，便把[npc.cock+]从[npc3.herHim]喉咙里抽出来了。"));
 											
 									if(characterOrgasming.hasPenisModifier(PenetrationModifier.KNOTTED)) {
 										if(Objects.equals(Main.sex.getCharacterKnotting(characterOrgasming), characterTargeted)) {
 											genericOrgasmSB.append(UtilText.parse(Util.newArrayListOfValues(characterOrgasming, characterTargeted, primary),
-													" Moving the [npc.cockHead+] over to point directly at [npc2.namePos] mouth, [npc.she] [npc.verb(thrust)] forwards and "
-														+ " [npc.verb(hilt)] [npc.her] [npc.cock+] down [npc2.namePos] throat, ramming [npc.her] rapidly-growing knot against [npc2.her] [npc2.lips+] in the process."
-													+ " It's already started to swell up so much that [npc.she] [npc.do]n't manage to get it into [npc2.her] [npc2.mouth] on the first thrust,"
-														+ " but after pulling back and slamming [npc.her] [npc.hips] forwards once again, [npc.she] [npc.verb(succeed)] in pushing the thick knot past [npc2.her] [npc2.lips]."
+													"[npc.cockHead+]正对着[npc2.namePos]的嘴，向前突刺"
+														+ "[npc.cock+]直顶入[npc2.namePos]嗓子眼，快速膨胀的结顺带冲撞着[npc2.lips+]。"
+													+ "它早已肿胀过头，[npc.she]初次探进时没能成功操进[npc2.mouth]里，"
+														+ "[npc.she]悻悻缩回下体，又猛地挺腰，[npc.hips]向前挺进，成功把充血肿大的结填进[npc2.her][npc2.lips]。"
 													+ "<br/>"
-													+ "The moment [npc.she] [npc.verb(feel)] it pop inside, [npc.name] [npc.verb(let)] out [npc.a_moan+], and as [npc.she] presses [npc.her] groin firmly against [npc2.namePos] [npc2.face+],"
-														+ " [npc.her] knot finishes fully expanding and firmly locks [npc.her] [npc.cock+] down [npc2.namePos] throat."));
+													+ "[npc.name]感觉到它轻而易举地操入，便发出[npc.a_moan+]，下体紧贴在[npc2.namePos][npc2.face+]上，"
+														+ "锁结完全胀开，将[npc.cock+]牢牢锁在[npc2.namePos]嗓子眼里。"));
 											
 										} else {
 											if(!Main.game.isPenetrationLimitationsEnabled() || characterOrgasming.isFullPenetrationTooShort(SexAreaPenetration.PENIS, characterTargeted, (SexAreaOrifice)contactingArea)) {
 												genericOrgasmSB.append(UtilText.parse(characterOrgasming, characterTargeted,
-														" Moving the [npc.cockHead+] over to point directly at [npc2.namePos] mouth, [npc.she] [npc.verb(thrust)] forwards until [npc.her] rapidly-growing knot is rammed against [npc2.her] [npc2.lips+]."
-														+ " Not wanting to get locked down [npc2.her] throat, [npc.name] [npc.verb(hold)] back from pushing the thick knot past [npc2.her] [npc2.lips]."));
+														"[npc.cockHead+]正对上[npc2.namePos]的嘴，[npc.she]挺进向前，直到快速膨胀的结撞上[npc2.her][npc2.lips+]。"
+														+ "[npc.Name]不想被锁在[npc2.her]的喉咙里，控制自己没把充血膨大的结填进[npc2.lips]。"));
 												
 											} else if(characterOrgasming.isWantingToFullyPenetrate(characterTargeted, SexAreaPenetration.PENIS)) {
-												genericOrgasmSB.append(" Moving the [npc.cockHead+] over to point directly at [npc2.namePos] mouth, [npc.she] [npc.verb(thrust)] forwards,"
-														+ " only to feel that [npc2.her] throat isn't deep enough to accommodate the full length of [npc.her] [npc.cock+], preventing [npc.her] rapidly-swelling knot from being pushed into [npc2.her] mouth.");
+												genericOrgasmSB.append("[npc.cockHead+]正对上[npc2.namePos]的嘴，[npc.she]挺身向前，"
+														+ "却只感觉到[npc2.her]的喉咙不够深，吞不进整根[npc.cock+]，快速膨大的结没能塞进[npc2.her]嘴里。");
 												
 											} else {
-												genericOrgasmSB.append(" Moving the [npc.cockHead+] over to point directly at [npc2.namePos] mouth, [npc.she] [npc.verb(thrust)] forwards,"
-														+ " but as [npc.she] [npc.do]n't want to cause [npc2.herHim] any discomfort, [npc.she] [npc.verb(hold)] back from fully hilting [npc.her] [npc.cock] down [npc2.her] throat.");
+												genericOrgasmSB.append("[npc.cockHead+]正对上[npc2.namePos]的嘴，[npc.she]挺身向前，"
+														+ "但[npc.she]不想让[npc2.herHim]不舒服，于是忍住了，没把整根[npc.cock]捅进[npc2.her]喉咙里。");
 											}
 										}
 										
 									} else {
 										if(!Main.game.isPenetrationLimitationsEnabled() || characterOrgasming.isFullPenetrationTooShort(SexAreaPenetration.PENIS, characterTargeted, (SexAreaOrifice)contactingArea)) {
-											genericOrgasmSB.append(" Moving the [npc.cockHead+] over to point directly at [npc2.namePos] mouth, [npc.she] [npc.verb(thrust)] forwards, fully hilting [npc.her] [npc.cock+] deep down [npc2.her] throat."
-													+ " Grinding the base up against [npc2.her] [npc2.lips], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] [npc.her] [npc.cock+] start to twitch inside of [npc2.herHim].");
+											genericOrgasmSB.append("[npc.cockHead+]正对上[npc2.namePos]的嘴，[npc.she]一顶身子，[npc.cock+]尽根没入，深深顶进[npc2.her]的喉咙。"
+													+ "根部蹭着[npc2.her]的[npc2.lips]，[npc.Name]发出[npc.a_moan+]，感受着[npc.cock+]在[npc2.herHim]体内颤动。");
 										} else {
-											genericOrgasmSB.append(" Moving the [npc.cockHead+] over to point directly at [npc2.namePos] mouth, [npc.she] [npc.verb(thrust)] forwards, ramming [npc.her] twitching [npc.cock] deep down [npc2.namePos] throat.");
+											genericOrgasmSB.append("[npc.cockHead+]正对上[npc2.namePos]的嘴，[npc.she]一顶身子，颤动的[npc.cock]没入[npc2.namePos]喉咙里。");
 										}
 									}
 								}
@@ -1083,44 +1083,44 @@ public class GenericOrgasms {
 							} else {
 								if(immobile) {
 									if(!Main.game.isPenetrationLimitationsEnabled() || characterOrgasming.isFullPenetrationTooShort(SexAreaPenetration.PENIS, characterTargeted, (SexAreaOrifice)contactingArea)) {
-										genericOrgasmSB.append(" Remaining "+(sleeping?"asleep":"completely motionless")+", [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] fully hilted deep down [npc2.namePos] throat.");
+										genericOrgasmSB.append("[npc.her]更进一步，把[npc.cock+]连根塞入"+(sleeping?"熟睡的":"毫无反应的")+"[npc2.name]喉咙中。");
 									} else {
-										genericOrgasmSB.append(" Remaining "+(sleeping?"asleep":"completely motionless")+", [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] shoved deep down [npc2.namePos] throat.");
+										genericOrgasmSB.append("[npc.her]更进一步，把[npc.cock+]狠狠怼进"+(sleeping?"熟睡的":"毫无反应的")+"[npc2.name]喉咙中。");
 									}
 									
 								} else {
 									if(characterOrgasming.hasPenisModifier(PenetrationModifier.KNOTTED)) {
 										if(Objects.equals(Main.sex.getCharacterKnotting(characterOrgasming), characterTargeted)) {
 											genericOrgasmSB.append(UtilText.parse(Util.newArrayListOfValues(characterOrgasming, characterTargeted, primary),
-													" Letting out [npc.a_moan+], [npc.name] [npc.verb(thrust)] forwards and [npc.verb(hilt)] [npc.her] [npc.cock+] down [npc2.namePos] throat,"
-															+ " ramming [npc.her] rapidly-growing knot against [npc2.her] [npc2.lips+] in the process."
-													+ " It's already started to swell up so much that [npc.she] [npc.do]n't manage to get it into [npc2.her] [npc2.mouth] on the first thrust,"
-														+ " but after pulling back and slamming [npc.her] [npc.hips] forwards once again, [npc.she] [npc.verb(succeed)] in pushing the thick knot past [npc2.her] [npc2.lips]."
+													"[npc.Name]发出[npc.a_moan+]，[npc.cock+]猛干进[npc2.namePos]的喉咙，"
+															+ "快速膨胀的结顺带冲撞着[npc2.her][npc2.lips+]。"
+													+ "它早已肿胀过头，[npc.she]初次探进时没能成功操进[npc2.mouth]里，"
+														+ "[npc.she]悻悻缩回下体，又猛地挺腰，[npc.hips]向前挺进，成功把充血肿大的结填进[npc2.her][npc2.lips]。"
 													+ "<br/>"
-													+ "The moment [npc.she] [npc.verb(feel)] it pop inside, [npc.name] [npc.verb(let)] out [npc.a_moan+], and as [npc.she] presses [npc.her] groin firmly against [npc2.namePos] [npc2.face+],"
-														+ " [npc.her] knot finishes fully expanding and firmly locks [npc.her] [npc.cock+] down [npc2.namePos] throat."));
+													+ "[npc.name]感觉到它轻而易举地操入，便发出[npc.a_moan+]，下体紧贴在[npc2.namePos][npc2.face+]上，"
+														+ "锁结完全胀开，将[npc.cock+]牢牢锁在[npc2.namePos]嗓子眼里。"));
 											
 										} else {
 											if(!Main.game.isPenetrationLimitationsEnabled() || characterOrgasming.isFullPenetrationTooShort(SexAreaPenetration.PENIS, characterTargeted, (SexAreaOrifice)contactingArea)) {
 												genericOrgasmSB.append(UtilText.parse(characterOrgasming, characterTargeted,
-														" Letting out [npc.a_moan+], [npc.name] [npc.verb(thrust)] forwards until [npc.her] rapidly-growing knot is rammed against [npc2.her] [npc2.lips+]."
-														+ " Not wanting to get locked down [npc2.her] throat, [npc.name] [npc.verb(hold)] back from pushing the thick knot past [npc2.her] [npc2.lips]."));
+														"[npc.Name]挺进着发出[npc.a_moan+]，迅速膨大的结顶起了[npc2.her][npc2.lips+]。"
+														+ "[npc.Name]不想被锁在[npc2.her]的喉咙里，控制自己没把充血膨大的结填进[npc2.lips]。"));
 												
 											} else if(characterOrgasming.isWantingToFullyPenetrate(characterTargeted, SexAreaPenetration.PENIS)) {
-												genericOrgasmSB.append(" Letting out [npc.a_moan+], [npc.name] [npc.verb(thrust)] forwards,"
-														+ " only to feel that [npc2.her] throat isn't deep enough to accommodate the full length of [npc.her] [npc.cock+], preventing [npc.her] rapidly-swelling knot from being pushed into [npc2.her] mouth.");
+												genericOrgasmSB.append("[npc.Name]发出[npc.a_moan+]，开始向前推进，"
+														+ "却只感觉到[npc2.her]的喉咙不够深，吞不进整根[npc.cock+]，快速膨大的结没能塞进[npc2.her]嘴里。");
 												
 											} else {
-												genericOrgasmSB.append(" Letting out [npc.a_moan+], [npc.name] [npc.verb(thrust)] forwards,"
-														+ " but as [npc.she] [npc.do]n't want to cause [npc2.herHim] any discomfort, [npc.she] [npc.verb(hold)] back from fully hilting [npc.her] [npc.cock] down [npc2.her] throat.");
+												genericOrgasmSB.append("[npc.Name]发出[npc.a_moan+]，开始向前推进，"
+														+ "但[npc.she]不想让[npc2.herHim]不舒服，于是忍住了，没把整根[npc.cock]捅进[npc2.her]喉咙里。");
 											}
 										}
 											
 									} else {
 										if(!Main.game.isPenetrationLimitationsEnabled() || characterOrgasming.isFullPenetrationTooShort(SexAreaPenetration.PENIS, characterTargeted, (SexAreaOrifice)contactingArea)) {
-											genericOrgasmSB.append(" Fully hilting [npc.her] [npc.cock+] deep down [npc2.namePos] throat, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it starts to twitch inside of [npc2.herHim].");
+											genericOrgasmSB.append("[npc.cock+]向深处顶，尽根没入[npc2.namePos]的喉咙，[npc.Name]发出[npc.a_moan+]，感受着它在[npc2.herHim]体内的颤动。");
 										} else {
-											genericOrgasmSB.append(" Ramming [npc.her] [npc.cock+] deep down [npc2.namePos] throat, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it starts to twitch inside of [npc2.herHim].");
+											genericOrgasmSB.append("[npc.Name]把[npc.cock+]埋进[npc2.namePos]的喉咙，发出[npc.a_moan+]，感受着它在[npc2.herHim]体内颤动。");
 										}
 									}
 								}
@@ -1131,38 +1131,38 @@ public class GenericOrgasms {
 								switch(mod) {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Name] [npc.verb(continue)] to make small, thrusting movements, raking [npc.her] barbs back against the lining of [npc2.namePos] throat"
-													+ (immobileTarget?".":" and causing [npc2.herHim] to let out a choking [npc2.moan]."));
+											modifiers.add("[npc.Name]继续轻柔地操干着，倒刺扎入[npc2.namePos]的喉咙"
+													+ (immobileTarget?"。":"堵住了[npc2.herHim]气管，让她发出沉闷地[npc2.moan]。"));
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.isPlayer()) {
-												modifiers.add(" You feel the wide, flared head of your [npc.cock] swell up, making a seal with which to trap your [npc.cum] deep down [npc2.her] throat.");
+												modifiers.add("你感觉到自己宽大的平头[npc.cock]胀起来，把[npc.cum]封在了[npc2.her]嗓子眼深处。");
 											} else {
-												modifiers.add(" The wide, flared head of [npc.namePos] [npc.cock] swells up, making a seal with which to trap [npc.her] [npc.cum] deep down [npc2.namePos] throat.");
+												modifiers.add("[npc.namePos]宽大的平头[npc.cock]胀起来，把[npc.cum]封在了[npc2.namePos]嗓子眼深处。");
 											}
 										}
 										break;
 									case RIBBED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.isPlayer()) {
-												modifiers.add(" You feel your ribbed [npc.cock] bumping against the lining of [npc2.her] throat"
-														+ (immobileTarget?", but [npc2.she] doesn't react in any way whatsoever.":", which causes [npc2.herHim] to let out a muffled [npc2.moan]."));
+												modifiers.add("你用螺纹[npc.cock]在[npc2.her]喉咙里不停搅动"
+														+ (immobileTarget?"，[npc2.she]还是没有做出任何反应。":"，令[npc2.herHim]发出沉闷的[npc2.moan]."));
 											} else {
-												modifiers.add(" The ribbed length of [npc.namePos] [npc.cock] bumps against the lining of [npc2.namePos] throat"
-														+ (immobileTarget?", but [npc2.she] [npc2.do]n't react in any way whatsoever.":", which causes [npc2.herHim] to let out a muffled [npc2.moan]."));
+												modifiers.add("[npc.namePos]有螺纹的[npc.cock]在[npc2.namePos]嗓子眼里有力地泵动"
+														+ (immobileTarget?"，[npc2.she]还是没有做出任何反应。":"，令[npc2.herHim]发出沉闷的[npc2.moan]。"));
 											}
 										}
 										break;
 									case TENTACLED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.isPlayer()) {
-												modifiers.add(" You feel the wriggling tentacles lining your [npc.cock] start to massage the lining of [npc2.her] throat"
-														+ (immobileTarget?", but [npc2.she] [npc2.do]n't react in any way whatsoever.":", which causes [npc2.herHim] to let out a muffled [npc2.moan]."));
+												modifiers.add("你感觉[npc.cock]上蠕动的触手在[npc2.her]的咽喉中耸动"
+														+ (immobileTarget?"，[npc2.she]还是没有做出任何反应。":"，令[npc2.herHim]发出沉闷的[npc2.moan]。"));
 											} else {
-												modifiers.add(" The wriggling tentacles lining [npc.namePos] [npc.cock] start to massage the lining of [npc2.namePos] throat"
-														+ (immobileTarget?", but [npc2.she] [npc2.do]n't react in any way whatsoever.":", which causes [npc2.herHim] to let out a muffled [npc2.moan]."));
+												modifiers.add("[npc.namePos][npc.cock]上附生的触手不断按压刺激着[npc2.her]的咽喉内壁"
+														+ (immobileTarget?"，[npc2.she]还是没有做出任何反应。":"，令[npc2.herHim]发出沉闷的[npc2.moan]。"));
 											}
 										}
 										break;
@@ -1185,12 +1185,12 @@ public class GenericOrgasms {
 						case THIGHS:
 							if(immobile) {
 								if(sleeping) {
-									genericOrgasmSB.append(" Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] thighs.");
+									genericOrgasmSB.append("[npc2.name]还在睡，用屁股夹着[npc.her][npc.cock+]。");
 								} else {
-									genericOrgasmSB.append(" Remaining completely motionless, [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] thighs.");
+									genericOrgasmSB.append("[npc2.name]一动不动，保持臀部夹住[npc.Name][npc.cock+]的姿势。");
 								}
 							} else {
-								genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] thrusting [npc.her] [npc.cock+] between [npc2.namePos] thighs, letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+								genericOrgasmSB.append("[npc.Name][npc.cock+]继续在[npc2.namePos]股间操弄，[npc.she]发出[npc.a_moan+]，肉棒颤动了起来。");
 							}
 
 							modifiers.clear();
@@ -1198,32 +1198,32 @@ public class GenericOrgasms {
 								switch(mod) {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] movements cause the barbs lining the sides of [npc.her] [npc.cock] to rake against [npc2.namePos] [npc2.legs+]"+penisModPostfix);
+											modifiers.add("[npc.cock]两侧的倒刺随着[npc.her]动作刮蹭着[npc2.namePos][npc2.legs+]"+penisModPostfix);
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] flared head swells up, causing [npc2.namePos] [npc2.legs+] to be parted ever wider"+penisModPostfix);
+											modifiers.add("平坦的龟头更加膨胀，将[npc2.legs+]挤得更开"+penisModPostfix);
 										}
 										break;
 									case KNOTTED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] [npc2.legs+]"+penisModPostfix);
+											modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会撞到[npc2.namePos][npc2.legs+]"+penisModPostfix);
 										}
 										break;
 									case PREHENSILE:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] bends it around [npc2.namePos] [npc2.legs+] on each thrust"+penisModPostfix);
+											modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，每次插入都会伸到[npc2.namePos][npc2.legs+]附近"+penisModPostfix);
 										}
 										break;
 									case RIBBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc2.namePos] [npc2.legs+] on every thrust"+penisModPostfix);
+											modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos]的[npc2.legs+]"+penisModPostfix);
 										}
 										break;
 									case TENTACLED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] [npc2.legs+]"+penisModPostfix);
+											modifiers.add("柱身上的小触手扭动着，按摩[npc2.namePos]的[npc2.legs+]"+penisModPostfix);
 										}
 										break;
 									case BLUNT:
@@ -1248,15 +1248,15 @@ public class GenericOrgasms {
 							if(characterOrgasming.equals(characterTargeted)) {
 								if(immobile) {
 									if(sleeping) {
-										genericOrgasmSB.append(" [npc.She] [npc.verb(remain)] asleep while holding [npc.her] [npc.cock+] in [npc.her] [npc.hand].");
+										genericOrgasmSB.append("[npc.Name]还在睡，而且用[npc.her][npc.hand]握着[npc.her][npc.cock+]。");
 									} else {
-										genericOrgasmSB.append(" [npc.She] [npc.verb(remain)] completely motionless while holding [npc.her] [npc.cock+] in [npc.her] [npc.hand], performing the role of inanimate sex doll with absolute perfection.");
+										genericOrgasmSB.append("[npc.Name]继续一动不动，而且用[npc.her][npc.hand]握着[npc.her][npc.cock+]，完美演绎着一个无生命的性爱玩偶。");
 									}
 								} else {
-									genericOrgasmSB.append(" [npc.She] [npc.verb(continue)] pumping [npc.her] [npc.cock+] with [npc.her] [npc.hand], letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+									genericOrgasmSB.append("[npc.Name][npc.cock+]在[npc.her]的手中抽插，[npc.she]感受着它的抽搐，发出[npc.a_moan+]。");
 								}
 							} else {
-								genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] thrusting [npc.her] [npc.cock+] into [npc2.namePos] [npc2.hand], letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+								genericOrgasmSB.append("[npc.Name][npc.cock+]在[npc2.namePos]的[npc2.hand]里抽插，[npc.she]感受着它的抽搐，发出[npc.a_moan+]。");
 							}
 
 							modifiers.clear();
@@ -1265,58 +1265,58 @@ public class GenericOrgasms {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.equals(characterTargeted)) {
-												modifiers.add(" [npc.Her] movements cause the barbs lining the sides of [npc.her] [npc.cock] to rake against [npc.her] [npc.fingers+], causing [npc.herHim] to let out [npc.a_moan+].");
+												modifiers.add("[npc.Her]的动作更让[npc.cock]两侧的倒刺扎入[npc.namePos][npc.fingers+]，引得[npc.herHim]发出[npc.a_moan+]。");
 											} else {
-												modifiers.add(" [npc.Her] movements cause the barbs lining the sides of [npc.her] [npc.cock] to rake against [npc2.namePos] [npc2.fingers+]"+penisModPostfix);
+												modifiers.add("[npc.Her]的动作更让[npc.cock]两侧的倒刺扎入[npc2.namePos][npc2.fingers+]"+penisModPostfix);
 											}
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.equals(characterTargeted)) {
-												modifiers.add(" [npc.Her] flared head swells up, causing [npc.her] [npc.fingers+] to be spread ever wider"
+												modifiers.add("平平的顶部肿胀起来，将[npc.fingers+]挤得更开"
 														+(immobile
-															?" around [npc.her] [npc.cock+]."
-															:", which in turn causes [npc.herHim] to let out [npc.a_moan+]."));
+															?"环绕着[npc.her][npc.cock+]。"
+															:"，却反而使[npc.herHim]发出了[npc.a_moan+]。"));
 											} else {
-												modifiers.add(" [npc.Her] flared head swells up, causing [npc2.namePos] [npc2.fingers+] to be parted ever wider"+penisModPostfix);
+												modifiers.add("平平的顶部肿胀起来，将[npc2.fingers+]挤得更开"+penisModPostfix);
 											}
 										}
 										break;
 									case KNOTTED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.equals(characterTargeted)) {
-												modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc.her] [npc.fingers+], which in turn causes [npc.herHim] to let out [npc.a_moan+].");
+												modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都狂撞着自己[npc.fingers+]，引得[npc.herHim]连连发出[npc.a_moan+]。");
 											} else {
-												modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] [npc2.fingers+]"+penisModPostfix);
+												modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会撞到[npc2.namePos]的[npc2.fingers+]"+penisModPostfix);
 											}
 										}
 										break;
 									case PREHENSILE:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.equals(characterTargeted)) {
-												modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] [npc.verb(bend)] it around [npc.her] [npc.fingers+] on each thrust,"
-														+ " which in turn causes [npc.herHim] to let out [npc.a_moan+].");
+												modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，每次插入都会伸到自己[npc.fingers+]附近，"
+														+ "却反而使[npc.herHim]发出了[npc.a_moan+]。");
 											} else {
-												modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] [npc.verb(bend)] it around [npc2.namePos] [npc2.fingers+] on each thrust"+penisModPostfix);
+												modifiers.add("[npc.Name]利用自己灵活控制肉棒的能力，每次插入都会伸到[npc2.namePos][npc2.fingers+]附近"+penisModPostfix);
 											}
 										}
 										break;
 									case RIBBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.equals(characterTargeted)) {
-												modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc.her] [npc.fingers+] on every thrust, which in turn causes [npc.herHim] to let out [npc.a_moan+].");
+												modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到自己[npc.fingers+]，引得[npc.herHim]每次都发出[npc.a_moan+]。");
 											} else {
-												modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc2.namePos] [npc2.fingers+] on every thrust"+penisModPostfix);
+												modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos]的[npc2.fingers+]"+penisModPostfix);
 											}
 										}
 										break;
 									case TENTACLED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
 											if(characterOrgasming.equals(characterTargeted)) {
-												modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc.her] [npc.fingers+]"+(immobile?".":", which in turn causes [npc.herHim] to let out [npc.a_moan+]."));
+												modifiers.add("柱身上的小触手扭动着，每次顶入都顺带按摩[npc.her][npc.fingers+]，"+(immobile?".":"引得[npc.herHim]每次都发出[npc.a_moan+]。"));
 											} else {
-												modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] [npc2.fingers+] on every thrust"+penisModPostfix);
+												modifiers.add("柱身上的小触手扭动着，每次顶入都顺带按摩[npc2.namePos][npc2.fingers+]"+penisModPostfix);
 											}
 										}
 										break;
@@ -1333,39 +1333,39 @@ public class GenericOrgasms {
 							}
 							break;
 						case PENIS:
-							genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] grinding [npc.her] [npc.cock+] against [npc2.namePos] [npc2.cock+], letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+							genericOrgasmSB.append("[npc.Name]继续用[npc.cock+]磨蹭着[npc2.namePos][npc2.cock+]，[npc.she]发出[npc.a_moan+]，感受着它的颤动。");
 
 							modifiers.clear();
 							for(PenetrationModifier mod : PenetrationModifier.getPenetrationModifiers()) {
 								switch(mod) {
 									case BARBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] movements cause the barbs lining the sides of [npc.her] [npc.cock] to rake against [npc2.namePos] shaft"+penisModPostfix);
+											modifiers.add("[npc.Her]的动作使得[npc.her][npc.cock]两侧的倒刺刮蹭着[npc2.namePos]的柱身"+penisModPostfix);
 										}
 										break;
 									case FLARED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] flared head swells up and rubs against [npc2.namePos] shaft"+penisModPostfix);
+											modifiers.add("[npc.Her]平平的顶部肿胀起来，刮蹭着[npc2.namePos]的柱身"+penisModPostfix);
 										}
 										break;
 									case KNOTTED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] fat knot swells up, and with each thrust, bumps wildly against [npc2.namePos] shaft"+penisModPostfix);
+											modifiers.add("[npc.Her]的肥结肿胀起来，每下顶入，都会撞到[npc2.namePos]的柱身"+penisModPostfix);
 										}
 										break;
 									case PREHENSILE:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" Harnessing the ability of [npc.her] prehensile cock, [npc.name] [npc.verb(bend)] it around [npc2.namePos] shaft"+penisModPostfix);
+											modifiers.add("[npc.name]利用自己灵活控制肉棒的能力，将它弯曲，环绕着[npc2.namePos]的柱身"+penisModPostfix);
 										}
 										break;
 									case RIBBED:
 										if(!immobile && characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" [npc.Her] ribbed shaft repeatedly bumps against [npc2.namePos] shaft on every thrust"+penisModPostfix);
+											modifiers.add("[npc.Her]有螺纹的柱身每下塞入，都会顶到[npc2.namePos]的柱身"+penisModPostfix);
 										}
 										break;
 									case TENTACLED:
 										if(characterOrgasming.hasPenisModifier(mod)) {
-											modifiers.add(" The little tentacles lining [npc.her] shaft wriggle against and massage [npc2.namePos] shaft"+penisModPostfix);
+											modifiers.add("[npc.her]柱身上的小触手扭动着，按摩着[npc2.namePos]的柱身"+penisModPostfix);
 										}
 										break;
 									case BLUNT:
@@ -1387,15 +1387,15 @@ public class GenericOrgasms {
 						case FOOT://TODO modifiers
 							if(immobile) {
 								if(Main.sex.isDoubleFootJob(characterTargeted)) {
-									genericOrgasmSB.append(" Remaining "+(sleeping?"asleep":"completely motionless")+", [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] positioned between [npc2.namePos] [npc2.feet+].");
+									genericOrgasmSB.append("[npc2.name]"+(sleeping?"还在睡":"一动不动")+", [npc.name]保持[npc.cock+]夹在[npc2.namePos][npc2.feet+]间的姿势。");
 								} else {
-									genericOrgasmSB.append(" Remaining "+(sleeping?"asleep":"completely motionless")+", [npc.name] [npc.verb(keep)] [npc.her] [npc.cock+] pressed against [npc2.namePos] [npc2.foot+].");
+									genericOrgasmSB.append("[npc2.name]"+(sleeping?"还在睡":"一动不动")+", [npc.name]保持[npc.cock+]压在[npc2.namePos][npc2.feet+]间的姿势。");
 								}
 							} else {
 								if(Main.sex.isDoubleFootJob(characterTargeted)) {
-									genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] thrusting [npc.her] [npc.cock+] between [npc2.namePos] [npc2.feet+], letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+									genericOrgasmSB.append("[npc.Name][npc.cock+]继续在[npc2.namePos][npc2.feet+]间操弄，[npc.she]发出[npc.a_moan+]，感受着肉棒的颤动。");
 								} else {
-									genericOrgasmSB.append(" [npc.Name] [npc.verb(continue)] rubbing [npc.her] [npc.cock+] against [npc2.namePos] [npc2.foot+], letting out [npc.a_moan+] as [npc.she] [npc.verb(feel)] it start to twitch.");
+									genericOrgasmSB.append("[npc.Name][npc.cock+]在[npc2.namePos][npc2.foot+]上磨蹭，[npc.she]感受到它的抽搐，发出[npc.a_moan+]。");
 								}
 							}
 							break;
@@ -1406,7 +1406,7 @@ public class GenericOrgasms {
 			}
 		}
 		
-		genericOrgasmSB.append(" As [npc.her] [npc.balls+] tense up, ");
+		genericOrgasmSB.append("[npc.her][npc.balls+]骤然缩紧，");
 		genericOrgasmSB.append(getCumQuantityDescription(characterOrgasming));
 		if(characterOrgasming.getPenisRawOrgasmCumQuantity()>0) {
 			genericOrgasmSB.append(cumTargetDescription(sexAction, characterOrgasming, characterTargeted, cumTarget, condomFailure, isSecondaryCreampieTarget));
@@ -1435,61 +1435,61 @@ public class GenericOrgasms {
 					&& !immobile) {
 				if(immobileTarget) {
 					if(sleepingTarget) {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.verb(remain)] asleep as [npc.namePos] [npc.cum+] shoots deep inside [npc2.her] womb");
+						genericOrgasmSB.append("<br/>[npc.namePos][npc.cum+]射入了[npc2.namePos]子宫深处，[npc2.Name]仍然保持着沉睡。");
 					} else {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.verb(remain)] frozen in place as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cum+] shooting deep inside [npc2.her] womb");
+						genericOrgasmSB.append("<br/>[npc2.name]纹丝不动，[npc2.she]清晰地感受到[npc.namePos][npc.cum+]灌进了子宫");
 					}
 				} else {
 					if(Main.sex.getSexPace(characterTargeted)==SexPace.SUB_RESISTING || characterTargeted.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()) {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.verb(sob)] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cum+] shooting deep inside [npc2.her] womb");
+						genericOrgasmSB.append("<br/>[npc2.Name]眼神涣散地啜泣，[npc2.she]清晰地感受到[npc.namePos][npc.cum+]灌进了子宫");
 					} else {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.moansVerb+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cum+] shooting deep inside [npc2.her] womb");
+						genericOrgasmSB.append("<br/>[npc2.Name][npc2.moansVerb+]，[npc2.she]清晰地感受到[npc.namePos][npc.cum+]灌进了子宫");
 					}
 				}
 				if(!characterOrgasming.isMute() && characterOrgasming.getFetishDesire(Fetish.FETISH_IMPREGNATION).isPositive()) {
 					if(immobileTarget) {
-						genericOrgasmSB.append(", and [npc2.verb(stay)] silent as [npc.name] ");
+						genericOrgasmSB.append("， 沉默着就像[npc.name]一样 ");
 					} else {
 						if(Main.sex.getSexPace(characterTargeted)==SexPace.SUB_RESISTING || characterTargeted.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()) {
-							genericOrgasmSB.append(", and [npc2.verb(let)] out a distressed cry as [npc.name] ");
+							genericOrgasmSB.append("，发出哀羞懊恼的叫喊，与此同时[npc.Name]");
 						} else {
-							genericOrgasmSB.append(", and [npc2.verb(let)] out a horny whine as [npc.name] ");
+							genericOrgasmSB.append("，发出低俗淫荡的呜咽，与此同时[npc.Name]");
 						}
 					}
 					if(Main.sex.getSexPace(characterOrgasming)==SexPace.DOM_ROUGH
 							&& characterOrgasming.hasFetish(Fetish.FETISH_SADIST)
 							&& !Main.sex.isDom(characterTargeted)) {
 						genericOrgasmSB.append(UtilText.returnStringAtRandom(
-								"[npc.moansVerb], [npc.speechNoEffects(Get pregnant, you [npc2.bitch+]!)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(You're going to get pregnant from this, [npc2.bitch]...)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(You'll be carrying my kids soon enough, [npc2.bitch]...)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(I'll have knocked you up from this, [npc2.bitch]...)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(I'll have got you pregnant from this, [npc2.bitch]...)]"));
+								"[npc.moansVerb]着说，[npc.speechNoEffects(准备怀孕吧，你这个[npc2.bitch+]！)]",
+								"调戏道，[npc.speechNoEffects(准备好怀上我的崽了吗，[npc2.bitch]……)]",
+								"调戏道，[npc.speechNoEffects(很快你就会怀上我的孩子了，[npc2.bitch]……)]",
+								"挑逗道，[npc.speechNoEffects(我要干你干到怀孕，[npc2.bitch]……)]",
+								"挑逗道，[npc.speechNoEffects(我要把你干到怀孕，[npc2.bitch]……)]"));
 						
 					} else {
 						genericOrgasmSB.append(UtilText.returnStringAtRandom(
-								"[npc.moansVerb], [npc.speechNoEffects(Get pregnant!)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(You're going to get pregnant from this...)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(You'll be carrying my kids soon enough...)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(I'll have knocked you up from this...)]",
-								"[npc.verb(tease)], [npc.speechNoEffects(I'll have got you pregnant from this...)]"));
+								"[npc.moansVerb]着说，[npc.speechNoEffects(怀孕吧！)]",
+								"挑逗道，[npc.speechNoEffects(你这样子会怀孕的哦……)]",
+								"挑逗道，[npc.speechNoEffects(你很快就会怀上我的种啦……)]",
+								"挑逗道，[npc.speechNoEffects(我这样会把你操怀孕呢……)]",
+								"挑逗道，[npc.speechNoEffects(你就要怀上我的宝宝了哦……)]"));
 					}
 				} else {
-					genericOrgasmSB.append(".");
+					genericOrgasmSB.append("。");
 				}
 				
 			} else {
 				if(immobileTarget) {
 					if(sleepingTarget) {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.verb(remain)] asleep as [npc.namePos] [npc.cum+] shoots deep inside of [npc2.herHim].");
+						genericOrgasmSB.append("<br/>[npc.namePos][npc.cum+]射入了[npc2.namePos]体内，[npc2.name]仍然保持着沉睡。");
 					} else {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.verb(remain)] frozen in place as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cum+] shooting deep inside of [npc2.herHim].");
+						genericOrgasmSB.append("<br/>[npc2.name]纹丝不动，[npc2.she]清晰地感受到[npc.namePos][npc.cum+]深深灌注了[npc2.herHim]。");
 					}
 				} else {
 					if(Main.sex.getSexPace(characterTargeted)==SexPace.SUB_RESISTING) {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.verb(sob)] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cum+] shooting deep inside of [npc2.herHim].");
+						genericOrgasmSB.append("<br/>[npc2.Name]眼神涣散地啜泣，[npc2.she]清晰地感受到[npc.namePos][npc.cum+]深深灌注了[npc2.herHim]。");
 					} else {
-						genericOrgasmSB.append("<br/>[npc2.Name] [npc2.moansVerb+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cum+] shooting deep inside of [npc2.herHim].");
+						genericOrgasmSB.append("<br/>[npc2.Name][npc2.moansVerb+]，[npc2.she]清晰地感受到[npc.namePos][npc.cum+]深深灌注了[npc2.herHim]。");
 					}
 				}
 			}
@@ -1501,13 +1501,13 @@ public class GenericOrgasms {
 				&& contactingArea.isOrifice()
 				&& ((SexAreaOrifice)contactingArea).isInternalOrifice()) {
 			genericOrgasmSB.append("<br/>"
-					+ "Even after [npc.namePos] [npc.balls+] have pumped their entire load into [npc2.name], [npc.her] knot remains swollen, locking"
+					+ "哪怕[npc.namePos][npc.balls+]早已把储藏尽数射出，灌进[npc2.name]体内。结仍然膨大肿胀着，"
 					+ "#IF(npc2.isPlayer() || npc.isPlayer())"
-						+ " the two of you together."
+						+ "牢牢锁住，你们合二为一。"
 					+ "#ELSE"
-						+ " [npc.herHim] and [npc.her] partner together."
+						+ "让[npc.herHim]牢牢锁住伴侣，融合在一起。"
 					+ "#ENDIF"
-					+ " It takes a few minutes for it to start to deflate, and with a wet pop, [npc.sheIs] finally able to pull [npc.her] [npc.cock+] free.");
+					+ "几分钟后，它才开始小下来。“啵”的一声，[npc.her]终于拔出了[npc.cock+]。");
 		}
 		
 		if(characterTargeted!=null) {
@@ -1518,36 +1518,36 @@ public class GenericOrgasms {
 	}
 	
 	private static String getCumQuantityDescription(GameCharacter characterOrgasming) {
-		String targetName = "your";
+		String targetName = "你";
 		if(!characterOrgasming.isPlayer()) {
 			targetName = "[npc.namePos]";
 		}
-		String cumQuantityDescription = targetName+" [npc.cum+] squirts";
+		String cumQuantityDescription = targetName+"[npc.cum+]喷射而出";
 		
 		switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 			case ZERO_NONE:
-				cumQuantityDescription = "not even a single drop of [npc.cum] is produced...";
+				cumQuantityDescription = "哪怕一滴[npc.cum]都没有……";
 				break;
 			case ONE_TRICKLE:
-				cumQuantityDescription = "a small trickle of [npc.cum+] squirts";
+				cumQuantityDescription = "勉强射出几滴[npc.cum+]";
 				break;
 			case TWO_SMALL_AMOUNT:
-				cumQuantityDescription = "a small amount of [npc.cum+] squirts";
+				cumQuantityDescription = "喷出一小股[npc.cum+]";
 				break;
 			case THREE_AVERAGE:
-				cumQuantityDescription = targetName+" [npc.cum+] squirts out";
+				cumQuantityDescription = targetName+"[npc.cum+]喷射而出";
 				break;
 			case FOUR_LARGE:
-				cumQuantityDescription = targetName+" [npc.cum+] shoots out";
+				cumQuantityDescription = targetName+"射出[npc.cum+]";
 				break;
 			case FIVE_HUGE:
-				cumQuantityDescription = targetName+" [npc.cum+] shoots out";
+				cumQuantityDescription = targetName+"射出[npc.cum+]";
 				break;
 			case SIX_EXTREME:
-				cumQuantityDescription = targetName+" [npc.cum+] spurts out";
+				cumQuantityDescription = targetName+"迸出[npc.cum+]";
 				break;
 			case SEVEN_MONSTROUS:
-				cumQuantityDescription = targetName+" [npc.cum+] spurts out";
+				cumQuantityDescription = targetName+"迸出[npc.cum+]";
 				break;
 		}
 		return UtilText.parse(characterOrgasming, cumQuantityDescription);
@@ -1558,41 +1558,41 @@ public class GenericOrgasms {
 		
 		if(!isSecondaryCreampieTarget) {
 			if(characterOrgasming.isWearingCondom()) {
-				cumTargetSB.append(UtilText.parse(characterOrgasming, " into the condom that [npc.sheIs] wearing."));
+				cumTargetSB.append(UtilText.parse(characterOrgasming, "，落在了避孕套里。"));
 				
 				switch(condomFailure) {
 					case CUM_OVERLOAD:
 						cumTargetSB.append(UtilText.parse(characterOrgasming,
-								" [npc.Her] orgasm proves to be too much for the rubbery sheath to endure, and after swelling up and filling with [npc.her] huge amount of [npc.cum+], it suddenly bursts, expelling [npc.her] cum"));
+								"事实证明，避孕套无法承受[npc.her]高潮的威力，在膨胀并充满[npc.her]大量[npc.cum+]后，它突然爆开，[npc.her]的精液漏了出来"));
 						break;
 					case MINERAL_OIL_CUM:
 						cumTargetSB.append(UtilText.parse(characterOrgasming, target,
-								" Although ordinarily strong enough to contain [npc.her] cum, the rubbery sheath's durability has been severely degraded by [npc2.namePos] mineral-oil-infused cum, and"
-										+ " after swelling up and filling with [npc.namePos] [npc.cum+], it suddenly bursts, expelling [npc.her] seed"));
+								"尽管这个避孕套本身的强度足以承受[npc.her]射出的精液，但[npc2.namePos]那矿物油质地的精液可以溶解橡胶材质，避孕套的耐久大打折扣"
+										+ "在膨胀并充满[npc.namePos][npc.cum+]后，它突然爆开，[npc.her]的精液漏了出来"));
 						break;
 					case MINERAL_OIL_GIRLCUM:
 						cumTargetSB.append(UtilText.parse(characterOrgasming, target,
-								" Although ordinarily strong enough to contain [npc.her] cum, the rubbery sheath's durability has been severely degraded by [npc2.namePos] mineral-oil-infused girlcum, and"
-										+ " after swelling up and filling with [npc.namePos] [npc.cum+], it suddenly bursts, expelling [npc.her] seed"));
+								"尽管这个避孕套本身的强度足以承受[npc.her]射出的精液，但[npc2.namePos]那矿物油质地的爱液可以溶解橡胶材质，避孕套的耐久大打折扣"
+										+ "在膨胀并充满[npc.namePos][npc.cum+]后，它突然爆开，[npc.her]的精液漏了出来"));
 						break;
 					case MINERAL_OIL_MILK:
 						cumTargetSB.append(UtilText.parse(characterOrgasming, target,
-								" Although ordinarily strong enough to contain [npc.her] cum, the rubbery sheath's durability has been severely degraded by [npc2.namePos] mineral-oil-infused milk, and"
-										+ " after swelling up and filling with [npc.namePos] [npc.cum+], it suddenly bursts, expelling [npc.her] seed"));
+								"尽管这个避孕套本身的强度足以承受[npc.her]射出的精液，但[npc2.namePos]那矿物油质地的乳汁可以溶解橡胶材质，避孕套的耐久大打折扣"
+										+ "在膨胀并充满[npc.namePos][npc.cum+]后，它突然爆开，[npc.her]的精液漏了出来"));
 						break;
 					case MINERAL_OIL_SALIVA:
 						cumTargetSB.append(UtilText.parse(characterOrgasming, target,
-								" Although ordinarily strong enough to contain [npc.her] cum, the rubbery sheath's durability has been severely degraded by [npc2.namePos] mineral-oil-infused saliva, and"
-										+ " after swelling up and filling with [npc.namePos] [npc.cum+], it suddenly bursts, expelling [npc.her] seed"));
+								"尽管这个避孕套本身的强度足以承受[npc.her]射出的精液，但[npc2.namePos]那矿物油质地的唾液可以溶解橡胶材质，避孕套的耐久大打折扣"
+										+ "在膨胀并充满[npc.namePos][npc.cum+]后，它突然爆开，[npc.her]的精液漏了出来"));
 						break;
 					case MINERAL_OIL_SELF_CUM:
 						cumTargetSB.append(UtilText.parse(characterOrgasming, target,
-								" Although ordinarily strong enough to contain the quantity of cum that [npc.name] produces, the rubbery sheath's durability is instantaneously degraded by [npc.her] mineral-oil-infused cum,"
-										+ " and it suddenly bursts, expelling [npc.her] seed"));
+								"尽管这个避孕套本身的强度足以承受[npc.Name]射出的精液，但[npc.her]那矿物油质地的精液片刻间溶解了橡胶材质的避孕套，"
+										+ "它突然爆开，里面容纳的[npc.her]的精液漏了出来"));
 						break;
 					case SABOTAGED:
 						cumTargetSB.append(UtilText.parse(characterOrgasming,
-								" Having been surreptitiously sabotaged, the rubbery sheath's durability is severely compromised, and as it swells up and fills with [npc.namePos] [npc.cum+], it suddenly bursts, expelling [npc.her] seed"));
+								" 这个避孕套已经被暗中做了手脚，在膨胀并充满[npc.namePos][npc.cum+]后，它突然爆开，[npc.her]的精液漏了出来"));
 						break;
 					case NONE:
 					case EGG_LAYING:
@@ -1604,9 +1604,9 @@ public class GenericOrgasms {
 		
 		if(!characterOrgasming.isCoverableAreaExposed(CoverableArea.PENIS)) {
 			if(characterOrgasming.isPlayer()) {
-				return "  into your [npc.lowClothing(PENIS)].";
+				return "进你的[npc.lowClothing(PENIS)]。";
 			} else {
-				return UtilText.parse(characterOrgasming, "  into [npc.her] [npc.lowClothing(PENIS)].");
+				return UtilText.parse(characterOrgasming, "进[npc.her]的[npc.lowClothing(PENIS)]。");
 			}
 		}
 
@@ -1641,24 +1641,24 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] [npc2.armpit+].");
+					sb.append("流过[npc2.namePos][npc2.armpit+]。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.namePos] arm,");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.namePos]的手臂上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.namePos] arm,");
+							sb.append("[npc.Name]沉默不语，任凭[npc.cum+]飞溅到[npc2.namePos]手臂上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.namePos] arm,");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.namePos]的手臂上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] [npc2.armSkin+].");
+							sb.append("[npc2.name]依旧熟睡着，任由液体顺着[npc2.armSkin+]流下。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.armSkin+].");
+							sb.append("[npc2.Name]毫无反应，任精液顺着[npc2.armSkin+]流下手臂，");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.armSkin+].");
+						sb.append("[npc2.she]情不自禁发出[npc2.a_moan]，任精液顺着[npc2.armSkin+]流下手臂，");
 					}
 					return UtilText.parse(characterOrgasming, target, sb.toString());
 				}
@@ -1669,31 +1669,31 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] [npc2.ass+].");
+					sb.append("流过[npc2.namePos][npc2.ass+]。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.namePos] naked backside,");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.namePos]裸露的臀部上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.namePos] naked backside,");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.namePos]裸露的臀部上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.namePos] naked backside,");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.namePos]裸露的臀部上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it");
+							sb.append("[npc2.she]仍然沉睡");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it");
+							sb.append("[npc2.she]毫无反应");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it");
+						sb.append("[npc2.she]情难自抑发出[npc2.a_moan]，感受着液体");
 					}
 					if(target.getGenitalArrangement()==GenitalArrangement.CLOACA) {
-						sb.append(" run down over [npc2.her] [npc2.assSkin+].");
+						sb.append("从[npc2.her]的[npc2.assSkin+]中缓缓流出。");
 					} else if(target.getGenitalArrangement()==GenitalArrangement.CLOACA_BEHIND) {
-						sb.append(" run down over [npc2.her] [npc2.assSkin+] and rear-facing cloaca.");
+						sb.append("从[npc2.her]的[npc2.assSkin+]和泄殖腔中流出。");
 					} else {
-						sb.append(" run down over [npc2.her] [npc2.asshole+].");
+						sb.append("从[npc2.her][npc2.asshole+]中缓缓渗出。");
 					}
 					return UtilText.parse(characterOrgasming, target, sb.toString());
 				}
@@ -1704,24 +1704,24 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] back.");
+					sb.append("流到了[npc2.namePos]背上。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] [npc2.skin+].");
+							sb.append("[npc2.she]仍然沉睡，任精液在[npc2.skin+]上流淌。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.skin+].");
+							sb.append("[npc2.she]毫无反应，任精液在[npc2.skin+]上流下");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.skin+].");
+						sb.append("随着精液从[npc2.skin+]上流下，[npc2.she]难以自禁发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
@@ -1733,24 +1733,24 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] [npc2.breasts].");
+					sb.append("弄得[npc2.namePos]的[npc2.breasts]上到处都是。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] [npc2.breastsSkin+].");
+							sb.append("[npc2.she]仍然沉睡，任精液在[npc2.breastsSkin+]上流淌。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.breastsSkin+].");
+							sb.append("[npc2.she]毫无反应，任精液在[npc2.breastsSkin+]上流淌。");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.breastsSkin+].");
+						sb.append("随着精液在[npc2.breastsSkin+]上流淌，[npc2.she]情难自禁发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
@@ -1762,30 +1762,30 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] [npc2.face+].");
+					sb.append("流到了[npc2.namePos][npc2.face+]上。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] [npc2.faceSkin+].");
+							sb.append("[npc2.she]仍然沉睡，任精液在[npc2.faceSkin+]上流淌。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.faceSkin+].");
+							sb.append("[npc2.she]毫无反应，任精液在[npc2.faceSkin+]上流淌。");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.faceSkin+].");
+						sb.append("随着精液在脸上流淌，[npc2.she]情不自禁发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
 				}
 			case FLOOR:
-				return " all over the floor.";
+				return "遍地。";
 			case STOMACH:
 				target = Main.sex.getTargetedPartner(characterOrgasming);
 				if (!targetAreaClothingCummedOn.isEmpty()) {
@@ -1793,24 +1793,24 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] stomach.");
+					sb.append("流到[npc2.namePos]肚子上。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] [npc2.skin+].");
+							sb.append("[npc2.she]仍然沉睡，任精液在[npc2.skin+]上流淌。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.skin+].");
+							sb.append("[npc2.she]毫无反应，任精液在[npc2.skin+]上流下");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.skin+].");
+						sb.append("随着精液从[npc2.skin+]上流下，[npc2.she]难以自禁发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
@@ -1833,52 +1833,52 @@ public class GenericOrgasms {
 					return getClothingCummedOnText(characterOrgasming, target, areasCummedOn, targetAreaClothingCummedOn);
 					
 				} else {
-					String groinText = "groin.";
+					String groinText = "腹股沟。";
 					if(target.hasPenisIgnoreDildo()) {
 						if(target.hasVagina()) {
 							if(target.getGenitalArrangement()==GenitalArrangement.CLOACA || (isFrotting && target.getGenitalArrangement()==GenitalArrangement.CLOACA_BEHIND)) {
-								groinText = " [npc2.cock], [npc2.pussy], and [npc2.asshole].";
+								groinText = "[npc2.cock]，[npc2.pussy]和[npc2.asshole]。";
 							} else if(target.getGenitalArrangement()==GenitalArrangement.NORMAL) {
-								groinText = " [npc2.cock] and [npc2.pussy].";
+								groinText = "[npc2.cock]和[npc2.pussy]。";
 							}
 						} else {
 							if(target.getGenitalArrangement()==GenitalArrangement.CLOACA) {
-								groinText = " [npc2.cock] and [npc2.asshole].";
+								groinText = "[npc2.cock]和[npc2.asshole]。";
 							} else if(target.getGenitalArrangement()==GenitalArrangement.NORMAL) {
-								groinText = " [npc2.cock+].";
+								groinText = "[npc2.cock+]。";
 							}
 						}
 						
 					} else if(target.hasVagina()) {
 						if(target.getGenitalArrangement()==GenitalArrangement.CLOACA) {
-							groinText = " [npc2.pussy] and [npc2.asshole].";
+							groinText = "[npc2.pussy]和[npc2.asshole]。";
 						} else if(target.getGenitalArrangement()==GenitalArrangement.NORMAL) {
-							groinText = " [npc2.pussy+].";
+							groinText = "[npc2.pussy+]。";
 						}
 						
 					} else {
-						groinText = " genderless mound.";
+						groinText = " 无性别的下体。";
 					}
 
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] "+groinText);
+					sb.append("溅满了[npc2.namePos]的"+groinText);
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] groin.");
+							sb.append("[npc2.she]仍然沉睡，任精液在腹股沟上流淌。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] groin.");
+							sb.append("[npc2.she]毫无反应，任精液在腹股沟上流淌。");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] groin.");
+						sb.append("随着精液在腹股沟上流淌，[npc2.she]难以自制发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
@@ -1891,7 +1891,7 @@ public class GenericOrgasms {
 					
 				} else {
 					List<String> areas = new ArrayList<>();
-					areas.add("head");
+					areas.add("头");
 					if(target.hasHair()) {
 						areas.add("[npc2.hair(true)]");
 					}
@@ -1900,24 +1900,24 @@ public class GenericOrgasms {
 					}
 
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] "+Util.stringsToStringList(areas, false)+".");
+					sb.append("溅满了[npc2.namePos]的"+Util.stringsToStringList(areas, false)+"。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down onto [npc2.her] face.");
+							sb.append("[npc2.she]仍然沉睡，任精液流过脸颊。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down onto [npc2.her] face.");
+							sb.append("[npc2.she]毫无反应，任精液在脸上流淌。");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down onto [npc2.her] face.");
+						sb.append("随着精液从脸上流下，[npc2.she]情难自禁发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
@@ -1929,24 +1929,24 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] [npc2.legs].");
+					sb.append("弄得[npc2.namePos][npc2.legs]上到处都是。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] [npc2.legsSkin+].");
+							sb.append("[npc2.she]仍然沉睡，任精液在[npc2.legsSkin+]上流淌。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.legsSkin+].");
+							sb.append("[npc2.she]毫无反应，任精液在[npc2.legsSkin+]上流淌。");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.legsSkin+].");
+						sb.append("随着精液在[npc2.legsSkin+]上流淌，[npc2.she]情难自禁发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
@@ -1958,59 +1958,59 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc2.namePos] [npc2.feet+].");
+					sb.append("流得[npc2.namePos][npc2.feet+]上到处都是。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name],");
+						sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，");
 					}
 					if(isCharacterTotallyImmobilised(target)) {
 						if(target.isAsleep()) {
-							sb.append(" who [npc2.verb(remain)] deeply asleep as it runs down over [npc2.her] [npc2.toes+].");
+							sb.append("[npc2.she]仍然沉睡，任精液在[npc2.toes+]上流淌。");
 						} else {
-							sb.append(" who [npc2.do]n't react in any way whatsoever as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.toes+].");
+							sb.append("[npc2.she]毫无反应，任精液在[npc2.toes+]上流淌。");
 						}
 					} else {
-						sb.append(" who can't help but let out [npc2.a_moan] as [npc2.she] [npc2.verb(feel)] it run down over [npc2.her] [npc2.toes+].");
+						sb.append("随着精液从[npc2.toes+]上流下，[npc2.she]情难自禁发出[npc2.a_moan]。");
 					}
 
 					return UtilText.parse(characterOrgasming, target, sb.toString());
 				}
 			case WALL:
-				return " all up the [pc.wall].";
+				return "全在[pc.wall]上。";
 				
 			case SELF_GROIN:
 				if (!targetAreaClothingCummedOn.isEmpty()) {
 					return getClothingCummedOnText(characterOrgasming, areasCummedOn, targetAreaClothingCummedOn);
 						
 				} else {
-					String groinText = "groin.";
+					String groinText = "腹股沟。";
 					if(characterOrgasming.hasPenisIgnoreDildo()) {
 						if(characterOrgasming.hasVagina()) {
-							groinText = " [npc.cock] and [npc.pussy].";
+							groinText = "[npc.cock]和[npc.pussy]。";
 						} else {
-							groinText = " [npc.cock+].";
+							groinText = "[npc.cock+]。";
 						}
 					} else if(characterOrgasming.hasVagina()) {
-						groinText = " [npc.pussy+].";
+						groinText = "[npc.pussy+]。";
 					} else {
-						groinText = " genderless mound.";
+						groinText = " 无性别的下体。";
 					}
 
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc.her] "+groinText);
+					sb.append("流满了[npc.her]的"+groinText);
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't show any signs of waking as it begins to run down over [npc.her] [npc.skin].");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.skin]时，没有任何醒来的迹象。");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't react at all as it begins to run down over [npc.her] [npc.skin].");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.skin]时，没有任何反应。");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc.herHim], and [npc.she] can't help but let out [npc.a_moan] as [npc.she] [npc.verb(feel)] it running down over [npc.her] [npc.skin].");
+						sb.append("当[npc.Name][npc.cum+]飞溅到[npc.herHim]身上时，[npc.her]咧嘴一笑，当[npc.she]感觉到[npc.her][npc.skin]的流动时，[npc.she]情不自禁地发出[npc.a_moan]。");
 					}
 					return UtilText.parse(characterOrgasming, sb.toString());
 				}
@@ -2021,15 +2021,15 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc.her] stomach.");
+					sb.append("流到[npc.namePos]肚子上。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't show any signs of waking as it begins to run down over [npc.her] [npc.skin].");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.skin]时，没有任何醒来的迹象。");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't react at all as it begins to run down over [npc.her] [npc.skin].");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.skin]时，没有任何反应。");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc.herHim], and [npc.she] can't help but let out [npc.a_moan] as [npc.she] [npc.verb(feel)] it running down over [npc.her] [npc.skin].");
+						sb.append("当[npc.Name][npc.cum+]飞溅到[npc.herHim]身上时，[npc.her]咧嘴一笑，当[npc.she]感觉到[npc.her][npc.skin]的流动时，[npc.she]情不自禁地发出[npc.a_moan]。");
 					}
 					return UtilText.parse(characterOrgasming, sb.toString());
 				}
@@ -2040,15 +2040,15 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc.her] [npc.legs].");
+					sb.append("流到[npc.namePos][npc.legs]上。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't show any signs of waking as it begins to run down over [npc.her] [npc.skin].");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.skin]时，没有任何醒来的迹象。");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't react at all as it begins to run down over [npc.her] [npc.skin].");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.skin]时，没有任何反应。");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc.herHim], and [npc.she] can't help but let out [npc.a_moan] as [npc.she] [npc.verb(feel)] it running down over [npc.her] [npc.skin].");
+						sb.append("当[npc.Name][npc.cum+]飞溅到[npc.herHim]身上时，[npc.her]咧嘴一笑，当[npc.she]感觉到[npc.her][npc.skin]的流动时，[npc.she]情不自禁地发出[npc.a_moan]。");
 					}
 					return UtilText.parse(characterOrgasming, sb.toString());
 				}
@@ -2059,15 +2059,15 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc.her] [npc.feet+].");
+					sb.append("流满了[npc.her][npc.feet+]。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't show any signs of waking as it begins to run down over [npc.her] [npc.toes+].");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.toes+]时，没有任何醒来的迹象。");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't react at all as it begins to run down over [npc.her] [npc.toes+].");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.toes+]时，没有任何反应。");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc.herHim], and [npc.she] can't help but let out [npc.a_moan] as [npc.she] [npc.verb(feel)] it running down over [npc.her] [npc.toes+].");
+						sb.append("当[npc.Name][npc.cum+]飞溅到[npc.herHim]身上时，[npc.her]咧嘴一笑，当[npc.she]感觉到[npc.her][npc.toes+]的流动时，[npc.she]情不自禁地发出[npc.a_moan]。");
 					}
 					return UtilText.parse(characterOrgasming, sb.toString());
 				}
@@ -2078,15 +2078,15 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc.her] [npc.breasts].");
+					sb.append("溅满了[npc.her]的[npc.breasts]。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't show any signs of waking as it begins to run down over [npc.her] [npc.breastsSkin+].");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.breastsSkin+]时，没有任何醒来的迹象。");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't react at all as it begins to run down over [npc.her] [npc.breastsSkin+].");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.breastsSkin+]时，没有任何反应。");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc.herHim], and [npc.she] can't help but let out [npc.a_moan] as [npc.she] [npc.verb(feel)] it running down over [npc.her] [npc.breastsSkin+].");
+						sb.append("当[npc.Name][npc.cum+]飞溅到[npc.herHim]身上时，[npc.her]咧嘴一笑，当[npc.she]感觉到[npc.her][npc.breastsSkin+]的流动时，[npc.she]情不自禁地发出[npc.a_moan]。");
 					}
 					return UtilText.parse(characterOrgasming, sb.toString());
 				}
@@ -2096,15 +2096,15 @@ public class GenericOrgasms {
 					
 				} else {
 					StringBuilder sb = new StringBuilder();
-					sb.append(" all over [npc.her] [npc.face+].");
+					sb.append("流过[npc.namePos][npc.face+]。");
 					if(immobile) {
 						if(sleeping) {
-							sb.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't show any signs of waking as it begins to run down over [npc.her] [npc.faceSkin+].");
+							sb.append("[npc.Name]保持熟睡，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.faceSkin+]时，没有任何醒来的迹象。");
 						} else {
-							sb.append(" [npc.Name] [npc.verb(remain)] silent and unmoving as [npc.her] [npc.cum+] splatters onto [npc.herHim], and doesn't react at all as it begins to run down over [npc.her] [npc.faceSkin+].");
+							sb.append("[npc.Name]保持沉默，[npc.cum+]飞溅到了[npc2.name]身上，并且当它开始流过[npc.her][npc.faceSkin+]时，没有任何反应。");
 						}
 					} else {
-						sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc.herHim], and [npc.she] can't help but let out [npc.a_moan] as [npc.she] [npc.verb(feel)] it running down over [npc.her] [npc.faceSkin+].");
+						sb.append("当[npc.Name][npc.cum+]飞溅到[npc.herHim]身上时，[npc.her]咧嘴一笑，当[npc.she]感觉到[npc.her][npc.faceSkin+]的流动时，[npc.she]情不自禁地发出[npc.a_moan]。");
 					}
 					return UtilText.parse(characterOrgasming, sb.toString());
 				}
@@ -2114,15 +2114,15 @@ public class GenericOrgasms {
 					return getClothingCummedOnText(characterOrgasming, areasCummedOn, targetAreaClothingCummedOn);
 				} else {
 					return UtilText.parse(characterOrgasming,
-							" all over [npc.namePos] [npc.hands].");
+							"弄得[npc.namePos][npc.hands]上到处都是。");
 				}
 				
 			case LILAYA_PANTIES:
 				LilayasRoom.lilayasPanties.setDirty(null, true);
 				return UtilText.parse(characterOrgasming,
-						" directly into Lilaya's panties."
-						+ " You can't help but let out [pc.a_moan+] as you watch your [pc.cum+] pool in the soft fabric,"
-							+ " and you give your [pc.cock+] a few extra strokes as you imagine your demonic [lilaya.relation(pc)] blushing as she slides the cum-saturated underwear up over her hot pussy.");
+						"直射莉莱雅的内裤。"
+						+ "你看着自己[pc.cum+]射在柔软的布料上，忍不住发出[pc.a_moan+]，"
+							+ "你想像着你的恶魔[lilaya.relation(pc)]将这件沾满精液的内衣套在她火热的阴户上时脸红的样子，又套弄了几下你[pc.cock+]。");
 		}
 		
 		// Continued description for cumming inside:
@@ -2137,12 +2137,12 @@ public class GenericOrgasms {
 							return getClothingCummedOnText(characterOrgasming, target, areasCummedOn, targetAreaClothingCummedOn);
 							
 						} else {
-							cumTargetSB.append(" all over [npc2.namePos] [npc2.armpit+] and [npc2.arm+(true)].");
+							cumTargetSB.append("弄得[npc2.namePos][npc2.armpit+]和[npc2.arm+(true)]上到处都是。");
 		
 							switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 								case SIX_EXTREME: case SEVEN_MONSTROUS:
-									cumTargetSB.append(" After a few seconds, [npc2.name] [npc2.verb(realise)] that [npc.nameIs] not even close to stopping, and after just a moment more,"
-											+ " [npc2.her] [npc2.arm+(true)] are absolutely drenched in [npc.cum+].");
+									cumTargetSB.append("几秒后，[npc2.name]就意识到[npc.nameIs]远远没打算停下来，只过了一小会，"
+											+ "[npc2.her][npc2.arm+(true)]完全浸在[npc.cum+]中。");
 									break;
 								default:
 									break;
@@ -2151,22 +2151,22 @@ public class GenericOrgasms {
 						break;
 						
 					case ANUS:
-						cumTargetSB.append(" deep into [npc2.namePos] [npc2.asshole+].");
+						cumTargetSB.append("深深灌入[npc2.namePos][npc2.asshole+]。");
 						switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 							case SIX_EXTREME: case SEVEN_MONSTROUS:
-								cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping,");
+								cumTargetSB.append("[npc.nameIs]只休息了一下，就继续动了起来，");
 								if(isCharacterTotallyImmobilised(target)) {
 									if(target.isAsleep()) {
-										cumTargetSB.append(" and even as [npc.her] [npc.cum+] backs up and starts drooling out of [npc2.namePos] [npc2.asshole], [npc2.name] [npc2.verb(show)] no sign of waking.");
+										cumTargetSB.append("在[npc2.namePos]的[npc2.asshole]中把[npc.cum+]尽数射出，没有弄醒[npc2.name]。");
 									} else {
-										cumTargetSB.append(" and even as [npc.her] [npc.cum+] backs up and starts drooling out of [npc2.namePos] [npc2.asshole], [npc2.name] [npc2.verb(hold)] still and [npc2.verb(remain)] totally silent.");
+										cumTargetSB.append("在[npc2.namePos]的[npc2.asshole]中把[npc.cum+]尽数射出，而[npc2.name]对此毫无反应。");
 									}
 								} else {
-									cumTargetSB.append(" and as [npc.her] [npc.cum+] backs up and starts drooling out of [npc2.namePos] [npc2.asshole], [npc2.she] [npc2.verb(let)] out [npc2.a_moan+].");
+									cumTargetSB.append("在[npc2.namePos]的[npc2.asshole]中把[npc.cum+]尽数射出，搞得[npc2.name][npc2.a_moan]不断。");
 								}
 								
 								cumTargetSB.append(((targetArea!=OrgasmCumTarget.INSIDE_SWITCH_DOUBLE || isSecondaryCreampieTarget) && !immobile
-														?" [npc.Name] [npc.verb(keep)] [npc.her] [npc.cock] hilted deep in [npc2.her] ass, [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc.her] [npc.balls] to run dry."
+														?"[npc.Name]让[npc.her]的[npc.cock]深深地插入了[npc2.her]的屁股，[npc.moaning+]着，等待[npc.her]的[npc.balls]彻底射空。"
 														:""));
 								break;
 							default:
@@ -2186,11 +2186,11 @@ public class GenericOrgasms {
 							return getClothingCummedOnText(characterOrgasming, target, areasCummedOn, targetAreaClothingCummedOn);
 							
 						} else {
-							cumTargetSB.append(" all over [npc2.namePos] back and [npc2.ass+].");
+							cumTargetSB.append("弄得[npc2.namePos]后背和[npc2.ass+]上到处都是。");
 	
 							switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 								case SIX_EXTREME: case SEVEN_MONSTROUS:
-									cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more, [npc2.namePos] [npc2.ass+] is absolutely drenched in [npc.cum+].");
+									cumTargetSB.append("[npc.nameIs]只休息了一下，就继续动了起来，在[npc2.namePos][npc2.ass+]上射出了厚厚一层[npc.cum+]。");
 									break;
 								default:
 									break;
@@ -2204,13 +2204,13 @@ public class GenericOrgasms {
 							
 						} else {
 							if(target.hasBreasts()) {
-								cumTargetSB.append(" all over [npc2.namePos] [npc2.breasts+] and face.");
+								cumTargetSB.append("弄得[npc2.namePos][npc2.breasts+]和脸上到处都是。");
 							} else {
-								cumTargetSB.append(" all over [npc2.namePos] flat chest and face.");
+								cumTargetSB.append("弄得[npc2.namePos]的平胸和脸上到处都是。");
 							}
 							switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 								case SIX_EXTREME: case SEVEN_MONSTROUS:
-									cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more, [npc2.namePos] torso is absolutely drenched in [npc.cum+].");
+									cumTargetSB.append("[npc.nameIs]只休息了一下，就继续动了起来，在[npc2.namePos]躯干上射出了厚厚一层[npc.cum+]。");
 									break;
 								default:
 									break;
@@ -2223,10 +2223,10 @@ public class GenericOrgasms {
 							return getClothingCummedOnText(characterOrgasming, target, areasCummedOn, targetAreaClothingCummedOn);
 							
 						} else {
-							cumTargetSB.append(" all over [npc2.namePos] [npc2.crotchBoobs+] and groin.");
+							cumTargetSB.append("弄得[npc2.namePos][npc2.crotchBoobs+]和腹股沟上到处都是。");
 							switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 								case SIX_EXTREME: case SEVEN_MONSTROUS:
-									cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more, [npc2.namePos] crotch and stomach are absolutely drenched in [npc.cum+].");
+									cumTargetSB.append("几秒后，很明显[npc.nameIs]远远没打算停下来，只过了一小会，[npc2.namePos]的胯和肚子都完全浸在[npc.cum+]中。");
 									break;
 								default:
 									break;
@@ -2236,153 +2236,153 @@ public class GenericOrgasms {
 						
 					case MOUTH:
 						if(target.isPlayer()) {
-							cumTargetSB.append(" deep down your throat, and you ");
+							cumTargetSB.append("深深地插进你的喉咙，你意识到");
 							if(isCharacterTotallyImmobilised(target)) {
 								if(target.isAsleep()) {
-									cumTargetSB.append("reamin deeply asleep as [npc.cum+] slides down into your stomach.");
+									cumTargetSB.append("仍然呼呼大睡，任[npc.cum+]从肚子上淌下。");
 								} else {
-									cumTargetSB.append("remain still and silent as you feel the [npc.cum+] sliding down into your stomach.");
+									cumTargetSB.append("仍然毫无反应，任[npc.cum+]从肚子上淌下。");
 								}
 							} else {
-								cumTargetSB.append("find yourself making muffled whining noises as you feel the [npc.cum+] sliding down into your stomach.");
+								cumTargetSB.append("伴随着[npc.cum+]从肚子上淌下，你压抑不住自己的情欲，发出出模糊的呜咽声。");
 							}
 							switch(characterOrgasming.getCumFlavour()) {
 								case BEER:
-									cumTargetSB.append(" The unusual taste of [npc.namePos] beer-flavoured");
+									cumTargetSB.append("[npc.namePos]的味道是不常见的啤酒风味");
 									break;
 								case CHOCOLATE:
-									cumTargetSB.append(" The sweet taste of [npc.namePos] chocolate-flavoured");
+									cumTargetSB.append("[npc.namePos]是甜蜜的巧克力风味");
 									break;
 								case CUM:
-									cumTargetSB.append(" The salty taste of");
+									cumTargetSB.append("味道咸咸的");
 									break;
 								case GIRL_CUM:
-									cumTargetSB.append(" The unusual taste of [npc.namePos] sweet");
+									cumTargetSB.append("[npc.namePos]不寻常的甜味");
 									break;
 								case HONEY:
-									cumTargetSB.append(" The sweet taste of [npc.namePos] honey-flavoured");
+									cumTargetSB.append("[npc.namePos]甜蜜的蜂蜜风味");
 									break;
 								case MILK:
-									cumTargetSB.append(" The unusual taste of [npc.namePos] milk-flavoured");
+									cumTargetSB.append("[npc.namePos]的味道是不常见的牛奶风味");
 									break;
 								case MINT:
-									cumTargetSB.append(" The taste of [npc.namePos] mint-flavoured");
+									cumTargetSB.append("[npc.namePos]薄荷风味");
 									break;
 								case PINEAPPLE:
-									cumTargetSB.append(" The sweet taste of [npc.namePos] pineapple-flavoured");
+									cumTargetSB.append("[npc.namePos]甜蜜的菠萝风味");
 									break;
 								case BUBBLEGUM:
-									cumTargetSB.append(" The fruity taste of [npc.namePos] bubblegum-flavoured");
+									cumTargetSB.append("[npc.namePos]水果风味且起泡");
 									break;
 								case STRAWBERRY:
-									cumTargetSB.append(" The sweet taste of [npc.namePos] strawberry-flavoured");
+									cumTargetSB.append("[npc.namePos]草莓风味的甜蜜感");
 									break;
 								case VANILLA:
-									cumTargetSB.append(" The taste of [npc.namePos] vanilla-flavoured");
+									cumTargetSB.append("[npc.namePos]香草风味的");
 									break;
 								case CHERRY:
-									cumTargetSB.append(" The sweet taste of [npc.namePos] cherry-flavoured");
+									cumTargetSB.append("[npc.namePos]甜蜜的樱桃风味");
 									break;
 								case COFFEE:
-									cumTargetSB.append(" The strong, bitter taste of [npc.namePos] coffee-flavoured");
+									cumTargetSB.append("[npc.namePos]浓郁微苦的咖啡风味");
 									break;
 								case TEA:
-									cumTargetSB.append(" The taste of [npc.namePos] tea-flavoured");
+									cumTargetSB.append("[npc.namePos]茶叶风味");
 									break;
 								case MAPLE:
-									cumTargetSB.append(" The sweet taste of [npc.namePos] maple-flavoured");
+									cumTargetSB.append("[npc.namePos]甜蜜的枫浆口味");
 									break;
 								case CINNAMON:
-									cumTargetSB.append(" The taste of [npc.namePos] cinnamon-flavoured");
+									cumTargetSB.append("[npc.namePos]肉桂风味");
 									break;
 								case LEMON:
-									cumTargetSB.append(" The sour taste of [npc.namePos] lemon-flavoured");
+									cumTargetSB.append("[npc.namePos]酸酸的柠檬风味");
 									break;
 								case ORANGE:
-									cumTargetSB.append(" The citrus taste of [npc.namePos] orange-flavoured");
+									cumTargetSB.append("[npc.namePos]柑橘香的甜橙风味");
 									break;
 								case GRAPE:
-									cumTargetSB.append(" The taste of [npc.namePos] grape-flavoured");
+									cumTargetSB.append("[npc.namePos]葡萄风味");
 									break;
 								case MELON:
-									cumTargetSB.append(" The taste of [npc.namePos] melon-flavoured");
+									cumTargetSB.append("[npc.namePos]蜜瓜风味");
 									break;
 								case COCONUT:
-									cumTargetSB.append(" The taste of [npc.namePos] coconut-flavoured");
+									cumTargetSB.append("[npc.namePos]可可风味");
 									break;
 								case BLUEBERRY:
-									cumTargetSB.append(" The taste of [npc.namePos] blueberry-flavoured");
+									cumTargetSB.append("[npc.namePos]蓝莓风味");
 									break;
 								case BANANA:
-									cumTargetSB.append(" The taste of [npc.namePos] banana-flavoured");
+									cumTargetSB.append("[npc.namePos]香蕉风味");
 									break;
 								case FLAVOURLESS:
-									cumTargetSB.append(" [npc.NamePos] cum is completely flavourless, and you");
+									cumTargetSB.append("[npc.namePos]的精液完全无味，你");
 									break;
 							}
 							if(characterOrgasming.getCumFlavour()!=FluidFlavour.FLAVOURLESS) {
-								cumTargetSB.append(" cum rises up to hit your [npc2.tongue], and you");
+								cumTargetSB.append("精液喷射在你的[npc2.tongue]上，你");
 							}
 							
 							if(target.hasFetish(Fetish.FETISH_CUM_ADDICT) || Main.sex.getCharactersRequestingCreampie().contains(target) || Main.sex.getCharactersRequestingKnot().contains(target)) {
-								cumTargetSB.append(" " + UtilText.returnStringAtRandom("greedily","hungrily"));
+								cumTargetSB.append(" " + UtilText.returnStringAtRandom("贪婪地","饥渴地"));
 							} else {
-								cumTargetSB.append("'re left with no other option but to");
+								cumTargetSB.append("别无选择，只能");
 							}
-							cumTargetSB.append(" gulp down as much of the");
+							cumTargetSB.append("大口大口地尽可能喝下");
 							if(!characterOrgasming.getCumModifiers().isEmpty()) {
 								switch(characterOrgasming.getCumModifiers().get(Util.random.nextInt(characterOrgasming.getCumModifiers().size()))) { //TODO specials for ALCOHOLIC & HALLUCINOGENIC
 									case ADDICTIVE:
-										cumTargetSB.append(" delicious, highly-addictive [npc.cum] as you possibly can.");
+										cumTargetSB.append("美味而让人上瘾的[npc.cum]。");
 										break;
 									case ALCOHOLIC:
 									case ALCOHOLIC_WEAK:
-										cumTargetSB.append(" alcoholic [npc.cum] as you possibly can.");
+										cumTargetSB.append("含酒精的[npc.cum]。");
 										break;
 									case BUBBLING:
-										cumTargetSB.append(" bubbling, fizzy [npc.cum] as you possibly can.");
+										cumTargetSB.append("泡沫腾涌的[npc.cum]。");
 										break;
 									case HALLUCINOGENIC:
-										cumTargetSB.append(" psychoactive [npc.cum] as you possibly can.");
+										cumTargetSB.append("致幻的[npc.cum]。");
 										break;
 									case MUSKY:
-										cumTargetSB.append(" musky [npc.cum] as you possibly can.");
+										cumTargetSB.append("雄性味道的[npc.cum]。");
 										break;
 									case SLIMY:
-										cumTargetSB.append(" slimy [npc.cum] as you possibly can.");
+										cumTargetSB.append("粘滑的[npc.cum]。");
 										break;
 									case STICKY:
-										cumTargetSB.append(" sticky [npc.cum] as you possibly can.");
+										cumTargetSB.append("粘稠的[npc.cum]。");
 										break;
 									case VISCOUS:
-										cumTargetSB.append(" thick, viscous [npc.cum] as you possibly can.");
+										cumTargetSB.append("浓厚粘稠的[npc.cum]。");
 										break;
 									case MINERAL_OIL:
-										cumTargetSB.append(" tasty [npc.cum] as you possibly can.");
+										cumTargetSB.append("美味的[npc.cum]。");
 										break;
 								}
 							} else {
-								cumTargetSB.append(" [npc.cum] as you possibly can.");
+								cumTargetSB.append("[npc.cum]。");
 							}
 							
 						} else {
-							cumTargetSB.append(" deep down [npc2.namePos] throat.");
+							cumTargetSB.append("深深灌入[npc2.namePos]的喉咙。");
 						}
 						switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 							case SIX_EXTREME: case SEVEN_MONSTROUS:
-								cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and [npc2.name]");
+								cumTargetSB.append("[npc.nameIs]只休息了一下，就继续动了起来，");
 								if(isCharacterTotallyImmobilised(target)) {
 									if(target.isAsleep()) {
-										cumTargetSB.append(" [npc2.verb(remain)] asleep");
+										cumTargetSB.append(" 而[npc2.name]还在熟睡");
 									} else {
-										cumTargetSB.append(" [npc2.verb(remain)] still and silent");
+										cumTargetSB.append(" 而[npc2.name]毫无反应");
 									}
 								} else {
-									cumTargetSB.append(" [npc2.verb(let)] out a desperate, gargled [npc2.moan]");
+									cumTargetSB.append("发出狂乱而含糊的[npc2.moan]");
 								}
-								cumTargetSB.append(" as [npc.namePos] [npc.cum+] backs up and starts drooling out of the corners of [npc2.her] mouth.");
+								cumTargetSB.append("[npc.namePos][npc.cum+]尽数射出，从[npc2.her]的嘴角处满溢滴落。");
 								if(!immobile) {
-									cumTargetSB.append(" [npc.Name] [npc.verb(keep)] [npc.her] [npc.cock] hilted deep down [npc2.her] throat, [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc.her] [npc.balls] to run dry.");
+									cumTargetSB.append("[npc.Name]让[npc.her]的[npc.cock]深深地插入了[npc2.her]的喉咙，[npc.moaning+]着，等待[npc.her]的[npc.balls]彻底射空。");
 								}
 								break;
 							default:
@@ -2396,9 +2396,9 @@ public class GenericOrgasms {
 						
 					case NIPPLE:
 						if(target.isPlayer()) {
-							cumTargetSB.append(" deep into your [pc.breasts+]"+(isCharacterTotallyImmobilised(target)?".":", and you find yourself whining and moaning as you feel the [npc.cum+] deep inside of your [pc.breasts+]."));
+							cumTargetSB.append("深深地插进你[pc.breasts+]"+(isCharacterTotallyImmobilised(target)?".":"，你发现自己在低喘呻吟，感觉[npc.cum+]完全灌注进[pc.breasts+]。"));
 						} else {
-							cumTargetSB.append(" deep into [npc2.namePos] [npc2.breasts+].");
+							cumTargetSB.append("深深灌入[npc2.namePos][npc2.breasts+]。");
 						}
 						if(Main.getProperties().hasValue(PropertyValue.inflationContent)) {
 							float cumAmount = target.getTotalFluidInArea(SexAreaOrifice.NIPPLE) + characterOrgasming.getPenisRawOrgasmCumQuantity();
@@ -2407,7 +2407,7 @@ public class GenericOrgasms {
 						break;
 						
 					case NIPPLE_CROTCH:
-						cumTargetSB.append(" deep into [npc2.namePos] [npc2.crotchBoobs+].");
+						cumTargetSB.append("深深灌入[npc2.namePos][npc2.crotchBoobs+]。");
 						
 						if(Main.getProperties().hasValue(PropertyValue.inflationContent)) {
 							float cumAmount = target.getTotalFluidInArea(SexAreaOrifice.NIPPLE_CROTCH) + characterOrgasming.getPenisRawOrgasmCumQuantity();
@@ -2420,12 +2420,12 @@ public class GenericOrgasms {
 							return getClothingCummedOnText(characterOrgasming, target, areasCummedOn, targetAreaClothingCummedOn);
 							
 						} else {
-							cumTargetSB.append(" all over [npc2.namePos] thighs.");
+							cumTargetSB.append("整个夹进[npc2.namePos]股间。");
 							
 							switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 								case SIX_EXTREME: case SEVEN_MONSTROUS:
-									cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more,"
-											+ " [npc2.namePos] [npc2.legs+] are absolutely drenched in [npc.cum+].");
+									cumTargetSB.append("几秒后，很明显[npc.nameIs]远远没打算停下来，只过了一小会，"
+											+ "[npc2.namePos][npc2.legs+]完全浸在[npc.cum+]中。");
 									break;
 								default:
 							}
@@ -2434,15 +2434,15 @@ public class GenericOrgasms {
 						
 					case URETHRA_PENIS: case URETHRA_VAGINA:
 						if(target.isPlayer()) {
-							cumTargetSB.append(" deep into your urethra.");
+							cumTargetSB.append("深深顶入你的尿道。");
 						} else {
-							cumTargetSB.append(" deep into [npc2.namePos] urethra.");
+							cumTargetSB.append("深深顶入[npc2.namePos]的尿道。");
 						}
 						switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 							case SIX_EXTREME: case SEVEN_MONSTROUS:
-								cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more, [npc.her] [npc.cum+] backs up and starts drooling out of [npc2.namePos] urethra.");
+								cumTargetSB.append("几秒后，很明显[npc.nameIs]远远没打算停下来，只过了一小会，[npc.her][npc.cum+]尽数射出，从[npc2.her]吃不下的尿道里滴滴嗒嗒地淌出来。");
 								if(!immobile) {
-									cumTargetSB.append(" [npc.Name] [npc.verb(keep)] [npc.her] [npc.cock] hilted inside of [npc2.herHim], [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc.her] [npc.balls] to run dry.");
+									cumTargetSB.append("[npc.Name]让[npc.cock]深深地插入了[npc2.herHim]，[npc.moaning+]着，等待[npc.balls]彻底射空。");
 								}
 								break;
 							default:
@@ -2457,22 +2457,22 @@ public class GenericOrgasms {
 					case VAGINA:
 						if(target.isPlayer()) {
 							if(!target.isVisiblyPregnant()) {
-								cumTargetSB.append(" deep into your waiting womb"+(isCharacterTotallyImmobilised(target)?".":", and you find yourself whining and moaning as you wonder if the [npc.cum+] will get you pregnant."));
+								cumTargetSB.append("深深塞入你待插的子宫"+(isCharacterTotallyImmobilised(target)?".":"，你发现自己正呜咽呻吟，惊惧着[npc.cum+]会不会让你怀上宝宝。"));
 							} else {
-								cumTargetSB.append(" deep into your hungry [pc.pussy]"+(isCharacterTotallyImmobilised(target)?".":", and you find yourself whining and moaning as you feel the [npc.cum+] deep inside of you."));
+								cumTargetSB.append("深深顶进你饥渴的[pc.pussy]"+(isCharacterTotallyImmobilised(target)?".":"， 你发现自己正轻颤着呻吟，感觉[npc.cum+]灌注进体内。"));
 							}
 						} else {
 							if(!target.isVisiblyPregnant()) {
-								cumTargetSB.append(" deep into [npc2.namePos] waiting womb.");
+								cumTargetSB.append("深深灌进[npc2.namePos]等待已久的子宫。");
 							} else {
-								cumTargetSB.append(" deep into [npc2.namePos] [npc2.pussy+].");
+								cumTargetSB.append("深深灌入[npc2.namePos][npc2.pussy+]。");
 							}
 						}
 						switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 							case SIX_EXTREME: case SEVEN_MONSTROUS:
-								cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more, [npc.her] [npc.cum+] backs up and starts drooling out of [npc2.namePos] [npc2.pussy+].");
+								cumTargetSB.append("几秒后，很明显[npc.nameIs]远远没打算停下来，只过了一小会，[npc.her][npc.cum+]尽数射出，从[npc2.her][npc2.pussy+]里滴滴嗒嗒地淌出来。");
 								cumTargetSB.append(((targetArea!=OrgasmCumTarget.INSIDE_SWITCH_DOUBLE || isSecondaryCreampieTarget) && !immobile
-											?" [npc.Name] [npc.verb(keep)] [npc.her] [npc.cock] hilted deep in [npc2.her] [npc2.pussy], [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc.her] [npc.balls] to run dry."
+											?"[npc.Name]让[npc.cock]深深地插入了[npc2.her]的[npc2.pussy]，[npc.moaning+]着，等待[npc.balls]彻底射空。"
 											:""));
 								break;
 							default:
@@ -2488,13 +2488,13 @@ public class GenericOrgasms {
 						break;
 	
 					case SPINNERET:
-						cumTargetSB.append(" deep into [npc2.namePos] spinneret.");
+						cumTargetSB.append("深深灌入[npc2.namePos]的丝囊穴。");
 						switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 							case SIX_EXTREME: case SEVEN_MONSTROUS:
-								cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more,"
-										+ " [npc.her] [npc.cum+] backs up and starts drooling out of [npc2.namePos] web-spinning orifice.");
+								cumTargetSB.append("几秒后，很明显[npc.nameIs]远远没打算停下来，只过了一小会，"
+										+ "[npc.cum+]尽数射出，从[npc2.her]吃不下的丝囊穴里滴滴嗒嗒地淌出来。");
 								if(!immobile) {
-									cumTargetSB.append(" [npc.Name] [npc.verb(keep)] [npc.her] [npc.cock] hilted inside of [npc2.herHim], [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc.her] [npc.balls] to run dry.");
+									cumTargetSB.append("[npc.Name]让[npc.cock]深深地插入了[npc2.herHim]，[npc.moaning+]着，等待[npc.balls]彻底射空。");
 								}
 								break;
 							default:
@@ -2509,7 +2509,7 @@ public class GenericOrgasms {
 						cumTargetSB.append(" deep into [npc2.namePos] [npc2.tussy].");
 						switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 							case SIX_EXTREME: case SEVEN_MONSTROUS:
-								cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more,"
+								cumTargetSB.append("几秒后，很明显[npc.nameIs]远远没打算停下来，只过了一小会，"
 										+ " [npc.her] [npc.cum+] backs up and starts drooling out of [npc2.namePos] [npc2.tussy+].");
 								if(!immobile) {
 									cumTargetSB.append(" [npc.Name] [npc.verb(keep)] [npc.her] [npc.cock] hilted inside of [npc2.herHim], [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc.her] [npc.balls] to run dry.");
@@ -2531,8 +2531,8 @@ public class GenericOrgasms {
 					case WATER:
 					case SLIME:
 						cumTargetSB.append("<br/>"
-								+ "As [npc2.namePos] body is made completely out of translucent "+target.getBodyMaterial().getName()+","
-										+ " you're able to see the cloud of [npc.namePos] [npc.cum+] shooting up and dispersing inside of [npc2.herHim].");
+								+ "由于[npc2.namePos]的身体由半透明的"+target.getBodyMaterial().getName()+"组成，"
+										+ "你看到[npc.namePos][npc.cum+]在[npc2.herHim]身体里射出后扩散开来的精雾。");
 						break;
 					case FIRE:
 					case FLESH:
@@ -2552,12 +2552,12 @@ public class GenericOrgasms {
 							if (!targetAreaClothingCummedOn.isEmpty()) {
 								return getClothingCummedOnText(characterOrgasming, areasCummedOn, targetAreaClothingCummedOn);
 							} else {
-								cumTargetSB.append(" all over [npc.her] [npc.fingers+].");
+								cumTargetSB.append("弄得[npc.her][npc.fingers+]上到处都是。");
 								
 								switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 									case SIX_EXTREME:
 									case SEVEN_MONSTROUS:
-										cumTargetSB.append(" After a few seconds, [npc.her] [npc.hands+] are absolutely drenched in [npc.cum+].");
+										cumTargetSB.append("几秒后，[npc.her][npc.hands+]完全浸在[npc.cum+]里面。");
 										break;
 									default:
 										break;
@@ -2567,12 +2567,12 @@ public class GenericOrgasms {
 							return getClothingCummedOnText(characterOrgasming, target, areasCummedOn, targetAreaClothingCummedOn);
 							
 						} else {
-							cumTargetSB.append(" all over [npc2.namePos] [npc2.fingers+].");
+							cumTargetSB.append("弄得[npc2.namePos][npc2.fingers+]上到处都是。");
 							
 							switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 								case SIX_EXTREME: case SEVEN_MONSTROUS:
-									cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more,"
-											+ " [npc2.namePos] [npc2.hands+] are absolutely drenched in [npc.cum+].");
+									cumTargetSB.append("几秒后，很明显[npc.nameIs]远远没打算停下来，只过了一小会，"
+											+ "[npc2.namePos][npc2.hands+]完全浸在[npc.cum+]中。");
 									break;
 								default:
 									break;
@@ -2590,12 +2590,12 @@ public class GenericOrgasms {
 							return getClothingCummedOnText(characterOrgasming, target, areasCummedOn, targetAreaClothingCummedOn);
 							
 						} else {
-							cumTargetSB.append(" all over [npc2.namePos] [npc2.toes+].");
+							cumTargetSB.append("弄得[npc2.namePos][npc2.toes+]上到处都是。");
 							
 							switch (characterOrgasming.getPenisOrgasmCumQuantity()) {
 								case SIX_EXTREME: case SEVEN_MONSTROUS:
 									cumTargetSB.append(" After a few seconds, it becomes clear that [npc.nameIs] not even close to stopping, and after just a moment more,"
-											+ " [npc2.namePos] [npc2.feet+] are absolutely drenched in [npc.cum+].");
+											+ "[npc2.namePos][npc2.feet+]完全浸在[npc.cum+]中。");
 									break;
 								default:
 									break;
@@ -2653,12 +2653,12 @@ public class GenericOrgasms {
 		StringBuilder sb = new StringBuilder();
 		
 		if(nakedAreas.isEmpty()) {
-			sb.append(" all over [npc2.namePos] "+Util.clothesToStringList(clothing, false)+".");
+			sb.append("溅满了[npc2.namePos]的"+Util.clothesToStringList(clothing, false)+"。");
 		} else {
-			sb.append(" all over [npc2.namePos] "+Util.clothesToStringList(clothing, false)+", as well as [npc2.her] exposed "+Util.inventorySlotsToParsedStringList(nakedAreas, target)+".");
+			sb.append("遍布[npc2.namePos]的"+Util.clothesToStringList(clothing, false)+"以及[npc2.her]暴露的"+Util.inventorySlotsToParsedStringList(nakedAreas, target)+"。");
 		}
 		if(!immobile) {
-			sb.append(" [npc.Name] [npc.verb(grin)] as [npc.her] [npc.cum+] splatters onto [npc2.name], making a mess of [npc2.her] outfit.");
+			sb.append("[npc.Name]咧嘴一笑，[npc.cum+]飞溅到了[npc2.name]身上，把[npc2.her]的装束弄得一团糟。");
 		}
 		return UtilText.parse(characterOrgasming, target, sb.toString());
 	}
@@ -2674,13 +2674,13 @@ public class GenericOrgasms {
 		StringBuilder sb = new StringBuilder();
 		
 		if(nakedAreas.isEmpty()) {
-			sb.append(" all over [npc.her] "+Util.clothesToStringList(clothing, false)+".");
+			sb.append("溅满了[npc.her]的"+Util.clothesToStringList(clothing, false)+"。");
 		} else {
-			sb.append(" all over [npc.her] "+Util.clothesToStringList(clothing, false)+", as well as [npc.her] exposed "+Util.inventorySlotsToParsedStringList(nakedAreas, characterOrgasming)+".");
+			sb.append("遍布[npc.her]的"+Util.clothesToStringList(clothing, false)+"以及[npc.her]暴露的"+Util.inventorySlotsToParsedStringList(nakedAreas, characterOrgasming)+"。" );
 		}
 
 		if(!immobile) {
-			sb.append(" [npc.She] [npc.verb(let)] out [npc.a_moan+] as [npc.her] [npc.cum+] splatters onto [npc.her] clothing, making a mess of [npc.her] outfit.");
+			sb.append("[npc.She]发出[npc.a_moan+]，[npc.cum+]飞溅到了[npc.her]的衣物上，把[npc.her]的装束弄得一团糟。");
 		}
 		return UtilText.parse(characterOrgasming, sb.toString());
 	}
@@ -2690,43 +2690,43 @@ public class GenericOrgasms {
 		
 		if(characterOrgasming.isPlayer()) {
 			if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMaximumValue()) {
-				return ("<br/>You see [npc2.namePos] stomach swell out to a massive, over-inflated size as it distends from the colossal amount of cum that you've pumped inside of [npc2.herHim]."
-						+ (!immobile?" Placing a [npc.hand] on [npc2.her] huge belly, you grin as you think to yourself that [npc2.she] now looks as though [npc2.sheIs] heavily pregnant.":""));
+				return ("<br/>你看到[npc2.namePos]的肚子因为你所注入的大量精液而膨胀到一个巨大到夸张的尺寸。"
+						+ (!immobile?"把一只[npc.hand]放在[npc2.her]的大肚子上，你咧嘴一笑，心想[npc2.she]现在看起来就像怀胎十月了一样。":""));
 				
 			} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMedianValue()) {
-				return ("<br/>You see [npc2.namePos] stomach swell out as it distends from the huge amount of cum that you've pumped inside of [npc2.herHim]."
-						+ (!immobile?" Placing a [npc.hand] on [npc2.her] belly, you grin as you think to yourself that [npc2.she] now looks as though [npc2.sheIs] pregnant.":""));
+				return ("<br/>你看到[npc2.namePos]的肚子因为你注入的大量精液而膨胀了起来。"
+						+ (!immobile?"把一只[npc.hand]放在[npc2.her]的肚子上，你咧嘴一笑，心想[npc2.she]现在看起来就像怀孕了一样。":""));
 				
 			} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMinimumValue()) {
-				return ("<br/>You see [npc2.namePos] stomach swell out a little as it distends from the sheer amount of cum that you've pumped inside of [npc2.herHim]."
-						+ (!immobile?" Placing a [npc.hand] on [npc2.her] belly, you grin as you think to yourself that [npc2.she] now looks as though [npc2.sheIs] in the early stages of pregnancy.":""));
+				return ("<br/>你看到[npc2.namePos]的肚子因为你注入的精液而微微膨胀。"
+						+ (!immobile?"把一只[npc.hand]放在[npc2.her]的肚子上，你咧嘴一笑，心想[npc2.she]现在看起来就像刚怀孕了一样。":""));
 			}
 		} else {
 			if(target.isPlayer()) {
 				if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMaximumValue()) {
-					return ("<br/>You feel your stomach swell out to a massive, over-inflated size as it distends from the colossal amount of cum that's been pumped inside of you."
-							+ (!immobile?" Placing a [npc.hand] on your belly, [npc.name] grins as [npc.she] remarks on the fact that you now look as though you're heavily pregnant.":""));
+					return ("<br/>大量的精液注入你体内，你感觉自己的肚子膨胀到了一个巨大而夸张的尺寸。"
+							+ (!immobile?"把一只[npc.hand]放在你的肚子上，[npc.name]咧嘴一笑，表示你现在看起来就像怀胎十月了一样。":""));
 					
 				} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMedianValue()) {
-					return ("<br/>You feel your stomach swell out a little as it distends from the huge amount of cum that's been pumped inside of you."
-							+ (!immobile?" Placing a [npc.hand] on your belly, [npc.name] grins as [npc.she] remarks on the fact that you now look as though you're pregnant.":""));
+					return ("<br/>大量精液涌入体内，让你感到胃部有些胀痛。"
+							+ (!immobile?"把一只[npc.hand]放在你的肚子上，[npc.name]咧嘴一笑，表示你现在看起来就像怀孕了一样。":""));
 					
 				} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMinimumValue()) {
-					return ("<br/>You feel your stomach swell out a little as it distends from the sheer amount of cum that's been pumped inside of you."
-							+ (!immobile?" Placing a [npc.hand] on your belly, [npc.name] grins as [npc.she] remarks on the fact that you now look as though you're in the early stages of pregnancy.":""));
+					return ("<br/>大量精液涌入体内，让你感到胃部有些膨大。"
+							+ (!immobile?"把一只[npc.hand]放在你的肚子上，[npc.name]咧嘴一笑，表示你现在看起来就像刚怀孕了一样。":""));
 				}
 			} else {
 				if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMaximumValue()) {
-					return ("<br/>[npc2.NamePos] stomach swells out to a massive, over-inflated size as it distends from the sheer amount of cum that [npc.namePos] pumped inside of [npc2.herHim]."
-							+ (!immobile?" Placing a [npc.hand] on [npc2.her] belly, the [npc.race] grins as [npc.she] remarks on the fact that [npc2.name] now looks as though [npc2.sheIs] heavily pregnant.":""));
+					return ("<br/>[npc2.NamePos]的肚子因为[npc.namePos]所注入的大量精液而膨胀到一个巨大到夸张的尺寸。"
+							+ (!immobile?"把一只[npc.hand]放在[npc2.her]的肚子上，[npc.race]咧嘴一笑，表示[npc2.name]现在看起来就像怀胎十月了一样。":""));
 					
 				} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMedianValue()) {
-					return ("<br/>[npc2.NamePos] stomach swells out as it distends from the huge amount of cum that [npc.namePos] pumped inside of [npc2.herHim]."
-							+ (!immobile?" Placing a [npc.hand] on [npc2.her] belly, the [npc.race] grins as [npc.she] remarks on the fact that [npc2.name] now looks as though [npc2.sheIs] pregnant.":""));
+					return ("<br/>[npc2.NamePos]的肚子因为[npc.namePos]注入的大量精液而膨胀了起来。"
+							+ (!immobile?"把一只[npc.hand]放在[npc2.her]的肚子上，[npc.race]咧嘴一笑，表示[npc2.name]现在看起来就像怀孕了一样。":""));
 					
 				} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMinimumValue()) {
-					return ("<br/>[npc2.NamePos] stomach swells out a little as it distends from the sheer amount of cum that [npc.namePos] pumped inside of [npc2.herHim]."
-							+ (!immobile?" Placing a [npc.hand] on [npc2.her] belly, the [npc.race] grins as [npc.she] remarks on the fact that [npc2.name] now looks as though [npc2.sheIs] in the early stages of pregnancy.":""));
+					return ("<br/>[npc2.NamePos]的肚子因为[npc.namePos]注入的精液而微微膨胀。"
+							+ (!immobile?"把一只[npc.hand]放在[npc2.her]的肚子上，[npc.race]咧嘴一笑，表示[npc2.name]现在看起来就像刚怀孕了一样。":""));
 				}
 			}
 		}
@@ -2735,13 +2735,13 @@ public class GenericOrgasms {
 	
 	private static String getSpinneretInflationText(GameCharacter characterOrgasming, GameCharacter target, float cumAmount) {
 		if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMaximumValue()) {
-			return ("<br/>[npc2.NamePos] "+(target.hasTailSpinneret()?"[npc2.tail]":"abdomen")+" swells out to a massive, over-inflated size as it distends from the sheer amount of cum that [npc.nameHas] pumped inside of [npc2.her] spinneret.");
+			return ("<br/>[npc2.NamePos]的"+(target.hasTailSpinneret()?"[npc2.tail]":"腹部")+"因为[npc.nameHas]在[npc2.her]的丝囊穴里注入的大量精液而膨胀到一个巨大到夸张的尺寸。");
 			
 		} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMedianValue()) {
-			return ("<br/>[npc2.NamePos] "+(target.hasTailSpinneret()?"[npc2.tail]":"abdomen")+" swells out as it distends from the huge amount of cum that [npc.nameHas] pumped inside of [npc2.her] spinneret.");
+			return ("<br/>[npc2.NamePos]的"+(target.hasTailSpinneret()?"[npc2.tail]":"腹部")+"因为[npc.nameHas]在[npc2.her]的丝囊穴里注入的大量精液而膨胀了起来。");
 			
 		} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMinimumValue()) {
-			return ("<br/>[npc2.NamePos] "+(target.hasTailSpinneret()?"[npc2.tail]":"abdomen")+" swells out a little as it distends from the sheer amount of cum that [npc.nameHas] pumped inside of [npc2.her] spinneret.");
+			return ("<br/>[npc2.NamePos]的"+(target.hasTailSpinneret()?"[npc2.tail]":"腹部")+"因为[npc.nameHas]在[npc2.her]的丝囊穴里注入的精液而微微膨胀。");
 		}
 		return "";
 	}
@@ -2761,26 +2761,26 @@ public class GenericOrgasms {
 	
 	private static String getBreastInflationText(GameCharacter characterOrgasming, GameCharacter target, float cumAmount) {
 		if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMaximumValue()) {
-			return ("<br/>[npc2.NamePos] [npc2.breasts] swell out to a massive, over-inflated size as they distend from the sheer amount of cum that [npc.nameHas] pumped inside of them.");
+			return ("<br/>[npc2.NamePos]的[npc2.breasts]因为[npc.nameHas]所注入的大量精液而膨胀到一个巨大到夸张的尺寸。");
 			
 		} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMedianValue()) {
-			return ("<br/>[npc2.NamePos] [npc2.breasts] swell out as they distend from the huge amount of cum that [npc.nameHas] pumped inside of them.");
+			return ("<br/>[npc2.NamePos]的[npc2.breasts]因为[npc.nameHas]注入的大量精液而膨胀了起来。");
 			
 		} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMinimumValue()) {
-			return ("<br/>[npc2.NamePos] [npc2.breasts] swell out a little as they distend from the sheer amount of cum that [npc.nameHas] pumped inside of them.");
+			return ("<br/>[npc2.NamePos]的[npc2.breasts]因为[npc.nameHas]注入的精液而微微膨胀。");
 		}
 		return "";
 	}
 	
 	private static String getBreastCrotchInflationText(GameCharacter characterOrgasming, GameCharacter target, float cumAmount) {
 		if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMaximumValue()) {
-			return ("<br/>[npc2.NamePos] [npc2.crotchBoobs] swell out to a massive, over-inflated size as they distend from the sheer amount of cum that [npc.nameHas] pumped inside of them.");
+			return ("<br/>[npc2.NamePos]的[npc2.crotchBoobs]因为[npc.nameHas]所注入的大量精液而膨胀到一个巨大到夸张的尺寸。");
 			
 		} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMedianValue()) {
-			return ("<br/>[npc2.NamePos] [npc2.crotchBoobs] swell out as they distend from the huge amount of cum that [npc.nameHas] pumped inside of them.");
+			return ("<br/>[npc2.NamePos]的[npc2.crotchBoobs]因为[npc.nameHas]注入的大量精液而膨胀了起来。");
 			
 		} else if(cumAmount >= CumProduction.SEVEN_MONSTROUS.getMinimumValue()) {
-			return ("<br/>[npc2.NamePos] [npc2.crotchBoobs] swell out a little as they distend from the sheer amount of cum that [npc.nameHas] pumped inside of them.");
+			return ("<br/>[npc2.NamePos]的[npc2.crotchBoobs]因为[npc.nameHas]注入的精液而微微膨胀。");
 		}
 		return "";
 	}
@@ -2792,14 +2792,14 @@ public class GenericOrgasms {
 		genericOrgasmSB.setLength(0);
 		
 		if(immobile) {
-			genericOrgasmSB.append("A desperate, shuddering heat suddenly crashing up from [npc.her] [npc.pussy+],");
+			genericOrgasmSB.append("渴望、战栗的热流冲向[npc.namePos][npc.pussy+]，");
 			if(sleeping) {
-				genericOrgasmSB.append(" but even with this [npc.name] [npc.verb(remain)] deeply asleep, with not even the wave of pure ecstasy that washes over [npc.herHim] being enough to wake [npc.herHim].");
+				genericOrgasmSB.append("但即便如此，[npc.name]仍沉沉睡去，甚至连[npc.herHim]身上涌起的狂喜的浪潮都不足以唤醒[npc.herHim]。");
 			} else {
-				genericOrgasmSB.append(" but even with this [npc.name] [npc.verb(remain)] completely silent and motionless, not reacting at all to the wave of pure ecstasy that washes over [npc.herHim].");
+				genericOrgasmSB.append("但即便如此，[npc.name]也完全保持沉默，一动不动，对[npc.herHim]身上涌起的狂喜浪潮毫无反应。");
 			}
 		} else {
-			genericOrgasmSB.append("A desperate, shuddering heat suddenly crashes up from [npc.namePos] [npc.pussy+], and [npc.she] [npc.verb(let)] out a manic squeal as a blinding wave of pure ecstasy washes over [npc.herHim].");
+			genericOrgasmSB.append("渴望、战栗的热流冲向[npc.namePos][npc.pussy+]，[npc.she]疯狂地尖叫，强烈、纯粹的快感冲过了[npc.herHim]。");
 		}
 		
 		GameCharacter characterPenetrating = null;
@@ -2817,39 +2817,39 @@ public class GenericOrgasms {
 				case FINGER:
 					if(immobile) {
 						if(characterOrgasming.equals(characterPenetrating)) {
-							genericOrgasmSB.append(" [npc.Name] [npc.verb(keep)] [npc.her] [npc.fingers] stuffed deep in [npc.her] [npc.pussy+] while remaining "+(sleeping?"asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc.her]更进一步，把[npc.fingers]狠狠怼进"+(sleeping?"熟睡的":"毫无反应的")+"[npc2.name][npc.pussy+]中。");
 						} else {
 							if(immobilePenetrator) {
-								genericOrgasmSB.append(" [npc2.NamePos] [npc2.fingers+] remain stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm, with the two of "
-										+(playerInvolved?"you":"them")+" remaining "+(sleeping&&sleepingPenetrator?"asleep":"completely motionless")+".");
+								genericOrgasmSB.append("[npc2.NamePos][npc2.fingers+]持续塞着[npc.namePos][npc.pussy+]在[npc.her]高潮时，伴随两个"
+										+(playerInvolved?"你":"他")+"仍然"+(sleeping&&sleepingPenetrator?"沉睡":"一动不动")+"。");
 							} else {
-								genericOrgasmSB.append(" [npc2.NamePos] [npc2.fingers+] carry on pumping away at [npc.namePos] [npc.pussy+] through [npc.her] orgasm,"
-										+ " but despite this stimulation, [npc.she] [npc.verb(remain)] "+(sleeping?"deeply asleep":"completely motionless")+".");
+								genericOrgasmSB.append("[npc2.namePos][npc2.fingers+]持续操弄着[npc2.namePos]因为高潮而更加敏感的[npc.pussy+]，"
+										+ "但在这样的刺激下，[npc.she]仍然"+(sleeping?"沉睡不醒":"一动不动")+"。");
 							}
 						}
 					} else {
 						if(characterOrgasming.isPlayer()) {
 							if(characterPenetrating.isPlayer()) {
-								genericOrgasmSB.append(" You curl your fingers up deep inside your [npc.pussy+], and, while desperately stroking in a 'come-hither' motion,"
-										+ " you let out a series of high-pitched moans as your vaginal muscles grip and squeeze around your intruding digits.");
+								genericOrgasmSB.append("你将手指在自己[npc.pussy+]内蜷曲，意乱情迷地抚弄着，不停勾起手指，"
+										+ "阴道收缩挤压着你插入的手指，你发出一连串高亢的呻吟声。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] fingers remain stuffed in your [npc.pussy+], and you let out a series of high-pitched moans as your vaginal muscles grip and squeeze around the intruding digits.");
+									genericOrgasmSB.append("你压抑不住快感，发出兴奋的尖叫，阴道内的肌肉也不短收缩，紧紧吸住了其中插入的手指。");
 								} else {
-									genericOrgasmSB.append(" [npc2.NamePos] fingers carry on pumping away at your [npc.pussy+], and you let out a series of high-pitched moans as your vaginal muscles grip and squeeze around the intruding digits.");
+									genericOrgasmSB.append("[npc2.NamePos]的手指继续在你[npc.pussy+]里推来挤去，阴道内的肌肉忽然收缩，紧紧吸住了插入的手指，你也不住地发出高声的呻吟。");
 								}
 							}
 						} else {
 							if(characterOrgasming.equals(characterPenetrating)) {
-								genericOrgasmSB.append(" [npc.NamePos] vaginal muscles grip and squeeze around [npc.her] intruding digits,"
-										+ " and, driven on by the intense, pleasurable sensation, [npc.she] continues to stroke and tease [npc.her] clit, all the while letting out a series of [npc.moans+].");
+								genericOrgasmSB.append("[npc.NamePos]阴道内的肌肉骤然紧缩，紧紧吸住[npc.her]插入的手指，"
+										+ "在强烈快感的驱使下，[npc.she]继续抚摸挑逗着阴蒂，发出一连串[npc.moans+]。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] fingers remain stuffed in [npc.namePos] [npc.pussy+],"
-											+ " and [npc.she] [npc.verb(let)] out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around the intruding digits.");
+									genericOrgasmSB.append("[npc2.NamePos]继续用手指操弄着[npc.namePos][npc.pussy+]，"
+											+"genericOrgasmSB.append(操的[npc.her]压抑不住快感，发出兴奋的尖叫。而[npc.she]阴道内的肌肉也不短收缩，紧紧吸住了其中插入的手指。");
 								} else {
-									genericOrgasmSB.append(" [npc.NamePos] vaginal muscles grip and squeeze around [npc2.namePos] intruding digits,"
-											+ " and [npc2.she] continues to stroke and tease [npc.her] clit, drawing out a series of [npc.moans+] from between [npc.her] [npc.lips+].");
+									genericOrgasmSB.append("[npc.NamePos]阴道内的肌肉骤然紧缩，紧紧吸住[npc2.namePos]插入的手指，"
+											+ "[npc2.she]继续磨蹭挑弄着阴蒂，[npc.her][npc.lips+]间更是[npc.moans+]不断。");
 								}
 							}
 						}
@@ -2858,36 +2858,36 @@ public class GenericOrgasms {
 				case PENIS:
 					if(immobile) {
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(" [npc2.NamePos] [npc2.cock+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm, with the two of "
-									+(playerInvolved?"you":"them")+" remaining "+(sleeping&&sleepingPenetrator?"asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos][npc2.cock+]继续抽插着[npc.namePos]因为高潮更加敏感[npc.pussy+]，伴随两根"
+									+(playerInvolved?"你":"他")+"仍然"+(sleeping&&sleepingPenetrator?"沉睡":"一动不动")+"。");
 						} else {
-							genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm, but despite this stimulation, [npc.she] [npc.verb(remain)] "
-									+(sleeping?"deeply asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.Name]在[npc.namePos]高潮时持续操着[npc.her][npc.pussy+]，尽管有这样的刺激，[npc.she]仍"
+									+(sleeping?"深度睡眠":"完全不动")+"。");
 						}
 						
 					} else {
 						if(characterOrgasming.isPlayer()) {
 							if(characterPenetrating.isPlayer()) {
-								genericOrgasmSB.append(" You carry on fucking yourself through your orgasm, letting out a series of high-pitched moans as your vaginal muscles grip and squeeze around your [npc.cock+].");
+								genericOrgasmSB.append("你在高潮时继续操自己，阴道的肌肉紧紧包裹挤压你[npc.cock+]，引得你发出了一系列高亢的呻吟。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.cock+] remains stuffed in your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.cock+]在你高潮的时候依旧插在你[pc.pussy+]中，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on fucking your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.Name]在你高潮时继续操着你[pc.pussy+]，");
 								}
-								genericOrgasmSB.append(" and you let out a series of high-pitched moans as your vaginal muscles grip and squeeze around [npc2.her] [npc2.penis+].");
+								genericOrgasmSB.append("你阴道的肌肉紧紧包裹挤压着[npc2.her][npc2.penis+]，引得你发出了一阵高亢的呻吟。");
 							}
 						} else {
 							if(characterOrgasming.equals(characterPenetrating)) {
-								genericOrgasmSB.append(" [npc.Name] carries on fucking [npc.her] own [npc.pussy+] through [npc.her] orgasm,"
-										+ " causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around [npc.her] [npc.penis+].");
+								genericOrgasmSB.append("[npc.Name]在[npc.her]高潮时继续操着自己[npc.pussy+]，"
+										+ "[npc.her]的阴道收缩挤压着自己[npc.penis+]，让[npc.herHim]发出一连串高亢的呻吟声。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.cock+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.cock+]在[npc.namePos]高潮的时候依旧插在[npc.her][npc.pussy+]中，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.Name]在[npc.namePos]高潮时持续操着[npc.her][npc.pussy+]，");
 								}
-								genericOrgasmSB.append(" causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around [npc2.her] [npc2.penis+].");
+								genericOrgasmSB.append("[npc.her]的阴道收缩挤压着[npc2.her][npc2.penis+]，引得[npc.herHim]发出一连串高亢的呻吟声。");
 							}
 						}
 					}
@@ -2895,36 +2895,36 @@ public class GenericOrgasms {
 				case TAIL:
 					if(immobile) {
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(" [npc2.NamePos] [npc2.tail+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm, with the two of "
-									+(playerInvolved?"you":"them")+" remaining "+(sleeping&&sleepingPenetrator?"asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos][npc2.tail+]继续抽插着[npc.namePos]因为高潮更加敏感[npc.pussy+]，伴随两根"
+									+(playerInvolved?"你":"他")+"仍然"+(sleeping&&sleepingPenetrator?"沉睡":"一动不动")+"。");
 						} else {
-							genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on tail-fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm, but despite this stimulation, [npc.she] [npc.verb(remain)] "
-									+(sleeping?"deeply asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos]用尾巴继续抽插着[npc.namePos]因为高潮更加敏感[npc.pussy+]，不过[npc.she]还是"
+									+(sleeping?"深度睡眠":"完全不动")+"。");
 						}
 						
 					} else {
 						if(characterOrgasming.isPlayer()) {
 							if(characterPenetrating.isPlayer()) {
-								genericOrgasmSB.append(" You carry on tail-fucking yourself through your orgasm, letting out a series of high-pitched moans as your vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("你在高潮时继续尾交着自己，阴道的肌肉紧紧包裹挤压着侵入的异物，引得你发出了一连串高亢的呻吟。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.tail+] remains stuffed in your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.tail+]继续干着你因为高潮而更加敏感的[pc.pussy+]，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on tail-fucking your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.Name]用尾巴继续操着你因为高潮而更加敏感的[pc.pussy+]，");
 								}
-								genericOrgasmSB.append(" and you let out a series of high-pitched moans as your vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("随后阴道的肌肉紧紧包裹挤压着入侵的物体，你发出了一连串高亢的呻吟。");
 							}
 						} else {
 							if(characterOrgasming.equals(characterPenetrating)) {
-								genericOrgasmSB.append(" [npc.Name] carries on tail-fucking [npc.her] own [npc.pussy+] through [npc.her] orgasm,"
-										+ " causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("[npc.Name]在[npc.her]高潮时继续尾交着自己[npc.pussy+]，"
+										+ "[npc.her]的阴道收缩挤压着侵入的异物，让[npc.herHim]发出一连串高亢的呻吟声。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.tail+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.tail+]继续操弄着[npc.namePos]因为高潮而更加敏感的[npc.pussy+]，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on tail-fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos]用尾巴继续操干着[npc.namePos]因为高潮而更加敏感的[npc.pussy+]，");
 								}
-								genericOrgasmSB.append(" causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("[npc.her]的阴道收缩挤压着侵入的异物，让[npc.herHim]发出一连串高亢的呻吟声。");
 							}
 						}
 					}
@@ -2932,36 +2932,36 @@ public class GenericOrgasms {
 				case TONGUE:
 					if(immobile) {
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(" [npc2.NamePos] [npc2.tongue+] remains thrust deep into [npc.namePos] [npc.pussy+] through [npc.her] orgasm, with the two of "
-									+(playerInvolved?"you":"them")+" remaining "+(sleeping&&sleepingPenetrator?"asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos]的舌头继续在[npc.namePos]因高潮更加敏感[npc.pussy+]深处舔弄着，伴随两根"
+									+(playerInvolved?"你":"他")+"仍然"+(sleeping&&sleepingPenetrator?"沉睡":"一动不动")+"。");
 						} else {
-							genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on licking and kissing [npc.namePos] clit through [npc.her] orgasm, but despite this stimulation, [npc.she] [npc.verb(remain)] "
-									+(sleeping?"deeply asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.name]用继续舔吻[npc.namePos]因高潮更加敏感的阴蒂，不过[npc.she]还是"
+									+(sleeping?"深度睡眠":"完全不动")+"。");
 						}
 						
 					} else {
 						if(characterOrgasming.isPlayer()) {
 							if(characterPenetrating.isPlayer()) {
-								genericOrgasmSB.append(" You carry on licking and kissing your clit as you orgasm, letting out a series of high-pitched moans as you feel your vaginal muscles quiver and contract at the overwhelming sensation.");
+								genericOrgasmSB.append("你在高潮时继续舔吻着自己的阴蒂，阴道也由于快感而颤抖收缩着，引得你发出了一连串高亢的呻吟。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.tongue+] remains thrust deep into your [npc.pussy+] while you orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos]的舌头继续在你因高潮而更加敏感的[pc.pussy+]深处舔弄着，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] carries on licking and kissing at your clit while you orgasm,");
+									genericOrgasmSB.append("[npc2.name]在你高潮时继续舔吻着你的阴蒂，");
 								}
-								genericOrgasmSB.append(" causing you to let out a series of high-pitched moans as you feel your vaginal muscles quiver and contract at the overwhelming sensation.");
+								genericOrgasmSB.append("你的阴道由于快感而颤抖收缩着，让你发出了一连串高亢的呻吟。");
 							}
 						} else {
 							if(characterOrgasming.equals(characterPenetrating)) {
-								genericOrgasmSB.append(" [npc.Name] carries on licking and kissing [npc.her] own clit while [npc.she] orgasms,"
-										+ " causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles quiver and contract at the overwhelming sensation.");
+								genericOrgasmSB.append("[npc.Name]在[npc.she]高潮时继续舔吻着自己的阴蒂，"
+										+ "[npc.her]的阴道由于快感而颤抖收缩着，让[npc.herHim]发出了一连串高亢的呻吟。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.tongue+] remains thrust deep [npc.namePos] [npc.pussy+] while [npc.she] [npc.verb(orgasm)],");
+									genericOrgasmSB.append("[npc2.NamePos]的舌头继续在[npc.namePos]因高潮而更加敏感的[npc.pussy+]深处舔弄着，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on licking and kissing [npc.namePos] clit while [npc.she] orgasms,");
+									genericOrgasmSB.append("[npc2.Name]在[npc.she]高潮时继续舔吻着[npc.namePos]的阴蒂，");
 								}
-								genericOrgasmSB.append(" causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles quiver and contract at the overwhelming sensation.");
+								genericOrgasmSB.append("[npc.her]的阴道由于快感而颤抖收缩着，让[npc.herHim]发出了一连串高亢的呻吟。");
 							}
 						}
 					}
@@ -2969,36 +2969,36 @@ public class GenericOrgasms {
 				case TENTACLE:
 					if(immobile) {
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(" [npc2.NamePos] [npc2.tentacle+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm, with the two of "
-									+(playerInvolved?"you":"them")+" remaining "+(sleeping&&sleepingPenetrator?"asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos][npc2.tentacle+]玩弄着[npc.namePos]因高潮更加敏感[npc.pussy+]，伴随两根"
+									+(playerInvolved?"你":"他")+"仍然"+(sleeping&&sleepingPenetrator?"沉睡":"一动不动")+"。");
 						} else {
-							genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on tentacle-fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm, but despite this stimulation, [npc.she] [npc.verb(remain)] "
-									+(sleeping?"deeply asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos]用继续触手操干[npc.namePos]因高潮更加敏感[npc.pussy+]，不过[npc.she]还是"
+									+(sleeping?"深度睡眠":"完全不动")+"。");
 						}
 						
 					} else {
 						if(characterOrgasming.isPlayer()) {
 							if(characterPenetrating.isPlayer()) {
-								genericOrgasmSB.append(" You carry on tentacle-fucking yourself through your orgasm, letting out a series of high-pitched moans as your vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("你在高潮时继续触手交着自己，阴道的肌肉紧紧包裹挤压着侵入的异物，引得你发出了一连串高亢的呻吟。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.tentacle+] remains stuffed in your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.tentacle+]在你高潮的时候依旧插在你[pc.pussy+]中，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on tentacle-fucking your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.Name]在你高潮时继续触手交着你[pc.pussy+]，");
 								}
-								genericOrgasmSB.append(" and you let out a series of high-pitched moans as your vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("随后阴道的肌肉紧紧包裹挤压着入侵的物体，你发出了一连串高亢的呻吟。");
 							}
 						} else {
 							if(characterOrgasming.equals(characterPenetrating)) {
-								genericOrgasmSB.append(" [npc.Name] carries on tentacle-fucking [npc.her] own [npc.pussy+] through [npc.her] orgasm,"
-										+ " causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("[npc.Name]在[npc.her]高潮时继续触手交自己[npc.pussy+]，"
+										+ "[npc.her]的阴道收缩挤压着侵入的异物，让[npc.herHim]发出一连串高亢的呻吟声。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.tentacle+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.tentacle+]在[npc.namePos]高潮的时候依旧插在[npc.her][npc.pussy+]中，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on tentacle-fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.Name]在[npc.namePos]高潮时继续触手交着[npc.her][npc.pussy+]，");
 								}
-								genericOrgasmSB.append(" causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around the intruding object.");
+								genericOrgasmSB.append("[npc.her]的阴道收缩挤压着侵入的异物，让[npc.herHim]发出一连串高亢的呻吟声。");
 							}
 						}
 					}
@@ -3006,36 +3006,36 @@ public class GenericOrgasms {
 				case CLIT:
 					if(immobile) {
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(" [npc2.NamePos] [npc2.clit+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm, with the two of "
-									+(playerInvolved?"you":"them")+" remaining "+(sleeping&&sleepingPenetrator?"asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos][npc2.clit+]玩弄着[npc.namePos]因高潮更加敏感[npc.pussy+]，伴随两根"
+									+(playerInvolved?"你":"他")+"仍然"+(sleeping&&sleepingPenetrator?"沉睡":"一动不动")+"。");
 						} else {
-							genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on clit-fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm, but despite this stimulation, [npc.she] [npc.verb(remain)] "
-									+(sleeping?"deeply asleep":"completely motionless")+".");
+							genericOrgasmSB.append("[npc2.NamePos]用继续阴蒂操干[npc.namePos]因高潮更加敏感[npc.pussy+]，不过[npc.she]仍然"
+									+(sleeping?"深度睡眠":"完全不动")+"。");
 						}
 						
 					} else {
 						if(characterOrgasming.isPlayer()) {
 							if(characterPenetrating.isPlayer()) {
-								genericOrgasmSB.append(" You carry on clit-fucking yourself through your orgasm, letting out a series of high-pitched moans as your vaginal muscles grip and squeeze around your [npc.clit+].");
+								genericOrgasmSB.append("你在高潮时继续阴蒂自交着，阴道的肌肉紧紧包裹挤压你[npc.clit+]，让你发出了一连串高亢的呻吟。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.clit+] remains stuffed in your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.clit+]玩弄着你因高潮而更加敏感的[npc.pussy+]，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on clit-fucking your [npc.pussy+] through your orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos]用继续阴蒂操干着你因高潮而更加敏感的[npc.pussy+]，");
 								}
-								genericOrgasmSB.append(" and you let out a series of high-pitched moans as your vaginal muscles grip and squeeze around [npc2.her] [npc2.clit+].");
+								genericOrgasmSB.append("接着你因为快感娇喘连连，而阴道肌肉收缩，绞着[npc2.clit+]不松。");
 							}
 						} else {
 							if(characterOrgasming.equals(characterPenetrating)) {
-								genericOrgasmSB.append(" [npc.Name] carries on clit-fucking [npc.her] own [npc.pussy+] through [npc.her] orgasm,"
-										+ " causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around [npc.her] [npc.clit+].");
+								genericOrgasmSB.append("[npc.Name]在[npc.her]高潮时继续阴蒂交着自己[npc.pussy+]，"
+										+ "[npc.her]的阴道收缩挤压着自己[npc.clit+]，让[npc.herHim]发出一连串高亢的呻吟声。");
 							} else {
 								if(immobilePenetrator) {
-									genericOrgasmSB.append(" [npc2.NamePos] [npc2.clit+] remains stuffed in [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos][npc2.clit+]操着[npc.namePos]因为高潮而更加敏感的[npc.pussy+]，");
 								} else {
-									genericOrgasmSB.append(" [npc2.Name] [npc2.verb(carry)] on clit-fucking [npc.namePos] [npc.pussy+] through [npc.her] orgasm,");
+									genericOrgasmSB.append("[npc2.NamePos]用继续阴蒂操干[npc.namePos]因高潮而更加敏感的[npc.pussy+]，");
 								}
-								genericOrgasmSB.append(" causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around [npc2.her] [npc2.clit+].");
+								genericOrgasmSB.append("操得[npc.her]快感不断，抑制不住兴奋地呻吟，阴道肌肉收缩，狠狠地绞住插入的[npc2.clit+]不松。");
 							}
 						}
 					}
@@ -3051,13 +3051,13 @@ public class GenericOrgasms {
 					pluggedVagina = true;
 					if(immobile) {
 						if(sleeping) {
-							genericOrgasmSB.append(" [npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] vaginal muscles grip and squeeze around the "+c.getName()+" inserted into [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("[npc.Name]保持着沉睡，阴道肌肉收缩挤压着插入[npc.pussy]的"+c.getName()+"。");
 						} else {
-							genericOrgasmSB.append(" [npc.Name] [npc.verb(remain)] totally motionless as [npc.her] vaginal muscles grip and squeeze around the "+c.getName()+" inserted into [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("[npc.Name]一动不动，阴道肌肉收缩挤压着插入[npc.pussy]的"+c.getName()+"。");
 						}
 					} else {
-						genericOrgasmSB.append(" [npc.NamePos] [npc.pussy+] clenches down hard,"
-								+ " causing [npc.herHim] to let out a series of high-pitched moans as [npc.her] vaginal muscles grip and squeeze around the "+c.getName()+" inserted into [npc.her] [npc.pussy].");
+						genericOrgasmSB.append("[npc.NamePos][npc.pussy+]用力收紧，"
+								+ "[npc.her]的阴道收缩挤压着插入[npc.pussy]的"+c.getName()+"，引得[npc.herHim]发出一连串高亢的呻吟声。");
 					}
 					break;
 				}
@@ -3071,34 +3071,34 @@ public class GenericOrgasms {
 						&& analPenetrator.isTakesVirginity()) {
 					GameCharacter characterPenetratingAss = Main.sex.getOngoingCharactersUsingAreas(characterOrgasming, SexAreaOrifice.ANUS, analPenetrator).iterator().next();
 					genericOrgasmSB.append(UtilText.parse(characterOrgasming, characterPenetratingAss,
-							" [npc.NamePos] [npc.pussy+] clenches down hard, and despite the fact that it's not being penetrated, [npc.namePos] pleasure isn't in any way lessened due to the fact that [npc.sheIs] "
-								+(Main.sex.getSexPace(characterOrgasming)==SexPace.SUB_RESISTING?"focusing primarily on":"loving")
-								+" the feeling of [npc2.namePos] "+analPenetrator.getName(characterPenetratingAss)+" in [npc.her] ass."));
+							"[npc.NamePos][npc.pussy+]紧缩起来，尽管并没有被插入，但[npc.sheIs]依然心醉神迷。因为[npc.sheIs]"
+								+(Main.sex.getSexPace(characterOrgasming)==SexPace.SUB_RESISTING?"主要关注":"热爱")
+								+"这种[npc2.namePos]的"+analPenetrator.getName(characterPenetratingAss)+"在[npc.her]屁股里的感觉。"));
 					
 				} else if(tribbingPartners!=null && !tribbingPartners.isEmpty()) {
 					GameCharacter tribbingPartner = tribbingPartners.iterator().next();
 					if(immobile) {
 						if(sleeping) {
 							genericOrgasmSB.append(UtilText.parse(characterOrgasming, tribbingPartner,
-									"  [npc.Name] [npc.verb(remain)] deeply asleep as [npc2.namePos] [npc2.pussy+] rubs, bumps, and grinds against [npc.hers]."));
+									"[npc.Name]保持着沉睡，[npc2.namePos][npc2.pussy+]不断磨蹭、挤压、碰撞着[npc.her]的[npc.pussy]。"));
 						} else {
 							genericOrgasmSB.append(UtilText.parse(characterOrgasming, tribbingPartner,
-									"  [npc.Name] [npc.verb(remain)] totally motionless as [npc2.namePos] [npc2.pussy+] rubs, bumps, and grinds against [npc.hers]."));
+									"[npc.Name]一动不动，[npc2.namePos][npc2.pussy+]不断磨蹭、挤压、碰撞着[npc.her]的[npc.pussy]。"));
 						}
 					} else {
 						genericOrgasmSB.append(UtilText.parse(characterOrgasming, tribbingPartner,
-								" [npc.NamePos] [npc.pussy+] clenches down hard, and [npc.she] can't help but let out [npc.a_moan+] as [npc.she] [npc.verb(focus)]"
-									+ " on the feeling of [npc2.namePos] [npc2.pussy+] rubbing, bumping, and grinding against [npc.hers]."));
+								"[npc.NamePos][npc.pussy+]突然紧缩起来，[npc.she]全身心投入"
+									+ "与[npc2.namePos][npc2.pussy+]磨蹭着，不禁发出[npc.a_moan+]。"));
 					}
 					
 				} else {
-					genericOrgasmSB.append(" [npc.NamePos] [npc.pussy+] clenches down hard, and the wave of disappointment upon finding itself empty almost overwhelms the pleasure that radiates up through [npc.her] groin.");
+					genericOrgasmSB.append("[npc.NamePos][npc.pussy+]忽然紧缩起来，但随之而来的空虚感却让[npc.her]顿时有些失望，几乎压倒了股间传来的快感。");
 				}
 			}
 		}
 		
 		if(targetArea == OrgasmCumTarget.LILAYA_PANTIES && !Main.game.getPlayer().hasPenisIgnoreDildo()) {
-			genericOrgasmSB.append(" As you squeal and pant, you bring Lilaya's panties up to your face, and breathe in your demonic [lilaya.relation(pc)]'s musky, perfume-laced scent as you imagine her pussy pressing against the soft fabric.");
+			genericOrgasmSB.append("你高声娇喘着，把莉莱雅的内裤凑到脸前，呼吸着你恶魔[lilaya.relation(pc)]雌性味道浓重的芬芳，脑中满是她把这柔软布料贴在蜜穴上的样子。");
 		}
 		
 		if(characterOrgasming.isVaginaSquirter()) {
@@ -3108,61 +3108,61 @@ public class GenericOrgasms {
 					ejaculateDescriptors.add(mod.getName());
 				}
 			}
-			ejaculateDescriptors.add("wet");
-			genericOrgasmSB.append("<br/>As [npc.namePos] [npc.pussy+] uncontrollably spasms and quivers with delight, it suddenly squirts out a huge amount of hot, "+Util.randomItemFrom(ejaculateDescriptors)+" female ejaculate");
+			ejaculateDescriptors.add("湿润的");
+			genericOrgasmSB.append("<br/>[npc.namePos][npc.pussy+]无法控制地痉挛并愉悦的颤动，突然喷射出大量热且"+Util.randomItemFrom(ejaculateDescriptors)+"淫液");
 
 			if(characterPenetrating!=null && penetration!=null) {
 				boolean immobilePenetrator = isCharacterTotallyImmobilised(characterPenetrating);
 				boolean sleepingPenetrator = characterPenetrating.isAsleep();
 				switch(penetration) {
 					case CLIT:
-						genericOrgasmSB.append(", which helps to lube [npc2.namePos] [npc2.clit+].");
+						genericOrgasmSB.append("，有助于润滑[npc2.namePos][npc2.clit+]。");
 						break;
 					case FINGER:
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(", which helps to lube [npc2.namePos] [npc2.fingers+] as they remain "+(sleepingPenetrator?"stuffed":"motionless")+" deep within [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，在[npc2.namePos][npc2.fingers+]"+(sleepingPenetrator?"狠狠地":"被操纵着")+"深入[npc.pussy]时，起到润滑作用。");
 						} else {
-							genericOrgasmSB.append(", which helps to produce a slick, wet sound as [npc2.namePos] [npc2.fingers+] continue to slide in and out of [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，[npc2.namePos][npc2.fingers+]依然在[npc.her]的[npc.pussy]里抽插，造成滑溜、湿润的水声。");
 						}
 						break;
 					case FOOT:
-						genericOrgasmSB.append(", which runs down over [npc2.namePos] [npc2.feet+].");
+						genericOrgasmSB.append("，一路流到了[npc2.namePos][npc2.feet+]上。");
 						break;
 					case PENIS:
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(", which helps to lube [npc2.namePos] [npc2.cock+] as it remains "+(sleepingPenetrator?"stuffed":"motionless")+" deep within [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，在[npc2.namePos][npc2.cock+]"+(sleepingPenetrator?"狠狠地":"被操纵着")+"深入[npc.pussy]时，起到润滑作用。");
 						} else {
-							genericOrgasmSB.append(", which helps to produce a lewd, squelching noise as [npc2.namePos] [npc2.cock+] continues to pump in and out of [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，[npc2.namePos][npc2.cock+]依然在[npc.her]的[npc.pussy]里抽插，造成淫荡、湿漉漉的水声。");
 						}
 						break;
 					case TAIL:
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(", which helps to lube [npc2.namePos] [npc2.tail+(true)] as it remains "+(sleepingPenetrator?"stuffed":"motionless")+" deep within [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，在[npc2.namePos][npc2.tail+(true)]"+(sleepingPenetrator?"狠狠地":"被操纵着")+"深入[npc.pussy]时，起到润滑作用。");
 						} else {
-							genericOrgasmSB.append(", which helps to produce a lewd, squelching noise as [npc2.namePos] [npc2.tail+(true)] continues to pump in and out of [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，[npc2.namePos][npc2.tail+(true)]依然在[npc.her]的[npc.pussy]里抽插，造成淫荡、湿漉漉的水声。");
 						}
 						break;
 					case TENTACLE:
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(", which helps to lube [npc2.namePos] [npc2.tentacle+(true)] as it remains "+(sleepingPenetrator?"stuffed":"motionless")+" deep within [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，在[npc2.namePos][npc2.tentacle+(true)]"+(sleepingPenetrator?"狠狠地":"被操纵着")+"深入[npc.pussy]时，起到润滑作用。");
 						} else {
-							genericOrgasmSB.append(", which helps to produce a lewd, squelching noise as [npc2.namePos] [npc2.tentacle+(true)] continues to pump in and out of [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，[npc2.namePos][npc2.tentacle+(true)]依然在[npc.her]的[npc.pussy]里抽插，造成淫荡、湿漉漉的水声。");
 						}
 						break;
 					case TONGUE:
 						if(immobilePenetrator) {
-							genericOrgasmSB.append(", which runs down over [npc2.namePos] [npc2.tongue+] as [npc2.she] [npc2.verb(keep)] it "+(sleepingPenetrator?"stuffed":"motionless")+" deep within [npc.her] [npc.pussy].");
+							genericOrgasmSB.append("，流过[npc2.namePos]"+(sleepingPenetrator?"狠狠地":"被操纵着")+"深入[npc.pussy]的舌头。");
 						} else {
-							genericOrgasmSB.append(", which [npc2.name] [npc2.verb(lap)] up with [npc2.her] [npc2.tongue+].");
+							genericOrgasmSB.append("，覆盖了[npc2.name][npc2.tongue+]。");
 						}
 						break;
 				}
 			} else {
-				genericOrgasmSB.append(".");
+				genericOrgasmSB.append("。");
 			}
 			
 			if(targetArea == OrgasmCumTarget.LILAYA_PANTIES) {
-				genericOrgasmSB.append("<br/>You quickly drop Lilaya's panties down between your legs, squirting directly into her underwear as you let out [pc.a_moan+].");
+				genericOrgasmSB.append("<br/>你迅速将莉莱雅的内裤放到两腿之间，直接对着它喷射了出来，你不禁发出[pc.a_moan+]。");
 				LilayasRoom.lilayasPanties.setDirty(null, true);
 				
 			} else {
@@ -3172,19 +3172,19 @@ public class GenericOrgasms {
 							&& !vaginaClothing.getItemTags().contains(ItemTag.SEALS_VAGINA)) {
 						if(immobile) {
 							if(sleeping) {
-								genericOrgasmSB.append(" [npc.She] [npc.verb(continue)] to sleep as [npc.her] "
-										+vaginaClothing.getName()+" "+(vaginaClothing.getClothingType().isPlural()?"are":"is")+" quickly dirtied by [npc.her] fluids.");
+								genericOrgasmSB.append("[npc.She]保持沉睡，而"
+										+vaginaClothing.getName()+"浸上淫液，弄脏了。");
 							} else {
-								genericOrgasmSB.append(" [npc.She] [npc.do]n't react at all as [npc.she] [npc.verb(feel)] that [npc.her] "
-										+vaginaClothing.getName()+" "+(vaginaClothing.getClothingType().isPlural()?"are":"is")+" quickly getting dirtied by [npc.her] fluids.");
+								genericOrgasmSB.append("[npc.she]一动不动，就像没感觉到"
+										+vaginaClothing.getName()+"迅速被[npc.her]的液体脏污了。");
 							}
 						} else {
-							genericOrgasmSB.append(" [npc.She] [npc.verb(let)] out a deep sigh as [npc.she] [npc.verb(feel)] that [npc.her] "
-									+vaginaClothing.getName()+" "+(vaginaClothing.getClothingType().isPlural()?"are":"is")+" quickly getting dirtied by [npc.her] fluids.");
+							genericOrgasmSB.append("[npc.She]发出深沉的叹息，感觉到"
+									+vaginaClothing.getName()+"迅速被[npc.her]的液体脏污了。");
 						}
 						
 					} else {
-						genericOrgasmSB.append(" As [npc.her] "+vaginaClothing.getName()+" "+(vaginaClothing.getClothingType().isPlural()?"are":"is")+" sealing [npc.her] [npc.pussy], nothing gets dirtied by [npc.her] fluids.");
+						genericOrgasmSB.append("因为[npc.her]的"+vaginaClothing.getName()+"封住了[npc.pussy]，所以没东西被[npc.her]的液体脏污。");
 					}
 					vaginaClothing.setDirty(Main.sex.getCharacterPerformingAction(), true);
 					
@@ -3195,10 +3195,10 @@ public class GenericOrgasms {
 					for(GameCharacter character : charactersEatingOut) { // Should only be one character
 						if(isCharacterTotallyImmobilised(character)) {
 							genericOrgasmSB.append(UtilText.parse(characterOrgasming, character,
-									" As [npc2.namePos] face is right in front of [npc.namePos] [npc.pussy+], [npc.namePos] fluids squirt out both into [npc2.her] mouth, as well as all over [npc2.her] [npc2.face]."));
+									"[npc.namePos]潮吹不断，体液喷溅而出，射到了[npc2.namePos]正对[npc.pussy+]的脸上和嘴里。"));
 						} else {
 							genericOrgasmSB.append(UtilText.parse(characterOrgasming, character,
-									" As [npc2.nameIs] eating [npc.herHim] out, [npc.namePos] fluids squirt out both into [npc2.her] mouth, as well as all over [npc2.her] [npc2.face]."));
+									"[npc2.nameIs]给[npc.namePos]做着口交，液体喷溅到了[npc2.her]的嘴里，弄得[npc2.face]上到处都是。"));
 						}
 					}
 				}
@@ -3210,14 +3210,14 @@ public class GenericOrgasms {
 //		}
 		if(immobile) {
 			if(sleeping) {
-				genericOrgasmSB.append("<br/><br/>Although [npc.she] [npc.verb(make)] some lewd noises and [npc.verb(squirm)] about a little, [npc.name] [npc.verb(remain)] asleep as [npc.her] feminine climax starts to fade,"
-						+ " and [npc.do]n't show any sign of being close to waking up.");
+				genericOrgasmSB.append("<br/><br/>[npc.Name]在熟睡中高潮迭起，体液喷溅而出，产生淫荡的声音，"
+						+"不过没有任何醒来的迹象。");
 			} else {
-				genericOrgasmSB.append("<br/><br/>Obediently acting like an inanimate sex doll, [npc.name] [npc.verb(remain)] silent and unmoving as [npc.her] feminine climax starts to fade,"
-						+ " and [npc.do]n't show any sign of needing to recover from [npc.her] orgasm.");
+				genericOrgasmSB.append("<br/><br/>作为一个标准的性爱玩偶，[npc.Name]十分安静，一动不动，只有下身不断喷溅爱液表现出[npc.her]高潮，"
+						+"却好像也不需要休息。");
 			}
 		} else {
-			genericOrgasmSB.append("<br/><br/>With a deeply-satisfied sigh, [npc.namePos] feminine climax starts to fade, and [npc.she] [npc.verb(take)] a few deep gasps of air as [npc.she] [npc.verb(seek)] to catch [npc.her] breath.");
+			genericOrgasmSB.append("<br/><br/>[npc.name]心满意足地叹了一口气，高潮逐渐消退，深呼吸，调整自己的气息。");
 		}
 		
 		if(characterPenetrating!=null) {
@@ -3231,24 +3231,24 @@ public class GenericOrgasms {
 		if(isCharacterTotallyImmobilised(characterOrgasming)) {
 			if(characterOrgasming.isAsleep()) {
 				return UtilText.parse(characterOrgasming,
-						"Without waking, [npc.name] lets out a lewd [npc.moan] as a crashing wave of pure ecstasy suddenly washes through [npc.herHim]."
-								+ " The muscles within [npc.her] genderless mound start to spasm and contract, but despite this [npc.she] remains deeply asleep,"
-								+ " with [npc.her] intense pseudo-orgasm not being enough to rouse [npc.herHim] from [npc.her] slumber.");
+						"[npc.Name]在熟睡中发出下流的呻吟，身体被纯粹的快感冲刷着。"
+								+"[npc.her]保持沉睡，但无性征的下体里，肌肉开始收缩痉挛，强烈的假性高潮席卷而来，"
+								+ "但即使是这样强烈的假性高潮也不能将[npc.herHim]从沉睡中唤醒。");
 			} else {
 				return UtilText.parse(characterOrgasming,
-						"Continuing to remain completely silent and motionless, [npc.name] [npc.do]n't react at all as a crashing wave of pure ecstasy suddenly washes through [npc.herHim]."
-								+ " The muscles within [npc.her] genderless mound start to spasm and contract, but despite this [npc.she] manages to carry out the role of inanimate sex doll to perfection,"
-								+ " allowing [npc.her] intense pseudo-orgasm to crash over [npc.herHim] without making so much as a whimper.");
+						"[npc.Name]仍然一动不动，完全看不出身体正在被无尽的快感冲刷着。"
+								+ "[npc.her]无性征的下体里，肌肉开始收缩痉挛，但[npc.she]仍然完美演绎着一个无生命性爱玩偶的职责，"
+								+"尽管正处于假性高潮之中，[npc.her]也没有发出任何的声音。");
 			}
 		}
 		if(characterOrgasming.isPlayer()) {
-			return "With an ear-splitting scream and trembling legs, a crashing wave of pure ecstasy suddenly washes through you."
-					+ " The muscles within your genderless mound start to spasm and contract, and you're soon left as a panting, moaning wreck as an intense pseudo-orgasm crashes over you.";
+			return "随着一声刺耳的尖叫，你的双腿不住颤抖着，浪潮般的纯粹极乐冲刷着你的全身。"
+					+ "你无性征的下体里，肌肉开始收缩痉挛，强烈的假高潮席卷而来，你满足地不住喘息着。";
 			
 		} else {
 			return UtilText.parse(characterOrgasming,
-					"With an ear-splitting scream and trembling legs, a crashing wave of pure ecstasy suddenly washes through [npc.name]."
-							+ " The muscles within [npc.her] genderless mound start to spasm and contract, and [npc.sheIs] soon left as a panting, moaning wreck as [npc.her] intense pseudo-orgasm crashes over [npc.herHim].");
+					"随着一声刺耳的尖叫，[npc.Name]双腿不住颤抖着，浪潮般的纯粹极乐冲刷着[npc.her]的全身。"
+							+ "[npc.her]无性征的下体里，肌肉开始收缩痉挛，强烈的假高潮席卷而来，[npc.sheIs]满足地不住喘息着。");
 		}
 		
 	}
@@ -3273,10 +3273,10 @@ public class GenericOrgasms {
 		if(isCharacterTotallyImmobilised(characterOrgasming)) {
 			if(characterOrgasming.isAsleep()) {
 				descriptionSB.append(UtilText.parse(characterOrgasming,
-						"Upon reaching [npc.her] climax, [npc.name] [npc.verb(let)] out [npc.a_moan+], but despite making this noise and briefly squirming about, [npc.she] [npc.verb(remain)] fast asleep."));
+						"[npc.Name]达到了高潮，[npc.she]发出了[npc.a_moan+]，除了这些声音以及短暂地扭动了一下之外，[npc.she]仍保持着沉睡。"));
 			} else {
 				descriptionSB.append(UtilText.parse(characterOrgasming,
-						"Upon reaching [npc.her] climax, [npc.name] obediently [npc.verb(suppress)] [npc.her] urge to let out [npc.a_moan], and without making so much as a whimper, [npc.she] [npc.verb(remain)] frozen in place."));
+						"[npc.Name]的高潮如此强烈，本应该发出[npc.a_moan]；但[npc.her]却毫无反应，一声不吭。"));
 			}
 			
 		} else {
@@ -3335,12 +3335,12 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Orgasm";
+			return "高潮";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer.";
+			return "你已经到达了快感的极限，再无法阻止高潮的到来。";
 		}
 
 		@Override
@@ -3506,22 +3506,22 @@ public class GenericOrgasms {
 			if(Main.sex.getCreampieLockedBy().containsKey(Main.sex.getCharacterPerformingAction())) {
 				Class<? extends BodyPartInterface> bodypart = Main.sex.getCreampieLockedBy().get(Main.sex.getCharacterPerformingAction()).getValue();
 				if(bodypart == Torso.class) {
-					return "Forced creampie!";
+					return "被迫内射！";
 					
 				} else if(bodypart == Arm.class) {
-					return "Hug-locked!";
+					return "拥抱禁锢！";
 					
 				} else if(bodypart == Leg.class) {
-					return "Leg-locked!";
+					return "叉腿禁锢！";
 					
 				} else if(bodypart == Tail.class) {
-					return "Tail-locked!";
+					return "尾巴禁锢！";
 					
 				} else if(bodypart == Wing.class) {
-					return "Wing-locked!";
+					return "翅膀禁锢！";
 					
 				} else if(bodypart == Tentacle.class) {
-					return "Tentacle-locked!";
+					return "触手禁锢！";
 				}
 			}
 			
@@ -3531,31 +3531,31 @@ public class GenericOrgasms {
 			if(areaContacted.isOrifice()) {
 				switch((SexAreaOrifice)areaContacted) {
 					case ARMPITS:
-						return "Armpit climax";
+						return "腋窝高潮";
 					case ANUS:
-						return "Anal creampie";
+						return "肛门内射";
 					case ASS:
-						return "Hotdogging climax";
+						return "尻交高潮";
 					case BREAST:
 						if(characterPenetrated.hasBreasts()) {
-							return "Paizuri climax";
+							return "乳交高潮";
 						} else {
-							return "Naizuri climax";
+							return "贫乳乳交高潮";
 						}
 					case BREAST_CROTCH:
-						return "Paizuri climax";
+						return "乳交高潮";
 					case MOUTH:
-						return "Deepthroat";
+						return "深喉";
 					case NIPPLE: case NIPPLE_CROTCH:
-						return "Nipple creampie";
+						return "乳头内射";
 					case THIGHS:
-						return "Thigh-sex climax";
+						return "腿交高潮";
 					case URETHRA_PENIS: case URETHRA_VAGINA:
-						return "Urethra creampie";
+						return "尿道内射";
 					case VAGINA:
-						return "Creampie";
+						return "内射";
 					case SPINNERET:
-						return "Spinneret creampie";
+						return "丝囊内射";
                     case TUSSY:
 						return "Tussy creampie";
 				}
@@ -3565,7 +3565,7 @@ public class GenericOrgasms {
 					case CLIT:
 						break;
 					case FINGER:
-						return "Handjob Climax";
+						return "手交高潮";
 					case PENIS:
 						break;
 					case TAIL:
@@ -3573,12 +3573,12 @@ public class GenericOrgasms {
 					case TENTACLE:
 						break;
 					case FOOT:
-						return "Footjob Climax";
+						return "足交高潮";
 					case TONGUE:
 						break;
 				}
 			}
-			return "Creampie";
+			return "内射";
 		}
 		@Override
 		public String getActionDescription() {
@@ -3587,115 +3587,115 @@ public class GenericOrgasms {
 				Class<? extends BodyPartInterface> bodypart = Main.sex.getCreampieLockedBy().get(Main.sex.getCharacterPerformingAction()).getValue();
 				if(bodypart == Torso.class) {
 					return UtilText.parse(character,
-							"[npc.NameIsFull] using [npc.her] advantageous position to force you to cum inside of [npc.herHim]! As you're on the very brink of orgasm, you have no time to try and push [npc.herHim] away!");
+							"[npc.NameIsFull]占据有利位置，强迫你射在[npc.herHim]里面！你处在高潮边缘，没时间尝试推开[npc.herHim]！");
 					
 				} else if(bodypart == Arm.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.arms+] around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " As you're on the very brink of orgasm, you have no time to try and disentangle yourself from [npc.her] clutches!");
+							"[npc.NameHasFull]紧紧地用[npc.her][npc.arms+]抱着你的下背部，强迫你射在里面！"
+							+ "你处在高潮边缘，没时间尝试从[npc.herHim]的掌握中解脱！");
 					
 				} else if(bodypart == Leg.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.legs+] around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " As you're on the very brink of orgasm, you have no time to try and disentangle yourself from [npc.her] clutches!");
+							"[npc.NameHasFull]紧紧地用[npc.her][npc.legs+]抱着你的下背部，强迫你射在里面！"
+							+ "你处在高潮边缘，没时间尝试从[npc.herHim]的掌握中解脱！");
 					
 				} else if(bodypart == Tail.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] "+(character.getTailCount()>1?"[npc.tails+]":"[npc.tail]")+" around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " As you're on the very brink of orgasm, you have no time to try and disentangle yourself from [npc.her] clutches!");
+							"[npc.NameHasFull]紧紧地用[npc.her]"+(character.getTailCount()>1?"[npc.tails+]":"[npc.tail]")+"缠着你的下背部，强迫你射在里面！"
+							+ "你处在高潮边缘，没时间尝试从[npc.herHim]的掌握中解脱！");
 					
 				} else if(bodypart == Wing.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.wingSize] [npc.wings] around your body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " As you're on the very brink of orgasm, you have no time to try and disentangle yourself from [npc.her] clutches!");
+							"[npc.NameHasFull]紧紧地用[npc.wingSize]的[npc.wings]包裹着你的身体，强迫你射在里面！"
+							+ "你处在高潮边缘，没时间尝试从[npc.herHim]的掌握中解脱！");
 					
 				} else if(bodypart == Tentacle.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.tentacles+] around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " As you're on the very brink of orgasm, you have no time to try and disentangle yourself from [npc.her] clutches!");
+							"[npc.NameHasFull]紧紧地用[npc.her][npc.tentacles+]缠着你的下背部，强迫你射在里面！"
+							+ "你处在高潮边缘，没时间尝试从[npc.herHim]的掌握中解脱！");
 				}
 			}
 			
 			GameCharacter characterPenetrated = getCharacterToBeCreampied();
 			SexAreaInterface areaContacted = getAreaToBeCreampied();
-			String returnString = "You've reached your climax, and can't hold back your orgasm any longer. Creampie [npc2.name].";
+			String returnString = "你达到了极限，再也无法承受快感的冲击。你内射了[npc2.name]。";
 			
 			if(areaContacted.isOrifice()) {
 				switch((SexAreaOrifice)areaContacted) {
 					case ARMPITS:
-						returnString = "Keep on rubbing your [npc.cock+] over [npc2.namePos] [npc2.armpit+] as you orgasm, spurting your [npc.cum+] all over [npc2.her] arm and pit.";
+						returnString = "继续在高潮时用[npc.cock+]蹭着[npc2.namePos][npc2.armpit+]，射得[npc2.her]手臂和奶子上都是你[npc.cum+]。";
 						break;
 					case ANUS:
 						if(Main.sex.getCharacterPerformingAction().hasPenisModifier(PenetrationModifier.KNOTTED)) {
 							if(Main.game.isPenetrationLimitationsEnabled() && Main.sex.getCharacterPerformingAction().isFullPenetrationTooLongToFit(SexAreaPenetration.PENIS, characterPenetrated, (SexAreaOrifice)areaContacted, false)) {
-								returnString = "[style.italicsBad([npc2.NamePos] asshole is not deep enough for you to insert your knot)],"
-										+ " and so you'll just have to make do with pushing your [npc.cock+] deep into [npc2.her] butt before filling [npc2.herHim] with your [npc.cum+].";
+								returnString = "[style.italicsBad([npc2.NamePos]的肛门不够深，塞不进去你的结)]，"
+										+ "所以你只能把自己[npc.cock+]深深插进了[npc2.her]的屁股里，用[npc.cum+]灌满了[npc2.herHim]。";
 							} else {
-								returnString = "Hold back from inserting your knot, and just push your [npc.cock+] deep inside [npc2.namePos] [npc2.asshole+] before filling [npc2.herHim] with your [npc.cum+].";
+								returnString = "不再硬塞你的结，只把[npc.cock+]深深顶进[npc2.namePos][npc2.asshole+]，然后填满[npc.cum+]。";
 							}
 							
 						} else {
-							returnString = "Push your [npc.cock+] deep inside [npc2.namePos] [npc2.asshole+], before filling [npc2.herHim] with your [npc.cum+].";
+							returnString = "把你[npc.cock+]深深插进[npc2.namePos][npc2.asshole+]，用[npc.cum+]灌满了[npc2.herHim]。";
 						}
 						break;
 					case ASS:
-						returnString = "Keep on hotdogging [npc2.name] as you orgasm, spurting your [npc.cum+] all over [npc2.her] back and [npc2.assSize] ass.";
+						returnString = "你维持着尻交的姿势享受高潮，射得[npc2.name]后背和屁股上到处都是[npc.cum+]。";
 						break;
 					case BREAST:
 						if(characterPenetrated.hasBreasts()) {
-							returnString = "Keep on fucking [npc2.namePos] breasts as you orgasm, spurting your [npc.cum+] all over [npc2.her] tits and [npc2.face].";
+							returnString = "在高潮时继续操干[npc2.namePos]的乳房，射得[npc2.her]奶子和[npc2.face]上都是你[npc.cum+]。";
 						} else {
-							returnString = "Keep on grinding against [npc2.namePos] flat chest as you orgasm, spurting your [npc.cum+] all over [npc2.her] torso and [npc2.face].";
+							returnString = "在高潮时继续用[npc.cock+]磨蹭[npc2.namePos]的平胸，射得[npc2.her]胸和脸上都是你[npc.cum+]。";
 						}
 						break;
 					case BREAST_CROTCH:
-						returnString = "Keep on fucking [npc2.namePos] [npc2.crotchBoobs] as you orgasm, spurting your [npc.cum+] all over [npc2.her] stomach, [npc2.crotchBoobs] and crotch.";
+						returnString = "在高潮时继续用[npc.cock+]操干[npc2.namePos][npc2.crotchBoobs]，射得[npc2.her]肚子，[npc2.crotchBoobs]和胯部上都是你[npc.cum+]。";
 						break;
 					case MOUTH:
-						returnString = "Push your [npc.cock+] deep down [npc2.namePos] throat, before filling [npc2.her] stomach with your [npc.cum+].";
+						returnString = "把你[npc.cock+]深深插进[npc2.namePos]的喉咙，用[npc.cum+]填满[npc2.her]的肚子。";
 						break;
 					case NIPPLE:
-						returnString = "Push your [npc.cock+] deep into [npc2.namePos] [npc2.nipple+], before filling [npc2.her] breast with your [npc.cum+].";
+						returnString = "把你[npc.cock+]深深插进[npc2.namePos][npc2.nipple+]，用[npc.cum+]填满[npc2.her]的乳房。";
 						break;
 					case NIPPLE_CROTCH:
-						returnString = "Push your [npc.cock+] deep into [npc2.namePos] [npc2.crotchNipple+], before filling [npc2.her] [npc2.crotchBoob] with your [npc.cum+].";
+						returnString = "把你[npc.cock+]深深插进[npc2.namePos][npc2.crotchNipple+]，用[npc.cum+]填满[npc2.her][npc2.crotchBoob]。";
 						break;
 					case THIGHS:
-						returnString = "Keep on fucking [npc2.namePos] thighs as you start to orgasm, before pulling back and spurting your [npc.cum+] all over [npc2.her] [npc2.legs].";
+						returnString = "在高潮时继续用[npc.cock+]操干[npc2.namePos]股间，射得[npc2.her][npc2.legs]上都是你[npc.cum+]。";
 						break;
 					case URETHRA_PENIS:
-						returnString = "Push your [npc.cock+] deep into the urethra of [npc2.namePos] [npc2.cock+], before filling [npc2.her] bladder with your [npc.cum+].";
+						returnString = "将你[npc.cock+]深深地推进[npc2.namePos][npc2.cock+]尿道，你把[npc.cum+]射满了[npc2.her]的膀胱。";
 						break;
 					case URETHRA_VAGINA:
-						returnString = "Push your [npc.cock+] deep into the urethra of [npc2.namePos] [npc2.pussy+], before filling [npc2.her] bladder with your [npc.cum+].";
+						returnString = "将你[npc.cock+]深深插入[npc2.namePos][npc2.pussy+]中，你把[npc2.her]的膀胱注满了你[npc.cum+]。";
 						break;
 					case VAGINA:
 						if(Main.sex.getCharacterPerformingAction().hasPenisModifier(PenetrationModifier.KNOTTED)) {
 							if(Main.game.isPenetrationLimitationsEnabled() && Main.sex.getCharacterPerformingAction().isFullPenetrationTooLongToFit(SexAreaPenetration.PENIS, characterPenetrated, (SexAreaOrifice)areaContacted, false)) {
-								returnString = "[style.italicsBad([npc2.NamePos] pussy is not deep enough for you to insert your knot)],"
-										+ " and so you'll just have to make do with pushing your [npc.cock+] deep into [npc2.her] cunt before filling"
+								returnString = "[style.italicsBad([npc2.NamePos]的小穴不够深，塞不进去你的结)]，"
+										+ "所以你只能把自己[npc.cock+]深深插进了[npc2.her]的阴部，用[npc.cum+]灌满"
 										+(characterPenetrated.isPregnant() || characterPenetrated.hasIncubationLitter(SexAreaOrifice.VAGINA)
-												?" [npc2.herHim]"
-												:" [npc2.her] womb")
-										+ " with your [npc.cum+].";
+												?"[npc2.herHim]"
+												:"[npc2.her]的子宫")
+										+ "。";
 							} else {
-								returnString = "Hold back from inserting your knot, and just push your [npc.cock+] deep inside [npc2.namePos] [npc2.pussy+] before filling"
+								returnString = "不再硬塞你的结，只把[npc.cock+]深深顶进[npc2.namePos][npc2.pussy+]，然后用[npc.cum+]填满"
 										+(characterPenetrated.isPregnant() || characterPenetrated.hasIncubationLitter(SexAreaOrifice.VAGINA)
-												?" [npc2.herHim]"
-												:" [npc2.her] womb")
-										+ " with your [npc.cum+].";
+												?"[npc2.herHim]"
+												:"[npc2.her]的子宫")
+										+ "。";
 							}
 							
 						} else {
-							returnString = "Push your [npc.cock+] deep inside [npc2.namePos] [npc2.pussy+], before filling [npc2.her]"
+							returnString = "把你[npc.cock+]深深插进[npc2.namePos][npc2.pussy+]，用[npc.cum+]填满[npc2.her]的"
 										+(characterPenetrated.isPregnant() || characterPenetrated.hasIncubationLitter(SexAreaOrifice.VAGINA)
-												?" [npc2.pussy]"
-												:" womb")
-										+ " with your [npc.cum+].";
+												?"[npc2.pussy]"
+												:"子宫")
+										+ "。";
 						}
 						break;
 					case SPINNERET:
-						returnString = "Push your [npc.cock+] deep into [npc2.namePos] spinneret, before filling [npc2.herHim] with your [npc.cum+].";
+						returnString = "把你[npc.cock+]深深插进[npc2.namePos]的丝囊，用[npc.cum+]填满[npc2.her]。";
 						break;
 					case TUSSY:
 						returnString = "Push your [npc.cock+] deep into [npc2.namePos] [npc2.tussy+], before filling [npc2.herHim] with your [npc.cum+].";
@@ -3707,9 +3707,9 @@ public class GenericOrgasms {
 						break;
 					case FINGER:
 						if(Main.sex.getCharacterPerformingAction().equals(characterPenetrated)) {
-							returnString = "Carry on stroking your cock, before spurting your [npc.cum+] all over your [npc.hand+].";
+							returnString = "继续撸动着你的肉棒，然后将[npc.cum+]射满你[npc.hand+]。";
 						} else {
-							returnString = "Carry on focusing on the pleasure that you're getting from [npc2.name] giving you a handjob, before pulling back slightly and spurting your [npc.cum+] all over [npc2.her] [npc2.hand+].";
+							returnString = "继续享受着[npc2.name]手交所带来的快感，然后微微抽出，将你[npc.cum+]喷射到[npc2.her][npc2.hand+]上。";
 						}
 						break;
 					case PENIS:
@@ -3719,7 +3719,7 @@ public class GenericOrgasms {
 					case TENTACLE:
 						break;
 					case FOOT:
-						returnString = "Carry on focusing on the pleasure that you're getting from [npc2.namePos] [npc2.footjob], before spurting your [npc.cum+] all over [npc2.her] [npc2.feet+].";
+						returnString = "继续专注于[npc2.namePos][npc2.footjob]带来的快感，然后将[npc.cum+]喷射到[npc2.her][npc2.feet+]上。";
 						break;
 					case TONGUE:
 						break;
@@ -3947,26 +3947,26 @@ public class GenericOrgasms {
 			if(Main.sex.getCreampieLockedBy().containsKey(Main.sex.getCharacterPerformingAction())) {
 				Class<? extends BodyPartInterface> bodypart = Main.sex.getCreampieLockedBy().get(Main.sex.getCharacterPerformingAction()).getValue();
 				if(bodypart == Torso.class) {
-					return "Forced creampie (Knot!)";
+					return "强制内射(锁结！)";
 					
 				} else if(bodypart == Arm.class) {
-					return "Hug-locked (Knot!)";
+					return "拥抱禁锢(锁结！)";
 					
 				} else if(bodypart == Leg.class) {
-					return "Leg-locked (Knot!)";
+					return "叉腿禁锢(锁结！)";
 					
 				} else if(bodypart == Tail.class) {
-					return "Tail-locked (Knot!)";
+					return "尾巴禁锢(锁结！)";
 					
 				} else if(bodypart == Wing.class) {
-					return "Wing-locked (Knot!)";
+					return "翅膀禁锢(锁结！)";
 					
 				} else if(bodypart == Tentacle.class) {
-					return "Tentacle-locked (Knot!)";
+					return "触手禁锢(锁结！)";
 				}
 			}
 			
-			return UtilText.parse(getCharacterToBeKnotted(), "Knot [npc.herHim]");
+			return UtilText.parse(getCharacterToBeKnotted(), "锁结[npc.herHim]");
 		}
 
 		@Override
@@ -3976,69 +3976,69 @@ public class GenericOrgasms {
 				Class<? extends BodyPartInterface> bodypart = Main.sex.getCreampieLockedBy().get(Main.sex.getCharacterPerformingAction()).getValue();
 				if(bodypart == Torso.class) {
 					return UtilText.parse(character,
-							"[npc.NameIsFull] using [npc.her] advantageous position to force you to cum inside of [npc.herHim]!"
-							+ " Give [npc.herHim] what [npc.she] wants and knot [npc.herHim]!");
+							"[npc.NameIsFull]占据有利位置，强迫你射在[npc.herHim]里面！"
+							+ "给[npc.herHim]想要的，锁结[npc.herHim]吧！");
 					
 				} else if(bodypart == Arm.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.arms+] around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " Give [npc.herHim] what [npc.she] wants and knot [npc.herHim]!");
+							"[npc.NameHasFull]紧紧地用[npc.her][npc.arms+]抱着你的下背部，强迫你射在里面！"
+							+ "给[npc.herHim]想要的，锁结[npc.herHim]吧！");
 					
 				} else if(bodypart == Leg.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.legs+] around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " Give [npc.herHim] what [npc.she] wants and knot [npc.herHim]!");
+							"[npc.NameHasFull]紧紧地用[npc.her][npc.legs+]抱着你的下背部，强迫你射在里面！"
+							+ "给[npc.herHim]想要的，锁结[npc.herHim]吧！");
 					
 				} else if(bodypart == Tail.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] "+(character.getTailCount()>1?"[npc.tails+]":"[npc.tail]")+" around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " Give [npc.herHim] what [npc.she] wants and knot [npc.herHim]!");
+							"[npc.NameHasFull]紧紧地用[npc.her]"+(character.getTailCount()>1?"[npc.tails+]":"[npc.tail]")+"缠着你的下背部，强迫你射在里面！"
+							+ "给[npc.herHim]想要的，锁结[npc.herHim]吧！");
 					
 				} else if(bodypart == Wing.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.wingSize] [npc.wings] around your body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " Give [npc.herHim] what [npc.she] wants and knot [npc.herHim]!");
+							"[npc.NameHasFull]紧紧地用[npc.wingSize]的[npc.wings]包裹着你的身体，强迫你射在里面！"
+							+ "给[npc.herHim]想要的，锁结[npc.herHim]吧！");
 					
 				} else if(bodypart == Tentacle.class) {
 					return UtilText.parse(character,
-							"[npc.NameHasFull] tightly wrapped [npc.her] [npc.tentacles+] around your lower body, thereby forcing you to cum inside of [npc.herHim]!"
-							+ " Give [npc.herHim] what [npc.she] wants and knot [npc.herHim]!");
+							"[npc.NameHasFull]紧紧地用[npc.her][npc.tentacles+]缠着你的下背部，强迫你射在里面！"
+							+ "给[npc.herHim]想要的，锁结[npc.herHim]吧！");
 				}
 			}
 			
 			GameCharacter characterPenetrated = getCharacterToBeKnotted();
 			SexAreaInterface areaContacted = getAreaToBeKnotted();
-			String returnString = "You've reached your climax, and can't hold back your orgasm any longer. Push your knot inside of [npc2.namePos] "+areaContacted.getName(characterPenetrated)+" and fill [npc2.herHim] with your [npc.cum+].";
+			String returnString = "你达到了极限，再也无法承受快感的冲击。把结塞进[npc2.namePos]体内"+areaContacted.getName(characterPenetrated)+"用你[npc.cum+]填满[npc2.herHim]。";
 			
 			switch((SexAreaOrifice)areaContacted) {
 				case ANUS:
-					returnString = "Push your cock fully into [npc2.namePos] [npc2.asshole+] before your knot swells up, which will lock you inside of [npc2.herHim] as you fill [npc2.herHim] with your [npc.cum+].";
+					returnString = "将你的鸡巴尽根没入[npc2.namePos][npc2.asshole+]，膨胀阴茎结，将你锁在[npc2.herHim]体内，直到你将[npc2.her]体内灌满[npc.cum+]。";
 					break;
 				case MOUTH:
-					returnString = "Push your cock fully down [npc2.namePos] throat before your knot swells up, which will lock you inside of [npc2.herHim] as you fill [npc2.her] stomach with your [npc.cum+].";
+					returnString = "将你的鸡巴尽根没入[npc2.namePos]的喉咙，膨胀阴茎结，将你锁在[npc2.herHim]体内，直到你将[npc2.her]的肚子灌满[npc.cum+]。";
 					break;
 				case NIPPLE:
-					returnString = "Push your cock fully into [npc2.namePos] [npc2.nipple+] before your knot swells up, which will lock you inside of [npc2.herHim] as you fill [npc2.her] breast with your [npc.cum+].";
+					returnString = "将你的鸡巴尽根没入[npc2.namePos][npc2.nipple+]，膨胀阴茎结，将你锁在[npc2.herHim]体内，直到你将[npc2.her]的乳房灌满[npc.cum+]。";
 					break;
 				case NIPPLE_CROTCH:
-					returnString = "Push your cock fully into [npc2.namePos] [npc2.crotchNipple+] before your knot swells up, which will lock you inside of [npc2.herHim] as you fill [npc2.her] [npc2.crotchBoob] with your [npc.cum+].";
+					returnString = "将你的鸡巴尽根没入[npc2.namePos][npc2.crotchNipple+]，膨胀阴茎结，将你锁在[npc2.herHim]体内，直到你将[npc2.her]的[npc2.crotchBoob]灌满[npc.cum+]。";
 					break;
 				case URETHRA_PENIS:
-					returnString = "Push your cock fully into the urethra of [npc2.namePos] [npc2.cock+] before your knot swells up, which will lock you inside of [npc2.herHim] as you fill [npc2.her] bladder with your [npc.cum+].";
+					returnString = "你的整根鸡巴完全推进了[npc2.namePos][npc2.cock+]尿道里，紧接着，你的阴茎结膨胀起来，将你锁在[npc2.herHim]体内，直到你将[npc2.her]的膀胱灌满了你[npc.cum+]。";
 					break;
 				case URETHRA_VAGINA:
-					returnString = "Push your cock fully into the urethra of [npc2.namePos] [npc2.pussy+] before your knot swells up, which will lock you inside of [npc2.herHim] as you fill [npc2.her] bladder with your [npc.cum+].";
+					returnString = "你的整根鸡巴完全推进了[npc2.namePos][npc2.pussy+]尿道里，紧接着，你的阴茎结膨胀起来，将你锁在[npc2.herHim]体内，直到你将[npc2.her]的膀胱灌满了你[npc.cum+]。";
 					break;
 				case VAGINA:
-					returnString = "Push your cock fully into [npc2.namePos] [npc2.pussy+] before your knot swells up,"
-							+ " which will lock you inside of [npc2.herHim] as you fill [npc2.her]"
+					returnString = "将你的鸡巴尽根没入[npc2.namePos][npc2.pussy+]，膨胀阴茎结，"
+							+ "将你锁在[npc2.herHim]体内，直到你用[npc.cum+]灌满[npc2.her]的"
 										+(characterPenetrated.isPregnant() || characterPenetrated.hasIncubationLitter(SexAreaOrifice.VAGINA)
-												?" [npc2.pussy]"
-												:" womb")
-										+ " with your [npc.cum+].";
+												?"[npc2.pussy]"
+												:"子宫")
+										+ "。";
 					break;
 				default:
-					return "Knotting error! (Code 1)";
+					return "锁结错误！(Code 1)";
 			}
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated, returnString);
 		}
@@ -4255,12 +4255,12 @@ public class GenericOrgasms {
                     case TUSSY:
 						break;
 					case ANUS:
-						return "Double anal creampie";
+						return "双重肛门内射";
 					case VAGINA:
-						return "Double creampie";
+						return "双重内射";
 				}
 			}
-			return "Double creampie";
+			return "双重内射";
 		}
 
 		@Override
@@ -4270,7 +4270,7 @@ public class GenericOrgasms {
 			GameCharacter secondaryCharacterPenetrated = getSecondaryCreampieTarget(Main.sex.getCharacterTargetedForSexAction(this), (SexAreaOrifice) areaContacted);
 			
 			String returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-					"You've reached your climax, and can't hold back your orgasm any longer. Give [npc.name] half of your creampie, before quickly pulling out and finishing inside of [npc2.name].");
+					"你达到了极限，再也无法承受快感的冲击。把一半精液内射到[npc.name]体内后，你把屌拔了出来，把另外一半灌给了[npc2.name]。");
 			
 			if(areaContacted.isOrifice()) {
 				switch((SexAreaOrifice)areaContacted) {
@@ -4291,36 +4291,36 @@ public class GenericOrgasms {
 						if(Main.sex.getCharacterPerformingAction().hasPenisModifier(PenetrationModifier.KNOTTED)) {
 							if(Main.game.isPenetrationLimitationsEnabled() && Main.sex.getCharacterPerformingAction().isFullPenetrationTooLongToFit(SexAreaPenetration.PENIS, characterPenetrated, (SexAreaOrifice)areaContacted, false)) {
 								returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-										"[style.italicsBad([npc2.NamePos] asshole is not deep enough for you to insert your knot)],"
-										+ " and so you'll just have to make do with pushing your [npc.cock+] deep into [npc2.her] butt and filling [npc2.herHim] with your cum after giving [npc.name] half of your load.");
+										"[style.italicsBad([npc2.NamePos]的肛门不够深，塞不进去你的结)]，"
+										+"把一半的精液内射到[npc.Name]体内之后，你狠狠地插进[npc2.her]的屁股，把剩下的部分灌了进去。");
 								
 							} else {
 								returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-										"Keep your knot out of [npc.namePos] [npc.asshole] as you give [npc.herHim] half of your load,"
-												+ " before quickly pulling out and similarly avoiding getting locked inside of [npc2.name] as you finish inside of [npc2.her] [npc2.asshole].");
+										"你在[npc.namePos]的[npc.asshole]外成结，朝里灌了一半精液，然后拔了出来，"
+												+"接着插进[npc2.name]的[npc2.asshole]里迅速射完另外一半，之后拔了出来。你射的很快，以免成结锁住。");
 							}
 							
 						} else {
 							returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-									"You've reached your climax, and can't hold back your orgasm any longer. Spurt half of your load into [npc.namePos] [npc.asshole], before quickly pulling out and finishing inside of [npc2.namePos] [npc2.asshole+].");
+									"你达到了极限，再也无法承受快感的冲击。把一半精液内射入[npc.name]的[npc.asshole]，然后迅速拔了出来，把另外一半灌进了[npc2.namePos][npc2.asshole+]。");
 						}
 						break;
 					case VAGINA:
 						if(Main.sex.getCharacterPerformingAction().hasPenisModifier(PenetrationModifier.KNOTTED)) {
 							if(Main.game.isPenetrationLimitationsEnabled() && Main.sex.getCharacterPerformingAction().isFullPenetrationTooLongToFit(SexAreaPenetration.PENIS, characterPenetrated, (SexAreaOrifice)areaContacted, false)) {
 								returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-										"[style.italicsBad([npc2.NamePos] pussy is not deep enough for you to insert your knot)],"
-										+ " and so you'll just have to make do with pushing your [npc.cock+] deep into [npc2.her] cunt and filling [npc2.herHim] with your cum after giving [npc.name] half of your load.");
+										"[style.italicsBad([npc2.NamePos]的小穴不够深，塞不进去你的结)]，"
+										+"你在把一半精液内射到[npc.Name]之后，用力把[pc.cock+]捅进[npc2.her]小穴然后射了个爽。");
 								
 							} else {
 								returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-										"Keep your knot out of [npc.namePos] [npc.pussy] as you give [npc.herHim] half of your load,"
-												+ " before quickly pulling out and similarly avoiding getting locked inside of [npc2.name] as you finish inside of [npc2.her] [npc2.pussy].");
+										"你在[npc.namePos]的[npc.pussy]之外成结，然后把一半精液射了进去，"
+												+"你迅速地在[npc2.name]的[npc2.pussy]射出了另外一半，然后拔了出来，以免成结。");
 							}
 							
 						} else {
 							returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-									"You've reached your climax, and can't hold back your orgasm any longer. Spurt half of your load into [npc.namePos] [npc.pussy+], before quickly pulling out and finishing inside of [npc2.namePos] [npc2.pussy+].");
+									"你达到了极限，再也无法承受快感的冲击。你把一半精液灌进了[npc.namePos][npc.pussy+]里，然后迅速插进[npc2.namePos]的小穴灌进去另外一半。");
 						}
 						break;
 				}
@@ -4582,12 +4582,12 @@ public class GenericOrgasms {
 					case TUSSY:
 						break;
 					case ANUS:
-						return "Double anal knotting";
+						return "双重肛门锁结";
 					case VAGINA:
-						return "Double knotting";
+						return "双重锁结";
 				}
 			}
-			return "Double knotting";
+			return "双重锁结";
 		}
 
 		@Override
@@ -4597,7 +4597,7 @@ public class GenericOrgasms {
 			GameCharacter secondaryCharacterPenetrated = getSecondaryCreampieTarget(Main.sex.getCharacterTargetedForSexAction(this), (SexAreaOrifice) areaContacted);
 			
 			String returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-					"You've reached your climax, and can't hold back your orgasm any longer. Give [npc.name] half of your creampie, before quickly pulling out and knotting [npc2.name] as you finish inside of [npc2.herHim].");
+					"你达到了极限，再也无法承受快感的冲击。你内射[npc.name]到一半，然后迅速拔出来，用锁结锁住了[npc2.name]，并在[npc2.herHim]体内射干净。");
 			
 			if(areaContacted.isOrifice()) {
 				switch((SexAreaOrifice)areaContacted) {
@@ -4616,13 +4616,13 @@ public class GenericOrgasms {
 						break;
 					case ANUS:
 						returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-								"Keep your knot out of [npc.namePos] [npc.asshole] as you give [npc.herHim] half of your load,"
-										+ " before quickly pulling out and ramming your knot into [npc2.namePos] [npc2.asshole], before finishing inside of [npc2.herHim].");
+								"你在[npc.namePos]的[npc.asshole]外成结，朝里灌了一半精液，然后拔了出来，"
+										+"接着迅速把鸡巴连着结一起塞进[npc2.namePos][npc2.asshole]里，然后射了个爽");
 						break;
 					case VAGINA:
 						returnString = UtilText.parse(characterPenetrated, secondaryCharacterPenetrated,
-								"Keep your knot out of [npc.namePos] [npc.pussy+] as you give [npc.herHim] half of your load,"
-										+ " before quickly pulling out and ramming your knot into [npc2.namePos] [npc2.pussy+], before finishing inside of [npc2.herHim].");
+								"你在[npc.namePos][npc.pussy+]外成结，然后把一半的精液关了进去，"
+										+"接着迅速把鸡巴连着结一起塞进[npc2.namePos][npc2.pussy+]里，然后射了个爽");
 						break;
 				}
 			}
@@ -4791,16 +4791,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto floor";
+					return "手交后射在地上";
 				}
-				return "Pull out (floor)";
+				return "外射(地上)";
 			}
-			return "Cum on floor";
+			return "射在地上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto the floor.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了地上。";
 		}
 
 		@Override
@@ -4839,16 +4839,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto [pc.wall]";
+					return "手交后射在[pc.wall]上";
 				}
-				return "Pull out ([pc.wall])";
+				return "外射([pc.wall])";
 			}
-			return "Cum on [pc.wall]";
+			return "射在[pc.wall]上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto the [pc.wall].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[pc.wall]上。";
 		}
 
 		@Override
@@ -4882,16 +4882,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto ass";
+					return "手交后射在屁股上";
 				}
-				return "Pull out (ass)";
+				return "外射(肛门)";
 			}
-			return "Cum on ass";
+			return "射在屁股上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] [npc2.ass+].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos][npc2.ass+]上。";
 		}
 
 		@Override
@@ -4946,16 +4946,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto groin";
+					return "手交后射在腹股沟上";
 				}
-				return "Pull out (groin)";
+				return "外射(腹股沟)";
 			}
-			return "Cum on groin";
+			return "射在腹股沟上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] groin.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]的腹股沟上。";
 		}
 
 		@Override
@@ -5007,16 +5007,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob (own groin)";
+					return "手交后射在自己的腹股沟上";
 				}
-				return "Pull out (own groin)";
+				return "外射(自己的腹股沟)";
 			}
-			return "Cum on own groin";
+			return "射在自己的腹股沟上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your groin.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己的腹股沟。";
 		}
 
 		@Override
@@ -5065,22 +5065,22 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			String breasts = "breasts";
+			String breasts = "乳房";
 			if(!Main.sex.getCharacterTargetedForSexAction(this).hasBreasts()) {
-				breasts = "chest";
+				breasts = "胸部";
 			}
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto "+breasts;
+					return "手交后射精到"+breasts;
 				}
-				return "Pull out ("+breasts+")";
+				return "外射("+breasts+")";
 			}
-			return "Cum on "+breasts;
+			return "射到"+breasts;
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] [npc2.breasts].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]的[npc2.breasts]上。";
 		}
 
 		@Override
@@ -5119,22 +5119,22 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			String breasts = "breasts";
+			String breasts = "乳房";
 			if(!Main.sex.getCharacterPerformingAction().hasBreasts()) {
-				breasts = "chest";
+				breasts = "胸部";
 			}
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob (own "+breasts+")";
+					return "手交(射到自己的"+breasts+"上)";
 				}
-				return "Pull out (own "+breasts+")";
+				return "外射(自己的"+breasts+")";
 			}
-			return "Cum on own "+breasts;
+			return "射到自己的"+breasts;
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your [npc.breasts+].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己[npc.breasts+]上。";
 		}
 
 		@Override
@@ -5178,16 +5178,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto face";
+					return "手交后射在脸上";
 				}
-				return "Pull out (facial)";
+				return "外射(面部)";
 			}
-			return "Facial";
+			return "面部";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] face.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]脸上。";
 		}
 
 		@Override
@@ -5226,16 +5226,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob (own face)";
+					return "手交(射在自己脸上)";
 				}
-				return "Pull out (own face)";
+				return "外射(自己的脸)";
 			}
-			return "Cum on own face";
+			return "射在自己脸上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your [npc.face+].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己的[npc.face+]上。";
 		}
 
 		@Override
@@ -5274,16 +5274,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob (own hands)";
+					return "手交后射在自己的手上";
 				}
-				return "Pull out (own hands)";
+				return "外射(自己的手)";
 			}
-			return "Cum on own hands";
+			return "射在自己的手上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your [npc.hands].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己的[npc.hands]上。";
 		}
 
 		@Override
@@ -5326,16 +5326,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob into [npc2.hair(true)]";
+					return "手交后射在[npc2.hair(true)]里";
 				}
-				return "Pull out ([npc2.hair(true)])";
+				return "外射([npc2.hair(true)])";
 			}
-			return "Cum in [npc2.hair(true)]";
+			return "射在[npc2.hair(true)]上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum into [npc2.namePos] [npc2.hair(true)].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]的[npc2.hair(true)]上。";
 		}
 
 		@Override
@@ -5378,16 +5378,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto stomach";
+					return "手交后射在肚子上";
 				}
-				return "Pull out (stomach)";
+				return "外射(肚子)";
 			}
-			return "Cum on stomach";
+			return "射在肚子上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] stomach.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]肚子上。";
 		}
 
 		@Override
@@ -5426,16 +5426,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob (own stomach)";
+					return "手交后射在自己的肚子上";
 				}
-				return "Pull out (own stomach)";
+				return "外射(自己的肚子)";
 			}
-			return "Cum on own stomach";
+			return "射在自己肚子上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your stomach.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己肚子上。";
 		}
 
 		@Override
@@ -5478,16 +5478,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto [npc2.legs]";
+					return "手交后射在[npc2.legs]上";
 				}
-				return "Pull out ([npc2.legs])";
+				return "外射([npc2.legs])";
 			}
-			return "Cum on [npc2.legs]";
+			return "射在[npc2.legs]上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] [npc2.legs].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos][npc2.legs]上。";
 		}
 
 		@Override
@@ -5526,16 +5526,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob (own [npc.legs])";
+					return "手交后射在自己的[npc.legs]上";
 				}
-				return "Pull out (own [npc.legs])";
+				return "外射(自己的[npc.legs])";
 			}
-			return "Cum on own [npc.legs]";
+			return "射在自己[npc.legs]上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your [npc.legs+].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己[npc.legs+]上。";
 		}
 
 		@Override
@@ -5579,16 +5579,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto [npc2.feet]";
+					return "手交后射在[npc2.feet]上";
 				}
-				return "Pull out ([npc2.feet])";
+				return "外射([npc2.feet])";
 			}
-			return "Cum on [npc2.feet]";
+			return "射在[npc2.feet]上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] [npc2.feet+].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos][npc2.feet+]上。";
 		}
 
 		@Override
@@ -5627,16 +5627,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob (own [npc.feet])";
+					return "手交后射在自己的[npc.feet]上";
 				}
-				return "Pull out (own [npc.feet])";
+				return "外射(自己的[npc.feet])";
 			}
-			return "Cum on own [npc.feet]";
+			return "射在自己[npc.feet]上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto your [npc.feet+].";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了自己[npc.feet+]上。";
 		}
 
 		@Override
@@ -5679,16 +5679,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto back";
+					return "手交后射在后背上";
 				}
-				return "Pull out (back)";
+				return "外射(后背)";
 			}
-			return "Cum on back";
+			return "射在后背上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] back.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]背上。";
 		}
 
 		@Override
@@ -5731,16 +5731,16 @@ public class GenericOrgasms {
 		public String getActionTitle() {
 			if(!Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
 				if(!Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, SexAreaPenetration.FINGER).isEmpty()) {
-					return "Handjob onto armpit";
+					return "手交后射在腋窝上";
 				}
-				return "Pull out (armpit)";
+				return "外射(腋窝)";
 			}
-			return "Cum on armpit";
+			return "射在腋窝上";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer. Direct your cum onto [npc2.namePos] armpit.";
+			return "你达到了极限，再也无法承受快感的冲击。你直接射在了[npc2.namePos]的腋窝上。";
 		}
 
 		@Override
@@ -5791,26 +5791,26 @@ public class GenericOrgasms {
 		@Override
 		public String getActionTitle() {
 			if(Main.sex.getCharacterPerformingAction().isAsleep()) {
-				return "So sleepy...";
+				return "好困……";
 			} else {
-				return "Stay still";
+				return "保持不动";
 			}
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().isAsleep()) {
-				return "[npc2.NameIsFull] fast approaching [npc2.her] orgasm, but you're so sleepy that there's no chance of [npc2.her] climax being able to wake you up...";
+				return "[npc2.NameIsFull]马上就要高潮了，但你睡得太沉，[npc2.her]的高潮不可能将你唤醒……";
 			} else {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Remain motionless and don't react to it.";
+				return "你能感觉到[npc2.name]马上就要高潮了。保持静止，不要做出任何反应。";
 			}
 		}
 		@Override
 		public String getDescription() {
 			String description = "";
 			if(Main.sex.getCharacterPerformingAction().isAsleep()) {
-				description = "Remaining fast asleep, [npc.name] [npc.verb(show)] no sign of waking up as [npc2.name] [npc2.verb(prepare)] to reach [npc2.her] climax.";
+				description = "在[npc2.name]准备达到高潮时，[npc.name]在熟睡，没有醒来的迹象。";
 			} else {
-				description = "Continuing to act like an inanmate sex doll, [npc.name] [npc.verb(remain)] silent and completely motionless, even though [npc.she] can tell that [npc2.nameIsFull] about to orgasm.";
+				description = "作为性爱玩偶，[npc.Name]能感觉到[npc2.nameIsFull]马上就要高潮了，不过也不会有任何动作。";
 			}
 			GameCharacter orgasming = Main.sex.getCharacterOrgasming();
 			if(orgasming==null) {
@@ -5839,11 +5839,11 @@ public class GenericOrgasms {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Prepare";
+			return "准备";
 		}
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Prepare yourself for it.";
+			return "你能感觉到[npc2.name]马上就要高潮了。做好准备。";
 		}
 		@Override
 		public String getDescription() {
@@ -5851,25 +5851,25 @@ public class GenericOrgasms {
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_GENTLE:
-					description = "[npc.Name] [npc.verb(let)] out a soft [npc.moan] of encouragement as [npc.she] [npc.verb(prepare)] for [npc2.name] to reach [npc2.her] orgasm.";
+					description = "[npc.Name]发出轻柔的[npc.moan]，催动着氛围，准备让[npc2.name]高潮。";
 					break;
 				case DOM_NORMAL:
-					description = "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] for [npc2.name] to reach [npc2.her] orgasm.";
+					description = "[npc.Name]发出[npc.a_moan+]，准备迎接[npc2.name]高潮的到来。";
 					break;
 				case DOM_ROUGH:
-					description = "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] for [npc2.name] to reach [npc2.her] orgasm.";
+					description = "[npc.Name]发出[npc.a_moan+]，准备迎接[npc2.name]高潮的到来。";
 					break;
 				case SUB_EAGER:
-					description = "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] for [npc2.name] to reach [npc2.her] orgasm.";
+					description = "[npc.Name]发出[npc.a_moan+]，准备迎接[npc2.name]高潮的到来。";
 					break;
 				case SUB_NORMAL:
-					description = "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] for [npc2.name] to reach [npc2.her] orgasm.";
+					description = "[npc.Name]发出[npc.a_moan+]，准备迎接[npc2.name]高潮的到来。";
 					break;
 				case SUB_RESISTING:
 					if(Main.sex.isSpectator(Main.sex.getCharacterPerformingAction())) {
-						description = "Not liking what [npc.sheIs] seeing, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(realise)] that [npc2.nameIs] about to orgasm.";
+						description = "并不像[npc.Name]看到那样，[npc.Name]发出[npc.a_moan+]时，意识到[npc2.nameIs]要高潮了。";
 					} else {
-						description = "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] desperately [npc.verb(try)] to pull away from [npc2.name] before [npc2.she] [npc2.verb(orgasm)].";
+						description = "[npc.Name]十分绝望，想要推开即将高潮的[npc2.name]，却只能发出[npc.a_moan+]。";
 					}
 					break;
 			}
@@ -5927,44 +5927,44 @@ public class GenericOrgasms {
 		@Override
 		public String getActionTitle() {
 			if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
-				return "Keep fucking";
+				return "接着操";
 				
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-				return "Request cum";
+				return "请求射精";
 
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-				return "Request cum on [npc.breasts]";
+				return "请求射在[npc.breasts]上";
 				
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-				return "Request cum on [npc.feet]";
+				return "请求射在[npc.feet]上";
 				
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-				return "Request cum on [npc.armpit]";
+				return "请求射在[npc.armpit]上";
 				
 			} else {
-				return "Request creampie";
+				return "请求内射";
 			}
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to keep fucking you with [npc2.her] dildo as [npc2.she] climaxes.";
+				return "你察觉到，[npc2.name]要高潮了。让[npc2.herHim]高潮的时候继续用假屌干你。";
 				
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to fill your stomach with [npc2.her] cum.";
+				return "你察觉到[npc2.name]要高潮了。让[npc2.herHim]通通射在你的肚子里。";
 
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to cum all over your [pc.breasts+].";
+				return "你察觉到[npc2.name]快高潮了。让[npc2.herHim]通通射在你那[pc.breasts+]上。";
 				
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to cum all over your [pc.feet+].";
+				return "你能感到[npc2.name]快高潮了。让[npc2.herHim]全射在你[pc.feet+]上。";
 				
 			} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to cum all over your [pc.armpit+].";
+				return "你能感到[npc2.name]快高潮了。让[npc2.herHim]全射在你[pc.armpit+]上。";
 				
 			} else {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to fill you with [npc2.her] cum.";
+				return "你察觉到[npc2.name]要高潮了。让[npc2.herHim]尽管射出来。";
 			}
 		}
 
@@ -6010,93 +6010,93 @@ public class GenericOrgasms {
 			
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
 				if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
-					sb.append("Although not able to speak, [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to keep");
+					sb.append("尽管无法说话，[npc.name]设法用一系列呜咽声传达[npc.she]想要[npc2.name]继续");
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						sb.append(" pounding [npc.her] [npc.pussy+] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("耸动着[npc.pussy+]，继续刺激着高潮中的[npc2.name]。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						sb.append(" pounding [npc.her] [npc.asshole+] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("耸动着[npc.asshole+]，继续刺激着高潮中的[npc2.name]。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						sb.append(" pounding [npc.her] [npc.nipple+] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("耸动着[npc.nipple+]，继续刺激着高潮中的[npc2.name]。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						sb.append(" pounding [npc.her] [npc.spinneret+] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("耸动着[npc.spinneret+]，继续刺激着高潮中的[npc2.name]。");
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 						sb.append(" pounding [npc.her] [npc.tussy+] as [npc2.she] [npc2.verb(orgasm)].");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						sb.append(" fucking [npc.her] [npc.breasts+] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("耸动着[npc.breasts+]，继续刺激着高潮中的[npc2.name]。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-						sb.append(" fucking [npc.her] [npc.armpit+] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("耸动着[npc.armpit+]，继续刺激着高潮中的[npc2.name]。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						sb.append(" fucking [npc.her] [npc.feet+] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("耸动着[npc.feet+]，继续刺激着高潮中的[npc2.name]。");
 						
 					} else {
-						sb.append(" fucking [npc.herHim] as [npc2.she] [npc2.verb(orgasm)].");
+						sb.append("晃动着身体，继续刺激着高潮中的[npc2.name]。");
 					}
 	
 				} else {
-					sb.append("Although not able to speak, [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)]");
+					sb.append("尽管无法说话，[npc.name]设法用一系列呜咽声传达[npc.she]想要");
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						sb.append(" [npc2.name] to cum in [npc.her] [npc.pussy+].");
+						sb.append("[npc2.she]在[npc.pussy+]里射了个爽。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						sb.append(" [npc2.name] to cum in [npc.her] [npc.asshole+].");
+						sb.append("[npc2.she]在[npc.asshole+]里射了个爽。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						sb.append(" [npc2.name] to cum in [npc.her] [npc.nipple+].");
+						sb.append("[npc2.she]在[npc.nipple+]里射了个爽。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						sb.append(" [npc2.name] to cum in [npc.her] [npc.spinneret+].");
+						sb.append("[npc2.she]在[npc.spinneret+]里射了个爽。");
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 						sb.append(" [npc2.name] to cum in [npc.her] [npc.tussy+].");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						sb.append(" [npc2.name] to cum all over [npc.her] [npc.breasts+].");
+						sb.append("[npc2.she]在[npc.breasts+]里射了个爽。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						sb.append(" [npc2.name] to cum all over [npc.her] [npc.feet+].");
+						sb.append("[npc2.she]在[npc.feet+]间射了个爽。");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-						sb.append(" [npc2.name] to cum all over [npc.her] [npc.armpit+].");
+						sb.append("[npc2.she]在[npc.armpit+]里射了个爽。");
 						
 					} else {
-						sb.append(" [npc2.namePos] cum.");
+						sb.append("[npc2.namePos]的精液。");
 					}
 				}
 				
 			} else {
 				if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
-					sb.append("Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence and [npc.verb(cry)] out for [npc2.name] to keep");
+					sb.append("[npc.name]被操得眼神迷乱，浪叫连连，在淫荡的呻吟间总算艰难地组织语言，大喊着求[npc2.name]继续，");
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						sb.append(" pounding [npc.her] [npc.pussy+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking me!)]");
+						sb.append("耸动着[npc.pussy+]，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我！)]");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						sb.append(" pounding [npc.her] [npc.asshole+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking my ass!)]");
+						sb.append("耸动着[npc.asshole+]，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我的屁眼！)]");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						sb.append(" pounding [npc.her] [npc.nipple+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking my [npc.nipple(true)]!)]");
+						sb.append("耸动着[npc.nipple+]，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我的乳穴！)]");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						sb.append(" pounding [npc.her] [npc.spinneret+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking my spinneret!)]");
+						sb.append("耸动着[npc.spinneret+]，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我的丝穴！)]");
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 						sb.append(" pounding [npc.her] [npc.tussy+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking my tussy!)]");
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						sb.append(" fucking [npc.her] [npc.breasts+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking my tits!)]");
+						sb.append("耸动着[npc.breasts+]，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我的奶子！)]");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						sb.append(" fucking [npc.her] [npc.feet+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking my [npc.feet]!)]");
+						sb.append("耸动着[npc.pussy+]，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我的[npc.feet]！)]");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-						sb.append(" fucking [npc.her] [npc.armpit+] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking my [npc.armpit]!)]");
+						sb.append("耸动着[npc.armpit+]，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我的腋穴！)]");
 						
 					} else {
-						sb.append(" fucking [npc.herHim] as [npc2.she] [npc2.verb(orgasm)], [npc.speech(Fuck! Yes! Keep fucking me!)]");
+						sb.append("耸动着身体，继续刺激着高潮中的[npc2.name]，[npc.speech(好爽！就是这样！用力操我！)]");
 					}
 	
 				} else if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
@@ -6105,23 +6105,23 @@ public class GenericOrgasms {
 						petName = true;
 					}
 
-					sb.append("Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence and [npc.verb(cry)] out for [npc2.name] to cum,");
+					sb.append("[npc.name]被操得眼神迷乱，浪叫连连，在淫荡的呻吟间总算艰难地组织语言，大喊着求[npc2.name]射进来，");
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						sb.append(" [npc.speech(Finish inside of me if you want"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+						sb.append("[npc.speech(别拔出去了"+(petName?"，[#npc.getPetName(npc2)]":"")+"！你能填满这个套吗！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						sb.append(" [npc.speech(Finish inside of me if you want"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+						sb.append("[npc.speech(别拔出去了"+(petName?"，[#npc.getPetName(npc2)]":"")+"！你能填满这个套吗！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						sb.append(" [npc.speech(Finish inside of me if you want"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+						sb.append("[npc.speech(别拔出去了"+(petName?"，[#npc.getPetName(npc2)]":"")+"！你能填满这个套吗！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						sb.append(" [npc.speech(Finish inside of me if you want"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+						sb.append("[npc.speech(别拔出去了"+(petName?"，[#npc.getPetName(npc2)]":"")+"！你能填满这个套吗！)]");
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 						sb.append(" [npc.speech(Finish inside of me if you want"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
 
 					} else {
-						sb.append(" [npc.speech(Yes! Cum for me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+						sb.append("[npc.speech(来！射给我吧"+(petName?"，[#npc.getPetName(npc2)]":"")+"！全喷进套套里吧！)]");
 					}
 					
 				} else {
@@ -6130,37 +6130,37 @@ public class GenericOrgasms {
 						petName = true;
 					}
 
-					sb.append("Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out for [npc2.namePos] cum,");
+					sb.append("在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，狂叫着求[npc2.name]射出来，");
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 						sb.append(((Main.sex.getCharacterPerformingAction().isVisiblyPregnant() || !Main.sex.getCharacterPerformingAction().isImpregnationPhysicallyPossible())
-										?" [npc.speech(Fuck! Cum in me"+(petName?", [#npc.getPetName(npc2)]":"")+"! I need your cum!)]"
-										:" [npc.speech(Breed me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Cum in me! I need your cum!)]"));
+										?"[npc.speech(操啊！射在我里面"+(petName?"，[#npc.getPetName(npc2)]":"")+"！我好想要你的精液！)]"
+										:"[npc.speech(给我授种吧"+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在我里面！我好想要你的精液！)]"));
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						sb.append(" [npc.speech(Fuck! Cum in me"+(petName?", [#npc.getPetName(npc2)]":"")+"! I need your cum!)]");
+						sb.append(" [npc.speech(操啊！射我里面"+(petName?", [#npc.getPetName(npc2)]":"")+"！好想要你的精液！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						sb.append(" [npc.speech(Fuck! Cum in me"+(petName?", [#npc.getPetName(npc2)]":"")+"! I need your cum!)]");
+						sb.append(" [npc.speech(操啊！射我里面"+(petName?", [#npc.getPetName(npc2)]":"")+"！好想要你的精液！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						sb.append(" [npc.speech(Fuck! Cum in me"+(petName?", [#npc.getPetName(npc2)]":"")+"! I need your cum!)]");
+						sb.append(" [npc.speech(操啊！射我里面"+(petName?", [#npc.getPetName(npc2)]":"")+"！好想要你的精液！)]");
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 						sb.append(" [npc.speech(Fuck! Cum in me"+(petName?", [#npc.getPetName(npc2)]":"")+"! I need your cum!)]");
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						sb.append(" [npc.speech(Yes! Cum for me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Cover my tits with your cum!)]");
+						sb.append(" [npc.speech(射出来！"+(petName?"，[#npc.getPetName(npc2)]":"")+"！射得我满奶子都是！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						sb.append(" [npc.speech(Fuck! Yes! Cum all over my [npc.feet]"+(petName?", [#npc.getPetName(npc2)]":"")+"!)]");
+						sb.append("[npc.speech(操！太棒了！全射到我的[npc.feet]上吧"+(petName?"，[#npc.getPetName(npc2)]":"")+"！)]");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-						sb.append(" [npc.speech(Cum for me"+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to taste your cum!)]");
+						sb.append(" [npc.speech(射出来！"+(petName?"，[#npc.getPetName(npc2)]":"")+"！让我尝尝！)]");
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-						sb.append(" [npc.speech(Fuck! Yes! Cum all over my [npc.armpit]"+(petName?", [#npc.getPetName(npc2)]":"")+"!)]");
+						sb.append("[npc.speech(操！太棒了！全射到我的[npc.armpit]上吧"+(petName?"，[#npc.getPetName(npc2)]":"")+"！)]");
 						
 					} else {
-						sb.append(" [npc.speech(Cum for me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Don't pull out!)]");
+						sb.append("[npc.speech(射给我吧"+(petName?"，[#npc.getPetName(npc2)]":"")+"！别拔出去哦！)]");
 					}
 				}
 			}
@@ -6169,36 +6169,36 @@ public class GenericOrgasms {
 				if(Main.sex.getCharacterTargetedForSexAction(this).isSpeechMuffled() || Main.sex.getCharacterTargetedForSexAction(this).isMute()) {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
-								+"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] [npc2.verb(let)] out a positive-sounding [npc2.moan] in order to let [npc.name] know that that's exactly what [npc2.sheHasFull] planned.");
+								+"[npc2.name]听到[npc.Name]的问题，笑了笑，发出愉悦的[npc2.moan]，让[npc.Name]明白，这正中下怀。");
 						
 					} else {
 						sb.append("<br/><br/>"
-								+"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this,"
-								+ " [npc2.name] [npc2.verb(let)] out a negative-sounding [npc2.moan] in order to let [npc.name] know that [npc2.sheIs] not interested in listening to anything [npc.sheHasFull] to say.");
+								+"[npc2.her]听到[npc.Name]这么问，皱起眉头，"
+								+ "[npc2.name]发出否定的[npc2.moan]，让[npc.Name]明白，[npc2.name]根本不想听[npc.sheHasFull]说这些。");
 					}
 					
 				} else {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly replies in the positive, ",
-									"Letting out [npc.a_moan+] after hearing what it is [npc.nameIs] asking of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]的问题，笑了笑，迅速积极地回答，",
+									"在听清[npc.nameIs]问[npc2.herHim]后发出了[npc.a_moan+]，[npc2.name]回应道，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(Sure, if that's what you want!)]",
-								"[npc2.speech(Sounds good to me!)]",
-								"[npc2.speech(Sure thing! I'm going to enjoy this!)]"));
+								"[npc2.speech(好吧，如你所愿！)]",
+								"[npc2.speech(感觉很适合我呢！)]",
+								"[npc2.speech(没问题呀！我会喜欢上这个的！)]"));
 						
 					} else {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly [npc2.verb(shut)] [npc.herHim] down, ",
-									"Clearly not liking the fact that [npc.nameIs] asking something of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]问这个，皱起眉头让[npc.herHim]闭嘴，",
+									"[npc2.name]很显然不想听[npc.NameIs]问这些关于[npc2.herHim]的事，便回复说，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(I'll do whatever I feel like doing!)]",
-								"[npc2.speech(I'm not listening to you!)]",
-								"[npc2.speech(I'll do what I want!)]"));
+								"[npc2.speech(我会为所欲为哦！)]",
+								"[npc2.speech(我才不听你的！)]",
+								"[npc2.speech(我会为所欲为哦！)]"));
 					}
 				}
 			}
@@ -6287,12 +6287,12 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Request knot";
+			return "请求锁结";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to knot you and fill you with [npc2.her] cum.";
+			return "你察觉到[npc2.name]要高潮了。让[npc2.herHim]锁结，然后灌满。";
 		}
 
 		@Override
@@ -6341,33 +6341,33 @@ public class GenericOrgasms {
 			StringBuilder sb = new StringBuilder();
 			
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
-				sb.append("Although not able to speak, [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to knot [npc.herHim] and cum deep inside");
+				sb.append("尽管[npc.name]无法说话，但[npc.she]仍设法用一系列呜咽声传达[npc.she]想要被[npc2.name]锁结并射进");
 				
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					sb.append(" [npc.her] [npc.pussy+].");
+					sb.append("[npc.her][npc.pussy+]里。");
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					sb.append(" [npc.her] [npc.asshole+].");
+					sb.append("[npc.her][npc.asshole+]里。");
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-					sb.append(" [npc.her] [npc.nipple+].");
+					sb.append("[npc.her][npc.nipple+]里。");
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE_CROTCH)) {
-					sb.append(" [npc.her] [npc.nipple+].");
+					sb.append("[npc.her][npc.nipple+]里。");
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					sb.append(" [npc.her] [npc.spinneret+].");
+					sb.append("[npc.her][npc.spinneret+]里。");
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					sb.append(" [npc.her] [npc.tussy+].");
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					sb.append(" [npc.her] [npc.urethraPenis+].");
+					sb.append("[npc.her][npc.urethraPenis+]里。");
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					sb.append(" [npc.her] [npc.urethraVagina+].");
+					sb.append("[npc.her][npc.urethraVagina+]里。");
 					
 				} else {
-					sb.append(" of [npc.herHim]");
+					sb.append("[npc.herHim]体内");
 				}
 				
 			} else {
@@ -6377,33 +6377,33 @@ public class GenericOrgasms {
 						petName = true;
 					}
 
-					sb.append("Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence and [npc.verb(cry)] out for [npc2.name] to knot [npc.herHim] and cum deep inside");
+					sb.append("[npc.name]被操得眼神迷乱，浪叫连连，在淫荡的呻吟间总算艰难地组织语言，大喊着求[npc2.name]在体内成结然后射进");
 					
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						sb.append(" [npc.her] [npc.pussy+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside my pussy and fill up that condom!)]");
+						sb.append("[npc.her][npc.pussy+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在我的[npc.pussy]里射出来，你能填满这个套吗？)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						sb.append(" [npc.her] [npc.asshole+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside my ass and fill up that condom!)]");
+						sb.append("[npc.her][npc.asshole+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在我的屁股里射出来，你能填满这个套吗？)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						sb.append(" [npc.her] [npc.nipple+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside my nipple and fill up that condom!)]");
+						sb.append("[npc.her][npc.nipple+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在我的乳头里射出来，你能填满这个套吗？)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE_CROTCH)) {
-						sb.append(" [npc.her] [npc.nippleCrotch+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me and fill up that condom!)]");
+						sb.append("[npc.her][npc.nippleCrotch+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在我这射出来，你能填满这个套吗？)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						sb.append(" [npc.her] [npc.spinneret+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me and fill up that condom!)]");
+						sb.append("[npc.her][npc.spinneret+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在我的丝穴里射出来，你能填满这个套吗？)]");
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 						sb.append(" [npc.her] [npc.tussy+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me and fill up that condom!)]");
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-						sb.append(" [npc.her] [npc.urethraPenis+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me and fill up that condom!)]");
+						sb.append("[npc.her][npc.urethraPenis+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在我的尿道里射出来，你能填满这个套吗？)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-						sb.append(" [npc.her] [npc.urethraVagina+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me and fill up that condom!)]");
+						sb.append("[npc.her][npc.urethraVagina+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在我的尿道里射出来，你能填满这个套吗？)]");
 	
 					} else {
-						sb.append(" of [npc.herHim], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me and fill up that condom!)]");
+						sb.append("[npc.herHim]体内，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在里面射出来，你能填满这个套吗？)]");
 					}
 					
 				} else {
@@ -6412,36 +6412,36 @@ public class GenericOrgasms {
 						petName = true;
 					}
 					
-					sb.append("Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence and [npc.verb(cry)] out for [npc2.name] to knot [npc.herHim] and cum deep inside");
+					sb.append("[npc.name]被操得眼神迷乱，浪叫连连，在淫荡的呻吟间总算艰难地组织语言，大喊着求[npc2.name]在体内成结然后射进");
 					
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						sb.append(" [npc.her] [npc.pussy+],"
+						sb.append("[npc.her][npc.pussy+]，"
 									+(Main.sex.getCharacterPerformingAction().isVisiblyPregnant()
-											?" [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of me and fill my pussy with your cum!)]"
-											:" [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill my pussy with your cum and breed me!)]"));
+											?"[npc.speech(锁结我"+(petName?"，[#npc.getPetName(npc2)]":"")+"！然后灌满我的小穴！)]"
+											:"[npc.speech(锁结我"+(petName?"，[#npc.getPetName(npc2)]":"")+"！然后灌满我的小穴！让我怀上你的崽！)]"));
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						sb.append(" [npc.her] [npc.asshole+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside my ass!)]");
+						sb.append("[npc.her][npc.asshole+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！灌满我的屁眼！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						sb.append(" [npc.her] [npc.nipple+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside my nipple!)]");
+						sb.append("[npc.her][npc.nipple+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！灌满我的乳头小穴！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE_CROTCH)) {
-						sb.append(" [npc.her] [npc.nippleCrotch+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me!)]");
+						sb.append("[npc.her][npc.nippleCrotch+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在这射出来！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						sb.append(" [npc.her] [npc.spinneret+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me!)]");
+						sb.append("[npc.her][npc.spinneret+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在这射出来！)]");
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 						sb.append(" [npc.her] [npc.tussy+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me!)]");
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-						sb.append(" [npc.her] [npc.urethraPenis+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me!)]");
+						sb.append("[npc.her][npc.urethraPenis+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在这射出来！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-						sb.append(" [npc.her] [npc.urethraVagina+], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me!)]");
+						sb.append("[npc.her][npc.urethraVagina+]，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在这射出来！)]");
 	
 					} else {
-						sb.append(" of [npc.herHim], [npc.speech(Knot me"+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside me!)]");
+						sb.append("[npc.herHim]体内，[npc.speech(让我感受你的结"+(petName?"，[#npc.getPetName(npc2)]":"")+"！就在这射出来！)]");
 					}
 				}
 			}
@@ -6450,36 +6450,36 @@ public class GenericOrgasms {
 				if(Main.sex.getCharacterTargetedForSexAction(this).isSpeechMuffled() || Main.sex.getCharacterTargetedForSexAction(this).isMute()) {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
-								+"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] [npc2.verb(let)] out a positive-sounding [npc2.moan] in order to let [npc.name] know that that's exactly what [npc2.sheHasFull] planned.");
+								+"[npc2.name]听到[npc.Name]的问题，笑了笑，发出愉悦的[npc2.moan]，让[npc.Name]明白，这正中下怀。");
 						
 					} else {
 						sb.append("<br/><br/>"
-								+"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this,"
-								+ " [npc2.name] [npc2.verb(let)] out a negative-sounding [npc2.moan] in order to let [npc.name] know that [npc2.sheIs] not interested in listening to anything [npc.sheHasFull] to say.");
+								+"[npc2.her]听到[npc.Name]这么问，皱起眉头，"
+								+ "[npc2.name]发出否定的[npc2.moan]，让[npc.Name]明白，[npc2.name]根本不想听[npc.sheHasFull]说这些。");
 					}
 					
 				} else {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly replies in the positive, ",
-									"Letting out [npc.a_moan+] after hearing what it is [npc.nameIs] asking of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]的问题，笑了笑，迅速积极地回答，",
+									"在听清[npc.nameIs]问[npc2.herHim]后发出了[npc.a_moan+]，[npc2.name]回应道，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(Sure, if that's what you want!)]",
-								"[npc2.speech(Sounds good to me!)]",
-								"[npc2.speech(Sure thing! I'm going to enjoy this!)]"));
+								"[npc2.speech(好吧，如你所愿！)]",
+								"[npc2.speech(感觉很适合我呢！)]",
+								"[npc2.speech(没问题呀！我会喜欢上这个的！)]"));
 						
 					} else {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly [npc2.verb(shut)] [npc.herHim] down, ",
-									"Clearly not liking the fact that [npc.nameIs] asking something of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]问这个，皱起眉头让[npc.herHim]闭嘴，",
+									"[npc2.name]很显然不想听[npc.NameIs]问这些关于[npc2.herHim]的事，便回复说，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(I'll do whatever I feel like doing!)]",
-								"[npc2.speech(I'm not listening to you!)]",
-								"[npc2.speech(I'll do what I want!)]"));
+								"[npc2.speech(我会为所欲为哦！)]",
+								"[npc2.speech(我才不听你的！)]",
+								"[npc2.speech(我会为所欲为哦！)]"));
 					}
 				}
 			}
@@ -6586,73 +6586,73 @@ public class GenericOrgasms {
 			if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 				if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive() && !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
 					return (performerSpeechMuffled
-								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] to receive [npc.her] creampie."
-								:" With a hysterical squeal, [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Aah!~ Now I've got you! Cum in me"+(knowsName?", [npc2.name]":"")+"! ~Ooh!~ ~Yes!~ Give me your babies!)]");
+								?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被内射了。"
+								:"伴随着歇斯底里的尖叫，[npc.she]大叫着：[npc.speechNoExtraEffects(~啊！~我抓住你了！射在我"+(knowsName?"里，[npc2.name]":"里面")+"！哦！~ ~啊！~给我你的子种们！)]");
 				}
 				return (performerSpeechMuffled
-								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] to receive [npc.her] creampie."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Cum in my pussy"+(knowsName?", [npc2.name]":"")+"! ~Aah!~ Give me a nice big creampie!)]");
+								?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被内射了。"
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(~嗯~啊~射到我的小穴里！"+(knowsName?"，[npc2.name]":"")+"！啊！用你的精液喂饱我！)]");
 
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
 				return (performerSpeechMuffled
-								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] to receive [npc.her] creampie."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Cum in my ass"+(knowsName?", [npc2.name]":"")+"! ~Aah!~ Give me a nice big creampie!)]");
+								?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被内射了。"
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(~嗯~啊~射到我的屁眼里！"+(knowsName?"，[npc2.name]":"")+"！啊！用你的精液喂饱我！)]");
 				
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
 				return (performerSpeechMuffled
-							?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] to receive [npc.her] creampie."
-							:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Cum in my spinneret"+(knowsName?", [npc2.name]":"")+"! ~Aah!~ Give me a nice big creampie!)]");
+							?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被内射了。"
+							:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(~嗯！~啊！~射到我的丝囊里！"+(knowsName?"，[npc2.name]":"")+"！啊！用你的精液喂饱我！)]");
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 				return (performerSpeechMuffled
-							?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] to receive [npc.her] creampie."
+							?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被内射了。"
 							:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Cum in my tussy"+(knowsName?", [npc2.name]":"")+"! ~Aah!~ Give me a nice big creampie!)]");
 
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
 				return (performerSpeechMuffled
-								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] to receive [npc.her] creampie."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Cum in me"+(knowsName?", [npc2.name]":"")+"! ~Aah!~ Fill my balls with your cum!)]");
+								?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被内射了。"
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(~嗯~啊~射出来！"+(knowsName?"，[npc2.name]":"")+"！啊！用你的精液填满我的蛋蛋！)]");
 				
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
 				return (performerSpeechMuffled
 								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] to receive [npc.her] creampie."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Cum in me"+(knowsName?", [npc2.name]":"")+"! ~Aah!~ Give me a nice big creampie!)]");
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(~嗯~啊~射出来！"+(knowsName?"，[npc2.name]":"")+"！啊！用你的精液喂饱我！)]");
 				
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS)) {
 				return (performerSpeechMuffled
-							?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(prepare)] for [npc2.name] to cum all over [npc.her] cock."
-							:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(That's it! ~Mmm!~ Cum all over my cock"+(knowsName?", [npc2.name]":"")+"!)]");
+							?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被[npc2.name]射在[npc.her]的阴茎上了。"
+							:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(就是这样！~嗯！~射满我的鸡巴"+(knowsName?"，[npc2.name]":"")+"！)]");
 		
 			}
 			
 		} else { // Dildo:
 			if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 				return (performerSpeechMuffled
-								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(feel)] [npc.herself] being filled by [npc2.namePos] toy."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Fill my pussy with that toy"+(knowsName?", [npc2.name]":"")+"!)]");
+								?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被[npc2.namePos]的玩具填满了。"
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(嗯~啊~把它狠狠地塞到我的小穴里"+(knowsName?"，[npc2.name]":"")+"！)]");
 
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
 				return (performerSpeechMuffled
-								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(feel)] [npc.herself] being filled by [npc2.namePos] toy."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Fill my ass with that toy"+(knowsName?", [npc2.name]":"")+"!)]");
+								?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被[npc2.namePos]的玩具填满了。"
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(嗯~啊~把它狠狠地塞到我的屁眼里"+(knowsName?"，[npc2.name]":"")+"！)]");
 				
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
 				return (performerSpeechMuffled
-						?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(feel)] [npc.herself] being filled by [npc2.namePos] toy."
-						:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Fill my spinneret with that toy"+(knowsName?", [npc2.name]":"")+"!)]");
+						?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被[npc2.namePos]的玩具填满了。"
+						:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(嗯~啊~把它狠狠地塞到我的丝囊里"+(knowsName?"，[npc2.name]":"")+"！)]");
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 				return (performerSpeechMuffled
-						?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(feel)] [npc.herself] being filled by [npc2.namePos] toy."
+						?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被[npc2.namePos]的玩具填满了。"
 						:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Fill my tussy with that toy"+(knowsName?", [npc2.name]":"")+"!)]");
 
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
 				return (performerSpeechMuffled
-								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(feel)] [npc.herself] being filled by [npc2.namePos] toy."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Fill my cock with that toy"+(knowsName?", [npc2.name]":"")+"!)]");
+								?"[npc.she]嘴被堵住了，只能发出模糊不清的[npc.moan]，要准备好被[npc2.namePos]的玩具填满了。"
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(嗯~啊~把它狠狠地塞到我的鸡巴里"+(knowsName?"，[npc2.name]":"")+"！)]");
 				
 			} else if(isAreaFuckedByTarget(sexAction, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
 				return (performerSpeechMuffled
 								?" With [npc.her] mouth being blocked, [npc.sheIs] only able to make a very muffled [npc.moan] as [npc.she] [npc.verb(feel)] [npc.herself] being filled by [npc2.namePos] toy."
-								:" With a desperate [npc.moan], [npc.she] [npc.verb(cry)] out, [npc.speechNoExtraEffects(~Ooh!~ ~Yes!~ Fill me with that toy"+(knowsName?", [npc2.name]":"")+"!)]");
+								:"[npc.she]发出迷乱的[npc.moan]，尖叫道，[npc.speechNoExtraEffects(嗯~啊~把它狠狠地塞到进来"+(knowsName?"，[npc2.name]":"")+"！)]");
 			}
 		}
 		
@@ -6676,17 +6676,17 @@ public class GenericOrgasms {
 		@Override
 		public String getActionTitle() {
 			if(isFrottingOrgasm()) {
-				return "Force frotting orgasm";
+				return "强制磨枪高潮";
 			}
-			return "Force creampie";
+			return "强制内射";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(isFrottingOrgasm()) {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Use your advantageous position to force [npc2.herHim] to cum all over your [pc.cock+].";
+				return "你能感觉到[npc2.name]快高潮了。凭借你有利的位置强迫[npc2.herHim]在你[pc.cock+]上射精。";
 			}
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Use your advantageous position to force [npc2.herHim] to cum inside of you.";
+			return "你能感觉到[npc2.name]快高潮了。凭借你有利的位置强迫[npc2.herHim]在你体内射精。";
 		}
 
 		@Override
@@ -6742,69 +6742,69 @@ public class GenericOrgasms {
 			if(isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 					if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive() && !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
-						return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.namePos] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+						return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.namePos][npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 					}
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]鸡巴的尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]淫穴的尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]的丝囊穴。"
 							+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] [npc.tussy+]."
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep down [npc.her] throat."
-							+ " With a desperate, gurgling [npc.moan], [npc.she] [npc.verb(prepare)] to swallow all of the cum that's about to be pumped inside of [npc.herHim].";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]的喉咙。"
+							+ "[npc.she]狂乱且咕噜噜地[npc.moan]着，准备吞下即将射进体内的所有精液。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to forcefully press [npc.her] own [npc.cock+] against [npc2.hers]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫自己[npc.cock+]压向[npc2.namePos]的阴茎。"
 							+ getForcedCreampieSpeech(this);
 				}
-				return "Error: Forced creampie not accounted for. Please let Innoxia know!";
+				return "错误：强制内射未计算在内。请联系Innoxia！";
 				
 			} else { // Dildo:
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]鸡巴的尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]淫穴的尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]的丝囊穴。"
 							+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep into [npc.her] [npc.tussy+]."
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] [npc.verb(use)] [npc.her] advantageous position to force [npc2.her] [npc2.cock+] deep down [npc.her] throat.";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]用[npc.her]有利的位置强迫[npc2.her][npc2.cock+]深深插入[npc.her]的喉咙。";
 				}
-				return "Error: Forced creampie area not accounted for. Please let Innoxia know!";
+				return "错误：强制内射未计入。请联系Innoxia！";
 			}
 		}
 
@@ -6863,12 +6863,12 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Hug-lock";
+			return "抱锁";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Quickly wrap your [npc.arms] around [npc2.her] lower back, and, by tightly hugging [npc2.herHim] into you, force [npc2.herHim] to cum inside of you.";
+			return "你能感觉到[npc2.name]快高潮了。你迅速用[npc.arms]环住[npc2.her]的下半身，紧紧地把[npc2.herHim]抱向你，强迫[npc2.herHim]在你体内射精。";
 		}
 
 		@Override
@@ -6902,74 +6902,74 @@ public class GenericOrgasms {
 			if(isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 					if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive() && !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
-						return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-								+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+						return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+								+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 					}
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-								+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+								+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-								+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+								+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 								+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-								+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+								+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 						+ getForcedCreampieSpeech(this);
 				
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
 							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.tussy+]."
 						+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-								+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat."
-							+ " With a desperate, gurgling [npc.moan], [npc.she] [npc.verb(prepare)] to swallow all of the cum that's about to be pumped inside of [npc.herHim].";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+								+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深顶入[npc.her]的喉咙。"
+							+ "[npc.she]狂乱且咕噜噜地[npc.moan]着，准备吞下即将射进体内的所有精液。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] against [npc.hers]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]抵住[npc.hers]的阴茎。"
 							+ getForcedCreampieSpeech(this);
 				}
-				return "Error: Hug-lock area not accounted for. Please let Innoxia know!";
+				return "错误：抱锁区域未计算在内。请联系Innoxia！";
 				
 			} else { // Dildo:
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-							+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.arms]抱住[npc2.her]的下背部。"
+							+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
@@ -6978,9 +6978,9 @@ public class GenericOrgasms {
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.her] lower back,"
-								+ " and, tightly hugging [npc2.herHim], [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat.";
+								+ "然后，紧紧搂住[npc2.herHim]，强迫[npc2.cock+]深深顶入[npc.her]的喉咙。";
 				}
-				return "Error: Hug-lock area not accounted for. Please let Innoxia know!";
+				return "错误：抱锁区域未计算在内。请联系Innoxia！";
 			}
 		}
 
@@ -7039,12 +7039,12 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Leg-lock";
+			return "叉腿禁锢";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Quickly wrap your [npc.legs] around [npc2.herHim] and force [npc2.herHim] to cum inside of you.";
+			return "你能感到[npc2.name]快高潮了。你迅速用[npc.legs]夹住[npc2.herHim]，强迫[npc2.herHim]在你体内射精。";
 		}
 
 		@Override
@@ -7078,72 +7078,72 @@ public class GenericOrgasms {
 			if(isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 					if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive() && !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
-						return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+						return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速抱住[npc2.her]的下背部。"
+								+ "强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 					}
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速抱住[npc2.her]的下背部。"
+								+ "强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速抱住[npc2.her]的下背部。"
+								+ "强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 								+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速抱住[npc2.her]的下背部。"
+								+ "强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 								+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速抱住[npc2.her]的下背部。"
+								+ "强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 								+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-							+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速抱住[npc2.her]的下背部。"
+							+ "强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 							+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速抱住[npc2.her]的下背部。"
 							+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] [npc.tussy+]."
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) { // This shouldn't really ever be encountered:
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back, before letting out a desperate, muffled [npc.moan].";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速锁住[npc2.her]的下背部，发出一阵渴望、沉闷的[npc.moan]。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-							+ " forcing [npc2.her] [npc2.cock+] against [npc.hers]."
+							+ "强迫[npc2.her][npc2.cock+]抵住[npc.hers]的阴茎。"
 							+ getForcedCreampieSpeech(this);
 				}
-				return "Error: Leg-lock area not accounted for. Please let Innoxia know!";
+				return "错误：腿锁区域未计算在内。请联系Innoxia！";
 				
 			} else { // Dildo:
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to orgasm, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便迅速用[npc.legs]锁住[npc2.her]的下背部，"
+								+ "强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to orgasm, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便迅速用[npc.legs]锁住[npc2.her]的下背部，"
+								+ "强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to orgasm, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便迅速用[npc.legs]锁住[npc2.her]的下背部，"
+								+ "强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 								+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to orgasm, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-								+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便迅速用[npc.legs]锁住[npc2.her]的下背部，"
+								+ "强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 								+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to orgasm, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
-							+ " forcing [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便迅速用[npc.legs]锁住[npc2.her]的下背部，"
+							+ "强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 							+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to orgasm, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back,"
@@ -7151,9 +7151,9 @@ public class GenericOrgasms {
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) { // This shouldn't really ever be encountered:
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to orgasm, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.legs] around [npc2.her] lower back, before letting out a desperate, muffled [npc.moan].";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便用[npc.legs]快速环住[npc2.her]的下背部，发出渴望、沉闷的[npc.moan]。";
 				}
-				return "Error: Leg-lock area not accounted for. Please let Innoxia know!";
+				return "错误：腿锁区域未计算在内。请联系Innoxia！";
 			}
 		}
 
@@ -7204,13 +7204,13 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Tail-lock";
+			return "尾锁";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm."
-					+ " Quickly wrap your prehensile [npc.tail] around [npc2.her] lower back, and, by tightly pulling [npc2.herHim] into you, force [npc2.herHim] to cum inside of you.";
+			return "你能感觉到[npc2.name]马上就要高潮了。"
+					+ "你迅速用你灵活可控的[npc.tail]环住对方的下背部，紧紧拉近距离，强迫[npc2.herHim]射在里面。";
 		}
 
 		@Override
@@ -7245,74 +7245,74 @@ public class GenericOrgasms {
 			if(isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 					if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive() && !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
-						return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+						return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 					}
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
 							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.tussy+]."
 						+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat."
-							+ " With a desperate, gurgling [npc.moan], [npc.she] [npc.verb(prepare)] to swallow all of the cum that's about to be pumped inside of [npc.herHim].";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的喉咙。"
+							+ "[npc.she]狂乱且咕噜噜地[npc.moan]着，准备吞下即将射进体内的所有精液。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] against [npc.hers]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.her][npc2.cock+]抵在[npc.hers]的阴茎上。"
 							+ getForcedCreampieSpeech(this);
 				}
-				return "Error: Tail-lock area not accounted for. Please let Innoxia know!";
+				return "错误：尾锁区域未计算在内。请联系Innoxia！";
 				
 			} else { // Dildo:
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tail]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
@@ -7321,9 +7321,9 @@ public class GenericOrgasms {
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tail] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat.";
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的喉咙。";
 				}
-				return "Error: Tail-lock area not accounted for. Please let Innoxia know!";
+				return "错误：尾锁区域未计算在内。请联系Innoxia！";
 			}
 		}
 
@@ -7382,13 +7382,13 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Wing-lock";
+			return "翼锁";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm."
-					+ " Quickly wrap your [npc.wingSize] [npc.wings] around [npc2.her] body, and, by tightly pulling [npc2.herHim] into you, force [npc2.herHim] to cum inside of you.";
+			return "你能感觉到[npc2.name]马上就要高潮了。"
+					+ "你迅速用你[npc.wingSize][npc.wings]环住对方的身体，紧紧拉近距离，强迫[npc2.herHim]射在里面。";
 		}
 
 		@Override
@@ -7422,74 +7422,74 @@ public class GenericOrgasms {
 			if(isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 					if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive() && !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
-						return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+						return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 					}
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
 							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.tussy+]."
 						+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat."
-							+ " With a desperate, gurgling [npc.moan], [npc.she] [npc.verb(prepare)] to swallow all of the cum that's about to be pumped inside of [npc.herHim].";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的喉咙。"
+							+ "[npc.she]狂乱且咕噜噜地[npc.moan]着，准备吞下即将射进体内的所有精液。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] against [npc.hers]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.her][npc2.cock+]抵在[npc.hers]的阴茎上。"
 							+ getForcedCreampieSpeech(this);
 				}
-				return "Error: Tail-lock area not accounted for. Please let Innoxia know!";
+				return "错误：尾锁区域未计算在内。请联系Innoxia！";
 				
 			} else { // Dildo:
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her][npc.wingSize]的[npc.wings]包住[npc2.her]的身体。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
@@ -7498,9 +7498,9 @@ public class GenericOrgasms {
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.wingSize] [npc.wings] around [npc2.her] body,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat.";
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的喉咙。";
 				}
-				return "Error: Tail-lock area not accounted for. Please let Innoxia know!";
+				return "错误：尾锁区域未计算在内。请联系Innoxia！";
 			}
 		}
 
@@ -7559,13 +7559,13 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Tentacle-lock";
+			return "触手捆绑";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm."
-					+ " Quickly wrap your [npc.tentacles] around [npc2.her] lower back, and, by tightly pulling [npc2.herHim] into you, force [npc2.herHim] to cum inside of you.";
+			return "你能感觉到[npc2.name]马上就要高潮了。"
+					+ "你迅速用[npc.tentacles]环住对方的下背部，紧紧拉近距离，强迫[npc2.herHim]射在里面。";
 		}
 
 		@Override
@@ -7599,74 +7599,74 @@ public class GenericOrgasms {
 			if(isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
 					if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isPositive() && !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
-						return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+						return "[npc.name]注意到[npc2.nameIsFull]要射精了，便快速用[npc.tentacles]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 								+ getForcedCreampieSpeech(this);
 					}
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tentacles]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便快速用[npc.tentacles]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便快速用[npc.tentacles]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tentacles]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便快速用[npc.tentacles]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tentacles]缠住[npc2.her]的下背部。"
 							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.tussy+]."
 						+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat."
-							+ " With a desperate, gurgling [npc.moan], [npc.she] [npc.verb(prepare)] to swallow all of the cum that's about to be pumped inside of [npc.herHim].";
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tentacles]缠住[npc2.her]的下背部。"
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的喉咙。"
+							+ "[npc.she]狂乱且咕噜噜地[npc.moan]着，准备吞下即将射进体内的所有精液。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] against [npc.hers]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便快速用[npc.tentacles]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.her][npc2.cock+]抵在[npc.hers]的阴茎上。"
 							+ getForcedCreampieSpeech(this);
 				}
-				return "Error: Tail-lock area not accounted for. Please let Innoxia know!";
+				return "错误：尾锁区域未计算在内。请联系Innoxia！";
 				
 			} else { // Dildo:
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便快速用[npc.tentacles]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.pussy+]。"
 							+ getForcedCreampieSpeech(this);
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+]."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tentacles]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her][npc.asshole+]。"
 							+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] cock's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tentacles]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的阴茎尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] pussy's urethra."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，[npc.she]快速用[npc.her]的[npc.tentacles]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的小穴尿道。"
 						+ getForcedCreampieSpeech(this);
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-							+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep into [npc.her] spinneret."
+					return "[npc.name]注意到[npc2.nameIsFull]要射精了，便快速用[npc.tentacles]缠住[npc2.her]的下背部。"
+							+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的丝囊。"
 						+ getForcedCreampieSpeech(this);
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
@@ -7675,9 +7675,9 @@ public class GenericOrgasms {
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH)) {
 					return "As [npc.name] [npc.verb(realise)] that [npc2.nameIsFull] about to cum, [npc.she] quickly [npc.verb(wrap)] [npc.her] [npc.tentacles] around [npc2.her] lower back,"
-								+ " and, pulling [npc2.herHim] forwards, [npc.she] [npc.verb(force)] [npc2.her] [npc2.cock+] deep down [npc.her] throat.";
+								+ "然后，把[npc2.herHim]向前一推，强迫[npc2.cock+]深深插入[npc.her]的喉咙。";
 				}
-				return "Error: Tail-lock area not accounted for. Please let Innoxia know!";
+				return "错误：尾锁区域未计算在内。请联系Innoxia！";
 			}
 		}
 
@@ -7745,15 +7745,15 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Request pullout";
+			return "请求拔出";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
-				return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to pull [npc2.her] dildo out of you as [npc2.she] [npc2.verb(orgasm)].";
+				return "你能感到[npc2.name]快高潮了。让[npc2.herHim]高潮的时候把[npc2.her]的假阳具从你体内抽出去。";
 			}
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to pull out before [npc2.she] cums.";
+			return "你能感到[npc2.name]快高潮了。让[npc2.herHim]在射精之前从你体内抽出去。";
 		}
 
 		@Override
@@ -7823,49 +7823,49 @@ public class GenericOrgasms {
 			if(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())==SexPace.SUB_RESISTING) {
 				if(Main.sex.getCharacterPerformingAction().isMute()) {
 					if(Main.sex.getOrificesBeingPenetratedBy(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, Main.sex.getCharacterPerformingAction()).isEmpty()) { // Non-orifice penetration
-						return "Although not able to speak, [npc.namePos] distressed struggles make it very clear that [npc.she] [npc.verb(want)] [npc2.name] to pull [npc2.her] [npc2.cock+] away from [npc.herhim].";
+						return "尽管[npc.namePos]无法说话，但[npc.she]痛苦的挣扎清楚地表明了[npc.she]希望[npc2.name]将[npc2.cock+]抽离[npc.herhim]。";
 					} else { // Orifice penetration
 						SexAreaInterface areaPenetrated = Main.sex.getOrificesBeingPenetratedBy(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, Main.sex.getCharacterPerformingAction()).get(0);
 						if(areaPenetrated.isOrifice() && ((SexAreaOrifice)areaPenetrated).isInternalOrifice()) {
-							return "Although not able to speak, [npc.namePos] distressed struggles make it very clear that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.herhim].";
+							return "尽管[npc.namePos]无法说话，但[npc.she]痛苦的挣扎清楚地表明了[npc.she]希望[npc2.name]从[npc.herhim]体内抽离。";
 						} else {
-							return "Although not able to speak, [npc.namePos] distressed struggles make it very clear that [npc.she] [npc.verb(want)] [npc2.name] to pull [npc2.her] [npc2.cock+] away from [npc.herhim].";
+							return "尽管[npc.namePos]无法说话，但[npc.she]痛苦的挣扎清楚地表明了[npc.she]希望[npc2.name]将[npc2.cock+]抽离[npc.herhim]。";
 						}
 					}
 					
 				} else {
 					if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 						if(Main.sex.getOrificesBeingPenetratedBy(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, Main.sex.getCharacterPerformingAction()).isEmpty()) { // Non-orifice penetration
-							return "Desperately struggling as [npc.she] [npc.verb(try)] to push [npc2.name] away from [npc.herHim], [npc.name] [npc.verb(cry)] out,"
-									+ " [npc.speech(No! Please! Get your [npc2.cock] away from me!)]";
+							return "[npc.Name]绝望地挣扎着，试图推开[npc2.name]，[npc.she]哭喊着说，"
+									+ "[npc.speech(不要！求你了！快把你的[npc2.cock]拿开！)]";
 						} else { // Orifice penetration
 							SexAreaInterface areaPenetrated = Main.sex.getOrificesBeingPenetratedBy(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, Main.sex.getCharacterPerformingAction()).get(0);
 							if(areaPenetrated.isOrifice() && ((SexAreaOrifice)areaPenetrated).isInternalOrifice()) {
-								return "Desperately struggling as [npc.she] [npc.verb(try)] to push [npc2.name] away from [npc.herHim], [npc.name] [npc.verb(cry)] out,"
-										+ " [npc.speech(No! Please! Pull out! Get your [npc2.cock] out of me!)]";
+								return "[npc.Name]绝望地挣扎着，试图推开[npc2.name]，[npc.she]哭喊着说，"
+										+ " [npc.speech(不！求你了！把你的[npc2.cock]拔出去！)]";
 								
 							} else {
-								return "Desperately struggling as [npc.she] [npc.verb(try)] to push [npc2.name] away from [npc.herHim], [npc.name] [npc.verb(cry)] out,"
-										+ " [npc.speech(No! Please! Get your [npc2.cock] away from my "+areaPenetrated.getName(Main.sex.getCharacterPerformingAction(), true)+"!)]";
+								return "[npc.Name]绝望地挣扎着，试图推开[npc2.name]，[npc.she]哭喊着说，"
+										+ "[npc.speech(不要！求你了！快把[npc2.cock]从我的"+areaPenetrated.getName(Main.sex.getCharacterPerformingAction(), true)+"上拿开！)]";
 							}
 						}
 					
 					} else {
 						if(Main.sex.getOrificesBeingPenetratedBy(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, Main.sex.getCharacterPerformingAction()).isEmpty()) { // Non-orifice penetration
-							return "Desperately struggling as [npc.she] [npc.verb(try)] to push [npc2.name] away from [npc.herHim], [npc.name] cries out, [npc.speech(No! Please! Get your cock away from me!)]";
+							return "[npc.Name]绝望地挣扎着，试图推开[npc2.name]，[npc.she]哭喊着说，[npc.speech(不！求你了！把你的鸡巴拔出去！)]";
 						} else { // Orifice penetration
 							SexAreaInterface areaPenetrated = Main.sex.getOrificesBeingPenetratedBy(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, Main.sex.getCharacterPerformingAction()).get(0);
 							if(areaPenetrated.isOrifice() && ((SexAreaOrifice)areaPenetrated).isInternalOrifice()) {
 								if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-									return "Desperately struggling as [npc.she] [npc.verb(try)] to push [npc2.name] away from [npc.herHim], [npc.name] [npc.verb(cry)] out,"
-											+ " [npc.speech(No! Please! Pull out! Your condom could break inside of me!)]";
+									return "[npc.Name]绝望地挣扎着，试图推开[npc2.name]，[npc.she]哭喊着说，"
+											+ "[npc.speech(别！求你了！快拔出去！避孕套可能会在里面破掉的！)]";
 								} else {
-									return "Desperately struggling as [npc.she] [npc.verb(try)] to push [npc2.name] away from [npc.herHim], [npc.name] [npc.verb(cry)] out,"
-											+ " [npc.speech(No! Please! Pull out of my "+areaPenetrated.getName(Main.sex.getCharacterPerformingAction(), true)+"! Don't cum inside me!)]";
+									return "[npc.Name]绝望地挣扎着，试图推开[npc2.name]，[npc.she]哭喊着说，"
+											+ "[npc.speech(别！求你了！快从我的"+areaPenetrated.getName(Main.sex.getCharacterPerformingAction(), true)+"里拔出去！别射在里面啊！)]";
 								}
 							} else {
-								return "Desperately struggling as [npc.she] [npc.verb(try)] to push [npc2.name] away from [npc.herHim], [npc.name] [npc.verb(cry)] out,"
-										+ " [npc.speech(No! Please! Get your cock away from my "+areaPenetrated.getName(Main.sex.getCharacterPerformingAction(), true)+"!)]";
+								return "[npc.Name]绝望地挣扎着，试图推开[npc2.name]，[npc.she]哭喊着说，"
+										+"[npc.speech(不要！求你了！快把肉棒从我的"+areaPenetrated.getName(Main.sex.getCharacterPerformingAction(), true)+"上拿开！)]";
 							}
 						}
 					}
@@ -7875,74 +7875,74 @@ public class GenericOrgasms {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
 				if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.pussy+].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.pussy+]里。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.asshole+].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，还有动作示意，表示想要[npc2.name]从那[npc.asshole+]里拔出去。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.nipple+].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，还有动作示意，表示想要[npc2.name]从那[npc.nipple+]里拔出去。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.spinneret+].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，还有动作示意，表示想要[npc2.name]从那[npc.spinneret+]里拔出去。";
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-						return "Although not able to speak,"
+						return "虽然不能说话，"
 								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.tussy+].";
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to get away from [npc.her] [npc.breasts+].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，还有动作示意，表示想要[npc2.name]远离[npc.her]那[npc.breasts+]。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to get away from [npc.her] [npc.feet+].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，还有动作示意，表示想要[npc2.name]远离[npc.her]那[npc.feet+]。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to get away from [npc.her] [npc.armpit+].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，还有动作示意，表示想要[npc2.name]远离[npc.her]那[npc.armpit+]。";
 						
 					} else {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.herHim] as [npc2.she] [npc2.verb(orgasm)].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]想要自己高潮前拔出去。";
 					}
 	
 				} else {
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.pussy+] before [npc2.she] [npc2.verb(cum)].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.pussy+]里，要在射之前拔出去。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.asshole+] before [npc2.she] [npc2.verb(cum)].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.asshole+]里，要在射之前拔出去。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.nipple+] before [npc2.she] [npc2.verb(cum)].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.nipple+]里，要在射之前拔出去。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.spinneret+] before [npc2.she] [npc2.verb(cum)].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.spinneret+]里，要在射之前拔出去。";
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-						return "Although not able to speak,"
+						return "虽然不能说话，"
 								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull out of [npc.her] [npc.tussy+] before [npc2.she] [npc2.verb(cum)].";
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull away from [npc.her] [npc.breasts+] before [npc2.she] [npc2.verb(cum)].";
+						return "虽然不能说话，"
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.breasts+]上，要在射之前挪开。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
 						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull away from [npc.her] [npc.feet+] before [npc2.she] [npc2.verb(cum)].";
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.feet+]上，要在射之前挪开。";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
 						return "Although not able to speak,"
-								+ " [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to pull away from [npc.her] [npc.armpit+] before [npc2.she] [npc2.verb(cum)].";
+								+ "[npc.Name]努力连声呜咽祈求，让[npc2.name]明白[npc.she]不想被射在[npc.armpit+]上，要在射之前挪开。";
 						
 					} else {
-						return "Although not able to speak, [npc.name] [npc.verb(manage)] to use a series of pleading whines in order to convey that [npc.she] [npc.do]n't want [npc2.namePos] cum.";
+						return "虽然不能说话，[npc.Name]努力连声呜咽祈求，还有动作示意，表达[npc.her]不想要[npc2.namePos]的精液。";
 					}
 				}
 				
@@ -7950,137 +7950,137 @@ public class GenericOrgasms {
 				if(!isRealPenisFuckingCharacter(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this))) {
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)
 							|| isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Pull out! Get that dildo out of me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(快拔出去！把那个假阳具从我身体里拿走！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Pull out! Get that dildo out of me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(快拔出去！把那个假阳具从我身体里拿走！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Pull out! Get that dildo out of me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(快拔出去！把那个假阳具从我身体里拿走！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Pull out! Get that dildo out of me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(快拔出去！把那个假阳具从我身体里拿走！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Pull out! Get that dildo out of me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(快拔出去！把那个假阳具从我身体里拿走！)]";
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
 								+"[npc.speech(Pull out! Get that dildo out of me!)]";
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Pull out! Get that dildo away from me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(快拔出去！把那个假阳具从我身旁拿开！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Get that dildo away from me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(把那假阳具从我面前拿开！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+"[npc.speech(Get that dildo away from me!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+"[npc.speech(把那假阳具从我面前拿开！)]";
 						
 					} else {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to cry out around [npc2.namePos] [npc2.cock], "
-								+ "[npc.speech(Pull out! Get that dildo out of my mouth!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算哭喊出声，朝着[npc2.namePos]的[npc2.cock]大叫，"
+								+ "[npc.speech(快拔出去！把那个假阳具从我嘴里拿走！)]";
 					}
 					
 				} else if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! I don't want to risk that condom breaking in my pussy!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出来！我可不想冒风险，我怕套套在小穴里面破掉！)]";
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! I don't want to risk that condom breaking!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出来！我可不想冒风险，我怕套套破掉！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! I don't want to risk that condom breaking!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出来！我可不想冒风险，我怕套套破掉！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! I don't want that condom breaking in my ass!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出来！我可不想冒风险，我怕套套在屁股里面破掉！)]";
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! I don't want that condom breaking in my nipple!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出来！我可不想冒风险，我怕套套在乳头里面破掉！)]";
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! I don't want that condom breaking in my spinneret!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出来！我可不想冒风险，我怕套套在丝囊里面破掉！)]";
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
 								+ "[npc.speech(Pull out! I don't want that condom breaking in my tussy!)]";
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Get back! I don't want that condom breaking all over my tits!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(上一边去！我可不想套套破在奶子上！)]";
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Get back! I don't want that condom breaking all over my [npc.feet]!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(上一边去！我可不想套套破在[npc.feet]上！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Get back! I don't want that condom breaking all over my [npc.armpit]!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(上一边去！我可不想套套破在[npc.armpit]上！)]";
 						
 					} else {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to cry out around [npc2.namePos] [npc2.cock], "
-								+ "[npc.speech(Pull out! Please!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算哭喊出声，朝着[npc2.namePos]的[npc2.cock]大叫，"
+								+ "[npc.speech(快拔出去！求你了！)]";
 					}
 					
 				} else {
 					if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
 								+(Main.sex.getCharacterPerformingAction().isVisiblyPregnant()
 										|| Main.sex.getCharacterPerformingAction().hasStatusEffect(StatusEffect.MENOPAUSE)
 //										|| !Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative()
-									?"[npc.speech(Pull out! I don't want you to cum in me!)]"
-									:"[npc.speech(Pull out! I don't want to get pregnant!)]");
+									?"[npc.speech(快拔出去！我可不想你射在里面！)]"
+									:"[npc.speech(拔出来！我不想怀孕啊！)]");
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_VAGINA)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! Don't cum in me, please!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出去！别射在我里面，求你了！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.URETHRA_PENIS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! Don't cum in me, please!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出去！别射在我里面，求你了！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! Don't cum in my ass, please!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出去！别射在我屁股里，求你了！)]";
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! Don't cum in my nipple! Don't do it!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出去！别射在我乳头里，求你了！)]";
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Pull out! Don't cum in my spinneret! Don't do it!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(快拔出去！别射在我丝囊里，求你了！)]";
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
 								+ "[npc.speech(Pull out! Don't cum in my [npc.tussy+]! Don't do it!)]";
 
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Get back! Don't cum on my tits! Don't you dare!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(上一边去！别射在我奶子上！你敢！)]";
 	
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Get back! Don't cum on my [npc.feet]! Don't you dare!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算组织出一段语言，向着[npc2.name]喊道，"
+								+ "[npc.speech(上一边去！别射在我[npc.feet]上！你敢！)]";
 						
 					} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
 						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-								+ "[npc.speech(Get back! Don't cum on my [npc.armpit]! Don't you dare!)]";
+								+ "[npc.speech(上一边去！别射在我[npc.armpit]里！你敢！)]";
 						
 					} else {
-						return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to cry out around [npc2.namePos] [npc2.cock], "
-								+ "[npc.speech(Pull out! I don't want to taste your cum!)]";
+						return "在止不住的呻吟和淫荡的叫喊中，[npc.name]总算哭喊出声，朝着[npc2.namePos]的[npc2.cock]大叫，"
+								+ "[npc.speech(快拔出去！我可不想吃你的精液！)]";
 					}
 				}
 			}
@@ -8096,11 +8096,11 @@ public class GenericOrgasms {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Request facial";
+			return "请求面交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Ask [npc2.herHim] to finish all over your face.";
+			return "你能感到[npc2.name]快高潮了。让[npc2.herHim]全射在你脸上。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -8158,7 +8158,7 @@ public class GenericOrgasms {
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
-				return "Although not able to speak, [npc.name] [npc.verb(manage)] to use a series of pleading whines and gestures in order to convey that [npc.she] [npc.verb(want)] [npc2.name] to finish on [npc.her] face.";
+				return "虽然不能说话，[npc.Name]努力连声呜咽祈求，还有动作示意，[npc.her]想被弄在脸上。";
 				
 			} else {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)
@@ -8169,11 +8169,11 @@ public class GenericOrgasms {
 						|| isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)
 						|| isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
 					return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-							+"[npc.speech(Pull out! Finish on my face!)]";
+							+"[npc.speech(快拔出来！全射在我脸上吧！)]";
 
 				} else {
 					return "Through [npc.her] desperate moans and lewd cries, [npc.name] somehow [npc.verb(manage)] to formulate a sentence as [npc.she] [npc.verb(cry)] out to [npc2.name], "
-							+ "[npc.speech(I want you to finish on my face!)]";
+							+ "[npc.speech(我想你射在我脸上！)]";
 				}
 			}
 		}
@@ -8197,12 +8197,12 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "No request";
+			return "无请求";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Don't make any requests of [npc2.herHim], and see what [npc2.sheHasFull] in store for you.";
+			return "你能感觉到[npc2.name]快高潮了。不对[npc2.herHim]提出任何要求，看看[npc2.sheHasFull]打算对你怎么做。";
 		}
 
 		@Override
@@ -8222,71 +8222,71 @@ public class GenericOrgasms {
 		public String getDescription() {
 			if(!isRealPenisFuckingCharacter(Main.game.getPlayer(), Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slam in and out of your [npc.pussy+], and you wonder if [npc2.sheIs] going to pull out or carry on fucking you through [npc2.her] orgasm.";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.pussy+]进进出出，你想知道[npc2.she]会抽出来，还是会继续操你直到[npc2.her]高潮。";
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slam in and out of your [npc.asshole+], and you wonder if [npc2.sheIs] going to pull out or carry on fucking you through [npc2.her] orgasm.";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.asshole+]进进出出，你想知道[npc2.she]会抽出来，还是会继续操你直到[npc2.her]高潮。";
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-					return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slam in and out of your [npc.nipple+], and you wonder if [npc2.sheIs] going to pull out or carry on fucking you through [npc2.her] orgasm.";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.nipple+]进进出出，你想知道[npc2.she]会抽出来，还是会继续操你直到[npc2.her]高潮。";
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slam in and out of your [npc.spinneret+], and you wonder if [npc2.sheIs] going to pull out or carry on fucking you through [npc2.her] orgasm.";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.spinneret+]进进出出，你想知道[npc2.she]会抽出来，还是会继续操你直到[npc2.her]高潮。";
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slam in and out of your [npc.tussy+], and you wonder if [npc2.sheIs] going to pull out or carry on fucking you through [npc2.her] orgasm.";
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
 					if(Main.sex.getCharacterPerformingAction().isBreastFuckablePaizuri()) {
-						return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slide up and down between your [npc.breasts+],"
-								+ " and you wonder if [npc2.sheIs] going to carry on fucking your [npc.breasts+] through [npc2.her] orgasm.";
+						return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.breasts+]间进进出出，"
+								+"接着你开始想象[npc2.her]在高潮时继续操你[npc.breasts+]";
 					} else {
-						return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slide up and down over your torso,"
-								+ " and you wonder if [npc2.sheIs] going to back away or carry on fucking your flat chest through [npc2.her] orgasm.";
+						return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你躯干上来回磨蹭，"
+								+ "接着你开始想象[npc2.her]在高潮时继续操你的平胸";
 					}
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-					return "You continue [npc.moaning+] as you give [npc.name] [pc.a_footjob], and you wonder if [npc2.sheIs] going to back away or carry on fucking your [npc.feet] through [npc2.her] orgasm.";
+					return "你一边[npc.moaning+]，一边继续给[npc.Name][pc.a_footjob]，你不太确定[npc2.sheIs]是会退缩，还是会在高潮时继续操你的[npc.feet]。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ARMPITS)) {
-					return "You continue [npc.moaning+] as [npc.name] fucks your [pc.armpit+], and you wonder if [npc2.sheIs] going to back away or carry on fucking your pit through [npc2.her] orgasm.";
+					return "你继续[npc.moaning+]，感受着[npc2.Name]操着你[pc.armpit+]，你想知道[npc2.she]会抽出来，还是会在高潮时继续操你的腋窝。";
 					
 				} else {
-					return "You continue [npc.moaning+] as [npc2.name] continues to fuck you with [npc2.her] [npc2.cock+], and you wonder if [npc2.sheIs] going to pull out, or carry on fucking you through [npc2.her] orgasm.";
+					return "你继续[npc.moaning+]，感受着[npc2.name]继续用[npc2.her][npc2.cock+]操你，你想知道[npc2.she]会抽出来，还是会继续操你直到[npc2.her]高潮。";
 				}
 				
 			} else {
 				if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA)) {
-					return "You continue [npc.moaning+] as you feel [npc2.namePos] [npc2.cock+] start to twitch inside your [npc.pussy+], and you wonder if [npc2.sheIs] going to pull out or"
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.pussy+]里开始不自主地抽动，你想知道[npc2.she]会抽出来，"
 							+(Main.game.getPlayer().isVisiblyPregnant()
-									?" give you a fresh creampie..."
-									:" fill your womb with [npc2.her] [npc2.cum+]...");
+									?"还是会给你灌成新鲜的泡芙……"
+									:"用[npc2.cum+]灌满你的子宫……");
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS)) {
-					return "You continue [npc.moaning+] as you feel [npc2.namePos] [npc2.cock+] start to twitch inside your [npc.asshole+], and you wonder if [npc2.sheIs] going to pull out or give you a fresh anal creampie...";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.asshole+]里开始不自主地抽动，你想知道[npc2.she]会抽出来，还是会给你灌成新鲜的菊穴泡芙……";
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.NIPPLE)) {
-					return "You continue [npc.moaning+] as you feel [npc2.namePos] [npc2.cock+] start to twitch inside your [npc.nipple+], and you wonder if [npc2.sheIs] going to pull out or give you a fresh nipple creampie...";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.nipple+]里进进出出，你想着[npc2.sheIs]会不会给你灌成新鲜的乳头泡芙……";
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.SPINNERET)) {
-					return "You continue [npc.moaning+] as you feel [npc2.namePos] [npc2.cock+] start to twitch inside your [npc.spinneret+], and you wonder if [npc2.sheIs] going to pull out or give you a fresh spinneret creampie...";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.spinneret+]里进进出出，你想着[npc2.sheIs]会不会给你灌成新鲜的纺器泡芙……";
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.TUSSY)) {
 					return "You continue [npc.moaning+] as you feel [npc2.namePos] [npc2.cock+] start to twitch inside your [npc.tussy+], and you wonder if [npc2.sheIs] going to pull out or give you a fresh tussy creampie...";
 
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaOrifice.BREAST)) {
 					if(Main.sex.getCharacterPerformingAction().isBreastFuckablePaizuri()) {
-						return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slide up and down between your [npc.breasts+], and you wonder if [npc2.sheIs] going to pull out or cum all over your [npc.breasts+].";
+						return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你[npc.breasts+]间进进出出，你想着[npc2.sheIs]会不会射满你[npc.breasts+]……";
 					} else {
-						return "You continue [npc.moaning+] as [npc2.namePos] [npc2.cock+] continues to slide up and down over your torso, and you wonder if [npc2.sheIs] going to back away or cum all over your flat chest.";
+						return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]在你躯干上来回磨蹭，你想知道[npc2.she]会退回去，还是会射满你平坦的胸部。";
 					}
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-					return "You continue [npc.moaning+] as you give [npc.name] [pc.a_footjob], and you wonder if [npc2.sheIs] going to pull back or cum all over your [npc.feet].";
+					return "你继续[npc.moaning+]着，给[npc.Name][pc.a_footjob]，你不太确定[npc2.sheIs]是会退缩，还是会射满你的[npc.feet]。";
 					
 				} else if(isAreaFuckedByTarget(this, Main.sex.getCharacterPerformingAction(), SexAreaPenetration.FOOT)) {
-					return "You continue [npc.moaning+] as [npc.name] fucks your [pc.armpit+], and you wonder if [npc2.sheIs] going to pull back or cum all over your pit.";
+					return "你继续[npc.moaning+]着，让[npc.Name]操你[pc.armpit+]，你不太确定[npc2.sheIs]是会退缩，还是会射满你的胸口。";
 					
 				} else {
-					return "You continue [npc.moaning+] as you feel [npc2.namePos] [npc2.cock+] start to twitch, and you wonder if [npc2.sheIs] going to pull out or fill you with [npc2.her] [npc2.cum+]...";
+					return "你继续[npc.moaning+]，感受着[npc2.namePos][npc2.cock+]抽插，你想着[npc2.sheIs]是会抽出来，还是会用[npc2.cum+]填满你……";
 				}
 			}
 		}
@@ -8333,12 +8333,12 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Deny";
+			return "禁止";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "You can feel that [npc2.name] is fast approaching [npc2.her] orgasm. Don't let [npc2.herHim] have it.";
+			return "你能感觉到[npc2.name]马上就要高潮了。不要让[npc2.herHim]得到高潮。";
 		}
 
 		@Override
@@ -8348,27 +8348,27 @@ public class GenericOrgasms {
 			if(isCharacterTotallyImmobilised(Main.sex.getCharacterTargetedForSexAction(this))) {
 				if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"From the increased intensity of [npc2.namePos] sleepy whines and pants, it's clear to [npc.name] that [npc2.sheIs] about to orgasm in [npc2.her] sleep.",
-							"[npc2.Name] [npc2.verb(let)] out a particularly lewd, sleepy moan, making it clear to [npc.name] that [npc2.sheIs] about to orgasm in [npc2.her] sleep."));
+							"从[npc2.namePos]睡梦中的呜呜声和喘息来看，[npc.name]很清楚[npc2.sheIs]即将在睡梦中达到高潮。",
+							"[npc2.namePos]在睡梦中发出淫荡无比的声音，暗示着[npc2.her]马上就要高潮。"));
 					
 					UtilText.nodeContentSB.append("<br/><br/>");
 					
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Upon hearing this, [npc.name] [npc.verb(stop)] moving, bringing [npc2.namePos] stimulation to an abrupt halt in order to stop [npc2.herHim] from reaching [npc2.her] climax.",
-							"As [npc.she] [npc.verb(hear)] this, [npc.name] quickly [npc.verb(stop)] what [npc.sheIs] doing,"
-									+ " making sure that [npc2.nameIsFull] receiving no stimulation in order to prevent [npc2.herHim] from reaching [npc2.her] climax."));
+							"听到这些，[npc.name]停止移动，使[npc2.namePos]的刺激戛然而止，以阻止[npc2.herHim]达到[npc2.her]的高潮。",
+							"[npc.Name]听到这些，很快停下来，"
+									+ "以确保[npc2.nameIsFull]不受任何刺激，防止[npc2.herHim]达到高潮。"));
 					
 				} else {
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Although [npc2.she] [npc2.verb(remain)] totally motionless, [npc.name] [npc.verb(get)] the feeling that [npc2.she] must be close to orgasming.",
-							"Despite the fact that [npc2.name] [npc.verb(remain)] in a completely inanimate state, [npc.name] intuitively [npc2.verb(realise)] that [npc2.she] must be about to orgasm."));
+							"尽管[npc2.Name]总是一动不动，但[npc.Name]有一种直觉[npc2.she]快要高潮了。",
+							"尽管[npc2.Name]保持着完全的静止状态，但[npc.Name]有一种直觉[npc2.she]快要高潮了。"));
 					
 					UtilText.nodeContentSB.append("<br/><br/>");
 
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Upon coming to this realisation, [npc.name] [npc.verb(stop)] moving, bringing [npc2.namePos] stimulation to an abrupt halt in order to stop [npc2.herHim] from reaching [npc2.her] climax.",
-							"As [npc.she] [npc.verb(realise)] this, [npc.name] quickly [npc.verb(stop)] what [npc.sheIs] doing,"
-									+ " making sure that [npc2.nameIsFull] receiving no stimulation in order to prevent [npc2.herHim] from reaching [npc2.her] climax."));
+							"于是[npc.name]停了下来，不再给[npc2.namePos]任何刺激，阻止[npc2.herHim]达到高潮。",
+							"[npc.she]意识到这些，很快停下来，"
+									+ "以确保[npc2.nameIsFull]不受任何刺激，防止[npc2.herHim]达到高潮。"));
 				}
 				
 			} else {
@@ -8378,13 +8378,13 @@ public class GenericOrgasms {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 						case SUB_RESISTING:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									"From the increased intensity of [npc2.namePos] desperate, muffled whines and pants, it's clear to [npc.name] that [npc2.sheIs] about to orgasm.",
-									"[npc2.Name] [npc2.verb(let)] out a particularly lewd, muffled whine, making it clear to [npc.name] that [npc2.sheIs] about to orgasm."));
+									"从[npc2.namePos]绝望、低沉的呜呜声和喘息来看，[npc.name]很清楚[npc2.sheIs]即将达到高潮。",
+									"[npc2.Name]淫荡无比的声音暗示着[npc2.sheIs]马上就要高潮了。"));
 							break;
 						default:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									"From the increased intensity of [npc2.namePos] excited, muffled [npc2.moans], it's clear to [npc.name] that [npc2.sheIs] about to orgasm.",
-									"[npc2.Name] [npc2.verb(let)] out a particularly erotic, muffled [npc2.moan], making it clear to [npc.name] that [npc2.sheIs] about to orgasm."));
+									"从[npc2.namePos]兴奋而低沉的[npc2.moans]的来看，[npc.name]很清楚[npc2.sheIs]即将达到高潮。",
+									"[npc2.Name]色气无比的[npc2.moan]暗示着[npc2.sheIs]马上就要高潮了。"));
 							break;
 					}
 					
@@ -8392,15 +8392,15 @@ public class GenericOrgasms {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 						case SUB_RESISTING:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									"[npc2.Name] [npc2.verb(start)] desperately whining and panting, before blurting out, [npc2.speech(No! You're going to make me cum!)]",
-									"[npc2.Name] [npc2.verb(let)] out a particularly lewd whine, before shuddering and crying out, [npc2.speech(Not like this! I'm going to cum! No!)]",
-									"Letting out a surprisingly erotic scream, [npc2.name] [npc2.verb(exclaim)], [npc2.speech(Stop it! No! I'm... I'm going to cum!)]"));
+									"[npc2.Name]欲望缠身，十分饥渴，大喊着哀求到，[npc2.speech(求求了！让我射出来吧！)]",
+									"[npc2.Name]欲望缠身，色气无比，颤抖着淫叫道，[npc2.speech(不要！求求了！让我射出来吧！)]",
+									"[npc2.name]欲望缠身，淫荡地叫着，[npc2.speech(别这样！让我射……让我射出来！)]"));
 							break;
 						default:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									"[npc2.Name] [npc2.verb(start)] desperately panting and [npc2.moaning], before blurting out, [npc2.speech(Yes! You're going to make me cum!)]",
-									"[npc2.Name] [npc2.verb(let)] out a particularly erotic [npc2.moan], before excitedly exclaiming, [npc2.speech(Yes! I'm going to cum! Yes, give it to me!)]",
-									"Letting out an incredibly erotic [npc2.moan], [npc2.name] [npc2.verb(exclaim)], [npc2.speech(Just like that! Yes! I'm... I'm going to cum!)]"));
+									"[npc2.Name]开始迷乱地喘息[npc2.moaning]，然后脱口而出，[npc2.speech(好棒！你要把我弄去了！)]",
+									"[npc2.name]欲望缠身，淫荡地叫着，[npc2.speech(就是这样！让我射……让我射出来！)]",
+									"[npc2.name]发出无比色情的[npc2.moan]，惊叫道：[npc2.speech(就是这样！嗯啊~！我……我要去了！)]"));
 							break;
 					}
 				}
@@ -8411,17 +8411,17 @@ public class GenericOrgasms {
 					case DOM_GENTLE:
 					case DOM_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Upon hearing this, [npc.name] quickly [npc.verb(take)] a firm grip of [npc2.namePos] [npc2.arms], before holding [npc2.herHim] in place and preventing [npc2.herHim] from stimulating [npc2.herself].",
-								"As [npc.she] [npc.verb(hear)] this, [npc.name] quickly [npc.verb(grab)] hold of [npc2.namePos] [npc2.arms],"
-										+ " before using [npc.her] leverage to hold [npc2.herHim] still and stop [npc2.herHim] from reaching [npc2.her] climax.",
-								"Hearing that [npc2.sheIs] about to orgasm, [npc.name] quickly [npc.verb(grab)] hold of [npc2.namePos] [npc2.arms], before holding [npc2.herHim] still and preventing [npc2.herHim] from reaching [npc2.her] climax."));
+								"听到这些，[npc.name]迅速牢牢抓住[npc2.namePos][npc2.arms]，然后将[npc2.herHim]按在原地，阻止[npc2.herHim]刺激[npc2.herself]。",
+								"[npc.name]听到了，就迅速地抓住[npc2.namePos]的[npc2.arms]，"
+										+"强按住[npc2.herHim]，阻止[npc2.herHim]达到高潮。",
+								"[npc.name]听到[npc2.namePos]马上要高潮了，就迅速地抓住[npc2.sheIs]的[npc2.arms]，固定住[npc2.sheIs]不能动弹，以阻止高潮。"));
 						break;
 					case DOM_ROUGH:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Upon hearing this, [npc.name] quickly [npc.verb(take)] a forceful grip of [npc2.namePos] [npc2.arms], before roughly holding [npc2.herHim] in place and preventing [npc2.herHim] from stimulating [npc2.herself].",
-								"As [npc.she] [npc.verb(hear)] this, [npc.name] roughly [npc.verb(grab)] hold of [npc2.namePos] [npc2.arms],"
-										+ " before using [npc.her] leverage to force [npc2.herHim] to stay still in order to stop [npc2.herHim] from reaching [npc2.her] climax.",
-								"Hearing that [npc2.sheIs] about to orgasm, [npc.name] forcefully [npc.verb(grab)] hold of [npc2.namePos] [npc2.arms], before roughly holding [npc2.herHim] still and preventing [npc2.herHim] from reaching [npc2.her] climax."));
+								"听到这些，[npc.name]迅速用力握住[npc2.namePos][npc2.arms]，然后粗暴地把[npc2.herHim]按在原地，不让[npc2.herHim]刺激[npc2.herself]。",
+								"[npc.name]听到了，就粗暴地抓住[npc2.namePos]的[npc2.arms]，"
+										+"强迫[npc2.herHim]固定不动，防止[npc2.herHim]达到高潮。",
+								"[npc.name]听到[npc2.namePos]马上要高潮了，就粗暴地抓住[npc2.sheIs]的[npc2.arms]，强迫[npc2.sheIs]不能动弹，以阻止高潮。"));
 						break;
 					default:
 						break;
@@ -8431,45 +8431,45 @@ public class GenericOrgasms {
 					case SUB_RESISTING:
 						if(Main.sex.getCharacterTargetedForSexAction(this).isPlayer()) {
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" You find yourself feeling a little relieved as you realise that you're not going be forced into orgasming,"
-											+ " and simply continue to sob and plead to be left alone as [npc.name] [npc.verb(force)] you to calm down."));
+									"被[npc.Name]抓着冷静下来后，你发现自己不会被强制高潮，松了口气，"
+											+"继续哭着请求[npc.she]放开你。"));
 							
 						} else {
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(seem)] a little relieved that [npc2.sheIs] not going be forced into orgasming,"
-											+ " and simply [npc2.verb(continue)] to sob and plead to be left alone as [npc.name] [npc.verb(force)] [npc2.herHim] to calm down."));
+									"被[npc.Name]抓着冷静下来后，[npc2.name]发现自己不会被强制高潮，松了口气，"
+											+"继续哭着请求[npc.her]放开自己。"));
 						}
 						break;
 					default:
 						if(Main.sex.getCharacterTargetedForSexAction(this).isSpeechMuffled() || Main.sex.getCharacterTargetedForSexAction(this).isMute()) {
 							if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_DENIAL_SELF).isPositive()) {
 								UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-										" Being enamoured with the concept of being denied so close to [npc2.her] climax, [npc2.name] [npc2.verb(let)] out a lewd cry as [npc2.sheIs] forced to calm down,"
-												+ " and as [npc2.she] [npc2.verb(withdraw)] from the edge of [npc2.her] orgasm, [npc2.her] erotic exclamation turns into a particularly desperate, muffled [npc2.moan]."));
+										"被抓着冷静下来以后，[npc2.name]沉溺于寸止的感觉，发出了淫荡的声音，"
+												+ "当寸止带来的兴奋退去以后，色气十足的轻叹很快就变成了欲求不满的[npc2.moan]。"));
 								
 							} else {
 								UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-										" Feeling incredibly frustrated at being denied when so close to [npc2.her] climax, [npc2.name] [npc2.verb(let)] out a frantic, muffled cry as [npc2.sheIs] forced to calm down,"
-												+ " making it clear that [npc2.she] desperately [npc2.verb(want)] to orgasm."));
+										"临近高潮时被寸止让[npc2.name]无比沮丧，当[npc2.her]被迫冷静下来时，发出了狂乱的低声啜泣，"
+												+ "显而易见，[npc2.she]疯狂地想高潮。"));
 							}
 							
 						} else {
 							if(Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_DENIAL_SELF).isPositive()) {
 								UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-										" Being enamoured with the concept of being denied so close to [npc2.her] climax, [npc2.name] [npc2.verb(let)] out a lewd cry as [npc2.sheIs] forced to calm down,"
-												+ " and as [npc2.she] [npc2.verb(withdraw)] from the edge of [npc2.her] orgasm, [npc2.she] [npc2.moansVerb], "));
+										"被抓着冷静下来以后，[npc2.name]沉溺于寸止的感觉，发出了淫荡的声音，"
+												+ "[npc2.she]高潮退去，[npc2.moansVerb]，"));
 		
 								UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-										"[npc2.speech(Oh yes... That feels good... I'll only cum when you allow me to, [npc.name]...)]",
-										"[npc2.speech(Yes... I'm yours to deny as you wish, [npc.name]...)]"));
+										"[npc2.speech(真棒……感觉太好了……只有得到你允许我才会去，[npc.Name]……)]",
+										"[npc2.speech(好的……我是你的，我永远不会违抗你的意愿，[npc.Name]……)]"));
 								
 							} else {
 								UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-										" Feeling incredibly frustrated at being denied when so close to [npc2.her] climax, [npc2.name] [npc2.verb(let)] out a frantic cry as [npc2.sheIs] forced to calm down, "));
+										"临近高潮时被寸止让[npc2.name]无比沮丧，当[npc2.her]被迫冷静下来时，发出了狂乱的哭泣声，"));
 		
 								UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-										"[npc2.speech(No! I was so close! Let me cum already!)]",
-										"[npc2.speech(Let me cum! No! I was so close!)]"));
+										"[npc2.speech(不要！我要去了！我要高潮了！)]",
+										"[npc2.speech(求求你了！马上！马上就要去了！)]"));
 							}
 						}
 						break;
@@ -8477,7 +8477,7 @@ public class GenericOrgasms {
 			}
 			
 			UtilText.nodeContentSB.append("<p style='text-align:center'>"
-						+ "<i>[npc2.NamePos] orgasm was [style.boldBad(denied)]!</i>"
+						+ "<i>[npc2.NamePos]的高潮被[style.boldBad(禁止了)]！</i>"
 					+ "</p>");
 			
 			return UtilText.nodeContentSB.toString();
@@ -8523,22 +8523,22 @@ public class GenericOrgasms {
 		@Override
 		public String getActionTitle() {
 			if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
-				return "Encourage fucking";
+				return "鼓励操弄";
 				
 			} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH).contains(getCharacterBeingFucked())) {
-				return "Encourage deepthroat";
+				return "鼓励深喉";
 
 			} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-				return UtilText.parse(getCharacterBeingFucked(), "Encourage cum on [npc.breasts]");
+				return UtilText.parse(getCharacterBeingFucked(), "鼓励射在[npc.breasts]上");
 				
 			} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-				return UtilText.parse(getCharacterBeingFucked(), "Encourage cum on [npc.feet]");
+				return UtilText.parse(getCharacterBeingFucked(), "鼓励射在[npc.feet]上");
 				
 			} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-				return UtilText.parse(getCharacterBeingFucked(), "Encourage cum on [npc.armpit]");
+				return UtilText.parse(getCharacterBeingFucked(), "鼓励射在[npc.armpit]上");
 				
 			} else {
-				return "Encourage creampie";
+				return "鼓励内射";
 			}
 		}
 
@@ -8546,36 +8546,36 @@ public class GenericOrgasms {
 		public String getActionDescription() {
 			if(isSelfFucking()) {
 				if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
-					return UtilText.parse(getCharacterBeingFucked(), "You can tell that [npc.name] is fast approaching [npc.her] orgasm. Encourage [npc.herHim] to keep fucking [npc.herself] with [npc.her] dildo as [npc.she] climaxes.");
+					return UtilText.parse(getCharacterBeingFucked(), "你发现[npc.name]就要高潮了。鼓励[npc.her]用假阳具继续干自己干到高潮。");
 	
 				} else {
-					return UtilText.parse(getCharacterBeingFucked(), "You can tell that [npc.name] is fast approaching [npc.her] orgasm. Encourage [npc.herHim] to keep fucking [npc.herself] as [npc.she] climaxes.");
+					return UtilText.parse(getCharacterBeingFucked(), "你发现[npc.name]就要高潮了。鼓励[npc.her]继续干自己干到高潮。");
 				}
 				
 			} else {
 				if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to keep fucking [npc.name] with [npc2.her] dildo as [npc2.she] climaxes.");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]高潮的时候继续用假阳具操[npc.Name]。");
 	
 				} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH).contains(getCharacterBeingFucked())) {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to fill [npc.namePos] stomach with [npc2.her] cum.");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]用精液填满[npc.namePos]的肚子吧。");
 	
 				} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to cum all over [npc.namePos] [npc.breasts+].");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]全射在[npc.namePos][npc.breasts+]上吧。");
 	
 				} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to cum all over [npc.namePos] [npc.feet+].");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]全射在[npc.namePos][npc.feet+]上吧。");
 					
 				} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to cum all over [npc.namePos] [npc.armpit+].");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]全射在[npc.namePos][npc.armpit+]上吧。");
 					
 				} else {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to fill [npc.name] with [npc2.her] cum.");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]用精液填满[npc.Name]吧。");
 				}
 			}
 		}
@@ -8629,8 +8629,8 @@ public class GenericOrgasms {
 			
 			if(isSelfFucking()) {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
-					sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-							+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc2.herself] as [npc2.she] [npc2.verb(orgasm)].");
+					sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+							+"[npc.name]允许[npc2.herHim]继续干自己干到高潮。");
 				
 				} else {
 					boolean petName = false;
@@ -8639,24 +8639,24 @@ public class GenericOrgasms {
 					}
 
 					if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
-						sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep fucking [npc2.herself] as [npc2.she] [npc2.verb(orgasm)],"
-								+" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Keep going!)]");
+						sb.append("[npc.name]顺从欲望，大喊道让[npc2.name]继续干自己干到高潮，"
+								+"[npc.speech(别停下来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！继续！)]");
 						
 					} else if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-						sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep fucking [npc2.herself] as [npc2.she] [npc2.verb(orgasm)],"
-								+" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+						sb.append("[npc.name]顺从欲望，大喊道让[npc2.name]继续干自己干到高潮，"
+								+" [npc.speech(别停下来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！射满那个套！)]");
 						
 					} else {
-						sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep fucking [npc2.herself] as [npc2.she] [npc2.verb(orgasm)],");
+						sb.append("[npc.Name]顺从欲望，大喊着让[npc2.name]继续操自己操到高潮，");
 
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
 							if(getCharacterBeingFucked().isVisiblyPregnant()) {
-								sb.append(" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill your pussy with your cum!)]");
+								sb.append(" [npc.speech(别拔出来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！用精液填满你的小穴！)]");
 							} else {
-								sb.append(" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill your pussy with your cum and knock yourself up!)]");
+								sb.append("[npc.speech(别拔出来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！用精液填满你的小穴，把自己干到怀孕！)]");
 							}
 						} else {
-							sb.append(" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Keep going!)]");
+							sb.append(" [npc.speech(别拔出来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！继续！)]");
 						}
 					}
 				}
@@ -8665,115 +8665,115 @@ public class GenericOrgasms {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
 					if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep pounding [npc3.namePos] [npc3.pussy+] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.namePos][npc3.pussy+]，[npc2.name]高潮了。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep pounding [npc3.namePos] [npc3.asshole+] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.namePos][npc3.asshole+]，[npc2.name]高潮了。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep pounding [npc3.namePos] [npc3.nipple+] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.namePos][npc3.nipple+]，[npc2.name]高潮了。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc3.namePos] [npc3.spinneret+] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.namePos][npc3.spinneret+]，[npc2.name]高潮了。");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
 									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc3.namePos] [npc3.tussy+] as [npc2.she] [npc2.verb(orgasm)].");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc3.namePos] [npc3.breasts+] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.namePos][npc3.breasts+]，[npc2.name]高潮了。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc3.namePos] [npc3.feet+] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.namePos][npc3.feet+]，[npc2.name]高潮了。");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc3.namePos] [npc3.armpit+] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.namePos][npc3.armpit+]，[npc2.name]高潮了。");
 							
 						} else {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc3.name] as [npc2.she] [npc2.verb(orgasm)].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想要[npc2.herHim]一直操[npc3.name]，[npc2.name]高潮了。");
 						}
 		
 					} else {
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum inside [npc3.namePos] [npc3.pussy+].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射在[npc3.namePos][npc3.pussy+]里面。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum inside [npc3.namePos] [npc3.asshole+].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射在[npc3.namePos][npc3.asshole+]里面。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum inside [npc3.namePos] [npc3.nipple+].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射在[npc3.namePos][npc3.nipple+]里面。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum inside [npc3.namePos] [npc3.spinneret+].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射在[npc3.namePos][npc3.spinneret+]里面。");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
 									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum inside [npc3.namePos] [npc3.tussy+].");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum all over [npc3.namePos] [npc3.breasts+].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射得[npc3.namePos][npc3.breasts+]上面到处都是。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum all over [npc3.namePos] [npc3.feet+].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射得[npc3.namePos][npc3.feet+]上到处都是。");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum all over [npc3.namePos] [npc3.armpit+].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射得[npc3.namePos][npc3.armpit+]上到处都是。");
 							
 						} else {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to cum inside of [npc3.name].");
+							sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+									+ "[npc.she]想让[npc2.herHim]射在[npc3.name]里面。");
 						}
 					}
 					
 				} else {
 					if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.pussy+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHerHim+"!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.pussy+]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHerHim+"！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.asshole+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHer+" [npc3.ass]!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.asshole+]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHer+"的[npc3.ass]！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.nipple+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHer+" [npc3.breasts]!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.nipple+]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHer+"的[npc3.breasts]！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.spinneret+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHer+" [npc3.spinneret]!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.spinneret+]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHer+"的[npc3.spinneret]！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.tussy+] as [npc2.she] [npc2.verb(orgasm)],"
 									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHer+" [npc3.tussy]!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.breasts+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHer+" tits!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.breasts+]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHer+"的奶子！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.feet+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHer+" [npc3.feet]!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.feet+]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHer+"的[npc3.feet]！)]");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.armpit+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHer+" pit!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.armpit+]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHer+"的胸口！)]");
 							
 						} else {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.name] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Yes! That's right! Don't stop fucking "+targetHerHim+"!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos]，[npc2.name]高潮了，"
+									+"[npc.speech(太棒了！就是这样！一直操下去吧！来操"+targetHerHim+"！)]");
 						}
 		
 					} else if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
@@ -8783,39 +8783,39 @@ public class GenericOrgasms {
 						}
 						
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.pussy+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Finish inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.pussy+]，[npc2.name]高潮了，"
+									+"[npc.speech(就在"+targetHerHim+(petName?"里面完事吧，#npc.getPetName(npc2)]":"里面完事吧")+"！要全都射进套套里哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.asshole+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Finish inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.asshole+]，[npc2.name]高潮了，"
+									+"[npc.speech(就在"+targetHerHim+(petName?"里面完事吧，#npc.getPetName(npc2)]":"里面完事吧")+"！要全都射进套套里哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.nipple+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Finish inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.nipple+]，[npc2.name]高潮了，"
+									+"[npc.speech(就在"+targetHerHim+(petName?"里面完事吧，#npc.getPetName(npc2)]":"里面完事吧")+"！要全都射进套套里哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.spinneret+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Finish inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.spinneret+]，[npc2.name]高潮了，"
+									+"[npc.speech(就在"+targetHerHim+(petName?"里面完事吧，#npc.getPetName(npc2)]":"里面完事吧")+"！要全都射进套套里哦！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.tussy+] as [npc2.she] [npc2.verb(orgasm)],"
 									+" [npc.speech(Finish inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.breasts+] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(That's it"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.breasts+]，[npc2.name]高潮了，"
+									+ "[npc.speech(这才对嘛"+(petName?"，[#npc.getPetName(npc2)]":"")+"！要全都射进套套里哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.feet+] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(That's it"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.feet+]，[npc2.name]高潮了，"
+									+ "[npc.speech(这才对嘛"+(petName?"，[#npc.getPetName(npc2)]":"")+"！要全都射进套套里哦！)]");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.armpit+] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(That's it"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.armpit+]，[npc2.name]高潮了，"
+									+ "[npc.speech(这才对嘛"+(petName?"，[#npc.getPetName(npc2)]":"")+"！要全都射进套套里哦！)]");
 							
 						} else {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.name] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(That's it"+(petName?", [#npc.getPetName(npc2)]":"")+"! Spurt it all out into that condom!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos]，[npc2.name]高潮了，"
+									+ "[npc.speech(这才对嘛"+(petName?"，[#npc.getPetName(npc2)]":"")+"！要全都射进套套里哦！)]");
 						}
 						
 					} else {
@@ -8825,41 +8825,41 @@ public class GenericOrgasms {
 						}
 		
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.pussy+] as [npc2.she] [npc2.verb(orgasm)],"
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.pussy+]，[npc2.name]高潮了，"
 									+(getCharacterBeingFucked().isVisiblyPregnant()
-											?" [npc.speech(Fuck! Cum in "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill "+targetHer+" pussy with your cum!)]"
-											:" [npc.speech(Breed "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill "+targetHer+" pussy with your cum and knock "+targetHerHim+" up!)]"));
+											?"[npc.speech(操啊！射进"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！用精液灌满"+targetHer+"的小穴哦！)]"
+											:"[npc.speech(要给"+targetHerHim+(petName?"播种哦，[#npc.getPetName(npc2)]":"播种哦")+"！用精液填满"+targetHer+"的小穴，顺带锁结"+targetHerHim+"吧！)]"));
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.asshole+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Fuck! Cum in "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill "+targetHer+" ass with your cum!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.asshole+]，[npc2.name]高潮了，"
+									+"[npc.speech(操啊！射进"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！用精液灌满"+targetHer+"的屁股哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.nipple+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Fuck! Cum in "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill "+targetHer+" nipple with your cum!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.nipple+]，[npc2.name]高潮了，"
+									+"[npc.speech(操啊！射进"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！用精液灌满"+targetHer+"的乳头哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.spinneret+] as [npc2.she] [npc2.verb(orgasm)],"
-									+" [npc.speech(Fuck! Cum in "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill "+targetHer+" spinneret with your cum!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.spinneret+]，[npc2.name]高潮了，"
+									+"[npc.speech(操啊！射在"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！用精液灌满"+targetHer+"的丝囊吧！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.tussy+] as [npc2.she] [npc2.verb(orgasm)],"
 									+" [npc.speech(Fuck! Cum in "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Fill "+targetHer+" tussy with your cum!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.breasts+] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(Yes! Cum for "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Cover "+targetHer+" tits with your cum!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.breasts+]，[npc2.name]高潮了，"
+									+ "[npc.speech(太棒了！为了"+targetHerHim+(petName?"射精吧，[#npc.getPetName(npc2)]":"射精吧")+"！射满"+targetHer+"的奶子！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.feet+] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(Yes! Cum for "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Cover "+targetHer+" [npc3.feet] with your cum!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.feet+]，[npc2.name]高潮了，"
+									+ "[npc.speech(太棒了！为了"+targetHerHim+(petName?"射精吧，[#npc.getPetName(npc2)]":"射精吧")+"！射满"+targetHer+"的[npc3.feet]！)]");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.namePos] [npc3.armpit+] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(Yes! Cum for "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Cover "+targetHer+" pit with your cum!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos][npc3.armpit+]，[npc2.name]高潮了，"
+									+ "[npc.speech(太棒了！为了"+targetHerHim+(petName?"射精吧，[#npc.getPetName(npc2)]":"射精吧")+"！射满"+targetHer+"的胸口！)]");
 							
 						} else {
-							sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to keep pounding [npc3.name] as [npc2.she] [npc2.verb(orgasm)],"
-									+ " [npc.speech(Yes! Cum for "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Don't pull out!)]");
+							sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，持续猛撞着[npc3.namePos]，[npc2.name]高潮了，"
+									+ "[npc.speech(太棒了！为了"+targetHerHim+(petName?"射精吧，[#npc.getPetName(npc2)]":"射精吧")+"！别拔出去哦！)]");
 						}
 					}
 				}
@@ -8869,36 +8869,36 @@ public class GenericOrgasms {
 				if(Main.sex.getCharacterTargetedForSexAction(this).isSpeechMuffled() || Main.sex.getCharacterTargetedForSexAction(this).isMute()) {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
-								+"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] [npc2.verb(let)] out a positive-sounding [npc2.moan] in order to let [npc.name] know that that's exactly what [npc2.sheHasFull] planned.");
+								+"[npc2.name]听到[npc.Name]的问题，笑了笑，发出愉悦的[npc2.moan]，让[npc.Name]明白，这正中下怀。");
 						
 					} else {
 						sb.append("<br/><br/>"
-								+"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this,"
-								+ " [npc2.name] [npc2.verb(let)] out a negative-sounding [npc2.moan] in order to let [npc.name] know that [npc2.sheIs] not interested in listening to anything [npc.sheHasFull] to say.");
+								+"[npc2.her]听到[npc.Name]这么问，皱起眉头，"
+								+ "[npc2.name]发出否定的[npc2.moan]，让[npc.Name]明白，[npc2.name]根本不想听[npc.sheHasFull]说这些。");
 					}
 					
 				} else {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly replies in the positive, ",
-									"Letting out [npc.a_moan+] after hearing what it is [npc.nameIs] asking of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]的问题，笑了笑，迅速积极地回答，",
+									"在听清[npc.nameIs]问[npc2.herHim]后发出了[npc.a_moan+]，[npc2.name]回应道，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(Sure, if that's what you want to see!)]",
-								"[npc2.speech(Sounds good to me!)]",
-								"[npc2.speech(Sure thing! I'm going to enjoy this!)]"));
+								"[npc2.speech(好吧，如你所愿！)]",
+								"[npc2.speech(感觉很适合我呢！)]",
+								"[npc2.speech(没问题呀！我会喜欢上这个的！)]"));
 						
 					} else {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly [npc2.verb(shut)] [npc.herHim] down, ",
-									"Clearly not liking the fact that [npc.nameIs] asking something of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]问这个，皱起眉头让[npc.herHim]闭嘴，",
+									"[npc2.name]很显然不想听[npc.NameIs]问这些关于[npc2.herHim]的事，便回复说，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(I'll do whatever I feel like doing!)]",
-								"[npc2.speech(I'm not listening to you!)]",
-								"[npc2.speech(I'll do what I want!)]"));
+								"[npc2.speech(我会为所欲为哦！)]",
+								"[npc2.speech(我才不听你的！)]",
+								"[npc2.speech(我会为所欲为哦！)]"));
 					}
 				}
 			}
@@ -8945,22 +8945,22 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Encourage knotting";
+			return "鼓励锁结";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(isSelfFucking()) {
-				return UtilText.parse(getCharacterBeingFucked(), "You can tell that [npc.name] is fast approaching [npc.her] orgasm. Encourage [npc.herHim] to push [npc.her] knot inside and fill [npc.herself] with [npc.her] cum.");
+				return UtilText.parse(getCharacterBeingFucked(), "你意识到[npc.name]快要高潮了。鼓励[npc.herHim]在自己体内成结然后射出来。");
 				
 			} else {
 				if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH).contains(getCharacterBeingFucked())) {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to push [npc2.her] knot into [npc.namePos] mouth and fill [npc.her] stomach with [npc2.her] cum.");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]在[npc.Name]嘴里锁结，用精液灌满[npc.her]的肚子吧。");
 	
 				} else {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to push [npc2.her] knot into [npc.name] and fill [npc.name] with [npc2.her] cum.");
+							"你能感到[npc2.name]快高潮了。让[npc2.herHim]在[npc.Name]里面锁结，用精液填满[npc.Name]吧。");
 				}
 			}
 		}
@@ -9015,8 +9015,8 @@ public class GenericOrgasms {
 
 			if(isSelfFucking()) {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
-					sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-							+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to knot [npc2.herself] as [npc2.she] [npc2.verb(orgasm)].");
+					sb.append("[npc.Name]很清楚自己想要什么，便发出一连串闷哼，努力向[npc2.name]传达着，"
+							+"[npc.she]想要[npc2.name]在自己体内成结，然后高潮。");
 				
 				} else {
 					boolean petName = false;
@@ -9025,20 +9025,20 @@ public class GenericOrgasms {
 					}
 
 					if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-						sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to knot [npc2.herself] as [npc2.she] [npc2.verb(orgasm)],"
-								+" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Get your knot in and fill up that condom!)]");
+						sb.append("[npc.name]顺从欲望，大喊着让[npc2.name]在自己体内成结然后高潮，"
+								+"[npc.speech(别拔出来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！用精液填满你的小穴，把自己干到怀孕！)]");
 						
 					} else {
-						sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to knot [npc2.herself] as [npc2.she] [npc2.verb(orgasm)],");
+						sb.append("[npc.Name]顺从欲望，大喊着让[npc2.name]高潮时在自己体内成结，");
 
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
 							if(getCharacterBeingFucked().isVisiblyPregnant()) {
-								sb.append(" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Knot yourself and fill up your pussy!)]");
+								sb.append("[npc.speech(别拔出来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！用结锁住自己然后用精液填满你的小穴！)]");
 							} else {
-								sb.append(" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Knot yourself and knock yourself up!)]");
+								sb.append("[npc.speech(别拔出来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！用结锁住自己然后把自己干到怀孕！)]");
 							}
 						} else {
-							sb.append(" [npc.speech(Don't pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Knot yourself!)]");
+							sb.append("[npc.speech(别拔出来"+(petName?"，[#npc.getPetName(npc2)]":"")+"！把自己干到怀孕！)]");
 						}
 					}
 				}
@@ -9046,32 +9046,32 @@ public class GenericOrgasms {
 			} else {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
 					sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-							+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to knot [npc3.name] and cum deep inside");
+							+ "[npc.she]想让[npc2.herHim]在[npc3.name]里面锁结，深深射进");
 					if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-						sb.append(" [npc3.her] [npc3.pussy+].");
+						sb.append("[npc3.pussy+]。");
 	
 					} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-						sb.append(" [npc3.her] [npc3.asshole+].");
+						sb.append("[npc3.asshole+]。");
 	
 					} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-						sb.append(" [npc3.her] [npc3.nipple+].");
+						sb.append("[npc3.nipple+]。");
 	
 					} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE_CROTCH).contains(getCharacterBeingFucked())) {
-						sb.append(" [npc3.her] [npc3.nippleCrotch+].");
+						sb.append("[npc3.nippleCrotch+]。");
 	
 					} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-						sb.append(" [npc3.her] [npc3.spinneret+].");
+						sb.append("[npc3.spinneret+]。");
 					} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 						sb.append(" [npc3.her] [npc3.tussy+].");
 
 					} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_PENIS).contains(getCharacterBeingFucked())) {
-						sb.append(" [npc3.her] [npc3.urethraPenis+].");
+						sb.append("[npc3.urethraPenis+]。");
 	
 					} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_VAGINA).contains(getCharacterBeingFucked())) {
-						sb.append(" [npc3.her] [npc3.urethraVagina+].");
+						sb.append("[npc3.urethraVagina+]。");
 	
 					} else {
-						sb.append(" of [npc3.herHim].");
+						sb.append("[npc3.herHim]里面。");
 					}
 					
 				} else {
@@ -9081,33 +9081,33 @@ public class GenericOrgasms {
 							petName = true;
 						}
 	
-						sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to ram [npc2.her] knot into");
+						sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，让[npc2.her]把锁结塞进");
 						
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.pussy+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.namePos][npc3.pussy+]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.asshole+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.namePos][npc3.asshole+]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.nipple+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.namePos][npc3.nipple+]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE_CROTCH).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.nippleCrotch+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.namePos][npc3.nippleCrotch+]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.spinneret+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.namePos][npc3.spinneret+]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append(" [npc3.namePos] [npc3.tussy+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_PENIS).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.urethraPenis+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.namePos][npc3.urethraPenis+]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.urethraVagina+] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.namePos][npc3.urethraVagina+]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 		
 						} else {
-							sb.append(" [npc3.name] and cum deep inside of [npc3.herHim], [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill up that condom!)]");
+							sb.append("[npc3.name]，深深射进[npc3.herHim]体内，[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"吧！在"+targetHerHim+"里面射干净，填满避孕套哦！)]");
 						}
 						
 					} else {
@@ -9116,44 +9116,44 @@ public class GenericOrgasms {
 							petName = true;
 						}
 	
-						sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(cry)] out for [npc2.name] to ram [npc2.her] knot into");
+						sb.append("[npc.Name]很清楚自己想要什么，冲[npc2.name]叫嚷着，让[npc2.her]把锁结塞进");
 						
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.pussy+] and cum deep inside of [npc3.herHim],"
+							sb.append("[npc3.namePos][npc3.pussy+]，深深灌注了[npc3.herHim]，"
 										+(getCharacterBeingFucked().isVisiblyPregnant()
-											?" [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and stuff "+targetHer+" pussy with your cum!)]"
-											:" [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Stuff "+targetHer+" pussy with your cum and breed "+targetHerHim+"!)]"));
+											?"[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液装满"+targetHer+"的小穴吧！)]"
+											:"[npc.speech(锁结"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！用你的浓精填塞满"+targetHer+"的小穴，给"+targetHerHim+"播种哦！)]"));
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.asshole+] and cum deep inside of [npc3.herHim],"
-										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and stuff "+targetHer+" ass with your cum!)]");
+							sb.append("[npc3.namePos][npc3.asshole+]，深深灌注了[npc3.herHim]，"
+										+ "[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液装满"+targetHer+"的屁股吧！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.nipple+] and cum deep inside of [npc3.herHim],"
-										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and stuff "+targetHer+" nipple with your cum!)]");
+							sb.append("[npc3.namePos][npc3.nipple+]，深深灌注了[npc3.herHim]，"
+										+ "[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液装满"+targetHer+"的乳头吧！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE_CROTCH).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.nippleCrotch+] and cum deep inside of [npc3.herHim],"
-										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and stuff "+targetHer+" nipple with your cum!)]");
+							sb.append("[npc3.namePos][npc3.nippleCrotch+]，深深灌注了[npc3.herHim]，"
+										+ "[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液装满"+targetHer+"的乳头吧！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.spinneret+] and cum deep inside of [npc3.herHim],"
-										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and stuff "+targetHer+" spinneret with your cum!)]");
+							sb.append("[npc3.namePos][npc3.spinneret+]，深深灌注了[npc3.herHim]，"
+										+ "[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液装满"+targetHer+"的丝囊吧！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append(" [npc3.namePos] [npc3.tussy+] and cum deep inside of [npc3.herHim],"
 										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and stuff "+targetHer+" tussy with your cum!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_PENIS).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.urethraPenis+] and cum deep inside of [npc3.herHim],"
-										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill "+targetHer+" balls with your cum!)]");
+							sb.append("[npc3.namePos][npc3.urethraPenis+]，深深灌注了[npc3.herHim]，"
+										+ "[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液填满"+targetHer+"的蛋蛋吧！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.URETHRA_VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append(" [npc3.namePos] [npc3.urethraVagina+] and cum deep inside of [npc3.herHim],"
-										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and fill "+targetHer+" bladder with your cum!)]");
+							sb.append("[npc3.namePos][npc3.urethraVagina+]，深深灌注了[npc3.herHim]，"
+										+ "[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液装满"+targetHer+"的膀胱吧！)]");
 		
 						} else {
-							sb.append(" [npc3.name] and cum deep inside of [npc3.herHim],"
-										+ " [npc.speech(Knot "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Finish inside of "+targetHerHim+" and stuff "+targetHerHim+" with your cum!)]");
+							sb.append("[npc3.name]，深深灌注了[npc3.herHim]，"
+										+ "[npc.speech(锁住"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"！射在"+targetHerHim+"里面，用你的精液塞满"+targetHer+"吧！)]");
 						}
 					}
 				}
@@ -9163,36 +9163,36 @@ public class GenericOrgasms {
 				if(Main.sex.getCharacterTargetedForSexAction(this).isSpeechMuffled() || Main.sex.getCharacterTargetedForSexAction(this).isMute()) {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
-								+"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] [npc2.verb(let)] out a positive-sounding [npc2.moan] in order to let [npc.name] know that that's exactly what [npc2.sheHasFull] planned.");
+								+"[npc2.name]听到[npc.Name]的问题，笑了笑，发出愉悦的[npc2.moan]，让[npc.Name]明白，这正中下怀。");
 						
 					} else {
 						sb.append("<br/><br/>"
-								+"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this,"
-								+ " [npc2.name] [npc2.verb(let)] out a negative-sounding [npc2.moan] in order to let [npc.name] know that [npc2.sheIs] not interested in listening to anything [npc.sheHasFull] to say.");
+								+"[npc2.her]听到[npc.Name]这么问，皱起眉头，"
+								+ "[npc2.name]发出否定的[npc2.moan]，让[npc.Name]明白，[npc2.name]根本不想听[npc.sheHasFull]说这些。");
 					}
 					
 				} else {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly replies in the positive, ",
-									"Letting out [npc.a_moan+] after hearing what it is [npc.nameIs] asking of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]的问题，笑了笑，迅速积极地回答，",
+									"在听清[npc.nameIs]问[npc2.herHim]后发出了[npc.a_moan+]，[npc2.name]回应道，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(Sure, if that's what you want to see!)]",
-								"[npc2.speech(Sounds good to me!)]",
-								"[npc2.speech(Sure thing! I'm going to enjoy this!)]"));
+								"[npc2.speech(好吧，如你所愿！)]",
+								"[npc2.speech(感觉很适合我呢！)]",
+								"[npc2.speech(没问题呀！我会喜欢上这个的！)]"));
 						
 					} else {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly [npc2.verb(shut)] [npc.herHim] down, ",
-									"Clearly not liking the fact that [npc.nameIs] asking something of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]问这个，皱起眉头让[npc.herHim]闭嘴，",
+									"[npc2.name]很显然不想听[npc.NameIs]问这些关于[npc2.herHim]的事，便回复说，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(I'll do whatever I feel like doing!)]",
-								"[npc2.speech(I'm not listening to you!)]",
-								"[npc2.speech(I'll do what I want!)]"));
+								"[npc2.speech(我会为所欲为哦！)]",
+								"[npc2.speech(我才不听你的！)]",
+								"[npc2.speech(我会为所欲为哦！)]"));
 					}
 				}
 			}
@@ -9238,21 +9238,21 @@ public class GenericOrgasms {
 		
 		@Override
 		public String getActionTitle() {
-			return "Encourage pullout";
+			return "鼓励拔出去";
 		}
 
 		@Override
 		public String getActionDescription() {
 			if(isSelfFucking()) {
-				return UtilText.parse(getCharacterBeingFucked(), "You can tell that [npc.name] is fast approaching [npc.her] orgasm. Encourage [npc.herHim] to pull out of [npc.herself] as [npc.she] [npc.verb(orgasm)].");
+				return UtilText.parse(getCharacterBeingFucked(), "你发现[npc.Name]快要高潮了。鼓励他在高潮时拔出去。");
 				
 			} else {
 				if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
 					return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-							"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to pull [npc2.her] dildo out of [npc.name] as [npc2.she] [npc2.verb(orgasm)].");
+							"你看出[npc2.name]很快就要高潮了，便让[npc2.herHim]高潮的时候把假阳具从[npc.Name]体内抽出去。");
 				}
 				return UtilText.parse(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this),
-						"You can tell that [npc2.name] is fast approaching [npc2.her] orgasm. Encourage [npc2.herHim] to pull out of [npc.name] as [npc2.she] [npc2.verb(orgasm)].");
+						"你看出[npc2.name]很快就要高潮了，便让[npc2.herHim]高潮的时候从[npc.Name]体内抽出去。");
 			}
 		}
 
@@ -9321,7 +9321,7 @@ public class GenericOrgasms {
 			if(isSelfFucking()) {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
 					sb.append("Knowing exactly what it is [npc.she] [npc.verb(want)], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.name]"
-							+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to keep fucking [npc2.herself] as [npc2.she] [npc2.verb(orgasm)].");
+							+"[npc.name]允许[npc2.herHim]继续干自己干到高潮。");
 				
 				} else {
 					boolean petName = false;
@@ -9330,20 +9330,20 @@ public class GenericOrgasms {
 					}
 
 					if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this)) || Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
-						sb.append("Not wanting [npc2.name] to continue fucking [npc2.herself] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-								+" [npc.speech(Pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"!)]");
+						sb.append("[npc.Name]不想看[npc2.name]在高潮时继续干自己，大喊着让[npc2.herHim]停下来，"
+								+" [npc.speech(拔出去"+(petName?"，[#npc.getPetName(npc2)]":"")+"！)]");
 						
 					} else {
-						sb.append("Not wanting [npc2.name] to continue fucking [npc2.herself] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,");
+						sb.append("[npc.Name]不想看[npc2.name]在高潮时继续干自己，大喊着让[npc2.herHim]停下来，");
 
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
 							if(getCharacterBeingFucked().isVisiblyPregnant()) {
-								sb.append(" [npc.speech(Pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Don't cum in your pussy!)]");
+								sb.append("[npc.speech(拔出去"+(petName?"，[#npc.getPetName(npc2)]":"")+"！别射你小穴里！)]");
 							} else {
-								sb.append(" [npc.speech(Pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"! Don't knock yourself up!)]");
+								sb.append("[npc.speech(拔出去"+(petName?"，[#npc.getPetName(npc2)]":"")+"！别把自己搞怀孕了！)]");
 							}
 						} else {
-							sb.append(" [npc.speech(Pull out"+(petName?", [#npc.getPetName(npc2)]":"")+"!)]");
+							sb.append("[npc.speech(拔出去"+(petName?"，[#npc.getPetName(npc2)]":"")+"！)]");
 						}
 					}
 				}
@@ -9352,75 +9352,75 @@ public class GenericOrgasms {
 				if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
 					if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.pussy+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.namePos][npc3.pussy+]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.asshole+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.namePos][npc3.asshole+]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.nipple+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.namePos][npc3.nipple+]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.spinneret+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.namePos][npc3.spinneret+]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.tussy+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+									+ "赶快拔出来。");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.breasts+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.namePos][npc3.breasts+]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.feet+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull away.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.namePos][npc3.feet+]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快抽远点。");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.armpit+] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull away.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.namePos][npc3.armpit+]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快抽远点。");
 							
 						} else {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]操[npc3.name]到高潮，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 						}
 		
 					} else {
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside [npc3.namePos] [npc3.pussy+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]灌满[npc3.namePos][npc3.pussy+]，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside [npc3.namePos] [npc3.asshole+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]灌满[npc3.namePos][npc3.asshole+]，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside [npc3.namePos] [npc3.nipple+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]灌满[npc3.namePos][npc3.nipple+]，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside [npc3.namePos] [npc3.spinneret+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]灌满[npc3.namePos][npc3.spinneret+]，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append("Not wanting [npc2.name] to cum inside [npc3.namePos] [npc3.tussy+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+									+ "赶快拔出来。");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum all over [npc3.namePos] [npc3.breasts+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
+							sb.append("[npc.Name]不想让[npc2.name]射得[npc3.namePos][npc3.breasts+]上到处都是，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快拔出来。");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum all over [npc3.namePos] [npc3.feet+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
+							sb.append("[npc.Name]不想让[npc2.name]射得[npc3.namePos][npc3.feet+]上到处都是，便发出一串压抑的呼喊，示意[npc2.herHim]"
 									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum all over [npc3.namePos] [npc3.armpit+], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
-									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull away.");
+							sb.append("[npc.Name]不想让[npc2.name]射得[npc3.namePos][npc3.armpit+]上到处都是，便发出一串压抑的呼喊，示意[npc2.herHim]"
+									+ "赶快抽远点。");
 							
 						} else {
-							sb.append("Not wanting [npc2.name] to cum inside [npc3.name], [npc.name] [npc.verb(make)] a series of muffled cries as [npc.she] [npc.verb(try)] to convey to [npc2.herHim]"
+							sb.append("[npc.Name]不想让[npc2.name]射得[npc3.name]身上到处都是，便发出一串压抑的呼喊，示意[npc2.herHim]"
 									+ " that [npc.she] [npc.verb(want)] [npc2.herHim] to pull out.");
 						}
 					}
@@ -9428,39 +9428,39 @@ public class GenericOrgasms {
 				} else {
 					if(!isRealPenisFuckingCharacter(getCharacterBeingFucked(), Main.sex.getCharacterTargetedForSexAction(this))) {
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Pull out of "+targetHer+" pussy when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHer+"小穴里拔出来！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Pull out of "+targetHer+" ass when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHer+"屁股里拔出来！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Pull out of "+targetHer+" nipple when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHer+"奶头里拔出来！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Pull out of "+targetHer+" spinneret when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHer+"丝囊里拔出来！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
 									+" [npc.speech("+targetSheHas+" had enough! Pull out of "+targetHer+" tussy when you're going to cum!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Get away from "+targetHer+" tits when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHer+"奶子上挪开！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Get away from "+targetHer+" feet when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHer+"脚上挪开！)]");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Get away from "+targetHer+" pit when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHer+"胸口挪开！)]");
 							
 						} else {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech("+targetSheHas+" had enough! Pull away from "+targetHerHim+" when you're going to cum!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.name]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech("+targetSheHas+"已经够了！要射的时候从"+targetHerHim+"里面拔出来！)]");
 						}
 		
 					} else if(Main.sex.getCharacterTargetedForSexAction(this).isWearingCondom()) {
@@ -9470,43 +9470,43 @@ public class GenericOrgasms {
 						}
 						
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc.pussy+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(Pull out of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.pussy+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(从"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"里面拔出来！我想看你的避孕套胀起来呢！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.asshole+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(Pull out of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.asshole+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(从"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"里面拔出来！我想看你的避孕套胀起来呢！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.face+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(Pull out of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.face+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(从"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"里面拔出来！我想看你的避孕套胀起来呢！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.nipple+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(Pull out of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.nipple+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(从"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"里面拔出来！我想看你的避孕套胀起来呢！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.spinneret+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(Pull out of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.spinneret+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(从"+targetHerHim+(petName?"，[#npc.getPetName(npc2)]":"")+"里面拔出来！我想看你的避孕套胀起来呢！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.tussy+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
 									+" [npc.speech(Pull out of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.breasts+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+ " [npc.speech(Pull back"+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.breasts+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+ "[npc.speech(快"+(petName?"从[#npc.getPetName(npc2)]那":"")+"退出来！我想看着你的避孕套胀起来！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.feet+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+ " [npc.speech(Pull back"+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.feet+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+ "[npc.speech(快"+(petName?"从[#npc.getPetName(npc2)]那":"")+"退出来！我想看着你的避孕套胀起来！)]");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to continue fucking [npc3.namePos] [npc3.armpit+] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+ " [npc.speech(Pull back"+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+							sb.append("[npc.Name]不想让[npc2.name]一直操[npc3.namePos][npc3.armpit+]到高潮，便叫嚷着要[npc2.herHim]停下，"
+									+ "[npc.speech(快"+(petName?"从[#npc.getPetName(npc2)]那":"")+"退出来！我想看着你的避孕套胀起来！)]");
 							
 						} else {
 							sb.append("Not wanting [npc2.name] to continue fucking [npc3.name] through [npc2.her] orgasm, [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+ " [npc.speech(Pull back"+(petName?", [#npc.getPetName(npc2)]":"")+"! I want to see your condom inflating!)]");
+									+ "[npc.speech(快"+(petName?"从[#npc.getPetName(npc2)]那":"")+"退出来！我想看着你的避孕套胀起来！)]");
 						}
 						
 					} else {
@@ -9516,45 +9516,45 @@ public class GenericOrgasms {
 						}
 		
 						if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside of [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]里面，便叫嚷着要[npc2.herHim]停下，"
 									+(getCharacterBeingFucked().isVisiblyPregnant()
-											?" [npc.speech(I don't want you cumming inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull out of "+targetHer+" pussy!)]"
-											:" [npc.speech(I don't want "+targetHerHim+" getting pregnant"+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull out of "+targetHer+" pussy before you cum!)]"));
+											?"[npc.speech(我不想你射在"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！从"+targetHer+"穴里拔出来！)]"
+											:"[npc.speech(我不想让"+targetHerHim+"怀孕"+(petName?"，[#npc.getPetName(npc2)]":"")+"！射之前从"+targetHer+"小穴里拔出来！)]"));
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ANUS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside of [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull out of "+targetHer+" ass!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]里面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！从"+targetHer+"屁眼里拔出来！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside of [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull out of "+targetHer+" throat!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]里面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！从"+targetHer+"喉咙里拔出来！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.NIPPLE).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside of [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull out of "+targetHer+" nipple!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]里面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！从"+targetHer+"乳头里拔出来！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.SPINNERET).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum inside of [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull out of "+targetHer+" spinneret!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]里面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHerHim+(petName?"里面，[#npc.getPetName(npc2)]":"里面")+"！从"+targetHer+"丝穴里拔出来！)]");
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.TUSSY).contains(getCharacterBeingFucked())) {
 							sb.append("Not wanting [npc2.name] to cum inside of [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
 									+" [npc.speech(I don't want you cumming inside of "+targetHerHim+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull out of "+targetHer+" tussy!)]");
 
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.BREAST).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum all over [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming on "+targetHer+" tits"+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull away from "+targetHerHim+"!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]上面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHer+"奶子上"+(petName?"，[#npc.getPetName(npc2)]":"")+"！从"+targetHerHim+"身上挪开！)]");
 		
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaPenetration.FOOT).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum all over [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming on "+targetHer+" [npc3.feet]"+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull away from "+targetHerHim+"!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]上面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHer+"[npc3.feet]上"+(petName?"，[#npc.getPetName(npc2)]":"")+"！从"+targetHerHim+"身上挪开！)]");
 							
 						} else if(Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, SexAreaOrifice.ARMPITS).contains(getCharacterBeingFucked())) {
-							sb.append("Not wanting [npc2.name] to cum all over [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming on "+targetHer+" pit"+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull away from "+targetHerHim+"!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]上面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHer+"胸口上"+(petName?"，[#npc.getPetName(npc2)]":"")+"！从"+targetHerHim+"身上挪开！)]");
 							
 						} else {
-							sb.append("Not wanting [npc2.name] to cum all over [npc3.name], [npc.name] [npc.verb(cry)] out for [npc2.herHim] to stop,"
-									+" [npc.speech(I don't want you cumming on "+targetHer+""+(petName?", [#npc.getPetName(npc2)]":"")+"! Pull away from "+targetHerHim+"!)]");
+							sb.append("[npc.Name]不想让[npc2.name]射在[npc3.name]上面，便叫嚷着要[npc2.herHim]停下，"
+									+"[npc.speech(我不想你射在"+targetHer+"身上"+(petName?"，[#npc.getPetName(npc2)]":"")+"！从"+targetHerHim+"身旁挪开！)]");
 						}
 					}
 				}
@@ -9564,36 +9564,36 @@ public class GenericOrgasms {
 				if(Main.sex.getCharacterTargetedForSexAction(this).isSpeechMuffled() || Main.sex.getCharacterTargetedForSexAction(this).isMute()) {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
-								+"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] [npc2.verb(let)] out a positive-sounding [npc2.moan] in order to let [npc.name] know that that's exactly what [npc2.sheHasFull] planned.");
+								+"[npc2.name]听到[npc.Name]的问题，笑了笑，发出愉悦的[npc2.moan]，让[npc.Name]明白，这正中下怀。");
 						
 					} else {
 						sb.append("<br/><br/>"
-								+"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this,"
-								+ " [npc2.name] [npc2.verb(let)] out a negative-sounding [npc2.moan] in order to let [npc.name] know that [npc2.sheIs] not interested in listening to anything [npc.sheHasFull] to say.");
+								+"[npc2.her]听到[npc.Name]这么问，皱起眉头，"
+								+ "[npc2.name]发出否定的[npc2.moan]，让[npc.Name]明白，[npc2.name]根本不想听[npc.sheHasFull]说这些。");
 					}
 					
 				} else {
 					if(Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction())) {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Grinning as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly replies in the positive, ",
-									"Letting out [npc.a_moan+] after hearing what it is [npc.nameIs] asking of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]的问题，笑了笑，迅速积极地回答，",
+									"在听清[npc.nameIs]问[npc2.herHim]后发出了[npc.a_moan+]，[npc2.name]回应道，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(Sure, if that's what you want to see!)]",
-								"[npc2.speech(Sounds good to me!)]",
-								"[npc2.speech(Sure thing! I'm going to enjoy this!)]"));
+								"[npc2.speech(好吧，如你所愿！)]",
+								"[npc2.speech(感觉很适合我呢！)]",
+								"[npc2.speech(没问题呀！我会喜欢上这个的！)]"));
 						
 					} else {
 						sb.append("<br/><br/>"
 								+UtilText.returnStringAtRandom(
-									"Furrowing [npc2.her] eyebrows as [npc.name] [npc.verb(ask)] this, [npc2.name] quickly [npc2.verb(shut)] [npc.herHim] down, ",
-									"Clearly not liking the fact that [npc.nameIs] asking something of [npc2.herHim], [npc2.name] responds, "));
+									"[npc2.name]听到[npc.Name]问这个，皱起眉头让[npc.herHim]闭嘴，",
+									"[npc2.name]很显然不想听[npc.NameIs]问这些关于[npc2.herHim]的事，便回复说，"));
 		
 						sb.append(UtilText.returnStringAtRandom(
-								"[npc2.speech(I'll do whatever I feel like doing!)]",
-								"[npc2.speech(I'm not listening to you!)]",
-								"[npc2.speech(I'll do what I want!)]"));
+								"[npc2.speech(我会为所欲为哦！)]",
+								"[npc2.speech(我才不听你的！)]",
+								"[npc2.speech(我会为所欲为哦！)]"));
 					}
 				}
 			}
@@ -9623,11 +9623,11 @@ public class GenericOrgasms {
 			SexParticipantType.SELF) {
 		@Override
 		public String getActionTitle() {
-			return "Orgasm";
+			return "高潮";
 		}
 		@Override
 		public String getActionDescription() {
-			return "You've reached your climax, and can't hold back your orgasm any longer.";
+			return "你已经到达了快感的极限，再无法阻止高潮的到来。";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -9682,46 +9682,46 @@ public class GenericOrgasms {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Denied!";
+			return "拒绝！";
 		}
 		@Override
 		public String getActionDescription() {
-			return "You were denied at the last moment!";
+			return "你在最后一刻被拒绝了！";
 		}
 		@Override
 		public String getDescription() {
 			if(isPerformingCharacterTotallyImmobilised()) {
 				if(Main.sex.getCharacterPerformingAction().isAsleep()) {
-					return "[npc.Name] uncomfortably [npc.verb(shuffle)] about in [npc.her] sleep, but other than that [npc.she] [npc.do]n't react to having had [npc.her] orgasm denied.";
+					return "[npc.Name]在睡梦中不舒服地动了动，但除此之外，[npc.she]对于自己被拒绝高潮就没有什么别的反应了。";
 				} else {
-					return "[npc.Name] [npc.verb(remain)] completely motionless and [npc.do]n't react to having had [npc.her] orgasm denied.";
+					return "[npc.Name]保持着完全的静止，对于自己被拒绝高潮没有任何反应。";
 				}
 			}
 			
 			if(Main.sex.getCharacterPerformingAction().isSpeechMuffled() || Main.sex.getCharacterPerformingAction().isMute()) {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 					case SUB_RESISTING:
-						return UtilText.returnStringAtRandom("[npc.Name] [npc.verb(let)] out a distressed, muffled cry, making it clear that [npc.sheIs] having a bad time.");
+						return UtilText.returnStringAtRandom("[npc.Name]发出苦恼的闷哭声，显然心情很差。");
 					default:
 						if(Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_DENIAL_SELF)) {
-							return UtilText.returnStringAtRandom("[npc.Name] [npc.verb(let)] out an erotic, muffled cry, making it clear that [npc.she] [npc.verb(enjoy)] having [npc.her] orgasms denied.");
+							return UtilText.returnStringAtRandom("[npc.Name]色气无比的声音，表现出[npc.she]十分享受寸止的感觉。");
 						} else {
-							return UtilText.returnStringAtRandom("[npc.Name] [npc.verb(let)] out a dismayed, muffled cry, making it clear that [npc.sheIs] desperate to be allowed to orgasm.");
+							return UtilText.returnStringAtRandom("[npc.Name]发出沮丧的闷哭声，显然狂乱地想要被允许高潮。");
 						}
 				}
 				
 			} else {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 					case SUB_RESISTING:
-						return UtilText.returnStringAtRandom("[npc.speech(You've had your fun! Now leave me alone!)] [npc.name] [npc.verb(scream)], [npc.speech(D-Don't make me go through that again!)]");
+						return UtilText.returnStringAtRandom("[npc.speech(你可爽了！就把我扔一边不管了！)][npc.name]尖叫着，[npc.speech(别，别再让我这样了！)]");
 					default:
 						if(Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_DENIAL_SELF)) {
 							return UtilText.returnStringAtRandom(
-									"[npc.speech(I was so close!)] [npc.name] [npc.verb(whine)]."
-									+ " The erotic tone of [npc.her] voice makes it clear that [npc.sheIs] actually enjoying being denied, and is simply acting as [npc.she] [npc.verb(go)] on to playfully protest,"
-									+ "[npc.speech(Let me cum next time!)]");
+									"[npc.speech(就差一点！)][npc.name]哀鸣道。"
+									+ "[npc.her]色情的语气让人明白，[npc.sheIs]其实很享受被拒绝的感觉，只是在扮演[npc.she]的角色，嬉皮笑脸地提出抗议，"
+									+ "[npc.speech(下次，下次要去！)]");
 						} else {
-							return UtilText.returnStringAtRandom("[npc.speech(No! I was so close!)] [npc.name] [npc.verb(wail)] in dismay, [npc.speech(Let me cum next time!)]");
+							return UtilText.returnStringAtRandom("[npc.speech(明明！明明就差一点！)][npc.name]挣扎大哭，[npc.speech(下次，下次要去！)]");
 						}
 				}
 			}

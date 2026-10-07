@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_mouse</race>
 	<colour>innoxia_mouse</colour>
@@ -23,24 +23,24 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Harvest Friends</bookName>
+	<bookName><![CDATA[丰收伙伴]]></bookName>
 	<basicDescriptionId>MOUSE_BASIC</basicDescriptionId>
 	<advancedDescriptionId>MOUSE_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[mouse-morph]]></name>
-	<namePlural><![CDATA[mouse-morphs]]></namePlural>
-	<singularMaleName><![CDATA[mouse-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[mouse-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[mouse-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[mouse-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic mouse, known as a 'mouse-morph' when bipedal, and a 'mouse-taur' when the lower body is that of a feral mouse.]]></description>
+	<name><![CDATA[鼷鼠化形]]></name>
+	<namePlural><![CDATA[鼷鼠化形]]></namePlural>
+	<singularMaleName><![CDATA[鼷鼠男]]></singularMaleName>
+	<singularFemaleName><![CDATA[鼷鼠女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[鼷鼠男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[鼷鼠女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的鼷鼠，当下肢为双足时称为“鼷鼠化形”，而下肢呈现出小鼠兽态时称为“半鼷鼠人”。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[mouse]]></feralName>
-		<feralNamePlural><![CDATA[mice]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[mouse]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[mouse]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[mice]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[mice]]></feralPluralFemaleName>
+		<feralName><![CDATA[鼷鼠]]></feralName>
+		<feralNamePlural><![CDATA[鼷鼠]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[鼷鼠]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[鼷鼠]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[鼷鼠]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[鼷鼠]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>false</sizeHeight>
 		<size>20</size>
@@ -53,7 +53,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] agility and speed allow [npc.herHim] to effectively strike at an opponent's weak points.
+		[npc.NamePos]的敏捷和速度让[npc.herHim]能够有效地攻击对手的弱点。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="0">MAJOR_PHYSIQUE</attribute>

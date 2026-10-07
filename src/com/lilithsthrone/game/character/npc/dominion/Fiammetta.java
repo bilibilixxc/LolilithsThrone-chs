@@ -78,8 +78,8 @@ public class Fiammetta extends NPC {
 	}
 	
 	public Fiammetta(boolean isImported) {
-		super(isImported, new NameTriplet("Fiammetta"), "Sciarra",
-				"Fiammetta is a human reporter who works for Dominion's only newspaper; The Octogram Herald.",
+		super(isImported, new NameTriplet("菲亚梅塔"), "夏拉",
+				"菲亚梅塔是一位在御城区唯一的报纸：《八角星先驱报》中工作的人类记者。",
 				23, Month.JULY, 14,
 				15, Gender.F_V_B_FEMALE, Subspecies.HUMAN, RaceStage.HUMAN,
 				new CharacterInventory(false, 30),

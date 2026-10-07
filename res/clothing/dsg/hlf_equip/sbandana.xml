@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
-		<authorTag><![CDATA[A small tag sewn into the hem reads "MFD by DSG Threadworks".]]></authorTag>
+		<authorTag><![CDATA[下摆有一个小标签印着“DSG织厂生产。”]]></authorTag>
 		<value>50</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[skull-patterned bandana]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[skull-patterned bandanas]]></namePlural>
-		<description><![CDATA[A square piece of cloth with a stylized canine skull printed on it. Folded and tied just right, it can be made into an intimidating face mask.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[骷髅花纹面巾]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[骷髅花纹面巾]]></namePlural>
+		<description><![CDATA[一块方形的布，上面印着一个风格化的狗骷髅。折叠并系好就可以做成一个吓人的面巾。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>MOUTH</slot>
@@ -59,51 +58,51 @@
 	</coreAtributes>
 	
 	<resplacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(tie)] the bandana around [npc.her] head and [npc.verb(adjust)] it so that the skull design is over [npc.her] nose and mouth.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(tie)] the bandana around [npc2.namePos] head and [npc.verb(adjust)] it so that the skull design is over [npc2.her] nose and mouth.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(tie)] the bandana around [npc2.namePos] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将面巾系在[npc.her]的头上并调节它，直到面巾上骷髅的图案能遮盖[npc.her]的鼻子和嘴。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将面巾系在[npc2.namePos]的头上，并对它进行调整，直到面巾上的骷髅图案能盖住[npc2.her]的鼻子和嘴巴。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗糙地将头巾系在[npc2.namePos]的头上。
+]]></otherRough>
 	</resplacementText>
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the bandana from around [npc.her] head.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the bandana from around [npc2.namePos] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tears)] the bandana from around [npc2.namePos] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将面巾从头上摘下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将头巾从[npc2.namePos]的头上解下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将头巾从[npc2.namePos]的头上扯下来。
+]]></otherRough>
 	</displacementText>
 	
 	<displacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] bandana down.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] bandana down.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] bandana down.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的面巾拉下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的头巾拉下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的头巾拽下。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up [npc.her] bandana.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up [npc2.namePos] bandana.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcefully [npc.verb(pull)] up [npc2.namePos] bandana.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的面巾拉起来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的头巾拉起来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]用力将[npc2.namePos]的头巾拉起来。
+]]></otherRough>
 	</replacementText>
 	
 </clothing>

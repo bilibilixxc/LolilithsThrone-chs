@@ -1,53 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Orgasm reaction when you cum from Scarlett's anal -->
 	
 	<htmlContent tag="ROUGH_ANAL_ORGASM"><![CDATA[
 	<p>
-		Letting out a triumphant chuckle, [scarlett.name] continues to thrust [scarlett.her] [scarlett.cock+] in and out of your [pc.asshole+] as [scarlett.she] asks, [scarlett.speechNoEffects(You like that, bitch?! ~Mmm!~ Tell me what you are!)]
+		[scarlett.name]发出一声胜利的轻笑，继续让[scarlett.her][scarlett.cock+]在[pc.asshole+]中抽插，并问道，[scarlett.speechNoEffects(你喜欢这样对吗，婊子？！嗯哼！～告诉我你是什么！)]
 	</p>
 	<p>
-		Letting out a deep [pc.moan], you submissively tell the [scarlett.race] what [scarlett.she] wants to hear, [pc.speechNoEffects(~Ooh!~ I'm a dirty buttslut!)]
+		你发出一声低沉的[pc.moan]，驯从地说出[scarlett.race]想要听到的，[pc.speechNoEffects(哦！～我是个肮脏的屁穴荡妇！)]
 	</p>
 	<p>
-		Hilting [scarlett.her] [scarlett.cock+] in your [pc.ass], [scarlett.name] hammers the point home by saying, [scarlett.speechNoEffects(That's right! ~Mmm!~ You came from having my cock pound your ass! ~Aah!~ That makes you my dirty buttslut bitch!)]
+		[scarlett.her][scarlett.cock+]继续在[pc.ass]里横冲直撞，[scarlett.name]强调道，[scarlett.speechNoEffects(这就对了！～嗯哼！～你生来就是为了让我的肉棒狠狠操你屁股的！～啊！～这让你变成我的脏脏屁穴荡妇！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CUSTOMER_INTERRUPTION -->
 	
 	<htmlContent tag="CUSTOMER_INTERRUPTION"><![CDATA[
 	#IF(scarlett.hasPenis())
-		Having spotted a customer heading towards her, Scarlett bucks her hips forwards and slams her [scarlett.cock+] down your throat, effectively silencing you as she calls out, 
+		斯嘉丽发现一位顾客向她走来，她弓腰，使劲儿把她的[scarlett.cock+]塞进你的喉咙，有效地在她叫喊时让你保持安静， 
 	#ELSE
-		Having spotted a customer heading towards her, Scarlett bucks her hips forwards and smothers your mouth with her [scarlett.pussy+], effectively silencing you as she calls out,
+		斯嘉丽发现一位顾客向她走来，她弓腰，用她的[scarlett.pussy+]堵住你的嘴，有效地在她叫喊时让你保持安静， 
 	#ENDIF
-	 [scarlett.speechNoEffects(Ask one of the other harpies for help! I'm fucking busy here!)]
+	[scarlett.speechNoEffects(去找另一个哈比帮忙！我这儿正他妈忙得要死！)]
 	<br/><br/>
-	Scarlett's hostile exclamation effectively dissuades the customer from coming any closer, and after watching them turn around and walk off, the raven harpy draws back a little and hisses down at you,
+	斯嘉丽敌意的喊叫有效地阻止了客人靠得更近，在看到客人转身离开后，这个渡鸦哈比向后撤开了一点，并对你“嘘——”，
 	#IF(scarlett.hasPenis())
-		 [scarlett.speechNoEffects(Keep sucking, bitch!)]
+		[scarlett.speechNoEffects(继续吸啊，贱货！)]
 	#ELSE
-		 [scarlett.speechNoEffects(Get that tongue working again, bitch!)]
+		[scarlett.speechNoEffects(舌头动起来啊，贱货！)]
 	#ENDIF
 	]]></htmlContent>
 	
 	<htmlContent tag="CUSTOMER_INTERRUPTION"><![CDATA[
 	#IF(scarlett.hasPenis())
-		Suddenly thrusting her [scarlett.cock+] down your throat, Scarlett calls out to an approaching customer,
+		斯嘉丽猛地把[scarlett.cock+]塞入你的喉咙，冲着一个靠近的客人大喊，
 	#ELSE
-		Suddenly bucking her hips forwards and smothering your mouth with her [scarlett.pussy+], Scarlett calls out to an approaching customer,
+		斯嘉丽猛地扭动臀部，用[scarlett.pussy+]堵住你的嘴，冲着一个靠近的客人大喊，
 	#ENDIF
-	 [scarlett.speechNoEffects(Fuck off and bother one of the other harpies!)]
+	[scarlett.speechNoEffects(滚远点！去烦别的哈比去！)]
 	<br/><br/>
-	Clearly not wanting to argue with such a hostile harpy, the customer scurries off, leaving Scarlett to draw back a little and hiss down at you,
+	客人急忙退开了，显而易见地不想招惹一个充满敌意的哈比，留下斯嘉丽后撤开一点儿后对着你“嘘——”，
 	#IF(scarlett.hasPenis())
-		 [scarlett.speechNoEffects(Go on, bitch, keep sucking my cock!)]
+		[scarlett.speechNoEffects(继续啊，婊子，接着吸我的屌啊！)]
 	#ELSE
-		 [scarlett.speechNoEffects(Go on, bitch, get your tongue in deep!)]
+		[scarlett.speechNoEffects(继续啊，婊子，把你的舌头探深点！)]
 	#ENDIF
 	]]></htmlContent>
 	
@@ -56,23 +56,23 @@
 	
 	<htmlContent tag="HELENA_INTERRUPTION"><![CDATA[
 	#IF(scarlett.hasPenis())
-		Letting out a surprised gasp, Scarlett suddenly steps forwards and hilts her cock down your throat, effectively limiting the sounds you can produce to no more than a quiet, gargled splutter.
+		斯嘉丽讶然地抽气，猛地上前，把阴茎塞进你的喉咙，有效地把你能发出的最大噪音限制为一声轻微的、漱喉时的咳呛。
 	#ELSE
-		Letting out a surprised gasp, Scarlett suddenly steps forwards and smothers your mouth with her [scarlett.pussy+], effectively limiting the sounds you can produce to no more than a quiet, muffled splutter.
+		斯嘉丽讶然地抽气，猛地上前，用[scarlett.pussy+]堵住你的嘴，有效地把你能发出的最大噪音限制为一声轻微的、闷闷的咳呛。
 	#ENDIF
-	 The reason for this unexpected move is very quickly made clear to you, as from up above, you hear the familiar, soft voice of Helena addressing your sexual partner, [helena.speechNoEffects(Scarlett, my dear, I've just received a complaint from one of our clients. Apparently, you've just been extremely rude to them. What do you have to say for yourself?)]
+	你很快就明白了这一意外之举的原因，你从柜台上方听见了海伦娜和你的性伴侣交谈时熟悉、轻柔的声音，[helena.speechNoEffects(亲爱的斯嘉丽，我刚刚收到了一位客人的投诉。显然，你对他们表现得极其粗鲁。你还有什么要为自己辩解的吗？)]
 	<br/><br/>
-	[scarlett.speechNoEffects(Ah! S-Sorry, Helena! I didn't mean to be so rude!)] the raven harpy quickly apologises, doing her best to hide the tone of arousal in her voice.
+	[scarlett.speechNoEffects(啊！抱、抱歉，海伦娜！我不是有意表现得如此无礼的！)]这个渡鸦哈比立刻道了歉，用尽全力尽量掩饰自己声调里的性奋。
 	<br/><br/>
-	Thankfully, Helena seems to be oblivious as to what's happening beneath the counter in front of her, and after sharply scolding her subordinate, she lets out an exasperated sigh and asks, [helena.speechNoEffects(So did [pc.name] leave earlier? I thought [pc.she] would have come and said goodbye to me...)]
+	谢天谢地，海伦娜似乎对发生在柜台下的一切无知无觉，在严厉批评了她的下属后，她恼怒地叹了口气，并问道，[helena.speechNoEffects(所以[pc.name]早先前就离开了吗？我还以为[pc.she]会来和我道别呢……)]
 	<br/><br/>
-	[scarlett.speechNoEffects(Yes, but I'm sure [pc.she]'ll be back soon,)] Scarlett says
+	[scarlett.speechNoEffects(是的，但我很确定[pc.she]马上就会再回来，)]斯嘉丽说道，
 	#IF(scarlett.hasPenis())
-		 as she slowly grinds the base of her cock against your [pc.lips].
+		同时用她的肉棒根部摩擦你的[pc.lips]。
 	#ELSE
-		 as she slowly grinds her wet cunt against your [pc.lips].
+		同时用她湿润的阴户摩擦你的[pc.lips]。
 	#ENDIF
-	 Without saying another word, you hear the beautiful matriarch turn on the spot and head off back into the store, leaving Scarlett to let out a soft laugh and hiss down at you, [scarlett.speechNoEffects(You hear that? Once I've finished with you, Helena'll be wanting to see you. Now hurry up and finish me off!)]
+	不再多发一言，你听到这位美丽的负责人转过身回到商店里，留下斯嘉丽轻柔地低笑，并对你“嘘——”，[scarlett.speechNoEffects(你听到了吗？等我们一搞定你就去见海伦娜。现在，快点把我口过去！)]
 	]]></htmlContent>
 	
 </dialogue>

@@ -58,7 +58,7 @@ public class EnchantmentController {
 			id = "DELETE_EFFECT_"+effectCount;
 			if (MainController.document.getElementById(id) != null) {
 				MainController.addTooltipListeners(id,
-						new TooltipInformationEventListener().setInformation("Delete Effect", ""),
+						new TooltipInformationEventListener().setInformation("去除效果", ""),
 						new EnchantmentEventListener().removeEffect(effectCount), false);
 			}
 		}
@@ -145,7 +145,7 @@ public class EnchantmentController {
 			((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
 				if (EnchantmentDialogue.getIngredient().getEnchantmentEffect().getEffectsDescription(
 						EnchantmentDialogue.getPrimaryMod(), EnchantmentDialogue.getSecondaryMod(), EnchantmentDialogue.getPotency(), EnchantmentDialogue.getLimit(), Main.game.getPlayer(), Main.game.getPlayer()) != null) {
-					Main.game.setContent(new Response("Add", "Add the effect.", EnchantmentDialogue.ENCHANTMENT_MENU) {
+					Main.game.setContent(new Response("添加", "添加该效果。", EnchantmentDialogue.ENCHANTMENT_MENU) {
 						@Override
 						public void effects() {
 							EnchantmentDialogue.addEffect(new ItemEffect(
@@ -154,15 +154,15 @@ public class EnchantmentController {
 					});
 				}
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Add Effect", ""));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("添加效果", ""));
 		}
 		
 		id = "ENCHANT_ADD_BUTTON_DISABLED";
 		if (MainController.document.getElementById(id) != null) {
 			String blockedString = EnchantmentDialogue.getEnchantmentEffectBlockedReason(EnchantmentDialogue.getCurrentEffect());
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Add Effect",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("添加效果",
 					EnchantmentDialogue.getEffects().size()>=EnchantmentDialogue.getIngredient().getEnchantmentLimit()
-							?"You have already added the maximum number of effects for this item!"
+							?"你对这件物品添加的效果已达上限！"
 							:(blockedString != null
 							?blockedString
 							:"")));

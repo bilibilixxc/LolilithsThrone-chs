@@ -135,7 +135,7 @@ public abstract class AbstractTorsoType implements BodyPartTypeInterface {
 	
 	@Override
 	public String getDeterminer(GameCharacter gc) {
-		return "a layer of";
+		return "一层";
 	}
 
 	@Override

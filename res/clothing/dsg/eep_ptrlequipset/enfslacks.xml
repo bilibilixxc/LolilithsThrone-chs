@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 		
-		<authorTag><![CDATA[A small tag sewn into the inside of the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[腰间内侧有一个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>800</value>
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's slacks]]></name>
+		<name><![CDATA[执法者便裤]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's slacks]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者便裤]]></namePlural> 
 
-		<description><![CDATA[A pair of slacks made from cotton twill. The reinforced stitching and relatively loose fit make it suitable for both patrol and station duty.]]></description> 
+		<description><![CDATA[一条棉质斜纹裤。强化缝线和相对宽松的配合，使它适合穿着去巡逻和站岗。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -101,84 +100,84 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the slacks and [npc.verb(pull)] them up to [npc.her] waist before buttoning up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the slacks up around [npc2.namePos] legs up to [npc2.her] waist before buttoning up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] 
+		<self><![CDATA[
+[npc.Name]把脚放进裤子里，然后把它提到腰部之后从前面系好扣子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把[npc2.namePos]的休闲裤从腿上拉到腰部，然后系上前面的扣子。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]猛然将[npc2.namePos]腿边的休闲裤提到腰部位置，
 					#IF game.isSillyModeEnabled()
-					#THEN practically [npc.verb(give)] [npc2.namePos] a wedgie as [npc2.her]
+					#THEN 直接将裤子勒入[npc2.namePos]的臀缝间，
 					#ENDIF
-					[npc.verb(yank)] the slacks up around [npc2.namePos] legs up to [npc2.her] waist before roughly buttoning up the front.]]>
-		</otherRough>
+					粗暴地系上前面的扣子。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] slacks and [npc.verb(pull)] them down before kicking them from [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] slacks and [npc.verb(pull)] them down before sliding them from [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] slacks and [npc.verb(yank)] them off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉下[npc.her]的裤子到脚踝处，随后一脚踢开。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.name]的休闲裤，然后扒到小腿处从[npc2.her]的[npc2.feet]上脱下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]扯开[npc2.name]的休闲裤扣子，随后将它猛然拽掉。
+]]></otherRough>
 	</displacementText>	
 
 	<replacementText type="UNZIPS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up the fly of [npc.her] slacks.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(zip)] up the front of [npc2.namePos] slacks.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(zip)] up the front of [npc2.namePos] slacks
+		<self><![CDATA[
+[npc.Name]拉起[npc.her]休闲裤上的拉链。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉起[npc2.namePos]休闲裤上的拉链。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地拉上[npc2.namePos]休闲裤的拉链
 					#IF game.isSillyModeEnabled() && npc2.hasPenis()
-					#THEN without much regard for what might be in the way, resulting in a close call!
-					#ELSE .
+					#THEN ，毫不在意是否会被什么东西挡住，惊险地擦过[npc2.namePos]的肉棒！
+					#ELSE 。
 					#ENDIF
-					]]>
-		</otherRough>
+					
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="UNZIPS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc.her] slacks.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc2.namePos] slacks.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(unzip)] the fly of [npc2.namePos] slacks.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]休闲裤上的拉链。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]休闲裤前面的拉链。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]强行拉开[npc2.namePos]休闲裤的拉链。
+		]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] slacks up to [npc.her] waist and [npc.verb(button)] up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] slacks up to [npc2.her] waist and [npc.verb(button)] up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(pull)] [npc2.namePos] slacks up to [npc2.her] waist and roughly [npc.verb(button)] up the front.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把[npc.her]的休闲裤拉到[npc.her]的腰部，然后从前面系好扣子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将裤子提到[npc2.her]的腰部，然后系上前面的扣子。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]强行把[npc2.namePos]的休闲裤拉到腰部，然后粗暴地系上前面的扣子。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] slacks and [npc.verb(pull)] them down.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] slacks and [npc.verb(pull)] them down.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] slacks and [npc.verb(yank)] down around [npc2.her] legs.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的休闲裤，然后一把拉下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.name]的休闲裤然后脱下来。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]强行解开[npc2.name]的休闲裤然后将其从[npc2.her]腿上用力拉下。
+		]]></otherRough>
 	</displacementText>	
 	
 </clothing>

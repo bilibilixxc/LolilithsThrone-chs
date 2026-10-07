@@ -133,17 +133,17 @@ public class KaysWarehouse {
 		SexType sexTypeWolfgang = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, sexAreaWolfgang);
 		SexType sexTypeKarl = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, sexAreaKarl);
 		
-		String fuckingText = "Wolfgang fucking your " +sexTypeWolfgang.getTargetedSexArea().getName(Main.game.getPlayer())+" while Karl fucks your " +sexTypeKarl.getTargetedSexArea().getName(Main.game.getPlayer());
+		String fuckingText = "沃尔夫冈操着你的" +sexTypeKarl.getTargetedSexArea().getName(Main.game.getPlayer());
 		if(sexTypeWolfgang.getTargetedSexArea()==sexTypeKarl.getTargetedSexArea()) {
-			fuckingText = "both Wolfgang and Karl fucking your " + sexTypeWolfgang.getTargetedSexArea().getName(Main.game.getPlayer());
+			fuckingText = "沃尔夫冈和卡尔都在操着你的" + sexTypeWolfgang.getTargetedSexArea().getName(Main.game.getPlayer());
 		}
 		if(sexTypeWolfgang.getTargetedSexArea()==SexAreaOrifice.MOUTH) {
-			fuckingText = "Wolfgang fucking your face while Karl makes you give him a handjob";
+			fuckingText = "沃尔夫冈要操你的嘴，而卡尔要你给他手淫";
 		}
 		
 		return new ResponseSex(title,
 				description
-					+"<br/>[style.italicsSex(This will result in "+fuckingText+"!)]",
+					+"<br/>[style.italicsSex(这将会导向"+fuckingText+"！)]",
 				true, false,
 				new SexManagerDefault(
 						position,
@@ -240,11 +240,11 @@ public class KaysWarehouse {
 	
 	private static Response getDobermannsRewardSexResponse(int startIndex, int index, String title) {
 		if(index == startIndex) {
-			title = title.replaceAll("sex_type_replacement", "oral");
+			title = title.replaceAll("sex_type_replacement", "口交");
 			
 			if(!isPlayerMouthFree()) {
 				return new Response(title,
-						"As you cannot gain access to your mouth, you cannot offer to perform oral on the dobermann-boys...",
+						"你无法使用嘴巴，所以也就不能给这两个杜宾口交……",
 						null);
 				
 			} else {
@@ -253,22 +253,22 @@ public class KaysWarehouse {
 						SexSlotSitting.SITTING, SexAreaPenetration.FINGER,
 						SexSlotSitting.PERFORMING_ORAL,
 						title,
-						"Offer to suck the dobermann-boys' cocks...",
+						"主动提出舔这两个杜宾男的鸡巴……",
 						AFTER_SEX_WILLING,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "DOBERMANNS_SEX_OFFER_ORAL"));
 			}
 			
 		} else if(index == startIndex+1) {
-			title = title.replaceAll("sex_type_replacement", "spit-roast");
+			title = title.replaceAll("sex_type_replacement", "串肉串");
 			
 			if(!isPlayerMouthFree()) {
 				return new Response(title,
-						"As you cannot gain access to your mouth, you cannot offer to be spit-roasted by the dobermann-boys...",
+						"你无法使用自己的嘴巴，所以不能跟杜宾兄弟玩“串肉串”……",
 						null);
 				
 			} else if(!isPlayerAssFree() && !isPlayerVaginaFree()) {
 				return new Response(title,
-						"As you cannot gain access to your ass"+(Main.game.getPlayer().hasVagina()?" or pussy":"")+", you cannot offer to be spit-roasted by the dobermann-boys...",
+						"你无法使用自己的屁股"+(Main.game.getPlayer().hasVagina()?"或小穴":"")+"，所以不能跟杜宾兄弟玩“串肉串”……",
 						null);
 				
 			} else {
@@ -277,17 +277,17 @@ public class KaysWarehouse {
 						SexSlotAllFours.IN_FRONT, SexAreaOrifice.MOUTH,
 						SexSlotAllFours.ALL_FOURS,
 						title,
-						"Offer to let the two dobermann-boys spit-roast you...",
+						"主动提出让杜宾兄弟跟你玩“串肉串”……",
 						AFTER_SEX_WILLING,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "DOBERMANNS_SEX_OFFER_SPITROAST"));
 			}
 			
 		} else if(index == startIndex+2) {
-			title = title.replaceAll("sex_type_replacement", "ride");
+			title = title.replaceAll("sex_type_replacement", "骑乘");
 			
 			if(!isPlayerAssFree() && !isPlayerVaginaFree()) {
 				return new Response(title,
-						"As you cannot gain access to your ass"+(Main.game.getPlayer().hasVagina()?" or pussy":"")+", you cannot offer to ride the dobermann-boys...",
+						"你无法使用后穴"+(Main.game.getPlayer().hasVagina()?"或小穴":"")+"，所以无法跟这两个杜宾骑乘……",
 						null);
 				
 			} else {
@@ -296,19 +296,19 @@ public class KaysWarehouse {
 						SexSlotLyingDown.MISSIONARY, isPlayerAssFree()?SexAreaOrifice.ANUS:SexAreaOrifice.VAGINA,
 						SexSlotLyingDown.COWGIRL,
 						title,
-						"Offer to give the two dobermann-boys a ride...",
+						"主动提出跟这两个杜宾来骑乘位……",
 						AFTER_SEX_WILLING,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "DOBERMANNS_SEX_OFFER_RIDE"));
 			}
 			
 		} else if(index == startIndex+3 && Main.game.isNipplePenEnabled()) {
-			title = title.replaceAll("sex_type_replacement", "nipple-fuck");
+			title = title.replaceAll("sex_type_replacement", "操乳头");
 			
 			if(!isPlayerNippleFuckFree()) {
 				return new Response(title,
 						Main.game.getPlayer().isBreastFuckableNipplePenetration()
-							?"As you cannot gain access to your fuckable nipples, you cannot offer them to the dobermann-boys..."
-							:"As you do not have fuckable nipples, you cannot offer them to the dobermann-boys...",
+							?"由于你无法使用足以插入的乳头，所以不能提供给杜宾兄弟……"
+							:"由于你没有足以插入的乳头，所以不能提供给杜宾兄弟……",
 						null);
 				
 			} else {
@@ -317,7 +317,7 @@ public class KaysWarehouse {
 						SexSlotStanding.STANDING_DOMINANT_TWO, SexAreaOrifice.NIPPLE,
 						SexSlotStanding.PERFORMING_ORAL,
 						title,
-						"Offer to let the two dobermann-boys fuck your nipples...",
+						"主动提出让两个杜宾男来操你的乳头……",
 						AFTER_SEX_WILLING,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "DOBERMANNS_SEX_OFFER_NIPPLES"));
 			}
@@ -425,7 +425,7 @@ public class KaysWarehouse {
 	}
 	
 	
-	public static final DialogueNode INITIAL_ENTRY = new DialogueNode("Reception Area", "", false) {
+	public static final DialogueNode INITIAL_ENTRY = new DialogueNode("接待区", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -442,7 +442,7 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.supplierDepotDoorUnlocked)) {
-					return new Response("Exit", "Decide to leave the warehouse for now.", PlaceType.DOMINION_WAREHOUSES.getDialogue(false)) {
+					return new Response("出口", "决定暂时离开仓库。", PlaceType.DOMINION_WAREHOUSES.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_WAREHOUSES, false);
@@ -450,7 +450,7 @@ public class KaysWarehouse {
 					};
 					
 				} else {
-					return new Response("Receptionist", "Approach the receptionist and tell her that you're here to see Kay.", RECEPTIONIST_UNLOCKING) {
+					return new Response("接待员", "靠近接待员，告诉她你是来这儿见凯的。", RECEPTIONIST_UNLOCKING) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.supplierDepotDoorUnlocked, true);
@@ -462,7 +462,7 @@ public class KaysWarehouse {
 		}
 	};
 
-	public static final DialogueNode RECEPTIONIST_UNLOCKING = new DialogueNode("Reception Area", "", false) {
+	public static final DialogueNode RECEPTIONIST_UNLOCKING = new DialogueNode("接待区", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -477,7 +477,7 @@ public class KaysWarehouse {
 		}
 	};
 	
-	public static final DialogueNode RECEPTION = new DialogueNode("Reception Area", "", false) {
+	public static final DialogueNode RECEPTION = new DialogueNode("接待区", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -498,7 +498,7 @@ public class KaysWarehouse {
 			return INITIAL_ENTRY.getResponse(responseTab, index);}
 	};
 	
-	public static final DialogueNode CORRIDOR = new DialogueNode("Corridor", "", false) {
+	public static final DialogueNode CORRIDOR = new DialogueNode("走廊", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 30;
@@ -513,7 +513,7 @@ public class KaysWarehouse {
 		}
 	};
 	
-	public static final DialogueNode STORAGE_AREA = new DialogueNode("Storage Area", "", false) {
+	public static final DialogueNode STORAGE_AREA = new DialogueNode("仓储区", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 30;
@@ -526,13 +526,13 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
 				if(!Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.RELATIONSHIP_NYAN_HELP, Quest.RELATIONSHIP_NYAN_3_STOCK_ISSUES_DOBERMANNS)) {
-					return new Response("Surplus", "You don't think it's a good idea to help yourself to items from the 'Surplus Disposal' crate without first receiving permission to do so...", null);
+					return new Response("过剩处理", "你认为在未获得许可的情况下，自行从“过剩处理”板条箱中取用物品不是一个好主意……", null);
 					
 				} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayCratesSearched)) {
-					return new Response("Surplus", "You've already taken today's surplus stock!", null);
+					return new Response("过剩处理", "你已经拿了今天的过剩库存了！", null);
 					
 				} else {
-					return new Response("Surplus", "Help yourself to today's surplus stock.", STORAGE_AREA_SEARCHING) {
+					return new Response("过剩处理", "自行拿去今天的过剩库存。", STORAGE_AREA_SEARCHING) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.kayCratesSearched, true);
@@ -554,7 +554,7 @@ public class KaysWarehouse {
 		}
 	};
 	
-	public static final DialogueNode STORAGE_AREA_SEARCHING = new DialogueNode("Storage Room", "", false) {
+	public static final DialogueNode STORAGE_AREA_SEARCHING = new DialogueNode("储藏室", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -569,7 +569,7 @@ public class KaysWarehouse {
 		}
 	};
 	
-	public static final DialogueNode WEAVING_MACHINES = new DialogueNode("Weaving Machines", "", false) {
+	public static final DialogueNode WEAVING_MACHINES = new DialogueNode("织机", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -584,7 +584,7 @@ public class KaysWarehouse {
 		}
 	};
 
-	public static final DialogueNode OVERSEER_STATION = new DialogueNode("Overseer's Station", "", true) {
+	public static final DialogueNode OVERSEER_STATION = new DialogueNode("监督站", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -597,7 +597,7 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.RELATIONSHIP_NYAN_HELP, Quest.RELATIONSHIP_NYAN_3_STOCK_ISSUES_DOBERMANNS)) {
-					return new Response("[kay.NamePos] office", "Head up the stairs, through the overseer's station, and pay [kay.name] a visit.", OFFICE) {
+					return new Response("[kay.NamePos]的办公室", "走上楼梯，经过监督站，去见[kay.name]一面。", OFFICE) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.TEXTILES_WAREHOUSE, PlaceType.TEXTILE_WAREHOUSE_OFFICE, false);
@@ -606,7 +606,7 @@ public class KaysWarehouse {
 					};
 					
 				} else {
-					return new Response("Upstairs", "Head up the stairs and enter the overseer's station.", DOBERMANNS) {
+					return new Response("上楼", "走上楼梯，进入监督站。", DOBERMANNS) {
 						@Override
 						public void effects() {
 							if(Main.game.getPlayer().getQuest(QuestLine.RELATIONSHIP_NYAN_HELP)==Quest.RELATIONSHIP_NYAN_2_STOCK_ISSUES_AGREED_TO_HELP) {
@@ -617,7 +617,7 @@ public class KaysWarehouse {
 				}
 				
 			} else if(index==2) {
-				return new Response("Turn around", "[pc.Step] away from the staircase and head back down the corridor.", CORRIDOR) {
+				return new Response("转身", "离开楼梯，沿着走廊往回走。", CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.TEXTILES_WAREHOUSE, PlaceType.TEXTILE_WAREHOUSE_CORRIDOR, false);
@@ -628,7 +628,7 @@ public class KaysWarehouse {
 		}
 	};
 	
-	public static final DialogueNode DOBERMANNS = new DialogueNode("Overseer's Station", "", true) {
+	public static final DialogueNode DOBERMANNS = new DialogueNode("监督站", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getNpc(SupplierLeader.class).setPlayerKnowsName(true);
@@ -646,12 +646,12 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
 				if(Main.game.getPlayer().hasAnyEnforcerStatusEffect()) {
-					return new Response("Leave", "Now that the dobermann-boys have mistaken you for an Enforcer, it would be best to resolve this conflict before attempting to leave...", null);
+					return new Response("离开", "杜宾兄弟将你误认为了执法者，最好在解决问题之后再离开……", null);
 				}
 				if(Main.game.getPlayer().getRace()==Race.DEMON) {
-					return new Response("Leave", "Now that the dobermann-boys have seen you in your demonic form, it would be best to resolve this conflict before attempting to leave...", null);
+					return new Response("离开", "杜宾兄弟已经见到了你的恶魔形态，最好解决问题之后再离开……", null);
 				}
-				return new Response("Leave", "[pc.Step] back from the dobermann-boys and head back out the way you came.", CORRIDOR) {
+				return new Response("离开", "从杜宾兄弟身旁退开，原路返回。", CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.TEXTILES_WAREHOUSE, PlaceType.TEXTILE_WAREHOUSE_CORRIDOR, false);
@@ -661,13 +661,13 @@ public class KaysWarehouse {
 				
 			} else if(index == 1) {
 				if(Main.game.getPlayer().getMoney()<PAY_OFF_PRICE) {
-					return new Response("Pay off ("+UtilText.formatAsMoneyUncoloured(PAY_OFF_PRICE, "span")+")",
-							"You don't have enough flames to offer to pay off the dobermann-boys' contract...",
+					return new Response("支付("+UtilText.formatAsMoneyUncoloured(PAY_OFF_PRICE, "span")+")",
+							"你的火币抵不上杜宾兄弟合同的那一部分……",
 							null);
 					
 				} else {
-					return new Response("Pay off ("+UtilText.formatAsMoney(PAY_OFF_PRICE, "span")+")",
-							"Offer to pay off the remainder of the dobermann-boys' contract, which, along with the pointed reminder that what they're doing is illegal, should be enough to make them leave.",
+					return new Response("支付("+UtilText.formatAsMoney(PAY_OFF_PRICE, "span")+")",
+							"付上杜宾兄弟合同中剩下的部分款项，同时尖锐地指出他们的所作所为已经违法，这应该足以赶他们走了。",
 							DOBERMANNS_PAID_OFF) {
 						@Override
 						public void effects() {
@@ -682,7 +682,7 @@ public class KaysWarehouse {
 				
 			} else if (index == 2) {
 				if(Main.game.getPlayer().hasAnyEnforcerStatusEffect()) {
-					return new Response("Enforcer bluff", "Use the fact that the dobermann-boys have mistaken you for an Enforcer to convince them to leave.", DOBERMANNS_ENFORCER_BLUFF) {
+					return new Response("假装执法者", "杜宾兄弟把你误认为了执法者，利用这个机会赶他们离开。", DOBERMANNS_ENFORCER_BLUFF) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.suppliersEncountered, true);
@@ -691,17 +691,17 @@ public class KaysWarehouse {
 					};
 					
 				} else {
-					return new Response("Enforcer Bluff", "You'd need to be wearing an Enforcer's uniform in order to attempt this!", null);
+					return new Response("假装执法者", "你需要穿上执法者的制服才能这么做！", null);
 				}
 				
 			} else if(index==3) {
 				if(Main.game.getPlayer().getRace()!=Race.DEMON
 						&& Main.game.getPlayer().getSubspeciesOverrideRace()==Race.DEMON) {
 					if(!Main.game.getPlayer().isAbleToSelfTransform()) {
-						return new Response("Demonic reveal", "As your self-transformative powers are current inhibited, you're not able to turn into a demon in front of the dobermann-boys in order to intimidate them into leaving!", null);
+						return new Response("显露真身", "你自我转化的能力目前被抑制了，无法再杜宾兄弟面前转化为恶魔，吓跑他们！", null);
 					} else {
-						return new Response("Demonic reveal",
-								"Transform into a demon in front of the dobermann-boys and intimidate them into leaving.",
+						return new Response("显露真身",
+								"在杜宾兄弟面前转化为恶魔，吓跑他们。",
 								DOBERMANNS_DEMON_REVEAL) {
 							@Override
 							public void effects() {
@@ -712,8 +712,8 @@ public class KaysWarehouse {
 					}
 					
 				} else {
-					return new Response("Demonic intimidation",
-							"Use the fact that you're a demon to intimidate the dobermann-boys into leaving.",
+					return new Response("恶魔威慑",
+							"你是个恶魔，利用这一点恐吓杜宾兄弟离开。",
 							DOBERMANNS_DEMONIC_INTIMIDATION,
 							null,
 							null,
@@ -730,10 +730,10 @@ public class KaysWarehouse {
 				
 			} else if(index==4) {
 				if(!isSexAvailable()) {
-					return new Response("Seduce", "As you're unable to access any of your orifices, you're unable to seduce the dobermann-boys...", null);
+					return new Response("诱惑", "由于你无法使用任何腔穴，所以不能诱惑这对杜宾兄弟……", null);
 				}
-				return new Response("Seduce",
-						"Seduce the dobermann-boys and offer them your body in exchange for leaving Kay alone.",
+				return new Response("诱惑",
+						"诱惑杜宾兄弟，将身体献给他们，从而让他们离开凯。",
 						DOBERMANNS_SEDUCE,
 						null,
 						null,
@@ -753,20 +753,20 @@ public class KaysWarehouse {
 				
 			} else if(index==5) {
 				if(Main.game.getPlayer().hasAnyEnforcerStatusEffect()) {
-					return new Response("Fight", "It'd be better to try and play on the fact that the dobermann-boys have mistaken you for an Enforcer...", null);
+					return new Response("战斗", "杜宾兄弟把你误认为了执法者，最好利用一下……", null);
 					
 				} else {
-					return new ResponseCombat("Fight", "Immediately launch into combat!",
+					return new ResponseCombat("战斗", "战斗一触即发！",
 							Main.game.getNpc(SupplierLeader.class),
 							Util.newArrayListOfValues(
 									Main.game.getNpc(SupplierLeader.class),
 									Main.game.getNpc(SupplierPartner.class)),
 							Util.newHashMapOfValues(
-									new Value<>(Main.game.getPlayer(), "[pc.speech(I'll soon have the two of you cleared out from here,)]"
-											+ " you declare, readying yourself for a fight,"
-											+ " [pc.speech(but I know that people like you only respect force, so I'm left with no choice but to do this!)]"),
-									new Value<>(Main.game.getNpc(SupplierLeader.class), "[wolfgang.speech(Hah!)] Wolfgang shouts, [wolfgang.speech(If it's a fight you want, we'll give you one!)]"),
-									new Value<>(Main.game.getNpc(SupplierPartner.class), "[karl.speech(You're gonna pay for this, bitch!)] Karl snarls."))) {
+									new Value<>(Main.game.getPlayer(), "[pc.speech(我马上就把你们两个从这赶出去，)]"
+											+ "你大喝一声，准备好战斗，"
+											+ "[pc.speech(我了解你们这种人，只屈服于力量，这也是你们逼我的！)]"),
+									new Value<>(Main.game.getNpc(SupplierLeader.class), "[wolfgang.speech(哈！)]沃尔夫冈大喊道，[wolfgang.speech(如果你想打架，那我们就陪你战个痛快！)]"),
+									new Value<>(Main.game.getNpc(SupplierPartner.class), "[karl.speech(你有好果子吃，混球！)]卡尔嘶吼道。"))) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.suppliersEncountered, true);
@@ -791,10 +791,10 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Let them go", "Stand aside and let the two dobermann-boys leave.", DOBERMANNS_BANISHED);
+				return new Response("放他们走", "站到一旁，让这两个杜宾男离开。", DOBERMANNS_BANISHED);
 				
 			} else {
-				return getDobermannsRewardSexResponse(2, index, "\"Thank\" them (sex_type_replacement)");
+				return getDobermannsRewardSexResponse(2, index, "“答谢”他们(sex_type_replacement)");
 			}
 		}
 	};
@@ -865,11 +865,11 @@ public class KaysWarehouse {
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
-			return getDobermannsRewardSexResponse(1, index, "Offer sex_type_replacement");
+			return getDobermannsRewardSexResponse(1, index, "提供sex_type_replacement");
 		}
 	};
 	
-	public static final DialogueNode DOBERMANNS_COMBAT_PLAYER_VICTORY = new DialogueNode("Victory", "The two dobermann-boys have been defeated!", true) {
+	public static final DialogueNode DOBERMANNS_COMBAT_PLAYER_VICTORY = new DialogueNode("胜利", "两个杜宾男被击溃了！", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getDialogueFlags().setFlag(DialogueFlagValue.dobermannDefeatCombat, true);
@@ -881,11 +881,11 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Let them go", "Stand aside and let the two dobermann-boys leave.", DOBERMANNS_BANISHED);
+				return new Response("放他们走", "站到一旁，让这两个杜宾男离开。", DOBERMANNS_BANISHED);
 				
 			} else if (index == 2) {
-				return new ResponseSex("Fuck Them",
-						"Push Wolfgang and Karl down side-by-side in the doggy-style position, ready to have some fun with them...",
+				return new ResponseSex("干爆他们",
+						"你将沃尔夫冈和卡尔推倒，让他们并排摆出狗爬式的姿势，准备好一同享乐……",
 						null, null, null, null, null, null,
 						false, false,
 						new SMGeneric(
@@ -898,12 +898,12 @@ public class KaysWarehouse {
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "OFFICE_VICTORY_FUCK_THEM"));
 				
 			} else {
-				return getDobermannsRewardSexResponse(3, index, "Submit (sex_type_replacement)");
+				return getDobermannsRewardSexResponse(3, index, "屈服(sex_type_replacement)");
 			}
 		}
 	};
 	
-	public static final DialogueNode DOBERMANNS_COMBAT_PLAYER_LOSS = new DialogueNode("Defeated", "The dobermann-boys have proven to be too much for you to handle...", true) {
+	public static final DialogueNode DOBERMANNS_COMBAT_PLAYER_LOSS = new DialogueNode("落败", "两个杜宾男一起上，你还是处理不了……", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "DOBERMANNS_COMBAT_PLAYER_LOSS");
@@ -911,8 +911,8 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new ResponseSex("Fucked",
-						"Completely exhausted and utterly defeated, you're not able to offer any resistance as the two dobermann-boys prepare to fuck you...",
+				return new ResponseSex("挨操",
+						"力尽落败后，你甚至无法抵抗，只能看着杜宾兄弟对你蠢蠢欲动……",
 						null, null, null, null, null, null,
 						false, false,
 						new SMGeneric(
@@ -932,8 +932,8 @@ public class KaysWarehouse {
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "DOBERMANNS_COMBAT_PLAYER_LOSS_FUCKED"));
 				
 			} else if(index == 2) {
-				return new ResponseSex("Eagerly fucked",
-						"Turned on from being so dominantly put in your place, you can't help but eagerly beg for the two dobermann-boys to fuck you...",
+				return new ResponseSex("挨操(渴求)",
+						"被狠狠地教做人之后，你顿时起了性欲，按捺不住地乞求着两只杜宾来操你……",
 						null, null, null, null, null, null,
 						false, false,
 						new SMGeneric(
@@ -954,7 +954,7 @@ public class KaysWarehouse {
 				
 			} else if(index==3) {
 				if(!Main.game.isNonConEnabled()) {
-					return new Response("Refuse", "You might be defeated, but there's no way you're going to let these two brutes have their way with you!", PlaceType.DOMINION_WAREHOUSES.getDialogue(false)) {
+					return new Response("拒绝", "你或许确实败了，但绝不能让这两个畜生得逞！", PlaceType.DOMINION_WAREHOUSES.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "DOBERMANNS_COMBAT_PLAYER_LOSS_THROWN_OUT"));
@@ -963,8 +963,8 @@ public class KaysWarehouse {
 					};
 					
 				} else {
-					return new ResponseSex("Resist",
-							"Despite being completely exhausted and utterly defeated, you do your best to resist as the two dobermann-boys prepare to rape you...",
+					return new ResponseSex("抵抗",
+							"虽然已经精疲力竭，完全落败，但你还是动用起最后一丝力量，反抗这两个想强奸你的杜宾……",
 							null, null, null, null, null, null,
 							false, false,
 							new SMGeneric(
@@ -988,7 +988,7 @@ public class KaysWarehouse {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_WILLING = new DialogueNode("Finished", "The two dobermann-boys have had enough...", true) {
+	public static final DialogueNode AFTER_SEX_WILLING = new DialogueNode("结束", "两个杜宾男爽够了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -1004,13 +1004,13 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Let them go", "Stand aside and let the two dobermann-boys leave.", DOBERMANNS_BANISHED);
+				return new Response("放他们走", "站到一旁，让这两个杜宾男离开。", DOBERMANNS_BANISHED);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_FUCKED = new DialogueNode("Finished", "The two dobermann-boys have had their fun with you...", true) {
+	public static final DialogueNode AFTER_SEX_FUCKED = new DialogueNode("结束", "两个杜宾男和你爽够了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -1022,7 +1022,7 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Thrown out", "Karl unceremoniously throws you out of the warehouse.", PlaceType.DOMINION_WAREHOUSES.getDialogue(false)) {
+				return new Response("被扔出去", "卡尔毫不客气地把你扔出了仓库。", PlaceType.DOMINION_WAREHOUSES.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "AFTER_SEX_FUCKED_THROWN_OUT"));
@@ -1052,7 +1052,7 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Follow", "Follow the excitable Kay into his office.", KAY_SAVED_OFFICE) {
+				return new Response("跟随", "跟着激动不已的凯进入办公室。", KAY_SAVED_OFFICE) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.TEXTILES_WAREHOUSE, PlaceType.TEXTILE_WAREHOUSE_OFFICE, false);
@@ -1098,7 +1098,7 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "Exit [kay.namePos] office and head back down to the warehouse corridor.", CORRIDOR) {
+				return new Response("离开", "离开[kay.namePos]的办公室，回到仓库走廊。", CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.TEXTILES_WAREHOUSE, PlaceType.TEXTILE_WAREHOUSE_CORRIDOR, false);
@@ -1108,10 +1108,10 @@ public class KaysWarehouse {
 				
 			} else if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayTalkedTo)) {
-					return new Response("Small talk", "You've already spent time talking to [kay.name] today, and as such, you don't have much more to say until tomorrow.", null);
+					return new Response("闲聊", "你已经和[kay.name]交谈了很久，今天再也找不出话题了。", null);
 					
 				} else {
-					return new Response("Small talk", "Spend some time talking to [kay.name].", KAY_OFFICE_UTIL_EMPTY) {
+					return new Response("闲聊", "花点时间和[kay.name]聊聊。", KAY_OFFICE_UTIL_EMPTY) {
 						@Override
 						public int getSecondsPassed() {
 							return 30*60;
@@ -1148,10 +1148,10 @@ public class KaysWarehouse {
 				
 			} else if(index==2) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayFlirtedWith)) {
-					return new Response("Flirt", "You've already spent time flirting with [kay.name] today. You should return tomorrow if you wanted to flirt with him some more.", null);
+					return new Response("调情", "你今天已经与[kay.name]调情了。如果你还想调情，得明天再来。", null);
 					
 				} else {
-					return new Response("Flirt", "Spend some time flirting with [kay.name].", KAY_OFFICE_UTIL_EMPTY) {
+					return new Response("调情", "与[kay.name]调情一会。", KAY_OFFICE_UTIL_EMPTY) {
 						@Override
 						public int getSecondsPassed() {
 							return 20*60;
@@ -1167,17 +1167,17 @@ public class KaysWarehouse {
 				
 			} else if(index==3) {
 				if(Main.game.getNpc(Kay.class).getAffectionLevel(Main.game.getPlayer()).isLessThan(AffectionLevel.POSITIVE_FOUR_LOVE)) {
-					return new Response("Dominate",
-							"Although he clearly likes you, you can tell that [kay.name] wouldn't be comfortable with letting you sexually dominate him."
-							+ "<br/>[style.italicsMinorBad(Requires Kay to have an affection level of at least '"+AffectionLevel.POSITIVE_FOUR_LOVE.getName()+"' towards you.)]",
+					return new Response("支配",
+							"虽然他显然是喜欢你的，但你看的出来现在让[kay.name]在性爱中主导会让[kay.her]不太舒服。"
+							+ "<br/>[style.italicsMinorBad(需要凯对你的好感至少达到“"+AffectionLevel.POSITIVE_FOUR_LOVE.getName()+"”。)]",
 							null);
 					
 				} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayDommed)) {
-					return new Response("Dominate", "You've already dominated [kay.name] today, and as such he'll be far too exhausted to be of much fun until tomorrow.", null);
+					return new Response("支配", "你今天已经支配过[kay.name]了，这么舒服的事情太过消耗精力，明天再来吧。", null);
 					
 				} else {
-					return new Response("Dominate",
-							"Dominate [kay.name] and make [kay.herHim] submit to you.",
+					return new Response("支配",
+							"支配[kay.name]，让[kay.herHim]向你屈服。",
 							KAY_OFFICE_DOMINATE,
 							Util.newArrayListOfValues(Fetish.FETISH_DOMINANT),
 							Fetish.FETISH_DOMINANT.getAssociatedCorruptionLevel(),
@@ -1226,7 +1226,7 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kaySubmitted)) {
 				if(index==1) {
-					return new Response("[pc.Name]", "Don't give [kay.name] any special name to call you by.<br/>[style.colourMinorGood(This can be changed at any time after this scene.)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+					return new Response("[pc.Name]", "并不指示[kay.name]以特殊的名字称呼你。<br/>[style.colourMinorGood(该场景过后可以随时修改。)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_NO_PET_NAME"));
@@ -1236,7 +1236,7 @@ public class KaysWarehouse {
 					};
 					
 				} else if(index==2) {
-					return new Response("[pc.Mistress]", "Get [kay.name] to call you '[pc.Mistress]'.<br/>[style.colourMinorGood(This can be changed at any time after this scene.)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+					return new Response("[pc.Mistress]", "让[kay.name]称呼你为“[pc.Mistress]”。<br/>[style.colourMinorGood(该场景过后可以随时修改。)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Kay.class).setPetName(Main.game.getPlayer(), "[pc.Mistress]");
@@ -1247,7 +1247,7 @@ public class KaysWarehouse {
 					};
 					
 				} else if(index==3) {
-					return new Response("[pc.Maam]", "Get [kay.name] to call you '[pc.Maam]'.<br/>[style.colourMinorGood(This can be changed at any time after this scene.)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+					return new Response("[pc.Maam]", "让[kay.name]称呼你为“[pc.Maam]”。<br/>[style.colourMinorGood(该场景过后可以随时修改。)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Kay.class).setPetName(Main.game.getPlayer(), "[pc.Maam]");
@@ -1259,7 +1259,7 @@ public class KaysWarehouse {
 					
 				} else if(index==4) {
 					String surname = (Main.game.getPlayer().getSurname()!=null && !Main.game.getPlayer().getSurname().isEmpty()?"[pc.Surname]":"[pc.Name]");
-					return new Response("[pc.Miss] "+surname,"Get [kay.name] to call you '[pc.Miss] "+surname+"'.<br/>[style.colourMinorGood(This can be changed at any time after this scene.)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+					return new Response(surname+"[pc.Miss]","让[kay.name]称呼你为“"+surname+"[pc.Miss]”。<br/>[style.colourMinorGood(该场景过后可以随时修改。)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Kay.class).setPetName(Main.game.getPlayer(), "[pc.Miss] "+surname);
@@ -1270,7 +1270,7 @@ public class KaysWarehouse {
 					};
 					
 				} else if(index==5) {
-					return new Response("[pc.Mommy]", "Get [kay.name] to call you '[pc.Mommy]'.<br/>[style.colourMinorGood(This can be changed at any time after this scene.)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+					return new Response("[pc.Mommy]", "让[kay.name]称呼你为“[pc.Mommy]”。<br/>[style.colourMinorGood(该场景过后可以随时修改。)]", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Kay.class).setPetName(Main.game.getPlayer(), "[pc.Mommy]");
@@ -1285,8 +1285,8 @@ public class KaysWarehouse {
 				boolean buttplugActionAvailable = Main.game.getNpc(Kay.class).getClothingInSlot(InventorySlot.ANUS)!=null || Main.game.isAnalContentEnabled();
 				
 				if(index==0) {
-					return new Response("Leave",
-							"Having had your fun with [kay.name], it's time to leave his office.<br/>[style.italicsMinorBad(If you leave, you'll have to wait until tomorrow before being able to dominate him again!)]",
+					return new Response("离开",
+							"跟[kay.name]爽过之后，是时候离开办公室了。<br/>[style.italicsMinorBad(如果现在离开，再次支配他就要等到明天了！)]",
 							CORRIDOR) {
 						@Override
 						public void effects() {
@@ -1297,23 +1297,23 @@ public class KaysWarehouse {
 				}
 				// Standard actions:
 				if(index==1) {
-					return new Response("Pet [kay.herHim]", "Have [kay.name] kneel down beside you so that you can pet [kay.her] soft ears and hair for a while.", KAY_OFFICE_DOMINATE_PETTING);
+					return new Response("抚摸[kay.herHim]", "让[kay.name]跪在你的身旁，这样你就能抚摸[kay.her]柔软的耳朵和头发了。", KAY_OFFICE_DOMINATE_PETTING);
 					
 				} else if(index==2) {
-					return new Response("Get massage", "Get [kay.name] to massage your shoulders and back.", KAY_OFFICE_DOMINATE_MASSAGE);
+					return new Response("享受按摩", "让[kay.name]帮你揉肩按背。", KAY_OFFICE_DOMINATE_MASSAGE);
 					
 				} else if(index==3 && Main.game.isFootContentEnabled()) {
 					if(!Main.game.getPlayer().hasLegs()) {
-						return new Response("Get foot massage", "You do not have any feet for [kay.name] to massage...", null);
+						return new Response("享受足部按摩", "你没有脚能让[kay.name]按摩……", null);
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.FEET, true)) {
-						return new Response("Get foot massage", "As you are unable to gain access to your [pc.feet], [kay.name] cannot give you a foot massage!", null);
+						return new Response("享受足部按摩", "你无法使用自己的[pc.feet]，[kay.name]不能给你足部按摩！", null);
 					} else {
-						return new Response("Get foot massage", "Get [kay.name] to give you a foot massage.", KAY_OFFICE_DOMINATE_MASSAGE_FEET);
+						return new Response("享受足部按摩", "让[kay.name]给你足部按摩。", KAY_OFFICE_DOMINATE_MASSAGE_FEET);
 					}
 					
 				} else if(Main.game.isFootContentEnabled()?index==4:index==3) {
-					return getKaySexResponse("Fuck [kay.herHim]",
-							"Pull [kay.name] into your embrace and tell [kay.herHim] that you're going to fuck [kay.herHim].",
+					return getKaySexResponse("操[kay.herHim]",
+							"把[kay.name]揽进怀里，告诉[kay.herHim]你要准备干[kay.herHim]了。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_FUCK"),
 							SexPosition.STANDING,
@@ -1328,33 +1328,33 @@ public class KaysWarehouse {
 				// Toys and behaviour changes:
 				if(index==6) {
 					if(Main.game.getNpc(Kay.class).getClothingInSlot(InventorySlot.PENIS)==null) {
-						return new Response("Cage: [style.colourMinorBad(Unequipped)]",
-								"[kay.Name] is currently not wearing [kay.her] chastity cage. You could change that, if you wanted to..."
-										+ "<br/>[style.italicsMinorGood(You can freely equip and remove [kay.namePos] cage at any time.)]",
+						return new Response("贞操笼: [style.colourMinorBad(解除)]",
+								"[kay.Name]没有戴着贞操笼。如果你想的话可以给[kay.her]戴上……"
+										+ "<br/>[style.italicsMinorGood(你可以随时自由地给[kay.namePos]装上或摘下贞操笼。)]",
 								KAY_OFFICE_DOMINATE_CAGE);
 					} else {
-						return new Response("Cage: [style.colourMinorGood(Equipped)]",
-								"[kay.Name] is currently wearing [kay.her] chastity cage. You could take it off of [kay.herHim], if you wanted to..."
-									+ "<br/>[style.italicsMinorGood(You can freely equip and remove [kay.namePos] cage at any time.)]",
+						return new Response("贞操笼: [style.colourMinorGood(已装备)]",
+								"[kay.Name]正戴着贞操笼。如果你想的话可以摘下来……"
+									+ "<br/>[style.italicsMinorGood(你可以随时自由地给[kay.namePos]装上或摘下贞操笼。)]",
 								KAY_OFFICE_DOMINATE_CAGE);
 					}
 					
 				} else if(index==7 && buttplugActionAvailable) {
 					if(Main.game.getNpc(Kay.class).getClothingInSlot(InventorySlot.ANUS)==null) {
-						return new Response("Buttplug: [style.colourMinorBad(Removed)]", "[kay.Name] is currently not wearing [kay.her] buttplug. You could change that, if you wanted to...", KAY_OFFICE_DOMINATE_BUTTPLUG);
+						return new Response("肛塞: [style.colourMinorBad(移除)]", "[kay.Name]现在没有塞着肛塞。如果你想的话可以给[kay.her]塞上……", KAY_OFFICE_DOMINATE_BUTTPLUG);
 					} else {
-						return new Response("Buttplug: [style.colourMinorGood(Inserted)]", "[kay.Name] is currently wearing [kay.her] buttplug. You could remove it, if you wanted to...", KAY_OFFICE_DOMINATE_BUTTPLUG);
+						return new Response("肛塞: [style.colourMinorGood(插入)]", "[kay.Name]正塞着肛塞。如果你想的话可以拔下来……", KAY_OFFICE_DOMINATE_BUTTPLUG);
 					}
 					
 				} else if(buttplugActionAvailable?index==8:index==7) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayFeminised)) {
-						return new Response("Clothing: [style.colourFeminine(Feminine)]",
-								"Tell [kay.name] to switch back to wearing [kay.her] old masculine suit."
-										+ "<br/>[style.italicsMinorBad([kay.Name] will revert to having [kay.her] old hairstyle and will wipe off [kay.her] makeup as part of this.)]",
+						return new Response("衣物: [style.colourFeminine(女性化)]",
+								"告诉[kay.name]重新换上之前的男性西服。"
+										+ "<br/>[style.italicsMinorBad([kay.Name]同时也会改换发型，并且抹掉妆容。)]",
 								KAY_OFFICE_DOMINATE_CLOTHING);
 					} else {
-						return new Response("Clothing: [style.colourMasculine(Masculine)]",
-								"Tell [kay.name] that [kay.she] should find a feminine suit to wear.",
+						return new Response("衣物: [style.colourMasculine(男性化)]",
+								"告诉[kay.name]应该换一件女性西服穿。",
 								Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayPreviouslyFeminised)
 									?KAY_OFFICE_DOMINATE_CLOTHING
 									:KAY_OFFICE_DOMINATE_CLOTHING_FIRST_TIME);
@@ -1362,17 +1362,17 @@ public class KaysWarehouse {
 					
 				} else if(buttplugActionAvailable?index==9:index==8) {
 					if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayFeminised)) {
-						return new Response("Makeover", "[kay.Name] won't feel comfortable with you giving [kay.herHim] a makeover unless you've already got [kay.herHim] to wear feminine clothing!", null);
+						return new Response("化妆", "在你让[kay.Name]穿上女性化服装之前，[kay.she]不太愿意化妆！", null);
 						
 					} else if(!Main.game.getPlayer().hasItemType(ItemType.MAKEUP_SET)) {
-						return new Response("Makeover", "You require "+ItemType.MAKEUP_SET.getDeterminer()+" "+ItemType.MAKEUP_SET.getName(false)+" in order to do this!", null);
+						return new Response("化妆", "你需要"+ItemType.MAKEUP_SET.getDeterminer()+" "+ItemType.MAKEUP_SET.getName(false)+"才能这么做！", null);
 						
 					} else {
-						return new Response("Makeover", "Get [kay.name] to sit in [kay.her] chair while you change [kay.her] hairstyle and apply makeup to [kay.herHim].", KAY_OFFICE_DOMINATE_MAKEUP);
+						return new Response("化妆", "让[kay.name]坐好在椅子上，你来帮[kay.her]修改发型和化妆。", KAY_OFFICE_DOMINATE_MAKEUP);
 					}
 					
 				} else if(index==10) {
-					return new Response("Naming", "Choose what name [kay.name] calls you by.", KAY_OFFICE_DOMINATE_NAMING);
+					return new Response("称呼", "选择[kay.name]对你的称呼。", KAY_OFFICE_DOMINATE_NAMING);
 					
 				}
 			}
@@ -1423,7 +1423,7 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			List<Response> responses = new ArrayList<>();
 
-			responses.add(new Response("Stop petting", "Having had enough of petting [kay.name], you sit back in [kay.her] chair and wonder what to do next.", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+			responses.add(new Response("不摸了", "你抚摸[kay.name]已经摸够了，于是坐在[kay.her]的椅子上，思索起接下来的计划。", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 				@Override
 				public void effects() {
 					Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_PETTING_END"));
@@ -1431,10 +1431,10 @@ public class KaysWarehouse {
 			});
 			
 			if(isPlayerPenisFree()) {
-				responses.add(getKaySexResponse("Receive blowjob",
+				responses.add(getKaySexResponse("接受口交",
 						Main.game.getPlayer().isTaur()
-							?"Stand up and get [kay.name] to kneel beneath your lower [pc.legRace]'s body so that [kay.she] can suck your cock."
-							:"Pull [kay.namePos] head into your lap and get [kay.herHim] to suck your cock.",
+							?"站起来让[kay.name]跪在你的[pc.legRace]下肢之下，[kay.she]就可以舔你的肉棒了。"
+							:"把[kay.namePos]的脑袋塞进你的股间，让[kay.herHim]舔你的鸡巴。",
 						KAY_OFFICE_DOMINATE_POST_SEX,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_PETTING_BLOWJOB"),
 						Main.game.getPlayer().isTaur()
@@ -1452,14 +1452,14 @@ public class KaysWarehouse {
 						Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getPlayer(), Main.game.getNpc(Kay.class), PenisMouth.BLOWJOB_START, false, true))));
 				
 			} else {
-				responses.add(new Response("Receive blowjob", "You require a penis and access to it in able to receive a blowjob from [kay.name].", null));
+				responses.add(new Response("接受口交", "你需要有阴茎，并且能够使用，才能让[kay.name]给你口交。", null));
 			}
 			
 			if(isPlayerVaginaFree()) {
-				responses.add(getKaySexResponse("Receive cunnilingus",
+				responses.add(getKaySexResponse("接受舔阴",
 						Main.game.getPlayer().isTaur()
-							?"Stand up and get [kay.name] to kneel behind your lower [pc.legRace]'s body so that [kay.she] can eat you out."
-							:"Pull [kay.namePos] head into your lap and get [kay.herHim] to eat you out.",
+							?"站起来让[kay.name]跪在你的[pc.legRace]下肢后面，[kay.she]就可以舔你的小穴了。"
+							:"把[kay.namePos]的脑袋塞进你的股间，让[kay.herHim]给你舔阴。",
 						KAY_OFFICE_DOMINATE_POST_SEX,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_PETTING_CUNNILINGUS"),
 						Main.game.getPlayer().isTaur()
@@ -1477,10 +1477,10 @@ public class KaysWarehouse {
 						Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getPlayer(), Main.game.getNpc(Kay.class), TongueVagina.RECEIVING_CUNNILINGUS_START, false, true))));
 				
 				if(Main.game.getPlayer().isClitorisPseudoPenis()) {
-					responses.add(getKaySexResponse("Clit sucked",
+					responses.add(getKaySexResponse("吮吸阴蒂",
 							Main.game.getPlayer().isTaur()
-								?"Stand up and get [kay.name] to kneel behind your lower [pc.legRace]'s body so that [kay.she] can suck your [pc.clitSize] clit."
-								:"Pull [kay.namePos] head into your lap and get [kay.herHim] to suck your [pc.clitSize] clit.",
+								?"站起来让[kay.name]跪在你的[pc.legRace]下肢之后，[kay.she]就可以吮吸你[pc.clitSize]的阴蒂了。"
+								:"把[kay.namePos]的脑袋塞进你的股间，让[kay.herHim]舔你[pc.clitSize]的阴核。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_PETTING_CLIT_SUCK"),
 							Main.game.getPlayer().isTaur()
@@ -1497,12 +1497,12 @@ public class KaysWarehouse {
 							Util.newArrayListOfValues(CoverableArea.VAGINA),
 							Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getPlayer(), Main.game.getNpc(Kay.class), ClitMouth.CLIT_ORAL_START, false, true))));
 				} else {
-					responses.add(new Response("Clit sucked", "You require a clit of at least size '"+ClitorisSize.getMinimumClitorisSizeForPseudoPenis()+"' before you are able to get it sucked by [kay.name].", null));
+					responses.add(new Response("吮吸阴核", "的你阴核的大小至少需要为“"+ClitorisSize.getMinimumClitorisSizeForPseudoPenis()+"”才能让[kay.name]给你吸。", null));
 				}
 				
 			} else {
-				responses.add(new Response("Receive cunnilingus", "You require a pussy and access to it before you are able to receive cunnilingus from [kay.name].", null));
-				responses.add(new Response("Clit sucked", "You require a pussy, a clit of at least size '"+ClitorisSize.getMinimumClitorisSizeForPseudoPenis()+"', and access to it before you are able to get it sucked by [kay.name].", null));
+				responses.add(new Response("接受舔阴", "你需要有阴道，并且能够使用，才能让[kay.name]给你舔阴。", null));
+				responses.add(new Response("吮吸阴核", "你需要拥有阴道，以及大小至少为“"+ClitorisSize.getMinimumClitorisSizeForPseudoPenis()+"”的阴核，并且能够使用，才能让[kay.name]给你吸。", null));
 			}
 			
 			for(int i=0;i<responses.size();i++) {
@@ -1532,7 +1532,7 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			List<Response> responses = new ArrayList<>();
 
-			responses.add(new Response("Stop massage", "Tell [kay.name] that [kay.sheHas] done an excellent job, but that you've had enough of [kay.her] massaging for now.", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+			responses.add(new Response("停止按摩", "告诉[kay.name]做得很棒，但是你已经享受够了。", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 				@Override
 				public void effects() {
 					Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_END"));
@@ -1540,13 +1540,13 @@ public class KaysWarehouse {
 			});
 			
 			if(isPlayerPenisFree() || isPlayerVaginaFree()) {
-				responses.add(getKaySexResponse("Groin 'massage'",
-						"Tell [kay.name] to move [kay.her] attention down to your groin and "
+				responses.add(getKaySexResponse("下体“按摩”",
+						"告诉[kay.name]接下来专注在胯部，"
 						+(isPlayerPenisFree() && isPlayerVaginaFree()
-							?"finger you while also giving you a handjob."
+							?"一边给你手淫一边给你指交。"
 							:(isPlayerPenisFree()
-								?"give you a handjob."
-								:"finger you.")),
+								?"给你手淫。"
+								:"给你指交。")),
 						KAY_OFFICE_DOMINATE_POST_SEX,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_GROIN"),
 						Main.game.getPlayer().isTaur()
@@ -1572,12 +1572,12 @@ public class KaysWarehouse {
 									:null))));
 				
 			} else {
-				responses.add(new Response("Groin 'massage'", "You require a penis or a vagina, as well as access to them, before you're able to receive a groin 'massage' from [kay.name].", null));
+				responses.add(new Response("下体“按摩”", "你需要拥有阴茎或者阴道，并且能够使用，才能接受[kay.name]的下体“按摩”。", null));
 			}
 
 			if(isPlayerVaginaFree()) {
-				responses.add(getKaySexResponse("Cunnilingus",
-						"Get [kay.name] to drop down behind you and eat you out.",
+				responses.add(getKaySexResponse("舔阴",
+						"让[kay.name]跪在你身后给你舔阴。",
 						KAY_OFFICE_DOMINATE_POST_SEX,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_CUNNILINGUS"),
 						Main.game.getPlayer().isTaur()
@@ -1595,13 +1595,13 @@ public class KaysWarehouse {
 						Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getNpc(Kay.class), Main.game.getPlayer(), TongueVagina.CUNNILINGUS_START, false, true))));
 				
 			} else {
-				responses.add(new Response("Cunnilingus", "You require a vagina, as well as access to it, before you're able to receive cunnilingus from [kay.name].", null));
+				responses.add(new Response("舔阴", "你需要拥有阴道，并且能够使用，才能让[kay.name]给你舔阴。", null));
 			}
 			
 			if(Main.game.isAnalContentEnabled()) {
 				if(isPlayerAssFree()) {
-					responses.add(getKaySexResponse("Anilingus",
-							"Get [kay.name] to drop down behind you and perform anilingus.",
+					responses.add(getKaySexResponse("吻肛",
+							"让[kay.name]跪在你身后给你吻肛。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_ANILINGUS"),
 							Main.game.getPlayer().isTaur()
@@ -1619,19 +1619,19 @@ public class KaysWarehouse {
 							Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getNpc(Kay.class), Main.game.getPlayer(), TongueAnus.ANILINGUS_START, false, true))));
 					
 				} else {
-					responses.add(new Response("Anilingus", "You require access to your anus in order to receive cunnilingus from [kay.name].", null));
+					responses.add(new Response("吻肛", "你需要能够使用肛门，才能让[kay.name]给你吻肛。", null));
 				}
 			}
 			
 			if(!isPlayerVaginaFree()) {
-				responses.add(new Response("Fucked", "You require a vagina, as well as access to it, in order to get fucked by [kay.name].", null));
+				responses.add(new Response("挨操", "你需要拥有阴道，并且能够使用，才能让[kay.name]操你。", null));
 				
 			} else if(!Main.game.getNpc(Kay.class).isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-				responses.add(new Response("Fucked", "As [kay.namePos] cock is locked away in [kay.her] chastity cage, [kay.she] is unable to fuck you!", null));
+				responses.add(new Response("挨操", "[kay.namePos]的鸡巴依然被锁在贞操笼里，所以不能操你！", null));
 				
 			} else {
-				responses.add(getKaySexResponse("Fucked",
-						"Get [kay.name] to move up behind you and fuck you.",
+				responses.add(getKaySexResponse("挨操",
+						"让[kay.name]去到你身后操你。",
 						KAY_OFFICE_DOMINATE_POST_SEX,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_VAGINAL"),
 						Main.game.getPlayer().isTaur()
@@ -1662,14 +1662,14 @@ public class KaysWarehouse {
 			
 			if(Main.game.isAnalContentEnabled()) {
 				if(!isPlayerAssFree()) {
-					responses.add(new Response("Fucked (anal)", "You require access to your anus in order to receive anal from [kay.name].", null));
+					responses.add(new Response("挨操(肛交)", "你需要能够使用肛门，才能让[kay.name]给你肛交。", null));
 					
 				} else if(!Main.game.getNpc(Kay.class).isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-					responses.add(new Response("Fucked (anal)", "As [kay.namePos] cock is locked away in [kay.her] chastity cage, [kay.she] is unable to fuck your ass!", null));
+					responses.add(new Response("挨操(肛交)", "[kay.namePos]的鸡巴依然被锁在贞操笼里，所以不能操你的屁股！", null));
 					
 				} else {
-					responses.add(getKaySexResponse("Fucked (anal)",
-							"Get [kay.name] to move up behind you and fuck your ass.",
+					responses.add(getKaySexResponse("挨操(肛交)",
+							"让[kay.name]去到你身后操你的屁股。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_ANAL"),
 							Main.game.getPlayer().isTaur()
@@ -1725,7 +1725,7 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Stop massage", "Tell [kay.name] that [kay.sheHas] done an excellent job, but that you've had enough of [kay.her] massaging for now.", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+				return new Response("停止按摩", "告诉[kay.name]做得很棒，但是你已经享受够了。", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_FEET_END"));
@@ -1733,8 +1733,8 @@ public class KaysWarehouse {
 				};
 				
 			} else if(index==2) {
-				return getKaySexResponse("[pc.Foot(true)] worship",
-						"Get [kay.name] to orally worship your [pc.feet+(true)].",
+				return getKaySexResponse("吻[pc.Foot(true)]",
+						"让[kay.name]用嘴巴侍奉你[pc.feet+(true)]。",
 						KAY_OFFICE_DOMINATE_POST_SEX,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_FEET_FOOT_WORSHIP"),
 						Main.game.getPlayer().isTaur()
@@ -1753,11 +1753,11 @@ public class KaysWarehouse {
 				
 			} else if(index==3) {
 				if(!Main.game.getNpc(Kay.class).isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-					return new Response("[pc.Footjob]", "As [kay.namePos] cock is locked away in [kay.her] chastity cage, you are unable to give [kay.herHim] a [pc.footjob]!", null);
+					return new Response("[pc.Footjob]", "[kay.namePos]的鸡巴依然被锁在贞操笼里，所以不能让你[pc.footjob]！", null);
 					
 				} else {
 					return getKaySexResponse("[pc.Footjob]",
-							"Get [kay.name] to present you with [kay.her] cock so that you can reward [kay.herHim] with a [pc.footjob].",
+							"让[kay.name]把肉棒在你面前露出来，奖励[kay.herHim]一次[pc.footjob]。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MASSAGE_FEET_FOOTJOB"),
 							Main.game.getPlayer().isTaur()
@@ -1812,7 +1812,7 @@ public class KaysWarehouse {
 			if(Main.game.getNpc(Kay.class).getClothingInSlot(InventorySlot.PENIS)==null) { // Taken cage off:
 				List<Response> responses = new ArrayList<>();
 
-				responses.add(new Response("Sit back", "Sit back and let [kay.name] pull [kay.her] trousers back up.", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+				responses.add(new Response("坐下", "坐下来让[kay.name]提上裤子。", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CAGE_SIT_BACK"));
@@ -1820,8 +1820,8 @@ public class KaysWarehouse {
 				});
 				
 				if(!Main.game.getPlayer().isTaur()) {
-					responses.add(getKaySexResponse("Pull into lap",
-							"Pull [kay.name] into your lap and tell [kay.herHim] that you're going to fuck [kay.herHim].",
+					responses.add(getKaySexResponse("坐在腿上",
+							"让[kay.name]做到你的腿上，告诉[kay.herHim]你要准备干[kay.herHim]了。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CAGE_LAP"),
 							SexPosition.SITTING,
@@ -1832,12 +1832,12 @@ public class KaysWarehouse {
 							Util.newArrayListOfValues(),
 							Util.newArrayListOfValues()));
 				} else {
-					responses.add(new Response("Pull into lap", "As you have the lower body of [pc.a_legRace], you cannot pull [kay.name] into your lap!", null));
+					responses.add(new Response("坐在腿上", "你的下半身是[pc.a_legRace]，所以不能让[kay.name]坐在你的腿上！", null));
 				}
 
 				if(Main.game.isAnalContentEnabled()) {
-					responses.add(getKaySexResponse("Push over desk",
-							"Push [kay.name] over [kay.her] desk and tell [kay.herHim] that you're going to fuck [kay.herHim].",
+					responses.add(getKaySexResponse("推倒在桌上",
+							"把[kay.name]推倒在桌子上，告诉[kay.herHim]你要准备干[kay.herHim]了。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CAGE_DESK"),
 							SexPosition.OVER_DESK,
@@ -1849,8 +1849,8 @@ public class KaysWarehouse {
 							Util.newArrayListOfValues()));
 				}
 
-				responses.add(getKaySexResponse("Handjob",
-						"Reward [kay.name] by taking hold of [kay.her] cock and jerking [kay.herHim] off.",
+				responses.add(getKaySexResponse("手交",
+						"奖励一下[kay.name]，握住[kay.her]的肉棒撸动起来。",
 						KAY_OFFICE_DOMINATE_POST_SEX,
 						UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CAGE_HANDJOB"),
 						SexPosition.STANDING,
@@ -1862,8 +1862,8 @@ public class KaysWarehouse {
 						Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getPlayer(), Main.game.getNpc(Kay.class), FingerPenis.COCK_MASTURBATING_START, false, true))));
 
 				if(isPlayerMouthFree()) {
-					responses.add(getKaySexResponse("Suck cock",
-							"Reward [kay.name] by leaning forwards and sucking [kay.her] cock.",
+					responses.add(getKaySexResponse("舔肉棒",
+							"奖励一下[kay.name]，俯下身去舔[kay.her]的肉棒。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CAGE_BLOWJOB"),
 							SexPosition.STANDING,
@@ -1875,15 +1875,15 @@ public class KaysWarehouse {
 							Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getPlayer(), Main.game.getNpc(Kay.class), PenisMouth.GIVING_BLOWJOB_START, false, true))));
 					
 				} else {
-					responses.add(new Response("Suck cock", "You cannot gain access to your mouth, and so are not able to suck [kay.namePos] cock.", null));
+					responses.add(new Response("舔肉棒", "你无法使用嘴巴，所以不能舔[kay.namePos]的肉棒。", null));
 				}
 
 				if(!isPlayerVaginaFree()) {
-					responses.add(new Response("Humped", "You require a vagina, as well as access to it, in order to get fucked by [kay.name].", null));
+					responses.add(new Response("骑背", "你需要拥有阴道，并且能够使用，才能让[kay.name]操你。", null));
 					
 				} else {
-					responses.add(getKaySexResponse("Humped",
-							"Present yourself to [kay.name] and let [kay.herHim] fuck your pussy.",
+					responses.add(getKaySexResponse("骑背",
+							"将下体展露在[kay.name]面前，让[kay.herHim]插入你的小穴。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CAGE_VAGINAL"),
 							SexPosition.ALL_FOURS,
@@ -1897,11 +1897,11 @@ public class KaysWarehouse {
 				
 				if(Main.game.isAnalContentEnabled()) {
 					if(!isPlayerAssFree()) {
-						responses.add(new Response("Humped (anal)", "You require access to your anus in order to receive anal from [kay.name].", null));
+						responses.add(new Response("骑背(肛交)", "你需要能够使用肛门，才能让[kay.name]给你肛交。", null));
 						
 					} else {
-						responses.add(getKaySexResponse("Humped (anal)",
-								"Present yourself to [kay.name] and let [kay.herHim] fuck your ass.",
+						responses.add(getKaySexResponse("骑背(肛交)",
+								"将下体展露在[kay.name]面前，让[kay.herHim]插入你的屁股。",
 								KAY_OFFICE_DOMINATE_POST_SEX,
 								UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CAGE_ANAL"),
 								SexPosition.ALL_FOURS,
@@ -1959,7 +1959,7 @@ public class KaysWarehouse {
 			if(Main.game.getNpc(Kay.class).getClothingInSlot(InventorySlot.ANUS)==null) {
 				List<Response> responses = new ArrayList<>();
 
-				responses.add(new Response("Sit back", "Sit back and let [kay.name] pull [kay.her] trousers back up.", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+				responses.add(new Response("坐下", "坐下来让[kay.name]提上裤子。", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_BUTTPLUG_SIT_BACK"));
@@ -1967,8 +1967,8 @@ public class KaysWarehouse {
 				});
 				
 				if(!Main.game.getPlayer().isTaur()) {
-					responses.add(getKaySexResponse("Pull into lap",
-							"Pull [kay.name] into your lap and tell [kay.herHim] that you're going to fuck [kay.herHim].",
+					responses.add(getKaySexResponse("坐在腿上",
+							"让[kay.name]做到你的腿上，告诉[kay.herHim]你要准备干[kay.herHim]了。",
 							KAY_OFFICE_DOMINATE_POST_SEX,
 							UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_BUTTPLUG_LAP"),
 							SexPosition.SITTING,
@@ -1979,13 +1979,13 @@ public class KaysWarehouse {
 							Util.newArrayListOfValues(),
 							Util.newArrayListOfValues()));
 				} else {
-					responses.add(new Response("Pull into lap", "As you have the lower body of [pc.a_legRace], you cannot pull [kay.name] into your lap!", null));
+					responses.add(new Response("坐在腿上", "你的下半身是[pc.a_legRace]，所以不能让[kay.name]坐在你的腿上！", null));
 				}
 				
 				if(Main.game.isAnalContentEnabled()) {
 					if(isPlayerMouthFree()) {
-						responses.add(getKaySexResponse("Desk anilingus",
-								"Push [kay.name] over [kay.her] desk and start eating [kay.her] ass.",
+						responses.add(getKaySexResponse("桌上吻肛",
+								"把[kay.name]推倒在桌子上，开始舔[kay.her]的屁股。",
 								KAY_OFFICE_DOMINATE_POST_SEX,
 								UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_BUTTPLUG_DESK_ANILINGUS"),
 								SexPosition.OVER_DESK,
@@ -1997,12 +1997,12 @@ public class KaysWarehouse {
 								Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getPlayer(), Main.game.getNpc(Kay.class), TongueAnus.ANILINGUS_START, false, true))));
 						
 					} else {
-						responses.add(new Response("Desk anilingus", "You cannot gain access to your mouth, and so are not able to perform anilingus on [kay.name].", null));
+						responses.add(new Response("桌上吻肛", "你无法使用自己的嘴巴，不能给[kay.name]吻肛！", null));
 					}
 					
 					if(isPlayerPenisFree()) {
-						responses.add(getKaySexResponse("Desk anal",
-								"Push [kay.name] over [kay.her] desk and fuck [kay.her] ass.",
+						responses.add(getKaySexResponse("桌上肛交",
+								"把[kay.name]推倒在桌子上，开始干[kay.her]的屁股。",
 								KAY_OFFICE_DOMINATE_POST_SEX,
 								UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_BUTTPLUG_DESK_FUCK"),
 								SexPosition.OVER_DESK,
@@ -2014,7 +2014,7 @@ public class KaysWarehouse {
 								Util.newArrayListOfValues(new InitialSexActionInformation(Main.game.getPlayer(), Main.game.getNpc(Kay.class), PenisAnus.PENIS_FUCKING_START, false, true))));
 						
 					} else {
-						responses.add(new Response("Desk fuck", "You require a penis, as well as access to it, in order to anally fuck [kay.name].", null));
+						responses.add(new Response("桌上性交", "你需要拥有阴茎，并且能够使用，才能跟[kay.name]肛交。", null));
 					}
 				}
 
@@ -2044,7 +2044,7 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Tell Kay to get changed into 'her' new set of clothing...", KAY_OFFICE_DOMINATE_CLOTHING);
+				return new Response("继续", "告诉凯可以换上“她”的新衣服了……", KAY_OFFICE_DOMINATE_CLOTHING);
 				
 			}
 			return null;
@@ -2061,7 +2061,7 @@ public class KaysWarehouse {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayFeminised)) {
 				Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_MASCULINE"));
 				Main.game.getNpc(Kay.class).removeAllMakeup();
-				Main.game.getNpc(Kay.class).setName(new NameTriplet("Jack", "Jack", "Jackie"));
+				Main.game.getNpc(Kay.class).setName(new NameTriplet("杰克", "杰克", "杰姬"));
 				Main.game.getNpc(Kay.class).setHairStyle(HairStyle.LOOSE);
 				Main.game.getDialogueFlags().setFlag(DialogueFlagValue.kayFeminised, false);
 				Main.game.getNpc(Kay.class).equipClothing(EquipClothingSetting.getAllClothingSettings());
@@ -2085,10 +2085,10 @@ public class KaysWarehouse {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.kayFeminised)) {
 				if(index==1) {
-					return new Response("Kay", "Keep calling the cute cat-girl by her surname and tell her that she looks very pretty.", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
+					return new Response("凯", "继续用姓氏喊这个可爱的猫女，说她现在漂亮极了。", KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
-							Main.game.getNpc(Kay.class).setName(new NameTriplet("Jack", "Jack", "Jackie"));
+							Main.game.getNpc(Kay.class).setName(new NameTriplet("杰克", "杰克", "杰姬"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_START"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_END"));
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.kayPreviouslyFeminised, true);
@@ -2096,13 +2096,13 @@ public class KaysWarehouse {
 					};
 					
 				} else if(index==2) {
-					return new Response("Jackie",
-							"Tell the cute [kay.race] that she looks very pretty, and that the name of 'Jackie' is more suitable for [kay.herHim] when [kay.she] looks like this."
-							+ "<br/>[style.colourFeminine(Kay will be renamed to 'Jackie' until (if ever) you tell [kay.herHim] to start wearing masculine clothing again.)]",
+					return new Response("杰姬",
+							"说这个可爱[kay.race]看上去漂亮极了，“杰姬”这个名字更适合[kay.herHim]的外表。"
+							+ "<br/>[style.colourFeminine(凯会被重新命名为“杰姬”，直到你让[kay.herHim]换回男性服装。)]",
 							KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
-							Main.game.getNpc(Kay.class).setName(new NameTriplet("Jackie", "Jackie", "Jackie"));
+							Main.game.getNpc(Kay.class).setName(new NameTriplet("杰姬", "杰姬", "杰姬"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_START"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_MID"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_JACKIE"));
@@ -2112,13 +2112,13 @@ public class KaysWarehouse {
 					};
 					
 				} else if(index==3) {
-					return new Response("Kaytie",
-							"Tell the cute [kay.race] that she looks very pretty, and that the name of 'Kaytie' is more suitable for [kay.herHim] when [kay.she] looks like this."
-							+ "<br/>[style.colourFeminine(Kay will be renamed to 'Kaytie' until (if ever) you tell [kay.herHim] to start wearing masculine clothing again.)]",
+					return new Response("凯蒂",
+							"说这个可爱的[kay.race]看上去漂亮极了，“凯蒂”这个名字更适合[kay.herHim]的外表。"
+							+ "<br/>[style.colourFeminine(凯会被重新命名为“凯蒂”，直到你让[kay.herHim]换回男性服装。)]",
 							KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
-							Main.game.getNpc(Kay.class).setName(new NameTriplet("Kaytie", "Kaytie", "Kaytie"));
+							Main.game.getNpc(Kay.class).setName(new NameTriplet("凯蒂", "凯蒂", "凯蒂"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_START"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_MID"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_KAYTIE"));
@@ -2128,13 +2128,13 @@ public class KaysWarehouse {
 					};
 					
 				} else if(index==4) {
-					return new Response("Mikayla",
-							"Tell the cute [kay.race] that she looks very pretty, and that the name of 'Mikayla' is more suitable for [kay.herHim] when [kay.she] looks like this."
-							+ "<br/>[style.colourFeminine(Kay will be renamed to 'Mikayla' until (if ever) you tell [kay.herHim] to start wearing masculine clothing again.)]",
+					return new Response("米凯菈",
+							"说这个可爱的[kay.race]看上去漂亮极了，“米凯菈”这个名字更适合[kay.herHim]的外表。"
+							+ "<br/>[style.colourFeminine(凯会被重新命名为“米凯菈”，直到你让[kay.herHim]换回男性服装。)]",
 							KAY_OFFICE_DOMINATE_UTIL_EMPTY) {
 						@Override
 						public void effects() {
-							Main.game.getNpc(Kay.class).setName(new NameTriplet("Mikayla", "Mikayla", "Mikayla"));
+							Main.game.getNpc(Kay.class).setName(new NameTriplet("米凯拉", "米凯拉", "米凯拉"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_START"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_MID"));
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_CLOTHING_NAME_MIKAYLA"));
@@ -2163,25 +2163,25 @@ public class KaysWarehouse {
 
 			sb.append(UtilText.parseFromXMLFile("places/dominion/warehouseDistrict/kaysTextiles", "KAY_OFFICE_DOMINATE_MAKEUP"));
 					
-			sb.append(CharacterModificationUtils.getSelfDivHairStyles("Hair Style", UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] hair style."))
+			sb.append(CharacterModificationUtils.getSelfDivHairStyles("Hair Style", UtilText.parse(BodyChanging.getTarget(), "改变[npc.namePos]的发型。"))
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "腮红", "腮红(也叫胭脂)被用来粉饰脸颊，以显得更加年轻或凸显颧骨。", true, true)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "口红", "口红被用来为嘴唇提供色彩、质地或保护。", true, true)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "眼线", "眼线用于眼廓周围，有助于修饰眼型或突出不同的特征。", true, true)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "眼影", "眼影用来让使用者的眼睛更加凸显迷人。", true, true)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on your [pc.hands].", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "指甲油", "指甲油用于给[pc.hands]添加色彩或提供保护。", true, true)
 					
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on your [pc.feet].", true, true));
+							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "脚趾甲油", "脚趾甲油用于给[pc.feet]添加色彩或提供保护。", true, true));
 			
 			return sb.toString();
 		}
@@ -2192,7 +2192,7 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Finished", "You've finished giving [kay.name] a makeover.", KAY_OFFICE_DOMINATE_MAKEUP_END);
+				return new Response("结束", "你已经给[kay.name]化完妆了。", KAY_OFFICE_DOMINATE_MAKEUP_END);
 			}
 			return null;
 		}
@@ -2224,53 +2224,53 @@ public class KaysWarehouse {
 			
 			UtilText.nodeContentSB.append(UtilText.parse(kay,
 					"<p>"
-						+ "At the moment, [npc.nameIsFull] calling you '[npc.pcName]', and you wonder if you should get [npc.herHim] to call you by a different name or title."
-						+ " As [npc.sheIs] not your slave, you can't get [npc.herHim] to change [npc.her] name."
+						+ "从现在开始，[npc.nameIsFull]将称呼你为“[npc.pcName]”，你不禁思考起该不该让[npc.herHim]换个说法称呼你。"
+						+ "[npc.sheIs]不是你的奴隶，你不能让[npc.herHim]改变名字。"
 					+ "</p>"));
 			
 			UtilText.nodeContentSB.append(
 				"<div class='container-full-width' style='padding:8px 16px;'>"
 					+ "<div style='width:18%; float:left; font-weight:bold; margin:0 13% 0 0; padding:0; text-align:center;'>"
-						+ "Name"
+						+ "名字"
 					+ "</div>"
 					+ "<div style='width:18%; float:left; font-weight:bold; margin:0 13% 0 0; padding:0; text-align:center;'>"
-						+ "Surname"
+						+ "姓氏"
 					+ "</div>"
 					+ "<div style='width:20%; float:left; font-weight:bold; margin:0 18% 0 0; padding:0; text-align:center;'>"
-						+ UtilText.parse(kay, "What [npc.she] calls you")
+						+ UtilText.parse(kay, "[npc.she]对你的称呼")
 					+ "</div>"
 					
 					+ "<form style='float:left; width:18%; margin:0; padding:0;'><input type='text' id='slaveNameInput'"
 						+ " value='"+ UtilText.parseForHTMLDisplay(kay.getName(false))+ "' style='width:100%; margin:0; padding:0;' disabled></form>"
-					+ "<div class='normal-button disabled' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button disabled' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#10003;"
 					+ "</div>"
-					+ "<div class='normal-button disabled' style='float:left; width:5%; height:28px; line-height:28px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button disabled' style='float:left; width:5%; height:22px; line-height:22px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#127922;"
 					+ "</div>"
 						
 					+ "<form style='float:left; width:18%; margin:0; padding:0;'><input type='text' id='slaveSurnameInput'"
 						+ " value='"+ UtilText.parseForHTMLDisplay(kay.getSurname())+ "' style='width:100%; margin:0; padding:0;' disabled></form>"
-					+ "<div class='normal-button disabled' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button disabled' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#10003;"
 					+ "</div>"
-					+ "<div class='normal-button disabled' style='float:left; width:5%; height:28px; line-height:28px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button disabled' style='float:left; width:5%; height:22px; line-height:22px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#127922;"
 					+ "</div>"
 					
 					+ "<form style='float:left; width:20%; margin:0; padding:0;'><input type='text' id='slaveToPlayerNameInput' value='"+ UtilText.parseForHTMLDisplay(kay.getPetName(Main.game.getPlayer()))
 						+ "' style='width:100%; margin:0; padding:0;'></form>"
-					+ "<div class='normal-button' id='"+kay.getId()+"_CALLS_PLAYER' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button' id='"+kay.getId()+"_CALLS_PLAYER' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#10003;"
 					+ "</div>"
-					+ " <div class='normal-button disabled' style='float:left; width:12%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
-						+ "All Slaves"
+					+ "<div class='normal-button disabled' style='float:left; width:12%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+						+ "全体奴隶"
 					+ "</div>");
 			
 			UtilText.nodeContentSB.append(UtilText.parse(kay,
 						"<p style='text-align:center; margin-top:4px;'>"
-							+ "<i>If [npc.name] is told to call you 'Mom' or 'Dad', 'Mommy' or 'Daddy', 'Mistress' or 'Master', or 'Ma'am' or 'Sir',"
-							+ " then [npc.she] will automatically switch to the appropriate paired name depending on the femininity of your character.</i>"
+							+ "<i>如果[npc.name]被告知称呼你为“爸爸”/“妈妈”、“爹地”/“妈咪”、“女主人”/“男主人”或“女士”/“先生”，"
+							+ "那么[npc.she]将根据你角色的女性化程度自动切换合适的称呼。</i>"
 						+ "</p>"
 					+ "</div>"));
 			
@@ -2281,7 +2281,7 @@ public class KaysWarehouse {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Finished", "You've finished choosing what [kay.name] calls you.", KAY_OFFICE_DOMINATE_NAMING_END);
+				return new Response("结束", "你结束了[kay.name]对你称呼的选择。", KAY_OFFICE_DOMINATE_NAMING_END);
 			}
 			return null;
 		}

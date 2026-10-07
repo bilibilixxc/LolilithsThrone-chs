@@ -1,512 +1,512 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- TRADER_EXTERIOR -->
 	
 	<htmlContent tag="TRADER_EXTERIOR"><![CDATA[
 	<p>
-		Adjoining the main atrium of the Gambling Den, you spot an open-fronted shop, with the sign 'Roxy's Fun Box' fixed to the wall above the opening. From your exterior vantage point, you can see that the interior is filled with rows of shelves, holding all manner of different goods, but despite quite obviously being open for business, the shop floor looks to be completely deserted.
+		你发现赌场的主中庭旁有一家敞开式商店，店门上方挂着“罗克西的妙妙盒”的招牌。你从外面望进去，看到室内排满了货架，摆满了各种各样的商品。这家店明显正在营业，但店里看起来冷冷清清。
 	</p>
 	<p>
-		You could [pc.step] inside and take a look around, or instead head back into the Gambling Den...
+		你可以进去逛逛，或者回到赌场……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TRADER -->
 	
 	<htmlContent tag="TRADER_VENGAR_INTRO_START"><![CDATA[
 	<p>
-		Once again deciding to enter Roxy's store, you scan the interior for any sign of the crass owner or her latest rat-boy acquisition. Before you see them, however, you're alerted to their presence by the unmistakable sound of Roxy's grating laughter coming from the other side of the shop. Approaching the source of the noise, you suddenly see the rat-girl stand up from behind her counter, puffing away on a cigarette. Grinning down at who you assume must be Vengar, she teases, [roxy.speech(That's right, keep on lickin' yer lips! Ya ain't gonna be gettin' any more o' me cunt juices until yer willin' ta do exactly what I say! I'll make ya regret ever fuckin' those sluts!)]
+		再次决定进入罗克西的商店时，你扫视了一下店内，寻找是否有粗鲁的店主或她最新买来的鼠男的踪迹。然而，在你看到他们之前，罗克西的刺耳笑声从店的另一侧传来，让你警觉到他们的存在。走近笑声的源头，你突然看到鼠女从柜台后面站了起来，正抽着烟。她咧嘴笑着，你猜下面一定是文加，[roxy.speech(没错，继续舔恁嘞嘴唇！除非恁愿意按我说嘞做，否则我不会再让恁舔我嘞屄了！我会让恁后悔和那些骚货上床嘞！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_VENGAR_INTRO_ADDICTED"><![CDATA[
 	<p>
-		Suddenly noticing your approach out of the corner of her eye, Roxy turns towards you with an angry snarl on her face. Upon recognising you, however, her scowl shifts into a devious grin. Leaning heavily on the counter-top, she takes a deep drag of her cigarette and teases, [roxy.speech(If yer back ta get another taste o' me cunt, ya know ya gotta pay a thousand flames. Me little slave 'ere 'as already got me cunt all wet an' drippin' from excitement. Ya ain't gonna resist gettin' a taste o' me flowin' juices now, are ya?)]
+		罗克西眼角的余光突然注意到你的靠近，她转过身来，脸上带着愤怒的咆哮。不过，在认出你之后，她的鄙夷又变成了狡黠的笑容。她重重地靠在台面上，深深地吸了一口烟，然后挑逗道，[roxy.speech(如果恁想再尝尝我嘞骚屄，得付一千火币。我嘞小奴已经把我嘞屄弄得湿漉漉的了。恁不会不想尝尝我嘞淫水吧？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_VENGAR_INTRO_BEATEN_ADDICTION"><![CDATA[
 	<p>
-		Suddenly noticing your approach out of the corner of her eye, Roxy turns towards you with an angry snarl on her face. Upon recognising you, however, her scowl shifts into a devious grin. Leaning heavily on the counter-top, she takes a deep drag of her cigarette and teases, [roxy.speech(If yer back ta get another taste o' me cunt, ya know ya gotta pay a thousand flames! Ya ain't gonna resist gettin' a taste o' me flowin' juices now, are ya?)]
+		罗克西突然用眼角的余光注意到你的靠近，她转过身来，脸上带着愤怒的咆哮。然而，在认出你之后，她的蔑视转变成了狡黠的笑容。她重重地靠在台面上，深深地吸了一口烟，然后挑逗道，[roxy.speech(如果恁想再尝尝我嘞骚屄，一千火币。恁不会拒绝尝尝我嘞淫水吧？)]
 	</p>
 	<p>
-		Having rid yourself of your addiction to Roxy's girlcum, you tell the rat-girl that you have absolutely no interest in paying any money to eat her out. Raising one eyebrow, the foul-mouthed rat-girl jeers, [roxy.speech(Oh, you's fuckin' gone an' cured yeself, 'ave ya? Well, 'ow about I offer ya the chance to earn an item by eatin' me out again? Come on, ya know yer cravin' a taste o' me wet little cunt again, ain't ya?! Me little slave 'ere sure seems ta love it! Heh-heh-heh!)]
+		在摆脱了对罗克西的爱液的沉迷之后，你告诉鼠女，你绝对没有兴趣花一分钱。粗话连篇的鼠女扬起眉毛，嘲笑道，[roxy.speech(哦，恁妈恁已经好了？我给恁个机会，让恁再吃我一次，赚点钱怎么样？来吧，恁渴望再尝尝我嘞湿屄，不是吗？我嘞小奴似乎很喜欢着！嘿-嘿-嘿！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_VENGAR_INTRO_NOT_ADDICTED"><![CDATA[
 	<p>
-		Suddenly noticing your approach out of the corner of her eye, Roxy turns towards you with an angry snarl on her face. Upon recognising you, however, her scowl shifts into a devious grin. Leaning heavily on the counter-top, she takes a deep drag of her cigarette and teases, [roxy.speech(If yer here lookin' fer some hot little rat pussy ta get a taste of, me little slave 'ere 'as already got me cunt all wet an' drippin' from excitement. Ya ain't gonna resist gettin' a taste o' me flowin' juices now, are ya? Remember, ya get a free item from me shop as an extra reward!)]
+		罗克西突然用眼角的余光注意到你的靠近，她转过身来，脸上带着愤怒的咆哮。然而，在认出你之后，她的蔑视转变成了狡黠的笑容。她重重地靠在台面上，深深地吸了一口烟，然后挑逗道，[roxy.speech(如果你是来这里找火辣嘞老鼠小穴尝尝鲜，我这个小奴已经把我嘞小屄弄得湿漉漉了。恁不会拒绝尝尝我嘞淫水吧？记住，恁可以从我嘞商店免费得到一件东西作为额外奖励！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_VENGAR_INTRO_END"><![CDATA[
 	<p>
-		Before you can reply, Roxy's 'little slave' stands up from behind the counter, and is, of course, the familiar figure of Vengar. Steadying himself against the counter with one hand, he doesn't notice who you are at first as he angrily addresses Roxy, [vengar.speech(I ain't ya slave, bitch! You ain't gonna get away with thi-)] 
+		你还没来得及回答，罗克西的“小奴隶”就从柜台后面站了起来，他当然就是我们熟悉的文加。他用一只手稳稳地靠在柜台上，一开始并没有注意到你是谁，而是愤怒地对罗克西说，[vengar.speech(我不是恁嘞奴隶，信球！你逃不掉——)] 
 	</p>
 	<p>
-		[roxy.speech(You want me ta fuckin' gag ya?!)] Roxy screeches, before turning to slap Vengar across the face. Before he can react, she grabs the ring on the front of the rat-boy's slave collar and yanks downwards, forcing him to his knees. Glaring down at her insolent ex-boyfriend, she continues, [roxy.speech(That fuckin' lizard said I can do whatever I want with ya, includin' transformin' ya, so if ya don't wanna be turned into a sissy rat-slut, ya betta never even <i>think</i> about talkin' back ta me! Ain't that right, [pc.name]?)]
+		[roxy.speech(恁想让我堵住恁嘞嘴吗？)]罗克西尖叫一声，然后转身给了文加一记耳光。还没等他反应过来，她就抓住了鼠男奴隶项圈前面的环，向下一拽，迫使他跪了下来。她瞪着傲慢无礼的前男友，继续说道，[roxy.speech(那信嘞蜥蜴说我可以对恁为所欲为，包括改造你。如果你不想变成男娘的骚货，就别<i>幻想</i>跟我顶嘴！对吧，[pc.name]？)]
 	</p>
 	<p>
-		Having been present at the moment when Axel gave Roxy permission to transform Vengar, you confirm that what she's saying is the truth. Recognising your voice, Vengar peers over the top of the counter, before exclaiming, [vengar.speechNoEffects(You?! Dis is all your faul-)] 
+		阿克塞尔允许罗克西转化文加的那一刻，你也在场，你确认她说的是事实。文加认出了你的声音，她从柜台顶上探出头来，然后惊呼道：[vengar.speechNoEffects(你？恁娘这都是恁嘞错——)] 
 	</p>
 	<p>
-		Having a habit of interrupting people, Roxy once again cuts Vengar off by roughly shoving him to the ground. Raising her paw, she steps on his face, snarling, [roxy.speech(Shut yer fuckin' mouth! Yer ain't gonna speak ta me customers without me express permission, ya understand, slave?!)]
+		罗克西有打断别人说话的习惯，她又一次粗暴地把文加推倒在地，打断了他的话。她举起爪子，踩在他的脸上，咆哮着，[roxy.speech(闭上恁嘞臭嘴！没有我嘞允许，你不能跟我嘞顾客说话，明白吗，奴隶？！)]
 	</p>
 	<p>
-		After hearing a muffled groan of agreement, the rat-girl turns back towards you, cigarette still in mouth, and asks, [roxy.speech(So, wot ya wantin' this time?)]
+		在听到一声低沉的同意呻吟后，鼠女回头朝你问道，嘴里还叼着香烟，[roxy.speech(那么，这次你想要啥？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 
 	<htmlContent tag="TRADER"><![CDATA[
 	<p>
-		Wanting to investigate further, you [pc.step] forwards into the empty store, before starting to look around for any sign of the owner, 'Roxy'. The first thing that strikes you as you enter is the fact that the interior smells strongly of cigarette smoke; a clear indication that the currently-absent owner must be a very heavy smoker indeed. Although there's a counter prominently running along half the length of the far wall, you can't see anyone standing behind it, and, recalling Axel's warning that you should watch yourself around Roxy, you carefully start walking up and down the aisles, on the lookout for any sign of trouble.
+		你想进一步调查，于是决定走进这家空荡荡的商店，寻找店主“罗克西”的踪迹。你进入店内，首先闻到的就是浓烈的烟味，店主一定烟瘾很大。虽然远处的墙壁旁有个显眼的柜台，但你发现柜台后没人。你想起阿克塞尔警告过你在罗克西身边要小心，便开始小心翼翼地在过道里走来走去，提防着危险的迹象。
 	</p>
 	<p>
-		As you're taking a look at some of the goods on offer, you suddenly hear movement coming from behind the shop's counter, and, turning to face it, you see a rather scruffy-looking rat-girl standing up, before yawning and stretching her arms up above her head. The very next thing she does after waking from her nap is grab a cigarette from under the counter, before putting it in her mouth and inhaling a lungful of smoke.
+		你正在看一些商品，突然听到商店柜台后面传来动静。转过身去，你看到一个看起来相当邋遢的鼠女站了起来，打了个哈欠，把胳膊伸过头顶上。她从睡梦中醒来后的第一件事就是从柜台下面拿起一根香烟，叼在嘴里吸了一口。
 	</p>
 	<p>
-		Using this opportunity to take a good look at the rat-girl, the first thing you notice about her is the series of claw-shaped scars running down over one side of her face. A black eye patch conceals whatever damage this old wound has done to her eye, which gives her a rather ominous appearance. The second thing you notice about this brown-furred rat-girl is the fact that she's wearing an abundance of gold jewellery, with every possible piercing that you can imagine being home to some form of gaudy ornament or another.
+		借此机会，你可以仔细打量一下这个鼠女，首先映入你眼帘的是她一侧脸上的一连串的爪形伤疤。黑色的眼罩遮住了她眼睛上的旧伤，给人一种不祥的感觉。这个棕色毛发的鼠女戴着大量的金首饰，你能想象到的所有可能的穿孔上都是她的首饰。
 	</p>
 	<p>
-		As she catches sight of you with her good eye, the rat-girl sneers, before unleashing one of the most profane greetings you've ever heard, [roxy.speech(Heh, someone's finally fuckin' come to buy some o' my shit. Well, that'd fuckin' better be what yer here for. The last cunt that came in here just fuckin' stood around like some gormless twat, an' I had to fuckin' scream at 'im to get 'im to fuck off. You don't look like a complete fuckin' idiot, so I'm hopin' yer gonna buy somethin', an' not waste my fuckin' time.)]
+		当她用好的那只眼捕捉到你时，鼠女嗤之以鼻，然后发出了你听过的最脏的问候：[roxy.speech(呵，终于有人他妈的来买我叻东西了。恁他妈最好是来买东西的。上一个来叻傻逼就像个傻逼一样站着，我他妈还得对他大喊大叫才能让他滚蛋。你看起来不像个白痴，希望恁能买什么物件，别浪费我他妈的时间。)]
 	</p>
 	<p>
-		At this point, the foul-mouthed rat-girl smirks at you, before inhaling deeply on her cigarette once again. Blowing out a huge cloud of white smoke, she lets a cackling, grating laughter burst out from between her lips. Placing both of her hands on the counter in front of her, she leans forwards and, cigarette hanging from her mouth, continues, [roxy.speech(The name's Roxy. You got a problem with any o' my prices, or what I've got fer sale, you fuckin' keep it to yerself, ya got me?)]
+		此时，这个满嘴脏话的鼠女冲你冷笑一声，再次深深地吸了一口烟，喷出一大团白烟，嘴唇间发出咯咯刺耳的笑声。她把双手放在面前的柜台上，身体前倾，嘴里叼着烟，继续说道：[roxy.speech(我叫罗克西。如果你对我叻价格或我卖的东西有意见，你他妈的自己憋着，明白？)]
 	</p>
 	<p>
-		[pc.speech(Right...)] you say, taken a little off-guard by just how crass Roxy is. [pc.speech(I'm [pc.name].)]
+		[pc.speech(行……)]你说，对罗克西的粗鲁有点措手不及，[pc.speech(我是[pc.name]。)]
 	</p>
 	<p>
-		[roxy.speech(Heh. You ain't like most of the cunts that wander in 'ere. I can tell there's somethin' real special about yer,)] Roxy grins, before beckoning you closer with one hand. Deciding to follow along for now, you step towards the counter, allowing her to continue, [roxy.speech(I don't offer this to any ol' cunt what wanders in here, but I got a real fuckin' special deal fer you. Not gonna give yer the whole story, cos I ain't got time fer that shit, but a couple o' years ago I used to wander 'round that shithole they call Dominion, an' I came across this real fuckin' hung horse-boy runnin' a shop up there. Well, he showed me his cock, fuckin' huge it was, an' said he'd sell me his stuff real cheap if I'd blow 'im right then and there. Well, there ain't no way I was sayin' no to that!)] Roxy bursts out laughing yet again; the sudden, grating noise causes you to flinch. Inhaling on her cigarette, Roxy carelessly blows the smoke all over you as she continues with her story, [roxy.speech(So anyways, I'd keep on goin' back to suck his fuckin' huge cock and get a real good price on the shit he was sellin'. Anyways, the whole point o' this story is that it gave me an idea, y'see?)]
+		[roxy.speech(嘿，你不更其他在这儿晃悠的傻逼一样。我看得出恁很特别。)]罗克西咧嘴一笑，向你招手。你决定暂时停下，走向柜台，让她继续说：[roxy.speech(我不会把这个提供给在这儿晃悠的傻逼，但我他妈有个特别的交易要给恁。不给你讲整个故事，我也没工夫讲，但几年前，我在那个叫御城区的傻逼地方转悠，遇到了一个他妈吊儿郎当的马男。他给我看他的鸡巴，真他妈的大啊，他说如果我给他吹箫，他就把东西便宜卖我，我当然不会拒绝！)]罗克西又一次大笑起来，这突如其来的刺耳笑声让你不禁打了个寒战。吸了口烟，罗克西漫不经心地把二手烟吹到你身上，继续讲她的故事：[roxy.speech(不管怎么说，我会继续回去嗦他他妈巨大的鸡巴，拿到一个好价钱。总之，这个故事叻重点是，它给了我一个想法，你滴明白？)]
 	</p>
 	<p>
-		Roxy pauses for a moment, and, hoping that she's finally getting to the point, you ask, [pc.speech(What idea was that?)]
+		罗克西停顿了一下，希望她终于说到了重点，你问道：[pc.speech(所以是什么？)]
 	</p>
 	<p>
-		[roxy.speech(Ay! Don't fuckin' interrupt!)] she berates you, before once again bursting out in her abrasive laughter. Before you can react to her rude reply, she continues, [roxy.speech(Now that I've got my own shop and shit, I was thinkin' I'd do the same as that fuckin' horse-boy, but make it even better! Instead of just givin' yer some kinda shitty discount, if yer wanna come lick my cunt 'til I cum, I'll give yer a fuckin' free item from my shop!)]
+		[roxy.speech(唉！别他妈插嘴！)]她斥责你，然后再次爆发出她那粗鲁的笑声。你没来得及对她的粗鲁回答反应，她继续说道，[roxy.speech(现在我有了自己的商店，我在寻思我也要像那个他妈的马男一样，但要做得更好！如果恁来舔我叻屄直到我高潮，我他妈就免费送你一件我店里的东西！)]
 	</p>
 	<p>
-		[pc.speech(What kind of free item?)] you ask, immediately regretting asking your question, as it causes Roxy to let out yet another of her infuriatingly annoying laughs.
+		[pc.speech(什么样的免费物品？)]你问道，但马上又后悔问了这个问题，因为这又引起了罗克西那令人恼火的笑声。
 	</p>
 	<p>
-		[roxy.speech(I got a couple o' dice here. Yer come down here and let me plant my fuckin' sweet cunt on yer face, and I'll roll these to decide on a random fuckin' item from my shop. Whattya say?)]
+		[roxy.speech(我这儿有几呃骰子。恁下来，让我把我叻甜屄贴在恁脸上。我掷骰子决定恁从我这儿买几件东西。啧么说？)]
 	</p>
 	<p>
-		Before you can answer, Roxy steps back from the counter, pulling up the skirt of her dress with one hand to reveal the fact that she's not wearing any underwear. As you look down at the sudden movement, she reaches down with her free hand to spread her exposed pussy, blowing out yet another cloud of smoke as she teases you, [roxy.speech(Come on, I can tell yer want a taste o' my fuckin' cunt! All yer gotta do is get yer fuckin' tongue buried in here an' get me ta cum. Easiest item you'll ever earn!)]
+		你还没来得及回答，罗克西就从柜台上退了下来，一手拉起裙子，露出了她没穿内衣的下身。当你低头看这突如其来的动作时，她用空闲的手向下伸去，分开她裸露的小穴，又喷出了一团烟雾，挑逗你说：[roxy.speech(来嘛，我看得出恁特尝尝我叻骚逼！恁只需要把恁叻舌头埋进来，让我高潮。这是你赚到的最简单的了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_REPEAT"><![CDATA[
 	<p>
-		As you step foot inside Roxy's store once again, you see the one-eyed rat-girl leaning on the counter over on the far side of the room, puffing away on a cigarette. Just a moment later, she sees you entering her shop, and calls out, [roxy.speech(Hey [pc.name]! Yer back to buy some o' this shit I got on offer?)]
+		当你再次踏进罗克西的商店时，你看到独眼鼠女正倚靠在远处的柜台上抽着烟。过了一会儿，她看到你走进她的店，便叫了起来，[roxy.speech(嘿[pc.name]！恁回来买我嘞东西吗？)]
 	</p>
 	<p>
-		[pc.speech(Hi, Roxy,)] you reply, [pc.speech(I just wanted to see what you've got in stock.)]
+		[pc.speech(嗨，罗克西。)]你回应道，[pc.speech(我想看你又进了什么货。)]
 	</p>
 	<p>
-		[roxy.speech(Well, seein' as it's you, I don't mind yer takin' a look around fer a bit. Oh, and remember, if yer want a free item, my special offer's still on!)] Roxy says, before bursting out in her abrasive laughter. [roxy.speech(All yer gotta do is come lie behind my counter fer an hour, so I can plant my sweet fuckin' cunt on yer face!)]
+		[roxy.speech(既然是你，我不介意恁四处看看。哦，记住，如果恁想要免费嘞货，我嘞特价商品还在卖呢！)]罗克西说，然后就爆发出她那刺耳的笑声。[roxy.speech(恁要做的就是躺搁我嘞柜台后面一个小时，这样我就能把我嘞揍屄贴在恁脸上了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_REPEAT_ADDICT"><![CDATA[
 	<p>
-		As you step foot inside Roxy's store once again, you see the one-eyed rat-girl leaning on the counter over on the far side of the room, puffing away on a cigarette. Just a moment later, she sees you entering her shop, and calls out, [roxy.speech(Hey, [pc.name]! Yer got a craving fer my fuckin' cunt, haven't yer?)]
+		当你再次踏进罗克西的商店时，你看到独眼鼠女正倚靠在远处的柜台上抽着烟。过了一会儿，她看到你走进她的店，便叫了起来，[roxy.speech(嘿，[pc.name]！恁又想吃我嘞屄了？)]
 	</p>
 	<p>
-		[pc.speech(Hi, Roxy,)] you reply, trying not to reveal the fact that you're desperate for another taste of her pussy.
+		[pc.speech(嗨，罗克西。)]你回复道，努力不暴露自己还想品尝罗克西小穴的滋味。
 	</p>
 	<p>
-		[roxy.speech(Heh! Don't yer try an' hide it!)] Roxy exclaims, before bursting out in her abrasive laughter. [roxy.speech(I can tell yer want nothin' more than for me to plant my sweet fuckin' cunt on yer face! Yer just desperate fer another taste o' my wet twat, ain't yer?)]
+		[roxy.speech(嘿！别想藏起来！)]罗克西惊叹道，然后爆发出她那刺耳的笑声，[roxy.speech(我可以告诉恁，恁最想要嘞，就是我把我嘞甜屄贴在你脸上，恁急着想再尝尝我嘞湿屄，是不是？)]
 	</p>
 	<p>
-		[pc.speech(Yes...)] you admit, your craving for Roxy's girlcum getting the better of you.
+		[pc.speech(对……)]你承认自己对罗克西爱液的渴望占了上风。
 	</p>
 	<p>
-		[roxy.speech(Heh! Just as I fuckin' planned!)] Roxy suddenly laughs, making you flinch. [roxy.speech(It's gonna cost yer a thousand flames to get another taste o' my sweet fuckin' nectar. I gotta make the cost o' that item I gave yer back!)]
+		[roxy.speech(嘿！正如我恁妈计划嘞那样！)]罗克西突然大笑起来，让你吓了一跳，[roxy.speech(要想再尝尝我嘞甜头，你得花上一千火币，我得把我还给恁嘞那东西赚回来！)]
 	</p>
 	<p>
-		You can't help but let out a desperate whine as you imagine yourself getting another taste of Roxy's girlcum. Perhaps it would be worth handing over a thousand flames to get your fix...
+		一幻想自己再次品尝到罗克西的爱液，你不禁发出迷乱的呜咽。也许，为了得到你想要的东西，付出上千元的火币也是值得的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TRADER_REPEAT_BEATEN_ADDICTION"><![CDATA[
 	<p>
-		As you step foot inside Roxy's store once again, you see the one-eyed rat-girl leaning on the counter over on the far side of the room, puffing away on a cigarette. She sees you enter her shop, and calls out, [roxy.speech(Hey, [pc.name]! Yer got a craving fer gettin' addicted to my fuckin' cunt again, eh?)]
+	当你再次踏进罗克西的商店时，你看到独眼鼠女正倚在房间远处的柜台上抽着烟。她看到你进了她的店，便叫了起来，[roxy.speech(嘿，[pc.name]！恁又想沉迷于我嘞骚屄了？)]
 	</p>
 	<p>
-		[pc.speech(Hi, Roxy,)] you reply, ignoring her question.
+		[pc.speech(嗨，罗克西。)]你无视问题回复道。
 	</p>
 	<p>
-		[roxy.speech(Heh! Don't try to hide it!)] Roxy exclaims, before bursting out in her abrasive laughter. [roxy.speech(I can tell yer want nothin' more than for me to plant my sweet fuckin' cunt on yer face! Yer just desperate fer another taste o' my wet twat, ain't yer?)]
+		[roxy.speech(嘿！别藏了！)]罗克西一边大叫，一边又发出一阵粗鲁的笑声，[roxy.speech(我知道恁只想要我叻甜屄贴在恁脸上！还想要舔我叻湿屄，对不？)]
 	</p>
 	<p>
-		[pc.speech(No, I'm not,)] you reply, having rid yourself of your addiction to Roxy's girlcum.
+		[pc.speech(不，我才没有。)]你已然戒除对罗克西爱液的瘾。
 	</p>
 	<p>
-		[roxy.speech(Heh! Yer can't hold out for long!)] Roxy suddenly laughs, making you flinch. [roxy.speech(I'll give yer another free item if yer agree to come get another taste o' my sweet fuckin' nectar. Come on, we both know yer love it!)]
+		[roxy.speech(嘿！恁坚持不了多久啦！)]罗克西突然大笑起来，让你吓了一跳。[roxy.speech(如果恁同意再来尝尝我嘞甜汁，我就再送恁一样东西。来吧，我们都知道恁喜欢它！)]
 	</p>
 	<p>
-		You can't help but let out a sigh as you remember the last time you serviced Roxy's pussy. Despite ridding yourself of the addiction that followed, you still find a small part of yourself wanting to do it all again...
+		你回忆起上次为罗克西的小穴服务的情景，不禁叹了口气。尽管你已经摆脱了上瘾的感觉，但你仍有点想要再做一次……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROXY_SEX_START_ADDICT"><![CDATA[
 	<p>
-		Desperate for another taste of Roxy's girlcum, you place a thousand flames on the counter in front of her, before pleading, [pc.speech(Please! I need another taste! Please, let me lick your pussy!)]
+		你渴望再次品尝罗克西的爱液，于是在她面前的柜台上放了数以千计的火币，恳求道：[pc.speech(求求你！我还想再尝一次！拜托，让我舔你的小穴吧！)]
 	</p>
 	<p>
-		[roxy.speech(Heh! I can't believe this fuckin' plan of mine actually worked!)] Roxy exclaims, letting out another of her abrasive laughs as she scoops up your money. Stepping to one side, she then lifts up the hinged part of the counter, before grinning at you. [roxy.speech(Come on then! Get back here and fuckin' lie down already!)]
+		[roxy.speech(嘿！真不敢相信我嘞熊货计划真嘞成功了！)]罗克西一边拾起你的钱，一边又发出了刺耳的笑声。她走到一边，抬起柜台的铰链部分，然后冲你咧嘴一笑，[roxy.speech(来吧！搁我回来躺下！)]
 	</p>
 	<p>
-		You eagerly do as the rat-girl says, and hurry forwards behind the counter. As you pass by her, she lets out a big puff of cigarette smoke, before reaching down and giving your [pc.ass+] a sharp slap. Letting out another grating laugh, she lets the counter-top slam shut behind you and says, [roxy.speech(Yer just fuckin' desperate fer another taste o' my cunt, ain't yer? Now hurry up and get down already. I'm eager ta get this started!)]
+		你迫不及待地按照鼠女说的做，匆匆跑到柜台后面。当你从她身边经过时，她吐出一大口烟雾，然后伸手给了你[pc.ass+]一个响亮的巴掌。她又发出一阵刺耳的笑声，让你身后的台面砰地一声关上，然后说：[roxy.speech(恁妈你就是想再尝尝我嘞骚屄，中不？现在快点下来，我已经迫不及待了！)]
 	</p>
 	<p>
-		Once again doing as Roxy says, you quickly lie down on your back behind the counter. Looking up, you see Roxy hike up her skirt, before stepping over your face and sinking down onto her knees. With her [roxy.pussy+] now hovering just above your face, Roxy looks down into your eyes and sneers, [roxy.speech(You'd better make this fuckin' good, y'hear? Get that fuckin' tongue of yours nice 'n deep! Yer did a good job at servicing my cunt the last time, so you'd better put the same fuckin' amount of effort into it now!)] 
+		你再次按照罗克西说的做，迅速在柜台后面躺了下来。抬起头，你看到罗克西撩起裙子，然后跨过你的脸，跪了下来。现在，她[roxy.pussy+]就在你的脸上盘旋，罗克西低头看着你的眼睛，冷笑着，[roxy.speech(你特妈你最好给我好好的，知道么？把你嘞舌头伸进去，上次你把我嘞屄伺候得太舒服了，所以现在你最好特妈嘞也花同样嘞力气！)] 
 	</p>
 	<p>
-		Before you can say anything in response, the one-eyed rat-girl lets her legs give out from under her, planting her dripping-wet cunt down firmly onto your face with an audible squelch. Thanks to the fact that her pussy is already soaking wet, her girlcum immediately starts drooling out all over your mouth, and, desperately eager to get started with eating her out, you part your [pc.lips] and greedily drive your [pc.tongue+] up between her [roxy.labia+]. Roxy's juices soon start flowing into your open mouth, and as you set about kissing and licking the rat-girl's [roxy.pussy], you find yourself frantically swallowing them down.
+		你还没来得及说什么，独眼鼠女的双腿就从她的脚下松开了，她湿漉漉的淫穴紧紧地贴在你的脸上，发出一声闷响。她的爱液立刻开始流到你的嘴里，你急切地想开始口她，分开[pc.lips]并贪婪地把你[pc.tongue+]伸到她[roxy.labia+]之间。罗克西的汁液很快就流进了你张开的嘴里，你开始亲吻舔舐鼠女的[roxy.pussy]时，疯狂地将它们吞咽下去。
 	</p>
 	<p>
-		[roxy.speechNoEffects(Heh! Yer real and truly addicted to me sweet cunt, ain't yer?)] Roxy asks, [roxy.speech(That bitch up in Dominion sure knew 'er stuff; yer gonna be cunt-lickin' slave fer as long as I want yer!)]
+		[roxy.speechNoEffects(嘿！恁真嘞对我嘞甜屄上瘾了，是啊？)]罗克西问道，[roxy.speech(在御城区嘞那个婊子可真有一套，只要我还想要恁，恁就会成为我嘞奴隶！)]
 	</p>
 	<p>
-		You can't help but let out a desperate, muffled moan into Roxy's [roxy.pussy] as she taunts you. The addictive nature of her girlcum is already having a profound effect on your mind, and you can't help but continue hungrily licking and kissing her pussy as you seek to satisfy yourself.
+		在罗克西的嘲弄下，你情不自禁地对着她的[roxy.pussy]发出迷乱而含混的呻吟。她令人上瘾的爱液已经对你的思想产生了深远的影响，你忍不住继续饥渴地舔吻她的小穴，只为得到满足。
 	</p>
 	<p>
-		[roxy.speech(Yer gonna do a real good job o' gettin' me ta cum at this rate! Keep on gettin' that tongue o' yers in deep, yeah, like that!)] Roxy commands, and, absolutely desperate to swallow down more of her addictive girlcum, you set about doing just that...
+		[roxy.speech(照这样下去，恁会让我高潮了，继续把恁呢舌头伸进去，对，就着中！)]在罗克西的命令下，你不顾一切地想吞下更多她令人上瘾的爱液……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROXY_SEX_START"><![CDATA[
 	<p>
-		[pc.speech(Ok, I'll accept your deal in exchange for a free item,)] you say.
+		[pc.speech(好，我接受你的交易。)]你说道。
 	</p>
 	<p>
-		[roxy.speech(Heh! I fuckin' knew yer wouldn't be able to resist my cunt!)] Roxy exclaims, letting out another of her abrasive laughs as she steps to one side and lifts up the hinged part of the counter. [roxy.speech(Come on then! Get back here and fuckin' lie down already!)]
+		[roxy.speech(呵！我他妈就知道恁抵挡不住我的阴户！)]罗克西一边感叹，一边又发出一阵粗鲁的笑声。她走到一边，抬起柜台的铰链部分。[roxy.speech(快点，过来躺下吧！)]
 	</p>
 	<p>
-		You do as the rat-girl says, and step forwards behind the counter. As you pass by her, she lets out a big puff of cigarette smoke, before reaching down and giving your [pc.ass+] a firm squeeze. Letting out another grating laugh, she lets the counter-top slam shut behind you and says, [roxy.speech(Oh yeah, that's a sweet fuckin' ass yer got there! Now get down.)]
+		你按照鼠女说的做，走到柜台后面。当你从她身边经过时，她吐出一大口烟雾，然后伸手在你[pc.ass+]上狠狠地捏了一把。她又发出一阵刺耳的笑声，让你身后的台面砰地一声关上，然后说：[roxy.speech(中啊，恁呢屁股真恁妈漂亮！现在趴下。)]
 	</p>
 	<p>
-		Once again doing as Roxy says, you lie down on your back behind the counter. Looking up, you see Roxy hike up her skirt, before stepping over your face and sinking down onto her knees. With her [roxy.pussy+] now hovering just above your face, Roxy looks down into your eyes and sneers, [roxy.speech(You'd better make this fuckin' good, y'hear? Get that fuckin' tongue of yours nice 'n deep! I ain't had my cunt serviced fer a fuckin' while now, so you'd better put some fuckin' effort into it!)] 
+		你再次按照罗克西说的做，在柜台后面躺了下来。抬起头，你看到罗克西撩起裙子，然后跨过你的脸，跪了下来。现在，她[roxy.pussy+]就在你的脸上盘旋，罗克西低头看着你的眼睛，冷笑着，[roxy.speech(恁妈你最好给我好好的，中不中？把恁嘞舌头伸进去，上次恁把我嘞屄伺候得很中，所以现在恁最好恁妈嘞也花同样嘞力气！)] 
 	</p>
 	<p>
-		Before you can say anything in response, the one-eyed rat-girl lets her legs give out from under her, planting her dripping-wet cunt down firmly onto your face with an audible squelch. Thanks to the fact that her pussy is already soaking wet, her girlcum immediately starts drooling out all over your mouth, and, eager to get started with eating her out, you part your [pc.lips] and drive your [pc.tongue+] up between her [roxy.labia+]. Roxy's juices soon start flowing into your open mouth, and as you set about kissing and licking the rat-girl's [roxy.pussy], you find yourself swallowing them down.
+		你还没来得及说什么，独眼鼠女的双腿就松开了，她湿漉漉的淫穴紧紧地贴在你的脸上，发出一声闷响。她的爱液立刻开始流到你的嘴里，你迫不及待地开始口她，分开[pc.lips]并将你[pc.tongue+]伸到她[roxy.labia+]之间。罗克西的汁液很快就流进了你张开的嘴里，把它们吞了下去。
 	</p>
 	<p>
-		As you gulp down her girlcum, you suddenly start to feel a strange, overwhelming desire to taste more and more of Roxy's [roxy.pussy]. Desperately craning your neck up in order to force your [pc.lips] against the rat-girl's dripping [roxy.pussy], you start frantically kissing, sucking, and licking every part of her delicious [roxy.pussy] that's in range of your mouth. As you do this, you suddenly become aware of the fact that the rat-girl is laughing up above you, [roxy.speechNoEffects(Heh-heh-heh! That's it! Fuckin' drink it down! ~Mmm!~ Yes!)]
+		当你大口吞咽她的爱液时，你突然开始感觉到一种奇怪的、压倒性的欲望，想要品尝更多更多罗克西[roxy.pussy]的味道。你拼命仰起脖子，将自己的[pc.lips]紧紧贴在鼠女滴水的[roxy.pussy]上，开始疯狂地亲吻、吸吮和舔舐她美味[roxy.pussy]的每一个部位。鼠女正在你的头顶上大笑，[roxy.speechNoEffects(嘿-嘿-嘿！就是着！恁娘嘞喝下去！~嗯！~中！)]
 	</p>
 	<p>
-		Eager to do as she says, you gulp down Roxy's juices, before thrusting your tongue up into her [roxy.pussy+]. As her slimy girlcum slides down your throat, you suddenly find yourself with a desperate craving for even more, and, reaching up to grab her thighs, you pull the rat-girl's cunt down onto your face. As you start to hungrily lick up as much of her girlcum as you possibly can, she continues to laugh, [roxy.speechNoEffects(Heh! That's right, lick it all up! Tastes good, don't it?)]
+		你迫不及待地按她说的做，大口大口地喝着罗克西的淫液，然后将舌头伸进她[roxy.pussy+]里。她粘稠的爱液顺着你的喉咙滑下时，你突然发现自己急切地渴望得到更多，于是你伸手抓住她的大腿，把鼠女的淫穴拉到你的脸上。当你开始如饥似渴地尽情舔舐她的爱液时，她继续笑着，[roxy.speechNoEffects(嘿！中嘞，舔干净！味道中吧？)]
 	</p>
 	<p>
-		[pc.speechNoEffects(~Mmm!~ ~Mmmm!~)] you reply, your words muffled into the rat-girl's [roxy.pussy+].
+		[pc.speechNoEffects(~唔！~~唔唔！~)]你回应的声音因鼠女[roxy.pussy+]模糊不清。
 	</p>
 	<p>
-		[roxy.speechNoEffects(Heh! Probably a bit late now, but I should let yer know somethin'. I went and bought one o' those special potions from some bitch up in Dominion. 'Makes yer girlcum real fuckin' addictive,' she said, 'Just get some cunt to eat yer out, and they'll be beggin' to be yer permanent pussy licker,' she said. From the way yer actin', it's lookin' like she was tellin' the truth!)]
+		[roxy.speechNoEffects(嘿！也许现在有点晚了，但我应该让恁知道一些事。我从御城区嘞yue信婊子那嘞，买了着特殊嘞药，她说能让额嘞爱液上瘾，只要找yue骚货来吃，她们就会求着要做永久舔屄者。从恁的表现来看，她说嘞是真的！)]
 	</p>
 	<p>
-		You can't help but let out a desperate, muffled moan into Roxy's [roxy.pussy] as she reveals this. The addictive nature of her girlcum is already having a profound effect on your mind, and even as she reveals the fact that you've been tricked into drinking her addictive juices, you can't help but continue hungrily licking and kissing her pussy.
+		当她说出这些时，你不禁对着罗克西的[roxy.pussy]发出一声绝望的低沉呻吟。她令人上瘾的爱液已经对你的心灵产生了深远的影响，即使她揭露了你被骗去喝她令人上瘾的汁液的事实，你还是会情不自禁地继续饥渴地舔吻她的淫穴。
 	</p>
 	<p>
-		[roxy.speechNoEffects(Fuckin' looks like you're well an' truly addicted to my cunt now, ain't yer?)] Roxy laughs, [roxy.speech(Yer gonna do a real good job o' gettin' me ta cum at this rate! Keep on gettin' that tongue o' yers in deep, yeah, like that!)]
+		[roxy.speechNoEffects(看来恁他妈对我的逼上瘾了，是吗？)]罗克西笑了，[roxy.speech(照这个速度，你会做得很好，继续把恁叻舌头伸进来，对，就这样，让我去！)]
 	</p>
 	<p>
-		Absolutely desperate to swallow down more of her addictive girlcum, you set about doing as the rat-girl commands...
+		意乱情迷地吞下更多让人上瘾的爱液，你对鼠女言听计从……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FIREBOMBS -->
 	
 	<htmlContent tag="FIREBOMBS"><![CDATA[
 	<p>
-		You think back to the arcane firebombs you got from the mysterious cave.
+		你回想起从神秘洞穴中得到的奥术燃烧弹。
 		#IF(flags.hasFlag(FLAG_axelExplainedVengar))
-			 Surely Roxy still has some connections from her time with Vengar's gang? You bring out a firebomb and set it down on the counter.
+			想必罗克西在文加的帮派里肯定还有些关系吧？你拿出一个燃烧弹，放在柜台上。
 		#ELSE
-			 Surely Roxy is the sort of rat who'd have some shady connections? You bring out a firebomb and set it down on the counter.
+			想必罗克西是那种有见不得人的关系的老鼠吧？你拿出一个燃烧弹，放在柜台上。
 		#ENDIF
 	</p>
 	<p>
-		[roxy.speech(What's that yer got there?)] Roxy asks, raising an eyebrow, [roxy.speech(The newest thing y'been jammin' up yer arse?)]
+		[roxy.speech(恁手里头是啥？)]罗克西挑起眉毛，[roxy.speech(恁要往腚里塞的新玩意？)]
 	</p>
 	<p>
-		Rolling your eyes as Roxy chuckles at her own crude joke, you explain what the firebomb is and what it does. [roxy.speech(Yer mean it breaks when y'use et? 'urts resale value. I'll take it off yer 'ands fer twenty an' not a fuckin' flame more.)]
+		罗克西被自己粗俗的玩笑逗笑了，你翻了翻白眼，解释了什么是燃烧弹以及它的作用。[roxy.speech(恁是说用了就坏了？影响了它的卖钱呗。我要了恁手里的东西，二十块就够了，再多一分钱我他妈也不会给。)]
 	</p>
 	<p>
-		[pc.speech(I'm not interested in just pawning it off to you,)] you reply, [pc.speech(I don't have a way to get more of these. I was wondering if you know anyone who does.)]
+		[pc.speech(我没兴趣把这个当给你。)]你回答说，[pc.speech(我没有办法得到更多这些东西。你知不知道谁有这个能力？)]
 	</p>
 	<p>
-		Roxy frowns slightly at your question. [roxy.speech(I might. I might not. Tha' fuck do I get out ta' this?)]
+		罗克西微微皱眉：[roxy.speech(俺可能晓得，也可能不晓得。这咋整，到时候俺咋脱身？)]
 	</p>
 	<p>
-		[pc.speech(Nobody up in Dominion is going to carry something like this. Think about it, exclusive goods mean more business.)]
+		[pc.speech(在御城区没人会把这种东西带在身上。想想吧，独家商品意味着更多的生意。)]
 	</p>
 	<p>
-		You tense up as Roxy grabs the firebomb and holds it perilously close to her lit cigarette while examining it. After a brief pause, she puts it under the counter. [roxy.speech(Yeah, alright, y'made yer fuckin' point. Gimme, say, two days an' I'll set somethin' up. Now, y'gonna buy anythin' or are yer gonna stand there gawpin'?)]
+		罗克西拿起燃烧弹，一边检查，一边把它险险地靠近她点燃的香烟，你顿时紧张起来。稍作停顿后，她把燃烧弹放到了柜台下面：[roxy.speech(行嘞，你他妈的说到点子上了。给我两天时间，我会安排好的。那现在你是要买东西，还是要傻站着发呆？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FIREBOMBS_COMPLETE -->
 	
 	<htmlContent tag="FIREBOMBS_COMPLETE"><![CDATA[
 	<p>
-		Roxy gestures at a wooden crate full of familiar rag-stuffed glass bottles on a nearby shelf when you ask her about the firebomb you gave her. [roxy.speech(Y'blind? They's right there behind yer. Jus' came in, perfect copies o' the one yer gave me. Don't ask where I got 'em; all ya needs ta know is dat I's gonna be havin' ten o' dem fer sale every day.)]
+		当你问起你给她的燃烧弹时，罗克西指了指旁边架子上的一个木箱，里面装满了熟悉的塞着碎布的玻璃瓶。[roxy.speech(尼瞎了？它们就在尼身后。甘进来的，是尼给我的那个的完美复制品。别问我从哪儿弄来的，尼只需要知道，我每天都要卖十份。)]
 	</p>
 	<p>
-		Pausing to take a deep drag on her cigarette, she rudely blows smoke all over you as she cackles, [roxy.speech(Now, y'gonna buy 'em or wot?)]
+		她抽了口烟，粗鲁地把烟雾吹向你，嘎嘎大笑道：[roxy.speech(那现在你要买东西还是咋地？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FIREBOMBS_FAILED -->
 	
 	<htmlContent tag="FIREBOMBS_FAILED"><![CDATA[
 	<p>
-		Roxy is likely the only person who's going to be able to help you to get your [pc.hands] on more of those arcane firebombs. Surely she still has some connections from her time with Vengar's gang? You ask the rat-girl if she's got any contacts who could make weapons of questionable legality. Leaning back in her chair and grinning at you, she replies, [roxy.speech(Maybe I 'as, maybe I don't. Wot ya tryin' ta get yer grubby little mits on?)]
+		罗克西很可能是唯一能帮你弄到更多奥术燃烧弹的人。她在文加的帮派里肯定还有些关系吧？你问这个鼠女，她是否有关系能制造出不太合法的武器。她靠在椅背上，冲你咧嘴一笑，回答道：[roxy.speech(也许有，也许没有。恁想搞到什么？)]
 	</p>
 	<p>
-		As you explain to Roxy the nature of the firebombs which you're no longer in possession of, you watch in dismay as the rat-girl's expression turns to one of confusion and annoyance. Despite giving her a clear description of the firebombs' properties, she shakes her head and snarls, [roxy.speech(Don't ya be wastin' me time with that shit. I ain't gonna bother me friends by askin' 'em ta fill a bottle with some kind o' burnin' stuff. An' besides, ain't nobody gonna buy weapons wot breaks when ya use 'em! Don't fuckin' ask me fer such stupid shit again.)]
+		当你向罗克西解释你已用光的燃烧弹的性质时，你沮丧地看到她的表情变成了困惑和恼怒。尽管你向她清楚地描述了燃烧弹的特性，她还是摇摇头，咆哮道：[roxy.speech(你别拿这种垃圾浪费我的时间。我可不想只是为了在瓶子里装一些燃烧的东西麻烦我的朋友。况且，没人会买一用就坏的武器！别他妈再找我问这种蠢东西了。)]
 	</p>
 	<p>
-		Taking a deep drag on her cigarette to help her calm down, the obnoxious rat-girl blows smoke all over you and sneers, [roxy.speech(Now, ya gonna buy sumthin', or fuck off?)]
+		为了让自己冷静下来，罗克西深深地吸了一口烟，把烟雾吹得你满身都是，接着冷笑道：[roxy.speech(那现在你是要买东西，还是滚蛋？)]
 	</p>
 	<p>
-		With your hopes of ever getting more firebombs dashed by Roxy's rude response, you wonder what to do now...
+		罗克西粗鲁的回应粉碎了你获得更多燃烧弹的希望，你思考起现在要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TRADER_REPLY_NO -->
 	
 	<htmlContent tag="TRADER_REPLY_NO"><![CDATA[
 	<p>
-		You really aren't interested in letting this obnoxious rat-girl sit on your face for an hour, and, taking a step away from the counter, you tell her as much, [pc.speech(I only came in to take a look at what you had for sale. I'm not interested in your deal.)]
+		你真的不想让这个讨人厌的鼠女在你脸上坐一个小时，你撤开柜台一步，说道：[pc.speech(我只是进来看看你有什么东西卖，对你那交易不感兴趣。)]
 	</p>
 	<p>
-		[roxy.speech(Alright, alright, no need to be such a fuckin' cunt about it,)] Roxy huffs, lowering her skirt and leaning down on the counter once more. Taking a deep drag of her cigarette, she blows the smoke out in your general direction, grinning mischievously at you as she says, [roxy.speech(Yer still ain't as bad as most o' the stupid twats that wander in 'ere, so if yer ever change yer mind, just let me know, ok? Remember, yer get a free fuckin' item outta it!)]
+		[roxy.speech(好了，好了，没必要这么叽叽歪歪嘞，)]罗克西哼了一声，放下裙子，再次靠在柜台上。她深深地吸了一口烟，把烟雾朝你的方向吹了出去，一边说一边调皮地朝你咧嘴一笑，[roxy.speech(恁还是没有大多数在这里游荡嘞蠢货那么坏，所以如果恁改主意了，就告诉我，中？记住，恁可以免费得到一件东西！)]
 	</p>
 	<p>
-		[pc.speech(Ok, I'll keep that in mind,)] you say, before moving off to look around the store.
+		[pc.speech(行，我会记在心里的。)]说完，你把店铺逛了一圈。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_ROXY_SEX -->
 	
 	<htmlContent tag="AFTER_ROXY_SEX"><![CDATA[
 	<p>
-		As Roxy starts to stand up, you desperately sit up to try and get one last lick of her pussy. Looking down to see you doing this, the rat-girl lets out another of her annoying laughs, before stepping to one side and denying you a final taste of her juices. [roxy.speech(Come on now! That's fuckin' enough! Get back to the other side o' the counter!)]
+		罗克西站起身，你坐起来追上去，急切地想最后舔一下她的蜜穴。她看见你这样，又发出一声她那种恼人的笑声，然后走到了另一边，显然是拒绝了你。[roxy.speech(舔够了，走吧！回柜台的另一边去！)]
 	</p>
 	<p>
-		You reluctantly do as Roxy says, and, lifting up the counter top, you step back around to the other side. Ashamed at having been tricked into getting addicted to Roxy's girlcum, you start to take your leave, but the rat-girl calls out to stop you, [roxy.speech(Ay! Not so fuckin' fast! Yer want yer free item, don't ya?)]
+		你不情不愿地做了，然后抬起台面退到另一边。被骗着喝下爱液，还对罗克西的爱液上了瘾，你羞愤难当，刚想离开，鼠女却叫住了你，[roxy.speech(喂！别他妈那么快！你想要免费的，不是么？)]
 	</p>
 	<p>
-		[pc.speech(Oh, yeah...)] you reply, turning back and stepping towards the counter.
+		[pc.speech(额，是吧……)]你回答，转身又回到柜台旁。
 	</p>
 	<p>
-		[roxy.speech(Don't yer worry! I'll be gettin' the value o' this back soon enough!)] Roxy laughs, [roxy.speech(Yer gonna come crawlin' back fer another taste o' my cunt before long, and it's gonna cost yer next time!)]
+		[roxy.speech(别那担心！我很快就能赚回来！)]罗克西大笑道，[roxy.speech(你不久就会回来，求着我给你爱液喝，那时候就要花钱咯！)]
 	</p>
 	<p>
-		With that, Roxy leans down to fetch a couple of dice from beneath the counter, before grinning at you. [roxy.speech(Right. I'm gonna roll these, and the item yer gonna get is based on the total value, yer get me? Two or three, yer get a vanilla water, then four or five, it's one o' those fruit boxes the bat-morphs fuckin' love. Then, if yer lucky enough to get over that, it's a mother's milk for six an' seven, a bottle o' rum for eight or nine, a fuckin' burger for ten or eleven, and, if yer really, <i>really</i> fuckin' lucky, yer get a bottle o' angel's tears for a twelve.)]
+		罗克西说着，弯腰从柜台下取出一对骰子，冲你笑笑，[roxy.speech(来了。我来骰点，你会根据结果获得对应的东西，懂了吗？二或三，一瓶香草水；四或五，那些蝙蝠化形喜欢的果盒。接着，你要是运气好，六或七，那就是一瓶母乳；八或九，给你瓶朗姆酒；十或十一，香喷喷的汉堡一个。还有，你要是真那么，<i>那么</i>他娘的幸运，骰出十二点，你就能得到一瓶天使之泪。)]
 	</p>
 	<p>
-		[pc.speech(Alright,)] you say, [pc.speech(let's see then.)]
+		[pc.speech(行吧)]你说，[pc.speech(我们等着瞧。)]
 	</p>
 	<p>
-		[roxy.speech(Fuckin' calm down! I'm gettin' to it!)] Roxy laughs, grabbing the dice and preparing to roll...
+		[roxy.speech(他妈的别那么疯！我要骰了！)]罗克西大笑道，抓起骰子准备掷点……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_ROXY_SEX_DICE_ROLL"><![CDATA[
 	<p>
-		Roxy rolls the dice onto the counter, and you both watch as they quickly come clattering to a halt. You can't help but get the feeling that there's something a little unnatural in the way that they tumble across the counter-top, but, not being certain about it, you decide not to say anything.
+		罗克西把骰子掷到台面上，你俩看着骰子伴着响亮的碰撞声很快停了下来。你不禁觉得，台面上的骰子翻滚方式有些不自然，但由于不确定，你最终什么也没说。
 	</p>
 	<p>
-		The first dice stops on a <b>[#SPECIAL_PARSE_0]</b>, and the second dice stops on a <b>[#SPECIAL_PARSE_1]</b>, giving a total value of <b>[#SPECIAL_PARSE_2]</b>.
+		第一个骰子停在了<b>[#SPECIAL_PARSE_0]点</b>，第二个则停在<b>[#SPECIAL_PARSE_1]点</b>，最终结果是<b>[#SPECIAL_PARSE_2]点</b>。
 	</p>
 	<p>
-		[roxy.speech(Well, would yer fuckin' look at that!)] Roxy exclaims, looking down at the result of her roll. [roxy.speech(That fuckin' gets yer [#SPECIAL_PARSE_3]!)]
+		[roxy.speech(哦吼，干，恁也看看！)]罗克西看着她掷出的点数，宣扬道，[roxy.speech(恁摇了个[#SPECIAL_PARSE_3]点！)]
 	</p>
 	<p>
-		As the obnoxious rat-girl throws the promised item to you, another of her abrasive, cackling laughs bursts out from her mouth, [roxy.speech(Heh-heh-heh! I'll be makin' the value o' that back soon enough! Yer gonna get some real fuckin' nice cravings fer my cunt before long, and when yer do, yer gonna come crawlin' back here beggin' fer another taste o' my fuckin' sweet nectar. I think a thousand flames is a fair price, so make sure yer bring yer cash with yer when the cravings kick in! Heh!)]
+		让人生厌的鼠女把说好的东西扔给你，粗野地狂笑起来，[roxy.speech(哼哼~哈！我很快就能赚回这么多！要不了多久，你就会对我的小穴上瘾，那时候，就轮到你爬回来，求着我给你舔蜜汁了。一千火币，公道价，记得带现金哦！哈哈！)]
 	</p>
 	<p>
-		Taking the [#SPECIAL_PARSE_4] that Roxy just gave to you, you turn around and prepare to take your leave...
+		收了[#SPECIAL_PARSE_4]，罗克西给了你要的，你转身准备离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_ROXY_SEX_ADDICT -->
 	
 	<htmlContent tag="AFTER_ROXY_SEX_ADDICT"><![CDATA[
 	<p>
-		As Roxy starts to stand up, you desperately sit up to try and get one last lick of her pussy. Looking down to see you doing this, the rat-girl lets out another of her annoying laughs, before stepping to one side and denying you a final taste of her juices. [roxy.speech(Come on now! That's fuckin' enough! Get back to the other side o' the counter!)]
+		罗克西站起身，你坐起来追上去，急切地想最后舔一下她的蜜穴。她看见你这样，又发出一声她那种恼人的笑声，然后走到了另一边，显然是拒绝了你。[roxy.speech(舔够了，走吧！回柜台的另一边去！)]
 	</p>
 	<p>
-		You reluctantly do as Roxy says, and, lifting up the counter top, you step back around to the other side. Having got your fix of Roxy's addictive girlcum, you turn to take your leave, and as you head off, the rat-girl calls out to you, [roxy.speech(Make sure to bring more o' yer cash when yer get more cravings fer my sweet fuckin' cunt!)]
+		你不情愿地按照罗克西说的去做，然后抬起柜台，绕到另一边。你尝到了罗克西令人上瘾的爱液，准备离开，就在你转身的时候，鼠女叫住了你，[roxy.speech(你要是还想享用我的蜜穴的话，多带点钱来！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGAR -->
 	
 	<htmlContent tag="VENGAR"><![CDATA[
 	<p>
-		Wanting to spend some time interacting with Vengar, you ask Roxy if she'll let you talk to [vengar.herHim]. Letting out an abrasive cackle, the rat-girl takes a drag on her cigarette and sneers, [roxy.speech(You's wantin' ta fuck [vengar.her] ass? Heh! If that's wot ya afta, you's betta be prepared ta pay!)]
+		你想花点时间和文加交流，于是问罗克西是否愿意让你和[vengar.herHim]交谈。鼠女发出一阵刺耳的咯咯声，吸了一口烟，冷笑道：[roxy.speech(你想干[vengar.her]的屁股？呵！如果你想干，那就准备好付钱吧！)]
 	</p>
 	<p>
-		Looking down at the floor behind her desk, Roxy kicks out with one of her legs, causing Vengar to reveal [vengar.her] presence by letting out a loud yelp. Moving aside so as to give her slave the room in which to stand up, Roxy snaps, [roxy.speech(Get on yer fuckin' feet! [pc.Name] 'ere is thinkin' about fuckin' yer ass!)]
+		罗克西低头看了看办公桌后面的地板，一脚踢出，文加发出一声大叫，暴露了[vengar.her]的存在。罗克西冷喝道：[roxy.speech(他妈的给我站起来！[pc.name]要来干你的屁股！)]
 	</p>
 	#IF(vengar.isFeminine())
 		<p>
-			[vengar.speech(Yes, Roxy...)] Vengar meekly replies, and after standing up and throwing a quick glance your way, she casts her eyes to the floor and blushes as she reveals her naked body to you.
+			[vengar.speech(是，罗克西……)]文加温顺地回答，站起身来向你抛了个媚眼后，她把目光投向地板，脸红红地向你露出赤裸的身体。
 		</p>
 		<p>
-			Cackling in delight at her slave's submission, the rat-girl reaches down and gropes Vengar's ass, before turning towards you and asking, [roxy.speech(So, ya gonna pay me fifteen-'undred flames ta fuck her, or perhaps ya looking ta get fucked, huh? If dat's the case, I'll unlock 'er cage an' let 'er hump ya fer a thousand flames!)]
+			鼠女对奴隶的屈服高兴得咯咯直笑，她伸手摸了摸文加的屁股，然后转向你问道：[roxy.speech(那么，你是要付我1500火币来干她，还是你想被干，嗯？如果是这样，花1000火币，我会打开她的笼子，让她和你做爱！)]
 		</p>
 		<p>
-			Looking over at Vengar, you wonder if you should pay to have sex with her, or instead decide to do something else...
+			你望着文加，思索要不要付钱和她做爱，还是做点别的……
 		</p>
 	#ELSE
 		<p>
-			[vengar.speech(Ya dumb bitch! You's gonna pay fer this some day!)] Vengar shouts as he stands up and growls at his one-time girlfriend.
+			[vengar.speech(你个垃圾浪荡货！迟早为今天的事付出代价！)]文加站起来对着他昔日的女友怒吼。
 		</p>
 		<p>
-			Not brooking any insubordination, the rat-girl delivers a sharp slap across Vengar's face, before turning towards you and asking, [roxy.speech(So, ya gonna pay me fifteen-'undred flames ta fuck him, or perhaps ya looking ta get fucked, huh? If dat's the case, I's only gonna ask ya fer a thousand flames!)]
-		</p>
+那个老鼠女毫不犹豫地猛甩文加一巴掌，然后转向你说道：[roxy.speech(中啊，你想跟他那啥的话，得先给我一千五，要不然是你想当那个被上的娃？嗯哼，那样的话，俺就少要点，一千块钱就中！)]
+</p>
 		<p>
-			Looking over at Vengar, you wonder if you should pay to have sex with him, or instead decide to do something else...
+			你望着文加，思索要不要付钱和他做爱，还是做点别的……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGAR_SEX_DOM"><![CDATA[
 	#IF(vengar.isFeminine())
 		<p>
-			Handing over the one thousand, five-hundred flames which Roxy is asking for, you tell her that you want to dominantly fuck Vengar. Letting out yet another of her intensely-annoying cackles, the rat-girl takes a deep drag on her cigarette and declares, [roxy.speech(You's can fuck 'er all ya want! 'Er toys ain't locked, so you's can take off 'er cage an' buttplug if ya like! 'Ave fun!)]
+			你把罗克西要的一千五百火币递过去，告诉她你想支配性地干文加。鼠女又一次发出令人讨厌的咯咯笑声，她深深地吸了一口烟，宣布：[roxy.speech(恁想怎么干就怎么干！她嘞玩具没有上锁，如果喜欢，可以把她嘞笼子和肛塞拿下来！玩得欢！)]
 		</p>
 		<p>
-			Still laughing to herself, the rat-girl pushes Vengar over to the far end of the counter, before returning to her usual spot and sitting down to watch the two of you go at it...
+			鼠女仍自顾自地笑着，她把文加推到柜台的最远处，然后回到自己的老位置坐下来，看着你们两个打得火热……
 		</p>
 	#ELSE
 		<p>
-			Handing over the one thousand, five-hundred flames which Roxy is asking for, you tell her that you want to dominantly fuck Vengar. Letting out yet another of her intensely-annoying cackles, the rat-girl takes a deep drag on her cigarette and declares, [roxy.speech(You's can fuck 'im all ya want! Don't pay no attention if he starts complainin' about it; 'e's just a slave an' ain't nobody gonna give a shit if ya abuse 'im! Heh! 'Ave fun!)]
+			你把罗克西要的一千五百块火币递给她，告诉她你想支配性地干文加。鼠女又一次发出令人讨厌的咯咯笑声，深深吸了一口烟，然后宣布：[roxy.speech(恁想怎么干就怎么干！如果他开始抱怨，别理他；他只是个奴隶，如果你虐待他，没人会在乎的！嘿！玩的欢！)]
 		</p>
 		<p>
-			Still laughing to herself, the rat-girl pushes Vengar over to the far end of the counter, before returning to her usual spot and sitting down to watch the two of you go at it. Moving over to the rat-boy, you ignore the angry snarl on his face and prepare to give him a good fucking...
+			鼠女还在自顾自地笑着，她把文加推到柜台的另一端，然后回到她的老位置，坐下来看着你们两个打得火热。你走到鼠男身边，无视他脸上愤怒的咆哮，准备好好教训他一顿……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGAR_SEX_SUB"><![CDATA[
 	#IF(vengar.isFeminine())
 		<p>
-			Handing over the one thousand flames which Roxy is asking for, you tell her that you want Vengar to dominantly fuck you. Letting out yet another of her intensely-annoying cackles, the rat-girl takes a deep drag on her cigarette and declares, [roxy.speech(You's can get fucked by 'er all ya want! Lemme take 'er cage off so's she can stick 'er tiny little cok in ya! Heh! 'Ave fun!)]
+			你把罗克西要的一千块火币递给她，告诉她你想让文加支配你。鼠女再次发出令人讨厌的咯咯笑声，深深地吸了一口烟，然后宣布：[roxy.speech(恁想被她干就干吧！让我把她嘞笼子拿掉，这样她就能把她嘞小雀雀插进恁嘞身体了！嘿！玩得欢！)]
 		</p>
 		<p>
-			Still laughing to herself, the rat-girl takes off Vengar's chastity cage, before pushing her over to the far end of the counter. Returning to her usual spot, she sits down to watch her slave dominantly fuck you...
+			鼠女仍自顾自地笑着，她摘下文加的贞操笼，然后把她推到柜台的最远处。她回到自己的老地方，坐下来看着她的奴隶霸道地操你……
 		</p>
 	#ELSE
 		<p>
-			Handing over the one thousand flames which Roxy is asking for, you tell her that you want Vengar to dominantly fuck you. Letting out yet another of her intensely-annoying cackles, the rat-girl takes a deep drag on her cigarette and declares, [roxy.speech(You's can get fucked by him all ya want! He's gonna love the chance ta stick 'is dick in someone! Heh! 'Ave fun!)]
+			你把罗克西要的一千块火币递给她，告诉她你想让文加支配你。鼠女再次发出令人讨厌的咯咯笑声，深深地吸了一口烟，然后宣布：[roxy.speech(你想被他干就干吧！他会很高兴有机会把老二插进别人嘞身体！嘿！玩得欢！)]
 		</p>
 		<p>
-			Still laughing to herself, the rat-girl pushes Vengar over to the far end of the counter, before returning to her usual spot and sitting down to watch the two of you go at it. Moving over to the rat-boy, you ignore the angry snarl on his face and prepare to receive a good fucking from him...
+			鼠女还在自顾自地笑着，她把文加推到柜台的另一头，然后回到她的老位置，坐下来看着你们俩做爱。你走到鼠男身边，无视他脸上愤怒的咆哮，准备接受他的一顿猛操……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_VENGAR_SEX -->
 	
 	<htmlContent tag="AFTER_VENGAR_SEX_AS_DOM"><![CDATA[
 	<p>
-		Having had your fun, you [pc.step] away from Vengar and tell Roxy that you've finished with [vengar.herHim]. Snapping her fingers and pointing to the floor beside her, she shouts at her slave, [roxy.speech(Get back down 'ere so I can get me cunt on yer face!)]
+		在玩够了之后，你从文加身上起开并告诉罗克西你已经爽完了。她打了个响指，指着旁边的地板大喊道：[roxy.speech(快挨这儿来！你这鳖孙！好好尝尝我叻骚逼！)]。
 	</p>
 	<p>
-		Doing as [vengar.sheIs] told, the [vengar.race] steps over to [vengar.her] owner and lies down beside her. Sitting down and planting her drooling cunt on Vengar's face, Roxy lets out a deeply-satisfied sigh and states, [roxy.speech(If ya ever want ta fuck [vengar.herHim] again, just pay up an' I'll give ya anotha go with [vengar.herHim]!)]
+		按照[vengar.sheIs]的命令，[vengar.race]走到[vengar.her]的主人身边并躺了下去。在坐上去之后，罗克西将她湿漉漉的私处贴到文加的脸上，随后满意地叹气道：[roxy.speech(哪天你想再搞[vengar.herHim]，只要给钱就行，我让你再爽一回！)] 
 	</p>
 	<p>
-		After quickly getting your things back in order, you wonder what to do next...
+		在快速整理好自己之后，你开始思考接下来做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_VENGAR_SEX_AS_SUB"><![CDATA[
 	<p>
-		Having had your fun, you [pc.step] away from Vengar and tell Roxy that you've had enough of being fucked by [vengar.herHim]. Snapping her fingers and pointing to the floor beside her, she shouts at her slave, [roxy.speech(Get back down 'ere so I can get me cunt on yer face!)]
+		在玩够了之后，你从文加身上起来并告诉罗克西你受够了被文加操。罗克西打了个响指，指着身边的地板朝她的奴隶大喊道： [roxy.speech(躺在这！好好尝尝我的小穴！)]
 	</p>
 	<p>
-		Doing as [vengar.sheIs] told, the [vengar.race] steps over to [vengar.her] owner and lies down beside her. Sitting down and planting her drooling cunt on Vengar's face, Roxy lets out a deeply-satisfied sigh and states, [roxy.speech(If ya ever want ta get fucked by [vengar.herHim] again, just pay up an' I'll give ya anotha go with [vengar.herHim]!)]
+		文加按照吩咐，走到[vengar.her]的主人身边躺下。罗克西坐下来，把流着淫水的骚穴贴在文加的脸上，满足地深叹了一口气，接着说道：[roxy.speech(哪天你想再被[vengar.herHim]干，只要给钱就行，我让你再爽一回！)]
 	</p>
 	<p>
-		After quickly getting your things back in order, you wonder what to do next...
+		在快速整理好自己之后，你开始思考接下来做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- VENGAR_SISSIFY -->
 	
 	<htmlContent tag="VENGAR_SISSIFY"><![CDATA[
 	<p>
-		Thinking that Vengar could do with some changes to make him more receptive to being a submissive slave, you suggest to Roxy that she have him turned into a sissy slut. Chuckling in glee at your suggestion, the rat-girl points out a flaw in your plan, [roxy.speech(That's all well an' good, but I ain't got no transformative potions! I'd love fer me slave ta be a subby sissy slut, but I ain't gonna pay fer that ta be done ta him!)]
+		你认为文加可以做一些改变，让他更容易接受成为一个顺从的奴隶，于是你建议罗克西把他变成一个女性化的荡妇。鼠女对你的建议兴高采烈，却指出了你计划中的一个漏洞，[roxy.speech(这很好，但我可没有转化药水。我很想让我嘞奴隶变成一个男娘荡妇，但我不会花钱让他变成那样的！)]
 	</p>
 	<p>
-		Explaining to Roxy that if she was willing to donate an item of food, you could enchant both it and your [#ITEM_FETISH_UNREFINED.getName(false)] in order to make a couple of potions to turn Vengar into a submissive sissy. Hearing what it is you're saying, the rat-boy stands up from behind the counter and shouts, [vengar.speechNoEffects(Fuck you! I ain't bein' turned inta no sissy!)]
+		向罗克西解释说，如果她愿意捐出一件食物，你就可以给食物和你的[#ITEM_FETISH_UNREFINED.getName(false)]附魔，从而制作几种药水，把文加变成一个顺从的男娘。听到你在说什么，鼠男从柜台后面站起来喊道，[vengar.speechNoEffects(靠嫩娘！我才不变什么男娘！)]
 	</p>
 	<p>
-		Sharply slapping the rat-boy across the face, Roxy snaps, [roxy.speech(If ya ain't wantin' this, I could always arrange fer ya ta be locked up in public use stocks fer the rest o' yer miserable life! Wot's it gonna be, slave?! Ya gonna be a good girl, or ya want ta be turned inta a public cum-dump?!)]
+		罗克西啪地给了鼠男一记响亮的耳光，[roxy.speech(如果恁不愿意，我可以安排把你关进公共监狱！度过恁悲惨嘞余生！你想怎么样，奴隶？你是想做个好女孩，还是想变成公共肉便器？！)]
 	</p>
 	<p>
-		Knowing that he doesn't have any choice but to submit to Roxy's wishes, Vengar sinks back down onto the floor with a defeated sigh. Tossing a burger at you, the foul-mouthed rat-girl snaps, [roxy.speech(Fuckin' get on with it then! I's lookin' forward ta seein' the sort of sissy slut you's gonna turn 'im inta!)]
+		文加知道自己别无选择，只能屈从于罗克西的愿望，他叹了口气，败下阵来，重新坐回地板上。向你扔了一个汉堡，满嘴脏话的鼠女咆哮道，[roxy.speech(那就恁娘嘞继续吧，我很期待看看恁会把他变成什么样嘞男娘骚货！)]
 	</p>
 	<p>
-		Quickly setting about enchanting both the burger and your [#ITEM_FETISH_UNREFINED.getName(false)], you've soon crafted two transformative potions. Grabbing both of them, Roxy force-feeds her slave the concoction which you've created, before stepping back and watching as he begins to transform...
+		你给汉堡和你的[#ITEM_FETISH_UNREFINED.getName(false)]进行了附魔，很快就制作出了两瓶转化药水。罗克西抓起这两样东西，强迫她的奴隶喝下了你制作的药水，然后退后一步，看着他开始转化……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VENGAR_SISSIFY_END"><![CDATA[
 	<p>
-		Cackling in glee at Vengar's new form, Roxy grabs a chastity cage and a buttplug from beneath her counter, and after locking Vengar's small cock up, she shoves the sex toy into her ass. Letting out a shocked gasp as she feels the metallic object enter her, Vengar whines, [vengar.speech(Is dat really necessary?)]
+		看着文加的新造型，罗克西高兴得咯咯直笑，她从柜台下面拿起一个贞操笼和一个肛塞，把文加的小鸡鸡锁起来后，把肛塞塞进了屁眼里。当感觉到金属物体进入自己的身体时，文加发出一声惊天动地的喘息，[vengar.speech(有这个必要吗？)]
 	</p>
 	<p>
-		[roxy.speech(Course it is, ya sissy slut!)] Roxy teases as she gives her slave's feminine ass a good grope. After applying the finishing touch by using a dye brush to recolour Vengar's slave collar from black to light pink, Roxy turns towards you and snickers, [roxy.speech(Good job with creatin' those potions! Me slave's lookin' real good now! So, you's wantin' ta pay ta get a fuck with 'er?)]
+		[roxy.speech(当然了，你个男娘骚货！)]罗克西一边抚摸奴隶妩媚的臀部，一边发出悦耳的笑声。用染色刷将文加的奴隶项圈从黑色重新染成浅粉色后，罗克西转过身来对着你窃笑，[roxy.speech(这些药水做得不错，我嘞奴隶现在看起来真不错！恁想花钱操她吗？)]
 	</p>
 	<p>
-		Looking over at the feminine form of Vengar, you wonder whether you should pay to have sex with her, or do something else...
+		你望着文加的女性化形态，思索要不要付钱和她做爱，还是做点别的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

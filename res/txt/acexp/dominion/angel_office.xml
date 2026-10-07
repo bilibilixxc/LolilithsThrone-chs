@@ -1,71 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
     <!-- Meeting Angel encounter: -->
 
     <htmlContent tag="MEET_ANGEL"><![CDATA[
    	<p>
-		Once again, you find that the door to Angel's office is wide open, and the familiar little sign hanging outside her door still reads: <i>'For all Administrative Enquiries, please knock and enter!'</i>
-	</p>
+		再一次，你发现安吉尔办公室的门大敞着，门外挂的熟悉小牌子上仍然写着：<i>“如需查询行政事务，请敲门！”</i>
+</p>
 	<p>
-		Although Angel's office is now a familiar location to you, there's something different about it this time, as lewd moaning sounds can be heard coming from within. Following the sign's instructions, you knock the door and push it open as you [pc.step] inside. The room that you find yourself walking into is stacked high with mountains of ledgers and piles of papers. A snaking path has been left to link the doorway with a desk on the far side of the room, and it's behind this that you spot Angel. Leaning back in her chair with her eyes closed, her hands are frantically moving underneath her desk, while lewd moans continue to escape from between her full lips. Preoccupied with her masturbation session, she clearly didn't hear your knock, for as she catches sight of you out of the corner of her eye, she suddenly looks up and exclaims in surprise, [angel.speech(Oh, [pc.name]! You caught me in quite a state! Didn't you learn to knock before entering?!)]
-	</p>
+		尽管安吉尔的办公室对你来说已经很熟悉，但这次略有不同，因为你听到了里面传来淫荡的呻吟声。按照牌子上的指示，你轻轻敲了敲门，然后推开它，[pc.step]进了房间。你发现自己走进的房间里堆满了高高的台账和一堆堆的文件。一条蜿蜒的小路将门口与房间远端的一张桌子连接起来，你看见安吉尔在桌子后面。她靠在椅子上，双眼紧闭，双手在桌后疯狂地上上下下，口中发出淫荡的呻吟。沉浸在自慰的快感中，她显然没听见你的敲门声。当她转头偶然瞥见你时，抬头惊讶地呼喊道：[angel.speech(哦，[pc.name]！你看到我这个样子真是太尴尬了！难道你不知道敲门才能进来吗？！)]
+</p>
 	<p>
-		After you've quickly explained that you did knock but that she didn't hear you, Angel laughs and admits, [angel.speech(Well, yeah, I was procrastinating a little... I've been so bored with all of my paperwork, and after you bought that prostitution license, I can't stop fantasising about how hot it would be to whore myself out to you... I don't know what it is, but I keep on fantasising about you; there's something about you that just makes me so horny! It must be your aura or something... Anyway, would you like to help me out? For you I'd only charge ten thousand flames...)]
-	</p>
-	]]>
-    </htmlContent>
+		你快速解释了是她没听见你的敲门声之后，安吉尔笑着承认了，[angel.speech(好吧，是的，我稍微有点拖延……我厌倦了这些文书工作，在你买下卖淫许可证之后，我就幻想卖给你是种什么感觉，根本停不下来……我不知道这是怎么了，但我不停地想到你；关于你的任何事情都会让我性奋起来！这肯定是因为你的灵气或者别的什么能力……不管怎么说，你愿意帮帮我吗？对于你，我只会收取一万火币……)]
+</p>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="LEAVE"><![CDATA[
 	<p>
-		Deciding that you'd rather not pay Angel to have sex with her, you tell her that you might take her up on her offer another time, but not now. Playfully pouting at you, she teases, [angel.speech(Fine... Well, if you don't mind, I need to finish myself off here, so I'll see you later.)]
-	</p>
+你决定拒绝安吉尔的卖淫，你告诉她也许以后会考虑，但现在不行。她顽皮地撅着嘴对你调笑道，[angel.speech(好吧……如果你不介意，我需要自己解决一下，那么待会再见。)]
+</p>
 	<p>
-		Taking the hint, you turn around and head out of Angel's office, allowing her to pick up from where she left off. As you [pc.step] back out into the corridor, you hear Angel starting to moan again, and within just a few moments, she's letting out a frantic, high-pitched squeal. Realising that she must have been on the edge of an orgasm when you entered her office, and that she must have just climaxed, you wonder whether to head back into her office or instead head off somewhere else...
-	</p>
-	]]>
-    </htmlContent>
+	察觉到了暗示，你转身离开了安吉尔的办公室，让她继续她中断的事情。当你重新踏上走廊时，你听到Angel重新开始呻吟，只不过几秒钟后，她发出了一声疯狂、尖锐的尖叫。意识到你进入她的办公室时她可能已经快要达到高潮，而且她刚刚达到了高潮，你在考虑是返回她的办公室还是去别的地方……
+</p>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="SEX_START"><![CDATA[
 	<p>
-		Producing the ten thousand flames which she's asked for, you place the money on Angel's desk and tell her that you'll take her up on her offer. A lewd smile quickly settles on Angel's face, and after first taking your money, she swivels around in her chair, stands up, and steps over to drop to her knees before you.
+		你支付了她要求的一万火币。你把钱堆在安吉尔的桌子上，告诉她你同意了她的做爱邀请。安吉尔的脸上迅速挂上了淫荡的微笑，收走钱后，她在椅子上转了个身，站起来，然后走过来跪在你面前。
 		#IF(pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true) && !pc.isSexAreaExposed(PENETRATION_PENIS))
-	         With a few quick, well trained motions, she sets your [pc.cock+] free, and brings her face next to it, ready to start giving you a blowjob.
+		几个训练有素的动作后，她解放了你[pc.cock+]，面向它，准备给你吹箫。
     	#ELSEIF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true) && !pc.isSexAreaExposed(ORIFICE_VAGINA) && !pc.hasPenis())
-			 With a few quick, well trained motions, she removes the clothing from your [pc.pussy+] and brings her face next to it, ready to start eating you out.
+			几个训练有素的动作后，她扒下了你[pc.pussy+]上的布料，面向它，准备吃你的鲍鱼。
 		#ENDIF
-		 Her hot breath falls on your groin as she teases, [angel.speech(I'll warm you up a little bit first...)]
+			她笑着舔弄你的腹股沟，呼出的热气喷在你的皮肤上[angel.speech(我先让你暖和一点吧……)]
 	</p>
 	<p>
-		Impressed with how eager she is, you tell Angel that you're looking forwards to seeing what she can do. Looking up into your [pc.eyes+], she lets out an erotic moan and sensually sighs, [angel.speech(Use me however you want... ~Mmm!~ I'll be a good little human whore for you...)]
+		被她的渴望所打动，你告诉安吉尔你很想看看她的本事。她仰起头，与[pc.eyes+]对视，她发出一声轻叹，性感地呻吟着。[angel.speech(尽情使用我吧……~ 唔姆！~ 为了你，我会做一个听话的人类小妓女的……)]
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
-		Seeing that you're satisfied, Angel stands up and steps back, and as she starts to pull her clothing back on, she lets out a happy sigh and declares, [angel.speech(Oh, [pc.Name]... That was amazing! Even after all of my years working as a whore, I've never had sex that good before...)]
+		安吉尔看到你满足的表现，站起身后退几步，穿起衣服。她幸福地叹了口气，[angel.speech(哦，[pc.Name]……真是太厉害了！我做了这么久妓女，还是第一次做这么棒的爱……)]
 	</p>
 	<p>
-	    #IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_NAIVE))
-			Delighted to hear Angel's feedback, you tell her that you might be back to give her another good time some other day. Biting her lip and letting out a happy little moan as she hears your response, Angel sits back down on her chair and teases, [angel.speech(Oh, [pc.name], I'd love that! Please do come back soon; my pussy hasn't felt this good in years!)]
-	    #ELSEIF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_CYNICAL))
-			Being quite a cynic, you scoff at Angel's words, before telling her that she doesn't need to lie about how good it was. Smirking at you as she hears your response, Angel sits back down on her chair and laughs, [angel.speech(Well, I wasn't being totally insincere; you were a pretty good fuck!)]
+	#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_NAIVE))
+			陶醉于她的反应，你告诉他过几天你或许能给她带来更好的体验。听到你的回应，安吉尔咬着嘴唇，发出一声幸福的呻吟，然后重新坐回椅子上，调皮地开玩笑说，[angel.speech(哦，[pc.name]，我很愿意！请尽快再来一次吧，我的小穴很多年没这么舒服啦！)]
+	#ELSEIF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_CYNICAL))
+			你很愤世嫉俗，对安吉尔的话嗤之以鼻，然后告诉她不需要撒谎说你有多么好。安吉尔听到你的回应咧嘴一笑，然后重新坐回椅子上。[angel.speech(哦，我也不完全是在骗你啦，你真的是个好床伴！)]
 		#ELSE
-		    She doesn't sound completely sincere as she says this, and you realise that old habits die hard and she's just being a pro. Giving her a knowing grin, you tell Angel that it was fun for you too, and as she sits back down on her chair, she teases, [angel.speech(You really were a pretty good fuck, you know!)]
+		她说这些话时听起来并不完全真诚，你意识到她积习难改，这只是妓女的小把戏罢了。你冲她了然地笑，告诉安吉尔你也觉得她很有趣，当她重新坐回椅子上时，她开玩笑说，[angel.speech(你真的是个好性伙伴，你知道的。)]
 		#ENDIF
 	</p>
 	<p>
-		As you gather your things and head towards the door to make your exit, Angel calls out after you, [angel.speech(I'm going to be busy for the rest of today, but if you want to do this again, then come back tomorrow! See you later, [pc.name]!)]
+		当你收拾好东西朝门口走去准备离开时，安吉尔在你身后喊道，[angel.speech(今天剩下的时间我会很忙，但如果你想再来一次，明天回来吧！再见，[pc.name]！)]
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		Returning Angel's farewell, you [pc.walk] on over to the door of her office and make your exit. [pc.Stepping] out into the corridor beyond, you look around and wonder where to go next...
-	</p>
-	]]>
-    </htmlContent>
+你回应着安吉尔的告别，[pc.walk]向她办公室的门，然后离开。踏出门口，来到了走廊，环顾四周，思考接下来要去哪里……
+</p>
+	
+    ]]></htmlContent>
 	
 </dialogue>

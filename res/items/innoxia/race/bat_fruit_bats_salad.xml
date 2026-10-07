@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>40</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Fruit Bat's Salad]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Fruit Bat's Salad]]></namePlural>
-		<description><![CDATA[A little plastic pot, containing a delicious-looking fruit salad. Printed into the film lid, there's a little picture of a bat-girl sitting cross-legged as she eats her way through a mountain of fruit.]]></description> 
+		<determiner><![CDATA[一盒]]></determiner>
+		<name><![CDATA[果蝠沙拉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[果蝠沙拉]]></namePlural>
+		<description><![CDATA[一个小塑料盒，里面装着一份看起来美味的水果沙拉。盖子上印着一个蝙蝠女盘腿坐着，她正享受着一座山的水果。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/bat/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/bat/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">bat_fruit_bats_salad.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,21 +25,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[bat]]></potionDescriptor>
+		<potionDescriptor><![CDATA[蝙蝠]]></potionDescriptor>
 		<associatedRace>BAT_MORPH</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(2)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(2)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel [npc.her] arcane power increasing...
+				[npc.Name]开始感到[npc.her]的奥术力量增强……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_ARCANE, 2)]
 		]]></applyEffects>
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(peel)] off the film lid to the pot of Fruit Bat's Salad, before starting to eat the fruit contained within. The slices of orange, mango, and strawberry are all absolutely delicious, and it only takes [npc.herHim] a moment to finish off the entire pot.
+		[npc.Name]揭开果蝠沙拉盖上的薄膜，然后开始吃其中的水果。橙子、芒果和草莓的切片都非常美味，不一会儿，[npc.herHim]就把整个锅里的食物吃光了。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(peel)] off the film lid to the pot of Fruit Bat's Salad, before presenting it to [npc2.name] and getting [npc2.herHim] to start eating the fruit contained within. The slices of orange, mango, and strawberry are all absolutely delicious, and it only takes [npc2.name] a moment to finish off the entire pot.
+		[npc.Name]揭开果蝠沙拉盖上的薄膜，然后将它呈现给[npc2.name]，并让[npc2.herHim]开始吃其中的水果。橙子、芒果和草莓的切片都非常美味，不一会儿，[npc2.name]就把整个锅里的食物吃光了。
 		]]></otherUse>
 	</useDescriptions>
 

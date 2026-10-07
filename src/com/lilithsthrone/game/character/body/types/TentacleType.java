@@ -29,11 +29,11 @@ public class TentacleType {
 			Race.NONE,
 			PenetrationGirth.THREE_AVERAGE,
 			0f,
-			"none",
+			"无",
 			"",
 			"",
-			"tentacle",
-			"tentacles",
+			"触手",
+			"触手",
 			Util.newArrayListOfValues(),
 			Util.newArrayListOfValues(),
 			"",
@@ -41,13 +41,13 @@ public class TentacleType {
 			Util.newArrayListOfValues(),
 			Util.newArrayListOfValues(),
 			"#IF(npc.getTentacleCount()==1)"
-					+ " [npc.She] gasps as [npc.she] feels [npc.her] [npc.tentacle] shrinking down and disappearing into [npc.her] body."
+					+ "当[npc.She]感到[npc.tentacle]逐渐缩小，并消失在[npc.her]体内时，[npc.She]倒吸了一口凉气。"
 				+ "#ELSE"
-					+ " [npc.She] gasps as [npc.she] feels [npc.her] [npc.tentacles] shrinking down and disappearing into [npc.her] body."
+					+ "当[npc.She]感到[npc.tentacle]逐渐缩小，并消失在[npc.her]体内时，[npc.She]倒吸了一口凉气。"
 				+ "#ENDIF"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldTfGeneric(no tentacles)].",
-			"[style.colourDisabled([npc.She] [npc.do] not have any tentacles.)]",
+				+ "[npc.Name]现在[style.boldTfGeneric(没有触手)]。",
+			"[style.colourDisabled([npc.She]没有触手。)]",
 			Util.newArrayListOfValues()) {
 	};
 	
@@ -56,45 +56,45 @@ public class TentacleType {
 			Race.DEMON,
 			PenetrationGirth.ONE_SLENDER,
 			1f,
-			"demonic",
+			"恶魔",
 			"",
 			"",
-			"tentacle",
-			"tentacles",
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			"tip",
-			"tips",
-			Util.newArrayListOfValues("rounded"),
-			Util.newArrayListOfValues("rounded"),
+			"触手",
+			"触手",
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			"尖端",
+			"尾尖",
+			Util.newArrayListOfValues("圆润"),
+			Util.newArrayListOfValues("圆润"),
 			"#IF(npc.getTentacleCount()==1)"
-				+ " A demonic tentacle sprouts from [npc.her] back, rapidly growing in size until it's about [npc.tentacleLength] long."
-				+ " [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] complete control over where it goes, allowing [npc.herHim] to use it like a third limb."
+				+ "一条恶魔触手从背部延伸而出，迅速生长至大概有[npc.tentacleLength]长。"
+				+ "[npc.She]很快意识到自己能够随心所欲地控制其运动，仿佛拥有了额外的肢体。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has]"
+				+ "[npc.Name]现在拥有"
 				+ "#IF(npc.isShortStature())"
-					+ " an [style.boldImp(impish tentacle)]"
+					+ "一条[style.boldImp(小恶魔触手)]"
 				+ "#ELSE"
-					+ " a [style.boldDemon(demonic tentacle)]"
+					+ "一条[style.boldDemon(恶魔触手)]"
 				+ "#ENDIF"
-				+ ", [npc.materialDescriptor] [npc.tentacleFullDescription(true)]."
+				+ "，[npc.materialDescriptor][npc.tentacleFullDescription(true)]。"
 			+ "#ELSE"
-				+ " [npc.TentacleCount] demonic tentacles sprout from [npc.her] back, rapidly growing in size until they're each about [npc.tentacleLength] long."
-				+ " [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] complete control over where they go, allowing [npc.herHim] to use them like extra limbs."
+				+ "[npc.TentacleCount]条恶魔触手从背部延伸而出，迅速生长至大概有[npc.tentacleLength]长。"
+				+ "[npc.She]很快意识到[npc.she]能够随心所欲地控制它们，就像拥有了额外的肢体一样。"
 				+ "<br/>"
-				+ "[npc.Name] now [npc.has] [npc.tentacleCount]"
+				+ "[npc.Name]现在拥有[npc.tentacleCount]条"
 				+ "#IF(npc.isShortStature())"
-					+ " [style.boldImp(impish tentacles)]"
+					+ "[style.boldImp(小恶魔触手)]"
 				+ "#ELSE"
-					+ " [style.boldDemon(demonic tentacles)]"
+					+ "[style.boldDemon(恶魔触手)]"
 				+ "#ENDIF"
-				+ ", [npc.materialDescriptor] [npc.tentacleFullDescription(true)]."
+				+ "，[npc.materialDescriptor][npc.tentacleFullDescription(true)]。"
 			+ "#ENDIF",
-			"Growing out from [npc.her] back, [npc.sheHasFull]"
+			"[npc.sheHasFull]从背部长出"
 				+ "#IF(npc.getTentacleCount()==1)"
-					+ " a spaded, [npc.tentacleColour(true)] #IF(npc.isShortStature())impish#ELSEdemonic#ENDIF tentacle, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use it to grip and hold objects."
+					+ "一条桃心状的[npc.tentacleColour(true)]#IF(npc.isShortStature())小恶魔#ELSE恶魔#ENDIF触手。[npc.sheHasFull]能自如地掌控其运动，帮助[npc.herHim]抓握物体。"
 				+ "#ELSE"
-					+ " [npc.tentacleCount] spaded, [npc.tentacleColour(true)] #IF(npc.isShortStature())impish#ELSEdemonic#ENDIF tentacles, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects."
+					+ "[npc.sheHasFull]拥有[npc.tentacleCount]条桃心状的，[npc.tentacleColour(true)]#IF(npc.isShortStature())小恶魔#ELSE恶魔#ENDIF触手。它们活动自如，能够帮助[npc.herHim]抓取并握住物体。"
 				+ "#ENDIF",
 			Util.newArrayListOfValues(
 					BodyPartTag.TAIL_PREHENSILE,
@@ -108,19 +108,19 @@ public class TentacleType {
 			Race.DEMON,
 			PenetrationGirth.FOUR_GIRTHY,
 			2.5f,
-			"demonic-octopus",
+			"恶魔章鱼",
 			"",
 			"",
-			"tentacle",
-			"tentacles",
-			Util.newArrayListOfValues("demonic"),
-			Util.newArrayListOfValues("demonic"),
-			"tip",
-			"tips",
-			Util.newArrayListOfValues("rounded"),
-			Util.newArrayListOfValues("rounded"),
+			"触手",
+			"触手",
+			Util.newArrayListOfValues("恶魔"),
+			Util.newArrayListOfValues("恶魔"),
+			"尾尖",
+			"尾尖",
+			Util.newArrayListOfValues("圆润"),
+			Util.newArrayListOfValues("圆润"),
 			"",
-			"In place of legs, [npc.sheHasFull] [npc.tentacleCount] [npc.tentacleColour(true)], octopus-like tentacles, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects.",
+			"在腿的位置上，[npc.sheHasFull]长出了[npc.tentacleCount]条[npc.tentacleColour(true)]，章鱼一样的触手。它们活动自如，能够帮助[npc.herHim]抓取并握住物体。",
 			Util.newArrayListOfValues(
 					BodyPartTag.TAIL_PREHENSILE,
 					BodyPartTag.TAIL_SUITABLE_FOR_PENETRATION,

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <leg>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[eagle]]></transformationName>
+	<transformationName><![CDATA[鹰]]></transformationName>
 	
 	<coveringType>innoxia_raptor_feathers</coveringType>
 	
@@ -21,45 +21,45 @@
 		<configuration>AVIAN</configuration>
 	</allowedLegConfigurations>
 	
-	<name><![CDATA[leg]]></name>
-	<namePlural><![CDATA[legs]]></namePlural> 
+	<name><![CDATA[腿]]></name>
+	<namePlural><![CDATA[腿]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>powerful</descriptor>
-		<descriptor>large</descriptor>
-		<descriptor>masculine</descriptor>
-		<descriptor>clawed</descriptor>
-		<descriptor>anthropomorphic, eagle-like</descriptor>
+		<descriptor><![CDATA[强健]]></descriptor>
+		<descriptor><![CDATA[大量]]></descriptor>
+		<descriptor><![CDATA[男性]]></descriptor>
+		<descriptor><![CDATA[带爪]]></descriptor>
+		<descriptor><![CDATA[鹰般拟人]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>powerful</descriptor>
-		<descriptor>large</descriptor>
-		<descriptor>feminine</descriptor>
-		<descriptor>clawed</descriptor>
-		<descriptor>anthropomorphic, eagle-like</descriptor>
+		<descriptor><![CDATA[强健]]></descriptor>
+		<descriptor><![CDATA[大量]]></descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[带爪]]></descriptor>
+		<descriptor><![CDATA[鹰般拟人]]></descriptor>
 	</descriptorsFeminine>
 	
 	<footDescriptorsMasculine>
-		<descriptor>eagle-like</descriptor>
+		<descriptor><![CDATA[鹰一般]]></descriptor>
 	</footDescriptorsMasculine>
 	<footDescriptorsFeminine>
-		<descriptor>eagle-like</descriptor>
+		<descriptor><![CDATA[鹰一般]]></descriptor>
 	</footDescriptorsFeminine>
 	
 	<toeDescriptorsMasculine>
-		<descriptor>eagle-like</descriptor>
+		<descriptor><![CDATA[鹰一般]]></descriptor>
 	</toeDescriptorsMasculine>
 	<toeDescriptorsFeminine>
-		<descriptor>eagle-like</descriptor>
+		<descriptor><![CDATA[鹰一般]]></descriptor>
 	</toeDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		A layer of scaly, bird-like leather quickly grows over [npc.her] legs as they grow larger and shift into a new form. As [npc.her] new leathery skin spreads down to the ends of [npc.her] toes, [npc.her] feet start to undergo an extreme transformation. [npc.Her] toes combine together and re-shape themselves into three forward-facing talons, as a fourth, rear-facing talon branches out behind them. As the transformation ends, this leathery skin sharply transitions into [npc.her] body's [npc.skinColour] [npc.skin] at [npc.her] upper-thigh.
-		<br/>[npc.Name] now [npc.has] anthropomorphic, [style.boldRaptor(eagle-like legs and talons in place of feet)], which are [npc.materialDescriptor] [npc.legFullDescription].
-	]]></transformationDescription>
+		[npc.her]的双腿转化成了新的形式，一层鳞片状的鸟的皮毛迅速覆盖了上去。[npc.her]的新皮毛覆盖到了其脚趾的末端，[npc.her]的脚趾重合在一起，重塑为三个向前的利爪和一个向后的爪子。转变完成时，[npc.she]看到皮毛自然过渡成了覆盖到大腿上部的[npc.skin]。
+	<br/>[npc.Name]现在拥有似人非人的[npc.materialDescriptor][npc.legFullDescription]的[style.boldRaptor(鹰一般的腿和利爪)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.Her] eagle-like legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], which sharply transitions into [npc.her] body's [npc.skinColour] [npc.skin] at [npc.her] upper-thigh. At the end of each of [npc.her] [npc.legs], [npc.she] [npc.has] large, sharp talons.
-	]]></bodyDescription>
+		[npc.Her]鹰一般的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，自大腿处迅速过渡成了覆盖身体其他部位的[npc.skin]。在每条腿末端有着大而锋利的利爪。
+]]></bodyDescription>
 </leg>

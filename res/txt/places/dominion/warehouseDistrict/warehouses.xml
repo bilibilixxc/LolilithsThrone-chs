@@ -1,37 +1,37 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- WAREHOUSE_DISTRICT -->
 	
 	<htmlContent tag="WAREHOUSE_DISTRICT"><![CDATA[
 	<p>
-		While there are countless industrial buildings scattered all throughout Dominion, there's no higher concentration of them than in the place you currently find yourself travelling through. The official name for this area is proudly displayed in several places as being simply 'Dominion's Warehouse District', which, while being somewhat generic, very accurately describes it.
+		虽然整个御城区都散布着数不清的工业建筑，但最集中的地方莫过于你现在所经过的地方。它的官方名称在很多地区被骄傲地标注为“御城区仓库”——这有些笼统，但很准确。
 	</p>
 	<p>
-		Most of the buildings you see around you are constructed of either red brick or corrugated iron, and almost without exception they have numerous centaur-drawn carts parked outside of them.
+		你周围看到的大多数建筑都是用红砖或波状钢建造的，而且无一例外外面都停着许多半人马拉的车。
 		#IF(game.isExtendedWorkTime())
 			#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-				 Thanks to its strategic position right next to Dominion's canal and near to one of the main boulevards, this area is typically heaving with industrial traffic, but due to the ongoing arcane storm, all activity has come to a halt, leaving the entire area completely deserted.
+				由于其紧邻御城区运河和主要林荫大道的重要位置，这里通常是工业交通繁忙的地方。但由于持续的奥术风暴，所有活动都已停止，整个地区完全荒芜。
 			#ELSE
-				 Thanks to its strategic position right next to Dominion's canal and near to one of the main boulevards, this area is absolutely heaving with industrial traffic, and you often have to step aside to let goods-filled carts rumble past.
+				由于其紧邻御城区运河和主要林荫大道的重要位置，这里的工业交通繁忙，你经常不得不靠边站，让满载货物的小车隆隆驶过。
 			#ENDIF
 		#ELSE
 			#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-				 Thanks to its strategic position right next to Dominion's canal and near to one of the main boulevards, this area is typically heaving with industrial traffic, but due to the ongoing arcane storm, all activity has come to a halt, leaving the entire area completely deserted.
+				由于其紧邻御城区运河和主要林荫大道的重要位置，这里通常是工业交通繁忙的地方。但由于持续的奥术风暴，所有活动都已停止，整个地区完全荒芜。
 			#ELSE
-				 Thanks to its strategic position right next to Dominion's canal and near to one of the main boulevards, a large quantity of industrial traffic is still moving through here, even despite the time of day.
+				由于其紧邻御城区运河和主要林荫大道的重要位置，这里任何时间都有大量的工业车辆经过。
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WAREHOUSE_DISTRICT_NO_BUSINESS"><![CDATA[
 	<p>
-		Although there are plenty of businesses established in this area, they're of the kind which only provide services to other large companies. With nothing being on offer to passing members of the public, and without having a specific reason to be here, there's not much for you to do except continue on your way elsewhere...
+		虽然这里有很多企业，但都是那种只为其他大公司提供服务的企业。这里不向路过的公众提供任何服务，你也没有来到这里的具体理由，所以除了继续前往其他地方之外，你也没有什么可做的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

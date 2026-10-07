@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="DISCOVERED"><![CDATA[
 	<p style='text-align:center;'>
-		[style.BoldGood(New Location Discovered:)] [style.boldYellowLight(Evelyx's Dairy)]
-	</p>	]]>
-	</htmlContent>
+		[style.BoldGood(新地点发现：)][style.boldYellowLight(艾弗利克斯乳业)]
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DISCOVERED_END"><![CDATA[
 	<p style='text-align:center;'>
-		[style.italicsMinorGood(You make a note on your map of your current location, allowing you to return here at any time.)]
+		[style.italicsMinorGood(你在地图上记下你的当前位置，以便随时返回这里。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

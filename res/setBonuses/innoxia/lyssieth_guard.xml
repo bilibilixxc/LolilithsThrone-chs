@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Lyssieth's Guard]]></name>
+	<name><![CDATA[莉西丝的护卫]]></name>
 	
 	<statusEffect>SET_LYSSIETH_GUARD</statusEffect>
 	

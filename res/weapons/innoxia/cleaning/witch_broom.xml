@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -6,15 +6,15 @@
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[witch's broom]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[witch's brooms]]></namePlural>
-		<description><![CDATA[An old-fashioned wooden broom, consisting of a long pole with a bundle of flexible twigs attached to one end. The opposite end of the pole widens out a little, where there's a curious engraving of a pentagram etched into the wood.]]></description>
-		<attackDescriptor>Broom swipe</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Swipe your broom at [npc.name]!]]></attackTooltipDescription>
+		<name><![CDATA[魔女扫帚]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[魔女扫帚]]></namePlural>
+		<description><![CDATA[这是一把老式的木制扫帚，主体部分是一根长长的木杆，杆子的一端捆着飘逸的扫帚草，另一端稍稍变宽。木头上刻有一个奇特的五角星图案。]]></description>
+		<attackDescriptor><![CDATA[扫帚横扫]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用扫帚扫向[npc.name]！]]></attackTooltipDescription>
 		<rarity>EPIC</rarity>
 		<weaponSet>innoxia_witch</weaponSet>
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] broom.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] broom away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出了扫帚。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]放下了扫帚。]]></unequipText>
 		<imageName>witch_broom.svg</imageName> 
 		<imageEquippedName/> 
 		<damage>8</damage> 
@@ -53,22 +53,22 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(whack)] [npc2.namePos] [npc2.arm] with [npc.her] broom!
+		[npc.Name]用扫帚砸向[npc2.namePos][npc2.arm]！
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swipe)] [npc.her] broom at [npc2.name] and [npc.verb(manage)] to whack [npc2.her] [npc2.arm]!
+		[npc.Name]用扫帚朝着[npc2.name]扫去，成功击中了[npc2.her]的[npc2.arm]！
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] broom at [npc2.name] and [npc.verb(hit)] [npc2.herHim] in the chest!
+		[npc.Name]挥舞扫帚向[npc2.name]而去，最后击中了[npc2.her]的胸口！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swipe)] [npc.her] broom at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.Name]用扫帚朝着[npc2.name]扫去，却没能命中！
 		]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] broom at [npc2.name], but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]挥舞扫帚向[npc2.name]而去，但是打偏了！
 		]]></missText>
 	</missDescriptions>
 	

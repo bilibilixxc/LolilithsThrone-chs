@@ -37,12 +37,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Prostate massage";
+			return "前列腺按摩";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Curl your [npc.fingers] up inside [npc2.namePos] [npc2.asshole+] and start stroking [npc2.her] prostate.";
+			return "你将[npc.fingers]伸进[npc2.namePos][npc2.asshole+]，开始抚摸起前列腺。";
 		}
 
 		@Override
@@ -52,39 +52,39 @@ public class FingerAnus {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Gently pushing the palm of [npc.her] [npc.hand] in against [npc2.namePos] [npc2.assCloaca+],"
-								+ " [npc.name] [npc.verb(slide)] [npc.her] [npc.fingers] deep into [npc2.her] [npc2.asshole], before curling them up and starting to softly stroke and massage [npc2.her] prostate.",
-							"With a soft [npc.moan], [npc.name] gently [npc.verb(slide)] [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-								+ " before curling them up and starting to rhythmically stroke and massage [npc2.her] prostate.",
-							"Slowly pushing [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-									+ " [npc.name] [npc.verb(let)] out a soft [npc.moan] as [npc.she] then [npc.verb(curl)] them up and [npc.verb(start)] to gently massage [npc2.her] prostate."));
+							"[npc.her]轻柔地将手推向[npc2.namePos][npc2.assCloaca+]，"
+								+ "[npc.name]将[npc.fingers]滑入[npc2.her]的[npc2.asshole]深处，然后屈起手指，开始轻柔地爱抚和按摩前列腺。",
+							"随着轻柔的[npc.moan]，[npc.name]温柔地将[npc.fingers+]尽可能滑入[npc2.namePos][npc2.asshole+]，"
+								+ "然后将它们屈起，开始有节奏地爱抚和按摩前列腺。",
+							"[npc.name]慢慢地将[npc.fingers+]尽可能深地插入[npc2.namePos][npc2.asshole+]，"
+									+ "[npc.she]卷曲手指，开始温柔地按摩[npc2.namePos]的前列腺，轻轻地发出[npc.a_moan+]。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Roughly slamming the palm of [npc.her] [npc.hand] in against [npc2.namePos] [npc2.assCloaca+],"
-								+ " [npc.name] [npc.verb(force)] [npc.her] [npc.fingers] deep into [npc2.her] [npc2.asshole], before curling them up and starting to forcefully stroke and massage [npc2.her] prostate.",
-							"With [npc.a_moan+], [npc.name] violently [npc.verb(slam)] [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-								+ " before curling them up and starting to aggressively stroke and massage [npc2.her] prostate.",
-							"Forcefully pushing [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-									+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] then [npc.verb(curl)] them up and [npc.verb(start)] to roughly massage [npc2.her] prostate."));
+							"[npc.her]猛地把手插进[npc2.namePos][npc2.assCloaca+]，"
+								+ "[npc.name]将[npc.fingers]滑入[npc2.her]的[npc2.asshole]深处，然后屈起手指，开始激烈地爱抚和按摩前列腺。",
+							"伴随着[npc.a_moan+]，[npc.name]疯狂地用[npc.fingers+]深入[npc2.namePos][npc2.asshole+]，"
+								+ "然后将它们屈起，开始积极地爱抚和按摩前列腺。",
+							"[npc.name]强行把[npc.fingers+]深入[npc2.namePos][npc2.asshole+]，"
+									+ "[npc.her]卷曲手指，开始粗暴地按摩[npc2.namePos]的前列腺，发出一阵[npc.a_moan+]。"));
 					break;
 				case SUB_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Pushing the palm of [npc.her] [npc.hand] in against [npc2.namePos] [npc2.assCloaca+],"
-								+ " [npc.name] [npc.verb(slide)] [npc.her] [npc.fingers] deep into [npc2.her] [npc2.asshole], before curling them up and starting to stroke and massage [npc2.her] prostate.",
-							"With [npc.a_moan+], [npc.name] [npc.verb(push)] [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-								+ " before curling them up and starting to stroke and massage [npc2.her] prostate.",
-							"Pushing [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-									+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] then [npc.verb(curl)] them up and [npc.verb(start)] to massage [npc2.her] prostate."));
+							"[npc.her]将手推向[npc2.namePos][npc2.assCloaca+]，"
+								+ "[npc.name]将[npc.fingers]滑入[npc2.her]的[npc2.asshole]深处，然后屈起手指，开始爱抚和按摩前列腺。",
+							"伴随着[npc.a_moan+]，[npc.name]用[npc.fingers+]尽可能深入[npc2.namePos][npc2.asshole+]，"
+								+ "然后将它们屈起，开始爱抚和按摩前列腺。",
+							"[npc.name]将[npc.fingers+]尽可能深地伸入[npc2.namePos][npc2.asshole+]，"
+									+ "[npc.her]卷曲手指，开始按摩[npc2.namePos]的前列腺，发出一阵[npc.a_moan+]。"));
 					break;
 				default: // Normal dom and eager sub:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Eagerly pushing the palm of [npc.her] [npc.hand] in against [npc2.namePos] [npc2.assCloaca+],"
-								+ " [npc.name] [npc.verb(slide)] [npc.her] [npc.fingers] deep into [npc2.her] [npc2.asshole], before curling them up and starting to rapidly stroke and massage [npc2.her] prostate.",
-							"With [npc.a_moan+], [npc.name] desperately [npc.verb(push)] [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-								+ " before curling them up and starting to eagerly stroke and massage [npc2.her] prostate.",
-							"Happily pushing [npc.her] [npc.fingers+] as deep as possible into [npc2.namePos] [npc2.asshole+],"
-									+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] then [npc.verb(curl)] them up and [npc.verb(start)] to energetically massage [npc2.her] prostate."));
+							"[npc.her]急切地将手推向[npc2.namePos][npc2.assCloaca+]，"
+								+ "[npc.name]将[npc.fingers]滑入[npc2.her]的[npc2.asshole]深处，然后屈起手指，开始迅速地爱抚和按摩前列腺。",
+							"伴随着[npc.a_moan+]，[npc.name]急切地用[npc.fingers+]尽可能深入[npc2.namePos][npc2.asshole+]，"
+								+ "然后将它们屈起，开始急切地爱抚和按摩前列腺。",
+							"[npc.name]兴奋地将[npc.fingers+]尽可能深地伸入[npc2.namePos][npc2.asshole+]，"
+									+ "[npc.name]卷曲手指，开始大力地按摩[npc2.her]的前列腺，发出[npc.a_moan+]。"));
 					break;
 			}
 
@@ -92,33 +92,33 @@ public class FingerAnus {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 					case DOM_GENTLE:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" Upon feeling this sudden stimulating sensation, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+], before gently pushing [npc2.her] [npc2.assCloaca+] against [npc.namePos] [npc.hand].",
-								" Immediately, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] in response, before gently bucking [npc2.her] hips against [npc.namePos] touch.",
-								" Responding to this move by letting out [npc2.a_moan+], [npc2.name] gently [npc2.verb(push)] [npc2.her] [npc2.assCloaca+] out against [npc.namePos] [npc.hand]."));
+								"[npc2.name]受到刺激，不由得发出[npc2.a_moan+]。寻求更多，[npc2.her]把[npc2.assCloaca+]凑向[npc.namePos]的[npc.hand]。",
+								"瞬息之间，[npc2.name]不由自主发出[npc2.a_moan+]，想得到更多，[npc2.her]再次顶腰以迎合[npc.namePos]的触碰。",
+								"[npc2.name]发出了[npc2.a_moan+]，温柔地将[npc2.assCloaca+]推向[npc.namePos]的[npc.hand]。"));
 						break;
 					case DOM_ROUGH:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" Upon feeling this sudden stimulating sensation, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+], before roughly forcing [npc2.her] [npc2.assCloaca+] against [npc.namePos] [npc.hand].",
-								" Immediately, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] in response, before forcefully slamming [npc2.her] [npc2.assCloaca+] against [npc.namePos] touch.",
-								" Responding to this move by letting out [npc2.a_moan+], [npc2.name] aggressively [npc2.verb(slam)] [npc2.her] [npc2.assCloaca+] against [npc.namePos] [npc.hand]."));
+								"[npc2.name]受到刺激，不由得发出[npc2.a_moan+]。寻求更多，[npc2.her]粗暴地把[npc2.assCloaca+]拱向[npc.namePos]的[npc.hand]。",
+								"瞬息之间，[npc2.name]不由自主发出[npc2.a_moan+]，[npc2.her]用力地挺动[npc2.assCloaca+]，以迎合[npc.namePos]的触摸。",
+								"[npc2.name]发出了[npc2.a_moan+]，使劲将[npc2.assCloaca+]冲向[npc.namePos]的[npc.hand]。"));
 						break;
 					case SUB_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" Upon feeling this sudden stimulating sensation, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+], before pushing [npc2.her] [npc2.assCloaca+] against [npc.namePos] [npc.hand].",
-								" Immediately, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] in response, before bucking [npc2.her] hips against [npc.namePos] touch.",
-								" Responding to this move by letting out [npc2.a_moan+], [npc2.name] [npc2.verb(push)] [npc2.her] [npc2.assCloaca+] against [npc.namePos] [npc.hand]."));
+								"[npc2.name]受到突如其来的刺激，不由得发出[npc2.a_moan+]，晃动着[npc2.assCloaca+]迎合[npc.namePos]的[npc.hand]。",
+								"瞬息之间，[npc2.name]不由自主发出[npc2.a_moan+]，渴求更多，[npc2.her]扭腰以撞上了[npc.namePos]的触碰。",
+								"[npc2.name]发出了[npc2.a_moan+]，将[npc2.assCloaca+]推向[npc.namePos]的[npc.hand]。"));
 						break;
 					case SUB_RESISTING:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" Upon feeling this unwanted stimulating sensation, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+], before desperately trying to pull [npc2.her] [npc2.assCloaca+] away from [npc.namePos] [npc.hand].",
-								" Immediately, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] in response, before desperately attempting to pull [npc2.her] hips away from [npc.namePos] touch.",
-								" Responding to this move by letting out [npc2.a_moan+], [npc2.name] desperately [npc2.verb(try)] to pull [npc2.her] [npc2.assCloaca+] away from [npc.namePos] [npc.name]."));
+								"[npc2.name]受到强加的刺激，不由得发出[npc2.a_moan+]，绝望地尝试将[npc2.assCloaca+]从[npc.namePos]的[npc.hand]边挪开。",
+								"瞬息之间，[npc2.name]不情愿地发出[npc2.a_moan+]，尽管身体叫嚣着更多，[npc2.her]绝望地试图把腰从[npc.namePos]的触碰中拉开。",
+								"[npc2.name]不情愿地发出了[npc2.a_moan+]，尽管身体叫嚣着更多，[npc2.her]拼命地企图将[npc2.assCloaca+]远离[npc.namePos]的[npc.hand]。"));
 						break;
 					default: // Normal dom and eager sub:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" Upon feeling this sudden stimulating sensation, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+], before pushing [npc2.her] [npc2.assCloaca+] against [npc.namePos] [npc.hand].",
-								" Immediately, [npc2.name] [npc2.verb(let)] out [npc2.a_moan+] in response, before desperately bucking [npc2.her] hips against [npc.namePos] touch.",
-								" Responding to this move by letting out [npc2.a_moan+], [npc2.name] desperately [npc2.verb(push)] [npc2.her] [npc2.assCloaca+] against [npc.namePos] [npc.hand]."));
+								"[npc2.name]受到突如其来的刺激，不由得发出[npc2.a_moan+]，晃动着[npc2.assCloaca+]迎合[npc.namePos]的[npc.hand]。",
+								"瞬息之间，[npc2.name]不由自主发出[npc2.a_moan+]，渴求更多，[npc2.her]急切地扭腰，迎向[npc.namePos]的触碰。",
+								"[npc2.name]发出了[npc2.a_moan+]，拼命地将[npc2.assCloaca+]推向[npc.namePos]的[npc.hand]。"));
 						break;
 				}
 			}
@@ -138,12 +138,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Finger [npc2.her] ass";
+			return "指交[npc2.her]的屁股";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Sink [npc.namePos] [npc.fingers] into [npc2.namePos] [npc2.asshole+] and start fingering [npc2.herHim].";
+			return "把[npc.namePos]的[npc.fingers]插进[npc2.namePos][npc2.asshole+]并开始指交[npc2.herHim]。";
 		}
 
 		@Override
@@ -154,41 +154,41 @@ public class FingerAnus {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Slowly teasing [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.assCloaca], [npc.name] [npc.verb(let)] out a little [npc.moan] before slowly sinking [npc.her] digits into [npc2.her] [npc2.asshole+].",
+							"[npc.name]用[npc.fingers+]缓慢地挑逗着[npc2.namePos]的[npc2.assCloaca]，将手指没入[npc2.her][npc2.asshole+]，发出一阵小小地[npc.a_moan+]。",
 
 							
-							"[npc.Name] [npc.verb(press)] [npc.her] [npc.fingers+] down between [npc2.namePos] ass cheeks,"
-									+ " and with a slow, steady pressure, [npc.she] gently  [npc.verb(sink)] [npc.her] digits into [npc2.her] [npc2.asshole+]."));
+							"[npc.Name]将[npc.her][npc.fingers+]压入[npc2.namePos]肉臀，"
+									+ "[npc.she]以缓慢而稳定的力度，轻柔地将指部深深地插入[npc2.namePos][npc2.asshole+]。"));
 					break;
 				case DOM_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Eagerly teasing [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.assCloaca], [npc.name] [npc.verb(let)] out [npc.a_moan+] before greedily sinking [npc.her] digits into [npc2.her] [npc2.asshole+].",
+							"[npc.name]用[npc.fingers+]急切地挑逗着[npc2.namePos]的[npc2.assCloaca]，贪婪地将手指没入[npc2.her][npc2.asshole+]，发出一阵[npc.a_moan+]。",
 
 							
-							"[npc.Name] eagerly [npc.verb(press)] [npc.her] [npc.fingers+] down between [npc2.namePos] ass cheeks,"
-									+ " and with a determined thrust, [npc.she] greedily  [npc.verb(sink)] [npc.her] digits into [npc2.her] [npc2.asshole+]."));
+							"[npc.Name]将[npc.her][npc.fingers+]急切地压入[npc2.namePos]肉臀，"
+									+ "[npc.she]以难以撼动的推力，贪婪地将指部插进[npc2.namePos][npc2.asshole+]。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Roughly grinding [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.assCloaca], [npc.name] [npc.verb(let)] out [npc.a_moan+] before violently slamming [npc.her] digits deep into [npc2.her] [npc2.asshole+].",
+							"[npc.name]发出[npc.a_moan+]，用[npc.fingers+]粗暴地挤压着[npc2.namePos]的[npc2.assCloaca]，接着用力将手指捅入[npc2.her][npc2.asshole+]。",
 
 							
-							"[npc.Name] roughly grinds [npc.her] [npc.fingers+] down between [npc2.namePos] ass cheeks, and with a forceful thrust, [npc.she] greedily slams [npc.her] digits deep into [npc2.her] [npc2.asshole+]."));
+							"[npc.name]，发出[npc.a_moan+]，用[npc.fingers+]粗暴地挤压着[npc2.namePos]的[npc2.assCloaca]，接着在强烈的饥渴中，贪婪地将手指探向[npc2.her][npc2.asshole+]，深入其中。"));
 					break;
 				case SUB_EAGER:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Eagerly teasing [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.assCloaca], [npc.name] [npc.verb(let)] out [npc.a_moan+] before greedily sinking [npc.her] digits into [npc2.her] [npc2.asshole+].",
+							"[npc.name]用[npc.fingers+]急切地挑逗着[npc2.namePos]的[npc2.assCloaca]，贪婪地将手指没入[npc2.her][npc2.asshole+]，发出一阵[npc.a_moan+]。",
 
 							
-							"[npc.Name] eagerly [npc.verb(press)] [npc.her] [npc.fingers+] down between [npc2.namePos] ass cheeks,"
-									+ " and with a determined thrust, [npc.she] greedily  [npc.verb(sink)] [npc.her] digits into [npc2.her] [npc2.asshole+]."));
+							"[npc.Name]将[npc.her][npc.fingers+]急切地压入[npc2.namePos]肉臀，"
+									+ "[npc.she]以难以撼动的推力，贪婪地将指部插进[npc2.namePos][npc2.asshole+]。"));
 					break;
 				case SUB_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Teasing [npc.her] [npc.fingers+] over [npc2.namePos] [npc2.assCloaca], [npc.name] [npc.verb(let)] out [npc.a_moan+] before sinking [npc.her] digits into [npc2.her] [npc2.asshole+].",
+							"[npc.name]用[npc.fingers+]挑逗着[npc2.namePos]的[npc2.assCloaca]，将手指没入[npc2.her][npc2.asshole+]，发出一阵[npc.a_moan+]。",
 
 							
-							"[npc.Name] [npc.verb(press)] [npc.her] [npc.fingers+] down between [npc2.namePos] ass cheeks, and with a little push, [npc.she]  [npc.verb(sink)] [npc.her] digits into [npc2.her] [npc2.asshole+]."));
+							"[npc.Name]将[npc.her][npc.fingers+]压入[npc2.namePos]肉臀，然后轻轻一推，就把[npc.her]的手指插入了[npc2.her][npc2.asshole+]。"));
 					break;
 				default:
 					break;
@@ -197,60 +197,60 @@ public class FingerAnus {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 					case DOM_GENTLE:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out a soft [npc2.moan] as [npc.namePos] [npc.fingers] enter [npc2.herHim],"
-										+ " before gently bucking [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand] as [npc2.name] [npc2.verb(help)]"
-										+ " to [npc2.verb(sink)] [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+].",
+								"[npc2.name]感受到[npc.namePos]的[npc.fingers]进入了自己的身体，不禁漏出轻柔的[npc2.a_moan+]，"
+										+ "然后在[npc2.name]的帮助下，轻轻地把[npc2.her][npc2.assCloaca]引向[npc.namePos]的[npc.hand]"
+										+ "[npc.her]的[npc.fingers]进一步深入[npc2.her][npc2.asshole+]。",
 	
 	
-								" With a soft [npc2.moan], [npc2.name] [npc2.verb(start)] gently bucking [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-										+ " encouraging [npc.herHim] to sink [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+]."));
+								"[npc2.name]轻柔地[npc2.moan]，开始温柔地将[npc2.assCloaca+]压向[npc.namePos]的[npc.hand]，"
+										+ "鼓励[npc.name]将[npc.fingers]更深地插入[npc2.her][npc2.asshole+]。"));
 						break;
 					case DOM_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.fingers] enter [npc2.herHim],"
-										+ " before eagerly bucking [npc2.her] [npc2.assCloaca] back against [npc.her] [npc.hand] as [npc2.she] enthusiastically [npc2.verb(help)]"
-										+ " to [npc2.verb(sink)] [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+].",
+								"[npc2.name]感受到[npc.namePos]的[npc.fingers]进入了自己的身体，不禁漏出一声[npc2.a_moan+]，"
+										+"在[npc2.her]热切地迎合下，急切地将[npc2.her][npc2.assCloaca]引向自己的[npc.hand]"
+										+ "[npc.her]的[npc.fingers]进一步深入[npc2.her][npc2.asshole+]。",
 	
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(start)] eagerly bucking [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-										+ " desperately encouraging [npc.name] to sink [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+]."));
+								"伴随着一声[npc2.a_moan+]，[npc2.name]开始急切地将[npc2.assCloaca]压向[npc.namePos]的[npc.hand]，"
+										+ "饥渴地鼓励[npc.Name]将[npc.fingers]更深地插入[npc2.her][npc2.asshole+]。"));
 						break;
 					case DOM_ROUGH:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.fingers] enter [npc2.herHim],"
-										+ " before violently bucking [npc2.her] [npc2.assCloaca] back against [npc.her] [npc.hand] and roughly forcing [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+].",
+								"[npc2.name]感受到[npc.namePos]的[npc.fingers]进入了自己的身体，不禁漏出一声[npc2.a_moan+]，"
+										+"然后激烈地将[npc2.assCloaca]压向[npc.her]的[npc.hand]，粗暴地让[npc.namePos]的[npc.fingers]更加深入自己[npc2.asshole+]。",
 	
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(start)] violently bucking [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-										+ " roughly forcing [npc.herHim] to sink [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+]."));
+								"伴随着一声[npc2.a_moan+]，[npc2.name]开始猛烈地将[npc2.assCloaca]撞向[npc.namePos]的[npc.hand]，"
+										+ "粗暴地强迫[npc.name]将[npc.fingers]更深地插入[npc2.her][npc2.asshole+]。"));
 						break;
 					case SUB_EAGER:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.fingers] enter [npc2.herHim],"
-										+ " eagerly bucking [npc2.her] [npc2.assCloaca] back against [npc.her] [npc.hand] as [npc2.she] enthusiastically [npc2.verb(help)]"
-										+ " to [npc2.verb(sink)] [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+].",
+								"[npc2.name]感受到[npc.namePos]的[npc.fingers]进入了自己的身体，不禁漏出一声[npc2.a_moan+]，"
+										+"在[npc2.her]热切地迎合下，急切地将[npc2.her][npc2.assCloaca]引向自己的[npc.hand]"
+										+ "[npc.her]的[npc.fingers]进一步深入[npc2.her][npc2.asshole+]。",
 	
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(start)] eagerly bucking [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-										+ " desperately encouraging [npc.herHim] to sink [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+]."));
+								"伴随着一声[npc2.a_moan+]，[npc2.name]开始急切地将[npc2.assCloaca]压向[npc.namePos]的[npc.hand]，"
+										+ "饥渴地鼓励[npc.Name]将[npc.fingers]更深地插入[npc2.her][npc2.asshole+]。"));
 						break;
 					case SUB_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.fingers] enter [npc2.herHim],"
-										+ " before bucking [npc2.her] [npc2.assCloaca] back against [npc.her] [npc.hand] and helping to sink [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+].",
+								"[npc2.name]感受到[npc.namePos]的[npc.fingers]进入了自己的身体，不禁漏出一声[npc2.a_moan+]，"
+										+"然后将[npc2.assCloaca]压向[npc.her]的[npc.hand]，让[npc.namePos]的[npc.fingers]更加深入自己[npc2.asshole+]。",
 	
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(start)] bucking [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-										+ " encouraging [npc.herHim] to sink [npc.her] [npc.fingers] even deeper into [npc2.her] [npc2.asshole+]."));
+								"伴随着一声[npc2.a_moan+]，[npc2.name]开始将[npc2.assCloaca]压向[npc.namePos]的[npc.hand]，"
+										+ "鼓励[npc.name]将[npc.fingers]更深地插入[npc2.her][npc2.asshole+]。"));
 						break;
 					case SUB_RESISTING:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.fingers] enter [npc2.herHim],"
-										+ " before trying, in vain, to pull [npc2.her] [npc2.assCloaca] away from the unwanted penetration, struggling and [npc2.sobbing] all the while.",
+								"[npc2.name]感受到[npc.namePos]的[npc.fingers]进入了自己的身体，不禁漏出一声[npc2.a_sob+]，"
+										+"[npc2.she]徒劳地挣扎扭身，试图拔出[npc2.assCloaca]中讨厌的插入物，不断[npc2.sobbing]着反抗。",
 	
 	
-								" With [npc2.a_sob+], [npc2.name] [npc2.verb(try)], in vain, to [npc2.verb(pull)] away from the unwanted penetration,"
-										+ " [npc2.sobbing] and struggling against [npc.name] as [npc.her] unwelcome [npc.fingers] [npc2.verb(push)] deep into [npc2.her] [npc2.asshole+]."));
+								"[npc2.name]发出[npc2.a_sob+]，徒劳地挣扎扭身，试图拔出讨厌的插入物，"
+										+ "[npc2.sobbing]并挣扎抵抗着[npc.name]，因为[npc.her]正试图将[npc.fingers]深入自己[npc2.asshole+]。"));
 						break;
 					default:
 						break;
@@ -267,58 +267,58 @@ public class FingerAnus {
 				case SUB_EAGER:
 				case DOM_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] eagerly [npc2.verb(thrust)] [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-									+ " letting out a delighted [npc2.moan] as [npc2.she] [npc2.verb(start)] enthusiastically imploring [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+							"[npc2.name]急切地将[npc2.assCloaca]撞向[npc.namePos]的[npc.hand]，"
+									+"[npc2.she]发出一声愉悦的[npc2.moan]，热切地乞求着[npc.Name]继续指交[npc2.her][npc2.asshole+]。",
 		
-							" A delighted [npc2.moan] bursts out from between [npc2.namePos] [npc2.lips+],"
-									+ " and, eagerly thrusting [npc2.her] [npc2.assCloaca] back against [npc.her] touch, [npc2.she] [npc2.verb(beg)] for [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+							"[npc2.namePos][npc2.lips+]间爆发出一声愉悦的[npc2.moan]，"
+									+ "[npc2.name]急切地将[npc2.assCloaca]向后推，让[npc.name]触摸，乞求[npc.Name]继续指交[npc2.her][npc2.asshole+]。",
 		
-							" [npc2.Moaning] in delight, [npc2.name] eagerly [npc2.verb(grind)] [npc2.her] [npc2.assCloaca] against [npc.namePos] [npc.hand],"
-									+ " eagerly begging for [npc.herHim] to continue as [npc2.her] movements drive [npc.her] [npc.fingers] ever deeper into [npc2.her] [npc2.ass+]."));
+							"[npc2.name]愉悦地[npc2.moaning]着，迫不及待地用[npc2.assCloaca]磨蹭[npc.namePos]的[npc.hand]，"
+									+ "做出有助于[npc.fingers]更深地插入[npc2.her][npc2.ass+]的动作，急切地乞求[npc.Name]继续。"));
 					break;
 				case SUB_RESISTING:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" Failing to recoil [npc2.her] [npc2.ass+] away from [npc.namePos] unwanted touch,"
-									+ " [npc2.name] [npc2.verb(let)] out [npc2.a_sob+] as [npc2.she] weakly [npc2.verb(try)] to struggle away from [npc.namePos] intruding [npc.fingers].",
+							"[npc2.name]无法将[npc2.ass+]从[npc.namePos]那讨厌的触摸下缩回，"
+									+ "[npc2.name]无力地反抗着[npc.namePos]插进来的[npc.fingers]，发出一阵[npc2.a_sob+]。",
 		
-							" [npc2.A_sob+] bursts out from between [npc2.namePos] [npc2.lips] as [npc2.she] weakly [npc2.verb(try)] to push [npc.name] away,"
-									+ " squirming and protesting as [npc.she] [npc.verb(continue)] to finger [npc2.namePos] [npc2.asshole+].",
+							"[npc2.namePos][npc2.lips]间爆发出一阵[npc2.A_sob+]，[npc2.she]无力地尝试推开[npc.name]，"
+									+ "即使对方全力抵抗，[npc.name]依然继续指交[npc2.her][npc2.asshole+]。",
 		
-							" [npc2.Sobbing] in distress, [npc2.name] [npc2.verb(try)], in vain, to recoil away from [npc.namePos] touch,"
-									+ " struggling against [npc.herHim] as [npc.her] [npc.fingers+] [npc.verb(continue)] sliding deep into [npc2.namePos] [npc2.ass+]."));
+							"[npc2.name]在痛苦中[npc2.Sobbing]着，徒劳地尝试不让[npc.name]触碰自己，"
+									+ "但[npc.name]还是将[npc.fingers+]插入了[npc2.her][npc2.ass+]，[npc2.she]奋力反抗着[npc.name]。"));
 					break;
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						" [npc2.Name] slowly [npc2.verb(thrust)] [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-								+ " letting out a soft [npc2.moan] as [npc2.she] [npc2.verb(start)] gently imploring [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+						"[npc2.name]缓慢地将[npc2.assCloaca]撞向[npc.namePos]的[npc.hand]，"
+								+ "[npc2.she]发出一声轻柔的[npc2.moan]，开始温柔地乞求[npc.name]继续指交[npc2.her][npc2.asshole+]。",
 	
-						" A soft [npc2.moan] drifts out from between [npc2.namePos] [npc2.lips+],"
-								+ " and, gently pushing [npc2.her] [npc2.hips] out against [npc.her] [npc.hand], [npc2.she] [npc2.verb(beg)] for [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+						" 一声轻柔的[npc2.moan]从[npc2.namePos][npc2.lips+]间飘离，"
+								+ "[npc2.she]温柔地将[npc2.hips]压向[npc.NamePos]的[npc.hand]，乞求[npc.Name]继续指交[npc2.her][npc2.asshole+]。",
 	
-						" [npc2.Moaning] in delight, [npc2.name] slowly [npc2.verb(grind)] [npc2.her] [npc2.assCloaca] against [npc.namePos] [npc.hand],"
-								+ " softly [npc2.moaning] for [npc.herHim] to continue as [npc2.her] movements cause [npc.her] [npc.fingers] to slide ever deeper into [npc2.her] [npc2.ass+]."));
+						"[npc2.name]愉悦地[npc2.moaning]着，缓缓地用[npc2.assCloaca]磨蹭[npc.namePos]的[npc.hand]，"
+								+ "做出有助于[npc.fingers]更深地插入[npc2.her][npc2.ass+]的动作，柔和地[npc2.moaning]着让[npc.Name]继续。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] violently [npc2.verb(thrust)] [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-									+ " letting out [npc2.a_moan+] as [npc2.name] roughly [npc2.verb(order)] [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+							"[npc2.name]粗暴地将[npc2.assCloaca]撞向[npc.namePos]的[npc.hand]，"
+									+ "[npc2.she]粗鲁地命令[npc.name]继续指交[npc2.her][npc2.asshole+]，发出一阵[npc2.a_moan+]。",
 	
-							" [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+],"
-									+ " and, roughly grinding [npc2.her] [npc2.hips] against [npc.her] [npc.hand], [npc2.name] dominantly [npc.verb(command)] [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+							"[npc2.namePos][npc2.lips+]间爆发出一阵[npc2.A_moan+]，"
+									+ "[npc2.she]粗鲁地将[npc2.hips]压向[npc.NamePos]的[npc.hand]，专横地命令[npc.Name]继续指交[npc2.her][npc2.asshole+]。",
 	
-							" [npc2.Name] roughly [npc2.verb(grind)] [npc2.her] [npc2.assCloaca] against [npc.namePos] [npc.hand],"
-									+ " ordering [npc.herHim] to continue as [npc2.her] forceful movements cause [npc.her] [npc.fingers] to sink ever deeper into [npc2.her] [npc2.ass+]."));
+							"[npc2.Name]粗暴地用[npc2.assCloaca]顶着[npc.namePos]的[npc.hand]，"
+									+ "强迫[npc.name]将[npc.fingers]深深插入[npc2.her][npc2.ass+]，命令[npc.name]继续。"));
 					break;
 				case SUB_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(thrust)] [npc2.her] [npc2.assCloaca] back against [npc.namePos] [npc.hand],"
-									+ " letting out [npc2.a_moan+] as [npc2.name] [npc2.verb(beg)] for [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+							"[npc2.name]将[npc2.assCloaca]撞向[npc.namePos]的[npc.hand]，"
+									+ "[npc2.she]乞求[npc.name]继续指交[npc2.her][npc2.asshole+]，发出一阵[npc2.a_moan+]。",
 		
-							" [npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+],"
-									+ " and, thrusting [npc2.her] [npc2.hips] out against [npc.her] touch, [npc2.name] [npc2.verb(beg)] for [npc.name] to continue fingering [npc2.her] [npc2.asshole+].",
+							"[npc2.namePos][npc2.lips+]间爆发出一阵[npc2.A_moan+]，"
+									+"接着，渴求更多的触碰，[npc2.name]扭动着腰，祈求[npc.name]继续用手指玩弄[npc2.asshole+]。",
 		
-							" [npc2.Moaning+], [npc2.name] [npc2.verb(grind)] [npc2.her] [npc2.assCloaca] against [npc.namePos] [npc.hand],"
-									+ " begging for [npc.herHim] to continue as [npc2.her] movements drive [npc.her] [npc.fingers] ever deeper into [npc2.her] [npc2.ass+]."));
+							"[npc2.name][npc2.moaning+]着，用[npc2.assCloaca]磨蹭[npc.namePos]的[npc.hand]，"
+									+ "做出有助于[npc.fingers]更深地插入[npc2.her][npc2.ass+]的动作，乞求[npc.Name]继续。"));
 					break;
 			}
 		}
@@ -337,12 +337,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Gentle anal fingering";
+			return "指交肛门(温柔)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently finger [npc2.namePos] [npc2.asshole+].";
+			return "温柔地指交[npc2.namePos][npc2.asshole+]。";
 		}
 		
 		@Override
@@ -350,12 +350,12 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Gently sinking [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(curl)] [npc.her] digits up, softly stroking [npc2.her] inner walls as [npc.she] slowly [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]温柔地将[npc.fingers+]插入[npc2.namePos][npc2.asshole+]，[npc.she]弯起手指按摩内壁，缓缓地指交[npc2.namePos]的[npc2.ass]。",
 
-					"Slowly pushing [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+],"
-							+ " [npc.name] gently [npc.verb(pump)] them in and out, letting out [npc.a_moan+] as [npc.she] softly [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]缓缓地将[npc.fingers+]插入[npc2.namePos][npc2.asshole+]，"
+							+ "[npc.she]温柔地进出抽插，柔和地指交[npc2.namePos]的[npc2.ass]，发出一阵[npc.a_moan+]。",
 
-					"Pressing [npc.her] [npc.hand] down against [npc2.namePos] [npc2.ass], [npc.name] [npc.verb(let)] out a little [npc.moan] as [npc.she] gently [npc.verb(slide)] [npc.her] [npc.fingers+] deep into [npc2.her] [npc2.asshole+]."));
+					"[npc.name]轻声[npc.moan]，把[npc.hand]贴紧[npc2.namePos]的[npc2.ass]，轻轻地把[npc.fingers+]不断探入[npc2.her][npc2.asshole+]内。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -373,24 +373,24 @@ public class FingerAnus {
 			SexPace.DOM_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Anal fingering";
+			return "指交肛门";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Continue fingering [npc2.namePos] [npc2.asshole+].";
+			return "继续指交[npc2.namePos][npc2.asshole+]。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Eagerly sinking [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(curl)] [npc.her] digits up,"
-							+ " enthusiastically stroking [npc2.her] inner walls as [npc.she] hungrily [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]急切地将[npc.fingers+]深深插入[npc2.namePos][npc2.asshole+]，然后将指部弯起，"
+							+ "亢奋地按摩内壁，[npc.she]饥渴地指交[npc2.namePos]的[npc2.ass]。",
 
-					"Firmly pushing [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+],"
-							+ " [npc.name] rapidly [npc.verb(pump)] them in and out, letting out [npc.a_moan+] as [npc.she] eagerly [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]坚定地将[npc.fingers+]插入[npc2.namePos][npc2.asshole+]，"
+							+ "[npc.she]开始迅速地进出抽插，急切地指交[npc2.namePos]的[npc2.ass]，发出一阵[npc.a_moan+]。",
 
-					"Eagerly pressing [npc.her] [npc.hand] down against [npc2.namePos] [npc2.ass], [npc.name] [npc.verb(let)] out [npc.a_moan+] before enthusiastically sliding [npc.her] [npc.fingers+] deep into [npc2.her] [npc2.asshole+]."));
+					"[npc.name]放出[npc.moan]，把[npc.hand]贴紧[npc2.namePos]的[npc2.ass]，亢奋地把[npc.fingers+]不断挤入[npc2.her][npc2.asshole+]内。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -409,12 +409,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Rough anal fingering";
+			return "指交肛门(粗暴)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Roughly finger [npc2.namePos] [npc2.asshole+].";
+			return "粗暴地指交[npc2.namePos][npc2.asshole+]。";
 		}
 
 		@Override
@@ -422,13 +422,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Greedily sinking [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(curl)] [npc.her] digits up,"
-							+ " roughly stroking [npc2.her] inner walls as [npc.she] forcefully [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]贪婪地将[npc.fingers+]深深插入[npc2.namePos][npc2.asshole+]，然后将指部弯起，"
+							+ "粗暴地开始按摩内壁，[npc.she]激烈地指交着[npc2.namePos]的[npc2.ass]。",
 
-					"Roughly pushing [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+],"
-							+ " [npc.name] violently [npc.verb(pump)] them in and out, letting out [npc.a_moan+] as [npc.she] forcefully [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]粗暴地将[npc.fingers+]插入[npc2.namePos][npc2.asshole+]，"
+							+ "[npc.she]开始猛烈地进出抽插，激烈地指交[npc2.namePos]的[npc2.ass]，发出一阵[npc.a_moan+]。",
 
-					"Forcefully pressing [npc.her] [npc.hand] down against [npc2.namePos] [npc2.ass], [npc.name] [npc.verb(let)] out [npc.a_moan+] before roughly slamming [npc.her] [npc.fingers+] deep into [npc2.her] [npc2.asshole+]."));
+					"[npc.name][npc.moan]出声，把[npc.hand]用力贴紧[npc2.namePos]的[npc2.ass]，粗暴地把[npc.fingers+]不断捅入[npc2.her][npc2.asshole+]内。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -448,12 +448,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Anal fingering";
+			return "指交肛门";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Continue fingering [npc2.namePos] [npc2.asshole+].";
+			return "继续指交[npc2.namePos][npc2.asshole+]。";
 		}
 
 		@Override
@@ -461,13 +461,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Sinking [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(curl)] [npc.her] digits up,"
-							+ " stroking [npc2.her] inner walls as [npc.she] [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]将[npc.fingers+]深深插入[npc2.namePos][npc2.asshole+]，然后将指部弯起，"
+							+ "开始按摩内壁，[npc.she]指交着[npc2.namePos]的[npc2.ass]。",
 
-					"Pushing [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+],"
-							+ " [npc.name] [npc.verb(pump)] them in and out, letting out [npc.a_moan+] as [npc.she] [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]将[npc.fingers+]插入[npc2.namePos][npc2.asshole+]，"
+							+ "[npc.she]开始进出抽插，指交[npc2.namePos]的[npc2.ass]，发出一阵[npc.a_moan+]。",
 
-					"Pressing [npc.her] [npc.hand] down against [npc2.namePos] [npc2.ass], [npc.name] [npc.verb(let)] out [npc.a_moan+] before sliding [npc.her] [npc.fingers+] deep into [npc2.her] [npc2.asshole+]."));
+					"[npc.name]发出[npc.moan]，把[npc.hand]贴紧[npc2.namePos]的[npc2.ass]，把[npc.fingers+]不断探入[npc2.her][npc2.asshole+]内。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -487,12 +487,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Eager anal fingering";
+			return "指交肛门(渴求)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Eagerly finger [npc2.namePos] [npc2.asshole+].";
+			return "饥渴地指交[npc2.namePos][npc2.asshole+]。";
 		}
 		
 		@Override
@@ -500,13 +500,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Eagerly sinking [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+], [npc.name] [npc.verb(curl)] [npc.her] digits up,"
-							+ " enthusiastically stroking [npc2.her] inner walls as [npc.she] hungrily [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]急切地将[npc.fingers+]深深插入[npc2.namePos][npc2.asshole+]，然后将指部弯起，"
+							+ "亢奋地按摩内壁，[npc.she]饥渴地指交[npc2.namePos]的[npc2.ass]。",
 
-					"Firmly pushing [npc.her] [npc.fingers+] into [npc2.namePos] [npc2.asshole+],"
-							+ " [npc.name] rapidly [npc.verb(pump)] them in and out, letting out [npc.a_moan+] as [npc.she] eagerly [npc.verb(finger)] [npc2.her] [npc2.ass].",
+					"[npc.name]坚定地将[npc.fingers+]插入[npc2.namePos][npc2.asshole+]，"
+							+ "[npc.she]开始迅速地进出抽插，急切地指交[npc2.namePos]的[npc2.ass]，发出一阵[npc.a_moan+]。",
 
-					"Eagerly pressing [npc.her] [npc.hand] down against [npc2.namePos] [npc2.ass], [npc.name] [npc.verb(let)] out [npc.a_moan+] before enthusiastically sliding [npc.her] [npc.fingers+] deep into [npc2.her] [npc2.asshole+]."));
+					"[npc.name]放出[npc.moan]，急切地把[npc.hand]贴紧[npc2.namePos]的[npc2.ass]，亢奋地把[npc.fingers+]不断挤入[npc2.her][npc2.asshole+]内。"));
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
 			
@@ -525,24 +525,24 @@ public class FingerAnus {
 			SexPace.SUB_RESISTING) {
 		@Override
 		public String getActionTitle() {
-			return "Resist anal fingering";
+			return "抵抗指交肛门";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and pull your [npc.fingers] out of [npc2.namePos] [npc2.asshole+].";
+			return "尝试把你的[npc.fingers]从[npc2.namePos][npc2.asshole+]中拔出。";
 		}
 		@Override
 		public String getDescription() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(feel)] tears starting to well up in [npc.namePos] [npc.eyes], and, unable to keep it in any longer,"
-							+ " [npc.a_sob+] bursts out from [npc.her] mouth as [npc.she] weakly [npc.verb(try)] to pull [npc.her] [npc.fingers] out of [npc2.namePos] [npc2.asshole+].",
+					"[npc.Name]再也抑制不住泪水，眼泪夺眶而出，"
+							+ "[npc.she]发出一阵[npc.a_sob+]，拼命地尝试将自己[npc.fingers+]从[npc2.namePos][npc2.asshole+]中抽离。",
 
-					"[npc.A_sob+] bursts out from [npc.namePos] mouth as [npc.she] frantically [npc.verb(try)] to pull [npc.her] [npc.fingers+] out of [npc2.namePos] [npc2.asshole+].",
+					"[npc.name]发出一阵[npc.a_sob+]，拼命地尝试将自己[npc.fingers+]从[npc2.namePos][npc2.asshole+]中抽离。",
 
-					"Trying desperately to pull [npc.her] [npc.fingers+] out of [npc2.namePos] [npc2.asshole+],"
-							+ " [npc.name] [npc.sob] in distress as [npc.she] [npc.verb(fail)] to pull them out of [npc2.her] [npc2.assCloaca+]."));
+					"[npc.name]拼命地尝试把自己[npc.fingers+]从[npc2.namePos][npc2.asshole+]中抽离，"
+							+"[npc.name]痛哭出声，没能把手指抽出[npc2.her]的[npc2.assCloaca+]。"));
 			
 			
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
@@ -560,11 +560,11 @@ public class FingerAnus {
 			SexParticipantType.NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Stop anal fingering";
+			return "停止指交肛门";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Pull your [npc.fingers] out of [npc2.namePos] [npc2.asshole+] and stop fingering [npc2.herHim].";
+			return "把你的[npc.fingers]从[npc2.namePos][npc2.asshole+]拔出去，停止指交[npc2.herHim]。";
 		}
 		@Override
 		public String getDescription() {
@@ -574,32 +574,32 @@ public class FingerAnus {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Roughly yanking [npc.her] [npc.fingers] out of [npc2.namePos] [npc2.asshole+], [npc.name] quickly takes [npc.her] [npc.hand] away from [npc2.namePos] [npc2.assCloaca].",
+							"[npc.name]粗暴地将[npc.fingers]从[npc2.namePos][npc2.asshole+]中拉出，迅速把[npc.hand]抽离[npc2.namePos]的[npc2.assCloaca]。",
 
-							"Thrusting deep inside of [npc2.name] one last time, [npc.name] then yanks [npc.her] [npc.fingers] back out of [npc2.namePos] [npc2.asshole+], putting an end to [npc.her] rough fingering."));
+							"[npc.name]最后一次深深插入[npc2.name]，然后将[npc.fingers]从[npc2.her][npc2.asshole+]中猛抽出来，结束了粗暴指交。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Sliding [npc.her] [npc.fingers] out of [npc2.namePos]  [npc2.asshole+], [npc.name] quickly takes [npc.her] [npc.hand] away from [npc2.namePos] [npc2.assCloaca].",
+							"[npc.name]将[npc.fingers]从[npc2.namePos][npc2.asshole+]中抽出，迅速把[npc.hand]抽离[npc2.namePos]的[npc2.assCloaca]。",
 
-							"Pushing deep inside of [npc2.name] one last time, [npc.name] then [npc.verb(slide)] [npc.her] [npc.fingers] back out of [npc2.namePos] [npc2.asshole+], putting an end to [npc.her] fingering."));
+							"[npc.name]最后一次深深插入[npc2.name]，然后将[npc.fingers]从[npc2.her][npc2.asshole+]中拔出来，结束了指交。"));
 					break;
 			}
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case SUB_RESISTING:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] gasp as [npc.name] withdraws from [npc2.namePos] [npc2.asshole], before letting out [npc2.a_sob+] as [npc2.name] [npc2.verb(continue)] to struggle against [npc.herHim].",
+							"[npc.name]从[npc2.namePos]的[npc2.asshole]中抽出手指，而[npc2.name]喘气连连，一边发出[npc2.a_sob+]一边持续挣扎着。",
 
 
-							" With [npc2.a_sob+], [npc2.name] [npc2.verb(continue)] to struggle against [npc.name] as [npc.she] withdraws from [npc2.namePos] [npc2.asshole+]."));
+							"[npc.Name]强行从[npc.asshole+]抽出手指，[npc2.name]拼命反抗，发出一声[npc2.a_sob+]。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] [npc.her] [npc.fingers+] out of [npc2.namePos] [npc2.asshole+].",
+							"[npc.name]将[npc.fingers+]从[npc2.namePos][npc2.asshole+]里拔出，[npc2.Name]发出一阵[npc2.a_moan+]。",
 
 
-							" [npc2.A_moan+] escapes from between [npc2.namePos] [npc2.lips+], betraying [npc2.namePos] desire for more of [npc.namePos] attention."));
+							"[npc2.namePos][npc2.lips+]间漏出一阵[npc2.A_moan+]，暴露了[npc2.she]渴望得到[npc.namePos]的更多关注。"));
 					break;
 			}
 			
@@ -617,12 +617,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Get anally fingered";
+			return "开始被指交肛门";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Get [npc2.name] to start fingering your [npc.assCloaca+].";
+			return "让[npc2.name]开始指交你[npc.assCloaca+]。";
 		}
 
 		@Override
@@ -632,43 +632,43 @@ public class FingerAnus {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Taking a gentle, but firm, grip on [npc2.namePos] [npc2.hand], [npc.name] slowly [npc.verb(guide)] [npc2.her] [npc2.fingers] over [npc.her] [npc.assCloaca],"
-									+ " letting out a little [npc.moan] before pushing [npc2.her] digits into [npc.her] [npc.asshole+].",
+							"[npc.name]温柔但牢固地抓住[npc2.namePos]的[npc2.hand]，将[npc2.namePos]那[npc2.fingers]引导到自己的[npc.assCloaca]，"
+									+ "发出轻柔的[npc.a_moan+]，将[npc2.namePos]的指部插入[npc.her][npc.asshole+]。",
 							
-							"Taking hold of [npc2.namePos] [npc2.hand], [npc.name] [npc.verb(guide)] [npc2.her] [npc2.fingers] between [npc.her] ass cheeks, and with a slow, steady pressure,"
-									+ " [npc.she] gently [npc.verb(push)] [npc2.her] digits into [npc.her] [npc.asshole+]."));
+							"在抓住[npc2.namePos]的[npc2.hands]后, [npc.Name]引导着将[npc2.her]那[npc2.fingers]滑向[npc.her]的臀瓣之间，并缓慢地摩擦了起来，"
+									+ "[npc.she]温柔地将[npc2.namePos]的指部推向[npc.her][npc.asshole+]。"));
 					break;
 				case DOM_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"With a firm grip on [npc2.her] [npc2.hand], [npc.name] eagerly [npc.verb(guide)] [npc2.namePos] [npc2.fingers] over [npc.her] [npc.assCloaca],"
-									+ " letting out [npc.a_moan+] before greedily pushing [npc2.her] digits into [npc.her] [npc.asshole+].",
+							"[npc.name]牢牢抓住[npc2.namePos]的[npc2.hand]，急切地将[npc2.namePos]那[npc2.fingers]引导到自己的[npc.assCloaca]，"
+									+ "发出[npc.a_moan+]，贪婪地将[npc2.namePos]的指部插入[npc.her][npc.asshole+]。",
 
-							"Taking hold of [npc2.namePos] [npc2.hand], [npc.name] eagerly [npc.verb(guide)] [npc2.her] [npc2.fingers] between [npc.her] ass cheeks, and with a determined pressure,"
-									+ " [npc.she] greedily [npc.verb(push)] [npc2.her] digits into [npc.her] [npc.asshole+]."));
+							"[npc.Name]抓住[npc2.namePos]的[npc2.hands]，急切地引导[npc2.her]的[npc2.fingers]滑向自己的臀瓣之间，并缓慢地摩擦了起来，"
+									+ "[npc.she]贪婪地将[npc2.namePos]的指部推向[npc.her][npc.asshole+]。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"With a vice-like grip on [npc2.her] [npc2.hand], [npc.name] [npc.verb(grind)] [npc2.namePos] [npc2.fingers] over [npc.her] [npc.assCloaca],"
-									+ " letting out [npc.a_moan+] before roughly forcing [npc2.her] digits into [npc.her] [npc.asshole+].",
+							"[npc.name]牢牢钳制住[npc2.namePos]的[npc2.hand]，用[npc2.namePos]那[npc2.fingers]磨蹭自己的[npc.assCloaca]，"
+									+ "发出[npc.a_moan+]，粗暴地将[npc2.namePos]的指部插入[npc.her][npc.asshole+]。",
 
-							"Grabbing [npc2.namePos] [npc2.hand], [npc.name] forcefully [npc.verb(push)] [npc2.namePos] [npc2.fingers] between [npc.her] ass cheeks, and with a dominant, jerking motion,"
-									+ " [npc.she] roughly [npc.verb(stuff)] [npc2.her] digits into [npc.her] [npc.asshole+]."));
+							"[npc.name]抓住[npc2.namePos]的[npc2.hand]，激烈地将[npc2.namePos]那[npc2.fingers]拉向[npc.her]肉臀间，然后霸道地猛推，"
+									+ "[npc.she]粗暴地将[npc2.namePos]的指部插进[npc.her][npc.asshole+]。"));
 					break;
 				case SUB_EAGER:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"With a firm grip on [npc2.her] [npc2.hand], [npc.name] eagerly [npc.verb(guide)] [npc2.namePos] [npc2.fingers] over [npc.her] [npc.assCloaca],"
-									+ " letting out [npc.a_moan+] before greedily pushing [npc2.her] digits into [npc.her] [npc.asshole+].",
+							"[npc.name]牢牢抓住[npc2.namePos]的[npc2.hand]，急切地将[npc2.namePos]那[npc2.fingers]引导到自己的[npc.assCloaca]，"
+									+ "发出[npc.a_moan+]，贪婪地将[npc2.namePos]的指部插入[npc.her][npc.asshole+]。",
 
-							"Taking hold of [npc2.namePos] [npc2.hand], [npc.name] eagerly [npc.verb(guide)] [npc2.namePos] [npc2.fingers] between [npc.her] ass cheeks, and with a determined pressure,"
-									+ " [npc.she] greedily [npc.verb(push)] [npc2.her] digits into [npc.her] [npc.asshole+]."));
+							"[npc.Name]抓住[npc2.namePos]的[npc2.hands]，急切地引导[npc2.namePos]的[npc2.fingers]滑向自己的臀瓣之间，并缓慢地摩擦了起来，"
+									+ "[npc.she]贪婪地将[npc2.namePos]的指部推向[npc.her][npc.asshole+]。"));
 					break;
 				case SUB_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"With a firm grip on [npc2.her] [npc2.hand], [npc.name] [npc.verb(guide)] [npc2.namePos] [npc2.fingers] over [npc.her] [npc.assCloaca],"
-									+ " letting out [npc.a_moan+] before pushing [npc2.her] digits into [npc.her] [npc.asshole+].",
+							"[npc.name]牢牢抓住[npc2.namePos]的[npc2.hand]，将[npc2.namePos]那[npc2.fingers]引导到自己的[npc.assCloaca]，"
+									+ "发出[npc.a_moan+]，将[npc2.namePos]的指部插入[npc.her][npc.asshole+]。",
 
-							"Taking hold of [npc2.namePos] [npc2.hand], [npc.name] [npc.verb(guide)] [npc2.namePos] [npc2.fingers] between [npc.her] ass cheeks, and with a determined pressure,"
-									+ " [npc.she] [npc.verb(push)] [npc2.her] digits into [npc.her] [npc.asshole+]."));
+							"[npc.Name]抓住[npc2.namePos]的[npc2.hand]，引导[npc2.namePos]的[npc2.fingers]滑向自己的臀瓣之间，并缓慢地摩擦了起来，"
+									+ "[npc.she]将[npc2.namePos]的指部推向[npc.her][npc.asshole+]。"));
 					break;
 				default:
 					break;
@@ -678,47 +678,47 @@ public class FingerAnus {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 					case DOM_GENTLE:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out a soft [npc2.moan] as [npc2.she] [npc2.verb(enter)] [npc.herHim], curling [npc2.her] [npc2.fingers] up before gently starting to finger [npc.her] [npc.asshole+].",
+								"[npc2.name]进入[npc.name]的身体，不禁发出轻柔的[npc2.moan]，然后弯起[npc2.fingers]，开始温柔地指交[npc.her][npc.asshole+]。",
 	
-								" With a soft [npc2.moan], [npc2.name] [npc2.verb(curl)] [npc2.her] [npc2.fingers+] up inside of [npc.name],"
-										+ " gently pushing [npc2.her] [npc2.hand] into [npc.her] [npc.assCloaca] as [npc2.she] [npc2.verb(set)] about fingering [npc.her] [npc.asshole+]."));
+								"[npc2.name]轻柔地[npc2.moan]着，将[npc2.fingers+]在[npc.Name]体内弯起，"
+										+ "[npc2.she]温柔地将[npc2.hand]压进[npc.NamePos]的[npc.assCloaca]，开始指交[npc.NamePos][npc.asshole+]。"));
 						break;
 					case DOM_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(enter)] [npc.herHim], curling [npc2.her] [npc2.fingers] up before eagerly starting to finger [npc.her] [npc.asshole+].",
+								"[npc2.name]进入[npc.name]的身体，不禁发出一阵[npc2.a_moan+]，然后弯起[npc2.fingers]，开始急切地指交[npc.her][npc.asshole+]。",
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(curl)] [npc2.her] [npc2.fingers+] up inside of [npc.name],"
-										+ " eagerly pushing [npc2.her] [npc2.hand] into [npc.her] [npc.assCloaca] as [npc2.she] [npc2.verb(set)] about fingering [npc.her] [npc.asshole+]."));
+								"[npc2.name]发出一阵[npc2.a_moan+]，将[npc2.fingers+]在[npc.Name]体内弯起，"
+										+ "[npc2.she]急切地将[npc2.hand]压向[npc.NamePos]的[npc.assCloaca]，开始指交[npc.NamePos][npc.asshole+]。"));
 						break;
 					case DOM_ROUGH:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(enter)] [npc.herHim], and, seeking to remind [npc.name] who's in charge,"
-										+ " [npc2.she] roughly [npc2.verb(curl)] [npc2.her] [npc2.fingers] up before starting to ruthlessly finger-fuck [npc.her] [npc.asshole+].",
+								"[npc2.name]顶进[npc.Name]的身体，忘我地发出一阵[npc2.a_moan+]，为了提醒[npc.Name]谁才是主导者，"
+										+ "[npc2.she]粗暴地弯起[npc2.fingers]，开始无情地指交[npc.namePos][npc.asshole+]。",
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(curl)] [npc2.her] [npc2.fingers+] up inside of [npc.name],"
-										+ " seeking to remind [npc.name] who's in charge as [npc2.she] [npc2.verb(start)] roughly fingering [npc.her] [npc.asshole+]."));
+								"[npc2.name]发出一阵[npc2.a_moan+]，将[npc2.fingers+]在[npc.Name]体内弯起，"
+										+ "[npc2.she]无情地指交[npc.namePos][npc.asshole+]，宣告着自己的支配权。"));
 						break;
 					case SUB_EAGER:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(enter)] [npc.herHim], curling [npc2.her] [npc2.fingers] up before eagerly starting to finger [npc.her] [npc.asshole+].",
+								"[npc2.name]进入[npc.name]的身体，不禁发出一阵[npc2.a_moan+]，然后弯起[npc2.fingers]，开始急切地指交[npc.her][npc.asshole+]。",
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(curl)] [npc2.her] [npc2.fingers+] up inside of [npc.name],"
-										+ " eagerly pushing [npc2.her] [npc2.hand] into [npc.her] [npc.assCloaca] as [npc2.she] [npc2.verb(set)] about fingering [npc.her] [npc.asshole+]."));
+								"[npc2.name]发出一阵[npc2.a_moan+]，将[npc2.fingers+]在[npc.Name]体内弯起，"
+										+ "[npc2.she]急切地将[npc2.hand]压向[npc.NamePos]的[npc.assCloaca]，开始指交[npc.NamePos][npc.asshole+]。"));
 						break;
 					case SUB_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(enter)] [npc.herHim], curling [npc2.her] [npc2.fingers] up before starting to finger [npc.her] [npc.asshole+].",
+								"[npc2.name]进入[npc.name]的身体，不禁发出一阵[npc2.a_moan+]，然后弯起[npc2.fingers]，开始指交[npc.her][npc.asshole+]。",
 	
-								" With [npc2.a_moan+], [npc2.name] [npc2.verb(curl)] [npc2.her] [npc2.fingers+] up inside of [npc.name],"
-										+ " pushing [npc2.her] [npc2.hand] into [npc.her] [npc.assCloaca] as [npc2.she] [npc2.verb(set)] about fingering [npc.her] [npc.asshole+]."));
+								"[npc2.name]发出一阵[npc2.a_moan+]，将[npc2.fingers+]在[npc.Name]体内弯起，"
+										+ "[npc2.she]将[npc2.hand]压向[npc.NamePos]的[npc.assCloaca]，开始指交[npc.NamePos][npc.asshole+]。"));
 						break;
 					case SUB_RESISTING:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.name] [npc.verb(force)] [npc2.her] [npc2.fingers] inside of [npc.herHim],"
-										+ " struggling against [npc.namePos] firm grip on [npc2.her] [npc2.hand] as [npc2.she] [npc2.verb(try)] to pull [npc2.herself] free.",
+								"[npc.name]紧紧裹住[npc2.name]那[npc2.fingers]，[npc2.her]不禁发出一声[npc2.a_sob+]，"
+										+ "[npc2.she]挣扎着，想要从[npc.namePos]的紧握中抽出自己的[npc2.hand]。",
 	
-								" With [npc2.a_sob+], [npc2.name] [npc2.verb(start)] struggling against [npc.namePos] tight grip on [npc2.her] [npc2.hand],"
-										+ " pleading for [npc.name] to stop as [npc.she] [npc2.verb(force)] [npc2.her] [npc2.fingers] deep into [npc.her] [npc.asshole+]."));
+								"[npc2.name]发出[npc2.a_sob+]，挣扎着从[npc.namePos]的紧握中抽出手，"
+										+ "[npc2.her]请求[npc.Name]不要再强迫自己把手指深入[npc.her][npc.asshole+]内。"));
 						break;
 					default:
 						break;
@@ -741,12 +741,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Gently anally fingered";
+			return "被指交肛门(温柔)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently enjoy [npc2.namePos] [npc2.fingers+] in your [npc.asshole+].";
+			return "温柔地享受[npc2.namePos][npc2.fingers+]指交你[npc.asshole+]。";
 		}
 
 		@Override
@@ -754,13 +754,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Gently pushing [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.name] [npc.verb(let)] out a soft [npc.moan] as [npc.she] [npc.verb(help)] to sink [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+].",
+					"[npc.name]温柔地将[npc.assCloaca]向后压向[npc2.namePos]的[npc2.hand]，"
+							+ "让[npc2.namePos][npc2.fingers+]深深插入自己[npc.asshole+]，发出一阵轻柔地[npc.moan]。",
 
-					"With a soft [npc.moan], [npc.name] gently [npc.verb(start)] gyrating [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand], forcing [npc2.her] [npc2.fingers+] ever deeper into [npc.her] [npc.asshole+].",
+					"伴随着一声轻柔的[npc.moan]，[npc.Name]温柔地将[npc.assCloaca]扭向[npc2.namePos]的[npc2.hand]，迫使[npc2.namePos][npc2.fingers+]更深地插入[npc.her][npc.asshole+]。",
 
-					"Slowly thrusting [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " a soft [npc.moan] drifts out from between [npc.namePos] [npc.lips+] as [npc.her] movements force [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+]."));
+					"[npc.name]缓慢地将[npc.assCloaca]向后顶向[npc2.namePos]的[npc2.hand]，"
+							+ "[npc.lips+]间飘出一声轻柔的[npc.moan]，[npc.her]设法让[npc2.namePos][npc2.fingers+]深深插入[npc.her][npc.asshole+]。"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -778,12 +778,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Enjoy fingering";
+			return "享受指交";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Enjoy [npc2.namePos] [npc2.fingers+] in your [npc.asshole+].";
+			return "享受[npc2.namePos][npc2.fingers+]指交你[npc.asshole+]。";
 		}
 
 		@Override
@@ -791,13 +791,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Eagerly pushing [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(help)] to sink [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+].",
+					"[npc.name]急切地将[npc.assCloaca]向后压向[npc2.namePos]的[npc2.hand]，"
+							+ "让[npc2.namePos][npc2.fingers+]深深插入自己[npc.asshole+]，发出一阵[npc.a_moan+]。",
 
-					"With [npc.a_moan+], [npc.name] energetically [npc.verb(start)] gyrating [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand], forcing [npc2.her] [npc2.fingers+] ever deeper into [npc.her] [npc.asshole+].",
+					"[npc.Name]发出一阵[npc.a_moan+]，竭力地将[npc.assCloaca]扭向[npc2.namePos]的[npc2.hand]，迫使[npc2.namePos][npc2.fingers+]更深地插入[npc.her][npc.asshole+]。",
 
-					"Enthusiastically thrusting [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.a_moan+] drifts out from between [npc.her] [npc.lips+] as [npc.her] movements force [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+]."));
+					"[npc.name]亢奋地将[npc.assCloaca]向后顶向[npc2.namePos]的[npc2.hand]，"
+							+ "[npc.lips+]间迸发出一阵[npc.a_moan+]，[npc.her]设法让[npc2.namePos][npc2.fingers+]插入自己[npc.asshole+]深处。"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -815,12 +815,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Roughly anally fingered";
+			return "被指交肛门(粗暴)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Roughly force [npc2.namePos] [npc2.fingers+] deep inside your [npc.asshole+].";
+			return "粗暴地强迫[npc2.namePos][npc2.fingers+]深入你[npc.asshole+]。";
 		}
 
 		@Override
@@ -828,13 +828,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Violently slamming [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] roughly [npc.verb(force)] [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+].",
+					"[npc.name]粗暴地把[npc.assCloaca]撞向[npc2.namePos]的[npc2.hand]，"
+							+ "强迫[npc2.namePos][npc2.fingers+]粗暴地深深插入自己[npc.asshole+]，发出一阵[npc.a_moan+]。",
 
-					"With [npc.a_moan+], [npc.name] [npc.verb(start)] aggressively gyrating [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand], forcing [npc2.her] [npc2.fingers+] ever deeper into [npc.her] [npc.asshole+].",
+					"[npc.Name]发出一阵[npc.a_moan+]，强有力地将[npc.assCloaca]扭向[npc2.namePos]的[npc2.hand]，强迫[npc2.namePos][npc2.fingers+]在自己[npc.asshole+]中插得更深。",
 
-					"Roughly thrusting [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.a_moan+] bursts out from between [npc.her] [npc.lips+] as [npc.her] forceful movements drive [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+]."));
+					"[npc.name]将[npc.assCloaca]粗暴地向后顶向[npc2.namePos]的[npc2.hand]，"
+							+ "[npc.lips+]间迸发出一阵[npc.a_moan+]，[npc.her]设法让[npc2.namePos][npc2.fingers+]有力地插入自己[npc.asshole+]深处。"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -852,12 +852,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Enjoy anal fingering";
+			return "享受指交肛门";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Enjoy [npc2.namePos] [npc2.fingers+] in [npc.her] [npc.asshole+].";
+			return "享受[npc2.namePos][npc2.fingers+]指交[npc.her][npc.asshole+]。";
 		}
 
 		@Override
@@ -865,13 +865,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Pushing [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(help)] to sink [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+].",
+					"[npc.name]将[npc.assCloaca]向后压向[npc2.namePos]的[npc2.hand]，"
+							+ "让[npc2.namePos][npc2.fingers+]深深插入自己[npc.asshole+]，发出一阵[npc.a_moan+]。",
 
-					"With [npc.a_moan+], [npc.name] [npc.verb(start)] gyrating [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand], forcing [npc2.her] [npc2.fingers+] ever deeper into [npc.her] [npc.asshole+].",
+					"[npc.Name]发出一阵[npc.a_moan+]，将[npc.assCloaca]扭向[npc2.namePos]的[npc2.hand]，强迫[npc2.namePos][npc2.fingers+]在自己[npc.asshole+]中插得更深。",
 
-					"Thrusting [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.a_moan+] drifts out from between [npc.her] [npc.lips+] as [npc.her] movements force [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+]."));
+					"[npc.name]将[npc.assCloaca]向后顶向[npc2.namePos]的[npc2.hand]，"
+							+ "[npc.lips+]间迸发出一阵[npc.a_moan+]，[npc.her]设法让[npc2.namePos][npc2.fingers+]插入自己[npc.asshole+]深处。"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -889,12 +889,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Eagerly anally fingered";
+			return "被指交肛门(渴求)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Eagerly push your [npc.assCloaca+] against [npc2.namePos] [npc2.hand] as [npc2.she] fingers your [npc.asshole+].";
+			return "饥渴地将你[npc.assCloaca+]压向[npc2.namePos]的[npc2.hand]，让[npc2.she]指交你[npc.asshole+]。";
 		}
 
 		@Override
@@ -902,13 +902,13 @@ public class FingerAnus {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Eagerly pushing [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(help)] to sink [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+].",
+					"[npc.name]急切地将[npc.assCloaca]向后压向[npc2.namePos]的[npc2.hand]，"
+							+ "让[npc2.namePos][npc2.fingers+]深深插入自己[npc.asshole+]，发出一阵[npc.a_moan+]。",
 
-					"With [npc.a_moan+], [npc.name] energetically [npc.verb(start)] gyrating [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand], forcing [npc2.her] [npc2.fingers+] ever deeper into [npc.her] [npc.asshole+].",
+					"[npc.Name]发出一阵[npc.a_moan+]，竭力地将[npc.assCloaca]扭向[npc2.namePos]的[npc2.hand]，迫使[npc2.namePos][npc2.fingers+]更深地插入[npc.her][npc.asshole+]。",
 
-					"Enthusiastically thrusting [npc.her] [npc.assCloaca] back against [npc2.namePos] [npc2.hand],"
-							+ " [npc.a_moan+] drifts out from between [npc.her] [npc.lips+] as [npc.her] movements force [npc2.namePos] [npc2.fingers+] deep into [npc.her] [npc.asshole+]."));
+					"[npc.name]亢奋地将[npc.assCloaca]向后顶向[npc2.namePos]的[npc2.hand]，"
+							+ "[npc.lips+]间迸发出一阵[npc.a_moan+]，[npc.her]设法让[npc2.namePos][npc2.fingers+]插入自己[npc.asshole+]深处。"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -926,12 +926,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Resist anal fingering";
+			return "抵抗指交肛门";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Try and pull [npc2.namePos] [npc2.fingers] out of your [npc.asshole+].";
+			return "尝试把[npc2.namePos]的[npc.fingers]从你[npc.asshole+]中拔出。";
 		}
 		
 		@Override
@@ -942,40 +942,40 @@ public class FingerAnus {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Name] [npc.verb(feel)] tears starting to well up in [npc.namePos] [npc.eyes], and, unable to keep it in any longer,"
-									+ " [npc.a_sob+] bursts out from [npc.her] mouth as [npc.she] weakly [npc.verb(try)] to pull [npc2.namePos] gently-pumping [npc2.fingers] out of [npc.her] [npc.asshole+].",
+							"[npc.Name]再也抑制不住泪水，眼泪夺眶而出，"
+									+ "[npc.she]发出一阵[npc.a_sob+]，虚弱地尝试着，将[npc2.namePos]轻轻抽动的[npc2.fingers+]从自己[npc.asshole+]中抽出。",
 
-							"[npc.A_sob+] bursts out from [npc.namePos] mouth as [npc.she] frantically [npc.verb(try)] to pull [npc.her] [npc.assCloaca] away from [npc2.namePos] unwanted touch,"
-									+ " struggling in desperation as [npc2.namePos] [npc2.fingers+] continue gently sliding in and out of [npc.her] [npc.asshole+].",
+							"[npc.name]发出一阵[npc.a_sob+]，拼命地尝试将[npc.assCloaca]从[npc2.namePos]令人憎恶的抚摸下抽离，"
+									+ "[npc.she]绝望地挣扎着，但[npc2.namePos][npc2.fingers+]依然温柔地在[npc.her][npc.asshole+]里滑进滑出。",
 
-							"Trying desperately to pull [npc.her] [npc.assCloaca] away from [npc2.namePos] [npc2.hand],"
-									+ " [npc.name] [npc.sob] in distress as [npc2.namePos] [npc2.fingers+] continue gently sliding deep into [npc.her] [npc.asshole+]."));
+							"[npc.name]拼命地尝试把[npc.assCloaca]从[npc2.namePos]的[npc2.hand]边挪开，"
+									+ "[npc2.namePos][npc2.fingers+]依然温柔地滑进[npc.Name][npc.asshole+]深处，使得[npc.Name]难以抑制地[npc.sob]。"));
 					break;
 				case DOM_NORMAL:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Name] [npc.verb(feel)] tears starting to well up in [npc.namePos] [npc.eyes], and, unable to keep it in any longer,"
-									+ " [npc.a_sob+] bursts out from [npc.her] mouth as [npc.she] weakly [npc.verb(try)] to pull [npc2.namePos] greedily-thrusting [npc2.fingers] out of [npc.her] [npc.asshole+].",
+							"[npc.Name]再也抑制不住泪水，眼泪夺眶而出，"
+									+ "[npc.she]发出一阵[npc.a_sob+]，虚弱地尝试着，将[npc2.namePos]贪婪饥渴的[npc2.fingers]从自己[npc.asshole+]中轻轻抽出。",
 
 
-							"[npc.A_sob+] bursts out from [npc.namePos] mouth as [npc.she] frantically [npc.verb(try)] to pull [npc.her] [npc.assCloaca] away from [npc2.namePos] unwanted touch,"
-									+ " struggling in desperation as [npc2.namePos] [npc2.fingers+] continue eagerly sliding in and out of [npc.her] [npc.asshole+].",
+							"[npc.name]发出一阵[npc.a_sob+]，拼命地尝试将[npc.assCloaca]从[npc2.namePos]令人憎恶的抚摸下抽离，"
+									+ "[npc.she]绝望地挣扎着，但[npc2.namePos][npc2.fingers+]依然急切地在[npc.her][npc.asshole+]里滑进滑出。",
 
 
-							"Trying desperately to pull [npc.her] [npc.assCloaca] away from [npc2.namePos] [npc2.hand],"
-									+ " [npc.name] [npc.sob] in distress as [npc2.namePos] [npc2.fingers+] continue eagerly pumping deep into [npc.her] [npc.asshole+]."));
+							"[npc.name]拼命地尝试把[npc.assCloaca]从[npc2.namePos]的[npc2.hand]边挪开，"
+									+ "[npc2.namePos][npc2.fingers+]依然饥渴地插入[npc.Name][npc.asshole+]深处，使得[npc.Name]难以抑制地[npc.sob]。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Name] [npc.verb(feel)] tears starting to well up in [npc.namePos] [npc.eyes], and, unable to keep it in any longer,"
-									+ " [npc.a_sob+] bursts out from [npc.her] mouth as [npc.she] weakly [npc.verb(try)] to pull [npc2.namePos] roughly-thrusting [npc2.fingers] out of [npc.her] [npc.asshole+].",
+							"[npc.Name]再也抑制不住泪水，眼泪夺眶而出，"
+									+ "[npc.she]发出一阵[npc.a_sob+]，虚弱地尝试着，将[npc2.namePos]粗暴抽插的[npc2.fingers]从自己[npc.asshole+]中轻轻抽出。",
 
 
-							"[npc.A_sob+] bursts out from [npc.namePos] mouth as [npc.she] frantically [npc.verb(try)] to pull [npc.her] [npc.assCloaca] away from [npc2.namePos] unwanted touch,"
-									+ " struggling in desperation as [npc2.namePos] [npc2.fingers+] continue roughly slamming in and out of [npc.her] [npc.asshole+].",
+							"[npc.name]发出一阵[npc.a_sob+]，拼命地尝试将[npc.assCloaca]从[npc2.namePos]令人憎恶的抚摸下抽离，"
+									+ "[npc.she]绝望地挣扎着，但[npc2.namePos][npc2.fingers+]依然粗暴地在[npc.her][npc.asshole+]里抽送爆操。",
 
 
-							"Trying desperately to pull [npc.her] [npc.assCloaca] away from [npc2.namePos] [npc2.hand],"
-									+ " [npc.name] [npc.sob] in distress as [npc2.namePos] [npc2.fingers+] continue roughly slamming deep into [npc.her] [npc.asshole+]."));
+							"[npc.name]拼命地尝试把[npc.assCloaca]从[npc2.namePos]的[npc2.hand]边挪开，"
+									+ "[npc2.namePos][npc2.fingers+]依然粗暴撞进[npc.Name][npc.asshole+]深处，使得[npc.Name]难以抑制地[npc.sob]。"));
 					break;
 				default:
 					break;
@@ -996,12 +996,12 @@ public class FingerAnus {
 		
 		@Override
 		public String getActionTitle() {
-			return "Stop anally fingered";
+			return "停止被指交肛门";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Force [npc2.name] to pull [npc2.her] [npc2.fingers] out of your [npc.asshole+].";
+			return "让[npc2.name]把[npc2.her]那[npc2.fingers]从你[npc.asshole+]里拔出来。";
 		}
 
 		@Override
@@ -1012,30 +1012,30 @@ public class FingerAnus {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Yanking [npc2.namePos] [npc2.fingers] out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(growl)] at [npc2.name] as [npc.she] [npc.verb(command)] [npc2.herHim] to stop fingering [npc.herHim].",
+							"[npc.name]猛地将[npc2.namePos]那[npc2.fingers]从自己[npc.asshole+]里抽出，[npc.she]愤怒地咆哮着，命令[npc2.name]停止指交。",
 
-							"[npc.Name] [npc.verb(lean)] into [npc2.name], inhaling [npc2.her] [npc2.scent] as [npc.she] [npc.verb(yank)] [npc2.her] [npc2.fingers] out of [npc.her] [npc.asshole+]."));
+							"[npc.Name]倚靠在[npc2.name]身上，呼吸着[npc2.her]的[npc2.scent]，然后猛地将[npc2.her]那[npc2.fingers]从自己[npc.asshole+]中抽出。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Sliding [npc2.namePos] [npc2.fingers] out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out [npc.a_moan+] before telling [npc2.herHim] to stop fingering [npc.herHim].",
+							"[npc.name]将[npc2.namePos]那[npc2.fingers]从自己[npc.asshole+]里抽出，[npc.she]发出一阵[npc.a_moan+]，告诉[npc2.name]停止指交。",
 
-							"[npc.Name] lean into [npc2.name], inhaling [npc2.her] [npc2.scent] as [npc.name] [npc.verb(slide)] [npc2.her] [npc2.fingers] out of [npc.her] [npc.asshole+]."));
+							"[npc.Name]倚靠在[npc2.name]身上，呼吸着[npc2.her]的[npc2.scent]，然后将[npc2.her]那[npc2.fingers]从自己[npc.asshole+]中滑出。"));
 					break;
 			}
 			
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case SUB_RESISTING:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out a relieved sigh, which soon turns into [npc2.a_sob+] as [npc2.she] [npc2.verb(realise)] that [npc.nameIsFull]n't finished with [npc2.herHim] yet.",
+							"[npc2.Name]松了一口气，但当[npc2.she]意识到[npc.name]还没完全满足时，又发出了一阵[npc2.a_sob+]。",
 
-							" With [npc2.a_sob+], [npc2.name] [npc2.verb(continue)] to protest and struggle against [npc.name] as [npc.she] [npc.verb(hold)] [npc2.herHim] firmly in place."));
+							"[npc2.name]发出一阵[npc2.a_sob+]，继续反抗并挣扎着，但[npc.name]依然牢牢地将[npc2.she]固定在原位。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] [npc2.herHim] from stimulating [npc.her] [npc.asshole+].",
+							"[npc.Name]不再让[npc2.name]玩弄自己[npc.asshole+]，[npc2.name]不情愿地发出一声[npc2.a_moan+]。",
 
-							" [npc2.A_moan+] escapes from between [npc2.namePos] [npc2.lips+], betraying [npc2.her] desire to give [npc.her] [npc.asshole+] more of [npc2.her] attention."));
+							"[npc2.namePos][npc2.lips+]间漏出一阵[npc2.A_moan+]，暴露了[npc2.she]想更多关注[npc.namePos][npc.asshole+]的渴望。"));
 					break;
 			}
 			

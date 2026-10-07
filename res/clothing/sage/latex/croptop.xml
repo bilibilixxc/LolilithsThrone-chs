@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>50</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[latex crop top]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[latex crop tops]]></namePlural>
-		<description><![CDATA[An extra short latex crop top that leaves the entire torso exposed while only covering the neck and arms.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[乳胶露腹上衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乳胶露腹上衣]]></namePlural>
+		<description><![CDATA[超短乳胶露腹上衣，露出整个躯干，仅遮住脖子和手臂。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>TORSO_UNDER</slot>

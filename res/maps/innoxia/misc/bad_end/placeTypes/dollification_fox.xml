@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[CEO's Office]]></name>
-	<tooltipDescription><![CDATA[You work in your Master's office as his secretary and fuck-toy.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in your Master's office]]></virginityLossDescription>
+	<name><![CDATA[CEO办公室]]></name>
+	<tooltipDescription><![CDATA[你在主人的办公室里作为秘书和性玩具而工作。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在你主人的办公室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

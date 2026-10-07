@@ -1,131 +1,131 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	<p>
-		Set back from one of the main streets, and with Dominion's canal running close behind it, there's an expansive lumber yard, with a couple of large warehouses sitting in the middle of it. An impressive wrought-iron sign over the entrance to this area declares it be 'Argus's DIY Depot', while smaller, wooden signs attached to the supporting posts reveal that the warehouses are open from 
+		这里背靠一条主干道，后面紧邻御城区运河，有一个宽阔的木材场，中间有几个大仓库。入口处有一个令人印象深刻的锻铁标志，上面写着“阿格斯的DIY仓库”，而支撑柱子上的木质小标志则显示，仓库的营业时间是
 		#IF(game.isExtendedWorkTime())
-			 [style.colourMinorGood([units.time(6)]-[units.time(22)])].
+			[style.colourMinorGood([units.time(6)]-[units.time(22)])].
 		#ELSE
-			 [style.colourMinorBad([units.time(6)]-[units.time(22)])].
+			[style.colourMinorBad([units.time(6)]-[units.time(22)])].
 		#ENDIF
 	</p>
 	<p>
-		Looking across at the warehouses, you see that one is quite clearly signposted as being open to the general public, while the other is apparently just for supplying small businesses. Huge posters advertising cans of paint, ceramic tiles, tools, timber, and all manner of miscellaneous building supplies have been plastered all over the walls of these warehouses, letting passersby know the sort of things which can be purchased here.
+		再看看对面的仓库，你发现其中一个仓库明确标明向公众开放，而另一个仓库显然只向小企业供货。这些仓库的墙上贴满了油漆罐、瓷砖、工具、木材和各种杂项建筑用品的巨幅广告海报，让路人知道在这里可以买到什么样的东西。
 	</p>
 	<p>
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			As there's an arcane storm raging overhead, your surroundings are almost completely deserted, with only the occasional demon to be seen walking down the nearby street.
+			由于头顶上正肆虐着一场奥术风暴，你的周围几乎空无一人，只能偶尔看到恶魔在附近的街道上行走。
 			#IF(game.isExtendedWorkTime())
-				 As the warehouses are [style.colourGood(currently open)], you wonder how many people are inside due to legitimate business, and how many are just making use of the building to take shelter from the storm. If you wanted to, you could always head inside the one signposted as being open to the public and do some shopping for DIY or building supplies.
+				这些仓库都[style.colourGood(正在开放)]，你不知道里面有多少人是在做正当生意，又有多少人只是在建筑里躲避风暴。如果你愿意的话，你可以去标明向公众开放的仓库，购买一些DIY或建筑用品。
 			#ELSE
-				 Unfortunately, due to the time of day, the warehouses are [style.colourBad(currently closed)], so if you wanted to do any shopping for DIY or building supplies, you'll have to return at a more sociable hour.
+				不幸的，现在这个时间，这些仓库都[style.colorBad(正在打烊)]，所以如果你想购买任何DIY或建筑用品，你必须在更适合的时间过来。
 			#ENDIF
 		#ELSE
 			#IF(game.isExtendedWorkTime())
-				As the warehouses are [style.colourGood(currently open)], you could always head inside the one signposted as being open to the public and do some shopping for DIY or building supplies.
+				这些仓库都是[style.colourGood(正在开放)]，你可以去标明向公众开放的仓库，购买一些DIY或建筑用品。
 			#ELSE
-				Unfortunately, due to the time of day, the warehouses are [style.colourBad(currently closed)], so if you wanted to do any shopping for DIY or building supplies, you'll have to return at a more sociable hour.
+				不幸的，现在这个时间，这些仓库都[style.colorBad(正在打烊)]，所以如果你想购买任何DIY或建筑用品，你必须在更适合的时间过来。
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE -->
 	
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		The first thing anyone notices upon entering this warehouse is the large, colourful sign hanging from its high ceiling, which bears the exclamation, '<i>Welcome to Argus's DIY Depot!</i>'
+		进入这座仓库，首先注意到的是悬挂在高高天花板上的彩色大标牌，上面有着大大的感叹号：“<i>欢迎来到阿格斯的DIY仓库！</i>”
 	</p>
 	<p>
-		In stark contrast to this cheery message, the rest of the scene which greets new customers is a distinctly boring one, consisting of a series of a dozen or so checkouts, several rows of trolleys, and a rather uninspired collection of ordinary garden plants. Taking a brief look around, you notice that less than half of these checkouts are currently staffed, which is causing a small queue of customers to build up at each one. In addition to the employees working behind these tills, there's a solitary security guard standing watch near the front doors, who seems to be doing little else but casting suspicious glances at everyone who walks past him.
+		与这一欢欣鼓舞的信息形成鲜明对比的是，迎接新顾客的其他地方却显得十分乏味，只有十几个收银台、几排手推车和一些毫无新意的普通花园植物。环顾四周，你发现这些收银台中只有不到一半有人在值班，这导致每个收银台前都排起了长队。除了这些收银员外，还有一名单独的保安在前门附近站岗，他似乎除了对走过的每个人投出怀疑的目光外，几乎不做其他事情。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CORRIDOR -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		The interior of 'Argus's DIY Depot' is just as dull to the casual shopper as one would expect. Drab, grey concrete flooring perfectly matches the monotone steel roof high up ahead, while the goods stacked up on the tall shelves would be best described as being distinctly unremarkable. From boxes of screws to flooring tiles, arcane light bulbs to stacks of wooden planks, there really isn't anything here that threatens to hold your interest for more than a fraction of a second.
+		“阿格斯的DIY仓库”的内部装潢与休闲购物者想象的一样沉闷。单调的灰色混凝土地面与高高耸立的单色钢铁屋顶相得益彰，堆放在高高货架上的商品也是毫不起眼。从成箱的螺丝钉到地板砖，再到奥术灯泡和成堆的木板，这里确实没有任何东西能让你产生超过一秒钟的兴趣。
 	</p>
 	<p>
-		As you continue forwards, your progress is regularly impeded by groups of slow-moving shoppers, and occasionally also by the odd shopping trolley inconsiderately positioned so as to be blocking half of the aisle. All of this, combined with the unbearably repetitive background music being piped through the store's loudspeakers, makes you think that prolonged exposure to this environment would surely be enough to drive anybody completely insane.
+		你继续前行，经常会遇到成群结队、行动迟缓的购物者，偶尔还会遇到不经意摆放的购物手推车，以至于挡住了半条过道。所有这一切，再加上店内扬声器播放的令人难以忍受的重复的背景音乐，让你觉得长期处于这样的环境中肯定足以让任何人彻底疯掉。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_PAINT_OPTIONS"><![CDATA[
 	<p>
-		Informative signs are helpfully positioned throughout the warehouse, and after consulting the nearest one, you discover that the 'Premium-grade Supplies' are kept near the front entrance. This would undoubtedly be the place to go if you were intending to buy the 'Purple-star' paint which Helena specified. Then again, if you wanted to save some money, and are prepared to run the risk of annoying Helena, you could head over to the sides of the warehouse, where the 'Standard-grade Supplies' are marked as being kept...
+		仓库里到处都贴着信息告示，你走近一看，发现“高级用品”就放在前门附近。如果你想购买海伦娜指定的「紫星」油漆，无疑应该去这里。不过，如果你想省点钱，冒着惹恼海伦娜的风险，你可以去仓库的两侧，那里标明存放的是“标准级用品”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_PAINT_PURCHASED"><![CDATA[
 	<p>
-		<i>As you've already purchased a can of golden paint, you should return to Helena and deliver it to her as soon as possible.</i>
+		<i>你已经购买了一罐金色颜料，你应该尽快回到海伦娜身边并把油漆交给她。</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHELVING_PREMIUM -->
 	
 	<htmlContent tag="SHELVING_PREMIUM"><![CDATA[
 	<p>
-		Tall shelving units have been lined up to form a solid wall in front of you, and you see that each one of them is stocked full of almost every type of building supply imaginable. While the products on display don't look particularly special, their prices are listed as being anything up to ten times what they ordinarily should be. The reason for these astronomical costs seems to be that these shelves are labelled as containing 'Premium-grade supplies'. 
+		高高的货架一字排开，在你面前形成一堵坚实的墙，你看到每一个货架上都摆满了几乎所有能想到的建筑用品。虽然展示的产品看起来并不特别，但它们的价格却高达正常价格的十倍。造成这些天价的原因，似乎是这些货架上的产品都被标为“高级用品”。
 	</p>
 	<p>
 		#IF(pc.hasTraitActivated(PERK_OBSERVANT))
-			Taking a quick look around, you see that while there are quite a few customers browsing these shelves, not a single one looks like they know what they're doing. Perhaps there's a reason why these supplies don't seem to be attracting the attention of the more experienced shoppers... 
+			环顾四周，你发现虽然有不少顾客在浏览这些货架，但没有一个人看起来知道自己在做什么。也许是有原因的，这些用品似乎没法吸引更有经验的购物者……
 		#ELSE
-			Taking a quick look around, you see that there are quite a few customers browsing these shelves. If popularity is any measure, then perhaps these supplies are worth their steep price after all...
+			环顾四周，你会发现有不少顾客在浏览这些货架。如果人气是衡量标准的话，那么这些用品的高昂价格也许还是物有所值的……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHELVING_PREMIUM_PRICE"><![CDATA[
 	<p>
-		A few of the shelves in this area are stocked with nothing but 'Purple-star' branded cans of paint. Heading over to the section which has been set aside for metallic colours, you quickly locate the can of golden paint [style.colourGood(which Helena requested)]. Just as it was in the brochure, it's marked up as costing [style.colourGold([#SPECIAL_PARSE_0] flames)], which is significantly more expensive than the 'Bronze-star' brand...
+		这个区域的几个货架上只摆放着「紫星」牌油漆。来到金属色区，你很快就找到了一罐[style.colourGood(海伦娜要求的)]金色油漆。和宣传册上的一样，它的标价是[style.colourGold([#SPECIAL_PARSE_0]火币)]，比「青铜星」牌贵得多……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHELVING_PAINT_PURCHASED"><![CDATA[
 	<p>
-		<i>As you've already purchased a can of golden paint for Helena, there's nothing more for you to do here...</i>
+		<i>你已经为海伦娜购买了一罐金色颜料，没什么可做的了……</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SHELVING_STANDARD -->
 	
 	<htmlContent tag="SHELVING_STANDARD"><![CDATA[
 	<p>
-		Each side of the warehouse is lined with a series of tall shelves, and as you stand before them, you see that they're stocked full of all manner of miscellaneous building supplies. While the prices displayed next to each item seem to be very reasonable, there are several small signs reminding you that these 'Standard-grade supplies' are not the finest quality goods which are on offer, and that if you want the very best, you should head back to browse over the 'Premium-grade supplies' located near to the entrance.
+		仓库的每一侧都摆放着一系列高高的货架，站在货架前，你发现里面堆满了各种杂七杂八的建筑用品。虽然每件物品旁边显示的价格似乎都很合理，但还是有几块小牌子提醒你，这些“标准级用品”并不是这里提供的最优质的商品，如果你想要最好的，就应该到入口附近的“高级用品”去看看。
 	</p>
 	<p>
 		#IF(pc.hasTraitActivated(PERK_OBSERVANT))
-			Taking a quick look around, you see that not only are there lots of people browsing the goods in this section, but there are also several of them who look to be experienced shoppers. Perhaps there's a reason why these people are over here instead of at the more expensive 'Premium-grade supplies' section... 
+			环顾四周，你发现不仅有很多人在浏览这个区域的商品，而且其中有几个看起来还是经验丰富的购物者。也许这些人在这里而不是在更昂贵的“高级用品”区是有原因的……
 		#ELSE
-			Taking a quick look around, you see that there are a lot of customers browsing these shelves. It seems as though most people either don't care about getting the 'Premium-grade supplies', or simply can't afford them...
+			环顾四周，你会发现有很多顾客在浏览这些货架。看来，大多数人要么不屑于购买“高级用品”，要么根本买不起……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHELVING_STANDARD_PRICE"><![CDATA[
 	<p>
-		A few of the shelves in this area are stocked with nothing but 'Bronze-star' branded cans of paint. Heading over to the section which has been set aside for metallic colours, you quickly locate a can of golden paint. Just as it was in the brochure, it's marked up as costing [style.colourBronze([#SPECIAL_PARSE_0] flames)], which, while being significantly cheaper than the 'Purple-star' brand, is also [style.colourBad(not the one which Helena requested)]...
+		这个区域的几个货架上只摆放着「青铜星」牌的油漆。走到金属色区，你很快就找到了一罐金色油漆。和宣传册上一样，它的标价为[style.colourBronze([#SPECIAL_PARSE_0]火币)]，虽然价格比「紫星」牌便宜得多，但它[style.colourBad(不是海伦娜要求的)]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- PAINT_PURCHASED -->
@@ -133,242 +133,242 @@
 	<htmlContent tag="PAINT_PURCHASED"><![CDATA[
 	#IF(pc.getRace().equals(RACE_DEMON))
 		<p>
-			Picking up the can of golden paint, you quickly make your way over to the checkouts, before joining on at the end of the shortest queue. As the customers notice your approach, and see that you're [pc.a_race], they quickly move aside to let you move to the front. The employee behind the till immediately stops serving the customer she was dealing with, and offers, [style.speechFeminine(Good [style.afternoon], [pc.maam], please let me take that for you.)]
+			在拿起那罐金色颜料后，你便迅速走向收银台，然后排在了最短的队伍末尾。但当顾客们注意到你的到来，并看到你是一个[pc.a_race]时，他们迅速让开来让你走到前面。收银台后面的员工立即停止为她正在接待的顾客服务，并主动询问道：[style.speechFeminine([style.afternoon]好，[pc.maam]，请让我来帮您吧。)]
 		</p>
 		<p>
-			Doing as the helpful cashier says, you hand the can of paint over to her, along with the [#SPECIAL_PARSE_0] flames required to purchase it. Once the transaction is complete, you head over towards the warehouse's exit, ignoring the apologetic remarks of several customers who hurry to move out of your way.
+			按照收银员的吩咐，你把购买油漆所需的[#SPECIAL_PARSE_0]火币与漆罐一同交了出去。在交易完成之后，你无视了那些匆忙避让的家伙们的歉意，径直离开了这里。
 		</p>
 	#ELSE
 		<p>
-			Picking up the can of golden paint, you quickly make your way over to the checkouts, before joining on at the end of the shortest queue. After what seems to take an eternity, you finally reach the front of the line, whereupon the employee behind the till drones in a monotonous tone, [style.speechFeminine(Good [style.afternoon], [pc.maam], please let me take that for you.)]
+			在拿起那罐金色颜料后，你便迅速走向收银台，然后排在了最短的队伍末尾。似乎在等待了一个世纪之后，你终于排到了队伍的最前面，这时，收银台后面的员工用单调的语气絮絮叨叨地说着什么：[style.speechFeminine([style.afternoon]好，[pc.maam], 让我来帮你吧。)]
 		</p>
 		<p>
-			Doing as the bored cashier says, you hand the can of paint over to her, along with the [#SPECIAL_PARSE_0] flames required to purchase it. Once the transaction is complete, you head over towards the warehouse's exit, ignoring the suspicious glare which the security guard throws your way.
+			按照这个无聊收银员的吩咐，你把购买油漆所需的[#SPECIAL_PARSE_0]火币与漆罐一同交了出去。在交易完成之后，你无视了保安投来的怀疑目光，径直离开了这里。
 		</p>
 	#ENDIF
 	<p>
-		With the double doors right ahead of you, you wonder whether you should head back out into the streets of Dominion right away, or head back into the store and look around a little more before leaving...
+		大门就在你面前，你不知道是应该马上回到御城区的街道上，还是回到店里再四处看看再走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BUILDING_SUPPLIES -->
 	
 	<htmlContent tag="BUILDING_SUPPLIES"><![CDATA[
 	<p>
-		The shelves near the back of the warehouse seem to have been set aside for stockpiling all sorts of building materials. Timber planks, ceramic tiles, metal piping, and all other sorts of miscellaneous supplies can be found here.
+		靠近仓库后面的货架似乎是用来储存各种建筑材料的。木板、瓷砖、金属管道和其他各种杂项用品都可以在这里找到。
 	</p>
 	<p>
-		Looking around, you see that there aren't many people looking around in this section. Most shoppers apparently seem to be more interested in the goods on offer in other parts of the warehouse.
+		在环顾四周，你发现并没有多少人选择在这个区域购物，大多数地购物者显然对仓库其他地方的商品更感兴趣。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE -->
 	
 	<htmlContent tag="OFFICE"><![CDATA[
 	<p>
-		Although its frosted glass windows run along the entire front length of the warehouse, the manager's office seems to have only the one entrance, which takes the form of the wooden door that you're currently standing in front of. Etched onto a polished brass plate that's fixed to the wall beside this door, you read the words: <i>'Argus's Office: No admittance to the public'</i>
+		虽然磨砂玻璃窗贯穿整个仓库的正面，但经理办公室似乎只有一个入口，就是你面前地这扇木门。门旁的墙壁上固定着一块抛光的黄铜板，上面刻着几个字：<i>'阿格斯办公室：不对外开放'</i>
 	</p>
 	<p>
-		As you have no business with Argus, you don't see any reason to knock on the door of his office, and so there's nothing for you to do except turn around and head back into the warehouse.
+		既然你和阿格斯没有任何关系，所以你也就没有理由去敲他办公室的门，现在你只能转身回到仓库去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS -->
 	
 	<htmlContent tag="TOILETS"><![CDATA[
 	<p>
-		While quite basic, the toilets provided for the store's customers are well maintained, and are far cleaner than you'd expect of an average public restroom. You count just four stalls in here, but this limited number doesn't seem to be an issue,
+		为顾客提供的厕所虽然很简陋，但维护得很好，比一般的公共厕所要干净得多。虽然这里只有四个隔间，但数量有限似乎不是什么大问题。
 		#IF(pc.hasCompanions())
-			 as other than you and [com.name],
+			因为这里除了你和[com.name]之外
 		#ELSE
-			 as other than yourself,
+			因为这里除了你之外
 		#ENDIF
-		 there isn't a single person in here. Directly opposite the stalls, there are a series of mirrors and sinks, one of which has been marked as out of order.
+		一个人都没有。在坑位的正对面是一排镜子和水槽，而其中一个水槽也被标记为维护中。
 	</p>
 	<p>
-		As you walk past the open stalls, you see that the wall separating the two at the far end has had a glory hole cut into it. While it's been taped over on one side, there's really nothing that would be stopping someone from simply peeling this barrier off and making use of it...
+		当你走过敞开的坑位时，你发现最深处隔开的两个坑位的墙壁被凿了一个大洞。虽然墙的一侧被胶带封住了，但没有任何东西可以阻止有人直接把这道屏障剥掉并加以利用……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_USE -->
 	
 	<htmlContent tag="TOILETS_USE"><![CDATA[
 	<p>
-		Stepping into one of the empty stalls, you turn and lock the door behind you, before making use of the toilet. After you've finished, you flush the toilet before making your way over to one of the sinks and washing your [pc.hands]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你走进其中一个空隔间，转身锁上身后的门，然后上厕所。如厕完毕后，你冲完马桶，然后走到水槽前洗净双手，再从旁边的纸巾机拿起一张纸巾，迅速擦干。你转身面向房间，盘算着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_WASH -->
 	
 	<htmlContent tag="TOILETS_WASH"><![CDATA[
 	<p>
-		Feeling like you could do with having a quick clean, you step over to the sinks and thoroughly wash your [pc.hands], before splashing some water on your [pc.face]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你觉得自己可以做个快速清洁，于是走到水池边仔细洗了洗[pc.hands]，然后往[pc.face]上扑了些水。结束后，你从旁边的纸巾机抽出纸巾，迅速擦干皮肤，然后转身面向房间，下一步要做什么呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_DOM -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM"><![CDATA[
 	<p>
-		Deciding that it would be fun to get serviced at the glory hole, you peel off the tape that's covering it up, before
+		你认为在寻欢洞接受服务会很有趣，于是你撕掉了遮住寻欢洞的胶带，
 		#IF(pc.hasCompanions())
-			 telling [com.name] to wait outside and then locking the stall's door behind you.
+			然后告诉[com.name]在外面等着后，你锁上了隔间的门。
 		#ELSE
-			  locking the stall's door behind you.
+			然后锁上了隔间的门。
 		#ENDIF
-		 With the restroom still completely deserted, you have little choice but to patiently wait for a stranger to turn up and choose to service you through the glory hole...
+		由于洗手间仍然空无一人，所以你别无选择，只能耐心等待一个陌生人出现，并且愿意通过寻欢洞为你提供服务……
 	</p>
 	<p>
-		Five minutes later, you finally hear someone enter the stall on the other side. With the open glory hole obviously having been the reason they chose to enter this stall, the stranger chooses to immediately kneel down
+		五分钟后，你终于听到有人进入另一边的隔间。开放的寻欢洞显然是他们选择进入这个隔间的原因，所以这个陌生人立即跪了下去，
 		#IF(npc.isMute())
-			 and push [npc.her] open mouth up to the hole. With an impatient tap on the wall to let you know that [npc.sheIs] there, the stranger prepares to orally service you.
+			[npc.her]张开嘴并靠在洞口上， 然后这个陌生人不耐烦地敲了敲墙，好让你知道[npc.sheIs]在那里并且也做好了口交服务的准备。
 		#ELSE
-			 and call out through the hole,
+			这个陌生人开口喊道：
 			#IF(pc.hasPenis())
-				 [npc.speech(Come on then! Put your cock through here and I'll give it a good suck!)]
+				[npc.speech(来吧！把你的鸡巴伸进来吧！我会好好吮吸它的！)]
 			#ELSEIF(pc.hasVagina())
-				 [npc.speech(Come on then! Push your pussy up against the hole and I'll eat you out!)]
+				[npc.speech(来吧，把你的小穴对着洞口，我会让你爽一爽的！)]
 			#ELSE
-				 [npc.speech(Come on then! Give me something to suck already!)]
+				[npc.speech(来吧！随便把什么东西放进我嘴里！)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about receiving oral from some random stranger, you back away from the hole and wait for them to give up and leave...
+		对于接受陌生人的口交一事你又有了其他想法，于是你远离洞口，等待他们放弃并离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_START"><![CDATA[
 	<p>
-		Having already waited long enough, you quickly step up to the glory hole,
+		已经等了足够长时间，你快速地走到寻欢洞前，
 		#IF(pc.hasPenis())
-			 preparing to have your [pc.cock+] sucked by the stranger on the other side.
+			准备让对面的陌生人吮吸你[pc.cock+]。
 		#ELSEIF(pc.hasVagina())
-			 preparing to have your [pc.pussy+] licked by the stranger on the other side.
+			准备让对面的陌生人舔你[pc.pussy+]。
 		#ELSE
-			 preparing to have your genderless mound licked by the stranger on the other side.
+			准备让对面的陌生人舔你的无性的下体。
 		#ENDIF
 	</p>
 	<p>
-		As [npc.she] sees the approach of your groin, [npc.name] lets out [npc.a_moan+], before shuffling closer to the wall and firmly pressing [npc.her] open mouth up against the hole. 
+		[npc.she]看到你的腹股沟靠近时，[npc.name]发出[npc.a_moan+]，然后贴近墙壁，将[npc.her]张开的嘴紧紧地贴在洞口上。
 		#IF(!npc.isMute())
-			 Letting out [npc.a_moan+], [npc.she] impatiently encourages you to get started, [game.random(
-			[npc.speech(Oh yeah, come on! Let this whore show you what [npc.sheIs] capable of!)]
-			|[npc.speech(~Mmm!~ Oh yeah! Let's get started!)]
-			|[npc.speech(Oh yeah, babe! I'll show you how much of a slut I am!)])]
+			[npc.she]发出[npc.a_moan+]，不耐烦地鼓励你开始行动[game.random(
+			[npc.speech(哦~来吧！让我这个荡妇向你展示一下[npc.sheIs]能做些什么！)]
+			|[npc.speech(~嗯！~哦！让我们开始吧！)]
+			|[npc.speech(哦~宝贝！我来让你看看我有多淫荡！)])]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_DOM_POST_SEX -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_POST_SEX"><![CDATA[
 	<p>
-		You step back from the glory hole, grinning as you hear [npc.name] let out a happy little [npc.moan]. As you get your things in order, you see a flash of movement through the hole, before the creak of the adjoining stall's door announces the horny slut's exit.
+		你从寻欢洞前[pc.step]开，听到[npc.Name]发出快乐的小声[npc.moan]，你咧嘴一笑。你整理好东西，看到人影从洞中一闪而过，之后隔壁隔间的门吱吱作响，宣告这个淫荡的婊子出去了。
 	</p>
 	<p>
-		Just a moment later, you reach down to unlock the door of your own stall, and as you open it and step back out into the toilets, you see that [npc.name] has already left. With absolutely no idea as to who just orally serviced you, you wonder what to do next...
+		片刻之后，你打开了自己隔间的门锁。你打开门回到厕所，发现[npc.Name]已经离开了。你完全不知道刚才是谁在为你口交，思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_SUB -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB"><![CDATA[
 	<p>
-		Feeling horny and eager to pleasure some stranger's cock, you peel off the tape that's covering up the glory hole, before
+		你认为在寻欢洞服务一根陌生地鸡巴会很有趣，于是你撕掉了遮住寻欢洞的胶带，
 		#IF(pc.hasCompanions())
-			 telling [com.name] to wait outside and then locking the stall's door behind you.
+			然后告诉[com.name]在外面等着后，你锁上了隔间的门。
 		#ELSE
-			  locking the stall's door behind you.
+			然后锁上了隔间的门。
 		#ENDIF
-		 With the restroom still completely deserted, you have little choice but to patiently wait for a stranger to turn up and have you service them...
+		由于洗手间仍然空无一人，所以你别无选择，只能耐心等待一个陌生人出现，并且愿意通过寻欢洞接受你提供的服务……
 	</p>
 	<p>
-		Five minutes later, and you finally hear someone enter the stall on the other side. With the open glory hole obviously having been the reason they chose to enter this stall, the stranger immediately steps up to it and starts shifting their clothing out of the way. Just a moment later, and their [npc.cockDescriptive(true)] is being pushed through the hole. Before you can make a move, [npc.name]
+		五分钟后，你终于听到有人进入另一边的隔间。开放的寻欢洞显然是他们选择进入这个隔间的原因，这个陌生人走到寻欢洞前开始脱起了衣服，随后便把[npc.cockDescriptive(true)]怼到了洞口处，在你有所行动之前，[npc.name]
 		#IF(npc.isMute())
-			 impatiently taps the wall, encouraging you to get started on sucking [npc.her] cock...
+			不耐烦地开始敲打墙壁，并催促你赶紧给[npc.her]口交……
 		#ELSE
 			#IF(npc.isSelfish())
 				#IF(npc.isFeminine())
-					 barks out a sharp command,
+					一声尖锐地命令声突然传来，
 				#ELSE
-					 lets out a deep growl,
+					一声低沉地怒吼声传来，
 				#ENDIF
-				 [game.random(
-				[npc.speech(Come on, slut, get to work!)]
-				|[npc.speech(Start sucking, slut!)]
-				|[npc.speech(Come on, you dirty slut, get started already!)])]
+				[game.random(
+				[npc.speech(来吧，荡妇，开始工作吧！)]
+				|[npc.speech(开始吸吧，骚货！)]
+				|[npc.speech(来吧，你这个肮脏的荡妇，该工作了！)])]
 			#ELSE
 				#IF(npc.isFeminine())
-					 sensually [npc.moansVerb],
+					一道性感地[npc.moansVerb]传来，
 				#ELSE
-					 lets out a deep grunt,
+					一道低沉的咕噜声传来，
 				#ENDIF
-				 [game.random(
-				[npc.speech(Come on then, show me what you can do!)]
-				|[npc.speech(Get your lips wrapped around my cock!)]
-				|[npc.speech(Come on, get started already!)])]
+				[game.random(
+				[npc.speech(来吧，让我看看你的本事！)]
+				|[npc.speech(用你的嘴含住我的鸡巴！)]
+				|[npc.speech(来吧，该开始了！)])]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about servicing some random stranger's cock, you back away from the hole and wait for them to give up and leave...
+		对于为陌生人的阴茎服务一事你又有了其他想法，于是你远离洞口，等待他们放弃并离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_START"><![CDATA[
 	<p>
-		Having already waited long enough, you quickly kneel down in front of the glory hole,
+		已经等得够久了，你赶紧跪在了寻欢洞前，
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 before opening your mouth and leaning in towards [npc.namePos] [npc.cock+].
+			然后张开嘴，靠近[npc.namePos][npc.cock+]。
 		#ELSE
-			 but as your mouth is blocked, all you can prepare to do is give [npc.name] a handjob.
+			但由于你的嘴被堵住了，你只能准备给[npc.Name]一个手交。
 		#ENDIF
 	</p>
 	<p>
-		Hearing you drop down in front of [npc.herHim], [npc.name] lets out an eager [npc.moan], and as [npc.her] cock starts to stiffen, [npc.she] impatiently bucks [npc.her] [npc.hips] up against the wall.
+		听到你跪在了[npc.herHim]跟前，[npc.Name]发出了急切的[npc.moan]，随着[npc.her]的阴茎变硬，[npc.she]急不可耐地将[npc.her]的[npc.hips]怼在墙上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_SUB_POST_SEX -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_POST_SEX"><![CDATA[
 	<p>
-		You step back from the glory hole, grinning to yourself as you hear [npc.name] letting out a satisfied [npc.moan]. As you get your things in order, you see a flash of movement through the hole, before the creak of the adjoining stall's door announces the stranger's exit.
+		你从寻欢洞前离开，听到[npc.Name]发出快乐的小声[npc.moan]，你咧嘴一笑。你整理好东西，看到人影从洞中一闪而过，之后隔壁隔间的门吱吱作响，宣告这个淫荡的婊子出去了。
 	</p>
 	<p>
-		Just a moment later, you reach down to unlock the door of your own stall, and as you open it and step back out into the toilets, you see that [npc.name] has already left. With absolutely no idea as to whose cock you just serviced, you wonder what to do next...
+		片刻之后，你打开了自己隔间的门锁。你打开门回到厕所，发现[npc.Name]已经离开了。你完全不知道刚才是谁在为你口交，思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

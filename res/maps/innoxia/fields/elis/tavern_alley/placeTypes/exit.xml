@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[entrance]]></name>
-	<tooltipDescription><![CDATA[The entrance to 'The Crossed Blades' tavern.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the entrance to 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[入口]]></name>
+	<tooltipDescription><![CDATA[十字利刃的入口。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在十字利刃入口处]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

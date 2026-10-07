@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>1500</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
-		<name><![CDATA[taur-skirt]]></name>
+		<name><![CDATA[马罩袍]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[taur-skirts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[马罩袍]]></namePlural> 
 		
-		<description><![CDATA[A specially-designed skirt, suitable to be fit onto the lower body of any taur race.]]></description> 
+		<description><![CDATA[一条专门设计的裙子，适合任何下半身是兽态的种族。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -86,27 +86,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the taur-skirt down over [npc.her] head, before allowing it to settle into place over [npc.her] [npc.legRace]'s body.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the taur-skirt down over [npc2.namePos] head, before allowing it to settle into place over [npc2.her] [npc2.legRace]'s body.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(yank)] the taur-skirt down over [npc2.namePos] head, before firmly pulling it down over [npc2.her] [npc2.legRace]'s body.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将马罩袍从头上拉下，然后让它在[npc.her]的[npc.legRace]的身体上合适地安顿下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将马罩袍从[npc2.namePos]的头上套下来，并使得罩袍能够很好的包裹住[npc2.her]的[npc2.legRace]的身体。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]将马罩袍从[npc2.namePos]的头上拽下来，并使得罩袍能够很好的包裹住[npc2.her]的[npc2.legRace]的身体。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] taur-skirt, before pulling it up and over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of [npc2.namePos] taur-skirt, before pulling it up and over [npc2.her] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(grab)] hold of [npc2.namePos] taur-skirt, before yanking it up and over [npc2.her] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]抓住[npc.her]的马罩袍，然后把它举过[npc.her]的头顶。
+]]></self>
+    <other><![CDATA[
+[npc.Name]抓住[npc.her]的马罩袍，然后把它拉过[npc2.namePos]的头顶。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]抓住[npc.her]的马罩袍，然后把它扯过[npc2.namePos]的头顶。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

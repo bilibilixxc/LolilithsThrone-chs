@@ -102,7 +102,7 @@ public class SMDominionExpressEncounter extends SexManagerDefault {
 	public String getPublicSexStartingDescription() {
 		if(Main.game.getPlayer().getWorldLocation()==WorldType.DOMINION_EXPRESS) {
 			return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
-						+ "A passing centaur slave looks over and smirks as he sees you submitting to [npc.name]..."
+						+ "一匹路过的半人马奴隶看到你屈服于[npc.name]发出一声嗤笑……"
 					+ "</p>";
 		}
 		
@@ -115,15 +115,15 @@ public class SMDominionExpressEncounter extends SexManagerDefault {
 			return "<p style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+"; font-style:italic; text-align:center;'>"
 						+ UtilText.parse(Main.sex.getTargetedPartner(Main.game.getPlayer()),
 							UtilText.returnStringAtRandom(
-								"A couple of centauresses look over at you and giggle as they pass by.",
-								"A centaur slave hastily trots past, too busy to pay you any attention.",
-								"A centauress slave hastily trots past, too busy to pay you any attention.",
-								"A group of centaur slaves take a moment to stop and comment on your performance, before continuing on their way to the stables.",
-								"You hear a centauress letting out an amused laugh from somewhere behind you.",
-								"You hear a centaur letting out an amused grunt from somewhere behind you.",
-								"You glance across to see a bronze-ranked [style.mule] curiously watching to see how you service centaurs.",
-								"A muscular centaur slave pauses to comment on your lewd display, before trotting off on his way to work.",
-								"A busty centauress slave pauses to comment on your lewd display, before trotting off on her way to work."))
+								"几匹路过的女半人马看到你后就笑了起来。",
+								"一匹半人马奴隶匆忙经过，没有时间看你。",
+								"一匹女半人马奴隶匆忙经过，没有时间看你。",
+								"一群半人马奴隶稍作停留，评价了你的表演，然后继续前往马厩。",
+								"你听到一个女半人马从你身后的某个地方发出了开心的笑声。",
+								"你听到一个半人马从你身后的某个地方发出了开心的笑声。",
+								"你瞥见一匹青铜等级的[style.mule]正好奇地看着你如何为半人马提供服务。",
+								"一个肌肉紧致的半人马奴隶停顿了一下，评价着你的淫秽表演，然后小跑着去工作了。",
+								"一个丰满的女半人马奴隶停顿了一下，评价着你的淫秽表演，然后小跑着去工作了。"))
 					+"</p>";
 			
 		}

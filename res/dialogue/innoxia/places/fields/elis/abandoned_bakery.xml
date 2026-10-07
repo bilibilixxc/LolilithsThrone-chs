@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- ELIS SCENES: -->
@@ -13,12 +13,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Explore]]></responseTitle>
+				<responseTitle><![CDATA[探索]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(ENCOUNTER_innoxia_elis_alleyway.isAnyEncounterAvailable())
-						Spend some time exploring the surrounding alleyways to see if you can find anything of interest.
+						你花了些时间探索周围的小巷寻找感兴趣的东西。
 					#ELSE
-						You get the feeling that you're not going to find anything interesting in the surrounding alleyways, so there's no reason to waste your time exploring...
+						你觉得在周围的小巷里找不到任何感兴趣的东西，所以没有浪费时间去探索……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -47,8 +47,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Geared up]]></responseTitle>
-				<responseTooltip><![CDATA[Wait while Hammer and Ghost get their gear on.]]></responseTooltip>
+				<responseTitle><![CDATA[准备就绪]]></responseTitle>
+				<responseTooltip><![CDATA[等待锤子和幽灵穿好装备。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_mission_start_geared_up</nextDialogue>
 			</response>
 		</responses>
@@ -68,12 +68,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Weapons]]></responseTitle>
+				<responseTitle><![CDATA[武器]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_talk_weapons))
-						You've already asked Hammer and Ghost about the weapons they're carrying...
+						你已经问过了锤子和幽灵他们带的什么武器……
 					#ELSE
-						Ask Hammer and Ghost about the weapons they're carrying.
+						问锤子和幽灵他们带的什么武器。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -91,12 +91,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Gang strength]]></responseTitle>
+				<responseTitle><![CDATA[帮派人力]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_talk_gang))
-						You've already asked Hammer and Ghost about what to expect in the gang's hideout...
+						你已经问过了锤子和幽灵在帮派藏身处会遇到什么……
 					#ELSE
-						Ask Hammer and Ghost about what you should expect in the gang's hideout.
+						你问锤子和幽灵会在帮派藏身处遇到什么。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -114,12 +114,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Backup]]></responseTitle>
+				<responseTitle><![CDATA[后援]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_talk_backup))
-						You've already asked Hammer and Ghost if they're going to call on the other SWORD Enforcers for backup...
+						你已经问过了锤子和幽灵他们是否会请求其他SWORD执法者后援……
 					#ELSE
-						Ask Hammer and Ghost if they're going to call on the other SWORD Enforcers for backup.
+						问锤子和幽灵他们是否会请求其他SWORD执法者后援。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -137,12 +137,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Succubus]]></responseTitle>
+				<responseTitle><![CDATA[魅魔]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_talk_succubus))
-						You've already asked Hammer and Ghost about what the plan is for when you encounter Angelixx...
+						你已经问过了锤子和幽灵当你们遇到安吉莉克丝时有什么计划……
 					#ELSE
-						Ask Hammer and Ghost what the plan is for when you encounter Angelixx.
+						问锤子和幽灵当你们遇到安吉莉克丝时有什么计划。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -163,9 +163,9 @@
 				<responseTitle><![CDATA[SWORD]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_talk_history))
-						You've already asked Hammer and Ghost about SWORD...
+						你已经问过了锤子和幽灵关于SWORD的事了……
 					#ELSE
-						Ask Hammer and Ghost what it's like to be in SWORD.
+						问锤子和幽灵在SWORD是什么感觉。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -185,8 +185,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Start]]></responseTitle>
-				<responseTooltip><![CDATA[Wait with Hammer and Ghost until the gang's meeting is underway and then start the operation.]]></responseTooltip>
+				<responseTitle><![CDATA[开始]]></responseTitle>
+				<responseTooltip><![CDATA[与锤子和幽灵一起等待帮派会议开始然后开始行动。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_mission_start_wait</nextDialogue>
 			</response>
 		</responses>
@@ -219,8 +219,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hammer]]></responseTitle>
-				<responseTooltip><![CDATA[Decide to enter the building via the front door with Hammer.]]></responseTooltip>
+				<responseTitle><![CDATA[锤子]]></responseTitle>
+				<responseTooltip><![CDATA[决定和锤子从正门进入建筑。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_mission_start_hammer</nextDialogue>
 				<effects><![CDATA[
 					[#hammer.resetBarricade()]
@@ -230,8 +230,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Ghost]]></responseTitle>
-				<responseTooltip><![CDATA[Decide to enter the building via the back door with Ghost.]]></responseTooltip>
+				<responseTitle><![CDATA[幽灵]]></responseTitle>
+				<responseTooltip><![CDATA[决定和幽灵从后门进入建筑。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_mission_start_ghost</nextDialogue>
 			</response>
 		</responses>
@@ -246,8 +246,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Hammer into the bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[跟随锤子进入面包店。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_abandoned_bakery_f0_exit"/>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_abandoned_bakery_f0, PLACE_TYPE_innoxia_fields_elis_abandoned_bakery_f0_exit)]
@@ -280,8 +280,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Ghost into the bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[跟随幽灵进入面包店。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_abandoned_bakery_f0_back_door"/>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_abandoned_bakery_f0, PLACE_TYPE_innoxia_fields_elis_abandoned_bakery_f0_back_door)]
@@ -321,18 +321,18 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Follow
+					跟着
 					#IF(flags.hasFlag(FLAG_innoxia_hammer_following))
-						 Hammer as he continues
+						锤子
 						#IF(flags.hasFlag(FLAG_innoxia_ghost_following))
-						 and Ghost as they continue
+						和幽灵
 						#ENDIF
 					#ELSE
-						 Ghost as she continues
+						幽灵
 					#ENDIF
-					 to clear the gang's hideout.
+					继续清理黑帮的藏身之处。
 				]]></responseTooltip>
 				<nextDialogue>default</nextDialogue>
 			</response>
@@ -367,8 +367,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_back_door) && !flags.hasFlag(FLAG_innoxia_hammer_following)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Ghost into the abandoned bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟随幽灵进入破败的面包店。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_abandoned_bakery_f0_back_door"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -397,9 +397,9 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_kitchen) && !flags.hasFlag(FLAG_innoxia_hammer_following)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Join Ghost and help her to fight the gang members.
+					加入幽灵和帮派成员战斗。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -418,10 +418,10 @@
 						<enemy leader="false"><![CDATA[gangMember2]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[You decide to give Ghost some backup and move to help her fight the gang members.]]></combatant>
-						<combatant id="ghost"><![CDATA[[ghost.speech(I can handle this myself,)] the [ghost.race] says, before smirking and adding, [ghost.speech(but I guess it'll be quicker this way.)]]]></combatant>
-						<combatant id="gangMember1"><![CDATA[[gangMember1.speech(Who the fuck are you?!)] the gang member demands.]]></combatant>
-						<combatant id="gangMember2"><![CDATA[[gangMember2.speech(They look pretty serious!)] the second gang member calls out to [gangMember2.her] comrade.]]></combatant>
+						<combatant id="pc"><![CDATA[你决定帮助幽灵，与帮派成员战斗。]]></combatant>
+						<combatant id="ghost"><![CDATA[[ghost.speech(我能自己解决，)][ghost.race]说，然后笑着补充道，[ghost.speech(但我想这样会快一些。)]]]></combatant>
+						<combatant id="gangMember1"><![CDATA[[gangMember1.speech(你他妈是谁？！)]帮派成员说道。]]></combatant>
+						<combatant id="gangMember2"><![CDATA[[gangMember2.speech(他们看起来很严肃！)]第二个帮派成员呼叫[gangMember2.her]的同伙。]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 					<submitBlocked><![CDATA[true]]></submitBlocked>
@@ -431,8 +431,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_kitchen) && !flags.hasFlag(FLAG_innoxia_hammer_following)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Stay back]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Ghost says and stay back while she takes care of the gang members.]]></responseTooltip>
+				<responseTitle><![CDATA[后退]]></responseTitle>
+				<responseTooltip><![CDATA[按照幽灵说的做，在她解决那些帮派成员的时候待在后面。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -445,8 +445,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_hammer_following) && !flags.hasFlag(FLAG_innoxia_ghost_following)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've linked up with Ghost, the three of you need to continue on up to the first floor of the abandoned bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在你已经和幽灵联系上了，你们三人需要继续前往破败的面包店一楼。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -466,8 +466,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[There's no time to dismantle the barricade; head back to find another way around.]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[现在没时间拆除路障，回去寻找其他的路。]]></responseTooltip>
 				<nextDialogue><![CDATA[[#pc.getLastCell().getDialogue(false).getId()]]]></nextDialogue>
 				<secondsPassed><![CDATA[30]]></secondsPassed>
 				<effects><![CDATA[
@@ -498,7 +498,7 @@
 				[#game.addNPC('fields.ElisAlleywayAttacker', 'gangMemberHammer3')]
 				[#gangMemberHammer3.setBody(GENDER_M_P_MALE, SUBSPECIES_CAT_MORPH, RACE_STAGE_GREATER, true)]
 				[#gangMemberHammer3.setLocation(pc, true)]
-				[#gangMemberHammer3.setGenericName('collapsed cat-boy')]
+				[#gangMemberHammer3.setGenericName('瘫倒在地的猫男')]
 			#ENDIF
 		]]></preParsingEffects>
 		<content folderPath="txt/places/fields/elis/abandoned_bakery">SHOP_FLOOR</content>
@@ -510,9 +510,9 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_shop_floor) && !flags.hasFlag(FLAG_innoxia_ghost_following)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Join Hammer and help him to fight the gang members.
+					加入锤子和帮派成员战斗。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -531,10 +531,10 @@
 						<enemy leader="false"><![CDATA[gangMember2]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[You decide to give Hammer some backup and move to help him fight the gang members.]]></combatant>
-						<combatant id="hammer"><![CDATA[[hammer.speech(Let's make this quick,)] Hammer grunts, before pointing his shotgun towards the enemy.]]></combatant>
-						<combatant id="gangMember1"><![CDATA[[gangMember1.speech(Who the fuck are you?!)] the gang member demands.]]></combatant>
-						<combatant id="gangMember2"><![CDATA[[gangMember2.speech(They look pretty serious!)] the second gang member calls out to [gangMember2.her] comrade.]]></combatant>
+						<combatant id="pc"><![CDATA[你决定为锤子提供支援，帮助他与黑帮成员作战。]]></combatant>
+						<combatant id="hammer"><![CDATA[[hammer.speech(让我们速战速决，)]锤子哼了一声，然后用霰弹枪指向敌人。]]></combatant>
+						<combatant id="gangMember1"><![CDATA[[gangMember1.speech(你他妈是谁？！)]帮派成员说道。]]></combatant>
+						<combatant id="gangMember2"><![CDATA[[gangMember2.speech(他们看起来很严肃！)]第二个帮派成员呼叫[gangMember2.her]的同伙。]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 					<submitBlocked><![CDATA[true]]></submitBlocked>
@@ -544,8 +544,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_shop_floor) && !flags.hasFlag(FLAG_innoxia_ghost_following)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Stay back]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Hammer says and stay back while he takes care of the gang members.]]></responseTooltip>
+				<responseTitle><![CDATA[后退]]></responseTitle>
+				<responseTooltip><![CDATA[按照锤子说的做，在他解决那些帮派成员的时候待在后面。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -558,8 +558,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_hammer_following) && game.getCharactersPresent().contains(hammer)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've linked up with Hammer, the three of you need to continue on up to the first floor of the abandoned bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在你已经和锤子联系上了，你们三人需要继续前往破败的面包店一楼。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -580,8 +580,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_exit) && !flags.hasFlag(FLAG_innoxia_ghost_following)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Follow]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Hammer into the abandoned bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[跟随]]></responseTitle>
+				<responseTooltip><![CDATA[跟随锤子进入破败的面包店。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_abandoned_bakery_f0_exit"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -601,8 +601,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Upstairs]]></responseTitle>
-				<responseTooltip><![CDATA[Head on up to the first floor of the abandoned bakery.]]></responseTooltip>
+				<responseTitle><![CDATA[上楼]]></responseTitle>
+				<responseTooltip><![CDATA[前往破败的面包店一楼。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_abandoned_bakery_stairs_top</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -656,10 +656,10 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_storage)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Join Hammer and Ghost and help them to fight the gang members.
-				]]></responseTooltip>
+					加入锤子和幽灵并与帮派成员战斗。
+]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -679,12 +679,12 @@
 						<enemy leader="false"><![CDATA[gangMember3]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[You decide to give Hammer and Ghost some backup and move to help them fight the gang members.]]></combatant>
-						<combatant id="hammer"><![CDATA[[hammer.speech(You're finished,)] Hammer barks as he raises his shotgun towards the nearest gang member.]]></combatant>
-						<combatant id="ghost"><![CDATA[[ghost.speech(This is our territory now,)] Ghost says in an attempt to make it seem like you're from a rival gang.]]></combatant>
-						<combatant id="gangMember1"><![CDATA[[gangMember1.speech(Fuck you!)] [gangMember1.name] shouts.]]></combatant>
-						<combatant id="gangMember2"><![CDATA[[gangMember2.speech(I'll fuck you up!)] [gangMember2.name] roars as [gangMember2.she] rushes forwards.]]></combatant>
-						<combatant id="gangMember3"><![CDATA[[gangMember3.speech(Let's do this!)] [gangMember3.name] cries.]]></combatant>
+						<combatant id="pc"><![CDATA[你决定为锤子和幽灵提供支援，帮助他们与黑帮成员作战。]]></combatant>
+						<combatant id="hammer"><![CDATA[[hammer.speech(你完蛋了，)]锤子一边吠叫，一边举起猎枪朝最近的帮派成员射击。]]></combatant>
+						<combatant id="ghost"><![CDATA[[ghost.speech(现在这里是我们的地盘了，)]幽灵说，试图让人觉得你是敌对帮派的人。]]></combatant>
+						<combatant id="gangMember1"><![CDATA[[gangMember1.speech(操你妈！)][gangMember1.name]喊道。]]></combatant>
+						<combatant id="gangMember2"><![CDATA[[gangMember2.speech(我要把你操翻！)][gangMember2.name]怒吼着冲了上去。]]></combatant>
+						<combatant id="gangMember3"><![CDATA[[gangMember3.speech(来干吧！)][gangMember3.name]哭了起来。]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 					<submitBlocked><![CDATA[true]]></submitBlocked>
@@ -694,8 +694,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_storage)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Stay back]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Ghost says and stay back while she and Hammer take care of the gang members.]]></responseTooltip>
+				<responseTitle><![CDATA[后退]]></responseTitle>
+				<responseTooltip><![CDATA[按照幽灵说的做，在她和锤子解决黑帮成员的时候待在后面。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -708,12 +708,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_sword_mission_storage)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take flames]]></responseTitle>
+				<responseTitle><![CDATA[拿走火币]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_sword_mission_searched_storage))
-						You've already taken the flames which the three gang members were splitting amongst themselves, and there's no time to conduct a more thorough search.
+						你已经拿走了那三个帮派成员互相争夺的火币，现在没有时间再彻底搜查了。
 					#ELSE
-						Take the flames which the three gang members were splitting amongst themselves.
+						拿走那三个帮派成员互相争夺的火币。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -756,8 +756,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_sword_mission_bathroom)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[Wait while Ghost deals with the gang member.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[等幽灵处理完帮派成员。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_bathroom_wait</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -778,8 +778,8 @@
 				<availabilityConditional><![CDATA[[#game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Captive]]></responseTitle>
-				<responseTooltip><![CDATA[Wait while Hammer releases the captive.]]></responseTooltip>
+				<responseTitle><![CDATA[俘虏]]></responseTitle>
+				<responseTooltip><![CDATA[等待锤子释放俘虏。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_bathroom_captive</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -817,8 +817,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to what it is Angelixx has to say.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听安吉莉克丝怎么说。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_bedroom_angelixx_escape</nextDialogue>
 			</response>
 		</responses>
@@ -837,9 +837,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Join Hammer and Ghost and help them to fight Angelixx's bodyguards.
+					加入锤子和幽灵并与安吉莉克丝的保镖战斗。
 				]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
@@ -858,11 +858,11 @@
 						<enemy leader="false"><![CDATA[nir]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[You decide to give Hammer and Ghost some backup and move to help them fight Angelixx's bodyguards.]]></combatant>
-						<combatant id="hammer"><![CDATA[[hammer.speech(I'll put you down!)] Hammer barks.]]></combatant>
-						<combatant id="ghost"><![CDATA[[ghost.speech(You don't stand a chance,)] Ghost teases.]]></combatant>
-						<combatant id="sleip"><![CDATA[[sleip.speech(Surrender now and I'll go easy on you!)] [sleip.name] shouts.]]></combatant>
-						<combatant id="nir"><![CDATA[[nir.speech(We'll be rewarded for beating you!)] [nir.name] gleefully exclaims.]]></combatant>
+						<combatant id="pc"><![CDATA[你决定为锤子和幽灵提供支援，帮助他们与安吉莉克丝的保镖作战。]]></combatant>
+						<combatant id="hammer"><![CDATA[[hammer.speech(我要把你放倒！)]锤子吠道。]]></combatant>
+						<combatant id="ghost"><![CDATA[[ghost.speech(你没有机会的，)]幽灵挑逗道。]]></combatant>
+						<combatant id="sleip"><![CDATA[[sleip.speech(现在投降，我会对你网开一面的！)][sleip.name]喊道。]]></combatant>
+						<combatant id="nir"><![CDATA[[nir.speech(打败你们，我们有赏！)][nir.name]兴高采烈地叫道。]]></combatant>
 					</openingDescriptions>
 					<escapeBlocked><![CDATA[true]]></escapeBlocked>
 					<submitBlocked><![CDATA[true]]></submitBlocked>
@@ -871,8 +871,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Stay back]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Ghost says and stay back while she and Hammer take care of the nightmares.]]></responseTooltip>
+				<responseTitle><![CDATA[后退]]></responseTitle>
+				<responseTooltip><![CDATA[按照幽灵说的做，在她和锤子解决梦魇的时候待在后面。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_abandoned_bakery_bedroom_combat_no_fight]]></nextDialogue>
 			</response>
 		</responses>
@@ -891,9 +891,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Escape]]></responseTitle>
+				<responseTitle><![CDATA[逃跑]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Listen to Hammer's escape plan and hope that it can be put into effect before the Enforcers arrive.
+					听听锤子的逃跑计划，希望能在执法者到来之前成功。
 				]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_abandoned_bakery_mission_end</nextDialogue>
 				<effects><![CDATA[
@@ -940,9 +940,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Part ways]]></responseTitle>
+				<responseTitle><![CDATA[分开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Say goodbye to Hammer and Ghost and tell them that you'll be back to see them again soon...
+					向锤子和幽灵道别，告诉他们你们还会再见……
 				]]></responseTooltip>
 				<nextDialogue stripContent="true">default</nextDialogue>
 				<effects><![CDATA[

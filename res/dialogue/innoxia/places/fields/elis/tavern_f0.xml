@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- First entry meeting Meraxis: -->
@@ -16,8 +16,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Introduce yourself]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Flash who you are.]]></responseTooltip>
+				<responseTitle><![CDATA[自我介绍]]></responseTitle>
+				<responseTooltip><![CDATA[告诉弗拉什你是谁。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_tavern_f0_first_entry_flash_introduction</nextDialogue>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_elis_flash_introduced, true)]
@@ -40,8 +40,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Minions?]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Meraxis to find out what she means by her 'minions'.]]></responseTooltip>
+				<responseTitle><![CDATA[爪牙？]]></responseTitle>
+				<responseTooltip><![CDATA[跟着梅拉克西丝，见识一下她说的“爪牙”到底是什么。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_tavern_f0_first_entry_minions</nextDialogue>
 			</response>
 		</responses>
@@ -61,8 +61,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Your room]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Meraxis so that she can show you where your room is.]]></responseTooltip>
+				<responseTitle><![CDATA[你的房间]]></responseTitle>
+				<responseTooltip><![CDATA[跟着梅拉克西丝，她会告诉你房间在哪里。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_tavern_f0_first_entry_player_room</nextDialogue>
 			</response>
 		</responses>
@@ -83,8 +83,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Thank her]]></responseTitle>
-				<responseTooltip><![CDATA[Thank Meraxis for getting your accommodation sorted for you.]]></responseTooltip>
+				<responseTitle><![CDATA[感谢她]]></responseTitle>
+				<responseTooltip><![CDATA[感谢梅拉克西丝为你安排住宿。]]></responseTooltip>
 				<nextDialogue>default</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -106,17 +106,17 @@
 		<responseTabs>
 			<tab index="0"><![CDATA[
 				#IF(game.getCharactersPresent().contains(flash))
-					Talk
+					交谈
 				#ENDIF
 			]]></tab>
 			<tab index="1"><![CDATA[
 				#IF(game.getCharactersPresent().contains(flash))
-					Drinks
+					饮品
 				#ENDIF
 			]]></tab>
 			<tab index="2"><![CDATA[
 				#IF(game.getCharactersPresent().contains(flash))
-					Food
+					食物
 				#ENDIF
 			]]></tab>
 		</responseTabs>
@@ -128,12 +128,12 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Small talk]]></responseTitle>
+				<responseTitle><![CDATA[闲谈]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_flash_smalltalk_complete))
-						You've already spent time making small talk with Flash today. You'll have to wait until tomorrow before you can repeat this.
+						今天已经和弗拉什聊了很久，明天再聊吧。
 					#ELSE
-						Spend fifteen minutes talking to Flash about the weather, local news, and other such trivial topics.
+						花十五分钟和弗拉什聊聊天气、本地新闻和其他琐碎的话题。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -158,8 +158,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Meraxis]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Flash what he thinks of Meraxis.]]></responseTooltip>
+				<responseTitle><![CDATA[梅拉克西丝]]></responseTitle>
+				<responseTooltip><![CDATA[问问弗拉什，对梅拉克西丝有什么看法。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -172,8 +172,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Lunette]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Flash what he knows about Lunette.]]></responseTooltip>
+				<responseTitle><![CDATA[露内特]]></responseTitle>
+				<responseTooltip><![CDATA[问问弗拉什，对露内特有什么看法。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -186,8 +186,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[History]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Flash about his history and how he came to own this tavern.]]></responseTooltip>
+				<responseTitle><![CDATA[历史]]></responseTitle>
+				<responseTooltip><![CDATA[打听弗拉什的过往，以及他是如何拥有这家酒馆的。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -200,8 +200,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Minotallys]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Flash what he knows about Minotallys.]]></responseTooltip>
+				<responseTitle><![CDATA[米诺塔莉丝]]></responseTitle>
+				<responseTooltip><![CDATA[问问弗拉什，对米诺塔莉丝有什么看法。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -214,8 +214,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Youko]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Flash what he knows about the youko.]]></responseTooltip>
+				<responseTitle><![CDATA[妖狐]]></responseTitle>
+				<responseTooltip><![CDATA[问问弗拉什，对妖狐有什么看法。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -228,8 +228,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Jess]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Flash about his history with Jess.]]></responseTooltip>
+				<responseTitle><![CDATA[婕斯]]></responseTitle>
+				<responseTooltip><![CDATA[问问弗拉什，对婕斯有什么看法。]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -242,10 +242,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
-					Water (Free)
+					免费的水
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Order a glass of water.
+					点杯水。
 				]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -258,8 +258,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Orange juice (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) Order a glass of carbonated orange juice. #ELSE You can't afford a glass of carbonated orange juice... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[橙汁 (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) 点杯碳酸橙汁。#ELSE 你喝不起碳酸橙汁……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=20)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -272,8 +272,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Berry soda (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) Order a glass of berry-flavoured soda. #ELSE You can't afford a glass of berry-flavoured soda... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[莓果苏打水 (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) 点杯莓果苏打水。#ELSE 你喝不起莓果苏打水……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=20)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -286,8 +286,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Cola (#IF(pc.getMoney()>=25)[style.moneyFormat(25, span)]#ELSE[style.moneyFormatUncoloured(25, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=25) Order a glass of carbonated cola. #ELSE You can't afford a glass of carbonated cola... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[可乐 (#IF(pc.getMoney()>=25)[style.moneyFormat(25, span)]#ELSE[style.moneyFormatUncoloured(25, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=25) 点杯可乐。#ELSE 你喝不起可乐……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=25)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -300,8 +300,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Coffee (#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30) Order a glass of cold-brew, black coffee. #ELSE You can't afford a glass of cold-brew, black coffee... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[咖啡 (#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30) 点杯冷萃黑咖啡。#ELSE 你喝不起冷萃黑咖啡……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=30)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -314,8 +314,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Bread rolls (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) Order a small basket of freshly-baked bread rolls from the 'starters & sides' menu. #ELSE You can't afford a small basket of freshly-baked bread rolls from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[小面包 (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) 从“前菜和配菜”菜单中点一小筐新鲜出炉的小面包。#ELSE 你连一小筐 “前菜和配菜”菜单上新鲜出炉的小面包都买不起……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=50)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -328,8 +328,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Mixed nuts (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) Order a serving of mixed nuts from the 'starters & sides' menu. #ELSE You can't afford a serving of mixed nuts from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[混合坚果 (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) 从“前菜和配菜”菜单中点一把混合坚果。#ELSE 你吃不起混合坚果……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=50)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -342,8 +342,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Pâté and crackers (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a serving of meat pâté and crackers from the 'starters & sides' menu. #ELSE You can't afford a serving of meat pâté and crackers from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[肉酱酥脆饼干 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从“前菜和配菜”菜单中点一份肉酱酥脆饼干。#ELSE 你吃不起肉酱酥脆饼干……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -356,8 +356,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Honey bread (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a serving of honey bread from the dessert menu. #ELSE You can't afford a serving of honey bread from the dessert menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[蜂蜜小面包 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从甜点菜单上点一份蜂蜜小面包。#ELSE 你吃不起蜂蜜小面包……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -370,8 +370,8 @@
 				<availabilityConditional><![CDATA[[#!game.getCharactersPresent().contains(flash)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Brownie (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a chocolate brownie from the dessert menu. #ELSE You can't afford a chocolate brownie from the dessert menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[巧克力蛋糕 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从甜点菜单上点一份巧克力布朗尼。#ELSE 你吃不起巧克力布朗尼……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -387,10 +387,10 @@
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
-					Water (Free)
+					免费的水
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Order a glass of water.
+					点杯水。
 				]]></responseTooltip>
 				<nextDialogue stripContent="true">innoxia_places_fields_elis_tavern_f0_bar</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -402,8 +402,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Orange juice (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) Order a glass of carbonated orange juice. #ELSE You can't afford a glass of carbonated orange juice... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[橙汁 (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) 点杯碳酸橙汁。#ELSE 你喝不起碳酸橙汁……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=20)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -415,8 +415,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Berry soda (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) Order a glass of berry-flavoured soda. #ELSE You can't afford a glass of berry-flavoured soda... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[莓果苏打水 (#IF(pc.getMoney()>=20)[style.moneyFormat(20, span)]#ELSE[style.moneyFormatUncoloured(20, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=20) 点杯莓果苏打水。#ELSE 你喝不起莓果苏打水……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=20)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -428,8 +428,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Cola (#IF(pc.getMoney()>=25)[style.moneyFormat(25, span)]#ELSE[style.moneyFormatUncoloured(25, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=25) Order a glass of carbonated cola. #ELSE You can't afford a glass of carbonated cola... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[可乐 (#IF(pc.getMoney()>=25)[style.moneyFormat(25, span)]#ELSE[style.moneyFormatUncoloured(25, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=25) 点杯可乐。#ELSE 你喝不起可乐……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=25)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -441,8 +441,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Coffee (#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30) Order a glass of cold-brew, black coffee. #ELSE You can't afford a glass of cold-brew, black coffee... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[咖啡 (#IF(pc.getMoney()>=30)[style.moneyFormat(30, span)]#ELSE[style.moneyFormatUncoloured(30, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=30) 点杯冷萃黑咖啡。#ELSE 你喝不起冷萃黑咖啡……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=30)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -455,8 +455,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Beer (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of beer. #ELSE You can't afford a pint of beer... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[啤酒 (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱啤酒。#ELSE 你喝不起一品脱啤酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -468,8 +468,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Cider (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of cider. #ELSE You can't afford a pint of cider... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[苹果西打酒 (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱苹果酒。#ELSE 你喝不起一品脱苹果酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -481,8 +481,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Perry (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) Order a pint of pear cider, which is commonly known as perry. #ELSE You can't afford a pint of pear cider... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[梨酒 (#IF(pc.getMoney()>=40)[style.moneyFormat(40, span)]#ELSE[style.moneyFormatUncoloured(40, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=40) 点一品脱梨酒。#ELSE 你喝不起一品脱梨酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=40)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -494,8 +494,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Red wine (#IF(pc.getMoney()>=60)[style.moneyFormat(60, span)]#ELSE[style.moneyFormatUncoloured(60, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=60) Order a glass of red wine. #ELSE You can't afford a glass of red wine... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[红葡萄酒 (#IF(pc.getMoney()>=60)[style.moneyFormat(60, span)]#ELSE[style.moneyFormatUncoloured(60, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=60) 点一杯红酒。#ELSE 你喝不起红酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=60)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -507,8 +507,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[White wine (#IF(pc.getMoney()>=60)[style.moneyFormat(60, span)]#ELSE[style.moneyFormatUncoloured(60, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=60) Order a glass of white wine. #ELSE You can't afford a glass of white wine... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[白葡萄酒 (#IF(pc.getMoney()>=60)[style.moneyFormat(60, span)]#ELSE[style.moneyFormatUncoloured(60, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=60) 点一杯白葡萄酒。#ELSE 你喝不起白葡萄酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=60)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -520,8 +520,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[11]]></index>
-				<responseTitle><![CDATA[Vodka (#IF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100) Order a glass of vodka. #ELSE You can't afford a glass of vodka... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[伏特加 (#IF(pc.getMoney()>=100)[style.moneyFormat(100, span)]#ELSE[style.moneyFormatUncoloured(100, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100) 点一杯伏特加。#ELSE 你喝不起伏特加…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=100)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -533,8 +533,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[12]]></index>
-				<responseTitle><![CDATA[Rum (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) Order a glass of rum. #ELSE You can't afford a glass of rum... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[朗姆酒 (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) 点一杯朗姆酒。#ELSE 你喝不起朗姆酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=120)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -546,8 +546,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[13]]></index>
-				<responseTitle><![CDATA[Whiskey (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) Order a glass of whiskey. #ELSE You can't afford a glass of whiskey... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[威士忌 (#IF(pc.getMoney()>=120)[style.moneyFormat(120, span)]#ELSE[style.moneyFormatUncoloured(120, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=120) 点一杯威士忌。#ELSE 你喝不起威士忌……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=120)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -559,8 +559,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[14]]></index>
-				<responseTitle><![CDATA[Champagne (#IF(pc.getMoney()>=160)[style.moneyFormat(160, span)]#ELSE[style.moneyFormatUncoloured(160, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=160) Order a glass of champagne. #ELSE You can't afford a glass of champagne... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[香槟 (#IF(pc.getMoney()>=160)[style.moneyFormat(160, span)]#ELSE[style.moneyFormatUncoloured(160, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=100) 点一杯香槟。#ELSE 你喝不起香槟…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=160)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -575,8 +575,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Bread rolls (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) Order a small basket of freshly-baked bread rolls from the 'starters & sides' menu. #ELSE You can't afford a small basket of freshly-baked bread rolls from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[小面包 (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) 从“前菜和配菜”菜单中点一小筐新鲜出炉的小面包。#ELSE 你连一小筐 “前菜和配菜”菜单上新鲜出炉的小面包都买不起……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=50)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -588,8 +588,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Mixed nuts (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) Order a serving of mixed nuts from the 'starters & sides' menu. #ELSE You can't afford a serving of mixed nuts from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[混合坚果 (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) 从“前菜和配菜”菜单中点一把混合坚果。#ELSE 你吃不起混合坚果……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=50)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -601,8 +601,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Curly fries (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) Order a serving of curly fries from the 'starters & sides' menu. #ELSE You can't afford a serving of curly fries from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[扭扭薯条 (#IF(pc.getMoney()>=50)[style.moneyFormat(50, span)]#ELSE[style.moneyFormatUncoloured(50, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=50) 从“前菜和配菜”菜单中点一份扭扭薯条。#ELSE 你吃不起混扭扭薯条……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=50)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -614,8 +614,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Shrimp cocktail (#IF(pc.getMoney()>=75)[style.moneyFormat(75, span)]#ELSE[style.moneyFormatUncoloured(75, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=75) Order a serving of shrimp cocktail from the 'starters & sides' menu. #ELSE You can't afford a serving of shrimp cocktail from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[鲜虾鸡尾酒 (#IF(pc.getMoney()>=75)[style.moneyFormat(75, span)]#ELSE[style.moneyFormatUncoloured(75, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=75) 从“前菜和配菜”菜单中点一份鲜虾鸡尾酒。#ELSE 你吃不起鲜虾鸡尾酒……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=75)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -627,8 +627,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Pâté and crackers (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a serving of meat pâté and crackers from the 'starters & sides' menu. #ELSE You can't afford a serving of meat pâté and crackers from the 'starters & sides' menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[肉酱酥脆饼干 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从“前菜和配菜”菜单中点一份肉酱酥脆饼干。#ELSE 你吃不起肉酱酥脆饼干……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -641,8 +641,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Fish & chips (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) Order a serving of fish and chips from the main menu. #ELSE You can't afford a serving of fish and chips from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[炸鱼薯条 (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) 在主菜单上点一份炸鱼薯条。#ELSE 你买不起炸鱼薯条…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=150)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
@@ -654,8 +654,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Sausages (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) Order a serving of high-quality sausages from the main menu. #ELSE You can't afford a serving of high-quality sausages from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[香肠 (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) 从主菜单上点一份优质香肠。#ELSE 你吃不起优质香肠…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=150)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
@@ -667,8 +667,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Burger (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) Order a burger from the main menu. #ELSE You can't afford a burger from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[汉堡 (#IF(pc.getMoney()>=150)[style.moneyFormat(150, span)]#ELSE[style.moneyFormatUncoloured(150, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=150) 从主菜单上点一份汉堡。#ELSE 你买不起汉堡…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=150)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
@@ -680,8 +680,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Chicken pie (#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180) Order a chicken pie from the main menu. #ELSE You can't afford a chicken pie from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[鸡肉派 (#IF(pc.getMoney()>=180)[style.moneyFormat(180, span)]#ELSE[style.moneyFormatUncoloured(180, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=180) 从主食菜单上点一份鸡肉派。#ELSE 你吃不起鸡肉派……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=180)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
@@ -693,8 +693,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Steak (#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=250) Order a steak from the main menu. #ELSE You can't afford a steak from the main menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[牛排 (#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=250) 从主菜单上点一份牛排。#ELSE 你买不起牛排……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=250)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[20]]></secondsPassed>
 				<effects><![CDATA[
@@ -707,8 +707,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[11]]></index>
-				<responseTitle><![CDATA[Fruit salad (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a fruit salad from the dessert menu. #ELSE You can't afford a fruit salad from the dessert menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[水果沙拉 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从甜点菜单上点一份水果沙拉。#ELSE 你吃不起水果沙拉……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -720,8 +720,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[12]]></index>
-				<responseTitle><![CDATA[Honey bread (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a serving of honey bread from the dessert menu. #ELSE You can't afford a serving of honey bread from the dessert menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[蜂蜜小面包 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从甜点菜单上点一份蜂蜜小面包。#ELSE 你吃不起蜂蜜小面包……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -733,8 +733,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[13]]></index>
-				<responseTitle><![CDATA[Berry trifle (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a serving of berry trifle from the dessert menu. #ELSE You can't afford a serving of berry trifle from the dessert menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[浆果松饼 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从甜点菜单点一份浆果松饼。#ELSE 你买不起浆果松饼…… #ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -746,8 +746,8 @@
 			<response>
 				<responseTabIndex><![CDATA[2]]></responseTabIndex>
 				<index><![CDATA[14]]></index>
-				<responseTitle><![CDATA[Brownie (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
-				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) Order a chocolate brownie from the dessert menu. #ELSE You can't afford a chocolate brownie from the dessert menu... #ENDIF]]></responseTooltip>
+				<responseTitle><![CDATA[巧克力蛋糕 (#IF(pc.getMoney()>=80)[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(pc.getMoney()>=80) 从甜点菜单上点一份巧克力布朗尼。#ELSE 你吃不起巧克力布朗尼……#ENDIF]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[#IF(pc.getMoney()>=80)innoxia_places_fields_elis_tavern_f0_bar#ELSEnull#ENDIF]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -779,18 +779,18 @@
 		<travelDisabled>false</travelDisabled>
 		<responseTabs>
 			<tab index="0"><![CDATA[
-				Actions
-			]]></tab>
+				行动
+]]></tab>
 			<tab index="1"><![CDATA[
-				Fast Travel
-			]]></tab>
+				快速旅行
+]]></tab>
 		</responseTabs>
 		<responses>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit the tavern and head back out into the streets of Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[走出旅店，回到伊利斯的街道上。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_street"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -804,15 +804,15 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Entrance]]></responseTitle>
-				<responseTooltip><![CDATA[You are already at the tavern's entrance!]]></responseTooltip>
+				<responseTitle><![CDATA[入口]]></responseTitle>
+				<responseTooltip><![CDATA[你已在旅店入口处！]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Your room]]></responseTitle>
-				<responseTooltip><![CDATA[Fast travel up to your room.]]></responseTooltip>
+				<responseTitle><![CDATA[你的房间]]></responseTitle>
+				<responseTooltip><![CDATA[快速旅行到你的房间。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f1_room_player"/>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -867,12 +867,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Approach]]></responseTitle>
+				<responseTitle><![CDATA[接近]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(meraxis))
-						Approach Meraxis and say hello to her.
+						靠近梅拉克西丝，向她问好。
 					#ELSE
-						Meraxis isn't here at the moment...
+						梅拉克西丝现在不在……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -898,8 +898,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Meraxis and [pc.step] back into the tavern.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告别梅拉克西丝，[pc.step]回旅店。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f0_tables"/>
 				<secondsPassed minutes="false"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -911,12 +911,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Duel]]></responseTitle>
+				<responseTitle><![CDATA[决斗]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_meraxis_duel_daily_complete))
-						As you and Meraxis have already duelled one another today, you'll have to wait until tomorrow to do it again...
+						今天已经和梅拉克西丝决斗过了，明天再来决斗吧……
 					#ELSE
-						Accept Meraxis's offer of a duel.
+						接受梅拉克西丝的决斗邀请。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -935,12 +935,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Takahashi]]></responseTitle>
+				<responseTitle><![CDATA[高桥]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_3_I_ELIS_DEFENCE_PLAN))
-						Ask Meraxis if she's managed to find Takahashi, the youko who used to work at her citadel in Submission.
+						问问梅拉克西丝，她是否找到了曾经在屈城区的城堡为她工作的妖狐高桥。
 					#ELSE
-						Ask Meraxis if she can tell you more about Takahashi.
+						问问梅拉克西丝，她能否告诉你有关高桥的更多信息。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_f0_meraxis_talk]]></nextDialogue>
@@ -956,13 +956,13 @@
 					]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Minotallys]]></responseTitle>
+					<responseTitle><![CDATA[米诺塔莉丝]]></responseTitle>
 					<responseTooltip><![CDATA[
 						#IF(game.isHourBetween(8, 18))
-							Tell Meraxis that you're ready to meet Minotallys now, which will lead into travelling to Elis's town hall together.
+							告诉梅拉克西丝你准备好去见米诺塔莉丝了，然后一起前往伊利斯的市镇议会。
 						#ELSE
-							This isn't a suitable time in which to be asking to meet Minotallys...
-							<br/>[style.italics(You can ask to meet Minotallys between [units.time(9)]-[units.time(18)]...)]
+							现在不是要求会见米诺塔莉丝的合适时机……
+							<br/>[style.italics(你可以在[units.time(9)]-[units.time(18)]求见米诺塔莉丝……)]
 						#ENDIF
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[
@@ -980,10 +980,10 @@
 					]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Themiscyra]]></responseTitle>
+					<responseTitle><![CDATA[特弥斯库拉]]></responseTitle>
 					<responseTooltip><![CDATA[
-						Tell Meraxis that you're ready to go with her to Themiscyra to find out if the town is suffering from Lunette's raiders.
-						<br/>[style.italicsCombat(Be prepared, for this will start a lengthy section of the main quest during which there may be difficult fights!)]
+						告诉梅拉克西丝，你准备同她一道去特弥斯库拉，看看那里是否遭受了露内特劫掠者的袭击。
+						<br/>[style.italicsCombat(请做好准备，因为这将开启一段漫长的主线任务，期间可能会有艰难的战斗！)]
 					]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_places_fields_themiscyra_journey_start]]></nextDialogue>
 				</response>
@@ -994,8 +994,8 @@
 					]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Lunexis's plan]]></responseTitle>
-					<responseTooltip><![CDATA[Tell Meraxis that you have something to discuss with her in private concerning Lunexis.]]></responseTooltip>
+					<responseTitle><![CDATA[露内克西丝的计划]]></responseTitle>
+					<responseTooltip><![CDATA[告诉梅拉克西丝，你要和她私下讨论一些关于露内克西丝的事情。]]></responseTooltip>
 					<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_f0_lunexis_plan]]></nextDialogue>
 					<effects><![CDATA[
 						[#pc.walkPathNoEffects(PLACE_TYPE_innoxia_fields_elis_tavern_f0_garden, true, 1)]
@@ -1009,10 +1009,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Hideout[style.colourBad(*)]]]></responseTitle>
+				<responseTitle><![CDATA[藏身处[style.colourBad(*)]]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that you're ready to set off to the Shinrin Highlands in order to find her friend, Takahashi.
-					<br/>[style.italicsMinorBad(After this, Meraxis will move her permanent location to the hideout and will no longer be able to be found here in The Red Dragon.)]
+					告诉梅拉克西丝，你已准备好动身前往心林高地，去找她的朋友高桥。
+					<br/>[style.italicsMinorBad(在这之后，梅拉克西丝会常驻藏身处，红龙酒馆这里就找不到她了。)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_travelToHideout_start]]></nextDialogue>
 			</response>
@@ -1023,10 +1023,10 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Demon]]></responseTitle>
+				<responseTitle><![CDATA[恶魔]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Meraxis that she should go through with the process of becoming a full demon.
-					<br/>[style.italicsDemon(This will permanently transform Meraxis into a full demon!)]
+					告诉梅拉克西丝，她应该继续称为一个完全的恶魔。
+					<br/>[style.italicsDemon(这会永久使梅拉克西丝转化为完全恶魔！)]
 				]]></responseTooltip>
 				<colour><![CDATA[RACE_DEMON]]></colour>
 				<nextDialogue><![CDATA[MERAXIS_DEMON_TF_START]]></nextDialogue>
@@ -1039,18 +1039,18 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_meraxis_daily_sex))
-						You've already had sex with Meraxis in her room today, and as such will have to wait until tomorrow before you can do it again...
+						你今天已经在梅拉克西丝的房间里一番云雨，因此必须等到明天才能与她再战一回……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) && flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) && (!game.isAnalContentEnabled() || flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked)))
-						Tell Meraxis that you want to have a 'duel' with her in her bedroom...
+						告诉梅拉克西丝，你想在她的卧室和她来一场“决斗”……
 					#ELSE
-						Meraxis needs to be comfortable with having
+						想要梅拉克西丝答应在上床“决斗”，先要对与你
 						#IF(game.isAnalContentEnabled())
-							 oral, vaginal, and anal sex with you before she'd agree to have sex with you in her bedroom...
+							口交、阴道性交和肛交感到舒适……
 						#ELSE
-							 oral and vaginal sex with you before she'd agree to have sex with you in her bedroom...
+							口交和阴道性交感到舒适……
 						#ENDIF
 					#ENDIF
 				]]></responseTooltip>
@@ -1082,8 +1082,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Takahashi]]></responseTitle>
-				<responseTooltip><![CDATA[You're already asking Meraxis about Takahashi...]]></responseTooltip>
+				<responseTitle><![CDATA[高桥]]></responseTitle>
+				<responseTooltip><![CDATA[你已经询问过梅拉克西丝有关高桥的事情了！]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -1099,10 +1099,10 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<colour><![CDATA[GENERIC_BAD_END]]></colour>
-				<responseTitle><![CDATA[Betray Meraxis]]></responseTitle>
+				<responseTitle><![CDATA[背叛梅拉克西丝]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Convince Meraxis that Themiscyra has been abandoned by Lunette's daughters and that by teleporting yourself and Lunexis there, the centauress will reveal where she's hidden a secret weapon.
-					<br/>[style.italicsBadEnd(This will lead into both you and Meraxis falling into the clutches of Lunexis!)]
+					说服梅拉克西丝，让她相信特弥斯库拉已经被露内特的女儿们遗弃，只要把你和露内克西丝传送到那里，半人马就会说出她藏匿秘密武器的地方。
+					<br/>[style.italicsBadEnd(这将导致你和梅拉克西丝都落入露内克西丝的魔掌！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_start]]></nextDialogue>
 				<effects><![CDATA[
@@ -1112,10 +1112,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Betray Lunexis]]></responseTitle>
+				<responseTitle><![CDATA[背叛露内克西丝]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Betray your Mistress and reveal all the details of Lunexis's plan to Meraxis.
-					<br/>[style.italicsBad(You will be forbidden from contacting Lunexis again after this!)]
+					背叛你的主人，向露内克西丝透露露内克西丝计划的所有细节。
+					<br/>[style.italicsBad(此后，你会被禁止与露内克西丝接触！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_badEnds_lunexis_escape_failed]]></nextDialogue>
 				<effects/>
@@ -1123,8 +1123,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Another time]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis that now's not the time to reveal your secret information, but you'll tell her what's going on soon.]]></responseTooltip>
+				<responseTitle><![CDATA[以后再说]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，现在不是透露秘密信息的时候，但你很快就会告诉她发生了什么。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_tavern_f0_garden"/>
 				<secondsPassed minutes="false"><![CDATA[2]]></secondsPassed>
 				<effects><![CDATA[
@@ -1149,8 +1149,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that Meraxis has been transformed into a full demon, all that's left for you to do is continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[现在梅拉克西丝是个完全的恶魔了，你可以继续出发了……]]></responseTooltip>
 				<nextDialogue>default</nextDialogue>
 				<secondsPassed minutes="false"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -1171,8 +1171,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take charge]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis that you're going to be the one who's in charge...]]></responseTooltip>
+				<responseTitle><![CDATA[做主]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，你会对她负责的……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_meraxis_standard]]></id>
@@ -1197,8 +1197,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Submit to Meraxis and allow her to take charge...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[臣服于梅拉克西丝，让她掌控你……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_meraxis_standard]]></id>
@@ -1225,8 +1225,8 @@
 	
 	<scene id="meraxis_after_sex">
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You and Meraxis have finished having sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你和梅拉克西丝做完了爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_f0">MERAXIS_ROOM_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1235,8 +1235,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Leave Meraxis's room and continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开梅拉克西丝的房间，继续旅程……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f1_corridor"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_f0', 'MERAXIS_AFTER_SEX_LEAVE'))]
@@ -1269,8 +1269,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Upstairs]]></responseTitle>
-				<responseTooltip><![CDATA[Head up the staircase to the upper floor of the tavern.]]></responseTooltip>
+				<responseTitle><![CDATA[上楼]]></responseTitle>
+				<responseTooltip><![CDATA[沿楼梯来到旅馆上层。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f1_stairs"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -1295,24 +1295,24 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
-						Jess
+						婕斯
 					#ELSE
-						Fox-girl
+						狐女
 					#ENDIF
-					 (#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)
+					(#IF(pc.getMoney()>=250)[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_elis_jess_introduced))
 						#IF(pc.getMoney()>=250)
-							Pay Jess for her company and sit down at her table.
+							付钱给婕斯请她作陪，坐在她的桌旁。
 						#ELSE
-							You can't afford Jess's company...
+							你付不起婕斯的陪伴……
 						#ENDIF
 					#ELSE
 						#IF(pc.getMoney()>=250)
-							Pay the fox-girl for her company and sit down at her table.
+							付钱给狐女请她作陪，坐在她的桌旁。
 						#ELSE
-							You can't afford the fox-girl's company...
+							你付不起狐女的陪伴……
 						#ENDIF
 					#ENDIF
 				]]></responseTooltip>
@@ -1349,12 +1349,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Talk]]></responseTitle>
+				<responseTitle><![CDATA[交谈]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_jess_talked))
-						You've already spent some time talking with Jess.
+						你已经和婕斯聊过一会儿了。
 					#ELSE
-						Spend a while talking with Jess.
+						和婕斯聊会儿天。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1375,14 +1375,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[History]]></responseTitle>
+				<responseTitle><![CDATA[历史]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(jess.getAffection(pc)<AFFECTION_POSITIVE_FOUR_LOVE.getMinimumValue())
-						Jess does not like you enough to feel comfortable talking about her past with you.<br/>[style.italicsBad(Requires Jess to have an affection of at least '[#AFFECTION_POSITIVE_FOUR_LOVE.getName()]' towards you.)]
+						婕斯还不够喜欢你，不愿意和你谈论她的过去。<br/>[style.italicsBad(需要婕斯的好感度最少为“[#AFFECTION_POSITIVE_FOUR_LOVE.getName()]”。)]
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_jess_talked_history))
-						You've already spent some time asking Jess about her past.
+						你已经和婕斯聊过她的过去了。
 					#ELSE
-						Spend a while talking with Jess.
+						和婕斯聊会儿天。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1403,12 +1403,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Fluff tail]]></responseTitle>
+				<responseTitle><![CDATA[蓬松的尾巴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_jess_tail_fluffed))
-						You've already spent some time playing with Jess's fluffy tail.
+						你已经玩过婕斯的松软尾巴了。
 					#ELSE
-						Spend a while playing with Jess's fluffy tail.
+						玩会儿婕斯的松软尾巴。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1429,14 +1429,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Beers (#IF(pc.getMoney()>=80 && !flags.hasFlag(FLAG_innoxia_jess_drinks))[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
+				<responseTitle><![CDATA[啤酒 (#IF(pc.getMoney()>=80 && !flags.hasFlag(FLAG_innoxia_jess_drinks))[style.moneyFormat(80, span)]#ELSE[style.moneyFormatUncoloured(80, span)]#ENDIF)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_jess_drinks))
-						You've already had a drink with Jess.
+						你已经和婕斯喝过一杯了。
 					#ELSEIF(pc.getMoney()<80)
-						You can't afford two pints of beer...
+						你付不起两品脱啤酒……
 					#ELSE
-						Order a pint of beer for you and Jess.
+						给你和婕斯点两品脱啤酒。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1460,15 +1460,15 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[
-					Get intimate (#IF(pc.getMoney()>=250 && !flags.hasFlag(FLAG_innoxia_jess_intimate))[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)
+					亲密接触 (#IF(pc.getMoney()>=250 && !flags.hasFlag(FLAG_innoxia_jess_intimate))[style.moneyFormat(250, span)]#ELSE[style.moneyFormatUncoloured(250, span)]#ENDIF)
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_jess_intimate))
-						You've already paid for Jess to get more intimate with you.
+						你已经付钱让婕斯和你更亲密了。
 					#ELSEIF(pc.getMoney()<250)
-						You can't afford for Jess to get more intimate with you...
+						你没钱让婕斯更亲近你……
 					#ELSE
-						Pay Jess so that she'll get more intimate with you.
+						给婕斯更多钱让她更亲近你。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1492,14 +1492,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Make out]]></responseTitle>
+				<responseTitle><![CDATA[亲热]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_jess_intimate))
-						You need to pay Jess to get intimate with her before being able to kiss her...
+						你得付钱让婕斯更亲近你才能亲她……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_jess_kissed))
-						You've already spent some time making out with Jess.
+						你已经和婕斯亲热一会儿了。
 					#ELSE
-						Spend a while making out with Jess.
+						和婕斯亲热一会儿。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1520,14 +1520,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Stroke pussy]]></responseTitle>
+				<responseTitle><![CDATA[轻抚小穴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_jess_intimate))
-						You need to pay Jess to get intimate with her before being able to grope her...
+						你得付钱让婕斯更亲近你才能摸她……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_jess_groped))
-						You've already spent some time playing with Jess's pussy.
+						你已经玩一会儿婕斯的小穴了。
 					#ELSE
-						Do as Jess suggested and play with her pussy under the cover of her tail.
+						按照婕斯的建议，在她尾巴的掩护下玩弄她的小穴。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -1549,15 +1549,15 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
 				<responseTitle><![CDATA[
-					Sex (#IF(pc.getMoney()>=2000 && flags.hasFlag(FLAG_innoxia_jess_intimate))[style.moneyFormat(2000, span)]#ELSE[style.moneyFormatUncoloured(2000, span)]#ENDIF)
+					做爱 (#IF(pc.getMoney()>=2000 && flags.hasFlag(FLAG_innoxia_jess_intimate))[style.moneyFormat(2000, span)]#ELSE[style.moneyFormatUncoloured(2000, span)]#ENDIF)
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_jess_intimate))
-						You need to pay Jess to get intimate with her before being able to pay to have sex with her...
+						你得付钱让婕斯更亲近你才能和她做爱……
 					#ELSEIF(pc.getMoney()<2000)
-						You can't afford to have sex with Jess...
+						你付不起和婕斯做爱……
 					#ELSE
-						Pay Jess and follow her up to her room to have sex with her.
+						付钱给婕斯，跟她回到她的房间做爱。
 					#ENDIF
 				]]></responseTooltip>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
@@ -1579,8 +1579,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Thank Jess for her company and say goodbye.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[感谢婕斯的陪伴，与她告别。]]></responseTooltip>
 				<nextDialogue stripContent="true">default</nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_f0', 'JESS_LEAVE'))]
@@ -1600,9 +1600,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take charge]]></responseTitle>
+				<responseTitle><![CDATA[做主]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Jess that you'll be the one taking charge as you move to start fucking her...
+					告诉婕斯你在操她的时候会是主导者……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
@@ -1625,9 +1625,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell Jess that you want her to take charge and submit to her...
+					告诉婕斯你会屈服于她……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
@@ -1652,17 +1652,17 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<responseTitle><![CDATA[
-					Risky sex (#IF(pc.getMoney()>=5000 && !jess.hasStatusEffect(SE_VIXENS_VIRILITY) && !jess.isVisiblyPregnant())[style.moneyFormat(5000, span)]#ELSE[style.moneyFormatUncoloured(5000, span)]#ENDIF)
+					危险性爱 (#IF(pc.getMoney()>=5000 && !jess.hasStatusEffect(SE_VIXENS_VIRILITY) && !jess.isVisiblyPregnant())[style.moneyFormat(5000, span)]#ELSE[style.moneyFormatUncoloured(5000, span)]#ENDIF)
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(jess.isVisiblyPregnant())
-						Jess is already pregnant, so paying for her to take a breeder pill would be pointless...
+						婕斯已经怀孕了，付钱让她吃繁育药毫无意义……
 					#ELSEIF(jess.hasStatusEffect(SE_VIXENS_VIRILITY))
-						You've already paid Jess to take a breeder pill...
+						你已经付钱让婕斯吃繁育药了……
 					#ELSEIF(pc.getMoney()<5000)
-						You don't have the five thousand flames required to pay Jess for her to take a breeder pill...
+						你没有五千火币来让婕斯吃繁育药……
 					#ELSE
-						Pay Jess five thousand flames for her to take a breeder pill, thereby making it possible for you to impregnate her during sex...
+						付婕斯五千火币让她吃繁育药，这会让她在和你做爱时更容易怀孕……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -1692,8 +1692,8 @@
 	
 	<scene id="jess_after_sex">
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You and Jess have finished having sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你和婕斯做完了爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_f0">JESS_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1702,10 +1702,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[
-					Leave Jess's room and continue on your way...
-				]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开婕斯的房间，继续旅程……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_tavern_f1_corridor"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_f0', 'JESS_AFTER_SEX_LEAVE'))]
@@ -1728,9 +1726,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Enter the toilets.
+					进入厕所。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_f0_toilets_interior]]></nextDialogue>
 			</response>
@@ -1745,10 +1743,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Exit the toilets and head back out into the shopping precinct.
-				]]></responseTooltip>
+					走出厕所，回到购物区。
+]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_shops_street"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -1759,9 +1757,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Toilet]]></responseTitle>
+				<responseTitle><![CDATA[盥洗室]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the toilet.
+					使用厕所。
 				]]></responseTooltip>
 				<nextDialogue forceContinue="true" stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f0_toilets_interior]]></nextDialogue>
 				<effects><![CDATA[
@@ -1771,11 +1769,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wash]]></responseTitle>
+				<responseTitle><![CDATA[清洗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the sinks to wash your [pc.hands] and face.
-					<br/>[style.italicsGood(This will clean all inventory slots associated with head and hand slots, as well as any clothing worn in these slots.)]
-				]]></responseTooltip>
+					用水槽洗脸洗[pc.hands]。
+					<br/>[style.italicsGood(这会清理你的头部、手部，以及在这些栏位穿着的衣物。)]
+]]></responseTooltip>
 				<nextDialogue forceContinue="true" stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_f0_toilets_interior]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.applyLimitedWash(IS_HEAD, IS_EYES, IS_MOUTH, IS_NECK, IS_HAIR, IS_FINGER, IS_HAND, IS_WRIST)]

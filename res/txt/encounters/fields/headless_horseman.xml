@@ -1,343 +1,343 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- Warning: -->
 	
 	<htmlContent tag="WARNING"><![CDATA[
 	<p>
-		As you continue to travel through the Foloi Fields, you suddenly spot a squat, wooden signpost sitting by the side of the road up ahead. Approaching this curiosity, you see that the board bears a warning, and you stop to read:
+		当你继续穿越弗洛伊田野时，突然间你看到一块矮矮的木制路牌坐落在前方的路边。走近一看，你发现路牌上写着一条警示，你停下来阅读：
 	</p>
 	<p style='text-align:center;'>
 	<i>
-		[style.boldOrange(Beware the Headless Horseman!)]
-		<br/>A most foul criminal has once again been reported to be on the prowl! The 'headless horseman' is known to attack innocent citizens and demand that they give him head! Finding him an amusement, Lunette has granted him legal immunity, so all that you can do is try to avoid him!
-		<br/>What is known about this horseman:
-		<br/>- He only attacks at night
-		<br/>- He is only active during the month of October
-		<br/>- He is not interested in money
-		<br/>- He only attacks people whose mouths he can access
-		<br/>Stay safe and don't become his next victim!
+		[style.boldOrange(警惕无头骑士！)]
+		<br/>据报道，一名恶贯满盈的罪犯堂堂来袭！众所周知，“无头骑士”会袭击无辜市民，并要求他们把头交给他！露内特认为他是个有趣的人，因此给予了他法律豁免权，你能做的就只有尽量避开他！
+		<br/>关于这位罪犯的已知信息：
+		<br/>- 他只在夜晚袭击
+		<br/>- 他只在十月活跃
+		<br/>- 他对钱不感兴趣
+		<br/>- 他只袭击那些“有嘴”的人
+		<br/>注意安全，不要成为他的下一个受害者！
 	</i>
 	</p>
 	<p>
-		Taking this warning seriously, you quickly glance around to make sure that this 'headless horseman' isn't lurking somewhere nearby. Thankfully, there's no sign of this menace, and so after again scanning over the facts about the criminal's modus operandi, you prepare to set off and continue on your way...
+		看到这则警告时，你迅速环顾四周，确保这个“无头骑士”没有潜伏在附近。幸运的是，周围一片安静，暂时没有威胁。你又一次看了看罪犯的作案手法，然后准备好继续你的旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HORSEMAN_NO_ENCOUNTER_HINT"><![CDATA[
 	<p style='text-align:center;'>
-		[style.italicsMinorGood(You won't encounter the headless horseman again tonight!)]
+		[style.italicsMinorGood(在今晚，你不会再受到无头骑士的袭击！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Actual encounter: -->
 	
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		Although it's mostly wide-open fields which flank either side of the road you find yourself travelling down, now and again you pass by small thickets of densely-packed trees and bushes. At this time of night these tangled copses are absolutely pitch-black, but as you pass by a particularly overgrown patch of foliage, you suddenly spot a floating, yellow light deep within its depths. Just as you catch sight of it, this strange light starts to rapidly move towards you, and you quickly prepare yourself for the worst as it bursts out of the undergrowth and blocks the road ahead.
+		尽管你所在道路两旁大多是开阔的田野，但偶尔你也会经过一些茂密的小树林和灌木丛。在深夜此时，这些纠结的树丛里黢黑无光，但当你经过一处植被茂盛的地方时，你突然在其深处发现了一个漂浮的黄色光点。就在你瞥见它的时候，这个奇怪的光点开始迅速向你移动，当它冲出灌木丛并挡住了前方的道路时，你迅速做好了准备以备万一。
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_fields_headless_horseman_encountered))
 		<p>
-			Finally getting a chance to see what exactly this strange light is, you find yourself once again being confronted by some kind of arcane illumination that's glowing out through a creepy face which has been carved into one side of a large pumpkin. Although it looked like it was floating when in the dark copse, you're now able to see that this Jack-o'-Lantern is being worn as a frightening headpiece by a tall figure whose body is otherwise completely concealed by a long, black cloak. Through the eye-slits which have been carved into the pumpkin, you see a pair of red, glowing eyes staring out at you, and before you're able to make a move, this familiar figure calls out in a deep, booming voice, [headHorse.speech(I have chosen you as my victim before! That's right, I am the headless horseman, and once again I demand that you give me head!)]
+			你终于找到机会对怪异的光点一探究竟。你发现自己再次对上某种奥术光芒，光芒从巨大南瓜一侧雕刻的令人毛骨悚然的脸上透出。似有似无的身影在幽黑的树丛中浮动。但你辨认出，只不过是身着黑色长斗篷的高个人影，还戴着骇人的南瓜头套。人影在斗篷下隐没了身形，但那红色双目却通过南瓜的缝隙紧盯着你。你尚未有所动作，熟悉的身影便以深沉且洪亮的声音呼唤道，[headHorse.speech(你曾许作吾之祭礼！正是如此，我乃无头骑士，命你向我献上头颅！)]
 		</p>
 	#ELSE
 		<p>
-			Finally getting a chance to see what exactly this strange light is, you find your eyes opening wide as you see that it's some kind of arcane illumination that's glowing out through a creepy face which has been carved into one side of a large pumpkin. Although it looked like it was floating when in the dark copse, you're now able to see that this Jack-o'-Lantern is being worn as a frightening headpiece by a tall figure whose body is otherwise completely concealed by a long, black cloak. Through the eye-slits which have been carved into the pumpkin, you see a pair of red, glowing eyes staring out at you, and before you're able to make a move, this figure calls out in a deep, booming voice, [headHorse.speech(This night, you are to become my next victim! That's right, I am the headless horseman, and you shall give me head!)]
+			你终于找到机会对怪异的光点一探究竟。你双目圆睁，正对上某种奥术光芒，光芒从巨大南瓜一侧雕刻的令人毛骨悚然的脸上透出。似有似无的身影在幽黑的树丛中浮动。但你辨认出，只不过是身着黑色长斗篷的高个人影，还戴着骇人的南瓜头套。人影在斗篷下隐没了身形，但那红色双目却通过南瓜的缝隙紧盯着你。你尚未有所动作，那身影便以深沉且洪亮的声音呼唤道，[headHorse.speech(今夜，你即为吾之祭礼！正是如此，我乃无头骑士，命你向我献上头颅！)]
 		</p>
 	#ENDIF
 	<p>
-		With that, the headless horseman throws open his cloak, revealing to you the fact that he's not wearing any other item of clothing. As he exposes his naked body, you're able to see that this horseman is a greater horse-boy, and the horse-like hair covering his muscular body is completely pitch-black. Looking down, you see that even though it's currently sheathed, he's got a [headHorse.cockGirth], [headHorse.cockLengthValue] horse-cock and a [headHorse.ballsSize] pair of heavy balls between his legs, both of which are covered in ebony skin. In his hands, this horseman is holding a huge [headHorse.mainWeapon], and as he flashes his huge genitals at you, the horseman points this two-handed sword in your direction and hungrily growls, [headHorse.speech(I haven't had any head tonight, and so you're going to give me some! Surrender to me and let me fuck your face, or else I'll have to use force to get my way!)]
+		说着，无头骑士甩开斗篷，露出他不着片缕的身体，漆黑的马鬃覆盖在他发达的肌肉上，你由此辨别出这个骑士是个纯马男。你低头看到他双腿间没出鞘就有[headHorse.cockGirth][headHorse.cockLengthValue]的马屌，和一对被乌黑皮肤所覆盖着的[headHorse.ballsSize]沉重阴囊。这个骑士手持一把巨大的[headHorse.mainWeapon]，一边向你展露巨大的生殖器，一边用双手剑指着你，饥渴地咆哮道，[headHorse.speech(我今晚还没有头，所以你来给我！向我投降吧，让我操你的脸，否则我就靠武力来达到目的了！)]
 	</p>
 	<p>
-		Remembering the warning sign you saw regarding this headless horseman, you know that he's not going to be interested in taking your money. As such, it seems like your only options are to do as he says and give him some head, or prepare to defend yourself...
+		你想起所见的无头骑士的警告标志，知道他对钱不感兴趣。看来你唯一的选择就是照他所说交出脑袋，或者准备自卫……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GIVE_HEAD"><![CDATA[
 	<p>
 		#IF(pc.getAddiction(FLUID_TYPE_CUM_HORSE_MORPH)!=null)
-			Hopelessly addicted to horse-cum, you find yourself getting madly turned on and desperate to get a taste of the horseman's seed, and so without needing to be told again, you submissively drop down before him.
+			你对马精上瘾了，而这让你疯狂地兴奋起来，急切于品尝骑士的精液，于是无需多言，你就顺从地跪倒在他面前。
 		#ELSE
-			Not wanting to fight such a fearsome figure, you decide to do as the horseman demands, and so without needing to be told again, you submissively drop down before him.
+			你不想与如此可怕的人战斗，决定按照骑士的要求行事，于是无需多言，你就顺从地跪倒在他面前。
 		#ENDIF
-		 Letting out a deep, approving grunt as he sees that you're willing to give him what he wants, the muscular horse-boy sticks the blade of his [headHorse.mainWeapon] into the ground, before stepping forwards and placing his large, strong hands on the top of your head. Before you can react or say anything in response to this dominant move, the horseman suddenly pulls you forwards and thrusts his groin into your face. Grinding his still-sheathed shaft all over your mouth, he forces you to breathe in the musky, masculine scent of his animalistic genitals as he grunts, [headHorse.speech(Get me hard with your tongue. And put some effort into it!)]
+		肌肉发达的马男看到你愿意满足他时，发出了低沉而赞许的咕哝声，随后将[headHorse.mainWeapon]插入地面，向你逼近。你还来不及反应，他强壮的双手便举过你的头顶，霸道地把你的脸摁向他凑近的腹股沟。他在你的嘴上磨蹭他那收在鞘中的阴茎，一边强迫你闻他兽根浓重的雄味，一边咕哝道，[headHorse.speech(舌头动起来，卖力点！)]
 	</p>
 	<p>
-		Once again doing as you're told, you dart out your [pc.tongue+] and start to eagerly lick the horse-boy's thick, ebony cock-sheath. Each time you slide your tongue over his salty genitals, the horseman's fat cock pushes out of its sheath a little more and starts to grow harder and larger. In just a moment, you find yourself happily kissing and licking the horseman's huge, erect horse-cock, and after letting out another of his deep, masculine grunts, he orders, [headHorse.speech(Get a taste of my precum, then open wide.)]
+		你又一次听话地伸出[pc.tongue]，热切地舔起马男乌黑粗大的鞘。你的舌头每在他咸湿的生殖器上滑动一下，骑士肥大的阴茎就会从鞘中推出一些，变硬变粗。片刻之后，你所热切舔舐亲吻的就变成了他完全勃起的巨大马屌。他又发出一声低沉的咕哝，命令道，[headHorse.speech(来尝尝我的先走液，张大嘴巴。)]
 	</p>
 	<p>
-		Once more doing as you're told, you work your way up the length of the horseman's hot, veiny shaft, before pressing your [pc.lips+] against the flared head of his horse-like cock and eagerly lapping up the salty, slimy precum that's starting to ooze out from his urethra. After planting one last a passionate kiss on his animalistic dick, you open wide, and without waiting a single moment, the impatient horseman roughly thrusts forwards and forces the massive, flared head of his shaft into your mouth. Gripping your head tightly in both hands, the oral-obsessed horse-boy slams his hips forwards, forcing his huge cock as deep as possible down your throat. Only concerned with his own pleasure, he ignores your choking, gargling splutters, and after pulling back, he thrusts forwards once again and starts to relentlessly fuck your face, causing a stream of cummy saliva to begin to drool from the corners of your mouth...
+		你再一次听话地沿着骑士火热而青筋暴起的阴茎往上舔，再用你[pc.lips+]裹在他的马龟头上，热切地舔食他尿道渗出的咸湿先走液。你最后给他的兽根一个热情深吻，张大嘴巴，这位急不可耐的骑士立刻就粗暴地向前一挺，将他那巨大而扁平的龟头捅进了你的嘴里。痴迷于口交的马男仍然紧抓着你的头，猛烈地向前挺动臀部，将巨大的阴茎尽可能深入你的喉咙。他只顾着自己的快感，对你窒息干呕置若罔闻，一波未平一波又起，无情地操弄你的脸，一股粘稠的唾液从你的嘴角流出……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_SUB"><![CDATA[
 	<p>
-		Ramming his cock deep down your throat one last time, the horseman, having got the head he was seeking, pulls all the way back and slides his softening shaft out of your mouth. Grabbing his semi-flaccid cock with one hand, he slaps its cummy, saliva-coated length against your [pc.lips+], grunting in amused satisfaction, [headHorse.speech(You're addicted to horse cum now. So show me how much you need it. Lick me clean.)]
+		最后一次将阳具狠狠插入你的喉咙之后，那个得到了他寻求的口交的马男将他瘫软的肉棒从你的嘴中整根抽出。他一只手握住沾满唾液和精液的半软肉棒拍打着你[pc.lips+]，发出了满意的咕哝声，[headHorse.speech(你可是要对马精液上瘾了哦，现在让我看看你有多渴求它——给我舔干净。)]
 	</p>
 	<p>
-		The desperate urge in your mind to get another taste of the horseman's seed lets you know that what he's saying is the truth, and before you can think twice about it, you're eagerly running your [pc.tongue+] all over the horseman's ebony shaft, swallowing down every last drop of slimy cum that you can find. Despite your oral attention, the horseman seems to have had enough for one night, and within a few moments, his huge shaft has once again softened and withdrawn into its sheath. Desperately sliding your tongue into the thick folds of skin which protect the horseman's cock, you find yourself letting out a series of pathetic, whining moans.
+		他说的是真的，你的确急切地想再尝尝马精的滋味。不经思考，你[pc.tongue+]就迫不及待地来回游走在马男乌黑的阴茎上，吞下你能找到的每一滴粘稠的精液。尽管你口交得很卖力，但马男今晚似乎已经爽够了，没过一会儿，他巨大的阴茎就再次软化并缩回了鞘中。你拼命地将舌头伸进其厚厚的褶皱里，可怜巴巴地发出了绵长的呜咽与呻吟。
 	</p>
 	<p>
-		[headHorse.speech(That's enough for tonight,)] the horse-boy booms, before pushing you away from his groin and taking a step back. Looking down at you through the eye slots of the Jack-o'-Lantern he's still wearing, the horseman grunts, [headHorse.speech(If I see you again, I'll be sure to offer you another load of my cum.)]
+		[headHorse.speech(今晚已经够了，)]马男低沉地说，把你从腹股沟推开，并后退一步。骑士透过南瓜灯的眼缝向下看着你，咕哝道，[headHorse.speech(如果我再见到你，一定会再给你来一发精液。)]
 	</p>
 	<p>
-		Without so much as a farewell, the horseman turns about on the spot, and after retrieving his [headHorse.mainWeapon] from where he left it earlier, he runs off into the night, leaving you with little else to do except gather your thoughts and continue on your way...
+		骑士连一句道别都没说便转身离开，捡起[headHorse.mainWeapon]后，跑进了夜色中，只留你整理思绪，继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON"><![CDATA[
 	<p>
-		Although his physical appearance would suggest that he'd be a strong opponent, the headless horseman was no match for you, and after half-heartedly swinging his [headHorse.mainWeapon] at you one last time, he sinks down onto one knee and pants, [headHorse.speech(Wait... No more... I am defeated...)]
+		虽然从外表上能判断出无头骑士实力强劲，但他依然不是你的对手。他在自我质疑中最后一次向你挥舞[headHorse.mainWeapon]，就地单膝跪下，喘息道，[headHorse.speech(等等！够了，我输了……)]
 	</p>
 	<p>
 		#IF(headHorse.getClothingInSlot(IS_HEAD)!=null && headHorse.getClothingInSlot(IS_HEAD).getClothingType()==CT_innoxia_head_jack_o_lantern)
-			With the glowing Jack-o'-Lantern still securely in place on his head, your foe makes for a curious and frightening sight.
+			你的敌人头上还牢牢地戴着发光的南瓜灯，让人看了既好奇又害怕。
 		#ELSE
-			Although you've taken the glowing Jack-o'-Lantern off his head, your foe's glowing red eyes and pitch-black fur still gives him a fearsome look.
+			虽然你摘掉了敌人头上发光的南瓜灯，但他发光的红眼睛和黝黑的皮毛还是让你不寒而栗。
 		#ENDIF
-		 Despite his alarming appearance, however, he remains defeated and repeats his declaration of surrender, leaving you wondering what to do with him...
+		尽管他长的可怕，但还是被你打败了，在一旁重复着投降宣言，你思索该拿他怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_END"><![CDATA[
 	<p>
-		Deciding that you're finished with the headless horseman, you [pc.step] past him and leave him panting for breath as you continue on your way through the Foloi Fields...
+		你决定不再与无头骑士纠缠，径直[pc.step]过，留下他只能气喘吁吁地离开。你继续穿过弗洛伊田野……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX"><![CDATA[
 	<p>
-		Liking the look of the horseman's muscular, masculine body, as well as his huge, sheathed cock and heavy balls, you decide that you'd like to have some fun with him. [pc.Stepping] up to where he's still collapsed down on one knee, you tell the horseman that tonight's his lucky night, as you've decided to use him to satisfy your lust.
+		你喜欢骑士肌肉发达的健壮身躯，收在鞘中的巨大肉棒以及他沉重的阴囊，因此你决定和他找点乐子。你[pc.Stepping]到仍然单膝跪倒的骑士面前，说今晚是他的幸运之夜，因为你决定用他来满足色欲。
 	</p>
 	<p>
-		[headHorse.speech(If that's the case, then use that mouth of yours to suck my cock,)] he audaciously grunts. Telling him that he's in no position to be making such demands, you order the horseman to stand. Doing as he's told, your defeated foe rises to his [headHorse.feet], enabling you to slide your [pc.fingers] over the thick sheath between his legs. Much to your delight, his cock quickly responds to your touch, and within a moment, his hot, thick horse-shaft is fully erect and standing to attention.
+		[headHorse.speech(既然这样，你不如来给我口交，)]他大胆地咕哝着。你一边告诉他没资格提这种要求，一边让骑士站起来。他按照吩咐站起，使你能够用手指挑逗他两腿之间的厚鞘。你欣喜地看着他火热的大肉棒回应了你的触碰，不足片刻便完全勃起。
 	</p>
 	<p>
-		[headHorse.speech(Just let me pump a load inside of you,)] he eagerly grunts in his deep, gruff voice. Deciding to make him wait and see what it is you're planning to do with him, you ignore the horseman's comment as you [pc.step] forwards and prepare to have your way with him...
+		[headHorse.speech(不如让我在你身体里抽插一番吧，)]他急切地用他低沉粗鲁的声音咕哝着。你无视骑士的提议，让他静待你的决定，前[pc.step]一步，准备和他来一次……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX_GENTLE"><![CDATA[
 	<p>
-		Liking the look of the horseman's muscular, masculine body, as well as his huge, sheathed cock and heavy balls, you decide that you'd like to have some fun with him. [pc.Stepping] up to where he's still collapsed down on one knee, you tell the horseman that tonight's his lucky night, as you've decided to use him to satisfy your lust.
+		你喜欢骑士肌肉发达的健壮身躯，收在鞘中的巨大肉棒以及他沉重的阴囊，因此你决定和他找点乐子。你[pc.Stepping]到仍然单膝跪倒的骑士面前，说今晚是他的幸运之夜，因为你决定用他来满足色欲。
 	</p>
 	<p>
-		[headHorse.speech(If that's the case, then use that mouth of yours to suck my cock,)] he audaciously grunts. Gently informing him that he's in no position to be making such demands, you ask the horseman to stand. Doing as he's told, your defeated foe rises to his [headHorse.feet], enabling you to softly tease your [pc.fingers] over the thick sheath between his legs. Much to your delight, his cock quickly responds to your touch, and within a moment, his hot, thick horse-shaft is fully erect and standing to attention.
+		[headHorse.speech(既然这样，你不如来给我口交，)]他大胆地咕哝着。你一边温柔地告诉他没资格提这种要求，一边让骑士站起来。他按照吩咐站起，使你能够轻柔地用手指挑逗他两腿之间的厚鞘。你欣喜地看着他火热的大肉棒回应了你的触碰，不足片刻便完全勃起。
 	</p>
 	<p>
-		[headHorse.speech(Just let me pump a load inside of you,)] he eagerly grunts in his deep, gruff voice. Deciding to make him wait and see what it is you're planning to do with him, you ignore the horseman's comment as you [pc.step] forwards and prepare to have your way with him...
+		[headHorse.speech(不如让我在你身体里抽插一番吧，)]他急切地用他低沉粗鲁的声音咕哝着。你无视骑士的提议，让他静待你的决定，前[pc.step]一步，准备和他来一次……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_SEX_ROUGH"><![CDATA[
 	<p>
-		Liking the look of the horseman's muscular, masculine body, as well as his huge, sheathed cock and heavy balls, you decide that you'd like to have some fun with him. [pc.Stepping] up to where he's still collapsed down on one knee, you tell the horseman that tonight's his lucky night, as you've decided to use him to satisfy your lust.
+		你喜欢骑士肌肉发达的健壮身躯，收在鞘中的巨大肉棒以及他沉重的阴囊，因此你决定和他找点乐子。你[pc.Stepping]到仍然单膝跪倒的骑士面前，说今晚是他的幸运之夜，因为你决定用他来满足色欲。
 	</p>
 	<p>
-		[headHorse.speech(If that's the case, then use that mouth of yours to suck my cock,)] he audaciously grunts. Roughly snapping back that he's in no position to be making such demands, you order the horseman to stand. Doing as he's told, your defeated foe rises to his [headHorse.feet], enabling you to forcefully rub your [pc.fingers] over the thick sheath between his legs. Much to your delight, his cock quickly responds to your touch, and within a moment, his hot, thick horse-shaft is fully erect and standing to attention.
+		[headHorse.speech(既然这样，你不如来给我口交，)]他大胆地咕哝着。你厉声呵斥他没资格提这种要求，一边让骑士站起来。他按照吩咐站起，使你能够强劲地用[pc.fingers]挑逗两腿之间的厚鞘。你欣喜地看着火热的大肉棒回应了你的触碰，不足片刻便完全勃起。
 	</p>
 	<p>
-		[headHorse.speech(Just let me pump a load inside of you,)] he eagerly grunts in his deep, gruff voice. Deciding to make him wait and see what it is you're planning to do with him, you tell the horseman to shut up as you [pc.step] forwards and prepare to have your way with him...
+		[headHorse.speech(不如让我在你身体里抽插一番吧，)]他急切地用他低沉粗鲁的声音咕哝着。你叫骑士闭嘴，让他静待你的决定，前[pc.step]一步，准备和他来一次……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_GIVE_HEAD"><![CDATA[
 	<p>
 		#IF(pc.getAddiction(FLUID_TYPE_CUM_HORSE_MORPH)!=null)
-			Hopelessly addicted to horse-cum, you find yourself getting madly turned on and desperate to get a taste of the horseman's seed,
+			你对马精上瘾了，而这让你疯狂地兴奋起来，急切于品尝骑士的精液，
 		#ELSE
-			Feeling sorry for the horseman, you decide that it would be best to give him what he wants,
+			你对骑士感到抱歉，决定让他如愿以偿，
 		#ENDIF
-		 and so instead of using your victory to your advantage, you submissively drop down before him and tell him to do whatever he likes with you. Letting out a deep, surprised grunt as he sees that you're willing to give him what he wants, the muscular horse-boy rises to his [headHorse.feet], before stepping forwards and placing his large, strong hands on the top of your head. Seeing that you're serious about submitting to him, the horseman lets out another deep grunt, before pulling you forwards and thrusting his groin into your face. Grinding his still-sheathed shaft all over your mouth, he forces you to breathe in the musky, masculine scent of his animalistic genitals as he grunts, [headHorse.speech(Get me hard with your tongue. And put some effort into it!)]
+		因此，尽管你胜利了，还是顺从地跪在他面前，让他对你为所欲为。肌肉发达的马男看到你愿意满足他时，发出了低沉而惊讶的咕哝声，然后站起身来，把他那双有力的大手放在你的头顶上。骑士明确了你的决心，又发出一声低沉的哼声，将你的脸摁向他凑近的腹股沟。他在你的嘴上磨蹭他那收在鞘中的阴茎，一边强迫你闻他兽根浓重的雄味，一边咕哝道，[headHorse.speech(舌头动起来，卖力点！)]
 	</p>
 	<p>
-		Doing as you're told, you dart out your [pc.tongue+] and start to eagerly lick the horse-boy's thick, ebony cock-sheath. Each time you slide your tongue over his salty genitals, the horseman's fat cock pushes out of its sheath a little more and starts to grow harder and larger. In just a moment, you find yourself happily kissing and licking the horseman's huge, erect horse-cock, and after letting out another of his deep, masculine grunts, he orders, [headHorse.speech(Get a taste of my precum, then open wide.)]
+		你听话地伸出[pc.tongue]，热切地舔起马男乌黑粗大的鞘。你[pc.tongue+]每在他咸湿的生殖器上滑动一下，骑士肥大的阴茎就会从鞘中推出一些，变硬变粗。片刻之后，你所热切舔舐亲吻的就变成了他完全勃起的巨大马屌。他又发出一声低沉的咕哝，命令道，[headHorse.speech(来尝尝我的先走液，张大嘴巴。)]
 	</p>
 	<p>
-		Once more doing as you're told, you work your way up the length of the horseman's hot, veiny shaft, before pressing your [pc.lips+] against the flared head of his horse-like cock and eagerly lapping up the salty, slimy precum that's starting to ooze out from his urethra. After planting one last a passionate kiss on his animalistic dick, you open wide, and without waiting a single moment, the impatient horseman roughly thrusts forwards and forces the massive, flared head of his shaft into your mouth. Gripping your head tightly in both hands, the oral-obsessed horse-boy slams his hips forwards, forcing his huge cock as deep as possible down your throat. Only concerned with his own pleasure, he ignores your choking, gargling splutters, and after pulling back, he thrusts forwards once again and starts to relentlessly fuck your face, causing a stream of cummy saliva to begin to drool from the corners of your mouth...
+		你再一次听话地沿着骑士火热而青筋暴起的阴茎往上舔，再用你[pc.lips+]裹在他的马龟头上，热切地舔食他尿道渗出的咸湿先走液。你最后给他的兽根一个热情深吻，张大嘴巴，这位急不可耐的骑士立刻就粗暴地向前一挺，将他那巨大而扁平的龟头捅进了你的嘴里。痴迷于口交的马男仍然紧抓着你的头，猛烈地向前挺动臀部，将巨大的阴茎尽可能深入你的喉咙。他只顾着自己的快感，对你窒息干呕置若罔闻，一波未平一波又起，无情地操弄你的脸，一股粘稠的唾液从你的嘴角流出……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_DOM"><![CDATA[
 	<p>
-		Having had your fun with the [headHorse.name], you push him away from you, and with one last deep, masculine grunt, the horse-boy collapses to the floor in complete exhaustion. As he continues to heavily pant for breath, you quickly get your things back in order, before wondering whether to help yourself to any of his possessions, or to instead simply continue on your way and leave him behind...
+		你和[headHorse.name]玩尽兴了，便将他推开。马男发出了最后一声深沉粗犷的低吼，然后全身脱力地趴倒在地上。你看着他仍喘着粗气，迅速整理好自己，犹豫着要不要拿走他的财物，或者丢下他，直接离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_DOM_END"><![CDATA[
 	<p>
-		Deciding that you're finished with the headless horseman, you [pc.step] past him and leave him panting for breath as you continue on your way through the Foloi Fields...
+		你决定不再与无头骑士纠缠，径直[pc.step]过，他只能气喘吁吁地离开。你继续穿过弗洛伊田野……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_WON_TALK"><![CDATA[
 	<p>
-		Wanting to get some answers, you ask the headless horseman why he's attacking innocent travellers and demanding head from them. Although he lets out a deep grunt in annoyance at your decision to question him, the horse-boy nevertheless answers you in his booming voice, [headHorse.speech(Wel, my cock's not going to suck itself is it? I got bored of all the whores and easy sluts in the city, so I thought I'd look to get my cock sucked out here. It's a lot more fun doing it this way...)]
+		你想知道无头骑士为何袭击无辜旅者并向他们索要人头，于是向他寻求答案。你的询问虽然让无头骑士恼怒地发出低沉的咕哝声，但他还是用洪亮的声音回答道，[headHorse.speech(呃，我的鸡巴不会自己舔自己吧？我又厌倦了城里的妓女和荡妇，所以我在这里让人给我口交。这样做会更有趣……)]
 	</p>
 	<p>
-		Not content with the simplicity of his answer, you tell the horseman that he'd better tell you the truth, or else his nights of hunting for head will be well and truly over. Letting out a laugh, he asks, [headHorse.speech(What, is that not a good enough reason for you? I like fucking people's faces, that's all there is to it. Oh, and I've got Lunette's protection, so don't try to threaten me with the Enforcers or slavery or any of that shit. Now I've answered your questions, you'd better thank me. Get down and open that pretty little mouth of yours so that I can empty my fat balls deep down your throat.)]
+		你并不满足于他简单的回答，便叫骑士最好告诉你真相，否则他的猎头之夜可就真的要结束了。他笑着问道，[headHorse.speech(怎么，这个理由还不够充分吗？我喜欢干别人的脸，就这么简单。噢，我可有露内特的保护，别指望用执法者或者奴役之类的威胁我。你的问题我已经回答完了，你最好感谢我。趴下，张开你漂亮的小嘴，让我的蛋蛋在你的喉咙里清空库存。)]
 	</p>
 	<p>
-		Discovering that this horseman's motives are extremely one-dimensional, you realise that there's no point in asking him any further questions. Looking down at your defeated foe, you wonder what to do with him...
+		在发现这个骑士的动机非常单一后，你意识到问他任何问题都没有意义了。看着眼前被打败的敌人，你思考着该怎样处置他……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST"><![CDATA[
 	<p>
-		The headless horseman proves to be too formidable a foe for you to defeat, and after taking a [pc.step] backwards and collapsing down to the ground, you indicate to him that you surrender. Letting out a deep, booming laugh in response, he declares, [headHorse.speech(You were foolish to try and resist your fate!)]
+		事实证明，无头骑手是你无法击败的强敌，你[pc.step]退一步，跪倒在地，臣服于他。回应你的是他低沉而洪亮的笑声，他宣布道，[headHorse.speech(你刚刚正愚蠢地尝试反抗你的命运！)]
 	</p>
 	<p>
-		Having secured his victory over you, the muscular horse-boy sticks the blade of his [headHorse.mainWeapon] into the ground, before stepping forwards and placing his large, strong hands on the top of your head. Before you can react or say anything in response to this dominant move, the horseman suddenly pulls you forwards and thrusts his groin into your face. Grinding his still-sheathed shaft all over your mouth, he forces you to breathe in the musky, masculine scent of his animalistic genitals as he grunts, [headHorse.speech(Get me hard with your tongue. And put some effort into it!)]
+		肌肉发达的马男宣告胜利后，将[headHorse.mainWeapon]刺入地面，向你逼近。你还来不及反应，他强壮的双手便举过你的头顶，将你的脸摁向他凑近的腹股沟。他在你的嘴上磨蹭他那收在鞘中的阴茎，一边强迫你闻他兽根浓重的雄味，一边咕哝道，[headHorse.speech(舌头动起来，卖力点！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_GIVE_HEAD"><![CDATA[
 	<p>
-		With the strong, muscular horse-boy overpowering you and grinding his musky genitals all over your face, you see no way out of your predicament except to do as you're told and lick the horse-boy's thick, ebony cock-sheath. Each time you slide your [pc.tongue+] over his salty genitals, the horseman's fat cock pushes out of its sheath a little more and starts to grow harder and larger. In just a moment, you find yourself kissing and licking the horseman's huge, erect horse-cock, and after letting out another of his deep, masculine grunts, he orders, [headHorse.speech(Get a taste of my precum, then open wide.)]
+		这个肌肉发达的强壮马男正压制着你，把他雄味浓重的生殖器在你脸上磨来磨去，你想不到破局之法，只能听话地舔起马男乌黑粗大的鞘。你[pc.tongue+]每在他咸湿的生殖器上滑动一下，骑士肥大的阴茎就会从鞘中推出一些，变硬变粗。片刻之后，你舔舐亲吻的就变成了他完全勃起的巨大马屌。他又发出一声低沉的咕哝，命令道，[headHorse.speech(来尝尝我的先走液，张大嘴巴。)]
 	</p>
 	<p>
-		Seeing no other option but to do as you're told, you work your tongue up the length of the horseman's hot, veiny shaft, before pressing your [pc.lips+] against the flared head of his horse-like cock and eagerly lapping up the salty, slimy precum that's starting to ooze out from his urethra. After planting one last a passionate kiss on his animalistic dick, you open wide, and without waiting a single moment, the impatient horseman roughly thrusts forwards and forces the massive, flared head of his shaft into your mouth. Gripping your head tightly in both hands, the oral-obsessed horse-boy slams his hips forwards, forcing his huge cock as deep as possible down your throat. Only concerned with his own pleasure, he ignores your choking, gargling splutters, and after pulling back, he thrusts forwards once again and starts to relentlessly fuck your face, causing a stream of cummy saliva to begin to drool from the corners of your mouth...
+		你别无选择，只能听命行事，沿着骑士火热而青筋暴起的阴茎往上舔，再用你[pc.lips+]裹在他的马龟头上，热切地舔食他尿道渗出的咸湿先走液。你最后给他的兽根一个热情深吻，张大嘴巴，这位急不可耐的骑士立刻就粗暴地向前一挺，将他那巨大而扁平的龟头捅进了你的嘴里。痴迷于口交的马男仍然紧抓着你的头，猛烈地向前挺动臀部，将巨大的阴茎尽可能深入你的喉咙。他只顾着自己的快感，对你窒息干呕置若罔闻，一波未平一波又起，无情地操弄你的脸，一股粘稠的唾液从你的嘴角流出……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_GIVE_HEAD_RESIST"><![CDATA[
 	<p>
-		Although the strong, muscular horse-boy is overpowering you and grinding his musky genitals all over your face, you refuse to do as he says and try to pull your face away from his thick, ebony cock-sheath. Despite your refusal to follow his orders, the stimulation from rubbing his sheathed cock against your mouth starts to get the horseman hard, and you watch in growing horror as his fat cock pushes out of its sheath and begins to get harder and larger. In just a moment, his huge, erect horse-cock is sliding up and down over your face, and after letting out another of his deep, masculine grunts, he impatiently booms, [headHorse.speech(Stop trying to resist! My cock's going down your throat one way or another!)]
+		尽管这个肌肉发达的强壮马男正压制着你，把他雄味浓重的生殖器在你脸上磨来磨去，但你不想如他所愿，努力把脸从他乌黑的马鞘上拉开。尽管你一直抗拒，但嘴唇摩擦产生的刺激还是让骑士变硬了，你惊慌地看着他的肥大的肉棒从鞘中推出，变硬变粗。不一会儿，在你脸上来回磨蹭的就变成了他完全勃起的巨大马屌。他又发出一声低沉的咕哝，不耐烦地低吼道，[headHorse.speech(别反抗了！我的鸡巴无论如何都会捅进你的喉咙！)]
 	</p>
 	<p>
-		Ignoring the horseman's words, you continue to struggle against him, which succeeds in only annoying him further. Not willing to put up with your attitude, the muscular horse-boy grabs hold of you by the [pc.arm], and you find yourself unable to fight back as he half-leads, half-drags you over to a nearby fallen tree. Roughly throwing you down face-first over it, he quickly vaults the sturdy log and once again grabs hold of your face. With your new position severely limiting your ability to pull away, you're unable to prevent the horseman from pushing his huge, flared head up against your face. Musky precum oozes out of his urethra, quickly coating your [pc.lips+] and causing you to let out a protesting cry. Deeply grunting, the horseman booms, [headHorse.speech(Take it, bitch.)]
+		你无视骑士的话，继续挣扎着反抗，但这只能进一步惹恼他。肌肉发达的马男受不了了，一把抓住你的[pc.arm]，半牵半拖着你走到附近一棵倒下的树旁，你根本无力反抗。随即他粗鲁地把你脸朝下扔到树上，一把跃过粗壮的圆木，再次抓住你的脸。可惜你现在的姿势严重限制了你的活动能力，无法阻止骑士把他那硕大的扁平龟头顶在你的脸上。他雄味浓重的先走液从尿道渗出，很快布满了你[pc.lips+]，引得你发出抗议。骑士低吼道，[headHorse.speech(接好了，婊子。)]
 	</p>
 	<p>
-		Despite your best efforts to resist, the horseman eventually manages to force the head of his hot, musky cock past your [pc.lips+], and before you can try to pull away, he's violently thrusting forwards and slamming his thick, ebony shaft deep down your throat. Having finally got his way, the horse-boy keeps his massive shaft hilted as deep as physically possible down your throat, and ignoring your choking, gargling splutters, he gloats in his deep, rough voice, [headHorse.speech(You like that? ~Mmm!~ Keep resisting, bitch; your cries only make your throat tighter. ~Aah!~ I'll be emptying my balls in no time if you carry on like this!)]
+		尽管你竭力反抗，但骑士最终还是成功地将他那火热而雄味浓重的龟头顶进你[pc.lips+]，不给你丝毫挣扎时间，猛地将他那乌黑粗大的阴茎深深地插入你的喉咙。马男终于得逞了，他一边无视你的咕噜声，用巨大的阴茎不断深入你的喉咙，一边用低沉粗犷的声音幸灾乐祸道， [headHorse.speech(你喜欢这样？~唔！~再挣扎啊，婊子！你的哭喊只能拉紧你的喉咙哦。~啊哈！~这样我的蛋蛋可很快就会被你掏空了啦！)]
 	</p>
 	<p>
-		Still gripping your head tightly in both hands, the oral-obsessed horse-boy pulls his hips back, and you feel the wide, flared head of his cock sliding up your throat as he starts to withdraw his cock from your mouth. Just as you think that he's going to completely withdraw his throbbing shaft and put an end to this, the horseman violently thrusts forwards once again, grunting in delight as he fills your throat and causes you to let out another choking splutter. Having got the head which he was so desperately craving, the horseman keeps you bent over the fallen tree as he starts to relentlessly fuck your face, causing a stream of cummy saliva to begin to drool from the corners of your mouth...
+		痴迷于口交的马男仍然紧抓着你的头，把肉棒从你的嘴里抽出，他宽大平坦的龟头也随之滑出你的喉咙。就在你以为他要抽出他那抽动的阴茎，结束这一切的时候，马男又猛地向前挺进，填满你的喉咙。他愉悦地哼哼着，你却只能窒息的干呕。骑士终于得偿所愿，让你躬在倒下的树上，他无情地操弄你的脸，一股粘稠的唾液从你的嘴角流出……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COMBAT_LOST_CONTINUE"><![CDATA[
 	<p>
-		Not at all willing to give this horseman the head which he's after, you pull away from his musky sheath is disgust and tell him that you'll never do as he asks. Letting out a deep, angry grunt, the horse-boy declares, [headHorse.speech(You're lucky that I've got no interest in forcing you to do it.)]
+		你根本不愿意给这个骑士他想要的人头，厌恶地抽离他的鞘，告诉他你永远不会如他所愿。马男愤怒地低吼着，宣称道，[headHorse.speech(算你走运，我没兴趣强迫你。)]
 	</p>
 	<p>
-		Pushing you away from his groin, the horse-boy takes a step back before heading over to retrieve his [headHorse.mainWeapon]. Turning to look back at you through the eye slots of the Jack-o'-Lantern he's still wearing, the horseman grunts, [headHorse.speech(You'll have changed you mind for the next time, I'm sure of it. If I see you again, I'll be sure to offer you another load of my cum.)]
+		马男把你从腹股沟推开，后退一步捡起[headHorse.mainWeapon]。骑士透过南瓜灯的眼缝向下看着你，咕哝道，[headHorse.speech(我肯定你下次会改变主意，如果我再见到你，我一定会再给你来一发精液。)]
 	</p>
 	<p>
-		Without so much as a farewell, the horseman turns about on the spot and runs off into the night, leaving you with little else to do except gather your thoughts and continue on your way...
+		骑士连一句道别都没说便转身跑进夜色中，只留你整理思绪，继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Fully submit: -->
 	
 	<htmlContent tag="FULLY_SUBMIT"><![CDATA[
 	<p>
-		Your addiction to horse-cum starts to weigh heavily on your mind, and before you know what you're doing, you catch yourself staring in desperate longing at the headless horseman's heavy balls and sheathed cock. Letting out a hungry whine, you decide that you're going to have to do whatever it takes to get your next fix of hot, musky horse-jizz, and so drop down before the horse-boy and declare your complete and utter submission to him and his fat, delicious cock. Although you can't see his face through the Jack-o'-Lantern he's wearing, you're sure that he must be smirking in satisfaction as he grunts, [headHorse.speech(That's what I like to hear.)]
+		你的马精上瘾支配你的思想，无意识间便沉溺于迷乱的渴望中。你痴痴地盯着无头骑士沉重的睾丸和出鞘的阴茎，发出饥渴的呜咽。你决定不惜一切代价都要得到他雄味浓重的滚烫马精，便俯身宣布你完全臣服于他和他肥硕美味的肉棒。[headHorse.speech(我想听到的就是这个。)]他哼道，虽然你无法透过南瓜灯看到他的脸，但你肯定他此时一定在满意地坏笑。
 	</p>
 	<p>
-		Stepping over to a nearby fallen tree, the horseman sits down on it and spreads his legs so as to present himself to you. Not needing to be told what to do, you quickly shuffle forwards and drop your head down to his groin, before starting to greedily lick and kiss his musky sheath. Letting out a series of deep, masculine grunts, the horseman orders in his booming voice, [headHorse.speech(Worship my balls, you slut.)]
+		骑士走到附近一棵倒下的树旁坐下，叉开双腿，尽显风光。你无需多言就迅速到他身侧，低下头贪婪地舔吻他雄味浓重的鞘。骑士发出低沉而绵长的咕哝声，用他洪亮的嗓音命令道，[headHorse.speech(来崇拜我的蛋蛋吧，荡妇。)]
 	</p>
 	<p>
-		Doing as you're told, you drop your mouth down to the horseman's huge, heavy balls, before starting to passionately kiss and lick them. Thanks to your passionate oral attention, the horseman's fat, ebony cock quickly pushes out of its sheath and rises to full erection. As you continue to service his dangling, cum-stuffed balls, the horse-boy grunts, [headHorse.speech(That's enough! ~Mmm!~ Now choke yourself on my cock, slut!)]
+		你听话地把嘴凑到骑士巨大而沉重的睾丸上，开始热情地亲吻和舔舐。你热情的口交让骑士那乌黑肥硕的肉棒很快就从鞘中挤出，并完全勃起。在你继续伺候他那悬垂的、充满精液的睾丸时，马男哼道，[headHorse.speech(够了！~唔！~让我的鸡巴噎死你吧，荡妇！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FULLY_SUBMIT_DEEPTHROAT"><![CDATA[
 	<p>
-		More than happy to do as you're told, you work your [pc.lips+] and tongue up the length of the horseman's hot, thick shaft, before greedily licking up the stream of salty, musky precum that's started to ooze out of his urethra. Once that's done, you open up wide and force the huge, flared head of his horse-like cock into your mouth. After sucking on the end of his delicious, musky dick for a brief moment, you drop your head down into the horse-boy's lap, forcing his fat, throbbing shaft deep down your throat. Grunting in satisfaction, the horseman places his hands on the back of your head and forces you down a little further, grunting, [headHorse.speech(That's it! ~Mmm!~ Take it deep, you slut!)]
+		你非常乐意听从吩咐，用你[pc.lips+]和舌头顺着骑士火热的肥硕肉棒一路往上舔吻，如饥似渴地舔食他尿道流出的咸湿先走液。舔完之后，你张大嘴巴将他那巨大而扁平的马龟头吞进嘴里。你吮吸了一小会儿他那美味而雄味浓重的肉棒后，把头埋进马男的腿间，将他那颤动的肥硕肉棒深深压入你的喉咙。骑士满意地直哼哼，双手摁着你的后脑勺往下推，说道：[headHorse.speech(我想要的就是这个！~唔！~荡妇，深一点！)]
 	</p>
 	<p>
-		Using his grip on the back of your head to hold you in place, the horseman continues to grunt in satisfaction as you start to let out a series of choking, spluttering cries. Just as you start to feel like you can't take it any more, the horse-boy finally lifts your head up, allowing his massive, fat cock to almost completely slide out of your mouth, before pulling you down and slamming it deep down your throat again at the last moment. Eager to please the horseman and earn your delicious reward of thick, salty horse-jizz, you happily let him use your throat as his personal cock-sleeve. Within moments, you find yourself letting out a stream of gargled, erotic moans as you focus on doing your best to deepthroat him, while a stream of cummy saliva begins to drool from the corners of your mouth...
+		你发出一串窒息的咕噜声，骑士继续用他抓着你后脑勺的手将你固定在原地，满足地哼哼着。就在你觉得要受不了的时候，马男终于提起你的头，把他那巨大肥大的阴茎几乎完全滑出你的嘴，但最后一刻又把你再摁下来，直顶入喉。你迫不及待地想取悦这位骑士，赢得浓稠咸湿的马精作为美味的奖赏，于是高兴地让他把你的喉咙当作他的私人鸡巴套。不一会儿，你便发出绵长又色情的咕噜声，一股粘稠的唾液从你的嘴角流出……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FULLY_SUBMIT_STANDING_FACE_FUCK"><![CDATA[
 	<p>
-		Deciding to push your luck a little, you ask the horseman if he could instead stand up and give you a good, hard face-fuck. Snorting in amusement at your submissive request, he grunts, [headHorse.speech(Fine. I'll give you what you want.)]
+		你决定再碰碰运气，于是问骑士能不能站起来狠狠地操你的脸。他被你顺从的要求逗得直哼哼，说道，[headHorse.speech(好啊，我会如你所愿。)]
 	</p>
 	<p>
-		Rising to his [headHorse.feet], the horseman grabs the back of your head and pulls your face into the underside of his thick, musky cock. Not needing to be told what to do, you greedily work your [pc.lips+] and tongue up the length of the horseman's hot, thick shaft, before hungrily licking up the stream of salty, musky precum that's started to ooze out of his urethra. Once that's done, you open up wide and force the huge, flared head of his horse-like cock into your mouth. Grunting in satisfaction, the horseman places his hands on the back of your head, grunting, [headHorse.speech(That's what I like to see, slut! ~Mmm!~ Now take it deep!)]
+		骑士站起身来，抓住你的后脑勺，把你的脸拉到他雄味浓重的粗壮肉棒下。你无需多言就贪婪地用你[pc.lips+]裹住骑士火热的肉棒，舌头沿着往上舔，如饥似渴地舔食他尿道流出的咸湿精液。舔完之后，你张大嘴巴将他那巨大而扁平的龟头吞进嘴里。骑士满意地哼了一声，双手摁在你的后脑勺上，哼哼道，[headHorse.speech(我想看的就是这个，荡妇！~唔！~深一点！)]
 	</p>
 	<p>
-		Using his grip on the back of your head, the horseman pulls you forwards while simultaneously thrusting his hips into your face. As a result of this, his massive, throbbing cock is violently slammed as deep as physically possible down your throat, causing you to let out a series of choking, spluttering cries. After holding you in place for a moment and keeping his thick shaft hilted deep down your throat, the horseman pulls back, allowing his hot horse-cock to almost completely slide out of your mouth. As his wide, flared head slides all the way up into your mouth, the horse-boy again suddenly slams forwards, ramming his shaft deep down your throat. Eager to please the horseman and earn your delicious reward of thick, salty horse-jizz, you happily let him use your throat as his personal cock-sleeve. Within moments, you find yourself letting out a stream of gargled, erotic moans as he roughly fucks your face, while a stream of cummy saliva begins to drool from the corners of your mouth...
+		骑士一边抵住你的后脑勺向前拉，一边把臀部顶向你。他那抽动的巨大肉棒也因此猛烈地撞击到你的喉咙深处，使你发出窒息的咕噜声。骑士摁着你，把他的粗大的肉棒深深地捅进你的喉咙后，又把他火热的马屌几乎完全抽离你的嘴。马男平坦的龟头在你嘴里一路滑过，又猛得一冲，把他的阴茎深深地捅进你的喉咙。你为了取悦骑士并获得你的美味马精奖励，高兴地让他把你的喉咙当做他的私人鸡巴套。他还在粗暴地操着你的脸，不一会儿，你便发出绵长又色情的咕噜声，一股粘稠的唾液从你的嘴角流出……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FULLY_SUBMIT_ANILINGUS"><![CDATA[
 	<p>
-		Deciding to push your luck and ask the horseman to try something different,
+		你决定碰碰运气，让骑士来点不一样的，
 		#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-			 you show off your [style.mule] choker to him, before quickly explaining that you have experience with using your mouth to submissively service horse ass.
+			便向他炫耀你的[style.mule]项圈，迅速解释说你有用嘴伺候马屁股的经验。
 		#ELSE
-			 you tell him that you'd like to use your mouth to submissively service his horse ass.
+			便和他说想用嘴伺候他的马屁股。
 		#ENDIF
-		 Suggesting that you could give him a rimjob while jerking him off, you enthusiastically tell him how good it will feel to have you submit to him in such an absolute manner, and that you'll make sure he enjoys the feeling of your tongue working away at his asshole. Although he doesn't seem too enthusiastic about your suggestion at first, when you mention the submissive aspect of it, the horseman lets out an approving grunt. Holding his hand up to silence you, he agrees to your suggestion by declaring, [headHorse.speech(Completely dominating you by making you service my ass sounds good... Afterwards I'm still going to fuck your throat though.)]
+		你热情地提议可以一边给他舔肛一边口交，你的舌头肯定也能把他的屁眼舔爽，而且你的绝对臣服会让他爽飞。起初他似乎兴致缺缺，但你提到顺从的方面时，骑士发出了赞许的咕哝声。他抬起手示意你噤声，然后宣布同意，[headHorse.speech(让你伺候我的屁股，完全支配你，听起来不错……不过之后我还是会操你的喉咙。)]
 	</p>
 	<p>
-		Happy with his response, you ask the horseman to present his ass to you, and after standing up and turning around, he does so. Just as his anthropomorphic body would suggest, his asshole is horse-like in appearance, and is formed into a puffy, ebony ring. Eagerly shuffling forwards, you plant a big, wet kiss on the horse-boy's back door, before starting to greedily lick and nuzzle into it. Not forgetting the other half of your offer, you reach around and take hold of the horseman's fat, throbbing shaft, before starting to eagerly jerk him off.
+		你对他的回答很满意，便让骑士露出屁股，他站起身来，转身照做。他的身体是人形的，但肛门却似马，有一个充满肉感的乌黑环。你迫不及待地走上前去，在马男的后庭上来了个绵长的湿吻，立刻贪婪地舔咬起来。当然你也没有忘记另一部分提议，便伸手握住了骑士跳动的肥硕肉棒，立马迫不及待地给他打飞机。
 	</p>
 	<p>
-		[headHorse.speech(~Mmm!~ That's it, slut! Submit to me and service my ass!)] the horseman grunts. More than happy to do as he says, you play the perfect submissive and continue to passionately lick and kiss his puffy asshole. Continuing to slide your [pc.fingers+] up and down around his throbbing horse-cock, you start to let out a series of erotic, submissive whines as you wonder how long it will take you to make him cum from this... 
+		[headHorse.speech(~唔！~就是这样，荡妇！臣服于我，伺候我的肛门！)]骑士哼道。你非常乐意扮演他完美的顺从者，不断热情地舔吻他肉感的肛门，同时你[pc.fingers+]在他跳动的马屌来回磨蹭。你不知道要多久才能让他射精，便顺从地发出色情又绵长的呜呜声……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FULLY_SUBMIT_AFTER_SEX"><![CDATA[
 	<p>
-		Ramming his cock deep down your throat one last time, the horseman, having got the head he was seeking, pulls all the way back and slides his softening shaft out of your mouth. Grabbing his semi-flaccid cock with one hand, he slaps its cummy, saliva-coated length against your [pc.lips+], grunting in amused satisfaction, [headHorse.speech(Go on, you dirty little horse-cum addict. Show me how much you need this. Lick me clean.)]
+		骑士最后一次将他的阴茎深深插入你的喉咙，得偿所愿后又将肉棒从你的嘴中整根抽出。他一只手握住沾满唾液和精液的半软肉棒拍打着你[pc.lips+]，满足地哼哼道，[headHorse.speech(来吧，你这肮脏的马精瘾君子。现在让我看看你有多渴求它——给我舔干净。)]
 	</p>
 	<p>
-		The desperate urge in your mind to get another taste of the horseman's seed drives you to eagerly run your [pc.tongue+] all over the horseman's ebony shaft, swallowing down every last drop of slimy cum that you can find. Despite your oral attention, the horseman seems to have had enough for one night, and within a few moments, his huge shaft has once again softened and withdrawn into its sheath. Desperately sliding your tongue into the thick folds of skin which protect the horseman's cock, you find yourself letting out a series of pathetic, whining moans.
+		你被对骑士马精的渴求驱使着，你[pc.tongue+]急切地来回游走于马男乌黑的阴茎上，吞下你能找到的每一滴粘稠的精液。尽管你口交得很卖力，但马男今晚似乎已经爽够了，没过一会儿，他巨大的阴茎就再次软化并缩回了鞘中。你拼命地将舌头伸进其厚厚的褶皱里，可怜巴巴地发出了绵长的呜咽与呻吟。
 	</p>
 	<p>
-		[headHorse.speech(That's enough for tonight,)] the horse-boy booms, before pushing you away from his groin and taking a step back. Looking down at you through the eye slots of the Jack-o'-Lantern he's still wearing, the horseman grunts, [headHorse.speech(If I see you again, I'll be sure to offer you another load of my cum.)]
+		[headHorse.speech(今晚已经够了，)]马男低沉地说，把你从腹股沟推开，并后退一步。骑士透过南瓜灯的眼缝向下看着你，咕哝道，[headHorse.speech(如果我再见到你，一定会再给你来一发精液。)]
 	</p>
 	<p>
-		Without so much as a farewell, the horseman turns about on the spot, and after retrieving his [headHorse.mainWeapon] from where he left it earlier, he runs off into the night, leaving you with little else to do except gather your thoughts and continue on your way...
+		骑士连一句道别都没说便转身离开，捡起[headHorse.mainWeapon]后，跑进了夜色中，只留你整理思绪，继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FULLY_SUBMIT_AFTER_SEX_ANILINGUS"><![CDATA[
 	<p>
-		Having orgasmed from the feeling of your tongue working away at his puffy asshole, the horseman lets out a deep grunt. After letting you kiss his ass one last time, he steps forwards and brings an end to the rimjob you were so enthusiastically giving him. Turning to face you, he declares in his deep, booming voice, [headHorse.speech(You're good at that, you dirty little slut.)]
+		你舔弄骑士肉感的肛门，送他到达高潮，发出低沉的哼声。他允许你最后亲吻一下他的屁股后，向前走了一步，结束了你如此热情的口交。他转过身来面对你，用低沉洪亮的声音宣布道，[headHorse.speech(你很擅长这个，肮脏的小荡妇。)]
 	</p>
 	<p>
-		Happy with his praise, you flash the horseman a sly look and blow him a little kiss. Grunting in amusement at your reaction, he states, [headHorse.speech(We're not finished yet. Open wide, slut. It's time to give you a good, hard face-fuck.)]
+		骑士的赞美使你高兴地向他投去狡黠的一瞥，给了他一个飞吻。他被你的反应逗得直哼哼，说道，[headHorse.speech(还没结束呢，张大嘴，荡妇。是时候给你来个狠狠的颜射了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FULLY_SUBMIT_AFTER_SEX_ANILINGUS_FACE_FUCK"><![CDATA[
 	<p>
-		More than happy to have your throat fucked and stomach filled with delicious, musky horse-jizz, you shuffle forwards, allowing the horseman to grab the back of your head and pull your face into the underside of his thick, hard cock. Not needing to be told what to do, you greedily work your [pc.lips+] and tongue up the length of the horseman's hot, throbbing shaft, before hungrily licking up the stream of salty, musky cum that's still slowly oozing out of his urethra. Once that's done, you open up wide and force the huge, flared head of his horse-like cock into your mouth. Grunting in satisfaction, the horseman places his hands on the back of your head, grunting, [headHorse.speech(That's what I like to see, slut! ~Mmm!~ Now take it deep!)]
+		你非常高兴自己被操喉咙，让胃里充满了雄味浓重的美味马精也同样令你愉悦。你向前挪了挪，让骑士托着你的后脑勺，摁向他又粗又硬的鸡巴下面。你无需多言就贪婪地用你[pc.lips+]裹住骑士抽动的火热阴茎，舌头沿着往上舔，如饥似渴地舔食他尿道流出的咸湿精液。舔完之后，你张大嘴巴将他那巨大而扁平的龟头吞进嘴里。骑士满意地哼了一声，双手摁在你的后脑勺上，哼哼道，[headHorse.speech(我想看的就是这个，荡妇！~唔！~深一点！)]
 	</p>
 	<p>
-		Using his grip on the back of your head, the horseman pulls you forwards while simultaneously thrusting his hips into your face. As a result of this, his massive, throbbing cock is violently slammed as deep as physically possible down your throat, causing you to let out a series of choking, spluttering cries. After holding you in place for a moment and keeping his thick shaft hilted deep down your throat, the horseman pulls back, allowing his hot horse-cock to almost completely slide out of your mouth. As his wide, flared head slides all the way up into your mouth, the horse-boy again suddenly slams forwards, ramming his shaft deep down your throat. Eager to please the horseman and earn your delicious reward of thick, salty horse-jizz, you happily let him use your throat as his personal cock-sleeve. Within moments, you find yourself letting out a stream of gargled, erotic moans as he roughly fucks your face, while a stream of cummy saliva begins to drool from the corners of your mouth...
+		骑士一边抵住你的后脑勺向前拉，一边把臀部顶向你。他那抽动的巨大肉棒也因此猛烈地撞击到你的喉咙深处，使你发出窒息的咕噜声。骑士摁着你，把他的粗大的肉棒深深地捅进你的喉咙后，又把他火热的马屌几乎完全抽离你的嘴。马男平坦的龟头在你嘴里一路滑过，又猛得一冲，把他的阴茎深深地捅进你的喉咙。你为了取悦骑士并获得你的美味马精奖励，高兴地让他把你的喉咙当做他的私人鸡巴套。他还在粗暴地操着你的脸，不一会儿，你便发出绵长又色情的咕噜声，一股粘稠的唾液从你的嘴角流出……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

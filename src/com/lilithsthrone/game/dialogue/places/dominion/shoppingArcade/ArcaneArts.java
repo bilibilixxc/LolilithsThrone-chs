@@ -72,14 +72,14 @@ public class ArcaneArts {
 	
 	static {
 		mealResponses = new ArrayList<>();
-		mealResponses.add(new Value<>("Feed her", "Do as Vicky commands and cut up the meat for her, before feeding it to her bite-by-bite."));
-		mealResponses.add(new Value<>("Petted", "Do as Vicky commands and kneel down beside her so that she can pet you while eating."));
-		mealResponses.add(new Value<>("Give massage", "Do as Vicky commands and massage her shoulders while she eats."));
+		mealResponses.add(new Value<>("给她喂食", "听从维姬的命令，给她切肉，一口一口喂给她。"));
+		mealResponses.add(new Value<>("受抚摸", "听从维姬的命令，在她身边跪下来，让她可以边吃边抚摸你。"));
+		mealResponses.add(new Value<>("按摩", "听从维姬的命令，在她吃的时候帮她按摩肩背。"));
 
 		helpResponses = new ArrayList<>();
-		helpResponses.add(new Value<>("Stock shelves", "Do as Vicky commands and stock the shelves for her."));
-		helpResponses.add(new Value<>("Sweep floor", "Do as Vicky commands and sweep the floor of the shop for her."));
-		helpResponses.add(new Value<>("Organise weapons", "Do as Vicky commands and organise the weapons she has for sale."));
+		helpResponses.add(new Value<>("整理货架", "听从维姬的命令，帮她整理货架。"));
+		helpResponses.add(new Value<>("扫地", "听从维姬的命令，帮她清扫商店的地面。"));
+		helpResponses.add(new Value<>("整理武器", "听从维姬的命令，整理将要售卖的武器。"));
 	}
 	
 	private static Vicky getVicky() {
@@ -101,7 +101,7 @@ public class ArcaneArts {
 		return Main.game.getPlayer().isMarkedByMuskMarkerCharacter(getVicky());
 	}
 	
-	public static final DialogueNode EXTERIOR = new DialogueNode("Arcane Arts (Exterior)", "-", false) {
+	public static final DialogueNode EXTERIOR = new DialogueNode("奥术艺术(外部)", "-", false) {
 
 		@Override
 		public String getContent() {
@@ -118,7 +118,7 @@ public class ArcaneArts {
 			if(responseTab==0) {
 				if (index == 1) {
 					if(Main.game.isWorkTime()) {
-						return new Response("Enter", "Step inside Arcane Arts.", SHOP_WEAPONS) {
+						return new Response("进入", "进入奥术艺术。", SHOP_WEAPONS) {
 							@Override
 							public void effects() {
 								vickyRefused = false;
@@ -126,7 +126,7 @@ public class ArcaneArts {
 							}
 						};
 					} else {
-						return new Response("Enter", "Arcane Arts is currently closed. You'll have to come back later if you want to do some shopping here.", null);
+						return new Response("进入", "奥术艺术目前关门。如果你想在这里购物的话，得过一会再来。", null);
 					}
 				}
 			}
@@ -135,7 +135,7 @@ public class ArcaneArts {
 		}
 	};
 	
-	public static final DialogueNode SHOP_WEAPONS = new DialogueNode("Arcane Arts", "-", true) {
+	public static final DialogueNode SHOP_WEAPONS = new DialogueNode("奥术艺术", "-", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			if(!vickyRefused
@@ -166,9 +166,9 @@ public class ArcaneArts {
 		public String getResponseTabTitle(int index) {
 			if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_claimed") && (!Main.game.isMuskContentEnabled() || isMuskMarked()) && !vickyRefused) {
 				if(index==0) {
-					return "Business";
+					return "购物";
 				} else if(index==1) {
-					return "Pleasure";
+					return "取悦";
 				}
 			}
 			return null;
@@ -186,7 +186,7 @@ public class ArcaneArts {
 							:!Main.game.getDialogueFlags().hasFlag("innoxia_vicky_claimed"))) {
 				if(index==1) {
 					if(Main.game.isMuskContentEnabled()) {
-						return new ResponseSex("Get marked", "Submit to Vicky and allow her to cum all over you in order to mark you with her musk.",
+						return new ResponseSex("获得标记", "向维姬屈服，让她射满你的全身，被她浓重的淫味所标记。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 								true, false,
 								new SMVicky(
@@ -232,7 +232,7 @@ public class ArcaneArts {
 						};
 						
 					} else {
-						return new ResponseSex("Submit", "Submit to Vicky and let her dominantly fuck you.",
+						return new ResponseSex("顺从", "屈服于维姬，让她随心所欲地操你。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 								true, false,
 								new SMVicky(
@@ -247,7 +247,7 @@ public class ArcaneArts {
 					}
 					
 				} else if(index==2) {
-					return new Response("Refuse", "Refuse to submit to Vicky.", VICKY_REFUSED) {
+					return new Response("拒绝", "拒绝屈服于维姬。", VICKY_REFUSED) {
 						@Override
 						public void effects() {
 							vickyRefused = true;
@@ -260,7 +260,7 @@ public class ArcaneArts {
 			// Standard responses:
 
 			if (index == 0) {
-				return new Response("Leave", "Leave Arcane Arts and head back out into the arcade.", EXTERIOR) {
+				return new Response("离开", "离开奥术艺术，回到购物中心。", EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.setResponseTab(0);
@@ -271,7 +271,7 @@ public class ArcaneArts {
 			
 			if(!Main.game.getDialogueFlags().hasFlag("innoxia_vicky_claimed") || responseTab==0) {
 				if(index == 1) {
-					return new ResponseTrade("Weapons", "Walk over to the counter and see what weapons Vicky has in stock.", getVicky()) {
+					return new ResponseTrade("武器", "走到柜台前，看看维姬有什么武器卖。", getVicky()) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vickyIntroduced, true);
@@ -288,7 +288,7 @@ public class ArcaneArts {
 					};
 					
 				} else if (index == 2) {
-					return new ResponseTrade("Potions & Spells", "Walk over to the counter and see what potions, essences, and spells Vicky has in stock.", getVicky()) {
+					return new ResponseTrade("药剂和法术", "走到柜台前，看看维姬有什么药剂、精华和法术卖。", getVicky()) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vickyIntroduced, true);
@@ -306,9 +306,9 @@ public class ArcaneArts {
 					
 				} else if (index == 3) {
 					if((getVicky()).getClothingForSale().isEmpty()) {
-						return new Response("Clothing", "Vicky doesn't have any clothing in stock at the moment.", null);
+						return new Response("衣物", "维姬现在没有衣物在售卖。", null);
 					}
-					return new ResponseTrade("Clothing", "Walk over to the counter and see what clothing Vicky has in stock.", getVicky()) {
+					return new ResponseTrade("衣物", "走到柜台前，看看维姬有什么衣物卖。", getVicky()) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vickyIntroduced, true);
@@ -331,10 +331,10 @@ public class ArcaneArts {
 						if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.arthursPackageObtained)) {
 							if(Main.game.getPlayer().getQuest(QuestLine.SIDE_HYPNO_WATCH)==Quest.SIDE_HYPNO_WATCH_VICKY) {
 								if(Main.game.getPlayer().isInventoryFull()) {
-									return new Response("Arthur's package", "You don't have enough room in your inventory for the package!", null);
+									return new Response("亚瑟的包裹", "你的物品栏没有多余的空间放置包裹了！", null);
 									
 								} else {
-									return new Response("Arthur's package", "Tell Vicky that you're here to collect Arthur's package.", ARTHURS_PACKAGE) {
+									return new Response("亚瑟的包裹", "告诉维姬你是来拿亚瑟的包裹的。", ARTHURS_PACKAGE) {
 										@Override
 										public void effects() {
 											Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vickyIntroduced, true);
@@ -349,19 +349,19 @@ public class ArcaneArts {
 						} else {
 							if((!Main.game.isAnalContentEnabled() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))
 									&& (!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))) {
-								return new Response("Offer body",
-										"Vicky needs to be able to access your "
-											+ (Main.game.isAnalContentEnabled()?"anus":"")
-											+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?" or ":"")+"vagina":"")+"!",
+								return new Response("献出身体",
+										"维姬需要能接触你的"
+											+ (Main.game.isAnalContentEnabled()?"肛门":"")
+											+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?"或":"")+"阴道":"")+"！",
 										null);
 								
 							} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-								return new Response("Offer body",
-										"Vicky has already fucked you today, and doesn't have time to do so again...",
+								return new Response("献出身体",
+										"维姬今天已经操过你了，没时间继续跟你纠缠……",
 										null);
 								
 							} else {
-								return new ResponseSex("Offer body", "Let Vicky use your body.",
+								return new ResponseSex("献上身体", "让维姬使用你的身体。",
 										Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 										true, false,
 										new SMVickyOverDesk(
@@ -377,21 +377,21 @@ public class ArcaneArts {
 					} else if (index == 10 && Main.getProperties().hasValue(PropertyValue.nonConContent) && Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.arthursPackageObtained)) {
 						if((!Main.game.isAnalContentEnabled() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))
 								&& (!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))) {
-							return new Response("Nervously leave",
-									"Vicky needs to be able to access your "
-										+ (Main.game.isAnalContentEnabled()?"anus":"")
-										+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?" or ":"")+"vagina":"")+"!",
+							return new Response("不安地离开",
+									"维姬需要能接触你的"
+										+ (Main.game.isAnalContentEnabled()?"肛门":"")
+										+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?"或":"")+"阴道":"")+"！",
 									null);
 							
 						} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-							return new Response("Nervously leave",
-									"Vicky has already fucked you today, and doesn't have time to do so again...",
+							return new Response("不安地离开",
+									"维姬今天已经操过你了，没时间继续跟你纠缠……",
 									null);
 							
 						} else {
-							return new ResponseSex("Nervously leave",
-									"Vicky is far too intimidating for you... Turn around and try to escape from her gaze."
-											+ "<br/>[style.boldBad(You get the feeling that this will result in non-consensual sex...)]",
+							return new ResponseSex("不安地离开",
+									"维姬吓坏你了……转身从她的注视中逃离吧。"
+											+ "<br/>[style.boldBad(你觉得这样会导致一场非自愿的性爱……)]",
 									Util.newArrayListOfValues(
 											Fetish.FETISH_SUBMISSIVE,
 											Fetish.FETISH_NON_CON_SUB), null, CorruptionLevel.FOUR_LUSTFUL, null, null, null,
@@ -418,17 +418,17 @@ public class ArcaneArts {
 			} else if(responseTab==1) {
 				if(index==1) { // Offer cunnilingus:
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Offer cunnilingus",
-								"You need to be able to access your mouth in order to eat Vicky out!",
+						return new Response("主动舔阴",
+								"你需要能够使用嘴巴才能舔维姬的下面！",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-						return new Response("Offer cunnilingus",
-								"Vicky has already fucked you today, and doesn't have time to do so again...",
+						return new Response("主动舔阴",
+								"维姬今天已经操过你了，没时间继续跟你纠缠……",
 								null);
 						
 					} else {
-						return new ResponseSex("Offer cunnilingus", "Tell Vicky that you want to eat her out.",
+						return new ResponseSex("主动舔阴", "告诉维姬你想舔她下面。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 								true, false,
 								new SMVicky(
@@ -455,17 +455,17 @@ public class ArcaneArts {
 				}
 				if(index==2) { // Offer blowjob:
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Offer blowjob",
-								"You need to be able to access your mouth in order to give Vicky a blowjob!",
+						return new Response("主动口交",
+								"你需要能够使用嘴巴才能给维姬口交！",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-						return new Response("Offer blowjob",
-								"Vicky has already fucked you today, and doesn't have time to do so again...",
+						return new Response("主动口交",
+								"维姬今天已经操过你了，没时间继续跟你纠缠……",
 								null);
 						
 					} else {
-						return new ResponseSex("Offer blowjob", "Tell Vicky that you want to give her a blowjob.",
+						return new ResponseSex("主动口交", "告诉维姬你想给她口交。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 								true, false,
 								new SMVicky(
@@ -492,19 +492,19 @@ public class ArcaneArts {
 				}
 				if(index==3) { // Offer pussy:
 					if(!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						return new Response("Offer pussy",
+						return new Response("献上小穴",
 								!Main.game.getPlayer().hasVagina()
-									?"You don't have a pussy..."
-									:"Vicky needs to be able to access your pussy in order to fuck it!",
+									?"你没有阴道……"
+									:"维姬需要能够使用你的阴道才能干你！",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-						return new Response("Offer pussy",
-								"Vicky has already fucked you today, and doesn't have time to do so again...",
+						return new Response("献上小穴",
+								"维姬今天已经操过你了，没时间继续跟你纠缠……",
 								null);
 						
 					} else {
-						return new ResponseSex("Offer pussy", "Let Vicky fuck your pussy.",
+						return new ResponseSex("献上小穴", "让维姬操你的小穴。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 								true, false,
 								new SMVicky(
@@ -529,17 +529,17 @@ public class ArcaneArts {
 				}
 				if(index==4 && Main.game.isAnalContentEnabled()) { // Offer ass:
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-						return new Response("Offer ass",
-								"Vicky needs to be able to access your asshole in order to fuck it!",
+						return new Response("献上屁股",
+								"维姬需要能够使用你的屁眼才能干你！",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-						return new Response("Offer ass",
-								"Vicky has already fucked you today, and doesn't have time to do so again...",
+						return new Response("献上屁股",
+								"维姬今天已经操过你了，没时间继续跟你纠缠……",
 								null);
 						
 					} else {
-						return new ResponseSex("Offer ass", "Let Vicky fuck your ass.",
+						return new ResponseSex("献上屁股", "让维姬操你的屁股。",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 								true, false,
 								new SMVicky(
@@ -564,27 +564,27 @@ public class ArcaneArts {
 				}
 				if(Main.game.isAnalContentEnabled()?index==5:index==4) {
 					if(!Main.game.getPlayer().hasPenis() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-						return new Response("Offer cock",
+						return new Response("献上鸡巴",
 								!Main.game.getPlayer().hasPenis()
-									?"You don't have a penis, so can't offer it to Vicky!"
-									:"Vicky needs to be able to access your penis in order to use it!",
+									?"你没有阴茎，所以无法献给维姬！"
+									:"维姬需要能够使用你的阴茎！",
 								null);
 						
 					} else if(!getVicky().getAffectionLevel(Main.game.getPlayer()).isGreaterThan(AffectionLevel.POSITIVE_TWO_LIKE)) {
-						return new Response("Offer cock",
-								"Vicky doesn't like you enough to allow you to use your cock on her..."
-								+ "<br/>[style.italicsMinorBad(Requires Vicky's affection towards you to be at least "+AffectionLevel.POSITIVE_THREE_CARING.getMinimumValue()
-									+", and it is currently "+((int)getVicky().getAffection(Main.game.getPlayer()))+"!)]",
+						return new Response("献上鸡巴",
+								"维姬对你的好感还不够，不愿意让你的鸡巴上她的身……"
+								+ "<br/>[style.italicsMinorBad(需要维姬对你的好感至少达到"+AffectionLevel.POSITIVE_THREE_CARING.getMinimumValue()
+									+"，目前为"+((int)getVicky().getAffection(Main.game.getPlayer()))+"！)]",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-						return new Response("Offer cock",
-								"Vicky has already fucked you today, and doesn't have time to do so again...",
+						return new Response("献上鸡巴",
+								"维姬今天已经操过你了，没时间继续跟你纠缠……",
 								null);
 						
 					} else {
-						return new Response("Offer cock",
-								"Ask Vicky if she'll let you use your cock.",
+						return new Response("献上鸡巴",
+								"询问维姬你能否使用自己的肉棒。",
 								VICKY_PET_OFFER_COCK) {
 							@Override
 							public boolean isSexHighlight() {
@@ -596,30 +596,30 @@ public class ArcaneArts {
 				// Non-sex:
 				if(index==6) {
 					if(Main.game.getHourOfDay()>15) {
-						return new Response("Offer lunch",
-								"It's too late in the day to be offering Vicky lunch..."
-								+ "<br/>[style.italicsMinorBad(She will only want to eat if the time is before [style.time(16)].)]",
+						return new Response("提供午饭",
+								"时间太晚了，不能给维姬提供午饭……"
+								+ "<br/>[style.italicsMinorBad(她只会在[style.time(16)]前吃饭。)]",
 								null);
 						
 					} else if(!Main.game.getPlayer().hasItemType("innoxia_race_wolf_meat_and_marrow")
 							&& !Main.game.getPlayer().hasItemType("innoxia_race_panther_panthers_delight")) {
 						return new Response(
 								Main.game.isMorning()
-									?"Offer breakfast"
-									:"Offer lunch",
-								"Vicky only likes to eat meat, so you'll need to have either '"
+									?"提供早饭"
+									:"提供午饭",
+								"维姬只喜欢吃肉，你需要拥有“"
 									+ItemType.getItemTypeFromId("innoxia_race_wolf_meat_and_marrow").getName(false)
-									+"' or '"
+									+"”或者“"
 									+ItemType.getItemTypeFromId("innoxia_race_panther_panthers_delight").getName(false)
-									+"' in your inventory to offer to her...",
+									+"”才能供她食用……",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_fed")) {
 							return new Response(
 								Main.game.isMorning()
-									?"Offer breakfast"
-									:"Offer lunch",
-								"You've already given Vicky some food today, so if you wanted to offer her another meal then you'll have to do so tomorrow...",
+									?"提供早饭"
+									:"提供午饭",
+								"你今天已经给维姬提供过食物了，如果还想再这么做需要等到明天……",
 								null);
 							
 					} else {
@@ -631,62 +631,62 @@ public class ArcaneArts {
 						}
 						return new Response(
 								Main.game.isMorning()
-									?"Offer breakfast"
-									:"Offer lunch",
-								"Offer Vicky the '"+itemTypeBeingOffered.getName(false)+"' in your inventory.",
+									?"提供早饭"
+									:"提供午饭",
+								"将物品栏的“"+itemTypeBeingOffered.getName(false)+"”提供给维姬。",
 								VICKY_PET_OFFER_MEAL);
 					}
 				}
 				if(index==7) {
 					if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_helped")) {
-						return new Response("Offer help",
-								"You've already helped Vicky today, so if you wanted to offer her any more assistance then you'll have to do so tomorrow...",
+						return new Response("提供帮助",
+								"你今天已经帮过维姬了，如果还想提供帮助需要等到明天……",
 								null);
 						
 					} else {
-						return new Response("Offer help",
-								"Ask Vicky if there's anything you can do to help her.",
+						return new Response("提供帮助",
+								"询问维姬你能帮她做什么。",
 								VICKY_PET_OFFER_HELP);
 					}
 				}
 				if(index==8) {
 					if(!getVicky().getAffectionLevel(Main.game.getPlayer()).isGreaterThan(AffectionLevel.POSITIVE_TWO_LIKE)) {
-						return new Response("Evening company",
-								"Vicky doesn't like you enough to want your company for the evening..."
-								+ "<br/>[style.italicsMinorBad(Requires Vicky's affection towards you to be at least "+AffectionLevel.POSITIVE_THREE_CARING.getMinimumValue()
-									+", and it is currently "+((int)getVicky().getAffection(Main.game.getPlayer()))+"!)]",
+						return new Response("夜间陪伴",
+								"维姬还不够喜欢你，不愿意晚上让你陪伴……"
+								+ "<br/>[style.italicsMinorBad(需要维姬对你的好感至少达到"+AffectionLevel.POSITIVE_THREE_CARING.getMinimumValue()
+									+"，目前为"+((int)getVicky().getAffection(Main.game.getPlayer()))+"！)]",
 								null);
 						
 					} else if(Main.game.getHourOfDay()<16) {
-						return new Response("Evening company",
-								"It's too early in the day to be offering Vicky your company for the evening..."
-								+ "<br/>[style.italicsMinorBad(She will only consider this if the time is past [style.time(16)].)]",
+						return new Response("夜间陪伴",
+								"时间太早了，还不能给维姬提供夜间陪伴……"
+								+ "<br/>[style.italicsMinorBad(她只会在[style.time(16)]后才会考虑这个建议。)]",
 								null);
 						
 					} else {
-						return new Response("Evening company",
-								"Ask Vicky if she'd like you to spend the evening with her to give her some company.",
+						return new Response("夜间陪伴",
+								"询问维姬你是否能在今晚给她一些陪伴。",
 								VICKY_PET_OFFER_COMPANY);
 					}
 				}
 				if (index == 10 && Main.getProperties().hasValue(PropertyValue.nonConContent)) {
 					if((!Main.game.isAnalContentEnabled() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))
 							&& (!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))) {
-						return new Response("Nervously leave",
-								"Vicky needs to be able to access your "
-									+ (Main.game.isAnalContentEnabled()?"anus":"")
-									+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?" or ":"")+"vagina":"")+"!",
+						return new Response("不安地离开",
+								"维姬需要能接触你的"
+									+ (Main.game.isAnalContentEnabled()?"肛门":"")
+									+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?"或":"")+"阴道":"")+"！",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_vicky_daily_sex")) {
-						return new Response("Nervously leave",
-								"Vicky has already fucked you today, and doesn't have time to do so again...",
+						return new Response("不安地离开",
+								"维姬今天已经操过你了，没时间继续跟你纠缠……",
 								null);
 						
 					} else {
-						return new ResponseSex("Nervously leave",
-								"Vicky is far too intimidating for you... Turn around and try to escape from her gaze."
-								+ "<br/>[style.boldBad(You get the feeling that this will result in non-consensual sex...)]",
+						return new ResponseSex("不安地离开",
+								"维姬吓坏你了……转身从她的注视中逃离吧。"
+								+ "<br/>[style.boldBad(你觉得这样会导致一场非自愿的性爱……)]",
 								Util.newArrayListOfValues(
 										Fetish.FETISH_SUBMISSIVE,
 										Fetish.FETISH_NON_CON_SUB), null, CorruptionLevel.FOUR_LUSTFUL, null, null, null,
@@ -715,7 +715,7 @@ public class ArcaneArts {
 		}
 	};
 	
-	public static final DialogueNode ARTHURS_PACKAGE = new DialogueNode("Arcane Arts", "-", true, true) {
+	public static final DialogueNode ARTHURS_PACKAGE = new DialogueNode("奥术艺术", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -726,7 +726,7 @@ public class ArcaneArts {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getPlayer().getMoney()>=100) {
-					return new Response("Pay ("+UtilText.formatAsMoney(100, "span")+")", "Pay Vicky 100 flames.", ARTHURS_PACKAGE_BOUGHT) {
+					return new Response("支付("+UtilText.formatAsMoney(100, "span")+")", "支付维姬100火币。", ARTHURS_PACKAGE_BOUGHT) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.arthursPackageObtained, true);
@@ -735,20 +735,20 @@ public class ArcaneArts {
 						}
 					};
 				} else {
-					return new Response("Pay ("+UtilText.formatAsMoneyUncoloured(100, "span")+")", "You don't have enough money to pay the fee!", null);	
+					return new Response("支付("+UtilText.formatAsMoneyUncoloured(100, "span")+")", "你的钱不够支付费用！", null);	
 				}
 				
 			} else if (index == 2) {
 				if((!Main.game.isAnalContentEnabled() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))
 						&& (!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))) {
-					return new Response("Offer body",
-							"Vicky needs to be able to access your "
-								+ (Main.game.isAnalContentEnabled()?"anus":"")
-								+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?" or ":"")+"vagina":"")+"!",
+					return new Response("献出身体",
+							"维姬需要能接触你的"
+								+ (Main.game.isAnalContentEnabled()?"肛门":"")
+								+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?"或":"")+"阴道":"")+"！",
 							null);
 					
 				} else {
-					return new ResponseSex("Offer body", "Let Vicky use your body as payment for the fee.",
+					return new ResponseSex("献上身体", "让维姬用你的身体代替费用。",
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 							true, false,
 							new SMVickyOverDesk(
@@ -764,17 +764,17 @@ public class ArcaneArts {
 			} else if (index == 3 && Main.getProperties().hasValue(PropertyValue.nonConContent)) {
 				if((!Main.game.isAnalContentEnabled() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))
 						&& (!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))) {
-					return new Response("Weakly refuse",
-							"Vicky needs to be able to access your "
-								+ (Main.game.isAnalContentEnabled()?"anus":"")
-								+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?" or ":"")+"vagina":"")+"!",
+					return new Response("弱气地拒绝",
+							"维姬需要能接触你的"
+								+ (Main.game.isAnalContentEnabled()?"肛门":"")
+								+ (Main.game.getPlayer().hasVagina()?(Main.game.isAnalContentEnabled()?"或":"")+"阴道":"")+"！",
 							null);
 					
 				} else {
 					return new ResponseSex(
-							"Weakly refuse",
-							"You can't bring yourself to say no to such an intimidating person... Try to wriggle free and leave..."
-									+ "<br/>[style.boldBad(You get the feeling that this will result in non-consensual sex...)]",
+							"弱气地拒绝",
+							"面对着如此恐怖的角色，你拒绝不出口……试图挣脱离开……"
+									+ "<br/>[style.boldBad(你觉得这样会导致一场非自愿的性爱……)]",
 							Util.newArrayListOfValues(
 									Fetish.FETISH_SUBMISSIVE,
 									Fetish.FETISH_NON_CON_SUB),
@@ -798,7 +798,7 @@ public class ArcaneArts {
 				}
 				
 			} else if (index == 0) {
-				return new Response("Leave", "Leave Arcane Arts and head back out into the arcade.", EXTERIOR) {
+				return new Response("离开", "离开奥术艺术，回到购物中心。", EXTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.vickyIntroduced, true);
@@ -812,7 +812,7 @@ public class ArcaneArts {
 		}
 	};
 	
-	public static final DialogueNode ARTHURS_PACKAGE_BOUGHT = new DialogueNode("Arcane Arts", "-", true, true) {
+	public static final DialogueNode ARTHURS_PACKAGE_BOUGHT = new DialogueNode("奥术艺术", "-", true, true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/shoppingArcade/arcaneArts", "ARTHURS_PACKAGE_BOUGHT");
@@ -828,7 +828,7 @@ public class ArcaneArts {
 	};
 	
 	
-	public static final DialogueNode VICKY_POST_SEX_PACKAGE = new DialogueNode("Arcane Arts", "-", true) {
+	public static final DialogueNode VICKY_POST_SEX_PACKAGE = new DialogueNode("奥术艺术", "-", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getDialogueFlags().setFlag("innoxia_vicky_daily_sex", true);
@@ -847,7 +847,7 @@ public class ArcaneArts {
 		}
 	};
 	
-	public static final DialogueNode VICKY_POST_SEX_RAPE_PACKAGE = new DialogueNode("Arcane Arts", "-", true) {
+	public static final DialogueNode VICKY_POST_SEX_RAPE_PACKAGE = new DialogueNode("奥术艺术", "-", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getDialogueFlags().setFlag("innoxia_vicky_daily_sex", true);
@@ -866,7 +866,7 @@ public class ArcaneArts {
 		}
 	};
 	
-	public static final DialogueNode VICKY_POST_SEX = new DialogueNode("Finished", "Vicky has had her fun...", true) {
+	public static final DialogueNode VICKY_POST_SEX = new DialogueNode("结束", "维姬爽够了……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			vickyHadSex = true;
@@ -886,7 +886,7 @@ public class ArcaneArts {
 		}
 	};
 	
-	public static final DialogueNode VICKY_POST_SEX_RAPE = new DialogueNode("Finished", "Vicky has had her fun...", true) {
+	public static final DialogueNode VICKY_POST_SEX_RAPE = new DialogueNode("结束", "维姬爽够了……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			vickyHadSex = true;
@@ -906,7 +906,7 @@ public class ArcaneArts {
 		}
 	};
 
-	public static final DialogueNode VICKY_CLAIMED_AFTER_SEX = new DialogueNode("Finished", "Vicky has finished with you...", true) {
+	public static final DialogueNode VICKY_CLAIMED_AFTER_SEX = new DialogueNode("结束", "维姬跟你搞完了……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getDialogueFlags().setFlag("innoxia_vicky_claimed", true);
@@ -953,7 +953,7 @@ public class ArcaneArts {
 	
 	// Vicky dominated player content:
 
-	public static final DialogueNode VICKY_PET_OFFER_COCK = new DialogueNode("Arcane Arts", "-", true) {
+	public static final DialogueNode VICKY_PET_OFFER_COCK = new DialogueNode("奥术艺术", "-", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -965,7 +965,7 @@ public class ArcaneArts {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Handjob", "Ask Vicky to give you a handjob.",
+				return new ResponseSex("手淫", "让维姬帮你手淫。",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 						true, false,
 						new SMVicky(
@@ -990,7 +990,7 @@ public class ArcaneArts {
 				};
 			}
 			if(index==2) {
-				return new ResponseSex("Blowjob", "Ask Vicky to give you a blowjob.",
+				return new ResponseSex("口交", "让维姬给你口交。",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 						true, false,
 						new SMVicky(
@@ -1015,7 +1015,7 @@ public class ArcaneArts {
 				};
 			}
 			if(index==3) {
-				return new ResponseSex("Pussy", "Tell Vicky that you want to fuck her pussy.",
+				return new ResponseSex("小穴", "告诉维姬你想插进她的小穴里。",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 						true, false,
 						new SMVicky(
@@ -1038,7 +1038,7 @@ public class ArcaneArts {
 				};
 			}
 			if(index==4 && Main.game.isAnalContentEnabled()) {
-				return new ResponseSex("Anal", "Tell Vicky that you want to fuck her ass.",
+				return new ResponseSex("后穴", "告诉维姬你想操她屁股。",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 						true, false,
 						new SMVicky(
@@ -1061,7 +1061,7 @@ public class ArcaneArts {
 				};
 			}
 			if(Main.game.isFootContentEnabled() && (Main.game.isAnalContentEnabled()?index==5:index==4)) {
-				return new ResponseSex("Footjob", "Tell Vicky that you want her to give you a footjob.",
+				return new ResponseSex("足交", "告诉维姬你想让她给你足交。",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, null, null,
 						true, false,
 						new SMVicky(
@@ -1251,8 +1251,8 @@ public class ArcaneArts {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait",
-						"Wait with Vicky until closing time...",
+				return new Response("等待",
+						"等维姬下班……",
 						VICKY_PET_OFFER_COMPANY_APARTMENT);
 			}
 			return null;
@@ -1277,7 +1277,7 @@ public class ArcaneArts {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Shower time", "Join Vicky in the shower.",
+				return new ResponseSex("淋浴", "跟维姬一起淋浴。",
 						true, false,
 						new SMVicky(
 								SexPosition.STANDING,
@@ -1308,7 +1308,7 @@ public class ArcaneArts {
 		}
 	};
 	
-	public static final DialogueNode VICKY_APARTMENT_POST_SHOWER_SEX = new DialogueNode("Finished", "Vicky has had her fun...", true) {
+	public static final DialogueNode VICKY_APARTMENT_POST_SHOWER_SEX = new DialogueNode("结束", "维姬爽够了……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getVicky().applyWash(true, true, StatusEffect.CLEANED_SHOWER, 240);
@@ -1326,8 +1326,8 @@ public class ArcaneArts {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Chat",
-						"Relax with Vicky and chat with her for a while...",
+				return new Response("聊天",
+						"跟维姬放松地聊会儿天……",
 						VICKY_APARTMENT_SLEEP);
 			} else if(index<=6) {
 				return SHOP_WEAPONS.getResponse(1, index-1);
@@ -1336,7 +1336,7 @@ public class ArcaneArts {
 		}
 	};
 
-	public static final DialogueNode VICKY_APARTMENT_POST_SEX = new DialogueNode("Finished", "Vicky has had her fun...", true) {
+	public static final DialogueNode VICKY_APARTMENT_POST_SEX = new DialogueNode("结束", "维姬爽够了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -1348,8 +1348,8 @@ public class ArcaneArts {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Chat",
-						"Relax with Vicky and chat with her for a while...",
+				return new Response("聊天",
+						"跟维姬放松地聊会儿天……",
 						VICKY_APARTMENT_SLEEP);
 			}
 			return null;
@@ -1368,8 +1368,8 @@ public class ArcaneArts {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sleep",
-						"It seems like Vicky isn't giving you a choice, so you'll have to sleep over at her place tonight...",
+				return new Response("睡觉",
+						"看起来维姬不会给你选择，你今晚必须在她那里过夜了……",
 						VICKY_APARTMENT_END);
 			}
 			return null;
@@ -1388,8 +1388,8 @@ public class ArcaneArts {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"Say goodbye to Vicky and head back out through her store to return to the shopping arcade.",
+				return new Response("离开",
+						"跟维姬道别，回到购物中心。",
 						VICKY_APARTMENT_END_LEAVE) {
 					@Override
 					public void effects() {

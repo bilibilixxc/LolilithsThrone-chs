@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>250</value>
-    <determiner><![CDATA[a]]></determiner>
-    <name><![CDATA[chastity cage]]></name>
-    <namePlural pluralByDefault="false"><![CDATA[chastity cages]]></namePlural>
-    <description><![CDATA[A basic penis-shaped cage, complete with lock, that's designed to imprison the wearer's cock. When worn, it will physically prevent an erection from occurring.]]></description>
+    <determiner><![CDATA[一个]]></determiner>
+    <name><![CDATA[贞操笼]]></name>
+    <namePlural pluralByDefault="false"><![CDATA[贞操笼]]></namePlural>
+    <description><![CDATA[一个基本的阴茎笼，附带锁。用于锁住穿戴者的阴茎。穿戴后，阴茎就不能勃起。]]></description>
 
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
@@ -65,27 +64,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(lock)] the chastity cage in place around [npc.her] cock.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(lock)] the chastity cage in place around [npc2.namePos] cock.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly squeezes [npc2.namePos] cock before locking it inside the chastity cage.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把贞操笼套上[npc.her]的阴茎并上锁。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把贞操笼套上[npc2.namePos]的阴茎并上锁。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的阴茎挤进贞操笼并上锁。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unlock)] and [npc.verb(remove)] the chastity cage that was imprisoning [npc.her] cock.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unlock)] and [npc.verb(remove)] the chastity cage that was imprisoning [npc2.namePos] cock.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] impatiently [npc.verb(unlock)] and [npc.verb(pull)] off the chastity cage that was imprisoning [npc2.namePos] cock.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开并脱下锁在[npc.her]的阴茎上的贞操笼。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]解开并脱下锁在[npc2.namePos]的阴茎上的贞操笼。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]不耐烦地解开并脱下锁在[npc2.namePos]的阴茎上的贞操笼。
+    ]]></otherRough>
   </displacementText>
 
 

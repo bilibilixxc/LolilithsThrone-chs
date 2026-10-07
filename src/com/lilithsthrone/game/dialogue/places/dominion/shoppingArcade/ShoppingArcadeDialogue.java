@@ -47,9 +47,9 @@ public class ShoppingArcadeDialogue {
 	
 	public static String getCoreResponseTab(int index) {
 		if(index==0) {
-			return "Actions";
+			return "行动";
 		} else if(index==1) {
-			return "Fast travel";
+			return "快速旅行";
 		}
 		return null;
 	}
@@ -57,7 +57,7 @@ public class ShoppingArcadeDialogue {
 	public static Response getFastTravelResponses(int responseTab, int index) {
 		if(responseTab==1) {
 			if (index == 1) {
-				return new Response("Entrance", "Fast travel to the Shopping Arcade's main entrance.", PlaceType.SHOPPING_ARCADE_ENTRANCE.getDialogue(false)){
+				return new Response("入口", "快速旅行到购物中心的主入口", PlaceType.SHOPPING_ARCADE_ENTRANCE.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_ENTRANCE, false);
@@ -66,7 +66,7 @@ public class ShoppingArcadeDialogue {
 				};
 	
 			} else if (index == 2) {
-				return new Response("Ralph's Snacks", "Fast travel to Ralph's Snacks.", PlaceType.SHOPPING_ARCADE_RALPHS_SHOP.getDialogue(false)){
+				return new Response("拉尔夫小吃店", "快速旅行到拉尔夫小吃店。", PlaceType.SHOPPING_ARCADE_RALPHS_SHOP.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_RALPHS_SHOP, false);
@@ -75,7 +75,7 @@ public class ShoppingArcadeDialogue {
 				};
 	
 			} else if (index == 3) {
-				return new Response("Nyan's Clothing Emporium", "Fast travel to Nyan's Clothing Emporium.", PlaceType.SHOPPING_ARCADE_NYANS_SHOP.getDialogue(false)){
+				return new Response("妮安服装店", "快速旅行到妮安服装店。", PlaceType.SHOPPING_ARCADE_NYANS_SHOP.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_NYANS_SHOP, false);
@@ -84,7 +84,7 @@ public class ShoppingArcadeDialogue {
 				};
 	
 			} else if (index == 4) {
-				return new Response("Arcane Arts", "Fast travel to Arcane Arts.", PlaceType.SHOPPING_ARCADE_VICKYS_SHOP.getDialogue(false)){
+				return new Response("奥术艺术", "快速旅行到奥术艺术。", PlaceType.SHOPPING_ARCADE_VICKYS_SHOP.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_VICKYS_SHOP, false);
@@ -93,7 +93,7 @@ public class ShoppingArcadeDialogue {
 				};
 	
 			} else if (index == 5) {
-				return new Response("Succubi's Secrets", "Fast travel to Succubi's Secrets.", PlaceType.SHOPPING_ARCADE_KATES_SHOP.getDialogue(false)){
+				return new Response("魅魔的秘密", "快速旅行到魅魔的秘密。", PlaceType.SHOPPING_ARCADE_KATES_SHOP.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_KATES_SHOP, false);
@@ -102,7 +102,7 @@ public class ShoppingArcadeDialogue {
 				};
 	
 			} else if (index == 6) {
-				return new Response("Pix's Playground", "Fast travel to the gym, 'Pix's Playground'.", PlaceType.SHOPPING_ARCADE_PIXS_GYM.getDialogue(false)){
+				return new Response("皮克斯操练场", "快速旅行到皮克斯操练场的健身房内。", PlaceType.SHOPPING_ARCADE_PIXS_GYM.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_PIXS_GYM, false);
@@ -111,7 +111,7 @@ public class ShoppingArcadeDialogue {
 				};
 	
 			} else if (index == 7) {
-				return new Response("Dream Lover", "Fast travel to Dream Lover.", PlaceType.SHOPPING_ARCADE_ASHLEYS_SHOP.getDialogue(false)){
+				return new Response("梦中爱侣", "快速旅行到梦中爱侣。", PlaceType.SHOPPING_ARCADE_ASHLEYS_SHOP.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_ASHLEYS_SHOP, false);
@@ -120,7 +120,7 @@ public class ShoppingArcadeDialogue {
 				};
 				
 			} else if (index == 8) {
-				return new Response("The Oaken Glade", "Fast travel to the restaurant, 'The Oaken Glade'.", PlaceType.SHOPPING_ARCADE_RESTAURANT.getDialogue(false)){
+				return new Response("橡木林荫", "快速旅行到“橡木林荫”餐厅。", PlaceType.SHOPPING_ARCADE_RESTAURANT.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_RESTAURANT, false);
@@ -134,7 +134,7 @@ public class ShoppingArcadeDialogue {
 	
 	// Dialogue noes:
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Shopping arcade", "-", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("购物中心", "-", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -149,7 +149,7 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Enter", "Step through the entrance and enter the shopping arcade.", PlaceType.SHOPPING_ARCADE_ENTRANCE.getDialogue(false)){
+				return new Response("进入", "穿过入口进入购物中心。", PlaceType.SHOPPING_ARCADE_ENTRANCE.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_ENTRANCE, false);
@@ -162,7 +162,7 @@ public class ShoppingArcadeDialogue {
 		}
 	};
 	
-	public static final DialogueNode ENTRY = new DialogueNode("Entrance to the arcade", "-", false) {
+	public static final DialogueNode ENTRY = new DialogueNode("商场入口", "-", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -183,7 +183,7 @@ public class ShoppingArcadeDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(responseTab==0) {
 				if (index == 1) {
-					return new Response("Exit", "Leave the Shopping Arcade.", PlaceType.DOMINION_SHOPPING_ARCADE.getDialogue(false)){
+					return new Response("离开", "离开购物中心", PlaceType.DOMINION_SHOPPING_ARCADE.getDialogue(false)){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_SHOPPING_ARCADE, false);
@@ -196,7 +196,7 @@ public class ShoppingArcadeDialogue {
 		
 	};
 	
-	public static final DialogueNode ARCADE = new DialogueNode("Shopping arcade", "-", false) {
+	public static final DialogueNode ARCADE = new DialogueNode("购物中心", "-", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 20;
@@ -222,13 +222,13 @@ public class ShoppingArcadeDialogue {
 					if(Main.game.getPlayer().getQuest(QuestLine.SIDE_WES)==Quest.WES_START) {
 						if(Vector2i.getDistance(Main.game.getPlayer().getLocation(), Main.game.getWorlds().get(WorldType.SHOPPING_ARCADE).getCell(PlaceType.SHOPPING_ARCADE_ANTIQUES).getLocation())==1) {
 							if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.wesQuestMet)) {
-								return new Response("Meet Enforcer", "You've already met Wes today, and so will be unable to meet with him again until tomorrow at the earliest...", null);
+								return new Response("会见执法者", "你今天已经见过韦斯了，最早要明天才能再见到他……", null);
 								
 							} else if(Main.game.getHourOfDay()!=13) {
-								return new Response("Meet Enforcer", "The mysterious Enforcer told you to meet him between the hours of [units.time(13)] and [units.time(14)], so you'll have to come back then...", null);
+								return new Response("会见执法者", "那个神秘的执法者告诉你在[units.time(13)]到[units.time(14)]之间见面，到时候再来吧……", null);
 								
 							} else {
-								return new Response("Meet Enforcer", "Loiter around the area and wait for the mysterious Enforcer to contact you...", WesQuest.WES_QUEST_SHOPPING_ARCADE_MEETING);
+								return new Response("会见执法者", "在这片区域闲逛一会儿，等那个神秘的执法者跟你联系……", WesQuest.WES_QUEST_SHOPPING_ARCADE_MEETING);
 							}
 						}
 					}
@@ -239,7 +239,7 @@ public class ShoppingArcadeDialogue {
 		
 	};
 	
-	public static final DialogueNode GENERIC_SHOP = new DialogueNode("Shop", "-", false) {
+	public static final DialogueNode GENERIC_SHOP = new DialogueNode("商店", "-", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -262,7 +262,7 @@ public class ShoppingArcadeDialogue {
 		}
 	};
 	
-	public static final DialogueNode RESTAURANT = new DialogueNode("The Oaken Glade", "-", false) {
+	public static final DialogueNode RESTAURANT = new DialogueNode("橡木林荫", "-", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -281,7 +281,7 @@ public class ShoppingArcadeDialogue {
 		}
 	};
 	
-	public static final DialogueNode ANTIQUES = new DialogueNode("Antiques Shop", "-", false) {
+	public static final DialogueNode ANTIQUES = new DialogueNode("古董店", "-", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -299,16 +299,16 @@ public class ShoppingArcadeDialogue {
 			if(responseTab==0) {
 				if(index==1) {
 					if(!Main.game.isExtendedWorkTime()) {
-						return new Response("Enter", "The antiques shop is currently closed; you'll have to return at another time if you want to take a look inside.", null);
+						return new Response("进入", "古玩店目前关门。如果你想进去转转，得换个时间再来。", null);
 					}
-					return new Response("Enter", "Step inside the antiques shop and take a look around.", ANTIQUES_INTERIOR);
+					return new Response("进入", "进入古玩店并在里面转转。", ANTIQUES_INTERIOR);
 				}
 			}
 			return getFastTravelResponses(responseTab, index);
 		}
 	};
 	
-	public static final DialogueNode ANTIQUES_INTERIOR = new DialogueNode("Antiques Shop", "-", true) {
+	public static final DialogueNode ANTIQUES_INTERIOR = new DialogueNode("古董店", "-", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -331,7 +331,7 @@ public class ShoppingArcadeDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getCharactersTreatingCellAsHome(Main.game.getPlayerCell()).contains(Main.game.getNpc(Scarlett.class))) {
 				if(index==1) {
-					return new Response("Scarlett", "Head over to the store's employee and ask them about Scarlett.", ANTIQUES_INTERIOR_SCARLETT) {
+					return new Response("斯嘉丽", "去找店员询问斯嘉丽的事情。", ANTIQUES_INTERIOR_SCARLETT) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/generic", "ANTIQUES_INTERIOR_SCARLETT_START"));
@@ -350,7 +350,7 @@ public class ShoppingArcadeDialogue {
 				}
 			}
 			if(index==0) {
-				return new Response("Exit", "Head back out into the Shopping Arcade.", ANTIQUES);
+				return new Response("离开", "回头返回购物中心。", ANTIQUES);
 			}
 			return null;
 		}
@@ -368,7 +368,7 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Explain", "Explain that while you're not here from the business which the squirrel-boy is talking about, you <i>are</i> here to take Scarlett off his hands.", ANTIQUES_INTERIOR_SCARLETT_EXPLAIN);
+				return new Response("解释", "解释说你不是来讨论那个松鼠男说的事情的，<i>而是</i>要他放了斯嘉丽。", ANTIQUES_INTERIOR_SCARLETT_EXPLAIN);
 			}
 			return null;
 		}
@@ -387,10 +387,10 @@ public class ShoppingArcadeDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getMoney()<10_000) {
-					return new Response("Pay ("+UtilText.formatAsMoney(10_000, "span")+")", "You cannot afford to pay the squirrel-boy the ten thousand flames he's asking for!", null);
+					return new Response("支付("+UtilText.formatAsMoney(10_000, "span")+")", "你付不起那个松鼠男要求的一万火币！", null);
 					
 				} else {
-					return new Response("Pay ("+UtilText.formatAsMoney(10_000, "span")+")", "Pay the squirrel-boy the ten thousand flames he's asking for.", ANTIQUES_INTERIOR_SCARLETT_END) {
+					return new Response("支付("+UtilText.formatAsMoney(10_000, "span")+")", "付给那个松鼠男要求的一万火币。", ANTIQUES_INTERIOR_SCARLETT_END) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/generic", "ANTIQUES_INTERIOR_SCARLETT_PURCHASED"));
@@ -400,7 +400,7 @@ public class ShoppingArcadeDialogue {
 				}
 				
 			} else if(index==2) {
-				return new Response("Haggle", "Haggle with the squirrel-boy in an attempt to drive down the price which he's asking for Scarlett.", ANTIQUES_INTERIOR_SCARLETT_END) {
+				return new Response("讨价还价", "跟那个松鼠男讨价还价，希望能拉低一些对斯嘉丽的报价。", ANTIQUES_INTERIOR_SCARLETT_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/generic", "ANTIQUES_INTERIOR_SCARLETT_HAGGLE"));
@@ -433,8 +433,8 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Continue on your way out into the Shopping Arcade.",
+				return new Response("继续",
+						"继续走出到购物中心。",
 						ARCADE);
 			}
 			return null;
@@ -453,14 +453,14 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Toilet", "Use the toilet.", TOILETS_USE);
+				return new Response("厕所", "使用厕所。", TOILETS_USE);
 				
 			} else if(index==2) {
 				List<InventorySlot> washSlots = Util.newArrayListOfValues(InventorySlot.HEAD, InventorySlot.EYES, InventorySlot.MOUTH, InventorySlot.NECK, InventorySlot.HAIR, InventorySlot.FINGER, InventorySlot.HAND, InventorySlot.WRIST);
-				return new Response("Wash",
-						"Use the sinks to wash your hands and face."
-							+ "<br/>[style.italicsGood(This will clean your "+Util.inventorySlotsToParsedStringList(washSlots, Main.game.getPlayer())+", as well as any clothing worn in these slots.)]"
-							+ "<br/>[style.italicsMinorBad(This does <b>not</b> clean companions.)]",
+				return new Response("清洗",
+						"用洗手池清洗手和脸。"
+							+ "<br/>[style.italicsGood(这将清理你的"+Util.inventorySlotsToParsedStringList(washSlots, Main.game.getPlayer())+"，以及穿着在这些栏位上的衣物。)]"
+							+ "<br/>[style.italicsMinorBad(<b>不会</b>为同伴清理。)]",
 						TOILETS_WASH) {
 					@Override
 					public void effects() {
@@ -479,23 +479,23 @@ public class ShoppingArcadeDialogue {
 				boolean vaginaAvailable = Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true);
 				
 				if((penisAvailable && !Main.game.getPlayer().isTaur()) || vaginaAvailable) {
-					return new Response("Glory hole (use)",
-							"One of the toilet's stalls has a glory hole in it. Enter the stall and wait for someone on the other side to service you.",
+					return new Response("寻欢洞(使用)",
+							"厕所的隔间里有个寻欢洞。进入隔间，等待对面的人服务你。",
 							TOILETS_GLORY_HOLE_DOM) {
 						@Override
 						public void effects() {
-							Main.game.spawnSubGloryHoleNPC("stranger");
+							Main.game.spawnSubGloryHoleNPC("陌生人");
 						}
 					};
 					
 				} else if(penisAvailable && Main.game.getPlayer().isTaur()) {
-					return new Response("Glory hole (use)",
-							"Due to the shape of your [pc.legRace]'s body, you cannot get into a suitable position for using the glory hole...",
+					return new Response("寻欢洞(使用)",
+							"由于你[pc.legRace]身躯的构造，你找不到一个使用寻欢洞的合适姿势……",
 							null);
 					
 				} else {
-					return new Response("Glory hole (use)",
-							"You can't get access to your genitals, so can't get serviced at a glory hole.",
+					return new Response("寻欢洞(使用)",
+							"你无法使用你的生殖器，所以无法在寻欢洞接受服务。",
 							null);
 				}
 				
@@ -503,19 +503,19 @@ public class ShoppingArcadeDialogue {
 				if((Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true))
 						|| (Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))
 						|| (Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))) {
-					return new Response("Glory hole (service)",
-							"One of the toilet's stalls has a glory hole in it. Enter the stall and wait to service someone on the other side.",
+					return new Response("寻欢洞(服务)",
+							"厕所的隔间里有个寻欢洞。进入隔间，等待给对面的人服务。",
 							TOILETS_GLORY_HOLE_SUB) {
 						@Override
 						public void effects() {
-							Main.game.spawnDomGloryHoleNPC("stranger");
+							Main.game.spawnDomGloryHoleNPC("陌生人");
 							getGloryHoleCharacter().setAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer(), true);
 						}
 					};
 				
 				} else {
-					return new Response("Glory hole (service)",
-							"You can't get access to your mouth, genitals, or asshole, so can't service any strangers at the glory holes.",
+					return new Response("寻欢洞(服务)",
+							"你无法使用嘴巴、生殖器或肛门，所以无法在寻欢洞为陌生人服务。",
 							null);
 				}
 			}
@@ -553,7 +553,7 @@ public class ShoppingArcadeDialogue {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_DOM = new DialogueNode("Toilets", "", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_DOM = new DialogueNode("厕所", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			if(Main.game.isExtendedWorkTime()) {
@@ -568,7 +568,7 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "On second thoughts, you don't really want some stranger having fun with your private parts...", TOILETS) {
+				return new Response("离开", "你又想了下，你不太想让陌生人用你的隐私部位寻欢作乐……", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/generic", "TOILETS_GLORY_HOLE_DOM_LEAVE", getGloryHoleCharacter()));
@@ -577,8 +577,8 @@ public class ShoppingArcadeDialogue {
 				};
 				
 			} else if(index==1) {
-				return new ResponseSex("Start",
-						UtilText.parse(getGloryHoleCharacter(), "Do as [npc.name] says and step up to the glory hole."),
+				return new ResponseSex("开始",
+						UtilText.parse(getGloryHoleCharacter(), "按照[npc.name]的指示，靠近寻欢洞。"),
 						true, false,
 						new SMGloryHole(
 								SexPosition.GLORY_HOLE,
@@ -598,7 +598,7 @@ public class ShoppingArcadeDialogue {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_DOM_POST_SEX = new DialogueNode("Toilets", "The stranger quickly exits their stall, and heads back into the store, leaving you to do the same...", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_DOM_POST_SEX = new DialogueNode("厕所", "那个陌生人匆匆离开了隔间，走向一家商店，你也该离开了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -610,7 +610,7 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Walk out of the stall.", TOILETS) {
+				return new Response("继续", "走出隔间。", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC((NPC) getGloryHoleCharacter());
@@ -621,7 +621,7 @@ public class ShoppingArcadeDialogue {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_SUB = new DialogueNode("Toilets", "", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_SUB = new DialogueNode("厕所", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			if(Main.game.isExtendedWorkTime()) {
@@ -636,7 +636,7 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "On second thoughts, you don't really want to suck the cock of some random stranger...", TOILETS) {
+				return new Response("离开", "你又想了下，你其实不太想吸随机路人的屌……", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/generic", "TOILETS_GLORY_HOLE_SUB_LEAVE", getGloryHoleCharacter()));
@@ -645,8 +645,8 @@ public class ShoppingArcadeDialogue {
 				};
 				
 			} else if(index==1) {
-				return new ResponseSex("Start",
-						UtilText.parse(getGloryHoleCharacter(), "Do as [npc.name] says and get ready to service [npc.her] cock."),
+				return new ResponseSex("开始",
+						UtilText.parse(getGloryHoleCharacter(), "按照[npc.name]说的，准备给[npc.her]的肉棒服务。"),
 						true, false,
 						new SMGloryHole(
 								SexPosition.GLORY_HOLE,
@@ -666,7 +666,7 @@ public class ShoppingArcadeDialogue {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_SUB_POST_SEX = new DialogueNode("Toilets", "The stranger quickly exits their stall, and heads back into the store, leaving you to do the same...", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_SUB_POST_SEX = new DialogueNode("厕所", "那个陌生人匆匆离开了隔间，走向一家商店，你也该离开了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -678,7 +678,7 @@ public class ShoppingArcadeDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Walk out of the stall.", TOILETS) {
+				return new Response("继续", "走出隔间。", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC((NPC) getGloryHoleCharacter());

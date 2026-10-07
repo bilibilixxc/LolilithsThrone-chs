@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -27,20 +27,20 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Stop fucking]]></title>
-	<tooltip><![CDATA[Pull your cock out of [pc.namePos] [pc.pussy+].]]></tooltip>
+	<title><![CDATA[停止操干]]></title>
+	<tooltip><![CDATA[将你的阴茎从[pc.namePos][pc.pussy+]中抽出。]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
-				Having had enough fun with your [pc.pussyCapacity] pussy, [npc.name] pulls [npc.her] [npc.cock+] out of your well-fucked cunt, before sliding [npc.her] [npc.fingers+] over your [pc.ass+] and teasing, [npc.speechNoEffects(I haven't fucked this hole yet...)]
+				[npc.name]玩够了你[pc.pussyCapacity]的小穴，[npc.she]将[npc.cock+]从你被操得很爽的小穴中抽出，然后用[npc.fingers+]滑过你[pc.ass+]，挑逗道，[npc.speechNoEffects(这个洞我还没操过呢……)]
 				
 				#IF(!pc.isAbleToAccessCoverableArea(CA_ANUS, false) && pc.getClothingInSlot(IS_ANUS)!=null)
 					</p>
 					<p>
 						#IF(pc.getClothingInSlot(IS_ANUS).getClothingType()==CLOTHING_norin_anal_beads_anal_beads)
-							Grabbing hold of the end of your anal beads, [npc.name] roughly yanks the first sphere out of your [pc.asshole+]. You can't help but let out [pc.a_moan+] as you feel this first bead slip out of your ass, and continue to [pc.moan] like a slut as [npc.she] pulls out the other five. With your ass now ready to take [npc.namePos] [npc.cock+], you lewdly squeal as [npc.she] rubs [npc.her] thumb over your inviting orifice...
+							[npc.name]抓住你肛珠链的末端，粗暴地将第一颗珠子从你[pc.asshole+]中拔出。你感受到珠子从你菊穴中滑出，不禁发出一声[pc.a_moan+]，随着[npc.she]拔出另外五颗珠子，你像个荡妇一样不断[pc.moan]着。现在你的菊穴已经准备好接受[npc.namePos][npc.cock+]了，你淫荡地尖叫着，感受着[npc.she]的拇指在你诱人的腔穴上按动……
 						#ELSE
-							Grabbing hold of your buttplug, [npc.name] roughly yanks it out of your [pc.asshole+], before eagerly running one of [npc.her] thumbs over your inviting orifice...
+							[npc.name]抓住你的肛塞，粗暴地将其从你[pc.asshole+]中拔出，然后饥渴地用[npc.her]的拇指在你诱人的腔穴上按动……
 						#ENDIF
 				#ENDIF
 			]]></text>

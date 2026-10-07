@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[staircase]]></name>
-	<tooltipDescription><![CDATA[A narrow staircase leads down to the ground floor of 'The Red Dragon' tavern.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the staircase at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[楼梯]]></name>
+	<tooltipDescription><![CDATA[一条狭窄的楼梯通向红龙酒馆的底层。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“红龙酒馆”的楼梯上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

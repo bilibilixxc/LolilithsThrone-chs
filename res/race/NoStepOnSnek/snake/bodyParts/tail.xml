@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tail>
 	<race>NoStepOnSnek_snake</race>
-	<transformationName><![CDATA[snake]]></transformationName>
+	<transformationName><![CDATA[蛇]]></transformationName>
 	<coveringType>SNAKE_SCALES</coveringType>
 	<spinneret>false</spinneret>
 	<defaultGirth>3</defaultGirth>
@@ -15,39 +15,39 @@
 	</tags>
 	<determiner><![CDATA[]]></determiner>
 	<determinerPlural><![CDATA[]]></determinerPlural>
-	<name><![CDATA[tail]]></name>
-	<namePlural><![CDATA[tails]]></namePlural>
+	<name><![CDATA[尾巴]]></name>
+	<namePlural><![CDATA[尾巴]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor>snake-like</descriptor>
-		<descriptor>scaly</descriptor>
+		<descriptor><![CDATA[蛇般]]></descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>snake-like</descriptor>
-		<descriptor>scaly</descriptor>
+		<descriptor><![CDATA[蛇般]]></descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
 	</descriptorsFeminine>
-	<tipName><![CDATA[tip]]></tipName>
-	<tipNamePlural><![CDATA[tips]]></tipNamePlural>
+	<tipName><![CDATA[尖端]]></tipName>
+	<tipNamePlural><![CDATA[尖端]]></tipNamePlural>
 	<tipDescriptorsMasculine>
-		<descriptor>scaly</descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
 	</tipDescriptorsMasculine>
 	<tipDescriptorsFeminine>
-		<descriptor>scaly</descriptor>
+		<descriptor><![CDATA[有鳞]]></descriptor>
 	</tipDescriptorsFeminine>
 	<transformationDescription><![CDATA[
 		#IF(npc.getTailCount()==1)
-			A scaly, snake-like tail sprouts from just above [npc.her] ass, rapidly growing in size until it's about [npc.tailLength] long. [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] complete control over where it goes, allowing [npc.herHim] to use it like a third limb.
-			<br/>[npc.Name] now [npc.has] a [style.boldSnake(snake-like tail)], [npc.materialDescriptor] [npc.tailFullDescription(true)].
+			[npc.her]的屁股上方生出一条覆鳞的蛇尾，尾巴迅速变长，直到[npc.tailLength]左右。[npc.she]很快就意识到[npc.she]可以随心所欲地控制它，宛若新生的第三只手。
+			<br/>[npc.Name]现在拥有一条[style.boldSnake(蛇般的尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ELSE
-			[npc.TailCount] scaly, snake-like tails sprout from just above [npc.her] ass, rapidly growing in size until they're each about [npc.tailLength] long. [npc.She] quickly [npc.verb(realise)] that [npc.she] [npc.has] complete control over where they go, allowing [npc.herHim] to use them like extra limbs.
-			<br/>[npc.Name] now [npc.has] [npc.tailCount] [style.boldSnake(snake-like tails)], [npc.materialDescriptor] [npc.tailFullDescription(true)].
+			[npc.TailCount]条覆鳞的蛇尾从[npc.her]屁股上长出，迅速变大，直到每条都有大约[npc.tailLength]长。[npc.she]很快就意识到[npc.she]可以随心所欲地控制它们，宛若新生的额外肢体。
+			<br/>[npc.Name]现在拥有[npc.tailCount]条[style.boldSnake(蛇尾)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。
 		#ENDIF
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		Growing out from just above [npc.her] ass, [npc.sheHasFull]
+		从[npc.her]的屁股上方生出，[npc.sheHasFull]拥有了
 		#IF(npc.getTailCount()==1)
-			 a #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF [npc.tailColour(true)] snake tail, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use it to grip and hold objects.
+			一条#IF(npc.isTailFeral())[style.colourFeral(兽态的)]#ENDIF[npc.tailColour(true)]蛇尾，[npc.sheHasFull]可以随心所欲地控制它，轻易地令其抓持物体。
 		#ELSE
-			 [npc.tailCount] #IF(npc.isTailFeral()) [style.colourFeral(feral)],#ENDIF [npc.tailColour(true)] snake tails, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects.
+			[npc.tailCount]条#IF(npc.isTailFeral())[style.colourFeral(兽态的)],#ENDIF[npc.tailColour(true)]蛇尾，[npc.sheHasFull]可以随心所欲地控制它们，轻易地令其抓持物体。
 		#ENDIF
 	]]></bodyDescription>
 </tail>

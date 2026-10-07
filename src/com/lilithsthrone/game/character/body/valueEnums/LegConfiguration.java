@@ -37,7 +37,7 @@ public enum LegConfiguration {
 	/**
 	 * This LegConfiguration is the standard for humans, demons, angels, and the vast majority of animal-morphs.
 	 */
-	BIPEDAL("bipedal",
+	BIPEDAL("双足",
 			0,
 			0,
 			true,
@@ -47,8 +47,8 @@ public enum LegConfiguration {
 			WingSize.THREE_LARGE,
 			false,
 			2,
-			"The most common type of lower body; the character's legs and groin are in the same configuration as that of a regular human.",
-			"Above [npc.her] groin, occupying the lower region of [npc.her] abdomen,",
+			"下半身最常见的类型；角色的腿和腹股沟配置与人类相同。",
+			"位于[npc.her]的腹股沟之上，腹部的偏下部分，",
 			TFModifier.TF_MOD_LEG_CONFIG_BIPEDAL,
 			"") {
 		@Override
@@ -79,7 +79,7 @@ public enum LegConfiguration {
 	/**
 	 * This LegConfiguration is available for almost every mammalian race, with some notable exceptions being humans, demons, and angels.
 	 */
-	QUADRUPEDAL("quadrupedal",
+	QUADRUPEDAL("四足",
 			-50,
 			0,
 			false,
@@ -89,9 +89,9 @@ public enum LegConfiguration {
 			WingSize.FOUR_HUGE,
 			true,
 			4,
-			"A configuration in which the character's legs and groin are replaced by the quadrupedal, feral body of the associated animal-morph, with their genitals shifting to be found in the same place as their animal equivalent."
-				+ " The most common example of this is the 'centaur', in which the character's legs and groin are replaced by the body and genitals of a horse.",
-			"Down beneath the groin of [npc.her] feral body,",
+			"角色的腿和腹股沟被相应动物形态四足、兽态的身体所替代，外生殖器的位置与对应动物的位置相同。"
+				+ "最常见的例子是“半人马”，角色的腿和腹股沟都被马的身躯和外生殖器替代。",
+			"[npc.her]兽态身体的腹股沟之下，",
 			TFModifier.TF_MOD_LEG_CONFIG_TAUR,
 			"statusEffects/race/raceBackgroundLegQuadrupedal") {
 		@Override
@@ -122,7 +122,7 @@ public enum LegConfiguration {
 											InventorySlot.SOCK,
 											InventorySlot.GROIN),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], only clothing suitable for quadrupedal-taurs or quadrupedal-ferals can be worn in this slot.",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，只有适合四足兽态身体的衣物可以装备至该栏位中。",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_TAUR_BODY,
 											ItemTag.FITS_FERAL_ALL_BODY,
@@ -138,7 +138,7 @@ public enum LegConfiguration {
 											InventorySlot.WEAPON_OFFHAND_2,
 											InventorySlot.WEAPON_OFFHAND_3),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], [npc.she] cannot wield regular weapons!",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，[npc.she]无法握持常规的武器！",
 									Util.newArrayListOfValues(
 											ItemTag.WEAPON_FERAL_EQUIPPABLE)));
 				
@@ -149,7 +149,7 @@ public enum LegConfiguration {
 											InventorySlot.LEG,
 											InventorySlot.GROIN),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the lower body of [npc.a_legRace], only taur-suitable clothing can be worn in this slot.",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的下半身，只有适合四足兽态身体的衣物可以装备至该栏位中。",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_NON_BIPED_BODY_HUMANOID,
 											ItemTag.FITS_TAUR_BODY)));
@@ -168,7 +168,7 @@ public enum LegConfiguration {
 	/**
 	 * This LegConfiguration is available for snakes and eels.
 	 */
-	TAIL_LONG("serpent-tailed",
+	TAIL_LONG("蛇尾",
 			0,
 			0,
 			true,
@@ -178,9 +178,9 @@ public enum LegConfiguration {
 			WingSize.FOUR_HUGE,
 			false,
 			0,
-			"A configuration in which the character's legs and groin are replaced by an extremely long tail of the associated animal-morph, with their genitals shifting to be located within a cloaca."
-				+ " The most common example of this is the 'lamia', in which the character's legs and groin are replaced by the body and genitals of a snake.",
-			"Above [npc.her] groin, occupying the lower region of [npc.her] humanoid abdomen,",
+			"角色的腿和腹股沟被相应动物形态极长的尾巴所替代，外生殖器被转移至泄殖腔的位置。"
+				+ "最常见的例子是“拉米亚”，角色的腿和腹股沟都被蛇的身躯和外生殖器替代。",
+			"位于[npc.her]腹股沟之上，人形腹部的偏下部分，",
 			TFModifier.TF_MOD_LEG_CONFIG_TAIL_LONG,
 			"statusEffects/race/raceBackgroundLegTailLong") {
 		@Override
@@ -210,7 +210,7 @@ public enum LegConfiguration {
 											InventorySlot.SOCK,
 											InventorySlot.GROIN),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], only clothing suitable for long-tails or long-tail-ferals can be worn in this slot.",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，只有适合长尾身躯的衣物可以装备至该栏位中。",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_LONG_TAIL_BODY,
 											ItemTag.FITS_FERAL_ALL_BODY,
@@ -226,7 +226,7 @@ public enum LegConfiguration {
 											InventorySlot.WEAPON_OFFHAND_2,
 											InventorySlot.WEAPON_OFFHAND_3),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], [npc.she] cannot wield regular weapons!",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，[npc.she]无法握持常规的武器！",
 									Util.newArrayListOfValues(
 											ItemTag.WEAPON_FERAL_EQUIPPABLE)));
 				
@@ -237,7 +237,7 @@ public enum LegConfiguration {
 										InventorySlot.LEG,
 										InventorySlot.GROIN),
 								character.getLegType().getRace(),
-								"Due to the fact that [npc.nameHasFull] the lower body of [npc.a_legRace], only long-tail-suitable clothing can be worn in this slot.",
+								"由于[npc.nameHasFull]拥有[npc.a_legRace]的下半身，只有适合长尾身躯的衣物可以装备至该栏位中。",
 								Util.newArrayListOfValues(
 										ItemTag.FITS_NON_BIPED_BODY_HUMANOID,
 										ItemTag.FITS_LONG_TAIL_BODY)));
@@ -261,42 +261,42 @@ public enum LegConfiguration {
 		}
 		@Override
 		public String getMovementVerbPresentFirstPersonSingular() {
-			return "slither";
+			return "爬";
 		}
 		@Override
 		public String getMovementVerbPresentThirdPersonSingular() {
-			return "slithers";
+			return "爬";
 		}
 		@Override
 		public String getMovementVerbPresentParticiple() {
-			return "slithering";
+			return "爬";
 		}
 		@Override
 		public String getMovementVerbPastParticiple() {
-			return "slithered";
+			return "爬";
 		}
 		@Override
 		public String getIndividualMovementVerbPresentFirstPersonSingular() {
-			return "slide";
+			return "滑";
 		}
 		@Override
 		public String getIndividualMovementVerbPresentThirdPersonSingular() {
-			return "slides";
+			return "滑";
 		}
 		@Override
 		public String getIndividualMovementVerbPresentParticiple() {
-			return "sliding";
+			return "滑";
 		}
 		@Override
 		public String getIndividualMovementVerbPastParticiple() {
-			return "slid";
+			return "滑";
 		}
 	},
 
 	/**
 	 * This LegConfiguration is available for fish.
 	 */
-	TAIL("mer-tailed",
+	TAIL("鱼尾",
 			25,
 			-95,
 			true,
@@ -306,9 +306,9 @@ public enum LegConfiguration {
 			WingSize.THREE_LARGE,
 			false, 
 			0,
-			"A configuration in which the character's legs and groin are replaced by a tail of the associated animal-morph, with their genitals shifting to be located within a cloaca."
-					+ " The most common example of this is the 'mermaid', in which the character's legs and groin are replaced by the body and genitals of a fish.",
-			"Above [npc.her] groin, occupying the lower region of [npc.her] humanoid abdomen,",
+			"角色的腿和腹股沟被相应动物形态尾巴所替代，外生殖器被转移至泄殖腔的位置。"
+					+ "最常见的例子是“美人鱼”，角色的腿和腹股沟都被鱼的身躯和外生殖器替代。",
+			"位于[npc.her]腹股沟之上，人形腹部的偏下部分，",
 			TFModifier.TF_MOD_LEG_CONFIG_TAIL,
 			"statusEffects/race/raceBackgroundLegTailShort") {
 		@Override
@@ -338,7 +338,7 @@ public enum LegConfiguration {
 											InventorySlot.SOCK,
 											InventorySlot.GROIN),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], only clothing suitable for tails or tail-ferals can be worn in this slot.",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，只有适合尾状身躯的衣物可以装备至该栏位中。",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_TAIL_BODY,
 											ItemTag.FITS_FERAL_ALL_BODY,
@@ -354,7 +354,7 @@ public enum LegConfiguration {
 											InventorySlot.WEAPON_OFFHAND_2,
 											InventorySlot.WEAPON_OFFHAND_3),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], [npc.she] cannot wield regular weapons!",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，[npc.she]无法握持常规的武器！",
 									Util.newArrayListOfValues(
 											ItemTag.WEAPON_FERAL_EQUIPPABLE)));
 				
@@ -365,7 +365,7 @@ public enum LegConfiguration {
 										InventorySlot.LEG,
 										InventorySlot.GROIN),
 								character.getLegType().getRace(),
-								"Due to the fact that [npc.nameHasFull] the lower body of [npc.a_legRace], only tail-suitable clothing can be worn in this slot.",
+								"由于[npc.nameHasFull]拥有[npc.a_legRace]的下半身，只有适合尾状身躯的衣物可以装备至该栏位中。",
 								Util.newArrayListOfValues(
 										ItemTag.FITS_NON_BIPED_BODY_HUMANOID,
 										ItemTag.FITS_TAIL_BODY)));
@@ -395,7 +395,7 @@ public enum LegConfiguration {
 	/**
 	 * This LegConfiguration is available for spiders and scorpions.
 	 */
-	ARACHNID("arachnid",
+	ARACHNID("蛛身",
 			-25,
 			100,
 			false,
@@ -405,9 +405,9 @@ public enum LegConfiguration {
 			WingSize.FOUR_HUGE,
 			true,
 			8,
-			"A configuration in which the character's legs and groin are replaced by the eight-legged, feral body of the associated arachnid-morph, with their genitals shifting to be found in the same place as their animal equivalent."
-					+ " The most common example of this is the 'arachne', in which the character's legs and groin are replaced by the body and genitals of a spider.",
-			"Occupying the lower region of [npc.her] humanoid abdomen,",
+			"角色的腿和腹股沟被相应蜘蛛形态八足、兽态的身体所替代，外生殖器的位置与对应动物的位置相同。"
+					+ "最常见的例子是“阿拉克涅”，角色的腿和腹股沟都被蜘蛛的身躯和外生殖器替代。",
+			"位于[npc.her]人形腹部的偏下部分，",
 			TFModifier.TF_MOD_LEG_CONFIG_ARACHNID,
 			"statusEffects/race/raceBackgroundLegArachnid") {
 		@Override
@@ -440,7 +440,7 @@ public enum LegConfiguration {
 											InventorySlot.SOCK,
 											InventorySlot.GROIN),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], only clothing suitable for arachnids or arachnid-ferals can be worn in this slot.",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，只有适合蛛形身躯的衣物可以装备至该栏位中。",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_ARACHNID_BODY,
 											ItemTag.FITS_FERAL_ALL_BODY,
@@ -456,7 +456,7 @@ public enum LegConfiguration {
 											InventorySlot.WEAPON_OFFHAND_2,
 											InventorySlot.WEAPON_OFFHAND_3),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], [npc.she] cannot wield regular weapons!",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，[npc.she]无法握持常规的武器！",
 									Util.newArrayListOfValues(
 											ItemTag.WEAPON_FERAL_EQUIPPABLE)));
 				
@@ -470,7 +470,7 @@ public enum LegConfiguration {
 										InventorySlot.FOOT,
 										InventorySlot.SOCK),
 								character.getLegType().getRace(),
-								"Due to the fact that [npc.nameHasFull] the lower body of [npc.a_legRace], only arachnid-suitable clothing can be worn in this slot.",
+								"由于[npc.nameHasFull]拥有[npc.a_legRace]的下半身，只有适合蛛形身躯的衣物可以装备至该栏位中。",
 								Util.newArrayListOfValues(
 										ItemTag.FITS_NON_BIPED_BODY_HUMANOID,
 										ItemTag.FITS_ARACHNID_BODY)));
@@ -513,7 +513,7 @@ public enum LegConfiguration {
 	 * Then once by man and angels to be seen,<br/>
 	 * In roaring he shall rise and on the surface die.</i>
 	 */
-	CEPHALOPOD("cephalopod",
+	CEPHALOPOD("头足",
 			50,
 			-75,
 			true,
@@ -524,9 +524,9 @@ public enum LegConfiguration {
 			false,
 			8,
 			// I believe that "tentacled" is technically incorrect as a catch-all term for cephalopods, as octopuses have eight 'arms', while squids have eight arms plus two tentacles. Oh well.
-			"A configuration in which the character's legs and groin are replaced by the tentacled, feral body of the associated cephalopod-morph, with their genitals shifting to be found in the same place as their animal equivalent."
-					+ " The most common example of this is the 'kraken', in which the character's legs and groin are replaced by the body and genitals of a squid.",
-			"Above [npc.her] groin, occupying the lower region of [npc.her] humanoid abdomen,",
+			"角色的腿和腹股沟被相应头足动物形态长有触手、兽态的身体所替代，外生殖器的位置与对应动物的位置相同。"
+					+ "最常见的例子是“克拉肯”，角色的腿和腹股沟都被鱿鱼的身躯和外生殖器替代。",
+			"位于[npc.her]腹股沟之上，人形腹部的偏下部分，",
 			TFModifier.TF_MOD_LEG_CONFIG_CEPHALOPOD,
 			"statusEffects/race/raceBackgroundLegCephalopod") {
 		@Override
@@ -555,7 +555,7 @@ public enum LegConfiguration {
 											InventorySlot.SOCK,
 											InventorySlot.GROIN),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], only clothing suitable for cephalopods or cephalopod-ferals can be worn in this slot.",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，只有适合头足动物身躯的衣物可以装备至该栏位中。",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_CEPHALOPOD_BODY,
 											ItemTag.FITS_FERAL_ALL_BODY,
@@ -571,7 +571,7 @@ public enum LegConfiguration {
 											InventorySlot.WEAPON_OFFHAND_2,
 											InventorySlot.WEAPON_OFFHAND_3),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], [npc.she] cannot wield regular weapons!",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，[npc.she]无法握持常规的武器！",
 									Util.newArrayListOfValues(
 											ItemTag.WEAPON_FERAL_EQUIPPABLE)));
 				
@@ -585,7 +585,7 @@ public enum LegConfiguration {
 										InventorySlot.FOOT,
 										InventorySlot.SOCK),
 								character.getLegType().getRace(),
-								"Due to the fact that [npc.nameHasFull] the lower body of [npc.a_legRace], only cephalopod-suitable clothing can be worn in this slot.",
+								"由于[npc.nameHasFull]拥有[npc.a_legRace]的下半身，只有适合头足动物身躯的衣物可以装备至该栏位中。",
 								Util.newArrayListOfValues(
 										ItemTag.FITS_NON_BIPED_BODY_HUMANOID,
 										ItemTag.FITS_CEPHALOPOD_BODY)));
@@ -606,35 +606,35 @@ public enum LegConfiguration {
 		}
 		@Override
 		public String getMovementVerbPresentFirstPersonSingular() {
-			return "crawl";
+			return "爬";
 		}
 		@Override
 		public String getMovementVerbPresentThirdPersonSingular() {
-			return "crawls";
+			return "爬";
 		}
 		@Override
 		public String getMovementVerbPresentParticiple() {
-			return "crawling";
+			return "爬";
 		}
 		@Override
 		public String getMovementVerbPastParticiple() {
-			return "crawled";
+			return "爬";
 		}
 		@Override
 		public String getIndividualMovementVerbPresentFirstPersonSingular() {
-			return "slide";
+			return "滑";
 		}
 		@Override
 		public String getIndividualMovementVerbPresentThirdPersonSingular() {
-			return "slides";
+			return "滑";
 		}
 		@Override
 		public String getIndividualMovementVerbPresentParticiple() {
-			return "sliding";
+			return "滑";
 		}
 		@Override
 		public String getIndividualMovementVerbPastParticiple() {
-			return "slid";
+			return "滑";
 		}
 	},
 	
@@ -642,7 +642,7 @@ public enum LegConfiguration {
 	/**
 	 * This LegConfiguration is a 'tauric' configuration for bird races.
 	 */
-	AVIAN("avian",
+	AVIAN("鸟类",
 			0,
 			0,
 			false,
@@ -652,9 +652,9 @@ public enum LegConfiguration {
 			WingSize.THREE_LARGE,
 			true,
 			2,
-			"A configuration in which the character's legs and groin are replaced by the avian body of the associated animal-morph, with their genitals shifting to be found in a rear-facing cloaca."
-					+ " The most common example of this is the 'harpy-moa', in which a regular harpy's legs and groin are replaced by the feral body and genitals of a bird.",
-			"Above [npc.her] groin, occupying the lower region of [npc.her] humanoid abdomen,",
+			"角色的腿和腹股沟被相应动物形态鸟类身躯所替代，外生殖器被转移至泄殖腔的位置。"
+					+ "最常见的例子是“哈比鸟”，角色的腿和腹股沟都被鸟的身躯和外生殖器替代。",
+			"位于[npc.her]腹股沟之上，人形腹部的偏下部分，",
 			TFModifier.TF_MOD_LEG_CONFIG_AVIAN,
 			"statusEffects/race/raceBackgroundLegAvian") {
 		@Override
@@ -683,7 +683,7 @@ public enum LegConfiguration {
 											InventorySlot.SOCK,
 											InventorySlot.GROIN),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], only clothing suitable for avians or avian-ferals can be worn in this slot.",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，只有适合鸟类身躯的衣物可以装备至该栏位中。",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_CEPHALOPOD_BODY,
 											ItemTag.FITS_FERAL_ALL_BODY,
@@ -699,7 +699,7 @@ public enum LegConfiguration {
 											InventorySlot.WEAPON_OFFHAND_2,
 											InventorySlot.WEAPON_OFFHAND_3),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], [npc.she] cannot wield regular weapons!",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，[npc.she]无法握持常规的武器！",
 									Util.newArrayListOfValues(
 											ItemTag.WEAPON_FERAL_EQUIPPABLE)));
 				
@@ -710,7 +710,7 @@ public enum LegConfiguration {
 										InventorySlot.LEG,
 										InventorySlot.GROIN),
 								character.getLegType().getRace(),
-								"Due to the fact that [npc.nameHasFull] the lower body of [npc.a_legRace], only avian-suitable clothing can be worn in this slot.",
+								"由于[npc.nameHasFull]拥有[npc.a_legRace]的下半身，只有适合鸟类身躯的衣物可以装备至该栏位中。",
 								Util.newArrayListOfValues(
 										ItemTag.FITS_NON_BIPED_BODY_HUMANOID,
 										ItemTag.FITS_AVIAN_BODY))
@@ -740,7 +740,7 @@ public enum LegConfiguration {
 	 * This LegConfiguration is a configuration for feral biped-ish races with wings instead of forelegs.<br/>
 	 * <b>This should only ever be used for ferals!</b>
 	 */
-	WINGED_BIPED("winged-biped",
+	WINGED_BIPED("翼手双足",
 			0,
 			0,
 			true,
@@ -750,9 +750,9 @@ public enum LegConfiguration {
 			WingSize.THREE_LARGE,
 			false,
 			2,
-			"A configuration in which the character's legs and groin are replaced by the body of the associated animal-morph, while their arm-wings are used in place of forelegs."
-					+ " The most common examples of this are feral wyverns and feral bats, which both have wings instead of arms, and which use these arm-wings to walk on all fours.",
-			"Above [npc.her] groin, occupying the lower region of [npc.her] humanoid abdomen,",
+			"角色的腿和腹股沟被相应动物形态的身体所替代，而翼手则取代了前腿。"
+					+ "最常见的例子是双足飞龙和蝙蝠，前肢均为翅膀而非手臂，也可以使用这对翼手四足行走。",
+			"位于[npc.her]腹股沟之上，人形腹部的偏下部分，",
 			TFModifier.TF_MOD_LEG_CONFIG_WINGED_BIPED,
 			"statusEffects/race/raceBackgroundLegAvian") {
 		@Override
@@ -779,7 +779,7 @@ public enum LegConfiguration {
 											InventorySlot.WEAPON_OFFHAND_2,
 											InventorySlot.WEAPON_OFFHAND_3),
 									character.getLegType().getRace(),
-									"Due to the fact that [npc.nameHasFull] the feral body of [npc.a_legRace], [npc.she] cannot wield regular weapons!",
+									"由于[npc.nameHasFull]拥有[npc.a_legRace]的完全兽态身躯，[npc.she]无法握持常规的武器！",
 									Util.newArrayListOfValues(
 											ItemTag.FITS_ARM_WINGS,
 											ItemTag.FITS_ARM_WINGS_EXCLUSIVE)));
@@ -886,35 +886,35 @@ public enum LegConfiguration {
 	}
 
 	public String getMovementVerbPresentFirstPersonSingular() {
-		return "walk";
+		return "走";
 	}
 
 	public String getMovementVerbPresentThirdPersonSingular() {
-		return "walks";
+		return "走";
 	}
 
 	public String getMovementVerbPresentParticiple() {
-		return "walking";
+		return "走";
 	}
 
 	public String getMovementVerbPastParticiple() {
-		return "walked";
+		return "走";
 	}
 
 	public String getIndividualMovementVerbPresentFirstPersonSingular() {
-		return "step";
+		return "走";
 	}
 
 	public String getIndividualMovementVerbPresentThirdPersonSingular() {
-		return "steps";
+		return "走";
 	}
 
 	public String getIndividualMovementVerbPresentParticiple() {
-		return "stepping";
+		return "走";
 	}
 
 	public String getIndividualMovementVerbPastParticiple() {
-		return "stepped";
+		return "走";
 	}
 	
 	public int getLandSpeedModifier() {

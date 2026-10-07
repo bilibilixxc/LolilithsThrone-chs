@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>200</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[strapless bra]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[strapless bras]]></namePlural>
-		<description><![CDATA[This bra has no shoulder straps to help hold it in place, and as such relies on an extra-wide band for breast support. It is intended to be worn in combination with dresses that would leave a normal bra's shoulder straps on display.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[无肩带文胸]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[无肩带文胸]]></namePlural>
+		<description><![CDATA[这款文胸没有肩带来固定，因此依靠一条超宽的带子来支撑胸部。它旨在与连衣裙搭配使用，因为这些连衣裙会露出普通文胸的肩带。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -47,27 +47,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(press)] the cups of the strapless bra to [npc.her] chest, before reaching around to [npc.her] back and fastening it in place.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(press)] the cups of the strapless bra to [npc2.namePos] chest, before reaching around to [npc2.her] back and fastening it in place.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(press)] the cups of the strapless bra to [npc2.namePos] chest, before reaching around to [npc2.her] back and fastening it in place.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将低胸胸罩贴在[npc.her]的胸部上并将背带系在[npc.her]的后背上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将低胸胸罩贴在[npc2.namePos]的胸部上并将背带系在[npc2.her]的后背上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将胸罩贴在[npc2.namePos]的胸部上并将背带系在[npc2.her]的后背上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] strapless bra and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] strapless bra and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] strapless bra and [npc.verb(take)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]的低胸胸罩并将其摘下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的低胸胸罩并将其摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地解下了[npc2.namePos]的胸罩并将其扯下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

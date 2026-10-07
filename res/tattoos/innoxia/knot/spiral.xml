@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[spiral knot]]></name>
+		<name><![CDATA[螺旋结]]></name>
 		
-		<description><![CDATA[A depiction of a Celtic spiral knot, believed to symbolise the transition between the physical and spiritual worlds.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts a Celtic spiral knot]]></bodyOverviewDescription> 
+		<description><![CDATA[凯尔特螺旋结的图像，被认为象征着物质世界和精神世界之间的过渡。]]></description> 
+		<bodyOverviewDescription><![CDATA[凯尔特螺旋结的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>spiral.svg</imageName> 
 		

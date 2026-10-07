@@ -1,55 +1,55 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="START_SEX_2KOMA"><![CDATA[
 	<p>
-		[npc2.Name] can't help but laugh as [npc2.she] [npc2.verb(realise)] that [npc.name] actually [npc.verb(think)] [npc.she] [npc.verb(stand)] a chance against [npc2.herHim]. With a mocking smirk on [npc2.her] face, [npc2.she] [npc2.verb(taunt)], [npc2.speech(Hah! You should know your place, you pathetic little thing! Get down and beg for my forgiveness, before I decide to end you!)]
+		当[npc2.name]看见[npc.Name]攥紧拳头，紧盯着[npc2.she]时，[npc2.she]笑个不停。[npc2.she]用戏谑的语气奚落道，[npc2.speech(哈，你还没弄清现状吗？你这可怜虫！跪下摇尾乞怜，不然别怪我心狠手辣！)]
 	</p>
 	<p style='text-align:center;'>
-		[style.italics(A few moments later...)]
+		[style.italics(过了一会儿……)]
 	</p>
 	<p>
-		[npc2.speechNoEffects(~Aah!~ Oh, yes! That's right, ruin my pussy! ~Mmm!~ I'm your bitch!
-		#IF(npc2.isVisiblyPregnant()) Fuck me! #ELSE Breed me! #ENDIF
-		~Aah!~ Yes!)]
+		[npc2.speechNoEffects(~哈啊~哦~太爽了，操烂我的婊子小穴吧~我是荡妇，我是不要脸的婊子~尽管操我！
+		#IF(npc2.isVisiblyPregnant())用力操我！#ELSE给我播种！让我怀上你的孩子！#ENDIF
+		~哈~对，就是那里，用力~)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="POST_SEX_2KOMA"><![CDATA[
 	<p>
-		Having put [npc.name] in [npc.her] place, you gather your things and make your exit, leaving [npc.herHim] panting and moaning on the floor behind you.
+	你把[npc.Name]放在原地，收拾你的东西转身离开了。从你身后传来隐约的喘息声和呻吟声……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="POST_SEX_2KOMA_AS_SUB"><![CDATA[
 	<p>
-		Having put you in your place, [npc.name] gathers [npc.her] things and makes [npc.her] exit, leaving you panting and [pc.moaning] on the floor. After a few minutes, you've got your breath back, and, getting your own things in order, you brush yourself down and set off on your way.
+	[npc.Name]捡起[npc.her]的东西，把你留在那里，转身走了。你躺在地上呻吟着，喘息着，过了几分钟才缓过气来。你站起来，捡起你的东西，掸掉了身上的灰尘，继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="A_WILD_CENTAUR_APPEARS"><![CDATA[
 	<p>
-		As you find yourself thinking about the nature of centaurs, one suddenly appears before you! From the lustful look in [npc.her] [npc.eyes], you can tell that [npc.she] wants some sex...
+	当你沉浸在对半人马习性的思考时，一只半人马突然出现在你面前！从[npc.her][npc.eyes]中，你看到了燃起的性欲的火焰，[npc.she]已经发情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_SEX_CENTAUR"><![CDATA[
 	<p>
-		Having put [npc.name] in [npc.her] place, you gather your things and make your exit, leaving [npc.herHim] panting and moaning on the floor behind you.
+	你把[npc.Name]放在原地，收拾你的东西转身离开了。从你身后传来隐约的喘息声和呻吟声……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="POST_SEX_CENTAUR_AS_SUB"><![CDATA[
 	<p>
-		Having put you in your place, [npc.name] gathers [npc.her] things and makes [npc.her] exit, leaving you panting and [pc.moaning] on the floor. After a few minutes, you've got your breath back, and, getting your own things in order, you brush yourself down and set off on your way.
+	[npc.Name]捡起[npc.her]的东西，把你留在那里，转身走了。你躺在地上呻吟着，喘息着，过了几分钟才缓过气来。你站起来，捡起你的东西，掸掉了身上的灰尘，继续前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -57,32 +57,32 @@
 
 	<htmlContent tag="MASTURBATION"><![CDATA[
 	<p>
-		Feeling turned on and desperate to get some sexual relief, you decide to take a break in order to masturbate.
+		你性奋起来，急欲释放性欲，决定抽出点时间自慰。
 		#IF(game.getPlayerCell().getPlace().isPopulated())
-			 The fact that there are people around to witness you touching yourself serves to excite you even more, and, moving your [pc.hands] down your body, you prepare to start touching yourself...
+			周围有人在围观，你比以往更兴奋了。便用[pc.hands]抚下身子，准备开始自摸……
 		#ELSEIF(game.getPlayer().hasCompanions())
 			#IF(pc.hasFetish(FETISH_EXHIBITIONIST))
-				 The idea of having [npc.name] look on as you pleasure yourself serves to excite you even more, and, after telling [npc.herHim] not to look away, you move your [pc.hands] down your body and prepare to start touching yourself...
+				[npc.name]正注视着你。你比以往更兴奋了。告诉[npc.herHim]别移开目光。便用[pc.hands]抚下身子，准备开始自摸……
 			#ELSE
-				 Not wanting [npc.name] to witness you pleasuring yourself, you tell [npc.herHim] to move away and not look in your direction, before moving your [pc.hands] down your body as you prepare to start touching yourself...
+				你不想让[npc.name]看着你自慰，便让[npc.herHim]走开，别盯着你。便用[pc.hands]抚下身子，准备开始自摸……
 			#ENDIF
 		#ELSE
-			 The idea that you're going to be orgasming very soon serves to excite you even more, and, moving your [pc.hands] down your body, you prepare to start touching yourself...
+			即将到来的高潮让你比以往更兴奋了。你用[pc.hands]抚下身子，准备开始自摸……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_MASTURBATION"><![CDATA[
 	<p>
 		#IF(pc.isSatisfiedFromLastSex())
-			Letting out a deeply satisfied sigh, you decide that you've got what you wanted out of your masturbation session, and, getting your things back in order, you prepare to continue on your way...
+			你满足地长叹一声，感觉自慰过后已经心满意足，于是整理好衣服，准备继续赶路……
 		#ELSE
-			Letting out an annoyed sigh, you decide that you'll have to get the sexual satisfaction you're looking for elsewhere, and, putting an end to your masturbation session, you prepare to continue on your way...
+			你有些烦躁地叹了一声，感觉必须要到别的地方寻一番快活，于是结束了自慰，准备继续赶路……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INCUBATION_EGG_LAYING -->
@@ -92,331 +92,331 @@
 	<htmlContent tag="INCUBATION_EGG_LAYING_VAGINA"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thinking that it would be fun to put on a show for passing strangers, you decide to stop and lay the [#SPECIAL_PARSE_1] you've incubated in your womb right here in public. Getting excited at the prospect of performing such an act, you quickly find a suitable spot and squat down on the ground. Quietly [pc.moaning] in delight, you expose your [pc.pussy+] and tease your [pc.fingers] over your [pc.labia+], which proves to be more than enough to attract a couple of curious passersby.
+			你觉得在过路的陌生人面前表演一番或许不错，于是你决定停下来，把你子宫里孕育着的[#SPECIAL_PARSE_1]卵就在这儿大大方方下了。想到要做这样的事，你兴奋不已，赶紧找了个合适的地方并蹲好。小声地在喜悦中[pc.moaning]着，你裸出[pc.pussy+]并开始用你的[pc.fingers]在[pc.labia+]上挑逗，而这显而易见足以吸引来一些好奇的路人。
 		</p>
 	#ELSE
 		<p>
-			Desperate to lay the [#SPECIAL_PARSE_1] you've incubated in your womb, you find a suitably private spot nearby, and after making sure that nobody's watching, you squat down on the ground. Unable to suppress a quiet [pc.moan], you expose your [pc.pussy+] and tease your [pc.fingers] over your [pc.labia+].
+			你几乎忍耐不住，马上就要将肚子中孵化的[#SPECIAL_PARSE_1]产下，连忙在附近找了个合适的隐秘场所，在保证没人偷看后便蹲了下来。你还是压抑不住那轻声的[pc.moan]，将[pc.pussy+]露了出来，用[pc.fingers]挑逗着[pc.labia+]。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_VAGINA_SINGLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your womb, your pussy instantly responds to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] in excitement, you #IF(pc.hasLegs())spread your [pc.legs]#ELSElower your [pc.hips] towards the ground#ENDIF and start to push, smiling to yourself as the strangers gathered around you lustfully stare at your drooling cunt.
+			你体内孕育着的那颗卵让你释放出更多荷尔蒙，催熟着你的子宫，你的小穴随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，#IF(pc.hasLegs())伸展着你的[pc.legs]#ELSE把[pc.hips]低向地面#ENDIF并开始用力，在周围的陌生人围聚过来色迷迷地盯着你淫液滴答的阴户时情不自禁地微笑着。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way down and out of your exposed pussy. A desperate cry bursts out from between your [pc.lips] as your labia lewdly stretch apart, and before you have time to think about what's happening, the egg has escaped from your slimy cunt and has been safely deposited onto the floor beneath you.
+			几乎是瞬间，你便感到一颗浑圆的卵顺着阴道，从你暴露在大庭广众下阴户口中滑出。你无法忍受地泄出一声尖叫，等你缓过来后，那颗蛋早已从你湿滑的洞口中出来，安安稳稳地躺在你身下的地面上。
 		</p>
 		<p>
-			After releasing a chorus of crass remarks and low whistles, the crowd of strangers starts to depart, leaving you panting for breath as you collapse down next to the egg. Suddenly, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			人群中响起了一阵下流的呼喝和低沉的口哨声，便逐渐散开了，只留下你倒在了那颗蛋旁边。忽然，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your womb, your pussy instantly responds to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you #IF(pc.hasLegs())spread your [pc.legs]#ELSElower your [pc.hips] towards the ground#ENDIF and start to push.
+			你体内孕育着的那颗卵让你释放出更多荷尔蒙，催熟着你的子宫，你的小穴随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，感到一股激烈的热潮冲刷过躯体，你#IF(pc.hasLegs())伸展着你的[pc.legs]#ELSE把[pc.hips]低向地面#ENDIF并开始用力。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way down and out of your exposed pussy. A desperate cry bursts out from between your [pc.lips] as your labia lewdly stretch apart, and before you have time to think about what's happening, the egg has escaped from your slimy cunt and has been safely deposited onto the floor beneath you. Before you can react, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you collapse down next to the egg and try to rest and recover your strength...
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的小穴里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的阴唇淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的阴户里滚落，被你安置在下方的地板。在你反应过来之前，一股巨大的疲惫感突然涌上你的心头。在你休息并试图恢复一些体力的过程中，你费尽全身力气才没有晕过去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_VAGINA_MULTIPLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your womb, your pussy instantly responds to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] in excitement, you #IF(pc.hasLegs())spread your [pc.legs]#ELSElower your [pc.hips] towards the ground#ENDIF and start to push, smiling to yourself as the strangers gathered around you lustfully stare at your drooling cunt.
+			你体内孕育着的卵让你释放出更多荷尔蒙，催熟着你的子宫，你的小穴随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，#IF(pc.hasLegs())伸展着你的[pc.legs]#ELSE把[pc.hips]低向地面#ENDIF并开始用力，在周围的陌生人围聚过来色迷迷地盯着你淫液滴答的阴户时情不自禁地微笑着。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of your exposed pussy. A desperate cry bursts out from between your [pc.lips] as your labia lewdly stretch apart, and before you have time to think about what's happening, the egg has escaped from your slimy cunt and has been safely deposited onto the floor beneath you. Seemingly with a mind of its own, your pussy starts spasming and contracting, pushing the next egg out from your womb and leaving you desperately gasping for breath as it stretches out your labia and slides free from your slimy pussy to join the first on the floor beneath you.
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的小穴里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的阴唇淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的阴户里滚落，被你安置在下方的地上。你的小穴痉挛着收缩着，开始把下一颗卵从你的子宫里挤出，让你在用这个粘滑一片的小穴产下一颗卵时激烈地喘息着——它和第一颗在地上靠在一起。
 		</p>
 		<p>
-			A chorus of crass remarks and low whistles break out from the crowd at the sight of your lewd display, and before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched pussy. As the crowd senses that the show is over and begins to wander off, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			在你淫荡的表演下，人群中接连响起下流的呼喝和低沉的口哨声，不一会儿，你就倒在了那刚才阴道里排出的，还黏糊糊的[#SPECIAL_PARSE_0]枚卵旁，人群发现表演结束后，准备散开时，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your womb, your pussy instantly responds to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you #IF(pc.hasLegs())spread your [pc.legs]#ELSElower your [pc.hips] towards the ground#ENDIF and start to push.
+			你体内孕育着的卵让你释放出更多荷尔蒙，催熟着你的子宫，你的小穴随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，感到一股激烈的热潮冲刷过躯体，你#IF(pc.hasLegs())伸展着你的[pc.legs]#ELSE把[pc.hips]低向地面#ENDIF并开始用力。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of your exposed pussy. A desperate cry bursts out from between your [pc.lips] as your labia lewdly stretch apart, and before you have time to think about what's happening, the egg has escaped from your slimy cunt and has been safely deposited onto the floor beneath you. Seemingly with a mind of its own, your pussy starts spasming and contracting, pushing the next egg out from your womb and leaving you desperately gasping for breath as it stretches out your labia and slides free from your slimy pussy to join the first on the floor beneath you.
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的小穴里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的阴唇淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的阴户里滚落，被你安置在下方的地上。你的小穴痉挛着收缩着，开始把下一颗卵从你的子宫里挤出，让你在用这个粘滑一片的小穴产下一颗卵时激烈地喘息着——它和第一颗在地上靠在一起。
 		</p>
 		<p>
-			Before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched pussy. As your cunt finally stops quivering, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			你还没意识到发生了什么，便倒在了那[#SPECIAL_PARSE_0]枚卵旁，它们都是从那黏糊糊且被撑开的阴道里挤出来的。当你的阴户终于停止颤抖时，一股巨大的疲惫感突然涌上心头，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Stomach incubation: -->
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_ANUS"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thinking that it would be fun to put on a show for passing strangers, you decide to stop and lay the [#SPECIAL_PARSE_1] you've incubated in your stomach right here in public. Getting excited at the prospect of performing such an act, you quickly find a suitable spot and squat down on the ground. Quietly [pc.moaning] in delight, you expose your [pc.assCloaca] and tease your [pc.fingers] over your [pc.asshole+], which proves to be more than enough to attract a couple of curious passersby.
+			你觉得在路过的陌生人面前表演肯定很有趣，便停下脚步，准备在大庭广众之下将肚子里孵化的[#SPECIAL_PARSE_1]产下。你只是想想就兴奋得不得了，立马找到了一个合适的位置，蹲在地上。你欣喜地发出轻声的[pc.moaning]，将[pc.assCloaca]露了出来，用[pc.fingers]挑逗着[pc.asshole+]，仅仅这样就足以引起一些好奇的过路人关注了。
 		</p>
 	#ELSE
 		<p>
-			Desperate to lay the [#SPECIAL_PARSE_1] you've incubated in your stomach, you find a suitably private spot nearby, and after making sure that nobody's watching, you squat down on the ground. Unable to suppress a quiet [pc.moan], you expose your [pc.assCloaca] and tease your [pc.fingers] over your [pc.asshole+].
+			你几乎忍耐不住，马上就要将肚子中孵化的[#SPECIAL_PARSE_1]产下，连忙在附近找了个合适的隐秘场所，保证没人偷看，就蹲了下来。你还是压抑不住那轻声的[pc.moan]，将[pc.assCloaca]露了出来，用[pc.fingers]挑逗着[pc.asshole+]。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_ANUS_SINGLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your body, your asshole instantly responds to your touch by secreting a thick, slimy stream of natural, odourless lubricant. Panting and [pc.moaning] in excitement, you spread your [pc.assCloaca] and start to push, smiling to yourself as the strangers gathered around you lustfully stare at your drooling [pc.asshole].
+			由于体内的卵已经成熟，大量激素被释放到循环系统中，你的菊花刚受到触碰便做出了反应，分泌出一滩浓稠、黏滑、无味的天然润滑剂。你呼哧呼哧地喘息，兴奋地[pc.moaning]着张开了[pc.assCloaca]，面带着微笑鼓励自己用力起来，周围的陌生人都贪婪地凝视着你那滴出水来的[pc.asshole]。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way down and out of your exposed [pc.assCloaca]. A desperate cry bursts out from between your [pc.lips] as your [pc.asshole] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and has been safely deposited onto the floor beneath you.
+			几乎是瞬间，你便感到一颗浑圆的卵顺着肠道，从你暴露在大庭广众下的[pc.assCloaca]中滑出。你无法忍受，从[pc.lips]间泄出一声尖叫，[pc.asshole]淫靡地扩张着，等你缓过来后，那颗蛋早已从你湿滑的洞口中出来，安安稳稳地躺在你身下的地面上。
 		</p>
 		<p>
-			After releasing a chorus of crass remarks and low whistles, the crowd of strangers starts to depart, leaving you panting for breath as you collapse down next to the egg. Suddenly, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			人群中响起了一阵下流的呼喝和低沉的口哨声，便逐渐散开了，只留下你倒在了那颗蛋旁边。忽然，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your body, your asshole instantly responds to your touch by secreting a thick, slimy stream of natural, odourless lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you spread your [pc.assCloaca] and start to push.
+			由于体内的卵已经成熟，大量激素被释放到循环系统中，你的菊花刚受到触碰便做出了反应，分泌出一滩浓稠、黏滑、无味的天然润滑剂。你忽然激动万分，呼哧呼哧地喘息，兴奋地[pc.moaning]着张开了[pc.assCloaca]，用力起来。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way down and out of your exposed [pc.assCloaca]. A desperate cry bursts out from between your [pc.lips] as your [pc.asshole] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and has been safely deposited onto the floor beneath you. Before you can react, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you collapse down next to the egg and try to rest and recover your strength...
+			几乎是瞬间，你便感到一颗浑圆的卵顺着肠道，从你暴露在大庭广众下的[pc.assCloaca]中滑出。你无法忍受，从[pc.lips]间泄出一声尖叫，[pc.asshole]淫靡地扩张着，等你缓过来后，那颗蛋早已从你湿滑的洞口中出来，安安稳稳地躺在你身下的地面上。忽然，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_ANUS_MULTIPLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your body, your asshole instantly responds to your touch by secreting a thick, slimy stream of natural, odourless lubricant. Panting and [pc.moaning] in excitement, you spread your [pc.assCloaca] and start to push, smiling to yourself as the strangers gathered around you lustfully stare at your drooling [pc.asshole].
+			由于体内的卵已经成熟，大量激素被释放到循环系统中，你的菊花刚受到触碰便做出了反应，分泌出一滩浓稠、黏滑、无味的天然润滑剂。你呼哧呼哧地喘息，兴奋地[pc.moaning]着张开了[pc.assCloaca]，面带着微笑鼓励自己用力起来，周围的陌生人都贪婪地凝视着你那滴出水来的[pc.asshole]。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of your exposed [pc.assCloaca]. A desperate cry bursts out from between your [pc.lips] as your [pc.asshole] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and has been safely deposited onto the floor beneath you. Seemingly with a mind of its own, your [pc.asshole] starts spasming and contracting, pushing the next egg out from your [pc.assCloaca] and leaving you desperately gasping for breath as it stretches out your [pc.asshole] and slides free from your slimy hole to join the first on the floor beneath you.
+			几乎是瞬间，你便感到第一颗浑圆的卵顺着肠道，从你暴露在大庭广众下的[pc.assCloaca]中滑出。你无法忍受，从[pc.lips]间泄出一声尖叫，[pc.asshole]淫靡地扩张着，等你缓过来后，那颗蛋早已从你湿滑的洞口中出来，安安稳稳地躺在你身下的地面上。你的[pc.asshole]也像是有自己的思想一般，开始痉挛、收缩，将下一枚卵送出了你的[pc.assCloaca]，将你的[pc.asshole]撑得大开，害得你不停大口呼吸着空气。最终也从那湿润的洞穴中逃出来，跟早先地上那颗组成了一对。
 		</p>
 		<p>
-			A chorus of crass remarks and low whistles break out from the crowd at the sight of your lewd display, and before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched [pc.asshole]. As the crowd senses that the show is over and begins to wander off, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			在你淫荡的表演下，人群中接连响起下流的呼喝和低沉的口哨声，不一会儿，你就倒在了那[#SPECIAL_PARSE_0]枚卵旁，它们都是从你大张着的黏滑的[pc.asshole]中挤出来的。人群发现表演结束后，准备散开时，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your body, your asshole instantly responds to your touch by secreting a thick, slimy stream of natural, odourless lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you spread your [pc.assCloaca] and start to push.
+			由于体内的卵已经成熟，大量激素被释放到循环系统中，你的菊花刚受到触碰便做出了反应，分泌出一滩浓稠、黏滑、无味的天然润滑剂。你忽然激动万分，呼哧呼哧地喘息，兴奋地[pc.moaning]着张开了[pc.assCloaca]，用力起来。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of your exposed [pc.assCloaca]. A desperate cry bursts out from between your [pc.lips] as your [pc.asshole] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and has been safely deposited onto the floor beneath you. Seemingly with a mind of its own, your [pc.asshole] starts spasming and contracting, pushing the next egg out from your [pc.assCloaca] and leaving you desperately gasping for breath as it stretches out your [pc.asshole] and slides free from your slimy hole to join the first on the floor beneath you.
+			几乎是瞬间，你便感到第一颗浑圆的卵顺着肠道，从你暴露在大庭广众下的[pc.assCloaca]中滑出。你无法忍受，从[pc.lips]间泄出一声尖叫，[pc.asshole]淫靡地扩张着，等你缓过来后，那颗蛋早已从你湿滑的洞口中出来，安安稳稳地躺在你身下的地面上。你的[pc.asshole]也像是有自己的思想一般，开始痉挛、收缩，将下一枚卵送出了你的[pc.assCloaca]，将你的[pc.asshole]撑得大开，害得你不停大口呼吸着空气。最终也从那湿润的洞穴中逃出来，跟早先地上那颗组成了一对。
 		</p>
 		<p>
-			Before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched [pc.asshole]. Having safely laid all of your eggs, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			你还没意识到发生了什么，便倒在了那[#SPECIAL_PARSE_0]枚卵旁，它们都是从你大张着的黏滑的[pc.asshole]中挤出来的。看到每一颗蛋都安安全全地排了出来，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Breasts incubation: -->
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_NIPPLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thinking that it would be fun to put on a show for passing strangers, you decide to stop and lay the [#SPECIAL_PARSE_1] you've incubated in your [pc.breasts] right here in public. Getting excited at the prospect of performing such an act, you quickly find a suitable spot and squat down on the ground. Quietly [pc.moaning] in delight, you expose your chest and tease your [pc.fingers] over your [pc.nipples+], which proves to be more than enough to attract a couple of curious passersby.
+			你心血来潮，想在路人面前表演一下找点乐子，于是便停下脚步，打算在公众场合里把[pc.breasts]中的[#SPECIAL_PARSE_1]卵产下。<br>光是这样想想，就让你性奋地不能自已。于是你找了个合适的地方蹲下，露出用胸部，用[pc.fingers]在[pc.nipples+]上来回挑逗，让自己愉悦地小声[pc.moaning]起来——这着实引来了几个好奇的路人。
 		</p>
 	#ELSE
 		<p>
-			Desperate to lay the [#SPECIAL_PARSE_1] you've incubated in your [pc.breasts], you find a suitably private spot nearby, and after making sure that nobody's watching, you squat down on the ground. Unable to suppress a quiet [pc.moan], you expose your chest and tease your [pc.fingers] over your [pc.nipples+].
+			你迫切地想将[pc.breasts]中的[#SPECIAL_PARSE_1]产出，于是急忙在附近找了个隐蔽的地方。确定周遭没有人注意，你立马就蹲了下来，开始抑制不住小声的[pc.moan]起来。你露出[pc.breasts]用[pc.fingers]在[pc.nipples+]上来回挑逗。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_NIPPLE_SINGLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your body, your [pc.nipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] in excitement, you begin to massage your [pc.breasts], smiling to yourself as the strangers gathered around you lustfully stare at your drooling [pc.nipples].
+			你体内孕育着的那颗卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.nipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，开始摩挲你的[pc.breasts]，在周围的陌生人围聚过来色迷迷地盯着你淫液滴答的[pc.nipples]时情不自禁地微笑着。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way forwards and out of your exposed [pc.breast(true)]. A desperate cry bursts out from between your [pc.lips] as your [pc.nipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you.
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.breasts(true)]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.nipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地上。
 		</p>
 		<p>
-			After releasing a chorus of crass remarks and low whistles, the crowd of strangers starts to depart, leaving you panting for breath as you collapse down next to the egg. Suddenly, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			人群中响起了一阵下流的呼喝和低沉的口哨声，便逐渐散开了，只留下你倒在了那颗蛋旁边。忽然，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your body, your [pc.nipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you begin to massage your [pc.breasts].
+			你体内孕育着的那颗卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.nipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，感到一股热潮涌过，并开始摩挲你的[pc.breasts]。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way forwards and out of your exposed [pc.breast(true)]. A desperate cry bursts out from between your [pc.lips] as your [pc.nipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you. Before you can make another move, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you collapse down next to the egg and try to rest and recover your strength...
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.breasts(true)]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.nipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地板。在你能做出其他举动前，一股巨大的疲惫感突然涌上你的心头。在你休息并试图恢复一些体力的过程中，你费尽全身力气才没有晕过去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_NIPPLE_MULTIPLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your body, your [pc.nipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] in excitement, you begin to massage your [pc.breasts], smiling to yourself as the strangers gathered around you lustfully stare at your drooling [pc.nipples].
+			你体内孕育着的卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.nipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，开始摩挲你的[pc.breasts]，在周围的陌生人围聚过来色迷迷地盯着你淫液滴答的[pc.nipples]时情不自禁地微笑着。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of one of your exposed [pc.breasts]. A desperate cry bursts out from between your [pc.lips] as your [pc.nipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you. Seemingly with a mind of its own, your [pc.nipples] start spasming and contracting, pushing the next egg out from your other [pc.breast(true)]. A few moments later, you're left desperately gasping for breath as this next egg stretches out your [pc.nipple(true)] and slides free from your slimy hole to join the first on the floor beneath you.
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.breasts]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.nipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地上。你的[pc.nipples]似乎有它自己的想法，痉挛着收缩着，开始把下一颗卵从你的另一个[pc.breast(true)]里挤出。不过片刻，你就又从你粘滑一片的[pc.nipple(true)]里产下了下一颗卵——它和第一颗在地上靠在一起。你拼命喘着气。
 		</p>
 		<p>
-			A chorus of crass remarks and low whistles break out from the crowd at the sight of your lewd display, and before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched [pc.nipples]. As the crowd senses that the show is over and begins to wander off, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			看到你淫荡的表演，人群中爆发出一阵阵低俗的议论声和低沉的口哨声。没过多久，你就累得瘫倒在那枚[#SPECIAL_PARSE_0]蛋旁——你的[pc.nipples]被它撑大了好一圈，里面还淌着黏糊糊的液体。观众们意识到表演已经结束，于是缓缓开始散去。一股巨大的疲惫感突然涌来，你努力放松身体以恢复体力，好不容易才没让自己晕倒……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your body, your [pc.nipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you begin to massage your [pc.breasts].
+			你体内孕育着的卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.nipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，感到一股热潮涌过，并开始摩挲你的[pc.breasts]。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of one of your exposed [pc.breasts]. A desperate cry bursts out from between your [pc.lips] as your [pc.nipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you. Seemingly with a mind of its own, your [pc.nipples] start spasming and contracting, pushing the next egg out from your other [pc.breast(true)]. A few moments later, you're left desperately gasping for breath as this next egg stretches out your [pc.nipple(true)] and slides free from your slimy hole to join the first on the floor beneath you.
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.breasts]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.nipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地上。你的[pc.nipples]似乎有它自己的想法，痉挛着收缩着，开始把下一颗卵从你的另一个[pc.breast(true)]里挤出。不过片刻，你就又从你粘滑一片的[pc.nipple(true)]里产下了下一颗卵——它和第一颗在地上靠在一起。你拼命喘着气。
 		</p>
 		<p>
-			Before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched [pc.nipples]. Having safely laid all of your eggs, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			没过多久，你就累得瘫倒在那枚[#SPECIAL_PARSE_0]蛋旁——你的[pc.nipples]被它撑大了好一圈，里面还淌着黏糊糊的液体。安全产完卵后，一股巨大的疲惫感突然涌来，你努力放松身体以恢复体力，好不容易才没让自己晕倒……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Crotch-boobs incubation: -->
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_NIPPLE_CROTCH"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thinking that it would be fun to put on a show for passing strangers, you decide to stop and lay the [#SPECIAL_PARSE_1] you've incubated in your [pc.crotchBoobs] right here in public. Getting excited at the prospect of performing such an act, you quickly find a suitable spot and squat down on the ground. Quietly [pc.moaning] in delight, you expose your [pc.crotchBoobs] and tease your [pc.fingers] over your [pc.crotchNipples+], which proves to be more than enough to attract a couple of curious passersby.
+			你觉得在过路的陌生人面前表演一番或许不错，于是你决定停下来，把你[pc.crotchBoobs]里孕育着的[#SPECIAL_PARSE_1]卵就在这儿大大方方下了。想到要做这样的事，你兴奋不已，赶紧找了个合适的地方并蹲好。小声地在喜悦中[pc.moaning]着，你裸出[pc.crotchBoobs]并开始用你的[pc.fingers]在[pc.crotchNipples+]上挑逗，而这显而易见足以吸引来一些好奇的路人。
 		</p>
 	#ELSE
 		<p>
-			Desperate to lay the [#SPECIAL_PARSE_1] you've incubated in your [pc.crotchBoobs], you find a suitably private spot nearby, and after making sure that nobody's watching, you squat down on the ground. Unable to suppress a quiet [pc.moan], you expose your [pc.crotchBoobs] and tease your [pc.fingers] over your [pc.crotchNipples+].
+			你迫切地想将[pc.crotchBoobs]中的[#SPECIAL_PARSE_1]产出，于是急忙在附近找了个隐蔽的地方。确定周遭没有人注意，你立马就蹲了下来，开始抑制不住小声的[pc.moan]起来。你露出[pc.crotchBoobs]，用[pc.fingers]在[pc.crotchNipples+]上来回挑逗。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_NIPPLE_CROTCH_SINGLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your body, your [pc.crotchNipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] in excitement, you begin to massage your [pc.crotchBoobs], smiling to yourself as the strangers gathered around you lustfully stare at your drooling [pc.crotchNipples].
+			你体内孕育着的卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.crotchNipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，开始摩挲你的[pc.crotchBoobs]，在周围的陌生人色迷迷地盯着你淫液滴答的[pc.crotchNipples]时情不自禁地微笑着。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way forwards and out of your exposed [pc.crotchBoob(true)]. A desperate cry bursts out from between your [pc.lips] as your [pc.crotchNipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you.
+			就在那一瞬间，你感到那颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.crotchBoob(true)]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.crotchNipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地上。
 		</p>
 		<p>
-			After releasing a chorus of crass remarks and low whistles, the crowd of strangers starts to depart, leaving you panting for breath as you collapse down next to the egg. Suddenly, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			人群中响起了一阵下流的呼喝和低沉的口哨声，便逐渐散开了，只留下你倒在了那颗蛋旁边。忽然，一阵巨大的疲惫感突然向你袭来，你竭尽全力避免自己昏迷过去，稍作休息并恢复起体力来……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the egg that's been maturing in your body, your [pc.crotchNipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you begin to massage your [pc.crotchBoobs].
+			你体内孕育着的那颗卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.crotchNipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，感受到一股激烈的情潮冲刷过身体，你开始摩挲你的[pc.crotchBoobs]。
 		</p>
 		<p>
-			Almost immediately, you feel the huge, bulbous egg pushing its way forwards and out of your exposed [pc.crotchBoob(true)]. A desperate cry bursts out from between your [pc.lips] as your [pc.crotchNipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you. Before you can make another move, a huge wave of exhaustion washes over you, and it takes all of your effort to stop yourself from fainting as you collapse down next to the egg and try to rest and recover your strength...
+			就在那一瞬间，你感到那颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.crotchBoob(true)]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.crotchNipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地上。在你可以做出其他举动前，一股巨大的疲惫感突然涌上你的心头。在你休息并试图恢复一些体力的过程中，你费尽全身力气才没有晕过去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_NIPPLE_CROTCH_MULTIPLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your body, your [pc.crotchNipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] in excitement, you begin to massage your [pc.crotchBoobs], smiling to yourself as the strangers gathered around you lustfully stare at your drooling [pc.crotchNipples].
+			你体内孕育着的卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.crotchNipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，开始摩挲你的[pc.crotchBoobs]，在周围的陌生人围聚过来色迷迷地盯着你淫液滴答的[pc.crotchNipples]时情不自禁地微笑着。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of one of your exposed [pc.crotchBoobs]. A desperate cry bursts out from between your [pc.lips] as your [pc.crotchNipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you. Seemingly with a mind of its own, your [pc.crotchNipples] start spasming and contracting, pushing the next egg out from your other [pc.crotchBoob(true)]. A few moments later, you're left desperately gasping for breath as this next egg stretches out your [pc.crotchNipple(true)] and slides free from your slimy hole to join the first on the floor beneath you.
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.crotchBoobs]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.crotchNipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地上。你的[pc.crotchNipples]似乎有它自己的想法，痉挛着收缩着，开始把下一颗卵从你的另一个[pc.crotchBoob(true)]里挤出。不过片刻，你就又从你粘滑一片的[pc.crotchNipple(true)]里产下了下一颗卵——它和第一颗在地上靠在一起。你拼命喘着气。
 		</p>
 		<p>
-			A chorus of crass remarks and low whistles break out from the crowd at the sight of your lewd display, and before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched [pc.crotchNipples]. As the crowd senses that the show is over and begins to wander off, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			观赏着你的淫荡表演，人群中爆发出下流的议论和口哨声，不知不觉中，你倒在了[#SPECIAL_PARSE_0]卵旁——刚从你被撑开的、黏糊糊的[pc.crotchNipples]里新鲜出炉。当观众们意识到表演已经结束并开始散去时，一股巨大的疲惫感突然涌上你的心头。在你休息并试图恢复一些体力的过程中，你费尽全身力气才没有晕过去……
 		</p>
 	#ELSE
 		<p>
-			Thanks to the hormones released into your system by the eggs that have been maturing in your body, your [pc.crotchNipples] instantly respond to your touch by secreting a thick, slimy stream of natural lubricant. Panting and [pc.moaning] as a sudden wave of excitement washes over you, you begin to massage your [pc.crotchBoobs].
+			你体内孕育着的卵让你释放出更多荷尔蒙，催熟着你的肉体，你的[pc.crotchNipples]随着你的抚摸，立刻泌出一涌粘稠的天然润滑剂。你兴奋地[pc.moaning]，感受到一股激烈的情潮冲刷过身体，你开始摩挲你的[pc.crotchBoobs]。
 		</p>
 		<p>
-			Almost immediately, you feel the first huge, bulbous egg pushing its way down and out of one of your exposed [pc.crotchBoobs]. A desperate cry bursts out from between your [pc.lips] as your [pc.crotchNipple(true)] lewdly stretches out, and before you have time to think about what's happening, the egg has escaped from your slimy hole and you've safely deposited it onto the floor beneath you. Seemingly with a mind of its own, your [pc.crotchNipples] start spasming and contracting, pushing the next egg out from your other [pc.crotchBoob(true)]. A few moments later, you're left desperately gasping for breath as this next egg stretches out your [pc.crotchNipple(true)] and slides free from your slimy hole to join the first on the floor beneath you.
+			就在那一瞬间，你感到第一颗大鼓鼓、圆滚滚的卵从你赤裸的[pc.crotchBoobs]里挤出。一声迷乱的喊叫从你的[pc.lips]中逸出，而你的[pc.crotchNipple(true)]淫乱地舒展开，在你还来不及思考到底发生了什么时，那颗卵就从你黏糊糊的洞洞里滚落，被你安置在下方的地上。你的[pc.crotchNipples]似乎有它自己的想法，痉挛着收缩着，开始把下一颗卵从你的另一个[pc.crotchBoob(true)]里挤出。不过片刻，你就又从你粘滑一片的[pc.crotchNipple(true)]里产下了下一颗卵——它和第一颗在地上靠在一起。你拼命喘着气。
 		</p>
 		<p>
-			Before you know it, you're collapsing down next to the [#SPECIAL_PARSE_0] eggs you've managed to squeeze out from your slimy, stretched [pc.crotchNipples]. Having safely laid all of your eggs, a huge wave of exhaustion suddenly washes over you, and it takes all of your effort to stop yourself from fainting as you try to rest and recover your strength...
+			不知不觉中，你倒在了[#SPECIAL_PARSE_0]卵旁——刚从你被撑开的、黏糊糊的[pc.crotchNipples]里新鲜出炉。母卵平安，一股巨大的疲惫感突然涌上你的心头。在你休息并试图恢复一些体力的过程中，你费尽全身力气才没有晕过去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Spinneret incubation: -->
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_SPINNERET"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Public laying.
+			在公众场合产卵。
 		</p>
 		<p>
-			Gain access to spinneret and squat down to lay. Members of public stop to watch.
+			露出丝囊，然后蹲下来开始产卵。有路人驻足围观。
 		</p>
 	#ELSE
 		<p>
-			Private laying.
+			偷偷产卵。
 		</p>
 		<p>
-			Gain access to spinneret and squat down to lay.
+			露出丝囊，然后蹲下来开始产卵。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_SPINNERET_SINGLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Lay a single egg. Members of public comment and leave.
+			产下了一个蛋。围观群众见此纷纷议论了几句而后慢慢散去。
 		</p>
 	#ELSE
 		<p>
-			Lay a single egg.
+			产下了一个蛋。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_SPINNERET_MULTIPLE"><![CDATA[
 	#IF(game.getPlayerCell().getPlace().isPopulated())
 		<p>
-			Lay [#SPECIAL_PARSE_0] eggs. Members of public comment and leave.
+			[#SPECIAL_PARSE_0]卵顺利产出，围观群众见此纷纷议论了几句而后慢慢散去。
 		</p>
 	#ELSE
 		<p>
-			Lay [#SPECIAL_PARSE_0] eggs.
+			[#SPECIAL_PARSE_0]卵顺利产出。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INCUBATION_EGG_LAYING_FINISHED -->
 
 	<htmlContent tag="INCUBATION_EGG_LAYING_FINISHED_SINGLE"><![CDATA[
 	<p>
-		The process of laying the egg has really taken its toll on you, and you're unable to summon the energy to do anything other than try to keep your eyes open and watch as it hatches. As the shell breaks, you feel the arcane using you as a source of energy, rapidly maturing your offspring into a young adult right before your eyes. Finding yourself completely depleted of energy, you manage to take one good look at your offspring before you fall unconscious:
+		产下卵的过程让你吃尽苦头，你再无余力做任何事，只能尽力支开眼睛看着它们孵化。当它们破壳时，你感到奥术正在抽取你的能量，而你的后代在你面前快速成熟。你彻底地精疲力竭了，在失去意识之前，你最后深深看了一眼你的孩子们：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INCUBATION_EGG_LAYING_FINISHED_MULTIPLE"><![CDATA[
 	<p>
-		The process of laying the [#SPECIAL_PARSE_0] eggs has really taken its toll on you, and you're unable to summon the energy to do anything other than try to keep your eyes open and watch as they hatch. As their shells break, you feel the arcane using you as a source of energy, rapidly maturing your offspring into young adults right before your eyes. Finding yourself completely depleted of energy, you manage to take one good look at your offspring before you fall unconscious:
+		产下[#SPECIAL_PARSE_0]卵的过程让你吃尽苦头，你再无余力做任何事，只能尽力支开眼睛看着它们孵化。当它们破壳时，你感到奥术正在抽取你的能量，而你的后代在你面前快速成熟。你彻底地精疲力竭了，在失去意识之前，你最后深深看了一眼你的孩子们：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_FINISHED_END_SINGLE"><![CDATA[
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p>
-		A short time later, you awake to discover that the [#SPECIAL_PARSE_0] has departed, leaving you to laboriously stand back up and prepare to continue on your way...
+		过了不久，你醒来了。那[#SPECIAL_PARSE_0]已经离开，你只能艰难地站起来，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INCUBATION_EGG_LAYING_FINISHED_END_MULTIPLE"><![CDATA[
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p>
-		A short time later, you awake to discover that your offspring have departed, leaving you to laboriously stand back up and prepare to continue on your way...
+		过了不久，你醒来了。你的孩子们已经离开，你只能艰难地站起来，准备继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

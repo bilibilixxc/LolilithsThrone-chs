@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ear>
 	<race>innoxia_deer</race>
 	
-	<transformationName><![CDATA[deer]]></transformationName>
+	<transformationName><![CDATA[鹿]]></transformationName>
 	
 	<coveringType>innoxia_deer_fur</coveringType>
 	
 	<tags/>
 	
-	<name><![CDATA[ear]]></name>
-	<namePlural><![CDATA[ears]]></namePlural>
+	<name><![CDATA[耳朵]]></name>
+	<namePlural><![CDATA[耳朵]]></namePlural>
 	
 	<descriptorsMasculine>
-		<descriptor>furry</descriptor>
-		<descriptor>deer-like</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[鹿般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>deer-like</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[鹿般]]></descriptor>
 	</descriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		They quickly take on a distinctly deer-like shape by growing out and narrowing down into long, slightly-folded ovals.
+		它们立刻生长成明显的鹿耳形状，又收缩成略微折叠的长椭圆形。
 		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-		 A layer of [npc.earFullDescriptionColour] quickly grows to cover them,
+			一层[npc.earFullDescriptionColour]迅速长出来覆盖它们，
 		#ELSE
-		 Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],
+			就像身体其他部分一样，它们呈[npc.earFullDescription]，
 		#ENDIF
-		 and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new deer-like ears back and forth.
-		 <br/>[npc.Name] now [npc.has] [style.boldGoat(deer-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].
+		转化完成了，[npc.she]试探地前后摇摆新生的鹿耳朵。
+		<br/>[npc.Name]现在拥有[style.boldGoat(鹿耳朵)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.She] [npc.has] a pair of #IF(npc.isPiercedEar()) pierced,#ENDIF deer-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].
-	]]></bodyDescription>
+		[npc.She]有着一对鹿般的耳朵#IF(npc.isPiercedEar())，且已经打过孔#ENDIF，正长在[npc.her]头顶上，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]。
+]]></bodyDescription>
 	
 </ear>

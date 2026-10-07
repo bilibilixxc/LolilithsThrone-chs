@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1000</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[triple cuff choker necklace]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[cuff choker necklaces]]></namePlural>
-		<description><![CDATA[Three solid bands of metal, each of which with a gap at the back, allowing them to be fitted onto someone's neck. Two of the bands are smaller than the third, which sports an additional decorative orb of metal.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[三重金属颈饰]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[三重金属颈饰]]></namePlural>
+		<description><![CDATA[三条坚固的金属环，每一条都在背后有一个间隙，可以套在某人的脖子上。其中两条比第三条小，第三条上还有一个额外的金属饰球。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
     <equipSlots>
@@ -44,26 +43,20 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] securely [npc.verb(slot)] the three cuff choker necklaces around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] securely [npc.verb(slot)] the three cuff choker necklaces around [npc2.namePos] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before forcing the three cuff choker necklaces around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将三重金属颈饰牢固地扣在[npc.her]的脖子上。]]></self>
+    <other><![CDATA[
+[npc.Name]将三重金属颈饰牢固地扣在[npc2.namePos]的脖子上。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]紧紧抓住[npc2.name]，然后强行把三重金属颈饰套在[npc2.her]的脖子上。]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] three cuff choker necklaces off from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] three cuff choker necklaces off from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] three cuff choker necklaces off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的三重金属颈饰从[npc.her]的脖子上摘下。]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的三重金属颈饰从[npc2.her]的脖子上摘下。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的三重金属颈饰从[npc2.her]的脖子上扯下。]]></otherRough>
   </displacementText>
 	
 </clothing>

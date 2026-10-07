@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[wine merchants' district]]></name>
-	<tooltipDescription><![CDATA[The residents of Themiscyra had a particular fondness for wine, and as a result an entire wine merchant district sprang up to serve this demand.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the wine merchants' district in Themiscyra]]></virginityLossDescription>
+	<name><![CDATA[酒水贩卖区]]></name>
+	<tooltipDescription><![CDATA[特弥斯库拉的居民嗜酒，她们甚至养活了一整片贩卖酒水的城区。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在特弥斯库拉的酒水贩卖区里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

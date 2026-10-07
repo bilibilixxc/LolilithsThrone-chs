@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>120</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Wolf Whiskey]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Wolf Whiskies]]></namePlural>
-		<description><![CDATA[Filled with a highly alcoholic whiskey, this glass bottle has a label on the front which depicts a greater wolf-boy having sex with a trio of lesser wolf-girls. A slogan written above this reads: 'Wolf Whiskey; For a real alpha!']]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[头狼威士忌]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[头狼威士忌]]></namePlural>
+		<description><![CDATA[这个玻璃瓶装满了高度含酒精的威士忌，正面的标签上画着一只纯狼男与三只亚狼女做爱的场景。上面的标语写道：“头狼威士忌；献给真正的首领！"。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 40% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]40%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 			[#npc.incrementAlcoholLevel(0.4)]
@@ -55,10 +55,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Wolf Whiskey, before tilting [npc.her] head back and bringing it up to [npc.her] waiting [npc.lips]. A thick, musky scent rises from the opening, and with a gulp, [npc.name] [npc.verb(start)] downing the liquid, discovering that its taste is almost identical to its pungent aroma.
+		[npc.Name]拧开头狼威士忌瓶子的瓶盖，然后仰起头将它送到[npc.her]等待[npc.lips]前。一股浓郁的雄性气味从瓶口散发出来，然后[npc.name]大口喝下这液体，发现它的味道几乎与其刺鼻的香气相同。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Wolf Whiskey, before bringing it up to [npc2.namePos] waiting [npc2.lips]. A thick, musky scent rises from the opening, and with a gulp, [npc2.name] [npc2.verb(start)] downing the liquid, discovering that its taste is almost identical to its pungent aroma.
+		[npc.Name]拧开头狼威士忌瓶子的瓶盖，然后将它送到[npc2.namePos]等待[npc2.lips]前。一股浓郁的雄性气味从瓶口散发出来，然后[npc2.name]大口喝下这液体，发现它的味道几乎与其刺鼻的香气相同。
 		]]></otherUse>
 	</useDescriptions>
 

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1250</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[corset dress]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[corset dresses]]></namePlural>
-		<description><![CDATA[An overbust corset, which is tied up and tightened by a series of strings running up the front.  A long skirt is attached to the bottom rim, turning it into a dress.]]></description>
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[裹身连衣裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[裹身连衣裙]]></namePlural>
+		<description><![CDATA[一款胸部紧身胸衣，靠前面的一系列绳子固定并拉紧。一条长裙连接在下摆处，使其变成连衣裙。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot> 
@@ -68,27 +68,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] into the corset dress, before tightening the strings on the front.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(guide)] [npc2.name] into the corset dress, before tightening the strings on the front.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.name] into the corset dress, before tightening the strings on the front.]]>
-	  </otherRough>
+		<self><![CDATA[
+			[npc.Name]穿上裹身连衣裙，然后拉紧前面的绳子。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]引导[npc2.name]穿上裹身连衣裙，然后拉紧前面的绳子。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.name]塞进裹身连衣裙里，然后拉紧前面的绳子。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the corset dress's strings and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(untie)] the strings on [npc2.namePos] corset dress and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(untie)] the strings on [npc2.namePos] corset dress and [npc.verb(pull)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开裹身连衣裙的系带，然后脱了下来。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]解开[npc2.namePos]裹身连衣裙的绳结并将其脱下。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地解开[npc2.namePos]裹身连衣裙上的绳结并将其拽下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

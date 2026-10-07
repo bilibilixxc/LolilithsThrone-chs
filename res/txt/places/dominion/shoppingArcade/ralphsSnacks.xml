@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- EXTERIOR -->
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		While there are a few restaurants and other sit-down eateries scattered throughout the Shopping Arcade, there is a conspicuous lack of places which offer food to take out. The sole exception to this is the store in front of you, which, from the outside, is reminiscent of an old-fashioned sweet shop, with large glass windows displaying all manner of exotic-looking food and drink.
+		虽然购物中心里散布着几家餐馆和其他坐着吃饭的地方，但提供外卖食品的地方却明显不足。唯一的例外是你面前的这家商店，从外面看，它的风格让人联想到老式的甜品店，大玻璃橱窗里陈列着各种稀奇古怪的食品和饮料。
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
-			 The words 'Ralph's Snacks' are painted in cursive gold lettering above the entrance, while a little sign hanging in the door's window informs you that the [style.colourMinorGood(opening hours are between [unit.time(6)] and [unit.time(22)])]. As the store is currently [style.colourGood(open)], you could step inside and take a look around if you wanted to...
+			＂拉尔夫小吃店＂几个字用草书金字刷在入口上方，而挂在门窗上的一个小牌子告诉你，[style.colourMinorGood(营业时间是[unit.time(6)]到[unit.time(22)])]。现在这家店[style.colourGood(正在营业)]，你可以走进去看看，如果你对此感兴趣的话……
 		#ELSE
-			 The words 'Ralph's Snacks' are painted in cursive gold lettering above the entrance, while a little sign hanging in the door's window informs you that the [style.colourMinorBad(opening hours are between [unit.time(6)] and [unit.time(22)])]. As the store is currently [style.colourBad(closed)], you'll have to come back later if you wanted to take a look inside...
+			＂拉尔夫小吃店＂几个字用草书金字刷在入口上方，而挂在门窗上的一个小牌子告诉你，[style.colourMinorGood(营业时间是[unit.time(6)]到[unit.time(22)])]。现在这家店[style.colourGood(打烊了)]，你如果你对这里感兴趣的话，可能得等到营业时间再来……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CANDI_LIPSTICK -->
@@ -23,157 +23,157 @@
 	<htmlContent tag="CANDI_LIPSTICK"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_ralphAskedAboutHundredKisses))
 		<p>
-			Wanting to finally get your [pc.hands] on the lipstick set Candi is looking for, you ask Ralph if he still has 'A Hundred Kisses' for sale. Much to your relief, he replies, [ralph.speech(Yeah, I've still got it locked up safely behind the counter. If you want it, it's going to be the same deal as before; [#SPECIAL_PARSE_1] flames.)]
+			你想要搞到坎迪想要的口红套装，所以你问拉尔夫还有没有“百万之吻”出售。他的回答让你松了一口气，[ralph.speech(有，我还把它安全地锁在柜台后面。如果你想要它，条件和之前一样，[#SPECIAL_PARSE_1]火币。)]
 		</p>
 		<p>
-			As you think about whether it would be a good idea to spend so much money on lipstick or not, Ralph continues,
+			就在你考虑花这么多钱买口红是否合适时，拉尔夫继续说道，
 			#IF(game.getSecondsPassed()-game.getDialogueFlags().ralphSexTimer<60*60*22)
-				 [ralph.speech(I can't afford to take any more time out today, so I can't offer you any alternative to the price in flames. Maybe tomorrow I'll give you the chance to have me try and knock you up again.)]
+				[ralph.speech(我今天没时间了，没有额外的选项给你来代替付钱。也许明天我会给你一个机会，让我再试着把你肚子搞大。)]
 			#ELSEIF(pc.isPregnant())
-				 [ralph.speech(There's no other deal I can offer you, seeing as you're already pregnant.)]
+				[ralph.speech(你已经怀孕了，我没有其他交易选项可以给你了。)]
 			#ELSEIF(pc.hasIncubationLitter(ORIFICE_VAGINA))
-				 [ralph.speech(There's no other deal I can offer you, seeing as you're already stuffed full of eggs.)]
+				[ralph.speech(你已经有一肚子蛋了，我没有其他交易选项可以给你了。)]
 			#ELSEIF(!pc.hasVagina())
-				 [ralph.speech(Seeing as you haven't got a pussy, there's no other deal I can offer you.)]
+				[ralph.speech(看起来你没有小穴，我没有其他交易选项可以给你了。)]
 			#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 [ralph.speech(Seeing as I can't get access to your pussy, there's no other deal I can offer you.)]
+				[ralph.speech(看起来我没法进入你的小穴，我没有其他交易选项可以给你了。)]
 			#ELSE
-				 [ralph.speech(Of course, if you want to have a go at my alternative deal, there's always that option available to you. All you need to do is lie down on my desk and let me put a kid or two in your belly. Of course, I'll have to test after I'm done that I've got you pregnant, but if I have, I'll give you the lipsticks for free...)]
+				[ralph.speech(当然，如果你想和我做另一种交易，你也可以选择这样做。你只需要躺在我的桌子上，让我在你的肚子里造一两个孩子。当然，我在完成后必须测试，确认你怀孕了，如果成功的话，我会免费把口红给你……)]
 			#ENDIF
 		</p>
 		<p>
-			With the horse-boy waiting to hear what your decision will be, you wonder whether you should buy the lipsticks or not...
+			马男等待着你的回答，你不知道该不该买口红……
 		</p>
 	#ELSE
 		<p>
-			Knowing that this is the final hurdle before being able to get [brax.name] as your very own slave, you tell Ralph that you've heard he has the lipstick set, 'A Hundred Kisses', for sale, and that you were interested in purchasing it from him.
+			你知道这是将[brax.name]变成你的奴隶的最后一步。你告诉拉尔夫，你听说他有待售的口红套装“百万之吻”，你有兴趣从他那里购买。
 		</p>
 		<p>
-			[ralph.speech(Hah, is that so?)] Ralph laughs, leaning heavily down against the counter-top and grinning at you as he replies, [ralph.speech(I only ever told one person that I had that for sale, just one, and I've already had over ten people asking to buy it! The price turned out to be a little too steep for each of them, however, so it's still in my possession... How does fifty-thousand flames sound to you?)]
+			[ralph.speech(哈，是吗？)]拉尔夫大笑一声，重重地靠上柜台上，对你咧嘴一笑，回答道，[ralph.speech(我只告诉过一个人我在卖这个，只有一个，但已经有十多个人询问要购买它！然而，对每个人来说，价格似乎都有点高，所以它还在我手上……五万火币你觉得怎么样？)]
 		</p>
 		<p>
-			As exclusive as it might be, fifty-thousand flames for a set of lipsticks is nothing less than outrageous. Without expressing too much shock, you ask Ralph if he's willing to drop the price at all, to which he replies,
+			这套口红可能确实很特别，但五万火币的价格多少是有点离谱了。你尽量不表现的太惊讶，你问拉尔夫是否愿意降低价格，他回答说，
 			#IF(game.getDialogueFlags().ralphDiscount>0)
-				 [ralph.speech(After what you did for me before, of course! I'll give you the same [#SPECIAL_PARSE_0]-percent discount as I do on everything else in my shop. That'd make it [#SPECIAL_PARSE_1] flames, just for you!)]
+				[ralph.speech(当然愿意，毕竟你之前为我做了事情！我会给你和我商店里其他所有东西一样的百分之[#SPECIAL_PARSE_0]的折扣。这样对你来说就是[#SPECIAL_PARSE_1]火币，只给你一个人的价格！)]
 			#ELSE
-				 [ralph.speech(Sorry, but unless you're willing to do something for a special discount, then that's a no. Fifty-thousand flames is my final price.)]
+				[ralph.speech(抱歉，除非你愿意做一些事情以获得特别折扣，否则不行。五万火币就是最终价格。)]
 			#ENDIF
 		</p>
 		<p>
-			Just as you're wondering whether it would be worth paying that much for what is, ultimately, gaining [brax.name] as a slave, Ralph says,
+			就在你在思考为了让[brax.name]作为奴隶付那么多钱是否值得时，拉尔夫说道，
 			#IF(pc.isPregnant())
-				 [ralph.speech(You know, if you weren't pregnant, I could have offered you a special deal, but seeing as you've already got a bun in the oven, there's nothing else I can do for you.)]
+				[ralph.speech(你知道吗，如果你没有怀孕，我可以给你一个特别的优惠，但你已经怀孕了，那我也没办法了。)]
 			#ELSEIF(pc.hasIncubationLitter(ORIFICE_VAGINA))
-				 [ralph.speech(You know, if your womb wasn't stuffed full of eggs, I could have offered you a special deal, but seeing as you're 'unavailable', there's nothing else I can do for you.)]
+				[ralph.speech(你知道吗，如果你不是一肚子蛋的话，我可以给你一个特别的优惠，但你已经‘没空’了，那我也没办法了。)]
 			#ELSEIF(!pc.hasVagina())
-				 [ralph.speech(You know, if you had a pussy, I could have offered you a special deal, but seeing as you're lacking the necessary parts, there's nothing else I can do for you.)]
+				[ralph.speech(你知道吗，如果你有小穴的话，我可以给你一个特别的优惠，但你没有，那我也没办法了。)]
 			#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 [ralph.speech(You know, if your pussy wasn't locked up like that, I could have offered you a special deal, but seeing as you're 'unavailable', there's nothing else I can do for you.)]
+				[ralph.speech(你知道吗，如果你的小穴没被锁起来的话，我可以给你一个特别的优惠，但你已经‘没空’了，那我也没办法了。)]
 			#ELSE
-				 [ralph.speech(Of course, if you're looking for an alternative deal, there's always another option available to you... All you'd need to do is lie down on my desk here#IF(pc.hasLegs()), spread your legs,#ENDIF and let me put a kid or two in your belly. Of course, I'll have to test after I'm done that I've got you pregnant, but if I have, I'll give you the lipsticks for free...)]
+				[ralph.speech(当然，如果你想和我做另一种交易，你还有个选项……你只需要躺在我的桌子上#IF(pc.hasLegs())，打开双腿，#ENDIF然后让我在你的肚子里造一两个孩子。当然，我在完成后必须测试，确认你怀孕了，如果成功的话，我会免费把口红给你……)]
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="CANDI_LIPSTICK_PURCHASE_DECLINE"><![CDATA[
 	<p>
-		Telling Ralph that you're not going to buy the lipsticks right now, you step away from him and return to browsing the shelves...
+		你告诉拉尔夫，你现在不打算买口红，然后从他身边走开，继续浏览货架……
 	</p>
 	<p>
-		Most of the goods aren't anything special, and are just the typical sorts of food and drink that you could pick up anywhere. What sets this shop apart, however, is a special display of arcane-imbued consumables. The prices aren't listed, and instead, a little label reads 'Please ask Ralph for assistance with these items'.
+		大部分商品都没什么特别的，都是随处可买到的普通食品和饮料。不过，这家商店与众不同的是，店里特别陈列了一些充满奥术的消耗品。价格没有标明，取而代之的是一个小标签，上面写着“请向拉尔夫咨询这些物品”。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CANDI_LIPSTICK_START_BREEDING"><![CDATA[
 	<p>
-		Liking the sound of Ralph's alternative deal, you playfully bite your lip and seductively declare your willingness to let him try and impregnate you. With a hungry grin quickly settling on his horse-like face, the shopkeeper steps around from the other side of his counter, before quickly moving over to lock the front door. Drawing the blinds so that no members of the public can see in, he then moves back over to stand before you.
+		你喜欢拉尔夫的额外交易，于是俏皮地咬着嘴唇，诱惑地表示愿意让他尝试让你怀孕。店主的马脸很快露出了饥渴的笑容，他从柜台的另一侧绕过来，然后迅速走过去锁上了前门。他拉上百叶窗，不让公众看到里面，然后又走到你面前。
 	</p>
 	<p>
-		[ralph.speech(I wouldn't offer this to just anyone, you know,)] the horse-boy says, reaching out to run his hands over your [pc.hips+], before sliding them around to grab your [pc.ass+] and then dominantly pulling you in against his muscular chest. [ralph.speech(So, are you ready for me to make you a mommy?)]
+		[ralph.speech(我可不是随便向任何人提供这个的，你知道吗，)]马男说着，伸手在你[pc.hips+]上抚摸着，然后把手伸到你[pc.ass+]上，然后气势十足地将你带向他坚实的胸膛。[ralph.speech(那么，你准备好让我把你变成妈妈了吗？)]
 	</p>
 	<p>
-		As you open your mouth to say yes, the horse boy leans forwards and presses his lips against yours. Immediately thrusting his tongue into your mouth, he starts greedily groping and squeezing your [pc.ass+], before moving up to fondle your [pc.breasts+]. The two of you continue kissing one another like this for just a few moments, before Ralph suddenly pulls back and growls into your ear, [ralph.speech(Enough of the foreplay, it's time to breed you!)]
+		当你张开嘴想说是的时，马男俯身将嘴唇压在你的嘴上。立刻将舌头伸进你的嘴里，他开始贪婪地摸索和揉捏你[pc.ass+]，然后上移抚摸你[pc.breasts+]。你们两个像这样亲吻了一会儿，然后拉尔夫退开，对着你的耳朵咆哮道，[ralph.speech(前戏足够了！是时候给你配种了！)]
 	</p>
 	<p>
-		Grabbing hold of your [pc.hips+] once more, the horny horse-boy manhandles you over to the shop's counter, before
+		再次抓住你[pc.hips+]，兴奋的马男把你推到店铺的柜台上，然后
 		#IF(pc.isTaur())
-			 getting you to step up onto it with the front legs of your feral [pc.legRace]'s body, and then to lie down on its surface, thereby presenting your rear-facing genitals to him.
+			让你用你的兽性[pc.legRace]身体的前腿站在柜台上，然后趴在上面，将你的后向生殖器呈现给他。
 		#ELSE
-			 pushing you down, face-first, over the surface.
+			将你按在柜台上，脸朝下。
 		#ENDIF
-		 Looking back over your shoulder, you see Ralph quickly unzipping his trousers, before fishing out his massive, rapidly-hardening horse-cock. Seeming to then remember something important, he grabs a couple of '[#ITEM_innoxia_pills_fertility.getNamePlural(false)]' from out of a nearby drawer, before swallowing one himself and then getting you to take the other. Telling you that you're sure to get pregnant now, he moves on to quickly gain access to your [pc.pussy+], and you suddenly find yourself letting out a gasp as you feel his wide, flared head impatiently prodding forwards between your [pc.labia+].
+		你回过头，看到拉尔夫迅速拉下拉链，然后掏出他巨大的、迅速勃起的马屌。似乎随后想起了什么重要的事情，他从附近的抽屉里拿出一些“[#ITEM_innoxia_pills_fertility.getNamePlural(false)]”，然后自己吞下一颗，让你吃下另一颗。他告诉你现在一定会怀孕，然后迅速靠近你[pc.pussy+]，你发出一声呻吟，感觉到他宽阔、膨胀的龟头急不可耐地顶在你[pc.labia+]之间。
 	</p>
 	<p>
-		Somehow managing to keep his lust under control for a few moments more, Ralph teases you with the promise of penetration, [ralph.speech(You want me to make you the mother of my children, don't you? Go on, beg for my cock! Beg for me to breed you!)]
+		拉尔夫试图控制住自己的欲望，再坚持几分钟，用承诺要进入你来挑逗你，[ralph.speech(你想让我把你变成我孩子的母亲，是吗？来吧，求我的鸡巴！求我给你配种！)]
 	</p>
 	<p>
-		By this point you're getting desperate for Ralph to start fucking you, and you eagerly cry out for him to breed you. Half-way through your submissive request, he suddenly obliges, and, thrusting forwards, he rams his hot, fat horse-cock deep into your hungry pussy. Arching your back#IF(pc.hasLegs()) and spreading your [pc.legs]#ENDIF, you let out a wild [pc.moan] as you feel Ralph take hold of your [pc.hips+] and start to pump into and out of your [pc.pussy+]...
+		此时此刻，你已经急不可耐地想让拉尔夫开始操你了，你急切地请求他为你配种。在你顺从的话语说到一半时，他突然答应了，向前一挺，将他火热肥大的马屌深深地插入了你饥渴的小穴。你弓起背#IF(pc.hasLegs())打开你的[pc.legs]#ENDIF，当你感觉到拉尔夫握住你[pc.hips+]，开始狠狠地撞击你[pc.pussy+]，你发出了饥渴的[pc.moan]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CANDI_LIPSTICK_PURCHASE -->
 
 	<htmlContent tag="CANDI_LIPSTICK_PURCHASE"><![CDATA[
 	<p>
-		Deciding that [#SPECIAL_PARSE_1] flames is an acceptable price to pay in order to gain [brax.name] as your slave, you tell Ralph that you'd like to buy the lipstick set, 'A Hundred Kisses'. As he hears this, the horse-boy's face lights up, and with a voice full of surprised delight, he asks, [ralph.speech(Would you like it delivered to a particular address, or do you want to take it with you?)]
+		你觉得[#SPECIAL_PARSE_1]火币是一个很合适的价格来换取[brax.name]作为你的奴隶，你告诉拉尔夫，你想购买口红套装“百万之吻”。当他听到这个消息，这位马男的脸上露出了开心的表情，充满惊喜的问道，[ralph.speech(你想把它送到特定的地址，还是自己带走？)]
 	</p>
 	<p>
-		Thinking that it would be faster to take it back to Candi yourself, you decline the offer of having it delivered. Retrieving it from a locked cupboard nearby, Ralph places 'A Hundred Kisses' down on the counter before you. Although the box appears to be simple enough in design, it is flawless in construction, and is made from a combination of dark leather and rich mahogany. Opening the hinged lid, Ralph shows you that all one hundred of the individual lipsticks are contained within, and, happy with the product, you hand over the [#SPECIAL_PARSE_1] flames in exchange for it.
+		你觉得自己把它带给坎迪会更快，拒绝了其送货的提议。拉尔夫从附近的锁柜中取出它。口红套装的盒子看起来很简单，但它的制作却很完美，由深色皮革和大量的桃花心木构成。打开带铰链的盖子，拉尔夫向你展示里面的一百支口红，你对产品感到满意，将[#SPECIAL_PARSE_1]火币付了出去。
 	</p>
 	<p>
-		Thanking you for your custom, Ralph then asks if there's anything else he can help you with today...
+		拉尔夫感谢你的惠顾，然后问你今天还有什么需要帮忙的吗……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_BREEDING -->
 	
 	<htmlContent tag="AFTER_BREEDING"><![CDATA[
 	<p>
-		Having pumped his seed directly into your womb, and therefore having gotten what he wanted, Ralph steps back, letting out a satisfied growl as he looks down at your creampied-pussy. As you push yourself up off the counter and back onto your [pc.feet], the horse-boy grabs a nearby arcane pregnancy tester, before stepping forwards and saying, [ralph.speech(Let's find out if you're a mommy! Remember, you only get the lipsticks if I've knocked you up...)]
+		拉尔夫将他的种子全部灌入你的子宫，他已经得到了他想要的东西，退后一步，低头看着你那满是奶油的小穴，发出了一声满足的咆哮。当你用你[pc.feet]从桌子上起身时，马男抓起边上的一个奥术验孕棒，然后走到你面前说，[ralph.speech(让我们看看你有没有成为母亲吧！记住，只有你被我搞怀孕了，你才能得到口红……)]
 	</p>
 	[#SPECIAL_PARSE_0]
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_BREEDING_SUCCESS"><![CDATA[
 	<p>
-		With the pregnancy test showing a positive result, Ralph reaches forwards to run his hand over your stomach, smiling in delight as he exclaims, [ralph.speech(You're going to make an excellent mother! I knew my virile seed would have no trouble in getting you knocked up!)]
+		怀孕检测显示阳性结果，拉尔夫伸手轻抚你的肚子，欣喜地笑着喊道，[ralph.speech(你会成为一位出色的母亲！我就知道我的精子一定可以让你怀上！)]
 	</p>
 	<p>
-		Letting Ralph have his fun for a moment, you soon remind him of his end of the bargain, and that he now owes you the lipstick set, 'A Hundred Kisses'. Obviously valuing his success at having bred you far more than the monetary value of the lipstick set, the impregnation-obsessed horse-boy doesn't seem at all upset to be handing over the valuable item to you for free, and happily retrieves it from a locked cupboard nearby. Although the box appears to be simple enough in design, it is flawless in construction, and is made from a combination of dark leather and rich mahogany. Opening the hinged lid, Ralph shows you that all one hundred of the individual lipsticks are contained within, and, happy with the product, you take it and prepare to continue on your way.
+		你先让拉尔夫开心了一会儿，但很快就提醒他，他现在欠着你口红套装“百万之吻”。显然，他更看重自己成功让你怀孕，而不是口红套装的金钱价值，这位痴迷于怀孕的马男似乎完全不介意免费将这个有价值的物品交给你，并高兴地从附近的锁柜中取出它。口红套装的盒子看起来很简单，但它的制作却很完美，由深色皮革和大量的桃花心木构成。打开带铰链的盖子，拉尔夫向你展示里面的一百支口红，你对产品感到满意，拿起它准备继续前行。
 	</p>
 	<p>
-		Remarking one last time about how your womb has been claimed by his strong seed, Ralph moves across the store to unlock the front door, before returning to his counter and asking if there's anything else he can help you with today...
+		拉尔夫又一次提到你的子宫已经被他强壮的种子灌满，他走到前门打开锁，然后回到柜台，问你今天是否还有其他需要帮助的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_BREEDING_FAILURE"><![CDATA[
 	<p>
-		With the pregnancy test showing a negative result, Ralph lets out a sigh and exclaims, [ralph.speech(I can't believe I didn't get you pregnant from that! Well, there's always tomorrow, if you want to come back and try again then...)]
+		怀孕检测显示阴性结果，拉尔夫叹了口气，喊道，[ralph.speech(我不敢相信我没有让你怀孕！不过，如果你明天再回来试试，总是有机会的……)]
 	</p>
 	<p>
-		Having failed to impregnate you, Ralph moves across the store to unlock the front door, before returning to his counter and asking if there's anything else he can help you with today...
+		没有让你成功怀孕，拉尔夫走到前门打开锁，然后回到柜台，问你今天是否还有其他需要帮助的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="AFTER_BREEDING_INTERIOR"><![CDATA[
 	<p>
-		Stepping away from Ralph, you return to browsing the shelves of his shop...
+		从拉尔夫身边走过，你又回到商店的货架前……
 	</p>
 	<p>
-		Most of the goods aren't anything special, and are just the typical sorts of food and drink that you could pick up anywhere. What sets this shop apart, however, is a special display of arcane-imbued consumables. The prices aren't listed, and instead, a little label reads 'Please ask Ralph for assistance with these items'.
+		大部分商品都没什么特别的，都是随处可买到的普通食品和饮料。不过，这家商店与众不同的是，店里特别陈列了一些充满奥术的消耗品。价格没有标明，取而代之的是一个小标签，上面写着“请向拉尔夫咨询这些物品”。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	

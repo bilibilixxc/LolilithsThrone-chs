@@ -30,14 +30,14 @@ public class FaceType {
 			null,
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"nose",
-			"noses",
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"Thankfully#IF(!npc.isPlayer())for [npc.herHim]#ENDIF, the transformation only lasts a matter of moments, leaving [npc.herHim] with a normal human face, [npc.materialDescriptor] [npc.faceSkin+].<br/>"
-				+ "[npc.Name] now [npc.has] a [style.boldHuman(human face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldHuman(human tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], human face, [npc.materialDescriptor] [npc.faceFullDescription(true)].",
+			"万幸的是，转化只持续了很短的时间，[npc.herHim]变成了普通的人类面容，[npc.materialDescriptor][npc.faceSkin+]。<br/>"
+				+ "[npc.Name]现在拥有[style.boldHuman(人类的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldHuman(人类舌头)]。",
+			"[npc.SheHasFull]长着一副[npc.a_feminineDescriptor(true)]的人类面孔，[npc.materialDescriptor][npc.faceFullDescription(true)]。",
 			Util.newArrayListOfValues()){
 	};
 
@@ -46,16 +46,16 @@ public class FaceType {
 			MouthType.ANGEL,
 			null,
 			null,
-			Util.newArrayListOfValues("perfect", "flawless", "angelic"),
-			Util.newArrayListOfValues("perfect", "flawless", "angelic"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("完美", "无暇", "天使般"),
+			Util.newArrayListOfValues("完美", "无暇", "天使般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"Thankfully#IF(!npc.isPlayer())for [npc.herHim]#ENDIF, the transformation only lasts a matter of moments, leaving [npc.herHim] with an angelic, human-looking face, [npc.materialDescriptor] [npc.faceSkin+].<br/>"
-					+ "[npc.Name] now [npc.has] an [style.boldAngel(angelic face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-					+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] an [style.boldAngel(angelic tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], angelic face, [npc.materialDescriptor] [npc.faceFullDescription(true)].",
+			"万幸的是，转化只持续了很短的时间，[npc.herHim]变成了与人类相似的天使面容，[npc.materialDescriptor][npc.faceSkin+]。<br/>"
+					+ "[npc.Name]现在拥有[style.boldAngel(天使的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+					+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldAngel(天使舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的天使面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]。",
 			Util.newArrayListOfValues()){
 	};
 
@@ -64,22 +64,22 @@ public class FaceType {
 			MouthType.DEMON_COMMON,
 			null,
 			null,
-			Util.newArrayListOfValues("perfect", "flawless", "demonic"),
-			Util.newArrayListOfValues("perfect", "flawless", "demonic"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("完美", "无暇", "恶魔般"),
+			Util.newArrayListOfValues("完美", "无暇", "恶魔般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
 			"#IF(npc.isShortStature())"
-				+ "Thankfully#IF(!npc.isPlayer())for [npc.herHim]#ENDIF, the transformation only lasts a matter of moments, leaving [npc.herHim] with an impish, human-looking face, [npc.materialDescriptor] [npc.faceSkin+].<br/>"
-				+ "[npc.Name] now [npc.has] a [style.boldImp(impish face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldImp(impish tongue)]."
+				+ "万幸的是，转化只持续了很短的时间，[npc.herHim]变成了与人类相似的小恶魔面容，[npc.materialDescriptor][npc.faceSkin+]。<br/>"
+				+ "[npc.Name]现在拥有[style.boldImp(小恶魔的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldImp(小恶魔舌头)]。"
 			+ "#ELSE"
-				+ "Thankfully#IF(!npc.isPlayer())for [npc.herHim]#ENDIF, the transformation only lasts a matter of moments, leaving [npc.herHim] with a demonic, human-looking face, [npc.materialDescriptor] [npc.faceSkin+].<br/>"
-				+ "[npc.Name] now [npc.has] a [style.boldDemon(demonic face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldDemon(demonic tongue)]."
+				+ "万幸的是，转化只持续了很短的时间，[npc.herHim]变成了与人类相似的恶魔面容，[npc.materialDescriptor][npc.faceSkin+]。<br/>"
+				+ "[npc.Name]现在拥有[style.boldDemon(恶魔的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldDemon(恶魔舌头)]。"
 			+ "#ENDIF",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], #IF(npc.isShortStature())impish#ELSEdemonic#ENDIF face, [npc.materialDescriptor] [npc.faceFullDescription(true)].",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的#IF(npc.isShortStature())小恶魔#ELSE恶魔#ENDIF面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]。",
 			Util.newArrayListOfValues()){
 	};
 
@@ -88,23 +88,23 @@ public class FaceType {
 			MouthType.ALLIGATOR_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic alligator-like", "alligator-like", "reptile"),
-			Util.newArrayListOfValues("anthropomorphic alligator-like", "alligator-like", "reptile"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("鳄鱼般拟人", "鳄鱼般", "爬行动物般"),
+			Util.newArrayListOfValues("鳄鱼般拟人", "鳄鱼般", "爬行动物般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic reptilian muzzle, and [npc.her] tongue transforms into a strong, alligator-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的爬行动物的吻部，舌头也变得十分有力，与鳄鱼类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldAlligatorMorph(alligator-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldAlligatorMorph(strong, alligator-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, alligator-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a long, flat muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a long, flat muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldAlligatorMorph(鳄鱼般的拟人面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldAlligatorMorph(有力的鳄鱼舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的鳄鱼面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有长而平的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有长而平的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_FANGS,
@@ -117,23 +117,23 @@ public class FaceType {
 			MouthType.BAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic bat-like", "bat-like"),
-			Util.newArrayListOfValues("anthropomorphic bat-like", "bat-like"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("蝙蝠般拟人", "蝙蝠般"),
+			Util.newArrayListOfValues("蝙蝠般拟人", "蝙蝠般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic bat-like muzzle, and [npc.her] tongue transforms into a thin, bat-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的蝙蝠吻部，舌头也变得比较细窄，与蝙蝠类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldBatMorph(bat-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldBatMorph(thin, bat-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, bat-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a short muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a short muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldBatMorph(蝙蝠般的拟人面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldBatMorph(细窄的蝙蝠舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的蝙蝠面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有短小的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有短小的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_FANGS,
@@ -146,23 +146,23 @@ public class FaceType {
 			MouthType.CAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic cat-like", "cat-like", "feline"),
-			Util.newArrayListOfValues("anthropomorphic cat-like", "cat-like", "feline"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("猫一般拟人", "猫一般", "猫类"),
+			Util.newArrayListOfValues("猫一般拟人", "猫一般", "猫类"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic feline muzzle, and [npc.her] tongue flattens and transforms into a cat-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的猫类吻部，舌头也变得平直，与猫类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldCatMorph(cat-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldCatMorph(flat, cat-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, cat-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a cute little feline muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a cute little feline muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldCatMorph(猫一般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldCatMorph(平直的猫类舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的猫的面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有小而可爱的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有小而可爱的猫科吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_FANGS,
@@ -204,23 +204,23 @@ public class FaceType {
 			MouthType.COW_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic cow-like", "cow-like", "bovine"),
-			Util.newArrayListOfValues("anthropomorphic cow-like", "cow-like", "bovine"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("牛一般拟人", "牛一般", "牛类"),
+			Util.newArrayListOfValues("牛一般拟人", "牛一般", "牛类"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic bovine-like muzzle, and [npc.her] tongue transforms into a strong, cow-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的爬行动物的牛类吻部，舌头也变得十分有力，与牛类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldCowMorph(cow-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldCowMorph(strong, cow-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, cow-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a bovine muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a bovine muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldCowMorph(牛一般的拟人面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldCowMorph(有力的牛舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的牛一般的面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有牛类的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有牛类的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_NATURAL_BALDNESS_FURRY
@@ -232,23 +232,23 @@ public class FaceType {
 			MouthType.DOG_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic dog-like", "dog-like", "canine"),
-			Util.newArrayListOfValues("anthropomorphic dog-like", "dog-like", "canine"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("犬一般拟人", "犬一般", "犬类"),
+			Util.newArrayListOfValues("犬一般拟人", "犬一般", "犬类"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic canine muzzle, and [npc.her] tongue flattens and grows wider, turning into a dog-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的犬类吻部，舌头也变又平又宽，与狗类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldDogMorph(dog-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldDogMorph(flat, dog-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, dog-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a canine muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a canine muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldDogMorph(犬一般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldDogMorph(平直的犬类舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的犬一般的面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有犬类的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有犬类的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_FANGS,
@@ -261,23 +261,23 @@ public class FaceType {
 			MouthType.FOX_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic fox-like", "fox-like"),
-			Util.newArrayListOfValues("anthropomorphic fox-like", "fox-like"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("狐狸般拟人", "狐狸般"),
+			Util.newArrayListOfValues("狐狸般拟人", "狐狸般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic vulpine muzzle, and [npc.her] tongue flattens and transforms into a fox-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的狐类吻部，舌头也变得平直，与狐狸类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldFoxMorph(fox-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldFoxMorph(flat, fox-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, fox-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a slender, vulpine muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a slender, vulpine muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldFoxMorph(狐狸般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldFoxMorph(平直的狐狸舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的狐狸般的面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有细长的狐类吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有细长的狐类吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_FANGS,
@@ -290,25 +290,25 @@ public class FaceType {
 			MouthType.HARPY,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic bird-like", "bird-like"),
-			Util.newArrayListOfValues("anthropomorphic bird-like", "bird-like"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("鸟一般拟人", "鸟一般"),
+			Util.newArrayListOfValues("鸟一般拟人", "鸟一般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they fuse together and push out into a short beak, and [npc.her] tongue thins down, turning into a bird-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便融合在一起，变成了个粗短的鸟喙，舌头也变得很细，与鸟类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face,"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部，"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+],"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]，"
 				+ "#ENDIF"
-					+ " and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath."
-				+ " [npc.She] [npc.verb(find)], much to [npc.her] relief, that [npc.sheIs] able to harden or soften the edges of [npc.her] beak at will,"
-					+ " allowing [npc.herHim] to portray facial emotions as well as to wrap [npc.her] beak's edges around anything [npc.she] might want to put in [npc.her] mouth.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldHarpy(bird-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldHarpy(thin, bird-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, bird-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a beak.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a beak.",
+					+ "转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。"
+				+ "[npc.She]发现自己可以随意地软化硬化喙部边缘，这才松了口气，"
+					+ "这使得[npc.her]可以通过弯曲喙的边缘，模仿各种嘴巴能够摆出的样子，来展现面部动作。<br/>"
+				+ "[npc.Name]现在拥有[style.boldHarpy(鸟一般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldHarpy(细窄的鸟类舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的鸟一般的面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有一只喙。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有一只喙。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_BEAK,
 					BodyPartTag.FACE_NATURAL_BALDNESS_AVIAN
@@ -320,23 +320,23 @@ public class FaceType {
 			MouthType.HORSE_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic horse-like", "horse-like", "equine"),
-			Util.newArrayListOfValues("anthropomorphic horse-like", "horse-like", "equine"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("马一般拟人", "马一般", "马类"),
+			Util.newArrayListOfValues("马一般拟人", "马一般", "马类"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic equine muzzle, and [npc.her] tongue transforms into a strong, horse-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的马类吻部，舌头也变得十分有力，与马类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldHorseMorph(horse-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldHorseMorph(strong, horse-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, horse-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a long, equine muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a long, equine muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldHorseMorph(马一般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldHorseMorph(有力的马类舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的马一般的面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有长长的马类吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有长长的马类吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_NATURAL_BALDNESS_FURRY // Note: Some horse races only have hair on the neck aka a mane so its not totally unnatural to have a bald face
@@ -348,23 +348,23 @@ public class FaceType {
 			MouthType.RABBIT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic rabbit-like", "rabbit-like"),
-			Util.newArrayListOfValues("anthropomorphic rabbit-like", "rabbit-like"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("兔子般拟人", "兔子般"),
+			Util.newArrayListOfValues("兔子般拟人", "兔子般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic rabbit-like muzzle, and [npc.her] tongue transforms into a thin, rabbit-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的兔子吻部，舌头也变得比较细窄，与兔子类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldRabbitMorph(rabbit-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldRabbitMorph(thin, rabbit-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, rabbit-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a short muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a short muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldRabbitMorph(兔子般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldRabbitMorph(细窄的兔子舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的兔子面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有短小的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有短小的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_NATURAL_BALDNESS_FURRY
@@ -376,23 +376,23 @@ public class FaceType {
 			MouthType.RAT_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic rat-like", "rat-like", "rodent"),
-			Util.newArrayListOfValues("anthropomorphic rat-like", "rat-like", "rodent"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("老鼠般拟人", "老鼠般", "啮齿类"),
+			Util.newArrayListOfValues("老鼠般拟人", "老鼠般", "啮齿类"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic rat-like muzzle, and [npc.her] tongue transforms into a thin, rat-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的老鼠吻部，舌头也变得比较细窄，与老鼠类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldRatMorph(rat-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldRatMorph(thin, rat-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, rat-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a long, rodent muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a long, rodent muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldRatMorph(老鼠般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldRatMorph(细窄的老鼠舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的老鼠面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有长长的啮齿类吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有长长的啮齿类吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_NATURAL_BALDNESS_FURRY
@@ -404,23 +404,23 @@ public class FaceType {
 			MouthType.REINDEER_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic reindeer-like", "reindeer-like", "reindeer"),
-			Util.newArrayListOfValues("anthropomorphic reindeer-like", "reindeer-like", "reindeer"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("驯鹿般拟人", "驯鹿般", "驯鹿"),
+			Util.newArrayListOfValues("驯鹿般拟人", "驯鹿般", "驯鹿"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic reindeer muzzle, and [npc.her] tongue transforms into a strong, reindeer-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的驯鹿吻部，舌头也变得十分有力，与驯鹿类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldReindeerMorph(horse-reindeer face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldReindeerMorph(strong, reindeer-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, reindeer-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a long muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a long muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldReindeerMorph(驯鹿般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldReindeerMorph(有力的驯鹿舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的驯鹿面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有长长的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有长长的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_NATURAL_BALDNESS_FURRY
@@ -432,23 +432,23 @@ public class FaceType {
 			MouthType.SQUIRREL_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic squirrel-like", "squirrel-like", "rodent"),
-			Util.newArrayListOfValues("anthropomorphic squirrel-like", "squirrel-like", "rodent"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("松鼠般拟人", "松鼠般", "啮齿类"),
+			Util.newArrayListOfValues("松鼠般拟人", "松鼠般", "啮齿类"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic squirrel-like muzzle, and [npc.her] tongue transforms into a thin, squirrel-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的松鼠吻部，舌头也变得比较细窄，与松鼠类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldSquirrelMorph(squirrel-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldSquirrelMorph(thin, squirrel-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, squirrel-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a short muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a short muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldSquirrelMorph(松鼠般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldSquirrelMorph(细窄的松鼠舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的松鼠面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有短小的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有短小的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_NATURAL_BALDNESS_FURRY
@@ -460,23 +460,23 @@ public class FaceType {
 			MouthType.WOLF_MORPH,
 			null,
 			null,
-			Util.newArrayListOfValues("anthropomorphic wolf-like", "wolf-like"),
-			Util.newArrayListOfValues("anthropomorphic wolf-like", "wolf-like"),
-			"nose",
-			"noses",
+			Util.newArrayListOfValues("狼一般拟人", "狼一般"),
+			Util.newArrayListOfValues("狼一般拟人", "狼一般"),
+			"鼻子",
+			"鼻子",
 			Util.newArrayListOfValues(""),
 			Util.newArrayListOfValues(""),
-			"[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic lupine muzzle, and [npc.her] tongue flattens and grows wider, turning into a wolf-like one."
+			"[npc.Her]的鼻子和嘴巴微微抽搐，随后便转化为似人的狼类吻部，舌头也变又平又宽，与狼类似。"
 				+ "#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)"
-					+ " A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face"
+					+ "一层[npc.faceSkin+]迅速覆盖了[npc.her]的面部"
 				+ "#ELSE"
-					+ " Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+]"
+					+ "与身体的其余部分一样，[npc.her]的面部[npc.materialDescriptor][npc.faceSkin+]"
 				+ "#ENDIF"
-					+ ", and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.<br/>"
-				+ "[npc.Name] now [npc.has] an anthropomorphic [style.boldWolfMorph(wolf-like face)], [npc.materialDescriptor] [npc.faceFullDescription]."
-				+ " Within [npc.her] [npc.mouth], [npc.sheHasFull] a [style.boldWolfMorph(flat, wolf-like tongue)].",
-			"[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, wolf-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a long muzzle.",
-			"[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a long muzzle.",
+					+ "，转化终于步入尾声，[npc.sheIs]气喘吁吁地攫取着氧气。<br/>"
+				+ "[npc.Name]现在拥有[style.boldWolfMorph(狼一般拟人的面容)]，[npc.materialDescriptor][npc.faceFullDescription]。"
+				+ "在[npc.her]的[npc.mouth]里，有着一根[style.boldWolfMorph(平直的狼类舌头)]。",
+			"[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的狼类面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有长长的吻部。",
+			"[npc.SheHasFull]拥有[npc.feminineDescriptor(true)]的兽态[npc.legRace]面庞，[npc.materialDescriptor][npc.faceFullDescription(true)]，且有长长的吻部。",
 			Util.newArrayListOfValues(
 					BodyPartTag.FACE_MUZZLE,
 					BodyPartTag.FACE_FANGS,

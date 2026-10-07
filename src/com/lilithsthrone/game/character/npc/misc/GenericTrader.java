@@ -40,7 +40,7 @@ public class GenericTrader extends NPC {
 	}
 	
 	public GenericTrader(boolean isImported) {
-		super(isImported, new NameTriplet("Someone"), null, "A trader.",
+		super(isImported, new NameTriplet("某人"), null, "一个商人。",
 				25, Month.JUNE, 15,
 				1, Gender.N_P_V_HERMAPHRODITE, Subspecies.HUMAN, RaceStage.HUMAN,
 				new CharacterInventory(false, 0), WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL, false);

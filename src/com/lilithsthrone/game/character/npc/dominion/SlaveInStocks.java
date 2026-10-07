@@ -93,7 +93,7 @@ public class SlaveInStocks extends NPC {
 			setName(Name.getRandomTriplet(this.getSubspecies()));
 			this.setPlayerKnowsName(false);
 			setDescription(UtilText.parse(this,
-					"[npc.Name] is a slave, who, for one reason or another, has been locked into the stocks for public use."));
+					"[npc.Name]是一名奴隶，出于某种原因被锁在公共刑具中供人使用。"));
 			
 			// PERSONALITY & BACKGROUND:
 
@@ -171,7 +171,7 @@ public class SlaveInStocks extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return (UtilText.parse(this, "[npc.Name] is a slave, who, for one reason or another, has been locked into the stocks for public use."));
+		return (UtilText.parse(this, "[npc.Name]是一名奴隶，出于某种原因被锁在公共刑具中供人使用。"));
 	}
 
 	@Override

@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 		
-		<authorTag><![CDATA[On the inside of the hat's crown, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在帽冠内侧，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>850</value> 
 
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一顶]]></determiner>
 
-		<name><![CDATA[cap]]></name>
+		<name><![CDATA[警帽]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's caps]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者警帽]]></namePlural> 
 
-		<description><![CDATA[A cap with a flat circular top and a short polished visor. It is standard issue headgear for Enforcers on patrol duty.]]></description> 
+		<description><![CDATA[有着圆形平顶和短圆遮阳帽檐的帽子。执法者们进行日常巡逻的标准头部装备。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -35,8 +34,8 @@
 			<category id="badge" priority="1"> 
 				<categoryName><![CDATA[Cap Badge]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[None]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix>
+					<stickerName><![CDATA[无]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
 					<imageName/>
@@ -46,10 +45,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="badge_dominion" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_LUST"> 
-					<stickerName><![CDATA[Dominion]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Dominion Patrol Enforcer ]]></namePrefix> 
+					<stickerName><![CDATA[御城区]]></stickerName>
+					<namePrefix priority="1"><![CDATA[御城区巡逻执法者]]></namePrefix> 
 					<namePostfix/> 
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Dominion Frontline Patrol attached to it.</i>]]></descriptionModification> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这上面有御城区前线巡逻队的徽章。</i>]]></descriptionModification> 
 					<imageName>pcap_st_badge_dominion.svg</imageName> 
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -67,10 +66,10 @@
 					</availabilityText> 
 				</sticker>
 				<sticker id="badge_elis" priority="2" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_PHYSICAL"> 
-					<stickerName><![CDATA[Elis]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Elis Enforcer ]]></namePrefix>
+					<stickerName><![CDATA[伊利斯]]></stickerName>
+					<namePrefix priority="1"><![CDATA[伊利斯执法者]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Elis Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这上面有伊利斯前线巡逻队的徽章。</i>]]></descriptionModification>
 					<imageName>pcap_st_badge_elis.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -88,10 +87,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="badge_thinis" priority="3" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_FIRE">
-					<stickerName><![CDATA[Thinis]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Thinis Enforcer ]]></namePrefix>
+					<stickerName><![CDATA[提尼斯]]></stickerName>
+					<namePrefix priority="1"><![CDATA[提尼斯]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Thinis Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这上面有提尼斯前线巡逻队的徽章。</i>]]></descriptionModification>
 					<imageName>pcap_st_badge_thinis.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -109,10 +108,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="badge_itzaaak" priority="4" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_POISON">
-					<stickerName><![CDATA[Itza'aak]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Itza'aak Enforcer ]]></namePrefix>
+					<stickerName><![CDATA[伊察阿克]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Itza'aak Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这上面有伊察阿克前线巡逻队的徽章。</i>]]></descriptionModification>
 					<imageName>pcap_st_badge_itzaaak.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -130,10 +129,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="badge_lyonesse" priority="5" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_COLD">
-					<stickerName><![CDATA[Lyonesse]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Lyonesse Enforcer ]]></namePrefix>
+					<stickerName><![CDATA[莱昂内斯]]></stickerName>
+					<namePrefix priority="1"><![CDATA[莱昂内斯]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Lyonesse Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这上面有莱昂内斯前线巡逻队的徽章。</i>]]></descriptionModification>
 					<imageName>pcap_st_badge_lyonesse.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -151,10 +150,10 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="badge_cm" priority="6" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_PURPLE">
-					<stickerName><![CDATA[Commissioner]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer Commissioner ]]></namePrefix>
+					<stickerName><![CDATA[专员]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者]]></namePrefix>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Commissioner's Office attached to it.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这上面有专员办公室的徽章。</i>]]></descriptionModification>
 					<imageName>pcap_st_badge_cm.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -185,10 +184,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="oakleaves_dm" priority="1" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_PURPLE">
-					<stickerName><![CDATA[Deputy Commissioner]]></stickerName>
+					<stickerName><![CDATA[副专员]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the single row of oak leaves of a Deputy Commissioner.</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>这上面有一排副专员的橡树叶</i>]]></descriptionModification>
 					<imageName>pcap_st_oakleaves_dm.svg</imageName>
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -206,7 +205,7 @@
 					</availabilityText>
 				</sticker>
 				<sticker id="oakleaves_cm" priority="2" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_PURPLE">
-					<stickerName><![CDATA[Commissioner]]></stickerName>
+					<stickerName><![CDATA[专员]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -269,27 +268,26 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] the peaked cap on.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(put)] the peaked cap on [npc2.namePos] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] the peaked cap down on [npc2.namePos] head.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]将大檐帽扣在头上。]]></self>
+		<other><![CDATA[
+		[npc.Name]将大檐帽扣在[npc2.namePos]头上。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]强行将大檐帽扣在[npc2.namePos]头上。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(take)] [npc.her] peaked cap off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] peaked cap off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(slap)] [npc2.namePos] peaked cap off.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]将大檐帽摘下。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]将大檐帽从[npc2.namePos]头上摘下。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]将大檐帽从[npc2.namePos]头上拍掉。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

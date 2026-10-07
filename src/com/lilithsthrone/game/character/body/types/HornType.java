@@ -29,12 +29,12 @@ public class HornType {
 			BodyCoveringType.HORN,
 			Race.NONE,
 			2,
-			"none",
-			"horn",
-			"horns",
+			"无",
+			"角",
+			"角",
 			new ArrayList<>(),
 			new ArrayList<>(),
-			"<br/>[npc.Name] now [npc.has] [style.boldTfGeneric(no horns)].",
+			"<br/>[npc.Name]现在[style.boldTfGeneric(没有角)]。",
 			"") {
 	};
 
@@ -74,14 +74,14 @@ public class HornType {
 			BodyCoveringType.ANTLER,
 			Race.REINDEER_MORPH,
 			2,
-			"multi-branched",
-			"antler",
-			"antlers",
-			Util.newArrayListOfValues("multi-branched", "reindeer"),
-			Util.newArrayListOfValues("multi-branched", "reindeer"),
-			"branching, multi-pronged #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(reindeer-like #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], multi-branched #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"分杈",
+			"鹿角",
+			"鹿角",
+			Util.newArrayListOfValues("分杈", "驯鹿"),
+			Util.newArrayListOfValues("分杈", "驯鹿"),
+			"多分杈的[npc.horn]。"
+					+ "<br/>[npc.Name]现在拥有[npc.hornsDeterminer][style.boldTfGeneric(驯鹿般的#IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，多分杈且[npc.hornSize]的[npc.horn]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 	};
 	
 	// Horse:
@@ -90,14 +90,14 @@ public class HornType {
 			BodyCoveringType.HORN,
 			Race.HORSE_MORPH,
 			1,
-			"unicorn",
-			"horn",
-			"horns",
-			Util.newArrayListOfValues("straight", "twirling", "unicorn"),
-			Util.newArrayListOfValues("straight", "twirling", "unicorn"),
-			"straight, twirling unicorn's #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(unicorn #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], unicorn's #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"独角",
+			"角",
+			"角",
+			Util.newArrayListOfValues("竖直", "螺旋", "独"),
+			Util.newArrayListOfValues("竖直", "螺旋", "独"),
+			"竖直向上，带螺旋纹的独[npc.horn]。"
+					+ "<br/>[npc.Name]现在拥有[npc.hornsDeterminer][style.boldTfGeneric(独[npc.horn])]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，[npc.hornSize]的独[npc.horns]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 	};
 
 	// Generic:
@@ -106,14 +106,14 @@ public class HornType {
 			BodyCoveringType.ANTLER,
 			Race.NONE,
 			2,
-			"pronged",
-			"antler",
-			"antlers",
-			Util.newArrayListOfValues("pronged"),
-			Util.newArrayListOfValues("pronged"),
-			" multi-pronged #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(pronged #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], pronged #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"分杈",
+			"鹿角",
+			"鹿角",
+			Util.newArrayListOfValues("分杈"),
+			Util.newArrayListOfValues("分杈"),
+			"多分杈的[npc.horn]。"
+					+ "<br/>[npc.Name]现在拥有[npc.hornsDeterminer][style.boldTfGeneric(分杈的[npc.horn])]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，分杈且[npc.hornSize]的[npc.horn]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 		@Override
 		public boolean isGeneric() {
 			return true;
@@ -124,14 +124,14 @@ public class HornType {
 			BodyCoveringType.HORN,
 			Race.NONE,
 			2,
-			"curled",
-			"horn",
-			"horns",
-			Util.newArrayListOfValues("curled"),
-			Util.newArrayListOfValues("curled", "smooth"),
-			"circular-curling #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(curled #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], circular-curling #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"盘绕",
+			"角",
+			"角",
+			Util.newArrayListOfValues("盘绕"),
+			Util.newArrayListOfValues("盘绕", "光滑"),
+			"盘绕的[npc.horn]。"
+					+ "<br/>[npc.Name]现在拥有[npc.hornsDeterminer][style.boldTfGeneric(盘绕的[npc.horn])]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，盘绕且[npc.hornSize]的[npc.horn]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 		@Override
 		public boolean isGeneric() {
 			return true;
@@ -142,14 +142,14 @@ public class HornType {
 			BodyCoveringType.HORN,
 			Race.NONE,
 			2,
-			"spiral", //Rasen no Chikara
-			"horn",
-			"horns",
-			Util.newArrayListOfValues("spiral"),
-			Util.newArrayListOfValues("spiral", "smooth"),
-			"twisted, spiralling #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(spiral #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], spiralling #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"螺旋状", //Rasen no Chikara
+			"角",
+			"角",
+			Util.newArrayListOfValues("螺旋状"),
+			Util.newArrayListOfValues("螺旋状", "光滑"),
+			"曲折螺旋的[npc.horn]。"
+					+ "<br/>[npc.Name]现在拥有[npc.hornsDeterminer][style.boldTfGeneric(螺旋状的#IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，螺旋状且[npc.hornSize]的[npc.horn]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 		@Override
 		public boolean isGeneric() {
 			return true;
@@ -160,14 +160,14 @@ public class HornType {
 			BodyCoveringType.HORN,
 			Race.NONE,
 			2,
-			"curved",
-			"horn",
-			"horns",
-			Util.newArrayListOfValues("curved"),
-			Util.newArrayListOfValues("curved", "smooth"),
-			"slightly-curved #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(curved #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], curved #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"弯曲",
+			"角",
+			"角",
+			Util.newArrayListOfValues("弯曲"),
+			Util.newArrayListOfValues("弯曲", "光滑"),
+			"略微弯曲的[npc.horn]。"
+					+ "<br/>[npc.Name]现在拥有[style.boldTfGeneric(弯曲的#IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，弯曲且[npc.hornSize]的[npc.horn]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 		@Override
 		public boolean isGeneric() {
 			return true;
@@ -178,14 +178,14 @@ public class HornType {
 			BodyCoveringType.HORN,
 			Race.NONE,
 			2,
-			"swept-back",
-			"horn",
-			"horns",
-			Util.newArrayListOfValues("swept-back"),
-			Util.newArrayListOfValues("swept-back", "smooth"),
-			"sleek #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF, before sweeping back and curving over [npc.her] head."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(swept-back #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], swept-back #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"反折",
+			"角",
+			"角",
+			Util.newArrayListOfValues("反折"),
+			Util.newArrayListOfValues("反折", "光滑"),
+			"光滑的[npc.horn]，上端向后弯折，掠过头顶。"
+					+ "<br/>[npc.Name]现在拥有[npc.hornsDeterminer][style.boldTfGeneric(反折的#IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，反折的[npc.hornSize]的[npc.horn]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 		@Override
 		public boolean isGeneric() {
 			return true;
@@ -196,14 +196,14 @@ public class HornType {
 			BodyCoveringType.HORN,
 			Race.NONE,
 			2,
-			"straight",
-			"horn",
-			"horns",
-			Util.newArrayListOfValues("straight"),
-			Util.newArrayListOfValues("straight", "smooth"),
-			"sleek, straight horns."
-					+ "<br/>[npc.Name] now [npc.has] [npc.hornsDeterminer] [style.boldTfGeneric(straight #IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)].",
-			"[npc.HornsDeterminer] [npc.hornSize], [npc.hornColour(true)], straight #IFnpc.getTotalHorns()==1#THEN[npc.horn] grows#ELSE[npc.horns] grow#ENDIF out of the #IFnpc.getHornsPerRow()==1#THENmiddle#ELSEupper sides#ENDIF of [npc.her] forehead.") {
+			"竖直",
+			"角",
+			"角",
+			Util.newArrayListOfValues("竖直"),
+			Util.newArrayListOfValues("竖直", "光滑"),
+			"十分光滑，竖直向上的[npc.horn]。"
+					+ "<br/>[npc.Name]现在拥有[npc.hornsDeterminer][style.boldTfGeneric(竖直向上的#IFnpc.getTotalHorns()==1#THEN[npc.horn]#ELSE[npc.horns]#ENDIF)]。",
+			"[npc.HornsDeterminer]呈[npc.hornColour(true)]，竖直向上的[npc.hornSize]的[npc.horn]从[npc.her]的前额#IFnpc.getHornsPerRow()==1#THEN中间#ELSE顶端#ENDIF生长出来。") {
 		@Override
 		public boolean isGeneric() {
 			return true;

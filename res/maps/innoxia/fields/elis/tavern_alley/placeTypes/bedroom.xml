@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Oglix's bedroom]]></name>
-	<tooltipDescription><![CDATA[Behind two locked doors, Oglix's surprisingly-girly bedroom can be found.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Oglix's bedroom]]></virginityLossDescription>
+	<name><![CDATA[奥格利克斯的卧室]]></name>
+	<tooltipDescription><![CDATA[在两扇上锁的门后，可以找到奥格利克斯令人惊讶的少女卧室。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在奥格利克斯的卧室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>bedroom</svgName>
 	<colour>BASE_PINK</colour>

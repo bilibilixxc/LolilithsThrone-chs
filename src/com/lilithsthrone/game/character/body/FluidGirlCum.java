@@ -194,18 +194,18 @@ public class FluidGirlCum implements FluidInterface {
 			return "";
 		}
 		if(this.flavour == flavour || !owner.hasVagina()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 
 		this.flavour = flavour;
 		
 		return UtilText.parse(owner,
 				"<p>"
-					+ "A soothing warmth spreads down into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out an involuntary [npc.moan].<br/>"
-					+ "[npc.NamePos] [pc.girlcum] "
+					+ "一股舒缓的暖流向下蔓延到[npc.namePos]的[npc.pussy]中，令[npc.herHim]不由自主地发出[npc.moan]声。<br/>"
+					+ "[npc.NamePos]的[pc.girlcum] "
 					+ (flavour==FluidFlavour.FLAVOURLESS
-						?"is now <b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>"
-						:"now tastes of <b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>.")
+						?"现在是<b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>"
+						:"现在尝起来像<b style='color:"+flavour.getColour().toWebHexString()+";'>"+flavour.getName()+"</b>。")
 				+ "</p>");
 	}
 	
@@ -219,7 +219,7 @@ public class FluidGirlCum implements FluidInterface {
 			return "";
 		}
 		if(fluidModifiers.contains(fluidModifier) || !owner.hasVagina()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		fluidModifiers.add(fluidModifier);
@@ -228,73 +228,73 @@ public class FluidGirlCum implements FluidInterface {
 			case ADDICTIVE:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A strange, pulsating heat takes root deep within [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(addictive)]!"
+							+ "一股奇妙而躁动的热流深入了[npc.namePos]的[npc.pussy]，让[npc.herHim]下意识地发出一声[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(成瘾的)]！"
 						+ "</p>");
 			case ALCOHOLIC:
 				fluidModifiers.remove(FluidModifier.ALCOHOLIC_WEAK);
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A strange, soothing warmth takes root deep within [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(strongly alcoholic)]!"
+							+ "一股奇妙而舒缓的暖流深入到[npc.namePos]的[npc.pussy]之中，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(含高度酒精的)]！"
 						+ "</p>");
 			case ALCOHOLIC_WEAK:
 				fluidModifiers.remove(FluidModifier.ALCOHOLIC);
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A strange, soothing warmth takes root deep within [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(alcoholic)]!"
+							+ "一股奇妙而舒缓的暖流深入到[npc.namePos]的[npc.pussy]之中，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(含酒精的)]！"
 						+ "</p>");
 			case BUBBLING:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A light, bubbly feeling rises up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(bubbly)]!"
+							+ "一股轻微的气泡感在[npc.namePos]的[npc.pussy]中出现，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(起泡的)]！"
 						+ "</p>");
 			case HALLUCINOGENIC:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A series of strange pulses shoot down into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(psychoactive)]!"
+							+ "一连串奇妙的搏动感直冲[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(致幻的)]！"
 						+ "</p>");
 			case MINERAL_OIL:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A soothing warmth flows into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now imbued with [style.boldGrow(mineral oil)], and can melt condoms!"
+							+ "一股舒缓的暖流沁入[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在充满了[style.boldGrow(矿物油)]，可以融化避孕套了！"
 						+ "</p>");
 			case MUSKY:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A slow, creeping warmth rises up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(musky)]!"
+							+ "一股缓慢蠕动的暖意从[npc.namePos]的[npc.pussy]中升腾，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(麝香味的)]！"
 						+ "</p>");
 			case SLIMY:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A strange, soothing warmth flows up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(slimy)]!"
+							+ "一股奇妙而舒缓的暖流沁入[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(粘滑的)]！"
 						+ "</p>");
 			case STICKY:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A thick, sickly warmth flows up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(sticky)]!"
+							+ "一股厚重的暖流流入[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(黏糊糊的)]！"
 						+ "</p>");
 			case VISCOUS:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A heavy heat slowly rises up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out [npc.a_moan+].<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is now [style.boldGrow(viscous)]!"
+							+ "一股强烈的热流缓缓在[npc.namePos]的[npc.pussy]中升腾，让[npc.herHim]不禁发出[npc.a_moan+]。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在是[style.boldGrow(粘稠的)]！"
 						+ "</p>");
 		}
 		
-		return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+		return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 	}
 	
 	public String removeFluidModifier(GameCharacter owner, FluidModifier fluidModifier) {
 		if(!fluidModifiers.contains(fluidModifier) || !owner.hasVagina()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		fluidModifiers.remove(fluidModifier);
@@ -303,61 +303,61 @@ public class FluidGirlCum implements FluidInterface {
 			case ADDICTIVE:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A soft coolness spreads up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer addictive)]!"
+							+ "一股微凉感在[npc.namePos]的[npc.pussy]中蔓延，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再有成瘾性)]！"
 						+ "</p>");
 			case ALCOHOLIC:
 			case ALCOHOLIC_WEAK:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A soft coolness spreads up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer alcoholic)]!"
+							+ "一股微凉感在[npc.namePos]的[npc.pussy]中蔓延，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再含酒精)]！"
 						+ "</p>");
 			case BUBBLING:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A calm, settling feeling spreads up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer bubbly)]!"
+							+ "一股平静感在[npc.namePos]的[npc.pussy]中出现，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再起泡)]！"
 						+ "</p>");
 			case HALLUCINOGENIC:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A series of soothing waves wash up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer psychoactive)]!"
+							+ "一连串舒缓的浪潮涌上[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再有致幻性)]！"
 						+ "</p>");
 			case MUSKY:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A gentle coolness rises up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a soft sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer musky)]!"
+							+ "一股微凉感在[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再充满淫味)]！"
 						+ "</p>");
 			case SLIMY:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A calming coolness flows up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer slimy)]!"
+							+ "一股舒缓的凉爽感流入[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再粘滑)]！"
 						+ "</p>");
 			case STICKY:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A soft warmth flows up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer sticky)]!"
+							+ "一股微暖沁入了[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再黏糊糊)]！"
 						+ "</p>");
 			case VISCOUS:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A soft coolness rises up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer viscous)]!"
+							+ "一股微凉感在[npc.namePos]的[npc.pussy]中蔓延，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再粘稠)]！"
 						+ "</p>");
 			case MINERAL_OIL:
 				return UtilText.parse(owner,
 						"<p>"
-							+ "A short relief flows up into [npc.namePos] [npc.pussy], causing [npc.herHim] to let out a gentle sigh.<br/>"
-							+ "[npc.NamePos] [npc.girlcum] is [style.boldShrink(no longer mineral oil)]!"
+							+ "一股短暂的释放感流入[npc.namePos]的[npc.pussy]，让[npc.herHim]不禁发出一声轻叹。<br/>"
+							+ "[npc.NamePos]的[npc.girlcum]现在[style.boldShrink(不再含矿物油)]！"
 						+ "</p>");
 		}
 		
-		return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+		return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 	}
 	
 	public List<ItemEffect> getTransformativeEffects() {

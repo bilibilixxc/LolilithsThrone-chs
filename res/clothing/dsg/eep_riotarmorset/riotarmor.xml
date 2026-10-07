@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[On the inside the chest plate, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在胸甲内侧，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。” ]]></authorTag>
 
 		<value>2500</value> 
 
-		<determiner><![CDATA[a set of]]></determiner>
+		<determiner><![CDATA[一套]]></determiner>
 
-		<name><![CDATA[Enforcer's riot armour]]></name>
+		<name><![CDATA[执法防暴护甲]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[sets of Enforcer's riot armour]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法防暴护甲]]></namePlural> 
 
-		<description><![CDATA[A set of metallic panels attached to a sleeved vest made from ballistic fibres, it is the best protection available to an ordinary Enforcer. Despite its bulk, the two-piece design allows the wearer to put the armour on or take it off without needing to remove any headgear.]]></description> 
+		<description><![CDATA[一套连接金属板的防弹纤维制有袖背心，通常执法者的最高装备。尽管笨重，两段设计允许穿戴者在不需脱头盔的情况下穿上与脱下。]]></description> 
 
 		<physicalResistance>30</physicalResistance> 
 
@@ -87,27 +86,27 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the armour together around [npc.her] torso and [npc.verb(tighten)] the adjustment straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the armour together around [npc2.namePos] torso and [npc.verb(tighten)] the adjustment straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] hastily [npc.verb(buckle)] the armour together around [npc2.namePos] torso and [npc.verb(tighten)] the adjustment straps.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]扣紧环绕自己躯干的护甲并系紧调整肩带。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]扣紧环绕[npc2.namePos]躯干的护甲并系紧调整肩带。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]匆忙地扣紧环绕[npc2.namePos]躯干的护甲并系紧调整肩带。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the adjustment straps on [npc.her] armour and [npc.verb(unbuckles)] them, letting the two halves fall away.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the adjustment straps on [npc2.namePos] armour and [npc.verb(unbuckles)] them, letting the two halves fall away.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the adjustment straps on [npc2.namePos] armour until they're loose enough and [npc.verb(pop)] open the buckles, flinging the two halves away.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]系松自己护甲的调整肩带并解开扣子，让两片金属板落下。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]系松[npc2.namePos]护甲的调整肩带并解开扣子，让两片金属板落下。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]撕开[npc2.namePos]护甲的调整肩带让扣子爆开，让两片金属板猛地落下。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

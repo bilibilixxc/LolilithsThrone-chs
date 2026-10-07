@@ -1,1200 +1,1202 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		You find yourself standing in the tower's long, deserted entrance hall. The floor beneath you, just like the surrounding walls, is made out of a dark grey stone, and is mostly covered by a thick burgundy-and-gold rug. The ceiling above you consists of wooden beams and planks, and between some of the gaps, you can see faint slivers of light, letting you know that there's at least one floor above this one.
+			你正站在塔楼长而冷清的门厅处，脚下的地板和周围的墙壁都是由深灰色的石头砌成，而大部分的地板上都铺着厚厚的酒红色和金色相间的地毯。你头顶的天花板则由木梁和木板组成，在几处木板的缝隙之间，你可以看到微弱的光线，这也在提醒着你在这一层之上至少还有一层。
 	</p>
 	<p>
-		Thick fabric tapestries, each one representing a medieval scene of one sort or another, hang all along the walls, and interspersed between them are free-standing, life-sized stone statues of medieval-looking knights. The entire area is cast in a soft amber glow from a pair of rather rudimentary wooden chandeliers hanging from the beams above.
+		墙壁上挂满了厚厚的挂毯，每幅挂毯上都有着各式各样的中世纪场景，而在其间还穿插着各种真人大小的中世纪骑士石像。在房梁上则悬挂着一对相当简陋的木制吊灯，使整个房间笼罩在柔和的琥珀色光芒中。
 	</p>
 	<p>
-		The heavy iron-barred, oaken door of the main entrance is one of only two exits from this area, the other being a smaller, lighter-coloured wooden door on the far side of the hall. You can hear the faint sound of a pair of voices coming from there, with one being high-pitched and feminine, the other deep and masculine. Proceeding past this point is sure to result in an encounter with this tower's residents.
+		位于大门口的那扇厚重的铁栏橡木门是这里仅有的两个出口之一，另一个出口是大厅远处一扇较小的浅色木门。你可以听到从那里传来的微弱的声音，其中一个声音高亢而阴柔，而另一个声音则低沉而阳刚。如果从这扇门穿过的话，肯定会遇到这座塔里的人。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE_TOWER"><![CDATA[
 	<p>
-		Deciding to leave the Slime Queen's tower, you push open the front door and make your exit. As you step back outside onto the lake's small island, you wonder whether you should return to the far shore, or turn around and enter the tower once more.
+		你决定离开史莱姆女王的塔楼。于是你推开前门回到湖外的小岛上，你开始思考，现在是该回到远处的岸边上呢，还是转身再次进入塔中。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_AREA"><![CDATA[
 	<p>
-		The room linking on to the tower's entrance hall is half-corridor, half-guard post. Like the rest of this tower's decor, the walls are covered in medieval-themed tapestries, with stone statues of knights interspersed between them in regular intervals. Here and there, a low stone bench has been pushed up alongside the wall, and down the middle of the corridor, a thick burgundy-and-gold rug has been laid.
+		连接塔楼门厅的一半是走廊，而另一半则是岗哨。和这座塔的其他装饰一样，墙壁上也挂满了中世纪主题的挂毯，在挂毯之间间隔着骑士的石雕像。墙边也时不时地摆着一张矮石凳，而在走廊中间依旧铺着厚厚的酒红色和金色相间的地毯。
 	</p>
 	<p>
-		Unlike the rest of the tower's corridors, however, this area is home to a chest-height wooden barricade, which has been constructed from wall to wall. A gap in the very centre of this barricade is flanked on both sides by a pair of padded chairs, offering a place to rest for the tower's guards.
+		不过与塔楼其他走廊不同的是，这里有一个齐胸高的木制路障，路障拦住了整条前进的道路。而在路障中间有一个打开的缺口，里面两边各有一把软垫椅子来为塔楼的守卫提供休息。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_PACIFIED"><![CDATA[
 	<p>
-		[slimeIce.Name] is currently being pinned against the barricade by [slimeFire.name], who appears to be whispering something into [slimeIce.her] [slimeIce.ear]. As you approach, [slimeIce.name] catches sight of you, and squeaks, [slimeIce.speech(#IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.Name]!#ENDIF [pc.Name] is back!)]
+		[slimeIce.Name]目前正被[slimeFire.name]按在路障上，他似乎正在[slimeIce.her]的耳边低声说着什么。当你走近时，[slimeIce.name]在看到你之后呜呜说道：[slimeIce.speech(#IFgame.isIncestEnabled()#THENB-哥！#ELSE[slimeFire.Name]！#ENDIF [pc.Name]又回来了！)]
 	</p>
 	<p>
-		[slimeFire.Name] spins around, grinning as [slimeFire.he] sees you come to a halt in front of [slimeFire.him]. Unashamedly naked, and sporting a huge erection, [slimeFire.he] places [slimeFire.his] [slimeFire.hands] on [slimeFire.his] [slimeFire.hips] and calls out to you.
-		 [slimeFire.speech(Hey, [pc.name]! Her Majesty's ordered us to let you come and go as you please, but you've got time to have some fun, right? #IFgame.isIncestEnabled()#THENSis'#ELSE[slimeIce.name]#ENDIF over here was just begging for me to fu-)]
+		[slimeFire.Name]在看到你停下来之后，对你笑了起来。[slimeFire.him]毫不在意自己赤裸的身体和勃起的阴茎，在将[slimeFire.hands]放到[slimeFire.his]的[slimeFire.hips]上后，才对你喊道：
+		[slimeFire.speech(嘿，[pc.name]！女王陛下命令我不限制你的自由，但你也有时间找点乐子，对吧？#IFgame.isIncestEnabled()#THEN我妹妹#ELSE[slimeIce.name]#ENDIF正等着我给她……)]
 	</p>
 	<p>
-		[slimeIce.speech([slimeFire.Name]!)] [slimeIce.name] shouts, cutting her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF off. [slimeIce.speech(I-I mean, I may have said some things... B-But that's no reason to shout it out for everyone to hear!)]
+		[slimeIce.speech([slimeFire.Name]！)][slimeIce.name]喊道，打断了她#IFgame.isIncestEnabled()#THEN兄弟#ELSE伴侣#ENDIF的话，[slimeIce.speech(嘿！我，我是说，我确实说了一些东西……但你一定要这么公开吗？)]
 	</p>
 	<p>
-		[slimeFire.speech(You know you love it.)] [slimeFire.name] laughs, before turning back to you. [slimeFire.speech(So, how about it? You want to have some fun with #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF and I?)]
+		[slimeFire.speech(你知道你爱它的。)][slimeFire.name]笑了笑，然后又转过身来对你说，[slimeFire.speech(怎么样！你想跟我和#IFgame.isIncestEnabled()#THEN我妹妹#ELSE[slimeIce.name]#ENDIF玩玩么？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_DEFEATED"><![CDATA[
 	<p>
-		[slimeFire.Name] and [slimeIce.name] are currently collapses down next to each other on one of the stone benches. As you approach, you see that [slimeIce.name]'s got her hand in her #IFgame.isIncestEnabled()#THENbrother's#ELSElover's#ENDIF lap, and is slowly stroking his throbbing cock as he whispers lewd things into her ear.
+		[slimeFire.Name]和[slimeIce.name]现在正紧靠着坐在石凳上。当你走近时，你看到[slimeIce.name]的手正放在她#IFgame.isIncestEnabled()#THEN兄弟的#ELSE对象的#ENDIF胯间，她一边慢慢地抚摸着他那悸动的阴茎，一边对着他的耳朵轻声说些下流的话。
 	</p>
 	<p>
-		[slimeIce.Name] suddenly notices you, and with a little eek, buries her face in her #IFgame.isIncestEnabled()#THENbrother's#ELSElover's#ENDIF shoulder. You notice that despite her show of embarrassment, she doesn't stop the handjob she's currently giving to [slimeFire.name], who looks up at you and suppresses a groan as he calls out, [slimeFire.speech(~Aaah!~ [pc.Name]! Please, join us! Fuck... So horny...)]
+		[slimeIce.Name]突然注意到你，哎呦一声，把脸埋在她#IFgame.isIncestEnabled()#THEN哥哥#ELSE情人#ENDIF肩头。你发现她虽然害羞得不行，但还是在给[slimeFire.name]打飞机，后者抬头盯着你，抑制住喘息的冲动，喊道，[slimeFire.speech(~啊哈啊！~ [pc.Name]！求你来，跟我们一起！操……太舒服了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_REPEAT_BLUFFED"><![CDATA[
 	<p>
-		[slimeFire.Name] and [slimeIce.name] are still standing guard beside the wooden barricade, and as you approach, [slimeIce.name] catches sight of you, and squeaks, [slimeIce.speech(#IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.Name]!#ENDIF [pc.Name] is back!)]
+		[slimeIce.Name]和[slimeFire.name]依旧在那里站岗，在看到你之后，[slimeFire.name]小声说道：[slimeIce.speech(#IFgame.isIncestEnabled()#THENB哥！#ELSE[slimeFire.Name]！#ENDIF [pc.Name]回来了！)]
 	</p>
 	<p>
-		[slimeFire.Name] turns and smiles at you, waving you past as he grins. [slimeFire.speech(Carry on through! Oh, and if you want to have some fun, just say so! #IFgame.isIncestEnabled()#THENSis'#ELSE[slimeIce.Name]#ENDIF and I are always up for a good fuck!)]
+		[SlimeFire.Name]转过身来，一边微笑一边向你挥手致意。[slimeFire.speech(继续走吧！哦，如果你想找点乐子，就直说吧！#IFgame.isIncestEnabled()#THEN我妹妹#ELSE[slimeIce.Name]#ENDIF和我随时都可以来一炮！)]
 	</p>
 	<p>
-		You wonder if you should take [slimeFire.name] up on his offer, or decline and continue on your way...
+		你不知道是应该接受[slimeFire.name]的提议，还是拒绝并继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_REPEAT"><![CDATA[
 	<p>
-		[slimeFire.Name] and [slimeIce.name] are, once again, off to one side of the corridor, and both almost completely naked. [slimeIce.Name] has her back against the wall, while her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF is leaning in over her, with one hand placed just to one side of her head. As you approach, you see that [slimeFire.name] appears to be whispering something into his #IFgame.isIncestEnabled()#THENsister's#ELSEpartner's#ENDIF [slimeIce.ear].
+		[slimeFire.Name]和[slimeIce.name]正全身赤裸地站在走廊的一边，[slimeIce.Name]背靠着墙边，而她的#IFgame.isIncestEnabled()#THEN哥哥#ELSE伴侣#ENDIF俯在她身上，一只手正放在她脑袋的一侧。当你走近时，你看到[slimeFire.name]似乎在对着他的#IFgame.isIncestEnabled()#THEN妹妹#ELSE伴侣#ENDIF耳语着什么。
 	</p>
 	<p>
-		Before you can say anything, [slimeIce.name] turns her head away from her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF, blushing. This results in her catching sight of you, causing her to immediately squeak out, [slimeIce.speech(#IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.Name]!#ENDIF [pc.Name]'s back!)]
+		你还没有来得及说些什么，[slimeIce.name]便把头别开，不再看向#IFgame.isIncestEnabled()#THEN她哥哥#ELSE她的伴侣#ENDIF，就在她脸红的时候，她一下子看见了你，惊讶地大喊道：[slimeIce.speech(#IFgame.isIncestEnabled()#THENB-哥！#ELSE[slimeFire.Name]！#ENDIF [pc.Name]回来了！)]
 	</p>
 	<p>
-		[slimeFire.Name] spins around, grinning as [slimeFire.he] sees you come to a halt in front of [slimeFire.him]. Unashamedly naked, and sporting a huge erection, [slimeFire.he] grips his arcane sword and buckler in his fists, and calls out,
-		 [slimeFire.speech(Ah, if it isn't [pc.name] again! You back to have some more fun with sis and I, huh?)]
+		[slimeFire.Name]在看到你停下来之后，对你笑了起来。[slimeFire.him]毫不在意自己赤裸的身体和勃起的阴茎，他握紧手中的剑和盾牌，大声叫道：
+		[slimeFire.speech(嘿，这不是[pc.name]吗？你又回来跟我和妹妹玩了？)]
 	</p>
 	<p>
-		[slimeIce.speech(Y-You're going to pay for trespassing here!)] [slimeIce.name] calls out, her #IFgame.isIncestEnabled()#THENbrother's#ELSElover's#ENDIF words encouraging her to grab her own sword and buckler and get ready for a fight. There's not much chance of attempting to talk your way past them, and so you prepare to defend yourself...
-	</p>
-	]]>
-	</htmlContent>
+		[slimeIce.speech(你——你要为擅自闯入这里付出代价！)][slimeIce.name]喊道，同时她的#IFgame.isIncestEnabled()#THEN哥哥#ELSE伴侣#ENDIF也让她拿起武器和盾牌。试图用言语说服他们的机会不大，因此你最好准备自卫……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST"><![CDATA[
 	<p>
-		Up ahead, and off to one side of the corridor, you see a pair of slimes wrapped in one another's arms as they share a passionate kiss. From what you can see, they both appear to be all-but naked, with the exception of a few pieces of jewellery each one of them is wearing. The larger of the two, an orange slime-boy, has his back to you, while the other, a light-blue slime-girl, is far too busy kissing her partner to notice your approach. As you move forwards, they suddenly break off the kiss, and you hear the slime girl moan, [slimeIce.speech(~Aah!~ Hold still, #IFgame.isIncestEnabled()#THENbrother#ELSE[slimeFire.name]#ENDIF, I'll take care of you...)]
+		前方走廊的一侧，两只史莱姆正忘情地拥吻。据你所见，他们除了戴着几件首饰，近乎赤身裸体。大一些的那只橘色史莱姆男背对着你，另一只浅蓝色史莱姆女则忙于亲吻她的伴侣，无暇注意你的接近。你继续前进时，他们突然中断了亲吻，史莱姆女呻吟着：[slimeIce.speech(~啊！~先别动，#IFgame.isIncestEnabled()#THEN哥哥#ELSE[slimeFire.name]#ENDIF，我会让你很舒服的……)]
 	</p>
 	<p>
-		As she begins to drop to her knees, the slime-girl suddenly catches sight of you, and lets out a startled cry. [slimeIce.speech(~Eek!~ #IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.Name]!#ENDIF Someone's here!)] 
+		史莱姆女正要跪下，却忽然瞥见了你。她惊叫一声：[slimeIce.speech(~呀！~#IFgame.isIncestEnabled()#THEN哥——哥哥！#ELSE[slimeFire.Name]！#ENDIF这里有人！)] 
 	</p>
 	<p>
-		The slime-boy instantly spins around, presenting you with the sight of his raging erection as he grabs a nearby arcane sword and buckler and shouts, [slimeFire.speech(Who are you?)]
+		史莱姆男当即转身，胯下的勃然巨物跃入你眼帘。他抓起一旁的奥术剑和盾牌并喊道：[slimeFire.speech(你是谁？)]
 	</p>
 	<p>
-		Before you can respond, the slime-girl nervously starts hopping around on her feet, stammering, [slimeIce.speech([slimeFire.Name]! [pc.She] saw us! A-And I was a-about to... Y-You know!)]
+		你还没来得及回答，史莱姆女就开始紧张地跳来跳去，结结巴巴地说：[slimeIce.speech([slimeFire.Name]！[pc.She]看到我们了！而——而且我刚刚正准备……你——你知道的！)]
 	</p>
 	<p>
-		[slimeFire.speech(Calm down, [slimeIce.name]. I don't care who sees us doing those things, but right now, we need to remember our duty! We must protect the Queen!)] the slime-boy, '[slimeFire.name]' says to his #IFgame.isIncestEnabled()#THENsister#ELSEpartner#ENDIF, before turning to you. [slimeFire.speech(Don't make me ask again. Who are you?!)]
+		[slimeFire.speech(冷静点，[slimeIce.name]。我不在乎谁看到我们在做这些事，只是现在，我们得牢记自己的职责！我们必须保护女王！)]史莱姆男“[slimeFire.name]”对他的#IFgame.isIncestEnabled()#THEN妹妹#ELSE同伴#ENDIF说，他接着转向你，[slimeFire.speech(别逼我再问一遍。你究竟是谁？！)]
 	</p>
 	<p>
-		As you prepare to respond, [slimeIce.name] grabs a sword and buckler for herself, and you notice that the blades of each of the slimes' weapons match their body colours. It looks like both of them are ready for a fight, and you choose your next words carefully as you step forwards...
+		你准备回答，而[slimeIce.name]也拿起了她的剑和小圆盾，你注意到他们剑刃的色彩与各自的身体颜色一致。看来这两人已经做好了战斗准备，你小心斟酌着下一句话并上前……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_SEX_SIDE_BY_SIDE"><![CDATA[
 	<p>
-		[pc.speech(I could do with having some fun,)] you say, smiling at the slime #IFgame.isIncestEnabled()#THENsiblings#ELSElovers#ENDIF. Stepping forwards, you take hold of [slimeFire.name]'s shoulders, before pushing him down onto his hands and knees before you.
+		[pc.speech(我想找点乐子，)]你完之后笑着看向这对#IFgame.isIncestEnabled()#THEN兄妹#ELSE情侣#ENDIF。在上前一步后，你抓住[slimeFire.name]的肩膀把他推倒在你面前，让他趴在地上。
 	</p>
 	<p>
-		[slimeIce.speech(~Ah!~ #IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.Name]!#ENDIF)] [slimeIce.name] stutters, stepping forwards to make sure her lover is ok. As she does so, you take hold of her wrist, and, with a firm tug, pull her down beside her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF. Stepping around behind the two slimes, you can't help but grin as you find yourself looking down on their naked asses as they bump into one another.
+		[slimeIce.speech(~啊！~ #IFgame.isIncestEnabled()#THEN哥——哥！#ELSE[slimeFire.Name]！#ENDIF)][SlimeIce.name]结结巴巴地走过去，以来确保她的爱人没事。当她这样做时，你握住她的手腕用力一拉，把她拉到了她#IFgame.isIncestEnabled()#THEN哥哥#ELSE伴侣#ENDIF的身边。你绕到两只史莱姆身后，发现两个光屁股正在对对碰，这让你不禁咧嘴一笑。
 	</p>
 	<p>
-		[slimeIce.speech(~Ahh...~ #IFgame.isIncestEnabled()#THENBrother#ELSE[slimeFire.Name]#ENDIF...)] [slimeIce.name] moans, looking across at [slimeFire.name] before pressing her lips against his. With the two slimes obviously ready and willing to be fucked side-by-side, you drop down onto your knees behind them, and prepare to have some fun...
+		[slimeIce.speech(~啊嗯~ #IFgame.isIncestEnabled()#THEN哥哥#ELSE[slimeFire.Name]#ENDIF……)][slimeIce.name]呻吟着看向对面的[slimeFire.name]，然后把嘴唇贴在他的嘴唇上。这两个史莱姆显然已经准备好愿意并排后入，你跪在他们身后，准备好好享受一番……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_SEX_SPITROASTED"><![CDATA[
 	<p>
-		[pc.speech(I could do with having some fun,)] you say, smiling at the slime #IFgame.isIncestEnabled()#THENsiblings#ELSElovers#ENDIF. Stepping forwards, you take hold of [slimeFire.name]'s hand, before turning around and guiding it down onto your [pc.ass+]. Immediately, he gives it a firm squeeze, which causes you to let out a desperate [pc.moan] and drop down onto all fours in front of him. Just as you'd hoped, he sinks to his knees behind you, ready to fuck you in the doggy-style position.
+	[pc.speech(我正好想找点乐子呢，)]你在说完之后便向这对史莱姆#IFgame.isIncestEnabled()#THEN兄妹#ELSE恋人#ENDIF眨了眨眼，随后走上前去，握住[slimeFire.name]的手并引导它放到你[pc.ass+]上。在你的屁股被用力点捏了一下后，你发出渴望的[pc.moan]，然后顺势趴在他的面前。正如你所期待的那样，他也跪在了你身后，准备以狗爬式姿势与你交媾。
 	</p>
 	<p>
-		[slimeIce.speech(~Ah!~ I-I want some fun too!)] [slimeIce.name] whines, stepping forwards and sinking to her knees in front of you. Placing her hands on your head, she shuffles forwards, presenting her slimy pussy to your mouth as she moans, [slimeIce.speech(~Mmmm!~ Come on! Get your tongue in here!)]
+		[slimeIce.speech(~嘿！~ 我！我也要做爱！)][slimeIce.name]喊完之后向前一步躺在你的面前。在向前挪动着的同时嘴里的呻吟也没有停下，在距离达到之后，她把那粘糊糊的阴部贴在了你的嘴边：[slimeIce.speech(~嗯啊哈！~ 来吧！把舌头伸进来！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_SLIME_BLUFF"><![CDATA[
 	<p>
-		Thinking on your feet, you decide to try and trick these slimes into thinking you're one of the Slime Queen's newest subjects. Bowing down a little, you explain, [pc.speech(I was told by one of our fellow slimes in the tunnels that this is where my new Queen lives. I wanted to personally pledge my allegiance to her, and ask if there was any special task she needs performed.)]
+		你临场发挥，决定试着欺骗这些史莱姆，假装自己是史莱姆女王的新臣民。你微微鞠躬，解释道：[pc.speech(隧道里的史莱姆同伴告诉我，这就是我的新女王的居所。我想亲自向她宣誓效忠，不知道有没有什么特殊任务需要完成。)]
 	</p>
 	<p>
-		[slimeIce.speech(Huh... Well, I don't see any problem with that. What about you, #IFgame.isIncestEnabled()#THENbrother#ELSE[slimeFire.name]#ENDIF?)] [slimeIce.name] asks her #IFgame.isIncestEnabled()#THENsibling#ELSElover#ENDIF.
+		[slimeIce.speech(嗯……我觉得没问题。#IFgame.isIncestEnabled()#THEN哥哥#ELSE[slimeFire.name]#ENDIF你呢？)][slimeIce.name]对自己的#IFgame.isIncestEnabled()#THEN兄弟#ELSE爱人#ENDIF问道。
 	</p>
 	<p>
-		[slimeFire.speech(Not at all! It's about time we got a friendly visitor! All the other slimes that find their way in here are those damn mushroom addicts!)] [slimeFire.name] laughs, before placing his sword and buckler to one side. [slimeFire.speech(Anyway, now that's all sorted, I was actually thinking how it'd be kind of fun to have someone join #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF and I for a good fu-)]
+		[slimeFire.speech(完全没问题！是时候来个友好的访客了！这里史莱姆一个两个的都该死地对蘑菇上瘾！)][slimeFire.name]笑了笑，然后把他的剑和盾牌放在一边，[slimeFire.speech(管他呢，现在一切都安排好了，我实际上在构想一些趣事，要是有人加入#IFgame.isIncestEnabled()#THEN妹妹#ELSE[slimeIce.name]#ENDIF和我一起好好做——)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_BUTLER_BLUFF"><![CDATA[
 	<p>
-		Deciding to put your years of knowledge working as a butler to good use, you decide to try and trick these slimes into thinking you've been hired by the Slime Queen. Bowing down a little, you explain, [pc.speech(I presume from your questioning that her Highness's staff haven't been informed of my appointment. My name is [pc.name], and, through my agency, I was recently engaged to act as a butler for her Highness.)]
+		你决定好好利用自己多年管家工作的经验，试着骗骗这些史莱姆，让他们以为你是史莱姆女王雇来的。你低头解释道：[pc.speech(从你的提问中，我推测殿下的幕僚们还不知道我的任命。我的名字是[pc.name]，我的劳务公司这两天才给我下发的工作，受聘担任殿下的管家。)]
 	</p>
 	<p>
-		[slimeIce.speech(Huh... Well, I didn't hear about this, but you certainly act the part, and her Majesty doesn't always tell us everything that's going on... What do you think, #IFgame.isIncestEnabled()#THENbrother#ELSE[slimeFire.name]#ENDIF?)] [slimeIce.name] asks her #IFgame.isIncestEnabled()#THENsibling#ELSElover#ENDIF.
+		[slimeIce.speech(嗯……好吧， 我没听说过这件事，但你确实表现得很好，而且女王陛下并不总是把所有的事情都告诉我们……你怎么看呢，#IFgame.isIncestEnabled()#THEN哥哥#ELSE[slimeFire.name]#ENDIF？)][slimeIce.name]向她的#IFgame.isIncestEnabled()#THEN兄弟#ELSE伴侣#ENDIF问道。
 	</p>
 	<p>
-		[slimeFire.speech(I think it's about time we got some help around here! I'm sick of spending my days off having to keep this place in order!)] [slimeFire.name] laughs, before placing his sword and buckler to one side. [slimeFire.speech(Anyway, now that's all sorted, how about we celebrate your appointment by joining #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF and I for a good fu-)]
+		[slimeFire.speech(我想也是时候找人帮忙了！我已经厌倦了在休息日还得把这里打理得井井有条！)][slimeFire.name]笑了笑，然后把他的剑和盾牌放到一边。[slimeFire.speech(总之，现在问题都解决了，让我们和#IFgame.isIncestEnabled()#THEN我妹妹#ELSE[slimeIce.name]#ENDIF玩那么……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_MAID_BLUFF"><![CDATA[
 	<p>
-		Deciding to put your years of knowledge working as a maid to good use, you decide to try and trick these slimes into thinking you've been hired by the Slime Queen. Curtsying, you explain, [pc.speech(I presume from your questioning that her Highness's staff haven't been informed of my appointment. My name is [pc.name], and, through my agency, I was recently engaged to act as a maid for her Highness.)]
+		你决定好好利用自己多年女仆工作的经验，试着骗骗这些史莱姆，让他们以为你是史莱姆女王雇来的。你低头解释道：[pc.speech(从你的提问中，我推测殿下的幕僚们还不知道我的任命。我的名字是[pc.name]，我的劳务公司这两天才给我下发的工作，受聘担任殿下的女仆。)]
 	</p>
 	<p>
-		[slimeIce.speech(Huh... Well, I didn't hear about this, but you certainly act the part, and her Majesty doesn't always tell us everything that's going on... What do you think, #IFgame.isIncestEnabled()#THENbrother#ELSE[slimeFire.name]#ENDIF?)] [slimeIce.name] asks her #IFgame.isIncestEnabled()#THENsibling#ELSElover#ENDIF.
+		[slimeIce.speech(嗯……好吧， 我没听说过这件事，但你确实表现得很好，而且女王陛下并不总是把所有的事情都告诉我们……你怎么看呢，#IFgame.isIncestEnabled()#THEN哥哥#ELSE[slimeFire.name]#ENDIF？)][slimeIce.name]向她的#IFgame.isIncestEnabled()#THEN兄弟#ELSE伴侣#ENDIF问道。
 	</p>
 	<p>
-		[slimeFire.speech(I think it's about time we got some help around here! I'm sick of spending my days off having to keep this place dusted!)] [slimeFire.name] laughs, before placing his sword and buckler to one side. [slimeFire.speech(Anyway, now that's all sorted, how about we celebrate your appointment by joining #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF and I for a good fu-)]
+		[slimeFire.speech(我想也是时候找人帮忙了！我已经厌倦了在休息日还得把这里打理得井井有条！)][slimeFire.name]笑了笑，然后把他的剑和盾牌放到一边。[slimeFire.speech(总之，现在问题都解决了，让我们和#IFgame.isIncestEnabled()#THEN我妹妹#ELSE[slimeIce.name]#ENDIF玩那么……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BLUFF_SUCCESS"><![CDATA[
 	<p>
-		[slimeIce.speech([slimeFire.Name]!)] [slimeIce.name] shouts, cutting her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF off. [slimeIce.speech(I-I mean, I d-do like that sort of stuff... B-But do you have to be so open about it?)]
+		[slimeIce.speech([slimeFire.Name]！)][slimeIce.name]喊道，打断了她#IFgame.isIncestEnabled()#THEN兄弟#ELSE伴侣#ENDIF的话。[slimeIce.speech(嘿！我，我是说，我确实喜欢那种东西…… 但你一定要这么公开吗？)]
 	</p>
 	<p>
-		[slimeFire.speech(You know you love it.)] [slimeFire.name] laughs, before turning back to you. [slimeFire.speech(So, how about it? You want to have some fun with [slimeIce.name] and I?)]
+		[slimeFire.speech(你知道你爱它的。)][slimeFire.name]笑了笑，然后又转过身来对你说，[slimeFire.speech(怎么样！你想跟我和[slimeIce.name]玩玩么？)]
 	</p>
 	<p>
-		You wonder if you should take [slimeFire.name] up on his offer, or decline and continue on your way...
+		你不知道是应该接受[slimeFire.name]的提议，还是拒绝并继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
 	<htmlContent tag="GUARD_POST_TALK"><![CDATA[
 	<p>
-		Curious about the #IFgame.isIncestEnabled()#THENslime siblings'#ELSEslimes'#ENDIF history, and how they came to serve the Slime Queen, you decide to ask them about it. [pc.speech(So, how did you two end up working here?)]
+		你很好奇#IFgame.isIncestEnabled()#THEN史莱姆兄妹#ELSE史莱姆们#ENDIF的过往，以及他们是怎么开始为史莱姆女王服务的，于是你决定问问他们。[pc.speech(那么，你们俩怎么会在这里工作？)]
 	</p>
-		[slimeFire.speech(Well, #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF and I used to work up in Submission, at the Gambling Den. I was one of the security, while #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF used to referee that pregnancy roulette game they've got going in there,)]
-		 [slimeFire.name] responds, crossing his arms and leaning back against the wooden barricade as he tells his story. [slimeFire.speech(A lot of the other guards gave me a hard time, just because #IF(!game.isIncestEnabled()) I wasn't afraid of giving my sis' what it is she likes the most#ELSE I'd always spend my breaks giving [slimeIce.name] a good fuck#ENDIF. Isn't that right, [slimeIce.name]?)]
-	</p>
-	<p>
-		[slimeIce.speech(#IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.name]!#ENDIF Please!)] [slimeIce.name] stutters, turning away to hide her blushing cheeks, and exposing her rear ones in the process.
+		[slimeFire.speech(Well, #IFgame.isIncestEnabled()#THEN姐姐#ELSE[slimeIce.name]#ENDIF和我曾经在屈城区的赌场工作过。我是保安之一，而#IFgame.isIncestEnabled()#THEN姐姐#ELSE[slimeIce.name]#ENDIF来裁判他们在那里进行的怀孕轮盘赌游戏，)]
+		[slimeFire.name]回答道，他双手交叉，背靠着木制路障，讲述着自己的故事。[slimeFire.speech(很多其他保安都为难我，只因为#IF(!game.isIncestEnabled())我不怕给姐姐她最喜欢的东西#ELSE我总是利用休息时间和[slimeIce.name]来一炮#ENDIF。是吧，[slimeIce.name]？)]
 	</p>
 	<p>
-		[slimeFire.speech(Hah!)] [slimeFire.name] laughs. [slimeFire.speech(That's what I love about you, #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF. You're always so shy in front of others, but when it's just the two of us, you're begging for my co-)]
+		[slimeIce.speech(#IFgame.isIncestEnabled()#THEN哥——哥哥！#ELSE[slimeFire.name]！#ENDIF求你了！)][slimeIce.name]她结结巴巴地说着，转过身去以藏起她羞红的脸颊，结果露出了她的屁股。
 	</p>
 	<p>
-		[slimeIce.speech([slimeFire.Name]! You're not even answering [pc.name]'s question!)] [slimeIce.name] shouts, spinning back around to face the two of you as she cuts her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF off. With a little cough, she then turns to address you, and continues her #IFgame.isIncestEnabled()#THENbrother's#ELSElover's#ENDIF story. [slimeIce.speech(So, the two of us were working at the Gambling Den, and, partly due to the harassment [slimeFire.name] was receiving, we were looking for something a bit more in our lives. That's when [slimeRoyalGuard.name] came along.)]
+		[slimeFire.speech(哈！)][slimeFire.name]笑了，[slimeFire.speech(我就喜欢你这一点，#IFgame.isIncestEnabled()#THEN老妹#ELSE[slimeIce.name]#ENDIF。你在别人面前总是羞答答的，但只有我们两个的时候，你就求着要我的鸡——)]
 	</p>
 	<p>
-		[slimeFire.speech(Yeah,)] [slimeFire.name] continues, not being able to help himself from telling the rest of the story, [slimeFire.speech(good old [slimeRoyalGuard.name] was the first demon-slime I'd ever seen, and when he overheard the stuff my co-workers were saying about me, he immediately jumped to my aid. Well, one thing led to another, and before we could defuse the situation, [slimeRoyalGuard.name] and I were having to defend ourselves against the entire security staff!)]
+		[slimeIce.speech([slimeFire.Name]！你还压根没有回答[pc.name]的问题呢！)][slimeIce.name]喊道，转身面对着你们两个，打断她#IFgame.isIncestEnabled()#THEN哥哥#ELSE爱人#ENDIF的话。她轻咳一声，又转向你，继续讲起她#IFgame.isIncestEnabled()#THEN哥哥#ELSE爱人#ENDIF的故事：[slimeIce.speech(我们两个曾在赌场工作，有部分原因是[slimeFire.name]遭受了骚扰，这促使我们想要在生活中寻找一些改变。此时，[slimeRoyalGuard.name]出现了。)]
 	</p>
 	<p>
-		[slimeIce.speech(And [slimeFire.name] won, of course!)] [slimeIce.name] excitedly shouts, gazing at her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF with wonder in her eyes.
+		[slimeFire.speech(是啊。)][slimeFire.name]忍不住插嘴，继续讲起剩下的故事，[slimeFire.speech(老[slimeRoyalGuard.name]是我见过的第一个恶魔史莱姆，某次他无意中听到我的同事在议论我，他立即跳出来拔刀相助。好吧，一事接一事，在我们化解局势之前，我和[slimeRoyalGuard.name]不得不自保，对抗所有安保人员！)]
 	</p>
 	<p>
-		[slimeFire.speech(Of course I did!)] [slimeFire.name] exclaims. [slimeFire.speech(Well, with more than a little help from [slimeRoyalGuard.name], of course. Anyway, after that, [slimeRoyalGuard.name] offered us shelter and a real purpose in life; swearing ourselves to protect the Queen of all Slimes!)]
+		[slimeIce.speech(当然喽，最后是[slimeFire.name]赢了！)][slimeIce.name]欢呼着，她眼中闪烁着惊奇，注视着她的#IFgame.isIncestEnabled()#THEN哥哥#ELSE爱人#ENDIF。
 	</p>
 	<p>
-		[slimeIce.speech([slimeRoyalGuard.name] even taught me how to use a sword!)] [slimeIce.name] interrupts again.
+		[slimeFire.speech(那可不！)][slimeFire.name]惊叫着，[slimeFire.speech(当然，[slimeRoyalGuard.name]可也帮了我不少。话说回来，在那之后，[slimeRoyalGuard.name]为我们提供了庇护所和生活的真正目标：发誓要保护史莱姆女王！)]
 	</p>
 	<p>
-		[slimeFire.speech(That's right!)] [slimeFire.name] laughs. [slimeFire.speech(My #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF can do anything if she puts her mind to it, and now she's even almost as good as me! Well, that's our story, such as it is...)]
+		[slimeIce.speech([slimeRoyalGuard.name]还教了我怎么用剑！)][slimeIce.name]再次打断说道。
 	</p>
 	<p>
-		[pc.speech(Thanks for sharing it with me,)] you respond, your curiosity sated.
+		[slimeFire.speech(太对了！)][slimeFire.name]笑了，[slimeFire.speech(只要#IFgame.isIncestEnabled()#THEN我妹妹#ELSE[slimeIce.name]#ENDIF用心，她什么事都能做到，现在她甚至和我不相上下！好了，这就是我们的故事，虽然这……)]
 	</p>
-	]]>
-	</htmlContent>
+	<p>
+		[pc.speech(谢谢你和我分享。)]你的好奇心得到了满足。
+	</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_GUARD_SEX_AS_DOM"><![CDATA[
 	<p>
-		As you step back from the #IFgame.isIncestEnabled()#THENslime siblings#ELSEslimes#ENDIF, they both crawl over to the nearest stone bench, before sinking down onto it.
-		 [slimeFire.Name] lets out a deep sigh, and as he leans back against the wall, [slimeIce.name] lies down to rest her head in his lap.
+		当你后退一步离开#IFgame.isIncestEnabled()#THEN史莱姆兄妹们#ELSE史莱姆们#ENDIF，它们就都爬到最近的石凳上，然后堆叠起来。
+		[slimeFire.Name]靠到墙上，深深叹了口气，[slimeIce.name]把头靠在他的腿上躺下来休息。
 	</p>
 	<p>
-		You quickly get your things in order, before preparing to continue on your way.
+		你快速收拾好东西，然后继续旅程。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_GUARD_SEX_AS_SUB"><![CDATA[
 	<p>
-		The #IF(game.isIncestEnabled())slime siblings#ELSEslimes#ENDIF both move away from you, before stepping over to the nearest stone bench and sinking down onto it.
-		 [slimeFire.Name] lets out a deep sigh, and as he leans back against the wall, [slimeIce.name] lies down to rest her head in his lap.
+		#IF(game.isIncestEnabled())史莱姆兄妹#ELSE史莱姆#ENDIF从你身边走开，然后走到最近的石凳上坐下。
+		[slimeFire.Name]深深地叹了一口气，当他靠着墙坐下时，[slimeIce.name]也躺了下来，并把头靠在他的腿上。
+
 	</p>
 	<p>
-		You quickly get your things in order, before preparing to continue on your way.
+		你快速收拾好东西，然后继续旅程。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_GUARDS_COMBAT_PLAYER_VICTORY"><![CDATA[
 	<p>
-		[slimeFire.Name] and [slimeIce.name] both stagger back, dropping their swords and bucklers in defeat.
+		[slimeFire.Name]和[slimeIce.name]踉踉跄跄地后退，因落败而松开了手中的剑与盾，任由它们掉到地上。
 	</p>
 	<p>
-		[slimeIce.speech(~Aah!~ #IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.name]!#ENDIF I can't carry on...)] [slimeIce.name] moans, before sinking to the floor and reaching down between her legs.
+		[slimeIce.speech(~啊！~#IFgame.isIncestEnabled()#THEN哥——哥哥！#ELSE[slimeFire.name]！#ENDIF我撑不住了……)][slimeIce.name]呜咽着倒在地上，伸手探向腿间。
 	</p>
 	<p>
-		[slimeFire.Name] seems to be in a similar state of affairs, and as you step towards the defeated #IFgame.isIncestEnabled()#THENslime siblings#ELSEslimes#ENDIF, he drops down on one knee, panting, [slimeFire.speech(We... We surrender... No more...)]
+		[slimeFire.Name]似乎处于类似的状态，你走向战败的#IFgame.isIncestEnabled()#THEN史莱姆兄妹#ELSE两只史莱姆#ENDIF时，他单膝跪地，喘息道：[slimeFire.speech(我……我们投降……别打了……)]
 	</p>
 	<p>
-		With your powerful arcane aura clearly causing these two slimes to be overwhelmed with lust, you wonder if you should take advantage of the situation, or continue on your way through the Slime Queen's tower...
+		你强大的奥术灵气显然让这两只史莱姆欲火焚身，你琢磨着是该趁势而上，还是在史莱姆女王塔中继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_GUARDS_COMBAT_PLAYER_VICTORY_CONTINUE"><![CDATA[
 	<p>
-		Ignoring the lewd moans coming from the #IF(game.isIncestEnabled())slime siblings#ELSEslimes#ENDIF, you [pc.step] past them and prepare to continue on your way. Although you don't show any interest in having sex with them, [slimeFire.name] and [slimeIce.name] continue to let out a series of horny moans as they proposition you for sex, letting you know that you could always change your mind and have some fun with them if you wanted to...
+		你忽略#IF(game.isIncestEnabled())史莱姆兄妹#ELSE史莱姆#ENDIF色情的呻吟，径直经过他们，继续你的路。虽然你对和他们做爱没有任何兴趣，但[slimeFire.name]和[slimeIce.name]依旧发出连绵的色情呻吟，提议你来做爱。你知道只要你愿意找乐子，你可以随时改变想法……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_GUARDS_COMBAT_PLAYER_DEFEAT"><![CDATA[
 	<p>
-		You can't carry on fighting any longer, and stagger back against the nearest wall, panting, [pc.speech(P-Please... No more...)]
+		由于无法再继续战斗下去，你摇摇晃晃地靠在最近的一面墙大口喘着粗气：[pc.speech(拜托……别打了……)]
 	</p>
 	<p>
-		[slimeIce.speech(~Aah!~ #IFgame.isIncestEnabled()#THENB-Brother!#ELSE[slimeFire.name]!#ENDIF This fight's got me all... Y-You know...)] [slimeIce.name] moans, reaching down between her legs and starting to stroke her [slimeIce.pussy+] as she watches you desperately trying to catch your breath.
+		[slimeIce.speech(~啊哈！~#IFgame.isIncestEnabled()#THEN哥——哥哥！#ELSE[slimeFire.name]！#ENDIF这一架打得我……你知道我说什么……)][slimeIce.name]呜咽着，伸手探向腿间，触碰起自己[slimeIce.pussy+]，她此时还看着你拼命地试图喘过气来。
 	</p>
 	<p>
-		[slimeFire.speech(~Mmm!~ Me too #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF!)] [slimeFire.name] replies, before stepping forwards and grabbing you by the [pc.arm]. With a devious smirk on his face, he growls, [slimeFire.speech(I think it's time for some fun!)]
+		[slimeFire.speech(~唔嗯！~我也是，#IFgame.isIncestEnabled()#THEN妹妹#ELSE[slimeIce.name]#ENDIF！)][slimeFire.name]说着，上前抓住你的[pc.arm]。带着狡黠的坏笑，他咆哮道：[slimeFire.speech(我想是时候找点乐子了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARD_POST_SEX_SPITROASTED_UPON_DEFEAT"><![CDATA[
 	<p>
-		In one swift move, [slimeFire.name] throws you to the floor, laughing, [slimeFire.speech(That's right, get down on all fours so me and #IFgame.isIncestEnabled()#THENsis'#ELSE[slimeIce.name]#ENDIF can have some fun!)]
+		[slimeFire.name]一下子把你摔到了地上，然后哈哈笑道：[slimeFire.speech(没错！就这样跪在地上！让我和#IFgame.isIncestEnabled()#THEN我妹妹#ELSE[slimeIce.name]#ENDIF一起玩个爽！)]
 	</p>
 	<p>
-		Before you can react, [slimeFire.name] drops down onto his knees behind you, before grabbing hold of your [pc.hips+] and grinding his [slimeFire.cock+] against your [pc.ass+]. Seeing her #IFgame.isIncestEnabled()#THENbrother#ELSElover#ENDIF take such a bold move, [slimeIce.name] quickly steps forwards, before dropping down onto her knees right in front of your face. Shuffling forwards, she presents her [slimeIce.pussy+] to you, and moans, [slimeIce.speech(Come on! Get that tongue working already!)]
+		还没等你反应过来，[slimeFire.name]就跪倒在你身后，然后抓住你[pc.hips+]，并用他[slimeFire.cock+]在你[pc.ass+]上磨蹭。在看到自己#IFgame.isIncestEnabled()#THEN哥哥#ELSE伴侣#ENDIF做出如此大胆的举动后，[slimeIce.name]也快步跪倒在你的面前。随后向前挪了挪，向你展示她[slimeIce.pussy+]并呻吟道：[slimeIce.speech(来吧 ！让你的舌头工作起来！)]
 	</p>
 	<p>
-		Completely exhausted from your fight with #IFgame.isIncestEnabled()#THENthis brother-sister pair#ELSEthe slimes#ENDIF, you're in no position to try and break free, and realise that they're going to have their way with you, one way or another...
+		和#IFgame.isIncestEnabled()#THEN这对兄妹pair#ELSE这对情侣#ENDIF的战斗使你筋疲力竭了，所以你现在根本无法逃脱，只能被他们为所欲为……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_GUARD_SEX_DEFEATED"><![CDATA[
 	<p>
-		The #IFgame.isIncestEnabled()#THENslime siblings#ELSEslimes#ENDIF both step back, allowing you to sink to the floor as you're completely overcome with exhaustion. You aren't given much time to rest, however, as after just a moment you're seized by [slimeFire.name], before being hauled to your feet.
+		#IF(game.isIncestEnabled())史莱姆兄妹#ELSE史莱姆#ENDIF后退了一步，筋疲力尽的你倒在了地上。不过你没有多少时间休息，因为只过了一会儿，你就被[slimeFire.name]抓住，并在地上被拖行了起来。
 	</p>
 	<p>
-		[slimeIce.speech(Here's your stuff,)] [slimeIce.name] says, shoving your things into your [pc.arms].
+		[slimeIce.speech(这是你的东西，)][slimeIce.name]在说完之后把东西塞到了你的[pc.arms]。
 	</p>
 	<p>
-		With that, [slimeFire.name] half-carries, half-drags you to the front door of the tower, before releasing you and stepping back. [slimeFire.speech(Maybe this'll teach you a lesson about trespassing!)]
+		就这样，[slimeFire.name]半抱半拖地把你带到了塔楼的前门，然后将你松开，在转身离开前，其开口道：[slimeFire.speech(也许这会给你上一堂课，让你知道什么叫非法入侵！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_GUARD_SEX_DEFEATED_KICKED_OUT"><![CDATA[
 	<p>
-		Before you can say anything in your defence, [slimeFire.name] pulls open the tower's front door, before kicking your rear end.
-		 You stagger forwards from the blow, and, still exhausted from the fight and resulting sex, you find yourself tumbling to the floor.
+		还没等你开口辩解，[slimeFire.name]就拉开了塔楼的前门，然后一脚踢在你的屁股上。
+		你被这一脚踢得踉踉跄跄着向前踏了几步，因为打斗和性爱，你感觉有些精疲力竭了，这一下让你跌坐在了地板上。
 	</p>
 	<p>
-		You don't try to get up right away, and simply lie back on the island's gentle hill, trying to catch your breath. After some time, you finally feel like you've recovered enough energy to be able to stand, and, pushing yourself to your feet, you make sure that you're still in possession of all your things, before looking back at the Slime Queen's tower. You see that the front door has been left slightly ajar, and while you're in no state to try and take another fight right away, you know that you can always come back and give it another go some other time...
+		你没有马上爬起来，而是躺在岛上的缓坡上缓上一会。过了一段时间，你终于觉得自己恢复了足够的体力，于是你用力站起来，确保自己的东西都还在，然后回头看了看史莱姆女王所在的塔楼。你看到前门被微微虚掩着，虽然你现在没办法马上再打一场，但你知道，改天你还可以回来再打一场……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRCASE_UP"><![CDATA[
 	<p>
-		You find yourself at the bottom of a narrow, spiral staircase. To either side of the opening, life-sized stone statues of medieval knights are standing guard, and beside each one, a flickering arcane torch is held in a metal sconce.
+	你正站在一个狭窄的螺旋楼梯底部。在楼梯口的两侧有一对栩栩如生的中世纪骑士石像在站岗，在每个石像旁的金属灯罩里都插着一支闪烁的神秘火炬。
 	</p>
 	<p>
-		It doesn't look like the statues are going to present much of a barrier to your passage, and so there's nothing stopping you from travelling up the stairs to the tower's upper floor.
+		这些雕像看起来不会对通行造成太大的阻碍，因此没什么能阻止你沿着楼梯上到塔楼的上层。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRCASE_DOWN"><![CDATA[
 	<p>
-		You find yourself at the top of a narrow, spiral staircase. To either side of the opening, and just like the ones on the ground floor, life-sized stone statues of a medieval knights are standing guard, and beside each one, a flickering arcane torch is held in a metal sconce.
+	你现在位于一座狭窄的螺旋楼梯的上方，楼梯口两侧各有一座中世纪骑士石像守卫着，和一楼一样，在在每座石像的旁边都有一个闪烁着神秘光芒的火炬插在金属壁的灯架上。
 	</p>
 	<p>
-		It doesn't look like the statues are going to present much of a barrier to your passage, and so there's nothing stopping you from travelling down the stairs to the tower's ground floor.
+		这些雕像看起来不会对通行造成太大的阻碍，因此没什么能阻止你沿着楼梯上到塔楼的下层。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		The corridors of the Slime Queen's Tower are very similar in aesthetic to its entrance hall. Underfoot, a thick burgundy-and-gold rug runs down the middle of the floor, while the stone walls to either side are covered in thick fabric tapestries, each one bearing a depiction of a medieval scene. In between these tapestries, and evenly positioned down the corridor, stand life-sized stone statues of knights clad in armour. 
+		史莱姆女王塔内的走廊与门厅遵循着相似的设计美学。酒红色和金色相间的厚重地毯铺在走廊正中，描绘中世纪景象的织锦挂毯装点两侧石墙。与真人等大的骑士石雕均匀陈列于走廊挂毯间，皆着盔甲。
 	</p>
 	<p>
-		It's obvious even from a cursory glance at the tower's decor that the Slime Queen is a big fan of medieval history, and, not wanting to miss this opportunity to find out a little more about Dominion's past, you find yourself stopping to take a look at some of tapestries' scenes. Apart from the occupants being some form of animal-morph or another, the style and content are identical to the medieval art of your world, and you can't help but marvel at how similar Dominion's culture, scenery, and history are to that of the place where you came from.
+		即使只是简单一瞥这座塔的装饰，也能看出史莱姆女王是中世纪历史的忠实爱好者。你不想错过这个了解御城区历史的大好时机，于是停下脚步，细细观赏几幅挂毯上的场景。除了人物是某种动物化形，挂毯的风格和内容都与你原本世界的中世纪艺术别无二致。御城区的文化、景色和历史与你那个世界竟如此相似，你不禁大为惊奇。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM"><![CDATA[
 	<p>
-		Just like the rest of the tower, the stone walls of this bedroom are covered in tapestries, and a thick burgundy rug covers most of the floor. On one side of the room stands a neatly made four-poster bed, and opposite to that, a small fire flickers happily away in a stone hearth.
+		这个卧室和塔中的其他地方类似，石墙装饰着挂毯，大部分地面铺着厚厚的酒红色地毯。房间一侧有张整洁的四柱床，而对面的石炉里，火苗欢快地摇曳着。
 	</p>
 	<p>
-		From the pile of clothes on top of one of the room's dressers, it's obvious that this bedroom is in regular use, but after a cursory look around the place, you discover that there's nothing of any interest being stored in here.
+		房间里其中一个梳妆台上堆着不少衣物，这间卧室明显经常被使用，但你粗略打量了一圈，发现这里放的东西都没什么价值。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STORAGE_VATS"><![CDATA[
 	<p>
-		The majority of this room is taken up by a huge distillation device. A large glass tank, filled with a sweet-smelling pink liquid, is joined to a metal tower by means of a glass tube. Taking a closer look, you see the pink slime slowly moving up through the pipe as it's sucked into the tower, and, letting your gaze wander down over the adjoining pipes, valves, and other such machinery, you find yourself looking at a little tap set into the bottom of the metal tower.
+		这个房间的大部分被一个巨大的蒸馏装置占据。一个大玻璃罐里装满了香甜的粉红色液体，通过玻璃管连接到一个金属塔上。仔细一看，你会发现粉红色的粘液在被吸入塔中的过程中慢慢地通过管道往上移动，你的视线随着移动，一直到旁边的管道，阀门和其他类似的机器上，最后你发现了在金属塔底部的一个小水龙头。
 	</p>
 	<p>
-		Beside this tap, at least a hundred empty bottles and canisters are neatly stacked, and you realise that this is the place where all of the 'biojuice' is coming from. Upon further inspection, you find a roll of familiar-looking bottle labels, which reveal this to be not just the source of all the transformative slime fluids in Submission, but also the place where the popular drink 'Slime Quencher' is manufactured.
+		水龙头旁堆了上百个空瓶空罐，你意识到这里就是“生物萃取液”的生产地。你进一步翻检，发现了一卷眼熟的饮料瓶标签——这里产出的除了屈城区那些具有转化效果的史莱姆粘液，还有流行饮品“史莱姆畅饮”。
 	</p>
 	<p>
-		While the machine is steadily humming away - no doubt producing the next batch of the Slime Queen's beverages - there's nobody in here monitoring the process, and you suppose that it's all set up so as to only require someone for the final bottling stage.
+		机器在不停地运转——无疑是在生产下一批史莱姆女王的饮料，但这里却没有人在监控这个过程，你猜这一切都是自动化的，只在最后的装瓶阶段才需要人。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_PACIFIED"><![CDATA[
 	<p>
-		Up ahead, you see [slimeRoyalGuard.name] swinging his huge sword back and forth as he charges up and down the corridor. He catches sight of you as you approach, and, slinging the sword over his shoulder, he steps forwards and bars the way as he calls out to you, [slimeRoyalGuard.speech(Ah! If it isn't [pc.name], coming to challenge the mighty [slimeRoyalGuard.name]!)]
+		你向前方走近，看到[slimeRoyalGuard.name]正挥舞着巨剑在走廊上来回冲锋。他发现了你，于是扛起剑向你逼近，一边挡住去路，一边向你喊道：[slimeRoyalGuard.speech(啊！这不是[pc.name]吗，前来挑战勇猛的[slimeRoyalGuard.name]！)]
 	</p>
 	<p>
-		Coming to a halt in front of the [slimeRoyalGuard.race], you smile as you reply, [pc.speech(Hello again, [slimeRoyalGuard.name]. You're as energetic as ever, I see.)]
+		你在[slimeRoyalGuard.race]面前停下，微笑着回复道：[pc.speech(又见面了，[slimeRoyalGuard.name]。看来你还是那么精力充沛。)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Why of course!)] [slimeRoyalGuard.name] cries out. [slimeRoyalGuard.speech(There's no time to be resting! Not while there are still combat techniques to be learned!)]
+		[slimeRoyalGuard.speech(那当然！)][slimeRoyalGuard.name]大喊，[slimeRoyalGuard.speech(没时间休息了！还有很多战斗技巧要学呢！)]
 	</p>
 	<p>
-		As if to demonstrate his resolve, [slimeRoyalGuard.name] suddenly grasps his sword in both hands, and, spinning around, he darts forwards, before slicing and thrusting into mid-air as shows off his ability to wield his weapon. Once he's done, he turns back to you, panting slightly as he issues a challenge, [slimeRoyalGuard.speech(Her royal Highness has instructed me to allow you to come and go as you please, but she never forbade me from issuing challenges! If you'd like to have a little sparring match, I'd love to put my moves to the test! What do you say?)]
+		似乎是在印证着他的决心，[slimeRoyalGuard.name]突然双手握剑，旋转着向前冲锋，剑锋在空气中一挑一折。他展示完其武艺后，回过头来，一边微微喘息，一边向你发出挑战：[slimeRoyalGuard.speech(女王陛下吩咐过让你随意进出，但她从未禁止我发出挑战！如果你想比试一下，我很乐意检验一下我的招式！怎么样？)]
 	</p>
 	<p>
-		Before you can answer, [slimeRoyalGuard.name] gets carried away, and continues, [slimeRoyalGuard.speech(Oh! And whoever wins gets to use the losers body in whatever way they like for the next hour! Ha-ha!)]
+		你还没回答，[slimeRoyalGuard.name]就得意忘形地继续说道：[slimeRoyalGuard.speech(哦！谁赢了，谁就能在接下来的一个小时里对输家的身体为所欲为！哈哈！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_DEFEATED"><![CDATA[
 	<p>
-		Completely and utterly exhausted, [slimeRoyalGuard.name] is still sunk down on one of the low stone benches in this area. As you pass, he lets out a low groan, and you wonder if you should take advantage of his weakened state, or continue on your way through the Slime Queen's tower...
+		[slimeRoyalGuard.name]已经筋疲力尽了，仍然沉沉地瘫倒在这里的矮石凳上。当你经过时，他发出低沉的呻吟，你思索要不要在他虚弱时趁势而上，还是继续在史莱姆女王塔中前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_REPEAT"><![CDATA[
 	<p>
-		Up ahead, you see the familiar figure of [slimeRoyalGuard.name] swinging his huge sword back and forth as he charges up and down the corridor. He catches sight of you as you approach, and, slinging the sword over his shoulder, he steps forwards and bars the way as he calls out to you, [slimeRoyalGuard.speech(Ah! If it isn't [pc.name], coming to challenge the mighty [slimeRoyalGuard.name] once more!)]
+		你向前方走近，看到[slimeRoyalGuard.name]熟悉的身影正挥舞着巨剑在走廊上来回冲锋。他发现了你，于是扛起剑向你逼近，一边挡住去路，一边向你喊道：[slimeRoyalGuard.speech(啊！这不是[pc.name]吗，再来挑战勇猛的[slimeRoyalGuard.name]！)]
 	</p>
 	<p>
-		Coming to a halt in front of the [slimeRoyalGuard.race], you see a look of steely determination in his eyes, and know that you have no choice but to fight your way out of this.
+		你在[slimeRoyalGuard.race]面前停下，看到他坚定如铁的目光，你就知道你除了和他动手之外别无选择。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST"><![CDATA[
 	<p>
-		Up ahead, a little way down the corridor, you see a rather curious sight. A purple incubus-slime, standing at well over [units.size(183)] in height, is charging back and forth, wildly swinging a huge two-handed sword this way and that as he shouts and grunts from exertion. As you approach, you see that he's wearing a pair of black leather chaps, and, apart from a cloth wrapping around his stomach, is currently topless. Preparing to defend yourself, you continue walking forwards, until the muscular demonic slime finally notices your presence. 
+		在走廊前方不远处，你看到了一个相当迷惑的景象：一个身高超过[units.size(183)]的紫色淫梦魔史莱姆正在来回冲锋，一边狂野地挥舞着一把巨大的双手剑，一边因用力过度而大喊大叫、哼哼唧唧。当你走近时，你看到他穿着一双黑色皮靴，除了肚子上裹着一块布之外，他现在上身赤裸。你摆好防御姿势，继续向前走，直到肌肉发达的史莱姆恶魔终于注意到你的存在。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Who dares approach I, the mighty [slimeRoyalGuard.name], royal bodyguard of her Highness, the Queen of all Slimes?!)] the [slimeRoyalGuard.race] booms, slinging his huge sword over his shoulder as he turns to bar your way forwards.
+		[slimeRoyalGuard.speech(谁胆敢接近我，勇猛的[slimeRoyalGuard.name]，史莱姆女王殿下的皇家护卫？！)][slimeRoyalGuard.race]大喝一声，将巨剑扛在肩上，转身挡住你的去路。
 	</p>
 	<p>
-		[pc.speech(My name is [pc.name],)] you offer, [pc.speech(and I have business with the Slime Queen.)]
+		[pc.speech(我叫[pc.name]，)]你回答，[pc.speech(我有事找史莱姆女王。)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Is that so?)] [slimeRoyalGuard.name] laughs, his huge, barrel-like chest reverberating from his deafening roar as he booms, [slimeRoyalGuard.speech(I don't know how you got past the two downstairs, but your trespassing ends here! None can defeat the mighty [slimeRoyalGuard.name]!)]
+		[slimeRoyalGuard.speech(是这样吗？)][slimeRoyalGuard.name]大笑，巨大如桶的胸膛随着他震耳欲聋的吼声起伏，[slimeRoyalGuard.speech(我不知道你是怎么通过楼下那两道门的，但你的非法闯入到此为止了！没人能打败勇猛的[slimeRoyalGuard.name]！)]
 	</p>
 	<p>
-		As if to prove his point, the huge purple slime grips his sword in both hands, and, turning to one side, he thrusts the blade out into mid-air, before turning it back and performing a perfectly horizontal slice. You're alarmed by how agile [slimeRoyalGuard.name] appears to be, despite his huge size, and before you can think about what to do next, he steps forwards, booming once more as he points his sword at you. [slimeRoyalGuard.speech(Defend yourself, [pc.name]!)]
+		似乎是在印证着他的观点，这个高大的紫色史莱姆双手持剑，身体微微一偏，剑锋在空气中一挑一折，划出一道漂亮的水平弧线。别看[slimeRoyalGuard.name]个头很大，但是他的速度快得惊人，还没等你想好下一步该怎么做，他就向前跨出一步，又是一声怒吼，剑锋直指你。[slimeRoyalGuard.speech(快防御，[pc.name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_ROYAL_GUARD_BEGIN_SEX_AS_DOM"><![CDATA[
 	<p>
-		You can't resist the sight of [slimeRoyalGuard.name]'s huge, muscular figure sitting on the stone bench before you. The way his broad, strong chest rises and falls with ever breath has you captivated, and before you're able to stop yourself, you're stepping forwards and reaching down to take hold of his arm. As he looks up at you, you pull him to his feet, and, stepping forwards, you plant a passionate kiss on his slightly parted lips.
+		眼前[slimeRoyalGuard.name]正坐在石凳上，你无法抗拒那壮硕的身躯。他宽阔而强壮的胸膛随着每一次呼吸起伏，让你着迷。没等脑子反应过来，你已经走上前去，伸手抓住了他的胳膊。他刚抬头看你，你就将他拉起身来，更进一步，热情地吻上他微微张开的双唇。
 	</p>
 	<p>
-		[slimeRoyalGuard.Name] reaches around to pull you close to him, but, not wanting to let him take control, you quickly break off the kiss, before grabbing hold of his wrists and warning him, [pc.speech(Don't forget, [slimeRoyalGuard.name], <i>I'm</i> the one in charge here.)] 
+		[slimeRoyalGuard.Name]环抱住你，将你紧紧拉到身边。但你不愿让他掌控局面，于是结束了这个吻，随后扯着他的手腕警告道：[pc.speech(别忘了，[slimeRoyalGuard.name]，<i>我才是</i>主导者。)]
 	</p>
 	<p>
-		With that, you release your grip on his wrists, and prepare to have some fun...
+		说罢，你松开手，准备找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_ROYAL_GUARD_BEGIN_SEX_AS_SUB"><![CDATA[
 	<p>
-		You can't resist the sight of [slimeRoyalGuard.name]'s huge, muscular figure sitting on the stone bench before you. The way his broad, strong chest rises and falls with ever breath has you captivated, and before you're able to stop yourself, you're stepping forwards and sitting down next to him. As he looks over at you, you lean into his chest, before planting a passionate kiss on his slightly parted lips.
+		眼前[slimeRoyalGuard.name]正坐在石凳上，你无法抗拒那壮硕的身躯。他宽阔而强壮的胸膛随着每一次呼吸起伏，让你着迷。没等脑子反应过来，你已经走上前去，坐在他身边。他刚转头看你，你就依偎在他的胸膛，又热情地吻上他微微张开的双唇。
 	</p>
 	<p>
-		[slimeRoyalGuard.Name] reaches around to pull you close to him, and, perfectly content to let him take control, you gently break off the kiss, before [pc.moaning] [pc.speech(Oh yes, [slimeRoyalGuard.name], take me! Take me now!)] 
+		[slimeRoyalGuard.Name]从后面环抱住你并将你紧紧拉到身边，你欣然接受他的掌控且温柔地结束了这个吻，随后[pc.moaning]道：[pc.speech(哦，是的，[slimeRoyalGuard.name]，占有我吧！现在就占有我！)]
 	</p>
 	<p>
-		With that, the [slimeRoyalGuard.race] dominantly grabs hold of you, pulling you to your feet as he prepares to have some fun with you...
+		这个[slimeRoyalGuard.race]以主导者的姿态抓住你，随后将你拉起身准备好好与你玩玩……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_TALK"><![CDATA[
 	<p>
-		Curious as to how [slimeRoyalGuard.name] came to be the Slime Queen's royal bodyguard, you step forwards and ask, [pc.speech(What series of events led to you becoming the Slime Queen's royal guard?)]
+		你很好奇[slimeRoyalGuard.name]是怎么成为史莱姆女王的皇家守卫的，于是你走近问道：[pc.speech(发生了什么事让你成为史莱姆女王的皇家守卫？)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Well, I suppose it all started back when I was still a demon. Although my Lilin mother, Lunette, was unwilling to recognise me as her son, she didn't completely cut me off, and amongst other things, she gave me this sword.)] [slimeRoyalGuard.name] holds his sword up in front of him, smiling as he recalls the memory. [slimeRoyalGuard.speech(Eager to try and impress her, I devoted myself to learning how to wield it, but no matter how much I tried, nor how good I became, nothing I did was enough to earn her praise.)]
+		[slimeRoyalGuard.speech(嗯，我想这要从我还是恶魔的时候说起。虽然我的母亲，莉琳露内特，不愿意承认我是她的儿子，但她并没有完全与我断绝关系。除了别的，她还给了我这把剑。)][slimeRoyalGuard.name]把剑举在面前，微笑着回忆起这段记忆，[slimeRoyalGuard.speech(为了让她记住我，我醉心磨练剑术。但无论我如何尝试，也无论我变得多么优秀，我所做的一切甚至都得不到她的一句表扬。)]
 	</p>
 	<p>
-		[slimeRoyalGuard.name]'s smile disappears, and he frowns as he continues, [slimeRoyalGuard.speech(After a while, I gave up on trying to impress her, and travelled from the Foloi Fields to find adventure in Dominion.)]
+		[slimeRoyalGuard.name]的微笑消失了，他眉头紧锁地继续说，[slimeRoyalGuard.speech(过了一段时间，我不再试图打动她，转而从弗洛伊田野来到御城区探险。)]
 	</p>
 	<p>
-		[pc.speech(And that's when you met Catherine?)] you ask.
+		[pc.speech(然后你就遇到凯瑟琳了？)]你问。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(That's right,)] [slimeRoyalGuard.name] replies. [slimeRoyalGuard.speech(Soon after arriving in the city, I realised that the lowlifes who haunt the alleyways wouldn't ever be able to challenge my skill with the sword, so, after hearing that Submission was more dangerous, I travelled down there in search of worthy opponents. Fate must have decreed that we meet, for I found her Highness in the very first tunnel that I decided to explore.)]
+		[slimeRoyalGuard.speech(对。)][slimeRoyalGuard.name]回复道，[slimeRoyalGuard.speech(在御城区待了一段时间后，我意识到那些在巷子里出没的底层居民根本不是我的对手。所以，听说屈城区更危险，我就前往那里寻找有实力的对手。命运注定我们会相遇，在我决定探索的第一个隧道里，我找到了公主殿下。)]
 	</p>
 	<p>
-		At this point, you see [slimeRoyalGuard.name]'s cheeks turn a slightly darker shade of purple, and he shuffles about on his feet a little as he continues, [slimeRoyalGuard.speech(She'd just run into a pair of rat-boys, you see, who were about to have their way with her... Needless to say, I quickly gave them a sound beating, and once I'd seen them off, I turned to help her Highness. S-She had the wrong idea at first, and thought that I wanted to ~Ahem!~ 'ravish' her.)]
+		这时，你注意到[slimeRoyalGuard.name]的脸颊好像变紫了，他一边说着，一边有些不自在地挪动着脚步，[slimeRoyalGuard.speech(她正被两个鼠男追赶，一看就是欲行不轨……不用说，我很快就给了他们一顿狠揍，把他们赶走后，我转过身去帮助公主殿下。一开始，她误会了，以为我想要……咳咳，‘非礼’她。)]
 	</p>
 	<p>
-		Knowing what Catherine is like, you nod in understanding, imagining how the situation must have played out. [slimeRoyalGuard.name] quickly moves on, and continues with his tale, [slimeRoyalGuard.speech(After I'd explained that I was simply protecting her, I helped her to her feet. She was so happy to have been saved, she immediately hugged me, which caught me completely off guard. Still weakened from her ordeal, she accidentally collapsed on top of me, and before I knew what was happening, I'd been sucked into her body!)]
+		了解凯瑟琳的德性后，你点头表示理解，可以想象出当时的情况。[slimeRoyalGuard.name]很快继续他的故事：[slimeRoyalGuard.speech(在我解释完我只是在保护她之后，我帮她站了起来。她因为得救而欣喜若狂，立刻拥抱了我，打得我措手不及。她才经历了一番挣扎，虚弱不已，就这么不小心倒在了我身上。不等我我意识到发生了什么，我已经陷入了她的体内！)]
 	</p>
 	<p>
-		[pc.speech(So this is how you became a slime?)] you ask, seeing where this is going.
+		[pc.speech(所以你就变成史莱姆啦？)]你问道，想知道事情会如何发展。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(That's right,)] [slimeRoyalGuard.name] replies. [slimeRoyalGuard.speech(By the time her Highness managed to spit me out, I'd already swallowed down litres of her slime. Needless to say, and as you've already guessed, her body's transformative properties quickly turned me into the slime you see today.)]
+		[slimeRoyalGuard.speech(对。)][slimeRoyalGuard.name]回复道，[slimeRoyalGuard.speech(等到公主殿下把我吐出来的时候，我已经吞下了好几升粘液。不用说，如你所猜，她身体的转化特性很快就把我变成了如今的史莱姆。)]
 	</p>
 	<p>
-		[pc.speech(So you decided to protect the one who'd transformed you?)] you ask, curious to find out how this led to [slimeRoyalGuard.name] becoming Catherine's guard.
+		[pc.speech(所以你决定保护她，那个将你转化成这样的她？)]你问道，好奇这怎么让[slimeRoyalGuard.name]成为了凯瑟琳的守卫。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Well, at first, I was shocked and angry, but her Highness was so distressed by what she'd done, I couldn't stay mad at her for long. She insisted on following me back up to Dominion, calling me 'her heroic knight', and saying that it was fate that led me to her,)] [slimeRoyalGuard.name] recalls, smiling at the memory. [slimeRoyalGuard.speech(By the time I'd gathered enough flames to have a solidification potion made, I'd seen enough of her Highness's antics to realise that she needs someone to protect her. Having grown used to this form, I decided to stay as a slime, and pledged to protect her Highness for as long as she wanted me to.)]
+		[slimeRoyalGuard.speech(嗯，起初，我震惊又愤怒，但公主殿下事后总是非常苦恼，我的气也总是很快就消了。她坚持要跟着我回到御城区，称呼我为她‘英勇的骑士’，还说是命运让我遇到了她。)][slimeRoyalGuard.name]噙着微笑，回忆起那段往事，[slimeRoyalGuard.speech(等我攒了足够的火币制作固化药水时，公主殿下的糗事我也见得够多了，觉得她需要被人保护。习惯了史莱姆形态后，我决定保持现状，并承诺只要公主殿下需要，我就会一直保护她。)]
 	</p>
 	<p>
-		[pc.speech(At this point, Catherine wasn't calling herself the 'Slime Queen' though, right?)] you ask, wondering when that happened.
+		[pc.speech(那时，凯瑟琳还没有自称‘史莱姆女王’，对吧？)]你问道，想知道那是什么时候改口的。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(It was shortly after I'd pledged myself to her that she started doing that,)] [slimeRoyalGuard.name] admits. [slimeRoyalGuard.speech(She grew rather attached to the idea of me being her knight, and decided that forcing her slime transformation onto others made her their queen. Although I was reluctant to carry out some of her more erratic orders at first, I'd already sworn to obey her, and helped her to transform her first subjects.)]
+		[slimeRoyalGuard.speech(在我向她宣誓效忠后不久，她就开始这样了。)][slimeRoyalGuard.name]承认道，[slimeRoyalGuard.speech(她非常依赖我这位骑士，于是决定强迫别人史莱姆转化，使自己成为女王。虽然一开始我不太情愿执行这古怪的命令，但我已经发誓要服从她，所以我帮她转化出她的第一批臣民。)]
 	</p>
 	<p>
-		[pc.speech(Thanks for sharing your story with me,)] you say, your curiosity sated.
+		[pc.speech(谢谢你和我分享故事。)]你的好奇心得到了满足。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_ADMIRE"><![CDATA[
 	<p>
-		Taking note of the fact that [slimeRoyalGuard.name] seems eager to show off his moves, you decide to see if you can trick him into showing off, hoping to get him to tire himself out. [pc.speech(That's some fancy footwork you've got there. I don't think I've seen someone wield a sword that well before.)]
+		你注意到[slimeRoyalGuard.name]似乎急于炫耀自己的招式，便决定骗他炫耀一番，好让他累得筋疲力尽。[pc.speech(你的步法真漂亮，我以前从没见过有人能把剑用得这么好。)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(You're a sharp one!)] [slimeRoyalGuard.name] quickly replies, before lowering his sword and stepping back. [slimeRoyalGuard.speech(But you haven't seen anything yet! Watch this!)] 
+		[slimeRoyalGuard.speech(你眼光真好！)][slimeRoyalGuard.name]迅速回答，然后放下剑，退后一步。[slimeRoyalGuard.speech(但你还没看到什么呢！瞧瞧这个！)] 
 	</p>
 	<p>
-		Just as you'd hoped, the [slimeRoyalGuard.race] starts swinging his sword back and forth, dashing this way and that as he tries to impress you with his moves. You remain silent as you watch, waiting for him to tire himself out.
+		如你所愿，[slimeRoyalGuard.race]来回挥舞他的剑，冲过来冲过去，试图给你留下深刻印象。而你在一旁默不作声，等着他把自己累垮。
 	</p>	
 	<p>
-		After a minute or two, [slimeRoyalGuard.name] lowers his sword and turns back to face you, panting slightly from exertion. You can't help but feel like you've already won a small victory as you hear the distinct hint of fatigue in his voice as he points his arcane blade at you one more. [slimeRoyalGuard.speech(Now that you've seen what I'm capable of, I hope you'll at least try to give me a challenge!)]
+		一两分钟后，[slimeRoyalGuard.name]放下剑，转过身来看你，呼吸有些急促。他又一次将奥术之刃指向了你：[slimeRoyalGuard.speech(既然你已经见识过我的实力了，我希望你至少能试着来挑战我！)]你听出他的声音中明显带着一丝疲惫，不禁觉得自己已经取得了一个小胜利。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_ADMIRE_INSTRUCT"><![CDATA[
 	<p>
-		From your fighting experience, you're able to identify several key mistakes that [slimeRoyalGuard.name] made in his demonstration, and, putting on your most commanding tone, you express your concerns, [pc.speech(On your third turn, you dropped your guard, exposing yourself to an attack from your left. Then when you repeated that move for a second time later on in your performance, you failed once again to keep your head and left-side protected.)]
+		根据你的战斗经验，你能找出[slimeRoyalGuard.name]在演示中犯的几个关键错误，并担忧地指示出来：[pc.speech(第三轮的时候你放松了警惕，把自己暴露在来自左侧的攻击之下。后来你再次重复这个动作时，你又没有保护好脑袋和身体左侧。)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(W-What?)] [slimeRoyalGuard.name] stutters, caught off guard by your sudden critique. [slimeRoyalGuard.speech(But I was leading into-)]
+		[slimeRoyalGuard.speech(什、什么？)][slimeRoyalGuard.name]被你突如其来的批评弄得结结巴巴。[slimeRoyalGuard.speech(但我是在引出——)]
 	</p>
 	<p>
-		[pc.speech(You were leading into getting yourself hit,)] you say, cutting the [slimeRoyalGuard.race] off. [pc.speech(And that wasn't your only mistake. You have a habit of lowering your guard before every strike. While your average untrained opponent won't pick up on it, you're telegraphing each and every one of your moves, leaving yourself open to a counter-attack. You're also far too reliant on overhead swings, and when you do attempt to strike from a different position, your footwork gets pretty sloppy.)]
+		[pc.speech(你这是引别人来打你，)]你打断[slimeRoyalGuard.race]。[pc.speech(不仅这个，你还有个习惯：每次攻击前都会放松警惕。虽然没经验的对手不会注意到这一点，但你的每一招每一式都好像在说自己随时能被反击。而且你也太依赖高空劈斩了，但你试图从别的位置出击时，你的步法又变得相当凌乱。)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(W-Well, I don't have anyone to train with,)] [slimeRoyalGuard.name] tries to explain, [slimeRoyalGuard.speech(so I don't notice these things when I'm practising by myself.)]
+		[slimeRoyalGuard.speech(好、好吧，没人陪我训练，)][slimeRoyalGuard.name]想辩解，[slimeRoyalGuard.speech(所以我自己练习根本注意不到。)]
 	</p>
 	<p>
-		From the tone of his voice, you can tell that you've flustered [slimeRoyalGuard.name], and, wanting to tire him out even more, you seek to capitalise on this opportunity by offering some advice. [pc.speech(Perform that third turn again, and I'll show you where you're going wrong.)]
+		你从[slimeRoyalGuard.name]的声音听出一丝慌乱，为了继续消耗他，你想利用这个机会提点建议：[pc.speech(再把第三轮的动作做一遍，我会告诉你哪里出错了。)]
 	</p>
 	<p>
-		Eager to learn from you, [slimeRoyalGuard.name] does as you ask, and for the next ten minutes, you get him to repeat as many of his moves as possible, pointing out all the places where he's going wrong. Just as you'd hoped, by the time you're done, [slimeRoyalGuard.name] is breathing heavily, and looks to be on the verge of exhaustion. 
+		[slimeRoyalGuard.name]立马求知若渴地乖乖照做，在接下来的十分钟里，你让他尽可能多地重复各种动作，指出所有漏洞。正如你所愿，结束训练时，[slimeRoyalGuard.name]已经喘着粗气，看起来快要精疲力竭了。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Thank you... Thank you for your help...)] [slimeRoyalGuard.name] pants, desperately trying to catch his breath as he readies his sword once more. [slimeRoyalGuard.speech(Now let us fight! I... I want to put these moves... to the test!)]
+		[slimeRoyalGuard.speech(谢谢……谢谢你的帮助……)][slimeRoyalGuard.name]一边拼命喘气，一边再次握好剑。[slimeRoyalGuard.speech(现在来战斗吧！我……想检验一下……学习成果！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_ADMIRE_INSTRUCT_OVERPOWER"><![CDATA[
 	<p>
-		Sensing that you'd be able to overpower [slimeRoyalGuard.name], you step forwards, before giving him one final instruction. [pc.speech(There's one final thing you're lacking in your technique, and it's the difference between an easy victory, and being defeated before you're able to land even one hit.)]
+		你感觉到自己能够战胜[slimeRoyalGuard.name]，于是向前迈了一步，给他最后的指导。[pc.speech(你最后还欠缺一点技巧，而这正是自己轻松取胜和敌人一击未中就被击败的区别所在。)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(What... What's that?)] [slimeRoyalGuard.name] asks, still panting as he tries to get his breath back.
+		[slimeRoyalGuard.speech(什么……是什么？)][slimeRoyalGuard.name]问道，他还在气喘吁吁地尝试平复呼吸。
 	</p>
 	<p>
-		[pc.speech(It's an issue with your favourite stance, where you strike from above. Show me it again,)] you say, preparing to deliver a decisive strike.
+		[pc.speech(这与你最喜欢的下劈姿势有关，让我再看一遍，)]你说，准备好突然袭击。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Like this?)] the [slimeRoyalGuard.race] asks, raising his sword above his head.
+		[slimeRoyalGuard.speech(像这样？)][slimeRoyalGuard.race]把剑举过头顶后问道。
 	</p>
 	<p>
-		[pc.speech(That's right. It's an issue with your mobility. Try doing a complete turn on the spot, and feel how your feet almost trip over one another.)]
+		[pc.speech(没错，看来是你的活动能力出了问题。试着在原地转个圈，感受一下你的双脚是怎么绊在一起的。)]
 	</p>
 	<p>
-		As [slimeRoyalGuard.name] starts to do as you command, you prepare to make your move. Half-way through his turn, with his back towards you, you strike. Dashing forwards, you reach up to grab his arms, twisting them and forcing him to drop his sword before pinning them behind his back. Before he can react to your move, you hook one leg in front of his, and with a forceful shove, you tackle [slimeRoyalGuard.name] to the ground. As his chest hits the solid floor, you drive your weight into his back, completely winding him as you grapple him into a choke-hold.
+		[slimeRoyalGuard.name]乖乖照做，你也准备好出手。当他转身到背对着你时，你猛然出击。先是向前冲去，伸手扭转他的手臂，迫使他放下剑，并将他的胳膊反绑在身后。不等[slimeRoyalGuard.name]反应，你又用一条腿勾住他的腿，把他往地上一摔。等他的胸膛撞到坚实的地面，你就把身体的重量都压在他的后背上，掐住他的脖子，将他完全缠绕起来。
 	</p>
 	<p>
-		[pc.speech(This is the final thing you're lacking,)] you explain to [slimeRoyalGuard.name] as you pin him to the floor. [pc.speech(You lack the awareness of what your enemy is trying to do. You allowed me to trick you into wearing yourself out, and now you've been defeated before even landing a single hit.)]
+		[pc.speech(这就是你欠缺的最后一项，)]你一边把[slimeRoyalGuard.name]按在地板上，一边向他解释，[pc.speech(你意识不到敌人的意图，被我骗得筋疲力尽，不战而败。)]
 	</p>
 	<p>
-		Completely overcome by your sudden move, [slimeRoyalGuard.name] isn't even able to offer a response, and, sensing that he's not going to be in fighting condition again for some time, you release your hold on him and step back.
+		你的突然袭击让[slimeRoyalGuard.name]甚至来不及反应就落败了，而你也感觉到他短时间内不会再有能力战斗，于是你松开了对他的控制，向后退了一步。
 	</p>
 	<p>
-		[slimeRoyalGuard.Name] pushes himself up onto his hands and knees, before crawling over to one side of the corridor and collapsing down onto a stone bench. [slimeRoyalGuard.speech(You... You got me...)] he pants, slouching down in defeat.
+		[slimeRoyalGuard.Name]手脚并用地撑起身子，爬到走廊一侧的石凳上。[slimeRoyalGuard.speech(你……你赢了……)]他喘着粗气，垂头丧气地瘫倒在上面。
 	</p>
 	<p>
-		With [slimeRoyalGuard.name] defeated, you could take advantage of him, or choose to continue on towards your final goal of meeting the Slime Queen...
+		你打败了[slimeRoyalGuard.name]，你可以趁势而上，或者继续朝着面见史莱姆女王的最终目标前进……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_POST_ADMIRE_SEDUCE"><![CDATA[
 	<p>
-		Sensing that [slimeRoyalGuard.name] is very proud of his ability with the sword, you try to play up to this in order to seduce him. [pc.speech(Wow! You're amazing with that thing! Can you show me your moves again?)]
+		你察觉到[slimeRoyalGuard.name]对自己的剑术非常自豪，于是决定以此来引诱他：[pc.speech(哇！你的剑术好厉害！能让我再看看你的招式吗？)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Well, if you insist!)] [slimeRoyalGuard.name] laughs, before starting to repeat the motions he just went through. As he does this, you give him plenty of encouraging comments, making sure to put on your most seductive voice as you tell him how amazing he is.
+		[slimeRoyalGuard.speech(好吧，如果你坚持的话！)][slimeRoyalGuard.name]笑了，随即重复起刚才的动作。他耍起招式，而你一直在吹捧他，甜腻腻地夸赞他有多棒。
 	</p>
 	<p>
-		After a few minutes of this, [slimeRoyalGuard.name] finishes his display and turns back towards you. You make sure to let him catch you staring at his body, and, looking longingly into his eyes, you sigh, [pc.speech(The queen sure is lucky to have you as her guard... I bet she calls you for some private assistance all the time...)]
+		这样过了几分钟，[slimeRoyalGuard.name]完成展示，回头朝你走来。你故意确保让他发现你在盯着他的身体看，随后你渴望地望着他的眼睛，叹了口气：[pc.speech(女王有你做她的守卫可真是幸运……我赌她一定经常私下找你帮忙……)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(I-It's nothing like that!)] [slimeRoyalGuard.name] stutters. [slimeRoyalGuard.speech(I just protect her, t-that's all!)]
+		[slimeRoyalGuard.speech(才、才没有那样！)][slimeRoyalGuard.name]结结巴巴，[slimeRoyalGuard.speech(我只是保护她，仅、仅此而已！)]
 	</p>
 	<p>
-		[pc.speech(So you mean you're free to have some fun, hmm?)] you ask, winking at the [slimeRoyalGuard.race] and biting your lip. 
+		[pc.speech(那你是说你可以自由地找点乐子了吗，嗯？)]你问道，对着[slimeRoyalGuard.race]眨巴眼睛，一边咬着嘴唇。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(W-Well yes, but, you're an intruder!)] [slimeRoyalGuard.name] stammers, clearly flustered by your advances. [slimeRoyalGuard.speech(A-Anyway, are we going to fight or what?)]
+		[slimeRoyalGuard.speech(是、是啊，但是，你是入侵者！)][slimeRoyalGuard.name]明显被你的挑逗弄得结结巴巴，[slimeRoyalGuard.speech(总、总之，我们是要打还是怎么着？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROYAL_GUARD_SEX_SEDUCTION"><![CDATA[
 	<p>
-		[pc.speech(There's no need to fight...)] you sigh, smiling at [slimeRoyalGuard.name]. [pc.speech(I bet you're all worked up after training so hard. How about we have some fun instead?)]
+		[pc.speech(没必要动手……)]你叹了口气，对[slimeRoyalGuard.name]微笑。[pc.speech(训练这么辛苦，我打赌你一定累坏了吧。我们来找点乐子怎么样？)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(W-Well I-I'd love to but-)] [slimeRoyalGuard.name] starts, but you quickly step forwards and press a finger to his lips.
+		[slimeRoyalGuard.speech(我——我很想，但是——)][slimeRoyalGuard.name]开口说，但你迅速走上前，伸出一根手指按在他的嘴唇上。
 	</p>
 	<p>
-		[pc.speech(You don't need to make any excuses,)] you say, looking down at the [slimeRoyalGuard.race]'s crotch and letting out a delighted cry as you see the distinctive shape of an erection pressing out beneath the fabric of his clothes. [pc.speech(How about you show me your skill with your other sword?)]
+		[pc.speech(你不必找借口。)]你说着，低头看向[slimeRoyalGuard.race]的胯部，看到他衣物下明显的凸起，你乐得发出了一声惊叫，[pc.speech(不如你用你的另一把剑展示一下你的技巧如何？)]
 	</p>
 	<p>
-		Unable to resist your advances any longer, [slimeRoyalGuard.name] places his blade to one side, before taking hold of your [pc.arms] and pulling you into a passionate kiss. You let out a happy, muffled [pc.moan] as you feel his tongue slide into your mouth, and, closing your eyes, you tilt your head to one side and press yourself against the [slimeRoyalGuard.race] as you return his kiss.
+		[slimeRoyalGuard.name]再也无法抗拒你的接近，他将剑放到一边，接着抓住你的[pc.arms]，拉着你激吻。他的舌头滑入你的口中，你发出了快乐而低沉的[pc.moan]。闭上双眼，你将头歪向一侧，紧紧地贴向[slimeRoyalGuard.race]，回应着他的吻。
 	</p>
 	<p>
-		After a moment, he pulls back, breaking off the kiss before grinning at you and sighing, [slimeRoyalGuard.speech(I haven't had a good fuck in weeks...)]
+		过了一会儿，他抽身退开，结束了那个吻，然后对你咧嘴一笑，又叹了口气说：[slimeRoyalGuard.speech(我已经好几周没有好好做过了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_ROYAL_GUARD_SEX_AS_DOM"><![CDATA[
 	<p>
-		As you step back from [slimeRoyalGuard.name], [slimeRoyalGuard.he] staggers over to a nearby stone bench, before sinking down onto it and sighing, [slimeRoyalGuard.speech(Ah... That was good...)]
+		你从[slimeRoyalGuard.name]身上离开，[slimeRoyalGuard.he]踉跄着走到附近的石凳旁，然后坐在上面叹了口气：[slimeRoyalGuard.speech(嗯……这还不错……)]
 	</p>
 	<p>
-		Grinning at the [slimeRoyalGuard.race], you set about gathering your things, and once you've got everything in order, you prepare to move off and continue on your way.
+		在对[slimeRoyalGuard.race]善意的笑了笑之后，你开始收拾自己的东西，等一切都收拾妥当后，你就准备继续上路了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_ROYAL_GUARD_SEX_AS_SUB"><![CDATA[
 	<p>
-		Stepping away from you, [slimeRoyalGuard.name] staggers over to a nearby stone bench, before sinking down onto it and sighing, [slimeRoyalGuard.speech(Ah... That was good...)]
+		[slimeRoyalGuard.name]从你身上离开，踉跄着走到附近的石凳旁，然后坐在上面叹了口气：[slimeRoyalGuard.speech(嗯……这还不错……)]
 	</p>
 	<p>
-		Grinning at the [slimeRoyalGuard.race], you set about gathering your things, and once you've got everything in order, you prepare to move off and continue on your way.
+		在对[slimeRoyalGuard.race]善意的笑了笑之后，你开始收拾自己的东西，等一切都收拾妥当后，你就准备继续上路了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_ROYAL_GUARD_SEX_SEDUCTION"><![CDATA[
 	<p>
-		Having had his fun, [slimeRoyalGuard.name] staggers over to a nearby stone bench, before sinking down onto it and sighing, [slimeRoyalGuard.speech(Ah... That was good...)]
+		在爽完之后，[slimeRoyalGuard.name]从你身上起开，踉跄着走到附近的石凳旁，然后坐在上面叹了口气：[slimeRoyalGuard.speech(嗯……这还不错……)]
 	</p>
 	<p>
-		Grinning at the [slimeRoyalGuard.race], you set about gathering your things, and once you've got everything in order, you prepare to move off and continue on your way. Now that you've worn [slimeRoyalGuard.name] out, you can be sure that he won't have the energy to stop you from proceeding to the Slime Queen's room...
+		在对[slimeRoyalGuard.race]善意的笑了笑之后，你开始收拾自己的东西，等一切都收拾妥当后，你就准备继续上路了。现在，你已经把[slimeRoyalGuard.name]折腾的够呛，他现在肯定不会再有力气阻止你前往史莱姆女王的房间了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_ROYAL_GUARD_COMBAT_PLAYER_VICTORY"><![CDATA[
 	<p>
-		[slimeRoyalGuard.Name] staggers back against the nearest wall, before sinking down to his knees before you. His huge, two-handed sword clatters to the ground, and he looks up at you, panting, [slimeRoyalGuard.speech(I yield! No more...)]
+		[slimeRoyalGuard.Name]踉踉跄跄地退到墙边，跪倒在你面前，双手巨剑也哐当一声掉在地上。他抬起头，喘息着对你说：[slimeRoyalGuard.speech(我投降！别继续了……)]
 	</p>
 	<p>
-		You step forwards, grinning at the [slimeRoyalGuard.race] as he surrenders to you. With the Slime Queen's royal guard defeated, there's nothing stopping you from continuing on to her room. Then again, you could stop to have some fun with [slimeRoyalGuard.name] first...
+		[slimeRoyalGuard.race]向你投降了，你打败了史莱姆女王的皇家亲卫，现在可以继续前往她的房间了。不过你也可以先停下来和[slimeRoyalGuard.name]找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_ROYAL_GUARD_COMBAT_PLAYER_DEFEAT"><![CDATA[
 	<p>
-		Unable to continue fighting any longer, you stagger back against the nearest wall, panting, [pc.speech(N-No more...)]
+		由于无法再继续战斗下去，你摇摇晃晃地靠在最近的一面墙大口喘着粗气…[pc.speech(不……不打了……)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(There's no shame in losing to me!)] [slimeRoyalGuard.name] laughs, before placing his blade to one side and stepping up to you. [slimeRoyalGuard.speech(Now, I think you and I should have a little fun before you leave.)]
+		[slimeRoyalGuard.speech(败在我手下是你的荣幸！)][slimeRoyalGuard.name]在放下手中的剑后淫笑着向你走来：[slimeRoyalGuard.speech(不过在把你赶走之前，我想我们应该先一起找点乐子。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_ROYAL_GUARD_SPARRING_PLAYER_VICTORY"><![CDATA[
 	<p>
-		[slimeRoyalGuard.Name] staggers back against the nearest wall, before sinking down to his knees before you. His huge, two-handed sword clatters to the ground, and he looks up at you, panting, [slimeRoyalGuard.speech(I yield! No more...)]
+		[slimeRoyalGuard.Name]踉踉跄跄地退到墙边，跪倒在你面前，双手巨剑也哐当一声掉在地上。他抬起头，喘息着对你说：[slimeRoyalGuard.speech(我投降！别继续了……)]
 	</p>
 	<p>
-		You step forwards, grinning at the [slimeRoyalGuard.race] as he surrenders to you. With the Slime Queen's royal guard defeated, there's nothing stopping you from continuing on to her room. Then again, you could stop to have some fun with [slimeRoyalGuard.name] first...
+		[slimeRoyalGuard.race]向你投降了，你打败了史莱姆女王的皇家亲卫，现在可以继续前往她的房间了。不过你也可以先停下来和[slimeRoyalGuard.name]找点乐子……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_ROYAL_GUARD_SPARRING_PLAYER_DEFEAT"><![CDATA[
 	<p>
-		Unable to continue fighting any longer, you stagger back against the nearest wall, panting, [pc.speech(N-No more...)]
+		由于无法再继续战斗下去，你摇摇晃晃地靠在最近的一面墙大口喘着粗气，[pc.speech(不……不打了……)]
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(There's no shame in losing to me!)] [slimeRoyalGuard.name] laughs, before placing his blade to one side and stepping up to you. [slimeRoyalGuard.speech(Now, just as we agreed, I get to have some fun with you!)]
+		[slimeRoyalGuard.speech(败在我手下是你的荣幸！)][slimeRoyalGuard.name]在放下手中的剑后淫笑着向你走来：[slimeRoyalGuard.speech(现在按照约定，是时候让我爽爽了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_ROYAL_GUARD_COMBAT_PLAYER_DEFEAT_SEX"><![CDATA[
 	<p>
-		As you look up at [slimeRoyalGuard.name], he suddenly steps forwards, and, pinning you back against the wall, he presses forwards and kisses you passionately on the lips. Before you're able to react, he thrusts his tongue into your mouth, reaching down behind you to give your [pc.ass+] a firm squeeze as he starts grinding his crotch against your leg.
+		正当你抬头看向[slimeRoyalGuard.name]时，他突然跨步向前将你抵在墙壁上，随后热烈地吻住你的嘴唇。你还未来得及反应，他已经将舌头探入你的口中，同时从背后伸出手用力握住你[pc.ass+]，并将胯部紧贴着你的大腿开始摩擦。
 	</p>
 	<p>
-		As suddenly as he started, [slimeRoyalGuard.name] quickly pulls back, grinning at you as he growls, [slimeRoyalGuard.speech(All that fighting's got me pumped up. Mmm, this is gonna be good...)]
+	就在开始行动的瞬间，[slimeRoyalGuard.name]快速撤回攻势，一边对你露出狡黠的笑容一边低吼道：[slimeRoyalGuard.speech(这一番激战让我热血沸腾。嗯，接下来会更有趣……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_ROYAL_GUARD_SEX_DEFEATED"><![CDATA[
 	<p>
-		[slimeRoyalGuard.Name] steps back, allowing you to sink to the floor as you're completely overcome with exhaustion. You aren't given much time to rest, however, as after just a moment the [slimeRoyalGuard.race] reaches down and pulls you to your feet.
+		[slimeRoyalGuard.Name]向后退了一步，任由筋疲力尽的你倒在了地上。不过你没有多少时间休息，因为只过了一会儿，你就被[slimeFire.name]抓了起来。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Here's your stuff,)] he says, before shoving your things into your [pc.arms].
+		[slimeIce.speech(这是你的东西，)]他在说完之后把东西塞到了你的[pc.arms]。
 	</p>
 	<p>
-		With that, [slimeRoyalGuard.name] half-carries, half-drags you back down the corridor, down the spiral stairs, and over to the front door of the tower, before releasing you and stepping back. [slimeRoyalGuard.speech(I hope you've learned your lesson!)]
+		就这样，[slimeRoyalGuard.name]半抱半拖地把你带到了塔楼的前门，然后将你松开，在转身离开前，其开口道：[slimeFire.speech(我希望你能吸取教训！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_ROYAL_GUARD_SEX_DEFEATED_KICKED_OUT"><![CDATA[
 	<p>
-		Before you can say anything in your defence, [slimeRoyalGuard.name] pulls open the tower's front door, before kicking your rear end. You stagger forwards from the blow, and, still exhausted from the fight and resulting sex, you find yourself tumbling to the floor.
+		还没等你开口辩解， [slimeRoyalGuard.name]就拉开了塔楼的前门，然后一脚踢在你的屁股上。
+		你被这一脚踢得踉踉跄跄着向前踏了几步，因为打斗和性爱，你感觉有些精疲力竭了，这一下让你跌坐在了地板上。
 	</p>
 	<p>
-		You don't try to get up right away, and simply lie back on the island's gentle hill, trying to catch your breath. After some time, you finally feel like you've recovered enough energy to be able to stand, and, pushing yourself to your feet, you make sure that you're still in possession of all your things, before looking back at the Slime Queen's tower. You see that the front door has been left slightly ajar, and while you're in no state to try and take another fight right away, you know that you can always come back and give it another go some other time...
+		你没有马上爬起来，而是躺在岛上的缓坡上缓上一会。过了一段时间，你终于觉得自己恢复了足够的体力，于是你用力站起来，确保自己的东西都还在，然后回头看了看史莱姆女王所在的塔楼。你看到前门被微微虚掩着，虽然你现在没办法马上再打一场，但你知道，改天你还可以回来再打一场……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_ROYAL_GUARD_SEX_SPARRING_DEFEATED"><![CDATA[
 	<p>
-		[slimeRoyalGuard.Name] steps back, allowing you to sink to the floor as you're completely overcome with exhaustion.
+		[slimeRoyalGuard.Name]向后退了一步，让精疲力尽的你躺在地板上。
 	</p>
 	<p>
-		[slimeRoyalGuard.speech(Hah! That was fun!)] He laughs. [slimeRoyalGuard.speech(Let me know if you want to go again!)]
+		[slimeRoyalGuard.speech(哈！真有趣！)]他说道：[slimeRoyalGuard.speech(如果你想再去的话，请告诉我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
 	
 	<htmlContent tag="BED_CHAMBER"><![CDATA[
 	<p>
-		Unlike all of the other doors that you've passed so far, the one at the end of this corridor is painted a soft shade of pink, and hanging from the handle, a little sign reads; 'Her Majesty's Room; Do not disturb!'. 
+		与你目前经过的其他所有门不同，走廊尽头的这扇门被漆成了柔和的粉红色，门把手上挂着一个小牌子，上面写着：“女王陛下的房间，请勿打扰！”。
 	</p>
 	<p>
-		As commanding as the statement on the sign may be, you have no intention of turning back now. Reaching out to turn the handle, you find that the door to the Slime Queen's room is unlocked, and, preparing yourself for an ambush, you push it open and cautiously step inside.
+		虽然告示牌上满是命令的语气，但你可没打算现在回头。伸手转动把手后，你发现通往史莱姆女王房间的门没有上锁，于是在做好了伏击的准备，你推开门小心翼翼地走了进去。
 	</p>
 	<p>
-		The room in front of you is similar in many ways to the rest of the tower, with the walls covered in tapestries, a burgundy rug underfoot, and rudimentary wooden chandeliers hanging from the ceiling's wooden beams. What sets this particular room apart, however, is the colossal four-poster bed on the left-hand-side of the room. It's by far the largest bed you've ever seen, and from a quick estimate, you guess that it's well over
+		这个房间在很多方面都与塔里的其他房间相似，墙上挂着挂毯，脚下铺着酒红色的地毯，天花板的木梁上挂着简陋的木质吊灯。不过，让这个房间与众不同的是房间左侧那张巨大的四柱床。这是你迄今为止见过的最大的床，你稍稍估算一下，就能看出这张床的尺寸远远超过了
 		#IF(game.isMetricSizes())
-			 four and a half metres
+			四米半
 		#ELSE
-			 fifteen feet
+			十五英尺
 		#ENDIF
-		 in length.
+		长。
 	</p>
 	<p>
-		Along with this abnormally sized piece of furniture, there's another feature of this room which catches your attention. In the far right corner, you see that a square area measuring roughly
+		而除了这件尺寸异常的家具之外，这个房间还有另一个与众不同之处。在最右边的角落里，你可以看到一个占地面积大约为
 		#IF(game.isMetricSizes())
-			 three metres
+			三米的地方
 		#ELSE
-			 ten feet
+			十英尺的地方
 		#ENDIF
-		 on each side has been enclosed by an intricately carved wooden wall, which stands at about
+		两侧各有一堵精雕细刻的木墙，墙约
 		#IF(game.isMetricSizes())
-			 one metre
+			一米
 		#ELSE
-			 three feet
+			三英尺
 		#ENDIF
-		 in height. The interior of this enclosure has been tiled to form a huge bath, and is currently filled with a considerable amount of translucent pink liquid.
+		高，这个围墙的内部被铺上了瓷砖，形成了一个巨大的浴池，里面装满了大量半透明的粉红色液体。
 	</p>
 	<p>
-		Glancing around the room, you don't see any sign of the Slime Queen, and, highly suspicious of the bath's slimy pink contents, you slowly make your way towards it. As you approach, you see several pieces of gold jewellery scattered around the bath's floor. In the middle of all of these, there's a small, glowing pink core, confirming that the bath's contents are concealing the slime that you've been seeking.
+		在快速地对四周探查一番后，你并没有发现粘液女王的踪迹，你对浴池里粘糊糊的粉红色东西非常怀疑，于是慢慢地向浴池走去。当你走近时，你看到浴池里面上散落着几件金首饰。而在这些首饰中间有一个闪着粉红色光芒的小核心，这证明浴池里隐藏着你一直在寻找的史莱姆。
 	</p>
 	<p>
-		So as not to be caught off-guard and dragged into the bath, you step back, before calling out, [pc.speech(It's no use hiding! I know you're in there, Slime Queen!)]
+		为了不被突然拖进浴池，你退后一步喊道：[pc.speech(躲起来也没用！我知道你在里面，史莱姆女王！)]
 	</p>
 	<p>
-		[slimeQueen.speech(~Aah!~)] a surprised, yet slightly erotic, cry calls out from the bath. [slimeQueen.speech(You found me!)]
+		[slimeQueen.speech(~啊！~)]一声惊讶而又略带情色的声音从浴池中传出。[slimeQueen.speech(你找到我了！)]
 	</p>
 	<p>
-		Before you can respond, the bath's surface starts to push upwards, carrying a golden tiara, earrings, and necklace up from the tiled floor. The distinctive shape of a woman's head quickly forms out of the slime, and you watch, ready to defend yourself from any attack, as the rest of the Queen's naked body starts to take shape.
+		还没等你反应过来，浴池内的粘液便开始翻涌，那些金色的头饰，耳环和项链从浴池的底部往上推了起来。一个独特的女性头形很快从粘液中形成，就在你小心注视准备随时抵御攻击时，史莱姆女王裸体的其余部分也开始逐渐成形。
 	</p>
 	<p>
-		To begin with, nothing seems to be out of the ordinary as the pink, female slime stands up before you. As her hips lift up out of the bath's slimy waters, however, the Queen starts to rapidly grow in size. Initially standing at just over [units.sizes(168)] in height, it only takes a couple of seconds before her entire body has proportionally expanded up to
+		当粉红色的雌性史莱姆刚站在你面前时似乎并没有什么异常。但当她的臀部从浴缸的粘液中抬起来时，史莱姆女王的体型开始迅速变大。起初，她的身高刚刚超过[units.sizes(168)] ，但仅仅只过了几秒钟，她的整个身体就膨胀到了
 		#IF(game.isMetricSizes())
-			 just over two metres in height.
+			两米开外。
 		#ELSE
-			 seven feet in height.
+			七英尺高。
 		#ENDIF
 	</p>
 	<p>
-		You instinctively step back as the slime before you continues to grow in height.
+		当你面前的史莱姆不断变大时，你本能地后退了一步。
 		#IF(game.isMetricSizes())
-			 Two and a half metres... Three metres...
+			两米半……三米……
 		#ELSE
-			 Eight feet... Nine... Ten...
+			八英尺……九英尺……十英尺……
 		#ENDIF
-		 Her growth shows no sign of stopping as she backs away from you, making no attempt to cover up her [slimeQueen.breastSize], [slimeQueen.cupSize]-cup breasts and [slimeQueen.pussy+].
+		她的发育丝毫没有停止的迹象，随后她丝毫不掩饰她[slimeQueen.breastSize]的[slimeQueen.cupSize]罩杯乳房和[slimeQueen.pussy+]，就这样保持着全裸的姿态从你身边经过。
 	</p>
 	<p>
-		[slimeQueen.speech(~Aaah!~)] she cries again, as she finally finishes growing to stand at a staggering
+		[slimeQueen.speech(~哇啊！~)]她一下喊了起来，她站了起来，其身高变为了惊人的
 		#IF(game.isMetricSizes())
-			 three and a half metres
+			三米五
 		#ELSE
-			 twelve feet
+			十二英尺
 		#ENDIF
-		 in height. [slimeQueen.speech(H-How did you get past my guards?! W-What do you want?)]
+		。[slimeQueen.speech(你！你是谁啊！我的护卫怎么没有拦住你？)]
 	</p>
 	<p>
-		Despite her immense size, the Slime Queen shows no sign of aggression, and almost trips over the edge of the bath as she attempts to manoeuvre her way towards her bed. Worried that she might try to draw strength from the considerable amount of pink goo still left in the bath, you give the Slime Queen some space, allowing her to rush over and hide behind her huge bed.
+		尽管史莱姆女王体型巨大，但她并没有表现出任何的攻击性，甚至当她试图向她的床走去时都差点被浴池边缘绊倒。由于你担心她会从浴池中的粉红色粘液里汲取力量，所以你给了史莱姆女王一些空间，好让她冲过来躲在她那张大床后面。
 	</p>
 	<p>
-		Sensing that the Queen isn't going to fight, you step forwards and start to answer her question, [pc.speech(Let's just say that your guards won't be bothering us. As to what it is I want, I-)]
+		在察觉到女王并不打算战斗后，你向前迈了一步，然后开始回答她的问题：[pc.speech(我明说了，你的卫兵不会来打扰我们了，至于我想要什么，我……)]
 	</p>
 	<p>
-		[slimeQueen.speech(I knew it!)] the Slime Queen cries. [slimeQueen.speech(You struck them down, and then had your wicked way with them, didn't you?!)]
+		[slimeQueen.speech(我就知道！)]史莱姆女王喊道： [slimeQueen.speech(你把那卫兵打倒在地，然后狠狠的羞辱了他们，是不是！？)]
 	</p>
 	<p>
-		[pc.speech(Well, I-)] you start to explain, but the colossal Slime Queen suddenly jumps to her feet, before pressing the back of her hand to her forehead and swooning.
+		[pc.speech(额-我……)]你刚要解释，巨大的史莱姆女王突然用手背按住额头，就这样作势躺了下去。
 	</p>
 	<p>
-		[slimeQueen.speech(~Ah!~ Say no more! I know that you cut your way through them, intent on storming my personal bed chambers, where you'd claim your reward and ravish my supple, defenceless body!)] she cries, falling backwards onto her bed in such a position that she's presenting her exposed pussy to you. [slimeQueen.speech(Y-You monster! To think I, Catherine, the Queen of all Slimes, am about to be despoiled by an invading [pc.race]! M-Mercy! I beg of you!)]
+		[slimeQueen.speech(~哦！~别再说了！我知道你的目的，你打倒我的侍卫，冲进我的私人卧室！就是为了你想要的奖赏！你这无耻的混蛋！来蹂躏我这柔软无力的身体吧！)]她叫喊着躺在床上，然后张开双腿，向你展示她暴露的小穴。[slimeQueen.speech(你！你这个怪物！我，凯瑟琳，史莱姆女王，就要被一个从未见过面的[pc.race]强奸了！而我的护卫呢？他在哪里？)]
 	</p>
 	<p>
-		Despite her words, Catherine shows no hint of trying to run or protect herself from you. Quite on the contrary, she spreads her legs and slips one of her hands down to part her [slimeQueen.labia+], moaning as she does so, [slimeQueen.speech(No! Please! Don't ruin me! You can't do this to royalty!)]
+		尽管凯瑟琳这么说，但她丝毫没有要逃跑或保护自己的意思。恰恰相反，她张开双腿，一只手向下滑去，分开她的[slimeQueen.labia+]，她随之呻吟道：[slimeQueen.speech(不！求你了！不要伤害我！你不能这样对待皇室！)]
 	</p>
 	<p>
-		It's quite obvious that Catherine is getting immensely turned on at the thought of being 'despoiled' by you. Being convinced by her behaviour that she's not at all interested in putting up a fight, you step forwards, deciding how best to handle this kinky Slime Queen...
+		很明显，一想到要被你“蹂躏”，凯瑟琳就兴奋异常。她的行为让你相信她根本不想反抗，于是你走上前，决定如何最好地对付这个淫荡的史莱姆女王……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BED_CHAMBER_PACIFIED"><![CDATA[
 	<p>
-		The Slime Queen's room is similar in many ways to the rest of the tower, with the walls covered in tapestries, a burgundy rug underfoot, and rudimentary wooden chandeliers hanging from the ceiling's wooden beams. What sets this particular room apart, however, is the colossal four-poster bed on the left-hand-side of the room. It's by far the largest bed you've ever seen, and from a quick estimate, you guess that it's well over
+		史莱姆女王的房间在很多方面都与塔里的其他房间相似，墙上挂着挂毯，脚下铺着酒红色的地毯，天花板的木梁上挂着简陋的木质吊灯。不过，让这个房间与众不同的是房间左侧那张巨大的四柱床。这是你迄今为止见过的最大的床，你稍稍估算一下，就能看出这张床的尺寸远远超过了
 		#IF(game.isMetricSizes())
-			 four and a half metres
+			四米半
 		#ELSE
-			 fifteen feet
+			十五英尺
 		#ENDIF
-		 in length.
+		长。
 	</p>
 	<p>
-		Along with this abnormally sized piece of furniture, there's another feature of this room which is out of the ordinary. In the far right corner, you see that a square area measuring roughly
+		而除了这件尺寸异常的家具之外，这个房间还有另一个与众不同之处。在最右边的角落里，你可以看到一个占地面积大约为
 		#IF(game.isMetricSizes())
-			 three metres
+			三米的地方
 		#ELSE
-			 ten feet
+			十英尺的地方
 		#ENDIF
-		 on each side has been enclosed by an intricately carved wooden wall, which stands at about
+		两侧各有一堵精雕细刻的木墙，墙约
 		#IF(game.isMetricSizes())
-			 one metre
+			一米
 		#ELSE
-			 three feet
+			三英尺
 		#ENDIF
-		 in height. The interior of this enclosure has been tiled to form a huge bath, and is currently filled with a considerable amount of translucent pink liquid.
+		高，这个围墙的内部被铺上了瓷砖，形成了一个巨大的浴池，里面装满了大量半透明的粉红色液体。
 	</p>
 	<p>
-		Relaxing in this pool of pink slime is Catherine, who jumps to her feet as she sees you enter. Making no attempt to cover her huge, naked body, she cries, [slimeQueen.speech(~Aah!~ You've returned! I-I knew you wouldn't be able to resist your lustful impulses for long!)]
+		凯瑟琳正躺在这滩粉红色的粘液中休息，在看到你进来后，她一下子坐了起来。但她并没有试图遮住自己赤裸的巨大身体，而是哭了起来：[slimeQueen.speech(~啊哟！~ 你回来了！我，我就知道你是抵挡不住诱惑的！)]
 	</p>
 	<p>
-		[pc.speech(I was-)] you start to explain, but the Slime Queen cuts you off as she dashes out of the bath and over to her bed.
+		[pc.speech(我只是——)]没等你解释完，史莱姆女王便打断了你，她冲出浴池跑到了床边。
 	</p>
 	<p>
-		[slimeQueen.speech(You were thinking about how easy it would be to force your way into my bed chamber, before having your wicked way with me, I know!)] she cries, falling back on her bed and spreading her legs to present you with her [slimeQueen.pussy+]. [slimeQueen.speech(I'm sure that there's nothing I can say to make you leave! Oh, woe is me! To think, the queen of all slimes is about to be ravished by [pc.a_race]!)]
+		[slimeQueen.speech(我知道你在想什么，你是不是在想，在对我施展你那邪恶的手段之前，强行进入我的卧室是多么容易的一件事！)]她喊着躺在床上，然后张开双腿，向你展示她的[slimeQueen.pussy+]。[slimeQueen.speech(我敢肯定，不论我说什么你都不会离开的！哦，我真可怜！想想看啊，所有史莱姆的女王就要被一个[pc.a_race]强奸蹂躏了！)]
 	</p>
 	<p>
-		It's quite obvious that Catherine is getting immensely turned on at the thought of being 'ravished' by you. Used to her behaviour by now, you step forwards, deciding how best to handle this kinky Slime Queen...
+		很明显，凯瑟琳一想到要被你“蹂躏”，就显得兴奋异常。不过你现在已经习惯了她的行为，你现在唯一要做的就是决定如何最好地对付这个淫荡的史莱姆女王……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_CONVINCE"><![CDATA[
 	<p>
-		[pc.speech(Please calm down,)] you say. [pc.speech(I'm here on behalf of Submission's Enforcers. Your subjects up in the tunnels have been causing quite a problem, what with transforming everyone into slimes and all. I'm here to put an end to it.)]
+		[pc.speech(请冷静，)]你说。[pc.speech(我是代表屈城区执法者来的。你们在地道里搞什么把人都变成史莱姆的实验已经造成了很大的麻烦。我是来结束这一切的。)]
 	</p>
 	<p>
-		[slimeQueen.speech(S-So you're not going to ravish me?)] Catherine whines, sitting up on her bed and sulking. [slimeQueen.speech(You just want me to stop my subjects from transforming people?)]
+		[slimeQueen.speech(所、所以你不打算蹂躏我？)]凯瑟琳抱怨着，生着闷气从床上坐起来，[slimeQueen.speech(你只是想让我阻止我的臣民去转化人？)]
 	</p>
 	<p>
-		[pc.speech(That's right. Why are you doing this anyway? There are plenty of slimes in Submission already.)]
+		[pc.speech(没错。你为什么要这么做？明明屈城区里已经有很多史莱姆了。)]
 	</p>
 	<p>
-		[slimeQueen.speech(Mmm... Well...)] the Slime Queen mumbles, looking down at her feet as she kicks them back and forth. [slimeQueen.speech(I was kind of hoping to attract someone like you... I thought that if I made a nuisance of myself, a sexy, strong [pc.hero] would storm my tower, beat my guards, and...)] Catherine shudders in delight, [slimeQueen.speech(<i>ravish</i> me...)]
+		[slimeQueen.speech(唔嗯……这个……)]史莱姆女王嗫嚅着，她目光低垂，盯着双脚来回踢荡，[slimeQueen.speech(我只是想通过这种方式，找到你这样的，我的真命天子……在我做些坏事之后，就会如英雄一般出现，攻下我的高塔，击败我的守卫，强壮而性感的你将进入我的宫殿，把我……)]凯瑟琳越讲越激动，兴奋得颤抖起来，[slimeQueen.speech(<i>征服</i>……)]
 	</p>
 	<p>
-		You can't help but let out a sigh as you hear the Slime Queen's ridiculous reason for wanting to transform people into slimes. [pc.speech(So you were only ordering your subjects to do this in order to get someone to defeat you?)]
+		听完“史莱姆女王”如此荒谬的转化理由，你不禁叹了口气：[pc.speech(所以你命令臣民这么做，只是为了找人打败你？)]
 	</p>
 	<p>
-		[slimeQueen.speech(W-Well, it is kind of nice gaining more followers, but yeah. That's why I was doing this.)] Catherine looks up and pouts. [slimeQueen.speech(But now that you've finally come, you're not even going to have your way with me! That's not fair...)]
+		[slimeQueen.speech(那——那个，能有更多的追随者是件好事，但是没错，这就是原因。)]凯瑟琳抬起头，噘起嘴，[slimeQueen.speech(但是现在你终于来了，又压根不打算对我为所欲为！这不公平……)]
 	</p>
 	<p>
-		[pc.speech(I'm sure that there are plenty of people out there who are seeking revenge for being turned into slimes,)] you say. [pc.speech(And one of them is bound to want to 'ravish' you when they finally find you. I'm not asking you to leave your tower or stop calling yourself the Slime Queen, I just need you to stop telling your subjects to transform people. And if you're supplying them with those 'biojuice canisters', you need to stop that too.)]
+		[pc.speech(我敢肯定有很多人因为被变成史莱姆而想要报复。)]你说，[pc.speech(等他们最终找到你，肯定会有人想要‘强暴’你。我不是要你离开你的高塔或者不再自称史莱姆女王，我只是需要你不再要求你的臣民去转化居民。如果你还有向他们提供那些“生物萃取液”，你也需要停下这个。)]
 	</p>
 	<p>
-		[slimeQueen.speech(F-Fine... I guess I don't have much say in the matter, now that my guards have failed me. I'll stop telling my subjects to transform people, and will only use the distillery to make Slime Quenchers from now on.)] Catherine whines, before suddenly throwing you a cheeky smile and continuing, [slimeQueen.speech(Do you wanna know how I've been making them?)]
+		[slimeQueen.speech(行——行吧……我想我也没什么资格说不，毕竟我的守卫都落败了。从现在起，我将不再要求我的臣民去转化人，而且只会用蒸馏厂来制造史莱姆畅饮。)]凯瑟琳呜咽着，又突然对你笑了笑，继续说，[slimeQueen.speech(你想知道我是怎么制造它们的吗？)]
 	</p>
 	<p>
-		[pc.speech(I think I can guess...)] you say, realising that Catherine's slimy body is the exact same colour as the liquid within the 'biojuice canisters'.
+		[pc.speech(我觉得能猜到……)]你意识到凯瑟琳的粘液身体和“生物萃取液”的颜色完全一样。
 	</p>
 	<p>
-		[slimeQueen.speech(~Mhm!~ That's right.)] Catherine giggles, sliding two of her fingers into her exposed pussy. [slimeQueen.speech(I spend all day in that bath, drinking water and letting my body convert it into more of my yummy slime! The distillery downstairs splits the transformative and non-transformative parts, and that's how we make Slime Quencher!)]
+		[slimeQueen.speech(~唔嗯！~对啦。)]凯瑟琳咯咯笑着，把手滑向两腿之间，抚摸起自己裸露的小穴， [slimeQueen.speech(我整天都泡在浴缸里，喝水，让身体把水转化成更多的美味粘液！楼下的蒸馏厂将转化成分和非转化成分分开，这就是我们制作史莱姆畅饮的方法！)]
 	</p>
 	<p>
-		[pc.speech(And from now on, you'll throw the transformative part away,)] you firmly state, crossing your [pc.arms] and frowning at Catherine.
+		[pc.speech(从现在开始，你要停止转化试验，)]你严肃地说，双手抱胸，蹙着眉看向凯瑟琳。
 	</p>
 	<p>
-		[slimeQueen.speech(Yes, I will, but there's a little problem. I don't really have any way to contact my subjects, and I've distributed quite a few of those canisters by now. I won't make any more, but I don't think your problem's going to disappear any time soon...)]
+		[slimeQueen.speech(好的，我会照做，但有个小问题。先前我分发了很多罐子，但我现在真的联系不上我的臣民们了。即使我不会再做了，这问题也不会很快解决……)]
 	</p>
 	<p>
-		[pc.speech(Fine. At least there's not going to be any more encouragement from you from now on.)] You sigh. [pc.speech(Now, I'm going to need some proof for the Enforcers that you won't be a problem anymore.)]
+		[pc.speech(好吧，至少现在开始你不会在鼓动他们去干了。)]你叹了口气。[pc.speech(现在，我需要一些证据让执法者知道你不再是个麻烦了。)]
 	</p>
 	<p>
-		[slimeQueen.speech(Hmm, you can have this, I guess,)] Catherine says, taking off her crown and throwing it to you. [slimeQueen.speech(It's kind of uncomfortable to wear, so I was thinking of getting rid of it anyway.)]
+		[slimeQueen.speech(唔，我想你可以带上这个，)]凯瑟琳说着，把王冠摘下丢给你，[slimeQueen.speech(这戴起来有点不舒服，所以还是把它扔了。)]
 	</p>
 	<p>
-		As you catch the crown, Catherine lies back on her bed, spreading her legs once more and sighing, [slimeQueen.speech(Now, if you'll excuse me, I'll just lie here for a while, all defenceless and innocent, hoping that you don't change your mind and decide to have your wicked way with me...)]
+		当你接住王冠时，凯瑟琳躺回床上，再次张开双腿，呻吟道：[slimeQueen.speech(现在，如果你不介意的话，我就在这里躺一会儿，毫无防备，天真无邪，希望你不要改变主意，快快决定对我做点坏事……)]
 	</p>
 	<p>
-		With your business with the Slime Queen finally resolved, and with the proof of your victory grasped firmly in your [pc.hand], all that's left to do is to return to the Enforcer post and report back to Claire. Then again, you could always play along with Catherine's fantasy first...
+		史莱姆女王的事情终于告一段落，获胜的证据也牢牢地握在你的[pc.hand]中，接下来只要回到执法者岗哨向克莱尔汇报。不过，你也可以先满足凯瑟琳的幻想……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_FORCE"><![CDATA[
 	<p>
-		[pc.speech(If that's how you want it, then fine,)] you snarl, stepping up to the bed and grabbing the Slime Queen's arm. With a rough yank, you pull her up so that she's in a sitting position, before putting on your most menacing tone and continuing, [pc.speech(You're going to put an end to your subjects transforming people up in the tunnels!)]
+		[pc.speech(如果你想要这样，那好吧。)]你咆哮着，走上床，抓住了史莱姆女王的胳膊。你粗暴地一拉，把她拉着坐起来，又恶狠狠地继续说：[pc.speech(你得阻止你的臣民在隧道里转化人！)]
 	</p>
 	<p>
-		[slimeQueen.speech(Y-Yes! I-I'll do whatever you ask!)] Catherine cries, failing to conceal the aroused tone of her voice. [slimeQueen.speech(I'll just make the Slime Quenchers from now on! N-No more of the transformatives, I promise!)]
+		[slimeQueen.speech(好——好的！你叫我做什么我都听！)]凯瑟琳叫着，但没能掩饰她性奋的声调，[slimeQueen.speech(从现在开始我只做史莱姆畅饮！不会再转化人了，我保证！)]
 	</p>
 	<p>
-		Pulling the Slime Queen close to you, you growl, [pc.speech(Why are you doing this anyway?!)]
+		你一把拉过史莱姆女王，怒吼起来，[pc.speech(你为什么要这么做？！)]
 	</p>
 	<p>
-		[slimeQueen.speech(Mmm... Well...)] the Slime Queen mumbles, [slimeQueen.speech(I was kind of hoping to attract someone like you... I thought that if I made a nuisance of myself, a sexy, strong [pc.hero] would storm my tower, beat my guards, and...)] Catherine shudders in delight, [slimeQueen.speech(<i>ravish</i> me...)]
+		[slimeQueen.speech(呃姆……这个……)]史莱姆女王嗫嚅着，[slimeQueen.speech(我只是想通过这种方式，找到您这样的，我的真命天子……在我做些坏事之后，他就会如英雄一般出现，攻下我的高塔，击败我的守卫，强壮而性感的他将进入我的宫殿，把我……)]凯瑟琳越讲越激动，兴奋得颤抖起来，[slimeQueen.speech(<i>征服</i>……)]
 	</p>
 	<p>
-		[pc.speech(What kind of reason is that?! You're going to tell your subjects to stop this nonsense,)] you say, roughly tugging on the Slime Queen's arm to emphasise your point.
+		[pc.speech(这算是什么扯淡理由？！告诉你那群手下别胡闹了，)]你边说，边用力扯了两下史莱姆女王的胳膊，以示强调和威胁。
 	</p>
 	<p>
-		[slimeQueen.speech(W-Well, I don't really have any way to contact my subjects, and I've distributed quite a few of those canisters by now... I-I won't make any more, but I don't think your problem's going to disappear any time soon...)]
+		[slimeQueen.speech(呃，我，我真的没有办法和我的下属们取得联系，而且我现在已经分发了不少这种罐子……我不会再做了，但我不认为问题会很快得到解决……)]
 	</p>
 	<p>
-		You let out a frustrated sigh as the Slime Queen tells you this. [pc.speech(But you're the only one who can make them, right? And now that you're not going to make any more, at least it can't continue forever.)]
+		史莱姆女王告诉你这些时，你无奈地叹了口气。[pc.speech(但只有你能制造它们，不是吗？现在，既然你不打算再做了，那这些乱子迟早会结束的。)]
 	</p>
 	<p>
-		[slimeQueen.speech(~Mhmm~ T-That's right.)] Catherine giggles, sliding her free hand down to rub at her exposed pussy. [slimeQueen.speech(I-I spend all day in that bath, drinking water and letting my body convert it into more of my yummy slime! The distillery downstairs splits the transformative and non-transformative parts, and that's how we make Slime Quencher!)]
+		[slimeQueen.speech(~呃姆~对，对呀。)]凯瑟琳咯咯笑着，把手滑向两腿之间，抚摸起自己裸露的小穴， [slimeQueen.speech(我整天都泡在浴缸里，喝水，让身体把水转化成更多的美味粘液！楼下的蒸馏厂将转化成分和非转化成分分开，这就是我们制作史莱姆萃取液的方法！)]
 	</p>
 	<p>
-		[pc.speech(Enough,)] you snap, tightening your grip as you continue, [pc.speech(I'm going to need some proof for the Enforcers that you won't be a problem anymore.)]
+		[pc.speech(够了，)]你厉声呵斥，拽住她的那只手更加用力，[pc.speech(我得从你这拿走点什么当做证据，交给执法者，好让他们相信你不会再为非作歹。)]
 	</p>
 	<p>
-		[slimeQueen.speech(M-My crown...)] Catherine mutters, dropping her head down a little. [slimeQueen.speech(A-As a sign of my submission, y-you should take my crown.)]
+		[slimeQueen.speech(我，我的王冠……)]凯瑟琳小声说着，把头稍稍低了下来，[slimeQueen.speech(作，作为我服从的标志，你，你可以带走我的王冠。)]
 	</p>
 	<p>
-		Doing as the Slime Queen suggests, you snatch the crown from her head, causing her to let out a particularly erotic moan, [slimeQueen.speech(~Aah!~ Stripped of my sign of authority! Y-You brute! I bet you want to have your wicked way with me now, as well!)]
+		你接受史莱姆女王的建议，从她的头上抢走皇冠，引得她发出极色情的呻吟：[slimeQueen.speech(~啊哈！~剥夺我的王权！真——真野蛮！我敢说你现在也想用你那邪恶的方式对付我！)]
 	</p>
 	<p>
-		With your business with the Slime Queen finally resolved, and with the proof of your victory grasped firmly in your [pc.hand], all that's left to do is to return to the Enforcer post and report back to Claire. Then again, you could always play along with Catherine's fantasy first...
+		史莱姆女王的事情终于告一段落，获胜的证据也牢牢地握在你的[pc.hand]中，接下来只要回到执法者岗哨向克莱尔汇报。不过，你也可以先满足凯瑟琳的幻想……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_SUBMIT"><![CDATA[
 	<p>
-		[pc.speech(Actually, I'm here to help,)] you say, stepping towards the Slime Queen's bed.
+		[pc.speech(实际上，我过来是想帮你的忙，)]你说着，走到史莱姆女王的床边。
 	</p>
 	<p>
-		[slimeQueen.speech(H-Help?)] she asks, sitting up and looking at you with a puzzled expression on her face. [slimeQueen.speech(You aren't here to put an end to my reign?)]
+		[slimeQueen.speech(帮——帮忙？)]她坐起身来看着你，脸上带着困惑，[slimeQueen.speech(你不是来推翻我的统治的吗？)]
 	</p>
 	<p>
-		[pc.speech(No, I want to help you transform as many people in Submission into slimes as possible.)]
+		[pc.speech(不是的，我想帮助你，能转化多少屈城区的人就转化多少。)]
 	</p>
 	<p>
-		[slimeQueen.speech(O-Oh! Well, t-thank you...)] the Slime Queen mumbles. [slimeQueen.speech(But I should probably let you know why I'm doing all this first... You see, by ordering my subjects to make more people into slimes, I was kind of hoping to attract someone like you... I thought that if I made a nuisance of myself, a sexy, strong [pc.hero] would storm my tower, beat my guards, and...)] Catherine shudders in delight, [slimeQueen.speech(<i>ravish</i> me...)]
+		[slimeQueen.speech(哦！好诶，谢谢你……)]史莱姆女王嗫嚅着，[slimeQueen.speech(但我想告诉你我为什么要这么做……你看，命令我的臣民把更多的人变成史莱姆，我有点希望靠这样，找到你这样的，我的真命天子……在我做些坏事之后，就会如英雄一般出现，攻下我的高塔，击败我的守卫，强壮而性感的你将进入我的宫殿，把我……)]凯瑟琳越讲越激动，兴奋得颤抖起来，[slimeQueen.speech(<i>征服</i>……)]
 	</p>
 	<p>
-		[pc.speech(Whatever your motive, I just want there to be more slimes,)] you say. [pc.speech(So what can I do to help?)]
+		[pc.speech(不管动机如何，我只想要让屈城区有更多史莱姆。)]你说，[pc.speech(所以我能帮什么忙？)]
 	</p>
 	<p>
-		[slimeQueen.speech(Mmm... Well... It would be kind of anticlimactic if the Enforcers stormed my tower and simply arrested me. I'm sure they wouldn't want to ravish me, which would be just awful,)] Catherine whines, before suddenly having an idea. [slimeQueen.speech(Oh! If you could get the Enforcers to stop investigating the slime problem, then only strong adventurers would come seeking me out! Oh, and I guess there'd be more slimes, as my subjects wouldn't be getting arrested as much...)]
+		[slimeQueen.speech(嗯……那个……如果执法者冲进塔来逮捕我，那就有点扫兴了。我确信他们不会想非礼我，没意思。)]凯瑟琳呜咽着，突然她灵光一闪，[slimeQueen.speech(哦！如果你能让执法者停止调查史莱姆问题，那么只有强大的冒险家才会来找我！哦，我猜会有更多的史莱姆，毕竟我的臣民不会被逮捕那么多……)]
 	</p>
 	<p>
-		[pc.speech(So you need me to convince the Enforcers that you're not a problem? I can do that, but I'll need some proof to show them that you've been dealt with.)]
+		[pc.speech(所以你需要我说服执法者你不是问题？我可以，但我需要一些证据，让他们知道你被解决了。)]
 	</p>
 	<p>
-		[slimeQueen.speech(Hmm, you can have this, I guess,)] Catherine says, taking off her crown and throwing it to you. [slimeQueen.speech(It's kind of uncomfortable to wear, so I was thinking of getting rid of it anyway.)]
+		[slimeQueen.speech(唔，我想你可以带上这个，)]凯瑟琳说着，把王冠摘下丢给你。[slimeQueen.speech(这戴起来有点不舒服，所以还是把它扔了。)]
 	</p>
 	<p>
-		As you catch the crown, Catherine lies back on her bed, spreading her legs once more and sighing, [slimeQueen.speech(Now, if you'll excuse me, I'll just lie here for a while, all defenceless and innocent, hoping that you don't change your mind and decide to have your wicked way with me...)]
+		当你接住王冠时，凯瑟琳躺回床上，再次张开双腿，呻吟道：[slimeQueen.speech(现在，如果你不介意的话，我就在这里躺一会儿，毫无防备，天真无邪，希望你不要改变主意，快快决定对我做点坏事……)]
 	</p>
 	<p>
-		With your business with the Slime Queen finally resolved, and with the proof needed to convince the Enforcers grasped firmly in your [pc.hand], all that's left to do is to return to the Enforcer post and report back to Claire. Then again, you could always play along with Catherine's fantasy first...
+		你与史莱姆女王的交易完成了，必要的证据也牢牢地握在你的[pc.hand]中，接下来只要回到执法者岗哨，向克莱尔汇报。不过，你也可以先满足凯瑟琳的幻想……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_SEX_START"><![CDATA[
 	<p>
-		Deciding to give Catherine what she wants, you take hold of her shoulders and pin her down onto the bed. [pc.speech(Seeing as you want to be 'ravished' so badly, I think I'll have a little fun with you...)]
+		你决定让凯瑟琳如愿以偿，于是你抓着她的肩膀，把她摁在床上。[pc.speech(既然你这么想被‘蹂躏’，那我就跟你玩玩……)]
 	</p>
 	<p>
-		[slimeQueen.speech(Ah! No! Please! Y-You can't do this to royalty! I-I'm a queen!)] Catherine screams, completely failing to conceal the tone of arousal in her voice as she shuffles back and tries, rather half-heartedly, to wriggle out of your grasp.
+		[slimeQueen.speech(啊！不！求你了！你、你不能这样对待皇室！我、我是女王！)]凯瑟琳尖叫着后退，完全无法掩饰她声音中的兴奋，心猿意马地挣扎着。
 	</p>
 	<p>
-		Stepping forwards to kneel on the bed, you crawl forwards between Catherine's legs as she shuffles away from you. Looking down at the huge pink Slime Queen, you grin as you prepare to give her the ravishing she so badly desires...
+		你向前跪在床上，爬到正努力从你身边挪开的凯瑟琳的两腿之间。你低头看着巨大的粉色史莱姆女王，咧嘴一笑，准备给她所渴求的奸淫……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_BATH"><![CDATA[
 	<p>
-		Wanting to relax before continuing on your way, you step over to the side of the huge bath, and take a look down into the pink slime. Sensing what it is you want, Catherine gets up from her bed and walks over to your side, before giggling, [slimeQueen.speech(Would you like to get in with me?)]
+		你想在继续前行之前放松一下，于是走到巨大的浴缸边，低头看了一眼粉色的史莱姆。凯瑟琳察觉到了你想要什么，于是从床上站起来，走到你身边，然后咯咯笑道：[slimeQueen.speech(你想和我一起进去吗？)]
 	</p>
 	<p>
-		Quickly stripping off, you take hold of the Slime Queen's hand and pull her along with you as you step forwards into the bath's warm, slimy contents. Catherine immediately sinks down into the slime, letting out a relaxed sigh as you sit down next to her.
+		你迅速脱掉衣服，与史莱姆女王牵着手一起走进浴缸温暖的粘稠物中。凯瑟琳立刻沉入粘液中，当你在她身边坐下时，她发出了一声轻松的叹息。
 	</p>
 	<p>
-		[slimeQueen.speech(You must be tired from travelling all this way to see me. Please, let me wash you,)] she sighs, sliding around behind you before starting to rub her slimy hands all over your back.
+		[slimeQueen.speech(你为了见我，这一路上舟车劳顿一定辛苦了。请让我帮你清洗，)]她叹息着绕到你身后，粘稠的手掌抚上你的后背。
 	</p>
 	<p>
-		Her warm touch instantly puts you at ease, and, once she's finished with your back, you lean back into Catherine, using her [slimeQueen.breastSize] breasts as a cushion as you let out a contented sigh. The Slime Queen giggles as she hugs you close to her, and happily runs her hands up and down the length of your body as she submissively cleans you with her warm pink slime.
+		凯瑟琳温暖的触感立刻让你感到安心，她一帮你擦完背，你就靠在她[slimeQueen.breastSize]的乳房上享受乳枕，发出满足的叹息。史莱姆女王咯咯地笑着，紧紧地把你搂在怀中，双手快乐地在你的身体上下游走，顺从地用她温暖的粉红色粘液为你清洁。
 	</p>
 	<p>
-		After a while of this, you feel as though you really should be getting on your way. Somehow sensing that you're about to leave, Catherine makes a show of 'accidentally' slipping down into the slimy bath, before pushing herself up onto her hands and knees and shaking her naked ass in your direction. Putting on a tone of dismay, the huge slime cries out, [slimeQueen.speech(~Aah!~ I'm so clumsy! And now I'm in the perfect position for someone to take advantage of me...)]
+		这样过了一会儿，你觉得自己好像真的该上路了。凯瑟琳不知怎么感觉到你要走了，她先是“不小心”滑进了黏糊糊的浴缸，然后跪趴在地上，朝你的方向摇晃着光屁股。巨大的史莱姆装出一副懊恼的样子，叫道：[slimeQueen.speech(~啊！~我真是笨手笨脚！现在我的位置正好让别人占了便宜……)]
 	</p>
 	<p>
-		While Catherine's attempt at getting you to fuck her is beyond transparent, you wonder if you should take advantage of this situation and just give her what she so clearly wants...
+		虽然凯瑟琳想让你上她的企图非常明显，但你思索自己要不要趁势而上，直接满足她如此直白的要求……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_BATH_SEX_START"><![CDATA[
 	<p>
-		Deciding to give Catherine what she so clearly wants, you sink down onto your knees behind her and grab her hips, before stating, [pc.speech(Seeing as you want to be 'ravished' so badly, I think I'll have a little fun with you...)]
+		你决定让凯瑟琳如愿以偿，于是你跪在她身后，抓着她的屁股说：[pc.speech(既然你这么想被‘蹂躏’，那我就跟你玩玩……)]
 	</p>
 	<p>
-		[slimeQueen.speech(Ah! No! Please! Y-You can't do this to royalty! I-I'm a queen!)] Catherine screams, completely failing to conceal the tone of arousal in her voice as she half-heartedly splashes about in the bath.
+		[slimeQueen.speech(啊！不！求你了！你、你不能这样对待皇室！我、我是女王！)]凯瑟琳尖叫着，完全无法掩饰她声音中的兴奋，心猿意马地在浴缸里挣扎着泼水。
 	</p>
 	<p>
-		Pulling Catherine back into your groin, you look down at the huge pink Slime Queen, grinning as you prepare to give her the ravishing she so badly desires...
+		你把凯瑟琳拉回你的下体，低头看着巨大的粉色史莱姆女王，咧嘴一笑，准备给她所渴求的奸淫……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_BATH_TRANSFORM"><![CDATA[
 	<p>
-		Wanting to relax before continuing on your way, you step over to the side of the huge bath, and take a look down into the pink slime. Sensing what it is you want, Catherine gets up from her bed and walks over to your side, before giggling, [slimeQueen.speech(Would you like to get in with me?)]
+		你想在继续前行之前放松一下，于是走到巨大的浴缸边，低头看了一眼粉色的史莱姆。凯瑟琳察觉到了你想要什么，于是从床上站起来，走到你身边，然后咯咯笑道：[slimeQueen.speech(你想和我一起进去吗？)]
 	</p>
 	<p>
-		Quickly stripping off, you take hold of the Slime Queen's hand and pull her along with you as you step forwards into the bath's warm, slimy contents. Catherine immediately sinks down into the slime, letting out a relaxed sigh as you sit down next to her.
+		你迅速脱掉衣服，与史莱姆女王牵着手一起走进浴缸温暖的粘稠物中。凯瑟琳立刻沉入粘液中，当你在她身边坐下时，她发出了一声轻松的叹息。
 	</p>
 	<p>
-		[slimeQueen.speech(You must be tired from travelling all this way to see me. Please, let me wash you,)] she sighs, sliding around behind you before starting to rub her slimy hands all over your back.
+		[slimeQueen.speech(你为了见我，这一路上舟车劳顿一定辛苦了。请让我帮你清洗，)]她叹息着绕到你身后，粘稠的手掌抚上你的后背。
 	</p>
 	<p>
-		Her warm touch instantly puts you at ease, and, once she's finished with your back, you lean back into Catherine, using her [slimeQueen.breastSize] breasts as a cushion as you let out a contented sigh. The Slime Queen giggles as she hugs you close to her, and, running her hands up and down the length of your body, she submissively cleans you with her warm pink slime.
+		凯瑟琳温暖的触感立刻让你感到安心，她一帮你擦完背，你就靠在她[slimeQueen.breastSize]的乳房上享受乳枕，发出满足的叹息。史莱姆女王咯咯地笑着，紧紧地把你搂在怀中，双手快乐地在你的身体上下游走，顺从地用她温暖的粉色粘液为你清洁。
 	</p>
 	<p>
-		As you lean back into Catherine, you feel her warm, slimy body start to envelop you, and before you know what's happening, you suddenly sink back <i>into</i> her. Your world is immediately transformed into one of total pink, and you instinctively struggle against your slimy surrounding as you try to get back to the surface.
+		随着你倚靠着凯瑟琳，她那温暖而粘稠的身体开始将你包围，还没等你反应过来是怎么回事，你就突然<i>沉入</i>了她的身体，你的世界顿时变得一片粉红。你本能地挣扎着，试图脱离包裹你的史莱姆。
 	</p>
 	<p>
-		[slimeQueen.speech(H-Hold on! I-I'll get you out of me, just- ~Aaaah!~)] you hear Catherine's muffled voice calling out from above, before being interrupted by an incredibly erotic moan. [slimeQueen.speech(S-Stop! You're pressing on my- ~Aaaaaah!~)]
+		[slimeQueen.speech(别、别动！我、我会把你弄出来的，只是——~嗯啊！~)]你听到凯瑟琳低沉的声音从上面呼唤着，突然被一声令人难以置信的娇喘打断了，[slimeQueen.speech(停、停下！你压到我的——~嗯啊嗯啊！~)]
 	</p>
 	<p>
-		Before you have time to realise what Catherine's saying, the need for oxygen overwhelms you, and you instinctively breathe in, taking a huge gulp of Catherine's slimy pink body into your lungs. At that moment, the Slime Queen is finally able to expel you from her body, and with a huge splash, she pushes you out into the slimy pink bath water.
+		你还没来得及理解凯瑟琳在说什么，缺氧就迫使你本能地吸气，把凯瑟琳的粉色粘液大口大口地吸进肺里。就在这时，史莱姆女王终于可以把你排出体外了，伴随着巨大的水花，她把你排进浴缸粉色的稠水里。
 	</p>
 	<p>
-		[slimeQueen.speech(Oh no! Are you ok? Cough it all up!)] Catherine calls out as she frantically rubs and pats your back. Although you manage to cough up a small amount of the pink goo, you can feel that the damage is already done, and you find yourself sinking down into the bath water as your body starts to change...
+		[slimeQueen.speech(哦不！你还好吗？快全部咳出来！)]凯瑟琳一边叫着，一边慌乱地给你拍背。虽然你尽力咳出了一点点粉色粘液，但你能感觉到伤害已经造成，你发现自己沉入了浴缸水中，身体开始发生变化……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_BATH_TRANSFORM_END"><![CDATA[
 	<p>
-		[slimeQueen.speech(Y-You're a slime!)] Catherine exclaims, stating the obvious. [slimeQueen.speech(I-I'm so sorry! I didn't mean to do this to you!)]
+		[slimeQueen.speech(你、你变成史莱姆了！)]凯瑟琳惊叫道，[slimeQueen.speech(我、我很抱歉！我不是故意的！)]
 	</p>
 	<p>
-		Surprisingly, you feel completely recovered from your sudden, alarming transformation, and you let out a weary sigh, [pc.speech(I think I'm ok...)]
+		出乎意料的是，你感觉自己已经从突如其来的惊人转变中完全恢复了过来，疲惫地叹息道：[pc.speech(我想我没事了……)]
 	</p>
 	<p>
-		Standing up on your new, slimy legs, you prepare to step out of the bath and see about getting your things back in order. Seeing that you're about to leave, Catherine makes a show of 'accidentally' slipping back down into the slimy bath, before pushing herself up onto her hands and knees and shaking her naked ass in your direction. Putting on a tone of dismay, the huge slime cries out, [slimeQueen.speech(~Aah!~ I'm so clumsy! And now I'm in the perfect position for someone to take advantage of me...)]
+		你用黏糊糊的新腿站了起来，准备走出浴缸，把东西整理好。凯瑟琳看到你要走了，她先是“不小心”滑进了黏糊糊的浴缸，然后跪趴在地上，朝你的方向摇晃着光屁股。巨大的史莱姆装出一副懊恼的样子，叫道：[slimeQueen.speech(~啊！~我真是笨手笨脚！现在我的位置正好让别人占了便宜……)]
 	</p>
 	<p>
-		While Catherine's attempt at getting you to fuck her is beyond transparent, you wonder if you should take advantage of this situation and just give her what she so clearly wants...
+		虽然凯瑟琳想让你上她的企图非常明显，但你思索自己要不要趁势而上，直接满足她如此直白的要求……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_TALK"><![CDATA[
 	<p>
-		Wanting to find out how Catherine came to be the 'Slime Queen', you ask her, [pc.speech(How did you end up in this position? And how is it that your slime can transform others?)]
+		你想知道是什么让凯瑟琳成为“史莱姆女王”，便问道：[pc.speech(你是怎么来这里安居的？你的粘液又是怎么转化别人的？)]
 	</p>
 	<p>
-		[slimeQueen.speech(Mmm...)] Catherine hums, sitting up on her bed. [slimeQueen.speech(Well, I used to be a normal slime-girl, and would attack people in Submission's tunnels, before letting them beat me and have their way with me. After a while of this, I started to think that it would be more fun if I looked really intimidating, so that when I got beaten, it would be extra humiliating to be ravished by my opponents. To this end, I started forcing myself to drink loads of water, so that I'd get really big and scary-looking!)]
+		[slimeQueen.speech(嗯……)]凯瑟琳哼着，坐在床上，[slimeQueen.speech(那个，我曾经是一个普通的史莱姆女孩，会在屈城区隧道中攻击人们，然后让他们打我，在我身上为所欲为。过了一段时间，我开始想，如果我看起来真的很吓人会更有趣。这样，当我被打败时，被对手蹂躏会得到更多的羞辱。为此，我开始强迫自己喝大量的水，让我变得非常大，看起来非常可怕！)]
 	</p>
 	<p>
-		[pc.speech(Well, that explains your size,)] you comment.
+		[pc.speech(难怪你尺寸这么大。)]你评价道。
 	</p>
 	<p>
-		[slimeQueen.speech(Yeah, and then once I'd grown really big, I thought I'd look even more threatening if I was like the slimes down here in the Bat Caverns. You know, what with the glowing and all. So I came down here and started eating the glowing mushrooms, but all they did was make my inside bits glow, see?)] Catherine explains, reaching down to spread her pussy and show you her glowing-pink insides. [slimeQueen.speech(I soon got bored of the taste though, so before my whole body started glowing, I travelled back up to Submission to have some fun!)]
+		[slimeQueen.speech(是的，当我长得很大的时候，我想如果我像蝙蝠洞窟里的史莱姆一样，看起来会更有威胁。你知道的，那些史莱姆会发光。所以我来到这里，开始吃发光的蘑菇，但它们只能让我的内部部分发光，看到了吗？)]凯瑟琳解释说，伸手扒开她的小穴，给你看她发粉红色荧光的内部，[slimeQueen.speech(但我很快就厌倦了它的味道，所以没等我全身都开始发光，我回到了屈城区，想找点乐子！)]
 	</p>
 	<p>
-		[pc.speech(I'm guessing that's how your slime became transformative. The mushrooms down here seem to have some weird effects on slimes,)] you interject.
+		[pc.speech(我猜这就是你的粘液可以转化别人的原因，这里的蘑菇似乎对粘液有一些奇怪的影响。)]你插嘴道。
 	</p>
 	<p>
-		[slimeQueen.speech(Yeah, I guess so too. At the time, however, I had no idea that my slime could do that. I soon found out about it though, as after I'd thrown my first fight to a pair of rat-boys in the tunnels, I kind of accidentally transformed [slimeRoyalGuard.name] into a slime...)] Catherine blushes, looking embarrassed as she recounts this part of her tale. [slimeQueen.speech(He'd just saved me, you see, and I went to give him a really big, annoying hug, in an attempt to frustrate him into wanting to take advantage of me. Well, I was still weak from my fight, and accidentally collapsed on top of him. By the time I managed to spit him out, he'd already swallowed a lot of my slime, and right there before my eyes, he transformed into a slime!)]
+		[slimeQueen.speech(是的，我也这么猜。然而，当时我不知道我的粘液可以做到这一点。不过，我很快就发现了，那时我在隧道里第一次与两个鼠男打架，结束后，我有点意外地把[slimeRoyalGuard.name]变成了史莱姆……)]凯瑟琳脸红了，当她讲到故事的这一部分时，她看起来很尴尬，[slimeQueen.speech(他刚刚救了我，你想，我走过去给了他一个大大的熊抱，试图阻止他占我的便宜。但当时我还很虚弱，不小心倒在了他身上。等我把他吐出来的时候，他已经吞下了许多我身体的粘液。就在我眼前，他变成了史莱姆！)]
 	</p>
 	<p>
-		[pc.speech(So how did that lead into you being the Slime Queen?)] you ask. 
+		[pc.speech(所以是什么促使你成为史莱姆女王？)]你问。
 	</p>
 	<p>
-		[slimeQueen.speech(Ah, well, I was feeling so guilty at having transformed [slimeRoyalGuard.name], that I started following him around and offering to help him find a way to turn back. I kept on calling him 'my heroic knight' to try and make him feel better, and I think he kind of got used to it,)] Catherine explains. [slimeQueen.speech(He ended up getting kind of attached to me, and instead of transforming back to how he used to be, he decided to offer me his service as my knight. It was at that point he started calling me his 'Queen', and the name kind of stuck.)]
+		[slimeQueen.speech(啊，我对自己转化[slimeRoyalGuard.name]感到很内疚，所以我一直跟着他，还提出要帮助他找到回去的方法。我一直叫他‘我英勇的骑士’，试图让他感觉好一点，我想他已经习惯了。)]凯瑟琳解释道，[slimeQueen.speech(他最后有点喜欢上我了，就没有变回以前的样子，而是决定作为我的骑士守护我。从那时起，他开始把我叫做他的‘女王’，这个名字就一直沿用了下来。)]
 	</p>
 	<p>
-		[pc.speech(So that's when you decided to build this tower and gather new subjects?)]
+		[pc.speech(所以那时你就决定建高塔来聚集臣民了吗？)]
 	</p>
 	<p>
-		[slimeQueen.speech(That's right!)] Catherine giggles. [slimeQueen.speech(It was all so much fun! Well, up until I realised that all of the intruders were getting defeated by my guards... All I wanted was a different adventurer each day, coming to claim me as their prize!)]
+		[slimeQueen.speech(对啦！)]凯瑟琳咯咯笑着，[slimeQueen.speech(这真是太有趣了！嗯，直到我意识到所有的入侵者都被我的守卫打败了……我想要的只是每天都有一个不同的冒险家，来把我收为战利品！)]
 	</p>
 	<p>
-		With Catherine's story now told, and your curiosity sated, you wonder what to do next...
+		凯瑟琳讲完故事，你满足了好奇心，思索起接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_QUEEN_LEAVE"><![CDATA[
 	<p>
-		Having finished your business with Catherine, you walk over to the bedroom door, and, after saying a brief goodbye, open it and step out into the corridor beyond. As you close the Queen's door behind you, you wonder where you should head off to next...
+		你结束了与凯瑟琳的事务，走到卧室门前，在简短地道别后，你打开门走到外面的走廊上。你关上身后的女王房门，思索接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SLIME_QUEEN_SEX_BATH -->
 	
 	<htmlContent tag="AFTER_SLIME_QUEEN_SEX_BATH"><![CDATA[
 	<p>
-		Exhausted from her orgasm, [slimeQueen.name] clambers out of the bath and sinks down onto her huge bed, before sighing, [slimeQueen.speech(~Aah!~ That was amazing...)]
+		高潮过后，[slimeQueen.name]用尽最后一丝力气地爬出浴池，直到躺在她的大床上后，她才长长的叹了口气：[slimeQueen.speech(~啊！~ 太不可思议了……)]
 	</p>
 	<p>
-		Similarly exiting the pool of slimy water, you can't help but grin at the Slime Queen as you question her admission of enjoyment, [pc.speech(I thought you didn't want to be 'ravished'?)]
+		你从浴池里爬出来之后，不禁笑了起来，因为你很好奇她是否会承认自己很享受，于是便开口问道：[pc.speech(我还以为你不想被‘蹂躏’呢？)]
 	</p>
 	<p>
-		[slimeQueen.speech(Oh! T-That's right!)] Catherine stutters, [slimeQueen.speech(I-I meant to say; Oh no! Now that you've had your wicked way with me, nobody will respect me any more! To think, the queen of all slimes was ravished like a common whore!)]
+		[slimeQueen.speech(哦！没！不是！)]凯瑟琳结结巴巴地说道：[slimeQueen.speech(我，我想说的是；哦，不！现在现在你强暴了我，没人会再尊重我了！想想看，所有史莱姆的女王就像个普通妓女一样被强暴蹂躏！)]
 	</p>
 	<p>
-		Shaking your head at Catherine's remarks, you gather your things and wonder what to do next...
+		在听了凯瑟琳的话，你摇了摇头，随后收拾好自己的东西，开始琢磨接下来该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_QUEEN_SEX_BATH_NO_ORGASM"><![CDATA[
 	<p>
-		Frustrated from your inability to satisfy her, [slimeQueen.name] clambers out of the bath and sinks down onto her huge bed with an overly-dramatic sigh, [slimeQueen.speech(~Aah!~ Y-You brute! You were only concerned with your own pleasure!)]
+	[slimeQueen.name]因性欲无法满足而感到沮丧，她爬出浴池，沉沉地躺在大床上，发出一声超大的叹息：[slimeQueen.speech(~啊呀！~你……你这个畜生！你只顾自己爽，根本不在乎我的感受！)]
 	</p>
 	<p>
-		Similarly exiting the pool of slimy water, you can't help but grin at the Slime Queen as you reply, [pc.speech(Well, the one who's being 'ravished' doesn't really get a say in the matter, does she?)]
+		你从浴池里爬出来之后，不禁笑着回答道：[pc.speech(好吧，但被‘蹂躏’的那个人其实并没有发言权，不是吗？)]
 	</p>
 	<p>
-		[slimeQueen.speech(W-Well, it would have been better for both of us if you fully satisfied me!)] Catherine stutters, [slimeQueen.speech(The next time you decide to have your wicked way with me, make sure I get to have some fun too!)]
+		[slimeQueen.speech(唔……好吧，但如果你能完全满足我的话，对我们双方都好！)]凯瑟琳结结巴巴地说道：[slimeQueen.speech(下次你决定和我玩你的强奸游戏时，最好确保我也能玩得开心！)]
 	</p>
 	<p>
-		Shaking your head at Catherine's remarks, you gather your things and wonder what to do next...
+		在听了凯瑟琳的话，你摇了摇头，随后收拾好自己的东西，开始琢磨接下来该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SLIME_QUEEN_SEX -->
 	
 	<htmlContent tag="AFTER_SLIME_QUEEN_SEX"><![CDATA[
 	<p>
-		Exhausted from her orgasm, [slimeQueen.name] collapses back onto her huge bed. [slimeQueen.speech(~Aah!~ T-That was amazing...)]
+		高潮过后，[slimeQueen.name]躺倒在了她的大床上，随后才长长的叹了口气：[slimeQueen.speech(~啊！~ 太不可思议了……)]
 	</p>
 	<p>
-		Grinning at the Slime Queen, you can't help but question her satisfied sigh, [pc.speech(But I thought you didn't want to be 'ravished'?)]
+		你笑看着史莱姆女王，因为你很好奇她是否会承认自己很享受，于是便开口问道：[pc.speech(我还以为你不想被‘蹂躏’呢？)]
 	</p>
 	<p>
-		[slimeQueen.speech(O-Oh! T-That's right!)] Catherine stutters, [slimeQueen.speech(I-I meant to say; Oh no! Now that you've had your wicked way with me, nobody will respect me any more! To think, the queen of all slimes was ravished like a common whore!)]
+		[slimeQueen.speech(哦！没！不是！)]凯瑟琳结结巴巴地说道：[slimeQueen.speech(我，我想说的是；哦，不！现在现在你强暴了我，没人会再尊重我了！想想看，所有史莱姆的女王就像个普通妓女一样被强暴蹂躏！)]
 	</p>
 	<p>
-		Shaking your head at Catherine's remarks, you gather your things and wonder what to do next...
+		在听了凯瑟琳的话，你摇了摇头，随后收拾好自己的东西，开始琢磨接下来该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SLIME_QUEEN_SEX_NO_ORGASM"><![CDATA[
 	<p>
-		Frustrated from your inability to satisfy her, [slimeQueen.name] collapses back onto her huge bed with an overly-dramatic sigh, [slimeQueen.speech(~Aah!~ Y-You brute! You were only concerned with your own pleasure!)]
+		由于你没能满足她，[slimeQueen.name]沮丧地躺倒在她的大床上，随后发出一声超大的叹息：[slimeQueen.speech(~呀！~你……你这个畜生！你只顾自己爽，根本不在乎我的感受！)]
 	</p>
 	<p>
-		Grinning at the Slime Queen, you can't help but reply, [pc.speech(Well, the one who's being 'ravished' doesn't really get a say in the matter, does she?)]
+		你笑看着史莱姆女王，随后情不自禁地回答道：[pc.speech(好吧，但被‘蹂躏’的那个人其实并没有发言权，不是吗？)]
 	</p>
 	<p>
-		[slimeQueen.speech(W-Well, it would have been better for both of us if you fully satisfied me!)] Catherine stutters, [slimeQueen.speech(The next time you decide to have your wicked way with me, make sure I get to have some fun too!)]
+		[slimeQueen.speech(唔……好吧，但如果你能完全满足我的话，对我们双方都好！)]凯瑟琳结结巴巴地说道：[slimeQueen.speech(下次你决定和我玩你的强奸游戏时，最好确保我也能玩得开心！)]
 	</p>
 	<p>
-		Shaking your head at Catherine's remarks, you gather your things and wonder what to do next...
+		在听了凯瑟琳的话，你摇了摇头，随后收拾好自己的东西，开始琢磨接下来该怎么办……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

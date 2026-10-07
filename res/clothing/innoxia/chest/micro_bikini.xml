@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>180</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[micro bikini top]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[micro bikini tops]]></namePlural>
-		<description><![CDATA[A triangle-shaped micro bikini top. It uses loose strings tied around the neck and back to keep it in place and has only just enough material to cover the wearer's nipples.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[迷你比基尼上装]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[迷你比基尼上装]]></namePlural>
+		<description><![CDATA[三角形微型比基尼上衣。它用散开的绳子绑在脖子和背部以保持原位，并且只能保证覆盖佩戴者的乳头。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -58,27 +58,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the skimpy fabric of the micro bikini top over [npc.her] [npc.nipples] before tying up the strings at [npc.her] back.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the skimpy fabric of the micro bikini top over [npc2.namePos] [npc2.nipples] before tying up the strings at [npc2.her] back.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(place)] the skimpy fabric of the micro bikini top over [npc2.namePos] [npc2.nipples] before roughly tying up the strings at [npc2.her] back.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将迷你比基尼上装放在[npc.her]的胸部上，并系好[npc.her]背后的绳子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将比迷你基尼上装放在[npc2.namePos]的胸部上，并把[npc2.her]背后的绳子系好。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将迷你比基尼上装放在[npc2.namePos]的胸部上，并草草地把[npc2.her]背后的绳子系好。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the strings of [npc.her] micro bikini top and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the strings of [npc2.namePos] micro bikini top and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(untie)] the strings of [npc2.namePos] micro bikini top and [npc.verb(pull)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的迷你比基尼上装的绳子并把它脱了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]的迷你比基尼上装的绳子并把它脱了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地解开[npc2.namePos]的迷你比基尼上装的绳子并把它拽了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

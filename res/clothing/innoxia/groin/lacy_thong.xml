@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>350</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[lacy thong]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[lacy thongs]]></namePlural>
-		<description><![CDATA[A skimpy thong, with a decorative lace front panel.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[蕾丝丁字裤]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[蕾丝丁字裤]]></namePlural>
+		<description><![CDATA[一条小巧的丁字裤，前面有装饰性的蕾丝面料。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>GROIN</slot>

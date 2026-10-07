@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<additionalPlaceTypeTriggers>
@@ -9,14 +9,14 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[demonic centauress marauder]]></name>
+			<name><![CDATA[恶魔半人马掠夺者]]></name>
 			<chanceToTrigger opportunisticEncounter="true"><![CDATA[
 				3
 			]]></chanceToTrigger>
 			<dialogueReturned><![CDATA[innoxia_encounters_fields_centaur_melee_start]]></dialogueReturned>
 		</encounter>
 		<encounter>
-			<name><![CDATA[demonic centauress raider]]></name>
+			<name><![CDATA[恶魔半人马劫掠者]]></name>
 			<chanceToTrigger opportunisticEncounter="true"><![CDATA[
 				3
 			]]></chanceToTrigger>

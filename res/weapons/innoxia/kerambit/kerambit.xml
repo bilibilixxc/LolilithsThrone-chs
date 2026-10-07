@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>1500</value> 
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[kerambit]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[kerambits]]></namePlural>
-		<description><![CDATA[Originally made as a sickle-like agricultural tool, this small, easily-concealable knife soon began to see use as a weapon. The double-edged blade, made from enchanted ethereal energy, is sharply curved to resemble a tiger's claw, and is intended to be held pointing downward from the fist.]]></description> 
+		<determiner><![CDATA[一把]]></determiner>
+		<name><![CDATA[爪刀]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[爪刀]]></namePlural>
+		<description><![CDATA[这把小刀最初是一种类似镰刀的农具，易于藏匿，很快便被当做武器。双刃刀刃由附魔的奥术能量制成，刀刃弯曲锋利，形似老虎的爪子，握刀时可从拳头朝下。]]></description> 
 		
-		<attackDescriptor>slash</attackDescriptor>
+		<attackDescriptor><![CDATA[划]]></attackDescriptor>
 		
-		<attackTooltipDescription><![CDATA[Slash at [npc2.name] with your kerambit.]]></attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用爪刀划向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>COMMON</rarity> 
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(unsheathe)] the kerambit, readying it for use in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(sheathe)] the kerambit, before putting it away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拔出爪刀，准备用于战斗。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]将爪刀插回刀鞘，然后收好。]]></unequipText>
 		
 		<imageName>kerambit_sheathed.svg</imageName> 
 		<imageEquippedName>kerambit.svg</imageEquippedName>
@@ -63,26 +63,26 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Making a downwards slashing motion with [npc.her] kerambit, [npc.name] [npc.verb(manage)] to strike [npc2.name] in the chest; the ethereal arcane blade passing through [npc2.her] torso to drain [npc2.her] energy!
+		[npc.Name]的爪刀向下挥舞，狠狠地劈中[npc2.name]的胸膛；其虚幻的奥术利刃穿过了[npc2.her]的躯体，汲取其能量！
 		]]></hitText>
 		<hitText><![CDATA[
-		Swiftly striking at [npc2.name] with [npc.her] kerambit, [npc.name] [npc.verb(manage)] to slash through [npc2.her] [npc2.arm] with the ethereal blade and drain [npc2.her] energy!
-		]]></hitText>
+		[npc.Name]用爪刀迅速攻击[npc2.name]，用虚幻的奥术刀刃刺入了[npc2.her]的[npc2.arm]，汲取其能量！
+]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] kerambit, slashing the ethereal blade into [npc2.her] shoulder and causing [npc2.herHim] to lose some energy!
-		]]></hitText>
+		[npc.Name]前踏一步，用爪刀捅向[npc2.name]，虚幻的奥术利刃深深地插进[npc2.her]的肩膀，令其失去了一些能量！
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] kerambit, [npc.name] [npc.verb(attempt)] to slash [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.name]挥出爪刀，捅向[npc2.name]的胸口，但最后没有成功命中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] kerambit, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]用爪刀攻击[npc2.name]，却没能命中目标，让[npc.she]恼火地大喊一声！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] kerambit, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]快步上前，用爪刀冲向[npc2.name]，却没能命中目标，让[npc.she]恼火地大喊一声！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

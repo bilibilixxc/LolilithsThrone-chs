@@ -49,15 +49,15 @@ public class Moreno extends NPC {
 	}
 	
 	public Moreno(boolean isImported) {
-		super(isImported, new NameTriplet("Moreno"), "Caballo",
-				"On every day but Wednesday and Saturday, Moreno operates the strength tester game in the centre of Elis's Farmer's Market.",
+		super(isImported, new NameTriplet("莫雷诺"), "卡巴罗",
+				"除了周三周六，莫雷诺每天都在伊利斯农贸市场中心举办力量测试赛。",
 				31, Month.AUGUST, 28,
 				25, Gender.M_P_MALE, Subspecies.HORSE_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 10),
 				WorldType.getWorldTypeFromId("innoxia_fields_elis_market"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_market_centre"),
 				true);
 
-		this.setGenericName("muscular horse-boy");
+		this.setGenericName("肌肉紧致的马男");
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);

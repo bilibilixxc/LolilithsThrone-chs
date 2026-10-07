@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[locked door]]></name>
-	<tooltipDescription><![CDATA[This door links the storage area to the main factory.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside a locked door in the factory beneath Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[锁住的门]]></name>
+	<tooltipDescription><![CDATA[这扇门连接着主工厂的仓库区。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[洛维耶纳奢侈品店下面工厂的锁着的门旁边]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>door</svgName>
 	<colour>BASE_CRIMSON</colour>

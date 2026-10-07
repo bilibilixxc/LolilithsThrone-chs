@@ -184,9 +184,9 @@ public abstract class AbstractEyeType implements BodyPartTypeInterface {
 	@Override
 	public String getDeterminer(GameCharacter gc) {
 		if(gc.getEyePairs()==1) {
-			return "a pair of";
+			return "一双";
 		}
-		return Util.intToString(gc.getEyePairs())+" pairs of";
+		return Util.intToString(gc.getEyePairs())+"双";
 	}
 
 	@Override

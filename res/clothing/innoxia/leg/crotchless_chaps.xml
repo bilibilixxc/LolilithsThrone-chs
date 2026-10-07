@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>750</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[crotchless chaps]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[crotchless chaps]]></namePlural>
-		<description><![CDATA[These leather chaps are missing a large piece at the front and back, which leaves the wearer's ass and groin completely exposed.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[无裆套裤]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[无裆套裤]]></namePlural>
+		<description><![CDATA[这条套裤的前面和背面都缺了一大块，使穿着者的屁股和腹股沟完全暴露出来。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>LEG</slot>
@@ -51,27 +51,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(step)] into the crotchless chaps, before pulling them up to fit around [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(get)] [npc2.name] to step into the crotchless chaps, before pulling them up to fit around [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step into the crotchless chaps, before yanking them up to fit around [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]穿上无裆套裤，然后拉上以适应[npc.her]的腰部。
+]]></self>
+    <other><![CDATA[
+[npc.Name]让[npc2.name]踏入无裆套裤，然后拉上以合适[npc2.her]的腰部。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强迫[npc2.name]踩进无裆裤，然后猛地将它们拉上围上[npc2.her]的腰部。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc.her] crotchless chaps, before slipping them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] down [npc2.namePos] crotchless chaps, before slipping them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] crotchless chaps, before yanking them off.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把[npc.her]的无裆套裤拉下并脱掉。
+    ]]></self>
+    <other><![CDATA[
+[npc.Name]拉下[npc2.namePos]的无裆套裤，然后将它脱掉。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地拉下[npc2.namePos]的无裆套裤，随后用力将它们拽掉。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

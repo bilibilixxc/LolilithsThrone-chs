@@ -80,7 +80,7 @@ public class Sean extends NPC {
 	}
 	
 	public Sean(boolean isImported) {
-		super(isImported, new NameTriplet("Sean"), "Hughes",
+		super(isImported, new NameTriplet("肖恩"), "休斯",
 				"",
 				28, Month.MAY, 3,
 				15, Gender.M_P_MALE,
@@ -88,7 +88,7 @@ public class Sean extends NPC {
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
-			this.setGenericName("rabbit-boy Enforcer");
+			this.setGenericName("兔男执法者");
 		}
 	}
 	
@@ -283,7 +283,7 @@ public class Sean extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return UtilText.parse(this, "Constable [npc.surname] is a member of the Enforcer's Frontline Patrol division, and has been tasked with watching over the slaves locked into the stocks in Slaver Alley.");
+		return UtilText.parse(this, "警员[npc.surname]是执法者前线巡逻部门的成员，并被指派监视被锁在奴隶巷颈手枷里的奴隶。");
 	}
 	
 	@Override

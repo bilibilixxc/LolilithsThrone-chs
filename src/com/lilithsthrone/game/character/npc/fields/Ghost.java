@@ -84,8 +84,8 @@ public class Ghost extends NPC {
 	}
 	
 	public Ghost(boolean isImported) {
-		super(isImported, new NameTriplet("Laura"), "Macaulay",
-				"One of the SWORD Enforcers stationed in Elis, this small otter-girl is known only by her callsign, 'Ghost'.",
+		super(isImported, new NameTriplet("劳拉"), "麦考利",
+				"SWORD的一名执法者在伊利斯落脚，这个小巧的水獭女只以其代号闻名：“幽灵”。",
 				67, Month.JULY, 11,
 				42,
 				Gender.F_V_B_FEMALE, Subspecies.getSubspeciesFromId("dsg_otter_subspecies_otter"), RaceStage.GREATER,
@@ -94,7 +94,7 @@ public class Ghost extends NPC {
 				true);
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
-			this.setGenericName("small otter-girl");
+			this.setGenericName("小水獭女");
 		}
 	}
 	
@@ -405,7 +405,7 @@ public class Ghost extends NPC {
 				new ItemEffect(ItemEffectType.WEAPON, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.CRITICAL_DAMAGE, TFPotency.MAJOR_BOOST, 0),
 				new ItemEffect(ItemEffectType.WEAPON, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.CRITICAL_DAMAGE, TFPotency.BOOST, 0)
 				));
-		dagger.setName("Ghost's SWORD dagger");
+		dagger.setName("幽灵SWORD匕首");
 		return dagger;
 	}
 	

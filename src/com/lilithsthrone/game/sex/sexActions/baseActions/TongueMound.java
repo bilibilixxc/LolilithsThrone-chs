@@ -23,11 +23,11 @@ public class TongueMound {
 	private static String getDescriptionFinisher(SexAction action, int variation) {
 		if(!action.isTargetedCharacterInanimate()) {
 			if(variation==1) {
-				return " as [npc2.name] [npc2.moan+] beneath [npc.herHim].";
+				return "，[npc2.name]在[npc.herHim]身下发出一阵[npc2.moan+]。";
 			}
-			return " as [npc2.she] [npc2.moan+] beneath [npc.herHim].";
+			return "，[npc2.name]在[npc.herHim]身下发出一阵[npc2.moan+]。";
 		}
-		return ".";
+		return "。";
 	}
 	
 	public static final SexAction MOUND_SNOG = new SexAction(
@@ -41,12 +41,12 @@ public class TongueMound {
 		
 		@Override
 		public String getActionTitle() {
-			return "Rough mound kiss";
+			return "亲吻耻丘(粗暴)";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Roughly kiss [npc2.namePos] genderless crotch.";
+			return "粗暴地亲吻着[npc2.namePos]无性别的小丘。";
 		}
 
 		@Override
@@ -58,14 +58,14 @@ public class TongueMound {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-						"[npc.Name] roughly [npc.verb(grind)] [npc.her] [npc.lips+] down against [npc2.namePos] doll-like mound,"
-								+ " forcefully kissing and licking at [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0),
+						"[npc.Name]急切地用[npc.her][npc.lips+]摩擦着[npc2.namePos]玩偶般空无一物的下体，"
+								+ "激烈地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0),
 
-						"Dropping [npc.her] head down into [npc2.namePos] crotch, [npc.name] roughly [npc.verb(grind)] [npc.her] mouth against [npc2.her] genderless crotch,"
-								+ " kissing and licking [npc2.her] sensitive mound"+getDescriptionFinisher(this, 1),
+						"将头埋入[npc2.namePos]胯间，[npc.Name]粗暴地用嘴唇摩擦着[npc2.her]无性别的小丘，"
+								+ "激烈地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 1),
 
-						"Pushing [npc.her] face down into [npc2.namePos] groin, [npc.name] [npc.verb(start)] grinding [npc.her] [npc.lips+] against [npc2.her] genderless mound,"
-								+ " roughly kissing and licking [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0));
+						"[npc.Name]将脸压在[npc2.namePos]的腹股沟上，开始用[npc.lips+]磨蹭着[npc2.her]无性别的小丘，"
+								+ "粗暴地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0));
 		}
 	};
 	
@@ -80,12 +80,12 @@ public class TongueMound {
 		
 		@Override
 		public String getActionTitle() {
-			return "Kiss mound";
+			return "亲吻耻丘";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Passionately kiss and lick [npc2.namePos] genderless mound.";
+			return "热情地亲吻舔舐[npc2.namePos]无性别的小丘。";
 		}
 
 		@Override
@@ -97,14 +97,14 @@ public class TongueMound {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] eagerly [npc.verb(press)] [npc.her] [npc.lips+] down against [npc2.namePos] doll-like mound,"
-							+ " passionately kissing and licking at [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0),
+					"[npc.Name]急切地将[npc.her][npc.lips+]压向[npc2.namePos]玩偶般空无一物的下体，"
+							+ "热情地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0),
 
-					"Dropping [npc.her] head down into [npc2.namePos] crotch, [npc.name] passionately [npc.verb(press)] [npc.her] mouth against [npc2.her] genderless crotch,"
-							+ " kissing and licking [npc2.her] sensitive mound"+getDescriptionFinisher(this, 1),
+					"[npc.Name]将头埋入[npc2.namePos]胯间，嘴激情四射地贴住无性别的小丘，"
+							+ "激烈地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 1),
 
-					"Pushing [npc.her] face down into [npc2.namePos] groin, [npc.name] [npc.verb(start)] pressing [npc.her] [npc.lips+] against [npc2.her] genderless mound,"
-							+ " eagerly kissing and licking [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0));
+					"[npc.Name]将脸压在[npc2.namePos]的腹股沟上，开始用[npc.lips+]磨蹭着[npc2.her]无性别的小丘，"
+							+ "急切地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0));
 		}
 	};
 	
@@ -119,12 +119,12 @@ public class TongueMound {
 		
 		@Override
 		public String getActionTitle() {
-			return "Kiss mound";
+			return "亲吻耻丘";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently kiss and lick [npc2.namePos] genderless mound.";
+			return "温柔地亲吻舔舐[npc2.namePos]无性别的小丘。";
 		}
 
 		@Override
@@ -136,14 +136,14 @@ public class TongueMound {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] gently [npc.verb(press)] [npc.her] [npc.lips+] down against [npc2.namePos] doll-like mound,"
-							+ " planting delicate kisses on [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0),
+					"[npc.Name]温柔地将[npc.her][npc.lips+]压向[npc2.namePos]玩偶般空无一物的下体，"
+							+ "在[npc2.her]敏感的小丘上亲下轻柔的吻"+getDescriptionFinisher(this, 0),
 
-					"Dropping [npc.her] head down into [npc2.namePos] crotch, [npc.name] gently [npc.verb(press)] [npc.her] mouth against [npc2.her] genderless crotch,"
-							+ " kissing and licking [npc2.her] sensitive mound"+getDescriptionFinisher(this, 1),
+					"[npc.Name]将头埋入[npc2.namePos]胯间，嘴温柔地贴住无性别的小丘，"
+							+ "激烈地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 1),
 
-					"Pushing [npc.her] face down into [npc2.namePos] groin, [npc.name] [npc.verb(start)] softly pressing [npc.her] [npc.lips+] against [npc2.her] genderless mound,"
-							+ " gently kissing and licking [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0));
+					"[npc.Name]将脸压在[npc2.namePos]的腹股沟上，开始温柔地用[npc.lips+]磨蹭着[npc2.her]无性别的小丘，"
+							+ "温柔地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0));
 		}
 	};
 	
@@ -158,12 +158,12 @@ public class TongueMound {
 		
 		@Override
 		public String getActionTitle() {
-			return "Snog mound";
+			return "深吻耻丘";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Passionately snog [npc2.namePos] genderless crotch.";
+			return "热情地亲吻着[npc2.namePos]无性别的小丘。";
 		}
 
 		@Override
@@ -175,14 +175,14 @@ public class TongueMound {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] eagerly [npc.verb(press)] [npc.her] [npc.lips+] down against [npc2.namePos] doll-like mound,"
-							+ " passionately kissing and licking at [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0),
+					"[npc.Name]急切地将[npc.her][npc.lips+]压向[npc2.namePos]玩偶般空无一物的下体，"
+							+ "热情地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0),
 
-					"Dropping [npc.her] head down into [npc2.namePos] crotch, [npc.name] passionately [npc.verb(press)] [npc.her] mouth against [npc2.her] genderless crotch,"
-							+ " kissing and licking [npc2.her] sensitive mound"+getDescriptionFinisher(this, 1),
+					"[npc.Name]将头埋入[npc2.namePos]胯间，嘴激情四射地贴住无性别的小丘，"
+							+ "激烈地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 1),
 
-					"Pushing [npc.her] face down into [npc2.namePos] groin, [npc.name] [npc.verb(start)] pressing [npc.her] [npc.lips+] against [npc2.her] genderless mound,"
-							+ " eagerly kissing and licking [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0));
+					"[npc.Name]将脸压在[npc2.namePos]的腹股沟上，开始用[npc.lips+]磨蹭着[npc2.her]无性别的小丘，"
+							+ "急切地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0));
 		}
 	};
 	
@@ -197,12 +197,12 @@ public class TongueMound {
 		
 		@Override
 		public String getActionTitle() {
-			return "Kiss mound";
+			return "亲吻耻丘";
 		}
 	
 		@Override
 		public String getActionDescription() {
-			return "Gently kiss and lick [npc.namePos] doll-like crotch.";
+			return "温柔地亲吻舔舐[npc2.namePos]玩偶般空无一物的下体。";
 		}
 	
 		@Override
@@ -214,14 +214,14 @@ public class TongueMound {
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.Name] [npc.verb(press)] [npc.her] [npc.lips+] down against [npc2.namePos] doll-like mound,"
-							+ " kissing and licking at [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0),
+					"[npc.Name]将[npc.her][npc.lips+]压向[npc2.namePos]玩偶般空无一物的下体，"
+							+ "对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0),
 
-					"Dropping [npc.her] head down into [npc2.namePos] crotch, [npc.name] [npc.verb(press)] [npc.her] mouth against [npc2.her] genderless crotch,"
-							+ " kissing and licking [npc2.her] sensitive mound"+getDescriptionFinisher(this, 1),
+					"[npc.Name]将头埋入[npc2.namePos]胯间，嘴贴住无性别的小丘，"
+							+ "激烈地对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 1),
 
-					"Pushing [npc.her] face down into [npc2.namePos] groin, [npc.name] [npc.verb(start)] pressing [npc.her] [npc.lips+] against [npc2.her] genderless mound,"
-							+ " kissing and licking [npc2.her] sensitive crotch"+getDescriptionFinisher(this, 0));
+					"[npc.Name]将脸压在[npc2.namePos]的腹股沟上，开始用[npc.lips+]磨蹭着[npc2.her]无性别的小丘，"
+							+ "对着[npc2.her]敏感的小丘亲吻舔舐"+getDescriptionFinisher(this, 0));
 		}
 	};
 }

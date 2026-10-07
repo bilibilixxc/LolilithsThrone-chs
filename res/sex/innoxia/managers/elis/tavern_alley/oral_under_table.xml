@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[table]]></deskName>
-	<title><![CDATA[Under table oral]]></title>
+	<deskName><![CDATA[桌子]]></deskName>
+	<title><![CDATA[在桌子下面口交]]></title>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>
 	<canSkipSex><![CDATA[true]]></canSkipSex>
@@ -15,14 +15,14 @@
 	<publicSex>
 		<isPublic><![CDATA[true]]></isPublic>
 		<startingDescription><![CDATA[
-			Although you shuffle mostly out of sight beneath the table, you're still partially exposed to the tavern, allowing several revellers to look over and watch as you prepare to perform oral on the [attacker.race]...
+			虽然你尽量躲在桌下，但还是在酒馆里露出了一部分，几个狂欢者看过来，准备围观你口[attacker.race]……
 		]]></startingDescription>
 		<randomDescriptions enabled="true">
-			<description><![CDATA[Several people sitting at nearby tables laugh and cheer as they watch your lewd display.]]></description>
-			<description><![CDATA[You hear someone in the tavern wolf-whistling as they watch you performing oral under the table.]]></description>
-			<description><![CDATA[You hear someone nearby commenting on your performance.]]></description>
-			<description><![CDATA[Cheering and laughing, several rowdy onlookers happily watch as you continue performing oral.]]></description>
-			<description><![CDATA[You glance across to see a couple of spectators touching themselves as they watch you perform oral.]]></description>
+			<description><![CDATA[坐在附近桌子的几个人看着你好色淫荡的表演，大声欢呼起来。]]></description>
+			<description><![CDATA[当人们围观着你在桌子下面进行口交时，你听见旅店某处传来了一声流氓哨。]]></description>
+			<description><![CDATA[你听到附近的一些人正在评论你的表演。]]></description>
+			<description><![CDATA[几个粗暴的围观者兴奋地看着你继续进行口交，欢呼大笑着。]]></description>
+			<description><![CDATA[你瞥了一眼，看到几个观众一边在看你进行口交，一边自慰。]]></description>
 		</randomDescriptions>
 	</publicSex>
 	<characterInformationContainer>

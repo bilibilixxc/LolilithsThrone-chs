@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="exterior">
@@ -13,12 +13,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Depot]]></responseTitle>
+				<responseTitle><![CDATA[车站]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-						As Astrapi informed you that she and Vronti will not be offering rides for the rest of today, you'll have to come back tomorrow if you wanted to make use of their services.
+						阿斯特拉皮告诉你，现在已经过了乘车服务的时间段，如果你想乘坐马车，还请明天再来。
 					#ELSE
-						Approach the Centaur Carriage Depot and see if you can find Astrapi or Vronti.
+						靠近半人马拉车站，看看能否找到阿斯特拉皮或弗洛狄。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -46,12 +46,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Inside]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5.75, 15))
-						The Centaur Carriage Depot is open between [style.italicsMinorGood([units.time(5.75)]-[units.time(15)])], and as such you could [pc.step] inside the intact barn and see what all the noise is about.
+						现在是半人马马拉车的开放时间，所以你可以循着嘈杂热闹的声音进去看看这个齐整的马厩内部。
 					#ELSE
-						The Centaur Carriage Depot is open between [style.italicsMinorBad([units.time(5.75)]-[units.time(15)])], and as such is currently deserted. You'll have to come back during opening times if you wanted to take a look inside the barn.
+						半人马马拉车只在[style.italicsMinorBad([units.time(5.75)]-[units.time(15)])]时间段开放，如果你想进去看看，得等到开放时间再来。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -68,8 +68,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wait & enter]]></responseTitle>
-				<responseTooltip><![CDATA[As the depot is currently closed, you could wait here until [units.time(5.75)] for it to open and then head inside, should you want to...]]></responseTooltip>
+				<responseTitle><![CDATA[等待&进入]]></responseTitle>
+				<responseTooltip><![CDATA[车站目前关闭了，你在考虑是否要在原地待到[units.time(5.75)]等车站开门再进去。你决定……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_approach_inside]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
 					[#game.getMinutesUntilTimeInMinutes(5.75*60)]
@@ -84,12 +84,12 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5.75, 15))
-						Decide against heading inside the building and continue on your way through the Foloi Fields.
+						你决定不去车站，继续在弗洛伊田野探索。
 					#ELSE
-						As the Centaur Carriage Depot is currently closed, there's nothing for you to do here. You'll have to come back between [style.italicsMinorBad([units.time(5.75)]-[units.time(15)])] if you wanted to take a look inside the barn.
+						目前半人马马拉车车站处于关闭状态，你在这无事可做。你应该在[style.italicsMinorBad([units.time(5.75)]-[units.time(15)])]时间段再来。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
@@ -113,8 +113,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Introduction]]></responseTitle>
-				<responseTooltip><![CDATA[Introduce yourself to the two centaurs.]]></responseTooltip>
+				<responseTitle><![CDATA[介绍]]></responseTitle>
+				<responseTooltip><![CDATA[向这两位半人马介绍自己。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_introductions]]></nextDialogue>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_centaur_transport_introduced, true)]
@@ -139,16 +139,16 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.getMoney()>=250)
-						Elis [style.moneyFormat(250, span)]
+						伊利斯[style.moneyFormat(250, span)]
 					#ELSE
-						Elis [style.moneyFormatUncoloured(250, span)]
+						伊利斯[style.moneyFormatUncoloured(250, span)]
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()>=250)
-						Take up Astrapi's offer and have her take you to Elis now.
+						选择阿斯特拉皮的服务，让她载你到伊利斯。
 					#ELSE
-						You don't have enough money to get a ride to Elis!
+						你没有足够的火币购买马车服务。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -166,8 +166,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Astrapi that you don't want a ride to Elis right now.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉阿斯特拉皮你暂时不想前往伊利斯。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/centaur_transport', 'LEAVE_BARN'))]
@@ -190,12 +190,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Inside]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5.75, 15))
-						The Centaur Carriage Depot is open between [style.italicsMinorGood([units.time(5.75)]-[units.time(15)])], and as such you could [pc.step] inside the intact barn and potentially find Astrapi or Vronti.
+						现在是半人马马拉车的开放时间，所以你可以进去看看阿斯特拉皮或者弗洛狄在不在。
 					#ELSE
-						The Centaur Carriage Depot is open between [style.italicsMinorBad([units.time(5.75)]-[units.time(15)])], and as such is currently deserted. You'll have to come back during opening times if you wanted to meet Astrapi or Vronti again.
+						半人马马拉车只在[style.italicsMinorBad([units.time(5.75)]-[units.time(15)])]时间段开放，如果你找阿斯特拉皮或者弗洛狄，得等到开放时间再来。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -212,8 +212,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wait & enter]]></responseTitle>
-				<responseTooltip><![CDATA[As the depot is currently closed, you could wait here until [units.time(5.75)] for it to open and then head inside, should you want to...]]></responseTooltip>
+				<responseTitle><![CDATA[等待&进入]]></responseTitle>
+				<responseTooltip><![CDATA[车站目前关闭了，你在考虑是否要在原地待到[units.time(5.75)]等车站开门再进去。你决定……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_approach_inside_repeat]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
 					[#game.getMinutesUntilTimeInMinutes(5.75*60)]
@@ -228,12 +228,12 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5.75, 15))
-						Decide against heading inside the building and continue on your way through the Foloi Fields.
+						你决定不去车站，继续在弗洛伊田野探索。
 					#ELSE
-						As the Centaur Carriage Depot is currently closed, there's nothing for you to do here. You'll have to come back between [style.italicsMinorBad([units.time(5.75)]-[units.time(15)])] if you wanted to meet Astrapi or Vronti again.
+						目前半人马马拉车车站处于关闭状态，你在这无事可做。你应该在[style.italicsMinorBad([units.time(5.75)]-[units.time(15)])]时间段再来找阿斯特拉皮或者弗洛狄。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
@@ -271,8 +271,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[As neither Astrapi nor Vronti are here right now, you'll need to wait for the next departure time if you wanted to get a ride to Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[目前阿斯特拉皮和弗洛狄都不在，如果你还想坐车去伊利斯，你必须等到下次发车时间。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_approach_inside_repeat]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
 					#IF(game.getHourOfDay()>12)
@@ -304,20 +304,20 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.getMoney()>=250)
-						Elis ([style.moneyFormat(250, span)])
+						伊利斯([style.moneyFormat(250, span)])
 					#ELSE
-						Elis ([style.moneyFormatUncoloured(250, span)])
+						伊利斯([style.moneyFormatUncoloured(250, span)])
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()>=250)
 						#IF(game.getCharactersPresent().contains(astrapi))
-							Take up Astrapi's offer and have her take you to Elis now.
+							选择阿斯特拉皮的服务，让她载你到伊利斯。
 						#ELSE
-							Take up Vronti's offer and have him take you to Elis now.
+							选择弗洛狄的服务，让他载你到伊利斯。
 						#ENDIF
 					#ELSE
-						You don't have enough money to get a ride to Elis!
+						你没有火币来购买任何一人的服务。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -344,8 +344,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Astrapi that you don't want a ride to Elis right now and exit the barn.]]></responseTooltip>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉阿斯特拉皮你现在不想坐车去伊利斯，然后离开谷仓。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					#IF(game.getCharactersPresent().contains(astrapi) && astrapi.isVisiblyPregnant())
@@ -375,12 +375,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Set off]]></responseTitle>
+				<responseTitle><![CDATA[出发]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Set off on your way to Elis.
+						出发前往伊利斯。
 					#ELSE
-						Set off on your way to Dominion.
+						出发前往御城区。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey]]></nextDialogue>
@@ -408,14 +408,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Relax and stay quiet as you're transported to Elis.
+						放松，享受前往伊利斯路上的宁静。
 					#ELSE
-						Relax and stay quiet as you're transported to Dominion.
+						放松，享受前往御城区路上的宁静。
 					#ENDIF
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_end]]></nextDialogue>
 				<effects><![CDATA[
@@ -425,10 +425,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[History]]></responseTitle>
+				<responseTitle><![CDATA[历史]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Astrapi about how long she and her brother have been working together as centaur carriage operators.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					询问阿斯特拉皮她和她的兄长担任半人马车夫多久了。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_talk]]></nextDialogue>
 				<effects><![CDATA[
@@ -438,10 +438,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Competition]]></responseTitle>
+				<responseTitle><![CDATA[行业竞争]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Astrapi about the competition she has for providing centaur carriage rides.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					询问阿斯特拉皮，作为半人马车夫会遇到什么样的竞争压力。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_talk]]></nextDialogue>
 				<effects><![CDATA[
@@ -451,10 +451,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Lunette]]></responseTitle>
+				<responseTitle><![CDATA[露内特]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Astrapi about Lunette's centaurs and how she manages to avoid conflict with them.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					询问阿斯特拉皮有关露内特半人马的事，以及她如何避免与他们接触的。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_talk]]></nextDialogue>
 				<effects><![CDATA[
@@ -464,10 +464,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Flirt]]></responseTitle>
+				<responseTitle><![CDATA[调情]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Start flirting with Astrapi.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					向阿斯特拉调情。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_flirt]]></nextDialogue>
 			</response>
@@ -493,12 +493,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Relax and continue making small talk as you're transported to Elis.
+						放松并享受前往伊利斯路上的闲聊。
 					#ELSE
-						Relax and continue making small talk as you're transported to Dominion.
+						放松并享受前往御城区路上的闲聊。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_end]]></nextDialogue>
@@ -525,19 +525,19 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Push her]]></responseTitle>
-				<responseTooltip><![CDATA[With Astrapi shamelessly flashing you her horse-pussy, you can be sure that a little more pushing in the right direction will result in an offer of sex.]]></responseTooltip>
+				<responseTitle><![CDATA[引诱她]]></responseTitle>
+				<responseTooltip><![CDATA[阿斯特甩动她的尾巴，拉皮恬不知耻地向你展示她的雌马阴户。你可以确信，只要再朝正确的方向推一把，她就会主动向你提出性要求。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_flirt_pushed]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Stop flirting]]></responseTitle>
+				<responseTitle><![CDATA[停止调情]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Having had your fun, decide to stop flirting with Astrapi and stay quiet as you're transported to Elis.
+						对她的反应很满意，你浅尝即止，在接下来去往伊利斯的旅程中保持安静。
 					#ELSE
-						Having had your fun, decide to stop flirting with Astrapi and stay quiet as you're transported to Dominion.
+						对她的反应很满意，你浅尝即止，在接下来去往御城区的旅程中保持安静。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_end]]></nextDialogue>
@@ -573,14 +573,14 @@
 				<availabilityConditional><![CDATA[[#(!pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)) && (!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Receive oral]]></responseTitle>
+				<responseTitle><![CDATA[接受口交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis() && !pc.hasVagina())
-						You don't have a penis or a vagina, so Astrapi cannot perform oral on you...
+						你没有阴茎或者阴道，阿斯特拉皮无法为你口交……
 					#ELSEIF(pc.hasPenis())
-						You cannot gain access to your penis, so Astrapi cannot perform oral on you...
+						你的阴茎目前被限制了，阿斯特拉皮无法为你口交……
 					#ELSE
-						You cannot gain access to your pussy, so Astrapi cannot perform oral on you...
+						你的阴道目前被限制了，阿斯特拉皮无法为你舔阴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -589,8 +589,8 @@
 				<availabilityConditional><![CDATA[[#(pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)) || (pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Receive oral]]></responseTitle>
-				<responseTooltip><![CDATA[Get Astrapi to drop down and perform oral on you.]]></responseTooltip>
+				<responseTitle><![CDATA[接受口交]]></responseTitle>
+				<responseTooltip><![CDATA[让阿斯特拉皮跪下为你口交。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -639,12 +639,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Titjob]]></responseTitle>
+				<responseTitle><![CDATA[乳交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so Astrapi cannot give you a titjob...
+						你没有阴茎，阿斯特拉皮无法为你乳交……
 					#ELSE
-						You cannot gain access to your penis, so Astrapi cannot give you a titjob...
+						你的阴茎目前被限制了，阿斯特拉皮无法为你乳交……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -653,8 +653,8 @@
 				<availabilityConditional><![CDATA[[#pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Titjob]]></responseTitle>
-				<responseTooltip><![CDATA[Get Astrapi to squeeze her huge breasts together so that you can fuck them.]]></responseTooltip>
+				<responseTitle><![CDATA[乳交]]></responseTitle>
+				<responseTooltip><![CDATA[让阿斯特拉皮将她巨大的乳房包住你的阴茎，并开始抽插。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -690,8 +690,8 @@
 				<availabilityConditional/>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Service pussy]]></responseTitle>
-				<responseTooltip><![CDATA[Get Astrapi to fully present her horse-pussy to you so that you can finger her and perform cunnilingus.]]></responseTooltip>
+				<responseTitle><![CDATA[服务小穴]]></responseTitle>
+				<responseTooltip><![CDATA[让阿斯特拉皮把她的雌马阴道对准你，这样你就能给她指交或者舔阴了。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -729,16 +729,16 @@
 				<index><![CDATA[4]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isTaur())
-						Mount her
+						骑配她
 					#ELSE
-						Fuck her
+						操她
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so you cannot fuck Astrapi...
+						你没有阴茎，所以你不能操阿斯特拉皮……
 					#ELSE
-						You cannot gain access to your penis, so you cannot fuck Astrapi...
+						你的阴茎目前被限制了，所以你不能操阿斯特拉皮……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -749,16 +749,16 @@
 				<index><![CDATA[4]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isTaur())
-						Mount her
+						骑配她
 					#ELSE
-						Fuck her
+						操她
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isTaur())
-						Get Astrapi to present herself to you so that you can mount her and rut her pussy.
+						让阿斯特拉皮把她的马臀对着你，这样你就能骑配着抱着她的马腰操她的阴道了。
 					#ELSE
-						Get Astrapi to present herself to you so that you can fuck her pussy.
+						让阿斯特拉皮把她的马臀对着你，这样你就能操她的阴道了。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -796,14 +796,14 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_astrapi_impregnation_talk)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Impregnation]]></responseTitle>
+				<responseTitle><![CDATA[授精]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!astrapi.isAffectionAtLeast(pc, AFFECTION_POSITIVE_FOUR_LOVE))
-						As Astrapi doesn't seem too keen on the idea of being impregnated, you think that you'd better wait until the two of you are on better terms before asking her about it.
+						意识到阿斯特拉皮并不希望怀孕，你决定等你们关系再进一步后再谈谈这个。
 						<br/>[style.italicsBad(Requires affection of at least [#AFFECTION_POSITIVE_FOUR_LOVE.getMinimumValue()].)]
 						<br/>Current affection: [#~~astrapi.getAffection(pc)]
 					#ELSE
-						Wanting to knock her up, you ask Astrapi if she'd be willing to let you impregnate her.
+						你非常想让阿斯特拉皮怀上你的孩子，于是你询问阿斯特拉皮是否愿意让自己为她授精。
 						<br/>[style.italicsGood(Requires affection of at least [#AFFECTION_POSITIVE_FOUR_LOVE.getMinimumValue()].)]
 						<br/>Current affection: [#~~astrapi.getAffection(pc)]
 					#ENDIF
@@ -824,12 +824,12 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Service ass]]></responseTitle>
+				<responseTitle><![CDATA[服务屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-						Tell Astrapi about how [style.mules] such as yourself are well trained to perform anilingus, before demonstrating this fact on her.
+						告诉阿斯特拉皮，像你这样的[style.mules]是如何训练有素地进行肛交的，想在她身上演示一下。
 					#ELSE
-						Get Astrapi to fully present her rear end to you so that you can finger her anus and perform anilingus.
+						让阿斯特拉皮将她的马臀对着你，这样你就能指交她的屁穴或者舔肛。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -882,16 +882,16 @@
 				<index><![CDATA[7]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isTaur())
-						Mount her (anal)
+						骑配她(肛交)
 					#ELSE
-						Fuck her ass
+						操她肛门
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenis())
-						You don't have a penis, so you cannot fuck Astrapi...
+						你没有阴茎，所以你不能操阿斯特拉皮……
 					#ELSE
-						You cannot gain access to your penis, so you cannot fuck Astrapi...
+						你的阴茎目前被限制了，所以你不能操阿斯特拉皮……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -902,16 +902,16 @@
 				<index><![CDATA[7]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.isTaur())
-						Mount her (anal)
+						骑配她(肛交)
 					#ELSE
-						Fuck her ass
+						操她肛门
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isTaur())
-						Get Astrapi to present herself to you so that you can mount her and rut her asshole.
+						让阿斯特拉皮准备好被你搂着马腰骑配着操她的屁眼。
 					#ELSE
-						Get Astrapi to present herself to you so that you can fuck her asshole.
+						让阿斯特拉皮准备好被你操她的屁眼。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -948,12 +948,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Back out]]></responseTitle>
+				<responseTitle><![CDATA[反悔]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Having had your fun, decide to back out of this situation and tell Astrapi that you don't want to have sex after all, then stay quiet as you're transported to Elis.
+						心满意足后，你停止了当前的动作，告诉阿斯特拉皮自己不是真的想和她做，然后一路保持安静前往伊利斯。
 					#ELSE
-						Having had your fun, decide to back out of this situation and tell Astrapi that you don't want to have sex after all, then stay quiet as you're transported to Dominion.
+						心满意足后，你停止了当前的动作，告诉阿斯特拉皮自己不是真的想和她做，然后一路保持安静前往御城区。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_end]]></nextDialogue>
@@ -973,8 +973,8 @@
 	</scene>
 	
 	<scene id="astrapi_post_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You and Astrapi bring an end to the sex.]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你和阿斯特拉皮结束了这场寻欢。]]></tooltip>
 		<content folderPath="txt/places/fields/centaur_transport">ASTRAPI_POST_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -983,12 +983,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Relax for the rest of the journey as Astrapi continues to transport you to Elis.
+						在阿斯特拉皮的马车上放松，让她载你到伊利斯。
 					#ELSE
-						Relax for the rest of the journey as Astrapi continues to transport you to Dominion.
+						在阿斯特拉皮的马车上放松，让她载你到御城区。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_journey_end]]></nextDialogue>
@@ -1031,12 +1031,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Thank Astrapi for the ride and say goodbye, before setting off towards the gates of Elis.
+						在前往伊利斯的大门之前，你向阿斯特拉皮道谢并道别。
 					#ELSE
-						Thank Astrapi for the ride and say goodbye, before setting off towards Dominion.
+						在前往御城区的中心之前，你向阿斯特拉皮道谢并道别。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
@@ -1049,16 +1049,16 @@
 				<availabilityConditional><![CDATA[[#(astrapi.getTotalTimesHadSex(pc)==0)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Offer clean]]></responseTitle>
-				<responseTooltip><![CDATA[You don't think that Astrapi would feel comfortable allowing you to help clean her off. Perhaps if the two of you had previously had intimate relations with one another, things would be different...]]></responseTooltip>
+				<responseTitle><![CDATA[帮忙清洗]]></responseTitle>
+				<responseTooltip><![CDATA[你觉得阿斯特拉皮还无法接受让你为她清洗身体，或许再培养一下感情事情会变得不一样……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#(astrapi.getTotalTimesHadSex(pc)>0)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Offer clean]]></responseTitle>
-				<responseTooltip><![CDATA[You can see that there's a fine sheen of sweat over the human half of Astrapi's body, while her horse half looks like it could do with a brush. Offer to help clean her off.]]></responseTooltip>
+				<responseTitle><![CDATA[帮忙清洗]]></responseTitle>
+				<responseTooltip><![CDATA[你看到阿斯特拉皮人的半边身体上有一层细细的汗珠，而她的马的半边身体看起来需要刷一刷。帮她擦擦吧。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_clean]]></nextDialogue>
 			</response>
 		</responses>
@@ -1077,23 +1077,23 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wipe back]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Astrapi that you'll wipe the sweat from her back.]]></responseTooltip>
+				<responseTitle><![CDATA[擦拭背部]]></responseTitle>
+				<responseTooltip><![CDATA[告诉阿斯特拉皮你会帮她擦拭背部的汗珠。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_clean_wipe]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Lick abs]]></responseTitle>
-				<responseTooltip><![CDATA[As Astrapi is clearly getting turned on, you're certain that she'll consent to letting you lick the sweat from her abdominal muscles.]]></responseTooltip>
+				<responseTitle><![CDATA[舔舐腹肌]]></responseTitle>
+				<responseTooltip><![CDATA[阿斯特拉皮显然已经欲火中烧，你肯定她会同意让你舔她腹肌上的汗液。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_clean_abs]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#game.isArmpitContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Lick armpits]]></responseTitle>
-				<responseTooltip><![CDATA[As Astrapi is clearly getting turned on, you're certain that she'll consent to letting you lick the sweat from her armpits.]]></responseTooltip>
+				<responseTitle><![CDATA[舔腋窝]]></responseTitle>
+				<responseTooltip><![CDATA[阿斯特拉皮显然已经欲火中烧，你肯定她会同意让你舔她腋窝处的汗液。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_astrapi_clean_armpits]]></nextDialogue>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_ARMPIT_GIVING]]></fetish>
@@ -1116,8 +1116,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Finished]]></responseTitle>
-				<responseTooltip><![CDATA[Having finished helping her out, it's time to say goodbye to Astrapi.]]></responseTooltip>
+				<responseTitle><![CDATA[结束]]></responseTitle>
+				<responseTooltip><![CDATA[帮完她之后，是时候和阿斯特拉皮道别了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -1141,8 +1141,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Finished]]></responseTitle>
-				<responseTooltip><![CDATA[Having finished helping her out, it's time to say goodbye to Astrapi.]]></responseTooltip>
+				<responseTitle><![CDATA[结束]]></responseTitle>
+				<responseTooltip><![CDATA[帮完她之后，是时候和阿斯特拉皮道别了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/centaur_transport', 'ASTRAPI_CLEAN_ABS_END'))]
@@ -1154,12 +1154,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasPenisIgnoresDildo() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Handjob]]></responseTitle>
+				<responseTitle><![CDATA[手交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenisIgnoresDildo())
-						You don't have a penis, so you cannot receive a handjob from Astrapi...
+						你没有阴茎，阿斯特拉皮无法为你手交……
 					#ELSE
-						You cannot gain access to your penis, so you cannot receive a handjob from Astrapi...
+						你的阴茎目前被限制了，阿斯特拉皮不能为你手交……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1168,8 +1168,8 @@
 				<availabilityConditional><![CDATA[[#pc.hasPenisIgnoresDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Handjob]]></responseTitle>
-				<responseTooltip><![CDATA[Accept Astrapi's offer of a handjob so that you can cum on her muscular abs.]]></responseTooltip>
+				<responseTitle><![CDATA[手交]]></responseTitle>
+				<responseTooltip><![CDATA[接受阿斯特拉皮的手交，射在她的腹肌上。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1204,8 +1204,8 @@
 	</scene>
 	
 	<scene id="astrapi_post_sex_abs">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You and Astrapi bring an end to the sex.]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你和阿斯特拉皮结束了这场寻欢。]]></tooltip>
 		<content folderPath="txt/places/fields/centaur_transport">ASTRAPI_POST_SEX_ABS</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1215,8 +1215,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Having finished helping her out, it's time to say goodbye to Astrapi.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[帮完她之后，是时候和阿斯特拉皮道别了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/centaur_transport', 'ASTRAPI_CLEAN_END'))]
@@ -1239,8 +1239,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Finished]]></responseTitle>
-				<responseTooltip><![CDATA[Having finished helping her out, it's time to say goodbye to Astrapi.]]></responseTooltip>
+				<responseTitle><![CDATA[结束]]></responseTitle>
+				<responseTooltip><![CDATA[帮完她之后，是时候和阿斯特拉皮道别了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/centaur_transport', 'ASTRAPI_CLEAN_ARMPITS_END'))]
@@ -1252,12 +1252,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasPenisIgnoresDildo() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Armpit fuck]]></responseTitle>
+				<responseTitle><![CDATA[腋交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasPenisIgnoresDildo())
-						You don't have a penis, so you cannot fuck Astrapi's armpits...
+						你没有阴茎，无法操阿斯特拉皮的腋窝……
 					#ELSE
-						You cannot gain access to your penis, so you cannot fuck Astrapi's armpits...
+						你的阴茎目前被限制了，无法操阿斯特拉皮的腋窝……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1266,8 +1266,8 @@
 				<availabilityConditional><![CDATA[[#pc.hasPenisIgnoresDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Armpit fuck]]></responseTitle>
-				<responseTooltip><![CDATA[Take up Astrapi's offer and rub your cock up and down over her armpits until you cum on them.]]></responseTooltip>
+				<responseTitle><![CDATA[腋交]]></responseTitle>
+				<responseTooltip><![CDATA[接受阿斯特拉皮的好意，用你的鸡巴在她的腋窝间抽插并在里面射精。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -1302,8 +1302,8 @@
 	</scene>
 	
 	<scene id="astrapi_post_sex_armpits">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You and Astrapi bring an end to the sex.]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你和阿斯特拉皮结束了这场寻欢。]]></tooltip>
 		<content folderPath="txt/places/fields/centaur_transport">ASTRAPI_POST_SEX_ARMPITS</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1313,8 +1313,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Having finished helping her out, it's time to say goodbye to Astrapi.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[帮完她之后，是时候和阿斯特拉皮道别了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/centaur_transport', 'ASTRAPI_CLEAN_END'))]
@@ -1325,8 +1325,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_astrapi_not_shaving) && game.isBodyHairEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Stop shaving]]></responseTitle>
-				<responseTooltip><![CDATA[Before saying goodbye to Astrapi, tell her to stop shaving her armpits.]]></responseTooltip>
+				<responseTitle><![CDATA[不要剃毛]]></responseTitle>
+				<responseTooltip><![CDATA[在向阿斯特拉皮道别前，告诉她不要剃腋窝的毛。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/centaur_transport', 'ASTRAPI_POST_SEX_ARMPITS_SHAVING_STOP'))]
@@ -1339,8 +1339,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_astrapi_not_shaving) && game.isBodyHairEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Start shaving]]></responseTitle>
-				<responseTooltip><![CDATA[Before saying goodbye to Astrapi, tell her to start shaving her armpits again.]]></responseTooltip>
+				<responseTitle><![CDATA[多多剃毛]]></responseTitle>
+				<responseTooltip><![CDATA[在向阿斯特拉皮道别前，告诉她还是多剃剃腋窝的毛吧。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/centaur_transport', 'ASTRAPI_POST_SEX_ARMPITS_SHAVING_START'))]
@@ -1367,12 +1367,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Set off]]></responseTitle>
+				<responseTitle><![CDATA[出发]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Get into the carriage and set off on your way to Elis.
+						登上马车，前往伊利斯。
 					#ELSE
-						Get into the carriage and set off on your way to Dominion.
+						登上马车，前往御城区。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey]]></nextDialogue>
@@ -1400,14 +1400,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Relax and stay quiet as you're transported to Elis.
+						放松，享受前往伊利斯路上的宁静。
 					#ELSE
-						Relax and stay quiet as you're transported to Dominion.
+						放松，享受前往御城区路上的宁静。
 					#ENDIF
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_end]]></nextDialogue>
 				<effects><![CDATA[
@@ -1417,10 +1417,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[History]]></responseTitle>
+				<responseTitle><![CDATA[历史]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Vronti about how long he and his sister have been working together as centaur carriage operators.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					询问弗洛狄他和他的兄妹担任半人马车夫多久了。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_end]]></nextDialogue>
 				<effects><![CDATA[
@@ -1431,10 +1431,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Competition]]></responseTitle>
+				<responseTitle><![CDATA[行业竞争]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Vronti about the competition he has for providing centaur carriage rides.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					询问弗洛狄，作为半人马车夫会遇到什么样的竞争压力。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_end]]></nextDialogue>
 				<effects><![CDATA[
@@ -1445,10 +1445,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Lunette]]></responseTitle>
+				<responseTitle><![CDATA[露内特]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Ask Vronti about Lunette's centaurs and how he manages to avoid conflict with them.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					询问弗洛狄有关露内特半人马的事，以及他如何避免与他们接触的。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_end]]></nextDialogue>
 				<effects><![CDATA[
@@ -1459,10 +1459,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Flirt]]></responseTitle>
+				<responseTitle><![CDATA[调情]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Start flirting with Vronti.
-					<br/><i>Only one of these five actions can be chosen before you reach your destination.</i>
+					向弗洛狄调情。
+					<br/><i>车程长度只允许你选择这里的五个动作之一。</i>
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_flirt]]></nextDialogue>
 			</response>
@@ -1493,19 +1493,19 @@
 				</requiredPerks>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Push him]]></responseTitle>
-				<responseTooltip><![CDATA[Use every possible trick you know to seduce Vronti and get him to respond to your flirting.]]></responseTooltip>
+				<responseTitle><![CDATA[引诱他]]></responseTitle>
+				<responseTooltip><![CDATA[用尽一切方法色诱弗洛狄，让他回应你的挑逗。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_flirt_pushed]]></nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Give up]]></responseTitle>
+				<responseTitle><![CDATA[放弃]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Vronti's stoicism seems to be completely unassailable. Stop trying to flirt with him and stay quiet as you're transported to Elis.
+						弗洛狄的冷淡似乎不可动摇。别再跟他调情，安静坐着前往伊利斯吧。
 					#ELSE
-						Vronti's stoicism seems to be completely unassailable. Stop trying to flirt with him and stay quiet as you're transported to Dominion.
+						弗洛狄的冷淡似乎不可动摇。别再跟他调情，安静坐着前往御城区吧。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_end]]></nextDialogue>
@@ -1537,8 +1537,8 @@
 				<availabilityConditional/>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Handjob]]></responseTitle>
-				<responseTooltip><![CDATA[Having successfully given him an erection, tell Vronti that you'll help him deal with it by jerking him off.]]></responseTooltip>
+				<responseTitle><![CDATA[手交]]></responseTitle>
+				<responseTooltip><![CDATA[你成功让他勃起，告诉他你可以帮他打飞机缓解一下需要。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_vronti_handjob_given, true)]
@@ -1576,12 +1576,12 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_vronti_handjob_given) || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
+				<responseTitle><![CDATA[口交]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_vronti_handjob_given))
-						You can tell that Vronti wouldn't agree to anything more than receiving a handjob. After jerking him off, you're sure that he'll be more receptive to a blowjob the next time you find yourself in this situation.
+						你看得出，弗洛狄除了手交之外，不会同意其他任何事情。给他打完手枪后，你确信下次再遇到这种情况时，他会尝试你的口交。
 					#ELSE
-						You cannot gain access to your mouth, so you cannot give Vronti a blowjob...
+						你的嘴巴目前被限制了，无法为弗洛狄口交……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1590,8 +1590,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_vronti_handjob_given) && pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Blowjob]]></responseTitle>
-				<responseTooltip><![CDATA[Having successfully given him an erection, tell Vronti that you'll help him deal with it by giving him a blowjob.]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[你成功让他勃起，告诉他你可以帮他吸一下缓解他的需要。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_vronti_blowjob_given, true)]
@@ -1629,18 +1629,18 @@
 				<availabilityConditional><![CDATA[[#(!flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) && !flags.hasFlag(FLAG_innoxia_vronti_anilingus_given)) || !pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) && !flags.hasFlag(FLAG_innoxia_vronti_anilingus_given))
 						#IF(game.isAnalContentEnabled())
-							You can tell that Vronti wouldn't agree to anything more than receiving a blowjob or having his ass serviced. After doing either of these two things, you're sure that he'll be more receptive to fucking you the next time you find yourself in this situation.
+							你看得出弗洛狄不会接受口交和舔肛以外的动作。你可以肯定在做过这两件事后，下次他会接受操你。
 						#ELSE
-							You can tell that Vronti wouldn't agree to anything more than receiving a blowjob. After sucking his cock, you're sure that he'll be more receptive to fucking you the next time you find yourself in this situation.
+							你看得出弗洛狄不会接受口交以外的动作。为他口交之后，你可以肯定下次他会接受操你。
 						#ENDIF
 					#ELSEIF(!pc.hasVagina())
-						You do not have a vagina, so you cannot get fucked by Vronti...
+						你没有小穴，弗洛狄没办法操你……
 					#ELSE
-						You cannot gain access to your vagina, so you cannot get fucked by Vronti...
+						你的小穴目前被限制了，弗洛狄没办法操你……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1649,8 +1649,8 @@
 				<availabilityConditional><![CDATA[[#(flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) || flags.hasFlag(FLAG_innoxia_vronti_anilingus_given)) && pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Fucked]]></responseTitle>
-				<responseTooltip><![CDATA[Having successfully given him an erection, tell Vronti that you'll help him deal with it by letting him rut your pussy.]]></responseTooltip>
+				<responseTitle><![CDATA[挨操]]></responseTitle>
+				<responseTooltip><![CDATA[你成功让他勃起，告诉他你可以把自己的小穴借给他缓解一下需要。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_vronti_sex_given, true)]
@@ -1687,12 +1687,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Stop flirting]]></responseTitle>
+				<responseTitle><![CDATA[停止调情]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Having had your fun, decide to stop flirting with Vronti and stay quiet as you're transported to Elis.
+						对他的反应很满意，你浅尝即止，在接下来去往伊利斯的旅程中保持安静。
 					#ELSE
-						Having had your fun, decide to stop flirting with Vronti and stay quiet as you're transported to Dominion.
+						对他的反应很满意，你浅尝即止，在接下来去往御城区的旅程中保持安静。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_end]]></nextDialogue>
@@ -1705,9 +1705,9 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && !flags.hasFlag(FLAG_innoxia_vronti_handjob_given)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Service ass]]></responseTitle>
+				<responseTitle><![CDATA[服务屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
-					You can tell that Vronti wouldn't agree to anything more than receiving a handjob. After jerking him off, you're sure that he'll be more receptive to having his ass serviced the next time you find yourself in this situation.
+					你看得出弗洛狄不会接受打飞机以外的行为。在为他手冲之后，你确信下一次他会愿意让你服务他的肛门。
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
@@ -1715,12 +1715,12 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && flags.hasFlag(FLAG_innoxia_vronti_handjob_given)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Service ass]]></responseTitle>
+				<responseTitle><![CDATA[服务屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getClothingInSlot(IS_NECK)!=null && pc.getClothingInSlot(IS_NECK).getClothingType().getId().equals('innoxia_neck_filly_choker'))
-						Having successfully given him an erection, tell Vronti about how [style.mules] such as yourself are well trained to perform anilingus, before demonstrating this fact on him.
+						成功让他勃起后，你告诉弗洛狄自己是训练有素的[style.mules]，将会为他展示自己高超的舔肛绝技。
 					#ELSE
-						Having successfully given him an erection, tell Vronti that you'll help him deal with it by anally fingering him, after which you could also perform anilingus on him.
+						成功让他勃起后，你告诉弗洛狄自己可以帮他指交他的菊穴，或者为他舔肛来缓解他的需要。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue/>
@@ -1773,12 +1773,12 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && ((!flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) && !flags.hasFlag(FLAG_innoxia_vronti_anilingus_given)) || !pc.isAbleToAccessCoverableArea(CA_ANUS, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Fucked (anal)]]></responseTitle>
+				<responseTitle><![CDATA[挨操(肛交)]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) && !flags.hasFlag(FLAG_innoxia_vronti_anilingus_given))
-						You can tell that Vronti wouldn't agree to anything more than receiving a blowjob or having his ass serviced. After doing either of these two things, you're sure that he'll be more receptive to fucking your ass the next time you find yourself in this situation.
+						你看得出来弗洛狄不会接受口交和玩肛以外的行为。你确信在做过这两件事之后，下一次他会尝试操你屁股。
 					#ELSE
-						You cannot gain access to your asshole, so you cannot get fucked by Vronti...
+						你的肛门目前被限制了，弗洛狄无法操你的屁穴……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
@@ -1787,8 +1787,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && (flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) || flags.hasFlag(FLAG_innoxia_vronti_anilingus_given)) && pc.isAbleToAccessCoverableArea(CA_ANUS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Fucked (anal)]]></responseTitle>
-				<responseTooltip><![CDATA[Having successfully given him an erection, tell Vronti that you'll help him deal with it by letting him rut your asshole.]]></responseTooltip>
+				<responseTitle><![CDATA[挨操(肛交)]]></responseTitle>
+				<responseTooltip><![CDATA[你成功让他勃起，告诉他你可以把自己的肛门借给他缓解一下需要。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_vronti_anal_sex_given, true)]
@@ -1826,24 +1826,23 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && ((!flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) && !flags.hasFlag(FLAG_innoxia_vronti_anilingus_given)) || !pc.isAbleToAccessCoverableArea(CA_PENIS, true) || !pc.hasPenis())]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Fuck his ass]]></responseTitle>
+				<responseTitle><![CDATA[操他的屁股]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) && !flags.hasFlag(FLAG_innoxia_vronti_anilingus_given))
-						You can tell that Vronti wouldn't agree to anything more than receiving a blowjob or having his ass serviced. After doing either of these two things, you're sure that he'll be more receptive to other forms of stimulation...
+						你看得出弗洛狄只愿意接受口交或肛交服务。做完其中任意一项后，他应该会更愿意尝试其他刺激方式……
 					#ELSEIF(!pc.hasPenis())
-						You don't have a penis, so you can't fuck Vronti in the ass...
+						你没有阴茎，所以无法跟弗洛狄肛交……
 					#ELSEIF(!pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-						You cannot gain access to your penis, so you cannot fuck Vronti in the ass...
-					#ENDIF
-				]]></responseTooltip>
+						你的阴茎目前无法使用，所以无法跟弗洛狄肛交……
+					#ENDIF]]></responseTooltip>
 				<nextDialogue>null</nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && (flags.hasFlag(FLAG_innoxia_vronti_blowjob_given) || flags.hasFlag(FLAG_innoxia_vronti_anilingus_given)) && pc.isAbleToAccessCoverableArea(CA_PENIS, true) && pc.hasPenis()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Fuck his ass]]></responseTitle>
-				<responseTooltip><![CDATA[Having successfully given him an erection, you think that you'll be able to convince Vronti to let you fuck his ass.]]></responseTooltip>
+				<responseTitle><![CDATA[操他的屁股]]></responseTitle>
+				<responseTooltip><![CDATA[成功让弗洛狄勃起后，你觉得应该能说服他让你操他的屁股。]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_vronti_ass_fucked, true)]
@@ -1880,8 +1879,8 @@
 	</scene>
 	
 	<scene id="vronti_post_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You and Vronti bring an end to the sex.]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你和弗洛狄结束了这场寻欢。]]></tooltip>
 		<content folderPath="txt/places/fields/centaur_transport">VRONTI_POST_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -1890,12 +1889,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Relax for the rest of the journey as Vronti continues to transport you to Elis.
+						在弗洛狄的马车上放松，让他载你到伊利斯。
 					#ELSE
-						Relax for the rest of the journey as Vronti continues to transport you to Dominion.
+						在弗洛狄的马车上放松，让他载你到御城区。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_centaur_transport_vronti_journey_end]]></nextDialogue>
@@ -1933,12 +1932,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_centaur_travel_to_elis))
-						Thank Vronti for the ride and say goodbye, before setting off towards the gates of Elis.
+						在前往伊利斯的大门之前，你向弗洛狄道谢并道别。
 					#ELSE
-						Thank Vronti for the ride and say goodbye, before setting off towards Dominion.
+						在前往御城区的中心之前，你向弗洛狄道谢并道别。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>450</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[leg warmer]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[leg warmers]]></namePlural>
-		<description><![CDATA[A pair of ribbed, woollen leg warmers. Forming tubular sleeves, they're intended to keep the wearer's lower legs warm in cold weather, although are often worn simply for the sake of fashion.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[暖腿套]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[暖腿套]]></namePlural>
+		<description><![CDATA[一双罗纹羊毛暖腿套。一般是在寒冷的天气里为穿着者的小腿保暖，但也经常有人为了时尚而穿着。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>SOCK</slot> 
@@ -44,27 +44,24 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the leg warmers on to cover [npc.her] lower [npc.legs(true)].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the leg warmers onto [npc2.namePos] lower [npc2.legs(true)].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the leg warmers onto [npc2.namePos] lower [npc2.legs(true)].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]穿上暖腿套以保护[npc.her]的小[npc.legs(true)]。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]給[npc2.namePos]套上暖腿套以保护[npc2.her]的小[npc2.legs(true)]。
+    ]]></other>
+    <otherRough><![CDATA[[npc.Name]粗暴地将暖腿套套在[npc2.namePos]的小[npc2.legs(true)]。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] leg warmers.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] leg warmers.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] leg warmers.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下了[npc.her]的暖腿套。]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的暖腿套脱下。]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的暖腿套并粗暴地扯下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

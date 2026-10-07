@@ -50,7 +50,7 @@ public class SAClaireDangerSex {
 		}
 		@Override
 		public String getActionTitle() {
-			return "The door opens!";
+			return "门开着呢！";
 		}
 		@Override
 		public String getActionDescription() {
@@ -85,11 +85,11 @@ public class SAClaireDangerSex {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Stay quiet";
+			return "保持安静";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Do as Claire says and remain quiet until the Enforcer has left.";
+			return "按照克莱尔说的做，保持安静，直到执法者离开。";
 		}
 		@Override
 		public String getDescription() {
@@ -104,67 +104,67 @@ public class SAClaireDangerSex {
 				if(area.isOrifice()) {
 					foundPenetration = true;
 					sb.append("<br/><br/>");
-					sb.append("Remaining completely still and silent as the Enforcer starts searching through the storeroom, you suddenly become aware of your [pc.cock+] ");
+					sb.append("当执法者开始搜查储藏室时，你保持完全静止并沉默，突然你意识到自己[pc.cock+] ");
 					switch((SexAreaOrifice)area) {
 						case ANUS:
-							sb.append("throbbing deep inside Claire's [claire.asshole]."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her [claire.ass+] back against you, driving your cock even deeper into her [claire.asshole].");
+							sb.append("在克莱尔[claire.asshole]深处跳动着。"
+									+ "现况使她异常兴奋，这只淫荡的猫女慢慢地将[claire.ass+]向后推，让你的鸡巴更深入[claire.asshole]中。");
 							break;
 						case ASS:
-							sb.append("throbbing between Claire's [claire.assSize] ass cheeks."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly bucks her [claire.hips+] back against you, driving your cock up and down over her [claire.asshole].");
+							sb.append("在克莱尔[claire.assSize]的臀瓣间抽插。"
+									+ "现况使她异常兴奋，这只淫荡的猫女慢慢地向后顶她[claire.hips+]，使阴茎在她的[claire.asshole]里前后抽插。");
 							break;
 						case BREAST:
-							sb.append("throbbing between Claire's [claire.breastSize] boobs."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her [claire.breasts+] together, enveloping your cock in her cleavage.");
+							sb.append("在克莱尔[claire.breastSize]的奶子间抽插。"
+									+ "现况使她异常兴奋，这只淫荡的猫女慢慢地将[claire.breasts+]挤到一起，让你的阴茎夹在乳沟内。");
 							break;
 						case BREAST_CROTCH:
-							sb.append("throbbing between Claire's [claire.crotchBoobSize] [claire.crotchBoobs]."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her [claire.crotchBoobs+] together, enveloping your cock in her cleavage.");
+							sb.append("在克莱尔[claire.crotchBoobSize]的[claire.crotchBoobs]间抽插。"
+									+ "现况使她兴奋得发狂，这只淫荡的猫女慢慢地把[claire.crotchBoobs+]挤到一起，把你的阴茎包进她的乳沟里。");
 							break;
 						case MOUTH:
-							sb.append("throbbing inside Claire's mouth."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her head forwards, driving your cock deep down her throat.");
+							sb.append("在克莱尔的嘴里抽插。"
+									+ "现况使她兴奋得发狂，这只淫荡的猫女慢慢地将头向前凑，令阴茎深深地插入喉中。");
 							break;
 						case NIPPLE:
-							sb.append("throbbing deep inside Claire's [claire.nipple(true)]."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her chest out into you, driving your cock even deeper into her [claire.nipple+].");
+							sb.append("深深插入克莱尔的[claire.nipple(true)]。"
+									+ "处境使你们纷纷陷入癫狂似的兴奋当中。淫荡的猫女慢慢地将胸顶向你，让你的阴茎更深地插入[claire.nipple+]中。");
 							break;
 						case NIPPLE_CROTCH:
-							sb.append("throbbing deep inside Claire's [claire.crotchNipple]."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her stomach out into you, driving your cock even deeper into her [claire.crotchNipple+].");
+							sb.append("深深插入克莱尔的[claire.crotchNipple]。"
+									+ "处境使你们纷纷陷入癫狂似的兴奋当中。淫荡的猫女慢慢地将腹部顶向你，让你的阴茎更深地插入[claire.crotchNipple+]中。");
 							break;
 						case THIGHS:
-							sb.append("throbbing between Claire's thick thighs."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly bucks her [claire.hips+] back against you, driving your cock between her soft legs.");
+							sb.append("在克莱尔的丰臀内抽插。"
+									+ "处境使你们纷纷陷入癫狂似的兴奋当中。淫荡的猫女慢慢地将[claire.hips+]顶向你，让你的阴茎更深地插入腿间。");
 							break;
 						case URETHRA_PENIS:
 							break;
 						case URETHRA_VAGINA:
-							sb.append("throbbing deep inside Claire's [claire.urethraVagina]."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her [claire.hips+] out into you, driving your cock even deeper into her [claire.urethraVagina].");
+							sb.append("深深插入克莱尔的[claire.urethraVagina]。"
+									+ "处境使你们纷纷陷入癫狂似的兴奋当中。淫荡的猫女慢慢地[claire.hips+]顶向你，让你的阴茎更深地插入[claire.urethraVagina]。");
 							break;
 						case VAGINA:
-							sb.append("throbbing deep inside Claire's [claire.pussy+]."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly pushes her [claire.hips+] out into you, driving your cock even deeper into her [claire.pussy+].");
+							sb.append("深深插入克莱尔的[claire.pussy+]。"
+									+ "处境使你们纷纷陷入癫狂似的兴奋当中。淫荡的猫女慢慢地[claire.hips+]顶向你，让你的阴茎更深地插入[claire.pussy+]里。");
 							break;
 						case ARMPITS:
-							sb.append("throbbing up against Claire's armpit."
-									+ " Obviously madly turned-on by the situation which the two of you find yourselves in, the horny cat-girl slowly grinds herself up and down against you, driving your cock over her [claire.armpit+].");
+							sb.append("抵着克莱尔的腋窝抽插。"
+									+ "处境使你们纷纷陷入癫狂似的兴奋当中。淫荡的猫女抵着你磨蹭着，用[claire.armpit+]搓弄着你的阴茎。");
 							break;
 						case SPINNERET:
 							break;
 					}
 					sb.append("<br/><br/>"
-							+ "Just as you feel as though you can't take it any more, the Enforcer finds what they're looking for, and, without spotting the two of you locked in coitus, they leave just as quickly as they entered.");
+							+ "就在你即将攀上快感高峰之际，执法者找到了要找的东西，他们没有发现你们正在做爱，就像进来时那样迅速离开了。");
 				}
 			}
 			
 			if(!foundPenetration) {
 				sb.append("<br/><br/>"
-						+ "After a nerve-wracking thirty or so seconds, the Enforcer finally finds what they're looking for, and, without spotting the two of you locked in coitus, they leave just as quickly as they entered.");
+						+ "在令人紧张的三十多秒后，执法者终于找到了要找的东西，没有发现正在做爱的你们，就像进来时那样迅速离开了。");
 			}
-			sb.append(" Letting out a sigh of relief, you and Claire move back into your previous position, before continuing from where you left off...");
+			sb.append("你和克莱尔松了一口气，回到之前的位置，继续工作……");
 
 			return sb.toString();
 		}
@@ -199,11 +199,11 @@ public class SAClaireDangerSex {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Keep going";
+			return "继续";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Ignore Claire's plea to remain quiet and keep on fucking her.";
+			return "不理会克莱尔保持安静的请求，继续操她。";
 		}
 		@Override
 		public String getDescription() {
@@ -214,64 +214,64 @@ public class SAClaireDangerSex {
 			SexAreaInterface area = map.get(SexAreaPenetration.PENIS).get(Main.game.getNpc(Claire.class)).iterator().next();
 			if(area.isOrifice()) {
 				sb.append("<br/><br/>");
-				sb.append("Seeing no reason to do as Claire asks, you ignore the fact that there's an Enforcer searching through the storeroom and continue to ");
+				sb.append("你觉得没理由按克莱尔说的做，便忽略了有执法者在储藏室内搜查的事实，继续");
 				switch((SexAreaOrifice)area) {
 					case ANUS:
-						sb.append(" thrust your [pc.cock+] in and out of Claire's [claire.asshole+]."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her ass.");
+						sb.append("把你[pc.cock+]插入克莱尔[claire.asshole+]里前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地操着她的屁股，而她用尽全力按耐着呻吟声。");
 						break;
 					case ASS:
-						sb.append(" thrust your [pc.cock+] up and down between Claire's [claire.assSize] ass cheeks."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her ass's cleavage.");
+						sb.append("把你[pc.cock+]插入克莱尔[claire.assSize]屁股的臀瓣里前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地蹂躏她的臀沟，而她用尽全力按耐着呻吟声。");
 						break;
 					case BREAST:
-						sb.append(" thrust your [pc.cock+] up and down between Claire's [claire.breastSize] boobs."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her ample cleavage.");
+						sb.append("把你[pc.cock+]插到克莱尔[claire.breastSize]奶子间前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地蹂躏她的乳沟，而她用尽全力按耐着呻吟声。");
 						break;
 					case BREAST_CROTCH:
-						sb.append("thrust your [pc.cock+] up and down between Claire's [claire.crotchBoobSize] [claire.crotchBoobs]."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her crotch-boob's cleavage.");
+						sb.append("把你[pc.cock+]插到克莱尔[claire.crotchBoobSize]的[claire.crotchBoobs]间前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地蹂躏她的胯乳沟，而她用尽全力按耐着呻吟声。");
 						break;
 					case MOUTH:
-						sb.append(" thrust your [pc.cock+] down Claire's throat."
-								+ " Not wanting to be discovered, the horny cat-girl does her best to remain quiet as you continue to relentlessly fuck her face.");
+						sb.append("把你[pc.cock+]插到克莱尔的喉咙里前后抽插。"
+								+ "这只淫荡的猫女不愿被人发现。你继续用力地操着她的嘴，而她用尽全力按耐着呻吟声。");
 						break;
 					case NIPPLE:
-						sb.append(" thrust your [pc.cock+] in and out of Claire's [claire.nipple(true)+]."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her [claire.nipple(true)].");
+						sb.append("把你[pc.cock+]插到克莱尔[claire.nipple(true)+]里前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地蹂躏她的[claire.nipple(true)]，而她用尽全力按耐着呻吟声。");
 						break;
 					case NIPPLE_CROTCH:
-						sb.append(" thrust your [pc.cock+] in and out of Claire's [claire.crotchNipple(true)+]."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her [claire.crotchNipple(true)].");
+						sb.append("把你[pc.cock+]插到克莱尔[claire.crotchNipple(true)+]里前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地蹂躏她的[claire.crotchNipple(true)]，而她用尽全力按耐着呻吟声。");
 						break;
 					case THIGHS:
-						sb.append(" thrust your [pc.cock+] in and out of Claire's thick thighs."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her thighs.");
+						sb.append("把你[pc.cock+]插在克莱尔丰臀里前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地蹂躏她的臀沟，而她用尽全力按耐着呻吟声。");
 						break;
 					case URETHRA_PENIS:
 						break;
 					case URETHRA_VAGINA:
-						sb.append(" thrust your [pc.cock+] in and out of Claire's [claire.urethraVagina]."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her [claire.urethraVagina].");
+						sb.append("把你[pc.cock+]插进克莱尔[claire.urethraVagina]里前后抽插。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地操着她[claire.urethraVagina]，而她用尽全力按耐着呻吟声。");
 						break;
 					case VAGINA:
-						sb.append(" thrust your [pc.cock+] in and out of Claire's [claire.pussy+]."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with both hands and does her best to remain quiet as you continue to relentlessly fuck her [claire.pussy].");
+						sb.append("用你[pc.cock+]在克莱尔[claire.pussy+]里前后抽动。"
+								+ "这只淫荡的猫女用双手捂住嘴巴，不愿被人发现。你继续用力地操着她的[claire.pussy]，而她用尽全力按耐着呻吟声。");
 						break;
 					case ARMPITS:
-						sb.append(" thrust your [pc.cock+] up and down over Claire's [claire.armpit]."
-								+ " Not wanting to be discovered, the horny cat-girl covers her mouth with her free hand and does her best to remain quiet as you continue to relentlessly fuck her [claire.armpit+].");
+						sb.append("掏出你[pc.cock+]上上下下蹭着克莱尔的[claire.armpit]。"
+								+ "淫荡的猫女不想被人发现，便用手捂住嘴巴，尽力保持着安静。你继续无情地操弄她[claire.armpit+]。");
 						break;
 					case SPINNERET:
 						break;
 				}
 				sb.append("<br/><br/>"
-						+ "Just as it seems as though the busty cat-girl can't take any more, the Enforcer finds what they're looking for, and, without spotting the two of you locked in coitus, they leave just as quickly as they entered.");
+						+ "就在这位丰满的猫女似乎再也无法抑制的时候，执法者找到了他们要找的东西，他们没有发现你们两个正在交媾，就像进来时一样迅速离开了。");
 			}
 			
-			sb.append(" Finally able to break her silence, Claire lets out a particularly-erotic moan and exclaims, [claire.speechNoEffects(~Aah!~ [pc.Name]! ~Ooh!~ I-I told you to stop!)]");
+			sb.append("克莱尔终于打破了沉默，色情的呻吟脱口而出，[claire.speechNoEffects(~啊哈啊！~ [pc.Name]！~哦呜！~我说、我说你停一下！)]");
 			sb.append("<br/><br/>");
-			sb.append("Telling your horny partner that you were having too much fun to do as she asked, you flash her a cheeky smile before moving back into your previous position and quickly continuing from where you left off...");
+			sb.append("你告诉你的性对象，你之前太上头了，没法按照她的要求去做。然后你向她露出一道腼腆的微笑，回到之前的位置，迅速投入进工作中……");
 			
 			return sb.toString();
 		}

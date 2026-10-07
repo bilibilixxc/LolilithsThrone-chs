@@ -35,7 +35,7 @@ public class QuickTransformations {
 	
 	// Quick transformations:
 	
-	public static final DialogueNode QUICK_TRANSFORMATIONS_FEMININITY = new DialogueNode("Transformations", "", true, true) {
+	public static final DialogueNode QUICK_TRANSFORMATIONS_FEMININITY = new DialogueNode("转化", "", true, true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile(dialoguePath, "QUICK_TRANSFORMATIONS_FEMININITY", targetedNpc);
@@ -47,8 +47,8 @@ public class QuickTransformations {
 			String maleName = targetedNpc.getSubspecies().getSingularMaleName(targetedNpc.getBody());
 			
 			if (index == 1) {
-				return new Response("[style.colourMasculineStrong(Very masculine)]",
-						"Tell [npc.name] that you want [npc.herHim] to shift [npc.her] femininity so that [npc.sheIs] "+UtilText.generateSingularDeterminer(maleName)+" "+maleName+".",
+				return new Response("[style.colourMasculineStrong(极端男性化)]",
+						"告诉[npc.name]你想改变[npc.her]的女性化程度，让[npc.sheIs]成为一个"+maleName+"。",
 						QUICK_TRANSFORMATIONS_PENIS){
 					@Override
 					public void effects() {
@@ -58,8 +58,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 2) {
-				return new Response("[style.colourMasculine(Masculine)]",
-						"Tell [npc.name] that you want [npc.herHim] to shift [npc.her] femininity so that [npc.sheIs] "+UtilText.generateSingularDeterminer(maleName)+" "+maleName+".",
+				return new Response("[style.colourMasculine(男性化)]",
+						"告诉[npc.name]你想改变[npc.her]的女性化程度，让[npc.sheIs]成为一个"+maleName+"。",
 						QUICK_TRANSFORMATIONS_PENIS){
 					@Override
 					public void effects() {
@@ -69,8 +69,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 3) {
-				return new Response("[style.colourAndrogynous(Androgynous)]",
-						"Tell [npc.name] that you want [npc.herHim] to shift [npc.her] femininity so that [npc.sheIs] "+UtilText.generateSingularDeterminer(femaleName)+" "+femaleName+".",
+				return new Response("[style.colourAndrogynous(中性的)]",
+						"告诉[npc.name]你想改变[npc.her]的女性化程度，让[npc.sheIs]成为一个"+femaleName+"。",
 						QUICK_TRANSFORMATIONS_PENIS){
 					@Override
 					public void effects() {
@@ -80,8 +80,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 4) {
-				return new Response("[style.colourFeminine(Feminine)]",
-						"Tell [npc.name] that you want [npc.herHim] to shift [npc.her] femininity so that [npc.sheIs] "+UtilText.generateSingularDeterminer(femaleName)+" "+femaleName+".",
+				return new Response("[style.colourFeminine(女性)]",
+						"告诉[npc.name]你想改变[npc.her]的女性化程度，让[npc.sheIs]成为一个"+femaleName+"。",
 						QUICK_TRANSFORMATIONS_PENIS){
 					@Override
 					public void effects() {
@@ -91,8 +91,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 5) {
-				return new Response("[style.colourFeminineStrong(Very feminine)]",
-						"Tell [npc.name] that you want [npc.herHim] to shift [npc.her] femininity so that [npc.sheIs] "+UtilText.generateSingularDeterminer(femaleName)+" "+femaleName+".",
+				return new Response("[style.colourFeminineStrong(极端女性化)]",
+						"告诉[npc.name]你想改变[npc.her]的女性化程度，让[npc.sheIs]成为一个"+femaleName+"。",
 						QUICK_TRANSFORMATIONS_PENIS){
 					@Override
 					public void effects() {
@@ -107,7 +107,7 @@ public class QuickTransformations {
 		}
 	};
 	
-	private static final DialogueNode QUICK_TRANSFORMATIONS_PENIS = new DialogueNode("Transformations", "", true, true) {
+	private static final DialogueNode QUICK_TRANSFORMATIONS_PENIS = new DialogueNode("转化", "", true, true) {
 		
 
 		@Override
@@ -118,8 +118,8 @@ public class QuickTransformations {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("No cock",
-						"Tell the [npc.race] that you don't want [npc.herHim] to have a cock.",
+				return new Response("无阴茎",
+						"告诉[npc.race]你不想让[npc.herHim]有一根鸡巴。",
 						QUICK_TRANSFORMATIONS_VAGINA){
 					@Override
 					public boolean isSexHighlight() {
@@ -134,8 +134,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Tiny cock",
-						"Tell the [npc.race] that you want [npc.herHim] to have a tiny little [unit.size(3)] cock.",
+				return new Response("极小的阴茎",
+						"告诉[npc.race]你想让[npc.herHim]长出一根[unit.size(3)]的小小雀雀。",
 						QUICK_TRANSFORMATIONS_VAGINA){
 					@Override
 					public boolean isSexHighlight() {
@@ -155,8 +155,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 3) {
-				return new Response("Average-sized cock",
-						"Tell the [npc.race] that you want [npc.herHim] to have an average, [unit.size(15)] cock.",
+				return new Response("平均尺寸的阴茎",
+						"告诉[npc.race]你想让[npc.herHim]长出一根[unit.size(15)]的普通鸡巴。",
 						QUICK_TRANSFORMATIONS_VAGINA){
 					@Override
 					public boolean isSexHighlight() {
@@ -176,8 +176,8 @@ public class QuickTransformations {
 				};
 				
 			} if (index == 4) {
-				return new Response("Large cock",
-						"Tell the [npc.race] that you want [npc.herHim] to have a large, [unit.size(30)] cock.",
+				return new Response("较大的阴茎",
+						"告诉[npc.race]你想让[npc.herHim]长出一根[unit.size(30)]的较大鸡巴。",
 						QUICK_TRANSFORMATIONS_VAGINA){
 					@Override
 					public boolean isSexHighlight() {
@@ -197,8 +197,8 @@ public class QuickTransformations {
 				};
 				
 			} if (index == 5) {
-				return new Response("Enormous cock",
-						"Tell the [npc.race] that you want [npc.herHim] to have a massive [unit.size(50)] cock.",
+				return new Response("巨大的阴茎",
+						"告诉[npc.race]你想让[npc.herHim]长出一根[unit.size(50)]的巨大鸡巴。",
 						QUICK_TRANSFORMATIONS_VAGINA){
 					@Override
 					public boolean isSexHighlight() {
@@ -223,7 +223,7 @@ public class QuickTransformations {
 		}
 	};
 	
-	private static final DialogueNode QUICK_TRANSFORMATIONS_VAGINA = new DialogueNode("Transformations", "", true, true) {
+	private static final DialogueNode QUICK_TRANSFORMATIONS_VAGINA = new DialogueNode("转化", "", true, true) {
 
 
 		@Override
@@ -234,8 +234,8 @@ public class QuickTransformations {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Vagina",
-						"Tell the [npc.race] that you want [npc.herHim] to have a pussy.",
+				return new Response("阴道",
+						"告诉[npc.race]你想让[npc.herHim]长出小穴。",
 						QUICK_TRANSFORMATIONS_BREASTS){
 					@Override
 					public boolean isSexHighlight() {
@@ -250,8 +250,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 2) {
-				return new Response("No Vagina",
-						"Tell the [npc.race] that [npc.she] won't be needing a pussy.",
+				return new Response("无阴道",
+						"告诉[npc.race][npc.she]不需要一个小穴。",
 						QUICK_TRANSFORMATIONS_BREASTS){
 					@Override
 					public boolean isSexHighlight() {
@@ -271,7 +271,7 @@ public class QuickTransformations {
 		}
 	};
 	
-	private static final DialogueNode QUICK_TRANSFORMATIONS_BREASTS = new DialogueNode("Transformations", "", true, true) {
+	private static final DialogueNode QUICK_TRANSFORMATIONS_BREASTS = new DialogueNode("转化", "", true, true) {
 
 		@Override
 		public String getContent() {
@@ -281,8 +281,8 @@ public class QuickTransformations {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Flat chest",
-						"Tell [npc.name] that [npc.she] should have no breasts.",
+				return new Response("平坦的胸部",
+						"告诉[npc.name][npc.she]不该有乳房。",
 						QUICK_TRANSFORMATIONS_FINISHED){
 					@Override
 					public void effects() {
@@ -292,8 +292,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 2) {
-				return new Response("AA-cup",
-						"Tell [npc.name] to make [npc.her] breasts tiny little AA-cups.",
+				return new Response("AA罩杯",
+						"告诉[npc.name]让[npc.her]的胸变成AA罩杯。",
 						QUICK_TRANSFORMATIONS_FINISHED){
 					@Override
 					public void effects() {
@@ -303,8 +303,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 3) {
-				return new Response("C-cup",
-						"Tell [npc.name] to make [npc.her] breasts C-cups.",
+				return new Response("C罩杯",
+						"告诉[npc.name]让[npc.her]的胸变成C罩杯。",
 						QUICK_TRANSFORMATIONS_FINISHED){
 					@Override
 					public void effects() {
@@ -314,8 +314,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 4) {
-				return new Response("E-cup",
-						"Tell [npc.name] to make [npc.her] breasts E-cups.",
+				return new Response("E罩杯",
+						"告诉[npc.name]让[npc.her]的胸变成E罩杯。",
 						QUICK_TRANSFORMATIONS_FINISHED){
 					@Override
 					public void effects() {
@@ -325,8 +325,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 5) {
-				return new Response("H-cup",
-						"Tell [npc.name] to make [npc.her] breasts H-cups.",
+				return new Response("H罩杯",
+						"告诉[npc.name]让[npc.her]的胸变成H罩杯。",
 						QUICK_TRANSFORMATIONS_FINISHED){
 					@Override
 					public void effects() {
@@ -336,8 +336,8 @@ public class QuickTransformations {
 				};
 				
 			} else if (index == 6) {
-				return new Response("N-cup",
-						"Tell [npc.name] to make [npc.her] breasts N-cups.",
+				return new Response("N罩杯",
+						"告诉[npc.name]让[npc.her]的胸变成N罩杯。",
 						QUICK_TRANSFORMATIONS_FINISHED){
 					@Override
 					public void effects() {
@@ -352,7 +352,7 @@ public class QuickTransformations {
 		}
 	};
 	
-	private static final DialogueNode QUICK_TRANSFORMATIONS_FINISHED = new DialogueNode("Transformations", "", true, true) {
+	private static final DialogueNode QUICK_TRANSFORMATIONS_FINISHED = new DialogueNode("转化", "", true, true) {
 		
 		@Override
 		public String getContent() {

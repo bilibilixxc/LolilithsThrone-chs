@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA[At the base of the grip, there is a small engraving that reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在把手底部，刻画着几个小字：“执法者官方分配，由DSG锻造厂生产”。]]></authorTag>
 		
 		<value>3000</value> 
 		
@@ -9,23 +9,23 @@
 		
 		<twoHanded>false</twoHanded>
 		
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一根]]></determiner>
 		
-		<name><![CDATA[Enforcer's baton]]></name>
+		<name><![CDATA[执法者伸缩警棍]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's Batons]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者伸缩警棍]]></namePlural> 
 		
-		<description><![CDATA[A standard issue baton for Enforcers. It is favored for its ability to collapse into a more discrete form factor but offers little in the way of defensive techniques.]]></description> 
+		<description><![CDATA[一根执法者标配的伸缩警棍。因其便携性而备受青睐，但不适合用来防御。]]></description> 
 		
-		<attackDescriptor>Bludgeon</attackDescriptor>
+		<attackDescriptor><![CDATA[捶打]]></attackDescriptor>
 		
-		<attackTooltipDescription>Hit [npc2.name] with your baton.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[你用警棍敲[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>UNCOMMON</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(swing)] the baton out, letting the weight of the tip extend the shaft to full length.]]></equipText>
+		<equipText><![CDATA[[npc.Name]用力一甩伸缩警棍，让打击头的重量将棍身拉长。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(push)] the end of the baton into the handle and [npc.verb(put)] it away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将警棍打击头推入手柄然后收好。]]></unequipText>
 		
 		<imageName>enbaton_inv.svg</imageName> 
 		
@@ -46,14 +46,14 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.boldPhysical("Dazed")] on critical hit.]]></effect>
+			<effect><![CDATA[暴击附带[style.boldPhysical(“击晕”)]效果。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect/>
 		
 		<onCriticalHitEffect><![CDATA[
 		#IF !npc2.hasStatusEffect(SE_DAZED)
-		#THEN [##npc2.addStatusEffect(SE_DAZED, 6)] [npc2.Name] [npc2.is] [style.boldPhysical(seeing stars)] from such a succession of blows! 
+		#THEN [##npc2.addStatusEffect(SE_DAZED, 6)][npc2.Name]被击中后顿时[style.boldPhysical(眼冒金星)]！
 		#ENDIF
 		]]></onCriticalHitEffect>
 		
@@ -70,26 +70,26 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Swinging out with [npc.her] baton, [npc.name] [npc.verb(manage)] to hit [npc2.name] square in the chest. There is a loud cracking sound as the shaft connects with the aura above [npc2.her] torso to drain [npc2.her] energy!
-		]]></hitText>
+		[npc.Name]挥出警棍，正中了[npc2.name]胸部，警棍与[npc2.her]躯干的灵气链接并发出巨大的破碎声，汲取其能量！
+]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] baton, bashing into the aura around [npc2.her] shoulder with the shaft and causing [npc2.herHim] to lose some energy!
-		]]></hitText>
+		[npc.Name]挥出警棍，砸中了[npc2.name]肩头处的灵气，使其失去了一些能量！
+]]></hitText>
 		<hitText><![CDATA[
-		Swinging out with [npc.her] baton, [npc.name] [npc.verb(manage)] to hit [npc2.name] across the head! There is a loud cracking sound as the shaft connects with the aura above [npc2.her] head to drain [npc2.her] energy!
-		]]></hitText>
+		[npc.Name]挥出警棍，正中了[npc2.name]的头部，警棍与[npc2.her]头上的灵气链接并发出巨大的破碎声，汲取其能量！
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] baton, [npc.name] [npc.verb(attempt)] to hit [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.name]挥出警棍，捅向[npc2.name]的胸口，但最后没有成功命中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] baton, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用甩棍猛地挥向[npc2.name]，却没能击中目标！
+]]></missText>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] baton, [npc.name] [npc.verb(attempt)] to hit [npc2.name] across the head, but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.name]用警棍捅向[npc2.name]的头部，但最后没有成功命中[npc2.herHim]！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

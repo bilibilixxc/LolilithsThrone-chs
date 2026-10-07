@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>750</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
-		<name><![CDATA[hakama]]></name>
+		<name><![CDATA[袴]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[hakama]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[袴]]></namePlural> 
 		
-		<description><![CDATA[Tied at the waist and falling approximately to the ankles, hakama, such as this one, are meant to be worn over a kimono.]]></description> 
+		<description><![CDATA[袴(kù)系于腰部，垂至脚踝，像这件袴，就是用来套在和服外面穿的。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -71,27 +71,19 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(put)] on the hakama, before tying it up at [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(put)] on the hakama on [npc2.name], before tying it up at [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(put)] on the hakama on [npc2.name], before firmly tying it up at [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[[npc.Name]穿上了袴，然后在[npc.her]的腰部系好。]]></self>
+    <other><![CDATA[[npc.Name]帮[npc2.name]穿上了袴，然后在[npc2.her]的腰部系好。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地给[npc2.name]穿上了袴，然后牢牢地在[npc2.her]的腰部系紧了。]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(untie)] [npc.her] hakama, before taking it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(untie)] [npc2.namePos] hakama, before taking it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(untie)] [npc2.namePos] hakama, before yanking it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解下[npc.her]的袴然后将其取下。]]></self>
+    <other><![CDATA[
+[npc.Name]解下[npc2.namePos]的袴然后将其取下。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开[npc2.namePos]袴，然后猛地将它从[npc2.herHim]身上扯掉。]]></otherRough>
   </displacementText>
 	
 </clothing>

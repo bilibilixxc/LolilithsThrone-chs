@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bridle]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bridles]]></namePlural>
-		<description><![CDATA[A piece of equipment that's designed to fit around the head of a horse and used to direct the animal. Thanks to an arcane enchantment, the leather straps and headstall resize themselves to fit any muzzle-faced person or beast.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[缰绳]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[缰绳]]></namePlural>
+		<description><![CDATA[一种设计用来套在马头上并用来指挥马的设备。得益于奥术附魔，皮革背带和颈带可以自行调整大小，以适合任何戴缰绳的人或野兽。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -22,10 +21,10 @@
 			<category id="reins" priority="1">
 				<categoryName><![CDATA[Reins]]></categoryName>
 				<sticker id="present" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Present]]></stickerName>
+					<stickerName><![CDATA[赠送]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[This particular bridle is fitted with reins.]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[这种特殊的笼头配有缰绳。]]></descriptionModification>
 					<imageName zLayer="-1">bridle_reins.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -33,10 +32,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="removed" priority="2" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Removed]]></stickerName>
+					<stickerName><![CDATA[取下]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[The reins have been removed from this bridle.]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[缰绳从笼头上取下。]]></descriptionModification>
 					<imageName zLayer="-1">bridle_bit.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -90,26 +89,26 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(open)] [npc.her] mouth wide and [npc.verb(slide)] the bridle's bit into it, before reaching back and fastening the buckles to keep the headstall in place.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the bridle's bit into [npc2.namePos] mouth, before reaching back and fastening the buckles to keep the headstall in place.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(force)] the bridle's bit into [npc2.namePos] mouth, before reaching back and tightly fastening the buckles to keep the headstall in place.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]张开[npc.her]嘴部并塞入缰绳的嚼子，然后伸手扣上针扣并固定好笼头。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]张开[npc2.namePos]的嘴部并塞入缰绳的嚼子，然后伸手扣上针扣并固定好笼头。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]强行张开[npc2.namePos]的嘴部并塞入缰绳的嚼子，然后伸手扣上针扣并固定好笼头。
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the bridle's straps and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unfasten)] the bridle's straps and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] impatiently [npc.verb(unfasten)] the bridle's straps and [npc.verb(yank)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了缰绳并把它脱了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开了缰绳并把它脱了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙的解开了缰绳并把它拽了下来。
+]]></otherRough>
 	</displacementText>
 </clothing>

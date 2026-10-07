@@ -54,7 +54,7 @@ public class OffspringMapDialogue {
 	}
 	
 	
-	public static final DialogueNode OFFSPRING_CHOICE = new DialogueNode("Offspring list", "-", true) {
+	public static final DialogueNode OFFSPRING_CHOICE = new DialogueNode("后代列表", "-", true) {
 		List<OffspringSeed> offspringList;
 		@Override
 		public void applyPreParsingEffects() {
@@ -68,39 +68,39 @@ public class OffspringMapDialogue {
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-						+ "The arcane enchantment in the map causes a list of names of all your unmet offspring to be projected into the air in front of you, with corresponding dots showing their exact location on the physical map itself."
+						+ "地图的奥术附魔在你面前投影出一份你未曾谋面的后代名单，并在地图上展示出对应的准确地点。"
 						+ (noOffspring
-								? " It doesn't look like you have any unmet offspring to be found right now..."
-								: " Luckily, it looks like one of your offspring is in this very area."
-									+ " As you take a look at the key, you see just who it is...")
+								? "看来现在你并没有需要寻找的没见过面的后代……"
+								: " 幸运的是，看起来你的一个后代就在这个区域。"
+									+ "你看了看关键信息，得知对方是……")
 					+ "</p>"
 					+ "<p style='text-align:center;'>");
 			
 			if(Main.game.getOffspringNotSpawned(os->true).isEmpty()) {
-				UtilText.nodeContentSB.append("[style.colourDisabled(No offspring available)]");
+				UtilText.nodeContentSB.append("[style.colourDisabled(后代不可用)]");
 				
 			} else {
 				boolean foundAnyInArea = false;
 				List<OffspringSeed> offspringToShow = Main.game.getOffspringNotSpawned(npc->offspringList.contains(npc));
 				if(!offspringToShow.isEmpty()) {
 					foundAnyInArea = true;
-					UtilText.nodeContentSB.append("Offspring [style.colourMinorGood(possibly in this area)]:<br/>");
+					UtilText.nodeContentSB.append("后代[style.colourMinorGood(可能在该区域)]:<br/>");
 				}
 				for(OffspringSeed os : offspringToShow) {
 					UtilText.nodeContentSB.append("<span style='color:"+os.getFemininity().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(os.getName())+"</span>");
 					
-					String unknownMotherName = "Unknown";
+					String unknownMotherName = "未知";
 					if(os.getMother()==null && !os.getMotherName().equals("???")) {
 						unknownMotherName = os.getMotherName();
 					}
-					String unknownFatherName = "Unknown";
+					String unknownFatherName = "未知";
 					if(os.getFather()==null && !os.getFatherName().equals("???")) {
 						unknownFatherName = os.getFatherName();
 					}
 
 					UtilText.nodeContentSB.append(" ("+(os.isFeral()?"<span style='color:"+RaceStage.FERAL.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(RaceStage.FERAL.getName())+"</span> ":"")+"<span style='color:"+os.getSubspecies().getColour(null).toWebHexString()+";'>"+Util.capitaliseSentence(os.getSubspecies().getName(os.getBody()))+"</span>)"
-							+ " Mother: "+(os.getMother()==null?unknownMotherName:(os.getMother().isPlayer()?"[style.colourExcellent(You)]":os.getMother().getName(true)))
-							+ " Father: "+(os.getFather()==null?unknownFatherName:(os.getFather().isPlayer()?"[style.colourExcellent(You)]":os.getFather().getName(true)))
+							+ " 母亲："+(os.getMother()==null?unknownMotherName:(os.getMother().isPlayer()?"[style.colourExcellent(你)]":os.getMother().getName(true)))
+							+ " 父亲："+(os.getFather()==null?unknownFatherName:(os.getFather().isPlayer()?"[style.colourExcellent(你)]":os.getFather().getName(true)))
 							+ "<br/>");
 				}
 				
@@ -109,23 +109,23 @@ public class OffspringMapDialogue {
 					if(foundAnyInArea) {
 						UtilText.nodeContentSB.append("<br/>");
 					}
-					UtilText.nodeContentSB.append("Offspring [style.colourMinorBad(not in this area)]:<br/>");
+					UtilText.nodeContentSB.append("后代[style.colourMinorBad(不在该区域)]:<br/>");
 				}
 				for(OffspringSeed os : offspringToShow) {
 					UtilText.nodeContentSB.append("[style.colourDisabled("+Util.capitaliseSentence(os.getName())+")]");
 					
-					String unknownMotherName = "Unknown";
+					String unknownMotherName = "未知";
 					if(os.getMother()==null && !os.getMotherName().equals("???")) {
 						unknownMotherName = os.getMotherName();
 					}
-					String unknownFatherName = "Unknown";
+					String unknownFatherName = "未知";
 					if(os.getFather()==null && !os.getFatherName().equals("???")) {
 						unknownFatherName = os.getFatherName();
 					}
 					
 					UtilText.nodeContentSB.append(" (<span style='color:"+os.getSubspecies().getColour(null).toWebHexString()+";'>"+Util.capitaliseSentence(os.getSubspecies().getName(os.getBody()))+"</span>)"
-							+ " Mother: "+(os.getMother()==null?unknownMotherName:(os.getMother().isPlayer()?"[style.colourExcellent(You)]":os.getMother().getName(true)))
-							+ " Father: "+(os.getFather()==null?unknownFatherName:(os.getFather().isPlayer()?"[style.colourExcellent(You)]":os.getFather().getName(true)))
+							+ " 母亲："+(os.getMother()==null?unknownMotherName:(os.getMother().isPlayer()?"[style.colourExcellent(你)]":os.getMother().getName(true)))
+							+ " 父亲："+(os.getFather()==null?unknownFatherName:(os.getFather().isPlayer()?"[style.colourExcellent(你)]":os.getFather().getName(true)))
 							+ "<br/>");
 				}
 			}
@@ -141,19 +141,19 @@ public class OffspringMapDialogue {
 			offspringToShow.addAll(Main.game.getOffspringNotSpawned(npc->!offspringList.contains(npc)));
 			
 			if (index == 0) {
-				return new Response("Back", "Decide not to look for any of your offspring in this location after all.", Main.game.getDefaultDialogue(false));
+				return new Response("返回", "还是决定不去寻找该地区的后代。", Main.game.getDefaultDialogue(false));
 				
 			} else if(index-1 < offspringToShow.size()) {
 				OffspringSeed offspring = offspringToShow.get(index-1);
 				
 				if(!offspringList.contains(offspring)) {
 					return new Response(offspring.getName(),
-							offspring.getName()+" cannot be found in this area, due to "+offspring.hisHer()+" subspecies...",
+							"因为" + offspring.getName()+"的亚种，"+offspring.hisHer()+"在该区域无法找到……",
 							null);
 				}
 
 				return new Response(offspring.getName(),
-						"With the help of the enchanted map, you know that you'll soon be able to find "+offspring.getName()+" in this area...",
+						"在附魔地图的帮助下，你很快就会在该区域找到"+offspring.getName()+"……",
 						offspring.getEncounterDialogue()) {
 					@Override
 					public Colour getHighlightColour() {
@@ -172,8 +172,8 @@ public class OffspringMapDialogue {
 						Main.game.getTextStartStringBuilder().append(
 								"<p><i>"
 									+ UtilText.parse(npc,
-										"Consulting the map, you soon find that your [npc.daughter], [npc.name], is living in this particular area of the alleyways."
-										+ " Putting away your map, you start to search for [npc.herHim]...")
+										"通过查询地图，你很快找到了你的[npc.daughter][npc.name]，正住在这条小巷确切某处。"
+										+ "你收好地图，开始寻找[npc.herHim]……")
 								+ "</i></p>");
 					}
 				};

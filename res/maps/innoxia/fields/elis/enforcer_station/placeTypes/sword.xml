@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[SWORD Office]]></name>
-	<tooltipDescription><![CDATA[This office is where Elis's SWORD unit meets to plan their missions.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the SWORD office in the Enforcer station in Elis]]></virginityLossDescription>
+	<name><![CDATA[SWORD办公室]]></name>
+	<tooltipDescription><![CDATA[SWORD小队在这间办公室制定任务计划。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯执法局的SWORD办公室里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>#2c5aa0</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

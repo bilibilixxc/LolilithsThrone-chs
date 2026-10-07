@@ -40,7 +40,7 @@ public class HomeImprovements {
 		return characters.get(0);
 	}
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Argus's DIY Depot", ".", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("阿格斯的DIY仓库", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -53,21 +53,21 @@ public class HomeImprovements {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.isExtendedWorkTime()) {
-					return new Response("Enter", "Enter the warehouse signposted as being open to members of the public.", PlaceType.HOME_IMPROVEMENTS_ENTRANCE.getDialogue(false)) {
+					return new Response("进入", "进入张贴着向公众开放的仓库。", PlaceType.HOME_IMPROVEMENTS_ENTRANCE.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.HOME_IMPROVEMENTS, PlaceType.HOME_IMPROVEMENTS_ENTRANCE, false);
 						}
 					};
 				} else {
-					return new Response("Enter", "The warehouse is quite clearly closed at the moment. You'll have to come back later if you want to get inside...", null);
+					return new Response("进入", "仓库目前关门。如果你想进去，得晚点再来……", null);
 				}
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE = new DialogueNode("", ".", false) {
+	public static final DialogueNode ENTRANCE = new DialogueNode("", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -79,7 +79,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Exit", "Exit the warehouse and head back out into Dominion.", PlaceType.DOMINION_HOME_IMPROVEMENT.getDialogue(false)){
+				return new Response("离开", "离开仓库，回到御城区。", PlaceType.DOMINION_HOME_IMPROVEMENT.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_HOME_IMPROVEMENT, false);
@@ -90,7 +90,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode CORRIDOR = new DialogueNode("", ".", false) {
+	public static final DialogueNode CORRIDOR = new DialogueNode("", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -117,7 +117,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode SHELVING_PREMIUM = new DialogueNode("", ".", false) {
+	public static final DialogueNode SHELVING_PREMIUM = new DialogueNode("", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -146,12 +146,12 @@ public class HomeImprovements {
 					&& !Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN)) {
 				if(index==1) {
 					if(Main.game.getPlayer().getMoney()<ItemType.PAINT_CAN_PREMIUM.getValue()) {
-						return new Response("Purchase ("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
-								"Although this can of paint [style.colourGood(is the one Helena requested)], you [style.colourbad(cannot afford to buy it)]!",
+						return new Response("购买("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
+								"虽然[style.colourGood(海伦娜需要)]这罐油漆，但是你[style.colourbad(买不起)]！",
 								null);
 					}
-					return new Response("Purchase ("+UtilText.formatAsMoney(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
-							"Purchase a can of "+ItemType.PAINT_CAN_PREMIUM.getName(false)+", which [style.colourGood(is the one Helena requested)].",
+					return new Response("购买("+UtilText.formatAsMoney(ItemType.PAINT_CAN_PREMIUM.getValue(), "span")+")",
+							"购买一罐"+ItemType.PAINT_CAN_PREMIUM.getName(false)+"，[style.colourGood(海伦娜需要这种)]。",
 							PAINT_PURCHASED) {
 						@Override
 						public void effects() {
@@ -168,7 +168,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode SHELVING_STANDARD = new DialogueNode("", ".", false) {
+	public static final DialogueNode SHELVING_STANDARD = new DialogueNode("", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -197,12 +197,12 @@ public class HomeImprovements {
 					&& !Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN)) {
 				if(index==1) {
 					if(Main.game.getPlayer().getMoney()<ItemType.PAINT_CAN.getValue()) {
-						return new Response("Purchase ("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN.getValue(), "span")+")",
-								"This can of paint [style.colourBad(is not the one Helena requested)], and even if you did want to purchase it, you [style.colourbad(cannot afford it)]!",
+						return new Response("购买("+UtilText.formatAsMoneyUncoloured(ItemType.PAINT_CAN.getValue(), "span")+")",
+								"海伦娜不需要[style.colourBad(这罐油漆)]，而且你也[style.colourbad(买不起它)]！",
 								null);
 					}
-					return new Response("Purchase ("+UtilText.formatAsMoney(ItemType.PAINT_CAN.getValue(), "span")+")",
-							"Purchase a can of "+ItemType.PAINT_CAN.getName(false)+", which [style.colourBad(is not the one Helena requested)]!",
+					return new Response("购买("+UtilText.formatAsMoney(ItemType.PAINT_CAN.getValue(), "span")+")",
+							"购买一罐"+ItemType.PAINT_CAN.getName(false)+"，[style.colourBad(海伦娜不需要这个)]！",
 							PAINT_PURCHASED) {
 						@Override
 						public void effects() {
@@ -219,7 +219,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode PAINT_PURCHASED = new DialogueNode("", ".", true) {
+	public static final DialogueNode PAINT_PURCHASED = new DialogueNode("", "。", true) {
 		@Override
 		public int getSecondsPassed() {
 			if(Main.game.getPlayer().getRace()==Race.DEMON) {
@@ -235,8 +235,8 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"Now that you've got what you came here for, you may as well leave.",
+				return new Response("离开",
+						"你已经得到想要的了，或许可以离开了。",
 						PlaceType.DOMINION_HOME_IMPROVEMENT.getDialogue(false)) {
 					@Override
 					public void effects() {
@@ -245,15 +245,15 @@ public class HomeImprovements {
 				};
 				
 			} else if(index==2) {
-				return new Response("Continue shopping",
-						"You could always stay and look around a little more before leaving.",
+				return new Response("继续购物",
+						"你离开之前可以停下再看看。",
 						ENTRANCE);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode BUILDING_SUPPLIES = new DialogueNode("", ".", false) {
+	public static final DialogueNode BUILDING_SUPPLIES = new DialogueNode("", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -268,7 +268,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode OFFICE = new DialogueNode("", ".", false) {
+	public static final DialogueNode OFFICE = new DialogueNode("", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 1*60;
@@ -295,14 +295,14 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Toilet", "Use the toilet.", TOILETS_USE);
+				return new Response("厕所", "使用厕所。", TOILETS_USE);
 				
 			} else if(index==2) {
 				List<InventorySlot> washSlots = Util.newArrayListOfValues(InventorySlot.HEAD, InventorySlot.EYES, InventorySlot.MOUTH, InventorySlot.NECK, InventorySlot.HAIR, InventorySlot.FINGER, InventorySlot.HAND, InventorySlot.WRIST);
-				return new Response("Wash",
-						"Use the sinks to wash your hands and face."
-							+ "<br/>[style.italicsGood(This will clean your "+Util.inventorySlotsToParsedStringList(washSlots, Main.game.getPlayer())+", as well as any clothing worn in these slots.)]"
-							+ "<br/>[style.italicsMinorBad(This does <b>not</b> clean companions.)]",
+				return new Response("洗澡",
+						"用洗手池清洗手和脸。"
+							+ "<br/>[style.italicsGood(这将清理你的"+Util.inventorySlotsToParsedStringList(washSlots, Main.game.getPlayer())+"，以及穿着在这些栏位上的衣物。)]"
+							+ "<br/>[style.italicsMinorBad(<b>不会</b>为同伴清理。)]",
 						TOILETS_WASH) {
 					@Override
 					public void effects() {
@@ -321,23 +321,23 @@ public class HomeImprovements {
 				boolean vaginaAvailable = Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true);
 				
 				if((penisAvailable && !Main.game.getPlayer().isTaur()) || vaginaAvailable) {
-					return new Response("Glory hole (use)",
-							"One of the toilet's stalls has a glory hole in it. Enter the stall and wait for someone on the other side to service you.",
+					return new Response("寻欢洞(使用)",
+							"厕所的隔间里有个寻欢洞。进入隔间，等待对面的人服务你。",
 							TOILETS_GLORY_HOLE_DOM) {
 						@Override
 						public void effects() {
-							Main.game.spawnSubGloryHoleNPC("stranger");
+							Main.game.spawnSubGloryHoleNPC("陌生人");
 						}
 					};
 					
 				} else if(penisAvailable && Main.game.getPlayer().isTaur()) {
-					return new Response("Glory hole (use)",
-							"Due to the shape of your [pc.legRace]'s body, you cannot get into a suitable position for using the glory hole...",
+					return new Response("寻欢洞(使用)",
+							"由于你[pc.legRace]身躯的构造，你找不到一个使用寻欢洞的合适姿势……",
 							null);
 					
 				} else {
-					return new Response("Glory hole (use)",
-							"You can't get access to your genitals, so can't get serviced at a glory hole.",
+					return new Response("寻欢洞(使用)",
+							"你无法使用你的生殖器，所以无法在寻欢洞接受服务。",
 							null);
 				}
 				
@@ -345,19 +345,19 @@ public class HomeImprovements {
 				if((Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true))
 						|| (Main.game.getPlayer().hasVagina() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))
 						|| (Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true))) {
-					return new Response("Glory hole (service)",
-							"One of the toilet's stalls has a glory hole in it. Enter the stall and wait to service someone on the other side.",
+					return new Response("寻欢洞(服务)",
+							"厕所的隔间里有个寻欢洞。进入隔间，等待给对面的人服务。",
 							TOILETS_GLORY_HOLE_SUB) {
 						@Override
 						public void effects() {
-							Main.game.spawnDomGloryHoleNPC("stranger");
+							Main.game.spawnDomGloryHoleNPC("陌生人");
 							getGloryHoleCharacter().setAreaKnownByCharacter(CoverableArea.PENIS, Main.game.getPlayer(), true);
 						}
 					};
 				
 				} else {
-					return new Response("Glory hole (service)",
-							"You can't get access to your mouth, genitals, or asshole, so can't service any strangers at the glory holes.",
+					return new Response("寻欢洞(服务)",
+							"你无法使用嘴巴、生殖器或肛门，所以无法在寻欢洞为陌生人服务。",
 							null);
 				}
 			}
@@ -395,7 +395,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_DOM = new DialogueNode("Toilets", "", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_DOM = new DialogueNode("厕所", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -407,7 +407,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "On second thoughts, you don't really want some stranger having fun with your private parts...", TOILETS) {
+				return new Response("离开", "你又想了下，你不太想让陌生人用你的隐私部位寻欢作乐……", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/homeImprovements/generic", "TOILETS_GLORY_HOLE_DOM_LEAVE", getGloryHoleCharacter()));
@@ -416,8 +416,8 @@ public class HomeImprovements {
 				};
 				
 			} else if(index==1) {
-				return new ResponseSex("Start",
-						UtilText.parse(getGloryHoleCharacter(), "Do as [npc.name] says and step up to the glory hole."),
+				return new ResponseSex("开始",
+						UtilText.parse(getGloryHoleCharacter(), "按照[npc.name]的指示，靠近寻欢洞。"),
 						true, false,
 						new SMGloryHole(
 								SexPosition.GLORY_HOLE,
@@ -437,7 +437,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_DOM_POST_SEX = new DialogueNode("Toilets", "The stranger quickly exits their stall, and heads back into the store, leaving you to do the same...", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_DOM_POST_SEX = new DialogueNode("厕所", "陌生人迅速离开小隔间，回到商店。你也该离开了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -449,7 +449,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Walk out of the stall.", TOILETS) {
+				return new Response("继续", "走出摊位。", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC((NPC) getGloryHoleCharacter());
@@ -460,7 +460,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_SUB = new DialogueNode("Toilets", "", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_SUB = new DialogueNode("厕所", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -472,7 +472,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Leave", "On second thoughts, you don't really want to suck the cock of some random stranger...", TOILETS) {
+				return new Response("离开", "你又想了下，你其实不太想吸随机路人的屌……", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/homeImprovements/generic", "TOILETS_GLORY_HOLE_SUB_LEAVE", getGloryHoleCharacter()));
@@ -481,8 +481,8 @@ public class HomeImprovements {
 				};
 				
 			} else if(index==1) {
-				return new ResponseSex("Start",
-						UtilText.parse(getGloryHoleCharacter(), "Do as [npc.name] says and get ready to service [npc.her] cock."),
+				return new ResponseSex("开始",
+						UtilText.parse(getGloryHoleCharacter(), "按照[npc.name]说的，准备给[npc.her]的肉棒服务。"),
 						true, false,
 						new SMGloryHole(
 								SexPosition.GLORY_HOLE,
@@ -502,7 +502,7 @@ public class HomeImprovements {
 		}
 	};
 	
-	public static final DialogueNode TOILETS_GLORY_HOLE_SUB_POST_SEX = new DialogueNode("Toilets", "The stranger quickly exits their stall, and heads back into the store, leaving you to do the same...", true) {
+	public static final DialogueNode TOILETS_GLORY_HOLE_SUB_POST_SEX = new DialogueNode("厕所", "陌生人迅速离开小隔间，回到商店。你也该离开了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -514,7 +514,7 @@ public class HomeImprovements {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Walk out of the stall.", TOILETS) {
+				return new Response("继续", "走出摊位。", TOILETS) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC((NPC) getGloryHoleCharacter());

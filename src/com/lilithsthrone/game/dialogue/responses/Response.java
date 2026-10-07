@@ -481,27 +481,27 @@ public class Response {
 		
 		if(!isAvailable() && !isAbleToBypass()) {
 			if(!Main.game.isBypassSexActionsEnabled() && !isCorruptionWithinRange()) {
-				SB.append("This action is blocked as [style.colourTerrible(you are not corrupt enough)] to think of performing it.");
+				SB.append("由于[style.colourTerrible(你不够堕落)]，不知道该如何实行，该动作无法使用。");
 				
 			} else {
-				SB.append("This action is blocked due to not meeting certain [style.colourBad(requirements)].");
+				SB.append("因为没有满足[style.colourBad(需求)]，该动作无法使用。");
 			}
 			
 		} else {
 			if(isAvailableFromFetishes()) {
-				SB.append("Your [style.colourFetish(fetish)] bypasses this action's [style.colourCorruption(corruption)] requirements!");
+				SB.append("你的[style.colourFetish(性癖)]能够绕过该动作的[style.colourCorruption(堕落)]要求！");
 				return SB.toString();
 			}
 			
 			if(getCorruptionNeeded() != null) {
 				if(!isActionCorrupting()) {
-					SB.append("Your <span style='color:"+Main.game.getPlayer().getCorruptionLevel().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Main.game.getPlayer().getCorruptionLevel().getName())+"</span>"
-							+ " [style.colourCorruption(corruption)] has unlocked this action!");
+					SB.append("你<span style='color:"+Main.game.getPlayer().getCorruptionLevel().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Main.game.getPlayer().getCorruptionLevel().getName())+"</span>"
+							+ "的[style.colourCorruption(堕落程度)]解锁了该动作！");
 				} else {
-					SB.append("You will gain <b>+"+getCorruptionNeeded().getCorruptionBypass()+"</b> [style.boldCorruption(corruption)], as you don't meet the [style.colourCorruption(corruption)] or [style.colourFetish(fetish)] requirements!");
+					SB.append("你将获得<b>+"+getCorruptionNeeded().getCorruptionBypass()+"</b>[style.boldCorruption(堕落)]，因为你没有满足其[style.colourCorruption(堕落)]或[style.colourFetish(性癖)]需求！");
 				}
 			} else {
-				SB.append("This action cannot be unlocked with [style.colourCorruption(corruption)].");
+				SB.append("该动作无法通过[style.colourCorruption(堕落)]解锁。");
 			}
 		}
 		
@@ -510,10 +510,10 @@ public class Response {
 	
 	public String getAdditionalSexActionInformationText() {
 		if(this.getSexActionType()==SexActionType.START_ADDITIONAL_ONGOING) {
-			return "This action will cause you to [style.colourSex(join in)] with the related ongoing action.";
+			return "该动作会导致你[style.colourSex(进入)]额外的相关动作。";
 			
 		} else if(isSexActionSwitch()) {
-			return "This action will cause [style.colourCorruption(some ongoing actions to be stopped)] before starting the related ongoing action.";
+			return "该动作会导致[style.colourCorruption(部分正在进行的动作停止)]，并开始额外的相关动作。";
 		}
 		return "";
 	}
@@ -560,13 +560,13 @@ public class Response {
 						?Main.game.getPlayer().hasTrait(p, true)
 						:Main.game.getPlayer().hasPerkAnywhereInTree(p)) {
 					SB.append("<br/>"
-							+"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b>"
-							+ " (<span style='color:"+PresetColour.PERK.toWebHexString()+";'>Perk</span>): "
+							+"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>"
+							+ "(<span style='color:"+PresetColour.PERK.toWebHexString()+";'>天赋</span>):"
 							+Util.capitaliseSentence(p.getName(Main.game.getPlayer())));
 				} else {
 					SB.append("<br/>"
-							+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b>"
-							+ " (<span style='color:"+PresetColour.PERK.toWebHexString()+";'>Perk</span>): "
+							+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>"
+							+ "(<span style='color:"+PresetColour.PERK.toWebHexString()+";'>天赋</span>):"
 							+Util.capitaliseSentence(p.getName(Main.game.getPlayer())));
 				}
 			}
@@ -575,26 +575,26 @@ public class Response {
 		if(getFemininityRequired()!=null) {
 			if(isFemininityInRange()) {
 				SB.append("<br/>"
-						+"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b>"
-						+ " (Femininity): "
+						+"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>"
+						+ "(女性化程度):"
 						+ "<span style='color:"+getFemininityRequired().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(getFemininityRequired().getName(false))+"</span>");
 			} else {
 				SB.append("<br/>"
-						+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b>"
-						+ " (Femininity): "
+						+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>"
+						+ "(女性化程度):"
 						+ "<span style='color:"+getFemininityRequired().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(getFemininityRequired().getName(false))+"</span>");
 			}
 		}
 		
 		if(getSubspeciesRequired()!=null) {
 			if(isRequiredSubspecies()) {
-				SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b>");
+				SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>");
 
 			} else {
-				SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b>");
+				SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>");
 			}
 
-			SB.append(" (Subspecies): ");
+			SB.append("(亚种):");
 			List<String> subspeciesList = new ArrayList<>();
 			for(AbstractSubspecies subspecies : getSubspeciesRequired()) {
 				subspeciesList.add("<span style='color:"+subspecies.getColour(Main.game.getPlayer()).toWebHexString()+";'>"+Util.capitaliseSentence(subspecies.getName(null))+"</span>");
@@ -605,12 +605,12 @@ public class Response {
 		if(sexActionType==SexActionType.SPEECH) {
 			if(!Main.sex.isOngoingActionsBlockingSpeech(Main.game.getPlayer())) {
 				SB.append("<br/>"
-						+"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b>"
-						+ " (Speech): [style.colourMinorGood(Unblocked mouth)]");
+						+"<b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>"
+						+ "(语音):[style.colourMinorGood(发声自由)]");
 			} else {
 				SB.append("<br/>"
-						+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b>"
-						+ " (Speech): [style.colourMinorBad(Unblocked mouth)]");
+						+"<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>"
+						+ "(语音):[style.colourMinorBad(发声自由)]");
 			}
 		}
 		
@@ -645,31 +645,31 @@ public class Response {
 				for(SexAreaInterface sArea : sexAreaAccessRequiredForPerformer) {
 					if(sArea!=null) {
 						String penetrationName = Util.capitaliseSentence(sArea.getName(characterPerformingSexAction));
-						String accessText = (penetrationAccess?"access":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>access</span>");
-						String freeText = (penetrationFree?"free":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>free</span>");
-						String targetName = (characterPerformingSexAction.isPlayer()?"Your":UtilText.parse(characterPerformingSexAction, "[npc.Name]'s"));
+						String accessText = (penetrationAccess?"可用":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>可用</span>");
+						String freeText = (penetrationFree?"空闲":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>空闲</span>");
+						String targetName = (characterPerformingSexAction.isPlayer()?"你的":UtilText.parse(characterPerformingSexAction, "[npc.Name]的"));
 						
 						if(getSexActionType()==SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED
 								|| getSexActionType()==SexActionType.START_ONGOING
 								|| getSexActionType()==SexActionType.REQUIRES_NO_PENETRATION) {
 							if(penetrationAccess && penetrationFree) {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b> ("+accessText+" & "+freeText+"): "+targetName+" "+ penetrationName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>("+accessText+"&"+freeText+"):"+targetName + penetrationName);
 							} else {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b> ("+accessText+" & "+freeText+"): "+targetName+" "+ penetrationName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>("+accessText+"&"+freeText+"):"+targetName + penetrationName);
 							}
 							
 						} else if(getSexActionType()==SexActionType.REQUIRES_EXPOSED) {
 							if(penetrationAccess) {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ penetrationName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName + penetrationName);
 							} else {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ penetrationName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName + penetrationName);
 							}
 							
 						} else {
 							if(penetrationAccess) {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ penetrationName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName + penetrationName);
 							} else {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ penetrationName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName + penetrationName);
 							}
 						}
 					}
@@ -697,31 +697,31 @@ public class Response {
 				for(SexAreaInterface sArea : sexAreaAccessRequiredForTargeted) {
 					if(sArea!=null) {
 						String orificeName = Util.capitaliseSentence(sArea.getName(characterTargetedForSexAction));
-						String accessText = (orificeAccess?"access":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>access</span>");
-						String freeText = (orificeFree?"free":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>free</span>");
-						String targetName = (characterTargetedForSexAction.isPlayer()?"Your":UtilText.parse(characterTargetedForSexAction, "[npc.Name]'s"));
+						String accessText = (orificeAccess?"可用":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>可用</span>");
+						String freeText = (orificeFree?"空闲":"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>空闲</span>");
+						String targetName = (characterTargetedForSexAction.isPlayer()?"你的":UtilText.parse(characterTargetedForSexAction, "[npc.Name]的"));
 						
 						if(getSexActionType()==SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED
 								|| getSexActionType()==SexActionType.START_ONGOING
 								|| getSexActionType()==SexActionType.REQUIRES_NO_PENETRATION) {
 							if(orificeAccess && orificeFree) {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b> ("+accessText+" & "+freeText+"): "+targetName+" "+ orificeName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>("+accessText+"&"+freeText+"):"+targetName+ orificeName);
 							} else {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b> ("+accessText+" & "+freeText+"): "+targetName+" "+ orificeName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>("+accessText+"&"+freeText+"):"+targetName+ orificeName);
 							}
 							
 						} else if(getSexActionType()==SexActionType.REQUIRES_EXPOSED) {
 							if(orificeAccess) {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ orificeName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName+ orificeName);
 							} else {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ orificeName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName+ orificeName);
 							}
 							
 						} else {
 							if(orificeAccess) {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ orificeName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName+ orificeName);
 							} else {
-								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Requirement</b> ("+accessText+"): "+targetName+" "+ orificeName);
+								SB.append("<br/><b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>需求</b>("+accessText+"):"+targetName+ orificeName);
 							}
 						}
 					}
@@ -739,14 +739,14 @@ public class Response {
 			for(AbstractFetish f : getFetishesForUnlock()){
 				if(Main.game.getPlayer().hasFetish(f)) {
 					SB.append("<br/>"
-							+"[style.colourFetish(Associated Fetish)]"
-							+ " (<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>owned</span>): "
+							+"[style.colourFetish(相关性癖)]"
+							+ "(<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>拥有</span>):"
 							+ Util.capitaliseSentence(f.getName(Main.game.getPlayer())));
 					
 				} else {
 					SB.append("<br/>"
-							+"[style.colourFetish(Associated Fetish)]"
-							+ " (<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>not owned</span>): "
+							+"[style.colourFetish(相关性癖)]"
+							+ "(<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>未拥有</span>):"
 							+ Util.capitaliseSentence(f.getName(Main.game.getPlayer())));
 				}
 			}
@@ -755,17 +755,17 @@ public class Response {
 		if(getCorruptionNeeded()!=null) {
 			if(isCorruptionWithinRange()) {
 				SB.append("<br/>"
-						+"[style.colourCorruption(Associated Corruption)]"
+						+"[style.colourCorruption(相关堕落)]"
 						+ (!isActionCorrupting()
-							?" ([style.colourMinorGood(within range)]): "
-							:" ([style.colourMinorBad(just out of range)]): ")
+							?"([style.colourMinorGood(范围内)]):"
+							:"([style.colourMinorBad(稍微范围外)]):")
 						+ Util.capitaliseSentence(getCorruptionNeeded().getName()));
 			} else {
 				SB.append("<br/>"
-						+"[style.colourCorruption(Associated Corruption)]"
+						+"[style.colourCorruption(相关堕落)]"
 						+ (!Main.game.isBypassSexActionsEnabled()
-								?" ([style.colourTerrible(out of range)]): "
-								:" ([style.colourMinorBad(out of range)]): ")
+								?"([style.colourTerrible(范围外)]):"
+								:"([style.colourMinorBad(范围外)]):")
 						+ Util.capitaliseSentence(getCorruptionNeeded().getName()));
 			}
 		}
@@ -1031,11 +1031,11 @@ public class Response {
 	}
 
 	public static Response getDisallowedSpittingResponse() {
-		return getDisallowedSpittingResponse("Spit");
+		return getDisallowedSpittingResponse("吐出");
 	}
 
 	public static Response getDisallowedSpittingResponse(String desc) {
-		return new Response(desc, "You are being forced to drink down the potion!<br/>[style.italicsBad(Rejection of TF potions is disabled in the gameplay options!)]", null);
+		return new Response(desc, "你被强制喂下了药水！<br/>[style.italicsBad(拒绝转化药水功能在游戏玩法设置中被关闭！)]", null);
 	}
 
 	public String getConditional() {

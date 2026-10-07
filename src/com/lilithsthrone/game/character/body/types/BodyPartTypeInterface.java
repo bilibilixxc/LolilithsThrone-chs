@@ -28,9 +28,9 @@ public interface BodyPartTypeInterface {
 	/** @return Pronoun for this body part. (They, it) */
 	public default String getPronoun(GameCharacter gc){
 		if(isDefaultPlural(gc)) {
-			return "they";
+			return "其";
 		} else {
-			return "it";
+			return "其";
 		}
 	}
 	
@@ -56,7 +56,7 @@ public interface BodyPartTypeInterface {
 
 	/** @return The name of this body part with its descriptor. */
 	public default String getName(boolean withDescriptor, GameCharacter gc) {
-		return (getDescriptor(gc).length() > 0 ? getDescriptor(gc) + " " : "") + getName(gc);
+		return (getDescriptor(gc).length() > 0 ? getDescriptor(gc) : "") + getName(gc);
 	}
 
 	/** A 1-word descriptor that best describes this body part. */

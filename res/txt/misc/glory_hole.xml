@@ -1,254 +1,254 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- As dom: -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM"><![CDATA[
 	<p>
-		Deciding that it would be fun to get serviced at the glory hole, you peel off the tape that's covering it up, before
+		你决定在寻欢洞接受服务会很有趣，于是撕下了覆盖洞口的胶带，然后
 		#IF(pc.hasCompanions())
-			 telling [com.name] to wait outside and then locking the stall's door behind you.
+			告诉[com.name]在外面等着并锁上了身后的隔间门。
 		#ELSE
-			 locking the stall's door behind you.
+			锁上了身后的隔间门。
 		#ENDIF
-		 In position and ready to get started, you patiently wait for a stranger to turn up and choose to service you through the glory hole...
+		就位并准备开始，你耐心地等待一个选择通过寻欢洞为你服务的陌生人出现……
 	</p>
 	<p>
-		A few minutes later, and someone finally enters the stall on the other side. With the open glory hole obviously having been the reason they chose to enter this stall, the stranger chooses to immediately kneel down
+		几分钟后，终于有人走进了另一边的隔间。开放的寻欢洞显然是ta选择进入这个隔间的原因，陌生人立即跪下
 		#IF(glory.isMute())
-			 and push [glory.her] open mouth up to the hole. With an impatient tap on the wall to let you know that [glory.sheIs] there, the stranger prepares to orally service you.
+			并将[glory.her]张开的嘴巴贴向洞口。陌生人不耐烦地敲着墙壁，告诉你[glory.sheIs]就在那里，准备为你提供口交服务。
 		#ELSE
-			 and call out through the hole,
+			并通过洞口喊道，
 			#IF(pc.hasPenis())
-				 [glory.speech(Come on then! Put your cock through here and I'll give it a good suck!)]
+				[glory.speech(来吧！把你的阴茎插进来，我会好好地吮吸它！)]
 			#ELSEIF(pc.hasVagina())
-				 [glory.speech(Come on then! Push your pussy up against the hole and I'll eat you out!)]
+				[glory.speech(来吧！把你的小穴贴到洞口这让我吃掉它！)]
 			#ELSE
-				 [glory.speech(Come on then! Give me something to suck already!)]
+				[glory.speech(来吧！给我些可吸的东西！)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about receiving oral from some random stranger, you back away from the hole and wait for them to give up and leave...
+		对于接受陌生人的口交一事你又有了其他想法，于是你远离洞口，等待他们放弃并离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_START"><![CDATA[
 	<p>
-		Having already waited long enough, you quickly [pc.step] up to the glory hole,
+		已经等得够久了，你赶紧[pc.step]到寻欢洞前，
 		#IF(pc.hasPenis())
-			 preparing to have your [pc.cock+] sucked by the stranger on the other side.
+			准备让对面的陌生人吸你[pc.cock+]。
 		#ELSEIF(pc.hasVagina())
-			 preparing to have your [pc.pussy+] licked by the stranger on the other side.
+			准备让对面的陌生人舔你[pc.pussy+]。
 		#ELSE
-			 preparing to have your genderless mound licked by the stranger on the other side.
+			准备让对面的陌生人舔你的无性阴阜。
 		#ENDIF
 	</p>
 	<p>
-		As [glory.she] sees the approach of your groin, [glory.name] lets out [glory.a_moan+], before shuffling closer to the wall and firmly pressing [glory.her] open mouth up against the hole. 
+		当[glory.she]看到你的腹股沟靠近时，[glory.name]发出[glory.a_moan+]，移向墙壁并将[glory.her]张开的嘴牢牢地对准洞口。
 		#IF(!glory.isMute())
-			 Letting out [glory.a_moan+], [glory.she] impatiently encourages you to get started, [game.random(
-			[glory.speech(Oh yeah, come on! Let this whore show you what [glory.sheIs] capable of!)]
-			|[glory.speech(~Mmm!~ Oh yeah! Let's get started!)]
-			|[glory.speech(Oh yeah, babe! I'll show you how much of a slut I am!)])]
+			发出[glory.a_moan+]，[glory.she]不耐烦地鼓励你开始，[game.random(
+			[glory.speech(哦耶，来吧！让我这个荡妇向你展示一下[glory.sheIs]能做些什么！)]
+			|[glory.speech(~嗯！~哦耶！让我们开始吧！)]
+			|[glory.speech(哦耶，宝贝！我来让你看看我有多淫荡！)])]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_POST_SEX"><![CDATA[
 	<p>
-		You [pc.step] back from the glory hole, grinning as you hear [glory.name] let out a happy little [glory.moan]. As you get your things in order, you see a flash of movement through the hole, before the creak of the adjoining stall's door announces the horny slut's exit.
+		你从寻欢洞前[pc.step]开，听到[glory.name]发出快乐的小声[glory.moan]，你咧嘴一笑。当你整理好你的东西时，你看到人影从洞中一闪而过，之后隔壁隔间的门吱吱作响，宣告这个淫荡的婊子出去了。
 	</p>
 	<p>
-		Just a moment later, you reach down to unlock the door of your own stall, and as you open it and [pc.step] back out into the toilets, you see that [glory.name] has already left. With absolutely no idea as to who just orally serviced you, you wonder what to do next...
+		片刻之后，你打开了自己隔间的门锁。当你打开门[pc.step]回到厕所时，你发现[glory.name]已经离开了。完全不知道刚才是谁在为你口交，你思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- As sub: -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB"><![CDATA[
 	<p>
-		Feeling horny and eager to please a complete stranger, you choose a stall which has a glory hole, and after peeling off the tape that's covering it up, you
+		你感到饥渴难耐，并渴望取悦一个完全陌生的人，于是你选择了一个有寻欢洞的隔间，撕掉遮挡洞口的胶带后，你
 		#IF(pc.hasCompanions())
-			 tell [com.name] to wait outside and then lock the stall's door behind you.
+			告诉[com.name]在外面等着并锁上了身后的隔间门。
 		#ELSE
-			 lock the stall's door behind you.
+			锁上了身后的隔间门。
 		#ENDIF
-		 In position and ready to get started, you patiently wait for a stranger to turn up and have you service them...
+		就位并准备开始，你耐心地等待一个能让你为其提供服务的陌生人出现……
 	</p>
 	<p>
-		A few minutes later, and someone finally enters the stall on the other side. With the open glory hole obviously having been the reason they chose to enter this stall, the stranger immediately steps up to it and starts shifting their clothing out of the way. Just a moment later, and their [glory.cockDescriptive(true)] is being pushed through the hole. Before you can make a move, [glory.name]
+		几分钟后，终于有人进入了另一边的隔间。开放的寻欢洞显然是ta选择进入这个隔间的原因，这个陌生人立即走到寻欢洞前，开始移除ta的衣物，过了一小会，ta的[glory.cockDescriptive(true)]就被推进了洞中。还没等你有所行动，[glory.name]便
 		#IF(glory.isMute())
-			 impatiently taps the wall, encouraging you to get started on sucking [glory.her] cock...
+			不耐烦地敲着墙壁，鼓励你开始吮吸[glory.her]的阴茎……
 		#ELSE
 			#IF(glory.isSelfish())
 				#IF(glory.isFeminine())
-					 barks out a sharp command,
+					尖声命令道，
 				#ELSE
-					 lets out a deep growl,
+					发出低沉地咆哮，
 				#ENDIF
-				 [game.random(
-				[glory.speech(Come on, slut, get to work!)]
-				|[glory.speech(Start sucking, slut!)]
-				|[glory.speech(Come on, you dirty slut, get started already!)])]
+				[game.random(
+				[glory.speech(来吧，荡妇，开始工作！)]
+				|[glory.speech(开始吸吧，荡妇！)]
+				|[glory.speech(来吧，你个肮脏的荡妇，已经开始了！)])]
 			#ELSE
 				#IF(glory.isFeminine())
-					 sensually [glory.moansVerb],
+					性感地[glory.moansVerb]，
 				#ELSE
-					 lets out a deep grunt,
+					发出低沉地咕哝声，
 				#ENDIF
-				 [game.random(
-				[glory.speech(Come on then, show me what you can do!)]
-				|[glory.speech(Get your lips wrapped around my cock!)]
-				|[glory.speech(Come on, get started already!)])]
+				[game.random(
+				[glory.speech(来吧，让我看看你能做些什么！)]
+				|[glory.speech(用你的嘴唇包住我的阴茎！)]
+				|[glory.speech(来吧，已经开始了！)])]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about servicing some random stranger's cock, you back away from the hole and wait for them to give up and leave...
+		对于为陌生人的阴茎服务一事你又有了其他想法，于是你远离洞口，等待他们放弃并离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_START"><![CDATA[
 	<p>
-		Having already waited long enough, you quickly kneel down in front of the glory hole,
+		已经等得够久了，你赶紧跪在了寻欢洞前，
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 before opening your mouth and leaning in towards [glory.namePos] [glory.cock+].
+			然后张开嘴，靠近[glory.namePos][glory.cock+]。
 		#ELSE
-			 but as your mouth is blocked, all you can prepare to do is give [glory.name] a handjob.
+			但由于你的嘴被堵住了，你只能准备给[glory.name]一个手交。
 		#ENDIF
 	</p>
 	<p>
-		Hearing you drop down in front of [glory.herHim], [glory.name] lets out an eager [glory.moan], and as [glory.her] cock starts to stiffen, [glory.she] impatiently bucks [glory.her] [glory.hips] up against the wall.
+		听到你跪在了[glory.herHim]跟前，[glory.name]发出了急切的[glory.moan]，随着[glory.her]的阴茎变硬，[glory.she]急不可耐地将[glory.her]的[glory.hips]怼在墙上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_POST_SEX"><![CDATA[
 	<p>
-		You shuffle back from the glory hole, grinning to yourself as you hear [glory.name] letting out a satisfied [glory.moan]. As you get your things in order, you see a flash of movement through the hole, before the creak of the adjoining stall's door announces the stranger's exit.
+		你从寻欢洞前移开，听到[glory.name]发出满意的[glory.moan]，你咧嘴一笑。当你整理好你的东西时，你看到人影从洞中一闪而过，之后隔壁隔间的门吱吱作响，宣告这个陌生人出去了。
 	</p>
 	<p>
-		Just a moment later, you reach down to unlock the door of your own stall, and as you open it and [pc.step] back out into the toilets, you see that [glory.name] has already left. With absolutely no idea as to whose cock you just serviced, you wonder what to do next...
+		片刻之后，你伸手打开了自己隔间的门锁，当你打开门[pc.step]回到厕所时，你发现[glory.name]已经离开了。完全不知道刚才是在为谁的阴茎服务，你思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- As sub in a threesome: -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_THREESOME_SUB"><![CDATA[
 	<p>
-		Feeling horny and eager to please a couple of strangers, you choose a stall which has two glory holes, and after peeling off the tape that's covering them up, you
+		你感到饥渴难耐并渴望取悦一对陌生人，于是你选择了一间有两个寻欢洞的隔间，撕掉遮挡洞口的胶带后，你
 		#IF(pc.hasCompanions())
-			 tell [com.name] to wait outside and then lock the stall's door behind you.
+			告诉[com.name]在外面等着并锁上了身后的隔间门。
 		#ELSE
-			 locking the stall's door behind you.
+			锁上了身后的隔间门。
 		#ENDIF
-		 In position and ready to get started, you patiently wait for a couple of strangers to turn up and have you service them...
+		就位并准备开始，你耐心地等待一对你能够提供服务的陌生人出现……
 	</p>
 	<p>
-		A few minutes later, and someone finally enters the stall on one other side. With the open glory hole obviously having been the reason they chose to enter this stall, the stranger immediately steps up to it and starts shifting their clothing out of the way. Just a moment later, and their [glory.cockDescriptive(true)] is being pushed through the hole. Before you can make a move, [glory.name]
+		几分钟后，终于有人进入了一侧的隔间。开放的寻欢洞显然是ta选择进入这个隔间的原因，这个陌生人立即走到寻欢洞前，开始移除ta的衣物。过了一小会，ta的[glory.cockDescriptive(true)]就被推进了洞内。还没等你有所行动，[glory.name]便
 		#IF(glory.isMute())
-			 impatiently taps the wall, encouraging you to get started on sucking [glory.her] cock...
+			不耐烦地敲着墙壁，鼓励你开始吮吸[glory.her]的阴茎……
 		#ELSE
 			#IF(glory.isSelfish())
 				#IF(glory.isFeminine())
-					 barks out a sharp command,
+					尖声命令道，
 				#ELSE
-					 lets out a deep growl,
+					发出低沉地咆哮，
 				#ENDIF
-				 [game.random(
-				[glory.speech(Come on, slut, get to work!)]
-				|[glory.speech(Start sucking, slut!)]
-				|[glory.speech(Come on, you dirty slut, get started already!)])]
+				[game.random(
+				[glory.speech(来吧，荡妇，开始工作！)]
+				|[glory.speech(开始吸吧，荡妇！)]
+				|[glory.speech(来吧，你个肮脏的荡妇，已经开始了！)])]
 			#ELSE
 				#IF(glory.isFeminine())
-					 sensually [glory.moansVerb],
+					性感地[glory.moansVerb]，
 				#ELSE
-					 lets out a deep grunt,
+					发出低沉地咕哝声，
 				#ENDIF
-				 [game.random(
-				[glory.speech(Come on then, show me what you can do!)]
-				|[glory.speech(Get your lips wrapped around my cock!)]
-				|[glory.speech(Come on, get started already!)])]
+				[game.random(
+				[glory.speech(来吧，让我看看你能做些什么！)]
+				|[glory.speech(用你的嘴唇包住我的阴茎！)]
+				|[glory.speech(来吧，已经开始了！)])]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		At that moment, another stranger enters the stall on the other side. Not wanting to miss out on the action, they hastily whip out their [glory2.cockDescriptive(true)] and push it through the glory hole. As you find yourself being presented with this second cock, [glory2.name]
+		这时，另一个陌生人进入了另一侧隔间。不想错过这个机会，ta急忙掏出ta的[glory2.cockDescriptive(true)]并将其推进洞内。当你发现你面前的第二根阴茎时，[glory2.name]
 		#IF(glory2.isMute())
-			 eagerly thrusts [glory2.her] [glory2.hips] forwards, encouraging you to service [glory2.her] cock...
+			急切地将[glory2.her]的[glory2.hips]推向前方，鼓励你为[glory2.her]的阴茎服务……
 		#ELSE
 			#IF(glory2.isSelfish())
 				#IF(glory2.isFeminine())
-					 harshly snaps,
+					厉声斥责，
 				#ELSE
-					 menacingly grunts,
+					气势汹汹地嘟囔着，
 				#ENDIF
-				 [game.random(
-				[glory2.speech(Get to work, you dumb slut!)]
-				|[glory2.speech(What are you waiting for, slut?! Get to it!)]
-				|[glory2.speech(Hurry up, slut! I don't have all day!)])]
+				[game.random(
+				[glory2.speech(立刻工作，愚蠢的荡妇！)]
+				|[glory2.speech(你还在等什么，荡妇？！快点做！)]
+				|[glory2.speech(快点荡妇！我没有一整天时间！)])]
 			#ELSE
 				#IF(glory2.isFeminine())
-					 eagerly moans,
+					急切地呻吟，
 				#ELSE
-					 eagerly grunts,
+					急切地咕哝，
 				#ENDIF
-				 [game.random(
-				[glory2.speech(I'm looking forward to this!)]
-				|[glory2.speech(Go on, suck my cock!)]
-				|[glory2.speech(Come on, get a taste!)])]
+				[game.random(
+				[glory2.speech(我很期待这个！)]
+				|[glory2.speech(来吧，吸我的阴茎！)]
+				|[glory2.speech(来吧，好好品尝！)])]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_THREESOME_SUB_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about servicing some random strangers' cocks, you back away from the holes and wait for the two of them to give up and leave...
+		对于为一些随机的陌生人的阴茎服务一事，你又有了其他想法，于是你远离这两个洞口，等待ta们放弃并离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_THREESOME_SUB_START"><![CDATA[
 	<p>
-		Having already waited long enough, you quickly kneel down in front of [glory.namePos] glory hole,
+		已经等得够久了，你赶紧跪在了[glory.namePos]寻欢洞前，
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 before opening your mouth and leaning in towards [glory.her] [glory.cock+].
+			然后张开嘴，靠近[glory.her]的[glory.cock+]。
 		#ELSE
-			 but as your mouth is blocked, all you can prepare to do is give [glory.herHim] a handjob.
+			但你的嘴被堵住了，你只能准备给[glory.herHim]手交。
 		#ENDIF
 	</p>
 	<p>
-		Hearing you drop down in front of the other stranger, [glory2.name] lets out a frustrated [glory2.moan] and impatiently bucks [glory2.her] [glory2.hips] up against the wall. Calling out to reassure [glory2.herHim] that you're not going to neglect [glory2.her] cock, you tease your [pc.fingers+] over [glory2.her] hard shaft and prepare to get started...
+		听到你跪在了其他陌生人跟前，[glory2.name]发出一声沮丧的[glory2.moan]并焦急地将[glory2.her]的[glory2.hips]怼到墙上。为了告诉[glory2.herHim]你不会忽略[glory2.her]的阴茎，你[pc.fingers+]在[glory2.her]的阴茎上抚摸挑逗并准备开始……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_THREESOME_SUB_POST_SEX"><![CDATA[
 	<p>
-		You shuffle back from the glory holes, grinning to yourself as you hear the two strangers letting out satisfied [glory.moans]. As you get your things in order, you see a flash of movement through the holes, before the consecutive creaking of the adjoining stalls' doors announces each of the strangers' exits.
+		你从寻欢洞前移开，听到两个陌生人发出满意的[glory.moans]，你咧嘴一笑。当你整理好你的东西，你看到人影从洞中一闪而过，之后相邻隔间的门吱嘎吱嘎地连续响起，宣告这两个陌生人各自离开。
 	</p>
 	<p>
-		Just a moment later, you reach down to unlock the door of your own stall, and as you open it and [pc.step] back out into the toilets, you see that your partners have already left. With absolutely no idea as to whose cocks you just serviced, you wonder what to do next...
+		片刻之后，你伸手打开了自己隔间的门锁，当你打开门[pc.step]回到厕所时，你发现你的临时搭档们已经离开了。完全不知道自己刚刚为谁们的阴茎服务过，你思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

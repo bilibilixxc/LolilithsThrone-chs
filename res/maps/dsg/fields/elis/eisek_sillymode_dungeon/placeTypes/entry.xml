@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>	
-	<name><![CDATA[Entryway]]></name>
-	<tooltipDescription><![CDATA[This door once led to the outside world, but the sheer amount of junk blocking it has made it impossible to open.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the entryway to a strange basement]]></virginityLossDescription>	
+	<name><![CDATA[入口通道]]></name>
+	<tooltipDescription><![CDATA[这扇门曾经通往外面的世界，但是被大量的垃圾堵塞，使门无法打开。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在通往一个奇怪地下室的入口]]></virginityLossDescription>	
 	<sexBlockedFromCharacterPresent/>
 	<svgName>dungeon_door</svgName>
 	<colour>BASE_WHITE</colour>

@@ -188,16 +188,16 @@ public class ImpCitadelDialogue {
 				imp.setLevel(12-(i*2)+Util.random.nextInt(3));
 				Main.game.addNPC(imp, false);
 				if(i==0) {
-					imp.setGenericName("alpha-imp leader");
+					imp.setGenericName("阿尔法小恶魔首领");
 					imp.equipMainWeaponFromNowhere(Main.game.getItemGen().generateWeapon(WeaponType.getWeaponTypeFromId("innoxia_pipe_pipe")));
 					imp.equipOffhandWeaponFromNowhere(Main.game.getItemGen().generateWeapon(WeaponType.getWeaponTypeFromId("innoxia_crudeShield_crude_shield")));
 					
 				} else if(i==1) {
-					imp.setGenericName("alpha-imp archer");
+					imp.setGenericName("阿尔法小恶魔弓箭手");
 					imp.equipMainWeaponFromNowhere(Main.game.getItemGen().generateWeapon("innoxia_bow_shortbow"));
 					
 				} else if(i==2) {
-					imp.setGenericName("alpha-imp arcanist");
+					imp.setGenericName("阿尔法小恶魔奥术师");
 					imp.setAttribute(Attribute.MAJOR_ARCANE, 50);
 					imp.addSpell(Spell.ARCANE_AROUSAL);
 					imp.addSpell(Spell.FIREBALL);
@@ -346,9 +346,9 @@ public class ImpCitadelDialogue {
 	// Dialogues:
 	
 	private static Response getImpChallengeResponse() {
-		return new Response("Challenge",
-				"Declare that you've come to defeat all of the inhabitants of this citadel!<br/>"
-						+ "<i>You think that there are about [style.boldBad(thirty imps)] in the citadel, so be prepared to fight this many as they arrive, in waves, to the aid of their allies!</i>",
+		return new Response("挑战",
+				"宣布你是来打败这个城堡的所有居民的！<br/>"
+						+ "<i>你认为城堡里大约有[style.boldBad(三十只小恶魔)]，他们会一波接一波来帮助他们的盟友，所以准备好与他们战斗吧！</i>",
 				IMP_CHALLENGE) {
 			@Override
 			public boolean isCombatHighlight() {
@@ -364,7 +364,7 @@ public class ImpCitadelDialogue {
 		};
 	}
 	
-	public static final DialogueNode ENTRANCE = new DialogueNode("Gateway", "", false) {
+	public static final DialogueNode ENTRANCE = new DialogueNode("大门", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -392,7 +392,7 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "Head back out into the tunnels.", LEAVE_FORTRESS) {
+				return new Response("离开", "回到隧道里去。", LEAVE_FORTRESS) {
 					@Override
 					public void effects() {
 						applyExit();
@@ -440,7 +440,7 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				try {
-					return new ResponseCombat("Fight", "It's time to put these imps in their place!", (NPC) getImpGroupLeader(), getImpGroup(), null);
+					return new ResponseCombat("战斗", "是时候让这些小恶魔乖乖听话了！", (NPC) getImpGroupLeader(), getImpGroup(), null);
 				} catch(Exception ex) {
 				}
 			}
@@ -487,17 +487,17 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseCombat("More imps", "Yet more imps arrive to save their fallen comrades!", (NPC) getImpGroup().get(0), getImpGroup(), null);
+				return new ResponseCombat("更多小恶魔", "然而有更多小恶魔来支援倒下的同伴！", (NPC) getImpGroup().get(0), getImpGroup(), null);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode IMP_FIGHT_AFTER_COMBAT_VICTORY = new DialogueNode("Victory", ".", true) {
+	public static final DialogueNode IMP_FIGHT_AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "。", true) {
 
 		@Override
 		public String getDescription() {
-			return "You have defeated the imps!";
+			return "你已击败这些小恶魔！";
 		}
 
 		@Override
@@ -519,13 +519,13 @@ public class ImpCitadelDialogue {
 		public String getResponseTabTitle(int index) {
 			if(!getImpGroup().isEmpty()) {
 				if(index==0) {
-					return "Interactions";
+					return "互动";
 					
 				} else if(index==1) {
-					return "Inventories";
+					return "物品栏";
 					
 				} else if(index==2) {
-					return "Transformations";
+					return "转化";
 					
 				}
 			}
@@ -536,14 +536,14 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getImpGroup().isEmpty()) {
 				if(index==1) {
-					return new Response("Continue", "As you've enslaved all of the imps, there's nothing left to do but continue on your way through the citadel...", Main.game.getDefaultDialogue(false));
+					return new Response("继续", "因为你已经奴役了所有的小恶魔，除了穿过城堡以外你没有别的事情可以做了……", Main.game.getDefaultDialogue(false));
 				}
 				return null;
 			}
 			if(!isCompanionDialogue()) {
 				if(responseTab == 0) {
 					if (index == 1) {
-						return new Response("Scare off", "Tell the imps to get out of here while they still can...", Main.game.getDefaultDialogue(false)) {
+						return new Response("吓跑", "告诉这些小恶魔趁着他们还能走赶紧滚出去……", Main.game.getDefaultDialogue(false)) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SCARE_OFF", getImpGroup()));
@@ -552,8 +552,8 @@ public class ImpCitadelDialogue {
 						};
 						
 					} else if (index == 2) {
-						return new ResponseSex("Sex",
-								"Well, they <i>are</i> asking for it!",
+						return new ResponseSex("做爱",
+								"当然，这些家伙<i>就是</i>想要这个！",
 								true,
 								false,
 								Main.game.getPlayer().getParty(),
@@ -563,8 +563,8 @@ public class ImpCitadelDialogue {
 								IMP_AFTER_SEX_VICTORY, UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SEX", getImpGroup()));
 						
 					} else if (index == 3) {
-						return new ResponseSex("Gentle Sex",
-								"Well, they <i>are</i> asking for it!",
+						return new ResponseSex("做爱(温柔)",
+								"当然，这些家伙<i>就是</i>想要这个！",
 								true,
 								false,
 								Main.game.getPlayer().getParty(),
@@ -575,8 +575,8 @@ public class ImpCitadelDialogue {
 								UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SEX_GENTLE", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_GENTLE);
 						
 					} else if (index == 4) {
-						return new ResponseSex("Rough Sex",
-								"Well, they <i>are</i> asking for it!",
+						return new ResponseSex("做爱(粗暴)",
+								"当然，这些家伙<i>就是</i>想要这个！",
 								true,
 								false,
 								Main.game.getPlayer().getParty(),
@@ -587,8 +587,8 @@ public class ImpCitadelDialogue {
 								UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SEX_ROUGH", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_ROUGH);
 						
 					} else if (index == 5) {
-						return new ResponseSex("Submit",
-								"You're not really sure what to do now... Perhaps it would be best to let the imps choose what to do next...",
+						return new ResponseSex("顺从",
+								"你不太确定现在该做什么……也许最好让小恶魔来决定接下来做什么……",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 								null,
 								Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -610,7 +610,7 @@ public class ImpCitadelDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new ResponseEffectsOnly(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...")) {
+									UtilText.parse(imp, "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……")) {
 								@Override
 								public void effects() {
 									Main.mainController.openInventory(imp, InventoryInteraction.FULL_MANAGEMENT);
@@ -624,7 +624,7 @@ public class ImpCitadelDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new Response(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Take a very detailed look at what [npc.name] can transform [npc.herself] into..."),
+									UtilText.parse(imp, "仔细观察[npc.name]会将自己转化成什么样……"),
 									BodyChanging.BODY_CHANGING_CORE){
 								@Override
 								public void effects() {
@@ -641,7 +641,7 @@ public class ImpCitadelDialogue {
 			} else {
 				if(responseTab == 0) {
 					if (index == 1) {
-						return new Response("Scare off", "Tell the imps to get out of here while they still can...", Main.game.getDefaultDialogue(false)) {
+						return new Response("吓跑", "告诉这些小恶魔趁着他们还能走赶紧滚出去……", Main.game.getDefaultDialogue(false)) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SCARE_OFF", getImpGroup()));
@@ -650,8 +650,8 @@ public class ImpCitadelDialogue {
 						};
 						
 					} else if (index == 2) {
-						return new ResponseSex("Solo sex",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the imps."),
+						return new ResponseSex("单人做爱",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你和小恶魔做爱。"),
 								true,
 								false,
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -661,8 +661,8 @@ public class ImpCitadelDialogue {
 								IMP_AFTER_SEX_VICTORY, UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SEX", getImpGroup()));
 						
 					} else if (index == 3) {
-						return new ResponseSex("Solo sex (Gentle)",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the imps."),
+						return new ResponseSex("单人做爱(温柔)",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你和小恶魔做爱。"),
 								true,
 								false,
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -673,8 +673,8 @@ public class ImpCitadelDialogue {
 								UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SEX_GENTLE", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_GENTLE);
 						
 					} else if (index == 4) {
-						return new ResponseSex("Solo sex (Rough)",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the imps."),
+						return new ResponseSex("单人做爱(粗暴)",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你和小恶魔做爱。"),
 								true,
 								false,
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -685,8 +685,8 @@ public class ImpCitadelDialogue {
 								UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_COMBAT_VICTORY_SEX_ROUGH", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_ROUGH);
 						
 					} else if (index == 5) {
-						return new ResponseSex("Solo submission",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you submit to the imps, allowing them to have dominant sex with you."),
+						return new ResponseSex("单人屈从",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你臣服于小恶魔，让他们与你发生支配型性爱。"),
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 								null,
 								Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -705,12 +705,12 @@ public class ImpCitadelDialogue {
 						GameCharacter companion = getMainCompanion();
 
 						if(!companion.isAttractedTo(getImpGroupLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response("Group sex",
-									UtilText.parse(companion, "[npc.Name] is not interested in having sex with the imps, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+							return new Response("群交",
+									UtilText.parse(companion, "[npc.Name]半点也不想同小恶魔做爱，而且[npc.sheIs]不是你的奴隶，所以你也无法强迫[npc.herHim]……"), null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Group sex"),
-									UtilText.parse(companion, "Have dominant sex with the imps, and get [npc.name] to join in with the fun."),
+							return new ResponseSex(UtilText.parse(companion, "群交"),
+									UtilText.parse(companion, "与小恶魔进行支配型性爱，并让[npc.Name]也加入其中找找乐子。"),
 									true,
 									false,
 									Main.game.getPlayer().getParty(),
@@ -724,12 +724,12 @@ public class ImpCitadelDialogue {
 						GameCharacter companion = getMainCompanion();
 
 						if(!companion.isAttractedTo(getImpGroupLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response("Group submission",
-									UtilText.parse(companion, "[npc.Name] is not interested in having sex with the imps, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+							return new Response("群体屈从",
+									UtilText.parse(companion, "[npc.Name]半点也不想同小恶魔做爱，而且[npc.sheIs]不是你的奴隶，所以你也无法强迫[npc.herHim]……"), null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Group submission"),
-									UtilText.parse(companion, "Get [npc.name] to join you in submitting to the imps, allowing them to have dominant sex with the two of you."),
+							return new ResponseSex(UtilText.parse(companion, "群体屈从"),
+									UtilText.parse(companion, "让[npc.name]和你一起臣服于小恶魔，让他们和你俩发生支配型性爱。"),
 									true,
 									false,
 									getImpGroup(),
@@ -743,12 +743,12 @@ public class ImpCitadelDialogue {
 						GameCharacter companion = getMainCompanion();
 
 						if(!companion.isAttractedTo(getImpGroupLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response(UtilText.parse(companion, "Give to [npc.name]"),
-									UtilText.parse(companion, "[npc.Name] is not interested in having sex with the imps, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+							return new Response(UtilText.parse(companion, "给[npc.name]"),
+									UtilText.parse(companion, "[npc.Name]半点也不想同小恶魔做爱，而且[npc.sheIs]不是你的奴隶，所以你也无法强迫[npc.herHim]……"), null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Give to [npc.name]"),
-									UtilText.parse(companion, "Tell [npc.name] that [npc.she] can have some fun with the imps while you watch."),
+							return new ResponseSex(UtilText.parse(companion, "交给[npc.name]"),
+									UtilText.parse(companion, "告诉[npc.Name]让[npc.she]和小恶魔玩玩，你在旁边看着。"),
 									false,
 									false,
 									Util.newArrayListOfValues(getMainCompanion()),
@@ -762,13 +762,13 @@ public class ImpCitadelDialogue {
 						GameCharacter companion = getMainCompanion();
 						
 						if(!companion.isAttractedTo(getImpGroupLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-									UtilText.parse(companion, "You can tell that [npc.name] isn't at all interested in having sex with the imps, and you can't force [npc.herHim] to do so..."),
+							return new Response(UtilText.parse(companion, "献上[npc.name]"),
+									UtilText.parse(companion, "你看出[npc.name]一点也不想跟小恶魔做爱，你也没法逼[npc.herHim]去做……"),
 									null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-									UtilText.parse(companion, "Hand [npc.name] over to the imps, and watch as they have sex with [npc.herHim]."),
+							return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+									UtilText.parse(companion, "将[npc.Name]交给小恶魔，然后看着他们与[npc.herHim]发生性关系。"),
 									true,
 									false,
 									getImpGroup(),
@@ -794,7 +794,7 @@ public class ImpCitadelDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new ResponseEffectsOnly(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...")) {
+									UtilText.parse(imp, "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……")) {
 								@Override
 								public void effects() {
 									Main.mainController.openInventory(imp, InventoryInteraction.FULL_MANAGEMENT);
@@ -808,7 +808,7 @@ public class ImpCitadelDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new Response(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Take a very detailed look at what [npc.name] can transform [npc.herself] into..."),
+									UtilText.parse(imp, "仔细观察[npc.name]会将自己转化成什么样……"),
 									BodyChanging.BODY_CHANGING_CORE){
 								@Override
 								public void effects() {
@@ -825,11 +825,11 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode IMP_FIGHT_AFTER_COMBAT_DEFEAT = new DialogueNode("Defeat", ".", true) {
+	public static final DialogueNode IMP_FIGHT_AFTER_COMBAT_DEFEAT = new DialogueNode("落败", "。", true) {
 		
 		@Override
 		public String getDescription() {
-			return "You have been defeated by the imps!";
+			return "你已被小恶魔们击败！";
 		}
 
 		@Override
@@ -852,7 +852,7 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.isNonConEnabled()) {
 				if(index==1) {
-					return new Response("Recover", "Take a moment to catch your breath, and then continue on your way.", Main.game.getDefaultDialogue(false)) {
+					return new Response("恢复", "花点时间喘口气然后继续前进吧。", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							banishImps();
@@ -911,8 +911,8 @@ public class ImpCitadelDialogue {
 				if(spectators.contains(Main.game.getPlayer())) {
 					if(index==1) {
 						return new ResponseSex(
-								"Watch",
-								UtilText.parse(getArcanist(), getMainCompanion(), "Accept the price of your defeat, and watch as [npc2.name] is forced to perform oral on [npc.name]."),
+								"旁观",
+								UtilText.parse(getArcanist(), getMainCompanion(), "接受你失败的代价，然后看着[npc2.name]被迫给[npc.Name]口交。"),
 								false,
 								false,
 								manager,
@@ -925,10 +925,10 @@ public class ImpCitadelDialogue {
 				} else {
 					if(index==1) {
 						return new ResponseSex(
-								"Sex",
+								"性爱",
 								isCompanionDialogue() && !spectators.contains(getMainCompanion())
-									?UtilText.parse(getArcanist(), getMainCompanion(), "Accept the price of your defeat, and alongside [com.name], prepare to perform oral on [npc.name].")
-									:UtilText.parse(getArcanist(), "Accept the price of your defeat, and prepare to perform oral on [npc.name]."),
+									?UtilText.parse(getArcanist(), getMainCompanion(), "接受你失败的代价：站到[com.name]旁边准备给[npc.Name]口交。")
+									:UtilText.parse(getArcanist(), "接受你失败的代价：准备给[npc.Name]口交。"),
 								false,
 								false,
 								manager,
@@ -939,10 +939,10 @@ public class ImpCitadelDialogue {
 						
 					} else if(index==2) {
 						return new ResponseSex(
-								"Eager sex",
+								"做爱(渴求)",
 								isCompanionDialogue() && !spectators.contains(getMainCompanion())
-									?UtilText.parse(getArcanist(), getMainCompanion(), "Happily accept what's being demanded of you, and alongside [com.name], eagerly prepare to perform oral on [npc.name].")
-									:UtilText.parse(getArcanist(), "Happily accept what's being demanded of you, and eagerly prepare to perform oral on [npc.name]."),
+									?UtilText.parse(getArcanist(), getMainCompanion(), "开心的接受别人的要求，准备和[com.name]一起给[npc.Name]口交。")
+									:UtilText.parse(getArcanist(), "愉快地接受别人对你的要求，然后心急地准备给[npc.Name]口交。"),
 								false,
 								false,
 								manager,
@@ -953,8 +953,8 @@ public class ImpCitadelDialogue {
 
 					} else if (index == 3 && Main.game.isNonConEnabled()) {
 						return new ResponseSex(
-								"Resist sex",
-								UtilText.parse(getArcanist(), "Struggle against [npc.name] and try to push [npc.herHim] away from you."),
+								"抵抗做爱",
+								UtilText.parse(getArcanist(), "你与[npc.Name]搏斗并尝试把[npc.herHim]推离你身边。"),
 								false,
 								false,
 								manager,
@@ -968,8 +968,8 @@ public class ImpCitadelDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new ResponseSex("Sex",
-							"Allow the imps to move you into position...",
+					return new ResponseSex("做爱",
+							"让小恶魔把你移到合适的位置……",
 							false,
 							false,
 							getImpGroup(),
@@ -980,8 +980,8 @@ public class ImpCitadelDialogue {
 							UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "IMP_AFTER_COMBAT_DEFEAT_SEX", getAllCharacters()));
 					
 				} else if (index == 2) {
-					return new ResponseSex("Eager sex",
-							"Eagerly allow yourself to be moved into position by the gang of imps...",
+					return new ResponseSex("做爱(渴求)",
+							"在这群小恶魔跟你摆好姿势的时候，表现得十分饥渴……",
 							false,
 							false,
 							getImpGroup(),
@@ -993,8 +993,8 @@ public class ImpCitadelDialogue {
 							ResponseTag.START_PACE_PLAYER_SUB_EAGER);
 					
 				} else if (index == 3 && Main.game.isNonConEnabled()) {
-					return new ResponseSex("Resist sex",
-							"Try to resist as the gang of imps move you into position...",
+					return new ResponseSex("抵抗做爱",
+							"在这群小恶魔跟你摆好姿势的时候，奋力抵抗……",
 							false,
 							false,
 							getImpGroup(),
@@ -1010,11 +1010,11 @@ public class ImpCitadelDialogue {
 		}
 	};
 	
-	public static final DialogueNode IMP_AFTER_SEX_VICTORY = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode IMP_AFTER_SEX_VICTORY = new DialogueNode("退开", "", true) {
 		
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave the imps to recover and disperse.";
+			return "你已经爽过了，于是退到一旁，让这群小恶魔恢复过来后，自行散去了。";
 		}
 
 		@Override
@@ -1034,7 +1034,7 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(responseTab==0) {
 				if (index == 1) {
-					return new Response("Scare off", "Scare the imps off and continue on your way.", Main.game.getDefaultDialogue(false)) {
+					return new Response("吓跑", "把小恶魔吓跑然后继续做你的事。", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							banishImps();
@@ -1050,7 +1050,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 	
-	public static final DialogueNode IMP_AFTER_SEX_DEFEAT = new DialogueNode("Collapse", "", true) {
+	public static final DialogueNode IMP_AFTER_SEX_DEFEAT = new DialogueNode("瘫软", "", true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -1059,7 +1059,7 @@ public class ImpCitadelDialogue {
 		
 		@Override
 		public String getDescription(){
-			return "You're completely worn out from sex with these imps...";
+			return "你和这些小恶魔做爱都累坏了……";
 		}
 
 		@Override
@@ -1085,7 +1085,7 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Recover", "Take a moment to catch your breath, and then continue on your way.", Main.game.getDefaultDialogue(false)) {
+				return new Response("恢复", "花点时间喘口气然后继续前进吧。", Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						banishImps();
@@ -1099,7 +1099,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode COURTYARD = new DialogueNode("Courtyard", ".", false) {
+	public static final DialogueNode COURTYARD = new DialogueNode("庭院", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1135,7 +1135,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode WELL = new DialogueNode("Well", ".", false) {
+	public static final DialogueNode WELL = new DialogueNode("井", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1172,7 +1172,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode LABORATORY = new DialogueNode("Laboratory", ".", false) {
+	public static final DialogueNode LABORATORY = new DialogueNode("实验室", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1207,10 +1207,10 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!isDefeated() && !isImpsDefeated()) {
 				if(index==1) {
-					return new Response("Overseer",
+					return new Response("监督",
 							getArcanist().isPlayerKnowsName()
-								?"Approach the youko overseer."
-								:"Approach the fox-girl overseer.",
+								?"靠近妖狐监工。"
+								:"靠近狐女监工。",
 							LABORATORY_ARCANIST) {
 						@Override
 						public void effects() {
@@ -1221,9 +1221,9 @@ public class ImpCitadelDialogue {
 			} else if(isDefeated()) {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.impCitadelLaboratorySearched)) {
-						return new Response("Search", "You've already searched the laboratory. There's nothing left to find!", null);
+						return new Response("搜寻", "你已经搜过实验室了。里面没东西了！", null);
 					}
-					return new Response("Search", "Search through the rubble to see if you can find anything of value.", LABORATORY_SEARCH) {
+					return new Response("搜寻", "搜寻废墟，搜刮有价值的东西。", LABORATORY_SEARCH) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.impCitadelLaboratorySearched, true);
@@ -1234,7 +1234,7 @@ public class ImpCitadelDialogue {
 							AbstractItem potion = EnchantingUtils.craftItem(
 								Main.game.getItemGen().generateItem(effects.getItemType()),
 								effects.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-							potion.setName("Foxy Fuck");
+							potion.setName("狐媚子操剂");
 							Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addItem(potion, 1, false, true));
 							
 							if(isCompanionDialogue()) {
@@ -1242,7 +1242,7 @@ public class ImpCitadelDialogue {
 								potion = EnchantingUtils.craftItem(
 									Main.game.getItemGen().generateItem(effects.getItemType()),
 									effects.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-								potion.setName("Foxy Fuck");
+								potion.setName("狐媚子操剂");
 								Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addItem(potion, 1, false, true));
 							}
 						}
@@ -1271,7 +1271,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode LABORATORY_ARCANIST = new DialogueNode("", ".", true, true) {
+	public static final DialogueNode LABORATORY_ARCANIST = new DialogueNode("", "。", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1298,7 +1298,7 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Decline", UtilText.parse(getArcanist(), "Say no to [npc.name], and leave [npc.herHim] to [npc.her] work."), LABORATORY_ARCANIST_EXIT) {
+				return new Response("拒绝", UtilText.parse(getArcanist(), "对[npc.name]说不， 让[npc.herHim]回去工作。"), LABORATORY_ARCANIST_EXIT) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.impCitadelArcanistEncountered, true);
@@ -1311,12 +1311,12 @@ public class ImpCitadelDialogue {
 			} else if(index==2) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.impCitadelArcanistAcceptedTF) || Main.game.getPlayer().getRace()==Race.FOX_MORPH) {
 					if(!Main.game.getPlayer().isFeminine()) {
-						return new Response(isCompanionDialogue()?"Oral (solo)":"Oral",
-								UtilText.parse(getArcanist(), "As [npc.sheIsFull] gynephilic, [npc.name] is not interested in having you perform oral on her."),
+						return new Response(isCompanionDialogue()?"口交(单人)":"口交",
+								UtilText.parse(getArcanist(), "因为[npc.sheIsFull]是女性恋，[npc.name]对你给她口交不感兴趣。"),
 								null);
 					} else {
-						return new ResponseSex(isCompanionDialogue()?"Oral (solo)":"Oral",
-								UtilText.parse(getArcanist(), "Agree to do as [npc.name] says, and get down on your knees to perform oral on her."),
+						return new ResponseSex(isCompanionDialogue()?"口交(单人)":"口交",
+								UtilText.parse(getArcanist(), "同意按[npc.Name]说的做，然后跪下来给她口交。"),
 								true,
 								false,
 								new SMStanding(
@@ -1333,9 +1333,9 @@ public class ImpCitadelDialogue {
 								UtilText.parseFromXMLFile("places/submission/impCitadel"+getDialogueEncounterId(), "ARCANIST_SOLO_START_SEX", getAllCharacters()));
 					}
 				}
-				return new Response(isCompanionDialogue()?"Accept (solo)":"Accept",
-						UtilText.parse(getArcanist(), "Agree to drink [npc.namePos] potion.<br/>"
-								+ "This will [style.italicsTfGeneric(transform you into a fox-girl)], and is likely to apply some additional, non-racial, transformative effects!"),
+				return new Response(isCompanionDialogue()?"接受(单人)":"接受",
+						UtilText.parse(getArcanist(), "同意喝[npc.namePos]的药水。<br/>"
+								+ "这将[style.italicsTfGeneric(把你转化为狐女)]，且可能会带来额外的非种族转化效果！"),
 						LABORATORY_ARCANIST_SOLO_TF) {
 					@Override
 					public void effects() {
@@ -1362,21 +1362,21 @@ public class ImpCitadelDialogue {
 				if((Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.impCitadelArcanistAcceptedTF) || getMainCompanion().getRace()==Race.FOX_MORPH) && Main.getProperties().hasValue(PropertyValue.voluntaryNTR)) {
 					if(!getMainCompanion().isAttractedTo(getArcanist()) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 						return new Response(
-								UtilText.parse(getMainCompanion(), "Oral ([npc.name])"),
+								UtilText.parse(getMainCompanion(), "口交([npc.name])"),
 								UtilText.parse(getArcanist(), getMainCompanion(),
-									"As [npc2.name] is not attracted to [npc.name], [npc2.she] will refuse to have sex with [npc.herHim]. You can't force [npc2.herHim] to do it, either..."),
+									"[npc2.name]没被[npc2.name]诱惑，[npc2.she]将拒绝与[npc.herHim]发生性关系。而你也不能强迫[npc2.herHim]这样做……"),
 								null);
 						
 					} else if(!getMainCompanion().isFeminine()) {
 						return new Response(
-								UtilText.parse(getMainCompanion(), "Oral ([npc.name])"),
-								UtilText.parse(getArcanist(), getMainCompanion(), "As [npc.sheIsFull] gynephilic, [npc.name] is not interested in having [npc2.name] perform oral on her."),
+								UtilText.parse(getMainCompanion(), "口交([npc.name])"),
+								UtilText.parse(getArcanist(), getMainCompanion(), "因为[npc.sheIsFull]是女性恋，[npc.name]对[npc2.name]给她口交不感兴趣。"),
 								null);
 						
 					} else {
 						return new ResponseSex(
-								UtilText.parse(getMainCompanion(), "Oral ([npc.name])"),
-								UtilText.parse(getArcanist(), getMainCompanion(), "Tell [npc2.name] to get down on [npc2.her] knees and perform oral on [npc.name] while you watch."),
+								UtilText.parse(getMainCompanion(), "口交([npc.name])"),
+								UtilText.parse(getArcanist(), getMainCompanion(), "让[npc2.name]跪下，你旁观[npc2.her]给[npc.Name]口交。"),
 								true,
 								false,
 								new SMStanding(
@@ -1395,30 +1395,30 @@ public class ImpCitadelDialogue {
 				}
 				if(!getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isPositive() && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					return new Response(
-							UtilText.parse(getMainCompanion(), "Accept ([npc.name])"),
+							UtilText.parse(getMainCompanion(), "接受([npc.name])"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] doesn't like being transformed, [npc2.she] will refuse to drink [npc.namePos] potion. You can't force [npc2.herHim] to do it, either..."),
+								"因为[npc2.name]不愿意被转化，[npc2.she]将拒绝喝下[npc.namePos]药水。你也不能强迫[npc2.herHim]喝下它……"),
 							null);
 				}
 				if(getMainCompanion().getRace()==Race.FOX_MORPH) {
 					return new Response(UtilText.parse(
-							getMainCompanion(), "Accept ([npc.name])"),
+							getMainCompanion(), "接受([npc.name])"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] is already a fox-morph, [npc.name] is unwilling to use a potion on [npc2.herHim]..."),
+								"由于[npc2.name]已经是狐化形了，所以[npc.Name]不愿意对[npc2.herHim]使用药水……"),
 							null);
 				}
 				if(getMainCompanion().getRace()==Race.DEMON || (getMainCompanion().isElemental())) {
 					return new Response(UtilText.parse(
-							getMainCompanion(), "Accept ([npc.name])"),
+							getMainCompanion(), "接受([npc.name])"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] is a demon, and therefore unable to be transformed, [npc.name] is unwilling to waste a potion on [npc2.herHim]..."),
+								"由于[npc2.name]已经是恶魔了，因此无法转化，[npc.Name]不愿意在[npc2.herHim]身上浪费药水……"),
 							null);
 				}
 				return new Response(
-						UtilText.parse(getMainCompanion(), "Accept ([npc.name])"),
+						UtilText.parse(getMainCompanion(), "接受([npc.name])"),
 						UtilText.parse(getArcanist(), getMainCompanion(),
-								"Tell [npc2.name] to drink [npc.namePos] potion.<br/>"
-								+ "This will [style.italicsTfGeneric(transform [npc2.name] into a fox-girl)], and is likely to apply some additional, non-racial, transformative effects!"),
+								"让[npc2.name]喝下[npc.namePos]的药水。<br/>"
+								+ "这将[style.italicsTfGeneric(把[npc2.name]转化为狐女)]，且可能会带来额外的非种族转化效果！"),
 						LABORATORY_ARCANIST_COMPANION_TF) {
 					@Override
 					public void effects() {
@@ -1445,27 +1445,27 @@ public class ImpCitadelDialogue {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.impCitadelArcanistAcceptedTF) || (Main.game.getPlayer().getRace()==Race.FOX_MORPH && getMainCompanion().getRace()==Race.FOX_MORPH)) {
 					if(!getMainCompanion().isAttractedTo(getArcanist()) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 						return new Response(
-								"Oral (both)",
+								"口交(双人)",
 								UtilText.parse(getArcanist(), getMainCompanion(),
-									"As [npc2.name] is not attracted to [npc.name], [npc2.she] will refuse to have sex with [npc.herHim]. You can't force [npc2.herHim] to do it, either..."),
+									"[npc2.name]没被[npc2.name]诱惑，[npc2.she]将拒绝与[npc.herHim]发生性关系。而你也不能强迫[npc2.herHim]这样做……"),
 								null);
 						
 					} else if(!Main.game.getPlayer().isFeminine()) {
 						return new Response(
-								"Oral (both)",
-								UtilText.parse(getArcanist(), "As [npc.sheIsFull] gynephilic, [npc.name] is not interested in having you perform oral on her."),
+								"口交(双人)",
+								UtilText.parse(getArcanist(), "因为[npc.sheIsFull]是女性恋，[npc.name]对你给她口交不感兴趣。"),
 								null);
 						
 					} else if(!getMainCompanion().isFeminine()) {
 						return new Response(
-								"Oral (both)",
-								UtilText.parse(getArcanist(), getMainCompanion(), "As [npc.sheIsFull] gynephilic, [npc.name] is not interested in having [npc2.name] perform oral on her."),
+								"口交(双人)",
+								UtilText.parse(getArcanist(), getMainCompanion(), "因为[npc.sheIsFull]是女性恋，[npc.name]对[npc2.name]给她口交不感兴趣。"),
 								null);
 						
 					} else {
 						return new ResponseSex(
-								UtilText.parse(getMainCompanion(), "Oral (both)"),
-								UtilText.parse(getArcanist(), getMainCompanion(), "Tell [npc2.name] to get down on [npc2.her] knees and join you in performing oral on [npc.name]."),
+								UtilText.parse(getMainCompanion(), "口交(双人)"),
+								UtilText.parse(getArcanist(), getMainCompanion(), "你让[npc2.name]跪下来，一起给[npc.name]口交。"),
 								true,
 								false,
 								new SMStanding(
@@ -1486,36 +1486,36 @@ public class ImpCitadelDialogue {
 				}
 				if(getMainCompanion().getRace()==Race.FOX_MORPH) {
 					return new Response(UtilText.parse(
-							getMainCompanion(), "Accept (both)"),
+							getMainCompanion(), "接受(双人)"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] is already a fox-morph, [npc.name] is unwilling to use a potion on [npc2.herHim]..."),
+								"由于[npc2.name]已经是狐化形了，所以[npc.Name]不愿意对[npc2.herHim]使用药水……"),
 							null);
 				}
 				if(getMainCompanion().getRace()==Race.DEMON || (getMainCompanion().isElemental())) {
 					return new Response(UtilText.parse(
-							getMainCompanion(), "Accept (both)"),
+							getMainCompanion(), "接受(双人)"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] is a demon, and therefore unable to be transformed, [npc.name] is unwilling to waste a potion on [npc2.herHim]..."),
+								"[npc2.name]已经是恶魔了，因此无法转化，[npc.Name]也不愿意在[npc2.herHim]身上浪费药水……"),
 							null);
 				}
 				if(Main.game.getPlayer().getRace()==Race.FOX_MORPH) {
 					return new Response(UtilText.parse(
-							getMainCompanion(), "Accept (both)"),
+							getMainCompanion(), "接受(双人)"),
 							UtilText.parse(getArcanist(),
-								"As you are already a fox-morph, [npc.name] is unwilling to use a potion on you..."),
+								"因为你已经是狐化形了，[npc.Name]不愿意对你使用药剂……"),
 							null);
 				}
 				if(!getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isPositive() && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					return new Response(UtilText.parse(
-							getMainCompanion(), "Accept (both)"),
+							getMainCompanion(), "接受(双人)"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] doesn't like being transformed, [npc2.she] will refuse to drink [npc.namePos] potion. You can't force [npc2.herHim] to do it, either..."),
+								"因为[npc2.name]不愿意被转化，[npc2.she]将拒绝喝下[npc.namePos]的药水。你也不能强迫[npc2.herHim]喝下它……"),
 							null);
 				}
-				return new Response("Accept (both)", 
+				return new Response("接受(双飞)", 
 						UtilText.parse(getArcanist(), getMainCompanion(),
-								"Agree to share [npc.namePos] potion between you and [npc2.name].<br/>"
-								+ "This will [style.italicsTfGeneric(transform both you and [npc2.name] into fox-girls)], and is likely to apply some additional, non-racial, transformative effects!"),
+								"同意与[npc2.name]共享[npc.namePos]的药水。<br/>"
+								+ "这将[style.italicsTfGeneric(把你与[npc2.name]都转化为狐女)]，且可能会带来额外的非种族转化效果！"),
 						LABORATORY_ARCANIST_BOTH_TF) {
 					@Override
 					public void effects() {
@@ -1546,9 +1546,9 @@ public class ImpCitadelDialogue {
 				
 			// Action 5: Combat
 			} else if(index==5) {
-				return new Response("Attack",
-						"There's no way you're going to let this sneaky fox get away with insulting you in this manner!<br/>"
-							+ "<i>You think that there are about [style.boldBad(thirty imps)] in the citadel, so be prepared to fight this many as they arrive, in waves, to the aid of their allies!</i>",
+				return new Response("攻击",
+						"你不能让这个狡猾的狐狸以这种方式侮辱你！<br/>"
+							+ "<i>你认为城堡里大约有[style.boldBad(三十只小恶魔)]，他们会一波接一波来帮助他们的盟友，所以准备好与他们战斗吧！</i>",
 						IMP_CHALLENGE) {
 					@Override
 					public boolean isCombatHighlight() {
@@ -1568,7 +1568,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode LABORATORY_ARCANIST_EXIT = new DialogueNode("", ".", false) {
+	public static final DialogueNode LABORATORY_ARCANIST_EXIT = new DialogueNode("", "。", false) {
 
 		@Override
 		public String getContent() {
@@ -1581,7 +1581,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode LABORATORY_ARCANIST_SOLO_TF = new DialogueNode("", ".", true, true) {
+	public static final DialogueNode LABORATORY_ARCANIST_SOLO_TF = new DialogueNode("", "。", true, true) {
 
 		@Override
 		public String getContent() {
@@ -1591,9 +1591,9 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Decline",
+				return new Response("拒绝",
 						UtilText.parse(getArcanist(),
-								"Tell [npc.name] that you have no interest in having sex with [npc.herHim]."),
+								"告诉[npc.Name]你没有兴趣与[npc.herHim]发生关系。"),
 						LABORATORY_ARCANIST_EXIT) {
 					@Override
 					public void effects() {
@@ -1602,8 +1602,8 @@ public class ImpCitadelDialogue {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Oral",
-						UtilText.parse(getArcanist(), "Agree to do as [npc.name] says, and get down on your knees to perform oral on [npc.herHim]."),
+				return new ResponseSex("口交",
+						UtilText.parse(getArcanist(), "你同意按[npc.Name]说的做，跪下来给[npc.herHim]口交。"),
 						true,
 						false,
 						new SMStanding(
@@ -1624,7 +1624,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode LABORATORY_ARCANIST_COMPANION_TF = new DialogueNode("", ".", true, true) {
+	public static final DialogueNode LABORATORY_ARCANIST_COMPANION_TF = new DialogueNode("", "。", true, true) {
 
 		@Override
 		public String getContent() {
@@ -1634,9 +1634,9 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Decline",
+				return new Response("拒绝",
 						UtilText.parse(getArcanist(), getMainCompanion(),
-								"Tell [npc.name] that you have no interest in getting [npc2.name] to perform oral on [npc.herHim]."),
+								"告诉[npc.Name]你没有兴趣让[npc2.name]给[npc.herHim]口交。"),
 						LABORATORY_ARCANIST_EXIT) {
 					@Override
 					public void effects() {
@@ -1647,13 +1647,13 @@ public class ImpCitadelDialogue {
 			} else if(index==2 && Main.getProperties().hasValue(PropertyValue.voluntaryNTR)) {
 				if(!getMainCompanion().isAttractedTo(getArcanist()) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					return new Response(
-							UtilText.parse(getMainCompanion(), "Agree"),
+							UtilText.parse(getMainCompanion(), "同意"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] is not attracted to [npc.name], [npc2.she] will refuse to have sex with [npc.herHim]. You can't force [npc2.herHim] to do it, either..."),
+								"[npc2.name]没被[npc2.name]诱惑，[npc2.she]将拒绝与[npc.herHim]发生性关系。而你也不能强迫[npc2.herHim]这样做……"),
 							null);
 				} 
-				return new ResponseSex("Agree",
-						UtilText.parse(getArcanist(), getMainCompanion(), "Agree to do as [npc.name] says, and tell [npc2.name] to get down on [npc2.her] knees to perform oral on [npc.herHim] while you watch."),
+				return new ResponseSex("同意",
+						UtilText.parse(getArcanist(), getMainCompanion(), "你同意按[npc.name]说的做，让[npc2.name]在你看着的情况下跪下为[npc.herHim]口交。"),
 						true,
 						false,
 						new SMStanding(
@@ -1674,7 +1674,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode LABORATORY_ARCANIST_BOTH_TF = new DialogueNode("", ".", true, true) {
+	public static final DialogueNode LABORATORY_ARCANIST_BOTH_TF = new DialogueNode("", "。", true, true) {
 
 		@Override
 		public String getContent() {
@@ -1684,9 +1684,9 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Decline",
+				return new Response("拒绝",
 						UtilText.parse(getArcanist(),
-								"Tell [npc.name] that you have no interest in having sex with [npc.herHim]."),
+								"告诉[npc.Name]你没有兴趣与[npc.herHim]发生关系。"),
 						LABORATORY_ARCANIST_EXIT) {
 					@Override
 					public void effects() {
@@ -1697,13 +1697,13 @@ public class ImpCitadelDialogue {
 			} else if(index==2) {
 				if(!getMainCompanion().isAttractedTo(getArcanist()) && getMainCompanion().isAbleToRefuseSexAsCompanion()) {
 					return new Response(
-							UtilText.parse(getMainCompanion(), "Agree"),
+							UtilText.parse(getMainCompanion(), "同意"),
 							UtilText.parse(getArcanist(), getMainCompanion(),
-								"As [npc2.name] is not attracted to [npc.name], [npc2.she] will refuse to have sex with [npc.herHim]. You can't force [npc2.herHim] to do it, either..."),
+								"[npc2.name]没被[npc2.name]诱惑，[npc2.she]将拒绝与[npc.herHim]发生性关系。而你也不能强迫[npc2.herHim]这样做……"),
 							null);
 				} 
-				return new ResponseSex("Agree",
-						UtilText.parse(getArcanist(), getMainCompanion(), "Agree to do as [npc.name] says, and tell [npc2.name] to join you in getting down on your knees to perform oral on [npc.herHim]."),
+				return new ResponseSex("同意",
+						UtilText.parse(getArcanist(), getMainCompanion(), "同意按[npc.name]说的做，你让[npc2.name]和你一起跪下给[npc.name]口交。"),
 						true,
 						false,
 						new SMStanding(
@@ -1726,11 +1726,11 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode LABORATORY_ARCANIST_POST_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode LABORATORY_ARCANIST_POST_SEX = new DialogueNode("结束", "", true) {
 		
 		@Override
 		public String getDescription(){
-			return "[citadelArcanist.Name] has finished with you, and pushes you away as she steps back.";
+			return "[citadelArcanist.Name]跟你做完之后，她推开你走了。";
 		}
 
 		@Override
@@ -1749,13 +1749,13 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode TREASURY = new DialogueNode("Treasury", ".", false) {
+	public static final DialogueNode TREASURY = new DialogueNode("宝藏", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1779,9 +1779,9 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.impCitadelTreasurySearched)) {
-					return new Response("Search", "You've already searched the treasury. There's nothing left to find!", null);
+					return new Response("搜寻", "你已经搜过金库了。里面没东西了！", null);
 				}
-				return new Response("Search", "Search through the rubble to see if you can find anything of value.", TREASURY_SEARCH) {
+				return new Response("搜寻", "搜寻废墟，搜刮有价值的东西。", TREASURY_SEARCH) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.impCitadelTreasurySearched, true);
@@ -1828,7 +1828,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode KEEP = new DialogueNode("Keep", ".", true) {
+	public static final DialogueNode KEEP = new DialogueNode("主楼", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1857,7 +1857,7 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!isDefeated()) {
 				if(index==1) {
-					return new Response("Enter", "Push open the doors of the keep and step inside.", KEEP_ENTRY) {
+					return new Response("进入", "推开主楼的门走进去。", KEEP_ENTRY) {
 						@Override
 						public void effects() {
 							getBoss().setPlayerKnowsName(true);
@@ -1865,7 +1865,7 @@ public class ImpCitadelDialogue {
 					};
 					
 				} else if(index==2) {
-					return new Response("Leave", "Step back from the doors of the keep.", COURTYARD) {
+					return new Response("离开", "从门关处退开。", COURTYARD) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().moveToAdjacentMatchingCellType(false, PlaceType.FORTRESS_DEMON_COURTYARD);
@@ -1878,7 +1878,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 	
-	public static final DialogueNode KEEP_ENTRY = new DialogueNode("Keep", ".", true) {
+	public static final DialogueNode KEEP_ENTRY = new DialogueNode("主楼", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1906,14 +1906,14 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getPlayer().hasTraitActivated(Perk.CHUUNI)) {
-					return new Response("Challenge", UtilText.parse(getBoss(), "Challenge [npc.name] to a duel between the two greatest arcane-users in the world!"), KEEP_CHALLENGE);
+					return new Response("挑战", UtilText.parse(getBoss(), "和[npc.name]展开世界上两个最伟大的奥术术士之间的决斗！"), KEEP_CHALLENGE);
 					
 				} else {
-					return new Response("Challenge", "You can't bring yourself to engage in the same level of dialogue as this embarrassing succubus. Perhaps if you were a chuuni as well, things would be different...", null);
+					return new Response("挑战", "你不能让自己与这个魅魔进行这样尴尬的对话，但如果你也是中二病的话事情可能会不一样……", null);
 				}
 				
 			} else if(index==2) {
-				return new ResponseCombat("Fight", UtilText.parse(getBoss(), "Defend yourself against the three demons!"), getDemonLeader(), getBossGroup(false), null);
+				return new ResponseCombat("战斗", UtilText.parse(getBoss(), "保护自己，和三个恶魔战斗！"), getDemonLeader(), getBossGroup(false), null);
 				
 			}
 				
@@ -1921,11 +1921,11 @@ public class ImpCitadelDialogue {
 		}
 	};
 	
-	public static final DialogueNode KEEP_DEMONS_DEFEATED = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode KEEP_DEMONS_DEFEATED = new DialogueNode("胜利", "", true) {
 
 		@Override
 		public String getDescription() {
-			return "You have defeated the demons!";
+			return "你已击败这些恶魔！";
 		}
 		
 		@Override
@@ -1944,12 +1944,12 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight", UtilText.parse(getBoss(), "Now that [npc.her] demon companions have been defeated, it's time fight [npc.name]!"), (NPC) getBoss(), Util.newArrayListOfValues(getBoss()), null);
+				return new ResponseCombat("战斗", UtilText.parse(getBoss(), "现在[npc.Name]的恶魔同伴被击败了，是时候和[npc.her]战斗了！"), (NPC) getBoss(), Util.newArrayListOfValues(getBoss()), null);
 
 			} else if(index==2 && Main.game.getPlayer().hasItemType(ItemType.LYSSIETHS_RING)) {
-				return new Response("Use ring",
-						UtilText.parse(getBoss(), "Show [npc.name] that you have [npc.her] mother's ring, and trick her into taking it from you and putting it on!<br/>"
-								+ "[style.italicsExcellent(You can tell that [npc.she] will instantly put it on, thus enslaving [npc.herHim] without having to fight!)]"),
+				return new Response("使用指环",
+						UtilText.parse(getBoss(), "向[npc.name]展示你有[npc.her]母亲的戒指， 然后骗她把戒指从你手上拿走并戴上！<br/>"
+								+ "[style.italicsExcellent(你可以告诉[npc.she]，她将立刻戴上它，这不会导致与[npc.herHim]的战斗！)]"),
 						KEEP_CHALLENGE_RING_TRICK) {
 					@Override
 					public void effects() {
@@ -1984,12 +1984,12 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Duel", UtilText.parse(getBoss(), "Accept [npc.namePos] offer, and fight [npc.herHim] one-on-one!"), null, (NPC) getBoss(), Util.newArrayListOfValues(getBoss()), null);
+				return new ResponseCombat("决斗", UtilText.parse(getBoss(), "接受[npc.namePos]的提议，与[npc.herHim]一对一决斗！"), null, (NPC) getBoss(), Util.newArrayListOfValues(getBoss()), null);
 
 			} else if(index==2 && Main.game.getPlayer().hasItemType(ItemType.LYSSIETHS_RING)) {
-				return new Response("Use ring",
-						UtilText.parse(getBoss(), "Show [npc.name] that you have [npc.her] mother's ring, and trick her into taking it from you and putting it on!<br/>"
-								+ "[style.italicsExcellent(You can tell that [npc.she] will instantly put it on, thus enslaving [npc.herHim] without having to fight!)]"),
+				return new Response("使用指环",
+						UtilText.parse(getBoss(), "向[npc.name]展示你有[npc.her]母亲的戒指， 然后骗她把戒指从你手上拿走并戴上！<br/>"
+								+ "[style.italicsExcellent(你可以告诉[npc.she]，她将立刻戴上它，这不会导致与[npc.herHim]的战斗！)]"),
 						KEEP_CHALLENGE_RING_TRICK) {
 					@Override
 					public void effects() {
@@ -2006,7 +2006,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 
-	public static final DialogueNode KEEP_CHALLENGE_RING_TRICK = new DialogueNode("Keep", ".", true, true) {
+	public static final DialogueNode KEEP_CHALLENGE_RING_TRICK = new DialogueNode("主楼", "。", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -2021,8 +2021,8 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Escape",
-						"The citadel is collapsing! Rush out to the safety of Submission before you're crushed!",
+				return new Response("逃跑",
+						"城堡正在崩塌！在被碾碎之前赶紧逃到屈城区安全的地方！",
 						KEEP_COLLAPSE_ESCAPE) {
 					@Override
 					public void effects() {
@@ -2055,8 +2055,8 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Explain",
-						UtilText.parse(getBoss(), "Explain to Lyssieth's guards what happened."),
+				return new Response("解释",
+						UtilText.parse(getBoss(), "向莉西丝的护卫解释发生了什么事。"),
 						KEEP_COLLAPSE_ESCAPE_END) {
 					@Override
 					public void effects() {
@@ -2104,11 +2104,11 @@ public class ImpCitadelDialogue {
 		}
 	};
 	
-	public static final DialogueNode KEEP_AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode KEEP_AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 		
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getBoss(), "[npc.Name] is finally on the verge of defeat!");
+			return UtilText.parse(getBoss(), "[npc.Name]终于到了失败的边缘！");
 		}
 
 		@Override
@@ -2119,8 +2119,8 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response(UtilText.parse(getBoss(), "Save her"),
-						UtilText.parse(getBoss(), "The citadel is collapsing! Save [npc.name] by carrying [npc.herHim] out to the safety of Submission before the two of you are crushed!"),
+				return new Response(UtilText.parse(getBoss(), "救她"),
+						UtilText.parse(getBoss(), "城堡要塌了！趁你们被碾碎之前救下[npc.name]然后拎着[npc.herHim]跑到屈城区安全的地方！"),
 						KEEP_COLLAPSE_ESCAPE) {
 					@Override
 					public void effects() {
@@ -2138,8 +2138,8 @@ public class ImpCitadelDialogue {
 				};
 
 			} else if (index == 2) {
-				return new Response("Run",
-						UtilText.parse(getBoss(), "The citadel is collapsing! Abandon [npc.name] and rush out to the safety of Submission before you're crushed!"),
+				return new Response("跑",
+						UtilText.parse(getBoss(), "城堡要塌了！在你被碾碎之前放弃[npc.name]然后独自跑到屈城区安全的地方！"),
 						KEEP_COLLAPSE_ESCAPE) {
 					@Override
 					public void effects() {
@@ -2158,11 +2158,11 @@ public class ImpCitadelDialogue {
 	};
 
 	
-	public static final DialogueNode KEEP_AFTER_COMBAT_DEFEAT = new DialogueNode("Keep", ".", true) {
+	public static final DialogueNode KEEP_AFTER_COMBAT_DEFEAT = new DialogueNode("主楼", "。", true) {
 		
 		@Override
 		public String getDescription() {
-			return "You have been defeated!";
+			return "你已被击败！";
 		}
 
 		@Override
@@ -2181,7 +2181,7 @@ public class ImpCitadelDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.isNonConEnabled()) {
 				if(index==1) {
-					return new Response("Thrown out", "The three demons drag you out of the citadel.", THROWN_OUT) {
+					return new Response("被扔出去", "三个恶魔拖着你把你扔出城堡。", THROWN_OUT) {
 						@Override
 						public void effects() {
 							applyExit();
@@ -2239,10 +2239,10 @@ public class ImpCitadelDialogue {
 				
 				if(index==1) {
 					return new ResponseSex(
-							"Sex",
+							"性爱",
 							isCompanionDialogue()
-								?UtilText.parse(getArcanist(), getMainCompanion(), "Accept the price of your defeat, and alongside [com.name], prepare to get fucked by the three demons.")
-								:UtilText.parse(getArcanist(), "Accept the price of your defeat, and prepare to get fucked by the three demons."),
+								?UtilText.parse(getArcanist(), getMainCompanion(), "接受你失败的代价：和[com.name]一起被三个恶魔操。")
+								:UtilText.parse(getArcanist(), "接受失败的代价，准备好被三个恶魔操吧。"),
 							false,
 							false,
 							manager,
@@ -2253,10 +2253,10 @@ public class ImpCitadelDialogue {
 					
 				} else if(index==2) {
 					return new ResponseSex(
-							"Eager sex",
+							"做爱(渴求)",
 							isCompanionDialogue()
-								?UtilText.parse(getArcanist(), getMainCompanion(), "Happily accept what's about to happen, and alongside [com.name], eagerly prepare to get fucked by the three demons.")
-								:UtilText.parse(getArcanist(), "Happily accept the price of your defeat, and eagerly prepare to get fucked by the three demons."),
+								?UtilText.parse(getArcanist(), getMainCompanion(), "你高兴于即将发生的事情，你渴望和[com.name]一起被三个恶魔操。")
+								:UtilText.parse(getArcanist(), "高兴的结束你的失败，然后急切的准备被三个恶魔操。"),
 							false,
 							false,
 							manager,
@@ -2267,8 +2267,8 @@ public class ImpCitadelDialogue {
 					
 				} else if (index == 3 && Main.game.isNonConEnabled()) {
 					return new ResponseSex(
-							"Resist sex",
-							UtilText.parse(getArcanist(), "Struggle against the three demons and try to push them away from you."),
+							"抵抗做爱",
+							UtilText.parse(getArcanist(), "你奋力抵抗，试图将三个恶魔从你身上推开。"),
 							false,
 							false,
 							manager,
@@ -2383,7 +2383,7 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Thrown out", "The three demons drag you out of the citadel.", THROWN_OUT) {
+				return new Response("被扔出去", "三个恶魔拖着你把你扔出城堡。", THROWN_OUT) {
 					@Override
 					public void effects() {
 						applyExit();
@@ -2458,8 +2458,8 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Stripped",
-						UtilText.parse(getOwner(), "[npc.Name] strips you of all of your non-sealed clothing!"),
+				return new Response("被剥夺",
+						UtilText.parse(getOwner(), "[npc.Name]剥夺了你所有未被封印的衣服！"),
 						isCompanionDialogue()
 							?PRISONER_INITIAL_SCENE_COMPANION_STRIP
 							:PRISONER_STRIPPED) {
@@ -2512,8 +2512,8 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response(UtilText.parse(getMainCompanion(), "[npc.NamePos] turn"),
-						UtilText.parse(getOwner(), getMainCompanion(), "[npc.Name] strips your companion of all of [npc2.her]non-sealed clothing!"),
+				return new Response(UtilText.parse(getMainCompanion(), "[npc.NamePos]的回合"),
+						UtilText.parse(getOwner(), getMainCompanion(), "[npc.Name]脱下了你同伴所有未被封印的衣物！"),
 						PRISONER_STRIPPED) {
 					@Override
 					public void effects() {
@@ -2590,10 +2590,10 @@ public class ImpCitadelDialogue {
 			
 			if(index==1) {
 				return new ResponseSex(
-						"Oral",
+						"口交",
 						isCompanionDialogue()
-							?UtilText.parse(getOwner(), getMainCompanion(), "Accept the price of your defeat, and alongside [com.name], prepare to perform oral on [npc.name].")
-							:UtilText.parse(getOwner(), "Accept the price of your defeat, and prepare to perform oral on [npc.name]."),
+							?UtilText.parse(getOwner(), getMainCompanion(), "你接受失败，准备和[com.name]一起给[npc.name]口交。")
+							:UtilText.parse(getOwner(), "你接受失败，准备给[npc.name]口交。"),
 						false,
 						false,
 						manager,
@@ -2604,10 +2604,10 @@ public class ImpCitadelDialogue {
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						"Eager oral",
+						"口交(渴求)",
 						isCompanionDialogue()
-							?UtilText.parse(getOwner(), getMainCompanion(), "Happily accept what's being demanded of you, and alongside [com.name], eagerly prepare to perform oral on [npc.name].")
-							:UtilText.parse(getOwner(), "Happily accept what's being demanded of you, and eagerly prepare to perform oral on [npc.name]."),
+							?UtilText.parse(getOwner(), getMainCompanion(), "你高兴地接受这个要求，你渴望地和[com.name]一起准备给[npc.name]口交。")
+							:UtilText.parse(getOwner(), "你高兴地接受这个要求，渴望地准备给[npc.name]口交。"),
 						false,
 						false,
 						manager,
@@ -2618,8 +2618,8 @@ public class ImpCitadelDialogue {
 
 			} else if (index == 3 && Main.game.isNonConEnabled()) {
 				return new ResponseSex(
-						"Resist oral",
-						UtilText.parse(getOwner(), "Struggle against [npc.name] and try to push [npc.herHim] away from you."),
+						"拒绝口交",
+						UtilText.parse(getOwner(), "你奋力抵抗，试图将[npc.name]从你身上推开。"),
 						false,
 						false,
 						manager,
@@ -2643,10 +2643,10 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Cells",
+				return new Response("监狱",
 						isCompanionDialogue()
-							?UtilText.parse(getOwner(), getMainCompanion(), "[npc.Name] takes you and [npc2.name] to the citadel's cell block...")
-							:UtilText.parse(getOwner(), "[npc.Name] takes you to the citadel's cell block..."),
+							?UtilText.parse(getOwner(), getMainCompanion(), "[npc.Name]将你与[npc2.name]带进城堡的牢房……")
+							:UtilText.parse(getOwner(), "[npc.Name]把你带到城堡的牢房……"),
 							CELLS) {
 					@Override
 					public void effects() {
@@ -2662,7 +2662,7 @@ public class ImpCitadelDialogue {
 		}
 	};
 	
-	public static final DialogueNode CELLS = new DialogueNode("Cells", "", false) {
+	public static final DialogueNode CELLS = new DialogueNode("监狱", "", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -2753,10 +2753,10 @@ public class ImpCitadelDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Cells",
+				return new Response("监狱",
 						isCompanionDialogue()
-							?UtilText.parse(getOwner(), getMainCompanion(), "[npc.Name] takes you and [npc2.name] to the citadel's cell block...")
-							:UtilText.parse(getOwner(), "[npc.Name] takes you to the citadel's cell block..."),
+							?UtilText.parse(getOwner(), getMainCompanion(), "[npc.Name]将你与[npc2.name]带进城堡的牢房……")
+							:UtilText.parse(getOwner(), "[npc.Name]把你带到城堡的牢房……"),
 							CELLS) {
 					@Override
 					public void effects() {

@@ -114,7 +114,7 @@ public class ScarlettsShop {
 	private static void spawnDeliveryNpcs() {
 		Main.game.getNpc(Natalya.class).setLocation(Main.game.getPlayer(), false);
 		
-		String[] names = new String[] {"obedient centaur", "loyal centaur"};
+		String[] names = new String[] {"顺从的半人马", "忠诚的半人马"};
 		for(int i=0; i<2; i++) {
 			NPC npc = new GenericSexualPartner(Gender.M_P_MALE, WorldType.EMPTY, Main.game.getWorlds().get(WorldType.EMPTY).getCell(PlaceType.GENERIC_HOLDING_CELL).getLocation(), false);
 			npc.setBody(Gender.M_P_MALE, Subspecies.CENTAUR, Main.game.getCharacterUtils().getRaceStageFromPreferences(Main.getProperties().getSubspeciesMasculineFurryPreferencesMap().get(Subspecies.CENTAUR), Gender.M_P_MALE, Subspecies.CENTAUR),false);
@@ -404,13 +404,13 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
 				if(!Main.game.isExtendedWorkTime()) {
-					return new Response("Enter", "Scarlett's Shop is currently closed, and will re-open at six in the morning. You'll have to come back some time after then.", null);
+					return new Response("进入", "斯嘉丽商店目前关门，早上六点营业。你得在六点之后过来。", null);
 					
 				} else if(Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_E_REPORT_TO_HELENA) {
-					return new Response("Enter", "You should go and find Helena before entering Scarlett's Shop again.", null);
+					return new Response("进入", "你需要找到海伦娜，才能再次进入斯嘉丽的商店。", null);
 					
 				} else {
-					return new Response("Enter", "Enter the shop.", SCARLETTS_SHOP);
+					return new Response("进入", "进入商店。", SCARLETTS_SHOP);
 				}
 
 			}else {
@@ -437,14 +437,14 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_D_SLAVERY) {
-					return new Response("Ask for Arthur", "Ask Scarlett if she's got a slave named Arthur for sale.", SCARLETT_IS_A_BITCH);
+					return new Response("问及亚瑟", "询问斯嘉丽有没有一个叫亚瑟的奴隶卖。", SCARLETT_IS_A_BITCH);
 
 				} else {
 					return null;
 				}
 				
 			} else if (index == 0) {
-				return new Response("Leave", "Exit the shop.", SCARLETTS_SHOP_EXTERIOR);
+				return new Response("离开", "退出商店。", SCARLETTS_SHOP_EXTERIOR);
 				
 			} else {
 				return null;
@@ -465,7 +465,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Agree", "Agree to help Scarlett.", SCARLETT_IS_A_SUPER_BITCH) {
+				return new Response("同意", "同意帮助斯嘉丽。", SCARLETT_IS_A_SUPER_BITCH) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.MAIN, Quest.MAIN_1_E_REPORT_TO_HELENA));
@@ -491,7 +491,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Continue on your way.", SlaverAlleyDialogue.ALLEYWAY) {
+				return new Response("继续", "继续你的旅程。", SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()-1));
@@ -577,7 +577,7 @@ public class ScarlettsShop {
 			
 			if (index == 1) {
 				if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_F_SCARLETTS_FATE) {
-					return new Response("Enter", "Enter the shop.", HELENAS_SHOP) {
+					return new Response("进入", "进入商店。", HELENAS_SHOP) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Helena.class).addSlave(Main.game.getNpc(Scarlett.class));
@@ -591,12 +591,12 @@ public class ScarlettsShop {
 					};
 					
 				} else if(!Main.game.getNonCompanionCharactersPresent().contains(Main.game.getNpc(Helena.class))) {
-					return new Response("Enter",
-							"Helena's shop is currently closed, and will re-open at nine in the morning. You'll have to come back some time after then.",
+					return new Response("进入",
+							"海伦娜的商店现在还没开门，早上九点营业。你得之后再过来。",
 							null);
 				}
-				return new Response("Enter",
-						"Enter the shop.",
+				return new Response("进入",
+						"进入商店。",
 						Main.game.getPlayer().hasQuest(QuestLine.ROMANCE_HELENA)
 							?ROMANCE_SHOP_CORE
 							:HELENAS_SHOP);
@@ -624,11 +624,11 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0 && Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_F_SCARLETTS_FATE)) {
-				return new Response("Leave", "Say goodbye to Helena and exit her shop.", HELENAS_SHOP_EXTERIOR);
+				return new Response("离开", "跟海伦娜道别，离开她的商店。", HELENAS_SHOP_EXTERIOR);
 				
 			} else if (index == 1) {
 				if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_F_SCARLETTS_FATE) {
-					return new Response("Offer to buy", "Offer to buy Scarlett from Helena.", HELENAS_SHOP_SCARLETT_FOR_SALE) {
+					return new Response("提议购买", "提议从海伦娜那里买下斯嘉丽。", HELENAS_SHOP_SCARLETT_FOR_SALE) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.MAIN, Quest.MAIN_1_G_SLAVERY));
@@ -640,15 +640,15 @@ public class ScarlettsShop {
 					
 				} else if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_G_SLAVERY) {
 					if(!Main.game.getPlayer().isHasSlaverLicense()) {
-						return new Response("Buy Scarlett (" + UtilText.formatAsMoneyUncoloured(Main.game.getDialogueFlags().scarlettPrice, "span")+")",
-								"You need to obtain a slaver license from the Slavery Administration before you can buy Scarlett!", null);
+						return new Response("购买斯嘉丽(" + UtilText.formatAsMoneyUncoloured(Main.game.getDialogueFlags().scarlettPrice, "span")+")",
+								"你需要先从奴隶管理局获得贩奴许可才能购买斯嘉丽！", null);
 						
 					} else if(Main.game.getPlayer().getMoney() < Main.game.getDialogueFlags().scarlettPrice) {
-						return new Response("Buy Scarlett (" +UtilText.formatAsMoneyUncoloured(Main.game.getDialogueFlags().scarlettPrice, "span")+")", "You don't have enough money to buy Scarlett.", null);
+						return new Response("购买斯嘉丽(" +UtilText.formatAsMoneyUncoloured(Main.game.getDialogueFlags().scarlettPrice, "span")+")", "你的钱不够购买斯嘉丽。", null);
 						
 					} else {
-						return new Response("Buy Scarlett ("+UtilText.formatAsMoney(Main.game.getDialogueFlags().scarlettPrice, "span")+")",
-								"Buy Scarlett for "+Main.game.getDialogueFlags().scarlettPrice+" flames.", HELENAS_SHOP_BUYING_SCARLETT) {
+						return new Response("购买斯嘉丽("+UtilText.formatAsMoney(Main.game.getDialogueFlags().scarlettPrice, "span")+")",
+								"以"+Main.game.getDialogueFlags().scarlettPrice+"火币的价格购买斯嘉丽。", HELENAS_SHOP_BUYING_SCARLETT) {
 							@Override
 							public void effects() {
 								Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(-Main.game.getDialogueFlags().scarlettPrice));
@@ -668,7 +668,7 @@ public class ScarlettsShop {
 					}
 					
 				} else {
-					return new Response("Slave Manager", "Enter the slave management screen.", HELENAS_SHOP) {
+					return new Response("奴隶管理", "进入奴隶管理界面。", HELENAS_SHOP) {
 						@Override
 						public boolean isTradeHighlight() {
 							return true;
@@ -685,9 +685,9 @@ public class ScarlettsShop {
 			if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_G_SLAVERY)) {
 				if(index==2) {
 					if(!Main.game.getPlayer().hasQuest(QuestLine.ROMANCE_HELENA)) {
-						return new Response("Business",
-								"Ask Helena why she's chosen to remain here and run this business herself."
-										+ "<br/>[style.italicsQuestRomance(This will start Helena's romance quest!)]",
+						return new Response("生意",
+								"询问海伦娜问什么还会选择留在这里自己经营生意。"
+										+ "<br/>[style.italicsQuestRomance(这将会开启海伦娜的浪漫任务！)]",
 								ROMANCE_BUSINESS) {
 							@Override
 							public Colour getHighlightColour() {
@@ -732,7 +732,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Calm her down", "Gently reassure Scarlett to get her to calm down.", HELENAS_SHOP_SCARLETT_PURCHASED) {
+				return new Response("让她冷静", "安抚斯嘉丽，让她冷静下来。", HELENAS_SHOP_SCARLETT_PURCHASED) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/scarlettsShop", "HELENAS_SHOP_SCARLETT_PURCHASED_GENTLE"));
@@ -743,7 +743,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Shout at her", "Shout at Scarlett and remind her that she's now your property.", HELENAS_SHOP_SCARLETT_PURCHASED) {
+				return new Response("大声呵斥", "呵斥斯嘉丽，让她清楚她已经是你的财产了。", HELENAS_SHOP_SCARLETT_PURCHASED) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/scarlettsShop", "HELENAS_SHOP_SCARLETT_PURCHASED_SHOUT"));
@@ -755,7 +755,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if (index == 3) {
-				return new Response("Slap her", "Slap Scarlett and remind her that she's now your property.", HELENAS_SHOP_SCARLETT_PURCHASED,
+				return new Response("打她耳光", "打斯嘉丽一耳光，让她清楚她已经是你的财产了。", HELENAS_SHOP_SCARLETT_PURCHASED,
 						Util.newArrayListOfValues(Fetish.FETISH_SADIST),
 						CorruptionLevel.FOUR_LUSTFUL,
 						null, null, null) {
@@ -786,7 +786,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Keep her", "You decide to keep Scarlett as your slave.", HELENAS_SHOP_BUYING_SCARLETT_KEEP_HER) {
+				return new Response("留下她", "你决定将斯嘉丽留作你的奴隶。", HELENAS_SHOP_BUYING_SCARLETT_KEEP_HER) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Scarlett.class).setLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SLAVERY_ADMINISTRATION, true);
@@ -794,7 +794,7 @@ public class ScarlettsShop {
 				};
 
 			} else if (index == 2) {
-				return new Response("Free her", "You decide to grant Scarlett her freedom.", HELENAS_SHOP_BUYING_SCARLETT_FREE_HER) {
+				return new Response("释放她", "你决定赐予斯嘉丽自由。", HELENAS_SHOP_BUYING_SCARLETT_FREE_HER) {
 					@Override
 					public void effects() {
 						
@@ -830,7 +830,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "Exit the shop.", SlaverAlleyDialogue.ALLEYWAY) {
+				return new Response("离开", "退出商店。", SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()-1));
@@ -853,7 +853,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "Exit the shop.", SlaverAlleyDialogue.ALLEYWAY) {
+				return new Response("离开", "退出商店。", SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()-1));
@@ -978,7 +978,7 @@ public class ScarlettsShop {
 				if(daysToGo>0) {
 					UtilText.addSpecialParsingString(Util.intToString(daysToGo), true);
 					LocalDateTime timeReady = Main.game.getDateNow().plusDays(daysToGo);
-					UtilText.addSpecialParsingString(timeReady.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH), false);
+					UtilText.addSpecialParsingString(timeReady.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.CHINESE), false);
 					sb.append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "ROMANCE_SHOP_CORE_END_CUSTOM_SLAVE_PROGRESS"));
 				} else {
 					sb.append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "ROMANCE_SHOP_CORE_END_CUSTOM_SLAVE_READY"));
@@ -995,7 +995,7 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().isQuestCompleted(QuestLine.ROMANCE_HELENA)) {
 				if(index==0) {
-					return new Response("Leave", "Say goodbye to Helena and exit her shop.", HELENAS_SHOP_EXTERIOR) {
+					return new Response("离开", "跟海伦娜道别之后退出商店。", HELENAS_SHOP_EXTERIOR) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Helena.class).setCharacterReactedToPregnancy(Main.game.getPlayer(), true);
@@ -1010,12 +1010,12 @@ public class ScarlettsShop {
 					if(getSlaveForCustomisation()!=null) {
 						int daysToGo = 7-(Main.game.getDayNumber()-Main.game.getDialogueFlags().helenaSlaveOrderDay);
 						if(daysToGo>0) {
-							return new Response("Collect slave",
-									"Your custom slave is in the process of being trained and transformed, and won't be ready for collection for another "+Util.intToString(daysToGo)+" days.",
+							return new Response("收下奴隶",
+									"你自定义的奴隶还在训练和转化过程中，需要"+Util.intToString(daysToGo)+"天才能收到。",
 									null);
 							
 						} else {
-							return new Response("Collect slave", "Tell Helena that you're ready to take delivery of your custom slave.", HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY) {
+							return new Response("收下奴隶", "告诉海伦娜你准备好收下你自定义的奴隶了。", HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY) {
 								@Override
 								public void effects() {
 									NPC slave = (NPC) getSlaveForCustomisation();
@@ -1025,14 +1025,14 @@ public class ScarlettsShop {
 						}
 						
 					} else {
-						return new Response("Custom slave", "Ask Helena about ordering a custom slave.", HELENAS_SHOP_CUSTOM_SLAVE_START);
+						return new Response("自定义奴隶", "询问海伦娜自定义奴隶的服务。", HELENAS_SHOP_CUSTOM_SLAVE_START);
 					}
 					
 				} else if(index==2) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopTalkedTo)) {
-						return new Response("Talk", "You've already spent some time talking to Helena today...", null);
+						return new Response("对话", "你今天已经跟海伦娜谈过话了……", null);
 					}
-					return new Response("Talk", "Ask Helena how her business is going.", HELENAS_SHOP_TALK) {
+					return new Response("对话", "询问海伦娜生意如何。", HELENAS_SHOP_TALK) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.helenaShopTalkedTo, true);
@@ -1042,14 +1042,14 @@ public class ScarlettsShop {
 					
 				} else if(index==3 && ((Helena) Main.game.getNpc(Helena.class)).isSlutty()) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopFucked)) {
-						return new Response("Back room", "You've already had sex with Helena in the back room today, and she doesn't have time to do it again...", null);
+						return new Response("去里屋", "你今天已经去里屋跟海伦娜做过了，她没时间再来一次……", null);
 					}
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)
 							&& (!Main.game.getPlayer().hasPenis() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true))
 							&& (!Main.game.getPlayer().hasVagina() || !Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true))) {
-						return new Response("Back room", "As you are unable to gain access to your mouth or genitals, you can't have sex with Helena...", null);
+						return new Response("里屋", "你不能使用嘴巴或生殖器，所以无法和海伦娜做爱……", null);
 					}
-					return new Response("Back room", "Accept Helena's offer of joining her in the back room.<br/>[style.italicsSex(This will lead into having sex with her...)]", HELENAS_SHOP_BACK_ROOM) {
+					return new Response("里屋", "接受海伦娜的建议，跟她一起去里屋。<br/>[style.italicsSex(这会让你跟她做爱……)]", HELENAS_SHOP_BACK_ROOM) {
 						@Override
 						public boolean isSexHighlight() {
 							return true;
@@ -1092,20 +1092,20 @@ public class ScarlettsShop {
 //				}
 				else if(index==5) {
 					if(Main.game.getDayOfWeek()!=DayOfWeek.FRIDAY || Main.game.getHourOfDay()<17) {
-						return new Response("Date", "You can only ask Helena out on a date on Fridays after [units.time(17)].", null);
+						return new Response("约会", "你只能在星期五[units.time(17)]之后邀请海伦娜外出约会。", null);
 					}
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						return new Response("Date", "As it will involve eating dinner, you [style.colourBad(require access to your mouth)] to ask Helena out on a date!", null);
+						return new Response("约会", "由于涉及晚餐，你[style.colourBad(需要能够使用嘴巴)]才能邀请海伦娜外出约会！", null);
 					}
-					return new Response("Date", "Ask Helena out on a date.", HelenaHotel.DATE_START);
+					return new Response("约会", "叫海伦娜出去约会。", HelenaHotel.DATE_START);
 					
 				} else if(index==6) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafe)) {
-						return new Response("Scarlett", "As she's already spent her lunch break with you, Helena will not agree to giving Scarlett any more time off work in which to talk with you...", null);
+						return new Response("斯嘉丽", "由于她已经跟你吃过午饭了，海伦娜不允许斯嘉丽再浪费工作时间跟你闲聊……", null);
 					} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCounterOral)) {
-						return new Response("Scarlett", "As you've already spent time with Scarlett today, Helena will not agree to giving her any more time off work in which to talk with you...", null);
+						return new Response("斯嘉丽", "由于你今天已经跟斯嘉丽度过一段时间了，海伦娜不允许斯嘉丽再浪费工作时间跟你闲聊……", null);
 					}
-					return new Response("Scarlett", "Ask Helena if you could spend some time with Scarlett.", HELENAS_SHOP_SCARLETT);
+					return new Response("斯嘉丽", "询问海伦娜你能不能跟斯嘉丽待一会儿。", HELENAS_SHOP_SCARLETT);
 				}
 				return null;
 			}
@@ -1118,14 +1118,14 @@ public class ScarlettsShop {
 					&& Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)!=Quest.ROMANCE_HELENA_3_C_EXTERIOR_DECORATOR
 					&& Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)!=Quest.ROMANCE_HELENA_4_SCARLETTS_RETURN
 					&& Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)!=Quest.ROMANCE_HELENA_5_SCARLETT_TRAINER) {
-				return new Response("Leave", "Say goodbye to Helena and exit her shop.", HELENAS_SHOP_EXTERIOR);
+				return new Response("离开", "与海伦娜告别，离开她的商店。", HELENAS_SHOP_EXTERIOR);
 			}
 			
 			if(Main.game.getPlayer().isQuestProgressLessThan(QuestLine.ROMANCE_HELENA, Quest.ROMANCE_HELENA_3_A_EXTERIOR_DECORATOR)
 					&& !Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN)
 					&& !Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN_PREMIUM)) {
 				if(index == 1) {
-					return new Response("Slave Manager", "Enter the slave management screen.", ROMANCE_SHOP_CORE) {
+					return new Response("奴隶管理", "进入奴隶管理界面。", ROMANCE_SHOP_CORE) {
 						@Override
 						public boolean isTradeHighlight() {
 							return true;
@@ -1141,14 +1141,14 @@ public class ScarlettsShop {
 			
 			if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)==Quest.ROMANCE_HELENA_1_OFFER_HELP) {
 				if(index==2) {
-					return new Response("Offer help", "Tell Helena that you'd be willing to provide whatever help she needs in order to improve her business.", ROMANCE_OFFER_HELP);
+					return new Response("提供帮助", "告诉海伦娜，你愿意帮她的忙推进这场生意。", ROMANCE_OFFER_HELP);
 				}
 			}
 			
 			if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA)==Quest.ROMANCE_HELENA_2_PURCHASE_PAINT) {
 				if(index==1) {
 					if(Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN_PREMIUM)) {
-						return new Response("Paint", "Show Helena the 'Purple-star' can of golden paint which she asked for.", ROMANCE_PAINT) {
+						return new Response("油漆", "给海伦娜看看那罐“紫星”金色油漆，正是她想要的那款。", ROMANCE_PAINT) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_PAINT_PREMIUM"));
@@ -1159,7 +1159,7 @@ public class ScarlettsShop {
 						};
 						
 					} else if(Main.game.getPlayer().hasItemType(ItemType.PAINT_CAN)) {
-						return new Response("Paint", "Show Helena the can of 'Bronze-star' golden paint, and hope that she doesn't notice that it's not the exact one she asked for...", ROMANCE_PAINT) {
+						return new Response("油漆", "给海伦娜看看那罐“铜星”金色油漆，希望她没注意到这跟她要求的牌子并不一样……", ROMANCE_PAINT) {
 							@Override
 							public void effects() {
 								Main.game.getDialogueFlags().setFlag(DialogueFlagValue.helenaCheapPaint, true);
@@ -1171,14 +1171,14 @@ public class ScarlettsShop {
 						};
 						
 					} else {
-						return new Response("Paint", "You haven't yet purchased the golden paint which Helena asked for...", null);
+						return new Response("油漆", "你还没有买来海伦娜要的金色油漆……", null);
 					}
 				}
 			}
 
 			if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA) == Quest.ROMANCE_HELENA_3_A_EXTERIOR_DECORATOR) {
 				if(index==1) {
-					return new Response("Strip paint", "Do as Helena ordered and strip all the old, peeling paint from the store's frontage.", ROMANCE_PAINTING_A) {
+					return new Response("刮除油漆", "听从海伦娜的安排，把门面上已经要剥落的旧油漆刮下来。", ROMANCE_PAINTING_A) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.ROMANCE_HELENA, Quest.ROMANCE_HELENA_3_B_EXTERIOR_DECORATOR));
@@ -1188,12 +1188,12 @@ public class ScarlettsShop {
 			}
 			if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA) == Quest.ROMANCE_HELENA_3_B_EXTERIOR_DECORATOR) {
 				if(index==1) {
-					return new Response("Paint frontage", "Do as Helena ordered and paint the entire frontage in a fresh new coat of white paint.", ROMANCE_PAINTING_B);
+					return new Response("粉刷门面", "听从海伦娜的安排，用全新的一层白漆粉刷门面。", ROMANCE_PAINTING_B);
 				}
 			}
 			if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA) == Quest.ROMANCE_HELENA_3_C_EXTERIOR_DECORATOR) {
 				if(index==1) {
-					return new Response("Take paint", "Do as Helena instructs and take the golden paint outside.", ROMANCE_PAINTING_C);
+					return new Response("拿来油漆", "听从海伦娜的指导，把金色油漆拿到外面。", ROMANCE_PAINTING_C);
 				}
 			}
 
@@ -1201,7 +1201,7 @@ public class ScarlettsShop {
 				if(Main.game.getNpc(Scarlett.class).isSlave() && Main.game.getNpc(Scarlett.class).getOwner().isPlayer()) {
 					if(!Main.game.getCharactersPresent().contains(Main.game.getNpc(Scarlett.class))) {
 						if(index==1) {
-							return new Response("Leave", "Do as Helena says and leave her shop.", SlaverAlleyDialogue.ALLEYWAY) {
+							return new Response("离开", "按海伦娜说的做，离开她的商店。", SlaverAlleyDialogue.ALLEYWAY) {
 								@Override
 								public void effects() {
 									Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()-1));
@@ -1224,10 +1224,10 @@ public class ScarlettsShop {
 				} else {
 					if(index==1) {
 						if(Main.game.getCharactersPresent().contains(Main.game.getNpc(Scarlett.class))) { // Returning after recovering Scarlett from nest or antiques shop:
-							return new Response("Agree",
+							return new Response("同意",
 									Main.game.getDayOfWeek()==DayOfWeek.FRIDAY
-										?"Tell Helena that you'll return on Monday."
-										:"Tell Helena that you'll return tomorrow.",
+										?"告诉海伦娜你周一再来。"
+										:"告诉海伦娜你明天再来。",
 									ROMANCE_SCARLETT_DELIVERED_EMPTY) {
 								@Override
 								public void effects() {
@@ -1238,7 +1238,7 @@ public class ScarlettsShop {
 							};
 							
 						} else { // Returning before Scarlett is recovered:
-							return new Response("Leave", "Do as Helena says and leave her shop.", SlaverAlleyDialogue.ALLEYWAY) {
+							return new Response("离开", "按海伦娜说的做，离开她的商店。", SlaverAlleyDialogue.ALLEYWAY) {
 								@Override
 								public void effects() {
 									Main.game.getPlayer().setLocation(new Vector2i(Main.game.getPlayer().getLocation().getX(), Main.game.getPlayer().getLocation().getY()-1));
@@ -1251,8 +1251,8 @@ public class ScarlettsShop {
 
 			if(Main.game.getPlayer().getQuest(QuestLine.ROMANCE_HELENA) == Quest.ROMANCE_HELENA_5_SCARLETT_TRAINER) {
 				if(index==1) {
-					return new Response("Follow",
-							"Do as Helena asks and follow her into the back room.",
+					return new Response("跟随",
+							"按照海伦娜的要求，跟她进到里屋。",
 							ROMANCE_5_POTIONS);
 				}
 			}
@@ -1273,7 +1273,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Thank her", "Perhaps she's waiting for you to thank her?", ROMANCE_BUSINESS_FOLLOWUP) {
+				return new Response("表达感谢", "或许她正等着你感谢她呢？", ROMANCE_BUSINESS_FOLLOWUP) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_BUSINESS_THANK_HER"));
@@ -1283,7 +1283,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Prompt her", "Tell her to get on with it then.", ROMANCE_BUSINESS_FOLLOWUP) {
+				return new Response("催促她", "让她继续讲。", ROMANCE_BUSINESS_FOLLOWUP) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_BUSINESS_PROMPT_HER"));
@@ -1324,7 +1324,7 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getMoney()>=10_000) {
-					return new Response("Pay ("+UtilText.formatAsMoney(10_000, "span")+")", "Pay Helena the ten thousand flames which she's asking for.", ROMANCE_OFFER_HELP_PAYMENT) {
+					return new Response("支付("+UtilText.formatAsMoney(10_000, "span")+")", "付给海伦娜要求的一万火币。", ROMANCE_OFFER_HELP_PAYMENT) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_OFFER_HELP_PAY"));
@@ -1335,7 +1335,7 @@ public class ScarlettsShop {
 					};
 					
 				} else if(Main.game.getPlayer().getMoney()>0) {
-					return new Response("Pay ("+UtilText.formatAsMoney(Main.game.getPlayer().getMoney(), "span")+")", "Tell Helena that you don't have ten thousand flames, so cannot pay her.", ROMANCE_OFFER_HELP_PAYMENT) {
+					return new Response("支付("+UtilText.formatAsMoney(Main.game.getPlayer().getMoney(), "span")+")", "告诉海伦娜你没有一万火币那么多钱，所以没法付给她钱。", ROMANCE_OFFER_HELP_PAYMENT) {
 						@Override
 						public void effects() {
 							UtilText.addSpecialParsingString(Util.intToString(Main.game.getPlayer().getMoney()), true);
@@ -1346,7 +1346,7 @@ public class ScarlettsShop {
 					};
 					
 				} else {
-					return new Response("Cannot pay", "Tell Helena that you don't have any flames on you at all, so cannot pay her.", ROMANCE_OFFER_HELP_PAYMENT) {
+					return new Response("无法支付", "告诉海伦娜你的火币完全不够用，所以没法付给她钱。", ROMANCE_OFFER_HELP_PAYMENT) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_OFFER_HELP_CANNOT_PAY"));
@@ -1356,7 +1356,7 @@ public class ScarlettsShop {
 				}
 				
 			} else if(index==2) {
-				return new Response("Refuse", "Tell Helena that she's being extremely unreasonable; <i>she's</i> the one who should be paying <i>you</i>!", ROMANCE_OFFER_HELP_PAYMENT) {
+				return new Response("拒绝", "告诉海伦娜她太无理取闹了；应该<i>她</i>付给<i>你</i>钱才是！", ROMANCE_OFFER_HELP_PAYMENT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_OFFER_HELP_REFUSE_TO_PAY"));
@@ -1380,7 +1380,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Supplies", "Do as Helena commands and fetch the box of supplies.", ROMANCE_OFFER_HELP_FETCH_SUPPLIES);
+				return new Response("补给品", "听从海伦娜的命令，取回补给品。", ROMANCE_OFFER_HELP_FETCH_SUPPLIES);
 			}
 			return null;
 		}
@@ -1398,7 +1398,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Wait for Helena to find what it is she's looking for.", ROMANCE_OFFER_HELP_WAIT) {
+				return new Response("等待", "等海伦娜找到她要找的东西。", ROMANCE_OFFER_HELP_WAIT) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.ROMANCE_HELENA, Quest.ROMANCE_HELENA_2_PURCHASE_PAINT));
@@ -1467,10 +1467,10 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
+				return new Response("离开",
 						Main.game.getDayOfWeek()==DayOfWeek.FRIDAY
-							?"You'll have to wait until Monday before continuing with your work..."
-							:"You'll have to wait until tomorrow before continuing with your work...",
+							?"你必须等到周一才能继续工作……"
+							:"你必须等到明天才能继续工作……",
 						SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
@@ -1506,11 +1506,11 @@ public class ScarlettsShop {
 			if(index==1) {
 				return new Response(
 						isMule()
-							?"Greet Natalya"
-							:"Introduction",
+							?"向娜塔莉亚问好"
+							:"介绍",
 						isMule()
-							?"Greet your Mistress and tell her that you're here to take delivery of the furniture which must be in the back of the cart."
-							:"Introduce yourself as the person this [natalya.race] is looking for, and then proceed to take delivery of the furniture which must be in the back of the cart.",
+							?"向主人问好，告诉他你是来取一批家具的，肯定就在马车后面。"
+							:"向这个[natalya.race]说自己就是[natalya.she]要找的人，然后拿走那批家具，肯定就在马车后面。",
 						ROMANCE_PAINTING_FURNITURE_DELIVERY) {
 					@Override
 					public void effects() {
@@ -1536,7 +1536,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Don't offer any help, and instead stand back and wait for the centaurs to be done with their task.", ROMANCE_PAINTING_FURNITURE_DELIVERY_NEXT) {
+				return new Response("等待", "完全不帮忙，站在旁边等半人马完成工作。", ROMANCE_PAINTING_FURNITURE_DELIVERY_NEXT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_PAINTING_FURNITURE_DELIVERY_NEXT_NO_HELP"));
@@ -1544,7 +1544,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Offer help", "Ask Natalya if there's anything you can do to help.", ROMANCE_PAINTING_FURNITURE_DELIVERY_NEXT) {
+				return new Response("提供帮助", "询问娜塔莉亚有什么忙你可以帮上的。", ROMANCE_PAINTING_FURNITURE_DELIVERY_NEXT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_PAINTING_FURNITURE_DELIVERY_NEXT_HELP"));
@@ -1571,8 +1571,8 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(isMule()) {
 				if(index==1) {
-					return new Response("Follow",
-							"Follow Mistress Natalya down the alleyway to see what she requires of you.",
+					return new Response("跟随",
+							"跟着主人娜塔莉亚进到小巷子里，看看她想让你做什么。",
 							ROMANCE_PAINTING_FURNITURE_DELIVERY_FOLLOW_SUBMIT) {
 						@Override
 						public void effects() {
@@ -1584,7 +1584,7 @@ public class ScarlettsShop {
 				
 			} else {
 				if(index==1) {
-					return new Response("Remain", "Wait next to the cart for Natalya to return.", ROMANCE_PAINTING_FURNITURE_DELIVERY_END) {
+					return new Response("留在原地", "在马车旁等候，等娜塔莉亚回来。", ROMANCE_PAINTING_FURNITURE_DELIVERY_END) {
 						@Override
 						public int getSecondsPassed() {
 							return 15*60;
@@ -1597,14 +1597,14 @@ public class ScarlettsShop {
 					
 				} else if(index==2) {
 					if(!Main.game.isAnalContentEnabled()) {
-						return new Response("Follow",
-								"You get the feeling that following Natalya down the alleyway would lead to something you'd rather not see..."
-										+ "<br/>[style.italicsMinorBad(Natalya's scenes involve anal content, and as such will be disabled for as long as your 'Anal Content' setting is turned off.)]",
+						return new Response("跟随",
+								"你预感到跟着娜塔莉亚去小巷子里，可能会面临你不想见到的事情……"
+										+ "<br/>[style.italicsMinorBad(娜塔莉亚的场景包含肛门内容，若关闭“肛门内容”则相关文本也会被移除。)]",
 								null);
 					}
-					return new Response("Follow",
-							"Follow Natalya down the alleyway and see what she's up to."
-									+ "<br/>[style.italicsSex(You get the feeling that you might see something quite lewd...)]",
+					return new Response("跟随",
+							"跟着娜塔莉亚去小巷子里，看看她有什么打算。"
+									+ "<br/>[style.italicsSex(你预感到可能会看到十分下流的场面……)]",
 							ROMANCE_PAINTING_FURNITURE_DELIVERY_FOLLOW) {
 						@Override
 						public void effects() {
@@ -1644,8 +1644,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lock up",
-						"Lock up the store and prepare to leave.",
+				return new Response("上锁",
+						"给商店上锁，准备离开。",
 						ROMANCE_PAINTING_FURNITURE_DELIVERY_END_LOCK_UP);
 			}
 			return null;
@@ -1664,8 +1664,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						"Continue on your way out into Slaver Alley.",
+				return new Response("继续",
+						"继续往奴隶巷走。",
 						SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
@@ -1689,7 +1689,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "Turn around and leave Natalya to get herself off without your help.", ROMANCE_PAINTING_FURNITURE_DELIVERY_END) {
+				return new Response("离开", "转头从娜塔莉亚身旁离开，留娜塔莉亚自救。", ROMANCE_PAINTING_FURNITURE_DELIVERY_END) {
 					@Override
 					public int getSecondsPassed() {
 						return 15*60;
@@ -1702,8 +1702,8 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Submit",
-						"Do as the dominant [natalya.race] commands, and after calling her 'Mistress', kneel down before her and submit to whatever plans she has in store for you...",
+				return new Response("屈服",
+						"听从这个强硬的[natalya.race]的命令，喊了她一句“主人”后，便跪在她面前，甘愿接受她为你安排的任何任务……",
 						ROMANCE_PAINTING_FURNITURE_DELIVERY_FOLLOW_SUBMIT) {
 					@Override
 					public boolean isSexHighlight() {
@@ -1733,7 +1733,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Start stroking", "Do as Mistress Natalya commands and start stroking her thick horse-like cock.",
+				return new ResponseSex("开始撸管", "听从主人娜塔莉亚的命令，开始撸动她粗壮的马屌。",
 						true,
 						false,
 						new SMStanding(
@@ -1813,7 +1813,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode ROMANCE_PAINTING_FURNITURE_DELIVERY_FOLLOW_SUBMIT_POST_SEX = new DialogueNode("Finished", "Mistress Natalya has finished with you for now.", true) {
+	public static final DialogueNode ROMANCE_PAINTING_FURNITURE_DELIVERY_FOLLOW_SUBMIT_POST_SEX = new DialogueNode("结束", "娜塔莉亚主人暂时和你做够了。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -1825,7 +1825,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Mistress Natalya to see if the two centaurs have finished unpacking the furniture yet.", ROMANCE_PAINTING_FURNITURE_DELIVERY_END) {
+				return new Response("跟随", "跟着主人娜塔莉亚，去看看那两只半人马把家具都拆出来了没有。", ROMANCE_PAINTING_FURNITURE_DELIVERY_END) {
 					@Override
 					public int getSecondsPassed() {
 						return 5*60;
@@ -1852,7 +1852,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Paint sign", "Under the close supervision of Helena, use the golden paint you purchased to paint the words 'Helena's Boutique' over the shop's entrance.", ROMANCE_PAINTING_C_PAINT_SIGN);
+				return new Response("粉刷标志", "在海伦娜近距离的监督下，用买来的金色油漆给入口处“海伦娜精品店”几个字粉刷。", ROMANCE_PAINTING_C_PAINT_SIGN);
 			}
 			return null;
 		}
@@ -1873,7 +1873,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Helena back into her store.", ROMANCE_PAINTING_C_FINISHED) {
+				return new Response("跟随", "跟随海伦娜回到商店。", ROMANCE_PAINTING_C_FINISHED) {
 					@Override
 					public void effects() {
 						// If Scarlett has been sold but not 'banished' yet, 'banish' her now:
@@ -1900,8 +1900,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Make tea",
-						"Do as Helena says and make some tea for the two of you.",
+				return new Response("沏茶",
+						"按海伦娜说的做，给你们两个沏一壶茶。",
 						ROMANCE_PAINTING_C_FINISHED_SCARLETT) {
 					@Override
 					public void effects() {
@@ -1911,8 +1911,8 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Refuse",
-						"Refuse to make Helena some tea, and instead bluntly ask her if there's anything else she requires of you.",
+				return new Response("拒绝",
+						"拒绝给海伦娜沏茶，反而直白地问她还有什么事情要让你做。",
 						ROMANCE_PAINTING_C_FINISHED_SCARLETT) {
 					@Override
 					public void effects() {
@@ -1937,7 +1937,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Read", "Read the letter which Helena just handed to you.", ROMANCE_PAINTING_C_FINISHED_LETTER) {
+				return new Response("阅读", "阅读海伦娜递给你的信。", ROMANCE_PAINTING_C_FINISHED_LETTER) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.ROMANCE_HELENA, Quest.ROMANCE_HELENA_4_SCARLETTS_RETURN));
@@ -1963,13 +1963,13 @@ public class ScarlettsShop {
 			if(Main.game.getNpc(Scarlett.class).isSlave() && Main.game.getNpc(Scarlett.class).getOwner().isPlayer()) {
 				if(!Main.game.getCharactersPresent().contains(Main.game.getNpc(Scarlett.class))) {
 					if(index==1) {
-						return new Response("Agree", "Agree to go and fetch Scarlett and bring [scarlett.herHim] back here.", ROMANCE_SCARLETT_OWNED_FETCH);
+						return new Response("同意", "同意去把斯嘉丽带来到这。", ROMANCE_SCARLETT_OWNED_FETCH);
 					}
 				} else {
 					if(index==1) {
 						if(Main.game.getCharactersPresent().contains(Main.game.getNpc(Scarlett.class))) {
-							return new Response("Sell Scarlett ("+UtilText.formatAsMoney(getScarlettPrice(), "span", PresetColour.GENERIC_GOOD)+")",
-									"Sell Scarlett back to Helena for "+UtilText.formatAsMoney(getScarlettPrice())+".",
+							return new Response("出售斯嘉丽("+UtilText.formatAsMoney(getScarlettPrice(), "span", PresetColour.GENERIC_GOOD)+")",
+									"再把斯嘉丽以"+UtilText.formatAsMoney(getScarlettPrice())+"的价格卖给海伦娜。",
 									ROMANCE_SCARLETT_DELIVERED_EMPTY) {
 								@Override
 								public void effects() {
@@ -1999,15 +1999,15 @@ public class ScarlettsShop {
 							};
 							
 						} else {
-							return new Response("Sell Scarlett ("+UtilText.formatAsMoneyUncoloured(getScarlettPrice(), "span")+")",
-									"You need to bring Scarlett here as your companion before being able to sell [scarlett.herHim] to Helena!",
+							return new Response("出售斯嘉丽("+UtilText.formatAsMoneyUncoloured(getScarlettPrice(), "span")+")",
+									"你需要先把斯嘉丽作为队友带到这里，才能把[scarlett.herHim]卖给海伦娜！",
 									null);
 						}
 						
 					} else if(index==2) {
 						if(Main.game.getCharactersPresent().contains(Main.game.getNpc(Scarlett.class))) {
-							return new Response("Give Scarlett",
-									"Give Scarlett back to Helena and do not accept the "+UtilText.formatAsMoney(getScarlettPrice())+" she's offering you.",
+							return new Response("交出斯嘉丽",
+									"将斯嘉丽归还给海伦娜，并且不接受她付给你的"+UtilText.formatAsMoney(getScarlettPrice())+"。",
 									ROMANCE_SCARLETT_DELIVERED_EMPTY) {
 								@Override
 								public void effects() {
@@ -2036,15 +2036,15 @@ public class ScarlettsShop {
 							};
 							
 						} else {
-							return new Response("Give Scarlett", "You need to bring Scarlett here as your companion before being able to give [scarlett.herHim] away to Helena!", null);
+							return new Response("交出斯嘉丽", "你需要先把斯嘉丽带到这里，才能把[scarlett.herHim]交给海伦娜！", null);
 						}
 					}
 				}
 				
 				if(index==5) {
-					return new Response("Refuse",
-								"Refuse to sell Scarlett to Helena."
-									+ "<br/>[style.italicsBad(This will fail the quest, and without your help, Helena will have to close down the store and return to the Harpy Nests!)]",
+					return new Response("拒绝",
+								"拒绝把斯嘉丽卖给海伦娜。"
+									+ "<br/>[style.italicsBad(这将会导致任务失败，没有你的协助，海伦娜只得关停店铺，回到哈比之巢！)]",
 								ROMANCE_QUEST_FAILURE) {
 						@Override
 						public Colour getHighlightColour() {
@@ -2057,7 +2057,7 @@ public class ScarlettsShop {
 							Main.game.getNpc(Helena.class).setLocation(WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HELENAS_NEST);
 							if(!Main.game.getPlayer().hasCompanion(Main.game.getNpc(Scarlett.class))) {
 								Main.game.getNpc(Scarlett.class).returnToHome();
-								Main.game.getTextEndStringBuilder().append("<p style='text-align:center;'><i>You order [scarlett.name] to return to [scarlett.her] room...</i></p>");
+								Main.game.getTextEndStringBuilder().append("<p style='text-align:center;'><i>你命令[scarlett.name]回到[scarlett.her]的房间……</i></p>");
 							}
 						}
 					};
@@ -2066,8 +2066,8 @@ public class ScarlettsShop {
 			}
 			
 			if(index==1) {
-				return new Response("Continue",
-						"Continue on your way out into Slaver Alley.",
+				return new Response("继续",
+						"继续往奴隶巷走。",
 						SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
@@ -2096,8 +2096,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"As you've promised to go and fetch Scarlett, you'd better head off and do so...",
+				return new Response("离开",
+						"你既然保证会把斯嘉丽带回来，最好还是赶紧去吧……",
 						SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
@@ -2121,8 +2121,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"With Helena having abandoned her store, there's nothing left for you to do here except leave...",
+				return new Response("离开",
+						"由于海伦娜已经放弃了这家店铺，你无事可做，只得离开……",
 						SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
@@ -2161,8 +2161,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"Now that Helena and Scarlett have departed, there's nothing for you to do except leave...",
+				return new Response("离开",
+						"现在海伦娜和斯嘉丽都离开了，你无事可做，只得离开……",
 						SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
@@ -2190,7 +2190,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave her", "Tell Helena that it would be best not to transform Scarlett.", ROMANCE_5_POTIONS_NEXT) {
+				return new Response("保持原样", "告诉海伦娜最好还是不要转化斯嘉丽。", ROMANCE_5_POTIONS_NEXT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_5_POTIONS_SCARLETT_NO_TF"));
@@ -2198,7 +2198,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Transform her", "Tell Helena that transforming Scarlett into a female harpy would be best for her.", ROMANCE_5_POTIONS_NEXT) {
+				return new Response("转化她", "告诉海伦娜把斯嘉丽转化成个女性哈比是最适合她的。", ROMANCE_5_POTIONS_NEXT) {
 					@Override
 					public void effects() {
 						((Scarlett)Main.game.getNpc(Scarlett.class)).applyFeminisation();
@@ -2222,7 +2222,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow", "Follow Helena back out into the store.", ROMANCE_ADVERTISING_POSTERS);
+				return new Response("跟随", "跟随海伦娜进到商店里。", ROMANCE_ADVERTISING_POSTERS);
 			}
 			return null;
 		}
@@ -2240,7 +2240,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Compliment", "Compliment Helena on how beautiful she looks on the posters.", ROMANCE_ADVERTISING_POSTERS_END) {
+				return new Response("称赞", "称赞海伦娜海报上她的美貌。", ROMANCE_ADVERTISING_POSTERS_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_ADVERTISING_POSTERS_COMPLIMENT"));
@@ -2249,7 +2249,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Question", "Agree with Scarlett and question how these posters are supposed to advertise the business.", ROMANCE_ADVERTISING_POSTERS_END) {
+				return new Response("质疑", "同意斯嘉丽说的，质疑这些海报是否真的能给生意打广告。", ROMANCE_ADVERTISING_POSTERS_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_ADVERTISING_POSTERS_QUESTION"));
@@ -2282,8 +2282,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave",
-						"Having received your orders from Helena, you're ready to set out into Slaver Alley and put up these posters.",
+				return new Response("离开",
+						"从海伦娜那里接受命令后，你动身前往奴隶巷，准备张贴海报。",
 						SlaverAlleyDialogue.GATEWAY_POSTER_PERMISSION) {
 					@Override
 					public void effects() {
@@ -2315,8 +2315,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Follow",
-						"Follow Helena throughout the store to see what she needs you and Scarlett to have done by tomorrow.",
+				return new Response("跟随",
+						"跟随海伦娜穿过商店，弄清楚她想让你和斯嘉丽在明天之前完成什么事情。",
 						ROMANCE_7_FOLLOW) {
 					@Override
 					public void effects() {
@@ -2344,8 +2344,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Start work",
-						"There's not much to do except get to work...",
+				return new Response("开始工作",
+						"除了开始干活也别无选择了……",
 						ROMANCE_7_START);
 			}
 			return null;
@@ -2364,8 +2364,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Ask nicely",
-						"Kindly ask Scarlett to help clean the shop with you.",
+				return new Response("耐心请求",
+						"耐着性子请求斯嘉丽帮你一起打扫商店。",
 						ROMANCE_7_WORKING) {
 					@Override
 					public void effects() {
@@ -2375,8 +2375,8 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Scold her",
-						"Scold Scarlett for always causing a nuisance and order her to help.",
+				return new Response("责骂她",
+						"责骂斯嘉丽只会捣乱，命令她来帮忙。",
 						ROMANCE_7_WORKING) {
 					@Override
 					public void effects() {
@@ -2401,8 +2401,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Put up decorations",
-						"Get started on putting up the decorations.",
+				return new Response("布置装饰",
+						"开始布置装饰。",
 						ROMANCE_7_DECORATIONS) {
 					@Override
 					public void effects() {
@@ -2429,8 +2429,8 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Decline",
-						"Turn down the offer of whiskey from Scarlett.",
+				return new Response("拒绝",
+						"拒绝斯嘉丽递来的威士忌。",
 						ROMANCE_7_WORKING_FINISHED) {
 					@Override
 					public void effects() {
@@ -2440,8 +2440,8 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Drink",
-						"Drink the whiskey which Scarlett is offering to you.",
+				return new Response("喝",
+						"喝下斯嘉丽给你的威士忌。",
 						ROMANCE_7_WORKING_FINISHED) {
 					@Override
 					public void effects() {
@@ -2481,19 +2481,19 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
 				if(index==1) {
-					return new Response("Sleep", "Fall asleep on the sofa.", ROMANCE_7_MORNING);
+					return new Response("睡觉", "在沙发上睡着。", ROMANCE_7_MORNING);
 				}
 				
 			} else {
 				if(Main.game.getNpc(Scarlett.class).hasVagina()) {
 					if(index==1) {
-						return new Response("Decline", "Tell Scarlett that you're not interested in servicing her pussy.", ROMANCE_7_SEX_DECLINED);
+						return new Response("拒绝", "告诉斯嘉丽，你没兴趣侍奉她的小穴。", ROMANCE_7_SEX_DECLINED);
 						
 					} else if(index==2) {
 						if(Main.game.getPlayer().hasPenis() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
 							return new ResponseSex(
-									"Ridden",
-									"Do as Scarlett asks and let her ride your cock.",
+									"骑乘",
+									"按照斯嘉丽的要求，让她骑上你的肉棒。",
 									true,
 									false,
 									getScarlettSleepoverSexManager(SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -2517,8 +2517,8 @@ public class ScarlettsShop {
 							
 						} else if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
 							return new ResponseSex(
-									"Eat out",
-									"Do as Scarlett asks and eat her out.",
+									"舔阴",
+									"按照斯嘉丽的要求，给他舔阴。",
 									true,
 									false,
 									getScarlettSleepoverSexManager(SexPosition.LYING_DOWN, SexSlotLyingDown.FACE_SITTING, SexSlotLyingDown.LYING_DOWN,
@@ -2542,8 +2542,8 @@ public class ScarlettsShop {
 							
 						} else {
 							return new ResponseSex(
-									"Finger her",
-									"Do as Scarlett asks and finger her.",
+									"指交",
+									"按照斯嘉丽的要求，给她指交。",
 									true,
 									false,
 									getScarlettSleepoverSexManager(SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -2568,13 +2568,13 @@ public class ScarlettsShop {
 					
 				} else {
 					 if(index==1) {
-						return new Response("Decline", "Tell Scarlett that you're not interested in servicing her cock.", ROMANCE_7_SEX_DECLINED);
+						return new Response("拒绝", "告诉斯嘉丽你没兴趣侍奉她的肉棒。", ROMANCE_7_SEX_DECLINED);
 						
 					} else if(index==2) {
 						if(Main.game.isAnalContentEnabled() && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
 							return new ResponseSex(
-									"Offer ass",
-									"Do as Scarlett asks and offer her the use of your ass.",
+									"献上屁股",
+									"按照斯嘉丽的要求，将屁股献上供她使用。",
 									true,
 									false,
 									getScarlettSleepoverSexManager(SexPosition.ALL_FOURS, SexSlotAllFours.BEHIND, SexSlotAllFours.ALL_FOURS,
@@ -2610,8 +2610,8 @@ public class ScarlettsShop {
 							
 						} else if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
 							return new ResponseSex(
-									"Suck cock",
-									"Do as Scarlett asks and suck her cock.",
+									"吮吸鸡巴",
+									"按照斯嘉丽的要求，含住她的鸡巴。",
 									true,
 									false,
 									getScarlettSleepoverSexManager(SexPosition.ALL_FOURS, SexSlotAllFours.IN_FRONT, SexSlotAllFours.ALL_FOURS,
@@ -2635,8 +2635,8 @@ public class ScarlettsShop {
 							
 						} else {
 							return new ResponseSex(
-									"Give handjob",
-									"Do as Scarlett asks and give her a handjob.",
+									"提供手淫",
+									"按照斯嘉丽的要求，帮她手淫。",
 									true,
 									false,
 									getScarlettSleepoverSexManager(SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -2664,7 +2664,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode ROMANCE_7_AFTER_SEX = new DialogueNode("Finished", "Scarlett is satisfied with your performance.", true) {
+	public static final DialogueNode ROMANCE_7_AFTER_SEX = new DialogueNode("结束", "斯嘉丽对你的表现很满意。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -2676,7 +2676,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sleep", "Fall asleep on the sofa.", ROMANCE_7_MORNING) {
+				return new Response("睡觉", "在沙发上睡着。", ROMANCE_7_MORNING) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.helenaScarlettSleepoverSex, true);
@@ -2699,7 +2699,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sleep", "Fall asleep on the sofa.", ROMANCE_7_MORNING);
+				return new Response("睡觉", "在沙发上睡着。", ROMANCE_7_MORNING);
 			}
 			return null;
 		}
@@ -2718,7 +2718,7 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaScarlettSleepoverSex) && Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
 				if(index==1) {
-					return new Response("Wake her", "Shake Scarlett to wake her up.", ROMANCE_7_MORNING_TIDY_UP) {
+					return new Response("叫醒她", "晃醒斯嘉丽。", ROMANCE_7_MORNING_TIDY_UP) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_7_MORNING_WAKE_SCARLETT_NO_SEX"));
@@ -2728,8 +2728,8 @@ public class ScarlettsShop {
 				} else if(index==2) {
 					if(Main.game.getNpc(Scarlett.class).hasVagina()) {
 						return new ResponseSex(
-								"Morning cunnilingus",
-								"Do as Scarlett told you the night before and wake her up by eating her out.",
+								"早安舔阴",
+								"按照斯嘉丽昨晚告诉你的，舔她的下面来叫醒她。",
 								true,
 								false,
 								getScarlettSleepoverSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -2753,8 +2753,8 @@ public class ScarlettsShop {
 						
 					} else {
 						return new ResponseSex(
-								"Morning blowjob",
-								"Do as Scarlett told you the night before and wake her up by giving her a blowjob.",
+								"早安口交",
+								"按照斯嘉丽昨晚告诉你的，给她口交来叫醒她。",
 								true,
 								false,
 								getScarlettSleepoverSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.PERFORMING_ORAL,
@@ -2781,7 +2781,7 @@ public class ScarlettsShop {
 				
 			} else {
 				if(index==1) {
-					return new Response("Wake her", "Shake Scarlett to wake her up.", ROMANCE_7_MORNING_TIDY_UP) {
+					return new Response("叫醒她", "晃醒斯嘉丽。", ROMANCE_7_MORNING_TIDY_UP) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_7_MORNING_WAKE_SCARLETT"));
@@ -2793,7 +2793,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode ROMANCE_7_MORNING_AFTER_SEX = new DialogueNode("Finished", "Now that she's orgasmed, Scarlett has had enough.", true) {
+	public static final DialogueNode ROMANCE_7_MORNING_AFTER_SEX = new DialogueNode("结束", "斯嘉丽达到了高潮，已经做够了。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -2805,7 +2805,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Tidy up", "Tidy up the back room before Helena arrives.", ROMANCE_7_MORNING_TIDY_UP);
+				return new Response("收拾干净", "趁海伦娜还没来，收拾干净里屋。", ROMANCE_7_MORNING_TIDY_UP);
 			}
 			return null;
 		}
@@ -2830,7 +2830,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Make drinks", "Work alongside Scarlett to make drinks for the guests.", ROMANCE_7_MAKING_DRINKS);
+				return new Response("准备饮料", "跟斯嘉丽一起给客人准备一些饮料。", ROMANCE_7_MAKING_DRINKS);
 			}
 			return null;
 		}
@@ -2851,7 +2851,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Close eyes", "Do as Helena orders and close your eyes.", ROMANCE_END_KISSED) {
+				return new Response("闭上眼睛", "听从海伦娜的要求，闭上眼睛。", ROMANCE_END_KISSED) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_END_KISSED_CLOSE_EYES"));
@@ -2859,7 +2859,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Peek", "Pretend to close your eyes, but secretly peek to see what it is Helena is planning.", ROMANCE_END_KISSED) {
+				return new Response("偷瞄", "假装闭上眼睛，但是偷偷瞄一眼海伦娜有什么打算。", ROMANCE_END_KISSED) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenaRomance", "ROMANCE_END_KISSED_PEEK"));
@@ -2892,7 +2892,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue on your way out into Slaver Alley...", SlaverAlleyDialogue.ALLEYWAY) {
+				return new Response("继续", "继续进入奴隶巷……", SlaverAlleyDialogue.ALLEYWAY) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Helena.class).setHomeLocation(WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HELENAS_NEST);
@@ -2919,10 +2919,10 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Back out", "Decide against ordering a custom slave from Helena.", HELENAS_SHOP_CUSTOM_SLAVE_DECLINED);
+				return new Response("反悔", "决定还是不从海伦娜那里定制奴隶了。", HELENAS_SHOP_CUSTOM_SLAVE_DECLINED);
 				
 			} else if(index==1) {
-				return new Response("[style.colourFeminine(Female template)]", "Start designing your custom slave, using a human female as a starting point.", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY) {
+				return new Response("[style.colourFeminine(女性模板)]", "开始设计自定义奴隶，使用人类女性为出发点。", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY) {
 					@Override
 					public void effects() {
 						generateStartingSlave(Gender.F_V_B_FEMALE);
@@ -2930,7 +2930,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("[style.colourMasculine(Male template)]", "Start designing your custom slave, using a human male as a starting point.", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY) {
+				return new Response("[style.colourMasculine(男性模板)]", "开始设计自定义奴隶，使用人类男性为出发点。", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY) {
 					@Override
 					public void effects() {
 						generateStartingSlave(Gender.M_P_MALE);
@@ -2956,7 +2956,7 @@ public class ScarlettsShop {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -2970,36 +2970,36 @@ public class ScarlettsShop {
 			sb.append(
 					"<div class='container-full-width' style='padding:8px;'>"
 						+ "<div style='width:22%; float:left; font-weight:bold; margin:0 13% 0 0; padding:0; text-align:center;'>"
-							+ "Name"
+							+ "名字"
 						+ "</div>"
 						+ "<div style='width:22%; float:left; font-weight:bold; margin:0 13% 0 0; padding:0; text-align:center;'>"
-							+ "Surname"
+							+ "姓氏"
 						+ "</div>"
 						+ "<div style='width:24%; float:left; font-weight:bold; margin:0 6% 0 0; padding:0; text-align:center;'>"
-							+ UtilText.parse(getSlaveForCustomisation(), "What [npc.she] calls you")
+							+ UtilText.parse(getSlaveForCustomisation(), "[npc.she]对你的称呼")
 						+ "</div>"
 						
 						+ "<form style='float:left; width:22%; margin:0; padding:0;'><input type='text' id='slaveNameInput'"
 							+ " value='"+ UtilText.parseForHTMLDisplay(getSlaveForCustomisation().getName(false))+ "' style='width:100%; margin:0; padding:0;'></form>"
-						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 							+ "&#10003;"
 						+ "</div>"
-						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME_RANDOM' style='float:left; width:5%; height:28px; line-height:28px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
+						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME_RANDOM' style='float:left; width:5%; height:22px; line-height:22px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
 							+ "&#127922;"
 						+ "</div>"
 							
 						+ "<form style='float:left; width:22%; margin:0; padding:0;'><input type='text' id='slaveSurnameInput'"
 							+ " value='"+ UtilText.parseForHTMLDisplay(getSlaveForCustomisation().getSurname())+ "' style='width:100%; margin:0; padding:0;'></form>"
-						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME_SURNAME' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME_SURNAME' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 							+ "&#10003;"
 						+ "</div>"
-						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME_SURNAME_RANDOM' style='float:left; width:5%; height:28px; line-height:28px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
+						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_RENAME_SURNAME_RANDOM' style='float:left; width:5%; height:22px; line-height:22px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
 							+ "&#127922;"
 						+ "</div>"
 						
 						+ "<form style='float:left; width:24%; margin:0; padding:0;'><input type='text' id='slaveToPlayerNameInput' value='"+ UtilText.parseForHTMLDisplay(getSlaveForCustomisation().getPetName(Main.game.getPlayer()))
 							+ "' style='width:100%; margin:0; padding:0;'></form>"
-						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_CALLS_PLAYER' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+						+ "<div class='normal-button' id='"+getSlaveForCustomisation().getId()+"_CALLS_PLAYER' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 							+ "&#10003;"
 						+ "</div>"
 					+ "</div>");
@@ -3024,7 +3024,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Cancel", "Decide against ordering a custom slave from Helena.", ROMANCE_SHOP_CORE) {
+				return new Response("取消", "决定还是不从海伦娜那里定制奴隶了。", ROMANCE_SHOP_CORE) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC((NPC) getSlaveForCustomisation());
@@ -3033,9 +3033,9 @@ public class ScarlettsShop {
 				
 			} else if(index==1) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY) {
-					return new Response("Personality", "You are already customising your slave's personality!", null);
+					return new Response("个性", "你正在定制奴隶的个性！", null);
 				}
-				return new Response("Personality", "Customise aspects of your slave's personality.", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY) {
+				return new Response("个性", "定制奴隶的个性。", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3044,9 +3044,9 @@ public class ScarlettsShop {
 				
 			} else if(index==2) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_CORE) {
-					return new Response("Body", "You are already customising core aspects of your slave's body!", null);
+					return new Response("身体", "你正在定制奴隶身体的核心部分！", null);
 				}
-				return new Response("Body", "Customise core aspects of your slave's body.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_CORE) {
+				return new Response("身体", "定制奴隶身体的核心部分。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_CORE) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3055,9 +3055,9 @@ public class ScarlettsShop {
 				
 			} else if(index==3) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_EYES) {
-					return new Response("Eyes", "You are already customising the aspects of your slave's eyes!", null);
+					return new Response("眼睛", "你正在定制奴隶的眼睛了！", null);
 				}
-				return new Response("Eyes", "Customise aspects of your slave's eyes.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_EYES) {
+				return new Response("眼部", "定制奴隶的眼睛。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_EYES) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3066,9 +3066,9 @@ public class ScarlettsShop {
 				
 			} else if(index==4) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_HAIR) {
-					return new Response("Hair", "You are already customising the aspects of your slave's hair!", null);
+					return new Response("毛发", "你正在定制奴隶的毛发！", null);
 				}
-				return new Response("Hair", "Customise aspects of your slave's hair.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_HAIR) {
+				return new Response("毛发", "定制奴隶的毛发。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_HAIR) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3077,9 +3077,9 @@ public class ScarlettsShop {
 				
 			} else if(index==5) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_HEAD) {
-					return new Response("Head", "You are already customising the aspects of your slave's head and face!", null);
+					return new Response("头部", "你正在定制奴隶的头部和面部！", null);
 				}
-				return new Response("Head", "Customise aspects of your slave's head and face.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_HEAD) {
+				return new Response("头部", "定制奴隶的头部和面部。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_HEAD) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3088,9 +3088,9 @@ public class ScarlettsShop {
 				
 			} else if(index==6) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_ASS) {
-					return new Response("Ass", "You are already customising the aspects of your slave's hips and ass!", null);
+					return new Response("屁股", "你正在定制奴隶的臀部和屁股！", null);
 				}
-				return new Response("Ass", "Customise aspects of your slave's hips and ass.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_ASS) {
+				return new Response("屁股", "定制奴隶的臀部和屁股。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_ASS) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3099,9 +3099,9 @@ public class ScarlettsShop {
 				
 			} else if(index==7) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS) {
-					return new Response("Breasts", "You are already customising the aspects of your slave's breasts!", null);
+					return new Response("胸部", "你正在定制奴隶的胸部！", null);
 				}
-				return new Response("Breasts", "Customise aspects of your slave's breasts.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS) {
+				return new Response("胸部", "定制奴隶的胸部。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3110,9 +3110,9 @@ public class ScarlettsShop {
 				
 			} else if(index==8) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_VAGINA) {
-					return new Response("Vagina", "You are already customising the aspects of your slave's vagina!", null);
+					return new Response("阴道", "你正在定制奴隶的阴道！", null);
 				}
-				return new Response("Vagina", "Customise aspects of your slave's vagina.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_VAGINA) {
+				return new Response("阴道", "定制奴隶的阴道。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_VAGINA) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3121,9 +3121,9 @@ public class ScarlettsShop {
 				
 			} else if(index==9) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_PENIS) {
-					return new Response("Penis", "You are already customising the aspects of your slave's penis!", null);
+					return new Response("阴茎", "你正在定制奴隶的阴茎！", null);
 				}
-				return new Response("Penis", "Customise aspects of your slave's penis.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_PENIS) {
+				return new Response("阴茎", "定制奴隶的阴茎。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_PENIS) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3132,14 +3132,14 @@ public class ScarlettsShop {
 				
 			} else if(index==10) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_SPINNERET) {
-					return new Response("Spinneret", "You are already customising the aspects of your slave's spinneret!", null);
+					return new Response("丝囊", "你正在定制奴隶的丝囊！", null);
 				}
 				if(!BodyChanging.getTarget().hasSpinneret()) {
-					return new Response("Spinneret",
-							"Your slave does not have a spinneret!<br/><i>Spinnerets are gained via certain tail or leg types.</i>",
+					return new Response("丝囊",
+							"你的奴隶没有丝囊！<br/><i>丝囊通过特定的尾巴类型或腿部类型获得。</i>",
 							null);
 				}
-				return new Response("Spinneret", "Customise aspects of your slave's spinneret.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_SPINNERET) {
+				return new Response("丝囊", "定制奴隶的丝囊。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_SPINNERET) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3148,19 +3148,19 @@ public class ScarlettsShop {
 				
 			} else if(index==11) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS_CROTCH) {
-					return new Response("Crotch-boobs", "You are already customising the aspects of your slave's crotch-boobs!", null);
+					return new Response("胯乳", "你正在定制奴隶的胯乳！", null);
 				}
 				
 				return new Response(
-						BodyChanging.getTarget().getBreastCrotchShape()==BreastShape.UDDERS?"Udders":"Crotch-boobs",
-						UtilText.parse(BodyChanging.getTarget(), "Change aspects of your slave's [npc.crotchBoobs]."),
+						BodyChanging.getTarget().getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳",
+						UtilText.parse(BodyChanging.getTarget(), "定制奴隶的[npc.crotchBoobs]。"),
 						HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS_CROTCH);
 				
 			} else if(index==12) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP) {
-					return new Response("Makeup", "You are already customising your slave's makeup!", null);
+					return new Response("妆容", "你正在定制奴隶的妆容！", null);
 				}
-				return new Response("Makeup", "Customise your slave's makeup.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP) {
+				return new Response("妆容", "定制奴隶的妆容。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3169,9 +3169,9 @@ public class ScarlettsShop {
 				
 			} else if(index==13) {
 				if(Main.game.getCurrentDialogueNode()==HELENAS_SHOP_CUSTOM_SLAVE_BODY_PIERCINGS) {
-					return new Response("Piercings", "You are already customising your slave's piercings!", null);
+					return new Response("穿孔", "你正在定制奴隶的穿孔！", null);
 				}
-				return new Response("Piercings", "Customise your slave's piercings.", HELENAS_SHOP_CUSTOM_SLAVE_BODY_PIERCINGS) {
+				return new Response("穿孔", "定制奴隶的穿孔。", HELENAS_SHOP_CUSTOM_SLAVE_BODY_PIERCINGS) {
 					@Override
 					public int getSecondsPassed() {
 						return 10;
@@ -3179,8 +3179,8 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==14) {
-				return new Response("[style.colourMinorGood(Finalise order)]",
-						"Tell Helena that you've completed the ordering forms, and see how much this is going to cost you...",
+				return new Response("[style.colourMinorGood(确认订单)]",
+						"告诉海伦娜你填好了订单表格，看看价格如何……",
 						HELENAS_SHOP_CUSTOM_SLAVE_FINISH) {
 					@Override
 					public void effects() {
@@ -3193,7 +3193,7 @@ public class ScarlettsShop {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_CORE = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_CORE = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3217,7 +3217,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_EYES = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_EYES = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3241,7 +3241,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_HAIR = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_HAIR = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3265,7 +3265,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_HEAD = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_HEAD = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3289,7 +3289,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_ASS = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_ASS = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3313,7 +3313,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3337,7 +3337,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_VAGINA = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_VAGINA = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3361,7 +3361,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_PENIS = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_PENIS = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3385,7 +3385,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS_CROTCH = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_BREASTS_CROTCH = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3409,7 +3409,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_SPINNERET = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_SPINNERET = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3433,7 +3433,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3445,17 +3445,17 @@ public class ScarlettsShop {
 			sb.append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_CUSTOM_SLAVE_BODY_MAKEUP"));
 
 			sb.append(CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "Blusher", "Blusher (also called rouge) is used to colour the cheeks so as to provide a more youthful appearance, and to emphasise the cheekbones.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_BLUSHER, "腮红", "腮红(也叫胭脂)被用来粉饰脸颊，以显得更加年轻或凸显颧骨。", true, true)
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "Lipstick", "Lipstick is used to provide colour, texture, and protection to the wearer's lips.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_LIPSTICK, "口红", "口红被用来为嘴唇提供色彩、质地或保护。", true, true)
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "Eyeliner", "Eyeliner is applied around the contours of the eyes to help to define shape or highlight different features.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_LINER, "眼线", "眼线用于眼廓周围，有助于修饰眼型或突出不同的特征。", true, true)
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "Eye shadow", "Eye shadow is used to make the wearer's eyes stand out or look more attractive.", true, true)
+							false, Race.NONE, BodyCoveringType.MAKEUP_EYE_SHADOW, "眼影", "眼影用来让使用者的眼睛更加凸显迷人。", true, true)
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "Nail polish", "Nail polish is used to colour and protect the nails on a person's hands.", true, true)
+							true, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, "指甲油", "指甲油用于某人的手添加色彩或提供保护。", true, true)
 					+CharacterModificationUtils.getKatesDivCoveringsNew(
-							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "Toenail polish", "Toenail polish is used to colour and protect the nails on person's feet.", true, true));
+							false, Race.NONE, BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, "脚趾甲油", "脚趾甲油用于给某人的脚添加色彩或提供保护。", true, true));
 					
 			return sb.toString();
 		}
@@ -3469,7 +3469,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_PIERCINGS = new DialogueNode("Customise Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_BODY_PIERCINGS = new DialogueNode("定制奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 0;
@@ -3493,7 +3493,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_FINISH = new DialogueNode("Order Slave", "", true) {
+	public static final DialogueNode HELENAS_SHOP_CUSTOM_SLAVE_FINISH = new DialogueNode("命令奴隶", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -3507,13 +3507,13 @@ public class ScarlettsShop {
 			
 			sb.append("<div class='container-full-width' style='text-align:center;'>"
 							+ "<i>"
-								+ "More sexual experience will result in your slave gaining more corruption."
+								+ "性经历越丰富，堕落就越高。"
 							+ "</i>"
 						+ "</div>"
 						+CharacterModificationUtils.getSexualExperienceDiv());
 			
 			sb.append("<div class='container-full-width'>"
-						+ UtilText.parse(BodyChanging.getTarget(), "<p style='text-align:center;'><b>[npc.NamePos] Appearance</b></p>")
+						+ UtilText.parse(BodyChanging.getTarget(), "<p style='text-align:center;'><b>[npc.NamePos]的外表</b></p>")
 						+ BodyChanging.getTarget().getBodyDescription()
 					+ "</div>");
 			
@@ -3526,21 +3526,21 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Back", "Go back and make some changes...", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY);
+				return new Response("返回", "返回并且做些改变……", HELENAS_SHOP_CUSTOM_SLAVE_PERSONALITY);
 				
 			} else if(index==1) {
 				if(Main.game.getPlayer().getMoney()<getSlaveValue(false)) {
-					return new Response("Order ("+UtilText.formatAsMoneyUncoloured(getSlaveValue(false), "span")+")",
-							"You cannot afford to order the slave, as you only have "+Util.intToString(Main.game.getPlayer().getMoney())+" flames.",
+					return new Response("下单("+UtilText.formatAsMoneyUncoloured(getSlaveValue(false), "span")+")",
+							"你付不起下单的钱，你只有"+Util.intToString(Main.game.getPlayer().getMoney())+"火币。",
 							null);
 				}
-				return new Response("Order ("+UtilText.formatAsMoney(getSlaveValue(false), "span")+")",
-						"Tell Helena that you'd like to order the slave for "+Util.intToString(getSlaveValue(false))+" flames.",
+				return new Response("下单("+UtilText.formatAsMoney(getSlaveValue(false), "span")+")",
+						"告诉海伦娜你想用"+Util.intToString(getSlaveValue(false))+"火币下单这个奴隶。",
 						HELENAS_SHOP_CUSTOM_SLAVE_ORDER) {
 					@Override
 					public void effects() {
 						UtilText.addSpecialParsingString(Util.intToString(getSlaveValue(false)), true);
-						UtilText.addSpecialParsingString(Main.game.getDateNow().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH), false);
+						UtilText.addSpecialParsingString(Main.game.getDateNow().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.CHINESE), false);
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_CUSTOM_SLAVE_ORDER"));
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_CUSTOM_SLAVE_ORDER_END"));
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(-getSlaveValue(false)));
@@ -3549,17 +3549,17 @@ public class ScarlettsShop {
 				
 			} else if(index==2) {
 				if(Main.game.getPlayer().getMoney()<getSlaveValue(true)) {
-					return new Response("Slime special ("+UtilText.formatAsMoneyUncoloured(getSlaveValue(true), "span")+")",
-							"You cannot afford to order the slime special, as you only have "+Util.intToString(Main.game.getPlayer().getMoney())+" flames.",
+					return new Response("史莱姆特征("+UtilText.formatAsMoneyUncoloured(getSlaveValue(true), "span")+")",
+							"你付不起史莱姆特征的钱，你只有"+Util.intToString(Main.game.getPlayer().getMoney())+"火币。",
 							null);
 				}
-				return new Response("Slime special ("+UtilText.formatAsMoney(getSlaveValue(true), "span")+")",
-						"Tell Helena that you'd like to order the slave, with the 'slime special' treatment, for "+Util.intToString(getSlaveValue(true))+" flames.",
+				return new Response("史莱姆特征("+UtilText.formatAsMoney(getSlaveValue(true), "span")+")",
+						"告诉海伦娜你想用"+Util.intToString(getSlaveValue(true))+"火币下单“史莱姆特征”的奴隶。",
 						HELENAS_SHOP_CUSTOM_SLAVE_ORDER) {
 					@Override
 					public void effects() {
 						UtilText.addSpecialParsingString(Util.intToString(getSlaveValue(true)), true);
-						UtilText.addSpecialParsingString(Main.game.getDateNow().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH), false);
+						UtilText.addSpecialParsingString(Main.game.getDateNow().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.CHINESE), false);
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_CUSTOM_SLAVE_ORDER_SLIME"));
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_CUSTOM_SLAVE_ORDER_END"));
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().incrementMoney(-getSlaveValue(true)));
@@ -3605,7 +3605,7 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			NPC slave = (NPC) getSlaveForCustomisation();
 			if(index==1) {
-				return new Response("Respond", UtilText.parse(slave, "Respond in the positive to [npc.namePos] question."), HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY_END) {
+				return new Response("回应", UtilText.parse(slave, "积极回应[npc.namePos]的问题。"), HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_CUSTOM_SLAVE_DELIVERY_END", slave));
@@ -3669,11 +3669,11 @@ public class ScarlettsShop {
 			List<Response> responses = new ArrayList<>();
 			
 			if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-				responses.add(new Response("Cunnilingus", "As you cannot gain access to your mouth, you cannot eat Helena out!", null));
+				responses.add(new Response("舔阴", "由于无法使用嘴巴，所以你不能给海伦娜舔阴！", null));
 			} else {
 				responses.add(new ResponseSex(
-						"Cunnilingus",
-						"Drop down in front of Helena and start eating her out.",
+						"舔阴",
+						"在海伦娜面前跪下，开始舔阴。",
 						true, true,
 						HelenaHotel.getHelenaSexManager(false,
 								SexPosition.AGAINST_WALL, SexSlotAgainstWall.BACK_TO_WALL, SexSlotAgainstWall.PERFORMING_ORAL_WALL,
@@ -3694,11 +3694,11 @@ public class ScarlettsShop {
 
 			if(Main.game.isAnalContentEnabled()) {
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					responses.add(new Response("Anilingus", "As you cannot gain access to your mouth, you cannot perform anilingus on Helena!", null));
+					responses.add(new Response("吻肛", "由于无法使用嘴巴，你无法给海伦娜吻肛！", null));
 				} else {
 					responses.add(new ResponseSex(
-							"Anilingus",
-							"Ask Helena if you can perform anilingus on her instead.",
+							"吻肛",
+							"询问海伦娜你是否能给她吻肛。",
 							true, true,
 							HelenaHotel.getHelenaSexManager(false,
 									SexPosition.AGAINST_WALL, SexSlotAgainstWall.FACE_TO_WALL, SexSlotAgainstWall.PERFORMING_ORAL_WALL,
@@ -3727,11 +3727,11 @@ public class ScarlettsShop {
 			if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) { // If Helena is dominant, she wants to be on the receiving end of oral
 				if(Main.game.getPlayer().hasPenis()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						responses.add(new Response("Get blowjob", "As you cannot gain access to your penis, Helena cannot suck your cock.", null));
+						responses.add(new Response("接受口交", "由于无法使用阴茎，海伦娜不能舔你的鸡巴。", null));
 					} else {
 						responses.add(new ResponseSex(
-								"Get blowjob",
-								"Ask Helena to suck your cock.",
+								"接受口交",
+								"让海伦娜舔你的鸡巴。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(false,
 										Main.game.getPlayer().isTaur()
@@ -3772,11 +3772,11 @@ public class ScarlettsShop {
 	
 				if(Main.game.getPlayer().hasVagina()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						responses.add(new Response("Eaten out", "As you cannot gain access to your pussy, Helena cannot eat you out.", null));
+						responses.add(new Response("被舔阴", "由于无法使用小穴，海伦娜无法给你舔阴。", null));
 					} else {
 						responses.add(new ResponseSex(
-								"Eaten out",
-								"Ask Helena to eat you out.",
+								"被舔阴",
+								"让海伦娜给你舔阴。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(false,
 										Main.game.getPlayer().isTaur()
@@ -3818,15 +3818,15 @@ public class ScarlettsShop {
 			if(Main.game.getPlayer().hasPenis()) {
 				if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 					if(Main.game.getNpc(Helena.class).isVaginaVirgin()) {
-						responses.add(new Response("Ridden", "Helena is unwilling to lose her virginity in a situation like this!", null));
+						responses.add(new Response("骑乘", "海伦娜不愿意就这样失去处女！", null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						responses.add(new Response("Ridden", "As you cannot gain access to your penis, you cannot fuck Helena.", null));
+						responses.add(new Response("骑乘", "由于无法使用阴茎，你不能操海伦娜。", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Ridden",
-								"Ask Helena to ride your cock.",
+								"骑乘",
+								"让海伦娜骑上你的肉棒。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(true,
 										SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -3846,18 +3846,18 @@ public class ScarlettsShop {
 					}
 					if(Main.game.isAnalContentEnabled()) {
 						if(Main.game.getNpc(Helena.class).isAssVirgin()) {
-							responses.add(new Response("Ridden (anal)", "Helena is unwilling to lose her anal virginity in a situation like this!", null));
+							responses.add(new Response("骑乘(肛交)", "海伦娜不愿意就这样失去肛门贞操！", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Ridden (anal)", "As you cannot gain access to your penis, you cannot fuck Helena's ass.", null));
+							responses.add(new Response("骑乘(肛交)", "由于无法使用阴茎，你不能操海伦娜的屁股。", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							responses.add(new Response("Ridden (anal)", "Helena will want you to lubricate her ass before fucking it, and as you cannot gain access to your mouth, you cannot do this...", null));
+							responses.add(new Response("骑乘(肛交)", "海伦娜想让你操她屁股之前先给那里润滑一下，但由于无法使用嘴巴，所以你不能这么做……", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Ridden (anal)",
-									"Ask Helena to anally ride your cock.<br/>[style.italicsSex(She will get you to lubricate her ass with your saliva before letting you penetrate her...)]",
+									"骑乘(肛交)",
+									"让海伦娜用后面骑上你的肉棒。<br/>[style.italicsSex(她会让你先用唾液润滑后再让你插入……)]",
 									true, true,
 									HelenaHotel.getHelenaSexManager(true,
 											SexPosition.LYING_DOWN, SexSlotLyingDown.COWGIRL, SexSlotLyingDown.LYING_DOWN,
@@ -3879,15 +3879,15 @@ public class ScarlettsShop {
 					
 				} else { // Submissive:
 					if(Main.game.getNpc(Helena.class).isVaginaVirgin()) {
-						responses.add(new Response("Fuck her", "Helena is unwilling to lose her virginity in a situation like this!", null));
+						responses.add(new Response("操她", "海伦娜不愿意就这样失去处女！", null));
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						responses.add(new Response("Fuck her", "As you cannot gain access to your penis, you cannot fuck Helena.", null));
+						responses.add(new Response("操她", "由于无法使用阴茎，你不能操海伦娜。", null));
 						
 					} else {
 						responses.add(new ResponseSex(
-								"Fuck her",
-								"Bend Helena over a nearby desk and fuck her pussy.",
+								"操她",
+								"让海伦娜趴在附近的桌子上，开始干她的小穴。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(false,
 										SexPosition.OVER_DESK, Main.game.getNpc(Helena.class).isVisiblyPregnant()?SexSlotDesk.OVER_DESK_ON_BACK:SexSlotDesk.OVER_DESK_ON_FRONT, SexSlotDesk.BETWEEN_LEGS,
@@ -3907,18 +3907,18 @@ public class ScarlettsShop {
 					}
 					if(Main.game.isAnalContentEnabled()) {
 						if(Main.game.getNpc(Helena.class).isAssVirgin()) {
-							responses.add(new Response("Fuck her (anal)", "Helena is unwilling to lose her anal virginity in a situation like this!", null));
+							responses.add(new Response("操她(肛交)", "海伦娜不愿意就这样失去肛门贞操！", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Fuck her (anal)", "As you cannot gain access to your penis, you cannot fuck Helena's ass.", null));
+							responses.add(new Response("操她(肛交)", "由于无法使用阴茎，你不能操海伦娜的屁股。", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-							responses.add(new Response("Fuck her (anal)", "Helena will want you to lubricate her ass before fucking it, and as you cannot gain access to your mouth, you cannot do this...", null));
+							responses.add(new Response("操她(肛交)", "海伦娜想让你操她屁股之前先给那里润滑一下，但由于无法使用嘴巴，所以你不能这么做……", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Fuck her (anal)",
-									"Bend Helena over a nearby desk and fuck her ass.<br/>[style.italicsSex(She will get you to lubricate her ass with your saliva before letting you penetrate her...)]",
+									"操她(肛交)",
+									"让海伦娜趴在附近的桌子上，开始用她的后面。<br/>[style.italicsSex(她会让你先用唾液润滑后再让你插入……)]",
 									true, true,
 									HelenaHotel.getHelenaSexManager(false,
 											SexPosition.OVER_DESK, Main.game.getNpc(Helena.class).isVisiblyPregnant()?SexSlotDesk.OVER_DESK_ON_BACK:SexSlotDesk.OVER_DESK_ON_FRONT, SexSlotDesk.BETWEEN_LEGS,
@@ -3950,7 +3950,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_BACK_ROOM_AFTER_SEX = new DialogueNode("Finished", "Helena is done and need to return to work.", true) {
+	public static final DialogueNode HELENAS_SHOP_BACK_ROOM_AFTER_SEX = new DialogueNode("结束", "海伦娜好了，需要回去工作。", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getNpc(Helena.class).cleanAllClothing(true, false);
@@ -3983,9 +3983,9 @@ public class ScarlettsShop {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index==0) {
-				return "Helena focus";
+				return "专注海伦娜";
 			} else if(index==1) {
-				return "Scarlett focus";
+				return "专注斯嘉丽";
 			}
 			return null;
 		}
@@ -3995,11 +3995,11 @@ public class ScarlettsShop {
 			
 			if(responseTab==0) { // Helena focus:
 				if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					responses.add(new Response("Cunnilingus", "As you cannot gain access to your mouth, you cannot eat Helena out!", null));
+					responses.add(new Response("舔阴", "由于无法使用嘴巴，所以你不能给海伦娜舔阴！", null));
 				} else {
 					responses.add(new ResponseSex(
-							"Cunnilingus",
-							"Get Helena to lie down so that you can drop your head between her legs and eat her out while Scarlett sits on her face.",
+							"舔阴",
+							"让海伦娜躺下，这样你就可以低下头趴在腿间给她舔阴，同时让斯嘉丽坐在她的脸上了。",
 							true, true,
 							HelenaHotel.getHelenaSexManager(false,
 									true,
@@ -4039,11 +4039,11 @@ public class ScarlettsShop {
 
 				if(Main.game.isAnalContentEnabled()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						responses.add(new Response("Anilingus", "As you cannot gain access to your mouth, you cannot perform anilingus on Helena!", null));
+						responses.add(new Response("吻肛", "由于无法使用嘴巴，你无法给海伦娜吻肛！", null));
 					} else {
 						responses.add(new ResponseSex(
-								"Anilingus",
-								"Get Helena to sit on your face so that you can perform anilingus on her while she performs oral on Scarlett.",
+								"吻肛",
+								"让海伦娜坐在你的脸上，这样你就能给她吻肛，同时让她用嘴巴侍奉斯嘉丽了。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(true,
 										true,
@@ -4094,14 +4094,14 @@ public class ScarlettsShop {
 				if(!Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) { // If Helena is dominant, she wants to be on the receiving end of oral
 					if(Main.game.getPlayer().hasPenis()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Get blowjob", "As you cannot gain access to your penis, Helena cannot suck your cock.", null));
+							responses.add(new Response("接受口交", "由于无法使用阴茎，海伦娜不能舔你的鸡巴。", null));
 						} else {
 							if(Main.game.getNpc(Scarlett.class).hasPenis()
 									&& (!Main.game.getNpc(Helena.class).isAssVirgin() || !Main.game.getNpc(Helena.class).isVaginaVirgin())) {
 								if(!Main.game.getNpc(Helena.class).isAssVirgin()) {
 									responses.add(new ResponseSex(
-											"Get blowjob",
-											"Get Helena to give you a blowjob while she gets anally fucked by Scarlett from behind.",
+											"接受口交",
+											"让海伦娜给你口交，同时让斯嘉丽在后面干她的屁股。",
 											true, true,
 											HelenaHotel.getHelenaSexManager(false,
 													true,
@@ -4130,8 +4130,8 @@ public class ScarlettsShop {
 									
 								} else {
 									responses.add(new ResponseSex(
-											"Get blowjob",
-											"Get Helena to give you a blowjob while she gets fucked by Scarlett from behind.",
+											"接受口交",
+											"让海伦娜给你口交，同时让斯嘉丽从后面插入她。",
 											true, true,
 											HelenaHotel.getHelenaSexManager(false,
 													true,
@@ -4161,8 +4161,8 @@ public class ScarlettsShop {
 								
 							} else {
 								responses.add(new ResponseSex(
-										"Get blowjob",
-										"Get Helena to give you a blowjob while she sits on Scarlett's face.",
+										"接受口交",
+										"让海伦娜给你口交，同时也让她坐在斯嘉丽的脸上。",
 										true, true,
 										HelenaHotel.getHelenaSexManager(true,
 												false,
@@ -4203,14 +4203,14 @@ public class ScarlettsShop {
 		
 					if(Main.game.getPlayer().hasVagina()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-							responses.add(new Response("Eaten out", "As you cannot gain access to your pussy, Helena cannot eat you out.", null));
+							responses.add(new Response("被舔阴", "由于无法使用小穴，海伦娜无法给你舔阴。", null));
 						} else {
 							if(Main.game.getNpc(Scarlett.class).hasPenis()
 									&& (!Main.game.getNpc(Helena.class).isAssVirgin() || !Main.game.getNpc(Helena.class).isVaginaVirgin())) {
 								if(!Main.game.getNpc(Helena.class).isAssVirgin()) {
 									responses.add(new ResponseSex(
-											"Eaten out",
-											"Get Helena to eat you out while she gets anally fucked by Scarlett from behind.",
+											"被舔阴",
+											"让海伦娜舔你的下面，同时让斯嘉丽在后面干她的屁股。",
 											true, true,
 											HelenaHotel.getHelenaSexManager(false,
 													true,
@@ -4239,8 +4239,8 @@ public class ScarlettsShop {
 									
 								} else {
 									responses.add(new ResponseSex(
-											"Eaten out",
-											"Get Helena to eat you out while she gets fucked by Scarlett from behind.",
+											"被舔阴",
+											"让海伦娜舔你的下面，同时让斯嘉丽从后面插入她。",
 											true, true,
 											HelenaHotel.getHelenaSexManager(false,
 													true,
@@ -4270,8 +4270,8 @@ public class ScarlettsShop {
 								
 							} else {
 								responses.add(new ResponseSex(
-										"Eaten out",
-										"Sit on Helena's face and have her eat you out while Scarlett drops down between her legs and performs cunnilingus on her.",
+										"被舔阴",
+										"坐在海伦娜的脸上，这样她就能舔你的下面，同时让斯嘉丽低下头趴在腿间给她舔阴了。",
 										true, true,
 										HelenaHotel.getHelenaSexManager(false,
 												true,
@@ -4316,15 +4316,15 @@ public class ScarlettsShop {
 				if(Main.game.getPlayer().hasPenis()) {
 					if(Main.game.getNpc(Helena.class).hasFetish(Fetish.FETISH_DOMINANT)) {
 						if(Main.game.getNpc(Helena.class).isVaginaVirgin()) {
-							responses.add(new Response("Ridden", "Helena is unwilling to lose her virginity in a situation like this!", null));
+							responses.add(new Response("骑乘", "海伦娜不愿意就这样失去处女！", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Ridden", "As you cannot gain access to your penis, you cannot fuck Helena.", null));
+							responses.add(new Response("骑乘", "由于无法使用阴茎，你不能操海伦娜。", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Ridden",
-									"Get Helena to ride your cock while Scarlett sits on your face.",
+									"骑乘",
+									"让海伦娜骑上你的肉棒，斯嘉丽坐在你的脸上。",
 									true, true,
 									HelenaHotel.getHelenaSexManager(true,
 											true,
@@ -4362,15 +4362,15 @@ public class ScarlettsShop {
 						}
 						if(Main.game.isAnalContentEnabled()) {
 							if(Main.game.getNpc(Helena.class).isAssVirgin()) {
-								responses.add(new Response("Ridden (anal)", "Helena is unwilling to lose her anal virginity in a situation like this!", null));
+								responses.add(new Response("骑乘(肛交)", "海伦娜不愿意就这样失去肛门贞操！", null));
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-								responses.add(new Response("Ridden (anal)", "As you cannot gain access to your penis, you cannot fuck Helena's ass.", null));
+								responses.add(new Response("骑乘(肛交)", "由于无法使用阴茎，你不能操海伦娜的屁股。", null));
 								
 							} else {
 								responses.add(new ResponseSex(
-										"Ridden (anal)",
-										"Get Helena to anally ride your cock while Scarlett sits on your face.",
+										"骑乘(肛交)",
+										"让海伦娜用后面骑上你的肉棒，斯嘉丽坐在你的脸上。",
 										true, true,
 										HelenaHotel.getHelenaSexManager(true,
 												true,
@@ -4410,15 +4410,15 @@ public class ScarlettsShop {
 						
 					} else { // Submissive:
 						if(Main.game.getNpc(Helena.class).isVaginaVirgin()) {
-							responses.add(new Response("Fuck her", "Helena is unwilling to lose her virginity in a situation like this!", null));
+							responses.add(new Response("操她", "海伦娜不愿意就这样失去处女！", null));
 							
 						} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Fuck her", "As you cannot gain access to your penis, you cannot fuck Helena.", null));
+							responses.add(new Response("操她", "由于无法使用阴茎，你不能操海伦娜。", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Fuck her",
-									"Push Helena down onto all fours and fuck her from behind while she performs oral on Scarlett.",
+									"操她",
+									"让海伦娜四肢着地趴下，从身后插入她，同时让她用嘴巴侍奉斯嘉丽。",
 									true, true,
 									HelenaHotel.getHelenaSexManager(false,
 											true,
@@ -4457,15 +4457,15 @@ public class ScarlettsShop {
 						}
 						if(Main.game.isAnalContentEnabled()) {
 							if(Main.game.getNpc(Helena.class).isAssVirgin()) {
-								responses.add(new Response("Fuck her (anal)", "Helena is unwilling to lose her anal virginity in a situation like this!", null));
+								responses.add(new Response("操她(肛交)", "海伦娜不愿意就这样失去肛门贞操！", null));
 								
 							} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-								responses.add(new Response("Fuck her (anal)", "As you cannot gain access to your penis, you cannot fuck Helena's ass.", null));
+								responses.add(new Response("操她(肛交)", "由于无法使用阴茎，你不能操海伦娜的屁股。", null));
 								
 							} else {
 								responses.add(new ResponseSex(
-										"Fuck her (anal)",
-										"Push Helena down onto all fours and fuck her ass while she performs oral on Scarlett.",
+										"操她(肛交)",
+										"让海伦娜四肢着地趴下，从身后插入她的后穴，同时让她用嘴巴侍奉斯嘉丽。",
 										true, true,
 										HelenaHotel.getHelenaSexManager(false,
 												true,
@@ -4509,11 +4509,11 @@ public class ScarlettsShop {
 			} else if(responseTab==1) { // Scarlett focus:
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						responses.add(new Response("Blowjob", "As you cannot gain access to your mouth, you cannot give Scarlett a blowjob!", null));
+						responses.add(new Response("口交", "由于无法使用嘴巴，你不能给斯嘉丽口交！", null));
 					} else {
 						responses.add(new ResponseSex(
-								"Blowjob",
-								"Join Helena in kneeling down and giving Scarlett a blowjob.",
+								"口交",
+								"跟海伦娜一起，跪下来给斯嘉丽口交。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(false,
 										true,
@@ -4543,11 +4543,11 @@ public class ScarlettsShop {
 					
 				} else {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						responses.add(new Response("Cunnilingus", "As you cannot gain access to your mouth, you cannot eat Scarlett out!", null));
+						responses.add(new Response("舔阴", "由于无法使用嘴巴，你不能给斯嘉丽舔阴！", null));
 					} else {
 						responses.add(new ResponseSex(
-								"Cunnilingus",
-								"Join Helena in dropping down before Scarlett and orally servicing her pussy.",
+								"舔阴",
+								"跟海伦娜一起，跪下来侍奉斯嘉丽的小穴。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(false,
 										true,
@@ -4578,11 +4578,11 @@ public class ScarlettsShop {
 				
 				if(Main.game.isAnalContentEnabled()) {
 					if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-						responses.add(new Response("Anilingus", "As you cannot gain access to your mouth, you cannot perform anilingus on Scarlett!", null));
+						responses.add(new Response("吻肛", "由于无法使用嘴巴，你无法给斯嘉丽吻肛！", null));
 					} else {
 						responses.add(new ResponseSex(
-								"Anilingus",
-								"Get Scarlett to sit on your face so that you can perform anilingus on her while she performs oral on Helena.",
+								"吻肛",
+								"让斯嘉丽坐在你的脸上，这样你就能给她吻肛，同时让她用嘴巴侍奉海伦娜了。",
 								true, true,
 								HelenaHotel.getHelenaSexManager(true,
 										true,
@@ -4616,12 +4616,12 @@ public class ScarlettsShop {
 				if(Main.game.getPlayer().hasPenis()) {
 					if(Main.game.getNpc(Scarlett.class).hasVagina()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Ridden", "As you cannot gain access to your penis, you cannot fuck Scarlett.", null));
+							responses.add(new Response("骑乘", "由于无法使用阴茎，你不能操斯嘉丽。", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Ridden",
-									"Get Scarlett to ride your cock while Helena sits on your face.",
+									"骑乘",
+									"让斯嘉丽骑上你的肉棒，海伦娜坐在你的脸上。",
 									true, true,
 									HelenaHotel.getHelenaSexManager(true,
 											true,
@@ -4655,12 +4655,12 @@ public class ScarlettsShop {
 				if(Main.game.getNpc(Scarlett.class).hasVagina()) {
 					if(Main.game.getPlayer().hasPenis()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-							responses.add(new Response("Ridden", "As you cannot gain access to your penis, you cannot fuck Scarlett.", null));
+							responses.add(new Response("骑乘", "由于无法使用阴茎，你不能操斯嘉丽。", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Ridden",
-									"Get Scarlett to ride your cock while Helena sits on your face.",
+									"骑乘",
+									"让斯嘉丽骑上你的肉棒，海伦娜坐在你的脸上。",
 									true, true,
 									HelenaHotel.getHelenaSexManager(true,
 											true,
@@ -4694,12 +4694,12 @@ public class ScarlettsShop {
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 					if(Main.game.getPlayer().hasVagina()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-							responses.add(new Response("Fucked", "As you cannot gain access to your pussy, Scarlett cannot fuck you.", null));
+							responses.add(new Response("挨操", "由于无法使用小穴，斯嘉丽不能插入你。", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Fucked",
-									"Get Scarlett to fuck your pussy while you perform cunnilingus on Helena.",
+									"挨操",
+									"让斯嘉丽插入你的秘缝，同时你给海伦娜舔阴。",
 									true, true,
 									HelenaHotel.getHelenaSexManager(true,
 											true,
@@ -4730,12 +4730,12 @@ public class ScarlettsShop {
 					}
 					if(Main.game.isAnalContentEnabled()) {
 						if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-							responses.add(new Response("Fucked (anal)", "As you cannot gain access to your ass, Scarlett cannot fuck you.", null));
+							responses.add(new Response("挨操(肛交)", "由于无法使用肛门，斯嘉丽不能插入你。", null));
 							
 						} else {
 							responses.add(new ResponseSex(
-									"Fucked (anal)",
-									"Get Scarlett to fuck your ass while you perform cunnilingus on Helena.",
+									"挨操(肛交)",
+									"让斯嘉丽操你的屁股，同时你给海伦娜舔阴。",
 									true, true,
 									HelenaHotel.getHelenaSexManager(true,
 											true,
@@ -4776,7 +4776,7 @@ public class ScarlettsShop {
 		}
 	};
 
-	public static final DialogueNode HELENAS_SHOP_BACK_ROOM_AFTER_SEX_THREESOME = new DialogueNode("Finished", "Helena is done and need to return to work.", true) {
+	public static final DialogueNode HELENAS_SHOP_BACK_ROOM_AFTER_SEX_THREESOME = new DialogueNode("结束", "海伦娜做完了，需要回去工作。", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			Main.game.getNpc(Helena.class).cleanAllClothing(true, false);
@@ -4813,7 +4813,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Back", "Tell Scarlett that she can get back to work now.", HELENAS_SHOP_SCARLETT_END) {
+				return new Response("返回", "告诉斯嘉丽她可以回去工作了。", HELENAS_SHOP_SCARLETT_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_SCARLETT_END"));
@@ -4822,9 +4822,9 @@ public class ScarlettsShop {
 				
 			} else if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettTalkedTo)) {
-					return new Response("Talk", "You've already spent some time talking to Scarlett...", null);
+					return new Response("对话", "你今天已经跟斯嘉丽谈过话了……", null);
 				}
-				return new Response("Talk", "Ask Scarlett how she's been recently.", HELENAS_SHOP_SCARLETT_TALK) {
+				return new Response("对话", "询问斯嘉丽最近过得如何。", HELENAS_SHOP_SCARLETT_TALK) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.helenaShopScarlettTalkedTo, true);
@@ -4834,17 +4834,17 @@ public class ScarlettsShop {
 				
 			} else if(index==2) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCounterOral)) {
-					return new Response(Main.game.getNpc(Scarlett.class).hasPenis()?"Blowjob":"Cunnilingus",
-							"You've already given Scarlett oral today...",
+					return new Response(Main.game.getNpc(Scarlett.class).hasPenis()?"口交":"舔阴",
+							"你今天已经用嘴巴侍奉过斯嘉丽了……",
 							null);
 				}
 				if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
-					return new Response(Main.game.getNpc(Scarlett.class).hasPenis()?"Blowjob":"Cunnilingus",
-							"Scarlett isn't attracted to you, so she'd be unwilling to let you give her "+(Main.game.getNpc(Scarlett.class).hasPenis()?"a quick blowjob":"some quick cunnilingus")+".",
+					return new Response(Main.game.getNpc(Scarlett.class).hasPenis()?"口交":"舔阴",
+							"斯嘉丽并没有被你吸引，所以她不愿意让你给她"+(Main.game.getNpc(Scarlett.class).hasPenis()?"来一回迅速的口交":"来一回迅速的舔阴")+"。",
 							null);
 				}
-				return new Response(Main.game.getNpc(Scarlett.class).hasPenis()?"Blowjob":"Cunnilingus",
-						"Kneel down beneath the shop's counter and give Scarlett "+(Main.game.getNpc(Scarlett.class).hasPenis()?"a quick blowjob":"some quick cunnilingus")+".",
+				return new Response(Main.game.getNpc(Scarlett.class).hasPenis()?"口交":"舔阴",
+						"跪在商店的柜台下面，给斯嘉丽"+(Main.game.getNpc(Scarlett.class).hasPenis()?"来一回迅速的口交":"来一回迅速的舔阴")+"。",
 						HELENAS_SHOP_SCARLETT_COUNTER_ORAL) {
 					@Override
 					public boolean isSexHighlight() {
@@ -4861,43 +4861,43 @@ public class ScarlettsShop {
 				if(!Main.game.getNpc(Scarlett.class).isAttractedTo(Main.game.getPlayer())) {
 					return new Response(
 							Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafeRevealed)
-								?"Cafe"
-								:"Lunch break",
-							"Scarlett is only willing to spend her lunch break with people she's attracted to, and as you're not feminine enough for her liking, she's unwilling to spend it with you...",
+								?"小餐馆"
+								:"午餐休息",
+							"斯嘉丽只愿意跟能吸引她的人一起共进午餐，由于你不够女性化，她不愿意跟你消磨时光……",
 							null);
 					
 				} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafe)) {
-					return new Response("Cafe", "You've already been out to the cafe with Scarlett today...", null);
+					return new Response("小餐馆", "你今天已经跟斯嘉丽去过小餐馆了……", null);
 					
 				} else if(Main.game.getHourOfDay()<11) {
 					return new Response(
 							Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafeRevealed)
-								?"Cafe"
-								:"Lunch break",
+								?"小餐馆"
+								:"午餐休息",
 							Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafeRevealed)
-								?"It's too early for Scarlett to take a lunch break, and so she can't go out to the cafe with you. Try again between [units.time(11)] and [units.time(15)]."
-								:"It's too early for Scarlett to take a lunch break. Try again between [units.time(11)] and [units.time(15)].",
+								?"现在去午餐为时尚早，她不能跟你去小餐厅。[units.time(11)]到[units.time(15)]之间再来。"
+								:"斯嘉丽现在去午餐为时尚早。[units.time(11)]到[units.time(15)]之间再来。",
 							null);
 					
 				} else if(Main.game.getHourOfDay()>15) {
 					return new Response(
 							Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafeRevealed)
-								?"Cafe"
-								:"Lunch break",
+								?"小餐馆"
+								:"午餐休息",
 							Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafeRevealed)
-								?"Scarlett has already taken her lunch break, and so she can't go out to a cafe with you. Try again another day between [units.time(11)] and [units.time(15)]."
-								:"Scarlett has already taken her lunch break, and so can't spend it with you. Try again another day between [units.time(11)] and [units.time(15)].",
+								?"斯嘉丽已经用过午餐了，所以不能跟你去小餐厅。另找一天的[units.time(11)]到[units.time(15)]之间再来。"
+								:"斯嘉丽已经用过午餐了，所以再跟你一起。另找一天的[units.time(11)]到[units.time(15)]之间再来。",
 							null);
 					
 				}
 				
 				return new Response(
 						Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafeRevealed)
-							?"Cafe"
-							:"Lunch break",
+							?"小餐馆"
+							:"午餐休息",
 						Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.helenaShopScarlettCafeRevealed)
-							?"Ask Scarlett if she'd like to spend her lunch break with you at the cafe again."
-							:"Ask Scarlett if she'd like to spend her lunch break with you.",
+							?"询问斯嘉丽愿不愿意跟你再去小餐厅用午餐。"
+							:"询问斯嘉丽愿不愿意跟你去小餐厅用午餐。",
 						HELENAS_SHOP_SCARLETT_CAFE);
 			}
 			return null;
@@ -4933,8 +4933,8 @@ public class ScarlettsShop {
 			if(index==1) {
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 					return new ResponseSex(
-							"Suck cock",
-							"Do as Scarlett says and suck her cock...",
+							"吮吸鸡巴",
+							"听斯嘉丽的，含住她的鸡巴……",
 							true,
 							false,
 							new SMScarlettShopOral(),
@@ -4950,8 +4950,8 @@ public class ScarlettsShop {
 					
 				} else {
 					return new ResponseSex(
-							"Eat her out",
-							"Do as Scarlett says and eat her out...",
+							"给她舔阴",
+							"听斯嘉丽的，舔她的下面……",
 							true,
 							false,
 							new SMScarlettShopOral(),
@@ -4970,7 +4970,7 @@ public class ScarlettsShop {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_SHOP_SCARLETT_AFTER_COUNTER_ORAL = new DialogueNode("Finished", "Scarlett is satisfied, and steps back from the counter...", true) {
+	public static final DialogueNode HELENAS_SHOP_SCARLETT_AFTER_COUNTER_ORAL = new DialogueNode("结束", "斯嘉丽很满足，从柜台退开……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -5013,7 +5013,7 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(((Scarlett)Main.game.getNpc(Scarlett.class)).isLikesPlayer()) {
 				if(index==1) {
-					return new Response("Cafe", "Let Scarlett lead you to the cafe she wants to visit.", HELENAS_SHOP_SCARLETT_CAFE_ARRIVE) {
+					return new Response("小餐馆", "让斯嘉丽带你去她想去的那家小餐馆。", HELENAS_SHOP_SCARLETT_CAFE_ARRIVE) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_SCARLETT_CAFE_CORE"));
@@ -5025,9 +5025,9 @@ public class ScarlettsShop {
 			} else {
 				if(index==1) {
 					if(Main.game.getPlayer().getMoney()<150) {
-						return new Response("Pay ("+UtilText.formatAsMoneyUncoloured(150, "span")+")", "You don't have enough money to pay for Scarlett's lunch...", null);
+						return new Response("支付("+UtilText.formatAsMoneyUncoloured(150, "span")+")", "你的钱不够付斯嘉丽的午餐……", null);
 					}
-					return new Response("Pay ("+UtilText.formatAsMoney(150, "span")+")", "Tell Scarlett that you're willing to pay for her lunch.", HELENAS_SHOP_SCARLETT_CAFE_ARRIVE) {
+					return new Response("付钱("+UtilText.formatAsMoney(150, "span")+")", "告诉斯嘉丽这一顿你请。", HELENAS_SHOP_SCARLETT_CAFE_ARRIVE) {
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_SCARLETT_CAFE_PAY"));
@@ -5038,7 +5038,7 @@ public class ScarlettsShop {
 					};
 					
 				} else if(index==2) {
-					return new Response("Refuse", "Refuse to pay for Scarlett's lunch.", HELENAS_SHOP_SCARLETT_CAFE_REFUSE_TO_PAY);
+					return new Response("拒绝", "拒绝给斯嘉丽的午餐付钱。", HELENAS_SHOP_SCARLETT_CAFE_REFUSE_TO_PAY);
 				}
 			}
 			return null;
@@ -5080,9 +5080,9 @@ public class ScarlettsShop {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getMoney()<150) {
-					return new Response("Order ("+UtilText.formatAsMoneyUncoloured(150, "span")+")", "You don't have enough money to order lunch...", null);
+					return new Response("点单("+UtilText.formatAsMoneyUncoloured(150, "span")+")", "你的钱不够点一份午餐……", null);
 				}
-				return new Response("Order ("+UtilText.formatAsMoney(150, "span")+")", "Order the same sandwich selection that Scarlett's choosing.", HELENAS_SHOP_SCARLETT_CAFE_EATING) {
+				return new Response("点单("+UtilText.formatAsMoney(150, "span")+")", "点一份跟斯嘉丽相同样式的三明治。", HELENAS_SHOP_SCARLETT_CAFE_EATING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_SCARLETT_CAFE_ARRIVE_EATING_LUNCH"));
@@ -5093,7 +5093,7 @@ public class ScarlettsShop {
 				};
 				
 			} else if(index==2) {
-				return new Response("Don't order", "Don't order anything and instead just sit and talk with Scarlett while she eats.", HELENAS_SHOP_SCARLETT_CAFE_EATING) {
+				return new Response("不点单", "什么也不点，只是坐着让斯嘉丽跟你边吃边聊。", HELENAS_SHOP_SCARLETT_CAFE_EATING) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_SCARLETT_CAFE_ARRIVE_NO_LUNCH"));
@@ -5129,8 +5129,8 @@ public class ScarlettsShop {
 				
 			} else {
 				if(index==1) {
-					return new Response("Discourage",
-							"Discourage Scarlett from drinking the potion for the time being.<br/>[style.italics(You can get her to drink it another time, if you change your mind later on.)]",
+					return new Response("劝止",
+							"劝斯嘉丽暂时不要喝下药水。<br/>[style.italics(如果你改变主意，可以随时让她喝下。)]",
 							HELENAS_SHOP_SCARLETT_CAFE_END) {
 						@Override
 						public void effects() {
@@ -5140,12 +5140,12 @@ public class ScarlettsShop {
 					};
 					
 				} else if(index==2) {
-					return new Response("Drink",
-							"Encourage Scarlett to drink the potion.<br/>"
+					return new Response("喝",
+							"支持斯嘉丽喝下药水。<br/>"
 							+ (Main.game.getNpc(Scarlett.class).hasVagina()
-								?"[style.italicsTfSex(This will grow Scarlett's breasts by one cup size (to "+CupSize.getCupSizeFromInt(Main.game.getNpc(Scarlett.class).getBreastSize().getMeasurement()+1)+"-cups),"
-										+ " and will also make her appear more feminine!)]"
-								:"[style.italicsTfSex(This will increase Scarlett's cum production, as well as thickening her cock and expanding it to [style.sizes(20)] in length!)]"),
+								?"[style.italicsTfSex(这会让斯嘉丽的胸部增大一个罩杯(变成"+CupSize.getCupSizeFromInt(Main.game.getNpc(Scarlett.class).getBreastSize().getMeasurement()+1)+"罩杯)，"
+										+ "并且让她显得更加女性化！)]"
+								:"[style.italicsTfSex(这将会增加斯嘉丽的精液产量，同时也会让她的肉棒加粗，并且增长至[style.sizes(20)]！)]"),
 							HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMED) {
 						@Override
 						public void effects() {
@@ -5171,14 +5171,14 @@ public class ScarlettsShop {
 					
 				} else if(index==3) {
 					if(Main.game.getPlayer().getEssenceCount()<10) {
-						return new Response("Boost (10 essences)", "You need at least ten arcane essences to boost the effects of the transformation potion!", null);
+						return new Response("增强(10精华)", "你至少需要十点奥术精华才能增强转化药剂的效果！", null);
 					}
-					return new Response("Boost ([style.colourArcane(10 essences)])",
-							"Use ten of your arcane essences to boost the effects of Scarlett's potion.<br/>"
+					return new Response("增强([style.colourArcane(10精华)])",
+							"使用十点奥术精华增强斯嘉丽那个药水的效果。<br/>"
 							+ (Main.game.getNpc(Scarlett.class).hasVagina()
-								?"[style.italicsTfSex(This will grow Scarlett's breasts by two cup sizes (to "+CupSize.getCupSizeFromInt(Main.game.getNpc(Scarlett.class).getBreastSize().getMeasurement()+2)+"-cups),"
-										+ " and will also make her appear far more feminine!)]"
-								:"[style.italicsTfSex(This will increase Scarlett's cum production, as well as thickening her cock and expanding it to [style.sizes(30)] in length!)]"),
+								?"[style.italicsTfSex(这会让斯嘉丽的胸部增大两个罩杯(变成"+CupSize.getCupSizeFromInt(Main.game.getNpc(Scarlett.class).getBreastSize().getMeasurement()+2)+"罩杯)，"
+										+ "并且让她显得格外女性化！)]"
+								:"[style.italicsTfSex(这将会增加斯嘉丽的精液产量，同时也会让她的肉棒加粗，并且增长至[style.sizes(30)]！)]"),
 							HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMED) {
 						@Override
 						public void effects() {
@@ -5220,7 +5220,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Refuse", "Tell Scarlett that you don't want to do something so lewd with her.", HELENAS_SHOP_SCARLETT_CAFE_END) {
+				return new Response("拒绝", "告诉斯嘉丽你不想跟她做什么淫乱的行为。", HELENAS_SHOP_SCARLETT_CAFE_END) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/slaverAlley/helenasBoutique", "HELENAS_SHOP_SCARLETT_CAFE_EATING_TRANSFORMED_NO_SEX"));
@@ -5230,8 +5230,8 @@ public class ScarlettsShop {
 			} else if(index==2) {
 				if(Main.game.getNpc(Scarlett.class).hasPenis()) {
 					return new ResponseSex(
-							"Handjob",
-							"Move around to sit next to Scarlett and give her a handjob...",
+							"手淫",
+							"坐到斯嘉丽身旁，给她手淫……",
 							true,
 							false,
 							getScarlettCafeSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.SITTING_TWO,
@@ -5254,8 +5254,8 @@ public class ScarlettsShop {
 					
 				} else {
 					return new ResponseSex(
-							"Finger her",
-							"Move around to sit next to Scarlett and start fingering her...",
+							"指交",
+							"坐到斯嘉丽身旁，给她指交……",
 							true,
 							false,
 							getScarlettCafeSexManager(SexPosition.SITTING, SexSlotSitting.SITTING, SexSlotSitting.SITTING_TWO,
@@ -5281,7 +5281,7 @@ public class ScarlettsShop {
 		}
 	};
 	
-	public static final DialogueNode HELENAS_SHOP_SCARLETT_CAFE_AFTER_SEX = new DialogueNode("Finished", "Scarlett is satisfied, and tells you to move away from her...", true) {
+	public static final DialogueNode HELENAS_SHOP_SCARLETT_CAFE_AFTER_SEX = new DialogueNode("结束", "斯嘉丽满足了，让你从她身边走开……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 10*60;
@@ -5308,7 +5308,7 @@ public class ScarlettsShop {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Return", "Accompany Scarlett back to Helena's Boutique.", HELENAS_SHOP_SCARLETT_CAFE_RETURNED) {
+				return new Response("返回", "伴随斯嘉丽一起返回海伦娜精品店。", HELENAS_SHOP_SCARLETT_CAFE_RETURNED) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(WorldType.SLAVER_ALLEY, PlaceType.SLAVER_ALLEY_SCARLETTS_SHOP, false);

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>innoxia_goat</race>
 	
-	<transformationName><![CDATA[goat]]></transformationName>
+	<transformationName><![CDATA[山羊]]></transformationName>
 	
 	<coveringType>innoxia_goat_fur</coveringType>
 	
@@ -15,10 +15,10 @@
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldGoat(goat-like)], [npc.assholeFullDescription].
+		[npc.She]现在拥有了[style.boldGoat(山羊般的)][npc.assholeFullDescription]。
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] a goat-like, [npc.anusFullDescription(true)]
-	]]></bodyDescription>
+		拥有山羊般[npc.anusFullDescription(true)]
+]]></bodyDescription>
 </ass>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-    <clothingAuthorTag><![CDATA[Small engraved lettering informs you that these piercings were made by 'Norin'.]]></clothingAuthorTag>
+    <clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
 		<value>600</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[sunflower earring]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[sunflower earrings]]></namePlural>
-		<description><![CDATA[A pair of earrings with dangling sunflowers.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[向日葵耳坠]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[向日葵耳坠]]></namePlural>
+		<description><![CDATA[一对挂着向日葵的耳坠。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>PIERCING_EAR</slot> 
@@ -45,27 +45,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] a pair of sunflower earrings into [npc.her] [npc.ears].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] a pair of sunflower earrings into [npc2.namePos] [npc2.ears].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] a pair of sunflower earrings into [npc2.namePos] [npc2.ears].]]>
-    </otherRough>
+    <self><![CDATA[
+ [npc.Name]把一对向日葵耳坠戴在[npc.her]的[npc.ears]上。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把一对向日葵耳坠戴在[npc2.namePos]的[npc2.ears]上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]强行将向日葵耳坠戴在[npc2.namePos]的[npc2.ears]上。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] sunflower earrings and [npc.verb(take)] them out.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] sunflower earrings and [npc.verb(take)] them out.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] sunflower earrings and roughly [npc.verb(pull)] them out.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的向日葵耳坠摘了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的向日葵耳坠摘了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的向日葵耳坠扯了下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

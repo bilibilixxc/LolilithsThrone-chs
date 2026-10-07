@@ -33,12 +33,12 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Pinch nipples (self)";
+            return "捏乳头 (自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Play with your nipples.";
+            return "玩弄你自己的乳头。";
         }
 
         @Override
@@ -46,32 +46,32 @@ public class SelfFingerNipple {
             UtilText.nodeContentSB.setLength(0);
 
             UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                    "[npc.Name] [npc.verb(reach)] up and [npc.verb(start)] playing with [npc.her] hard [npc.nipples], pinching and rubbing them as [npc.she] [npc.moans] with arousal.",
-                    "[npc.NamePos] fingertips tease over [npc.her] [npc.breasts+], stopping to pinch and tug at [npc.her] [npc.nipples+] as [npc.she] [npc.moan] and sighs in delight.",
-                    "[npc.Name] reaches up to [npc.her] [npc.breasts+], and, with eager fingers, [npc.verb(start)] to pinch and rub at [npc.her] exposed [npc.nipples].",
-                    "With [npc.a_moan+], [npc.name] [npc.verb(reach)] up to [npc.her] [npc.nipples+], pinching and flicking them as [npc.she] continues to cry out in delight."));
+                    "[npc.Name]向上摸索并开始玩弄[npc.her]坚硬的[npc.nipples]，[npc.she]揉捏着摩擦它们并激动地[npc.moans]着。",
+                    "[npc.NamePos]指尖在[npc.her][npc.breasts+]上挑逗，停下来并捏拉[npc.her][npc.nipples+]，[npc.she]发出愉悦的[npc.moan]与叹息。",
+                    "[npc.Name]将手伸向[npc.her][npc.breasts+]，开始用热切的手指揉捏和摩擦[npc.her]暴露的[npc.nipples]。",
+                    "[npc.name]发出[npc.a_moan+]，将手摸索向[npc.her][npc.nipples+]，或捏或弹，[npc.she]紧接着兴奋地叫喊。"));
 
             switch (Main.sex.getCharacterPerformingAction().getBreastStoredMilk()) {
                 case ONE_TRICKLE:
-                    UtilText.nodeContentSB.append(" A small trickle of [npc.milk] leaks out around [npc.her] fingertips.");
+                    UtilText.nodeContentSB.append("几滴[npc.milk]漏出并萦绕在[npc.her]的指尖上。");
                     break;
                 case TWO_SMALL_AMOUNT:
-                    UtilText.nodeContentSB.append(" A small squirt of [npc.milk] leaks out around [npc.her] fingertips.");
+                    UtilText.nodeContentSB.append("少许[npc.milk]从[npc.her]的指尖下漏出。");
                     break;
                 case THREE_DECENT_AMOUNT:
-                    UtilText.nodeContentSB.append(" A trickle of [npc.milk] runs out around [npc.her] fingertips.");
+                    UtilText.nodeContentSB.append("些许的[npc.milk]从[npc.her]的指尖下流了出来。");
                     break;
                 case FOUR_LARGE_AMOUNT:
-                    UtilText.nodeContentSB.append(" [npc.Her] [npc.milk] starts to flow out around [npc.her] fingers and run down [npc.her] [npc.breasts+].");
+                    UtilText.nodeContentSB.append("[npc.Her][npc.milk]开始从[npc.her]指尖流出并从[npc.her][npc.breasts+]上缓缓流下。");
                     break;
                 case FIVE_VERY_LARGE_DROOLING:
-                    UtilText.nodeContentSB.append(" [npc.Milk] starts drooling out in a little stream around [npc.her] fingers.");
+                    UtilText.nodeContentSB.append("[npc.Milk]开始在[npc.her]的指间一小股一小股地流下。");
                     break;
                 case SIX_EXTREME_AMOUNT_DRIPPING:
-                    UtilText.nodeContentSB.append(" [npc.Milk] starts pouring out in a constant stream to run down [npc.her] [npc.breasts+].");
+                    UtilText.nodeContentSB.append("[npc.Milk]开始源源不断地流出，并成股地从[npc.her][npc.breasts+]上流下。");
                     break;
                 case SEVEN_MONSTROUS_AMOUNT_POURING:
-                    UtilText.nodeContentSB.append(" [npc.Milk] starts pouring out in a heavy flow to quickly soak [npc.her] [npc.breasts+].");
+                    UtilText.nodeContentSB.append("[npc.Milk]开始源源不断地倾泻而下并将[npc.her][npc.breasts+]完全浸没了。");
                     break;
                 default:
                     break;
@@ -102,12 +102,12 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Finger nipples (self)";
+            return "乳头自慰(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Sink [npc.her] fingers into [npc.her] [npc.nipples+].";
+            return "将[npc.her]的手指压入[npc.her][npc.nipples+]。";
         }
 
         @Override
@@ -115,31 +115,31 @@ public class SelfFingerNipple {
             UtilText.nodeContentSB.setLength(0);
 
             UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-                    "[npc.Name] [npc.verb(reach)] up, letting out a lewd [npc.moan] as [npc.she] eagerly [npc.verb(sink)] [npc.her] fingers into [npc.her] fuckable [npc.nipples].",
-                    "[npc.NamePos] fingertips tease over [npc.her] breasts, circling around [npc.her] [npc.nipples] before greedily sinking inside.",
-                    "[npc.Name] [npc.moans] and [npc.verb(squeal)] as [npc.she] [npc.verb(start)] eagerly fingering [npc.her] nipple-cunts.",
-                    "With a lewd cry, [npc.name] [npc.verb(sink)] [npc.her] digits into [npc.her] inviting nipple-cunts, panting heavily as [npc.she] [npc.verb(start)] eagerly fingering [npc.herself]."));
+                    "[npc.Name]向上摸索，发出淫荡的[npc.moan]，将[npc.her]的手指急切地陷入那足以插入的[npc.nipples]内。",
+                    "[npc.NamePos]的指尖挑逗着[npc.her]的胸脯，盘旋在[npc.her]的[npc.nipples]周围，然后贪婪地陷入其中。",
+                    "当[npc.she]开始热烈地用手指探入[npc.her]的乳穴，[npc.Name][npc.moans]并且高亢地叫起来。",
+                    "随着一声淫荡的叫喊，[npc.name]将[npc.her]的手指插入[npc.her]令人沉醉的乳穴中，[npc.she]沉重地喘息着并热烈地用手指取悦[npc.herself]。"));
             switch (Main.sex.getCharacterPerformingAction().getBreastStoredMilk()) {
                 case ONE_TRICKLE:
-                    UtilText.nodeContentSB.append(" A small trickle of [npc.milk] leaks out around [npc.her] fingertips.");
+                    UtilText.nodeContentSB.append("几滴[npc.milk]漏出并萦绕在[npc.her]的指尖上。");
                     break;
                 case TWO_SMALL_AMOUNT:
-                    UtilText.nodeContentSB.append(" A small squirt of [npc.milk] leaks out around [npc.her] fingertips.");
+                    UtilText.nodeContentSB.append("少许[npc.milk]从[npc.her]的指尖下漏出。");
                     break;
                 case THREE_DECENT_AMOUNT:
-                    UtilText.nodeContentSB.append(" A trickle of [npc.milk] runs out around [npc.her] fingertips.");
+                    UtilText.nodeContentSB.append("些许的[npc.milk]从[npc.her]的指尖下流了出来。");
                     break;
                 case FOUR_LARGE_AMOUNT:
-                    UtilText.nodeContentSB.append(" [npc.Her] [npc.milk] starts to flow out around [npc.her] fingers and run down [npc.her] [npc.breasts+].");
+                    UtilText.nodeContentSB.append("[npc.Her][npc.milk]开始从[npc.her]指尖流出并从[npc.her][npc.breasts+]上缓缓流下。");
                     break;
                 case FIVE_VERY_LARGE_DROOLING:
-                    UtilText.nodeContentSB.append(" [npc.Her] [npc.milk] starts drooling out in a little stream around [npc.her] fingers.");
+                    UtilText.nodeContentSB.append("[npc.Her]的[npc.milk]开始在[npc.her]的指间一小股一小股地流下。");
                     break;
                 case SIX_EXTREME_AMOUNT_DRIPPING:
-                    UtilText.nodeContentSB.append(" [npc.Her] [npc.milk] starts pouring out in a constant stream to run down [npc.her] [npc.breasts+].");
+                    UtilText.nodeContentSB.append("[npc.Her]的[npc.milk]开始源源不断地流出，并成股地从[npc.her][npc.breasts+]上流下。");
                     break;
                 case SEVEN_MONSTROUS_AMOUNT_POURING:
-                    UtilText.nodeContentSB.append(" [npc.Her] [npc.milk] starts pouring out in a heavy flow to quickly soak [npc.her] [npc.breasts+].");
+                    UtilText.nodeContentSB.append("[npc.Her]的[npc.milk]开始源源不断地倾泻而下并将[npc.her][npc.breasts+]完全浸没了。");
                     break;
                 default:
                     break;
@@ -165,21 +165,21 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Gentle nipple fingering (self)";
+            return "指交乳头(温柔)(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Gently finger [npc.her] [npc.nipples+].";
+            return "温柔地用手指玩弄[npc.her][npc.nipples+]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] slowly [npc.verb(push)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.nipple+].",
-                    "Gently pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.nipple+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(finger)] [npc.her] [npc.breast+].",
-                    "Curling [npc.her] [npc.fingers] up inside [npc.her] [npc.nipple(true)], [npc.name] [npc.verb(let)] out a little whimper as [npc.she] [npc.verb(start)] pumping [npc.her] digits in and out of [npc.her] [npc.breast+].",
-                    "Focusing on pleasuring [npc.her] fuckable [npc.breasts], [npc.name] [npc.verb(start)] gently pumping [npc.her] [npc.fingers] in and out of one of [npc.her] [npc.nipples+].");
+                    "当[npc.she]慢慢地将[npc.her]的[npc.fingers]向[npc.her][npc.nipple+]更深处推入时，[npc.A_moan+]从[npc.namePos][npc.lips+]间漏出。",
+                    "温柔地将[npc.her]的[npc.fingers]在[npc.her][npc.nipple+]中富有节奏地抽插着，[npc.she]用手指玩弄起[npc.her][npc.breast+]，[npc.name]开始发出一连串愉悦的[npc.moans]。",
+                    "[npc.fingers]在[npc.nipple(true)]内蜷起，[npc.name]将[npc.fingers]在[npc.her][npc.breast+]中抽插，不自觉地发出呜咽声。",
+                    "[npc.name]专心取悦起[npc.her]足以插入的[npc.breasts]，温柔地用[npc.fingers]在[npc.her]的其中一个[npc.nipples+]中进进出出。");
         }
 
     };
@@ -195,21 +195,21 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Nipple fingering (self)";
+            return "指交乳头(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Concentrate on fingering [npc.her] [npc.nipples+].";
+            return "全身心地投入玩弄[npc.her][npc.nipples+]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] greedily [npc.verb(push)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.nipple+].",
-                    "Pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.nipple+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(finger)] [npc.her] [npc.breast+].",
-                    "Curling [npc.her] [npc.fingers] up inside [npc.her] fuckable [npc.nipple(true)], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] pumping [npc.her] digits in and out of [npc.her] [npc.breast+].",
-                    "Focusing on pleasuring [npc.her] [npc.breasts+], [npc.name] [npc.verb(start)] pumping [npc.her] [npc.fingers] in and out of one of [npc.her] [npc.nipples+].");
+                    "当[npc.she]贪婪地将[npc.her]的[npc.fingers]向[npc.her][npc.nipple+]更深处推入时，[npc.A_moan+]从[npc.namePos][npc.lips+]间漏出。",
+                    "[npc.name]的[npc.fingers]在[npc.her][npc.nipple+]中富有节奏地抽插着，[npc.she]用手指玩弄起[npc.her][npc.breast+]，[npc.her]开始发出一连串愉悦的[npc.moans]。",
+                    "[npc.fingers]在那足以插入的[npc.nipple(true)]内蜷起，[npc.name]将[npc.fingers]开始在自己[npc.nipple+]中抽插，不自觉地漏出[npc.a_moan]。",
+                    "[npc.name]专心取悦起[npc.her]的[npc.breasts]，用[npc.fingers]在[npc.her][npc.nipples+]中进进出出。");
         }
 
     };
@@ -225,21 +225,21 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Rough nipple-fingering (self)";
+            return "指交乳头(粗暴)(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Roughly finger [npc.her] [npc.nipples+].";
+            return "粗暴地用手指玩弄[npc.her][npc.nipples+]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] roughly [npc.verb(slam)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.nipple+], before starting to rapidly finger [npc.her] [npc.breast(true)].",
-                    "Roughly pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.nipple+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(finger)] [npc.her] [npc.breast+].",
-                    "Forcefully curling [npc.her] [npc.fingers] up inside [npc.her] fuckable [npc.nipple(true)], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] roughly grinding [npc.her] digits in and out of [npc.her] [npc.breast+].",
-                    "Focusing on pleasuring [npc.her] fuckable [npc.breasts+], [npc.name] [npc.verb(start)] roughly slamming [npc.her] [npc.fingers] in and out of one of [npc.her] [npc.nipples+].");
+                    "[npc.namePos]粗暴地将[npc.fingers]深深插进那[npc.nipple+]中，[npc.A_moan+]从[npc.lips+]间漏出，紧接着[npc.she]开始用手指快速地抽插自己的[npc.breast(true)]。",
+                    "[npc.her]的[npc.fingers]在[npc.her][npc.nipple+]中粗暴地抽插着，当[npc.she]用手指富有节奏地玩弄起[npc.her][npc.breast+]，[npc.name]开始发出一连串愉悦的[npc.moans]。",
+                    "[npc.Her]的[npc.fingers]在[npc.her]那足以插入的[npc.nipple(true)]内激烈地蜷起，当[npc.her]的[npc.fingers]开始在[npc.her][npc.nipple+]中粗暴地摩擦，[npc.name]不自觉地漏出[npc.a_moan]。",
+                    "[npc.name]专心取悦起[npc.her]足以插入的[npc.breasts]，粗暴地用[npc.fingers]插入[npc.her]的其中一个[npc.nipples+]并激烈地抽插。");
         }
 
     };
@@ -255,21 +255,21 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Nipple-fingering (self)";
+            return "指交乳头(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Concentrate on fingering [npc.her] [npc.nipples+].";
+            return "全身心地投入玩弄[npc.her][npc.nipples+]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] greedily [npc.verb(push)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.nipple+].",
-                    "Pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.nipple+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(finger)] [npc.her] [npc.breast+].",
-                    "Curling [npc.her] [npc.fingers] up inside [npc.her] fuckable [npc.nipple(true)], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] pumping [npc.her] digits in and out of [npc.her] [npc.breast+].",
-                    "Focusing on pleasuring [npc.her] [npc.breasts+], [npc.name] [npc.verb(start)] pumping [npc.her] [npc.fingers] in and out of one of [npc.her] [npc.nipples+].");
+                    "当[npc.she]贪婪地将[npc.her]的[npc.fingers]向[npc.her][npc.nipple+]更深处推入时，[npc.A_moan+]从[npc.namePos][npc.lips+]间漏出。",
+                    "[npc.name]的[npc.fingers]在[npc.her][npc.nipple+]中富有节奏地抽插着，[npc.she]用手指玩弄起[npc.her][npc.breast+]，[npc.her]开始发出一连串愉悦的[npc.moans]。",
+                    "[npc.fingers]在那足以插入的[npc.nipple(true)]内蜷起，[npc.name]将[npc.fingers]开始在自己[npc.nipple+]中抽插，不自觉地漏出[npc.a_moan]。",
+                    "[npc.name]专心取悦起[npc.her]的[npc.breasts]，用[npc.fingers]在[npc.her][npc.nipples+]中进进出出。");
         }
 
     };
@@ -285,21 +285,21 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Eager nipple-fingering (self)";
+            return "指交乳头(渴求)(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Eagerly finger [npc.her] [npc.nipples+].";
+            return "饥渴地用手指玩弄[npc.her][npc.nipples+]。";
         }
 
         @Override
         public String getDescription() {
             return UtilText.returnStringAtRandom(
-                    "[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] eagerly [npc.verb(slam)] [npc.her] [npc.fingers] deep inside [npc.her] [npc.nipple+], before starting to desperately finger [npc.her] [npc.breast(true)].",
-                    "Enthusiastically pumping [npc.her] [npc.fingers] in and out of [npc.her] [npc.nipple+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] frantically [npc.verb(finger)] [npc.her] [npc.breast+].",
-                    "Desperately curling [npc.her] [npc.fingers] up inside [npc.her] fuckable [npc.nipple(true)], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] eagerly grinding [npc.her] digits in and out of [npc.her] [npc.breast+].",
-                    "Focusing on pleasuring [npc.her] fuckable [npc.breasts+], [npc.name] eagerly [npc.verb(start)] slamming [npc.her] [npc.fingers] in and out of one of [npc.her] [npc.nipples+].");
+                    "当[npc.she]饥渴地将[npc.her]的[npc.fingers]深深插进[npc.her][npc.nipple+]中，[npc.A_moan+]从[npc.namePos][npc.lips+]间漏出，紧接着[npc.she]开始用手指猛烈地抽插[npc.her]的[npc.breast(true)]。",
+                    "狂热地将[npc.her]的[npc.fingers]在[npc.her][npc.nipple+]中富有节奏地抽插着，[npc.she]用手指疯狂地玩弄起[npc.her][npc.breast+]，[npc.name]开始发出一连串愉悦的[npc.moans]。",
+                    "[npc.fingers]在那足以插入的[npc.nipple(true)]内猛然蜷起，[npc.name]将[npc.fingers]在自己[npc.nipple+]中饥渴地摩擦，不自觉地漏出[npc.a_moan]。",
+                    "[npc.name]专心取悦起[npc.her]足以插入的[npc.breasts]，饥渴地用[npc.fingers]插入[npc.her]的其中一个[npc.nipples+]抽插起来。");
         }
 
     };
@@ -314,17 +314,17 @@ public class SelfFingerNipple {
 
         @Override
         public String getActionTitle() {
-            return "Stop fingering nipples (self)";
+            return "停止指交乳头(自己)";
         }
 
         @Override
         public String getActionDescription() {
-            return "Stop fingering [npc.her] [npc.nipples+].";
+            return "停止玩弄[npc.her][npc.nipples+]。";
         }
 
         @Override
         public String getDescription() {
-            return "Letting out a satisfied [npc.moan], [npc.name] [npc.verb(slide)] [npc.her] fingers out of [npc.her] [npc.nipples+].";
+            return "[npc.name]发出一声心满意足的[npc.moan]，将指尖滑出了[npc.nipples+]。";
         }
     };
 }

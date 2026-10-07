@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
 	<title/>
-	<wallName><![CDATA[wall]]></wallName>
-	<deskName><![CDATA[table]]></deskName>
+	<wallName><![CDATA[城墙]]></wallName>
+	<deskName><![CDATA[桌子]]></deskName>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[true]]></subHasEqualControl>
 	<canSkipSex><![CDATA[true]]></canSkipSex>

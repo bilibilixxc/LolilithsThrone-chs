@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[hearts]]></name>
+		<name><![CDATA[心形]]></name>
 		
-		<description><![CDATA[A series of hearts and swirling lines.]]></description> 
+		<description><![CDATA[一系列心形和盘旋的线条。]]></description> 
 		
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts of a series of hearts and swirling lines]]></bodyOverviewDescription> 
+		<bodyOverviewDescription><![CDATA[一个纹身，画着一系列心形和盘旋的线条]]></bodyOverviewDescription> 
 		
 		<imageName>hearts.svg</imageName> 
 		

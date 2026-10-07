@@ -1,725 +1,725 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="PATH"><![CDATA[
 	<p>
-		A beaten, dirt path winds its way through Shiranui's illusionary realm. To either side, dense foliage prevents you from leaving the trail, and within the shadowy, mist-wreathed depths of this thicket, you sometimes catch a fleeting glimpse of a feminine silhouette.
+		一条踩踏出来的泥土小径蜿蜒穿过不知火的幻境。道路两旁，茂密的植被阻挡了你离开小径的去路，而在这片被迷雾笼罩的阴暗灌木丛深处，你时不时能瞥见一个若隐若现的女性身影。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME_PROGRESS"><![CDATA[
 	<p>
 		#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==0)
-			The wispy, shifting clouds which permeate this realm are unlike any mist or fog which you've encountered in the real world. Where they lazily drift through the surrounding trees, these banks of fog are so thick that you can't see your [pc.hand] when holding your [pc.arm(true)] outstretched in front of you, but where the path is located they thin out into a misty haze, allowing you to navigate through this realm without too much difficulty.
+			弥漫在这个领域中的缥缈游移的云雾，和你在现实世界中见过的任何雾气都截然不同。在它们懒洋洋地飘过周围树木的地方，这些雾墙浓厚到你把[pc.arm(true)]伸到面前都看不见自己的[pc.hand]；但在小路所在的地方，雾气变得稀薄，化为一层朦胧的薄雾，让你能在这个领域中不太费力地辨认方向。
 		#ELSEIF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==1)
-			After extinguishing one of Shiranui's fires, you notice that the mists are thinning out. Now and again, the clouds of fog within the surrounding foliage disperse, allowing you to see that the trees and bushes to either side of the path look more like three-dimensional paintings than real plants.
+			在熄灭了不知火的一团火焰后，你注意到迷雾正在变薄。时不时地，周围树丛中的浓雾会散开，让你看到小路两旁的树木和灌丛看起来更像是立体的画作，而非真正的植物。
 		#ELSEIF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==2)
-			After extinguishing two of Shiranui's fires, you can clearly see that the mists which surround you are losing strength. The thick fog which once concealed the surrounding foliage has thinned out considerably, allowing you to see that the trees and bushes to either side of the path look more like three-dimensional paintings than real plants.
+			在熄灭了不知火的两团火焰后，你可以清楚地看到周围的迷雾正在减弱。曾经遮蔽周围植被的浓雾已经稀薄了许多，让你看到小路两旁的树木和灌丛看起来更像是立体的画作，而非真正的植物。
 		#ELSE
-			After extinguishing all of Shiranui's fires, the mists which surround you have all but vanished. The thick fog which once concealed the surrounding foliage is confined to within the deepest depths, allowing you to see that the trees and bushes to either side of the path look more like three-dimensional paintings than real plants.
+			在熄灭了不知火的所有火焰后，周围的迷雾几乎完全消散了。曾经遮蔽周围植被的浓雾已退缩到最深处，让你看到小路两旁的树木和灌丛看起来更像是立体的画作，而非真正的植物。
 		#ENDIF
 	</p>
 	#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==3)
 		<p>
 			#IF(pc.getLocation().getDistanceToVector(game.getWorlds().get(WORLD_TYPE_innoxia_shinrin_highlands_shiranuisTrap).getCell(PLACE_TYPE_innoxia_shinrin_highlands_shiranuisTrap_hideout).getLocation()) <= 1)
-				<i>The sound of explosions is now very loud, and up ahead you see the foliage illuminated by flashes of green and bursts of orange. You're certain that what you're seeing are the effects of Meraxis's spells.</i>
+				<i>爆炸声现在已经非常响亮了，前方的树丛被绿色的闪光和橙色的爆裂照亮。你确信那是梅拉克西丝的法术造成的效果。</i>
 			#ELSE
-				<i>Distant, bassy echoes of explosions can sometimes be heard in the distance. You can't help but shake the feeling that what you're hearing are Meraxis's spells.</i>
+				<i>远处偶尔能听到沉闷的爆炸回声。你不由自主地觉得那是梅拉克西丝施展法术的声音。</i>
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		By continuing to head in roughly one direction, you feel like you've put some distance between yourself and the middle of Shiranui's trap. Perhaps if you were to continue going forwards, you'd manage to escape from this place.
+		沿着大致一个方向持续前进，你感觉自己已经和不知火陷阱的中心拉开了一些距离。也许继续往前走的话，你就能从这个地方逃出去了。
 	</p>
 	<p>
-		As this thought enters your head, the mocking voice of Shiranui drifts out from the mist, [shiranui.speech(Don't run away. I haven't finished playing with you yet...)]
+		就在这个念头浮现在脑海中时，不知火嘲弄的声音从迷雾中飘了过来，[shiranui.speech(别跑啊，我还没玩够呢……)]
 	</p>
 	<p>
-		With that, Shiranui's laughter envelops you. It's impossible to pinpoint where her voice is coming from, and so being unable to deal with the trickster youko directly, your only options are to continue forwards and try to escape, or turn back into her realm.
+		话音刚落，不知火的笑声便将你包围了。你根本无法判断她的声音是从哪个方向传来的，既然没办法直接对付这个诡计多端的妖狐，你唯一的选择就是继续往前走试图逃脱，或者折返回她的领域。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_RETURNED"><![CDATA[
 	<p>
-		Pressing forwards, you leave Shiranui's laughter behind and keep following the path. Although you continue heading in one direction, you soon begin to get the feeling that you're somehow heading back towards the middle of the youko's trap. Confirming your suspicions, the voice of Shiranui suddenly calls out to taunt you, [shiranui.speech(Back so soon? But I thought that you were trying to leave!)]
+		你继续往前走，将不知火的笑声抛在身后，沿着小路前行。尽管你一直朝着一个方向走，但很快你就开始感觉自己似乎正在折返回妖狐陷阱的中心。印证了你的猜想，不知火的声音突然响起嘲弄道，[shiranui.speech(这么快就回来了？我还以为你想离开呢！)]
 	</p>
 	<p>
-		As the youko's laughter fades back into the mist, you realise that you're not going to be able to escape from her trap in this manner.
+		随着妖狐的笑声渐渐消散在迷雾中，你意识到用这种方式是无法逃脱她的陷阱的。
 		#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')<3)
-			 You're going to have to do as Meraxis said and extinguish the fires in order to break this illusionary spell.
+			你必须按照梅拉克西丝说的去做，熄灭那些火焰才能打破这个幻术法术。
 		#ELSE
-			 As you've already extinguished all of the fires, you need to find Meraxis so that the spell can finally be broken.
+			既然你已经熄灭了所有的火焰，现在需要找到梅拉克西丝，这样法术才能最终被破解。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
 	<htmlContent tag="FLAME"><![CDATA[
 	<p>
-		Through the mists, you see a pink light shining out from somewhere up ahead. As you continue down the path towards this source of illumination, you discover that it's a pink, arcane fire, which is floating in mid-air. Although this fire is no larger than a tennis ball, it burns with great intensity, and is difficult to look at directly. Despite appearing to emit a great deal of light, however, the surrounding grass and trees are not illuminated by it in any way.
+		透过迷雾，你看到前方某处闪烁着一道粉色的光芒。沿着小路继续向光源走去，你发现那是一团粉色的奥术火焰，悬浮在半空中。这团火焰虽然只有网球大小，却燃烧得极为炽烈，令人难以直视。然而，尽管它似乎散发着大量光芒，周围的草木却丝毫没有被它照亮。
 	</p>
 	<p>
-		This obviously must be one of the fires which serves as an arcane anchor to keep this illusionary spell powered. All that remains to be done is to approach this fire and find the object which is linked to it. According to Meraxis and the benevolent youko who you met earlier, by destroying that linked object you should be able to extinguish the fire.
+		这显然就是作为奥术锚点来维持幻术法术运转的火焰之一。接下来要做的就是靠近这团火焰，找到与之相连的物体。据梅拉克西丝和你之前遇到的那位善良的妖狐所说，只要摧毁那个关联物，就应该能熄灭这团火焰。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Flame 1: -->
 	
 	<htmlContent tag="FLAME1_START"><![CDATA[
 	<p>
-		Not wanting to fall into another of Shiranui's traps, you stay on high alert as you cautiously approach this fire. As you get near, the object which it's linked to is immediately obvious. A short distance away from where the arcane flame is burning, a perfectly-circular block of stone has been embedded into the ground. On top of this pedestal sits a glass bottle, which is filled with bubbling pink liquid.
+		不想再落入不知火的圈套，你保持高度警惕，小心翼翼地靠近这团火焰。走近之后，与它相连的物体一目了然。在奥术火焰燃烧处不远的地方，一块浑圆的石块被嵌入了地面。石座顶上放着一个玻璃瓶，里面装满了冒着泡的粉色液体。
 	</p>
 	<p>
-		[shiranui.speech(Your friend must be Meraxis, which means that you are... '[pc.name]'?)] an amused-sounding feminine voice calls out from the mist. She laughs as she watches you spin around to try and pinpoint the source of the voice, and then as you stop to listen, she reveals, [shiranui.speech(Takahashi's told me all about the two of you. It seems as though my time here is almost over, but before I go, please do try to amuse me. Drink that potion, and the fire shall be extinguished.)]
+		「你的同伴应该就是梅拉克西丝，那么你就是……'[pc.name]'？」一个听起来颇为有趣的女性声音从迷雾中传来。她笑着看你转身四处张望，试图锁定声音的来源，然后在你停下来倾听时，她说道：「高桥已经把你们俩的事都告诉我了。看来我在这里的时间快到头了，不过在我离开之前，请务必让我乐一乐。喝下那瓶魔药，火焰就会熄灭。」
 	</p>
 	<p>
-		Cautiously, you reach down and carefully pick up the bottle. Watching how you treat the object with care and suspicion, Shiranui laughs, [shiranui.speech(Don't worry, it's completely harmless. It will allow you to see through the mists as I can. I regret having kept Takahashi prisoner for so long, so this is my way of apologising.)]
+		你小心翼翼地弯腰拿起了瓶子。看着你如此谨慎且充满怀疑地对待这东西，不知火笑了起来：「别担心，完全无害的。它能让你像我一样看穿迷雾。我很后悔把高桥关了那么久，所以这算是我的道歉。」
 	</p>
 	<p>
-		There's no way that you can trust the word of this trickster youko, and it would surely be best to simply smash the potion bottle on the ground. Then again, maybe Shiranui is telling the truth, and drinking the potion will grant you the ability to see through the mists as she claims.
+		你完全不能相信这个狐妖骗子的话，最稳妥的做法无疑是直接把魔药瓶砸碎在地上。不过话说回来，也许不知火说的是真的，喝下魔药确实能让你获得如她所说的看穿迷雾的能力。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME1_SMASH"><![CDATA[
 	<p>
-		There's absolutely no way that you're going to trust the word of this trickster youko, and so instead of drinking the potion, you smash the bottle down on the stone pedestal, whereupon it shatters and spills its contents all over the ground.
+		你绝不可能相信这个狐妖骗子的话，所以你没有喝下魔药，而是将瓶子狠狠砸在了石座上，瓶子应声碎裂，里面的液体洒了一地。
 	</p>
 	<p>
-		[shiranui.speech(What a shame...)] the voice of Shiranui wistfully sighs, [shiranui.speech(You would have looked so much better...)]
+		「真可惜……」不知火的声音悠然叹息道，「你本来可以变得好看多了……」
 	</p>
 	<p>
-		A gentle breeze suddenly blows through the area, and the pink flame before you sputters for a moment before being silently extinguished. A thin cloud of purple smoke lingers in its place for a moment, before being blown away and dissipating into nothing.
+		一阵轻柔的微风忽然吹过这片区域，你面前的粉色火焰摇曳了片刻，随后悄无声息地熄灭了。一缕紫色烟雾在原处短暂停留，便被风吹散，消弭于无形。
 	</p>
 	<p>
-		With the destruction of this arcane anchor, Shiranui's spell is weakened, and the surrounding mists thin out and recede by just a little. Although one of the fires has now been extinguished, there are still two more to deal with...
+		随着这个奥术锚点的摧毁，不知火的法术被削弱了，周围的迷雾也随之稍稍变薄并退去了一些。虽然其中一团火焰已经熄灭，但还有两团需要处理……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME1_DRINK"><![CDATA[
 	#IF(!pc.isAbleToHaveRaceTransformed())
 		<p>
-			As you're [pc.a_race], you're largely immune to transformations, and as such you aren't too worried if this potion turns out to be something other than what Shiranui claims it to be. Deciding to do as she says and drink it, you pull out the stopper and bring the bottle up to your [pc.lips]. Ignoring its sickly-sweet scent, you tilt your head back and gulp down every last drop of the sugary liquid.
+			因为你是[pc.a_race]，所以你对转化基本免疫，因此即使这瓶魔药和不知火所声称的不一样，你也不太担心。你决定按她说的做把它喝掉，拔出瓶塞，将瓶子举到[pc.lips]边。忽略那股甜腻的气味，你仰起头将这甜滋滋的液体一饮而尽。
 		</p>
 	#ELSE
 		<p>
-			Against your better judgement, you decide to trust Shiranui and drink her potion. Pulling out the stopper and bringing the bottle up to your [pc.lips], you ignore its sickly-sweet scent as you tilt your head back and gulp down every last drop of the sugary liquid.
+			违背了理性的判断，你决定相信不知火，喝下她的魔药。你拔出瓶塞，将瓶子举到[pc.lips]边，忽略那股甜腻的气味，仰起头将这甜滋滋的液体一饮而尽。
 		</p>
 	#ENDIF
 	<p>
-		[shiranui.speech(You actually did it!)] the voice of Shiranui gleefully laughs. Her incredulous tone makes you feel a little embarrassed as she taunts, [shiranui.speech(I never thought that you'd actually drink it! Enjoy your new look, <i>idiot</i>!)]
+		「你居然真的喝了！」不知火的声音欢快地笑了起来。她那难以置信的语气让你感到有些尴尬，她嘲弄道：「我还以为你不会真的喝下去呢！好好享受你的新造型吧，<i>笨蛋</i>！」
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME1_TRANSFORMED"><![CDATA[
 	<p>
-		Just as you should have known, the potion didn't grant you the ability to see through the mist as Shiranui claimed it would. Your head spins as you try to get used to the feeling of your new body, but after staggering back and taking a few deep breaths, the disorienting feeling passes, and you look down as you experimentally run your [pc.hands] over your new body.
+		正如你早该料到的，这瓶魔药并没有像不知火声称的那样赋予你看穿迷雾的能力。你努力适应新身体的感觉，脑袋一阵眩晕，但在踉跄后退几步并深呼吸几次之后，那种晕眩感便消退了。你低下头，试探性地用[pc.hands]抚过自己的新身体。
 	</p>
+	<p>
+\t\t#IF(!pc.isAbleToHaveRaceTransformed())
+\t\t\t虽然你是[pc.a_race]，因此免疫于种族转化，但你如今的身体证明了你仍然能够以许多其他方式被转化。
+\t\t#ELSEIF(flags.getObject('shiranuiPreTFSubspecies')==pc.getSubspecies())
+\t\t\t尽管你仍是[pc.a_race]，转化药水依然改变了你身体的许多其他部位；当你抚摸自己时，忍不住发出一声相当尖细的喘息。
+\t\t#ELSE
+\t\t\t发现自己身处[pc.a_raceFull(true)]的身体中，当你抚摸自己时，忍不住发出一声相当尖细的喘息。
+\t\t#ENDIF
+\t\t#IF(!flags.getBool('shiranuiTFWasFeminine'))
+\t\t\t毫无疑问：当你的[pc.fingers]划过脸庞和躯干时，你意识到自己现在拥有一种[style.colourFeminine(女性化)]的外表。
+\t\t#ENDIF
+\t\t#IF(flags.getObject('shiranuiPreTFGender').getGenderName().isHasPenis())
+\t\t\t突然意识到
+\t\t\t#IF(pc.hasLegs())
+\t\t\t\t你的[pc.legs]之间空荡荡的，你伸手
+\t\t\t#ELSE
+\t\t\t\t下体似乎少了些什么，你
+\t\t\t#ENDIF
+\t\t\t触摸下体，发现[style.colourMinorBad(你已经没有阴茎了)]时，不由得倒吸了一口气！
+\t\t#ENDIF
+\t\t#IF(!flags.getObject('shiranuiPreTFGender').getGenderName().isHasVagina())
+\t\t\t你的[pc.fingers]掠过胯间，发现自己现在有了[pc.a_pussy+]，忍不住呻吟起来！
+\t\t#ENDIF
+\t\t#IF(!flags.getObject('shiranuiPreTFGender').getGenderName().isHasBreasts())
+\t\t\t你注意到身上变化最明显的部位，托起并捧住在胸前长出的[pc.breasts+]，感受到[pc.nipples+]有多么敏感，不由得猛吸了一口气。
+\t\t#ELSE
+\t\t\t当你用[pc.hands+]托起自己的[pc.tits+]时，感受到[pc.nipples+]有多么敏感，不由得猛吸了一口气。
+\t\t#ENDIF
+\t</p>
 	<p>
 		#IF(!pc.isAbleToHaveRaceTransformed())
-			Although you're [pc.a_race], and as such are immune to racial transformations, your new body is proof that you're still able to be transformed in numerous other ways.
-		#ELSEIF(flags.getObject('shiranuiPreTFSubspecies')==pc.getSubspecies())
-			While you remained [pc.a_race], the transformative potion still worked to alter many other parts of your body, and you can't help but let out a rather high-pitched gasp as you touch yourself.
+			[shiranui.speech(你以为转化对你这个[pc.a_race]没用吗？<i>蠢货！</i>我之后会好好享用你那好色的身体的！)]
 		#ELSE
-			Finding yourself in the body of [pc.a_raceFull(true)], you can't help but let out a rather high-pitched gasp as you touch yourself.
+			[shiranui.speech(魔药的效果完美！我之后会好好享用你那好色的身体的！)]
 		#ENDIF
-		#IF(!flags.getBool('shiranuiTFWasFeminine'))
-			 There's no mistaking it; as your [pc.fingers] trace over your face and torso, you realise that you now have a [style.colourFeminine(feminine)] appearance.
-		#ENDIF
-		#IF(flags.getObject('shiranuiPreTFGender').getGenderName().isHasPenis())
-			 Suddenly becoming aware 
-			#IF(pc.hasLegs())
-				 of the void between your [pc.legs], you reach down to 
-			#ELSE
-				 that something's missing from your groin, you
-			#ENDIF
-			 touch your groin and gasp as you discover that [style.colourMinorBad(you no longer have a penis)]!
-		#ENDIF
-		#IF(!flags.getObject('shiranuiPreTFGender').getGenderName().isHasVagina())
-			 Your [pc.fingers] dart over your crotch, and you can't help but moan as you discover that you now have [pc.a_pussy+]!
-		#ENDIF
-		#IF(!flags.getObject('shiranuiPreTFGender').getGenderName().isHasBreasts())
-			 Focusing on the most obvious part of you that's changed, you heft and cup the [pc.breasts+] which have grown upon your chest and take a sharp inhalation of breath as you feel how sensitive your [pc.nipples+] are.
-		#ELSE
-			 As you heft your [pc.tits+] in your [pc.hands+], you take a sharp inhalation of breath as you feel how sensitive your [pc.nipples+] are.
-		#ENDIF
+		不知火的声音在雾气中渐渐远去，离去时还伴着笑声。
 	</p>
 	<p>
-		#IF(!pc.isAbleToHaveRaceTransformed())
-			[shiranui.speech(Did you think that the transformation wouldn't work, just because you're [pc.a_race]? <i>Moron!</i> I'll be having fun with that lewd body of yours later!)]
-		#ELSE
-			[shiranui.speech(The potion worked perfectly! I'll be having fun with that lewd body of yours later!)]
-		#ENDIF
-		 the voice of Shiranui fades away into the mists, laughing as she goes.
+		一阵轻柔的微风忽然吹过，你面前那团粉色的火币摇曳了一瞬，随即无声地熄灭了。一缕淡淡的紫色烟雾在原处短暂停留，然后被风吹散，消逝得无影无踪。
 	</p>
 	<p>
-		A gentle breeze suddenly blows through the area, and the pink flame before you sputters for a moment before being silently extinguished. A thin cloud of purple smoke lingers in its place for a moment, before being blown away and dissipating into nothing.
+		随着这个奥术锚点的毁坏，不知火的法术被削弱了，周围的迷雾也随之稍稍变薄、退散了一些。虽然其中一处火焰已经被熄灭，但还有两处需要处理……
 	</p>
-	<p>
-		With the destruction of this arcane anchor, Shiranui's spell is weakened, and the surrounding mists thin out and recede by just a little. Although one of the fires has now been extinguished, there are still two more to deal with...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Flame 2: -->
 	
 	<htmlContent tag="FLAME2_START"><![CDATA[
 	<p>
-		Wondering what form the linked object will take this time, you cautiously approach the floating ball of pink fire and look around for something which doesn't seem to belong here. You don't have to search very far, as lying on the ground a short distance away from the fire, half-hidden behind several tall tufts of grass, is a conspicuous bundle of red ribbon. Picking it up, you see that it's been repeatedly folded over onto itself, before being tied up with a length of black string.
+		不知道这次关联的物品会是什么形态，你谨慎地走向那颗漂浮的粉色火球，环顾四周寻找不属于这里的东西。你很快就发现了——在离火焰不远的地上，半藏在几丛高草后面，是一卷显眼的红色缎带。捡起来一看，它被反复折叠了好几层，然后用一截黑色的绳子捆扎了起来。
 	</p>
 	<p>
-		[shiranui.speech(Takahashi tried to disrupt my spell with that silly little ribbon of hers,)] the voice of Shiranui drifts out from the mist, [shiranui.speech(Look at it; all tied up and <i>desperately</i> struggling to be free! How pathetic!)]
+		「高桥试图用她那条可笑的小缎带来破坏我的法术，」不知火的声音从迷雾中飘来，「你看看它，被捆得严严实实，还在<i>急切地</i>挣扎着想要挣脱！真是可悲！」
 	</p>
 	<p>
-		Sure enough, as you hold the ribbon in your [pc.hands], it suddenly starts to squirm about and struggle against the black string that's binding it. As it moves, you're able to tell from both the sound and the texture of their surfaces that both the ribbon and the string are made out of paper.
+		果不其然，当你把缎带拿在[pc.hands]里时，它突然开始扭动起来，拼命挣扎着想要挣脱束缚它的黑绳。随着它的动作，你从声音和触感都能分辨出，缎带和绳子都是用纸做的。
 	</p>
 	<p>
-		There's no doubt that this is the object which is linked to the arcane fire, but before carelessly ripping up the entire bundle, you take a moment to inspect it more thoroughly. It seems possible to tear the string and so free the ribbon, but if you wanted to tear the ribbon itself, then you'd also have to tear the string to do so. As such, the only choices you have are to tear just the string and free the ribbon, or tear up everything.
+		毫无疑问，这就是与奥术火焰相连的物品。但在鲁莽地撕碎整个包裹之前，你花了点时间仔细检查了一番。看起来可以撕断绳子来释放缎带，但如果你想撕毁缎带本身，就必须同时撕断绳子。因此，你只有两个选择：只撕断绳子释放缎带，或者把所有东西都撕碎。
 	</p>
 	<p>
-		[shiranui.speech(That little minx spent weeks enchanting that ribbon, and almost managed to snuff out my fire,)] Shiranui giggles, [shiranui.speech(I should have torn it up when I had the chance. If you'd be so kind as to finish the job, I'd appreciate it.)]
+		「那个小妖精花了好几周来给那条缎带附魔，差点就把我的火焰给熄灭了，」不知火咯咯笑道，「我当时就应该把它撕了的。如果你愿意帮忙把这活儿干完，我会很感激的。」
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME2_RIP_BOTH"><![CDATA[
 	<p>
-		The idea that a ribbon which had been enchanted by Takahashi would have been left here by Shiranui, and that she would have told you what it is, seems very hard to believe. As such, you decide to destroy both the string and the ribbon. As they're both made of paper, it takes you just a moment to tear through the two of them and send their ripped pieces fluttering to the floor.
+		一条由高桥附魔的缎带会被不知火留在这里，而且她还会告诉你那是什么——这件事怎么想都太可疑了。因此，你决定把绳子和缎带一起销毁。两者都是纸做的，你只花了片刻功夫就将它们撕成碎片，碎屑纷纷扬扬地飘落到地上。
 	</p>
 	<p>
-		As the shreds of ribbon, no longer bound by the string, settle on the ground, they suddenly twitch and transform into strips of thick, red leather. Suddenly, they all fly up at you and furiously try to wrap themselves around your body and limbs. As they're cut up into such small pieces, however, they aren't able to restrain you, and so you're able to effortlessly peel them off your [pc.skin] and throw them back down to the ground, whereupon they turn back into paper and are consumed by flashes of purple fire.
+		缎带的碎片脱离了绳子的束缚，纷纷落到地面上，却突然抽搐起来，转化成一条条厚实的红色皮革。紧接着，它们一齐朝你飞来，疯狂地试图缠绕住你的身体和四肢。然而，由于被撕成了太小的碎片，它们根本无法束缚住你，你毫不费力地就把它们从[pc.skin]上剥了下来，扔回地上。落地之后，它们重新变回纸片，被一阵紫色的火焰吞噬殆尽。
 	</p>
 	<p>
-		[shiranui.speech(How clever of you,)] Shiranui derisively sneers from the shadows, [shiranui.speech(You saw through my trick, did you? What a shame, you were <i>bound</i> to enjoy it!)]
+		[shiranui.speech(你还挺聪明的嘛，)]不知火从暗处发出嘲讽的冷笑，[shiranui.speech(居然看穿了我的把戏？真可惜啊，你本来注定会<i>乐在其中</i>的！)]
 	</p>
 	<p>
-		The youko's laughter fades into the distance as a sudden gust of wind blows through the area. The pink fire before you roars for a moment, before vanishing and leaving behind nothing but an ephemeral wisp of smoke. Once again, as one of Shiranui's arcane anchors is destroyed, the mists which surround you get thinner and retreat further into the tree line.
+		妖狐的笑声渐渐远去，一阵突如其来的疾风吹过此地。你面前的粉色火焰猛烈地跳动了一下，随即消散，只留下一缕转瞬即逝的烟雾。又一个不知火的奥术锚点被摧毁，你周围的迷雾变得更加稀薄，进一步退入了树丛之中。
 	</p>
 	<p>
-		There must now be only one flame left to extinguish. Hopefully once that's taken care of you'll be able to reunite with Meraxis...
+		现在应该只剩下最后一枚火币了。希望解决掉它之后，你就能和梅拉克西丝重新会合……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME2_RIP_STRING"><![CDATA[
 	<p>
-		Sensing that the string is the real object which must be destroyed, you take care not to damage the ribbon as you tear the black binding into pieces. Now free, the paper ribbon happily dances up into the air, before suddenly twitching, lengthening, and finally transforming into a long strip of thick, red leather. Suddenly, with lightning speed, it flies towards you and furiously wraps itself around your body and limbs.
+		你察觉到真正需要摧毁的是那根绳子，于是小心翼翼地避免损坏缎带，只将黑色的束绳撕成碎片。重获自由的纸缎带开心地飞舞到空中，随即猛然一阵抽搐，不断伸展拉长，最终转化成一条又长又厚的红色皮革。紧接着，它以闪电般的速度朝你飞来，疯狂地缠绕住了你的身体和四肢。
 	</p>
 	<p>
-		[shiranui.speech(What an <i>idiot</i>!)] Shiranui gloats as the leather tightens around your [pc.arms] and [pc.legs]. One end of this enchanted binding lifts up and tightly wraps itself around your head, forming a blindfold through which nothing can be seen, as well as a gag through which you find it impossible to talk. Tighter and tighter the binding gets, until your [pc.arms] are locked behind your back and your
+		[shiranui.speech(真是个<i>蠢货</i>！)]不知火得意洋洋地嘲笑道，皮革在你的[pc.arms]和[pc.legs]上越勒越紧。这条附魔束带的一端翘起，紧紧缠绕住你的头部，形成了一副完全遮挡视线的眼罩，以及一个让你完全无法开口说话的口塞。束缚越来越紧，直到你的[pc.arms]被锁在身后，
 		#IF(pc.hasLegs())
-			 legs are tied up and forced apart,
+			双腿也被绑住并强行分开，
 		#ELSE
-			 lower body is constricted within the tightening coils of leather,
+			下半身被不断收紧的皮革层层缠绕，
 		#ENDIF
-		 which sends you helplessly tumbling to the ground. As you lie there, completely powerless to escape from your bindings, you hear footsteps approaching.
+		你无助地跌倒在地。就这样躺在那里，完全无法挣脱束缚，你听到有脚步声正在靠近。
 	</p>
 	<p>
-		[shiranui.speech(What easy prey you are,)] Shiranui tuts as she comes to a halt beside you. You feel her toes tracing up and over your body, before she places her bare foot down over your [pc.face+]. Laughing to herself as you're forced to endure this humiliation, she continues, [shiranui.speech(Takahashi claimed that you were powerful enough to defeat Meraxis, who herself is a recognised daughter of an elder lilin, so I really was expecting more from you. Now hold still while I take everything that you own...)]
+		[shiranui.speech(你这猎物也太好抓了，)]不知火啧啧着在你身旁停下脚步。你感觉到她的脚趾沿着你的身体缓缓描画而上，然后将赤裸的脚掌踩在了你的[pc.face+]上。她笑着看你被迫忍受这番屈辱，继续说道，[shiranui.speech(高桥说你强大到足以击败梅拉克西丝——她本人可是一位上位莉琳承认的女儿——所以我对你的期望还是蛮高的。现在乖乖别动，让我把你身上的东西全部收走……)]
 	</p>
 	<p>
-		The youko takes her foot off your face, before snapping her fingers at the leather binding. As though possessed with a mind of its own, the strip of leather contorts and flaps around; its movements are totally in sync with those of Shiranui as the trickster youko swiftly relieves you of all of your possessions.
+		妖狐从你脸上移开了脚，然后对着皮革束带打了个响指。那条皮革仿佛有了自己的意志，扭曲翻转、不停拍动；它的每一个动作都与不知火完美同步，这位诡计多端的妖狐麻利地将你身上的所有物品全部搜刮一空。
 		#IF(pc.isAnyEquippedClothingSealed())
-			 Where necessary, she channels arcane essences into your clothing in order to remove their seals, before stripping you completely naked. Letting out a mischievous laugh, she teases,
+			必要时，她会将奥术精华注入你的衣物来解除封印，然后将你扒得一丝不挂。她发出一声顽皮的笑，揶揄道，
 		#ELSE
-			 Stripping you completely naked, she lets out a mischievous laugh and teases,
+			将你扒得一丝不挂后，她发出一声顽皮的笑，揶揄道，
 		#ENDIF
-		 [shiranui.speech(Thank you for giving all of your possessions to me! Perhaps if you continue to amuse me you can earn them back. For the rest of your time within my fun little world of illusions, however, you'll have to get by with nothing but this cute little outfit which I've prepared for you...)]
+		[shiranui.speech(多谢你把所有的东西都送给我！要是你继续让我开心，说不定还能把它们赢回去呢。不过在我这个有趣的幻境里待着的这段时间嘛，你就只能靠我给你准备的这套可爱小衣服凑合了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME2_DRESSED"><![CDATA[
 	<p>
-		Once again, the leather strip moves around you in order to give Shiranui access to your body, but this time instead of stripping you she beings to dress you.
-		#IF(pc.isBipedal())
-			 First, what feel like a pair of tight, latex stockings are drawn up over your [pc.legs+], before a pair of high heels are forced onto your [pc.feet+]. Next, 
-		#ELSE
-			 First, 
-		#ENDIF
-		 your [pc.arms+] are fed into the sleeves of a latex crop-top, which is swiftly zipped up at the back. A tiny microskirt is then fastened around your waist, then finally a choker is tightly clasped into place around your neck. Flicking the metal tag which hangs from your new neckpiece, the youko reads from it and laughs,
-		#IF(flags.hasFlag(FLAG_innoxia_transformed_by_shiranui))
-			 [shiranui.speech(<i>'Dumb Slut'</i>, that describes you perfectly! Now I've transformed you <i>and</i> dressed you up to be just as I want you. ~Mmm!~ I could fuck you right now...)]
-		#ELSE
-			 [shiranui.speech(<i>'Dumb Slut'</i>, that describes you perfectly! ~Mmm!~ I could fuck you right now...)]
-		#ENDIF
+\t\t皮革带再次绕着你移动，好让不知火能够接触你的身体，但这一次她没有剥去你的衣物，而是开始为你穿衣。
+\t\t#IF(pc.isBipedal())
+\t\t\t首先，一双像紧身乳胶长筒袜的东西被拉到你的[pc.legs+]上，随后一双高跟鞋被强行套上你的[pc.feet+]。接着，
+\t\t#ELSE
+\t\t\t首先，
+\t\t#ENDIF
+\t\t\t你的[pc.arms+]被塞进乳胶短款上衣的袖子里，背后的拉链随即被迅速拉上。一条小巧的超短裙被系在你的腰间，最后，一只项圈紧紧扣在你的脖子上。不知火拨弄着挂在新项圈上的金属牌，读着上面的字，笑道，
+\t\t#IF(flags.hasFlag(FLAG_innoxia_transformed_by_shiranui))
+\t\t\t[shiranui.speech(<i>“蠢婊子”</i>，这个称呼完美地描述了你！现在我不但把你转化了，<i>还</i>把你打扮成我想要的样子。~嗯！~我现在就想操你……)]
+\t\t#ELSE
+\t\t\t[shiranui.speech(<i>“蠢婊子”</i>，这个称呼完美地描述了你！~嗯！~我现在就想操你……)]
+\t\t#ENDIF
+\t</p>
+	<p>
+		突然，你感觉到一根又粗又热、不断跳动的东西紧贴着你的[pc.skin]。你立刻意识到那是不知火的肉棒，隔着封嘴的皮条发出了一声闷叫。狡黠的妖狐见状笑了起来，揶揄道：[shiranui.speech(别担心，[pc.name]。除非你求我，否则我才不会操你。不过……你很快就会求我了……)]
 	</p>
 	<p>
-		Suddenly, you feel something thick, hot, and throbbing pressing against your [pc.skin]. Instantly recognising it to be Shinarui's cock, you let out a muffled yelp through the leather strip that's covering your mouth. The trickster youko laughs at your reaction and teases, [shiranui.speech(Don't worry, [pc.name]. I won't fuck you unless you're begging for it. Which you will be soon enough...)]
+		说完，妖狐转身离你而去，消失在迷雾之中。她离开的瞬间，皮革束缚重新变回了纸张，你挣脱开来，碎片飘落在地，随即被一簇簇紫色火焰吞噬殆尽。
 	</p>
 	<p>
-		With that, the youko steps away from you and vanishes back into the mist. As she departs, the leather binding turns back into paper, and as you tear yourself free, the pieces flutter to the ground and are consumed by flashes of purple flame.
+		不知火最后一声嘲弄的笑声随着一阵突然吹过的风飘入你的耳中。你面前的粉色火焰猛地一窜，随即消失无踪，只留下一缕转瞬即逝的轻烟。又一个不知火的奥术锚点被摧毁，你周围的迷雾变得更加稀薄，向林木深处进一步退去。
 	</p>
 	<p>
-		A final burst of Shiranui's mocking laughter drifts to you on a gust of wind that suddenly blows through the area. The pink fire before you roars for a moment, before vanishing and leaving behind nothing but an ephemeral wisp of smoke. Once again, as one of Shiranui's arcane anchors is destroyed, the mists which surround you get thinner and retreat further into the tree line.
-	</p>
-	<p>
-		Looking down at your new outfit, you see that the skimpy fetish gear which you've been clad in is a garish pink, and as you try to remove it you discover that it's all been enchanted so as to be sealed onto your body. As you helplessly tug at your new choker, you feel that the enchantment which it's carrying is more than that of a simple seal, and you can't help but let out a pathetic [pc.moan] as you realise that it's making you both more submissive and aroused at the fact that you've been dressed up like this. What's more,
+		你低头打量着自己身上的新装扮，发现套在你身上的暴露恋物装束是一种花哨的粉红色。当你试图脱掉它时，你发现这些衣物全都被附魔封印在了你的身体上。你无助地拉扯着新戴上的项圈，感觉到它所承载的附魔远不止简单的封印——你忍不住发出一声可怜的[pc.moan]，因为你意识到它正在让你变得更加顺从，并且对自己被这样打扮起来这件事感到愈发兴奋。不仅如此，
 		#IF(pc.hasVagina())
-			 it's filling your mind with a desperate need to have your [pc.pussy+] pounded by a nice, thick cock.
+			它还让你的脑海中充满了一种迷乱的渴求——渴求一根又粗又大的肉棒狠狠贯穿你的[pc.pussy+]。
 		#ELSE
-			 it's filling your mind with a desperate desire to have a [pc.pussy+] so that you can have it pounded by a nice, thick cock.
+			它还让你的脑海中充满了一种迷乱的渴望——渴望自己能拥有一个[pc.pussy+]，好让一根又粗又大的肉棒狠狠地贯穿它。
 		#ENDIF
 	</p>
 	<p>
-		Trying not to think about how you've just been tricked and humiliated by Shiranui, you focus on what you need to do next. There must now only be one flame left to extinguish. Hopefully once that's taken care of you'll be able to find the hideout and retrieve your belongings before Meraxis can see you like this...
+		你努力不去想自己刚刚是如何被不知火戏耍和羞辱的，把注意力集中在接下来该做的事上。现在应该只剩下一枚火币了。希望处理完之后，你能在梅拉克西丝看到你这副模样之前找到藏身处，把你的东西拿回来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Flame 3: -->
 	
 	<htmlContent tag="FLAME3_START"><![CDATA[
 	<p>
-		As you approach what must now be the final flame, it's immediately obvious what its linked object is. To one side of the small clearing in which the flame burns, five huge, full-height mirrors have been placed in a semi-circular fashion. Curiously, as you approach these mirrors, your reflection doesn't appear in any of them.
+		当你走近这最后一处火焰时，与之相连的物体一目了然。在火焰燃烧的小空地一侧，五面巨大的落地镜以半圆形排列着。奇怪的是，当你走近这些镜子时，你的倒影却没有出现在任何一面镜中。
 	</p>
 	<p>
-		[shiranui.speech(There are no more tricks. You can smash those mirrors to extinguish the flame,)] the voice of Shiranui drifts out from the mist, [shiranui.speech(Of course, if you do that then you'll miss out on the show. One of the stars is none other than myself, and the other... is you!)]
+		[shiranui.speech(已经没有更多把戏了。你可以砸碎那些镜子来熄灭火币，)]不知火的声音从迷雾中飘来，[shiranui.speech(当然，如果你那样做的话，就会错过一场好戏。主角之一正是我本人，而另一位……就是你！)]
 	</p>
 	<p>
-		As she finishes her sentence, your stark-naked reflection suddenly appears in all five of the mirrors. Standing beside you in each one is a similarly-naked, seven-tailed youko. As you look upon the beautiful form of Shiranui, the first thing you notice is the fact that her hair, as well as the fur on her fox tails and ears, is light pink in colour. Her flawless, porcelain skin and [shiranui.cupSize]-cup breasts prove to be irresistible to your reflections, who independently move with lives of their own as they turn to face the youko and begin to caress her shapely body in five different ways. As first kisses are exchanged within the mirrors, you turn around to make sure that the real Shiranui isn't sneaking up on you, but there's no sign of her nor of any imminent danger.
+		话音刚落，你赤裸的倒影突然出现在了所有五面镜子中。每面镜子里，你的身旁都站着一位同样一丝不挂的七尾妖狐。当你望向不知火那美丽的身姿时，首先注意到的是她的头发，以及狐狸尾巴和耳朵上的毛皮，都呈浅粉色。她无瑕的瓷白肌肤和[shiranui.cupSize]罩杯的乳房对你的倒影们有着无法抗拒的吸引力，它们仿佛拥有了各自的生命，独立地转身面向妖狐，以五种不同的方式开始抚摸她曼妙的身躯。当镜中开始交换初吻时，你转过身确认真正的不知火没有偷偷靠近你，但既看不到她的身影，也没有任何迫近的危险迹象。
 	</p>
 	<p>
-		Turning back to the mirrors, you see that in each one your reflections and the images of Shiranui are now passionately making out with one another. As they continue to exchange saliva with your reflections, the youkos' excitement is made clear as huge, scarlet fox-cocks rise up from their groins. Revealed now to be [shiranui.a_gender] who's packing a [shiranui.a_cockGirth], [shiranui.cockLengthValue] dick, the real Shiranui laughs from somewhere within the mist, [shiranui.speech(We make a good couple, wouldn't you say? There's no harm in watching a little more; you can smash the mirrors at any moment, but then you won't get to see what happens next... You're going to love my cock...)]
+		你重新看向镜子，只见每面镜中你的倒影正与不知火的幻象热情地激吻缠绵。她们不断与你的倒影交换唾液，胯下挺立起一根根猩红硕大的狐狸阴茎，妖狐的兴奋显露无疑。如今暴露出她是个[shiranui.a_gender]，还长着一根[shiranui.a_cockGirth]、[shiranui.cockLengthValue]的阴茎，真正的不知火在迷雾深处笑出声来：[shiranui.speech(我们很般配，你说是不是？再多看一会儿也无妨；你随时都可以砸碎镜子，但那样你就看不到接下来会发生什么了……你会爱上我的肉棒的……)]
 	</p>
 	<p>
-		It would be easy to simply smash these fragile-looking mirrors and therefore extinguish the last of Shiranui's fires, but if you wanted to see what happens next then you could wait for a moment and watch.
+		要熄灭不知火最后的残焰，只需砸碎这些看似脆弱的镜子就行，易如反掌；但若你想看看接下来会发生什么，也可以稍作等待，静观其变。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_SMASH1"><![CDATA[
 	<p>
-		You aren't interested in what Shiranui's mirrors are going to show you, and so you reject her words and strike the first of the mirrors. It completely shatters under your blow, and the broken pieces instantly transform from glass and metal into scraps of plain white paper, which burn up in flashes of purple fire. The force of your strike is carried through each of the four remaining mirrors, and in turn every one of them undergoes a similar destructive process.
+		你对不知火的镜子将要展示的东西毫无兴趣，于是无视她的话语，径直击碎了第一面镜子。镜面在你的打击下彻底粉碎，碎片瞬间从玻璃和金属化为几片白纸，随即在紫色火焰中燃烧殆尽。你的力量贯穿了剩下的四面镜子，每一面都依次经历了同样的毁灭过程。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_SMASH_COMMON_END"><![CDATA[
 	<p>
-		[shiranui.speech(How disappointing,)] the voice of Shiranui whines,
+		「真是令人失望呢。」不知火的声音带着哀鸣，
 		#IF(pc.hasVagina())
 			#IF(flags.hasFlag(FLAG_innoxia_transformed_by_shiranui))
-				 [shiranui.speech(That potion you drank gave you the exact sort of pussy which I love, and I really was hoping that I'd get to fuck it...)]
+				「你喝下的那瓶魔药让你长出了我最喜欢的那种小穴，我真的很想好好享用一番呢……」
 			#ELSE
-				 [shiranui.speech(I was hoping to fuck that hot little pussy of yours...)]
+				「我本来还想好好操一操你那骚嫩的小穴呢……」
 			#ENDIF
 		#ELSEIF(game.isAnalContentEnabled())
-			 [shiranui.speech(I was hoping to fuck that nice ass of yours...)]
+			「我本来还想好好操一操你那漂亮的屁股呢……」
 		#ELSE
-			 [shiranui.speech(I was hoping to fuck that cute little face of yours...)]
+			「我本来还想好好操一操你那可爱的小脸蛋呢……」
 		#ENDIF
 	</p>
 	<p>
-		As Shiranui says this, a sudden gust of wind rushes through the clearing. The arcane fire is instantly snuffed out, and the puff of smoke which it releases is quickly blown away.
+		不知火话音刚落，一阵狂风突然席卷过空地。奥术火焰瞬间被吹灭，升起的那缕烟雾也很快消散无踪。
 	</p>
 	<p>
-		[shiranui.speech(You've destroyed all of my anchors. I won't be able to keep this spell going for much longer,)] Shiranui mournfully calls out, before letting out a cheeky giggle and teasing, [shiranui.speech(Before it completely breaks, there's still time to have some fun with Meraxis! Please join us when you're ready!)]
+		「你已经摧毁了我所有的锚点。这个法术我维持不了多久了。」不知火哀伤地喊道，随即又发出一声俏皮的轻笑，调侃道，「不过在法术彻底崩溃之前，还有时间和梅拉克西丝好好玩一玩哦！准备好了就来加入我们吧！」
 	</p>
 	<p>
-		The youko's gleeful laughter fades away into silence. With all of the youko's fires now extinguished, and her spell on the brink of collapse, all that's left for you to do is to find Meraxis and potentially save her from whatever Shiranui has planned for her.
+		妖狐欢快的笑声渐渐消散在寂静中。随着她的所有火焰被熄灭，法术也处于崩溃的边缘，你现在要做的就是找到梅拉克西丝，想办法把她从不知火的算计中解救出来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_WATCH1"><![CDATA[
 	<p>
-		Your curiosity gets the better of you, and instead of smashing the mirrors you decide to continue watching to see what happens next.
+		好奇心占了上风，你没有砸碎镜子，而是决定继续观看接下来的发展。
 	</p>
 	<p>
-		With each of the mirrors showing a slightly different scene, the occupants within move on to the next stage. In the first, you drop to your knees and begin kissing the tapered head of Shiranui's throbbing cock. In the next, the youko steps around behind you and reaches down to start stroking your 
+		五面镜子各自呈现出略有不同的场景，镜中的人物们进入了下一阶段。在第一面镜中，你跪了下来，开始亲吻不知火那根跳动着的阴茎的尖端。在第二面中，妖狐绕到你身后，伸手开始抚弄你的
 		#IF(pc.hasPenis())
-			 [pc.cock+]
+			[pc.cock+]
 		#ELSEIF(pc.hasVagina())
-			 [pc.pussy+]
+			[pc.pussy+]
 		#ELSE
-			 genderless mound
+			无性的下体
 		#ENDIF
-		 as she grinds the underside of her shaft over your [pc.ass+]. In the third, you lie down on your back and allow Shiranui to drop her wet pussy down onto your face. In the fourth, you're kneeling down and
+		，同时将她阴茎的底面磨蹭着你的[pc.ass+]。在第三面中，你仰面躺下，让不知火将湿润的小穴坐到你脸上。在第四面中，你跪在地上
 		#IF(pc.hasBreasts())
-			 preparing to give her a titjob,
+			准备用乳房为她服务，
 		#ELSE
-			 eagerly jerking her off,
+			饥渴地为她手淫，
 		#ENDIF
-		 while the last mirror shows a scene similar to that of the first, except instead of kissing the tip of her cock you're lovingly licking the underside of her massive shaft. It doesn't escape your notice that you're the one taking the submissive role in each scene,
+		而最后一面镜子里的场景与第一面相似，只不过你不是在亲吻她阴茎的顶端，而是深情地舔舐着她那粗大阴茎的底面。你注意到自己在每个场景中都扮演着顺从的角色，
 		#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui))
-			 and thanks to the power of the enchanted choker which is fastened around your neck, you feel immensely turned on as you witness yourself acting in this manner.
+			而拜紧扣在你脖子上的附魔项圈所赐，看到自己这副模样令你感到无比兴奋。
 		#ELSEIF(pc.hasFetish(FETISH_SUBMISSIVE))
-			 and thanks to the fact that you're a sub, you feel immensely turned on as you witness yourself acting in this manner.
+			而由于你本就是个顺从者，看到自己这副模样令你感到无比兴奋。
 		#ELSEIF(pc.hasFetish(FETISH_DOMINANT))
-			 and even though the real you would instead be taking the dominant role, you still feel a rush of arousal as you witness these lewd scenes.
+			尽管真实的你会选择扮演支配者的角色，但目睹这些好色的场景仍让你涌起一阵冲动。
 		#ELSE
-			 and you feel a rush of arousal as you witness these lewd scenes.
+			目睹这些好色的场景令你涌起一阵冲动。
 		#ENDIF
 	</p>
 	<p>
-		[shiranui.speech(You look so happy to be my submissive little slut,)] Shiranui teases, [shiranui.speech(Let's carry on watching it together...)]
+		[shiranui.speech(做我顺从的小荡妇，你看起来开心得很嘛，)]不知火挑逗道，[shiranui.speech(咱们接着一起看吧……)]
 	</p>
 	<p>
-		In the first mirror, your reflection takes the youko's cock into [pc.her] mouth, before starting to give Shiranui a very enthusiastic blowjob. In the second mirror, you're melting back into the youko's arms as she
+		在第一面镜子里，你的倒影将妖狐的阴茎含入[pc.her]口中，然后开始热情地为不知火口交。在第二面镜子里，你融化在妖狐的怀抱中，而她
 		#IF(pc.hasPenis())
-			 rapidly jerks you off.
+			迅速地为你手淫。
 		#ELSEIF(pc.hasVagina())
-			 rapidly fingers your [pc.pussy+].
+			迅速地用手指抽插着你的[pc.pussy+]。
 		#ELSE
-			 expertly stimulates your genderless mound with her [shiranui.fingers+].
+			用她的[shiranui.fingers+]熟练地刺激着你无性的下体。
 		#ENDIF
-		 In the third mirror, you're submissively eating Shiranui out as she sinks down onto your face, while in the fourth you look to be getting even more aroused than she is as you
+		在第三面镜子里，不知火坐到你脸上，你顺从地为她舔舐，而在第四面镜子里，你看起来比她还要兴奋，
 		#IF(pc.hasBreasts())
-			 eagerly give her a titjob.
+			饥渴地用乳房为她服务。
 		#ELSE
-			 frantically jerk her off.
+			拼命地为她手淫。
 		#ENDIF
-		 Finally, in the fifth mirror, your kneeling reflection is dutifully holding still as Shiranui grabs the sides of your head and rhythmically fucks your face.
+		最后，在第五面镜子里，你的倒影跪在地上乖乖地保持不动，不知火抓住你的头部两侧，有节奏地操弄着你的嘴。
 	</p>
 	<p>
-		The more you watch, the more aroused you feel yourself getting. Shiranui's beautiful body and throbbing, irresitable cock are all that you can focus on, and as your reflections continue to please their partners, you find yourself deperately longing to be able to take their place.
+		你看得越多，就越感到欲火焚身。不知火美丽的身体和那根跳动着的、令人无法抗拒的阴茎占据了你全部的注意力，随着你的倒影们继续取悦着各自的对象，你发觉自己迫切地渴望能取代它们的位置。
 	</p>
 	<p>
-		[shiranui.speech(Look at you go!)] the voice of the real Shiranui excitedly exclaims, [shiranui.speech(Oh! ~Mmm!~ You're about to cum for me!)]
+		[shiranui.speech(看看你这副模样！)]真正的不知火兴奋地叫道，[shiranui.speech(哦！~嗯嗯！~你要为我高潮了！)]
 	</p>
 	<p>
-		Sure enough, your submissive reflections seem to have reached their climax, and all at once they orgasm. A blinding pulse of intense, arcane-infused lust crashes over you at the exact moment of their climax, and 
+		果然，你那些顺从的镜像似乎已经到达了高潮的顶点，它们同时高潮了。在它们攀上顶峰的那一刻，一股令人目眩的、浸透奥术力量的强烈情欲猛然袭来，
 		#IF(pc.hasPenis() && !pc.isErectionPreventedPhysically())
-			 your cock stiffens and rises into a full, throbbing erection as [pc.a_moan+] escapes from between your [pc.lips+].
+			你的阴茎硬挺起来，完全勃起并搏动着，一声[pc.a_moan+]从你的[pc.lips+]间溢出。
 		#ELSEIF(pc.hasVagina())
-			 you feel your [pc.pussy+] getting wet as [pc.a_moan+] escapes from between your [pc.lips+].
+			你感到[pc.pussy+]变得湿润，一声[pc.a_moan+]从你的[pc.lips+]间溢出。
 		#ELSE
-			 you can't help but let out [pc.a_moan+].
+			你忍不住发出了[pc.a_moan+]。
 		#ENDIF
 	</p>
 	<p>
-		[shiranui.speech(That's it... It feels good to submit to me, doesn't it?)] the voice of Shiranui seductively asks through the mist, before revealing, [shiranui.speech(If you mimic their poses, you can even control what's happening within the mirrors. Give it a try...)]
+		[shiranui.speech(就是这样……臣服于我的感觉很好，不是吗？)]不知火的声音透过迷雾诱惑地问道，随即又说，[shiranui.speech(如果你模仿她们的姿势，你甚至可以控制镜中正在发生的事情。试试看吧……)]
 	</p>
 	<p>
-		Shaking your head, you remind yourself that you need to smash the mirrors in order to break Shiranui's spell. Then again, perhaps watching a little more wouldn't hurt?
+		你摇了摇头，提醒自己必须打碎镜子才能破解不知火的法术。不过话说回来，也许再多看一会儿也无妨？
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_SMASH2"><![CDATA[
 	<p>
-		The scenes within Shiranui's mirrors are enticing, but you manage to shake your head and momentarily free yourself from the temptation of continuing to watch them. Not wanting to be ensnared for a second time, you quickly rush forwards and strike the first of the mirrors. It completely shatters under your blow, and the broken pieces instantly transform from glass and metal into scraps of plain white paper, which burn up in flashes of purple fire. The force of your strike is carried through each of the four remaining mirrors, and in turn every one of them undergoes a similar destructive process.
+		不知火镜中的景象确实很诱人，但你还是努力摇了摇头，暂时从继续观看的诱惑中挣脱出来。不想再被蛊惑第二次，你迅速冲上前去击碎了第一面镜子。镜面在你的打击下彻底粉碎，碎片瞬间从玻璃和金属化为几片白纸，随即在紫色火焰中燃烧殆尽。你的力量贯穿了剩下的四面镜子，每一面都依次经历了同样的毁灭过程。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_WATCH2"><![CDATA[
 	<p>
-		Aroused, intrigued, and willing to take this a little further, you do as Shiranui suggests. As each one of your mirror reflections finish orgasming, they move into new positions, and you decide to mimic the one in the very middle in an attempt to control how the scene plays out.
+		你既兴奋又好奇，愿意更进一步，于是按照不知火的建议去做。当你每一面镜中的倒影都结束高潮后，它们换了新的姿势，你决定模仿正中间那个的动作，试图控制接下来的场景走向。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_transformed_by_shiranui))
-			Having been transformed by Shiranui makes this whole act even more of a turn on; getting to explore your new body in this manner sends a rush of excitement through you and causes you to let out an eager [pc.moan].
+			曾被不知火转化过的身体让这一切更加令人兴奋；以这种方式探索你的新身体让你浑身一阵战栗，忍不住发出一声急切的[pc.moan]。
 		#ELSE
-			The fact that the real Shiranui is no doubt watching you and potentially waiting for the perfect moment in which to strike gives you an unexpected rush of excitement and causes you to let out an eager [pc.moan].
+			想到真正的不知火无疑正在看着你，也许正在等待最佳的出手时机，一种意想不到的兴奋涌上心头，你忍不住发出一声急切的[pc.moan]。
 		#ENDIF
 		#IF(pc.getClothingCurrentlyEquipped().isEmpty())
-			 Already completely naked, you don't have to remove any clothing in order to look like your reflection, and so as the other you starts to move into a new position, you mimic [pc.her] movements and try to influence how [pc.sheIs] acting.
+			你已经一丝不挂，不需要脱掉任何衣物就能与倒影一模一样。当镜中的另一个你开始换成新的姿势时，你模仿着[pc.her]的动作，试图影响[pc.sheIs]的行为。
 		#ELSE
 			#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui))
-				 Having already been stripped by Shiranui and dressed up in this revealing fetish gear, each of your orifices are just as exposed as those of your reflection, allowing you to easily imagine yourself in [pc.her] place. As the other you starts to move into a new position, you mimic [pc.her] movements and try to influence how [pc.sheIs] acting.
+				既然已经被不知火扒光并穿上了这套暴露的情趣装束，你的每一处腔穴都像你的倒影一样裸露着，让你很容易就能想象自己置身于[pc.her]的位置。当镜中的另一个你开始换成新的姿势时，你模仿着[pc.her]的动作，试图影响[pc.sheIs]的行为。
 			#ELSE
-				 Your reflection is completely naked, and you feel the need to be in a similar state in order to be able to imagine yourself being in [pc.her] place.
+				你的倒影一丝不挂，你觉得自己也需要处于同样的状态才能想象自己身处[pc.her]的位置。
 				#IF(pc.isAnyEquippedClothingSealed())
-					 You feel the real Shiranui channelling her essences into your sealed clothing in order to remove their enchantments and therefore allowing to strip completely naked. As the other you starts to move into a new position, you mimic [pc.her] movements and try to influence how [pc.sheIs] acting.
+					你感觉到真正的不知火正将精华注入你被封印的衣物中，解除上面的附魔，从而让你能够脱得精光。当镜中的另一个你开始换成新的姿势时，你模仿着[pc.her]的动作，试图影响[pc.sheIs]的行为。
 				#ELSE
-					 You quickly strip naked, and as the other you starts to move into a new position, you mimic [pc.her] movements and try to influence how [pc.sheIs] acting.
+					你迅速脱光了衣物，当镜中的另一个你开始换成新的姿势时，你模仿着[pc.her]的动作，试图影响[pc.sheIs]的行为。
 				#ENDIF
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		[shiranui.speech(That's it...)] Shiranui gleefully whispers to you, [shiranui.speech(Imagine that you're [pc.herHim]. Imagine that you're submitting to me. You <i>will</i> submit to me...)]
+		[shiranui.speech(就是这样……)]不知火愉悦地低声对你说，[shiranui.speech(想象你就是[pc.herHim]。想象你正在臣服于我。你<i>会</i>臣服于我的……)]
 	</p>
 	<p>
-		Copying your reflection, you lie down on your back in the grass. As the mirror version of you coyly bites [pc.her] [pc.lip] and gives the image of Shiranui a submissive look, you find yourself doing the same thing. It's at that moment that you realise that you're not influencing your reflection, but your reflection is influencing you.
+		你模仿着倒影的动作，仰面躺在草地上。当镜中的你娇羞地咬住[pc.her]的[pc.lip]，向不知火的镜像投去顺从的目光时，你发现自己也做出了同样的举动。就在那一刻，你意识到并非你在影响倒影，而是倒影在影响着你。
 	</p>
 	<p>
-		[shiranui.speech(I'm going to fuck you, [pc.name],)] the voice of Shiranui teases, 
+		[shiranui.speech(我要操你，[pc.name]，)]不知火的声音撩拨道，
 		#IF((pc.hasVagina() || game.isAnalContentEnabled()) && pc.hasLegs())
-			 [shiranui.speech(Spread your legs for me.)]
+			[shiranui.speech(把腿张开。)]
 		#ELSE
-			 [shiranui.speech(Submit to me.)]
+			[shiranui.speech(臣服于我。)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasVagina())
 			#IF(pc.hasLegs())
-				 Your reflection submissively spreads [pc.her] [pc.legs] for Shiranui,
+				你的倒影顺从地为不知火张开了[pc.her]的[pc.legs]，
 			#ELSE
-				 Your reflection submissively lies back and beckons Shiranui to fuck [pc.herHim],
+				你的倒影顺从地躺下，示意不知火来操[pc.herHim]，
 			#ENDIF
-			 and you find yourself doing the same. As the mirror image of Shiranui slides her huge fox-cock over your reflection's pussy, you feel the ghostly pressure of an invisible cock rubbing over your own [pc.pussy+].
+			你发现自己也做出了同样的动作。当镜中不知火的镜像将她巨大的狐狸阴茎抵在你倒影的小穴上滑动时，你感到一根无形的阴茎那幽灵般的压迫感正摩擦着你自己的[pc.pussy+]。
 		#ELSEIF(game.isAnalContentEnabled())
 			#IF(pc.hasLegs())
-				 Your reflection submissively spreads [pc.her] [pc.legs] for Shiranui,
+				你的倒影顺从地为不知火张开了[pc.her]的[pc.legs]，
 			#ELSE
-				 Your reflection submissively lies back and beckons Shiranui to fuck [pc.herHim],
+				你的倒影顺从地躺下，示意不知火来操[pc.herHim]，
 			#ENDIF
-			 and you find yourself doing the same. As the mirror image of Shiranui slides her huge fox-cock over your reflection's asshole, you feel the ghostly pressure of an invisible cock rubbing over your own [pc.asshole+].
+			你发现自己也做出了同样的动作。当镜中不知火的镜像将她巨大的狐狸阴茎抵在你倒影的肛门上滑动时，你感到一根无形的阴茎那幽灵般的压迫感正摩擦着你自己的[pc.asshole+]。
 		#ELSE
-			Your reflection submissively opens [pc.her] mouth and beckons Shiranui to drop down on top of [pc.herHim] and fuck [pc.her] face, and you find yourself doing the same. As the mirror image of Shiranui slides her huge fox-cock over your reflection's mouth, you feel the ghostly pressure of an invisible cock rubbing against your own [pc.lips+].
+			你的倒影顺从地张开了[pc.her]的嘴，示意不知火骑到[pc.herHim]身上操[pc.her]的嘴，你发现自己也做出了同样的动作。当镜中不知火的镜像将她巨大的狐狸阴茎抵在你倒影的嘴上滑动时，你感到一根无形的阴茎那幽灵般的压迫感正摩擦着你自己的[pc.lips+]。
 		#ENDIF
 	</p>
 	<p>
-		[shiranui.speech(Submit... Submit...)] Shiranui's voice continues to whisper through the mist, [shiranui.speech(Submit and be <i>mine</i>!)]
+		[shiranui.speech(臣服……臣服……)]不知火的声音继续在迷雾中低语，[shiranui.speech(臣服，成为<i>我的</i>！)]
 	</p>
 	<p>
-		An arcane-charged pulse of intense, mind-numbing arousal pulses through you, and you find yourself forgetting about smashing the mirrors and wishing to be dominated by Shiranui...
+		一股充满奥术能量的强烈快感脉冲穿透了你的身体，令你神志恍惚，渐渐忘记了砸碎镜子的念头，只想被不知火支配……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_SMASH3"><![CDATA[
 	<p>
-		The feeling of the real Shiranui's cock impatiently pressing against your
+		真实的不知火的肉棒急切地抵住你的
 		#IF(pc.hasVagina())
-			 [pc.pussy+]
+			[pc.pussy+]
 		#ELSEIF(game.isAnalContentEnabled())
-			 [pc.asshole+]
+			[pc.asshole+]
 		#ELSE
-			 [pc.lips+]
+			[pc.lips+]
 		#ENDIF
-		 jolts you out of your lustful stupor. Not wanting to be fucked by this trickster youko, you strike out at where you think her body must be, but much to your surprise you hit nothing but empty air.
+		，这种触感将你从情欲的恍惚中惊醒。你不想被这只狡猾的妖狐得逞，于是朝你估计她身体所在的位置猛然出手，可出乎意料的是，你什么也没打到，只击中了空气。
 	</p>
 	<p>
-		[shiranui.speech(What a shame!)] Shiranui laughs as you break free from her spell, [shiranui.speech(I almost had you!)]
+		「真可惜呀！」不知火在你挣脱她的法术时笑道，「差一点就得手了呢！」
 	</p>
 	<p>
-		Not wanting to be ensnared again, you quickly rush forwards and strike the first of the mirrors. It completely shatters under your blow, and the broken pieces instantly transform from glass and metal into scraps of plain white paper, which burn up in flashes of purple fire. The force of your strike is carried through each of the four remaining mirrors, and in turn every one of them undergoes a similar destructive process.
+		不想再被蛊惑，你迅速冲上前去击碎了第一面镜子。镜面在你的打击下彻底粉碎，碎片瞬间从玻璃和金属化为几片白纸，随即在紫色火焰中燃烧殆尽。你的力量贯穿了剩下的四面镜子，每一面都依次经历了同样的毁灭过程。
 		#IF(!flags.hasFlag(FLAG_innoxia_transformed_by_shiranui) && !pc.getHoldingClothing().isEmpty())
-			 You hastily retrieve your discarded clothing and get dressed as the mirrors collapse, making sure to stay alert for any signs of Shiranui as you do so.
+			趁着镜子崩碎的间隙，你连忙捡起丢在地上的衣物穿戴好，同时保持警惕，提防不知火随时可能出现。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_MIRROR_SEX_START"><![CDATA[
 	<p>
-		You're far too horny to even think about backing out now. As your mirror reflections each get penetrated by Shiranui, you helplessly moan, [pc.speech(Yes, I submit!)]
+		你实在太兴奋了，根本无法在这时候退缩。当镜中的每一个倒影都被不知火贯穿时，你无助地呻吟着，[pc.speech(是的，我臣服！)]
 	</p>
 	#IF(pc.hasVagina())
 		<p>
-			A shimmer of light ripples up from where the ghostly cock is pressing against your pussy, and suddenly you're looking upon the real Shiranui. She smirks down at you as she slides the [shiranui.cockHead+] of her [shiranui.cock+] up and down over your defenceless pussy, and you can't help but shudder and moan as you feel her slimy precum being smeared over your [pc.labia+].
+			一道微光从那根幽灵般的阴茎抵着你小穴的地方泛起涟漪，忽然间，真正的不知火出现在你面前。她低头对你露出得意的坏笑，用她[shiranui.cock+]的[shiranui.cockHead+]在你毫无防备的小穴上来回磨蹭，你不禁颤抖着呻吟出声，感觉她黏滑的先走液正被涂抹在你的[pc.labia+]上。
 		</p>
 		<p>
-			[shiranui.speech(Good [pc.girl],)] Shiranui giggles, before pulling her cock back a little and ordering, [shiranui.speech(Spread your pussy for me.)]
+			[shiranui.speech(好[pc.girl]，)]不知火咯咯笑着，将她的阴茎稍微抽回一点，命令道，[shiranui.speech(把你的小穴掰开给我看。)]
 		</p>
 		<p>
-			Obediently reaching down
+			你顺从地将手伸向
 			#IF(pc.hasLegs())
-				 between your [pc.legs], 
+				[pc.legs]之间，
 			#ELSE
-				 to your groin,
+				下体，
 			#ENDIF
-			 you use your [pc.fingers] to spread your pussy open, and desperately whimper as you eagerly anticipate your impending penetration.
+			用[pc.fingers]将小穴掰开，发出迷乱的呜咽声，饥渴地期待着即将到来的侵入。
 		</p>
 		<p>
 			#IF(flags.hasFlag(FLAG_innoxia_transformed_by_shiranui))
-				[shiranui.speech(I knew that transforming you would be worth it,)] the youko teases,
+				[shiranui.speech(我就知道把你转化是值得的，)]妖狐挑逗道，
 			#ELSE
-				[shiranui.speech(I knew that I'd get to fuck you from the first moment I saw you,)] the youko teases,
+				[shiranui.speech(从第一眼看到你起，我就知道我一定会操你的，)]妖狐挑逗道，
 			#ENDIF
 			#IF(pc.isVaginaVirgin())
-				 before suddenly letting out a delighted moan and eagerly asking, [shiranui.speech(You're a virgin, aren't you?)]
+				随即她突然发出一声欣喜的呻吟，饥渴地追问道，[shiranui.speech(你是处女，对吧？)]
 			#ELSE
-				 [shiranui.speech(You're a real slut, aren't you?)]
+				[shiranui.speech(你就是个小荡妇，对吧？)]
 			#ENDIF
 		</p>
 		#IF(pc.isVaginaVirgin())
 			<p>
-				[pc.speech(Yes...)] you whimper, nodding your head as you keep your pussy spread for Shiranui.
+				[pc.speech(是的……)]你呜咽着，一边点头一边为不知火掰开小穴。
 			</p>
 			<p>
-				[shiranui.speech(So you saved yourself for all of those years, waiting to give your first time to me?)] she happily asks. Pointing the head of her huge cock at your virgin orifice, she gently pushes forwards until the tapered tip is
+				[shiranui.speech(所以你保持了这么多年的贞洁，就是为了把第一次献给我？)]她开心地问道。她将巨大阴茎的龟头对准你纯洁的腔穴，温柔地向前顶去，直到锥形的尖端
 				#IF(pc.hasHymen())
-					 prodding at your hymen.
+					抵住了你的处女膜。
 				#ELSE
-					 just starting to enter you.
+					刚刚开始进入你的身体。
 				#ENDIF
-				 Smirking down at you, she demands, [shiranui.speech(Beg for me to take your virginity!)]
+				她俯视着你，露出一抹坏笑，命令道，[shiranui.speech(求我夺走你的贞操！)]
 			</p>
 			<p>
-				Hopelessly turned on, you can't think of doing anything other than what the youko says.
+				你已经兴奋得无可救药，脑子里除了服从妖狐的话什么也想不了。
 				#IF(pc.hasLegs())
-					 Keeping your [pc.legs] parted and your [pc.pussy+] spread open before her,
+					你保持[pc.legs]分开，在她面前掰开[pc.pussy+]，
 				#ELSE
-					 Keeping your [pc.legs] parted and your [pc.pussy+] spread open before her,
+					你保持[pc.legs]分开，在她面前掰开[pc.pussy+]，
 				#ENDIF
-				 you look up at Shiranui and desperately beg, [pc.speech(Please, take my virginity! Fuck me, Shiranui! Fuck me!)]
+				抬头望着不知火，迷乱地恳求道，[pc.speech(求你了，夺走我的贞操吧！操我，不知火！操我！)]
 			</p>
 			<p>
-				With a triumphant moan, the seven-tailed youko thrusts forwards and takes your virginity by burying her huge, throbbing fox-cock deep into your [pc.pussy+].
+				伴随着一声得意的呻吟，七尾妖狐猛地挺身向前，将她巨大的、跳动着的狐狸阴茎深深插入你的[pc.pussy+]，夺走了你的贞操。
 			</p>
 		#ELSE
 			<p>
-				[pc.speech(Yes...)] you whimper, nodding your head as you keep your pussy spread for Shiranui.
+				[pc.speech(是的……)]你呜咽着，一边点头一边为不知火掰开小穴。
 			</p>
 			<p>
-				Smirking down at you, she demands, [shiranui.speech(Beg for me to fuck you!)]
+				她低头对你露出讥笑，命令道：[shiranui.speech(求我操你！)]
 			</p>
 			<p>
-				Hopelessly turned on, you can't think of doing anything other than what the youko says.
+				你已经兴奋到无可救药，除了照妖狐说的去做，什么都想不了了。
 				#IF(pc.hasLegs())
-					 Keeping your [pc.legs] parted and your [pc.pussy+] spread open before her,
+					你保持着[pc.legs]分开的姿势，将[pc.pussy+]敞开在她面前，
 				#ELSE
-					 Keeping your [pc.legs] parted and your [pc.pussy+] spread open before her,
+					你保持着[pc.legs]分开的姿势，将[pc.pussy+]敞开在她面前，
 				#ENDIF
-				 you look up at Shiranui and desperately beg, [pc.speech(Please, fuck me, Shiranui! Fuck me!)]
+				抬头望着不知火，急切地哀求道：[pc.speech(求你了，操我吧，不知火！操我！)]
 			</p>
 			<p>
-				With a triumphant moan, the seven-tailed youko thrusts forwards and buries her huge, throbbing fox-cock deep into your [pc.pussy+].
+				伴随着一声得意的呻吟，这只七尾妖狐猛地挺身向前，将她那根粗大、跳动着的狐狸阴茎深深埋入了你的[pc.pussy+]。
 			</p>
 		#ENDIF
 	#ELSEIF(game.isAnalContentEnabled())
 		<p>
-			A shimmer of light ripples up from where the ghostly cock is pressing against your asshole, and suddenly you're looking upon the real Shiranui. She smirks down at you as she slides the [shiranui.cockHead+] of her [shiranui.cock+] up and down over your defenceless [pc.asshole+], and you can't help but shudder and moan as you feel her slimy precum being smeared over your [pc.assSkin].
+			一道微光从那根幽灵般的阴茎抵着你肛门的地方泛起涟漪，忽然间，真正的不知火出现在你面前。她低头对你露出得意的坏笑，用她[shiranui.cock+]的[shiranui.cockHead+]在你毫无防备的[pc.asshole+]上来回磨蹭，你不禁颤抖着呻吟出声，感觉她黏滑的先走液正被涂抹在你的[pc.assSkin]上。
 		</p>
 		<p>
-			[shiranui.speech(Good [pc.girl],)] Shiranui giggles, before pulling her cock back a little and ordering, [shiranui.speech(Spread yourself for me.)]
+			[shiranui.speech(好孩子，)]	不知火咯咯笑着，随后将她的阴茎稍稍往后抽了一些，命令道：[shiranui.speech(自己掰开。)]
 		</p>
 		<p>
-			Obediently reaching down
+			你顺从地伸手向下
 			#IF(pc.hasLegs())
-				 around your [pc.legs], 
+				绕过[pc.legs]，
 			#ELSE
-				 to your ass,
+				摸向臀部，
 			#ENDIF
-			 you use your [pc.fingers] to spread your asshole open, and desperately whimper as you eagerly anticipate your impending penetration.
+			用[pc.fingers]将自己的肛门掰开，饥渴地呜咽着，急切地期待着即将到来的侵入。
 		</p>
 		<p>
 			#IF(flags.hasFlag(FLAG_innoxia_transformed_by_shiranui))
-				[shiranui.speech(I knew that transforming you would be worth it,)] the youko teases,
+				[shiranui.speech(我就知道转化你是值得的，)]妖狐揶揄道，
 			#ELSE
-				[shiranui.speech(I knew that I'd get to fuck you from the first moment I saw you,)] the youko teases,
+				[shiranui.speech(第一次见到你的时候，我就知道迟早会操到你，)]妖狐揶揄道，
 			#ENDIF
 			#IF(pc.isAssVirgin())
-				 before suddenly letting out a delighted moan and eagerly asking, [shiranui.speech(You're a virgin, aren't you?)]
+				随即她发出一声惊喜的呻吟，饥渴地追问道：[shiranui.speech(你还是处吧？)]
 			#ELSE
-				 [shiranui.speech(You're a real slut, aren't you?)]
+				[shiranui.speech(你就是个小荡妇吧？)]
 			#ENDIF
 		</p>
 		#IF(pc.isAssVirgin())
 			<p>
-				[pc.speech(Yes...)] you whimper, nodding your head as you keep your asshole spread for Shiranui.
+				[pc.speech(是的……)]你呜咽着，一边点头一边为不知火掰开自己的肛门。
 			</p>
 			<p>
-				[shiranui.speech(So you saved yourself for all of those years, waiting to give your first time to me?)] she happily asks. Pointing the head of her huge cock at your virgin hole, she gently pushes forwards until the tapered tip is just starting to enter you. Smirking down at you, she demands, [shiranui.speech(Beg for me to take your virginity!)]
+				[shiranui.speech(所以你守了这么多年的身子，就是为了把第一次献给我？)]她开心地问道。她将巨大阴茎的头部对准你未经人事的穴口，温柔地向前推进，直到锥形的尖端刚刚开始进入你体内。她低头对你露出得意的坏笑，命令道，[shiranui.speech(求我夺走你的贞操！)]
 			</p>
 			<p>
-				Hopelessly turned on, you can't think of doing anything other than what the youko says.
+				你已经被欲望冲昏了头脑，除了听从妖狐的话之外什么都想不了。
 				#IF(pc.hasLegs())
-					 Keeping your [pc.legs] parted and your [pc.asshole+] spread open before her,
+					你保持[pc.legs]分开，将[pc.asshole+]在她面前敞开，
 				#ELSE
-					 Keeping your [pc.legs] parted and your [pc.asshole+] spread open before her,
+					你保持[pc.legs]分开，将[pc.asshole+]在她面前敞开，
 				#ENDIF
-				 you look up at Shiranui and desperately beg, [pc.speech(Please, take my virginity! Fuck me, Shiranui! Fuck me!)]
+				你仰头看着不知火，急切地哀求道，[pc.speech(请夺走我的贞操吧！操我，不知火！操我！)]
 			</p>
 			<p>
-				With a triumphant moan, the seven-tailed youko thrusts forwards and takes your virginity by burying her huge, throbbing fox-cock deep into your [pc.asshole+].
+				伴随着一声胜利般的呻吟，七尾妖狐向前挺身，将她巨大的、搏动着的狐狸阴茎深深埋入你的[pc.asshole+]，夺走了你的贞操。
 			</p>
 		#ELSE
 			<p>
-				[pc.speech(Yes...)] you whimper, nodding your head as you keep your asshole spread for Shiranui.
+				[pc.speech(是的……)]你呜咽着，一边点头一边为不知火掰开自己的肛门。
 			</p>
 			<p>
-				Smirking down at you, she demands, [shiranui.speech(Beg for me to fuck your ass!)]
+				她低头对你露出得意的坏笑，命令道，[shiranui.speech(求我操你的屁股！)]
 			</p>
 			<p>
-				Hopelessly turned on, you can't think of doing anything other than what the youko says.
+				你已经被欲望冲昏了头脑，除了听从妖狐的话之外什么都想不了。
 				#IF(pc.hasLegs())
-					 Keeping your [pc.legs] parted and your [pc.asshole+] spread open before her,
+					你保持[pc.legs]分开，将[pc.asshole+]在她面前敞开，
 				#ELSE
-					 Keeping your [pc.legs] parted and your [pc.asshole+] spread open before her,
+					你保持[pc.legs]分开，将[pc.asshole+]在她面前敞开，
 				#ENDIF
-				 you look up at Shiranui and desperately beg, [pc.speech(Please, fuck me, Shiranui! Fuck me!)]
+				你仰头看着不知火，急切地哀求道，[pc.speech(请操我吧，不知火！操我！)]
 			</p>
 			<p>
-				With a triumphant moan, the seven-tailed youko thrusts forwards and buries her huge, throbbing fox-cock deep into your [pc.asshole+].
+				伴随着一声胜利般的呻吟，七尾妖狐向前挺身，将她巨大的、搏动着的狐狸阴茎深深埋入你的[pc.asshole+]。
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			A shimmer of light ripples up from where the ghostly cock is pressing against your [pc.lips], and suddenly you're looking upon the real Shiranui. She smirks down at you as she slides the [shiranui.cockHead+] of her [shiranui.cock+] over your mouth, and you can't help but shudder and moan as you feel her slimy precum being smeared over your [pc.lips+].
+			一道微光从那根幽灵般的阴茎按压着你[pc.lips]的地方泛起涟漪，突然间，真正的不知火出现在你眼前。她低头对你露出得意的坏笑，将她[shiranui.cock+]的[shiranui.cockHead+]在你嘴上滑过，你忍不住颤抖着呻吟起来，感受到她黏滑的先走液被抹在了你的[pc.lips+]上。
 		</p>
 		<p>
-			[shiranui.speech(Good [pc.girl],)] Shiranui giggles, before pulling her cock back a little and ordering, [shiranui.speech(Open wide!)]
+			[shiranui.speech(好孩子，)]不知火咯咯笑着，然后将她的阴茎稍稍往后抽了一点，命令道，[shiranui.speech(张大嘴巴！)]
 		</p>
 		<p>
-			Obediently parting your [pc.lips], you open your mouth and desperately pant as you eagerly anticipate your impending penetration.
+			你顺从地张开[pc.lips]，打开嘴巴，急切地喘息着，饥渴地期待着即将到来的侵入。
 		</p>
 		<p>
-			With a triumphant moan, the seven-tailed youko steps forwards and pushes the [shiranui.cockHead+] of her [shiranui.cock+] into your mouth, before thrusting forwards and burying her huge, throbbing fox-cock deep down your throat.
+			伴随着一声得意的呻吟，七尾妖狐向前迈了一步，将她[shiranui.cock+]的[shiranui.cockHead+]塞进你的嘴里，然后猛地一挺，将她巨大的、跳动着的狐狸阴茎深深埋入你的喉咙。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLAME3_AFTER_SEX"><![CDATA[
 	<p>
 		#IF(pc.hasVagina())
-			With a long, satisfied sigh, Shiranui slides her fat, softening fox-cock out of your well-fucked pussy. Stepping back, she smirks down at your cum-stuffed cunt and giggles,
+			不知火满足地长叹一声，将她那根变软的粗大狐狸肉棒从你被操透的小穴里抽了出来。她退后一步，低头看着你被精液塞满的小穴，得意地坏笑着咯咯说道：
 			#IF(pc.isVisiblyPregnant())
-				 [shiranui.speech(Thanks, I really needed that. There's nothing quite like fucking pregnant [pc.girls].)]
+				「谢了，我真的太需要这个了。没什么比操怀孕的[pc.girls]更爽的了。」
 			#ELSE
-				 [shiranui.speech(Thanks, I really needed that. I wonder if I got you knocked up?)]
+				「谢了，我真的太需要这个了。不知道有没有让你怀上呢？」
 			#ENDIF
 		#ELSEIF(game.isAnalContentEnabled())
-			With a long, satisfied sigh, Shiranui slides her fat, softening fox-cock out of your well-fucked asshole. Stepping back, she smirks down at your cum-stuffed asshole and giggles, [shiranui.speech(Thanks, I really needed that.)]
+			不知火满足地长叹一声，将她那根变软的粗大狐狸肉棒从你被操透的肛门里抽了出来。她退后一步，低头看着你被精液塞满的肛门，得意地坏笑着咯咯说道：「谢了，我真的太需要这个了。」
 		#ELSE
-			With a long, satisfied sigh, Shiranui slides her fat, softening fox-cock out of your well-fucked throat. Stepping back, she smirks down at the cummy saliva that's drooling from the corners of your mouth and giggles, [shiranui.speech(Thanks, I really needed that.)]
+			不知火满足地长叹一声，将她那根变软的粗大狐狸肉棒从你被操透的喉咙里抽了出来。她退后一步，低头看着从你嘴角流下的混着精液的唾液，得意地坏笑着咯咯说道：「谢了，我真的太需要这个了。」
 		#ENDIF
 	</p>
 	<p>
-		Still trying to catch your breath, all you can do is let out an exhausted moan as the youko skips off and vanishes into the mist. Looking over at the mirrors, you see that your reflections are in a similar state to you; panting and moaning on the ground, they're covered in cum and struggling to do anything other than get their breath back.
+		你仍在努力平复呼吸，只能发出一声精疲力竭的呻吟，看着那只妖狐蹦蹦跳跳地消失在迷雾中。你望向那些镜子，发现你的倒影也和你一样狼狈——她们在地上喘息呻吟着，浑身沾满精液，除了喘气什么也做不了。
 	</p>
 	<p>
-		Coming to your senses, it suddenly dawns on you how simple it was for Shiranui to trick you. Although you enjoyed the end result, you can't help but feel a little disappointed in yourself at failing to resist the youko's charms. Not wanting to get tricked again so easily, you quickly [pc.step] over to the first of the mirrors and strike it. It completely shatters under your blow, and the broken pieces instantly transform from glass and metal into scraps of plain white paper, which burn up in flashes of purple fire. The force of your strike is carried through each of the four remaining mirrors, and in turn every one of them undergoes a similar destructive process.
+		回过神来，你突然意识到被不知火耍得有多轻松。虽然最终的结果确实很享受，但你还是忍不住对自己没能抵挡住妖狐的魅惑感到有些失望。为了不再这么容易上当，你迅速[pc.step]到第一面镜子前挥拳击碎了它。镜子在你的打击下彻底碎裂，碎片瞬间从玻璃和金属转化为普通的白纸碎片，在紫色火焰的闪光中燃烧殆尽。你的力道传递到了其余四面镜子上，它们依次经历了同样的毁灭过程。
 		#IF(!flags.hasFlag(FLAG_innoxia_transformed_by_shiranui) && !pc.getHoldingClothing().isEmpty())
-			 You hastily retrieve your discarded clothing and get dressed as the mirrors collapse, making sure to stay alert for any signs of Shiranui as you do so.
+			在镜子坍塌的同时，你急忙捡起丢弃的衣物穿上，同时保持警惕，留意着不知火的任何动静。
 		#ENDIF
 	</p>
 	<p>
-		[shiranui.speech(It took me ages to make those mirrors, you know...)] the voice of Shiranui drifts out from the mists.
+		「做那些镜子可花了我好长时间呢……」不知火的声音从迷雾中飘来。
 	</p>
 	<p>
-		As she says this, a sudden gust of wind rushes through the clearing. The arcane fire is instantly snuffed out, and the puff of smoke which it releases is quickly blown away.
+		话音刚落，一阵突如其来的狂风席卷了空地。奥术火焰瞬间被吹灭，升起的烟雾也很快被风吹散。
 	</p>
 	<p>
-		[shiranui.speech(You've destroyed all of my anchors. I won't be able to keep this spell going for much longer,)] Shiranui mournfully calls out, before letting out a cheeky giggle and teasing, [shiranui.speech(Before it completely breaks, there's still time to have some fun with Meraxis! Please join us when you're ready!)]
+		「你把我所有的锚点都毁了。我没法再维持这个法术太久了，」不知火哀伤地喊道，随即又发出一声俏皮的咯咯笑，调侃道：「在法术彻底崩溃之前，还有时间跟梅拉克西丝玩玩哦！准备好了就过来吧！」
 	</p>
 	<p>
-		The youko's gleeful laughter fades away into silence. With all of the youko's fires now extinguished, and her spell on the brink of collapse, all that's left for you to do is to find Meraxis and potentially save her from whatever Shiranui has planned for her.
+		妖狐欢快的笑声逐渐消散在寂静之中。随着她所有的狐火尽数熄灭，法术也即将崩溃瓦解，你现在要做的就是去找到梅拉克西丝，把她从不知火的算计中拯救出来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="FLAME_EXTINGUISHED"><![CDATA[
 	<p>
-		One of Shiranui's fires used to burn here, but after destroying the object which was connected to it, it extinguished itself and vanished without trace. There's nothing more to do in this area,
+		不知火的其中一团火焰曾在这里燃烧，但在你摧毁了与之相连的物体后，火焰自行熄灭，消失得无影无踪。这片区域已经没有什么可做的了，
 		#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')<2)
-			 so you decide to head back the way you came and search for the next fire.
+			于是你决定原路返回，去寻找下一团火焰。
 		#ELSE
-			 and as you've already extinguished all three of Shiranui's fires, you decide to head back the way you came and search for Meraxis.
+			既然你已经熄灭了不知火的全部三团火焰，你决定原路返回去寻找梅拉克西丝。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- The hideout: -->
@@ -727,838 +727,838 @@
 	<htmlContent tag="HIDEOUT"><![CDATA[
 	<p>
 		#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==0)
-			The swirling mists which blanket your surroundings start to close in and thicken as you travel down this particular path. Through the wall of shifting grey and white, you catch a glimpse of a single-story building, which you assume must be Meraxis's hideout.
+			笼罩四周的迷雾在你沿着这条小路前行时开始收拢、变浓。透过不断变幻的灰白色雾墙，你隐约瞥见了一栋单层建筑，你猜那应该就是梅拉克西丝的藏身处。
 		#ELSEIF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==1)
-			Thanks to one of Shiranui's fires having been extinguished, the mists in this area are not as thick as they once were. Through the rolling banks of of shifting grey and white, you can see a single-story building, which you assume must be Meraxis's hideout.
+			由于不知火的一处火焰已被扑灭，这一带的迷雾不再像之前那般浓厚。透过翻滚涌动的灰白色雾气，你可以看到一栋单层建筑，你猜那应该就是梅拉克西丝的藏身处。
 		#ELSEIF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==2)
-			Thanks to two of Shiranui's fires having been extinguished, the mists in this area have thinned out considerably. Through the wisps of shifting grey and white, you can see a single-story building, which you assume must be Meraxis's hideout.
+			由于不知火的两处火焰已被扑灭，这一带的迷雾已经稀薄了许多。透过缕缕灰白色的薄雾，你可以看到一栋单层建筑，你猜那应该就是梅拉克西丝的藏身处。
 		#ELSE
-			As all three of Shiranui's fires have been extinguished, her spell is on the brink of collapse. The mists which once cloaked this area have vanished, giving you a completely unobstructed view of a single-story building, which you assume must be Meraxis's hideout.
+			随着不知火的三处火焰全部被扑灭，她的法术已经濒临崩溃。曾经笼罩这片区域的迷雾已然消散，一栋单层建筑毫无遮挡地映入你的眼帘，你猜那应该就是梅拉克西丝的藏身处。
 		#ENDIF
-		 Constructed in a traditional Japanese architectural style, it has dark roof tiles, a raised foundation, and walls which are a combination of white, lime-plastered walls and black wooden beams.
+		这栋建筑采用传统的日式建筑风格，铺着深色的屋瓦，有着架高的地基，墙壁则是白色石灰粉墙与黑色木梁的组合。
 	</p>
 	#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')>=3)
 		<p>
-			Standing in front of this building, wreathed in a shroud of mist, is Meraxis herself. For a moment you can't quite believe what you're seeing, for right there, standing beside her, is an identical copy of the chuuni [meraxis.race]. Both of them are panting heavily and are completely naked, except for the fact that one of them is still wearing her hat. Casting your gaze about the area, you see that the rest of Meraxis's outfit, including her scythe, is scattered in a haphazard fashion all over the place.
+			在这栋建筑前方，被一层薄雾缭绕着的，正是梅拉克西丝本人。你一时间不敢相信自己的眼睛，因为就在她身旁，站着一个与这位中二病[meraxis.race]一模一样的复制体。两人都气喘吁吁，而且完全赤裸，唯一的区别是其中一个还戴着她的帽。环顾四周，你发现梅拉克西丝的其余衣物，包括她的镰刀，都七零八落地散落在各处。
 		</p>
 		<p>
-			Noticing your arrival, both of them blush, before attempting to cover their [meraxis.breastSize], [meraxis.cupSize]-cup breasts and [meraxis.pussyCapacity] pussies with their hands. The completely-naked Meraxis frantically calls out, [meraxis.speech([pc.name]! Shiranui's taken my form! Don't trust her!)]
+			注意到你的到来，两人都羞红了脸，试图用双手遮住自己[meraxis.breastSize]的[meraxis.cupSize]罩杯乳房和[meraxis.pussyCapacity]的小穴。完全赤裸的那个梅拉克西丝拼命喊道：[meraxis.speech([pc.name]！不知火变成了我的样子！别相信她！)]
 		</p>
 		<p>
-			The hat-wearing Meraxis scowls at her mirror image, before turning to face you and shout, [meraxis.speech(Don't believe her, [pc.name]! She tricked me into stripping by making me think my clothes were cursed, then used an illusion spell to copy my appearance!)]
+			戴帽的梅拉克西丝瞪了一眼自己的镜像，然后转向你喊道：[meraxis.speech(别信她，[pc.name]！她骗我说我的衣服被诅咒了，让我脱光，然后用幻术法术复制了我的外表！)]
 		</p>
 		<p>
-			It appears as though Shiranui had one final trick up her sleeve, and you're going to have to figure out which one the real Meraxis is...
+			看来不知火还留了最后一手，你得弄清楚她们之中哪个才是真正的梅拉克西丝……
 		</p>
 	#ELSE
 		<p>
-			Standing in front of this building, wreathed in a shroud of mist, is Meraxis herself. As she turns, she looks straight at you, but doesn't react to your presence at all. You [pc.walk] forwards to try and approach her, but although the ground beneath your [pc.feet] moves, your surroundings remain static. No matter how fast you move, the chuuni [meraxis.race] and the building behind her don't get any closer.
+			在这栋建筑前方，被一层薄雾缭绕着的，正是梅拉克西丝本人。她转过身来，目光直直地望向你，却对你的存在毫无反应。你[pc.walk]着上前试图接近她，但尽管你[pc.feet]下的地面在移动，周围的景象却纹丝不动。无论你移动得多快，那个中二病[meraxis.race]和她身后的建筑始终没有靠近一分一毫。
 		</p>
 		<p>
-			The feminine, mocking laughter of Shiranui drifts out from the mist as you try, and fail, to reach Meraxis. Ignoring the youko's amused giggles, you wonder if Meraxis could hear you if you were to call out to her.
+			不知火那充满女性魅力的嘲弄笑声从迷雾中飘来，伴随着你一次又一次接近梅拉克西丝的徒劳尝试。你无视妖狐那轻佻的笑声，心想如果朝梅拉克西丝喊话的话，她会不会能听到。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_MERAXIS"><![CDATA[
 	<p>
-		Although she might not be able to see you, it might be possible for Meraxis to hear you, and so you loudly shout out the chuuni [meraxis.race]'s name. 
+		虽然她可能看不见你，但梅拉克西丝也许还能听到你的声音，于是你大声喊出了这位中二[meraxis.race]的名字。
 	</p>
 	#IF(flags.getSavedLong('shiranuis_trap_fires_extinguished')==0)
 		<p>
-			Unfortunately, she doesn't react to your voice at all, letting you know that not only can she not see you, but she also can't hear you. Shiranui's mocking laughter redoubles as she witnesses your futile attempt to communicate with Meraxis. Realising that there's no hope of reaching out to her while the youko's spell is still active, there's nothing else for you to do except head back the way you came and search for the fires which you need to extinguish...
+			遗憾的是，她对你的声音毫无反应，这说明她不仅看不见你，也听不到你。不知火目睹了你与梅拉克西丝沟通的徒劳尝试，嘲弄的笑声愈发放肆。意识到在妖狐的法术仍然生效的情况下，根本无法联系到她，你只能原路返回，去寻找那些需要熄灭的火焰……
 		</p>
 	#ELSE
 		<p>
-			For a moment it seems like she hasn't heard you, but then Meraxis turns and frantically looks all around her. Even though you shouted as loudly as you could, it seems as though Meraxis was only able to hear the faintest trace of your voice. Cupping her hands around her mouth, she shouts, [meraxis.speech([pc.name]?! If that's you, and you can hear me, you have to find and put out Shiranui's fires! She's keeping me trapped here so it's up to you! That's the only way we can escape!)]
+			有那么一瞬间，她似乎没有听到你的声音，但随后梅拉克西丝转过身来，拼命地四处张望。尽管你已经竭尽全力地大喊，梅拉克西丝似乎也只隐约捕捉到了你声音的一丝痕迹。她双手拢在嘴边，大声喊道：[meraxis.speech([pc.name]？！如果是你，而且你能听到我的话，你必须找到不知火的火焰并把它们扑灭！她把我困在这里了，所以全靠你了！只有这样我们才能逃出去！)]
 		</p>
 		<p>
-			Further attempts to call out to Meraxis all fail, and so there's nothing else for you to do except head back the way you came and search for the fires which you need to extinguish...
+			之后再怎么呼喊梅拉克西丝都没有回应，你只能原路返回，去寻找那些需要熄灭的火焰……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_FINAL_START"><![CDATA[
 	<p>
-		You approach the two identical versions of Meraxis, before pausing to look back and forth between them and wondering how you're going to be able to tell which one is actually Shiranui. The one wearing the hat tries to rush forwards to you, but the completely-naked one grabs her and pulls her back, shouting, [meraxis.speech(Get away from [pc.herHim]! Don't let this youko trick you, [pc.name]!)]
+		你走向两个一模一样的梅拉克西丝，停下脚步在她们之间来回打量，琢磨着该怎么分辨哪个才是不知火假扮的。戴帽的那个急忙朝你冲过来，但全身赤裸的那个一把抓住她往回拽，大喊道：「离[pc.herHim]远点！别被这只妖狐骗了，[pc.name]！」
 	</p>
 	<p>
-		[meraxis.speech(Get off, you bitch!)] the hat-wearing Meraxis objects, before turning around and slapping the naked Meraxis. This physical confrontation quickly devolves into a rather pathetic-looking catfight, with each Meraxis trading slaps, kicks, and punches with each other.
+		「放开我，你这贱人！」戴帽的梅拉克西丝抗议道，随即转身给了裸体梅拉克西丝一巴掌。这场肢体冲突很快演变成一场看起来相当狼狈的猫打架，两个梅拉克西丝你来我往地互扇耳光、踢腿、挥拳。
 	</p>
 	<p>
-		Not wanting the real Meraxis to be hurt, you hurriedly [pc.step] forwards and break up the fight. Knowing that the real Meraxis would most likely have instantly used a powerful spell on her opponent, you ask the two of them why they aren't using the arcane to fight on another.
+		不想让真正的梅拉克西丝受伤，你赶紧[pc.step]上前拉开了她们。你心想，真正的梅拉克西丝多半会直接对对手施放强力法术，于是你问她们俩，为什么不用秘法来对付彼此。
 	</p>
 	<p>
-		[meraxis.speech(She tricked me!)] the hat-wearing Meraxis pouts, [meraxis.speech(She kept on attacking me with illusions, and I cast so many spells that now I've got no aura left...)]
+		「她骗了我！」戴帽的梅拉克西丝嘟着嘴说，「她一直用幻术攻击我，我施了太多法术，现在灵气已经耗尽了……」
 	</p>
 	<p>
-		[meraxis.speech(As if I'd be tricked so easily!)] the naked Meraxis objects, [meraxis.speech(I used up all of my aura trying to use spells to blast away her mists, but it didn't work...)]
+		「我怎么可能那么容易被骗！」裸体的梅拉克西丝反驳道，「我把所有灵气都用来施法驱散她的迷雾了，但根本没用……」
 	</p>
 	<p>
-		[meraxis.speech(Be careful, [pc.name],)] the hat-wearing Meraxis warns you, [meraxis.speech(Her spell gives her knowledge of how I speak, how I act, and a general understanding of how I think. She's identical to me!)]
+		「小心点，[pc.name]，」戴帽的梅拉克西丝警告你，「她的法术让她了解我说话的方式、行为举止，还有大致的思维模式。她跟我一模一样！」
 	</p>
 	<p>
-		The naked Meraxis points an accusatory finger at the hat-wearing Meraxis and shouts, [meraxis.speech(Stop hiding behind your illusions, Shiranui! [pc.Name] has already broken your spell, so just give up already!)]
+		裸体的梅拉克西丝伸出手指控地指着戴帽的梅拉克西丝，喊道：「别再躲在幻术后面了，不知火！[pc.name]已经破解了你的法术，乖乖认输吧！」
 	</p>
 	<p>
-		The two chuuni [meraxis.race]s look absolutely identical, sound exactly the same, and are reacting to one another in the exact same manner. Perhaps you could ask some questions to determine which is the real one...
+		这两个中二病[meraxis.race]长得一模一样，声音完全相同，对彼此的反应也如出一辙。也许你可以问些问题来分辨哪个是真的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_FINAL_QUEST"><![CDATA[
 	<p>
-		You say that the real Meraxis will know what your ultimate goal is, alluding to the fact that the two of you know that you're eventually going to have to overthrow Lilith herself.
+		你说真正的梅拉克西丝一定知道你们的终极目标是什么，暗示你们两人都清楚最终必须推翻莉莉丝本人。
 	</p>
 	<p>
-		The hat-wearing Meraxis angrily pouts and shouts, [meraxis.speech(Don't say anything about that! We can't let the youko know what we're planning!)]
+		戴帽的梅拉克西丝气呼呼地嘟着嘴喊道：「别说那件事！我们不能让妖狐知道我们的计划！」
 	</p>
 	<p>
-		[meraxis.speech(She's right! Are you an idiot?! What if Shiranui found out about our quest?)] the naked Meraxis similarly declares.
+		「她说得对！你是白痴吗？！要是不知火发现了我们的任务怎么办？」赤裸的梅拉克西丝同样叫道。
 	</p>
 	<p>
-		This line of questioning doesn't look like it's going to work...
+		看来这个问法行不通……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_FINAL_SUBMISSION"><![CDATA[
 	<p>
-		Thinking that only the real Meraxis will know the details of how you met and what happened in Submission, you ask the two of them to tell you what happened during your first encounter.
+		你想着只有真正的梅拉克西丝才会知道你们相遇以及在屈城区发生的事的细节，于是你让她们俩讲讲你们初次相遇时发生了什么。
 	</p>
 	<p>
-		The naked Meraxis quickly replies, [meraxis.speech(You came into my fortress to challenge me! I cast one of my ultimate spells, and the entire place ended up collapsing.)]
+		裸体的梅拉克西丝抢先回答：「你闯进我的要塞来挑战我！我施展了一个终极法术，结果整个地方都塌了。」
 	</p>
 	<p>
-		[meraxis.speech(Oh, come on!)] the hat-wearing Meraxis wearily exclaims, before pointing out, [meraxis.speech(Shiranui has been holding Takahashi captive here this whole time! She's got the entire story of what happened from her.)]
+		「拜托！」戴帽的梅拉克西丝疲惫地叫道，然后指出：「不知火一直把高桥囚禁在这里！她完全可以从高桥那儿套出当时发生的一切。」
 	</p>
 	<p>
-		It seems as though both Shiranui and the Meraxis know everything about your meeting in Submission...
+		看来不知火和梅拉克西丝都对你们在屈城区的会面了如指掌……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- painful -->
 	<htmlContent tag="HIDEOUT_FINAL_POSE"><![CDATA[
 	<p>
-		Knowing that the real Meraxis has a rather unique manner of showing off, you ask the two of them to show you their most impressive pose.
+		你知道真正的梅拉克西丝有一种相当独特的炫耀方式，于是你让她们两个展示一下自己最厉害的姿势。
 	</p>
 	<p>
-		The naked Meraxis pushes the other one out of the way and boasts, [meraxis.speech(Watch this, and be in awe! A little of my aura has recovered, so I can at least do this...)]
+		赤裸的梅拉克西丝把另一个推到一边，得意地说道：「看好了，给你们开开眼！我的灵力恢复了一点点，至少还能做到这个……」
 	</p>
 	<p>
-		Raising her arm up to the sky, Meraxis's scythe, which had been discarded along with the rest of her clothes, flies over from one side of the clearing into her outstretched hand. Gripping it tightly, she swings it around in one hand while using the other to launch a series of small fireballs up into the air. Striking the scythe down into the ground at the exact moment that the fireballs explode behind her, she turns to the side and holds her arm out in front of her. Tilting her head down slightly, she takes on a dark expression and proclaims in a menacing tone, [meraxis.speech(None can stand against me! Now perish!)]
+		梅拉克西丝将手臂高举向天，她那把和衣物一起被丢在一旁的镰刀从空地的另一头飞来，稳稳落入她伸出的手中。她紧紧握住镰刀，单手挥舞旋转，同时用另一只手接连发射出一连串小型火球升上半空。就在火球在她身后炸开的那一瞬间，她将镰刀猛然插入地面，侧过身去，一只手臂向前伸展。她微微低头，露出一副阴沉的表情，用充满威压的语气宣告道：「无人能与我为敌！现在，去死吧！」
 	</p>
 	<p>
-		[meraxis.speech(~Pfft!~ That's so lame!)] the hat-wearing Meraxis laughs, before snatching the scythe out of the naked Meraxis's hand and confidently declaring, [meraxis.speech(You'll remember this for all eternity!)]
+		「噗——！太逊了吧！」戴帽的梅拉克西丝大笑着，一把夺过赤裸梅拉克西丝手中的镰刀，自信满满地宣言道：「这一幕你将永生铭记！」
 	</p>
 	<p>
-		Taking a few steps away from you and the naked Meraxis, the chuuni [meraxis.race] lowers the brim of her hat over her eyes and holds the scythe outstretched behind her. Keeping her head bowed and her free hand over her face, she lets out a maniacal laugh and loudly declares, [meraxis.speech(By my power, the crushing abyss of ultimate darkness shall be summoned before you! Behold the cataclysmic destiny of fate itself!)]
+		这个中二[meraxis.race]离你和赤裸的梅拉克西丝走了几步远，将帽檐压低遮住双眼，一手将镰刀向身后伸展。她低着头，另一只手遮在脸前，发出一阵癫狂的笑声，高声宣告道：「以我之力，终极黑暗的毁灭深渊将在你面前召唤而出！见证命运本身的灾变宿命吧！」
 	</p>
 	<p>
-		Suddenly lifting her hat and spinning around with her scythe outstretched, Meraxis moves into a pose in which she's directing the pointed tip of the shaft of her weapon directly at you. Turning her head to one side, and with a somewhat-deranged smile on her face, she boasts, [meraxis.speech(I control the very substance of the universe itself! All of creation is mine to manipulate as I will, and only by my limitless benevolence are my dark powers contained!)]
+		她猛地掀起帽子，镰刀平伸着旋转一圈，最终摆出一个用武器长柄尖端直指向你的姿势。她将头偏向一侧，脸上挂着几分癫狂的笑容，夸口道：「我掌控着宇宙的本质！万物的创造皆由我操纵，唯有凭借我无尽的仁慈，这黑暗之力才得以封印！」
 	</p>
 	<p>
-		Then, with each word punctuating her movements, she advances through several different poses, each one more exaggerated and unstable-looking than the last, [meraxis.speech(Inferno! Eruption! Cataclysm! Apocalypse! Meraxis!)]
+		紧接着，她的每一个字都伴随着一个动作，连续切换了好几个姿势，一个比一个夸张，一个比一个摇摇欲坠：「炼狱！爆裂！浩劫！末世！梅拉克西丝！」
 	</p>
 	<p>
-		With the final word being her own name, the chuuni [meraxis.race] dangerously throws her scythe up into the air, and after spinning up in a wild arc, it falls perfectly down into her outstretched hand, before being slammed down into the ground before her.
+		随着最后一个字——也就是她自己的名字——这个中二[meraxis.race]将镰刀猛地抛向空中。镰刀在高空划出一道狂野的弧线旋转而下，完美地落入她伸出的手中，然后被狠狠插进面前的地面。
 	</p>
 	<p>
-		Although she clearly does have genuine skill at manipulating her scythe, the rest of the hat-wearing Meraxis's display is little more than theatrics. Her embarrassing words and series of wild poses evoke a physical reaction from the other Meraxis, who visibly cringes and exclaims, [meraxis.speech(What the fuck?! I know that I'm the most powerful succubus to ever have lived, and that's the best you can do?!)]
+		虽然她操控镰刀的技术确实有真功夫，但戴帽梅拉克西丝剩下的表演不过是一场作秀。她那些令人尴尬的台词和一连串浮夸的姿势让另一个梅拉克西丝产生了生理性的不适，她明显浑身一哆嗦，惊呼道：「搞什么鬼？！我可是有史以来最强大的魅魔，你就只能整出这种东西？！」
 	</p>
 	<p>
-		[meraxis.speech(What are you talking about?)] the hat-wearing Meraxis angrily snaps, [meraxis.speech(That was my ultimate secret combination pose which I've been practising for months! Your display was lame and boring!)]
+		「你在说什么？！」戴帽的梅拉克西丝怒气冲冲地反驳道，「那可是我练了好几个月的终极秘密组合姿势！你那个才又无聊又逊！」
 	</p>
 	<p>
-		The naked Meraxis reaches out and grabs the scythe, but the hat-wearing Meraxis refuses to let go. The two [meraxis.race]s snarl and shout at one another as they pathetically fight over their weapon, leaving you to decide which of the two is the real Meraxis...
+		赤裸的梅拉克西丝伸手去抓镰刀，但戴帽的梅拉克西丝死活不肯松手。两个[meraxis.race]互相咆哮怒骂，可怜巴巴地争夺着武器，只留下你来判断她们到底哪个才是真正的梅拉克西丝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Incorrect choice, Shiranui sex scene or humiliation (if non-con off): -->
 	
 	<htmlContent tag="HIDEOUT_INCORRECT_CHOICE"><![CDATA[
 	<p>
-		Making your decision, you point at the hat-wearing Meraxis and declare that she's Shiranui.
+		做出决定后，你指向戴帽的梅拉克西丝，宣布她就是不知火。
 	</p>
 	<p>
-		[meraxis.speech(What?! Are you kidding me?!)] she cries out, before letting out a yelp as the naked Meraxis grabs hold of her.
+		[meraxis.speech(什么？！你在开玩笑吗？！)]她失声喊道，赤身裸体的梅拉克西丝一把抓住了她，吓得她发出一声惊叫。
 	</p>
 	<p>
-		[meraxis.speech(Help me, [pc.name]! Keep her still while I get something to tie her up!)] the naked Meraxis desperately cries out as she struggles against who you believe to be Shiranui. Doing as she says, you grab the hat-wearing Meraxis and hold her still as the naked Meraxis steps out of your vision.
+		「帮帮我，[pc.name]！按住她，我去找东西把她绑起来！」裸身的梅拉克西丝急切地喊道，同时奋力与你认为是不知火的那个人扭打着。你照她说的做，抓住戴帽的梅拉克西丝将她按住，裸身的梅拉克西丝则走出了你的视野。
 	</p>
 	<p>
-		[shiranui.speech(<i>Idiot!</i>)] Shiranui's voice laughs from behind you. Realising too late that you've made a terrible mistake, you try to turn and confront Shiuranui, but a
+		「蠢货！」不知火的声音从你身后传来，伴随着嘲弄的笑声。你意识到自己犯了大错，但为时已晚。你试图转身对抗不知火，然而一条
 		#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui))
-			 very familiar-looking strip
+			看起来非常眼熟的
 		#ELSE
-			 thick strip
+			粗厚的
 		#ENDIF
-		 of what looks to be red leather is already snaking its way around your body. As it constricts and pulls your [pc.arms] around behind your back, the binding twists and turns about your
+		红色皮革带已经蛇一般缠上了你的身体。它收紧并将你的[pc.arms]反绑到身后，束缚继续缠绕着你的
 		#IF(pc.hasLegs())
-			 legs, which are swiftly tied tightly together,
+			双腿，迅速将它们紧紧绑在一起，
 		#ELSE
-			 lower body,
+			下半身，
 		#ENDIF
 		#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui))
-			 and, for the second time today, you let out a surprised yelp as
+			今天第二次，你发出一声惊叫，
 		#ELSE
-			 and with a surprised yelp
+			伴随着一声惊叫，
 		#ENDIF
-		 you're sent helplessly tumbling to the ground.
+		你无助地摔倒在地上。
 	</p>
 	<p>
-		The real Meraxis shares your fate, for as Shiranui's red binding ties you up, your chuuuni friend is similarly constrained within the enchanted clutches of a strip of dark purple leather. After falling to the floor, the real Meraxis scowls at you and exclaims, [meraxis.speech(How could you choose her?! I was obviously the real Meraxis!)]
+		真正的梅拉克西丝也难逃同样的命运。在不知火的红色束缚缠住你的同时，你的中二朋友也被一条深紫色的附魔皮革带牢牢束缚住了。摔倒在地后，真正的梅拉克西丝瞪着你，喊道：「你怎么能选她？！我明明才是真的梅拉克西丝！」
 	</p>
 	<p>
-		[shiranui.speech(Now, now, there's no need to fight,)] Shiranui, who's still in the body of Meraxis, laughs as she steps over to where the two of you are helplessly lying. Snapping her fingers, she teases, [shiranui.speech(Now kiss and make up!)]
+		「好了好了，不用吵嘛。」不知火——仍然保持着梅拉克西丝的外貌——笑着走向你们两个无助地躺在地上的人。她打了个响指，揶揄道：「现在亲一下和好吧！」
 	</p>
 	<p>
-		The enchanted leather bindings twist and turn around you and Meraxis, and little by little they contort your limbs and force the two of you up into a kneeling position. Further adjustments make the two of you stumble towards one another, until the two of you are face-to-face. At that moment, Meraxis's purple binding and your red one reach out to each other and pull the two of you together. Meraxis's [meraxis.breasts+] bump into your [pc.breasts+] and you feel her hot breath on your face as you're forced together.
+		附魔皮革绑带在你和梅拉克西丝身上扭转缠绕，一点一点地摆弄着你们的四肢，迫使两人跪立起来。进一步的调整让你们跌跌撞撞地靠向彼此，直到面对面为止。就在这时，梅拉克西丝的紫色束缚和你的红色束缚伸向对方，将你们拉到了一起。梅拉克西丝[meraxis.breasts+]撞上你[pc.breasts+]，她炽热的呼吸扑在你的脸上，你们被迫紧紧贴在一起。
 	</p>
 	<p>
-		Letting out a delighted giggle, Shiranui steps forwards and 
+		发出一声愉悦的咯咯笑，不知火走上前来，
 		#IF(pc.getNextClothingToRemoveForCoverableAreaAccess(CA_MOUTH)!=null)
 			#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-				 removes the clothing blocking your mouth, before
+				移除了遮住你嘴巴的衣物，然后
 			#ELSE
-				 removes the seals on the clothing blocking your mouth, before removing them and
+				解开了遮住你嘴巴的衣物上的封印，将它们取下后
 			#ENDIF
 		#ELSE
-			 admires your position for a moment, before
+			欣赏了一会儿你们的姿势，然后
 		#ENDIF
-		 taking hold of the backs of your heads and pushing your faces together. Laughing as your [pc.lips+] press against Meraxis's mouth, she teases, [shiranui.speech(I'll let you go once the two of you have kissed and made up! Now, how many arcane arousal spells will it take before you've got your tongues down each other's throats?)]
+		抓住你们的后脑勺，把你们的脸推到一起。看着你的[pc.lips+]贴上梅拉克西丝的嘴唇，她笑着揶揄道：「等你们俩亲好和好了我就放你们走！那么，要用多少个秘法催情法术才能让你们的舌头伸进彼此的喉咙里呢？」
 	</p>
 	<p>
-		The leather bindings keep your heads locked in position, and as Meraxis's [meraxis.lips+] squish against your mouth, you realise that the only way to get out of this situation is to wait until Shiranui has had her fun. With a flick of the youko's wrist, she targets Meraxis with the first of her arcane arousal spells, which causes the [meraxis.race] to melt into you and moan into your mouth. The next spell hits you, and an intense, lewd vision of having sex with Meraxis flashes before your eyes. As the spell passes you're left feeling incredibly turned on.
+		皮革绑带将你们的头牢牢锁定在原位，梅拉克西丝[meraxis.lips+]紧贴着你的嘴，你意识到唯一脱身的办法就是等不知火玩够为止。妖狐手腕一挥，对梅拉克西丝施放了一个奥术狂欲法术，[meraxis.race]随即软倒在你身上，对着你的嘴呻吟起来。你被第二次奥术狂欲击中了，一段与梅拉克西丝交欢的强烈淫靡幻象在你眼前闪过。法术消退后，你浑身燥热难耐。
 	</p>
 	<p>
-		Again and again Shiranui casts arcane arousal on you and Meraxis, and after witnessing half a dozen of these intense, erotic visions, your resistance crumbles. The two of you part your lips, and under the delighted gaze of Shiranui, who's still in the form of Meraxis, you start to kiss one another.
+		不知火一次又一次地对你和梅拉克西丝施放秘法催情法术，在经历了半打如此强烈的色情幻象之后，你的抵抗终于土崩瓦解。你们张开双唇，在仍然保持着梅拉克西丝形态的不知火欣喜的注视下，开始亲吻彼此。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_INCORRECT_CHOICE_KISSING"><![CDATA[
 	<p>
-		With your minds melted into a haze of unnatural arousal by Shiranui's spells, you and Meraxis are unable to think of anything but sex. Bound up and only able to satisfy yourself with each others' mouths, you each part your lips and start kissing. As your resistance crumbles, your tongues slide over one another, and your desperate, horny moans are muffled by the other's mouth being planted firmly over your own.
+		在不知火的法术作用下，你和梅拉克西丝的神智被融化在一片不自然的情欲迷雾中，满脑子只剩下性事。被捆在一起，只能用彼此的嘴来满足对方，你们各自张开双唇，开始接吻。随着抵抗力逐渐崩溃，你们的舌头交缠在一起，狂乱而饥渴的呻吟声被紧紧贴合在一起的嘴唇所闷住。
 	</p>
 	<p>
-		Somewhere in the distance, Shiranui is laughing, but all you care about is the [meraxis.race] before you. You're aware only of the feeling of Meraxis's soft lips. Her feminine scent. The warmth of her body as it presses against your own. The feeling of her hard nipples, perched upon the tips of her [meraxis.breastSize] breasts, projecting into you. For her part, Meraxis must be feeling the same about you, for she's returning your kiss with a passion that's every bit as intense and raw as your own.
+		远处某个地方，不知火在笑，但你满心只有眼前的[meraxis.race]。你只感受得到梅拉克西丝柔软的双唇，她女性的芬芳，她的身体紧贴着你时的温暖，还有她[meraxis.breastSize]乳房顶端硬挺的乳头抵在你身上的触感。而梅拉克西丝对你的感受想必也是如此，因为她回吻你的热情同样强烈而炽热。
 	</p>
 	<p>
-		Then, suddenly, the leather strips which bind you pull you apart. Your desperate, horny whines are cut short as the leather bindings first seal your mouths, and then move so as to turn your heads to one side. Both now facing the same direction, with your cheeks pressed up against one another, you and Meraxis look up at Shiranui, who still looks identical to your companion.
+		然后，突然间，捆绑你们的皮条将你们拉开。你们狂乱饥渴的呜叫戛然而止，皮条先是封住了你们的嘴，接着将你们的头转向一侧。两人面朝同一个方向，脸颊紧贴在一起，你和梅拉克西丝一同抬头望向不知火——她的外表依然和你的同伴一模一样。
 	</p>
 	#IF(game.isNonConEnabled())
 		<p>
-			[shiranui.speech(It's not so bad, being caught by me, is it?)] she laughs, [shiranui.speech(Now, let me entertain you with a little magic trick!)]
+			[shiranui.speech(被我抓住也没那么糟吧？)]她笑道，[shiranui.speech(现在，让我来给你们表演一个小魔术！)]
 		</p>
 		<p>
-			Reaching forwards and plucking Meraxis's hat from her head, Shiranui holds it down in front of her groin. With her free hand, the youko sweeps her arm across her body, and as a shimmering sheen of glitter and sparkling lights falls down all around her, she transforms into her true form. Beautiful, shapely, and with seven light-pink fox-tails swirling around behind her, she looks exactly as she did when you saw her in the mirrors. With a big grin on her face, she lets go of Meraxis's hat, which somehow remains in place in front of her groin. Letting out a little laugh, she exclaims, [shiranui.speech(Ta-da! Now, a magician shouldn't reveal their trick, but in this case I'll break that rule.)]
+			她伸手摘下梅拉克西丝头上的帽，不知火将它挡在自己的下体前方。妖狐用另一只手在身前一挥，一层闪烁的光粉和璀璨的光点如雨般洒落，她变回了自己的真实模样。美丽、曼妙，七条浅粉色的狐尾在身后飘舞摇曳，和你在镜中看到的一模一样。她满脸笑意地松开了梅拉克西丝的帽，而那顶帽竟然稳稳地留在了她下体前方。她轻笑一声，得意地宣布：[shiranui.speech(当当！按理说魔术师不该揭秘自己的把戏，但这次我就破个例吧。)]
 		</p>
 		<p>
-			Flicking the hat down onto the floor, the youko reveals that she's got a huge, erect fox-cock, which had been acting as a support for the hat. Letting out a delighted laugh as she sees the expression on your and Meraxis's faces, she steps forwards and teases, [shiranui.speech(You don't mind if I join in with your little kissing session, do you? Now, as you were...)]
+			她一把将帽弹到地上，露出了一根巨大的、硬挺的狐狸阴茎——原来一直是它撑着那顶帽。看到你和梅拉克西丝脸上的表情，妖狐开心地大笑起来，向前走了一步，挑逗道：[shiranui.speech(你们不介意我加入你们的小亲亲环节吧？那么，继续吧……)]
 		</p>
 		<p>
-			The leather bindings turn your heads so that you and Meraxis are facing one another, and, still under the stupefying effects of the youko's arcane arousal spells, you can't help but start passionately kissing each other again. This time, however, Shiranui is going to join in on the fun, and as she steps forwards, she points her [shiranui.cock+] at your mouths and giggles, [shiranui.speech(Time to worship my cock, you sluts!)]
+			皮革绑带将你们的头转回来，让你和梅拉克西丝再次面对面，在妖狐奥术狂欲的迷乱效果下，你们又情不自禁地热吻起来。不过这一次，不知火也要加入这场乐事，她走上前来，将她[shiranui.cock+]对准你们的嘴，咯咯笑道：[shiranui.speech(来侍奉我的阴茎吧，小荡妇们！)]
 		</p>
 	#ELSE
 		<p>
-			[shiranui.speech(It's not so bad, being caught by me, is it?)] she laughs, [shiranui.speech(Now, let me slip into something more comfortable...)]
+			[shiranui.speech(被我抓住也没那么糟吧？)]她笑道，[shiranui.speech(现在，让我换身更舒服的装扮……)]
 		</p>
 		<p>
-			With that, the youko spins around on the spot, and as a shimmering sheen of glitter and sparkling lights falls down over her body, she transforms into her true form. Beautiful, shapely, and with seven light-pink fox-tails swirling around behind her, she winks at you and says, [shiranui.speech(I'll go and say goodbye to Takahashi, then I'll be off. The two of you can carry on having some fun while I'm gone!)]
+			话音刚落，妖狐原地旋转了一圈，一层闪烁的光粉和璀璨的光点洒落全身，她变回了自己的真实模样。美丽、曼妙，七条浅粉色的狐尾在身后飘舞摇曳，她向你眨了眨眼，说道：[shiranui.speech(我去跟高桥道个别，然后就走啦。你们两个趁我不在继续好好玩吧！)]
 		</p>
 		<p>
-			With that, the youko skips off towards the nearby building, and as she goes, the leather strips force you and Meraxis to be facing one another again. Still stupefied from all of the arcane arousal spells which were cast on you, the two of you pick up where you left off, and start passionately making out with one another once again.
+			说完，妖狐便蹦蹦跳跳地朝附近的建筑走去。她离开后，皮条又将你和梅拉克西丝转成面对面的姿势。在秘法催情法术的余韵中，你们两个从中断的地方继续，再次热情地亲吻起来。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_INCORRECT_CHOICE_ENDURE"><![CDATA[
 	<p>
-		For the next ten minutes, you and Meraxis are lost in a blissful state of perpetual arousal as you explore every last part of one another's mouths with your tongues. The arcane arousal spells which Shiranui cast on you keep your minds focused entirely on kissing one another, and the time passes in what seems to be mere seconds.
+		接下来的十分钟里，你和梅拉克西丝沉浸在持续不断的极乐亢奋中，用舌头探索着彼此口腔的每一寸。不知火施加在你们身上的秘法催情法术让你们的心神完全集中在亲吻上，时间仿佛转瞬即逝。
 	</p>
 	<p>
-		[shiranui.speech(Enjoying yourselves?)] the youko giggles as she returns and sees that you're still making out with each other. As she passes by, you see that she's now wearing a pink, short-skirted kimono. Smirking down at you, she says, [shiranui.speech(That binding spell won't last for much longer, so I suppose I'd better be leaving. I won't be showing my face back here again; as easy and as fun as it would be to keep on playing with you two idiots, I've grown tired of this place, and I really don't want to make a lasting enemy out of a recognised daughter of Lyssieth. I get the feeling that we'll meet again some day, so until then, goodbye!)]
+		[shiranui.speech(玩得开心吗？)]妖狐折返回来，见你们还在忘情亲吻，不由咯咯直笑。她从你们身边走过，身上已换上一件粉色短裙和服。她居高临下地冲你们得意坏笑，说道，[shiranui.speech(束缚法术维持不了多久了，我看我还是告辞吧。我不会再回这儿露面了；虽然继续逗你们两个蠢货既轻松又有趣，可这地方我已经待腻了，而且我实在不想跟莉西丝认可的女儿结下死仇。我有预感咱们日后还会再见的，那么，后会有期！)]
 	</p>
 	<p>
-		With that, Shiranui hurriedly skips off into what little of the surrounding mists remain, and a few moments later the leather bindings which are keeping you and Meraxis locked together loosen and turn into paper. The effects of the arcane arousal spells also begin to fade, and as you pull away from one another and tear yourselves free from the paper bindings, the reality of what's just happened hits you.
+		话音刚落，不知火便急匆匆地蹦跳着消失在周围残余的薄雾里。。片刻后，你和梅拉克西丝捆在一起的皮革绑带松开，化作了纸片。奥术狂欲法术的效果也开始消退，你们彼此拉开距离、挣脱纸片绑带时，终于回过神来意识到刚才到底发生了什么。
 	</p>
 	<p>
-		[meraxis.speech(Eugh...)] Meraxis sheepishly moans, [meraxis.speech(That damn youko, I <i>hate</i> her for making us do that! I-I mean, not that I'd hate kissing you, [pc.name], but y-you know what I mean! Eugh!)]
+		[meraxis.speech(呃……)]梅拉克西丝羞怯地呻吟道，[meraxis.speech(那个该死的妖狐，我<i>恨死</i>她让我们做那种事了！我……我的意思是，不是说我讨厌亲你，[pc.name]，只是你……你懂我意思的！呃！)]
 	</p>
 	<p>
-		Profusely blushing, the [meraxis.race] attempts to hide her embarrassment by turning away from you and quickly gathering up her clothes from the clearing. As you wait for your head to stop spinning, she gets dressed, before walking over to you and sighing, [meraxis.speech(Well, at least we were able to evict her. Somehow. Her spell should completely break any second now...)] 
+		这个[meraxis.race]满脸通红，试图转过身去掩饰自己的尴尬，迅速从空地上捡起自己的衣服。你等着头晕目眩的感觉消退，她已经穿好了衣服，然后走到你身边叹了口气，[meraxis.speech(好吧，至少我们把她赶走了。不知怎么做到的。她的法术应该马上就会完全消退了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_INCORRECT_CHOICE_SEX_START"><![CDATA[
 	<p>
-		Stepping forwards, the youko pushes her thick, vulpine cock forwards and squeezes it in between your mouths. As your lips press against the sides of her hot, throbbing shaft, she
+		妖狐向前一步，将她粗壮的狐狸阴茎挤进你们的嘴之间。你们的双唇贴着她滚烫跳动的阴茎两侧，她
 		#IF(shiranui.getSexCount(pc, sex.newSexType(PENETRATION_PENIS, ORIFICE_VAGINA))>0)
-			 looks down at Meraxis and giggles, [shiranui.speech(I was balls-deep in [pc.namePos] pussy not too long ago. Can you taste [pc.herHim] on me?)]
+			低头看着梅拉克西丝咯咯笑道：[shiranui.speech(不久前我还把整根插在[pc.namePos]小穴里呢。你能尝到[pc.herHim]的味道吗？)]
 		#ELSE
-			 giggles, [shiranui.speech(That's it, sluts, worship my cock!)]
+			咯咯笑道：[shiranui.speech(就是这样，小荡妇们，好好侍奉我的阴茎！)]
 		#ENDIF
 	</p>
 	<p>
-		Meraxis lets out a muffled moan in response to the youko's teasing, and as Shiranui slides her cock forwards and back between your faces, she hums,
+		梅拉克西丝发出一声闷闷的呻吟回应妖狐的挑逗，不知火将阴茎在你们脸颊之间前后滑动，哼哼道：
 		#IF(meraxis.isFaceVirgin())
 			#IF(pc.isFaceVirgin())
-				 [shiranui.speech(Neither of you seem very good at this... Don't tell me... The two of you have never sucked cock before?! ~Ooh!~ I'll get to be your first! Let's start with... Meraxis!)]
+				[shiranui.speech(你们两个好像都不太擅长呢……别告诉我……你们俩都没吃过阴茎？！~噢！~那我就是你们的第一次了！先从……梅拉克西丝开始吧！)]
 			#ELSE
-				 [shiranui.speech(Meraxis, you don't seem to be very good at this... Don't tell me... You've never sucked cock before?! ~Ooh!~ I'll get to be your first!)]
+				[shiranui.speech(梅拉克西丝，你好像不太擅长呢……别告诉我……你没吃过阴茎？！~噢！~那我就是你的第一次了！)]
 			#ENDIF
 		#ELSEIF(pc.isFaceVirgin())
-			 [shiranui.speech([pc.Name], you don't seem to be very good at this... Don't tell me... You've never sucked cock before?! ~Ooh!~ I'll get to be your first! I'll let Meraxis get me warmed up, then you can get your first real taste of cock!)]
+			[shiranui.speech([pc.Name]，你好像不太擅长呢……别告诉我……你没吃过阴茎？！~噢！~那我就是你的第一次了！先让梅拉克西丝帮我热热身，然后你就能第一次好好品尝阴茎的滋味了！)]
 		#ELSE
-			 [shiranui.speech(You're both so eager... That's it, sluts, worship me... ~Mmm!~ How about I give you a better taste?)]
+			[shiranui.speech(你们都好热情呢……就是这样，小荡妇们，好好侍奉我……~嗯！~要不要让你们尝点更带劲的？)]
 		#ENDIF
 	</p>
 	<p>
-		With a snap of her fingers, Shiranui pulls back and commands the leather bindings to turn Meraxis's head to one side, leaving you kissing the [meraxis.race]'s cheek. The youko repositions her cock so that the tapered tip is pressing against Meraxis's lips, and, still under the influence of arcane arousal, she starts lapping the precum from the head of Shiranui's shaft. 
+		不知火打了一个响指，抽身后退，命令皮革绑带将梅拉克西丝的头转向一侧，你的嘴唇便贴在了[meraxis.race]的脸颊上。妖狐重新调整了阴茎的位置，将锥形的前端抵在梅拉克西丝的唇上，而她在秘法催情法术的影响下，开始舔舐不知火阴茎顶端渗出的先走液。
 	</p>
 	<p>
-		[shiranui.speech(Good girl! So eager!)] the youko giggles, before pressing forwards and forcing her cock into Meraxis's mouth. With you [pc.lips+] pressed against the [meraxis.race]'s cheek, you feel the girth of the youko's cock stretching Meraxis's mouth, and she moans and squirms about as the huge, vulpine shaft is shoved deep down her throat. Grabbing her horns, Shiranui starts pumping her hips forwards and back, causing Meraxis to make gargled, choking noises as she fucks her face.
+		「好女孩！真是迫不及待呢！」妖狐咯咯笑着，随即向前挺身，将她的阴茎强行塞进了梅拉克西丝的嘴里。你的[pc.lips+]贴着这位[meraxis.race]的脸颊，感受到妖狐粗壮的阴茎将梅拉克西丝的嘴撑得满满当当，她呜咽着扭动身体，巨大的狐形阴茎深深捅入她的喉咙。不知火抓住她的角，开始前后摆动臀部，梅拉克西丝发出含混的呛咳声，被妖狐肆意地侵犯着面庞。
 	</p>
 	<p>
-		[shiranui.speech(Don't worry, [pc.name]. ~Mmm!~ I... ~Ooh!~ I haven't forgotten about you!)] Shiranui moans, before pulling back and letting her cock slide free from Meraxis's mouth with a lewd, wet pop. The leather ribbons move again, forcing you and Meraxis to swap poses. Now with the [meraxis.race] kissing your cheek, it's your turn to be staring at the youko's saliva-coated cock. The intense effects of being hit with so many arcane arousals is preventing you from thinking normally, and all you can bring yourself to do is submissively kiss the tip of the beautiful youko's twitching dick.
+		「别担心，[pc.name]。嗯啊～我……噢～我可没忘了你！」不知火呻吟着说道，随后抽身退出，让她的阴茎从梅拉克西丝嘴里滑出，发出一声淫靡的水声。皮革缎带再次移动，迫使你和梅拉克西丝交换姿势。现在换成[meraxis.race]亲吻你的脸颊，轮到你盯着妖狐那根沾满唾液的阴茎了。被接连命中那么多秘法催情法术的强烈效果让你无法正常思考，你所能做的只是顺从地亲吻这位美丽妖狐颤动的龟头。
 	</p>
 	<p>
-		[shiranui.speech(Good slut!)] she giggles, before thrusting forwards and forcing her [shiranui.cock+] into your mouth. Your [pc.lips+] are forced to stretch wide as the youko's girthy shaft enters you, and just like Meraxis, you star to make gargling, choking noises as Shiranui's cock is pushed down your throat. Moaning in delight, the youko starts fucking your face, and you feel trails of thick, precum-infused saliva drooling from the corners of your mouth as Shiranui uses your throat as her personal cock sleeve.
+		「好荡妇！」她咯咯笑着，随即猛地前挺，将她的[shiranui.cock+]塞入你的口中。妖狐粗壮的阴茎进入时，你的[pc.lips+]被迫大大撑开，和梅拉克西丝一样，你也开始发出含混的呛咳声，不知火的阴茎被推入你的喉咙深处。妖狐愉悦地呻吟着，开始侵犯你的面庞，你感觉到混着先走液的浓稠唾液从嘴角淌下，不知火把你的喉咙当成了她私人的套弄工具。
 	</p>
 	<p>
-		After a few moments of this, the youko seems to want to do something else, and after using the leather bindings to make you and Meraxis face one another, she giggles as she slides her cock between your mouths and makes you kiss, lick, and worship the sides of her shaft...
+		持续了片刻之后，妖狐似乎想换个花样。她用皮革绑带让你和梅拉克西丝面对面，然后咯咯笑着将阴茎插入你们两人的嘴之间，让你们亲吻、舔舐、侍奉她阴茎的两侧……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_COCK_WORSHIP"><![CDATA[
 	<p>
-		Having had her fun, the youko steps back, before looking down at your cum-covered bodies and letting out a mocking laugh.
+		在玩够了之后，妖狐后退一步，低头看着你们满身精液的身体，发出一阵嘲弄的笑声。
 	</p>
 	<p>
-		[shiranui.speech(You really do look like a pair of sluts now!)] Shiranui giggles. Smirking down at the two of you, she says, [shiranui.speech(That binding spell won't last for much longer, so I suppose I'd better be leaving. I won't be showing my face back here again; as easy and as fun as it would be to keep on playing with you two idiots, I've grown tired of this place, and I really don't want to make a lasting enemy out of a recognised daughter of Lyssieth. I get the feeling that we'll meet again some day, so until then, goodbye!)]
+		[shiranui.speech(你们俩现在活脱脱就是一对荡妇！)]不知火咯咯笑着。她居高临下，冲你们得意地坏笑，说道，[shiranui.speech(束缚法术撑不了多久了，我看我还是走吧。我不会再回这儿露面了；你们两个蠢货虽然好骗、玩起来也有趣，可这地方我已经待腻了，更不想跟莉西丝认可的女儿结下不解之仇。我总觉得咱们日后还会再见，那就后会有期！)]
 	</p>
 	<p>
-		With that, the youko hurriedly skips off into what little of the surrounding mists remain, and a few moments later the leather bindings which are keeping you and Meraxis locked together loosen and turn into paper. The effects of the arcane arousal spells also begin to fade, and as you pull away from one another and tear yourselves free from the paper bindings, the reality of what's just happened hits you.
+		话音刚落，妖狐便急匆匆地蹦跳着消失在周围残余的薄雾里。片刻后，你和梅拉克西丝捆在一起的皮革绑带松开，化作了纸片。奥术狂欲法术的效果也开始消退，你们彼此拉开距离、挣脱纸片绑带时，终于回过神来意识到刚才到底发生了什么。
 	</p>
 	<p>
-		[meraxis.speech(My head... W-Wait, we were just...)] Meraxis stutters, before furiously blushing and spitting on the floor. Repeatedly wiping her mouth with the back of her hands, she exclaims, [meraxis.speech(That damn youko! I <i>hate</i> her for making us do that! I-I mean, not that I'd hate kissing you, [pc.name], but y-you know what I mean! Making us give her a blowjob together! Eugh!)]
+		[meraxis.speech(我的头……等、等等，我们刚才还……)]梅拉克西丝结结巴巴地说，然后猛地涨红了脸，朝地上吐了口唾沫。她用手背反复擦着嘴，喊道， [meraxis.speech(那个该死的妖狐！她逼我们做那种事，我<i>恨死</i>她了！我、我是说，我不是讨厌亲你，[pc.name]，可、可你懂我意思吧！逼我们一起给她口交！呕！)]
 	</p>
 	<p>
-		Still profusely blushing, the [meraxis.race] attempts to hide her embarrassment by turning away from you and quickly gathering up her clothes from the clearing. As you wait for your head to stop spinning, she gets dressed, before walking over to you and sighing, [meraxis.speech(That didn't go as planned, but at least we were able to evict her. Shiranui's spell should completely break any second now...)]
+		[meraxis.race]依然满脸通红。她背过身去，手忙脚乱地收拾起散落在空地上的衣服，想要掩饰自己的窘态。趁你还在等头晕缓解，她已经穿好衣服走到你身边，叹了口气道：[meraxis.speech(虽说没按计划来，但至少总算把她赶出去了。不知火的法术随时都会彻底失效……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Correct choice, offer of sex scene: -->
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE"><![CDATA[
 	<p>
-		From everything you've seen, it's obvious that the naked Meraxis is in fact Shiranui. Declaring this to be the case, you tell her to give up and stop pretending to be Meraxis.
+		根据你所观察到的一切，很明显那个赤身裸体的梅拉克西丝其实是不知火。你当即点破了这一事实，让她放弃伪装，别再假扮梅拉克西丝了。
 	</p>
 	<p>
-		[shiranui.speech(Well done,)] she giggles as you and the hat-wearing Meraxis turn to confront her, [shiranui.speech(for a moment there I thought I had you.)]
+		[shiranui.speech(干得漂亮，)]她咯咯笑着，你和戴着帽的梅拉克西丝一同转向面对她，[shiranui.speech(刚才有那么一瞬间，我还以为能骗过你呢。)]
 	</p>
 	<p>
-		Sweeping her arm across her body, a shimmering sheen of glitter and sparkling lights falls down all around Shiranui, and within a couple of seconds she's transformed back into her true form. Beautiful, shapely, and with seven light-pink fox-tails swirling around behind her, she looks exactly as she did when you saw her in the mirrors. Down between her legs, her huge fox-cock is fully erect, and she smirks as she playfully touches herself and teases, [shiranui.speech(As a reward for having chosen correctly, I'll let the two of you fuck me!)]
+		她手臂在身前一挥，一层闪烁的光辉与星星点点的亮光如瀑布般洒落在不知火周围，短短几秒之内，她就变回了真实的模样。美丽、曼妙，七条浅粉色的狐尾在身后翩然摇曳，和你在镜子里看到的一模一样。在她双腿之间，那根硕大的狐狸阴茎完全勃起，她得意地坏笑着，一边玩弄着自己一边挑逗道，[shiranui.speech(作为你猜对了的奖励，我就让你们两个一起来操我吧！)]
 	</p>
 	<p>
-		Blushing, Meraxis crosses her arms and exclaims, [meraxis.speech(You really think that we'd just have sex with you after all of that?!)]
+		梅拉克西丝满脸通红，双臂交叉在胸前嚷道，[meraxis.speech(你真以为经历了这一切之后，我们就会跟你上床吗？！)]
 	</p>
 	<p>
-		[shiranui.speech(Well, if you'd prefer, I can give you some gifts,)] the youko says in a soothing tone, [shiranui.speech(It's customary for us servants of Kayo to reward those who see through our tricks, so I have to give you something. Wouldn't you prefer to have sex rather than receive some potions?)]
+		[shiranui.speech(嗯，如果你更愿意的话，我可以给你一些礼物，)]妖狐用柔和的语气说道，[shiranui.speech(我们这些侍奉加代的仆从，按照惯例要奖赏那些看穿我们把戏的人，所以我必须给你点什么。比起拿几瓶魔药，你不觉得做爱更好吗？)]
 	</p>
 	<p>
-		Shiranui looks over at you as she asks this question, leaving you to decide what you want from her.
+		不知火问出这个问题时，转头看向你，由你来决定想从她那里得到什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRECT_CHOICE_GIFTS"><![CDATA[
 	<p>
-		Agreeing with Meraxis, you tell Shiranui that you're not interested in having sex with her.
+		你赞同梅拉克西丝的意见，告诉不知火你对和她做爱没兴趣。
 		#IF(shiranui.getSexCount(pc).getTotalTimesHadSex()>0)
-			 She gives you a sly smirk as you say this, and she giggles, [shiranui.speech(That's not what you were saying a little while ago. You seemed to enjoy getting fucked by my big cock in front of those mirrors...)]
+			你说这话时，她露出了狡黠的坏笑，咯咯笑道，[shiranui.speech(刚才你可不是这么说的哦。在那些镜子前面被我的大肉棒操的时候，你明明很享受嘛……)]
 		#ELSE
-			 She pouts as you say this, before smirking and giggling, [shiranui.speech(Well, that's your loss!)]
+			听到你这么说，她撅起了嘴，随即又坏笑着咯咯笑道，[shiranui.speech(那可是你的损失咯！)]
 		#ENDIF
 	</p>
 	<p>
-		Snapping her fingers, Shiranui points to a spot a little way away, and in a puff of smoke, a small collection of bottles appear out of thin air. Gesturing towards the nearby building, she reveals, [shiranui.speech(Takahashi is in there. As I'm sure she'll tell you, she's been enjoying her time as my slave, so there's no bad feelings between us, right?)]
+		不知火打了个响指，指向不远处的一个地方，一阵烟雾中，几个小瓶子凭空出现。她朝着附近的建筑示意，说道，[shiranui.speech(高桥就在里面。我相信她会告诉你的，她很享受当我奴隶的这段时光，所以我们之间没有什么过节，对吧？)]
 	</p>
 	<p>
-		[meraxis.speech(You'd better not have hurt her!)] Meraxis angrily shouts, [meraxis.speech(If you have, I'll use my ultimate obliteration spell on you!)]
+		[meraxis.speech(你最好没伤到她！)]梅拉克西丝怒吼道，[meraxis.speech(不然，我就用终极湮灭法术轰了你！)]
 	</p>
 	<p>
-		[shiranui.speech(You have my word that she's unharmed,)] the youko replies in a rather amused tone. After performing a little bow, she says, [shiranui.speech(I won't be showing my face back here again; as amusing as it would be to keep on playing with the two of you, I've grown tired of this place, and I really don't want to make a lasting enemy out of a recognised daughter of Lyssieth. I get the feeling that we'll meet again some day, so until then, goodbye!)]
+		[shiranui.speech(我向你保证，她毫发无伤，)]妖狐颇觉有趣地答道。她微微鞠了一躬，说道，[shiranui.speech(我不会再回这里露面了；虽然继续陪你们俩玩下去肯定很有趣，但我也确实待腻了，更不想跟莉西丝认可的女儿结下不解之仇。我有种预感咱们总有一天还会再见，那么，后会有期！)]
 	</p>
 	<p>
-		With another click of her fingers, Shiranui is engulfed in a puff of smoke, and as it fades away, she's completely vanished. Now finding herself alone with you, Meraxis suddenly becomes aware of the fact that all she's wearing is her hat. Letting out a startled yelp, the [meraxis.race] attempts to hide her embarrassment by turning away from you, before hastily gathering up her clothes from the clearing. After quickly getting dressed, she walks over to you and sighs, [meraxis.speech(Well, that could have gone smoother, but at least we were able to evict her. Shiranui's spell should completely break any second now...)]
+		又是一个响指，不知火被一团烟雾吞没，烟雾散去之后，她已经完全消失不见了。发现只剩自己和你独处，梅拉克西丝突然意识到自己身上只穿着一顶帽。她惊叫一声，这位[meraxis.race]连忙转过身去试图掩饰自己的窘迫，然后匆忙从空地上捡起自己的衣服。飞速穿好衣服后，她走到你身边叹了口气，[meraxis.speech(好吧，虽然本来可以更顺利一点，但至少我们成功把她赶走了。不知火的法术应该马上就会彻底消散了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_SEX"><![CDATA[
 	<p>
-		Unable to refuse Shiranui's offer, you tell her that you'd like to have sex with
+		无法拒绝不知火的邀请，你告诉她你想和她
 		#IF(shiranui.getSexCount(pc).getTotalTimesHadSex()>0)
-			 her again.
+			再做一次。
 		#ELSE
-			 her.
+			做爱。
 		#ENDIF
-		  Meraxis lets out a loud, annoyed sigh as she hears you say this, before declaring, [meraxis.speech(You two have fun then! I'm going to go and rescue Takahashi!)]
+		梅拉克西丝听到你的话后恼怒地叹了口气，随后宣布道，[meraxis.speech(那你们俩慢慢玩吧！我去救高桥了！)]
 	</p>
 	<p>
-		Clearly embarrassed by thinking about what you and the youko are about to do, the [meraxis.race] furiously blushes as she quickly gathers up her clothes from the clearing. Rushing over to the building, she stutters as she calls out behind her, [meraxis.speech(J-Just don't take too long!)]
+		一想到你和妖狐接下来要做的事，这位[meraxis.race]显然十分难为情，满脸通红地迅速从空地上捡起自己的衣服。她匆忙跑向那栋建筑，边跑边结结巴巴地喊道，[meraxis.speech(你、你们别磨蹭太久！)]
 	</p>
 	<p>
-		As Meraxis disappears into her hideout, Shiranui saunters over to you. Her seven fox tails happily sway behind her as she approaches, and with a sulty look on her beautiful face, she asks, [shiranui.speech(So, now that she's gone, do you want to fuck me like this, or do you want me to transform back into Meraxis? Oh, don't worry, did you see her face? She'll be far too embarrassed to come back out here, so she'll never find out...)]
+		梅拉克西丝消失在藏身处里，不知火朝你款款走来，身后七条狐尾开心地摇摆着。她面容姣好，神情魅惑，问道，[shiranui.speech(那么，她都走了——你是想就这样干我，还是想让我转化回梅拉克西丝的样子？哦，别担心，你看到她那张脸了吗？她肯定羞得不敢再出来，所以她永远不会知道的……)]
 	</p>
 	<p>
-		The youko smirks at you as you decide whether to fuck her in her youko form or in the body of Meraxis.
+		妖狐朝你得意地坏笑着，等你决定是要操她妖狐的样子，还是操梅拉克西丝的身体。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_SEX_YOUKO"><![CDATA[
 	<p>
-		Wanting her to remain in her youko form, you tell Shiranui that you like her the way she is.
+		你想让她保持妖狐的模样，于是告诉不知火你喜欢她现在的样子。
 	</p>
 	<p>
-		[shiranui.speech(How sweet,)] she giggles, before stepping forwards and pressing her [shiranui.lips+] against your mouth. Leaning into you, she kisses you for a moment, before pulling back and moaning, [shiranui.speech(Come on, [pc.name]. Fuck me...)]
+		[shiranui.speech(真贴心，)]她咯咯笑着，走上前来，将[shiranui.lips+]贴上你的嘴唇。她靠向你，亲吻了片刻，然后退开，娇喘着说道，[shiranui.speech(来吧，[pc.name]。要了我……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_SEX_YOUKO_FEMALE"><![CDATA[
 	<p>
-		Wanting her to remain in her youko form, you tell Shiranui that you like her the way she is, but that you want her to get rid of her cock.
+		你想让她保持妖狐形态，便告诉不知火你喜欢她现在的样子，不过希望她能把肉棒去掉。
 	</p>
 	<p>
-		[shiranui.speech(Aww, that's no fun!)] she whines, before pouting at you and sighing, [shiranui.speech(Fine, if that's what it'll take to get you to fuck me...)]
+		[shiranui.speech(呜，真没意思！)]她娇嗔地抱怨着，接着嘟起嘴朝你叹了口气，[shiranui.speech(好吧，只要能让你来操我……)]
 	</p>
 	<p>
-		As she harnesses the transformative powers of her youko form, you see Shiranui's cock rapidly shrink, before completely vanishing and leaving her with just her [shiranui.pussy+]. Letting out another giggle, she steps forwards and presses her [shiranui.lips+] against your mouth. Leaning into you, she kisses you for a moment, before pulling back and moaning, [shiranui.speech(Come on, [pc.name]. My cock's gone now, so fuck me already...)]
+		她催动妖狐形态的变身之力，只见不知火的阴茎迅速地缩小，随即彻底消失，只留下[shiranui.pussy+]。她又咯咯一笑，走上前来，将[shiranui.lips+]贴上你的嘴唇。她偎向你，吻了片刻，然后退开，娇吟道：[shiranui.speech(快点，[pc.name]。我的肉棒都没了，快操我呀……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_SEX_MERAXIS"><![CDATA[
 	<p>
-		Thinking that it would be fun to fuck Shiranui while she's taken on the form of Meraxis, you tell her to transform.
+		觉得趁不知火变成梅拉克西丝的样子来一发会很有趣，你让她转化。
 	</p>
 	<p>
-		[shiranui.speech(Your wish is my command!)] she giggles, before lifting her arm up over her body. Just like when she transformed before, a shimmering sheen of glitter and sparkling lights falls down all around the youko, and within a couple of seconds she's transformed into Meraxis. Every part of her is indistinguishable from the real thing, and as she smirks at you, Shiranui teases, [shiranui.speech(You've been wanting to fuck Meraxis. Now's your chance...)]
+		[shiranui.speech(遵命！)]她咯咯笑着，然后将手臂举过头顶。就像之前转化时一样，一层闪烁的光辉和璀璨的光点如雨般洒落在妖狐周身，不过几秒钟，她就转化成了梅拉克西丝的模样。她的每一处都与真人别无二致。她冲你坏笑了一下，挑逗道，[shiranui.speech(你一直想上梅拉克西丝吧。现在机会来了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_SEX_MERAXIS_FUTA"><![CDATA[
 	<p>
-		Thinking that it would be fun to fuck Shiranui while she's taken on the form of Meraxis, you tell her to transform, but that you want her to remain as [shiranui.a_gender].
+		觉得趁不知火变成梅拉克西丝的样子来一发会很有趣，你让她转化，不过要求她保持为[shiranui.a_gender]。
 	</p>
 	<p>
-		[shiranui.speech(Your wish is my command!)] she giggles, before lifting her arm up over her body. Just like when she transformed before, a shimmering sheen of glitter and sparkling lights falls down all around the youko, and within a couple of seconds she's transformed into Meraxis. Every part of her is indistinguishable from the real thing, except for the fact that she has a big, demonic cock between her legs. Smirking at you as she strokes her thick shaft, Shiranui teases, [shiranui.speech(You've been wanting to fuck Meraxis, haven't you. Or is it that you wanted Meraxis to fuck you? In either case, now's the chance to make your dreams a reality...)]
+		[shiranui.speech(如你所愿！)]她咯咯娇笑着，将手臂高高举过头顶。就如之前变身时一样，妖狐周身洒下一片流光溢彩的璀璨光斑，短短几秒内，她便化作了梅拉克西丝的模样。她全身上下与本尊毫无二致，唯独双腿间多了一根粗大的恶魔肉棒。不知火一边抚弄着自己粗壮的阴茎，一边朝你坏笑着挑逗道：[shiranui.speech(你一直想干梅拉克西丝，对吧？还是说你想被梅拉克西丝干？不过不管怎样，现在可是美梦成真的好机会……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRECT_CHOICE_AFTER_SEX"><![CDATA[
 	<p>
-		Having had your fun, you bring an end to the sex. Letting out an amused giggle, Shiranui asks, [shiranui.speech(Did you have fun?)]
+		尽兴之后，你结束了这场欢爱。不知火发出一声愉悦的轻笑，问道，[shiranui.speech(玩得开心吗？)]
 	</p>
 	<p>
-		Replying in the positive, you take a moment to get your breath back, and as you do so, the youko performs a little bow and says, [shiranui.speech(My spell will break in just a moment, so I really ought to be going now. I get the feeling that we'll meet again some day, so until then, goodbye!)]
+		你给了肯定的答复，趁机喘口气平复呼吸。与此同时，妖狐向你微微欠身，说道，[shiranui.speech(我的法术马上就要失效了，所以我真得走了。我有种预感，我们总有一天还会再见面的，那么，后会有期！)]
 	</p>
 	<p>
-		With a click of her fingers, Shiranui is engulfed in a puff of smoke, and as it fades away, she's completely vanished. Now finding yourself alone, you turn towards the building which serves as Meraxis's hideout.
+		不知火打了个响指，一团烟雾将她吞没，待烟雾散去，她已经消失得无影无踪。发现自己已经独自一人，你转身望向梅拉克西丝用作藏身处的那栋建筑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_THREESOME"><![CDATA[
 	<p>
-		Although she claims to not be interested in sex, you can tell from the way in which Meraxis occasionally glances at Shiranui's body that she might be open to being convinced otherwise. Smiling at the chuuni [meraxis.race], you tease her by saying that you know that she's not as much of a prude as she claims to be.
+		尽管她嘴上说对做爱不感兴趣，但从梅拉克西丝不时偷瞄不知火身体的眼神来看，她或许并非不可说服。你对着这位中二病[meraxis.race]微微一笑，打趣她说，你知道她并不像自己声称的那样拘谨。
 	</p>
 	<p>
-		[meraxis.speech(H-Hey!)] she stutters, [meraxis.speech(It's not like I'm not interested in sex, it's just that I don't want to do it with this youko!)]
+\t\t[meraxis.speech(喂、喂！)]她结结巴巴地说道，[meraxis.speech(我又不是对做爱没兴趣，只是我不想和这只妖狐做！)]
+\t</p>
+	<p>
+\t\t[shiranui.speech(哦？担心我会比你更能满足[pc.name]吗？)]不知火咯咯笑道，[shiranui.speech(没关系，承认你输了，然后跑吧。[pc.Name]和我没有你也能玩得开心。)]
+\t</p>
+	<p>
+\t\t[meraxis.speech(你说什么？！)]梅拉克西丝怒声喝道。她走到不知火面前，大胆地挺起自己的[meraxis.breastSize]乳房，撞向不知火那对[shiranui.breastSize]、[shiranui.cupSize]罩杯的乳房，并大喊道，[meraxis.speech(我做爱比你厉害！)]
+\t</p>
+	<p>
+		[shiranui.speech(“做爱这件事？”)]不知火被梅拉克西丝的说法逗笑了，[shiranui.speech(你根本不是我的对手，丫头。你真以为像你这样没经验的人能跟我较量？)]
 	</p>
 	<p>
-		[shiranui.speech(Oh? Worried that I'd be able to satisfy [pc.name] better than you ever could?)] Shiranui giggles, [shiranui.speech(That's fine; admit your loss and run off. [pc.Name] and I don't need you to have fun.)]
+		还没等她回话，不知火突然伸手抓住梅拉克西丝的头，俯身热情地吻上了她的嘴唇。梅拉克西丝在妖狐的亲密攻势下涨红了脸，但又不甘心输给她，非但没有退缩，反而全身心地投入了这个吻。两人较劲似的看谁先撑不住，这场激吻持续了好几分钟，最终还是梅拉克西丝败下阵来。她向后退开，断开这个吻，喘息着说，[meraxis.speech(我、我才不会输给你！)]
 	</p>
 	<p>
-		[meraxis.speech(Excuse me?!)] Meraxis angrily snaps. Stepping up to Shiranui, she boldly bumps her [meraxis.breastSize] tits into Shiranui's [shiranui.breastSize], [shiranui.cupSize]-cup breasts and shouts, [meraxis.speech(I'm better at doing the sex than you are!)]
+		[shiranui.speech(但你刚才不就说了嘛！)]妖狐笑道。随后一抹阴险的坏笑浮现在她美丽的面庞上，她转向你说道，[shiranui.speech(也许梅拉克西丝更想在公平的条件下一较高下。我变回她的样子怎么样？然后你来操我们俩，告诉我们谁才是“更会做爱的”梅拉克西丝。)]
 	</p>
 	<p>
-		[shiranui.speech('At doing the sex'?)] Shiranui laughs at Meraxis's phrasing, [shiranui.speech(You're out of your league, girl. You really think that someone as inexperienced as you can take me on?)]
+		[meraxis.speech(什……什么？！)]梅拉克西丝又结巴了，[meraxis.speech(没必要那样！我、我一个人就能应付你！)]
 	</p>
 	<p>
-		Before she can reply, Shiranui suddenly reaches up to grab Meraxis's head and leans forwards to passionately kiss her on the lips. Meraxis furiously blushes as she receives the youko's intimate attention, but, not wanting to be outdone by her, she doesn't pull away and instead fully commits to the kiss. The two of them, competing to see who's going to break first, continue this makeout session for good couple of minutes, before finally Meraxis is the one to lose. Pulling back, she breaks off the kiss and pants, [meraxis.speech(I-I won't lose to you!)]
+		[shiranui.speech(哦？你看起来很害怕嘛，)]不知火揶揄道，[shiranui.speech(我猜你是担心我会比你更像一个梅拉克西丝，然后[pc.name]会更喜欢我吧？真可惜，我还以为你喜欢挑战呢。不过我也不想让你不高兴，那我就保持这个形态好了。)]
 	</p>
 	<p>
-		[shiranui.speech(But you just did!)] the youko laughs. A sinister smirk then settles on her beautiful face, and she turns to you to say, [shiranui.speech(Perhaps Meraxis would prefer to fight on a more even footing. How about I transform back to look like her? Then you can fuck us and let us know who's the best Meraxis 'at doing the sex'.)]
+		[meraxis.speech(我才没有害怕！)]梅拉克西丝大喊道，完全没意识到自己一直被不知火轻易地牵着鼻子走。她嘟着嘴，手指着你，尽管脸上还在气得通红，却自信地宣告道，[meraxis.speech(真正的梅拉克西丝能比任何妖狐都更让你满足！让她变成我的样子，我会让你看看我的本事！)]
 	</p>
-	<p>
-		[meraxis.speech(W-What?!)] Meraxis stutters again, [meraxis.speech(There's no need for that! I-I can take you on just fine as you are!)]
-	</p>
-	<p>
-		[shiranui.speech(Oh? You seem afraid,)] Shiranui teases, [shiranui.speech(I guess you're worried that I'll be the better Meraxis, and that [pc.name] would prefer me? How sad, I thought that you liked a challenge. I wouldn't want to upset you, though, so I'll stay in this form instead.)]
-	</p>
-	<p>
-		[meraxis.speech(I'm not afraid!)] Meraxis shouts, failing to realise that she's been easily manipulated by Shiranui this whole time. Pouting, she points a finger at you, and despite the fact that she's still furiously blushing, she confidently declares, [meraxis.speech(The real Meraxis can satisfy you better than any youko! Tell her to transform into me, and I'll show you what I've got!)]
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_THREESOME_YOUKO"><![CDATA[
 	<p>
-		You don't really want Shiranui to transform back into looking like Meraxis, and so you tell the [meraxis.race] that she has nothing to fear; you already know that she's the best version of Meraxis that could exist.
+		你并不想让不知火变回梅拉克西丝的模样，于是你告诉这位[meraxis.race]她完全不必担心——你早就知道，她就是最好的梅拉克西丝。
 	</p>
 	<p>
-		A smug look settles on Meraxis's face, and she gloats, [meraxis.speech(Hear that, Shiranui? You could never compete with me!)]
+		梅拉克西丝脸上浮现出一副得意洋洋的表情，她炫耀道，[meraxis.speech(听到了吗，不知火？你永远比不过我！)]
 	</p>
 	<p>
-		[shiranui.speech(Maybe I couldn't be the better Meraxis, but I'm still your superior when it comes to pleasing my partners,)] Shiranui retorts, [shiranui.speech(Now, do try to keep up.)]
+		[shiranui.speech(也许我当不了更好的梅拉克西丝，但论取悦对象的本事，我可比你强多了，)]不知火反唇相讥，[shiranui.speech(来吧，看你能不能跟上。)]
 	</p>
 	<p>
-		With that, the youko skips forwards and throws herself into your [pc.arms]. Her lips are pressed against your mouth, and she lets out horny little moans as she starts grinding against you and passionately kissing you.
+		说罢，妖狐一步跃上前来，扑进了你的[pc.arms]里。她的双唇贴上你的嘴，一边在你身上磨蹭，一边热情地吻着你，口中发出阵阵淫靡的呻吟。
 	</p>
 	<p>
-		[meraxis.speech(H-Hey! I can do that too!)] Meraxis stutters. Rushing forwards, she pulls Shiranui off you, before taking her place and, somewhat clumsily compared to the experienced youko, starts kissing you.
+		[meraxis.speech(喂、喂——！我也会！)]梅拉克西丝结结巴巴地喊道。她冲上前来把不知火从你身上拉开，然后取而代之，虽然和经验丰富的妖狐比起来有些笨拙，但还是开始亲吻你。
 	</p>
 	<p>
-		As Meraxis tries to make you forget about her new rival, Shiranui drops down on all fours and arches her back. Lifting her ass, she lifts her seven tails and presents her [shiranui.pussy+] and [shiranui.asshole+] to you while moaning, [shiranui.speech(Enough with the games, come and fuck me!)]
+		就在梅拉克西丝试图让你忘掉她的新对手时，不知火趴伏在地，弓起腰背。她翘起臀部，撩开七条尾巴，将自己的[shiranui.pussy+]和[shiranui.asshole+]展露在你面前，呻吟着说，[shiranui.speech(别再玩了，快来操我！)]
 	</p>
 	<p>
-		Breaking off your kiss, Meraxis turns to see what Shiranui is doing and lets out an annoyed groan. Rushing over to her, she drops down onto all fours beside the youko and attempts to mimic her pose. Although she looks a little stiff, and her back is kept straight instead of arching down like Shiranui's, Meraxis shows no less enthusiasm as she proclaims, [meraxis.speech(I won't lose to you! I look better than her, don't I, [pc.name]?!)]
+		梅拉克西丝中断了和你的亲吻，转头看到不知火的举动后发出一声恼怒的低吟。她连忙跑过去，在妖狐身旁也趴伏下来，试图模仿她的姿势。虽然她的身体看起来有些僵硬，背也挺得笔直而非像不知火那样弓成拱形，但梅拉克西丝丝毫不输在气势上，大声嚷道，[meraxis.speech(我才不会输给你！我比她好看多了，对吧，[pc.name]？！)]
 	</p>
 	<p>
-		[shiranui.speech(Face it; you can never compete with me like this,)] Shiranui giggles, but her mocking laughter is cut short as Meraxis suddenly shoves her shoulder into her. Scowling at the [meraxis.race], Shiranui sneers, [shiranui.speech(You bitch...)]
+		[shiranui.speech(认清现实吧，这样你永远比不过我的，)]不知火咯咯笑道。然而她的嘲笑戛然而止——梅拉克西丝突然用肩膀狠狠撞了她一下。不知火瞪着这个[meraxis.race]，冷哼道，[shiranui.speech(你这个贱人……)]
 	</p>
 	<p>
-		As they exchange snarls, Meraxis and Shiranui start bumping their asses into one another. You aren't quite sure how things got to this point, but as Meraxis and Shiranui compete to make themselves look more enticing, you're not complaining...
+		在彼此低吼对峙之间，梅拉克西丝和不知火开始用屁股互相顶撞起来。你也不太确定事情是怎么发展到这一步的，但看着梅拉克西丝和不知火争相展示自己的魅力，你可没什么好抱怨的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_THREESOME_YOUKO_FEMALE"><![CDATA[
 	<p>
-		You don't really want Shiranui to transform back into looking like Meraxis, and so you tell the [meraxis.race] that she has nothing to fear; you already know that she's the best version of Meraxis that could exist. Turning to Shiranui, you tell her that you want her to get rid of her cock.
+		你并不想让不知火转化回梅拉克西丝的模样，于是你告诉这位[meraxis.race]她完全不必担心——你早就知道，她就是最好的梅拉克西丝。随后你转向不知火，告诉她你希望她把肉棒弄掉。
 	</p>
 	<p>
-		A smug look settles on Meraxis's face, and she gloats, [meraxis.speech(Hear that, Shiranui? You could never compete with me! Now do as [pc.name] says and transform yourself!)]
+		梅拉克西丝脸上泛起得意之色，洋洋自得道，[meraxis.speech(听见了吗，不知火？你拿什么跟我比！还不快按[pc.name]说的办，赶紧转化！)]
 	</p>
 	<p>
-		[shiranui.speech(Maybe I couldn't be the better Meraxis, but I'm still your superior when it comes to pleasing my partners,)] Shiranui retorts, before looking over at you and pouting. Letting out a little whine, she sighs, [shiranui.speech(You really don't like my cock? Well, I guess I can get rid of it for now...)]
+		[shiranui.speech(也许我变出来的梅拉克西丝比不上你，但要说到怎么取悦自己的对象，我可比你强多了，)]不知火反驳道，接着转头看向你，嘟起了嘴。她发出一声轻微的呜叫，叹息道，[shiranui.speech(你真的不喜欢我的肉棒？好吧，那我暂时先把它收起来好了……)]
 	</p>
 	<p>
-		As she harnesses the transformative powers of her youko form, you see Shiranui's cock rapidly shrink, before completely vanishing and leaving her with just her [shiranui.pussy+]. Letting out a giggle, she skips forwards and throws herself into your [pc.arms], before pressing her [shiranui.lips+] against your mouth and deeply kissing you. After a moment of this, she pulls back and moans, [shiranui.speech(Come on, [pc.name]. My cock's gone now, so fuck me already...)]
+		不知火运转妖狐形态的变幻之力，只见她的阴茎迅速地缩小，随后彻底隐去，只留下了[shiranui.pussy+]。她咯咯娇笑，蹦跳着扑进你的[pc.arms]，将[shiranui.lips+]贴上你的嘴唇，与你深吻起来。温存片刻后，她退开些许，娇吟道：[shiranui.speech(快点嘛，[pc.name]。我的肉棒已经没了，快来干我呀……)]
 	</p>
 	<p>
-		[meraxis.speech(H-Hey! I can do that too!)] Meraxis stutters. Rushing forwards, she pulls Shiranui off you, before taking her place and, somewhat clumsily compared to the experienced youko, starts kissing you.
+		[meraxis.speech(喂、喂——！我也会！)]梅拉克西丝结结巴巴地喊道。她冲上前来把不知火从你身上拉开，然后取而代之，虽然和经验丰富的妖狐比起来有些笨拙，但还是开始亲吻你。
 	</p>
 	<p>
-		As Meraxis tries to make you forget about her new rival, Shiranui drops down on all fours and arches her back. Lifting her ass, she lifts her seven tails and presents her [shiranui.pussy+] and [shiranui.asshole+] to you while moaning, [shiranui.speech(Enough with the games, come and fuck me!)]
+		就在梅拉克西丝试图让你忘掉她的新对手时，不知火趴伏在地，弓起腰背。她翘起臀部，撩开七条尾巴，将自己的[shiranui.pussy+]和[shiranui.asshole+]展露在你面前，呻吟着说，[shiranui.speech(别再玩了，快来操我！)]
 	</p>
 	<p>
-		Breaking off your kiss, Meraxis turns to see what Shiranui is doing and lets out an annoyed groan. Rushing over to her, she drops down onto all fours beside the youko and attempts to mimic her pose. Although she looks a little stiff, and her back is kept straight instead of arching down like Shiranui's, Meraxis shows no less enthusiasm as she proclaims, [meraxis.speech(I won't lose to you! I look better than her, don't I, [pc.name]?!)]
+		梅拉克西丝中断了和你的亲吻，转头看到不知火的举动后发出一声恼怒的低吟。她连忙跑过去，在妖狐身旁也趴伏下来，试图模仿她的姿势。虽然她的身体看起来有些僵硬，背也挺得笔直而非像不知火那样弓成拱形，但梅拉克西丝丝毫不输在气势上，大声嚷道，[meraxis.speech(我才不会输给你！我比她好看多了，对吧，[pc.name]？！)]
 	</p>
 	<p>
-		[shiranui.speech(Face it; you can never compete with me like this,)] Shiranui giggles, but her mocking laughter is cut short as Meraxis suddenly shoves her shoulder into her. Scowling at the [meraxis.race], Shiranui sneers, [shiranui.speech(You bitch...)]
+		[shiranui.speech(认清现实吧，这样你永远比不过我的，)]不知火咯咯笑道。然而她的嘲笑戛然而止——梅拉克西丝突然用肩膀狠狠撞了她一下。不知火瞪着这个[meraxis.race]，冷哼道，[shiranui.speech(你这个贱人……)]
 	</p>
 	<p>
-		As they exchange snarls, Meraxis and Shiranui start bumping their asses into one another. You aren't quite sure how things got to this point, but as Meraxis and Shiranui compete to make themselves look more enticing, you're not complaining...
+		在彼此低吼对峙之间，梅拉克西丝和不知火开始用屁股互相顶撞起来。你也不太确定事情是怎么发展到这一步的，但看着梅拉克西丝和不知火争相展示自己的魅力，你可没什么好抱怨的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_THREESOME_MERAXIS"><![CDATA[
 	<p>
-		Meraxis seems determined to want to challenge Shiranui, and as you like the idea of getting to fuck two of Meraxis at once, you turn to the youko and tell her to transform.
+		梅拉克西丝似乎铁了心要和不知火一较高下，而你也很喜欢同时操两个梅拉克西丝的想法，于是你转向妖狐，让她转化。
 	</p>
 	<p>
-		[shiranui.speech(Your wish is my command!)] she giggles, before lifting her arm up over her body. Just like when she transformed before, a shimmering sheen of glitter and sparkling lights falls down all around the youko, and within a couple of seconds she's transformed into the spitting image of Meraxis. Every part of her is indistinguishable from the real thing, and as she smirks at you, Shiranui teases, [shiranui.speech(I bet the real Meraxis has never done this!)]
+		[shiranui.speech(遵命！)]她咯咯笑着，然后举起手臂划过身体。就像之前转化时一样，一层闪闪发光的亮粉和璀璨光芒从妖狐周身倾泻而下，短短几秒之内，她便转化成了和梅拉克西丝一模一样的模样。她身上每一处都与真人毫无二致，她朝你得意地坏笑着，不知火揶揄道，[shiranui.speech(我敢打赌，真正的梅拉克西丝从没做过这种事吧！)]
 	</p>
 	<p>
-		With that, she skips forwards and throws herself into your [pc.arms]. Her lips are pressed against your mouth, and she lets out horny little moans as she starts grinding against you and passionately kissing you.
+		说完，她蹦蹦跳跳地扑进你的[pc.arms]里。她的双唇紧贴着你的嘴，一边磨蹭着你的身体，一边热情地吻你，口中发出阵阵饥渴的轻哼。
 	</p>
 	<p>
-		[meraxis.speech(H-Hey! I can do that too!)] Meraxis stutters. Rushing forwards, she pulls Shiranui off you, before taking her place and, somewhat clumsily compared to the experienced youko, starts kissing you.
+		[meraxis.speech(喂、喂——！我也可以的！)]梅拉克西丝结结巴巴地喊道。她冲上前去把不知火从你身上扯开，然后取而代之——虽然和经验丰富的妖狐相比动作略显笨拙，但还是开始吻了起来。
 	</p>
 	<p>
-		As the real Meraxis tries to make you forget about her new rival, Shiranui drops down on all fours and arches her back. Lifting her ass, she presents her [meraxis.pussy+] and [meraxis.asshole+] to you and moans, [shiranui.speech(Enough with the games, come and fuck me!)]
+		趁真正的梅拉克西丝试图让你忘掉她的新对手时，不知火趴下身子四肢着地，弓起后背。她翘起屁股，将自己的[meraxis.pussy+]和[meraxis.asshole+]展示给你，呻吟道，[shiranui.speech(别再磨蹭了，快来操我！)]
 	</p>
 	<p>
-		Breaking off your kiss, the real Meraxis turns to see what Shiranui is doing and lets out an annoyed groan. Rushing over to her, she drops down onto all fours beside the youko and attempts to mimic her pose. Although she looks a little stiff, and her back is kept straight instead of arching down like Shiranui's, the real Meraxis shows no less enthusiasm as she proclaims, [meraxis.speech(I won't lose to you! I look better than her, don't I, [pc.name]?!)]
+		中断了亲吻，真正的梅拉克西丝回头看不知火在干什么，不禁发出一声恼怒的呻吟。她赶紧跑过去，在妖狐旁边也趴下身子，试图模仿她的姿势。虽然看起来有些紧绷难入，背也挺得直直的而不像不知火那样弓着，但真正的梅拉克西丝丝毫不缺热情，她大声宣告道，[meraxis.speech(我才不会输给你！我看起来比她好看吧，对不对，[pc.name]？！)]
 	</p>
 	<p>
-		[shiranui.speech(Face it; I'm simply a better version of you,)] Shiranui giggles, but her mocking laughter is cut short as Meraxis shoves her shoulder into her. Scowling at the real [meraxis.race], Shiranui sneers, [shiranui.speech(You bitch...)]
+		[shiranui.speech(认了吧，我就是比你更好的版本。)]不知火咯咯笑着，但她的嘲弄还没完，梅拉克西丝就用肩膀撞了她一下。不知火怒视着真正的[meraxis.race]，冷笑道，[shiranui.speech(你这个贱人……)]
 	</p>
 	<p>
-		As they exchange snarls, Meraxis and Shiranui start bumping their asses into one another. You aren't quite sure how things got to this point, but as the two versions of Meraxis compete to make themselves look more enticing, you're not complaining...
+		两人互相怒视着，梅拉克西丝和不知火开始用屁股互相顶撞。你也不太确定事情怎么发展到了这一步，但看着两个版本的梅拉克西丝争先恐后地想让自己看起来更诱人，你也没什么好抱怨的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_THREESOME_MERAXIS_FUTA"><![CDATA[
 	<p>
-		Meraxis seems determined to want to challenge Shiranui, and as you like the idea of getting to fuck two of Meraxis at once, you turn to the youko and tell her to transform into [shiranui.a_gender] version of Meraxis.
+		梅拉克西丝似乎铁了心要和不知火一较高下，而你也很喜欢同时操两个梅拉克西丝的想法，于是你转向妖狐，让她转化成[shiranui.a_gender]梅拉克西丝。
 	</p>
 	<p>
-		[shiranui.speech(Your wish is my command!)] she giggles, before lifting her arm up over her body. Just like when she transformed before, a shimmering sheen of glitter and sparkling lights falls down all around the youko, and within a couple of seconds she's transformed into the spitting image of Meraxis. Every part of her is indistinguishable from the real thing, except for the fact that she has a big, demonic cock between her legs. Smirking at you as she strokes her thick shaft, Shiranui teases, [shiranui.speech(I bet the real Meraxis has never done this for you!)]
+		[shiranui.speech(遵命！)]她咯咯笑着，然后举起手臂划过身前。就像之前转化时一样，一层闪烁的光粉和璀璨的光点倾泻在妖狐周身，不过短短数秒，她便转化成了梅拉克西丝的分身。除了双腿间那根硕大的恶魔阴茎之外，她浑身上下每一处都与真人毫无二致。不知火一边抚弄着自己粗大的阴茎，一边朝你得意地坏笑，挑逗道，[shiranui.speech(我敢打赌，真正的梅拉克西丝可没为你这么做过吧！)]
 	</p>
 	<p>
-		With that, she skips forwards and throws herself into your [pc.arms]. Her lips are pressed against your mouth, and she lets out horny little moans as she starts grinding against you and passionately kissing you.
+		说完，她蹦蹦跳跳地扑进你的[pc.arms]里。她的双唇紧贴着你的嘴，一边磨蹭着你的身体，一边热情地吻你，口中发出阵阵饥渴的轻哼。
 	</p>
 	<p>
-		[meraxis.speech(H-Hey! I can do that too!)] Meraxis stutters. Rushing forwards, she pulls Shiranui off you, before taking her place and, somewhat clumsily compared to the experienced youko, starts kissing you.
+		[meraxis.speech(喂、喂——！我也会！)]梅拉克西丝结结巴巴地喊道。她冲上前来把不知火从你身上拉开，然后取而代之，虽然和经验丰富的妖狐比起来有些笨拙，但还是开始亲吻你。
 	</p>
 	<p>
-		As the real Meraxis tries to make you forget about her new rival, Shiranui drops down on all fours and arches her back. Lifting her ass, she presents her meraxis.pussy+], erect cock, and [meraxis.asshole+] to you and moans, [shiranui.speech(Enough with the games, come and fuck me!)]
+		趁真正的梅拉克西丝试图让你忘掉她的新对手时，不知火趴下身子四肢着地，弓起后背。她翘起屁股，将自己[meraxis.pussy+]、挺立的肉棒和[meraxis.asshole+]展示给你，呻吟道，[shiranui.speech(别再磨蹭了，快来操我！)]
 	</p>
 	<p>
-		Breaking off your kiss, the real Meraxis turns to see what Shiranui is doing and lets out an annoyed groan. Rushing over to her, she drops down onto all fours beside the youko and attempts to mimic her pose. Although she looks a little stiff, and her back is kept straight instead of arching down like Shiranui's, the real Meraxis shows no less enthusiasm as she proclaims, [meraxis.speech(I won't lose to you! I look better than her, don't I, [pc.name]?!)]
+		中断了亲吻，真正的梅拉克西丝回头看不知火在干什么，不禁发出一声恼怒的呻吟。她赶紧跑过去，在妖狐旁边也趴下身子，试图模仿她的姿势。虽然看起来有些紧绷难入，背也挺得直直的而不像不知火那样弓着，但真正的梅拉克西丝丝毫不缺热情，她大声宣告道，[meraxis.speech(我才不会输给你！我看起来比她好看吧，对不对，[pc.name]？！)]
 	</p>
 	<p>
-		[shiranui.speech(Face it; I'm simply a better version of you,)] Shiranui giggles, but her mocking laughter is cut short as Meraxis shoves her shoulder into her. Scowling at the real [meraxis.race], Shiranui sneers, [shiranui.speech(You bitch...)]
+		[shiranui.speech(认了吧，我就是比你更好的版本。)]不知火咯咯笑着，但她的嘲弄还没完，梅拉克西丝就用肩膀撞了她一下。不知火怒视着真正的[meraxis.race]，冷笑道，[shiranui.speech(你这个贱人……)]
 	</p>
 	<p>
-		As they exchange snarls, Meraxis and Shiranui start bumping their asses into one another. You aren't quite sure how things got to this point, but as the two versions of Meraxis compete to make themselves look more enticing, you're not complaining...
+		两人互相怒视着，梅拉克西丝和不知火开始用屁股互相顶撞。你也不太确定事情怎么发展到了这一步，但看着两个版本的梅拉克西丝争先恐后地想让自己看起来更诱人，你也没什么好抱怨的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_CORRECT_CHOICE_THREESOME_MERAXIS_DOUBLE_FUTA"><![CDATA[
 	<p>
-		Meraxis seems determined to want to challenge Shiranui, and as you like the idea of getting to fuck two of Meraxis at once, you turn to the youko and tell her to transform into [shiranui.a_gender] version of Meraxis.
+		梅拉克西丝似乎铁了心要和不知火一较高下，而你也很喜欢同时操两个梅拉克西丝的想法，于是你转向妖狐，让她转化成[shiranui.a_gender]梅拉克西丝。
 	</p>
 	<p>
-		[shiranui.speech(Your wish is my command!)] she giggles, before lifting her arm up over her body. Just like when she transformed before, a shimmering sheen of glitter and sparkling lights falls down all around the youko, and within a couple of seconds she's transformed into the spitting image of Meraxis. Every part of her is indistinguishable from the real thing, except for the fact that she has a big, demonic cock between her legs. Smirking at you as she strokes her thick shaft, Shiranui teases, [shiranui.speech(So this is how you want Meraxis to be!)]
+		[shiranui.speech(遵命！)]她咯咯笑着，然后抬起手臂划过身前。就像之前转化时一样，一层闪烁的光粉和璀璨的光点洒落在妖狐周身，不过短短几秒，她便转化成了梅拉克西丝的模样。她浑身上下每一处都与真人毫无二致，只是双腿间多出一根硕大的恶魔阴茎。她一边抚弄着粗大的阴茎，一边朝你得意地坏笑，不知火挑逗道，[shiranui.speech(原来你想让梅拉克西丝变成这样啊！)]
 	</p>
 	<p>
-		[meraxis.speech(H-Hey! I can grow a cock too, you know! I-I mean, I don't really like having a p-penis... But if I have to do it to put Shiranui in her place, I guess I could grow one just this once...)] Meraxis stutters. Nodding at the [meraxis.race], you tell her that you'd like her to grow a cock as well. Furiously blushing, she does just that, and above her pussy a big, demonic cock rapidly appears. Tentatively touching her new dick, Meraxis stutters again, [meraxis.speech(I-I'm not so sure about this... But I bet I can use it better than Shiranui!)]
+		[meraxis.speech(喂、喂！我也能长出肉棒的好吗！我、我是说，我其实并不喜欢长肉、肉棒……但要是为了杀杀不知火的锐气，破例长一次也不是不行……)]莫拉西丝结结巴巴地说。你冲这只[meraxis.race]点了点头，表示你也想看她长出一根。她羞得满脸通红，顺从地照做，只见她小穴上方迅速长出了一根粗硕狰狞的恶魔肉棒。莫拉西丝试探着摸了摸自己的新家伙，又结巴起来：[meraxis.speech(我、我心里其实也没底……但我敢打赌，我用起来肯定比不知火强！)]
 	</p>
 	<p>
-		[shiranui.speech(Do try to keep up, then!)] the youko giggles, before skipping forwards and throwing herself into your [pc.arms]. Her lips are pressed against your mouth, and she lets out horny little moans as she starts grinding against you and passionately kissing you.
+		[shiranui.speech(那就试着跟上我吧！)]妖狐咯咯娇笑起来，蹦跳着扑进你的[pc.arms]里。她的双唇贴上你的嘴，一边贴着你磨蹭，一边热情地吻着你，口中溢出阵阵动情的娇吟。
 	</p>
 	<p>
-		[meraxis.speech(Get off! I can do that too!)] Meraxis exclaims. Rushing forwards, she pulls Shiranui off you, before taking her place and, somewhat clumsily compared to the experienced youko, starts kissing you.
+		[meraxis.speech(快让开！我也会！)]梅拉克西丝叫道。她冲上前把不知火从你身上拉开，自己取而代之，虽说比起经验丰富的妖狐显得有些笨拙，但还是开始亲吻起你来。
 	</p>
 	<p>
-		As the real Meraxis tries to make you forget about her new rival, Shiranui drops down on all fours and arches her back. Lifting her ass, she presents her [meraxis.pussy+], erect cock, and [meraxis.asshole+] to you and moans, [shiranui.speech(Enough with the games, come and fuck me!)]
+		趁真正的梅拉克西丝试图让你忘掉她的新对手时，不知火趴下身子四肢着地，弓起后背。她翘起屁股，将自己[meraxis.pussy+]、勃起的肉棒和[meraxis.asshole+]展示给你，呻吟道，[shiranui.speech(别再磨蹭了，快来操我！)]
 	</p>
 	<p>
-		Breaking off your kiss, the real Meraxis turns to see what Shiranui is doing and lets out an annoyed groan. Rushing over to her, she drops down onto all fours beside the youko and attempts to mimic her pose. Although she looks a little stiff, and her back is kept straight instead of arching down like Shiranui's, the real Meraxis shows no less enthusiasm as she proclaims, [meraxis.speech(I won't lose to you! I look better than her, don't I, [pc.name]?!)]
+		中断了亲吻，真正的梅拉克西丝回头看不知火在干什么，不禁发出一声恼怒的呻吟。她赶紧跑过去，在妖狐旁边也趴下身子，试图模仿她的姿势。虽然看起来有些紧绷难入，背也挺得直直的而不像不知火那样弓着，但真正的梅拉克西丝丝毫不缺热情，她大声宣告道，[meraxis.speech(我才不会输给你！我看起来比她好看吧，对不对，[pc.name]？！)]
 	</p>
 	<p>
-		[shiranui.speech(Face it; I'm simply a better version of you,)] Shiranui giggles, but her mocking laughter is cut short as Meraxis shoves her shoulder into her. Scowling at the real [meraxis.race], Shiranui sneers, [shiranui.speech(You bitch...)]
+		[shiranui.speech(认了吧，我就是比你更好的版本。)]不知火咯咯笑着，但她的嘲弄还没完，梅拉克西丝就用肩膀撞了她一下。不知火怒视着真正的[meraxis.race]，冷笑道，[shiranui.speech(你这个贱人……)]
 	</p>
 	<p>
-		As they exchange snarls, Meraxis and Shiranui start bumping their asses into one another. As they jostle for position, their erect cocks sway back and forth and bump against their inner thighs. You aren't quite sure how things got to this point, but as the two versions of Meraxis compete to make themselves look more enticing, you're not complaining...
+		伴随着彼此的低吼，梅拉克西丝和不知火开始用屁股互相顶撞。两人争抢着位置，高挺勃起的肉棒来回晃荡，拍打在各自的大腿内侧。你也不太确定事情是怎么发展到这一步的，但看着两个梅拉克西丝争相展现诱人的身姿，你可没什么好抱怨的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRECT_CHOICE_AFTER_THREESOME"><![CDATA[
 	<p>
-		As the sex comes to an end, you, Meraxis, and Shiranui disentangle yourselves from one another and sit back on the grass, panting.
+		欢爱结束后，你、梅拉克西丝和不知火从彼此身上解开纠缠，坐回草地上，喘息不已。
 	</p>
 	#IF(sex.getTimesCummedInside(pc, meraxis, ORIFICE_VAGINA)>0)
 		#IF(sex.getTimesCummedInside(pc, meraxis, ORIFICE_VAGINA)==sex.getTimesCummedInside(pc, shiranui, ORIFICE_VAGINA))
 			<p>
-				Looking down at each others' pussies, Meraxis and Shiranui see your cum leaking out of both of them. After exchanging a scowl with her rival, the youko muses, [shiranui.speech(So [pc.she] chose both of us... I guess it's a draw.)]
+				低头看着彼此的小穴，梅拉克西丝和不知火看到你的精液正从她们两人体内缓缓流出。与对手交换了一个不满的眼神后，妖狐若有所思地说道，[shiranui.speech(所以[pc.she]两个都选了啊……算是平局吧。)]
 			</p>
 			<p>
-				[meraxis.speech(This time maybe...)] Meraxis reluctantly concedes, before pointing a finger at the youko and declaring, [meraxis.speech(Next time you'll see my true power at doing sex!)]
+				[meraxis.speech(这次也许……)]梅拉克西丝不情愿地承认了，然后指着妖狐宣布道，[meraxis.speech(下次你就能见识到我在床上的真正实力了！)]
 			</p>
 		#ELSEIF(sex.getTimesCummedInside(pc, meraxis, ORIFICE_VAGINA)>sex.getTimesCummedInside(pc, shiranui, ORIFICE_VAGINA))
 			#IF(sex.getTimesCummedInside(pc, shiranui, ORIFICE_VAGINA)>0)
 				<p>
-					Looking down at each others' pussies, Meraxis and Shiranui see your cum leaking out of both of them. Letting out a triumphant laugh, Meraxis gloats, [meraxis.speech([pc.Name] came in both of us, but [pc.she] came in me more! I win!)]
+					两人低头看了看彼此的小穴，梅拉克西丝和不知火都看到你的精液正从里面往外流。梅拉克西丝得意地笑了起来，炫耀道，[meraxis.speech([pc.Name]虽然射在了我们两个里面，但[pc.she]射在我里面的更多！我赢了！)]
 				</p>
 				<p>
-					[shiranui.speech(I don't know about that,)] Shiranui sighs, before winking at you and teasing, [shiranui.speech(I know that you preferred to me fuck me really.)]
+					[shiranui.speech(那可不一定，)]不知火娇喘一声，然后朝你眨了眨眼，打趣道，[shiranui.speech(我知道你其实更喜欢操我啦。)]
 				</p>
 				<p>
-					[meraxis.speech(Shut up!)] Meraxis protests, before pointing a finger at the youko and declaring, [meraxis.speech(You have to admit that I am the best at doing sex!)]
+					[meraxis.speech(闭嘴！)]梅拉克西丝抗议道，然后指着妖狐宣称，[meraxis.speech(你必须承认我才是最擅长做那种事的！)]
 				</p>
 			#ELSE
 				<p>
-					With a big smirk on her face, Meraxis draws Sharanui's attention to her pussy, from which your cum is leaking. Letting out a triumphant laugh, the [meraxis.race] gloats, [meraxis.speech([pc.Name] came in my pussy and not yours! I win!)]
+					梅拉克西丝脸上带着得意的坏笑，将不知火的注意力引向自己的小穴，你的精液正从里面流出来。她发出一声得意的笑，这位[meraxis.race]炫耀道，[meraxis.speech([pc.Name]射在了我的小穴里而不是你的！我赢了！)]
 				</p>
 				<p>
-					[shiranui.speech(I don't know about that,)] Shiranui sighs, before winking at you and teasing, [shiranui.speech(I know that you preferred to me fuck me really.)]
+					[shiranui.speech(那可不一定，)]不知火娇喘一声，然后朝你眨了眨眼，打趣道，[shiranui.speech(我知道你其实更喜欢操我啦。)]
 				</p>
 				<p>
-					[meraxis.speech(Shut up!)] Meraxis protests, before pointing a finger at the youko and declaring, [meraxis.speech(You have to admit that I am the best at doing sex!)]
+					[meraxis.speech(闭嘴！)]梅拉克西丝抗议道，然后指着妖狐宣称，[meraxis.speech(你必须承认我才是最擅长做那种事的！)]
 				</p>
 			#ENDIF
 		#ELSE
 			<p>
-				Looking down at each others' pussies, Meraxis and Shiranui see your cum leaking out of both of them. With a huge smirk on her face, Shiranui teases, [shiranui.speech([pc.Name] came in both of us, but [pc.she] came in me more! I told you that you couldn't compete with me. Looks like I win!)]
+				梅拉克西丝和不知火低头看着彼此的小穴，你的精液正从她们两人体内流出。不知火脸上挂着灿烂的坏笑，挑逗道，[shiranui.speech([pc.Name]虽然射在了我们俩里面，但[pc.she]射进我里面的更多！我就说了你比不过我吧。看来我赢了！)]
 			</p>
 			<p>
-				[meraxis.speech(This time maybe...)] Meraxis reluctantly concedes, before pointing a finger at the youko and declaring, [meraxis.speech(Next time you'll see my true power at doing sex!)]
+				[meraxis.speech(这次也许……)]梅拉克西丝不情愿地承认了，然后指着妖狐宣布道，[meraxis.speech(下次你就能见识到我在床上的真正实力了！)]
 			</p>
 		#ENDIF
 	#ELSEIF(sex.getTimesCummedInside(pc, shiranui, ORIFICE_VAGINA)>0)
 		<p>
-			With a big smirk on her face, Sharanui draws Meraxis's attention to her pussy, from which your cum is leaking. Letting out a triumphant laugh, the youko gloats, [shiranui.speech([pc.Name] came in my pussy and not yours! I told you that you couldn't compete with me. Looks like I win!)]
+			不知火脸上带着得意的坏笑，将梅拉克西丝的注意力引向自己的小穴——你的精液正从里面缓缓流出。她发出一声得意的笑，这只妖狐炫耀道，[shiranui.speech([pc.Name]射在了我的小穴里，而不是你的！我就说了你根本比不过我。看来是我赢了！)]
 		</p>
 		<p>
-			[meraxis.speech(This time maybe...)] Meraxis reluctantly concedes, before pointing a finger at the youko and declaring, [meraxis.speech(Next time you'll see my true power at doing sex!)]
+			[meraxis.speech(这次也许……)]梅拉克西丝不情愿地承认道，然后指着妖狐宣称，[meraxis.speech(下次你就会见识到我做爱的真正实力！)]
 		</p>
 	#ELSE
 		<p>
-			Unable to decide which of them has 'won', Meraxis and Shiranui exchange scowls, before the youko muses, [shiranui.speech(I guess it's a draw...)]
+			无法决定她们之中谁算“赢了”，梅拉克西丝和不知火互相怒视了一番，然后妖狐若有所思地说道，[shiranui.speech(我猜这算是平局吧……)]
 		</p>
 		<p>
-			[meraxis.speech(This time maybe...)] Meraxis reluctantly concedes, before pointing a finger at the youko and declaring, [meraxis.speech(Next time you'll see my true power at doing sex!)]
+			[meraxis.speech(这次也许……)]梅拉克西丝不情愿地承认道，然后指着妖狐宣称，[meraxis.speech(下次你就会见识到我做爱的真正实力！)]
 		</p>
 	#ENDIF
 	<p>
-		Rolling her eyes at Meraxis's awkward phrasing, Shiranui stands up
+		不知火翻了个白眼，嫌弃梅拉克西丝那笨拙的措辞，然后站起身来
 		#IF(shiranui.getRace()==RACE_DEMON)
-			 and, in a shower of glitter and sparkling lights, transforms back into her youko form. Looking over at you, she then performs a little bow and says, 
+			，在一阵闪烁的光粉和璀璨的光芒中，变回了她的妖狐形态。她看了你一眼，随后微微鞠了一躬，说道，
 		#ELSE
-			 and performs a little bow, before saying, 
+			，微微鞠了一躬，然后说道，
 		#ENDIF
-		 [shiranui.speech(I really ought to be going now. I get the feeling that we'll meet again some day, so until then, goodbye!)]
+		[shiranui.speech(我真的该走了。我有种预感，我们总有一天会再见的，那么，后会有期！)]
 	</p>
 	<p>
-		With a click of her fingers, Shiranui is engulfed in a puff of smoke, and as it fades away, she's completely vanished. Now finding herself alone with you, the reality of what just transpired seems to hit Meraxis all at once. Letting out an embarrassed yelp, the [meraxis.race] attempts to hide her blushing cheeks by turning away from you, before hastily gathering up her clothes from the clearing. After quickly getting dressed, she walks over to you and sighs, [meraxis.speech(Well, I admit that it was pretty fun, but I really didn't expect to be doing <i>that</i> when we set out to reclaim my hideout. Anyway, Shiranui's spell should completely break any second now...)]
+		不知火打了个响指，一团烟雾将她吞没，待烟雾散去，她已经完全消失不见。现在只剩下梅拉克西丝和你独处，刚才发生的一切似乎一下子涌上了她的心头。她发出一声窘迫的惊叫，这个[meraxis.race]转过身去，试图遮掩自己泛红的脸颊，然后匆匆忙忙地从空地上捡起自己的衣服。迅速穿好衣服后，她走到你面前，叹了口气，[meraxis.speech(好吧，我承认确实挺有意思的，但我真没想到我们出来收复我的藏身处，居然会变成<i>那种事</i>。总之，不知火的法术应该马上就要完全解除了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Ending: -->
 	
 	<htmlContent tag="HIDEOUT_ENTRY_SOLO"><![CDATA[
 	<p>
-		As she leaves, Shiraui's spell finally breaks. What few wispy clouds of mist are left completely vanish, before the surrounding foliage disintegrates into thin air. All of a sudden, you find yourself firmly planted back in the real world, and although the nearby building doesn't change, the rest of your surroundings do, leaving you standing on the edge of a large, grassy field.
+		随着她的离去，不知火的法术终于破解了。残留的几缕精灵般的薄雾彻底消散，随后周围的草木也化为虚无，消失在空气中。一瞬间，你发现自己已经稳稳地回到了现实世界。虽然附近的建筑没有变化，但周围的景色却焕然一新，你正站在一片广阔草地的边缘。
 	</p>
 	<p>
-		After quickly checking your surroundings to make sure that there's no sudden sign of danger, you approach the building which serves as Meraxis's hideout. As its foundations are slightly raised, you have to [pc.walk] up a few steps to reach the wooden veranda that extends around the entire property, and after crossing that, you arrive at the front door. Sliding it to one side, you enter a small room which serves as a kind of porch, and within this area, sitting on a small step which spans the entire width of this hall, sits Meraxis.
+		迅速确认了周围没有突如其来的危险之后，你朝着梅拉克西丝的藏身处走去。建筑的地基略微抬高，你不得不[pc.walk]上几级台阶才到达环绕整栋建筑的木质走廊，穿过走廊后，你来到了正门前。将门滑向一侧，你走进一个充当玄关的小房间，而在这个空间里，梅拉克西丝正坐在一道横贯整个门厅宽度的小台阶上。
 	</p>
 	<p>
-		[meraxis.speech(Shiranui's spell prevented me from getting any further, and I didn't want to come back outside as I didn't want to... well... interrupt the two of you...)] she blushes as she explains the situation. Standing up, she
+		[meraxis.speech(不知火的法术拦住了我，让我无法再往前走。而且我也不想回到外面，因为我不想……嗯……打扰到你们两个……)]她红着脸说明了情况。她站起身来，
 		#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui))
-			 points to the floor beside her, and you see a pile of all the belongings which Shiranui stole from you earlier. Continuing to blush as she looks at the fetish gear which you're wearing, Meraxis channels her arcane essences into your outfit, and as you strip out of it and put on your old clothes, she tuts, [meraxis.speech(I can't believe that you allowed her to trick you into wearing that ridiculous getup. Anyway, just leave it all on the floor and you can sort it out later. Let's rescue Takahashi.)]
+			指了指身旁的地上，只见不知火之前从你身上扒走的所有物品都堆在那里。梅拉克西丝看着你身上穿的那套性癖装备，脸上的红晕更深了，她将奥术精华注入你的衣服中。趁你脱下那套行头换回旧衣服时，她啧了一声，[meraxis.speech(真不敢相信你居然会被她骗得穿上这么荒唐的行头。算了，先都扔在地上吧，晚点再收拾。我们去救高桥。)]
 		#ELSE
-			 places her hands on her hips and states, [meraxis.speech(Let's rescue Takahashi!)]
+			双手叉腰说道，[meraxis.speech(我们去救高桥！)]
 		#ENDIF
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui) && game.getSavedInventories().get(pc.getId()).getMoney()>0)
 		<p>
-			Unfortunately, although it seems as though the youko has returned all of your items, [style.colourBad(all of your flames are missing)]! You ask Meraxis if she's picked up your money for safe-keeping, but the chuuni [meraxis.race] shakes her head and sighs, [meraxis.speech(She's stolen all of your money? Well, what did you expect? You're extremely lucky to have got any of your stuff back at all; I guess Shiranui didn't want to make enemies of us. Perhaps if we meet her again in the future you can get your money back from her then. For now, we need to rescue Takahashi.)]
+			不幸的是，妖狐虽然看似归还了你的全部物品，[style.colourBad(但你的火币全都不翼而飞了)]！你问梅拉克西丝是不是帮忙把钱收起来保管了，但这名中二病[meraxis.race]摇了摇头，叹气道，[meraxis.speech(她把你的钱全偷光了？哎，不然你还指望什么？能拿回东西你就已经走大运了，我想不知火只是不想跟我们结仇罢了。以后要是再碰上她，你或许还能把钱讨回来。眼下，我们得先去救高桥。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_ENTRY_NORMAL"><![CDATA[
 	<p>
-		Just as Meraxis predicts, Shiraui's spell finally breaks. What few wispy clouds of mist are left completely vanish, before the surrounding foliage disintegrates into thin air. All of a sudden, you find yourselves firmly planted back in the real world, and although the nearby building doesn't change, the rest of your surroundings do, leaving you standing on the edge of a large, grassy field.
+		正如梅拉克西丝所预料的那样，不知火的法术终于破解了。残留的几缕精灵般的薄雾彻底消散，随后周围的草木也化为虚无，消失在空气中。一瞬间，你们发现自己已经稳稳地回到了现实世界。虽然附近的建筑没有变化，但周围的景色却焕然一新，你们正站在一片广阔草地的边缘。
 	</p>
 	<p>
-		After quickly checking your surroundings to make sure that there's no sudden sign of danger, the two of you approach the building which serves as Meraxis's hideout. As its foundations are slightly raised, you have to [pc.walk] up a few steps to reach the wooden veranda that extends around the entire property, and after crossing that, you arrive at the front door. Sliding it to one side, you enter a small room which serves as a kind of porch, and past a small step which spans the entire width of this hall is another sliding door.
+		迅速确认了周围没有突如其来的危险之后，你们二人朝着梅拉克西丝的藏身处走去。建筑的地基略微抬高，你不得不[pc.walk]上几级台阶才到达环绕整栋建筑的木质走廊，穿过走廊后，你来到了正门前。将门滑向一侧，你走进一个充当玄关的小房间，跨过一道横贯整个门厅宽度的小台阶后，前方是另一扇推拉门。
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui))
-			Beside this door, you see a pile of all the belongings which Shiranui stole from you earlier. Blushing as she looks at the fetish gear which you're wearing, Meraxis channels her arcane essences into your outfit, and as you strip out of it and put on your old clothes, she tuts, [meraxis.speech(I can't believe that you allowed her to trick you into wearing that ridiculous getup. Anyway, just leave it all on the floor and you can sort it out later. Let's rescue Takahashi.)]
+			在门旁，你看到不知火早前从你身上搜刮走的所有物品堆在那里。看着你身上穿的那套性癖行头，梅拉克西丝红着脸将奥术精华注入你的衣物中。趁你脱下行头换回原本的衣服，她啧了一声，[meraxis.speech(真不敢相信，你居然被她骗得穿上了这么一身荒唐的衣服。算了，先都扔地上吧，回头再收拾。我们去救高桥。)]
 		#ELSE
-			Entering this hallway, Meraxis motions for you to follow her and confidently states, [meraxis.speech(Let's rescue Takahashi!)]
+			走进走廊，梅拉克西丝示意你跟上，自信地说道，[meraxis.speech(我们去救高桥！)]
 		#ENDIF
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_stripped_by_shiranui) && game.getSavedInventories().get(pc.getId()).getMoney()>0)
 		<p>
-			Unfortunately, although it seems as though the youko has returned all of your items, [style.colourBad(all of your flames are missing)]! You ask Meraxis if she's picked up your money for safe-keeping, but the chuuni [meraxis.race] shakes her head and sighs, [meraxis.speech(She's stolen all of your money? Well, what did you expect? You're extremely lucky to have got any of your stuff back at all; I guess Shiranui didn't want to make enemies of us. Perhaps if we meet her again in the future you can get your money back from her then. For now, we need to rescue Takahashi.)]
+			不幸的是，妖狐虽然看似归还了你的全部物品，[style.colourBad(但你的火币全都不翼而飞了)]！你问梅拉克西丝是不是帮忙把钱收起来保管了，但这名中二病[meraxis.race]摇了摇头，叹气道，[meraxis.speech(她把你的钱全偷光了？哎，不然你还指望什么？能拿回东西你就已经走大运了，我想不知火只是不想跟我们结仇罢了。以后要是再碰上她，你或许还能把钱讨回来。眼下，我们得先去救高桥。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_ENTRY_ENDING"><![CDATA[
 	<p>
-		Stepping forwards, Meraxis slides open the door on the far side of this small hallway, and you follow her forwards into her hideout. The square room beyond is far larger than you expected, and although there's a door on the far side and another over to your left, you imagine that the majority of this building's interior is what you can see before you. Tatami mats cover the floor, and hanging upon the white walls are paintings of a distinctly Japanese-style, which no doubt would be referred to as being 'youko-styled' in this world. In one corner of the room, an old fabric sofa, two leather chairs, and a kotatsu with four matching zaisu have been assembled into a cozy seating area. The corner next to this houses a wooden table and chairs, along with several tall cabinets which have been pushed back against the walls. The corner opposite to this is the one which grabs your attention, however, for the long counter-top which runs around the perimeter appears to have been constructed as a kitchen, but is now covered in potions and all manner of miscellaneous glass equipment which is used in their creation.
+		梅拉克西丝迈步上前，拉开这条小走廊尽头的门，你跟着她走进她的藏身处。里面的方形房间远比你预想的大；虽然远端有一扇门，你左边还有另一扇，但你觉得这栋建筑内部大部分就是你眼前所见的空间。地上铺着榻榻米，白墙上挂着明显是日式风格的画作——在这个世界，这无疑会被称作“妖狐风格”。房间的一角，一张旧布艺沙发、两把皮椅，以及一张配着四把同款和室椅的被炉，组成了一个舒适的就座区。旁边的角落摆着一张木桌和几把椅子，还有几个靠墙放着的高柜。不过，真正吸引你注意的是对面的角落：环绕房间四周的长台面似乎是当作厨房建造的，如今上面却堆满了魔药，以及各种用于制作魔药的玻璃器具。
 	</p>
 	<p>
-		Takahashi is standing in front of this kitchen-cum-laboratory, wearing a short-skirted kimono and a black leather choker. She's facing away from you, and has just finished pouring a bubbling pink liquid from a large flask into a potion bottle, which she hastily corks as she hears the front door slide open. Placing the equipment before her to one side, she stands up, and without turning around she giggles and calls out, [takahashi.speech(Welcome home, Mistress! I've been thinking about you all day. My pussy's ready for your cock...)]
+		高桥正站在这个厨房兼实验室前，穿着短裙和服，脖子上戴着黑色皮革项圈。她背对着你，刚把一大瓶冒着气泡的粉色液体倒进魔药瓶中，听到前门滑开的声音，便匆忙塞上瓶塞。她把面前的器具放到一旁，站起身，没有回头，咯咯笑着喊道：[takahashi.speech(欢迎回家，主人！我一整天都在想你。我的小穴已经准备好迎接你的肉棒了……)]
 	</p>
 	<p>
-		She leans forwards over the counter-top in front of her and hikes up her kimono, fully exposing her [takahashi.pussy+] and [takahashi.asshole+]. Reaching back to part her labia with her slender fingers, she moans, [takahashi.speech(So, would you like a bath, dinner... or maybe, me?)]
+		她向前俯身趴在面前的台面上，撩起和服，完全露出自己的[takahashi.pussy+]和[takahashi.asshole+]。她伸手到身后，用纤细的手指拨开阴唇，呻吟道：[takahashi.speech(那么，你是想洗个澡、吃顿晚饭……还是想要我呢？)]
 	</p>
 	<p>
-		[meraxis.speech(What if I want all three?)] Meraxis cheekily replies.
+		梅拉克西丝俏皮地回答道，[meraxis.speech(如果我三个都要呢？)]
 	</p>
 	<p>
-		Snapping around to face the two of you, the youko jumps to her feet and hastily covers herself up.
+		妖狐猛地转过身面对你们两人，连忙跳起来遮住自己。
 	</p>
 	<p>
-		[takahashi.speech(<i>Axy?!</i>)] she exclaims, taking you a little off-guard as you heard the nickname she has for Meraxis. Shaking her head, she asks, [takahashi.speech(Is that really you? And you're.... [pc.name], right? Where's Shiranui? This isn't one of her tricks, is it?!)]
+		「<i>阿西？！</i>」她惊呼道，你听到她对梅拉克西丝的昵称时不禁愣了一下。她摇了摇头，问道：「真的是你吗？还有你是……[pc.name]，对吧？不知火呢？这不是她的什么诡计吧？！」
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_ENTRY_EXPLAIN"><![CDATA[
 	<p>
-		Stepping forwards, you briefly explain to Takahashi that you and Meraxis came here to find her, and that Shiranui has been driven off. Looking extremely relieved to hear that, the youko sighs, [takahashi.speech(It took the two of you long enough to come and rescue me! She's been making me act as her slave, and every time she came home she wouldn't leave me along until I'd let her fuck me...)]
+		你上前一步，简要地向高桥解释了你和梅拉克西丝是来找她的，不知火已经被击退了。听到这个消息，妖狐明显松了一口气，叹道：「你们俩可真够慢的，现在才来救我！她一直逼我当她的奴隶，每次回来都纠缠我不放，非要我让她上我……」
 	</p>
 	<p>
-		[meraxis.speech(From what we just saw, it looks like you weren't objecting to that too much,)] Meraxis teases, before blushing a little and addressing Takahashi by her first name as she states, [meraxis.speech(I always thought that you hated cock, Hitomi...)]
+		「就刚才我们看到的情形，你好像也没怎么反抗嘛。」梅拉克西丝揶揄道，随后微微脸红，直呼高桥的名字说道：「我一直以为你讨厌那玩意儿的，曈……」
 	</p>
 	<p>
-		[takahashi.speech(I did! I mean, I do!)] Takahashi exclaims, before tugging at the black choker around her neck and explaining, [takahashi.speech(This thing's cursed to make me love it, though. Even though I knew that it was just the choker making me feel that way, I couldn't help but like the way Shiranui was treating me... That bitch.)]
+		「我确实讨厌！我是说，我现在也讨厌！」高桥叫道，然后扯了扯脖子上那个黑色的项圈，解释道：「这东西被下了诅咒，会让我喜欢上那种事。虽然我知道那只是项圈在作怪，但我还是控制不住地……喜欢不知火对我做的那些事……那个贱人。」
 	</p>
 	<p>
-		Skipping forwards to embrace her friend, Meraxis channels her essences into Takahashi's choker in order to remove its seal. Pulling off the cursed clothing, the youko tosses it onto the counter-top and breathes a sigh of relief, [takahashi.speech(Thanks, Axy. That's better... I feel like myself again!)]
+		梅拉克西丝快步上前拥抱了她的朋友，将自己的精华引导入高桥的项圈中，解除了上面的封印。妖狐扯下那件被诅咒的东西，随手丢在台面上，松了一口气：「谢了，阿西。这下好多了……我终于感觉自己回来了！」
 	</p>
 	<p>
-		Taking Takahashi by the hand, Meraxis pulls her over to the seating area. As the two of them flop down onto the sofa, you join them by taking a seat and listen as Meraxis more thoroughly explains the situation to Takahashi.
+		梅拉克西丝拉着高桥的手，把她拽到了休息区。两人一起倒在沙发上，你也找了个位子坐下，听梅拉克西丝向高桥更详细地说明了情况。
 	</p>
 	<p>
-		After Meraxis has finished, Takahahi thinks for a moment, before revealing, [takahashi.speech(You know, Shiranui is a servant of that nine-tailed youko who's got the weapons you're looking for. She was boasting to me one evening about how she was the one who first discovered that you'd stored all those guns here. You know when they all went missing? They were actually still here, it's just that Shiranui had concealed them from sight with an illusion spell. Then, when we moved to Submission, she came back and transferred them all to her Mistress's mansion.)]
+		梅拉克西丝说完后，高桥想了一会儿，然后透露道：「你们知道吗，不知火是那个拥有你们要找的武器的九尾妖狐的手下。有天晚上她向我炫耀，说最先发现你把那些枪藏在这里的人就是她。你们还记得那些枪全部失踪的事吗？其实它们当时还在这里，只不过不知火用幻象法术把它们隐藏了起来。后来我们搬去屈城区之后，她又回来把它们全部转移到了她主人的宅邸里。」
 	</p>
 	<p>
-		[meraxis.speech(If that's the case then I'm sure that we'll have to confront Shiranui again,)] Meraxis says, [meraxis.speech(Perhaps you can get some revenge on her then?)]
+		梅拉克西丝说道，[meraxis.speech(如果是那样的话，我们肯定还得再跟不知火交手，)]又接着说，[meraxis.speech(到时候你也许能报仇雪恨？)]
 	</p>
 	<p>
-		[takahashi.speech(Well, it's not like I feel the need to get revenge. As I said, that choker which she made me wear made it so that I actually enjoyed it,)] Takahshi replies, but then after thinking for a moment, her face turns up into a scowl, and she lets out a disgusted groan and growls, [takahashi.speech(Now that I'm no longer wearing it, thinking back on how she fucked me with that <i>disgusting</i> cock makes me... Eugh! I don't even want to think about it! Maybe I do want to get some revenge after all...)]
+		高桥回答道，[takahashi.speech(嗯，我倒不是说非要报仇不可。就像我说的，她让我戴上的那个项圈让我实际上……还挺享受的。)]但想了片刻后，她的脸上浮现出嫌恶的神色，发出一声厌恶的呻吟，咆哮道，[takahashi.speech(现在我不用戴着那东西了，一回想起她用那根<i>恶心</i>的鸡巴操我的场景就……呕！我根本不想再回忆了！也许我确实想报仇来着……)]
 	</p>
 	<p>
-		You interject to say that you and Meraxis will have to retrieve the weapons at some point in the near future, and if Takahashi can aid you in your mission then any help would be appreciated.
+		你插话说，你和梅拉克西丝在不久的将来必须去取回那些武器，如果高桥能在任务中助你们一臂之力，那任何帮助都是求之不得的。
 	</p>
 	<p>
-		[takahashi.speech(I can guide us through some pretty dangerous territory,)] she offers, [takahashi.speech(I don't stand a chance in a fight against a seven or nine-tail, but I'll do what I can. I owe Axy a great deal already, and now that she's rescued me I've got yet another debt to her to pay off...)]
+		[takahashi.speech(我可以带我们穿过一些非常危险的区域，)]她主动说道，[takahashi.speech(跟七尾或者九尾打起来我肯定不是对手，但我会尽力的。我已经欠阿西很多了，现在她又救了我一命，这笔债就更大了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDEOUT_ENTRY_EXPLAIN_FINISH"><![CDATA[
 	<p>
-		With that, Takahashi stands up and crosses the room to return to her potion lab. Calling out over her shoulder as she goes, she says, [takahashi.speech(Let me know when you're ready to go. I'm going to carry on making potions. Oh, and [pc.name]? You may have rescued me, but don't think that you can call me Hitomi. I'm still Takahashi to you.)]
+		说完，高桥站起身，穿过房间回到她的魔药实验台前。她边走边回头喊道：「准备好出发的时候告诉我一声。我先继续制作魔药。哦对了，[pc.name]？虽然你救了我，但别以为就能叫我曈了。对你来说我还是高桥。」
 	</p>
 	<p>
-		Turning to smile at you, Meraxis leans back on the sofa and sighs, [meraxis.speech(All's well that ends well. I think I'm going to stay here from now on; The Red Dragon was fun for a while, but there's no place like home. I'm going to cast an illusion spell to keep this place hidden from prying eyes; it'll be invisible to all who don't already know of its location. So you'll be able to find this place again just fine, [pc.name], but any wandering youko won't know that it's here.)]
+		梅拉克西丝转头冲你笑了笑，向后靠在沙发上舒了口气，[meraxis.speech(万事大吉，总算圆满收场了。我想从今往后就住在这儿；红龙酒馆虽好，住着也挺有意思，但终究比不上自己的家。我打算施个幻象法术把这里藏起来，免得被外人窥探；不知道具体位置的人根本发现不了。所以[pc.name]，你依然能找过来，但那些四处游荡的妖狐就休想知道这儿在哪了。)]
 	</p>
 	<p>
-		Thanking Meraxis, you remember that she previously mentioned that teleportation doesn't work in the Shinrin Highlands, but that she'd be able to make it work here in her hideout, and so you ask her about this.
+		你谢过梅拉克西丝，同时想起她先前曾提过心林高地无法使用传送，但她有办法在自己的藏身处里搞定，便就此向她打听了一番。
 	</p>
 	<p>
-		[meraxis.speech(That's correct! As I have deciphered the mechanisms behind the youko's teleportation-blocking spells, I'm able to destroy them! Hold on...)] Meraxis says, before standing up and casts a series of strange-looking spells. Although you can't detect any changes, the chuuni [meraxis.race] smiles and sits back down on the sofa with a sigh, [meraxis.speech(Done... My hideout is now concealed <i>and</i> we can teleport to and from here. Needless to say, make yourself comfortable and treat this place like home.)]
+		[meraxis.speech(没说错！既然我已经破解了妖狐封锁传送的法术机制，自然就能破除它们！稍等一下……)]梅拉克西丝说着站起身，施展了一连串看起来稀奇古怪的法术。虽然你没察觉到任何改变，但这名中二病[meraxis.race]还是微微一笑，叹着气坐回沙发上，[meraxis.speech(搞定……我的藏身处现在既隐蔽，<i>而且</i>我们还能在这儿自由往返传送。别客气，放轻松，就把这儿当成自己家吧。)]
 	</p>
 	<p>
-		Thanking Meraxis, you stand up and wonder what to do now...
+		你向梅拉克西丝道了谢，站起身来，琢磨着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

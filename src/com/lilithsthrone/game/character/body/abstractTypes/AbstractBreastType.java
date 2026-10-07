@@ -211,12 +211,12 @@ public abstract class AbstractBreastType implements BodyPartTypeInterface {
 	@Override
 	public String getDeterminer(GameCharacter gc) {
 		if(gc.getBreastCrotchShape()==BreastShape.UDDERS) {
-			return "a set of";
+			return "一套";
 		}
 		if(gc.getBreastRows()==1) {
-			return "a pair of";
+			return "一对";
 		} else {
-			return Util.intToString(gc.getBreastRows())+" pairs of";
+			return Util.intToString(gc.getBreastRows())+"对";
 		}
 	}
 
@@ -229,13 +229,13 @@ public abstract class AbstractBreastType implements BodyPartTypeInterface {
 	public String getNameSingular(GameCharacter gc) {
 		if (gc.hasBreasts()) {
 			if(namesBreasts==null || namesBreasts.isEmpty()) {
-				return UtilText.returnStringAtRandom("breast", "boob", "tit");
+				return UtilText.returnStringAtRandom("乳房", "胸部", "奶子");
 			}
 			return Util.randomItemFrom(namesBreasts);
 			
 		} else {
 			if(namesFlat==null || namesFlat.isEmpty()) {
-				return UtilText.returnStringAtRandom("pec");
+				return UtilText.returnStringAtRandom("平板胸部");
 			}
 			return Util.randomItemFrom(namesFlat);
 		}
@@ -245,13 +245,13 @@ public abstract class AbstractBreastType implements BodyPartTypeInterface {
 	public String getNamePlural(GameCharacter gc) {
 		if (gc.hasBreasts()) {
 			if(namesBreastsPlural==null || namesBreastsPlural.isEmpty()) {
-				return UtilText.returnStringAtRandom("breasts", "boobs", "mammaries", "tits");
+				return UtilText.returnStringAtRandom("乳房", "胸部", "奶子");
 			}
 			return Util.randomItemFrom(namesBreastsPlural);
 			
 		} else {
 			if(namesFlatPlural==null || namesFlatPlural.isEmpty()) {
-				return UtilText.returnStringAtRandom("pecs");
+				return UtilText.returnStringAtRandom("平板胸部");
 			}
 			return Util.randomItemFrom(namesFlatPlural);
 		}
@@ -273,11 +273,11 @@ public abstract class AbstractBreastType implements BodyPartTypeInterface {
 	}
 
 	public String getCrotchNameSingular(GameCharacter gc) {
-		return UtilText.returnStringAtRandom("crotch-breast", "crotch-boob", "crotch-boob", "crotch-boob", "crotch-tit");
+		return UtilText.returnStringAtRandom("胯乳", "胯乳", "胯乳", "胯奶");
 	}
 	
 	public String getCrotchNamePlural(GameCharacter gc) {
-		return UtilText.returnStringAtRandom("crotch-breasts", "crotch-boobs", "crotch-boobs", "crotch-boobs", "crotch-tits");
+		return UtilText.returnStringAtRandom("胯乳", "胯乳", "胯乳", "胯奶", "胯胸");
 	}
 
 	@Override

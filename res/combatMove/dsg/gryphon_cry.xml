@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Hunting Call]]></name>
+	<name><![CDATA[狩猎长啸]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Make a chilling hunting call with [npc.her] beak, granting [style.boldGood(+20)] to [npc.her] [style.boldMagenta(physique)] and [style.boldPurple(arcane ability)] for 5 turns. On [style.boldExcellent(critical)] hits, also debuffs opponent.
+		[npc.her]用喙发出令人不寒而栗的啸叫，使[npc.her]的[style.boldMagenta(体格)]和[style.boldPurple(奥术能力)][style.boldGood(+20)]，持续5个回合。当[style.boldExcellent(暴击)]时同样会给对手造成减益。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -99,7 +99,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have a gryphon face type and are not muffled or mute.
+		仅适用于有狮鹫面部且没有被消音或沉默的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -126,7 +126,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target's height is less than 95% of the attacker's.
+		目标的身高要低于攻击者身高的95%。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -138,12 +138,12 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Make a chilling hunting call with [npc.her] beak, granting [style.boldGood(+20)] to [npc.her] [style.boldMagenta(physique)] and [style.boldPurple(arcane ability)].
+		[npc.her]用喙发出令人不寒而栗的啸叫，使[npc.her]的[style.boldMagenta(体格)]和[style.boldPurple(奥术能力)][style.boldGood(+20)]。
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Make a chilling hunting call with [npc.her] beak, granting [style.boldGood(+20)] to [npc.her] [style.boldMagenta(physique)] and [style.boldPurple(arcane ability)].
+		[npc.her]用喙发出令人不寒而栗的叫声，使[npc.her]的[style.boldMagenta(体格)]和[style.boldPurple(奥术能力)][style.boldGood(+20)]。
 	]]></movePredictionDescriptionNoTarget>
 	
 	<!-- The code that's executed when this move is performed.
@@ -157,16 +157,16 @@
 		<!-- The 'execute' section should be used for the main description of the attack, as well as any extra effects you want to apply.
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
-			[npc.Name] [npc.verb(open)] [npc.her] beak and [npc.verb(screech)] out a mighty hunting call.
+			[npc.Name]张开自己的喙，发出威武的啸叫。
 			#IF (!npc.hasStatusEffect(SE_dsg_race_gryphon_hunting_cry))
 				[##npc.addStatusEffect(SE_dsg_race_gryphon_hunting_cry, 3)]
 			#ENDIF
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc.NamePos] hunting call was extremely effective!
+			[npc.NamePos]的啸叫造成了超出预期的效果！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.is] feeling vulnerable in front of [npc.namePos] superior stature!
+			[npc2.Name]在[npc.namePos]优越的身材面前感到不堪一击！
 		]]></critEffectDescription>
 	</performMove>
 	

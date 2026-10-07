@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>10</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Impish Brew]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Impish Brews]]></namePlural>
-		<description><![CDATA[A cracked and dirty glass bottle, filled with a creamy-yellow liquid. There's no label, but someone's helpfully, albeit crudely, written 'Impish Brew' in black marker pen on one side. You think you can guess what the thick, musky liquid is...]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[小恶魔酿]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[小恶魔酿]]></namePlural>
+		<description><![CDATA[一个破损肮脏的玻璃瓶，里面装满了乳黄色的液体。瓶子上没有标签，但有人在一边用黑色记号笔写上了 "小恶魔酿"，尽管写得很粗糙，但还是很有用。你想你能猜到这浓稠且雄性味道浓重的液体是什么……]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_CORRUPTION</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_CORRUPTION.getFormattedValue(50)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_CORRUPTION.getFormattedValue(50)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A sickly wave of corruptive arcane energy washes over [npc.name]...
+				一股病态的腐化奥术能量席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_CORRUPTION, 50)]
 		]]></applyEffects>
@@ -50,11 +50,11 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		As [npc.name] [npc.verb(unscrew)] the cap from the bottle of Impish Brew, [npc.her] senses are immediately assaulted by the musky, potent smell of the liquid within. Bringing the dirty bottle to [npc.her] [npc.lips], [npc.she] [npc.verb(force)] [npc.herself] to gulp down all of the thick, musky liquid contained within.
+		当[npc.name]拧开小恶魔酿的瓶盖时，[npc.her]的感官立刻受到液体内部的味道浓重的、雄性味道的气味的侵袭。将脏兮兮的瓶子送到[npc.her][npc.lips]边，[npc.she]强迫自己一口气喝下了其中的浓稠的味道浓重的、雄性味道的液体。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Unscrewing the cap from the dirty bottle of Impish Brew, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips]. After letting out an uncomfortable whine, [npc2.she] [npc2.verb(force)] [npc2.herself] to gulp down all of the thick, musky liquid contained within.
-		]]></otherUse>
+		拧开小恶魔酿脏瓶的瓶盖，[npc.name]把它送到[npc2.namePos]等待[npc2.lips]前。[npc2.she]不舒服地哀鸣，强迫自己一口气喝下了其中浓稠且雄性味道浓重的液体。
+]]></otherUse>
 	</useDescriptions>
 
 	

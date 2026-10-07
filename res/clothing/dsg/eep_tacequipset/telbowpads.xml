@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[Faintly raised lettering on each pad reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[每块垫板上都有微微凸起的字母，写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>350</value>
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一对]]></determiner>
 
-		<name><![CDATA[Enforcer's tactical elbow pads]]></name>
+		<name><![CDATA[执法者战术护肘]]></name>
 
-		<namePlural pluralByDefault="true"><![CDATA[Enforcer's tactical elbow pads]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[执法者战术护肘]]></namePlural> 
 
-		<description><![CDATA[A pair of hard plastic plates riveted to elbow pads made from shock absorbing foam. They attach to the wearer's elbows via adjustable straps]]></description> 
+		<description><![CDATA[一对用硬质塑料铆接在减震泡沫上的护肘。它们通过可调节的带子固定在穿戴者的手臂上。]]></description> 
 
 		<physicalResistance>2</physicalResistance> 
 
@@ -66,27 +65,21 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the tactical elbow pads over [npc.her] elbows and [npc.verb(tighten)] the straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the tactical elbow pads over [npc2.namePos] elbows and [npc.verb(tighten)] the straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] legs through the tactical elbow pads and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将护肘套在了[npc.her]的胳膊上并拉紧了带子。]]></self>
+		<other><![CDATA[
+[npc.Name]将护肘套在了[npc2.namePos]的胳膊上并拉紧了带子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将护肘穿过[npc2.namePos]的胳膊并仓促地拉紧了带子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] tactical elbow pads and [npc.verb(slip)] them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] tactical elbow pads and [npc.verb(slip)] them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] tactical elbow pads until they're loose enough and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]松开了[npc.her]胳膊上的带子并把护肘脱了下来。]]></self>
+		<other><![CDATA[
+[npc.Name]松开了[npc2.namePos]胳膊上的带子并把护肘脱了下来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]撕扯着[npc2.namePos]胳膊上的带子，在带子松动后将护肘一把扯下并扔到了一边。]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -24,18 +24,18 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Swap focus]]></title>
+	<title><![CDATA[切换焦点]]></title>
 	<tooltip><![CDATA[
-		Move over to be focusing more on [npc2.name].
+		把注意力更多地放在[npc2.name]身上。
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
-				Deciding that you should give [npc2.name] a little more attention, you shuffle over to position yourself behind her.
+				你决定给[npc2.name]更多关注，于是挪到她身后。
 				#IF(npc2==natalya)
-					 Now giving your Mistress most of your attention, you can't help but let out a happy [pc.moan] as she looks back at you over her shoulder and says, [natalya.speech(Good [style.mule]... Keep eating my ass!)]
+					现在你将大部分注意力都献给了主人，你见她回头看着你，忍不住发出愉悦的[pc.moan]，她说道，[natalya.speech(好[style.mule]……继续舔我的屁股！)]
 				#ELSE
-					 Now giving Callie most of your attention, you can't help but let out a happy [pc.moan] as she looks back at you over her shoulder and exclaims, [callie.speech(That feels so good! Don't stop!)]
+					现在你将大部分注意力都献给了卡丽，你见她回头看着你，忍不住发出愉悦的[pc.moan]，她喊道，[callie.speech(太舒服了！别停下来！)]
 				#ENDIF
 			]]></text>
 		</description>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- LAB -->
@@ -6,66 +6,66 @@
 	<htmlContent tag="LAB"><![CDATA[
 	#IF(lilaya.getLocationPlaceType()==PLACE_TYPE_LILAYA_HOME_LAB)
 		<p>
-			Lilaya's laboratory is located in this particular corner of the house, and as you approach it, you see that the door has been left wide [style.colourGood(open)]. With no physical barrier blocking your way, you could simply step forwards and enter the lab, or continue on your way and choose to come back at another time.
+			莉莱雅的实验室位于房间的特别角落，随着一步步靠近，你看见门[style.colourGood(敞开着)]。没有任何物理阻碍，你可以轻易地靠近并且进入实验室，或者选择下次再来。
 		</p>
 		#IF(!flags.hasFlag(FLAG_acexp_lilaya_daily_voyeurism))
 			<p>
-				As you stand before the door to Lilaya's laboratory, a lewd idea forms in your mind. Your demonic aunt and her cat-girl maid are always up to something whenever you enter, and you could try to sneak up on them and see for yourself what they're doing. All it would take is to move very quietly, and once you're inside, you're sure that you could find a good spot from which to observe them...
+				站在莉莱雅的实验室门前，一个淫邪的想法出现在你脑海里。无论你什么时候进去，你的恶魔姨妈和她的猫女仆总在搞些不明不白的事情，你试图悄悄接近，亲自看看他们在干什么。你需要蹑手蹑脚地移动，一旦进去了，你肯定可以找到一个好位置来观察他们……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Lilaya's laboratory is located in this particular corner of the house, and as you approach it, you see that the door has been firmly [style.colourBad(closed)]. Considering the current hour, it's most likely that your [lilaya.relation(pc)] and her cat-girl maid have both retired to their rooms in order to get a good night's sleep. If you wanted to discuss something with Lilaya, you'll have to come back later during the day.
+			莉莱雅的实验室位于房间的特别角落，随着一步步靠近，你看见门[style.colourBad(紧闭着)]。考虑到已经是这个时间，你的[lilaya.relation(pc)]和她的猫女仆很可能各自回房间睡大觉了。如果你想找莉莱雅讨论些事情，那必须得白天来。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_PREGNANT"><![CDATA[
 	<p>
-		As you approach the door to Lilaya's lab, you notice that it's been firmly pulled shut. A little piece of paper has been stuck on it, and you see that your demonic [lilaya.relation(pc)] has left you a handwritten note:
+		随着你一步步靠近莉莱雅的实验室，你发现大门紧锁，门上粘着一张便条，你察觉到那是你恶魔[lilaya.relation(pc)]的手迹：
 	</p>
 	<p style='text-align:center;'>
 		#IF(lilaya.isCondomBroke())
-			<i>Hey [pc.name], I know the condom breaking wasn't your fault, but I need some time alone. I don't want anyone seeing me pregnant. Come back later after I've given birth.</i>
+			<i>嘿，[pc.name]，我知道避孕套破了不是你的错，但我需要一个人静静。我不想让人看见我怀孕。等我生产之后你再来吧。</i>
 		#ELSE
-			<i>Hey [pc.name], would you kindly fuck off and give me some time alone? I don't want anyone seeing me pregnant, especially not you! Come back later after I've given birth.</i>
+			<i>嘿，[pc.name]，你做点好事赶快滚，让我一个人静静好吗？我不想让人看见我挺着个大肚子，特别是你！等我生产之后你再来吧。</i>
 		#ENDIF
 	</p>
 	<p>
-		Letting out a defeated sigh, you decide to do as the note asks, and step back from the door.
+		沮丧地叹了口气，你决定按照便条上说的做，你从门前离开。
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsBad(It doesn't look as though you're going to be able to get back in until Lilaya's pregnancy has run its course. Maybe Rose could help?)]
+		[style.italicsBad(看起来你直到莉莱雅生产后才能进实验室。或许萝丝能帮帮你？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="LAB_PREGNANCY_RISK"><![CDATA[
 	<p>
-		As you approach the door to Lilaya's lab, you notice that it's been firmly pulled shut. A little piece of paper has been stuck on it, and you see that demonic [lilaya.relation(pc)] has left you a handwritten note:
+		随着你一步步靠近莉莱雅的实验室，你发现大门紧锁，门上粘着一张便条，你察觉到那是你恶魔[lilaya.relation(pc)]的手迹：
 	</p>
 	<p style='text-align:center;'>
 		#IF(lilaya.isCondomBroke())
-			<i>Hey [pc.name], I may have overreacted a little, but this really is all your fault for buying cheap crappy condoms. I'm keeping this door locked until I know if I'm pregnant or not.</i>
+			<i>嘿，[pc.name]，我可能有点反应过激了，但这真的全是你买的便宜又差劲的避孕套的错。在我搞清楚自己怀没怀孕之前，你别指望我会打开这扇门。</i>
 		#ELSEIF(lilaya.isAmazonsSecretImpregnation())
-			<i>Hey [pc.name], I thought you could do with taking some time to think about what 'don't use Amazon's Secret next time you fucking asshole' could possibly mean. I'm keeping this door locked until I know if I'm pregnant or not. You'd better hope I'm not.</i>
+			<i>嘿，[pc.name]，我觉得你得花点时间考虑下，“下次别再用亚马逊的秘密”可能是干你娘的屁眼的哪个意思。在我搞清楚自己怀没怀孕之前，你别指望我会打开这扇门。你最好祈祷我没怀孕。</i>
 		#ELSE
-			<i>Hey [pc.name], I thought you could do with taking some time to think about what 'pull out next time you fucking asshole' could possibly mean. I'm keeping this door locked until I know if I'm pregnant or not. You'd better hope I'm not.</i>
+			<i>嘿，[pc.name]，我觉得你得花点时间考虑下，“下次别再用亚马逊的秘密”可能是干你娘的屁眼的哪个意思。在我搞清楚自己怀没怀孕之前，你别指望我会打开这扇门。你最好祈祷我没怀孕。</i>
 		#ENDIF
 	</p>
 	<p>
-		Letting out a defeated sigh, you decide to leave Lilaya alone for now, and step back from the door. It looks like you'll just have to wait until she's calmed down before seeing her again...
+		沮丧地叹了口气，你决定暂时不打扰莉莱雅，从门口退了回来。看起来你只能等到她冷静下来再去见她了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_PREGNANCY_RESOLVED"><![CDATA[
 	<p>
-		You find yourself walking towards the door to Lilaya's laboratory, and as you get closer, you see that it's once again been left wide open. Realising that Lilaya's pregnancy must now have been resolved, you wonder if you should enter her lab right now, or continue on your way and choose to come back at another time.
+		随着你一步步靠近莉莱雅的实验室，你发现门再次敞开了。意识到莉莱雅的孕期肯定已经结束了，你想知道现在能不能再进她的实验室，或者继续你原本的计划，下次选个时间来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -73,630 +73,630 @@
 	
 	<htmlContent tag="LAB_ENTRY_DEMON_REACTION_PREGNANCY_RESOLVED"><![CDATA[
 	<p>
-		As Lilaya hasn't seen you since you were transformed into a demon by Lyssieth, you ready yourself for the worst as you step through the open doorway into her lab.
+		自从你被莉西丝变成恶魔后，莉莱雅就再也没有见过你，所以当你进入她的实验室时，你已经做好了最坏的打算。
 	</p>
 	<p>
-		On the opposite side of the room, you see your demonic [lilaya.relation(pc)] sitting at one of the long lab tables, busily performing an experiment. Noticing your entry out of the corner of her eye, she looks across and shoots you a furious glare, before starting to stand up. As she gets to her feet, you notice that she has a flat belly, so although there's still the issue of you being a demon at hand, at least the issue of her pregnancy has been resolved.
+		在房间的对面，你看到你的恶魔[lilaya.relation(pc)]坐在一张长实验桌前，忙着进行实验。她用眼角的余光注意到了你的到来，她向你怒目而视，然后站起来。当她站起来的时候，你注意到她的肚子已经平坦了，虽然你是恶魔的问题还没有解决，但至少她怀孕的问题已经解决了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_DEMON_REACTION_NO_PREGNANCY"><![CDATA[
 	<p>
-		As Lilaya hasn't seen you since you were transformed into a demon by Lyssieth, you ready yourself for the worst and step through the open doorway into her lab.
+		自从你被莉西丝变成恶魔后，莉莱雅就再也没有见过你，所以当你进入她的实验室时，你已经做好了最坏的打算。
 	</p>
 	<p>
-		On the opposite side of the room, you see the half-demon who's now your demonic [lilaya.relation(pc)] sitting at one of the long lab tables, busily performing an experiment. Noticing your entry out of the corner of her eye, she looks across and shoots you a furious glare, before standing up and marching over to you.
+		在房间的对面，你看到那位半恶魔，也就是你的恶魔[lilaya.relation(pc)]，坐在一张长实验桌前，忙着进行实验。她用眼角的余光注意到了你的到来，向你怒目而视，然后站起身向你走来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_DEMON_REACTION"><![CDATA[
 	<p>
-		[lilaya.speech(I simply do <i>not</i> even know what to say!)] she yells in a shrill voice, before contradicting her statement by continuing, [lilaya.speech(I already heard from Meraxis via the resonance stone all about what mommy did! A full demon?! I didn't believe her at first! H-How could you?!)]
+		[lilaya.speech(我简直<i>不知道</i>该说什么！)]她尖声喊道，然后又自相矛盾地说，[lilaya.speech(我从梅拉克西丝的回声石那知道了你妈咪干的好事！一只完全的恶魔？我起初不敢信她！你、你怎么能这样？)]
 	</p>
 	<p>
-		[pc.speech(How else am I to defeat the other elder lilin without a demon's power?)] you respond with your own question as you try to reason with Lilaya. [pc.speech(Surely you can see how this is for the best?)]
+		[pc.speech(没有恶魔的力量，我要怎样才能打败其他的莉琳长老呢？)]你回答道，试图用提问说服莉莱雅，[pc.speech(你肯定能看出这是最佳选择，不是吗？)]
 	</p>
 	<p>
-		[lilaya.speech(Oh, I can see how it's for the best alright,)] Lilaya replies, crossing her arms and letting her voice take on a sinister, icy tone, [lilaya.speech(For my entire life, I've been begging mommy to turn me into a full demon, but no matter what I said, she always refused, telling me that she'd sworn never to turn anyone into a demon ever again. Now that she's quite clearly proven that her word means <i>nothing</i>, she has no choice but to finally give me what I want.)]
+		[lilaya.speech(哦，我能看出来这再好不过，)]莉莱雅回答，她交叉双臂，她的声音邪恶而冰冷，[lilaya.speech(我长这么大，求了妈咪无数次，让她把我变成完全的恶魔，但是无论我说什么，她都拒绝我，告诉我她发誓再也不会把任何人转化成恶魔。现在她的确证明了她的发誓<i>狗屁不是</i>！除了满足我的要求，她别无选择。)]
 	</p>
 	<p>
-		[pc.speech(Lilaya, please, there's no-)] you start to reason, finding your [lilaya.relation(pc)]'s cold, calculating voice to be of some concern, but you're not able to get even one sentence out before her composure breaks. 
+		[pc.speech(莉莱雅，求你，没——)]你开始解释，[lilaya.relation(pc)]冷酷而多虑的声音让你有点担心，在她情绪崩溃之前，你甚至连一句话都说不出来。
 	</p>
 	<p>
-		[lilaya.speech(<b><i>No!</i></b>)] she screams, [lilaya.speech(I won't hear any of it! Both you and mommy have betrayed me, so you can make it up to me by convincing her to finally turn me into a real demon! I <i>hate</i> being a half-demon! <b><i>I hate it!</i></b>)]
+		[lilaya.speech(<b><i>不！</i></b>)]她尖叫，[lilaya.speech(我不想听解释！妈咪和你都背叛了我，所以你跟我保证，你会说服她把我变成一个真正的恶魔！我<i>恨透了</i>作为半恶魔的生活！<b><i>我 恨 它！</i></b>)]
 	</p>
 	<p>
-		Although most of her anger seems directed at your now-shared mother, Lilaya is definitely more than a little upset with you. As you're wondering whether to agree with her demands and convince Lyssieth to transform her into a full demon, she continues,
+		虽然她的大部分怒火似乎烧向你们共同的妈咪，但显然，莉莱雅对你也相当不满。当你在思考该不该同意她的要求，说服莉西丝将她转化成一个完整的恶魔时，她继续说道，
 		#IF(lilaya.getTotalTimesHadSex(pc)>0)
-			 [lilaya.speech(And don't think for <i>one second</i> that I'm going to let you fuck me again until you agree to do as I say!)]
+			[lilaya.speech(别以为我会在你同意照我的话做之前再让你操我，<i>一下也不行</i>！)]
 		#ELSE
-			 [lilaya.speech(And don't think for <i>one second</i> that I'm going to offer you any special tests until you agree to do as I say!)]
+			[lilaya.speech(别以为我会在你同意照我的话做之前给你做任何特别测试，<i>一秒也不行</i>！)]
 		#ENDIF
 	</p>
 	<p>
-		Knowing that demonic transformations are permanent, you wonder what you should choose to say...
+		恶魔转化是永久的，你不知道该不该告诉她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="LAB_ENTRY_PREGNANT"><![CDATA[
 	<p>
-		Stepping inside Lilaya's laboratory, you quickly scan the interior for any sign of life.
+		你走进莉莱雅的实验室，快速扫视内部，寻找任何可能的生命迹象。
 	</p>
 	<p>
-		On the opposite side of the room, you see your demonic [lilaya.relation(pc)] sitting at one of the long lab tables, busily performing an experiment. Noticing your entry out of the corner of her eye, she looks across and glares angrily at you, before starting to stand up. As she gets to her feet, you notice that her movements are slightly unusual, and as she steps around the table that she was working at, you see the cause of her clumsy motions taking the form of a clearly swollen belly.
+		在房间对面，你看见你的恶魔[lilaya.relation(pc)]正坐在一张长实验桌旁，忙着复现实验。余光瞥见你进来，她把目光投向门边，怒视着你。你发现她起身的动作有点异常。当她绕过工作台时，你意识到她的笨拙动作来自于明显隆起的腹部。
 	</p>
 	<p>
-		[lilaya.speech(Yes, that's right!)] she angrily shouts, before marching over towards you.
+		[lilaya.speech(对，没错！)]她怒吼道，冲你走了过来。
 		#IF(lilaya.isCondomBroke())
-			 [lilaya.speech(You ended up getting me pregnant! This is all your fault for using such cheap, crappy condoms! Why couldn't you have just pulled out instead?!)]
+			[lilaya.speech(你还是把我搞怀孕了！这全是你非得用那个便宜又糟糕的避孕套的错！你为什么不在射之前抽出来？！)]
 		#ELSEIF(lilaya.isAmazonsSecretImpregnation())
-			 [lilaya.speech(You ended up getting me pregnant! I <i>told</i> you to pull back before you orgasmed! I knew this would happen!)]	
+			[lilaya.speech(你还是把我搞怀孕了！我<i>都跟你说了</i>高潮前要抽出来！我就知道会发生这种事！)]	
 		#ELSE
-			 [lilaya.speech(You ended up getting me pregnant! I <i>told</i> you to pull out! I knew this would happen!)]		
+			[lilaya.speech(你还是把我搞怀孕了！我<i>都跟你说了</i>高潮前要抽出来！我就知道会发生这种事！)]	
 		#ENDIF
 	</p>
 	<p>
-		Not giving you a chance to talk, she continues furiously scolding you, before launching into the reason as to why she's so upset to be pregnant, [lilaya.speech(You <i>know</i> I'm just a half-demon! That means all my kids end up as imps! Do you have any idea of how embarrassing and shameful it is to be called an 'imp-breeder', or 'imp-fucker'?! <i>Do you?!</i>)]
+		没给你机会说，她继续愤怒地数落你的过失，然后才开始说她为什么这么烦怀上孩子。[lilaya.speech(你<i>明知道</i>我只是个半恶魔！这意味着我所有的孩子就只能是小恶魔！你知道被称为‘生小恶魔的’或‘操小恶魔的’有多尴尬多丢人吗？<i>你能知道吗？！</i>)]
 	</p>
 	<p>
-		As you start to answer in the negative, Lilaya suddenly whacks you on the arm, and, with tears in her eyes, she shouts, [lilaya.speech(Get out! <b>Get out!</b>)]
+		你忙着否定她的消极想法，莉莱雅突然重重地打了一下你的胳膊，泪水盈满了眼眶，她喊道，[lilaya.speech(滚出去！<b>滚出去！</b>)]
 	</p>
 	<p>
-		You try to apologise as your furious [lilaya.relation(pc)] marches you over to the door of her lab, but your words fall on deaf ears. With one last furious yell, she pushes you out into the corridor, before slamming the door shut and locking it behind you.
+		你努力道歉，但怒气冲天的[lilaya.relation(pc)]拽着你走到实验室门前，你所有的话都像是对牛弹琴。借着最后一声怒吼，她把你推到走廊上，然后砰地关上门并锁好。
 	</p>
 	<p>
-		[style.italicsBad(It doesn't look as though you're going to be able to get back in until Lilaya's pregnancy has run its course...)]
+		[style.italicsBad(看起来在莉莱雅生产之前，你没法再进实验室的门了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_NOT_PREGNANT"><![CDATA[
 	<p>
-		Stepping inside Lilaya's laboratory, you quickly scan the interior for any sign of life.
+		你走进莉莱雅的实验室，快速扫视内部，寻找任何可能的生命迹象。
 	</p>
 	<p>
-		On the opposite side of the room, you see your demonic [lilaya.relation(pc)] sitting at one of the long lab tables, busily performing an experiment. Noticing your entry out of the corner of her eye, she looks across and narrows her eyes at you, before standing up and marching over to where you're standing.
+		在房间对面，你看见你的恶魔[lilaya.relation(pc)]正坐在一张长实验桌旁，忙着复现实验。余光瞥见你进来，她便眯起眼睛，投来不善的目光，接着站起身向你大步走来。
 	</p>
 	<p>
-		[lilaya.speech(You're a very lucky [pc.girl],)] she firmly states as she approaches, [lilaya.speech(As you can see, I'm not pregnant. You'd have been in so much trouble if I was!)]
+		[lilaya.speech(你可真是个幸运的[pc.girl]，)]她边靠近边斩钉截铁地说着，[lilaya.speech(你也看到了，我没有怀孕。但万一有什么差池，你就麻烦大了！)]
 	</p>
 	<p>
 		#IF(lilaya.isCondomBroke())
-			[pc.speech(Well, it wasn't my fault the condom broke. Everything worked out fine in the end anyway,)] you say, sensing that Lilaya's anger won't last.
+			[pc.speech(那个，避孕套破了又不是我的错。反正一切顺利嘛，)]你也意识到莉莱雅不会生气太久，便说道。
 		#ELSE
-			[pc.speech(Everything worked out fine in the end then,)] you say, sensing that Lilaya's anger won't last.
+			[pc.speech(反正一切顺利嘛，)]你也意识到莉莱雅不会生气太久，便说道。
 		#ENDIF
 	</p>
 	<p>
-		True enough, she lets out a resigned sigh as you say that, and, lowering her voice, she continues, [lilaya.speech(Yes, it did. As we only ever give birth to imps, it's extremely embarrassing and shameful for half-demons to get pregnant. Even those who know that I'm the recognised daughter of Lyssieth herself would call me 'imp-breeder' or 'imp-fucker' behind my back... I <i>hate</i> being pregnant!)]
+		也确实如此，等你说完，她无奈地叹息一声，便放低了声音，继续道，[lilaya.speech(是这样没错。要记住我们只会生出小恶魔，半恶魔怀孕是很难堪，很耻辱的。即使那些家伙知道我是莉西丝认可的女儿，也还是会在背后揶揄我是‘生小恶魔的’或‘操小恶魔的’……我<i>恨死</i>怀孕了！)]
 	</p>
 	<p>
-		Reassuring your [lilaya.relation(pc)] that everything's ok, you walk her back over to her lab table, where she lets out one final sigh and says that she forgives you for not pulling out like she asked. As her thoughts turn back to the sex which the two of you had, Lilaya starts hungrily staring at your body, and, with a sultry tone in her voice, she traces a finger over your chest and asks,
+		你向你的[lilaya.relation(pc)]安抚道一切无恙，便将她送回了实验桌前，她又是一声叹息，说你没有照她的意思外射的事情，她已经原谅你了。可当莉莱雅又想到你们二人的性爱场面时，却又开始饥渴地紧盯着你的身体，接着拿手指划过你的脸颊，用撩拨的语调问道，
 		#IF(lilaya.isCondomBroke())
-			 [lilaya.speech(Now that you're here, would you like me to run some more <i>tests</i>? With the condition that you've got a proper condom this time, or that you'll be sure to pull out...)]
+			[lilaya.speech(既然你来了，那愿不愿意再多来几场<i>测试</i>？如果你确定这次带上了安全的避孕套，或者保证一定会射在外面……)]
 		#ELSE
-			 [lilaya.speech(Now that you're here, would you like me to run some more <i>tests</i>? With the condition that you'll promise not to get me pregnant, of course...)]
+			[lilaya.speech(既然你来了，那愿不愿意再多来几场<i>测试</i>？当然，如果你保证不会再让我怀孕的话……)]
 		#ENDIF
 	</p>
 	<p>
-		You wonder if you should take her up on that offer, or discuss some other business with her...
+		你思索起来，是否应该接受她的邀请，亦或是讨论些别的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_PREGNANCY_RESOLVED"><![CDATA[
 	<p>
-		Stepping inside Lilaya's laboratory, you quickly scan the interior for any sign of life.
-	</p>
+	你走进莉莱雅的实验室，快速扫视内部，寻找任何可能的生命迹象。
+</p>
 	<p>
-		On the opposite side of the room, you see your demonic [lilaya.relation(pc)] sitting at one of the long lab tables, busily performing an experiment. Noticing your entry out of the corner of her eye, she looks across and narrows her eyes at you, before standing up and marching over to where you're standing.
-	</p>
+	在房间对面，你看见你的恶魔[lilaya.relation(pc)]正坐在一张长实验桌旁，忙着复现实验。余光瞥见你进来，她便眯起眼睛，投来不善的目光，接着站起身向你大步走来。
+</p>
 	<p>
-		[lilaya.speech(I've decided to forgive you,)] she firmly states as she approaches, and as she comes to stand before you, you take note of the fact that her belly is flat once again. [lilaya.speech(As you can see, I've given birth, and the imps that you got me knocked up with are no doubt out there in Submission somewhere, causing trouble for everyone! They even tried stealing some of my lab equipment as they left...)]
-	</p>
+	[lilaya.speech(我已经决定要原谅你了，)]她边靠近边斩钉截铁地说道，等到她站在你面前的时候，你注意到她的小腹已经又变得平坦如故。[lilaya.speech(你也看到了，我已经分娩过，你让我意外怀上的小恶魔现在铁定在屈城区不知哪里作乱，惹得人不得安宁！那些家伙走的时候甚至偷走了我的实验设备……)]
+</p>
 	<p>
-		[pc.speech(Sorry for the trouble,)] you say.
-	</p>
+	[pc.speech(很抱歉，带来这么些麻烦，)]你说道。
+</p>
 	<p>
-		#IF(lilaya.isCondomBroke())
-			Your [lilaya.relation(pc)] lets out a resigned sigh as you say that, and, lowering her voice, she continues, [lilaya.speech(Yes, well, I've already forgiven you. It wasn't really your fault that the condom broke. Just know now that I <i>hate</i> being pregnant, so don't let this happen again.)]
-		#ELSEIF(lilaya.isAmazonsSecretImpregnation())
-			Your [lilaya.relation(pc)] lets out a resigned sigh as you say that, and, lowering her voice, she continues, [lilaya.speech(Yes, well, I've already forgiven you. Just know now that I <i>hate</i> being pregnant, so when I say pull back before you orgasm, I mean it.)]
-		#ELSE
-			Your [lilaya.relation(pc)] lets out a resigned sigh as you say that, and, lowering her voice, she continues, [lilaya.speech(Yes, well, I've already forgiven you. Just know now that I <i>hate</i> being pregnant, so when I say pull out, I mean it.)]
-		#ENDIF
-	</p>
+	#IF(lilaya.isCondomBroke())
+		等你说完，你的[lilaya.relation(pc)]无奈地叹息一声，便放低了声音，继续道，[lilaya.speech(唉，好吧，我已经原谅你了。毕竟避孕套破了确实不能算你的错。只要记住我<i>非常讨厌</i>怀孕就好，不要再发生这种事情了。)]
+	#ELSEIF(lilaya.isAmazonsSecretImpregnation())
+		等你说完，你的[lilaya.relation(pc)]无奈地叹息一声，便放低了声音，继续道，[lilaya.speech(唉，好吧，我已经原谅你了。只要记住我<i>非常讨厌</i>怀孕就好，我说让你拔出来的时候，我是认真的。)]
+	#ELSE
+		等你说完，你的[lilaya.relation(pc)]无奈地叹息一声，便放低了声音，继续道，[lilaya.speech(唉，好吧，我已经原谅你了。只要记住我<i>非常讨厌</i>怀孕就好，我说让你拔出来的时候，我是认真的。)]
+	#ENDIF
+</p>
 	<p>
-		Reassuring your [lilaya.relation(pc)] that you now appreciate how much she dislikes being pregnant, you walk her back over to her lab table, where she lets out one final sigh and says that she really did try to warn you about pulling out. As her thoughts turn back to the sex which the two of you had, Lilaya starts hungrily staring at your body, and, with a sultry tone in her voice, she traces a finger over your chest and asks,
-		#IF(lilaya.isCondomBroke())
-			 [lilaya.speech(Now that you're here, and that whole business is behind us, would you like me to run some more <i>tests</i>? With the condition that you've got a proper condom this time, or that you'll be sure to pull out...)]
-		#ELSE
-			 [lilaya.speech(Now that you're here, and that whole business is behind us, would you like me to run some more <i>tests</i>? With the condition that you'll promise not to get me pregnant, of course...)]
-		#ENDIF
-	</p>
+	你向你的[lilaya.relation(pc)]安抚道一切无恙，便将她送回了实验桌前，她又是一声叹息，说你没有照她的意思外射的事情，她已经原谅你了。可当莉莱雅又想到你们二人的性爱场面时，却又开始饥渴地紧盯着你的身体，接着拿手指划过你的脸颊，用撩拨的语调问道，
+	#IF(lilaya.isCondomBroke())
+		[lilaya.speech(既然你来了，那愿不愿意再多来几场<i>测试</i>？如果你确定这次带上了安全的避孕套，或者保证一定会射在外面……)]
+	#ELSE
+		[lilaya.speech(既然你来了，那愿不愿意再多来几场<i>测试</i>？当然，如果你保证不会再让我怀孕的话……)]
+	#ENDIF
+</p>
 	<p>
-		You wonder if you should take her up on that offer, or discuss some other business with her...
-	</p>
-	]]>
-	</htmlContent>
+	你思索起来，是否应该接受她的邀请，亦或是讨论些别的事情……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_BASE"><![CDATA[
 	<p>
-		Stepping inside Lilaya's laboratory, you quickly scan the interior for any sign of life.
+		你走进莉莱雅的实验室，快速扫视内部，寻找任何可能的生命迹象。
 	</p>
 	<p>
-		On the opposite side of the room, you see your demonic [lilaya.relation(pc)] sitting at one of the long lab tables, with her back to the door. Open books and sheets of paper litter the tabletop and floor around her, but she seems far more interested in something other than work at the moment. Rose is straddling her lap, leaning in against Lilaya's chest as she whispers down to her demonic mistress. You see your [lilaya.relation(pc)]'s hand reaching up Rose's skirt, and from the movement of her arm, you can tell that she's fingering her cat-girl maid.
+		你望向房间的另一端，看见你的恶魔[lilaya.relation(pc)]正坐在一张长实验桌旁，后背倚在门上。房间内一片狼藉，没合上的书本和草稿纸在实验桌和地上四处散落。莉莱雅似乎并没有在集中精力地工作。萝丝跨坐在她大腿上，倚在莉莱雅胸前，在她的恶魔主人耳边低声呢喃。你发现[lilaya.relation(pc)]的手伸进了萝丝的裙摆下。你观察着她手臂颤动的节奏，看出她在给猫女仆指交。
 	</p>
 	<p>
-		Before you can say anything, you hear some surprising words coming out of Rose's mouth as she moans down into Lilaya's ear,
-	]]>
-	</htmlContent>
+		你还没来得及说什么，就听到萝丝的嘴里发出了一些令人惊讶的话语，她对着莉莱雅的耳朵低声呻吟道，
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_NAUGHTY_ROSE"><![CDATA[
-		 [rose.speech(~Mmm!~ That's right, you horny little slut. ~Aah!~ Come on, please your Mistress!)]
+		[rose.speech(~呜姆！~ 做得好，你这个淫荡的小骚货。~啊哈啊！~来吧，取悦你的主人！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_NAUGHTY_ROSE"><![CDATA[
-		 [rose.speech(~Mmm!~ That's right, slut. ~Aah!~ Do a good job, and maybe this'll be the year I let you fuck me!)]
+		[rose.speech(~呜姆！~ 就是这样，骚货。~啊哈哈！~ 好好干，也许今年我会允许你操我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_NAUGHTY_ROSE"><![CDATA[
-		 [rose.speech(~Mmm!~ Come on, slut, you can do better than that! ~Aah!~ Yes, get those fingers in deeper!)]
+		[rose.speech( ~呜姆！~ 来吧，骚货，你能做得更好！~啊哈啊！~ 手指再插深点儿！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_NAUGHTY_ROSE"><![CDATA[
-		 [rose.speech(~Ooh!~ You dirty little slut! ~Mmm!~ That's right, focus on my clit a little more!)]
+		[rose.speech(~哦！~ 你这个脏兮兮的小贱人！~呜姆！~ 就是这样，记得照顾我的阴蒂！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_NAUGHTY_ROSE"><![CDATA[
-		 [rose.speech(~Ooh!~ Yes, that's it, slut, focus on my clit! ~Mmm!~ Maybe I'll let you use your tongue tonight!)]
+		[rose.speech(~哦呜！~ 对，就是那里，骚货，照顾点我的豆豆！~嗯姆！~ 或许今晚我会允许你用用舌头哦！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_ROSE_TOLD_ON_YOU_DEMON"><![CDATA[
 	<p>
-		Rose hooks her arms around Lilaya's neck and leans back, letting out a deep moan as her owner's fingers continue working away between her legs. She suddenly notices you out of the corner of her eye, and, turning to give you an evil grin, she pointedly grinds down against your demonic [lilaya.relation(pc)], before letting out a little eek and jumping to her feet as she feigns surprise. [rose.speech(M-Mistress! [pc.NameIsFull] here!)]
+		萝丝用手臂环住莉莱雅的脖子，贴在她身上。主人的手指在她腿间进进出出，她发出悠长的呻吟声。突然，她用余光瞥见了你在拐角探头探脑，转过身来，朝你露出了邪恶的笑容。她故意在[lilaya.relation(pc)]身上蹭来蹭去，发出一声小小的尖叫，跳了起来，假装被吓了一跳。[rose.speech(主、主人！[pc.Name]来了！)]
 	</p>
 	<p>
-		Lilaya, upon hearing that, mirrors her maid's movements and jumps out of her chair. [lilaya.speech([pc.Name]! E-Erm, w-we were just... Doing an experiment! Yes! Isn't that right, Rose?!)]
+		莉莱雅听见她的话，也学着她的动作跳下椅子。[lilaya.speech([pc.Name]！呃……唔，我、我们只是……在做实验！对！是这样吧，萝丝？！)]
 	</p>
 	<p>
-		[rose.speech(Yes, Mistress!)] Rose squeaks in agreement, [rose.speech(That's right!)]
+		[rose.speech(是的，主人！)]萝丝赞同道，[rose.speech(就是这样！)]
 	</p>
 	<p>
-		Brushing down her skirt, Lilaya blushes a little and clears her throat, [lilaya.speech(~Ahem!~ Well, it's a good job that you came here to see me, [pc.name]. Rose has already told me all about your little adventure in my room with my underwear. So, what do you have to say for yourself?)]
+		盖上裙子，莉莱雅的脸微微泛红，清了清嗓子，[lilaya.speech(~啊哼！~ 哦，很感谢你能来这里看我，[pc.name]。萝丝跟我说了所有你在我房间里用我的内衣做的小小冒险。所以，你对自己有什么说法？)]
 	</p>
 	<p>
-		As you're indebted to Lilaya for allowing you to live here, you see no other option but to apologise. Stepping forwards, you make up an excuse and say, [pc.speech(I'm sorry, Lilaya. I don't know what came over me. It must be this arcane aura of mine... or something...)]
+		由于你住在这里欠着莉莱雅人情，你别无选择，只能道歉。你走上前，编好了借口，[pc.speech(非常抱歉，莉莱雅。我不知道自己干了什么。肯定是奥术灵气……或者别的什么……)]
 	</p>
 	<p>
-		[lilaya.speech(Hmm... Well, I've already told you that you're not getting any sex from me until you help me convince mommy to turn me into a full demon. As you're quite clearly desperate for it, perhaps you should just do as I say already!)] Lilaya exclaims in her sternest voice.
+		[lilaya.speech(嗯……哦，我跟你说过，别想和我做爱，除非你说服妈咪把我变成完全恶魔。你显然是欲求不满，你应该听我的，快去做！)]莉莱雅严厉地呼喊。
 	</p>
 	<p>
-		You wonder if you should agree to convince Lyssieth to permanently transform Lilaya into a full demon, or just ask about some other business...
+		你不知道该不该说服莉西丝把莉莱雅永久地转化成完全的恶魔，或者只是扯开话题……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_BASE_END_DEMON"><![CDATA[
 	<p>
-		Rose hooks her arms around Lilaya's neck and leans back, letting out a deep moan as her owner's fingers continue working away between her legs. She suddenly notices you out of the corner of her eye, and, letting out a little eek, she quickly leaps up onto her feet. [rose.speech(M-Mistress! [pc.NamePos] here!)]
+		萝丝用手臂环住莉莱雅的脖子，贴在她身上。主人的手指在她腿间进进出出，她发出悠长的呻吟声。突然，她用余光瞥见了你在拐角探头探脑，发出一声小小的尖叫，她跳起来，假装被吓了一跳。[rose.speech(主、主人！[pc.Name]来了！)]
 	</p>
 	<p>
-		Lilaya, upon hearing that, mirrors her maid's movements and jumps out of her chair. [lilaya.speech([pc.Name]! E-Erm, w-we were just... Doing an experiment! Yes! Isn't that right, Rose?!)]
+		莉莱雅听见她的话，也学着她的动作跳下椅子。[lilaya.speech([pc.Name]！呃……唔，我、我们只是……在做实验！对！是这样吧，萝丝？！)]
 	</p>
 	<p>
-		[rose.speech(Yes, Mistress!)] Rose squeaks in agreement, [rose.speech(That's right!)]
+		[rose.speech(是的，主人！)]萝丝赞同道，[rose.speech(就是这样！)]
 	</p>
 	<p>
-		Brushing down her skirt, Lilaya clears her throat, [lilaya.speech(~Ahem!~ So, have you changed your mind, [pc.name]? You're ready to convince mommy to turn me into a full demon as well, aren't you?)]
+		盖上裙子，莉莱雅的脸微微泛红，清了清嗓子，[lilaya.speech(~啊哼！~所以你改变主意了，[pc.name]？你准备好说服妈咪把我变成完全的恶魔了，是吧？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_ROSE_TOLD_ON_YOU"><![CDATA[
 	<p>
-		Rose hooks her arms around Lilaya's neck and leans back, letting out a deep moan as her owner's fingers continue working away between her legs. She suddenly notices you out of the corner of her eye, and, turning to give you an evil grin, she pointedly grinds down against your demonic [lilaya.relation(pc)], before letting out a little eek and jumping to her feet as she feigns surprise. [rose.speech(M-Mistress! [pc.NameIsFull] here!)]
+		萝丝用手臂环住莉莱雅的脖子，贴在她身上。主人的手指在她腿间进进出出，她发出悠长的呻吟声。突然，她用余光瞥见了你在拐角探头探脑，转过身来，朝你露出了邪恶的笑容。她故意在[lilaya.relation(pc)]身上蹭来蹭去，发出一声小小的尖叫，跳了起来，假装被吓了一跳。[rose.speech(主、主人！[pc.Name]来了！)]
 	</p>
 	<p>
-		Lilaya, upon hearing that, mirrors her maid's movements and jumps out of her chair. [lilaya.speech([pc.Name]! E-Erm, w-we were just... Doing an experiment! Yes! Isn't that right, Rose?!)]
+		莉莱雅听见她的话，也学着她的动作跳下椅子。[lilaya.speech([pc.Name]！呃……唔，我、我们只是……在做实验！对！是这样吧，萝丝？！)]
 	</p>
 	<p>
-		[rose.speech(Yes, Mistress!)] Rose squeaks in agreement, [rose.speech(That's right!)]
+		[rose.speech(是的，主人！)]萝丝赞同道，[rose.speech(就是这样！)]
 	</p>
 	<p>
 	#IF !lilaya.isCharacterReactedToPregnancy(pc) && !lilaya.getBaseFetishDesire(FETISH_PREGNANCY).isNegative() && lilaya.isVisiblyPregnant()
 	#THEN
 		#IF lilaya.getPregnantLitter().isFatherId(pc.getId())
 		#THEN
-			As Lilaya brushes down her skirt, you can't help but notice the visible bulge in her belly. As she sees what it is you're looking at, your [lilaya.relation(pc)] clears her throat and confirms, [lilaya.speech(~Ahem!~ Yes, [pc.name], you got me pregnant. As I'm a full demon now, it's really no big deal... As I'm not going to be birthing any imps, I don't mind it at all. But anyway, it's a good job that you came here to see me, [pc.name]. Rose has already told me all about your little adventure in my room with my underwear. So, what do you have to say for yourself?)]
+			盖上裙子，莉莱雅的脸微微泛红，你很难忽视她仍然挺着个大肚子。注意到你的目光，[lilaya.relation(pc)]清了清嗓子承认，[lilaya.speech(~啊哼！~ 是的，[pc.name]，我怀上了你的孩子。但我是个完全的恶魔了，这不算什么大事……我没打算生小恶魔，我根本没把这当回事。但无所谓，很感谢你来这儿看我。萝丝跟我说了所有你在我房间里用我的内衣做的小小冒险。所以，你对自己有什么说法？)]
 		#ELSE
-			As Lilaya brushes down her skirt, you can't help but notice the visible bulge in her belly. As she sees what it is you're looking at, your [lilaya.relation(pc)] clears her throat and confirms, [lilaya.speech(~Ahem!~ Yes, [pc.name], mommy got me pregnant. As I'm a full demon now, it's really no big deal... As I'm not going to be birthing any imps, I don't mind it at all. But anyway, it's a good job that you came here to see me, [pc.name]. Rose has already told me all about your little adventure in my room with my underwear. So, what do you have to say for yourself?)]
+			盖上裙子，莉莱雅的脸微微泛红，你很难忽视她仍然挺着个大肚子。注意到你的目光，[lilaya.relation(pc)]清了清嗓子承认，[lilaya.speech(~啊哼！~ 是的，[pc.name]，我怀上了妈咪的孩子。但我是个完全的恶魔了，这不算什么大事……我没打算生小恶魔，我根本没把这当回事。但无所谓，很感谢你来这儿看我。萝丝跟我说了所有你在我房间里用我的内衣做的小小冒险。所以，你对自己有什么说法？)]
 		#ENDIF
 	#ELSE
 		#IF !lilaya.getBaseFetishDesire(FETISH_PREGNANCY).isNegative() && lilaya.isVisiblyPregnant()
 		#THEN
-			As Lilaya brushes down her skirt, you can't help but notice that she's still got a very visible bulge in her belly. As she sees what it is you're looking at, your [lilaya.relation(pc)] clears her throat and confirms, [lilaya.speech(~Ahem!~ Yes, [pc.name], I'm still pregnant... But anyway, it's a good job that you came here to see me. Rose has already told me all about your little adventure in my room with my underwear. So, what do you have to say for yourself?)]
+			盖上裙子，莉莱雅的脸微微泛红，你很难忽视她仍然挺着个大肚子。注意到你的目光，[lilaya.relation(pc)]清了清嗓子承认，[lilaya.speech(~啊哼！~ 是的，[pc.name]，我还在怀孕……但无所谓，很感谢你来这儿看我。萝丝跟我说了所有你在我房间里用我的内衣做的小小冒险。所以，你对自己有什么说法？)]
 		#ELSE
-			Brushing down her skirt, Lilaya blushes a little and clears her throat, [lilaya.speech(~Ahem!~ Well, it's a good job that you came here to see me, [pc.name]. Rose has already told me all about your little adventure in my room with my underwear. So, what do you have to say for yourself?)]
+			盖上裙子，莉莱雅的脸微微泛红，清了清嗓子，[lilaya.speech(~啊哼！~ 哦，很感谢你能来这里看我，[pc.name]。萝丝跟我说了所有你在我房间里用我的内衣做的小小冒险。所以，你对自己有什么说法？)]
 		#ENDIF
 	#ENDIF
 	</p>
 	<p>
-		As you're indebted to Lilaya for allowing you to live here, you see no other option but to apologise. Stepping forwards, you make up an excuse and say, [pc.speech(I'm sorry, Lilaya. I don't know what came over me. It must be this arcane aura of mine... or something...)]
+		由于你住在这里欠着莉莱雅人情，你别无选择，只能道歉。你走上前，编好了借口，[pc.speech(非常抱歉，莉莱雅。我不知道自己干了什么。肯定是奥术灵气……或者别的什么……)]
 	</p>
 	<p>
-		[lilaya.speech(Hmm... Well, if you find yourself feeling like that, there's no need to sneak off into my room. J-Just come back here and I-I can run some tests on you! O-Ok?)] Lilaya responds, trying her best to sound stern and in control, but ultimately failing as her thoughts shift to wanting to do lewd things with you.
+		[lilaya.speech(嗯……如果你感到不舒服，也没必要偷偷溜进我的房间。只、只要回到这里，我、我可以给你检查检查！好、好吗？)]莉莱雅答道。她竭尽所能地让声音听起来严厉和尽在掌握，但最终失败了，因为她满脑子想着和你做些淫荡的事。
 	</p>
 	<p>
-		[pc.speech(Yes, Lilaya,)] you respond, much in the same way you always used to with your aunt Lily.
+		[pc.speech(好吧，莉莱雅。)]你回答。和你过去应付姨妈莉莉的方式一模一样。
 	</p>
 	<p>
-		[lilaya.speech(So, now that that's out of the way, what is it you need?)]
+		[lilaya.speech(所以，既然那件事已经解决了，你需要什么？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_BASE_END"><![CDATA[
 	<p>
-		Rose hooks her arms around Lilaya's neck and leans back, letting out a deep moan as her owner's fingers continue working away between her legs. She suddenly notices you out of the corner of her eye, and, letting out a little eek, she quickly leaps up onto her feet. [rose.speech(M-Mistress! [pc.NamePos] here!)]
+		萝丝用手臂环住莉莱雅的脖子，贴在她身上。主人的手指在她腿间进进出出，她发出悠长的呻吟声。突然，她用余光瞥见了你在拐角探头探脑，发出一声小小的尖叫，她跳起来，假装被吓了一跳。[rose.speech(主、主人！[pc.Name]来了！)]
 	</p>
 	<p>
-		Lilaya, upon hearing that, mirrors her maid's movements and jumps out of her chair. [lilaya.speech([pc.Name]! E-Erm, w-we were just... Doing an experiment! Yes! Isn't that right, Rose?!)]
+		莉莱雅听见她的话，也学着她的动作跳下椅子。[lilaya.speech([pc.Name]！呃……唔，我、我们只是……在做实验！对！是这样吧，萝丝？！)]
 	</p>
 	<p>
-		[rose.speech(Yes, Mistress!)] Rose squeaks in agreement, [rose.speech(That's right!)]
+		[rose.speech(是的，主人！)]萝丝赞同道，[rose.speech(就是这样！)]
 	</p>
 	<p>
 	#IF !lilaya.isCharacterReactedToPregnancy(pc) && !lilaya.getBaseFetishDesire(FETISH_PREGNANCY).isNegative() && lilaya.isVisiblyPregnant()
 	#THEN
 		#IF(lilaya.getPregnantLitter().isFatherId(pc.getId()))
-			As Lilaya brushes down her skirt, you can't help but notice the visible bulge in her belly. As she sees what it is you're looking at, your [lilaya.relation(pc)] clears her throat and confirms, [lilaya.speech(~Ahem!~ Yes, [pc.name], you got me pregnant. As I'm a full demon now, it's really no big deal... As I'm not going to be birthing any imps, I don't mind it at all. So, what is it you want?)]
+			盖上裙子，莉莱雅的脸微微泛红，你很难忽视她仍然挺着个大肚子。注意到你的目光，[lilaya.relation(pc)]清了清嗓子承认，[lilaya.speech(~啊哼！~ 是的，[pc.name]，我怀上了你的孩子。但我是个完全的恶魔了，这不算什么大事……我没打算生小恶魔，我根本没把这当回事。所以，你是来干什么的？)]
 		#ELSEIF(lilaya.getPregnantLitter().isFatherId(lyssieth.getId()))
-			As Lilaya brushes down her skirt, you can't help but notice the visible bulge in her belly. As she sees what it is you're looking at, your [lilaya.relation(pc)] clears her throat and confirms, [lilaya.speech(~Ahem!~ Yes, [pc.name], mommy got me pregnant. As I'm a full demon now, it's really no big deal... As I'm not going to be birthing any imps, I don't mind it at all. So, what is it you want?)]
+			盖上裙子，莉莱雅的脸微微泛红，你很难忽视她仍然挺着个大肚子。注意到你的目光，[lilaya.relation(pc)]清了清嗓子承认，[lilaya.speech(~啊哼！~ 是的，[pc.name]，我怀上了妈咪的孩子。但我是个完全的恶魔了，这不算什么大事……我没打算生小恶魔，我根本没把这当回事。所以，你是来干什么的？)]
 		#ELSE
-			As Lilaya brushes down her skirt, you can't help but notice the visible bulge in her belly. As she sees what it is you're looking at, your [lilaya.relation(pc)] clears her throat and confirms, [lilaya.speech(~Ahem!~ Yes, [pc.name], [daddy.name] got me pregnant. As I'm a full demon now, it's really no big deal... As I'm not going to be birthing any imps, I don't mind it at all. So, what is it you want?)]
+			盖上裙子，莉莱雅的脸微微泛红，你很难忽视她仍然挺着个大肚子。注意到你的目光，[lilaya.relation(pc)]清了清嗓子承认，[lilaya.speech(~啊哼！~ 是的，[pc.name]，我怀上了[daddy.name]的孩子。但我是个完全的恶魔了，这不算什么大事……我没打算生小恶魔，我根本没把这当回事。所以，你是来干什么的？)]
 		#ENDIF
 	#ELSE
 		#IF !lilaya.getBaseFetishDesire(FETISH_PREGNANCY).isNegative() && lilaya.isVisiblyPregnant()
 		#THEN
-			As Lilaya brushes down her skirt, you can't help but notice that she's still got a very visible bulge in her belly. As she sees what it is you're looking at, your [lilaya.relation(pc)] clears her throat and confirms, [lilaya.speech(~Ahem!~ Yes, I'm still pregnant... So, what is it you need, [pc.name]?)]
+			盖上裙子，莉莱雅的脸微微泛红，你很难忽视她仍然挺着个大肚子。注意到你的目光，[lilaya.relation(pc)]清了清嗓子承认，[lilaya.speech(~啊哼！~ 是的，我还在怀孕……所以，[pc.name]，你是来干什么的？)]
 		#ELSE
-			Brushing down her skirt, Lilaya clears her throat, [lilaya.speech(~Ahem!~ So, what is it you need, [pc.name]?)]
+			盖上裙子，莉莱雅清了清嗓子，[lilaya.speech(~啊哼！~ 所以，[pc.name]，你是来干什么的？)]
 		#ENDIF
 	#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_ARTHUR_PREGNANCY_BASE"><![CDATA[
 	<p>
-		As you approach the door to Lilaya's lab, you hear the distinctive sound of your demonic [lilaya.relation(pc)]'s voice getting louder and louder, [lilaya.speech(...and I told you <i>three times</i> already! <i>Don't touch my notes!</i>)]
-	</p>
+	随着你一步步靠近莉莱雅的实验室，你分明地听见你恶魔[lilaya.relation(pc)]的声音也越来越大，[lilaya.speech(……我告诉过你<i>三次</i>了！<i>别碰我的笔记！</i>)]
+</p>
 	<p>
-		Stepping through the open doorway, you see a rather flustered-looking Arthur sitting down on one of the lab's many chairs, his eyes cast to the floor as he endures your angry [lilaya.relation(pc)]'s furious scolding. [arthur.speech(Sorry, Lilaya, I just thought that-)]
-	</p>
+	你进入敞开的门口，见到亚瑟一脸慌张的坐在实验室一张椅子上，埋头盯着地面，承受着你暴怒着的[lilaya.relation(pc)]的怒骂。[arthur.speech(抱歉，莉莱雅，我只是以为——)]
+</p>
 	<p>
-		[lilaya.speech(Be quiet!)] Lilaya shrieks, before suddenly noticing your entry. [lilaya.speech(And now the other asshole's here! [pc.Name]! Come and take a seat, <i>this instant</i>!)]
-	</p>
-	]]>
-	</htmlContent>
+	[lilaya.speech(闭嘴！)]莉莱雅高喊道，此刻才注意到你进来了。[lilaya.speech(又来了个混球！[pc.Name]！过来坐着，<i>立刻马上</i>！)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_ARTHUR_PREGNANT"><![CDATA[
 	<p>
-		Looking down at your [lilaya.relation(pc)]'s stomach, you see the reason why she's addressing you in such a furious manner; her belly is quite visibly swollen, making it obvious that you've ended up getting her pregnant. Knowing from experience that it's best to just do as you're told when your [lilaya.relation(pc)] is like this, you walk over to the chair next to Arthur and sit down.
-	</p>
+	你低头看向[lilaya.relation(pc)]的肚子，顿时明白过来她为什么对你也怒火冲天；她的小腹肉眼可见地鼓了起来，很明显你让她怀了孕。根据过往的经验，你明白自己最好照你[lilaya.relation(pc)]说的做，于是连忙走到亚瑟旁边的椅子上坐了下来。
+</p>
 	<p>
-		Addressing you, Lilaya shouts, [lilaya.speech(You <i>know</i> I'm just a half-demon! That means all my kids end up as imps! Do you have any idea of how embarrassing and shameful it is to be called an 'imp-breeder', or 'imp-fucker'?! <i>Do you?!</i>)]
-	</p>
+	莉莱雅转向了你，怒吼道，[lilaya.speech(你<i>很清楚</i>我只是个半恶魔对吧！所以我的孩子全都会是小恶魔！你知不知道被骂成‘生小恶魔的’或‘操小恶魔的’到底有多难堪，多耻辱？！<i>你知道吗？！</i>)]
+</p>
 	<p>
-		Not even giving you a chance to answer, she continues in the same furious tone, [lilaya.speech(Once this business with Arthur is sorted out, I don't want to see you anywhere near my lab until my pregnancy is resolved!)]
-	</p>
-	]]>
-	</htmlContent>
+	她不等你回答，便继续怒气冲冲地喊着，[lilaya.speech(等我处理完亚瑟的事情，我怀孕的事情解决之前，我就不想看到你再接近实验室一步！)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_ARTHUR_NOT_PREGNANT"><![CDATA[
 	<p>
-		Knowing from experience that it's best to just do as you're told when your [lilaya.relation(pc)]'s like this, you walk over to the chair next to Arthur and sit down. Looking up at Lilaya's flat stomach, you see that you didn't end up getting her pregnant after all, and, seeing what it is you're glancing at, she firmly says, [lilaya.speech(Yes, luckily for you, I'm not pregnant. You'd have been in so much trouble if I was!)]
+		根据经验，当你的[lilaya.relationship(pc)]出现这种情况时，最好还是乖乖听话，你走到亚瑟旁边的椅子上坐下。抬头看了看莉莱雅平坦的腹部，你发现你最终还是没有让她怀孕。看到你在看什么，她坚定地说：[lilaya.speech(是的，你很幸运，我没有怀孕。如果我怀孕了，你就麻烦大了！)]
 	</p>
 	<p>
-		Taking a step back, Lilaya doesn't pause for a moment, and angrily continues, [lilaya.speech(As we only ever give birth to imps, it's extremely embarrassing and shameful for half-demons to get pregnant. Even those who know that I'm the recognised daughter of Lyssieth herself would call me 'imp-breeder' or 'imp-fucker' behind my back... I <i>hate</i> being pregnant!)]
+		莉莱雅退后一步，没有丝毫停顿，继续愤怒地说：[lilaya.speech(半恶魔只生出小恶魔，所以半恶魔怀孕是一件非常尴尬和羞耻的事。即使知道我是被莉西丝承认的女儿的那些人，也会在背后叫我‘生小恶魔的’或‘操小恶魔的’……我<i>讨厌</i>怀孕！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_ARTHUR_BASE"><![CDATA[
 	<p>
-		As you approach the door to Lilaya's lab, you hear the distinctive sound of your demonic [lilaya.relation(pc)]'s voice getting louder and louder, [lilaya.speech(...and I told you <i>three times</i> already! <i>Don't touch my notes!</i>)]
+		当你走近莉莱雅实验室的大门时，你听到了你的恶魔[lilaya.relation(pc)]那独特的嗓音，她说话的声音越来越大，[lilaya.speech(……我已经告诉过你<i>三次</i>了，<i>别动我的笔记！</i>)]
 	</p>
 	<p>
-		Stepping through the open doorway, you see a rather flustered-looking Arthur sitting down on one of the lab's many chairs, his eyes cast to the floor as he endures your angry [lilaya.relation(pc)]'s furious scolding. [arthur.speech(Sorry, Lilaya, I just thought that-)]
+		走过敞开的门口，你看到亚瑟一脸慌张地坐在实验室的一把椅子上，眼睛盯着地面，忍受着你愤怒的[lilaya.relationship(pc)]劈头盖脸的怒斥。[arthur.speech(对不起，莉莱雅，我只是想——)]
 	</p>
 	<p>
-		[lilaya.speech(Be quiet!)] Lilaya shrieks, before suddenly noticing your entry. [lilaya.speech([pc.Name]! Please come in and take a seat!)]
+		[lilaya.speech(别插嘴！)]莉莱雅尖叫起来，然后突然注意到了你的进入，[lilaya.speech([pc.Name]！进来坐吧！)]
 	</p>
 	<p>
-		Knowing from experience that it's best to just do as you're told when your [lilaya.relation(pc)]'s like this, you walk over to the chair next to Arthur and sit down.
+		根据既有经验，当你的[lilaya.relationship(pc)]出现这种情况时，你最好乖乖按她说的照做，于是你走到亚瑟旁边的椅子上坐下。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_ENTRY_ARTHUR"><![CDATA[
 	<p>
-		Lilaya starts pacing back and forth, her eyes fixed on Arthur as she explains the situation to the two of you, [lilaya.speech(It's just impossible. Absolutely <i>impossible</i>! I might need your help in order to figure out how to return [pc.name] to [pc.her] world, but I simply <i>cannot</i> be around you for longer than five minutes!)]
+		莉莱雅来回踱步，眼睛紧盯着亚瑟，向你们俩解释情况，[lilaya.speech(不可能！绝对<i>不可能</i>！我需要你帮我找出把[pc.name]送回[pc.her]世界的办法，但是我肯定<i>不能</i>待在你旁边超过五分钟！)]
 	</p>
 	<p>
-		[arthur.speech(Lilaya, please, how many times to I have to say I'm sorr-)] Arthur starts, before being cut short by a sudden exclamation from your [lilaya.relation(pc)].
+		[arthur.speech(莉莱雅，我得道歉多少次你才能——)]亚瑟辩解道，但话还没说完，便被你[lilaya.relation(pc)]尖锐的声音打断。
 	</p>
 	<p>
-		[lilaya.speech(You wouldn't have had to say sorry even <i>once</i> if you could have just refrained from fucking my mother! And right here in my lab of all places!)] Lilaya shouts, her cheeks burning red from embarrassment and anger. With a dismissive swipe of her hand, she turns to you and demands, [lilaya.speech([pc.Name], you're going to help Rose clear out my lab's storeroom so that it can be converted into a bedroom for Arthur! I simply can't endure having this insufferable cheating bastard in my presence for more than a few minutes at a time!)]
+		[lilaya.speech(如果你不在我的实验室里和我妈上床的话，那你<i>一次</i>也不用道歉！)]莉莱雅喊道，她的脸颊因为尴尬和愤怒而烧得通红。她不屑一顾地挥了挥手，转过身来对你要求道，[lilaya.speech([pc.Name]，你去和萝丝一起，帮我把实验室的储藏室腾空，以后那里用作亚瑟的卧室！我忍不了了，再和这个谎话连篇的混蛋待几分钟我就要疯了！)]
 	</p>
 	<p>
-		Finding yourself in an increasingly awkward position, you realise that your only real option is to agree to do as your [lilaya.relation(pc)] asks...
+		你发现自己的处境很尴尬，你觉得你最好同意按照你的[lilaya.relationship(pc)]的要求去做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_ELLE_HELP_REPEAT"><![CDATA[
 	<p>
-		Having forgotten what it was that Lilaya deduced about Elle's location, you ask your [lilaya.relation(pc)] if she can remind you of where you should be looking for her. Letting out an exasperated sigh, Lilaya pushes her glasses up onto the bridge of her nose and sharply states, [lilaya.speech(She's going down into the Bat Caverns, remember?! Just travel down to the west side of Submission to get there!)]
+		你忘记了莉莱雅是怎么推断出埃勒的位置的，于是询问你的[lilaya.relationship(pc)]，能否提醒你应该去哪里找她。莉莱雅发出一声恼怒的叹息，推了推鼻梁上的眼镜，尖声说道：[lilaya.speech(她要去蝙蝠洞窟，记得吗？！只要去屈城区的西侧就能到达那里！)]
 	</p>
 	<p>
 		#IF(game.isSillyMode())
-			As you start to thank Lilaya for her help, she steps forwards and bonks you over the head with a rolled-up stack of papers. Frowning at you in disapproval, she states, [lilaya.speech(Please do try to remember what I've said this time!)]
+			你感谢莉莱雅的帮助，她走上前来，用一叠卷起来的文件敲了敲你的头。她不以为然地皱了皱眉头：[lilaya.speech(这次请尽量记住我说的话！)]
 		#ELSE
-			Thanking Lilaya for her help, and reassuring her that you'll be careful, you wonder what to do next...
+			你感谢莉莱雅的帮助，并向她保证你会小心的。下一步该怎么做……
 		#ENDIF
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsMinorGood(You can find Elle by searching in the Bat Caverns between [units.time(12)]-[units.time(15)] on a Wednesday!)]
+		[style.italicsMinorGood(你可以在周三的[units.time(12)]-[units.time(15)]在蝙蝠洞窟里找到埃勒！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_ELLE_HELP"><![CDATA[
 	<p>
-		Struggling to figure out for yourself where Elle could be teleporting to during her long Wednesday lunch breaks, you ask Lilaya if she can help you to figure out where to go. Telling her that the Superintendent apparently takes a pair of night vision goggles with her, and that she returns with wet shoes often coated in some kind of glowing residue, you ask your [lilaya.relation(pc)] if she can figure out what location Elle is visiting.
+		你想不出来埃勒在周三漫长的午休时间里会传送到哪，于是你问莉莱雅是否能帮你找出埃勒去了哪里。你告诉她，警司经常会带着一副夜视镜，而且她回来时鞋子是湿的并且还会沾着一些发光的东西，你问你的[lilaya.relation(pc)]是否能判断出她是去了什么地方。
 	</p>
 	<p>
-		[lilaya.speech(Hmm, well, if she's taking night vision goggles with her, then she's going somewhere that's dark even in the middle of the day,)] Lilaya muses, before stepping over to a nearby pile of books and retrieving one that appears to be a reference guide on local flora. Flicking through the pages, she quickly finds what she was looking for, and reads out loud, [lilaya.speech(<i>'Bioluminescent fungi are found all throughout Lilith's Realm...'</i> Now where's the section on Dominion... Ah, here it is; <i>'One may be surprised to discover that the subterranean Bat Caverns are home to one of the most diverse fungal ecosystems currently known to exist. In places, vast carpets of bioluminescent fungi can be observed, and it is impossible to take a step without disturbing their vividly-glowing spores...'</i>)]
+		[lilaya.speech(嗯，如果她带着夜视镜，那么她要去的地方肯定是在白天也是黑暗的，)]莉莱雅喃喃道，然后走到附近的一堆书前，拿起一本似乎是关于当地植物的图鉴。她翻了几页，很快就找到了她要找的东西，并大声读了出来，[lilaya.speech(<i>‘发光真菌在莉莉丝王国随处可见……’</i>让我看看御城区的部分在哪里……啊，在这。<i>‘人们可能会惊讶地发现，地下蝙蝠洞窟是目前已知的生态系统中最多样化的真菌栖息地之一。在一些地方，可以观察到巨大的发光真菌地毯，踏上一步都会扰动它们明亮发光的孢子……’</i>)]
 	</p>
 	<p>
-		Closing her book and looking up at you with a triumphant look on her face, your [lilaya.relation(pc)] proudly declares, [lilaya.speech(Mystery solved! Your elusive Enforcer must be teleporting down into the Bat Caverns. If you've never been there before, then you should know that you have to travel down to the west side of Submission to get there. Please do be careful if you do decide to follow this 'Elle' character though; the last I heard, the Bat Caverns are quite a dangerous place...)]
+		她合上书，满脸得意地看着你，你的[lilaya.relation(pc)]自豪地宣布，[lilaya.speech(答案揭晓！你那位难以捉摸的执法者必定是传送到了蝙蝠洞窟。如果你以前没去过那里，那么你必须知道，要去那里必须前往屈城区的西部。如果你决定跟着这个‘埃勒’，请务必小心。据我所知，蝙蝠洞窟是相当危险的地方……)]
 	</p>
 	#IF(game.isSillyMode())
 		<p>
-			You start to thank Lilaya for her help, but before you're able to articulate your thoughts, she steps forwards and bonks you on the head with the book that she's still holding. Frowning at you in disapproval, she tuts, [lilaya.speech(You really should have been able to solve this by yourself...)]
+			你刚准备感谢莉莱雅的帮助，但还没说出口，她就向前走了一步，用手里的书敲了敲你的头。她皱着眉头不满地看着你，嘀咕道，[lilaya.speech(你真的应该自己解决这个问题……)]
 		</p>
 		<p>
-			Rubbing your head and feeling more than a little ashamed from your [lilaya.relation(pc)]'s words, you wonder what to do next...
+			你揉着头，听到你[lilaya.relation(pc)]的话，感到有些羞愧，你开始思考接下来该做什么……
 		</p>
 	#ELSE
 		<p>
-			Thanking Lilaya for her help, and reassuring her that you'll be careful, you wonder what to do next...
+			你向莉莱雅表示感谢，并向她保证你会小心，然后开始思考接下来该做什么……
 		</p>
 	#ENDIF
 	<p style='text-align:center;'>
-		[style.italicsMinorGood(You can find Elle by searching in the Bat Caverns between [units.time(12)]-[units.time(15)] on a Wednesday!)]
+		[style.italicsMinorGood(你可以在星期三的[units.time(12)]-[units.time(15)]去蝙蝠洞窟寻找埃勒的踪迹了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LAB_EXIT -->
 	
 	<htmlContent tag="LAB_EXIT"><![CDATA[
 	<p>
-		You find yourself standing in what appears at first to be a huge library. The walls are covered in shelving, holding what must be hundreds, if not thousands, of ancient-looking leather-bound tomes. Most of the room, however, is occupied by a series of long tables, each covered in strange glass vials, odd-looking instruments, and bottles of glowing liquids.
+		一眼望去，你觉得自己似乎站在一个巨大的图书馆里。墙壁上布满了书架，摆放着数以百计甚至数以千计的皮面装订的古代书籍。不过，房间的大部分被各种长桌所占据，每张桌子上都摆满了奇怪的玻璃瓶，奇形怪状的仪器或是一瓶瓶发光液体。
 	</p>
 	<p>
-		Lilaya is hovering close by, ready to answer any questions you might have. Her cat-girl maid, Rose, is dutifully standing in one corner of the room, ready to assist with any request her mistress might make.
+		莉莱雅就在旁边，随时准备回答你的任何问题。她的猫女仆萝丝则尽职尽责地站在房间的一角，随时为满足主人的任何要求而待命。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LAB_EXIT_THROWN_OUT -->
 	
 	<htmlContent tag="LAB_EXIT_THROWN_OUT"><![CDATA[
 	<p>
-		You find yourself standing outside the door to Lilaya's laboratory. Your demonic [lilaya.relation(pc)] seemed pretty angry, and you think that it's probably a good idea if you gave her some time to cool off before trying to speak to her again...
+		你站在莉莱雅的实验室门外，你的恶魔[lilaya.relation(pc)]似乎相当生气，你觉得还是先给她些时间让她冷静下来，再去找她聊天比较好……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LILAYA_PRESENT -->
 	
 	<htmlContent tag="LILAYA_PRESENT_1"><![CDATA[
 	<p>
-		[pc.speech(I wanted to get you something for Yuletide, to thank you for everything,)] you say, holding out the wrapped gift towards Lilaya, [pc.speech(so here you go. Happy Yuletide, Lilaya!)]
+		[pc.speech(我之前就在打算给你送份圣诞礼物，毕竟，你一直在帮我，我很感激你为我所做的一切，)]你拿出一件包装好的礼物递给莉莱雅，[pc.speech(所以，现在是时候给你了。圣诞节快乐，莉莱雅！)]
 	</p>
 	<p>
-		Your [lilaya.relation(pc)] gasps as you give her the gift you bought, [lilaya.speech([pc.Name]! Y-You didn't have to do that! Oh my goodness, t-thank you so much!)]
+		当你把买来的礼物给她时，你的[lilaya.relation(pc)]兴奋到喘不过气来，[lilaya.speech([pc.Name]！你，你不必这么做的！哦，天哪，谢，谢谢你！)]
 	</p>
 	<p>
-		She seems completely shocked at the fact that you're giving her a gift, and awkwardly takes the present from out of your hands. [lilaya.speech(S-Should I open it now?)]
+		她似乎完全没料到你要送她礼物，不好意思地从你手中接过礼物。[lilaya.speech(我，我现在要打开吗？)]
 	</p>
 	<p>
-		[pc.speech(Go on, it'll be fun,)] you reply. [pc.speech(I got it from one of the reindeer-morphs who're working to keep the streets clear of snow. The contents are a surprise, so I guess we'll find out what's in there together!)]
+		[pc.speech(打开吧，会很有意思的。)]你回答道。[pc.speech(这是我从一个在路上扫雪的驯鹿人那里得到的。里面的东西对我也是个惊喜，我想我们会一起知道答案的！)]
 	</p>
 	<p>
-		Lilaya sets the present down on the table behind her, before pulling off the ribbon and tearing off the wrapping paper. Opening the top of the box, she gasps as she sees what's inside, and then just a moment later you see it too, as she reaches in and lifts out a beautiful pink [#CT_innoxia_japanese_kanzashi.getName()].
+		莉莱雅把礼物放在身后的桌子上，然后拉开丝带，撕开包装纸。打开盒子的顶盖，她看到里面的东西时惊呼了一声，于是你也凑过去一起看。她伸手从里面拿出了一支精致的粉红色[#CT_innoxia_japanese_kanzashi.getName()]。
 	</p>
 	<p>
-		Lilaya turns towards you, a huge smile on her face as she exclaims, [lilaya.speech(Oh, [pc.name]! It's beautiful! Thank you so much!)]
+		莉莱雅转向你，你看到她露出了灿烂的笑容，她惊叫着，[lilaya.speech(哦，[pc.name]！这个真的很漂亮！太谢谢你了！)]
 	</p>
 	<p>
-		Before you can react, your demonic [lilaya.relation(pc)] leaps forwards and pulls you into a loving hug; a gesture that you instantly reciprocate. You feel the warmth of her body as she presses herself tightly against you, squashing her [lilaya.breastSize] breasts into your chest as she sighs, [lilaya.speech(Really, thank you so much.)]
+		在你还来不及反应的一刹那，你的[lilaya.relation(pc)]走向你，给了你一个爱的拥抱——你的礼物立刻就得到了回报。你感觉她的怀里很暖和，于是让她紧紧抱着你，感受着她那[lilaya.breastSize]胸部压在你胸膛的感觉，你听到她轻声说，[lilaya.speech(真的，很谢谢你……)]
 	</p>
 	<p>
-		After a few moments, Lilaya pulls back, placing the [#CT_innoxia_japanese_kanzashi.getName()] to one side and waiting to see what you'd like to discuss next.
+		过了一会，莉莱雅放开了你，把[#CT_innoxia_japanese_kanzashi.getName()]放在桌子上，等着听你还想要和她说些什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_PRESENT_2"><![CDATA[
 	<p>
-		[pc.speech(After I saw how happy you were to receive that [#CT_innoxia_japanese_kanzashi.getName()], I decided to get you another Yuletide gift,)] you say, holding out another wrapped gift towards Lilaya, [pc.speech(so here you go. Happy Yuletide again, Lilaya!)]
+		[pc.speech(看到你收到[#CT_innoxia_japanese_kanzashi.getName()]这么开心，我决定再给你另一件圣诞节礼物，)]你边说，边拿出另一份包好的礼物递给莉莱雅，[pc.speech(给你，然后，我要再说一次，圣诞节快乐，莉莱雅！)]
 	</p>
 	<p>
-		Your [lilaya.relation(pc)]'s cheeks flush bright red as you give her another gift. [lilaya.speech([pc.name]! Y-You didn't have to! O-One gift was more than enough!)]
+		你[lilaya.relation(pc)]的脸颊一下子变红了，[lilaya.speech([pc.name]！你，你不必这样的！一，一份礼物已经让我很高兴了！)]
 	</p>
 	<p>
-		[pc.speech(I know I didn't have to, but I wanted to,)] you smile, handing the gift over to Lilaya, [pc.speech(so go on, open it and let's find out what it is this time!)]
+		[pc.speech(我知道我不必这样做，可是，我想这样做。)]你笑着把礼物交给莉莱雅，[pc.speech(所以，打开吧，我们一起看看这次是什么？)]
 	</p>
 	<p>
-		Doing as you suggest, Lilaya places the gift down on the table beside her, before pulling off the ribbon and wrapping paper. Taking off the lid, she reaches inside and produces a pair of [#CT_innoxia_japanese_geta.getNamePlural()], before turning and smiling lovingly at you, [lilaya.speech(Thank you, [pc.name]! These will go perfectly with the [#CT_innoxia_japanese_kanzashi.getName()] you got me before!)]
+		莉莱雅按你说的把礼物放在旁边的桌子上，然后解开丝带和包装纸。取下盖子，她伸手从里面拿出一双做工精美的[#CT_innoxia_japanese_geta.getNamePlural()]，你看到你兴奋的[lilaya.relation(pc)]转向你，笑得那么可爱，[lilaya.speech(谢谢你，[pc.name]！这个和你之前给我的[#CT_innoxia_japanese_kanzashi.getName()]很搭！)]
 	</p>
 	<p>
-		[pc.speech(Now all you need is the kimono itself,)] you reply, [pc.speech(and then you've got the full set!)]
+		[pc.speech(如果再来一件和服就完美了。)]你回答道，[pc.speech(那样就凑齐一套了。)]
 	</p>
 	<p>
-		[lilaya.speech(P-Please,)] Lilaya stutters a little, [lilaya.speech(don't feel obliged to get me any more gifts! This is already far more than I ever would have dreamed of!)]
+		[lilaya.speech(不，不要再送更多啦！)]莉莱雅因为太过兴奋而有些结巴，[lilaya.speech(我，我做梦也想不到会有人送给我这么多精致的礼物……)]
 	</p>
 	<p>
-		Almost as if to hide her sudden embarrassment, your demonic [lilaya.relation(pc)] steps forwards and pulls you into another tight hug; her [lilaya.breastSize] breasts pressing up against you as she holds you close. After a moment, she then pulls back, and, placing the [#CT_innoxia_japanese_geta.getNamePlural()] to one side, she waits to see what you'd like to discuss next.
+		就像是在掩饰她突如其来的羞涩，你的恶魔[lilaya.relation(pc)]向前走了一步，再次把你拉进她的怀抱之中，她的[lilaya.breastSize]乳房紧紧地贴着你。过了好一会儿，她才放开你，又把[#CT_innoxia_japanese_geta.getNamePlural()]放到桌子上，等着听你接下来想说些什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_PRESENT_3"><![CDATA[
 	<p>
-		[pc.speech(Seeing as you have the other two parts already, I thought I'd get you one last gift, to see if it contains the kimono to finish the set,)] you say, holding out the wrapped gift towards Lilaya, [pc.speech(so here you go. Happy Yuletide yet again Lilaya!)]
+		[pc.speech(你已经开出两件啦，我想再给你最后一件礼物，让我们看看里面有没有和服，这样就能和前两件凑成一套了，)]你边说边拿出一件包装好的礼物，[pc.speech(这个也给你，凑成帽子戏法，圣诞节快乐，莉莱雅！)]
 	</p>
 	<p>
-		Your demonic [lilaya.relation(pc)] cheeks turn a deep shade of scarlet, and she stutters in her embarrassment, [lilaya.speech(P-Please! [pc.Name]! I-I said you'd already given me enough!)]
+		你的恶魔[lilaya.relationship(pc)]脸颊绯红，因羞涩变得结结巴巴，[lilaya.speech(太，太多了！[pc.Name]！我，我说过你已经给我够多了！)]
 	</p>
 	<p>
-		[pc.speech(I know, I know,)] you laugh, pressing the gift into Lilaya's hands, [pc.speech(but I really wanted to get you the whole set!)]
+		[pc.speech(我知道，我知道，)]你大笑着，把礼物交给莉莱雅，[pc.speech(不过我只是想送你一整套嘛！)]
 	</p>
 	<p>
-		[lilaya.speech(W-Well, these are random gifts, right? S-So it's probably not even going to be a kimono, b-but thank you anyway,)] Lilaya says, placing the gift down on the table beside her, before pulling off the ribbon and wrapping paper. Lifting off the lid, your easily-embarrassed [lilaya.relation(pc)] fails to contain an excited little cry as she sees what's inside. Your suspicions as to what it is are proven correct, as she quickly lifts out a beautiful pink [#CT_innoxia_japanese_kimono.getName()], before turning and beaming at you in delight. [lilaya.speech(Thank you so, so much, [pc.name]! This is the best Yuletide ever!)]
+		[lilaya.speech(这些都是随机的礼物，对吧？所以里面可能不会是和服，但还是谢谢你……)]莉莱雅说着，把礼物放在旁边的桌子上，然后拉开丝带和包装纸。掀开盖子，当看到里面的东西时，你那容易脸红的[lilaya.relationship(pc)]激动到甚至哭了出来。你的猜想是成立的，你看到她从里面拿出了一件漂亮的粉色[#CT_innoxia_japanese_kimono.getName()]，她眼里带着泪花，然而却笑容满面，[lilaya.speech(真是，太谢谢你了，[pc.name]！这是我度过的最棒的圣诞节！)]
 	</p>
 	<p>
-		Before you can say anything, your demonic [lilaya.relation(pc)] leaps forwards and pulls you into the most loving hug yet; her [lilaya.breastSize] breasts squishing up against your body as she holds you close. After a moment, she then pulls back, and, placing the [#CT_innoxia_japanese_kimono.getName()] to one side, she waits to see what you'd like to discuss next.
+		还没等你开口，你的恶魔[lilaya.relationship(pc)]就向前扑向了你，把你拉进了你体验过的最深情的拥抱中，当她紧紧抱住你时，她的[lilaya.breastSize]乳房压在你身体上的感觉让你浮想联翩。过了一会儿，她把[#CT_innoxia_japanese_kimono.getName()]放到一边的桌子上，等着听你接下来想说些什么。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LAB_DEMON_TF_AGREE -->
 	
 	<htmlContent tag="LAB_DEMON_TF_AGREE"><![CDATA[
 	<p>
-		Having been convinced by Lilaya's passionate plea, you agree to do as she asks,
+		在莉莱雅的热切恳求下，你同意了她的要求。
 		#IF pc.hasFetish(FETISH_INCEST)
-		#THEN [pc.speech(Ok, Lilaya, use the resonance stone to contact mommy, and I'll help you to convince her.)]
-		#ELSE [pc.speech(Ok, Lilaya, use the resonance stone to contact Lyssieth, and I'll help you to convince her.)]
+		#THEN [pc.speech(好吧，莉莱雅，用回声石联系妈妈吧，我会帮你说服她的。)]
+		#ELSE [pc.speech(好吧，莉莱雅，用回声石联系莉西丝吧，我会帮你说服她的。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_DEMON_TF_AGREE_AFTER_REPEAT"><![CDATA[
 	<p>
-		Wanting to let Lilaya know that you've changed your mind, you say,
+		你想让莉莱雅知道你改变主意了，于是说，
 		#IF pc.hasFetish(FETISH_INCEST)
-		#THEN [pc.speech(Go on, use the resonance stone to contact mommy, and I'll help you to convince her to turn you into a full demon.)]
-		#ELSE [pc.speech(Go on, use the resonance stone to contact Lyssieth, and I'll help you to convince her to turn you into a full demon.)]
+		#THEN [pc.speech(继续，用回声石联系妈妈吧，我会帮你说服她，让她把你变成完全的恶魔的。)]
+		#ELSE [pc.speech(继续，用回声石联系莉西丝吧，我会帮你说服她，让她把你变成完全的恶魔的。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_DEMON_TF_AGREE_CORE"><![CDATA[
 	<p>
-		Your [lilaya.relation(pc)]'s eyes light up as you say this, and she quickly rushes over to the other side of her lab where she keeps the resonance stone. Holding it in one hand, you see the dark-purple sphere light up and start to emit a soft pink glow. In a clear voice, Lilaya states, [lilaya.speech(Mommy, I need you to come here. Right now.)]
+		你说这话时，你的[lilaya.relationship(pc)]眼睛一亮，她迅速冲到实验室的另一边，那里放着回声石。她用一只手握住回声石，你看到深紫色的球体亮了起来，并开始散发出柔和的粉红色光芒。莉莱雅用清晰的声音说道，[lilaya.speech(妈咪，过来一下，现在。)]
 	</p>
 	<p>
-		[lyssieth.speech(Yes, dear,)] you hear Lyssieth's voice being projected from out of the arcane device. A moment later, the elder lilin appears before you in a bright purple flash, and although at first she's smiling, her expression turns into one of worry as she sees the angry expression on Lilaya's face. [lyssieth.speech(Oh, sweetheart, what's wrong? You look upse-)]
+		[lyssieth.speech(好的，宝贝。)]你听到莉西丝的声音从奥术装置中传出。片刻之后，莉琳长老伴随一道明亮的紫色闪光出现在你们面前，虽然一开始她还面带微笑，但当她看到莉莱雅脸上愤怒的表情时，她的神色变得担忧。[lyssieth.speech(哦，小甜心，怎么了？你看上去心情不——)]
 	</p>
 	<p>
-		[lilaya.speech(Of course I'm upset!)] Lilaya interrupts, [lilaya.speech(You said you'd never turn anyone into a demon ever again, and then you go back on your word the moment you meet [pc.name]! So it turns out that you were just lying to me for all these years! You have no problem at all with turning people into demons, so you've got no reason to leave me as a half-demon for any longer! Tell her, [pc.name]!)]
+		[lilaya.speech(我心情当然不好！)]莉莱雅打断了她的话，[lilaya.speech(你说过你再也不会把任何人变成恶魔，可一见到[pc.name]你就食言了！原来这么多年来你一直在骗我！你明明可以把人变成恶魔，所以你没有理由让我继续当半恶魔！告诉她，[pc.name]！)]
 	</p>
 	<p>
-		Having already agreed to help Lilaya, you ask your mother,
+		你已经答应过莉莱雅要说服莉西丝，所以你走上前去，
 		#IF pc.hasFetish(FETISH_INCEST)
-		#THEN [pc.speech(There'd be no harm in making Lilaya a full demon, would there mommy? It's what she really wants...)]
-		#ELSE [pc.speech(There'd be no harm in making Lilaya a full demon, would there? It's what she really wants...)]
+		#THEN [pc.speech(把莉莱雅变成完全的恶魔也没什么坏处，对吧，妈妈？这才是她真正想要的……)]
+		#ELSE [pc.speech(把莉莱雅变成完全的恶魔也没什么坏处，对吧？这才是她真正想要的……)]
 		#ENDIF
 	</p>
 	<p>
-		Lyssieth starts to let out a deep, defeated sigh, before suddenly noticing that Rose is present and duly altering her reaction into an unfriendly sneer, [lyssieth.speech(I will only discuss this back in the privacy of my palace. Come here.)]
+		沮丧的莉西丝长叹了一口气，当她突然注意到萝丝也在场时，她收敛了一些，冷笑一声，[lyssieth.speech(回我的宫殿再说，过来吧。)]
 	</p>
 	<p>
-		Doing as your mother says, both you and Lilaya step up next to her, and, wrapping an arm around each of you, she teleports you back to her palace in yet another flash of purple light...
+		按照母亲的吩咐，你和莉莱雅走到她身边，她用一只手搂住你们，伴随着又一次紫光的闪烁，你们传送到了她的宫殿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_DEMON_TF_REFUSE"><![CDATA[
 	<p>
-		Shaking your head, you reply,
+		你摇了摇头，回复道，
 		#IF pc.hasFetish(FETISH_INCEST)
-		#THEN [pc.speech(This issue is between you and mommy. I don't want to get between the two of you like this, so I can't do as you ask. Sorry, Lilaya.)]
-		#ELSE [pc.speech(This issue is between you and mother. I don't want to get between the two of you like this, so I can't do as you ask. Sorry, Lilaya.)]
+		#THEN [pc.speech(这是你和妈咪之间的事。我不能以这样的方式介入你们之间，所以我不能照你说的做，抱歉，莉莱雅。)]
+		#ELSE [pc.speech(这是你和妈妈之间的事。我不能以这样的方式介入你们之间，所以我不能照你说的做，抱歉，莉莱雅。)]
 		#ENDIF
 	</p>
 	<p>
-		[lilaya.speech(Eugh! You're unbelievable,)] Lilaya crossly states, before turning and pacing back and forth in front of you. [lilaya.speech(I should have known that you and mommy would already have agreed to keep me as a half-demon... Fine! I think you can see how upset I am about being stuck in this half-demon form, so if you want to be a good [pc.sister], then you'll think this over and let me know when you've agreed to help me out.)]
+		[lilaya.speech(呃啊！你真是让人不可置信。)]莉莱雅反胃地说着，随后转过身，在你们面前来回踱步。[lilaya.speech(我早就该知道你和妈咪达成了共识要让我一直作为半恶魔活着……好吧！我想你能看出来我卡在这种半恶魔状态有多难受，所以如果你想让我当个好[pc.sister]你就得好好思考思考这件事，要是打算帮我了再和我说。)]
 	</p>
 	<p>
-		[pc.speech(Ok, I'll think about it some more,)] you reply.
+		[pc.speech(好吧，我会再多考虑的，)]你回答道。
 	</p>
 	<p>
-		[lilaya.speech(And remember, you're not getting any sex from me until I'm a full demon, just like you!)] Lilaya finally states, and although her voice is still raised, you sense that her initial anger is dying down. Wondering if you'll change your mind after giving this matter some thought, you think about what to ask your [lilaya.relation(pc)] next...
+		[lilaya.speech(而且记住，在变成和你一样的恶魔之前我不会和你进行任何性交！)]莉莱雅最后说道。尽管她的声调依旧高亢，但你能听出她最开始的怒火开始消散。你思考着自己会不会因为这种情况而回心转意，随后考虑着接下来该对你的[lilaya.relation(pc)]问些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!--LAB_TELEPORT_TO_LYSSIETHS_OFFICE-->
 	
 	<htmlContent tag="LAB_TELEPORT_TO_LYSSIETHS_OFFICE"><![CDATA[
 	<p>
-		Wanting to see Lyssieth again, you ask, [pc.speech(Lilaya, could you use the resonance stone to contact Lyssieth? I'd like to talk to her about something.)]
+		想要再看看莉西斯，你问道，[pc.speech(莉莱雅，你能用回声石来联系莉西斯吗？我有点话要和她说。)]
 	</p>
 	<p>
-		[lilaya.speech(Of course,)] your [lilaya.relation(pc)] replies, before heading over to the desk in which she keeps the communication device. As she retrieves the small, dark sphere and holds it up in one hand, you see it start to emit a pink glow, and she says, [lilaya.speech(Mommy, [pc.name] would like you to come here.)]
+		[lilaya.speech(当然了，)]你的[lilaya.relation(pc)]回答道，随后走向她放置着通讯机器的书桌旁边。她拿起了那个小而黑的球体，把它拿在手中，你看见它发出了粉色的光芒，随后她说，[lilaya.speech(妈咪，[pc.name]要找你。)]
 	</p>
 	<p>
-		Just a moment later, a flash of purple light fills the lab, and there before you stands the familiar figure of Lyssieth. Smiling at Lilaya, she then turns and steps towards you, before pulling you into a hug and saying, [lyssieth.speech(Let's return to my palace.)]
+		就在片刻之后，一道紫色的闪光照亮了实验室，随后你的面前站立着莉西斯的身影。她对莉莱雅微笑，随后转身并走向你，将你抱在怀里并说道，[lyssieth.speech(回我的宫殿去吧。)]
 	</p>
 	<p>
-		With that, the two of you are teleported back into the elder lilin's office, and, releasing you from the hug, Lyssieth smiles at you and asks, [lyssieth.speech(So, what is it you wanted?)]
+		随后，你们两个被传送回了莉琳长老的办公室。莉西斯摆脱了你的拥抱，微笑着对你问道，[lyssieth.speech(所以，你想要干什么？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_TELEPORT_TO_LYSSIETHS_OFFICE_COMPANION"><![CDATA[
 	<p>
-		Wanting to see Lyssieth again, you ask, [pc.speech(Lilaya, could you use the resonance stone to contact Lyssieth? I'd like to talk to her about something.)]
+		想要再看看莉西斯，你问道，[pc.speech(莉莱雅，你能用回声石来联系莉西斯吗？我有点话要和她说。)]
 	</p>
 	<p>
-		[lilaya.speech(Of course,)] your [lilaya.relation(pc)] replies, before heading over to the desk in which she keeps the communication device. As she retrieves the small, dark sphere and holds it up in one hand, you see it start to emit a pink glow, and she says, [lilaya.speech(Mommy, [pc.name] would like you to come here.)]
+		[lilaya.speech(当然了，)]你的[lilaya.relation(pc)]回答道，随后走向她放置着通讯机器的书桌旁边。她拿起了那个小而黑的球体，把它拿在一只手中，你看见它开始发出粉色的光芒，随后她说，[lilaya.speech(妈咪，[pc.name]要找你。)]
 	</p>
 	<p>
-		Just a moment later, a flash of purple light fills the lab, and there before you stands the familiar figure of Lyssieth. Smiling at Lilaya, she then turns and steps towards you, before pulling you and [npc.name] into a hug and saying, [lyssieth.speech(Let's return to my palace.)]
+		就在片刻之后，一道紫色的闪光照亮了实验室，随后你的面前站立着莉西斯的身影。她对莉莱雅微笑，随后转身并走向你们，将你[npc.name]和抱在怀里并说道，[lyssieth.speech(回我的宫殿去吧。)]
 	</p>
 	<p>
-		With that, the three of you are teleported back into the elder lilin's office, and, releasing you both from the hug, Lyssieth asks [npc.name] to wait in Meraxis's office. After [npc.sheHas] left, Lyssieth smiles at you and asks, [lyssieth.speech(So, what is it you wanted?)]
+		随后，你们三个被传送回了莉琳长老的办公室。随后，莉西斯松开了拥抱你们两个的怀抱，让[npc.name]在梅拉克西丝的办公室等一会。在[npc.sheHas]离开后，莉西斯微笑着对你问道，[lyssieth.speech(所以，你想要干什么？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -705,47 +705,47 @@
 	<htmlContent tag="LAB_END_SEX_CREAMPIE"><![CDATA[
 	#IF(lilaya.isAmazonsSecretImpregnation())
 		<p>
-			Lilaya forcefully shoves you away from her, and with a look of disbelief on her face, clutches her lower abdomen. Looking down at her hot, wet pussy, she angrily shouts, [lilaya.speech(What the fuck?! What the fuck?! I fucking told you to pull back!)]
+			莉莱雅强行将你从她身边推开，抓着自己的小腹，满脸不可置信。俯视着自己湿热的小穴，她生气地喊道，[lilaya.speech(你他妈干了什么？！干了什么？！我告诉了你要拔出来的！)]
 		</p>
 		<p>
-			Knowing that the effects of your Amazon's Secret potion may very well have led to her being impregnated, she lets out a short, panicked cry. Her face has gone completely scarlet, and as the reality of what you've just done sinks in, she turns on you in a furious rage, [lilaya.speech(What did I say?! Huh?! I fucking told you to get back before you orgasmed! I do <i>not</i> want to be giving birth to a brood of imps! Oh fuck... You'd better fucking hope I don't get pregnant from this!)]
+			得知你的“亚马逊人的秘术”药剂的效果会很可能让她受孕后，她发出一声短促而惊慌的叫声。她的脸变得通红，而当她明白过来你做了什么时，她暴跳如雷地转向了你，[lilaya.speech(我怎么说的？！啊？！我他妈告诉过你射之前要拔出来！我<i>不想</i>生一堆小恶魔！我操……你最好祈祷我不会因此怀孕！)]
 		</p>
 	#ELSE
 		<p>
-			Lilaya forcefully shoves you away from her, and with a look of disbelief on her face, looks down at the [pc.cum+] dripping out from between her thighs as she shouts, [lilaya.speech(What the fuck?! What the fuck?! I fucking told you to pull out!)]
+			莉莱雅强行将你从她身边推开，看着从她的股间流出的[pc.cum+]满脸不可置信。她吼道，[lilaya.speech(你他妈干了什么？！干了什么？！我告诉了你要拔出来的！)]
 		</p>
 		<p>
-			Grabbing a tissue from a nearby desk, she starts frantically trying to clean your [pc.cum] out of her creampied pussy. Her face has gone completely scarlet, and as the reality of what you've just done sinks in, she turns on you in a furious rage, [lilaya.speech(What did I say?! Huh?! I fucking told you to pull out! I do <i>not</i> want to be giving birth to a brood of imps! Oh fuck... You'd better fucking hope I don't get pregnant from this!)]
+			她从旁边的桌子上抓过纸巾，疯了般地尝试从她被灌满的小穴中把你的[pc.cum]清理掉。她的脸变得通红，而当她明白过来你做了什么时，她暴跳如雷地转向了你，[lilaya.speech(我怎么说的？！啊？！我他妈告诉过你射之前要拔出来！我<i>不想</i>生一堆小恶魔！我操……你最好祈祷我不会因此怀孕！)]
 		</p>
 	#ENDIF
 	<p>
-		Continuing to shout and curse, she grabs you by the [pc.arm] and marches you over to the lab's exit. With one last angry cry, she throws you out, before slamming the door behind you. You start to wonder if perhaps you made a mistake, but surely she'll have calmed down in a couple of hours...
+		她边喊边骂，抓着你的[pc.arm]将你拉向实验室的出口。伴随着一声怒吼，她把你丢了出去，随后在你身后摔上了门。你开始考虑自己是不是犯了错误，不过她肯定在几个小时后就冷静下来了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_END_SEX_NO_ORGASM"><![CDATA[
 	<p>
-		As you disentangle yourself from her clutches, Lilaya lets out a very frustrated sigh. Stepping back, she gives her demonic wings an impatient flutter, before striding back over to her workplace and making several loud tutting sounds. Before you can say anything, she shouts out over her shoulder, [lilaya.speech(I <i>really</i> don't see the point in offering these tests to you, if all you're going to do is <i>that</i>! I didn't even get to cum...)]
+		当你从她的魔爪中挣脱出来时，莉莱雅沮丧地叹了口气。她退了一步，不耐烦地拍打着她那恶魔的翅膀，然后大步走回她的工作场所，发出了几声响亮的“啧”声。你还没来得及说话，她就转过身喊道，[lilaya.speech(我<i>真的</i>我看不出向你提供这些测试的意义，如果你要做的只是<i>那些</i>！我都没来得及高潮……)]
 	</p>
 	<p>
-		Ignoring your excuses, Lilaya buries herself in preparing yet another of her experiments. Quickly sorting yourself out, you leave her to carry on with her work, knowing that she won't stay angry for long.
+		无视了你的借口，莉莱雅埋头准备她的另一个实验。你迅速整理好自己，让她继续工作，知道她不会生气太久的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAB_END_SEX"><![CDATA[
 	<p>
-		Disentangling herself from your clutches, Lilaya lets out a very satisfied sigh as she stands up and stretches her arms up high. You see her demonic wings and tail following suit, and as she stretches, she turns back to face you. With one last smile and a quick kiss on your cheek, she then rushes back over to her workplace.
+		从你的掌握中挣脱出来，莉莱雅发出一声非常满意的叹息，她站起身来，高高地伸展双臂。你看到她的恶魔翅膀和尾巴也跟着伸展开来，在她伸展的同时，她转过身来面对着你。她带着最后一个微笑，在你的脸颊上轻轻一吻，然后匆匆回到她的工作场所。
 	</p>
 	<p>
-		[lilaya.speech(Oh, fuck, that was amazing!)] your demonic [lilaya.relation(pc)] cries out, energetically gathering up papers before starting to frantically write down some notes. [lilaya.speech(With the power of your aura, I'm sure that anyone who you have sex with will feel turned on, even if they're not really into you at first. I-I mean, I'm not advocating anything like <i>that</i>, of course, I just mean that your aura certainly does have some strong effects...)]
+		[lilaya.speech(哦，妈的，太棒了！)]你的恶魔[lilaya.relation(pc)]叫喊着，她精力充沛地整理文件，然后开始疯狂地写下一些笔记。[lilaya.speech(有你的灵气这样的力量，我相信任何和你做爱的人都会感到兴奋，即使他们一开始并不是真的喜欢你。我的意思是，我当然不是在鼓吹什么<i>那样</i>的东西，我只是说你的灵气肯定会有一些强烈的效果……)]
 	</p>
 	<p>
-		With that, Lilaya buries herself in her work, seemingly forgetting that you're still here. You quickly sort yourself out, and, smiling at the fact that you've given Lilaya a good time, leave her to carry on with her work.
+		就这样，莉莱雅埋头工作，似乎忘记了你还在这里。你很快整理好自己，因你让莉莱雅度过了一段美好时光笑意满面，留下她继续工作。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -753,88 +753,88 @@
 	
 	<htmlContent tag="LILAYA_GEISHA"><![CDATA[
 	<p>
-		[pc.speech(I really want to see how you look wearing that kimono,)] you say, [pc.speech(would you like to try it on and show me?)]
+		[pc.speech(我一直在想，你穿上和服会是什么样子？)]你说，[pc.speech(你愿意穿给我看吗？)]
 	</p>
 	<p>
-		Lilaya's cheeks flush bright red, and, without saying a word, she grabs your hand and starts pulling you towards the door. For a moment, you think she's going to throw you out of the lab, but she instead leads you out into the corridor and over towards the staircase.
+		莉莱雅的脸颊涨得通红，她二话不说，抓住你的手就往门口拉。有那么一瞬间，你以为她是要把你丢出实验室。不过，她把你领到走廊上，朝楼梯走去。
 	</p>
 	<p>
-		[lilaya.speech(I-I haven't r-really thought about h-how I look in it yet,)] Lilaya stammers out, without turning to look at you, [lilaya.speech(s-so I hope you like it!)]
+		[lilaya.speech(我，我从来没想过，穿上会是什，什么样子，)]莉莱雅结结巴巴地说着，没有回过头来看你，你猜她的脸肯定很红，[lilaya.speech(所，所以，如果不好看，不要笑话我！)]
 	</p>
 	<p>
-		Leading you up the stairs, your demonic [lilaya.relation(pc)] pulls you along the first-floor corridor, and, without hesitation, into her exceptionally-messy room. Her clothes are scattered all over the floor, and every available surface is littered with beauty products and yet more discarded clothing. You don't have any time to think about the state of your [lilaya.relation(pc)]'s room, however, as you're far more concerned with the fact that she's instantly started stripping off in front of you.
+		你的恶魔[lilaya.relationship(pc)]带着你走上楼梯，拉着你来到一楼的走廊，直奔她那异常凌乱的房间。她的衣服散落一地，每一个可以利用的地方都堆满了美容产品和更多的衣物。不过，你现在没心情多考虑你[lilaya.relation(pc)]的房间状况，你更关心的是她马上就要开始在你面前脱衣服了。
 	</p>
 	<p>
-		Either because she's completely indifferent to you seeing her naked, or, more likely, that she's so flustered at the prospect of modelling her kimono for you that she's forgotten you're there, your [lilaya.relation(pc)] quickly pulls off all of her clothes with little regard to your presence. Deciding that it would be best both for her dignity and for the surprise of seeing her wearing her kimono, you turn your back to Lilaya, and allow her to get changed into the clothes that you gifted her.
+		或许是因为她对你看到她的裸体这件事满不在乎，或者更有可能的是，她迫切而慌张地希望向你展示她的和服，以至于忘记了你的存在，你的[lilaya.relationship(pc)]很快就脱掉了她所有的衣服，完全不顾你的存在。为了维护她的尊严，也为了寻求看到她身着新装时的惊喜感，你决定背对着莉莱雅，让她换上你送给她的衣服。
 	</p>
 	<p>
-		[lilaya.speech(Aah! I-I forgot you were there!)] Lilaya calls out, proving the second assumption to be true. [lilaya.speech(Y-You can turn around now.)]
+		[lilaya.speech(啊！我忘了你还在这里！)]莉莱雅喊道，这印证了你的第二猜想。[lilaya.speech(你，你可以转过来了！)]
 	</p>
 	<p>
-		Turning around, you see your demonic [lilaya.relation(pc)] blushing profusely as she looks to the floor. The elegant pink kimono, delicate kanzashi, and delightful geta that you bought her as a Yuletide gift all work together to accentuate your [lilaya.relation(pc)]'s natural beauty. You find yourself gasping at how gorgeous she looks, which makes her look up and smile shyly at you.
+		转过身来，你看到你的恶魔[lilaya.relationship(pc)]低头看着地面，脸颊上绯色的红晕表明她内心的羞涩。她穿着你给她买的优雅的粉色和服、精致的簪子和漂亮的木屐，将你[lilaya.relationship(pc)]的天生丽质衬托得更加迷人。你不由得对她的美丽惊叹不已，这使得她鼓起勇气抬起头，羞涩地对你微笑。
 	</p>
 	<p>
-		[pc.speech(Wow, Lilaya, you look gorgeous!)] you exclaim, causing her cheeks to turn an even deeper shade of red.
+		[pc.speech(哇，莉莱雅，你真的很漂亮！)]你的感叹让她的脸颊变得更红了。
 	</p>
 	<p>
-		[lilaya.speech(R-Really?)] Lilaya asks, stepping forwards as a huge smile breaks out across her face. [lilaya.speech(W-Well, I have you to thank for giving it to me.)]
+		[lilaya.speech(真，真的？)]莉莱雅问道，她向前走了一步，脸上露出了灿烂的笑容。[lilaya.speech(那，那就好，我得感谢你送给我这样珍贵的礼物。)]
 	</p>
 	<p>
-		The tone of your [lilaya.relation(pc)]'s voice changes as she moves closer, and you realise that now she's been assured that she looks good, something other than embarrassment is on her mind. [lilaya.speech(You know, I really do need to show you how thankful I am... While I'm wearing my kimono, perhaps you'd like to have some fun?)]
+		随着她的靠近，你的[lilaya.relationship(pc)]的语气也变了，你意识到现在她已经确信自己看起来真的很不错。她脸上的红晕仍未退去，你猜测这不是因为尴尬，而是，因为其他事情。[lilaya.speech(你，你知道，我该如何来表达我的感激之情……要不要，穿着这身和服，来做呢？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_GEISHA_SEX_START"><![CDATA[
 	<p>
-		You can't resist an offer like that, and, stepping forwards, you pull your demonic [lilaya.relation(pc)] into your embrace. [pc.speech(~Mmm!~ Yes Lilaya, that sounds good to me!)]
+		你无法拒接这样的盛情邀请，于是上前一步，把你的恶魔[lilaya.relation(pc)]拉进怀里。[pc.speech(嗯~那太好了，莉莱雅，我喜欢这个！)]
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to fuck me, make sure you pull out, ok? I'm <b>not</b> getting pregnant!)] she demands.
+			[lilaya.speech(嗯，好！只是，射在外面，好吗？我<b>不想</b>怀孕！)]她说。
 		#ELSEIF(pc.hasStatusEffect(SE_innoxia_amazons_secret) && pc.hasVagina() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to scissor, make sure you pull back before climaxing, ok?)] she demands, before explaining, [lilaya.speech(I'm an arcane researcher, remember? I can tell that you're under the effects of Amazon's Secret, and I'm <b>not</b> going to let you get me pregnant from it.)]
+			[lilaya.speech(嗯，好！只是，我们磨豆腐的时候，你得在高潮前把你的小穴移开，好吗？)]她提出了要求，随后解释道，[lilaya.speech(我是奥术学者，你还记得吧？我看得出来你现在受到‘亚马逊人的秘术’效果的影响，我<b>并不想</b>因此受孕。)]
 		#ELSE
-			[lilaya.speech(Mmm, yes!)] she giggles.
+			[lilaya.speech(嗯，好啊！)]她开心地咯咯笑着。
 		#ENDIF
 	</p>
 	<p>
-		As Lilaya locks her [lilaya.eyes+] onto yours, she throws you a seductive smile, before taking your head in both hands and pressing her lips against your mouth. You reach up and pull her close, passionately making out with one another as you both give in to your lust.
+		当莉莱雅用她[lilaya.eyes+]深情注视你的眼眸时，她的微笑越发摄人心魄。她双手抱住你的头，将她的嘴唇贴在你的唇上。你伸手将她拉得更近，两个人亲密地缠绵着，交换着彼此炽热的感情，因内心火热而迫切的欲望，一同向那极乐的深渊堕落。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_GEISHA_SUBMISSIVE_SEX_START"><![CDATA[
 	<p>
-		You can't resist an offer like that, and, stepping forwards, you allow your demonic [lilaya.relation(pc)] to reach up and pull you into her embrace. [pc.speech(~Mmm!~ Yes Lilaya, that sounds good to me!)]
+		你无法拒接这样的盛情邀请，于是上前一步，把你的恶魔[lilaya.relation(pc)]拉进怀里。[pc.speech(嗯~那太好了，莉莱雅，我喜欢这个！)]
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to fuck me, make sure you pull out, ok? I'm <b>not</b> getting pregnant!)] she demands.
+			[lilaya.speech(嗯，好！只是，射在外面，好吗？我<b>不想</b>怀孕！)]她说。
 		#ELSEIF(pc.hasStatusEffect(SE_innoxia_amazons_secret) && pc.hasVagina() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to scissor, make sure you pull back before climaxing, ok? I'm <b>not</b> getting pregnant from the effects of Amazon's Secret!)] she demands.
+			[lilaya.speech(嗯，好！只是，我们磨豆腐的时候，你得在高潮前把你的小穴移开，好吗？你现在受到‘亚马逊人的秘术’效果的影响，我<b>并不想</b>因此受孕。)]
 		#ELSE
-			[lilaya.speech(Mmm, yes!)] she giggles.
+			[lilaya.speech(嗯，好啊！)]她开心地咯咯笑着。
 		#ENDIF
 	</p>
 	<p>
-		As Lilaya locks her [lilaya.eyes+] onto yours, she throws you a seductive smile, before taking your head in both hands and pressing her lips against your mouth. You let out a desperate little whine as she pulls you close to her body, and, passionately making out with one another, you both give in to your lust.
+		当莉莱雅用她[lilaya.eyes+]深情注视你的眼眸时，她的微笑越发摄人心魄。她双手抱住你的头，将她的嘴唇贴在你的唇上。你伸手将她拉得更近，两个人亲密地缠绵着，交换着彼此炽热的感情，因内心火热而迫切的欲望，一同向那极乐的深渊堕落。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_GEISHA_SEX_REFUSED"><![CDATA[
 	<p>
-		[pc.speech(You really do look amazing, Lilaya, but that might be going a little too far,)] you respond, not liking the idea of having sex with your [lilaya.relation(pc)].
+		[pc.speech(你看着真的很漂亮，莉莱雅，但这似乎有点太过了，)]你回应道，并不赞成同你的[lilaya.relation(pc)]做爱的想法。
 	</p>
 	<p>
-		[lilaya.speech(Aww, well, I understand,)] Lilaya responds, before turning around to get changed back into her regular clothes. [lilaya.speech(Just let me know if you want to see me in this again!)]
+		[lilaya.speech(啊，好吧，我明白了，)]莉莱雅回复道，随后转身换上了她平日穿的衣服。[lilaya.speech(如果你还想看我穿这个，一定要告诉我！)]
 	</p>
 	<p>
-		Reassuring her that you will, you exit your [lilaya.relation(pc)]'s bedroom and head back to your own, pleased that your gift looks so good on her.
+		你告诉她你会的，随后离开了你[lilaya.relation(pc)]的卧室并回到你自己的，因为她穿着你的礼物很漂亮而沾沾自喜。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- END_SEX_GEISHA -->
@@ -842,82 +842,82 @@
 	<htmlContent tag="END_SEX_GEISHA_CREAMPIE"><![CDATA[
 	#IF(lilaya.isAmazonsSecretImpregnation())
 		<p>
-			Lilaya forcefully shoves you away from her, and with a look of disbelief on her face, clutches her lower abdomen. Looking down at her hot, wet pussy, she angrily shouts, [lilaya.speech(What the fuck?! What the fuck?! I fucking told you to pull back!)]
+			莉莱雅强行将你从她身边推开，抓着自己的小腹，满脸不可置信。俯视着自己湿热的小穴，她生气地喊道，[lilaya.speech(你他妈干了什么？！干了什么？！我告诉了你要拔出来的！)]
 		</p>
 		<p>
-			Knowing that the effects of your Amazon's Secret potion may very well have led to her being impregnated, she lets out a short, panicked cry. Her face has gone completely scarlet, and as the reality of what you've just done sinks in, she turns on you in a furious rage, [lilaya.speech(What did I say?! Huh?! I fucking told you to get back before you orgasmed! Do you know how fucking fertile demons are?! Oh fuck... You'd better fucking hope I don't get pregnant from this!)]
+			得知你的“亚马逊人的秘术”药剂的效果很可能会让她受孕后，她发出一声短促而惊慌的叫声。她的脸变得通红，而当她明白过来你做了什么时，她暴跳如雷地转向了你，[lilaya.speech(我怎么说的？！啊？！我他妈告诉过你射之前要拔出来！你他妈知道恶魔的繁殖效率有多高吗？！我操……你最好祈祷我不会因此怀孕！)]
 		</p>
 	#ELSE
 		<p>
-			Lilaya forcefully shoves you away from her, and with a look of disbelief on her face, looks down at the [pc.cum+] dripping out from between her thighs as she shouts, [lilaya.speech(What the fuck?! What the fuck?! I fucking told you to pull out!)]
+			莉莱雅强行将你从她身边推开，看着从她的股间流出的[pc.cum+]满脸不可置信。她吼道，[lilaya.speech(你他妈干了什么？！干了什么？！我告诉了你要拔出来的！)]
 		</p>
 		<p>
-			Grabbing a tissue from a nearby cabinet, she starts frantically trying to clean your [pc.cum] out of her creampied pussy. Her face has gone completely scarlet, and as the reality of what you've just done sinks in, she turns on you in a furious rage, [lilaya.speech(What did I say?! Huh?! I fucking told you to pull out! Do you know how fucking fertile demons are?! Oh fuck... You'd better fucking hope I don't get pregnant from this!)]
+			她从旁边的桌子上抓过纸巾，疯了般地尝试从她被灌满的小穴中把你的[pc.cum]清理掉。她的脸变得通红，而当她明白过来你做了什么时，她暴跳如雷地转向了你，[lilaya.speech(我怎么说的？！啊？！我他妈告诉过你射之前要拔出来！你他妈知道恶魔的繁殖效率有多高吗？！我操……你最好祈祷我不会因此怀孕！)]
 		</p>
 	#ENDIF
 	<p>
-		Continuing to shout and curse, she grabs you by the [pc.arm] and marches you over to her bedroom door. With one last angry cry, she throws you out, before slamming the door behind you. You start to wonder if perhaps you made a mistake, but surely she'll have calmed down in a couple of hours...
+		她边喊边骂，抓着你的[pc.arm]将你拉向她卧室的门。伴随着一声怒吼，她把你丢了出去，随后在你身后摔上了门。你开始考虑自己是不是犯了错误，不过她肯定在几个小时后就冷静下来了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="END_SEX_GEISHA_NO_ORGASM"><![CDATA[
 	<p>
-		Lilaya collapses face-first onto her bed, giving her demonic wings an impatient flutter as she sighs in annoyance, [lilaya.speech(As grateful as I am for this outfit, I <i>really</i> don't appreciate being treated like that! You didn't even get me to cum once!)]
+		莉莱雅脸朝下倒在床上，不悦地叹息着，不耐烦地拍打着她的恶魔翅膀，[lilaya.speech(我很感激这身衣服，而我<i>真的</i>很不喜欢你这样对我！你都没有让我射出来过！)]
 	</p>
 	<p>
-		Lilaya buries her face in her pillows, ignoring your excuses as she waits for you to leave. Quickly sorting yourself out, you head out of her bedroom, knowing that she won't stay angry for long.
+		莉莱雅将她的脸埋在枕头里，等着你离开，对你的借口充耳不闻。快速地整理好自己，你离开了她的卧室，心里明白她不会生气多久。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="END_SEX_GEISHA"><![CDATA[
 	<p>
-		Lilaya collapses back onto her bed, letting out a very satisfied sigh as she stretches out her arms and wings, [lilaya.speech(That was amazing! We definitely need to do this again some time!)]
+		莉莱雅倒回她的床上，一边舒展着她的胳膊和翅膀，一边发出一声满足的叹息。[lilaya.speech(真是太棒了！我们以后一定还要再来几次！)]
 	</p>
 	<p>
-		Reassuring her that you will, you exit your [lilaya.relation(pc)]'s bedroom and head back to your own, allowing her to get changed and head back down to her lab.
+		向她确保你回答，你离开了你[lilaya.relation(pc)]的卧室并回到了你自己的，让她可以换好衣服并回到她自己的实验室去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LAB_JINX_REMOVAL -->
 	
 	<htmlContent tag="LAB_JINX_REMOVAL"><![CDATA[
 	<p>
-		[pc.speech(I was wondering if you could help me with my clothes,)] you say, before explaining to Lilaya how you're unable to unseal your clothing due to a 'servitude' enchantment being present on them. 
+		[pc.speech(你能帮我处理身上的衣服吗，)]你不知道该怎么给莉莱雅解释，你根本没法解封这些有“仆役”附魔的衣服。
 	</p>
 	<p>
-		As she hears you explaining your dilemma, your [lilaya.relation(pc)] crosses her arms and tuts in disapproval. Shaking her head as you finish talking, she asks, [lilaya.speech(How did you end up in such a ridiculous situation? Were you just going around Dominion putting on any old piece of clothing you found lying on the ground? No, wait, don't answer. I feel as though I'd regret finding out.)]
+		[lilaya.relation(pc)]了解到你的困境，抱起胳膊咂咂嘴，问道，[lilaya.speech(你怎么把自己搞这么难堪的？你不会是去御城区满大街乱晃，捡到什么就往身上穿吧？不，别急，别回答。我感觉我听完一定会后悔的。)]
 	</p>
 	<p>
-		Asking Lilaya if she can help, you're pleased to see the annoyed expression on her face quickly soften as she replies, [lilaya.speech(Yes, I can help. Ordinarily, I'd refuse to help so as to teach you a lesson about being so careless, but seeing as you're completely unable to get yourself out of this mess, I'll remove the servitude enchantments from all of your clothing. Just come and stand over here, please.)]
+		你问莉莱雅能不能帮忙。她恼怒的表情迅速软化下来，回答说，[lilaya.speech(能，当然能。常态来说，我会拒绝帮忙，让你受受教训，长点心。但看你这完全无法脱身的尴尬样，我就把你衣服上的仆役附魔解除吧。过来，站在这就好。)]
 	</p>
 	<p>
-		Moving up next to Lilaya, you hold still as she removes the servitude enchantments your clothing. After just a few moments she's done, but as you thank her and then try to remove your clothing, you realise that it's still sealed.
+		你靠到莉莱雅旁边，一动不动，等着她给你解除仆役附魔。她很快就解掉了。你千恩万谢地往下脱装备，却脱不下去。
 	</p>
 	<p>
-		[lilaya.speech(Did you think that I'd waste my essences on unsealing your clothing?)] the [lilaya.race] asks in a disapproving tone. Crossing her arms, she tuts, [lilaya.speech(You can unseal your clothing yourself. Just be grateful that I spent some essences on removing those other enchantments. Now, is there anything else you need from me?)]
+		[lilaya.speech(别以为我会在解封你衣服上浪费精华。)][lilaya.race]不悦地说，又抱起胳膊，咂了咂嘴，[lilaya.speech(你自己就能解封。我都已经花精华解除其他附魔了，你就偷着乐去吧。还有事要我帮忙吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LILAYA_SCIENTIST_OUTFIT -->
 	
 	<htmlContent tag="LILAYA_SCIENTIST_OUTFIT"><![CDATA[
 	<p>
-		Liking the look of Lilaya's lab coat, you compliment her on her appearance, before asking if she has a spare lying around which you could have.
+		为了莉莱雅的实验室外套，你开始称赞她的容貌，并趁机询问她身边是否有多余的外套可以给分给你。
 	</p>
 	<p>
-		[lilaya.speech(Well, in this instance, flattery will get you somewhere after all,)] she responds with a smile on her face. Striding over to a cabinet on the far side of the room, she slides open one of the drawers and retrieves the white lab coat you've asked for. Walking back over to you, she hands you the garment and says, [lilaya.speech(Don't get carried away and start thinking you're a real arcane researcher; it takes years of study to get to that level.)]
+		[lilaya.speech(嗯，事实证明有些时候，奉承话真的非常受用，)]她几乎掩盖不住脸上的笑意。她大步走到房间远处的一个柜子前，推开其中一个抽屉，取出了你要的那件实验室外套。她走回你身边，把衣服递给你： [lilaya.speech(可别穿上件衣服就以为自己是个大奥术家了，真正的学者可是需要长年累月的积累的。)]
 	</p>
 	<p>
-		As you thank your [lilaya.relation(pc)], she hands you something else which she'd just retrieved from the same drawer, and you look down to see that it's a pair of safety goggles. Flashing you another smile, Lilaya says, [lilaya.speech(If you're trying to get the look right, you'll need these too. Anyway, is there anything else you want?)]
+		正当你准备感谢你的[lilaya.relation(pc)]时， 她又递给你一样东西，那是她刚从同一个抽屉里拿出来的，你低头一看，原来是一副护目镜。莉莱雅又对你笑了笑：[lilaya.speech(如果要显得专业，这东西可不能少。还有什么我可以帮你的吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LAB_LILAYA_HUG -->
@@ -925,30 +925,30 @@
 	<htmlContent tag="LAB_LILAYA_HUG"><![CDATA[
 	<p>
 		#IF(pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_2_D_MEETING_A_LILIN))
-			Although she's no longer the same person you knew before Lilith's spell altered this reality, you know that Lilaya is sure to love the same sort of big hug which you used to give her when she was your aunt Lily.
+			尽管她不再是莉莉丝的咒语改变了这个现实前你之前所认识的那个人，但你知道莉莱雅一定会喜欢你过去在她还是你的莉莉姨妈时给她的那种大拥抱。
 		#ELSE
-			Although she's not the same person as the Lily from your world, you know that Lilaya is sure to love the same sort of big hug which you used to give your aunt.
+			尽管她和你世界中的莉莉不是一个人，但你知道莉莱雅一定会喜欢你过去给姨妈的那种大拥抱。
 		#ENDIF
 		#IF(pc.isShy())
-			 Although you're shy around most people, you feel at ease when in the presence of [lilaya.race], and so you don't feel any trepidation in throwing your [pc.arms] around her and pulling her into your loving embrace.
+			尽管你在大多数人面前都很害羞，但在[lilaya.race]面前你感觉很放松，所以你毫不犹豫地伸出你的[pc.arms]，紧紧抱住她，把她拉进你充满爱意的怀抱。
 		#ELSE
-			 Stepping up to the [lilaya.race], you throw your [pc.arms] around her and pull her into your loving embrace.
+			你走向[lilaya.race]，伸出[pc.arms]紧紧抱住她，把她拉进你充满爱意的怀抱。
 		#ENDIF
 	</p>
 	<p>
-		Furiously blushing at this sudden display of affection, your [lilaya.relation(pc)] stutters, [lilaya.speech(W-What are you doing?! I-I have important work to be getting on with! I-I don't have time for this!)]
+		面对这突如其来的亲昵，你的[lilaya.relation(pc)]脸红得就像刚刚被煮熟的虾，她结结巴巴地说，[lilaya.speech(你在做什么？！我有重要的工作要做！我没有时间！)]
 	</p>
 	<p>
-		Despite her words, the embarrassed [lilaya.race] makes no move to push you off of her, and in fact actually seems to lean into your hug. What's more, you're able to see that her [lilaya.tail+] is excitedly wrapping itself around the leg of the table behind her, and as you continue to hold your [lilaya.relation(pc)] in your embrace, her [lilaya.wings+] suddenly flap out and curl around to return your hug. With her cheeks still flushing a deep shade of scarlet, she mutters, [lilaya.speech(I-I suppose I can spare a minute or two...)]
+		尽管她这么说，但是尴尬的[lilaya.race]并没有推开你，实际上她似乎还抱了过来。更重要的是，你能看到她[lilaya.tail+]兴奋地绕在她后面的桌腿上，当你继续拥抱着你的[lilaya.relation(pc)]时，她[lilaya.wings+]突然张开并卷曲起来回应你的拥抱。她的脸颊仍然是深红色的，她嘟囔着说，[lilaya.speech(我想我可以抽出一两分钟的时间……)]
 	</p>
 	<p>
-		After sharing a hug with your [lilaya.relation(pc)] for another couple of minutes, she eventually breaks it off and declares, [lilaya.speech(T-That was nice, thank you, [pc.name]. Now, I really have a lot of important work to get done today, s-so please don't try this again!)]
+		和你的[lilaya.relation(pc)]分享了又几分钟的拥抱后，她最终打断了这个拥抱，并宣称，[lilaya.speech(那，那很好，谢谢你，[pc.name]。现在，我今天确实有很多重要的工作要做，所以请不要再这样了！)]
 	</p>
 	<p>
-		Although she made it very clear from her body language that she actually likes being hugged, you're sure that Lilaya would get angry if you were to try and hug her again today. As your [lilaya.relation(pc)] waits to hear if there's anything else you want from her, you think to yourself that you could always do this to her again tomorrow without risk of annoying her... 
+		尽管她通过身体语言非常明确地表明她实际上喜欢被拥抱，但你确信如果你今天再尝试拥抱莉莱雅，她会生气的。当你的[lilaya.relation(pc)]等着听你还有什么其他要求时，你心想，你完全可以明天再这样做，而不用担心惹烦她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LILAYA_EXPLAINS_ESSENCES -->
@@ -957,149 +957,155 @@
 	#IF(game.getDialogueFlags().hasFlag(FLAG_jinxedClothingDiscovered))
 		#IF(!pc.isAnyEquippedClothingSealed())
 			<p>
-				[pc.speech(I managed to take it off already, but some clothing that I put on a little while ago sort of stuck onto me,)] you explain. [pc.speech(Every time I tried to take it off, some kind of weird enchantment stopped me. I was wondering if you knew what was causing that?)]
+				[pc.speech(我已经设法脱掉了，但不久前穿上的一些衣服还是粘在了我身上，)]你讲述道。[pc.speech(每次我想把它摘下来，都会被某种奇怪的魔法阻止。你知道是什么原因吗？)]
 			</p>
 		#ELSE
 			<p>
-				[pc.speech(There seems to be something wrong with [#SPECIAL_PARSE_2] [#SPECIAL_PARSE_0] I'm wearing,)] you explain. [pc.speech(Every time I try to take [#SPECIAL_PARSE_1] off, some kind of weird enchantment stops me. Can you help?)]
+				[pc.speech(我穿的[#SPECIAL_PARSE_2][#SPECIAL_PARSE_0]好像有什么问题)]你讲述道。[pc.speech(每次我想脱掉[#SPECIAL_PARSE_1]时，奇都会被某种奇怪的魔法阻止，你能帮我吗？)]
 			</p>
 		#ENDIF
 		<p>
-			Lilaya frowns at you for a moment, then, much to your surprise, she starts scolding you, [lilaya.speech(Well, what did you expect to happen if you're going to start trying on random pieces of clothing like that?!)]
+			莉莱雅皱着眉头看了你一会儿，然后出乎你的意料，开始责骂你：[lilaya.speech(你这样随便穿搭衣服，还想不发生什么吗？！)]
 		</p>
 		<p>
-			[pc.speech(Well, it's not really my fau-)] you start, but Lilaya quickly interrupts you.
+			[pc.speech(呃呃，这不是我的cu……)]你解释道，但莉莱雅很快打断你。
 		</p>
 		<p>
-			[lilaya.speech(Well then, whose fault is it? Hmm? I can't be running around saving you every time you get in trouble, understood?!)]
+			[lilaya.speech(那，这是谁的错？嗯？我不能在你每次遇到麻烦时都去救你，明白吗？！)]
 		</p>
 		<p>
-			If it were anyone else, you might have argued back, but Lilaya's stern words sound exactly like the sort of lecture you used to receive from your [lilaya.relation(pc)] Lily. That, combined with the fact that this is a rare display of frustration from Lilaya, leaves you muttering out an apology in the hope that you can calm her down. Thankfully, she lets out one last exasperated sigh before taking in a deep breath and speaking in her normal tone.
+			如果是别人，你可能会反驳，但莉莱雅严厉的话语听起来很像你以前从你的[lilaya.relationship(pc)]莉莉那里受到的教训。再加上莉莱雅难得地表现出了沮丧的情绪，你只好喃喃地道歉，希望能让她冷静下来。幸而，她发出了最后一声气愤的叹息，深吸了一口气，开始以正常的语气说话。
 		</p>
 		<p>
-			[lilaya.speech(Sorry, I didn't mean to be so stern, it's just that I don't want you to get hurt out there... Anyway, if that's all it is, the solution to sealed clothing is actually quite simple!)]
+			[lilaya.speech(对不起，我不是故意要这么严厉的，只是我不想你在外面受伤……总之，如果只是这样的话，密封服的解决方法其实很简单！)]
 		</p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_essenceOrgasmDiscovered) || game.getDialogueFlags().hasFlag(FLAG_essencePostCombatDiscovered))
 			<p>
-				[pc.speech(Actually, there <i>is</i> something else as well. I recently had this weird experience, where I saw someone's arcane aura. A piece of it broke off and shot <i>into</i> me, and I'm not sure if it needs to be removed or anything...)] your voice trails off as you see an extremely concerned look flash across Lilaya's face.
+				[pc.speech(其实，还<i>有</i>别的原因。我最近有一次奇怪的经历，我看到了某人的奥术灵气。有一块断裂了，射<i>进</i>了我的身体，我不知道是否需要把它移除还是什么……)]你的话音刚落，就看到莉莱雅脸上闪过一丝极为关切的神情。
 			</p>
 			<p>
-				[lilaya.speech(Are you sure?! You absorbed someone's essence directly from them?!)] Lilaya asks, failing to conceal the worried tone in her voice.
+				[lilaya.speech(你确定？你直接吸收了别人的精华？！)]莉莱雅问道，语气中难掩担忧。
 			</p>
 			<p>
-				Before you can respond, Lilaya grabs your [pc.arm] and starts pulling you over to the same place where she ran her first test on you. Instructing you to sit on the chair in the middle of the chalk square, she once more starts adjusting the floodlight-like pieces of arcane equipment at each corner.
+				还没等你反应过来，莉莱雅就抓住了你的[pc.arm]，开始把你拉到她第一次对你进行测试的地方。她示意你坐在粉笔记号中间的椅子上，然后再一次开始调整每个角落里类似泛光灯的奥术设备。
 			</p>
 			<p>
-				[pc.speech(Wait, my clothes aren't going to be teleported all over the room or anything again, are they?)] you ask.
+				[pc.speech(等等，我的衣服不会又被传送得满屋子都是吧？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(No, don't worry, I fixed that little problem!)] Lilaya responds, and before you get the chance to say anything else, arcane energy suddenly crackles into life around her arm, before shooting out into each of the curious instruments. A familiar bright pink flash illuminates the room, but this time, thankfully, your clothes and sight are unaffected.
+				[lilaya.speech(不会，别担心，我修好了这个小BUG！)]莉莱雅回应道，你还没来得及说什么，奥术能量突然在她的手臂上噼啪作响，然后射向每一个稀奇古怪的仪器。一道熟悉的亮粉色闪光照亮了整个房间，不过这次幸好你的衣服和视线没有受到影响。
 			</p>
+
 			<p>
-				Once again, you find yourself surrounded by the shimmering pink outline of your arcane aura. This time, however, you see a strange ball of energy orbiting your body, which looks to be the same sort of size as the shard of energy that you remember shooting into you. Looking up at Lilaya, you see that her cheeks have completely drained of colour, and she's looking down at you with an extremely worried expression on her face.
+				你再一次发现自己被闪烁着粉红色光芒的奥术灵气所包围。不过这一次，你看到一个奇怪的能量球围绕着你的身体，看起来和你记忆中射向你的能量碎片大小相同。抬头看看莉莱雅，你发现她的脸颊已经完全失去了血色，她正低头看着你，脸上带着极其担忧的表情。
 			</p>
 		#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_essenceBottledDiscovered))
 			<p>
-				[pc.speech(Actually, there <i>is</i> something else as well. I had this little bottle with a swirling light in it, and when I took out the stopper, the light sort of shot <i>into</i> me...)] you explain, hoping that Lilaya can tell you what that was all about as well.
+				[pc.speech(其实，还<i>有</i>一件事。我有一个小瓶子，里面有一束旋转的光，当我拔出瓶塞时，那束光就射<i>进</i>了我的身体里……)]你解释道，希望莉莱雅能告诉你那是怎么回事。
 			</p>
 			<p>
-				[lilaya.speech(Oh! Of course! I should have mentioned that,)] Lilaya responds. [lilaya.speech(As you've got a demon-strength aura, it's only natural that you'd be able to absorb arcane essences! I really should have tested you for that as well... But we can just do it now!)]
+				[lilaya.speech(哦！当然！我早该提醒的，)]莉莱雅回应道，[lilaya.speech(既然你身上有恶魔强度的灵气，自然就能吸收奥术精华了！我真应该也测试一下你……不过我们现在就可以测！)]
 			</p>
 			<p>
-				Before you can respond, Lilaya grabs your [pc.arm] and starts pulling you over to the same place where she ran her first test on you. Instructing you to sit on the chair in the middle of the chalk square, she once more starts adjusting the floodlight-like pieces of arcane equipment at each corner.
+				还没等你反应过来，莉莱雅就抓住了你的[pc.arm]，开始把你拉到她第一次对你进行测试的地方。她示意你坐在粉笔记号中间的椅子上，然后再一次开始调整每个角落里类似泛光灯的奥术设备。
 			</p>
 			<p>
-				[pc.speech(Wait, my clothes aren't going to be teleported all over the room or anything again, are they?)] you ask.
+				[pc.speech(等等，我的衣服不会又被传送得满屋子都是吧？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(No, don't worry, I fixed that little problem!)] Lilaya responds, and before you get the chance to say anything else, arcane energy suddenly crackles into life around her arm, before shooting out into each of the curious instruments. A familiar bright pink flash illuminates the room, but this time, thankfully, your clothes and sight are unaffected.
+				[lilaya.speech(不会，别担心，我修好了这个小BUG！)]莉莱雅回应道，你还没来得及说什么，奥术能量突然在她的手臂上噼啪作响，然后射向每一个稀奇古怪的仪器。一道熟悉的亮粉色闪光照亮了整个房间，不过这次幸好你的衣服和视线没有受到影响。
 			</p>
+
 			<p>
-				Once again, you find yourself surrounded by the shimmering pink outline of your arcane aura. This time, however, you see a strange ball of energy orbiting your body, which looks to be the same sort of size as the shard of energy that you remember shooting into you. Looking up at Lilaya, you see that her cheeks have completely drained of colour, and she's looking down at you with an extremely worried expression on her face.
+				你再一次发现自己被闪烁着粉红色光芒的奥术灵气所包围。不过这一次，你看到一个奇怪的能量球围绕着你的身体，看起来和你记忆中射向你的能量碎片大小相同。抬头看看莉莱雅，你发现她的脸颊已经完全失去了血色，她正低头看着你，脸上带着极其担忧的表情。
 			</p>
 		#ELSEIF(!pc.isAnyEquippedClothingSealed())
 			<p>
-				[pc.speech(That's good to hear, so what would I need to do if it happens again?)] you ask.
+				[pc.speech(听起来不错，如果再发生这种情况，我需要做些什么？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(Well, as you've got a demon-strength aura, it's only natural that you'd be able to absorb arcane essences too, and then you could channel some of them into clothing to remove seals yourself! I really should have tested you for that as well... But we can just do it now!)]
+				[lilaya.speech(好吧，既然你身上有恶魔强度的灵气，自然也能吸收奥术精华，然后你就可以把其中一些导入衣服，自己解除封印！我真应该也测试一下你……不过我们现在就可以测！)]
 			</p>
 			<p>
-				Before you can respond, Lilaya grabs your [pc.arm] and starts pulling you over to the same place where she ran her first test on you. Instructing you to sit on the chair in the middle of the chalk square, she once more starts adjusting the floodlight-like pieces of arcane equipment at each corner.
+				还没等你反应过来，莉莱雅就抓住了你的[pc.arm]，开始把你拉到她第一次对你进行测试的地方。她示意你坐在粉笔记号中间的椅子上，然后再一次开始调整每个角落里类似泛光灯的奥术设备。
 			</p>
 			<p>
-				[pc.speech(Wait, my clothes aren't going to be teleported all over the room or anything again, are they?)] you ask.
+				[pc.speech(等等，我的衣服不会又被传送得满屋子都是吧？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(No, don't worry, I fixed that little problem!)] Lilaya responds, and before you get the chance to say anything else, arcane energy suddenly crackles into life around her arm, before shooting out into each of the curious instruments. A familiar bright pink flash illuminates the room, but this time, thankfully, your clothes and sight are unaffected.
+				[lilaya.speech(不会，别担心，我修好了这个小BUG！)]莉莱雅回应道，你还没来得及说什么，奥术能量突然在她的手臂上噼啪作响，然后射向每一个稀奇古怪的仪器。一道熟悉的亮粉色闪光照亮了整个房间，不过这次幸好你的衣服和视线没有受到影响。
 			</p>
+
 			<p>
-				Once again, you find yourself surrounded by the shimmering pink outline of your arcane aura. This time, however, you see a strange ball of energy orbiting your body, which looks to be the same sort of size as the shard of energy that you remember shooting into you. Looking up at Lilaya, you see that her cheeks have completely drained of colour, and she's looking down at you with an extremely worried expression on her face.
+				你再一次发现自己被闪烁着粉红色光芒的奥术灵气所包围。不过这一次，你看到一个奇怪的能量球围绕着你的身体，看起来和你记忆中射向你的能量碎片大小相同。抬头看看莉莱雅，你发现她的脸颊已经完全失去了血色，她正低头看着你，脸上带着极其担忧的表情。
 			</p>
 		#ELSE
 			<p>
-				[pc.speech(That's good to hear, so what do I need to do?)] you ask.
+				[pc.speech(听起来不错，如果再发生这种情况，我需要做些什么？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(Well, I could just channel some of my absorbed essences into [#SPECIAL_PARSE_1] to remove the seal, but...)] Lilaya responds, her sentence trailing off a little as she suddenly thinks of something. [lilaya.speech(As you've got a demon-strength aura, it's only natural that you'd be able to absorb arcane essences too, and then you could remove [#SPECIAL_PARSE_1] yourself! I really should have tested you for that as well... But we can just do it now!)]
+				[lilaya.speech(嗯，我可以把吸收的精华导入[#SPECIAL_PARSE_1]来解除封印，但是……)]莉莱雅回应道，话音刚落，她突然想到了什么，[lilaya.speech(既然你拥有恶魔强度的灵气，自然也能吸收奥术精华，然后你就可以自己移除[#SPECIAL_PARSE_1]了！我真应该也测试一下你……不过我们现在就可以测！)]
 			</p>
 			<p>
-				Before you can respond, Lilaya grabs your [pc.arm] and starts pulling you over to the same place where she ran her first test on you. Instructing you to sit on the chair in the middle of the chalk square, she once more starts adjusting the floodlight-like pieces of arcane equipment at each corner.
+				还没等你反应过来，莉莱雅就抓住了你的[pc.arm]，开始把你拉到她第一次对你进行测试的地方。她示意你坐在粉笔记号中间的椅子上，然后再一次开始调整每个角落里类似泛光灯的奥术设备。
 			</p>
 			<p>
-				[pc.speech(Wait, my clothes aren't going to be teleported all over the room or anything again, are they?)] you ask.
+				[pc.speech(等等，我的衣服不会又被传送得满屋子都是吧？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(No, don't worry, I fixed that little problem!)] Lilaya responds, and before you get the chance to say anything else, arcane energy suddenly crackles into life around her arm, before shooting out into each of the curious instruments. A familiar bright pink flash illuminates the room, but this time, thankfully, your clothes and sight are unaffected.
+				[lilaya.speech(不会，别担心，我修好了这个小BUG！)]莉莱雅回应道，你还没来得及说什么，奥术能量突然在她的手臂上噼啪作响，然后射向每一个稀奇古怪的仪器。一道熟悉的亮粉色闪光照亮了整个房间，不过这次幸好你的衣服和视线没有受到影响。
 			</p>
+
 			<p>
-				Once again, you find yourself surrounded by the shimmering pink outline of your arcane aura. This time, however, you see a strange ball of energy orbiting your body, which looks to be the same sort of size as the shard of energy that you remember shooting into you. Looking up at Lilaya, you see that her cheeks have completely drained of colour, and she's looking down at you with an extremely worried expression on her face.
+				你再一次发现自己被闪烁着粉红色光芒的奥术灵气所包围。不过这一次，你看到一个奇怪的能量球围绕着你的身体，看起来和你记忆中射向你的能量碎片大小相同。抬头看看莉莱雅，你发现她的脸颊已经完全失去了血色，她正低头看着你，脸上带着极其担忧的表情。
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(game.getDialogueFlags().hasFlag(FLAG_essenceOrgasmDiscovered) || game.getDialogueFlags().hasFlag(FLAG_essencePostCombatDiscovered))
 			<p>
-				[pc.speech(I wanted to ask you about this weird experience I recently had, where I saw someone's arcane aura. A piece of it broke off and shot <i>into</i> me, and I'm not sure if it needs to be removed or anything...)] your voice trails off as you see an extremely concerned look flash across Lilaya's face.
+				[pc.speech(我想问问你我最近的奇怪经历，我看到了某人的奥术灵气。它的一部分断裂后射<i>进</i>了我的身体，我不确定是否需要把它移除或做其他处理……)]你的话音刚落，就看到莉莱雅脸上闪过一丝极为关切的神情。
 			</p>
 			<p>
-				[lilaya.speech(Are you sure?! You absorbed someone's essence directly from them?!)] Lilaya asks, failing to conceal the worried tone in her voice.
+				[lilaya.speech(你确定？你直接吸收了别人的精华？！)]莉莱雅问道，语气中难掩担忧。
 			</p>
 			<p>
-				Before you can respond, Lilaya grabs your [pc.arm] and starts pulling you over to the same place where she ran her first test on you. Instructing you to sit on the chair in the middle of the chalk square, she once more starts adjusting the floodlight-like pieces of arcane equipment at each corner.
+				还没等你反应过来，莉莱雅就抓住了你的[pc.arm]，开始把你拉到她第一次对你进行测试的地方。她示意你坐在粉笔记号中间的椅子上，然后再一次开始调整每个角落里类似泛光灯的奥术设备。
 			</p>
 			<p>
-				[pc.speech(Wait, my clothes aren't going to be teleported all over the room or anything again, are they?)] you ask.
+				[pc.speech(等等，我的衣服不会又被传送得满屋子都是吧？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(No, don't worry, I fixed that little problem!)] Lilaya responds, and before you get the chance to say anything else, arcane energy suddenly crackles into life around her arm, before shooting out into each of the curious instruments. A familiar bright pink flash illuminates the room, but this time, thankfully, your clothes and sight are unaffected.
+				[lilaya.speech(不会，别担心，我修好了这个小BUG！)]莉莱雅回应道，你还没来得及说什么，奥术能量突然在她的手臂上噼啪作响，然后射向每一个稀奇古怪的仪器。一道熟悉的亮粉色闪光照亮了整个房间，不过这次幸好你的衣服和视线没有受到影响。
 			</p>
+
 			<p>
-				Once again, you find yourself surrounded by the shimmering pink outline of your arcane aura. This time, however, you see a strange ball of energy orbiting your body, which looks to be the same sort of size as the shard of energy that you remember shooting into you. Looking up at Lilaya, you see that her cheeks have completely drained of colour, and she's looking down at you with an extremely worried expression on her face.
+				你再一次发现自己被闪烁着粉红色光芒的奥术灵气所包围。不过这一次，你看到一个奇怪的能量球围绕着你的身体，看起来和你记忆中射向你的能量碎片大小相同。抬头看看莉莱雅，你发现她的脸颊已经完全失去了血色，她正低头看着你，脸上带着极其担忧的表情。
 			</p>
 			
 		#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_essenceBottledDiscovered))
 			<p>
-				[pc.speech(Well, you see, I had this little bottle with a swirling light in it, and when I took out the stopper, the light sort of shot <i>into</i> me...)] you explain, hoping that Lilaya can tell you what that was all about as well.
+				[pc.speech(嗯，我有一个小瓶子，里面有一束旋转的光，当我拔出瓶塞时，那束光就射<i>进</i>了我的身体……)]你解释道，希望莉莱雅能告诉你那是怎么回事。
 			</p>
 			<p>
-				[lilaya.speech(Oh! Of course! I should have mentioned that,)] Lilaya responds. [lilaya.speech(As you've got a demon-strength aura, it's only natural that you'd be able to absorb arcane essences! I really should have tested you for that as well... But we can just do it now!)]
+				[lilaya.speech(哦！当然！我早该提醒的，)]莉莱雅回应道，[lilaya.speech(既然你身上有恶魔强度的灵气，自然就能吸收奥术精华了！我真应该也测试一下你……不过我们现在就可以测！)]
 			</p>
 			<p>
-				Before you can respond, Lilaya grabs your [pc.arm] and starts pulling you over to the same place where she ran her first test on you. Instructing you to sit on the chair in the middle of the chalk square, she once more starts adjusting the floodlight-like pieces of arcane equipment at each corner.
+				还没等你反应过来，莉莱雅就抓住了你的[pc.arm]，开始把你拉到她第一次对你进行测试的地方。她示意你坐在粉笔记号中间的椅子上，然后再一次开始调整每个角落里类似泛光灯的奥术设备。
 			</p>
 			<p>
-				[pc.speech(Wait, my clothes aren't going to be teleported all over the room or anything again, are they?)] you ask.
+				[pc.speech(等等，我的衣服不会又被传送得满屋子都是吧？)]你问道。
 			</p>
 			<p>
-				[lilaya.speech(No, don't worry, I fixed that little problem!)] Lilaya responds, and before you get the chance to say anything else, arcane energy suddenly crackles into life around her arm, before shooting out into each of the curious instruments. A familiar bright pink flash illuminates the room, but this time, thankfully, your clothes and sight are unaffected.
+				[lilaya.speech(不会，别担心，我修好了这个小BUG！)]莉莱雅回应道，你还没来得及说什么，奥术能量突然在她的手臂上噼啪作响，然后射向每一个稀奇古怪的仪器。一道熟悉的亮粉色闪光照亮了整个房间，不过这次幸好你的衣服和视线没有受到影响。
 			</p>
+
 			<p>
-				Once again, you find yourself surrounded by the shimmering pink outline of your arcane aura. This time, however, you see a strange ball of energy orbiting your body, which looks to be the same sort of size as the shard of energy that you remember shooting into you. Looking up at Lilaya, you see that her cheeks have completely drained of colour, and she's looking down at you with an extremely worried expression on her face.
+				你再一次发现自己被闪烁着粉红色光芒的奥术灵气所包围。不过这一次，你看到一个奇怪的能量球围绕着你的身体，看起来和你记忆中射向你的能量碎片大小相同。抬头看看莉莱雅，你发现她的脸颊已经完全失去了血色，她正低头看着你，脸上带着极其担忧的表情。
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LILAYA_EXPLAINS_ESSENCES_2 -->
@@ -1107,127 +1113,127 @@
 	<htmlContent tag="LILAYA_EXPLAINS_ESSENCES_2"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_essenceOrgasmDiscovered) || game.getDialogueFlags().hasFlag(FLAG_essencePostCombatDiscovered))
 		<p>
-			[pc.speech(You look like you've seen a ghost, what's wrong?)] you ask, concerned by Lilaya's reaction.
+			[pc.speech(你看起来像见了鬼一样，发生了什么？)]你问，对莉莱雅的反应很担心。
 		</p>
 		<p>
-			[lilaya.speech(Ah, well, it's just...)] Lilaya stumbles over her words a little as she responds. [lilaya.speech(You really, <i>really</i> shouldn't be able to do that!)]
+			[lilaya.speech(嗯……呃……这……)]莉莱雅有些结巴地回答，[lilaya.speech(你真的，<i>真的</i>不应该是那样！)]
 		</p>
 		<p>
-			Pointing at the ball of energy that's orbiting your aura, she continues, [lilaya.speech(You see that? You've absorbed a piece of someone's essence! There's something seriously wrong with your aura... Normally only Lilin are able to do that, hell, even demons can't absorb essences directly from people!)]
+			能量球围绕着你的灵气旋转，莉莱雅指着它继续说：[lilaya.speech(你发现了吗？你吸收了一些别人的精华！你的灵气有大问题……这通常来说只有莉琳能做到，我的天，即使是恶魔也不能从其他人身上直接吸取精华！)]
 		</p>
 		<p>
-			[pc.speech(Wait, I absorbed their <i>essence</i>? What does that mean?)]
+			[pc.speech(等一下，你说我吸收了他们的<i>精华</i>？这是什么意思？)]
 		</p>
 		<p>
-			[lilaya.speech(Well, basically, you absorbed a fragment of someone's aura. Extracting essences isn't harmful to either you or to the other person, and all auras replenish their natural strength very quickly, so don't worry about anything like that,)] Lilaya explains, pacing back and forth. [lilaya.speech(You see, using absorbed essences is the way in which enchantments are infused into objects. Normally, demons have to buy bottled essences in order to absorb them into their aura, but you can <i>somehow</i> absorb them directly from a person, just like a Lilin can! After absorbing an essence, you'll be able to use it to enchant items or remove seals... Look, it's better if I show you...)]
+			[lilaya.speech(简单的来说，你吸收了别人的灵气碎片，这对你和其他人都没有坏处，而且灵气很快就会回到它们本身的强度，所以不用太担心。)]莉莱雅解释道，同时来回踱步：[lilaya.speech(你可以使用吸收的精华，来将附魔注入物品。通常来说，恶魔会购买瓶装的精华，这样才能将其吸收，变成自己的灵气，但<i>不知为何</i>你居然可以从别人那里直接吸取精华，就像莉琳一样。吸收了灵气之后，你就可以给物品附魔，或者解除封印……我想，给你展示一下会更好……)]
 		</p>
 		<p>
-			Lilaya flicks a switch on one of the instruments, and the shimmering pink aura instantly vanishes from sight. Stepping forwards, she takes you by the [pc.arm] once more, and quickly leads you over to another corner of the lab, where a long, sturdy table is covered in all sorts of alchemical-looking apparatus. Large glass bottles filled with brightly coloured liquids bubble away without any apparent source of heat, and all manner of strange looking ingredients lie scattered over the table's surface. Coming to a halt in front of the workspace, Lilaya turns to face you. [lilaya.speech(Right, I can explain as we go...)]
+			莉莱雅轻轻按了一个器械的开关，紫色光芒的灵气立刻从你的视线里消失了。她向前走来，又一次抓住了你的[pc.arm]，快速的带你来到了实验室的另一个角落。这里有一张又长又结实的桌子，上面摆满了各种炼金术外观的仪器。大型的玻璃杯中装满了各种颜色鲜艳的液体，即使没有外部热源，它仍然在冒着泡泡，并且桌子上散落着各种各样看起来奇怪的材料。莉莱雅停在了工作区前，转头看向你：[lilaya.speech(好的，我可以边做边解释……)]
 		</p>
 
 	#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_essenceBottledDiscovered))
 		<p>
-			[pc.speech(You look like you've seen a ghost, what's wrong?)] you ask, concerned by Lilaya's reaction.
+			[pc.speech(你看起来像见了鬼一样，发生了什么？)]你问，对莉莱雅的反应很担心。
 		</p>
 		<p>
-			[lilaya.speech(Ah, well, it's just...)] Lilaya stumbles over her words a little as she responds. [lilaya.speech(Your aura really, <i>really</i> shouldn't look like that!)]
+			[lilaya.speech(嗯……呃……这……)]莉莱雅有些结巴地回答，[lilaya.speech(你真的，<i>真的</i>不应该是那样！)]
 		</p>
 		<p>
-			Lilaya points up above your head, and you look up to see that there's a ball of energy orbiting your aura. [lilaya.speech(You see that? You've absorbed an essence! I mean, all demonic-strength auras can do that, but there's something seriously wrong with yours... I-It has the exact same characteristics as a Lilin's! With your aura, you'd even be able to absorb essences directly from people! Hell, even demons can't do that!)]
+            莉莱雅指向了你的头顶，你看到那里有一个能量球，正围绕着你的灵气旋转。[lilaya.speech(你发现了吗？你已经吸收了一份精华！虽然所有恶魔强度的灵气都能做到，但你的灵气有大问题……它存在着一些莉琳的特质。你的灵气甚至可以直接从别人身上吸取精华，这甚至连恶魔都做不到！)]
 		</p>
 		<p>
-			[pc.speech(Wait, what does all of this mean?)] you ask.
+			[pc.speech(这些是什么意思？)]你问道。
 		</p>
 		<p>
-			[lilaya.speech(Well, basically, you've absorbed an essence, which had been collected directly from someone's aura by a Lilin, and then bottled. Extracting essences isn't harmful to either the Lilin or to the other person, and all auras replenish their natural strength very quickly, so don't worry about anything like that,)] Lilaya explains, pacing back and forth. [lilaya.speech(You see, using absorbed essences is the way in which enchantments are infused into objects. Normally, demons have to buy bottled essences in order to absorb them into their aura, but <i>somehow</i> you'll be able to absorb them directly from a person, just like a Lilin can! After absorbing an essence, you'll be able to use it to enchant items or remove seals... Look, it's better if I show you...)]
+			[lilaya.speech(简单来说，你之前吸收的这些灵气，本来应该直接由莉琳收集起来，并装瓶。这对莉琳和其他人都没有坏处，而且灵气很快就会回到它们本身的强度，所以不用太担心。)]莉莱雅解释道，同时来回踱步：[lilaya.speech(你可以使用吸收的精华，来将附魔注入物品。通常来说，恶魔会购买瓶装的精华，这样才能将其吸收，变成自己的灵气，但<i>不知为何</i>你居然可以从别人那里直接吸取精华，就像莉琳一样。吸收了灵气之后，你就可以给物品附魔，或者解除封印……我想，给你展示一下会更好……)]
 		</p>
 		<p>
-			Lilaya flicks a switch on one of the instruments, and the shimmering pink aura instantly vanishes from sight. Stepping forwards, she takes you by the [pc.arm] once more, and quickly leads you over to another corner of the lab, where a long, sturdy table is covered in all sorts of alchemical-looking apparatus. Large glass bottles filled with brightly coloured liquids bubble away without any apparent source of heat, and all manner of strange looking ingredients lie scattered over the table's surface. Coming to a halt in front of the workspace, Lilaya turns to face you. [lilaya.speech(Right, I can explain as we go...)]
+			莉莱雅轻轻按了一个器械的开关，紫色光芒的灵气立刻从你的视线里消失了。她向前走来，又一次抓住了你的[pc.arm]，快速的带你来到了实验室的另一个角落。这里有一张又长又结实的桌子，上面摆满了各种炼金术外观的仪器。大型的玻璃杯中装满了各种颜色鲜艳的液体，即使没有外部热源，它仍然在冒着泡泡，并且桌子上散落着各种各样看起来奇怪的材料。莉莱雅停在了工作区前，转头看向你：[lilaya.speech(好的，我可以边做边解释……)]
 		</p>
 		
 	#ELSE
 		<p>
-			[pc.speech(You look like you've seen a ghost, what's wrong?)] you ask, concerned by Lilaya's reaction.
+			[pc.speech(你看起来像见了鬼一样，发生了什么？)]你问，对莉莱雅的反应很担心。
 		</p>
 		<p>
-			[lilaya.speech(Ah, well, it's just...)] Lilaya stumbles over her words a little as she responds. [lilaya.speech(Your aura really, <i>really</i> shouldn't look like that! I-I need to try something, hold still!)]
+			[lilaya.speech(嗯……呃……这……)]莉莱雅回答地有些结巴，[lilaya.speech(你的灵气真的，<i>真的</i>不应该是那样！我……我需要做一些尝试，在那别动。)]
 		</p>
 		<p>
-			Doing as Lilaya asks, you sit still as she turns around and runs over to a nearby desk. As she pulls open the top drawer, you hear the distinctive clink of multiple glass bottles bumping against each other. Lilaya reaches in and grabs something out of the drawer, before running back over to you and holding up what she just retrieved.
+			你照着莉莱雅说的做，你静静地坐着，而莉莱雅转身跑到附近的一张桌子。当她拉开最上面的抽屉时，你听到多个玻璃瓶相互碰撞，发出了叮叮当当的声音。莉莱雅伸手从抽屉里拿出一样东西，然后跑回你身边，举起她刚刚取出的东西。
 		</p>
 		<p>
-			In her hand, you see a tiny glass bottle, with a flickering purple light swirling around inside of it. Before you can ask what it is you're looking at, Lilaya pulls out the little cork stopper and holds the bottle out towards you. Almost instantly, the light darts out of its glass prison, and you let out a gasp as the curious little wisp shoots straight into your chest. Looking up at Lilaya in alarm, you see her pointing up above your head, and you look up to see that there's now a ball of energy orbiting your aura.
+            你看到她手中有个小玻璃瓶，其中旋转着闪烁的紫色光芒。你还没来得及问她正在看着什么，莉莱雅拔出了小瓶塞，将瓶子伸向你。几乎瞬间，那股好奇的小光点从它的玻璃牢笼中飞出，你不禁发出一声惊叹，因为这个奇特的小光点直接射入了你的胸部。抬头警惕的看着莉莱雅，你看到她正指着你头顶，你抬头一看，现在有一个能量球围绕着你的灵气旋转。
 		</p>
 		<p>
-			[lilaya.speech(You see that? You've absorbed an essence! I mean, all demonic-strength auras can do that, but there's something seriously wrong with yours...)] Lilaya says, shaking her head in disbelief. [lilaya.speech(Your aura has the exact same characteristics as a Lilin's! With your aura, you'd even be able to absorb essences directly from people! Hell, even demons can't do that!)]
+			[lilaya.speech(你发现了吗？你已经吸收了一份精华！虽然所有恶魔强度的灵气都能做到，但你的灵气有大问题……)]莉莱雅难以置信地摇着头说道：[lilaya.speech(它存在着一些莉琳的特质。你的灵气甚至可以直接从别人身上吸取精华，这甚至连恶魔都做不到！)]
 		</p>
 		<p>
-			[pc.speech(Wait, what does all of this mean?)] you ask.
+			[pc.speech(这些是什么意思？)]你问道。
 		</p>
 		<p>
-			[lilaya.speech(Well, basically, you just absorbed an essence, which had been collected directly from someone's aura by a Lilin, and then bottled. Extracting essences isn't harmful to either the Lilin or to the other person, and all auras replenish their natural strength very quickly, so don't worry about anything like that,)] Lilaya explains, pacing back and forth. [lilaya.speech(You see, using absorbed essences is the way in which enchantments are infused into objects. Normally, demons have to buy bottled essences in order to absorb them into their aura, but <i>somehow</i> you'll be able to absorb them directly from a person, just like a Lilin can! After absorbing an essence, you'll be able to use it to enchant items or remove seals... Look, it's better if I show you...)]
+			[lilaya.speech(简单来说，你刚才吸收的这些灵气，本来应该直接由莉琳收集起来，并装瓶。这对莉琳和其他人都没有坏处，而且灵气很快就会回到它们本身的强度，所以不用太担心。)]莉莱雅解释道，同时来回踱步：[lilaya.speech(你可以使用吸收的精华，来将附魔注入物品。通常来说，恶魔会购买瓶装的精华，这样才能将其吸收，变成自己的灵气，但<i>不知为何</i>你居然可以从别人那里直接吸取精华，就像莉琳一样。吸收了灵气之后，你就可以给物品附魔，或者解除封印……我想，给你展示一下会更好……)]
 		</p>
 		<p>
-			Lilaya flicks a switch on one of the instruments, and the shimmering pink aura instantly vanishes from sight. Stepping forwards, she takes you by the [pc.arm] once more, and quickly leads you over to another corner of the lab, where a long, sturdy table is covered in all sorts of alchemical-looking apparatus. Large glass bottles filled with brightly coloured liquids bubble away without any apparent source of heat, and all manner of strange looking ingredients lie scattered over the table's surface. Coming to a halt in front of the workspace, Lilaya turns to face you. [lilaya.speech(Right, I can explain as we go...)]
+			莉莱雅轻轻按了一个器械的开关，紫色光芒的灵气立刻从你的视线里消失了。她向前走来，又一次抓住了你的[pc.arm]，快速的带你来到了实验室的另一个角落。这里有一张又长又结实的桌子，上面摆满了各种炼金术外观的仪器。大型的玻璃杯中装满了各种颜色鲜艳的液体，即使没有外部热源，它仍然在冒着泡泡，并且桌子上散落着各种各样看起来奇怪的材料。莉莱雅停在了工作区前，转头看向你：[lilaya.speech(好的，我可以边做边解释……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LILAYA_EXPLAINS_ESSENCES_3 -->
 	
 	<htmlContent tag="LILAYA_EXPLAINS_ESSENCES_3"><![CDATA[
 	<p>
-		[lilaya.speech(Ok, so, first thing to know is that these essences are no longer part of the person that they originally came from. It's not as though you're trapping a part of their soul into enchanted items or anything like that!)] Lilaya starts explaining, [lilaya.speech(So don't have any qualms about using these essences to enchant or unseal anything!)]
+		[lilaya.speech(好了，首先要知道的是，这些精华已经不再是原来那个人的一部分了。但这并不是说你把他们灵魂的一部分困在了魔法物品或类似的东西里！)]莉莱雅开始解释，[lilaya.speech(所以，你可以放心使用这些精华来为任何物品附魔或解封！)]
 	</p>
 	<p>
-		As she speaks, Lilaya reaches down under the table and produces a bottle of Feline's Fancy, putting it down on the desk before turning back towards you.
+		说话的同时，莉莱雅伸手从桌下拿出一瓶猫猫幻想，把它放在桌子上，然后回头朝你走来。
 	</p>
 	<p>
-		[lilaya.speech(Right, well I should probably demonstrate enchanting first! I still have a few essences absorbed from some work I was doing earlier, so I might as well use them on this!)] she says, and you notice that her earlier look of worry has been replaced with one of excitement. [lilaya.speech(So, you don't need any special equipment for this, all you need is an item, weapon, or piece of clothing to enchant, and the concentration to draw the essence out from your aura.)]
+		[lilaya.speech(好吧，我也许应该先演示一下附魔！我还有一些之前工作中吸收的精华，不如就用在这上面吧！)]她说，你注意到她先前的担忧神情已被兴奋所取代。[lilaya.speech(你不需要任何特殊的装备，你需要的只是一件需要附魔的物品、武器或衣服，以及从你的灵气中吸取精华的容量。)]
 	</p>
 	<p>
-		Lilaya picks up the bottle of Feline's Fancy, before placing a curious little green gem down next to it. [lilaya.speech(So, you have your base ingredient, and that's all well and good, but you can also add elements to an enchantment. Depending on what elements you choose to add, the resulting enchanted item will have different effects. Once you've decided on what ingredient and which elements you're going to use, you just need to focus on combining them...)]
+		莉莱雅拿起那瓶猫猫幻想，然后把一颗稀奇的绿色小宝石放在瓶子旁边。[lilaya.speech(现在，你有了基础材料，一切都很完美，你也可以为附魔添加元素。根据你选择添加的元素，最终的附魔物品会有不同的效果。一旦你决定了要用什么材料和哪些元素，你只需要集中精力把它们组合起来……)]
 	</p>
 	<p>
-		Lilaya closes her eyes and lets out a deep breath, and you gasp as you suddenly see four little balls of purple energy orbiting her body. As you watch, two of the orbs suddenly shoot down into the bottle of Feline's Fancy, and with a bright pink flash and a wisp of odourless smoke, both the bottle and the little green gem disappear. In its place, a curious little bottle of red liquid has materialised out of thin-air.
+		莉莱雅闭上眼睛，深深地吐出一口气。你发出惊呼，只看到四个紫色能量小球围绕着她的身体旋转。在你的注视下，其中两个小球突然向下射入猫猫幻想瓶中，随着一道明亮的粉红色闪光和一缕无味的烟雾，瓶子和绿色小宝石都消失了。取而代之的是一个奇怪的红色液体小瓶子。
 	</p>
 	<p>
-		[lilaya.speech(You have to sort of feel how much essence you want to pour into the enchantment. The more you put in, the better the resulting item!)] Lilaya picks up the little potion and places it off to one side. [lilaya.speech(And that's all there is to it!)]
+		[lilaya.speech(你必须感觉一下自己想在附魔中注入多少精华。你投入的越多，得到的物品就越好！)]莉莱雅拿起小药水，放在一边。[lilaya.speech(结束了！就是这样。)]
 	</p>
-	#IF(game.getDialogueFlags().hasFlag(FLAG_jinxedClothingDiscovered) && pc.isAnyEquippedClothingSealed())
-		<p>
-			Just as your about to thank her for explaining about essences, Lilaya suddenly exclaims, [lilaya.speech(Oh, and this is also how items can be identified, as well as how that sealed clothing of yours needs to be removed! All you need to do is channel some of your absorbed essences into an unidentified item to discover the enchantment, or into sealed clothing to allow you to remove it. Sealed clothing is a major problem for people without demonic-strength auras, as they need to pay demons to remove the seal for them, but for you and I, sealed clothing is no more than a minor inconvenience.)]
-		</p>
-		
-	#ELSE
-		<p>
-			Just as you're about to thank her for explaining about essences, Lilaya suddenly exclaims, [lilaya.speech(Oh, and this is also how items can be identified, as well as how sealed clothing is removed! All you need to do is channel some of your absorbed essences into an unidentified item to discover the enchantment. Also, if you ever find yourself putting on some clothing, and then it just won't come off, you need to do the same thing, and channel some of your absorbed essences into it to break the seal. Sealed clothing is a major problem for people without demonic-strength auras, as they need to pay demons to remove the seal for them, but for you and I, sealed clothing is no more than a minor inconvenience.)]
-		</p>
-	#ENDIF
-	]]>
-	</htmlContent>
+	<p>
+		正当你要感谢她为你讲解精华时，莉莱雅突然惊呼：[lilaya.speech(哦，这也是识别物品的方法，以及
+		#IF(game.getDialogueFlags().hasFlag(FLAG_jinxedClothingDiscovered) && pc.isAnyEquippedClothingSealed())脱掉你的封印衣物
+		#ELSE封印衣物被去除#ENDIF
+		的方法！你所需要做的，就是将你吸收的一些精华导入一件无法识别的物品中，以发现其中的魔法。
+		#IF(game.getDialogueFlags().hasFlag(FLAG_jinxedClothingDiscovered) && pc.isAnyEquippedClothingSealed())或者导入封印衣物中，让你可以将其移除。
+		#ELSE如果你发现自己穿上衣服后，衣服就是脱不下来，你也需要做同样的事情，将吸收的精华导入衣服中来解封。#ENDIF
+		封印衣物对于没有恶魔般强大灵气的人来说是个大问题，因为他们需要花钱请恶魔来帮他们解封，但对于你我来说，封印衣物不过是个小小的不便而已。)]
+	</p>
+	
+
+]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_EXPLAINS_ESSENCES_END"><![CDATA[
 	<p>
-		[pc.speech(Thanks, Lilaya, I understand now, but it still seems a little strange.)]
+		[pc.speech(谢谢你，莉莱雅。我现在明白了，但还是有点怪。)]
 	</p>
 	<p>
-		[lilaya.speech(The only strange thing about all this is how you're able to absorb essences like a Lilin,)] Lilaya responds, [lilaya.speech(but anyway, I've already got that arcane observation device set up in your room, so hopefully the test results will give me some idea of what's happening.)]
+		[lilaya.speech(唯一奇怪的是，你为什么能像一个莉琳一样吸收精华，)]莉莱雅说，[lilaya.speech(但不管怎么说，我已经在你的房间里安装了那个奥术观察装置，希望测试结果能让我知道发生了什么事。)]
 	</p>
 	<p>
-		[pc.speech(Yeah, hopefully, thanks again, Lilaya.)]
+		[pc.speech(是啊，希望能，再次谢谢你，莉莱雅。)]
 	</p>
 	<p>
-		[lilaya.speech(You're welcome!)] she answers, before stepping away and giving you some time to think.
+		[lilaya.speech(别客气！)]她回应道，然后就走开了，给了你一些思考的时间。
 	</p>
 	<div class='container-full-width' style='text-align:center;'>
-		<i>You can now enchant items by selecting them in your inventory, and then pressing the 'Enchant' button.</i><br/>
-		<i>In the same way, you're now able to unseal clothing. Simply select the clothing in your inventory, then press the 'Unseal' button.</i>
+		<i>现在，你只需在物品栏中选择物品，然后按下“附魔”按钮，就能对其进行附魔。</i><br/>
+		<i>同样，你现在也可以解除衣服的封印。只需选择物品栏中的衣服，然后按下“解封” 按钮即可。</i>
 	</div>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ESSENCE_EXTRACTION -->
@@ -1235,571 +1241,571 @@
 	<htmlContent tag="ESSENCE_EXTRACTION"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_essenceExtractionKnown))
 		<p>
-			Turning towards Lilaya, you get her attention before asking, [pc.speech(Is it ok if I extract some more essences?)]
+			你转向莉莱雅，吸引了她的注意，然后问，[pc.speech(我可以再提取一些精华吗？)]
 		</p>
 		<p>
-			[lilaya.speech(Of course!)] she responds. [lilaya.speech(Use as many vials as you'd like!)]
+			[lilaya.speech(当然可以！)]她回应道。[lilaya.speech(你想用多少小瓶都可以！)]
 		</p>
 		<p>
-			Reaching down to pull a few of the little glass containers out from their storage, you wonder which, and how many, of your essences to extract...
+			你弯腰从存储处拿出几个小玻璃容器，思考着要提取哪些，以及提取多少精华……
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(You mentioned that demons absorb essences from bottled sources, so I was wondering if it would be possible to make some of those myself?)] you ask.
+			[pc.speech(你提到恶魔从瓶装来源吸收精华，所以我在想能否自己制作一些这样的东西？)]你问。
 		</p>
 		<p>
-			[lilaya.speech(Oh, of course that's possible,)] Lilaya happily replies, beckoning you over to one of the many tables in her lab. [lilaya.speech(It's actually one of the easiest things about essence manipulation!)]
+			[lilaya.speech(哦，当然可以，)]莉莱雅高兴地回答，引导你走向她实验室的众多桌子中的一个。[lilaya.speech(这实际上是关于精华操作最简单的事情之一！)]
 		</p>
 		<p>
-			Bending down, Lilaya pulls out a heavy cardboard box, and you hear the high-pitched tinkling sound of countless little glass vials as they knock against each other. Taking one of the empty vessels from out of the box, Lilaya stands up and holds it out towards you. You see that it's no larger than one of her slender fingers, and as you take it from Lilaya's outstretched hand, you see that there's a little cork stopper wedged into the top.
+			莉莱雅弯下腰，拉出一个重重的纸板盒，你听到无数玻璃小瓶相互碰撞时发出的尖锐的叮当声。她从盒子里拿出一个空瓶子，站起来递给你。你看到它不比她纤细的手指大，当你从莉莱雅伸出的手中拿走它时，你看到顶部卡着一个小软木塞。
 		</p>
 		<p>
-			[lilaya.speech(These are how ordinary arcane users, like me, absorb essences. This one's empty at the moment, so if you take the cork out and concentrate on drawing an essence out from your aura, the vial's special enchantment will do the rest!)]
+			[lilaya.speech(像我这样的普通奥术使用者吸收精华就是用这些。这个现在是空的，所以如果你把软木塞拿出来并集中注意力从你的灵气中抽取精华，小瓶的特殊附魔会完成剩下的工作！)]
 		</p>
 		<p>
-			Turning the little glass container over in your [pc.hands], you look up at Lilaya. [pc.speech(So <i>all</i> essences that 'ordinary' arcane users have absorbed come from little vials like this?)]
+			你在你的[pc.hands]中转动小玻璃容器，抬头看向莉莱雅。[pc.speech(所以普通奥术使用者吸收的<i>所有</i>精华都来自这样的小瓶子？)]
 		</p>
 		<p>
-			[lilaya.speech(That's right,)] Lilaya responds. [lilaya.speech(Well, they come from a Lilin originally, then are extracted into these vials and sold on! Thanks to this unique ability of theirs, and I guess also being given anything they want from Lilith herself, all Lilin are extremely wealthy. I mean, essences are always in high demand, so all a Lilin has to do to earn money is extract some essences and sell them. These empty containers are next to worthless, so if you wanted to extract some essences, please feel free to use as many as you'd like!)]
+			[lilaya.speech(没错，)]莉莱雅答道。[lilaya.speech(好吧，它们最初是来自莉琳，然后被提取到这些小瓶子里并出售！由于她们这一独特的能力，我猜还有可以从莉莉丝那里得到任何她们想要的东西，所有的莉琳都非常富有。我的意思是，精华总是需求旺盛的，所以莉琳想要赚钱的话，只需提取一些精华并出售就可以。这些空容器几乎一文不值，所以如果你想提取一些精华，随便使用多少都可以！)]
 		</p>
 		<p>
-			You thank Lilaya, and after she moves away to give you a little space, you start to wonder how many of your essences to extract...
+			你感谢了莉莱雅，当她走开给你留了一点空间后，你开始考虑要提取多少自己的精华……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ESSENCE_EXTRACTION_BOTTLED -->
 	
 	<htmlContent tag="ESSENCE_EXTRACTION_BOTTLED"><![CDATA[
 	<p>
-		You pull out the little cork from the top of one of the glass vials, and, closing your [pc.eyes], you concentrate on extracting the arcane essence. Suddenly, you feel a strange little tugging sensation, and, opening your [pc.eyes], you see a pink, swirling glow within the vial in your [pc.hand]. Pushing the cork stopper back in the top, you smile as you realise that you've successfully extracted an essence; something that only a Lilin should be able to do!
+		你拔出其中一个玻璃瓶顶端的小软木塞，闭上[pc.eyes]集中精力提取奥术精华。突然，你感觉到一阵奇怪的拉扯感，睁开[pc.eyes]，你看到[pc.hand]中的小瓶里闪烁着粉红色的旋转光芒。将软木塞推回瓶口，你微笑着意识到自己已经成功提取出了精华——这只有莉琳才能做到！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LILAYA_CURRENT_DATE_TALK -->
 	
 	<htmlContent tag="LILAYA_CURRENT_DATE_TALK"><![CDATA[
 	<p>
-		Curious about the date shown on the calendar in your room, you decide to ask Lilaya about it, [pc.speech(Is the calendar in my room accurate? It's three years into the future from my world...)]
+		你出于对房间内日历年份的好奇，决定询问莉莱雅：[pc.speech(我房间里的那个日历是对的吗？上面的日期似乎是我之前世界的三年之后……)]
 	</p>
 	<p>
-		Lilaya frowns as she hears you say that, and leans back against the desk behind her. [lilaya.speech(Well, I can assure you that the year is [#game.getYear()]. Your world was still in [#game.getStartingDate().minusYears(3).getYear()], huh?)]
+		听到你这么说，莉莱雅皱起了眉头，靠在了身后的桌子上。[lilaya.speech(嗯……我很确定现在是[#game.getYear()]年。你是说你的世界还在[#game.getStartingDate().minusYears(3).getYear()]年，对吗？)]
 	</p>
 	<p>
-		You answer in the affirmative, and Lilaya pushes her glasses up to the bridge of her nose, before crossing her arms and sighing, [lilaya.speech(It shouldn't be anything to worry about. There must have been a chain of events in our world's past that led to the year being counted slightly differently to yours. Or maybe you time-travelled when you were teleported into this world!)] As she starts thinking out loud, you can hear the growing excitement in her voice, [lilaya.speech(In fact, it's pretty incredible that your world even uses the same calendar system as ours! And, thinking about it even more, why do we even speak the same language? And how come your customs, clothing, and even your appearance are similar to ours?!)]
+		你的回答是肯定的，莉莱雅推了推鼻梁上的眼镜，然后双手交叉，叹了口气：[lilaya.speech(这应该没什么特别的，可能是因为过去的某些事件导致了历法计量的偏移，也可能是你在传送到这个世界的过程中穿越了时空！)]她的声音似乎变得越来越兴奋，[lilaya.speech(事实上，你们的世界竟然和我们的世界使用相同的历法，这真是不可思议！再仔细想想，为什么我们说的是同一种语言？还有，你们的习俗、服饰，甚至你们的外表，怎么会和我们的相似？！)]
 	</p>
 	<p>
-		You start to chat with Lilaya about the peculiarities of these shared features between your worlds. The more you start to delve into it, however, the more surprised you are at the lack of historical knowledge that Lilaya has. [lilaya.speech(Well, the only history that anyone really knows about is stuff concerning Lilith. She's been ruling this world since before any trace of civilisation even existed, so I guess all of our customs come from her direct influence. I don't think anybody other than Lilith herself really knows much about this world's history. Maybe mommy-)]
+		你开始和莉莱雅讨论两个世界之间这些共同特征的奇特之处。然而，你越是深入探讨，就越惊讶于她在历史知识方面的匮乏。[lilaya.speech(好吧，我们所知道的真正意义上的历史也只有莉莉丝了。在任何文明和种族出现之前，她就统治着这个世界，所以我想我们现在的习俗都是受到她的影响。也只有莉莉丝本人能说清楚这个世界的历史了。或许妈妈——)]
 	</p>
 	<p>
-		Lilaya's cheeks suddenly flush red, and she turns away as she brings a close to the conversation, [lilaya.speech(Anyway! D-Don't worry about anything! Three years into the future is nothing! I-I'll try and investigate a little more, ok?!)]
+		莉莱雅的脸突然变得通红，她转过身去，匆匆结束了这场谈话。[lilaya.speech(别，别担心！只不过是穿越了三年而已！我，我会再努力调查一下的，好吧？！)]
 	</p>
 	<p>
-		It's quite apparent that Lilaya isn't interested in discussing the matter any more...
+		莉莱雅显然没有兴趣再讨论这个问题了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_CURRENT_DATE_TALK_KNOW_TRUTH"><![CDATA[
 	<p>
-		Wanting to talk to Lilaya about the date shown on the calendar in your room, you observe, [pc.speech(So, not only did Lilith change my old reality, but I also travelled three years into the future...)]
+		你想和莉莱雅探讨房间里日历上的时间，[pc.speech(所以，不仅仅是莉莉丝改变了我过去的现实，而且我还穿越到了三年后的未来……)]
 	</p>
 	<p>
-		Lilaya sighs as she hears you say that, and leans back against the desk behind her. [lilaya.speech(It would appear so. The year is most definitely [#game.getYear()], but even if it was still [#game.getStartingDate().minusYears(3).getYear()], there still wouldn't be any indication that this is the altered version of reality.)]
+		莉莱雅听完你的话，叹了口气，向后倚了倚身子，靠在桌旁，[lilaya.speech(看起来是这样。今年的确就是[#game.getYear()]，但即使它还是[#game.getStartingDate().minusYears(3).getYear()]，也仍然没有现象证明这是现实改变之后的世界。)]
 	</p>
 	<p>
-		As you make an affirmative noise, Lilaya pushes her glasses up to the bridge of her nose, before crossing her arms and sighing, [lilaya.speech(Well, there's nothing that can be done about it now, except continuing with our plan to overthrow the elder lilin. At least now we know why your language, customs, clothing, and even your appearance are similar to those in this reality.)]
+		你发出肯定的应和声。莉莱雅把眼镜推到鼻梁上，交叉手臂，叹了口气，[lilaya.speech(唉，我现在也不能干嘛，只能继续颠覆莉琳长老的计划。至少现在我们知道了你的语言、习俗、服饰乃至外貌为什么和这里的现实这般相似了。)]
 	</p>
 	<p>
-		With nothing more to be said on the matter, Lilaya brings a close to the conversation, [lilaya.speech(Anyway, I should get back on with my work, unless there's anything else you needed?)]
+		莉莱雅不想再谈这件事，意图结束对话，[lilaya.speech(行了，我要回去工作了，你没什么别的事要做吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_LABORATORY_TESTING -->
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING"><![CDATA[
 	<p>
-		Stepping forwards, you smile at your demonic [lilaya.relation(pc)]. [pc.speech(Hi, Lilaya, I'm here for those tests you mentioned.)]
+		你微笑着靠近恶魔[lilaya.relation(pc)]：[pc.speech(莉莱雅，我是来做你之前提到过的测试的。)]
 	</p>
 	#IF(game.getPlayer().isVisiblyPregnant() && !game.getDialogueFlags().hasFlag(FLAG_reactedToPregnancyLilaya))
 		<p>
-			[lilaya.speech(Excellent! Let's just... Wait... Are you <i>pregnant</i>?! Well, nevermind, I can help you deal with that later! For now, let's just get these tests done, come over here!)]
+			[lilaya.speech(太棒了！那我们现在就……等等……你是<i>怀孕</i>了吗！？嗯，没关系，我们等会再解决那个问题！现在先把测试做完，过来！)]
 		</p>
 	#ELSE
 		<p>
-			[lilaya.speech(Excellent! Let's get these tests done then, come over here!)]
+			[lilaya.speech(太棒了！那我们现在就开始测试，来我这儿！)]
 		</p>
 	#ENDIF
 	<p>
-		You do as she instructs, and make your way over to where Lilaya's standing. Rose quickly moves out of the way, hurrying over to a corner of the room and blushing as you say hello.
+		你按照她的指示，走到莉莱雅站的地方。萝丝迅速闪开，匆匆走到房间的一角，红着脸向你问好。
 		#IF(!pc.isTaur())
-			 Lilaya motions for you to sit down in the chair she just vacated, and as you do so, she grabs a smooth, wand-like instrument from another table.
+			莉莱雅示意你在她刚刚让出的椅子上坐下，与此同时，她从另一张桌子上拿起一个光滑的、类似魔杖的工具。
 		#ELSE
-			 Lilaya motions for you to stand next to the chair she just vacated, and as you do so, she grabs a smooth, wand-like instrument from another table.
+			莉莱雅示意你在她刚刚让出的椅子旁站定，与此同时，她从另一张桌子上拿起一个光滑的、类似魔杖的工具。
 		#ENDIF
-		 Moving over to you, the wand suddenly starts giving off a faint pink glow, and she starts swiping it over your body, humming as she does so.
+		当靠近你时，魔杖开始发出淡淡的粉红色光芒，她用魔杖扫过你的全身，同时低声哼唱着一些魔咒。
 	</p>
 	<p>
-		[lilaya.speech(Hmm... Yes... That's what I thought...)] she says, but before you have a chance to ask her what's going on, she steps back and places the wand to one side. [lilaya.speech(Your arcane aura hasn't shown any signs of degradation at all. It looks like it's permanent. If you've been out in Dominion, maybe you've noticed by now, but with an aura that strong, you have the same effect on people that a demon would.)]
+		[lilaya.speech(嗯……是的……如我所料……)]还没等你来得及发问，她已经后退了一步，把魔杖放到了一边：[lilaya.speech(你的奥术灵气丝毫没有衰退的迹象，看来是永久性的。如果你已经去过御城区，也许你已经注意到了——你的灵气是如此强大，可以像恶魔一样影响人类。)]
 	</p>
 	<p>
-		[pc.speech(You mean...)] you start, but Lilaya cuts you off.
+		[pc.speech(你是说……)]你想提问，但立马被莉莱雅打断了。
 	</p>
 	<p>
-		[lilaya.speech(Yes, I mean that anyone you encounter is going to feel extremely aroused when in your presence,)] she explains, [lilaya.speech(and if you haven't figured it out yet, that's the main power behind the arcane. Sure, it can be harnessed to create all sorts of spells and enchantments, but at its core, it's a primitive force linked very closely to sexual energy.)]
+		[lilaya.speech(是的，我是说你遇到的任何人在你面前都会感到饥渴难耐)]她解释道，[lilaya.speech(这并不难理解，这本身就是奥术能量的本源。当然，它可以被用来创造各种类型的法术和附魔，但其核心是一种与性欲紧密相连的原始力量。)]
 	</p>
 	<p>
-		[pc.speech(So everyone I meet is going to want to have sex with me?)] you ask.
+		[pc.speech(也就是说我遇见的每个人都想上我？)]你问道。
 	</p>
 	<p>
-		[lilaya.speech(Sort of, but remember that they have their own, less powerful, auras that shield them from the potency of yours. If they become too weak, whether mentally or physically, they won't be able to control their aura any more, and that's when all they'll be able to think of is... well... A-Anyway, the same applies right back at you!)] she says, starting to blush a little.
+		[lilaya.speech(算是吧，但你要记住，他们也有自己不那么强大的灵气来抵挡你的灵气。如果他们变得太虚弱——不管是精神上还是身体上——他们就再也无法控制自己的灵气了，那时他们就会开始……嗯……总之，你也一样！)]她说着，脸开始泛红。
 	</p>
 	<p>
-		[pc.speech(So if someone beats me up, my own arcane aura is going to make me want to have sex with them?!)] you ask.
+		[pc.speech(所以如果有人把我打败了，我自己的奥术灵气会反过来让我想与他们做爱？！)]你问道。
 	</p>
 	<p>
-		[lilaya.speech(Well, you'll still be able to summon some resistance, but it's unlikely that you'll be able to put up much of a fight at that stage... Anyway, enough of that for now, I need to tell you what I've discovered!)]
+		[lilaya.speech(这个嘛，你还是会省下一些抵抗力的，但到了这个阶段，很难说你还会有多少抵抗的余地……总之，这些就先不说了，我要告诉你另一个发现！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_LABORATORY_TESTING_REPEAT -->
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_REPEAT"><![CDATA[
 	<p>
-		Stepping forwards, you smile at your demonic [lilaya.relation(pc)]. [pc.speech(Hi, Lilaya, I'm here for some more of those tests...)]
+		你微笑着靠近恶魔[lilaya.relation(pc)]：[pc.speech(莉莱雅，我是来多做几组测试的……)]
 	</p>
 	#IF(pc.isVisiblyPregnant() && !game.getDialogueFlags().hasFlag(FLAG_reactedToPregnancyLilaya))
 		<p>
-			[lilaya.speech(Excellent! Let's just... Wait... Are you <i>pregnant</i>?! Well, if you want help with that, all you have to do is ask! For now, let's just get these... Erm... <i>tests</i> done, come over here!)]
+			[lilaya.speech(太棒了！那我们现在就……等等……你是<i>怀孕</i>了吗！？嗯，如果你需要帮助，尽管开口就行！现在，让我们……嗯……让我们先把<i>测试</i>做完，过来！)]
 		</p>
 	#ELSE
 		<p>
-			[lilaya.speech(Excellent! Let's get these... Erm... <i>tests</i> done then, come over here!)]
+			[lilaya.speech(太棒了！那我们就……呃……<i>测试</i>，过来这边！)]
 		</p>
 	#ENDIF
 	<p>
-		Rose quickly moves out of the way, hurrying over to a corner of the room and blushing as you say hello.
+		你按照她的指示，走到莉莱雅站的地方。萝丝迅速闪开，匆匆走到房间的一角，红着脸向你问好。
 		#IF(!pc.isTaur())
-			 Looking back over to Lilaya, you see her motioning for you to come and sit down in the chair she just vacated.
+			莉莱雅示意你在她刚刚让出的椅子上坐下，与此同时，她从另一张桌子上拿起一个光滑的、类似魔杖的工具。
 		#ELSE
-			 Looking back over to Lilaya, you see her motioning for you to come and stand next to the chair she just vacated.
+			莉莱雅示意你在她刚刚让出的椅子旁站定，与此同时，她从另一张桌子上拿起一个光滑的、类似魔杖的工具。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_LABORATORY_TESTING_LEAVE -->
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_LEAVE"><![CDATA[
 	<p>
-		You make your excuses to Lilaya, and, while she looks a little sad that you're not going to stay with her, she doesn't openly object.
+		你向莉莱雅推辞着。她尽管有些伤心，但没有直言反对。
 	</p>
 	<p>
-		[lilaya.speech(If you change your mind, just let me know!)] she says, before backing off a little to give you some space.
+		[lilaya.speech(如果你回心转意，就来找我！)]她说，然后后退一点，给你腾出空间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_LABORATORY_TESTING_MORE_SEX -->
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_MORE_SEX"><![CDATA[
 	<p>
-		Stepping forwards, you smile at your demonic [lilaya.relation(pc)] and ask, [pc.speech(Hi, Lilaya, I was wondering if you wanted to run some more of those... <i>tests</i>?)]
+		你走上前，对你的恶魔[lilaya.relation(pc)]笑了笑说，[pc.speech(嗨，莉莱雅，我在想你要不要多跑几组……<i>测试数据</i>？)]
 	</p>
 	<p>
-		[lilaya.speech(Ah! Y-Yes! I was hoping for some more of those...)] she responds, fiercely blushing.
+		[lilaya.speech(啊！对，对！我确实很想多测几组……)]她回答你，你发现她脸红得很厉害。
 	</p>
 	<p>
-		Rose, understanding what's about to happen, quickly makes her exit, and hurries out of the lab. Lilaya motions for you to come and stand next to the chair she just vacated, smiling seductively as you do as she commands.
+		萝丝明白你们要做什么，匆匆走出实验室。莉莱雅示意你站到她刚刚腾出的椅子旁边，她的微笑带着迷人的韵味。你按照她的吩咐去做。
 	</p>
 	<p>
-		You look up into her lustful, [lilaya.eyes+], and before you can say anything, she takes your head in both hands and presses her lips against yours. Her tongue slips out of her mouth, and you part your lips as you allow it to slide into yours.
+		你看向她那折射出欲望之光[lilaya.eyes+]，来不及开口，她便双手抓住你的头，将自己的唇贴向你的唇。你感觉到她香软的舌头舔舐着你的嘴唇，于是分开双唇，让她的舌头侵入你的口腔。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_MORE_SEX_START"><![CDATA[
 	<p>
-		You briefly wonder if it's your aura that's making Lilaya so horny, but whatever it is, you're feeling the same effects. You've never wanted someone as badly as you want her right now, and you feel your heart pounding as her soft, delicate lips press against yours. Before you can make the next move, Lilaya suddenly pulls back and takes the initiative. Pushing you down into the chair she recently vacated, she then throws one leg over yours, before sliding down to sit in your lap, bringing the two of you face-to-face.
+		你曾短暂怀疑过，是不是你的灵气让莉莱雅欲火焚身。但无论如何，你正处于相同的境地之中。你从未如此渴欲某人。她娇嫩柔软的嘴唇贴上你的，心脏怦怦地加速跳动起来。你尚未行动，她突然后撤，主动出击，将你推倒在她刚腾出的那把椅子上。一条腿顶入你腿间，她游移身体坐在你大腿上。你们面对面。
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to fuck me, make sure you pull out, ok? I'm <b>not</b> getting pregnant!)] she demands.
+			[lilaya.speech(嗯，好！只是，射在外面，好吗？我<b>不想</b>怀孕！)]她说。
 		#ELSEIF(pc.hasStatusEffect(SE_innoxia_amazons_secret) && pc.hasVagina() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to scissor, make sure you pull back before climaxing, ok? I'm <b>not</b> getting pregnant from the effects of Amazon's Secret!)] she demands.
+			[lilaya.speech(嗯，好！只是，我们磨豆腐的时候，你得在高潮前把你的小穴移开，好吗？你现在受到‘亚马逊人的秘术’效果的影响，我<b>并不想</b>因此受孕。)]
 		#ELSE
-			[lilaya.speech(Mmm, yes!)] she giggles.
+			[lilaya.speech(嗯，好啊！)]她开心地咯咯笑着。
 		#ENDIF
 	</p>
 	<p>
-		Before you can reply, your [lilaya.relation(pc)] throws you a quick, seductive smile, before taking your head in both hands and pressing her lips against yours once more. Reaching up, you pull her in close against your body, passionately making out with one another as you both give in to your lust.
+		不等你回答，你的[lilaya.relationship(pc)]便向你抛出诱人的微笑，双手抱住你的头，再次将她的嘴唇贴在你的嘴唇上。你伸手把她拉近自己的身体，热情地同她拥吻起来。你们双双堕落于欲望的泥淖之中，无法自拔。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_MORE_SEX_START_TAUR"><![CDATA[
 	<p>
-		You briefly wonder if it's your aura that's making Lilaya so horny, but whatever it is, you're feeling the same effects. You've never wanted someone as badly as you want her right now, and you feel your heart pounding as her soft, delicate lips press against yours. Before you can make the next move, Lilaya suddenly pulls back and takes the initiative. Stepping around to one side of your [pc.legRace]-like lower body, she sinks to her knees and reaches up to run her fingers up and over your animalistic groin.
+		你曾短暂怀疑过，是不是你的灵气让莉莱雅欲火焚身。但无论如何，你正处于相同的境地之中。你从未如此渴欲某人。细腻的手指按上你的唇，心脏怦怦地加速跳动起来。你尚未行动，莉莱雅突然后撤，占据了主动权。她绕到你[pc.legRace]下半身的一侧，双膝跪地，手指抚上你动物般的腹股沟。
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to fuck me, make sure you pull out, ok? I'm <b>not</b> getting pregnant!)] she demands.
+			[lilaya.speech(嗯，好！只是，射在外面，好吗？我<b>不想</b>怀孕！)]她说。
 		#ELSEIF(pc.hasStatusEffect(SE_innoxia_amazons_secret) && pc.hasVagina() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to scissor, make sure you pull back before climaxing, ok? I'm <b>not</b> getting pregnant from the effects of Amazon's Secret!)] she demands.
+			[lilaya.speech(嗯，好！只是，我们磨豆腐的时候，你得在高潮前把你的小穴移开，好吗？你现在受到‘亚马逊人的秘术’效果的影响，我<b>并不想</b>因此受孕。)]
 		#ELSE
-			[lilaya.speech(Mmm, yes!)] she giggles.
+			[lilaya.speech(嗯，好啊！)]她开心地咯咯笑着。
 		#ENDIF
 	</p>
 	<p>
-		Before you can reply, Lilaya shuffles forwards, moving under your feral body as she prepares to satisfy you with her mouth. Letting out a passionate [pc.moan], you prepare to have some fun with your horny [lilaya.relation(pc)].
+		你还没来得及反应，莉莱雅向前窜身，压住你的兽态身体，准备用嘴满足你。你发出情欲的[pc.moan]，准备与欲火焚身的[lilaya.relation(pc)]来一番欢愉。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_MORE_SEX_STOP"><![CDATA[
 	<p>
-		Prying her off of you, you make your excuses to Lilaya as you get up out of the chair. While she's quite clearly upset that you're not going to let her have some fun, she doesn't openly object.
+		你把她从身上拽下去，从椅子上站起来找着借口。没能和你爽一爽，她虽然感觉很不满，但没有开口反对。
 	</p>
 	<p>
-		[lilaya.speech(If you change your mind, just let me know!)] she says, before backing off a little to give you some space.
+		[lilaya.speech(如果你回心转意，就来找我！)]她说，然后后退一点，给你腾出空间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_LABORATORY_TESTING_ARTHUR -->
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_ARTHUR"><![CDATA[
 	<p>
-		[pc.speech(Have you found a way to get me back home then?)] you ask.
+		[pc.speech(那你有办法让我回家吗？)]你问道。
 	</p>
 	<p>
-		[lilaya.speech(Sorry, but no. That's what I needed to talk to you about,)] Lilaya answers, [lilaya.speech(The truth is, even though I'm considered one of the top experts in all things related to the arcane, I have no idea how you've ended up here.)]
+		[lilaya.speech(对不起，没有。这正是我要和你谈的，)]莉莱雅回答，[lilaya.speech(事实上，尽管我被认为是奥术相关领域的顶尖专家之一，我也不知道你是怎么来到这里的。)]
 	</p>
 	<p>
-		You can't help but feel completely deflated. Although Lilaya's home isn't exactly the worst place to be living, this whole world still makes you feel uneasy. You were rather hoping that this demonic version of your aunt could have found some way to send you back to where you belong, and as she delivers this bad news, you collapse back in your chair and let out a deep sigh.
+		你不禁感到泄气。虽然莉莱雅家并不是最糟糕的地方，但这个世界还是让你感到不安。当她告诉你这个坏消息时，你瘫坐在椅子上，深深地叹了一口气。
 	</p>
 	<p>
-		Seeing your reaction, Lilaya lets out a sigh of her own, before offering you a sliver of hope, [lilaya.speech(Well... I suppose there is <i>one</i> way we could find out more... but it means I'd have to talk to <i>him</i> again. There's no way I'm going over there to ask for his help though!)]
+		看到你的反应，莉莱雅也叹了一口气，但给你带来了一线生机：[lilaya.speech(嗯……我想有<i>一个</i>办法能让我们知道更多……但这意味着我得再和<i>他</i>谈谈。但想让我找他帮忙，门也没有！)]
 	</p>
 	<p>
-		You look up to see Lilaya's face turned up into a scowl as she continues, [lilaya.speech(If you ever want to find a way to go back home, you're going to have to get the help of Arthur... <i>that bastard!</i>)] she spits, before realising how angry she's become. Lilaya closes her eyes for a moment and takes a deep breath, calming herself down before continuing, [lilaya.speech(He and I used to work together, and with the exception of the Lilin themselves, he probably understands more about the arcane than anyone currently living. His apartment's over in Demon Home, but despite the name, people of all races live there. He's actually just a human, which makes his knowledge of the arcane all the more impressive. Here's his address... look for a building called 'Sawlty Towers'. So if you want his help, you're going to have to convince him to stop being such a <i>selfish bastard!</i> He'll need access to my research, and the only way he's going to get it is if he comes crawling to my front door, begging for my forgiveness.)]
+		你看到莉莱雅的脸上浮现出愤怒，她继续说道：[lilaya.speech(如果你想找到回家的路，就必须得到一个人的帮助……亚瑟，<i>那个混蛋</i>！)]她啐了一口，然后才意识到自己变得多么生气。莉莱雅闭上眼睛，深吸一口气，让自己平静下来，然后继续说道：[lilaya.speech(他曾经和我一起工作，他可能比除了莉琳以外任何活着的人都更了解奥术。他的公寓在恶魔之家，虽然名字叫恶魔之家，但那里各种种族的人都有。他其实只是一个人类，这使得他对奥秘的了解更加令人印象深刻。这是他的地址……找一个叫做‘圣尔蒂旅馆’的建筑。如果你想要他的帮助，就得说服他不再那么<i>自私</i>！他会需要使用我的研究，而他唯一能做的就是爬到我家门口，乞求我的原谅。)]
 	</p>
 	<p>
-		You're quite taken aback at Lilaya's apparent hatred for Arthur. You assume, seeing as he shares the same name, that he's this world's version of your [lilaya.relation(pc)] Lily's colleague from the museum. Back there, they were close friends, and you wonder what's happened in this reality to cause Lilaya to dislike him so much. Seeing how angry she's gotten just at the thought of him, you decide that it would be wise not to press the matter further, and instead you just agree to convince Arthur to apologise.
+		莉莱雅对亚瑟的憎恨让你大吃一惊。你猜想，既然他和你同名同姓，那么他就是这个世界的[lilaya.relation(pc)]莉莉在博物馆里的同事。在你的世界，他们是很要好的朋友，你不知道这个世界里发生了什么事，让莉莱雅如此不喜欢他。看到她一想到他就生气的样子，你决定还是不要再追问下去了，而是同意说服亚瑟来道歉。
 	</p>
 	<p>
-		[lilaya.speech(Good, good... Well, anyway, umm, I guess we're done here,)] Lilaya says, but before you can make a move, she nervously picks up the little wand-like instrument she used to test you earlier, and continues, [lilaya.speech(W-Wait, erm, I mean, t-there's some more tests I could... try on you...)]
+		[lilaya.speech(好，好……好吧，不管怎样，嗯，我想我们到此为止吧，)]莉莱雅说，但在你行动之前，她紧张地拿起了之前用来测试你的小魔杖一样的仪器，继续说道，[lilaya.speech(等、等等，呃，我是说，我还可以……在你身上……试试……)]
 	</p>
 	<p>
-		Lilaya seems to have become quite embarrassed by something, and you find this sudden offer of 'more tests' to be pretty suspicious. She's gripping the wand quite tightly now, and you notice her eyes keep glancing down hungrily at your body. You're almost certain that she's just making an excuse to get you to stay here, and the sudden thought that she's trying to hit on you flashes across your mind...
+		莉莱雅似乎因为什么事变得相当尴尬，你觉得她突然提出的“更多测试”非常可疑。她现在紧紧地握着魔杖，你注意到她的眼睛一直饥渴地往下瞟着你的身体。你几乎可以肯定，她只是在找借口让你留在这里。你的脑海里突然闪过一个念头，她在试图勾引你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_ARTHUR_DECLINED"><![CDATA[
 	<p>
-		You make your excuses to Lilaya, and, while she looks a little sad that you're not going to stay with her, she doesn't openly object.
+		你向莉莱雅推辞着。她尽管有些伤心，但没有直言反对。
 	</p>
 	<p>
-		[lilaya.speech(If you change your mind, just let me know!)] she says, before backing off a little to give you some space.
+		[lilaya.speech(如果你回心转意，就来找我！)]她说，然后后退一点，给你腾出空间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA -->
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA"><![CDATA[
 	<p>
-		[pc.speech(Well, if there are more tests you need to run, then sure,)] you say.
+		[pc.speech(好吧，如果你还需要更多的实验数据，那当然可以。)]你说。
 	</p>
 	<p>
-		[lilaya.speech(Excellent! Now, let me just start up here...)] she happily replies.
+		[lilaya.speech(太好了！现在，我们从这里开始吧……)]她显然很高兴。
 	</p>
 	<p>
-		You remain quite still as Lilaya steps in front of you, holding the wand out to run it over your head.
+		当莉莱雅走到你面前，伸出魔杖在你头上划过时，你一动不动。
 		#IF(!pc.isTaur())
-			 As she does this, she places one hand on your shoulder and leans down, lowering her chest so that her large breasts are directly in front of your face.
+			她一边这样做，一边把一只手放在你的肩膀上，然后俯下身，你很难不去注意她那对悬在你眼前的巨乳。
 		#ELSE
-			 As she does this, she places one hand on your shoulder and pushes her chest out, immediately drawing your attention towards her large breasts.
+			她一边这样做，一边把一只手搭在你的肩膀上，挺起胸膛，你的注意力完全被吸引到她那对巨乳上。
 		#ENDIF
-		 You can't help but notice that the top few buttons of both her lab coat and her shirt are undone, giving you a clear display of her impressive cleavage.
+		你的视线落在上面，看到她白大褂和衬衫最上面的几颗扣子都解开了，你清楚地看到了她那令人印象深刻的乳沟。
 	</p>
 	<p>
-		[lilaya.speech(I hope you aren't looking anywhere naughty...)] Lilaya softly whispers in your ear, before straightening back up and moving around behind you.
+		[lilaya.speech(我希望你这个淘气鬼不要偷看哦……)]莉莱雅在你耳边轻声细语，然后重新直起身子，绕到你身后。
 	</p>
 	<p>
-		[pc.speech(What?! No, I-)] you start, but Lilaya cuts you off as she reaches around to put a finger on your lips.
+		[pc.speech(什么？！我，我没有……)]你刚要开口，莉莱雅便打断了你，她伸手在你的嘴唇上轻轻一指。
 	</p>
 	<p>
-		You blush as you feel her free hand press the wand against your inner-thigh, and, still holding her finger over your mouth, she starts to slide the arcane instrument up your body. You can't help but feel aroused as Lilaya presses the wand up and over your chest, while simultaneously trying to push her finger into your mouth.
+		当你感觉到她另外一只手将魔杖抵在你的大腿内侧时，你脸红了。她仍然用手指按住你的双唇，同时将这个奥术工具滑过你的身体。当莉莱雅把魔杖滑到你的胸，同时试图把她的手指伸进你的嘴里时，你不禁感到兴奋了起来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA_DECLINED"><![CDATA[
 	<p>
-		Not feeling completely comfortable with the way your demonic [lilaya.relation(pc)] is trying to get you turned on,
+		你对你[lilaya.relation(pc)]这种勾起你情欲的动作感到不太舒服，
 		#IF(!pc.isTaur())
-			 you quickly stand up and make your excuses as to why you need to leave.
+			于是很快站了起来，找了个溜走的借口。
 		#ELSE
-			 you quickly step back and make your excuses as to why you need to leave.
+			于是很快后退一步，找了个溜走的借口。
 		#ENDIF
-		 While Lilaya looks a little disappointed that you're putting a stop to her advances, she doesn't openly object, and moves back to give you some space, before placing the wand-like instrument back on the table from which it came.
+		虽然莉莱雅看起来对你拒绝她更进一步有些失望，但她并没有说什么，而是向后退了退，给你留出了一些空间，然后把魔杖一样的工具放回了原来的桌子上。
 	</p>
 	<p>
-		[lilaya.speech(If you change your mind and want me to try these... erm... <i>tests</i> again, just let me know,)] Lilaya says, clearly hoping that you will.
+		[lilaya.speech(如果你改变了主意，想再来试试这些……呃……<i>试验</i>，请告诉我。)]你从莉莱雅的话里听出，她很希望你下次再来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA_WANTS_SEX -->
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA_WANTS_SEX"><![CDATA[
 	<p>
-		You part your lips slightly, allowing Lilaya to slip her finger into your mouth. As she slowly starts sliding her digit back and forth past your lips, you notice a faint, salty taste hitting your tongue. As a second finger pushes its way in to join the first, you realise that this is the same hand she was using to finger Rose. Before you can object, you suddenly notice that she's using her free hand to give your groin an experimental squeeze, and, without thinking, you find yourself bucking back against her touch.
+		你微微分开双唇，默许了莉莱雅将手指伸进你的口中。当她的手指在你的口中慢慢抽插时，你尝到了她手指上一点若有若无的咸味。当第二根手指伸进来一并抚摸你时，你意识到这就是她用来玩弄萝丝的那只手。你还来不及抗议，便突然感觉她的另一只手伸向了你的下面，娴熟地轻拢慢捻。你下意识地挺起身，迎合着她的抚摸。
 	</p>
 	<p>
-		[lilaya.speech(Good [pc.girl]...)] she whispers in your ear, [lilaya.speech(And just to think, I was worried that you wouldn't like this...)]
+		[lilaya.speech(好[pc.girl]……)]她伏在你的耳边，轻语着，[lilaya.speech(我还担心你会不喜欢这个……)]
 	</p>
 	<p>
-		You've become so caught up in the moment that you haven't even considered putting an end to all this, but as Lilaya draws her fingers from your mouth, you have a sudden moment of clarity in which you find yourself once again thinking of how similar Lilaya looks and sounds to your aunt Lily.
+		但当莉莱雅从你嘴里抽出手指时，你突然清醒过来，再次意识到莉莱雅的长相和声音与姨妈莉莉是多么相似。
 		#IF(pc.hasFetish(FETISH_INCEST))
-			 As you've got a serious kink for incestuous sex, you can't help but find this fact immensely arousing, and buck your groin even harder into your demonic [lilaya.relation(pc)]'s hand.
+			渴求着乱伦的你想到这里，不由心神荡漾。你更加用力地把下面贴向你恶魔[lilaya.relationship(pc)]的手。
 		#ELSE
-			 Then again, she <i>is</i> [lilaya.a_race] in this reality, so there's no real relation between the two of you... right?
+			你转念一想，这里的她<i>是</i>[lilaya.a_race]，所以你们两个不可能是有血缘关系的亲人，所以，也许并没有什么问题……吧？
 		#ENDIF
 	</p>
 	<p>
-		At that moment, Lilaya leans in to whisper one last thing in your ear,
+		这时，莉莱雅凑到你耳边，在你耳边说了最后一句话，
 		#IF(lilaya.getSubspecies()==SUBSPECIES_DEMON)
-			 [lilaya.speech(You want to see what my hot little demon pussy looks like, don't you?)]
+			[lilaya.speech(你想看看我火辣的恶魔小穴是什么样的，对吧？)]
 		#ELSE
-			 [lilaya.speech(You know, I'm all-demon where it counts... You want to see what a demon's pussy looks like, don't you?)]
+			[lilaya.speech(你知道吗，我关键的地方已经恶魔化了……你想看看恶魔的下体是什么样子，对吧？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA_WANTS_SEX_START"><![CDATA[
 	<p>
-		You briefly wonder if it's your aura that's making Lilaya so horny, but whatever it is, you're feeling the same effects. You've never wanted someone as badly as you want her right now, and you feel your heart pounding as her soft, delicate fingers stroke over your lips. Before you can make the next move, Lilaya suddenly pulls back and takes the initiative. Stepping around to one side, she quickly throws one leg over yours and slides down to sit in your lap, bringing the two of you face-to-face.
+		你曾短暂地怀疑是否是你的灵气让莉莱雅如此饥渴，但不管是什么，你都感受到了同样的效果。你从来没有像现在这样渴望着一个人，当她柔软纤细的手指抚过你的嘴唇时，你感到心跳加速。在你有所反应之前，莉莱雅突然收回手，主动了起来。她走到一边，迅速将一条腿搭在你的腿上，然后滑坐下来，让你们两个面对面。
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to fuck me, make sure you pull out, ok? I'm <b>not</b> getting pregnant!)] she demands.
+			[lilaya.speech(嗯，好！只是，射在外面，好吗？我<b>不想</b>怀孕！)]她说。
 		#ELSEIF(pc.hasStatusEffect(SE_innoxia_amazons_secret) && pc.hasVagina() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to scissor, make sure you pull back before climaxing, ok? I'm <b>not</b> getting pregnant from the effects of Amazon's Secret!)] she demands.
+			[lilaya.speech(嗯，好！只是，我们磨豆腐的时候，你得在高潮前把你的小穴移开，好吗？你现在受到‘亚马逊人的秘术’效果的影响，我<b>并不想</b>因此受孕。)]
 		#ELSE
-			[lilaya.speech(Mmm, yes!)] she giggles.
+			[lilaya.speech(嗯，好啊！)]她开心地咯咯笑着。
 		#ENDIF
 	</p>
 	<p>
-		Before you can reply, your [lilaya.relation(pc)] throws you a quick, seductive smile, before taking your head in both hands and pressing her lips against yours once more. Reaching up, you pull her in close against your body, passionately making out with one another as you both give in to your lust.
+		不等你回答，你的[lilaya.relationship(pc)]便向你抛出诱人的微笑，双手抱住你的头，再次将她的嘴唇贴在你的嘴唇上。你伸手把她拉近自己的身体，热情地同她拥吻起来。你们双双堕落于欲望的泥淖之中，无法自拔。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA_WANTS_SEX_START_TAUR"><![CDATA[
 	<p>
-		You briefly wonder if it's your aura that's making Lilaya so horny, but whatever it is, you're feeling the same effects. You've never wanted someone as badly as you want her right now, and you feel your heart pounding as her soft, delicate fingers stroke over your lips. Before you can make the next move, Lilaya suddenly pulls back and takes the initiative. Stepping around to one side of your [pc.legRace]-like lower body, she sinks to her knees and reaches up to run her fingers once again over your animalistic groin.
+		你曾短暂怀疑过，是不是你的灵气让莉莱雅欲火焚身。但无论如何，你正处于相同的境地之中。你从未如此渴欲某人。细腻的手指按上你的唇，心脏怦怦地加速跳动起来。你尚未行动，莉莱雅突然后撤，占据了主动权。她绕到你[pc.legRace]下半身的一侧，双膝跪地，手指抚上你动物般的腹股沟。
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to fuck me, make sure you pull out, ok? I'm <b>not</b> getting pregnant!)] she demands.
+			[lilaya.speech(嗯，好！只是，射在外面，好吗？我<b>不想</b>怀孕！)]她说。
 		#ELSEIF(pc.hasStatusEffect(SE_innoxia_amazons_secret) && pc.hasVagina() && !lilaya.isVisiblyPregnant() && lilaya.getFetishDesire(FETISH_PREGNANCY).isNegative())
-			[lilaya.speech(Mmm, yes! Just, if you want to scissor, make sure you pull back before climaxing, ok? I'm <b>not</b> getting pregnant from the effects of Amazon's Secret!)] she demands.
+			[lilaya.speech(嗯，好！只是，我们磨豆腐的时候，你得在高潮前把你的小穴移开，好吗？你现在受到‘亚马逊人的秘术’效果的影响，我<b>并不想</b>因此受孕。)]
 		#ELSE
-			[lilaya.speech(Mmm, yes!)] she giggles.
+			[lilaya.speech(嗯，好啊！)]她开心地咯咯笑着。
 		#ENDIF
 	</p>
 	<p>
-		Before you can reply, Lilaya shuffles forwards, moving under your feral body as she prepares to start by using her mouth. Letting out a passionate [pc.moan], you prepare to have some fun with your horny [lilaya.relation(pc)].
+		你还没来得及反应，莉莱雅向前窜身，压住你的兽态身体，准备用嘴服务。你发出情欲的[pc.moan]，准备与欲火焚身的[lilaya.relation(pc)]来一番欢愉。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AUNT_HOME_LABORATORY_TESTING_HORNY_LILAYA_WANTS_SEX_DECLINED"><![CDATA[
 	<p>
-		Not feeling comfortable with the way your demonic [lilaya.relation(pc)] is fully prepared and eager to have sex with you,
+		你对你的恶魔[lilaya.relation(pc)]做好准备，迫切地想和你做爱感到有点不舒服，
 		#IF(!pc.isTaur())
-			 you quickly stand up and make your excuses as to why you need to leave.
+			于是很快站了起来，找了个溜走的借口。
 		#ELSE
-			 you quickly step back and make your excuses as to why you need to leave.
+			于是很快后退一步，找了个溜走的借口。
 		#ENDIF
-		 While Lilaya looks more than a little disappointed that you're putting a stop to all of this, she doesn't openly object, and moves back to give you some space, before placing the wand-like instrument back on the table from which it came.
+		虽然莉莱雅看起来对你不打算更进一步感到非常失望，但她并没有说什么，而是向后退了退，给你留出了一些空间，然后把魔杖一样的工具放回了原来的桌子上。
 	</p>
 	<p>
-		[lilaya.speech(If you change your mind and want me to try these... erm... <i>tests</i> again, just let me know,)] Lilaya says, clearly hoping that you will.
+		[lilaya.speech(如果你改变了主意，想再来试试这些……呃……<i>试验</i>，请告诉我。)]你从莉莱雅的话里听出，她很希望你下次再来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="LILAYA_FRIEND_ACCOMMODATION"><![CDATA[
 	<p>
-		Wanting to ask Lilaya about the possibility of inviting guests to come and live here, you take a step towards your demonic [lilaya.relation(pc)] and ask, [pc.speech(Er, Lilaya, you know all of these empty rooms you've got in your house?)]
+		想向莉莱雅打听一下邀请客人来这里居住的可能性，你向你的恶魔[lilaya.relation(pc)]走了一步，问道：[pc.speech(呃，莉莱雅，你知道你家里的这些空房间吗？)]
 	</p>
 	<p>
-		[lilaya.speech(Mmm, what about them?)] she answers, raising one eyebrow as she peers at you over the top of her glasses.
+		[lilaya.speech(嗯，怎么了？)]她回答道，一边抬起眉毛，一边从眼镜上方注视着你。
 	</p>
 	<p>
-		[pc.speech(Well, I was wondering if I'd be able to use some of them for guests to stay in.)]
+		[pc.speech(呃，我在想我是否能用其中的一些让客人住进去。)]
 	</p>
 	<p>
-		Lilaya lets out a sigh, and, placing her hands on her hips, asks, [lilaya.speech(Who's going to be the one paying for their food and cleaning bills? I trust your judgement, so I don't mind your friends using the spare rooms, but I'm certainly not going to be the one to foot the bill.)]
+		莉莱雅发出一声叹息，双手叉腰，问道：[lilaya.speech(谁来为他们的伙食费和清洁费买单？我相信你的判断力，所以我不介意你的朋友们使用空余的房间，但我肯定不会是那个埋单的人。)]
 	</p>
 	<p>
-		[pc.speech(I'll pay for their rent and expenses,)] you reply. [pc.speech(I'll be able to afford that, don't worry.)]
+		[pc.speech(我会支付他们的房租和费用，)]你回答，[pc.speech(我付得起的，别担心。)]
 	</p>
 	<p>
-		[lilaya.speech(Mmm, well, ok then. After all, the more people living here, the more opportunities I'll have to run some background tests on arcane aura fluctuations. You see, I'm very interested in finding out if your demon-strength aura has any sort of long-term impact on those around you. I doubt that it will, but as far as I'm aware, nobody's done research into this before!)] your [lilaya.relation(pc)] replies, giving you her explicit permission to invite your new friend to come and live here with you.
+		[lilaya.speech(嗯，那好吧。毕竟，住在这里的人越多，我就越有机会对奥术灵气波动进行一些背景测试。你看，我很想知道你恶魔般强壮的灵气是否会对你周围的人产生任何长期影响。我怀疑会有，但就我所知，还没有人做过这方面的研究！)]你的[lilaya.relationship(pc)]回复说，她明确允许你邀请你的新朋友来这里和你一起生活。
 	</p>
 	<p>
-		[pc.speech(Thanks, Lilaya! You have no idea how much you're helping them out by doing this,)] you say, smiling fondly at your [lilaya.relation(pc)] as she pushes her glasses back up to the bridge of her nose.
+		[pc.speech(谢谢你，莉莱雅！你帮了他们一个大忙。)]你说，当她把眼镜重新推到鼻梁上时，你对你的[lilaya.relationship(pc)]深情地微笑着。
 	</p>
 	<p>
-		[lilaya.speech(Y-Yes, well, y-you're welcome,)] Lilaya stutters a little, blushing in response to your heartfelt thanks. [lilaya.speech(Just go to whichever room you'd like to use, then call for Rose to prepare it as a guest bedroom. A-And it's not like I'm doing this just for you or your friend, I-I'm just interested in researching the arcane!)]
+		[lilaya.speech(是，是的，不，不客气。)]面对你的衷心感谢，莉莱雅有点口吃，脸红了，[lilaya.speech(你想用哪个房间就去哪个房间，然后叫萝丝把它准备成客人卧室就可以了。我才不是为了你或你的朋友这么做的，我只是对奥术研究很感兴趣！)]
 	</p>
 	<p>
-		[pc.speech(Ok, thanks again,)] you reply, not wanting to say too much more out of fear of embarrassing your [lilaya.relation(pc)]. Giving her a loving smile, you turn around and head for the lab's exit, determined to return to your friend and invite them to come and live here as soon as possible.
+		[pc.speech(好的，再次感谢。)]你回答道，不想再说太多，怕让你的[lilaya.relationship(pc)]尴尬。给了她一个充满爱意的微笑，你转身向实验室的出口走去，决心尽快回到你的朋友身边，邀请他们来这里生活。
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsGood(You can now invite characters to come and live with you! To do so, you'll need to upgrade one of the empty rooms into a 'Guest Room', before asking the character to move in with you.)]
+		[style.italicsGood(你现在可以邀请角色来和你一起生活了！为此，你需要先将一个空房间升级为“客房”，然后再邀请角色搬来与你同住。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="LILAYA_DOLL_STORAGE"><![CDATA[
 	<p>
-		Wanting to find out if Lilaya would be ok with you storing sex dolls here in her mansion, you start by asking her if she's ever visited Lovienne's Luxuries before.
+				你想知道莉莱雅同不同意你在她的家里放性爱玩偶，于是你问她之前有没有去过洛维耶纳奢侈品店。
+			</p>
+	<p>
+			[lilaya.speech(嗯，我去过。我和赛拉特里克斯挺熟的，)]莉莱雅接着说道，[lilaya.speech(我第一次见她是在她的认可仪式上，那次仪式她把大厅布置的非常低俗。大厅中央大约二十来个未经认可的姐妹浑身赤裸，站在我们所有人面前。在洛维耶纳结束她的仪式之后，赛拉特里克斯邀请了所有来访的宾客随心所欲地使用她们。当然，我没有参与那种……活动。)]
+		</p>
+	<p>
+		[rose.speech(我记得那天晚上你没有回家啊，)]萝丝俏皮地说，莉莱雅的脸一下子就红了。
 	</p>
 	<p>
-		[lilaya.speech(Yes, I've been there before; Saellatrix and I know each other quite well,)] Lilaya responds, before revealing, [lilaya.speech(I first met her when I attended her recognition ceremony. She had quite a vulgar display set up in the centre of the ballroom; about twenty or so of her unrecognised sisters were stripped naked and presenting themselves to us, and once Lovienne had finished her vow, Saellatrix invited all of the guests to use them in any way they wanted. Of course I didn't partake in that...)]
+			[lilaya.speech(赛拉特里克斯太有魅力了，)]你的[lilaya.relation(pc)]辩解了几句，然后尴尬地承认道，[lilaya.speech(好，好吧，那晚我就是和她一起过夜了，行了吧？当时有其他客人当面侮辱我，叫我‘操小恶魔的’，她站出来为我说话。然后，不知怎么的我们就到了她的卧室，而且她还变出了一个巨大的……嗯……总之！你问她的店干什么，[pc.name]？)]
+		</p>
+	<p>
+		你告诉莉莱雅，你看到赛拉特里克斯的店里在出售性爱玩偶。你想知道如果你想买的话，能不能把它们放在房子的空余房间里。
 	</p>
 	<p>
-		[rose.speech(And yet I seem to recall that you didn't come home that night,)] Rose quips, causing Lilaya to blush.
-	</p>
-	<p>
-		[lilaya.speech(Saellatrix was very charming,)] your [lilaya.relation(pc)] says in a defensive tone, before admitting in embarrassment, [lilaya.speech(Y-Yes, I spent the night with her, ok? She stood up for me when some of the other guests called me 'imp-fucker' to my face, and the next thing I knew we were in her bedroom and she'd grown a huge... W-Well... Anyway! Why were you asking about her shop, [pc.name]?)]
-	</p>
-	<p>
-		You tell Lilaya that you've seen the sex dolls which Saellatrix sells there, and was wondering if you could use one of the spare rooms in the mansion in which to store them if you decided to buy any.
-	</p>
-	<p>
-		[lilaya.speech(Oh, well of course,)] Lilaya replies, [lilaya.speech(Saellatrix almost talked me into buying some when I was last there; they're very impressive, but with Rose I simply have no need for them. Now, was there anything else?)]
+		[lilaya.speech(哦，当然可以，)]莉莱雅回答道，[lilaya.speech(上次我去那儿的时候，赛拉特里克斯差点儿就说动我买下几个了，那些玩偶确实很让人印象深刻，但是我已经有萝丝了，那些东西对我没用。那么，你还有别的事吗？)]
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsGood(You can now buy sex dolls from Lovienne's Luxuries! To move them into the mansion, you'll need to upgrade one of the empty rooms into a 'Doll Closet' for them to live in.)]
+		[style.italicsGood(你现在可以在洛维耶纳奢侈品店购买性爱玩偶了！要想将它们移动至宅邸，你需要将一个空房间升级为“玩偶贮藏室”来让它们居住。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="LILAYA_SLAVER_RECOMMENDATION"><![CDATA[
 	<p>
-		You tell Lilaya that you're trying to obtain a slaver license, and that during your attempts to acquire one you were informed that you'd need a letter of recommendation from someone who's already got a license. With that, you lead into asking your [lilaya.relation(pc)] if she could write a letter of recommendation for you.
+		你告诉莉莱雅，你想办一张贩奴许可，但在办理时，你得知需要一封已经获得许可的人的推荐信。于是，你问你的[lilaya.relation(pc)]能否帮你写一封推荐信。
 	</p>
 	<p>
-		Lilaya lets out a little sigh and raises her eyebrow as she hears this. Leaning back in her chair, she asks, [lilaya.speech(I'm fine with writing a letter for you, but have you thought about where you're going to keep your slaves?)]
+		听到这里，莉莱雅微微叹了口气，挑了挑眉毛。她靠在椅子上问道，[lilaya.speech(我可以帮你写一封信，但你想过要把你的奴隶安置在哪里吗？)]
 	</p>
 	<p>
-		Realising that you hadn't thought about the logistics of owning slaves, you tell Lilaya that you haven't got a plan for that yet.
+		你意识到自己的确还没有考虑过这个问题，于是告诉莉莱雅你还没有这方面的计划。
 	</p>
 	<p>
-		[lilaya.speech(I thought not,)] Lilaya responds, before instructing Rose to bring her a piece of paper and a pen. After the cat-girl maid has quickly carried out this order, Lilaya starts writing your letter, speaking to you as she does so, [lilaya.speech(You're going to need a place to keep your slaves. No doubt they'll tell you all this when you receive your license, but the Slavery Administration is only for holding your new slaves until their relocation. It's <i>not</i> a permanent place to keep them. So, you'll be needing somewhere to house your slaves, won't you?)]
+		[lilaya.speech(我猜也是。)]莉莱雅回应道，然后吩咐萝丝拿纸和笔给她。猫女仆很快照做，于是莉莱雅开始写推荐信，一边写一边和你说，[lilaya.speech(你需要一个地方来安置你的奴隶。毫无疑问，他们也会在你领到执照时告诉你这件事，但奴隶管理局只是在你的新奴隶搬过来之前用来临时关押他们的，他们<i>不能</i>一直待在那里。所以，你需要另找一个地方来安置你的奴隶，不是吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_SLAVER_RECOMMENDATION_SLAVE_ACCOMMODATION"><![CDATA[
 	<p>
-		Replying to Lilaya's question in the affirmative, you brace yourself to be on the receiving end of one of your [lilaya.relation(pc)]'s scoldings.
+		在肯定地回答莉莱雅的问题时，你做好了接受你[lilaya.relation(pc)]责骂的准备。
 	</p>
 	<p>
-		[lilaya.speech(Well, luckily for you, I think I can help,)] Lilaya responds, putting your fears of having to endure one of her lectures to rest. Standing up from behind her desk with the completed letter of recommendation in her hand, she states, [lilaya.speech(I'm sure you've noticed, but this house is extremely large, which also means that it's an extremely time-consuming job to keep clean. Isn't that right, Rose?)]
+		[lilaya.speech(还好，算你走运，我能帮你。)]莉莱雅看起来并不是要训斥你。她从办公桌后站起来，手里拿着写好的推荐信，[lilaya.speech(我相信你已经注意到了，这所房子非常大，这也意味着打扫屋子非常耗时。对吧，萝丝？)]
 	</p>
 	<p>
-		[rose.speech(Yes, Mistress!)] Rose's voice calls out from one side of the room.
+		[rose.speech(是，主人！)]萝丝的声音从房间另外一边传来。
 	</p>
 	<p>
-		[lilaya.speech(So, I've got a deal to make. I only ever use my lab and my bedroom, and as you've probably seen, all the other rooms in this house are left empty and unused. I'm willing to let you use those empty rooms as accommodation for your slaves, but only on the condition that you either pay a daily upkeep for each room that you use, or you assign some of your slaves to help with the cleaning. Deal?)] Lilaya offers, tightly holding on to the letter of recommendation as she awaits your answer. 
+		[lilaya.speech(所以，我们来做个交易。我平时只用到了我的实验室和卧室，你可能也看到了，这房子里的其他房间都空着，没有人住。我很乐意让你使用这些空房间作为你奴隶的住处，但条件是你必须为你使用的每个房间支付管理费，或者你必须指派一些奴隶帮忙打扫卫生。你觉得怎么样？)]莉莱雅手里拿着推荐信，等待着你的回答。
 	</p>
 	<p>
-		Thinking that her deal sounds fair enough, you nod in agreement and thank Lilaya for her offer.
+		你认为她的提议听起来很公平，于是点头同意，并感谢莉莱雅的提议。
 	</p>
 	<p>
-		[lilaya.speech(Great!)] Lilaya responds, beaming at you as she gives you the letter. [lilaya.speech(If you want to use any of the rooms to house slaves, just go into the one you'd like and ring the bell-pull. Rose will handle all the necessary arrangements. Oh, and if you'd like to get Rose to manage your slaves for you, she's more than capable. Just ring the little bell beside her room's door, and she'll come running, won't you, Rose?)]
+		[lilaya.speech(很好！)]莉莱雅一边给你信，一边笑着回答，[lilaya.speech(如果你想用哪个房间来安置奴隶，只需要进去然后按铃，萝丝会过去帮你安排的。对了，如果你想让萝丝帮你管理奴隶，她也完全可以胜任。只要按一下房间门边的小铃，她就会过去，对吧，萝丝？)]
 	</p>
 	<p>
-		[rose.speech(Yes, Mistress! I'd love to help,)] Rose obediently replies.
+		[rose.speech(是，主人，乐意效劳！)]萝丝顺从地回答。
 	</p>
 	<p>
-		At that moment your demonic [lilaya.relation(pc)] suddenly seems to recall something, and after raising her finger, she states, [lilaya.speech(I've just remembered that we have several books in the library about slavery. You might want to read up on things. Rose, tell [pc.name] exactly where those slavery books are, will you?)]
+		这时，你的恶魔[lilaya.relationship(pc)]似乎突然想起了什么，她伸出一根手指，[lilaya.speech(我刚想起来，图书馆里有几本关于奴隶的书。你也许想读一读。萝丝，告诉[pc.name]那些关于奴隶的书籍的具体位置，好吗？)]
 	</p>
 	<p>
-		Rushing forwards to obey, Rose tells you in which of the library's many aisles the books on slavery can be found. After thanking both Rose and Lilaya for their help, you wonder what to do next...
+		听话的萝丝很快跑了过来，告诉你在图书馆的哪个过道可以找到有关奴隶的书籍。感谢萝丝和莉莱雅的帮助后，你想知道接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Arthur: -->
 	
 	<htmlContent tag="LAB_ARTHURS_TALE"><![CDATA[
 	<p>
-		Telling Lilaya that you'll help Rose clear out the lab's storeroom, you hope that your reply will calm your [lilaya.relation(pc)] down.
+		告诉莉莱雅你会去帮萝丝清理实验室储物间，你希望你的回应能让[lilaya.relation(pc)]冷静下来。
 	</p>
 	<p>
-		[lilaya.speech(Thank you, [pc.name]. Rose would be able to manage by herself, but it'll be a lot quicker with your help,)] Lilaya says, before stepping to one side and turning to face Arthur, [lilaya.speech(You should let [pc.name] know how you ended up as Zaranix's slave; after all, [pc.she] was the one who went through all that trouble to free you.)]
+		[lilaya.speech(谢谢你，[pc.name]。萝丝自己能行，但有你的帮助会快得多，)]莉莱雅说着，走到一边，转身面对亚瑟，[lilaya.speech(你应该让[pc.name]知道你是怎么成为扎拉尼克斯的奴隶的。毕竟，[pc.she]可是费了九牛二虎之力才把你救出来的。)]
 	</p>
 	<p>
-		[arthur.speech(Yes, Lilaya,)] Arthur responds, before turning to address you. [arthur.speech(We can discuss it a little more some other time, but the basic gist of it is that I decided to do a little research into arcane teleportation.)]
+		[arthur.speech(好的，莉莱雅，)]亚瑟回应道，转向你，[arthur.speech(我们可以改天再讨论这个问题，但基本要点是，我决定对研究一下这个奥术传送术。)]
 	</p>
 	<p>
-		[lilaya.speech(Which is illegal,)] Lilaya interjects.
+		[lilaya.speech(这是非法的。)]莉莱雅打断了他。
 	</p>
 	<p>
-		[arthur.speech(Yes, thank you, Lilaya. Which is illegal. Anyway, thanks to a certain amber-haired demon, who I <i>assumed</i> was no more than a succubus looking to make some quick cash, I ended up creating a teleportation device that actually worked! Well, it sort of worked... It didn't quite take me to where I wanted to go...)]
+		[arthur.speech(是，谢谢你莉莱雅。这是违法的。总之，多亏了一个琥珀色头发的恶魔， 我<i>以为</i>她不过是个想赚快钱的魅魔，我制造了一个能用的传送装置！呃，算是能用……它并没有把我带到我想去的地方……)]
 	</p>
 	<p>
-		You notice Arthur glance across to Lilaya, and the pair of them exchange a slightly worried look, before he continues, [arthur.speech(Anyway, when I returned, I discovered that Amber had already called for the Enforcers. After immediately being enslaved for 'treason', I was quickly shunted through the legal process, and, through a series of bribes, Zaranix quickly gained possession of me. It turned out that he'd been watching me for months, waiting for me to make a mistake so that he could get me enslaved. He was under the rather deluded impression that I'd be able to make a demonic transformative potion, among other things, and that I'd therefore be able to make him rich.)]
+		你注意到亚瑟瞥了莉莱雅一眼，两人交换了一个略带担忧的眼神，然后他继续说，[arthur.speech(总之，当我回来的时候，我发现安柏已经召集了执法者。我立即被以‘叛国’的罪名奴役，然后很快转入了司法程序，通过一系列的贿赂，扎拉尼克斯就得到了我。原来，他已经监视我好几个月了，就等着我犯错，好让我成为他的奴隶。他妄想我能够制作出恶魔转化药水之类的东西，从而让他发财。)]
 	</p>
 	<p>
-		[lilaya.speech(Which could actually be possible, by the way,)] Lilaya interrupts again, leaning back against a desk and crossing her arms.
+		[lilaya.speech(顺带一提，这是有可能的。)]莉莱雅再次打断他，背靠着书桌，双臂交叉。
 	</p>
 	<p>
-		[arthur.speech(Erm, no. It isn't possible. You can harness arcane power to create transformatives for other races, but demonic essence is actually-)]
+		[arthur.speech(呃，不。这是不可能。你可以利用奥术力量为其他种族创造转化，但恶魔精华实际上是——)]
 	</p>
 	<p>
-		[lilaya.speech(Oh please, give me a break. Who was it that said inter-dimensional travel wasn't possible, even when the entire rest of the research community said it was? Oh, that'd be you. And look what's sitting right next to you. Proof that it is possible!)]
+		[lilaya.speech(哦行了，饶了我吧。是谁在整个学界都认为跨维度旅行可行的情况下，还说不可能的？是你。看看你旁边坐着的是什么？证明了这是可行的！)]
 	</p>
 	<p>
-		[arthur.speech(L-Lilaya, we can discuss that another time. What I'm talking about it demonic essences being, by their very nature, incompatible with transformative consumables, or indeed items of any sort!)]
+		[arthur.speech(莉-莉莱雅，我们可以下次再讨论这个问题。我想说的是，恶魔精华就其本质而言，与转化消耗品或任何物品都是不相容的！)]
 	</p>
 	<p>
-		[lilaya.speech(I honestly can't believe how thick you are sometimes, Arthur. But then again, it is to be expected of someone who'd go behind their lover's back to fuck-)]
+		[lilaya.speech(老实说，我真不敢相信你有时会这么愚笨，亚瑟。不过话又说回来，这也是意料之中的，毕竟某人会背着自己的爱人去操——)]
 	</p>
 	<p>
-		[arthur.speech(How many times do I have to apologise?)]
+		[arthur.speech(我到底要道歉多少次？)]
 	</p>
 	<p>
-		[lilaya.speech(Oh, I'm sorry, I thought <i>I</i> was talking. But that's ok. Seeing as you want to interrupt me, you're obviously very eager to talk about how much you liked fucking her behind my back, so please, do go on!)]
+		[lilaya.speech(哦，对不起，我以为<i>我</i>在说话。不过没关系。既然你想打断我，显然你很想谈谈你有多喜欢背着我干她，所以，继续，继续！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

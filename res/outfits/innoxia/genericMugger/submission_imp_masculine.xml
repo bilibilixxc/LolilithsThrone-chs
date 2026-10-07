@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Look in the mods folder for a commented version of this. -->
 <outfit>
 	<coreAttributes>
-		<name><![CDATA[generic imp mugger (masculine)]]></name>
+		<name><![CDATA[一般小恶魔劫匪(男性化)]]></name>
 		
-		<description><![CDATA[Crude clothing and weapons...]]></description>
+		<description><![CDATA[粗制衣物和武器。]]></description>
 		
 		<femininity>MASCULINE</femininity>
 		

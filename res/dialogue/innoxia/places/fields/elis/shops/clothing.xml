@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_shops_clothing -->
@@ -9,12 +9,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(9, 17))
-						Enter the clothing shop.
+						进入服装店。
 					#ELSE
-						As the shop is currently closed, you'll have to come back at another time...
+						现在关门了，你只能换个时间再来……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -42,12 +42,12 @@
 		<responseTabs>
 			<tab index="0"><![CDATA[
 				#IF(flags.hasFlag(FLAG_innoxia_elis_clothing_visited))
-					Trade
+					交易
 				#ENDIF
 			]]></tab>
 			<tab index="1"><![CDATA[
 				#IF(flags.hasFlag(FLAG_innoxia_elis_clothing_visited))
-					Talk
+					交谈
 				#ENDIF
 			]]></tab>
 		</responseTabs>
@@ -57,8 +57,8 @@
 				<availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Introduction]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the cow-girl who you are.]]></responseTooltip>
+				<responseTitle><![CDATA[介绍]]></responseTitle>
+				<responseTooltip><![CDATA[告诉牛女你是谁。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_clothing_talk]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/clothing', 'CLOTHING_INTRO'))]
@@ -72,8 +72,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[1]]></index>
-					<responseTitle><![CDATA[Female Clothing]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what items of feminine clothing Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[女性服装]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的女性服装……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -86,8 +86,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[2]]></index>
-					<responseTitle><![CDATA[Female Lingerie]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what items of feminine underwear Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[女性内衣]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的女性内衣……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -100,8 +100,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[3]]></index>
-					<responseTitle><![CDATA[Female Accessories]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what feminine accessories Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[女式配件]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的女式配件……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -115,8 +115,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[6]]></index>
-					<responseTitle><![CDATA[Male Clothing]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what items of masculine clothing Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[男性服装]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的男性服装……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -129,8 +129,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[7]]></index>
-					<responseTitle><![CDATA[Male Underwear]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what items of masculine underwear Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[男性内衣]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的男性内衣……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -143,8 +143,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[8]]></index>
-					<responseTitle><![CDATA[Male Accessories]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what masculine accessories Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[男式配件]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的男式配件……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -158,8 +158,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[11]]></index>
-					<responseTitle><![CDATA[Unisex Clothing]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what items of unisex clothing Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[通用服装]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的通用服装……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -172,8 +172,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[12]]></index>
-					<responseTitle><![CDATA[Unisex Underwear]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what items of unisex underwear Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[通用内衣]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的通用内衣……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -186,8 +186,8 @@
 					<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 					<responseTabIndex><![CDATA[0]]></responseTabIndex>
 					<index><![CDATA[13]]></index>
-					<responseTitle><![CDATA[Unisex Accessories]]></responseTitle>
-					<responseTooltip><![CDATA[Take a look at what unisex accessories Monica has for sale...]]></responseTooltip>
+					<responseTitle><![CDATA[通用配件]]></responseTitle>
+					<responseTooltip><![CDATA[看看莫妮卡出售的通用配件……]]></responseTooltip>
 					<nextDialogue/>
 					<tradingVariables enabled="true">
 						<tradePartner><![CDATA[monica]]></tradePartner>
@@ -200,8 +200,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_elis_clothing_visited)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Monica and head out of her store...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[和莫妮卡告别，离开小店……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_shops_street"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -214,13 +214,13 @@
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[15]]></secondsPassed>
-				<responseTitle><![CDATA[Small talk]]></responseTitle>
+				<responseTitle><![CDATA[闲谈]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_monica_talk_small))
-						You've already spent time asking Monica about how her day is going today...
-						<br/>[style.italics(You should come back tomorrow if you wanted to talk to her about this again.)]
+						你已经问过莫妮卡今天过得怎么样了……
+						<br/>[style.italics(如果你还想问这个问题，只能明天再来。)]
 					#ELSE
-						Ask Monica how her day is going.
+						询问莫妮卡进今天过得怎么样。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -241,13 +241,13 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Business]]></responseTitle>
+				<responseTitle><![CDATA[交易]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_monica_talk_business))
-						You've already spent time asking Monica about how business has been today...
-						<br/>[style.italics(You should come back tomorrow if you wanted to talk to her about this again.)]
+						你已经问过莫妮卡今天生意如何了……
+						<br/>[style.italics(如果你还想问这个问题，只能明天再来。)]
 					#ELSE
-						Ask Monica about how business has been today.
+						询问莫妮卡进今天的生意如何。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -269,13 +269,13 @@
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
-				<responseTitle><![CDATA[Elis]]></responseTitle>
+				<responseTitle><![CDATA[伊利斯]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_monica_talk_elis))
-						You've already spent time asking Monica about Elis today...
-						<br/>[style.italics(You should come back tomorrow if you wanted to talk to her about this again.)]
+						你已经问过莫妮卡怎么看待伊利斯了……
+						<br/>[style.italics(如果你还想问这个问题，只能明天再来。)]
 					#ELSE
-						Ask Monica about what she thinks of Elis.
+						问问莫妮卡她怎么看待伊利斯。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -296,13 +296,13 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[History]]></responseTitle>
+				<responseTitle><![CDATA[历史]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_monica_talk_history))
-						You've already spent time asking Monica about her past and how she came to own this shop today...
-						<br/>[style.italics(You should come back tomorrow if you wanted to talk to her about this again.)]
+						你已经问过莫妮卡关于她的过去以及她是如何拥有这家商店的了……
+						<br/>[style.italics(如果你还想问这个问题，只能明天再来。)]
 					#ELSE
-						Ask Monica about her past and how she came to own this shop.
+						询问莫妮卡关于她的过去以及她是如何拥有这家商店的。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -326,8 +326,8 @@
 					<availabilityConditional><![CDATA[[#pc.hasQuest(QUEST_LINE_SIDE_EISEK_STALL) && pc.getQuest(QUEST_LINE_SIDE_EISEK_STALL) == QUEST_EISEK_STALL_QUEST_STAGE_ONE]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Fabric?]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Monica if she'd be willing to sell you some fabric for Eisek's stall.]]></responseTooltip>
+				<responseTitle><![CDATA[织物？]]></responseTitle>
+				<responseTooltip><![CDATA[询问莫妮卡愿不愿意卖你一些艾瑟克摊位的织物。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_clothing_talk_fabric]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.setQuestProgress(QUEST_LINE_SIDE_EISEK_STALL, QUEST_EISEK_STALL_QUEST_STAGE_TWO))]
@@ -341,8 +341,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Pick up order]]></responseTitle>
-				<responseTooltip><![CDATA[It hasn't been three days since you placed your order yet.]]></responseTooltip>
+				<responseTitle><![CDATA[自取]]></responseTitle>
+				<responseTooltip><![CDATA[你下单还不到三天。]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 				<effects/>
 			</response>
@@ -357,16 +357,16 @@
 				<index><![CDATA[10]]></index>
 					<responseTitle><![CDATA[
 						#IF(pc.getMoney() < 2500)
-							Pick up order ([style.moneyFormatUncoloured(2500, span)])
+							自取([style.moneyFormatUncoloured(2500, span)])
 						#ELSE
-							Pick up order ([style.moneyFormat(2500, span)])
+							自取([style.moneyFormat(2500, span)])
 						#ENDIF
 					]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney() < 2500)
-						You need two thousand five hundred flames to pay for your order, and you don't have that much money!
+						你需要2500火币才能付账，你没有这么多钱！
 					#ELSE
-						Pick up your order from Monica.
+						从莫妮卡这自取。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -391,8 +391,8 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_monica_talk_history) && !flags.hasFlag(FLAG_innoxia_monica_talk_milker_unlocked)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Milking issues]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Monica what issues she's having with her daily milking.]]></responseTooltip>
+				<responseTitle><![CDATA[产奶问题]]></responseTitle>
+				<responseTooltip><![CDATA[询问莫妮卡在每天的挤奶过程中遇到了哪些问题。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_clothing_talk]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/clothing', 'CLOTHING_TALK_MILKING'))]
@@ -404,14 +404,14 @@
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<colour><![CDATA[QUEST_RELATIONSHIP]]></colour>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Offer help]]></responseTitle>
+				<responseTitle><![CDATA[提供帮助]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isLactationContentEnabled())
-						Tell Monica that you'd be willing to travel to her old farm and retrieve her personalised breast pump.
-						<br/>[style.italicsQuestRomance(This will start Monica's romance quest!)]
+						告诉莫妮卡，你愿意前往她的老农场取回她的定制吸奶器。
+						<br/>[style.italicsQuestRomance(这将开启与莫妮卡的浪漫任务！)]
 					#ELSE
-						Monica's romance quest involves milking content, and so isn't suitable for if you don't like that sort of thing...
-						<br/>[style.italicsBad(You need to turn on lactation content to access this quest.)]
+						莫妮卡的浪漫任务涉及挤奶内容，不适合不喜欢这类内容的人……
+						<br/>[style.italicsBad(你需要打开泌乳内容才能访问此任务。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -434,12 +434,12 @@
 				<availabilityConditional><![CDATA[[#pc.hasQuest(QUEST_LINE_ROMANCE_MONICA) && !pc.isQuestCompleted(QUEST_LINE_ROMANCE_MONICA)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Give milker]]></responseTitle>
+				<responseTitle><![CDATA[挤奶]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getQuest(QUEST_LINE_ROMANCE_MONICA)==QUEST_ROMANCE_MONICA_3_THE_JOURNEY_HOME)
-						Give Monica her personalised breast pump.
+						递给莫妮卡定制吸奶器。
 					#ELSE
-						You need to retrieve Monica's personalised breast pump before being able to give it her!
+						你要先取回莫妮卡的定制吸奶器，才能给她！
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -462,13 +462,13 @@
 				<availabilityConditional><![CDATA[[#pc.isQuestCompleted(QUEST_LINE_ROMANCE_MONICA)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Milk her]]></responseTitle>
+				<responseTitle><![CDATA[给她挤奶]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_monica_milked))
-						You've already milked Monica today...
-						<br/>[style.italics(You should come back tomorrow if you wanted to milk her again.)]
+						你今天已经给莫妮卡挤过奶了……
+						<br/>[style.italics(如果你还想给她挤奶，只能明天再来。)]
 					#ELSE
-						Ask Monica if she'd like some help being milked...
+						询问莫妮卡需不需要你帮忙给她挤奶……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -484,13 +484,13 @@
 				<availabilityConditional><![CDATA[[#game.isSillyMode()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Big boobs]]></responseTitle>
+				<responseTitle><![CDATA[大咪咪]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_monica_talk_boobies))
-						You've already commented on the size of Monica's breasts today.
-						<br/>[style.italics(You should come back tomorrow if you wanted to talk to her about this again.)]
+						你今天已经评价过莫妮卡的乳房尺寸了。
+						<br/>[style.italics(如果你还想聊这个，只能明天再来。)]
 					#ELSE
-						Make a comment on how large Monica's breasts are.
+						评价莫妮卡的巨大乳房。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -511,8 +511,8 @@
 			<response>
 				<responseTabIndex><![CDATA[1]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Monica and head out of her store...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[和莫妮卡告别，离开小店……]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_shops_street"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -543,8 +543,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Pump]]></responseTitle>
-				<responseTooltip><![CDATA[Do as Monica asks and use her breast pump to milk her.]]></responseTooltip>
+				<responseTitle><![CDATA[泵]]></responseTitle>
+				<responseTooltip><![CDATA[照莫妮卡说的做，用吸奶器给她挤奶。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_clothing_milking_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/clothing', 'CLOTHING_MILKING_PUMP'))]
@@ -554,8 +554,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Massage]]></responseTitle>
-				<responseTooltip><![CDATA[Offer to massage Monica's breasts while she operates the pump.]]></responseTooltip>
+				<responseTitle><![CDATA[按摩]]></responseTitle>
+				<responseTooltip><![CDATA[在莫妮卡用吸奶器的时候帮她按摩乳房。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_clothing_milking_finished]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/shops/clothing', 'CLOTHING_MILKING_MASSAGE'))]
@@ -565,12 +565,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Use mouth]]></responseTitle>
+				<responseTitle><![CDATA[用嘴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-						Offer to suckle on Monica's breasts and drink her milk instead of using the pump.
+						代替吸奶器给莫妮卡吸乳房，喝下乳汁。
 					#ELSE
-						As you cannot gain access to your mouth, you're not able to suckle on Monica's breasts and drink her milk instead of using the pump...
+						你不能碰自己的嘴，没办法代替吸奶器给莫妮卡吸奶……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -603,8 +603,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Monica that you were happy to have been of help and take your leave.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告诉莫妮卡你很高兴能帮上忙，现在要离开了。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_shops_street"/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -615,8 +615,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Fuck her]]></responseTitle>
-				<responseTooltip><![CDATA[Monica is clearly extremely turned on. You could offer to help her get some sexual relief...]]></responseTooltip>
+				<responseTitle><![CDATA[操她]]></responseTitle>
+				<responseTooltip><![CDATA[莫妮卡的媚态展露无遗。你可以帮她浇灭性欲之火……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_elis_monica_generic]]></id>
@@ -642,8 +642,8 @@
 	</scene>
 	
 	<scene id="milking_sex_end">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Monica is satisfied and brings an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[莫妮卡很满足，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/shops/clothing">CLOTHING_MILKING_FINISHED_SEX_END</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -652,8 +652,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Monica that you were happy to have been of help and take your leave.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告诉莫妮卡你很高兴能帮上忙，现在要离开了。]]></responseTooltip>
 				<nextDialogue stripContent="true" defaultPlaceType="innoxia_fields_elis_shops_street"/>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[

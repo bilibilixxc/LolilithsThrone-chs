@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Entrance]]></name>
-	<tooltipDescription><![CDATA[One of the two entrances to 'The Red Dragon' tavern.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the entrance to 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[入口]]></name>
+	<tooltipDescription><![CDATA[红龙酒馆的两个入口之一。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆入口]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

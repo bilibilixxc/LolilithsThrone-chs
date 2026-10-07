@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Market's Centre]]></name>
-	<tooltipDescription><![CDATA[The centre of the Farmer's Market is used as a livestock market on Wednesdays and Saturdays, and used for games stalls on all other days of the week.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the Farmer's Market in Elis]]></virginityLossDescription>
+	<name><![CDATA[市场中心]]></name>
+	<tooltipDescription><![CDATA[在周三和周六农贸市场的中心进行家畜交易，而在剩下的日子里这里提供给游戏摊位。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_TAN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

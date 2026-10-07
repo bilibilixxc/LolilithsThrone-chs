@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Themiscyra smithies]]></name>
-	<tooltipDescription><![CDATA[The place where weapons and armour were once made with which to equip the town's all-female army.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside the smithies in Themiscyra]]></virginityLossDescription>
+	<name><![CDATA[特弥斯库拉铁匠铺]]></name>
+	<tooltipDescription><![CDATA[在这里，武器和装备被锻造出来用于武装小镇的军队。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在特弥斯库拉的铁匠铺旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_STEEL</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

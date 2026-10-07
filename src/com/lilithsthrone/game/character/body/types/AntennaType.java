@@ -25,12 +25,12 @@ public class AntennaType {
 	public static final AbstractAntennaType NONE = new AbstractAntennaType(
 			BodyCoveringType.ANTENNA,
 			Race.NONE,
-			"none",
-			"antenna",
-			"antennae",
+			"无",
+			"触须",
+			"触须",
 			new ArrayList<>(),
 			new ArrayList<>(),
-			"<br/>[npc.Name] now [npc.has] [style.boldTfGeneric(no antennae)].",
+			"<br/>[npc.Name]现在[style.boldTfGeneric(没有触须)]。",
 			"") {
 	};
 

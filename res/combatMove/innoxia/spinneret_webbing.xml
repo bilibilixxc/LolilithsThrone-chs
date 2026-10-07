@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	
 	<category>SPECIAL</category>
@@ -7,10 +7,10 @@
 	
 	<equipWeighting>10</equipWeighting>
 	
-	<name><![CDATA[Spin web]]></name>
+	<name><![CDATA[织丝结网]]></name>
 	
 	<description><![CDATA[
-		Use [npc.her] spinneret to fire a stream of sticky webbing at [npc.her] target.
+		用[npc.her]的丝囊向目标射出粘网。
 	]]></description>
 	
 	<damageType><![CDATA[
@@ -54,7 +54,7 @@
 	</availabilityCondition>
 	
 	<availabilityDescription><![CDATA[
-		Available to characters who have a spinneret.
+		仅适用于有丝囊的角色。
 	]]></availabilityDescription>
 	
 	<!-- Once started to cocoon a target, the AI will become more and more interested in finishing the cocooning process off. -->
@@ -75,37 +75,37 @@
 	]]></criticalCondition>
 	
 	<criticalDescription><![CDATA[
-		Cannot critically hit.
+		无法暴击。
 	]]></criticalDescription>
 	
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] spinneret to fire a stream of sticky webbing at [npc2.name].
+		用[npc.her]的丝囊向[npc2.name]喷射粘网
 	]]></movePredictionDescriptionWithTarget>
 	
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] spinneret to fire a stream of sticky webbing at [npc.her] target.
+		用[npc.her]的丝囊向目标喷射粘网
 	]]></movePredictionDescriptionNoTarget>
 	
 	<performMove>
 		<execute><![CDATA[
-			[npc.Name] [npc.verb(point)] [npc.her] spinneret at [npc2.name], and before [npc2.sheIs] able to dodge out of the way, [npc.name] [npc.verb(fire)] a sticky stream of thick, strong webbing all over [npc2.herHim]!
+			[npc.Name]将[npc.her]的丝囊对准[npc2.name]，在[npc2.sheIs]做出闪避之前向喷射了一张粘稠、结实的网！
 			#IF(npc2.hasStatusEffect(SE_WEBBED_3))
 				[##npc2.setHealth(0)]
-				<br/>[style.italicsTerrible([npc2.NameIsFull] now totally wrapped up in a cocoon, and as such [npc2.is] completely defeated!)]
+				<br/>[style.italicsTerrible([npc2.NameIsFull]被完全包裹在一个茧里，[npc2.she]被彻底击败！)]
 			#ELSEIF(npc2.hasStatusEffect(SE_WEBBED_2))
 				[##npc2.removeStatusEffectCombat(SE_WEBBED_2)]
 				[##npc2.addStatusEffect(SE_WEBBED_3, 10)]
-				<br/>[style.italicsTerrible([npc2.NameIsFull] almost totally wrapped up in a cocoon, and as such [npc2.is] near to being completely defeated!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] webbed again, [npc2.she] will be instantly defeated!)]
+				<br/>[style.italicsTerrible([npc2.NameIsFull]几乎完全被包裹在一个茧里，[npc2.she]马上要被击败了！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再次被网住，[npc2.she]将立即被击败！)]
 			#ELSEIF(npc2.hasStatusEffect(SE_WEBBED_1))
 				[##npc2.removeStatusEffectCombat(SE_WEBBED_1)]
 				[##npc2.addStatusEffect(SE_WEBBED_2, 10)]
-				<br/>[style.italicsBad([npc2.NameIsFull] seriously caught up in strong, sticky webbing, and as such [npc2.is] struggling to fight back!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] webbed again, this effect will become extremely serious!)]
+				<br/>[style.italicsBad([npc2.NameIsFull]被网粘住了，[npc2.she]正在奋力反抗！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再次被网住，束缚效果会更进一步！)]
 			#ELSE
 				[##npc2.addStatusEffect(SE_WEBBED_1, 10)]
-				<br/>[style.italicsBad([npc2.NameIsFull] caught up in strong, sticky webbing, and as such [npc2.her] ability to fight back is impaired!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] webbed again, this effect will become more serious!)]
+				<br/>[style.italicsBad([npc2.NameIsFull]被网缠住，[npc2.she]的反击能力受到了影响！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再次被网住，束缚效果会更进一步！)]
 			#ENDIF
 		]]></execute>
 		<critDescription><![CDATA[

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Look in the mods folder for a commented version of this. -->
 <outfit>
 	<coreAttributes>
-		<name><![CDATA[generic fishnet prostitute (feminine)]]></name>
+		<name><![CDATA[一般渔网服娼妓(女性化)]]></name>
 		
-		<description><![CDATA[Revealing fishnet clothing.]]></description>
+		<description><![CDATA[裸露的渔网服]]></description>
 		
 		<femininity>FEMININE</femininity>
 		

@@ -55,7 +55,7 @@ public class LilayasRoom {
 	
 	public static AbstractClothing lilayasPanties;
 	
-	public static final DialogueNode ROOM_LILAYA = new DialogueNode("Lilaya's Room", ".", false) {
+	public static final DialogueNode ROOM_LILAYA = new DialogueNode("莉莱雅的房间", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -79,9 +79,9 @@ public class LilayasRoom {
 			}
 			if (index == 1) {
 				if(!Main.game.isExtendedWorkTime()) {
-					return new Response("Lilaya's Room", "The door is firmly shut and locked at the moment...", null);
+					return new Response("莉莱雅的房间", "房门现在紧锁着……", null);
 				}
-				return new Response("Lilaya's Room", "Have a look around Lilaya's room.", ROOM_LILAYA_INSIDE);
+				return new Response("莉莱雅的房间", "看看莉莱雅的房间。", ROOM_LILAYA_INSIDE);
 
 			}  else {
 				return null;
@@ -89,7 +89,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode ROOM_LILAYA_INSIDE = new DialogueNode("Lilaya's Room", ".", true) {
+	public static final DialogueNode ROOM_LILAYA_INSIDE = new DialogueNode("莉莱雅的房间", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -104,10 +104,10 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Leave", "Step back out into the corridor.", ROOM_LILAYA);
+				return new Response("离开", "退回到转角处。", ROOM_LILAYA);
 
 			} else if (index == 1) {
-				return new Response("Panties", "Look through Lilaya's pile of panties.", PANTIES,
+				return new Response("内裤", "看看莉莱雅的那堆内裤。", PANTIES,
 						Util.newArrayListOfValues(Fetish.FETISH_INCEST), CorruptionLevel.TWO_HORNY,
 						null, null, null) {
 					@Override
@@ -128,7 +128,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode PANTIES = new DialogueNode("Lilaya's Room", ".", true) {
+	public static final DialogueNode PANTIES = new DialogueNode("莉莱雅的房间", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -143,7 +143,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			 if (index == 0) {
-				return new Response("Leave", "Step back out into the corridor.", ROOM_LILAYA) {
+				return new Response("Leave", "退回到转角处。", ROOM_LILAYA) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/lilayasHome/lilayasRoom", "PANTIES_EXIT"));
@@ -151,7 +151,7 @@ public class LilayasRoom {
 				};
 
 			} else if (index == 1) {
-				return new ResponseSex("Panty Masturbation", "Use Lilaya's panties to help you masturbate.",
+				return new ResponseSex("拿内裤自慰", "用莉莱雅的内裤作为自慰材料。",
 						true, true,
 						new SMMasturbation(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotMasturbation.KNEELING_PANTIES))) {
@@ -169,7 +169,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode PANTIES_POST_MASTURBATION = new DialogueNode("Finished", "As you stop masturbating, you wonder what you should do with Lilaya's panties next...", true) {
+	public static final DialogueNode PANTIES_POST_MASTURBATION = new DialogueNode("结束", "你结束自慰时，不禁在想接下来该拿莉莱雅的内裤做什么……", true) {
 
 		@Override
 		public String getContent() {
@@ -179,13 +179,13 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Hide", "Quickly hide underneath Lilaya's bed, taking the panties along with you.", HIDE);
+				return new Response("藏起", "快速藏到莉莱雅的床下，顺道拿上内裤。", HIDE);
 
 			} else if (index == 2) {
-				return new Response("Flee", "Quickly make your exit, taking the panties along with you.", FLEE);
+				return new Response("逃走", "迅速寻找出路，顺道拿上内裤。", FLEE);
 
 			} else if (index == 3) {
-				return new Response("Enjoy Panties", "Surely Rose isn't going to come in here... You think it'd be safe to just continue enjoying Lilaya's panties.", CAUGHT) {
+				return new Response("享受内裤", "萝丝肯定不会来这的……你觉得就这样继续享受莉莱雅的内裤不会出事。", CAUGHT) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Rose.class).setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_LILAYA);
@@ -199,7 +199,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode HIDE = new DialogueNode("Lilaya's Room", ".", true) {
+	public static final DialogueNode HIDE = new DialogueNode("莉莱雅的房间", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -214,7 +214,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "Now that Rose has left, you can safely step back out into the corridor.", ROOM_LILAYA);
+				return new Response("离开", "萝丝现在已经离开了，你可以安全的回到走廊里了。", ROOM_LILAYA);
 
 			} else {
 				return null;
@@ -222,7 +222,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode FLEE = new DialogueNode("Lilaya's Room", ".", true) {
+	public static final DialogueNode FLEE = new DialogueNode("莉莱雅的房间", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -237,7 +237,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Your room", "Continue on down the corridor to your room.") {
+				return new ResponseEffectsOnly("你的房间", "回到走廊里，前往你的房间。") {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_PLAYER);
@@ -251,7 +251,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode CAUGHT = new DialogueNode("Lilaya's Room", ".", true) {
+	public static final DialogueNode CAUGHT = new DialogueNode("莉莱雅的房间", "。", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -266,7 +266,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Apologise", "Say sorry to Rose.", APOLOGY) {
+				return new Response("道歉", "对萝丝道歉。", APOLOGY) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Rose.class).incrementAffection(Main.game.getPlayer(), 10));
@@ -274,7 +274,7 @@ public class LilayasRoom {
 				};
 					
 			} else if(index==2) {
-				return new Response("Threaten", "Threaten Rose and tell her that she'll be sorry if she tells Lilaya about this.", THREATEN) {
+				return new Response("威胁", "威胁萝丝，告诉她要是敢跟莉莱雅说这事，她肯定会后悔的。", THREATEN) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Rose.class).incrementAffection(Main.game.getPlayer(), -25));
@@ -282,7 +282,7 @@ public class LilayasRoom {
 				};
 
 			} else if (index == 3) {
-				return new ResponseEffectsOnly("Leave", "Make some quick excuses and rush past Rose back to your room.") {
+				return new ResponseEffectsOnly("离开", "随便扯点借口，从萝丝身旁冲走，回到你的房间。") {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.roseToldOnYou, true);
@@ -299,7 +299,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode APOLOGY = new DialogueNode("Lilaya's Room", ".", true, true) {
+	public static final DialogueNode APOLOGY = new DialogueNode("莉莱雅的房间", "。", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -314,7 +314,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Beg", "Beg Rose not to tell Lilaya.", BEG) {
+				return new Response("恳求", "求求萝丝不要告诉莉莱雅。", BEG) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Rose.class).incrementAffection(Main.game.getPlayer(), 15));
@@ -322,7 +322,7 @@ public class LilayasRoom {
 				};
 					
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Leave", "Tell Rose not to let Lilaya know, and rush off back to your room.") {
+				return new ResponseEffectsOnly("离开", "让萝丝不要把事情说给莉莱雅，然后冲回自己的房间里。") {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.roseToldOnYou, true);
@@ -339,7 +339,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode BEG = new DialogueNode("Lilaya's Room", ".", true, true) {
+	public static final DialogueNode BEG = new DialogueNode("莉莱雅的房间", "。", true, true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -354,7 +354,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Submit", "Let Rose push you back on to the bed and fuck you.",
+				return new ResponseSex("屈服", "放任萝丝将你推回床上上你",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 						null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true, false,
@@ -400,7 +400,7 @@ public class LilayasRoom {
 				};
 					
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Refuse", "Refuse Rose's offer and rush off back to your room.") {
+				return new ResponseEffectsOnly("拒绝", "回绝萝丝的提议，冲回你自己的房间。") {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.roseToldOnYou, true);
@@ -417,7 +417,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode AFTER_ROSE_AS_DOM = new DialogueNode("Finished", "Feeling as though she's 'punished' you enough, Rose brings an end to the sex.", true) {
+	public static final DialogueNode AFTER_ROSE_AS_DOM = new DialogueNode("结束", "她感觉已经“惩罚”够你了，便决定结束这场性爱。", true) {
 
 		@Override
 		public String getContent() {
@@ -427,7 +427,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Leave", "Hurry back to your room.") {
+				return new ResponseEffectsOnly("离开", "匆匆回到你的房间内。") {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_PLAYER);
@@ -455,7 +455,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Wait", "Do as Rose says and wait while Lilaya comes up to her room to confront you.", THREATEN_WAIT) {
+				return new Response("等待", "按萝丝说的做，等莉莱雅回到房间来跟你当面对质。", THREATEN_WAIT) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.roseToldOnYou, false);
@@ -465,7 +465,7 @@ public class LilayasRoom {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Flee", "Not wanting to be confronted by Lilaya, you rush off back to your room.") {
+				return new ResponseEffectsOnly("逃跑", "你冲回了自己的房间，没等莉莱雅来对峙。") {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.roseToldOnYou, true);
@@ -494,7 +494,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Submit", "Doing as Lilaya says, you decide to submit and apologise to Rose, letting her decide how best to punish you...", THREATEN_SUBMIT) {
+				return new Response("屈服", "你按莉莱雅说的做，屈服并向萝丝道歉，让她决定该如何惩罚你……", THREATEN_SUBMIT) {
 					@Override
 					public Colour getHighlightColour() {
 						return PresetColour.GENERIC_SEX;
@@ -523,7 +523,7 @@ public class LilayasRoom {
 //				
 //			}
 			else if (index == 2) {
-				return new ResponseEffectsOnly("Apologise", "Not wanting to risk Lilaya's wrath, you quickly apologise and hurry back to your room.") {
+				return new ResponseEffectsOnly("道歉", "你并不愿面对莉莱雅的怒火，迅速地道了歉，冲回了自己的房间。") {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.roseToldOnYou, false);
@@ -554,7 +554,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Lilaya's pussy", "Tell Rose that you like the taste of Lilaya's pussy.",
+				return new ResponseSex("莉莱雅的小穴", "跟萝丝说你很喜欢莉莱雅小穴的味道。",
 						true, false,
 						new SMAllFours(
 								Util.newHashMapOfValues(
@@ -658,7 +658,7 @@ public class LilayasRoom {
 				};
 					
 			} else if(index==2) {
-				return new ResponseSex("Lilaya's cock", "Tell Rose that you want Lilaya to grow a cock for you to suck.",
+				return new ResponseSex("莉莱雅的阴茎", "跟萝丝说你很想让莉莱雅长根家伙让你尝尝。",
 						true, false,
 						new SMAllFours(
 								Util.newHashMapOfValues(
@@ -768,7 +768,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode AFTER_LILAYA_AND_ROSE_AS_DOMS = new DialogueNode("Finished", "Feeling as though she's 'punished' you enough, Rose brings an end to the sex.", true) {
+	public static final DialogueNode AFTER_LILAYA_AND_ROSE_AS_DOMS = new DialogueNode("结束", "萝丝觉得对你的“惩罚”已经足够了，便结束了这场性爱。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -780,7 +780,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Leave", "Hurry back to your room.") {
+				return new ResponseEffectsOnly("离开", "匆匆回到你的房间内。") {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/lilayasHome/lilayasRoom", "AFTER_LILAYA_AND_ROSE_AS_DOMS_LEAVE"));
@@ -809,7 +809,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Fuck Lilaya", "Have dominant sex with Rose and Lilaya.",
+				return new ResponseSex("操莉莱雅", "与萝丝和莉莱雅做爱，作支配位。",
 						true, false,
 						new SMAllFours(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotAllFours.BEHIND)),
@@ -825,7 +825,7 @@ public class LilayasRoom {
 						UtilText.parseFromXMLFile("places/dominion/lilayasHome/lilayasRoom", "LILAYA_AS_SUB_START"));
 					
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Leave", "Turn down Rose's offer and head back to your room.") {
+				return new ResponseEffectsOnly("离开", "回绝萝丝的提议，回到你的房间里。") {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/lilayasHome/lilayasRoom", "DOMINATE_LEAVE"));
@@ -842,7 +842,7 @@ public class LilayasRoom {
 		}
 	};
 	
-	public static final DialogueNode AFTER_LILAYA_AS_SUB = new DialogueNode("Finished", "Having had your fun with Lilaya, you bring an end to the sex.", true) {
+	public static final DialogueNode AFTER_LILAYA_AS_SUB = new DialogueNode("结束", "你已经跟莉莱雅享乐够了，决定结束这场性爱。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -855,7 +855,7 @@ public class LilayasRoom {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Leave", "Head back to your room.") {
+				return new ResponseEffectsOnly("离开", "回到你的房间。") {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/lilayasHome/lilayasRoom", "AFTER_ROSE_AND_LILAYA_AS_SUBS_LEAVE"));

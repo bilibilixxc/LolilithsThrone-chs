@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_otter</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[otter]]></transformationName>
+	<transformationName><![CDATA[水獭]]></transformationName>
 	
 	<!-- The base type of this fluid.
 	Hard-coded values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/body/valueEnums/FluidTypeBase.java -->
@@ -36,12 +36,12 @@
 	<!-- The descriptors which should be drawn upon when describing a masculine character's fluid of this type.
 	Additional fluid descriptors are generated based on the fluid's properties (such as its modifiers, flavour, etc.), so these descriptors should only be related to the race itself. -->
 	<descriptorsMasculine>
-		<name><![CDATA[otter]]></name>
+		<name><![CDATA[水獭]]></name>
 	</descriptorsMasculine>
 	
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<name><![CDATA[otter]]></name>
+		<name><![CDATA[水獭]]></name>
 	</descriptorsFeminine>
 	
 	<!-- The fluid modifiers which this fluid has by default .

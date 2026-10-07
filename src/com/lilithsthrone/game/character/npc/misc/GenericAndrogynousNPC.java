@@ -31,7 +31,7 @@ public class GenericAndrogynousNPC extends NPC {
 	}
 	
 	public GenericAndrogynousNPC(boolean isImported) {
-		super(isImported, new NameTriplet("Someone"), null, "Generic androgynous.",
+		super(isImported, new NameTriplet("某人"), null, "中性通用。",
 				25, Month.JUNE, 15,
 				1, Gender.N_P_V_HERMAPHRODITE, Subspecies.HUMAN, RaceStage.HUMAN,
 				new CharacterInventory(false, 0), WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL, true);
@@ -44,7 +44,7 @@ public class GenericAndrogynousNPC extends NPC {
 	public void loadFromXML(Element parentElement, Document doc, CharacterImportSetting... settings) {
 		loadNPCVariablesFromXML(this, null, parentElement, doc, settings);
 		
-		this.setName(new NameTriplet("Someone"));
+		this.setName(new NameTriplet("某人"));
 	}
 	
 	@Override

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1000</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Jack-o'-Lantern]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Jack-o'-Lanterns]]></namePlural>
-		<description><![CDATA[A pumpkin that's not only had a frightening face carved into it, but which has also been enchanted so as to glow with an inner light. A hole has been cut out of the bottom of it, allowing someone to wear it like a helmet.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[南瓜灯头套]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[南瓜灯头套]]></namePlural>
+		<description><![CDATA[一个雕刻了可怕面孔的南瓜灯头套，还被施加了附魔，使其内部发光。底部切开了一个洞，使人可以像头盔一样戴在头上。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -19,8 +18,8 @@
 		<stickers>
 			<category id="Face" priority="1">
 				<sticker id="creepy" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Creepy]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Creepy]]></namePrefix>
+					<stickerName><![CDATA[毛骨悚然]]></stickerName>
+					<namePrefix priority="1"><![CDATA[毛骨悚然]]></namePrefix>
 					<descriptionModification/>
 					<imageName zLayer="1" slot="HEAD">jack_o_lantern_creepy.svg</imageName>
 					<itemTagsAdded/>
@@ -29,8 +28,8 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="grin" priority="2" defaultSticker="false" zLayer="1">
-					<stickerName><![CDATA[Grin]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Grin]]></namePrefix>
+					<stickerName><![CDATA[咧嘴]]></stickerName>
+					<namePrefix priority="1"><![CDATA[咧嘴]]></namePrefix>
 					<namePostfix/>
 					<descriptionModification/>
 					<imageName>jack_o_lantern_grin.svg</imageName>
@@ -75,27 +74,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the Jack-o'-Lantern onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the Jack-o'-Lantern onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the Jack-o'-Lantern onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将南瓜灯头套戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将南瓜灯头套戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将南瓜灯头套戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] Jack-o'-Lantern.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] Jack-o'-Lantern.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] Jack-o'-Lantern.]]>
-    </otherRough>
+    <self><![CDATA[
+			[npc.Name]摘下[npc.her]的南瓜灯头套。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的南瓜灯头套脱下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的南瓜灯头套。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

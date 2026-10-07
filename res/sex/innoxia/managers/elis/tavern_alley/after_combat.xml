@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[table]]></deskName>
+	<deskName><![CDATA[桌子]]></deskName>
 	<title/>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[false]]></subHasEqualControl>
@@ -13,14 +13,14 @@
 	<publicSex>
 		<isPublic><![CDATA[true]]></isPublic>
 		<startingDescription><![CDATA[
-			With the chaotic brawl continuing to take place all throughout the tavern, you and [attacker.name] are very much on public display as you have sex...
+			整个酒馆争吵不休，你和[attacker.name]的性爱也被公之于众……
 		]]></startingDescription>
 		<randomDescriptions enabled="true">
-			<description><![CDATA[A couple of nearby combatants pause for a moment to laugh and cheer at your lewd display.]]></description>
-			<description><![CDATA[You hear someone in the tavern wolf-whistling as they watch you and [attacker.name] go at it.]]></description>
-			<description><![CDATA[Over the sound of smashing bottles and breaking furniture, you somehow manage to hear someone nearby commenting on your performance.]]></description>
-			<description><![CDATA[Cheering and laughing, several rowdy combatants find a moment of peace in the chaos to watch and cheer you and [attacker.name] on.]]></description>
-			<description><![CDATA[You glance across to see a couple of defeated combatants touching themselves as they watch you and [attacker.name] have sex.]]></description>
+			<description><![CDATA[附近的几个战士停下来，为你好色淫荡的表演而大笑和欢呼。]]></description>
+			<description><![CDATA[人们围观着[attacker.name]和你的激情表演，你听见旅店某处的一声流氓哨。]]></description>
+			<description><![CDATA[在打碎酒瓶和打碎家具的声音中，你不知怎么听到了附近有人在评论你的表演。]]></description>
+			<description><![CDATA[几个粗暴的斗殴者在混乱中达成片刻和平，观看并为你和[attacker.name]加油助威。]]></description>
+			<description><![CDATA[你看向四周，发现一些战败者在围观你和[attacker.name]做爱时逐渐开始用手抚摸起自己。]]></description>
 		</randomDescriptions>
 	</publicSex>
 	<characterInformationContainer>

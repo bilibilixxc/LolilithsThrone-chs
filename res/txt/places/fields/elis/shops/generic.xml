@@ -1,227 +1,228 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		The link between this shopping precinct and the rest of Elis takes the form of a wide gap between a couple of residential buildings. A large sign proudly names this precinct as 'Wall's End', with an additional touristy-looking information board situated right in the middle of the path.
+		这个购物区与伊利斯其他地区之间的联系是在几栋住宅楼之间的一条宽阔的空隙中建立起来的。一个大牌子自豪地将这个购物区命名为“墙之尽头”，小路正中还设有一个游客模样的信息板。
 	</p>
 	<p>
-		Large wooden plant boxes line the sides of this entranceway, and are filled with a dazzling array of brightly-coloured flowers.
+		入口两侧排列着大大的木制植物箱，里面摆满了五颜六色的花朵。
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17)
-			 With the information board quite clearly listing the standard opening times of the precinct's stores as [style.colourMinorGood([units.time(9)]-[units.time(17)])], it's no wonder that there are a considerable amount of people passing through this entrance.
+			信息板上清楚标明商业区商店的标准营业时间为[style.colourMinorGood([units.time(9)]-[units.time(17)])]，难怪有那么多人进进出出。
 		#ELSE
-			 Despite the information board quite clearly listing the standard opening times of the precinct's stores as [style.colourMinorBad([units.time(9)]-[units.time(17)])], there's still the occasional person passing through this entrance.
+			尽管信息板上清楚标明商业区商店的标准营业时间为[style.colourMinorBad([units.time(9)]-[units.time(17)])]，但偶尔还是有人从入口进出。
 		#ENDIF
 	</p>
 	<p>
-		From here you have the limited options of heading into Wall's End, exiting back out into Elis, or reading the information board...
+		从这里你可以选择进入墙之尽头、从出口回到伊利斯，或者阅读信息板上的信息……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_INFO"><![CDATA[
 	<p>
-		Deciding to take a moment to read the touristy-looking information board, you [pc.walk] over to it and scan over the following:
+		你决定花一点时间阅读这块旅游信息看板。你[pc.walk]过去，扫视到以下内容：
 	</p>
 	<hr/>
 	<i>
 		<p style='text-align:center; font-size:1.1em'>
-			<b>Wall's End</b>
+			<b>墙之尽头</b>
 			<br/>
-			Standard Opening Times: [units.time(9)]-[units.time(17)]
+			标准营业时间：[units.time(9)]-[units.time(17)]
 		</p>
 		<p>
-			<b>History</b>
+			<b>历史</b>
 			<br/>
-			How did this shopping precinct come into being? Why is it called 'Wall's End'? And why is it needed when the farmer's market already exists? Woah, so many questions! Thankfully, all three can be answered by recounting a little of our wonderful town's history!
+			这个购物区是如何诞生的？为什么叫做“墙之尽头”？当农贸市场已经存在时，为什么还需要它？哇，好多问题啊！幸好，通过回顾一下我们美好小镇的历史，这三个问题都能得到解答。
+	
+		<br/><br/>
+			正如你可能已经知道的，在过去我们的小镇只是一个村子，尽管是一个注定会成长为莉莉丝王国中最佳小镇的村子。当然，像任何人口不断增长的地方一样，伊利斯很快就需要不只是市场摊位的商业场所。因此，我们出色的市长米诺塔莉丝决定需要创建一个购物区。
 			<br/><br/>
-			As you might already know, in the past our town was just a village, although a village that was destined to grow into the best town in all of Lilith's Realm. Of course, as with any growing population, Elis soon had need of commercial premises which couldn't be accommodated by simple market stalls. As such, our wonderful mayor, Minotallys, decreed that a shopping precinct needed to be created.
+			这一决定恰好与伊利斯有史以来最雄心勃勃的建设项目相吻合。当地人称之为“北部扩张”，部分防御墙需要被拆除并重建，以便容纳一个全新的城区。你现在站的地方就是北墙曾经所在的地方，因此大家一致同意这个购物区应该以“墙之尽头”的名字来纪念那段历史。
 			<br/><br/>
-			This decision coincided with the most ambitious construction project Elis has ever seen. Known to the locals as 'the northern expansion', a portion of the defensive walls needed to be torn down and rebuilt so as to accommodate an entirely new district. Where you're standing right now is where that northern wall once stood, hence it was agreed that this shopping precinct should honour that history by being called 'Wall's End'!
-			<br/><br/>
-			I hope that answers your questions, and now you can get to shopping! Make sure to spend lots of money to help keep our economy ticking!
+			希望这回答了你的问题，现在你可以开始购物了！多花点钱促进我们的经济发展！
 		</p>
 		<br/>
 		<p>
-			<b>Businesses</b>
+			<b>商业</b>
 			<br/>
-			Here at Wall's End we've got a convenience store, a place for clothes shopping, and even a massage parlour! Who needs to go to Dominion when you've got everything you could ever need right here?!
+			在墙之尽头，我们有便利店、服装店，甚至还有按摩店！当你能在这里找到你所需要的一切时，谁还需要去御城区呢？
 			<br/><br/>
-			Most businesses are open six days a week, between [units.time(9)]-[units.time(17)]. The convenience store is open 24/7, however, so even if it's the middle of the night there's no reason for you not to come in and take a look around!
+			大多数商家每周开放六天，时间在[units.time(9)]-[units.time(17)]之间。但便利店全天24小时开放，所以即使是半夜，也没有不进来看看的理由！
 		</p>
 		<p style='text-align:center; font-size:0.75em'>
-			This information has been provided by the Elis tourism board. For complaints or queries, please inquire at the town hall.
+			这些信息由伊利斯旅游局提供。有任何投诉或疑问，请咨询市镇议会。
 		</p>
 	</i>
 	<hr/>
 	<p>
-		Having read through all of the information the sign contains, there's little else for you to do except [pc.step] back and decide where to go next...
+		读完了标牌上所有的信息后，你没什么别的事好干了，只能[pc.step]开并思考接下来要去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Having concluded your business at Wall's End, you head out of the exit and find yourself back in the streets of Elis once again... 
+		结束在墙之尽头的事务后，你走出出口，发现自己又回到了伊利斯的街道上……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FOUNTAIN"><![CDATA[
 	<p>
-		In the very middle of Wall's End, facing the entrance, there's a large statue of the town's mayor, Minotallys. Expertly carved from white marble, this depiction of the town's favourite minotauress is wearing nothing except the jewellery which adorns her horns, fingers, and tail.
+		在墙之尽头的正中央，正对着入口处，有一尊巨大的米诺塔莉丝镇长雕像。这座雕像由白色大理石精雕细琢而成，是镇上最受欢迎的女米诺陶洛斯的形象，除了角、手指和尾巴上的饰品外，她什么也没戴。
 	</p>
 	<p>
-		With a playful grin on her face, this marble mimicry of Minotallys is using one hand to cover her pussy, while her other arm is crossed over beneath her huge breasts. Dual streams of water are being expelled from her large, puffy nipples, which fall down into the pool beneath her with a gentle splashing sound.
+		米诺塔莉丝的这个大理石像脸上带着俏皮的笑容，一只手遮住自己的阴部，另一只手则交叉放在巨大的乳房下面。两股水流从饱满的大乳头中喷涌而出，落在身下的水池中，发出轻轻的水花声。
 	</p>
 	<p>
-		A bronze plaque attached to the plinth upon which this statue stands reads: 'Funds for the creation and installation of this fountain were donated by the residents of Elis. Long may Minotallys guide us to prosperity!'
+		这座雕像矗立的基座上有一块铜牌，上面写着：“建造和安装这座喷泉的资金由伊利斯居民捐赠。愿米诺塔莉丝指引我们走向繁荣！”
 	</p>
 	<p>
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17)
 			#IF(game.getCurrentWeather()!=WEATHER_RAIN)
-				Other than a few people who have decided to make use of the raised edge of the pool to sit down and take a rest,
+				除了几个人坐在水池边休息一下之外，
 			#ELSE
-				With most of the people in the precinct hurrying from one shop to another in order to avoid the rain,
+				为了避雨，这地方的大多数人都匆匆忙忙地走进了商店里，
 			#ENDIF
-			 nobody seems to be paying the fountain much attention, and with your interest similarly not being held for too long, you prepare to continue on your way...
+			似乎没有人注意到喷泉的存在，你的兴趣也同样没有持续太久，于是你准备继续前行……
 		#ELSE
-			Out of the very few people who are in the precinct at this hour, none of them are paying the fountain much attention, and with your interest similarly not being held for too long, you prepare to continue on your way...
+			此时此刻，在这片区域内寥寥无几的人中，没有一个人注意到喷泉的存在，而你的兴趣也同样没有持续太久，于是准备继续前行……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GENERIC_SHOP"><![CDATA[
 	<p>
-		For every one of the stores which are of interest to you, there are one or two that offer goods or services which are of no use to you whatsoever. Ranging from furniture stores to first-floor accountants offices, you pass by these businesses without giving them so much of a second glance.
+		在你感兴趣的每一家商店的旁边，都有一两家无法提供对你有任何作用的商品或服务。从家具店到二楼的会计师事务所，你不经意地与这些商店擦肩而过。
 	</p>
 	<p>
-		It's in front of one of these generic shops which you currently find yourself standing.
+		你现在正站在一家商店门前。
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17)
-			 Although its opening hours are clearly displayed in the window as [style.colourMinorGood([units.time(9)]-[units.time(17)])], the goods within are of no interest to you, and as such there's nothing for you to do here...
+			尽管窗口清晰显示开放时间为[style.colourMinorGood([units.time(9)]-[units.time(17)])]，你对里面的货物不感兴趣，所以你无事可做……
 		#ELSE
-			 With its opening hours clearly displayed in the window as [style.colourMinorBad([units.time(9)]-[units.time(17)])], there's nothing for you to do here...
+			窗口清晰显示开放时间为[style.colourMinorBad([units.time(9)]-[units.time(17)])]，你无事可做……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAWN"><![CDATA[
 	<p>
-		A long, rectangular strip of grass sits in the middle of Wall's End,
+		墙之尽头中间有一条长方形的草地，
 		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-			 and despite the fact that the roofs and tops of the nearby lampposts are covered in snow, the lawn has somehow been kept clear, allowing you to admire its vivid green, perfectly-cut appearance.
+			尽管屋顶和附近的灯柱顶上都积满了雪，但草坪上却没有一丁点积雪，让人可以欣赏到草坪鲜绿、剪裁完美的外观。
 		#ELSE
-			 and from its vivid green, perfectly-cut appearance, looks to be very well maintained.
+			从其鲜绿色和完美切割的外观来看，保养得非常好。
 		#ENDIF
-		 Several small signs have been placed along the lawn's edge, but instead of ordering people to keep off, they instead declare that walking over or sitting upon the grass is encouraged.
+		草坪边上竖立着几块小牌子，但这些牌子并没有命令人们远离草坪，而是鼓励人们在草坪上行走或坐下。
 	</p>
 	<p>
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17)
 			#IF(game.getSeason()==SEASON_WINTER)
-				Despite the signs' message, there aren't many people willing to sit out in the cold, and other than the few people who are walking over it to reach the other side of the precinct, the lawn is completely deserted.
+				尽管标志上这么写着，但没几个人愿意坐在寒冷的室外，除了寥寥几人穿过草坪到购物区对面，草坪上空无一人。
 			#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-				Despite the signs' message, there aren't many people willing to sit out in the rain, and other than the few people who are hurrying over it to reach the other side of the precinct, the lawn is completely deserted.
+				尽管标志上这么写着，但没几个人愿意坐在雨中，除了寥寥几人匆匆穿过草坪到购物区对面，草坪上空无一人。
 			#ELSE
-				Perhaps due in part to the signs' message, there are quite a few people lounging around and even picnicking on the grass, and you have to adjust your path several times to avoid these groups.
+				也许是因为标志这么写着，有相当多的人在草地上休憩甚至野餐，你只能反复调整前进路线来避开他们。
 			#ENDIF
 		#ELSE
-			Due to the fact that there are very few people in the precinct at this hour, the lawn is completely deserted.
+			这个时候购物区里的人很少，所以草坪上空无一人。
 		#ENDIF
-		 Not having much to do here, you continue on your way across the lawn to the other side of the shopping precinct...
+		你在这里无事可做，于是你穿过草坪前往购物区的另一侧……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STREET"><![CDATA[
 	<p>
-		Running around the shopping precinct in a circular fashion, this cobblestone street is very similar to the ones found throughout the rest of Elis. While the arcane street lamps are slightly different to the others in the town, they're still of an old, ornate design which adds to the surrounding timber-framed buildings' appearance to give this area a late-medieval aesthetic.
+		这条鹅卵石街道环绕着购物区，与伊利斯其他地方的街道非常相似。虽然街灯与镇上其他地方的街灯略有不同，但它们仍然采用了古老而华丽的设计，与周围的木结构建筑相得益彰，给人一种中世纪晚期的美感。
 	</p>
 	<p>
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17)
-			Thanks to the hour of day,
+			在这个时间点，
 			#IF(game.getDayOfWeek()!=DOW_SUNDAY)
-				 all
-			#ELSE
-				 some
+				所有商店都
+		#ELSE
+				一些商店
 			#ENDIF
-			 of the shops here are currently open, and there are a great deal of people either walking around with shopping bags in their hands or
+			正在营业中，许多人手拿购物袋四处走动，或者
 			#IF(game.getCurrentWeather()==WEATHER_RAIN)
-				 standing beneath the shops' canvas awnings so as to be protected from the rain.
+				站在商店的帆布遮阳篷下避雨。
 			#ELSE
-				 sitting on one of the many wooden benches which line the sides of the street.
+			坐在街道两旁的木椅上。
 			#ENDIF
 		#ELSE
-			Due to the current hour, almost all of the shops here are currently closed, although there are still some people to be seen either out taking a walk around the precinct or heading to or from the convenience store.
+			因为到现在这个时间点了，几乎所有商店都关门了，但仍有一些人在购物区内闲逛或往返于便利店。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS"><![CDATA[
 	<p>
-		Wherever there's a concentration of members of the public, there exists the need for offering restroom facilities. Wall's End is no exception to this, and has met this need by converting the ground floor of one of the timber-framed buildings into public toilets.
+		只要有民众聚集，就需要提供洗手间，墙之尽头也不例外。为了满足这一需求，它将一栋木结构建筑的一楼改建为公共厕所。
 	</p>
 	<p>
-		A sign next to the entrance informs you that these facilities are open 24/7 and are cleaned at least once per hour, in addition to asking members of the public to please treat the toilets with respect. An additional sign has been attached beneath this one at what you assume to be a later date, and reminds the reader that the creation of glory holes in the stalls is considered to be vandalism, and is punishable by a fine of up to one hundred flames.
+		门口的标志显示本公厕全天候开放，且每小时至少打扫一次，此外它还要求民众爱护厕所。这下面还有个后续立的标志提醒阅读者，在隔间上挖寻欢洞是故意破坏行为，最高可被处以100火币的处罚。
 	</p>
 	<p>
-		If you wanted to, you could head inside the public toilets and make use of them, or instead turn around and head back into Wall's End...
+		只要你想，你可以走进公共厕所方便，或者掉头返回墙之尽头……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_INTERIOR"><![CDATA[
 	<p>
-		Deciding that you want to make use of the public toilets, you head inside and take a look around. While the stalls and sinks are of the usual public restroom quality, everything looks to be very well maintained, with the entire interior being nothing short of spotlessly clean. The steady hum of arcane-powered ventilation shafts produces a slightly-unpleasant monotonous background noise, but it's a minor discomfort worth paying to ensure that the air is kept fresh and odour-free.
+		你决定使用公共厕所，便走进去四处看看。虽然厕位和洗手池的质量与一般的公共厕所无异，但一切看起来都保养得很好，整个内部一尘不染。弧形通风井发出的持续嗡嗡声产生了略微令人不快的单调背景噪音，但为了确保空气清新、无异味，这种小小的不适是值得付出的代价。
 	</p>
 	<p>
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17)
-			A few of the stalls are currently occupied, while a couple of members of the public are making use of the sinks before heading back out into Wall's End to continue their shopping. As you walk past these people,
+			一些隔间现在有人，一些人在回墙之尽头继续购物之前先洗手。你穿过这些人，
 		#ELSE
-			Due to the current time, these toilets are completely deserted. As you walk down the entire length of the restroom,
+			因为到这个点了，厕所空无一人。你走过整个洗手间，
 		#ENDIF
 		#IF(!game.getDialogueFlags().hasFlag(FLAG_innoxia_elis_toilets_hole_ever_made))
-			 you notice that there's not a single glory hole between any of the stalls, and you wonder if the exterior sign's threat of a fine has put people off making one, or if the local population just aren't into that sort of thing...
+			发现每个隔间都没有寻欢洞，你思索究竟是因为外面标志的罚款警告让人们推迟了制作，还是当地人不喜欢这种东西……
 		#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_innoxia_elis_toilets_hole_made))
-			 you see that the glory hole which you previously made hasn't yet been repaired, and you wonder if it's worth the risk of being discovered and fined to make use of it...
+			你看到你之前挖的寻欢洞还没有被修，思索自己是否要冒着被发现和罚款的风险来使用它……
 		#ELSE
-			 you notice that the glory hole which you previously made has been flawlessly repaired, and you wonder if it's worth the risk of being discovered and fined to make another one...
+			你看到你之前挖的寻欢洞已经恢复如初，思索自己是否要冒着被发现和罚款的风险再挖一个……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_LEAVE"><![CDATA[
 	<p>
-		Having finished with the public restrooms, you head back out into the shopping precinct...
+		用完公共厕所后，你回到购物区……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_USE"><![CDATA[
 	<p>
-		[pc.Stepping] into one of the empty stalls, you turn and lock the door behind you, before making use of the toilet. After you've finished, you flush the toilet before making your way over to one of the sinks and washing your [pc.hands]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你[pc.Stepping]进一个空隔间，转身锁上身后的门，然后上厕所。如厕完毕后，你冲完马桶后便走到水槽前洗净双手，再从旁边的纸巾机拿起一张纸巾，把手迅速擦干。你转身面向房间，思索接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_WASH"><![CDATA[
 	<p>
-		Feeling like you could do with having a quick clean, you step over to the sinks and thoroughly wash your [pc.hands], before splashing some water on your [pc.face]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你觉得自己可以做个快速清洁，于是走到水池边仔细洗了洗[pc.hands]，然后往[pc.face]上扑了些水。结束后，你从旁边的纸巾机抽出纸巾，迅速擦干皮肤，然后转身面向房间，下一步要做什么呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_MAKE_HOLE"><![CDATA[
 	<p>
-		Looking around to make sure that there's no member of the cleaning staff or an Enforcer in the restroom, you enter one of the stalls and take out your bladed weapon. Slicing it into the thin wooden wall of the stall, you swiftly slice it around in a small circle, before popping out the round piece of wood and admiring the glory hole you've just made.
+		你环顾四周，确保洗手间里没有清洁人员或执法者，然后走进其中一个隔间，拿出刀刃武器。你将刀刃插入隔间薄薄的木壁上，迅速划了一个小圈，然后掰出那块圆木片，欣赏着自己刚刚开出的寻欢洞。
 	</p>
 	<p>
-		Feeling turned on at the thought of being the one responsible for the lewd acts which will undoubtedly be performed in this stall's immediate future, you put away your blade and take a look through to the stall that's connected to this one. Nobody's in there right now, but it's only a matter of time before your act of vandalism is discovered, and you wonder whether it's time for you to leave or to risk the chance of being fined in order to dominantly use the glory hole or submissively service it...
+		一想到这个隔间马上就会发生色情的事，你就兴奋不已。你收好刀片，仔细看向与之相连的隔间。现在空无一人，但你的破坏行为被发现只是时间问题，你思索是该离开，还是冒着被罚款的风险在寻欢洞提供服务……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

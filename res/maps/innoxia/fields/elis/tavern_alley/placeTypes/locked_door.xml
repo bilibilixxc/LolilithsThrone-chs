@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[locked door]]></name>
-	<tooltipDescription><![CDATA[A locked door bars members of the public from accessing the VIP area.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[锁住的门]]></name>
+	<tooltipDescription><![CDATA[一扇上锁的门来防止公众进入VIP区。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在十字利刃]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>door</svgName>
 	<colour>BASE_CRIMSON</colour>

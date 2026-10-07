@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>600</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[maid's headpiece]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[maid's headpieces]]></namePlural>
-		<description><![CDATA[A heavily stylised maid's headpiece, it consists of a coloured headband with a decorative white lace attached on top.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[女仆头饰]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[女仆头饰]]></namePlural>
+		<description><![CDATA[一条很有风格的女仆头饰，彩色的头带上带有白色的蕾丝边。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>HEAD</slot>
@@ -46,27 +45,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-		<![CDATA[[npc.Name] [npc.verb(place)] the headpiece onto [npc.her] head.]]>
-    </self>
-    <other>
-		<![CDATA[[npc.Name] [npc.verb(place)] the headpiece onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-		<![CDATA[[npc.Name] roughly [npc.verb(push)] the headpiece onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将头饰戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将头饰戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将头饰戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-		<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] headpiece.]]>
-    </self>
-    <other>
-		<![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] headpiece.]]>
-    </other>
-    <otherRough>
-		<![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] headpiece.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的头饰脱下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的头饰脱下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的头饰。
+]]></otherRough>
   </displacementText>
   
 </clothing>

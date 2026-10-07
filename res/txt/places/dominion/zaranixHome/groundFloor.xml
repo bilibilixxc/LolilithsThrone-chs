@@ -1,911 +1,910 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	<p>
-		Keen to put an end to your lengthy pursuit of Arthur, you once again find yourself travelling through the district of Dominion known as 'Demon Home'. Following the directions that you received from Scarlett, you soon locate Zaranix's house, which lies only a couple of streets away from your elusive quarry's apartment building. With a wry grin, you take a moment to reflect on the fact that Arthur was right under your nose this whole time, before focusing your attention on the building in front of you.
+		你为了尽快找到亚瑟，又一次来到了御城区内享有“恶魔之家”称号的区域。你循着斯嘉丽给的方向，很快到了扎拉尼克斯家。它离你难以捉摸的猎物的公寓楼居然只有几条街。你哭笑不得，好一会儿才接受亚瑟就在你眼皮子底下的事实。现在，你把注意力放到了眼前的建筑物上。
 	</p>
 	<p>
-		Much like all the other buildings in this area of the city, Zaranix's home takes the form of a grand, regency-style town-house. Unlike the majority of the other buildings, however, his home has what appears to be a modestly sized private garden adjoining the property to the right-hand side. A cast-iron fence, standing at around [units.size(250)], separates the garden from the street in which you're standing, but despite its height, you're sure that you could climb over it if you wanted to try and sneak inside.
+		扎拉尼克斯家和城市里这片区域的其他建筑一样，是摄政时期风格的宏伟联排别墅。不似大多数，别墅右侧还有一座大小适中的私人花园。[units.size(250)]高的铸铁栅栏恰到好处地分隔开花园和你所处的街道。但你敢相信，这种高度根本挡不住你翻栅栏偷溜进去。
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
 			#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=1)
-				Then again, you could always just knock on the door yet again. Perhaps the fiery-haired maid will be less angry this time?
+				不过，你可以再敲敲门。或许这次红发女仆的火气会小点？
 			#ELSE
-				Then again, you could always just knock on the door like a regular visitor. Perhaps you could convince whoever answers to let you see Arthur?
+				不过，你可以装作普通客人敲敲门。或许应门的人会带你见亚瑟？
 			#ENDIF
 		#ELSE
-			Due to the unsociable hour, you're certain that the house will be securely locked, and that nobody will come to answer the door if you were to knock it
+			这种不合时宜的时间，你敢肯定房门紧锁了。即使你敲门，也没人会应
 			#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE) >= 35)
-				, but you could always kick it down. Then again, it might be best to return at a more reasonable time, such as between [style.colourMinorBad([units.time(6)] and [units.time(22)])]...
+				，但你可以踢门。又或许，最好换个合适的时间来，比如[style.colourMinorBad([units.time(6)]-[units.time(22)])]……
 			#ELSE
-				. It might be best to return at a more reasonable time, such as between [style.colourMinorBad([units.time(6)] and [units.time(22)])]...
+				。最好换个合适的时间来，比如[style.colourMinorBad([units.time(6)]-[units.time(22)])]……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="OUTSIDE_REPEAT"><![CDATA[
 	<p>
-		Once more you find yourself standing outside Zaranix's home. Much like all the other buildings in this area of the city, the incubus's residence takes the form of a grand, regency-style town-house. Unlike the majority of the surrounding buildings, however, there's a modestly sized private garden adjoined to the right-hand side of the property. A tall, cast-iron fence separates this garden from the street in which you're standing, but despite its height, you're sure that you could climb over it if you wanted to try and sneak inside.
+		你又一次站在了扎拉尼克斯家外。扎拉尼克斯家和城市里这片区域的其他建筑一样，是摄政时期风格的宏伟联排别墅。不似大多数，别墅右侧还有一座大小适中的私人花园。[units.size(250)]高的铸铁栅栏恰到好处地分隔开花园和你所处的街道。但你敢相信，这种高度根本挡不住你翻栅栏偷溜进去。
 	</p>
 		#IF(!game.isExtendedWorkTime())
 			<p>
-				Due to the unsociable hour, you're certain that the house will be securely locked, and that nobody will come to answer the door if you were to knock it
+				这种不合时宜的时间，你敢肯定房门紧锁了。即使你敲门，也没人会应
 				#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE) >= 35 && !game.getDialogueFlags().hasFlag(FLAG_zaranixKickedDownDoor))
-					, but you could always kick it down. Then again, it might be best to return at a more reasonable time, such as between [style.colourMinorBad([units.time(6)] and [units.time(22)])]...
+					，但你可以踢门。又或许，最好换个合适的时间来，比如[style.colourMinorBad([units.time(6)]-[units.time(22)])]……
 				#ELSE
-					. It might be best to return at a more reasonable time, such as between [style.colourMinorBad([units.time(6)] and [units.time(22)])]...
+					。最好换个合适的时间来，比如[style.colourMinorBad([units.time(6)]-[units.time(22)])]……
 				#ENDIF
 			</p>
 		#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_REPEAT_HOSTILE_MAIDS"><![CDATA[
 	#IF(game.isExtendedWorkTime())
 		<p>
-			As Zaranix's demonic maids are sure to recognise you on sight, you decide that knocking on the door would be an extremely bad idea. You'll have to either sneak in through the garden, or try to kick in the door and storm the place before the maids can call for help.
+			由于扎拉尼克斯的恶魔女仆一定会一眼就认出你，你认为敲门是极其糟糕的想法。你只能要么偷溜进花园，要么试着踢开门，然后在女仆呼救前逃走。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_REPEAT_NON_HOSTILE_MAIDS"><![CDATA[
 	#IF(game.isExtendedWorkTime())
 		<p>
 			#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=1)
-				Then again, you could always just knock on the door yet again. Perhaps the fiery-haired maid will be less angry this time?
+				不过，你可以再敲敲门。或许这次红发女仆的火气会小点？
 			#ELSE
-				Then again, you could always just knock on the door like a regular visitor. Perhaps you could convince whoever answers to let you see Arthur?
+				不过，你可以装作普通客人敲敲门。或许应门的人会带你见亚瑟？
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR"><![CDATA[
 	<p>
-		You decide that the most appropriate course of action is to simply knock on the door and ask to see Arthur. Stepping forwards, you take hold of the ornate brass door knocker and deliver a sharp rap to alert those inside of your presence.
+		你决定选择最合适的方案——敲门然后要求见到亚瑟。你向前一步抓住华丽的黄铜门环，敲了几下，提醒屋内人有访客来临。
 	</p>
 	<p>
-		After just a few moments, you hear the sound of a lock being slid back, before the heavy oak door swings inwards to reveal one of the most striking succubi you've ever seen. Her gorgeous face and perfectly proportioned body are covered in pitch-black ebony skin, but it's not her voluptuous figure which your eyes are drawn to. Styled into loose waves, and giving off a luminescent, yellowy-orange glow, it's her extraordinary amber hair, which reaches down to just above her ass, that you find yourself gazing at. As her eyes fixate themselves onto yours, you see that her irises are the exact same glowing-amber shade as her hair, giving this demon a truly remarkable appearance.
+		不一会儿，你听到了开锁声。在沉重的橡木门打开后，你见到了一位女性魅魔——你见过的最妩媚的魅魔之一。不过，最吸引你目光的不是她被漆黑的乌木皮肤覆盖的出众容貌和完美匀称的身材，而是她那波浪状的琥珀色头发，散发着迷人的黄橙色的光，一直垂到她的屁股上方。你不由得痴痴凝望着。当她的眼睛看着你时，你发现她的虹膜和她耀眼的头发一般颜色——都是琥珀色的。这使这位恶魔看起来极具吸引力。
 	</p>
 	<p>
-		Despite the fact that her maid's dress quite clearly identifies her as a servant in this household, her attitude is not at all one of subservience, and as she crosses her arms and leans against the door frame, she makes a disapproving clicking noise with her tongue, [amber.speech(Who are <i>you</i> supposed to be? We're not expecting any visitors, and you're wasting my valuable time, so this had better be good!)]
+		虽然她穿着这个家的女仆制服，但她的态度却一点儿也不像个仆人。她交叉双臂靠在门框上，用舌头发出不耐烦的砸吧声，[amber.speech(<i>你</i>什么身份？我们不接待任何访客。你最好赶快离开这里，不要浪费我宝贵的时间！)]
 	</p>
 	<p>
-		You're pretty sure that servants aren't ordinarily supposed to greet visitors like that, but this particular maid doesn't exactly seem to be ordinary. As her tail swishes from side to side with impatience, she narrows her piercing, luminescent-amber eyes and glares at you in an intimidating manner.
+		你确信一般仆人不会这样对待客人，但显然这位女仆并不一般。她不耐烦地甩着尾巴，并眯起她锐利的琥珀色的眼睛，以一种恐吓的方式瞪着你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_REPEAT"><![CDATA[
 	#IF(flags.getSavedLong('amber_door_knock_repeat_count')==1)
 		<p>
-			You decide to try knocking on the door again in the hopes that a more reasonable maid will answer this time. With that in mind, you step forwards and take hold of the ornate brass door knocker, before delivering a sharp rap to alert those inside of your presence.
+			你决定再次敲门，也许这次会有一个通人情的女仆开门。你向前一步，叩响了华丽的黄铜门环。
 		</p>
 		<p>
-			After just a few moments, you hear the familiar sound of a lock being slid back, before the heavy oak door swings inwards once again. There, standing in the opening, is the same fiery-haired, demonic maid that greeted you last time.
+			几分钟后，你听到了熟悉的开锁声，沉重的橡木门再一次打开。在门廊里，站着的红发恶魔女仆，正是你上一次来访时的那位。
 		</p>
 		<p>
-			[amber.speech(It's <i>you</i> again?! Don't you know when to take a hint? Fuck off already!)] she shouts, before stepping back and grabbing the edge of the door, ready to slam it in your face.
+			[amber.speech(又是<i>你</i>？！你不懂什么叫暗示吗？滚蛋！)]她大吼，重新走回门内，然后重重地把门摔在你的脸上。
 		</p>
 	#ELSEIF(flags.getSavedLong('amber_door_knock_repeat_count')==2)
 		<p>
-			Despite knowing that the one to answer is likely to be the same fiery-haired maid who you've already had the displeasure of encountering, you [pc.step] up to the door and give the ornate brass knocker a few sharp raps. Sure enough, after a few moments the heavy oak door swings open to reveal the ebony-skinned maid you expected.
+			不过你早就知道开门的人很可能就是这位会把你辱骂一顿的红发恶魔女仆。你[pc.step]到门前，再次叩响黄铜门环。果然，在片刻后，沉重的橡木门打开了，你见到了预料中的黑皮女仆。
 		</p>
 		<p>
-			[amber.speech(<i>Again?!</i>)] she furiously shouts. Stepping back and grabbing the edge of the door, she prepares to slam it in your face as she roars, [amber.speech(Fuck off!)]
+			[amber.speech(<i>你还敢来？！</i>)]她怒吼着。她抓住门沿，把门和她的怒火全摔到你的脸上。[amber.speech(滚啊！)]
 		</p>
 	#ELSEIF(flags.getSavedLong('amber_door_knock_repeat_count')==3)
 		<p>
-			Although the previous three times you knocked on the door to Zaranix's home ended in the same disastrous way, you have a good feeling about this one. [pc.Stepping] forwards once again, you use the door's ornate brass knocker to deliver several sharp knocks.
+			虽然你在扎拉尼克斯家的三次敲门都是以不愉快结尾，但你对这一次很有感觉。又一次[pc.Stepping]到门前，你叩响了黄铜门环。
 		</p>
 		<p>
-			Several moments later, you hear the very familiar sound of a lock being slid back, before the heavy oak door swings inwards once again. There, standing in the opening, is the same fiery-haired, ebony-skinned maid who greeted you last time. Her demonic face contorts into an incendiary scowl, and before you can say anything, she rages, [amber.speech(What the <i>fuck</i> is your problem?! How many fucking times are you going to do this?! For the last time; <i><b>fuck off</b></i>!)]
+			不久后，你听到了再熟悉不过的开锁声，沉重的橡木门又一次打开了。站在门廊的，是上次欢迎你的红发黑皮女仆。她恶魔的脸庞被怒火扭曲，在你出声之前，她超级愤怒地大吼，[amber.speech(<i>你他妈</i>到底有什么毛病？！操，你还打算来多少次？！最后再说一遍：<i><b>滚蛋</b></i>！)]
 		</p>
 		<p>
-			With that, she once again steps back and grabs the edge of the door as she prepares to slam it in your face...
+			她再一次把门摔到了你的脸上……
 		</p>
 	#ELSEIF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
 		<p>
-			Telling yourself that fifth time's the charm, you once again find yourself [pc.stepping] up to the door of Zaranix's home and using the ornate brass knocker to deliver several loud, sharp raps. Clearly having been expecting you this time, the door immediately swings open to reveal the by-now very familiar figure of the amber-haired, demonic maid.
+			你并不泄气，也许第五次才是最好的。你又一次[pc.stepping]到扎拉尼克斯家门前，叩响了黄铜门环。如你所料，门很快开了，你熟悉的琥珀色头发的女仆站在门口。
 		</p>
 		<p>
-			[amber.speech(Your incessant knocking has drawn the attention of Zaranix,)] she spits through clenched teeth. Although her more subdued tone makes a pleasant change from her previous, fiery screams, you can tell that she's still absolutely livid as she snaps, [amber.speech(I've been ordered to offer you an audience with him. If you know what's good for you, though, you'll drop down on your knees and beg for it.)]
+			[amber.speech(你频繁的敲门声引起了扎拉尼克斯的注意。)]她咬牙切齿地吐口唾沫。尽管她克制的语气比之前的大吼大叫好多了，但是你依然可以看出她很生气。[amber.speech(我奉命让你见他。你最好跪下感谢这个恩赐，感谢它带给你的好处。)]
 		</p>
 		<p>
-			With that, she steps back a little and gestures inside, inviting you into the house...
+			她后退一步，向里面做了个手势，邀请你进屋……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_SLAMMED_IN_FACE"><![CDATA[
 	<p>
-		You step back just in time to avoid the door slamming into your face. With such a rude and unwelcoming maid in charge of receiving visitors, you're sure that you'll have to think of another way to get into Zaranix's home and find Arthur.
+		你及时后退，才没让门撞到你的脸。有如此不欢迎客人的粗鲁女仆，你不得不换个方式进扎拉尼克斯家找亚瑟。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_WRONG_HOUSE"><![CDATA[
 	<p>
-		Deciding that it would be best not to reveal your intentions to someone such as this, you tell the rude succubus that you must have got the wrong house. With just an angry click of her tongue as a response, the demon slams the door shut on you. With such a rude and unwelcoming maid in charge of receiving visitors, you're sure that you'll have to think of another way to get into Zaranix's home and find Arthur.
+		你不打算告诉她实情，你说你只是走错了。她不耐烦地砸吧着舌头，然后重重关上了门。有如此不欢迎客人的粗鲁女仆，你不得不换个方式进扎拉尼克斯家找亚瑟。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_ASK_FOR_ARTHUR"><![CDATA[
 	<p>
-		[pc.speech(I'm here to see Zaranix; he's got a slave by the name of Arthur who I need to talk to,)] you explain, noting how the maid's expression turns from one of annoyance to mild curiosity.
+		[pc.speech(我来见扎拉尼克斯；我想和他的奴隶亚瑟谈话。)]你解释道，发现女仆的脸色由愤怒变成略微好奇。
 	</p>
 	<p>
-		[amber.speech(My master doesn't receive uninvited guests, so you're not only wasting my time, you're wasting your own as well.)]
+		[amber.speech(我的主人不会接见未被事先邀请的客人，你只是在浪费我们彼此的时间。)]
 	</p>
 	<p>
-		With that, the maid steps back and grabs the edge of the door, ready to slam it in your face.
+		女仆走回门内，把门摔到了你的脸上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG -->
 	
 	<htmlContent tag="KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG"><![CDATA[
 	<p>
-		Doing the first thing that comes to your mind, you drop down onto your knees and look up at the inhospitable maid. The amber glow of her hair and eyes seems to grow even fiercer as her face contorts into one of rage, but before she can open her mouth, you blurt out an apology, [pc.speech(I'm sorry for wasting your time! Please, <i>please</i> can I see Arthur? I've been searching for him for forever! Please!)]
+		几乎是本能，你跪在她面前，仰望着这位冷漠的女仆。她的表情更加不耐烦。在她开口前，你说话了，[pc.speech(非常抱歉我浪费了你的宝贵时间。但是请问，可以让我见见亚瑟吗？<i>真的，求你了</i>我找他很长时间了。)]
 	</p>
 	<p>
-		[amber.speech(How pathetic,)] the maid sneers down at you, her voice sharp enough to cause you to let out a pleading little whimper, [amber.speech(begging like a dog just to see a slave.)]
+		[amber.speech(还真是个小可怜，)]女仆嘲笑地看着你，她的话语尖锐到让你哽咽，[amber.speech(像狗一样求我居然只是为了见一个奴隶。)]
 	</p>
 	<p>
-		The demon's voice takes on a different tone as she steps forwards, [amber.speech(I <i>do</i> deserve to have a little fun though. I'll let you see my master, who'll then decide if you can meet with Arthur or not, but you'll have to show me that you're prepared to be on your best behaviour.
+		恶魔的语气有些变化，她向前一步，[amber.speech(好吧，我<i>确实</i>想找点儿乐子。我会带你去见我的主人，他有权决定你是否见亚瑟。但是你必须让我看到你最好的表现。
 		#IF(pc.isTaur())
-			 Lie down
+			躺倒
 		#ELSE
-			 Get down on all fours
+			像狗一样四肢着地
 		#ENDIF
 		#IF(game.isFootContentEnabled())
-			 and lick my shoes like the dog you are!
+			像乖狗狗一样舔我的鞋！
 		#ELSE
-			 before me and tell me that you're going to be a good doggy!
+			告诉我你会成为一条好狗狗！
 		#ENDIF
 		)]
 	</p>
 	<p>
-		Still looking up at the sadistic maid, you see a wicked snarl break out across her face. She snaps her fingers at you and points to her feet, clearly serious about the demand that she's making. It's not too late to stand up and take your leave, but if you wanted to see Arthur without resorting to a more clandestine or violent approach, it looks like you'll have to do as the succubus asks.
+		你依旧仰望着这位施虐狂女仆，她的脸上满是邪恶的意味。她打着响指，指着自己的脚。很明显这不是玩笑，现在离开还来得及。但是如果你想见亚瑟又不想屈服于这位女仆，那就只能采用更隐秘或者更暴力的方法。看起来你必须要听从魅魔的要求。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG_REFUSE"><![CDATA[
 	<p>
 		#IF(game.isFootContentEnabled())
-			The thought of licking someone else's shoes is too much for you. Standing up, you see the maid's expression turn into one of furious disgust, and you're only just able to step back in time to avoid the door slamming into your face. With such a rude and unwelcoming maid in charge of receiving visitors, you're sure that you'll have to think of another way to get into Zaranix's home and find Arthur.
+			舔别人的鞋对你来说还是太过了。你站起来，女仆看起来很是恼怒。你及时后退，才没让门撞到你的脸。有如此不欢迎客人的粗鲁女仆，你不得不换个方式进扎拉尼克斯家找亚瑟。
 		#ELSE
-			The thought of submitting to this dominant succubus and acting like a dog is too much for you. Standing up, you see the maid's expression turn into one of furious disgust, and you're only just able to step back in time to avoid the door slamming into your face. With such a rude and unwelcoming maid in charge of receiving visitors, you're sure that you'll have to think of another way to get into Zaranix's home and find Arthur.
+			让魅魔成为你的支配者并表现得像条狗一样对你来说还是太过了，你站起来，女仆看起来很是恼怒。你及时后退，才没让门撞到你的脸。有如此不欢迎客人的粗鲁女仆，你不得不换个方式进扎拉尼克斯家找亚瑟。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OUTSIDE_KNOCK_ON_DOOR_ASK_FOR_ARTHUR_GOOD_DOGGY -->
 	
 	<htmlContent tag="OUTSIDE_KNOCK_ON_DOOR_ASK_FOR_ARTHUR_GOOD_DOGGY"><![CDATA[
 	<p>
-		Not seeing any alternative, you do as this dominant maid demands and
+		没别的选择了。你按女仆的命令去做，
 		#IF(pc.isTaur())
-			 lie down on your lower [pc.legRace]'s body
+			[pc.legRace]下身跪卧
 		#ELSE
-			 drop down onto all fours
+			四肢着地
 		#ENDIF
-		, before calling out, [pc.speech(I'm a good doggy...)]
+		狗叫几声，[pc.speech(我是一条乖狗狗……)]
 	</p>
 	<p>
-		[amber.speech(Is that all you've got?!)] the succubus angrily shouts, [amber.speech(You're to repeat after me; 'I'm a good doggy, Mistress Amber!', and put some damn effort into it!)]
+		[amber.speech(就这？)]魅魔愤怒地说，[amber.speech(按我说的来：‘安柏主人，我是一条好狗狗 ！’你他妈带点儿情绪！)]
 	</p>
 	<p>
-		You let out a humiliated whimper as Mistress Amber scolds you in full view of the public street behind you, before enthusiastically calling out, [pc.speech(I'm a good doggy, Mistress Amber!)]
+		安柏主人在众目睽睽之下责备了你，你呜咽着，随后热情地说，[pc.speech(安柏主人，我是一条好狗狗！)]
 	</p>
 	<p>
-		[amber.speech(Ha-ha-ha! How pathetic!)] Mistress Amber laughs, before commanding, [amber.speech(Stay there, bitch. I'll be back shortly. Oh, and don't even <i>think</i> about standing up, or else the deal's off!)]
+		[amber.speech(瞧瞧，真可怜啊。)]安柏主人笑了，随后命令你，[amber.speech(婊子，在这儿等着我。我马上回来。另外，你不要想着<i>偷偷</i>站起来，除非你希望我终止交易。)]
 	</p>
 	<p>
-		With that, the fiery-haired succubus steps back and slams the door in your face, leaving you down on the doorstep of Zaranix's home.
+		红发魅魔后退一步，“砰”的一声关上了门，把你丢在了扎拉尼克斯家台阶上。
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			 Despite the ongoing arcane-storm, it appears as though your display has attracted the attention of a group of passing succubi, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you. Looking to the floor as you do your best to ignore their words, you remind yourself that you're doing all of this in order to finally get hold of Arthur.
+			奥术风暴一直在持续，你的行为吸引了不少来自路过魅魔的注意。当你意识到自己被关在门外时，你的背后传来不断传来嘲笑声和讥讽声。你低头看着地面，尽量忽视他们的声音。你告诉自己，你所做的一切都是为了找到亚瑟。
 		#ELSE
-			It appears as though your display has attracted the attention of several passersby, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you. Looking to the floor as you do your best to ignore their words, you remind yourself that you're doing all of this in order to finally get hold of Arthur.
+			你的行为还是吸引了不少行人的注意力。当你意识到自己被关在门外时，你的背后爆发了一阵嘲笑声和讥讽声。你低头看着地面，尽量忽视他们的声音。你告诉自己，你所做的一切都是为了找到亚瑟。
 		#ENDIF
-		 Thankfully, you're not subjected to this humiliation for long, as after just a few moments the door swings open again; the sight of Mistress Amber quickly dispelling your tormentors.
+		幸运的是，你不用长时间地忍受这种羞辱。几分钟后，门开了。安柏主人出现驱散了嘲笑你的人。
 	</p>
 	<p>
-		[amber.speech(Heel,)] Amber commands, snapping her fingers and pointing to the floor. Having already come this far, you obey the succubus and crawl forwards to her side. Reaching over the top of you, Amber then grabs the edge of the door and slams it shut behind you.
+		[amber.speech(爬过来。)]安柏命令道。她用手指指着地面。都已经努力到这儿了，你按照她的命令，爬到她身边。安柏越过你的头顶，“砰”的一声关上了你背后的门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG_RELUCTANT_LICK -->
 	
 	<htmlContent tag="KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG_RELUCTANT_LICK"><![CDATA[
 	<p>
-		Not seeing any alternative, you hesitantly
+		看起来没有别的选择，你犹豫地按女仆的命令
 		#IF(pc.isTaur())
-			 lie down on your lower [pc.legRace]'s body
+			[pc.legRace]下身跪卧
 		#ELSE
-			 drop down onto all fours
+			四肢着地
 		#ENDIF
-		 as the maid commands. Sensing your reluctance, the succubus growls down to you, [amber.speech(Come on, bitch, I haven't got all day!)]
+		魅魔看出了你的不情愿，她冲你咆哮，[amber.speech(婊子，快点儿，我可没有一整天的功夫给你浪费！)]
 	</p>
 	<p>
-		Still feeling uneasy about what it is you're expected to do, you falter a little as you slowly drop your face down towards her feet.
+		你依然犹豫着，你低下头，慢慢地靠近她的脚。
 	</p>
 	<p>
-		[amber.speech(What are you doing?!)] the succubus angrily shouts, [amber.speech(You're to answer, 'Yes, Mistress Amber!', and immediately obey my commands! Now let's try it again shall we?! 'Come on, bitch, I haven't got all day!')]
+		[amber.speech(你在干什么？！)]魅魔愤怒地吼叫，[amber.speech(你应该回答：‘遵命，安柏主人！’然后立刻遵守我的命令！再来一次！快点儿，婊子。我可没有一整天的功夫给你浪费。)]
 	</p>
 	<p>
-		You let out a humiliated whimper as you do as you're told, and answer Amber in the proper manner, [pc.speech(Yes, Mistress Amber!)]
+		你呜咽一声，照她说的做，用她喜欢的方式回答，[pc.speech(遵命，安柏主人！)]
 	</p>
 	<p>
-		An evil, mocking laugh drifts down to you, and while still in full sight of the street, you drop your mouth down to Amber's feet. The black high heels that she's wearing are in keeping with the rest of her maid's uniform, with a little lacy white bow adorning each one. Deciding to choose her right foot, you bring your [pc.lips+] down to the black leather, breathing in the faint, warm scent of sweat as your nose draws near to her white cotton stockings.
+		你低下头，听到了邪恶的嘲弄声。众目睽睽之下，你的嘴靠近她的脚。她穿的黑色高跟鞋和黑白女仆装很配，上面都有白花边的蝴蝶结装饰。你选择了她的右脚，你[pc.lips+]靠近她的黑皮高跟鞋，你闻到了很淡的温暖的汗味儿。
 	</p>
 	<p>
-		[amber.speech(Lick it, bitch,)] Amber snarls, eager to see you humiliate yourself, [amber.speech(or would you rather not see your little friend after all?)]
+		[amber.speech(舔啊，婊子。)]安柏低声责备，迫不及待地要看你自取其辱。[amber.speech(还是说你改变主意不想见你的小伙伴了？)]
 	</p>
 	<p>
-		Deciding that it's best to do this quickly and get it over with, you press your [pc.lips] down against the tip of Amber's shoe, before pushing forwards and dragging your [pc.tongue+] up and over her feminine footwear. The bitter, tangy taste of leather, dirt, and shoe polish overwhelms your taste buds, and you struggle to stop yourself from gagging as you draw back, wiping your tongue on your shoulder as you try to remove the horrible taste from your mouth.
+		决定好要做还是赶紧完事儿吧，你催促自己。[pc.lips]对着她的鞋尖，向前贴近然后伸出[pc.tongue+]舔着她的女鞋。有污垢的皮革尝起来又辣又苦，鞋子的怪味一下子压倒在你的味蕾上，令人作呕。你强忍恶心舔了一遍，然后肩膀使劲擦着舌头，希望能让这个糟糕的味道赶紧从你嘴里消失。
 	</p>
 	<p>
-		[amber.speech(Hahaha! How pathetic!)] Amber laughs, lifting her foot and using your arm to wipe the saliva clean from her shoe. [amber.speech(Stay there, bitch, I'll be back shortly. Oh, and don't even <i>think</i> about standing up, or else the deal's off!)]
+		[amber.speech(哈哈哈哈，真是个小可怜。)]安柏笑起来，抬起脚用你的隔壁擦掉她鞋子上的口水。[amber.speech(婊子，在这儿等着我。我马上回来。另外，你不要想着<i>偷偷</i>站起来，除非你希望我终止交易。)]
 	</p>
 	<p>
-		With that, Amber steps back and slams the door in your face, leaving you down on the doorstep of Zaranix's home.
+		安柏后退一步，“砰”的一声关上了门，把你丢在了扎拉尼克斯家台阶上。
 		#IF game.getCurrentWeather()==WEATHER_MAGIC_STORM
 		#THEN
-			 Despite the ongoing arcane-storm, it appears as though your display has attracted the attention of a group of passing succubi, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you. Looking to the floor as you do your best to ignore their words, you remind yourself that you're doing all of this in order to finally get hold of Arthur.
+			奥术风暴一直持续，你的行为吸引了不少来自路过魅魔的注意。当你意识到自己被关在门外时，你的背后传来不断传来嘲笑声和讥讽声。你低头看着地面，尽量忽视他们的声音。你告诉自己，你所做的一切都是为了找到亚瑟。
 		#ELSE
-			It appears as though your display has attracted the attention of several passersby, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you. Looking to the floor as you do your best to ignore their words, you remind yourself that you're doing all of this in order to finally get hold of Arthur.
+			你的行为还是吸引了不少行人的注意力。当你意识到自己被关在门外时，你的背后爆发了一阵嘲笑声和讥讽声。你低头看着地面，尽量忽视他们的声音。你告诉自己，你所做的一切都是为了找到亚瑟
 		#ENDIF
-		 Thankfully, you're not subjected to this humiliation for long, as after just a few moments the door swings open again; the sight of the fiery-haired succubus quickly dispelling your tormentors.
+		幸运的是，你不用长时间地忍受这种羞辱。几分钟后，门开了。安柏主人出现驱散了嘲笑你的人。
 	</p>
 	<p>
-		[amber.speech(Heel,)] Amber commands, snapping her fingers and pointing to the floor.
+		[amber.speech(过来。)]安柏命令道。她用手指指着地面。
 	</p>
 	<p>
-		Having already come this far, you obey the succubus and
+		都已经努力到这儿了，你按照她的命令
 		#IF(pc.isTaur())
-			 move
+			趴
 		#ELSE
-			 crawl
+			爬
 		#ENDIF
-		 forwards to her side. Reaching over the top of you, Amber then grabs the edge of the door and slams it shut behind you.
+		到她身边。安柏越过你的头顶，“砰”的一声关上了你背后的门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG_EAGER_LICK"><![CDATA[
 	<p>
-		Eager to show your submission to the dominant maid, you immediately
+		迫不及待地想要展示你对支配者的忠诚，你立刻行动。
 		#IF(pc.isTaur())
-			 lie down on your lower [pc.legRace]'s body
+			让[pc.legRace的身体狗趴一样四肢着地
 		#ELSE
-			 drop down onto all fours
+			像狗爬一样四肢着地
 		#ENDIF
-		 as she commands. Pleased with your quick response, the succubus encourages you to continue, [amber.speech(What an obedient bitch! Come on now, get started! I haven't got all day!)]
+		，就像她要求的那样。魅魔很满意你的行动，鼓励你继续。[amber.speech(多听话的小婊子啊。过来，就现在，开始吧，我可没有太多时间浪费。)]
 	</p>
 	<p>
-		[pc.speech(Yes!)] you eagerly respond, moving your face down towards her feet.
+		[pc.speech(遵命！)]你迫不及待地回复，把脸贴向她的脚。
 	</p>
 	<p>
-		[amber.speech(That's 'Yes, Mistress Amber' to you!)] the succubus angrily shouts. [amber.speech(Don't you <i>dare</i> talk to me as though you're my equal! Let's try it again shall we?!)]
+		[amber.speech(不，你应该说‘遵命，安柏主人。’)]魅魔生气地吼道。[amber.speech(你怎么<i>敢</i>用平等的态度跟我讲话！再来一次吧，嗯？)]
 	</p>
 	<p>
-		You let out a humiliated whimper as you do as you're told, and answer Amber in the proper manner, [pc.speech(Yes, Mistress Amber!)]
+		你呜咽一声，照她说的做，按她喜欢的方式回答，[pc.speech(遵命，安柏主人！)]
 	</p>
 	<p>
-		An evil, mocking laugh drifts down to you, and, still in full sight of the street behind you, you drop your mouth down to Amber's feet. The black high heels that she's wearing are in keeping with the rest of her maid's uniform, with a little lacy white bow adorning each one. Deciding to start with her right foot, you bring your [pc.lips+] down to the black leather, letting out a little moan in anticipation as you breathe in the warm, faintly sweaty scent of her white cotton stockings.
+		当你低下头时，你听到了一个邪恶的嘲弄声。众目睽睽之下，你的嘴靠近她的脚。黑色高跟鞋和黑白女仆装很配，上面都有白花边的蝴蝶结装饰。你选择了她的右脚，你[pc.lips+]靠近她的黑皮高跟鞋，你闻到了很淡的温暖的汗味儿。
 	</p>
 	<p>
-		[amber.speech(You're enjoying this, aren't you, bitch?)] Amber mocks, clearly amused by the fact that you're so eager to humiliate yourself.
+		[amber.speech(你很享受做这种事，是吧，臭婊子？)]安柏嘲弄道，很明显她迫不及待地要看你自取其辱。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you enthusiastically reply, before pressing your [pc.lips] down against the tip of her shoe. Pushing forwards, you eagerly drag your [pc.tongue+] up and over her feminine footwear, relishing the bitter, tangy taste of leather, dirt, and shoe polish that immediately strikes your taste buds. Pulling back, you start once more from the tip of Amber's shoe, licking up and down as you seek to clean every [unit.size] of the delicious black leather.
+		[pc.speech(遵命，安柏主人！)]你热情地回答，然后把你[pc.lips]贴在她的鞋尖上。你的身体前倾，迫切地转动[pc.tongue+]擦着她的女鞋。不干净的皮革尝起来又苦又辣，鞋子的怪味刺激着你的味蕾。收回舌头，你开始舔鞋子的另一边，你渴望把[unit.size]的美味的黑皮鞋子的两边全部清理干净。
 	</p>
 	<p>
-		[amber.speech(Hahaha! How pathetic!)] Amber laughs, tilting her foot to one side to present the un-licked areas of her shoe to your eager [pc.tongue]. [amber.speech(That's right, bitch, keep on going!!)]
+		[amber.speech(哈哈哈，小可怜。)]安柏笑了，转动她的鞋子，以便你的[pc.tongue]舔到其他地方。[amber.speech(做得真不错。快继续啊，小婊子。)]
 	</p>
 	<p>
-		You continue licking and kissing Amber's shoe, the sadistic succubus encouraging you to keep on going until it's spotlessly clean. Pulling her foot back, she then pushes her left shoe towards your face, and you submissively set about licking that one clean as well.
+		你边舔边亲她的鞋子。她不停地鼓励你继续，直到你把她的鞋子舔得一尘不染。她收回右脚，把左脚伸到你面前，你迫不及待地像舔右脚一样又舔一遍。
 	</p>
 	<p>
-		After a short while, you've polished both of Amber's heels to a shiny finish, and she lets out a spiteful, derisive laugh, [amber.speech(Hahaha! I can't believe how pathetic you are! Stay there, bitch, I'll be back shortly. Oh, and don't even <i>think</i> about standing up, or else the deal's off!)]
+		不一会儿，你就让她的鞋子干净得闪闪发光。她发出刻薄的嘲弄声。[amber.speech(哈哈哈哈！我真不敢相信你这么惹人疼爱。婊子，在这儿等着我。我马上回来。另外，你不要想着<i>偷偷</i>站起来，除非你希望我终止交易。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG_WAITING"><![CDATA[
 	<p>
-		You remain still as Amber steps back and slams the door in your face, leaving you down on the doorstep of Zaranix's home.
+		安柏后退一步，“砰”的一声关上了门，把你丢在了扎拉尼克斯家的门阶上。
 		#IF game.getCurrentWeather()==WEATHER_MAGIC_STORM
 		#THEN
-			 Despite the ongoing arcane-storm, it appears as though your display has attracted the attention of a group of passing succubi, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you.
+			奥术风暴一直在持续，你的行为吸引了不少来自路过魅魔的注意。当你意识到自己被关在门外时，你的背后传来不断传来嘲笑声和讥讽声。
 		#ELSE
-			 It appears as though your display has attracted the attention of several passersby, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you.
+			你的行为还是吸引了不少行人的注意力。当你意识到自己被关在门外时，你的背后爆发了一阵嘲笑声和讥讽声。
 		#ENDIF
-		 You're not subjected to their humiliating words for long, however, as after just a few moments the door swings open again; the sight of the fiery-haired succubus quickly dispelling your tormentors.
+		不过你不用长时间忍受这种羞辱，几分钟后，门开了。红发魅魔的出现驱散了嘲笑你的人。
 	</p>
 	<p>
-		[amber.speech(Heel,)] Amber commands, snapping her fingers and pointing to her side.
+		[amber.speech(过来。)]安柏命令道。她用手指指着地面。
 	</p>
 	<p>
-		You immediately
+		你立刻
 		#IF(pc.isTaur())
-			 move
+			趴
 		#ELSE
-			 crawl
+			爬
 		#ENDIF
-		 forwards into the house, allowing Amber to shut the door behind you.
+		进房子，安柏关上了门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="KNOCK_ON_DOOR_ASK_FOR_ARTHUR_BEG_EAGER_LICK_SOLES"><![CDATA[
 	<p>
-		You can't help but feel like you haven't done a good enough job, and before Amber can step back, you drop your head to the ground and try to lick at the sides of her shoe's soles. [pc.speech(Please, Mistress Amber! I haven't finished!)]
+		你不禁去想你还没有完美地完成这份工作。在安柏回来以后，你低下头想要去舔她的鞋底。[pc.speech(安柏主人，麻烦您再给我一点儿时间，我还没有完成我的任务！)]
 	</p>
 	<p>
-		The sadistic maid lets out another mocking laugh, and, lifting her foot up, pushes the filthy sole of her heel into your face. [amber.speech(Stupid bitch! You'd better make this quick!)]
+		这个施虐狂发出一阵刻薄的嘲笑声，然后抬起她的脚，把她肮脏的脚后跟伸到你的脸上。[amber.speech(小婊子，你最好快点儿完事儿。)]
 	</p>
 	<p>
-		With the angry succubus ramming her heel down against your [pc.lips], you once more obediently do as she commands. Trying your best to do the job quickly, you eagerly lick and kiss the undersides of Amber's shoes. The salty, grimy taste of dirt fills your mouth as you submissively clean the heel's soles, moaning in delight as their owner continues to sneer and call you degrading names.
+		愤怒的魅魔用她的脚后跟撞你[pc.lips]，你乖乖按照她的吩咐去做。在保障速度的情况下，你对她的鞋底又亲又舔。在你顺从的清理黑皮鞋的鞋底时，又咸又脏的味道弥漫了你的口腔。鞋子的主人冷笑着，并用侮辱性词汇称呼你，这让你更兴奋了，你不禁高兴地呻吟着。
 	</p>
 	<p>
-		After you've finished with the first shoe, Amber quickly switches you to the next. Pushing the dirty underside of her other heel into your face, she snarls, [amber.speech(Pathetic bitch! Come on, you can do better than that!)]
+		在你清理完这只鞋子后，安柏快速地放下脚，把另一只的鞋底伸到你脸上。她龇牙咆哮。[amber.speech(可悲的婊子，来吧，你只能做的更好。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you reply, letting out whimpering little moans as you obediently lick all the dirt from the soles of her shoes.
+		[pc.speech(遵命，安柏主人！)]你回答。发出近乎呻吟的呜咽声，你乖巧地舔着她的鞋子。
 	</p>
 	<p>
-		Once she's satisfied that you've done enough, Amber lifts her foot a little higher, before forcing the heel into your mouth. After obediently sucking it clean, you lick your lips as Amber pulls back, before forcing you to perform the same treatment on the heel of her other shoe.
+		一旦安柏满足了，她就会把脚抬高一点，强行把脚后跟塞进你的嘴里。你乖乖吸干净鞋子，舔了舔嘴唇。安柏后退一步，强迫你吸干净另一只鞋子。
 	</p>
 	<p>
-		Finally, you're done, and as Amber steps back, you feel thoroughly pleased with your work. Both of her shoes are now spotlessly clean, but despite the amount of effort that you put in, the tone of Amber's voice remains as cold as ice as she speaks down to you, [amber.speech(Stay there, bitch!)]
+		最后，你完成了。当安柏放下脚时，你感到非常满足。现在她的两只鞋子都干净得一尘不染了。但是不管你怎么努力，安柏对你说出的话语依然冷如冰霜。[amber.speech(婊子，待在这儿。)]
 	</p>
 	<p>
-		With that, she steps back and slams the door in your face, leaving you down on the doorstep of Zaranix's home.
+		安柏后退一步，“砰”的一声关上了门，把你丢在了扎拉尼克斯家的台阶上。
 		#IF game.getCurrentWeather()==WEATHER_MAGIC_STORM
 		#THEN
-			 Despite the ongoing arcane-storm, it appears as though your display has attracted the attention of a group of passing succubi, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you.
+			奥术风暴一直持续，你的行为吸引了不少来自路过魅魔的注意。当你意识到自己被关在门外时，你的背后传来不断传来嘲笑声和讥讽声。
 		#ELSE
-			 It appears as though your display has attracted the attention of several passersby, and as you find yourself shut out on the doorstep, a cacophony of giggles and mocking comments bursts out behind you.
+			你的行为还是吸引了不少行人的注意力。当你意识到自己被关在门外时，你的背后爆发了一阵嘲笑声和讥讽声。
 		#ENDIF
-		 You're not subjected to their humiliating words for long, however, as after just a few moments the door swings open again; the sight of the fiery-haired succubus quickly dispelling your tormentors.
+		不过，你不用长时间地忍受这种羞辱。几分钟后，门开了。安柏主人出现驱散了嘲笑你的人。
 	</p>
 	<p>
-		[amber.speech(Heel,)] Amber commands, snapping her fingers and pointing to her side.
+		[amber.speech(过来。)]安柏命令道。她用手指指着地面。
 	</p>
 	<p>
-		You immediately
+		你立刻
 		#IF(pc.isTaur())
-			 move
+			趴
 		#ELSE
-			 crawl
+			爬
 		#ENDIF
-		 forwards into the house, allowing Amber to shut the door behind you.
+		进房子，安柏关上了门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX"><![CDATA[
 	#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
 		<p>
-			With your persistence having paid off, you [pc.step] bast the growling maid and enter Zaranix's home. Furiously slamming and locking the door behind you, the demonic, ebony-skinned maid strides forwards to stand in front of you, and with the glow of her amber hair seeming to increase in intensity, she reveals, [amber.speech(My name is Amber, but that's <i>Mistress</i> Amber to you, you worm! If I had my way, I'd be putting you in your place right about now!)]
+			你的努力取得了成效，你[pc.step]这位愤怒的女仆进入了扎拉尼克斯的家。黑皮女仆重重地关上你背后的门，随后大步走到你跟前，她的琥珀色头发看起来更耀眼了。她宣布道，[amber.speech(我的名字是安柏，但是你需要称呼我为<i>安柏主人</i>。你真是讨人厌的臭虫子！如果我有权利，我会立刻让你知道你现在应该做什么！)]
 		</p>
 		<p>
-			Pointing out to Amber that she isn't going to have it her way, you ask her to show you to where Zaranix is. With a look of pure hatred on her face, she turns her back on you and strides off down the corridor, leaving you to follow in her wake.
+			这表明安柏现在没有权力，她做不了什么。你要求她带你去见扎拉尼克斯。她的表情变成纯粹的厌恶，她转过身，大步穿过走廊，丝毫不管你是否可以跟上。
 		</p>
 		<p>
-			The wide corridor which you find yourself travelling down is lined by an immaculate red carpet, and as you follow the amber-haired maid, you glance around at your surroundings. The house appears to be quite similar to Lilaya's; the opulent décor of gold-framed paintings, marble busts, and crystal chandeliers is obviously a trend amongst the wealthy demon elite. Although it's quite clear that Zaranix is very well-off, his house is nevertheless a little less grand than Lilaya's, and you once again find yourself marvelling at how fortunate you are to have an aunt like her.
+			你发现你穿过的走廊两旁铺着干净的红毯。你跟在女仆后面，趁机环顾四周。这座公寓的装潢跟莉莱雅的很像，看起来金框画、大理石半身像和水晶吊灯这种华丽装饰在精英恶魔们很流行。你在心里默默比较，虽然莉莱雅的公寓更为华丽，但扎拉尼克斯的公寓要更大一些。你再次惊叹自己可以拥有这样一位姨妈是多么幸运。
 		</p>
 		<p>
-			You're suddenly snapped out of your musings by the sound of a high-pitched voice calling out, [katherine.speech(Mistress Amber, Zaranix sent me to make sure that you'd received the expected guest.)]
+			一个高亢的声音打断了你的思考。[katherine.speech(安柏主人，扎拉尼克斯让我来看看你是否接到了他想要的客人。)]
 		</p>
 		<p>
-			Looking across towards the origin of this voice, you see yet another succubus maid; this one with black hair and ivory skin, and wearing a pink maid's uniform. She submissively bows to Amber, but this gesture isn't enough to avoid attracting the ire of the ebony-skinned maid.
+			你看向声音的来源：是扎拉尼克斯的另一个魅魔女仆：她有着乌黑的秀发和象牙般的雪白皮肤，穿着粉色的女仆制服。她温顺地向安柏鞠了一躬，但是这依然不可避免地引起了安柏的怒火。
 		</p>
 		<p>
-			[amber.speech(What does it look like I'm doing, Katherine?!)] Amber snaps, [amber.speech(Go and help Kelly clean the kitchen. Once I've finished with this bitch, I'll be coming to inspect you and your sister's work, and if I find so much as a single speck of dust in there, you'll both be spending a night in the kennels. <i>Understood?</i>)]
+			[amber.speech(凯瑟琳，我想你应该有眼睛吧？)]安柏打断她。[amber.speech(滚去帮凯丽打扫厨房。处理好这位婊子之后，我会去检查你们姐妹俩的打扫成果。但凡让我发现一粒灰尘，你们就要在狗窝过夜了。<i>懂？</i>)]
 		</p>
 		<p>
-			[katherine.speech(Yes, Mistress Amber! Sorry, Mistress Amber!)] the maid exclaims, before hurrying off in what you assume to be the direction of the kitchen.
+			[katherine.speech(对不起，安柏主人，请饶恕我！)]这个女仆惊呼一声，然后匆忙赶往厨房的方向。
 		</p>
 		<p>
-			After that brief encounter, you follow Amber a little further down the corridor, before turning off and being led through a heavy oaken door into a grand drawing room. Several sofas and chairs are tastefully arranged around a low table in the centre of the room, while numerous bookcases and cabinets line the floral-wallpapered walls. Looking around, you don't see any sign of Zaranix, which is also clearly something Amber notices, for she lets out a frustrated sigh and turns to address you.
+			这个小插曲结束后，你继续跟着安柏走在走廊上。你们拐弯，再直走，直到遇到一扇沉重的橡木门。安柏打开它，一个宽敞的客厅出现在你面前。房间的正中央摆放着一张矮桌，它的周边高雅地摆放了几张沙发和椅子。墙壁上贴着华丽的花卉墙纸，沿墙排列了许多书柜和壁柜。你环顾四周，没有看到一点儿扎拉尼克斯的身影，只能清楚地听到安柏的噪音，她看起来很沮丧，转身对你说。
 		</p>
 		<p>
-			[amber.speech(It appears as though Zaranix hasn't arrived yet,)] she fumes, before snapping her fingers at the floor beside the central coffee table and demanding, [amber.speech(You shall sit on the floor like the bitch you are while we wait for him.)]
+			[amber.speech(看来扎拉尼克斯还没到。)]她冲着放在中央的茶几旁边的地面打了个响指，看起来她有些生气。[amber.speech(在我们等他期间，你应该像个婊子一样坐在那里。)]
 		</p>
 	#ELSE
 		<p>
 			#IF(pc.hasCompanions())
-					Wasting no time, Amber clicks her fingers once more, pointing down at her side as she motions for you to follow her like a dog. Looking across to your companion, she then snarls, [amber.speech(You stay here, bitch. If you cause any trouble, I'll be sure to make you pay.)]
+					安柏不想浪费时间，她指着她的旁边，要求你像狗一样跟着她。[amber.speech(听着，婊子，如果你敢惹什么麻烦，我一定让你完蛋。)]
 				</p>
 				<p>
-					Eager to get this whole business with Arthur settled once and for all, you tell [com.name] to do as Amber says, before obediently moving forwards alongside the succubus maid. Giving you one last disgusted glance, Amber sets off into the house, with you pathetically
+					你急于一劳永逸地处理亚瑟这件事，告诉[com.name]按照安柏说的做。你乖乖地爬到她身边，和她一起前进。安柏最后厌恶地看了你一样，走进了房间，可怜兮兮地和你待在一起。
 					#IF(pc.isTaur())
-						 moving
+						趴
 					#ELSE
-						 crawling
+						爬
 					#ENDIF
-					 along beside her.
+					着跟她进去。
 			#ELSE
-				Wasting no time, Amber clicks her fingers once more, pointing down at her side as she motions for you to follow her like a dog. Eager to get this whole business with Arthur settled once and for all, you obediently do as you're instructed, and
+				安柏不想浪费时间，她指着她的旁边，要求你像狗一样跟着她。你急于一劳永逸地处理亚瑟这件事，你
 				#IF(pc.isTaur())
-					 walk
+					走
 				#ELSE
-					 crawl
+					爬
 				#ENDIF
-				 alongside the succubus maid as she sets off into the house.
+				在魅魔身后。
 			#ENDIF
 		</p>
 		<p>
 			#IF(pc.isTaur())
-				The wide corridor which you find yourself travelling down is lined by an immaculate red carpet, and as you submissively walk along beside Amber, you glance around at your surroundings.
+				你发现你穿过的走廊两旁铺着干净的红毯。你跟在女仆后面，趁机环顾四周。
 			#ELSE
-				Your hands and knees are thankfully cushioned by the immaculate red carpet that lines the wide corridor you find yourself travelling down, and as you shuffle along beside Amber, you glance around at your surroundings.
+				真是谢天谢地，走廊两旁铺的红毯保护了你的手和膝盖。你环顾四周。
 			#ENDIF
-			 The house appears to be quite similar to Lilaya's; the opulent décor of gold-framed paintings, marble busts, and crystal chandeliers is obviously a trend amongst the wealthy demon elite. Although it's quite clear that Zaranix is very well-off, his house is nevertheless a little less grand than Lilaya's, and you once again find yourself marvelling at how fortunate you are to have an aunt like her.
+			你发现你穿过的走廊两旁铺着干净的红毯。你跟在女仆后面，趁机环顾四周。这座公寓的装潢跟莉莱雅的很像，看起来金框画、大理石半身像和水晶吊灯这种华丽装饰在精英恶魔们很流行。你在心里默默比较，虽然莉莱雅的公寓更为华丽，但扎拉尼克斯的公寓要更大一些。你再次惊叹自己可以拥有这样一位姨妈是多么幸运。
 		</p>
 		<p>
-			You're suddenly snapped out of your musings by the sound of a high-pitched giggle. Looking across towards the origin of the sound, you see yet another succubus maid; this one with black hair and ivory skin, and wearing a pink maid's uniform. She covers her mouth with one hand to stifle her laughter, but too late to avoid attracting the ire of Amber.
+			高亢的笑声打断了你的思考。你看向声音的来源：是扎拉尼克斯的另一个魅魔女仆。她有着乌黑的秀发和象牙般的雪白皮肤，穿着粉色的女仆制服。她慌忙捂住嘴，但是太晚了，她已经引起了安柏的怒火。
 		</p>
 		<p>
-			[amber.speech(Be silent, Katherine!)] Amber snaps, reprimanding the subordinate maid for her outburst, [amber.speech(If you have time to fritter away by giggling at this pathetic bitch, then you surely have time to go and help Kelly clean the kitchen. Once I've finished with bitch here, I'll be coming to inspect you and your sister's work, and if I find so much as a single speck of dust in there, you'll both be spending a night in the kennels. <i>Understood?</i>)]
+			[amber.speech(凯瑟琳，我想你应该有眼睛吧？)]安柏打断她。[amber.speech(滚去帮凯丽打扫厨房。处理好这位婊子之后，我会去检查你们姐妹俩的打扫成果。但凡让我发现一粒灰尘，你们就要在狗窝过夜了。<i>懂？</i>)]
 		</p>
 		<p>
-			[katherine.speech(Yes, Mistress Amber! Sorry, Mistress Amber!)] the maid exclaims, before hurrying off in what you assume to be the direction of the kitchen.
+			[katherine.speech(对不起，安柏主人，请饶恕我！)]这个女仆惊呼一声，然后匆忙赶往厨房的方向。
 		</p>
 		<p>
-			After that brief encounter, you follow Amber a little further down the corridor, before turning off and being led through a heavy oaken door into a grand drawing room. Several sofas and chairs are tastefully arranged around a low table in the centre of the room, while numerous bookcases and cabinets line the floral-wallpapered walls. The high ceiling is home to yet another extravagant chandelier, and you suddenly feel very small as you
+			这个小插曲结束后，你继续跟着安柏在走廊上前进。你们拐弯，再直行，直到遇到一扇沉重的橡木门。安柏打开它，一个宽敞的客厅出现在你面前。房间的正中央摆放着一张矮桌，它的周边高雅地摆放了几张沙发和椅子。墙壁上贴着华丽的花卉墙纸，沿墙排列了许多书柜和壁柜。高高的天花板上还有一盏奢华的枝形吊灯，你
 			#IF(pc.isTaur())
-				 walk along beside
+				跟着魅魔女仆走，突然觉得自己很渺小。
 			#ELSE
-				 crawl along beside
+				跟着魅魔女仆爬，突然觉得自己很渺小。
 			#ENDIF
-			 the succubus maid.
 		</p>
 		<p>
-			[amber.speech(Sit,)] Amber commands, snapping her fingers at the floor beside the central coffee table.
+			[amber.speech(坐下。)]安柏在中间的咖啡桌旁，对着地板打了个响指。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_SIT_FLOOR"><![CDATA[
 	#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
 		<p>
-			Deciding that you'll try to get on the maid's good side, you quickly respond, [pc.speech(Yes, Mistress Amber!)]
+			你想讨得这位女仆的欢心，于是很快回答，[pc.speech(好的，安柏主人！)]
 		</p>
 		<p>
-			Quickly [pc.stepping] over to the spot that the succubus is pointing at, you obediently sit on the floor. With a satisfied smirk on her face, Amber walks over to wait beside the door through which you entered, before turning to look at you and sneer, [amber.speech(I knew you'd turn out to be a good, submissive bitch. Now stay.)]
+			你快步走到魅魔指着的地方，顺从地坐在地上。安柏的脸上难掩笑意，走到你进来的那扇门旁边等着，然后转过身来看着你冷笑，[amber.speech(我就知道你是个顺从的好婊子，现在别动。)]
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(Yes, Mistress Amber!)] you say, before quickly shuffling over to the spot that the succubus is pointing at. Obediently sitting on the floor, you submissively wait for her next command.
+			[pc.speech(明白，主人！)]你说着，然后迅速走到魅魔指着的地方。你顺从地坐在地上，等待她的下一个命令。
 		</p>
 		<p>
-			[amber.speech(Good bitch,)] Amber says, walking over to the door through which you entered. [amber.speech(Now stay.)]
+			[amber.speech(好婊子。)]安柏说着，走到你进来的那扇门前。[amber.speech(现在，待在那别动。)]
 		</p>
 	#ENDIF
 	<p>
-		Doing as you're told, your remain in place, the two of you waiting in silence as you anticipate the arrival of Zaranix. Afforded a moment in which to take a closer look at Amber, you glance over in her direction. Her luminescent hair and eyes are quite obviously the features from which she gets her name, and combined with her almost pitch-black ebony skin, you find yourself comparing her appearance to that of a volcano; an image all the more appropriate considering her fiery personality.
+		你听话地留在原地，两个人默默地等待着扎拉尼克斯的到来。你看向安柏，仔细地观察着她。她那琥珀色的，发光的头发和眼睛很明显就是她名字的由来，再加上她深色的皮肤，她的外貌让你想起一座喷发的火山，再考虑到她那暴躁的性格，这样的形象就更加贴切了。
 	</p>
 	<p>
-		Obviously hearing her master's approach, she suddenly leans forwards and opens the door. As the maid steps aside, the figure of Zaranix strides forwards into the room. Standing at well over [units.size(183)], well dressed in a grey shirt and smart trousers, and with a broad chest and purple-skinned, muscular body, the incubus cuts an impressive figure. He strides over towards the sofa opposite to where you're sitting, and, clearly having missed you at first, he does a double-take as he catches sight of you.
+		她听到了主人的脚步声，突然向前倾身，打开了房门。女仆走到一旁，扎拉尼克斯大步走进房间。他身高超过[units.size(183)]，身着灰色衬衫和帅气的长裤，胸膛宽阔，皮肤呈紫色，肌肉发达，给人留下了深刻的印象。他大步走向你坐着的对面的沙发，一开始显然没注意到你，但当他看到你时，他看了你两眼。
 	</p>
 	<p>
-		[zaranix.speech(Hah!)] he cries, not at all in a mean-spirited manner, but in one more of mild surprise. [zaranix.speech(I'll wager this is Amber's doing! Well, if you're comfortable down there, no need to move!)]
+		[zaranix.speech(哈！)]他喊道，完全没有恶意，反而更多的是一种轻微的惊讶。[zaranix.speech(我敢打赌，这是安柏让你这么干的！如果你觉得坐在那更舒服，那也行吧。)]
 	</p>
 	<p>
-		The huge incubus bounds over to the sofa and collapses down onto it, before throwing you such a disarmingly friendly smile that you suddenly find yourself a little flustered. You were half-expecting Amber's master to be just as harsh as she is, but, much to your surprise, Zaranix seems to be the complete opposite, and cheerily booms, [zaranix.speech(Anyone who manages to get past my little inferno over there is worth every moment of my time! Now, what can I do for you, [pc.miss]...?)]
+		这只健壮的淫梦魔快步来到沙发前，瘫倒在上面，然后向你投来一个友好到令你感到不自然的微笑，你突然发现自己有点慌乱。你本以为安柏的主人会像她一样严厉，但出乎你意料的是，扎拉尼克斯似乎完全相反，他兴高采烈地夸赞道，[zaranix.speech(你能从我家那位暴脾气女仆手下挺过来，那肯定不是一般人！现在，我能为你做什么，[pc.miss]……？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_SIT_SOFA"><![CDATA[
 	#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
 		<p>
-			Telling the fiery-haired maid that you have no intention of sitting on the floor, you [pc.walk] over to one of the sofas and take a seat.
+			你告诉那位头发如火焰般闪耀的女仆，你不打算坐在地板上，一边[pc.walk]向一张沙发坐下。
 		</p>
 		<p>
-			[amber.speech(Why, you <i>insolent bitch</i>,)] Amber shouts, her luminous eyes positively burning with rage as she furiously storms towards you and growls, [amber.speech(how <i>dare</i> yo-)]
+			[amber.speech(凭什么，你这<i>无礼贱货</i>。)]安柏怒气冲冲地大喊，发光的眼睛因愤怒而燃烧着，她咆哮着向你冲来，[amber.speech(你怎么<i>敢</i>——)]
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(I'd rather sit down if I'm going to meet Zaranix,)] you say, quickly standing up and disobediently taking a seat on one of the sofas.
+			[pc.speech(我更可以坐下与扎拉尼克斯谈话。)]你迅速站起身来，不听话地找了一张沙发坐下。
 		</p>
 		<p>
-			[amber.speech(Why, you <i>insolent bitch</i>,)] Amber shouts, her luminous eyes positively burning with rage as she furiously storms towards you and growls, [amber.speech(how <i>dare</i> yo-)]
+			[amber.speech(凭什么，你这<i>无礼贱货</i>。)]安柏怒气冲冲地大喊，发光的眼睛因愤怒而燃烧着，她咆哮着向你冲来，[amber.speech(你怎么<i>敢</i>——)]
 		</p>
 	#ENDIF
 	<p>
-		She suddenly cuts her sentence off and freezes mid-stride. Her luminescent hair and eyes still burning with the same fury as that of her volcanic personality, Amber throws one last scowl your way before turning around and rushing over to the door through which you entered.
+		她的话戛然而止，步伐也顿住了，只留那发光的头发和眼睛仍然燃烧着，正如她火山般的性格。安柏最后瞪你一眼，转身朝门口冲去。
 	</p>
 	<p>
-		Obviously having heard her master's approach, she leans forwards and opens the door just in time to allow the figure of Zaranix to stride forwards into the room. Standing at well over [units.size(183)], well dressed in a grey shirt and smart trousers, and with a broad chest and purple-skinned, muscular body, the incubus cuts an impressive figure. He strides over towards the sofa opposite to the one upon which you're sitting, and as he approaches, he looks over in your direction.
+		她明显是听到了主人的脚步声，立马打开房门，让扎拉尼克斯迈着步子走了进来。扎拉尼克斯身高超过[units.size(183)]，身着灰色衬衫和帅气的长裤，胸膛宽阔，皮肤呈紫色，肌肉发达，令人难忘。他迈步走到你对面的沙发处，一边走一边看着你。
 	</p>
 	<p>
-		[zaranix.speech(Greetings!)] he cries in a booming voice. [zaranix.speech(I hope Amber hasn't been too much trouble for you!)]
+		[zaranix.speech(欢迎！)]他声如洪钟，[zaranix.speech(希望安柏没有太难为你！)]
 	</p>
 	<p>
-		The huge incubus bounds over towards you, throwing you such a disarmingly friendly smile that you suddenly find yourself a little flustered. You were half-expecting Amber's master to be just as harsh as she is, but, much to your surprise, Zaranix seems to be the complete opposite, and cheerily booms,
+		这只健壮的淫梦魔快步来到沙发前，瘫倒在上面，然后向你投来一个友好到令你感到不自然的微笑，你突然发现自己有点不知所措。你本以为安柏的主人会像她一样严厉，但出乎你意料的是，扎拉尼克斯似乎完全相反，他兴高采烈地夸赞道：
 		#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
-			 [zaranix.speech(You've been so persistent with your knocking that I found myself curious to discover what it is that you want! Now, what can Zaranix do for you, [pc.miss]...?)]
+			[zaranix.speech(你坚持不懈地敲门，都让我好奇起你究竟想要什么了！现在，我扎拉尼克斯能为你做什么，[pc.miss]……？)]
 		#ELSE
-			 [zaranix.speech(Anyone who manages to get past my little inferno over there is worth every moment of my time! Now, what can Zaranix do for you, [pc.miss]...?)]
+			[zaranix.speech(无论是谁，能挺过我这里的小火海，都值得我花时间好好对待！现在，我扎拉尼克斯能为你做什么，[pc.miss]……？)]
 		#ENDIF
 	</p>
 	<p>
-		Zaranix steps back and collapses down onto the sofa behind him, eagerly awaiting your response.
+		扎拉尼克斯倒在他身后的沙发上，急切等待着你的回复。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_HOLD_BACK"><![CDATA[
 	<p>
-		[pc.speech([pc.Name],)] you reply, seeing no harm in giving Zaranix your first name, even though you're not planning on telling him everything.
+		[pc.speech([pc.Name]。)]尽管你不打算悉数告知，但你觉得告诉扎拉尼克斯你的名字没什么大不了的。
 	</p>
 	<p>
-		[zaranix.speech(Pleased to make your acquaintance, [pc.name],)] the incubus says, leaning back on the sofa.
+		[zaranix.speech([pc.name]，幸会。)]淫梦魔背靠沙发说着。
 	</p>
 	<p>
-		[pc.speech(The reason I'm here is to find Arthur, who I believe is a slave of yours. My aunt really needs to see him again in order to carry out some important research,)] you explain, careful to leave out the part about you coming from another dimension, [pc.speech(so if I could buy him from you, both my aunt and I would be extremely grateful.)]
+		[pc.speech(我为找亚瑟而来，他现在是你的奴隶吧。我的姨妈很需要他来推进一项重要研究。)]你解释说，小心翼翼地略去了你来自另一个位面的部分，[pc.speech(所以，如果我能从你这里买下亚瑟，我和姨妈都将不胜感激。)]
 	</p>
 	<p>
-		Zaranix smiles, but you can tell from the look in his eyes what his words will be before he even says them. [zaranix.speech(I'm afraid Arthur isn't for sale. He's crucial to my own research you see. In fact, that's the whole reason I had him ensl- *Ahem* I mean, that's the whole reason I bought him in the first place. After all, his expertise in the field of arcane research is unrivalled, and I'm sure that you'll be the first of many that I have to turn down like this. So, I'm afraid my answer is no. I'm sorry to disappoint you and your aunt, but unless there's anything else, Amber will show you out now.)]
+		扎拉尼克斯笑了，但是你能从他的眼睛里读懂他的意思，还没等他开口，你就已经猜到了。[zaranix.speech(恐怕亚瑟是非卖品，你看，他对我的研究至关重要。事实上，这就是我让他成为奴——咳咳，我的意思是，这就是我最初买下他的原因。毕竟，他在奥术研究领域的专业知识无人能及，你是第一个像这样被我拒绝的人，但我确信以后还有许多。所以，恐怕我不能答应，很抱歉让你和你的姨妈失望，但如果没有其他事情，安柏现在会带你出去。)]
 	</p>
 	<p>
-		[pc.speech(Would you at least be willing to talk to my aunt Lilaya about this?)] you ask, desperate for this not to be the end of your quest.
+		[pc.speech(那能不能至少和我的姨妈莉莱雅谈谈呢？)]你迫切希望不是到此为止。
 	</p>
 	<p>
-		Zaranix had started to stand up, but as you ask that question, he immediately sits back down, and you see a flash of concern pass over his handsome face. [zaranix.speech(She's called Lilaya? It's a dangerous game, naming yourself after a Lilin's favourite child like that. You should advise your aunt to change it, before it brings down Lyssieth's wrath.)]
+		扎拉尼克斯刚站起来，但听到你的问题，立刻又坐了回去，英俊的脸上闪过一丝担忧：[zaranix.speech(她叫莉莱雅？取一个莉琳爱女的名字？这可是在玩火。你应该劝劝你的姨妈改个名字，以免招致莉西丝的怒火。)]
 	</p>
 	<p>
-		[pc.speech(Erm, that <i>is</i> my aunt,)] you explain, [pc.speech(She used to work with Arthur, and now she needs his help again. I've been trying to track him down for her for quite a while now...)]
+		[pc.speech(呃，那<i>就是</i>我姨妈。)]你解释，[pc.speech(她曾与亚瑟共事，现在再度需要他的帮助。我已经找他好一段时间了……)]
 	</p>
 	<p>
-		[zaranix.speech(Hah!)] Zaranix laughs again, but you notice that his cry sounds rather more deflated than before. [zaranix.speech(So your aunt's Lilaya herself, huh? I suppose <i>you're</i> the [pc.race] who's living with her? Yes, I've heard all about you. I may not get out much, but I still keep my ear close to the grapevine.)]
+		[zaranix.speech(哈！)]扎拉尼克斯又笑了，但又稍显低沉无力，[zaranix.speech(所以你姨妈就是莉莱雅，嗯？我猜<i>你</i>就是和莉莱雅住在一起的那个[pc.race]？对，我知道你是谁。虽然我不常出去，但我依旧很关注这些消息。)]
 	</p>
 	<p>
-		With a deep sigh, Zaranix stands up and calls out to Amber, [zaranix.speech(Bring Arthur down here would you, Amber?)]
+		扎拉尼克斯长叹一声，起身向安柏喊道：[zaranix.speech(安柏，你能带亚瑟下来吗？)]
 	</p>
 	<p>
-		The succubus quickly makes her exit, leaving you alone with the imposing incubus as he starts pacing back and forth. [zaranix.speech(Today's your lucky day, I suppose,)] he says, [zaranix.speech(You'll be getting what you're after. I may have wealth and a modicum of power in this city, but having never been recognised by my Lilin mother, I'd be a fool to stand against the wishes of a demon who has. And it's not just any demon! Hah! Lyssieth's precious little half-demon herself!)]
+		魅魔迅速离开了，留下你和淫梦魔单独在一起，他来回踱步道：[zaranix.speech(今天算你走运吧。)]他说，[zaranix.speech(你会如愿的。虽然我在这个城市有财富和一些权力，但从未被我混血的莉琳母亲承认过，如果违背一个得到承认的恶魔的意愿，那我就是个傻瓜。而且，这可不是普通的恶魔！哈！莉西丝那位宝贝的小半恶魔本人！)]
 	</p>
 	<p>
-		Clearly a little annoyed by this sudden turn of events, Zaranix can't help but ramble on as you both wait for Arthur to arrive. Thankfully, you don't have to listen to too much of the incubus' disgruntled monologue, as after just a couple of minutes, there's a short knock, before the door swings open.
+		扎拉尼克斯显然对这突如其来的变故有些恼火，一边等待亚瑟，一边滔滔不绝地说个不停。谢天谢地，几分钟后房门就被轻轻敲开了，你不必听淫梦魔的长篇大论。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_EXPLAIN_EVERYTHING"><![CDATA[
 	<p>
-		[pc.speech([pc.fullName],)] you quickly introduce yourself.
+		[pc.speech([pc.fullName]。)]你迅速地自我介绍。
 	</p>
 	<p>
-		[zaranix.speech(Pleased to make your acquaintance,)] the incubus says, leaning back on the sofa as he awaits your reason for visiting.
+		[zaranix.speech(幸会。)]淫梦魔背靠沙发说着，等待你说明来访原因。
 	</p>
 	<p>
-		[pc.speech(It's a bit of a long story, but I'm here to find Arthur, who I believe is a slave of yours. It might be a little hard to believe, but I'm not actually from this world...)]
+		[pc.speech(说来话长，但我是来这里找亚瑟的，现在是你的奴隶吧。可能听起来有点难以置信，实际上我并非是这个世界的人……)]
 	</p>
 	<p>
-		You go on to explain everything that's happened to you up until this point, noticing that Zaranix's cheery expression fades away more and more each time you mention anything to do with Lilaya. After a short while you come to the end of your tale, and after telling the incubus how you managed to find out where Arthur was from Scarlett, you bring your story to an end, [pc.speech(And so if I could buy Arthur from you, both my aunt and I would be extremely grateful. Without him, we're not going to be able to find out a way for me to get back to my world.)]
+		你继续解释过往种种，注意到每当你提到莉莱雅，扎拉尼克斯愉悦的表情都会慢慢褪去。过了一会儿，你终于讲完自己是如何从斯嘉丽那里得知亚瑟的下落，你的故事也结束了：[pc.speech(所以，如果我能从你这里买下亚瑟，我和姨妈将会不胜感激。没有他，我们就找不到方法让我回到我的世界。)]
 	</p>
 	<p>
-		[zaranix.speech(Hah!)] Zaranix laughs again, but you notice that his cry sounds rather more deflated than the first time you heard it. [zaranix.speech(So <i>you're</i> the [pc.race] who's moved in with Lilaya? Yes, I know who you are. I may not get out much, but I still keep my ear close to the grapevine. Your story is fascinating, but whether I chose to believe it or not makes no difference.)]
+		[zaranix.speech(哈！)]扎拉尼克斯又笑了，但又稍显低沉无力，[zaranix.speech(所以<i>你</i>就是和莉莱雅住在一起的那个[pc.race]？是的，我知道你是谁。虽然我不常出去，但我依旧很关注这些消息。你的故事引人入胜，但我相信与否并不重要。)]
 	</p>
 	<p>
-		With a deep sigh, Zaranix stands up and calls out to Amber, [zaranix.speech(Bring Arthur down here would you, Amber?)]
+		扎拉尼克斯长叹一声，起身向安柏喊道：[zaranix.speech(安柏，你能带亚瑟下来吗？)]
 	</p>
 	<p>
-		The succubus quickly makes her exit, leaving you alone with the imposing incubus as he starts pacing back and forth, [zaranix.speech(Today's your lucky day, I suppose,)] he says. [zaranix.speech(You'll be getting what you're after. I may have wealth and a modicum of power in this city, but having never been recognised by my Lilin mother, I'd be a fool to stand against the wishes of a demon who has. And it's not just any demon! Hah! Lyssieth's precious little half-demon herself!)]
+		魅魔迅速离开了，留下你和淫梦魔单独在一起，他来回踱步道：[zaranix.speech(今天算你走运吧。)]他说，[zaranix.speech(你会如愿的。虽然我在这个城市有财富和一些权力，但从未被我混血的莉琳母亲承认过，如果违背一个得到承认的恶魔的意愿，那我就是个傻瓜。而且，这可不是普通的恶魔！哈！莉西丝那位宝贝的小半恶魔本人！)]
 	</p>
 	<p>
-		Clearly a little annoyed by this sudden turn of events, Zaranix can't help but ramble on as you both wait for Arthur to arrive. Thankfully, you don't have to listen to too much of the incubus' disgruntled monologue, as after just a couple of minutes, there's a short knock, before the door swings open.
+		扎拉尼克斯显然对这突如其来的变故有些恼火，一边等待亚瑟，一边滔滔不绝地说个不停。谢天谢地，几分钟后房门就被轻轻敲开了，你不必听淫梦魔的长篇大论。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_ARTHUR"><![CDATA[
 	<p>
-		[arthur.speech(Alright, alright! Bloody hell, Amber, would it kill for you to learn some manners?)] the distinctive voice of Arthur, very familiar to you after having met him numerous times at Lily's museum, precedes his entrance into the room.
+		[arthur.speech(好吧，好吧！见鬼，安柏，你学点礼仪会死吗？)]在莉莉的博物馆见过他无数次之后，你对亚瑟独特的声音再熟悉不过了。
 	</p>
 	<p>
-		As you look over to the door, you can't help but let out a gasp. This world's version of Arthur looks <i>exactly</i> the same as the one you used to know. His lanky, pale-skinned body, his bright blue eyes, and his mop of messy, dark-brown hair are all exactly as you remember them. In fact, the only difference between this Arthur and the one from your world appears to be in his choice of clothing. Instead of his usual tweed suit, this Arthur is wearing a lab coat and a pair of safety goggles, revealing the fact that, just like Lilaya, he's not a historian in this world, but an arcane researcher.
+		你朝门口望去，不禁倒吸一口凉气。这个世界的亚瑟与你曾经认识的那个亚瑟<i>一模一样</i>。瘦长的身材、苍白的皮肤、明亮的蓝眼睛，还有那一头凌乱的深棕色头发，都与你的记忆如出一辙。实际上，二者的唯一区别似乎仅在于着装。这个亚瑟不再穿着他一贯的粗花呢西装，换成了实验室外套和防护眼镜，这揭示了一个事实：就像莉莱雅一样，这个世界的他不再是历史学家，而是奥术学者。
 	</p>
 	<p>
-		[arthur.speech(Well, here I am, summoned at your convenience! And, I might add, not at all to mine! How am I ever going to prove to you that demonic transformation potions are impossible to make if I'm going to be interrupted on a whim?!)] Arthur exclaims, very much in tone that would never suggest he was Zaranix's slave.
+		[arthur.speech(好吧，我随你心意来了！而且，我得补充一句，我本人完全不乐意！你总是随心所欲地打扰我，我怎么可能向你证明恶魔转化药剂不可能制作出来呢？！)]亚瑟大叫道，口气完全不像是扎拉尼克斯的奴隶。
 	</p>
 	<p>
-		[zaranix.speech(You won't need to trouble yourself with proving that to me anymore,)] Zaranix replies, [zaranix.speech(If truth be told, you'd already convinced me that it wasn't going to happen after your first day here. It's a moot point now anyway. Apparently, Lilaya wants you back. So go on, you're free. Oh, and you have [pc.name] here to thank for tracking you down.)]
+		[zaranix.speech(你不必再费心证明了。)]扎拉尼克斯回答，[zaranix.speech(说实话，你在这第一天就已经让我相信做不到了。反正现在这些已经无关紧要了，莉莱雅又明显想要你回去，所以去吧，你自由了。哦，你还要感谢这位[pc.name]来找你。)]
 	</p>
 	<p>
-		[arthur.speech(Bloody hell! And here I was, all ready to resign myself to a life of misery and servitude. But if it's <i>Lilaya</i> who's after me, then maybe the life of a slave doesn't sound so bad after all...)] Arthur looks across at you and smiles. [arthur.speech(If she doesn't blast me to pieces the moment she sees me, then I'll owe you my thanks for my freedom. I suppose I'll see you over at her place; I wouldn't want to overstay my welcome here, so I'd best be on my way! Thank you Zaranix for a delightful stay, and, my dear Amber, do try to allow yourself to smile now and again!)]
+		[arthur.speech(天哪！我本来已经准备好适应悲惨的奴役生活了，但如果是<i>莉莱雅</i>在追我，那奴役生活似乎也没那么糟……)]亚瑟看向你，微笑着说，[arthur.speech(感谢你让我重获自由，我欠你一个人情，如果她不会一看到我就把我轰成碎片的话。我想我们会在她的地盘上再会。我可不想在这里多待，现在就出发吧！扎拉尼克斯，谢谢你为我提供了愉快的住宿体验，还有，亲爱的安柏，偶尔尝试笑一笑吧！)]
 	</p>
 	<p>
-		With that, Arthur turns about and practically skips away through the door, promising the momentarily flustered Amber that he'll show himself out as he makes his exit.
+		说罢，亚瑟立马一蹦一跳地离开了，还向一时不知所措的安柏承诺，他能自己找到回去的路。
 	</p>
 	<p>
-		[amber.speech(That insolent-)] Amber starts, but is quickly cut off by her master.
+		[amber.speech(这个无礼的——)]安柏刚要发作，就被主人打断了。
 	</p>
 	<p>
-		[zaranix.speech(Let him go, Amber, it's not worth getting caught up in the affairs of Lyssieth's favourite child.)]
+		[zaranix.speech(让他走吧，安柏，别掺和莉西丝爱女的事情。)]
 	</p>
 	<p>
-		[amber.speech(Yes, master,)] Amber replies, before turning her attention towards you, [amber.speech(but <i>this one</i> should at least show [pc.her] gratitude.)]
+		[amber.speech(是，主人。)]安柏回应道，又转头注意起你，[amber.speech(但<i>这家伙</i>总得表达一下[pc.her]的谢意吧。)]
 	</p>
 	<p>
-		[zaranix.speech(Well, I can't really demand anything of someone so close to a demon as important as Lilaya, but I <i>did</i> go through a lot of trouble to get hold of Arthur...)] Zaranix smiles, before sitting back down on the sofa and suggestively spreading his legs.
+		[zaranix.speech(嗯，像莉莱雅这样重要的恶魔，我还真没办法向她身边的人提出什么过分的要求。但我<i>确实</i>费了不少劲才找到亚瑟……)]扎拉尼克斯微笑着，又坐回到沙发上，暗示地张开双腿。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_ARTHUR_REFUSE_SEX"><![CDATA[
 	<p>
-		You're not really too keen on performing any sexual acts with Zaranix or Amber, and so you quickly stand up, before stepping over towards the door and saying, [pc.speech(Thank you for being so understanding, but I really do need to get going now...)]
+		你不是很想与扎拉尼克斯或安柏做爱，所以赶忙起身走向门口，说道：[pc.speech(你真是通情达理，但我现在真得走了……)]
 	</p>
 	<p>
-		[zaranix.speech(Hrmph... Very well. Amber, please show [pc.name] out,)] Zaranix responds. [zaranix.speech(Perhaps we'll meet again some time.)]
+		[zaranix.speech(嗯……很好。安柏，请去送送[pc.name]。)]扎拉尼克斯回应道，[zaranix.speech(也许我们会再见面的。)]
 	</p>
 	#IF(flags.hasFlag(FLAG_amberSatOnFloor) || flags.getSavedLong('amber_door_knock_repeat_count')<4)
 		<p>
 			#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
-				Amber opens the door and steps out of the room, beckoning for you to follow her. As soon as you step back outside into the corridor, she closes the door behind you, before snapping her fingers and pointing to the floor. [amber.speech(You've already demonstrated to me that you're a bitch, so I expect you to act like one. Now heel.)]
+				安柏打开门走了出去，招手示意你跟上。你一走出走廊，她就关上门，打了个响指，指着地面说：[amber.speech(既然你已经证明自己是个婊子，那就这么表现吧。现在过来。)]
 			#ELSE
-				Amber opens the door and steps out of the room, beckoning for you to follow her. As soon as you step back outside into the corridor, she closes the door behind you, before snapping her fingers and pointing to the floor. [amber.speech(You'll leave the same way you entered, bitch. Now heel.)]
+				安柏打开门走了出去，招手示意你跟上。你一走出走廊，她就关上门，打了个响指，指着地面说：[amber.speech(怎么来就怎么去，婊子，过来。)]
 			#ENDIF
 		</p>
 		<p>
 			#IF(pc.isTaur())
-				Eager to get this business finished without causing a scene, you do as the fiery maid commands, and obediently move forwards to stand next to her. Amber lets out a derisive laugh, before setting off down the hallway. Submissively following her, you soon find yourself back at the front door, which Amber opens before you.
+				你不想节外生枝，便急忙按照这位火爆女仆的吩咐，顺从地走到她身边。安柏哂然一笑，迈开步子朝走廊走去。你顺从地紧随其后，很快就回到了前门，安柏为你打开大门。
 			#ELSE
-				Eager to get this business finished without causing a scene, you do as the fiery maid commands, and obediently drop down onto all fours next to her. Amber lets out a derisive laugh, before setting off down the hallway. Crawling alongside her, you soon find yourself back at the front door, which Amber opens before you.
+				你不想节外生枝，便急忙按照这位火爆女仆的吩咐，顺从地趴在她身边。安柏哂然一笑，迈开步子朝走廊走去。你在地上爬行，紧随其后，很快就回到了前门，安柏为你打开大门。
 			#ENDIF
 		</p>
 		<p>
-			[amber.speech(Good bitch, you were pretty fun,)] she says, her voice softening for the first time since you met her.
+			[amber.speech(乖婊子，你很有趣。)]她说道，你还是第一次听到她这么柔和的声音。
 			#IF(pc.isTaur())
-				 As you head back out into the street, Amber leans forwards to deliver a surprisingly playful slap to your rear end, and with a little laugh, she slams the door shut behind you.
+				你再次走入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，轻笑着关上大门。
 			#ELSE
-				 As you crawl back out into the street, Amber leans down to deliver a surprisingly playful slap to your rear end, and with a little laugh, she slams the door shut behind you.
+				你再次爬入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，轻笑着关上大门。
 			#ENDIF
 		</p>
 		<p>
 			#IF(pc.isTaur())
-				Ignoring the amused looks of a couple of passersby, you set off on your way, letting out a deep sigh of relief now that you've finally got all this business with Arthur resolved.
+				你无视两个路人打趣的目光，踏上你的旅程。亚瑟的事情终于尘埃落定，你也大松了一口气。
 			#ELSE
-				Standing up, you ignore the amused looks of several passersby as you brush yourself down and continue on your way, letting out a deep sigh of relief now that you've finally got all this business with Arthur resolved.
+				你站起身来，无视几位路人打趣的目光，梳洗完毕后继续前行。亚瑟的事情终于尘埃落定，你也大松了一口气。
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Amber opens the door and steps out of the room, beckoning for you to follow her. As soon as you step back outside into the corridor, she closes the door behind you, before striding off down the corridor and calling out behind her, [amber.speech(Hurry up, bitch. I want you out of here as quickly as possible.)]
+			安柏打开门走了出去，招手示意你跟上。你一走出走廊，她就关上门，大步沿着走廊走去，边走边回头喊道：[amber.speech(快点，贱人，我希望你赶快走。)]
 		</p>
 		<p>
-			Finding yourself as eager as she is to get this business finished, you follow the fiery maid down the corridor. After just a moment, you find yourself back at the front door, which Amber opens before you.
+			你同样急切，就跟随这位火爆的女仆沿走廊走去，片刻后便重回大门。安柏在前方为你拉开门。
 		</p>
 		<p>
-			[amber.speech(If you ever decide that you'd like to be a good bitch, then you know where to find me,)] she says, her voice softening for the first time since you met her.
+			[amber.speech(如果你还想再当乖婊子，知道去哪找我。)]她说道，你还是第一次听到她这么柔和的声音。
 			#IF(pc.isTaur())
-				 As you head back out into the street, Amber leans forwards to deliver a surprisingly playful slap to your rear end, and with one final growl, she slams the door shut behind you.
+				你再次走入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，她又低吼一声，砰地关上了门。
 			#ELSE
-				 As you crawl back out into the street, Amber leans down to deliver a surprisingly playful slap to your rear end, and with one final growl, she slams the door shut behind you.
+				你再次爬入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，她又低吼一声，砰地关上了门。
 			#ENDIF
 		</p>
 		<p>
-			Ignoring the amused looks of a couple of passersby, you set off on your way, letting out a deep sigh of relief now that you've finally got all this business with Arthur resolved.
+			你无视两个路人打趣的目光，踏上你的旅程。亚瑟的事情终于尘埃落定，你也大松了一口气。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_ARTHUR_THANK_ZARANIX"><![CDATA[
 	<p>
-		You weren't really expecting it to be so easy to convince Zaranix to part with Arthur, and, feeling more than a little grateful for how reasonable he's been, you decide that you'd better repay him. Looking down at his crotch and biting your [pc.lip], you let out a pleading little whine, [pc.speech(I'd like to show you my thanks...)]
+		你没想到说服扎拉尼克斯放亚瑟走会这么容易，你对他的通情达理感到非常感激，决定要好好报答他。你低头看向他的裤裆，咬着你的[pc.lip]，发出了恳求的低吟，[pc.speech(我希望能有机会向你好好表示一下我的谢意……)]
 	</p>
 	<p>
-		Zaranix spreads his legs a little wider, grinning at you as he calls out, [zaranix.speech(Amber, why don't you show your new bitch how to thank me in the proper manner!)]
+		扎拉尼克斯稍稍张开腿，高兴地笑出声来，[zaranix.speech(安柏，你应该教教你的新婊子，表示感谢的时候应该怎么做！)]
 	</p>
 	<p>
-		[amber.speech(Yes, master,)] you hear Amber reply from behind you, and before you can say or do anything else, the firm grip of the succubus' hand closes around the back of your neck. With a determined push, Amber forces you down onto your hands and knees, and, not loosening her grip on you for a moment, starts to drag you towards Zaranix.
+		[amber.speech(当然，主人。)]你听到身后传来安柏的回答，还没等你说什么或做什么，魅魔的手就紧紧抓住了你的后颈。安柏果断地一用力，迫使你手脚并用地跪了下来，并且一刻也没有放松对你的控制，开始把你拖向扎拉尼克斯。
 	</p>
 	<p>
-		You obediently crawl alongside Amber as she leads you between Zaranix's legs, and with one last push, forces your head down into his crotch. Letting go of you, Amber then reaches down to her master's groin, before unfastening his trousers and shifting aside his black briefs. You can't help but let out a little whine as you suddenly find your face just [unit.sizes] away from Zaranix's huge, purple demon-cock.
+		你顺从地爬到安柏身边，她把你带到扎拉尼克斯的两腿之间，最后一用力，把你的头按到了他的胯下。放开你后，安柏将手伸向主人的下体，然后解开他的裤子，把他的黑色内裤移到一边。当你突然发现自己的脸离扎拉尼克斯巨大的紫色恶魔阴茎只有几[unit.sizes]远时，你不禁发出了一声轻吟。
 	</p>
 	<p>
-		[amber.speech(Open wide, bitch,)] Amber commands, stroking her master's ribbed, tentacle-lined cock to attention, before kneeling down behind you and holding you in place. Left with little option but to do as you're told, you prepare to show Zaranix how thankful you are...
+		[amber.speech(张嘴，婊子。)]安柏命令道，她抚摸着主人那纹理分明，长有触手的阴茎，然后跪在你身后，把你按在原地。你别无选择，只能乖乖听话，准备向扎拉尼克斯表达你的感激之情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_ZARANIX_ARTHUR_THANK_ZARANIX_START_SEX"><![CDATA[
 	<p>
-		[amber.speech(So what are you waiting for, bitch?)] Amber snarls in your ear, [amber.speech(Open your fucking mouth!)]
+		[amber.speech(你在期待什么，婊子？)]安柏附耳低吼，[amber.speech(他妈把嘴张开！)]
 	</p>
 	<p>
-		Doing as you're told, you open wide, and the moment the fiery-haired succubus sees that you're obeying her command, she pushes your head down, forcing the head of [zaranix.namePos] cock into your mouth. She doesn't stop there, however, and continues exerting a steady pressure on the back of your head, causing the thick purple cock to be rammed deep down your throat. 
+		你张嘴照做，而这个头发如火焰般闪耀的魅魔一看到你服从命令，立刻按着你的头，强行让你吞入[zaranix.namePos]的肉棒。但她没有就此罢休，反而继续向你的后脑勺施压，使粗大的紫色阴茎深深捅入你的喉咙。
 	</p>
 	<p>
-		[amber.speech(That's right, you worthless bitch,)] the sadistic maid sneers, [amber.speech(take that cock all the way to the base!)]
+		[amber.speech(对喽，贱货。)]施虐狂女仆讥讽着，[amber.speech(让鸡巴插到底！)]
 	</p>
 	<p>
-		Regardless of whether or not you wanted to, this is exactly what happens next. With one last rough push, Amber slams your head down into [zaranix.namePos] crotch, and with your throat now completely full of [zaranix.his] thick demonic cock, you find your lips pressing tightly against the incubus's groin. As you let out a gurgled choking noise, Amber finally lets go, allowing you to raise your head until only the [zaranix.cockHead+] of [zaranix.namePos] saliva-coated cock remains in your mouth.
+		不管你愿不愿意，接下来发生的事情就是这样。安柏最后用力一摁，把你的头狠狠压在[zaranix.namePos]的胯下，你的喉咙塞满[zaranix.his]粗大的恶魔肉棒，嘴唇紧贴在淫梦魔的腹股沟上。直到[zaranix.namePos]的肉棒让你咕咕哽咽，嘴中[zaranix.cockHead+]覆满唾液，安柏才愿意收手，让你抬起头。
 	</p>
 	<p>
-		[amber.speech(Not bad, whore,)] Amber snarls, [amber.speech(now let's see you repeat that a few more times...)]
+		[amber.speech(不错嘛，婊子。)]安柏低吼着，[amber.speech(再继续来几遍……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="MEETING_ZARANIX_ARTHUR_THANK_AMBER"><![CDATA[
 	<p>
-		Although Zaranix was ultimately the one responsible for freeing Arthur, you feel like you owe his maid, Amber, a debt of gratitude for allowing you to meet with him in the first place. Turning your head to look up at the fiery-haired succubus, you thank her, [pc.speech(Thank you for letting me see Zaranix, Mistress Amber!)]
+		虽然最终是扎拉尼克斯释放了亚瑟，但又是他的女仆安柏允许你和他见面，所以你觉得自己欠安柏一个人情。所以你转过头，仰望着这位头发如火焰般闪耀的魅魔，向她道谢道：[pc.speech(谢谢你让我见到扎拉尼克斯，安柏主人！)]
 	</p>
 	<p>
-		[amber.speech(How <i>dare</i> you!)] Amber shouts, her eyes and hair seeming to glow ever brighter as she gets angrier, [amber.speech(Turn around <i>this instant</i> and thank my master instead!)]
+		[amber.speech(你怎么<i>敢</i>！)]安柏愤怒地大喊道，眼睛和头发也愈发闪亮，[amber.speech(<i>立刻</i>转过身来，向我的主人道谢！)]
 	</p>
 	<p>
-		Before you have a chance to react, Zaranix lets out a laugh, [zaranix.speech(Hah! If you want to thank Amber, then that's fine with me, but I doubt she'll be content with just your words!)]
+		你还没来得及反应，扎拉尼克就哈哈大笑起来：[zaranix.speech(哈！你想感谢安柏，我没意见，但我怀疑她不会仅满足于你的只言片语！)]
 	</p>
 	<p>
-		[amber.speech(Master, may I punish this insolent bitch?)] Amber asks, glaring down at you as she speaks.
+		[amber.speech(主人，我要惩罚这个无礼的婊子吗？)]安柏问道，眼睛还一边死死地盯着你。
 	</p>
 	<p>
-		[zaranix.speech(See what I mean?)] Zaranix says to you, before leaning back on the sofa and addressing Amber, [zaranix.speech(You have my permission, my little inferno.)]
+		[zaranix.speech(我说什么来着？)]扎拉尼克斯靠在沙发上和你说道，又转向安柏，[zaranix.speech(我准许了，我的小火海。)]
 	</p>
 	<p>
-		[amber.speech(<i>Present yourself,</i>)] Amber growls, her voice as cold as ice.
+		[amber.speech(<i>露出来。</i>)]安柏咆哮着，声似寒冰。
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress Amber!)] you cry,
+		[pc.speech(好的，安柏主人！)]你叫道，
 		#IF(pc.isTaur())
-			 turning around to present your rear end to her before lying down on your feral [pc.legRace]'s body.
+			转过身向她展示后臀，接着伏下你的[pc.legRace]身体。
 		#ELSE
-			 dropping down onto all fours and shuffling about to present your rear end to her.
+			四肢着地，向她摇晃后臀。
 		#ENDIF
-		Glancing back over your shoulder, you see Amber pull off her maid dress, revealing her underwear to consist of a red, cupless bra, a tight black underbust corset, and a red, crotchless thong.
+		你回头瞥了一眼，只见安柏脱下了女仆裙，露出她的深红色露乳胸罩、黑色束腰以及深红色开裆丁字裤。
 	</p>
 	<p>
-		As your [pc.eyes] wander down to her groin, you let out a little gasp. Quickly standing to attention as she steps towards you, Amber's huge, ebony, demonic cock is already dripping precum, and as she sees you looking back at her, the succubus growls, [amber.speech(Face-forwards, bitch! And lift that ass! I'll teach you what happens to insolent sluts!)]
+		你[pc.eyes]神游移到她的腹股沟，轻声喘息，一看到她走来就迅速回正。安柏那乌黑硕大的恶魔肉棒正滴着先走液，她发现你有回头看她，咆哮道：[amber.speech(看前面，婊子！把屁股抬起来！我会让你知道没教养的荡妇是什么下场！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_THANKING_ZARANIX"><![CDATA[
 	<p>
-		Amber pulls you back from Zaranix's lap, grinning down at you. [amber.speech(Good bitch.)]
+		安柏摁着你的背，把你按向扎拉尼克斯的大腿，一边咧嘴笑着：[amber.speech(乖婊子。)]
 	</p>
 	<p>
-		[zaranix.speech(Well, I can't say that I'm too happy at having lost Arthur, but that performance certainly makes me feel a little better about it. Amber, please show [pc.name] out now,)] Zaranix says, before looking down at you. [zaranix.speech(Perhaps we'll meet again some time.)]
+		[zaranix.speech(嗯，失去了亚瑟，我不能说我有多高兴，但这场表演确实让我感觉好了一点。安柏，请去送送[pc.name]。)]扎拉尼克斯低头看着你说，[zaranix.speech(也许我们会再见面的。)]
 	</p>
 	<p>
 		#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
-			With that, Amber snaps her fingers and points to her side once more. [amber.speech(Now that you've shown me what a submissive bitch you are, you're going to act like one. Now heel.)]
+			语毕，安柏再次向身侧打了个响指：[amber.speech(既然你已经向我展示了你是个多么顺从的婊子，那就这么表现吧。现在站起来。)]
 		#ELSE
-			With that, Amber snaps her fingers and points to her side once more. [amber.speech(You'll leave the same way you entered, bitch. Now heel.)]
+			语毕，安柏再次向身侧打了个响指：[amber.speech(从哪来回哪去，婊子。现在站起来。)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			Eager to get this business finished without causing a scene, you do as the fiery maid commands, and obediently move forwards to stand next to her. Amber lets out a derisive laugh, before setting off down the hallway. Submissively following her, you soon find yourself back at the front door, which Amber opens before you.
+			你不想节外生枝，便急忙按照这位火爆女仆的吩咐，顺从地走到她身边。安柏哂然一笑，迈开步子朝走廊走去。你顺从地紧随其后，很快就回到了前门，安柏为你打开大门。
 		#ELSE
-			Eager to get this business finished without causing a scene, you do as the fiery maid commands, and obediently drop down onto all fours next to her. Amber lets out a derisive laugh, before setting off down the hallway. Crawling alongside her, you soon find yourself back at the front door, which Amber opens before you.
+			你不想节外生枝，便急忙按照这位火爆女仆的吩咐，顺从地趴在她身边。安柏哂然一笑，迈开步子朝走廊走去。你在地上爬行，紧随其后，很快就回到了前门，安柏为你打开大门。
 		#ENDIF
 	</p>
 	<p>
-		[amber.speech(Good bitch, you were pretty fun,)] she says, her voice softening for the first time since you met her.
+		[amber.speech(乖婊子，你很有趣。)]她说道，你还是第一次听到她这么柔和的声音。
 		#IF(pc.isTaur())
-			 As you head back out into the street, Amber leans forwards to deliver a surprisingly playful slap to your rear end, and with a little laugh, she slams the door shut behind you.
+			再次走入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，轻笑着关上大门。
 		#ELSE
-			 As you crawl back out into the street, Amber leans down to deliver a surprisingly playful slap to your rear end, and with a little laugh, she slams the door shut behind you.
+			再次爬入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，轻笑着关上大门。
 		#ENDIF
 	</p>
 	<p>
-		Standing up, you ignore the amused looks of several passersby as you brush yourself down and continue on your way, letting out a deep sigh of relief now that you've finally got all this business with Arthur resolved.
+		你站起身来，无视几位路人打趣的目光，梳洗完毕后继续前行。亚瑟的事情终于尘埃落定，你也大松了一口气。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_THANKING_AMBER"><![CDATA[
 	<p>
-		Amber pulls back from you, letting out a little laugh, as she delivers one last slap to your exposed ass. [amber.speech(Good bitch, you were a pretty good fuck!)]
+		安柏从你身边退开，轻笑一声，最后抽了你那暴露的屁股一巴掌。[amber.speech(好婊子，你可真是个骚货！)]
 	</p>
 	<p>
-		[zaranix.speech(Good job, Amber,)] Zaranix calls out from his place on the sofa. [zaranix.speech(Now why don't you show our guest out, then perhaps I'll take you for a ride.)]
+		[zaranix.speech(做的好，安柏。)]扎拉尼克斯坐在沙发上喊道。[zaranix.speech(你现在送客人出去吧，也许待会儿我可以带你去兜兜风。)]
 	</p>
 	<p>
 		#IF(flags.getSavedLong('amber_door_knock_repeat_count')>=4)
-			[amber.speech(~Mmm~ Yes, Master!)] Amber replies, standing up and snapping her fingers to her side once again. [amber.speech(Now that you've shown me what a submissive bitch you are, you're going to act like one. Now heel.)]
+			[amber.speech(~唔~好的，主人！)]安柏回答说，她站起身来，再次向身侧打了个响指，[amber.speech(既然你已经向我展示了你是个多么顺从的婊子，那就这么表现吧。现在站起来。)]
 		#ELSE
-			[amber.speech(~Mmm~ Yes, Master!)] Amber replies, standing up and snapping her fingers to her side once again. [amber.speech(You'll leave the same way you entered, bitch. Now heel.)]
+			[amber.speech(~唔~好的，主人！)]安柏回答说，她站起身来，再次向身侧打了个响指，[amber.speech(从哪来回哪去，婊子。现在站起来。)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			Eager to get this business finished without causing a scene, you do as the fiery maid commands, and obediently move forwards to stand next to her. Amber lets out a derisive laugh, before setting off down the hallway. Submissively following her, you soon find yourself back at the front door, which Amber opens before you.
+			你不想节外生枝，便急忙按照这位火爆女仆的吩咐，顺从地走到她身边。安柏哂然一笑，迈开步子朝走廊走去。你顺从地紧随其后，很快就回到了前门，安柏为你打开大门。
 		#ELSE
-			Eager to get this business finished without causing a scene, you do as the fiery maid commands, and obediently drop down onto all fours next to her. Amber lets out a derisive laugh, before setting off down the hallway. Crawling alongside her, you soon find yourself back at the front door, which Amber opens before you.
+			你不想节外生枝，便急忙按照这位火爆女仆的吩咐，顺从地趴在她身边。安柏哂然一笑，迈开步子朝走廊走去。你在地上爬行，紧随其后，很快就回到了前门，安柏为你打开大门。
 		#ENDIF
 	</p>
 	<p>
-		[amber.speech(Good bitch, you were pretty fun,)] she says, her voice softening for the first time since you met her.
+		[amber.speech(乖婊子，你很有趣。)]她说道，你还是第一次听到她这么柔和的声音。
 		#IF(pc.isTaur())
-			 As you head back out into the street, Amber leans forwards to deliver a surprisingly playful slap to your rear end, and with a little laugh, she slams the door shut behind you.
+			再次走入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，轻笑着关上大门。
 		#ELSE
-			 As you crawl back out into the street, Amber leans down to deliver a surprisingly playful slap to your rear end, and with a little laugh, she slams the door shut behind you.
+			再次爬入街头，安柏向前倾身，出人意料地轻拍了一下你的屁股，轻笑着关上大门。
 		#ENDIF
 	</p>
 	<p>
-		Standing up, you ignore the amused looks of several passersby as you brush yourself down and continue on your way, letting out a deep sigh of relief now that you've finally got all this business with Arthur resolved.
+		你站起身来，无视几位路人打趣的目光，梳洗完毕后继续前行。亚瑟的事情终于尘埃落定，你也大松了一口气。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_KICK_DOWN_DOOR"><![CDATA[
 	<p>
-		Glancing around to make sure there aren't any Enforcers nearby, you walk up to the front door of Zaranix's home.
-		 Paying no heed to the fact that it looks to be made of sturdy, solid oak, you lift your [pc.leg] up, and deliver a powerful kick just to one side of the handle.
-		 A loud, splintering crash accompanies your blow, and the door swings wide open before you.
+		你环顾四周，确保附近没有执法者后走到扎拉尼克斯家门前。
+		这扇门看起来是由坚固的橡木制成，但你毫不理会，抬起[pc.leg]用力一踹。
+		伴随着巨大的劈啪声，门在你面前猛地打开了。
 	</p>
 	<p>
-		Quickly stepping inside, you shut the door behind you, keen to avoid the attention of any passersby.
-		 You find yourself in a large entrance hall, similar to the one in Lilaya's home, but on a slightly smaller scale.
-		 A crystal chandelier hangs from the high ceiling, and a little way in front of you, a wide staircase leads to the upper floor.
-		 To either side of that, a pair of corridors lead off to other parts of the house, and it's from one of those that you hear shouting.
+		你快步走进屋后立马关上门，避免引起路人的注意。
+		现在自己身处一个宽敞的门厅，这与莉莱雅家中的大厅很像，但更小。
+		高高的天花板上悬挂着一盏水晶吊灯，在你前方不远处，有一条宽阔的楼梯通往上层。
+		在楼梯两侧，有两条走廊通往房子的其他地方，你听到其中一条走廊传来喊叫声。
 	</p>
 	<p>
-		[katherine.speech(Mistress Amber! There was a loud noise at the door!)]
+		[katherine.speech(安柏主人！刚才门口似乎有什么很大声的动静！)]
 	</p>
 	<p>
-		[amber.speech(Be quiet, Katherine! Get on with your work, I'll deal with this!)]
+		[amber.speech(别问了，凯瑟琳！回去干你们的活，这边的事情我来处理！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_KICK_DOWN_DOOR_MAIDS_MET"><![CDATA[
 	<p>
-		Before you have the chance to take any action, the fiery-haired succubus maid who answered the door to you enters the hall.
-		 As her glowing-amber eyes fixate themselves onto yours, 'Mistress Amber' screams,
-		 [amber.speech(You picked the wrong house to try and rob, bitch!)]
+		不等你做出任何反应，应门的那个一头明艳长发的魅魔女仆就走进了大厅。
+		当她琥珀色的眼睛紧盯着你时，“安柏主人”尖叫起来，
+		[amber.speech(你抢错房子了，婊子！)]
 	</p>
 	<p>
-		Not even giving you a chance to offer an explanation, the maid launches herself at you in a blind fury!
+		怒火中烧的女仆丝毫不留给你辩解的时间，朝你冲了过来！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_KICK_DOWN_DOOR_MAIDS_NOT_MET"><![CDATA[
 	<p>
-		Before you have the chance to take any action, one of the most striking succubi you've ever seen, who you assume to be 'Mistress Amber', enters the hall.
-		 Her gorgeous face and perfectly proportioned body are covered in pitch-black ebony skin, but it's not her voluptuous figure which your eyes are drawn to.
-		 Styled into loose waves, and giving off a luminescent, yellowy-orange glow, it's her extraordinary amber hair, which reaches down to just above her ass, that you find yourself gazing at.
-		 As her eyes fixate themselves onto yours, you see that her irises are the exact same glowing-amber shade as her hair, giving this demon a truly remarkable appearance.
+		不等你做出任何反应，一个你见过的最引人注目的魅魔走进了大厅，你猜她就是“安柏主人”。
+		她有着黑檀色皮肤、姣好的面容和匀称的身材，但你的目光并没有被她丰满的身材所吸引。
+		她的头发被打理成松散的大波浪，散发出黄橙色荧光，她的琥珀色秀发垂至臀部，让人目不转睛。
+		当她注视着你时，你发现她的虹膜和头发一样，都是琥珀色的，让这个恶魔光彩夺目。
 	</p>
 	<p>
-		Despite the fact that her maid's dress quite clearly identifies her as a servant in this household, her attitude is not at all one of subservience, and as she sees you standing inside her master's home, she screams,
-		 [amber.speech(You picked the wrong house to try and rob, bitch!)]
+		虽然她穿着这个家的女仆制服，但她的态度却一点儿也不像个仆人。她一看你闯进屋子里，尖叫道：
+		[amber.speech(你抢错房子了，婊子！)]
 	</p>
 	<p>
-		Not even giving you a chance to offer an explanation, the maid launches herself at you in a blind fury!
+		怒火中烧的女仆丝毫不留给你辩解的时间，朝你冲了过来！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -913,373 +912,352 @@
 	
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		The entrance hall to Zaranix's home, while nothing compared to that of Lilaya's, is nonetheless very impressive.
-		 A huge crystal chandelier casts its bright, arcane-powered light over the entire area, and fine paintings in golden frames hang on each of the surrounding walls.
+		扎拉尼克斯家的门厅虽然比不上莉莱雅家，但也非常气派。
+		一盏巨大的水晶吊灯散发着明亮的奥术光芒，笼罩着整个大厅，四周的墙壁上挂满了金色边框的精美油画。
 	</p>
 	<p>
-		The main door to Zaranix's home is made from thick, sturdy oak, and there's nothing stopping you from opening it and taking your leave.
-		 <b>It looks like the door will be locked behind you if you do this, so be prepared to gain entry all over again if you choose to leave now!</b>
+		扎拉尼克斯家的大门是用厚实坚固的橡木制成的，但你可以直接开门离开。
+		<b>你一走门就会重新上锁，所以如果你现在选择离开，就要做好重新进入的准备！</b>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_AMBER_PRESENT"><![CDATA[
 	<p><i>
-		Amber is slumped down against one wall, and you see her hand furiously pumping away between her legs.
-		 Her intense lust doesn't look to be in any danger of dying down, and you wonder if you should have a little more fun with her while you have the chance...
+		安柏斜靠在一面墙上，你可以看到她的手在双腿间疯狂地抽动着。
+		她那强烈的欲望看起来丝毫没有消退的迹象，你在想，是否应该趁这个机会多和她玩玩呢？
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_AMBER_SEX"><![CDATA[
 	<p>
-		It doesn't look like any of the other maids of the household will interrupt you, so you decide to take this opportunity to have a little fun with Amber.
-		 Stepping over to where she's sunk down against the wall, you reach forwards and take hold of her arm, before pulling her to her feet.
-		 Denied the freedom to get herself off, Amber pitifully looks up into your eyes, and instead of fury, you see them filled with burning lust.
+		看起来在这里其他女仆不会打扰你，所以你决定趁这个机会和安柏找点乐子。
+		你走到她靠墙坐下的地方，握住她的胳膊，然后把她拉起来。
+		这位饥渴的女仆无处可逃，她抬起头看向你，你发现，那双眼睛里充满了急切而炽热的欲望。
 	</p>
 	<p>
-		She pushes herself off from the wall, wrapping her arms around your back and desperately pressing her [amber.lips+] against yours.
-		 You reciprocate the gesture, and after spending a few moments of sliding your tongues into one another's mouths, you pull back, grinning...
+		她把自己从墙边推离，双臂环绕在你的背上，迫切地把她[amber.lips+]贴在你的嘴上。
+		你回应了这个举动，与她进行了一个激烈的舌吻，随后你抬起头，笑了笑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_AMBER_SEX_SUBMIT"><![CDATA[
 	<p>
-		Despite her current state, you find yourself incredibly turned on by Amber's dominant, fiery personality.
-		 Not willing to take the dominant role, but with a deep desire to have sex with the now-very-horny succubus, you walk up to where she's collapsed against the wall, and sigh,
-		 [pc.speech(Mistress Amber... Erm... If you're feeling a little horny, perhaps you could use me? I mean, I-)]
+		尽管她现在的状态很糟糕，但你发现自己被安柏那霸道、火热的气质深深吸引。
+		你很想和这个已然欲火焚身的魅魔做爱，但又不想主导性爱，于是你走到她靠墙倒下的地方，叹了口气，
+		[pc.speech(安柏主人……呃……如果你觉得身体不舒服的话，也许可以用我来排解一下您的欲望？我是说，我——)]
 	</p>
 	<p>
-		Despite the fact that you're a stranger in her master's house, Amber looks up at you with an intense, burning passion in her eyes.
-		 Sliding her hand out from under her dress, she jumps to her feet, interrupting your sentence as she grabs your head and pulls you into a desperate kiss.
+		尽管你是她主人屋子里的一个陌生人，但安柏还是抬起头看向你，眼神中充满了强烈而炽热的欲望。
+		她从裙底拿出手，急切地跳起来，抓住你的头发狠狠吻你。
 	</p>
 	<p>
-		You reciprocate the gesture, but only spend a few moments sliding your tongues into one another's mouths before Amber pulls back, moaning,
-		 [amber.speech(Good bitch! Fuck... I'm so fucking horny! I <i>need</i> you!)]
+		你做出了回应，但安柏只与你唇齿纠缠了片刻就推开你，呻吟道：
+		[amber.speech(好婊子！操……我现在好他妈饥渴！我<i>需要</i>你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS"><![CDATA[
 	<p>
-		Before you, a wide, red-carpeted staircase leads up to the first floor of Zaranix's house.
-		 On either side, a corridor leads to other parts of the house, and behind you, the entrance hall offers an opportunity to make your exit.
+		在你面前的是一条铺着红色地毯的宽阔楼梯，通往扎拉尼克斯家的一楼。
+		两侧的走廊通向房子的其他部分，在你身后是门厅，你可以从那里离开。
 	</p>
 	<p>
-		Much like the rest of the house, the walls surrounding you are home to several fine paintings.
-		 Well-crafted cabinets, cushioned chairs, and little wooden tables are strategically dotted about here and there, but not so much so as to make the area seem cluttered.
+		就像房子里的其他地方一样，四周的墙壁上挂着几幅精美的画作。
+		精致的橱柜、软垫座椅和小巧的木桌巧妙地散布在各个角落，但数量恰到好处，不至于让这个区域显得杂乱无章。
 	</p>
 	<p>
-		You could use the stairs here to gain access to the first floor, which is where you're sure to find Zaranix.
+		你可以利用这里的楼梯进入二楼，在那里你一定能找到扎拉尼克斯。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STAIRS_KATHERINE_NOT_SUBDUED"><![CDATA[
 	<p>
-		[style.italicsBad(You can hear the faint sound of humming coming from down the corridor to your right, and you realise that one of Zaranix's maids must be busy cleaning down there!
-		 If you wanted to avoid confrontation, it would be best not to head over there.)]
+		[style.italicsBad(你隐隐约约听到，走廊那边传来微弱的嗡嗡声。一定是扎拉尼克斯的女仆在那边打扫卫生！如果你不想惹上麻烦，最好别去那里。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		You find yourself comparing the corridors of Zaranix's home to those of Lilaya's. While they're just as well-furnished as those of your aunt's house, being home to numerous fine paintings, cushioned chairs, and well-crafted cabinets, they're not quite as wide nor high. Where once you might have been deeply impressed by the extravagant luxury of this incubus's mansion, you now find yourself thinking that it's not quite as grand as the one you live in.
+		你把扎拉尼克斯家的走廊和莉莱雅家的走廊作了比较。虽然这些走廊和你姨妈家的一样，都摆放着许多精美的油画、软垫椅和精心制作的橱柜，但却没有那么宽，也没有那么高。以前，你可能会被这个淫梦魔豪宅的奢华所折服，而现在，你却觉得它还不如你住的房子宏伟。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_KATHERINE_NOT_SUBDUED"><![CDATA[
 	<p>
-		[style.italicsBad(You can hear the faint sound of humming coming from further down the corridor, and you realise that one of Zaranix's maids must be busy cleaning down there!
-		 If you wanted to avoid confrontation, it would be best not to head over there.)]
+		[style.italicsBad(你隐隐约约听到，走廊深处传来微弱的嗡嗡声。一定是扎拉尼克斯的女仆在那边打扫卫生！如果你不想惹上麻烦，最好别去那里。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN_ENTRY"><![CDATA[
 	<p>
-		A gravel path snakes through the entirety of Zaranix's garden, but, finding that the stones crunch loudly underfoot, you opt to walk on the small grass verge instead so as to remain as quiet as possible.
-		 To either side of the path, numerous flowerbeds and small glass structures are home to an incredible variety of plant-life, much of which is quite clearly alien to your old world.
+		一条碎石小路蜿蜒穿过扎拉尼克斯的整个花园。如果有人走在石头上，脚下就会发出嘎吱嘎吱的响声。你为了尽可能保持安静，选择在小草坪上行走。
+		小路两旁有许多花坛和小型玻璃房，里面种着种类繁多的植物，其中许多显然与你的旧世界格格不入。
 	</p>
 	<p>
-		Although small enough not to pose a threat, you see several, tentacle-like varieties squirming and twisting about with a mind of their own; the brightly coloured flower in the centre of each one looking unmistakably like a vagina.
-		 Inspecting yet more of the flora as you move along, you notice that some of these tentacled plants have penis-like endings,
-			 and you spend a moment reflecting on the fact that even the plant-life in this world is sexual in nature.
-		 From the variety of herbs, plants, and flowers, and the evidence of careful cultivation techniques, it appears as though this garden is less for show, and more for the practical purpose of gathering arcane ingredients.
+		尽管这些植物很小，不会对你构成威胁，但你还是看到了几种触手状的植物在蠕动和扭动，它们有自己的思维；每种触手状植物中心的鲜艳花朵看起来都非常像个阴道。你边走边观察这些植物，注意到其中一些触手状植物有类似阴茎的末端，你不禁陷入沉思，原来这个世界上的植物也有性征这方面。从草药、植物和花卉的种类以及精心栽培的技术来看，这个花园似乎不是为了炫耀，更多是为了收集一些奥术组分。
 	</p>
 	<p>
-		Looking over towards the side of Zaranix's house, you see a couple of glass doors connecting a pair of rooms to the garden in which you find yourself standing.
-		 You could either make your way over to them and use them to gain entry to the house, or climb back over the fence and return to the street behind you.
+		你向扎拉尼克斯家的一侧望去，看到有几扇玻璃门连接着房间和花园，而你就站在花园里。
+		你可以走过去，进入房子，或者爬过栅栏，回到你身后的街道上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN"><![CDATA[
 	<p>
-		A gravel path snakes through the entirety of Zaranix's garden, but, finding that the stones crunch loudly underfoot, you opt to walk on the small grass verge instead so as to remain as quiet as possible.
-		 To either side of the path, numerous flowerbeds and small glass structures are home to an incredible variety of plant-life, much of which is quite clearly alien to your old world.
+		一条碎石小路蜿蜒穿过扎拉尼克斯的整个花园。如果有人走在石头上，脚下就会发出嘎吱嘎吱的响声。你为了尽可能保持安静，选择在小草坪上行走。
+		小路两旁有许多花坛和小型玻璃房，里面种着种类繁多的植物，其中许多显然与你的旧世界格格不入。
 	</p>
 	<p>
-		Although small enough not to pose a threat, you see several, tentacle-like varieties squirming and twisting about with a mind of their own; the brightly coloured flower in the centre of each one looking unmistakably like a vagina.
-		 Inspecting yet more of the flora as you move along, you notice that some of these tentacled plants have penis-like endings,
-			 and you spend a moment reflecting on the fact that even the plant-life in this world is sexual in nature.
-		 From the variety of herbs, plants, and flowers, and the evidence of careful cultivation techniques, it appears as though this garden is less for show, and more for the practical purpose of gathering arcane ingredients.
+		尽管这些植物很小，不会对你构成威胁，但你还是看到了几种触手状的植物在蠕动和扭动，它们有自己的思维；每种触手状植物中心的鲜艳花朵看起来都非常像个阴道。你边走边观察这些植物，注意到其中一些触手状植物有类似阴茎的末端，你不禁陷入沉思，原来这个世界上的植物也有性征这方面。从草药、植物和花卉的种类以及精心栽培的技术来看，这个花园似乎不是为了炫耀，更多是为了收集一些奥术组分。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN_ROOM"><![CDATA[
 	<p>
-		Connected to the garden by means of a pair of sliding glass doors, the room you find yourself standing in appears to be some sort of utility room.
-		 A row of cupboards and cabinets line one of the walls, while a long counter-top runs the length of the opposite one.
+			你所处的房间通过滑动玻璃门与花园相隔，似乎是个杂物间。
+		其中一面墙上摆放着一排橱柜，对面则是长长的台面。
 	</p>
 	<p>
-		A wooden door, opposite to the glass ones that provide access to the garden, connects this room to the rest of the house, and you wonder if you should proceed into the main building itself, or go back out into the garden.
+		与玻璃门相对的是一扇木门，它将这个房间与屋子的其他部分相连，你在考虑是继续进入主建筑，还是回到花园里去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN_ROOM_KATHERINE_NOT_SUBDUED"><![CDATA[
 	<p>
-		[style.italicsBad(You can hear the faint sound of humming coming from the other side of the wooden door, and you realise that one of Zaranix's maids must be out there cleaning the corridor!
-		 If you wanted to avoid confrontation, it would be best to head back out into the garden and look for another way in.)]
+		[style.italicsBad(你隐隐约约听到，木门对面传来微弱的嗡嗡声。一定是扎拉尼克斯的女仆在走廊打扫卫生！如果你不想惹上麻烦，就得另辟蹊径。)]
 	</p>
 	
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KATHERINE_SUBDUED"><![CDATA[
 	<p>
-		The ivory-skinned succubus, Katherine, is slumped down against the wall.
-		 Her pink maid's dress is hiked up around her waist, and she lets out moan after lewd moan as with one hand she fingers herself, while the other strokes up and down the length of her throbbing cock.
+		那个象牙白色皮肤的魅魔，凯瑟琳，斜靠在墙上。
+		她的粉色女仆裙在腰间撩起，她一边发出一声又一声淫荡的呻吟，一边用一只手抚摸自己，另一只手则上下抚摸自己跳动的阴茎。
 	</p>
 	<p>
-		It doesn't look like there are any other maids around to interrupt, so you could go ahead and have a little fun with her...
+		看起来周围没有其他女仆来打扰，所以你可以去和她玩玩……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KATHERINE_ENCOUNTER_FOUGHT_AMBER"><![CDATA[
 	<p>
-		As you walk down the corridor, an ivory-skinned succubus, wearing a light pink maid's uniform, suddenly stands up from behind a cabinet. She doesn't notice you at first, and continues to swipe her little feather-duster over the top of the wooden furniture, happily humming away as she works.
+		当你走过走廊时，一个穿着浅粉色女仆服、象牙色皮肤的魅魔突然从柜子后面站了起来。
+		她一开始并没有注意到你，而是继续在木制家具的顶端挥舞着她的小羽毛掸子，一边工作一边开心地哼着歌。
 	</p>
 	<p>
-		Before you have a chance to take any action, however, she realises that there's someone behind her, and mistaking you for her colleague she starts to say, [katherine.speech(Oh, Amber, what was that at the front door? It sounded like someone was breaking-)]
+		然而，你还没来得及做什么，她就发现身后有人，误以为你是同事，开始说起话来：[katherine.speech(哦，安柏，前门那是什么声音？好像有人在砸——)]
 	</p>
 	<p>
-		The maid's eyes narrow down as she sees that you're an unexpected stranger, and she correctly surmises, [katherine.speech(You're the one who's responsible for that crashing noise! I don't know what you've done to Amber, but I'll stop you!)]
+		女仆发现你是个不速之客，眯起眼睛，猜测道：[katherine.speech(你就是那撞击声的罪魁祸首！我不知道你对安柏做了什么，但我会阻止你的！)]
 	</p>
 	<p>
-		Without giving you any opportunity to talk yourself out of this conflict, the maid suddenly launches herself at you, seemingly very eager to show you what she does to intruders in her master's house.
+		女仆不给你任何解释机会就突然向你扑来，迫不及待地要向你展示她是如何对待主人家的入侵者的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KATHERINE_ENCOUNTER"><![CDATA[
 	<p>
-		As you walk down the corridor, an ivory-skinned succubus, wearing a light pink maid's uniform, suddenly stands up from behind a cabinet.
-		 She doesn't notice you at first, and continues to swipe her little feather-duster over the top of the wooden furniture, happily humming away as she works.
+		当你走过走廊时，一个穿着浅粉色女仆服、象牙色皮肤的魅魔突然从柜子后面站了起来。
+		她一开始并没有注意到你，而是继续在木制家具的顶端挥舞着她的小羽毛掸子，一边工作一边开心地哼着歌。
 	</p>
 	<p>
-		Before you have a chance to take any action, however, she looks up and catches sight of you.
-		 [katherine.speech(Ah! Sorry, [pc.maam]! I didn't know we were expecting guests! My name is Katherine, at your service!)]
+		然而，在你准备做任何行动之前，她抬起头，看到了你。
+		[katherine.speech(啊！抱歉！[pc.maam]！我不知道有客人要来，我叫凯瑟琳，随时为您服务！)]
 	</p>
 	<p>
-		The maid curtsies as she says this, but as she stands up, the initial surprise of finding you wandering the corridors of her master's home wears off, and her eyes narrow down as she looks you up and down.
-		 [katherine.speech(Wait a moment... I would have been told if guests were expected...)]
+		女仆在说这话时行了一个屈膝礼，但随着她站起来，最初发现你在她主人家闲逛的惊喜已经消失，她的眼睛眯成一条缝，上下打量着你。
+		[katherine.speech(等等……如果有客人要来，我应该会被告知……)]
 	</p>
 	<p>
-		The realisation that you're an intruder suddenly dawns on her, and she gasps,
-		 [katherine.speech(Eek! That must mean you're a thief! Thief! Thief!)]
+		她突然意识到你是个不速之客，不禁惊呼起来，
+		[katherine.speech(啊！这意味着你是个小偷！小偷！)]
 	</p>
 	<p>
-		Although she cries out in alarm, her shouts seem to be more of an accusation than a call for help, and she suddenly launches herself at you, all too eager to show you what she does to uninvited guests in her master's house.
+		虽然她惊慌失措地大喊大叫，但她的喊声似乎更像是一种控诉，而不是求救，突然她向你扑来，迫不及待地要向你展示她是如何对待主人家的不速之客的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KATHERINE_ENCOUNTER_REPEAT"><![CDATA[
 	<p>
-		As you walk down the corridor, an ivory-skinned succubus, wearing a light pink maid's uniform, suddenly stands up from behind a cabinet.
-		 You instantly recognise her as Katherine, and, once again, she doesn't notice you at first, and continues to swipe her little feather-duster over the top of the wooden furniture, happily humming away as she works.
+		当你走过走廊时，一个穿着浅粉色女仆服、象牙色皮肤的魅魔突然从柜子后面站了起来。
+		你一眼认出她是凯瑟琳，但她并没有注意到你，而是继续在木制家具的顶端挥舞着她的小羽毛掸子，一边工作一边开心地哼着歌。
 	</p>
 	<p>
-		Before you have a chance to take any action, she looks up and catches sight of you.
-		 [katherine.speech(It's you again! How do you keep on getting in here?! You'll pay for this, you thief! Thief! Thief!)]
+		你还来不及采取任何行动，她就抬头看到了你。
+		[katherine.speech(怎么又是你！干嘛一直过来？！你会为此付出代价，你这小偷！小偷！小偷！)]
 	</p>
 	<p>
-		Although she cries out in alarm, her shouts seem to be more of an accusation than a call for help, and she suddenly launches herself at you, all too eager to show you what she does to uninvited guests in her master's house.
+		虽然她惊慌失措地大喊大叫，但她的喊声似乎更像是一种控诉，而不是求救，突然她向你扑来，迫不及待地要向你展示她是如何对待主人家的不速之客的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KATHERINE_SEX"><![CDATA[
 	<p>
-		It doesn't look like any of the other maids of the household will interrupt you, so you decide to take this opportunity to have a little fun with Katherine.
-		 Stepping over to where she's sunk down against the wall, you reach forwards and take hold of her arm, before pulling her to her feet.
-		 Denied the freedom to get herself off, the horny maid looks up into your eyes, and you see them filled with a desperate, burning lust.
+		看起来在这里不会被其他女仆打扰，所以你决定趁此机会和凯瑟琳找点乐子。
+		你走到她身边，扯着她的手臂，把她从地上拉起来。
+		这位饥渴的女仆因此无法自我排解，她抬头盯着你，眸子里满载炽热的渴求。
 	</p>
 	<p>
-		She pushes herself off from the wall, wrapping her arms around your back and desperately pressing her [katherine.lips+] against yours.
-		 You reciprocate the gesture, and after spending a few moments of sliding your tongues into one another's mouths, you pull back, grinning...
+		她离墙而去，双臂绕上你的背，迫切地把她[amber.lips+]贴上你的唇。
+		你回应了这个举动，与她激烈地舌吻，随后分开，相视一笑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_MAID_KATHERINE_SEX_SUBMIT"><![CDATA[
 	<p>
-		Not willing to take the dominant role, but with a deep desire to have sex with the now-very-horny succubus, you walk up to where Katherine's collapsed against the wall, and sigh,
-		 [pc.speech(Katherine... Erm... If you're feeling a little horny, perhaps you could use me? I mean, I-)]
+		你不愿意当支配方，但又很想和这个欲火焚身的魅魔做爱，便走到凯瑟琳身边，小声说道：
+		[pc.speech(凯瑟琳……呃唔……如果你想要，你要不要用用我？我是说，我——)]
 	</p>
 	<p>
-		Despite the fact that you're a stranger in her master's house, Katherine looks up at you with an intense, burning passion in her eyes.
-		 Sliding her hand out from under her dress, she jumps to her feet, interrupting your sentence as she grabs your head and pulls you into a desperate kiss.
+		尽管你是她主人屋子里的一个陌生人，但凯瑟琳还是抬起头看着你，眼神中充满了强烈而炽热的欲望。
+		她从裙底抽出手，急切地跳起来，抓住你的头发狠狠吻你。
 	</p>
 	<p>
-		You reciprocate the gesture, but only spend a few moments sliding your tongues into one another's mouths before Katherine pulls back, moaning,
-		 [katherine.speech(Oh yes! Fuck... I'm so fucking horny! I <i>need</i> you!)]
+		你也做出回应，但仅唇齿纠缠片刻，凯瑟琳就抽离开来，呻吟道：
+		[katherine.speech(哦，好棒！操……我太他妈想要了！我<i>想要</i>你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROOM"><![CDATA[
 	<p>
-		The door to this room is locked, and there's no sound of anyone within. Knowing that it's sure to just be a dull and uninteresting dead-end, you decide against trying to force the door open, and turn around to continue on your exploration of Zaranix's home.
+		这个房间的门是锁着的，里面也没有人的声音。你知道这肯定只是一个毫无意义的死胡同，所以决定不再试图强行开门，而是转身继续探索扎拉尼克斯的家。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_EMPTY"><![CDATA[
 	<p>
-		You find yourself standing in Zaranix's grand drawing room. Several sofas and chairs are tastefully arranged around a low table in the centre of the room, while numerous bookcases and cabinets line the floral-wallpapered walls. The high ceiling is home to an exceptionally extravagant chandelier, while the floor underfoot is covered in thick, cream-coloured carpet.
+		你正置身于扎拉尼克斯那富丽堂皇的客厅中。大厅中央的矮桌旁摆放着几张沙发和椅子，墙壁上贴着碎花壁纸，贴靠着许多书柜和橱柜。高高的天花板上挂着一盏异常奢华的吊灯，脚下铺着厚厚的乳白色地毯。
 	</p>
 	<p>
-		There doesn't appear to be anyone here right now, so you should probably continue on your way...
+		现在似乎空无一人，你或许该继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_SUBDUED"><![CDATA[
 	<p>
-		You find yourself standing in Zaranix's grand drawing room.
-		 Several sofas and chairs are tastefully arranged around a low table in the centre of the room, while numerous bookcases and cabinets line the floral-wallpapered walls.
-		 The high ceiling is home to an exceptionally extravagant chandelier, while the floor underfoot is covered in thick, cream-coloured carpet.
+		你正置身于扎拉尼克斯那富丽堂皇的客厅中。
+		大厅中央的矮桌旁摆放着几张沙发和椅子，墙壁上贴着碎花壁纸，贴靠着许多书柜和橱柜。
+		高高的天花板上挂着一盏异常奢华的吊灯，脚下铺着厚厚的乳白色地毯。
 	</p>
-	<p>
-		<i>
-		Amber is slumped down against one wall, and you see her hand furiously pumping away between her legs.
-		 Her intense lust doesn't look to be in any danger of dying down, and you wonder if you should have a little more fun with her while you have the chance...
-		</i>
-	</p>
-	]]>
-	</htmlContent>
+	<p><i>
+		安柏斜靠在一面墙上，你可以看到她的手在双腿间疯狂地抽动着。
+		她那强烈的欲望看起来丝毫没有消退的迹象，你在想，是否应该趁这个机会多和她玩玩呢？
+	</i></p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_PRESENT_ALREADY_MET"><![CDATA[
 	<p>
-		Carefully opening a heavy oaken door, you find yourself stepping into a grand drawing room.
-		 Several sofas and chairs are tastefully arranged around a low table in the centre of the room, while numerous bookcases and cabinets line the floral-wallpapered walls.
-		 The high ceiling is home to an exceptionally extravagant chandelier, while the floor underfoot is covered in thick, cream-coloured carpet.
+		你小心翼翼地打开一扇厚重的橡木门，步入了一间宽敞的客厅。房间中央的矮桌旁摆放着几张沙发和椅子，墙壁上贴着碎花壁纸，摆放着许多书柜和橱柜。高高的天花板上挂着一盏异常奢华的吊灯，脚下铺着厚厚的乳白色地毯。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_PRESENT_ALREADY_MET_KNOWS_NAME"><![CDATA[
 	<p>
-		The features of this room aren't quite the focus of your attention, however, as near the right-hand wall you see the back of Amber, the succubus maid who you've fought here before.
-		 She appears to be busily dusting and polishing several ornamental objects in a display cabinet, and hasn't noticed your entry.
-		 It might be wise to carefully continue on your way, but if you really wanted to, you could approach the maid and get her notice you...
+		不过，现在不是关注这个的时候，在靠近右侧墙壁的地方，你看到了安柏的背影，她就是之前和你在这里交过手的魅魔女仆。她似乎正在忙着擦拭展示柜里的几件装饰品，并没有注意到你的到来。小心翼翼地继续前行也许是明智之举，但如果你真的想的话，你可以接近女仆，让她注意到你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_PRESENT_ALREADY_MET_DOES_NOT_KNOW_NAME"><![CDATA[
 	<p>
-		The features of this room aren't quite the focus of your attention, however, as near the right-hand wall you see the back of the same amber-haired succubus who answered the front door.
-		 She appears to be busily dusting and polishing several ornamental objects in a display cabinet, and hasn't noticed your entry.
-		 It might be wise to carefully continue on your way, but if you really wanted to, you could approach the maid and get her notice you...
+		不过，现在不是关注这个的时候，在靠近右侧墙壁的地方，你看到了安柏的背影，她就是之前你在前门遇到的魅魔女仆。她似乎正在忙着擦拭展示柜里的几件装饰品，并没有注意到你的到来。小心翼翼地继续前行也许是明智之举，但如果你真的想的话，你可以接近女仆，让她注意到你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_PRESENT"><![CDATA[
 	<p>
-		Carefully opening a heavy oaken door, you find yourself stepping into a grand drawing room.
-		 Several sofas and chairs are tastefully arranged around a low table in the centre of the room, while numerous bookcases and cabinets line the floral-wallpapered walls.
-		 The high ceiling is home to an exceptionally extravagant chandelier, while the floor underfoot is covered in thick, cream-coloured carpet.
+		你小心翼翼地打开一扇厚重的橡木门，步入了一间宽敞的客厅。房间中央的矮桌旁摆放着几张沙发和椅子，墙壁上贴着碎花壁纸，摆放着许多书柜和橱柜。高高的天花板上挂着一盏异常奢华的吊灯，脚下铺着厚厚的乳白色地毯。
 	</p>
 	<p>
-		The features of this room aren't quite the focus of your attention, however, as near the right-hand wall you see the back of a succubus maid.
-		 Her dark ebony skin matches the black of her maid's uniform, and atop her head, she has the most amazing hair you've ever seen.
-		 Reaching down to just above her ass, and styled into loose waves, the maid's amber-coloured hair gives off a bright glow.
+		不过，现在不是关注这个的时候，在靠近右侧墙壁的地方，你看到了魅魔的背影。她乌黑的皮肤与女仆服的黑色相得益彰，头顶上是你见过的最迷人的头发。她的头发一直垂到屁股上方，梳成松散的波浪形，散发出明亮的光芒。
 	</p>
 	<p>
-		She appears to be busily dusting and polishing several ornamental objects in a display cabinet, and hasn't noticed your entry.
-		 It might be wise to carefully continue on your way, but if you really wanted to, you could approach the maid and get her notice you...
+		她似乎正在忙着擦拭展示柜里几件装饰品的灰尘，并没有注意到你的到来。
+		现在似乎小心前进，别惹祸上身比较好，但你如果真的想，你也可以凑到女仆跟前，让她注意到你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_SEX"><![CDATA[
 	<p>
-		It doesn't look like any of the other maids of the household will interrupt you, so you decide to take this opportunity to have a little fun with Amber.
-		 Stepping over to where she's sunk down against the wall, you reach forwards and take hold of her arm, before pulling her to her feet.
-		 Denied the freedom to get herself off, Amber pitifully looks up into your eyes, and instead of fury, you see them filled with burning lust.
+		看起来在这里其他女仆不会打扰你，所以你决定趁这个机会和安柏找点乐子。
+		你走到她靠墙坐下的地方，握住她的胳膊，然后把她拉起来。
+		这位饥渴的女仆无处可逃，她抬起头看向你，你发现，那双眼睛里充满了急切而炽热的欲望。
 	</p>
 	<p>
-		She pushes herself off from the wall, wrapping her arms around your back and desperately pressing her [amber.lips+] against yours.
-		 You reciprocate the gesture, and after spending a few moments of sliding your tongues into one another's mouths, you pull back, grinning...
+		她把自己从墙边推离，双臂环绕在你的背上，迫切地把她[amber.lips+]贴在你的嘴上。
+		你回应了这个举动，与她进行了一个激烈的舌吻，随后你抬起头，笑了笑……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_SEX_SUBMIT"><![CDATA[
 	<p>
-		Despite her current state, you find yourself incredibly turned on by Amber's dominant, fiery personality.
-		 Not willing to take the dominant role, but with a deep desire to have sex with the now-very-horny succubus, you walk up to where she's collapsed against the wall, and sigh,
-		 [pc.speech(Mistress Amber... Erm... If you're feeling a little horny, perhaps you could use me? I mean, I-)]
+		尽管她现在的状态很糟糕，但你发现自己被安柏那霸道、火热的气质深深吸引。
+		你很想和这个已然欲火焚身的魅魔做爱，但又不想主导性爱，于是你走到她靠墙倒下的地方，叹了口气，
+		[pc.speech(安柏主人……呃……如果你觉得身体不舒服的话，也许可以用我来排解一下您的欲望？我是说，我——)]
 	</p>
 	<p>
-		Despite the fact that you're a stranger in her master's house, Amber looks up at you with an intense, burning passion in her eyes.
-		 Sliding her hand out from under her dress, she jumps to her feet, interrupting your sentence as she grabs your head and pulls you into a desperate kiss.
+		尽管你是她主人屋子里的一个陌生人，但安柏还是抬起头看向你，眼神中充满了强烈而炽热的欲望。
+		她从裙底拿出手，急切地跳起来，抓住你的头发狠狠吻你。
 	</p>
 	<p>
-		You reciprocate the gesture, but only spend a few moments sliding your tongues into one another's mouths before Amber pulls back, moaning,
-		 [amber.speech(Good bitch! Fuck... I'm so fucking horny! I <i>need</i> you!)]
+		你做出了回应，但安柏只与你唇齿纠缠了片刻就推开你，呻吟道：
+		[amber.speech(好婊子！操……我太他妈想要了！我<i>需要</i>你！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_GREETING"><![CDATA[
 	<p>
-		Deciding that you'd like to say hello to the succubus, you begin to walk towards her.
-		 As you draw near, she turns her head to one side, obviously having heard your approach as she calls out,
-		 [amber.speech(If I have to tell you or your sister to announce your presence with 'Excuse me, Mistress Amber' <i>one</i> more time, I swear I'll-)]
+		你决定跟这个魅魔打个招呼，于是向她走去。你走近时，她显然听到了动静，扭头呵斥，
+		[amber.speech(说过多少次，你和你的姐妹要用‘安柏主人，打扰您一下’来打招呼，<i>再</i>让我重复的话，我发誓我会——)]
 	</p>
 	<p>
-		Having mistaken you for one of the other household maids, Amber turns around to face you.
-		 As she sees who you really are, her sentence is suddenly cut off, and an angry scowl covers her face.
-		 Her eyes, glowing amber just like her hair, lock onto yours, and she shouts, 
-	]]>
-	</htmlContent>
+		安柏误以为你是家里的女仆，转过身来面对你。
+		待看清来者何人，她便住口不言，赫然而怒。
+		她的眼睛与头发一同闪烁着琥珀色的光芒，此时正直勾勾地盯着你，一边大声叫喊，
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_GREETING_ALREADY_FOUGHT"><![CDATA[
-		[amber.speech(You again?! How the fuck did you get in here?! You're in big trouble now!)]
+		[amber.speech(又是你？！你他妈又是怎么进来的？！是该收拾你一顿了！)]
 	</p>
 	<p>
-		Not even giving you a chance to answer her questions, Amber launches herself at you in a blind fury!
+		怒火中烧的安柏朝你冲了过来，甚至不给你机会来回答她的问题！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOUNGE_AMBER_GREETING_NEVER_FOUGHT"><![CDATA[
-		[amber.speech(Who the fuck are you?! How the fuck did you get in here?! Whoever you are, you're in big trouble now!)]
+		[amber.speech(你他妈是谁？！你怎么进来的？！不管你是谁，你他妈的今天摊上事了！)]
 	</p>
 	<p>
-		Not even giving you a chance to answer her questions, Amber launches herself at you in a blind fury!
+		怒火中烧的安柏甚至不给你解释的机会，便朝你冲了过来！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 </dialogue>

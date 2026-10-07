@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[The Creamy Bakey]]></name>
+	<name><![CDATA[奶油烘焙店]]></name>
 	<colour>BASE_BROWN</colour>
 	<sexBlockedReason/>
 	<furniturePresent>true</furniturePresent>

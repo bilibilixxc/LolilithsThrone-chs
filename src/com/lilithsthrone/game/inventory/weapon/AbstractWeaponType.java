@@ -182,7 +182,7 @@ public abstract class AbstractWeaponType extends AbstractCoreType {
 				} else if(coreAttributes.getOptionalFirstOf("authorTag").isPresent()) {
 					this.authorDescription = coreAttributes.getMandatoryFirstOf("authorTag").getTextContent();
 				} else if(!author.equalsIgnoreCase("innoxia")){
-					this.authorDescription = "A discreet inscription on the surface of the "+(plural?namePlural:name)+" informs you that "+(plural?"they were":"it was")+" made by a certain '"+Util.capitaliseSentence(author)+"'.";
+					this.authorDescription = (plural?namePlural:name)+"表面上雅致的铭刻提醒你：武器是由那位'"+Util.capitaliseSentence(author)+"'制造的。";
 				} else {
 					this.authorDescription = "";
 				}
@@ -320,7 +320,7 @@ public abstract class AbstractWeaponType extends AbstractCoreType {
 							.map(o -> o.getTextContent())
 							.collect(Collectors.toList());
 				} else {
-					this.missDescriptions = Util.newArrayListOfValues("[npc.Name] [npc.verb(recover)] [npc.her] "+this.name+"!");
+					this.missDescriptions = Util.newArrayListOfValues("[npc.Name]恢复了[npc.her]的"+this.name+"！");
 				}
 				
 				if(weaponElement.getOptionalFirstOf("oneShotEndTurnRecoveryDescriptions").isPresent()) {
@@ -615,24 +615,24 @@ public abstract class AbstractWeaponType extends AbstractCoreType {
 			if(character.isFeral()) {
 				return UtilText.parse(character, target,
 						UtilText.returnStringAtRandom(
-							"Darting forwards, [npc.name] [npc.verb(rear)] up [npc.verb(deliver)] a solid kick to [npc2.namePos] torso.",
-							"Striking out at [npc2.name], [npc.name] [npc.verb(manage)] to land a solid kick on [npc2.her] [npc2.leg]!",
-							"[npc.Name] [npc.verb(strike)] out at [npc2.name] in unarmed combat, and [npc.verb(manage)] to land a solid kick on [npc2.her] torso."));
+							"[npc.Name]立马冲上前去，抬脚结结实实地踹在[npc2.namePos]的身上。",
+							"[npc.Name]踢出一脚，结结实实地踢在了[npc2.name]的腿上！",
+							"[npc.Name]徒手向[npc2.name]袭去，对着[npc2.her]的身子狠狠地来了一脚。"));
 				
 			} else {
 				return UtilText.parse(character, target,
 						UtilText.returnStringAtRandom(
-							"Darting forwards, [npc.name] [npc.verb(deliver)] a solid punch to [npc2.namePos] [npc2.arm].",
-							"Striking out at [npc2.name], [npc.name] [npc.verb(manage)] to land a solid punch on [npc2.her] [npc2.arm]!",
-							"[npc.Name] [npc.verb(strike)] out at [npc2.name] in unarmed combat, and [npc.verb(manage)] to land a solid hit on [npc2.her] torso."));
+							"[npc.Name]立马冲上前去，举拳结结实实地打在[npc2.namePos]的[npc2.arm]上。",
+							"[npc.Name]挥出一拳，结结实实地打在了[npc2.name]的[npc2.arm]上！",
+							"[npc.Name]徒手向[npc2.name]袭去，对着[npc2.her]的身子狠狠地来了一拳。"));
 			}
 			
 		} else {
 			return UtilText.parse(character, target,
 					UtilText.returnStringAtRandom(
-						"Darting forwards, [npc.name] [npc.verb(try)] to deliver a punch to [npc2.namePos] [npc2.arm], but [npc2.she] [npc2.verb(manage)] to step out of the way in time.",
-						"[npc.Name] [npc.verb(throw)] a punch at [npc2.name], but fails to make contact with any part of [npc2.her] body.",
-						"[npc.Name] [npc.verb(strike)] out at [npc2.name] in unarmed combat, but [npc.she] [npc.verb(end)] up missing."));
+						"[npc.Name]立马冲上前去，向着[npc2.namePos]的[npc2.arm]挥出一拳，但被及时躲开了。",
+						"[npc.Name]向[npc2.name]挥出一拳，但却没能击中[npc2.her]身体的任何一处。",
+						"[npc.Name]徒手向[npc2.name]袭去，却没能击中。"));
 		}
 	}
 
@@ -647,7 +647,7 @@ public abstract class AbstractWeaponType extends AbstractCoreType {
 
 	public String getUnableToBeUsedDescription() {
 		if(this.getArcaneCost()>0) {
-			return "You need at least [style.boldBad(one)] [style.boldArcane(arcane essence)] in order to use this weapon!";
+			return "你需要至少[style.boldBad(一)][style.boldArcane(奥术精华)]才能使用该武器！";
 		} else {
 			return "";
 		}
@@ -658,7 +658,7 @@ public abstract class AbstractWeaponType extends AbstractCoreType {
 		
 		if(this.getArcaneCost()>0) {
 			user.incrementEssenceCount(-this.getArcaneCost(), false);
-			sb.append(UtilText.parse(user, (this.isMelee()?"Using":"Firing")+" the "+this.getName()+" drains [style.boldBad("+Util.intToString(this.getArcaneCost())+")] [style.boldArcane(arcane essence)] from [npc.namePos] aura!"));
+			sb.append(UtilText.parse(user, "使用"+this.getName()+"从[npc.namePos]灵气中消耗了[style.boldBad("+Util.intToString(this.getArcaneCost())+")][style.boldArcane(奥术精华)]！"));
 		}
 		if(isHit) {
 			String hitText = isCritical?this.criticalHitEffect:this.hitEffect;

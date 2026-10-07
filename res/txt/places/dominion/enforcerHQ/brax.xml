@@ -1,624 +1,624 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- INTERIOR_BRAX -->
 
 	<htmlContent tag="INTERIOR_BRAX"><![CDATA[
 	<p>
-		You soon find the door that you're looking for, marked with the words 'Inspector [brax.nameFull]'. Wondering what sort of person this '[brax.name]' might be, you reach up and knock on the door. Almost instantly, a low, gruff voice barks out in response, [brax.speech(Enter!)]
+		你很快就找到了你要找的那扇门，门上标有“[brax.nameFull]督察”。你想知道这个“[brax.name]”可能是什么样的人，于是伸手敲了敲门。几乎就在一瞬间，一个低沉而粗鲁的声音回应道：[brax.speech(进来！)]
 	</p>
 	<p>
-		Pushing open the door, you step forwards into [brax.namePos] office. As you take a quick glance around, you notice that there are numerous posters of scantily-clad girls plastered all over the walls, which gives this room a rather unexpectedly-unprofessional feel to it. Apart from this oddity, the only other features of any interest are the normal collection of filing cabinets and bookshelves standing against the walls, a large mahogany desk on the other side of the room, and the imposing figure who's sitting behind it.
+		推开门，你走进了[brax.namePos]的办公室。当你快速环顾四周时，发现墙上贴满了许多衣着暴露的女孩海报，这让这个房间意外地给人一种不专业的感觉。除了这些奇怪的东西，唯一值得注意的是靠墙摆放的文件柜和书架，房间另一侧的一张红木大办公桌，以及坐在办公桌后面的那个威严的身影。
 	</p>
 	<p>
-		As the door starts to swing shut behind you, the person behind the desk, who you assume to be [brax.name], stands up. He's a greater wolf-morph, and is covered from head to toe in [brax.skinColour] fur. His face is formed into an anthropomorphic wolf-like muzzle, and his pair of eyes are a wild, vivid shade of [brax.eyeColour]. As would be expected, he's wearing an Enforcer's uniform, consisting of a blue shirt, black slacks, and a black tie. Behind him, hanging up on the wall, is his jacket, cap and dress belt.
+		当门在你身后关上时，办公桌后面的人站了起来，你猜他就是[brax.name]。他是一只更大的狼化形，从头到脚都覆盖着[brax.skinColour]毛皮。他的脸是拟人化的狼嘴，一双眼睛是野性而生动的[brax.eyeColour]色调。不出所料，他穿着执法者的制服，包括蓝色衬衫、黑色休闲裤和黑色领带。他身后的墙上挂着他的外套、帽子和腰带。
 	</p>
 	<p>
-		Staring right at you, [brax.name] angrily slams his fist on the desk. You see his huge muscles bulge underneath his Enforcer's shirt as he growls at you, [brax.speech(I told that stupid slut to stop handing out passes! Who the hell are you?!)]
+		[brax.name]怒视着你，一拳砸在桌子上。你看到他在执法者衬衫下隆起的巨大肌肉，他对你咆哮道：[brax.speech(我告诉过那个愚蠢的荡妇不要随便给别人发通行证了！你TM到底是谁？！)]
 	</p>
 	#IF(pc.getRace()==RACE_WOLF_MORPH && pc.isFeminine())
 		<p>
-			As he finishes barking out his question, you see his hungry eyes drop down to roam over your wolf-like body, and you wonder if he has a weakness for wolf-girls. Wanting to test your theory, you turn back to face the door, pushing it firmly shut while not-so-subtly sticking out your ass towards [brax.name]. Turning back to face him, your suspicions are proven to be correct as you see his eyes fogged over with lust...
+			当他问完问题时，你看到他饥渴的目光落在你狼一样的身体上，你怀疑他是否对狼女情有独钟。你想验证一下自己的猜想，于是转回身面对着门，紧紧地推开门，同时不着痕迹地向[brax.name]伸出屁股。转回身面对他时，你的猜想被证明是正确的，因为你看到他的眼睛里充满了欲望……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_REPEAT -->
 
 	<htmlContent tag="INTERIOR_BRAX_REPEAT"><![CDATA[
 	#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_C_WOLFS_DEN))
 		<p>
-			As he sees that it's you who's entering his office once again, [brax.namePos] jaw drops and he exclaims, [brax.speech(What the hell are you doing back here?! Did that braindead bimbo give you <i>another</i> pass?!)]
+			当他看到是你再次走进他的办公室时，[brax.namePos]他瞠目结舌，惊呼道：[brax.speech(你他妈怎么又回来了？！那个脑残的贱人又给了你<i>另一张</i>通行证？！)]
 		</p>
 		<p>
-			As you enter his office, ready for another fight, [brax.name] stands up, and you see the familiar sight of arcane fire being summoned around his right hand, while with the other he grabs his pistol.
+			当你走进他的办公室，准备迎接另一场战斗时，[brax.name]站了起来，你看到了熟悉的景象：他的右手正在召唤奥术火焰，而另一只手则拿起了手枪。
 		</p>
 		<p>
-			[brax.speech(I guess you've just got a craving for wolf dick!)] [brax.name] laughs, and you realise that if you lose again, you're going to be getting another taste of his cock...
+			[brax.speech(我猜你只是想吃我的狼屌吧！)][brax.name]笑了，你意识到如果你再输，你就又要尝尝他的鸡巴了……
 		</p>
 	#ELSE
 		<p>
-			The door to the office which used to be [brax.namePos] is securely shut and locked. There's really nothing more for you to do here except turn around and leave...
+			[brax.namePos]办公室的门已牢牢关闭并上锁。除了转身离开，你在这里真的没什么可做的了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_TRUTH -->
 
 	<htmlContent tag="INTERIOR_BRAX_TRUTH"><![CDATA[
 	<p>
-		You decide that it's probably for the best if you just tell the truth, [pc.speech(I'm here to find out what's happened to my friend, Arthur. His apartment was empty, and your name was on the arrest warrant stamped to his door.)]
+		你决定最好还是实话实说，[pc.speech(我是来了解我的朋友亚瑟出了什么事。他的公寓空无一人，而你的名字就在盖在他门上的逮捕令上。)]
 	</p>
 	<p>
-		As you mention Arthur's name, [brax.name] lets out a dismissive grunt, and as you finish speaking, he huffs, [brax.speech(As if I'd tell you that! You come barging into my office, then expect me to hand out classified information?! I think you need to be the first test subject for a special punishment I've recently thought of!)]
+		当你提到亚瑟的名字时，[brax.name]不屑一顾地哼了一声，当你说完之后，他又哼了一声，[brax.speech(好像我会告诉你似的。你闯进我的办公室，还指望我给你机密信息？我想你需要成为我最近想到的特殊惩罚的第一个试验品！)]
 	</p>
 	<p>
-		As [brax.name] finishes speaking, you see a burst of arcane fire suddenly materialise around his right hand, while with his other, he reaches down to grab the pistol at his waist. From the angry expression on his face, it's not too hard to figure out that he intends to fight you. This all seems incredibly unreasonable, and you think that he was just looking for any excuse to try this 'punishment' out on someone...
+		当[brax.name]刚说完，你就会看到他的右手突然冒出一阵奥术火焰，而他的另一只手则伸向腰间的手枪。从他脸上愤怒的表情不难看出，他打算和你战斗。这一切看起来都非常不合理，你认为他只是在寻找任何借口来对某人实施这种“惩罚”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_LIE -->
 
 	<htmlContent tag="INTERIOR_BRAX_LIE"><![CDATA[
 	<p>
-		As you take a closer look at [brax.namePos] office, you notice that the scantily-clad models in every single poster are wolf-girls. Shifting your gaze to look past [brax.namePos] desk for a moment, your eyes are drawn to a glass display cabinet sitting just behind him, and you see that it's full of small, half-naked wolf-girl figurines. From your observations of [brax.namePos] office, it's safe to assume that he has a thing for females of the same race as him.
+		你仔细观察了一下[brax.namePos]的办公室，发现每张海报上衣着暴露的模特都是狼女。你的视线移到[brax.namePos]办公桌的旁边，你的目光被他身后的一个玻璃展示柜吸引住了，你看到里面摆满了半裸的狼女小雕像。根据你对[brax.namePos]办公室的观察，可以断定他对和他同种族的女性情有独钟。
 	</p>
 	<p>
-		Deciding to take a bold course of action, you use your deduction as inspiration to make up a story right there on the spot, [pc.speech(Well, after I informed the cat-girl at the front desk that I'm the owner of the establishment 'The She-Wolf's Den', she said that you'd probably want to talk to me in person.)]
+		你决定采取大胆的行动，以你的推理为灵感，当场编了一个故事，[pc.speech(好吧，在我告诉前台的猫女我是‘母狼巢穴’的老板后，她说您可能想和我当面谈谈。)]
 	</p>
 	<p>
-		Just as you're kicking yourself for thinking up such a ridiculous name, you notice [brax.namePos] snarl fading away, and you struggle to keep your composure as he impatiently blurts out, [brax.speech(Wait, what's all this about a she-wolf's den?)]
+		正当你为自己想出这么一个荒唐的名字而自责时，你发现[brax.namePos]的咆哮声渐渐消失了，你努力保持镇定，因为他不耐烦地大声说道：[brax.speech(等等，‘母狼巢穴’是怎么回事？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_LIE_IDIOT_BRAX -->
 
 	<htmlContent tag="INTERIOR_BRAX_LIE_IDIOT_BRAX"><![CDATA[
 	<p>
-		Almost feeling sorry for [brax.name], you decide to tell him that he's a gullible idiot, [pc.speech(I can't believe you actually fell for that! Do you really have the rank of Inspector? That's just sad...)]
+		你几乎为[brax.name]感到难过，决定告诉他，他是个容易受骗的白痴，[pc.speech(我不敢相信你真的上当了！你真的是个督察吗？太可悲了……)]
 	</p>
 	<p>
-		As he hears that he's been fooled, [brax.namePos] wolf-like face turns up into a snarl, and he slams his fist on the desk, shouting, [brax.speech(I-I knew you were lying all along! I don't even like wolf-girls! You'd better tell me what the hell you're here for, <i>right now</i>!)]
+		当他听到自己上当受骗时，[brax.namePos]，那张狼一样的脸顿时变成了咆哮，他用拳头狠狠地砸在桌子上，大声喊道：[brax.speech(我……我就知道你一直在撒谎！我根本不喜欢狼女！你最好TM告诉我你到底是来干什么的！<i>现在</i>！)]
 	</p>
 	<p>
-		Despite the farcical nature of [brax.namePos] stuttering denial of his all-too-apparent weakness, you quickly realise from the angry expression on his face that he means business, and explain, [pc.speech(Well, if you want the truth, I'm here to find out what you've done with my friend, Arthur. I found his apartment empty, and your name was on the arrest warrant stamped to his door.)]
+		尽管[brax.namePos]结结巴巴地否认自己太明显的弱点很滑稽，但你很快就从他脸上愤怒的表情中意识到他是认真的，于是解释道：[pc.speech(我是来了解我的朋友亚瑟出了什么事。他的公寓空无一人，而你的名字就在盖在他门上的逮捕令上。)]
 	</p>
 	<p>
-		[brax.NamePos] snarling face relaxes a little, turning into a mocking sneer as he replies, [brax.speech(As if I'd tell you that! You come barging into my office, try to make a fool of me, then expect me to hand out classified information?! I think you need to be the first test subject for a special punishment I've recently thought of!)]
+		[brax.NamePos]咆哮的面孔稍稍放松，转而露出嘲弄的冷笑，回答道：[brax.speech(好像我会告诉你似的！你闯进我的办公室，想让我出丑，然后还指望我给你机密信息？我想你需要成为我最近想到的特殊惩罚的第一个试验品！)]
 	</p>
 	<p>
-		As [brax.name] finishes speaking, you see a burst of arcane fire suddenly materialise around his right hand, while with his other, he reaches down to grab the pistol at his waist. From the angry, although somewhat flustered, expression on his face, it's not too hard to figure out that he intends to fight you. Resorting to violence like this seems more than a little unreasonable, and you think that he was just looking for any excuse to try this 'punishment' out on someone...
+		当[brax.name]说完话时，你会看到他的右手突然冒出一阵奥术火焰，而他的另一只手则伸向腰间的手枪。从他愤怒但又有些慌乱的表情中，不难看出他打算和你战斗。像这样诉诸暴力似乎有点不合理，你认为他只是在寻找任何借口来对某人进行这种“惩罚”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_LIE_BLUFFING -->
 
 	<htmlContent tag="INTERIOR_BRAX_LIE_BLUFFING"><![CDATA[
 	<p>
-		Wondering just how gullible [brax.name] really is, you continue bluffing, [pc.speech(I'm not surprised that you haven't heard about it; membership of my club is by recommendation only. I'm sure you understand, but I wouldn't want any old member of the public being allowed to enjoy the company of the most beautiful wolf-girls in all of Dominion.)]
+		想知道[brax.name]到底有多好骗，你继续虚张声势：[pc.speech(我对你没听说过这件事并不感到惊讶，我夜店的会员资格只能通过推荐获得。我相信你能理解，但我不希望让任何一个普通市民享受到全御城区最美丽狼女的陪伴。)]
 	</p>
 	<p>
-		You struggle not to laugh as you see [brax.namePos] eyes glazing over with lust. [brax.speech(The most beautiful wolf-girls? So... what do they do in your club?)]
+		当你看到[brax.namePos]的眼睛因为欲望瞪得溜圆时，你努力忍住不笑出声来。[brax.speech(最美丽的狼女？那么……她们在你的夜店里做什么？)]
 	</p>
 	<p>
-		[pc.speech(Absolutely <i>anything</i> that's asked of them,)] you reply, and as you see that [brax.name] is by now totally taken in by your ruse, you decide to move onto business, [pc.speech(You know, I'm sure I could rely on an Inspector like you to really appreciate the girls at my club, and I'd love to offer you a recommendation to join, but I have a slight problem that needs solving first...)]
+		[pc.speech(那当然是她们被要求做的<i>任何事</i>，)]你回答，当你看到[brax.name]现在已经完全被你的诡计所迷惑时，你决定转入正题，[pc.speech(你知道，我确信只有你这样的督察才能真正欣赏我夜店里的女孩，我真的很想推荐你加入，但我有一个小问题需要先解决……)]
 	</p>
 	<p>
-		[brax.speech(Anything!)] [brax.name] eagerly blurts out.
+		[brax.speech(任何事都行！)][brax.name]急切地脱口而出。
 	</p>
 	<p>
-		[pc.speech(Excellent!)] you reply, [pc.speech(You see, an acquaintance of mine, going by the name of Arthur, owes me a good deal of money. When I paid him a visit, however, I found his apartment empty, and your name was on an arrest warrant fixed to his door. Could you tell me what happened to him?)]
+		[pc.speech(完美！)]你回答：[pc.speech(你看，我有个熟人，名叫亚瑟，欠我一大笔钱。然而，当我去拜访他时，却发现他的公寓空无一人，而你的名字却出现在贴在他门上的逮捕令上。你能告诉我他发生了什么事吗？)]
 	</p>
 	<p>
-		[brax.Name] fidgets uncomfortably as you reveal the reason for your visit. [brax.speech(Ah... Well, you see, he's kind of a special case... I really shouldn't divulge information relating to-)]
+		当你说出来访的原因时，[brax.Name]开始坐立不安。[brax.speech(啊……嗯，你看，他是个特例……我真的不该透露他的相关信息——)]
 	</p>
 	<p>
-		[pc.speech(That's a real shame. You know, many of our patrons like to take two or three girls at once...)]
+		[pc.speech(那可真是太遗憾了，要知道，我们的许多顾客喜欢一次带两三个女孩……)]
 	</p>
 	<p>
-		[brax.speech(Damn it!)] [brax.name] exclaims, interrupting your sentence. Grabbing a piece of paper out from a pile of freshly-signed documents, he thrusts it into your hands and says, [brax.speech(Don't tell anyone I gave you this! Now, where's this establishment of yours?!)]
+		[brax.speech(他妈的！)][brax.name]惊呼一声，打断了你的话。他从一堆新签署的文件中抓出一张纸，塞到你手里说：[brax.speech(别告诉别人是我给你的！你的夜店在哪里？)]
 	</p>
 	<p>
-		Wanting to trick him one last time, you give [brax.name] a series of instructions which will end up with him returning right back here at Enforcer HQ. Just as you thought, he's so completely blinded by his lust for wolf-girls that he doesn't realise you're sending him in a huge circuit of the city. As he leaps up and runs for the door, you wonder if you should tell him what a gullible idiot he is...
+		你想最后再骗他一次，于是给[brax.name]下达了一系列指令，最后让他回到执法者总部。正如你所想的那样，他完全被自己对狼女的欲望蒙蔽了双眼，以至于没有意识到你要让他在城市里绕一大圈。当他一跃而起跑向大门时，你在想是否应该告诉他，他是个多么容易受骗的白痴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_LIE_BLUFFING_SUCCESS -->
 
 	<htmlContent tag="INTERIOR_BRAX_LIE_BLUFFING_SUCCESS"><![CDATA[
 	<p>
-		You barely have time to say goodbye to your gullible friend before he bounds out of the door, muttering about how he won't need 'that slut on the front desk' any more.
+		你还没来得及跟你那容易上当的朋友道别，他就一跃而出地跑出了门，嘴里还嘟囔着他再也不需要“前台那个荡妇”了。
 	</p>
 	<p>
-		You finally have a moment to read over the piece of paper [brax.name] gave to you, and as you do so, you can't help but let out an annoyed sigh. It looks like Arthur is going to be one difficult person to track down, as the paper says:
+		你终于有时间仔细阅读[brax.name]给你的那张纸了，读着读着，你不禁恼怒地叹息。看来很难找到亚瑟了，因为这份文件写着：
 	</p>
-	<h6 style='text-align:center;'>Dominion Enforcer Department</h6>
-	<h5 style='text-align:center;'>RECORD OF SLAVE TRANSFER</h5>
+	<h6 style='text-align:center;'>御城区执法者部门</h6>
+	<h5 style='text-align:center;'>奴隶转让记录</h5>
 	<p style='text-align:center;'>
-		According to the laws of Dominion, the person of <i>[arthur.fullName]</i>, having being found guilty of <i>treason</i>, has been enslaved. Following standard procedure, ownership has been transferred to a registered slave trader chosen by random lottery.
+		根据御城区法律，<i>[arthur.fullName]</i>，被认定犯有<i>叛国罪</i>，已被奴役。按照标准程序，所有权已转让给随机抽签选出的一名注册奴隶贩子。
 		<br/><br/>
-		Officer in charge of transferring slave ownership: <i>[brax.fullName]</i>
+		负责奴隶所有权转让的官员：<i>[brax.fullName]</i>
 		<br/><br/>
-		Slave trader taking ownership: <i>[scarlett.fullName]</i>
+		获得所有权的奴隶贩子 ：<i>[scarlett.fullName]</i>
 		<br/><br/>
-		Contact address: <i>Scarlett's shop, Slaver Alley</i>
+		联系地址：<i>斯嘉丽的商店，奴隶巷</i>
 	</p>
 	<p>
-		After reading it over a second time, you realise that you're going to have to make your way to Slaver Alley and see if you can find some way to buy Arthur. Taking one last look around [brax.namePos] office, you notice that there's two neatly-folded Enforcer's uniforms lying on top of a cabinet. To punish [brax.name] a little more for falling for such an obvious trick, <b>you could take a spare uniform and add it to your inventory</b>.
+		看了第二遍之后，你意识到你必须去奴隶巷，看看能不能想办法买下亚瑟。最后一次环顾[brax.namePos]办公室，你发现柜子顶上放着两件叠得整整齐齐的执法者制服。为了给[brax.name]他上当受骗的更多的惩罚，<b>你可以拿一件备用制服，并将其添加到你的物品栏中</b>。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_LIE_BLUFFING_IDIOT_BRAX -->
 
 	<htmlContent tag="INTERIOR_BRAX_LIE_BLUFFING_IDIOT_BRAX"><![CDATA[
 	<p>
-		Almost feeling sorry for [brax.name], you decide to tell him that he's a gullible idiot, [pc.speech(Do you really believe that there's a place called 'The She-wolf's Den'? You do realise that I made all that up, right? I mean, no one can be <i>that</i> much of a gullible idiot!)]
+		你几乎要为[brax.name]感到难过了，你决定告诉他，他是个容易受骗的白痴，[pc.speech(你真的相信有一个叫‘母狼巢穴’的地方吗？你知道这些都是我编出来的吧？我是说，没人会是个<i>那么</i>容易受骗的白痴！)]
 	</p>
 	<p>
-		With his hand on the door-handle, [brax.name] stops, and with an unsure stammer, turns back to you, [brax.speech(W-What do you mean? I-I knew you were lying all along! I don't even like wolf-girls!)]
+		当他的手放在门把手上，[brax.name]停了下来，带着不确定的结巴回头对你说，[brax.speech(什……你什么意思？我知道你一直在撒谎！我根本不喜欢狼女！)]
 	</p>
 	<p>
-		You can't help but laugh at [brax.namePos] stuttering denial of his all-too-apparent weakness,
+		你看着[brax.namePos]他结结巴巴地否认了自己显而易见的弱点，情不自禁地笑出声来。
 		#IF(pc.getRace()==RACE_WOLF_MORPH && pc.isFeminine())
-			 [pc.speech(Oh, please! I see the way you keep glancing at my body! You couldn't make it any more obvious if you painted a big sign on your head reading '[brax.name] is a bitch for wolf-girls'!)]
+			[pc.speech(别这样，我看到你一直在看我的身体！如果你在头上画个大牌子，写上‘[brax.name]是狼女的婊子’，那就更明显不过了！)]
 		#ELSE
-			 [pc.speech(Oh, please! You couldn't make it any more obvious if you painted a big sign on your head reading '[brax.name] is a bitch for wolf-girls'!)]
+			[pc.speech(哦，拜托，如果你在头上画个大牌子，写上‘[brax.name]是狼女的婊子’，那就再明显不过了！)]
 		#ENDIF
 	</p>
 	<p>
-		[brax.namePos] face turns back up into the same snarl that you saw when you first entered his office. [brax.speech(S-Shut up! You want to see how much I like wolf-girls?! Fine! I think you need to be the first test subject for a special punishment I've recently thought of!)]
+		[brax.namePos]的脸又变成了你刚进他办公室时看到的咆哮。[brax.speech(闭……闭嘴！你想看看我有多喜欢狼女？好吧！我想你需要成为我最近想到的特殊惩罚的第一个试验品！)]
 	</p>
 	<p>
-		As [brax.name] finishes speaking, you see a burst of arcane fire suddenly materialise around his right hand, while with his other, he reaches down to grab the pistol at his waist. From the angry, although somewhat flustered, expression on his face, it's not too hard to figure out that he intends to fight you. Resorting to violence like this seems more than a little unreasonable, and you think that he was just looking for any excuse to try this 'punishment' out on someone...
+		当[brax.name]说完话时，你会看到他的右手突然冒出一阵奥术火焰，而他的另一只手则伸向腰间的手枪。从他愤怒但又有些慌乱的表情中，不难看出他打算和你战斗。像这样诉诸暴力似乎有点不合理，你认为他只是在寻找任何借口来对某人进行这种“惩罚”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_GETTING_TEASED -->
 
 	<htmlContent tag="INTERIOR_BRAX_GETTING_TEASED"><![CDATA[
 	<p>
-		Realising that you can use your body to get what you want, you slowly walk over to [brax.namePos] desk, suggestively swaying your [pc.hipSize] hips with each step. Just as you'd hoped, [brax.name] can't take his eyes off of you, and he slowly sits back down, his thoughts lost in a pink haze of arousal as he watches your provocative movements.
+		你意识到可以用身体得到你想要的东西，于是慢慢走到[brax.namePos]办公桌前，每走一步都暗示性地摇摆你的[pc.hipSize]臀部。正如你所希望的那样，[brax.name]无法将视线从你身上移开，他慢慢地坐了下来，看着你挑逗的动作，他的思绪迷失在一片粉红色的朦胧中。
 	</p>
 	<p>
-		[pc.speech(You know, it's not often that I get to meet such handsome wolf-boys...)] you sigh, leaning forwards over [brax.namePos] desk as you bat your eyelids at him.
+		[pc.speech(你知道，我很少能遇到像你这么英俊的狼男……)]你叹了口气，身体前倾，趴在[brax.namePos]桌子上，眼睛对他眨了眨。
 	</p>
 	<p>
-		Despite it being completely obvious what you're trying to do, [brax.namePos] weakness for wolf-girls has left him completely unable to act in a rational manner. As he hears you calling him handsome, a stupid grin crosses his face, and you smile back as you realise that he's now totally under your spell.
+		尽管你的意图非常明显，[brax.namePos]对狼女的软弱让他完全无法理智行事。当他听到你叫他帅哥时，脸上露出了愚蠢的笑容，而你也回以微笑，因为你意识到他现在完全被你迷住了。
 	</p>
 	<p>
-		[pc.speech(You know, [brax.name],)] you tease, reaching forwards to playfully straighten his tie, [pc.speech(I was hoping you could help me. My friend, Arthur, seems to have been arrested, and it was your name on the arrest warrant. Could you tell me what happened to him? Pretty please?)]
+		[pc.speech(你知道的，[brax.name]，)]你揶揄道，伸手向前俏皮地拉直他的领带，[pc.speech(我希望你能帮我，我的朋友亚瑟好像被捕了，逮捕令上是你的名字，你能告诉我他发生了什么事吗？可以吗~)]
 	</p>
 	<p>
-		In a hypnotised trance, [brax.name] leans down and produces a piece of paper, before pushing it into your hands. [brax.speech(Just for you, but don't tell anyone I gave you this!)]
+		为你着迷的恍惚中，[brax.name]俯下身，拿出一张纸，然后把它推到你的手中。[brax.speech(只给你一个人，但不要告诉别人是我给你的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_GETTING_TEASED_UH_OH -->
 
 	<htmlContent tag="INTERIOR_BRAX_GETTING_TEASED_UH_OH"><![CDATA[
 	<p>
-		Looking down, you read over the piece of paper [brax.name] gave to you, and as you do so, you can't help but let out an annoyed sigh. It looks like Arthur is going to be one difficult person to track down, as the paper says:
+		你终于有时间仔细阅读[brax.name]给你的那张纸了，读着读着，你不禁恼怒地叹息。看来很难找到亚瑟了，因为这份文件写着：
 	</p>
 	<p>
-	<h6 style='text-align:center;'>Dominion Enforcer Department</h6>
-	<h5 style='text-align:center;'>RECORD OF SLAVE TRANSFER</h5>
+	<h6 style='text-align:center;'>御城区执法者部门</h6>
+	<h5 style='text-align:center;'>奴隶转让记录</h5>
 	<p style='text-align:center;'>
-		According to the laws of Dominion, the person of <i>[arthur.fullName]</i>, having being found guilty of <i>treason</i>, has been enslaved. Following standard procedure, ownership has been transferred to a registered slave trader chosen by random lottery.
+		根据御城区法律，<i>[arthur.fullName]</i>，被认定犯有<i>叛国罪</i>，已被奴役。按照标准程序，所有权已转让给随机抽签选出的一名注册奴隶贩子。
 		<br/><br/>
-		Officer in charge of transferring slave ownership: <i>[brax.fullName]</i>
+		负责奴隶所有权转让的官员：<i>[brax.fullName]</i>
 		<br/><br/>
-		Slave trader taking ownership: <i>[scarlett.fullName]</i>
+		获得所有权的奴隶贩子：<i>[scarlett.fullName]</i>
 		<br/><br/>
-		Contact address: <i>Scarlett's shop, Slaver Alley</i>
+		联系地址：<i>斯嘉丽的商店，奴隶巷</i>
 	</p>
 	<p>
-		To [brax.namePos] lust-filled mind, your sigh of annoyance sounds just like a lewd moan, and before you can react, he stands up and steps forwards, before reaching up to grab your head and pull you into a sudden, rough kiss. After a moment of frantically forcing his tongue down your throat, he releases you, and you step back, panting for breath. Being caught off-guard, you're unable to think of a response to the wolf-boy's confident move, and you simply stare at him with eyes wide open as he says, [brax.speech(Don't come in here acting the tease and expect to get away with it!)]
+		在[brax.namePos]充满欲望的脑海中，你的恼怒叹息听起来就像淫荡的呻吟，还没等你反应过来，他就站了起来，向前走了一步，然后伸手抓住你的头，把你拉进一个突如其来的粗暴的吻中。他疯狂地把舌头伸进你的喉咙，片刻之后，他放开了你，你后退一步，气喘吁吁。由于措手不及，你无法对狼男自信的举动做出回应，你只是睁大眼睛盯着他说：[brax.speech(别在这挑逗我还指望能逃过一劫！)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			Stepping forwards, he grabs you by the waist and dominantly pulls you in tight against his wide, muscular chest. You instantly feel his massive erection pressing against your foreleg, and you gulp as he growls, [brax.speech(I haven't fucked a wolf-taur in a good long while! I hope you like it rough!)]
+			他向前一步，搂住你的腰，霸道地把你紧紧拉在他宽阔、肌肉发达的胸膛上。你立刻感觉到他巨大的勃起压在你的前腿上，你咽了咽口水，他咆哮道：[brax.speech(我已经很久没有干过半狼人了！希望你喜欢粗暴一点的！)]
 		#ELSE
-			Stepping forwards, he grabs you by the hips and dominantly pulls you in tight against his wide, muscular chest. You instantly feel his massive erection pressing against your leg, and you gulp as he growls, [brax.speech(I haven't fucked a wolf-girl as pretty as you in a good long while! I hope you like it rough!)]
+			他向前一步，抓住你的臀部，霸道地把你紧紧拉在他宽阔、肌肉发达的胸膛上。你立刻感觉到他巨大的勃起压在你的腿上，你咽了咽口水，他咆哮道：[brax.speech(我已经很久没有干过像你这么漂亮的狼女了！希望你喜欢粗暴一点的！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTERIOR_BRAX_GETTING_TEASED_UH_OH_GET_FUCKED"><![CDATA[
 	#IF(pc.isTaur())
 		<p>
-			With [brax.namePos] strong, confident grip still on your hips, you suddenly realise that you're happily leaning in against his masculine chest. With a little whimper, you gaze into his hungry, wolf-like eyes, and, taking your submissive noise as a sign that you want to be kissed, he presses his wolf-like muzzle against your [pc.lips] and forces his tongue into your mouth.
+			当[brax.namePos]有力而自信地握住你的臀部时，你突然意识到自己正快乐地靠在他阳刚的胸膛上。你发出一声轻微的呜咽，凝视着他如狼一般饥渴的眼睛，他把你顺从的声音当作你想要被亲吻的信号，用他狼一般的嘴抵住你[pc.lips]，强行把舌头伸进你的嘴里。
 		</p>
 		<p>
-			As you passionately kiss the dominant wolf-boy, you feel his hands reach up to grope and squeeze your [pc.breasts]. Moaning happily into his mouth, you push out your chest, encouraging him to continue playing with your [pc.breastSize] [pc.breasts] as you close your eyes and enjoy the safe, warm feeling of his embrace.
+			当你热情地亲吻霸道的狼男时，你感觉到他的手伸过来摸索和挤压你的[pc.breasts]。你对着他的嘴快乐地呻吟着，挺起胸膛，鼓励他继续玩弄你的[pc.breastSize][pc.breasts]，同时闭上眼睛享受他怀抱带来的安全、温暖的感觉。
 		</p>
 		<p>
-			[brax.name] is the first to make the next move, and he suddenly pulls his head back to break off the kiss before leaning down to growl into your ear, [brax.speech(Good bitch, now get down on the floor and present that feral ass to me!)]
+			[brax.name]率先做出了下一个动作，他突然把头往后一仰，中断了这个吻，然后俯下身在你耳边咆哮道：[brax.speech(好婊子，现在趴到地上，把你那野性的屁股给我看！)]
 		</p>
 		<p>
-			By now desperate to have sex with the dominant wolf-boy, you obediently do as you're told, and drop down onto your animalistic [pc.legRace]'s body, presenting your feral ass and genitals to him...
+			现在，你迫切希望与支配欲极强的狼男发生性关系，你顺从地听命行事，趴在兽性[pc.legRace]的身上，向他展示你野性的屁股和生殖器……
 		</p>
 	#ELSE
 		<p>
-			[brax.namePos] strong, confident grip on your hips quickly moves down and around to your [pc.assSize] ass, and as he gives it a forceful squeeze, you suddenly realise that you're happily leaning in against his masculine chest. With a little whimper, you gaze into his hungry, wolf-like eyes, and, taking your submissive noise as a sign that you want to be kissed, he presses his wolf-like muzzle against your [pc.lips] and forces his tongue into your mouth.
+			[brax.namePos]有力而自信地握住你的臀部，迅速向下移动，绕到你的[pc.assSize]屁股上，当他用力捏你的屁股时，你突然意识到自己正快乐地靠在他阳刚的胸膛上。随着一声轻微的呜咽，你凝视着他如狼一般饥渴的眼睛，他把你顺从的声音当作你想要被亲吻的信号，把他狼一般的嘴抵在你[pc.lips]上，强行把舌头伸进你的嘴里。
 		</p>
 		<p>
-			As you passionately kiss the dominant wolf-boy, you feel his hands continue to grope and squeeze your rear end. Moaning happily into his mouth, you grind yourself against his muscular body, pressing your [pc.breastSize] breasts firmly against his torso as you close your eyes and enjoy the safe, warm feeling of his embrace.
+			当你热情地亲吻这个霸道的狼男时，你感觉到他的手在继续摸索和揉捏你的后臀。你对着他的嘴快乐地呻吟着，把自己紧紧地贴在他肌肉发达的身体上，把[pc.breastSize]乳房紧紧地贴在他的躯干上，闭上眼睛享受他怀抱带来的安全、温暖的感觉。
 		</p>
 		<p>
-			[brax.name] is the first to make the next move, and he suddenly pulls his head back to break off the kiss before leaning down to growl into your ear, [brax.speech(Good bitch, now get down on all fours and present yourself!)]
+			[brax.name]率先做出了下一个动作，他突然把头往后一仰，中断了这个吻，然后俯下身在你耳边咆哮道：[brax.speech(好婊子，现在趴下，展示自己！)]
 		</p>
 		<p>
-			By now desperate to have sex with the dominant wolf-boy, you obediently do as you're told, and drop down onto your hands and knees as you present yourself to him...
+			现在，你迫切希望与这个霸道的狼男发生性关系，于是你顺从地按照他的吩咐，手脚并用地跪在他面前……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTERIOR_BRAX_GETTING_TEASED_UH_OH_TAKE_CONTROL"><![CDATA[
 	<p>
-		You feel a devious smile spread across your face as [brax.name] mentions it might get rough, and, leaning into him, you growl into his ear, [pc.speech(Yes, [brax.name], I <i>do</i> like it rough!)]
+		当[brax.name]提到可能会变得粗暴时，你的脸上露出了狡黠的笑容，你靠在他身上，对着他的耳朵咆哮道：[pc.speech(对！[brax.name]，我<i>d确实</i>喜欢粗暴！)]
 	</p>
 	<p>
-		[brax.name] lets out a surprised cry as you reach down and firmly grab his groin with one hand. Pressing your lips against his to prevent him from making any more noise, you thrust your tongue into his mouth, squeezing down on his satisfyingly-large package as he squirms and melts under your touch.
+		当你伸手紧紧抓住他的腹股沟时，[brax.name]发出了惊讶的叫声。为了防止他再发出声音，你把嘴唇贴在他的嘴唇上，把舌头伸进他的嘴里，挤压他那令人满意的巨大肉棒，他在你的抚摸下扭动着，融化了。
 	</p>
 	<p>
-		Breaking off the kiss, but making sure not to let go of his crotch, you growl again, [pc.speech(So, the real question is, do <i>you</i> like it rough?)]
+		结束这个吻，但是确保你没松开他的胯部，你再一次咆哮，[pc.speech(所以，现在真正的问题是，<i>你</i>喜欢更粗暴的吗？)]
 	</p>
 	<p>
-		[brax.speech(W-Wait I-)]
+		[brax.speech(等……等等——)]
 	</p>
 	<p>
-		[pc.speech(Wrong answer!)] you cry, giving [brax.namePos] throbbing cock a hard squeeze as you interrupt his response.
+		[pc.speech(回答错误！)]你喊道，在打断[brax.namePos]的回答时，用力捏了一下他跳动的鸡巴。
 	</p>
 	<p>
-		[brax.speech(Aah! Yes! Yes, I like it rough!)]
+		[brax.speech(啊！对！对！我喜欢粗暴的！)]
 	</p>
 	<p>
-		[pc.speech(Mmm, that's right,)] you sigh, softening your grip before running your fingers up and down over [brax.namePos] rapidly-hardening bulge. Biting your lip as you get a good feel of the impressive length of his throbbing cock, you tease, [pc.speech(So, who's going to be a good little bitch for their alpha she-wolf?)]
+		[pc.speech(嗯~这就对了，)]你叹了口气，放软了握住他的手，然后用手指在[brax.namePos]迅速变硬的凸起上来回摸索。你咬着嘴唇，仔细感受着他那令人印象深刻的勃起阴茎的长度，然后挑逗道：[pc.speech(那么，谁会成为他们的母狼首领的小母狗呢？)]
 	</p>
 	<p>
-		[brax.speech(I-I am...)] [brax.name] groans, admitting defeat.
+		[brax.speech(我……我……)][brax.name]呻吟着认输。
 	</p>
 	<p>
-		[pc.speech(That's right! You're going to love being my good little beta,)] you squeal, happy now that you've asserted your dominance over the handsome wolf-boy.
+		[pc.speech(没错，你会喜欢做我的beta的。)]你尖叫着，很高兴自己已经对这个英俊的狼男拥有了主导权。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- INTERIOR_BRAX_GETTING_TEASED_ESCAPE -->
 
 	<htmlContent tag="INTERIOR_BRAX_GETTING_TEASED_ESCAPE"><![CDATA[
 	<p>
-		[pc.speech(Oh, would you look at the time! I really need to be going now,)] you exclaim, disentangling yourself from [brax.namePos] clutches. [pc.speech(I'll come back later, and we can have some fun then, ok?)]
+		[pc.speech(哦，你看看时间！我真的得走了，)]你惊讶道，挣脱了[brax.namePos]的魔掌。[pc.speech(我晚点再来，到时候我们可以好好玩玩，好吗？)]
 	</p>
 	<p>
-		Letting out a disappointed grunt, [brax.name] reluctantly steps back, seemingly placated for now by your promise of a future rendezvous. Narrowing his eyes, he growls, [brax.speech(You'd better be back soon!)]
+		发出一声失望的咕哝，[brax.name]不情愿地后退了几步，似乎暂时被你未来会面的承诺所安抚。他眯起眼睛，咆哮道：[brax.speech(你最好快点回来！)]
 	</p>
 	<p>
-		Making more vague promises, you step back out into the corridor, breathing a sigh of relief as you pull the door firmly shut behind you. Turning to leave by the same route as which you arrived, you quickly set off towards the exit.
+		你含糊地许下诺言，然后回到走廊上，当你紧紧拉上身后的门时，长长地舒了一口气。转身从来时的路线离开，迅速向出口走去。
 	</p>
 	<p>
-		As you pass an empty office, you look in and notice that there are two neatly-folded Enforcer's uniforms lying on top of a cabinet. Deciding that you need a little compensation after being forcefully kissed by [brax.name], <b>you take one of the spare uniforms and add it to your inventory on your way out</b>.
+		当你经过一间空荡荡的办公室时，你发现柜子顶上放着两件叠得整整齐齐的执法者制服。在被[brax.name]强吻之后，你决定需要一点补偿，<b>你拿起一件备用制服，将其放入包中并离开</b>。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- AFTER_COMBAT_VICTORY -->
 
 	<htmlContent tag="AFTER_COMBAT_VICTORY"><![CDATA[
 	<p>
-		Brax takes one last half-hearted swing at you, which you easily sidestep. Stumbling past you, he ends up collapsing against his desk, completely and utterly defeated.
+		布拉克斯向你挥舞最后一拳，你轻松躲过。他跌跌撞撞地从你身边走过，最后瘫倒在办公桌上，完全彻底地被打败了。
 	</p>
 	<p>
-		Walking over to his submissive form, you can't help but smirk as you hear him surrender, [brax.speech(P-Please... No more...)]
+		走到他顺从的身旁，听到他投降的声音，你不禁哑然失笑，[brax.speech(请……不要再……)]
 	</p>
 	<p>
-		Grinning down at the broken wolf-boy, you demand to know what's happened to Arthur. Turning to one side, Brax pulls a piece of the paper out from a pile of freshly-signed documents and hands it over to you. Reading over it, you can't help but let out an annoyed sigh. It looks like Arthur is going to be one difficult person to track down, as the paper says:
+		你对着被击败的狼男咧嘴一笑，要求他告诉你亚瑟出了什么事。布拉克斯转过身，从一堆刚刚签署的文件中拿出一张纸递给你。你读完不禁恼怒地叹息，看来很难找到亚瑟了，因为这份文件写着：
 	</p>
 	<p>
-	<h6 style='text-align:center;'>Dominion Enforcer Department</h6>
-	<h5 style='text-align:center;'>RECORD OF SLAVE TRANSFER</h5>
+	<h6 style='text-align:center;'>御城区执法者部门</h6>
+	<h5 style='text-align:center;'>奴隶转让记录</h5>
 	<p style='text-align:center;'>
-		According to the laws of Dominion, the person of <i>[arthur.fullName]</i>, having being found guilty of <i>treason</i>, has been enslaved. Following standard procedure, ownership has been transferred to a registered slave trader chosen by random lottery.
+		根据御城区法律，<i>[arthur.fullName]</i>，被认定犯有<i>叛国罪</i>，已被奴役。按照标准程序，所有权已转让给随机抽签选出的一名注册奴隶贩子。
 		<br/><br/>
-		Officer in charge of transferring slave ownership: <i>[brax.fullName]</i>
+		负责奴隶所有权转让的官员：<i>[brax.fullName]</i>
 		<br/><br/>
-		Slave trader taking ownership: <i>[scarlett.fullName]</i>
+		获得所有权的奴隶贩子 ：<i>[scarlett.fullName]</i>
 		<br/><br/>
-		Contact address: <i>Scarlett's shop, Slaver Alley</i>
+		联系地址：<i>斯嘉丽的商店，奴隶巷</i>
 	</p>
 	<p>
-		As you read it over a second time, you let out another annoyed tutting sound, realising that you're going to have to make your way to Slaver Alley and see if you can find some way to buy Arthur's freedom from this 'Scarlett' person.
+		当你读第二遍的时候，你又发出了恼怒的叹息，意识到你必须去奴隶巷，看看能不能想办法从这个叫 “斯嘉丽”的人手里买到亚瑟的自由。
 	</p>
 	<p>
-		A little groan brings your attention back to Brax, and as you look down at him, you see a lustful glimmer in his eyes. Surprisingly, it doesn't seem as though anyone outside the office has heard your fight, and you wonder if you should take advantage of this wolf-boy's weakened state...
+		一声轻微的呻吟把你的注意力拉回到布拉克斯身上，当你低头看他时，你看到他眼中闪烁着淫邪的光芒。出乎意料的是，办公室外似乎没有人听到你们的打斗声，你在想是否应该利用这个狼男的虚弱状态……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_DOMINATE"><![CDATA[
 	<p>
-		You feel a devious smile spread across your face as you walk over to Brax. Leaning into him, you growl down into his ear, [pc.speech(I hope you like it rough!)]
+		当你走到布拉克斯身边时，你的脸上洋溢着邪恶的笑容。你靠在他身上，对着他的耳朵吼道：[pc.speech(我希望你喜欢粗暴的！)]
 	</p>
 	<p>
-		Brax lets out a surprised cry as you reach down and firmly grab his groin with one hand. Pressing your lips against his to prevent him from making any more noise, you thrust your tongue into his mouth, squeezing down on his satisfyingly large package as he squirms and melts under your touch.
+		当你伸手紧紧抓住他的腹股沟时，布拉克斯发出了惊讶的叫声。为了防止他发出更多的声音，你将嘴唇贴在他的嘴唇上，将舌头伸进他的嘴里，挤压他那令人满意的大肉棒，他在你的抚摸下扭动着，融化了。
 	</p>
 	<p>
-		Breaking off the kiss, but making sure not to let go of his crotch, you growl down to him again, [pc.speech(So, you ready to be my little bitch?)]
+		结束这个吻，但是确保你没松开他的胯部，你再一次咆哮道：[pc.speech(准备好做我的小母狗了吗？)]
 	</p>
 	<p>
-		[brax.speech(W-Wait I-)]
+		[brax.speech(等……等等——)]
 	</p>
 	<p>
-		[pc.speech(Wrong answer!)] you cry, giving Brax's throbbing cock a hard squeeze as you interrupt his response.
+		[pc.speech(回答错误！)]你喊道，在打断布拉克斯的回答时，用力捏了一下他跳动的阴茎。
 	</p>
 	<p>
-		[brax.speech(Aah! Yes! Yes, I like it rough!)]
+		[brax.speech(啊！对！对！我喜欢粗暴的！)]
 	</p>
 	<p>
-		[pc.speech(Mmm, that's right,)] you sigh, softening your grip before running your fingers up and down Brax's shorts, biting your lip as you get a good feel of the impressive length of his throbbing cock, [pc.speech(and who's going to be a good little bitch for their new alpha?)]
+		[pc.speech(嗯~这就对了，)]你叹了口气，放松了握住他的手，然后用手指在布拉克斯的短裤上来回摸索，咬着嘴唇仔细感受他那令人印象深刻的勃起的阴茎，[pc.speech(谁会为他的新的alpha首领当好小母狗？)]
 	</p>
 	<p>
-		[brax.speech(I-I am...)] Brax groans, admitting defeat.
+		[brax.speech(我……我……)]布拉克斯呻吟着承认失败。
 	</p>
 	<p>
-		[pc.speech(Good little beta!)] you cry, happy now that you've asserted your dominance over the handsome wolf-boy.
+		[pc.speech(好beta！)]你尖叫着，很高兴自己已经对这个英俊的狼男拥有了主导权。
 	</p>
 	<p>
-		With a forceful push, you shove Brax down onto his knees before you. His meek, submissive look couldn't be further from the aggressive snarl that he greeted you with when you entered his office, and you grin down at him as you prepare to make him your bitch.
+		你用力一推，把布拉克斯推倒在地，让他跪在你面前。他温顺顺从的样子与你进入他办公室时他咄咄逼人的咆哮判若两人，你对他咧嘴一笑，准备把他变成你的婊子。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_COMBAT_VICTORY_SUBMIT"><![CDATA[
 	<p>
-		You reach down and run your fingertips over Brax's crotch, biting your lip and letting out a soft squeal as you feel that he's already hard. Encouraged by your touch, Brax leans forwards, and you happily accept his tongue into your mouth as he pulls you down into a kiss.
+		你将手指伸到布拉克斯的胯下，咬着嘴唇，发出轻轻的尖叫，因为你感觉到他已经硬了。在你的抚摸鼓励下，布拉克斯向前倾了倾身子，你高兴地接受了他把舌头伸进你的嘴里，他把你拉下来亲吻。
 	</p>
 	<p>
-		Your submissive nature starts to take over, and after gently breaking off the kiss, you whisper down to Brax, [pc.speech(I bet you're pretty angry at being beaten like that, huh?)]
+		你的顺从天性开始占据上风，在轻轻地中断亲吻后，你低声对布拉克斯说，[pc.speech(我打赌你被打成这样一定很生气吧？)]
 	</p>
 	<p>
-		As Brax grunts in agreement, you continue teasing him, [pc.speech(I wonder what you'd like to do to me to get your revenge... Perhaps you'd grab me with those big, strong hands...)]
+		布拉克斯哼了一声表示同意，你就继续挑逗他：[pc.speech(我想知道你想对我做什么来报复……也许你会用那双有力的大手抓住我……)]
 	</p>
 	<p>
-		You reach down, and, taking Brax's wolf-like hands in yours, guide them up to your waist. As he starts to get the idea, you feel him roughly grab your [pc.hipSize] hips, causing you to let out a lewd little cry.
+		你向下伸手，握住布拉克斯狼型的双手，将它们引向你的腰部。当他开始明白你的想法时，你感觉到他粗暴地抓住你的[pc.hipSize]臀部，让你发出淫荡的小叫声。
 	</p>
 	<p>
-		[pc.speech(And then, pull me in against you as you ruthlessly tongue-fuck my mou- ~hrmp!~)]
+		[pc.speech(然后把我拉过来，用舌头狠狠地舔我的嘴~嗯！~)]
 	</p>
 	<p>
-		Brax does exactly what you suggest, and eagerly jerks you forwards, slamming his lips against yours as he starts passionately kissing you. He stands up, reaching down to grope and squeeze your [pc.assSize] ass as you grind yourself against him.
+		布拉克斯完全按照你的建议做了，他迫不及待地把你往前推，用嘴唇紧紧地贴在你的嘴唇上，开始热情地亲吻你。他站起身来，伸手摸索并揉捏你的[pc.assSize]屁股，你则在他身上磨来磨去。
 	</p>
 	<p>
-		[pc.speech(Then mayb-)] you try to continue, after breaking of the kiss, but Brax reaches up and presses his hand down firmly over your mouth.
+		[pc.speech(然后可能——)]你在中断亲吻后还想继续，但布拉克斯伸手紧紧按住了你的嘴。
 	</p>
 	<p>
-		[brax.speech(Then maybe you shut up, get down on all fours, and present yourself like the submissive little slut you clearly are!)]
+		[brax.speech(然后可能你就闭上嘴，四肢着地，像个顺从的小荡妇一样展示自己！)]
 	</p>
 	<p>
-		You obediently do as Brax commands and drop down on all fours right there in the middle of his office.
+		你顺从地听从布拉克斯的命令，四肢着地趴在他办公室的正中央。
 		#IF(pc.getTailType().getRace()==RACE_WOLF_MORPH)
-			 You can't help but shake your ass at the dominant wolf-boy, and you playfully flick your wolf-like tail back and forth, making pitiful little whining noises as you eagerly plead for Brax's thick cock.
+			你情不自禁地对着这个霸道的狼男摇晃着屁股，俏皮地来回甩动着狼一样的尾巴，发出可怜的呜呜声，急切地恳求布拉克斯粗大的鸡巴。
 		#ELSE
-			 You can't help but shake your ass at the dominant wolf-boy, and you turn your head and make a show of biting your lip, making pitiful little whining noises as you eagerly plead for Brax's thick cock.
+			你情不自禁地对着这个霸道的狼男摇晃着屁股，扭过头去，做出一副咬着嘴唇的样子，一边发出可怜的小呜咽声，一边急切地恳求布拉克斯粗大的鸡巴。
 		#ENDIF
 	</p>
 	<p>
-		Brax stands behind you, grinning, and you know that it's only going to be a matter of seconds before he fills you with his alpha cock.
+		布拉克斯站在你身后，咧开嘴笑着，你知道只需几秒钟，他就会用他的大鸡巴把你填满。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- AFTER_COMBAT_VICTORY_NO_SEX -->
 
 	<htmlContent tag="AFTER_COMBAT_VICTORY_NO_SEX"><![CDATA[
 	<p>
-		You really don't feel like having sex with the guy who just tried to beat you up. Instead, you push Brax back into his chair, tutting in disapproval as he lets out a desperate whine.
+		你真的不想和这个刚想揍你的家伙做爱。你把布拉克斯推回椅子上，听着他渴望的呜咽声，不以为然地啧啧。
 	</p>
 	<p>
-		Taking one last look around Brax's office, you notice that there are two neatly-folded Enforcer's uniforms lying on top of a cabinet. In order to punish Brax a little more for trying to beat you up, <b>you could take one of the uniforms and add it to your inventory</b>.
+		最后一次环顾布拉克斯的办公室，你发现柜子顶上放着两件叠得整整齐齐的执法者制服。为了再惩罚一下试图揍你的布拉克斯，<b>你可以从制服中挑选一件，并将其添加到你的物品栏中</b>。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- AFTER_COMBAT_DEFEAT -->
 
 	<htmlContent tag="AFTER_COMBAT_DEFEAT"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_braxTransformedPlayer))
 		<p>
-			You can't carry on fighting any longer, and you feel your [pc.legs] giving out beneath you as you collapse to the ground, defeated. As Brax lets out a deep laugh, you find yourself looking down at the floor, trying to avoid his powerful gaze.
+			你再也无法继续战斗了，你感觉到自己的[pc.legs]失去了力量，倒在地上，一败涂地。随着布拉克斯发出低沉的笑声，你低头看着地面，试图避开他那强大的目光。
 		</p>
 		<p>
-			[brax.speech(Hah! Looks like you're still just a submissive little bitch! Didn't you learn anything from last time?!)] he growls, stepping forwards and grabbing you by the neck, [brax.speech(Now let's get you another drink!)]
+			[brax.speech(哈！看来你还是个顺从的小贱人！上次你没学到什么吗？)]他咆哮着，向前一步，掐住你的脖子，[brax.speech(现在让我再给你来一瓶！)]
 		</p>
 		<p>
-			You cry out as Brax roughly drags you across the room to his desk. Fishing about in one of the drawers, he quickly finds what he's looking for, and with a light clink of glass, places a very familiar-looking bottle on the desk in front of you.
+			布拉克斯粗暴地把你拖过房间，拖到他的书桌前，你大叫起来。他在一个抽屉里翻了翻，很快就找到了他要找的东西，随着一声轻微的玻璃碰撞声，他把一个看起来非常眼熟的瓶子放在了你面前的桌子上。
 		</p>
 		<p>
-			[brax.speech(I was so pleased with the last one, I got a few more of these potions made!)] Brax says, pulling out the glass stopper before roughly shoving the bottle's neck down your throat, [brax.speech(That's right, be a good [pc.girl] and drink it all down again...)]
+			[brax.speech(我对最后一种药水非常满意，于是又多做了几种这样的药水！)]布拉克斯说着，拔出玻璃塞，然后粗暴地把瓶颈塞进你的喉咙，[brax.speech(这就对了，做一个好[pc.girl]再把它全部喝完……)]
 		</p>
 		<p>
-			With the bottle's transformative liquid already pouring out into your mouth, you find yourself having to make the decision of whether to spit it out, or do as the dominant wolf-boy says and swallow it all down...
+			随着瓶子里的液体不断涌入你的口中，你发现自己必须做出决定，是吐出来，还是按照支配的狼男所说的，把它全部吞下去……
 		</p>
 		
 	#ELSEIF(brax.getFoughtPlayerCount()>1)
 		<p>
-			You can't carry on fighting any longer, and you feel your [pc.legs] giving out beneath you as you collapse to the ground, defeated. As Brax lets out a deep laugh, you find yourself looking down at the floor, trying to avoid his powerful gaze.
+			你再也无法继续战斗了，你感觉到自己的[pc.legs]失去了力量，倒在地上，一败涂地。随着布拉克斯发出低沉的笑声，你低头看着地面，试图避开他那强大的目光。
 		</p>
 		<p>
-			[brax.speech(Hah! What a submissive little bitch! I was kinda hoping that you'd put up a better fight than that, but, whatever,)] he growls, stepping forwards and grabbing you by the neck, [brax.speech(Now this time, you're gonna drink down my potion like a good little bitch, aren't you?!)]
+			[brax.speech(哈，真是个顺从的小贱人，我还挺希望你能打得更漂亮点，不过，管他呢)]他咆哮着，向前一步，掐住你的脖子，[brax.speech(这一次，你要像个乖婊子一样喝掉我的药水，对吧？！)]
 		</p>
 		<p>
-			You cry out as Brax roughly drags you across the room to his desk. Fishing about in one of the drawers, he quickly finds one of his transformative potions, and with a light clink of glass, places yet another very delicate-looking bottle on the desk in front of you.
+			布拉克斯粗暴地把你拖过房间，拖到他的书桌前，你大叫起来。他在一个抽屉里翻了翻，很快就找到了一瓶转化药水，随着玻璃杯发出的轻微碰撞声，他又把一瓶看起来非常精致的药水放在了你面前的桌子上。
 		</p>
 		<p>
-			[brax.speech(That ungrateful slut on the front desk still doesn't want to be a wolf-girl...)] Brax says, pulling out the glass stopper before roughly shoving the bottle's neck down your throat, [brax.speech(So this one's all for you! Drink it down bitch!!)]
+			[brax.speech(前台那个忘恩负义的荡妇还不想当狼女……)]布拉克斯说着，拔出玻璃塞，然后粗暴地把瓶颈塞进你的喉咙，[brax.speech(所以这都给你了，喝了它，婊子！！)]
 		</p>
 		<p>
-			With the bottle's transformative liquid already pouring out into your mouth, you find yourself having to make the decision of whether to spit it out, or do as the dominant wolf-boy says and swallow it all down...
+			随着瓶子里的液体不断涌入你的口中，你发现自己必须做出决定，是吐出来，还是按照支配的狼男所说的，把它全部吞下去……
 		</p>
 	#ELSE
 		<p>
-			You can't carry on fighting any longer, and you feel your [pc.legs] giving out beneath you as you collapse to the ground, defeated. As Brax lets out a deep laugh, you find yourself looking down at the floor, trying to avoid his powerful gaze.
+			你再也无法继续战斗了，你感觉到自己的[pc.legs]失去了力量，倒在地上，一败涂地。随着布拉克斯发出低沉的笑声，你低头看着地面，试图避开他那强大的目光。
 		</p>
 		<p>
-			[brax.speech(Hah! What a submissive little bitch! I was kinda hoping that you'd put up a better fight than that, but, whatever,)] he growls, stepping forwards and grabbing you by the neck, [brax.speech(Now let's talk more about that little punishment I mentioned.)]
+			[brax.speech(哈，真是个顺从的小贱人，我还挺希望你能打得更漂亮点，不过，管他呢)]他咆哮着，向前一步，掐住你的脖子，[brax.speech(现在，让我们来谈谈我提到的那个小惩罚。)]
 		</p>
 		<p>
-			You cry out as Brax roughly drags you across the room to his desk. Fishing about in one of the drawers, he quickly finds what he's looking for, and, with a light clink of glass, places a very delicate-looking bottle on the desk in front of you.
+			布拉克斯粗暴地把你拖过房间，拖到他的书桌前，你大叫起来。他在一个抽屉里翻了翻，很快就找到了他要找的东西，随着玻璃杯发出的轻微碰撞声，他把一个看起来非常精致的瓶子放在了你面前的桌子上。
 		</p>
 		<p>
-			[brax.speech(I got this made up for that useless bimbo you saw on the front desk, but the ungrateful slut said she didn't want to be a wolf-girl...)] Brax says, pulling out the glass stopper before roughly shoving the bottle's neck down your throat, [brax.speech(That's right, drink it all down... Oh fuck, this is gonna be good!)]
+			[brax.speech(我给你在前台看到的那个没用的荡妇做了这个，但那个忘恩负义的荡妇说她不想当狼女……)]布拉克斯说着，拔出玻璃塞，然后粗暴地把瓶颈塞进你的喉咙，[brax.speech(没错，一饮而尽……妈的，这一定会很棒！)]
 		</p>
 		<p>
-			With the bottle's transformative liquid already pouring out into your mouth, you find yourself having to make the decision of whether to spit it out, or do as the dominant wolf-boy says and swallow it all down...
+			随着瓶子里的液体不断涌入你的口中，你发现自己必须做出决定，是吐出来，还是按照支配的狼男所说的，把它全部吞下去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- AFTER_DEFEAT_TRANSFORMATION_REFUSED -->
 
 	<htmlContent tag="AFTER_DEFEAT_TRANSFORMATION_REFUSED"><![CDATA[
 	<p>
-		You have no desire to be transformed into a wolf-girl, so, yanking your head away from Brax, you quickly spit out the fluid that's in your mouth. As the pink liquid splatters onto the floor, the aggressive wolf-boy lets out a furious growl, [brax.speech(You stupid bitch! You'll pay for that!)]
+		你可不想变成狼女，于是把头从布拉克斯身上移开，迅速吐出嘴里的液体。当粉红色的液体溅到地上时，好斗的狼男发出了愤怒的咆哮，[brax.speech(你这个愚蠢的婊子！你会付出代价的！)]
 	</p>
 	<p>
-		Angrily tossing the now-empty bottle to the floor, Brax grabs your [pc.arms] and pulls you into him, [brax.speech(You're fucked now, bitch!)]
+		布拉克斯愤怒地把空瓶子扔到地上，抓住你的[pc.arms]，把你拉到他身上，[brax.speech(你现在完蛋了，婊子！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_DEFEAT_TRANSFORMATION_REFUSED_DOMINATED"><![CDATA[
 	<p>
 		#IF(pc.isTaur())
-			Brax grabs hold of your feral [pc.legRace]'s body, and with a forceful shove, pushes you down to the ground. As you crash down onto your knees, the wolf-boy steps around behind you, before delivering a sharp slap to your animalistic rear-end. You make a pitiful little whining noise as his wolf-like paw strikes you, and, looking back over your shoulder, you see that you're perfectly presented for Brax to start fucking you.
+			布拉克斯抓住你的兽态[pc.legRace]的身体，用力一推，将你推倒在地。当你跪倒在地时，狼男绕到你身后，然后猛地一巴掌打在你的兽性后脑勺上。当他那像狼一样的爪子打在你身上时，你发出了可怜的呜呜声，回过头一看，你已经完美地呈现在布拉克斯面前，等他开始干你。
 		#ELSE
-			Brax spins you around, and with a forceful shove, pushes you down to the ground. You land on all-fours, with your ass raised up towards the dominant wolf-boy. Hearing him let out a deep growl, you make a pitiful little whining noise in response as you realise that you're perfectly presented for Brax to start fucking you, doggy-style.
+			布拉克斯把你转过来，用力一推，把你推倒在地。你四脚着地，屁股翘起，朝向这个霸道的狼男。听到他发出低沉的咆哮声，你发出可怜的呜呜声，因为你意识到你已经完全呈现在布拉克斯面前，他用后入式开始干你。
 		#ENDIF
 	</p>
 	<p>
-		As you feel your conqueror's hands reaching down to grip your hips, you know that it's only going to be a matter of seconds before he fills you with his alpha cock...
+		当你感觉到征服者的双手伸向你的臀部时，你就知道他用他的大鸡巴填满你只是几秒钟的事……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- AFTER_DEFEAT_TRANSFORMATION -->
 
 	<htmlContent tag="AFTER_DEFEAT_TRANSFORMATION"><![CDATA[
 	<p>
-		The liquid's transformative force is enough to knock to your knees, and you collapse to the floor, panting, as you feel your body start to change. You can't stand the powerful rush of transformations that suddenly wash through your body, and you find yourself collapsing to the floor as you pass out...
+		药水的转化之力足以让你跪倒，你气喘吁吁地瘫在地上，感觉身体开始发生变化。你无法承受突然涌入身体的强大转化冲击，倒在地上昏了过去……
 	</p>
 	<p>
-		...
+		……
 	</p>
 	<p>
-		[brax.speech(Hrmph! She never said anything about them losing consciousness! Hey! Wake up!)]
+		[brax.speech(呃！她从没说过他们会失去意识！喂，醒醒！)]
 	</p>
 	<p>
-		With Brax's worried voice sounding in your ears, you slowly start to come back to your senses. Blinking your eyes open, you see a look of relief wash over the wolf-like face that's hovering over you. Pushing yourself up on your elbows, you find yourself quickly recovering, and as Brax helps you to stand up on unfamiliar, shaking legs, the feeling of exhaustion is quickly replaced with an intense, burning lust.
+		随着布拉克斯担忧的声音在耳边响起，你慢慢清醒过来。你睁开眼，看到悬在你上方的那张狼脸露出如释重负的表情。你用手肘撑起身体，发现自己很快就恢复了，当布拉克斯帮助你用陌生而颤抖的双腿站起来时，疲惫的感觉很快就被强烈而灼热的欲望所取代。
 	</p>
 	<p>
-		Without thinking, you grab Brax's head and pull him into a manic, desperate kiss, grinding yourself against him as he tries to reel back in shock. After a moment, you feel the wolf-boy start to return the kiss, and you let out a happy giggle as you start making out with the very guy who's just forced you to transform...
+		你不假思索地抓住布拉克斯的头，狂躁而急切地吻他。他震惊之下想要后退，你却紧紧贴住他磨蹭。过了一会儿，你感觉到狼男开始回吻你，你开心地笑了，并和这个刚强迫你转化的家伙亲热起来……
 	</p>
 	<p>
-		As that thought crosses your mind, your eyes open wide, and you get your lust under control for a moment as you step back, looking down at your body to see what's changed. You hear Brax let out a laugh as he notices that you're trying to find out what he's done to you, and, with a powerful grip, he grabs your shoulders and spins you around to face a mirror hanging on one wall.
+		当这个想法掠过你的脑海，你的眼睛睁大了。你暂时控制住自己的欲望，后退一步，低头看自己的身体发生了什么变化。注意到你正试图弄清楚他对你做了什么，布拉克斯笑了起来，然后有力地抓住你的肩膀，把你转过去，面对挂在一面墙上的镜子。
 	</p>
 	#IF(properties.getForcedTFPreference() == FURRY_PREF_HUMAN)
 		<p>
-			As you see your new reflection, you let out a little gasp. Brax has transformed you into his perfect vision of a woman, and your [pc.eyes+] open wide in shock as you feel the weight of your [pc.breastSize], [pc.cupSize]-cup tits that are now sitting on your chest. As Brax steps up behind you, you feel his shaggy fur brushing up against your vulnerable, feminine body.
+			当你看到自己的新形象时，不禁发出一声轻微的喘息。布拉克斯把你变成了他心目中的完美女人。当你感受到[pc.breastSize]，[pc.cupSize]罩杯的双乳重量时，你震惊地睁大了[pc.eyes+]。布拉克斯走到你身后，你能感觉到他蓬松的毛发拂过你脆弱、女性化的身体。
 		</p>
 	#ELSEIF(properties.getForcedTFPreference() == FURRY_PREF_MINIMUM)
 		<p>
-			As you see your new reflection, you let out a little gasp. Brax has transformed you into his perfect vision of a partial wolf-girl, and your yellow, predatory eyes open wide in shock as you feel the weight of your huge, E-cup tits that are now sitting on your chest. Up on top of your head, white, wolf-like fur is covering your new pair of upright ears, while just above your [pc.ass+], a long, shaggy wolf's tail drops down to almost brush the floor.
+			当你看到自己的新形象时，不禁发出一声轻微的喘息。布拉克斯把你变成了他心目中完美的似狼女。当你感受到E罩杯巨乳在胸前的重量时，你震惊地睁大了黄色的掠食者眼睛。在你的头顶上，狼一般的白色皮毛覆盖着你新长出的一对立耳，而就在你[pc.ass+]上方，一条长长的、毛茸茸的狼尾巴垂下来，几乎要擦到地板了。
 		</p>
 	#ELSEIF(properties.getForcedTFPreference() == FURRY_PREF_REDUCED)
 		<p>
-			As you see your new reflection, you let out a little gasp. Brax has transformed you into his perfect vision of a lesser wolf-girl, and your yellow, predatory eyes open wide in shock as you feel the weight of your [pc.breastRows] [pc.breastSize], [pc.cupSize]-cup tits. White fur covers your wolf-like arms and legs, and you notice that your face and the skin covering your torso are the only parts of your body that haven't transformed into anthropomorphic wolf-like counterparts. Up on top of your head, the same white, wolf-like fur is covering your new pair of upright ears, while just above your [pc.ass+], a long, shaggy wolf's tail drops down to almost brush the floor.
+			当你看到自己的新形象时，不禁发出一声轻微的喘息。布拉克斯把你变成了他心目中完美的亚狼女。当你感受到[pc.breastRows][pc.breastSize]，[pc.cupSize]罩杯的双乳重量时，你震惊地睁大了黄色的掠食者眼睛。白色皮毛覆盖着你狼一般的胳膊和腿，你注意到你的脸部和躯干上的皮肤是身上仅剩的没被转化成似人的狼一般的部分。在你的头顶上，狼一般的白色皮毛覆盖着你新长出的一对立耳，而就在你[pc.ass+]上方，一条长长的、毛茸茸的狼尾巴垂下来，几乎要擦到地板了。
 		</p>
 	#ELSE
 		<p>
-			As you see your new reflection, you let out a little gasp. Brax has transformed you into his perfect vision of a greater wolf-girl, and your yellow, predatory eyes open wide in shock as you feel the weight of your [pc.breastRows] [pc.breastSize], [pc.cupSize]-cup tits. Your hands, feet and face have all transformed into anthropomorphic wolf-like counterparts, and are covered in the same bright white fur as your new upright, wolf-like ears and long, shaggy tail.
+			当你看到自己的新形象时，不禁发出一声轻微的喘息。布拉克斯把你变成了他心目中完美的纯狼女。当你感受到[pc.breastRows][pc.breastSize]，[pc.cupSize]罩杯的双乳重量时，你震惊地睁大了黄色的掠食者眼睛。你的手、脚和脸都变得像似人的狼一般，并与你新长出的、狼一般的立耳和长长的、毛茸茸的尾巴覆盖在相同的亮白色皮毛下。
 		</p>
 	#ENDIF
 	<p>
-		You see Brax's hand reaching around in the mirror, and with a pathetic little yelp, you quiver as he roughly grabs your crotch, [brax.speech(This little cunt belongs to me, understood?)]
+		你在镜子里看到布拉克斯的手四处游走着，当他粗暴地抓住你的裆部时，你发出一声可怜的尖叫，浑身颤抖，[brax.speech(这个小穴属于我，明白吗？)]
 	</p>
 	<p>
-		The final effect of the transformation makes itself known, and as Brax roughly gropes your body, something unlocks in your mind, and you find yourself wanting nothing more than to be dominated by your new master. You lean back into the masculine wolf-morph, feeling his hot breath on your neck as you let out a soft moan. Reaching down, you eagerly guide his paw-like hands over your new breasts, letting out little squeals of joy as he sinks his greedy fingers into your pillowy mounds of flesh.
+		转化的最终效果呈现出来了。当布拉克斯粗暴地抚摸你的身体，你的某些开关被打开了，你发现自己只想被新主人征服。你向后倚靠着这个阳刚的狼人，感受他洒在你脖子上的灼热呼吸，轻轻呻吟。你迫不及待地拉起他狼爪一般的手覆上你的新乳房，随着他贪婪的手指陷入你柔软的双丘，你愉悦地哼唧。
 	</p>
 	<p>
-		You see Brax's reflection smiling greedily back at you, and he issues you a command as he steps back and starts to undress, [brax.speech(Get down and present yourself like the bitch you are.)]
+		你看到布拉克斯的倒影正对着你饥渴地微笑，他退后一步脱衣服，同时向你发出命令，[brax.speech(趴下，像个婊子一样展示自己。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_DEFEAT_TRANSFORMATION_OBEY"><![CDATA[
 	<p>
-		You obediently do as Brax commands and drop down on all fours right there in the middle of his office.
+		你顺从地听从布拉克斯的命令，四肢着地趴在他办公室的正中央。
 		#IF(pc.getTailType().getRace()==RACE_WOLF_MORPH)
-			 You can't help but shake your ass at the dominant wolf-boy, and you playfully flick your wolf-like tail back and forth, making pitiful little whining noises as you eagerly plead for Brax's thick cock.
+			你情不自禁地对着这个霸道的狼男摇晃着屁股，俏皮地来回甩动着狼一样的尾巴，发出可怜的呜呜声，急切地恳求布拉克斯粗大的鸡巴。
 		#ELSE
-			 You can't help but shake your ass at the dominant wolf-boy, and you turn your head and make a show of biting your lip, making pitiful little whining noises as you eagerly plead for Brax's thick cock.
+			你情不自禁地对着这个霸道的狼男摇晃着屁股，扭过头去，做出一副咬着嘴唇的样子，一边发出可怜的呜咽声，一边急切地恳求布拉克斯粗大的鸡巴。
 		#ENDIF
 	</p>
 	<p>
-		Brax stands behind you, grinning, and you know that it's only going to be a matter of seconds before he fills you with his alpha cock.
+		布拉克斯站在你身后，咧开嘴笑着，你知道只需几秒钟，他就会用他的大鸡巴把你填满。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- AFTER_SUBMISSIVE_SEX -->
 
 	<htmlContent tag="AFTER_SUBMISSIVE_SEX"><![CDATA[
 	<p>
-		[brax.speech(You're a pretty good fuck, slut!)] Brax grunts, releasing his grip on your hips as you collapse to the floor, totally worn out from his dominant treatment of you.
+		[brax.speech(你干得不错，荡妇！)]布拉克斯哼了一声，松开了抓住你臀部的手，你瘫倒在地上，完全被他的霸道所折服。
 	</p>
 	<p>
-		With a satisfied sigh, you feel your eyelids closing, and the last thing you hear before passing out is Brax laughing down at the mess he's made of you.
+		随着一声满足的叹息，你感觉眼皮合上了，昏迷前最后听到的是布拉克斯低头笑着看他把你弄得一团糟。
 	</p>
 	<p>
-		...
+		……
 	</p>
 	<p>
-		With a soft moan, you slowly open your eyes, the memory of Brax's rough fucking filling your groggy mind. After a few moments, your head starts to clear, and you see that you've been unceremoniously dumped out the back of the Enforcer HQ.
+		随着一声轻柔的呻吟，你慢慢睁开了眼睛，布拉克斯粗暴的性交记忆充斥着你昏昏沉沉的头脑。过了一会儿，你的头脑开始清醒，看到自己被毫不客气地扔在了执行者总部的后面。
 	</p>
 	#IF(pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_C_WOLFS_DEN))
 		<p>
-			Although you've been thrown out without so much as a goodbye, you feel a big smile spreading across your face. You found out where Arthur is, and what's more, you got to have a good fuck with that hunk of a wolf-boy.
+			虽然你连一声再见都没说就被赶了出来，但你还是觉得脸上洋溢着灿烂的笑容。你找到了亚瑟的下落，更重要的是，你还和那个大块头狼男干了一炮。
 		</p>
 		<p>
-			As you walk out from behind the Enforcer HQ, you see that an open crate, full of spare uniforms, is sitting outside a side door. The crate is too big to fit through the doorway, and the person in charge of bringing them inside isn't anywhere to be seen. Deciding that you want a little memento of your time with Brax, <b>you pick a spare uniform to add it to your inventory</b> as you continue on your way.
+			你从执行者总部后面走出来，看到一个敞开的板条箱正放在侧门外，里面装满了备用制服。箱子太大，无法从门口放进去，而负责把它们搬进去的人却不见踪影。你决定要为和布拉克斯在一起的时光留下一点纪念，<b>你拿起一件备用制服，将其放入包中</b>，然后继续前行。
 		</p>
 	#ELSE
 		<p>
-			Although you've been fucked and thrown out without so much as a goodbye, you consider that things could always be worse. Setting off, you try to look on the bright side. After all, at least you weren't enslaved or anything crazy like that...
+			虽然你被人耍得团团转，连句再见都没说就被赶了出来，但你认为事情总是会变得更糟。出发时，你试着往好的方面想。毕竟，至少你没有被奴役或做任何疯狂的事……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- AFTER_DOMINANT_SEX -->
 
 	<htmlContent tag="AFTER_DOMINANT_SEX"><![CDATA[
 	<p>
-		Brax is completely exhausted, and collapses harmlessly to the floor as he passes out. Letting out a triumphant laugh, you look down at your latest sexual conquest, smirking in satisfaction as you see the happy smile covering his unconscious face.
+		布拉克斯完全筋疲力尽，昏倒在地，无力再战。你发出胜利的笑声，低头看着你最新的性征服者，看到他昏迷的脸上洋溢着幸福的笑容，你满意地笑了。
 	</p>
 	<p>
-		Taking one last look around Brax's office, you notice that there's a neatly-folded spare uniform lying on top of a cabinet. Thinking of how you could have a little memento of your time with Brax, <b>you think to take a spare uniform</b> before heading back outside.
+		你最后一次环顾布拉克斯的办公室，发现柜子顶上放着一件叠得整整齐齐的备用制服。想想你和布拉克斯在一起的时光，怎么不能留下一点纪念呢？在你回到外面之前，<b>你打算带走一套备用制服</b>。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

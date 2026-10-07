@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		
-		<authorTag><![CDATA[On one side of the cylinder, a small engraving reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在弹巢的一侧刻着细小的字迹，写着“执法者官方分配，DSG铸造厂生产。”]]></authorTag>
 	
 		<value>5600</value> 
 		
@@ -10,23 +10,23 @@
 		
 		<twoHanded>true</twoHanded>
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name><![CDATA[revolving tranquiliser rifle]]></name>
+		<name><![CDATA[转轮镇定剂步枪]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[revolving tranquiliser rifles]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[转轮镇定剂步枪]]></namePlural> 
 		
-		<description><![CDATA[Firing aura-piercing fin-stabilized discarding sabot darts filled with a potent sleeping potion, this rifle is not a true sniping weapon. Rather, it is designed to extend the reach of a standard Enforcer squad. Unlike most dart rifles, it uses a six-shot revolving autoloader.]]></description> 
+		<description><![CDATA[使用装有镇定剂的穿透灵气鳍型飞镖弹步枪，这把步枪并不是真正的狙击武器，它只是为了扩大标准执法者小队的攻击范围而装备，与其他的飞镖弹步枪不同，它使用六发转轮弹巢供弹。]]></description> 
 		
-		<attackDescriptor>shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your tranquiliser rifle.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用你的镇定剂步枪射向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(bring)] out the rifle, [npc.verb(load)] a fresh gas bottle, and [npc.verb(insert)] a full-moon clip of six darts into the autoloader.]]></equipText>
+		<equipText><![CDATA[[npc.Name]掏出步枪，装上新的气瓶，并在供弹具里插入能容下六个飞镖的弹巢。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(remove)] the unspent darts from the autoloader, [npc.verb(unload)] the gas bottle, and [npc.verb(put)] the rifle away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]把未用完的飞镖从填弹具移除，卸下气瓶，把步枪收起来。]]></unequipText>
 		
 		<imageName>trqrifle_nogas.svg</imageName> 
 		
@@ -47,14 +47,14 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.boldPoison("Negative Arcane Duality")] on critical hit.]]></effect>
+			<effect><![CDATA[暴击附带[style.boldPoison(“奥术二元”)]效果。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect/>
 		
 		<onCriticalHitEffect><![CDATA[
 		#IF !npc2.hasStatusEffect(SE_ARCANE_DUALITY_NEGATIVE)
-		#THEN [##npc2.addStatusEffect(SE_ARCANE_DUALITY_NEGATIVE, 6)] [npc2.Name] [style.boldPoison([npc2.verb(struggle)] to defend [npc2.herself])] as [npc2.her] eyelids grow visibly heavier. 
+		#THEN [##npc2.addStatusEffect(SE_ARCANE_DUALITY_NEGATIVE, 6)]眼睑明显变重时，[npc2.Name][style.boldPoison(努力保护[npc2.herself])]。
 		#ENDIF
 		]]></onCriticalHitEffect>
 		
@@ -76,13 +76,13 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The needle on the end of the dart embeds itself in [npc2.namePos] aura and releases its contents.
+		[npc.Name]用瞄准镜对准[npc2.name]，扣动了扳机。飞镖末端的针嵌入[npc2.namePos]的灵气中，并释放其内含物。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The shot goes wide! The dart clatters uselessly on the ground.
+		[npc.Name]用瞄准镜对准[npc2.name]，扣动了扳机。射偏了！飞镖无用地掉在地面，哗啦哗啦直响。
 		]]></missText>
 	</missDescriptions>
 	

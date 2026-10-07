@@ -170,8 +170,8 @@ public abstract class AbstractCombatMove {
     	
     	this.category = category;
         this.name = name;
-        this.description = "This action does nothing.";
-        this.performingText = "The move is performed.";
+        this.description = "该动作什么也不会做。";
+        this.performingText = "执行了该动作。";
         
         this.cooldown = cooldown;
         this.APcost = APcost;
@@ -447,10 +447,10 @@ public abstract class AbstractCombatMove {
 			if(damageHasBeenApplied) {
 				damage /= 2;
 			}
-			return "<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + String.valueOf(damage*2) + " " + damageType.getName() + "</span>"
-					+ " and <span style='color:" + PresetColour.DAMAGE_TYPE_MANA.toWebHexString() + ";'>" + String.valueOf(damage) + " " + Attribute.MANA_MAXIMUM.getName() + "</span>";
+			return "<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + String.valueOf(damage*2)  + damageType.getName() + "</span>"
+					+ "及<span style='color:" + PresetColour.DAMAGE_TYPE_MANA.toWebHexString() + ";'>" + String.valueOf(damage) + Attribute.MANA_MAXIMUM.getName() + "</span>";
 		}
-		return "<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + String.valueOf(damage) + " " + damageType.getName() + "</span>";
+		return "<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + String.valueOf(damage) + "" + damageType.getName() + "</span>";
 	}
 
 	protected static String getFormattedDamageRange(GameCharacter attacker, GameCharacter defender, DamageType damageType, Attack attackType, AbstractWeapon weapon, boolean isCritical) {
@@ -465,7 +465,7 @@ public abstract class AbstractCombatMove {
 					+ String.valueOf(Attack.applyFinalDamageModifiers(attacker, defender, Attack.getMinimumDamage(attacker, defender, attackType, weapon)*multiplier, isCritical))
 					+"-"
 					+ String.valueOf(Attack.applyFinalDamageModifiers(attacker, defender, Attack.getMaximumDamage(attacker, defender, attackType, weapon)*multiplier, isCritical))
-					+ " "
+					+ ""
 					+ damageType.getName()
 				+ "</span>";
 	}
@@ -481,7 +481,7 @@ public abstract class AbstractCombatMove {
 		
 		if(criticalText!=null) {
 			sb.append("<p>"
-							+ "<span style='color:"+PresetColour.CRIT.toWebHexString()+";'>Critical</span>: <i>"+criticalEffectText+"</i>"
+							+ "<span style='color:"+PresetColour.CRIT.toWebHexString()+";'>暴击</span>：<i>"+criticalEffectText+"</i>"
 						+ "</p>");
 		}
 		
@@ -704,7 +704,7 @@ public abstract class AbstractCombatMove {
             sb.append(formatAttackOutcome(source, target,
             		parseText,
             		damageValue.getValue()>0
-            			?"[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!"
+            			?"[npc2.Name]收到了" + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + "伤害！"
             			:"",
             		crit
 	            		?performingCritDescText
@@ -728,7 +728,7 @@ public abstract class AbstractCombatMove {
 	    	            sb.append(formatAttackOutcome(source, aoeTarget,
 	    	            		"",
 	    	            		damageValue.getValue()>0
-	    	            			?"[style.colourAqua(AoE)]: [npc2.Name] took " + getFormattedDamage(aoeDamageType, damageValue.getValue(), target, true, maxLust) + " damage!"
+	    	            			?"[style.colourAqua(AoE)]：[npc2.Name]受到了" + getFormattedDamage(aoeDamageType, damageValue.getValue(), target, true, maxLust) + "伤害！"
 	    	            			:"",
 	    	            		null,
 	    	            		null));
@@ -740,8 +740,8 @@ public abstract class AbstractCombatMove {
 							}
 							Main.combat.addStatusEffectToApply(aoeTarget, entry.getKey(), duration);
 							sb.append(UtilText.parse(aoeTarget,
-									"<br/>[npc.NameIsFull] now affected by <b style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(aoeTarget))+"</b>"
-											+ " for <b>"+Util.intToString(duration)+(duration==1?" turn":" turns")+"</b>!"));
+									"<br/>[npc.NameIsFull]现在受到<b style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(aoeTarget))+"</b>的影响"
+											+ "<b>"+Util.intToString(duration)+(duration==1?"回合":"回合")+"</b>！"));
 						}
 	    	            
 						aoeAvailableTargets.remove(aoeTarget);
@@ -833,24 +833,24 @@ public abstract class AbstractCombatMove {
     public String isUsable(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
         if(target != null) {
             if(!canTargetSelf && source == target) {
-                return "This action can't be used on yourself!";
+                return "该动作无法对自己使用！";
             }
 
             if(!canTargetAllies && allies.contains(target) && source != target) {
-                return "This action can't be used on your allies!";
+                return "该动作无法对盟友使用！";
             }
 
             if(!canTargetEnemies && enemies.contains(target)) {
-                return "This action can't be used on your enemies!";
+                return "该动作无法对敌人使用！";
             }
         }
 
         if(source.getMoveCooldown(this.getIdentifier()) > 0) {
-            return "This action can't be used since it is still on cooldown! "+String.valueOf(source.getMoveCooldown(this.getIdentifier()))+" turns remaining.";
+            return "该动作在冷却结束前无法使用！还剩下"+String.valueOf(source.getMoveCooldown(this.getIdentifier()))+"回合。";
         }
 
         if(source.getRemainingAP() < this.getAPcost(source)) {
-            return "This action can't be used since you don't have enough AP!";
+            return "由于AP不足，该动作无法使用！";
         }
 
         return null;
@@ -1027,7 +1027,7 @@ public abstract class AbstractCombatMove {
     	if(fromExternalFile) {
         	return Util.newArrayListOfValues(criticalDescription);
     	}
-        return Util.newArrayListOfValues("It's the third time being used this turn.");
+        return Util.newArrayListOfValues("这回合第三次被使用。");
     }
     
     public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {

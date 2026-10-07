@@ -7,27 +7,27 @@ package com.lilithsthrone.game.inventory.clothing;
  */
 public enum DisplacementType {
 	
-	REMOVE_OR_EQUIP("unequip", "", "", "", ""),
+	REMOVE_OR_EQUIP("卸下", "", "", "", ""),
 	
-	OPEN("open", "opens", "opened", "close", "closes"),
+	OPEN("敞开", "敞开", "敞开", "合上", "合上"),
 	
-	PULLS_UP("pull up", "pulls up", "pulled up", "pull down", "pulls down"),
+	PULLS_UP("拉起", "拉起", "拉起", "放下", "放下"),
 	
-	PULLS_DOWN("pull down", "pulls down", "pulled down", "pull up", "pulls up"),
+	PULLS_DOWN("拉下", "拉下", "拉下","提起", "提起"),
 	
-	PULLS_OUT("pull out", "pulls out", "pulled out", "push in", "pushes in"),
+	PULLS_OUT("拔出", "拔出", "拔出", "塞入", "塞入"),
 	
-	PULLS_OFF("pull off", "pulls off", "pulled off", "pull back on", "pulls back on"),
+	PULLS_OFF("摘掉", "摘掉", "摘掉", "重新戴上", "重新戴上"),
 	
-	SHIFTS_ASIDE("shift aside", "shifts aside", "shifted aside", "replace", "replaces"),
+	SHIFTS_ASIDE("挪开", "挪开", "挪开", "复位", "复位"),
 	
-	UNZIPS("unzip", "unzips", "unzipped", "zip up", "zips up"),
+	UNZIPS("解开", "解开", "解开", "拉上", "拉上"),
 	
-	UNTIE("untie", "unties", "untied", "tie-up", "ties-up"),
+	UNTIE("解开", "解开", "解开", "系上", "系上"),
 	
-	UNBUCKLE("unbuckle", "unbuckles", "unbuckled", "buckle up", "buckles up"),
+	UNBUCKLE("解开扣带", "解开扣带", "解开扣带", "扣好扣带", "扣好扣带"),
 	
-	UNBUTTONS("unbutton", "unbuttons", "unbuttoned", "button up", "buttons up");
+	UNBUTTONS("解开", "解开", "解开", "系上", "系上");
 
 	private String description, descriptionThirdPerson, descriptionPast, oppositeDescription, oppositeDescriptionThirdPerson;
 

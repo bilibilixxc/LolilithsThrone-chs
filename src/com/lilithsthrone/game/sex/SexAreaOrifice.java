@@ -70,7 +70,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.hand+],"
+										sb.append("[npc.Name]握住[npc2.namePos][npc2.hand+]，"
 												+ " [npc.name] rubbed [npc2.her] [npc2.fingers+] up and down over [npc.her] [npc2.tussy] before making [npc2.herHim] slip them inside and start fingering [npc.her] [npc2.tussy+].");
 										break;
 									case SUB_RESISTING:
@@ -79,7 +79,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
 										+", and remained totally motionless while keeping [npc2.her] [npc2.fingers] shoved deep in [npc.namePos] [npc.tussy+].");
 							} else {
 								switch(targetPace) {
@@ -92,7 +92,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 										break;
 									case SUB_RESISTING:
 										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.fingers] out of [npc.namePos] [npc2.tussy],"
-												+ " and could do nothing but cry as [npc2.she] was forced to finger [npc.herHim] against [npc2.her] will.");
+												+ "只能一边哭泣一边被迫指交[npc.name]。");
 										break;
 								}
 							}
@@ -123,7 +123,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
 										+", and remained totally motionless while keeping [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.tussy+].");
 							} else {
 								switch(targetPace) {
@@ -141,7 +141,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 							}
 
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] being fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]操。");
 						}
 						break;
 					case TAIL:
@@ -163,7 +163,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
 										+", and remained totally motionless while keeping [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.tussy+].");
 							} else {
 								switch(targetPace) {
@@ -203,7 +203,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
 										+", and remained totally motionless while keeping [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.tussy+].");
 							} else {
 								switch(targetPace) {
@@ -227,7 +227,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
 										+" while [npc2.name] performed oral on [npc.her] [npc2.tussy+].");
 							} else {
 								switch(performerPace) {
@@ -239,7 +239,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 										sb.append("[npc.Name] pushed [npc.her] [npc2.tussy] against [npc2.namePos] [npc2.face], before [npc.sexPaceVerb] making [npc2.herHim] start performing oral on [npc.her] [npc2.tussy+].");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist,"
+										sb.append("[npc.Name]试图反抗，"
 												+ " but [npc.was] unable to stop [npc2.name] from pressing [npc2.her] [npc2.face] against [npc.her] [npc2.tussy] and then start performing oral on [npc.her] [npc2.tussy+].");
 										break;
 								}
@@ -256,7 +256,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 										sb.append(" Letting out a series of [npc2.moans+], [npc2.name] [npc2.sexPaceVerb] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc2.tussy] and continued performing oral on [npc.herHim].");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist,"
+										sb.append("[npc2.Name]试图反抗，"
 												+ " but [npc2.was] unable to stop [npc.name] from planting [npc.her] [npc2.tussy] over [npc2.her] [npc2.face] and [npc.sexPaceVerb] forcing [npc2.herHim] to perform oral on [npc.herHim].");
 										break;
 								}
@@ -280,7 +280,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "pussy";
+				return "小穴";
 			}
 			return owner.getVaginaName(false);
 		}
@@ -318,16 +318,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.pussy+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.pussy+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.pussy+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.pussy+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.pussy+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.pussy+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.pussy+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.pussy+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -337,7 +337,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case CLIT:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.clit+] thrust into [npc.her] [npc.pussy+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.cock+]填入[npc.her][npc.pussy+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -345,17 +345,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Rubbing [npc.her] [npc.labia+] over the [npc2.clitTip+] of [npc2.namePos] [npc2.clit],"
-												+ " [npc.name] [npc.sexPaceVerb] bucked [npc.her] [npc.hips] and forced [npc2.herHim] to penetrate [npc.her] [npc.pussy+].");
+										sb.append("[npc.name]用[npc.labia+]在[npc2.namePos]的[npc2.clit][npc2.clitTip+]上摩擦，"
+												+ "[npc.sexPaceVerb]摇晃着[npc.hips]，强迫[npc2.name]插入[npc.her][npc.pussy+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.clit+] into [npc.her] [npc.pussy+] and start fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.clit+]推入[npc.her][npc.pussy+]并开始操[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.clit] hilted in [npc.namePos] [npc.pussy+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her][npc2.lips+]继续插入[npc.namePos][npc.pussy+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -363,22 +363,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.clit+] into [npc.namePos] [npc.pussy+], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fucked [npc.herHim].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.clit+]插入[npc.namePos][npc.pussy+]，[npc2.she]开始操[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.clit] out of [npc.namePos] [npc.pussy], and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.clit] used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.clit]从[npc.namePos]的[npc.pussy]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.clit]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] being clit-fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]阴蒂交。");
 						}
 						break;
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] pushed [npc2.her] [npc2.fingers+] deep into [npc.her] [npc.pussy+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.fingers+]深入[npc.her][npc.pussy+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -386,17 +386,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.hand+],"
-												+ " [npc.name] rubbed [npc2.her] [npc2.fingers+] up and down over [npc.her] [npc.labia+] before making [npc2.herHim] slip them inside and start fingering [npc.her] [npc.pussy+].");
+										sb.append("[npc.Name]握住[npc2.namePos][npc2.hand+]，"
+												+ "用[npc2.fingers+]在[npc.her][npc.labia+]上下摩擦，然后让它们滑入并开始指交[npc.her][npc.pussy+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.fingers+] into [npc.her] [npc.pussy+] and start fingering [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.fingers+]插入[npc.her][npc.pussy+]并开始指交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.fingers] shoved deep in [npc.namePos] [npc.pussy+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时将[npc2.her]那[npc2.fingers]继续深入[npc.namePos][npc.pussy+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -404,17 +404,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] curling [npc2.her] [npc2.fingers] up inside [npc.namePos] [npc.pussy], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fingered [npc.herHim].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.fingers]插入[npc.namePos]的[npc.pussy]，[npc2.she]指交[npc.name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.fingers] out of [npc.namePos] [npc.pussy],"
-												+ " and could do nothing but cry as [npc2.she] was forced to finger [npc.herHim] against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.fingers]从[npc.namePos]的[npc.pussy]撤出来，但失败了，"
+												+ "只能一边哭泣一边被迫指交[npc.name]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] fingering [npc.name].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]指交[npc.Name]。");
 						}
 						break;
 					case FOOT:
@@ -422,7 +422,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.cock+] thrust deep into [npc.her] [npc.pussy+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.cock+]深入[npc.her][npc.pussy+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -430,17 +430,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Rubbing [npc.her] [npc.labia+] over the [npc2.cockHead+] of [npc2.namePos] [npc2.cock],"
-												+ " [npc.name] [npc.sexPaceVerb] bucked [npc.her] [npc.hips] and forced [npc2.herHim] to penetrate [npc.her] [npc.pussy+].");
+										sb.append("[npc.name]用[npc.labia+]在[npc2.namePos]的[npc2.cock][npc2.cockHead+]上摩擦，"
+												+ "[npc.sexPaceVerb]摇晃着[npc.hips]，强迫[npc2.name]插入[npc.her][npc.pussy+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.cock] into [npc.her] [npc.pussy+] and start fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.cock]推入[npc.her][npc.pussy+]并开始操[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.pussy+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her][npc2.cock]继续插入[npc.namePos][npc.pussy+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -448,22 +448,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.cock+] into [npc.namePos] [npc.pussy+], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fucked [npc.herHim].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.cock+]插入[npc.namePos][npc.pussy+]，[npc2.she]开始操[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.cock] out of [npc.namePos] [npc.pussy], and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.cock]从[npc.namePos]的[npc.pussy]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.cock]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] being fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]操。");
 						}
 						break;
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tail+] thrust deep into [npc.her] [npc.pussy+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tail+]送入[npc.her][npc.pussy+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -471,16 +471,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tail+], [npc.name] rubbed it up and down over [npc.her] [npc.labia+] before making [npc2.herHim] penetrate and start tail-fucking [npc.her] [npc.pussy+].");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tail+]，在[npc.her][npc.labia+]上下摩擦，让[npc2.Name]插入并开始尾交[npc.her][npc.pussy+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tail+] into [npc.her] [npc.pussy+] and start tail-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail+]插入[npc.her][npc.pussy+]并开始尾交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.pussy+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tail]继续插入[npc.namePos][npc.pussy+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -488,22 +488,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tail] into [npc.namePos] [npc.pussy], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tail-fucked [npc.name].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tail]插入[npc.namePos]的[npc.pussy]，[npc2.she]开始尾交[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tail] out of [npc.namePos] [npc.pussy], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tail]从[npc.namePos]的[npc.pussy]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tail]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] being tail-fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]尾交。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tentacle+] thrust deep into [npc.her] [npc.pussy+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tentacle+]深入[npc.her][npc.pussy+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -511,16 +511,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tentacle+], [npc.name] rubbed it up and down over [npc.her] [npc.labia+] before making [npc2.herHim] penetrate and start tentacle-fucking [npc.her] [npc.pussy+].");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tentacle+]，在[npc.her][npc.labia+]上下摩擦，让[npc2.Name]插入并开始触手交[npc.her][npc.pussy+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tentacle+] into [npc.her] [npc.pussy+] and start tentacle-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle+]插入[npc.her][npc.pussy+]并开始触手交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.pussy+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tentacle]继续插入[npc.namePos][npc.pussy+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -528,23 +528,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tentacle] into [npc.namePos] [npc.pussy], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tentacle-fucked [npc.name].");
+										sb.append("[npc2.Name][npc2.sexpaceVerb]将[npc2.tentacle]插入[npc.namePos]的[npc.pussy]，开始触手交[npc.Name]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tentacle] out of [npc.namePos] [npc.pussy], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tentacle]从[npc.namePos]的[npc.pussy]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tentacle]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] being tentacle-fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]触手交。");
 						}
 						break;
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] performed cunnilingus on [npc.herHim].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]在给[npc.herHim]舔阴.");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -552,16 +552,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] pushed [npc.her] [npc.labia+] against [npc2.namePos] [npc2.face], before [npc.sexPaceVerb] making [npc2.herHim] start eating [npc.herHim] out.");
+										sb.append("[npc.name][npc.sexPaceVerb]将[npc.labia+]贴向[npc2.namePos]的[npc2.face]，让[npc2.name]开始舔[npc.herHim]下面。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist,"
-												+ " but [npc.was] unable to stop [npc2.name] from pressing [npc2.her] [npc2.face] against [npc.her] [npc.pussy] and then start eating [npc.herHim] out.");
+										sb.append("[npc.Name]试图反抗，"
+												+ "但无法阻止[npc2.name]将[npc2.face]贴向[npc.her]的[npc.pussy]并开始舔[npc.herHim]下面。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.tongue] thrust into [npc.namePos] [npc.pussy+].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，将[npc2.her]的[npc2.tongue]伸入[npc.namePos][npc.pussy+]里。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -569,17 +569,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out a series of [npc2.moans+], [npc2.name] [npc2.sexPaceVerb] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.pussy+] and continued performing cunnilingus on [npc.herHim].");
+										sb.append("[npc2.name]发出一连串[npc2.moans+]，[npc2.sexPaceVerb]将[npc2.lips+]贴向[npc.namePos][npc.pussy+]并开始对[npc.herHim]舔阴。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist,"
-												+ " but [npc2.was] unable to stop [npc.name] from planting [npc.her] [npc.pussy+] over [npc2.her] [npc2.face] and [npc.sexPaceVerb] forcing [npc2.herHim] to perform cunnilingus on [npc.herHim].");
+										sb.append("[npc2.Name]试图反抗，"
+												+ "但无法阻止[npc.Name]将[npc.pussy+]压向[npc2.her]的[npc2.face]并开始[npc.sexPaceVerb]强迫[npc2.herHim]舔阴。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] performing cunnilingus on [npc.name].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]对[npc.name]舔阴。");
 						}
 						break;
 				}
@@ -596,7 +596,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "asshole";
+				return "肛门";
 			}
 			return owner.getAnusName(false);
 		}
@@ -634,16 +634,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.asshole+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.asshole+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.asshole+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.asshole+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.asshole+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.asshole+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.asshole+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.asshole+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -653,7 +653,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case CLIT:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.clit+] thrust into [npc.her] [npc.asshole+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]挤着[npc.her][npc.asshole+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -661,16 +661,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Lining [npc.her] [npc.ass] up to [npc2.namePos] groin, [npc.name] [npc.sexPaceVerb] pushed back against [npc2.her] [npc2.clit+] and made [npc2.herHim] penetrate [npc.her] [npc.asshole+].");
+										sb.append("[npc.name]把[npc.ass]对准[npc2.namePos]的腹股沟，[npc.sexPaceVerb]向后推动到[npc2.clit+]上，让[npc2.Name]插入[npc.her][npc.asshole+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.clit+] into [npc.her] [npc.asshole+] and start anally fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.clit+]推入[npc.her][npc.asshole+]并开始肛交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.clit] hilted in [npc.namePos] [npc.asshole+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her][npc2.lips+]继续插入[npc.namePos][npc.asshole+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -678,22 +678,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] bucking [npc2.her] [npc2.hips] into [npc.namePos] [npc.ass], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] clit-fucked [npc.namePos] [npc.asshole+].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.hips]压向[npc.namePos]的[npc.ass]，[npc2.she]开始阴蒂肛交[npc.namePos][npc.asshole+]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.clit] out of [npc.namePos] [npc.asshole], and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.clit] used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.clit]从[npc.namePos]的[npc.asshole]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.clit]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] being [npc.sexPaceVerb] clit-fucked in the ass by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]阴蒂交屁股。");
 						}
 						break;
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] pushed [npc2.her] [npc2.fingers+] deep into [npc.her] [npc.asshole+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.fingers+]深入[npc.her][npc.asshole+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -701,16 +701,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Grabbing [npc2.namePos] [npc2.hand], [npc.name] [npc.sexPaceVerb] pushed [npc2.her] [npc2.fingers] into [npc.her] [npc.asshole] and made [npc2.herHim] anally finger [npc.herHim].");
+										sb.append("[npc.name]抓住[npc2.namePos]的[npc2.hand]，[npc.sexPaceVerb]将[npc2.fingers]插入自己的[npc.asshole]，让[npc2.Name]肛门指交[npc.herHim]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.fingers] into [npc.her] [npc.asshole+] and start anally fingering [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.fingers]插入[npc.her][npc.asshole+]并开始肛门指交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.fingers] shoved deep in [npc.namePos] [npc.asshole+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时将[npc2.her]那[npc2.fingers]继续深入[npc.namePos][npc.asshole+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -718,16 +718,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] pushing [npc2.her] [npc2.fingers] into [npc.namePos] [npc.asshole], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fingered [npc.namePos] [npc.asshole+].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.fingers]插入[npc.namePos]的[npc.asshole]，[npc2.she]指交[npc.namePos][npc.asshole+]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.fingers] out of [npc.namePos] [npc.asshole], and could do nothing but cry as [npc2.she] was forced to finger [npc.namePos] [npc.asshole+].");
+										sb.append("[npc2.Name]试图将[npc2.fingers]从[npc.namePos]的[npc.asshole]撤出来，但失败了，只能一边哭泣一边被迫指交[npc.namePos][npc.asshole+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] being [npc.sexPaceVerb] anally fingered by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]肛门指交。");
 						}
 						break;
 					case FOOT:
@@ -735,7 +735,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.cock+] thrust deep into [npc.her] [npc.asshole+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.cock+]深入[npc.her][npc.asshole+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -743,16 +743,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Lining [npc.her] [npc.ass] up to [npc2.namePos] groin, [npc.name] [npc.sexPaceVerb] pushed back against [npc2.her] [npc2.cock] and made [npc2.herHim] penetrate [npc.her] [npc.asshole+].");
+										sb.append("[npc.name]把[npc.ass]对准[npc2.namePos]的腹股沟，[npc.sexPaceVerb]向后推动到[npc2.cock]上，让[npc2.Name]插入[npc.her][npc.asshole+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.cock] into [npc.her] [npc.asshole+] and start anally fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.cock]插入[npc.her][npc.asshole+]并开始肛交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.asshole+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.cock]继续填满[npc.namePos][npc.asshole+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -760,22 +760,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] bucking [npc2.her] [npc2.hips] into [npc.namePos] [npc.ass], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fucked [npc.namePos] [npc.asshole+].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.hips]压向[npc.namePos]的[npc.ass]，[npc2.she]开始肛交[npc.namePos][npc.asshole+]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.cock] out of [npc.namePos] [npc.asshole], and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.cock]从[npc.namePos]的[npc.asshole]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.cock]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] being [npc.sexPaceVerb] fucked in the ass by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]肛交。");
 						}
 						break;
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tail+] thrust deep into [npc.her] [npc.asshole+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tail+]送入[npc.her][npc.asshole+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -783,16 +783,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tail+], [npc.name] lined it up to [npc.her] [npc.ass+] and made [npc2.herHim] penetrate [npc.her] [npc.asshole+].");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tail+]，拉向[npc.her][npc.ass+]，让[npc2.Name]插入[npc.her][npc.asshole+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tail+] into [npc.her] [npc.asshole+] and start anally tail-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail+]插入[npc.her][npc.asshole+]并开始尾交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.asshole+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tail]继续填满[npc.namePos][npc.asshole+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -800,22 +800,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tail] into [npc.namePos] [npc.asshole], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] anally tail-fucked [npc.name].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tail]插入[npc.namePos]的[npc.asshole]，[npc2.she]开始肛门尾交[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tail] out of [npc.namePos] [npc.asshole], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tail]从[npc.namePos]的[npc.asshole]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tail]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] being anally tail-fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]肛门尾交。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tentacle+] thrust deep into [npc.her] [npc.asshole+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc.asshole+]深入[npc.her][npc.asshole+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -823,16 +823,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tentacle+], [npc.name] lined it up to [npc.her] [npc.ass+] and made [npc2.herHim] penetrate [npc.her] [npc.asshole+].");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tentacle+]，拉向[npc.her][npc.ass+]，让[npc2.Name]插入[npc.her][npc.asshole+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tentacle+] into [npc.her] [npc.asshole+] and start anally tentacle-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle+]插入[npc.her][npc.asshole+]并开始触手肛交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.asshole+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tentacle]继续填满[npc.namePos][npc.asshole+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -840,23 +840,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tentacle] into [npc.namePos] [npc.asshole], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] anally tentacle-fucked [npc.name].");
+										sb.append("[npc2.Name][npc2.sexpaceVerb]将[npc2.tentacle]插入[npc.namePos]的[npc.asshole]，开始触手肛交[npc.Name]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tentacle] out of [npc.namePos] [npc.asshole], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tentacle]从[npc.namePos]的[npc.asshole]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tentacle]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] being anally tentacle-fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]触手肛交。");
 						}
 						break;
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] tongued [npc.her] [npc.asshole+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]舔舐着[npc.her][npc.asshole+].");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -864,16 +864,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] pushed [npc.her] [npc.ass+] back against [npc2.namePos] [npc2.face], before [npc.sexPaceVerb] making [npc2.herHim] start tonguing [npc.her] [npc.asshole+].");
+										sb.append("[npc.name][npc.sexPaceVerb]将[npc.ass+]贴向[npc2.namePos]的[npc2.face]，让[npc2.name]开始舔舐[npc.her][npc.asshole+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist,"
-												+ " but [npc.was] unable to stop [npc2.name] from pressing [npc2.her] [npc2.face] against [npc.her] [npc.ass] and then tonguing [npc.her] [npc.asshole+].");
+										sb.append("[npc.Name]试图反抗，"
+												+ "但无法阻止[npc2.name]将[npc2.face]贴向[npc.her]的[npc.ass]并开始舔舐[npc.her][npc.asshole+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.tongue] thrust into [npc.namePos] [npc.asshole+].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，将[npc2.her]的[npc2.tongue]伸入[npc.namePos][npc.asshole+]里。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -881,17 +881,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out a series of [npc2.moans+], [npc2.name] [npc2.sexPaceVerb] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.asshole+] and continued performing anilingus on [npc.herHim].");
+										sb.append("[npc2.name]发出一连串[npc2.moans+]，[npc2.sexPaceVerb]将[npc2.lips+]贴向[npc.namePos][npc.asshole+]并开始对[npc.herHim]舔肛。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc2.Name] tried to resist,"
-												+ " but [npc2.was] unable to stop [npc.name] from planting [npc.her] [npc.ass] over [npc2.her] [npc2.face] and [npc.sexPaceVerb] forcing [npc2.herHim] to perform anilingus on [npc.herHim].");
+										sb.append("[npc2.Name]试图反抗，"
+												+ "但无法阻止[npc.Name]将[npc.ass]压向[npc2.her]的[npc2.face]并开始[npc.sexPaceVerb]强迫[npc2.herHim]吻肛。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] performing anilingus on [npc.name].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]对[npc.name]吻肛。");
 						}
 						break;
 				}
@@ -909,9 +909,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		public String getName(GameCharacter owner, boolean standardName) {
 			// Changed from "ass cheeks" to "ass" in v0.4.10.8
 			if(standardName) {
-				return "ass";
+				return "后穴";
 			}
-			return "ass";
+			return "后穴";
 //			return owner.getAssName(false);
 		}
 		@Override
@@ -945,16 +945,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to molest [npc.her] [npc.ass+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"磨蹭自己[npc.ass+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to molest [npc.her] [npc.ass+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"磨蹭自己[npc.ass+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.ass+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.ass+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.ass+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.ass+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -966,7 +966,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.name] groped [npc.her] [npc.ass+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]挤着[npc.her][npc.ass+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -974,15 +974,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.ass+], [npc.name] [npc.sexPaceVerb] made [npc2.name] grope and squeeze it.");
+										sb.append("[npc.name]露出[npc.ass+]，[npc.sexPaceVerb]让[npc2.name]揉捏并挤压它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from groping and squeezing [npc.her] [npc.ass+].");
+										sb.append("[npc.Name]试图挣脱, 但无法阻止[npc2.name]揉捏并挤压[npc.her][npc.ass+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")+", and kept [npc.namePos] [npc.ass+] gripped in [npc2.her] [npc2.hands] without moving.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")+"，[npc2.her]的[npc2.hands]持续抓着[npc.namePos][npc.ass+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -990,16 +990,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] pressed [npc2.her] [npc2.hands] into [npc.namePos] [npc.ass] and [npc2.sexPaceVerb] continued playing with it.");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，把[npc2.hands]抚上[npc.namePos]的[npc.ass]，[npc2.sexPaceVerb]玩弄它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to play with [npc.her] [npc.ass+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫玩弄[npc.Name][npc.ass+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] groping and squeezing [npc.namePos] [npc.ass+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]揉捏并挤压[npc.namePos][npc.ass+]。");
 						}
 						break;
 					case FOOT:
@@ -1007,8 +1007,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] slid up and down between [npc.her] ass cheeks.");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"同时[npc2.namePos][npc2.cock+]在[npc.her]的肉臀间来回磨蹭");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1016,15 +1016,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing [npc.her] ass cheeks together, [npc.name] got [npc2.name] to slide [npc2.her] [npc2.cock+] up and down between the crevice that was formed.");
+										sb.append("[npc.name]把屁股的臀肉推到一起，以便[npc2.name]用[npc2.her][npc2.cock+]在形成的臀缝中上下抽送。");
 										break;
 									case SUB_RESISTING:
-										sb.append("Although [npc.she] tried to resist, [npc.name] had [npc.her] ass cheeks pushed together and was then hotdogged by [npc2.namePos] [npc2.cock+].");
+										sb.append("尽管[npc.name]试图抵抗，但[npc.her]的臀肉还是被推到一起，被[npc2.namePos][npc2.cock+]股交。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] thrust between [npc.namePos] ass cheeks.");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]插入[npc.namePos]的肉臀");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1032,16 +1032,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] [npc2.sexPaceVerb] thrust [npc2.her] [npc2.cock+] up and over [npc.namePos] [npc.asshole+].");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，[npc2.sexPaceVerb]将[npc2.her][npc2.cock+]压上了[npc.namePos][npc.asshole+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" Sobbing and crying, [npc2.name] did [npc2.her] best to pull away from [npc.name], but ended up being held in place and having [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.name]呜咽并哭泣着，尽全力从[npc.Name]身边逃开，但最终还是被固定在原位，被迫使用[npc2.her]的[npc2.cock]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] hotdogging [npc.namePos] ass.");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]股交[npc.namePos]的屁股。");
 						}
 						break;
 					case TAIL:
@@ -1051,8 +1051,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] kissed and licked [npc.her] [npc.ass+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]亲吻并舔舐着[npc.her][npc.ass+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1060,15 +1060,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] pushed [npc.her] [npc.ass+] into [npc2.namePos] [npc2.face], before getting [npc2.herHim] to start kissing and licking it.");
+										sb.append("[npc.Name][npc.sexPaceVerb]将[npc.ass+]贴向[npc2.namePos][npc2.face]，让[npc2.herHim]亲吻并舔舐它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.lips] against [npc.her] [npc.ass+] and starting to kiss and lick it.");
+										sb.append("[npc.Name]试图反抗，但无法阻止[npc2.name]将[npc2.lips]贴向[npc.her][npc.ass+]并开始亲吻舔舐它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.lips+] pressed against [npc.namePos] [npc.ass].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，[npc2.her][npc2.lips+]继续压入[npc.namePos]的[npc.ass]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1076,16 +1076,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out muffled [npc2.moans], [npc2.name] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.ass+] and continued to [npc2.sexPaceVerb] kiss it.");
+										sb.append("[npc2.name]发出低沉的[npc2.moans]，将[npc2.her][npc2.lips+]贴向[npc.namePos][npc.ass+]，[npc2.sexPaceVerb]亲吻它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist, but [npc2.was] unable to stop [npc.name] from pushing [npc.her] [npc.ass+] against [npc2.her] [npc2.lips+].");
+										sb.append("[npc2.name]试图反抗，但无法阻止[npc.Name]将[npc.ass+]贴上[npc2.her][npc2.lips+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] kissing [npc.namePos] [npc.ass+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]亲吻[npc.namePos][npc.ass+]。");
 						}
 						break;
 				}
@@ -1102,7 +1102,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "mouth";
+				return "嘴巴";
 			}
 			return owner.getMouthName(false);
 		}
@@ -1140,16 +1140,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] sucked [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]吮吸着[npc.her]自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] sucking [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]吮吸着[npc.her]自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] kissed and licked [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]亲吻舔舐着[npc.her]自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] kissing and licking [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]亲吻舔舐着[npc.her]自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -1159,7 +1159,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case CLIT:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] kept [npc.her] [npc.lips+] wrapped around [npc2.namePos] [npc2.clit+].");
+								sb.append("[npc.name]"+(performer.isAsleep()?"沉睡着":"一动不动")+"，[npc.lips+]含住[npc2.namePos][npc2.clit+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1167,15 +1167,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Bringing [npc.her] [npc.face] up to [npc2.namePos] groin, [npc.name] [npc.sexPaceVerb] wrapped [npc.her] [npc.lips+] around [npc2.her] [npc2.clit+] and performed oral on it.");
+										sb.append("[npc.name]的[npc.face]靠向[npc2.namePos]的腹股沟，[npc.sexPaceVerb]用[npc.her][npc.lips+]含住[npc2.her][npc2.clit+]并开始进行口交。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.clit+] into [npc.her] mouth and forcing [npc.herHim] to perform oral on it.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.clit+]推入[npc.her]嘴里并强迫[npc.herHim]进行口交。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")+", and didn't react at all as [npc2.she] had [npc2.her] [npc2.clit] sucked.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"沉睡着":"继续表现的像个任人摆布的性玩具")+"，不对自己被舔弄的[npc2.clit]做出任何反应。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1183,16 +1183,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] bucking [npc2.her] [npc2.hips] into [npc.namePos] [npc.face], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] had [npc2.her] [npc2.clit] sucked.");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.hips]挤到[npc.namePos][npc.face]上，[npc2.she]感受到[npc2.clit]被吮吸着，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.clit] out of [npc.namePos] mouth, and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.clit] sucked against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.clit]从[npc.namePos]嘴里撤出来，但失败了，[npc2.she]只能一边哭泣一边被迫看着自己的[npc2.clit]被舔弄。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] sucking [npc2.namePos] [npc2.clit+].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]吮吸[npc2.namePos][npc2.clit+]。");
 						}
 						break;
 					case FINGER:
@@ -1200,7 +1200,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case FOOT:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep":"Without making a move")+", [npc.name] kept [npc.her] [npc.lips+] pressed against [npc2.namePos] [npc2.feet] in order to orally worship them.");
+								sb.append((performer.isAsleep()?"保持沉睡着":"一动不动")+"，[npc.name]用[npc.lips+]含住[npc2.namePos]的[npc2.feet]，用嘴侍奉它们。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1208,15 +1208,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Bringing [npc.her] [npc.face] down to the ends of [npc2.namePos] [npc2.legs], [npc.name] [npc.sexPaceVerb] pressed [npc.her] [npc.lips+] against [npc2.her] [npc2.feet] and orally worshipped them.");
+										sb.append("[npc.name]的[npc.face]沿着[npc2.namePos]的[npc2.legs]逐渐下移，最后[npc.sexPaceVerb]将[npc.lips+]贴在[npc2.her]的[npc2.feet]上，开始用嘴侍奉起来。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.feet] into [npc.her] mouth and forcing [npc.herHim] to orally worship them.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.feet]推入[npc.her]嘴里并强迫[npc.herHim]用嘴侍奉。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.feet] pushed into [npc.namePos] [npc.face].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"没有醒来的迹象":"保持完全不动")+"，将[npc2.her]的[npc2.feet]压到[npc.namePos][npc.face]上。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1224,22 +1224,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] pushing [npc2.her] [npc2.feet] into [npc.namePos] [npc.face], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] had them orally worshipped.");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.feet]压到[npc.namePos][npc.face]上，[npc2.she]感受到[npc2.feet]被用嘴侍奉着，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.feet] away from [npc.namePos] mouth, but could do nothing but cry as [npc2.she] had them orally worshipped against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.feet]从[npc.namePos]嘴边挪开，但失败了，[npc2.she]只能一边哭泣一边被迫看着自己的[npc2.feet]被用嘴侍奉。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] kissing and licking [npc2.namePos] [npc2.feet].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]亲吻并舔舐[npc2.namePos]的[npc2.feet]。");
 						}
 						break;
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"deeply asleep":"as still as a statue")+", [npc.name] kept [npc.her] [npc.lips+] wrapped around [npc2.namePos] [npc2.cock].");
+								sb.append(""+(performer.isAsleep()?"保持沉睡着":"如雕塑一般")+"，[npc.her][npc.lips+]含住[npc2.namePos]的[npc2.cock].");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1247,15 +1247,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Bringing [npc.her] [npc.face] up to [npc2.namePos] groin, [npc.name] [npc.sexPaceVerb] wrapped [npc.her] [npc.lips+] around [npc2.her] [npc2.cock] and gave [npc2.herHim] a blowjob.");
+										sb.append("[npc.name]的[npc.face]靠向[npc2.namePos]的腹股沟，[npc.sexPaceVerb]用[npc.her][npc.lips+]含住[npc2.her]的[npc2.cock]并开始进行口交。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.cock] into [npc.her] mouth and forcing [npc.herHim] to give [npc2.herHim] a blowjob.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.cock]推入[npc.her]嘴里并强迫[npc.herHim]进行口交。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"continued to sleep":"didn't react or move at all")+" as [npc2.she] kept [npc2.her] [npc2.cock+] sheathed down [npc.namePos] throat.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"继续睡觉":"不作反应")+"，[npc2.her][npc2.cock+]填满[npc.namePos]的喉咙。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1263,22 +1263,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] bucking [npc2.her] [npc2.hips] into [npc.namePos] [npc.face], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] had [npc2.her] [npc2.cock] sucked.");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.hips]挤到[npc.namePos][npc.face]上，[npc2.she]感受到[npc2.cock]被吮吸着，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.cock] out of [npc.namePos] mouth, and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.cock] sucked against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.cock]从[npc.namePos]嘴里撤出来，但失败了，[npc2.she]只能一边哭泣一边被迫看着自己的[npc2.cock]被舔弄。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] giving [npc2.name] a blowjob.");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]给[npc2.name]进行口交。");
 						}
 						break;
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"deeply asleep":"as still as a statue")+", [npc.name] kept [npc.her] [npc.lips+] wrapped around [npc2.namePos] [npc2.tail].");
+								sb.append("保持"+(performer.isAsleep()?"深度沉睡着":"像雕塑一般")+"，[npc.name][npc.lips+]含住[npc2.namePos]的[npc2.tail]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1286,15 +1286,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] wrapped [npc.her] [npc.lips+] around [npc2.namePos] [npc2.tail] and started sucking on it.");
+										sb.append("[npc.name][npc.sexPaceVerb]用[npc.her][npc.lips+]含住[npc2.namePos]的[npc2.tail]并开始吮吸它。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tail] into [npc.her] mouth and forcing [npc.herHim] to suck on it.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail]推入[npc.her]嘴里并强迫[npc.herHim]进行吮吸。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"continued to sleep":"didn't react or move at all")+" as [npc2.she] kept [npc2.her] [npc2.tail+] thrust deep down [npc.namePos] throat.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"继续睡觉":"不作反应")+"，[npc2.her][npc2.tail+]填满[npc.namePos]的喉咙。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1302,22 +1302,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] [npc2.sexPaceVerb] thrust [npc2.her] [npc2.tail] down [npc.namePos] throat.");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tail]插入[npc.namePos]的喉咙，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tail] out of [npc.namePos] mouth, and could do nothing but cry as it was sucked against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tail]从[npc.namePos]嘴里拉出来，但失败了，[npc2.she]只能一边哭泣一边被迫看着自己的[npc2.tail]被吮吸。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] sucking [npc2.namePos] [npc2.tail].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]吮吸[npc2.namePos]的[npc2.tail]。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"deeply asleep":"as still as a statue")+", [npc.name] kept [npc.her] [npc.lips+] wrapped around [npc2.namePos] [npc2.tentacle].");
+								sb.append("保持"+(performer.isAsleep()?"深度沉睡着":"像雕塑一般")+"，[npc.name][npc.lips+]含住[npc2.namePos]的[npc2.tentacle]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1325,15 +1325,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] wrapped [npc.her] [npc.lips+] around [npc2.namePos] [npc2.tentacle] and started sucking on it.");
+										sb.append("[npc.name][npc.sexPaceVerb]用[npc.her][npc.lips+]含住[npc2.namePos]的[npc2.tentacle]并开始吮吸它。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tentacle] into [npc.her] mouth and forcing [npc.herHim] to suck on it.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle]推入[npc.her]嘴里并强迫[npc.herHim]进行吮吸。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"continued to sleep":"didn't react or move at all")+" as [npc2.she] kept [npc2.her] [npc2.tentacle+] thrust deep down [npc.namePos] throat.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"继续睡觉":"不作反应")+"，[npc2.her][npc2.tentacle+]填满[npc.namePos]的喉咙。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1341,23 +1341,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] [npc2.sexPaceVerb] thrust [npc2.her] [npc2.tentacle] down [npc.namePos] throat.");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tentacle]插入[npc.namePos]的喉咙，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tentacle] out of [npc.namePos] mouth, and could do nothing but cry as it was sucked against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tentacle]从[npc.namePos]嘴里拉出来，但失败了，[npc2.she]只能一边哭泣一边被迫看着自己的[npc2.tentacle]被吮吸。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] sucking [npc2.namePos] [npc2.tentacle].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]吮吸[npc2.namePos]的[npc2.tentacle]。");
 						}
 						break;
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while pressing [npc.her] [npc.lips+] against [npc2.namePos] mouth.");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"同时将[npc.her][npc.lips+]按在[npc2.namePos]的嘴上。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1365,15 +1365,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] pressed [npc.her] [npc.lips+] against [npc2.namePos] [npc2.mouth], before pulling [npc2.herHim] into a kiss and starting to [npc.sexPaceVerb] make out with [npc2.herHim].");
+										sb.append("[npc.Name]将[npc.lips+]贴向[npc2.namePos]的[npc2.mouth]，给了[npc2.herHim]一个吻并[npc.sexPaceVerb]与[npc2.herHim]亲热起来。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist, but [npc.was] unable to stop [npc2.name] from pulling [npc.herHim] into a kiss and starting to [npc2.sexPaceVerb] make out with [npc.herHim].");
+										sb.append("[npc.Name]试图反抗，但无法阻止[npc2.name]拉着[npc.herHim]亲吻并开始[npc2.sexPaceVerb]与[npc.herHim]亲热。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.tongue] thrust into [npc.namePos] [npc.mouth].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，将[npc2.her]的[npc2.tongue]伸入[npc.namePos]的[npc.mouth]里。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1381,16 +1381,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out muffled [npc2.moans], [npc2.name] leant into [npc.name] and [npc2.sexPaceVerb] started thrusting [npc2.her] [npc2.tongue] into [npc.her] [npc.mouth].");
+										sb.append("[npc2.name]发出低沉的[npc2.moans]，倒向[npc.name]，[npc2.sexPaceVerb]将[npc2.tongue]伸入[npc.Name][npc.mouth]里。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist, but [npc2.was] unable to stop [npc.name] from thrusting [npc.her] [npc.tongue] into [npc2.her] [npc2.mouth].");
+										sb.append("[npc2.name]试图反抗，但无法阻止[npc.Name]将[npc.tongue]伸入[npc2.her]的[npc2.mouth]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] kissing [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]亲吻[npc2.name]。");
 						}
 						break;
 				}
@@ -1407,7 +1407,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "nipple";
+				return "乳头";
 			}
 			return owner.getNippleName();
 		}
@@ -1449,16 +1449,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.nipples+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.nipples+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.nipples+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.nipples+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.nipples+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.nipples+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.nipples+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.nipples+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -1470,7 +1470,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.name] pinched and squeezed [npc.her] [npc.nipples+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]捏着[npc.her][npc.nipples+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1478,15 +1478,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.breasts+], [npc.name] [npc.sexPaceVerb] made [npc2.name] pinch and squeeze [npc.her] [npc.nipples+].");
+										sb.append("[npc.name]露出[npc.breasts+]，[npc.sexPaceVerb]让[npc2.name]揉捏并挤压[npc.her][npc.nipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pinching and squeezing [npc.her] [npc.nipples+].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]揉捏并挤压[npc.her][npc.nipples+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")+", and kept [npc.namePos] [npc.nipples+] pinched between [npc2.her] [npc2.fingers] without moving.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")+"，[npc2.her]那[npc2.fingers]持续掐着[npc.namePos][npc.nipples+]");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1494,16 +1494,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] pressed [npc2.her] [npc2.hands] into [npc.namePos] [npc.breasts] and [npc2.sexPaceVerb] played with [npc.her] [npc.nipples+].");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，用[npc2.hands]抓向[npc.namePos]的[npc.breasts]并[npc2.sexPaceVerb]玩弄起[npc.nipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to play with [npc.her] [npc.nipples+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫玩弄着[npc.Name][npc.nipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] pinching and playing with [npc.namePos] [npc.nipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]揉捏并玩弄[npc.namePos][npc.nipples+]。");
 						}
 						break;
 					case FOOT:
@@ -1511,8 +1511,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] thrust deep into [npc.her] [npc.nipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.namePos][npc2.cock+]深深插入[npc.her][npc.nipples+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1520,15 +1520,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.breasts+], [npc.name] [npc.sexPaceVerb] guided [npc2.namePos] [npc2.cock+] up to [npc.her] [npc.nipples+] and got [npc2.herHim] to start fucking them.");
+										sb.append("[npc.name]露出[npc.breasts+]，[npc.sexPaceVerb]将[npc2.namePos][npc2.cock+]引导至[npc.her][npc.nipples+]，让[npc2.name]开始操它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.cock] against [npc.her] [npc.nipples+] and proceeding to fuck them.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.cock]靠向[npc.her][npc.nipples+]并开始操它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.nipples+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]填满[npc.namePos][npc.nipples+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1536,23 +1536,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] soon started [npc2.sexpaceVerb] bucking [npc2.her] [npc2.hips] into [npc.namePos] torso, [npc2.moaning] in delight as [npc2.she] fucked [npc.her] [npc.nipples+].");
+										sb.append("[npc2.Name][npc2.sexpaceVerb]将[npc2.hips]压向[npc.namePos]的躯干，开始操[npc.namePos][npc.nipples+]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to fuck [npc.her] [npc.nipples+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫操干[npc.Name][npc.nipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] fucking [npc.namePos] [npc.nipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]操干[npc.namePos][npc.nipples+]。");
 						}
 						break;
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.tail+] thrust deep into [npc.her] [npc.nipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.namePos][npc2.tail+]深深插入[npc.her][npc.nipples+].");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1560,15 +1560,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.breasts+], [npc.name] [npc.sexPaceVerb] guided [npc2.namePos] [npc2.tail+] up to [npc.her] [npc.nipples+] and got [npc2.herHim] to start tail-fucking them.");
+										sb.append("[npc.name]露出[npc.breasts+]，[npc.sexPaceVerb]将[npc2.namePos][npc2.tail+]引导至[npc.her][npc.nipples+]，让[npc2.name]开始尾交它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.tail] against [npc.her] [npc.nipples+] and proceeding to tail-fuck them.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail]靠向[npc.her][npc.nipples+]并开始尾交它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.nipples+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"没有醒来的迹象":"保持完全不动")+"，将[npc2.her]的[npc2.tail]填满[npc.namePos][npc.nipples+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1576,23 +1576,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] soon started [npc2.sexpaceVerb] thrusting [npc2.her] [npc2.tail] into [npc.namePos] [npc.breasts+], [npc2.moaning] in delight as [npc2.she] tail-fucked [npc.her] [npc.nipples+].");
+										sb.append("[npc2.Name][npc2.sexpaceVerb]将[npc2.tail]插入[npc.namePos][npc.breasts+]，开始尾交[npc.namePos][npc.nipples+]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to tail-fuck [npc.her] [npc.nipples+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫尾交[npc.Name][npc.nipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tail-fucking [npc.namePos] [npc.nipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]尾交[npc.namePos][npc.nipples+]。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.tentacle+] thrust deep into [npc.her] [npc.nipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.namePos][npc2.tentacle+]深深插入[npc.her][npc.nipples+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1600,15 +1600,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.breasts+], [npc.name] [npc.sexPaceVerb] guided [npc2.namePos] [npc2.tentacle+] up to [npc.her] [npc.nipples+] and got [npc2.herHim] to start tentacle-fucking them.");
+										sb.append("[npc.name]露出[npc.breasts+]，[npc.sexPaceVerb]将[npc2.namePos][npc2.tentacle+]引导至[npc.her][npc.nipples+]，让[npc2.name]开始触手交它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.tentacle] against [npc.her] [npc.nipples+] and proceeding to tentacle-fuck them.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle]靠向[npc.her][npc.nipples+]并开始触手交它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.nipples+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.tentacle]填满[npc.namePos][npc.nipples+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1616,23 +1616,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] soon started [npc2.sexpaceVerb] thrusting [npc2.her] [npc2.tentacle] into [npc.namePos] [npc.breasts+], [npc2.moaning] in delight as [npc2.she] tentacle-fucked [npc.her] [npc.nipples+].");
+										sb.append("[npc2.Name][npc2.sexpaceVerb]将[npc2.tentacle]插入[npc.namePos][npc.breasts+]，开始触手交[npc.namePos][npc.nipples+]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to tentacle-fuck [npc.her] [npc.nipples+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫触手交[npc.Name][npc.nipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tentacle-fucking [npc.namePos] [npc.nipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]触手交[npc.namePos][npc.nipples+]。");
 						}
 						break;
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] sucked on [npc.her] [npc.nipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]吮吸着[npc.her][npc.nipples+].");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1640,15 +1640,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] pushed [npc.her] [npc.breasts+] into [npc2.namePos] [npc2.face], before getting [npc2.herHim] to start sucking on [npc.her] [npc.nipples+].");
+										sb.append("[npc.name][npc.sexPaceVerb]将[npc.breasts+]贴向[npc2.namePos]的[npc2.face]，让[npc2.name]开始吮吸[npc.her][npc.nipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.lips] against [npc.her] [npc.breasts+] and starting to suck on [npc.her] [npc.nipples+].");
+										sb.append("[npc.Name]试图反抗，但无法阻止[npc2.name]将[npc2.lips]贴向[npc.her][npc.breasts+]并开始吮吸[npc.her][npc.nipples+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.lips+] wrapped around [npc.namePos] [npc.nipples].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，[npc2.her][npc2.lips+]继续包裹着[npc.namePos]的[npc.nipples]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1656,16 +1656,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out muffled [npc2.moans], [npc2.name] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.breasts+] and [npc2.sexPaceVerb] continued to suck and kiss [npc.her] [npc.nipples+].");
+										sb.append("[npc2.name]发出低沉的[npc2.moans]，将[npc2.her][npc2.lips+]贴向[npc.namePos][npc.breasts+]，[npc2.sexPaceVerb]吮吸并亲吻[npc.namePos][npc.nipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist, but [npc2.was] unable to stop [npc.name] from pushing [npc.her] [npc.nipples+] against [npc2.her] [npc2.lips+].");
+										sb.append("[npc2.name]试图反抗，但无法阻止[npc.Name]将[npc.nipples+]贴上[npc2.her][npc2.lips+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] sucking on [npc.namePos] [npc.nipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]吮吸[npc.namePos][npc.nipples+]。");
 						}
 						break;
 				}
@@ -1683,9 +1683,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
 				if(owner.hasBreasts()) {
-					return "breasts";
+					return "胸部";
 				} else {
-					return "pecs";
+					return "平板胸部";
 				}
 			}
 			return owner.getBreastName();
@@ -1725,16 +1725,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.breasts+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.breasts+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.breasts+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.breasts+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.breasts+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.breasts+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.breasts+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.breasts+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -1746,7 +1746,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.name] groped and squeezed [npc.her] [npc.breasts+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]挤着[npc.her][npc.breasts+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1754,15 +1754,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.breasts+], [npc.name] [npc.sexPaceVerb] made [npc2.name] grope and squeeze them.");
+										sb.append("[npc.name]露出[npc.breasts+]，[npc.sexPaceVerb]让[npc2.name]揉捏并挤压它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from groping and squeezing [npc.her] [npc.breasts+].");
+										sb.append("[npc.Name]试图挣脱, 但无法阻止[npc2.name]揉捏并挤压[npc.her][npc.breasts+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")+", and kept [npc.namePos] [npc.breasts+] gripped in [npc2.her] [npc2.hands] without moving.");
+								sb.append(" [npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")+"，[npc2.her]的[npc2.hands]持续抓着[npc.namePos][npc.breasts+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1770,16 +1770,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] pressed [npc2.her] [npc2.hands] into [npc.namePos] [npc.breasts] and [npc2.sexPaceVerb] continued playing with them.");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，把[npc2.hands]抚上[npc.namePos]的[npc.breasts]，[npc2.sexPaceVerb]玩弄它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to play with [npc.her] [npc.breasts+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫玩弄[npc.Name][npc.nipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] groping and squeezing [npc.namePos] [npc.breasts+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]揉捏并挤压[npc.namePos][npc.breasts+]。");
 						}
 						break;
 					case FOOT:
@@ -1789,11 +1789,11 @@ public enum SexAreaOrifice implements SexAreaInterface {
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
 								if(paizuri) {
-									sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] slid up and down between [npc.her] [npc.breasts+].");
+									sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"同时[npc2.namePos][npc2.cock+]在[npc.her][npc.breasts+]间来回磨蹭");
 								} else {
-									sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] slid up and down over [npc.her] [npc.breasts+].");
+									sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"同时[npc2.namePos][npc2.cock+]在[npc.her][npc.breasts+]上来回磨蹭");
 								}
 							} else {
 								switch(performerPace) {
@@ -1803,25 +1803,25 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_NORMAL:
 									case DOM_ROUGH:
 										if(paizuri) {
-											sb.append("Pushing [npc.her] [npc.breasts+] together, [npc.name] [npc.was] able to slide [npc2.namePos] [npc2.cock+] up and down between them.");
+											sb.append("[npc.name]将[npc.breasts+]挤压在一起，以便[npc2.namePos][npc2.cock+]能在其中上下抽插。");
 										} else {
-											sb.append("[npc.NamePos] chest was too flat to perform paizuri on [npc2.name], but that didn't stop [npc.herHim] from grinding [npc.her] [npc.breasts+] up and down against [npc2.her] [npc2.cock+].");
+											sb.append("[npc.NamePos]贫瘠的胸部无法提供乳交，但这无法阻止[npc.herHim]用[npc.breasts+]对[npc2.name][npc2.cock+]上下摩擦。");
 										}
 										break;
 									case SUB_RESISTING:
 										if(paizuri) {
-											sb.append("Pushing [npc.her] [npc.breasts+] together, [npc2.name] ignored [npc.namePos] protesting cries and forced [npc.herHim] to perform paizuri on [npc2.herHim].");
+											sb.append("[npc2.name]把[npc.namePos][npc.breasts+]挤在一起，无视了[npc.her]抗议的呜咽，强迫[npc.herHim]提供乳交。");
 										} else {
-											sb.append("Not put off by the fact that [npc.her] chest is flat, [npc2.name] ignored [npc.namePos] protesting cries and stared grinding [npc.her] [npc.cock+] up and down over [npc2.her] [npc2.breasts+].");
+											sb.append("[npc2.name]并没有因为[npc.namePos]的平胸而停下，无视了[npc.her]抗拒的呜咽，将[npc.her][npc.cock+]在[npc2.her][npc2.breasts+]间大力摩擦。");
 										}
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
 								if(paizuri) {
-									sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] thrust between [npc.namePos] [npc.breasts+].");
+									sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]插入[npc.namePos][npc.breasts+]间");
 								} else {
-									sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] pressed against [npc.namePos] [npc.breasts+].");
+									sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]压入[npc.namePos][npc.breasts+]");
 								}
 							} else {
 								switch(targetPace) {
@@ -1831,16 +1831,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_NORMAL:
 									case DOM_ROUGH:
 										if(paizuri) {
-											sb.append(" Letting out a series of [npc2.moans], [npc2.name] happily received paizuri from [npc.name].");
+											sb.append("[npc2.name]发出一阵[npc2.moans]，很高兴能从[npc.name]得到乳交服务。");
 										} else {
-											sb.append(" Letting out a series of [npc2.moans], [npc2.name] happily received naizuri from [npc.name].");
+											sb.append("[npc2.name]发出一阵[npc2.moans]，很高兴能从[npc.name]得到贫乳乳交服务。");
 										}
 										break;
 									case SUB_RESISTING:
 										if(paizuri) {
-											sb.append(" Sobbing and crying, [npc2.name] tried, and failed, to resist receiving paizuri from [npc.name].");
+											sb.append("[npc2.name]呜咽并哭泣着，试图拒绝[npc.name]的乳交服务，但无济于事。");
 										} else {
-											sb.append(" Sobbing and crying, [npc2.name] tried, and failed, to resist receiving naizuri from [npc.name].");
+											sb.append("[npc2.name]呜咽并哭泣着，试图拒绝[npc.name]的贫乳乳交服务，但无济于事。");
 										}
 										break;
 								}
@@ -1848,9 +1848,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 							
 						} else {
 							if(paizuri) {
-								sb.append("[npc.NameIs] [npc.sexPaceVerb] performing paizuri on [npc2.name].");
+								sb.append("[npc.NameIs][npc.sexPaceVerb]为[npc2.name]提供乳交。");
 							} else {
-								sb.append("[npc.NameIs] [npc.sexPaceVerb] performing naizuri on [npc2.name].");
+								sb.append("[npc.NameIs][npc.sexPaceVerb]为[npc2.name]提供贫乳乳交。");
 							}
 						}
 						break;
@@ -1861,8 +1861,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] kissed and licked [npc.her] [npc.breasts+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]亲吻并舔舐着[npc.her][npc.breasts+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1870,15 +1870,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] pushed [npc.her] [npc.breasts+] into [npc2.namePos] [npc2.face], before getting [npc2.herHim] to start kissing and licking them.");
+										sb.append("[npc.Name][npc.sexPaceVerb]将[npc.breasts+]贴向[npc2.namePos][npc2.face]，让[npc2.herHim]亲吻并舔舐它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.lips] against [npc.her] [npc.breasts+] and starting to kiss and lick them.");
+										sb.append("[npc.Name]试图反抗，但无法阻止[npc2.name]将[npc2.lips]贴向[npc.her][npc.breasts+]并开始亲吻舔舐。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.lips+] pressed against [npc.namePos] [npc.breasts].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，[npc2.her][npc2.lips+]继续压入[npc.namePos]的[npc.breasts]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -1886,16 +1886,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out muffled [npc2.moans], [npc2.name] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.breasts+] and continued to [npc2.sexPaceVerb] kiss them.");
+										sb.append("[npc2.name]发出低沉的[npc2.moans]，将[npc2.her][npc2.lips+]贴向[npc.namePos][npc.breasts+]，[npc2.sexPaceVerb]亲吻它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist, but [npc2.was] unable to stop [npc.name] from pushing [npc.her] [npc.breasts+] against [npc2.her] [npc2.lips+].");
+										sb.append("[npc2.Name]试图反抗，但无法阻止[npc.name]将[npc.breasts+]贴上[npc2.her][npc2.lips+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] kissing [npc.namePos] [npc.breasts+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]亲吻[npc.namePos][npc.breasts+]。");
 						}
 						break;
 				}
@@ -1912,7 +1912,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "teat";
+				return "乳头";
 			}
 			return owner.getNippleCrotchName();
 		}
@@ -1954,16 +1954,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.crotchNipples+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.crotchNipples+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.crotchNipples+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.crotchNipples+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.crotchNipples+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.crotchNipples+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.crotchNipples+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.crotchNipples+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -1975,7 +1975,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.name] pinched and squeezed [npc.her] [npc.crotchNipples+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]捏着[npc.her][npc.crotchNipples+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -1983,16 +1983,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.crotchBoobs+], [npc.name] [npc.sexPaceVerb] made [npc2.name] pinch and squeeze [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc.Name]推出[npc.her][npc.crotchBoobs+]，[npc.sexPaceVerb]让[npc2.name]捏捏挤挤[npc.her][npc.crotchNipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pinching and squeezing [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc.Name]尝试挣脱束缚，却无法阻止[npc2.name]掐捏[npc.her][npc.crotchNipples+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and kept [npc.namePos] [npc.crotchNipples+] pinched between [npc2.her] [npc2.fingers] without moving.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"，[npc2.her]那[npc2.fingers]持续掐着[npc.namePos][npc.crotchNipples+]");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2000,16 +2000,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] pressed [npc2.her] [npc2.hands] into [npc.namePos] [npc.crotchBoobs] and [npc2.sexPaceVerb] played with [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，把[npc2.hands]抚上[npc.namePos]的[npc.crotchBoobs]，[npc2.sexPaceVerb]玩弄[npc.crotchNipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to play with [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.Name]试图从[npc.name]的手中挣脱，但却失败了。[npc2.she]因此只能一边哭泣一边被迫地看着自己[npc.crotchNipples+]被人无情玩弄。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] pinching and playing with [npc.namePos] [npc.crotchNipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]揉捏玩弄着[npc.namePos][npc.crotchNipples+]。");
 						}
 						break;
 					case FOOT:
@@ -2017,8 +2017,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] thrust deep into [npc.her] [npc.crotchNipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.namePos][npc2.cock+]深深插入[npc.her][npc.crotchNipples+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2026,15 +2026,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.crotchBoobs+], [npc.name] [npc.sexPaceVerb] guided [npc2.namePos] [npc2.cock+] up to [npc.her] [npc.crotchNipples+] and got [npc2.herHim] to start fucking them.");
+										sb.append("[npc.Name]露出[npc.crotchBoobs+]，将[npc2.namePos][npc2.cock+][npc.sexPaceVerb]引至[npc.crotchNipples+]，让[npc2.herHim]操了起来。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.cock] against [npc.her] [npc.crotchNipples+] and proceeding to fuck them.");
+										sb.append("尽管[npc.Name]试图挣脱，但其依旧无法阻止[npc2.name]用[npc2.cock]操弄[npc.her][npc.crotchNipples+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.crotchNipples+].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]填满[npc.namePos][npc.crotchNipples+]");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2042,23 +2042,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] soon started [npc2.sexpaceVerb] bucking [npc2.her] [npc2.hips] into [npc.namePos] groin, [npc2.moaning] in delight as [npc2.she] fucked [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.Name]很快就开始[npc2.sexpaceVerb]扭动[npc2.her]的[npc2.hips]来摩擦[npc.namePos]的下体，而[npc2.she]在[npc2.moaning]着的同时操弄起[npc.her]那[npc.crotchNipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to fuck [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.Name]试图从[npc.name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫操干[npc.Name][npc.crotchNipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] fucking [npc.namePos] [npc.crotchNipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]操干[npc.namePos][npc.crotchNipples+]。");
 						}
 						break;
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.tail+] thrust deep into [npc.her] [npc.crotchNipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.namePos][npc2.tail+]深深插入[npc.her][npc.crotchNipples+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2066,15 +2066,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.crotchBoobs+], [npc.name] [npc.sexPaceVerb] guided [npc2.namePos] [npc2.tail+] up to [npc.her] [npc.crotchNipples+] and got [npc2.herHim] to start tail-fucking them.");
+										sb.append("[npc.name]露出[npc.crotchBoobs+]，[npc.sexPaceVerb]将[npc2.namePos][npc2.tail+]引导至[npc.her][npc.crotchNipples+]，让[npc2.name]开始尾交它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.tail] against [npc.her] [npc.crotchNipples+] and proceeding to tail-fuck them.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail]靠向[npc.her][npc.crotchNipples+]并开始尾交它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.crotchNipples+].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"保持完全不动")+"，将[npc2.her]的[npc2.tail]填满[npc.namePos][npc.crotchNipples+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2082,23 +2082,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] soon started [npc2.sexpaceVerb] thrusting [npc2.her] [npc2.tail] into [npc.namePos] [npc.crotchBoobs+], [npc2.moaning] in delight as [npc2.she] tail-fucked [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.Name][npc2.sexpaceVerb]将[npc2.tail]插入[npc.namePos][npc.crotchBoobs+]，开始尾交[npc.namePos][npc.crotchNipples+]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to tail-fuck [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫尾交[npc.Name][npc.crotchNipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tail-fucking [npc.namePos] [npc.crotchNipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]尾交[npc.namePos][npc.crotchNipples+]。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.tentacle+] thrust deep into [npc.her] [npc.crotchNipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.namePos][npc2.tentacle+]深深插入[npc.her][npc.crotchNipples+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2106,15 +2106,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.crotchBoobs+], [npc.name] [npc.sexPaceVerb] guided [npc2.namePos] [npc2.tentacle+] up to [npc.her] [npc.crotchNipples+] and got [npc2.herHim] to start tentacle-fucking them.");
+										sb.append("[npc.name]露出[npc.crotchBoobs+]，[npc.sexPaceVerb]将[npc2.namePos][npc2.tentacle+]引导至[npc.her][npc.crotchNipples+]，让[npc2.name]开始触手交它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.tentacle] against [npc.her] [npc.crotchNipples+] and proceeding to tentacle-fuck them.");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle]靠向[npc.her][npc.crotchNipples+]并开始触手交它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.crotchNipples+].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.tentacle]填满[npc.namePos][npc.crotchNipples+]");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2122,24 +2122,24 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.Name] soon started [npc2.sexpaceVerb] thrusting [npc2.her] [npc2.tentacle] into [npc.namePos] [npc.crotchBoobs+],"
-												+ " [npc2.moaning] in delight as [npc2.she] tentacle-fucked [npc.her] [npc.crotchNipples+].");
+										sb.append(" [npc2.Name][npc2.sexpaceVerb]将[npc2.tentacle]插入[npc.namePos][npc.crotchBoobs+]，"
+												+ "开始触手交[npc.namePos][npc.crotchNipples+]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to tentacle-fuck [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫触手交[npc.Name][npc.crotchNipples+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tentacle-fucking [npc.namePos] [npc.crotchNipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]触手交[npc.namePos][npc.crotchNipples+]。");
 						}
 						break;
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] sucked on [npc.her] [npc.crotchNipples+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]吮吸着[npc.her][npc.crotchNipples+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2147,15 +2147,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] pushed [npc.her] [npc.crotchBoobs+] into [npc2.namePos] [npc2.face], before getting [npc2.herHim] to start sucking on [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc.name][npc.sexPaceVerb]将[npc.crotchBoobs+]贴向[npc2.namePos]的[npc2.face]，让[npc2.name]开始吮吸[npc.her][npc.crotchNipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.lips] against [npc.her] [npc.crotchBoobs+] and starting to suck on [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc.Name]试图反抗，但无法阻止[npc2.name]将[npc2.lips]贴向[npc.her][npc.crotchBoobs+]并开始吮吸[npc.her][npc.crotchNipples+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.lips+] wrapped around [npc.namePos] [npc.crotchNipples].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，[npc2.her][npc2.lips+]继续包裹着[npc.namePos]的[npc.crotchNipples]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2163,16 +2163,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out muffled [npc2.moans], [npc2.name] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.crotchBoobs+] and [npc2.sexPaceVerb] continued to suck and kiss [npc.her] [npc.crotchNipples+].");
+										sb.append("[npc2.name]发出低沉的[npc2.moans]，将[npc2.her][npc2.lips+]贴向[npc.namePos][npc.crotchBoobs+]，[npc2.sexPaceVerb]吮吸并亲吻[npc.namePos][npc.crotchNipples+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist, but [npc2.was] unable to stop [npc.name] from pushing [npc.her] [npc.crotchNipples+] against [npc2.her] [npc2.lips+].");
+										sb.append("[npc2.name]试图反抗，但无法阻止[npc.Name]将[npc.crotchNipples+]贴上[npc2.her][npc2.lips+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] sucking on [npc.namePos] [npc.crotchNipples+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]吮吸[npc.namePos][npc.crotchNipples+]。");
 						}
 						break;
 				}
@@ -2189,7 +2189,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "crotch-boobs";
+				return "胯乳";
 			}
 			return owner.getBreastCrotchName();
 		}
@@ -2228,16 +2228,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.crotchBoobs+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.crotchBoobs+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.crotchBoobs+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.crotchBoobs+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.crotchBoobs+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.crotchBoobs+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.crotchBoobs+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.crotchBoobs+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -2249,7 +2249,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.name] groped and squeezed [npc.her] [npc.crotchBoobs+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]挤着[npc.her][npc.crotchBoobs+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2257,15 +2257,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing out [npc.her] [npc.crotchBoobs+], [npc.name] [npc.sexPaceVerb] made [npc2.name] grope and squeeze them.");
+										sb.append("[npc.name]露出[npc.crotchBoobs+]，[npc.sexPaceVerb]让[npc2.name]揉捏并挤压[npc.her]它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from groping and squeezing [npc.her] [npc.crotchBoobs+].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]揉捏并挤压[npc.her][npc.crotchBoobs+]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")+", and kept [npc.namePos] [npc.crotchBoobs+] gripped in [npc2.her] [npc2.hands] without moving.");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")+"，[npc2.her]的[npc2.hands]持续抓着[npc.namePos][npc.crotchBoobs+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2273,16 +2273,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] pressed [npc2.her] [npc2.hands] into [npc.namePos] [npc.crotchBoobs] and [npc2.sexPaceVerb] continued playing with them.");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，用[npc2.hands]抓向[npc.namePos]的[npc.crotchBoobs]，[npc2.sexPaceVerb]玩弄它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull away from [npc.name], and could do nothing but cry as [npc2.she] [npc2.was] forced to play with [npc.her] [npc.crotchBoobs+].");
+										sb.append("[npc2.Name]试图从[npc.Name]身边逃开，但失败了，[npc2.she]只能一边哭泣一边被迫玩弄[npc.Name][npc.crotchBoobs+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] groping and squeezing [npc.namePos] [npc.crotchBoobs+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]揉捏并挤压[npc.namePos][npc.crotchBoobs+]。");
 						}
 						break;
 					case FOOT:
@@ -2292,11 +2292,11 @@ public enum SexAreaOrifice implements SexAreaInterface {
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
 								if(paizuri) {
-									sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] slid up and down between [npc.her] [npc.crotchBoobs+].");
+									sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"同时[npc2.namePos][npc2.cock+]在[npc.her][npc.crotchBoobs+]间来回磨蹭");
 								} else {
-									sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] slid up and down over [npc.her] [npc.crotchBoobs+].");
+									sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"同时[npc2.namePos][npc2.cock+]在[npc.her][npc.crotchBoobs+]上来回磨蹭");
 								}
 							} else {
 								switch(performerPace) {
@@ -2306,27 +2306,27 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_NORMAL:
 									case DOM_ROUGH:
 										if(paizuri) {
-											sb.append("Pushing [npc.her] [npc.crotchBoobs+] together, [npc.name] [npc.was] able to slide [npc2.namePos] [npc2.cock+] up and down between them.");
+											sb.append("[npc.name]将[npc.crotchBoobs+]挤压在一起，以便[npc2.namePos][npc2.cock+]能在其中上下抽插。");
 										} else {
-											sb.append("[npc.NamePos] [npc.crotchBoobs] were too flat to perform crotch-paizuri on [npc2.name],"
-													+ " but that didn't stop [npc.herHim] from grinding [npc.her] [npc.crotchBoobs+] up and down against [npc2.her] [npc2.cock+].");
+											sb.append("[npc.NamePos]贫瘠的[npc.crotchBoobs]无法提供胯乳乳交。"
+													+ "但这无法阻止[npc.herHim]用[npc.crotchBoobs+]对[npc2.name][npc2.cock+]上下摩擦。");
 										}
 										break;
 									case SUB_RESISTING:
 										if(paizuri) {
-											sb.append("Pushing [npc.her] [npc.crotchBoobs+] together, [npc2.name] ignored [npc.namePos] protesting cries and forced [npc.herHim] to perform crotch-paizuri on [npc2.herHim].");
+											sb.append("[npc2.name]把[npc.namePos][npc.crotchBoobs+]挤在一起，无视了[npc.her]抗议的呜咽，强迫[npc.herHim]提供胯乳乳交。");
 										} else {
-											sb.append("Not put off by the fact that [npc.her] [npc.crotchBoobs] are flat,"
-													+ " [npc2.name] ignored [npc.namePos] protesting cries and stared grinding [npc.her] [npc.cock+] up and down over [npc2.her] [npc2.crotchBoobs+].");
+											sb.append("[npc2.name]并没有因为[npc.namePos]平坦的[npc.crotchBoobs]而停下，"
+													+ "无视了[npc.her]抗拒的呜咽，将[npc.her][npc.cock+]在[npc2.her][npc2.crotchBoobs+]间上下摩擦。");
 										}
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
 								if(paizuri) {
-									sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] thrust between [npc.namePos] [npc.crotchBoobs+].");
+									sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]插入[npc.namePos][npc.crotchBoobs+]间");
 								} else {
-									sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] pressed against [npc.namePos] [npc.crotchBoobs+].");
+									sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]压入[npc.namePos][npc.crotchBoobs+]");
 								}
 							} else {
 								switch(targetPace) {
@@ -2336,16 +2336,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_NORMAL:
 									case DOM_ROUGH:
 										if(paizuri) {
-											sb.append(" Letting out a series of [npc2.moans], [npc2.name] happily received crotch-paizuri from [npc.name].");
+											sb.append("[npc2.name]发出一阵[npc2.moans]，很高兴能从[npc.name]得到胯乳乳交服务。");
 										} else {
-											sb.append(" Letting out a series of [npc2.moans], [npc2.name] happily received crotch-naizuri from [npc.name].");
+											sb.append("[npc2.name]发出一阵[npc2.moans]，很高兴能从[npc.name]得到胯乳贫乳交服务。");
 										}
 										break;
 									case SUB_RESISTING:
 										if(paizuri) {
-											sb.append(" Sobbing and crying, [npc2.name] tried, and failed, to resist receiving crotch-paizuri from [npc.name].");
+											sb.append("[npc2.name]呜咽并哭泣着，试图拒绝[npc.name]的胯乳乳交服务，但无济于事。");
 										} else {
-											sb.append(" Sobbing and crying, [npc2.name] tried, and failed, to resist receiving crotch-naizuri from [npc.name].");
+											sb.append("[npc2.name]呜咽并哭泣着，试图拒绝[npc.name]的胯乳贫乳交服务，但无济于事。");
 										}
 										break;
 								}
@@ -2353,9 +2353,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 							
 						} else {
 							if(paizuri) {
-								sb.append("[npc.NameIs] [npc.sexPaceVerb] performing crotch-paizuri on [npc2.name].");
+								sb.append("[npc.NameIs][npc.sexPaceVerb]为[npc2.name]提供胯乳乳交。");
 							} else {
-								sb.append("[npc.NameIs] [npc.sexPaceVerb] performing crotch-naizuri on [npc2.name].");
+								sb.append("[npc.NameIs][npc.sexPaceVerb]为[npc2.name]提供胯乳贫乳交。");
 							}
 						}
 						break;
@@ -2366,8 +2366,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] kissed and licked [npc.her] [npc.crotchBoobs+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]亲吻并舔舐着[npc.her][npc.crotchBoobs+]");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2375,15 +2375,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] pushed [npc.her] [npc.crotchBoobs+] into [npc2.namePos] [npc2.face], before getting [npc2.herHim] to start kissing and licking them.");
+										sb.append("[npc.Name][npc.sexPaceVerb]将[npc.crotchBoobs+]贴向[npc2.namePos]的[npc2.face]，让[npc2.name]亲吻并舔舐它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.lips] against [npc.her] [npc.crotchBoobs+] and starting to kiss and lick them.");
+										sb.append("[npc.Name]试图反抗，但无法阻止[npc2.name]将[npc2.lips]贴向[npc.her][npc.crotchBoobs+]并开始亲吻舔舐它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.lips+] pressed against [npc.namePos] [npc.crotchBoobs].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，[npc2.her][npc2.lips+]继续压入[npc.namePos]的[npc.crotchBoobs]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2391,16 +2391,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out muffled [npc2.moans], [npc2.name] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.crotchBoobs+] and continued to [npc2.sexPaceVerb] kiss them.");
+										sb.append("[npc2.name]发出低沉的[npc2.moans]，将[npc2.her][npc2.lips+]贴向[npc.namePos][npc.crotchBoobs+]，[npc2.sexPaceVerb]亲吻它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist, but [npc2.was] unable to stop [npc.name] from pushing [npc.her] [npc.crotchBoobs+] against [npc2.her] [npc2.lips+].");
+										sb.append("[npc2.name]试图反抗，但无法阻止[npc.Name]将[npc.crotchBoobs+]贴上[npc2.her][npc2.lips+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] kissing [npc.namePos] [npc.crotchBoobs+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]亲吻[npc.namePos][npc.crotchBoobs+]。");
 						}
 						break;
 				}
@@ -2419,9 +2419,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "thighs";
+				return "大腿";
 			}
-			return "thighs";
+			return "大腿";
 		}
 		@Override
 		public boolean isFree(GameCharacter owner) {
@@ -2458,16 +2458,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to molest [npc.her] thighs.");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"磨蹭着自己的股间。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to molest [npc.her] thighs.");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"磨蹭着自己的股间。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] thighs against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]用股间顶向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] thighs against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用股间顶向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -2482,8 +2482,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep":"Acting like a lifeless sex toy")
-										+", [npc.name] kept [npc.her] [npc.legs] pressed together while [npc2.namePos] slid [npc.her] [npc2.cock+] in and out of the crevice that was formed.");
+								sb.append((performer.isAsleep()?"仍在沉睡中":"表现得像一个无生命的性爱玩偶")
+										+"，[npc.name]把[npc.legs]继续[npc.Name]并到一起，以便[npc2.name]用[npc2.her][npc2.cock+]在形成的缝隙中进进出出。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2491,15 +2491,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Pushing [npc.her] [npc.legs] together, [npc.name] got [npc2.name] to slide [npc2.her] [npc2.cock+] in and out of the crevice that was formed.");
+										sb.append("[npc.name]把[npc.legs]并到一起，以便[npc2.name]用[npc2.her][npc2.cock+]在形成的缝隙中进进出出。");
 										break;
 									case SUB_RESISTING:
-										sb.append("Although [npc.she] tried to resist, [npc.name] had [npc.her] [npc.legs] pushed together and was then thigh-fucked by [npc2.namePos] [npc2.cock+].");
+										sb.append("尽管[npc.name]试图抵抗，但[npc.her]的[npc.legs]还是被并到一起，被[npc2.namePos][npc2.cock+]素股。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] thrust between [npc.namePos] thighs.");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]插入[npc.namePos]的股间");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2507,16 +2507,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] [npc2.sexPaceVerb] thrust [npc2.her] [npc2.cock+] into the cleft between [npc.namePos] thighs.");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，[npc2.sexPaceVerb]将[npc2.her][npc2.cock+]插入了[npc.namePos]股间的缝隙。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" Sobbing and crying, [npc2.name] did [npc2.her] best to pull away from [npc.name], but ended up being held in place and having [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.name]呜咽并哭泣着，尽全力从[npc.Name]身边逃开，但最终还是被固定在原位，被迫使用[npc2.her]的[npc2.cock]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] thigh-fucking [npc.name].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]素股[npc.Name]。");
 						}
 						break;
 					case TAIL:
@@ -2539,9 +2539,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "armpits";
+				return "腋窝";
 			}
-			return "armpits";
+			return "腋窝";
 		}
 		@Override
 		public boolean isFree(GameCharacter owner) {
@@ -2578,16 +2578,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to molest [npc.her] [npc.armpits+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"磨蹭自己[npc.armpits+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to molest [npc.her] [npc.armpits+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"磨蹭自己[npc.armpits+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.armpits+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.armpits+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.armpits+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.armpits+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -2602,8 +2602,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Acting like a lifeless sex toy, [npc.name] remained totally motionless")
-											+" while [npc2.namePos] [npc2.cock+] slid up and down over [npc.her] [npc.armpit+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"同时[npc2.namePos][npc2.cock+]在[npc.her][npc.armpit+]上来回磨蹭");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2611,15 +2611,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Lifting [npc.her] [npc.arm(true)], [npc.name] got [npc2.name] to slide [npc2.her] [npc2.cock+] up and down over [npc.her] [npc.armpit+].");
+										sb.append("[npc.name]把[npc.her]的[npc.arm(true)]提起，以便[npc2.name]用[npc2.her][npc2.cock+]在[npc.her][npc.armpit+]中上下抽送。");
 										break;
 									case SUB_RESISTING:
-										sb.append("Although [npc.she] tried to resist, [npc.name] had [npc.her] [npc.arm(true)] lifted and [npc2.namePos] [npc2.cock+] rubbed up and down over [npc.her] [npc.armpit+].");
+										sb.append("尽管[npc.name]试图反抗，但[npc.her][npc.arm(true)]还是被强行提起，[npc2.namePos][npc2.cock+]在[npc.her][npc.armpit+]间上下磨蹭。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"showed no sign of waking up":"remained totally inanimate")+" as [npc2.she] kept [npc2.her] [npc2.cock] pressed against [npc.namePos] armpit.");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"没有醒来的迹象":"完全不动")+"，保持[npc2.her]的[npc2.cock]压入[npc.namePos]的腋窝");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2627,16 +2627,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out [npc2.a_moan+], [npc2.name] [npc2.sexPaceVerb] thrust [npc2.her] [npc2.cock+] against [npc.namePos] armpit.");
+										sb.append("[npc2.name]发出[npc2.a_moan+]，[npc2.sexPaceVerb]将[npc2.her][npc2.cock+]压入了[npc.namePos]的腋窝。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" Sobbing and crying, [npc2.name] did [npc2.her] best to pull away from [npc.name], but ended up being held in place and having [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.name]呜咽并哭泣着，尽全力从[npc.Name]身边逃开，但最终还是被固定在原位，被迫使用[npc2.her]的[npc2.cock]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] fucking [npc.namePos] armpit.");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]操干[npc.namePos]的腋窝。");
 						}
 						break;
 					case TAIL:
@@ -2646,8 +2646,8 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] kissed and licked [npc.her] [npc.armpits+].");
+								sb.append((performer.isAsleep()?"[npc.name]仍在沉睡中，没有表现出即将醒来的迹象":"[npc.name]保持一动不动，表现得像一个无生命的性爱玩偶")
+											+"，同时[npc2.name]亲吻并舔舐着[npc.her][npc.armpits+]。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2655,15 +2655,15 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] [npc.sexPaceVerb] pushed [npc.her] [npc.armpits+] into [npc2.namePos] [npc2.face], before getting [npc2.herHim] to start kissing and licking them.");
+										sb.append("[npc.Name][npc.sexPaceVerb]将[npc.armpits+]贴向[npc2.namePos][npc2.face]，让[npc2.herHim]亲吻并舔舐它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to resist, but was unable to stop [npc2.name] from pressing [npc2.her] [npc2.lips] against [npc.her] [npc.armpits+] and starting to kiss and lick them.");
+										sb.append("[npc.Name]试图反抗，但无法阻止[npc2.name]将[npc2.lips]贴向[npc.her][npc.armpits+]并开始亲吻舔舐它们。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.lips+] pressed against [npc.namePos] [npc.armpit].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，[npc2.her][npc2.lips+]继续压入[npc.namePos]的[npc.armpit]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2671,16 +2671,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out muffled [npc2.moans], [npc2.name] pressed [npc2.her] [npc2.lips+] against [npc.namePos] [npc.armpits+] and continued to [npc2.sexPaceVerb] kiss them.");
+										sb.append("[npc2.name]发出低沉的[npc2.moans]，将[npc2.her][npc2.lips+]贴向[npc.namePos][npc.armpits+]，[npc2.sexPaceVerb]亲吻它们。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried to resist, but [npc2.was] unable to stop [npc.name] from pushing [npc.her] [npc.armpits+] against [npc2.her] [npc2.lips+].");
+										sb.append("[npc2.Name]试图反抗，但无法阻止[npc.name]将[npc.armpits+]贴上[npc2.her][npc2.lips+]。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] kissing [npc.namePos] [npc.armpits+].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]亲吻[npc.namePos][npc.armpits+]。");
 						}
 						break;
 				}
@@ -2697,9 +2697,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "vaginal urethra";
+				return "阴道尿道";
 			}
-			return "urethra";
+			return "尿道";
 		}
 		@Override
 		public boolean isFree(GameCharacter owner) {
@@ -2735,16 +2735,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.vaginaUrethra+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.vaginaUrethra+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.vaginaUrethra+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.vaginaUrethra+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.vaginaUrethra+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.vaginaUrethra+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.vaginaUrethra+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.vaginaUrethra+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -2760,7 +2760,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.cock+] thrust deep into [npc.her] [npc.vaginaUrethra+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.cock+]深入[npc.her][npc.vaginaUrethra+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2768,17 +2768,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Rubbing [npc.her] [npc.labia+] over the [npc2.cockHead+] of [npc2.namePos] [npc2.cock],"
-												+ " [npc.name] [npc.sexPaceVerb] bucked [npc.her] [npc.hips] and forced [npc2.herHim] to penetrate [npc.her] [npc.vaginaUrethra+].");
+										sb.append("[npc.name]用[npc.labia+]在[npc2.namePos]的[npc2.cock][npc2.cockHead+]上摩擦，"
+												+ "[npc.sexPaceVerb]摇晃着[npc.hips]，强迫[npc2.name]插入[npc.her][npc.vaginaUrethra+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.cock] into [npc.her] pussy's [npc.vaginaUrethra+] and start fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.cock]插入[npc.her]阴部[npc.vaginaUrethra+]并开始操[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.vaginaUrethra+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.cock]继续填满[npc.namePos][npc.vaginaUrethra+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2786,23 +2786,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.cock+] into [npc.namePos] [npc.vaginaUrethra+], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fucked [npc.herHim].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.cock+]插入[npc.namePos][npc.vaginaUrethra+]，[npc2.she]开始操[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.cock] out of [npc.namePos] [npc.vaginaUrethra],"
-												+ " and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.cock]从[npc.namePos]的[npc.vaginaUrethra]撤出来，但失败了，"
+												+ "只能一边哭泣一边被迫看着自己的[npc2.cock]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] fucking [npc.namePos] [npc.vaginaUrethra].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]操[npc.namePos]的[npc.vaginaUrethra]。");
 						}
 						break;
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tail+] thrust deep into [npc.her] [npc.vaginaUrethra+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tail+]深入[npc.her][npc.vaginaUrethra+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2810,16 +2810,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tail+], [npc.name] rubbed it up and down over [npc.her] [npc.labia+] before making [npc2.herHim] penetrate and start tail-fucking [npc.her] [npc.vaginaUrethra+].");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tail+]，在[npc.her][npc.labia+]上下摩擦，让[npc2.Name]插入并开始尾交[npc.her][npc.vaginaUrethra+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tail+] into [npc.her] pussy's [npc.vaginaUrethra+] and start tail-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail+]插入[npc.her]阴部[npc.vaginaUrethra+]并开始尾交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.vaginaUrethra+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tail]继续填满[npc.namePos][npc.vaginaUrethra+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2827,22 +2827,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tail] into [npc.namePos] [npc.vaginaUrethra], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tail-fucked [npc.name].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tail]插入[npc.namePos]的[npc.vaginaUrethra]，[npc2.she]开始尾交[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tail] out of [npc.namePos] [npc.vaginaUrethra], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tail]从[npc.namePos]的[npc.vaginaUrethra]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tail]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tail-fucking [npc.namePos] [npc.vaginaUrethra].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]尾交[npc.namePos]的[npc.vaginaUrethra]。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tentacle+] thrust deep into [npc.her] [npc.vaginaUrethra+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tentacle+]深入[npc.her][npc.vaginaUrethra+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2850,16 +2850,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tentacle+], [npc.name] rubbed it up and down over [npc.her] [npc.labia+] before making [npc2.herHim] penetrate and start tentacle-fucking [npc.her] [npc.vaginaUrethra+].");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tentacle+]，在[npc.her][npc.labia+]上下摩擦，让[npc2.Name]插入并开始触手交[npc.her][npc.vaginaUrethra+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tentacle+] into [npc.her] pussy's [npc.vaginaUrethra+] and start tentacle-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle+]插入[npc.her]阴部[npc.vaginaUrethra+]并开始触手交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.vaginaUrethra+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tentacle]继续填满[npc.namePos][npc.vaginaUrethra+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2867,16 +2867,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tentacle] into [npc.namePos] [npc.vaginaUrethra], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tentacle-fucked [npc.name].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tentacle]插入[npc.namePos]的[npc.vaginaUrethra]，[npc2.she]开始触手交[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tentacle] out of [npc.namePos] [npc.vaginaUrethra], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tentacle]从[npc.namePos]的[npc.vaginaUrethra]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tentacle]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tentacle-fucking [npc.namePos] [npc.vaginaUrethra].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]触手交[npc.namePos]的[npc.vaginaUrethra]。");
 						}
 						break;
 					case TONGUE:
@@ -2895,9 +2895,9 @@ public enum SexAreaOrifice implements SexAreaInterface {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
 			if(standardName) {
-				return "penile urethra";
+				return "阴茎尿道";
 			}
-			return "urethra";
+			return "尿道";
 		}
 		@Override
 		public boolean isFree(GameCharacter owner) {
@@ -2933,16 +2933,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.penisUrethra+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.penisUrethra+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.penisUrethra+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.penisUrethra+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.penisUrethra+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.penisUrethra+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.penisUrethra+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.penisUrethra+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -2958,7 +2958,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.cock+] thrust deep into [npc.her] [npc.penisUrethra+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.cock+]深入[npc.her][npc.penisUrethra+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -2966,17 +2966,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Rubbing the [npc2.cockHead+] of [npc2.namePos] [npc2.cock] over the tip of [npc.her] own,"
-												+ " [npc.name] [npc.sexPaceVerb] bucked [npc.her] [npc.hips] forwards and forced [npc2.herHim] to penetrate [npc.her] [npc.penisUrethra+].");
+										sb.append("[npc.name]将[npc2.namePos]的[npc2.cock][npc2.cockHead+]在自己的龟头上摩擦，"
+												+ "[npc.sexPaceVerb]向前摇动[npc.hips]，强迫[npc2.name]插入[npc.her][npc.penisUrethra+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.cock] into [npc.her] cock's [npc.penisUrethra+] and start fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.cock]插入[npc.her]阴茎[npc.penisUrethra+]并开始操[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.penisUrethra+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.cock]继续填满[npc.namePos][npc.penisUrethra+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -2984,23 +2984,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.cock+] into [npc.namePos] [npc.penisUrethra+], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fucked [npc.herHim].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.cock+]插入[npc.namePos][npc.penisUrethra+]，[npc2.she]开始操[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.cock] out of [npc.namePos] [npc.penisUrethra],"
-												+ " and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.cock]从[npc.namePos]的[npc.penisUrethra]撤出来，但失败了，"
+												+ "只能一边哭泣一边被迫看着自己的[npc2.cock]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] fucking [npc.namePos] [npc.penisUrethra].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]操[npc.namePos]的[npc.penisUrethra]。");
 						}
 						break;
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tail+] thrust deep into [npc.her] [npc.penisUrethra+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tail+]深入[npc.her][npc.penisUrethra+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -3008,17 +3008,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tail+],"
-												+ " [npc.name] rubbed it up and down over the [npc.cockHead+] of [npc.her] [npc.cock] before making [npc2.herHim] penetrate and start tail-fucking [npc.her] [npc.penisUrethra+].");
+										sb.append("[npc.Name]握住[npc2.namePos][npc2.tail+]，"
+												+ "在[npc.her]的[npc.cock][npc.cockHead+]上下摩擦，让[npc2.Name]插入并开始尾交[npc.her][npc.penisUrethra+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tail+] into [npc.her] cock's [npc.penisUrethra+] and start tail-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail+]插入[npc.her]阴茎[npc.penisUrethra+]并开始尾交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.penisUrethra+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tail]继续插入[npc.namePos][npc.penisUrethra+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -3026,22 +3026,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tail] into [npc.namePos] [npc.penisUrethra], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tail-fucked [npc.name].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tail]插入[npc.namePos][npc.penisUrethra]，[npc2.she]开始尾交[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tail] out of [npc.namePos] [npc.penisUrethra], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tail]从[npc.namePos]的[npc.penisUrethra]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tail]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tail-fucking [npc.namePos] [npc.penisUrethra].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]尾交[npc.namePos]的[npc.penisUrethra]。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tentacle+] thrust deep into [npc.her] [npc.penisUrethra+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tentacle+]深入[npc.her][npc.penisUrethra+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -3049,17 +3049,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tentacle+],"
-												+ " [npc.name] rubbed it up and down over the [npc.cockHead+] of [npc.her] [npc.cock] before making [npc2.herHim] penetrate and start tentacle-fucking [npc.her] [npc.penisUrethra+].");
+										sb.append("[npc.Name]握住[npc2.namePos][npc2.tentacle+]，"
+												+ "在[npc.her]的[npc.cock][npc.cockHead+]上下摩擦，让[npc2.Name]插入并开始触手交[npc.her][npc.penisUrethra+]。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tentacle+] into [npc.her] cock's [npc.penisUrethra+] and start tentacle-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle+]插入[npc.her]阴茎[npc.penisUrethra+]并开始触手交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.penisUrethra+].");
+								sb.append("[npc2.Name]"+(target.isAsleep()?"保持沉睡着":"继续表现的像个任人摆布的性玩具")
+										+"并保持完全不动，同时[npc2.her]的[npc2.tentacle]继续填满[npc.namePos][npc.penisUrethra+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -3067,16 +3067,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tentacle] into [npc.namePos] [npc.penisUrethra], [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tentacle-fucked [npc.name].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tentacle]插入[npc.namePos]的[npc.penisUrethra]，[npc2.she]开始触手交[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tentacle] out of [npc.namePos] [npc.penisUrethra], and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tentacle]从[npc.namePos]的[npc.penisUrethra]撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tentacle]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] tentacle-fucking [npc.namePos] [npc.penisUrethra].");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]触手交[npc.namePos]的[npc.penisUrethra]。");
 						}
 						break;
 					case TONGUE:
@@ -3094,7 +3094,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 			true) {
 		@Override
 		public String getName(GameCharacter owner, boolean standardName) {
-			return "spinneret";
+			return "丝囊";
 		}
 		@Override
 		public boolean isFree(GameCharacter owner) {
@@ -3136,16 +3136,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 				//TODO Improve
 				if(targetArea.isPenetration()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] used [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.spinneret+].");
+						sb.append("[npc.Name][npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.spinneret+]。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] using [npc.her] own "+targetArea.getName(performer)+" to fuck [npc.her] [npc.spinneret+].");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]用[npc.her]自己的"+targetArea.getName(performer)+"操干自己[npc.spinneret+]。");
 					}
 				}
 				if(targetArea.isOrifice()) {
 					if(pastTense) {
-						sb.append("[npc.Name] [npc.sexPaceVerb] pressed [npc.her] [npc.spinneret+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.Name][npc.sexPaceVerb]将自己[npc.spinneret+]压向自己的"+targetArea.getName(performer)+"。");
 					} else {
-						sb.append("[npc.NameIs] [npc.sexPaceVerb] pressing [npc.her] [npc.spinneret+] against [npc.her] own "+targetArea.getName(performer)+".");
+						sb.append("[npc.NameIs]正[npc.sexPaceVerb]将自己[npc.spinneret+]压向自己的"+targetArea.getName(performer)+"。");
 					}
 				}
 			}
@@ -3157,7 +3157,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case FINGER:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] pushed [npc2.her] [npc2.fingers+] deep into [npc.her] spinneret.");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.fingers+]深入[npc.her]的丝囊不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -3166,16 +3166,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_NORMAL:
 									case DOM_ROUGH:
 										sb.append("Taking hold of [npc2.namePos] [npc2.hand+],"
-												+ " [npc.name] rubbed [npc2.her] [npc2.fingers+] up and down over [npc.her] spinneret before making [npc2.herHim] slip them inside and start fingering [npc.her] web-spinning orifice.");
+												+ "用[npc2.fingers+]在[npc.her]的丝囊上下摩擦，然后让它们滑入并开始指交[npc.her]的丝囊穴。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.fingers+] into [npc.her] spinneret and start fingering [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.fingers+]插入[npc.her]的丝囊并开始指交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
 								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.fingers] shoved deep in [npc.namePos] [npc.spinneret+].");
+										+"并保持完全不动，同时将[npc2.her]那[npc2.fingers]继续深入[npc.namePos][npc.spinneret+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -3183,17 +3183,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] curling [npc2.her] [npc2.fingers] up inside [npc.namePos] spinneret, [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fingered [npc.herHim].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.fingers]插入[npc.namePos]的丝囊，[npc2.she]指交[npc.name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.fingers] out of [npc.namePos] spinneret,"
+										sb.append("[npc2.Name]试图将[npc2.fingers]从[npc.namePos]的丝囊撤出来，但失败了，"
 												+ " and could do nothing but cry as [npc2.she] was forced to finger [npc.herHim] against [npc2.her] will.");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] fingering [npc.namePos] spinneret.");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]指交[npc.namePos]的丝囊。");
 						}
 						break;
 					case FOOT:
@@ -3201,7 +3201,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case PENIS:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.cock+] thrust deep into [npc.her] [npc.spinneret+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.cock+]深入[npc.her][npc.spinneret+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -3209,17 +3209,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Rubbing [npc.her] spinneret over the [npc2.cockHead+] of [npc2.namePos] [npc2.cock],"
-												+ " [npc.name] [npc.sexPaceVerb] bucked [npc.her] [npc.hips] and forced [npc2.herHim] to penetrate [npc.her] web-spinning orifice.");
+										sb.append("[npc.name]用丝囊在[npc2.namePos]的[npc2.cock][npc2.cockHead+]上摩擦，"
+												+ "[npc.sexPaceVerb]摇晃着[npc.hips]，强迫[npc2.name]插入[npc.her]的丝囊穴。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.cock] into [npc.her] spinneret and start fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.cock]推入[npc.her]的丝囊并开始操[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
 								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.cock] hilted in [npc.namePos] [npc.spinneret+].");
+										+"并保持完全不动，同时[npc2.her]的[npc2.cock]继续填满[npc.namePos][npc.spinneret+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -3227,10 +3227,10 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.cock+] into [npc.namePos] spinneret, [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] fucked [npc.herHim].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.cock+]插入[npc.namePos]的丝囊，[npc2.she]开始操[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.cock] out of [npc.namePos] spinneret, and could do nothing but cry as [npc2.she] had [npc2.her] [npc2.cock] used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.cock]从[npc.namePos]的丝囊撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.cock]被使用。");
 										break;
 								}
 							}
@@ -3242,7 +3242,7 @@ public enum SexAreaOrifice implements SexAreaInterface {
 					case TAIL:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tail+] thrust deep into [npc.her] [npc.spinneret+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tail+]深入[npc.her][npc.spinneret+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -3250,16 +3250,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tail+], [npc.name] rubbed it up and down over [npc.her] spinneret before making [npc2.herHim] penetrate and start tail-fucking [npc.her] web-spinning orifice.");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tail+]，在[npc.her]的丝囊上下摩擦，让[npc2.Name]插入并开始尾交[npc.her]的丝囊穴。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tail+] into [npc.her] spinneret and start tail-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tail+]插入[npc.her]的丝囊并开始尾交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
 								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tail] hilted in [npc.namePos] [npc.spinneret+].");
+										+"并保持完全不动，同时[npc2.her]的[npc2.tail]继续填满[npc.namePos][npc.spinneret+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -3267,22 +3267,22 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tail] into [npc.namePos] spinneret, [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tail-fucked [npc.name].");
+										sb.append("[npc2.name][npc2.SexPaceVerb]将[npc2.tail]插入[npc.namePos]的丝囊，[npc2.she]开始尾交[npc.Name]，发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tail] out of [npc.namePos] spinneret, and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tail]从[npc.namePos]的丝囊撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tail]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] having [npc.her] spinneret tail-fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]尾交丝囊。");
 						}
 						break;
 					case TENTACLE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
-								sb.append("Remaining "+(performer.isAsleep()?"asleep":"motionless")+", [npc.name] didn't react at all as [npc2.namePos] [npc2.tentacle+] thrust deep into [npc.her] [npc.spinneret+].");
+								sb.append("[npc.name]保持"+(performer.isAsleep()?"沉睡着":"一动不动")+"，对[npc2.name]将[npc2.her][npc2.tentacle+]深入[npc.her][npc.spinneret+]不起任何反应。");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -3290,16 +3290,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("Taking hold of [npc2.namePos] [npc2.tentacle+], [npc.name] rubbed it up and down over [npc.her] spinneret before making [npc2.herHim] penetrate and start tentacle-fucking [npc.her] web-spinning orifice.");
+										sb.append("[npc.name]握住[npc2.namePos][npc2.tentacle+]，在[npc.her]的丝囊上下摩擦，让[npc2.Name]插入并开始触手交[npc.her]的丝囊穴。");
 										break;
 									case SUB_RESISTING:
-										sb.append("[npc.Name] tried to struggle free, but was unable to stop [npc2.name] from pushing [npc2.her] [npc2.tentacle+] into [npc.her] spinneret and start tentacle-fucking [npc.herHim].");
+										sb.append("[npc.Name]试图挣脱，但无法阻止[npc2.name]将[npc2.tentacle+]插入[npc.her]的丝囊并开始触手交[npc.herHim]。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
 								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"continued to act like an inanimate sex toy")
-										+", and remained totally motionless while keeping [npc2.her] [npc2.tentacle] hilted in [npc.namePos] [npc.spinneret+].");
+										+"并保持完全不动，同时[npc2.her]的[npc2.tentacle]继续填满[npc.namePos][npc.spinneret+]。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -3307,23 +3307,23 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" [npc2.SexPaceVerb] thrusting [npc2.her] [npc2.tentacle] into [npc.namePos] spinneret, [npc2.name] [npc2.was] soon [npc2.moaning] in delight as [npc2.she] tentacle-fucked [npc.name].");
+										sb.append("[npc2.Name][npc2.sexpaceVerb]将[npc2.tentacle]插入[npc.namePos]的丝囊，开始触手交[npc.Name]，并发出了愉悦的[npc2.moaning]。");
 										break;
 									case SUB_RESISTING:
-										sb.append(" [npc2.Name] tried, and failed, to pull [npc2.her] [npc2.tentacle] out of [npc.namePos] spinneret, and could do nothing but cry as [npc2.she] had it used against [npc2.her] will.");
+										sb.append("[npc2.Name]试图将[npc2.tentacle]从[npc.namePos]的丝囊撤出来，但失败了，只能一边哭泣一边被迫看着自己的[npc2.tentacle]被使用。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc.NameIs] [npc.sexPaceVerb] having [npc.her] spinneret tentacle-fucked by [npc2.name].");
+							sb.append("[npc.NameIs][npc.sexPaceVerb]被[npc2.name]触手交丝囊。");
 						}
 						break;
 					case TONGUE:
 						if(pastTense) {
 							if(isCharacterInanimate(performer)) {
 								sb.append((performer.isAsleep()?"Remaining deeply asleep, [npc.name] showed no sign of being close to waking up":"Continuing to act like an inanimate sex doll, [npc.name] kept perfectly still ")
-											+" while [npc2.name] performed oral on [npc.her] web-spinning orifice.");
+											+"，同时[npc2.name]对[npc.her]的丝囊穴口交");
 							} else {
 								switch(performerPace) {
 									case DOM_GENTLE:
@@ -3331,16 +3331,16 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append("[npc.Name] pushed [npc.her] spinneret against [npc2.namePos] [npc2.face], before [npc.sexPaceVerb] making [npc2.herHim] start performing oral on [npc.her] web-spinning orifice.");
+										sb.append("[npc.name][npc.sexPaceVerb]将丝囊贴向[npc2.namePos]的[npc2.face]，让[npc2.name]开始口交[npc.her]的丝囊穴。");
 										break;
 									case SUB_RESISTING:
 										sb.append("[npc.Name] tried to resist,"
-												+ " but [npc.was] unable to stop [npc2.name] from pressing [npc2.her] [npc2.face] against [npc.her] spinneret and then start performing oral on [npc.her] web-spinning orifice.");
+												+ "但无法阻止[npc2.name]将[npc2.face]贴向[npc.her]的丝囊并开始口交[npc.her]的丝囊穴。");
 										break;
 								}
 							}
 							if(isCharacterInanimate(target)) {
-								sb.append(" [npc2.Name] "+(target.isAsleep()?"remained deeply asleep":"remained totally motionless")+" while keeping [npc2.her] [npc2.tongue] thrust into [npc.namePos] [npc.spinneret+].");
+								sb.append("[npc2.Name] "+(target.isAsleep()?"保持深度睡眠":"保持完全不动")+"，将[npc2.her]的[npc2.tongue]伸入[npc.namePos][npc.spinneret+]里。");
 							} else {
 								switch(targetPace) {
 									case DOM_GENTLE:
@@ -3348,17 +3348,17 @@ public enum SexAreaOrifice implements SexAreaInterface {
 									case SUB_EAGER:
 									case SUB_NORMAL:
 									case DOM_ROUGH:
-										sb.append(" Letting out a series of [npc2.moans+], [npc2.name] [npc2.sexPaceVerb] pressed [npc2.her] [npc2.lips+] against [npc.namePos] spinneret and continued performing oral on [npc.herHim].");
+										sb.append("[npc2.name]发出一连串[npc2.moans+]，[npc2.sexPaceVerb]将[npc2.lips+]贴向[npc.namePos]的丝囊并开始口交[npc.herHim]。");
 										break;
 									case SUB_RESISTING:
 										sb.append(" [npc2.Name] tried to resist,"
-												+ " but [npc2.was] unable to stop [npc.name] from planting [npc.her] spinneret over [npc2.her] [npc2.face] and [npc.sexPaceVerb] forcing [npc2.herHim] to perform oral on [npc.herHim].");
+												+ "但无法阻止[npc.Name]将丝囊压向[npc2.her]的[npc2.face]并开始[npc.sexPaceVerb]强迫[npc2.herHim]口交。");
 										break;
 								}
 							}
 							
 						} else {
-							sb.append("[npc2.NameIs] [npc2.sexPaceVerb] performing oral on [npc.namePos] spinneret.");
+							sb.append("[npc2.NameIs][npc2.sexPaceVerb]对[npc.namePos]的丝囊口交。");
 						}
 						break;
 				}

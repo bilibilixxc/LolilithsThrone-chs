@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>35</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Ewe's Brew]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Ewe's Brew]]></namePlural>
-		<description><![CDATA[A small glass bottle filled with a light brownish-yellow liquid. The label on the front simply declares it to be 'Ewe's Brew', and you have to look over the list of ingredients to discover that it's a type of dandelion tea, made from both the leaves and flower of the plant.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[母羊酿]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[母羊酿]]></namePlural>
+		<description><![CDATA[一个小玻璃瓶里装满了淡棕黄色的液体。瓶子正面的标签上简单地标明这是 "母羊酿"，仔细查看配料表才发现这是一种蒲公英茶，由蒲公英的叶子和花制成。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A soothing wave of arcane energy washes over [npc.name]...
+				一股丝滑的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -51,10 +51,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After first unscrewing the cap, [npc.name] [npc.verb(bring)] the glass bottle of Ewe's Brew up to [npc.her] [npc.mouth]. Tilting [npc.her] head back, [npc.she] [npc.verb(start)] drinking the cool liquid, and [npc.is] very pleased to discover that it has a delicate, floral taste with a slight sweetness to it.
+		首先拧开瓶盖后，[npc.name]把母羊酿的玻璃瓶送到[npc.her]的嘴边。仰起头，[npc.she]开始喝这冰凉的液体，很高兴地发现它有着淡雅的花香味，还带有一丝甜味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After first unscrewing the cap, [npc.name] [npc.verb(bring)] the glass bottle of Ewe's Brew up to [npc2.namePos] waiting [npc2.lips]. Tilting [npc2.her] head back, [npc2.she] [npc2.verb(start)] drinking the cool liquid, and [npc2.is] very pleased to discover that it has a delicate, floral taste with a slight sweetness to it.
+		首先拧开瓶盖后，[npc.name]把母羊酿的玻璃瓶送到[npc2.namePos]等待[npc2.lips]前。仰起头，[npc2.she]开始喝这冰凉的液体，很高兴地发现它有着淡雅的花香味，还带有一丝甜味。
 		]]></otherUse>
 	</useDescriptions>
 

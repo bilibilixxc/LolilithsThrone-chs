@@ -53,8 +53,8 @@ public class SlimeRoyalGuard extends NPC {
 	}
 	
 	public SlimeRoyalGuard(boolean isImported) {
-		super(isImported, new NameTriplet("Maximilian", "Max", "Maxine"), "Lunettemartu",
-				"An incredibly rare and powerful demonic slime, [npc.name] prides [npc.herself] on [npc.her] skill with the sword.",
+		super(isImported, new NameTriplet("马克西米连", "马克斯", "玛可辛"), "露内特马尔图",
+				"相当少见且能力不俗的恶魔史莱姆，[npc.name]自诩其剑术高超。",
 				35, Month.APRIL, 14,
 				20, Gender.M_P_MALE, Subspecies.DEMON, RaceStage.GREATER,
 				new CharacterInventory(false, 10), WorldType.SLIME_QUEENS_LAIR_FIRST_FLOOR, PlaceType.SLIME_QUEENS_LAIR_ROYAL_GUARD, true);
@@ -83,7 +83,7 @@ public class SlimeRoyalGuard extends NPC {
 					PersonalityTrait.CONFIDENT);
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.5.9")) {
-			this.setSurname("Lunettemartu");
+			this.setSurname("露内特马尔图");
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.9.1")) {
 			this.setStartingBody(false);
@@ -326,14 +326,14 @@ public class SlimeRoyalGuard extends NPC {
 	@Override
 	public Response endCombat(boolean applyEffects, boolean victory) {
 		if (victory) {
-			return new Response("Victorious", "[slimeRoyalGuard.Name] is defeated!", SlimeQueensLair.SLIME_ROYAL_GUARD_COMBAT_PLAYER_VICTORY) {
+			return new Response("胜利", "[slimeRoyalGuard.Name]被打败了！", SlimeQueensLair.SLIME_ROYAL_GUARD_COMBAT_PLAYER_VICTORY) {
 				@Override
 				public void effects() {
 					Main.game.getDialogueFlags().setFlag(DialogueFlagValue.slimeRoyalGuardDefeated, true);
 				}
 			};
 		} else {
-			return new Response ("Defeated", "[slimeRoyalGuard.name] has defeated you!", SlimeQueensLair.SLIME_ROYAL_GUARD_COMBAT_PLAYER_DEFEAT);
+			return new Response ("被击败", "[slimeRoyalGuard.name]打败了你！", SlimeQueensLair.SLIME_ROYAL_GUARD_COMBAT_PLAYER_DEFEAT);
 		}
 	}
 	

@@ -63,15 +63,15 @@ public class Vronti extends NPC {
 	}
 	
 	public Vronti(boolean isImported) {
-		super(isImported, new NameTriplet("Vronti"), "Grigori",
-				"The older brother of the only two centaurs brave enough to keep their Dominion-to-Elis transport business running, Vronti has the body of a Greek god, and a stern, stoic personality to match.",
+		super(isImported, new NameTriplet("弗洛狄"), "格里戈里",
+				"弗洛狄有着希腊神一般强健的体魄与严峻坚忍的性格，是英勇无畏，维护御城区到伊利斯运输业务的半人马兄妹中的哥哥。",
 				29, Month.AUGUST, 15,
 				20, Gender.M_P_MALE, Subspecies.CENTAUR, RaceStage.PARTIAL_FULL,
 				new CharacterInventory(false, 10),
 				WorldType.EMPTY, PlaceType.GENERIC_HOLDING_CELL,
 				true);
 		
-		this.setGenericName("muscular centaur");
+		this.setGenericName("肌肉发达的半人马");
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA["MFD DSG Plumbing Supply" is printed on the grip.]]></authorTag>
+		<authorTag><![CDATA[握把上印着“由 DSG管道 生产供应”的字样。]]></authorTag>
 		
 		<value>100</value> 
 		
@@ -9,23 +9,23 @@
 		
 		<twoHanded>false</twoHanded>
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name><![CDATA[cardboard sword]]></name>
+		<name><![CDATA[纸板剑]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[cardboard swords]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[纸板剑]]></namePlural> 
 		
-		<description><![CDATA[With a blade of cardboardium alloy folded a thousand times over and a hilt of finest PVC pipe, this sword is light and well-balanced. You'd be hard pressed to do any real damage with it though.]]></description> 
+		<description><![CDATA[这把剑轻便又平衡，使用多次折叠的硬纸板作为剑身并用PVC管作为剑柄和剑格。不过你很难用它造成伤害。]]></description> 
 		
-		<attackDescriptor>Swing</attackDescriptor>
+		<attackDescriptor><![CDATA[挥舞]]></attackDescriptor>
 		
-		<attackTooltipDescription>Hit [npc2.name] with your cardboard sword.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[你用纸板剑砍向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>UNCOMMON</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(draw)] [npc.her] cardboard sword.]]></equipText>
+		<equipText><![CDATA[[npc.Name]拔出了[npc.her]的纸板剑。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] cardboard sword away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]收起纸板剑。]]></unequipText>
 		
 		<imageName>cbsword.svg</imageName> 
 		
@@ -46,7 +46,7 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[Makes the wielder look like a dork...]]></effect>
+			<effect><![CDATA[这让持有者看起来像个傻子……]]></effect>
 		</extraEffects>
 		
 		<onHitEffect/>
@@ -69,13 +69,13 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] sword at [npc2.name]! The edge of the mighty cardboardium blade makes contact with [npc2.namePos] aura, draining a minuscule amount of energy.
+		[npc.Name]挥剑刺向[npc2.name]！巨大纸板剑的边缘与[npc2.namePos]的灵气发生碰撞，但只消磨掉了它微小的能量。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] sword at [npc2.name] but an errant current of air causes [npc.her] to miss...
+		[npc.Name]向[npc2.name]挥出一剑，但一阵意外的气流使[npc.her]失手了……
 		]]></missText>
 	</missDescriptions>
 	

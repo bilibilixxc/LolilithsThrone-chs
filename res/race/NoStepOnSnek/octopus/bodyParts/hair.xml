@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <hair>
 	<race>NoStepOnSnek_octopus</race>
-	<transformationName><![CDATA[octopus]]></transformationName>
+	<transformationName><![CDATA[章鱼]]></transformationName>
 	<coveringType>NoStepOnSnek_octopus_hair</coveringType>
 	<tags>
 		<tag>HAIR_HANDLES_IN_SEX</tag>
 	</tags>
-	<determiner><![CDATA[a mass of]]></determiner>
-	<name><![CDATA[tentacle]]></name>
-	<namePlural pluralByDefault="true"><![CDATA[tentacles]]></namePlural>
+	<determiner><![CDATA[浓密]]></determiner>
+	<name><![CDATA[触手]]></name>
+	<namePlural pluralByDefault="true"><![CDATA[触手]]></namePlural>
 	<descriptorsMasculine>
-		<descriptor>squishy</descriptor>
-		<descriptor>floppy</descriptor>
+		<descriptor><![CDATA[黏糊]]></descriptor>
+		<descriptor><![CDATA[下垂]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>squishy</descriptor>
-		<descriptor>floppy</descriptor>
+		<descriptor><![CDATA[黏糊]]></descriptor>
+		<descriptor><![CDATA[下垂]]></descriptor>
 	</descriptorsFeminine>
 	<transformationDescription><![CDATA[
-		The transformation only lasts a matter of moments, leaving [npc.herHim] with decorative tentacles. Much to [npc.her] disappointment, [npc.she] [npc.does] not have any significant control over them.
-		<br/>[npc.Name] now [npc.has] [npc.hairColour] [style.boldOctopus(tentacles)].
+		转化仅持续了很短的时间，便得到了无法控制的装饰性触手，这令[npc.her]非常失望。
+		<br/>[npc.Name]现在拥有[npc.hairColour][style.boldOctopus(触手)]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.hairDeterminer] [npc.hairLength], [npc.hairColour(true)], octopus-like tentacles
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.hairDeterminer]的[npc.hairLength]章鱼触手
+]]></bodyDescription>
 </hair>

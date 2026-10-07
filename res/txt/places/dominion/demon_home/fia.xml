@@ -1,415 +1,415 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		Knowing that Fia is going to be in one of the many bars near here, you start to walk up and down the street, peering through windows as you search for her. After just a few minutes, you see the reporter in an upmarket cocktail bar with a drink in her hand. Entering the establishment, you [pc.walk] over to the bar and say hello to your friend.
+		你知道菲亚会出现在附近众多酒吧中的一家里，便开始在街上走来走去，透过窗户寻找她。几分钟后，你在一家高档鸡尾酒吧看到了手里拿着一杯酒的记者。你进入酒吧，[pc.walk]过去向你的朋友打招呼。
 	</p>
 	<p>
-		[fia.speech([pc.Name]!)] she happily greets you with a big smile on her face. Gesturing for you to sit down, she calls out to the donkey-boy barman, [fia.speech(Hey, Frank! Put another whiskey on my tab, would you?)]
+		[fia.speech([pc.Name]！)]她脸上挂着灿烂的笑容，高兴地向你打招呼。她示意你坐下，然后对驴男酒保喊道，[fia.speech(嘿，弗兰克！再给我上一杯威士忌，好吗？)]
 	</p>
 	<p>
-		As you sit down next to Fia, a glass of whiskey is placed down on the bartop in front of you. Thanking her for the drink, you ask her how she's been.
+		你坐在菲亚旁边，一杯威士忌被放在你面前的吧台上。你向她道谢，并问她最近怎么样。
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_inky_obtained))
 		<p>
-			[fia.speech(I'm doing great, thanks,)] she happily replies. Taking a sip of her own whiskey, she asks, [fia.speech(So, what's up?)]
+			[fia.speech(一切都好，谢谢，)]她高兴地回答。她品了一口自己的威士忌，问道，[fia.speech(那么，有什么事吗？)]
 		</p>
 	#ELSE
 		<p>
-			[fia.speech(Well, I've been kind of scared of Sae as I thought she'd try to get revenge on me. I've been hiding from her by staying with some family, which was fun,)] she replies, before revealing, [fia.speech(Thankfully my editor went and spoke to Sae on my behalf, and apparently she isn't at all interested in getting revenge on me, so I've moved back to my apartment. My editor's the best ever. Oh! That reminds me! She made something for you!)]
+			[fia.speech(好吧，我有点怕赛拉，因为我觉得她会报复我。我一直躲着她，和家人住在一起，这倒也还算有趣，)]她回答道，然后说，[fia.speech(多亏了我的编辑替我去找赛拉谈话了，显然她对报复我毫无兴趣，所以我又搬回了原先的住处。我的编辑是最棒的。哦！这提醒我了！她还给你留了点东西！)]
 		</p>
 		<p>
-			You're surprised to hear that Fia's editor has sent you a gift, and watch with curiosity as Fia reaches into her hoodie's pocket and pulls out a small object. As she presents it to you, you see that the gift is a fancy-looking fountain pen.
+			你惊讶于菲亚的编辑给你留了礼物，便好奇地看着菲亚将手伸进连帽衫的口袋，掏出一个小物件。她把小物件递给你，你发现礼物是一支看起来花里胡哨的钢笔。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="LEAVE"><![CDATA[
 	<p>
-		Feeling like you've spent enough time with Fia, you tell her that it was nice seeing her again, but you've got places to be.
+		你感觉已经跟菲亚待得足够久了，于是告诉她能跟她再见面很开心，但你有别的地方要去。
 	</p>
 	<p>
-		[fia.speech(It was great seeing you too, [pc.name],)] she replies with a smile on her face. Finishing off the last of her drink, she says, [fia.speech(I'd better get going now too. I've got some leads to follow up on.)]
+		[fia.speech(能见到你我也很开心，[pc.name]，)]她脸上挂起了笑容，随后将杯中的液体一饮而尽，说道，[fia.speech(我也得走了，我还有一些线索需要跟进。)]
 	</p>
 	<p>
-		The two of you exit the bar together, and after saying a final goodbye, you set off in different directions. Wandering down the street past Lovienne's Luxuries, you wonder what to do now...
+		你俩一起离开酒吧，最终道别后，向不同方向出发了。你沿街路过洛维耶纳奢侈品店，考虑着接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TALK_SMALL_TALK"><![CDATA[
 	<p>
-		Wanting to take this opportunity to just relax for a while and make some small talk, you tell Fia that you approve of her hangout spot.
+		你想借此机会放松一下，聊聊天，便告诉菲亚你喜欢她选的聚会地点。
 	</p>
 	<p>
-		[fia.speech(Yeah, the bars around here are great,)] she replies, [fia.speech(I've got loads of contacts in Demon Home, so hanging out in these places is as much work as it is pleasure.)]
+		[fia.speech(是啊，这附近的酒吧很棒，)]她回答道，[fia.speech(我在恶魔之家有很多联系人，所以在这里聚会既是工作也是享受。)]
 	</p>
 	<p>
-		From there, the two of you talk about Demon Home and Dominion in general, before sharing some experiences you've recently had in the city. The time flies by as you talk, and before you know it you've spent almost half an hour chatting with one another.
+		自此你们两人谈论起了恶魔之家和御城区的总体情况，然后分享了你们最近在这座城市的一些经历。时间在交谈中飞逝而过，不知不觉中你们已经聊了将近半个小时了。
 	</p>
 	<p>
-		Although not much of substance was said by either of you, you feel like the two of you have got to know each other a little better. As Fia pauses to take a sip of her drink, you wonder what to say next...
+		虽然你们俩都没有说什么实质性的东西，但感觉更加了解对方了。菲亚停下来喝了一口饮料，你思索接下来该说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TALK_BACKGROUND"><![CDATA[
 	<p>
-		Curious to hear more about Fia's background, you ask her how she came to be a reporter.
+		你好奇地想了解更多菲亚的过往，于是问她是如何成为一名记者的。
 	</p>
 	<p>
-		[fia.speech(Well, my first job was as a barmaid in one of the bars on the other side of Demon Home,)] she reveals, [fia.speech(I loved getting stories out of the customers, and after a while I decided to write a book about all the fun things I'd heard. Well, it turns out that nobody wants to publish demons' spicy secrets and risk pissing off an important succubus, so that went nowhere. After getting rejected by every publisher in the Realm, I decided to try my luck at the offices of The Octogram Herald.)]
+		[fia.speech(我的第一份工作是在恶魔之家另一边的一家酒吧当酒吧女侍，)]她说，[fia.speech(我喜欢从顾客那里听故事，过了一段时间，我决定把我听到的所有有趣的事情写一本书。结果呢，没人愿意冒着惹怒魅魔的风险公开恶魔的秘辛，所以我就没干成。在被王国的所有发行商拒绝后，我决定去《八角星先驱报》碰碰运气。)]
 	</p>
 	<p>
-		Recognising that name as that of the only newspaper in Dominion, you can guess the rest of Fia's story, and ask her if that's when she was hired as a journalist.
+		你认出这个是御城区唯一一家报社的名字，可以猜到菲亚接下来的故事，并问她是否从那时起被雇为记者。
 	</p>
 	<p>
-		[fia.speech(That's right,)] she replies, [fia.speech(They were so impressed with all the gossip and contacts I'd gathered that I was offered a job as a permanent reporter on the affairs of Demon Home. And I've been working there ever since!)]
+		[fia.speech(没错，)]她回答道，[fia.speech(我的情报收集与人脉给他们留下了深刻印象，于是我得到了一份工作，成为报道恶魔之家有关绯闻的常驻记者。从那以后我就一直在那里工作！)]
 	</p>
 	<p>
-		With Fia's history now revealed, you wonder what to ask her about next...
+		菲亚的过往已被揭露，你思考接下来该问她什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TALK_NEWSPAPER"><![CDATA[
 	<p>
-		From what you've gathered during your time in Dominion, the newspaper which Fia works for is the only official source of news for the city. Wanting to find out more about what it's like to work for such a company, you ask the reporter what she can tell you about it.
+		根据你在御城区这段时间的了解，菲亚工作的那家报社是这座城市唯一的官方新闻来源。你想了解更多她在这家报社工作的情况，于是问她能不能告诉你些什么。
 	</p>
 	<p>
-		[fia.speech(Well, everyone's heard of The Octogram Herald, of course, but I guess not many people know what it's really like,)] she muses, before revealing, [fia.speech(I'm an investigate reporter who specialises in Demon Home, but there are loads of different departments, and our editor oversees all of them. She's super nice and works non-stop, and even though she's one of the highest-ranking lilin in all the Realm, she really cares about us and takes the time to get to know us all. Anyway, it's thanks to her high status that we're able to publish negative stories about demons.)]
+		[fia.speech(好吧，每个人都听说过《八角星先驱报》，当然，但我想没有多少人知道它到底是什么样的，)]她沉思着，然后透露道，[fia.speech(我是一名专门报道恶魔之家的记者，但我们有很多不同的部门，我们的编辑负责所有部门。她超级好，时刻不停地工作，尽管她是全王国最高级别的莉琳之一，但她真的很关心我们，花时间去了解我们所有人。总之，多亏了她地位很高，我们才得以发表关于恶魔的负面报道。)]
 	</p>
 	<p>
-		You're surprised to hear that the Realm's official news source is printing stories that show demons in a bad light, and express this to Fia.
+		你很惊讶听到王国的官方新闻来源正在印刷一些关于恶魔的负面报道，你也这样对菲亚说了。
 	</p>
 	<p>
-		[fia.speech(Well, it's really only lilin and Lilith herself who are off-limits,)] she says,
+		[fia.speech(其实只有莉琳和莉莉丝才是报道禁区，)]她说道，
 		#IF(pc.getRace()==RACE_DEMON)
-			 [fia.speech(You're a demon, so you know how it is. You get access to better jobs and everyone respects you a lot more than other races, but that doesn't make you immune to criticism. So long as we take care not to print anything that might be construed as sedition, we can expose demons' crimes and unfair dealings. In fact, sometimes my editor specifically asks me to dig up a story about a certain demon.)]
+			[fia.speech(你是恶魔，所以你知道是怎么回事。你有机会得到更好的工作，每个人都比其他种族更尊重你，但这并不能让你免受批评。只要我们注意不发表任何可能被视为煽动叛乱的东西，我们就可以揭露恶魔的罪行和不公平交易。事实上，有时我的编辑会特别让我挖掘一个关于某个恶魔的故事。)]
 		#ELSE
-			 [fia.speech(Sure, demons get access to better jobs and everyone respects them a lot more, but that doesn't make them immune to criticism. So long as we take care not to print anything that might be construed as sedition, we can expose demons' crimes and unfair dealings. In fact, sometimes my editor specifically asks me to dig up a story about a certain demon.)]
+			[fia.speech(当然，恶魔可以获得更好的工作，每个人都更尊重他们，但这并不能使他们免受批评。只要我们注意不发表任何可能被视为煽动叛乱的东西，我们就可以揭露恶魔的罪行和不公平交易。事实上，有时我的编辑会特别让我挖掘一个关于某个恶魔的故事。)]
 		#ENDIF
 	</p>
 	<p>
-		It sounds like the lilin editor of The Octogram Herald is using the newspaper to influence demon politics. Wondering if there's anything else you can find out about it, you ask Fia what other kind of stories they work on.
+		听起来像是《八角星先驱报》的恶魔编辑在利用报纸影响恶魔政治。你还想再发掘点什么，便问菲亚工作中还有发生什么故事。
 	</p>
 	<p>
-		[fia.speech(Just the usual sort of stuff,)] she replies. After taking a sip of her drink, she finishes by saying, [fia.speech(I don't really get involved with any of the other departments, so I can't tell you much.)]
+		[fia.speech(只有平平无奇的东西，)]菲亚喝了一口饮料，继续说完，[fia.speech(我和其他部门都没什么关系，所以我告诉不了你太多。)]
 	</p>
 	<p>
-		It seems like Fia doesn't really have much else to say about her newspaper...
+		看来菲亚对她的报纸没什么可说的了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="TALK_STORIES"><![CDATA[
 	<p>
-		After finishing the story about Saellatrix and her sex doll factory, you wonder if Fia's already working on something else, and so you ask her what she's investigating at the moment.
+		赛拉特里克斯和她的性爱玩偶工厂的故事结束后，你想知道菲亚是不是已经在做别的事情了，于是问她现在正在调查什么。
 	</p>
 	<p>
-		[fia.speech(I've got a few leads on some scandals involving demons, but nothing even close to what Sae was up to,)] she reveals, before suddenly asking, [fia.speech(Hey, have you ever been down to Submission?)]
+		[fia.speech(我得到了一些关于恶魔的丑闻线索，但都不及赛拉的事劲爆，)]她透露道，然后突然问道，[fia.speech(嘿，你曾经到过屈城区吗？)]
 	</p>
 	<p>
-		You tell Fia that you've been down to Submission multiple times, and have experienced enough dark, dangerous tunnels to last you a lifetime.
+		你告诉菲亚自己多次去过屈城区，并且走过足够多黑暗而危险的隧道，足以让你终生难忘。
 	</p>
 	<p>
-		[fia.speech(That's great!)] she happily exclaims, before explaining, [fia.speech(Look, I only work here in Demon Home, but my editor's asked everyone to try and get some stories on Submission. Apparently there's a growing interest in what's happening beneath our feet, but we haven't really got anything to report on from down there. If you've got some juicy stories to share, I can pay you five thousand flames for each of them. Or perhaps...)]
+		[fia.speech(那可太好了！)]她开心地大叫起来，接着解释道，[fia.speech(听着，我只在恶魔之家找报道，但我的编辑让每个人都试着在屈城区找点文章。显然，人们对我们脚下发生的事情越来越感兴趣，但我们还没有什么可以报道的。要是你有什么有趣的故事要分享，每个故事可以付给你五千火币。或者……)]
 	</p>
 	<p>
-		Fia's words trail off, and she flashes you a rather seductive smile. Playfully teasing one of her fingers through her [fia.hairColour] hair, she gives you a smouldering look and lewdly suggests,
+		菲亚话音减弱，朝你魅惑一笑。她的手指玩弄着自己那[fia.hairColour]头发，她给你一个隐晦的眼神，下流地暗示道，
 		#IF(fia.getTotalTimesHadSex(pc)>0)
-			 [fia.speech(Perhaps instead of money you'd like to fuck me like you did back in Sae's factory... I can't stop thinking about that, you know...)]
+			[fia.speech(也许比起钱，你更愿意操我，就像你在赛拉的工厂里那样……我一直在想那件事，你知道吧……)]
 		#ELSE
-			 [fia.speech(Perhaps instead of money you'd like to fuck me...)]
+			[fia.speech(也许比起钱，你更愿意操我……)]
 		#ENDIF
 	</p>
 	<p>
-		Picking up her glass, Fia takes a sip of her drink and gives you a big smile as she waits to hear what you'll say next...
+		菲亚拿起杯子，喝了一口她的饮料，给了你一个大大的微笑，等着听你接下来要说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WHISKEY_SIP"><![CDATA[
 	<p>
 		[style.random(
-		Taking this opportunity to relax and have a drink, you take a sip of your whiskey while Fia makes some small talk about how her day's been.
+		趁此机会放松一下，喝上一杯，你抿了一口威士忌，菲亚则聊了聊她今天过得怎么样。
 		|
-		Turning your attention to the drink that's in front of you, you take a sip of whiskey while Fia tells you about what she's been up to today.
+		你把注意力转向你面前的酒，你抿了一口威士忌，菲亚告诉你她今天做了什么。
 		|
-		Picking up your glass of whiskey, you take a sip and relax as Fia idly talks about some of the things she's been up to today.
+		你拿起威士忌喝了一口，放松一下，菲亚则悠闲地谈论她今天所做的事。
 		)]
 	</p>
 	<p style='text-align:center;'><i>
 		#IF(flags.getSavedLong('fia_whiskey_sips')==1)
-			Your glass is still mostly full...
+			你的杯子基本上还是满的……
 		#ELSEIF(flags.getSavedLong('fia_whiskey_sips')==2)
-			You've still got a lot of whiskey left in your glass...
+			你的杯子里还剩了很多威士忌……
 		#ELSEIF(flags.getSavedLong('fia_whiskey_sips')==3)
-			Your glass is less than half-full now...
+			你的杯子现在还不到半满……
 		#ELSEIF(flags.getSavedLong('fia_whiskey_sips')==4)
-			You've only got a little whiskey left in your glass...
+			你的杯子里只剩下一点威士忌了……
 		#ELSE
-			[style.colourMinorBad(Your glass is now empty...)]
+			[style.colourMinorBad(你的杯子现在是空的……)]
 		#ENDIF
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WHISKEY_ORDER"><![CDATA[
 	<p>
-		As your whiskey has run out, you get the attention of the donkey-boy barman and order another drink. As Fia paid for your first drink, you offer to return the favour and buy a drink for her, but she lifts up her half-full glass and smiles to indicate that she doesn't need another one.
+		你的威士忌喝完了，便召来了驴男酒保，又点了一杯。菲亚为你付了第一杯酒的钱，所以你提出要回报她，也为她买一杯酒，但她举起半满的酒，微笑着表示她不打算再喝了。
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_fia_bar_alcohol_refused))
 		<p>
-			A moment later, the barman is placing another glass of whiskey down in front of you. With your head starting to spin from the alcohol in your system, it takes you three attempts to slide the glass closer to you. Watching your uncoordinated movements, the barman lets out the briefest of grunts, before shaking his head and saying in a firm tone, [style.speechMasculineHeavy(I can see that you've had enough, so this is your last drink for tonight.)]
+			过了一会儿，酒保又把一杯威士忌放在你面前。你的头开始因酒精作祟而晕头转向，试了三次才把杯子拖到自己身边。酒保看着你不协调的动作，发出了最简短的咕噜声，然后摇了摇头，用坚定的语气说道：[style.speechMasculineHeavy(我看得出来你已经喝够了，所以这是你今晚的最后一杯。)]
 		</p>
 		<p>
-			With that, the donkey-boy turns away and slowly walks down to another part of the bar, leaving you and Fia to continue your conversation in peace.
+			说完，驴男转过身，慢慢地走到吧台的另一边，留下你和菲亚继续平静地交谈。
 		</p>
 	#ELSE
 		<p>
-			A moment later, the barman is placing another glass of whiskey down in front of you. With the briefest of nods, he turns away and slowly walks down to another part of the bar, leaving you and Fia to continue your conversation in peace.
+			过了一会儿，酒保又把一杯威士忌放在你面前。他简单点了点头，转身慢慢地走到吧台的另一边，留下你和菲亚继续平静地交谈。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="STORY_SLIME_QUEEN"><![CDATA[
 	<p>
-		Deciding to tell Fia one of your stories from Submission, you ask her if she's heard of the slime queen, Catherine, before.
+		你决定给菲亚讲一个你在屈城区里的故事，问她以前是否听说过史莱姆女王凯瑟琳。
 	</p>
 	<p>
-		[fia.speech(Oh, right, I heard from an Enforcer that she was behind the increase in slimes, but apparently she's been stopped,)] she says, before asking, [fia.speech(Did you have something to do with that?)]
+		[fia.speech(哦，对，我听一个执法者说她是导致史莱姆增加的主谋，但显然她被阻止了，)]她又问道，[fia.speech(你做了什么吗？)]
 	</p>
 	<p>
 		#IF(flags.hasFlag(FLAG_slimeQueenHelped))
-			Deciding to leave out the part where you chose to assist Catherine instead of putting an end to her activities, you tell Fia the same account which you gave to Claire. 
+			你决定省略你选择帮助凯瑟琳而不是结束她的行为的部分，告诉菲亚你向克莱尔报告的版本。
 		#ELSE
-			Teling Fia that you were the one responsible for putting an end to Catherine's activities, you give her your account of what happened.
+			你告诉菲亚是你终止了凯瑟琳的行为，向她讲述发生了什么。
 		#ENDIF
-		 After discovering that the slime queen was responsible for the aggressive slimes in the tunnels of Submission, you tracker her down to a tower on an island deep within the Bat Caverns. After encountering a pair of slime twins, and then a guard who wielded a fearsome zweihander, you encountered the huge, pink slime queen herself. After defeating her, you returned her crown to Claire as proof of your deed, and with that Catherine's plan to flood Submission with slimes was ended.
+		自从知道屈城区隧道中广布好斗史莱姆的罪魁祸首是史莱姆女王后，你追踪她来到蝙蝠洞穴深处一座岛屿上的塔楼。你先是遇到一对史莱姆双胞胎，然后是一个挥舞着可怕的双手剑的守卫，最后遇到了巨大的粉红色史莱姆女王本人。打败她之后，你把她的王冠还给了克莱尔作为你行动的证明，这样凯瑟琳用史莱姆淹没屈城区的计划就终止了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="STORY_VENGAR"><![CDATA[
 	<p>
-		Wanting to tell Fia a story about Submission, you ask her if she's heard about Vengar's gang before.
+		你想给菲亚讲一个关于屈城区的故事，问她以前是否听说过文加的帮派。
 	</p>
 	<p>
-		[fia.speech(The rat-boy, right?)] she asks. As you give Fia a nod, she recalls, [fia.speech(His gang was raided by SWORD, wasn't it? I'm pretty sure that one of the other departments ran a story on that, but the Enforcers wouldn't share many details... You know something more about it?)]
+		[fia.speech(是那个鼠男吗？)]她问道。你向菲亚点点头，她回忆道，[fia.speech(他的帮派被SWORD突袭了是不是？我很确定其他部门也报道过这件事，但执法者不愿透露太多细节……你知道更多细节吗？)]
 	</p>
 	<p>
-		Telling Fia that you were the one responsible for bringing Vengar down, you wait while she fishes her notepad and pen out of her hoodie's pocket before launching into your story. Beginning with your encounter with Roxy in Axel's gambling den, you describe how you set off to the Rat Warrens to put an end to Vengar's extortion of Axel's business.
+		你告诉菲亚是你扳倒了文加，等她从连帽衫口袋里掏出笔记本和笔，你就开始讲述你的故事。从你在阿克塞尔的赌场遇到罗克西开始，你描述了你是如何前往鼠窟、结束文加对阿克塞尔的勒索。
 		#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_VENGAR, QUEST_VENGAR_TWO_ENFORCERS))
-			 Recounting how you used a resonance stone to call for the SWORD Enforcers, you finish your tale by saying that you were assisted by two rat-girls named Shadow and Silence.
+			讲到自己如何使用回声石呼叫SWORD执法者时，你说你得到了影和默两位鼠女的帮助。
 		#ELSEIF(pc.hasQuestInLine(QUEST_LINE_SIDE_VENGAR, QUEST_VENGAR_TWO_COOPERATION))
-			 Recounting how you decided to cooperate with Vengar, you say that 
+			讲到自己如何与文加达成合作， 你说
 			#IF(flags.hasFlag(FLAG_axelSissified))
-				 Axel ended up being feminised before
+				阿克塞尔变得女性化，
 			#ELSE
-				 you and Axel confronted the rat-boy, before
+				你与阿克塞尔一起向鼠男对峙，
 			#ENDIF
-			 SWORD Enforcers launched their raid, and during the chaos you were assisted by two rat-girls named Shadow and Silence.
+			随后SWORD执法者发动了突袭，在混乱中，你得到了影和默两位鼠女的帮助。
 		#ELSE
-			 Recounting how you had to use violence to bring an end to Vengar's reign, you recount how you fought his bodyguards, Shadow and Silence, who later turned out to be working with the SWORD Enforcers.
+			讲到自己不得不使用暴力来结束文加的统治时，你讲述了你如何与他的保镖——影和默战斗，但后来才知道她们其实在和SWORD执法者合作。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="STORY_HLF_BASE"><![CDATA[
 	<p>
-		Thinking that Fia might be interested in hearing about that artificial cave you discovered in the Bat Caverns, you ask her if she's ever heard of crazy people living down there.
+		你认为菲亚可能会对你在蝙蝠洞窟中发现的那个人工洞穴感兴趣，于是你问她是否听说过那里住着疯子。
 	</p>
 	<p>
-		[fia.speech(Crazy people down in the Bat Caverns?)] she wonders out loud, before humming and saying, [fia.speech(Well, there are those bat-morphs who just love talking, and I've heard that there are some weird glowing slimes down there. Why? What did you find?)]
+		[fia.speech(蝙蝠洞窟里有疯子？)]她大声地惊叹，然后沉吟道，[fia.speech(嗯，有些蝙蝠化形就是喜欢说话，而且我听说那里有一些奇怪的发光史莱姆。所以说为什么？你发现了什么？)]
 	</p>
 	<p>
-		You recount how you discovered the lever which granted access to a hidden cave deep within the Bat Caverns, and describe how the derelict interior was on the verge of collapsing. You cautiously travelled through this subterranean lair and discovered a crazy, partially-transformed human who attacked you on sight. The journal which you found after that described a rebellion starting in 1988, and after three years of fighting against the Enforcers, the writer said that a supposed angel named Astrea caused their group to fracture and split apart.
+		你讲述了你如何发现通往蝙蝠洞窟深处隐藏洞穴的拉杆，并描述了内部濒临坍塌的废弃空间。你小心翼翼地穿过这个地下洞穴，发现了一个疯狂的、部分转化的人类，他一见到你就向你攻击。你之后找到的日记里描述了一场始于1988年的叛乱，作者说，在与执法者们战斗了三年后，一个名叫艾斯特莱雅的所谓天使导致他们的团体最终四分五裂。
 	</p>
 	<p>
-		[fia.speech(That must have been from the Fifth Human Rebellion!)] Fia exclaims, [fia.speech(There was still a rebel down there?! It was all way before my time, but in our offices we've got front pages from those times framed and hanging on the walls.)]
+		[fia.speech(那肯定是来自第五次人类叛乱！)]菲亚惊呼道，[fia.speech(那地方还有一个反抗军？！这都是在我出生之前的事了，但在我们的办公室里，我们把那个时代的头版头条都装裱起来挂在墙上。)]
 	</p>
 	<p>
-		With your story not yet finished, you tell Fia that had a narrow escape as you exited the cave, for it completely collapsed right behind you.
+		你的故事还未结束，你告诉菲亚，当你离开洞穴时，洞穴在你身后完全坍塌了，你最终死里逃生。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="STORY_GENERIC"><![CDATA[
 	<p>
-		You don't have any more interesting stories about Submission, but you want to help Fia out, and so you tell her about some of your recent adventures and ask if they're of any use to her.
+		你没有更多关于屈城区的有趣故事了，但你想帮助菲亚，所以你告诉了她最近的一些冒险经历并询问它们是否对她有帮助。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="INKY"><![CDATA[
 	<p>
-		Taking the pen from her, you turn it over in your [pc.hands] and take a closer look at it. The quality is immediately apparent, and you get the feeling that it's a very expensive item of stationary. As you start to thank Fia, you suddenly detect a tiny tremor of arcane power, and so after expressing your gratitude, you make the comment that there's something more to this pen than meets the eye. 
+		你从她手中接过笔，放在[pc.hands]中仔细地看了看。这支笔的质量显而易见，想必是一件非常昂贵的文具。在感谢菲亚的时候，突然感觉到一股微弱的神秘力量在颤抖。所以在表达了感激之后，你又评论说这支笔绝没有看上去那么简单。
 	</p>
 	<p>
-		[fia.speech(That's right! I was wondering if you could tell, but I guess nothing gets past you, huh?)] she laughs, before revealing, [fia.speech(I don't think I've told you before, but my editor's a lilin; she's a daughter of the elder lilins Lovienne and Lirecea. So, as you'd guess, she's pretty amazing at harnessing the arcane. After I told her about what we went through in the sex doll factory, she made a dozen of those pens and gave them to all of us investigative reporters. If we get in trouble, we can use the pen's enchantment to help us out!)]
+		[fia.speech(没错！我在想你能不能辨别出来呢，但果然是逃不过你的眼睛吧？)]她笑了笑，接着表示，[fia.speech(我之前应该没告诉过你，我的编辑是一位莉琳；她是莉琳长老洛维耶纳和莉琳长老莉瑞恰的女儿。所以，正如你所想，她驾驭奥术的能力十分精湛。在我把我们在性爱玩偶工厂遇到的事情告诉她之后，她立刻做了一打这样的笔，给了所有的调查记者。如果我们遇到危险，可以使用笔上的附魔逃出生天！)]
 	</p>
 	<p>
-		Pulling off the cap, you take a closer look at the nib and then within the cap itself. Although you can still faintly detect an arcane presence within the pen, there's nothing about it to suggest that it'd be of any use in a fight.
+		你拔掉笔帽，仔细端详了一会儿笔尖，然后又看向笔帽内部。虽然此时仍然可以隐约感觉到其中的奥术气息，但没有任何迹象表明它在战斗中会派上用场。
 	</p>
 	<p>
-		[fia.speech(I'll tell you how to use it, but don't activate it in here, ok?)] Fia says, [fia.speech(So, all you need to do is twist the cap three times and then pull it off. When that happens, an arcane entity gets summoned which will distract anyone who's harassing or attacking you. As you'd expect from a daughter of Lirecea, who from what I hear spends all of her time in the form of an octopus-girl, the arcane entity looks like a little octopus. She named them all 'Inky', and they're kind of lewd, but I guess that's what's to be expected from a lilin, right?)]
+		[fia.speech(我会告诉你怎么用的，但别在这个地方激活，好吗？)]菲亚说道，[fia.speech(总之，你只需要将笔帽转动三次，然后拔下来就好了。这个时候，就会召唤出一个奥术实体，将骚扰或攻击你的家伙引开。据我所知，莉瑞恰的女儿应该一直保持着章鱼女的形态，既然是她的东西，奥术实体像章鱼也很正常。她把这些奥术实体统一叫做‘墨墨’，可能会有点色，但毕竟是莉琳手上的，对吧？)]
 	</p>
 	<p>
-		Telling Fia to pass your thanks along to her editor, you put the pen somewhere safe and make a mental note to take a closer look at it later.
+		你让菲亚替你向编辑道个谢，接着就把钢笔保存在了安全的位置，心中默默记下过后要再仔细观察一下。
 	</p>
 	<p>
-		[fia.speech(So, what's up?)] she happily asks as she takes a sip of her drink.
+		[fia.speech(所以，怎么样？)]她喝了一口，接着乐呵呵地问道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STORY_END"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_fia_stories_complete))
 		<p>
-			[fia.speech(Well, there's no doubt that you have a lot of interesting stories,)] Fia says, but then with a shake of her head she sighs, [fia.speech(I'm sorry, but they're not enough for me to write an article on. I can't offer you the five thousand flames for this, but I wouldn't want you to leave empty-handed...)]
+			[fia.speech(好吧，毫无疑问你有很多有趣的故事，)]菲亚说，但随后又摇摇头叹了口气，[fia.speech(很抱歉，但它们不足以让我写一篇文章。我不能为此给你五千火币，但我也不希望你空手而归……)]
 		</p>
 		<p>
-			Fia's slender fingers are suddenly tracing over your hips, and with a little giggle she teases, [fia.speech(How about the two of us have some fun together? This place has a couple of rooms to rent for customers who need some privacy...)]
+			菲亚纤细的手指突然抚上你的臀部，她咯咯地笑着挑逗道，[fia.speech(我们两个一起找点乐子怎么样？这里有几间房可以出租给需要私人空间的顾客……)]
 		</p>
 	#ELSE
 		<p>
-			[fia.speech(This is gold! It's exactly the sort of story which I was looking for,)] Fia happily exclaims as she finishes jotting down all the details in her notebook. Suddenly giving you a sly look, she teases, [fia.speech(So, do you want the five thousand flames? Or is it me that you want instead? This place has a couple of rooms to rent for customers who need some privacy...)]
+			[fia.speech(这真是太棒了！这正是我要找的故事，)]菲亚高兴地大叫，她把所有细节都记在了笔记本上。她突然狡黠地看了你一眼，调侃道，[fia.speech(那么，你想要五千火币吗？还是说你想要的是我？这里有几间房可以出租给需要私人空间的顾客……)]
 		</p>
 		<p>
-			Fia's slender fingers are suddenly tracing over your hips, and with a little giggle she playfully bites her lip and waits to hear what reward you'll choose...
+			菲亚纤细的手指突然抚上你的臀部，她咯咯地笑着，顽皮地咬着嘴唇，等着听你会选择什么奖励……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STORY_SEX_DECLINED"><![CDATA[
 	<p>
-		You don't really want to have sex with Fia, and so turn her down by saying that you've got somewhere else to be tonight. Playfully pouting at you, she whines, [fia.speech(Aww... Well, maybe next time then?)]
+		你并非真的想和菲亚做爱，所以拒绝了，说你今晚有别的地方要去。她俏皮地撅着嘴，呜呜地叫着，[fia.speech(啊~那下次吧？)]
 	</p>
 	<p>
-		Giving her a non-committal response, you stand up and say that it was nice seeing her again.
+		你不置可否，站起身说能再见面很不错。
 	</p>
 	<p>
-		[fia.speech(It was great seeing you too, [pc.name],)] she replies with a smile on her face. Finishing off the last of her drink, she says, [fia.speech(I guess I should get going now too. I've got some leads to follow up on.)]
+		[fia.speech(能再见面真的很开心，[pc.name]，)]她笑着回答。她喝干了最后一滴，开口道，[fia.speech(我想我该走了。还有些线索要跟进。)]
 	</p>
 	<p>
-		The two of you exit the bar together, and after saying a final goodbye, you set off in different directions. Wandering down the street past Lovienne's Luxuries, you wonder what to do now...
+		你俩一起离开酒吧，最终道别后，向不同方向出发了。你沿街路过洛维耶纳奢侈品店，考虑着接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="STORY_REWARD_FLAMES"><![CDATA[
 	<p>
-		Finding the five thousand flames to be the more attractive reward, you tell Fia that you'd like the money. Smirking as she places the coins down on the bar in front of you, she teases, [fia.speech(Well, maybe next time you'll choose me?)]
+		你觉得五千火币更有吸引力，便告诉菲亚你想要这笔钱。她把硬币放在你面前的吧台上，挑逗道，[fia.speech(好吧，也许你下次就选我了呢？)]
 	</p>
 	<p>
-		Giving her a non-committal response, you pocket the money and ask her what she's planning to do for the rest of the evening.
+		你不置可否，把钱装进口袋，问她晚上剩下的时间打算做什么。
 	</p>
 	<p>
-		Finishing off the last of her drink, she says, [fia.speech(Well, I've got some leads to follow up on, and I should go and get this story of yours written up, so I'd better be going.)]
+		菲亚喝完了酒，说道，[fia.speech(我有一些线索要跟进，还得去把你的故事写下来，所以我得走了。)]
 	</p>
 	<p>
-		With your companion leaving, you decide to head out as well, and so the two of you exit the bar together. After saying goodbye, you each set off in different directions. Wandering down the street past Lovienne's Luxuries, you wonder what to do now...
+		你的同伴离开了，你决定也出去，所以你们俩一起离开了酒吧。告别之后，你们各自向不同的方向出发了。你漫步在街上，经过洛维耶纳奢侈品店，思索现在该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="SEX_OPTIONS"><![CDATA[
 	<p>
-		Knowing exactly which reward you'd prefer, you tell Fia that you can't resist her sexy body. Finishing off her drink, she jumps to her feet and grabs your [pc.arm(true)] before giggling, [fia.speech(I was hoping you'd choose me! Come on, [pc.name]!)] 
+		你很清楚自己想要哪种奖励，于是告诉菲亚，你无法抗拒她性感的身体。她喝完最后一口，然后跳过来抱住你的[pc.arm(true)]，咯咯笑着说，[fia.speech(我正希望着你会选我呢！来吧，[pc.name]！)]
 	</p>
 	<p>
-		Telling the barman to put the room's rent on her tab, Fia leads you through a door and up a flight of stairs. Pushing open another door, she pulls you into an average-sized bedroom that's light on furnishings but clean and tidy. The king-sized bed has red sheets and heart-shaped pillows, and there's a bowl of condoms on the bedside table.
+		菲亚告诉酒保把房费记在她账上，然后领着你穿过一扇门，走上楼梯。她推开另一扇门，把你拉进一间中等大小的卧室，里面的家具很少，但干净又整洁。特大号的床上铺着红色的床单和心形枕头，床头柜上放着一碗避孕套。
 	</p>
 	<p>
-		Locking the door behind you, Fia kicks off her boots and skips forwards to excitedly jump onto the bed. Turning to face you with a huge smile on her face, she says, [fia.speech(You can fuck me however you like, but my pussy is off-limits! I'm saving my virginity, and all this immediately ends if you even try to touch it!)]
+		菲亚在你身后锁上门，踢掉靴子，兴奋地向前跳上床。她转过身来，脸上带着灿烂的笑容，说道，[fia.speech(你可以随心所欲地操我，但小穴是禁区！我得留着我的第一次，哪怕你只是想触摸它，那今晚也就到此为止！)]
 	</p>
 	<p>
-		With that rule having been clearly expressed, Fia pulls off her hoodie and tank top, leaving her wearing just her sports bra, daisy dukes, and socks. Continuing to smile, she waits to see what you'll do with her...
+		明确了这一规则后，菲亚脱下了连帽衫和背心，只穿着运动胸罩、牛仔热裤和袜子。她继续微笑着，期待着你会对她做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SEX_OPTIONS_TAKE_CONDOMS"><![CDATA[
 	<p>
-		Wanting to be prepared for what's about to happen, you quickly grab a few condoms from one of the bowls beside the bed...
+		你为接下来的事情做好准备，也是迅速从床边的碗里拿了几个避孕套……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="FIA_SEX_START"><![CDATA[
 	<p>
-		Eager to get things started, you join Fia on the bed and dominantly pull her into you as she giggles and plants a kiss on your [pc.lips+]. After lustfully grinding her body against your for a moment, she lies back on the bed and giggles, [fia.speech(Fuck me, [pc.name]!)]
+		你迫不及待地想要开始，跟着菲亚上了床，不由分说地把她拉进怀中，她笑得花枝乱颤，在你[pc.lips+]上留下了一吻。她也故意把身子朝你身上贴，过了一会儿又躺倒在床上，笑道，[fia.speech(来操我啊，[pc.name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="FIA_SEX_START_INTERCRURAL"><![CDATA[
 	<p>
-		The fact that she doesn't want her pussy penetrated just makes Fia's virgin cunt even more enticing, and so you tell her that you want to fuck her tight, wet twat more than anything else.
+		菲亚并不想被插入，但这反而让这处女穴更加诱人，你便跟她讲，你真的好想操她又紧又湿的小穴，别的什么也不想要了。
 	</p>
 	<p>
-		[fia.speech(Absolutely not,)] she firmly replies, before flashing you a smirk and saying, [fia.speech(But if you're so desperate to fuck me... Get your cock out.)]
+		[fia.speech(绝对不行，)]她语气坚决，随后又抛出一抹坏笑，说道，[fia.speech(但既然你急成这个样子……那把鸡巴掏出来吧。)]
 	</p>
 	<p>
-		Hoping that she's going to let you take her virginity, you quickly present Fia with your erect cock as she pulls off her daisy dukes and boyshorts and throws them over to one side of the room. Pushing herself up onto all fours, she wiggles her ass at you and giggles, [fia.speech(You're not going to fuck me, but I'll let you pretend. Bring that cock over here.)]
+		你以为是她愿意让你拿走她的处女了，便立马把挺立的肉棒竖在她的面前，她也脱下牛仔热裤和平角裤，随手丢到房间一侧。她用四肢撑起身体，朝着你扭了扭屁股，咯咯笑道，[fia.speech(你不能操我，但我会让你假装操到的。把鸡巴拿过来。)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			Swiftly mounting Fia,
+			你迅速骑上菲亚，
 		#ELSE
-			Swiftly dropping down behind Fia,
+			你迅速在菲亚身后跪下，
 		#ENDIF
-		 you line your cock up to her virgin cunt, but before you can even think of penetrating her, she reaches back with one hand and firmly grabs your rock-hard shaft. With your dick now completely under her control, Fia playfully slides the [pc.cockHead+] of your cock up and down over her [fia.labia+], moaning as she does so, [fia.speech(You want my hot little pussy? Your cock feels good rubbing against my virgin cunt? Sorry, [pc.name]... You can't have it! But here's the next best thing...)]
+		用肉棒对准了她的处女穴，但你还没来得及冒出要插入的念头，她便伸出一只手来，攥住了你剪影的肉竿。顿时你的鸡巴就任由她摆弄了，菲亚挑逗似的引着你[pc.cockHead+]沿着她[fia.labia+]上下滑动，呻吟声随之冒出，[fia.speech(你很想要我这枚小穴吗？蹭过我处女穴的感觉舒服吗？真抱歉，[pc.name]……你得不到的！但我还有更棒的东西……)]
 	</p>
 	<p>
-		Moving her knees together so that they're touching, Fia's thighs are squished up against each other, and she moves your cock down to the crevice that's formed and loosens her grip. Turned on and desperate to sink your cock into her, you immediately thrust forwards, and as your [pc.cock+] pushes in-between Fia's soft thighs, you feel her wet pussy kissing the top of your shaft. Trusting you not to penetrate her pussy, Fia lets go of your cock, and as you continue fucking her thighs, she lewdly moans,
+		菲亚合拢膝盖，大腿自然也贴合在一起，接着她把你的肉棒移动到刚刚形成的缝隙前，便松开了手。你早就按捺不住，想把鸡巴插进去了，于是立刻朝前一顶，将[pc.cock+]推入了菲亚柔软的大腿肉之间，顿时感到湿润的小穴跟肉棒的上部已经紧贴着了。菲亚也很相信你不会插进小穴里，便任由你活动，你则继续在大腿中抽插，她同时淫荡地呻吟着，
 		#IF(game.isAnalContentEnabled())
-			 [fia.speech(~Mmm!~ If this isn't enough for you, then just stick it in my ass!)]
+			[fia.speech(~姆嗯！~如果这还不够的话，那就插进我的屁股来吧！)]
 		#ELSE
-			 [fia.speech(~Mmm!~ If this isn't enough for you, then you can always just fuck my throat!)]
+			[fia.speech(~姆嗯！~如果这还不够的话，那嘴巴也随便你操啊！)]
 		#ENDIF
 	</p>
 	<p>
-		Keeping Fia's offer in mind, you decide to continue fucking her thighs for the time being...
+		你记下了菲亚的邀请，但决定暂时还是继续操她的大腿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
 		#IF(fia.isSatisfiedFromLastSex())
-			[fia.speech(Fuck, that was amazing,)] Fia sighs as she collapses back onto the bed, panting for breath.
+			[fia.speech(操，这可太棒了，)]菲亚长叹一声，瘫倒在床上，大口喘着气。
 		#ELSE
-			[fia.speech(You could have at least tried to satisfy me, [pc.name],)] Fia complains as you bring an end to the sex.
+			[fia.speech(你至少也该努力一下吧，[pc.name]，)]见你就这样结束，菲亚抱怨起来。
 		#ENDIF
 	</p>
 	<p>
-		After taking a couple of minutes to recover, the two of you get your things back in order, and as you look at the mess the two of you have made of the bed, Fia says, [fia.speech(The cleanup cost is included in what I paid to rent this room, so just leave it.)]
+		恢复了几分钟后，你们两个开始穿戴衣物，看着床上弄出来的一团糟，菲亚说道，[fia.speech(清洁费已经包含在房租里的，没事。)]
 	</p>
 	<p>
-		After pulling on her boots and hoodie, your companion is once again fully dressed, and happily skips over to the door. As you join her, she unlocks it and leads you back down to the bar.
+		你的同伴穿上靴子，穿上连帽衫，重新穿戴整齐，开开心心地跳到了门口。你也跟了上去，她把门解锁，带着你重新回到酒馆。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_END"><![CDATA[
 	<p>
-		Having had a lot of fun with her, you tell Fia that it was great seeing her again, and you hope to catch her here again some other time.
+		你和菲亚尽情爽过一番，告诉她能再次见面真的很好，希望之后有机会再见。
 	</p>
 	<p>
-		[fia.speech(It was great seeing you too, [pc.name],)] she replies with a smile on her face. Accompanying you as you head over to the door, she says, [fia.speech(I've got some leads to follow up on tonight... My work never ends!)]
+		[fia.speech(能再见面真是棒极了，[pc.name]，)]她笑着回答。她陪你走到门口，开口道，[fia.speech(我今晚有些线索要追查……工作总是那么多！)]
 	</p>
 	<p>
-		The two of you exit the bar together, and after saying a final goodbye, you set off in different directions. Wandering down the street past Lovienne's Luxuries, you wonder what to do now...
+		你俩一起离开酒吧，最终道别后，向不同方向出发了。你沿街路过洛维耶纳奢侈品店，考虑着接下来做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

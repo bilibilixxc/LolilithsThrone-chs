@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>DOG_MORPH</race>
 	<colour>BASE_WHITE</colour>
@@ -42,48 +42,48 @@
 	<iconName displaySize="80">dalmatianIcon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>dalmatianIcon</bookIconName>
-	<bookName>Canine Culture</bookName>
+	<bookName><![CDATA[犬类文化]]></bookName>
 	<basicDescriptionId>DOG_MORPH_BASIC</basicDescriptionId>
 	<advancedDescriptionId>DOG_MORPH_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[dalmatian-morph]]></name>
-			<namePlural><![CDATA[dalmatian-morphs]]></namePlural>
-			<singularMaleName><![CDATA[dalmatian-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[dalmatian-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[dalmatian-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[dalmatian-girls]]></pluralFemaleName>
+			<name><![CDATA[斑点狗化形]]></name>
+			<namePlural><![CDATA[斑点狗化形]]></namePlural>
+			<singularMaleName><![CDATA[斑点狗男]]></singularMaleName>
+			<singularFemaleName><![CDATA[斑点狗女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[斑点狗男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[斑点狗女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	<nameAnthroSillyMode>
 		<namesDefault>
-			<name><![CDATA[dalmatian-morph]]></name>
-			<namePlural><![CDATA[dalmatian-morphs]]></namePlural>
-			<singularMaleName><![CDATA[dalmatian-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[dalmatian-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[dalmatian-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[dalmatian-girls]]></pluralFemaleName>
+			<name><![CDATA[斑点狗化形]]></name>
+			<namePlural><![CDATA[斑点狗化形]]></namePlural>
+			<singularMaleName><![CDATA[斑点狗男]]></singularMaleName>
+			<singularFemaleName><![CDATA[斑点狗女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[斑点狗男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[斑点狗女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthroSillyMode>
-	<description><![CDATA[A dog-morph which resembles an anthropomorphised dalmatian. They are known as 'dalmatian-morphs' when bipedal, and 'dalmatiantaurs' when the lower body is that of an oversized feral dalmatian. To be identified as a dalmatian-morph, a character must be a dog-morph that has floppy ears and short, white fur, with either black or pitch black spots.]]></description>
+	<description><![CDATA[一种人形的犬化形。双足行走时被称为“斑点狗化形”，下半身是超大兽态斑点狗时则被称为“半斑点狗人”。要被认定为斑点狗化形，角色必须耳朵软软的，毛短而白，有黑色或漆黑的斑点的犬化形。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[hellhound]]></name>
-			<namePlural><![CDATA[hellhounds]]></namePlural>
-			<singularMaleName><![CDATA[hellhound]]></singularMaleName>
-			<singularFemaleName><![CDATA[hellhound]]></singularFemaleName>
-			<pluralMaleName><![CDATA[hellhounds]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[hellhounds]]></pluralFemaleName>
+			<name><![CDATA[地狱猎犬]]></name>
+			<namePlural><![CDATA[地狱猎犬]]></namePlural>
+			<singularMaleName><![CDATA[地狱猎犬]]></singularMaleName>
+			<singularFemaleName><![CDATA[地狱猎犬]]></singularFemaleName>
+			<pluralMaleName><![CDATA[地狱猎犬]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[地狱猎犬]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[dalmatian]]></feralName>
-		<feralNamePlural><![CDATA[dalmatians]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[dalmatian]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[dalmatian]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[dalmatians]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[dalmatians]]></feralPluralFemaleName>
+		<feralName><![CDATA[斑点狗]]></feralName>
+		<feralNamePlural><![CDATA[斑点狗]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[斑点狗]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[斑点狗]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[斑点狗]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[斑点狗]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>75</size>
@@ -95,7 +95,7 @@
 		<fingerActionsAvailable>false</fingerActionsAvailable>
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
-	<statusEffectDescription><![CDATA[[npc.NamePos] dalmatian-like body is strong and full of energy. Friendly and loyal to those [npc.she] [npc.verb(know)] and [npc.verb(trust)], [npc.she] also [npc.has] a strong instinct to guard [npc.her] territory, as well as a natural resistance to fire.]]></statusEffectDescription>
+	<statusEffectDescription><![CDATA[[npc.NamePos]的斑点狗身体强而有力，对了解且信任的对象友善而忠诚，有强烈的领地保卫意识，天然能够抗火。]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="15">MAJOR_PHYSIQUE</attribute>
 		<attribute value="5">RESISTANCE_PHYSICAL</attribute>

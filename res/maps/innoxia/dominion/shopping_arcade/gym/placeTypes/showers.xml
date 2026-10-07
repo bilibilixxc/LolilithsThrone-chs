@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[showers]]></name>
-	<tooltipDescription><![CDATA[Changing rooms and showers link the main area of the gym to the saunas and pool.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the showers at the gym, 'Pix's Playground']]></virginityLossDescription>
+	<name><![CDATA[淋浴间]]></name>
+	<tooltipDescription><![CDATA[更衣室和淋浴间将健身房的主区域与桑拿房和游泳池连接起来。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“皮克斯操练场”健身房的淋浴间内]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

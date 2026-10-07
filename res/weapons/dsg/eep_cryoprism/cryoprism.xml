@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		
-		<authorTag><![CDATA[On the underside of the stock, slightly raised lettering reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在枪托的底部，有几个微微凸起的字：“执法者官方分配，由DSG锻造厂生产。”]]></authorTag>
 	
 		<value>5700</value> 
 		
@@ -10,23 +10,23 @@
 		
 		<twoHanded>true</twoHanded>
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一个]]></determiner>
 		
-		<name><![CDATA[cryoprism gun]]></name>
+		<name><![CDATA[冷冻枪]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[cryoprism guns]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[冷冻枪]]></namePlural> 
 		
-		<description><![CDATA[Having the longest reach in the Enforcer arsenal, the cryoprism gun uses a [style.colourIce(freezing)] [style.colourLegendary(clear demonstone)] as the active medium of an otherwise normal quad-pumped solid state laser. The result turns a mildly annoying laser beam into a powerful freeze ray with a perfectly flat trajectory.]]></description> 
+		<description><![CDATA[冷冻枪在执法者的武器库中拥有最远的射程，它使用[style.colorIce(冷冻)][style.colorLegendary(透明魔石)]作为原本普通的四泵管固体激光器的活性介质。最终将一束稍许恼人的激光束转化成了威力强大、轨迹呈现完美平直的冰冻射线。]]></description> 
 		
-		<attackDescriptor>shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your cryoprism gun.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[你用冷冻枪射击[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>EPIC</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(bring)] out the cryoprism and [npc.verb(turn)] the selector switch to the fire position. There is a brief, unnerving hum as the arcane power source inside comes to life.]]></equipText>
+		<equipText><![CDATA[[npc.Name]掏出冷冻枪，将开关调到发射档。内部的奥术能量源启动，发出了短暂且令人不安的嗡嗡声。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(turn)] the selector switch back to the safe position and [npc.verb(put)] the rifle away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将开关转回了安全档，放下了枪。]]></unequipText>
 		
 		<imageName>cryoprism_safe.svg</imageName> 
 		
@@ -47,18 +47,18 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.boldIce("Freezing Fog")] on critical hit.]]></effect>
+			<effect><![CDATA[暴击附带[style.boldIce(“冻人寒雾”)]效果。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect/>
 		
 		<onCriticalHitEffect><![CDATA[
 		#IF (!npc2.hasStatusEffect(SE_FREEZING_FOG))
-			[##npc2.addStatusEffect(SE_FREEZING_FOG, 4)] A [style.boldIce(freezing fog)] settles around [npc2.name]!
+			[##npc2.addStatusEffect(SE_FREEZING_FOG, 4)]一团[style.boldIce(冻人寒雾)]出现在[npc2.name]身旁！
 		#ELSEIF (npc2.hasStatusEffect(SE_FREEZING_FOG) && !npc2.hasStatusEffect(SE_FROZEN))
 			[##npc2.addStatusEffect(SE_FROZEN, 2)]
 			[##npc2.removeStatusEffect(SE_FREEZING_FOG)]
-			The [style.colourIce(fog)] around [npc2.name] flash-freezes [style.boldIce(thin layer of ice)]!
+			[npc2.name]身旁的[style.colourIce(雾气)]迅速冻结成[style.boldIce(一层薄冰)]！
 		#ENDIF
 		]]></onCriticalHitEffect>
 		
@@ -80,13 +80,13 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. A bright blue beam of light smashes into [npc2.her] aura. A faint trail of snowflakes flutters delicately in the air as the light fades.
+		[npc.name将[npc2.name]列入准心中央，扣动扳机。一道明亮的蓝色光束没入[npc2.her]的灵气中。随着光束的消散，一缕淡淡的雪花优美地在空中飘荡。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The shot goes wide! The beam uselessly creates a large patch of ice some distance away.
+		[npc.name将[npc2.name]列入准心中央，扣动扳机。射线偏离了方向！在远处，出现了一片无用的冰层。
 		]]></missText>
 	</missDescriptions>
 	

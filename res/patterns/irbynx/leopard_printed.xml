@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <pattern>
-	<name><![CDATA[leopard-printed]]></name>
+	<name><![CDATA[花豹纹]]></name>
 	<defaultPattern>true</defaultPattern>
     <patternName>leopard_printed.svg</patternName>
 </pattern>

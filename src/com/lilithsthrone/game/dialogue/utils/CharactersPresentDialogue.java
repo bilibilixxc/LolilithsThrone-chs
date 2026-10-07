@@ -38,7 +38,7 @@ public class CharactersPresentDialogue {
 		} else {
 			CharactersPresentDialogue.characterViewed = (NPC) characterViewed;
 		}
-		menuTitle = "Characters Present ("+Util.capitaliseSentence(CharactersPresentDialogue.characterViewed.getName(true))+")";
+		menuTitle = "在场角色 ("+Util.capitaliseSentence(CharactersPresentDialogue.characterViewed.getName(true))+")";
 		menuContent = ((NPC) CharactersPresentDialogue.characterViewed).getCharacterInformationScreen(true);
 
 		if(Main.game.getPlayer().hasCompanion(CharactersPresentDialogue.characterViewed)) {
@@ -122,20 +122,20 @@ public class CharactersPresentDialogue {
 		public String getResponseTabTitle(int index) {
 			if(Main.game.getPlayer().hasCompanion(characterViewed)) {
 				if(index == 0) {
-					return "Characters";
+					return "特性";
 				} else if(index == 1) {
-					return UtilText.parse("[style.colourSex(Sex)]");
+					return UtilText.parse("[style.colourSex(性交)]");
 				} else if(index == 2) {
-					return UtilText.parse("[style.colourCompanion(Manage)]");
+					return UtilText.parse("[style.colourCompanion(管理)]");
 				}
 				
 			} else {
 				if(index == 0) {
-					return "Characters";
+					return "特性";
 				} else if(index == 1) {
-					return "Sex";
+					return "性技能";
 				} else if(index == 2) {
-					return "Manage";
+					return "管理";
 				}
 			}
 			return null;
@@ -149,7 +149,7 @@ public class CharactersPresentDialogue {
 			
 			if(responseTab==0) {
 				if (index == 0) {
-					return new ResponseEffectsOnly("Back", "Stop viewing the characters present and return to the main game."){
+					return new ResponseEffectsOnly("返回", "停止浏览在场角色并回到游戏。"){
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setManagementCompanion(null);
@@ -159,21 +159,21 @@ public class CharactersPresentDialogue {
 					
 				} else if (index <= charactersPresent.size()) {
 					String title = "[npc.Name]";
-					String description = "Take a detailed look at [npc.name].";
+					String description = "仔细地打量一下[npc.name]。";
 					
 					if(charactersPresent.get(index - 1).equals(characterViewed)) {
 						if(!charactersPresent.get(index - 1).isRaceConcealed() || charactersPresent.get(index - 1).isPlayerKnowsName()) {
 							title = "[style.colourDisabled([npc.Name])]";
-							description = "You are already looking at [npc.name]!";
+							description = "你已经在看[npc.name]了！";
 						}else {
-							title = "[style.colourDisabled(Unknown person)]";
-							description = "You don't know what this person looks like!";
+							title = "[style.colourDisabled(未知人物)]";
+							description = "你不知道这人长什么样！";
 						}
 							
 						
 					} else if(Main.game.getPlayer().hasCompanion(charactersPresent.get(index - 1))) {
 						title = "[style.colourCompanion([npc.Name])]";
-						description = "Take a detailed look at your [style.colourCompanion(companion)], [npc.name].";
+						description = "仔细地打量一下你的[style.colourCompanion(同伴)]，[npc.name]。";
 					}
 					
 					return new Response(
@@ -183,7 +183,7 @@ public class CharactersPresentDialogue {
 						@Override
 						public void effects() {
 							characterViewed = charactersPresent.get(index-1);
-							menuTitle = "Characters Present ("+Util.capitaliseSentence(charactersPresent.get(index - 1).getName(true))+")";
+							menuTitle = "在场角色 ("+Util.capitaliseSentence(charactersPresent.get(index - 1).getName(true))+")";
 							menuContent = ((NPC) charactersPresent.get(index - 1)).getCharacterInformationScreen(true);
 						}
 					};
@@ -194,7 +194,7 @@ public class CharactersPresentDialogue {
 				
 			} else if (responseTab==1 && Main.game.getPlayer().hasCompanion(characterViewed)) {
 				if (index == 0) {
-					return new ResponseEffectsOnly("Back", "Stop viewing the characters present and return to the main game."){
+					return new ResponseEffectsOnly("返回", "停止浏览在场角色并回到游戏。"){
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setManagementCompanion(null);
@@ -204,13 +204,13 @@ public class CharactersPresentDialogue {
 				} 
 				if(index>0 && index<5 && !characterViewed.isCompanionAvailableForSex(true)) {
 					if(index==1) {
-						return new Response("Sex", characterViewed.getCompanionSexRejectionReason(true), null);
+						return new Response("性交", characterViewed.getCompanionSexRejectionReason(true), null);
 					}
 					return null;
 				}
 				if(index>5 && index<10 && !characterViewed.isCompanionAvailableForSex(false)) {
 					if(index==6) {
-						return new Response("Submissive Sex", characterViewed.getCompanionSexRejectionReason(false), null);
+						return new Response("服从式性爱", characterViewed.getCompanionSexRejectionReason(false), null);
 					}
 					return null;
 				}
@@ -228,11 +228,11 @@ public class CharactersPresentDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("离开", "", true) {
 		
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你已经爽过了，离开这里让[npc.name]恢复一下吧。";
 		}
 
 		@Override
@@ -253,7 +253,7 @@ public class CharactersPresentDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Decide what to do next.", AFTER_SEX) {
+				return new Response("继续", "决定接下来该做什么。", AFTER_SEX) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -280,7 +280,7 @@ public class CharactersPresentDialogue {
 		
 		@Override
 		public String getLabel() {
-			return UtilText.parse(getCharacterViewed(), "[npc.NamePos] Perk Tree");
+			return UtilText.parse(getCharacterViewed(), "[npc.NamePos]的天赋树");
 		}
 		
 		@Override
@@ -289,12 +289,12 @@ public class CharactersPresentDialogue {
 
 			UtilText.nodeContentSB.append(UtilText.parse(characterViewed,
 					"<details>"
-							+ "<summary>[style.boldPerk(Perk & Trait Information)]</summary>"
-							+ "[style.colourPerk(Perks)] (circular icons) apply permanent boosts to [npc.namePos] attributes.<br/>"
-							+ "[style.colourPerk(Traits)] (square icons) provide unique effects for [npc.name]."
-								+ " Unlike perks, <b>traits will have no effect on [npc.name] until they're slotted into [npc.her] 'Active Traits' bar</b>.<br/>"
-							+ "Perks require perk points to unlock. [npc.Name] earns one perk point each time [npc.she] levels up, and earns an extra two perk points every five levels.<br/><br/>"
-							+ "In addition to the perks that can be purchased via perk points, there are also several special, hidden perks that are unlocked via special events."
+							+ "<summary>[style.boldPerk(天赋与特性信息)]</summary>"
+							+ "[style.colourPerk(天赋)](圆形图标)对于[npc.namePos]的属性有永久提升。<br/>"
+							+ "[style.colourPerk(特性)](方形图标)为[npc.Name]提供特殊效果。"
+								+ "与天赋不同，<b>特性在加入“生效特性”栏之前不会有任何效果</b>。<br/>"
+							+ "天赋需需要天赋点数解锁。[npc.Name]每当升级时便会获得一点天赋点数，并且每五级获得额外两点天赋点数。<br/><br/>"
+							+ "除了这些通过天赋点解锁的天赋以外，还存在着一些通过特殊事件解锁的特殊隐藏天赋。"
 					+ "</details>"));
 			
 			UtilText.nodeContentSB.append(PerkManager.MANAGER.getPerkTreeDisplay(characterViewed, true));
@@ -303,7 +303,7 @@ public class CharactersPresentDialogue {
 			
 			if(!characterViewed.isElemental() && !characterViewed.isDoll()) {
 				UtilText.nodeContentSB.append("<div class='container-full-width' style='padding:8px; text-align:center;'>"
-							+ "<i>Please note that this perk tree is a work-in-progress. This is not the final version, and is just a proof of concept!</i>"
+							+ "<i>请注意此天赋树仍在施工，并非最终版本，仅用于展示概念！</i>"
 						+ "</div>");
 			}
 			
@@ -313,10 +313,10 @@ public class CharactersPresentDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 6) {
-				return new Response("Perk Tree", UtilText.parse(characterViewed, "You are already assigning [npc.namePos] perk points."), null);
+				return new Response("天赋树", UtilText.parse(characterViewed, "你正在分配天赋点数。"), null);
 				
 			} else if(index==7) {
-				return new Response("Reset perks", "Reset all of [npc.namePos] perks and traits, refunding all points spent. (This is a temporary action while the perk tree is still under development.)", PERKS) {
+				return new Response("重置天赋", "重置[npc.namePos]所有的天赋和特性，退回所有消耗的天赋点。(临时可用，由于天赋树仍在开发中)", PERKS) {
 					@Override
 					public void effects() {
 						characterViewed.resetPerksMap(false, false);

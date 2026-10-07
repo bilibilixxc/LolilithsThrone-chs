@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[overbust corset]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[overbust corsets]]></namePlural> 
-		<description><![CDATA[A corset that keeps the wearer's stomach nicely shaped, while also covering their breasts. It has a series of laces at the back that are used to tighten it.]]></description> 
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[紧身胸衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[紧身胸衣]]></namePlural> 
+		<description><![CDATA[一件收紧穿着者的腹部保持良好形状的紧身胸衣，同时还能遮住胸部。它的背部有用于收紧的花边。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>STOMACH</slot> 
@@ -60,25 +60,20 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(place)] the corset around [npc.her] stomach before tying the laces up at [npc.her] back.
-		]]></self>
+[npc.Name]将紧身胸衣放在[npc.her]的腹部，并系好[npc.her]背后的绳子。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(place)] the corset around [npc2.namePos] stomach before tying the laces up at [npc2.her] back.
-		]]></other>
+[npc.Name]将紧身胸衣放在[npc2.namePos]的腹部，并把[npc2.her]背后的绳子系好。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(place)] the corset around [npc2.namePos] stomach before impatiently tying the laces up at [npc2.her] back.
-		]]></otherRough>
+[npc.Name]粗暴地将紧身胸衣贴在[npc2.namePos]的腹部并将[npc2.her]后背的背带系上。]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(untie)] [npc.her] corset's laces and [npc.verb(remove)] it from [npc.her] stomach.
-		]]></self>
+		[npc.Name]解开背带，然后从[npc.her]的腹部脱下紧身胸衣。]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(untie)] the laces of [npc2.namePos] corset and [npc.verb(remove)] it from [npc2.her] stomach.
-		]]></other>
+			[npc.Name]解开[npc2.namePos]背带，然后把紧身胸衣从[npc2.her]的腹部脱下。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] impatiently [npc.verb(untie)] the laces of [npc2.namePos] corset and roughly [npc.verb(remove)] it from [npc2.her] stomach.
-		]]></otherRough>
+[npc.Name]粗暴地解开[npc2.namePos]的背带并将[npc2.her]的紧身胸衣拽了下来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

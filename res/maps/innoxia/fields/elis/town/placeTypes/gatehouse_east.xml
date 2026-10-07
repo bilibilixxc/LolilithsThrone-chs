@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[gatehouse]]></name>
-	<tooltipDescription><![CDATA[A pair of towers flank the eastern gatehouse, guarding the road which leads out of Elis.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the eastern gatehouse at Elis]]></virginityLossDescription>
+	<name><![CDATA[城楼]]></name>
+	<tooltipDescription><![CDATA[东面城楼两侧有一对高塔，守卫着进入伊利斯的道路。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯东边的城楼里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>gatehouse</svgName> 
 	<colour>BASE_BLACK</colour>

@@ -127,8 +127,8 @@ public class Evelyx extends NPC {
 	
 	public Evelyx(boolean isImported) {
 		super(isImported,
-				new NameTriplet("Evelyx"), "Lisophiamartu",
-				"The owner and namesake of the farm 'Evelyne's Dairy', this succubus is extremely arrogant and rude, and will do whatever it takes to make the most amount of money possible.",
+				new NameTriplet("艾弗利克斯"), "莉索菲亚马尔图",
+				"作为以其名字命名的“艾弗利克斯乳业”牧场的主人，这个魅魔极其傲慢粗鲁，会不计代价地搞来尽可能多的金钱。",
 				76, Month.JULY, 2,
 				25, Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.GREATER,
 				new CharacterInventory(false, 10),
@@ -417,11 +417,11 @@ public class Evelyx extends NPC {
 		
 		sb.append("<p>");
 			if(available) {
-				sb.append("[style.boldGood(Apply:)] <span style='color:"+titleColour.toWebHexString()+";'>"+title+"</span>");
+				sb.append("[style.boldGood(使用:)]<span style='color:"+titleColour.toWebHexString()+";'>"+title+"</span>");
 				sb.append("</br>");
 				sb.append(text);
 			} else {
-				sb.append("[style.boldDisabled(Not Required:)] [style.colourDisabled("+title);
+				sb.append("[style.boldDisabled(不需要：)][style.colourDisabled("+title);
 				sb.append("</br>");
 				sb.append(text);
 				sb.append(")]");
@@ -431,9 +431,9 @@ public class Evelyx extends NPC {
 		// Appending to transformation:
 		transformationStringBuilder.append("<p style='text-align:center; margin-bottom:0; padding-bottom:0;'>");
 			if(available) {
-				transformationStringBuilder.append("<i><b style='color:"+titleColour.toWebHexString()+";'>"+title+":</b> "+text+"</i>");
+				transformationStringBuilder.append("<i><b style='color:"+titleColour.toWebHexString()+";'>"+title+":</b>"+text+"</i>");
 			} else {
-				transformationStringBuilder.append("<i>[style.boldDisabled(Not Required:)] [style.colourDisabled("+title+": "+text+")]</i>");
+				transformationStringBuilder.append("<i>[style.boldDisabled(不需要:)][style.colourDisabled("+title+": "+text+")]</i>");
 			}
 		transformationStringBuilder.append("</p>");
 		
@@ -477,7 +477,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyFemininity;
 		}
-		sbTransformationText.append(getTransformationFormat(applyFemininity, PresetColour.BASE_PINK_LIGHT, "Femininity Increase", "Cows are required to be feminine in appearance.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyFemininity, PresetColour.BASE_PINK_LIGHT, "增大女性化程度", "奶牛的外观应当女性化。", sbAppliedTransformation));
 		if(applyTransformation && applyFemininity) {
 			sbAppliedTransformation.append(worker.setFemininity(80));
 		}
@@ -487,7 +487,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyBreastSize;
 		}
-		sbTransformationText.append(getTransformationFormat(applyBreastSize, PresetColour.BASE_PINK, "Breast Enlargement", "Cows should have large breasts.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyBreastSize, PresetColour.BASE_PINK, "促进乳房发育", "奶牛应该有更大的乳房。", sbAppliedTransformation));
 		if(applyTransformation && applyBreastSize) {
 			sbAppliedTransformation.append(worker.setBreastSize(cupSize));
 		}
@@ -496,7 +496,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyMilkStorage;
 		}
-		sbTransformationText.append(getTransformationFormat(applyMilkStorage, PresetColour.MILK, "Milk Storage", "A cow's breasts should be full of milk.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyMilkStorage, PresetColour.MILK, "乳汁储量", "奶牛的乳房应当充盈乳汁。", sbAppliedTransformation));
 		if(applyTransformation && applyMilkStorage) {
 			sbAppliedTransformation.append(worker.setBreastMilkStorage(milkStorage));
 		}
@@ -505,7 +505,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyMilkRegeneration;
 		}
-		sbTransformationText.append(getTransformationFormat(applyMilkRegeneration, PresetColour.MILK, "Milk Regeneration", "Cows should never stop producing milk.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyMilkRegeneration, PresetColour.MILK, "乳汁再生速率", "奶牛永不停止产奶。", sbAppliedTransformation));
 		if(applyTransformation && applyMilkRegeneration) {
 			sbAppliedTransformation.append(worker.setBreastLactationRegeneration(milkRegeneration));
 		}
@@ -514,7 +514,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyPuffy;
 		}
-		sbTransformationText.append(getTransformationFormat(applyPuffy, PresetColour.BASE_PINK_LIGHT, "Puffy Nipples", "Large nipples improve milking machine compatibility.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyPuffy, PresetColour.BASE_PINK_LIGHT, "肉感乳头", "大乳头更能充满挤奶机。", sbAppliedTransformation));
 		if(applyTransformation && applyPuffy) {
 			sbAppliedTransformation.append(worker.addNippleOrificeModifier(OrificeModifier.PUFFY));
 		}
@@ -525,7 +525,7 @@ public class Evelyx extends NPC {
 			if(!anyTransformationAvailable) {
 				anyTransformationAvailable = applyCrotchBoobs;
 			}
-			sbTransformationText.append(getTransformationFormat(applyCrotchBoobs, PresetColour.BASE_PURPLE, "Udders", "Cows are required to have udders.", sbAppliedTransformation));
+			sbTransformationText.append(getTransformationFormat(applyCrotchBoobs, PresetColour.BASE_PURPLE, "腹乳", "奶牛就该有腹乳。", sbAppliedTransformation));
 			if(applyTransformation && applyCrotchBoobs) {
 				sbAppliedTransformation.append(worker.setBreastCrotchType(worker.getRace().getRacialBody().getBreastCrotchType()));
 			}
@@ -534,7 +534,7 @@ public class Evelyx extends NPC {
 			if(!anyTransformationAvailable) {
 				anyTransformationAvailable = applyCrotchBoobSize;
 			}
-			sbTransformationText.append(getTransformationFormat(applyCrotchBoobSize, PresetColour.BASE_PURPLE_LIGHT, "Udder Enlargement", "Cows should have large udders.", sbAppliedTransformation));
+			sbTransformationText.append(getTransformationFormat(applyCrotchBoobSize, PresetColour.BASE_PURPLE_LIGHT, "促进腹乳发育", "奶牛该有更大的腹乳。", sbAppliedTransformation));
 			if(applyTransformation && applyCrotchBoobSize) {
 				sbAppliedTransformation.append(worker.setBreastCrotchSize(cupSize.getMeasurement()/2));
 			}
@@ -543,7 +543,7 @@ public class Evelyx extends NPC {
 			if(!anyTransformationAvailable) {
 				anyTransformationAvailable = applyCrotchBoobMilkStorage;
 			}
-			sbTransformationText.append(getTransformationFormat(applyCrotchBoobMilkStorage, PresetColour.MILK, "Udder Milk Storage", "A cow's udders should be full of milk.", sbAppliedTransformation));
+			sbTransformationText.append(getTransformationFormat(applyCrotchBoobMilkStorage, PresetColour.MILK, "腹乳乳汁储量", "奶牛的腹乳应当充盈乳汁。", sbAppliedTransformation));
 			if(applyTransformation && applyCrotchBoobMilkStorage) {
 				sbAppliedTransformation.append(worker.setBreastCrotchMilkStorage(milkStorage*2));
 			}
@@ -552,7 +552,7 @@ public class Evelyx extends NPC {
 			if(!anyTransformationAvailable) {
 				anyTransformationAvailable = applyCrotchBoobMilkRegeneration;
 			}
-			sbTransformationText.append(getTransformationFormat(applyCrotchBoobMilkRegeneration, PresetColour.MILK, "Udder Milk Regeneration", "Cows should never stop producing milk.", sbAppliedTransformation));
+			sbTransformationText.append(getTransformationFormat(applyCrotchBoobMilkRegeneration, PresetColour.MILK, "胯乳乳汁再生速率", "奶牛永不停止产奶。", sbAppliedTransformation));
 			if(applyTransformation && applyCrotchBoobMilkRegeneration) {
 				sbAppliedTransformation.append(worker.setBreastCrotchLactationRegeneration(milkRegeneration*2));
 			}
@@ -561,7 +561,7 @@ public class Evelyx extends NPC {
 			if(!anyTransformationAvailable) {
 				anyTransformationAvailable = applyCrotchBoobPuffy;
 			}
-			sbTransformationText.append(getTransformationFormat(applyCrotchBoobPuffy, PresetColour.BASE_PURPLE_LIGHT, "Puffy Teats", "Large teats improve milking machine compatibility.", sbAppliedTransformation));
+			sbTransformationText.append(getTransformationFormat(applyCrotchBoobPuffy, PresetColour.BASE_PURPLE_LIGHT, "肉感乳头", "大乳头更能充满挤奶机。", sbAppliedTransformation));
 			if(applyTransformation && applyCrotchBoobPuffy) {
 				sbAppliedTransformation.append(worker.addNippleCrotchOrificeModifier(OrificeModifier.PUFFY));
 			}
@@ -572,7 +572,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyVagina;
 		}
-		sbTransformationText.append(getTransformationFormat(applyVagina, PresetColour.BASE_PINK_LIGHT, "Grow Vagina", "A cow needs to be able to be impregnated.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyVagina, PresetColour.BASE_PINK_LIGHT, "长出阴道", "奶牛应当能被授孕。", sbAppliedTransformation));
 		if(applyTransformation && applyVagina) {
 			sbAppliedTransformation.append(worker.setVaginaType(worker.getAssRace().getRacialBody().getVaginaType()));
 		}
@@ -581,7 +581,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyVaginaWetness;
 		}
-		sbTransformationText.append(getTransformationFormat(applyVaginaWetness, PresetColour.GIRLCUM, "Wet Vagina", "A cow's pussy needs to be wet and ready to be fucked at any moment.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyVaginaWetness, PresetColour.GIRLCUM, "湿润的阴道", "奶牛的小穴应当湿乎乎的，随时能操。", sbAppliedTransformation));
 		if(applyTransformation && applyVaginaWetness) {
 			sbAppliedTransformation.append(worker.setVaginaWetness(pussyWetness));
 		}
@@ -591,7 +591,7 @@ public class Evelyx extends NPC {
 			if(!anyTransformationAvailable) {
 				anyTransformationAvailable = applyVaginaSquirter;
 			}
-			sbTransformationText.append(getTransformationFormat(applyVaginaSquirter, PresetColour.GIRLCUM, "Squirter", "A cow's orgasm should be profitable.", sbAppliedTransformation));
+			sbTransformationText.append(getTransformationFormat(applyVaginaSquirter, PresetColour.GIRLCUM, "潮吹", "奶牛的高潮应当有用。", sbAppliedTransformation));
 			if(applyTransformation && applyVaginaSquirter) {
 				sbAppliedTransformation.append(worker.setVaginaSquirter(true));
 			}
@@ -601,7 +601,7 @@ public class Evelyx extends NPC {
 		if(!anyTransformationAvailable) {
 			anyTransformationAvailable = applyPenisRemoval;
 		}
-		sbTransformationText.append(getTransformationFormat(applyPenisRemoval, PresetColour.GENERIC_MINOR_BAD, "Remove Penis", "Cows do not require a penis.", sbAppliedTransformation));
+		sbTransformationText.append(getTransformationFormat(applyPenisRemoval, PresetColour.GENERIC_MINOR_BAD, "移除阴茎", "奶牛不该有阴茎。", sbAppliedTransformation));
 		if(applyTransformation && applyPenisRemoval) {
 			sbAppliedTransformation.append(worker.setPenisType(PenisType.NONE));
 		}
@@ -801,7 +801,7 @@ public class Evelyx extends NPC {
 		oralRing.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_MOD_FETISH_BODY_PART, TFModifier.TF_MOD_FETISH_ORAL_GIVING, TFPotency.MAJOR_BOOST, 0));
 		oralRing.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_MOD_FETISH_BODY_PART, TFModifier.TF_MOD_FETISH_VAGINAL_GIVING, TFPotency.MAJOR_BOOST, 0));
 		
-		oralRing.setName("Evelyx's oral ring");
+		oralRing.setName("艾弗利克斯的口环");
 		
 		return oralRing;
 	}
@@ -833,14 +833,14 @@ public class Evelyx extends NPC {
 		if(equippedTag!=null && equippedTag.getClothingType()==ClothingType.getClothingTypeFromId("innoxia_quest_dairy_ear_tag")) {
 			cow.forceUnequipClothingIntoVoid(cow, equippedTag);
 			return "<p style='text-align:center;'>"
-						+"You have traded in your old ear tag for "+upgradedEarTag.getDisplayName(true)+"!"
+						+"你已经把之前的耳标换成了"+upgradedEarTag.getDisplayName(true)+"！"
 						+"<br/>"+cow.equipClothingFromNowhere(upgradedEarTag, true, cow)
 					+"</p>";
 			
 		} else {
 			cow.removeClothingByType(ClothingType.getClothingTypeFromId("innoxia_quest_dairy_ear_tag"));
 			return "<p style='text-align:center;'>"
-				+"You have traded in your old ear tag for "+upgradedEarTag.getDisplayName(true)+"!"
+				+"你已经把之前的耳标换成了"+upgradedEarTag.getDisplayName(true)+"！"
 				+"<br/>"+cow.addClothing(upgradedEarTag, false)
 			+"</p>";
 		}
@@ -889,7 +889,7 @@ public class Evelyx extends NPC {
 			collarColour = PresetColour.CLOTHING_GOLD;
 		}
 		AbstractClothing collar = Main.game.getItemGen().generateClothing("innoxia_cattle_cowbell_collar", collarColour, PresetColour.CLOTHING_BLACK, collarColour, false);
-		collar.setName("Evelyx's Milker cowbell collar");
+		collar.setName("艾弗利克斯的产奶工牛铃项圈");
 		collar.clearEffects();
 		
 //		collar.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SPECIAL, TFModifier.CLOTHING_SEALING, TFPotency.MAJOR_DRAIN, 0));
@@ -923,7 +923,7 @@ public class Evelyx extends NPC {
 			collarColour = PresetColour.CLOTHING_GOLD;
 		}
 		AbstractClothing collar = Main.game.getItemGen().generateClothing("innoxia_cattle_piercing_nose_ring", collarColour, false);
-		collar.setName("Evelyx's Milker nose ring");
+		collar.setName("艾弗利克斯的产奶工鼻环");
 		collar.clearEffects();
 		
 //		collar.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SPECIAL, TFModifier.CLOTHING_SEALING, TFPotency.MAJOR_DRAIN, 0));
@@ -959,8 +959,8 @@ public class Evelyx extends NPC {
 					false,
 					new TattooWriting(
 							(slave
-								?"Princess's Pet"
-								:"Evelyx's Dairy Milker")
+								?"公主的宠物"
+								:"艾弗利克斯乳业的挤奶工")
 								+" #"+(worker.isPlayer()?Main.game.getDialogueFlags().getSavedLong("evelyx_player_number"):(Main.game.getNpcTally()+1500)),
 							PresetColour.CLOTHING_BLACK,
 							false),
@@ -1062,7 +1062,7 @@ public class Evelyx extends NPC {
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_FEMININITY, TFPotency.MAJOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_FEMININITY, TFPotency.MAJOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_CORE, TFModifier.TF_MOD_FEMININITY, TFPotency.BOOST, 0)));
-		potion.setName("Evelyx's 'Pretty Cow' Potion");
+		potion.setName("艾弗利克斯的“美牛牛”药水");
 		
 		return potion;
 	}
@@ -1078,7 +1078,7 @@ public class Evelyx extends NPC {
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_REGENERATION, TFPotency.MAJOR_BOOST, 0)));
-		potion.setName("Evelyx's 'Milky Cow' Potion");
+		potion.setName("艾弗利克斯的“乳牛牛”药水");
 		
 		return potion;
 	}
@@ -1093,7 +1093,7 @@ public class Evelyx extends NPC {
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_SIZE_SECONDARY, TFPotency.MINOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_SIZE_TERTIARY, TFPotency.MINOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_BREASTS, TFModifier.TF_MOD_ORIFICE_PUFFY, TFPotency.MINOR_BOOST, 0)));
-		potion.setName("Evelyx's 'Busty Cow' Potion");
+		potion.setName("艾弗利克斯的“波牛牛”药水");
 		
 		return potion;
 	}
@@ -1109,7 +1109,7 @@ public class Evelyx extends NPC {
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 0),
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_VAGINA, TFModifier.TF_MOD_VAGINA_SQUIRTER, TFPotency.MINOR_BOOST, 0)));
-		potion.setName("Evelyx's 'Wet Cow' Potion");
+		potion.setName("艾弗利克斯的“淫牛牛”药水");
 		
 		return potion;
 	}
@@ -1120,7 +1120,7 @@ public class Evelyx extends NPC {
 		AbstractItem potion = EnchantingUtils.craftItem(ingredient,
 				Util.newArrayListOfValues(
 						new ItemEffect(ingredient.getEnchantmentEffect(), TFModifier.TF_MOD_FETISH_BEHAVIOUR, TFModifier.TF_MOD_FETISH_BIMBO, TFPotency.BOOST, 0)));
-		potion.setName("Evelyx's 'Happy Cow' Potion");
+		potion.setName("艾弗利克斯的“喜牛牛”药水");
 		
 		return potion;
 	}
@@ -1208,7 +1208,7 @@ public class Evelyx extends NPC {
 	 * I didn't add her as an instanced character due to her only appearing in this one bad end.
 	 */
 	public void badEndInitPrincess(NPC princess) {
-		princess.setGenericName("Princess");
+		princess.setGenericName("公主");
 		
 		princess.addSpecialPerk(Perk.SPECIAL_MEGA_SLUT);
 		princess.addSpecialPerk(Perk.SPECIAL_MELEE_EXPERT);
@@ -1383,7 +1383,7 @@ public class Evelyx extends NPC {
 		ring.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_MAJOR_ATTRIBUTE, TFModifier.HEALTH_MAXIMUM, TFPotency.MINOR_BOOST, 0));
 		ring.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_MAJOR_ATTRIBUTE, TFModifier.STRENGTH, TFPotency.MINOR_BOOST, 0));
 		ring.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_MAJOR_ATTRIBUTE, TFModifier.INTELLIGENCE, TFPotency.MINOR_BOOST, 0));
-		ring.setName("Lunette's Gift");
+		ring.setName("露内特的礼物");
 		princess.equipClothingFromNowhere(ring, true, princess);
 
 		princess.setPiercedNose(true);

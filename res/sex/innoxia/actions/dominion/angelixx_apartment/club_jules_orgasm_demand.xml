@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 
 	<!-- TODO this is currently unused -->
@@ -35,15 +35,15 @@
 	
 	<!-- Information displayed to the player: -->
 	
-	<title><![CDATA[Demand pussy]]></title>
+	<title><![CDATA[索求小穴]]></title>
 	
-	<tooltip><![CDATA[Tell these sluts that you're going to finish in one of their cunts.]]></tooltip>
+	<tooltip><![CDATA[告诉这些荡妇，你要在其中一个逼里来一发。]]></tooltip>
 	
 	<descriptions>
 		<description>
 			<descriptionConditional><![CDATA[true]]></descriptionConditional>
 			<text><![CDATA[
-				Jules grunts that he's going to blow his load in one of you. Says to present him with a pussy to take his load.
+				朱尔斯咕哝着说他要在你们中的一个体内射精，还说要找个人来容纳他的种子。
 				
 				<br/><br/>
 			]]></text>

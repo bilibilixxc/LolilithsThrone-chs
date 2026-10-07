@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>50</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bow headband]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bow headbands]]></namePlural>
-		<description><![CDATA[A plain headband, designed to keep the wearer's hair pushed back out of their face.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[蝴蝶结头带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[蝴蝶结头带]]></namePlural>
+		<description><![CDATA[一条简单的头带，设计用于将佩戴者的头发推到后面，避免遮挡视线。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -43,27 +42,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the headband onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the headband onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the headband onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将头带戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将头带戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将头带戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] headband.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] headband.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] headband.]]>
-    </otherRough>
+    <self><![CDATA[
+			[npc.Name]摘下[npc.her]的头带。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的头带摘下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的头带。
+]]></otherRough>
   </displacementText>
   
 </clothing>

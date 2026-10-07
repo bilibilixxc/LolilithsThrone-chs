@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[wall]]></name>
-	<tooltipDescription><![CDATA[A crenellated stone wall surrounds the town of Elis, granting it exceptional protection against marauding bandits.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[on the walls of Elis]]></virginityLossDescription>
+	<name><![CDATA[城墙]]></name>
+	<tooltipDescription><![CDATA[伊利斯镇被建有城垛的石墙包围，这为它抵御歹徒的劫掠提供了特别的保护。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯城墙上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>#ac9a8c</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

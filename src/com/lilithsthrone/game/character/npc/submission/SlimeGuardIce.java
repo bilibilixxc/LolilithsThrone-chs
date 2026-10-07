@@ -81,8 +81,8 @@ public class SlimeGuardIce extends NPC {
 	}
 	
 	public SlimeGuardIce(boolean isImported) {
-		super(isImported, new NameTriplet("Crystal"), "Triggs",
-				"[npc.Name] is one of the Slime Queen's guards, tasked to challenge anyone who dares to enter [npc.her] Queen's territory.",
+		super(isImported, new NameTriplet("冰晶"), "特里格斯",
+				"[npc.Name]是史莱姆女王的一名护卫，受命向任何胆敢踏入女王领地的家伙发起挑战。",
 				19, Month.JANUARY, 29,
 				15, Gender.F_V_B_FEMALE, Subspecies.SLIME, RaceStage.HUMAN,
 				new CharacterInventory(false, 10), WorldType.SLIME_QUEENS_LAIR_GROUND_FLOOR, PlaceType.SLIME_QUEENS_LAIR_ENTRANCE_GUARDS, true);
@@ -372,14 +372,14 @@ public class SlimeGuardIce extends NPC {
 	@Override
 	public Response endCombat(boolean applyEffects, boolean victory) {
 		if (victory) {
-			return new Response("Victorious", "[slimeFire.Name] and [slimeIce.name] are defeated!", SlimeQueensLair.SLIME_GUARDS_COMBAT_PLAYER_VICTORY) {
+			return new Response("胜利", "[slimeFire.Name]和[slimeIce.name]被打败了！", SlimeQueensLair.SLIME_GUARDS_COMBAT_PLAYER_VICTORY) {
 				@Override
 				public void effects() {
 					Main.game.getDialogueFlags().setFlag(DialogueFlagValue.slimeGuardsDefeated, true);
 				}
 			};
 		} else {
-			return new Response ("Defeated", "[slimeFire.Name] and [slimeIce.name] have defeated you!", SlimeQueensLair.SLIME_GUARDS_COMBAT_PLAYER_DEFEAT);
+			return new Response ("被击败", "[slimeFire.Name]和[slimeIce.name]打败了你！", SlimeQueensLair.SLIME_GUARDS_COMBAT_PLAYER_DEFEAT);
 		}
 	}
 

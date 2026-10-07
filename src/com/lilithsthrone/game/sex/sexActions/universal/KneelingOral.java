@@ -48,12 +48,12 @@ public class KneelingOral {
 		
 		@Override
 		public String getActionTitle() {
-			return "Thigh squeeze";
+			return "大腿夹头";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Squeeze your thighs around [npc2.namePos] head and collapse down onto [npc2.her] face as you orgasm.";
+			return "你的大腿紧紧夹住[npc2.namePos]头部，高潮带来的强烈性奋感让你彻底失去了对身体的控制，整个人瘫倒在了[npc2.her]的脸上。";
 		}
 
 		@Override
@@ -61,11 +61,11 @@ public class KneelingOral {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(
-					"[npc.Name] [npc.verb(feel)] an overwhelming wave of burning arousal start to build up deep within [npc.her] groin, and with [npc.a_moan+],"
-							+ " [npc.she] [npc.verb(clamp)] [npc.her] thighs down hard around [npc2.namePos] head."
-					+ " [npc.Her] [npc.legs] start to shake and give out from under [npc.herHim], and with another [npc.a_moan+], [npc.she] [npc.verb(start)] collapsing forwards."
-					+ " [npc2.NameIsFull] quickly slammed to the floor, and suddenly [npc2.verb(find)] [npc.name] sitting on [npc2.her] face,"
-						+ " screaming in ecstasy as [npc.her] [npc.pussy+] spasms and clenches down around the [npc2.tongue+] that's being forced deep into [npc.her] soft folds.");
+					"伴随着销魂的[npc.a_moan+]，[npc.Name]感到一股无法抗拒的刺激感从腹股沟处升起，"
+							+ "[npc.she]紧紧地将大腿夹在[npc2.namePos]头上"
+					+ "伴随着[npc.a_moan+]，[npc.Her]身下的[npc.legs]止不住地开始颤抖。[npc.she]双腿一软，无力地倒向前方。"
+					+ "[npc2.NameIsFull]猛地摔到在地，而后突然发现[npc.name]正坐在[npc2.her]脸上，"
+						+ "随着[npc2.tongue+]强行在[npc.her][npc.pussy+]柔软的褶皱内的不断深入，[npc.her]开始忍不住发出一阵陶醉的尖叫声，下体也无意识地开始痉挛，紧紧夹住了[npc2.tongue+]。");
 			
 			if(Main.sex.getCharacterPerformingAction().hasPenis()) {
 				UtilText.nodeContentSB.append("<br/><br/>"
@@ -79,8 +79,8 @@ public class KneelingOral {
 			}
 			
 			UtilText.nodeContentSB.append("<br/><br/>"
-					+ "After a few moments of grinding down on [npc2.namePos] face, [npc.namePos] overwhelming orgasm starts to fade, and [npc.she] [npc.verb(stand)] up on shaky [npc.legs],"
-							+ " grinning down at [npc2.name] as [npc.she] [npc.verb(feel)] a slick stream of saliva and [npc.girlCum] drooling down from [npc.her] [npc.pussy+].");
+					+ "在[npc2.namePos]脸上又来回磨蹭了一会儿，[npc.namePos]才从绝顶的高潮中稍稍清醒过来， [npc.she]拖着软绵绵的[npc.legs]，摇摇晃晃地站立起来，"
+							+ "[npc.she]感觉到唾液与[npc.girlcum]混合着从[npc.pussy+]内汩汩流出，向[npc2.name]咧嘴一笑。");
 			
 			return Main.sex.getCharacterPerformingAction().getSexActionOrgasmOverride(this, Main.sex.getAvailableCumTargets(Main.sex.getCharacterPerformingAction()).get(0), false, UtilText.nodeContentSB.toString()).getDescription();
 		}

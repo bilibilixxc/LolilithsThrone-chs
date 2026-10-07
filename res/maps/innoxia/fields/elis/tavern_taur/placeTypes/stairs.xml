@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[staircase]]></name>
-	<tooltipDescription><![CDATA[A narrow staircase leads to the upper floor of 'The Centaur's Sword' tavern.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the staircase at 'The Centaur's Sword' tavern]]></virginityLossDescription>
+	<name><![CDATA[楼梯]]></name>
+	<tooltipDescription><![CDATA[一条通向半人马之剑上层的狭窄楼梯。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在半人马之剑的楼梯上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREEN_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

@@ -62,8 +62,8 @@ public class PrologueMale extends NPC {
 	}
 	
 	public PrologueMale(boolean isImported) {
-		super(isImported, new NameTriplet("Alexander", "Alex", "Alexandria"), "Bonheur",
-				"One of the guests at the museum's opening exhibit. He's tall, handsome, and muscular, and, even better, he seems to have taken an instant liking towards you...",
+		super(isImported, new NameTriplet("亚历山大", "亚历克斯", "亚莉山德莉娅"), "博纳尔",
+				"被邀请来博物馆开幕展的客人之一。他身材高挑、面貌英俊、肌肉分明，更棒的是他好像对你一见钟情了……",
 				29, Month.APRIL, 12,
 				3,
 				Gender.M_P_MALE,

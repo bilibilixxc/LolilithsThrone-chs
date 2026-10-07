@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>100000</value>
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
-		<determiner><![CDATA[the]]></determiner>
-		<name appendDamageName="false"><![CDATA[Inky's Pen]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Inky's Pens]]></namePlural>
-		<description><![CDATA[This fancy-looking fountain pen holds an incredibly powerful enchantment. When the cap is twisted three times before being taken off, an arcane entity known only as 'Inky' is unleashed upon the holder's enemies...]]></description>
-		<attackDescriptor>poke</attackDescriptor>
-		<attackTooltipDescription>Poke [npc2.name] with your pen.</attackTooltipDescription>
+		<determiner><![CDATA[​]]></determiner>
+		<name appendDamageName="false"><![CDATA[墨墨的钢笔]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[墨墨的钢笔]]></namePlural>
+		<description><![CDATA[这支外观奇特的钢笔带有极其强大的附魔。如果先将笔帽拧转三圈再拔下，就能对持有者的敌人释放出一个只知道名字叫“墨墨”的奥术实体……]]></description>
+		<attackDescriptor><![CDATA[戳]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的钢笔戳向[npc2.name]。]]></attackTooltipDescription>
 		<rarity>LEGENDARY</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(bring)] out Inky's pen and [npc.verb(get)] ready to use it in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] Inky's pen away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出墨墨的钢笔，准备将其用于战斗。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]收起了墨墨的钢笔。]]></unequipText>
 		<imageName>inky.svg</imageName> 
 		<imageEquippedName/>
 		<damage>1</damage> 
@@ -52,14 +52,14 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(thrust)] [npc.her] pen at [npc2.name], and although it strikes [npc2.her] body, it really doesn't cause much damage... 
+		[npc.Name]用钢笔刺向[npc2.name]，虽然它击中了[npc2.her]的身体，但是并没有造成任何伤害……
 		]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(thrust)] [npc.her] pen at [npc2.name], but [npc.she] [npc.verb(miss)]... 
+		[npc.Name]用钢笔刺向[npc2.name]，但没能命中……
 		]]></missText>
 	</missDescriptions>
 	

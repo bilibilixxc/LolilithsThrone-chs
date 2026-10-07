@@ -63,9 +63,9 @@ public class ElementalDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index==0) {
-				return "Interactions";
+				return "互动";
 			} else if(index==1) {
-				return UtilText.parse("[style.colourCompanion(Manage)]");
+				return UtilText.parse("[style.colourCompanion(管理)]");
 			}
 			return null;
 		}
@@ -74,40 +74,40 @@ public class ElementalDialogue {
 			if(responseTab==0) { // Interactions:
 				if(index==1) {
 					if(!getElemental().isActive()) {
-						return new Response("Inspect", "You need to have [el.name] take on [el.her] active form in order to inspect [el.herHim].", null);
+						return new Response("审视", "你需要让[el.name]处于主动形态，才能审视[el.herHim]。", null);
 					}
-					return new Response("Inspect", "Take a good look at [el.name].", ELEMENTAL_INSPECT);
+					return new Response("审视", "仔细打量[el.name]。", ELEMENTAL_INSPECT);
 					
 				} else if(index==2) {
-					return new Response("Talk", "Talk to [el.name] for a while.", ELEMENTAL_TALK);
+					return new Response("对话", "和[el.name]说说话。", ELEMENTAL_TALK);
 					
 				} else if(index==3) {
 					if(getElemental().isActive()) {
-						return new Response("Pet", "[el.Name] needs to be in [el.her] passive form in order to pet [el.herHim]...", null);
+						return new Response("安抚", "[el.Name]需要处于被动形态，你才能安抚[el.herHim]……", null);
 					}
-					return new Response("Pet", "Give [el.name] a good petting.", ELEMENTAL_PETTING);
+					return new Response("安抚", "好好摸摸[el.name]。", ELEMENTAL_PETTING);
 					
 				}
 				// index==5 is transform toggle defined below
 				if(index==6) {
 					if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						return new Response("Dominant sex", Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getValue(), null);
+						return new Response("支配型性爱", Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getValue(), null);
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						return new Response("Dominant sex",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with the idea of having sex with [el.name] in a place where people could see you!",
+						return new Response("支配型性爱",
+								"鉴于你没有[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+"性癖)]，你在能被别人看见的地方和[el.name]做爱会很难受！",
 								null);
 						
 					} else if(!getElemental().isActive()) {
-						return new Response("Dominant sex", "You need to have [el.name] take on [el.her] active form in order to have sex with [el.herHim].", null);
+						return new Response("支配型性爱", "你需要让[el.name]处于主动形态，才能与[el.herHim]做爱。", null);
 						
 					} else if(getElemental().isSummonerServant() && !getElemental().hasFetish(Fetish.FETISH_SUBMISSIVE)) {
-						return new Response("Dominant sex",
-								"As you have sworn subservience to the school of [el.school], and [el.name] does not have the '"+Fetish.FETISH_SUBMISSIVE.getName(getElemental())+"' fetish, [el.name] is not going to let you dominantly fuck [el.herHim]...",
+						return new Response("支配型性爱",
+								"由于你已经宣誓效忠[el.school]学派，且[el.name]没有“"+Fetish.FETISH_SUBMISSIVE.getName(getElemental())+"”性癖，所以[el.name]不会让你强硬地操[el.herHim]……",
 								null);
 					}
-					return new ResponseSex("Dominant sex",
-							"Have dominant sex with [el.name].",
+					return new ResponseSex("支配型性爱",
+							"和[el.name]进行支配型性爱。",
 							true, true,
 							new SMStanding(
 									Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotStanding.STANDING_DOMINANT)),
@@ -123,18 +123,18 @@ public class ElementalDialogue {
 					
 				} else if(index==7) {
 					if(!Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getKey()) {
-						return new Response("Submissive sex", Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getValue(), null);
+						return new Response("服从型性爱", Main.game.getPlayer().getSexAvailabilityBasedOnLocation().getValue(), null);
 						
 					} else if(Main.game.getPlayerCell().getPlace().isPopulated() && !Main.game.getPlayer().hasFetish(Fetish.FETISH_EXHIBITIONIST)) {
-						return new Response("Submissive sex",
-								"As you do not have the [style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+" fetish)], you are not comfortable with the idea of having sex with [el.name] in a place where people could see you!",
+						return new Response("服从型性爱",
+								"鉴于你没有[style.colourFetish("+Fetish.FETISH_EXHIBITIONIST.getName(Main.game.getPlayer())+"性癖)]，你在能被别人看见的地方和[el.name]做爱会很难受！",
 								null);
 						
 					} else if(!getElemental().isActive()) {
-						return new Response("Submissive sex", "You need to have [el.name] take on [el.her] active form in order to have sex with [el.herHim].", null);
+						return new Response("服从型性爱", "你需要让[el.name]处于主动形态，才能和[el.herHim]做爱。", null);
 					}
-					return new ResponseSex("Submissive sex",
-							"Let [el.name] take charge and have submissive sex with [el.herHim].",
+					return new ResponseSex("服从性爱",
+							"让[el.name]掌握主动权，和[el.herHim]进行服从型性爱。",
 							true, true,
 							new SMStanding(
 									Util.newHashMapOfValues(new Value<>(getElemental(), SexSlotStanding.STANDING_DOMINANT)),
@@ -149,16 +149,16 @@ public class ElementalDialogue {
 			} else if(responseTab==1) { // Management:
 				if(index==1) {
 					if(getElemental().isActive()) {
-						return new Response("Passive transform", "You need to have [el.name] take on [el.her] passive form in order for [el.herHim] to change it to something else...", null);
+						return new Response("被动转化", "你需要让[el.name]进入被动形态，才能令其转化为其他样子……", null);
 					}
-					return new Response("Passive transform", "Ask [el.name] about [el.her] passive form and whether [el.she] can change it to something else...", ELEMENTAL_PASSIVE_FORM);
+					return new Response("被动转化", "询问[el.name]被动形态的事情，还有[el.she]能否转化成别的样子……", ELEMENTAL_PASSIVE_FORM);
 					
 				} else if(index==2) {
 					if(!getElemental().isActive()) {
-						return new Response("Active transform", "You need to have [el.name] take on [el.her] active form in order for [el.herHim] to change it to something else...", null);
+						return new Response("主动转化", "你需要让[el.name]进入主动形态，才能令其发生变化……", null);
 					}
-					return new Response("Active transform",
-							"Get [el.name] to transform [el.herself] into a different form...",
+					return new Response("主动转化",
+							"让[el.name]将自己转化成其他形态……",
 							BodyChanging.BODY_CHANGING_CORE){
 						@Override
 						public void effects() {
@@ -168,15 +168,15 @@ public class ElementalDialogue {
 					};
 					
 				} else if(index==3) {
-					return new Response("Perks", "Assign [el.namePos] perk points.", ELEMENTAL_PERKS);
+					return new Response("天赋", "分配[el.namePos]的天赋点。", ELEMENTAL_PERKS);
 					
 				} else if(index==4) {
-					return new Response("Fetishes", "Use your intimate psychic connection with [el.name] to alter [el.her] fetishes based on which fetishes you have.", ELEMENTAL_FETISHES);
+					return new Response("性癖", "使用密切的精神链接，使[el.name]根据你的性癖改变性癖。", ELEMENTAL_FETISHES);
 					
 				}
 				// index==5 is transform toggle defined below
 				if(index==6) {
-					return new Response("Combat moves", "Adjust the moves [el.name] can perform in combat.", CombatMovesSetup.COMBAT_MOVES_CORE) {
+					return new Response("战斗动作", "调整[el.name]战斗中可使用的动作。", CombatMovesSetup.COMBAT_MOVES_CORE) {
 						@Override
 						public void effects() {
 							CombatMovesSetup.setTarget(getElemental(), ELEMENTAL_START);
@@ -185,9 +185,9 @@ public class ElementalDialogue {
 					
 				} else if(index==7) {
 					if(!getElemental().isActive()) {
-						return new Response("Inventory", "You need to have [el.name] take on [el.her] active form in order to manage [el.her] inventory...", null);
+						return new Response("物品栏", "你需要让[el.name]处于主动形态，才能管理[el.her]的物品栏……", null);
 					}
-					return new ResponseEffectsOnly("Inventory", "Manage [el.namePos] inventory.") {
+					return new ResponseEffectsOnly("物品栏", "管理[el.namePos]的物品栏。") {
 						@Override
 						public void effects() {
 							Main.mainController.openInventory((NPC) getElemental(), InventoryInteraction.FULL_MANAGEMENT);
@@ -195,10 +195,10 @@ public class ElementalDialogue {
 					};
 					
 				} else if(index==8) {
-					return new ResponseEffectsOnly("Self-clean: "+(!getElemental().hasFlag(NPCFlagValue.elementalStayDirty)?"[style.colourGood(On)]":"[style.colourBad(Off)]"),
+					return new ResponseEffectsOnly("自我清洁: "+(!getElemental().hasFlag(NPCFlagValue.elementalStayDirty)?"[style.colourGood(开启)]":"[style.colourBad(关闭)]"),
 							!getElemental().hasFlag(NPCFlagValue.elementalStayDirty)
-								?"[el.Name] is currently using [el.her] self-transformative powers to clean any fluids from [el.her] body or clothing.<br/>[style.colourMinorBad(Click to toggle self-clean off.)]"
-								:"[el.Name] is currently using [el.her] self-transformative powers to retain any fluids which dirty [el.her] body or clothing.<br/>[style.colourMinorGood(Click to toggle self-clean on.)]") {
+								?"[el.Name]正在使用其自身转化的能力清理体内和衣物。<br/>[style.colourMinorBad(点击关闭自我清洁。)]"
+								:"[el.Name]正在使用其自我转化能力尽量留存体内或衣物上的肮脏液体。<br/>[style.colourMinorGood(点击开启自我清洁。)]") {
 						@Override
 						public void effects() {
 							if(getElemental().hasFlag(NPCFlagValue.elementalStayDirty)) {
@@ -211,15 +211,15 @@ public class ElementalDialogue {
 					};
 					
 				} else if(index==9) {
-					return new Response("Set names", "Change [el.namePos] name or tell [el.herHim] to call you by a different name.", ELEMENTAL_CHOOSE_NAME);
+					return new Response("设定名字", "修改[el.namePos]的名字，或者让[el.herHim]用其他名字称呼你。", ELEMENTAL_CHOOSE_NAME);
 					
 				}
 			}
 			
 			if(index==5) {
 				if(getElemental().isActive()) {
-					return new Response("Form: <b style='color:"+getElemental().getCurrentSchool().getColour().toWebHexString()+";'>Active</b>",
-							"Tell [el.name] to switch back into [el.her] passive form.",
+					return new Response("形态:<b style='color:"+getElemental().getCurrentSchool().getColour().toWebHexString()+";'>主动</b>",
+							"让[el.name]切换回被动形态。",
 							UTIL_NO_CONTENT) {
 						@Override
 						public void effects() {
@@ -229,8 +229,8 @@ public class ElementalDialogue {
 					};
 					
 				} else {
-					return new Response("Form: <i style='color:"+getElemental().getCurrentSchool().getColour().toWebHexString()+";'>Passive</i>",
-							"Tell [el.name] to switch into [el.her] active form.",
+					return new Response("形态:<i style='color:"+getElemental().getCurrentSchool().getColour().toWebHexString()+";'>被动</i>",
+							"让[el.name]切换为主动形态。",
 							UTIL_NO_CONTENT) {
 						@Override
 						public void effects() {
@@ -242,7 +242,7 @@ public class ElementalDialogue {
 				}
 				
 			} else if(index==10) {
-				return new Response("Dispel", "Dispel [el.name]...",  Main.game.getDefaultDialogue(false)) {
+				return new Response("驱散", "驱散[el.name]……",  Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						getElemental().returnToHome();
@@ -252,7 +252,7 @@ public class ElementalDialogue {
 			}
 			
 			if(index==0) {
-				return new Response("Finished", "Tell [el.name] that you've finished talking with [el.herHim] and let [el.herHim] return to [el.her] passive form.", Main.game.getDefaultDialogue(false)) {
+				return new Response("结束", "告诉[el.name]你跟[el.herHim]谈完了，可以转化回被动形态了。", Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.setResponseTab(0);
@@ -264,7 +264,7 @@ public class ElementalDialogue {
 		}
 	};
 
-	public static final DialogueNode ELEMENTAL_AFTER_SEX = new DialogueNode("Finished", "Having had [el.her] fun with you, [el.name] puts an end to the sex...", true) {
+	public static final DialogueNode ELEMENTAL_AFTER_SEX = new DialogueNode("结束", "[el.name]和你爽够了，结束了性爱……", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("characters/elemental", "ELEMENTAL_AFTER_SEX");
@@ -293,7 +293,7 @@ public class ElementalDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(ELEMENTAL_START.getResponse(responseTab, index)!=null
 					&& ELEMENTAL_START.getResponse(responseTab, index).getNextDialogue()==ELEMENTAL_INSPECT) {
-				return new Response("Inspect", "You are already taking a good look at [el.name].", null);
+				return new Response("审视", "你正在仔细打量[el.name]。", null);
 			}
 			return ELEMENTAL_START.getResponse(responseTab, index);
 		}
@@ -312,7 +312,7 @@ public class ElementalDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(ELEMENTAL_START.getResponse(responseTab, index)!=null
 					&& ELEMENTAL_START.getResponse(responseTab, index).getNextDialogue()==ELEMENTAL_TALK) {
-				return new Response("Talk", "You are already talking to [el.name].", null);
+				return new Response("对话", "你正在跟[el.name]对话。", null);
 			}
 			return ELEMENTAL_START.getResponse(responseTab, index);
 		}
@@ -331,7 +331,7 @@ public class ElementalDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(ELEMENTAL_START.getResponse(responseTab, index)!=null
 					&& ELEMENTAL_START.getResponse(responseTab, index).getNextDialogue()==ELEMENTAL_PETTING) {
-				return new Response("Petting", "You are already petting [el.name]!", null);
+				return new Response("安抚", "你已经在安抚[el.name]了！", null);
 			}
 			return ELEMENTAL_START.getResponse(responseTab, index);
 		}
@@ -345,7 +345,7 @@ public class ElementalDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==0) {
-				return new Response("Back", "Decide against having [el.name] take on a different passive form.", UTIL_NO_CONTENT) {
+				return new Response("返回", "决定还是不让[el.name]切换为其他的被动形态了。", UTIL_NO_CONTENT) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("characters/elemental", "ELEMENTAL_PASSIVE_FORM_BACK"));
@@ -362,12 +362,12 @@ public class ElementalDialogue {
 			subspecies.removeIf(s -> s==Subspecies.CENTAUR || s==Subspecies.PEGATAUR || s==Subspecies.ALITAUR || s==Subspecies.UNITAUR); // Centaurs are a special case, as we don't want centaur ferals
 			
 			if(getElemental().getPassiveForm()==null) {
-				responses.add(new Response("Wisp", "[el.Name] is already assuming the passive form of an elemental wisp!", null));
+				responses.add(new Response("精灵", "[el.Name]已经是被动的元素精灵形态了！", null));
 			} else {
-				responses.add(new Response("Wisp", "Tell [el.name] to assume the passive form of an elemental wisp.", UTIL_NO_CONTENT) {
+				responses.add(new Response("精灵", "让[el.name]转化成被动的元素精灵形态。", UTIL_NO_CONTENT) {
 					@Override
 					public void effects() {
-						UtilText.addSpecialParsingString("wisp", true);
+						UtilText.addSpecialParsingString("精灵", true);
 						getElemental().setPassiveForm(null);
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("characters/elemental", "ELEMENTAL_PASSIVE_FORM_CHANGE"));
 					}
@@ -381,13 +381,13 @@ public class ElementalDialogue {
 				if(!nameDuplicates.contains(feralName)) {
 					nameDuplicates.add(feralName);
 					if(getElemental().getPassiveForm()==sub) {
-						responses.add(new Response(Util.capitaliseSentence(feralName), "[el.Name] is already assuming the passive form of a small, feral "+feralName+"!", null));
+						responses.add(new Response(Util.capitaliseSentence(feralName), "[el.Name]的被动形态已经是小型的兽态"+feralName+"了！", null));
 						
 					} else {
-						responses.add(new Response(Util.capitaliseSentence(feralName), "Tell [el.name] to assume the passive form of a small, feral "+feralName+".", UTIL_NO_CONTENT) {
+						responses.add(new Response(Util.capitaliseSentence(feralName), "让[el.name]将被动形态修改为小型的兽态"+feralName+"。", UTIL_NO_CONTENT) {
 							@Override
 							public void effects() {
-								UtilText.addSpecialParsingString(UtilText.generateSingularDeterminer(feralName)+" "+feralName, true);
+								UtilText.addSpecialParsingString(UtilText.generateSingularDeterminer(feralName)+""+feralName, true);
 								UtilText.addSpecialParsingString(feralName, false);
 								getElemental().setPassiveForm(sub);
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("characters/elemental", "ELEMENTAL_PASSIVE_FORM_CHANGE"));
@@ -407,19 +407,19 @@ public class ElementalDialogue {
 		}
 	};
 
-	public static final DialogueNode ELEMENTAL_PERKS = new DialogueNode("[el.NamePos] Perk Tree", "", true) {
+	public static final DialogueNode ELEMENTAL_PERKS = new DialogueNode("[el.NamePos]天赋树", "", true) {
 		@Override
 		public String getContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
 			UtilText.nodeContentSB.append(UtilText.parse(getElemental(),
 					"<details>"
-							+ "<summary>[style.boldPerk(Perk & Trait Information)]</summary>"
-							+ "[style.colourPerk(Perks)] (circular icons) apply permanent boosts to [npc.namePos] attributes.<br/>"
-							+ "[style.colourPerk(Traits)] (square icons) provide unique effects for [npc.name]."
-								+ " Unlike perks, <b>traits will have no effect on [npc.name] until they're slotted into [npc.her] 'Active Traits' bar</b>.<br/>"
-							+ "Perks require perk points to unlock. [npc.Name] earns one perk point each time [npc.she] levels up, and earns an extra two perk points every five levels.<br/><br/>"
-							+ "In addition to the perks that can be purchased via perk points, there are also several special, hidden perks that are unlocked via special events."
+							+ "<summary>[style.boldPerk(天赋与特性信息)]</summary>"
+							+ "[style.colourPerk(天赋)](圆形图标)为[npc.namePos]属性提供永久增益。<br/>"
+							+ "[style.colourPerk(特性)](方形图标)为[npc.name]提供独特的效果。"
+								+ "与天赋不同，<b>特性在加入“生效特性”栏之前不会有任何效果</b>。<br/>"
+							+ "天赋需需要天赋点数解锁。[npc.Name]每当升级时便会获得一点天赋点数，并且每五级获得额外两点天赋点数。<br/><br/>"
+							+ "除了这些通过天赋点解锁的天赋以外，还存在着一些通过特殊事件解锁的特殊隐藏天赋。"
 					+ "</details>"));
 			
 			UtilText.nodeContentSB.append(PerkManager.MANAGER.getPerkTreeDisplay(getElemental(), true));
@@ -436,10 +436,10 @@ public class ElementalDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(ELEMENTAL_START.getResponse(responseTab, index)!=null
 					&& ELEMENTAL_START.getResponse(responseTab, index).getNextDialogue()==ELEMENTAL_PERKS) {
-				return new Response("Perks", "You are already assigning [el.namePos] perk points!", null);
+				return new Response("天赋", "你正在分配[el.namePos]的天赋点！", null);
 			}
 			if(responseTab==1 && index==11) {
-				return new Response("Reset perks", "Reset all perks and traits, refunding all points spent. (This is a temporary action while the perk tree is still under development.)", ELEMENTAL_PERKS) {
+				return new Response("重置天赋", "重置所有天赋和特性，并且退回所有花费的点数。(临时可用，由于天赋树仍在开发中。)", ELEMENTAL_PERKS) {
 					@Override
 					public void effects() {
 						getElemental().resetPerksMap(false, false);
@@ -450,28 +450,28 @@ public class ElementalDialogue {
 		}
 	};
 
-	public static final DialogueNode ELEMENTAL_FETISHES = new DialogueNode("[el.NamePos] Fetishes", "", true) {
+	public static final DialogueNode ELEMENTAL_FETISHES = new DialogueNode("[el.NamePos]的性癖", "", true) {
 		@Override
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			
 			sb = new StringBuilder(
 					"<details>"
-						+ "<summary>[style.boldFetish(Fetish Information)]</summary>"
-							+ "You can select [el.namePos] [style.colourLust(desire)] for each fetish [style.colourArcane(for free)],"
-							+ " or choose to take the associated [style.colourFetish(fetish)] for a cost of [style.colourArcane(arcane essences)].<br/><br/>"
-							+ "Choosing a desire will affect bonus lust gains in sex, while taking a fetish will permanently lock [el.namePos] desire to 'love', and also give [el.herHim] special bonuses."
-							+ " Fetishes can only be removed through enchanted potions.<br/><br/>"
-							+ "[el.NamePos] currently selected desire has a "+PresetColour.FETISH.getName()+" border, but [el.her] true desire (indicated by the coloured desire icon) may be modified by enchanted clothes or other items.<br/><br/>"
-							+ "[el.name] will earn experience for each fetish through performing related actions in sex."
-							+ " Experience is earned regardless of whether or not [el.she] has the associated fetish."
-							+ " Higher level fetishes will cause both [el.name] and [el.her] partner to gain more arousal from related sex actions, as well as increase the fetish's bonuses.<br/><br/>"
-							+ "Finally, derived fetishes cannot be directly unlocked, but are instead automatically applied when [el.name] meets their requirements."
+						+ "<summary>[style.boldFetish(性癖信息)]</summary>"
+							+ "你可以为[el.namePos][style.colourArcane(免费)]选择对于各个性癖的[style.colourLust(渴望值)]，"
+							+ "或者消耗[style.colourArcane(奥术精华)]直接选择相关的[style.colourFetish(性癖)]。<br/><br/>"
+							+ "选择渴望会影响性交中的额外性欲获取，而取得某性癖则会永久将[el.namePos]渴望值设置为“热爱”，并给予[el.herHim]特殊增益。"
+							+ "性癖只能通过附魔药水去除。<br/><br/>"
+							+ "[el.NamePos]当前选择的渴望值使[el.her]拥有"+PresetColour.FETISH.getName()+"的边框，但[el.her]的真实渴望值(由染色的渴望值图标表示)可以通过附魔衣物或其他物品调整。<br/><br/>"
+							+ "[el.name]每次在性交中执行与某性癖相关的动作时，就会获得相应经验。"
+							+ "无论[el.she]是否拥有相关性癖，都会获得经验。"
+							+ "更高的性癖等级会令[el.name]和[el.her]的对象从相关性动作中获得更高的快感，并且也会提升性癖的增益。<br/><br/>"
+							+ "最后，派生性癖无法直接解锁，但在满足要求后会自动解锁。"
 					+ "</details>");
 			
 			// Normal fetishes:
 
-			sb.append("<div class='container-full-width' style='text-align:center; font-weight:bold;'><h6>Fetishes</h6></div>");
+			sb.append("<div class='container-full-width' style='text-align:center; font-weight:bold;'><h6>性癖</h6></div>");
 			sb.append(PhoneDialogue.getFetishEntry(getElemental(), Fetish.FETISH_DOMINANT, Fetish.FETISH_SUBMISSIVE));
 			sb.append(PhoneDialogue.getFetishEntry(getElemental(), Fetish.FETISH_VAGINAL_GIVING, Fetish.FETISH_VAGINAL_RECEIVING));
 			sb.append(PhoneDialogue.getFetishEntry(getElemental(), Fetish.FETISH_PENIS_GIVING, Fetish.FETISH_PENIS_RECEIVING));
@@ -519,7 +519,7 @@ public class ElementalDialogue {
 			
 			// Derived fetishes:
 
-			sb.append("<div class='container-full-width' style='text-align:center; font-weight:bold; margin-top:16px;'><h6>Derived Fetishes</h6></div>");
+			sb.append("<div class='container-full-width' style='text-align:center; font-weight:bold; margin-top:16px;'><h6>派生性癖</h6></div>");
 			sb.append("<div class='fetish-container'>");
 			
 			for(AbstractFetish fetish : Fetish.getAllFetishes()) {
@@ -553,7 +553,7 @@ public class ElementalDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(ELEMENTAL_START.getResponse(responseTab, index)!=null
 					&& ELEMENTAL_START.getResponse(responseTab, index).getNextDialogue()==ELEMENTAL_FETISHES) {
-				return new Response("Fetishes", "You are already assigning [el.namePos] fetishes!", null);
+				return new Response("性癖", "你正在为[el.namePos]分配性癖！", null);
 			}
 			//TODO
 			return ELEMENTAL_START.getResponse(responseTab, index);
@@ -567,53 +567,53 @@ public class ElementalDialogue {
 			
 			UtilText.nodeContentSB.append(UtilText.parse(getElemental(), 
 				"<p>"
-					+ "At the moment, [npc.nameIsFull] calling you '[npc.pcName]', and you wonder if you should get [npc.herHim] to call you by a different name or title."
-					+ " As [npc.sheIs] your slave, you could also change [npc.her] name to whatever you'd like it to be..."
+					+ "从现在开始，[npc.nameIsFull]将称呼你为“[npc.pcName]”，你不禁思考起该不该让[npc.herHim]换个说法称呼你。"
+					+ "[npc.sheIs]不是你的奴隶，你无法随心所欲地改变[npc.her]名字……"
 				+ "</p>"));
 			
 			UtilText.nodeContentSB.append(
 				"<div class='container-full-width' style='padding:8px 16px;'>"
 					+ "<div style='width:18%; float:left; font-weight:bold; margin:0 13% 0 0; padding:0; text-align:center;'>"
-						+ "Name"
+						+ "名字"
 					+ "</div>"
 					+ "<div style='width:18%; float:left; font-weight:bold; margin:0 13% 0 0; padding:0; text-align:center;'>"
-						+ "Surname"
+						+ "姓氏"
 					+ "</div>"
 					+ "<div style='width:20%; float:left; font-weight:bold; margin:0 18% 0 0; padding:0; text-align:center;'>"
-						+ UtilText.parse(getElemental(), "What [npc.she] calls you")
+						+ UtilText.parse(getElemental(), "[npc.she]对你的称呼")
 					+ "</div>"
 					
 					+ "<form style='float:left; width:18%; margin:0; padding:0;'><input type='text' id='slaveNameInput'"
 						+ " value='"+ UtilText.parseForHTMLDisplay(getElemental().getName(false))+ "' style='width:100%; margin:0; padding:0;'></form>"
-					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#10003;"
 					+ "</div>"
-					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME_RANDOM' style='float:left; width:5%; height:28px; line-height:28px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME_RANDOM' style='float:left; width:5%; height:22px; line-height:22px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#127922;"
 					+ "</div>"
 						
 					+ "<form style='float:left; width:18%; margin:0; padding:0;'><input type='text' id='slaveSurnameInput'"
 						+ " value='"+ UtilText.parseForHTMLDisplay(getElemental().getSurname())+ "' style='width:100%; margin:0; padding:0;'></form>"
-					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME_SURNAME' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME_SURNAME' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#10003;"
 					+ "</div>"
-					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME_SURNAME_RANDOM' style='float:left; width:5%; height:28px; line-height:28px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button' id='"+getElemental().getId()+"_RENAME_SURNAME_RANDOM' style='float:left; width:5%; height:22px; line-height:22px; margin:0 2% 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#127922;"
 					+ "</div>"
 					
 					+ "<form style='float:left; width:20%; margin:0; padding:0;'><input type='text' id='slaveToPlayerNameInput' value='"+ UtilText.parseForHTMLDisplay(getElemental().getPetName(Main.game.getPlayer()))
 						+ "' style='width:100%; margin:0; padding:0;'></form>"
-					+ "<div class='normal-button' id='"+getElemental().getId()+"_CALLS_PLAYER' style='float:left; width:5%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+					+ "<div class='normal-button' id='"+getElemental().getId()+"_CALLS_PLAYER' style='float:left; width:5%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
 						+ "&#10003;"
 					+ "</div>"
-					+ " <div class='normal-button' id='GLOBAL_CALLS_PLAYER' style='float:left; width:12%; height:28px; line-height:28px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
-						+ "All Slaves"
+					+ " <div class='normal-button' id='GLOBAL_CALLS_PLAYER' style='float:left; width:12%; height:22px; line-height:22px; margin:0 0 0 0.5%; padding:0; text-align:center;'>"
+						+ "全体奴隶"
 					+ "</div>");
 			
 			UtilText.nodeContentSB.append(UtilText.parse(getElemental(), 
 						"<p style='text-align:center; margin-top:4px;'>"
-							+ "<i>If [npc.name] is told to call you 'Mom' or 'Dad', 'Mommy' or 'Daddy', 'Mistress' or 'Master', or 'Ma'am' or 'Sir',"
-							+ " then [npc.she] will automatically switch to the appropriate paired name depending on the femininity of your character.</i>"
+							+ "<i>如果[npc.name]被告知称呼你为“爸爸”/“妈妈”、“爹地”/“妈咪”、“女主人”/“男主人”或“女士”/“先生”，"
+							+ "那么[npc.she]将根据你角色的女性化程度自动切换合适的称呼。</i>"
 						+ "</p>"
 					+ "</div>"));
 			
@@ -629,7 +629,7 @@ public class ElementalDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(ELEMENTAL_START.getResponse(responseTab, index)!=null
 					&& ELEMENTAL_START.getResponse(responseTab, index).getNextDialogue()==ELEMENTAL_CHOOSE_NAME) {
-				return new Response("Set names", "You are already telling [el.name] what names [el.she] should use!", null);
+				return new Response("设定名字", "你正在设定[el.name]的名字！", null);
 			}
 			return ELEMENTAL_START.getResponse(responseTab, index);
 		}

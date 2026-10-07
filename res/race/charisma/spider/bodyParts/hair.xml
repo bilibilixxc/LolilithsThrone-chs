@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <hair>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛]]></transformationName>
 	<coveringType>charisma_spider_hair</coveringType>
 	<tags>
 		<tag>HAIR_HANDLES_IN_SEX</tag>
 	</tags>
-	<determiner><![CDATA[a head of]]></determiner>
-	<name><![CDATA[hair]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[hairs]]></namePlural> 
+	<determiner><![CDATA[一头]]></determiner>
+	<name><![CDATA[头发]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[头发]]></namePlural> 
 	<descriptorsMasculine>
-		<descriptor>damp</descriptor>
-		<descriptor>human</descriptor>
+		<descriptor><![CDATA[潮湿]]></descriptor>
+		<descriptor><![CDATA[人类]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>damp</descriptor>
-		<descriptor>human</descriptor>
+		<descriptor><![CDATA[潮湿]]></descriptor>
+		<descriptor><![CDATA[人类]]></descriptor>
 	</descriptorsFeminine>
 	<transformationDescription><![CDATA[
-		The transformation only lasts a matter of moments, leaving [npc.herHim] with silky, human-like hair.
-		<br/>[npc.Name] now [npc.has] [npc.hairColour] [style.boldSpider(spider-morph hair)].
-	]]></transformationDescription>
+		转化只持续了很短的时间，便得到了人类样子的柔顺头发。
+		<br/>[npc.Name]现在拥有[npc.hairColour][style.boldSpider(蛛化形毛发)]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.hairDeterminer] [npc.hairLength], [npc.hairColour(true)], silky human-like hair
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.hairDeterminer]人类般柔顺的[npc.hairColour(true)][npc.hairLength]发
+]]></bodyDescription>
 </hair>

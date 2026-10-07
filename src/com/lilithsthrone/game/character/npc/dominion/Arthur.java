@@ -67,12 +67,12 @@ public class Arthur extends NPC {
 	}
 	
 	public Arthur(boolean isImported) {
-		super(isImported, new NameTriplet("Arthur"), "Fairbanks",
-				"With messy brown hair, pale skin, and a thin frame, the Arthur of this world looks exactly the same as the one you've always known."
-						+ " Just as he was in your world, this Arthur used to be a colleague of Lilaya's, before Lilaya kicked him out."
+		super(isImported, new NameTriplet("亚瑟"), "费尔班克斯",
+				"棕发乱作一团，肤色苍白，身材瘦弱，这个世界的亚瑟看起来和你一直熟悉的那个亚瑟一模一样。"
+						+ "就跟你世界的亚瑟一样，他也曾是莉莱雅的收集之一，不过莉莱雅将他又踢了出去。"
 						+ "<br/>"
-						+ "Arthur is recognised as one of, if not the best arcane researcher in all of Dominion."
-						+ " Despite this, however, he's unable to harness the arcane himself.",
+						+ "亚瑟是整个御城区公认最厉害的奥术研究者之一。"
+						+ "然而，抛开这点，他自身却无法驾驭奥术。",
 				41, Month.DECEMBER, 9,
 				10,
 				Gender.M_P_MALE,
@@ -83,11 +83,11 @@ public class Arthur extends NPC {
 	
 	@Override
 	public String getDescription() {
-		return "With messy brown hair, pale skin, and a thin frame, the Arthur of this world looks exactly the same as the one you've always known."
-				+ " Just as he was in your world, this Arthur used to be a colleague of Lilaya's, before Lilaya kicked him out."
+		return "棕发乱作一团，肤色苍白，身材瘦弱，这个世界的亚瑟看起来和你一直熟悉的那个亚瑟一模一样。"
+				+ "就跟你世界的亚瑟一样，他也曾是莉莱雅的收集之一，不过莉莱雅将他又踢了出去。"
 				+ "<br/>"
-				+ "Arthur is recognised as one of, if not the best arcane researcher in all of Dominion."
-				+ " Despite this, however, he's unable to harness the arcane himself.";
+				+ "亚瑟是整个御城区公认最厉害的奥术研究者之一。"
+				+ "然而，抛开这点，他自身却无法驾驭奥术。";
 	}
 	
 	@Override
@@ -100,7 +100,7 @@ public class Arthur extends NPC {
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.2.12")) {
 			equipClothing(EquipClothingSetting.getAllClothingSettings());
 		}
-		this.setSurname("Fairbanks");
+		this.setSurname("费尔班克斯");
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.3.6")) {
 			this.resetPerksMap(true);
 		}

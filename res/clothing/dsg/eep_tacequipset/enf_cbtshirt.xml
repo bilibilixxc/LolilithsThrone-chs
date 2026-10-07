@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A tag sewn into the side seam reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[侧缝上有个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>300</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[Enforcer's combat shirt]]></name>
+		<name><![CDATA[执法者蛙服]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's combat shirts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者蛙服]]></namePlural> 
 
-		<description><![CDATA[A moisture-wicking shirt with reinforced sleeves made from a hard-wearing material. The pockets on the sleeves allow easy access even when the wearer's chest may be obstructed. This particular shirt has a tag indicating who its intended wearer is.]]></description> 
+		<description><![CDATA[一种吸湿排汗的衬衫，袖子进行了加固，由耐磨材料制成。即使穿着者的胸部受到阻碍，袖子上的口袋也能方便地取用。这件衬衫上有一个标签，上面写着它的穿戴者的信息。]]></description> 
 
 		<physicalResistance>1</physicalResistance> 
 
@@ -102,51 +101,51 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] on the combat shirt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] [npc2.verb(put)] [npc2.her] arms through the combat shirt's sleeves as [npc.she] [npc.verb(pull)] the rest down over [npc2.her] torso.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.name] [npc2.verb(put)] [npc2.her] arms into the combat shirt's sleeves as [npc.she] roughly [npc.verb(pull)] the rest down over [npc2.her] torso.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿上蛙服。
+]]></self>
+		<other><![CDATA[
+[npc.Name]帮[npc2.name]将[npc2.her]的胳膊伸进蛙服的袖子并拉下来盖住[npc2.her]的躯干。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.name]塞进蛙服里并将[npc2.her]的胳膊伸进衬衣的袖子里，并把蛙服拽下来盖住[npc2.her]的躯干。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] combat shirt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] combat shirt.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(grab)] hold of [npc2.namePos] combat shirt and roughly pull it off over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]脱下[npc.her]的蛙服。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的蛙服脱下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]抓住[npc2.namePos]的蛙服并粗暴的将它从[npc2.her]的头上拽下来。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_DOWN">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] combat shirt back down over [npc.her] torso.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] combat shirt back down over [npc2.her] torso.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] combat shirt back down over [npc2.her] torso.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的蛙服拉下到[npc.her]的躯干。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的蛙服拉下到[npc2.her]的躯干。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的蛙服拉下到[npc2.her]的躯干。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] combat shirt up to just below [npc.her] chin.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] combat shirt up to just below [npc2.her] chin.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] combat shirt up to just below [npc2.her] chin.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的蛙服拉到[npc.her]的下巴上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的蛙服拉到[npc2.her]的下巴上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的蛙服拉到[npc2.her]的下巴上。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

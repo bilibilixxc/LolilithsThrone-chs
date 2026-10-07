@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[shin guard]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[shin guards]]></namePlural>
-		<description><![CDATA[A pair of protective shin guards, designed to protect the lower half of the wearer's legs from physical blows.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[护胫]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[护胫]]></namePlural>
+		<description><![CDATA[一对护胫，旨在保护穿着者的下半条腿免受伤害。]]></description>
 		<physicalResistance>1</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity> 
 		<slot>ANKLE</slot> 
@@ -50,27 +50,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the shin guards around [npc.her] ankles.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the shin guards around [npc2.namePos] ankles.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(fasten)] the shin guards around [npc2.namePos] ankles.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]在[npc.her]的脚踝上系紧了护胫。
+]]></self>
+    <other><![CDATA[
+[npc.Name]在[npc2.namePos]的脚踝上系紧了护胫。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]草草的在[npc2.namePos]的脚踝上系上了护胫。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] shin guards, before taking them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] shin guards, before taking them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] quickly [npc.verb(unfasten)] [npc2.namePos] shin guards, before roughly snatching them off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了[npc.her]的护胫并摘了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的护胫并摘了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]迅速的解开[npc2.namePos]的护胫，并粗暴地将其抢走。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

@@ -63,8 +63,8 @@ public class Hammer extends NPC {
 	}
 	
 	public Hammer(boolean isImported) {
-		super(isImported, new NameTriplet("Alex"), "Hall",
-				"One of the SWORD Enforcers stationed in Elis, this grey-furred wolf-boy is known only by his callsign, 'Hammer'.",
+		super(isImported, new NameTriplet("亚历克斯"), "豪斯",
+				"SWORD的一名执法者在伊利斯落脚，这个灰狼男只以其代号闻名：“锤子”。",
 				69, Month.DECEMBER, 1,
 				40,
 				Gender.M_P_MALE, Subspecies.WOLF_MORPH, RaceStage.GREATER,
@@ -73,7 +73,7 @@ public class Hammer extends NPC {
 				true);
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
-			this.setGenericName("one-eyed wolf-boy");
+			this.setGenericName("独眼狼男");
 		}
 	}
 	
@@ -388,7 +388,7 @@ public class Hammer extends NPC {
 				new ItemEffect(ItemEffectType.WEAPON, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.DAMAGE_PHYSICAL, TFPotency.MAJOR_BOOST, 0),
 				new ItemEffect(ItemEffectType.WEAPON, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.DAMAGE_PHYSICAL, TFPotency.MINOR_BOOST, 0)
 				));
-		dagger.setName("Hammer's SWORD dagger");
+		dagger.setName("锤子SWORD匕首");
 		return dagger;
 	}
 	

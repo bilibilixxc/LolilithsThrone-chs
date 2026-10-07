@@ -1,92 +1,92 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- ENCOUNTER_START -->
 	
 	<htmlContent tag="ENCOUNTER_START"><![CDATA[
 	<p>
-		Approaching Eisek's stall once more, you see... a small mob gathered around it. Exasperated that some of the townsfolk still do not understand, you quicken your pace. Yet as you get closer, you see that this crowd is not like the previous one. Diverse in species and ranging from scrawny to chubby, they are nonetheless uniform in their casual manner of dress and poor hygiene. You can't quite discern what they are talking about, but they don't seem to be an immediate threat. Perhaps this isn't the best time?
+		再次走近艾瑟克的摊位时，你发现……摊位周围聚集了一小群人。有些镇民还是很讨厌，于是你气恼地加快了脚步。然而，当你走近时，你发现这群人和之前的不一样。各式各样的人或兽都有，从瘦弱到肥胖不等，但穿着却很随意，卫生条件也很差。你不太清楚他们在谈论什么，但他们似乎并不构成直接威胁。也许现在不是最佳时机？
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ENCOUNTER_BACK_OFF -->
 	
 	<htmlContent tag="ENCOUNTER_BACK_OFF"><![CDATA[
 	<p>
-		You decide that Eisek can handle this on his own for now and step away. As you do, you see a bright blue flash between the press of bodies around the stall. The crowd bursts into... cheering? And then reverently haul away several vaguely bipedal lumps of ice like some sort of holy relics. When you turn back towards the [eisek.race], he only shrugs and states, [eisek.speech(They asked me for it. Some sort of rite of passage. I obliged... There are some very strange customs in this town.)]
+		你决定让艾瑟克暂时独自处理这件事，然后在准备离开的时候，你看到摊位周围的人群中闪过一道亮蓝色的光芒。人群爆发出的是……欢呼声？然后这群人像对待圣物一样，虔诚地拖走了几块模糊的双足冰块。当你回头看向[eisek.race]时，他只是耸耸肩，说：[eisek.speech(是他们要求我这么做的，这貌似关乎某种成年仪式，于是我就答应了…… 这镇上是有些奇怪的习俗。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Copy of 'TALK_MENU' in 'txt/dsg/characters/eisek/stall' with minor variations -->
 	<htmlContent tag="ENCOUNTER_END"><![CDATA[
 	#IF(eisek.getAffection(pc) >= 15)
 		<p>
-			With the odd group having now departed, a smile grows across Eisek's face as he asks, [eisek.speech(So, what can I do for my favourite customer?)]
+			在这群奇怪的人离开后，艾瑟克的脸上露出了一如往常的笑容，他问道：[eisek.speech(所以，我能为我最喜欢的顾客做些什么呢？)]
 		</p>
 	#ELSEIF(eisek.getAffection(pc) >= 30)
 		<p>
-			With the odd group having now departed, a broad smile grows across Eisek's face, and you catch a glimpse of his tail twitching involuntarily as he asks, [eisek.speech(What can I do for my favourite customer? The day is brighter already.)]
+			在这群奇怪的人离开后，艾瑟克的脸上露出了灿烂的笑容，你可以瞥见他的尾巴在不由自主地抽动着，他问道：[eisek.speech(我能为我最喜爱的顾客做些什么？毕竟这可是美好的一天。)]
 		</p>
 	#ELSE
 		<p>
-			With the odd group having now departed, a faint smile creeps across Eisek's face as he asks, [eisek.speech(So, what can I do for you?)]
+			在这群奇怪的人离开后，艾瑟克淡淡地笑了笑，然后说：[eisek.speech(所以我能为你做些什么呢？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ENCOUNTER_APPROACH -->
 	
 	<htmlContent tag="ENCOUNTER_APPROACH"><![CDATA[
 	<p>
-		Even though the crowd isn't openly hostile, you still dread seeing what kind of trouble has found the draconic merchant this time as you work your way through the haze of body odour. When you break through, you see what appears to be the ringleader of this particular mob: a scrawny human, hooded and cloaked. Certainly, he's the loudest of the bunch.
-	</p>
+	尽管人群并没有表示公开的敌意，但当你穿越这股人体气味的浓雾时，你仍然不敢想象这次会有什么麻烦找上这位龙族商人。当你穿过人群，你看到了这群暴民的头目：一个瘦弱的人类，戴着兜帽和斗篷。他当然是这群人中最吵闹的。
+</p>
 	<p>
-		[test.speechMasculine(I just can't believe that a real dragon has come to this stinking town! What's it like, raining fire and death from above? How many villages have you razed?)] he asks, almost giddy with excitement. These are not accusations, you realise. This crowd has some kind of unhealthy obsession with dragons.
-	</p>
+	[test.speechMasculine(真不敢相信有真龙来到了这个恶臭小镇！从天上降下火雨和死亡，那是什么感觉？你烧了多少村子？)]他几乎是兴奋地问。你意识到，这些不是指控，这群人对龙有某种不健康的迷恋。
+</p>
 	<p>
-		[eisek.speech(I have razed no villages,)] Eisek replies flatly.
-	</p>
+	[eisek.speech(我没有烧过任何村子，)] Eisek平淡地回答。
+</p>
 	<p>
-		[test.speechMasculine(You mean you've never razed a village? How did you get your hoard of treasure, then? You've got one of those, right?)]
-	</p>
+	[test.speechMasculine(你是说你从来没有烧过一个村子？那你的宝藏是怎么来的？你有那个吧？)]
+</p>
 	<p>
-		[eisek.speech(I do not.)]
-	</p>
+	[eisek.speech(我没有。)]
+</p>
 	<p>
-		[test.speechMasculine(So... you really do just farm?)]
-	</p>
+	[test.speechMasculine(所以……你真的就是种田的？)]
+</p>
 	<p>
-		[eisek.speech(Yes.)] Hearing this, the ringleader's demeanour changes instantly.
-	</p>
+	[eisek.speech(是的。)]听到这个，头目的态度立即发生了变化。
+</p>
 	<p>
-		[test.speechMasculine(Ugh, even the dragons here are boring! What kind of dragon are you anyhow? You should be out there taking what you want but all you do is farm like some kind of... vegan cuck!)] To this insult, the [eisek.race]'s only response is a dismissive snort. Unsatisfied, the ringleader continues, [test.speechMasculine(Oh, I know! You just need some practice. I need a good final boss for my next LARP session! Haven't you ever wanted to own a dungeon?)]
-	</p>
-	<p>	
-		His sentiments are echoed by some members of the crowd, while others make general noises of assent. To this Eisek gives an ice cold, [eisek.speech(No.)]
-	</p>
+	[test.speechMasculine(哦，连这里的龙都这么无聊！你到底是个什么样的龙啊？你应该在外面为所欲为，但你只是种田，像某种……素食主义傻逼！)]对这个侮辱，[eisek.race]唯一的回应是一声不屑的哼。没有满足的头目继续说到，[test.speechMasculine(哦，我知道了！你只是需要些练习。我我下次的LARP活动需要个好的最终boss！你有没有想过拥有个地下城？)]
+</p>
 	<p>
-		Out of patience, the ringleader suddenly tries to push the stall over, to what end you're not sure. To goad him into accepting? Countering this, Eisek extends a single digit and presses down on the table. The ringleader strains for some time before giving up with a huff. [test.speechMasculine(Fine! Nobody wants a lame dragon as a final boss anyhow. Let's get out of here,)] he exclaims, turning around to leave.
-	</p>
+	他的观点得到了人群中一些人的共鸣，而其他人则发出了一般的同意声。对此，Eisek冷冷地说了一声[eisek.speech(不。)]
+</p>
 	<p>
-		You turn towards Eisek as the crowd shuffles away. The [eisek.race] only scratches his chin. [eisek.speech(Hmm,)] he rumbles, [eisek.speech(there are some very strange people in this town.)]
-	</p>
+	不耐烦了，头目突然试图推翻摊位，你也不确定目的是什么。是为了激他接受吗？作为反击，Eisek伸出一个手指按在桌子上。头目费力地推了一会儿，然后气喘吁吁地放弃了。[test.speechMasculine(好吧！反正没人想要只无聊的龙作为最终boss。走吧，我们走，)]他大喊着，转身离去。
+</p>
 	<p>
-		For some reason, you don't share his sense of ease.
-		#IF(pc.getRace().equals(RACE_dsg_dragon))
-			 And you're a bit
-			#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_SELFISH))
-				 annoyed
-			#ELSE
-				 confused
-			#ENDIF
-			 that they didn't seem to notice <i>your</i> draconic visage at all.
+	当人群散去时，你转向Eisek。[eisek.race]只是挠了挠下巴。[eisek.speech(嗯，)]他发出一声轰鸣，[eisek.speech(这个镇上有些非常奇怪的人。)]
+</p>
+	<p>
+	出于某种原因，你并没有分享他的轻松感。
+	#IF(pc.getRace().equals(RACE_dsg_dragon))
+		而且你有点
+		#IF(pc.hasPersonalityTrait(PERSONALITY_TRAIT_SELFISH))
+			不高兴
+		#ELSE
+			困惑
 		#ENDIF
-		 The dungeon that the ringleader mentioned might warrant a visit, just in case. They seemed local, it shouldn't be too hard to find them.
-	</p>
-	]]>
-	</htmlContent>
+		他们似乎根本没有注意到<i>你的</i>龙形面孔。
+	#ENDIF
+	那位头目提到的地下城可能值得一游，以防万一。他们看起来是本地人，找到他们应该不会太难。
+</p>
+	
+	]]></htmlContent>
 	
 </dialogue>

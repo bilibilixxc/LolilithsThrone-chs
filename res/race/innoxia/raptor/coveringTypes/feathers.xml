@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>MAIN_FEATHER</category>
 	
-	<determiner><![CDATA[a layer of]]></determiner>
+	<determiner><![CDATA[一层]]></determiner>
 	
-	<name><![CDATA[feather]]></name>
+	<name><![CDATA[羽毛]]></name>
 	
-	<namePlural pluralByDefault="true"><![CDATA[feathers]]></namePlural> 
+	<namePlural pluralByDefault="true"><![CDATA[羽毛]]></namePlural> 
 	
 	<naturalCoveringModifiers>
 		<modifier>SMOOTH</modifier>

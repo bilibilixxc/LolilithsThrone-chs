@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[flowers]]></name>
+		<name><![CDATA[花朵]]></name>
 		
-		<description><![CDATA[This tattoo depicts a simplified series of flowers.]]></description> 
-		<bodyOverviewDescription><![CDATA[a floral-themed tattoo, depicting a simplified series of flowers]]></bodyOverviewDescription> 
+		<description><![CDATA[这个纹身描绘了一系列简化的花朵。]]></description> 
+		<bodyOverviewDescription><![CDATA[以花卉为主题的纹身，描绘了一系列简单的花朵]]></bodyOverviewDescription> 
 		
 		<imageName>flowers.svg</imageName> 
 		

@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA['MFD by DSG Novelty Co.' is printed around one of the sphere's poles.]]></authorTag>
+		<authorTag><![CDATA[“DSG奇物公司制造”被印在球体极点的附近。]]></authorTag>
 		
 		<value>1000</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Mystical Orb of Fate]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Mystical Orbs of Fate]]></namePlural>
-		<description><![CDATA[Supposedly a powerful arcane artefact capable of seeing into the future, it is actually just a novelty toy. Inside its spherical plastic shell, an icosahedral die floats in alcohol. The small window allows the wielder to view a random answer inscribed on the die as it floats up.]]></description> 
+		<determiner><![CDATA[一颗]]></determiner>
+		<name><![CDATA[神秘的命运之珠]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[神秘的命运之珠]]></namePlural>
+		<description><![CDATA[这个据说是一个强大的奥术遗物，能够预知未来，但实际上只是一个小玩具。在它的球形塑料外壳内，有一个二十面体的骰子漂浮在酒精中。小窗户允许使用者看到骰子上漂浮的随机答案。]]></description> 
 		
-		<useDescriptor>ponder</useDescriptor>
+		<useDescriptor><![CDATA[思索]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -25,12 +25,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Answers a yes-or-no question.]]></line>
+			<line><![CDATA[回答“是”或“否”的问题。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			A blue triangle floats up into view. Upon its surface, the inscription reads: <i>"[style.random(Certainly|Decidedly|No doubt|Definitely|Count on it|I see it is so|Most likely|A high chance|Yes|Signs are good|Too horny, try again|Try again later|Answer delayed|Uncertain|Masturbate and try again|Doubtful|No|Don't rely on it|Sources say no|Bad signs)]."</i>
+			一个蓝色的三角形浮现在视野中。上面的铭文写着：<i>"[style.random(肯定的|明确的|毫无疑问|绝对|可以指望|我看情况是这样|很可能|机会很大|是的|迹象是好的|太色情了，请再试一次|一会儿再试|回答延迟|不确定|自慰后再试|可疑的|不行|别指望它|来源不行|很糟糕)]。"</i>
 		</p>
 		]]></applyEffects>
 		
@@ -40,10 +40,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] gingerly [npc.verb(shake)] the orb before peering into its murky depths...
-		]]></selfUse>
+		[npc.Name]小心翼翼地摇晃着这个水晶球，然后凝视着它朦胧的内部……
+]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(shake)] the orb before turning the window on it towards [npc2.name] so that [npc2.she] can peer into its murky depths...
+		[npc.Name]摇动了这个水晶球，然后把上面的画面转向[npc2.name]，以便[npc2.her]能够凝视着它朦胧的内部……
 		]]></otherUse>
 	</useDescriptions>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="seating_start">
@@ -24,12 +24,12 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
-				<responseTitle><![CDATA[Talk]]></responseTitle>
+				<responseTitle><![CDATA[交谈]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_tavern_fae_small_talk))
-						Spend some time talking with the foxtauresses.
+						花点时间和狐狸们聊聊天。
 					#ELSE
-						The foxtauresses don't seem interested in spending any more time talking with you tonight.
+						狐狸们今晚似乎不想再和你聊天了。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -48,12 +48,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Drinks]]></responseTitle>
+				<responseTitle><![CDATA[饮品]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_tavern_fae_drink))
-						Ask the foxtauresses if they'd like a drink.
+						问问狐狸们要不要喝一杯。
 					#ELSE
-						The foxtauresses already have a drink.
+						狐狸们已经在喝酒了。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -77,12 +77,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Fluff tails]]></responseTitle>
+				<responseTitle><![CDATA[蓬松的尾巴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_tavern_fae_tail_fluffed))
-						Get the foxtauresses to turn around and let you fluff their tails.
+						让狐狸转过身来，让你给它们的尾巴松松毛。
 					#ELSE
-						The foxtauresses have already let you fluff their tails, and now want more physical contact...
+						狐狸们已经让你把它们的尾巴弄得毛茸茸的了，现在它们想要更多的身体接触……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -103,12 +103,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Flirt]]></responseTitle>
+				<responseTitle><![CDATA[调情]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_tavern_fae_flirt))
-						Start flirting with the foxtauresses.
+						开始与狐狸门调情。
 					#ELSE
-						You've already flirted with the foxtauresses, and now they want some real physical contact...
+						你已经和狐狸们调情了，现在他们想要一些真正的身体接触……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -129,14 +129,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Kiss]]></responseTitle>
+				<responseTitle><![CDATA[接吻]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_tavern_fae_flirt) && !flags.hasFlag(FLAG_innoxia_tavern_fae_tail_fluffed))
-						You need to spend some time flirting with Fae and Silvia before making a move on them...
+						在对法埃和西尔维娅采取行动之前，你需要花一些时间与她们调情……
 					#ELSEIF(!flags.hasFlag(FLAG_innoxia_tavern_fae_kiss))
-						Start kissing the foxtauresses.
+						开始亲吻狐狸们。
 					#ELSE
-						You've already spent some time kissing the foxtauresses, and now they want sex...
+						你已经花了一些时间亲吻狐狸们，现在他们想做爱……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -158,12 +158,12 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
-				<responseTitle><![CDATA[Take home]]></responseTitle>
+				<responseTitle><![CDATA[带回家]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_tavern_fae_kiss))
-						You're going to need to get the foxtauresses in the mood by kissing them before offering to take them back to your room in 'The Red Dragon'.
+						你需要先亲吻狐狸们，然后带她们回在“红龙酒馆”中的房间，这样才能让她们进入状态。
 					#ELSE
-						Offer to take the foxtauresses back to your room in 'The Red Dragon'.
+						主动把狐狸们带回你在“红龙酒馆”的房间。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -183,8 +183,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell the foxtauresses that you've got to go.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告诉狐狸们你得走了。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_fields_elis_tavern_taur_core_tables]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/fields/elis/tavern_taur', 'SEATING_FAE_LEAVE'))]
@@ -215,10 +215,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take charge]]></responseTitle>
+				<responseTitle><![CDATA[做主]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell the foxtauresses that you'll be the one taking charge...
-					<br/>[style.colourSex(This will start a normal sex scene in which Fae and Silvia are the submissive participants.)]
+					告诉那些狐狸们，由你来主导……
+					<br/>[style.colourSex(这将开启一个正常的性爱场景，法埃和西尔维娅是顺从的参与者。)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
@@ -249,10 +249,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell the foxtauresses that you want them to take charge...
-					<br/>[style.colourSex(This will start a normal sex scene in which Fae and Silvia are the dominant participants.)]
+					告诉狐狸们，你希望他们来主导……
+					<br/>[style.colourSex(这将开启一个正常的性爱场景，法埃和西尔维娅是主导参与者。)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
@@ -284,12 +284,12 @@
 				<availabilityConditional><![CDATA[[#!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Doggy-styled]]></responseTitle>
+				<responseTitle><![CDATA[后入式]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.hasVagina())
-						As you don't have a vagina, you cannot get doggy-styled...
+						因为你没有阴道，所以你不能做后入式……
 					#ELSE
-						As you can't gain access to your vagina, you cannot get doggy-styled...
+						由于你无法使用自己的阴道，因此也就无法获得后入式……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -298,10 +298,10 @@
 				<availabilityConditional><![CDATA[[#pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Doggy-styled]]></responseTitle>
+				<responseTitle><![CDATA[后入式]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell the foxtauresses that you want them to fuck you in the doggy-style position...
-					<br/>[style.colourSex(Fae will fuck your pussy while you perform oral on Silvia.)]
+					告诉那些狐狸们，你想让他们用后入式操你……
+					<br/>[style.colourSex(法埃会操你的小穴，你会为西尔维娅口交。)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
@@ -348,18 +348,18 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && !pc.isAbleToAccessCoverableArea(CA_ANUS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Doggy-styled (anal)]]></responseTitle>
-				<responseTooltip><![CDATA[As you can't gain access to your asshole, you cannot get anally doggy-styled...]]></responseTooltip>
+				<responseTitle><![CDATA[后入式(肛门)]]></responseTitle>
+				<responseTooltip><![CDATA[由于无法进入屁眼，因此无法进行肛门后入式……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Doggy-styled (anal)]]></responseTitle>
+				<responseTitle><![CDATA[后入式(肛门)]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Tell the foxtauresses that you want them to anally fuck you in the doggy-style position...
-					<br/>[style.colourSex(Fae will fuck your ass while you perform oral on Silvia.)]
+					告诉那些狐狸们，你想让他们用后入式肛交你……
+					<br/>[style.colourSex(法埃会操你的屁股，你会为西尔维娅口交。)]
 				]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
@@ -406,8 +406,8 @@
 	
 	<scene id="seating_after_sex">
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The foxtauresses seem satisfied and bring an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[狐狸们似乎很满意，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_taur">SEATING_FAE_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -416,8 +416,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Say goodbye]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Fae and Silvia.]]></responseTooltip>
+				<responseTitle><![CDATA[告别]]></responseTitle>
+				<responseTooltip><![CDATA[向法埃和西尔维娅道别。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_taur_fae_silvia_seating_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#fae.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
@@ -428,8 +428,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sleep over]]></responseTitle>
-				<responseTooltip><![CDATA[Offer to let Fae and Silvia stay the night with you here in your room.]]></responseTooltip>
+				<responseTitle><![CDATA[过夜]]></responseTitle>
+				<responseTooltip><![CDATA[主动提出让法埃和西尔维娅在你的房间过夜。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_taur_fae_silvia_seating_sleep_over]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
 					[#~~(game.getMinutesUntilNextMorningOrEvening() + 5)]
@@ -462,8 +462,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[No sex]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Fae and Silvia that you're not interested in more sex and say goodbye to them.]]></responseTooltip>
+				<responseTitle><![CDATA[不做爱]]></responseTitle>
+				<responseTooltip><![CDATA[告诉法埃和西尔维娅，你对更多的性爱不感兴趣，然后和她们说再见。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_taur_fae_silvia_seating_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#fae.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]
@@ -475,8 +475,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Suck cock]]></responseTitle>
-				<responseTooltip><![CDATA[Take Fae's fox-cock into your mouth and give her a blowjob.]]></responseTooltip>
+				<responseTitle><![CDATA[舔肉棒]]></responseTitle>
+				<responseTooltip><![CDATA[把法埃的狐狸鸡巴放入口中，给他口交。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fae_oral_on_fae]]></id>
@@ -531,8 +531,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Eat her out]]></responseTitle>
-				<responseTooltip><![CDATA[Get Fae to plant her fox-pussy over your mouth so that you can eat her out.]]></responseTooltip>
+				<responseTitle><![CDATA[给她口]]></responseTitle>
+				<responseTooltip><![CDATA[让法埃把她的狐狸小穴放在你的嘴上以便你给她来点“口技”。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fae_oral_on_fae_pussy]]></id>
@@ -588,8 +588,8 @@
 	
 	<scene id="seating_after_sleep_sex">
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The foxtauresses seem satisfied and bring an end to the sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[狐狸们似乎很满意，结束了性爱……]]></tooltip>
 		<content folderPath="txt/places/fields/elis/tavern_taur">SEATING_FAE_SLEEP_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -598,8 +598,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Say goodbye]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Fae and Silvia.]]></responseTooltip>
+				<responseTitle><![CDATA[告别]]></responseTitle>
+				<responseTooltip><![CDATA[向法埃和西尔维娅道别。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_tavern_taur_fae_silvia_seating_end]]></nextDialogue>
 				<effects><![CDATA[
 					[#fae.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, false)]

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
-    <scene id ="intro">
+    <scene id="intro">
         <author><![CDATA[AceXp]]></author>
         <preParsingEffects><![CDATA[
 			[#flags.setFlag(FLAG_acexp_shady_dealer_daily_interaction, true)]
@@ -20,21 +20,21 @@
 			[#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_enbaton_enbaton'), RND.nextInt(2)+1, false, false)]
 			
    			#IF(shadyDealerRnd<=8)
-    		    [#AceXpShadyDealer.addItem(game.getItemGen().generateItem('MUSHROOM'), RND.nextInt(5)+1, false, false)]
+    		[#AceXpShadyDealer.addItem(game.getItemGen().generateItem('MUSHROOM'), RND.nextInt(5)+1, false, false)]
     		#ENDIF
    			#IF(shadyDealerRnd<=7 && pc.isQuestCompleted(QUEST_LINE_SIDE_SLIME_QUEEN))
-    		    [#AceXpShadyDealer.addItem(game.getItemGen().generateItem('innoxia_race_slime_biojuice_canister'), RND.nextInt(3)+1, false, false)]
+    		[#AceXpShadyDealer.addItem(game.getItemGen().generateItem('innoxia_race_slime_biojuice_canister'), RND.nextInt(3)+1, false, false)]
     		#ENDIF
    			#IF(shadyDealerRnd<=6)
-		        [#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_pbweap_pbpistol'), RND.nextInt(1)+1, false, false)]
-		        [#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_taser_taser'), RND.nextInt(1)+1, false, false)]
+		[#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_pbweap_pbpistol'), RND.nextInt(1)+1, false, false)]
+		[#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_taser_taser'), RND.nextInt(1)+1, false, false)]
     		#ENDIF
    			#IF(shadyDealerRnd<=4)
-		        [#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_riotshield_riotshield'), RND.nextInt(1)+1, false, false)]
-		        [#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_pbweap_pbrifle'), 1, false, false)]
+		[#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_riotshield_riotshield'), RND.nextInt(1)+1, false, false)]
+		[#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('dsg_eep_pbweap_pbrifle'), 1, false, false)]
     		#ENDIF
    			#IF(shadyDealerRnd<=2)
-		        [#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('innoxia_gun_revolver'), 1, false, false)]
+		[#AceXpShadyDealer.addWeapon(game.getItemGen().generateWeapon('innoxia_gun_revolver'), 1, false, false)]
     		#ENDIF
 			
 			[#AceXpShadyDealer.setLocation(WORLD_TYPE_EMPTY, PLACE_TYPE_GENERIC_HOLDING_CELL, true)]
@@ -50,13 +50,13 @@
             <response>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Approach]]></responseTitle>
+                <responseTitle><![CDATA[接近]]></responseTitle>
                 <responseTooltip><![CDATA[
                 	#IF(flags.hasSavedLong('AceXpShadyDealer'))
-		                Approach the shady dealer.
-	                #ELSE
-		                Find out what is going on...
-	                #ENDIF
+		接近鬼鬼祟祟的小贩。
+	#ELSE
+		看看是怎么回事……
+	#ENDIF
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[acexp_dominion_shady_dealer_trade]]></nextDialogue>
                 <effects/>
@@ -64,14 +64,14 @@
             <response>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[0]]></index>
-                <responseTitle><![CDATA[Ignore]]></responseTitle>
+                <responseTitle><![CDATA[无视]]></responseTitle>
                 <responseTooltip><![CDATA[
                 	#IF(flags.hasSavedLong('AceXpShadyDealer'))
-		                Don't pay attention to the shady dealer.
-	                #ELSE
-		                It's probably best to ignore who or whatever is lurking in the shadows...
-	                #ENDIF
- 			    ]]></responseTooltip>
+		无视那个鬼鬼祟祟的小贩。
+	#ELSE
+		最好还是不要管那些潜伏在阴影中的家伙……
+	#ENDIF
+ 			]]></responseTooltip>
                 <nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
                 <effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/acexp/dominion/shady_dealer', 'INTRO_LEAVE'))]
@@ -80,7 +80,7 @@
         </responses>
     </scene>
 
-    <scene id ="trade">
+    <scene id="trade">
         <author><![CDATA[AceXp]]></author>
         <preParsingEffects><![CDATA[
    			[#AceXpShadyDealer.setLocation(pc, true)]
@@ -98,9 +98,9 @@
             <response>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Trade]]></responseTitle>
+                <responseTitle><![CDATA[交易]]></responseTitle>
                 <responseTooltip><![CDATA[
-					See if you can strike a bargain...
+					看看能不能砍一笔……
                 ]]></responseTooltip>
                 <effects/>
                 <tradingVariables enabled="true">
@@ -110,10 +110,10 @@
             <response>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[0]]></index>
-                <responseTitle><![CDATA[Leave]]></responseTitle>
+                <responseTitle><![CDATA[离开]]></responseTitle>
                 <responseTooltip><![CDATA[
-				    Time to leave...
- 			    ]]></responseTooltip>
+				该走了……
+ 			]]></responseTooltip>
                 <nextDialogue stripContent="false"><![CDATA[default]]></nextDialogue>
                 <effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/acexp/dominion/shady_dealer', 'TRADE_LEAVE'))]

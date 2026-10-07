@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>180</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[balaclava]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[balaclavas]]></namePlural>
-		<description><![CDATA[A form of headgear which covers almost all of the wearer's head, with just a horizontal slot to leave their eyes exposed.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[巴拉克拉瓦头套]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[巴拉克拉瓦头套]]></namePlural>
+		<description><![CDATA[一种几乎覆盖住佩戴者整个头部的头套，只留下一个水平的缝隙，让他们的眼睛暴露出来。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HAIR</slot>
@@ -67,27 +66,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the balaclava down over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the balaclava down over [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the balaclava down over [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将面罩拉下，盖在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]拉下头套，盖在[npc2.namePos]头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将头套拉下，盖在[npc2.namePos]头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] balaclava.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] balaclava.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(yank)] off [npc2.namePos] balaclava.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]拉下头套，盖在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]摘下[npc2.namePos]的头套。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地将[npc2.namePos]的面罩扯掉。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

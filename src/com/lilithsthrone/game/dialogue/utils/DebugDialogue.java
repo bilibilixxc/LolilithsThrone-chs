@@ -107,7 +107,7 @@ public class DebugDialogue {
 	
 	private static GameCharacter targetedCharacter;
 	
-	public static final DialogueNode DEBUG_MENU = new DialogueNode("A powerful tool", "Open debug menu.", false) {
+	public static final DialogueNode DEBUG_MENU = new DialogueNode("强力工具", "打开Debug菜单。", false) {
 //		@Override
 //		public void applyPreParsingEffects() {
 //			targetedCharacter = null; // Reset this value when opening the debug menu to make sure that the targetedCharacter is not from a previous save file
@@ -124,20 +124,20 @@ public class DebugDialogue {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "As you finish speaking the magic word, you suddenly hear a little thudding noise close behind you."
-						+ " Spinning around, you see a small metallic device lying on the floor, which sort of resembles a t.v. remote from back in your old world."
+						+ "你刚一念完咒语，便听到身后传来咚咚咚的声音。"
+						+ "你转过身，看到一个小金属装置躺在地上，有点像旧世界里的电视遥控器。"
 					+ "</p>"
 
 					+ "<p>"
-						+ "You lean down and pick it up, and as you turn it over in your hands, you see a little label stuck to the back."
-						+ " Someone's written a message on it, and you read the following:" 
+						+ "你俯下身把它捡起来，当你把它在手中翻转时，你看到背面贴着一个小标签。"
+						+ "有人在上面写了一条信息，你读了出来：" 
 					+ "</p>"
 
 					+ "<p style='text-align:center;'><i>"
-						+ "Hi [pc.name]!<br/>"
-						+ "It looks like you know about the magic debug code! Just to give you a warning, all the options here are really buggy!"
-						+ " If you spawn in any clothing or items, just be aware that some of them aren't officially in the game just yet, so they may not work exactly as expected."
-						+ " Thanks for playing!<br/><br/>"
+						+ "嗨，[pc.name]！<br/>"
+						+ "看来你知道神奇的调试代码！给你提个醒，这里的所有选项都很容易出异常！"
+						+ "请记住，生成出来的衣服和物品有许多还没实装进游戏，所以可能会触发一些意外。"
+						+ "谢谢你玩我的游戏！<br/><br/>"
 						+ "~Innoxia~<br/></i>"
 					+ "</p>";
 		}
@@ -145,19 +145,19 @@ public class DebugDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index == 0) {
-				return "Main";
+				return "主要";
 				
 			} else if(index == 1) {
-				return "Stats";
+				return "状态";
 				
 			} else if(index == 2) {
-				return "Misc.";
+				return "杂项";
 
 			} else if(index == 3) {
-				return "Item view";
+				return "物品";
 				
 			} else if(index == 4) {
-				return "Personality";
+				return "个性";
 			}
 			return null;
 		}
@@ -165,7 +165,7 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 0) {
-				return new Response("Back", "", DEBUG_MENU){
+				return new Response("返回", "", DEBUG_MENU){
 					@Override
 					public DialogueNode getNextDialogue() {
 						if(Main.game.isInSex()) {
@@ -178,13 +178,13 @@ public class DebugDialogue {
 			
 			if(responseTab==0) {
 				if (index == 1) {
-					return new Response("Open parser", "Test the parser.", PARSER);
+					return new Response("打开解析器", "测试解析器。", PARSER);
 					
 				} else if (index == 2) {
-					return new Response("Debug mode: ", "Unlocks enchanting and slavery without first having to do the associated quests.", DEBUG_MENU){
+					return new Response("Debug模式：", "无需完成任务，即刻解锁附魔和奴役。", DEBUG_MENU){
 						@Override
 						public String getTitle() {
-							return "Debug mode: "+(Main.game.isDebugMode()?"[style.colourGood(ON)]":"[style.colourDisabled(OFF)]");
+							return "Debug模式："+(Main.game.isDebugMode()?"[style.colourGood(开启)]":"[style.colourDisabled(关闭)]");
 						}
 						
 						@Override
@@ -195,10 +195,10 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 3) {
-					return new Response("Reveal Maps: ", "Reveals all map tiles.", DEBUG_MENU){
+					return new Response("显示全地图：", "显示所有地图地块。", DEBUG_MENU){
 						@Override
 						public String getTitle() {
-							return "Reveal Maps: "+(Main.game.isMapReveal()?"[style.colourGood(ON)]":"[style.colourDisabled(OFF)]");
+							return "显示全地图："+(Main.game.isMapReveal()?"[style.colourGood(开启)]":"[style.colourDisabled(关闭)]");
 						}
 						
 						@Override
@@ -209,13 +209,13 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 4) {
-					return new Response("Reveal bodies: ",
-							"When toggled on, clothing does not conceal inventory slots, and you'll know what all character's genitals look like without first having to see them."
-									+ " This also reveals unique NPCs' naked & underwear images.",
+					return new Response("显示身体信息：",
+							"开启时，衣物不再遮挡物品栏位，你无需亲眼看就能知道所有角色的性器官外形。"
+									+ "也会解锁特殊NPC的裸体和内衣图像。",
 							DEBUG_MENU){
 						@Override
 						public String getTitle() {
-							return "Reveal bodies: "+(Main.game.isConcealedSlotsReveal()?"[style.colourGood(ON)]":"[style.colourDisabled(OFF)]");
+							return "显示身体信息："+(Main.game.isConcealedSlotsReveal()?"[style.colourGood(开启)]":"[style.colourDisabled(关闭)]");
 						}
 						
 						@Override
@@ -235,18 +235,18 @@ public class DebugDialogue {
 							PlaceType.getPlaceTypeFromId("innoxia_fields_elis_town_alley"),
 							PlaceType.getPlaceTypeFromId("innoxia_fields_elis_town_abandoned_bakery")
 							).contains(Main.game.getPlayer().getLocationPlace().getPlaceType())) {
-						return new Response("Spawn attacker", "You can only spawn an attacker on: Dominion's alleyway & canal tiles; Submission's tunnel tiles; Elis alleyway tiles.", null);
+						return new Response("生成袭击者", "你只能在以下地块生成袭击者：御城区的小巷和运河、屈城区的隧道、伊利斯的小巷。", null);
 					}
 					if(!Main.game.getNonCompanionCharactersPresent().isEmpty()) {
-						return new Response("Spawn attacker", "You can only spawn an attacker on empty tiles.", null);
+						return new Response("生成袭击者", "你只能在空闲地块上生成袭击者。", null);
 					}
-					return new Response("Spawn attacker", "Spawn an attacker on this tile.", ATTACKER_SPAWN_MENU);
+					return new Response("生成袭击者", "在此地块上生成一名袭击者。", ATTACKER_SPAWN_MENU);
 					
 				} else if (index == 6) {
-					return new Response("Spawn Menu", "View the clothing, weapon, and item spawn menu.", SPAWN_MENU);
+					return new Response("生成菜单", "查看衣物、武器和道具生成菜单。", SPAWN_MENU);
 					
 				} else if (index == 7) {
-					return new Response("Transform", "Transform your body.", BodyChanging.BODY_CHANGING_CORE) {
+					return new Response("转化", "转化你的身体。", BodyChanging.BODY_CHANGING_CORE) {
 						@Override
 						public void effects() {
 							BodyChanging.setTarget(Main.game.getPlayer(), true);
@@ -254,16 +254,16 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 8) {
-					return new Response("Set body material", "Set your body material.", BODY_PART_MATERIAL);
+					return new Response("设置身体材质", "调整你身体的材质。", BODY_PART_MATERIAL);
 					
 				} else if (index == 9) {
-					return new Response("Race resets", "View the race reset options.", BODY_PART_RACE_RESET);
+					return new Response("重置种族", "查看重置种族选项。", BODY_PART_RACE_RESET);
 					
 				} else if (index == 10) {
-					return new Response("Set spawns", "View all of the clothing/weapon sets in the game and spawn them.", SPAWN_MENU_SET);
+					return new Response("生成套装", "查看游戏中的所有衣物/武器套装并生成它们。", SPAWN_MENU_SET);
 					
 				} else if (index == 11) {
-					return new Response(UtilText.formatAsMoney(100_000, "span"), "Add 100,000 flames.", DEBUG_MENU){
+					return new Response(UtilText.formatAsMoney(100_000, "span"), "增加十万火币。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementMoney(100_000);
@@ -271,7 +271,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 12) {
-					return new Response("+1000 essences", "Add 1000 arcane essences.", DEBUG_MENU){
+					return new Response("+1000精华", "增加1000奥术精华。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementEssenceCount(1000, false);
@@ -280,15 +280,15 @@ public class DebugDialogue {
 					
 				} else if (index == 13) {
 //					return new Response("Very long action text for testing", "Very long action text for testing.", null);
-					return new Response("Encounters", "View all encounters which can trigger on this tile.", ENCOUNTER_MENU);
+					return new Response("遭遇", "查看该地块上所有可触发的遭遇。", ENCOUNTER_MENU);
 					
 				} else if (index == 14) {
-					return new Response("Sticker unlocks: ",
-							"Unlocks availability of all stickers for clothing. This is done by ignoring stickers' unavailabilityText and availabilityText, so if you're trying to test those, having this on will be a problem!",
+					return new Response("解锁贴图: ",
+							"使所有衣物贴图可用。这将忽略贴图的unavailabilityText和availabilityText。因此，如果你要测试这些内容，打开此选项将造成问题！",
 							DEBUG_MENU){
 						@Override
 						public String getTitle() {
-							return "Sticker unlocks: "+(Main.game.isAllStickersUnlocked()?"[style.colourGood(ON)]":"[style.colourDisabled(OFF)]");
+							return "解锁贴图: "+(Main.game.isAllStickersUnlocked()?"[style.colourGood(开)]":"[style.colourDisabled(关)]");
 						}
 						
 						@Override
@@ -300,10 +300,10 @@ public class DebugDialogue {
 					
 				} else if(index==15) {
 					if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_I_ARTHURS_TALE)) {
-						return new Response("Skip Dominion quests", "You have already completed all of the main quests which lead up to the Submission quest line!", null);
+						return new Response("跳过御城区任务", "你已经完成了屈城区任务线之前的所有主线任务！", null);
 						
 					} else {
-						return new Response("Skip Dominion quests", "Skip all main quests up to the start of the Submission quest line.", DEBUG_MENU){
+						return new Response("跳过御城区任务", "跳过屈城区任务线之前的所有主线任务。", DEBUG_MENU){
 							@Override
 							public void effects() {
 								List<Quest> dominionSkipQuests = Util.newArrayListOfValues(
@@ -331,13 +331,13 @@ public class DebugDialogue {
 					
 				} else if(index==16) {
 					if(Main.game.getPlayer().isQuestProgressLessThan(QuestLine.MAIN, Quest.MAIN_2_A_INTO_THE_DEPTHS)) {
-						return new Response("Skip Submission quests", "You have not progressed far enough into the main quest to start skipping Submission quests!", null);
+						return new Response("跳过屈城区任务", "你当前的主线进度不够，还不能跳过屈城区任务。", null);
 						
 					} else if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_2_D_MEETING_A_LILIN)) {
-						return new Response("Skip Submission quests", "You have already completed all of the main quests which lead up to the Elis quest line!", null);
+						return new Response("跳过屈城区任务", "你已经完成了伊利斯任务线之前的所有主线任务！", null);
 						
 					} else {
-						return new Response("Skip Submission quests", "Skip all main quests up to the start of the Elis quest line.", DEBUG_MENU){
+						return new Response("跳过屈城区任务", "跳过伊利斯任务线之前的所有主线任务。", DEBUG_MENU){
 							@Override
 							public void effects() {
 								List<Quest> submissionSkipQuests = Util.newArrayListOfValues(
@@ -360,10 +360,10 @@ public class DebugDialogue {
 					}
 					
 				} else if(index==25) {
-					return new Response("Enchanted clothing", "View a list of all of the randomly-enchanted clothing which can spawn.", RANDOM_ENCHANTMENT_CLOTHING);
+					return new Response("附魔服装", "查看所有可生成的随机附魔服装列表。", RANDOM_ENCHANTMENT_CLOTHING);
 					
 				} else if(index==26) {
-					return new Response("Enchanted potions", "View a list of all of the randomly-enchanted Youko potions which can spawn.", RANDOM_ENCHANTMENT_POTIONS);
+					return new Response("附魔魔药", "查看所有可生成的随机附魔妖狐魔药列表。", RANDOM_ENCHANTMENT_POTIONS);
 
 				} else if(index==29) {
 					return new Response("Summon NPCS", "Summon NPCS.", SUMMON_NPC);
@@ -372,7 +372,7 @@ public class DebugDialogue {
 				
 			} else if(responseTab==1) {
 				if (index == 1) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_EXPERIENCE.toWebHexString()+";'>+500 xp</span> (self)", "Give yourself 500xp.", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_EXPERIENCE.toWebHexString()+";'>+500经验</span>(自己)", "给你自己加500经验值", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementExperience(500, false);
@@ -381,9 +381,9 @@ public class DebugDialogue {
 					
 				} else if (index == 2) {
 					if(!Main.game.getPlayer().hasCompanions()) {
-						return new Response("+500 xp (party)", "You do not have any companions, so there's nobody to give experience to...", null);
+						return new Response("+500经验(队伍)", "你没有任何盟友，所以没人可给……", null);
 					}
-					return new Response("<span style='color:"+PresetColour.GENERIC_EXPERIENCE.toWebHexString()+";'>+500 xp</span> (party)", "Give each of your party members 500xp.", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_EXPERIENCE.toWebHexString()+";'>+500经验</span>(队伍)", "给所有成员都加500经验。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							for(GameCharacter character : Main.game.getPlayer().getParty()) {
@@ -393,7 +393,7 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==3) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>+5</span> <span style='color:"+PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+";'>Physique</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>+5</span> <span style='color:"+PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+";'>体格</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementAttribute(Attribute.MAJOR_PHYSIQUE, 5);
@@ -401,7 +401,7 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==4) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>+5</span> <span style='color:"+PresetColour.ATTRIBUTE_ARCANE.toWebHexString()+";'>Arcane</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>+5</span> <span style='color:"+PresetColour.ATTRIBUTE_ARCANE.toWebHexString()+";'>奥术</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementAttribute(Attribute.MAJOR_ARCANE, 5);
@@ -409,7 +409,7 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==5) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>+5</span> <span style='color:"+PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString()+";'>Corruption</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>+5</span> <span style='color:"+PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString()+";'>堕落</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementAttribute(Attribute.MAJOR_CORRUPTION, 5);
@@ -417,7 +417,7 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==6) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>Max all attributes</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>所有属性拉满</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setAttribute(Attribute.MAJOR_PHYSIQUE, 100);
@@ -427,7 +427,7 @@ public class DebugDialogue {
 					};
 					
 				}  else if(index==7) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>+1</span> <span style='color:"+PresetColour.PERK.toWebHexString()+";'>Perk point</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_EXCELLENT.toWebHexString()+";'>+1</span> <span style='color:"+PresetColour.PERK.toWebHexString()+";'>天赋点</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementPerkPoints(1);
@@ -435,21 +435,21 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==8) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>-5</span> <span style='color:"+PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+";'>Physique</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>-5</span> <span style='color:"+PresetColour.ATTRIBUTE_PHYSIQUE.toWebHexString()+";'>体格</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementAttribute(Attribute.MAJOR_PHYSIQUE, -5);
 						}
 					};
 				} else if(index==9) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>-5</span> <span style='color:"+PresetColour.ATTRIBUTE_ARCANE.toWebHexString()+";'>Arcane</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>-5</span> <span style='color:"+PresetColour.ATTRIBUTE_ARCANE.toWebHexString()+";'>奥术</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementAttribute(Attribute.MAJOR_ARCANE, -5);
 						}
 					};
 				} else if(index==10) {
-					return new Response("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>-5</span> <span style='color:"+PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString()+";'>Corruption</span>", "", DEBUG_MENU){
+					return new Response("<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>-5</span> <span style='color:"+PresetColour.ATTRIBUTE_CORRUPTION.toWebHexString()+";'>堕落</span>", "", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().incrementAttribute(Attribute.MAJOR_CORRUPTION, -5);
@@ -457,7 +457,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 11) {
-					return new Response("Reset spells", "Resets all of your spells and upgrades, and removes all of your spell upgrade points.", DEBUG_MENU){
+					return new Response("重置法术", "重置所有法术和升级，并移除所有法术升级点数。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().resetSpells();
@@ -467,7 +467,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 12) {
-					return new Response("+10 Spell Points", "Add 10 spell points to each spell school.", DEBUG_MENU){
+					return new Response("+10法术点", "全学派+10法术点。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							for(SpellSchool school : SpellSchool.values()) {
@@ -477,7 +477,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 13) {
-					return new Response("[style.colourGood(Complete)] Shared Encyclopedia", "Unlock every entry in your shared encyclopedia.", DEBUG_MENU){
+					return new Response("[style.colourGood(完成)]百科全书", "解锁共享百科全书中的每个条目。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.getProperties().completeSharedEncyclopedia();
@@ -486,7 +486,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 14) {
-					return new Response("[style.colourBad(Reset)] Shared Encyclopedia", "Delete every entry in your shared encyclopedia.", DEBUG_MENU){
+					return new Response("[style.colourBad(重置)]共享百科全书", "删除共享百科全书中的所有条目。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.getProperties().resetRaceDiscovered();
@@ -500,7 +500,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 15) {
-					return new Response("Reset virginities", "Removes all of your virginity loss information as well as resetting all orifices to being 'virgin'.", DEBUG_MENU){
+					return new Response("重置童贞", "删除所有失贞信息，并将所有腔穴重设为“保留贞操”。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().completeVirginityReset();
@@ -511,16 +511,16 @@ public class DebugDialogue {
 				
 			} else if(responseTab==2) {
 				if (index == 1) {
-					return new Response("Test colours", "Test text for readability", COLOURS){
+					return new Response("测试颜色", "可读性测试文本", COLOURS){
 						@Override
 						public void effects() {
 							coloursSB = new StringBuilder("<p>");
 							for (Colour c : PresetColour.getAllPresetColours()) {
-								coloursSB.append(c.getId() + ": <span style='color:" + c.toWebHexString() + ";'>Test text for readability.</span><br/>");
+								coloursSB.append(c.getId() + ": <span style='color:" + c.toWebHexString() + ";'>可读性测试文本。</span><br/>");
 							}
 							coloursSB.append("<br/><br/>");
 							for (BaseColour bc : BaseColour.values()) {
-								coloursSB.append(bc.toString() + ": <span style='color:" + bc.toWebHexString() + ";'>Test text for readability.</span><br/>");
+								coloursSB.append(bc.toString() + ": <span style='color:" + bc.toWebHexString() + ";'>可读性测试文本。</span><br/>");
 							}
 							coloursSB.append("</p>");
 							
@@ -528,10 +528,10 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 2) {
-					return new Response("Offspring", "View available offspring", OFFSPRING);
+					return new Response("后代", "查看可找到的后代", OFFSPRING);
 					
 				} else if (index == 3) {
-					return new Response("[style.boldBad(Month -)]", "Reduce current month by 1.", DEBUG_MENU){
+					return new Response("[style.boldBad(月份-)]", "当前月份数减1。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.setStartingDateMonth(Main.game.getStartingDate().getMonth().minus(1));
@@ -539,7 +539,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 4) {
-						return new Response("[style.boldGood(Month +)]", "Increase current month by 1.", DEBUG_MENU){
+						return new Response("[style.boldGood(月份+)]", "当前月份数加1。", DEBUG_MENU){
 							@Override
 							public void effects() {
 								Main.game.setStartingDateMonth(Main.game.getStartingDate().getMonth().plus(1));
@@ -548,7 +548,7 @@ public class DebugDialogue {
 						
 				}
 				else if (index == 5) {
-					return new Response("Combat moves", "View a list of all combat moves available in the game.", COMBAT_MOVES);
+					return new Response("战斗动作", "查看游戏中所有可用战斗动作的列表。", COMBAT_MOVES);
 					
 //					if(!Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.DOMINION_BACK_ALLEYS)) {
 //						return new Response("Lumi test", "Lumi can only be spawned in alleyway tiles.", null);
@@ -568,7 +568,7 @@ public class DebugDialogue {
 					
 				} 
 				else if (index == 6) {
-					return new Response("Brax's revenge", "Brax cums in your vagina!", DEBUG_MENU){
+					return new Response("布拉克斯的复仇", "布拉克斯射在了你的阴道里！", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().guaranteePregnancyOnNextRoll();
@@ -582,7 +582,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 7) {
-					return new Response("Lilaya's hypocrisy", "Lilaya cums in your vagina!", DEBUG_MENU){
+					return new Response("莉莱雅的伪善", "莉莱雅射在了你的阴道里！", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().guaranteePregnancyOnNextRoll();
@@ -596,7 +596,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 8) {
-					return new Response("Lilaya's tests", "Automatically completes Lilaya's enchantment quest, making you able to enchant right away.", DEBUG_MENU){
+					return new Response("莉莱雅的测试", "自动完成莉莱雅的附魔任务，使你立刻学会附魔。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)){ //If the player hasn't completed the enchantment quest
@@ -612,17 +612,17 @@ public class DebugDialogue {
 					};
 
 				} else if (index == 9) {
-					return new Response("+1 Epona stamp", "Gives you one stamp you can get by playing the breeder roulette.", DEBUG_MENU){
+					return new Response("+1伊波娜印章", "获得一个怀孕轮盘赌奖励的印章。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().eponaStamps += 1;
-							Main.game.getTextEndStringBuilder().append("Added 1 stamp, you now have "  + Main.game.getDialogueFlags().eponaStamps + " stamp(s)");
+							Main.game.getTextEndStringBuilder().append("印章数加1，现在你拥有"  + Main.game.getDialogueFlags().eponaStamps + "枚印章");
 						}
 					};
 
 				} else if(index == 10){
 					if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_SLAVERY)) { //If the player doesn't have the slaver license
-						return new Response("Get slaver license", "Automatically completes the quest to get a slaver license. This will start the quest if you don't already have it, and finish it.", DEBUG_MENU){
+						return new Response("获得贩奴许可", "自动完成获得贩奴许可的任务。如果你还未接取任务，这将开启并完成任务。", DEBUG_MENU){
 							@Override
 							public void effects() {
 								if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_SLAVERY)){
@@ -643,11 +643,11 @@ public class DebugDialogue {
 						};
 						
 					} else {
-						return new Response("Get slaver license", "You've already completed the side quest to obtain a slaver license.", null);
+						return new Response("获得贩奴许可", "你已经完成了获取贩奴许可的支线任务。", null);
 					}
 					
 				} else if(index == 11){
-					return new Response("Centaur", "A wild centaur appears! (Please only use this on a completely neutral tile, as it will probably break things otherwise.)", CENTAUR_SEX){
+					return new Response("半人马", "一只野生的半人马出现了！(建议在无特征的地块上使用，否则可能会造成损坏。)", CENTAUR_SEX){
 						@Override
 						public void effects(){
 							NPC target = new GenericSexualPartner(Gender.getGenderFromUserPreferences(false,  false), Main.game.getPlayer().getWorldLocation(), Main.game.getPlayer().getLocation(), false, (s)->s!=Subspecies.CENTAUR);
@@ -660,7 +660,7 @@ public class DebugDialogue {
 						}
 					};
 				} else if (index == 12) {
-					return new Response("[style.boldMinorBad(Day -)]", "Reduce current day by 1.", DEBUG_MENU){
+					return new Response("[style.boldMinorBad(日期-)]", "当前日期数减1。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.incrementStartingDateDays(-1);
@@ -668,7 +668,7 @@ public class DebugDialogue {
 					};
 					
 				} else if (index == 13) {
-						return new Response("[style.boldMinorGood(Day +)]", "Increase current day by 1.", DEBUG_MENU){
+						return new Response("[style.boldMinorGood(日期+)]", "当前日期数加1。", DEBUG_MENU){
 							@Override
 							public void effects() {
 								Main.game.incrementStartingDateDays(1);
@@ -676,7 +676,7 @@ public class DebugDialogue {
 						};
 						
 				} else if (index == 14) {
-					return new Response("+1000 [style.mule] points", "Gives you the maximum amount of [style.mule] points (can be used after qualifying as a [style.mule] in Dominion Express).", DEBUG_MENU){
+					return new Response("+1000[style.mule]点数", "给予你最大额度的[style.mule]点数(在御城速递取得[style.mule]资格后可以使用)。", DEBUG_MENU){
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getDialogueFlags().incrementNatalyaPoints(1000));
@@ -684,7 +684,7 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==15) {
-					return new Response("Bimbos!", "Turn every feminine NPC in the game into a busty, slovenly bimbo.<br/>[style.italicsBad(Warning! This cannot be undone!)]", DEBUG_MENU){
+					return new Response("无脑大胸！", "将游戏中的每名女性NPC都变成丰满邋遢的无脑大胸女。<br/>[style.italicsBad(警告！此行为无法取消！)]", DEBUG_MENU){
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.BASE_PINK_DEEP;
@@ -704,7 +704,7 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==16) {
-					return new Response("Tiger mode", "Turn every NPC in the game into a greater tiger-morph.<br/>[style.italicsBad(Warning! This cannot be undone!)]", DEBUG_MENU){
+					return new Response("虎人模式", "将游戏中的每名NPC都变成纯兽虎化形。<br/>[style.italicsBad(警告！此行为无法取消！)]", DEBUG_MENU){
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.RACE_CAT_MORPH_TIGER;
@@ -724,7 +724,7 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==17) {
-					return new Response("Mofu mode", "Every NPC with a covering type that supports the 'fluffy' modifier gains the 'fluffy' modifier.<br/>[style.italicsBad(Warning! This cannot be undone!)]", DEBUG_MENU){
+					return new Response("毛茸茸模式", "每名皮毛种类允许的NPC都会获得“松软”修饰。<br/>[style.italicsBad(警告！此行为无法取消！)]", DEBUG_MENU){
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.BASE_ROSE;
@@ -745,13 +745,13 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==18) {
-					return new Response("Moo mode",
-							"Every feminine NPC will have their breast size incremented by 5,"
-									+ " gain the '"+Fetish.FETISH_LACTATION_SELF.getName(null)+"' fetish,"
-									+ " gain 500ml breast milk storage,"
-									+ " ass size incremented by 1,"
-									+ " and hip size incremented by 1."
-							+ "<br/>[style.italicsBad(Warning! This cannot be undone!)]",
+					return new Response("哞哞模式",
+							"每名女性NPC的乳房尺寸都会增加5，"
+									+ "获得“"+Fetish.FETISH_LACTATION_SELF.getName(null)+"”性癖，"
+									+ "获得500ml乳汁储量，"
+									+ "屁股尺寸增加1，"
+									+ "同时臀部尺寸增加1。"
+							+ "<br/>[style.italicsBad(警告！此行为无法取消！)]",
 							DEBUG_MENU){
 						@Override
 						public Colour getHighlightColour() {
@@ -771,7 +771,7 @@ public class DebugDialogue {
 						}
 					};
 				} else if(index==19) {
-					return new Response("Rat mode", "Turn every NPC in the game into a greater rat-morph.<br/>[style.italicsBad(Warning! This cannot be undone!)]", DEBUG_MENU){
+					return new Response("鼠人模式", "将游戏中的每名NPC都变成纯兽鼠化形。<br/>[style.italicsBad(警告！此行为无法取消！)]", DEBUG_MENU){
 						@Override
 						public Colour getHighlightColour() {
 							return PresetColour.RACE_RAT_MORPH;
@@ -810,10 +810,10 @@ public class DebugDialogue {
 					AbstractPerk perk = powerPerks.get(index-20);
 					AbstractPerk perkDemon = powerPerksDemon.get(index-20);
 					
-					return new Response("Elder Lilin perk", "Toggle perk.", DEBUG_MENU) {
+					return new Response("莉琳长老天赋", "切换天赋开关状态。", DEBUG_MENU) {
 						@Override
 						public String getTitle() {
-							return perk.getName(null)+": "+(Main.game.getPlayer().hasPerkAnywhereInTree(perk) || Main.game.getPlayer().hasPerkAnywhereInTree(perkDemon)?"[style.colourGood(ON)]":"[style.colourDisabled(OFF)]");
+							return perk.getName(null)+": "+(Main.game.getPlayer().hasPerkAnywhereInTree(perk) || Main.game.getPlayer().hasPerkAnywhereInTree(perkDemon)?"[style.colourGood(开启)]":"[style.colourDisabled(关闭)]");
 						}
 						
 						@Override
@@ -832,10 +832,10 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==29)  {
-					return new Response("Spawn rates", "List the spawn rates in the current location.", SPAWN_RATES) {
+					return new Response("生成概率", "列出此地块的种族生成概率。", SPAWN_RATES) {
 						@Override
 						public void effects() {
-							spawnrateSB = new StringBuilder("<table><tr><th>Race Name</th><th>Overall</th><th>Masculine</th><th>Feminine</th><th>Race Name</th><th>Overall</th><th>Masculine</th><th>Feminine</th></tr>");
+							spawnrateSB = new StringBuilder("<table><tr><th>种族名</th><th>总计</th><th>男性</th><th>女性</th><th>种族名</th><th>总计</th><th>男性</th><th>女性</th></tr>");
 							spawnTotal = 0;
 							spawnTotalMasculine = 0;
 							spawnTotalFeminine = 0;
@@ -877,20 +877,20 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==30) {
-					return new Response("Item collage", "View a collage of all item, weapon, and clothing icons which are currently in the game.<br/>[style.italicsMinorBad(Will be slow to load and display!)]", CLOTHING_COLLAGE);
+					return new Response("物品图标", "查看由当前游戏中所有道具、武器和衣物图标。<br/>[style.italicsMinorBad(加载和显示的过程会很慢！)]", CLOTHING_COLLAGE);
 					
 				}
 				
 			} else if(responseTab == 3) {
 				if(index==1) {
-					String femName = "None";
+					String femName = "无";
 					if(filterFemininity==Femininity.FEMININE) {
-						femName = "Feminine";
+						femName = "女性化";
 					} else if(filterFemininity==Femininity.MASCULINE) {
-						femName = "Masculine";
+						femName = "男性化";
 					}
-					return new Response("Filter: <span style='color:"+(filterFemininity.getColour().toWebHexString())+";'>"+femName+"</span>",
-							"Toggle the femininity filter for clothing.",
+					return new Response("过滤：<span style='color:"+(filterFemininity.getColour().toWebHexString())+";'>"+femName+"</span>",
+							"筛选女性化服装。",
 							Main.game.getCurrentDialogueNode()==DEBUG_MENU
 								?DEBUG_MENU
 								:ITEM_VIEWER) {
@@ -923,8 +923,8 @@ public class DebugDialogue {
 //					};
 					
 				} else if(index==2) {
-					return new Response("Items",
-							"View icons and ids of all the items in the game. You can also spawn these items by clicking on their icons. <i>Warning: May be sluggish and slow to load.</i>",
+					return new Response("道具",
+							"查看游戏中所有道具的图标和id。你也可以点击对应图标来生成物品。<i>警告：加载可能较慢。</i>",
 							ITEM_VIEWER) {
 						@Override
 						public void effects() {
@@ -937,8 +937,8 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==3) {
-					return new Response("Weapons",
-							"View icons and ids of all the weapons in the game. You can also spawn these items by clicking on their icons. <i>Warning: May be sluggish and slow to load.</i>",
+					return new Response("武器",
+							"查看游戏中所有武器的图标和id。你也可以点击对应图标来生成物品。<i>警告：加载可能较慢。</i>",
 							ITEM_VIEWER) {
 						@Override
 						public void effects() {
@@ -967,8 +967,8 @@ public class DebugDialogue {
 //							return PresetColour.BASE_YELLOW;
 //						}
 //					};
-					return new Response("Tattoos",
-							"View icons and ids of all the tattoos in the game. <i>Warning: May be sluggish and slow to load.</i>",
+					return new Response("纹身",
+							"查看游戏中所有纹身的图标和id。<i>警告：加载可能较慢。</i>",
 							ITEM_VIEWER) {
 						@Override
 						public void effects() {
@@ -978,8 +978,8 @@ public class DebugDialogue {
 					};
 					
 				} else if(index==5) {
-					return new Response("Outfits",
-							"Enter the outfit generator, allowing you to test all of the in-game outfits.",
+					return new Response("服装",
+							"进入装备生成器，让你测试所有游戏中的装备。",
 							OUTFIT_VIEWER) {
 						@Override
 						public void effects() {
@@ -1007,7 +1007,7 @@ public class DebugDialogue {
 							doll.setPiercedTongue(true);
 							doll.setPiercedVagina(true);
 							
-							doll.setName("Dress-up doll");
+							doll.setName("装扮玩偶");
 							doll.setLocation(Main.game.getPlayer());
 							Main.game.setActiveNPC(doll);
 						}
@@ -1030,7 +1030,7 @@ public class DebugDialogue {
 					if(index-indexOffset < clothingSlots.size()) {
 						InventorySlot is = clothingSlots.get(index-indexOffset);
 						return new Response(Util.capitaliseSentence(is.getName()),
-								"View icons and ids of all the clothing in the slot '"+is.getName()+"'. You can also spawn these items by clicking on their icons. <i>Warning: May be very sluggish and slow to load.</i>",
+								"查看所有装备于“"+is.getName()+"”栏位的衣物。你也可以点击对应图标来生成物品。<i>警告：加载可能较慢。</i>",
 								ITEM_VIEWER) {
 							@Override
 							public void effects() {
@@ -1057,8 +1057,8 @@ public class DebugDialogue {
 				if(index==1) {
 					return new ResponseEffectsOnly(UtilText.parse(targetedCharacter, "[npc.Name]"),
 							UtilText.parse(targetedCharacter,
-									"[npc.NameIsFull] the current target, and personality changes will be applied to [npc.herHim]."
-									+ "<br/><i>Click to cycle through characters present in this tile.</i>")) {
+									"[npc.NameIsFull]为当前目标，个性改变将作用于[npc.herHim]。"
+									+ "<br/><i>点击循环切换该地块的在场角色。</i>")) {
 						@Override
 						public Colour getHighlightColour() {
 							return targetedCharacter.getGender().getColour();
@@ -1093,8 +1093,8 @@ public class DebugDialogue {
 									?"<b style='color:"+perTr.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(perTr.getName())+"</b>"
 									:Util.capitaliseSentence(perTr.getName()),
 									(hasTrait
-										?"[style.boldGood(Owned!)] "
-										:"[style.colourMinorBad(Not owned!)] ")
+										?"[style.boldGood(已拥有！)] "
+										:"[style.colourMinorBad(尚未拥有！)] ")
 									+perTr.getDescription(targetedCharacter, true, true),
 								DEBUG_MENU) {
 							@Override
@@ -1110,8 +1110,8 @@ public class DebugDialogue {
 				}
 				
 				if(index==pt.size()+2) {
-					return new Response("[style.colourMinorBad(Regenerate)]",
-								UtilText.parse(targetedCharacter, "Regenerate [npc.namePos] personality traits based on [npc.her] race and history."),
+					return new Response("[style.colourMinorBad(重新生成)]",
+								UtilText.parse(targetedCharacter, "根据种族和经历，重新生成[npc.namePos]的个性特性。"),
 								DEBUG_MENU) {
 						@Override
 						public void effects() {
@@ -1189,17 +1189,17 @@ public class DebugDialogue {
 				if(npc.getMother()!=null && npc.getMother().getPregnantLitter()!=null && npc.getMother().getPregnantLitter().getOffspring().contains(npc.getId())) {
 					isBorn = false;
 				}
-				UtilText.nodeContentSB.append((isBorn?"":"(Not born yet) ")+"<span style='color:"+npc.getFemininity().getColour().toWebHexString()+";'>"+npc.getName(true)+" "+npc.getSurname()+"</span>"
+				UtilText.nodeContentSB.append((isBorn?"":"(尚未出生) ")+"<span style='color:"+npc.getFemininity().getColour().toWebHexString()+";'>"+npc.getName(true)+" "+npc.getSurname()+"</span>"
 						+ " ("+npc.getSubspecies().getName(npc.getBody())+" | "+npc.getHalfDemonSubspecies().getName(npc.getBody())+")"
 						+ " ("+npc.getCovering(npc.getBody().getTorsoType().getBodyCoveringType(npc.getBody())).getPrimaryColour().getName()+")" // Primary covering colour
-						+ " M:"+(npc.getMother()!=null?npc.getMother().getName(true):"Deleted NPC")
-						+ " F:"+(npc.getFather()!=null?npc.getFather().getName(true):"Deleted NPC")+"<br/>");
+						+ "母："+(npc.getMother()!=null?npc.getMother().getName(true):"被删除的NPC")
+						+ "父："+(npc.getFather()!=null?npc.getFather().getName(true):"被删除的NPC")+"<br/>");
 			}
 			for(OffspringSeed os : Main.game.getOffspringNotSpawned(os -> true,true)) {
 				if(!os.isBorn()) {
-					UtilText.nodeContentSB.append("[style.colourBad(Not yet born)] ");
+					UtilText.nodeContentSB.append("[style.colourBad(尚未出生)] ");
 				} else {
-					UtilText.nodeContentSB.append("Not yet met ");
+					UtilText.nodeContentSB.append("还未遇到");
 				}
 				
 				UtilText.nodeContentSB.append("<span style='color:"+os.getFemininity().getColour().toWebHexString()+";'>"+os.getName()+" "+os.getSurname()+"</span>");
@@ -1213,14 +1213,14 @@ public class DebugDialogue {
 				UtilText.nodeContentSB.append(")");
 				
 				Colour primaryCoveringColour = os.getBody().getCovering(os.getBody().getTorsoType().getBodyCoveringType(os.getBody()), true).getPrimaryColour();
-				UtilText.nodeContentSB.append(" (<span style='color:"+primaryCoveringColour.toWebHexString()+";'>"+primaryCoveringColour.getName()+"</span>)"); // Primary covering colour
+				UtilText.nodeContentSB.append("(<span style='color:"+primaryCoveringColour.toWebHexString()+";'>"+primaryCoveringColour.getName()+"</span>)"); // Primary covering colour
 				
-				UtilText.nodeContentSB.append(" M:"+(os.getMother()!=null?os.getMother().getName(true):"Deleted NPC"));
-				UtilText.nodeContentSB.append(" F:"+(os.getFather()!=null?os.getFather().getName(true):"Deleted NPC")+"<br/>");
+				UtilText.nodeContentSB.append("母："+(os.getMother()!=null?os.getMother().getName(true):"被删除的NPC"));
+				UtilText.nodeContentSB.append("父："+(os.getFather()!=null?os.getFather().getName(true):"被删除的NPC")+"<br/>");
 			}
 			if(activeOffspring!=null) {
 				for(AbstractFetish f : activeOffspring.getFetishes(true)) {
-					UtilText.nodeContentSB.append("<br/>[style.boldSex(Fetish:)] "+f.getName(activeOffspring));
+					UtilText.nodeContentSB.append("<br/>[style.boldSex(性癖：)] "+f.getName(activeOffspring));
 				}
 				UtilText.nodeContentSB.append(
 						"<br/>" + activeOffspring.getDescription()
@@ -1233,10 +1233,10 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else if(index-1 < Main.game.getOffspring().size()) {
-				return new Response(Main.game.getOffspring().get(index-1).getName(true), "View the character page for this offspring.", OFFSPRING) {
+				return new Response(Main.game.getOffspring().get(index-1).getName(true), "查看该后代的角色页面。", OFFSPRING) {
 					@Override
 					public void effects() {
 						activeOffspring = Main.game.getOffspring().get(index-1);
@@ -1278,7 +1278,7 @@ public class DebugDialogue {
 	}
 	private static StringBuilder inventorySB = new StringBuilder();
 	
-	public static final DialogueNode SPAWN_MENU = new DialogueNode("Spawn Menu", "Access the spawn menu.", false) {
+	public static final DialogueNode SPAWN_MENU = new DialogueNode("生成菜单", "进入生成菜单。", false) {
 		@Override
 		public String getHeaderContent() {
 			inventorySB.setLength(0);
@@ -1288,12 +1288,12 @@ public class DebugDialogue {
 			inventorySB.append(
 					"<p style='width:100%; text-align:center; padding:0 margin:0;'>"
 						+ (itemTag==ItemTag.CHEAT_ITEM
-							?"[style.boldGreenDark(Cheat Items)]"
+							?"[style.boldGreenDark(作弊道具)]"
 							:(activeSlot==null
-								?"<b style='color:"+PresetColour.BASE_BLUE_LIGHT.toWebHexString()+";'>Spawn Item</b>"
+								?"<b style='color:"+PresetColour.BASE_BLUE_LIGHT.toWebHexString()+";'>生成道具</b>"
 								:(activeSlot.isWeapon()
-									? "<b style='color:"+PresetColour.BASE_RED_LIGHT.toWebHexString()+";'>Spawn Weapon</b> ("+Util.capitaliseSentence(activeSlot==InventorySlot.WEAPON_MAIN_1?"Melee":"Ranged")+")"
-									: "<b style='color:"+PresetColour.BASE_YELLOW_LIGHT.toWebHexString()+";'>Spawn Clothing</b> ("+Util.capitaliseSentence(activeSlot.getName())+")")))
+									? "<b style='color:"+PresetColour.BASE_RED_LIGHT.toWebHexString()+";'>生成武器</b>("+Util.capitaliseSentence(activeSlot==InventorySlot.WEAPON_MAIN_1?"近战":"远程")+")"
+									: "<b style='color:"+PresetColour.BASE_YELLOW_LIGHT.toWebHexString()+";'>生成衣物</b>("+Util.capitaliseSentence(activeSlot.getName())+")")))
 					+"</p>");
 			
 			int count=0;
@@ -1389,18 +1389,18 @@ public class DebugDialogue {
 					inventorySB.append("<div class='normal-button' id='"+slot+"_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"
 							+ (slot.isWeapon() ? PresetColour.BASE_RED_LIGHT.toWebHexString() : PresetColour.BASE_YELLOW_LIGHT.toWebHexString())+";'>"
 							+(slot == InventorySlot.WEAPON_MAIN_1
-								?"Melee"
+								?"近战"
 								:(slot == InventorySlot.WEAPON_OFFHAND_1
-										?"Ranged"
+										?"远程"
 										:Util.capitaliseSentence(slot.getName())))
 							+"</div>");
 				}
 			}
-			inventorySB.append("<div class='normal-button' id='ITEM_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.BASE_BLUE_LIGHT.toWebHexString()+";'>Items</div>");
-			inventorySB.append("<div class='normal-button' id='ESSENCE_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Essences</div>");
-			inventorySB.append("<div class='normal-button' id='BOOK_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.BASE_ORANGE.toWebHexString()+";'>Books</div>");
-			inventorySB.append("<div class='normal-button' id='SPELL_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.DAMAGE_TYPE_SPELL.toWebHexString()+";'>Spells</div>");
-			inventorySB.append("<div class='normal-button' id='HIDDEN_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; opacity:0; cursor:default; color:"+PresetColour.BASE_GREEN_DARK.toWebHexString()+";'>Cheats</div>");
+			inventorySB.append("<div class='normal-button' id='ITEM_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.BASE_BLUE_LIGHT.toWebHexString()+";'>道具</div>");
+			inventorySB.append("<div class='normal-button' id='ESSENCE_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>精华</div>");
+			inventorySB.append("<div class='normal-button' id='BOOK_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.BASE_ORANGE.toWebHexString()+";'>书本</div>");
+			inventorySB.append("<div class='normal-button' id='SPELL_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.DAMAGE_TYPE_SPELL.toWebHexString()+";'>法术</div>");
+			inventorySB.append("<div class='normal-button' id='HIDDEN_SPAWN_SELECT' style='width:18%; margin:1%; padding:2px; font-size:0.9em; opacity:0; cursor:default; color:"+PresetColour.BASE_GREEN_DARK.toWebHexString()+";'>作弊</div>");
 
 			inventorySB.append("</div>");
 			
@@ -1423,7 +1423,7 @@ public class DebugDialogue {
 		}
 	};
 	
-	public static final DialogueNode SPAWN_MENU_SET = new DialogueNode("Set spawns", "", false) {
+	public static final DialogueNode SPAWN_MENU_SET = new DialogueNode("生成套装", "", false) {
 		@Override
 		public String getHeaderContent() {
 			inventorySB.setLength(0);
@@ -1485,7 +1485,7 @@ public class DebugDialogue {
 			
 			if(!viewAllClothing && !viewAllTattoos && (viewAll || itemViewSlot == null)) {
 				sb.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>"
-						+ "<h5>Total items: "+itemsTotal.size()+"</h5>");
+						+ "<h5>道具总计："+itemsTotal.size()+"</h5>");
 				for(AbstractItemType itemType : itemsTotal) {
 					if((itemTag==null
 							&& (!itemType.getItemTags().contains(ItemTag.BOOK)
@@ -1509,7 +1509,7 @@ public class DebugDialogue {
 
 			if(viewAll || (itemViewSlot!=null && itemViewSlot.isWeapon())) {
 				sb.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>"
-						+ "<h5>Total weapons: "+weaponsTotal.size()+"</h5>");
+						+ "<h5>武器总计："+weaponsTotal.size()+"</h5>");
 				for(AbstractWeaponType weaponType : weaponsTotal) {
 					sb.append("<div class='container-full-width' style='width:"+width+"%; white-space: nowrap; word-wrap: break-word; font-size:0.75em; -webkit-user-select:auto; padding:0; margin:0;'>"
 											+ "<div class='inventory-item-slot unequipped' style='width:"+imgWidth+"%; box-sizing: border-box; padding:0; margin:0; background-color:"+weaponType.getRarity().getBackgroundColour().toWebHexString()+";'>"
@@ -1526,7 +1526,7 @@ public class DebugDialogue {
 			if(viewAll || viewAllClothing) {
 				sb.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>");
 				sb.append("<h5>");
-					sb.append("Total clothing: "+clothingTotal.size());
+					sb.append("总服装数："+clothingTotal.size());
 				sb.append("</h5>");
 				for(AbstractClothingType clothingType : clothingTotal) {
 					sb.append("<div class='container-full-width' style='width:"+width+"%; white-space: nowrap; word-wrap: break-word; font-size:0.75em; -webkit-user-select:auto; padding:0; margin:0;'>"
@@ -1537,7 +1537,7 @@ public class DebugDialogue {
 											+ "<div class='overlay' id='" + clothingType.getId() + "_SPAWN'></div>"
 										+ "</div>"
 										+ (clothingType.getPhysicalResistance()>0
-												?"[style.boldPhysical("+UtilText.getShieldSymbol()+clothingType.getPhysicalResistance()+")] [style.colourGreenLight("+ClothingType.getIdFromClothingType(clothingType)+")]"
+												?"[style.boldPhysical("+UtilText.getShieldSymbol()+clothingType.getPhysicalResistance()+")][style.colourGreenLight("+ClothingType.getIdFromClothingType(clothingType)+")]"
 												:ClothingType.getIdFromClothingType(clothingType))
 									+ "</div>");
 				}
@@ -1545,7 +1545,7 @@ public class DebugDialogue {
 				
 			} else if(viewAllTattoos) {
 				sb.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>"
-						+ "<h5>Total tattoos: "+tattoosTotal.size()+"</h5>");
+						+ "<h5>纹身总计："+tattoosTotal.size()+"</h5>");
 				for(AbstractTattooType tattooType : tattoosTotal) {
 					sb.append("<div class='container-full-width' style='width:"+width+"%; white-space: nowrap; word-wrap: break-word; font-size:0.75em; -webkit-user-select:auto; padding:0; margin:0;'>"
 											+ "<div class='inventory-item-slot unequipped' style='width:"+imgWidth+"%; box-sizing: border-box; padding:0; margin:0; background-color:"+tattooType.getRarity().getBackgroundColour().toWebHexString()+";'>"
@@ -1574,10 +1574,10 @@ public class DebugDialogue {
 				
 				sb.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>");
 				sb.append("<h5>");
-					sb.append("Total '"+itemViewSlot.getName()+"' slot clothing: "+clothingToDisplay.size()+(filterFemininity!=Femininity.ANDROGYNOUS?"/"+maxItems:""));
+					sb.append("“"+itemViewSlot.getName()+"”槽位总服装数："+clothingToDisplay.size()+(filterFemininity!=Femininity.ANDROGYNOUS?"/"+maxItems:""));
 					if(filterFemininity!=Femininity.ANDROGYNOUS) {
 						sb.append("<br/>");
-						sb.append("(<span style='color:"+filterFemininity.getColour().toWebHexString()+";'>"+(filterFemininity.isFeminine()?"Feminine":"Masculine")+" Filter</span>)");
+						sb.append("(<span style='color:"+filterFemininity.getColour().toWebHexString()+";'>"+(filterFemininity.isFeminine()?"女性化":"男性化")+"过滤器</span>)");
 					}
 				sb.append("</h5>");
 				for(AbstractClothingType clothingType : clothingToDisplay) {
@@ -1609,7 +1609,7 @@ public class DebugDialogue {
 	};
 	
 	
-	public static final DialogueNode OUTFIT_VIEWER = new DialogueNode("Outfit Viewer", "", true) {
+	public static final DialogueNode OUTFIT_VIEWER = new DialogueNode("装备查看器", "", true) {
 		@Override
 		public String getContent() {
 			inventorySB.setLength(0);
@@ -1622,13 +1622,13 @@ public class DebugDialogue {
 				inventorySB.append("<div class='container-full-width' style='width:95%; padding:4px; margin:4px 2.5% 4px 2.5%; background-color:"+(i%2==0?PresetColour.BACKGROUND:PresetColour.BACKGROUND_ALT).toWebHexString()+";'>");
 
 					inventorySB.append("<div class='container-full-width' style='position:relative; padding:0; margin:0; width:100%; background-color:#00000000; -webkit-user-select:auto; text-align:left;'>");
-							inventorySB.append("<b>"+outfit.getName()+":</b> <i>"+outfit.getDescription()+"</i>");
+							inventorySB.append("<b>"+outfit.getName()+":</b><i>"+outfit.getDescription()+"</i>");
 							inventorySB.append("<br/>");
 							inventorySB.append("ID: "+id);
 							inventorySB.append("<br/>");
-							inventorySB.append("Femininity: <span style='color:"+outfit.getFemininity().getColour().toWebHexString()+";'>"+outfit.getFemininity().toString()+"</span>");
+							inventorySB.append("女性化程度：<span style='color:"+outfit.getFemininity().getColour().toWebHexString()+";'>"+outfit.getFemininity().toString()+"</span>");
 							inventorySB.append("<br/>");
-							inventorySB.append("Conditional: <span style='font-family:monospace; font-size:0.85em; background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; padding:2px;'>"+outfit.getConditional()+"</span>");
+							inventorySB.append("条件：<span style='font-family:monospace; font-size:0.85em; background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; padding:2px;'>"+outfit.getConditional()+"</span>");
 							
 							inventorySB.append("<br/>");
 							inventorySB.append("Leg configurations: ");
@@ -1639,7 +1639,7 @@ public class DebugDialogue {
 								}
 								inventorySB.append(Util.stringsToStringList(lcNames, false));
 							} else {
-								inventorySB.append("[style.colourMinorGood(ANY)]");
+								inventorySB.append("[style.colourMinorGood(任何)]");
 							}
 							
 							inventorySB.append("<br/>");
@@ -1651,7 +1651,7 @@ public class DebugDialogue {
 								}
 								inventorySB.append(Util.stringsToStringList(otNames, false));
 							} else {
-								inventorySB.append("[style.colourBad(NONE!)]");
+								inventorySB.append("[style.colourBad(无！)]");
 							}
 							inventorySB.append("<div class='normal-button' id='OUTFIT_"+id+"'"
 									+ " style='position:absolute; text-align:center; width:18%; margin:1%; right:2px; bottom:2px; padding:2px; font-size:0.9em; color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Apply</div>");
@@ -1668,7 +1668,7 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Back", "Return to the main debug menu.", DEBUG_MENU) {
+				return new Response("返回", "返回到debug主菜单", DEBUG_MENU) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC(dollID);
@@ -1701,17 +1701,17 @@ public class DebugDialogue {
 		
 	}
 	
-	public static final DialogueNode BODY_PART_MATERIAL = new DialogueNode("Set body material", "Set body material.", false) {
+	public static final DialogueNode BODY_PART_MATERIAL = new DialogueNode("设置身体材质", "设置身体材质。", false) {
 
 		@Override
 		public String getContent() {
-			return "<p>Choose a material type.</p>";
+			return "<p>选择一种材质类型。</p>";
 		}
 		
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index != 0 && index < BodyMaterial.values().length+1) {
-				return new Response(Util.capitaliseSentence(BodyMaterial.values()[index - 1].getName()), "Set your body to be made out of "+BodyMaterial.values()[index - 1].getName()+".", BODY_PART_MATERIAL){
+				return new Response(Util.capitaliseSentence(BodyMaterial.values()[index - 1].getName()), "将你的身体变成由"+BodyMaterial.values()[index - 1].getName()+"构成。", BODY_PART_MATERIAL){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(Main.game.getPlayer().setBodyMaterial(BodyMaterial.values()[index - 1]));
@@ -1719,7 +1719,7 @@ public class DebugDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -1728,7 +1728,7 @@ public class DebugDialogue {
 	};
 	
 	public static Map<AbstractEncounter, Float> encounters;
-	public static final DialogueNode ENCOUNTER_MENU = new DialogueNode("Available Encounters", "", false) {
+	public static final DialogueNode ENCOUNTER_MENU = new DialogueNode("可用遭遇", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			encounters = Main.game.getPlayerCell().getPlaceType().getPossibleEncountersMap(true);
@@ -1738,7 +1738,7 @@ public class DebugDialogue {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>"
-					+ "<h5>Encounters: "+encounters.size()+"</h5>");
+					+ "<h5>遭遇："+encounters.size()+"</h5>");
 			int i=0;
 			for(Entry<AbstractEncounter, Float> entry : encounters.entrySet()) {
 				AbstractEncounter encounter = entry.getKey();
@@ -1750,14 +1750,14 @@ public class DebugDialogue {
 
 					sb.append("<div class='container-full-width' style='position:relative; padding:0; margin:0; width:100%; background-color:#00000000; -webkit-user-select:auto; text-align:left;'>");
 						if(encounter.isFromExternalFile()) {
-							sb.append(UtilText.parse("[style.colourGreenLight(MOD)] "));
+							sb.append(UtilText.parse("[style.colourGreenLight(模组)] "));
 						} else {
-							sb.append(UtilText.parse("[style.colourRedLight(RES)] "));
+							sb.append(UtilText.parse("[style.colourRedLight(资源)] "));
 						}
 						sb.append("<b>"+id+": "+chance+"%</b>");
 						sb.append("<br/>");
 
-						sb.append("Encounters:");
+						sb.append("遭遇：");
 						if(encounter.isFromExternalFile()) {
 							int encounterIndex=0;
 							int rowCount=0;
@@ -1768,13 +1768,13 @@ public class DebugDialogue {
 										+ " background:"+(rowCount%2==0?PresetColour.BACKGROUND.getShades()[3]:PresetColour.BACKGROUND_ALT.getShades()[3])+";'>");
 									sb.append(data.getName()+": "+(triggerChance==0?"<span style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>":"<span>")+triggerChance+"%</span>");
 									sb.append("<br/>");
-									sb.append("Conditional: <span style='font-family:monospace; font-size:0.85em; background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; padding:2px;'>"+data.getTriggerConditional()+"</span>");
+									sb.append("条件: <span style='font-family:monospace; font-size:0.85em; background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; padding:2px;'>"+data.getTriggerConditional()+"</span>");
 									sb.append("<br/>");
-									sb.append("Dialogue triggered: "+data.getDialogueId());
+									sb.append("触发对话: "+data.getDialogueId());
 									sb.append("<div class='normal-button' id='DEBUG_ENCOUNTER_"+id+"_"+encounterIndex+"'"
 											+ " style='position:absolute; text-align:center; width:18%; height:auto; margin:1%; top:-8px; right:2px; padding:2px;"
 											+ " font-size:0.9em; color:"+(triggerChance==0?PresetColour.GENERIC_BAD:PresetColour.GENERIC_MINOR_GOOD).toWebHexString()+";'>");
-										sb.append("Trigger");
+										sb.append("触发");
 									sb.append("</div>");
 								sb.append("</div>");
 								encounterIndex++;
@@ -1791,7 +1791,7 @@ public class DebugDialogue {
 									sb.append(et.toString()+": "+etChance+"%");
 									sb.append("<div class='normal-button' id='DEBUG_ENCOUNTER_"+id+"_"+et+"'"
 											+ " style='position:absolute; text-align:center; width:18%; height:auto; margin:1%; top:-8px; right:2px; padding:2px; font-size:0.9em; color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>");
-										sb.append("Trigger");
+										sb.append("触发");
 									sb.append("</div>");
 								sb.append("</div>");
 							}
@@ -1846,7 +1846,7 @@ public class DebugDialogue {
 		Main.game.setActiveNPC(attacker);
 	}
 	
-	public static final DialogueNode ATTACKER_SPAWN_MENU = new DialogueNode("Spawn Attacker", "", false) {
+	public static final DialogueNode ATTACKER_SPAWN_MENU = new DialogueNode("生成袭击者", "", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			attacker = null;
@@ -1857,26 +1857,26 @@ public class DebugDialogue {
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			sb.append("<p>");
-				sb.append("Choose the attacker's race.");
+				sb.append("选择袭击者的种族。");
 			sb.append("</p>");
 			return sb.toString();
 		}
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index == 0) {
-				return "[style.colourTfPartial(Partial)]";
+				return "[style.colourTfPartial(似兽)]";
 
 			} else if(index == 1) {
-				return "[style.colourTfMinor(Minor)]";
+				return "[style.colourTfMinor(泛兽)]";
 				
 			} else if(index == 2) {
-				return "[style.colourTfLesser(Lesser)]";
+				return "[style.colourTfLesser(亚兽)]";
 				
 			} else if(index == 3) {
-				return "[style.colourTfGreater(Greater)]";
+				return "[style.colourTfGreater(纯兽)]";
 				
 			} else if(index == 4) {
-				return "[style.colourHalfDemon(Half-demon)]";
+				return "[style.colourHalfDemon(半恶魔)]";
 			}
 			return null;
 		}
@@ -1896,7 +1896,7 @@ public class DebugDialogue {
 				
 				return new Response(
 						Util.capitaliseSentence(name),
-						"Spawn an attacker of the subspecies: "+name,
+						"生成亚种的袭击者："+name,
 						ATTACKER_SPAWN) {
 					@Override
 					public Colour getHighlightColour() {
@@ -1923,18 +1923,18 @@ public class DebugDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode ATTACKER_SPAWN = new DialogueNode("Spawn Attacker", "", false) {
+	public static final DialogueNode ATTACKER_SPAWN = new DialogueNode("生成袭击者", "", false) {
 		@Override
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			sb.append("<p>");
-				sb.append("Choose the attacker's gender.");
+				sb.append("选择袭击者的性别。");
 			sb.append("</p>");
 			return sb.toString();
 		}
@@ -1948,13 +1948,13 @@ public class DebugDialogue {
 				
 				return new ResponseEffectsOnly(
 						Util.capitaliseSentence(gender.getName()),
-						"Spawn an attacker."
-						+ "<br/>Subspecies: "+name
-						+"<br/>Gender: "+gender.getName()
+						"生成一名袭击者。"
+						+ "<br/>亚种："+name
+						+"<br/>性别："+gender.getName()
 						+" ("
-							+(gender.getGenderName().isHasPenis()?"[style.italicsGood(Penis)] ":"[style.italicsBad(Penis)] ")
-							+(gender.getGenderName().isHasVagina()?"[style.italicsGood(Vagina)] ":"[style.italicsBad(Vagina)] ")
-							+(gender.getGenderName().isHasBreasts()?"[style.italicsGood(Breasts)]":"[style.italicsBad(Breasts)]")
+							+(gender.getGenderName().isHasPenis()?"[style.italicsGood(阴茎)] ":"[style.italicsBad(阴茎)] ")
+							+(gender.getGenderName().isHasVagina()?"[style.italicsGood(阴道)] ":"[style.italicsBad(阴道)] ")
+							+(gender.getGenderName().isHasBreasts()?"[style.italicsGood(胸部)]":"[style.italicsBad(胸部)]")
 						+")") {
 					@Override
 					public Colour getHighlightColour() {
@@ -1997,13 +1997,13 @@ public class DebugDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode BODY_PART_RACE_RESET = new DialogueNode("Reset body", "Set race.", false) {
+	public static final DialogueNode BODY_PART_RACE_RESET = new DialogueNode("重置种族", "设置种族。", false) {
 		@Override
 		public void applyPreParsingEffects() {
 			// Just in case this dialogue node is accessed before initialising targetedCharacter, or if targetedCharacter is no longer present:
@@ -2016,16 +2016,16 @@ public class DebugDialogue {
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			sb.append("<p>"
-						+ UtilText.parse(targetedCharacter, "Select one of the races to reset [npc.namePos] body to the default values of that race. (i.e. Regenerate [npc.her] current body as that of a different race.)")
+						+ UtilText.parse(targetedCharacter, "选择一个种族，将[npc.namePos]的身体重置为该种族的默认值。(也就是说，将[npc.her]当前的身体重生成不同种族的身体)。")
 					+ "</p>"
 					+ "<p>"
-						+ "[style.colourTfPartial(Partial)]: Sets body to human, with selected race's antennae, eyes, ears, hair, horns, tail, and wings.</br>"
-						+ "[style.colourTfMinor(Minor)]: Same as partial, but also includes ass, breasts, penis, and vagina.</br>"
-						+ "[style.colourTfLesser(Lesser)]: Same as minor, but also includes arms and legs.</br>"
-						+ "[style.colourTfGreater(Greater)]: Sets all parts to the race's.</br>"
+						+ "[style.colourTfPartial(似兽)]：拥有人类的身体，长着所选种族的触角、眼睛、耳朵、毛发、角、尾巴和翅膀。</br>"
+						+ "[style.colourTfMinor(泛兽)]：在似兽的基础上，额外长有所选种族的屁股、胸部、阴茎和阴道。</br>"
+						+ "[style.colourTfLesser(半兽)]：在泛兽的基础上，额外长有所选种族的上肢和下肢。</br>"
+						+ "[style.colourTfGreater(纯兽)]：身体所有部位都变为所选种族。</br>"
 					+ "</p>"
 					+ "<p>"
-					+ "<b>IDs:</b><br/>");
+					+ "<b>ID代码：</b><br/>");
 			for(AbstractSubspecies sub : Subspecies.getAllSubspecies()) {
 				sb.append("<span style='color:"+sub.getColour(targetedCharacter).toWebHexString()+";'>"+Util.capitaliseSentence(sub.getName(targetedCharacter.getBody()))+"</span>: "+Subspecies.getIdFromSubspecies(sub));
 				sb.append("</br>");
@@ -2038,19 +2038,19 @@ public class DebugDialogue {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index == 0) {
-				return "[style.colourTfPartial(Partial)]";
+				return "[style.colourTfPartial(似兽)]";
 
 			} else if(index == 1) {
-				return "[style.colourTfMinor(Minor)]";
+				return "[style.colourTfMinor(泛兽)]";
 				
 			} else if(index == 2) {
-				return "[style.colourTfLesser(Lesser)]";
+				return "[style.colourTfLesser(亚兽)]";
 				
 			} else if(index == 3) {
-				return "[style.colourTfGreater(Greater)]";
+				return "[style.colourTfGreater(纯兽)]";
 				
 			} else if (index == 4) {
-				return "Target";
+				return "目标";
 			}
 			return null;
 		}
@@ -2060,9 +2060,9 @@ public class DebugDialogue {
 			if(responseTab==4) {
 				if (index == 1) {
 					if (targetedCharacter == Main.game.getPlayer()) {
-						return new Response(Main.game.getPlayer().getName(), "You are the current target.", null);
+						return new Response(Main.game.getPlayer().getName(), "你已是当前目标。", null);
 					} else {
-						return new Response(Main.game.getPlayer().getName(), "Target yourself.", BODY_PART_RACE_RESET) {
+						return new Response(Main.game.getPlayer().getName(), "以自己为目标。", BODY_PART_RACE_RESET) {
 							@Override
 							public void effects() {
 								targetedCharacter = Main.game.getPlayer();
@@ -2080,9 +2080,9 @@ public class DebugDialogue {
 				GameCharacter gc = Main.game.getCharactersPresent().get(index);
 				if (!gc.isUnique()) {
 					if (targetedCharacter == gc) {
-						return new Response(gc.getName(), gc.getName()+" is the current target.", null);
+						return new Response(gc.getName(), gc.getName()+"已是当前目标。", null);
 					} else {
-						return new Response(gc.getName(), "Change target to "+gc.getName(), BODY_PART_RACE_RESET) {
+						return new Response(gc.getName(), "将目标改为"+gc.getName(), BODY_PART_RACE_RESET) {
 							@Override
 							public void effects() {
 								targetedCharacter = gc;
@@ -2103,7 +2103,7 @@ public class DebugDialogue {
 				
 				return new Response(
 						Util.capitaliseSentence(name),
-						"Set your body as that of "+UtilText.generateSingularDeterminer(name)+" "+name+".",
+						"将你的身体变为"+UtilText.generateSingularDeterminer(name)+" "+name+"。",
 						BODY_PART_RACE_RESET){
 					@Override
 					public void effects() {
@@ -2150,13 +2150,13 @@ public class DebugDialogue {
 						}
 						Main.game.getTextEndStringBuilder().append(
 								"<p>"
-									+ "[style.boldTfGeneric(Transformed:)] You are now "+UtilText.generateSingularDeterminer(name)+" "+name+"!"
+									+ "[style.boldTfGeneric(转化完成：)]你现在是"+UtilText.generateSingularDeterminer(name)+" "+name+"了！"
 								+ "</p>");
 					}
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -2165,7 +2165,7 @@ public class DebugDialogue {
 	};
 	
 	
-	public static final DialogueNode CLOTHING_COLLAGE = new DialogueNode("Clothing collage", "Clothing collage.", false) {
+	public static final DialogueNode CLOTHING_COLLAGE = new DialogueNode("服装拼贴", "服装拼贴。", false) {
 		@Override
 		public String getContent() {
 			inventorySB.setLength(0);
@@ -2174,7 +2174,7 @@ public class DebugDialogue {
 			int imgWidth = 100;
 			
 			inventorySB.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>"
-					+ "<h5>Total items: "+itemsTotal.size()+"</h5>");
+					+ "<h5>道具总计："+itemsTotal.size()+"</h5>");
 			for(AbstractItemType itemType : itemsTotal) {
 				inventorySB.append("<div class='container-full-width' style='width:"+width+"%; white-space: nowrap; word-wrap: break-word; font-size:0.75em; -webkit-user-select:auto; padding:1px; margin:0;'>"
 										+ "<div class='inventory-item-slot unequipped' style='width:"+imgWidth+"%; box-sizing: border-box; padding:0; margin:0; background-color:"+itemType.getRarity().getBackgroundColour().toWebHexString()+";'>"
@@ -2186,7 +2186,7 @@ public class DebugDialogue {
 			inventorySB.append("</div>");
 
 			inventorySB.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>"
-					+ "<h5>Total weapons: "+weaponsTotal.size()+"</h5>");
+					+ "<h5>武器总计："+weaponsTotal.size()+"</h5>");
 			for(AbstractWeaponType weaponType : weaponsTotal) {
 				inventorySB.append("<div class='container-full-width' style='width:"+width+"%; white-space: nowrap; word-wrap: break-word; font-size:0.75em; -webkit-user-select:auto; padding:1px; margin:0;'>"
 										+ "<div class='inventory-item-slot unequipped' style='width:"+imgWidth+"%; box-sizing: border-box; padding:0; margin:0; background-color:"+weaponType.getRarity().getBackgroundColour().toWebHexString()+";'>"
@@ -2199,7 +2199,7 @@ public class DebugDialogue {
 			inventorySB.append("</div>");
 
 			inventorySB.append("<div class='inventory-not-equipped' style='-webkit-user-select:auto;'>"
-					+ "<h5>Total clothing: "+clothingTotal.size()+"</h5>");
+					+ "<h5>衣物总计："+clothingTotal.size()+"</h5>");
 			for(AbstractClothingType clothingType : clothingTotal) {
 				inventorySB.append("<div class='container-full-width' style='width:"+width+"%; white-space: nowrap; word-wrap: break-word; font-size:0.75em; -webkit-user-select:auto; padding:1px; margin:0;'>"
 									+ "<div class='inventory-item-slot unequipped' style='width:"+imgWidth+"%; box-sizing: border-box; padding:0; margin:0; background-color:"+clothingType.getRarity().getBackgroundColour().toWebHexString()+";'>"
@@ -2218,7 +2218,7 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -2229,29 +2229,29 @@ public class DebugDialogue {
 	private static String parsedText = "";
 	private static String rawText = "";
 	private static String xmlFileText = "res/txt/ENTER_PATH.xml";
-	public static final DialogueNode PARSER = new DialogueNode("Parser", "", true) {
+	public static final DialogueNode PARSER = new DialogueNode("解析器", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			return ("<p>"
-					+ "<b>Please</b> at least skim over the help page before viewing the 'commands' pages! (The number of commands could be off-putting if you're not aware of how simple they really are.)"
+					+ "在查看“指令”页面之前，<b>请</b>先浏览一下“帮助”页面！(指令本身其实很简单，但如果你没弄明白，那指令的数量可能会多到你生理性不适。)"
 					+ "</p>"
 					
 
 					+ "<div class='container-full-width' style='text-align:center;'>"
 						+ "<div style='position:relative; display:inline-block; padding-bottom:0; margin 0 auto; vertical-align:middle; width:100%; text-align:center;'>"
-							+ "<p style='display:inline-block; padding:0; margin:0; width:100%;'>XML test (enter full path, including .xml): </p>"
+							+ "<p style='display:inline-block; padding:0; margin:0; width:100%;'>XML测试(输入完整路径名，包括.xml): </p>"
 							+ "<br/>"
-							+ "<form style='display:inline-block; width:100%; padding:0; margin:0; text-align:center;'><input type='text' id='xmlTest' style='width:50%;' placeholder='res/txt/...' value='"+xmlFileText+"'></form>"
+							+ "<form style='display:inline-block; width:100%; padding:0; margin:0; text-align:center;'><input type='text' id='xmlTest' style='width:50%;' placeholder='res/txt/……' value='"+xmlFileText+"'></form>"
 						+ "</div>"
 					+ "</div>"
 					
 					+ "<p>"
-						+ "<b>This parser accepts html formatting.</b>"
+						+ "<b>解析器可识别HTML文本格式。</b>"
 					+ "</p>"
 
 					+ "<p style='padding:0;margin:0;text-align:center;'>"
-						+ "Parse:"
+						+ "解析器:"
 					+ "</p>"
 					+ "<form style='padding:0;margin:0;text-align:center;'>"
 					+ "<textarea id='parseInput' name='Text1' style='width:760px;height:200px;'>"+rawText+"</textarea>"
@@ -2261,7 +2261,7 @@ public class DebugDialogue {
 		@Override
 		public String getContent() {
 			return  "<p>"
-					+ "<b>Output:</b>"
+					+ "<b>结果：</b>"
 					+ "</p>"
 					+ "<p>"+parsedText+"</p>";
 		}
@@ -2269,7 +2269,7 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseEffectsOnly("Parse!", "Parse the text you've entered."){
+				return new ResponseEffectsOnly("解析！", "解析你输入的文本。"){
 					@Override
 					public void effects() {
 						rawText = (String) Main.mainController.getWebEngine().executeScript("document.getElementById('parseInput').value");
@@ -2281,42 +2281,42 @@ public class DebugDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Help", "", PARSER_HELP);
+				return new Response("帮助", "", PARSER_HELP);
 				
 			} else if (index == 3) {
-				return new Response("Targets", "", PARSER_TARGETS);
+				return new Response("目标", "", PARSER_TARGETS);
 				
 			} else if (index == 4) {
-				return new Response("Commands", "", PARSER_COMMANDS_NEAT);
+				return new Response("指令", "", PARSER_COMMANDS_NEAT);
 				
 			} else if (index == 5) {
-				return new Response("Commands list", "", PARSER_COMMANDS);
+				return new Response("指令列表", "", PARSER_COMMANDS);
 				
 			} else if (index == 6) {
-				return new Response("Load example 1", "", PARSER){
+				return new Response("载入测试用例1", "", PARSER){
 					@Override
 					public void effects() {
-						rawText = "You see [lilaya.name] sitting at one of the tables in [lilaya.herHis] lab, playing around with an inert demonstone."
-								+ " [rose.name] is sitting beside [lilaya.herPro], gazing up lovingly into [lilaya.namePos] [lilaya.eyes+] as [rose.her] [rose.tail+] gently swishes back and forth behind [rose.herPro]."
+						rawText = "你看到莉莱雅坐在[lilaya.herHis]实验室的一张桌子前，把玩着一块失效的魔石。"
+								+ "萝丝坐在[lilaya.herPro]旁边，深情地凝视着莉莱雅[lilaya.eyes+]，身后[rose.tail+]温柔地前后摆动。"
 								+ "\n<br/><br/>\n"
-								+ "Unable to concentrate with [lilaya.her] slave hovering so close at hand, [lilaya.name] places the demonstone down onto the table, before wrapping [lilaya.her] [lilaya.arms+] around [rose.namePos] back and pulling"
-								+ " [rose.herPro] into [lilaya.her] lap. [rose.name] lets out a happy little cry as [rose.her] master finally starts giving [rose.herPro] the attention [rose.she] was craving, and as [lilaya.namePos] hand slips down"
-								+ " under [rose.her] dress, [rose.she] starts moaning in delight.";
+								+ "莉莱雅的奴隶靠得太近了，这让[lilaya.her]无法集中注意力，[lilaya.her]将魔石放在桌子上，[lilaya.arms+]环绕萝丝身后并把"
+								+ "萝丝向后拉到[lilaya.her]大腿上。萝丝想得到[rose.she]主人关注的强烈愿望终于被满足了，欢快地叫了一声。莉莱雅的手向下滑入"
+								+ "萝丝的裙子，萝丝发出了愉悦的呻吟。";
 					}
 				};
 				
 			} else if (index == 7) {
-				return new Response("Load example 2", "", PARSER){
+				return new Response("载入测试用例2", "", PARSER){
 					@Override
 					public void effects() {
-						rawText = "[brax.name] paces back and forth in [brax.herHis] office, growling softly to [brax.himself], [brax.speech(Hrmph... My new poster still hasn't arrived...)]";
+						rawText = "布拉克斯在[brax.herHis]办公室里来回踱步，[brax.himself]低声咆哮，[brax.speech(呃啊……我的新海报还没送来……)]";
 					}
 				};
 				
 			} else if (index == 11) {
-				return new Response("Xml test",
-						"Parse every dialogue entry in the file whose path you've specified in order to check for errors. Lilaya, Brax, Rose, Ralph, Nyan, and Zaranix, are passed in as parser targets."
-						+ " Special parsing is formtted as 'SP1' and runs up to 10.",
+				return new Response("Xml测试",
+						"解析指定路径文件中的每个对话条目，以检查是否有错误。莉莱雅、布拉克斯、萝丝、拉尔夫、妮安和扎拉尼克斯会被导入为解析器可用目标。"
+						+ "特殊解析的格式为“SP1”，最多到10。",
 						PARSER){
 					@Override
 					public void effects() {
@@ -2329,7 +2329,7 @@ public class DebugDialogue {
 				};
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -2342,7 +2342,7 @@ public class DebugDialogue {
 		}
 	};
 	
-	public static final DialogueNode PARSER_HELP = new DialogueNode("Innoxia's super fun and interesting guide to parsing", "", true) {
+	public static final DialogueNode PARSER_HELP = new DialogueNode("Innoxia超级快乐有趣的解析器使用指南", "", true) {
 
 		/*
 		 * I've seen String concatenation... String concatenation that you've seen.
@@ -2354,146 +2354,146 @@ public class DebugDialogue {
 		 */
 		@Override
 		public String getHeaderContent() {
-			return  "<p style='text-align:center;'><i>You put in the input, and it returns a nice output!</i></p>"
+			return  "<p style='text-align:center;'><i>你提交了输入文本，返回了不错的输出文本！</i></p>"
 					
 					+ "<p>"
-					+ "<h6>Input:</h6><br/>"
-					+"Everything is parsed using square brackets, split into the following pattern:<br/>"
-					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>target</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>]<br/>"
-					+"or, for the few special commands that require arguments:<br/>"
-					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>target</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>"
-							+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(arguments)</i>]<br/>"
-					+"or, for parsing as a script:<br/>"
-					+"[#<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>]<br/>"
-					+"or, for parsing as a script which suppresses output:<br/>"
-					+"[##<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>]<br/>"
-					+ "<i>(This means that the command will be executed, but no String output will be displayed.)</i>"
+					+ "<h6>输入文本：</h6><br/>"
+					+"方括号内的所有内容都会被解析，分为以下模式：<br/>"
+					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>]<br/>"
+					+"或者，有一些需求参数的特殊指令：<br/>"
+					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>"
+							+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(参数)</i>]<br/>"
+					+"或者，被当做脚本进行解析：<br/>"
+					+"[#<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>]<br/>"
+					+"或者，被当做无输出的脚本进行解析：<br/>"
+					+"[##<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>]<br/>"
+					+ "<i>(意思是指令会被执行，但不会输出可显示的字符串。)</i>"
 					+ "</p>"
 					
 					+ "<p>"
-					+"An example of use in a sentence would be:<br/><br/>"
-					+"<i>As you start to read Innoxia's tedious parsing documentation, [lilaya.name] steps up behind you and wraps [lilaya.her] [lilaya.tail+] around your [pc.leg]."
-					+" Leaning in over your shoulder, [lilaya.she] groans, [lilaya.speech(Oh my God. This is so boring, [#pc.getName(true)]!)]'</i><br/><br/>"
-					+ "parses to:<br/><br/>"
-					+ UtilText.parse("As you start to read Innoxia's tedious parsing documentation, [lilaya.name] steps up behind you and wraps [lilaya.her] [lilaya.tail+] around your [pc.leg]."
-							+ " Leaning in over your shoulder, [lilaya.she] groans, [lilaya.speech(Oh my God. This is so boring, [#pc.getName(true)]!)]")
+					+"举一个在句子中应用的例子：<br/><br/>"
+					+"<i>当你开始阅读Innoxia乏味的解析说明时，莉莱雅走到你身后，把[lilaya.her][lilaya.tail+]绕在你的[pc.leg]上。"
+					+"[lilaya.she]靠在你的肩膀上，叹息着，[lilaya.speech(我的老天啊，真是太无聊了，[#pc.getName(true)]！)]'</i><br/><br/>"
+					+ "解析为：<br/><br/>"
+					+ UtilText.parse("当你开始阅读Innoxia乏味的解析说明时，莉莱雅走到你身后，把[lilaya.her][lilaya.tail+]绕在你的[pc.leg]上。"
+							+ "[lilaya.she]靠在你的肩膀上，叹息着，[lilaya.speech(我的老天啊，真是太无聊了，[#pc.getName(true)]！)]")
 					+ "</p>"
 					+ "<br/>"
 					
 					
-					+"<h6><b style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>Target</b> <b>tag:</b></h6>"
+					+"<h6><b style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</b><b>标签：</b></h6>"
 					+"<p>"
-					+"The target of a command is an NPC's name, or 'pc' for the player character. Target tags are <b>case-insensitive.</b> (i.e. pc is treated the same as PC, pC, or Pc)<br/>"
-					+" If an unrecognised name is passed, the output will read 'INVALID_TARGET_NAME'.<br/>"
-					+" Currently accepted target tags can be viewed in the 'Targets' page.<br/>"
-					+ "e.g.:<br/>"
-					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>lilaya</i>.command]<br/>"
-					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>pc</i>.command(arguments)]<br/>"
-					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>npc</i>.command]"
+					+"指令的目标是NPC的名字，或是代表玩家角色的“pc”。目标标签<b>不区分大小写</b>。(即pc与PC、pC或Pc视作相同处理)<br/>"
+					+"如果输入了无法识别的名称，则将输出“INVALID_TARGET_NAME”。<br/>"
+					+"可在“目标”页面中查看当前识别的目标标签。<br/>"
+					+ "例如：<br/>"
+					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>lilaya</i>.指令]<br/>"
+					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>pc</i>.指令(参数)]<br/>"
+					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>npc</i>.指令]"
 					+ "</p>"
 					+ "<br/>"
 					
 					
-					+"<h6><b style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>Command</b> <b>and</b> <b style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>argument</b> <b>tags:</b></h6>"
+					+"<h6><b style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</b><b>与</b><b style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>参数</b><b>标签：</b></h6>"
 					+"<p>"
-					+"Command tags determine what output is returned. They come in two varieties; with and without arguments.<br/>"
-					+"Arguments are passed inside brackets that follow the command, ignoring any spaces that you may insert.<br/>"
-					+ "i.e. [pc.command(arguments)] is the same as [pc.command   (arguments)].<br/>"
-					+"Command tags are <b>only case-sensitive for the first letter</b>. (i.e. command is treated the same as cOMMAND, cOmMaNd, or commanD)<br/>"
-					+ "Arguments are specific to each command, and you'll have to refer to the command documentation to find out what arguments a command takes. (Don't worry, there aren't many that take arguments.)<br/>"
-					+ "e.g.:<br/>"
-					+ "[pc.speech<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(Hello reader!)</i>] outputs "+UtilText.parsePlayerSpeech("Hello reader!")+""
+					+"指令标签决定输出文本的内容。它们分两种类型：有参数和无参数。<br/>"
+					+"在指令后面括号里的参数会被读入，中间插入的空格会被忽略。<br/>"
+					+ "例如：[pc.指令(参数)]与[pc.指令   (参数)]的效果相同。<br/>"
+					+"指令标签<b>只有首字母区分大小写</b>。(例如：command与cOMMAND、cOmMaNd和commanD视为相同处理)<br/>"
+					+ "每个指令都有特定的参数，你需要查阅指令文档来了解一个指令的相关参数。(别担心，用到参数的地方不多。)<br/>"
+					+ "例如：<br/>"
+					+ "[pc.speech<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(读者你好！)</i>]输出"+UtilText.parsePlayerSpeech("读者你好！")+""
 					+ ""
 					+ "</p>"
 					
 					+"<p>"
-					+ "<b>Command modifier (a_ an_)</b><br/>"
-					+"You may insert 'a_' or 'an_' to automatically generate the appropriate pronoun before an argument. (It's your choice if you prefer a_ or an_, they both work in exactly the same way.)<br/>"
-					+"e.g.:<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>height</i>] outputs 'tall'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_height</i>] outputs 'a tall'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>an_height</i>] <b>also</b> outputs 'a tall'<br/><br/>"
+					+ "<b>指令修饰词(a_ an_)</b><br/>"
+					+"你可以在参数前插入“a_”或“an_”以自动生成适当的代词。(你可以根据自己的喜好选择a_或an_，它们的效果完全相同。)<br/>"
+					+"例如:<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>height</i>]输出“高挑”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_height</i>]输出“高挑”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>an_height</i>]<b>同样</b>输出“高挑”<br/><br/>"
 					
-					+"For some body part names, this provides a little more complexity.<br/>"
-					+ "e.g.:<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>arms</i>] outputs 'wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_arms</i>] outputs 'a pair of wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>an_arms</i>] <b>also</b> outputs 'a pair of wings'<br/><br/>"
+					+"对于某些身体部位的名称，情况可能会复杂一些。<br/>"
+					+ "例如：<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>arms</i>]输出“翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_arms</i>]输出“一对翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>an_arms</i>]<b>同样</b>输出“一对翅膀”<br/><br/>"
 					+ "</p>"
 					
 					+"<p>"
-					+ "<b>Command modifier (Capitalisation)</b><br/>"
-					+"Most commands are able to apply capitalisation. The ones that don't, such as numeric output commands, will still happily take a capitalised command, but capitalisation won't be applied.<br/>"
-					+ "To capitalise an output, all you have to do is capitalise <b>the first letter</b> of the command name.<br/>"
-					+"e.g.:<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>height</i>] outputs 'tall'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>hEIGHT</i>] <b>also</b> outputs 'tall' (I'm sure nobody would ever do this...)<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>Height</i>] outputs 'Tall'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_height</i>] outputs 'a tall'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>A_height</i>]  outputs 'A tall'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_Height</i>] <b>also</b> outputs 'A tall'<br/><br/>"
+					+ "<b>指令修饰词(大写字母)(注：以下内容在汉化版无法生效)</b><br/>"
+					+"大部分指令能够使用大写字母。有些指令，比如输出数字的指令，它们能够读取大写字母指令，但无法输出大写字母<br/>"
+					+ "要想输出大写字母，你要做的就是将指令名称的<b>第一个字母</b>大写。<br/>"
+					+"例如:<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>height</i>]输出“tall”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>hEIGHT</i>]<b>同样</b>输出“tall”(应该没人会用这种指令吧……)<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>Height</i>]输出“Tall”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_height</i>]输出“a tall”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>A_height</i>]输出“A tall”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_Height</i>]<b>同样</b>输出“A tall”<br/><br/>"
 					
 					+"<p>"
-					+ "<b>Command modifier (+ D)</b><br/>"
-					+"Most commands that return a name are able to apply additional <b>randomised descriptors</b>. (You can check to see what commands accept '+' and 'D' modifiers in the 'Commands' page.)<br/>"
-					+ "To apply additional descriptors to the returned output, all you have to do is add a '+', 'd', or 'D' to the end of the command.<br/>"
-					+ "<b>This works in combination with 'a_ an_' and 'Capitalisation' modifiers.</b><br/>"
-					+"e.g.:<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>arms</i>] outputs 'wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>arms+</i>] outputs 'feathered wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>armsD</i>] <b>also</b> outputs 'feathered wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>armsd</i>] <b>also</b> outputs 'feathered wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>ArmsD</i>] outputs 'Feathered wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_arms+</i>] outputs 'a pair of feathered wings'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>A_arms+</i>]  outputs 'A pair of feathered wings'<br/><br/>"
+					+ "<b>指令修饰词(+ D)</b><br/>"
+					+"大多数输出名词的指令可以应用额外的<b>随机描述词</b>。(你可以在“指令”页面查看哪些指令能应用“+”和“D”修饰词。)<br/>"
+					+ "若要将额外描述词应用于输出文本，只需在指令末尾添加“+”、“d”或“D”。<br/>"
+					+ "<b>可与“a_ an_”以及“大写字母”修饰词一起使用。</b><br/>"
+					+"例如:<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>arms</i>]输出“翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>arms+</i>]输出“覆羽翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>armsD</i>]<b>同样</b>输出“覆羽翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>armsd</i>]<b>同样</b>输出“覆羽翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>ArmsD</i>]输出“覆羽翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>a_arms+</i>]输出“一双覆羽翅膀”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>A_arms+</i>]输出“一双覆羽翅膀”<br/><br/>"
 					
-					+"Some outputs have more randomisation than others.<br/>"
-					+ "e.g.:<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy</i>] outputs 'slit'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy</i>] outputs 'cunt'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy+</i>] outputs 'wet pussy'<br/>"
-					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy+</i>] outputs 'tentacle-lined twat'<br/><br/>"
+					+"有些输出文本具有更强的随机性。<br/>"
+					+ "例如：<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy</i>]输出“秘缝”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy</i>]输出“小穴”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy+</i>]输出“潮湿的小穴”<br/>"
+					+ "[npc.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>pussy+</i>]输出“长有触手的秘缝”<br/><br/>"
 					+ "</p>"
 					+ "<br/>"
 
-					+ "<h6>Conclusion:</h6><br/>"
+					+ "<h6>结语：</h6><br/>"
 					+"<p>"
-					+"<b>Valid</b> command syntax:<br/>"
-					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>target</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>]<br/>"
-					+"or<br/>"
-					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>target</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>"
-							+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(arguments)</i>]<br/><br/>"
+					+"<b>有效的</b>指令语法：<br/>"
+					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>]<br/>"
+					+"或是<br/>"
+					+"[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>"
+							+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(参数)</i>]<br/><br/>"
 					+ "<br/>"
 
-					+ "<h6>Examples:</h6><br/>"
+					+ "<h6>例如：</h6><br/>"
 					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>brax</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>]"
-						+ " leans back in [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>brax</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>his</i>]"
-						+ " chair, wondering what happened to [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>arthur</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>]"
-						+ " after [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>brax</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>he</i>]"
-						+ " handed [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>arthur</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>him</i>] over to Scarlett.<br/>"
-					+ "outputs:<br/>"
-					+ "'Brax leans back in his chair, wondering what happened to Arthur after he handed him over to Scarlett.'<br/><br/>"
+						+ "向后靠在[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>brax</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>his</i>]"
+						+ "的椅子上，想知道[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>arthur</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>]"
+						+ "在[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>brax</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>he</i>]"
+						+ "把[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>arthur</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>him</i>]交给斯嘉丽。<br/>"
+					+ "输出：<br/>"
+					+ "“布拉克斯向后靠在他的椅子上，想知道亚瑟在他把他交给斯嘉丽后发生了什么。”<br/><br/>"
 					
 					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>rose</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>]"
-						+ " leans back in "
+						+ "向后靠在"
 						+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>rose</i>.<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>herHuis</i>]"
-						+ " chair, letting out a sigh as "
+						+ "椅子上，"
 						+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>rose</i>.<i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>shyeHe</i>]"
-						+ " takes a sip of [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>rose</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>] coffee.<br/>"
-					+ "outputs:<br/>"
-					+ UtilText.parse("[rose.name] leans back in [rose.herHuis] chair, letting out a sigh as [rose.shyeHe] takes a sip of [rose.name] coffee.")+"<br/>"
-					+ "<b>Note:</b> <i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>Typos</i> will cause the parsing system to return an invalid command string, whereas"
-							+ " <i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>incorrect commands</i> (such as typing .name instead of .herHis) will not throw an error!<br/><br/>"
+						+ "浅尝了一口[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>rose</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>]咖啡并发出了一声轻叹。<br/>"
+					+ "输出：<br/>"
+					+ UtilText.parse("萝丝向后靠在[rose.herHuis]椅子上，[rose.shyeHe]浅尝了一口萝丝咖啡并发出了一声轻叹。")+"<br/>"
+					+ "<b>注意：</b><i style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>错别字</i>将导致解析器输出无效的指令字符串，但是"
+							+ "<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>不正确的指令</i>(比如说把.herHis错打成.name)并不会报错！<br/><br/>"
 					
 					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>lilaya</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>]"
-						+ " storms up to [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>innoxia</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>],"
-						+ " shouting angrily in response to finding out that"
-						+ " [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>lilaya</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>her</i>] sex scenes haven't been fixed yet,"
-								+ " [<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>lilaya</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>speech</i>"
-										+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(What the hell are you doing Innoxia?! You said my scenes were going to be re-written weeks ago!)</i>]<br/>"
-					+ "outputs:<br/>"
-					+ "'Lilaya storms up to Innoxia, shouting angrily in response to finding out that her sex scenes haven't been fixed yet, "
-						+UtilText.parseSpeech("What the hell are you doing Innoxia?! You said my scenes were going to be re-written weeks ago!", Main.game.getNpc(Lilaya.class))+"'"
+						+ "怒气冲冲地找到[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>innoxia</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>name</i>]，"
+						+ "发现"
+						+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>lilaya</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>her</i>]性爱场景至今还没修复好，于是生气地大喊道，"
+								+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>lilaya</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>speech</i>"
+										+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(你到底都在忙些什么，Innoxia？！一星期前你就在说要重写我的场景对话了！)</i>]<br/>"
+					+ "输出：<br/>"
+					+ "莉莱雅怒气冲冲地找到Innoxia，发现她的性爱场景至今还没修复好，于是生气地大喊道，"
+						+UtilText.parseSpeech("你到底都在忙些什么，Innoxia？！一星期前你就在说要重写我的场景对话了！", Main.game.getNpc(Lilaya.class))+""
 					
 					+ "</p>";
 		}
@@ -2506,22 +2506,22 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Parser", "", PARSER);
+				return new Response("解析器", "", PARSER);
 					
 			} else if (index == 2) {
-				return new Response("Help", "", null);
+				return new Response("帮助", "", null);
 					
 			} else if (index == 3) {
-				return new Response("Targets", "", PARSER_TARGETS);
+				return new Response("目标", "", PARSER_TARGETS);
 				
 			} else if (index == 4) {
-				return new Response("Commands", "", PARSER_COMMANDS_NEAT);
+				return new Response("指令", "", PARSER_COMMANDS_NEAT);
 				
 			} else if (index == 5) {
-				return new Response("Commands list", "", PARSER_COMMANDS);
+				return new Response("指令列表", "", PARSER_COMMANDS);
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -2534,15 +2534,15 @@ public class DebugDialogue {
 		}
 	};
 	
-	public static final DialogueNode PARSER_TARGETS = new DialogueNode("Parser", "", true) {
+	public static final DialogueNode PARSER_TARGETS = new DialogueNode("解析器", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("<p>Here are a list of accepted <i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>targets</i>, for use in the parsing syntax:<br/>"
-					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>target</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>"
-							+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(arguments)</i>]</p>");
+			UtilText.nodeContentSB.append("<p>以下列出一些可被识别的<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>，应用于解析句式：<br/>"
+					+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>"
+							+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(参数)</i>]</p>");
 			
 			for(AbstractParserTarget character : ParserTarget.getAllParserTargets()) {
 				UtilText.nodeContentSB.append("<hr/>"
@@ -2570,22 +2570,22 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Parser", "", PARSER);
+				return new Response("解析器", "", PARSER);
 				
 			} else if (index == 2) {
-				return new Response("Help", "", PARSER_HELP);
+				return new Response("帮助", "", PARSER_HELP);
 				
 			} else if (index == 3) {
-				return new Response("Targets", "", null);
+				return new Response("目标", "", null);
 				
 			} else if (index == 4) {
-				return new Response("Commands", "", PARSER_COMMANDS_NEAT);
+				return new Response("指令", "", PARSER_COMMANDS_NEAT);
 				
 			} else if (index == 5) {
-				return new Response("Commands list", "", PARSER_COMMANDS);
+				return new Response("指令列表", "", PARSER_COMMANDS);
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -2598,29 +2598,29 @@ public class DebugDialogue {
 		}
 	};
 	
-	public static final DialogueNode PARSER_COMMANDS = new DialogueNode("Parser", "", true) {
+	public static final DialogueNode PARSER_COMMANDS = new DialogueNode("解析器", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("<p>Here are a list of accepted <i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>commands</i>, for use in the parsing syntax:<br/>"
-						+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>target</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>"
-						+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(arguments)</i>]</p>"
+			UtilText.nodeContentSB.append("<p>以下列出一些可被识别的<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>，应用于解析句式：<br/>"
+						+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>"
+						+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(参数)</i>]</p>"
 						+ "<p>"
-							+ "<b>Please don't be intimidated by the number of commands!</b>"
-							+ " The <i>vast</i> majority of them are automatically generated 'standard' variations for body parts, following a (hopefully) intuitive naming system."
+							+ "<b>请不要被指令的数目吓倒！</b>"
+							+ "它们中的<i>绝大多数</i>都是根据易懂(希望如此)的命名系统自动生成的身体部位的“标准”变体。"
 						+ "</p>");
 			
 			int count=1;
 			for(ParserCommand command : UtilText.commandsList) {
 				UtilText.nodeContentSB.append("<hr/>"
 						+ "<p>"
-						+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>"+String.format("%03d.", count)+"</b> <i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(0)+"</i>");
+						+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>"+String.format("%03d.", count)+"</b><i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(0)+"</i>");
 				
 				if(command.getTags().size()>1) {
 					for(int i = 1; i<command.getTags().size(); i++)
-						UtilText.nodeContentSB.append(" | <i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(i)+"</i>");
+						UtilText.nodeContentSB.append(" |<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(i)+"</i>");
 				}
 				
 				UtilText.nodeContentSB.append("</p>");
@@ -2638,22 +2638,22 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Parser", "", PARSER);
+				return new Response("解析器", "", PARSER);
 				
 			} else if (index == 2) {
-				return new Response("Help", "", PARSER_HELP);
+				return new Response("帮助", "", PARSER_HELP);
 				
 			} else if (index == 3) {
-				return new Response("Targets", "", PARSER_TARGETS);
+				return new Response("目标", "", PARSER_TARGETS);
 				
 			} else if (index == 4) {
-				return new Response("Commands", "", PARSER_COMMANDS_NEAT);
+				return new Response("指令", "", PARSER_COMMANDS_NEAT);
 				
 			} else if (index == 5) {
-				return new Response("Commands list", "", null);
+				return new Response("指令列表", "", null);
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -2666,42 +2666,42 @@ public class DebugDialogue {
 		}
 	};
 	
-	public static final DialogueNode PARSER_COMMANDS_NEAT = new DialogueNode("Parser", "", true) {
+	public static final DialogueNode PARSER_COMMANDS_NEAT = new DialogueNode("解析器", "", true) {
 
 		@Override
 		public String getHeaderContent() {
 			UtilText.nodeContentSB.setLength(0);
 			
-			UtilText.nodeContentSB.append("<p>Here are a list of accepted <i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>commands</i>, for use in the parsing syntax:<br/>"
-						+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>target</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>command</i>"
-						+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(arguments)</i>]</p>"
+			UtilText.nodeContentSB.append("<p>以下列出一些可被识别的<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>，应用于解析句式：<br/>"
+						+ "[<i style='color:"+PresetColour.CLOTHING_BLUE_LIGHT.toWebHexString()+";'>目标</i>.<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>指令</i>"
+						+ "<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>(参数)</i>]</p>"
 						+ "<p>"
-							+ "<b>Please don't be intimidated by the number of commands!</b>"
-							+ " The <i>vast</i> majority of them are automatically generated 'standard' variations for body parts, following a (hopefully) intuitive naming system."
+							+ "<b>请不要被指令的数目吓倒！</b>"
+							+ "它们中的<i>绝大多数</i>都是根据易懂(希望如此)的命名系统自动生成的身体部位的“标准”变体。"
 						+ "</p>");
 			
 			int count = 1;
 			for(BodyPartType bpt : BodyPartType.values()) {
 				UtilText.nodeContentSB.append("<details>"
 						+ "<summary style='cursor:pointer;'><b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>("
-							+String.format("%03d", count)+" - "+String.format("%03d", count+UtilText.commandsMap.get(bpt).size()-1)+")</b> "+Util.capitaliseSentence(bpt.getName())+"</summary>");
+							+String.format("%03d", count)+"-"+String.format("%03d", count+UtilText.commandsMap.get(bpt).size()-1)+")</b>"+Util.capitaliseSentence(bpt.getName())+"</summary>");
 				for(ParserCommand command : UtilText.commandsMap.get(bpt)) {
 					UtilText.nodeContentSB.append("<p>"
 							+ "<hr/>"
-							+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>"+String.format("%03d.", count)+"</b> <i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(0)+"</i>");
+							+ "<b style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>"+String.format("%03d.", count)+"</b><i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(0)+"</i>");
 					
 					if(command.getTags().size()>1) {
 						for(int i = 1; i<command.getTags().size(); i++)
-							UtilText.nodeContentSB.append(" | <i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(i)+"</i>");
+							UtilText.nodeContentSB.append(" |<i style='color:"+PresetColour.CLOTHING_PINK_LIGHT.toWebHexString()+";'>"+command.getTags().get(i)+"</i>");
 					}
 					
 					UtilText.nodeContentSB.append("<br/>"
-							+(command.getArguments()==""?"<i style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>No arguments</i>":"<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>"+command.getArguments()+"</i>")+"<br/>"
-							+(command.isAllowsCapitalisation()?"<i style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Capitalisation</i>":"<i style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>Capitalisation</i>")
-								+ " | " +(command.isAllowsPronoun()?"<i style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>Pronouns</i>":"<i style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>Pronouns</i>")
+							+(command.getArguments()==""?"<i style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>无参数</i>":"<i style='color:"+PresetColour.CLOTHING_YELLOW.toWebHexString()+";'>"+command.getArguments()+"</i>")+"<br/>"
+							+(command.isAllowsCapitalisation()?"<i style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>大写字母</i>":"<i style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>大写字母</i>")
+								+ " | " +(command.isAllowsPronoun()?"<i style='color:"+PresetColour.GENERIC_GOOD.toWebHexString()+";'>代词</i>":"<i style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>代词</i>")
 								+"<br/>"
 							+command.getDescription()+"<br/>"
-							+"Examples:<br/>"
+							+"示例:<br/>"
 							+ command.getExampleBeforeParse("lilaya", (command.getArguments()==""?"":command.getArgumentExample()))+" -> "
 								+UtilText.parse("[lilaya."+command.getTags().get(0)+(command.getArguments()==""?"":"("+command.getArgumentExample()+")")+"]")+"<br/>"
 							
@@ -2729,22 +2729,22 @@ public class DebugDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Parser", "", PARSER);
+				return new Response("解析器", "", PARSER);
 				
 			} else if (index == 2) {
-				return new Response("Help", "", PARSER_HELP);
+				return new Response("帮助", "", PARSER_HELP);
 				
 			} else if (index == 3) {
-				return new Response("Targets", "", PARSER_TARGETS);
+				return new Response("目标", "", PARSER_TARGETS);
 				
 			} else if (index == 4) {
-				return new Response("Commands", "", null);
+				return new Response("指令", "", null);
 				
 			} else if (index == 5) {
-				return new Response("Commands list", "", PARSER_COMMANDS);
+				return new Response("指令列表", "", PARSER_COMMANDS);
 				
 			} else if (index == 0) {
-				return new Response("Back", "", DEBUG_MENU);
+				return new Response("返回", "", DEBUG_MENU);
 				
 			} else {
 				return null;
@@ -2774,9 +2774,9 @@ public class DebugDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.sex.isDom(Main.game.getPlayer())) {
-					return new Response("Continue", "Now that you've put this bitch in [npc.her] place, you can continue with what you were doing...", Main.game.getDefaultDialogue(false));
+					return new Response("继续", "你现在已经将这个婊子放在了正确的位置，可以继续干别的事了……", Main.game.getDefaultDialogue(false));
 				} else {
-					return new Response("Continue", "Now that you've been put in your place like the bitch you are, you can continue with what you were doing...", Main.game.getDefaultDialogue(false));
+					return new Response("继续", "你这个婊子现在已经被放在了该在的位置，可以继续干你的事了……", Main.game.getDefaultDialogue(false));
 				}
 			}
 			return null;
@@ -2796,8 +2796,8 @@ public class DebugDialogue {
 			
 			if(index==1) {
 				return new ResponseSex(
-						UtilText.parse(centaur, "Dom [npc.herHim]"),
-						UtilText.parse(centaur, "Take the dominant role and fuck this [npc.race]."),
+						UtilText.parse(centaur, "支配[npc.herHim]"),
+						UtilText.parse(centaur, "作为支配的角色，操[npc.race]。"),
 						true,
 						false,
 						new SMGeneric(
@@ -2807,14 +2807,14 @@ public class DebugDialogue {
 								null),
 						DebugDialogue.POST_SEX_CENTAUR,
 						"<p>"
-							+ "Deciding that you want to dominate this [npc.race] who just magically appeared before you, you step up to [npc.herHim] and growl,"
-							+ " [pc.speech(It's time to put you in your place!)]"
+							+ "你决定被这只魔法般出现在你面前的[npc.race]支配，走到[npc.herHim]身前呜叫，"
+							+ "[pc.speech(是时候把你放到正确的位置上了！)]"
 						+ "</p>");
 				
 			} else if(index==2) {
 				return new ResponseSex(
-						UtilText.parse(centaur, "Submit to [npc.herHim]"),
-						UtilText.parse(centaur, "Take the submissive role and let this [npc.race] fuck you."),
+						UtilText.parse(centaur, "顺从[npc.herHim]"),
+						UtilText.parse(centaur, "作为顺从的角色，让[npc.race]操你。"),
 						true,
 						false,
 						new SMGeneric(
@@ -2824,12 +2824,12 @@ public class DebugDialogue {
 								Main.game.getPlayer().getCompanions()),
 						DebugDialogue.POST_SEX_CENTAUR,
 						"<p>"
-							+ "Deciding that you want to get dominated by this [npc.race] who just magically appeared before you, you step up to [npc.herHim] and plead,"
-							+ " [pc.speech(It's time for you to put me in my place!)]"
+							+ "你决定被这只魔法般出现在你面前的[npc.race]支配，走到[npc.herHim]身前恳求，"
+							+ "[pc.speech(是时候把我放到正确的位置上了！)]"
 						+ "</p>");
 				
 			} else if(index==0) {
-				return new Response("Nevermind", UtilText.parse(centaur, "Decide not to do anything with this [npc.race], and instead just continue with what you were doing..."), Main.game.getDefaultDialogue(false)) {
+				return new Response("放着不管", UtilText.parse(centaur, "你决定放着[npc.race]不动，继续你该干的事……"), Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.banishNPC(centaur);
@@ -2857,14 +2857,14 @@ public class DebugDialogue {
 			if(index==1) {
 				NPC centaur = Main.game.getActiveNPC();
 				if(Main.sex.isDom(Main.game.getPlayer())) {
-					return new Response("Continue", UtilText.parse(centaur, "Now that you've put this [npc.race] in [npc.her] place, you can continue with what you were doing..."), Main.game.getDefaultDialogue(false)) {
+					return new Response("继续", UtilText.parse(centaur, "你现在已经将[npc.race]放在了正确的位置，可以继续干别的事了……"), Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.banishNPC(centaur);
 						}
 					};
 				} else {
-					return new Response("Continue", UtilText.parse(centaur, "Now that you've been put in your place by this [npc.race], you can continue with what you were doing..."), Main.game.getDefaultDialogue(false)) {
+					return new Response("继续", UtilText.parse(centaur, "你现在已经将[npc.race]放在了正确的位置，可以继续干别的事了……"), Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.banishNPC(centaur);
@@ -2915,9 +2915,9 @@ public class DebugDialogue {
 							sb.append("<b style='color:"+move.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(move.getName(0, Main.game.getPlayer()))+"</b>: "+move.getDescription(0, Main.game.getPlayer()));
 							sb.append("<br/>");
 							if(cat==CombatMoveCategory.SPELL) {
-								sb.append("Type: <span style='color:"+move.getAssociatedSpell().getSpellSchool().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(move.getAssociatedSpell().getSpellSchool().getName())+" Spell</span> | ");
+								sb.append("种类：<span style='color:"+move.getAssociatedSpell().getSpellSchool().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(move.getAssociatedSpell().getSpellSchool().getName())+"法术</span> | ");
 							} else {
-								sb.append("Type: <span style='color:"+move.getType().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(move.getType().getName())+"</span> | ");
+								sb.append("种类：<span style='color:"+move.getType().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(move.getType().getName())+"</span> | ");
 							}
 							sb.append("ID: <span style='font-family:monospace;'>"+move.getIdentifier()+"</span>");
 						sb.append("</p>");
@@ -2939,19 +2939,19 @@ public class DebugDialogue {
 	};
 
 
-	public static final DialogueNode RANDOM_ENCHANTMENT_CLOTHING = new DialogueNode("Random Clothing Enchantments", "", false) {
+	public static final DialogueNode RANDOM_ENCHANTMENT_CLOTHING = new DialogueNode("随机衣物附魔", "", false) {
 		@Override
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			
-			sb.append(UtilText.parse("<h4>[style.colourMinorGood(Positive Enchantments:)]</h4>"));
+			sb.append(UtilText.parse("<h4>[style.colourMinorGood(正面附魔:)]</h4>"));
 			int i=0;
 			for(RandomEnchantment randomEnchantment : RandomEnchantment.getAllPositiveClothingEnchantments()) {
 				sb.append(getFormattedEnchantmentEntry(i%2==0, randomEnchantment));
 				i++;
 			}
 			
-			sb.append(UtilText.parse("<h4>[style.colourMinorBad(Negative Enchantments:)]</h4>"));
+			sb.append(UtilText.parse("<h4>[style.colourMinorBad(负面附魔:)]</h4>"));
 			i=0;
 			for(RandomEnchantment randomEnchantment : RandomEnchantment.getAllNegativeClothingEnchantments()) {
 				sb.append(getFormattedEnchantmentEntry(i%2==0, randomEnchantment));
@@ -2981,7 +2981,7 @@ public class DebugDialogue {
 		
 		String preParsingString = randomEnchantment.getConditionalPreParsingString();
 		UtilText.parse(Main.game.getPlayer(), preParsingString); // Parse the conditional to make sure that any variables for name have been set
-		preParsingString = preParsingString.replaceAll("(?<!^)\\[#", "<br/>\\[#"); // Format it for display
+		preParsingString = preParsingString.replaceAll("(?<!^)\\[#", "<br/>\\[#"); // 格式化以供显示
 		
 		sb.append("<div class='container-full-width' style='width:95%; padding:4px; margin:4px 2.5% 4px 2.5%; background-color:"+(oddRow?PresetColour.BACKGROUND:PresetColour.BACKGROUND_ALT).toWebHexString()+";'>");
 			sb.append("<div class='container-full-width' style='span:0; margin:0; width:50%; -webkit-user-select:auto; text-align:center; background:#00000000;'>");
@@ -2989,21 +2989,21 @@ public class DebugDialogue {
 			sb.append("</div>");
 			sb.append("<div class='container-full-width' style='span:0; margin:0; width:50%; -webkit-user-select:auto; font-family:monospace; font-size:0.75em;background:#00000000;'>");
 				if(randomEnchantment.isMod()) {
-					sb.append(UtilText.parse("[style.colourGreenLight(MOD)] "));
+					sb.append(UtilText.parse("[style.colourGreenLight(模组)] "));
 				} else {
-					sb.append(UtilText.parse("[style.colourBlueLight(RES)] "));
+					sb.append(UtilText.parse("[style.colourBlueLight(资源)] "));
 				}
 				sb.append(RandomEnchantment.getIdFromRandomEnchantment(randomEnchantment));
 			sb.append("</div>");
 
 			sb.append("<div class='container-full-width' style='background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; -webkit-user-select:auto; margin-top:0;'>");
-				sb.append("spawnWeighting:<br/>");
+				sb.append("生成权重:<br/>");
 				sb.append("<span style='font-family:monospace; font-size:0.75em;'>"+randomEnchantment.getSpawnWeighting()+"</span>");
 			sb.append("</div>");
 			
 			if(!preParsingString.isEmpty()) {
 				sb.append("<div class='container-full-width' style='background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; -webkit-user-select:auto; margin-top:0;'>");
-					sb.append("conditionalPreParsing:<br/>");
+					sb.append("条件预解析:<br/>");
 					sb.append("<span style='font-family:monospace; font-size:0.75em;'>"+preParsingString+"</span>");
 				sb.append("</div>");
 			}
@@ -3011,11 +3011,11 @@ public class DebugDialogue {
 			
 			sb.append("<div class='container-full-width' style='margin:0; padding:0; background:#00000000; text-align:center;'>");
 				sb.append("<div class='normal-button' id='RANDOM_ENCHANTMENT_"+randomEnchantmentClothingIds.get(0)+"_"+RandomEnchantment.getIdFromRandomEnchantment(randomEnchantment)+"'"
-						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.FEMININE.toWebHexString()+";'>Spawn Panties</div>");
+						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.FEMININE.toWebHexString()+";'>生成内裤</div>");
 				sb.append("<div class='normal-button' id='RANDOM_ENCHANTMENT_"+randomEnchantmentClothingIds.get(1)+"_"+RandomEnchantment.getIdFromRandomEnchantment(randomEnchantment)+"'"
-						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>Spawn T-shirt</div>");
+						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.ANDROGYNOUS.toWebHexString()+";'>生成T恤衫</div>");
 				sb.append("<div class='normal-button' id='RANDOM_ENCHANTMENT_"+randomEnchantmentClothingIds.get(2)+"_"+RandomEnchantment.getIdFromRandomEnchantment(randomEnchantment)+"'"
-						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.MASCULINE.toWebHexString()+";'>Spawn Watch</div>");
+						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.MASCULINE.toWebHexString()+";'>生成手表</div>");
 			sb.append("</div>");
 			
 		sb.append("</div>");
@@ -3024,19 +3024,19 @@ public class DebugDialogue {
 	}
 	
 	//TODO
-	public static final DialogueNode RANDOM_ENCHANTMENT_POTIONS = new DialogueNode("Random Potion Enchantments", "", false) {
+	public static final DialogueNode RANDOM_ENCHANTMENT_POTIONS = new DialogueNode("随机药水附魔", "", false) {
 		@Override
 		public String getContent() {
 			StringBuilder sb = new StringBuilder();
 			
-			sb.append(UtilText.parse("<h4>[style.colourMinorGood(Positive Enchantments:)]</h4>"));
+			sb.append(UtilText.parse("<h4>[style.colourMinorGood(正面附魔：)]</h4>"));
 			int i=0;
 			for(RandomPotionEnchantment randomEnchantment : RandomPotionEnchantment.getAllPositivePotionEnchantments()) {
 				sb.append(getFormattedPotionEnchantmentEntry(i%2==0, randomEnchantment));
 				i++;
 			}
 			
-			sb.append(UtilText.parse("<h4>[style.colourMinorBad(Negative Enchantments:)]</h4>"));
+			sb.append(UtilText.parse("<h4>[style.colourMinorBad(负面附魔：)]</h4>"));
 			i=0;
 			for(RandomPotionEnchantment randomEnchantment : RandomPotionEnchantment.getAllNegativePotionEnchantments()) {
 				sb.append(getFormattedPotionEnchantmentEntry(i%2==0, randomEnchantment));
@@ -3072,21 +3072,21 @@ public class DebugDialogue {
 			sb.append("</div>");
 			sb.append("<div class='container-full-width' style='span:0; margin:0; width:50%; -webkit-user-select:auto; font-family:monospace; font-size:0.75em;background:#00000000;'>");
 				if(randomEnchantment.isMod()) {
-					sb.append(UtilText.parse("[style.colourGreenLight(MOD)] "));
+					sb.append(UtilText.parse("[style.colourGreenLight(模组)] "));
 				} else {
-					sb.append(UtilText.parse("[style.colourBlueLight(RES)] "));
+					sb.append(UtilText.parse("[style.colourBlueLight(资源)] "));
 				}
 				sb.append(RandomPotionEnchantment.getIdFromRandomEnchantment(randomEnchantment));
 			sb.append("</div>");
 
 			sb.append("<div class='container-full-width' style='background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; -webkit-user-select:auto; margin-top:0;'>");
-				sb.append("spawnWeighting:<br/>");
+				sb.append("生成权重:<br/>");
 				sb.append("<span style='font-family:monospace; font-size:0.75em;'>"+randomEnchantment.getSpawnWeighting()+"</span>");
 			sb.append("</div>");
 			
 			if(!preParsingString.isEmpty()) {
 				sb.append("<div class='container-full-width' style='background:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; -webkit-user-select:auto; margin-top:0;'>");
-					sb.append("conditionalPreParsing:<br/>");
+					sb.append("条件预解析:<br/>");
 					sb.append("<span style='font-family:monospace; font-size:0.75em;'>"+preParsingString+"</span>");
 				sb.append("</div>");
 			}
@@ -3094,7 +3094,7 @@ public class DebugDialogue {
 			
 			sb.append("<div class='container-full-width' style='margin:0; padding:0; background:#00000000; text-align:center;'>");
 				sb.append("<div class='normal-button' id='RANDOM_POTION_ENCHANTMENT_"+RandomPotionEnchantment.getIdFromRandomEnchantment(randomEnchantment)+"'"
-						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>Spawn potion</div>");
+						+ " style='width:18%; margin:1%; padding:2px; font-size:0.9em; color:"+PresetColour.TRANSFORMATION_GENERIC.toWebHexString()+";'>生成魔药</div>");
 			sb.append("</div>");
 			
 		sb.append("</div>");

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -13,23 +13,23 @@
 		
 		<!-- What's appended before the weapon's name in an instance of "Innoxia was holding X metal pipe", where X is the determiner. This will usually be either "a" or "an", but for other weapons may be different.
 		An example might be: "Innoxia was holding X scissors", where X (the determiner) would now need to be "a pair of". -->
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一根]]></determiner>
 		
 		<!-- The name of this weapon. -->
-		<name><![CDATA[metal pipe]]></name>
+		<name><![CDATA[金属管]]></name>
 		
 		<!-- The plural name of this weapon. If pluralByDefault's "false" is changed to "true", then the game will always the plural name when referring to this weapon. -->
-		<namePlural pluralByDefault="false"><![CDATA[metal pipes]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[金属管]]></namePlural> 
 		
 		<!-- The description/lore of this weapon. -->
-		<description><![CDATA[A length of metal pipe, which, for reasons unknown, someone has gone to the trouble of enchanting. Despite its new arcane power, however, it really isn't a particularly effective weapon...]]></description> 
+		<description><![CDATA[一段金属管，不知什么原因有人费尽力气在上面进行了附魔。尽管拥有全新的奥能，但仍算不上特别有效的武器……]]></description> 
 		
 		<!-- How the weapon is used. This should be a single verb, and is used as the title of attacking actions in combat. -->
-		<attackDescriptor>whack</attackDescriptor>
+		<attackDescriptor><![CDATA[击打]]></attackDescriptor>
 		
 		<!-- The description that's displayed when hovering over the attack action in combat. Follow the same guidelines as equipText (a couple of entries further down this page).
 		As this tooltip is only ever seen from the player's perspective, you can always write in the first-person narrative. (Still use npc2 for the target, though.)-->
-		<attackTooltipDescription>Whack [npc2.name] with your metal pipe.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用金属管向[npc2.name]击打过去。]]></attackTooltipDescription>
 		
 		<!-- The rarity of this weapon. Values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/Rarity.java -->
 		<rarity>COMMON</rarity> 
@@ -41,10 +41,10 @@
 		The target "npc" OR "npc1" should be used for the character using the weapon. e.g. If the player is the one attacking (and is called Innoxia), then [npc.Name] will return "Innoxia"
 		The target "npc2" should be used for the character being attacked. e.g. If Brax is the one being attacked, then [npc2.Name] will return "Brax"
 		-->
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] metal pipe, and [npc.verb(prepare)] to use it in combat.]]></equipText>
+		<equipText><![CDATA[[npc.Name]拿出金属管，准备好在战斗中使用。]]></equipText>
 		
 		<!-- The description that's used when equipping this weapon. Follow the same guidelines as equipText. -->
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] metal pipe away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]把金属管收了起来。]]></unequipText>
 		
 		<!-- The file name of this weapon's image when in the character's inventory. The only supported file type is .svg. I use the free program "Inkscape" to make .svg images for the game. -->
 		<imageName>pipe.svg</imageName> 
@@ -123,26 +123,26 @@
 	<!-- Descriptions that are used when hitting an enemy. One of the hitText values will be randomly selected each time the attacker hits their target. Follow the same guidelines as equipText. -->
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Swinging [npc.her] metal pipe, [npc.name] [npc.verb(manage)] to whack [npc2.name] on the [npc2.arm], which causes [npc2.herHim] to let out a surprised yelp!
+		[npc.name]挥舞着金属管，成功击中了[npc2.name]的[npc2.arm]，令[npc2.herHim]意外地痛叫一声！
 		]]></hitText>
 		<hitText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] metal pipe, [npc.name] [npc.verb(manage)] to land a solid hit on [npc2.her] [npc2.arm]!
+		[npc.name]举起金属管向着[npc2.name]重挥出去，结结实实地打在了[npc2.her]的[npc2.arm]上！
 		]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] metal pipe, whacking the heavy end against [npc2.her] shoulder!
+		[npc.name]快步前踏，挥舞着金属管向[npc2.name]猛冲而去，狠狠地击中了[npc2.her]的肩膀！
 		]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] metal pipe, [npc.name] [npc.verb(attempt)] to whack [npc2.name] on the [npc2.arm], but [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.name]挥出手上的金属管，向着[npc2.name]的[npc2.arm]砸去，但没有命中！
 		]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] metal pipe, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]举起金属管向着[npc2.name]重挥出去，却没能命中目标，恼火地大喊了一声！
 		]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] metal pipe, but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.name]快步前踏，挥舞着金属管向[npc2.name]猛冲而去，却没能命中！
 		]]></missText>
 	</missDescriptions>
 	

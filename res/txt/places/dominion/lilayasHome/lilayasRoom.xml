@@ -1,566 +1,566 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		As you walk around this particular corner of the first-floor corridor, you catch the faint scent of Lilaya's perfume lingering in the air. Turning towards the nearest door, you see a little heart-shaped sign has been affixed to it, which reads: <i>'Lilaya's Room'</i>.
-	</p>
+	你走到二楼走廊的这处角落时，忽然注意到一抹莉莱雅香水的味道在空气中弥漫。你转身看向最近的那扇门，只见上面贴着一颗心形的小标志，写着：<i>“莉莱雅的房间”</i>。
+</p>
 	#IF(!game.isExtendedWorkTime())
 		<p>
-			Obviously being the source of your [lilaya.relation(pc)]'s fragrance, you take a step towards her bedroom, taking note of the fact that the door is firmly shut. After giving the handle a brief twist, you discover that [style.colourBad(the door is locked)], so if you wanted to take a look inside, you'd have to come back during the day when it's open...
-		</p>
+		显然这就是你[lilaya.relation(pc)]身上那种芳香的源头，你向着她的卧室前进一步，却注意到门紧紧地关着。你稍微扭动了一下把手，发现[style.colourBad(门锁上了)]，如果想要向里面看一眼，可能得等到白天门开的时候……
+	</p>
 	#ELSE
 		<p>
-			Obviously being the source of your [lilaya.relation(pc)]'s fragrance, you take a step towards her bedroom, taking note of the fact that the door is slightly ajar. With nobody around to stop you, you could always take a peek inside if you really wanted to...
-		</p>
+		显然这就是你[lilaya.relation(pc)]身上那种芳香的源头，你向着她的卧室前进一步，注意到门微微地开了一条小缝。既然附近无人阻止，你如果愿意完全可以向里面瞄一眼……
+	</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTERIOR_ENTRY"><![CDATA[
 	<p>
-		Turning the door's handle, you discover, just as you suspected, that it's not locked.
-		 Carefully peeking through the widening gap in the door as you push it open, you breathe a sigh of relief as you see that the room is currently deserted.
-		 Stepping forwards and closing the door behind you, you find yourself standing in your demonic [lilaya.relation(pc)]'s bedroom.
-	</p>
+	你转动了一下门把手，果然，门没有锁。
+	接着你小心翼翼地通过刚刚推开的门缝向里面瞄了一眼，看到房间里空无一人，悬着的心这才放下来。
+	你进入房间后关上了身后的门，此刻你已经站在你恶魔[lilaya.relation(pc)]的卧室里了。
+</p>
 	<p>
-		As you take in your surrounds, you discover that you're surrounded on all sides by every shade of pink imaginable.
-		 From the pale rose hue of the walls, to the offensively bright hot pink sheets on her bed, you feel as though you can probably take a reasonable guess as to what Lilaya's favourite colour is.
-		 Some pieces of furniture, which have been painted white, along with the white ceiling and thick, cream carpet underfoot, are the only parts of her room that aren't one type of pink or another.
-	</p>
+	你环顾四周，发现四面八方不出所料全都覆满了粉红色。
+	从墙壁的淡玫瑰色调，到床单的亮粉色，你大概可以猜得到莉莱雅最爱的颜色是什么了。
+	有几件家具被漆成了白色，天花板和[pc.feet]下厚实柔软的地毯也是一片白，应该是房间中处粉色外仅存的基础其他颜色。
+</p>
 	<p>
-		Continuing to look around her room, the next thing that you notice is just how messy it is.
-		 The doors of her ceiling-height wardrobe have been left wide open, with all manner of clothing tumbling out onto the floor in front of it.
-		 The chests of drawers are all half-closed, and every available surface is piled high with makeup, brushes, clothing, and all sorts of other miscellaneous items.
-		 This mess even extends out into the main body of the room, with the floor being a complete minefield of dirty clothing, shoes, bags, hairbrushes, and every type of accessory you could possibly imagine.
-		 Navigating through this mess to take a look into her en-suite bathroom, you see crumpled towels, discarded bath robes, and all sorts of shampoo bottles littering the marble floor.
-	</p>
+	你继续环顾房间，接下来注意到事情就是房间极其凌乱。
+	天花板高的衣柜门敞开着，各种衣物都散落在衣柜前的地面上。
+	抽屉都是半开着的，每一个可以利用的地方都堆满了化妆品、刷子、衣服和其他各种杂物。
+	这些杂物甚至蔓延到了房间的中心，每一块可用的地面上都堆满了脏衣服、鞋子、包包、梳子和各种杂物。
+	你穿过这些乱七八糟的东西，来到配套的浴室中，只见大理石地面上到处都是皱巴巴的毛巾、丢弃的浴袍和各种洗发水瓶。
+</p>
 	<p>
-		The huge, four-poster bed that dominates one side of the room seems to be the crowing achievement of Lilaya's messiness.
-		 A huge pile of clothes has been stacked up on top of the hot pink sheets, and you find yourself wondering how on earth she manages to sleep in there.
-	</p>
+	一张硕大的四柱床占据了房间的一侧，上面似乎是莉莱雅凌乱房间中的最大成就。
+	粉红色的床单上堆放着高高的衣服，你不禁自问，她究竟是怎么睡得着的？
+</p>
 	<p>
-		Lilaya must have told Rose to not tidy her room up, and you wonder what possible reason your aunt would have for letting her room get into such a state as this.
-	</p>
+	莉莱雅绝对告诉过萝丝不要整理她的房间，你猜想着你的姨妈到底是出于何种原因才将房间搞成这种样子。
+</p>
 	<p>
-		As you look around the room, you can't help but notice a large pile of your aunt's discarded, dirty underwear stacked up next to her bed.
-		 You wonder if you should turn around and make your exit, or do something naughty instead...
-	</p>
-	]]>
-	</htmlContent>
+	在你观察房间的时候，不仅注意到床边正堆放着一大堆你姨妈丢弃的脏内衣内裤。
+	你思索起来，是应该直接转头离开，还是调皮捣蛋一下……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PANTIES"><![CDATA[
 	<p>
-		First moving over to make sure that the door is firmly closed, you then turn back towards the pile of Lilaya's panties.
-		 With dirty thoughts on your mind, you quickly navigate through the chaotic mess of your aunt's bedroom floor, and soon find yourself standing next to the dirty laundry.
+		你先走过去确认门已经关紧，然后回头朝莉莱雅的那堆内裤看去。
+		带着龌龊的想法，你快速穿过姨妈卧室杂乱无章的地面，很快来到那堆脏衣服旁边。
 	</p>
 	<p>
-		Glancing over once more to make sure that nobody's entered the room, you drop down onto your knees before the enticing heap of clothing.
-		 Reaching out, you grab the closest pair of panties, letting out an excited hum as you lift them up and give them an experimental stretch.
+		你再次瞥了一眼，确保没有人进入房间，然后跪在那堆诱人的衣物前。
+		你伸出手，抓起离你最近的一条内裤，发出兴奋的哼声。你把内裤伸手拿了起来，试探性地拉了一下。
 	</p>
 	<p>
-		Delighted by the way the soft fabric feels in your [pc.hands], you can't resist taking a closer look at Lilaya's underwear.
-		 Bringing them up to your face, you gently squeeze and pull at the stretchy fabric, breathing in the faint scent of musk and perfume as your [pc.hands] move ever closer to your nose.
-		 Your demonic aunt's scent is exactly the same as it was in your old world, and you find the familiar smell to be extremely comforting.
+		柔软的面料在你[pc.hand]中的触感让你欣喜不已，你忍不住仔细观察莉莱雅的内衣。
+		你把它贴到脸上，轻轻地挤压和拉扯这块富有弹力的织物， 当你的脸紧紧贴在这块布料上时，你闻到了淡淡的淫液的味道和一股香水的味道。
+		你恶魔姨妈下体的气味和在原来世界的姨妈下体的气味一模一样，你觉得这种熟悉的芬芳味道让你非常舒服。
 	</p>
 	<p>
-		Having gone this far already, you let your knees slide out to either side of you, and, sinking down onto your [pc.ass+], you lean forwards and rest your head on the pile of panties.
-		 Letting out a deep, relaxed sigh, you find yourself enveloped in your aunt's comforting fragrance.
+		一不做二不休，你让膝盖向两边滑开，身体的重量沉到[pc.ass+]上，身体前倾，把整个头埋在那堆内裤上。
+		你深深地吸了一口气，发现自己被姨妈的内衣上令人舒适的味道所包裹。
 	</p>
 	<p>
-		After several minutes of slowly rummaging through the pile of panties, you wonder if you should make your exit.
-		 Then again, it doesn't look like anyone's going to disturb you, and you wonder if you should take things a little further...
+		在一堆内裤中慢慢翻找了几分钟后，你在想是不是该走了。
+		你回头看了一眼紧闭的门，似乎没有人会在这时候来打扰你，你又转念一想，思考着是否应该再做点更刺激的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PANTIES_EXIT"><![CDATA[
 	<p>
-		You decide that you've already taken things far enough, and, returning the panties in your [pc.hands] back to the pile, you stand up.
-		 Weaving your way through the minefield of clothing that is your aunt's bedroom floor, you quickly find yourself at the door, and, pushing it open, you step back out into the corridor beyond.
+		你觉得自己已经满足了，于是把手中的内裤放回原处，站了起来。
+		在姨妈卧室地板上的衣物雷区中小心地穿梭后，你来到了房间门口，推开门，你又回到了外面的走廊上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PANTIES_MASTURBATION"><![CDATA[
 	<p>
-		The familiar scent of your aunt is too much for you to simply leave behind.
-		 Grabbing the topmost pair, you quickly bring them up to your nose, before taking a desperate, deep breath.
-		 The musky, perfume-laced scent of Lilaya overwhelms your senses, and you feel a distinct heat rising in your groin.
+		姨妈熟悉的气息让你难以割舍。
+		你抓起了衣服堆最上面的一对，迅速凑到鼻子前，然后拼命深呼吸。
+		莉莱雅下面那淫液和香水混杂的味道扑面而来，让你的感官无法抗拒，你感觉到一股明显的热量于下体升腾。
 	</p>
 	<p>
 		#IF(!pc.hasLegs())
-			 Pushing yourself up into a sitting position, you reach down between to your groin and start touching yourself.
+			你坐了下来，把手伸到大腿之间，开始抚摸自己。
 		#ELSEIF(pc.isTaur())
-			 Pushing yourself up onto your knees once again, you push your rear-end back against one of the posts of Lilaya's bed and rub against it in order to masturbate.
+			你再次跪在地上，把后臀顶在莉莱雅床的一根柱子上，摩擦着柱子自慰。
 		#ELSE
-			 Pushing yourself up onto your knees once again, you reach down between your legs and start touching yourself.
+			你再次跪在地上，把手伸到两腿之间，开始抚摸自己。
 		#ENDIF
-		 Breathing in Lilaya's scent once again, you find yourself letting out a desperate whine as you imagine the soft fabric rubbing up against her wet pussy. Quickly resolving to see this through to the end, you glance at the closed bedroom door once more, before starting to masturbate to your aunt's used panties...
+		你再度呼吸着莉莱雅的体香，想象着柔软的布料摩擦着她湿润的阴部，你情不自禁地低吟着。你很快就下定决心要将这件事进行到底，于是再次看了一眼紧闭的卧室门，然后开始对着姨妈用过的内裤自慰……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PANTIES_POST_MASTURBATION"><![CDATA[
 	<p>
-		Your knees collapse out to either side of you once more, and, sinking down onto your [pc.ass+], you let out a deep sigh.
-		 The comforting fragrance of Lilaya's panties surrounds you, and you find your eyelids drooping as you recover from the fun you just had.
+		你吸了口气，双膝再次向两侧塌陷，身体的重量落在了你[pc.ass+]上。
+		莉莱雅的内裤散发出舒适的香味，你发现自己的眼皮耷拉下来，因为你已经从刚才的亢奋中恢复过来了。
 	</p>
 	<p>
-		Suddenly, the silence of the room is broken by the faint sound of footsteps outside in the corridor.
-		 Your [pc.eyes] open wide, and, remaining perfectly still so as to be able to listen, you hear the person approaching Lilaya's bedroom door.
+		突然，外面走廊上传来的微弱的脚步声打破了房间的宁静。
+		你[pc.eyes]睁得大大的，屏住呼吸，俯下身仔细倾听，你听到有人正在走近莉莱雅的卧室门。
 	</p>
 	<p>
-		You only have a split second to decide what to do.
-		 Being right next to the bed, you could quickly dive under it and hide, or, if you were feeling bolder, you could quickly hide the used panties behind your back and rush out of the room, making up an excuse to whoever is on the other side.
-		 Then again, the person outside could simply be passing by. You could continue to enjoy the panties before you and pay them no heed, but a little voice inside your head is saying that this would be a bad idea...
+		现在，能否全身而退，全在这一刻的抉择了。
+		由于就在床边，你可以迅速潜入床下躲藏起来，或者，如果你觉得胆子更大的话，你可以迅速把用过的内裤藏在背后，然后冲出房间，不管是谁在门那边，你都可以编个借口糊弄过去。
+		不过，外面的人也可能只是路过。你可以继续享用眼前的内裤，对他们不闻不问，但你脑子里有个尚存理智的声音在说，这恐怕不是个好主意……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HIDE"><![CDATA[
 	<p>
-		Gripping the used panties in one [pc.hand], you drop to the floor and crawl under Lilaya's bed.
-		 You manage to tuck your [pc.leg] in just as you hear the turning of the handle, right before the door swings open. 
+		你用[pc.hand]抓着用过的内裤，迅速伏在地上，爬到莉莱雅的床下。
+		你听到了门把手转动的声音！就在千钧一发之际，你用力把[pc.leg]收进了床下。
 	</p>
 	<p>
-		From your vantage point beneath the bed, you can just about see through the piles of dirty clothing to the bedroom door, where there now stands the familiar black-and-white heels of Rose.
-		 As she enters the room, you can hear her muttering to herself, and, not daring to make any sort of move, you hold your breath as you listen to what it is she's saying.
+		从床下的视角来看，你勉强可以透过成堆的脏衣服看到卧室的门，那里立着萝丝那双熟悉的黑白高跟鞋。
+		当她走进房间时，你能听到她在喃喃自语，你一动不动，静静地屏住呼吸，仔细听她在说什么。
 	</p>
 	<p>
-		[rose.speech(Honestly... So this is why she told me not to come in here... She's just begging for some <i>real</i> punishment...)]
+		[rose.speech(原来如此……这就是她让我不要进来的原因……她可能只是又想来点<i>真正的</i>惩罚了……)]
 	</p>
 	<p>
-		Your [pc.eyes] move this way and that as you watch the cat-girl maid moving back and forth around the room.
-		 In a distinctly frustrated tone, she continues to mutter to herself, and you make sure to remain completely silent as you listen in.
+		当你看着猫女仆在房间里来回走动时，你的[pc.eyes]随着那双高跟鞋左右移动。
+		她用明显不高兴的语气继续喃喃自语着，而你在一旁听着，大气都不敢出一口。
 	</p>
 	<p>
-		[rose.speech(I <i>know</i> I left it in here... And she's done so much to deserve it today as well... Ah! There it is!)]
+		[rose.speech(我<i>记得</i>我把它留在了这里……她今天也做了很多值得好好惩罚一下的事情……啊，找到了！)]
 	</p>
 	<p>
-		Your eyes widen as you see Rose bend down, and, from out of a particularly large pile of discarded clothing, you see her retrieve a black leather riding crop.
-		 The cat-girl maid lets out a devious little laugh, before hurrying back to the bedroom door and making her exit.
+		当你看到萝丝弯下腰，从一大堆废弃衣物中拿出一根黑色小皮鞭时，你的眼睛瞪得更大了。
+		猫女仆发出一阵坏坏的笑声，然后匆匆走到卧室门口，离开了。
 	</p>
 	<p>
-		You wait until the sound of her footsteps has completely disappeared before crawling out from under the bed.
-		 With nothing more to be done in here, you turn towards the door yourself, and prepare to make your exit.
+		等她的脚步声完全消失在门的那边后，你才从床底下爬出来。
+		你在这里已经没什么要做的了，于是你转身走到门口，准备离开。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FLEE"><![CDATA[
 	<p>
-		Gripping the used panties in one [pc.hand], you hide them behind your back as you rush over to the bedroom door.
-		 Quickly turning the handle, you pull open the door to find yourself standing before a very shocked-looking Rose.
+		你用一只[pc.hand]抓着姨妈穿过的内裤，把它们藏在身后，冲到了卧室门口。
+		你迅速转动把手，拉开门，发现自己正站在被吓了一跳的萝丝面前。
 	</p>
 	<p>
-		Taking the initiative, you quickly blurt out your excuses,
-		 [pc.speech(Ah, hello Rose! I was just checking all of the rooms for any sign of trouble. This one's safe enough!)]
+		你知道扯谎的时候气势上不能虚，于是先声夺人，编了个理由开始忽悠萝丝。
+		[pc.speech(你好啊，萝丝，我正在检查所有的房间有没有危险，我刚检查了这里，这里很安全！)]
 	</p>
 	<p>
-		[rose.speech(I wouldn't dare question the motives of one of Mistress's guests, but one might wonder what sort of 'trouble' one would expect to find in her room,)]
-		 Rose says, raising one eyebrow as she steps back to make room for you to proceed out into the corridor.
+		[rose.speech(我不敢质疑主人的客人的动机，但我想知道在她的房间里可能会有什么样的‘危险’。)]
+		萝丝挑了挑眉毛，躲到一边，好让你从房间里出来。
 	</p>
 	<p>
-		[pc.speech(Ah, well, that's the thing with trouble; you don't know what it is until you find it,)]
-		 you say, ignoring Rose's still-raised eyebrow.
-		 [pc.speech(Anyway, I need to head back to my room now, I'll see you later, Rose!)]
+		[pc.speech(对啊，这就是‘危险’的地方，你不知道是什么危险，)]
+		你无视着萝丝蹙起的眉头，继续说，
+		[pc.speech(总之，我先回我的屋里评估一下这栋房子的风险指数，之后见啦，萝丝！)]
 	</p>
 	<p>
-		You hurry off down the corridor, not daring to look back.
-		 You can feel Rose's questioning gaze drilling into your back up until the moment you push open your bedroom door and step inside.
+		你匆匆走过走廊，不敢回头看。
+		你能感觉到萝丝怀疑的目光一直在你身上扫来扫去，直到你推开卧室的门走了进去，这种感觉才消失。
 	</p>
 	<p>
-		Letting out a deep sigh of relief, you thank your lucky stars that you were able to get out of that situation without incident.
-		 What's more, you were even able to secure a trophy; that being the pair of used panties still clenched in your [pc.hand]...
+		你深深地呼出了一口气，感谢幸运之神的眷顾，你顺利脱险了。
+		更重要的是，你甚至还获得了战利品：那就是你[pc.hand]中紧握着的那条姨妈换下的内裤……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CAUGHT"><![CDATA[
 	<p>
-		You decide that whoever is outside must just be passing by, and continue playing with the pile of Lilaya's panties before you.
+		你认为外面的人一定只是路过，于是继续把玩着眼前这堆莉莱雅的内裤。
 	</p>
 	<p>
-		The footsteps outside suddenly stop, and you look up to see the door's handle turning.
-		 You're unable to make a move before the door suddenly swings open, and you find yourself gazing up into the eyes of a very shocked-looking Rose.
+		外面的脚步声突然停了下来，你抬头看到门把手在转动。
+		你还没来得及做任何动作，门就突然被推开了，你发现自己和瞠目结舌的萝丝四目相对。
 	</p>
 	<p>
-		Before you can say anything, the expression on the cat-girl's face quickly shifts into one of mild disgust, and, with an icy tone, she's the first one to break the heavy silence.
-		[rose.speech(What do you think you're doing?)]
+		你还没来得及说什么，猫女脸上的表情就迅速转变成了轻微的厌恶，她用冰冷的语气率先打破了这气氛凝重的沉默。
+		[rose.speech(请问，您为什么手里拿着莉莱雅的内裤呢？)]
 	</p>
 	<p>
-		[pc.speech(Well, I was just... Erm...)]
-		 you start, not sure quite what to say.
+		[pc.speech(呃，我……呃，因为，内裤就在那里？)]
+		你不太确定自己在这种场合下该说些什么。
 	</p>
 	<p>
-		[rose.speech(You were just masturbating to Mistress's dirty underwear?)]
-		 Rose questions, before curtsying and turning to make her exit.
-		 [rose.speech(Well, if you'll excuse me, you do appear to be rather busy, and I have some pressing matters to discuss with Mistress. I wonder what she'll say...)]
+		[rose.speech(您正在拿主人的内裤自慰，是吧？)]
+		萝丝问道，然后弯腰行了个礼，转身离去。
+		[rose.speech(恕我失陪，您继续忙吧。我有些急事要和主人商量一下，不知道她会作何感想……)]
 	</p>
 	<p>
-		You see Rose smirk as she finishes her sentence, as though she's eager to witness Lilaya's reaction to being told what it is you've been up to.
-		 As the cat-girl turns to leave, you realise that you only have a moment in which to say something to stop her.
+		你看到萝丝在说完这句话时得意地笑了笑，似乎她很想知道莉莱雅在知道你做这种事之后会有什么感想。
+		猫女仆这就要走了！你还有最后的机会，也许你可以说点什么，恳求她网开一面……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CAUGHT_FLEE"><![CDATA[
 	<p>
-		You don't think it would do much good to try and apologise to Rose, so, jumping to your feet, you rush to the door and hurry to block her path down the corridor.
-		 Running out in front of her, you turn and plead,
-		 [pc.speech(Please, Rose, promise me that you won't tell Lilaya!)]
+		你觉得向萝丝道歉没什么用，于是跳起来，冲到门口，急忙挡住她沿着走廊的去路。
+		你跑到她面前，转身恳求道，
+		[pc.speech(求你了，萝丝，答应我别告诉莉莱雅！)]
 	</p>
 	<p>
-		[rose.speech(I'm sorry, but I can't do that. Now, if you'll excuse me,)]
-		 Rose replies, before stepping around you and hurrying off down the stairs.
+		[rose.speech(对不起，做不到。恕我失陪了。)]
+		萝丝干脆地回绝了你，然后绕过你，匆匆走下楼梯。
 	</p>
 	<p>
-		You let out a frustrated sigh, and, with nothing else to do, you continue on down the corridor and return to the safety of your own room.
+		你无奈地叹了口气，无计可施，只能沿着走廊返回自己安全的房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APOLOGY"><![CDATA[
 	<p>
-		[pc.speech(Rose! Wait!)]
-		 you call out, and, much to your relief, the cat-girl maid stops in the doorway.
+		[pc.speech(等一下，萝丝！)]
+		听到你这么一喊，猫女仆停在了门口，这让你松了一口气。
 	</p>
 	<p>
-		[rose.speech(May I help you?)]
-		 Rose asks, failing to hide the devious smirk on her face.
+		[rose.speech(有什么事吗？)]
+		萝丝问道，脸上掩饰不住狡黠的笑意。
 	</p>
 	<p>
-		[pc.speech(I'm sorry! Please, don't tell Lilaya! I'm really, really sorry!)]
-		 you call out, desperate for Rose to keep this a secret between the two of you.
+		[pc.speech(对不起，请别告诉莉莱雅！我真的真的，真的很抱歉！)]
+		你喊道，迫切希望萝丝能保守住你们之间的秘密。
 	</p>
 	<p>
-		The hint of sadistic delight in Rose's voice is unmistakable as she curtsies and addresses you once more,
-		[rose.speech(I'm sorry, but this really isn't something that I can keep from Mistress. Have a good day.)]
+		当她再次向你弯腰致意时，你听出萝丝的声音中带着一丝施虐者的喜悦，这一点毋庸置疑。
+		[rose.speech(对不起，但这真的不能瞒着主人，祝你今天过得愉快。)]
 	</p>
 	<p>
-		Your apology clearly wasn't enough, and you wonder if you should debase yourself and beg for Rose to forgive you, or simply drop the matter and deal with Lilaya's wrath the next time you see her.
+		你的道歉显然是不够的，你不知道是应该继续放下身段，乞求萝丝原谅你，还是干脆放弃，等到下次见到莉莱雅时，再承受她的怒火。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APOLOGY_FLEE"><![CDATA[
 	<p>
-		You don't think that any further apologies are going to be of much use, so, jumping to your feet, you rush to the door and hurry to block Rose's path down the corridor.
-		 Running out in front of her, you turn and plead,
-		 [pc.speech(Please, Rose, promise me that you won't tell Lilaya!)]
+		你觉得再道歉也没什么用，于是跳起来，冲到门口，急忙挡住萝丝沿着走廊的去路。
+		你跑到她面前，转身恳求道，
+		[pc.speech(求你了，萝丝，答应我别告诉莉莱雅！)]
 	</p>
 	<p>
-		[rose.speech(I'm sorry, but I can't do that. Now, if you'll excuse me,)]
-		 Rose replies, before stepping around you and hurrying off down the stairs.
+		[rose.speech(对不起，我不能这么做，失陪了。)]
+		萝丝回答道，然后，她绕过了你，匆匆走下楼梯。
 	</p>
 	<p>
-		You let out a frustrated sigh, and, with nothing else to do, you continue on down the corridor and return to the safety of your own room.
+		你无奈地叹了口气，无计可施，只能沿着走廊返回自己安全的房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEG"><![CDATA[
 	<p>
-		[pc.speech(Rose! Please!)]
-		 you cry out in desperation, clasping your [pc.hands] together as you beg for her to remain silent.
-		 [pc.speech(Don't tell Lilaya! I'll do anything! Anything you ask!)]
+		[pc.speech(求你了，萝丝！)]
+		你握紧了双手，绝望地喊着，恳求她保持沉默。
+		[pc.speech(只要不告诉莉莱雅，我，我什么都会做的！)]
 	</p>
 	<p>
-		Already half-out of the doorway, Rose stops in her tracks as she hears your words.
-		 Keeping her back turned towards you, she offers you an ultimatum,
-		 [rose.speech(I could keep this from Mistress, but under only one condition. That being, you submit to my punishment.)]
+		萝丝已经走出门口一半了，听到你的话，她又将迈出门的脚收回来。
+		她背对着你，向你下了最后通牒，
+		[rose.speech(我可以装作没看见你干了什么，但是，我有条件，那就是，你要乖乖接受我的惩罚。)]
 	</p>
 	<p>
-		The cold, cutting tone of Rose's voice is enough to send a shiver down your spine, but, being offered a way out of this situation, you ignore it and shuffle forwards.
-		 [pc.speech(What kind of punishment?)]
+		萝丝那冷酷无情的语气足以让你不寒而栗，但你清楚这是你最后的救命稻草，你已经别无选择。
+		[pc.speech(什么样的惩，惩罚？)]
 	</p>
 	<p>
-		As Rose turns towards you, you see an uncharacteristically evil, sadistic grin on her face.
-		 Stepping over to one side of the room, she roughly yanks open the top drawer of one of Lilaya's cabinets, and from within, produces a black leather harness, with a large, purple dildo fixed to the front.
-		 Holding the strap-on up so that you can clearly see it, she laughs in sadistic pleasure as she states,
-		 [rose.speech(This kind of punishment. You let me fuck you with this, and Lilaya never needs to know about your filthy behaviour. Understood?)]
+		当萝丝转身向你走来时，你看到她的脸上露出了一反常态的邪恶的笑容，你感受到了她那施虐狂的气场。
+		她走到房间的一侧，用力拽开了莉莱雅柜子最上面的抽屉，从里面拿出了一套黑色的皮具，前面固定着一个紫色的大号假阳具。
+		她把这副穿戴式假阳具拿到你面前，让你仔细看了看，而后，她发出了施虐狂那开心而残忍的笑声，和你说，
+		[rose.speech(这种惩罚。让我操你，你那肮脏下流的举动，就永远不会被莉莱雅知道……)]
 	</p>
 	<p>
-		You gulp as you wonder if that would be worth it to avoid Lilaya's wrath...
+		你咽了咽口水，不知道这样做是否值得，如果仅仅是为了避免让莉莱雅发火……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BEG_FLEE"><![CDATA[
 	<p>
-		You really don't want to be on the receiving end of that kind of punishment, and, jumping to your feet, you tell Rose as much,
-		 [pc.speech(I really don't want to do that, Rose. Just... please, promise me that you won't tell Lilaya about all this!)]
+		你实在不想接受这种惩罚，于是很快站了起来，告诉了萝丝。
+		[pc.speech(我，我实在是不想接受这种惩罚，萝丝……求你了，饶了我吧！)]
 	</p>
 	<p>
-		[rose.speech(I'm sorry, but I can't do that. Now, if you'll excuse me,)]
-		 Rose replies, before quickly putting the strap-on away and hurrying off down the corridor.
+		[rose.speech(对不起，我可做不到。现在，恕我失陪了。)]
+		萝丝很快把穿戴式假阳具丢进抽屉里，匆匆地走进走廊。
 	</p>
 	<p>
-		You let out a frustrated sigh, and, with nothing else to do, you step out into the corridor and quickly return to the safety of your own room.
+		你无奈地叹了一口气，无计可施，只好走了出去，迅速回到自己安全的房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROSE_AS_DOM"><![CDATA[
 	<p>
-		[pc.speech(Ok, just don't let Lilaya know...)]
-		 you say, looking down at the floor.
+		[pc.speech(我明白了，只要不让莉莱雅知道……)]
+		你说完，低下了头。
 	</p>
 	<p>
-		[rose.speech(Excellent,)]
-		 Rose replies, lifting her maid's dress and dropping her thong to the floor.
-		 With a clear amount of previous practice, she then swiftly secures the strap-on's harness in place around her groin.
-		 [rose.speech(You'll call me Mistress for the duration of this, and you'd better show me a proper amount of respect, or else Lilaya will be certain to hear all about what it is that you like to do with her underwear. Now, let's start with you telling me how bad you've been.)]
+		[rose.speech(很好，)]
+		萝丝回答说，她撩起女仆裙，把丁字裤丢在地上。
+		她熟练地把穿戴式假阳具穿好，似乎她已经和谁这样做过很多次了……
+		[rose.speech(在惩罚期间，叫我主人，你最好对我保持足够的尊敬，不然，我会让莉莱雅知道你对她的内裤干了些什么。现在，亲口告诉我，你是不是个坏家伙。)]
 	</p>
 	<p>
-		Looking up, you see a determined, dominant glint in Rose's eyes, and you know for a fact that she'll follow through with her threat if you don't do as you're told.
-		 [pc.speech(I-I've been very bad... Mistress!)]
-		 you say, remembering at the last moment to address her in the proper manner.
+		你抬头，和猫女仆那果决而充满支配欲望的眼神交汇，心里清楚，她并不是在和你开玩笑，如果不按照她说的做，她真的会把事情捅给莉莱雅。
+		[pc.speech(我……我很坏，主人！)]
+		你按照她交代给你的毕恭毕敬的姿态，卑微地向她坦白。
 	</p>
 	<p>
-		[rose.speech(Ooh, that was a close one!)]
-		 Rose taunts, stepping forwards and pushing the purple dildo into your face.
-		 [rose.speech(And why are you very bad?)]
+		[rose.speech(哦，是吗？)]
+		她肆意奚落着你，将她紫色的假阳具拍在你脸上。
+		[rose.speech(告诉我，你为什么很坏？)]
 	</p>
 	<p>
-		[pc.speech(B-Because I was m-masturbating with Lilaya's panties, Mistress.)]
+		[pc.speech(因，因为我用莉莱雅的内裤自慰了，主人！)]
 	</p>
 	<p>
-		[rose.speech(Mmm, that <i>is</i> bad.)]
-		 Rose sneers, reaching down to grab you by the [pc.arm], before pulling you to your feet.
-		 [rose.speech(And how are you going to earn forgiveness?)]
+		[rose.speech(嗯~那可真是<i>坏透了</i>。)]
+		她讥讽着你，抓住你的[pc.arm]，把你拉起来。
+		[rose.speech(告诉我，你要怎么让主人原谅你？)]
 	</p>
 	<p>
-		[pc.speech(By... By letting you fuck me, Mistress,)]
-		 you answer, avoiding Rose's gaze.
-		 Suddenly, the cat-girl gives you a surprisingly hard shove, and you find yourself falling back onto Lilaya's bed.
+		[pc.speech(我会用……用这副身体……乞求您的原谅，主人……)]
+		你不敢忤视萝丝那灼热的目光。
+		突然间，猫女仆用力推了你一把，你躺倒在莉莱雅的床上。
 	</p>
 	<p>
 		#IF(pc.hasLegs())
-			[rose.speech(Now spread your legs, you horny slut,)]
+			[rose.speech(你这饥渴的荡妇，把腿张开！)]
 		#ELSE
-			[rose.speech(Now present yourself to me, you horny slut,)]
+			[rose.speech(现在，向我展示你最饥渴的地方！)]
 		#ENDIF
-		 Rose snaps, stepping forwards as you hurry to obey.
-		 Grinning down at you, Rose leans forwards as she commands,
-		 [rose.speech(Beg for me to fuck you.)]
+		萝丝站在你面前，厉声喝道。
+		她低头看着按照她命令照做的你，俯下身，继续下达着命令，
+		[rose.speech(现在，求我，你明白该怎么做。)]
 	</p>
 	<p>
-		[pc.speech(Please, Mistress, fuck me! I've been a very bad [pc.girl]! Please, I want to earn your forgiveness! Fuck me!)]
+		[pc.speech(求您了，主人，操我吧！我是个不听话的坏[pc.girl]！请用您的鸡巴来惩罚我，直到您原谅我！)]
 	</p>
 	<p>
-		[rose.speech(Well, if you insist!)]
-		 Rose laughs, preparing to do exactly what it is you've just asked of her.
+		[rose.speech(好吧，如果你想要这个，那我，就满足你！)]
+		萝丝大笑着，准备好按你说的去做了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_ROSE_AS_DOM"><![CDATA[
 	<p>
-		Rose steps back from the bed, grinning.
-		 [rose.speech(Well, I think you've been adequately punished now.)]
+		萝丝离开床，站了起来，大笑着。
+		[rose.speech(好了，我觉得你已经接受了足够的惩罚。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress... Thank you, Mistress...)]
-		 You pant, lying back on Lilaya's bed as you catch your breath.
-		 You hear Rose unfastening her strap-on, before she moves to retrieve her thong and get her clothes back in order.
+		[pc.speech(好的……主人……谢谢您……主人……)]
+		你躺在莉莱雅的床上喘息着，直到你缓过一口气来。
+		你听到萝丝解下假阳具的声音。她穿好了丁字裤，整理好自己的衣服。
 	</p>
 	<p>
-		[rose.speech(Now, back to your room,)]
-		 she commands.
-		 [rose.speech(And remember, the next time you see me, you're to treat me as Lilaya's slave once more. Understood?)]
+		[rose.speech(现在，回你自己屋里去吧。)]
+		她命令道。
+		[rose.speech(忘了在这里发生的事，下次再见到我，就把我当成莉莱雅的奴隶，明白了吗？)]
 	</p>
 	<p>
-		[pc.speech(Y-Yes, Mistress,)] you reply, before quickly gathering your things and hurrying to the door. Glancing back one last time at Rose, you see her grinning evilly at you. Letting out a little cry, you quickly turn away and rush off down the corridor, not daring to stop until you're back safe and sound in your own room...
+		[pc.speech(明白了，主人……呃，萝丝。)]你回答道，然后迅速收拾好东西，匆匆走向门口。你最后回头看了一眼萝丝，看见了她脸上那邪魅的笑容。你吓到哭出声来，迅速转身离开，冲向走廊，直到安全回到自己的房间才敢停下来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="THREATEN"><![CDATA[
 	<p>
-		You decide that there's only one thing for it. You'll have to threaten Rose into silence. Standing up, you quickly stride forwards until you're standing just in front of Rose, and, putting on your most menacing tone, you growl at her, [pc.speech(You'd <i>better</i> not tell Lilaya about all this. You'll be sorry if you do!)]
+		你只能威胁萝丝保持沉默，于是你站起身来，快步向萝丝逼近，用最凶狠的语气对她吼道：[pc.speech(你<i>最好</i>不要告诉莉莱雅，否则你会后悔的！)]
 	</p>
 	<p>
-		Completely unfazed by your aggressive action, Rose stares into your eyes and coolly replies, [rose.speech(It's really not very wise to threaten me. Let's find out what Mistress has to say about your actions, shall we?)]
+		萝丝完全没有被你咄咄逼人的举动吓到，她盯着你的眼睛，冷冷地回答道：[rose.speech(威胁我可不是明智之举，要不要让我们来看看主人会对你作何反应？)]
 	</p>
 	<p>
-		With that, Rose quickly steps away from you and slides a small wall panel to one side, before pressing a small button that's located behind it. Flashing you an evil smirk, the cat-girl maid raps her claw-like fingers on the surface of a nearby dresser, announcing as she does so, [rose.speech(Mistress will be up here in just a moment. Wait right there, [pc.name]...)]
+		说着，萝丝迅速从你身边掠过，把墙上的一个小面板推到一边，按下面板后的一个小按钮。猫女仆向你露出阴森的冷笑，爪指敲打着一旁的梳妆台，一边说：[rose.speech(主人马上就上来，在那儿等着，[pc.name]……)]
 	</p>
 	<p>
-		Realising that this button must have alerted Lilaya, and that your [lilaya.relation(pc)] must already be on her way up to this room, you wonder whether to wait for her arrival, or to instead hurry off and return to the safety of your own room...
+		你意识到这个按钮一定已经惊动了莉莱雅，你的[lilaya.relation(pc)]一定已经在来的路上了，你思索是该等她过来，还是赶紧跑回自己安全的房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="THREATEN_FLEE"><![CDATA[
 	<p>
-		Not wanting to face Lilaya right now, you tell Rose that you've got to leave, before dashing for the door and quickly exiting out into the corridor beyond. Thankfully, Lilaya doesn't seem to have made it up the stairs just yet, and so you manage to rush back to your room without encountering her...
+		你不想现在面对莉莱雅，于是在告诉萝丝你得走了之后便冲向门口，在离开走廊之后，你幸运的发现莉莱雅似乎还没有上楼，所以你匆匆的赶回房间好避免正面相遇……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="THREATEN_WAIT"><![CDATA[
 	<p>
-		Not having anything to fear from Lilaya, you do as Rose says and wait for your [lilaya.relation(pc)]'s arrival. As the two of you await the [lilaya.race]'s arrival, Rose takes the time to sneer, [rose.speech(Don't think you can talk your way out of this, [pc.name]. If you're smart, you'll do as I suggest and submit to your punishment...)]
+		你并不害怕莉莱雅，就按照萝丝说的做，等待你的[lilaya.relation(pc)]归来。在等待中，萝丝冷笑道：[rose.speech(别以为你能靠嘴皮子脱身，[pc.name]。你要是个聪明人，就会听我的话去接受惩罚……)]
 	</p>
 	<p>
-		Before you can respond, the door to the bedroom suddenly flies open, and the familiar figure of Lilaya bursts into the room. As she makes her entry, you see that she's beginning to hastily pull off her clothes, but upon seeing you she halts this rapid undressing, and with a deep blush rising into her cheeks, she turns and exclaims to Rose, [lilaya.speech(Mistress! You used the special bell, so I was expecting... Well, you know... What's [pc.name] doing here? Is [pc.she] joining us for today's session?)]
+		还没等你反应过来，房门猛地被推开，莉莱雅熟悉的身影就这么风风火火地冲进了房间。她一进来，你就看见她手忙脚乱地宽衣解带。但莉莱雅的动作在与你对视时就骤然停滞了，她双颊绯红，转过身来对萝丝惊呼道：[lilaya.speech(主人！你用了特殊的铃铛，我以为……嗯，你知道……[pc.name]在这里做什么？[pc.she]今天要加入我们吗？)]
 	</p>
 	<p>
-		Immediately picking up on the fact that Lilaya just called her maid 'Mistress', you realise that she was expecting Rose's summons to involve some kind of role-reversal sex. Before you can offer an explanation, the cat-girl quickly reveals, [rose.speech(I caught [pc.name] here pleasuring [pc.herself] with a pair of your underwear. Upon confronting [pc.herHim], [pc.she] threatened me, and so I was forced to summon you here.)]
+		莉莱雅刚刚称她的女仆为“主人”，你马上就意识到她以为萝丝的召唤是角色扮演性爱的一部分。你还没来得及解释，猫女就立马揭露道：[rose.speech(我抓到[pc.name]在这里用你的内裤自慰，而且[pc.she]还敢威胁我，所以我只好把你召唤到这里。)]
 	</p>
 	<p>
-		[lilaya.speech(You did what?!)] Lilaya exclaims, turning to face you with a curious mixture of anger and curiosity in her facial expression. Placing her hands on her hips, your [lilaya.relation(pc)] demands, [lilaya.speech(You're not to threaten Rose! And as to the other thing, you know you can come down to me and have some 'tests' at any time. There's no need for using my panties like that... Anyway, I want to hear you apologise to Rose for threatening her. If you know what's good for you, and don't want to end up on her bad side, then I suggest you submit and let her punish you like the naughty [pc.girl] you are!)]
+		[lilaya.speech(你干了什么？！)]莉莱雅惊呼道，你的[lilaya.relation(pc)]既愤怒又困惑地盯着你，她双手叉腰，命令道：[lilaya.speech(你不能威胁萝丝！至于另一件事，你知道你随时都可以来找我做一些‘测试’吧，没必要用我的内裤吧……总之，我想听你为威胁萝丝向她道歉。如果你知道什么对你有益，也不想跟她过不去，那么我建议你屈服，让她惩罚你这个淘气的[pc.girl] ！)]
 	</p>
 	<p>
-		As she mentions that you should submit to Rose and be 'punished', Lilaya's cheeks flush red once more, and she turns to give her maid a submissive look. Realising that Rose is really the one in charge in this situation, you wonder whether to submit to her and undoubtedly be forced to endure some kind of sexual punishment, or to instead quickly apologise and return to your room...
+		莉莱雅提到你应该服从萝丝并接受“惩罚”时，她的脸颊再次泛起红晕，转过身顺从地看向女仆。你意识到在这里萝丝才是真正的主导者，你思考是该顺从她——虽然无疑会被迫忍受某种性惩罚，还是迅速道歉并返回自己的房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="THREATEN_APOLOGISE"><![CDATA[
 	<p>
-		Not wanting to submit to Rose, nor end up on both her and Lilaya's bad side, you quickly apologise to the cat-girl maid, before dashing for the door and quickly exiting out into the corridor beyond. Thankfully, Lilaya doesn't seem to have any interest in pursuing you and demanding you do anything further, and so you manage to rush back to your room without further incident...
+		你不想屈服于萝丝，而且也不想与她和莉莱雅为敌，于是赶紧向猫女仆道歉，然后冲向门外并迅速离开了走廊。值得庆幸的是，莉莱雅似乎没有兴趣再追问你和要求你做什么，所以你顺利地回到了自己的房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="THREATEN_SUBMIT"><![CDATA[
 	<p>
-		Deciding that the best thing to do would be to completely submit to Rose, you bow down before her and offer the cat-girl your most sincere apology. Looking down at you with a look of triumph on her face, she drops what's left of her polite act, and after flashing you an uncharacteristically evil, sadistic grin, she declares, [rose.speech(That'll do for your apology, bitch. Now for your punishment. Get down on all fours and present yourself to me.)]
+		你决定最好的办法就是完全臣服于萝丝，于是你跪伏在她的脚边，并向她表达了你最诚挚的歉意。她低头看着你，那往常的标志性笑容转瞬即逝，你现在能看见的只有邪恶嗜虐的笑容：[rose.speech(这就是你的道歉？臭婊子！我现在要好好惩罚你！快点爬过来！)]
 	</p>
 	<p>
-		Committed to completely submitting to Rose, you do as she says and get down onto all fours. As you turn your ass towards her, she addresses Lilaya in a manner most unlike how she does so while on the job, and snaps, [rose.speech(Strip naked, slut, then sit on the edge of your bed.)]
+		你决心完全臣服于萝丝，于是按照她所说的趴在了地上，在你把屁股转向她时，她用一种与平时截然不同的方式对莉莱雅说了一句话：[rose.speech(脱光衣服，骚货，然后坐在床边。)]
 	</p>
 	<p>
-		As Lilaya obediently hurries to strip out of her clothing, Rose steps over to one side of the room, before roughly yanking open the top drawer of one of Lilaya's cabinets. From within, she produces a black leather harness, with a large, purple dildo fixed to the front. Holding the strap-on up so that you can clearly see it, she laughs in sadistic pleasure as she states, [rose.speech(For your punishment, I'm going to fuck you with this. Oh, and you'll call me Mistress for the duration of this. Understood?)]
+		当莉莱雅顺从地脱掉衣服时，萝丝走到房间的另一边，然后粗暴地拉开了莉莱雅某个柜子最上面的抽屉。她从里面拿出一个黑色皮制绑带，在它前面固定着一个紫色的巨大假阳具。她拿起背带，让你可以清楚地看到它，随后在发出虐待狂般的愉悦笑声后说道：[rose.speech(作为惩罚，我要用这个操你，哦对了，在这期间你要叫我女主人！明白了吗？！)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress,)] you reply.
+		[pc.speech(是的，女主人。)]你回答道。
 	</p>
 	<p>
-		Sitting down on the edge of her bed, the now-naked Lilaya spreads her legs, before addressing Rose in the same manner in which you've been instructed to, [lilaya.speech(Mistress, am I going to be allowed to join in?)]
+		莉莱雅保持着赤裸的姿态坐在床边，在张开双腿之后，她用和你差不多一样的语气对萝丝说道：[lilaya.speech(女主人，请问您能让我加入吗？)]
 	</p>
 	<p>
-		By means of an answer, the cat-girl maid grabs hold of you, before roughly pulling you forwards towards Lilaya, and once there, she pushes your face into your [lilaya.relation(pc)]'s groin. Grabbing hold of the back of your head, Lilaya pulls your head forwards, forcing you to lick and kiss her [lilaya.pussy+].
+		作为回答，猫女仆抓住你的手，然后粗暴地把你拉向莉莱雅，在过去之后，她就把你的脸推向你[lilaya.relation(pc)]的腹股沟。随后莉莱雅抓住你的后脑勺并把你的头往前拉，强迫你舔吻她那[lilaya.pussy+]。
 	</p>
 	<p>
-		[rose.speech(Liking the taste of this slut's cunt?)] Rose teases as she lifts her maid's dress and drops her thong to the floor. With a clear amount of previous practice, she then swiftly secures the strap-on's harness in place around her groin. Dropping down behind you, she
+		[rose.speech(喜欢这荡妇的逼吗？)]萝丝一边挑逗着，一边撩起女仆裙，把丁字裤脱到地上。她轻车熟路地把假阳具穿戴好，在你身后落下，
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 roughly gains access to your [pc.pussy+] and gives it a sharp slap, causing you to let out a muffled cry into Lilaya's cunt. Forcefully shoving three of her fingers into your [pc.pussy+], the cat-girl roughly fingers you as she states, 
+			她粗暴地进入你[pc.pussy+]，还猛烈地冲撞了一下，惹得你在莉莱雅的小穴里发出一声闷哼。猫女强行将三根手指塞进你[pc.pussy+]里，一边粗暴地抠你，一边说：
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 roughly gains access to your [pc.ass+] and gives it a sharp slap, causing you to let out a muffled cry into Lilaya's cunt. After forcefully swatting your exposed ass several more times, the cat-girl finally stops and states, 
+			她粗暴地进入你[pc.ass+]，还猛烈地拍打了一下，惹得你在莉莱雅的小穴里发出一声闷哼。猫女又狠拍了几下你暴露在外的屁股，终于停了下来，说道：
 		#ELSE
-			 gives your ass a sharp slap, causing you to let out a muffled cry into Lilaya's cunt. After forcefully swatting your ass several more times, the cat-girl finally stops and states, 
+			她狠狠地拍了一下你的屁股，惹得你在莉莱雅的小穴里发出一声闷哼。猫女又狠拍了几下你的屁股，终于停了下来，说道：
 		#ENDIF
-		 [rose.speech(You never answered me, bitch. You like the taste of slut's cunt? Or would you rather I have her grow a nice, fat cock for you to choke on?)]
+		[rose.speech(你还没回答我呢，婊子。你喜欢这荡妇的逼吗？还是你更想我命令她长出一根又肥又大的鸡巴让你噎着？)]
 	</p>
 	<p>
-		[lilaya.speech(Be a good [pc.girl] and answer Mistress,)] Lilaya says, pushing your head back a little so as to allow you to breathe and make your decision...
+		[lilaya.speech(当个乖[pc.girl]，回答主人吧。)]莉莱雅说，一边推开你的头，让你喘息片刻并做出决定……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AND_ROSE_AS_DOMS"><![CDATA[
 	<p>
-		[pc.speech(Yes, Mistress, I like the taste of her cunt,)] you reply, before burying your face between Lilaya's legs and carrying on where you left off.
+		[pc.speech(是的，主人，我喜欢她小穴的滋味，)]你抬起头回答萝丝，随后又把头埋进莉莱雅的两腿之间舔舐。
 	</p>
 	<p>
-		[rose.speech(Keep eating her out then, bitch,)] Rose laughs in a sadistic, mocking tone.
+		[rose.speech(那就继续吃下去，婊子)]萝丝用一种凄厉而嘲讽的语气大笑道。
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 Roughly yanking her fingers out of your cunt, she quickly brings the head of her purple strap-on to your [pc.labia+], and before you can react, she slams forwards, ramming the toy deep into your [pc.cunt+]. As you let out another muffled cry into Lilaya's pussy, Rose grabs your [pc.hips+] and sneers, [rose.speech(Take it like the bitch you are!)]
+			她粗暴地将手指从你的阴户中拽出，然后将紫色穿戴式假阴茎的头部对准你[pc.labia+]，随之在你做出反应之前，她猛地向前一顶，将玩具狠狠地插入你[pc.hips+]深处。当你对着莉莱雅的小穴发出另一声闷哼时，萝丝抓住你[pc.hips+]并冷笑道：[rose.speech(像个婊子一样受着吧！)]
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 Roughly spanking your exposed ass several times, she then quickly brings the head of her purple strap-on to your [pc.asshole+], and before you can react, she slams forwards, ramming the toy deep into your [pc.ass+]. As you let out another muffled cry into Lilaya's pussy, Rose grabs your [pc.hips+] and sneers, [rose.speech(Take it like the bitch you are!)]
+			她粗暴地在你暴露的屁股上抽了几下，然后迅速将紫色背带式假阴茎的龟头对准你[pc.ass+]，在你做出反应之前，她猛地向前一顶，将玩具狠狠地插入你[pc.asshole+]深处。萝丝抓住你[pc.hips+]并发出一声冷笑[rose.speech(像个婊子一样受着吧！)]
 		#ELSE
-			 Roughly spanking your ass several times, she then slaps the head of her purple strap-on against your [pc.ass+]. As you let out another muffled cry into Lilaya's pussy, Rose grabs your [pc.hips+] and sneers, [rose.speech(That's it, bitch! You're mine now!)]
+			她粗暴地在你暴露的屁股上抽了几下，然后迅速将紫色背带式假阴茎的龟头对准你[pc.ass+]，当你对着莉莱雅的小穴发出另一声闷哼时，萝丝抓住你[pc.hips+]并发出一声冷笑，[rose.speech(就这样，婊子，现在你是我的了！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AND_ROSE_AS_DOMS_PENIS"><![CDATA[
 	<p>
-		[pc.speech(I'd prefer the taste of her cock, Mistress,)] you truthfully reply.
+		[pc.speech(我更喜欢她鸡巴的味道，主人，)]你实话实说。
 	</p>
 	<p>
-		[rose.speech(Go on, slut. Grow a nice, big cock for this bitch to choke on,)] Rose orders Lilaya.
+		[rose.speech(来吧，荡妇。长根又粗又长的鸡巴塞进这个婊子的嘴里吧，)]萝丝命令莉莱雅。
 	</p>
 	<p>
-		[lilaya.speech(Yes, Mistress!)] your [lilaya.relation(pc)] replies, and before your eyes, a thick, demonic cock quickly grows out above Lilaya's pussy. With a horny squeal,
+		[lilaya.speech(好的，主人！)]你的[lilaya.relation(pc)]答道，你就眼睁睁地看着莉莱雅的小穴上迅速长出一根粗大恶魔阴茎。随着一声淫荡的浪叫，
 		#IF(!lilaya.isPregnant())
-			 the [lilaya.race] then transforms away her pussy, leaving you with no other option but to orally service her newly-grown dick. As a pair of large, full balls drop down beneath her erect shaft,
+			这[lilaya.race]转化完小穴，你别无选择，只能给她新长的屌口交。一对硕大饱满的睾丸挂在她勃起的阴茎下，
 		#ENDIF
-		 Lilaya impatiently grabs hold of your head and guides your mouth up to the twitching head of her throbbing cock. As you part your [pc.lips+], your [lilaya.relation(pc)] pulls your head down, forcing her cock into your mouth as she moans, [lilaya.speech(~Ooh!~ Yes! Take it deep!)]
+		莉莱雅不耐烦地抓住你的头，把你的嘴摁向她抽动的龟头。你刚分开[pc.lips+]，你的[lilaya.relation(pc)]就扯着你的头，把阴茎强行塞入你嘴中，一边发出呻吟：[lilaya.speech(~哦！~好！吃得深一点！)]
 	</p>
 	<p>
-		[rose.speech(That's it, bitch, choke on that slut's fat cock,)] Rose laughs in a sadistic, mocking tone.
+		[rose.speech(就是这样，婊子，吸那个荡妇的大鸡巴，)]萝丝的笑声带有那种虐待狂独有的、戏弄的语气。
 		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 Roughly yanking her fingers out of your cunt, she quickly brings the head of her purple strap-on to your [pc.labia+], and before you can react, she slams forwards, ramming the toy deep into your [pc.cunt+]. As you let out another muffled cry around Lilaya's cock, Rose grabs your [pc.hips+] and sneers, [rose.speech(Take it like the bitch you are!)]
+			她粗暴地将手指从你的小穴中拽出，并迅速将紫色背带式假阴茎的龟头对准你[pc.labia+]，在你反应过来之前，她猛地向前一顶，将玩具深深地插入你的[pc.cunt+]。当你的淫叫声从含着莉莱雅肉棒的口中传出时，萝丝抓住你[pc.hips+]并发出一声冷笑，[rose.speech(你不是婊子吗，那就给我接好了！)]
 		#ELSEIF(game.isAnalContentEnabled() && pc.isAbleToAccessCoverableArea(CA_ANUS, true))
-			 Roughly spanking your exposed ass several times, she then quickly brings the head of her purple strap-on to your [pc.asshole+], and before you can react, she slams forwards, ramming the toy deep into your [pc.ass+]. As you let out another muffled cry around Lilaya's cock, Rose grabs your [pc.hips+] and sneers, [rose.speech(Take it like the bitch you are!)]
+			她粗暴地在你暴露的屁股上抽了几下，然后迅速将紫色背带式假阴茎的龟头对准你[pc.asshole+]，在你反应过来之前，她猛地向前一顶，将玩具深深地插入你[pc.ass+]。当你的淫叫声从含着莉莱雅肉棒的口中传出时，萝丝抓住你[pc.hips+]并发出一声冷笑，[rose.speech(你不是婊子吗，那就给我接好了！)]
 		#ELSE
-			 Roughly spanking your ass several times, she then slaps the head of her purple strap-on against your [pc.ass+]. As you let out another muffled cry around Lilaya's cock, Rose grabs your [pc.hips+] and sneers, [rose.speech(That's it, bitch! You're mine now!)]
+			她粗暴地在你暴露的屁股上抽了几下，然后迅速将紫色背带式假阴茎的龟头对准你[pc.ass+]，当你的淫叫声从含着莉莱雅肉棒的口中传出时，萝丝抓住你[pc.hips+]并发出一声冷笑，[rose.speech(就这样，婊子，现在你是我的了！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_LILAYA_AND_ROSE_AS_DOMS"><![CDATA[
 	<p>
-		Having had her fun, Rose steps back from the bed, and with a big grin on her face, she teases, [rose.speech(Well, I think you've been adequately punished now.)]
+		萝丝玩够了，从床上起来，一脸心满意足地玩味道，[rose.speech(很好，我认为你已经得到了足够的惩罚了。)]
 	</p>
 	<p>
-		[pc.speech(Yes, Mistress... Thank you, Mistress...)] You pant, withdrawing from Lilaya's crotch as you catch your breath. You hear Rose unfastening her strap-on, and as she moves to retrieve her thong and get her clothes back in order, she commands, [rose.speech(Now, back to your room, bitch. I need to show this slut some love, and we don't want you present for it. Oh, and remember, the next time you see me, you're to treat me as a maid once more, so none of this 'Mistress' business. Understood?)]
+		[pc.speech(好的，主人……谢谢，主人……)]你喘着气，从莉莱雅胯下离开。你听到萝丝解开了她的假阳具。她朝你走来，拿回自己的丁字裤，整理好衣服。她命令道，[rose.speech(现在，回你的房间，婊子。我要接着调教这个荡妇，但我们不希望你在场。哦，还有，下次你见到我，你需要再次把我当成女仆，而不是‘主人’。明白吗？)]
 	</p>
 	<p>
-		[pc.speech(Yes,)] you reply, before quickly gathering your things and hurrying to the door as you prepare to leave...
+		[pc.speech(是，)]你回应道，迅速收拾好东西，匆匆走向门口，准备离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_LILAYA_AND_ROSE_AS_DOMS_LEAVE"><![CDATA[
 	<p>
-		Glancing back one last time, you see Rose stepping over to Lilaya and pulling her into a loving, tender kiss. Not wanting to get into trouble, you quickly turn away and rush off down the corridor, not daring to stop until you're back safe and sound in your own room...
+		你回眸一瞥，看到萝丝走向莉莱雅，将她拉入怀抱并给她了一个充满爱意和温柔的吻。为避免惹上这些是非，你连忙转身匆匆离开走廊，心里没底地一直走，直到回到自己安全的小房间……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Content below not used for now -->
 	
 	<htmlContent tag="DOMINATE"><![CDATA[
 	<p>
-		You explain that you're just horny. Rose smirks and suggests to Lilaya that they both take a break from work and help you with your problem.
+		你解释说你只是控制不住淫荡的欲望。萝丝冷笑一声，建议莉莱雅和她一起放下手头的工作，矫正一下你的问题。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILAYA_AS_SUB_START"><![CDATA[
 	<p>
-		Rose pushes Lilaya onto her knees before you, and pushes your face into her groin. She equips strap-on and kneels behind you.
+		萝丝把莉莱雅推到你面前跪下，把你的脸按进她的腹股沟。然后在穿上穿戴式的玩具之后跪在你的身后。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOMINATE_LEAVE"><![CDATA[
 	<p>
-		You say that you're not interested in that at the moment and return to your room.
+		你说你现在对这个不感兴趣，然后回到房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_ROSE_AND_LILAYA_AS_SUBS"><![CDATA[
 	<p>
-		Rose orders you to return to your room. Tells Lilaya to clean up and return to lab.
+		萝丝命令你回房间，她叫莉莱雅收拾一下后返回实验室。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_ROSE_AND_LILAYA_AS_SUBS_LEAVE"><![CDATA[
 	<p>
-		You say that you're not interested in that at the moment and return to your room.
+		你说你现在对这个不感兴趣，然后回到房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

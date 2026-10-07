@@ -109,7 +109,7 @@ public class AlleywayProstituteDialogue {
 				&& Main.game.getCurrentWeather()==Weather.MAGIC_STORM;
 	}
 	
-	public static final DialogueNode ALLEY_PROSTITUTE = new DialogueNode("Prostitute", "", true) {
+	public static final DialogueNode ALLEY_PROSTITUTE = new DialogueNode("妓女", "", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			inApartment = false;
@@ -131,7 +131,7 @@ public class AlleywayProstituteDialogue {
 			int threesomeCost = isStorm()?0:prostitutePrice(true);
 			
 			if (index == 1) {
-				return new Response("Leave", "You're not at all interested in having sex with a prostitute. Walk around [npc.herHim] and continue on your way.", Main.game.getDefaultDialogue(false)) {
+				return new Response("离开", "你对与妓女做爱丝毫不感兴趣。绕过[npc.herHim]继续前行。", Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						if(getProstitute().isVisiblyPregnant()){
@@ -143,16 +143,16 @@ public class AlleywayProstituteDialogue {
 				
 			} else if (index == 2 && !hadSex) {
 				if(Main.game.getPlayer().getMoney()<cost) {
-					return new Response("Dominant ("+UtilText.formatAsMoney(cost, "span")+")",
-							UtilText.parse(getProstitute(), "You don't have "+cost+" flames, so you can't afford to have sex with [npc.name]."),
+					return new Response("支配("+UtilText.formatAsMoney(cost, "span")+")",
+							UtilText.parse(getProstitute(), "你没有"+cost+"火币，付不起[npc.name]的嫖资。"),
 							null);
 					
 				} else {
-					return new ResponseSex("Dominant ("+UtilText.formatAsMoney(cost, "span")+")",
+					return new ResponseSex("主导("+UtilText.formatAsMoney(cost, "span")+")",
 							UtilText.parse(getProstitute(),
 									cost==0
-										?"[npc.Name] is so turned on that [npc.she] isn't going to charge you anything for having sex with [npc.herHim]!"
-										:("Pay [npc.name] "+cost+" flames to have dominant sex with [npc.herHim].")),
+										?"[npc.Name]欲火中烧，你不需要付钱就能跟[npc.she]做爱！"
+										:("付[npc.name]"+cost+"火币，来一场支配型性爱。")),
 							true, true,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -185,16 +185,16 @@ public class AlleywayProstituteDialogue {
 				
 			} else if (index == 3 && !hadSex) {
 				if(Main.game.getPlayer().getMoney()<cost) {
-					return new Response("Submissive ("+UtilText.formatAsMoney(cost, "span")+")",
-							UtilText.parse(getProstitute(), "You don't have "+cost+" flames, so you can't afford to have sex with [npc.name]."),
+					return new Response("顺从("+UtilText.formatAsMoney(cost, "span")+")",
+							UtilText.parse(getProstitute(), "你没有"+cost+"火币，付不起[npc.name]的嫖资。"),
 							null);
 					
 				} else {
-					return new ResponseSex("Submissive ("+UtilText.formatAsMoney(cost, "span")+")",
+					return new ResponseSex("顺从("+UtilText.formatAsMoney(cost, "span")+")",
 							UtilText.parse(getProstitute(),
 									cost==0
-										?"[npc.Name] is so turned on that [npc.she] isn't going to charge you anything for having sex with [npc.herHim]!"
-										:("Pay [npc.name] "+cost+" flames to have submissive sex with [npc.herHim].")),
+										?"[npc.Name]欲火中烧，你不需要付钱就能跟[npc.she]做爱！"
+										:("付[npc.name]"+cost+"火币，来一场服从型性爱。")),
 							true, true,
 							new SMGeneric(
 									Util.newArrayListOfValues(getProstitute()),
@@ -227,8 +227,8 @@ public class AlleywayProstituteDialogue {
 				
 			} else if(index == 4) {
 				if(!getProstitute().hasFlag(NPCFlagValue.prostituteQuestioned)) {
-					return new Response("Question",
-							UtilText.parse(getProstitute(), "Ask [npc.name] why [npc.sheIs] working in the alleyways. After all, it would be far safer to work out in the main streets of Dominion..."),
+					return new Response("疑问",
+							UtilText.parse(getProstitute(), "问问[npc.name]为什么在小巷工作。毕竟在御城区的街上工作会安全得多……"),
 							ALLEY_PROSTITUTE_QUESTION) {
 						@Override
 						public void effects() {
@@ -241,8 +241,8 @@ public class AlleywayProstituteDialogue {
 					
 				} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.prostitutionLicenseObtained)) {
 					if(RedLightDistrict.isSpaceForMoreProstitutes()) {
-						return new Response("Angel's Kiss",
-								UtilText.parse(getProstitute(), "Tell [npc.name] that [npc.she] can get back on the right side of the law if [npc.she] agrees to come and work at Angel's Kiss."),
+						return new Response("天使之吻",
+								UtilText.parse(getProstitute(), "告诉[npc.name]如果能到天使之吻工作，就能受到法律的保护。"),
 								ALLEY_PROSTITUTE_ANGELS_KISS) {
 							@Override
 							public void effects() {
@@ -250,14 +250,14 @@ public class AlleywayProstituteDialogue {
 									getProstitute().setCharacterReactedToPregnancy(Main.game.getPlayer(), true);
 								}
 								Main.game.getPlayer().incrementKarma(25);
-								getProstitute().setDescription(UtilText.parse(getProstitute(), "You first found [npc.name] in the alleyways of Dominion, where [npc.she] was illegally selling [npc.her] body."
-										+ " You offered [npc.herHim] the chance to move and work out of Angel's Kiss; an offer that [npc.she] happily accepted."));
+								getProstitute().setDescription(UtilText.parse(getProstitute(), "你最初在御城区的小巷中遇见了非法卖淫的[npc.name]。"
+										+ "你引荐[npc.herHim]去天使之吻工作，[npc.she]欣然接受。"));
 								Main.game.getTextEndStringBuilder().append(getProstitute().incrementAffection(Main.game.getPlayer(), 50));
 								getProstitute().setRandomUnoccupiedLocation(WorldType.ANGELS_KISS_GROUND_FLOOR, PlaceType.ANGELS_KISS_BEDROOM, true);
 							}
 						};
 					} else {
-						return new Response("Angel's Kiss", "There's no room available at Angel's Kiss for another prostitute...", null);
+						return new Response("天使之吻", "天使之吻没有空房间给其他妓女了……", null);
 					}
 				}
 			}
@@ -265,21 +265,21 @@ public class AlleywayProstituteDialogue {
 			if(Main.game.getPlayer().hasCompanions()) {
 				if(index == 6 && !hadSex) {
 					if(!Main.game.getPlayer().getMainCompanion().isAttractedTo(getProstitute())) {
-						return new Response("Threesome ("+UtilText.formatAsMoney(threesomeCost, "span")+")",
-								UtilText.parse(getProstitute(), "Your [com.companion] isn't attracted to [npc.name], and so would be unwilling to have sex with [npc.herHim]."),
+						return new Response("三人行("+UtilText.formatAsMoney(threesomeCost, "span")+")",
+								UtilText.parse(getProstitute(), "你的[com.companion]并没有被[npc.name]吸引，所以不愿意跟[npc.herHim]做爱。"),
 								null);
 						
 					} else if(Main.game.getPlayer().getMoney()<threesomeCost) {
-						return new Response("Threesome ("+UtilText.formatAsMoney(threesomeCost, "span")+")",
-								UtilText.parse(getProstitute(), "You don't have "+threesomeCost+" flames, so you can't afford to have a threesome with [com.name] and [npc.name]."),
+						return new Response("三人行("+UtilText.formatAsMoney(threesomeCost, "span")+")",
+								UtilText.parse(getProstitute(), "你没有"+threesomeCost+"火币，付不起跟[com.name]和[npc.name]三人行的嫖资。"),
 								null);
 						
 					} else {
-						return new ResponseSex("Threesome ("+UtilText.formatAsMoney(threesomeCost, "span")+")",
+						return new ResponseSex("三人行("+UtilText.formatAsMoney(threesomeCost, "span")+")",
 								UtilText.parse(getProstitute(),
 										threesomeCost==0
-											?"[npc.Name] is so turned on that [npc.she] isn't going to charge you anything for having sex with [npc.herHim]!"
-											:("Pay [npc.name] "+threesomeCost+" flames to have a threesome with you and [com.name].")),
+											?"[npc.Name]欲火中烧，你不需要付钱就能跟[npc.she]做爱！"
+											:("付[npc.name]"+threesomeCost+"火币来和你以及[com.name]进行三人行。")),
 								true, true,
 								new SMGeneric(
 										Util.newArrayListOfValues(
@@ -314,21 +314,21 @@ public class AlleywayProstituteDialogue {
 					
 				} else if (index == 7 && !hadSex) {
 					if(!Main.game.getPlayer().getMainCompanion().isAttractedTo(getProstitute())) {
-						return new Response("Dominant ([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
-								UtilText.parse(getProstitute(), "Your [com.companion] isn't attracted to [npc.name], and so would be unwilling to have sex with [npc.herHim]."),
+						return new Response("主导([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
+								UtilText.parse(getProstitute(), "你的[com.companion]并没有被[npc.name]吸引，所以不愿意跟[npc.herHim]做爱。"),
 								null);
 						
 					} else if(Main.game.getPlayer().getMoney()<cost) {
-						return new Response("Dominant ([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
-								UtilText.parse(getProstitute(), "You don't have "+cost+" flames, so you can't afford to pay for [com.name] to dominantly fuck [npc.name]."),
+						return new Response("主导([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
+								UtilText.parse(getProstitute(), "你没有"+cost+"火币，付不起让[com.name]跟[npc.name]来一场主导型性爱的嫖资。"),
 								null);
 						
 					} else {
-						return new ResponseSex("Dominant ([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
+						return new ResponseSex("主导([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
 								UtilText.parse(getProstitute(),
 										threesomeCost==0
-											?"[npc.Name] is so turned on that [npc.she] isn't going to charge you anything for letting [com.name] dominantly fuck [npc.herHim]!"
-											:("Pay [npc.name] "+cost+" flames to let [com.name] dominantly fuck [npc.herHim].")),
+											?"[npc.Name]欲火中烧，你不需要付钱就可以让[com.name]跟[npc.herHim]来一场主导型性爱！"
+											:("付给[npc.name]"+cost+"火币，让[com.name]跟[npc.herHim]来一场主导型性爱。")),
 								true, true,
 								new SMGeneric(
 										Util.newArrayListOfValues(Main.game.getPlayer().getMainCompanion()),
@@ -366,21 +366,21 @@ public class AlleywayProstituteDialogue {
 					
 				} else if (index == 8 && !hadSex) {
 					if(!Main.game.getPlayer().getMainCompanion().isAttractedTo(getProstitute())) {
-						return new Response("Submissive ([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
-								"Your [com.companion] isn't attracted to [npc.name], and so [npc.name] would be unwilling to make [com.herHim] have sex with [npc.herHim].",
+						return new Response("顺从([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
+								"你的[com.companion]并没有被[npc.name]吸引，所以不愿意跟[npc.herHim]做爱。",
 								null);
 						
 					} if(Main.game.getPlayer().getMoney()<cost) {
-						return new Response("Submissive ([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
-								"You don't have "+cost+" flames, so you can't afford to pay for [npc.name] to dominantly fuck [com.name].",
+						return new Response("顺从([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
+								"你没有"+cost+"火币，付不起让[npc.name]跟[npc.name]来一场主导型性爱的嫖资。",
 								null);
 						
 					} else {
-						return new ResponseSex("Submissive ([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
+						return new ResponseSex("顺从([com.Name]) ("+UtilText.formatAsMoney(cost, "span")+")",
 								UtilText.parse(getProstitute(),
 										threesomeCost==0
-											?"[npc.Name] is so turned on that [npc.she] isn't going to charge you anything for dominantly fucking [com.name]!"
-											:("Pay [npc.name] "+cost+" flames to dominantly fuck [com.name].")),
+											?"[npc.Name]欲火中烧，你不需要付钱就可以让她主导跟[com.name]的性爱！"
+											:("付给[npc.name]"+cost+"火币，让她主导跟[com.name]的性爱。")),
 								true, true,
 								new SMGeneric(
 										Util.newArrayListOfValues(getProstitute()),
@@ -415,9 +415,9 @@ public class AlleywayProstituteDialogue {
 		
 			if(getProstitute().hasFlag(NPCFlagValue.prostituteQuestioned)) {
 				if(index == 5) {
-					return new Response("Attack",
-							UtilText.parse(getProstitute(), "If you really wanted to, there's nothing stopping you from attacking [npc.name]. After all, as [npc.sheHas] run afoul of the law [npc.she] can be considered to be fair game!"
-									+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+					return new Response("攻击",
+							UtilText.parse(getProstitute(), "如果你真的想攻击[npc.name]，也无可厚非。毕竟[npc.sheHas]也违反了法律。这可以被视为“合法”的。"
+									+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 							PROSTITUTE_FIGHT) {
 						@Override
 						public boolean isCombatHighlight() {
@@ -433,9 +433,9 @@ public class AlleywayProstituteDialogue {
 					
 				} else if (index == 9) {
 					return new Response(
-							"Remove (threaten)",
-							UtilText.parse(getProstitute(), "Tell [npc.name] that unless [npc.she] immediately leaves this area, you're going to tell the Enforcers where [npc.she] is."
-									+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+							"移除(威胁)",
+							UtilText.parse(getProstitute(), "告诉[npc.name]马上离开这片区域，否则你会立刻去告诉执法者[npc.she]的位置。"
+									+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 							PROSTITUTE_REMOVAL_THREATENED) {
 						@Override
 						public Colour getHighlightColour() {
@@ -446,14 +446,14 @@ public class AlleywayProstituteDialogue {
 				} else if (index == 10) {
 					int fineAmount = getModifiedFineAmount(getProstitute());
 					if(Main.game.getPlayer().getMoney()<fineAmount) {
-						return new Response("Remove ("+UtilText.formatAsMoney(fineAmount, "span")+")",
-								UtilText.parse(getProstitute(), "You don't have "+Util.intToString(fineAmount)+" flames, so you can't afford to pay [npc.name] to leave this area."),
+						return new Response("移除("+UtilText.formatAsMoney(fineAmount, "span")+")",
+								UtilText.parse(getProstitute(), "你没有"+Util.intToString(fineAmount)+"火币，因此你不能付钱让[npc.name]离开这片区域。"),
 								null);
 					} else {
 						return new Response(
-								"Remove ("+UtilText.formatAsMoney(fineAmount, "span")+")",
-								UtilText.parse(getProstitute(), "Give [npc.name] enough money to pay off the Enforcers who are after [npc.herHim], which would allow [npc.herHim] to stop having to work in these dangerous alleyways."
-										+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]"),
+								"移除("+UtilText.formatAsMoney(fineAmount, "span")+")",
+								UtilText.parse(getProstitute(), "给[npc.name]足够多的钱买通搜捕的执法者，这样[npc.herHim]就不用再在危险的巷子里工作了。"
+										+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]"),
 								PROSTITUTE_REMOVAL_PAID) {
 							@Override
 							public Colour getHighlightColour() {
@@ -503,7 +503,7 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Knowing that you can now find [npc.name] at Angel's Kiss, you set off on your way once again...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "得知你现在可以在天使之吻找到[npc.name]，你再次踏上了旅途……", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
@@ -527,7 +527,7 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Now that you've cleaned up this area of the city, you can continue on your way...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "既然你已经清理了城市的这片区域，你就可以继续你的旅程了……", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
@@ -564,7 +564,7 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Feeling happy to have been able to help out one of Dominion's troubled citizens, you continue on your way...", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "你对能帮到御城区陷入困境的市民感到高兴，继续出发……", Main.game.getDefaultDialogue(false));
 			}
 			return null;
 		}
@@ -586,16 +586,16 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight", "Teach this insolent whore a lesson!", getProstitute());
+				return new ResponseCombat("战斗", "给这个不知天高地厚的婊子上一课！", getProstitute());
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getProstitute(), "You have defeated [npc.name]!");
+			return UtilText.parse(getProstitute(), "你打败了[npc.name]！");
 		}
 		@Override
 		public String getContent() {
@@ -604,9 +604,9 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave",
-						"Leave [npc.name] and carry on your way."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]",
+				return new Response("离开",
+						"离开[npc.name]，然后继续你的旅程。"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]",
 						Main.game.getDefaultDialogue(false)) {
 					@Override
 					public Colour getHighlightColour() {
@@ -619,8 +619,8 @@ public class AlleywayProstituteDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new ResponseSex("Have some fun",
-						UtilText.parse(getProstitute(), "It's clear that [npc.name] wants you to fuck [npc.herHim], so maybe you should give [npc.herHim] what [npc.she] wants..."),
+				return new ResponseSex("找些乐子",
+						UtilText.parse(getProstitute(), "很明显，[npc.name]希望你能干[npc.herHim]，或许你应该让她如愿[npc.herHim]……"),
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -631,8 +631,8 @@ public class AlleywayProstituteDialogue {
 						UtilText.parseFromXMLFile("encounters/dominion/prostitute", "AFTER_COMBAT_VICTORY_SEX", getProstitute()));
 				
 			} else if (index == 3) {
-				return new ResponseSex("Gentle fun",
-						UtilText.parse(getProstitute(), "It's clear that [npc.name] wants you to fuck [npc.herHim], so maybe you should give [npc.herHim] what [npc.she] wants..."),
+				return new ResponseSex("温柔玩弄",
+						UtilText.parse(getProstitute(), "很明显，[npc.name]希望你能干[npc.herHim]，或许你应该让她如愿[npc.herHim]如愿……"),
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -643,8 +643,8 @@ public class AlleywayProstituteDialogue {
 						UtilText.parseFromXMLFile("encounters/dominion/prostitute", "AFTER_COMBAT_VICTORY_SEX_GENTLE", getProstitute()));
 				
 			} else if (index == 4) {
-				return new ResponseSex("Rough fun",
-						UtilText.parse(getProstitute(), "It's clear that [npc.name] wants you to fuck [npc.herHim], so maybe you should give [npc.herHim] what [npc.she] wants..."),
+				return new ResponseSex("粗暴玩弄",
+						UtilText.parse(getProstitute(), "很明显，[npc.name]希望你能干[npc.herHim]，或许你应该让她如愿[npc.herHim]如愿……"),
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -655,8 +655,8 @@ public class AlleywayProstituteDialogue {
 						UtilText.parseFromXMLFile("encounters/dominion/prostitute", "AFTER_COMBAT_VICTORY_SEX_ROUGH", getProstitute()));
 				
 			} else if (index == 5) {
-				return new ResponseSex("Submit",
-						UtilText.parse(getProstitute(), "You feel bad for having beaten [npc.name]. Perhaps submitting to [npc.herHim] and letting [npc.herHim] dominantly fuck you would make [npc.herHim] feel better?"),
+				return new ResponseSex("顺从",
+						UtilText.parse(getProstitute(), "你忽然觉得击败了[npc.name]有些愧疚。或许向[npc.herHim]屈服，让[npc.herHim]主导跟你的性爱能让[npc.herHim]舒服一些？"),
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true, false,
 						new SMGeneric(
@@ -668,8 +668,8 @@ public class AlleywayProstituteDialogue {
 						UtilText.parseFromXMLFile("encounters/dominion/prostitute", "AFTER_COMBAT_VICTORY_SUBMIT", getProstitute()));
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory",
-						UtilText.parse(getProstitute(), "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...")){
+				return new ResponseEffectsOnly("物品栏",
+						UtilText.parse(getProstitute(), "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具出手…… ")){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(getProstitute(), InventoryInteraction.FULL_MANAGEMENT);
@@ -677,8 +677,8 @@ public class AlleywayProstituteDialogue {
 				};
 				
 			} else if (index == 8 && getProstitute().isAbleToSelfTransform()) {
-				return new Response("Transform [npc.herHim]",
-						"Take a very detailed look at what [npc.name] can transform [npc.herself] into...",
+				return new Response("转化[npc.herHim]",
+						"仔细观察[npc.name]会将自己转化成什么样……",
 						BodyChanging.BODY_CHANGING_CORE){
 					@Override
 					public void effects() {
@@ -688,22 +688,22 @@ public class AlleywayProstituteDialogue {
 				};
 				
 			} else if (index == 9 && getProstitute().isAbleToSelfTransform()) {
-				return new Response("Quick transformations",
-						"As [npc.she] is able to transform [npc.herself], you have a few quick ideas in mind..."
-								+ "(You'll return to these options once finished transforming [npc.herHim].)",
+				return new Response("快速转化",
+						"[npc.she]能够转化自己，你脑海中闪过一些点子……"
+								+ "(你完成[npc.herHim]的转化后将返回选项界面。)",
 						QuickTransformations.initQuickTransformations("misc/quickTransformations", getProstitute(), AFTER_COMBAT_VICTORY));
 			
 			} else if (index == 11 && Main.game.getPlayer().hasCompanions()) {
 				GameCharacter companion = Main.game.getPlayer().getMainCompanion();
 				
 				if(!companion.isAttractedTo(getProstitute())) {
-					return new Response(UtilText.parse(companion, "Threesome"),
-							UtilText.parse(getProstitute(), "[com.Name] isn't attracted to [npc.name], so wouldn't be willing to have sex with [npc.herHim]!"),
+					return new Response(UtilText.parse(companion, "三人行"),
+							UtilText.parse(getProstitute(), "[com.Name]并没有被[npc.name]吸引，所以不愿意跟[npc.herHim]做爱。"),
 							null);
 					
 				} else {
-					return new ResponseSex(UtilText.parse(companion, "Threesome"),
-							UtilText.parse(getProstitute(), "Have dominant sex with [npc.name], and get [com.name] to join in with the fun."),
+					return new ResponseSex(UtilText.parse(companion, "三人行"),
+							UtilText.parse(getProstitute(), "跟[npc.name]来一场支配型性爱，并且让[com.name]也一起来玩。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(Main.game.getPlayer(), companion),
@@ -718,13 +718,13 @@ public class AlleywayProstituteDialogue {
 				GameCharacter companion = Main.game.getPlayer().getMainCompanion();
 
 				if(!companion.isAttractedTo(getProstitute())) {
-					return new Response("Give to [com.name]",
-							UtilText.parse(getProstitute(), "[com.Name] isn't attracted to [npc.name], so wouldn't be willing to have sex with [npc.herHim]!"),
+					return new Response("交给[com.name]",
+							UtilText.parse(getProstitute(), "[com.Name]并没有被[npc.name]吸引，所以不愿意跟[npc.herHim]做爱。"),
 							null);
 					
 				} else {
-					return new ResponseSex("Give to [com.name]",
-							UtilText.parse(getProstitute(), "Tell [com.name] that [com.she] can have some fun with [npc.name] while you watch."),
+					return new ResponseSex("交给[com.name]",
+							UtilText.parse(getProstitute(), "告诉[com.name][com.she]可以跟[npc.name]找找乐子，你在一旁看着。"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(companion),
@@ -738,18 +738,18 @@ public class AlleywayProstituteDialogue {
 				GameCharacter companion = Main.game.getPlayer().getMainCompanion();
 
 				if(!getProstitute().isAttractedTo(companion)) {
-					return new Response("Offer [com.name]",
-							UtilText.parse(getProstitute(), "[com.Name] isn't attracted to [npc.name], so wouldn't be willing to have sex with [npc.herHim]!"),
+					return new Response("献上[com.name]",
+							UtilText.parse(getProstitute(), "[com.Name]并没有被[npc.name]吸引，所以不愿意跟[npc.herHim]做爱。"),
 							null);
 					
 				} else if(!companion.isAttractedTo(getProstitute()) && companion.isAbleToRefuseSexAsCompanion()) {
-					return new Response("Offer [com.name]",
-							UtilText.parse(getProstitute(), "You can tell that [com.name] isn't at all interested in having sex with [npc.name], and you can't force [com.herHim] to do so..."),
+					return new Response("献上[com.name]",
+							UtilText.parse(getProstitute(), "你看得出来[com.name]完全没兴趣和[npc.name]做爱，而你也无法强迫[com.herHim]这么做……"),
 							null);
 					
 				} else {
-					return new ResponseSex("Offer [com.name]",
-							UtilText.parse(getProstitute(), "Tell [npc.name] that [npc.she] can use [com.name]."),
+					return new ResponseSex("献上[com.name]",
+							UtilText.parse(getProstitute(), "告诉[npc.name][npc.she]可以使用[com.name]。"),
 							true, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getProstitute()),
@@ -771,10 +771,10 @@ public class AlleywayProstituteDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("Defeat", "", true) {
+	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("落败", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getProstitute(), "You have been defeated by [npc.name]!");
+			return UtilText.parse(getProstitute(), "你被[npc.name]打败了！");
 		}
 		@Override
 		public String getContent() {
@@ -784,8 +784,8 @@ public class AlleywayProstituteDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getProstitute().isAttractedTo(Main.game.getPlayer()) && getProstitute().isWillingToRape()) {
 				if (index == 1) {
-					return new ResponseSex("Sex",
-							"[npc.Name] forces [npc.herself] on you...",
+					return new ResponseSex("做爱",
+							"[npc.Name]强行压住了你……",
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getProstitute()),
@@ -796,8 +796,8 @@ public class AlleywayProstituteDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/prostitute", "AFTER_COMBAT_DEFEAT_SEX", getProstitute()));
 					
 				} else if (index == 2) {
-					return new ResponseSex("Eager Sex",
-							UtilText.parse(getProstitute(), "[npc.Name] forces [npc.herself] on you..."),
+					return new ResponseSex("做爱(渴求)",
+							UtilText.parse(getProstitute(), "[npc.Name]强行压住了你……"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getProstitute()),
@@ -809,8 +809,8 @@ public class AlleywayProstituteDialogue {
 							UtilText.parseFromXMLFile("encounters/dominion/prostitute", "AFTER_COMBAT_DEFEAT_SEX_EAGER", getProstitute()));
 					
 				} else if (index == 3 && Main.game.isNonConEnabled()) {
-					return new ResponseSex("Resist Sex",
-							UtilText.parse(getProstitute(), "[npc.Name] forces [npc.herself] on you..."),
+					return new ResponseSex("抵抗做爱",
+							UtilText.parse(getProstitute(), "[npc.Name]强行压住了你……"),
 							false, false,
 							new SMGeneric(
 									Util.newArrayListOfValues(getProstitute()),
@@ -824,9 +824,9 @@ public class AlleywayProstituteDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new Response("Continue",
-							"Carry on your way."
-									+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]",
+					return new Response("继续",
+							"继续你的旅程。"
+									+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]",
 							AFTER_COMBAT_DEFEAT){
 						@Override
 						public Colour getHighlightColour() {
@@ -847,10 +847,10 @@ public class AlleywayProstituteDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_PAID = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX_PAID = new DialogueNode("返回", "", true) {
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave [npc.name] to recover.";
+			return "你已经爽过了，离开这里让[npc.name]恢复一下吧。";
 		}
 		@Override
 		public String getContent() {
@@ -882,8 +882,8 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue",
-						UtilText.parse(getProstitute(), "Leave [npc.name] behind and continue on your way."),
+				return new Response("继续",
+						UtilText.parse(getProstitute(), "把[npc.name]留在身后，继续你的路程。"),
 						Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
@@ -911,10 +911,10 @@ public class AlleywayProstituteDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("返回", "", true) {
 		@Override
 		public String getDescription(){
-			return UtilText.parse(getProstitute(), "Now that you've had your fun, you can step back and leave [npc.name] to recover.");
+			return UtilText.parse(getProstitute(), "你已经爽过了，离开这里让[npc.name]恢复一下吧。");
 		}
 		@Override
 		public String getContent() {
@@ -933,9 +933,9 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave",
-						"Leave [npc.name] and carry on your way."
-								+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]",
+				return new Response("离开",
+						"离开[npc.name]，然后继续你的旅程。"
+								+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]",
 						Main.game.getDefaultDialogue(false)){
 					@Override
 					public Colour getHighlightColour() {
@@ -949,7 +949,7 @@ public class AlleywayProstituteDialogue {
 				};
 				
 			} else if (index == 6) {
-				return new ResponseEffectsOnly("Inventory", "There's nothing stopping you from helping yourself to [npc.namePos] clothing and items..."){
+				return new ResponseEffectsOnly("物品栏", "现在你可以随意拿取[npc.namePos]衣服和道具，谁也拦不了你……"){
 					@Override
 					public void effects() {
 						Main.mainController.openInventory(getProstitute(), InventoryInteraction.FULL_MANAGEMENT);
@@ -962,7 +962,7 @@ public class AlleywayProstituteDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("Collapse", "", true) {
+	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("瘫软", "", true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -971,7 +971,7 @@ public class AlleywayProstituteDialogue {
 		
 		@Override
 		public String getDescription(){
-			return "You're completely worn out from [npc.namePos] dominant treatment, and need a while to recover.";
+			return "你在[npc.namePos]的支配下精疲力竭，需要休息一会儿。";
 		}
 
 		@Override
@@ -986,9 +986,9 @@ public class AlleywayProstituteDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue",
-						"Carry on your way."
-							+ "<br/>[style.italicsBad(This will permanently remove [npc.herHim] from the game!)]",
+				return new Response("继续",
+						"继续你的旅程。"
+							+ "<br/>[style.italicsBad([npc.herHim]将会从游戏中永久删除！)]",
 						Main.game.getDefaultDialogue(false)){
 					@Override
 					public Colour getHighlightColour() {

@@ -1,600 +1,600 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 		#IF(game.isWorkTime())
 			<p>
-				You find yourself standing in front of a rather peculiar shop. Although there's a sign declaring 'Arcane Arts' to be [style.colourGood(open)], the interior is very dimly-lit, and you notice that most of the Arcade's shoppers are giving this particular store a wide berth. Wanting to take a closer look, you walk up to the entrance, and, looking through the glass into the shop's gloomy interior, you see signs of movement behind the counter.
+				你发现自己正站在一家相当奇特的商店前。虽然牌子上写着“奥术艺术”这家店现在[style.colorGood(正在营业)]，但店内光线非常暗淡，你注意到商场里的大多数顾客都对这家店敬而远之。你想仔细看看，于是走到入口处，透过玻璃向店里阴暗的内部望去，你听到柜台后面有动静。
 			</p>
 			<p>
-				A sign hanging in the door's window declares that the [style.colourMinorGood(opening hours are [unit.time(9)]-[unit.time(17)])]. You could step inside and browse the wares on offer if you wanted to.
+				门上的牌子写着[style.colorMinorGood(营业时间为[unit.time(9)]-[unit.time(17)])]。如果你愿意，可以走进去看看。
 			</p>
 		#ELSE
 			<p>
-				A hanging sign fixed to the wall of the shop in front of you declares the name of the premises as 'Arcane Arts'. Just like the rest of the shops in the arcade, this store is currently [style.colourBad(closed)], although it's apparent from even a cursory glance through the windows that the gloomy interior is stocked with weapons and potions.
+				你面前的商店墙上挂着一块招牌，上面写着“奥术艺术”。和拱廊里的其他商店一样，这家商店目前也是[style.colorBad(打烊)]状态，透过橱窗粗略地看一眼就能发现，阴暗的内部摆放着武器和药剂。
 			</p>
 			<p>
-				A sign hanging in the door's window declares that the [style.colourMinorBad(opening hours are [unit.time(9)]-[unit.time(17)])]. You'll have to come back later if you want to browse the wares on offer.
+				挂在门窗上的牌子上写着[style.colorMinorBad(营业时间为[unit.time(9)]-[unit.time(17)])]。如果你想逛逛这里，得在营业时间过来。
 			</p>
 		#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_DOMINATE"><![CDATA[
 	<p>
-		Pushing open the door to Arcane Arts once again, your arrival is announced by the familiar sound of a little bell ringing above you. Unlike the other times you've visited, the greater wolf-girl, Vicky, is nowhere to be seen. As the door swings shut behind you, however, you suddenly spot movement out of the corner of your eye.
+		再次推开奥术艺术的大门，熟悉的小铃铛声在你头顶响起，迎接你的到来。与你前几次来访不同的是，纯狼女维姬不见踪影。然而，当门在你身后关上时，你眼角的余光瞥见了异样。
 	</p>
 	#IF(game.isMuskContentEnabled())
 		#IF(flags.hasFlag(FLAG_innoxia_vicky_claimed))
 			<p>
-				[vicky.speech(Why do you not carry my scent?!)] the wolf-girl angrily growls as she leaps out of the shadows. Locking the door and pinning you up against the wall in one swift motion, she allows a wild, predatory grin to settle on her face as she continues, [vicky.speech(You've removed my musk, haven't you?)]
+				[vicky.speech(你，身上的气味变了，没有我的气味？！)]狼女愤怒地咆哮着，从阴影中一跃而出。她迅速锁上门，把你按在墙上，脸上露出狂野的笑容，压向你，[vicky.speech(你，把我的气味洗掉了，对吧？)]
 			</p>
 			<p>
-				With the dominant, ferocious wolf-girl continuing to hold you in place, you feel like you have no choice but to respond to her question by giving her a nod.
+				在这个霸道、凶猛的狼女继续按住你不放的情况下，你觉得自己别无选择，只能用点头来回答她的问题。
 			</p>
 			<p>
-				[vicky.speech(That's a bad little prey,)] she snaps, before declaring, [vicky.speech(I'll need to mark you as mine again. I'll cum on your face, and then you'll once again carry the scent of my musk.)]
+				[vicky.speech(小猎物，真不听话。)]她嗤之以鼻，和你说，[vicky.speech(我，要再次将你标记为我的人。我会把精液射在你脸上，然后你将再次散发出我的气息。)]
 			</p>
 			<p>
-				Although she's dominantly demanding this of you, the wolf-girl doesn't make a move, and you realise that she's wanting you to once again give your consent. Although she'll likely take it badly, you could always use this opportunity to refuse her. Then again, you could submit and reclaim your place as Vicky's 'good little prey'...
+				虽然她霸道地要求你这样做，但狼女并没有做出任何举动，你意识到她是想让你再次表示同意。虽然她可能会不高兴，但你可以利用这个机会拒绝她。或者，你也可以顺从，重新成为维姬的“小猎物”……
 			</p>
 		#ELSE
 			<p>
-				[vicky.speech(Back to submit to me again, are you?)] the wolf-girl growls as she leaps out of the shadows. Locking the door and pinning you up against the wall in one swift motion, she allows a wild, predatory grin to settle on her face as she continues, [vicky.speech(I've decided to make you mine. You're going to be my good little prey, aren't you?)]
+				[vicky.speech(你，要再次向我屈服了，是吗？)]狼姑娘一边咆哮着，一边从阴影中跃出。她迅速锁上门，把你按在墙上，脸上露出狂野的猎手笑容，扑向你，[vicky.speech(我决定，把你变成我的。你会成为我的小猎物，对吗？)]
 			</p>
 			<p>
-				With the dominant, ferocious wolf-girl continuing to hold you in place, you feel like you have no choice but to respond to her question by giving her a nod.
+				在这个霸道、凶猛的狼女继续按住你不放的情况下，你觉得自己别无选择，只能用点头来回答她的问题。
 			</p>
 			<p>
-				[vicky.speech(That's my good little prey,)] she growls, before declaring, [vicky.speech(I need to mark you as mine. I'll cum on your face, and then you'll carry the scent of my musk.)]
+				[vicky.speech(这才是我的小猎物。)]她咆哮着，然后说，[vicky.speech(我，要标记你，我会把精液射在你脸上，然后你身上就会散发出我的气味。)]
 			</p>
 			<p>
-				Although she's dominantly demanding this of you, the wolf-girl doesn't make a move, and you realise that she's wanting you to consent to her idea. Although she'll likely take it badly, you could always use this opportunity to refuse her. Then again, you could submit and become Vicky's 'good little prey'...
+				虽然她霸道地要求你这样做，但狼女并没有采取行动，你意识到她是在等你同意。虽然她可能会不高兴，但你可以利用这个机会拒绝她。不过，你也可以顺从，成为维姬的“小猎物”……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			[vicky.speech(Back to submit to me again, are you?)] the wolf-girl growls as she leaps out of the shadows. Locking the door and pinning you up against the wall in one swift motion, she allows a wild, predatory grin to settle on her face as she continues, [vicky.speech(I've decided to make you mine. You're going to be my good little prey, aren't you?)]
+			[vicky.speech(你，又要向我屈服了，是吗？)]狼姑娘一边咆哮着，一边从阴影中跃出。她迅速锁上门，把你按在墙上，脸上露出狂野的猎手笑容，压向你，[vicky.speech(我决定，把你变成我的，你会成为我的小猎物，对吗？)]
 		</p>
 		<p>
-			With the dominant, ferocious wolf-girl continuing to hold you in place, you feel like you have no choice but to respond to her question by giving her a nod.
+			在这个霸道、凶猛的女狼人继续按住你不放的情况下，你觉得自己别无选择，只能用点头来回答她的问题。
 		</p>
 		<p>
-			[vicky.speech(That's my good little prey,)] she growls, before declaring, [vicky.speech(I'm going to claim you as mine!)]
+			[vicky.speech(这才是我的小猎物。)]她咆哮着，然后说，[vicky.speech(我要把你据为己有！)]
 		</p>
 		<p>
-			Despite her words, the wolf-girl doesn't make a move, and you realise that she's wanting you to give your consent. Although she'll likely take it badly, you could always use this opportunity to refuse her. Then again, you could submit and become Vicky's 'good little prey'...
+			尽管她这么说，狼女却没有任何动作，你意识到她是在等你同意。虽然她可能会不高兴，但你可以利用这个机会拒绝她。不过，你也可以顺从，成为维姬的“小猎物”……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_vickyIntroduced))
 		<p>
-			Pushing open the door to Arcane Arts once again, your arrival is announced by the familiar sound of a little bell ringing above you. Just like the other times you've visited, only one other person is inside; the greater wolf-girl Vicky, who's standing behind the shop's counter.
+			再次推开奥术艺术的大门，熟悉的小铃铛声在你头顶响起，宣告你的到来。和你前几次来时一样，店里只有一个人，那就是站在柜台后面的纯狼女维姬。
 		</p>
 		#IF(vicky.isVisiblyPregnant())
 			#IF(!vicky.isCharacterReactedToPregnancy(pc))
 				<p>
-					As she flashes you a big, toothy grin, the rubbing motion of Vicky's right hand directs your attention down towards her stomach. Looking down, you see that she's sporting a [style.colourSex(pregnant belly)], but before you can react, the wolf-girl lets out a deep, rumbling growl and declares, [vicky.speech(You're the one who put these pups in me, my little prey. Now come here and have a feel.)]
+					维姬向你高兴地笑，露出她尖锐的牙齿，她右手的揉搓动作把你的注意力引向了她的肚子。低头一看，你会发现她正挺着[style.colorSex(孕肚)]，但还没等你反应过来，狼女就发出了低沉、隆隆的咆哮声，说，[vicky.speech(是你把这些小狼崽放进我体内的， 我的小猎物。现在，过来摸摸他们吧。)]
 				</p>
 			#ELSE
 				<p>
-					As she flashes you a big, toothy grin, the rubbing motion of Vicky's right hand directs your attention down towards her stomach. Looking down, you see that she's still sporting a [style.colourSex(pregnant belly)], but before you can react, the wolf-girl lets out a deep, rumbling growl and declares, [vicky.speech(That's right, my little prey, I'm still carrying our pups around. Now come here and have a feel.)]
+					维姬向你高兴地笑，露出她尖锐的牙齿，她右手的揉搓动作把你的注意力引向了她的肚子。低头一看，你会发现她仍然挺着[style.colorSex(孕肚)]，但还没等你反应过来，狼女就发出了低沉、隆隆的咆哮声，说，[vicky.speech(没错，我的小猎物，我还怀着我们的小狼崽呢。现在，过来摸摸他们吧。)]
 				</p>
 			#ENDIF
 			<p>
-				Doing as you're told, you cross the shop floor to stand before Vicky. Impatiently grabbing hold of your hands, the wolf-girl forces you to rub her rounded tummy, growling as she does so, [vicky.speech(Don't think that this changes our relationship. I'm still the one in charge, and you're nothing more than my submissive little prey. Understand?)]
+				你听话地穿过车间，站在维姬面前。她不耐烦地抓住你的手，强迫你揉她圆滚滚的肚子，一边揉还一边咆哮，[vicky.speech(别以为这会改变我们的关系，我仍然是猎手，你只不过是我顺从的小猎物而已，明白吗？)]
 			</p>
 			<p>
-				Replying in the affirmative, you rub Vicky's tummy for a few more moments, before the wolf-girl orders you to step back.
+				在得到肯定的答复后，你又揉了一会儿维姬的肚子，然后狼女命令你退后。
 			</p>
 		#ENDIF
 		#IF(pc.isVisiblyPregnant() && pc.getPregnantLitter().isFather(vicky))
 			<p>
 				#IF(flags.hasFlag(FLAG_innoxia_vicky_claimed))
 					#IF(!pc.isCharacterReactedToPregnancy(vicky))
-						Flashing a glance down at your pregnant bump, Vicky growls, [vicky.speech(Looks like I got you knocked up... You like that, my little prey? Being dominated and forced to carry my pups?)]
+						维姬低头看了一眼你怀孕的肚子，咆哮道，[vicky.speech(看来我把你肚子搞大了……是吗，我的小猎物？被人支配，被迫怀上孩子，喜欢这种感觉吗？)]
 					#ELSE
-						Flashing a glance down at your pregnant bump, Vicky growls, [vicky.speech(So, you're still pregnant... You like that, my little prey? Being dominated and forced to carry my pups?)]
+						维姬低头看了一眼你怀孕的肚子，咆哮道，[vicky.speech(看来你还怀着我的孩子……是吗，我的小猎物？被人支配，被迫怀上孩子，喜欢这种感觉吗？)]
 					#ENDIF
 				#ELSE
 					#IF(!pc.isCharacterReactedToPregnancy(vicky))
-						Flashing a glance down at your pregnant bump, Vicky growls, [vicky.speech(Looks like I got you knocked up... You like that, bitch? Being dominated and forced to carry my pups?)]
+						维姬低头看了一眼你怀孕的肚子，咆哮道，[vicky.speech(看来我把你肚子搞大了……是吗，小婊子？被人支配，被迫怀上孩子，喜欢这种感觉吗？)]
 					#ELSE
-						Flashing a glance down at your pregnant bump, Vicky growls, [vicky.speech(So, you're still pregnant... You like that, bitch? Being dominated and forced to carry my pups?)]
+						维姬低头看了一眼你怀孕的肚子，咆哮道，[vicky.speech(看来你还怀着我的孩子……是吗，小婊子？被人支配，被迫怀上孩子，喜欢这种感觉吗？)]
 					#ENDIF
 				#ENDIF
 			</p>
 			<p>
-				Feeling slightly intimidated by the menacing, toothy grin that's plastered across the wolf-girl's face, you don't dare to reply in the negative. Telling Vicky that you're happy to have been knocked up by her, you submissively shuffle around on the spot and wonder what to do next.
+				狼姑娘脸上挂着狰狞的露齿笑，让你感到有些害怕，但你不敢做出否定的回答。你告诉维姬，你很高兴能被她搞大肚子，然后顺从地在原地晃来晃去，不知道下一步该做什么。
 			</p>
 		#ENDIF
 		<p>
 			#IF(vicky.isVisiblyPregnant() || (pc.isVisiblyPregnant() && pc.getPregnantLitter().isFather(vicky)))
-				With Vicky's yellow eyes locked onto yours, and her mouth turned up into an unsettling predatory grin, she grunts, [vicky.speech(So, why are you back? You want to take a look at what I've got for sale?)]
+				维姬黄色的眼睛紧紧盯着你，嘴角上扬，露出令人不安的猎手的笑容，她哼了一声，[vicky.speech(你怎么回来了？想看看我在卖什么吗？)]
 			#ELSE
-				As the door swings shut behind you, Vicky's yellow eyes lock onto yours, and her mouth turns up into an unsettling predatory grin. Even though she's only a few [unit.lSizes] away, and you're the only person in the shop, she doesn't utter a single word of greeting, and you find that the shop's already-gloomy atmosphere has quickly become extremely oppressive. As you step forwards to say hello, the wolf-girl suddenly cuts you off,
+				当门在你身后关上时，维姬的黄眼睛紧紧盯着你，嘴角上扬，露出令人不安的猎手的笑容。尽管她离你只有几[unit.lSizes]的距离，而且店里只有你一个人，但她一句问候的话都没有说，你发现店里原本阴郁的气氛很快变得异常压抑。当你上前打招呼时，狼姑娘突然打断了你，
 				#IF(flags.hasFlag(FLAG_innoxia_vicky_claimed))
-					 [vicky.speech(So then, my little prey, are you here to take a look at what I've got for sale? Or for something else?)]
+					[vicky.speech(那么，我的小猎物，你是想来看看我在卖什么？还是为了别的什么？)]
 				#ELSE
-					 [vicky.speech(If you aren't here to waste my time, I keep the good stuff under the counter here. Want to take a look again?)]
+					[vicky.speech(如果你不是来浪费我时间的，那么，我把好东西都放在了柜台下面。想再看看吗？)]
 				#ENDIF
 			#ENDIF
 		</p>
 		<p>
 			#IF(flags.hasFlag(FLAG_innoxia_vicky_claimed))
-				The toothy, menacing grin on Vicky's wolf-like face is extremely worrying, but surely she isn't going to attack 'her little prey'...
+				维姬脸上露出的龇牙咧嘴、气势汹汹的笑容让人非常担心，但她肯定不会攻击她的“小猎物”……
 			#ELSE
-				The toothy, menacing grin on Vicky's wolf-like face is extremely worrying, but surely she isn't going to attack a customer...
+				维姬脸上露出的龇牙咧嘴、气势汹汹的笑容让人非常担心，但她肯定不会攻击她的顾客……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			Pushing open the door, your arrival is announced by the sound of a little bell ringing above you. There's only one other person inside; a greater wolf-girl, who's standing behind the shop's counter.
+			推开门，头顶上响起的小铃铛声宣告了你的到来。店里只有一个人，那就是站在柜台后面的纯狼女。
 		</p>
 		<p>
-			As the door swings shut behind you, the wolf-girl's yellow eyes lock onto yours, and her mouth turns up into an unsettling predatory grin. Even though she's only a few [unit.lSizes] away, and you're the only person in the shop, she doesn't utter a single word of greeting, and you find that the shop's already-gloomy atmosphere has quickly become extremely oppressive. You glance around, seeing that there are only odd trinkets and pieces of 'enchanted' junk littering the messy shelves.
+			当门在你身后关上时，狼姑娘的黄眼睛紧紧盯着你，嘴角上扬，露出令人不安的猎手的笑容。尽管她离你只有几[unit.lSizes]的距离，而且店里只有你一个人，但她一句问候的话都没有，你发现店里原本阴郁的气氛很快变得异常压抑。你环顾四周，只见凌乱的货架上到处都是稀奇古怪的小饰品和“附魔”垃圾。
 		</p>
 		<p>
-			You start to back off towards the door, but as you do, the wolf-girl finally speaks, [vicky.speech(If you aren't here to waste my time, I keep the good stuff under the counter here. I'm Vicky by the way, welcome to my shop...)]
+			你开始向门口退去，但就在你后退的时候，狼女终于开口说话了，[vicky.speech(如果你不是来浪费我时间的，那我告诉你，我把好东西都放在柜台下面。顺便说一下，我叫维姬，欢迎光临我的商店……)]
 		</p>
 		<p>
-			You look across to the wolf-girl to see that she's beckoning you over to her. The toothy grin on her wolf-like face is extremely worrying, but surely she isn't going to attack a customer...
+			你看向对面的狼女，发现她正在向你招手。她那张脸上露出的呲牙咧嘴的笑容让人非常担心，但她肯定不会攻击顾客的……吧？
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_OFFER_BODY"><![CDATA[
 	<p>
-		[pc.speech(I was wondering... If you'd like to use me...)] you say, looking sheepishly up at Vicky.
+		你怯怯地看着维姬说道，[pc.speech(我想……如果你想用我……)]
 	</p>
 	<p>
-		[vicky.speech(Sounds good to me, bitch,)] she growls, before leaping over the counter, roughly grabbing you by the [pc.arms], and shoving you towards the store's counter, before turning and locking the front door. [vicky.speech(I love fucking submissive customers like you.)]
+		[vicky.speech(听起来不错，婊子，)]她低声咆哮着，然后跃过柜台，粗暴地抓住你的[pc.arms]，将你推到店铺的柜台上，然后转身锁上前门。[vicky.speech(我就喜欢干你这种顺从的顾客。)]
 	</p>
 	<p>
-		Before you can reply, Vicky bounds over towards you, before grabbing you by the waist and hurling you down onto the counter-top. Stepping forwards, she [npc.verb(position)] herself
+		你还没来得及回复，维姬跃向你，然后抓住你的腰，将你猛力摔到柜台上。她迈步走向你，然后站在你的
 		#IF(pc.hasLegs())
-			 between your legs,
+			腿中间，
 		#ELSE
-			 right up in front of you,
+			面前，
 		#ENDIF
-		 making a point to grind her huge erection up against your crotch as she snarls, [vicky.speech(I hope you like it rough!)]
+		她一边咆哮着，一边用她勃起的巨大阴茎顶着你的胯部，[vicky.speech(我希望你喜欢粗暴的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_RAPE"><![CDATA[
 	<p>
-		Feeling more than a little intimidated by the overbearing wolf-girl's attitude, you try to back away towards the front door, muttering, [pc.speech(E-Erm... M-Maybe I'll come back later...)]
+		你被这个狼女的霸道态度吓到了，试图挪到前门边上，嘟囔道，[pc.speech(呃——我、我也许晚点再来……)]
 	</p>
 	<p>
-		Sensing your weakness, Vicky suddenly leaps over the counter and pounces on you. Grabbing hold of your shoulders, and, with considerable force, slamming you back against the wall, she snarls, [vicky.speech(So you came to waste my time, huh? I don't put up with that shit!)]
+		感受到你的软弱，维姬突然跃过柜台扑向你。她抓住你的肩膀，用相当的力量将你猛力撞向墙壁，咆哮着说，[vicky.speech(哈？所以你就过来浪费我的时间？你放什么狗屁！)]
 	</p>
 	<p>
-		You let out a startled cry as the aggressive wolf-girl suddenly throws you to the floor. Looking up as you struggle to your feet, you see Vicky quickly locking the front door, before she turns around and bounds over to you. [vicky.speech(You're just begging to be fucked!)]
+		当这个霸道的狼女突然把你扔到地上时，你发出了一声惊叫。当你挣扎着抬头看时，你看到维姬迅速锁上了前门，然后转身向你走来。[vicky.speech(你这是在求我操你！)]
 	</p>
 	<p>
-		[pc.speech(W-Wait! No! L-Let me go! I- ~Aaah!~)] Your protests are cut short as Vicky grabs you by the waist and hurls you down onto the counter-top.
+		[pc.speech(等、等等！不要！让我走！我——~啊！~)]维姬一把抓住你的腰，把你扔到台面上，打断你的抗议。
 	</p>
 	<p>
-		Stepping forwards, she [npc.verb(position)] herself right up behind you, making a point to grind her huge erection up against your [pc.ass+] as she snarls, [vicky.speech(Scream and cry as much as you want! I hope you like it rough, because I don't go easy with pathetic bitches like you!)]
+		她向前走了一步，站到你的身后，一边用她巨大的勃起磨蹭着你[pc.ass+]，一边咆哮道：[vicky.speech(尽管哭喊吧！我希望你喜欢粗暴的，因为我对你这种可怜的婊子可不会手软！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARTHURS_PACKAGE"><![CDATA[
 	<p>
-		[pc.speech(Actually, I'm here to collect a package,)] you say, stepping towards the shop's front desk, [pc.speech(it should be addressed to 'Arthur'...)]
+		[pc.speech(实际上，我是来取包裹的，)]你走向店铺的前台，说道，[pc.speech(应该是寄给‘亚瑟’的……)]
 	</p>
 	<p>
-		You allow your voice to trail off as a low, rumbling growl starts to fill the room. Vicky narrows her eyes a little, continuing to emit a menacing snarl as she allows her gaze to wander up and down your body. Feeling more than a little concerned with the wolf-girl's behaviour, you take a step back, preparing yourself in case she decides to attack.
+		当低沉的咆哮声开始充斥整个房间时，你也停下了声音。维姬微微眯起眼睛，继续发出气势汹汹的低吼，她的目光在你的身上上下打量。你担心她攻击你，于是退后一步，做好防卫的准备。
 	</p>
 	<p>
-		[vicky.speech(Don't worry, I don't bite,)] she snaps, thankfully bringing her intimidating growls to an end, before bending down to retrieve something from behind her desk. As she crouches out of sight, you hear a faint snarl as Vicky finishes her sentence, [vicky.speech(much...)]
+		[vicky.speech(别担心，我不咬人，)]她冷冷地说，结束了她那令人生畏的咆哮，然后弯下腰从办公桌后面拿东西。当她蹲在你看不见的地方时，你听到一声微弱的咆哮，维姬说完了她的话，[vicky.speech(大多数情况……)]
 	</p>
 	<p>
-		After just a moment, she suddenly springs to her feet, before placing a small cardboard box down on the desk in front of her. Looking into your eyes once more, she snarls, [vicky.speech(I've been holding on to this for some time, you know. It's quite <i>frustrating</i> when people don't collect their orders immediately.)]
+		过了片刻，她突然站了起来，然后将一个小纸盒放在她面前的桌子上。再次凝视着你的眼睛，她咆哮着说，[vicky.speech(你知道的，我已经保管了这个很长时间了。当人们不立刻来取他们的订单时，真是相当<i>令人沮丧</i>。)]
 	</p>
 	<p>
-		Without warning, Vicky suddenly grabs hold of the desk, and in one swift, alarming manoeuvre, vaults over the counter-top and pounces towards you. Caught with your back against the wall, you suddenly find yourself face-to-face with the aggressive wolf-girl. Showing a complete lack of respect for your personal space, she roughly presses her body right up against yours, staring hungrily into your eyes as she growls, [vicky.speech(It's so frustrating, in fact, that I'm going to need some <i>compensation</i>. It's a one-hundred flame fee for late collections like this. If you can't pay... I'm sure we can work <i>something</i> out...)]
+		毫无预警的，维姬突然抓住桌子，在一个迅速、令人震惊的动作中，跃过柜台朝你扑来。你被压在墙上，与这位霸道的狼女面对面。她毫不尊重你的个人空间，无礼地将她的身体紧贴在你身上，饥渴地盯着你的眼睛，咆哮着说，[vicky.speech(这么令人沮丧的情况，我需要一些<i>赔偿</i>。晚取货的罚款是一百火币。如果你支付不了……我相信我们可以找到一些<i>解决办法</i>……)]
 	</p>
 	<p>
-		Vicky presses herself close to you, and you feel her hot breath falling on your neck as she starts letting out a low growl once again. As she traps you against the wall, you suddenly feel something hard, and alarmingly-large, pressing against your leg. Looking down, you see a huge erection tenting out the fabric of the wolf-girl's skirt, which she then starts to dominantly rub up against you. [vicky.speech(So what's it going to be? You got the flames? Or am I going to have to fuck the payment out of you?)]
+		维姬贴得很近，你感受到她炽热的呼吸落在你的脖子上，她再次发出低沉的咆哮声。当她将你压在墙上时，你感到有什么坚硬而粗壮的东西顶在你的腿上。低头看去，你看到一根巨大的鸡巴撑起狼女的裙子，然后她开始强硬地在你身上摩擦。[vicky.speech(那么，你准备怎么做呢？你有火币吗？还是我必须从你身上榨取补偿？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARTHURS_PACKAGE_BOUGHT"><![CDATA[
 	<p>
-		[pc.speech(I can pay the fee,)] you say, side-stepping the wolf-girl before producing one-hundred flames.
+		[pc.speech(我可以付这个的，)]你说着，侧身避开狼女，然后拿出100个火币。
 	</p>
 	<p>
-		Vicky looks noticeably disappointed as you hand over the money, and, after walking back around to the correct side of the counter, she pushes the package towards you. [vicky.speech(Go on then, it's all yours. If you wanted to take a look at my goods, or if you ever get curious about what you just missed out on, then let me know.)]
+		你把钱递过去时，维姬显得很失望，她走回柜台后侧，把包裹推给你。[vicky.speech(行吧，给你了。如果你想看看我的商品，或者你想知道你错过了什么，告诉我。)]
 	</p>
 	<p>
-		Vicky leans back against the wall as you take the package, before fixing her gaze onto your face as she waits to see what you'll do next...
+		当你接过包裹时，维姬背靠着墙，然后把目光投向你的脸，等着看你接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARTHURS_PACKAGE_SEX"><![CDATA[
 	<p>
-		[pc.speech(That second option doesn't sound so bad...)] you say, grinning up at Vicky as she roughly presses you against the wall.
+		[pc.speech(第二个选择听起来还不错……)]你笑着看着维姬，她将你粗暴地压在墙上。
 	</p>
 	<p>
-		[vicky.speech(Suits me, bitch,)] she growls, before grabbing you by the [pc.arms] and shoving you towards the store's counter, before turning and locking the front door. [vicky.speech(I love fucking submissive customers like you.)]
+		[vicky.speech(正合我意，婊子，)]她低声咆哮着，然后跃过柜台，粗暴地抓住你的[pc.arms]，将你推到店铺的柜台上，然后转身锁上前门。[vicky.speech(我就喜欢干你这种顺从的顾客。)]
 	</p>
 	<p>
-		Before you can reply, Vicky bounds over towards you, before grabbing you by the waist and hurling you down onto the counter-top. Stepping forwards, she [npc.verb(position)] herself
+		你还没来得及回复，维姬跃向你，然后抓住你的腰，将你猛力摔到柜台上。她迈步走向你，然后站在你的
 		#IF(pc.hasLegs())
-			 between your legs,
+			腿中间，
 		#ELSE
-			 right up in front of you,
+			面前，
 		#ENDIF
-		 making a point to grind her huge erection up against your crotch as she snarls, [vicky.speech(I hope you like it rough!)]
+		她一边咆哮着，一边用她勃起的巨大阴茎顶着你的胯部，[vicky.speech(我希望你喜欢粗暴的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARTHURS_PACKAGE_RAPE"><![CDATA[
 	<p>
-		Feeling more than a little intimidated by the overbearing wolf-girl's advances, you try to slip away, muttering, [pc.speech(E-Erm... M-Maybe I'll come back later...)]
+		你被这个狼女的霸道态度吓到了，试图挪到前门边上，嘟囔道，[pc.speech(呃——我、我也许晚点再来……)]
 	</p>
 	<p>
-		Sensing your weakness, Vicky grabs hold of your shoulders, and, with considerable force, slams you back against the wall, snarling, [vicky.speech(Playing hard-to-get, huh? I don't have time for that shit!)]
+		感受到你的软弱，维姬抓住你的肩膀，用相当的力量将你猛力撞向墙壁，咆哮着说，[vicky.speech(欲擒故纵是吧？我可没时间和你玩这些！)]
 	</p>
 	<p>
-		You let out a startled cry as the aggressive wolf-girl suddenly throws you to the floor. Looking up as you struggle to your feet, you see Vicky quickly locking the front door, before she turns around and bounds over to you. [vicky.speech(You're just begging to be fucked!)]
+		当这个霸道的狼女突然把你扔到地上时，你发出了一声惊叫。当你挣扎着抬头看时，你看到维姬迅速锁上了前门，然后转身向你走来。[vicky.speech(你这是在求我操你！)]
 	</p>
 	<p>
-		[pc.speech(W-Wait! No! L-Let me go! I- ~Aaah!~)] Your protests are cut short as Vicky grabs you by the waist and hurls you down over the counter-top.
+		[pc.speech(等、等等！不要！让我走！我——~啊！~)]维姬一把抓住你的腰，把你扔到台面上，打断你的抗议。
 	</p>
 	<p>
-		Stepping forwards, she [npc.verb(position)] herself right up behind you, making a point to grind her huge erection up against your [pc.ass+] as she snarls, [vicky.speech(Scream and cry as much as you want! I hope you like it rough, because I don't go easy with pathetic bitches like you!)]
+		她向前走了一步，站到你的身后，一边用她巨大的勃起磨蹭着你[pc.ass+]，一边咆哮道：[vicky.speech(尽情哭喊吧！我希望你喜欢粗暴的，因为我对你这种可怜的婊子可不会手软！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARTHURS_PACKAGE_LEAVE"><![CDATA[
 	<p>
-		Not at all amused by Vicky's little performance, you look her straight in the eyes, and, firmly pushing her away, you state, [pc.speech(I'm leaving now. I'll be back later for the package.)]
+		你对维姬的表演不感兴趣，直视着她的眼睛，坚定地推开她，说：[pc.speech(我走了。一会再回来拿包裹。)]
 	</p>
 	<p>
-		Not giving the wolf-girl any time to respond, you stride over to the door, pull it open, and step out into the Shopping Arcade.
+		你不给狼女时间反应，你大步走向门，拉开它，回到购物中心。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_POST_SEX_PACKAGE"><![CDATA[
 	<p>
-		Vicky steps back, grinning down at you as she growls, [vicky.speech(You're a pretty good fuck. I guess this counts as payment for your package. If you wanted to take a look at my goods, then let me know. I don't have time to fuck you again today, but if you want to be my bitch again, then come back for more tomorrow...)]
+		维姬退后一步，咧嘴朝你咆哮着说道，[vicky.speech(你是个不错的炮友。这个包裹给你当报酬了。如果你想看看我卖的东西，告诉我。我今天没时间和你再来一炮了，但如果你还想做我的婊子，明天再来找我吧……)]
 	</p>
 	<p>
-		The wolf-girl strides over to the store's front door, barely giving you a moment to get your things in order before unlocking it and walking back behind her counter. You quickly finish gathering your things, and, taking the package from on top of the counter, you prepare to make your next move. Vicky leans back against the wall, fixing her gaze onto your face as she waits to see what you'll do next...
+		狼女大步走到店门口，几乎没给你时间整理东西，就打开了门锁，走回柜台后面。你迅速收拾好自己的东西，从柜台上拿走包裹，准备下一步行动。维姬背靠着墙，然后把目光投向你的脸，等着看你接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_POST_SEX_RAPE_PACKAGE"><![CDATA[
 	<p>
-		Vicky steps back, grinning down at you as she growls, [vicky.speech(You're a pretty good fuck; I love it when bitches like you try to put up a fight. I guess this counts as payment for your package. If you wanted to take a look at my goods, then let me know. I don't have time to fuck you again today, but if you want to be my bitch again, then come back for more tomorrow...)]
+		维姬退后一步，咧嘴朝你咆哮着说道，[vicky.speech(你是个不错的炮友。我喜欢像你这样试图反抗的婊子，这个包裹给你当报酬了。如果你想看看我卖的东西，告诉我。我今天没时间和你再来一炮了，但如果你还想做我的婊子，明天再来找我吧……)]
 	</p>
 	<p>
-		The wolf-girl strides over to the store's front door, barely giving you a moment to get your things in order before unlocking it and walking back behind her counter. You quickly finish gathering your things, and, taking the package from on top of the counter, you prepare to make your next move. Vicky leans back against the wall, fixing her gaze onto your face as she waits to see what you'll do next...
+		狼女大步走到店门口，几乎没给你时间整理东西，就打开了门锁，走回柜台后面。你迅速收拾好自己的东西，从柜台上拿走包裹，准备下一步行动。维姬背靠着墙，然后把目光投向你的脸，等着看你接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_POST_SEX"><![CDATA[
 	<p>
-		Vicky steps back, grinning down at you as she growls, [vicky.speech(You're a pretty good fuck. If you wanted to take a look at my goods, then let me know. I don't have time to fuck you again today, but if you want to be my bitch again, then come back for more tomorrow...)]
+		维姬退后一步，咧嘴朝你咆哮着说道，[vicky.speech(你是个不错的炮友。如果你想看看我卖的东西，告诉我。我今天没时间和你再来一炮了，但如果你还想做我的婊子，明天再来找我吧……)]
 	</p>
 	<p>
-		The wolf-girl strides over to the store's front door, barely giving you a moment to get your things in order before unlocking it and walking back behind her counter. You quickly finish gathering your things, and, scrambling to your [pc.feet], you prepare to make your next move. Vicky leans back against the wall, fixing her gaze onto your face as she waits to see what you'll do next...
+		狼女大步走到店门口，几乎没给你时间整理东西，就打开了门锁，走回柜台后面。你迅速收拾好自己的东西，站起来，准备下一步行动。维姬背靠着墙，然后把目光投向你的脸，等着看你接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_POST_SEX_RAPE"><![CDATA[
 	<p>
-		Vicky steps back, grinning down at you as she growls, [vicky.speech(You're a pretty good fuck; I love it when bitches like you try to put up a fight. If you wanted to take a look at my goods, then let me know. I don't have time to fuck you again today, but if you want to be my bitch again, then come back for more tomorrow...)]
+		维姬退后一步，咧嘴朝你咆哮着说道，[vicky.speech(你是个不错的炮友。我喜欢像你这样试图反抗的婊子。如果你想看看我卖的东西，告诉我。我今天没时间和你再来一炮了，但如果你还想做我的婊子，明天再来找我吧……)]
 	</p>
 	<p>
-		The wolf-girl strides over to the store's front door, barely giving you a moment to get your things in order before unlocking it and walking back behind her counter. You quickly finish gathering your things, and prepare to make your next move. Vicky leans back against the wall, fixing her gaze onto your face as she waits to see what you'll do next...
+		狼女大步走到店门口，几乎没给你时间整理东西，就打开了门锁，走回柜台后面。你迅速收拾好自己的东西，准备下一步行动。维姬背靠着墙，然后把目光投向你的脸，等着看你接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Sex action content: -->
 	
 	<htmlContent tag="VICKY_MARKING_ORGASM"><![CDATA[
 	<p>
-		With a deep, rumbling growl, Vicky suddenly grabs the back of your head, before moaning, [vicky.speechNoEffects(~Mmm!~ I'm going to cum! ~Aah!~ Take it on your face, my good little prey!)]
+		维姬突然在一声低沉的、隆隆的咆哮中抓住了你的后脑勺，然后呻吟道，[vicky.speechNoEffects(~我要射了~啊~就射在你的脸上吧，我美妙的小猎物！)]
 	</p>
 	<p>
-		Obediently doing as you're told, you direct Vicky's throbbing cock towards your face. As the knot at the base of her huge shaft swells up, she reaches her climax, and a thick spurt of hot, salty cum shoots out of her hard cock. Directing her musky cum onto your face, the wolf-girl growls, [vicky.speechNoEffects(That's it... Let me mark you with my scent... ~Mmm!~ That's my good prey...)]
+		你听话地把维姬跃动的阴茎对准自己的脸。巨大阴茎根部的结膨胀起来，她达到了高潮，一股又浓又热又咸的精液从坚硬的阴茎中喷射而出。味道浓重的精液喷射到你的脸上，狼女咆哮着，[vicky.speechNoEffects(就是这样……让我用气味标记你……~这才是我的好猎物……)]
 	</p>
 	<p>
-		Completely submitting to Vicky, you hold still so as to allow spurt after spurt of her thick, musky jizz to land on your [pc.faceSkin]. Growling in satisfaction as her orgasm comes to an end, the wolf-girl flashes a toothy grin down at you, before pulling back and declaring, [vicky.speechNoEffects(We're done... You carry my scent now, so everyone will know that you belong to me!)]
+		你完全服从维姬的要求，一动不动，让她的浓稠而浓郁的液体溅射到你的[pc.faceSkin]上。狼女结束性高潮，满足地咆哮着，她对你露齿一笑，退了一步后宣布道，[vicky.speechNoEffects(完成了……你现在带着我的气味，每个人都能知道你属于我！)]
 	</p>
 	<p>
-		It seems as though the wolf-girl has finished...
+		看起来这个狼女已经完事了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- After submitting content: -->
 	
 	<htmlContent tag="SHOP_WEAPONS_MARKING_SEX"><![CDATA[
 	<p>
-		Deciding to fully submit to Vicky, you tell her that you want to be her good little prey and get marked by her scent. Letting out a deep, rumbling growl, the wolf-girl pushes you down in front of her, before lifting her skirt and pulling out her thick, knotted cock. Licking her lips, she commands, [vicky.speech(Go on then, start stroking it! I'll cum all over your face and mark you as mine, my little prey!)]
+		你决定完全顺从维姬，告诉她你想成为她的乖巧猎物，并希望被她的气味标记。狼女发出低吼，将你推倒在她面前，掀起裙子并掏出粗壮带结的阴茎。舔着嘴唇，命令道：[vicky.speech(继续撸吧！我会射满你的脸，把你标记为我的小猎物！)]
 	</p>
 	<p>
-		Doing as you're told, you reach up and take hold of the wolf-girl's thick, throbbing cock, before starting to jerk her off...
+		你按照指示，伸手握住狼女粗壮、跃动的阴茎，开始给她打飞机……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_SUBMIT_SEX"><![CDATA[
 	<p>
-		Deciding to fully submit to Vicky, you tell her that you want to be her good little prey. Letting out a deep, rumbling growl, the wolf-girl pulls you into her embrace, and after delivering a long, dominant lick to your neck, she commands, [vicky.speech(Submit to me, my little prey! You're mine now!)]
+		你决定臣服于维姬，告诉她你想当她乖巧的小猎物。狼女发出低吼，将你拉进怀抱，强硬而绵长地舔舐你的脖子，命令道：[vicky.speech(臣服于我吧，小猎物！你现在是我的啦！)]
 	</p>
 	<p>
-		Doing as you're told, you submissively lean into Vicky and prepare to let her fuck you in whatever way she wants...
+		你服从命令，顺从地靠向维姬，让她随心所欲地操你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_OFFER_CUNNILINGUS"><![CDATA[
 	<p>
-		Wanting to get a taste of Vicky's pussy, you tell her that you want to eat her out. As she hears you say this, the wolf-girl flashes you another of her toothy grins, before growling, [vicky.speech(That doesn't sound too bad. Come on then, my little prey, kneel down and get a taste...)]
+		你想要尝一尝维姬的小穴，于是告诉她，你想给她舔阴。狼女听到你的话，又露齿一笑，咆哮着说：[vicky.speech(听起来还不错。来吧，我的小猎物，跪下来尝尝……)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 		<p>
-			With that, Vicky shifts aside her underwear, revealing both her hardening cock and hot pussy. Obediently doing as you're told, you drop down in front of her and shuffle forwards, before leaning in to her groin and planting a big, wet kiss on her [vicky.labia+].
+			维姬说着，甩下自己的内裤，露出逐渐勃起的阴茎和火热的小穴。你听话地跪在她面前，向前挪动，靠着她的腹股沟给了她[vicky.labia+]一个湿漉漉的大吻。
 		</p>
 	#ELSE
 		<p>
-			With that, Vicky pulls up her skirt and shifts aside her underwear, revealing both her hardening cock and hot pussy. Obediently doing as you're told, you drop down in front of her and shuffle forwards, before leaning in to her groin and planting a big, wet kiss on her [vicky.labia+].
+			维姬说着，拉起自己的裙子，甩掉内裤，露出坚硬的阴茎和火热的小穴。你听话地跪在她面前，向前挪动，靠在她的腹股沟上，给了她[vicky.labia+]一个湿漉漉的大吻。
 		</p>
 	#ENDIF
 	<p>
-		[vicky.speech(No need to be gentle,)] she growls, before grabbing the back of your head and pulling your face into her crotch. Darting out your [pc.tongue+], you start greedily licking and kissing Vicky's pussy...
+		[vicky.speech(不需要温柔，)]她咆哮着，抓着你的后脑勺，将你的脸拉向她的胯下。你伸出[pc.tongue+]，开始贪婪地舔舐亲吻着维姬的小穴……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_OFFER_BLOWJOB"><![CDATA[
 	<p>
-		Wanting to get a taste of Vicky's cock, you tell her that you want to give her a blowjob. As she hears you say this, the wolf-girl lets out a deep, rumbling growl, before asking, [vicky.speech(You like the taste of my cock, my little prey? Go on then, kneel down and let me fuck your face...)]
+		你想尝一尝维姬的肉棒，于是告诉她你想给她口交。狼女听到你说的话，发出了一声低沉的咆哮，然后问道： [vicky.speech(你喜欢我肉棒的滋味，我的小猎物？来吧，跪下，让我操你的嘴……)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 		<p>
-			With that, Vicky shifts aside her underwear, revealing both her hardening cock and hot pussy. Obediently doing as you're told, you drop down in front of her and shuffle forwards, before leaning in to deliver a long, wet lick up the underside of her throbbing shaft.
+			维姬说着，甩下自己的内裤，露出坚硬的阴茎和火热的小穴。你听话地跪在她面前，向前挪动，俯下身用你湿润的舌头缓慢舔舐着她跃动的阴茎下端。
 		</p>
 	#ELSE
 		<p>
-			With that, Vicky pulls up her skirt and shifts aside her underwear, revealing both her hardening cock and hot pussy. Obediently doing as you're told, you drop down in front of her and shuffle forwards, before leaning in to deliver a long, wet lick up the underside of her throbbing shaft.
+			维姬说着，拉起自己裙子，甩掉内裤，露出坚硬的阴茎和火热的小穴。你听话地跪在她面前，向前挪动，俯下身用你湿润的舌头缓慢舔舐着她跃动的阴茎下端。
 		</p>
 	#ENDIF
 	<p>
-		[vicky.speech(Open wide,)] she growls, before grabbing the back of your head and pulling your face into her crotch. Obediently parting your [pc.lips+], you take Vicky's [vicky.cock+] into your mouth and start giving her a blowjob...
+		[vicky.speech(嘴张大，)]她咆哮着，抓着你的后脑勺，将你的脸拉向她的胯下。你顺从地张开[pc.lips+]，含住了维基的[vicky.cock+]，开始给她口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_OFFER_PUSSY"><![CDATA[
 	<p>
-		Wanting to get fucked by Vicky, you tease her by telling her how hot and horny your pussy feels every time you look at her. Letting out a deep, predatory growl, the wolf-girl leaps forwards, and before you can react she's roughly groping your crotch. Delivering a long, wet lick to your neck, she grunts, [vicky.speech(I'm going to break that filthy cunt of yours, my little prey... You're mine!)]
+		你想被维姬操，就挑逗她，每次你看着她时，小穴会感到多么火热与饥渴。狼女发出侵略性的低咆，向前一跃，在你反应过来之前，便粗暴地摸上你的下体，湿漉漉的长舌舔舐你的脖子，咕哝道，[vicky.speech(我要操烂你那淫荡的逼，我的小猎物……你是我的！)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 		<p>
-			With that, Vicky shifts aside her underwear, revealing both her hardening cock and hot pussy. Pushing you down over the nearby coffee table, the wolf-girl quickly gains access to your pussy, before roughly shoving two of her paw-like fingers into your horny slit. After dominantly fingering you for a few moments, and causing you to let out a stream of lewd noises in the process, she withdraws her hand and quickly starts rubbing the tip of her [vicky.cock+] up and down over your [pc.labia+].
+			维姬说着，甩下自己的内裤，露出坚硬的阴茎和火热的小穴。这个狼女把你推倒在旁边的咖啡桌上，迫不及待地想要插进你的小穴。她粗暴地将两根指爪插入你饥渴的逼里，以支配姿态指交了一会儿，让你发出阵阵淫荡的声音，然后收回手，迅速开始用她[vicky.cock+]顶端磨蹭你[pc.labia+]。
 		</p>
 	#ELSE
 		<p>
-			With that, Vicky shifts aside her underwear, revealing both her hardening cock and hot pussy. Pushing you down over the shop's counter, the wolf-girl quickly gains access to your pussy, before roughly shoving two of her paw-like fingers into your horny slit. After dominantly fingering you for a few moments, and causing you to let out a stream of lewd noises in the process, she withdraws her hand and quickly starts rubbing the tip of her [vicky.cock+] up and down over your [pc.labia+].
+			维姬说着，甩下自己的内裤，露出坚硬的阴茎和火热的小穴。这个狼女把你推倒在旁边的咖啡桌上，迫不及待地想要插进你的小穴。她粗暴地将两根指爪插入你饥渴的逼里，以支配姿态指交了你一会儿，让你发出阵阵淫荡的声音，然后收回手，迅速开始用她[vicky.cock+]顶端磨蹭你[pc.labia+]。
 		</p>
 	#ENDIF
 	<p>
-		[vicky.speech(Beg for it, my little prey,)] she growls, before grabbing your [pc.hips+] and preparing to fuck you. Desperate for it, you obediently beg Vicky to fuck you, and can't help but let out a delighted, submissive squeal as you feel the wolf-girl roughly thrust forwards and slam her [vicky.cock+] into your hungry cunt...
+		[vicky.speech(乖乖求我吧，我的小猎物。)]她咆哮着，抓住你[pc.hips+]准备操你。你极度渴望地乞求着维姬来操你的屁股，当你感觉到狼女粗暴地向前挺进，将她[vicky.cock+]插入你饥渴的小穴。你情不自禁发出愉悦而顺从的浪叫声……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOP_WEAPONS_OFFER_ASS"><![CDATA[
 	<p>
-		Wanting Vicky to fuck your ass, you tease her by telling her how much you love anal, and how good it would feel for her cock to be rammed deep into your butt. Letting out a deep, predatory growl, the wolf-girl leaps forwards, and before you can react she's grinding up against you while roughly groping your ass. Delivering a long, wet lick to your neck, she grunts, [vicky.speech(You know my weakness, my little prey... This cute ass of yours is mine!)]
+		你想让维姬操你的屁股，于是挑逗她，说你超级喜欢肛交，她的鸡巴全插进来，肯定爽死了。狼女低吼一声，向你扑来。还没等你反应过来，她就已经顶住了你，同时粗鲁地揉捏着你的屁股。她舔了你的脖子好一会儿，你感觉脖子湿漉漉的，接着她咕哝着说道：[vicky.speech(你知道我的弱点，我的小猎物……你可爱的屁股是我的了！)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 		<p>
-			With that, Vicky shifts aside her underwear, revealing both her hardening cock and hot pussy. Pushing you down over the nearby coffee table, the wolf-girl quickly gains access to your asshole, before roughly shoving two of her paw-like fingers into your rear entrance. After dominantly fingering your ass for a few moments, and causing you to let out a stream of lewd noises in the process, she withdraws her hand and quickly starts rubbing the tip of her [vicky.cock+] up and down over your [pc.asshole+].
+			维姬说着，甩下自己的内裤，露出坚硬的阴茎和火热的小穴。她把你推倒在旁边的咖啡桌上，迫不及待地想要插进你的屁眼。她粗暴地将两根指爪插入你的后庭，以支配姿态指交了你一会儿，让你发出阵阵淫荡的声音，然后收回手，迅速开始用她[vicky.cock+]顶端磨蹭你[pc.asshole+]。
 		</p>
 	#ELSE
 		<p>
-			With that, Vicky shifts aside her underwear, revealing both her hardening cock and hot pussy. Pushing you down over the shop's counter, the wolf-girl quickly gains access to your asshole, before roughly shoving two of her paw-like fingers into your rear entrance. After dominantly fingering your ass for a few moments, and causing you to let out a stream of lewd noises in the process, she withdraws her hand and quickly starts rubbing the tip of her [vicky.cock+] up and down over your [pc.asshole+].
+			维姬说着，把她的内裤甩到一边，露出坚硬的阴茎和火热的小穴。她把你推倒在商店的柜台上，迫不及待地想要插进你的屁眼。她粗暴地将两根指爪插入你的后庭，以支配姿态指交了你一会儿，让你发出阵阵淫荡的声音，然后收回手，迅速开始用她[vicky.cock+]顶端磨蹭你[pc.asshole+]。
 		</p>
 	#ENDIF
 	<p>
-		[vicky.speech(Beg for it, my little prey,)] she growls, before grabbing your [pc.hips+] and preparing to fuck you. Desperate for it, you obediently beg Vicky to fuck your ass, and can't help but let out a delighted, submissive squeal as you feel the wolf-girl roughly thrust forwards and slam her [vicky.cock+] into your hungry asshole...
+		[vicky.speech(乖乖求我吧，我的小猎物。)]她咆哮着，抓住你的屁股准备操你。你极度渴望的乞求着维姬来操你的屁股，当你感觉到狼女粗暴地向前挺进，将她[vicky.cock+]插入你饥渴的屁眼时，你情不自禁发出顺从的尖叫声……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_RAPE"><![CDATA[
 	<p>
-		Feeling more than a little intimidated by the overbearing wolf-girl's attitude, you try to back away towards the front door, muttering excuses for why you have to leave as you do so.
+		你被这个狼女的霸道态度吓到了，试图挪到前门边上，咕哝着为你的离开找借口。
 	</p>
 	<p>
-		Sensing your weakness, Vicky suddenly leaps over the counter and pounces on you. Grabbing hold of your shoulders, she slams you back against the wall with considerable force, before snarling, [vicky.speech(You want to act like the submissive little prey? Fine with me! You're mine now, bitch!)]
+		感受到你的软弱，维姬突然跃过柜台扑向你。她抓住你的肩膀，用相当大的力量将你猛力撞向墙壁，咆哮着说，[vicky.speech(你想表现得像个顺从的小猎物吗？好啊！你现在是我的了，婊子！)]
 	</p>
 	<p>
-		You let out a startled cry as the aggressive wolf-girl suddenly throws you to the floor. Looking up as you struggle to your feet, you see Vicky quickly locking the front door, before she turns around and bounds over to you. With a frightening, toothy grin on her face, she snaps, [vicky.speech(You're just begging to be fucked!)]
+		这个霸道的狼女猝不及防地把你扔到地上，令你发出一声惊叫。你挣扎着站起来，却看到维姬迅速锁上了前门，转身向你走来。她露出可怖的笑容，厉声道，[vicky.speech(你这是在求我操你！)]
 	</p>
 	<p>
-		Although you try to protest and crawl away, Vicky dominantly grabs you by the waist and hurls you down onto the counter-top. Stepping forwards, she [npc.verb(position)] herself right up behind you, making a point to grind her huge erection up against your [pc.ass+] as she snarls, [vicky.speech(Scream and cry as much as you want! I hope you like it rough, because I don't go easy with pathetic bitches like you!)]
+		尽管你试图抵抗，但维姬霸道地抓住了你打算爬走的腰，把你扔到柜台上。她向前逼近，移动到你身后，一边咆哮，一边把她巨大的勃起压在你[pc.ass+]上，咆哮道，[vicky.speech(尽管哭喊吧！我希望你喜欢粗暴的，毕竟我对你这种可怜的婊子可不会手软！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_CLAIMED_AFTER_SEX"><![CDATA[
 	#IF(game.isMuskContentEnabled())
 		<p>
-			Having marked you with her musk, Vicky steps back and sniffs the air, before growling in satisfaction, [vicky.speech(That's better... You smell like me now, so everyone will know who you belong to. You like your new scent, my little prey?)]
+			维姬用精液标记了你，她嗅了嗅空气，发出满意的低吼，[vicky.speech(好多了……你现在闻起来就像我一样，这样每个人都能知道你属于谁。你喜欢这个新气味吗，我的小猎物？)]
 		</p>
 		<p>
-			As you breathe in, you find that all you can smell is the overpowering musk of Vicky's cum. Finding yourself turned on at the thought of being marked in such a dominant manner, you submissively tell the wolf-girl that you're happy to smell like her.
+			你每次呼吸都只能闻到维姬浓烈的精液味。一想到自己被如此霸道地标记，你就一阵兴奋。于是你乖顺地告诉狼女，你很高兴能闻起来像她。
 		</p>
 	#ELSE
 		<p>
-			Having completely and utterly dominated you, Vicky steps back and growls in satisfaction, [vicky.speech(That's better... You've been shown your true place now. You like being dominated, my little prey?)]
+			就这样彻彻底底地支配了你后，维姬后退一步，满意地低吼道，[vicky.speech(好多了……现在你该知道自己在什么位置了吧。你喜欢被支配吗，我的小猎物？)]
 		</p>
 		<p>
-			Finding yourself turned on at the thought of being put in your place, you submissively tell the wolf-girl that you're happy to be dominated by her.
+			一想到自己被置于此地，你就一阵兴奋，于是便顺从地告诉狼女，你乐于被她支配。
 		</p>
 	#ENDIF
 	<p>
-		[vicky.speech(That's my good little prey,)] Vicky grunts, before getting her clothes back in order and returning to stand behind the counter. As you recover and take your place on the other side of the desk, the wolf-girl asks, [vicky.speech(So, did you want to buy something? Or is there something else you want?)]
+		[vicky.speech(真是我乖巧的小猎物，)]维姬咕哝了一声，然后重整衣物，回到柜台后站好。你也恢复过来，坐回桌子另一边，狼女问道，[vicky.speech(那么，你是想买东西呢，还是另有所图呢？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_REFUSED"><![CDATA[
 	<p>
-		Although you've enjoyed having sex with the wolf-girl, you really don't want to submit to her and let her completely dominate you in this manner. As such, you turn your head away from Vicky and tell her to leave you alone.
+		虽然你喜欢和狼女做爱，但你实在不想屈从于她这种完全支配你的行为。因此，你把头扭开，让维姬离你远点。
 	</p>
 	<p>
-		A deep, rumbling growl lets you know how angry Vicky is at hearing your response, and for a moment it really seems like she's going to attack you. After snapping her teeth in front of your face, however, she seems to decide to let it go, and backs off to return to her place behind the counter.
+		听到你的回答，维姬低沉的咆哮声昭示了她有多生气，有那么一瞬间，她似乎真的要攻击你。不过，她咬了咬牙，似乎决定就此罢休，退回柜台后。
 	</p>
 	<p>
-		[vicky.speech(I could take you at any time I want, but it's not the same if you don't willingly submit to me,)] she defiantly growls, before asking, [vicky.speech(So, did you want to buy something? Or is there something else you want?)]
+		[vicky.speech(我可以随时占有你，但如果你不心甘情愿地臣服于我，那就不一样了，)]她挑衅地咆哮着，问道，[vicky.speech(那么，你是想买东西呢，还是另有所图呢？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COCK"><![CDATA[
 	<p>
-		Instead of being on the receiving end of Vicky's cock, you ask the wolf-girl if she'd use your cock for once. Hearing you say this, Vicky flashes you another of her toothy grins, before growling, [vicky.speech(Normally I'd never agree to that, but as you've been such a good little prey, I suppose I wouldn't mind...)]
+		你没有接受维姬的肉棒，反而问这个狼女是否愿意尝试一次你的肉棒。听到你这么说，维姬又对你露齿一笑，低声说，[vicky.speech(一般来说我不会同意，但既然小猎物你这么乖，我也不介意这样……)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 		<p>
-			Pulling you up close to her furry body, the wolf-girl leans back on the sofa and asks, [vicky.speech(So, what exactly did you have in mind?)]
+			狼女将你拉进她的绒毛中，倚靠在沙发上，轻声询问，[vicky.speech(那么，你究竟有什么想法呢？)]
 		</p>
 	#ELSE
 		<p>
-			Leaning forwards over the counter, the wolf-girl locks her yellow eyes onto yours and asks, [vicky.speech(So, what exactly did you have in mind?)]
+			狼女靠在柜台上，她的黄色眼睛盯着你，问道：[vicky.speech(那么，你究竟有什么想法呢？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COCK_HANDJOB"><![CDATA[
 	<p>
-		Not wanting to risk being too daring, you tell the wolf-girl that you'd settle for a handjob. Letting out a deep, rumbling growl, Vicky replies, [vicky.speech(You want me to jerk you off? Sure, I could do that...)]
+		你不想太胆大妄为，于是告诉狼女你愿意接受手交。维姬发出低沉的吼声，回答道，[vicky.speech(想让我给你打飞机？当然可以……)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 		<p>
-			Dominantly gaining access to your cock, Vicky reaches down and grabs hold of it. Grunting in amusement as you let out submissive [pc.moan], the wolf-girl wraps her [vicky.fingers+] around your shaft, before starting to give you a handjob...
+			维姬霸道地伸手握住你的阴茎，令你发出顺从的[pc.moan]。这位狼女兴味盎然地哼了一声，用她[vicky.fingers+]裹住你的阴茎，为你手交……
 		</p>
 	#ELSE
 		<p>
-			Pushing you back up against the wall, Vicky dominantly gains access to your cock, before reaching down and grabbing hold of it. Grunting in amusement as you let out submissive [pc.moan], the wolf-girl wraps her [vicky.fingers+] around your shaft, before starting to give you a handjob...
+			维姬把你推到墙上，霸道地摸上你的阴茎，令你发出顺从的[pc.moan]。这位狼女兴味盎然地哼了一声，用她[vicky.fingers+]裹住你的阴茎，为你手交……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COCK_BLOWJOB"><![CDATA[
 	<p>
-		Not at all put off by the sight of Vicky's sharp teeth as she gives you a toothy grin, you tell the wolf-girl that you'd like her to give you a blowjob. Licking her lips as she hears you say this, she replies, [vicky.speech(If it were anyone else, I'd fuck their face for daring to ask that of me. As it's my little prey who's asking, however, I suppose I wouldn't mind sucking some cock...)]
+		你并没有被维姬呲牙咧嘴的样子吓倒，告诉狼女你想让她给你口交。听到你这么说，她舔了舔唇，回答道，[vicky.speech(换做别人敢这样要求我，我早就打烂他们的脸。不过，既然是我的小猎物提出的要求，那我也不介意唆一唆肉棒……)]
 	</p>
 	#IF(pc.isTaur())
 		<p>
-			As your lower [pc.legRace]'s body limits the sort of positions you can use while receiving oral, you stand and turn to one side as the wolf-girl advances upon you. Dropping to her knees, she shuffles underneath you, and you can't help but let out [pc.a_moan+] as you feel her take hold of your [pc.cock+].
+			你的[pc.legRace]身体限制了你在接受口交时的姿势，当狼女向你靠近时，你站起来转向她。她跪下身，握住你[pc.cock+]，你情不自禁地发出[pc.a_moan+]。
 		</p>
 		<p>
-			[vicky.speech(Let's see how you taste,)] Vicky teases, and a moment later you feel her large, flat tongue sliding up the underside of your rapidly-hardening shaft. A moment later, her lips wrap around your cock, and with the same dominant energy she always has, Vicky starts purposefully bobbing her head forwards and back as she gives you the blowjob you asked for...
+			[vicky.speech(让我试试你的口感如何，)]维姬挑逗着，片刻后，你便感觉到她扁平的大舌头在你迅速勃起的柱身上滑动。随后，带着她一贯的霸道，维姬用嘴裹住了你的阴茎，有意地前后摆动，为你做所要求的口交……
 		</p>
 	#ELSE
 		#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 			<p>
-				Sliding off the sofa, the wolf-girl quickly gains access to your cock, before dropping her head down and sliding her large, flat tongue up the underside of your rapidly-hardening shaft. After grinning up at you for a moment, she wraps her lips around your cock, and with the same dominant energy she always has, she starts purposefully bobbing her head up and down as she gives you the blowjob you asked for...
+				狼女从沙发滑了下来，一下子摸上你的阴茎，然后低下头，用她那扁平的大舌头在你迅速勃起的阴茎根部滑动。她对着你咧嘴一笑，带着她一贯的霸气，张嘴含住你的鸡巴。维姬有意地上下晃动脑袋，为你做所要求的口交……
 			</p>
 		#ELSE
 			<p>
-				Pushing you back against the wall, Vicky quickly gains access to your cock, before dropping to her knees and sliding her large, flat tongue up the underside of your rapidly-hardening shaft. After grinning up at you for a moment, she wraps her lips around your cock, and with the same dominant energy she always has, she starts purposefully bobbing her head up and down as she gives you the blowjob you asked for...
+				维姬把你推到墙上，很快摸上你的阴茎，然后跪下来，用她扁平的大舌头在你迅速勃起的阴茎根部滑动。她对着你咧嘴一笑，带着她一贯的霸气，张嘴含住你的鸡巴。维姬有意地上下晃动脑袋，为你做所要求的口交……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COCK_PUSSY"><![CDATA[
 	<p>
-		Deciding to risk it and go all the way, you tell Vicky that you'd like to fuck her pussy. Letting out a deep, predatory growl as she hears what it is you're asking, the wolf-girl snaps, [vicky.speech(You dare to ask for that? You're a brave little prey, aren't you?)]
+		你决定冒险一试，告诉维姬你想操她的小穴。她一听到你的要求，就发出了低沉的咆哮，厉声道，[vicky.speech(你敢要这个？你可真是个勇敢的小猎物，不是吗？)]
 	</p>
 	<p>
-		Before you can answer, Vicky suddenly pounces on you, and using every ounce of her strength, she tackles you to the floor and pins you down onto your back. Staring down into your eyes, she bears her teeth at you, and for a moment you think that she's going to bite you, but instead she growls, [vicky.speech(I'll let you stick your cock in my pussy, but <i>I'm</i> the one fucking <i>you</i>, got it?!)]
-	</p>
+			还不等你回答，维姬就扑了上来，用尽全身力气把你扑倒在地。她盯着你的眼睛，对你龇牙咧嘴，有一瞬间你以为她要咬你，但她只是咆哮说，[vicky.speech(我会让你把鸡巴插进我的小穴里，但记住<i>我</i>才是操<i>你</i>的那个，明白吗？)]
+		</p>
 	<p>
-		As you tell her that you understand, Vicky quickly gains access to your cock, and after exposing her pussy, she drops her hips down and starts rubbing her [vicky.labia+] up and down over your shaft. Only once you're panting and letting out a series of desperate whines does she move to give you what you want. Lining the [pc.cockHead+] of your dick up to her cunt, she drops down, forcing your cock deep into her hot pussy as she begins to ride you, cowgirl style...
-	</p>
-	]]>
-	</htmlContent>
+			你说你知道了，维姬很快就露出小穴，向下顶弄，用她[vicky.labia+]上下挑逗你的阴茎。你连连喘息，发出连绵而迷乱的呜咽声，她这才动起来，给你所想要的。维姬将你[pc.cockHead+]对准小穴，径直坐了下去，她骑乘着你，迫使你的肉棒深入她火热的小穴……
+		</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COCK_ANAL"><![CDATA[
 	#IF(vicky.isAnalVirgin())
 		<p>
-			Although you know that Vicky likes to be on the giving end of anal, you want the wolf-girl to be the one whose ass is being fucked for once, and so tell her that you'd like to fuck her butt. Letting out a surprised grunt as she hears what it is you're asking, the wolf-girl snaps, [vicky.speech(You want to do what?! My little prey, I've never been fucked in the ass before... You want to be the one to take my anal virginity?! How brave of you...)]
+			虽然你知道维姬喜欢肛交，但这次你想让狼女当受，便说你想操她的屁股。狼女听后直接惊讶地哼了一声，厉声道，[vicky.speech(你想干什么？！我的小猎物，我可从来没让人操过屁股……你想拿走我的肛门贞操吗？！真是勇敢……)]
 		</p>
 		<p>
-			For once you hear a slight tone of unease in Vicky's voice, and you quickly reassure her that you'll be gentle for her first time. Letting out a loud, bark-like laugh, she teases, [vicky.speech(Oh, you won't have any control over that, don't you worry... But fine, I suppose I'll lose my anal virginity to you. After all, I've grown quite fond of you, my little prey...)]
+			你捕捉到维姬声音中的一丝不安，便迅速向她保证，第一次一定会对她温柔。听后，她发出狂吠般的大笑，揶揄道，[vicky.speech(哦，你可能无法控制的，不用担心……但好吧，我肛门第一次就交给你吧。毕竟我很喜欢你，我的小猎物……)]
 		</p>
 		<p>
-			Before you can reply to that, Vicky suddenly pounces on you, and using every ounce of her strength, she tackles you to the floor and pins you down onto your back. After leaning down to deliver a long, slow lick over your neck, she snaps, [vicky.speech(I'm choosing to give my anal virginity to you, you're not 'taking' it from me, understand? <i>I'm</i> the one in charge, and <i>I'm</i> the one who's fucking <i>you</i>, got it?!)]
+			还不等你回答，维姬就扑了上来，用尽全身力气把你扑倒在地。她俯身在你的脖子舔舐许久，厉声说道，[vicky.speech(是我决定把肛门第一次给你，而不是你‘夺走’它，懂吗？<i>我</i>才是主宰，<i>我</i>才是操<i>你</i>的人，明白吗？)]
 		</p>
 		<p>
-			As you tell her that you understand, Vicky quickly gains access to your cock, and after exposing her ass, she drops her hips down and starts rubbing the [pc.cockHead+] of your dick over her virgin asshole. Letting out a series of muted, deep growls, she quickly lines your cock up to her rear entrance and starts dropping down. As she forces your [pc.cock+] into her ass, Vicky's growls turn into high-pitched whines, and then suddenly she pants, [vicky.speech(~Aah!~ Fuck... That's it, my little prey, fuck my ass!)]
+			你说你知道了，维姬很快就露出臀部，向下顶弄，让你[pc.cockHead+]摩擦着她的处女肛门。她发出连绵而低沉的咆哮声，迅速将你的肉棒对准她的后庭，直接坐了下去。当你[pc.cock+]插进她的肛门时，维姬的咆哮变成了高亢的呜咽，随后直接喘了出来，[vicky.speech(~嗯啊！~操……就是这样，我的小猎物，操我的屁股！)]
 		</p>
 		<p>
-			With that, she suddenly drops down, forcing your cock deep into her ass and letting you claim her anal virginity in one powerful thrust. The wolf-girl's tongue lolls from her mouth and she moans in delight as she remains in place, your throbbing cock stuffed deep into her rear entrance. Clearly wanting more, Vicky then lifts her hips, before dropping back down and forcing your dick into her ass once again. Repeating this motion, the wolf-girl soon finds a rhythm as she anally rides you, cowgirl style...
+			就这样，她突然俯下身，迫使你的肉棒深深插入她的肛门，让你一鼓作气夺走她的肛门童贞。狼女的舌头直接耷拉出来，她愉悦地呻吟着，而你抽动的肉棒则深入了她的后庭。维姬显然还想要更多，她抬起臀部又坐了下去，迫使你的肉棒又一次插入。循环往复，狼女很快就找到了节奏，她骑乘着你进行肛交……
 		</p>
 	#ELSE
 		<p>
-			Knowing now that Vicky likes having her ass fucked, you suggest to her that she could anally ride your cock again. Letting out a deep, predatory growl as she hears what it is you're asking, the wolf-girl snaps, [vicky.speech(You dare to ask for that again? You're a brave little prey, aren't you?)]
+			看起来维姬喜欢肛交，于是你提议再这么来一次。她一听到你的要求，就发出了低沉的咆哮，[vicky.speech(你还敢要？你可真是个勇敢的小猎物，不是吗？)]
 		</p>
 		<p>
-			Before you can answer, Vicky suddenly pounces on you, and using every ounce of her strength, she tackles you to the floor and pins you down onto your back. Staring down into your eyes, she bears her teeth at you, and for a moment you think that she's going to bite you, but instead she growls, [vicky.speech(I'll let you stick your cock in my ass, but <i>I'm</i> the one fucking <i>you</i>, got it?!)]
+			还不等你回答，维姬就扑了上来，用尽全身力气把你扑倒在地。她盯着你的眼睛，对你龇牙咧嘴，有一瞬间你以为她要咬你，但她只是咆哮说，[vicky.speech(我会让你把鸡巴插进我的肛门里，但记住<i>我</i>才是操<i>你</i>的那个，明白吗？)]
 		</p>
 		<p>
-			As you tell her that you understand, Vicky quickly gains access to your cock, and after exposing her asshole, she drops her hips down and starts rubbing the [pc.cockHead+] of your dick over her butt. Only once you're panting and letting out a series of desperate whines does she move to give you what you want. Lining the [pc.cockHead+] of your dick up to her rear entrance, she drops down, forcing your cock deep into her hot ass as she begins to anally ride you, cowgirl style...
+			你说你知道了，维姬很快就露出臀部，向下顶弄，用肛门挑逗你[pc.cockHead+]。你连连喘息，发出连绵而迷乱的呜咽声，她这才动起来，给你所想要的。维姬将你[pc.cockHead+]对准后庭，径直坐了下去，迫使你的肉棒深入她火热的肛门，她骑乘着你进行肛交……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COCK_FOOTJOB"><![CDATA[
 	<p>
-		Wanting to make the most of Vicky's furry, wolf-like paws, you ask her if she could give you a footjob. Letting out a brief, bark-like laugh as she hears you say this, the wolf-girl asks, [vicky.speech(That's really all you want, my little prey? A footjob?)]
+		你想充分利用维姬毛茸茸的狼爪，就问她能不能给你足交。听后，她发出犬吠般的轻笑，揶揄地问道，[vicky.speech(这就是你想要的，我的小猎物？足交？)]
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_vicky_apartment))
 		<p>
-			After you've quickly and eagerly responded in the affirmative, Vicky dominantly commands you to kneel down before her. Sliding off the sofa, you do as you're told, and after following further instructions to expose your cock, you present yourself to the wolf-girl as she lifts her foot to your groin.
+			在你快速而热切地回以肯定后，维姬霸道地命令你跪在她面前。你如她所愿，从沙发上滑下，然后按照她的指示把你裸露的阴茎呈现在这个狼女面前。维姬把脚抬到你的腹股沟处。
 		</p>
 	#ELSE
 		<p>
-			After you've quickly and eagerly responded in the affirmative, Vicky dominantly commands you to kneel down before her. Happy to hear that she'll give you what you want, you quickly do as you're told, and after following further instructions to expose your cock, you present yourself to the wolf-girl as she lifts her foot to your groin.
+			在你快速而热切地回以肯定后，维姬霸道地命令你跪在她面前。你很高兴听到她说会满足你，你立马遵循指示，把你裸露的阴茎呈现在这个狼女面前。维姬把脚抬到你的腹股沟处。
 		</p>
 	#ENDIF
 	<p>
-		[vicky.speech(Go on then, beg for it,)] she teases as she hovers her paw over your hard shaft. As you're so close to getting what you want, you find yourself desperately doing as Vicky says, and submissively beg for her to use her paws to jerk you off. Flashing you a big, toothy grin, she pushes her paw down, pressing the pads of her furry foot against your cock. Letting out a horny [pc.moan], you buck your hips a little as the wolf-girl gives you the footjob you've been craving...
+		[vicky.speech(那就来吧，乞求我，)]她一边言语挑逗，一边用脚爪在你硬邦邦的阴茎上徘徊。眼看就能得偿所愿，你更加渴求地按照维姬说的去做，顺从地乞求她用脚爪帮你打飞机。她对你咧嘴一笑，把毛茸茸的脚爪压上了你的肉棒。狼女给了你渴望已久的足交，令你不由得发出淫荡的[pc.moan]，臀部微微扭动……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Non-sex offers: -->
 	
@@ -602,254 +602,254 @@
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL"><![CDATA[
 	<p>
-		Thinking that Vicky's aggressive, confrontational attitude might be partially due to her being hungry, you ask the wolf-girl if you can offer her anything to eat. Snarling at you through bared teeth, she snaps, [vicky.speech(If I'm hungry, my little prey, I'll just eat you!)]
+		你觉得可能是饥饿令维姬如此咄咄逼人，便问狼女要不要吃点什么。她对你龇牙咧嘴，厉声道，[vicky.speech(我的小猎物，如果我真的饿了，我就吃掉你！)]
 	</p>
 	<p>
-		Nervously gulping as the wolf-girl follows up her threat with a low, rumbling growl, you back away and apologise for annoying her. As you take a step back, however, Vicky suddenly sniffs up in the air, before narrowing her eyes and asking, [vicky.speech(Wait, have you got some meat on you?)] 
+		狼女发出低吼作为威胁，你紧张地吞咽着后退，为惹恼她道歉。然而，正当你后退时，维姬突然在空中嗅了嗅，闭上眼睛问道，[vicky.speech(等等，你身上有带肉吗？)] 
 	</p>
 	<p>
-		Responding in the affirmative, you present Vicky with the [#SPECIAL_PARSE_0] and tell her that it was what you were planning on offering to her for her 
+		你回以肯定，向维姬展示[#SPECIAL_PARSE_0]，告诉她这是你为她准备的
 		#IF(game.isMorning())
-			 breakfast.
+			早餐。
 		#ELSE
-			 lunch.
+			午餐。
 		#ENDIF
-		 A big grin breaks out across the wolf-girl's face as she hears this, and she grunts,
-	]]>
-	</htmlContent>
+		狼女一听这话，脸上绽放出灿烂的笑容，她咕哝着，
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL_DEMAND_FEED_HER"><![CDATA[
-		 [vicky.speech(In that case, I'll take it. Come over here and feed it to me, my little prey...)]
+		[vicky.speech(这样的话，我接受。过来喂我吧，我的小猎物……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL_DEMAND_PETTINGS"><![CDATA[
-		 [vicky.speech(In that case, I'll take it. Come over here and sit beside me, my little prey. I want to pet you while I eat...)]
+		[vicky.speech(这样的话，我接受。过来坐我边上，我的小猎物。我想一边吃一边摸摸你……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL_DEMAND_MASSAGE"><![CDATA[
-		 [vicky.speech(In that case, I'll take it. Come over here, my little prey, and give me a massage while I eat...)]
+		[vicky.speech(这样的话，我接受。过来吧，我的小猎物，在我现在吃东西的时候给我按摩一下……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL_FEED_HER"><![CDATA[
 	<p>
-		Doing as you're told, you give Vicky the [#SPECIAL_PARSE_0], who proceeds to slam the raw meat down onto a large plate which she produces from under the counter. Thrusting a fork and a sharp steak knife into your [pc.hands], she opens her mouth, bearing her rows of sharp teeth at you in the process.
+		你按照吩咐把[#SPECIAL_PARSE_0]递给维姬，她从柜台下取出一个大盘子，接着把生肉摔上去。在将叉子和一把锋利的牛排刀塞进你的[pc.hands]里后，她向你张开嘴，露出一排排锋利的牙齿。
 	</p>
 	<p>
-		Using the cutlery which the wolf-girl has provided, you set about cutting up the meat and feeding it to her, bite-by-bite. After snapping up every last morsel you offer to her, and almost catching your [pc.hand(true)] on more than one occasion, Vicky finishes her meal by licking her lips and declaring, [vicky.speech(That was delicious. Thank you, my little prey... Now come here so that I can get a taste of <i>you</i>...)]
+		你用狼女提供的餐具切割起肉块，又一口一口地喂给她。期间她不止一次差点咬到你的[pc.hand(true)]。维姬饱餐一顿后，舔了舔嘴唇，表示道，[vicky.speech(真是美味。谢谢你，我的小猎物……现在过来让我尝尝<i>你</i>的味道……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL_PETTINGS"><![CDATA[
 	<p>
-		Doing as you're told, you give Vicky the [#SPECIAL_PARSE_0], who proceeds to grab in one hand and use her rows of sharp teeth to tear off chunks and swallow them down in big, audible gulps. Pointing to the floor beside her, she directs to you sit, and as you do so, she uses her free hand to stroke
+		你按照吩咐把[#SPECIAL_PARSE_0]递给维姬，她一手抓起，用她那锋利的牙齿扯下一大块食物，大肆咀嚼一番才吞下去。她指了指身旁的地板，示意你坐下。你刚坐下，她就用空闲的手抚摸起
 		#IF(pc.hasHair())
-			 your [pc.hair+].
+			你[pc.hair+]。
 		#ELSE
-			 the top of your head.
+			你的头。
 		#ENDIF
 	</p>
 	<p>
-		Within just a few moments, the wolf-girl has swallowed down every bite, and after licking her fingers clean, she looks down at you and growls, [vicky.speech(That was delicious. Thank you, my little prey... Now come here so that I can get a taste of <i>you</i>...)]
+		几分钟内，狼女就吃完了每一口，她舔舐干净手指，看着你说道，[vicky.speech(真是美味。谢谢你，我的小猎物……现在过来让我尝尝<i>你</i>的味道……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL_MASSAGE"><![CDATA[
 	<p>
-		Doing as you're told, you give Vicky the [#SPECIAL_PARSE_0], who proceeds to grab in one hand and use her rows of sharp teeth to tear off chunks and swallow them down in big, audible gulps. At her direction, you move around behind her, and as she continues to eat, you start to give her furry shoulders a massage.
+		你按照吩咐把[#SPECIAL_PARSE_0]递给维姬，她一手抓起，用她那锋利的牙齿扯下一大块食物，大肆咀嚼一番才吞下去。你如她所说绕到背后，在她继续吃东西的时候给她毛茸茸的肩膀按摩。
 	</p>
 	<p>
-		Within a couple of minutes, the wolf-girl has swallowed down every bite, and after licking her fingers clean, she growls, [vicky.speech(That was delicious. Thank you, my little prey... Now come here so that I can get a taste of <i>you</i>...)]
+		几分钟内，狼女就吃完了每一口，她舔舐干净手指，说道，[vicky.speech(真是美味。谢谢你，我的小猎物……现在过来让我尝尝<i>你</i>的味道……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_MEAL_END"><![CDATA[
 	<p>
-		Although you can't help but feel a little frightened as you wonder how this wolf-girl is going to get a taste of you, you nevertheless obey and move up to stand right beside her. In an uncharacteristically gentle gesture, she tenderly pulls you into a loving hug, before darting out her tongue and delivering a series of big, wet licks to your neck and face.
+		你不知道这个狼女打算如何品尝你，不禁感到一丝恐惧，但你还是顺从地走到她身边。她却一反常态，温柔地将你拥入怀中，伸出舌头舔舐你的脖颈与脸颊，舔湿了一大片肌肤。
 	</p>
 	<p>
-		[vicky.speech(I'm lucky to have you,)] she growls, before releasing you and asking with a grunt, [vicky.speech(So, did you come here just to feed me, or did you want to buy something?)]
+		[vicky.speech(拥有你是我的幸运，)]她低声说，然后松开你，咕哝着问道，[vicky.speech(所以，你来这里就是为了喂我吗？还是你想买东西？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Offering help: -->
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP"><![CDATA[
 	<p>
-		Wanting to do something for Vicky, you ask her if there's any way you can help in her shop. After letting out a low, rumbling growl, she asks, [vicky.speech(What do you mean? You think I can't handle this place by myself?)]
+		你想为维姬做点什么，就问她店里有什么需要帮忙的。她发出低沉的咆哮声，问道，[vicky.speech(你什么意思？是觉得我一个人搞不定这里吗？)]
 	</p>
 	<p>
-		Realising that this situation has the potential to go very badly, you quickly clarify your intentions by telling Vicky that you just wanted to do something nice for her.
+		你意识到情形好像要变得非常糟糕了，于是赶紧阐明意图，告诉维姬你只是想帮她点忙。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP_DEMAND_STOCK_SHLEVES"><![CDATA[
 	<p>
-		[vicky.speech(Oh, I see, you just wanted to act like my good little prey, did you?)] the wolf-girl growls, [vicky.speech(In that case, I have a few boxes that need to be unpacked. You can stock the shelves with their contents.)]
+		[vicky.speech(哦，我明白了，你只是想表现得像我乖巧的小猎物是吗？)]狼女低声说，[vicky.speech(那样的话，我还有几个要拆的盒子，你可以把它们放到架子上。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP_DEMAND_SWEEP_FLOOR"><![CDATA[
 	<p>
-		[vicky.speech(Ah, so you were just trying to act like a good little prey, were you?)] the wolf-girl growls, [vicky.speech(In that case, you could sweep the floor for me.)]
+		[vicky.speech(啊，你只是想表现得像我乖巧的小猎物是吗？)]狼女低声说，[vicky.speech(那样的话，你可以帮我拖地。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP_DEMAND_ORGANISE_WEAPONS"><![CDATA[
 	<p>
-		[vicky.speech(So that's what this is about, is it?)] the wolf-girl growls, [vicky.speech(In that case, my little prey, you can organise the weapons for display.)]
+		[vicky.speech(你这是在撒娇对吗？)]狼女低声说，[vicky.speech(那么，我的小猎物，你可以去整理一下展示的武器了。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP_STOCK_SHLEVES"><![CDATA[
 	<p>
-		Happily hurrying to do as Vicky asks, you set about unpacking the stock from the boxes and placing the items upon the shelves. As you work, you can feel Vicky's predatory gaze roaming over your body, and each time you turn to confirm that she's still watching you, she flashes you a big, toothy grin.
+		你急忙按照维姬的吩咐，高兴地从箱子里取出货物，再摆上货架。在工作过程中，你一直感觉维姬掠夺性的目光在你身上游走，每次你转过身去确认，她都会灿烂地向你露齿一笑。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP_SWEEP_FLOOR"><![CDATA[
 	<p>
-		Grabbing a broom from behind the counter, you set about sweeping the floor of Vicky's shop. There's a surprising amount of dust and debris to be cleared, which is explained away when Vicky tells you that she opens all of her shop's deliveries right here on the shop floor, and that in the process of tearing apart the packaging she often causes a mess.
+		你从柜台后面拿起一把扫帚，清扫起维姬商店的地板。亟待清扫的灰尘和碎屑数量惊人，维姬告诉你，店里所有的快递全是就地打开的，而在开箱过程中，她又经常弄得一团糟。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP_ORGANISE_WEAPONS"><![CDATA[
 	<p>
-		Hurrying to do as you're asked, you wait for Vicky to open up the display case which houses dozens of weapons, and then set about organising them into a better arrangement. The wolf-girl stares hungrily at you while you work, and lets out the occasional low growl as she lustfully gazes at your body.
+		你急忙按照吩咐行事，等维姬把存有数十件武器的展示柜打开。然后你再把这些武器排列整齐。狼女在你工作时一直饥渴地盯着你，时不时发出低沉的咆哮声。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_HELP_END"><![CDATA[
 	<p>
-		Eventually you finish your task, and as you turn to Vicky to ask if she's happy with your work, you find yourself suddenly being pounced upon by the predatory wolf-girl. Pinning you up against the wall, she growls, [vicky.speech(You did a good job, my little prey... Thank you for your hard work...)]
+		你终于完成任务，转身问维姬是否对你的工作满意，结果突然被这个捕食者狼女扑倒。她把你压在墙上，低声说道，[vicky.speech(你做的很好，我的小猎物……辛苦啦……)]
 	</p>
 	<p>
-		Darting out her large, flat tongue to deliver a big, wet lick over your neck, Vicky lets out another low, rumbling growl, before staring into your eyes and sighing, [vicky.speech(I really do appreciate your help...)]
+		维姬用扁平的大舌头绵长地舔舐你的脖子，发出低沉的咆哮，她盯着你喘息道，[vicky.speech(真的很感谢你的帮助……)]
 	</p>
 	<p>
-		Not wanting to expose any more of her soft side to you, the wolf-girl steps back and quickly returns to stand behind the counter, before asking, [vicky.speech(So, did you come here only to offer me you help, or did you want to buy something?)]
+		狼女不想再向你展露她柔弱的一面，便迅速退回到柜台后，问道，[vicky.speech(所以，你来这里就是为了帮忙的吗？还是你想买东西？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Offer evening company: -->
 	
 	<htmlContent tag="VICKY_PET_OFFER_COMPANY"><![CDATA[
 	<p>
-		Wanting to spend some time with Vicky, you ask her if she'd like some company this evening. Flashing you a big, toothy grin, she grunts, [vicky.speech(I'm a lone wolf, I don't need company... But I suppose I wouldn't mind having my little prey with me tonight. Come and sit down here next to me and wait until closing time, then I'll take you up to my apartment.)]
+		你想和维姬共度时光，就问她今晚想不想有人陪。她向你咧嘴一笑，咕哝道，[vicky.speech(我是独行侠，不需要人陪…… 但我不介意今晚有我的小猎物相伴。过来坐在我旁边，等一打烊，我就带你回公寓。)]
 	</p>
 	<p>
-		Doing as you're told, you hurry over to sit down on a free stool beside Vicky. Within moments, you find yourself being dominantly groped and petted as the two of you wait until five o'clock...
+		你如维姬所说，赶紧走到她旁边的空位坐下。没过多久，你就发现自己被她霸道地抚摸着，直到五点到了才停止……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COMPANY_APARTMENT"><![CDATA[
 	<p>
-		Although no customers visit Vicky's shop while you wait, the time passes quickly enough, and before you know it the wolf-girl is standing up and moving over to lock the door. Placing a 'closed' sign in the window, she turns to you and growls, [vicky.speech(Follow me, my little prey...)]
+		虽然维姬的商店在你等待的这段时间都没有顾客光顾，但时间过得飞快，不知不觉间狼女已经走过去锁门了。她在窗户处挂了一个“关闭”标志，然后转向你说道，[vicky.speech(跟我来，我的小猎物……)]
 	</p>
 	<p>
-		Doing as you're told, you follow Vicky as she leads you through a door in the rear of the shop, and then up a flight of stairs which leads to her apartment. Looking around as you enter her home, you see that Vicky's apartment is tastefully furnished in a modern style. Stepping over to the kitchen to grab a quick bite to eat, the wolf-girl grabs a bottle of water and what looks like some kind of energy bar, before offering them to you and grunting, [vicky.speech(Would you like a quick snack?)]
+		你听话地跟着维姬，她带你穿过商店后门，走上通向她公寓的楼梯。踏入她的居所，你环视四周，发现维姬的公寓装饰得颇具品味，洋溢着现代气息。狼女走进厨房找点小零食吃，她拿起一瓶水和一根看似能量棒的食物，然后递给你，低声说道，[vicky.speech(你想来点速食吗？)]
 	</p>
 	<p>
-		Thinking that it might annoy her if you were to refuse, you accept the wolf-girl's offer, and join her in having a quick snack. As soon as the two of you have finished, Vicky grabs you by the [pc.arm] and pulls you along behind her as she heads to her bathroom. Stripping naked, she grunts, [vicky.speech(Come on, my little prey, I always like to have a shower after work, and you're going to join me.)]
+		你想到拒绝可能会惹恼她，便接受了狼女的好意，和她一起吃了点速食。你们俩刚吃完，维姬就抓住你的[pc.arm]，把你拉进浴室。脱光衣服后，她咕哝着说，[vicky.speech(来吧，我的小猎物，我下班后总喜欢洗个澡，你也要加入。)]
 	</p>
 	<p>
-		It looks like you have no option other than to join Vicky in the shower...
+		看来除了和维姬一起洗澡，你别无选择了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_PET_OFFER_COMPANY_APARTMENT_SHOWER_SEX"><![CDATA[
 	<p>
-		Stripping naked, you join the wolf-girl in the shower, which thankfully turns out to be large enough to comfortably accommodate the two of you at once. As she turns on the taps, causing warm water to flow over both of your bodies, Vicky grabs hold of you and lustfully moans, [vicky.speech(I've got you now...)] 
+		你和狼女褪下衣服，一起进入浴室，浴室足以同时容纳你们两个人。维姬打开水龙头，让温暖的水流过你们的身体。她抓住你，充满欲望地呻吟道，[vicky.speech(我现在就想要你……)] 
 	</p>
 	<p>
-		Leaning into the wolf-girl's furry chest, you share a passionate kiss with her, before submitting to her and preparing to get fucked...
+		你靠在狼女毛茸茸的胸膛上，给她一个热情的吻，顺从地准备做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_APARTMENT_POST_SHOWER_SEX"><![CDATA[
 	<p>
-		[vicky.speech(That was fun,)] Vicky pants, before commanding, [vicky.speech(Now help me to clean myself.)] 
+		[vicky.speech(真好玩，)]维姬喘着气，然后要求道，[vicky.speech(现在来帮我清洗吧。)] 
 	</p>
 	<p>
-		Doing as you're told, you use shampoo and soap to clean the wolf-girl's furry body, before standing still and allowing her to return the favour. Soon enough, the two of you are clean, and so Vicky turns off the taps and steps out of the shower. After drying one another off with a pair of fluffy towels, Vicky pulls on her thong and leads you back into the lounge.
+		你按照指示，用洗发水和肥皂清洗了狼女毛绒绒的身体，然后站着让她也这么干。不久，你们两个都干净了，于是维姬关掉水龙头，走出淋浴间。你们用一对蓬松的毛巾互相擦干，随后维姬穿上丁字裤，领着你回到客厅。
 	</p>
 	<p>
-		[vicky.speech(Come here, my little prey,)] she playfully growls as she pulls you down onto the sofa beside her. Wrapping an arm around you, she dominantly pulls you into her naked chest, before sighing, [vicky.speech(I do like my solitude, but it's nice to have company every now and then...)]
+		[vicky.speech(过来，我的小猎物，)]她顽皮地低吼道，将你拉倒在沙发旁。接着又用一只手臂环上你，霸道地将你拥入她裸露的胸膛，然后叹息道，[vicky.speech(我确实喜欢独处，但偶尔有人陪伴也挺好……)]
 	</p>
 	<p>
-		Feeling Vicky's body relax as you snuggle into her, you wonder what your next move should be...
+		你依偎进维姬的身体，瞬间感觉到她的身体放松下来，你思考起接下来该干嘛……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_APARTMENT_POST_SEX"><![CDATA[
 	<p>
-		Well and truly satisfied from having sex twice in one evening, Vicky collapses down onto the sofa with a big sigh. Grabbing hold of your [pc.arm], she dominantly pulls you down next to her, before growling, [vicky.speech(You really are a lot of fun, my little prey...)]
+		一夜两次令维姬大感满足，她瘫倒在沙发上，长吁一口气。随后，她抓住你的[pc.arm]，霸道地把你拉到她身边，低吼道，[vicky.speech(你真的很有意思，我的小猎物……)]
 	</p>
 	<p>
-		Feeling the wolf-girl's furry chest rise and fall beneath you, you allow yourself to relax and snuggle into her, before starting to make small talk...
+		感受到狼女毛绒绒的胸膛在你身下起伏，你放松身体，依偎在她身边，开始与她闲聊……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_APARTMENT_SLEEP"><![CDATA[
 	<p>
-		You and Vicky relax on the sofa and talk for several hours about all sorts of things, from the state of Dominion, to how her day's gone, to your relationship with Lilaya and what you've seen around the city. Finally, after a relaxing evening spend cuddling into one another on the sofa, the wolf-girl yawns and declares, [vicky.speech(I'm tired... Come on, my little prey, let's sleep...)]
+		你和维姬在沙发上聊天说地了好几个小时，从御城区的状态，她一天过得如何，到你与莉莱雅的关系以及你在城市周围看到的景象。你们相互依偎在沙发上，度过轻松的时光。终于到了晚上，狼女打了个哈欠，说道，[vicky.speech(我累了……来吧，我的小猎物，让我们睡觉吧……)]
 	</p>
 	<p>
-		Grabbing hold of you, Vicky dominantly leads you into her bedroom. Pulling the duvet off her bed, she drags you into bed, before wrapping her arms around you and cuddling you. It looks like you have no choice but to sleep here with her here tonight...
+		维姬霸道地把你拉进卧室。她拽开床上的被子，拖你上床，然后伸出双臂，把你紧拥于怀中。看来今晚你只能和她在这里睡了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_APARTMENT_END"><![CDATA[
 	<p>
-		Vicky's bed is extremely comfortable, and with the wolf-girl's clean, furry body pressed up against you, you're able to relax and begin to drift off to sleep. As you do so, Vicky softly sighs and whispers into your ear, [vicky.speech(I'm glad I've got you, my little prey...)]
+		维姬的床铺柔软舒适，狼女那洁净且毛绒绒的身躯紧紧依偎着你，让你不由自主地放松身心，渐渐进入了梦乡。就在此时，维姬轻声叹息，在你耳边细语道，[vicky.speech(很高兴能得到你，我的小猎物……)]
 	</p>
 	<p>
-		Although she inadvertently wakes you several times throughout the night as she shuffles about or pulls you tightly into her body, you manage to get a good night's rest, and before you know it her alarm clock is loudly buzzing for the two of you to wake up. After reaching across to hit the snooze button, Vicky wraps her arms and legs around you, before tightly hugging you and sleepily muttering, [vicky.speech(Just five more minutes...)]
+		尽管她在夜晚不时地翻身或是紧紧抱住你，让你无意间醒来几次，但你还是得到了良好的休息。不知不觉间，她的闹钟已经开始大声嗡鸣起来，提醒你们该起床了。维姬伸手按下了贪睡按钮，然后伸出双臂和双腿紧抱你，她带着困意喃喃道，[vicky.speech(再睡五分钟……)]
 	</p>
 	<p>
-		Completely and utterly immobilised by the dominant wolf-girl's embrace, you have no choice but to snuggle into her and wait for the alarm to start buzzing again. Soon enough, it does just that, and after letting out an annoyed growl that sends a rumbling vibration through your whole body, Vicky releases you and rolls out of bed.
+		狼女霸道的拥抱令你无法动弹，只能依偎在她身边，等待闹钟再次响起。没过多久，闹钟又响了，维姬发出恼怒的低吼，浑身颤动，随后她放开你，滚下床去。
 	</p>
 	<p>
-		[vicky.speech(Thanks for spending the night with me, my little prey,)] the wolf-girl yawns, before mumbling, [vicky.speech(I'm really not a morning person, so it'd probably be best if you left now...)]
+		[vicky.speech(谢谢你陪我度过这个夜晚，我的小猎物。)]狼女打了个哈欠，喃喃道，[vicky.speech(我真的不是个早起党，所以你还是现在离开为好……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VICKY_APARTMENT_END_LEAVE"><![CDATA[
 	<p>
-		Not wanting to overstay your welcome, you tell Vicky that you enjoyed the time you've spent together, before heading back through her apartment and across the shop floor to the exit. Following you the whole way, Vicky grabs hold of you as you unlock the door, before spinning you around to face her.
+		你不愿在此过多停留，于是向维姬表达了与她共度时光的愉悦之情。随后，你穿过公寓和店铺，朝着出口方向走去。然而，维姬一直紧随其后。就在你即将推开门的一刹那，她迅速抓住你的手臂，让你转身面对她。
 	</p>
 	<p>
-		[vicky.speech(Come back soon, my little prey,)] she says, before dominantly dragging her large, flat tongue over your neck and face. Flashing you a big, toothy grin, she happily grunts, [vicky.speech(Take care of yourself out there!)]
+		[vicky.speech(早点回来，我的小猎物。)]她说着，霸道地用扁平的大舌头舔舐你的脖子和脸。接着咧嘴一笑，开心地哼哼着，[vicky.speech(在外面照顾好自己！)]
 	</p>
 	<p>
-		Saying goodbye, you exit Vicky's shop and once again find yourself standing in the shopping arcade. As the wolf-girl locks the door behind you and returns to her apartment, you wonder what to do next...
+		道别后，你离开了维姬的商店，重新置身于购物中心之中。在你身后，狼女锁好门，返回公寓，你想着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

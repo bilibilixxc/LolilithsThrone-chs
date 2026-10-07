@@ -7,53 +7,53 @@ package com.lilithsthrone.game.character.body.types;
  */
 public enum BodyPartType {
 	
-	GENERIC("generic"),
+	GENERIC("一般"),
 	
 	// Limbs/body:
-	ARM("arms"),
-	LEG("legs"),
-	SKIN("skin"),
-	TAIL("tail"),
-	TENTACLE("tentacle"),
-	WING("wings"),
+	ARM("手臂"),
+	LEG("腿"),
+	SKIN("皮肤"),
+	TAIL("尾巴"),
+	TENTACLE("触手"),
+	WING("翅膀"),
 	
 	// Ass:
-	ASS("ass"),
-	ANUS("anus"),
+	ASS("屁股"),
+	ANUS("肛门"),
 
 	// Breasts:
-	BREAST("breasts"),
-	NIPPLES("nipples"),
-	MILK("milk"),
+	BREAST("乳房"),
+	NIPPLES("乳头"),
+	MILK("乳汁"),
 	
 	// Crotch-boobs:
-	BREAST_CROTCH("crotch-breasts"),
-	NIPPLES_CROTCH("crotch-nipples"),
-	MILK_CROTCH("crotch-breast-milk"),
+	BREAST_CROTCH("胯乳"),
+	NIPPLES_CROTCH("胯乳乳头"),
+	MILK_CROTCH("胯乳乳汁"),
 	
 	// Head:
-	ANTENNA("antenna"),
-	EAR("ears"),
-	EYE("eyes"),
-	FACE("face"),
-	MOUTH("mouth"),
-	TONGUE("tongue"),
-	HAIR("hair"),
-	HORN("horns"),
+	ANTENNA("触须"),
+	EAR("耳朵"),
+	EYE("眼睛"),
+	FACE("面部"),
+	MOUTH("嘴巴"),
+	TONGUE("舌头"),
+	HAIR("毛发"),
+	HORN("角"),
 	
 	// Penis:
-	PENIS("penis"),
-	TESTICLES("testicles"),
-	CUM("cum"),
+	PENIS("阴茎"),
+	TESTICLES("阴囊"),
+	CUM("精液"),
 	
 	// Vagina:
-	CLIT("clitoris"),
-	VAGINA("vagina"),
-	GIRL_CUM("girl cum"),
+	CLIT("阴蒂"),
+	VAGINA("阴道"),
+	GIRL_CUM("爱液"),
 	
 	// Spinneret:
 
-	SPINNERET("spinneret");
+	SPINNERET("丝囊");
 	
 	private String name;
 	private BodyPartType(String name){

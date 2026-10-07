@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
 		<value>200</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[latex corset]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[latex corsets]]></namePlural>
-		<description><![CDATA[A tight corset made from latex.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[乳胶束腰]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乳胶束腰]]></namePlural>
+		<description><![CDATA[一件用乳胶制作的束腰。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>STOMACH</slot>
@@ -46,27 +45,25 @@
 	</coreAtributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the latex corset around [npc.her] waist and [npc.verb(snap)] the clips together.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the latex corset around [npc2.namePos] waist and [npc.verb(snap)] the clips together.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the latex corset around [npc2.namePos] waist as much as possible and forcibly [npc.verb(snap)] the clips together.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]系紧[npc.her]腰上的乳胶束腰并扣上搭扣。]]></self>
+		<other><![CDATA[
+[npc.Name]系紧[npc2.namePos]腰上的乳胶束腰并扣上搭扣。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]系紧[npc2.namePos]腰上的乳胶束腰并用力的拉紧并扣上搭扣。
+]]></otherRough>
 	</replacementText>
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] latex corset.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] latex corset.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(rip)] the latex corset off [npc2.namePos] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的乳胶束腰解了下来。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的乳胶束腰解了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的乳胶束腰扯了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

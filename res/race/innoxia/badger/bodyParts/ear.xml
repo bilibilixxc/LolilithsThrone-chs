@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ear>
 	<race>innoxia_badger</race>
 	
-	<transformationName><![CDATA[badger]]></transformationName>
+	<transformationName><![CDATA[獾]]></transformationName>
 	
 	<coveringType>innoxia_badger_fur</coveringType>
 	
 	<tags/>
 	
-	<name><![CDATA[ear]]></name>
-	<namePlural><![CDATA[ears]]></namePlural>
+	<name><![CDATA[耳]]></name>
+	<namePlural><![CDATA[耳朵]]></namePlural>
 	
 	<descriptorsMasculine>
-		<descriptor>furry</descriptor>
-		<descriptor>badger-like</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[獾一般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>badger-like</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[獾一般]]></descriptor>
 	</descriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		They quickly take on a distinctly badger-like shape by growing out into stubby ovals.
+		它们立刻长成粗壮的椭圆形，呈现出明显的獾状。
 		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-		 A layer of [npc.earFullDescriptionColour] quickly grows to cover them,
+		一层[npc.earFullDescriptionColour]迅速长出并覆盖住了它们，
 		#ELSE
-		 Just like the rest of [npc.her] body, they're made out of [npc.earFullDescription],
+		正如[npc.her]身体的其他部分一样，它们[npc.earFullDescription]，
 		#ENDIF
-		 and as the transformation finishes, [npc.she] experimentally [npc.verb(twitch)] [npc.her] new badger-like ears back and forth.
-		 <br/>[npc.Name] now [npc.has] [style.boldBadger(badger-like ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].
-	]]></transformationDescription>
+		当转化结束时，[npc.she]试探性地前后摇摆[npc.her]新长出的獾耳朵。
+		<br/>[npc.Name]现在拥有了[style.boldBadger(獾般的耳朵)]，它们[npc.materialCompositionDescriptor][npc.earFullDescription]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.She] [npc.has] a pair of #IF(npc.isPiercedEar()) pierced,#ENDIF badger-like ears, which are positioned high up on [npc.her] head and are [npc.materialCompositionDescriptor] [npc.earFullDescription(true)].
-	]]></bodyDescription>
+		[npc.She]有着一对獾般的耳朵#IF(npc.isPiercedEar())，且已经打过孔#ENDIF，正长在[npc.her]头顶上，[npc.materialCompositionDescriptor][npc.earFullDescription(true)]。
+]]></bodyDescription>
 	
 </ear>

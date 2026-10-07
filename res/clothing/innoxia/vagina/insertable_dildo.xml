@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>150</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[insertable dildo]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[insertable dildos]]></namePlural>
-		<description><![CDATA[A dildo-shaped sex toy, designed to be discreetly inserted into the vagina.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[插入式假阳具]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[插入式假阳具]]></namePlural>
+		<description><![CDATA[一个假阳具形状的性玩具，用于隐蔽地插入阴道。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>VAGINA</slot>
@@ -64,27 +63,27 @@
 	</sexAttributesSelf>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(push)] the dildo into [npc.her] [npc.pussy+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the dildo into [npc2.namePos] [npc2.pussy+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] firmly [npc.verb(hold)] [npc2.name] still as [npc.she] roughly [npc.verb(force)] the dildo into [npc2.her] [npc2.pussy+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将假阳具塞进[npc.her][npc.pussy+]。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把假阳具插进[npc2.namePos][npc2.pussy+]。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]并且粗暴地把假阳具插进[npc2.her][npc2.pussy+]。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the dildo out from [npc.her] [npc.pussy+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the dildo out from [npc2.namePos] [npc2.pussy+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.namePos] dildo and [npc.verb(yank)] it out of [npc2.her] [npc2.pussy+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把假阳具从[npc.her][npc.pussy+]拔出。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]把假阳具从[npc2.namePos][npc2.pussy+]拔出。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]紧紧抓住[npc2.namePos]的假阳具并从[npc2.her][npc2.pussy+]里扯出来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

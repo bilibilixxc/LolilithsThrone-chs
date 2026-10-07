@@ -125,7 +125,7 @@ public abstract class AbstractFetish {
 
 		if(attributeModifiers != null) {
 			for (Entry<AbstractAttribute, Integer> e : attributeModifiers.entrySet()) {
-				modifiersList.add("<b>"+(e.getValue() > 0 ? "+" : "") + e.getValue() + "</b> <b style='color: "+ e.getKey().getColour().toWebHexString()+ ";'>"+ Util.capitaliseSentence(e.getKey().getAbbreviatedName())+ "</b>");
+				modifiersList.add("<b>"+(e.getValue() > 0 ? "+" : "") + e.getValue() + "</b><b style='color: "+ e.getKey().getColour().toWebHexString()+ ";'>"+ Util.capitaliseSentence(e.getKey().getAbbreviatedName())+ "</b>");
 			}
 		}
 	}
@@ -166,15 +166,15 @@ public abstract class AbstractFetish {
 	protected static String getGenericFetishDesireDescription(GameCharacter target, FetishDesire desire, String descriptor) {
 		switch(desire) {
 			case ZERO_HATE:
-				return UtilText.parse(target, "You absolutely hate "+descriptor+".");
+				return UtilText.parse(target, "你极其厌恶"+descriptor+"。");
 			case ONE_DISLIKE:
-				return UtilText.parse(target, "You don't like "+descriptor+".");
+				return UtilText.parse(target, "你不喜欢"+descriptor+"。");
 			case TWO_NEUTRAL:
-				return UtilText.parse(target, "You are indifferent to "+descriptor+".");
+				return UtilText.parse(target, "你对"+descriptor+"无感。");
 			case THREE_LIKE:
-				return UtilText.parse(target, "You like "+descriptor+".");
+				return UtilText.parse(target, "你喜欢"+descriptor+"。");
 			case FOUR_LOVE:
-				return UtilText.parse(target, "You love "+descriptor+".");
+				return UtilText.parse(target, "你热爱"+descriptor+"。");
 		}
 		return "";
 	}

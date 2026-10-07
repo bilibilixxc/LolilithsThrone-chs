@@ -68,12 +68,12 @@ public class LovingActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Caress face";
+			return "爱抚脸颊";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently caress [npc2.namePos] face to make [npc2.herHim] feel loved.";
+			return "轻柔地抚摸[npc2.namePos]的面庞，向[npc2.herHim]展示爱意。";
 		}
 		
 		@Override
@@ -86,21 +86,21 @@ public class LovingActions {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append(UtilText.returnStringAtRandom(
-					"Wanting to make [npc2.name] feel loved, [npc.name] [npc.verb(lift)] [npc.her] [npc.hand], before gently stroking [npc.her] [npc.fingers+] over [npc2.her] face.",
-					"Lifting [npc.her] [npc.hand], [npc.name] softly [npc.verb(trace)] [npc.her] [npc.fingers+] over [npc2.namePos] cheek in order to make [npc2.herHim] feel loved.",
-					"Seeking to put [npc2.name] at ease, [npc.name] [npc.verb(raise)] [npc.her] [npc.hand], before using [npc.her] [npc.fingers+] to lovingly caress [npc2.her] face."));
+					"[npc.Name]希望[npc2.name]感受到爱意，缓缓抬起[npc.hand]，用[npc.fingers+]轻柔地抚摸过[npc2.her]的面庞。",
+					"[npc.Name]缓缓抬起[npc.hand]，用[npc.fingers+]轻柔地滑过[npc2.namePos]的脸颊，向[npc2.herHim]展示着浓浓爱意。",
+					"[npc.Name]希望[npc2.name]能够平静下来，于是抬起[npc.hand]，用[npc.fingers+]宠溺地爱抚着[npc2.her]的脸庞。"));
 			
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A happy [npc2.moan] escapes from [npc2.namePos] mouth in response to this contact, causing [npc.name] to smile in delight.",
-							" The happy sigh which escapes [npc2.namePos] mouth is more than enough to let [npc.name] know that [npc.her] gentle caress has had the desired effect.",
-							" In response to this, [npc2.name] [npc2.verb(let)] out a happy [npc2.moan], letting [npc.name] know that [npc.her] gesture is much appreciated."));
+							"一声愉快的[npc2.moan]从[npc2.namePos]口中冒出，回应着这次接触，[npc.name]见状也开心地微笑起来。",
+							"一声愉快的喘息声从[npc2.namePos]的口中冒出，这足以让[npc.name]知道[npc.her]轻柔的爱抚已经达到了预想的效果。",
+							"[npc2.name]发出了愉快的[npc2.moan]，作为对此的回应，让[npc.name]知道[npc.her]的举动得到了回报。"));
 				} else {
 					sb.append(UtilText.returnStringAtRandom(
-							" A protesting yelp escapes from [npc2.namePos] mouth as [npc2.she] [npc2.verb(continue)] to resist [npc.namePos] advances.",
-							" The frustrated exclamation which immediately escapes from [npc2.namePos] mouth is not what [npc.name] [npc.was] looking for, and [npc.she] can't help but sigh as [npc2.name] [npc2.verb(continue)] to resist.",
-							" After letting out a shocked cry, tears start to well up in [npc2.namePos] [npc2.eyes], letting [npc.name] know that [npc.her] advances are not having the effect which [npc.she] [npc.was] looking for."));
+							"[npc2.namePos]的口中发出一声抗拒的尖叫，[npc2.she]依然对[npc.namePos]的进一步动作表示抵抗。",
+							"[npc2.namePos]的口中发出一声恼怒的大叫，这可不是[npc.name]想要的，见到[npc2.name]依然在抵抗，[npc.she]不禁长叹。",
+							"[npc2.name]发出了一声震惊的尖叫，泪水顿时从[npc2.eyes]中溢出，也让[npc.name]知道了[npc.her]的举动并没有达到期望的效果。"));
 				}
 			}
 			
@@ -149,12 +149,12 @@ public class LovingActions {
 		
 		@Override
 		public String getActionTitle() {
-			return "Kiss cheek";
+			return "亲吻脸颊";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Plant a loving kiss on [npc2.namePos] cheek.";
+			return "在[npc2.namePos]的脸颊上送上一吻。";
 		}
 		
 		@Override
@@ -167,21 +167,21 @@ public class LovingActions {
 			StringBuilder sb = new StringBuilder();
 
 			sb.append(UtilText.returnStringAtRandom(
-					"Wanting to show [npc2.name] that [npc2.sheIs] loved, [npc.name] [npc.verb(lean)] in towards [npc2.herHim], before planting a gentle kiss on [npc2.her] cheek.",
-					"Leaning in towards [npc2.name], [npc.name] [npc.verb(purse)] [npc.her] [npc.lips+], before planting a loving kiss on [npc2.her] cheek.",
-					"Seeking to remind [npc2.name] of how much [npc2.sheIsFull] loved, [npc.name] [npc.verb(lean)] in towards [npc2.herHim], before pursing [npc.her] [npc.lips+] and kissing [npc2.her] cheek."));
+					"[npc.Name]希望[npc2.name]感受到爱意，身体微微前倾，在[npc2.her]的脸颊上送上了轻柔的一吻。",
+					"[npc.Name]向[npc2.name]微微前倾，嘟起[npc.lips+]，在[npc2.her]的脸颊上留下了宠爱的一吻。",
+					"[npc.Name]希望[npc2.name]感受到爱意，身体微微前倾，嘟起[npc.lips+]在[npc2.her]的脸颊上吻了一下。"));
 
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A happy [npc2.moan] escapes from [npc2.namePos] mouth in response to this contact, causing [npc.name] to smile in delight.",
-							" The happy sigh which escapes [npc2.namePos] mouth is more than enough to let [npc.name] know that [npc.her] kiss has had the desired effect.",
-							" In response to this, [npc2.name] [npc2.verb(let)] out a happy [npc2.moan], letting [npc.name] know that [npc.her] gesture is much appreciated."));
+							"一声愉快的[npc2.moan]从[npc2.namePos]口中冒出，回应着这次接触，[npc.name]见状也开心地微笑起来。",
+							"一声愉快的喘息声从[npc2.namePos]的口中冒出，这足以让[npc.name]知道[npc.her]的吻已经达到了预想的效果。",
+							"[npc2.name]发出了一声愉快的[npc2.moan]，作为对此的回应，让[npc.name]知道[npc.her]的举动得到了回报。"));
 				} else {
 					sb.append(UtilText.returnStringAtRandom(
-							" A protesting yelp escapes from [npc2.namePos] mouth as [npc2.she] [npc2.verb(continue)] to resist [npc.namePos] advances.",
-							" The frustrated exclamation which immediately escapes from [npc2.namePos] mouth is not what [npc.name] [npc.was] looking for, and [npc.she] can't help but sigh as [npc2.name] [npc2.verb(continue)] to resist.",
-							" After letting out a shocked cry, tears start to well up in [npc2.namePos] [npc2.eyes], letting [npc.name] know that [npc.her] advances are not having the effect which [npc.she] [npc.was] looking for."));
+							"[npc2.namePos]的口中发出一声抗拒的尖叫，[npc2.she]依然对[npc.namePos]的进一步动作表示抵抗。",
+							"[npc2.namePos]的口中发出一声恼怒的大叫，这可不是[npc.name]想要的，见到[npc2.name]依然在抵抗，[npc.she]不禁长叹。",
+							"[npc2.name]发出了一声震惊的尖叫，泪水顿时从[npc2.eyes]中溢出，也让[npc.name]知道了[npc.her]的举动并没有达到期望的效果。"));
 				}
 			}
 			
@@ -219,11 +219,11 @@ public class LovingActions {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Stroke belly";
+			return "轻抚孕肚";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Gently stroke [npc2.namePos] pregnant belly.";
+			return "轻抚[npc2.namePos]已经怀孕的肚子。";
 		}
 		@Override
 		public SexActionCategory getCategory() {
@@ -236,40 +236,40 @@ public class LovingActions {
 			boolean performerPossiblyFather = Main.sex.getCharacterTargetedForSexAction(this).isCharacterPossiblyFather(Main.sex.getCharacterPerformingAction());
 			boolean performerIsFather = performerPossiblyFather && Main.sex.getCharacterTargetedForSexAction(this).getPotentialPartnersAsMother().size()==1;
 			
-			String pregnantBellyDesc = Util.randomItemFromValues("pregnant belly", "swollen belly", "rounded tummy", "pregnant tummy");
-			String fatherText = Main.sex.getCharacterPerformingAction().isFeminine()?"'father'":"father";
+			String pregnantBellyDesc = Util.randomItemFromValues("怀孕的小腹", "隆起的小腹", "圆滚的肚子", "怀孕的肚子");
+			String fatherText = Main.sex.getCharacterPerformingAction().isFeminine()?"“父亲”":"父亲";
 			
 			sb.append(UtilText.returnStringAtRandom(
-					"Wanting [npc2.name] to know that [npc2.sheIs] loved, [npc.name] [npc.verb(place)] [npc.her] [npc.hands] on [npc2.her] "+pregnantBellyDesc+" and [npc.verb(give)] it a gentle stroke.",
-					"Placing [npc.her] [npc.hands] on [npc2.namePos] "+pregnantBellyDesc+", [npc.name] [npc.verb(start)] lovingly stroking and patting it.",
-					"Seeking to show [npc2.name] how much [npc.she] [npc.verb(love)] [npc2.herHim], [npc.name] gently [npc.verb(place)] [npc.her] [npc.hands] on [npc2.her] "+pregnantBellyDesc+", before giving it several loving strokes."));
+					"[npc.Name]希望[npc2.name]感受到爱意，将[npc.hands]搭在[npc2.her]"+pregnantBellyDesc+"上，轻轻抚摸着。",
+					"[npc.Name]将[npc.hands]放在[npc2.namePos]"+pregnantBellyDesc+"上，宠爱地抚摸、轻拍着。",
+					"[npc.Name]希望[npc2.name]感受到爱意，将[npc.hands]轻轻地放在[npc2.her]的"+pregnantBellyDesc+"上，宠爱地摸了几下。"));
 			
 			if(performerIsFather) {
 				sb.append(UtilText.returnStringAtRandom(
-						" Knowing that [npc.she] [npc.is] the "+fatherText+" of the offspring growing inside of [npc2.namePos] belly,"
-								+ " [npc.name] [npc.verb(make)] sure to be extra gentle and loving as [npc.she] [npc.verb(run)] [npc.her] [npc.hands] over [npc.her] partner's "+pregnantBellyDesc+".",
-						" As it's a certainty that [npc.name] [npc.is] the "+fatherText+" of [npc2.namePos] offspring, [npc.she] [npc.verb(decide)] to give [npc.her] partner's belly a few extra gentle strokes.",
-						" As [npc.she] [npc.is] definitely the "+fatherText+" of [npc2.namePos] offspring, [npc.name] [npc.verb(make)] sure to be extra gentle and loving while stroking [npc.her] partner's "+pregnantBellyDesc+"."));
+						"[npc.name]知道[npc.she]就是[npc2.namePos]肚子里孩子的"+fatherText+"，"
+								+ "把手放在对方"+pregnantBellyDesc+"上抚摸时，显得格外轻柔且充满爱意。",
+						"[npc.name]确信自己就是[npc2.namePos]肚子里孩子的"+fatherText+"，又在对方的小腹上多抚摸了一会儿。",
+						"[npc.name]肯定是[npc2.namePos]肚子里孩子的"+fatherText+"，于是便在对方"+pregnantBellyDesc+"上多抚摸了一会儿。"));
 				
 			} else if(performerPossiblyFather) {
 				sb.append(UtilText.returnStringAtRandom(
-						" Knowing that [npc.she] might be the "+fatherText+" of the offspring growing inside of [npc2.namePos] belly,"
-								+ " [npc.name] [npc.verb(make)] sure to be extra gentle and loving as [npc.she] [npc.verb(run)] [npc.her] [npc.hands] over [npc.her] partner's "+pregnantBellyDesc+".",
-						" As it's possible that [npc.name] might be the "+fatherText+" of [npc2.namePos] offspring, [npc.she] [npc.verb(decide)] to give [npc.her] partner's belly a few extra gentle strokes.",
-						" As [npc.she] might be the "+fatherText+" of [npc2.namePos] offspring, [npc.name] [npc.verb(make)] sure to be extra gentle and loving while stroking [npc.her] partner's "+pregnantBellyDesc+"."));
+						"[npc.name]知道[npc.she]可能是[npc2.namePos]肚子里孩子的"+fatherText+"，"
+								+ "把手放在对方"+pregnantBellyDesc+"上抚摸时，显得格外轻柔且充满爱意。",
+						"[npc.name]认为自己或许是[npc2.namePos]肚子里孩子的"+fatherText+"，又在对方的小腹上多抚摸了一会儿。",
+						"[npc.name]或许是[npc2.namePos]肚子里孩子的"+fatherText+"，于是便在对方"+pregnantBellyDesc+"上多抚摸了一会儿。"));
 			}
 
 			if(!isTargetedCharacterInanimate()) {
 				if(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING) {
 					sb.append(UtilText.returnStringAtRandom(
-							" A happy [npc2.moan] escapes from [npc2.namePos] mouth in response to this contact, causing [npc.name] to smile in delight.",
-							" The happy sigh which escapes [npc2.namePos] mouth is more than enough to let [npc.name] know that [npc.her] gentle caress has had the desired effect.",
-							" In response to this, [npc2.name] [npc2.verb(let)] out a happy [npc2.moan], letting [npc.name] know that [npc.her] gesture is much appreciated."));
+							"一声愉快的[npc2.moan]从[npc2.namePos]口中冒出，回应着这次接触，[npc.name]见状也开心地微笑起来。",
+							"一声愉快的喘息声从[npc2.namePos]的口中冒出，这足以让[npc.name]知道[npc.her]轻柔的爱抚已经达到了预想的效果。",
+							"[npc2.name]发出了一声愉快的[npc2.moan]，作为对此的回应，让[npc.name]知道[npc.her]的举动得到了回报。"));
 				} else {
 					sb.append(UtilText.returnStringAtRandom(
-							" A protesting yelp escapes from [npc2.namePos] mouth as [npc2.she] [npc2.verb(continue)] to resist [npc.namePos] advances.",
-							" The frustrated exclamation which immediately escapes from [npc2.namePos] mouth is not what [npc.name] [npc.was] looking for, and [npc.she] can't help but sigh as [npc2.name] [npc2.verb(continue)] to resist.",
-							" After letting out a shocked cry, tears start to well up in [npc2.namePos] [npc2.eyes], letting [npc.name] know that [npc.her] advances are not having the effect which [npc.she] [npc.was] looking for."));
+							"[npc2.namePos]的口中发出一声抗拒的尖叫，[npc2.she]依然对[npc.namePos]的进一步动作表示抵抗。",
+							"[npc2.namePos]的口中发出一声恼怒的大叫，这可不是[npc.name]想要的，见到[npc2.name]依然在抵抗，[npc.she]不禁长叹。",
+							"[npc2.name]发出了一声震惊的尖叫，泪水顿时从[npc2.eyes]中溢出，也让[npc.name]知道了[npc.her]的举动并没有达到期望的效果。"));
 				}
 			}
 			

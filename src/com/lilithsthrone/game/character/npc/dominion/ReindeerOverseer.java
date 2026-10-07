@@ -182,7 +182,7 @@ public class ReindeerOverseer extends NPC {
 	@Override
 	public String getDescription() {
 		return (UtilText.parse(this,
-				"[npc.Name] is an overseer of one of the many groups of reindeer-morphs which are working throughout Dominion to keep the streets shovelled clear of snow."));
+				"[npc.Name]是某个驯鹿化形小队的监工，在整个御城区清理积雪，扫清街道。"));
 	}
 	
 	@Override
@@ -232,10 +232,10 @@ public class ReindeerOverseer extends NPC {
 	public String getTraderDescription() {
 		return UtilText.parse(this,
 				"<p>"
-					+ "[npc.speech(I'm not really interested in buying anything from you,)]"
-					+ " [npc.name] explains, leading you over to a nearby cart which is stacked high with boxes,"
-					+ " [npc.speech(but everything here is for sale."
-						+ " We passed through the Shinrin highlands on our way to Dominion this year, so I've got some of the youko's traditional clothing on offer!)]"
+					+ "[npc.speech(没什么兴趣从你那里买东西，)]"
+					+ "[npc.name]解释着便领你去了附近的拖车边，上面高高地堆满了盒子，"
+					+ "[npc.speech(但是我卖的东西都在这了。"
+						+ "我们今年穿越心林高地来到御城区，所以能提供一些妖狐的传统服饰！)]"
 				+ "</p>");
 	}
 

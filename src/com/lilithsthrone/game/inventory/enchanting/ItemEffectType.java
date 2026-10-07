@@ -81,7 +81,7 @@ import com.lilithsthrone.utils.colours.PresetColour;
 public class ItemEffectType {
 	
 	public static AbstractItemEffectType TESTING = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Test item."),
+			"测试物品"),
 		PresetColour.GENERIC_ARCANE) {
 		
 		@Override
@@ -93,31 +93,31 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType DYE_BRUSH = new AbstractItemEffectType(Util.newArrayListOfValues(
-				"Recolours a piece of clothing."),
+				"重新为一件衣物上色。"),
 			PresetColour.GENERIC_ARCANE) {
 		
 		@Override
 		public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
 			return "<p>"
-					+ "You use the dye brush."
+					+ "你使用了染色刷。"
 					+ "</p>";
 		}
 	};
 	
 	public static AbstractItemEffectType REFORGE_HAMMER = new AbstractItemEffectType(Util.newArrayListOfValues(
-				"Changes a weapon's damage type."),
+				"修改武器的伤害类型。"),
 			PresetColour.GENERIC_ARCANE) {
 		
 		@Override
 		public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
 			return "<p>"
-					+ "You use the reforge hammer."
+					+ "你使用了重铸锤。"
 					+ "</p>";
 		}
 	};
 	
 	public static AbstractItemEffectType USED_CONDOM_DRINK = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Provides a dose of stored cum."),
+			"提供一份存储的精液。"),
 			PresetColour.GENERIC_SEX) {
 		@Override
 		public boolean isBreakOutOfInventory() {
@@ -130,7 +130,7 @@ public class ItemEffectType {
 	};
 
 	public static AbstractItemEffectType FILLED_MOO_MILKER_DRINK = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Provides a milky drink."),
+			"奶香味的饮品。"),
 			PresetColour.GENERIC_SEX) {
 		
 		@Override
@@ -142,7 +142,7 @@ public class ItemEffectType {
 	
 	
 	public static AbstractItemEffectType ORIENTATION_CHANGE = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Sets orientation to gynephilic.",
+			"将性取向设置为女性恋。",
 			Attribute.MAJOR_CORRUPTION.getFormattedValue(50)),
 			PresetColour.FEMININE_PLUS) {
 		
@@ -182,44 +182,44 @@ public class ItemEffectType {
 			
 			if(primaryModifier!=null && primaryModifier!=TFModifier.NONE) {
 				if(primaryModifier==TFModifier.REMOVAL) {
-					descriptions.add("No effect.");
+					descriptions.add("没有效果。");
 					
 				} else if(primaryModifier==TFModifier.ORIENTATION_GYNEPHILIC) {
-					descriptions.add("Sets orientation to [style.colourFeminineStrong(gynephilic)]");
+					descriptions.add("将性取向设置为[style.colourFeminineStrong(女性恋)]");
 					descriptions.add(Attribute.MAJOR_CORRUPTION.getFormattedValue(5));
 					
 				} else if(primaryModifier==TFModifier.ORIENTATION_AMBIPHILIC) {
-					descriptions.add("Sets orientation to [style.colourAndrogynous(ambiphilic)]");
+					descriptions.add("将性取向设置为[style.colourAndrogynous(双性恋)]");
 					descriptions.add(Attribute.MAJOR_CORRUPTION.getFormattedValue(5));
 					
 				} else if(primaryModifier==TFModifier.ORIENTATION_ANDROPHILIC) {
-					descriptions.add("Sets orientation to [style.colourMasculineStrong(androphilic)]");
+					descriptions.add("将性取向设置为[style.colourMasculineStrong(男性恋)]");
 					descriptions.add(Attribute.MAJOR_CORRUPTION.getFormattedValue(5));
 					
 				} else if(primaryModifier==TFModifier.PERSONALITY_TRAIT_SPEECH_LISP) {
 					if(potency==TFPotency.MINOR_DRAIN) {
-						descriptions.add("Removes <b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_LISP.getColour().toWebHexString()+";'>lisp</b>");
+						descriptions.add("移除<b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_LISP.getColour().toWebHexString()+";'>口齿不清</b>");
 					} else {
-						descriptions.add("Adds <b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_LISP.getColour().toWebHexString()+";'>lisp</b>");
+						descriptions.add("添加<b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_LISP.getColour().toWebHexString()+";'>口齿不清</b>");
 					}
 					
 				} else if(primaryModifier==TFModifier.PERSONALITY_TRAIT_SPEECH_STUTTER) {
 					if(potency==TFPotency.MINOR_DRAIN) {
-						descriptions.add("Removes <b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_STUTTER.getColour().toWebHexString()+";'>stutter</b>");
+						descriptions.add("移除<b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_STUTTER.getColour().toWebHexString()+";'>口吃</b>");
 					} else {
-						descriptions.add("Adds <b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_STUTTER.getColour().toWebHexString()+";'>stutter</b>");
+						descriptions.add("添加<b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_STUTTER.getColour().toWebHexString()+";'>口吃</b>");
 					}
 					
 				} else if(primaryModifier==TFModifier.PERSONALITY_TRAIT_SPEECH_SLOVENLY) {
 					if(potency==TFPotency.MINOR_DRAIN) {
-						descriptions.add("Removes <b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_SLOVENLY.getColour().toWebHexString()+";'>slovenly speech</b>");
+						descriptions.add("移除<b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_SLOVENLY.getColour().toWebHexString()+";'>发音模糊</b>");
 					} else {
-						descriptions.add("Adds <b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_SLOVENLY.getColour().toWebHexString()+";'>slovenly speech</b>");
+						descriptions.add("添加<b style='color:"+TFModifier.PERSONALITY_TRAIT_SPEECH_SLOVENLY.getColour().toWebHexString()+";'>发音模糊</b>");
 					}
 				}
 				
 			} else {
-				descriptions.add("Enchantable.");
+				descriptions.add("可附魔");
 			}
 			
 			return descriptions;
@@ -237,7 +237,7 @@ public class ItemEffectType {
 							|| primaryModifier==TFModifier.ORIENTATION_ANDROPHILIC)) {
 					return UtilText.parse(target,
 							"<p style='text-align:center;'>"
-									+ "[style.colourDisabled(As a sex doll, [npc.name] can never be anything other than ambiphilic...)]"
+									+ "[style.colourDisabled(作为性爱玩偶，[npc.name]永远只能是双性恋……)]"
 								+ "</p>");
 				}
 				
@@ -247,8 +247,8 @@ public class ItemEffectType {
 					return UtilText.parse(target,
 							"<p style='text-align:center;'>"
 									+ (alreadyGynephilic
-											?"[style.colourDisabled([npc.NameIsFull] already gynephilic, so nothing happens...)]"
-											:"[npc.NameIsFull] now [style.colourFemininePlus(gynephilic)]!")
+											?"[style.colourDisabled([npc.NameIsFull]已经是女性恋了，所以无事发生……)]"
+											:"[npc.nameIsFull]现在是[style.colourFemininePlus(女性恋)]了！")
 								+ "</p>");
 					
 				} else if(primaryModifier==TFModifier.ORIENTATION_AMBIPHILIC) {
@@ -257,8 +257,8 @@ public class ItemEffectType {
 					return UtilText.parse(target,
 							"<p style='text-align:center;'>"
 									+ (alreadyAmbiphilic
-											?"[style.colourDisabled([npc.NameIsFull] already ambiphilic, so nothing happens...)]"
-											:"[npc.NameIsFull] now [style.colourAndrogynous(ambiphilic)]!")
+											?"[style.colourDisabled([npc.NameIsFull]已经是双性恋了，无事发生……)]"
+											:"[npc.NameIsFull]现在是[style.colourAndrogynous(双性恋)]了！")
 								+ "</p>");
 					
 					
@@ -268,8 +268,8 @@ public class ItemEffectType {
 					return UtilText.parse(target,
 							"<p style='text-align:center;'>"
 									+ (alreadyAndrophilic
-											?"[style.colourDisabled([npc.NameIsFull] already androphilic, so nothing happens...)]"
-											:"[npc.NameIsFull] now [style.colourMasculinePlus(androphilic)]!")
+											?"[style.colourDisabled([npc.NameIsFull]已经是男性恋了，无事发生……)]"
+											:"[npc.NameIsFull]现在是[style.colourMasculinePlus(男性恋)]了！")
 								+ "</p>");
 					
 				} else if(primaryModifier==TFModifier.PERSONALITY_TRAIT_SPEECH_LISP) {
@@ -297,8 +297,8 @@ public class ItemEffectType {
 			} 
 			
 			return "<p>"
-						+ "Nothing happens, as the Hypno-Watch has had its enchantment removed."
-						+ " You'll need to enchant it if you want to put it to use."
+						+ "无事发生，因为催眠怀表的附魔已经解除。"
+						+ "你在使用前需要先进行附魔。"
 					+ "</p>";
 		}
 	};
@@ -361,7 +361,7 @@ public class ItemEffectType {
 	
 
 	public static AbstractItemEffectType MOO_MILKER = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Milks breasts."),
+			"为胸部挤乳。"),
 			PresetColour.GENERIC_SEX) {
 		
 		@Override
@@ -370,14 +370,14 @@ public class ItemEffectType {
 			target.incrementBreastStoredMilk(-milkPumped);
 			if(target.isPlayer()) {
 				return "<p>"
-							+ "It only takes a moment before the beaker is filled with "+ Units.fluid(milkPumped, Units.UnitType.LONG)+" of your [pc.milk]."
+							+ "只花了一点时间，杯子里就装满了"+ Units.fluid(milkPumped, Units.UnitType.LONG)+" 你的[pc.milk]。"
 						+ "</p>"
 						+ user.addItem(Main.game.getItemGen().generateFilledBreastPump(ItemType.MOO_MILKER_EMPTY.getColourShades().get(0), target, target.getMilk(), milkPumped), false, true);
 			
 			} else {
 				return UtilText.parse(target,
 						"<p>"
-							+ "It only takes a moment before the beaker is filled with "+Units.fluid(milkPumped, Units.UnitType.LONG)+" of [npc.her] [npc.milk]."
+							+ "只花了一点时间，杯子里就装满了"+Units.fluid(milkPumped, Units.UnitType.LONG)+"[npc.her]的[npc.milk]。"
 						+ "</p>"
 						+ user.addItem(Main.game.getItemGen().generateFilledBreastPump(ItemType.MOO_MILKER_EMPTY.getColourShades().get(0), target, target.getMilk(), milkPumped), false, true));
 			}
@@ -386,7 +386,7 @@ public class ItemEffectType {
 	
 
 	public static AbstractItemEffectType PREGNANCY_TEST = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Reveals pregnancy info."),
+			"显示妊娠信息。"),
 			PresetColour.GENERIC_SEX) {
 		
 		@Override
@@ -406,7 +406,7 @@ public class ItemEffectType {
 				target.getPotentialPartnersAsMother().removeIf((pp) -> !pp.getFatherId().equals(target.getPregnantLitter().getFatherId()));
 				
 				GameCharacter father = target.getPregnantLitter().getFather();
-				String unknownFatherName = "Unknown!";
+				String unknownFatherName = "未知！";
 				if(father==null) {
 					try {
 						OffspringSeed offspring0 = target.getPregnantLitter().getOffspringSeed().iterator().next();
@@ -418,25 +418,25 @@ public class ItemEffectType {
 				}
 				
 				return "<p style='text-align:center;'>"
-						+ "The digital readout lights up with two parallel red lines, with flashing pink text next to that displaying:"
-						+ "<br/><b>'[style.italicsArcane(Pregnant!)]'</b>"
+						+ "电子屏幕上显示出两条平行红线，旁边闪烁着粉色文字："
+						+ "<br/><b>“[style.italicsArcane(怀孕！)]”</b>"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ "Underneath the flashing pregnancy confirmation, there's some extra information, which reads:<br/>"
+						+ "除了瞬间确认了怀孕，还提供了一些额外信息:<br/>"
 						+ "<i>"
-						+ "Father: "+(father!=null
+						+ "父亲："+(father!=null
 										?father.getNameIgnoresPlayerKnowledge()+" ("+Util.capitaliseSentence(target.getPregnantLitter().getFatherRace().getName(father.getBody()))+")"
 										:unknownFatherName+" ("+Util.capitaliseSentence(target.getPregnantLitter().getFatherRace().getName(Main.game.getNpc(GenericAndrogynousNPC.class).getBody()))+")")+"<br/>"
-						+ "Litter size: " +target.getPregnantLitter().getTotalLitterCount()+"<br/>"
-						+ "[style.colourFeminine(Daughters)]: " +(target.getPregnantLitter().getDaughtersFromFather()+target.getPregnantLitter().getDaughtersFromMother())+"<br/>"
-						+ "[style.colourMasculine(Sons)]: " +(target.getPregnantLitter().getSonsFromFather()+target.getPregnantLitter().getSonsFromMother())+"<br/>"
+						+ "产仔数量：" +target.getPregnantLitter().getTotalLitterCount()+"<br/>"
+						+ "[style.colourFeminine(女儿)]：" +(target.getPregnantLitter().getDaughtersFromFather()+target.getPregnantLitter().getDaughtersFromMother())+"<br/>"
+						+ "[style.colourMasculine(儿子)]：" +(target.getPregnantLitter().getSonsFromFather()+target.getPregnantLitter().getSonsFromMother())+"<br/>"
 						+ "</i>"
 					+ "</p>";
 				
 			} else {
 				return "<p style='text-align:center;'>"
-					+ "The digital readout lights up with a single red line, with solid black text next to that displaying:"
-					+ "<br/><b>'<i>Not Pregnant.</i>'</b>"
+					+ "子屏幕上显示出一条红线，旁边写着黑色的文字："
+					+ "<br/><b>“<i>未怀孕。</i>”</b>"
 				+ "</p>";
 			}
 		}
@@ -444,7 +444,7 @@ public class ItemEffectType {
 	
 	
 	public static AbstractItemEffectType MOTHERS_MILK = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Advances pregnancy and incubations."),
+			"加速孕期和孵化。"),
 			PresetColour.GENERIC_SEX) {
 		
 		@Override
@@ -453,7 +453,7 @@ public class ItemEffectType {
 			boolean effectsObserved = false;
 			
 			sb.append("<p>");
-			sb.append("[npc.Name] eagerly [npc.verb(gulp)] down the rich, creamy liquid; its delicious taste spurs [npc.herHim] on into quickly draining the entire bottle.");
+			sb.append("[npc.Name]急切地拿起这醇厚的液体大口喝了起来，醇香的味道让[npc.herHim]很快就将整瓶一饮而尽。");
 
 			Map<SexAreaOrifice, List<AbstractStatusEffect>> incubationEffectMap = Util.newHashMapOfValues(
 					new Value<>(SexAreaOrifice.VAGINA, Util.newArrayListOfValues(StatusEffect.INCUBATING_EGGS_WOMB_1, StatusEffect.INCUBATING_EGGS_WOMB_2, StatusEffect.INCUBATING_EGGS_WOMB_3)),
@@ -478,20 +478,20 @@ public class ItemEffectType {
 						int eggs = litter.getTotalLitterCount();
 						String areaName = entry.getKey().getName(target, true);
 						if(entry.getKey()==SexAreaOrifice.VAGINA) {
-							areaName = "womb";
+							areaName = "子宫";
 						} else if(entry.getKey()==SexAreaOrifice.ANUS) {
-							areaName = "stomach";
+							areaName = "肚子";
 						}
 						sb.append("</br>");
 						if(eggs>1) {
-							sb.append("The eggs being incubated in [npc.namePos] <b>"+areaName+"</b> rapidly mature and get noticeably heavier, letting [npc.herHim] know that they're ");
+							sb.append("在[npc.namePos]的<b>"+areaName+"</b>中孵化的卵迅速成熟，变得格外沉重，[npc.herHim]意识到");
 						} else {
-							sb.append("The egg being incubated in [npc.namePos] <b>"+areaName+"</b> rapidly matures and gets noticeably heavier, letting [npc.herHim] know that it's ");
+							sb.append("在[npc.namePos]的<b>"+areaName+"</b>中孵化的卵迅速成熟，变得格外沉重，[npc.herHim]意识到");
 						}
 						if(target.hasStatusEffect(entry.getValue().get(1))) {
-							sb.append("[style.colourYellowLight(advanced to the next stage of incubation)]!");
+							sb.append("[style.colourYellowLight(孵化进入了下一阶段)]！");
 						} else {
-							sb.append("now [style.colourYellowLight(ready to be laid)]!");
+							sb.append("已经[style.colourYellowLight(准备好产卵了)]！");
 						}
 					}
 				}
@@ -507,9 +507,9 @@ public class ItemEffectType {
 						target.removeStatusEffect(StatusEffect.PREGNANT_2);
 					}
 					sb.append("</br>");
-					sb.append("Immediately, [npc.her] belly rapidly swells and grows in size, and [npc.she] can't help but let out a deep [npc.moan] as a rush of energy flows up throughout [npc.her] body."
-								+ " After just a moment, the effects come a halt, and [npc.name] [npc.verb(smile)] happily to [npc.herself] as"
-									+ " [npc.she] [npc.verb(reflect)] on the fact that the expansion of [npc.her] pregnant bump has taken [npc.herHim] into the next stage of [npc.her] pregnancy...");
+					sb.append("顿时，[npc.her]的小腹飞快地鼓起，一股能量流淌过身体，[npc.she]不禁发出一声深沉的[npc.moan]。"
+								+ "没过多一会儿，药效便结束了，[npc.name]露出了欣慰的微笑，"
+									+ "孕肚长大也就说明[npc.herHim]进入了孕期的下一阶段……");
 				}
 				
 			} else if(target.hasStatusEffect(StatusEffect.PREGNANT_0)) {
@@ -518,18 +518,18 @@ public class ItemEffectType {
 				
 				if(target.isPregnant()) {
 					sb.append("</br>");
-					sb.append("A soothing warmth quickly spreads throughout [npc.her] lower abdomen, and as [npc.she] [npc.verb(let)] out an involuntary gasp,"
-									+ " [npc.her] belly suddenly swells up into an unmistakably [style.boldMinorGood(pregnant bump)]!");
+					sb.append("一股抚慰的暖流迅速在[npc.her]的下腹部流淌，[npc.she]不受控制地喘息起来，"
+									+ "[npc.her]的小腹瞬间鼓起，完全已经是[style.boldMinorGood(孕肚的样子)]！");
 					
 				} else {
 					sb.append("</br>");
-					sb.append("Although a soothing warmth spreads throughout [npc.her] lower abdomen, no sign of any pregnancy manifests itself in [npc.her] belly."
-								+ " It looks like [npc.sheIs] [style.boldMinorBad(not pregnant)] after all...");
+					sb.append("尽管一股舒缓的温暖弥漫在[npc.her]的小腹，但[npc.her]的腹部没有任何怀孕的迹象。"
+								+ "最终看来[npc.sheIs][style.boldMinorBad(没有怀孕)]……");
 				}
 			}
 			
 			if(!effectsObserved) {
-				sb.append("Aside from quenching [npc.her] thirst, the liquid doesn't have any effect on [npc.name]...");
+				sb.append("除了为[npc.her]解渴以外，这种液体对[npc.Name]没有任何效果……");
 			}
 			
 			sb.append("</p>");
@@ -545,13 +545,13 @@ public class ItemEffectType {
 		public List<String> getEffectsDescription(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target) {
 			List<String> effects = new ArrayList<>();
 			
-			effects.add("[style.colourExcellent(Instantly recovers)] [style.colourSex(stretched orifices)]");
+			effects.add("[style.colourExcellent(立即恢复)][style.colourSex(被撑开的腔穴)]");
 			
 			if(Main.game.isLactationContentEnabled()) {
-				effects.add("[style.colourGood(Fully refills)] [style.colourMilk(milk storage)]");
+				effects.add("[style.colourGood(重新充满)][style.colourMilk(乳汁储量)]");
 			}
 			if(Main.game.isCumRegenerationEnabled()) {
-				effects.add("[style.colourGood(Fully refills)] [style.colourCum(cum storage)]");
+				effects.add("[style.colourGood(重新充满)][style.colourCum(精液储量)]");
 			}
 			
 			return effects;
@@ -589,37 +589,37 @@ public class ItemEffectType {
 			
 			if(!areasTightened.isEmpty()) {
 				sb.append(UtilText.parse(target,
-							"<br/>[npc.Her] stretched-out [style.colourSex("+Util.stringsToStringList(areasTightened, false)+")]"
+							"<br/>[npc.Her]被撑开的[style.colourSex("+Util.stringsToStringList(areasTightened, false)+")]"
 							+ (areasTightened.size()>1
-								?" [style.colourGood(tighten back up)]!"
-								:" [style.colourGood(tightens back up)]!")));
+								?"[style.colourGood(重新收紧了)]！"
+								:"[style.colourGood(重新收紧了)]！")));
 			}
 			
 			if(Main.game.isLactationContentEnabled()) {
 				if(target.getBreastRawMilkStorageValue()>0 && target.getBreastRawStoredMilkValue()<target.getBreastRawMilkStorageValue()) {
 					target.setBreastStoredMilk(target.getBreastRawMilkStorageValue());
-					sb.append(UtilText.parse(target, "<br/>[npc.NamePos] [npc.breasts+] [style.colourGood(fill up)] with [npc.milk]!"));
+					sb.append(UtilText.parse(target, "<br/>[npc.NamePos][npc.breasts+][style.colourGood(充满了)][npc.milk]！"));
 				}
 				if(target.hasBreastsCrotch() && target.getBreastCrotchRawMilkStorageValue()>0 && target.getBreastCrotchRawStoredMilkValue()<target.getBreastCrotchRawMilkStorageValue()) {
 					target.setBreastCrotchStoredMilk(target.getBreastCrotchRawMilkStorageValue());
-					sb.append(UtilText.parse(target, "<br/>[npc.NamePos] [npc.crotchBoobs+] [style.colourGood(fill up)] with [npc.crotchMilk]!"));
+					sb.append(UtilText.parse(target, "<br/>[npc.NamePos][npc.crotchBoobs+][style.colourGood(充满了)][npc.crotchMilk]！"));
 				}
 			}
 
 			if(Main.game.isCumRegenerationEnabled()) {
 				if(target.hasPenis() && target.getPenisRawCumStorageValue()>0 && target.getPenisRawStoredCumValue()<target.getPenisRawCumStorageValue()) {
 					target.setPenisStoredCum(target.getPenisRawCumStorageValue());
-					sb.append(UtilText.parse(target, "<br/>[npc.NamePos] [npc.balls+] [style.colourGood(fill up)] with [npc.cum]!"));
+					sb.append(UtilText.parse(target, "<br/>[npc.NamePos][npc.balls+][style.colourGood(充满了)][npc.cum]！"));
 				}
 			}
 			
 			if(sb.length()==0) {
 				sb.append(UtilText.parse(target,
-							"<br/>Apart from experiencing this comforting feeling, nothing else happens to [npc.herHim]..."));
+							"<br/>除了感觉到很放松，并没有什么别的事情发生……"));
 			}
 			
 			return "<p style='text-align:center;'>"
-						+"[npc.Name] [npc.verb(let)] out a deep sigh as a cool, soothing sensation starts to wash over [npc.herHim]."
+						+"[npc.Name]感受到一阵凉爽抚慰的感觉冲刷身体而过，发出一声长叹。"
 						+ "<i>"
 							+ sb.toString()
 						+"</i>"
@@ -628,7 +628,7 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType CIGARETTE_PACK = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Provides 20 Starr Cigarettes."),
+			"提供20支斯塔尔香烟。"),
 			PresetColour.BASE_PURPLE) {
 		
 		@Override
@@ -652,15 +652,15 @@ public class ItemEffectType {
 		public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
 			return UtilText.parse(target,
 					"<p>"
-						+ "[npc.Name] immediately [npc.verb(feel)] the positive effects of the aura-boosting supplements added to the Starr Cigarette."
-						+ " As the smoke fills [npc.her] lungs, however, [npc.she] also [npc.verb(feel)] slightly less healthy..."
+						+ "[npc.Name]立刻感觉到了添加在斯塔尔香烟中的灵气增幅补剂的增益作用。"
+						+ "当[npc.her]将烟雾吸入肺中时，无论如何，还是感觉这有些不太健康……"
 					+ "</p>");
 		}
 	};
 
 	public static AbstractItemEffectType MAKEUP_SET = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.colourPink(Opens cosmetics screen)]",
-			"[style.colourSex(Automatically re-applies heavy lipstick after sex)]"),
+			"[style.colourPink(打开化妆界面)]",
+			"[style.colourSex(性交后自动重涂浓重的口红)]"),
 			PresetColour.BASE_PURPLE) {
 		@Override
 		public boolean isBreakOutOfInventory() {
@@ -674,14 +674,14 @@ public class ItemEffectType {
 					"",
 					MiscDialogue.getMakeupDialogue(false,
 							(BodyChanging.getTarget().isPlayer()
-								?"You open the arcane makeup set and prepare to get started..."
-								:"You open the arcane makeup set and prepare to get started on applying makeup to [npc.name]..."))));
+								?"你打开了奥术化妆套装，准备开始化妆……"
+								:"你打开了奥术化妆套装，准备开始给[npc.name]化妆……"))));
 			return "";
 		}
 	};
 
 	public static AbstractItemEffectType DOLL_CONSOLE = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.colourPink(Opens doll customisation screen)]"),
+			"[style.colourPink(打开玩偶定制界面)]"),
 			PresetColour.BASE_PURPLE) {
 		@Override
 		public boolean isBreakOutOfInventory() {
@@ -702,8 +702,8 @@ public class ItemEffectType {
 	// Ingredients and potions:
 	
 	public static AbstractItemEffectType MYSTERY_KINK = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.italicsSex(+50)] [style.italicsLust(Lust)]",
-			"[style.italicsSex(+50)] [style.italicsArousal(Arousal)] during sex"
+			"[style.italicsSex(+50)][style.italicsLust(性欲)]",
+			"在性爱中[style.italicsSex(+50)][style.italicsArousal(快感)]"
 			//"[style.colourFetish(Random fetish addition or removal)]"
 			),
 			PresetColour.FETISH) {
@@ -715,7 +715,7 @@ public class ItemEffectType {
 			if(Main.game.isInSex()) {
 				target.incrementArousal(50);
 				sb.append("<p style='text-align:center;'>"
-							+ UtilText.parse(target, "[npc.Name] [style.colourSex(gained)] [style.boldSex(50 arousal)]!")
+							+ UtilText.parse(target, "[npc.Name][style.colourSex(获得了)][style.boldSex(50快感)]！")
 						+ "</p>");
 			}
 			return sb.toString();
@@ -723,9 +723,9 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType ADDICTION_REMOVAL = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.colourMinorGood(Removes)] [style.colourExcellent(all)] [style.colourBad(addictions)]",
-			"[style.colourMinorGood(Removes)] [style.colourAlcohol(alcohol intoxication)]",
-			"[style.colourMinorGood(Removes)] [style.colourPsychoactive(psychoactive effects)]"),
+			"[style.colourMinorGood(移除)][style.colourExcellent(所有)][style.colourBad(成瘾状态)]",
+			"[style.colourMinorGood(移除)][style.colourAlcohol(醉酒程度)]",
+			"[style.colourMinorGood(移除)][style.colourPsychoactive(致幻状态)]"),
 			PresetColour.BASE_GOLD) {
 		
 		@Override
@@ -742,18 +742,18 @@ public class ItemEffectType {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p style='text-align:center;'>");
-				sb.append("[npc.Name] [npc.verb(feel)] a blissful sense of inner-peace wash over [npc.herHim]...");
+				sb.append("[npc.Name]感觉到一股幸福的宁静感涌上心头……");
 				if(hadAddictions) {
-					sb.append("<br/><i>[npc.SheIsFull] no longer addicted to any substances!</i>");
+					sb.append("<br/><i>[npc.SheIsFull]不再对任何物质上瘾！</i>");
 				}
 				if(drunk) {
-					sb.append("<br/><i>The alcohol still in [npc.her] system instantly metabolises!</i>");
+					sb.append("<br/><i>仍在[npc.her]体内的酒精瞬间被代谢了！</i>");
 				}
 				if(psychoactive) {
-					sb.append("<br/><i>The psychoactive trip which [npc.she] [npc.was] experiencing suddenly comes to an end!</i>");
+					sb.append("<br/><i>[npc.she]正在经历的幻觉结束了！</i>");
 				}
 				if(!hadAddictions && !drunk && !psychoactive) {
-					sb.append("<br/>[style.italicsDisabled(Other than experiencing this pleasant feeling, nothing happens...)]");
+					sb.append("<br/>[style.italicsDisabled(除了感到一股愉悦感，无事发生……)]");
 				}
 			sb.append("</p>");
 			
@@ -762,7 +762,7 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType MUSHROOMS = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.colourTfGeneric(Makes slime and orifice interiors glow)]"),
+			"[style.colourTfGeneric(令粘液和腔穴内部发光)]"),
 			PresetColour.ATTRIBUTE_CORRUPTION) {
 		@Override
 		public Map<AbstractStatusEffect, Integer> getAppliedStatusEffects() {
@@ -774,16 +774,16 @@ public class ItemEffectType {
 
 			if(target.isDoll()) {
 				return "<p style='text-align:center;'>"
-							+ UtilText.parse(target, "[style.colourDisabled(As [npc.sheIs] a sex doll, [npc.nameIsFull] completely unaffected by the mushrooms...)]")
+							+ UtilText.parse(target, "[style.colourDisabled(由于[npc.nameIsFull]是个性爱玩偶，[npc.sheIs]完全不会被蘑菇影响……)]")
 						+"</p>";
 			}
 			
 			sb.append("<p style='text-align:center;'>");
 				if(target.getBodyMaterial()==BodyMaterial.SLIME) {
 					if(target.isPlayer()) {
-						sb.append("Your slimy body starts [style.boldTfGeneric(glowing)]!");
+						sb.append("你粘液构成的躯体开始[style.boldTfGeneric(发光了)]！");
 					} else {
-						sb.append(UtilText.parse(target, "[npc.NamePos] slimy body starts [style.boldTfGeneric(glowing)]!"));
+						sb.append(UtilText.parse(target, "[npc.NamePos]粘液构成的躯体开始[style.boldTfGeneric(发光了)]！"));
 					}
 					
 					for(AbstractBodyCoveringType bct : BodyCoveringType.getAllSlimeTypes()) {
@@ -793,9 +793,9 @@ public class ItemEffectType {
 					sb.append("<br/>");
 				}
 				if(target.isPlayer()) {
-					sb.append("The interiors of all of your orifices start to [style.boldTfGeneric(glow)]!");
+					sb.append("你所有腔穴的内部开始[style.boldTfGeneric(发光了)]！");
 				} else {
-					sb.append(UtilText.parse(target, "The interiors of all of [npc.namePos] orifices start to [style.boldTfGeneric(glow)]!"));
+					sb.append(UtilText.parse(target, "[npc.namePos]所有腔穴的内部开始[style.boldTfGeneric(发光了)]！"));
 				}
 
 				target.getCovering(BodyCoveringType.MOUTH).setSecondaryGlowing(true);
@@ -808,9 +808,9 @@ public class ItemEffectType {
 
 			sb.append("<p>");
 				if(target.isPlayer()) {
-					sb.append("Multi-coloured stars and spots start to fade in and out of your vision, and you feel your head spinning as you start to [style.boldPsychoactive(trip out)]!");
+					sb.append("五颜六色的星点在你的视线中若隐若现，你觉得头晕目眩，产生了[style.boldPsychoactive(幻觉)]！");
 				} else {
-					sb.append(UtilText.parse(target, "Multi-coloured stars and spots start to fade in and out of [npc.namePos] vision, and [npc.she] feels [npc.her] head spinning as [npc.she] starts to [style.boldPsychoactive(trip out)]!"));
+					sb.append(UtilText.parse(target, "无颜六色的星点在[npc.namePos]的视线中若隐若现，[npc.she]觉得头晕目眩，产生了[style.boldPsychoactive(幻觉)]！"));
 				}
 			sb.append("</p>");
 			
@@ -819,8 +819,8 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType EGGPLANT = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.colourGood(Restores)] 5% [style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]",
-			"[style.colourGood(Restores)] 5% [style.colourAura(aura)]"),
+			"[style.colourGood(回复)]5%[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]",
+			"[style.colourGood(回复)]5%[style.colourAura(灵气)]"),
 			PresetColour.ATTRIBUTE_CORRUPTION) {
 		
 		@Override
@@ -830,7 +830,7 @@ public class ItemEffectType {
 			
 			if(target.isPlayer()) {
 				return "<p style='text-align:center;'>"
-							+"It's kind of tasty."
+							+"挺美味的。"
 						+"</p>";
 			} else {
 				return "";
@@ -901,11 +901,11 @@ public class ItemEffectType {
 			if(primaryModifier==TFModifier.CORRUPTION) {
 				switch(potency) {
 					case MINOR_BOOST:
-						return Util.newArrayListOfValues("[style.colourMinorGood(-5)] [style.colourCorruption(Corruption)]");
+						return Util.newArrayListOfValues("[style.colourMinorGood(-5)][style.colourCorruption(堕落)]");
 					case BOOST:
-						return Util.newArrayListOfValues("[style.colourGood(-10)] [style.colourCorruption(Corruption)]");
+						return Util.newArrayListOfValues("[style.colourGood(-10)][style.colourCorruption(堕落)]");
 					case MAJOR_BOOST:
-						return Util.newArrayListOfValues("[style.colourExcellent(-15)] [style.colourCorruption(Corruption)]");
+						return Util.newArrayListOfValues("[style.colourExcellent(-15)][style.colourCorruption(堕落)]");
 					case MINOR_DRAIN:
 					case DRAIN:
 					case MAJOR_DRAIN:
@@ -916,9 +916,9 @@ public class ItemEffectType {
 				
 			} else {
 				if(potency.isNegative()) {
-					return Util.newArrayListOfValues("[style.colourMinorBad(Removes)] [style.colourSex(hymen)]");
+					return Util.newArrayListOfValues("[style.colourMinorBad(移除)][style.colourSex(处女膜)]");
 				} else {
-					return Util.newArrayListOfValues("[style.colourMinorGood(Regenerates)] [style.colourSex(hymen)]");
+					return Util.newArrayListOfValues("[style.colourMinorGood(恢复)][style.colourSex(处女膜)]");
 				}
 			}
 		}
@@ -928,10 +928,10 @@ public class ItemEffectType {
 			if(primaryModifier==TFModifier.CORRUPTION) {
 				String purifyingDescription =
 						"<p style='text-align:center;'>"
-								+ "For a moment, it looks as though nothing is going to happen,"
-								+ " but as [npc.name] [npc.verb(swallow)] down the last couple of drops remaining in [npc.her] mouth, a sudden, cascading wave of purifying energy rushes through [npc.herHim]."
-							+ " Accompanied by a faint, light-blue flash which seems to radiate from every visible part of [npc.her] body, this energy rises up into [npc.her] head,"
-								+ " where it quickly gets to work purifying [npc.her] thoughts and calming [npc.her] libido..."
+								+ "乍一看，似乎什么都没有发生，"
+								+ "但[npc.name]咽下口中最后几滴液体后，瞬间一阵净化的能量便汹涌而来。"
+							+ "随着一股股淡蓝色的微弱闪光在[npc.her]身体各处微微浮现，能量最终汇集到了头部，"
+								+ "药水瞬间就开始生效，净化了[npc.her]的思想并且平复了性欲……"
 						+"</p>";
 				switch(potency) {
 					case MINOR_BOOST:
@@ -962,7 +962,7 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType GIFT_CHOCOLATES = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.colourGood(Restores)] 30% [style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]"),
+			"[style.colourGood(恢复)]30%[style.colourHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]"),
 			PresetColour.ATTRIBUTE_HEALTH) {
 		
 		@Override
@@ -971,7 +971,7 @@ public class ItemEffectType {
 			
 			if(target.isPlayer()) {
 				return "<p style='text-align:center;'>"
-						+"They're absolutely delicious, and it only takes you a few moments to finish off the entire box."
+						+"特别美味，你只用了一会儿就吃完了一整盒。"
 						+"</p>";
 			} else {
 				return "";
@@ -980,15 +980,15 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType GIFT_PERFUME = new AbstractItemEffectType(Util.newArrayListOfValues(
-			Attribute.DAMAGE_LUST.getFormattedValue(5)+" to 'potion effects'"),
+			Attribute.DAMAGE_LUST.getFormattedValue(5)+"到“药剂效果”"),
 			PresetColour.ATTRIBUTE_LUST) {
 		
 		@Override
 		public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
 			return "<p style='text-align:center;'>"
 					+(target.isPlayer()
-						?"You smell a lot nicer now..."
-						:UtilText.parse(target, "[npc.Name] smells a lot nicer now..."))
+						?"你现在闻上去味道好多了……"
+						:UtilText.parse(target, "[npc.Name]闻上去味道好多了……"))
 					+ "<br/>"
 					+ target.addPotionEffect(Attribute.DAMAGE_LUST, 5)
 					+"</p>";
@@ -997,7 +997,7 @@ public class ItemEffectType {
 	
 	
 	public static AbstractItemEffectType PRESENT = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Contains a random item."),
+			"内含随机物品。"),
 			PresetColour.GENERIC_EXCELLENT) {
 		
 		@Override
@@ -1035,7 +1035,7 @@ public class ItemEffectType {
 				AbstractItemType itemType = items.get(Util.random.nextInt(items.size()));
 				
 				return "<p>"
-							+ "The present contained: <b>"+itemType.getDisplayName(true)+"</b>!"
+							+ "其中的礼物是:<b>"+itemType.getDisplayName(true)+"</b>！"
 						+ "</p>"
 						+ user.addItem(Main.game.getItemGen().generateItem(itemType), false);
 				
@@ -1046,13 +1046,13 @@ public class ItemEffectType {
 				if(!Main.game.getPlayerCell().getInventory().isInventoryFull()) {
 					Main.game.getPlayerCell().getInventory().addClothing(clothing);
 					return "<p>"
-								+ "The present contained: <b>"+clothing.getDisplayName(true)+"</b>!"
+								+ "其中的礼物是:<b>"+clothing.getDisplayName(true)+"</b>！"
 							+ "</p>"
 							+ user.addClothing(clothing, true);
 					
 				} else {
 					return "<p>"
-								+ "The present contained: <b>"+clothing.getDisplayName(true)+"</b>!"
+								+ "其中的礼物是:<b>"+clothing.getDisplayName(true)+"</b>！"
 							+ "</p>"
 							+ user.addClothing(clothing, false);
 				}
@@ -1063,19 +1063,19 @@ public class ItemEffectType {
 	// Racial:
 	
 	public static AbstractItemEffectType RACE_INNOXIAS_GIFT = new AbstractItemEffectType(Util.newArrayListOfValues(
-			Attribute.MAJOR_PHYSIQUE.getFormattedValue(2)+" to 'potion effects'",
-			Attribute.MAJOR_ARCANE.getFormattedValue(2)+" to 'potion effects'",
-			Attribute.MAJOR_CORRUPTION.getFormattedValue(5)+" to 'potion effects'"),
+			Attribute.MAJOR_PHYSIQUE.getFormattedValue(2)+"到“药剂效果”",
+			Attribute.MAJOR_ARCANE.getFormattedValue(2)+"到“药剂效果”",
+			Attribute.MAJOR_CORRUPTION.getFormattedValue(5)+"到“药剂效果”"),
 			PresetColour.RACE_HUMAN) {
 		
 		@Override
 		public String getPotionDescriptor() {
-			return "demonic";
+			return "恶魔";
 		}
 		
 		@Override
 		public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
-			return "You start to feel like this item is just for testing purposes..."
+			return "你感觉到这个物品只是用来作为测试用途的……"
 					+ "<br/>"
 					+ target.addPotionEffect(Attribute.MAJOR_PHYSIQUE, 2)
 					+ "<br/>"
@@ -1089,11 +1089,11 @@ public class ItemEffectType {
 	 * This is just to provide a hard-coded hook to the biojuice canister's effects, for use in NPC.generateTransformativePotion()
 	 */
 	public static AbstractItemEffectType RACE_SLIME_TF_UTIL_EFFECT = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Transforms the consumer into a slime!"),
+			"将使用者转化为一个史莱姆！"),
 			PresetColour.RACE_HUMAN) {
 		@Override
 		public String getPotionDescriptor() {
-			return "slime";
+			return "史莱姆";
 		}
 		@Override
 		public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
@@ -1398,7 +1398,7 @@ public class ItemEffectType {
 	// Essences:
 	
 	public static AbstractItemEffectType BOTTLED_ESSENCE_ARCANE = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"[style.colourGood(+1)] [style.colourArcane(Arcane essence)]"),
+			"[style.colourGood(+1)][style.colourArcane(奥术精华)]"),
 			PresetColour.GENERIC_ARCANE) {
 		
 		@Override
@@ -1411,8 +1411,8 @@ public class ItemEffectType {
 	// Specials:
 	
 	public static AbstractItemEffectType BIMBO_LOLLIPOP = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Bimbo</b> <b style='color:"+PresetColour.RACE_HARPY.toWebHexString()+";'>harpy</b> <b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>transformation</b>",
-			"Applies [style.colourSex('Sucking lollipop')] status effect"),
+			"<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>无脑大胸</b><b style='color:"+PresetColour.RACE_HARPY.toWebHexString()+";'>哈比</b><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>转化</b>",
+			"施加[style.colourSex(“舔棒棒糖”)]状态效果"),
 			PresetColour.RACE_HARPY) {
 		
 		@Override
@@ -1421,7 +1421,7 @@ public class ItemEffectType {
 			
 			if(target.isDoll()) {
 				return "<p>"
-							+ UtilText.parse(target, "As [npc.sheIsFull] a sex doll, the lollipop's transformative effects do nothing to [npc.name]...")
+							+ UtilText.parse(target, "由于[npc.sheIsFull]是个性爱玩偶，棒棒糖的转化效果对[npc.name]无效……")
 						+ "</p>";
 			}
 			
@@ -1429,7 +1429,7 @@ public class ItemEffectType {
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p>"
-						+ UtilText.parse(target, "As the lollipop's transformative effects start to make themselves known, [npc.name] [npc.verb(start)] to feel very light-headed...")
+						+ UtilText.parse(target, "棒棒糖的转化效似乎起效了，[npc.name]开始觉得头昏脑沉……")
 					+ "</p>");
 			
 			if(!target.hasFetish(Fetish.FETISH_BIMBO)) {
@@ -1437,14 +1437,14 @@ public class ItemEffectType {
 				if(target.isPlayer()) {
 					sb.append("<br/>"
 							+ "<p>"
-								+ "A giggle escapes from between your [pc.lips], and you suddenly find yourself unable to think of anything other than how, like, super awesome bimbos are and stuff!"
-								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>You have gained the bimbo fetish!</b>"
+								+ "一阵傻笑从[pc.mouth]中发出，你忽然意识到自己满脑子都是，怎么说呢，没什么营养还超级下流的东西了！"
+								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>你获得了无脑大胸性癖！</b>"
 							+ "</p>");
 				} else {
 					sb.append(UtilText.parse(target, "<br/>"
 							+ "<p>"
-								+ "A giggle escapes from between [npc.namePos] [npc.lips], and [npc.she] suddenly finds [npc.herself] unable to think of anything other than how, like, super awesome bimbos are and stuff!"
-								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>[npc.Name] has gained the bimbo fetish!</b>"
+								+ "一阵傻笑从[npc.namePos]的[pc.mouth]中发出，[npc.she]忽然意识到自己满脑子都是，怎么说呢，没什么营养还超级下流的东西了！"
+								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>[npc.Name]获得了无脑大胸性癖！</b>"
 							+ "</p>"));
 				}
 			}
@@ -1466,7 +1466,7 @@ public class ItemEffectType {
 			
 			if(!target.isAbleToHaveRaceTransformed()) {
 				sb.append("<br/>");
-				sb.append(UtilText.parse(target, "As [npc.nameIsFull] immune to racial transformations, the lollipop has no further effect!"));
+				sb.append(UtilText.parse(target, "由于[npc.nameIsFull]免疫种族转化，棒棒糖没有产生额外效果！"));
 				
 			} else {
 				if(target.getHairType()!=HairType.HARPY) {
@@ -1523,8 +1523,8 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType NYMPHO_LOLLIPOP = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Nympho</b> <b style='color:"+PresetColour.RACE_HARPY.toWebHexString()+";'>harpy</b> <b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>transformation</b>",
-			"Applies [style.colourSex('Sucking lollipop')] status effect"),
+			"<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>女色鬼</b><b style='color:"+PresetColour.RACE_HARPY.toWebHexString()+";'>哈比</b><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>转化</b>",
+			"施加[style.colourSex(“舔棒棒糖”)]状态效果"),
 			PresetColour.RACE_HARPY) {
 		
 		@Override
@@ -1533,14 +1533,14 @@ public class ItemEffectType {
 
 			if(target.isDoll()) {
 				return "<p>"
-							+ UtilText.parse(target, "As [npc.sheIsFull] a sex doll, the lollipop's transformative effects do nothing to [npc.name]...")
+							+ UtilText.parse(target, "由于[npc.sheIsFull]是个性爱玩偶，棒棒糖的转化效果对[npc.name]无效……")
 						+ "</p>";
 			}
 			
 			StringBuilder sb = new StringBuilder();
 			
 			sb.append("<p>"
-						+ UtilText.parse(target, "As the lollipop's transformative effects start to make themselves known, [npc.name] [npc.verb(start)] to feel very light-headed...")
+						+ UtilText.parse(target, "棒棒糖的转化效似乎起效了，[npc.name]开始觉得头昏脑沉……")
 					+ "</p>");
 			
 			if(!target.hasTrait(Perk.NYMPHOMANIAC, false)) {
@@ -1548,14 +1548,14 @@ public class ItemEffectType {
 				if(target.isPlayer()) {
 					sb.append("<br/>"
 							+ "<p>"
-								+ "A desperate moan escapes from between your [pc.lips], and you suddenly find yourself unable to think of anything other than sex, sex, and more sex!"
-								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>You have gained the nymphomaniac perk!</b>"
+								+ "一阵难以抗拒的呻吟从[pc.mouth]中发出，你忽然意识到自己满脑子都只有做爱、做爱、做爱！"
+								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>你获得了性瘾成狂天赋！</b>"
 							+ "</p>");
 				} else {
 					sb.append(UtilText.parse(target, "<br/>"
 							+ "<p>"
-								+ "A desperate moan escapes from between [npc.namePos] [npc.lips], and [npc.she] suddenly finds [npc.herself] unable to think of anything other than sex, sex, and more sex!"
-								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>[npc.Name] has gained the nymphomaniac perk!</b>"
+								+ "一阵难以抗拒的呻吟从[npc.namePos]的[pc.mouth]中发出，[npc.she]忽然意识到自己满脑子都只有做爱、做爱、做爱！"
+								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>[npc.Name]获得了性瘾成狂天赋！</b>"
 							+ "</p>"));
 				}
 			}
@@ -1576,7 +1576,7 @@ public class ItemEffectType {
 
 			if(!target.isAbleToHaveRaceTransformed()) {
 				sb.append("<br/>");
-				sb.append(UtilText.parse(target, "As [npc.nameIsFull] immune to racial transformations, the lollipop has no further effect!"));
+				sb.append(UtilText.parse(target, "由于[npc.nameIsFull]免疫种族转化，棒棒糖没有产生额外效果！"));
 				
 			} else {
 				if(target.getHairType()!=HairType.HARPY) {
@@ -1639,7 +1639,7 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType DOMINANT_PERFUME = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Dominant</b> <b style='color:"+PresetColour.RACE_HARPY.toWebHexString()+";'>harpy</b> <b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>transformation</b>"),
+			"<b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>支配欲</b><b style='color:"+PresetColour.RACE_HARPY.toWebHexString()+";'>哈比</b><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>转化</b>"),
 			PresetColour.RACE_HARPY) {
 		
 		@Override
@@ -1648,12 +1648,12 @@ public class ItemEffectType {
 
 			if(target.isDoll()) {
 				return "<p>"
-							+ UtilText.parse(target, "As [npc.sheIsFull] a sex doll, the perfume's transformative effects do nothing to [npc.name]...")
+							+ UtilText.parse(target, "由于[npc.sheIsFull]是个性爱玩偶，香水的转化效果对[npc.name]无效……")
 						+ "</p>";
 			}
 			
 			sb.append("<p>"
-						+ UtilText.parse(target, "As the perfume's transformative effects start to make themselves known, [npc.name] [npc.verb(start)] to feel very light-headed...")
+						+ UtilText.parse(target, "香水的转化效似乎起效了，[npc.name]开始觉得头昏脑沉……")
 					+ "</p>");
 			
 			if(!target.hasFetish(Fetish.FETISH_DOMINANT)) {
@@ -1661,14 +1661,14 @@ public class ItemEffectType {
 				if(target.isPlayer()) {
 					sb.append("<br/>"
 							+ "<p>"
-								+ "A deep groan escapes from between your [pc.lips], and you suddenly find yourself thinking of how much you want to dominate the next person you come across!"
-								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>You have gained the dominant fetish!</b>"
+								+ "一阵低沉的呻吟从[pc.mouth]中发出，你忽然意识到自己满脑子都是要如何征服你遇见的下一个人！"
+								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>你获得了支配者性癖！</b>"
 							+ "</p>");
 				} else {
 					sb.append(UtilText.parse(target, "<br/>"
 							+ "<p>"
-								+ "A deep groan escapes from between [npc.namePos] [npc.lips], and [npc.she] suddenly finds [npc.herself] thinking of how much [npc.she] wants to dominate the next person [npc.she] meets!"
-								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>[npc.Name] has gained the dominant fetish!</b>"
+								+ "一阵低沉的呻吟从[npc.namePos]的[pc.mouth]中发出，[npc.she]忽然意识到自己满脑子都是要如何征服[npc.she]遇见的下一个人！"
+								+ "<br/><b style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>[npc.Name]获得了支配者性癖！</b>"
 							+ "</p>"));
 				}
 			}
@@ -1689,7 +1689,7 @@ public class ItemEffectType {
 
 			if(!target.isAbleToHaveRaceTransformed()) {
 				sb.append("<br/>");
-				sb.append(UtilText.parse(target, "As [npc.nameIsFull] immune to racial transformations, the perfume has no further effect!"));
+				sb.append(UtilText.parse(target, "由于[npc.nameIsFull]免疫种族转化，香水没有产生额外效果！"));
 				
 			} else {
 				if(target.getHairType()!=HairType.HARPY) {
@@ -1754,7 +1754,7 @@ public class ItemEffectType {
 
 		@Override
 		public String getPotionDescriptor() {
-			return "vivid";
+			return "绚丽的";
 		}
 		
 		@Override
@@ -1792,7 +1792,7 @@ public class ItemEffectType {
 
 		@Override
 		public String getPotionDescriptor() {
-			return "soothing";
+			return "抚慰的";
 		}
 		
 		@Override
@@ -1830,7 +1830,7 @@ public class ItemEffectType {
 
 		@Override
 		public String getPotionDescriptor() {
-			return "arousing";
+			return "情欲的";
 		}
 		
 		@Override
@@ -1868,7 +1868,7 @@ public class ItemEffectType {
 
 		@Override
 		public String getPotionDescriptor() {
-			return "viscous";
+			return "粘稠的";
 		}
 		
 		@Override
@@ -1942,43 +1942,43 @@ public class ItemEffectType {
 		public List<String> getEffectsDescription(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target) {
 
 			if(primaryModifier==TFModifier.NONE) {
-				return Util.newArrayListOfValues("Adds or removes a [style.colourFetish(random fetish)].");
+				return Util.newArrayListOfValues("增加或移除一个[style.colourFetish(随机性癖)]。");
 			}
 			
 			String descriptor = "";
 			
 			if(primaryModifier==TFModifier.TF_MOD_FETISH_BODY_PART) {
-				descriptor = " body-part";
+				descriptor = "身体部位相关";
 			} else if(primaryModifier==TFModifier.TF_MOD_FETISH_BEHAVIOUR) {
-				descriptor = " behavioural";
+				descriptor = "行为相关";
 			}
 			
 			if(potency==TFPotency.BOOST) {
 				if(secondaryModifier == TFModifier.NONE) {
-					return Util.newArrayListOfValues("Adds a [style.colourFetish(random"+descriptor+" fetish)].");
+					return Util.newArrayListOfValues("增加一个[style.colourFetish(随机"+descriptor+"性癖)]。");
 				} else {
-					return Util.newArrayListOfValues("Adds the [style.colourFetish("+secondaryModifier.getName()+" fetish)].");
+					return Util.newArrayListOfValues("增加[style.colourFetish("+secondaryModifier.getName()+"性癖)]。");
 				}
 				
 			} else if(potency==TFPotency.MINOR_BOOST) {
 				if(secondaryModifier == TFModifier.NONE) {
-					return Util.newArrayListOfValues("Boosts [style.colourLust(desire)] for a [style.colourFetish(random"+descriptor+" fetish)].");
+					return Util.newArrayListOfValues("提高对于[style.colourFetish(随机"+descriptor+"性癖)]的[style.colourLust(渴望值)]。");
 				} else {
-					return Util.newArrayListOfValues("Boosts [style.colourLust(desire)] for the [style.colourFetish("+secondaryModifier.getName()+" fetish)].");
+					return Util.newArrayListOfValues("提高对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]。");
 				}
 				
 			} else if(potency==TFPotency.MINOR_DRAIN) {
 				if(secondaryModifier == TFModifier.NONE) {
-					return Util.newArrayListOfValues("Lowers [style.colourLust(desire)] for a [style.colourFetish(random"+descriptor+" fetish)] (if that fetish is not already owned).");
+					return Util.newArrayListOfValues("降低对于[style.colourFetish(随机"+descriptor+"性癖)]的[style.colourLust(渴望值)](前提是尚未拥有该性癖)。");
 				} else {
-					return Util.newArrayListOfValues("Lowers [style.colourLust(desire)] for the [style.colourFetish("+secondaryModifier.getName()+" fetish)] (if that fetish is not already owned).");
+					return Util.newArrayListOfValues("降低对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)](前提是尚未拥有该性癖)。");
 				}
 				
 			} else {
 				if(secondaryModifier == TFModifier.NONE) {
-					return Util.newArrayListOfValues("Removes a [style.colourFetish(random"+descriptor+" fetish)].");
+					return Util.newArrayListOfValues("移除[style.colourFetish(随机"+descriptor+"性癖)]。");
 				} else {
-					return Util.newArrayListOfValues("Removes the [style.colourFetish("+secondaryModifier.getName()+" fetish)].");
+					return Util.newArrayListOfValues("移除[style.colourFetish("+secondaryModifier.getName()+"性癖)]。");
 				}
 			}
 		}
@@ -2049,7 +2049,7 @@ public class ItemEffectType {
 						
 					} else {
 						return "<p>"
-									+"[style.colourDisabled(Nothing happens...)]"
+									+"[style.colourDisabled(无事发生……)]"
 								+"</p>";
 					}
 					
@@ -2078,7 +2078,7 @@ public class ItemEffectType {
 						
 					} else {
 						return "<p>"
-									+"[style.colourDisabled(Nothing happens...)]"
+									+"[style.colourDisabled(无事发生……)]"
 								+"</p>";
 					}
 					
@@ -2108,7 +2108,7 @@ public class ItemEffectType {
 						
 					} else {
 						return "<p>"
-									+"[style.colourDisabled(Nothing happens...)]"
+									+"[style.colourDisabled(无事发生……)]"
 								+"</p>";
 					}
 					
@@ -2136,7 +2136,7 @@ public class ItemEffectType {
 						
 					} else {
 						return "<p>"
-									+"[style.colourDisabled(Nothing happens...)]"
+									+"[style.colourDisabled(无事发生……)]"
 								+"</p>";
 					}
 					
@@ -2158,11 +2158,11 @@ public class ItemEffectType {
 		public List<String> getEffectsDescription(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target) {
 			List<String> effectsDescription = new ArrayList<>();
 			
-			effectsDescription.add("[style.colourBad(Does not affect unique characters)]");
+			effectsDescription.add("[style.colourBad(无法影响特殊角色)]");
 			
-			effectsDescription.add("[style.colourTfGeneric(Transforms)] non-demons into [style.colourDemon(half-demons)]");
+			effectsDescription.add("将非恶魔[style.colourTfGeneric(转化)]为[style.colourDemon(半恶魔)]");
 
-			effectsDescription.add("[style.colourTfGeneric(Transforms)] half-demons into [style.colourDemon(demons)]");
+			effectsDescription.add("将半恶魔[style.colourTfGeneric(转化)]为[style.colourDemon(恶魔)]");
 			
 			return effectsDescription;
 		}
@@ -2173,17 +2173,17 @@ public class ItemEffectType {
 //				return "<p style='text-align:center'>[style.italicsDisabled(This item does not work on you...)]</p>";
 //			}
 			if(!target.isPlayer() && target.isUnique() && (!target.isSlave() || target.getOwner().isPlayer())) {
-				return "<p style='text-align:center'>[style.italicsDisabled(This item does not work on non-slave unique characters...)]</p>";
+				return "<p style='text-align:center'>[style.italicsDisabled(该物品对于非奴隶的特殊角色无效……)]</p>";
 			}
 			
 			AbstractSubspecies sub = target.getBody().getFleshSubspecies();
 			if(sub.getRace()!=Race.DEMON) {
 				target.setBody(Main.game.getCharacterUtils().generateHalfDemonBody(target, target.getGender(), sub, true), false);
-				return UtilText.parse(target, "<p style='text-align:center; color:"+PresetColour.RACE_DEMON.toWebHexString()+";'><i>[npc.Name] is now [npc.a_race]!</i></p>");
+				return UtilText.parse(target, "<p style='text-align:center; color:"+PresetColour.RACE_DEMON.toWebHexString()+";'><i>[npc.Name]现在是[npc.a_race]了！</i></p>");
 			} else {
 				target.setBody(target.getGender(), Subspecies.DEMON, RaceStage.GREATER, false);
 				target.setSubspeciesOverride(Subspecies.DEMON);
-				return UtilText.parse(target, "<p style='text-align:center; color:"+PresetColour.RACE_DEMON.toWebHexString()+";'><i>[npc.Name] is now [npc.a_race]!</i></p>");
+				return UtilText.parse(target, "<p style='text-align:center; color:"+PresetColour.RACE_DEMON.toWebHexString()+";'><i>[npc.Name]现在是[npc.a_race]了！</i></p>");
 			}
 		}
 	};
@@ -2288,113 +2288,113 @@ public class ItemEffectType {
 				
 			} else if(secondaryModifier == TFModifier.CLOTHING_SEALING) {
 				if(potency==TFPotency.SPECIAL) {
-					effectsList.add("[style.colourCrimson(Seals onto wearer)] <b>([style.colourTerrible(Cannot be unsealed!)])</b>");
+					effectsList.add("[style.colourCrimson(封印于穿戴者)]<b>([style.colourTerrible(无法解封！)])</b>");
 					
 				} else if(potency==TFPotency.MINOR_DRAIN) {
-					effectsList.add("[style.colourCrimson(Seals onto wearer)] <b>(Unseal: [style.colourArcane(" + ItemEffect.SEALED_COST_MINOR_DRAIN + ")])</b>");
+					effectsList.add("[style.colourCrimson(封印于穿戴者)]<b>(解封:[style.colourArcane(" + ItemEffect.SEALED_COST_MINOR_DRAIN + ")])</b>");
 					
 				} else if(potency==TFPotency.DRAIN) {
-					effectsList.add("[style.colourCrimson(Seals onto wearer)] <b>(Unseal: [style.colourArcane(" + ItemEffect.SEALED_COST_DRAIN + ")])</b>");
+					effectsList.add("[style.colourCrimson(封印于穿戴者)]<b>(解封:[style.colourArcane(" + ItemEffect.SEALED_COST_DRAIN + ")])</b>");
 					
 				} else if(potency==TFPotency.MAJOR_DRAIN) {
-					effectsList.add("[style.colourCrimson(Seals onto wearer)] <b>(Unseal: [style.colourArcane(" + ItemEffect.SEALED_COST_MAJOR_DRAIN + ")])</b>");
+					effectsList.add("[style.colourCrimson(封印于穿戴者)]<b>(解封:[style.colourArcane(" + ItemEffect.SEALED_COST_MAJOR_DRAIN + ")])</b>");
 					
 				} else {
-					effectsList.add("[style.colourCrimson(Seals onto wearer)] <b>(Unseal: [style.colourArcane(" + ItemEffect.SEALED_COST_MINOR_BOOST + ")])</b>");
+					effectsList.add("[style.colourCrimson(封印于穿戴者)]<b>(解封:[style.colourArcane(" + ItemEffect.SEALED_COST_MINOR_BOOST + ")])</b>");
 				}
 				
 			} else if(secondaryModifier == TFModifier.CLOTHING_SERVITUDE) {
-				effectsList.add("[style.colourBad(Inhibits)] [style.colourTfGeneric(self-transformations)]");
-				effectsList.add("[style.colourBad(Prevents)] [style.colourArcane(removal of seals)]");
+				effectsList.add("[style.colourBad(阻止)][style.colourTfGeneric(自我转化)]");
+				effectsList.add("[style.colourBad(阻止)][style.colourArcane(移除封印)]");
 				
 			} else if(secondaryModifier == TFModifier.CLOTHING_ENSLAVEMENT) {
-				effectsList.add("[style.colourCrimson(Enslaves the wearer)]");
+				effectsList.add("[style.colourCrimson(奴役穿戴者)]");
 				
 			} else if(secondaryModifier == TFModifier.CLOTHING_ORGASM_PREVENTION) {
-				effectsList.add("[style.colourCrimson(Prevents wearer from orgasming)]");
+				effectsList.add("[style.colourCrimson(阻止穿戴者高潮)]");
 				
 			} else if(primaryModifier == TFModifier.TF_MOD_FETISH_BEHAVIOUR
 					|| primaryModifier == TFModifier.TF_MOD_FETISH_BODY_PART) {
 				if(potency==TFPotency.MAJOR_BOOST) {
-					effectsList.add("[style.colourExcellent(Grants)] [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourExcellent(给予)][style.colourFetish("+secondaryModifier.getName()+"性癖)]");
 					
 				} else if(potency==TFPotency.BOOST) {
-					effectsList.add("[style.colourGood(+2)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourGood(+2)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 					
 				} else if(potency==TFPotency.MINOR_BOOST) {
-					effectsList.add("[style.colourMinorGood(+1)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourMinorGood(+1)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 					
 				} else if(potency==TFPotency.MAJOR_DRAIN) {
-					effectsList.add("<b style='color:"+FetishDesire.ZERO_HATE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(FetishDesire.ZERO_HATE.getNameAsVerb())+"</b> [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("<b style='color:"+FetishDesire.ZERO_HATE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(FetishDesire.ZERO_HATE.getNameAsVerb())+"</b>[style.colourFetish("+secondaryModifier.getName()+"性癖)]");
 					
 				} else if(potency==TFPotency.DRAIN) {
-					effectsList.add("[style.colourBad(-2)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourBad(-2)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 					
 				} else if(potency==TFPotency.MINOR_DRAIN) {
-					effectsList.add("[style.colourMinorBad(-1)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourMinorBad(-1)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 				}
 				
 			} else if(primaryModifier == TFModifier.CLOTHING_CONDOM) {
 				if(potency==TFPotency.MAJOR_BOOST) {
-					effectsList.add("[style.colourExcellent(Infinite)] safe cum capacity.");
+					effectsList.add("[style.colourExcellent(无限化)]安全射精量。");
 					
 				} else if(potency==TFPotency.BOOST) {
-					effectsList.add("[style.colourGood("+Units.fluid(CumProduction.SIX_EXTREME.getMaximumValue())+")] safe cum capacity.");
+					effectsList.add("[style.colourGood("+Units.fluid(CumProduction.SIX_EXTREME.getMaximumValue())+")]安全射精量。");
 					
 				} else if(potency==TFPotency.MINOR_BOOST) {
-					effectsList.add("[style.colourMinorGood("+Units.fluid(CumProduction.FIVE_HUGE.getMaximumValue())+")] safe cum capacity.");
+					effectsList.add("[style.colourMinorGood("+Units.fluid(CumProduction.FIVE_HUGE.getMaximumValue())+")]安全射精量。");
 					
 				} else if(potency==TFPotency.MAJOR_DRAIN
 						|| potency==TFPotency.DRAIN
 						|| potency==TFPotency.MINOR_DRAIN) {
-					effectsList.add("[style.colourTerrible(Sabotaged)] to always break!");
+					effectsList.add("[style.colourTerrible(只要被破坏)]就会损坏！");
 				}
 				
 			} else if(secondaryModifier == TFModifier.CLOTHING_VIBRATION) {
 				if(potency==TFPotency.MAJOR_BOOST) {
-					effectsList.add("[style.colourSex(+20)] [style.colourLust(Resting lust)]");
-					effectsList.add("[style.colourSex(+2)] [style.colourArousal(arousal/turn)] [style.colourSex(in sex)]");
+					effectsList.add("[style.colourSex(+20)][style.colourLust(日常性欲)]");
+					effectsList.add("[style.colourSex(性交时)][style.colourSex(+2)][style.colourArousal(快感/回合)] ");
 					
 				} else if(potency==TFPotency.BOOST) {
-					effectsList.add("[style.colourSex(+10)] [style.colourLust(Resting lust)]");
-					effectsList.add("[style.colourSex(+1)] [style.colourArousal(arousal/turn)] [style.colourSex(in sex)]");
+					effectsList.add("[style.colourSex(+10)][style.colourLust(日常性欲)]");
+					effectsList.add("[style.colourSex(性交时)][style.colourSex(+1)][style.colourArousal(快感/回合)]");
 					
 				} else {
-					effectsList.add("[style.colourSex(+5)] [style.colourLust(Resting lust)]");
-					effectsList.add("[style.colourSex(+0.5)] [style.colourArousal(arousal/turn)] [style.colourSex(in sex)]");
+					effectsList.add("[style.colourSex(+5)][style.colourLust(日常性欲)]");
+					effectsList.add("[style.colourSex(性交时)][style.colourSex(+0.5)][style.colourArousal(快感/回合)]");
 				}
 				
 			} else if(primaryModifier == TFModifier.CLOTHING_CREAMPIE_RETENTION) {
 				String area = "";
 				switch(secondaryModifier) {
 					case TF_FACE:
-						area = "stomach";
+						area = "腹部";
 						break;
 					case TF_ASS:
-						area = "ass";
+						area = "屁股";
 						break;
 					case TF_VAGINA:
-						area = "pussy";
+						area = "小穴";
 						break;
 					case TF_VAGINA_URETHRA:
-						area = "vaginal urethra";
+						area = "阴道尿道";
 						break;
 					case TF_PENIS_URETHRA:
-						area = "penile urethra";
+						area = "阴茎尿道";
 						break;
 					case TF_BREASTS:
-						area = "breasts";
+						area = "胸部";
 						break;
 					case TF_BREASTS_CROTCH:
-						area = target!=null && target.getBreastCrotchShape()==BreastShape.UDDERS?"udders":"crotch boobs";
+						area = target!=null && target.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳";
 						break;
 					case TF_SPINNERET:
-						area = "spinneret";
+						area = "丝囊";
 						break;
 					default:
 						break;
 				}
-				effectsList.add("[style.colourExcellent(Retains)] "+area+" creampies");
+				effectsList.add("[style.colourExcellent(保持)]"+area+"的内射状态");
 				
 			} else {
 				return getClothingTFDescriptions(primaryModifier, secondaryModifier, potency, limit, user, target);
@@ -2487,55 +2487,55 @@ public class ItemEffectType {
 			} else if(primaryModifier == TFModifier.TF_MOD_FETISH_BEHAVIOUR
 					|| primaryModifier == TFModifier.TF_MOD_FETISH_BODY_PART) {
 				if(potency==TFPotency.MAJOR_BOOST) {
-					effectsList.add("[style.colourExcellent(Grants)] [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourExcellent(给予)][style.colourFetish("+secondaryModifier.getName()+"性癖)]");
 					
 				} else if(potency==TFPotency.BOOST) {
-					effectsList.add("[style.colourGood(Increases)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourGood(提高)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 					
 				} else if(potency==TFPotency.MINOR_BOOST) {
-					effectsList.add("[style.colourMinorGood(Slightly increases)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourMinorGood(略微提高)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 					
 				} else if(potency==TFPotency.MAJOR_DRAIN) {
-					effectsList.add("<b style='color:"+FetishDesire.ZERO_HATE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(FetishDesire.ZERO_HATE.getNameAsVerb())+"</b> [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("<b style='color:"+FetishDesire.ZERO_HATE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(FetishDesire.ZERO_HATE.getNameAsVerb())+"</b>[style.colourFetish("+secondaryModifier.getName()+"性癖)]");
 					
 				} else if(potency==TFPotency.DRAIN) {
-					effectsList.add("[style.colourBad(Decreases)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourBad(降低)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 					
 				} else if(potency==TFPotency.MINOR_DRAIN) {
-					effectsList.add("[style.colourMinorBad(Slightly decreases)] [style.colourLust(desire)] for [style.colourFetish("+secondaryModifier.getName()+" fetish)]");
+					effectsList.add("[style.colourMinorBad(略微降低)]对于[style.colourFetish("+secondaryModifier.getName()+"性癖)]的[style.colourLust(渴望值)]");
 				}
 				
 			} else if(primaryModifier == TFModifier.CLOTHING_CREAMPIE_RETENTION) {
 				String area = "";
 				switch(secondaryModifier) {
 					case TF_FACE:
-						area = "stomach";
+						area = "腹部";
 						break;
 					case TF_ASS:
-						area = "ass";
+						area = "屁股";
 						break;
 					case TF_VAGINA:
-						area = "pussy";
+						area = "小穴";
 						break;
 					case TF_VAGINA_URETHRA:
-						area = "vaginal urethra";
+						area = "阴道尿道";
 						break;
 					case TF_PENIS_URETHRA:
-						area = "penile urethra";
+						area = "阴茎尿道";
 						break;
 					case TF_BREASTS:
-						area = "breasts";
+						area = "胸部";
 						break;
 					case TF_BREASTS_CROTCH:
-						area = target.getBreastCrotchShape()==BreastShape.UDDERS?"udders":"crotch boobs";
+						area = target.getBreastCrotchShape()==BreastShape.UDDERS?"腹乳":"胯乳";
 						break;
 					case TF_SPINNERET:
-						area = "spinneret";
+						area = "丝囊";
 						break;
 					default:
 						break;
 				}
-				effectsList.add("[style.colourExcellent(Retains)] "+area+" creampies");
+				effectsList.add("[style.colourExcellent(保持)]"+area+"的内射状态");
 				
 			} else {
 				return getClothingTFDescriptions(primaryModifier, secondaryModifier, potency, limit, user, target);
@@ -2595,7 +2595,7 @@ public class ItemEffectType {
 				effectsList.add(secondaryModifier.getAssociatedAttribute().getFormattedValue(potency.getClothingBonusValue()));
 				
 			} else {
-				effectsList.add("[style.colourBad(Unrecognised effect:)] "+primaryModifier.getName());
+				effectsList.add("[style.colourBad(未辨认效果:)]"+primaryModifier.getName());
 			}
 			
 			return effectsList;
@@ -2608,7 +2608,7 @@ public class ItemEffectType {
 	};
 	
 	public static AbstractItemEffectType OFFSPRING_MAP = new AbstractItemEffectType(Util.newArrayListOfValues(
-			"Facilitates the discovery of offspring."),
+			"启用后代发现功能。"),
 			PresetColour.RARITY_LEGENDARY) {
 		@Override
 		public boolean isBreakOutOfInventory() {
@@ -2702,13 +2702,13 @@ public class ItemEffectType {
 							}
 							@Override
 							public List<String> getEffectsDescription(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target) {
-								return Util.newArrayListOfValues("Changes the target's body material to flesh.");
+								return Util.newArrayListOfValues("将目标的身体材质修改为血肉。");
 							}
 							@Override
 							public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
 								return target.isElemental()
 										? "<p style='margin-bottom:0; padding-bottom:0;'>" +
-												"[style.colourDisabled([npc.NameIsFull] an elemental, so nothing happens...)]" +
+												"[style.colourDisabled([npc.NameIsFull]是元素体，所以无事发生……)]" +
 											"</p>"
 										: target.setBodyMaterial(BodyMaterial.FLESH);
 							}

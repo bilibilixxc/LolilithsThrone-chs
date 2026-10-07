@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -13,23 +13,23 @@
 		
 		<!-- What's appended before the weapon's name in an instance of "Innoxia was holding X staff", where X is the determiner. This will usually be either "a" or "an", but for other weapons may be different.
 		An example might be: "Innoxia was holding X scissors", where X (the determiner) would now need to be "a pair of". -->
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一根]]></determiner>
 		
 		<!-- The name of this weapon. -->
-		<name><![CDATA[imp arcanist's staff]]></name>
+		<name><![CDATA[小恶魔的奥术法杖]]></name>
 		
 		<!-- The plural name of this weapon. If pluralByDefault's "false" is changed to "true", then the game will always the plural name when referring to this weapon. -->
-		<namePlural pluralByDefault="false"><![CDATA[imp arcanist's staffs]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[小恶魔的奥术法杖]]></namePlural> 
 		
 		<!-- The description/lore of this weapon. -->
-		<description><![CDATA[A wooden staff, the crude design of which leads you to believe that it has been re-purposed from a different arcane weapon. Although lacking in refinement, it seems powerful enough...]]></description> 
+		<description><![CDATA[一根木杖，粗糙的设计让你认为它是从另一件奥术武器上改造而来的。虽然不够精致，但似乎足够强大……]]></description> 
 		
 		<!-- How the weapon is used. This should be a single verb, and is used as the title of attacking actions in combat. -->
-		<attackDescriptor>whack</attackDescriptor>
+		<attackDescriptor><![CDATA[猛击]]></attackDescriptor>
 		
 		<!-- The description that's displayed when hovering over the attack action in combat. Follow the same guidelines as equipText (a couple of entries further down this page).
 		As this tooltip is only ever seen from the player's perspective, you can always write in the first-person narrative. (Still use npc2 for the target, though.)-->
-		<attackTooltipDescription>Whack [npc2.name] with your staff.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[你用法杖猛击[npc2.name]。]]></attackTooltipDescription>
 		
 		<!-- The rarity of this weapon. Values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/Rarity.java -->
 		<rarity>RARE</rarity> 
@@ -41,10 +41,10 @@
 		The target "npc" OR "npc1" should be used for the character using the weapon. e.g. If the player is the one attacking (and is called Innoxia), then [npc.Name] will return "Innoxia"
 		The target "npc2" should be used for the character being attacked. e.g. If Brax is the one being attacked, then [npc2.Name] will return "Brax"
 		-->
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] staff, and [npc.verb(prepare)] to use it in combat.]]></equipText>
+		<equipText><![CDATA[[npc.Name]拿起[npc.her]的法杖，准备用于战斗。]]></equipText>
 		
 		<!-- The description that's used when equipping this weapon. Follow the same guidelines as equipText. -->
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] staff away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]放下了[npc.her]的法杖。]]></unequipText>
 		
 		<!-- The file name of this weapon's image when in the character's inventory. The only supported file type is .svg. I use the free program "Inkscape" to make .svg images for the game. -->
 		<imageName>arcanist_staff.svg</imageName> 
@@ -124,27 +124,27 @@
 	<!-- Descriptions that are used when hitting an enemy. One of the hitText values will be randomly selected each time the attacker hits their target. Follow the same guidelines as equipText. -->
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Swinging [npc.her] staff, [npc.name] [npc.verb(manage)] to whack [npc2.name] on the [npc2.arm], which causes [npc2.herHim] to let out a surprised yelp!
-		]]></hitText>
+		[npc.name]挥舞法杖，猛击[npc2.name]的[npc2.arm]，让[npc2.herHim]发出一声惊叫声！
+]]></hitText>
 		<hitText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] staff, [npc.name] [npc.verb(manage)] to land a solid hit on [npc2.her] [npc2.arm]!
-		]]></hitText>
+[npc.Name]用法杖砸向[npc2.name]，结结实实地打在了[npc2.name]的[npc2.arm]上。
+]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] staff, whacking the heavy end against [npc2.her] shoulder!
-		]]></hitText>
+		[npc.Name]快步上前，举起法杖冲向[npc2.name]，重重地砸在[npc2.her]的肩膀上。
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] staff, [npc.name] [npc.verb(attempt)] to whack [npc2.name] on the [npc2.arm], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+[npc.Name]用法杖打向[npc2.name]的[npc2.arm]，但最终没有击中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] staff, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]用法杖砸向[npc2.name]，却没能命中目标，让[npc.she]恼火地大喊一声！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] staff, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用法杖猛地挥向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

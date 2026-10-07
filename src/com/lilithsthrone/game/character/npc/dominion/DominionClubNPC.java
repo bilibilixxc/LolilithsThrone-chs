@@ -70,7 +70,7 @@ public class DominionClubNPC extends NPC {
 			setName(Name.getRandomTriplet(this.getSubspecies()));
 			this.setPlayerKnowsName(true);
 			setDescription(UtilText.parse(this,
-					"[npc.Name] is a resident of Dominion, who you met in one of the clubs in the city's Nightlife district."));
+					"[npc.Name]是御城区的居民，你们曾在夜生活区里的一家夜总会遇见过。"));
 			
 			// PERSONALITY & BACKGROUND:
 			

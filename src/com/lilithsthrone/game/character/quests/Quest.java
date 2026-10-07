@@ -49,33 +49,33 @@ public enum Quest {
 	MAIN_PROLOGUE(QuestType.MAIN, 1, 5) {
 		@Override
 		public String getName() {
-			return "Survive the Evening";
+			return "熬过今晚";
 		}
 		@Override
 		public String getDescription() {
-			return "You promised your aunt Lily that you'd attend the opening of her museum's new exhibit. You need to survive the boredom of the evening ahead.";
+			return "你答应莉莉姨妈要参加她博物馆新展览的开幕式。你必须熬过今晚的无聊时光。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Your evening at the museum turned out to be far more eventful than you'd have liked."
-					+ " A mysterious demon named Lilith tricked you into being pulled through a magical portal and into a parallel universe."
-					+ " After waking up in the middle of an unfamiliar street, you were saved from a dire situation by the half-demon 'Lilaya'."
-					+ " She seems to be this universe's version of your aunt Lily, and, in return for agreeing to help her with her experiments, she's allowed you to stay at her home.";
+			return "你在博物馆度过的夜晚比你想的要漫长得多。"
+					+ "一个名叫莉莉丝的神秘恶魔诱骗你穿过一个神奇的入口，进入一个平行宇宙。"
+					+ "你在一条陌生的街道上醒来，之后被半恶魔“莉莱雅”从危难中救了出来。"
+					+ "她似乎是这个宇宙中莉莉姨妈的异面同位体。她把你安置在她家里，作为协助她实验的回报。";
 		}
 	},
 
 	MAIN_1_A_LILAYAS_TESTS(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "Lilaya's Tests";
+			return "莉莱雅的测试";
 		}
 		@Override
 		public String getDescription() {
-			return "You can find Lilaya in her lab at any time, where she'll be ready to continue running her tests on you. Maybe she can find a way to send you back home?";
+			return "你可以随时到莉莱雅的实验室找她，她会在那里继续对你进行测试。也许她能找到送你回家的办法？";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya ran some more tests on you, but she's unable to progress with her research without the help of her old colleague, Arthur.";
+			return "莉莱雅又对你进行了一些测试，但没有老同事亚瑟的帮助，她的研究无法取得进展。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -86,17 +86,17 @@ public enum Quest {
 	MAIN_1_B_DEMON_HOME(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Demon Home";
+			return "寻找亚瑟：恶魔之家";
 		}
 		@Override
 		public String getDescription() {
-			return "Lilaya has informed you that her old colleague, Arthur, would know more about the type of magic used in the portal."
-					+ " However, she seems to have an intense dislike of him, and you've ended up being tasked to go and get him to apologise to Lilaya before she'll allow him to" + " come and work with her."
-					+ " Arthur lives in an apartment building called 'Sawlty Towers', in the district of the city known as 'Demon Home', so you can find him there.";
+			return "莉莱雅告诉你，她的老同事亚瑟会更了解传送门中使用的魔法类型。"
+					+ "不过，莉莱雅看起来对亚瑟很不待见。你的任务就是去找到他，让他给莉莱雅好好道歉，这样她才会容许他一起共事。"
+					+ "亚瑟住在本市“恶魔之家”区的“圣尔蒂旅馆”，可以去那里找他。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "When you arrived at Arthur's home, you found that Dominion's Enforcers had arrested him on suspicion of plotting against Lilith." + " After his arrest, he was taken to the Enforcer's HQ.";
+			return "你来到亚瑟家才发现他被抓了。御城区执法者以涉嫌密谋反对莉莉丝的罪名逮捕了他，并移交至执法者总部。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -107,17 +107,17 @@ public enum Quest {
 	MAIN_1_C_WOLFS_DEN(QuestType.MAIN, 3, 20) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; The Wolf's Den";
+			return "寻找亚瑟：勇闯狼穴";
 		}
 		@Override
 		public String getDescription() {
-			return "Arthur has been arrested by Dominion's Enforcers, and has been taken to the Enforcer's HQ."
-					+ " It looks like you'll have to inquire further there and find out a way to save Arthur.";
+			return "亚瑟被御城区的执法者逮捕，并被带到了执法者总部。"
+					+ "看来你得去那儿进一步询问详情，并想办法救出亚瑟。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You were forced to confront the Enforcer Inspector, Brax."
-					+ " Thankfully, you were able to deal with him, but you then found out that Arthur has been sold into slavery!";
+			return "你被迫面对向督查执法者，布拉克斯。"
+					+ "还好你打得过他！但随后便是一个噩耗：亚瑟已被卖为奴隶！";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -129,16 +129,16 @@ public enum Quest {
 	MAIN_1_D_SLAVERY(QuestType.MAIN, 3, 10) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Sold into Slavery";
+			return "寻找亚瑟：沦为奴隶";
 		}
 		@Override
 		public String getDescription() {
-			return "After defeating Brax, you found out that Arthur was sold into slavery to a trader called Scarlett."
-					+ " You'll have to travel to Slaver Alley, find Scarlett, and find a way to free Arthur.";
+			return "在击败布拉克斯后，你发现了亚瑟的情报，他被当做奴隶卖给了叫斯嘉丽的奴隶贩子。"
+					+ "你必须前往奴隶巷，找到斯嘉丽，并想办法解救亚瑟。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found the harpy Scarlett in Slaver Alley, who turned out to be one of the rudest people you've ever met.";
+			return "你在奴隶巷找到了哈比斯嘉丽，她是你见过的最粗鲁的人之一。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -149,17 +149,17 @@ public enum Quest {
 	MAIN_1_E_REPORT_TO_HELENA(QuestType.MAIN, 3, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Find Helena";
+			return "寻找亚瑟：报告海伦娜";
 		}
 		@Override
 		public String getDescription() {
-			return "After finding Scarlett in Slaver Alley, you discovered that she's no longer in possession of Arthur."
-					+ " Before she'll tell you anything about it, she wants you to go to the Harpy Nests and report to her matriarch, Helena, that her business is a complete failure";
+			return "在奴隶巷找到斯嘉丽后，你发现亚瑟已经不在她手里了。"
+					+ "她要你去哈比之巢向她的族长海伦娜报告，她的生意完全失败了。不然的话她半点口风都不会漏给你。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You reported Scarlett's problems to her matriarch, Helena."
-					+ " She didn't seem to have much sympathy for Scarlett, and quickly flew off to go and talk to her in person.";
+			return "你把斯嘉丽的麻烦报告给了她的族长海伦娜。"
+					+ "她似乎对斯嘉丽没有多少同情，很快就飞过去和她当面谈了。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -171,15 +171,15 @@ public enum Quest {
 	MAIN_1_F_SCARLETTS_FATE(QuestType.MAIN, 3, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Scarlett's fate";
+			return "寻找亚瑟：斯嘉丽的命运";
 		}
 		@Override
 		public String getDescription() {
-			return "You need to travel back to Scarlett's shop to find out what's become of her. Hopefully Helena wasn't too hard on her, and she'll be willing to tell you what happened to Arthur now...";
+			return "你需要回到斯嘉丽的店里，看看她现在怎么样了。希望海伦娜没有对她太苛刻，她现在会愿意告诉你亚瑟发生了什么事……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled back to Scarlett's shop, only to discover that Helena has enslaved her!";
+			return "你回到斯嘉丽的商店，却发现海伦娜已经奴役了她！";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -196,16 +196,16 @@ public enum Quest {
 	MAIN_1_G_SLAVERY(QuestType.MAIN, 3, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Slavery";
+			return "寻找亚瑟：奴隶身份";
 		}
 		@Override
 		public String getDescription() {
-			return "Helena is willing to sell Scarlett to you, which seems to be the only way you'll get the information you need."
-					+ " You'll need to have a slaver license in order to buy Scarlett.";
+			return "海伦娜愿意把斯嘉丽卖给你，这似乎是你获得所需信息的唯一途径。"
+					+ "要购买斯嘉丽，你需要持有贩奴许可。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Helena sold Scarlett to you, which allowed you to order Scarlett to tell you what happened to Arthur.";
+			return "海伦娜把斯嘉丽卖给了你。如此一来，你即可命令斯嘉丽告诉你，亚瑟到底发生了什么事。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -245,16 +245,16 @@ public enum Quest {
 	MAIN_1_H_THE_GREAT_ESCAPE(QuestType.MAIN, 10, 200) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; The Great Escape";
+			return "寻找亚瑟：逃离魔爪";
 		}
 		@Override
 		public String getDescription() {
-			return "It turns out that Arthur was sold to an extremely dangerous demon called Zaranix, who lives in Demon Home."
-					+ " You'll need to travel to demon home and rescue Arthur!";
+			return "原来，亚瑟被卖给了一个极其危险的恶魔，名叫扎拉尼克斯，他住在恶魔之家。"
+					+ "你需要前往恶魔之家营救亚瑟！";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After defeating Zaranix, you saved Arthur and brought him back to Lilaya's home.";
+			return "打败扎拉尼克斯后，你救出了亚瑟，并把他带回了莉莱雅的家。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -266,19 +266,19 @@ public enum Quest {
 	MAIN_1_I_ARTHURS_TALE(QuestType.MAIN, 1, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; Conclusion";
+			return "寻找亚瑟：来龙去脉";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've rescued Arthur from the clutches of Zaranix, you should travel back to Lilaya's home and get the full story of what happened from him.";
+			return "既然你已经从扎拉尼克斯的魔掌中救出了亚瑟，就应该回到莉莱雅的家，从他那里了解事情的前因后果。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Arthur explained how he was dabbling in the forbidden art of teleportation spells."
-					+ " Through one of his agents, Zaranix found out about this, and had no difficulty in getting Arthur enslaved for treason."
-					+ " Now that you've rescued him, he's keen to repay the favour by finding out how to send you back home.";
+			return "亚瑟解释了他是如何涉足传送法术这门禁术的。"
+					+ "扎拉尼克斯通过他的一名特工发现了这件事，并毫不费力地以叛国罪将亚瑟奴役。"
+					+ "既然你救了他，他也很想报答你，找出送你回家的方法。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -291,16 +291,16 @@ public enum Quest {
 	MAIN_1_J_ARTHURS_ROOM(QuestType.MAIN, 1, 30) {
 		@Override
 		public String getName() {
-			return "The search for Arthur; A room of his own";
+			return "寻找亚瑟：他的房间";
 		}
 		@Override
 		public String getDescription() {
-			return "Lilaya really doesn't want Arthur in her lab, and has tasked you to help Rose find a suitable room for him to stay in.<br/>"
-					+ "<i>Go into one of the empty rooms in Lilaya's House, and through the room management window, upgrade it to 'Arthur's Room'.</i>";
+			return "莉莱雅真的不想让亚瑟待在她的实验室里，她委托你帮萝丝找个合适的房间安排亚瑟住下。<br/>"
+					+ "<i>进入莉莱雅的家的一个空房间，通过房间管理窗口将其升级为 “亚瑟的卧室”。</i>";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You located a suitable room for Arthur, and, with Rose's help, moved a significant amount of arcane instrumentation into his new lab-cum-bedroom.";
+			return "你为亚瑟找到了一个合适的房间，并在萝丝的帮助下，把大量的奥术仪器搬进了他的新实验室兼卧室。";
 		}
 	},
 	
@@ -308,18 +308,18 @@ public enum Quest {
 	MAIN_2_A_INTO_THE_DEPTHS(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "Into Submission";
+			return "进入屈城区";
 		}
 		@Override
 		public String getDescription() {
-			return "Arthur was able to explain the mechanism by which you were transported into this new world, but he seemed to hold back on some of the details."
-					+ " He said that he'd explain everything fully once he knew for certain what was going on, but in order for that to happen, he'll need to talk to one of the seven elder Lilin."
-					+ " After much arguing, Lilaya agreed to convince her mother to help, but you'll have to be the one to deliver the message.<br/>"
-					+ "<i>Travel down into the undercity of Submission and seek an audience with Lilaya's mother, Lyssieth.</i>";
+			return "亚瑟能够解释你被传送到这个新世界的机制，但他似乎对一些细节有所保留。"
+					+ "他说，一旦他确定发生了什么事，他就会把一切都解释清楚，但要做到这一点，他需要和七位莉琳长老中的一位谈谈。"
+					+ "经过一番争论，莉莱雅同意说服她的母亲帮忙，但必须由你来传话。<br/>"
+					+ "<i>前往屈城区水下都市，求见莉莱雅的母亲，莉西丝。</i>";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Acting on Arthur's advice, you ventured down into Submission and discovered the location of Lyssieth's palace.";
+			return "根据亚瑟的建议，你冒险进入了屈城区，发现了莉西丝宫殿的位置。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -330,18 +330,18 @@ public enum Quest {
 	MAIN_2_B_SIRENS_CALL(QuestType.MAIN, 25, 300) {
 		@Override
 		public String getName() {
-			return "The Siren's Call";
+			return "塞壬的呼唤";
 		}
 		@Override
 		public String getDescription() {
-			return "The guards at the gate to Lyssieth's palace told you that she's not receiving any visitors at the moment."
-					+ " The only way to gain an audience with her would be to take care of her troublesome daughter; 'The Dark Siren'."
-					+ " She's currently living in a stone fortress in one of the central tunnels here in Submission, from which she sends out gangs of imps to terrorise innocent citizens.</br>"
-					+ "If you're able to enslave her, either through combat or trickery, you'll have earned an audience with Lyssieth.";
+			return "莉西丝宫殿门口的守卫告诉你，她现在不接待任何访客。"
+					+ "要得到她的接见，唯一的办法就是解决她的麻烦女儿“暗夜塞壬”。"
+					+ "目前，她住在屈城区中心隧道的一个石头要塞里，并从那里派出小恶魔团伙恐吓无辜市民。</br>"
+					+ "无论是堂堂正正地决斗，抑或是插圈弄套地算计，只要你能奴役她，便能得到莉西丝的接见。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to enslave Lyssieth's troublesome daughter, and so earned an audience with her!";
+			return "你设法奴役了莉西丝的麻烦女儿，因此赢得觐见莉西丝的机会！";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -372,18 +372,18 @@ public enum Quest {
 	MAIN_2_C_SIRENS_FALL(QuestType.MAIN, 1, 10) {
 		@Override
 		public String getName() {
-			return "The Siren's Fall";
+			return "塞壬陷落";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Return to Lyssieth's palace and report to the guards that you've enslaved 'The Dark Siren'."
-					+ " This should be enough to grant you an audience with Lyssieth.";
+			return "返回莉西丝的宫殿告知守卫，你已奴役了“暗夜塞壬”。"
+					+ "这应该足以让你觐见莉西丝了。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "For enslaving 'The Dark Siren', the guards at the gate to Lyssieth's palace gave you permission to enter and seek out an audience with her.";
+			return "因为奴役了“暗夜塞壬”，莉西丝宫殿门口的守卫允许你进入宫殿觐见她。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -399,17 +399,17 @@ public enum Quest {
 	MAIN_2_D_MEETING_A_LILIN(QuestType.MAIN, 1, 100) {
 		@Override
 		public String getName() {
-			return "Meeting a Lilin";
+			return "面见莉琳";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Travel to Lyssieth's throne room and try to finally get some answers about why you're here and how you can return to your old world.";
+			return "前往莉西丝的宫殿，追寻最终答案：你为什么会在这里，如何才能回到原来的世界。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lyssieth revealed that this world is in fact your own, and that Lilith transformed it into a different reality when she was released from the mirror.";
+			return "莉西丝透露，这个世界其实就是原来的世界，莉莉丝从镜子中被释放出来后，将现实的历史改写了";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -429,18 +429,18 @@ public enum Quest {
 	MAIN_3_ELIS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "Destination Elis";
+			return "目的地：伊利斯";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lyssieth told you that in order to defeat the elder lilin pegataur, Lunette, you'll need to obtain the help of Minotallys; the lilin who rules the town of Elis."
-					+ " Meraxis additionally mentioned enlisting the aid of the youko, but that can wait until after you've arrived in Elis itself.";
+			return "莉西丝告诉你，想打败莉琳长老——半天马人露内特，你需要得到米诺塔莉丝的帮助，她是统治伊利斯镇的莉琳。"
+					+ "梅拉克西丝建议向妖狐寻求帮助，不过也得等你到了伊利斯再做打算。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Lyssieth told you that in order to defeat the elder lilin pegataur, Lunette, you'll need to obtain the help of Minotallys; the lilin who rules the town of Elis."
-					+ " To this end, you left Dominion for the first time...";
+			return "莉西丝告诉你，想打败莉琳长老——半天马人露内特，你需要得到米诺塔莉丝的帮助，她是统治伊利斯镇的莉琳。"
+					+ "为此，你第一次离开了御城区……";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -451,18 +451,18 @@ public enum Quest {
 	MAIN_3_B_MEETING_MERAXIS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "To The Red Dragon";
+			return "到红龙酒馆";
 		}
 
 		@Override
 		public String getDescription() {
-			return "As you left Dominion, you were approached by Meraxis, who told you to meet her in the tavern 'The Red Dragon' at Elis, which is apparently near to the town's eastern gate."
-					+ " Meraxis also said that she'll set up a meeting with Minotallys when you arrive, and that she'll have secured accommodation for you.";
+			return "当你离开御城区时，梅拉克西丝走了过来。她让你到伊利斯的红龙酒馆来找她，那里离小镇的东大门不远。"
+					+ "梅拉克西丝还说，等你来了，她会安排你与米诺塔莉丝见面，也会给你安排好住处。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You met Meraxis in 'The Red Dragon' tavern, where she's managed to secure accommodation for you in the form of a rented room on the tavern's first floor.";
+			return "你在红龙酒馆见到了梅拉克西丝，她在旅店的一楼租了一间屋子，作为你的住所。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -473,19 +473,19 @@ public enum Quest {
 	MAIN_3_C_MEETING_MINOTALLYS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "Meeting Minotallys";
+			return "与米诺塔莉丝会面";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Meraxis has arranged for you to meet with Minotallys concerning the threat of Lunette to the town of Elis."
-					+ " Tell Meraxis that you're ready for the meeting at any time between [units.time(9)]-[units.time(18)].";
+			return "梅拉克西丝安排你与米诺塔莉丝会面，共商威胁——伊利斯城的露内特。"
+					+ "在[units.time(9)]-[units.time(18)]间的任意时刻，告知梅拉克西丝你已经准备好参加会面了。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Meraxis travelled to Elis's town hall to meet Minotallys, where you also met with her personal assistant, Arion."
-					+ " Minotallys is in a state of denial about the current state of affairs in the Foloi Fields, and stated that she would only consider taking action if the town of Themiscyra was somehow being threatened.";
+			return "你与梅拉克西丝前往了伊利斯的市镇议会，前去见米诺塔莉丝。而在那，你同时见到了她的个人助理，阿里昂。"
+					+ "米诺塔莉丝对弗洛伊田野的现状矢口否认，并表示只有当特弥斯库拉受到某种威胁时，她才会考虑采取行动。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -496,18 +496,18 @@ public enum Quest {
 	MAIN_3_D_TO_THEMISCYRA(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "To Themiscyra";
+			return "前往特弥斯库拉";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You agreed to travel to Themiscyra with Meraxis and find out whether or not the town is being threatened by Lunette's army."
-					+ " When you're ready, you need to meet with Meraxis and have her guide you there.";
+			return "你同意与梅拉克西丝一同前往特弥斯库拉，去确认此地是否受露内特的军队威胁。"
+					+ "当你准备好之后，你需要与梅拉克西丝见面，让她带你前往那里。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled to Themiscyra with Meraxis, but upon reaching the town, you discovered that it was being destroyed by Lunette's army!";
+			return "你与梅拉克西丝一同前往特弥斯库拉，但在抵达前，你便发现那里已遭露内特的军队摧毁了！";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -520,17 +520,17 @@ public enum Quest {
 	MAIN_3_E_THEMISCYRA_ATTACK(QuestType.MAIN, 1, 250) {
 		@Override
 		public String getName() {
-			return "Save the Queen";
+			return "保护女王";
 		}
 		@Override
 		public String getDescription() {
-			return "Separated from Meraxis, you've teamed up with an Amazon cow-girl named Aurokaris."
-					+ " You need to travel through Themiscyra and find both Meraxis and Ursa, the queen of the Amazons, who should be at the palace.";
+			return "在与梅拉克西丝分别后，你跟一名名为奥罗卡利斯的亚马逊牛女一同合作。"
+					+ "你需要穿越特弥斯库拉，找到梅拉克西丝，以及乌萨——亚马逊人的女王，她应当在宫殿内。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Alongside Aurokaris, you travelled through Themiscyra and found both Meraxis and Ursa at the plaza before the palace."
-					+ " After encountering Lunexis, the leader of Lunette's army, Meraxis teleported the five of you back to Elis's town hall, where Minotallys was finally convinced that Lunette is a threat to Elis.";
+			return "与奥罗卡利斯结伴而行，你穿越了特弥斯库拉，找到了梅拉克西丝，且在宫殿前的广场上找到了乌萨。"
+					+ "在遇到露内特军队的首领露内克西丝后，梅拉克西丝将你们五人传送回了伊利斯的市镇议会，而米诺塔莉丝终于相信露内特会对伊利斯造成威胁。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -546,16 +546,16 @@ public enum Quest {
 	MAIN_3_F_PREPARING_ELIS(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "Some Help from SWORD";
+			return "SWORD的援助";
 		}
 		@Override
 		public String getDescription() {
-			return "With Lunette planning to attack Elis at some point in the near future, you've told Minotallys that you'll help to get the town's defences in order."
-					+ " You need to travel to the Enforcer station in Elis and ask the group of SWORD Enforcers for their assistance.";
+			return "由于露内特准备在不久的将来攻打伊利斯，你告诉米诺塔莉丝你会帮助组织城镇的防御。"
+					+ "你需要前往伊利斯的执法者站，向SWORD执法者小组寻求帮助。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled to the Enforcer station in Elis and asked the group of SWORD Enforcers to help with getting the town's defences in order.";
+			return "你前往伊利斯的执法局，请求SWORD执法者小组帮助整顿城镇的防御。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -566,17 +566,17 @@ public enum Quest {
 	MAIN_3_G_SWORD_SCAPEGOAT(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "SWORD's Scapegoat";
+			return "SWORD的代罪羔羊";
 		}
 		@Override
 		public String getDescription() {
-			return "The SWORD Enforcers told you that in order for them to help you, you first need to help them."
-					+ " You're to tag along on an operation to stop an elder lilin's daughter so that you can get them out of trouble if they're recognised."
-					+ " You need to meet them in the Enforcer station on a Tuesday evening, after [units.time(17)], to start the operation.";
+			return "SWORD执法者告诉你，为了让他们帮助你，你首先要帮助他们。"
+					+ "你要跟去执行一项行动，阻止一位莉琳长老的女儿，这样如果他们被认出来，你就能帮他们摆脱困境。"
+					+ "你需要在周二晚上[units.time(17)]之后与他们在执法局会面，以开始行动。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You met with the SWORD Enforcers on a Tuesday afternoon so that you could tag along on an operation to stop an elder lilin's daughter.";
+			return "你在周二晚上与SWORD执法者会面，跟随他们一起行动，阻止一位莉琳长老的女儿。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -587,17 +587,17 @@ public enum Quest {
 	MAIN_3_H_SWORD_MISSION(QuestType.MAIN, 25, 250) {
 		@Override
 		public String getName() {
-			return "Stop the Succubus";
+			return "阻止魅魔";
 		}
 		@Override
 		public String getDescription() {
-			return "You need to stay with the SWORD Enforcers as they clear the succubus's headquarters."
-					+ " You don't need to fight, but the Enforcers might appreciate it if you gave them some assistance.";
+			return "在SWORD执法者清理魅魔总部的时候，你需要和他们待在一起。"
+					+ "你不需要战斗，但你若给执法者们一些支援的话，可能会赢得他们的感谢。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You worked with the SWORD Enforcers to clear the succubus's headquarters."
-					+ " Although she managed to escape, you've put a decisive end to her illegal enslavement activities.";
+			return "你与SWORD执法者协力合作，清理着魅魔的总部。"
+					+ "虽然她逃脱了，但你也彻底中止了以她为首的非法奴役活动。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -608,47 +608,47 @@ public enum Quest {
 	MAIN_3_I_ELIS_DEFENCE_PLAN(QuestType.MAIN, 1, 25) {
 		@Override
 		public String getName() {
-			return "Report to Minotallys";
+			return "报告米诺塔莉丝";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that the SWORD Enforcers are working on preparing the town's defences, you need to head back to the town hall to report this to Minotallys.";
+			return "既然SWORD执法者们已经在准备城镇的防御工事了，你需要回到市政厅向米诺塔莉丝汇报此事。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After meeting with Minotallys, Ursa, Hammer and Ghost, and Meraxis in the town hall, a plan for how to defend Elis from Lunette was made.";
+			return "在市政厅与米诺塔莉丝、乌萨、锤子和幽灵以及梅拉克西丝会面后，一个防御伊利斯免受露内特侵袭的计划制定了出来。";
 		}
 	},
 	
 	MAIN_3_J_FINDING_TAKAHASHI(QuestType.MAIN, 30, 25) {
 		@Override
 		public String getName() {
-			return "Finding Takahashi";
+			return "寻找高桥";
 		}
 		@Override
 		public String getDescription() {
-			return "Meraxis is convinced that she can enlist the aid of the youko with the help of her youko friend, Takahashi."
-					+ " The most likely place to find Takahashi is in Meraxis's old hideout in the Shinrin Highlands."
-					+ " When ready, you need to speak with Meraxis and travel to the Shinrin Highlands in order to find her friend.";
+			return "梅拉克西丝相信，在她的妖狐朋友高桥的帮助下，她能争取到妖狐们的援助。"
+					+ " 最有可能找到高桥的地方是梅拉克西丝在心林高地的旧藏身处。"
+					+ " 准备好之后，你需要与梅拉克西丝交谈，前往心林高地寻找她的朋友。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You discovered that Meraxis's secret hideout had been occupied by a seven-tailed youko, who had captured Takahashi and was using her as a servant."
-					+ " After being discovered, the seven-tailed youko fled, allowing Meraxis and Takahashi to reclaim their old hideout.";
+			return "你发现梅拉克西丝的秘密藏身处已经被一只七尾妖狐占据，她抓住了高桥并将其当作仆人使唤。"
+					+ " 在被发现之后，那只七尾妖狐逃走了，梅拉克西丝和高桥得以重新夺回她们的旧藏身处。";
 		}
 	},
 	
 	MAIN_3_K_WEAPONS_CACHE(QuestType.MAIN, 1, 25) {//TODO
 		@Override
 		public String getName() {
-			return "Getting the Guns";
+			return "夺回武器";
 		}
 		@Override
 		public String getDescription() {
-			return "[style.italicsBad(This is as far as the main quest goes for now! It will be updated soon!)]"
+			return "[style.italicsBad(主线任务暂时到此为止！很快就会更新！)]"
 					+"<br/>"
-					+"The guns which Meraxis stole from Lyssieth are in the possession of a nine-tailed youko."
-					+ " Takahashi knows where this youko lives, and so when you're ready the three of you can set off to reclaim these weapons.";
+					+"梅拉克西丝从莉西丝那里偷走的枪械现在落在了一只九尾妖狐手中。"
+					+ " 高桥知道这只妖狐住在哪里，所以等你准备好之后，你们三人就可以出发去夺回这些武器了。";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -659,12 +659,12 @@ public enum Quest {
 	MAIN_3_L_YOUKO_LILIN(QuestType.MAIN, 1, 25) {//TODO
 		@Override
 		public String getName() {
-			return "The Youko Lilin";
+			return "妖狐莉琳";
 		}
 		@Override
 		public String getDescription() {
-			return "Now the weapons have been secured, the defence of Elis is only lacking arcane users who can repel the spells which Lunette's daughters will be using."
-					+ " In order to get the youko to help with this, you need to seek out the two youko lilin and convince them to help you.";
+			return "武器已经到手，伊利斯的防御现在只差能够抵御露内特女儿们所使用法术的奥术使用者了。"
+					+ " 为了让妖狐帮忙，你需要找到两位妖狐莉琳，说服她们助你一臂之力。";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -679,7 +679,7 @@ public enum Quest {
 		}
 		@Override
 		public String getDescription() {
-			return "With the youko's aid secured and the stockpile of arcane muskets in your hands, all that's left to do is trigger Lunette's assault on the town.";
+			return "妖狐的援助已经确保，奥术滑膛枪的储备也已到手，剩下要做的就是引发露内特对城镇的进攻了。";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -694,8 +694,8 @@ public enum Quest {
 		}
 		@Override
 		public String getDescription() {
-			return "The assault on Elis has begun! Thanks to your actions and those of the youko and the musket-armed militia, Lunette's daughters have been repelled, but the elder lilin herself still needs to be dealt with."
-					+ " It's up to you, Meraxis, and Minotallys to defeat her centaur form.";
+			return "对伊利斯的进攻已经开始了！多亏了你、妖狐以及装备了滑膛枪的民兵的努力，露内特的女儿们已经被击退，但长老莉琳本人仍需解决。"
+					+ " 现在就看你、梅拉克西丝和米诺塔莉丝能否击败她的半人马形态了.";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -710,8 +710,8 @@ public enum Quest {
 		}
 		@Override
 		public String getDescription() {
-			return "You managed to defeat Lunette, but as her centaur body tumbled to the ground, she transformed into her true, demonic form."
-					+ " You need to stall her until Lyssieth can arrive and subdue her sister.";
+			return "你成功击败了露内特，但就在她的半人马身躯轰然倒地之际，她转化成了真正的恶魔形态。"
+					+ " 你需要拖住她，直到莉西丝赶来制服她的姐妹.";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -727,51 +727,51 @@ public enum Quest {
 	SIDE_UTIL_COMPLETE(QuestType.SIDE, 1, 0) {
 		@Override
 		public String getName() {
-			return "Quest Complete!";
+			return "任务完成！";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Quest complete!";
+			return "任务完成！";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Quest complete!";
+			return "任务完成！";
 		}
 	},
 	
 	SIDE_DISCOVER_ALL_ITEMS(QuestType.SIDE, 1, 100) {
 		@Override
 		public String getName() {
-			return "Completionist";
+			return "圆满主义者";
 		}
 
 		@Override
 		public String getDescription() {
-			return "There are a lot of curious items in this new world. You wonder if you can find them all...";
+			return "在这个新世界里，有许多奇特的物品。你在想自己能否把它们都找出来……";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You have discovered every item there is to find!";
+			return "你已经发现了所有可以找到的物品！";
 		}
 	},
 
 	SIDE_DISCOVER_ALL_RACES(QuestType.SIDE, 1, 100) {
 		@Override
 		public String getName() {
-			return "Completionist";
+			return "圆满主义者";
 		}
 
 		@Override
 		public String getDescription() {
-			return "There seem to be a lot of strange new races in this world. You wonder if you can discover them all...";
+			return "这个世界上似乎有很多奇怪的新种族。你想知道自己是否能发现全部的种族……";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You have discovered every race there is to find!.";
+			return "你们发现了所有可以找到的种族！";
 		}
 	},
 	
@@ -781,19 +781,19 @@ public enum Quest {
 	SIDE_ENCHANTMENTS_LILAYA_HELP(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Ask Lilaya for help";
+			return "向莉莱雅寻求帮助";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You recently felt a strange force entering your body, and although it doesn't seem to have had any obvious effect, you should probably have it checked out."
-					+ " Lilaya is sure to know more, so perhaps you should go and talk to her about it.";
+			return "你最近感觉有一股奇怪的力量进入了你的身体，虽然它似乎没有产生任何明显的影响，但你还是应该去检查一下。"
+					+ "莉莱雅肯定会知道更多，也许你应该去和她谈谈。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya informed you that you're able to collect 'essences' from other people's arcane aura."
-					+ " She seemed a little worried that you're able to do this, as apparently it's normally only Lilin who are able to gather essences in this fashion...";
+			return "莉莱雅告诉你，你可以从其他人的奥术灵气当中收集“精华”。"
+					+ "她似乎有点担心你能做到这一点，因为通常只有莉琳才能用这种方式收集精华……";
 		}
 	},
 
@@ -802,34 +802,34 @@ public enum Quest {
 	SIDE_PREGNANCY_CONSULT_LILAYA(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Lilaya knows best";
+			return "莉莱雅最清楚";
 		}
 
 		@Override
 		public String getDescription() {
-			return "There's no way... You're pregnant? You're <b>pregnant</b>! Surely Lilaya will know what to do?!";
+			return "这不可能……你怀孕了？你<b>怀孕</b>了！莉莱雅肯定知道该怎么做？！";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya managed to calm you down, and reassured you that pregnancy in this world isn't as big a deal as it was back home.";
+			return "莉莱雅设法让你平静下来，并安慰你说，在这个世界上，怀孕并不像在老家那样是件大事。";
 		}
 	},
 	
 	SIDE_PREGNANCY_LILAYA_THE_MIDWIFE(QuestType.SIDE, 1, 20) {
 		@Override
 		public String getName() {
-			return "Lilaya the midwife";
+			return "助产士莉莱雅";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lilaya said that she'd be able to help you give birth whenever you're ready. You're going to need to wait until your belly has finished growing, then you can go and see Lilaya to give birth.";
+			return "莉莱雅说，只要你准备好了，她就能帮你生产。你需要等到肚子不再变大后，再去找莉莱雅生产。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya helped you give birth. She said that if ever you get pregnant again, she can always help out.";
+			return "莉莱雅帮你生了孩子。她说，如果你再次怀孕，她可以随时帮忙。";
 		}
 	},
 	
@@ -838,15 +838,15 @@ public enum Quest {
 	SIDE_INCUBATION_WAITING(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Living Incubator";
+			return "活体孵卵器";
 		}
 		@Override
 		public String getDescription() {
-			return "There's no doubt about it; you've had a clutch of eggs implanted inside of your body! There's nothing else for you to do except wait for them to mature and then lay them...";
+			return "毫无疑问，你的体内已经植入了一窝卵！除了等待它们成熟，然后产下它们之外，你别无他法……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You waited for the eggs implanted inside of your body to mature, and then successfully laid and hatched them!";
+			return "你等待植入体内的卵子成熟，然后成功产卵并孵化了这些卵！";
 		}
 	},
 	
@@ -870,17 +870,17 @@ public enum Quest {
 	SIDE_SLAVER_NEED_RECOMMENDATION(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Letter of recommendation";
+			return "推荐信";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After asking how to obtain a slaver license at the Slavery Administration building, you discovered that you'll need a letter of recommendation first. Lilaya should be able to help with that.";
+			return "在奴隶管理大楼询问如何获得奴隶执照后，你发现首先需要一封推荐信。莉莱雅应该能帮上忙。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya gave you a letter of recommendation, and what's more, she also offered to let you house your slaves in her mansion.";
+			return "莉莱雅给了你一封推荐信，更重要的是，她还提出让你在她的宅邸里安置你的奴隶。";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -891,17 +891,17 @@ public enum Quest {
 	SIDE_SLAVER_RECOMMENDATION_OBTAINED(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Present letter";
+			return "递交信件";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've obtained a letter of recommendation from Lilaya, you should go back to the Slavery Administration building in Slaver Alley and present it to [finch.name].";
+			return "现在你已经从莉莱雅那里拿到了推荐信，你应该回到奴隶巷的奴隶管理大楼，把它交给[finch.name]。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You presented the letter of recommendation to [finch.name], and after paying the fee, you obtained a slaver license!";
+			return "你向[finch.name]提交了推荐信，并在支付费用后获得了奴隶许可证！";
 		}
 		@Override
 		public void applySkipQuestEffects() {
@@ -914,17 +914,17 @@ public enum Quest {
 	SIDE_ACCOMMODATION_NEED_LILAYAS_PERMISSION(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lilaya the Landlady";
+			return "女房东莉莱雅";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lilaya's mansion is full of empty rooms which could be put to use as guest accommodation. You should ask her if you could use them to house your friends and family.";
+			return "莉莱雅的豪宅里有很多空房间，可以用作客人的住所。你应该问问她，你是否可以用这些房间来安置你的亲朋好友。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya gave you permission to use the empty rooms to house your friends and family, on the condition that you pay for the expenses that are incurred.";
+			return "莉莱雅允许你使用空房间安置你的朋友和家人，条件是你必须支付由此产生的费用。";
 		}
 	},
 
@@ -933,15 +933,15 @@ public enum Quest {
 	SIDE_DOLL_STORAGE_ASK_FOR_SPACE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Where do the dolls go?";
+			return "玩偶去往何方？";
 		}
 		@Override
 		public String getDescription() {
-			return "Although Lilaya's mansion is full of empty rooms in which dolls could be stored, you'd better ask her for permission before bringing any home...";
+			return "虽然莉莱雅的豪宅里有不少可以存放玩偶的空房间，但在你把玩偶带回家之前，最好还是先征得她的同意……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Lilaya gave you permission to use the empty rooms to store any dolls you buy.";
+			return "莉莱雅允许你使用空闲房间来存放你购买的所有玩偶。";
 		}
 	},
 	
@@ -950,38 +950,38 @@ public enum Quest {
 	SIDE_HYPNO_WATCH_VICKY(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Order at Arcane Arts";
+			return "奥术艺术的订单";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Arthur informed you that he was instructed by Zaranix to find an arcane method of changing a person's sexual orientation."
-					+ " While he reassured you that he had no intention of ever using such an item himself, Arthur did express an interest in completing his research,"
-						+ " and asked you to fetch a special order from the store 'Arcane Arts' in the Shopping Arcade.";
+			return "亚瑟告诉你，扎拉尼克斯指示他寻找一种改变人性取向的奥术方法。"
+					+ "虽然他向你保证，他本人无意使用这种物品，但亚瑟确实表示有兴趣完成他的研究，"
+						+ "并让你去购物中心里的“奥术艺术”店取一份特别订单。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You retrieved the package from Arcane Arts, and brought it back to Arthur.";
+			return "你从“奥术艺术”那里取回了包裹，并把它带回给亚瑟。";
 		}
 	},
 	
 	SIDE_HYPNO_WATCH_TEST_SUBJECT(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Test subject";
+			return "测试用具";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After Lilaya followed Arthur's instructions to enchant the watch, she asked if it would be possible to test it on you...";
+			return "莉莱雅按照亚瑟的指示给怀表附魔后，她问是否可以在你身上测试一下……";
 //					+ " You could either offer yourself, or, if you own any slaves, offer one of those to Arthur instead.";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "The Hypno-Watch appeared to work, although Lilaya stopped the test before it had a permanent effect."
-					+ " She warned that it will have a strong corruptive effect upon the mind of the whoever is targeted, and disenchanted it for good measure, before handing it over to you.";
+			return "催眠怀表似乎起了作用，不过莉莱雅在它产生永久性效果之前就停止了测试。"
+					+ "她警告说，催眠怀表会对目标的思想施加强烈的堕落效果，在将怀表交给你之前，她顺便解除了上面的附魔。";
 		}
 	},
 	
@@ -989,36 +989,36 @@ public enum Quest {
 	LIGHTNING_SPELL_1_PAYMENT(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "The Price Of Power";
+			return "力量的代价";
 		}
 		@Override
 		public String getDescription() {
-			return "After showing Arthur the arcane lightning globe which you found in the Enforcer warehouse, you were told that it would be possible to learn the secrets of the lightning spells within it."
-					+ " Although the resulting spells will be more powerful than what the globe is capable of,"
-						+ " Arthur has explained to you that such an extraction will not only require an immense amount of arcane essences, but will also permanently remove the globe's innate spells."
-					+ "<br/>When you're willing and able to do so, give Arthur the arcane lightning globe and let him extract 500 arcane essences from your aura.";
+			return "亚瑟向你展示了在执法者仓库找到的奥术闪电球，并告诉你可以学习其中的闪电法术秘密。"
+					+ "尽管由此得到的法术将比闪电球的威力更强大，"
+						+ "亚瑟向你解释，这样的汲取不止需要极大量的奥术精华，同时也会永远移除球体固有的法术。"
+					+ "<br/>当你可以并愿意这样做时，给亚瑟一个奥术闪电球并让他从你的灵气内汲取500奥术精华。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You gave Arthur the arcane lightning globe which you found in the Enforcer warehouse, and also let him extract 500 arcane essences from your aura."
-					+ " In exchange, you've been promised that a powerful arcane lightning spell shall soon be yours.";
+			return "你给了亚瑟从执法者仓库找来的奥术闪电球，同时让他从你的灵气中汲取了500奥术精华。"
+					+ "作为交换，你被许诺了一个强大的奥术闪电法术";
 		}
 	},
 	
 	LIGHTNING_SPELL_2_WAITING(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Lightning Extraction";
+			return "闪电提取";
 		}
 		@Override
 		public String getDescription() {
-			return "Arthur informed you that it will take some time to extract the secrets of the arcane lightning from within the globe."
-					+ " You'll have to return to him after two weeks to find out what the results of his research are...";
+			return "亚瑟告诉你，从闪电球内获取奥术闪电的秘密需要一些时间。"
+					+ "你需要在两周后回来找他，看看他的研究得到了什么成果……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Arthur excitedly informed you that he'd not only been able to extract the secrets of two arcane lightning spells from the globe,"
-					+ " but that he'd also been able to transfer its remaining power into a smaller crystal, which he's had fitted onto a ring for you.";
+			return "亚瑟兴奋地告诉你，他不仅从闪电球上提取出两种奥术闪电的秘密，"
+					+ "而且还能将剩余力量转移到一个较小的水晶中，并将其镶在一个戒指上给了你。";
 		}
 	},
 	
@@ -1029,66 +1029,66 @@ public enum Quest {
 	HARPY_PACIFICATION_ONE(QuestType.SIDE, 6, 25) {
 		@Override
 		public String getName() {
-			return "Nests in chaos";
+			return "混乱中的巢穴";
 		}
 
 		@Override
 		public String getDescription() {
-			return "The Enforcer informed you that the Harpy Nests are extremely dangerous at the moment."
-					+ " Upon further questioning, you discovered that there's a hefty reward for the person who's able to calm the three main matriarchs down.";
+			return "执法者告诉你，哈比之巢目前非常危险。"
+					+ "经过进一步的询问，你发现能让三位族长平静下来的人可以获得丰厚的奖励。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You've managed to assume control of one of the harpy nests!";
+			return "你已经控制了其中一个哈比巢穴！";
 		}
 	},
 	HARPY_PACIFICATION_TWO(QuestType.SIDE, 6, 25) {
 		@Override
 		public String getName() {
-			return "One down, two to go";
+			return "解决一个，还剩两个";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You've managed to reign in one of the matriarchs, but there are still two more to go!";
+			return "你已经成功的“安抚”了一位哈比族长，但还有两位等着你去“安抚”呢！";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You've managed to assume control of two of the harpy nests!";
+			return "你已经控制了两个哈比巢穴！";
 		}
 	},
 	HARPY_PACIFICATION_THREE(QuestType.SIDE, 6, 25) {
 		@Override
 		public String getName() {
-			return "One matriarch left";
+			return "还剩一位族长";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You've managed to reign in two of the matriarchs, but there's still one more to go!";
+			return "你已经成功的“安抚”了两位位哈比族长，还剩最后一位！";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You've managed to assume control of all three of the major harpy nests!";
+			return "你已经控制了全部主要哈比巢穴！";
 		}
 	},
 	HARPY_PACIFICATION_REWARD(QuestType.SIDE, 6, 50) {
 		@Override
 		public String getName() {
-			return "Harpy "+(Main.game.getPlayer().isFeminine()?"queen":"king");
+			return "哈比"+(Main.game.getPlayer().isFeminine()?"女王":"之王");
 		}
 
 		@Override
 		public String getDescription() {
-			return "Return to the Enforcer post to report your success.";
+			return "回到执法者岗哨报告任务已经完成。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "After informing the Enforcers that you've pacified all three of the major harpy nests, they resumed their regular patrols, resulting in the Harpy Nests being safe to travel through!";
+			return "在告知执法者你已经控制了所有主要哈比巢穴后，执法者恢复了常规巡逻。你现在可以在哈比之巢通行无阻了！";
 		}
 	},
 	
@@ -1099,176 +1099,176 @@ public enum Quest {
 	SLIME_QUEEN_ONE(QuestType.SIDE, 10, 25) {
 		@Override
 		public String getName() {
-			return "Troublesome Slimes";
+			return "麻烦的史莱姆们";
 		}
 
 		@Override
 		public String getDescription() {
-			return "When you first arrived in Submission, an Enforcer named Claire informed you of an ongoing situation in the tunnels."
-					+ " Apparently, there are an increasing number of Slimes who are attacking innocent travellers and transforming them into more Slimes."
-					+ " If you're able to offer any information on where these aggressive Slimes are coming from, you could earn a five-thousand flame reward."
+			return "你刚来到屈城区时，便遇到一位名叫克莱尔的执法者。她告诉你隧道里正在发生的情况。"
+					+ "史莱姆正在袭击无辜的旅行者，并把他们变成也变成史莱姆。于是史莱姆就越来越多。"
+					+ "如果你向执法者提供凶猛史莱姆来源的线索，就能获得五千火币奖励。"
 					+ "<br/>"
-					+ "<p style='text-align:center;'><i>You'll need to defeat a slime in <b>Submission's tunnels</b> to find out more.</i></p>";
+					+ "<p style='text-align:center;'><i>你需要通过在<b>屈城区的隧道</b>中打倒一只史莱姆，以获取更多线索。</i></p>";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "One of the Slimes that you encountered in the tunnels told you that they'd been given orders to transform people by a certain 'Slime Queen'.";
+			return "隧道里遇到的一只史莱姆告诉你，有位“史莱姆女王”命令它们转化其他人。";
 		}
 	},
 	
 	SLIME_QUEEN_TWO(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Report Back";
+			return "汇报";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You should report back to one of Submission's Enforcer Posts with this information regarding a 'Slime Queen'.";
+			return "你应该向屈城区的执法者汇报关于这个“史莱姆女王”的事情。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "The Enforcer that you reported to told you that they'd heard rumours of a Slime Queen before, but no trace of any such thing has ever been found in Submission."
-					+ " They suggested that you could take a look down in the Bat Caverns, and offered you a further twenty-thousand flames if you could find this Queen and put an end to her scheming.";
+			return "听完报告的执法者告诉你，他们以前听说过关于史莱姆女王的传言，但从未在屈城区中发现过踪迹。"
+					+ "他们建议你去蝙蝠洞窟看看，如果你能找到女王并结束她的阴谋，他们还会再给你两万火币。";
 		}
 	},
 	
 	SLIME_QUEEN_THREE(QuestType.SIDE, 15, 25) {
 		@Override
 		public String getName() {
-			return "Finding the Slime Queen";
+			return "寻找史莱姆女王";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Travel down into the Bat Caverns and search for the rumoured Slime Queen.";
+			return "前往蝙蝠洞窟，寻找传说中的史莱姆女王。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "In the middle of Slime Lake, you discovered the Slime Queen's lair!";
+			return "在史莱姆湖的中央，你发现了史莱姆女王的巢穴！";
 		}
 	},
 	
 	SLIME_QUEEN_FOUR(QuestType.SIDE, 20, 50) {
 		@Override
 		public String getName() {
-			return "Confront the Queen";
+			return "面对女王";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Travel up the tower and find the Slime Queen.";
+			return "前往塔顶寻找史莱姆女王。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You found the Slime Queen at the top of the tower.";
+			return "你在塔顶找到了史莱姆女王。";
 		}
 	},
 	
 	SLIME_QUEEN_FIVE_SUBMIT(QuestType.SIDE, 1, 25) {
 		@Override
 		public String getName() {
-			return "Help the Queen";
+			return "帮助女王";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You decided to help the Slime Queen with her plans of transforming Submission's population into slimes.";
+			return "你决定协助史莱姆女王把屈城区的人口都转化成史莱姆的计划。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You decided to help the Slime Queen with her plans, and agreed to trick the Enforcers into believing that she's no longer a threat!";
+			return "你决定帮助史莱姆女王实现她的计划，并且答应欺骗执法者，好让他们相信她不再是一个威胁。";
 		}
 	},
 	
 	SLIME_QUEEN_SIX_SUBMIT(QuestType.SIDE, 1, 200) {
 		@Override
 		public String getName() {
-			return "Final Report";
+			return "最终报告";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Report back to Claire and tell her that the Slime Queen will no longer be a problem.";
+			return "跟克莱尔回报史莱姆女王不再是麻烦了。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told Claire that the Slime Queen is no longer a threat, and received the twenty-thousand flame reward."
-				+ " With your Queen now safe from Enforcer investigation, it's only a matter of time before all of Submission is a Slime paradise!";
+			return "你告诉克莱尔史莱姆女王不再是威胁，并且收到了两千火币作为报酬。"
+				+ "现在随着你的女王免于执法者的调查，屈城区变成史莱姆的天堂只剩下时间问题了！";
 		}
 	},
 	
 	SLIME_QUEEN_FIVE_CONVINCE(QuestType.SIDE, 1, 25) {
 		@Override
 		public String getName() {
-			return "Convince the Queen";
+			return "说服女王";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You decide to convince the Slime Queen to abandon her plans.";
+			return "你决定要说服史莱姆女王放弃她的计划。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You convinced Catherine to abandon her plan of transforming everyone in Submission into slimes.";
+			return "你说服了凯瑟琳放弃了她把屈城区的所有人都转化成史莱姆的计划。";
 		}
 	},
 	
 	SLIME_QUEEN_SIX_CONVINCE(QuestType.SIDE, 1, 200) {
 		@Override
 		public String getName() {
-			return "Final Report";
+			return "最终报告";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Report back to Claire and tell her that the Slime Queen will no longer be a problem.";
+			return "跟克莱尔回报史莱姆女王不再是麻烦了。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told Claire that the Slime Queen is no longer a threat, and received the twenty-thousand flame reward.";
+			return "你告诉克莱尔史莱姆女王不再是一个威胁，并且收到了两千火币作为报酬。";
 		}
 	},
 	
 	SLIME_QUEEN_FIVE_FORCE(QuestType.SIDE, 1, 25) {
 		@Override
 		public String getName() {
-			return "Force the Queen";
+			return "胁迫女王";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Force the Slime Queen to abandon her plans.";
+			return "胁迫史莱姆女王放弃她的计划。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You forced Catherine to abandon her plan of transforming everyone in Submission into slimes.";
+			return "你迫使凯瑟琳放弃了她把屈城区的所有人都转化成史莱姆的计划。";
 		}
 	},
 	
 	SLIME_QUEEN_SIX_FORCE(QuestType.SIDE, 1, 200) {
 		@Override
 		public String getName() {
-			return "Final Report";
+			return "最终报告";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Report back to Claire and tell her that the Slime Queen will no longer be a problem.";
+			return "跟克莱尔回报史莱姆女王不再是麻烦了。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told Claire that the Slime Queen is no longer a threat, and received the twenty-thousand flame reward.";
+			return "你告诉克莱尔史莱姆女王不再是一个威胁，并且收到了两千火币作为报酬。";
 		}
 	},
 	
@@ -1278,41 +1278,41 @@ public enum Quest {
 	TELEPORTING_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Escape from the warehouse";
+			return "从仓库中逃脱";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Having accidentally teleported into the 'SWORD' Enforcer division's storage warehouse, both you and Claire now need to avoid detection and make good your escape.";
+			return "意外传送到了‘SWORD’执法者部门的存储仓库，现在你和克莱尔需要避免被发现，并且安全离开。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Claire managed to escape from SWORD's warehouse.";
+			return "你和克莱尔打算设法从SWORD的仓库中离开。";
 		}
 	},
 
 	TELEPORTING_CAUGHT(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Endure the stocks";
+			return "忍受拘禁";
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.game.isNonConEnabled()) {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you've been sentenced to be locked into the public use stocks at slaver alley. Endure this ordeal until Claire comes to rescue you...";
+				return "你在SWORD的仓库中被执法者击败了，现在你被判处锁在奴隶巷的公共刑具中的惩罚。忍受这一磨难直到克莱尔前来营救你……";
 			} else {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you've been locked into the cells at Enforcer Headquarters. You'll have to wait until Claire comes to rescue you...";
+				return "你在SWORD的仓库中被执法者击败了，现在你被判处在执法者总部的监狱中监禁的惩罚。忍受这一煎熬直到克莱尔前来营救你……";
 			}
 		}
 
 		@Override
 		public String getCompletedDescription() {
 			if(Main.game.isNonConEnabled()) {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you had to endure being locked into the public use stocks at slaver alley for several hours before Claire turned up to release you.";
+				return "你在SWORD的仓库中被执法者击败了，现在你被判处锁在奴隶巷的公共刑具中数个小时，直到克莱尔现身来释放你。";
 			} else {
-				return "Having been defeated by the Enforcers inside SWORD's warehouse, you had to endure being locked into the cells at Enforcer Headquarters for a couple of hours before Claire turned up to release you.";
+				return "你在SWORD的仓库中被执法者击败了，现在你被判处在执法者总部的监狱几个小时的监禁，直到克莱尔前来释放你。";
 			}
 		}
 	},
@@ -1323,103 +1323,103 @@ public enum Quest {
 	DADDY_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Meeting [daddy.name]";
+			return "与[daddy.name]见面";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Rose has asked you to pay [daddy.name] a visit in order to convince [daddy.herHim] to leave Lilaya in peace."
-					+ " ([daddy.He] is only available at [daddy.his] apartment in Demon Home between "+Units.time(LocalTime.of(18, 00))+" and "+Units.time(LocalTime.of(21, 00))+".)";
+			return "萝丝要求你去见[daddy.name]，说服[daddy.herHim]别再来打扰莉莱雅。"
+					+ "([daddy.He]只在[daddy.his]恶魔之家的公寓中的"+Units.time(LocalTime.of(18, 00))+"和"+Units.time(LocalTime.of(21, 00))+"有空。)";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "At Rose's behest, you met with [daddy.name] at [daddy.her] apartment in Demon Home.";
+			return "遵照萝丝的吩咐，你和[daddy.name]在[daddy.her]恶魔之家的公寓中见了面。";
 		}
 	},
 	
 	DADDY_MEETING(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Dinner with [daddy.name]";
+			return "与[daddy.name]共进晚餐";
 		}
 
 		@Override
 		public String getDescription() {
-			return "[daddy.Name] is insisting upon explaining [daddy.her] motives over dinner. You're going to have to either accept [daddy.her] offer, or bluntly refuse [daddy.herHim] and insist that [daddy.she] leave Lilaya alone.";
+			return "[daddy.Name]坚持要在晚餐时解释[daddy.her]的动机。你要么接受[daddy.her]的提议，要么直截了当地拒绝[daddy.herHim]并要求[daddy.she]离莉莱雅远点。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You gave [daddy.name] your answer in response to [daddy.her] request to take you out for dinner.";
+			return "你给了[daddy.name]关于共进晚餐请求的回答。";
 		}
 	},
 	
 	DADDY_REFUSED(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "[daddy.Name] denied";
+			return "[daddy.Name]被拒绝";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You told [daddy.name] that you aren't at all interested in going out for a meal with [daddy.herHim], and that [daddy.sheIs] never to bother Lilaya again.";
+			return "你告诉[daddy.name]，你对于跟[daddy.herHim]一起出去吃饭没有丝毫兴趣，并且[daddy.sheIs]永远都不要再来打扰莉莱雅了。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told [daddy.name] that you aren't at all interested in going out for a meal with [daddy.herHim], and that [daddy.sheIs] never to bother Lilaya again.";
+			return "你告诉[daddy.name]，你对于跟[daddy.herHim]一起出去吃饭没有丝毫兴趣，并且[daddy.sheIs]永远都不要再来打扰莉莱雅了。";
 		}
 	},
 	
 	DADDY_REFUSED_2(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "[daddy.Name] denied";
+			return "[daddy.Name]被拒绝";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You told [daddy.name] that you aren't interested in convincing Lilaya to meet with [daddy.herHim], and that [daddy.she] should never bother your [lilaya.relation(pc)] again.";
+			return "你告诉[daddy.name]，你对说服莉莱雅和[daddy.herHim]见面没有丝毫兴趣，并且[daddy.she]永远都不要再来打扰你的[lilaya.relation(pc)]了。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You told [daddy.name] that you aren't interested in convincing Lilaya to meet with [daddy.herHim], and that [daddy.she] should never bother your [lilaya.relation(pc)] again.";
+			return "你告诉[daddy.name]，你对说服莉莱雅和[daddy.herHim]见面没有丝毫兴趣，并且[daddy.she]永远都不要再来打扰你的[lilaya.relation(pc)]了。";
 		}
 	},
 	
 	DADDY_ACCEPTED(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Convincing Lilaya";
+			return "说服莉莱雅";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You agreed to convince Lilaya to meet with [daddy.name] for dinner, and to then help persuade her to ask Lyssieth to meet with [daddy.herHim].";
+			return "你同意说服莉莱雅来和[daddy.name]共进晚餐，然后劝说她请莉西丝来和[daddy.herHim]见面。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You convinced Lilaya to meet with [daddy.name] for dinner, on the condition that you go with her. ";
+			return "你说服了莉莱雅和[daddy.name]共进晚餐，条件是你和她一起去。";
 		}
 	},
 	
 	DADDY_LILAYA_MEETING(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lilaya's date with [daddy.name]";
+			return "莉莱雅与[daddy.name]的约会";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Lilaya has agreed to go out for dinner with [daddy.name], so now you just need to accompany her and make sure the evening goes smoothly.";
+			return "莉莱雅同意和[daddy.name]共进晚餐，现在你需要陪着她，确保晚上能顺利进行。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You went with Lilaya to meet [daddy.name] for dinner, and while she had bad news for [daddy.herHim] regarding Lyssieth's romantic preferences, she did seem to like [daddy.herHim] well enough...";
+			return "你和莉莱雅一起与[daddy.name]共进晚餐，她给[daddy.herHim]带去了关于莉西丝爱情偏好的坏消息，不过她似乎很喜欢[daddy.herHim]……";
 		}
 	},
 	
@@ -1429,104 +1429,104 @@ public enum Quest {
 	BUYING_BRAX_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Perfume collection";
+			return "收集香水";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Candi said that she'd consider selling [brax.name] to you, but before she gives you a definite answer, she wants you to go and fetch her order of perfume from the shop 'Succubi's Secrets' in the shopping arcade.";
+			return "坎迪说她会考虑把[brax.name]卖给你，但在给出明确答案之前，她想让你去购物中心“魅魔的秘密”商店那里取她订购的香水。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You both paid for and collected Candi's order of perfume from Succubi's Secrets.";
+			return "你从魅魔的秘密那里购买并取得了坎迪订购的香水。";
 		}
 	},
 	
 	BUYING_BRAX_DELIVER_PERFUME(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Perfume delivery";
+			return "运送香水";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've collected the bottles of perfume, you need to deliver them to Candi back at the Enforcer headquarters.";
+			return "你已经获得了瓶装香水，现在你需要把它们送到执法者总部的坎迪那里。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You delivered Candi's bottles of perfume to her.";
+			return "你把坎迪的瓶装香水交到了她手上。";
 		}
 	},
 	
 	BUYING_BRAX_LOLLIPOPS(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lollipop contraband";
+			return "违禁棒棒糖";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Candi said she'd be willing to sell Brax to you, but she needs to think of how much [brax.sheIs] worth."
-					+ " She said that she'll have a price for you after you've fetched a box of contraband lollipops from the Harpy Nests' Enforcer checkpoint.";
+			return "坎迪说她愿意把布拉克斯卖给你，但她需要思考一下[brax.sheIs]值多少钱。"
+					+ "她让你从哈比之巢的执法者检查站拿来一盒违禁棒棒糖，之后她会给你报价。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You retrieved the lollipops from the Harpy Nests' Enforcer checkpoint.";
+			return "你从哈比之巢的执法者检查站取回了棒棒糖。";
 		}
 	},
 	
 	BUYING_BRAX_DELIVER_LOLLIPOPS(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Lollipops for Candi";
+			return "坎迪的棒棒糖";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that the box of contraband lollipops are in your possession, you need to return them to Candi back at the Enforcer headquarters.";
+			return "你拿到了那盒违禁棒棒糖，现在你需要把它们交给执法者总部的坎迪。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You delivered the box of contraband lollipops to Candi, who seemed to pay no attention to the warnings stamped all over it.";
+			return "你把那盒违禁棒棒糖交给了坎迪，她似乎根本不在意印在上面的警告。";
 		}
 	},
 	
 	BUYING_BRAX_LIPSTICK(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "A wolf's weight in lipstick";
+			return "价值一狼的口红";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Candi said that Brax is far too precious to be sold for mere flames, but she'd be willing to give [brax.herHim] to you in exchange for something just as valuable; a box of limited-edition lipsticks, branded as 'A Hundred Kisses'."
-					+ " Apparently, Candi has discovered the whereabouts of one of the only boxes left for sale, which is at a store in the shopping arcade called 'Ralph's Snacks'.";
+			return "坎迪说布拉克斯太珍贵了，不能仅仅为了些许火币而出售，但她愿意用布拉克斯换取同样珍贵的东西：一盒叫做“百万之吻”的限量版口红。"
+					+ "显然，坎迪发现了仅存的一盒待售口红的下落，在购物中心一家名为“拉尔夫小吃店”的商店里。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You retrieved the box of 'A Hundred Kisses' from Ralph.";
+			return "你从拉尔夫那里取回了那盒“百万之吻”";
 		}
 	},
 	
 	BUYING_BRAX_DELIVER_LIPSTICK(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "At the wolf's door";
+			return "在狼的门前";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Now that you've secured the box of 'A Hundred Kisses', all that's left to do is deliver it to Candi in exchange for ownership of [brax.name].";
+			return "你拿到了那盒“百万之吻”，剩下的就是把它交给坎迪，以换取[brax.name]的所有权。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You handed over the box of 'A Hundred Kisses' to Candi, and finally gained your prize; ownership of [brax.name].";
+			return "你把那盒“百万之吻”交给了坎迪，最终获得了奖品：[brax.name]的所有权。";
 		}
 	},
 
@@ -1536,126 +1536,126 @@ public enum Quest {
 	VENGAR_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Rat Warrens";
+			return "鼠窟";
 		}
 		@Override
 		public String getDescription() {
-			return "You agreed to help Axel deal with Vengar, who's apparently the leader of Submission's largest and most dangerous gang. You could head directly to his hideout, the 'Rat Warrens', or first go and ask Claire for help.";
+			return "你同意帮助阿克塞尔对付文加——屈城区最大、最危险团伙的头目。你可以直接去他的藏身处“鼠窟”，或是先向克莱尔寻求帮助。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "By using the password Axel gave to you, you were able to gain entry to Vengar's hideout; the Rat Warrens.";
+			return "你使用阿克塞尔给的密码，得以进入文加的藏身处：鼠窟。";
 		}
 	},
 	
 	VENGAR_ONE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Meeting Vengar";
+			return "与文加见面";
 		}
 		@Override
 		public String getDescription() {
-			return "In order to find Vengar, you need to locate the main hall and be there between the hours of "+Units.time(LocalDateTime.of(1, 1, 1, 6, 0))+" and "+Units.time(LocalDateTime.of(1, 1, 1, 22, 0))+".";
+			return "为了找到文加，你需要在"+Units.time(LocalDateTime.of(1, 1, 1, 6, 0))+"和"+Units.time(LocalDateTime.of(1, 1, 1, 22, 0))+"的时间段到主厅。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found Vengar sitting on a throne in the main hall, and after approaching him, you were given the choice to either join his gang, or be set upon by his rat-girl bodyguards.";
+			return "你发现文加坐在主厅的宝座上，接近他之后，你要么选择加入他的帮派，要么会被他的鼠女保镖攻击。";
 		}
 	},
 	
 	VENGAR_TWO_CONFLICT(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Conflict";
+			return "冲突";
 		}
 		@Override
 		public String getDescription() {
-			return "Having chosen to challenge Vengar, you now need to defeat him in combat in order to assert dominance over his gang.";
+			return "选择了挑战文加，现在你需要在战斗中击败他，才能在他的帮派中占据主导地位。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to defeat Vengar, but before you could take any further action, SWORD started their raid on the Rat Warrens.";
+			return "你成功击败了文加，但在你进一步行动前，SWORD就开始了对鼠窟的突袭。";
 		}
 	},
 	
 	VENGAR_TWO_COOPERATION(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Axel's submission";
+			return "阿克塞尔的臣服";
 		}
 		@Override
 		public String getDescription() {
-			return "Vengar revealed that he's been wanting to focus on his legitimate rum distillery business for some time, but he can't just leave Axel alone without losing respect from his gang."
-					+ " In exchange for an end to the extortion, you agreed to persuade Axel to come and show his submission to Vengar.";
+			return "文加透露，一段时间以来，他一直想专注于自己合法的朗姆酒厂业务，但他如果轻易地放过阿克塞尔就会失去帮派成员的尊重。"
+					+ "作为结束勒索的交换，你同意说服阿克塞尔来向文加表明他的顺从。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to convince Axel to go to the Rat Warrens and show his submission to Vengar."
-					+ " Accompanying him there, you were able to provide some input and influence what happened to the alligator-boy.";
+			return "你成功说服阿克塞尔去鼠窟向文加表示臣服。"
+					+ "陪同他去那里，你能够做些什么来影响鳄男的遭遇。";
 		}
 	},
 	
 	VENGAR_TWO_ENFORCERS(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Raid";
+			return "突袭";
 		}
 		@Override
 		public String getDescription() {
-			return "Having confirmed that Vengar is in the Rat Warrens, you've activated the resonance stone, signalling to the waiting SWORD Enforcers to start their raid.";
+			return "在确认文加就藏在鼠窟后，你启动了回声石向在等待着的SWORD执法者发出开始突袭的信号。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "The SWORD Enforcers successfully raided the Rat Warrens, and were able to apprehend Vengar.";
+			return "SWORD的执法者成功突袭了鼠窟并逮捕了文加。";
 		}
 	},
 	
 	VENGAR_THREE_COOPERATION_END(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Vengar's End";
+			return "文加的末路";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that [axel.name] has shown [axel.her] submission to Vengar, all that's left to do is head back to the Gambling Den...";
+			return "[axel.name]已经向文加表示臣服，剩下要做的就是返回赌场……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After [axel.name] had shown [axel.her] submission to Vengar, a group of SWORD Enforcers turned up to raid the Rat Warrens and arrest the rat-boy!";
+			return "在[axel.name]向文加表示臣服后，一群SWORD执法者出现了，他们突袭了鼠窟并逮捕了那鼠男！";
 		}
 	},
 
 	VENGAR_THREE_END(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Return to Axel";
+			return "回去找阿克塞尔";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that Vengar has been dealt with, you need to return to Axel and let him know what happened.";
+			return "文加已经被解决了，你需要回去找阿克塞尔，让他知道发生了什么。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You returned to Axel and told him what the situation will be from now on.";
+			return "你回到阿克塞尔身边，告诉他之后情况会如何发展。";
 		}
 	},
 	
 	VENGAR_OPTIONAL_CLAIRE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Claire's Help";
+			return "克莱尔的帮助";
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that it would be best to let Claire know of the situation, you asked her if there was anything the Enforcers could do to help."
-					+ " Apparently, a SWORD team is already prepared to raid the Rat Warrens, but they need to know Vengar is inside before launching their assault."
-					+ " Claire gave you a resonance stone to activate if you want them to back you up once inside.";
+			return "你认为让克莱尔了解情况是最好的选择，于是向她询问执法者是否能帮上忙。"
+					+ "看来，有一支SWORD小队已经准备好突袭鼠窟了，但他们需要在发动攻击之前确认文加在里面。"
+					+ "克莱尔给了你一块回声石，如果你想让执法者支援你，就激活它。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Deciding that it would be best to let Claire know of the situation, you asked her if there was anything the Enforcers could do to help."
-					+ " Apparently, a SWORD team is already prepared to raid the Rat Warrens, but they need to know Vengar is inside before launching their assault."
-					+ " Claire gave you a resonance stone to activate if you want them to back you up once inside.";
+			return "你认为让克莱尔了解情况是最好的选择，于是向她询问执法者是否能帮上忙。"
+					+ "看来，有一支SWORD小队已经准备好突袭鼠窟了，但他们需要在发动攻击之前确认文加在里面。"
+					+ "克莱尔给了你一块回声石，如果你想让执法者支援你，就激活它。";
 		}
 	},
 
@@ -1664,11 +1664,11 @@ public enum Quest {
 	WES_FAIL(QuestType.SIDE, 1, 0) {
 		@Override
 		public String getName() {
-			return "Opportunity Missed";
+			return "错失机会";
 		}
 		@Override
 		public String getDescription() {
-			return "After you'd told Wesley that you had no intention of helping him with his investigation, the fox-boy disappeared, and you can be sure that he'll never try to seek out your help again...";
+			return "在告知韦斯利你无意帮助他调查之后，这个狐男消失了，你可以确定他再也不会寻求你的帮助了……";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -1679,90 +1679,90 @@ public enum Quest {
 	WES_START(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Help Needed";
+			return "请求帮助";
 		}
 		@Override
 		public String getDescription() {
-			return "While travelling through Dominion, you were approached by a mysterious undercover SWORD Enforcer who asked for your help."
-					+ " He'd like you to meet him outside of the Shopping Arcade's antiques shop between [units.time(13)]-[units.time(14)].";
+			return "穿行于御城区时，一名神秘的SWORD秘密执法者向你求助。"
+					+ "他想和你在[units.time(13)]到[units.time(14)]于购物中心的古董店外见面。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You agreed to help Wesley investigate his superior officer.";
+			return "你答应帮助韦斯利调查他的上级警官。";
 		}
 	},
 
 	WES_1(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Finding Elle";
+			return "寻找埃勒";
 		}
 		@Override
 		public String getDescription() {
-			return "Wes told you that his superior officer, [elle.name] (or 'Elle' for short), takes night vision goggles with her while taking suspiciously long lunches on Wednesdays, and always comes back with wet shoes."
-					+ " You need to find her and record any incriminating evidence on the arcane recording device Wes gave to you..."
-					+ "<br/>She takes [style.colourOrange(unusually long lunch breaks)]."
-					+ "<br/>She only does this on a [style.colourOrange(Wednesday)]."
-					+ "<br/>She takes a set of [style.colourOrange(night vision goggles)] with her."
-					+ "<br/>Afterwards, her [style.colourOrange(shoes are often wet)] and sometimes have trace amounts of some kind of [style.colourOrange(glowing residue on them)]."
-					+ "<br/>[style.italicsMinorGood(For a hint on where to go, ask Lilaya about it.)]";
+			return "韦斯告诉你，他的警官上司，[elle.name](简称“埃勒”)，每周三都会带上夜视镜去午休很长时间，回来时鞋子总是湿的。"
+					+ "你需要找到她，并用韦斯给你的奥术录像机记录下所有罪证……"
+					+ "<br/>她的[style.colourOrange(午休时间异常长)]。"
+					+ "<br/>她只在[style.colourOrange(星期三)]出现这种情况。"
+					+ "<br/>她随身携带一套[style.colourOrange(夜视镜)]。"
+					+ "<br/>之后，她的[style.colourOrange(鞋子总是湿的)]，有时[style.colourOrange(上面沾有发光残留物)]。"
+					+ "<br/>[style.italicsMinorGood(可以询问莉莱雅以获得目标地点的提示。)]";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Having deduced that Elle was doing her shady business down in the Bat Caverns, you managed to collect evidence of her selling weapons to a dangerous criminal gang.";
+			return "你推断出埃勒在蝙蝠洞窟做着见不得人的生意，并设法收集到了她向一个危险的犯罪帮派出售武器的证据。";
 		}
 	},
 
 	WES_2(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Using the Evidence";
+			return "使用证据";
 		}
 		@Override
 		public String getDescription() {
-			return "With your arcane recording device now containing incriminating evidence of Elle's corruption, you're left with two possible choices of what to do with it."
-					+ " You could hand it in as an anonymous tip to either Claire or Candi, or if you wanted to betray Wes and side with Elle,"
-						+ " you could wait outside the Enforcer HQ between [units.time(16)]-[units.time(18)] and reveal everything to the [elle.race] as she leaves work.";
+			return "你的奥术录像机记录有埃勒腐败的罪证，你有两种可选的处理方式。"
+					+ "你可以把它匿名举报给克莱尔或坎迪，或者如果你想背叛韦斯并站在埃勒这边，"
+						+ "你也可以在[units.time(16)]到[units.time(18)]于执法者总部外等待埃勒，在下班时间向[elle.race]表明一切。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You made use of the evidence which you collected in order to bring an end to this whole business with Wes and Elle.";
+			return "你要利用收集的证据给韦斯和埃勒的全部交易画上句号。";
 		}
 	},
 
 	WES_3_WES(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Sided with Wes";
+			return "支持韦斯";
 		}
 		@Override
 		public String getDescription() {
-			return "You decided to do as Wes asked and hand in the incriminating evidence as an anonymous tip to the Enforcers."
-					+ " You should wait at least one week for things to be settled, then ask to see Wes up in the Enforcer HQ between [units.time(9)]-[units.time(17)].";
+			return "你决定按照韦斯的要求做，并将指控证据匿名举报给执法者。"
+					+ "事情解决至少要一周时间，之后你可以在[units.time(9)]到[units.time(17)]之间去执法者总部看望韦斯。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You sided with Wes, and after anonymously handing in the incriminating evidence, you met the fox-boy in the Enforcer HQ to discover that he's been promoted to take Elle's job."
-					+ " With his new authority, he's granted you access to the Enforcer HQ's requisitions area as a reward for your help."
-					+ " You can also now freely visit Wes in the Enforcer HQ between the hours of [units.time(9)]-[units.time(17)].";
+			return "你支持了韦斯，在匿名提交指控证据后，你在执法者总部遇到了这狐男，他被提拔来接替埃勒的工作。"
+					+ "他有了新的权限，作为对你帮助的回报，他允许你进入执法者总部的军需处。"
+					+ "你可以在[units.time(9)]到[units.time(17)]之间不受限制地去执法者总部拜访韦斯。";
 		}
 	},
 
 	WES_3_ELLE(QuestType.SIDE, 1, 5) {
 		@Override
 		public String getName() {
-			return "Sided with Elle";
+			return "支持埃勒";
 		}
 		@Override
 		public String getDescription() {
-			return "You decided to betray Wes and reveal everything to Elle."
-					+ " Thankful for your unexpected support, the [elle.race] promised to reward you if you return to the Enforcer HQ after at least a week has passed...";
+			return "你决定背叛韦斯，并将一切都告诉埃勒。"
+					+ "多亏了你的意外帮助，[elle.race]承诺，你可以在至少一周后回到执法者总部，她会给你奖励……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You sided with Elle, and after returning to meet with her at the Enforcer HQ, you discovered that Wes has been enslaved."
-					+ " Thankful for your support, the [elle.race] has granted you access to the Enforcer HQ's requisitions area."
-					+ " You can also now freely visit Elle (and Wes) in the Enforcer HQ between the hours of [units.time(9)]-[units.time(17)].";
+			return "你支持了埃勒，你回到执法者总部与她会面，发现韦斯被奴役了。"
+					+ "[elle.race]允许你进入执法者总部的军需处，以此来表达对你的感谢。"
+					+ "你可以在[units.time(9)]到[units.time(17)]之间不受限制地去执法者总部拜访埃勒(以及韦斯)。";
 		}
 	},
 
@@ -1774,15 +1774,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Hit The Lever!";
+			return "拉下拉杆！";
 		}
 		@Override
 		public String getDescription() {
-			return "You found a strange handle in the Bat Caverns. Who knows what it's for or what it does.";
+			return "你在蝙蝠洞窟里发现了一个奇怪的拉杆。没人知道它是干什么用的。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You pulled the handle against your better judgement.";
+			return "拉下拉杆不是最佳选择，但你还是这么做了。";
 		}
 	},
 
@@ -1791,15 +1791,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Pull Handle, Receive Mystery";
+			return "拉下拉杆，得到谜题";
 		}
 		@Override
 		public String getDescription() {
-			return "The strange handle asked for some kind of password that you don't have. Perhaps a bit of searching in the vicinity will reveal some clues.";
+			return "奇怪的拉杆要求你输入某种未知的密码。也许在附近搜索一下就能发现线索。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found half of a journal page that mentioned that the password is two words. You could only decipher one word, the other got torn away.";
+			return "你找到的半张日记纸上说密码是两个单词，你只能辨认一个单词，另一个被撕掉了。";
 		}
 	},
 
@@ -1808,15 +1808,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Fill In The Blank";
+			return "填空题";
 		}
 		@Override
 		public String getDescription() {
-			return "The other half of the password must be on the other half of the journal page. Perhaps it can still be found nearby.";
+			return "另一半密码一定在另外半张日记纸上，也许能在附近找到。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found both halves of the password, together they make the phrase 'RUAT CAELUM'";
+			return "你找全了两部分密码，它们一起构成了短语“RUAT CAELUM”(哪怕天崩地裂)。";
 		}
 	},
 
@@ -1825,15 +1825,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Open Says Me";
+			return "芝麻开门";
 		}
 		@Override
 		public String getDescription() {
-			return "With the completed password, you can now give the handle's challenge another try.";
+			return "有了完整的密码，你可以再次尝试挑战拉杆了。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You discovered that the handle was actually attached to a door that led to a hidden cave splitting off from the Bat Caverns.";
+			return "你发现拉杆其实连接着一扇门，它通向一个从蝙蝠洞窟中分离出来的隐藏洞穴。";
 		}
 	},
 
@@ -1842,15 +1842,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Going Spelunking";
+			return "洞穴大冒险";
 		}
 		@Override
 		public String getDescription() {
-			return "No telling what the hidden cave is for or where it goes. Perhaps you can find some answers inside.";
+			return "没人知道这隐藏洞穴内有何物或通往何处。或许你可以进入洞穴寻找答案。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You found out that the hidden cave was a hideout for a long gone rebel group. From the looks of things, they didn't win.";
+			return "你发现这个隐藏的洞穴是一个早已消失的反抗军组织的藏身之地。从种种特征来看，他们最终没能获胜。";
 		}
 	},
 
@@ -1859,15 +1859,15 @@ public enum Quest {
 			100) {
 		@Override
 		public String getName() {
-			return "Getting Away With It";
+			return "逃出生天";
 		}
 		@Override
 		public String getDescription() {
-			return "Time to make your escape, preferably before this cave collapses in on itself.";
+			return "赶在洞穴完全坍塌之前，是时候逃走了。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to get out in one piece. Whatever else that cave held is now buried forever.";
+			return "你安然无恙地逃出了洞穴。洞穴里其它东西现在都被永远埋葬了。";
 		}
 	},
 
@@ -1876,11 +1876,11 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Cold Feet";
+			return "临阵退缩";
 		}
 		@Override
 		public String getDescription() {
-			return "You managed to get out in one piece, but whatever secrets that cave held are now buried forever.";
+			return "你安然无恙地逃出了洞穴，但洞穴里隐藏的所有秘密，现在都永远被埋葬了。";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -1893,15 +1893,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Breaking Bombs";
+			return "点燃引信";
 		}
 		@Override
 		public String getDescription() {
-			return "The firebombs you got from the mysterious cave could come in handy in a fight. You'll need to find someone who can either make or acquire more.";
+			return "你从神秘洞窟中得到的燃烧弹可以在战斗中派上用场。你需要找到一个能制造燃烧弹或者有燃烧弹渠道的人。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Roxy has agreed to look into getting more firebombs for you.";
+			return "罗克西答应帮你调查燃烧弹的获取渠道。";
 		}
 	},
 
@@ -1910,15 +1910,15 @@ public enum Quest {
 			5) {
 		@Override
 		public String getName() {
-			return "Fire From The Rats";
+			return "鼠人火力";
 		}
 		@Override
 		public String getDescription() {
-			return "It will take Roxy two days to get a new supply of firebombs going. You should return to her then.";
+			return "罗克西需要两天时间才能获得新的燃烧弹。你最好到时候回来找她。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Somehow, Roxy didn't swindle you and you've gotten yourself a supply of firebombs.";
+			return "不知为什么，罗克西没有骗你，你得到了一批燃烧弹。";
 		}
 	},
 
@@ -1927,11 +1927,11 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Roxy's Reluctance";
+			return "不情愿的罗克西";
 		}
 		@Override
 		public String getDescription() {
-			return "Without an example to give to Roxy, she either couldn't understand or didn't want to be bothered with trying to replicate the firebombs you found...";
+			return "罗克西手头没有样品，她无法理解何为燃烧弹，亦或是她不想在仿制燃烧弹这件事上浪费时间……";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -1946,15 +1946,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Gathering Materials";
+			return "收集材料";
 		}
 		@Override
 		public String getDescription() {
-			return "You've learned what Eisek needs to fix up his stall, as well as what he would like on a new sign. Now you just need to gather some materials from the merchants around town for a nice surprise. Maybe there's one that deals in fabric?";
+			return "你已经知道了艾瑟克装修摊位所需的材料以及他的新招牌上想要的内容。现在你只需要从小镇附近的商贩那收集这些材料来给他一个惊喜。也许附近会有一家布店？";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've ordered a new sign and some bolts of cloth from Monica.";
+			return "你向莫妮卡订购了一个新招牌和一些布料。";
 		}
 	},
 	
@@ -1963,15 +1963,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Need an Awning Here";
+			return "这里需要一个遮阳棚";
 		}
 		@Override
 		public String getDescription() {
-			return "While you're waiting for Monica to finish your order, you need to find some wooden poles for the awning. Perhaps the local smithy could modify the haft of a polearm could be modified somehow?";
+			return "等待莫妮卡完成你的订单的时候，你需要找一些木棍来搭建遮阳棚。或许当地的铁匠可以拆卸长柄武器的柄？";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've placed an order with Imsu and Hale for some modified axe hafts.";
+			return "你已经向因苏和黑尔订购了一些斧头的柄。";
 		}
 	},
 	
@@ -1980,15 +1980,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "It's All Coming Together";
+			return "一切都准备就绪。";
 		}
 		@Override
 		public String getDescription() {
-			return "You should check back in with Hale in a day and Monica in three days to see if your order is ready yet.";
+			return "你应该在一天后确认黑尔的订单，在三天后确认莫妮卡的订单都是否准备好了。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've gathered all the materials.";
+			return "你已经收集了所需的全部材料。";
 		}
 	},
 	
@@ -1997,15 +1997,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Putting it all together";
+			return "全部组装起来";
 		}
 		@Override
 		public String getDescription() {
-			return "You have what you need to improve Eisek's stall. Tell him about it the next time you see him.";
+			return "你已经有办法去改造艾瑟克的摊位了。下次见面的时候告诉他吧。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "As far as you could tell, Eisek was overjoyed at what you've done for him and his stall looks better than ever.";
+			return "你可以肯定地说，艾瑟克对你为他所做的一切感到非常高兴，他的摊位看起来比以往任何时候都好。";
 		}
 	},
 	
@@ -2014,16 +2014,16 @@ public enum Quest {
 			25) {
 		@Override
 		public String getName() {
-			return "One against Many";
+			return "以一敌众";
 		}
 		@Override
 		public String getDescription() {
-			return "Eisek explained why there was a mob hounding him, but he doesn't know much about them. If you want to make sure they don't come back, you'll have to find them and confront them."
-					+ "<br/>As they seemed to be comprised of locals, maybe a search around town will do the trick.";
+			return "艾瑟克解释了为什么会有暴徒追杀他，但是他并不认识他们。如果你想要确保这些暴徒不会再来，你应该去找到他们并与其对峙。"
+					+ "<br/>他们似乎都是本地人，可能在镇上找找就可以找到。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Through a bit of luck and the mob putting up a big colourful poster, you've found and entered their meeting place.";
+			return  "通过一点点运气和暴徒贴在墙上的全彩海报，你找到并进入了他们的据点。";
 		}
 	},
 	
@@ -2032,28 +2032,28 @@ public enum Quest {
 			100) {
 		@Override
 		public String getName() {
-			return "Leave the Dragon Alone!";
+			return "离那龙远一点！";
 		}
 		@Override
 		public String getDescription() {
-			return "You've found where the mob has been meeting. Time to handle them!";
+			return "你已经找到了暴徒的据点，是时候处理他们了。";
 		}
 		@Override
 		public String getCompletedDescription() {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_intimidate"))) {
-			    return "You decided to try and convince the mob to leave Eisek alone with your intimidating physique.";
+			    return "你决定用你那令人生畏的力量去说服暴徒远离艾瑟克。";
 			} else if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_intimidate_arcane"))) {
-			    return "You decided to try and convince the mob to leave Eisek alone with your arcane prowess.";
+			    return "你决定用你的奥术能力去说服暴徒远离艾瑟克。";
 			} else if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_persuade"))) {
 			    if(!Main.game.isSillyModeEnabled()) {
-			    	return "You convinced the mob to leave Eisek alone with a heartfelt speech.";
+			    	return "你用感人的话语说服了暴徒远离艾瑟克。";
 			    } else {
-			    	return "You destroyed the mob's arguments with FACTS and LOGIC.";
+			    	return "你用事实和富有逻辑的话语推翻了暴徒的观点。";
 			    }
 			} else if (Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("dsg_elis_eisek_mob_quest_seduce"))) {
-			    return "You convinced the mob to leave Eisek alone by using your mastery of lust magic to fuel an orgy.";
+			    return "你精通欲望魔法，利用它煽动了一场淫趴，从而说服了暴徒远离艾瑟克。";
 			} else {
-			    return "You weren't able to convince the mob to leave Eisek alone.";
+			    return "你没能说服暴徒放过艾瑟克。";
 			}
 		}
 	},
@@ -2063,15 +2063,15 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Tossed Out";
+			return "抛弃";
 		}
 		@Override
 		public String getDescription() {
-			return "You weren't able to convince the mob to leave Eisek alone. You should return to him with the bad news now that you weren't able to handle the mob.";
+			return "你没能成功说服暴徒放过艾瑟克。你应该回去告诉他这个坏消息因为你处理不了那些暴徒。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You weren't able to convince the mob to leave Eisek alone.";
+			return "你没能说服暴徒放过艾瑟克。";
 		}
 	},
 	
@@ -2080,7 +2080,7 @@ public enum Quest {
 			0) {
 		@Override
 		public String getName() {
-			return "Bad News";
+			return "坏消息";
 		}
 		@Override
 		public String getDescription() {
@@ -2088,7 +2088,7 @@ public enum Quest {
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Although he tried to hide it, Eisek seemed upset that the mob is still somewhere out there plotting against him.";
+			return "尽管他想试图掩盖，但他还是对于有暴徒想暗算他而感到非常不安。";
 		}
 	},
 	
@@ -2097,15 +2097,15 @@ public enum Quest {
 			250) {
 		@Override
 		public String getName() {
-			return "Good News";
+			return "好消息";
 		}
 		@Override
 		public String getDescription() {
-			return "You should return to Eisek with the good news now that you've handled the mob.";
+			return "你已经解决了暴徒，现在该回去告诉艾瑟克这个好消息了。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Although he tried to hide it, Eisek seemed pretty happy that the mob will now leave him alone. You even got some rare Dragonfruit.";
+			return "尽管他试图掩盖，但还是表现出了对于不会有暴徒打扰他的高兴。你甚至因此获得了一颗稀有的火龙果。";
 		}
 	},
 	
@@ -2114,15 +2114,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Strange Crowd";
+			return "古怪的人群";
 		}
 		@Override
 		public String getDescription() {
-			return "You encountered a different sort of mob that was weirdly obsessed with Eisek. It ultimately came to nothing but you've decided to see what these strange people were all about.";
+			return "你遇到另一群对艾瑟克异常痴迷的暴徒，虽然无果而终，但你还是想看看这群人到底怎么回事。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've entered some sort of basement where they've gathered.";
+			return "你进入了他们聚集的地下室。";
 		}
 	},
 	
@@ -2131,15 +2131,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Darkest Dungeon";
+			return "暗黑地牢";
 		}
 		@Override
 		public String getDescription() {
-			return "You've followed the basement dwellers back to their basement and decided to have a look inside. Unfortunately they didn't appreciate your trespassing very much and have blocked off the way you came.";
+			return "你尾随地下居民返回了他们的地下室，决定进去看看。遗憾的是他们不太喜欢你的非法入侵行为，拦住了你的去路。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You're nearly at the exit, only one obstacle remains...";
+			return "你很接近出口了，只剩下一个障碍……";
 		}
 	},
 	
@@ -2148,15 +2148,15 @@ public enum Quest {
 			10) {
 		@Override
 		public String getName() {
-			return "Dungeon Cleared";
+			return "地牢已通关";
 		}
 		@Override
 		public String getDescription() {
-			return "Having defeated the leader of this strange group, all that's left for you to leave.";
+			return "你击败了这古怪团伙的首领，剩下要做的就是离开这里了。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You've successfully escaped the dungeon and shown a bunch of nerds who is the boss.";
+			return "你成功逃离了地牢，让这群蠢货明白了谁才是老大。";
 		}
 	},
 	
@@ -2165,33 +2165,33 @@ public enum Quest {
 	OGLIX_BEER_BARRELS_1(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Kheiron's Barrels";
+			return "喀戎的桶";
 		}
 		@Override
 		public String getDescription() {
-			return "Having agreed to help Oglix expand her selection of beer-bitches, you've been tasked with travelling to the tavern, 'The Centaur's Sword', and asking the owner, Kheiron, for any spare barrels he might have."
-					+ " If he refuses to help, Golix instructed you to tell the centaur that 'Golix says to be a good horsie'.";
+			return "你同意帮奥格利克斯扩大奶啤妓业务，接下来的任务是前往酒馆“半人马之剑”，问问店主喀戎有没有闲置的备用桶。"
+					+ "如果他拒绝帮忙，戈利克斯吩咐你告诉半人马“戈利克斯让你当只乖小马”。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Thanks to the special phrase 'Golix says to be a good horsie', you managed to convince Kheiron to send four spare barrels to Oglix's tavern.";
+			return "多亏了特殊咒语“戈利克斯让你当只乖小马”，你才说服喀戎把四个备用桶送到奥格利克斯的酒馆。";
 		}
 	},
 	
 	OGLIX_BEER_BARRELS_2(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Good Horsie Report";
+			return "乖小马报告";
 		}
 		@Override
 		public String getDescription() {
-			return "Having secured Kheiron's assistance, you now need to return to Oglix and inform her that Kheiron chose to be 'a good horsie' for Golix.";
+			return "在取得喀戎的帮助后，你需要回去通知奥格利克斯，喀戎选择成为戈利克斯的“乖小马”。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You returned to Oglix and informed her of your success."
-					+ " Having now secured four additional barrels in which to lock new beer-bitches, Oglix asked you to supply promising candidates from the nearby alleyways' criminal population."
-					+ " Additionally, she told you to sneak around the back of her tavern between [units.time(6)]-[units.time(7)] if you wanted to see what the phrase 'Golix says to be a good horsie' meant...";
+			return "你回去找到奥格利克斯，告诉她你成功了。"
+					+ "奥格利克斯获得了额外四个桶，可以用来锁住新的奶啤妓，她希望你从附近小巷的犯罪者中寻找合适的人选。"
+					+ "此外，她说如果你想知道“戈利克斯让你当只乖小马”这句话的意思，就在[units.time(6)]-[units.time(7)]之间偷偷到她酒馆后面来……";
 		}
 	},
 
@@ -2201,29 +2201,29 @@ public enum Quest {
 	LUNEXIS_ESCAPE(QuestType.SIDE, 1, 10) {
 		@Override
 		public String getName() {
-			return "Free Lunexis";
+			return "释放露内克西丝";
 		}
 		@Override
 		public String getDescription() {
-			return "Having surrendered to Lunexis and pledged to be her obedient cock-sleeve, you've been ordered by your new Mistress to assist her in escaping from captivity."
-					+ " Wanting to get her revenge on the one who teleported her to Elis, the centauress has devised a plan where you're to convince Meraxis to teleport the three of you back to Themiscyra."
-					+ " Once there, your Mistress will reward you by keeping you as one of her personal cock-sleeve slaves...";
+			return "你屈服于露内克西丝，发誓要做她忠诚的鸡巴套，你的新主人命令你帮助她逃离监禁。"
+					+ "为了报复将她传送到伊利斯的人，半人马设计了一个计划，你要说服梅拉克西丝将你们三人传送回特弥斯库拉。"
+					+ "一旦回到那里，你的主人就会奖励你，让你成为其中一个私人鸡巴套奴隶……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You convinced Meraxis to teleport herself, along with you and Lunexis, back to Themiscyra."
-					+ " Once there, your deception was made clear, and although she tried to fight, Meraxis was soon subdued and used by your Mistress to win back the wavering loyalty of her centauress army.";
+			return "你说服了梅拉克西丝，将她自己连同你和露内克西丝一起传送回特弥斯库拉。"
+					+ "回到那里，你的欺骗就昭然若揭了。尽管梅拉克西丝试图战斗，但很快就被制服，你的主人利用她赢回了半人马部队动摇的忠诚。";
 		}
 	},
 
 	LUNEXIS_ESCAPE_FAILED(QuestType.SIDE, 1, 0) {
 		@Override
 		public String getName() {
-			return "Lunexis Betrayed";
+			return "背叛露内克西丝";
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding to reveal everything to Meraxis, you betrayed Lunexis, and were banned from having any further contact with the demonic centauress.";
+			return "你决定背叛露内克西丝，向梅拉克西丝坦白一切，之后你被禁止与恶魔半人马有任何进一步的接触。";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -2237,113 +2237,113 @@ public enum Quest {
 	DOLL_FACTORY_1(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Investigate Lovienne's Luxuries";
+			return "调查洛维耶纳奢侈品店";
 		}
 		@Override
 		public String getDescription() {
-			return "Angelixx's diary revealed that the kidnapped refugees were being teleported to the shop 'Lovienne's Luxuries' in Dominion."
-					+ " If you're to discover what's happened to Angelixx's victims, then you'll need to investigate this store...";
+			return "安吉莉克丝的日记里提到，被绑架的难民都被传送到了御城区的“洛维耶纳奢侈品店”。"
+					+ "如果你想了解安吉莉克丝的受害者经历了什么，那你需要调查这家商店……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You travelled to the shop 'Lovienne's Luxuries' and attempted to discover if the refugees kidnapped by Angelixx were being taken there."
-					+ " Although you weren't able to discover anything, a reporter named Fiammetta approached you as you left and offered her help.";
+			return "你来到“洛维耶纳奢侈品店”，试图查明安吉莉克丝绑架的难民是否被带到了那里。"
+					+ "虽然什么都没发现，但当你准备离开时，一个名叫菲亚梅塔的记者接近你并提供了帮助。";
 		}
 	},
 	
 	DOLL_FACTORY_2(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Breaking and Entering";
+			return "突破进入";
 		}
 		@Override
 		public String getDescription() {
-			return "Fiammetta knows a way into the rear of Lovienne's Luxuries, where she believes the kidnapped refugees are being held and used as slave labour."
-					+ " With no other way to gain entry and get to the bottom of what's happening in there, you agreed to her plan and said you'd meet her near the shop between [units.time(1)]-[units.time(4)].";
+			return "菲亚梅塔知道有条暗道能够进入洛维耶纳奢侈品店后方，她认定被绑架的难民就在那里，做奴隶劳工。"
+					+ "你也没有其他方式得知下面究竟发生了什么，于是同意了她的计划，并约定[units.time(1)]-[units.time(4)]之间在商店附近见面。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You met Fiametta outside Lovienne's Luxuries and managed to break in to the rear of the premises without setting off the alarm system.";
+			return "你在“洛维耶纳奢侈品店”外见到了菲亚梅塔，并在没有触发报警系统的情况下从后面闯入了房屋。";
 		}
 	},
 	
 	DOLL_FACTORY_3(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Getting to the Bottom";
+			return "追根究底";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that you've managed to gain entry to the back of Lovienne's Luxuries, you need to investigate and find out where the kidnapped refugees are.";
+			return "你已经成功进入洛维耶纳奢侈品店的后方，搜查一下被绑架的难民的所在。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You discovered a large elevator in the rear of Lovienne's Luxuries, and after taking it down, you discovered a large facility hidden deep beneath Dominion.";
+			return "你发现洛维耶纳奢侈品店的后方有一台巨大的电梯，坐电梯下去后，竟找到御城区地下隐藏的一个巨型设施。";
 		}
 	},
 	
 	DOLL_FACTORY_4(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Gather Evidence";
+			return "收集证据";
 		}
 		@Override
 		public String getDescription() {
-			return "You and Fiammetta need to find evidence of what's happened to the refugees."
-					+ " Ledgers, machine schematics, or other such documents are sure to be found somewhere in here...";
+			return "你和菲亚梅塔需要寻找难民遭遇的蛛丝马迹。"
+					+ "肯定能在某个地方找到账本、机器原理图或者诸如此类的文件……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to gather hard evidence of Saellatrix's and Angelixx's involvement in kidnapping and illegal slavery, and also acquired the disturbing knowledge of how Lovienne's dolls are created.";
+			return "你收集到了确凿证据，能证明拉特里克斯和安吉莉克丝参与了绑架与非法奴役，并且得知了洛维耶纳的玩偶的恐怖制造方法。";
 		}
 	},
 	
 	DOLL_FACTORY_5(QuestType.SIDE, 30, 250) {
 		@Override
 		public String getName() {
-			return "Time to Leave";
+			return "该离开了";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that Fia has obtained enough proof to get a story published, the two of you need to escape from the factory...";
+			return "既然菲亚已经收集到足够证据将报道发表，你们两个现在需要从工厂中逃离……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You and Fia managed to escape from the lower factory.";
+			return "你和菲亚成功从地下工厂逃了出来。";
 		}
 	},
 	
 	DOLL_FACTORY_5_DOLLIFIED(QuestType.SIDE, 30, 250) {
 		@Override
 		public String getName() {
-			return "Dollified!";
+			return "要变成玩偶了！";
 		}
 		@Override
 		public String getDescription() {
-			return "Having been caught, Angelixx has turned you into a doll! You desperately need to find Fia to undo this alarming transformation."
-					+ "<br/>[style.italics(You need to find and investigate the four)] [style.italicsExcellent(yellow)] [style.italics(tiles within the factory to find Fia.)]";
+			return "你被安吉莉克丝抓住了，她将你变成了玩偶！你现在急需找到菲亚，在她的帮助下取消这个可怕的转化。"
+					+ "<br/>[style.italics(你需要搜寻并调查工厂内四个)][style.italicsExcellent(黄色)][style.italics(的地块来寻找菲亚。)]";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After being transformed into a doll by Angelixx, you managed to find Fia and reverse the process, after which the two of you escaped from the factory.";
+			return "安吉莉克丝把你转化成了玩偶，不过你设法找到了菲亚并逆转了玩偶化进程，之后你和菲亚一起逃离了工厂。";
 		}
 	},
 	
 	DOLL_FACTORY_6(QuestType.SIDE, 30, 500) {
 		@Override
 		public String getName() {
-			return "Fiammetta's Message";
+			return "菲亚梅塔的消息";
 		}
 		@Override
 		public String getDescription() {
-			return "Fiammetta has promised to write an article on everything the two of you have witnessed in Lovienne's Luxuries."
-					+ " She's promised to send a message to you once it's ready to be published."
-					+ "<br/>[style.italicsMinorGood(After a few days have passed, check in the entrance hall to Lilaya's mansion during daylight hours.)]";
+			return "菲亚梅塔保证会写一篇文章，将你们二人在洛维耶纳奢侈品店目睹的一些公之于众。"
+					+ "她还说好了只要做好发表的准备，就马上给你消息。"
+					+"<br/>[style.italicsMinorGood(已经过了好几天，白天的时候检查一下莉莱雅宅邸的门厅吧。)]";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Instead of receiving Fiammetta's message, you encountered Saellatrix."
-					+ " Exploiting her intimate relationship with Lilaya, she put you on the spot and demanded that you sign a document declaring that Fiammetta is lying.";
+			return "你并没有等到菲亚梅塔的消息，反而遇到了赛拉特里克斯。"
+					+ "她利用自己与莉莱雅的亲密关系，将你逼入困境并要求你签署一份文件，宣称菲亚梅塔说的都是谎话。";
 		}
 	},
 	
@@ -2352,39 +2352,39 @@ public enum Quest {
 	DOLL_FACTORY_7A(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "Integrity Above All";
+			return "诚信至上";
 		}
 		@Override
 		public String getDescription() {
-			return "You refused to make a deal with Saellatrix, and instead swore to tell the truth and back up all that Fiammetta has written in her article."
-					+ " Before swiftly leaving the mansion, Saellatrix mentioned that her store will be closed for a week or two while she waits for the public outrage to blow over."
-					+ "<br/>[style.italicsMinorGood(You should return to Lovienne's Luxuries once it's reopened to find out what's become of the dolls...)]";
+			return "你拒绝与赛拉特里克斯同流合污，反而发誓必定会讲出真相，为菲亚梅塔文章中所写的一切背书。"
+					+ "赛拉特里克斯说她会将商店关停一到两周的时间，以等待公众的愤怒平息，之后她便迅速地离开了宅邸。"
+					+ "<br/>[style.italicsMinorGood(你打算在洛维耶纳奢侈品店重新开业之后，回去看看玩偶们怎么样了……)]";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You refused to make a deal with Saellatrix, and instead swore to tell the truth and back up all that Fiammetta has written in her article."
-					+ " Returning to Lovienne's Luxuries after it'd been closed for a week, you discovered that Angelixx was made to take all of the blame for illegal enslavement,"
-						+ " and that Saellatrix is now only allowed to transform the worst of criminals into dolls."
+			return "你拒绝与赛拉特里克斯同流合污，反而发誓必定会讲出真相，为菲亚梅塔文章中所写的一切背书。"
+					+ "洛维耶纳奢侈品店关停一周后，你又一次回到了这里，你发现安吉莉克丝被认定为了非法奴役事件背后的主谋，"
+						+ "而赛拉特里克斯现在只被允许将最恶劣的罪犯转化为玩偶。"
 					+ "<br/>"
-					+ "Furthermore, not wanting to have you as an enemy, Saellatrix was keen to keep you as a customer, and even allowed you to decide what to do with Angelixx...";
+					+ "此外，赛拉特里克斯并不想与你为敌，她热切地希望能留住你这名顾客，甚至将安吉莉克丝的处置权也交到了你的手里……";
 		}
 	},
 	
 	DOLL_FACTORY_7B(QuestType.SIDE, 30, 10) {
 		@Override
 		public String getName() {
-			return "It's Just Good Business";
+			return "多好的生意";
 		}
 		@Override
 		public String getDescription() {
-			return "You betrayed the trust of Fiammetta and signed a document which declares that the reporter is lying."
-					+ " Saellatrix was delighted by your decision, and asked you to return to her shop to talk more about your special rewards..."
-					+ "<br/>[style.italicsMinorGood(You should return to Lovienne's Luxuries once it's reopened after a couple of days...)]";
+			return "你背弃了菲亚梅塔的信任，在文件上签下了名字，宣称报告中谎话连篇。"
+					+ "赛拉特里克斯对你的决定十分满意，邀请你在商店重新开业后再光顾一次，她为你准备了些特别的奖励……"
+					+ "<br/>[style.italicsMinorGood(等过几天洛维耶纳奢侈品店重新开业之后，你打算再去一趟……)]";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You betrayed the trust of Fiammetta and signed the document declaring that the reporter is lying."
-					+ " In return, Saellatrix offered to convert any of your slaves into dolls in exchange for a small fee, or will instead pay you if you let her keep them to sell in her shop.";
+			return "你背弃了菲亚梅塔的信任，在文件上签下了名字，宣称报告中谎话连篇。"
+					+ "作为报答，赛拉特里克斯可以让你只花一笔小钱就帮你把你的奴隶转化为玩偶，如果你将其放在店中售卖，她也会交给你应得的钱。";
 		}
 	},
 	
@@ -2394,66 +2394,66 @@ public enum Quest {
 	RELATIONSHIP_NYAN_1_STOCK_ISSUES(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Helping Nyan";
+			return "帮助妮安";
 		}
 		@Override
 		public String getDescription() {
-			return "Nyan explained that she's unable to sell any enchanted clothing due to the fact that her wholesale supplier has suddenly stopped communicating with her."
-					+ " Apparently, this supplier used to be on good terms with Nyan, and his uncharacteristic behaviour has caused the nervous cat-girl to suspect something terrible has happened to him.<br/>"
-					+ "Perhaps you could offer Nyan your help by finding out what's happened to this supplier?";
+			return "妮安解释说，由于供货商突然失去联系，附魔服装的货源被掐断了。"
+					+ "显而易见，这供货商以前和妮安关系不错，他的反常举动让紧张的猫女怀疑他遭遇什么可怕的事情。<br/>"
+					+ "也许你可以帮助妮安找出供货商的下落？";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You offered Nyan your help in finding out what's happened to her wholesale enchanted clothing supplier.";
+			return "你向妮安伸出援手，助她查清附魔服装供应商到底遭遇了什么。";
 		}
 	},
 	
 	RELATIONSHIP_NYAN_2_STOCK_ISSUES_AGREED_TO_HELP(QuestType.RELATIONSHIP, 1, 25) {
 		@Override
 		public String getName() {
-			return "Saving Kay";
+			return "救凯";
 		}
 		@Override
 		public String getDescription() {
-			return "Nyan told you that her supplier, [kay.nameFull], has his business set up in Dominion's warehouse district."
-					+ " You'll need to travel to the north-west of the city, find Kay's warehouse, and discover why he's suddenly cut off all communication with Nyan.";
+			return "妮安告诉你，她的供货商[kay.nameFull]在御城区的仓库开展业务。"
+					+ "你需要前往城市西偏北的地方，找到凯的仓库，了解他为什么突然切断了与妮安的所有联系。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You not only found Kay's warehouse, but were also able to discover that his business has been effectively seized by a pair of bullying bounty hunters.";
+			return "你找到了凯的仓库，发现他的生意实际上已经被一对恃强凌弱的赏金猎人抢走了。";
 		}
 	},
 	
 	RELATIONSHIP_NYAN_3_STOCK_ISSUES_DOBERMANNS(QuestType.RELATIONSHIP, 10, 100) {
 		@Override
 		public String getName() {
-			return "Bounty Hunter Bullies";
+			return "赏金恶霸兄弟";
 		}
 		@Override
 		public String getDescription() {
-			return "Wolfgang and Karl, a pair of bounty hunters hired by Kay to protect his warehouse, have turned on their employer and effectively seized full control of his business."
-					+ " One way or another, you're going to have to convince these dobermann bullies to leave Kay alone...";
+			return "沃尔夫冈和卡尔是一对赏金猎人，受凯的雇佣来保护他的仓库，但他们背叛了雇主，实际上全盘控制住了他的生意来往。"
+					+ "不管用什么办法，你都得说服这些杜宾恶霸，让他们离凯远点……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "By dealing with Wolfgang and Karl and sending them skulking off back to Slaver Alley's 'Bounty Hunter Lodge', you've both saved Kay's business and ensured that Nyan once again has access to a stock of enchanted clothing."
-					+ " Offering you his eternal thanks, Kay said that you're welcome to pay him a visit whenever you like.";
+			return "你搞定了沃尔夫冈和卡尔，让他们滚回奴隶巷的“赏金猎人小屋”。现在，你既保住了凯的生意，又让妮安恢复了附魔服饰的库存。"
+					+ "凯表示永远不会忘记你的恩情，欢迎你随时来找他。";
 		}
 	},
 	
 	RELATIONSHIP_NYAN_4_STOCK_ISSUES_SUPPLIERS_BEATEN(QuestType.RELATIONSHIP, 1, 25) {
 		@Override
 		public String getName() {
-			return "Nyan's Reward";
+			return "妮安的奖励";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that you've saved Kay's business, you should return to Nyan and inform her of what's happened.";
+			return "你已经拯救了凯的生意，现在该回去告诉妮安发生了什么了。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "A very happy Nyan paid you your promised reward, and also offered to give you a lifetime 25% discount in her store."
-					+ " She also let slip that she's single, in a clumsy attempt to try and hit on you...";
+			return "妮安高兴极了，不仅付了事先约定的报酬，还表示商店以后都会给你提供七五折的终身优惠。"
+					+ "她还透露自己是单身，笨笨地向你搭讪……";
 		}
 	},
 	
@@ -2462,13 +2462,13 @@ public enum Quest {
 	ROMANCE_HELENA_FAILED(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Furious Matriarch";
+			return "盛怒的族长";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After you refused to sell Scarlett to Helena, the haughty harpy matriarch gave up on her plans to run a slavery business and stormed off back to her nest."
-					+ " With the way she ruthlessly insulted you before leaving, you can be sure that she's never going to want to see you again...";
+			return "在你拒绝把斯嘉丽卖给海伦娜后，这位哈比族长放弃了她经营奴隶买卖的计划并愤怒的回巢了。"
+					+ "她走之前非常无情的辱骂了你，你可以肯定她再也不想见到你了……";
 		}
 
 		@Override
@@ -2480,189 +2480,189 @@ public enum Quest {
 	ROMANCE_HELENA_1_OFFER_HELP(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Offer to help";
+			return "提供帮助";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After asking Helena about her business, you discovered that she's barely managing to keep the place running."
-					+ " After expressing her desire to make some improvements to her shop, Helena revealed that she simply doesn't have the time nor inclination to do the work herself."
-					+ " Perhaps you could offer her your help?";
+			return "在向海伦娜打听过她的生意后，你发现她只能勉强维持着此处的运转。"
+					+ "在海伦娜表达了她对于商店改造的想法后，她表示她根本没有时间也没有兴趣完成这个工作。"
+					+ "或许你可以提供点帮助？";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You offered to help Helena make some improvements to her shop.";
+			return "你向海伦娜伸出援手，帮助商店进行改善。";
 		}
 	},
 
 	ROMANCE_HELENA_2_PURCHASE_PAINT(QuestType.RELATIONSHIP, 1, 25) {
 		@Override
 		public String getName() {
-			return "Purchase Paint";
+			return "购买颜料";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Helena revealed that the first thing she wants done is to have the entire exterior of her shop repainted."
-					+ " Having provided you with no money for expenses, the harpy is expecting you to travel to 'Argus's DIY Depot' and buy a can of 'Purple-star' branded golden paint."
-					+ " Once you've bought it, you need to return to Helena."
-					+ "<br/><i>('Argus's DIY Depot' can be found a fair way to the south of Slaver Alley, next to the canal.)</i>";
+			return "海伦娜提及了她想做的第一件事，重新粉刷整个店铺的外观。"
+					+ "哈比没有给你提供任何资金，且希望你去“阿格斯的DIY仓库”买一罐“紫星”牌金色颜料。"
+					+ "在购买后，你需要回去找海伦娜。"
+					+ "<br/><i>(“阿格斯的DIY仓库”可以在奴隶巷的南侧找到，就在运河旁边。)</i>";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You purchased the required paint from 'Argus's DIY Depot' and returned to Helena.";
+			return "你从“阿格斯的DIY仓库”处购买了需求物品，并返回去找海伦娜。";
 		}
 	},
 
 	ROMANCE_HELENA_3_A_EXTERIOR_DECORATOR(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "Exterior Decorator (1/3)";
+			return "室外装饰工(1/3)";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Having purchased the golden paint, you returned to Helena only to have her demand that you get started on repainting the exterior of her shop as soon as possible...";
+			return "在你买到金色油漆后你回到海伦娜的商店，她要求你尽快开始重新粉刷她的商店外部……";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You stripped off all of the old paint from the front of Helena's store.";
+			return "你刮掉了海伦娜商店前面的旧油漆。";
 		}
 	},
 
 	ROMANCE_HELENA_3_B_EXTERIOR_DECORATOR(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "Exterior Decorator (2/3)";
+			return "室外装饰工(2/3)";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You need to return to Helena's store during opening hours to see what your next task will be...";
+			return "你需要在营业时间回到海伦娜的商店来确认你的下一个任务是什么……";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You repainted the entire frontage of Helena's store, and additionally received a delivery of furniture from a succutaur named 'Natalya'.";
+			return "你重新粉刷了海伦娜商店的正面，并且收到了娜塔莉亚送来的家具。";
 		}
 	},
 
 	ROMANCE_HELENA_3_C_EXTERIOR_DECORATOR(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "Exterior Decorator (3/3)";
+			return "室外装饰工(3/3)";
 		}
 
 		@Override
 		public String getDescription() {
-			return "You need to return to Helena's store during opening hours to see what your next task will be...";
+			return "你需要在营业时间回到海伦娜的商店来确认你的下一个任务是什么……";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "Under the harpy matriarch's supervision, you painted the words 'Helena's Boutique' in golden lettering above the door to her store.";
+			return "在哈比族长的监督下，你在她的店铺门上用金字写下“海伦娜精品店”。";
 		}
 	},
 
 	ROMANCE_HELENA_4_SCARLETTS_RETURN(QuestType.RELATIONSHIP, 1, 100) {
 		@Override
 		public String getName() {
-			return "Scarlett's Return";
+			return "斯嘉丽归来";
 		}
 
 		@Override
 		public String getDescription() {
 			boolean slave = Main.game.getNpc(Scarlett.class).isSlave() || Main.game.getNpc(Scarlett.class).getHomeWorldLocation()==WorldType.EMPTY;
 			boolean playerOwner = Main.game.getNpc(Scarlett.class).isSlave() && Main.game.getNpc(Scarlett.class).getOwner().isPlayer();
-			return "Helena revealed to you her plan to rebrand her slave shop as a place where clients could order custom slaves."
-					+ " The person she has in mind to train these custom slaves is her old etiquette coach, who apparently is none other than Scarlett's sister."
+			return "海伦娜向你透露道她计划将她的奴隶店变成一个可以让客户定制奴隶的地方。"
+					+ "她想让她以前的礼仪老师来训练这些奴隶，那个人正是斯嘉丽的姐妹。"
 					+ (slave
-						?" The condition she's given Helena is that she free her unruly sister from slavery, promise never to enslave her again, and then keep her employed..."
+						?"她给海伦娜的条件是让她任性的妹妹获得自由，保证不再奴役她而且让她继续工作……"
 							+ "<br/>"
 							+(playerOwner
-								?"You're going to have to bring Scarlett to Helena and sell her back to her..."
-								:"You're going to have to find Scarlett and purchase her from whoever is her new owner. According to Helena, she's apparently been purchased by the owner of an antique shop somewhere in the Shopping Arcade.")
-						:" The condition she's given Helena is that she keep her unruly sister employed and promise never to enslave her again..."
+								?"你把斯嘉丽带给海伦娜并卖给她……"
+								:"你需要找到斯嘉丽并从她的新主人那里买下她。据海伦娜所说，她是被购物中心里的古董店老板买走的。")
+						:"她给海伦娜的条件是让她任性的妹妹获得自由，并保证不再奴役她……"
 							+ "<br/>"
-							+ "You're going to have to go up to Helena's nest, find Scarlett, and then tell her to return to Helena...");
+							+ "你需要去海伦娜的巢找到斯嘉丽，让她回到海伦娜身边……");
 		}
 		
 		@Override
 		public String getCompletedDescription() {
-			return "According to the wishes of Helena's old etiquette coach, Scarlett will from now on be working as the harpy matriarch's personal assistant.";
+			return "根据海伦娜以前的礼仪教练的意愿，斯嘉丽从今以后将担任哈比族长的个人助理。";
 		}
 	},
 
 	ROMANCE_HELENA_5_SCARLETT_TRAINER(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Harpy Helper";
+			return "哈比的帮手";
 		}
 
 		@Override
 		public String getDescription() {
-			return "The two harpies left early to head off and visit Scarlett's sister. You need to return to Helena's store during opening hours to see what your next task will be...";
+			return "两名哈比早早离开去拜访斯嘉丽的姐妹了。你需要在营业时间回到海伦娜的商店，看看你的下一个任务是什么……";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You returned to Helena's store to discover that everything is set up and ready for the harpy matriarch to start accepting customers. Before that, however, you need to help her with a couple more things...";
+			return "你回到海伦娜的商店，发现一切都安排妥当，准备好让哈比族长接待顾客了。然而，在此之前，你还需要帮她做一些事情……";
 		}
 	},
 
 	ROMANCE_HELENA_6_ADVERTISING(QuestType.RELATIONSHIP, 1, 15) {
 		@Override
 		public String getName() {
-			return "Advertising";
+			return "广告活动";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Having been given half a dozen enchanted posters showing off Helena's beauty, your task is to put them up at the entrance of Slaver Alley in order to help advertise her store.";
+			return "你拿到了六张炫耀海伦娜美貌的附魔海报，你的任务是把它们贴在奴隶巷的入口处，为她的商店做广告。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You put up posters advertising 'Helena's Boutique' at the entrance to Slaver Alley.";
+			return "你在奴隶巷的入口处张贴了“海伦娜精品店”的海报。";
 		}
 	},
 
 	ROMANCE_HELENA_7_GRAND_OPENING_PREPARATION(QuestType.RELATIONSHIP, 1, 15) {
 		@Override
 		public String getName() {
-			return "Preparing for the Grand Opening";
+			return "为盛大开业做准备";
 		}
 
 		@Override
 		public String getDescription() {
-			return "After putting up the posters, Scarlett appeared and lead you back to Helena's shop."
-					+ " Your new task is to get things ready for tomorrow's grand opening, which means working through the night...";
+			return "贴完海报后，斯嘉丽出现了，带你返回海伦娜的商店。"
+					+ "你的新任务是为明天的盛大开业做好准备，这意味着你要彻夜工作……";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Scarlett finished the preparations for the store's grand opening.";
+			return "你和斯嘉丽为商店的盛大开业做好了准备。";
 		}
 	},
 
 	ROMANCE_HELENA_8_FINISH(QuestType.RELATIONSHIP, 1, 100) {
 		@Override
 		public String getName() {
-			return "Preparing Drinks";
+			return "调制饮料";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Not wanting Scarlett to cause any trouble during the grand opening, Helena has tasked the two of you with staying in the back room and making drinks for the guests.";
+			return "海伦娜不想让斯嘉丽在开业典礼上惹麻烦，所以让你们两个留在里屋为客人调制饮料。";
 		}
 
 		@Override
 		public String getCompletedDescription() {
-			return "You and Scarlett stayed in the back room making drinks until the grand opening was over."
-					+ "  Finally showing some appreciation for your efforts, Helena told you that she'd be willing to let you take her on a date as your reward...";
+			return "你和斯嘉丽一直在里屋调制饮料，直到开业典礼结束。"
+					+ "海伦娜终于回应了你的努力，她告诉你，作为奖励，她愿意让你带她去约会……";
 		}
 	},
 	
@@ -2671,11 +2671,11 @@ public enum Quest {
 	ROMANCE_NATALYA_FAILED_INTERVIEW(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Interview Failed";
+			return "面试失败";
 		}
 		@Override
 		public String getDescription() {
-			return "Having refused to do as Natalya asked during her interview, you were thrown out of Dominion Express and told never to return...";
+			return "你拒绝按照娜塔莉亚在面试中的要求行事，你被赶出了御城速递，并被告知永远不要回来……";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -2686,11 +2686,11 @@ public enum Quest {
 	ROMANCE_NATALYA_FAILED_CONTRACT(QuestType.RELATIONSHIP, 1, 0) {
 		@Override
 		public String getName() {
-			return "Contract Refused";
+			return "合同被拒";
 		}
 		@Override
 		public String getDescription() {
-			return "Having refused to sign the contract which Natalya offered to you, you were thrown out of Dominion Express and told never to return...";
+			return "你拒绝签订娜塔莉亚提供给你的合同，你被赶出了御城速递，并被告知永远不要回来……";
 		}
 		@Override
 		public String getCompletedDescription() {
@@ -2701,122 +2701,122 @@ public enum Quest {
 	ROMANCE_NATALYA_1_INTERVIEW_START(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Interviewed";
+			return "接受面试";
 		}
 		@Override
 		public String getDescription() {
-			return "Natalya, the Stable Mistress at the company Dominion Express, has offered you the opportunity to be interviewed for the position of '[style.mule]'.";
+			return "娜塔莉亚是御城速递的马场主，她给你提供了一个面试“[style.mule]”职位的机会。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You accepted Natalya's offer of an interview for the position of '[style.mule]' at Dominion Express.";
+			return "你接受了娜塔莉亚的邀请，进行御城速递“[style.mule]”职位的面试。";
 		}
 	},
 
 	ROMANCE_NATALYA_2_CONTRACT_SIGNED(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Natalya's [style.Mule]";
+			return "娜塔莉亚的[style.Mule]";
 		}
 		@Override
 		public String getDescription() {
-			return "Having accepted the offer of an interview for the position of '[style.mule]', you now need to successfully pass it and sign the contract.";
+			return "你接受了“[style.mule]”职位的面试邀请，接下来需要成功通过并签订合同。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You successfully passed Natalya's interview, and after you'd signed the contract, you were told that you now need to be transformed into [style.a_shemale] taur.";
+			return "你成功通过了娜塔莉亚的面试，在签订合同后，你被告知需要转化为[style.a_shemale]半兽人。";
 		}
 	},
 	
 	ROMANCE_NATALYA_3_TRAINING_1(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "[style.Mule] Training";
+			return "[style.Mule]训练";
 		}
 		@Override
 		public String getDescription() {
-			return "You were told by Natalya that the first part of your training will involve repeating your oral performance on one of the centaur slaves.";
+			return "娜塔莉亚告诉你，训练的第一阶段是让你给一名半人马奴隶反复进行口交。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After being transformed into [style.a_shemale] taur, you began your [style.mule] training by sucking the cock of one of Dominion Express's more unruly centaur slaves.";
+			return "在转化为[style.a_shemale]半兽人后，[style.mule]训练开始，你吮吸了御城速递一名不听管教的半人马奴隶的鸡巴。";
 		}
 	},
 
 	ROMANCE_NATALYA_4_TRAINING_2(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "More Training";
+			return "更多的训练";
 		}
 		@Override
 		public String getDescription() {
-			return "Once again, you were told by Natalya to return the following day to continue your training, which will involve learning to love giving rimjobs.";
+			return "再一次，娜塔莉亚告诉你第二天回来继续训练，内容包括学习如何爱上舔肛。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "The second stage of your training involved wearing colourful lipstick and performing anilingus on Mistress Natalya.";
+			return "训练的第二阶段是涂上色彩鲜艳的口红，给娜塔莉亚主人进行吻肛。";
 		}
 	},
 
 	ROMANCE_NATALYA_5_TRAINING_3(QuestType.RELATIONSHIP, 1, 5) {
 		@Override
 		public String getName() {
-			return "Final Training";
+			return "最终训练";
 		}
 		@Override
 		public String getDescription() {
-			return "Natalya instructed you to return the following day to finish your training, which will involve giving a rimjob to a centaur slave, and being mounted and anally fucked by both Natalya and the slave whose ass you service.";
+			return "娜塔莉亚命令你明天回来结束训练，内容包括给一个半人马奴隶舔肛，然后被娜塔莉亚和这个奴隶骑上并肛交。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "After performing anilingus on a centaur slave and then being mounted and anally fucked by them, Natalya declared that your [style.mule] training is complete.";
+			return "在对一个半人马奴隶进行舔肛，然后被他们骑上并肛交后，娜塔莉亚宣布你的[style.mule]训练已经完成。";
 		}
 	},
 
 	ROMANCE_MONICA_1_TO_THE_FARM(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "To The Farm";
+			return "去往农场";
 		}
 		@Override
 		public String getDescription() {
-			return "After you'd offered to help recover her personalised breast pump, Monica told you that it could be found at her old workplace; a farm located to the North-East of Elis named 'Evelyx's Dairy'."
-					+ " You'll have to go to this farm and ask for Monica's breast pump...";
+			return "你主动提出帮莫妮卡找回定制吸奶器，她告诉你可以去她以前的工作场所寻找，那是一个位于伊利斯东北部，名为“艾弗利克斯乳业”的农场。"
+					+ "你必须前往这个农场，询问莫妮卡的定制吸奶器的下落……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "Having found the farm which is Monica's old workplace, you asked for the cow-girl's personalised breast pump, and were granted a meeting with the farm's owner...";
+			return "你找到了莫妮卡以前工作的农场，索要牛女的定制吸奶器。你获准与农场主会面……";
 		}
 	},
 
 	ROMANCE_MONICA_2_UNREASONABLE_DEMAND(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "An Unreasonable Demand";
+			return "不情之请";
 		}
 		@Override
 		public String getDescription() {
-			return "You managed to get a meeting with the farm's owner, Evelyx, who takes the form of an arrogant, greedy succubus."
-					+ " Although admitting that the breast pump was worthless, she's demanding that you either give her a huge sum of flames, or sign a suspicious contract, in exchange for it...";
+			return "你与农场主艾弗利克斯会面，她是一名外表贪婪又傲慢的魅魔。"
+					+ "虽然她承认吸奶器毫无价值，但她还是要求你给她一大笔钱，或者签署一份可疑的合同来换取它……";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You managed to obtain Monica's personalised breast pump from Evelyx.";
+			return "你设法从艾弗利克斯处获得了莫妮卡的定制吸奶器。";
 		}
 	},
 
 	ROMANCE_MONICA_3_THE_JOURNEY_HOME(QuestType.RELATIONSHIP, 1, 10) {
 		@Override
 		public String getName() {
-			return "The Journey Home";
+			return "回家之路";
 		}
 		@Override
 		public String getDescription() {
-			return "Now that Monica's personalised breast pump is in your possession, all that's left to do is to return it to its rightful owner.";
+			return "现在莫妮卡的定制吸奶器已经到了你的手里，剩下要做的就是还给它的主人了。";
 		}
 		@Override
 		public String getCompletedDescription() {
-			return "You returned Monica's personalised breast pump to her, much to her surprise and delight.";
+			return "你将莫妮卡的定制吸奶器还给了她，这让她喜出望外。";
 		}
 	},
 	;

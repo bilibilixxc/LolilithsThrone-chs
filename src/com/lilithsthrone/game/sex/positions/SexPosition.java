@@ -83,7 +83,7 @@ public class SexPosition {
 		@Override
 		public Value<Boolean, String> isSlotUnlocked(GameCharacter characterToTakeSlot, SexSlot slot, Map<GameCharacter, SexSlot> positioningSlots) {
 			if(characterToTakeSlot.isTaur() && slot==SexSlotMasturbation.SITTING) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "Due to the proportions of [npc.her] animalistic lower body, [npc.nameIsFull] unable to sit down and masturbate at the same time."));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "由于[npc.namePos]动物形态的下半身，[npc.she]无法在坐下的时候自慰。"));
 			}
 			
 			return new Value<Boolean, String>(true, "");
@@ -91,19 +91,19 @@ public class SexPosition {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
 			if(Main.sex.getCharacterInPosition(SexSlotMasturbation.KNEELING)!=null) {
-				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.KNEELING), "[npc.NameIsFull] kneeling on the floor, ready to masturbate.");
+				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.KNEELING), "[npc.NameIsFull]跪在地上，准备自慰。");
 			}
 			if(Main.sex.getCharacterInPosition(SexSlotMasturbation.STANDING)!=null) {
-				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.STANDING), "[npc.NameIsFull] standing upright, ready to masturbate.");
+				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.STANDING), "[npc.NameIsFull]站立着准备自慰。");
 			}
 			if(Main.sex.getCharacterInPosition(SexSlotMasturbation.SITTING)!=null) {
-				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.SITTING), "[npc.NameIsFull] sitting down, ready to masturbate.");
+				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.SITTING), "[npc.NameIsFull]坐下来准备自慰。");
 			}
 			if(Main.sex.getCharacterInPosition(SexSlotMasturbation.KNEELING_PANTIES)!=null) {
-				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.KNEELING_PANTIES), "[npc.NameIsFull] kneeling on the floor, ready to masturbate with the aid of Lilaya's panties.");
+				return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotMasturbation.KNEELING_PANTIES), "[npc.NameIsFull]跪在地上，准备用莉莱雅的内裤自慰。");
 			}
 			
-			return UtilText.parse("You are ready to masturbate.");
+			return UtilText.parse("你准备好自慰了。");
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -128,7 +128,7 @@ public class SexPosition {
 	};
 	
 	
-	public static final AbstractSexPosition STANDING = new AbstractSexPosition("Standing",
+	public static final AbstractSexPosition STANDING = new AbstractSexPosition("站姿",
 			8,
 			true,
 			SexActionPresets.positioningActionsNew, Util.newArrayListOfValues(KneelingOral.class)) {
@@ -152,8 +152,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -176,7 +176,7 @@ public class SexPosition {
 				}
 			}
 			if(!suitablePosition) {
-				return new Value<Boolean, String>(false, "At least one character needs to be in a standing slot for this position to work.");
+				return new Value<Boolean, String>(false, "这种姿势至少需要一个角色被分配至站立栏位才能生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -335,118 +335,118 @@ public class SexPosition {
 			
 			int totalDoms = doms.size()+domTaurs.size();
 			if(totalDoms>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(domNames, false))+" are standing side-by-side before ");
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(domNames, false))+"正肩并肩地站在");
 			} else {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(domNames, false))
-						+UtilText.parse(mainDom, " [npc.is]")+" standing before ");
+						+"正站在");
 			}
 
-			sb.append(Util.stringsToStringList(subNames, false)+", ready to have some fun with "
+			sb.append(Util.stringsToStringList(subNames, false)+"的面前，期待着跟"
 					+(subNames.size()>1
-							?(playerInSubs?(playerInSubs?"the "+Util.intToString(subs.size())+" of you":"them"):"them")
-							:UtilText.parse(subs.keySet().iterator().next(), " [npc.herHim]"))+". ");
+							?(playerInSubs?(playerInSubs?"你们"+Util.intToString(subs.size())+"个":"他们"):"他们")
+							:UtilText.parse(subs.keySet().iterator().next(), "[npc.herHim]"))+"爽一爽。");
 			
 			// Standing:
 			if(subStandingNames.size()>=2) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subStandingNames, false))
-						+" are similarly standing beside one another in front of "+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?"the "+Util.intToString(totalDoms)+" of you":"them"))+". ");
+						+"也同样挨着站在"+(totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们"+Util.intToString(totalDoms)+"个":"他们"))+"面前。");
 				
 			} else if(subStandingNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subStandingNames, false))
-						+UtilText.parse(mainStandingSub, " [npc.is]")+" standing in front of "+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?"the "+Util.intToString(totalDoms)+" of you":"them"))+". ");
+						+"则站在"+(totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们"+Util.intToString(totalDoms)+"个":"他们"))+"面前。");
 			}
 
 			// Kneeling:
 			if(subKneelingNames.size()>=2) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subKneelingNames, false))
-						+" are kneeling down beside one another");
+						+"挨着跪在");
 				if(domTaurs.isEmpty()) {
-					sb.append(" before "+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?" you":"the "+Util.intToString(totalDoms)+" of them"))+", ready to perform oral." );
+					sb.append((totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们":"他们"+Util.intToString(totalDoms)+"个"))+"面前，准备好口交。" );
 				} else if(doms.isEmpty()) {
-					sb.append(", and are ready to shuffle forwards beneath "
-								+(totalDoms==1?UtilText.parse(mainDom, " [npc.her] animalistic body"):(playerInDoms?"one of your animalistic bodies":"one of their animalistic bodies"))+" in order to perform oral. ");
+					sb.append("地上，准备好交替向前，在"
+								+(totalDoms==1?UtilText.parse(mainDom, "[npc.her]动物般的身躯"):(playerInDoms?"你们某个动物般的身躯":"他们某个动物般的身躯"))+"下依次进行口交。");
 				} else {
-					sb.append(", and are ready to shuffle forwards and start performing oral. ");
+					sb.append("地上，准备好交替向前，依次进行口交。");
 				}
 				
 			} else if(subKneelingNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subKneelingNames, false))
-						+UtilText.parse(mainKneelingSub, " [npc.is]")+" kneeling down");
+						+"跪在");
 				if(domTaurs.isEmpty()) {
-					sb.append(" before "+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?" you":"the "+Util.intToString(totalDoms)+" of them"))+", ready to perform oral. ");
+					sb.append((totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们":"他们"+Util.intToString(totalDoms)+"个"))+"面前，准备好口交。");
 				} else if(doms.isEmpty()) {
-					sb.append(" and "+UtilText.parse(mainKneelingSub, " [npc.is]")+" ready to shuffle forwards beneath "
-								+(totalDoms==1?UtilText.parse(mainDom, " [npc.her] animalistic body"):(playerInDoms?"one of your animalistic bodies":"one of their animalistic bodies"))+" in order to perform oral. ");
+					sb.append("地上，准备好交替向前，在"
+								+(totalDoms==1?UtilText.parse(mainDom, "[npc.her]动物般的身躯"):(playerInDoms?"你们某个动物般的身躯":"他们某个动物般的身躯"))+"下依次进行口交。");
 				} else {
-					sb.append(" and "+UtilText.parse(mainKneelingSub, " [npc.is]")+" ready to shuffle forwards and start performing oral. ");
+					sb.append("在地上，准备好交替向前，依次进行口交。");
 				}
 			}
 			// Kneeling size difference:
 			if(subSizeDiffKneelingNames.size()>=2) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subSizeDiffKneelingNames, false))
-						+" are ready to perform oral, but due to "+(playerInSubs?"your":"their")+" short stature, "+(playerInSubs?"you":"they")+" do not need to kneel, and are instead standing before "
-						+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?" you":"the "+Util.intToString(totalDoms)+" of them"))+".");
+						+"已经准备好口交，但由于"+(playerInSubs?"你们":"他们")+"身材矮小，无须跪下，只要站在"
+						+(totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们":"他们"+Util.intToString(totalDoms)+"个"))+"面前。");
 				
 			} else if(subSizeDiffKneelingNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subSizeDiffKneelingNames, false))
-						+UtilText.parse(mainKneelingSizeDiffSub, " [npc.is] ready to perform oral, but due to [npc.her] short stature, [npc.she] [npc.does] not need to kneel, and [npc.is] instead standing before ")
-						+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?" you":"the "+Util.intToString(totalDoms)+" of them"))+".");
+						+UtilText.parse(mainKneelingSizeDiffSub, "已经准备好口交，但由于[npc.her]身材矮小，无须跪下，只要站在")
+						+(totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们":"他们"+Util.intToString(totalDoms)+"个"))+"面前。");
 			}
 
 			// Standing behind:
 			if(subStandingBehindNames.size()>=2) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subStandingBehindNames, false))
-						+" are standing behind, next to one another.");
+						+"正肩并肩地站在身后。");
 				
 			} else if(subStandingBehindNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subStandingBehindNames, false))
-						+UtilText.parse(mainStandingBehindSub, " [npc.is]")+" standing behind "+(totalDoms==1?UtilText.parse(mainDom, " [npc.name]"):(playerInDoms?" you":" them"))+".");
+						+"正站在"+(totalDoms==1?UtilText.parse(mainDom, "[npc.name]"):(playerInDoms?"你们":"他们"))+"身后。");
 			}
 			
 			// Kneeling behind:
 			if(subKneelingBehindNames.size()>=2) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subKneelingBehindNames, false))
-						+" have knelt down beside one another");
+						+"正紧挨着跪在");
 				if(domTaurs.isEmpty()) {
-					sb.append(" behind "+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?" you":" them"))+", ready to perform anilingus.");
+					sb.append((totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们":"他们"))+"身后，准备好舔肛。");
 				} else if(doms.isEmpty()) {
-					sb.append(" behind "+
+					sb.append(
 							(totalDoms==1
-								?UtilText.parse(mainDom, " [npc.herHim], and are ready to perform oral on [npc.her] animalistic rear-half.")
+								?UtilText.parse(mainDom, "[npc.herHim]身后，准备好对[npc.her]动物般的后半身进行口交。")
 								:(playerInDoms
-									?" you, and are ready to perform oral on one of your animalistic rear-halves."
-									:" them, and are ready to perform oral on one of their animalistic rear-halves.")));
+									?"你们身后，准备好对你们其中一个的动物般的后半身进行口交。"
+									:"他们身后，准备好对他们其中一个的动物般的后半身进行口交。")));
 				} else {
-					sb.append(", and are ready to perform oral on "+(totalDoms==1?UtilText.parse(mainDom, " [npc.her] rear-end."):(playerInDoms?" your rear-ends.":" their rear-ends.")));
+					sb.append("地上，准备好对"+(totalDoms==1?UtilText.parse(mainDom, "[npc.her]的后半身进行口交。"):(playerInDoms?"你们的后半身进行口交。":"他们的后半身进行口交。")));
 				}
 				
 			} else if(subKneelingBehindNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subKneelingBehindNames, false))
-						+UtilText.parse(mainBehindSub, " [npc.is]")+" kneeling down behind "+(totalDoms==1?UtilText.parse(mainDom, " [npc.herHim]"):(playerInDoms?" you":" them")));
+						+"跪在"+(totalDoms==1?UtilText.parse(mainDom, "[npc.herHim]"):(playerInDoms?"你们":"他们"))+"身后");
 				if(domTaurs.isEmpty()) {
-					sb.append(", ready to perform anilingus.");
+					sb.append("，准备好舔肛。");
 				} else if(doms.isEmpty()) {
 					sb.append((totalDoms==1
-								?UtilText.parse(mainDom, ", and "+UtilText.parse(mainBehindSub, " [npc.is]")+" ready to perform oral on [npc.her] animalistic rear-half.")
+								?UtilText.parse(mainDom, "，准备好对[npc.her]动物般的后半身进行口交。")
 								:(playerInDoms
-									?", and "+UtilText.parse(mainBehindSub, " [npc.is]")+" ready to perform oral on one of your animalistic rear-halves."
-									:", and "+UtilText.parse(mainBehindSub, " [npc.is]")+" ready to perform oral on one of their animalistic rear-halves.")));
+									?"，准备好对你们其中一个的动物般的后半身进行口交。"
+									:"，准备好对他们其中一个的动物般的后半身进行口交。")));
 				} else {
-					sb.append(", ready to perform oral on "+(totalDoms==1?UtilText.parse(mainDom, " [npc.her] rear-end."):(playerInDoms?" your rear-ends.":" their rear-ends.")));
+					sb.append("，准备好对"+(totalDoms==1?UtilText.parse(mainDom, "[npc.her]的后半身进行口交。"):(playerInDoms?"你们的后半身进行口交。":"他们的后半身进行口交。")));
 				}
 			}
 			// Kneeling behind size difference:
 			if(subSizeDiffBehindNames.size()>=2) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subSizeDiffBehindNames, false))
-						+" are positioned behind "+(totalDoms==1?UtilText.parse(mainDom, "[npc.name]"):(playerInDoms?"you":"the "+Util.intToString(totalDoms)+" of them"))
-						+ ", ready to perform oral on "+(totalDoms==1?UtilText.parse(mainDom, " [npc.her] rear-end"):(playerInDoms?" your rear-ends":" their rear-ends"))
-						+", but due to "+(playerInSubs?"your":"their")+" short stature, "+(playerInSubs?"you":"they")+" do not need to kneel, and are instead standing upright.");
+						+"移动到"+(totalDoms==1?UtilText.parse(mainDom, "[npc.name]"):(playerInDoms?"你们":"他们"+Util.intToString(totalDoms)+"个"))
+						+ "身后，准备好对"+(totalDoms==1?UtilText.parse(mainDom, "[npc.her]的后半身进行口交"):(playerInDoms?"你们的后半身进行口交":"他们的后半身进行口交"))
+						+"，但由于"+(playerInSubs?"你们":"他们")+"身材矮小，无须跪下，只要站立即可。");
 				
 			} else if(subSizeDiffBehindNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(subSizeDiffBehindNames, false))
-						+UtilText.parse(mainBehindSizeDiffSub, " [npc.is] positioned behind ")+(totalDoms==1?UtilText.parse(mainDom, "[npc.name]"):(playerInDoms?"you":"the "+Util.intToString(totalDoms)+" of them"))
-						+ ", ready to perform oral on "+(totalDoms==1?UtilText.parse(mainDom, " [npc.her] rear-end"):(playerInDoms?" your rear-ends":" their rear-ends"))
-						+UtilText.parse(mainBehindSizeDiffSub, ", but due to [npc.her] short stature, [npc.she] [npc.does] not need to kneel, and [npc.is] instead standing upright."));
+						+UtilText.parse(mainBehindSizeDiffSub, "移动到")+(totalDoms==1?UtilText.parse(mainDom, "[npc.name]"):(playerInDoms?"你们":"他们"+Util.intToString(totalDoms)+"个"))
+						+ "身后，准备好对"+(totalDoms==1?UtilText.parse(mainDom, "[npc.her]的后半身进行口交"):(playerInDoms?"你们的后半身进行口交":"他们的后半身进行口交"))
+						+UtilText.parse(mainBehindSizeDiffSub, "，但由于[npc.her]身材矮小，无须跪下，只要站立即可。"));
 			}
 			
 
@@ -521,12 +521,12 @@ public class SexPosition {
 				}
 			}
 			if(!shorterMap.isEmpty()) {
-				sb.append("<br/>[style.italicsOrange(Some characters are significantly shorter than others, and as such will be in a position to perform oral on their larger partners even while standing:)]");
+				sb.append("<br/>[style.italicsOrange(部分角色比其他角色矮得多，所以即使是站立着也能对较高的对象进行口交: )]");
 				for(Entry<GameCharacter, List<String>> entry : shorterMap.entrySet()) {
-					sb.append(UtilText.parse(entry.getKey(), "<br/><span style='color:"+entry.getKey().getFemininity().getColour().toWebHexString()+";'>[npc.Name]</span> [npc.is] shorter than "));
+					sb.append(UtilText.parse(entry.getKey(), "<br/><span style='color:"+entry.getKey().getFemininity().getColour().toWebHexString()+";'>[npc.Name]</span>比"));
 					sb.append("");
 					sb.append(Util.stringsToStringList(entry.getValue(), false));
-					sb.append(".");
+					sb.append("矮。");
 				}
 			}
 						
@@ -611,7 +611,7 @@ public class SexPosition {
 	};
 	
 
-	public static final AbstractSexPosition AGAINST_WALL = new AbstractSexPosition("Against [pc.wall]",
+	public static final AbstractSexPosition AGAINST_WALL = new AbstractSexPosition("面对[pc.wall]",
 			8,
 			true,
 			SexActionPresets.positioningActionsNew,
@@ -635,8 +635,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -672,7 +672,7 @@ public class SexPosition {
 				}
 			}
 			if(!suitablePositionWall || !suitablePositionStandingOrOral) {
-				return new Value<Boolean, String>(false, "At least one character needs to be against [pc.a_wall], and another either standing or performing oral for this position to work.");
+				return new Value<Boolean, String>(false, "至少一个角色面向[pc.a_wall]，另外有角色站立或提供口交，才能使该姿势生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -758,32 +758,32 @@ public class SexPosition {
 
 			int facingWallCount = facingWallNames.size();
 			if(facingWallCount>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(facingWallNames, false))+" are standing side-by-side facing a nearby [pc.wall]");
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(facingWallNames, false))+"正肩并肩地面对着附近的[pc.wall]");
 				
 			} else if(facingWallCount==1) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(facingWallNames, false))+UtilText.parse(mainFacingWall, " [npc.is] standing facing a nearby [pc.wall]"));
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(facingWallNames, false))+UtilText.parse(mainFacingWall, "正面对着附近的[pc.wall]"));
 			}
 			
 			if(backToWallNames.size()>=2) {
 				if(facingWallCount>0) {
-					sb.append(", while "+Util.stringsToStringList(backToWallNames, false)+" are standing beside "
-								+(facingWallCount==1?UtilText.parse(mainFacingWall,"[npc.herHim]"):(playerBackToWall?"you":"them"))+", with "+(playerBackToWall?"your":"their")+" backs to the [pc.wall] instead. ");
+					sb.append("，而"+Util.stringsToStringList(backToWallNames, false)+"则站在"
+								+(facingWallCount==1?UtilText.parse(mainFacingWall,"[npc.herHim]"):(playerBackToWall?"你们":"他们"))+"旁边，背对着[pc.wall]。");
 				} else {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(backToWallNames, false))+" are standing side-by-side, with "+(playerBackToWall?"your":"their")+" rears pressed back against the [pc.wall] behind them. ");
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(backToWallNames, false))+"挨着站在一起，后半身顶在身后的[pc.wall]上。");
 				}
 				
 			} else if(backToWallNames.size()==1) {
 				if(facingWallCount>0) {
-					sb.append(", while "+Util.stringsToStringList(backToWallNames, false)+UtilText.parse(mainBackToWall, " [npc.is] standing beside ")
-							+(facingWallCount==1?UtilText.parse(mainFacingWall,"[npc.herHim]"):(playerBackToWall?"you":"them"))+", with "+UtilText.parse(mainBackToWall,"[npc.her]")+" back to the [pc.wall] instead. ");
+					sb.append("，而"+Util.stringsToStringList(backToWallNames, false)+UtilText.parse(mainBackToWall, "则站在")
+							+(facingWallCount==1?UtilText.parse(mainFacingWall,"[npc.herHim]"):(playerBackToWall?"你们":"他们"))+"身边，背对着[pc.wall]。");
 				} else {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(backToWallNames, false))+UtilText.parse(mainBackToWall, " [npc.is] standing with [npc.her] rear pressed back against a [pc.wall] behind [npc.herHim]. "));
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(backToWallNames, false))+UtilText.parse(mainBackToWall, "站立着，后半身顶在身后的[pc.wall]上。"));
 				}
 			} else {
 				if(facingWallCount>1) {
-					sb.append(", with each of "+(playerFacingWall?"you":"them")+" throwing the occasional glance back over "+(playerFacingWall?"your":"their")+" shoulders. ");
+					sb.append("，不时向后窥视着。");
 				} else {
-					sb.append(UtilText.parse(mainFacingWall, ", and occasionally [npc.verb(throw)] a rearward glance back over [npc.her] shoulder. "));
+					sb.append(UtilText.parse(mainFacingWall, "，不时向后窥视着。"));
 				}
 			}
 
@@ -791,37 +791,37 @@ public class SexPosition {
 			int standingCount = standingNames.size();
 			GameCharacter mainWall = mainBackToWall==null?mainFacingWall:mainBackToWall;
 			if(standingCount>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+" are positioned so as to be standing right up against "
-							+(totalAgainstWall>1?(playerFacingWall || playerBackToWall?"you":"them"):UtilText.parse(mainWall, "[npc.name]")));
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+"移动到正好跟"
+							+(totalAgainstWall>1?(playerFacingWall || playerBackToWall?"你们":"他们"):UtilText.parse(mainWall, "[npc.name]"))+"面对面的位置");
 				
 			} else if(standingCount==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))
-							+UtilText.parse(mainStanding," [npc.is] positioned so as to be standing right up against ")+(totalAgainstWall>1?(playerFacingWall || playerBackToWall?"you":"them"):UtilText.parse(mainWall, "[npc.name]")));
+							+UtilText.parse(mainStanding,"移动到正好跟")+(totalAgainstWall>1?(playerFacingWall || playerBackToWall?"你们":"他们"):UtilText.parse(mainWall, "[npc.name]"))+"面对面的位置");
 			}
 			
 			if(performingOralNames.size()>=2) {
 				if(standingCount>0) {
-					sb.append(", while "+Util.stringsToStringList(performingOralNames, false)+" are down on "+(playerPerformingOral?"your":"their")+" knees, ready to perform oral on "
-								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"you":"them"))+".");
+					sb.append("，而"+Util.stringsToStringList(performingOralNames, false)+"则跪在地上，准备好给"
+								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"你们":"他们"))+"提供口交。");
 				} else {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+" are positioned close behind and are down on "+(playerPerformingOral?"your":"their")+" knees, ready to perform oral on "
-								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"you":"them"))+".");
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+"移动到正后方，准备好给"
+								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"你们":"他们"))+"提供口交。");
 				}
 				
 			} else if(performingOralNames.size()==1) {
 				if(standingCount>0) {
-					sb.append(", while "+Util.stringsToStringList(performingOralNames, false)+UtilText.parse(mainPerformingOral, " [npc.is] down on [npc.her] knees, ready to perform oral on ")
-								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"you":"them"))+".");
+					sb.append("，而"+Util.stringsToStringList(performingOralNames, false)+UtilText.parse(mainPerformingOral, "则跪在地上，准备好给")
+								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"你们":"他们"))+"提供口交。");
 				} else {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral, " [npc.is] positioned close behind and [npc.is] down on [npc.her] knees, ready to perform oral on ")
-								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"you":"them"))+".");
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral, "移动到正后方，准备好给")
+								+(totalAgainstWall==1?UtilText.parse(mainWall,"[npc.name]"):(playerFacingWall || playerBackToWall?"你们":"他们"))+"提供口交。");
 				}
 				
 			} else {
 				if(totalAgainstWall>1) {
-					sb.append(", ready to have some fun with the "+Util.intToString(totalAgainstWall)+" of "+(playerFacingWall?"you":"them")+".");
+					sb.append("，期待着跟"+(playerFacingWall?"你们":"他们")+Util.intToString(totalAgainstWall)+"个爽一番。");
 				} else {
-					sb.append(", ready to have some fun with "+UtilText.parse(mainWall,"[npc.herHim]")+".");
+					sb.append("，期待着跟"+UtilText.parse(mainWall,"[npc.herHim]")+"爽一番。");
 				}
 			}
 			
@@ -837,12 +837,12 @@ public class SexPosition {
 				}
 			}
 			if(!shorterMap.isEmpty()) {
-				sb.append("<br/>[style.italicsOrange(Some characters are significantly shorter than others, and as such will be in a position to perform oral on their larger partners even while standing:)]");
+				sb.append("<br/>[style.italicsOrange(部分角色比其他角色矮得多，所以即使是站立着也能对较高的对象进行口交: )]");
 				for(Entry<GameCharacter, List<String>> entry : shorterMap.entrySet()) {
-					sb.append(UtilText.parse(entry.getKey(), "<br/><span style='color:"+entry.getKey().getFemininity().getColour().toWebHexString()+";'>[npc.Name]</span> [npc.is] shorter than "));
+					sb.append(UtilText.parse(entry.getKey(), "<br/><span style='color:"+entry.getKey().getFemininity().getColour().toWebHexString()+";'>[npc.Name]</span>比"));
 					sb.append("");
 					sb.append(Util.stringsToStringList(entry.getValue(), false));
-					sb.append(".");
+					sb.append("矮。");
 				}
 			}
 			
@@ -931,7 +931,7 @@ public class SexPosition {
 	};
 	
 
-	public static final AbstractSexPosition OVER_DESK = new AbstractSexPosition("Over [pc.desk]",
+	public static final AbstractSexPosition OVER_DESK = new AbstractSexPosition("[pc.desk]上",
 			8,
 			true,
 			SexActionPresets.positioningActionsNew, Util.newArrayListOfValues(MissionaryDesk.class)) {
@@ -960,8 +960,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -972,28 +972,28 @@ public class SexPosition {
 					|| (slot==SexSlotDesk.HUMPING_TWO && !positioningSlots.containsValue(SexSlotDesk.OVER_DESK_ON_FRONT_TWO) && !positioningSlots.containsValue(SexSlotDesk.OVER_DESK_ON_BACK_TWO))
 					|| (slot==SexSlotDesk.HUMPING_THREE && !positioningSlots.containsValue(SexSlotDesk.OVER_DESK_ON_FRONT_THREE) && !positioningSlots.containsValue(SexSlotDesk.OVER_DESK_ON_BACK_THREE))
 					|| (slot==SexSlotDesk.HUMPING_FOUR && !positioningSlots.containsValue(SexSlotDesk.OVER_DESK_ON_FRONT_FOUR) && !positioningSlots.containsValue(SexSlotDesk.OVER_DESK_ON_BACK_FOUR))) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "There is no free character lying over a [pc.desk] to hump!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "没有人在桌子上，所以无法趴到背上！"));
 			}
 
 			// Cannot hump when the person standing behind the intended target is a taur:
 			if((slot==SexSlotDesk.HUMPING && positioningSlots.containsValue(SexSlotDesk.BETWEEN_LEGS) && reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS).isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS), "[npc.Name] cannot hump anyone while [npc2.namePos] [npc2.legRace]'s body is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS), "[npc.Name]不能津贴上去，因为[npc2.namePos]的[npc2.legRace]身躯挡住了！"));
 			} else if((slot==SexSlotDesk.HUMPING_TWO && positioningSlots.containsValue(SexSlotDesk.BETWEEN_LEGS_TWO) && reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_TWO).isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_TWO), "[npc.Name] cannot hump anyone while [npc2.namePos] [npc2.legRace]'s body is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_TWO), "[npc.Name]不能紧贴上去，因为[npc2.namePos]的[npc2.legRace]身躯挡住了！"));
 			} else if((slot==SexSlotDesk.HUMPING_THREE && positioningSlots.containsValue(SexSlotDesk.BETWEEN_LEGS_THREE) && reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_THREE).isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_THREE), "[npc.Name] cannot hump anyone while [npc2.namePos] [npc2.legRace]'s body is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_THREE), "[npc.Name]不能趴到背上，因为[npc2.namePos]的[npc2.legRace]身躯挡住了！"));
 			} else if((slot==SexSlotDesk.HUMPING_FOUR && positioningSlots.containsValue(SexSlotDesk.BETWEEN_LEGS_FOUR) && reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_FOUR).isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_FOUR), "[npc.Name] cannot hump anyone while [npc2.namePos] [npc2.legRace]'s body is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.BETWEEN_LEGS_FOUR), "[npc.Name]不能趴到背上，因为[npc2.namePos]的[npc2.legRace]身躯挡住了！"));
 			}
 			// And vice-versa:
 			if((slot==SexSlotDesk.BETWEEN_LEGS && positioningSlots.containsValue(SexSlotDesk.HUMPING) && characterToTakeSlot.isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING), "[npc.NamePos] [npc2.legRace]'s body will not fit while [npc2.name] is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING), "[npc.NamePos]的[npc2.legRace]身躯上不去，因为[npc2.name]挡住了！"));
 			} else if((slot==SexSlotDesk.BETWEEN_LEGS_TWO && positioningSlots.containsValue(SexSlotDesk.HUMPING_TWO) && characterToTakeSlot.isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING_TWO), "[npc.NamePos] [npc2.legRace]'s body will not fit while [npc2.name] is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING_TWO), "[npc.NamePos]的[npc2.legRace]身躯上不去，因为[npc2.name]挡住了！"));
 			} else if((slot==SexSlotDesk.BETWEEN_LEGS_THREE && positioningSlots.containsValue(SexSlotDesk.HUMPING_THREE) && characterToTakeSlot.isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING_THREE), "[npc.NamePos] [npc2.legRace]'s body will not fit while [npc2.name] is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING_THREE), "[npc.NamePos]的[npc2.legRace]身躯上不去，因为[npc2.name]挡住了！"));
 			} else if((slot==SexSlotDesk.BETWEEN_LEGS_FOUR && positioningSlots.containsValue(SexSlotDesk.HUMPING_FOUR) && characterToTakeSlot.isTaur())) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING_FOUR), "[npc.NamePos] [npc2.legRace]'s body will not fit while [npc2.name] is in the way!"));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, reversedPositioningSlotsMap.get(SexSlotDesk.HUMPING_FOUR), "[npc.NamePos]的[npc2.legRace]身躯上不去，因为[npc2.name]挡住了！"));
 			}
 			
 			if(characterToTakeSlot.isTaur()
@@ -1001,7 +1001,7 @@ public class SexPosition {
 						|| slot==SexSlotDesk.OVER_DESK_ON_BACK_TWO
 						|| slot==SexSlotDesk.OVER_DESK_ON_BACK_THREE
 						|| slot==SexSlotDesk.OVER_DESK_ON_BACK_FOUR)) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "Due to the proportions of [npc.her] animalistic lower body, [npc.nameIsFull] unable to lie down on [npc.her] back over the [pc.desk]."));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "由于[npc.namePos]动物般的下肢，[npc.her]没法平躺在[pc.desk]上。"));
 			}
 			
 			return new Value<Boolean, String>(true, "");
@@ -1041,7 +1041,7 @@ public class SexPosition {
 				}
 			}
 			if(!suitablePositionDesk || !suitablePositionStandingOrOral) {
-				return new Value<Boolean, String>(false, "At least one character needs to be on top of the [pc.desk], and another either standing, humping, receiving oral, or performing oral for this position to work.");
+				return new Value<Boolean, String>(false, "至少需要一个角色在[pc.desk]上，另外有角色站立、趴背、接受口交或提供口交，才能使该姿势生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -1180,42 +1180,42 @@ public class SexPosition {
 			
 			int deskBackCount = deskBackNames.size();
 			if(deskBackCount>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskBackNames, false))+" are lying back over the [pc.desk]");
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskBackNames, false))+"平躺在[pc.desk]上");
 				
 			} else if(deskBackCount==1) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskBackNames, false))+UtilText.parse(mainDeskBack, " [npc.is] lying back over the [pc.desk]"));
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskBackNames, false))+UtilText.parse(mainDeskBack, "平躺在[pc.desk]上"));
 			}
 			
 			if(deskFrontNames.size()>=2) {
 				if(deskBackCount>0) {
-					sb.append(", while "+Util.stringsToStringList(deskFrontNames, false)+" are lying down, face-first, beside "
-								+(deskBackCount==1?UtilText.parse(mainDeskBack,"[npc.herHim]"):(playerDeskBack?"you":"them"))+". ");
+					sb.append("，而"+Util.stringsToStringList(deskFrontNames, false)+"则趴在"
+								+(deskBackCount==1?UtilText.parse(mainDeskBack,"[npc.herHim]"):(playerDeskBack?"你们":"他们"))+"旁边。");
 				} else {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskFrontNames, false))+" are lying down, face-first, over the [pc.desk]. "); 
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskFrontNames, false))+"俯卧在[pc.desk]上。"); 
 				}
 				
 			} else if(deskFrontNames.size()==1) {
 				if(deskBackCount>0) {
-					sb.append(", while "+Util.stringsToStringList(deskFrontNames, false)+UtilText.parse(mainDeskFront, " [npc.is] lying down, face-first, over the [pc.desk]. "));
+					sb.append("，而"+Util.stringsToStringList(deskFrontNames, false)+UtilText.parse(mainDeskFront, "则俯卧在[pc.desk]上。"));
 				} else {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskFrontNames, false))+UtilText.parse(mainDeskFront, " [npc.is] lying down, face-first, over the [pc.desk]. "));
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskFrontNames, false))+UtilText.parse(mainDeskFront, "俯卧在[pc.desk]上。"));
 				}
 				
 			} else if(deskBackCount>0) {
 				if(deskBackCount>1) {
-					sb.append(", side-by-side with one another. ");
+					sb.append("，跟另一个人紧挨着。");
 				} else {
-					sb.append(UtilText.parse(mainDeskBack, ", ready to be fucked. "));
+					sb.append(UtilText.parse(mainDeskBack, "，准备好挨操。"));
 				}
 			}
 			
 			// Desk taurs:
 			if(deskFrontTaurNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskFrontTaurNames, false))+" have used their front legs to step up on top of the [pc.desk], before lying down and resting their animalistic lower bodies over it. ");
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskFrontTaurNames, false))+"用前腿踩在[pc.desk]顶上，然后让动物般的下肢躺在了上面。");
 				
 			} else if(deskFrontTaurNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(deskFrontTaurNames, false))+UtilText.parse(mainDeskFrontTaur,
-						" [npc.has] used [npc.her] front legs to step up on top of the [pc.desk], before lying down and resting [npc.her] animalistic lower body over it. "));
+						"用前腿踩在[pc.desk]顶上，然后让动物般的下肢躺在了上面。"));
 			}
 			
 
@@ -1229,35 +1229,35 @@ public class SexPosition {
 						:mainDeskFront
 					:mainDeskBack;
 			if(standingCount>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+" have moved forwards so as to be standing right up between "
-							+(totalDeskCount>1?(playerDeskBack||playerDeskFront?"your legs":"their legs"):UtilText.parse(mainDesk, "[npc.namePos] [npc.legs]")));
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+"上前来，正站在"
+							+(totalDeskCount>1?(playerDeskBack||playerDeskFront?"你们的腿":"他们的腿"):UtilText.parse(mainDesk, "[npc.namePos]的[npc.legs]"))+"之间");
 				
 			} else if(standingCount==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))
-							+UtilText.parse(mainStanding," [npc.has] moved forwards so as to be standing right up between ")
-							+(totalDeskCount>1?(playerDeskBack||playerDeskFront?"your legs":"their legs"):UtilText.parse(mainDesk, "[npc.namePos] [npc.legs]")));
+							+UtilText.parse(mainStanding,"上前来，正站在")
+							+(totalDeskCount>1?(playerDeskBack||playerDeskFront?"你们的腿":"他们的腿"):UtilText.parse(mainDesk, "[npc.namePos]的[npc.legs]"))+"之间");
 			}
 			if(standingCount>0) {
 				if(totalDeskCount>1) {
-					sb.append(", ready to have some fun with the "+Util.intToString(totalDeskCount)+" of "+(playerDeskBack||playerDeskFront?"you":"them")+". ");
+					sb.append("，期待着跟"+(playerDeskBack||playerDeskFront?"你们":"他们")+Util.intToString(totalDeskCount)+"个爽一番。");
 				} else {
-					sb.append(", ready to have some fun with "+UtilText.parse(mainDesk,"[npc.herHim]")+". ");
+					sb.append("，期待着跟"+UtilText.parse(mainDesk,"[npc.herHim]")+"爽一番。");
 				}
 			}
 			
 			int standingCountTaurs = standingNamesTaur.size();
 			if(standingCountTaurs>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))+" have stepped up onto the [pc.desk] with their front legs, and are ready to use their feral lower bodies");
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))+"用前腿踩在[pc.desk]顶上，准备用其兽态的下半身");
 				
 			} else if(standingCountTaurs==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))
-							+UtilText.parse(mainStandingTaur," [npc.has] stepped up onto the [pc.desk] with [npc.her] front legs, and [npc.is] ready to use [npc.her] feral lower body"));
+							+UtilText.parse(mainStandingTaur,"用前腿踩在[pc.desk]顶上，准备用其兽态的下半身"));
 			}
 			if(standingCountTaurs>0) {
 				if(totalDeskCount>1) {
-					sb.append(" to mount the "+Util.intToString(totalDeskCount)+" of "+(playerDeskBack||playerDeskFront?"you":"them")+". ");
+					sb.append("骑在"+(playerDeskBack||playerDeskFront?"你们":"他们")+Util.intToString(totalDeskCount)+"个上面。");
 				} else {
-					sb.append(" to mount "+UtilText.parse(mainDesk,"[npc.herHim]")+". ");
+					sb.append("骑在"+UtilText.parse(mainDesk,"[npc.herHim]")+"上面。");
 				}
 			}
 			
@@ -1267,14 +1267,14 @@ public class SexPosition {
 			int humpingCount = humpingNames.size();
 			if(humpingCount>0) {
 				if(humpingCount>=2) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+" have eagerly clambered up onto the edge of the [pc.desk], and are ready to start humping their partners.");
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+"迫切地爬上[pc.desk]边缘，准备好贴在各自的对象身上。");
 					
 				} else if(humpingCount==1) {
-					sb.append(UtilText.parse(mainHumping, "[npc.Name] [npc.has] eagerly clambered up onto the edge of the [pc.desk], and [npc.is] ready to start humping"));
+					sb.append(UtilText.parse(mainHumping, "[npc.Name]迫切地爬上[pc.desk]边缘，准备好贴在"));
 					if(totalDeskCount>1) {
-						sb.append(UtilText.parse(mainHumping," [npc.her] partner. "));
+						sb.append(UtilText.parse(mainHumping,"[npc.her]的对象身上。"));
 					} else {
-						sb.append(UtilText.parse(mainDesk," [npc.name]")+". ");
+						sb.append(UtilText.parse(mainDesk,"[npc.name]")+"的身上。");
 					}
 				}
 			}
@@ -1283,31 +1283,31 @@ public class SexPosition {
 			// Performing oral:
 			
 			if(performingOralNames.size()>=2) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+" are positioned so as to be right up between "
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+"正好移动到"
 							+(totalDeskCount>1
-									?(playerDeskBack||playerDeskFront?"your legs":"their legs")+", ready to perform oral on "+(playerDeskBack||playerDeskFront?"you. ":"them. ")
-									:UtilText.parse(mainDesk, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+									?(playerDeskBack||playerDeskFront?"你们的腿":"他们的腿")+"之间，准备好给"+(playerDeskBack||playerDeskFront?"你们口交。":"他们口交。")
+									:UtilText.parse(mainDesk, "[npc.namePos]的[npc.legs]之间，准备好给[npc.herHim]口交。")));
 				
 				
 			} else if(performingOralNames.size()==1) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral," [npc.is] positioned so as to be right up between ")
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral,"正好移动到")
 							+(totalDeskCount>1
-									?(playerDeskBack||playerDeskFront?"your legs":"their legs")+", ready to perform oral on "+(playerDeskBack||playerDeskFront?"you. ":"them. ")
-									:UtilText.parse(mainDesk, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+									?(playerDeskBack||playerDeskFront?"你们的腿":"他们的腿")+"之间，准备好给"+(playerDeskBack||playerDeskFront?"你们口交。":"他们口交。")
+									:UtilText.parse(mainDesk, "[npc.namePos]的[npc.legs]之间，准备好给[npc.herHim]口交。")));
 			}
 			
 			boolean additionalDoms = !standingNames.isEmpty() || !standingNamesTaur.isEmpty() || !performingOralNames.isEmpty();
 			if(receivingOralNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?", meanwhile,":"")+" are positioned around the other side of the [pc.desk], next to "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?"同时也":"")+"移动到[pc.desk]的另一边，靠近"
 							+(totalDeskCount>1
-									?(playerDeskBack||playerDeskFront?"your faces":"their faces")+", in order to receive oral from "+(playerDeskBack||playerDeskFront?"you.":"them.")
-									:UtilText.parse(mainDesk, "[npc.namePos] [npc.face], in order to receive oral from [npc.herHim].")));
+									?(playerDeskBack||playerDeskFront?"你们的脸":"他们的脸")+"，准备好接受口交。"
+									:UtilText.parse(mainDesk, "[npc.namePos]的[npc.face]，准备好接受口交。")));
 				
 			} else if(receivingOralNames.size()==1) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?", meanwhile,":"")+UtilText.parse(mainReceivingOral, " [npc.is] positioned around the other side of the [pc.desk], next to ")
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?"同时也":"")+UtilText.parse(mainReceivingOral, "移动到[pc.desk]的另一边，靠近")
 						+(totalDeskCount>1
-								?(playerDeskBack||playerDeskFront?"your faces":"their faces")+", in order to receive oral from "+(playerDeskBack||playerDeskFront?"you.":"them.")
-								:UtilText.parse(mainDesk, "[npc.namePos] [npc.face], in order to receive oral from [npc.herHim].")));
+								?(playerDeskBack||playerDeskFront?"你们的脸":"他们的脸")+"，准备好接受口交。"
+								:UtilText.parse(mainDesk, "[npc.namePos]的[npc.face]，准备好接受口交。")));
 			}
 			
 
@@ -1321,15 +1321,15 @@ public class SexPosition {
 				if(deskFrontTaurNames.size()>=2) {
 					sizeDifferenceAdditions.add(
 							Util.capitaliseSentence(Util.stringsToStringList(deskFrontTaurNames, false))
-								+" are unable to perform oral on "+Util.stringsToStringChoice(receivingOralNames, false)+", due to the fact that "
+								+"无法给"+Util.stringsToStringChoice(receivingOralNames, false)+"提供口交，因为"
 									+(playerTaurPerformingOral
-											?"you are unable to bend your humanoid upper-bodies down low enough"
-											:"they are unable to bend their humanoid upper-bodies down low enough."));
+											?"你人形的上半身没法弯到那么低。"
+											:"他们人形的上半身没法弯到那么低。"));
 				} else {
 					sizeDifferenceAdditions.add(
 							Util.capitaliseSentence(Util.stringsToStringList(deskFrontTaurNames, false))
 								+UtilText.parse(mainDeskFrontTaur,
-										" [npc.is] unable to perform oral on "+Util.stringsToStringChoice(receivingOralNames, false)+", due to the fact that [npc.sheIsFull] unable to bend [npc.her] humanoid upper-body down low enough."));
+										"无法给"+Util.stringsToStringChoice(receivingOralNames, false)+"提供口交，因为[npc.sheIsFull]人形的上半身没法弯到那么低。"));
 				}
 			}
 			
@@ -1491,7 +1491,7 @@ public class SexPosition {
 	};
 
 	
-	public static final AbstractSexPosition STOCKS = new AbstractSexPosition("Stocks",
+	public static final AbstractSexPosition STOCKS = new AbstractSexPosition("颈手枷",
 			8,
 			true,
 			SexActionPresets.positioningActionsNew,
@@ -1503,13 +1503,13 @@ public class SexPosition {
 						|| positioningSlots.get(characterToTakeSlot)==SexSlotStocks.LOCKED_IN_STOCKS_TWO
 						|| positioningSlots.get(characterToTakeSlot)==SexSlotStocks.LOCKED_IN_STOCKS_THREE
 						|| positioningSlots.get(characterToTakeSlot)==SexSlotStocks.LOCKED_IN_STOCKS_FOUR) {
-					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "[npc.NameIsFull] locked into the stocks, and so cannot switch slot!"));
+					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "[npc.NameIsFull]被锁在颈手枷中，不能切换栏位！"));
 					
 				} else if(slot==SexSlotStocks.LOCKED_IN_STOCKS
 						|| slot==SexSlotStocks.LOCKED_IN_STOCKS_TWO
 						|| slot==SexSlotStocks.LOCKED_IN_STOCKS_THREE
 						|| slot==SexSlotStocks.LOCKED_IN_STOCKS_FOUR) {
-					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "Characters cannot be locked into or out of stocks during this sex scene!"));
+					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "性爱过程中无法将角色锁入或移出颈手枷！"));
 				}
 			}
 			
@@ -1526,8 +1526,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -1548,7 +1548,7 @@ public class SexPosition {
 				}
 			}
 			if(!characterInStocks) {
-				return new Value<Boolean, String>(false, "At least one character needs to be locked into the stocks for this position to work.");
+				return new Value<Boolean, String>(false, "这种姿势至少需要一个角色被锁在颈手枷中才能生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -1682,115 +1682,115 @@ public class SexPosition {
 			int stocksCount = stocksNames.size() + stocksTaurNames.size();
 			GameCharacter soloStocks = mainStocks==null?mainStocksTaur:mainStocks;
 			if(stocksNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(allStocksNames, false))+" are locked into "+Util.intToString(stocksNames.size())
-						+" sets of stocks, and are completely at the mercy of anyone who wants to use "+(playerStocks?"you":"them")+". "); 
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(allStocksNames, false))+"被锁在"+Util.intToString(stocksNames.size())
+						+"套颈手枷中，无论是谁想使用"+(playerStocks?"你们":"他们")+"，都只能任其摆布。"); 
 				
 			} else if(stocksTaurNames.isEmpty()) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(allStocksNames, false))
 						+UtilText.parse(soloStocks,
-								" [npc.is] locked into a set of stocks, and [npc.is] completely at the mercy of anyone who wants to use [npc.herHim]. ")); 
+								"被锁在颈手枷中，无论是谁想使用[npc.herHim]，都只能任凭其摆布。")); 
 			}
 			
 			if(stocksTaurNames.size()>=2) {
-				sb.append(" Having feral lower bodies, "+Util.stringsToStringList(stocksTaurNames, false)
-						+" have been locked into special sets of stocks, which force their front halves down into a kneeling position, while their animalistic rear halves are held fully upright,"
-						+ " allowing anyone to step up and use their mouths or genitals as they'd like. "); 
+				sb.append(Util.stringsToStringList(stocksTaurNames, false)+"拥有兽态的下半身，"
+						+"因而被锁在了特制的颈手枷中，迫使其前半身呈现跪姿，而动物般的后半身却是站立着的，"
+						+ "无论是谁上前来都能随意使用他们的嘴巴和下体。"); 
 				
 			} else if(stocksTaurNames.size()==1) {
 				sb.append(UtilText.parse(mainStocksTaur,
-						" Having the feral lower body of [npc.a_legRace], "+Util.stringsToStringList(stocksTaurNames, false)
-						+" [npc.has] been locked into a special set of stocks, which forces [npc.her] front half down into a kneeling position, while [npc.her] animalistic rear half is held fully upright,"
-						+ " allowing anyone to step up and use [npc.her] mouth or genitals as they'd like. ")); 
+						Util.stringsToStringList(stocksTaurNames, false)+"拥有兽态[npc.a_legRace]的下半身，"
+						+"因而被锁在了特制的颈手枷中，迫使其前半身呈现跪姿，而动物般的后半身却是站立着的，"
+						+ "无论是谁上前来都能随意使用他们的嘴巴和下体。")); 
 			}
 			
 			// Using stocks target:
 			
 			int standingCount = standingNames.size();
 			if(standingCount>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+" have moved forwards so as to be standing right up behind "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+"上前来，正站在"
 							+(stocksCount>1
-									?(playerStocks?"you, ready to take advantage of your immobility. ":"them, ready to take advantage of their immobility. ")
-									:UtilText.parse(soloStocks, "[npc.name], ready to take advantage of [npc.her] immobility. ")));
+									?(playerStocks?"你们身后，准备趁行动不便放肆一番。":"他们身后，准备趁行动不便放肆一番。")
+									:UtilText.parse(soloStocks, "[npc.name]身后，准备趁行动不便放肆一番。")));
 				
 			} else if(standingCount==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))
-							+UtilText.parse(mainStanding," [npc.has] moved forwards so as to be standing right up behind ")
+							+UtilText.parse(mainStanding,"上前来，正站在")
 							+(stocksCount>1
-									?(playerStocks?"you, ready to take advantage of your immobility. ":"them, ready to take advantage of their immobility. ")
-									:UtilText.parse(soloStocks, "[npc.name], ready to take advantage of [npc.her] immobility. ")));
+									?(playerStocks?"你们身后，准备趁行动不便放肆一番。":"他们身后，准备趁行动不便放肆一番。")
+									:UtilText.parse(soloStocks, "[npc.name]身后，准备趁行动不便放肆一番。")));
 			}
 			
 			int standingCountTaurs = standingNamesTaur.size();
 			if(standingCountTaurs>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))+" have reared up on their hind legs, before planting their front "
-							+UtilText.parse(mainStandingTaur, "[npc.feet]")+" on the top of the stocks, allowing them to "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))+"扬起前肢，稳稳地将"
+							+UtilText.parse(mainStandingTaur, "[npc.feet]")+"落在颈手枷上方，这样便可以"
 							+(stocksCount>1
-									?(playerStocks?"effectively mount the "+(Util.intToString(stocksCount))+" of you. ":"effectively mount the "+(Util.intToString(stocksCount))+" of them. ")
-									:UtilText.parse(soloStocks, "effectively mount [npc.name]. ")));
+									?(playerStocks?"方便地骑到你们"+(Util.intToString(stocksCount))+"个身上了。":"方便地骑到他们"+(Util.intToString(stocksCount))+"个身上了。")
+									:UtilText.parse(soloStocks, "方便地骑到[npc.name]身上了。")));
 				
 			} else if(standingCountTaurs==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))
-							+UtilText.parse(mainStanding," [npc.has] reared up on [npc.her] hind legs, before planting [npc.her] front [npc.feet] on the top of the stocks, allowing [npc.herHim] to ")
+							+UtilText.parse(mainStanding,"扬起前肢，稳稳地将[npc.feet]落在颈手枷上方，这样便可以")
 							+(stocksCount>1
 									?(playerStocks
-											?UtilText.parse(mainStanding,"effectively mount whichever of the "+(Util.intToString(stocksCount))+" of you [npc.she] [npc.verb(want)]. ")
-											:UtilText.parse(mainStanding,"effectively mount whichever of the "+(Util.intToString(stocksCount))+" of them [npc.she] [npc.verb(want)]. "))
-									:UtilText.parse(soloStocks, "effectively mount [npc.name]. ")));
+											?UtilText.parse(mainStanding,"方便地骑到你们"+(Util.intToString(stocksCount))+"个随便哪个人身上了。")
+											:UtilText.parse(mainStanding,"方便地骑到他们"+(Util.intToString(stocksCount))+"个随便哪个人身上了。"))
+									:UtilText.parse(soloStocks, "方便地骑到[npc.name]身上了。")));
 			}
 			
 			if(humpingNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+" have clambered up onto "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+"爬上了"
 						+(stocksCount>1
-								?(playerStocks?"your lower back":"their lower backs")+", ready to start humping "+(playerStocks?"you. ":"them. ")
-								:UtilText.parse(soloStocks, "[npc.namePos] lower back, ready to start humping [npc.herHim]. ")));
+								?(playerStocks?"你们下半身的后背":"他们下半身的后背")+"，将身子紧贴了上去。"
+								:UtilText.parse(soloStocks, "[npc.namePos]你们下半身的后背，将身子紧贴了上去。")));
 			
 			
 			} else if(humpingNames.size()==1) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+UtilText.parse(mainHumping," [npc.has] clambered up onto ")
-							+UtilText.parse(soloStocks, "[npc.namePos] lower back, ready to start humping [npc.herHim]. "));
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+UtilText.parse(mainHumping,"爬上了")
+							+UtilText.parse(soloStocks, "[npc.namePos]下半身的后背，将身子紧贴了上去。"));
 			}
 			
 			if(performingOralNames.size()>=2) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+" are positioned so as to be right up between "
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+"正好移动到"
 							+(stocksCount>1
-									?(playerStocks?"your legs":"their legs")+", ready to perform oral on "+(playerStocks?"you. ":"them. ")
-									:UtilText.parse(soloStocks, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+									?(playerStocks?"你们的腿":"他们的腿")+"之间，准备好给"+(playerStocks?"你们口交。":"他们口交。")
+									:UtilText.parse(soloStocks, "[npc.namePos]的[npc.legs]之间，准备好给[npc.herHim]口交。")));
 				
 				
 			} else if(performingOralNames.size()==1) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral," [npc.is] positioned so as to be right up between ")
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral,"正好移动到")
 							+(stocksCount>1
-									?(playerStocks?"your legs":"their legs")+", ready to perform oral on "+(playerStocks?"you. ":"them. ")
-									:UtilText.parse(soloStocks, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+									?(playerStocks?"你们的腿":"他们的腿")+"之间，准备好给"+(playerStocks?"你们口交。":"他们口交。")
+									:UtilText.parse(soloStocks, "[npc.namePos]的[npc.legs]之间，准备好给[npc.herHim]口交。")));
 			}
 			
 
 			if(beneathNames.size()>=2) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+" have dropped down beneath "
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+"俯卧在"
 							+(stocksCount>1
-									?(playerStocks?"you":"them")+", ready to get fucked. "
-									:UtilText.parse(soloStocks, "[npc.name], ready to get fucked by [npc.herHim]. ")));
+									?(playerStocks?"你们":"他们")+"身下，准备好挨操。"
+									:UtilText.parse(soloStocks, "[npc.name]身下，准备好挨操。")));
 				
 				
 			} else if(beneathNames.size()==1) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+UtilText.parse(mainBeneath," [npc.has] dropped down beneath ")
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+UtilText.parse(mainBeneath,"俯卧在")
 							+(stocksCount>1
-									?(playerStocks?"you":"them")+", ready to get fucked. "
-									:UtilText.parse(soloStocks, "[npc.name], ready to get fucked by [npc.herHim]. ")));
+									?(playerStocks?"你们":"他们")+"身下，准备好挨操。"
+									:UtilText.parse(soloStocks, "[npc.name]身下，准备好挨操。")));
 			}
 			
 			boolean additionalDoms = !standingNames.isEmpty() || !standingNamesTaur.isEmpty() || !performingOralNames.isEmpty() || !beneathNames.isEmpty();
 			if(receivingOralNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?", meanwhile,":"")+" are positioned around the other side of the stocks, next to "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?"同时也":"")+"移动到颈手枷的另一边，靠近"
 							+(stocksCount>1
-									?(playerStocks?"your faces":"their faces")+", in order to receive oral from "+(playerStocks?"you.":"them.")
-									:UtilText.parse(soloStocks, "[npc.namePos] [npc.face], in order to receive oral from [npc.herHim].")));
+									?(playerStocks?"你们的脸":"他们的脸")+"，准备好接受口交。"
+									:UtilText.parse(soloStocks, "[npc.namePos]的[npc.face]，准备好接受口交。")));
 				
 			} else if(receivingOralNames.size()==1) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?", meanwhile,":"")+UtilText.parse(mainReceivingOral, " [npc.is] positioned around the other side of the stocks, next to ")
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?"同时也":"")+UtilText.parse(mainReceivingOral, "移动到颈手枷的另一半，靠近")
 						+(stocksCount>1
-								?(playerStocks?"your faces":"their faces")+", in order to receive oral from "+(playerStocks?"you.":"them.")
-								:UtilText.parse(soloStocks, "[npc.namePos] [npc.face], in order to receive oral from [npc.herHim].")));
+								?(playerStocks?"你们的脸":"他们的脸")+"，准备好接受口交。"
+								:UtilText.parse(soloStocks, "[npc.namePos]的[npc.face]，准备好接受口交。")));
 			}
 			
 			
@@ -1889,7 +1889,7 @@ public class SexPosition {
 		}
 	};
 	
-	public static final AbstractSexPosition MILKING_STALL = new AbstractSexPosition("Milking stall",
+	public static final AbstractSexPosition MILKING_STALL = new AbstractSexPosition("挤奶台",
 			8,
 			true,
 			SexActionPresets.positioningActionsNew,
@@ -1901,13 +1901,13 @@ public class SexPosition {
 						|| positioningSlots.get(characterToTakeSlot)==SexSlotMilkingStall.LOCKED_IN_MILKING_STALL_TWO
 						|| positioningSlots.get(characterToTakeSlot)==SexSlotMilkingStall.LOCKED_IN_MILKING_STALL_THREE
 						|| positioningSlots.get(characterToTakeSlot)==SexSlotMilkingStall.LOCKED_IN_MILKING_STALL_FOUR) {
-					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "[npc.NameIsFull] locked into the stall, and so cannot switch slot!"));
+					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "[npc.NameIsFull]被锁在挤奶台上，不能切换栏位！"));
 					
 				} else if(slot==SexSlotMilkingStall.LOCKED_IN_MILKING_STALL
 						|| slot==SexSlotMilkingStall.LOCKED_IN_MILKING_STALL_TWO
 						|| slot==SexSlotMilkingStall.LOCKED_IN_MILKING_STALL_THREE
 						|| slot==SexSlotMilkingStall.LOCKED_IN_MILKING_STALL_FOUR) {
-					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "Characters cannot be locked into or out of stalls during this sex scene!"));
+					return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "性爱过程中无法将角色锁入或移出挤奶台！"));
 				}
 			}
 			
@@ -1924,8 +1924,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -1946,7 +1946,7 @@ public class SexPosition {
 				}
 			}
 			if(!characterInStocks) {
-				return new Value<Boolean, String>(false, "At least one character needs to be locked into the milking stall for this position to work.");
+				return new Value<Boolean, String>(false, "这种姿势至少需要一个角色被锁在挤奶台上才能生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -2080,117 +2080,117 @@ public class SexPosition {
 			int stocksCount = stocksNames.size() + stocksTaurNames.size();
 			GameCharacter soloStocks = mainStocks==null?mainStocksTaur:mainStocks;
 			if(stocksNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(allStocksNames, false))+" are locked into "+Util.intToString(stocksNames.size())
-						+" sets of milking stalls, and are completely at the mercy of anyone who wants to use "+(playerStocks?"you":"them")+". "); 
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(allStocksNames, false))+"被锁在"+Util.intToString(stocksNames.size())
+						+"套挤奶台上，无论是谁想使用"+(playerStocks?"你们":"他们")+"，都只能任其摆布。"); 
 				
 			} else if(stocksTaurNames.isEmpty()) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(allStocksNames, false))
 						+UtilText.parse(soloStocks,
-								" [npc.is] locked into a milking stall, and [npc.is] completely at the mercy of anyone who wants to use [npc.herHim]. ")); 
+								"被锁在挤奶台上，无论是谁想使用[npc.herHim]，都只能任凭其摆布。")); 
 			}
 			
 			if(stocksTaurNames.size()>=2) {
-				sb.append(" Having feral lower bodies, "+Util.stringsToStringList(stocksTaurNames, false)
-						+" have been locked into specially-designed milking stalls, which force their front halves down into a kneeling position, while their animalistic rear halves are held fully upright,"
-						+ " allowing anyone to step up and use their mouths or genitals as they'd like. "); 
+				sb.append(Util.stringsToStringList(stocksTaurNames, false)+"拥有兽态的下半身，"
+						+"因而被锁在了特制的挤奶台上，迫使其前半身呈现跪姿，而动物般的后半身却是站立着的，"
+						+ "无论是谁上前来都能随意使用他们的嘴巴和下体。"); 
 				
 			} else if(stocksTaurNames.size()==1) {
 				sb.append(UtilText.parse(mainStocksTaur,
-						" Having the feral lower body of [npc.a_legRace], "+Util.stringsToStringList(stocksTaurNames, false)
-						+" [npc.has] been locked into a specially-designed milking stall, which forces [npc.her] front half down into a kneeling position, while [npc.her] animalistic rear half is held fully upright,"
-						+ " allowing anyone to step up and use [npc.her] mouth or genitals as they'd like. ")); 
+						Util.stringsToStringList(stocksTaurNames, false)+"拥有兽态[npc.a_legRace]的下半身，"
+						+"因而被锁在了特制的挤奶台上，迫使其前半身呈现跪姿，而动物般的后半身却是站立着的，"
+						+ "无论是谁上前来都能随意使用他们的嘴巴和下体。")); 
 			}
 			
 			// Standing behind:
 			
 			int standingCount = standingNames.size();
 			if(standingCount>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+" have moved forwards so as to be standing right up behind "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))+"上前来，正站在"
 							+(stocksCount>1
-									?(playerStocks?"you, ready to take advantage of your immobility. ":"them, ready to take advantage of their immobility. ")
-									:UtilText.parse(soloStocks, "[npc.name], ready to take advantage of [npc.her] immobility. ")));
+									?(playerStocks?"你们身后，准备趁行动不便放肆一番。":"他们身后，准备趁行动不便放肆一番。")
+									:UtilText.parse(soloStocks, "[npc.name]身后，准备趁行动不便放肆一番。")));
 				
 			} else if(standingCount==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNames, false))
-							+UtilText.parse(mainStanding," [npc.has] moved forwards so as to be standing right up behind ")
+							+UtilText.parse(mainStanding,"上前来，正站在")
 							+(stocksCount>1
-									?(playerStocks?"you, ready to take advantage of your immobility. ":"them, ready to take advantage of their immobility. ")
-									:UtilText.parse(soloStocks, "[npc.name], ready to take advantage of [npc.her] immobility. ")));
+									?(playerStocks?"你们身后，准备趁行动不便放肆一番。":"他们身后，准备趁行动不便放肆一番。")
+									:UtilText.parse(soloStocks, "[npc.name]身后，准备趁行动不便放肆一番。")));
 			}
 			
 			int standingCountTaurs = standingNamesTaur.size();
 			if(standingCountTaurs>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))+" have reared up on their hind legs, before planting their front "
-							+UtilText.parse(mainStandingTaur, "[npc.feet]")+" on the top of the stall, allowing them to "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))+"扬起前肢，稳稳地将"
+							+UtilText.parse(mainStandingTaur, "[npc.feet]")+"落在挤奶台上方，这样便可以"
 							+(stocksCount>1
-									?(playerStocks?"effectively mount the "+(Util.intToString(stocksCount))+" of you. ":"effectively mount the "+(Util.intToString(stocksCount))+" of them. ")
-									:UtilText.parse(soloStocks, "effectively mount [npc.name]. ")));
+									?(playerStocks?"方便地骑到你们"+(Util.intToString(stocksCount))+"个身上了。":"方便地骑到他们"+(Util.intToString(stocksCount))+"个身上了。")
+									:UtilText.parse(soloStocks, "方便地骑到[npc.name]身上了。")));
 				
 			} else if(standingCountTaurs==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(standingNamesTaur, false))
-							+UtilText.parse(mainStanding," [npc.has] reared up on [npc.her] hind legs, before planting [npc.her] front [npc.feet] on the top of the stall, allowing [npc.herHim] to ")
+							+UtilText.parse(mainStanding,"扬起前肢，稳稳地将[npc.feet]落在挤奶台上方，这样便可以")
 							+(stocksCount>1
 									?(playerStocks
-											?UtilText.parse(mainStanding,"effectively mount whichever of the "+(Util.intToString(stocksCount))+" of you [npc.she] [npc.verb(want)]. ")
-											:UtilText.parse(mainStanding,"effectively mount whichever of the "+(Util.intToString(stocksCount))+" of them [npc.she] [npc.verb(want)]. "))
-									:UtilText.parse(soloStocks, "effectively mount [npc.name]. ")));
+											?UtilText.parse(mainStanding,"方便地骑到你们"+(Util.intToString(stocksCount))+"个随便哪个人身上了。")
+											:UtilText.parse(mainStanding,"方便地骑到他们"+(Util.intToString(stocksCount))+"个随便哪个人身上了。"))
+									:UtilText.parse(soloStocks, "方便地骑到[npc.name]身上了。")));
 			}
 
 			
 			if(humpingNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+" have clambered up onto "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+"爬上了"
 						+(stocksCount>1
-								?(playerStocks?"your lower back":"their lower backs")+", ready to start humping "+(playerStocks?"you. ":"them. ")
-								:UtilText.parse(soloStocks, "[npc.namePos] lower back, ready to start humping [npc.herHim]. ")));
+								?(playerStocks?"你们下半身的后背":"他们下半身的后背")+"，将身子紧贴了上去。"
+								:UtilText.parse(soloStocks, "[npc.namePos]你们下半身的后背，将身子紧贴了上去。")));
 			
 			
 			} else if(humpingNames.size()==1) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+UtilText.parse(mainHumping," [npc.has] clambered up onto ")
-							+UtilText.parse(soloStocks, "[npc.namePos] lower back, ready to start humping [npc.herHim]. "));
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(humpingNames, false))+UtilText.parse(mainHumping,"爬上了")
+							+UtilText.parse(soloStocks, "[npc.namePos]下半身的后背，将身子紧贴了上去。"));
 			}
 			
 			if(performingOralNames.size()>=2) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+" are positioned so as to be right up between "
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+"正好移动到"
 							+(stocksCount>1
-									?(playerStocks?"your legs":"their legs")+", ready to perform oral on "+(playerStocks?"you. ":"them. ")
-									:UtilText.parse(soloStocks, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+									?(playerStocks?"你们的腿":"他们的腿")+"之间，准备好给"+(playerStocks?"你们口交。":"他们口交。")
+									:UtilText.parse(soloStocks, "[npc.namePos]的[npc.legs]之间，准备好给[npc.herHim]口交。")));
 				
 				
 			} else if(performingOralNames.size()==1) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral," [npc.is] positioned so as to be right up between ")
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false))+UtilText.parse(mainPerformingOral,"正好移动到")
 							+(stocksCount>1
-									?(playerStocks?"your legs":"their legs")+", ready to perform oral on "+(playerStocks?"you. ":"them. ")
-									:UtilText.parse(soloStocks, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+									?(playerStocks?"你们的腿":"他们的腿")+"之间，准备好给"+(playerStocks?"你们口交。":"他们口交。")
+									:UtilText.parse(soloStocks, "[npc.namePos]的[npc.legs]之间，准备好给[npc.herHim]口交。")));
 			}
 
 			
 			if(beneathNames.size()>=2) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+" have dropped down beneath "
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+"俯卧在"
 							+(stocksCount>1
-									?(playerStocks?"you":"them")+", ready to get fucked. "
-									:UtilText.parse(soloStocks, "[npc.name], ready to get fucked by [npc.herHim]. ")));
+									?(playerStocks?"你们":"他们")+"身下，准备好挨操。"
+									:UtilText.parse(soloStocks, "[npc.name]身下，准备好挨操。")));
 				
 				
 			} else if(beneathNames.size()==1) {
-					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+UtilText.parse(mainBeneath," [npc.has] dropped down beneath ")
+					sb.append(Util.capitaliseSentence(Util.stringsToStringList(beneathNames, false))+UtilText.parse(mainBeneath,"俯卧在")
 							+(stocksCount>1
-									?(playerStocks?"you":"them")+", ready to get fucked. "
-									:UtilText.parse(soloStocks, "[npc.name], ready to get fucked by [npc.herHim]. ")));
+									?(playerStocks?"你们":"他们")+"身下，准备好挨操。"
+									:UtilText.parse(soloStocks, "[npc.name]身下，准备好挨操。")));
 			}
 			
 			boolean additionalDoms = !standingNames.isEmpty() || !standingNamesTaur.isEmpty() || !performingOralNames.isEmpty();
 			if(receivingOralNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?", meanwhile,":"")+" are positioned around the other side of the "+(stocksCount==1?"stall":"stalls")+", next to "
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?"同时也":"")+"移动到台子的另一边，靠近"
 							+(stocksCount>1
-									?(playerStocks?"your faces":"their faces")+", in order to receive oral from "+(playerStocks?"you.":"them.")
-									:UtilText.parse(soloStocks, "[npc.namePos] [npc.face], in order to receive oral from [npc.herHim].")));
+									?(playerStocks?"你们的脸":"他们的脸")+"，准备好接受口交。"
+									:UtilText.parse(soloStocks, "[npc.namePos]的[npc.face]，准备好接受口交。")));
 				
 			} else if(receivingOralNames.size()==1) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?", meanwhile,":"")
-						+UtilText.parse(mainReceivingOral, " [npc.is] positioned around the other side of the "+(stocksCount==1?"stall":"stalls")+", next to ")
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(receivingOralNames, false))+(additionalDoms?"同时也":"")
+						+UtilText.parse(mainReceivingOral, "移动到台子的另一边，靠近")
 						+(stocksCount>1
-								?(playerStocks?"your faces":"their faces")+", in order to receive oral from "+(playerStocks?"you.":"them.")
-								:UtilText.parse(soloStocks, "[npc.namePos] [npc.face], in order to receive oral from [npc.herHim].")));
+								?(playerStocks?"你们的脸":"他们的脸")+"，准备好接受口交。"
+								:UtilText.parse(soloStocks, "[npc.namePos]的[npc.face]，准备好接受口交。")));
 			}
 			
 			
@@ -2290,7 +2290,7 @@ public class SexPosition {
 	};
 	
 	
-	public static final AbstractSexPosition ALL_FOURS = new AbstractSexPosition("All fours",
+	public static final AbstractSexPosition ALL_FOURS = new AbstractSexPosition("四肢跪地",
 			8,
 			true,
 			SexActionPresets.positioningActionsNew,
@@ -2314,8 +2314,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -2348,7 +2348,7 @@ public class SexPosition {
 							|| slot==SexSlotAllFours.USING_FEET)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS.getDescription())+"' slot.");
+						"栏位“"+Util.capitaliseSentence(slot.getDescription())+"”无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotAllFours.ALL_FOURS_TWO) || positioningSlots.get(characterToTakeSlot)==SexSlotAllFours.ALL_FOURS_TWO)
 					&& (slot==SexSlotAllFours.BEHIND_TWO
@@ -2359,7 +2359,7 @@ public class SexPosition {
 							|| slot==SexSlotAllFours.USING_FEET_TWO)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS_TWO.getDescription())+"' slot.");
+						"栏位“"+Util.capitaliseSentence(slot.getDescription())+"”无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS_TWO.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotAllFours.ALL_FOURS_THREE) || positioningSlots.get(characterToTakeSlot)==SexSlotAllFours.ALL_FOURS_THREE)
 					&& (slot==SexSlotAllFours.BEHIND_THREE
@@ -2370,7 +2370,7 @@ public class SexPosition {
 							|| slot==SexSlotAllFours.USING_FEET_THREE)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS_THREE.getDescription())+"' slot.");
+						"栏位“"+Util.capitaliseSentence(slot.getDescription())+"”无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS_THREE.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotAllFours.ALL_FOURS_FOUR) || positioningSlots.get(characterToTakeSlot)==SexSlotAllFours.ALL_FOURS_FOUR)
 					&& (slot==SexSlotAllFours.BEHIND_FOUR
@@ -2381,7 +2381,7 @@ public class SexPosition {
 							|| slot==SexSlotAllFours.USING_FEET_FOUR)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS_FOUR.getDescription())+"' slot.");
+						"栏位“"+Util.capitaliseSentence(slot.getDescription())+"”无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotAllFours.ALL_FOURS_FOUR.getDescription())+"”栏位。");
 			}
 			
 			return new Value<Boolean, String>(true, "");
@@ -2398,7 +2398,7 @@ public class SexPosition {
 				}
 			}
 			if(!suitablePosition) {
-				return new Value<Boolean, String>(false, "At least one character needs to be down on all fours for this position to work.");
+				return new Value<Boolean, String>(false, "这种姿势至少需要一个角色四肢跪地才能生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -2487,26 +2487,26 @@ public class SexPosition {
 						case 0:
 							sb.append(UtilText.parse(allFours,
 									(!allFours.isTaur()
-										?"[npc.NameIsFull] down on all fours, ready to be fucked in the doggy-style position. "
-										:"[npc.NameHasFull] dropped the front legs of [npc.her] lower feral [npc.legRace]'s body down into a kneeling position, while keeping [npc.her] rear end raised up, ready to be fucked. ")));
+										?"[npc.NameIsFull]四肢跪地，准备好以后入式挨操了。"
+										:"[npc.NameHasFull]让兽态的[npc.legRace]下半身呈跪姿，后端还立着，准备好挨操了。")));
 							break;
 						case 1:
 							sb.append(UtilText.parse(allFours, fallBackAllFours3,
 									(!allFours.isTaur()
-										?" In a similar manner to [npc2.name], [npc.nameHasFull] dropped down on all fours, presenting [npc.herself] in order to be fucked like an animal. "
-										:" In a similar manner to [npc2.name], [npc.nameHasFull] knelt down with the front half of [npc.her] [npc.legRace] body, while raising [npc.her] [npc.ass+] up in order to be fucked like an animal. ")));
+										?"[npc.nameHasFull]跟[npc2.name]摆出类似的姿势，四肢跪地，期待着像只野兽一般交尾。"
+										:"[npc.nameHasFull]跟[npc2.name]摆出类似的姿势，让[npc.legRace]的前半肢呈跪姿，高高扬起[npc.her][npc.ass+]，期待着像只野兽一般交尾。")));
 							break;
 						case 2:
 							sb.append(UtilText.parse(Util.newArrayListOfValues(allFours, fallBackAllFours3, fallBackAllFours2),
 									(!allFours.isTaur()
-										?" Just like [npc2.name] and [npc3.name], [npc.nameHasFull] sunk down onto [npc.her] [npc.hands] and knees. "
-										:" Just like [npc2.name] and [npc3.name], [npc.nameHasFull] sunk down onto [npc.her] front [npc.legs], while lifting [npc.her] [npc.ass+] up and presenting [npc.her] lower [npc.legRace]'s body to be rutted. ")));
+										?"[npc.nameHasFull]照着[npc2.name]和[npc3.name]的样子，五体投地俯下身去。"
+										:"[npc.nameHasFull]照着[npc2.name]和[npc3.name]的样子，前[npc.legs]低跪下去，却高高扬起[npc.her][npc.ass+]，期待着[npc.legRace]的后半身被狠狠蹂躏。")));
 							break;
 						case 3:
 							sb.append(UtilText.parse(Util.newArrayListOfValues(allFours, fallBackAllFours3, fallBackAllFours2, fallBackAllFours1),
 									(!allFours.isTaur()
-										?" Finishing off the group of four, [npc.nameIsFull] down on all fours beside [npc2.name], [npc3.name], and [npc4.name]. "
-										:" Finishing off the group of four, [npc.nameIsFull] down beside [npc2.name], [npc3.name], and [npc4.name], and [npc.is] presenting [npc.her] feral [npc.legRace]'s body like a horny animal. ")));
+										?"[npc.nameIsFull]在[npc2.name]、[npc3.name]和[npc4.name]的身边，四肢跪地地俯下身去，补充了四人最后的空位。"
+										:"[npc.nameIsFull]在[npc2.name]、[npc3.name]和[npc4.name]的身边，四肢跪地地俯下身去，如同一只发情的动物一般，展露着自己兽态的[npc.legRace]身躯。")));
 							break;
 					}
 				}
@@ -2515,48 +2515,48 @@ public class SexPosition {
 				if(humping!=null) {
 					if(humping.isSizeDifferenceShorterThan(allFours)) {
 						sb.append(UtilText.parse(humping, allFours,
-								" Not letting [npc.her] smaller stature prevent [npc.herHim] from having fun, [npc.NameHasFull] climbed up onto [npc2.namePos] lower back, before gripping [npc2.her] waist and preparing to start humping [npc2.herHim]."));
+								"[npc.nameHasFull]不愿因为自己矮小的身形就错过玩乐的好机会，于是爬上[npc2.namePos]下半身的后背，牢牢抓住之后将身子紧贴了上去。"));
 					} else {
 						sb.append(UtilText.parse(humping, allFours,
-								" [npc.NameHasFull] crouched fully over [npc2.namePos] back, and, bumping [npc.her] groin against [npc2.her] [npc2.ass+], [npc.is] prepared to start humping [npc2.herHim]."));
+								"[npc.NameHasFull]整个俯贴在[npc2.namePos]的后背上，下半身抵着[npc2.her][npc2.ass+]，随时准备要开始交配。"));
 					}
 					continuation = true;
 				}
 				if(behind!=null) {
 					sb.append(UtilText.parse(behind, allFours,
 							!behind.isTaur()
-								?" [npc.NameIsFull] "+(positions.get(1).isStanding(behind)?"standing":"kneeling")+" just behind [npc2.herHim], in a position where [npc.she] can start fucking [npc2.herHim] at any moment."
-								:" [npc.NameHasFull] stepped fully over the top of [npc2.herHim] with [npc.her] feral [npc.legRace]'s body, effectively mounting [npc2.herHim]."));
+								?"[npc.NameIsFull]"+(positions.get(1).isStanding(behind)?"站在":"跪在")+"[npc2.herHim]的正后方，随时都可以开始对着[npc2.herHim]开干。"
+								:"[npc.NameHasFull]将自己兽态的[npc.legRace]身躯整个覆盖在[npc2.herHim]的上方，随时准备好骑上[npc2.herHim]。"));
 					continuation = true;
 				}
 				if(behindOral!=null) {
 					sb.append(UtilText.parse(behindOral, allFours,
-							" [npc.NameHasFull] "+(positions.get(2).isStanding(behindOral)?"moved up to stand":"dropped down onto [npc.her] knees")+" behind [npc2.name], ready to perform oral on [npc2.herHim]."));
+							"[npc.NameHasFull]"+(positions.get(2).isStanding(behindOral)?"站到了":"跪在")+"[npc2.name]身后，准备好为[npc2.herHim]提供口交。"));
 					continuation = true;
 				}
 				if(usingFeet!=null) {
 					sb.append(UtilText.parse(usingFeet, allFours,
-							" By sinking down onto [npc.her] knees behind [npc2.name], [npc.name] [npc.has] positioned [npc.herself] in such a way as to be able to use [npc2.her] [npc2.feet+]."));
+							"[npc.Name]低跪在[npc2.name]身后，这样就能随时使用到[npc2.her][npc2.feet+]了。"));
 					continuation = true;
 				}
 
 				if(inFront!=null) {
 					sb.append(UtilText.parse(inFront, allFours,
 							continuation
-							?" Meanwhile, around the other side of [npc2.name], [npc.nameHasFull] "+(positions.get(5).isStanding(inFront)?"stepped":"knelt down")
+							?"同时在[npc2.name]的另一边，[npc.nameHasFull]"+(positions.get(5).isStanding(inFront)?"立在":"跪在")
 									+(inFront.isTaur()
-										?" over the top of [npc2.herHim], before pushing [npc.her] animalistic groin towards [npc2.her] [npc2.face] so that [npc.she] can receive oral from [npc2.herHim]."
-										:" up in front of [npc2.her] [npc2.face], ready to receive oral from [npc2.herHim].")
-							:" Instead of taking advantage of [npc2.herHim] from behind, [npc.nameHasFull] "+(positions.get(5).isStanding(inFront)?"stepped up":"knelt down")
-								+" right in front of [npc2.her] [npc2.face], ready to receive oral from [npc2.herHim]."));
+										?"[npc2.herHim]的头顶，将动物化的下体抵住[npc2.her]的[npc2.face]，准备好了随时接受口交。"
+										:"[npc2.her]的[npc2.face]面前，准备好接受口交。")
+							:"[npc.nameHasFull]并没有从[npc2.herHim]的身后“趁人之危”，而是"+(positions.get(5).isStanding(inFront)?"走向":"跪在")
+								+"[npc2.her][npc2.face]的正前方，准备好接受口交。"));
 				}
 				if(inFrontAnal!=null) {
 					sb.append(UtilText.parse(inFrontAnal, allFours,
 							continuation
-							?" Meanwhile, around the other side of [npc2.name], [npc.nameHasFull] "+(positions.get(6).isStanding(inFrontAnal)?"stepped up and turned around":"knelt down and shuffled back")
-									+" towards [npc2.her] [npc2.face], ready to put [npc2.her] mouth to use on [npc.her] [npc.ass+]."
-							:" Instead of taking advantage of [npc2.herHim] from behind, [npc.nameHasFull] "+(positions.get(6).isStanding(inFrontAnal)?"stepped up and turned around":"knelt down and shuffled back")
-								+" towards [npc2.her] [npc2.face], ready to put [npc2.her] mouth to use on [npc.her] [npc.ass+]."));
+							?"同时在[npc2.name]的另一边，[npc.nameHasFull]"+(positions.get(6).isStanding(inFrontAnal)?"上前并转过身去":"跪下并扭过身子")
+									+"对准了[npc2.her]的[npc2.face]，准备好用[npc2.her]的嘴巴来满足自己[npc.ass+]了。"
+							:"[npc.nameHasFull]并没有从[npc2.herHim]的身后“趁人之危”，而是"+(positions.get(6).isStanding(inFrontAnal)?"上前并转过身去":"跪下并扭过身子")
+								+"对准了[npc2.her]的[npc2.face]，准备好用[npc2.her]的嘴巴来满足自己[npc.ass+]了。"));
 				}
 
 				if(!skipAllFours) {
@@ -2714,7 +2714,7 @@ public class SexPosition {
 	 * <b>Mating press</b><br/>
 	 * <b>Scissoring</b>
 	 */
-	public static final AbstractSexPosition LYING_DOWN = new AbstractSexPosition("Lying down",
+	public static final AbstractSexPosition LYING_DOWN = new AbstractSexPosition("躺姿",
 			8,
 			true,
 			SexActionPresets.positioningActionsNew,
@@ -2771,8 +2771,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -2803,8 +2803,8 @@ public class SexPosition {
 								if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 									return new Value<Boolean, String>(
 											false,
-											"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-													+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+											"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+													+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 								}
 							}
 							
@@ -2813,8 +2813,8 @@ public class SexPosition {
 								if(e.getValue()==matingPressSlot && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 									return new Value<Boolean, String>(
 											false,
-											"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-													+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+											"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+													+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 								}
 							}
 						}
@@ -2846,8 +2846,8 @@ public class SexPosition {
 								if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 									return new Value<Boolean, String>(
 											false,
-											"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-													+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+											"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+													+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 								}
 							}
 							
@@ -2856,8 +2856,8 @@ public class SexPosition {
 								if(e.getValue()==frontalLyingDownSlot && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 									return new Value<Boolean, String>(
 											false,
-											"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-													+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+											"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+													+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 								}
 							}
 						}
@@ -2871,14 +2871,14 @@ public class SexPosition {
 						|| slot==SexSlotLyingDown.SCISSORING_TWO
 						|| slot==SexSlotLyingDown.SCISSORING_THREE
 						|| slot==SexSlotLyingDown.SCISSORING_FOUR)) {
-				return new Value<Boolean, String>(false, "The slot '"+Util.capitaliseSentence(slot.getDescription())+"' can only be used by characters with a bipedal lower body.");
+				return new Value<Boolean, String>(false, "栏位“"+Util.capitaliseSentence(slot.getDescription())+"”无法由双足下肢角色使用。");
 			}
 			if(characterToTakeSlot.isTaur()
 					&& (slot==SexSlotLyingDown.SIXTY_NINE
 						|| slot==SexSlotLyingDown.SIXTY_NINE_TWO
 						|| slot==SexSlotLyingDown.SIXTY_NINE_THREE
 						|| slot==SexSlotLyingDown.SIXTY_NINE_FOUR)) {
-				return new Value<Boolean, String>(false, "The slot '"+Util.capitaliseSentence(slot.getDescription())+"' can only be used by characters with a bipedal lower body.");
+				return new Value<Boolean, String>(false, "栏位“"+Util.capitaliseSentence(slot.getDescription())+"”无法由双足下肢角色使用。");
 			}
 			
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN)
@@ -2892,7 +2892,7 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.SIXTY_NINE)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_TWO) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_TWO)
 					&& (slot==SexSlotLyingDown.COWGIRL_TWO
@@ -2905,7 +2905,7 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.SIXTY_NINE_TWO)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_TWO.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_TWO.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_THREE) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_THREE)
 					&& (slot==SexSlotLyingDown.COWGIRL_THREE
@@ -2918,7 +2918,7 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.SIXTY_NINE_THREE)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_THREE.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_THREE.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FOUR) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FOUR)
 					&& (slot==SexSlotLyingDown.COWGIRL_FOUR
@@ -2931,7 +2931,7 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.SIXTY_NINE_FOUR)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FOUR.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FOUR.getDescription())+"”栏位。");
 			}
 			
 
@@ -2939,25 +2939,25 @@ public class SexPosition {
 					&& (slot==SexSlotLyingDown.RECEIVING_ORAL)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FRONT_TWO) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FRONT_TWO)
 					&& (slot==SexSlotLyingDown.RECEIVING_ORAL_TWO)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_TWO.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_TWO.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FRONT_THREE) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FRONT_THREE)
 					&& (slot==SexSlotLyingDown.RECEIVING_ORAL_THREE)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_THREE.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_THREE.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FRONT_FOUR) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FRONT_FOUR)
 					&& (slot==SexSlotLyingDown.RECEIVING_ORAL_FOUR)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to the '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_FOUR.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_FOUR.getDescription())+"”栏位。");
 			}
 			
 			
@@ -2967,8 +2967,8 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.MISSIONARY_ORAL)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to either the"
-								+ " '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN.getDescription())+"' or '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至"
+								+ "“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN.getDescription())+"”或“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_TWO) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_TWO)
 					&& (!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FRONT_TWO) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FRONT_TWO)
@@ -2976,8 +2976,8 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.MISSIONARY_ORAL_TWO)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to either the"
-								+ " '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_TWO.getDescription())+"' or '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_TWO.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至"
+								+ "“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_TWO.getDescription())+"”或“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_TWO.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_THREE) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_THREE)
 					&& (!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FRONT_THREE) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FRONT_THREE)
@@ -2985,8 +2985,8 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.MISSIONARY_ORAL_THREE)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to either the"
-								+ " '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_THREE.getDescription())+"' or '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_THREE.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至"
+								+ "“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_THREE.getDescription())+"”或“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_THREE.getDescription())+"”栏位。");
 			}
 			if((!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FOUR) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FOUR)
 					&& (!positioningSlots.values().contains(SexSlotLyingDown.LYING_DOWN_FRONT_FOUR) || positioningSlots.get(characterToTakeSlot)==SexSlotLyingDown.LYING_DOWN_FRONT_FOUR)
@@ -2994,8 +2994,8 @@ public class SexPosition {
 							|| slot==SexSlotLyingDown.MISSIONARY_ORAL_FOUR)) {
 				return new Value<Boolean, String>(
 						false,
-						"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used unless there is a character assigned to either the"
-								+ " '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FOUR.getDescription())+"' or '"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_FOUR.getDescription())+"' slot.");
+						"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位无法使用，除非有角色被分配至"
+								+ "“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FOUR.getDescription())+"”或“"+Util.capitaliseSentence(SexSlotLyingDown.LYING_DOWN_FRONT_FOUR.getDescription())+"”栏位。");
 			}
 			
 			return new Value<Boolean, String>(true, "");
@@ -3016,7 +3016,7 @@ public class SexPosition {
 				}
 			}
 			if(!suitablePosition) {
-				return new Value<Boolean, String>(false, "At least one character needs to be lying down for this position to work.");
+				return new Value<Boolean, String>(false, "这种姿势至少需要一个角色呈躺姿才能生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -3126,14 +3126,14 @@ public class SexPosition {
 							if(occupiedSlots.get(targetedCharacter1).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT)) {
 								sb.append(UtilText.parse(targetedCharacter1,
 										(!targetedCharacter1.isTaur()
-											?" [npc.NameIsFull] lying down on [npc.her] front, "
-											:" [npc.NameIsFull] lying down flat and stretched out on [npc.her] feral [npc.legRace]'s body, ")
-										+"submissively exposing [npc.her] back, ass, and groin. "));
+											?"[npc.NameIsFull]俯卧着，"
+											:"[npc.NameIsFull]平躺着，伸展开[npc.her]兽态的[npc.legRace]身体，")
+										+"顺从地暴露出[npc.her]的背部、臀部和下体。"));
 							} else {
 								sb.append(UtilText.parse(lyingDownCharacters.get(0),
 										(!lyingDownCharacters.get(0).isTaur()
-											?" [npc.NameIsFull] lying down on [npc.her] back, submissively exposing [npc.her] stomach, [npc.face], and groin. "
-											:" [npc.NameHasFull] lain down on [npc.her] feral [npc.legRace]'s body, before rolling over onto [npc.her] back in order to submissively expose [npc.her] stomach. ")));
+											?"[npc.NameIsFull]仰面平躺着，顺从地露出[npc.her]的肚子、[npc.face]和下体。"
+											:"[npc.NameHasFull]让[npc.her]兽态的[npc.legRace]身躯跪坐下去，然后稍一翻身，顺从地露出了肚子。")));
 							}
 							break;
 						case 1:
@@ -3142,14 +3142,14 @@ public class SexPosition {
 							if(occupiedSlots.get(targetedCharacter1).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT)) {
 								sb.append(UtilText.parse(targetedCharacter2, targetedCharacter1,
 										(!targetedCharacter2.isTaur()
-											?" Joining [npc2.name] on the floor, [npc.nameIsFull] lying down on [npc.her] front, "
-											:" Joining [npc2.name] on the floor, [npc.nameIsFull] lying down on [npc.her] feral [npc.legRace]'s body, ")
-										+"ready to be submissively fucked. "));
+											?"[npc.nameIsFull]加入[npc2.name]，一起在地上俯卧着，"
+											:"[npc.nameIsFull]加入[npc2.name]，让[npc.her]兽态的[npc.legRace]身体跪坐在地上，")
+										+"顺从地准备好挨操。"));
 							} else {
 								sb.append(UtilText.parse(targetedCharacter2, targetedCharacter1,
 										(!targetedCharacter2.isTaur()
-											?" Joining [npc2.name] on the floor, [npc.nameHasFull] dropped down to lie on [npc.her] back. "
-											:" Joining [npc2.name] on the floor, [npc.nameHasFull] knelt down onto [npc.her] feral [npc.legRace]'s body, before rolling over and presenting [npc.her] underside. ")));
+											?"[npc.nameHasFull]加入[npc2.name]，一起仰面躺倒在地上。"
+											:"[npc.nameHasFull]加入[npc2.name]，先让[npc.her]兽态的[npc.legRace]身体跪坐在地上，再一翻身子，展示出下面的身体。")));
 							}
 							break;
 						case 2:
@@ -3159,14 +3159,14 @@ public class SexPosition {
 							if(occupiedSlots.get(targetedCharacter1).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT)) {
 								sb.append(UtilText.parse(Util.newArrayListOfValues(targetedCharacter3, targetedCharacter2, targetedCharacter1),
 										(!targetedCharacter3.isTaur()
-											?" Just like [npc2.name] and [npc3.name], [npc.nameHasFull] sunk down onto the floor and [npc.is] lying down on [npc.her] front, "
-											:" Just like [npc2.name] and [npc3.name], [npc.nameHasFull] sunk down onto the floor and [npc.is] lying down on [npc.her] feral [npc.legRace]'s body, ")
-										+"ready to be submissively fucked. "));
+											?"[npc.nameHasFull]照着[npc2.name]和[npc3.name]的样子，俯卧在地上，"
+											:"[npc.nameHasFull]照着[npc2.name]和[npc3.name]的样子，让[npc.her]兽态的[npc.legRace]身体跪坐在地上，")
+										+"顺从地准备好挨操。"));
 							} else {
 								sb.append(UtilText.parse(Util.newArrayListOfValues(targetedCharacter3, targetedCharacter2, targetedCharacter1),
 										(!targetedCharacter3.isTaur()
-											?" Just like [npc2.name] and [npc3.name], [npc.nameHasFull] sunk down onto the floor, before lying down on [npc.her] back. "
-											:" Just like [npc2.name] and [npc3.name], [npc.nameHasFull] sunk down onto [npc.her] feral [npc.legRace]'s body, before rolling over onto [npc.her] back and presenting [npc.herself]. ")));
+											?"[npc.nameHasFull]照着[npc2.name]和[npc3.name]的样子，平躺了下来。"
+											:"[npc.nameHasFull]照着[npc2.name]和[npc3.name]的样子，先让[npc.her]兽态的[npc.legRace]身躯跪下，再一翻身子，展示出下面的身体。")));
 							}
 							break;
 						case 3:
@@ -3177,13 +3177,13 @@ public class SexPosition {
 							if(occupiedSlots.get(targetedCharacter1).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT)) {
 								sb.append(UtilText.parse(Util.newArrayListOfValues(targetedCharacter4, targetedCharacter3, targetedCharacter2, targetedCharacter1),
 										(!targetedCharacter4.isTaur()
-											?" Finishing off the group of four, [npc.nameIsFull] lying down on [npc.her] front beside [npc2.name], [npc3.name], and [npc4.name]. "
-											:" Finishing off the group of four, [npc.nameIsFull] lying down on [npc.her] front beside [npc2.name], [npc3.name], and [npc4.name]. ")));
+											?"[npc.nameIsFull]俯卧在[npc2.name]、[npc3.name]和[npc4.name]身旁，补齐了四人最后的空位。"
+											:"[npc.nameIsFull]俯卧在[npc2.name]、[npc3.name]和[npc4.name]身旁，补齐了四人最后的空位。")));
 							} else {
 								sb.append(UtilText.parse(Util.newArrayListOfValues(targetedCharacter4, targetedCharacter3, targetedCharacter2, targetedCharacter1),
 										(!targetedCharacter4.isTaur()
-											?" Finishing off the group of four, [npc.nameIsFull] lying down on [npc.her] back beside [npc2.name], [npc3.name], and [npc4.name]. "
-											:" Finishing off the group of four, [npc.nameIsFull] lying down beside [npc2.name], [npc3.name], and [npc4.name], and [npc.has] rolled over to present the underside of [npc.her] feral [npc.legRace]'s body. ")));
+											?"[npc.nameIsFull]在[npc2.name]、[npc3.name]和[npc4.name]身边躺下，补充了四人最后的空位。"
+											:"[npc.nameIsFull]在[npc2.name]、[npc3.name]和[npc4.name]的身边跪下，然后翻身露出了兽态的[npc.legRace]身躯的下面，补充了四人最后的空位。")));
 							}
 							break;
 					}
@@ -3196,20 +3196,20 @@ public class SexPosition {
 					if(missionary!=null) {
 						if(!missionary.isTaur()) {
 							sb.append(UtilText.parse(missionary, lyingDownFront,
-									" [npc.NameHasFull] dropped down behind [npc2.name] and positioned [npc.herself] between [npc2.her] [npc2.legs], ready to fuck [npc2.herHim] in the prone bone position."));
+									"[npc.NameHasFull]在[npc2.name]身后俯下，调整自己的位置到[npc2.her]的[npc2.legs]间，准备以俯卧位与[npc2.herHim]交欢。"));
 						} else {
 							sb.append(UtilText.parse(missionary, lyingDownFront,
-									" [npc.NameHasFull] lowered [npc.her] feral [npc.legRace]'s body down over the top of [npc2.name], and [npc.is] ready to start rutting [npc2.herHim] in the prone bone position."));
+									"[npc.NameHasFull]跨坐在[npc2.name]身上，放低了[npc.her]兽态的[npc.legRace]身躯，准备好以俯卧位跟[npc2.herHim]开干了。"));
 						}
 						continuation = true;
 					}
 					if(performingOral!=null) {
 						sb.append(UtilText.parse(performingOral, lyingDownFront,
-								" Wanting to perform oral on [npc2.name], [npc.nameHasFull] laid down between [npc2.her] [npc2.legs], bringing [npc.her] [npc.face] right down to [npc2.her] groin."));
+								"[npc.nameHasFull]想要为[npc2.name]提供口交，于是趴在[npc2.her]的[npc2.legs]间，正面对着下体的位置。"));
 					}
 					if(receivingOral!=null) {
 						sb.append(UtilText.parse(receivingOral, lyingDownFront,
-								" Wanting to receive oral from [npc2.name], [npc.nameHasFull] dropped down in front of [npc2.herHim], bringing [npc.her] groin right down to [npc2.her] [npc2.face]."));
+								"[npc.nameHasFull]想要接受[npc2.name]的口交，于是跪坐在[npc2.herHim]面前，将下体靠近[npc2.her]的[npc2.face]。"));
 					}
 					
 					
@@ -3218,59 +3218,59 @@ public class SexPosition {
 					if(cowgirl!=null) {
 						if(!cowgirl.isTaur()) {
 							sb.append(UtilText.parse(cowgirl, lyingDown,
-									" [npc.NameHasFull] stepped over the top of [npc2.name], before lowering [npc.herself] down and straddling [npc2.her] groin, ready to start riding [npc2.herHim] in the cowgirl position."));
+									"[npc.NameHasFull]上前去，放低身子跨坐在了[npc2.name]的下体部位，摆出了骑乘位。"));
 						} else {
 							sb.append(UtilText.parse(cowgirl, lyingDown,
-									" [npc.NameHasFull] stepped over the top of [npc2.name], before dropping the rear-half of [npc.her] feral [npc.legRace]'s body down in order to plant [npc.her] groin firmly against [npc2.hers]."));
+									"[npc.NameHasFull]上前去，将[npc.her]兽态的[npc.legRace]身躯后半部放低，紧紧地压在了[npc2.name]的下体上。"));
 						}
 						continuation = true;
 					}
 					if(cowgirlReverse!=null) {
 						if(!cowgirlReverse.isTaur()) {
 							sb.append(UtilText.parse(cowgirlReverse, lyingDown,
-									" [npc.NameHasFull] stepped over the top of [npc2.name], before turning around and lowering [npc.herself] down and straddling [npc2.her] groin, ready to start riding [npc2.herHim] in the reverse cowgirl position."));
+									"[npc.NameHasFull]上前去转了个身，放低身子跨坐在了[npc2.name]的下体部位，摆出了反骑乘位。"));
 						} else {
 							sb.append(UtilText.parse(cowgirlReverse, lyingDown,
-									" [npc.NameHasFull] stepped over the top of [npc2.name], before turning around and dropping the rear-half of [npc.her] feral [npc.legRace]'s body down in order to plant [npc.her] groin firmly against [npc2.hers]."));
+									"[npc.NameHasFull]上前去转了个身，将[npc.her]兽态的[npc.legRace]身躯后半部放低，紧紧地压在了[npc2.name]的下体上。"));
 						}
 						continuation = true;
 					}
 					if(matingPress!=null) {
 						if(!matingPress.hasLegs()) {
 							sb.append(UtilText.parse(matingPress, lyingDown,
-									" [npc.NameHasFull] pushed [npc2.namePos] down onto [npc2.her] back, before lying down on top of [npc2.herHim] with [npc.her] groin hovering just over [npc2.hers]."
-										+ " [npc.SheIs] dominantly using [npc.her] [npc.hands] to pin [npc2.namePos] wrists to the floor on either side of [npc2.her] head,"
-											+ " thereby fully locking [npc2.herHim] down beneath [npc.herHim] in a position suitable for being bred."));
+									"[npc.NameHasFull]把[npc2.namePos]紧紧压在地上，随后也俯下身子，两人的性器正对在一起。"
+										+ "[npc.SheIs]强硬地用[npc.hands]将[npc2.namePos]的手腕按在[npc2.her]脑袋两边，"
+											+ "这样便把[npc2.herHim]牢牢锁在身下，形成了正适合配种的姿势。"));
 							
 						} else if(!matingPress.isTaur()) {
 							sb.append(UtilText.parse(matingPress, lyingDown,
-									" [npc.NameHasFull] pushed [npc2.namePos] [npc2.legs] apart and back up towards [npc2.her] head, before lying down on top of [npc2.herHim] with [npc.her] groin hovering just over [npc2.hers]."
-										+ " [npc.SheIs] dominantly using [npc.her] [npc.hands] to pin [npc2.namePos] wrists to the floor on either side of [npc2.her] head,"
-											+ " thereby fully locking [npc2.herHim] down beneath [npc.herHim] in a position suitable for being bred."));
+									"[npc.NameHasFull]把[npc2.namePos]的[npc2.legs]拨到旁边，压向脑袋的方向，随后便俯下身子，两人的性器正对在一起。"
+										+ "[npc.SheIs]强硬地用[npc.hands]将[npc2.namePos]的手腕按在[npc2.her]脑袋两边，"
+											+ "这样便把[npc2.herHim]牢牢锁在身下，形成了正适合配种的姿势。"));
 							
 						} else {
 							sb.append(UtilText.parse(matingPress, lyingDown,
-									" [npc.NameHasFull] pushed [npc2.namePos] [npc2.legs] apart and back up towards [npc2.her] head, before dropping [npc.her] feral [npc.legRace]'s body down on top of [npc2.herHim],"
-											+ " with [npc.her] animalistic groin hovering just over [npc2.hers]."
-										+ " [npc.SheIs] dominantly using [npc.her] front [npc.legs] to pin [npc2.name] wrists to the floor on either side of [npc2.her] head,"
-											+ " thereby fully locking [npc2.herHim] down beneath [npc.herHim] in a position suitable for being bred."));
+									"[npc.NameHasFull]把[npc2.namePos]的[npc2.legs]拨到旁边，压向脑袋的方向，随后便放低俯下[npc.her]兽态的[npc.legRace]身躯，"
+											+ "两人的性器正对在一起。"
+										+ "[npc.SheIs]强硬地用前肢将[npc2.namePos]的手腕按在[npc2.her]脑袋两边，"
+											+ "这样便把[npc2.herHim]牢牢锁在身下，形成了正适合配种的姿势。"));
 						}
 						continuation = true;
 					}
 					if(scissoring!=null) {
 						sb.append(UtilText.parse(scissoring, lyingDown,
-								" [npc.NameHasFull] laid down on [npc.her] back, and by [npc.spreadingHerLegs] and shuffling forwards,"
-										+ " [npc.has] brought [npc.her] groin into contact with [npc2.hers], ready to start scissoring [npc2.herHim]."));
+								"[npc.NameHasFull]平躺下来[npc.spreadingHerLegs]，缓缓向前移动，"
+										+ "等到下体跟[npc2.hers]接触后，便准备开始跟[npc2.herHim]剪刀式了。"));
 						continuation = true;
 					}
 	
 					if(missionary!=null) {
 						if(!missionary.isTaur()) {
 							sb.append(UtilText.parse(missionary, lyingDown,
-									" [npc.NameHasFull] dropped down between [npc2.namePos] [npc2.legs], ready to fuck [npc2.herHim] in the missionary position."));
+									"[npc.NameHasFull]趴在[npc2.namePos]身上，准备以传教士体位跟[npc2.herHim]开干了。"));
 						} else {
 							sb.append(UtilText.parse(missionary, lyingDown,
-									" [npc.NameHasFull] lowered [npc.her] feral [npc.legRace]'s body down over the top of [npc2.name], and [npc.is] ready to start rutting [npc2.herHim] in the missionary position."));
+									"[npc.NameHasFull]罩在[npc2.name]身上，放低了[npc.her]兽态的[npc.legRace]身躯，准备好以传教士体位跟[npc2.herHim]开干了。"));
 						}
 						continuation = true;
 					}
@@ -3279,60 +3279,60 @@ public class SexPosition {
 						if(!faceSitting.isTaur()) {
 							sb.append(UtilText.parse(faceSitting, lyingDown,
 									continuation
-									?" Meanwhile, eager for some face-sitting action, [npc.nameHasFull] stepped over the top of [npc2.name], before lowering [npc.herself] down and planting [npc.her] groin firmly over [npc2.her] [npc2.face]."
-									:" Eager for some face-sitting action, [npc.nameHasFull] stepped over the top of [npc2.name], before lowering [npc.herself] down and planting [npc.her] groin firmly over [npc2.her] [npc2.face]."));
+									?"[npc.nameHasFull]同时也迫切地想要来一番颜面骑乘，跨过[npc2.name]坐了下去，将下体紧紧地压在了[npc2.her]的[npc2.face]上。"
+									:"[npc.nameHasFull]迫切地想要来一番颜面骑乘，跨过[npc2.name]坐了下去，将下体紧紧地压在了[npc2.her]的[npc2.face]上。"));
 						} else {
 							sb.append(UtilText.parse(faceSitting, lyingDown,
 									continuation
-									?" Meanwhile, eager for some face-sitting action, [npc.nameHasFull] stepped over the top of [npc2.name],"
-											+ " before lowering [npc.her] feral [npc.legRace]'s body down and planting [npc.her] animalistic groin firmly over [npc2.her] [npc2.face]."
-									:" Eager for some face-sitting action, [npc.nameHasFull] stepped over the top of [npc2.name],"
-											+ " before lowering [npc.her] feral [npc.legRace]'s body down and planting [npc.her] animalistic groin firmly over [npc2.her] [npc2.face]."));
+									?"[npc.nameHasFull]同时也迫切地想要来一番颜面骑乘， 跨过[npc2.name]"
+											+ "将兽态的[npc.legRace]身躯降了下去，动物般的下体紧紧地压在了[npc2.her]的[npc2.face]上。"
+									:"[npc.nameHasFull]迫切地想要来一番颜面骑乘， 跨过[npc2.name]"
+											+  "将兽态的[npc.legRace]身躯降了下去，动物般的下体紧紧地压在了[npc2.her]的[npc2.face]上。"));
 						}
 					}
 					if(faceSittingReverse!=null) {
 						if(!faceSittingReverse.isTaur()) {
 							sb.append(UtilText.parse(faceSittingReverse, lyingDown,
 									continuation
-									?" Meanwhile, [npc.nameHasFull] stepped over the top of [npc2.name], before turning around to face [npc2.her] lower body and then lowering [npc.herself] down in order to assume the reverse face-sitting position."
-									:" [npc.NameHasFull] stepped over the top of [npc2.name], before turning around to face [npc2.her] lower body and then lowering [npc.herself] down in order to assume the reverse face-sitting position."));
+									?"[npc.nameHasFull]同时也跨过[npc2.name]，转过身面向[npc2.her]的下半身后便坐了下去，准备来一番反颜面骑乘。"
+									:"[npc.nameHasFull]跨过[npc2.name]，转过身面向[npc2.her]的下半身后便坐了下去，准备来一番反颜面骑乘。"));
 						} else {
 							sb.append(UtilText.parse(faceSittingReverse, lyingDown,
 									continuation
-									?" Meanwhile, [npc.nameHasFull] stepped over the top of [npc2.name],"
-											+ " before turning around to face [npc2.her] lower body and then lowering [npc.her] feral [npc.legRace]'s body down in order to assume the reverse face-sitting position."
-									:" [npc.NameHasFull] stepped over the top of [npc2.name],"
-											+ " before turning around to face [npc2.her] lower body and then lowering [npc.her] feral [npc.legRace]'s body down in order to assume the reverse face-sitting position."));
+									?"[npc.nameHasFull]同时也跨过[npc2.name]，"
+											+ "转过身面向[npc2.her]的下半身后，便将兽态的[npc.legRace]身躯降了下去，准备来一番反颜面骑乘。"
+									:"[npc.NameHasFull]跨过[npc2.name]，"
+											+ "转过身面向[npc2.her]的下半身后，便将兽态的[npc.legRace]身躯降了下去，准备来一番反颜面骑乘。"));
 						}
 					}
 					if(sixtyNine!=null) {
 						sb.append(UtilText.parse(sixtyNine, lyingDown,
 								continuation
-								?" Meanwhile, eager for some oral action, [npc.nameHasFull] stepped over the top of [npc2.name], before turning around and lowering [npc.herself] over [npc2.herHim] in the sixty-nine position."
-								:" Eager for some oral action, [npc.nameHasFull] stepped over the top of [npc2.name], before turning around and lowering [npc.herself] over [npc2.herHim] in the sixty-nine position."));
+								?"[npc.nameHasFull]同时也迫切地想要用一下嘴巴，跨过[npc2.name]，转身趴了下去，摆成六九的姿势。"
+								:"[npc.nameHasFull]迫切地想要用一下嘴巴，跨过[npc2.name]，转身趴了下去，摆成六九的姿势。"));
 					}
 					if(lapPillow!=null) {
 						sb.append(UtilText.parse(lapPillow, lyingDown,
 								continuation
-								?" Meanwhile, eager to fuss over [npc2.herHim], [npc.nameHasFull] knelt down beside [npc2.namePos] [npc2.face], before lifting [npc2.her] head and resting it on [npc.her] lap."
-								:" Eager to fuss over [npc2.herHim], [npc.nameHasFull] knelt down beside [npc2.namePos] [npc2.face], before lifting [npc2.her] head and resting it on [npc.her] lap."));
+								?"[npc.nameHasFull]同时也迫切地想关照一下[npc2.namePos]，在[npc2.her]的[npc2.face]旁跪了下来，抬起[npc2.her]的头让[npc2.her]躺在了大腿上。"
+								:"[npc.nameHasFull]迫切地想关照一下[npc2.namePos]，在[npc2.her]的[npc2.face]旁跪了下来，抬起[npc2.her]的头让[npc2.her]躺在了大腿上。"));
 					}
 	
 					if(performingOral!=null) {
 						sb.append(UtilText.parse(performingOral, lyingDown,
-								" Wanting to perform oral on [npc2.name], [npc.nameHasFull] laid down between [npc2.her] [npc2.legs], bringing [npc.her] [npc.face] right down to [npc2.her] groin."));
+								"[npc.nameHasFull]想要为[npc2.name]提供口交，于是趴在[npc2.her]的[npc2.legs]间，正面对着下体的位置。"));
 					}
 				}
 			}
 			
 			if(besideNames.size()>=2) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(besideNames, false))
-						+" are positioned off to the side, ready to receive oral or some non-penetrative sex. "); 
+						+"移动到旁边，准备好接受口交或其他非插入行为。"); 
 				
 			} else if(besideNames.size()==1) {
 				sb.append(Util.capitaliseSentence(Util.stringsToStringList(besideNames, false))
 						+UtilText.parse(mainBeside,
-								" [npc.is] positioned off to the side, ready to receive oral or some non-penetrative sex. ")); 
+								"动到旁边，准备好接受口交或其他非插入行为。")); 
 			}
 			
 			return sb.toString();
@@ -3636,7 +3636,7 @@ public class SexPosition {
 		}
 	};
 	
-	public static final AbstractSexPosition SITTING = new AbstractSexPosition("Sitting Down",
+	public static final AbstractSexPosition SITTING = new AbstractSexPosition("坐姿",
 			8,
 			true,
 			Util.mergeLists(
@@ -3663,8 +3663,8 @@ public class SexPosition {
 							if(entry.contains(e.getValue()) && e.getValue()!=slot && !e.getKey().equals(characterToTakeSlot)) {
 								return new Value<Boolean, String>(
 										false,
-										"The slot '"+Util.capitaliseSentence(slot.getDescription())+"' cannot be used while the slot"
-												+ " '"+Util.capitaliseSentence(e.getValue().getDescription())+"' is already assigned to "+(UtilText.parse(e.getKey(), "[npc.name]"))+".");
+										"“"+Util.capitaliseSentence(slot.getDescription())+"”栏位不能再使用，因为"
+												+ "“"+Util.capitaliseSentence(e.getValue().getDescription())+"”栏位已经被分配给"+(UtilText.parse(e.getKey(), "[npc.name]"))+"。");
 							}
 						}
 					}
@@ -3683,7 +3683,7 @@ public class SexPosition {
 							|| slot==SexSlotSitting.SITTING_TAUR_PRESENTING_ORAL_TWO
 							|| slot==SexSlotSitting.SITTING_TAUR_PRESENTING_ORAL_THREE
 							|| slot==SexSlotSitting.SITTING_TAUR_PRESENTING_ORAL_FOUR)) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "Only characters with the lower body of a feral animal can use the '"+Util.capitaliseSentence(slot.getDescription())+"' slot."));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "只有下半身为兽态动物肢体的角色才能使用“"+Util.capitaliseSentence(slot.getDescription())+"”栏位。"));
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -3699,7 +3699,7 @@ public class SexPosition {
 				}
 			}
 			if(!suitableSitting) {
-				return new Value<Boolean, String>(false, "At least one character needs to be sitting down for this position to work.");
+				return new Value<Boolean, String>(false, "这种姿势至少需要一个角色呈坐姿才能生效。");
 			}
 			return new Value<Boolean, String>(true, "");
 		}
@@ -3821,10 +3821,10 @@ public class SexPosition {
 			
 			
 			if(sittingNames.size()>=2) {
-				sb.append(Util.capitaliseSentence(Util.stringsToStringList(sittingNames, false))+" are sitting down next to one another, while "); 
+				sb.append(Util.capitaliseSentence(Util.stringsToStringList(sittingNames, false))+"紧挨着坐了下来， 而"); 
 				
 			} else {
-				sb.append(UtilText.parse(mainSitting, "[npc.Name] [npc.is] sitting down on a chair, while ")); 
+				sb.append(UtilText.parse(mainSitting, "[npc.Name]坐在椅子上，而")); 
 			}
 			
 			
@@ -3833,36 +3833,36 @@ public class SexPosition {
 			boolean sentenceContinuationFound = true;
 			if(sittingLapCount>=2) {
 				if(inLapNames.isEmpty()) {
-					sb.append(Util.stringsToStringList(inLapNamesTaur, false)+ " have turned around and stepped backwards, before lowering their feral bodies down into "
+					sb.append(Util.stringsToStringList(inLapNamesTaur, false)+ "则转过身去，稍稍后退，便将其兽态的身躯放低在"
 					+(sittingNames.size()>1
-							?(playerSitting?"your laps. ":"their laps. ")
-							:UtilText.parse(mainSitting, "[npc.her] lap. ")));
+							?(playerSitting?"你们的大腿上。":"他们的大腿上。")
+							:UtilText.parse(mainSitting, "[npc.her]的大腿上。")));
 					
 				} else {
-						sb.append(Util.stringsToStringList(allInLapNames, false)+" have stepped forwards so as to be sitting in "
+						sb.append(Util.stringsToStringList(allInLapNames, false)+"上前去，然后坐在了"
 									+(sittingNames.size()>1
-											?(playerSitting?"your laps. ":"their laps. ")
-											:UtilText.parse(mainSitting, "[npc.her] lap. ")));
+											?(playerSitting?"你们的大腿上。":"他们的大腿上。")
+											:UtilText.parse(mainSitting, "[npc.her]的大腿上。")));
 						if(!inLapNamesTaur.isEmpty()) {
-							sb.append(" In order to do this, "+Util.capitaliseSentence(Util.stringsToStringList(inLapNamesTaur, false))
-								+" have turned around and stepped backwards, allowing them to plant their feral bodies down against "
+							sb.append("为了做出这种姿势，"+Util.capitaliseSentence(Util.stringsToStringList(inLapNamesTaur, false))
+								+"不得不转过身去，稍稍后退，将其兽态的身躯放低在"
 								+(sittingNames.size()>1
-										?(playerSitting?"your groins. ":"their groins. ")
-										:UtilText.parse(mainSitting, "[npc.her] groin. ")));
+										?(playerSitting?"你们的胯下。":"他们的胯下。")
+										:UtilText.parse(mainSitting, "[npc.her]的胯下。")));
 						}
 				}
 				
 			} else if(inLapNames.size()==1) {
-				sb.append(Util.stringsToStringList(inLapNames, false)+UtilText.parse(mainInLap, " [npc.has] stepped forwards so as to be sitting in ")
+				sb.append(Util.stringsToStringList(inLapNames, false)+UtilText.parse(mainInLap, "上前去，然后坐在了")
 						+(sittingNames.size()>1
-								?(playerSitting?"your lap. ":"their lap. ")
-								:UtilText.parse(mainSitting, "[npc.her] lap. ")));
+								?(playerSitting?"你们的大腿上。":"他们的大腿上。")
+								:UtilText.parse(mainSitting, "[npc.her]的大腿上。")));
 				
 			} else if(inLapNamesTaur.size()==1) {
-				sb.append(Util.stringsToStringList(inLapNamesTaur, false)+UtilText.parse(mainInLapTaur, " [npc.has] turned around and stepped backwards, before lowering [npc.her] feral [npc.legRace]'s body down into ")
+				sb.append(Util.stringsToStringList(inLapNamesTaur, false)+UtilText.parse(mainInLapTaur, "转过身去，稍稍后退，便将[npc.her]兽态的[npc.legRace]身躯放低在")
 				+(sittingNames.size()>1
-						?(playerSitting?"your lap. ":"their lap. ")
-						:UtilText.parse(mainSitting, "[npc.her] lap. ")));
+						?(playerSitting?"你们的大腿上。":"他们的大腿上。")
+						:UtilText.parse(mainSitting, "[npc.her]的大腿上。")));
 			} else {
 				sentenceContinuationFound=false;
 			}
@@ -3872,74 +3872,74 @@ public class SexPosition {
 			if(betweenLegsCount>=2) {
 				if(betweenLegsNames.isEmpty()) {
 					sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(betweenLegsNamesTaur, false)):Util.stringsToStringList(betweenLegsNamesTaur, false))
-						+ " have stepped forwards over the top of "
+						+ "上前去，跨过"
 					+(sittingNames.size()>1
-							?(playerSitting ?"you" :"them")
+							?(playerSitting ?"你们" :"他们")
 							:UtilText.parse(mainSitting, "[npc.name]"))
-					+", bringing the groins of "+(playerBetweenLegs?"your":"their")+" animalistic lower bodies right up against "
+					+"，让动物般下肢的腹股沟处顶住了"
 					+(sittingNames.size()>1
-							?(playerSitting ?"yours. " :"theirs. ")
-							:UtilText.parse(mainSitting, "[npc.hers]. ")));
+							?(playerSitting ?"你们的下体。" :"他们的下体。")
+							:UtilText.parse(mainSitting, "[npc.hers]的下体。")));
 					
 				} else {
 					sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(betweenLegsNames, false)):Util.stringsToStringList(betweenLegsNames, false))
-							+" have stepped forwards so as to be standing in between "
+							+"上前来，站立在"
 								+(sittingNames.size()>1
-										?(playerSitting?"your legs":"their legs")
-										:UtilText.parse(mainSitting, "[npc.namePos] [npc.legs]")));
+										?(playerSitting?"你们的腿":"他们的腿")
+										:UtilText.parse(mainSitting, "[npc.namePos]的[npc.legs]")));
 					if(!betweenLegsNamesTaur.isEmpty()) {
-						sb.append(", while "+Util.stringsToStringList(betweenLegsNamesTaur, false)+ " "+(betweenLegsNamesTaur.size()==1?UtilText.parse(mainBetweenLegs, "[npc.has]"):"have")+" stepped forwards over the top of "
+						sb.append("之间，而"+Util.stringsToStringList(betweenLegsNamesTaur, false)+"则上前跨在"
 								+(sittingNames.size()>1
-										?(playerSitting ?"you" :"them")
+										?(playerSitting ?"你们" :"他们")
 										:UtilText.parse(mainSitting, "[npc.name]"))
 								+(betweenLegsNamesTaur.size()==1
-									?UtilText.parse(mainBetweenLegs, ", bringing the groin of [npc.her] animalistic [npc.legRace]'s body right up against ")
-									:", bringing the groins of "+(playerBetweenLegs?"your":"their")+" animalistic lower bodies right up against")
+									?UtilText.parse(mainBetweenLegs, "的头顶，让[npc.her]动物般[npc.legRace]身躯的腹股沟顶住了")
+									:"，让动物般下肢的腹股沟处顶住了")
 								+(sittingNames.size()>1
-										?(playerSitting ?"yours. " :"theirs. ")
-										:UtilText.parse(mainSitting, "[npc.hers]. ")));
+										?(playerSitting ?"你们的下体。" :"他们的下体。")
+										:UtilText.parse(mainSitting, "[npc.hers]的下体。")));
 					} else {
-						sb.append(".");
+						sb.append("。");
 					}
 				}
 				sentenceContinuationFound = true;
 				
 			} else if(betweenLegsNames.size()==1) {
 				sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(betweenLegsNames, false)):Util.stringsToStringList(betweenLegsNames, false))
-						+UtilText.parse(mainBetweenLegs, " [npc.has] stepped forwards so as to be standing in between ")
+						+UtilText.parse(mainBetweenLegs, "上前来，正站在")
 						+(sittingNames.size()>1
-								?(playerSitting?"your legs. ":"their legs. ")
-								:UtilText.parse(mainSitting, "[npc.her] [npc.legs]. ")));
+								?(playerSitting?"你们的腿之间。":"他们的腿之间。")
+								:UtilText.parse(mainSitting, "[npc.her]的[npc.legs]之间。")));
 				sentenceContinuationFound = true;
 				
 			} else if(betweenLegsNamesTaur.size()==1) {
 				sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(betweenLegsNamesTaur, false)):Util.stringsToStringList(betweenLegsNamesTaur, false))
-						+UtilText.parse(mainBetweenLegs, " [npc.has] stepped forwards over the top of ")
+						+UtilText.parse(mainBetweenLegs, "上前跨在")
 						+(sittingNames.size()>1
-								?(playerSitting ?"you" :"them")
+								?(playerSitting ?"你们" :"他们")
 								:UtilText.parse(mainSitting, "[npc.name]"))
-						+UtilText.parse(mainBetweenLegs, ", bringing the groin of [npc.her] animalistic [npc.legRace]'s body right up against ")
+						+UtilText.parse(mainBetweenLegs, "的上方，让[npc.her]动物般[npc.legRace]身躯的腹股沟顶住了")
 						+(sittingNames.size()>1
-								?(playerSitting ?"yours. " :"theirs. ")
-								:UtilText.parse(mainSitting, "[npc.hers]. ")));
+								?(playerSitting ?"你们的下体。" :"他们的下体。")
+								:UtilText.parse(mainSitting, "[npc.hers]的下体。")));
 				sentenceContinuationFound = true;
 			}
 			
 			// Performing oral:
 			if(performingOralNames.size()>=2) {
 					sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false)):Util.stringsToStringList(performingOralNames, false))
-							+" are positioned so as to be down between "
+							+"附身移动到"
 							+(sittingNames.size()>1
-									?(playerSitting?"your legs":"their legs")+", ready to perform oral on "+(playerSitting?"you. ":"them. ")
-									:UtilText.parse(mainSitting, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+									?(playerSitting?"你们的腿":"他们的腿")+"之间，准备好提供口交。"
+									:UtilText.parse(mainSitting, "[npc.namePos]的[npc.legs]之间，准备好提供口交。")));
 					sentenceContinuationFound = true;
 				
 			} else if(performingOralNames.size()==1) {
 					sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(performingOralNames, false)):Util.stringsToStringList(performingOralNames, false))
-							+UtilText.parse(mainPerformingOral," [npc.is] positioned so as to be right up between ")
+							+UtilText.parse(mainPerformingOral,"正好移动到")
 					+(sittingNames.size()>1
-							?(playerSitting?"your legs":"their legs")+", ready to perform oral on "+(playerSitting?"you. ":"them. ")
-							:UtilText.parse(mainSitting, "[npc.namePos] [npc.legs], ready to perform oral on [npc.herHim]. ")));
+							?(playerSitting?"你们的腿":"他们的腿")+"之间，准备好提供口交。"
+							:UtilText.parse(mainSitting, "[npc.namePos]的[npc.legs]之间，准备好提供口交。")));
 					sentenceContinuationFound = true;
 			}
 
@@ -3947,18 +3947,18 @@ public class SexPosition {
 			// Receiving oral:
 			if(taurPresentingNames.size()>=2) {
 				sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(taurPresentingNames, false)):Util.stringsToStringList(taurPresentingNames, false))
-						+" have turned around and stepped back in order to present their animalistic genitals to "
+						+"转过身去，稍稍后退，将其动物般的下体展示在"
 						+(sittingNames.size()>1
-								?(playerSitting?"the "+Util.intToString(sittingNames.size())+" of you.":"the "+Util.intToString(sittingNames.size())+" of them.")
-								:UtilText.parse(mainSitting, "[npc.name].")));
+								?(playerSitting?"你们"+Util.intToString(sittingNames.size())+"个面前。":"他们"+Util.intToString(sittingNames.size())+"个面前。")
+								:UtilText.parse(mainSitting, "[npc.name]面前。")));
 			
 				
 			} else if(taurPresentingNames.size()==1) {
 					sb.append((sentenceContinuationFound?Util.capitaliseSentence(Util.stringsToStringList(taurPresentingNames, false)):Util.stringsToStringList(taurPresentingNames, false))
-							+UtilText.parse(mainTaurPresenting," [npc.has] turned around and stepped back in order to present [npc.her] feral rear end to ")
+							+UtilText.parse(mainTaurPresenting,"转过身去，稍稍后退，将其兽态的后半身展示在")
 					+(sittingNames.size()>1
-							?(playerSitting?"the "+Util.intToString(sittingNames.size())+" of you.":"the "+Util.intToString(sittingNames.size())+" of them.")
-							:UtilText.parse(mainSitting, "[npc.name].")));
+							?(playerSitting?"你们"+Util.intToString(sittingNames.size())+"个面前。":"他们"+Util.intToString(sittingNames.size())+"个面前。")
+							:UtilText.parse(mainSitting, "[npc.name]面前。")));
 			}
 			
 			
@@ -4179,14 +4179,14 @@ public class SexPosition {
 	
 	//--- Unique and one-off sex scenes ---//
 	
-	public static final AbstractSexPosition BREEDING_STALL = new AbstractSexPosition("Breeding Stall",
+	public static final AbstractSexPosition BREEDING_STALL = new AbstractSexPosition("配种台",
 			2,
 			true,
 			null, Util.newArrayListOfValues()) {
 		@Override
 		public Value<Boolean, String> isSlotUnlocked(GameCharacter characterToTakeSlot, SexSlot slot, Map<GameCharacter, SexSlot> positioningSlots) {
 			if(characterToTakeSlot.isTaur() && (slot==SexSlotBreedingStall.BREEDING_STALL_BACK)) {
-				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "Due to the proportions of [npc.her] animalistic lower body, [npc.nameIsFull] unable to lie down on [npc.her] back in order to get bred."));
+				return new Value<Boolean, String>(false, UtilText.parse(characterToTakeSlot, "由于[npc.namePos]动物般的下肢，[npc.her]没法平躺下接受配种。"));
 			}
 			
 			return new Value<Boolean, String>(true, "");
@@ -4201,20 +4201,20 @@ public class SexPosition {
 			}
 			
 			if(lyingDown.isPlayer()) {
-				return "You're lying on your "+(front?"front":"back")+" on the padded bench, with your legs and lower abdomen projecting out of the hole in the wall, exposing your pussy to the breeders beyond."
+				return "你"+(front?"俯卧":"平躺")+"在一张长椅上，腿部和下腹部都通过墙上的洞伸了出去，向外面的配种员展示着你的小穴。"
 						+ (Main.game.getPlayer().hasTail()
-								?" As you get into position, someone on the other side of the wall fastens your "
-									+(Main.game.getPlayer().getTailCount()>1?"[pc.tailCount] [pc.tails] to the wall by means of metal clamps":" [pc.tail] to the wall by means of a metal clamp")
-									+ ", in order to prevent you from using"+(Main.game.getPlayer().getTailCount()>1?"them":"it")+" to block your [pc.pussy+]."
+								?"等你摆好位置后，墙另一边有个人"
+									+(Main.game.getPlayer().getTailCount()>1?"用金属夹子将你[pc.tailCount]条[pc.tails]都固定在了墙上":"用金属夹子将你的[pc.tails]固定在了墙上")
+									+ "，防止你用[pc.tails]挡住你[pc.pussy+]。"
 								:"");
 			} else {
 				GameCharacter character = Main.sex.getCharacterInPosition(SexSlotBreedingStall.BREEDING_STALL_FRONT);
 				if(character!=null) {
-					return "[npc.Name] is lying on [npc.her] "+(front?"front":"back")+" on the padded bench, with [npc.her] legs and lower abdomen projecting out of the hole in the wall. [npc.Her] pussy is completely exposed to you, ready for breeding."
+					return "[npc.Name]"+(front?"俯卧":"平躺")+"在一张长椅上，腿部和下腹部都通过墙上的洞伸了出去，向外面的配种员展示着[npc.her]的小穴。"
 							+ (character.hasTail()
-									?" As [npc.she] gets into position, Epona steps forwards and fastens [npc.her] "
-										+(character.getTailCount()>1?"[npc.tailCount] [npc.tails] to the wall by means of metal clamps":" [npc.tail] to the wall by means of a metal clamp")
-										+ ", in order to prevent [npc.herHim] from using"+(character.getTailCount()>1?"them":"it")+" to block [npc.her] [npc.pussy+]."
+									?"等[npc.she]摆好位置后，伊波娜走上前去，"
+										+(character.getTailCount()>1?"用金属夹子将[npc.her][npc.tailCount]条[npc.tails]都固定在了墙上":"用金属夹子将[npc.her]的[npc.tails]固定在了墙上")
+										+ "，防止[npc.herHim]用[npc.tails]挡住[npc.her][npc.pussy+]。"
 									:"");
 				} else {
 					return "";
@@ -4274,7 +4274,7 @@ public class SexPosition {
 	
 
 	
-	public static final AbstractSexPosition GLORY_HOLE = new AbstractSexPosition("Glory hole oral",
+	public static final AbstractSexPosition GLORY_HOLE = new AbstractSexPosition("寻欢洞口交",
 			3,
 			true,
 			null, Util.newArrayListOfValues(GloryHole.class)) {
@@ -4312,49 +4312,49 @@ public class SexPosition {
 				boolean c2Taur = characters.get(2).isTaur();
 				
 				if(c1Taur || c2Taur) {
-					sb.append("[npc.NameIsFull] kneeling on the floor, ready to service whatever sets of genitals [npc2.name] and [npc3.name] put through the glory holes to either side of [npc.herHim].");
+					sb.append("[npc.NameIsFull]跪在地上，无论[npc2.name]和[npc3.name]如何将下体对准两边寻欢洞，[npc.herHim]都会不遗余力地侍奉。");
 					for(int i=1; i<3; i++) {
 						GameCharacter character = characters.get(i);
 						if(character.hasPenis() && character.isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
 							sb.append(UtilText.parse(characters.get(0), character,
-									"<br/><i>As [npc2.namePos] [npc2.cock+] is positioned below [npc2.her] lower [npc2.legRace]'s body,"
-										+ " [npc2.name] quickly [npc2.verb(discover)] that [npc2.sheIs] unable to get into a position in which [npc2.she] could push [npc2.her] cock through the gloryhole."
-									+ " Instead, [npc2.she] [npc2.has] to make do with turning around and presenting [npc2.her] [npc2.pussy+] to [npc.name]...</i>"));
+									"<br/><i>由于[npc2.namePos][npc2.cock+]位于其[npc2.legRace]的下半身，"
+										+ "[npc2.name]很快就意识到并没有办法找到一种姿势，能将阴茎伸过寻欢洞。"
+									+ "于是[npc2.she]便只得转过身去，将[npc2.her][npc2.pussy+]对着[npc.name]……</i>"));
 							
 						} else {
 							sb.append(UtilText.parse(characters.get(0), character,
-									"<br/><i>Due to possessing the lower body of [npc2.a_legRace],"
-									+ " [npc2.name] [npc2.verb(make)] a great deal of noise as [npc2.she] awkwardly [npc2.verb(turn)] around in the cramped stall and [npc2.verb(present)] [npc2.her] [npc2.pussy+] to [npc.name]...</i>"));
+									"<br/><i>由于拥有[npc2.a_legRace]的下半身，"
+									+ "[npc2.name]在狭窄的隔间中转身时发出了巨大的噪声，十分尴尬地将[npc2.her][npc2.pussy+]对着[npc.name]……</i>"));
 						}
 					}
 					
 				} else {
 					if(characters.get(1).hasPenis() && characters.get(1).isAbleToAccessCoverableArea(CoverableArea.PENIS, true)
 							&& characters.get(2).hasPenis() && characters.get(2).isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						sb.append("[npc.NameIsFull] kneeling on the floor, ready to serve [npc2.namePos] [npc2.cock+] on one side, an [npc3.namePos] [npc3.cock+] on the other.");
+						sb.append("[npc.NameIsFull]跪在地上，随时准备侍奉从一边伸出来[npc2.namePos][npc2.cock+]和另一边[npc3.namePos][npc3.cock+]。");
 					} else {
-						sb.append("[npc.NameIsFull] kneeling on the floor, ready to service whatever sets of genitals [npc2.name] and [npc3.name] put through the glory holes to either side of [npc.herHim].");
+						sb.append("[npc.NameIsFull]跪在地上，无论[npc2.name]和[npc3.name]如何将下体对准两边寻欢洞，[npc.herHim]都会不遗余力地侍奉。");
 					}
 				}
 				
 			} else {
 				if(c1Taur) {
-					sb.append("[npc.NameIsFull] kneeling on the floor with [npc.her] mouth pushed up against the glory hole, ready to service whatever set of genitals [npc2.name] [npc2.verb(present)] [npc.herHim] with.");
+					sb.append("[npc.NameIsFull]跪在地上，张嘴堵住了寻欢洞，随时准备好侍奉[npc2.name]展露出来的下体。");
 					GameCharacter character = characters.get(1);
 					if(character.hasPenis() && character.isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
 						sb.append(UtilText.parse(characters.get(0), character,
-								"<br/><i>As [npc2.namePos] [npc2.cock+] is positioned below [npc2.her] lower [npc2.legRace]'s body,"
-									+ " [npc2.name] quickly [npc2.verb(discover)] that [npc2.sheIs] unable to get into a position in which [npc2.she] could push [npc2.her] cock through the gloryhole."
-								+ " Instead, [npc2.she] [npc2.has] to make do with turning around and presenting [npc2.her] [npc2.pussy+] to [npc.name]...</i>"));
+								"<br/><i>由于[npc2.namePos][npc2.cock+]位于其[npc2.legRace]的下半身，"
+									+ "[npc2.name]很快就意识到并没有办法找到一种姿势，能将阴茎伸过寻欢洞。"
+								+ "于是[npc2.she]便只得转过身去，将[npc2.her][npc2.pussy+]对着[npc.name]……</i>"));
 						
 					} else {
 						sb.append(UtilText.parse(characters.get(0), character,
-								"<br/><i>Due to possessing the lower body of [npc2.a_legRace],"
-								+ " [npc2.name] [npc2.verb(make)] a great deal of noise as [npc2.she] awkwardly [npc2.verb(turn)] around in the cramped stall and [npc2.verb(present)] [npc2.her] [npc2.pussy+] to [npc.name]...</i>"));
+								"<br/><i>由于拥有[npc2.a_legRace]的下半身，"
+								+ "[npc2.name]在狭窄的隔间中转身时发出了巨大的噪声，十分尴尬地将[npc2.her][npc2.pussy+]对着[npc.name]……</i>"));
 					}
 					
 				} else {
-					sb.append("[npc.NameIsFull] kneeling on the floor with [npc.her] mouth pushed up against the glory hole, ready to service whatever set of genitals [npc2.name] [npc2.verb(present)] [npc.herHim] with.");
+					sb.append("[npc.NameIsFull]跪在地上，张嘴堵住了寻欢洞，随时准备好侍奉[npc2.name]展露出来的下体。");
 				}
 			}
 			
@@ -4376,7 +4376,7 @@ public class SexPosition {
 		}
 	};
 	
-	public static final AbstractSexPosition GLORY_HOLE_SEX = new AbstractSexPosition("Glory hole sex",
+	public static final AbstractSexPosition GLORY_HOLE_SEX = new AbstractSexPosition("寻欢洞性爱",
 			3,
 			true,
 			null, Util.newArrayListOfValues(GloryHole.class)) {
@@ -4406,20 +4406,20 @@ public class SexPosition {
 			StringBuilder sb = new StringBuilder();
 			
 			if(analFucking) {
-				sb.append("[npc.NameIsFull] pressing [npc.her] [npc.asshole+] up against the glory hole behind [npc.herHim],");
+				sb.append("[npc.NameIsFull]将[npc.her][npc.asshole+]紧紧贴着身后的寻欢洞，");
 			} else {
-				sb.append("[npc.NameIsFull] pressing [npc.her] [npc.pussy+] up against the glory hole behind [npc.herHim],");
+				sb.append("[npc.NameIsFull]将[npc.her][npc.pussy+]紧紧贴着身后的寻欢洞，");
 			}
 			
 			if(characters.get(1).hasPenis() && characters.get(1).isAbleToAccessCoverableArea(CoverableArea.PENIS, true) && !characters.get(1).isTaur()) {
-				sb.append(" ready to have [npc2.name] thrust forwards and sink [npc2.her] [npc2.cock+] into it.");
+				sb.append("期待着[npc2.name]将[npc2.cock+]挺入洞中，填满淫穴。");
 			} else {
-				sb.append(" ready to have [npc2.name] start using it.");
+				sb.append("期待着[npc2.name]尽情享用。");
 			}
 
 			if(Main.sex.getTotalParticipantCount(false)==3) {
 				characters.add(Main.sex.getCharacterInPosition(SexSlotUnique.GLORY_HOLE_RECEIVING_ORAL_ONE));
-				sb.append(" On the other side of the stall, [npc.name] [npc.is] leaning down to continue pleasuring [npc3.namePos] gloryhole with [npc.her] mouth.");
+				sb.append("而在隔间的另一边，[npc.Name]前倾着身子，继续用嘴巴为[npc3.namePos]的寻欢洞侍奉着。");
 			}
 			
 			return UtilText.parse(characters, sb.toString());

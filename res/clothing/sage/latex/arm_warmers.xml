@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
 		<value>1000</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[latex arm warmers]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[latex arm warmers]]></namePlural>
-		<description><![CDATA[A pair of latex arm warmers that hooks around the middle finger.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[乳胶臂套]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[乳胶臂套]]></namePlural>
+		<description><![CDATA[一双钩住中指的乳胶臂套。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -59,48 +58,36 @@
 	</coreAtributes>
 
 	<replacementText slot="HAND" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the arm warmers over [npc.her] forearms and [npc.verb(tighten)] the straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the arm warmers over [npc2.namePos] forearms and [npc.verb(tighten)] the straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] forearms through the arm warmers and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将臂套在[npc.her]的胳膊上并拉紧带子。]]></self>
+		<other><![CDATA[
+[npc.Name]将臂套套在[npc2.namePos]的胳膊上并拉紧带子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将臂套穿过[npc2.namePos]的胳膊并仓促地拉紧带子。]]></otherRough>
 	</replacementText>
 	<displacementText slot="HAND" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] arm warmers and [npc.verb(slip)] them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] arm warmers and [npc.verb(slip)] them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] arm warmers until they're loose enough and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]松开[npc.her]胳膊上的带子并把臂套脱下来。]]></self>
+		<other><![CDATA[
+[npc.Name]松开[npc2.namePos]胳膊上的带子并把臂套脱了下来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]撕扯着[npc2.namePos]胳膊上的带子，在带子松动后将臂套一把扯下并扔到一边。]]></otherRough>
 	</displacementText>
 	<replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the arm warmers over [npc.her] forearms and [npc.verb(tighten)] the straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the arm warmers over [npc2.namePos] forearms and [npc.verb(tighten)] the straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] forearms through the arm warmers and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将臂套在[npc.her]的胳膊上并拉紧带子。]]></self>
+		<other><![CDATA[
+[npc.Name]将臂套套在[npc2.namePos]的胳膊上并拉紧带子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将臂套穿过[npc2.namePos]的胳膊并仓促地拉紧带子。]]></otherRough>
 	</replacementText>
 	<displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] arm warmers and [npc.verb(slip)] them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] arm warmers and [npc.verb(slip)] them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] arm warmers until they're loose enough and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]松开[npc.her]胳膊上的带子并把臂套脱下来。]]></self>
+		<other><![CDATA[
+[npc.Name]松开[npc2.namePos]胳膊上的带子并把臂套脱了下来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]撕扯着[npc2.namePos]胳膊上的带子，在带子松动后将臂套一把扯下并扔到一边。]]></otherRough>
   </displacementText>
 	
 </clothing>

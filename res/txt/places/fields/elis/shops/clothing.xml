@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	
@@ -6,416 +6,416 @@
 	
 	<htmlContent tag="CLOTHING"><![CDATA[
 	<p>
-		The store in front of you bears what is undoubtedly the most colourful sign in all of Wall's End. Adorned with painted flowers of every type and colour imaginable, the words 'The Fashionable Moo' are displayed in a light pink script, with an additional subtext reading:
+		你面前的商店挂着的毫无疑问是整个墙之尽头中最鲜艳的招牌。形形色色的彩绘花朵装饰着浅粉色的“哞求时尚”字样，旁边还有附上一行小字：
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17 && game.getDayOfWeek()!=DOW_SUNDAY)
-			 'Open weekdays and Saturdays, [style.colourMinorGood([units.time(9)]-[units.time(17)])]'
+			“周一到周六开放，[style.colourMinorGood([units.time(9)]-[units.time(17)])]”
 		#ELSE
-			 'Open weekdays and Saturdays, [style.colourMinorBad([units.time(9)]-[units.time(17)])]'
+			“周一到周六开放，[style.colourMinorBad([units.time(9)]-[units.time(17)])]”
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<17 && game.getDayOfWeek()!=DOW_SUNDAY)
-			Even if the displayed opening times weren't enough to inform you that this shop is currently [style.colourGood(open)], you can quite clearly see through the wide windows that all of the lights are on, allowing you to view the many items of clothing, shoes, and accessories which this store offers for sale.
+			即使所示的营业时间告诉你这家店目前没[style.colourGood(开门)]，但你可以透过宽阔的窗户清楚看到所有灯都亮着，看到这家商店出售的许多衣服、鞋子和配饰。
 			#IF(flags.hasFlag(FLAG_innoxia_elis_clothing_visited))
-				 Further inside, you see the voluminous form of Monica bouncing around as she excitedly helps some customers find the clothing they're after. It looks like she's just about finished serving them, and as she heads over to the checkout and starts packaging the customers' selected clothing, you wonder whether to head inside and say hello to the energetic cow-girl again...
+				再往里看去，你能看到莫妮卡在帮助顾客挑选衣服时兴奋地蹦蹦跳跳的身形。看起来她刚结束服务，正走向收银台，为顾客包装所挑的衣服。你思索是否该进店向这精力充沛的牛女问好……
 			#ELSE
-				 Further inside, you see the voluminous form of a short, busty cow-girl bouncing around as she excitedly helps some customers find the clothing they're after. It looks like she's just about finished serving them, and as she heads over to the checkout and starts packaging the customers' selected clothing, you wonder whether to head inside and say hello to who you assume must be the owner of this store...
+				再往里看去，你能看到一个丰满的矮个子牛女在帮助顾客挑选衣服时兴奋地蹦蹦跳跳的身形。看起来她刚结束服务，正走向收银台，为顾客包装所挑的衣服。你思索是否该进店向这精力充沛的牛女问好……
 			#ENDIF
 		#ELSE
-			Unfortunately, this shop is currently [style.colourBad(closed)], although you can see through the wide windows that some of the lights have been left on, allowing you to view the many items of clothing, shoes, and accessories which this store offers for sale.
+			不幸的是，这家店现在[style.colourBad(关门)]了，但你可以透过宽阔的窗户清楚看到一些灯还亮着，看到这家商店出售的许多衣服、鞋子和配饰。
 			#IF(flags.hasFlag(FLAG_innoxia_elis_clothing_visited))
-				 Knowing that Monica has put a lot of effort into the window display, you spend a moment looking over the dressed-up mannequins, before [pc.stepping] back and preparing to continue on your way...
+				你知道莫妮卡花了很多心思在橱窗展示上，于是你看了一会打扮好的人体模特，然后[pc.stepping]开，继续走你的路……
 			#ELSE
-				 It looks like the owner has put a considerable amount of effort into the window display, and so you spend a moment looking over the dressed-up mannequins, before [pc.stepping] back and preparing to continue on your way...
+				你知道店主一定花了很多心思在橱窗展示上，于是你看了一会打扮好的人体模特，然后[pc.stepping]开，继续走你的路……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_ENTER"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_elis_clothing_visited))
 		<p>
-			Deciding to once again to enter Monica's store to see what she's got on offer, you push open the glass door and [pc.step] inside. A little bell rings out above your head as the door swings open, which causes the familiar cow-girl to look over in your direction. Having once again caught her just as she's finished serving a pair of customers, the slightly-chubby, incredibly-busty cow-girl flashes you a smile and calls out in a happy, friendly tone, [monica.speech(Hi, [pc.name]!)]
+			你再次走进莫妮卡的商店，看看她有什么好东西，于是你推开玻璃门，[pc.step]了进去。当门打开时，一个小铃铛在你的头顶响起，这让熟悉的牛女朝你的方向看了过来。她又一次抓住了她刚刚招呼完一对客人的机会，微胖、丰满得令人难以置信的牛女向你露出了微笑，并用快乐、友好的语气叫了你一声，[monica.speech(嗨，[pc.name]！)]
 		</p>
 		#IF(monica.isVisiblyPregnant() && monica.getPregnantLitter().isFather(pc))
 			<p>
 				#IF(!monica.isCharacterReactedToPregnancy(pc))
-					Returning Monica's greeting, you [pc.step] past the exiting customers and head on over to the cow-girl's counter. As you approach, you suddenly notice that the cow-girl's belly is visibly swollen, and as she sees what you're looking at, she brushes her hand through her hand and laughs, [monica.speech(Haha, yeah, you kind of got me pregnant... I haven't been sexually active with anyone else for a long time, so it had to have been you... I wonder if my boobs are going to get bigger from this?)]
+					你同样问候莫妮卡一声，[pc.step]过离开的顾客，到牛女的柜台。靠近时，你突然发现牛姑娘的肚子明显胀了起来，当她看到你的目光时，她用手拂过自己的手，笑了起来， [monica.speech(哈哈，没错，是你让我怀孕的……我已经很久没有和别人发生性关系了，所以一定是你……不知道我的奶子会不会变得更大？)]
 				#ELSE
-					Returning Monica's greeting, you [pc.step] past the exiting customers and head on over to the cow-girl's counter. As you approach, you see that the cow-girl's belly is still visibly swollen, and as she sees what you're looking at, she brushes her hand through her hand and laughs, [monica.speech(Haha, yeah, I'm still pregnant, thanks to you...)]
+					你同样问候莫妮卡一声，[pc.step]过离开的顾客，到牛女的柜台。靠近时，你看到牛女的肚子依然明显得肿胀着，当她注意到你的目光时，她用手拂过自己的手，笑了起来，[monica.speech(哈哈，没错，我还怀着孕呢，多亏了你……)]
 				#ENDIF
 			</p>
 			<p>
-				At her encouragement, you [pc.step] forwards and stroke Monica's round belly, causing her to let out a happy little sigh and declare, [monica.speech(I don't need any help with anything, so don't worry about anything like that.
+				在她的鼓励下，你[pc.step]上前抚摸莫妮卡圆滚滚的肚子，引得她发出一声幸福叹息并说， [monica.speech(我不需要任何帮助，所以不用担心。
 				#IF(flags.hasFlag(FLAG_innoxia_monica_milked))
-					 Unless... Well, I can't afford to close my store again today, but if you come back tomorrow then I could do with being milked, and then perhaps we could have some fun together again?
+					除非……好吧，我今天不能再关店了，但如果你明天再来，那我就可以挤奶了，然后也许我们可以再一起找点乐子？
 				#ELSE
-					 Unless... If you've got a thing for pregnant girls, then I could do with being milked, and then perhaps we could have some fun together again?
+					除非……如果你喜欢怀孕的女孩，那我可以去挤奶，也许我们还能再一起找点乐子？
 				#ENDIF
 				)]
 			</p>
 			<p>
-				As you give Monica's belly one last affection stroke, she gestures around her at the dozens of different types of clothing which fill her store and continues, [monica.speech(Of course, if you're here for business, then I can help you pick out an outfit!)] 
+				你最后一次亲昵地抚摸莫妮卡的肚子，她指了指周围几十种不同类型的服装，继续说道， [monica.speech(当然，如果你是来买衣服的，那我可以帮你挑一套！)] 
 			</p>
 		#ELSE
 			<p>
-				Returning Monica's greeting, you [pc.step] past the exiting customers and head on over to the cow-girl's counter. Gesturing around her at the dozens of different types of clothing which fill her store, she offers in a friendly, happy voice, [monica.speech(I'd be happy to help you pick out an outfit. Just let me know what you're looking for!)]
+				你同样问候莫妮卡一声，[pc.step]过离开的顾客，到牛女的柜台。她指了指店里琳琅满目的服装，用友好而愉快的声音说，[monica.speech(我很乐意帮你挑选衣服。请告诉我你需要什么！)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Deciding to enter this clothing store to see what's on offer, you push open the glass door and [pc.step] inside. A little bell rings out above your head as the door swings open, which causes the store's solitary member of staff to look over in your direction. Having just finished serving a pair of customers, this slightly-chubby, incredibly-busty cow-girl flashes you a smile and calls out in a happy, friendly tone, [monica.speech(Hello, and welcome to 'The Fashionable Moo'!)]
+			你决定进入这家服装店看看有什么衣服，于是推开玻璃门，[pc.step]了进去。当门打开时，一个小铃铛在你的头顶响起，店里唯一的工作人员朝你的方向看了过来。这个身材微胖、胸脯丰满的牛女刚刚招呼完一对顾客，她向你微笑示意，并用开心、友好的语气叫了你一声，[monica.speech(你好，还有欢迎来到‘哞求时尚’！)]
 		</p>
 		<p>
-			As the customers pass you by and exit the shop, you return the cow-girl's greeting, which leads into her skipping over towards you. Although mostly human, she has a pair of small, white horns, along with a black-and-white spotted tail and a similarly-coloured pair of cow-like ears, which is how you've identified her as being a cow-girl. She's wearing a yellow dress, yellow headband, and has a yellow ribbon tied around her tail. Bronze bangles adorn her wrists, which match the bronze ring worn on one of her fingers, as well as the sunflower earrings hanging from her cow-like ears.
+			顾客从你身边经过并离开商店，你向牛女回以问候，她跳着向你走来。虽然她大部分地方还是人类，但却长着一对白色的小角，还有一条黑白相间的斑点尾巴和一对类牛耳的耳朵，你靠着这些认出她是一个牛女。她穿着黄色的裙子并戴着黄色的头巾，尾巴上还系着黄色的丝带。她的手腕上戴着青铜手镯，与戴在手指上的青铜戒指和挂在牛耳上的向日葵耳环相得益彰。
 		</p>
 		<p>
-			This energetic cow-girl's massive, [monica.cupSize]-cup breasts bounce up and down as she skids to a halt in front of you, and after brushing one of her hands back through her black, white-highlighted hair, she flashes you a big smile and reveals, [monica.speech(I'm Monica, the owner of the store. Is there anything I can help you with today, [pc.mr]...?)]
+			这个精力充沛的牛女体型庞大，当她在你面前停下时，[monica.cupSize]罩杯的胸部上下跳动，她的一只手向后梳理了一下黑白相间的头发后，向你露出一个灿烂的笑容说到，[monica.speech(我是店主莫妮卡，今天有什么需要我的地方吗？[pc.mr]……？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_INTRO"><![CDATA[
 	<p>
-		Seeing no reason not to give the happy cow-girl your name, you introduce yourself to Monica and tell her that you were hoping to take a look around at what sort of clothing she has for sale here. Gesturing around her at the dozens of different types of clothing which fill her store, she replies in a friendly, happy voice, [monica.speech(I've got all the latest fashions from Dominion! I'd love to help you pick out an outfit, so just let me know what you're looking for!)]
+		你没有理由不向这位快乐的牛女报上你的名字，于是你向莫妮卡介绍了自己，并告诉她你想看看她这里有哪些衣服出售。莫妮卡指着她店里琳琅满目的服装，用友好，开心的声音回答， [monica.speech(我有来自御城区的所有最新时装！我很乐意帮你挑选服装，请告诉我你想要什么！)]
 	</p>
 	<p>
-		With Monica continuing to flash you a happy smile, you wonder whether to continue with your original plan and see what Monica has for sale, or to instead engage her in further conversation...
+		莫妮卡继续向你投来幸福的微笑，你在想是该看看莫妮卡有什么可卖的，还是与她进一步聊聊……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TRANSACTION_START"><![CDATA[
 	<p>
-		[monica.speech(I get new stock in every day, so if you see something you really like, you can always come back tomorrow and buy more,)] Monica explains as you take a look at what she has for sale.
+		[monica.speech(我每天都会进一些新货，所以如果你看中了什么缺货的，可以明天再来买，)]莫妮卡一边解释，一边向你介绍她出售的商品。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TRANSACTION_START"><![CDATA[
 	<p>
-		[monica.speech(I'm sure there's something here you like the look of, right?)] Monica asks as she trails along behind you.
+		[monica.speech(我相信这里一定有你喜欢的东西，对吧？)]莫妮卡跟在你身后问道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TRANSACTION_START"><![CDATA[
 	<p>
-		[monica.speech(Let me know if you see something you like,)] Monica says as she skips up beside you.
+		[monica.speech(如果你看到喜欢的东西，请告诉我，)]莫妮卡边说边跳到你身边。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_LEAVE"><![CDATA[
 	<p>
-		Having concluded your business here for now, you tell Monica that you've got to get going and say goodbye. Flashing another of her big, friendly smiles, she waves as you head towards the door and calls out, [monica.speech(Goodbye, [pc.name]! I hope to see you again soon!)]
+		你买完东西便告诉莫妮卡你得走了并和她道别。当你到门口时，她又一次露出了友好的笑容，并挥手说，[monica.speech(再见，[pc.name]！希望很快再见到你！)]
 	</p>
 	<p>
-		Waving behind you to the energetic cow-girl, you [pc.step] out of her store and wonder where to go next...
+		你向身后精力充沛的牛女挥挥手，[pc.step]出她的商店，想着接下来该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_SMALL"><![CDATA[
 	<p>
-		Wanting to spend some time talking with Monica, you engage her in conversation by asking her how her day's been so far today. More than happy to talk with you, the busty cow-girl answers your question in great detail, and before you know it, the two of you are making small talk about the weather, the clothing she's got for sale, and the recent happenings in Elis.
+		你想花点时间和莫妮卡聊聊天，于是便和她攀谈起来，问她今天过得怎么样。这位身材丰满的牛女非常乐意与你交谈，她详实地回答了你的问题，不知不觉中，你们俩就聊起了天气、她卖的衣服以及伊利斯最近发生的事情。
 	</p>
 	<p>
-		You and Monica spend the next fifteen minutes in this manner, and after finally exhausting the trivial topics of conversation, the cow-girl smiles and declares, [monica.speech(It's been fun talking with you, [pc.name]! Is there anything else I can do for you today?)]
+		接下来的十五分钟，你和莫妮卡就这样度过了，在聊完这些琐碎的话题后，牛女微笑着说，[monica.speech(和你聊天非常开心，[pc.name]！现在还需要我为你做什么吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_BUSINESS"><![CDATA[
 	<p>
-		Wanting to know more about 'The Fashionable Moo', you ask Monica how business has been lately. Flashing you another one of her happy smiles, she enthusiastically responds, [monica.speech(Everything's going great, thanks; I always get lots of customers every day! Although there are stalls in the market which sell clothing, I offer the biggest selection in Elis, and so I get a lot of people saying that they prefer shopping here to buy their outfits.)]
+		你想多了解哞求时尚，便问莫妮卡最近生意如何。莫妮卡又一次向你露出开心的笑容，热情地回答着，[monica.speech(一切都很顺利，谢谢；我每天都有很多顾客！虽然农贸市场里也有卖服装的摊位，但我这里的衣服是伊利斯最多的，所以很多人都说他们更喜欢在这里买衣服。)]
 	</p>
 	<p>
-		Congratulating the cow-girl on her success, you ask her if business has always been this good. Nodding her head, Monica explains, [monica.speech(Before I bought it and turned it into 'The Fashionable Moo', this place used to be a different clothing store, and so everyone in Elis already knew to come here for their clothing. Thanks to that, and the good reputation I've got from stocking a huge selection of clothing, I've always had lots of customers.)]
+		你祝贺这位牛女经营得成功的同时问她生意是否一直这么好。莫妮卡点点头，解释道， [monica.speech(在我买下这里并将其改名为哞求时尚之前，这里就是一家与众不同的服装店，因此伊利斯的所有人都知道来这里买衣服。正因如此，再加上我的服装种类繁多，声誉很好，所以一直都有很多顾客。)]
 	</p>
 	<p>
-		After spending the next few minutes discussing the finer points about her business model, the topic of conversation draws to an end, leading Monica to smile and ask, [monica.speech(So, was there anything else you needed, [pc.name]?)]
+		在接下来的几分钟里，莫妮卡一直在聊着关于她商业模式的细节直到话题结束，莫妮卡微笑着问， [monica.speech(所以你有看中什么吗，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_ELIS"><![CDATA[
 	<p>
-		Wanting to hear Monica's thoughts on Elis, you ask her what she thinks of living here in this town. After spending a moment to think of how to answer, she says, [monica.speech(Well, I used to live in a small village out in the Fields, so compared to that there's far more going on here, but it doesn't have the same kind of close-knit community that I was used to. Thanks to Lunette, there's been a huge influx of refugees into Elis over the past couple of years, and tensions between them and the original residents of Elis flare up now and again. Thanks to those troubles, it isn't as nice here as it used to be, but it's still great living here!)]
+		你想听莫妮卡对伊利斯的看法，于是问她在这个小镇生活怎么样。莫妮卡花了一点时间思考如何回答，然后说，[monica.speech(我以前住在田野的一个小村庄里，所以和那里相比，这里发生的事情要多得多，但这里没有我习惯的那种亲密无间的社区。拜露内特所赐，这几年有大量难民涌入伊利斯，他们和伊利斯原住民之间经常发生冲突。都是因为这些麻烦事，这里才没有以前那么好，但生活在这里仍然很棒！)]
 	</p>
 	<p>
-		After that, the cow-girl spends a few minutes describing the perks of living in Elis, and then after that she spends a while talking about some recent events that have been happening here. After ten minutes, your conversation draws to a close, and with a smile on her face, the busty cow-girl asks, [monica.speech(Is there anything else I could do for you today, [pc.name]?)]
+		之后，牛女花了几分钟介绍了生活在伊利斯的好处，然后她又花了一段时间谈论最近这里发生的一些事情。十分钟后，你们终于聊完了，大胸牛女面带微笑地问，[monica.speech(现在还需要我为你做什么吗，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_HISTORY"><![CDATA[
 	#IF(pc.hasQuest(QUEST_LINE_ROMANCE_MONICA))
 		<p>
-			Wanting to talk to Monica about her past again, you ask her to remind you of how long she's been running this place, and what led to her wanting to own a clothing store.
+			你想和莫妮卡聊聊她的过去，就让她提醒你，她经营这个地方有多久了，是什么原因让她想开了一家服装店。
 		</p>
 		<p>
-			[monica.speech(Well, it was about five years ago that I bought this place, and before that, I used to work as a dairy cow in a nice little barn out in the fields,)] she tells you once again. Before you can ask more about her work as a 'dairy cow', Monica squeezes her huge breasts and reveals with a hint of pride in her voice, [monica.speech(Along with a dozen other girls, my breasts were milked all day, and I was the most productive employee there! Thanks to that, I always got a big bonus at the end of each month, which is what helped me to save up and buy this place. It'd always been my dream to own a clothing store, and so when the farm's owners sold out to Evelyx, I quit and finally made my dream a reality!)]
+			[monica.speech(嗯，大概是五年前我买下了这个地方，在那之前，我曾经在田野一个漂亮的小谷仓里当乳牛，)]还没等你问更多关于她作为“乳牛”的工作，莫妮卡就捏了捏她巨大的乳房。声音中透露出一丝自豪，[monica.speech(我和其他十几个女孩一起整天都被挤奶，我是那里最有生产力的员工！因此，每个月底我都能拿到一大笔奖金，这也是我攒钱买下这里的原因。拥有一家服装店一直是我的梦想，所以当农场主把谷仓卖给艾弗利克斯时，我就辞职了，终于实现了我的梦想！)]
 		</p>
 		<p>
-			Commenting on the big career change from dairy cow to clothing store owner, you ask Monica how she managed to adjust to her new life. Flashing you a slightly-embarrassed smile, she says, [monica.speech(Well, like most ex-cows that I know of, I'd grown to love the feeling of being milked, so although I massively reduced my milk production via transformative potions, I still produce enough to fill a couple of bottles each night. That's really helped me to switch over to this more normal life.)]
+			在谈到从乳牛到服装店店主的重大职业转变时，你问莫妮卡是如何适应新生活的。她向你露出一个略显尴尬的微笑，说道，[monica.speech(就和我知道的大多数前乳牛一样，我越来越喜欢被挤奶的感觉，尽管我通过转化药水大量减少了奶水的分泌，但每晚奶水还是会装满几个奶瓶。这确实帮助我适应了这种更正常的生活。)]
 		</p>
 		#IF(pc.isQuestCompleted(QUEST_LINE_ROMANCE_MONICA))
 			<p>
-				Continuing to grope her huge breasts, she bites her lip and steps a little closer to you, before teasing, [monica.speech(Thanks to you, my nightly milking is now every bit as pleasurable as it used to be. Thanks for getting my breast pump back for me, [pc.name], I'm really, really grateful...)]
+				莫妮卡继续摸索她巨大的乳房，她咬着嘴唇，向你走近了一些，然后挑逗着，[monica.speech(多亏了你，我现在每晚挤奶都像以前一样愉快了。谢谢你帮我把吸奶器找回来，[pc.name]，我真的非常非常感激……)]
 			</p>
 			<p>
-				From her behaviour, it's clear that Monica is attracted to you, and after giving you a coy look, she teases,
+				从她的表现来看，莫妮卡显然是被你吸引了，在腼腆地看了你一眼后，她挑逗着，
 				#IF(flags.hasFlag(FLAG_innoxia_monica_milked))
-					 [monica.speech(I'm still a bit worn out from earlier, but if you come back tomorrow, I'd like it if you could help to milk me again...)]
+					[monica.speech(我刚才还有点累，如果你明天再来，我希望你能再帮我挤一次奶……)]
 				#ELSE
-					 [monica.speech(You know, I could always use some help being milked...)]
+					[monica.speech(你知道的，我总是需要有人帮我挤奶……)]
 				#ENDIF
 			</p>
 		#ELSE
 			<p>
-				Continuing to grope her huge breasts, she bites her lip and steps a little closer to you, before sighing, [monica.speech(Thanks for offering to get my breast pump back for me, [pc.name], I'm really, really grateful. Just be careful out there, ok?)]
+				莫妮卡继续摸索她巨大的乳房，她咬着嘴唇，向你走近了一些，然后叹了口气，[monica.speech(谢谢你帮我取回吸奶器，[pc.name]，我真的非常非常感激。在外面小心点，好吗？)]
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Curious about Monica's past and how she came to own this shop, you ask the cow-girl how long she's been running this place, and what led to her wanting to own a clothing store.
+			你很好奇莫妮卡的过去，也很好奇她是如何拥有这家店的，于是你问这位牛女，她经营这家店有多久了，是什么原因让她想拥有一家服装店。
 		</p>
 		<p>
-			[monica.speech(Well, it was about five years ago that I bought this place, and before that, I used to work as a dairy cow in a nice little barn out in the fields,)] she explains. Before you can ask what exactly she means by working as a 'dairy cow', Monica squeezes her huge breasts and reveals with a hint of pride in her voice, [monica.speech(Along with a dozen other girls, my breasts were milked all day, and I was the most productive employee there! Thanks to that, I always got a big bonus at the end of each month, which is what helped me to save up and buy this place. It'd always been my dream to own a clothing store, and so when the farm's owners sold out to some arrogant succubus, I quit and finally made my dream a reality!)]
+			[monica.speech(嗯，大概是五年前我买下了这个地方，在那之前，我曾经在田野一个漂亮的小谷仓里当乳牛，)]她解释道。你还没来得及问她做“乳牛”到底是什么意思，莫妮卡就捏了捏她硕大的乳房，声音中透露出一丝自豪，[monica.speech(我和其他十几个女孩一起整天都被挤奶，我是那里最有生产力的员工！因此，每个月底我都能拿到一大笔奖金，这也是我攒钱买下这里的原因。拥有一家服装店一直是我的梦想，所以当农场主把谷仓卖给一个傲慢的魅魔时，我就辞职了，终于实现了我的梦想！)]
 		</p>
 		<p>
-			Commenting on the big career change from dairy cow to clothing store owner, you ask Monica how she managed to adjust to her new life. Flashing you a slightly-embarrassed smile, she says, [monica.speech(Well, like most ex-cows that I know of, I'd grown to love the feeling of being milked, so although I massively reduced my milk production via transformative potions, I still produce enough to fill a couple of bottles each night. That's really helped me to switch over to this more normal life, although my nightly milking is never the same as it used to be...)]
+			在谈到从乳牛到服装店店主的重大职业转变时，你问莫妮卡是如何适应新生活的。她向你露出一个略显尴尬的微笑，说道，[monica.speech(就和我知道的大多数前乳牛一样，我越来越喜欢被挤奶的感觉，尽管我通过转化药水大量减少了奶水的分泌，但每晚奶水还是会装满几个奶瓶。这确实帮助我适应了这种更正常的生活，虽然我每晚的挤奶量和以前大不相同……)]
 		</p>
 		<p>
-			Reaching up to give her huge breasts one last grope, the busty cow-girl lets out a good-natured laugh and declares, [monica.speech(Anyway, I don't want to be boring you with that stuff! Is there anything else I can do for you today, [pc.name]?)]
+			她伸手最后抚摸了一下她巨大的乳房，然后发出一阵善意的笑声并说，[monica.speech(总之，我不想拿这些事烦你！现在我还能为你做什么吗，[pc.name]？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_MILKING"><![CDATA[
 	<p>
-		Thinking that there's something more to what Monica mentioned about her 'nightly milking' not being the same as it used to be, you ask her what exactly she meant by that.
+		你想到莫妮卡曾提到“夜间挤奶”与过去不同，便问她这到底是什么意思。
 	</p>
 	<p>
-		[monica.speech(Oh, well, it's just something silly, really,)] she replies, before sighing and continuing, [monica.speech(If you really want to know, then I guess I can tell you... Back when I worked at the farm, I had a custom breast pump made, which perfectly fits me. Of course, most of the day we'd be milked by the machines, but after that I could always wind down and get some real pleasure out of using my special pump to finish me off for the day. I've gone through at least a dozen 'Moo Milker' breast pumps since leaving the farm, but none of them have ever felt quite the same as my custom one did...)]
+		[monica.speech(哦，好吧，这只是些蠢事，真的，)]她答道，叹气后继续说，[monica.speech(如果你真的想知道的话，我也可以告诉你……我当初还在农场工作的时候，有一个完美贴合我的定制吸奶器。当然，每天绝大多数时间我们都是用机器挤奶。但完成一天的工作后，我总是可以放松下来，从我的特殊吸奶器中获得真正的乐趣。离开农场后，我至少用了一打的‘哞哞挤奶器’，但没有一个和我的定制吸奶器感觉一模一样……)]
 	</p>
 	<p>
-		Assuming that she's left her custom pump at the farm, you ask Monica why she hasn't gone back to retrieve it. Shuffling around on the spot a little in a clear sign of unease, she explains, [monica.speech(I've heard some really bad things about the new management. I only met the succubus who took over the farm once, right after the deal had been done and I went to hand in my letter of resignation. Her attitude and reaction to me quitting was... well... not a very pleasant experience. I know for a fact that she'd never agree to give me my old pump back.)]
+		你想莫妮卡应该是把定制吸奶器落在农场了，问她为什么不回去取。她立刻不安地扭动着，叹气解释说，[monica.speech(我听说过一些关于新管理者的坏事。我只见过那个接管农场的魅魔一次，就在交易完成后，我去递交辞职信的时候。她对我辞职的态度和反应是……额……这经历不是很愉快。而我也知道她永远不会同意把我的旧吸奶器还给我。)]
 	</p>
 	<p>
-		Letting out a regretful sigh, Monica concludes by saying, [monica.speech(I wish I'd have thought to take it with me when I quit, but what's done is done... Anyway, I don't want to burden you with these bad thoughts, so is there anything else you want from me today?)]  
+		莫妮卡遗憾地叹了口气，结束话题，说道，[monica.speech(我多希望当初辞职时能记着带上它，但事已至此……无论如何，我不想让这些坏想法给你带来负担，所以，今天你还想从我这里了解什么吗？)]  
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_BOOBIES"><![CDATA[
 	<p>
-		Every time Monica moves, her huge breasts jiggle and sway in a mesmerising manner, and before you know what you're doing, you're making a very forward comment on how large the cow-girl's breasts are.
+		莫妮卡每次移动时，她巨大的乳房都会迷人地摇晃，在你知道自己在做什么之前，你给予这个牛女的大胸很高的正面评价。
 	</p>
 	<p>
-		[monica.speech(Oh these?)] she replies, pushing out her chest and thrusting her massive breasts towards you, [monica.speech(My boobies? My massive fucking tiddies? My super stuffed-up milkies? My honker-donker doinky-boinkies? My fucking fabric-stretching, wind-flapping, gravity-welling sex mounds? Do you mean these super duper, ultra god damn motherfucking tits?)]
+		[monica.speech(哦，它们吗？)]她回答说，挺起胸膛，把巨大的乳房顶向你，[monica.speech(我的胸部？我他妈满载牛奶又颠颠颤颤的大奶子？我这总是撑大衣服又迎风起伏的，还会下垂的色气肉堆吗？你是说这些超棒超该死的奶子吗？)]
 	</p>
 	<p>
-		After you've replied in the positive, Monica smiles and says, [monica.speech(Oh, well in that case thank you for the compliment, [pc.name]!)]
+		在得到你的肯定回答后，莫妮卡微笑说，[monica.speech(哦，那样的话，多谢夸奖，[pc.name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_MILKING_HELP"><![CDATA[
 	<p>
-		Deciding to offer Monica your help, you tell her that you'd be willing to go and retrieve her unique breast pump from her old farm. The cow-girl's eyes open wide as she hears you say this, and she quickly asks with more than a hint of excitement in her voice, [monica.speech(You'd really do that for me?)]
+		你决定帮助莫妮卡，于是告诉她你愿意去旧农场取回她特制的吸奶器。牛女听到你这么说，瞪大眼睛，兴奋地快速问道，[monica.speech(你真的愿意为我这么做吗？)]
 	</p>
 	<p>
-		After confirming that you're serious, you ask Monica where her old farm is located, and who the succubus is who you'll have to deal with.
+		你下定决心，询问莫妮卡旧农场的位置，以及你要面对的魅魔是谁。
 		#IF(game.getWorlds().get(WORLD_TYPE_WORLD_MAP).getCell(PLACE_TYPE_innoxia_fields_dairyFarm)==null)
-			 Beaming at you in delight, Monica tells you that the farm is some distance to the north-east of Elis, and after showing her your map, she marks where it is on it. Gazing into your eyes, she reveals, [monica.speech(The succubus who took the farm over is called 'Evelyx', and she renamed the place 'Evelyx's Dairy' when she took it over. From what I've heard, she had all of the old buildings demolished, and now it's just a few modern barns. Evelyx isn't the nicest person around, so please be careful when dealing with her...)]
+			莫妮卡眉开眼笑地看着你，告诉你农场离伊利斯东北部有一段距离。你把地图给她看，她便在地图上标记了农场的位置。她盯着你的眼睛说，[monica.speech(接管农场的魅魔被称为‘艾弗利克斯’，她接管农场后将其改名为‘艾弗利克斯乳业’。据我所知，她把所有的旧建筑都拆了，现在只有几个现代化的谷仓。艾弗利克斯不是什么好人，和她打交道务必小心……)]
 		#ELSE
-			 Beaming at you in delight, Monica tells you that the farm is some distance to the north-east of Elis, and, just as you'd started to suspect, she names it as 'Evelyx's Dairy'.
+			莫妮卡眉开眼笑地看着你，告诉你农场离伊利斯东北部有一段距离。正如你的猜想，她把它命名为“艾弗利克斯乳业”。
 			#IF(flags.hasFlag(FLAG_innoxia_evelyx_work_started))
-				 You tell the cow-girl that you're actually employed at Evelyx's farm, to which she replies in surprise,
+				你告诉牛女，你实际上受雇于艾弗利克斯的农场，她惊讶地回答，
 			#ELSE
-				 You tell the cow-girl that you've actually visited Evelyx's farm before, to which she replies in surprise,
+				你告诉牛女，你以前去过艾弗利克斯的农场，她惊讶地回答，
 			#ENDIF
-			 [monica.speech(Oh! Well, then you already know far more about the place than I do! I'm sure that you already know this, but please do be careful when dealing with Evelyx...)]
+			[monica.speech(哦！好吧，那么你对这地方的了解已经比我多得多了！尽管我相信你已经知道这一点，但在和艾弗利克斯打交道时请务必小心……)]
 		#ENDIF
 	</p>
 	<p>
-		Reassuring Monica that you'll be fine, you tell her that you'll return and let her know as soon as you've managed to secure her breast pump. Clapping her hands together in excitement, the happy cow-girl flashes you another big smile and offers you her thanks, before asking, [monica.speech(Did you want to take a look at the clothing I've got for sale before you go, [pc.name]?)]
+		你告诉莫妮卡你会安全回来的，而且取回吸奶器后就会尽快告知她，让她安心。快乐的牛女兴奋地将手一拍，再次向你投以灿烂的微笑并表示感谢，然后问道，[monica.speech(离开之前，你想看看我要卖的衣服吗，[pc.name]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_MILKING_COMPLETE"><![CDATA[
 	<p>
-		Wanting to give Monica the good news, you tell her that you've discussed the matter of her custom breast pump with Evelyx. The cow-girl's eyes open wide as you say this, and in an impatient tone she asks, [monica.speech(So?! Did you manage to get it from her?!)]
+		你想告诉莫妮卡好消息，你已经和艾弗利克斯讨论好定制吸奶器的事宜。你说话时，牛女瞪大眼睛，急切地问道，[monica.speech(所以呢？！你能从她那里拿到吗？！)]
 	</p>
 	<p>
-		As an answer to her question, you produce the breast pump which you retrieved from Evelyx's Dairy and hold it out towards the cow-girl. Seeing that you've succeeded in your quest, Monica happily jumps up and down on the spot, causing her massive breasts to bounce up and down in a hypnotic rhythm. Taking the breast pump from you, she flashes you an enormous smile and declares, [monica.speech(You're the best, [pc.name]! You have no idea how much this means to me! I can't believe you actually managed to get it from Evelyx. Here, let me give you a proper thank-you...)]
+		作为对她问题的回答，你把从艾弗利克斯乳业取回的吸奶器举给牛女看。看到你成功完成任务，莫妮卡立马高兴得上蹿下跳，她巨大的乳房也以令人晕眩的律动上下跳动着。她从你手中取过吸奶器，给你一个灿烂的微笑，说，[monica.speech(你是最棒的，[pc.name]！你不知道这对我有多重要！我不敢相信你真的能从艾弗利克斯那里得到它。于此，我可真要好好谢谢你呢……)]
 	</p>
 	<p>
-		Before you can react, Monica leans forwards and happily plants a big, wet kiss directly on your [pc.lips+]. Although she quickly pulls back, the cow-girl remains standing right in front of you, and as you catch the floral scent of her perfume, she lowers her voice and suggests in a husky tone, [monica.speech(I'd love to repay you for your trouble, so you're more than welcome to see how my pump works first-hand if ever you're interested... Just say the word, and we can head on up to my room...)]
+		你还不及反应，莫妮卡便高兴地身体前倾，径直在你[pc.lips+]上来了个长长的湿吻。牛女很快就退后，但她仍站在你的正前方，你可以嗅到她香水中的花朵芳香。她压低声音，沙哑地建议说，[monica.speech(我很想犒劳你的奔波，所以如果你感兴趣的话，非常欢迎你亲眼看看我的泵是如何工作的……只要你说一声，我们就可以去房间了……)]
 	</p>
 	<p>
-		As she bites her lip and flashes you a seductive glance, you wonder whether to take the busty cow-girl up on her offer to help milk her huge breasts straight away, or to leave your reward for another time...
+		她咬着唇，向你投来诱人的目光，你思索是否要接受这个丰满牛女的提议，马上去帮她挤奶，还是把你的报酬留到下一次……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING"><![CDATA[
 	<p>
-		Unable to resist the temptation of Monica's massive mammaries, you tell her that you'd like to take her up on her offer of helping to milk her. An excited little moan escapes from between the cow-girl's lips as she hears you say this, and after flashing you a delighted smile, she hurries over to the door of her shop and securely locks it. After quickly hanging a small 'Be back soon' sign in the window, she skips back to where you're standing, before taking hold of your [pc.hand] and panting, [monica.speech(Come on then, [pc.name], let's go up to my room...)]
+		你经不住莫妮卡巨大乳房的诱惑，告诉她你愿意接受她的提议，帮她挤奶。听到你这么说，牛女的嘴唇间发出了小声的兴奋呻吟，向你露出了欣喜的笑容，她急忙跑到店门口，牢牢地锁上了门。她迅速地在窗户上挂了一个“很快回来”的小牌子，然后溜回到你站的地方，握住你的[pc.hand]，喘息道， [monica.speech(来吧，[pc.name]，去我的房间……)]
 	</p>
 	<p>
-		Still holding firmly on to your [pc.hand], the enthusiastic cow-girl leads you into her store's back room and then up a narrow staircase to her apartment. Before you know it, you're being led into Monica's bedroom, and you watch as the cow-girl quickly strips out of her dress, before removing her bra and fully exposing her huge breasts. Your eyes are immediately drawn to her massive nipples, which you see are a darker shade than her body's light tone of skin would suggest. Sitting down on the edge of her bed, the cow-girl produces her custom breast pump from out of her bedside cabinet, before holding it out towards you and pleading, [monica.speech(Use this, and let's get started already; my breasts feel so full...)]
+		热情的牛女仍然紧紧握住你的[pc.hand]，带你走进她店里的后室，然后沿着狭窄的楼梯来到她的公寓。不知不觉中，你被带进了莫妮卡的卧室，看着这个牛女迅速脱掉衣服，再脱掉胸罩，完全暴露出巨大的乳房。你的目光立刻被她硕大的乳头吸引住了，你看到她的乳头颜色比她身体的浅色皮肤要深。牛女坐在床边，从床头柜里拿出她定制的吸奶器，然后把它伸向你，恳求道，[monica.speech(用这个，我已经准备好开始了；我的乳房好涨……)]
 	</p>
 	<p>
-		Teasing her free hand over her massive breasts and big nipples, Monica lets out a desperate whine, and as you see a few beads of white milk start to seep out of her huge nipples, you wonder how best to proceed with the cow-girl's milking...
+		莫妮卡用她的空闲的手在她巨大的乳房和大乳头上逗弄着，发出迷乱的呜呜声，你看到几珠白色的乳汁开始从她巨大的乳头中渗出，思考怎样才能最好地给这个牛女挤奶……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_PUMP"><![CDATA[
 	<p>
-		Deciding to stick with Monica's plan, you take the breast pump from her and sit down beside her. Placing the pump's suction cup over one of the cow-girl's massive nipples, you start to operate the device's lever, and thanks to its transparent plastic construction, you're able to see a steady stream of milk start to ooze out of Monica's teat as the pump's vacuum does its work. Placing her hands down on the bed behind her, the cow-girl pushes out her chest and lets out a deeply erotic moan, before panting, [monica.speech(~Ooh!~ Yes, that feels so good... ~Mmm!~ That's it, [pc.name]! Keep going...)]
+		你决定按莫妮卡的计划进行，从她手中接过吸奶器，在她身边坐下。你把吸奶器的吸盘放在牛女的一个硕大乳头上，开始操作设备的控制杆，由于它透明塑料的结构，你可以看到随着奶泵的真空作用，莫妮卡的乳头开始源源不断地渗出乳汁。她将双手放在身后的床上，挺起胸膛，发出色情的呻吟，然后不断喘息，[monica.speech(~哦哦！~是的，感觉真好……~就是这样，[pc.name]！继续……)]
 	</p>
 	<p>
-		The cow-girl's cheeks flush red as you do as she asks and continue operating the pump, and after biting her lip and flashing you a coy look, she starts letting out a stream of horny moans and sighs under her breath. After several minutes of this, she asks you to switch to her other breast, and as you follow Monica's instructions and start pumping away at her other teat, she starts rubbing her legs together and pants, [monica.speech(You're so good at this, [pc.name]... ~Mmm!~ Yes... Give it to me...)]
+		当你按照她的要求继续操作吸奶器时，牛女的脸颊涨得通红，咬着嘴唇向你露出害羞的表情，发出一连串淫荡的呻吟和叹息。几分钟后，她让你换到她的另一边乳房，你按照莫妮卡的指示开始在她的另一个乳头上使用吸奶器，她并起双腿摩擦，喘息道，[monica.speech(你真厉害，[pc.name]……~嗯……给我……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_MASSAGE"><![CDATA[
 	<p>
-		Wanting to do things a little differently, you tell Monica that it would be best for her to operate the pump while you massage her breasts. Flashing you a sly smile as she hears what it is you want to do, the cow-girl pushes out her chest and teases, [monica.speech(You want to get a good feel of my tits? Come on then...)]
+		你想用一种不同的方式，于是告诉莫妮卡，最好由她来操作挤奶器，你来按摩她的乳房。听到你想做什么，牛女向你露出一个狡猾的微笑，然后挺起胸挑逗你，[monica.speech(你想好好摸摸我的奶子吗？来吧……)]
 	</p>
 	<p>
-		With Monica agreeing to your suggestion, you move into position beside her, and as she places her pump's suction cup over one her massive nipples, you reach forwards and sink your [pc.fingers+] into her huge, pillowy mammaries. The cow-girl lets out a deeply erotic moan as you start to grope and massage her breasts, and as she operates her breast pump to extract the milk from her dark nipples, she pants, [monica.speech(~Ooh!~ Yes, that feels so good... ~Mmm!~ That's it, [pc.name]! Keep going...)]
+		莫妮卡同意了你的建议，你在她身边摆好姿势，她把挤奶器的吸盘放在她巨大的乳头上，你向前伸手，将[pc.fingers+]伸进她巨大的、枕头般的乳房。当你开始摸索和按摩她的乳房时，牛女发出了色情的呻吟，她用吸奶器从深色的乳头中挤出乳汁，喘息道，[monica.speech(~哦！~ 是的，感觉真好…… ~就是这样，[pc.name]！继续……)]
 	</p>
 	<p>
-		The cow-girl's cheeks flush red as you do as she asks and continue kneading and squeezing her huge breasts, and after biting her lip and flashing you a coy look, she starts letting out a stream of horny moans and sighs under her breath. After several minutes of this, she switches the pump to her other breast, and as you continue playing with her tits, she starts rubbing her legs together and pants, [monica.speech(You're so good at this, [pc.name]... ~Mmm!~ Yes... Give it to me...)]
+		当你按照她的要求继续揉捏她巨大的乳房时，牛女的脸颊涨得通红，咬着嘴唇向你露出害羞的表情，发出一连串淫荡的呻吟和叹息。几分钟后，她把吸奶器换到另一边乳房上，你继续玩弄她的奶子，她并起双腿摩擦，喘息道， [monica.speech(你真厉害，[pc.name]……~嗯……给我……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_DRINK"><![CDATA[
 	<p>
-		Wanting to do more than simply operate Monica's breast pump, you tell her that it would be more effective for you to use your mouth and suckle on her breasts instead. The cow-girl's cheeks flush red as she hears you say this, but after flashing you a coy smile, she agrees to your plan by teasing, [monica.speech(You want me to breast-feed you? Well, if that's what you really want, [pc.name], then I'm happy to play along...)]
+		你不只想操作莫妮卡的吸奶器。你告诉她，你亲自吸奶效果更好。牛女听你这么说，脸颊绯红。她露出腼腆的微笑，挑逗地同意了你的计划，[monica.speech(你想让我给你喂奶？好吧，如果你真的想这样，[pc.name]，我很乐意配合……)]
 	</p>
 	<p>
-		Pushing out her chest, Monica beckons you forwards, and as you move your face towards her massive breasts, she reaches forwards and pulls you into her huge, pillowy mammaries. After planting a series of kisses on her massive breasts, you quickly move over to one of her large, dark nipples, before parting your [pc.lips+] and taking it into your mouth. Using your [pc.tongue+] to playfully lick and tease her teat, you start to suck on Monica's nipple, and within a second, her warm, creamy milk starts to seep out into your mouth. The cow-girl lets out a deeply erotic moan as you start to suckle on her breast, and as she pulls your face into her chest, she pants, [monica.speech(~Ooh!~ Yes, that feels so good... ~Mmm!~ That's it, [pc.name]! Keep going...)]
+		莫妮卡挺起胸膛，招手示意你过来，当你把脸移向她巨大的乳房时，她向前伸手，把你拉进她巨大的、枕头般柔软的乳房。在她巨大的乳房上留下一连串的吻后，你迅速移到她的一颗又大又深的乳头上，然后分开你[pc.lips+]把它含进嘴里。你用你[pc.tongue+]调皮地舔舐和挑逗她的乳头，然后吮吸，不到一秒钟，她温暖的、奶油般的乳汁就开始渗入你的口中。当你开始吸她的乳房时，牛女发出了无比色情的呻吟，她把你的脸埋进她的胸部，喘息道，[monica.speech(~哦！~是的，感觉真好……~就是这样，[pc.name]！继续……)]
 	</p>
 	<p>
-		The cow-girl starts letting out a stream of horny moans and sighs under her breath as you continue to suck on her nipple and drink her milk. After several minutes, she gently pushes you back and asks you to switch to her other breast, and as you follow Monica's instructions and move over to start sucking on her other teat, she rubs her legs together and pants, [monica.speech(You're so good at this, [pc.name]... ~Mmm!~ Yes... Drink it all down, that's a good [pc.girl]...)]
+		你继续吮吸她的乳头并喝她的乳汁，牛女发出一连串淫荡的呻吟和感叹。几分钟后，她轻轻地把你往后推，让你换到她的另一边乳房上，你按照莫妮卡的指示移过去开始吮吸她的另一个乳头，她摩擦着双腿，喘息道，[monica.speech(你真厉害，[pc.name]……~呣嗯！~对……全部喝掉才是好孩子……)]
 	</p>
 	<p>
-		After spending the next five or so minutes drinking Monica's milk, you start to feel quite full, and after pulling back from her huge breasts, you ask her how much more milking she needs. Letting out a playful laugh, she tells you that her tits are still well over half full, and so with there being simply too much milk to be drunk in a single session, you end up having to use the cow-girl's breast pump after all. Placing the pump's suction cup over one of Monica's massive nipples, you start to operate the device's lever, and thanks to its transparent plastic construction, you're able to see a steady stream of milk start to ooze out of the cow-girl's teat as the pump's vacuum does its work. Placing her hands down on the bed behind her, she pushes out her chest and lets out another deeply erotic moan, before panting, [monica.speech(~Mmm!~ Yes, that feels so good... ~Aah!~ Keep going, [pc.name]...)]
+		在花了五分钟左右的时间喝莫妮卡的奶后，你开始感觉有些饱了，从她巨大的乳房上退开后，你问她还有多少奶需要挤。莫妮卡嬉笑着告诉你，她的乳房仍然有一半以上是满的，由于你一次喝的奶实在是太多了，你最终还是不得不使用牛女的吸奶器。你将吸奶器的吸盘放在莫妮卡的一个硕大乳头上，然后开始操作设备的控制杆，由于它透明塑料的结构，你可以看到随着奶泵的真空作用，奶水开始源源不断地从牛女的乳头中渗出。她将双手放在身后的床上，挺起胸膛，发出色情的呻吟，然后不断喘息，[monica.speech(~嗯！~感觉真好……~啊啊！~继续，[pc.name]……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_FINISHED"><![CDATA[
 	<p>
-		Soon enough, the bottle that's attached to the pump is completely full of milk, but instead of signalling the end of the milking session, Monica produces another empty bottle from out of her cabinet, and after swapping them over, she asks you to keep going. Twenty minutes, and a lot of horny moaning and panting later, and several bottles full of Monica's milk are sitting on the floor beside you. With her breasts now drained, the cow-girl lets out a deep, satisfied moan, before happily smiling at you and sighing, [monica.speech(That was amazing, thank you so much for helping me with this, [pc.name]...)]
+		不一会儿，连着挤奶器的瓶子就装满了奶，但莫妮卡并没有表示挤奶结束，而是从柜子里拿出另一个空瓶子，把瓶子交换后，她让你继续挤奶。随着乳房被榨干，牛女发出了低沉而满足的呻吟，开心地对你微笑并感叹，[monica.speech(太棒了，非常感谢你帮我解决，[pc.name]……)]
 	</p>
 	<p>
-		As she says your name, she spreads her legs a little, and as your attention is drawn down to her groin, you see that there's a wet patch in her lacy panties. Letting out a little high-pitched laugh as she sees you looking down between her legs, she teases, [monica.speech(You know, cows are conditioned to associate being milked with having sex... You've really got me turned on now, so how about it? Want to have some fun before I have to get back to work?)]
+		她微微张开双腿叫你的名字时，你的视线被她的下体吸引，发现她的蕾丝内裤上湿了一片。当她看到你低头看她的两腿之间时，她发出了一阵高亢的笑声，挑逗你道， [monica.speech(你知道的，牛习惯把挤奶和做爱联系在一起……你现在真的让我兴奋起来了，怎么样？想在我回去工作前找点乐子吗？)]
 	</p>
 	<p>
-		Dropping one of her hands down to her groin, Monica slides her panties to one side, flashing you her dripping-wet pussy as she lets out an excited moan. Her [monica.labiaSize] labia are the same dark shade as her nipples, and as you watch the cow-girl slide her fingers over her eager cunt, you wonder whether you should take things further and have sex with her right here and now...
+		莫妮卡将一只手移向下体，把内裤滑到一边，发出兴奋的呻吟，你看到她湿漉漉的小穴。她的[monica.labiaSize]阴唇和乳头的颜色一样深，你看着这个牛女用手指滑过她充满渴望的阴户，你在思考是否应该更进一步，就在此时此地和她做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_FINISHED_LEAVE"><![CDATA[
 	<p>
-		Although you enjoyed helping to milk Monica, you really don't feel like having sex with her, and so you tell the cow-girl that you've got to leave. She lets out a disappointed whine as she hears this, and after pouting at you, she sighs, [monica.speech(Fine... I'm going to need a few minutes to finish myself off here, so you can head downstairs and let yourself out. Thanks for helping me with my milking, [pc.name], and maybe next time you'll be up for a quick fuck?)]
+		虽然你很喜欢帮莫妮卡挤奶，但你真的不想和她做爱，所以你告诉这位牛女你得离开了。她听后失望地哼了一声，对你噘了噘嘴，然后叹了口气， [monica.speech(好吧……我需要几分钟在这里把剩下的弄完，你可以下楼去休息了。谢谢你帮我挤奶，[pc.name]，也许下一次你会想和我快速做一场爱？)]
 	</p>
 	<p>
-		Making a non-committal response, you say goodbye to Monica, before [pc.stepping] out of her room and leaving her to deal with her arousal by herself. Heading down the stairs, you pass through her store and show yourself out into Wall's End, before looking around the shopping precinct and wondering where to go next...
+		你不置可否地应了一声，和莫妮卡道别，然后走出她的房间，让她自己处理性奋。你走下楼梯，穿过她的商店，来到墙之尽头，环顾购物区，思考下一步该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_FINISHED_SEX_START"><![CDATA[
 	<p>
-		Not being able to resist that offer, you move up close to Monica and playfully tease her big nipples as you ask if she always gets turned on from being milked like this. Leaning into you, the horny cow-girl lets out an erotic moan and reveals in breathless sighs, [monica.speech(I don't normally get this bad... It must be because you're so good at milking...)]
+		你无法拒绝莫妮卡的好意，于是你靠近她，调皮地挑逗她的大乳头，问她这样挤奶是不是总能让她兴奋。莫妮卡靠在你身上，淫荡的牛女发出色情的呻吟和喘不上气的叹息，[monica.speech(我一般都不会这么糟糕的……一定是因为你太会挤奶了……)]
 	</p>
 	<p>
-		Leaning heavily into you, Monica plants a big, wet kiss on your [pc.lips], and before you know it, the two of you are passionately making out with one another. After a few moments of this, the cow-girl breaks off from your kiss, before lying back on her bed and spreading her legs, and as she presents you with her wet cunt, she desperately moans, [monica.speech(Come on, [pc.name], fuck me already!)]
+		莫妮卡重重地靠在你身上，在你的[pc.lips]上留下了一个大大的湿吻，不知不觉中，你们俩已经激烈地亲吻在一起了。过了一会儿，牛女打断了你们的亲吻，她躺回床上，张开双腿，向你展示她湿漉漉的小穴，饥渴地呻吟着，[monica.speech(快来吧，[pc.name]，我已经准备好被干了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_FINISHED_SEX_END"><![CDATA[
 	<p>
-		Collapsing back on her bed, Monica's huge breasts rise and fall in time with her heavy breathing as she pants,
+		莫妮卡倒在床上，巨大的乳房随着她粗重的呼吸起伏，她喘息着，
 		#IF(monica.isSatisfiedFromLastSex())
-			 [monica.speech(Fuck... That was amazing... You're so good, [pc.name]...)]
+			[monica.speech(操……太棒了……你真厉害，[pc.name]… )]
 		#ELSE
-			 [monica.speech(Fuck... I'm still feeling so horny... You didn't exactly satisfy me there, [pc.name]...)]
+			[monica.speech(操……我还是很想要……你没有完全满足我，[pc.name]……)]
 		#ENDIF
 	</p>
 	<p>
-		After spending a moment to get your breath back, you move to start getting your things back in order while the cow-girl quickly cleans herself up in her bathroom. Pulling on her underwear and dress, she flashes you a smile and says,
+		你花了一点时间恢复呼吸，开始收拾自己的东西，牛女则在浴室里快速地清理自己。她穿好内裤和裙子后，对你微笑着说，
 		#IF(monica.isSatisfiedFromLastSex())
-			 [monica.speech(That was just what I needed. Thanks again, [pc.name]! Now let's head back downstairs.)]
+			[monica.speech(这正是我需要的。再次感谢你，[pc.name]！现在我们下楼去吧。)]
 		#ELSE
-			 [monica.speech(I can always finish myself off later... Thanks again for the help with my milking, [pc.name]. Now let's head back downstairs.)]
+			[monica.speech(我总能在晚些时候自己解决掉……再次感谢你帮我挤奶，[pc.name]。现在我们下楼去吧。)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_MILKING_FINISHED_SEX_END_LEAVE"><![CDATA[
 	<p>
-		As the two of you move to her bedroom door, the cow-girl stops and exclaims, [monica.speech(Oh! I need to put my milk in the fridge and get it dated! You go on ahead, [pc.name]. You can show yourself out, right?)]
+		当你们俩走到她的卧室门口时，牛女停下了脚步，惊呼道，[monica.speech(噢！我得把奶标上日期放到冰箱里！你先走吧，[pc.name]。你可以自己出去的，对吧？)]
 	</p>
 	<p>
-		Responding in the affirmative, you say goodbye to Monica, before [pc.stepping] out of her room and leaving her to deal with her bottled milk. Heading down the stairs, you pass through her store and show yourself out into Wall's End, before looking around the shopping precinct and wondering where to go next...
+		你的回答是肯定的，你向莫妮卡道别，然后走出她的房间，让她自己处理她瓶装的奶。你走下楼梯，穿过她的商店，来到墙之尽头，环顾购物区，思考下一步该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_FABRIC"><![CDATA[
 	<p>
-		Taking a look around you, you suddenly remember your quest for fabric and ask Monica if she could sell you some fabric. The busty cow-girl makes a show of considering your question when you ask about it, and after placing a finger on her chin to make an exaggerated thinking expression, she playfully replies, [monica.speech(Hmm... Yes, I suppose I could order in some fabric for you. How come? Are you looking to get something custom made? Or are you looking to muscle in on my business?)]
+		你环顾四周，突然想起要买布料，于是问莫妮卡能否卖给你一些布料。这丰满的牛女考虑起你的问题，手指抵着下巴，做出夸张的思考表情，然后她开玩笑地回答道，[monica.speech(嗯……行，我想我可以帮你订购一些布料。你打算做什么？制作服装吗？还是你想插手我的生意？)]
 	</p>
 	<p>
-		You explain that you need the fabric to fix up a certain friend's stall, and since she brought it up, you actually are also looking to get something custom made. Monica's ears swivel forward as she hears this, and she excitedly asks, [monica.speech(Oh? Like what?)]
+		你解释说布料是要用来帮某个朋友修复摊位的，而且正如她所说，你确实也想要这个来制作服装。莫妮卡听到后，耳朵兴奋得直打转，问道，[monica.speech(哦？比如什么？)]
 	</p>
 	<p>
-		You mention that the same stall needs a new sign, but you're not really sure how to go about getting one printed. [monica.speech(Well, printing is one way to do it, or...)] she pauses for a moment before continuing with an up-seller's twinkle in her eye, [monica.speech(...an embroidery would be much more eye-catching, not to mention long-lasting. Maybe with metallic thread?)]
+		你又提到那个摊位需要一个新标志，但你真的不知道画什么。[monica.speech(嗯，画画算个方法，或者……)]她停顿了一下，眼中闪烁着奸商的光芒，[monica.speech(……不考虑耐久的话，刺绣会更引人注目。或者可以用金属线？)]
 	</p>
 	<p>
-		Well, you <i>do</i> want to make it a nice surprise for Eisek. When you assent to an embroidered sign, Monica fishes a small notepad from her considerable bust and begins writing down the description you give of what form it should take.
+		好吧，你<i>真的</i>想给艾瑟克一个惊喜，于是同意用刺绣标志的想法。莫妮卡从她巨大的胸部中抽出一个小记事本，记下你所描述的样式。
 	</p>
 	<p>
-		[monica.speech(I'll need about three days to get this ready and it'll probably run you around two and a half thousand flames,)] she says as you finish your order, [monica.speech(Do feel free to stop by in the meantime.)]
+		[monica.speech(我大约要花三天时间来准备，而且大概要你2500火币，)]当你完成交易时，她说，[monica.speech(在此期间你随时都可以过来。)]
 	</p>
 	<p>
-		With two items down, you look out the window at the smithy across the cobblestone path. You'll need some wooden poles to hold up the awning, preferably the sort that can be folded up. Maybe they can help?
+		你放下两件东西，望向窗外鹅卵石路上的铁匠铺。你需要一些木杆来支撑遮阳篷，最好是能折叠的。也许他们能帮忙？
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CLOTHING_TALK_PICKUP_ORDER"><![CDATA[
 	<p>
-		Monica lights up when you mention the custom order you placed, and cheerfully says, [monica.speech(Oh yes, they just arrived this morning! I think you'll like them a lot!)]
+		你提起你的定制订单，莫妮卡面露喜色，兴奋地说，[monica.speech(哦对，它们今天早上刚到！我想你会很喜欢的！)]
 	</p>
 	<p>
-		The busty cow-girl places a bolt of green fabric and a folded piece of canvas next to each other on the counter. You carefully unfold the canvas to find an embroidered, stylised depiction of many different types of fruits and vegetables carried by an avalanche descending the side of a mountain, while in the corner letters sewn in metallic blue thread proclaim "ALPINE PRODUCE". Whatever your trepidations about how Eisek may react to this tapestry of a sign, the craftsmanship is beyond reproach.
+		丰满的牛女把一块绿色织物和一块折叠的帆布叠放在柜台上。你仔细地展开帆布，发现一幅有个性的刺绣，其中描绘了许多雪崩带下来的不同品种的水果蔬菜，而边角则用金属蓝线缝着“阿尔卑斯出产”几个字。你先前还对艾瑟克如何处理这幅织锦有所担忧，但它的工艺无可挑剔。
 	</p>
 	<p>
-		You must have been staring for a while, since in the corner of your mind you hear Monica ask, [monica.speech(Well? Do you like it?)]
+		你一定是盯着看了好久，在你快要神游出去的时候，你听到莫妮卡问，[monica.speech(怎么样？你喜欢吗？)]
 	</p>
 	<p>
-		You answer affirmatively as you fold up the canvas and hand over the payment. With a teasing smile on her face, Monica giggles, [monica.speech(Your friend is very lucky you came to me. Now, is there anything else I can do for you?)]
+		你肯定地回答，折好画布并付款。莫妮卡脸上带着挑逗的微笑，咯咯笑着说，[monica.speech(你的朋友很幸运你来找我。现在，我还能为你做些什么吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

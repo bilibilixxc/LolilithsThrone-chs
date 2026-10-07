@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[plunge blouse]]></name>
+		<name><![CDATA[紧身短上衣]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[plunge blouses]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[紧身短上衣]]></namePlural> 
 		
-		<description><![CDATA[A silk blouse, with long sleeves and a hanging front tie. The plunging neckline reveals much of the wearer's cleavage.]]></description> 
+		<description><![CDATA[一件丝绸衬衫，长袖，前部系带。深V领口显露出穿着者很大的胸口面积。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

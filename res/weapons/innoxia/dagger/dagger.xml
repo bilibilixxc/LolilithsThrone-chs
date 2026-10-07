@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help!
@@ -38,14 +38,14 @@
 		
 		<!-- What's appended before the weapon's name in an instance of "Innoxia was holding X Demon's Dagger", where X is the determiner. This will usually be either "a" or "an", but for other weapons may be different.
 		An example might be: "Innoxia was holding X scissors", where X (the determiner) would now need to be "a pair of". -->
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
 		<!-- The name of this weapon. -->
-		<name appendDamageName="true"><![CDATA[Demon's Dagger]]></name> <!-- You can leave out the 'appendDamageName' attribute, but if you never want this weapon to be described by its damage type, then set it as false. (i.e. If set to false, this dagger would always be called 'Demon's Dagger' instead of, for example, 'Forceful Demon's Dagger')-->
+		<name appendDamageName="true"><![CDATA[恶魔匕首]]></name> <!-- You can leave out the 'appendDamageName' attribute, but if you never want this weapon to be described by its damage type, then set it as false. (i.e. If set to false, this dagger would always be called 'Demon's Dagger' instead of, for example, 'Forceful Demon's Dagger')-->
 		
 		<!-- The plural name of this weapon.
 			If pluralByDefault's "false" is changed to "true", then the game will always the plural name when referring to this weapon. -->
-		<namePlural pluralByDefault="false"><![CDATA[Demon's Daggers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[恶魔匕首]]></namePlural> 
 		
 		<!-- The description/lore of this weapon.
 			If pluralByDefault's "false" is changed to "true", then the game will always the plural name when referring to this weapon.
@@ -59,11 +59,11 @@
 					 It's worth [style.moneyFormat([#thisItem.getValue()], span)]!
 				]]></description> 
 		-->
-		<description><![CDATA[A finely crafted dagger, with a blade made out of enchanted ethereal energy. Issued to agents of the Enforcers' elite ORICL branch, this dagger is primarily intended to be a symbol of status, but is nonetheless completely functional.]]></description> 
+		<description><![CDATA[一把制作精良的匕首，刀刃由附魔的空灵能量制成。这把匕首配发给执法者精英ORICL的特工，主要是为了作为身份的象征，但功能齐全。]]></description> 
 		
 		<!-- How the weapon is used.
 			This should be a single verb, as it is used for the title of attacking actions in combat. -->
-		<attackDescriptor>stab</attackDescriptor>
+		<attackDescriptor><![CDATA[捅]]></attackDescriptor>
 		
 		<!-- A description of how the weapon is to be used in the sentence: "X your enemy for N damage!"
 			For this dagger, 'stab' fits well enough, but for example a javelin would need more than just 'throw', as otherwise you'd end up with "Throw your enemy for N damage!"
@@ -75,7 +75,7 @@
 		
 		<!-- The description that's displayed when hovering over the attack action in combat. Follow the same guidelines as equipText (a couple of entries further down this page).
 		As this tooltip is only ever seen from the player's perspective, you can always write in the first-person narrative. (Still use npc2 for the target, though.)-->
-		<attackTooltipDescription><![CDATA[Strike out with your Demon's Dagger at [npc2.name].]]></attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用你的恶魔匕首捅[npc2.name]。]]></attackTooltipDescription>
 		
 		<!-- The rarity of this weapon.
 			You should likely leave this as COMMON, as the game automatically varies the rarity of COMMON items based on their enchantments and whether or not they're part of a set.
@@ -93,10 +93,10 @@
 		The target "npc" OR "npc1" should be used for the character using the weapon. e.g. If the player is the one attacking (and is called Innoxia), then [npc.Name] will return "Innoxia"
 		The target "npc2" should be used for the character being attacked. e.g. If Brax is the one being attacked, then [npc2.Name] will return "Brax"
 		-->
-		<equipText><![CDATA[[npc.Name] [npc.verb(unsheathe)] the dagger, readying it for use in combat.]]></equipText>
+		<equipText><![CDATA[[npc.Name]拔出匕首，准备用于战斗。]]></equipText>
 		
 		<!-- The description that's used when equipping this weapon. Follow the same guidelines as equipText. -->
-		<unequipText><![CDATA[[npc.Name] [npc.verb(sheathe)] the dagger, before putting it away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]将匕首插回鞘内，然后收好。]]></unequipText>
 		
 		<!-- The file name of this weapon's image when in the character's inventory. The only supported file type is .svg. I use the free program "Inkscape" to make .svg images for the game. -->
 		<imageName>dagger_sheathed.svg</imageName> 
@@ -290,19 +290,19 @@
 		You can use 'npc' as the parsing target for the person who's attacking, and 'npc2' as the parsing target for the person being hit. -->
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Thrusting out with [npc.her] Demon's Dagger, [npc.name] [npc.verb(manage)] to stab [npc2.name] in the chest; the ethereal arcane blade passing through [npc2.her] torso to drain [npc2.her] energy!
-		]]></hitText>
+		[npc.Name]刺出恶魔匕首，狠狠地捅入[npc2.name]的胸膛；其虚幻的奥术利刃穿过了[npc2.her]的躯体，汲取其能量！
+]]></hitText>
 		<hitText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] Demon's Dagger, [npc.name] [npc.verb(manage)] to slash through [npc2.her] [npc2.arm] with the ethereal blade and drain [npc2.her] energy!
-		]]></hitText>
+		[npc.Name]向着[npc2.name]捅出恶魔匕首，用虚幻的奥术利刃砍到了[npc2.her]的[npc2.arm]，汲取其能量！
+]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] Demon's Dagger, sinking the ethereal blade into [npc2.her] shoulder and causing [npc2.herHim] to lose some energy!
-		]]></hitText>
+		[npc.Name]前踏一步，用恶魔匕首捅向[npc2.name]，虚幻的奥术利刃深深地插进[npc2.her]的肩膀，令其失去了一些能量！
+]]></hitText>
 		<!-- You can add hit descriptions which will only be shown on a critical hit by using the 'criticalHitText' element.
 			This is optional, and you don't need to define any critical hit descriptions (in which case just a regular 'hitText' will be used instead.)-->
 		<criticalHitText><![CDATA[
-		Expertly sidestepping around [npc2.namePos] attempt to block [npc.her] attack, [npc.name] [npc.verb(deal)] a devastating strike with [npc.her] Demon's Dagger!
-		]]></criticalHitText>
+		[npc.Name]精湛地横移一步，绕过了[npc2.namePos]的格挡，用恶魔匕首对[npc2.her]造成了毁灭性的伤害！
+]]></criticalHitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy.
@@ -311,14 +311,14 @@
 		You can use 'npc' as the parsing target for the person who's attacking, and 'npc2' as the parsing target for the person being struck at. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		Thrusting out with [npc.her] Demon's Dagger, [npc.name] [npc.verb(attempt)] to stab [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.name]用恶魔匕首捅向[npc2.name]的胸部，但最后没有成功命中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Striking out at [npc2.name] with [npc.her] Demon's Dagger, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]向着[npc2.name]捅出恶魔匕首，却没能命中目标，让[npc.she]恼火地大喊一声！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(lunge)] out at [npc2.name] with [npc.her] Demon's Dagger, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用恶魔匕首猛地捅向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 	<!-- Descriptions that are used when recovering this weapon (after being used) at the end of each combat tun.

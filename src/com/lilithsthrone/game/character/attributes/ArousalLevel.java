@@ -12,35 +12,35 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum ArousalLevel {
 
-	ZERO_NONE("none", 0, 10, PresetColour.AROUSAL_STAGE_ZERO) {
+	ZERO_NONE("无", 0, 10, PresetColour.AROUSAL_STAGE_ZERO) {
 		@Override
 		public AbstractStatusEffect getRelatedStatusEffect() {
 			return StatusEffect.AROUSAL_PERK_0;
 		}
 	},
 
-	ONE_TURNED_ON("turned on", 10, 25, PresetColour.AROUSAL_STAGE_ONE) {
+	ONE_TURNED_ON("性欲激起", 10, 25, PresetColour.AROUSAL_STAGE_ONE) {
 		@Override
 		public AbstractStatusEffect getRelatedStatusEffect() {
 			return StatusEffect.AROUSAL_PERK_1;
 		}
 	},
 
-	TWO_EXCITED("excited", 25, 50, PresetColour.AROUSAL_STAGE_TWO) {
+	TWO_EXCITED("非常性奋", 25, 50, PresetColour.AROUSAL_STAGE_TWO) {
 		@Override
 		public AbstractStatusEffect getRelatedStatusEffect() {
 			return StatusEffect.AROUSAL_PERK_2;
 		}
 	},
 
-	THREE_HEATED("heated", 50, 80, PresetColour.AROUSAL_STAGE_THREE) {
+	THREE_HEATED("欲火焚身", 50, 80, PresetColour.AROUSAL_STAGE_THREE) {
 		@Override
 		public AbstractStatusEffect getRelatedStatusEffect() {
 			return StatusEffect.AROUSAL_PERK_3;
 		}
 	},
 
-	FOUR_PASSIONATE("passionate", 80, 95, PresetColour.AROUSAL_STAGE_FOUR) {
+	FOUR_PASSIONATE("激情澎拜", 80, 95, PresetColour.AROUSAL_STAGE_FOUR) {
 		@Override
 		public AbstractStatusEffect getRelatedStatusEffect() {
 			return StatusEffect.AROUSAL_PERK_4;
@@ -51,7 +51,7 @@ public enum ArousalLevel {
 		}
 	},
 
-	FIVE_ORGASM_IMMINENT("imminent orgasm", 95, 100, PresetColour.AROUSAL_STAGE_FIVE) {
+	FIVE_ORGASM_IMMINENT("临近高潮", 95, 100, PresetColour.AROUSAL_STAGE_FIVE) {
 		@Override
 		public AbstractStatusEffect getRelatedStatusEffect() {
 			return StatusEffect.AROUSAL_PERK_5;

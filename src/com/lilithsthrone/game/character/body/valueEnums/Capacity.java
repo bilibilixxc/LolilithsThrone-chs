@@ -18,17 +18,17 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum Capacity {
 	
-	ZERO_IMPENETRABLE("extremely tight", "tight", 0f, 1f, PresetColour.GENERIC_SIZE_ONE, false),
+	ZERO_IMPENETRABLE("极紧", "紧致", 0f, 1f, PresetColour.GENERIC_SIZE_ONE, false),
 	
-	ONE_EXTREMELY_TIGHT("tight", "tight", 1f, 2f, PresetColour.GENERIC_SIZE_TWO, false),
+	ONE_EXTREMELY_TIGHT("紧致", "紧致", 1f, 2f, PresetColour.GENERIC_SIZE_TWO, false),
 	
-	TWO_TIGHT("somewhat tight", "tight", 2f, 4f, PresetColour.GENERIC_SIZE_THREE, false),
+	TWO_TIGHT("稍紧", "紧致", 2f, 4f, PresetColour.GENERIC_SIZE_THREE, false),
 	
-	THREE_SLIGHTLY_LOOSE("slightly loose", "loose", 4f, 6f, PresetColour.GENERIC_SIZE_FOUR, false),
+	THREE_SLIGHTLY_LOOSE("略松", "松垮", 4f, 6f, PresetColour.GENERIC_SIZE_FOUR, false),
 	
-	FOUR_LOOSE("loose", "loose", 6f, 9f, PresetColour.GENERIC_SIZE_FIVE, false),
+	FOUR_LOOSE("松垮", "松垮", 6f, 9f, PresetColour.GENERIC_SIZE_FIVE, false),
 	
-	FIVE_ROOMY("very loose", "loose", 9f, 12f, PresetColour.GENERIC_SIZE_SIX, true) {
+	FIVE_ROOMY("很松", "松垮", 9f, 12f, PresetColour.GENERIC_SIZE_SIX, true) {
 		@Override
 		public String getDescriptor() {
 			if(!Main.game.isGapeContentEnabled()) {
@@ -45,7 +45,7 @@ public enum Capacity {
 		}
 	},
 	
-	SIX_STRETCHED_OPEN("stretched open", "gaping", 12f, 16f, PresetColour.GENERIC_SIZE_SEVEN, true) {
+	SIX_STRETCHED_OPEN("张开", "张开", 12f, 16f, PresetColour.GENERIC_SIZE_SEVEN, true) {
 		@Override
 		public String getDescriptor() {
 			if(!Main.game.isGapeContentEnabled()) {
@@ -62,7 +62,7 @@ public enum Capacity {
 		}
 	},
 	
-	SEVEN_GAPING("gaping wide", "gaping", 16f, 25f, PresetColour.GENERIC_SIZE_EIGHT, true) {
+	SEVEN_GAPING("大张", "张开", 16f, 25f, PresetColour.GENERIC_SIZE_EIGHT, true) {
 		@Override
 		public String getDescriptor() {
 			if(!Main.game.isGapeContentEnabled()) {

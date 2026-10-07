@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- All of these are linked to the 'dialogue/innoxia/quests/main/minotallys_meeting.xml' dialogue nodes. -->
@@ -7,289 +7,289 @@
 	
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		Eager to get started on your mission to defeat Lunette, you tell Meraxis that you're ready to meet the town's lilin mayor, Minotallys. Upon hearing your request, the energetic [meraxis.race] spins around on the spot, before pointing to the door and declaring, [meraxis.speech(Then let us not waste a moment more! Onwards!)]
+		你迫不及待地想开始执行打败露内特的任务，于是你告诉梅拉克西丝，你已经准备好去见镇上的里林镇长米诺塔莉丝了。在听到你的请求后，这个充满活力的[meraxis.race]思考了一会，然后指着门说道：[meraxis.speech(那就让我们不要再浪费时间了！出发！)]
 	</p>
 	<p>
-		With that, Meraxis skips off towards the tavern's exit, leaving you to follow in her footsteps...
+		在说完之后，梅拉克西丝便离开了酒馆，留下你跟在其身后……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWN_HALL"><![CDATA[
 	<p>
-		Quickly catching up to the chuuni [meraxis.race] as she flings open the tavern's door and steps outside, you ask her where this meeting is to take place. Turning her head and flashing you a smug grin, she returns your question with one of her own, [meraxis.speech(You truly wish for me to reveal the secrets of our fateful meeting place? Well then, the answer lies in front of you!)]
+		你快步追上[meraxis.race]，当她推开酒馆的门走出来时，你询问她这次会面将在哪里举行。她转过头，向你露出一个得意的笑容，然后用那经典的语调回复你，[meraxis.speech(你真的希望我透露我们命运之约的秘密？那么，答案就在你面前！)]
 	</p>
 	<p>
-		Meraxis points down the road as she says this, and you look down the street to see the tower of Elis's town hall off in the distance. Swirling her cloak about herself in a dramatic fashion, she continues, [meraxis.speech(That's right; we shall be meeting the dreaded Minotallys in her tower of the damned! Mwhahaha!)]
+		梅拉克西丝一边说着一边指着路边，你顺着手指的方向望去，看到了远处伊利斯市镇议会的塔楼。她以一种戏剧性的方式卷起斗篷，然后说道：[meraxis.speech(没错，我们将在她的诅咒之塔中与可怕的米诺塔莉丝见面！哇哈哈！)]
 	</p>
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			Approving of Meraxis's choice of words, you play along with her chuuni mannerisms as the two of you engage in idle smalltalk,
+			你赞同梅拉克西丝的用词方式，然后也学着她的举止闲聊了起来，
 		#ELSE
-			Shaking your head at Meraxis's ridiculous words, you do your best to endure her chuuni mannerisms as the two of you engage in idle smalltalk,
+			你对梅拉克西丝的脱线举止摇摇头，然后在尽量忍受的情况下与其闲聊了起来，
 		#ENDIF
-		 and after ten minutes of [pc.walking] along at her side, the two of you find yourselves standing before Elis's town hall. Consisting of two long, timber-framed buildings joined in the middle by a five-story, steepled tower, the town hall is by far the largest structure in all of Elis. Before you can comment on its size or appearance, Meraxis skips forwards and heads inside, once again leaving you to follow along behind her...
+		在她身边[pc.walking]了十分钟后，你俩发现你们已经站在伊利斯市镇议会前。市镇议会由两座长长的木结构建筑组成，中间由一座五层高的尖塔连接，是目前伊利斯市最大的建筑。在你还未对它的规模或外观发表评论前，梅拉克西丝便向前走去，而你也只能无奈地继续跟在她身后……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWN_HALL_ENTRY"><![CDATA[
 	<p>
-		[pc.Stepping] through the open wooden doors which constitute its main entrance, you enter the town hall and take a quick look around. Positioned in between the exposed wooden beams of the high ceiling, long arcane lamps cast the town hall's interior in an unnatural pale glow. Old wooden floorboards creak under your weight as you [pc.step] forwards, and by glancing to either side, you see that the walls in this entrance hall are covered in boring posters and pieces of uninspiring government propaganda. Looking straight ahead, you see that there's a long desk signposted as 'Information & Reception', and it's in front of this desk that Meraxis is currently standing.
+		[pc.Stepping]穿过构成正门的敞开式木门，进入市镇议会并快速环顾四周。在高高的天花板的那些裸露的木梁之间，长长的奥术灯将市镇议会内部投射出一种不自然的苍白光芒。你向前[pc.step]时，老旧的木地板在你的体重下下发出吱吱嘎嘎的响声。你向两边扫了一眼，发现入口大厅的墙壁上贴满了无聊的海报和毫无新意的政府宣传品。当你看向前方时，你发现有一张长长的桌子，上面写着“信息与接待处”，而梅拉克西丝现在就站在这张桌子前面。
 	</p>
 	<p>
-		[meraxis.speech(Mwhahaha! Bow down before me, you mere mortals! I am the Dark Siren, bringer of ruin and wielder of the darkest secrets of the universe!)] she loudly declares, causing the couple of members of the public who are present to turn their heads. One of the receptionists stationed behind this desk starts to look very worried, and she turns to nervously ask her colleague if she should call for the Enforcers. Hearing her question, Meraxis spins around on the spot and declares, [meraxis.speech(The Enforcers cannot save you now! I am the recognised daughter of Lyssieth herself! None dare question my authority, and those who do soon meet their ultimate fate! Mwhahaha!)]
+		[meraxis.speech(在我面前俯首称臣吧，你们这些凡人！我是暗夜塞壬，毁灭的使者，宇宙最黑暗秘密的掌握者！)]她大声宣布着，引得在场的几位市民纷纷转过头来。站在这张桌子后面的一位接待员开始显得非常担心，她转过身紧张地问她的同事是否应该呼叫执法者。在听到她的问题，梅拉克西丝当场转过身来宣布：[meraxis.speech(执法者现在救不了你们了！我是莉西丝亲自承认的女儿！没有人敢质疑我的权威，那些敢质疑我的人很快就会遭到灭顶之灾！哇哈哈！)]
 	</p>
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			Not wanting to waste your time on such lowly peons, you [pc.step] up beside Meraxis and tell the receptionist that the two of you are here to meet Minotallys.
+			你不想把时间浪费在这些卑微的小人物身上，于是你[pc.step]到梅拉克西丝身边，告诉接待员你们俩是来见米诺塔莉丝的。
 		#ELSE
-			Not having time for her silly games, you [pc.step] up beside Meraxis and tell her to stop causing a scene, before informing the receptionist that the two of you are here to meet Minotallys.
+			你没有时间陪她玩这无聊的游戏，你走到梅拉克西丝身边，告诉她不要再闹了，然后告诉接待员你们两个是来见米诺塔莉丝的。
 		#ENDIF
-		 Clearly having been frightened by Meraxis's show, the receptionist points down the hallway with a trembling hand and tells you that you should talk to the Enforcer who's on duty at the base of the stairs.
+		接待员显然被梅拉克西丝的表演吓坏了，她用颤抖的手指着走廊，告诉你应该去找在楼梯底部值班的执法者。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWN_HALL_STAIRS"><![CDATA[
 	<p>
-		[pc.Stepping] away from the reception desk, you and Meraxis head down the hallway and towards a staircase which is well signposted as leading up into the town hall's tower. As you approach this staircase, you see that there's an Enforcer on duty, and from the fact that she's a succubus, as well as having a military-esque uniform and a pepperball rifle, you can tell that she's one of the Enforcer's elites.
+		你[pc.Stepping]着离开接待处，随后和梅拉克西丝沿着走廊走向楼梯，楼梯上有通往市政厅塔楼的指示牌。当你走近楼梯时，你发现有一个执法者在值班，从她是一个魅魔、有着一身军装和一把胡椒弹步枪的事实来看，你可以判断出她是执法者中的精英之一。
 	</p>
 	<p>
-		[meraxis.speech(Well, well, well, look who's back on duty!)] Meraxis exclaims as she sees this succubus, letting you know that the two of them have met before.
+		[meraxis.speech(哇哦！哇哦！哇哦！看看这是谁回来站岗了！)]梅拉克西丝大呼小叫的声音让你明白她一定认识这个执法者。
 	</p>
 	<p>
-		[style.speechFeminineStrong(Oh no, not you again...)] the Enforcer groans in response, before glancing over at you and asking Meraxis, [style.speechFeminineStrong(Is this [pc.race] with you? A simple yes or no, please, I don't want a repeat of the last time you were here...)]
+		[style.speechFeminineStrong(哦不，又是你……)]执法者叹了一口气，然后扫了你一眼，继续询问梅拉克西丝：[style.speechFeminineStrong(这个[pc.race]是跟你一伙的么？简单回答是或者不是就行了，我可不想重蹈覆辙，毕竟你上次来……)]
 	</p>
 	<p>
-		[meraxis.speech(Mwhahaha! Yes, [pc.name] is with me,)] Meraxis loudly declares.
+		[meraxis.speech(哇咔咔咔！当然，[pc.name]和我是一起的，)]梅拉克西丝大声宣布着.
 	</p>
 	<p>
-		[style.speechFeminineStrong(Ok, that's all I need to know,)] the Enforcer replies, cutting off your chuuni companion before she can launch into another of her self-aggrandising declarations. Stepping aside, the Enforcer waves the two of you through, saying, [style.speechFeminineStrong(I don't need to hear any more. I know that you're Lyssieth's daughter, and that you're the 'universe obliterator' or whatever it is. Just go on up.)]
+		[style.speechFeminineStrong(好好，我知道了，)]执法者在她将你吹到天花乱坠之前连忙摆手打断了她，然后在退到一边示意你们二人过去之前说道：[style.speechFeminineStrong(我不想再听了，我知道你是莉西丝的女儿，也知道你是什么黑暗之主还是乱七八糟的什么东西，现在你赶紧和你的同伴上去吧。)]
 	</p>
 	<p>
-		Puffing out her chest in pride, Meraxis skips past the Enforcer, leaving you to follow her up the winding staircase...
+		梅拉克西丝骄傲地挺起胸膛，然后越过执法者，让你跟着她走上蜿蜒的楼梯……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWN_HALL_UPSTAIRS"><![CDATA[
 	<p>
-		Although the town hall's tower is five stories tall, the spiral staircase curiously only takes you and Meraxis up to the fourth floor. Quickly reaching the top of these stairs, you find yourself confronted by two more succubi Enforcers, each of which is heavily armed and uniformed in the same fashion as the one which you met on the ground floor. Just like their colleague, these two Enforcers immediately recognise Meraxis, and after letting out a synchronised groan, they tell the two of you to wait while they inform Minotallys of your arrival.
+		虽然市政厅的塔楼有五层高，但奇怪的是旋转楼梯只带你和梅拉克西丝上到第四层，所以你们很快就到了楼梯顶端。在这里。你们又遇到了两个魅魔执法者，他们都全副武装，穿着与你在一楼遇到的执法者相同的制服。就像他们的同事一样，这两个执法者一眼就认出了梅拉克西丝，在发出一声一致的呻吟后，他们让你们两个等着，同时通知米诺塔莉丝你们的到来。
 	</p>
 	<p>
-		As one of these Enforcers steps over to knock on the door of what you assume to be Minotallys's office, you're able to take a quick look around at your surroundings. Surrounding the tower's central staircase, a wide, wooden-floored landing separates you from the doors which are set into each of the tower's four sides. The slightly-uneven wooden floorboards, along with the exposed wooden beams which hold up the high ceiling, give the impression that this is a very old structure. Hanging from the walls, there are large, painted portraits of who you assume to be Minotallys, who appears to take the form of a greater cow-girl. What draws your attention to these portraits is that her white, cow-like fur has differently-coloured spots in each of them, ranging from the typical black and brown to exotic shades of pink, green, yellow, purple, and blue.
+		当其中一名执法者走过去敲开你觉得是米诺塔莉丝办公室的门时，你快速地环顾一下周围的环境。围绕着塔楼的中央楼梯，一个宽阔的木地板平台将你与塔楼四面的门隔开。略显不平的木地板，加上支撑高高天花板的裸露木梁，让人感觉这是一座非常古老的建筑。墙壁上悬挂着大幅彩绘肖像，你可以猜测这些肖像是米诺塔莉丝，她似乎是个体型硕大的牛头人。但吸引你注意的是，这些画像上那些像牛一样的白色皮毛上有不同颜色的斑点，有典型的黑色和棕色，也有粉色、绿色、黄色、紫色和蓝色等奇异色调。
 	</p>
 	<p>
-		Before you're able to ask the remaining Enforcer about these paintings, the door to Minotallys's office swings open, but instead of the cow-girl lilin you were expecting to see, a greater alicorn-boy emerges. Standing at [arion.heightValue], and looking to be in his mid-twenties, both the horse-like hair which covers his body, as well as his large feathered wings, are coloured in a soft shade of grey. His smart, black suit, complete with a burgundy tie, gives him a very professional appearance, and as he steps over to where you and Meraxis are standing, he gives you a confident, albeit suspicious glance, before stating, [arion.speech(My name is Arion, and I'm Minotallys's personal assistant. I've had the 'pleasure' of meeting Meraxis already. I assume that you're the [pc.race] she told me about. '[pc.Name]', is it?)]
+		你还没来得及向剩下的那个执法者询问这些画的情况，米诺塔莉丝办公室的门就被推开了，但出现在你面前的却不是你期待看到的牛女，而是一个更大的独角兽男。他的身高为大概有[arion.heightValue]，看上去只有二十多岁，覆盖全身的马鬃和巨大的羽翼都呈现出柔和的灰色。当他走到你和梅拉克西丝所站的位置时，他自信地看了你一眼，尽管眼神中充满了怀疑，然后说道：[arion.speech(我叫阿里昂，是米诺塔莉丝的私人助理。我已经‘有幸’见过梅拉克西丝了，我猜你就是她告诉我的那个[pc.race]‘[pc.Name]’，是吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Arion dialogues: -->
 	
 	<htmlContent tag="ARION_INTRO"><![CDATA[
 	<p>
-		After you've confirmed who you are, Arion narrows his eyes a little and states, [arion.speech(I understand that the two of you have been sent here by Lyssieth herself. At least, that's what Meraxis told me when she came here before...)]
+		在你们确认了自己的身份之后，阿里昂微微眯起眼睛，说道：[arion.speech(我知道你们两位是被莉西丝亲自派到这里来的。至少，这是梅拉克西丝之前来这里时告诉我的……)]
 	</p>
 	<p>
-		[meraxis.speech(That's right! Mommy- I mean, Lyssieth, sent us here on top secret official business!)] Meraxis exclaims, [meraxis.speech(Now show us through to see Minotallys!)]
+		[meraxis.speech(没错！妈妈——我是说莉西丝，她派我们来这里执行绝密公务！)]梅拉克西丝大声喊道：[meraxis.speech(现在带我们去看看米诺塔莉丝！)]
 	</p>
 	<p>
-		[arion.speech(I'm sorry, but you'll have to wait a few minutes first,)] Arion states, blushing a little as he does so. Clearing his throat, he hesitantly explains, [arion.speech(Minotallys will be occupied with some... erm... <i>personal matters</i> for a short while. If you have any questions while we're waiting, please go ahead and ask...)]
+		[arion.speech(对不起，您需要先等几分钟，)]他清了清嗓子，然后迟疑地解释道：[arion.speech(米诺塔莉丝……正在忙一些……<i>私人事务。</i>请稍等片刻，在等待期间，如果您有任何问题，请提出来……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARION_DUTIES"><![CDATA[
 	<p>
-		Wanting to know what sort of duties Arion and Minotallys have, you ask the alicorn-boy what sort of work is involved in being the town's mayor.
+		你想知道阿里昂和米诺塔莉丝的职责是什么，于是你问天角兽男，作为镇长需要做哪些工作。
 	</p>
 	<p>
-		[arion.speech(It's mostly dealing with standard administrative paperwork, such as signing new decrees and making judgements on business licenses and standards,)] he replies, before letting out a slight sigh and continuing, [arion.speech(Lately, however, most of our work has been related to housing refugees in the northern part of Elis. As you've no doubt seen if you've travelled here from Dominion, Lunette's roving marauders have absolutely devastated the surrounding landscape, and while a lot of the displaced residents of the Foloi Fields have gone to Dominion, many have also come here for safety...)]
+		[arion.speech(主要是处理标准的行政文书工作，如签署新法令、对营业执照和标准做出判断，)]他在回答完叹了口气，然后继续说道，[arion.speech(不过最近，我们的大部分工作都与安置伊利斯北部的难民有关。毫无疑问，如果你从御城区来到这里，就会看到露内特的流窜掠夺者已经彻底破坏了周围的景象，虽然许多流离失所的弗洛伊田野居民都去了御城区，但也有许多人为了安全来到了这里……)]
 	</p>
 	<p>
-		[meraxis.speech(That's what we're here to help with!)] Meraxis exclaims, before striking a heroic pose and declaring, [meraxis.speech(We'll sort Lunette out!)]
+		[meraxis.speech(这正是我们要帮忙的！)]梅拉克西丝摆出英雄的姿态说道：[meraxis.speech(我们就是为了解决露内特的麻烦而来！)]
 	</p>
 	<p>
-		Raising one eyebrow, Arion throws Meraxis a doubting glance, before stating, [arion.speech(Well, you'll have to convince Minotallys of the severity of the situation first. Anyway, that matter can wait for your meeting...)]
+		阿里昂挑起眉毛，向梅拉克西丝投去一个怀疑的目光，然后继续说道：[arion.speech(好吧，但你得先让米诺塔莉丝相信情况的严重性。总之，这件事可以等你们见面再说……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARION_PAINTINGS"><![CDATA[
 	<p>
-		Wanting to find out the story behind the seven differently-coloured paintings of Minotallys, you gesture to the portraits and ask him about their unusual colour scheme.
+		你想知道米诺塔莉丝那七幅不同颜色的画作背后的故事，于是便对着肖像做了个手势，向他询问这些不同寻常的配色方案。
 	</p>
 	<p>
-		[arion.speech(Ah yes, that's just one of her little quirks,)] Arion replies, [arion.speech(She likes to change the flavour- Erm, I mean, she likes to change her style based on the day of the week. Today, for example, she's transformed to make her spots [minotallys.skinColourSecondary]. Tomorrow they'll be something else. It's just how it is with her...)]
+		[arion.speech(啊，是的，那只是她的一个怪癖。)]阿里昂继续说道，[arion.speech(她喜欢换换口味……呃，我是说，她喜欢根据一周中的不同日子来改变自己的风格。比如今天，她会把斑点变成[minotallys.skinColourSecondary]。明天就会变成别的样子，她就是这样……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARION_ROOMS"><![CDATA[
 	<p>
-		Looking around at the many doors which are to be found on this floor of the tower, you ask Arion what these rooms are used for.
+		环顾塔楼这一层那么多的门，你问阿里昂这些房间是用来做什么的。
 	</p>
 	<p>
-		[arion.speech(The largest is Minotallys's office,)] he replies, gesturing to the door through which he appeared. Pointing to the opposing walls which flank the one that holds the door to Minotally's office, he continues, [arion.speech(These doors lead into the archive rooms. There's nothing in there except shelves stacked full of old paper records.)]
+		[arion.speech(最大的是米诺塔莉丝的办公室，)]他一边说着道，一边指了指他出现的那扇门，然后他指着米诺塔利办公室大门两侧的门继续说道， [arion.speech(这些门通向档案室，里面什么都没有，只有架子上堆满了旧的纸质记录。)]
 	</p>
 	<p>
-		[meraxis.speech(And what about those two?)] Meraxis asks, pointing to the pair of doors which are on the opposite side of the room to Minotally's office.
+		[meraxis.speech(那这两扇门呢？)]梅拉克西丝指着梅拉克西丝办公室对面的两扇门说道。
 	</p>
 	<p>
-		[arion.speech(Ah, well those used to be archive rooms as well, but due to the increased workload caused by the recent influx of refugees from the Foloi Fields, Minotallys and I have temporarily converted them into our living quarters,)] the alicorn-boy states, [arion.speech(By moving here, we've cut out the time we were spending on the daily commute, and if there's an emergency situation, we can respond very quickly. There have been quite a few of those recently, typically following news of another village being burned down by Lunette's daughters...)]
+		[arion.speech(啊，那些房间以前也是档案室，但由于最近从弗洛伊田野涌入的难民导致工作量增加，米诺塔莉丝和我暂时把它们改成了我们的住处，)]天角兽男说道，[arion.speech(搬到这里后，我们省去了每天通勤的时间，而且如果出现紧急情况，我们也能迅速做出反应。最近这类情况相当多，通常是又有村庄被露内特的女儿们烧毁的消息传来……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARION_MINOTALLYS_READY"><![CDATA[
 	<p>
-		Before you can ask Arion anything else, the door to Minotally's office swings open, and a voice calls out from the other side, [minotallys.speech(Arion! You can show them in now!)]
+		你还没有问完你的问题，米诺塔莉丝办公室的门便打开了，一个声音从里面传了出来：[minotallys.speech(阿里昂！你可以带客人进来了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Minotallys office meeting: -->
 	
 	<htmlContent tag="MINOTALLYS_START"><![CDATA[
 	<p>
-		With Minotallys having finally finished whatever 'personal matters' she was dealing with, Arion sets off towards the now-open door of her office, saying, [arion.speech(Please follow me.)]
+		米诺塔莉丝终于处理完了她的“私事”，阿里昂朝她敞开的门走去时说道：[arion.speech(请跟我来。)]
 	</p>
 	<p>
-		Doing as you're instructed, you and Meraxis follow the alicorn-boy into Minotallys's office. Taking a quick look around at your new surroundings, you see that the office of Elis's mayor has been decorated so as to be worthy of a lilin. Underfoot, a lush, cream-coloured rug covers most of the polished, mahogany floorboards, while on all four sides of the room, a series of colourful, abstract paintings have been hung on the smooth, white walls. Overhead, brushed-steel lights hang down between the ceiling's high beams to cast a natural shade of light over the interior. Several mahogany bookshelves have been placed on either side of the room, and have been stacked full of rare and exotic-looking tomes, trinkets, and pieces of artwork.
+		按照指示，你和梅拉克西丝跟着那个独角兽男走进米诺塔莉丝的办公室。你迅速环顾了一下四周的新环境，发现伊利斯市长办公室的装修配得上一位莉琳。脚下的乳白色毛毯覆盖了大部分光亮的桃花心木地板，一系列色彩鲜艳的抽象画，挂在四周平滑的白色墙壁上。而在头顶上，刷过色的钢制灯悬挂在天花板的高横梁之间，为室内投下一道自然的光影。几排桃花心木书架分别放在房间的两边，上面堆满了稀有和充满异国情调的书籍、小饰品和艺术品。
 	</p>
 	<p>
-		As Arion steps aside to introduce you and Meraxis, you're able to get your first sight of Minotallys. Situated behind a large, mahogany desk, which is almost completely covered in piles of paperwork, the cow-girl lilin is sitting on a luxurious office chair, with her back to the wide window that overlooks the streets of Elis. Appearing almost exactly as she did in her series of portraits, Minotallys has taken the appearance of a greater cow-girl, and is covered in white fur with [minotallys.skinColourSecondary(true)] spots. Her hair, which is styled into a bobcut, is of a similar shade of [minotallys.skinColourSecondary] as her spots, while growing out from the sides of her forehead she has a pair of small, white horns. As Arion finishes introducing you, the lilin locks her golden eyes onto yours and stands up from her chair, allowing you to see that she stands at about [minotallys.heightValue].
+		当阿里昂走到一边去介绍你和梅拉克西丝时，你终于可以第一次见到米诺塔莉丝了。她坐在一张桃花心木大桌子后面，桌上堆积如山的文件几乎完全覆盖了桌面，她看起来几乎和她画像中的样子完全一样，她是一个体型更大一些的牛女，坐在奢华的办公椅上，背对着宽阔的窗户，俯瞰着伊利斯的街道。她全身覆盖着雪白色的皮毛，上面点缀着[minotallys.skinColourSecondary(true)]斑点。她的头发梳成了波波头的款式，同时其发色与她的肤色相似。[minotallys.skinColourSecondary]作为斑点点缀在上面，她的额头两侧长着一对白色的小角。阿里昂向你介绍完后，米诺塔莉丝用那双金色的眼眸紧紧盯着你，然后从椅子上站了起来，你估测她的身高约为[minotallys.heightValue]。
 	</p>
 	<p>
-		[minotallys.speech(Hello again, Meraxis. And I'm pleased to meet you, [pc.name],)] Minotallys cheerfully states, holding out her hand for a shake. As she moves, your eyes are naturally drawn down to her chest, where the feminine blazer and shirt which she's wearing are straining to contain her massive, [minotallys.cupSize]-cup breasts. [pc.Stepping] forwards, you shake the lilin's hand and return her greeting. From your close proximity, you're able to look over the edge of the desk to see that she's wearing a miniskirt, allowing her to show off a good portion of her legs and cow-like hoofs.
+		[minotallys.speech(你好，梅拉克西丝。也很高兴见到你，[pc.name]，)]米诺塔莉丝高兴的伸出手并向你们走来，你的目光自然而然的被她胸前那对超大的乳房所吸引，尤其是她穿着那紧绷着的女性上衣和衬衫，更是让那完美的曲线凸显了出来，你估测她的胸部大概有个[minotallys.cupSize]罩杯。你[pc.Stepping]上前，然后握住她的手向她回礼。由于离得很近，你可以从桌子边缘看到她穿着超短裙，还有大半条腿和牛一样的蹄子。
 	</p>
 	<p>
-		[meraxis.speech(Before we progress any further, I must warn you that my ultimate power is at risk of erupting and dooming this world! The only thing which can prevent this terrible fate is for you to hand over more of the milk which you had the last time I was here!)] Meraxis exclaims, before striking another of her dramatic poses and looking expectantly at Minotallys. 
+		[meraxis.speech(在我们取得进一步进展之前，我必须警告你，我的邪王真眼有可能会爆发并毁灭这个世界！唯一能避免这种可怕命运的办法，就是交出更多的牛奶，也就是我上次来的时候你们给我喝的牛奶！)]梅拉克西丝大声宣布着的同时摆出一个戏剧性的姿势，随后满怀期待地看着米诺塔莉丝。
 	</p>
 	<p>
-		[minotallys.speech(Oh, you'd like some more milk, Meraxis?)] Minotallys happily asks, clearly being used to Meraxis's chuuni mannerisms. Playfully biting her lip, she continues in a husky voice, [minotallys.speech(I've got more than enough for the two of you...)]
+		[minotallys.speech(哦，你还想喝牛奶吗，梅拉克西丝？)]米诺塔莉丝笑着询问道，看来她显然已经习惯了梅拉克西丝的奇怪举止。她俏皮地咬着嘴唇，用略显沙哑的声音继续说：[minotallys.speech(我有足够多的东西给你们俩……)]
 	</p>
 	<p>
-		With that, Minotallys reaches down beneath her desk, and you hear the distinctive sound of a fridge being opened, before the lilin produces two glasses of milk and sets them down on the desk in front of her. Absently-mindedly reaching up to touch her massive breasts, she flashes you a little grin and pants, [minotallys.speech(It's [minotallys.milkFlavour]-flavoured today, and it's <i>very</i> fresh... Please, help yourselves...)]
+		米诺塔莉丝将手伸到办公桌下面，你听到冰箱被打开的独特声音，然后她拿出两杯牛奶，放在面前的办公桌上。她心不在焉地伸手摸了摸自己硕大的乳房，然后冲你微微一笑并发出嗯的一声……[minotallys.speech(今天是[minotallys.milkFlavour]风味，尝起来应该<i>非常</i>鲜美……总之，请自便吧……)]
 	</p>
 	<p>
-		Considering the fact that this flavour matches the colouring of Minotallys's spots and hair, and that the lilin is fondling her tits while gazing in anticipation at you and Meraxis, you're almost completely certain that this milk has been freshly squeezed from her breasts. As Meraxis has just alluded to the fact that she's drunk this before, and that there's no reason for you to mistrust Minotallys, you don't think that there'd be any harm in drinking her milk. Then again, if you don't like the idea of it, you could always politely refuse...
+		考虑到这种味道与米诺塔莉丝的斑点和头发的颜色相吻合，而且这头母牛一边抚摸着自己的乳房，一边期待地望着你和梅拉克西丝，你几乎可以完全肯定，这些牛奶就是从她的乳房中刚挤出来的。由于梅拉克西丝刚刚暗示过她以前喝过这种奶，而且你也没有理由不信任米诺塔莉丝，所以你觉得喝她的奶不会有什么坏处。话又说回来，如果你不喜欢这个主意，你可以礼貌地拒绝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_START_DECLINE"><![CDATA[
 	<p>
-		Not wanting to drink Minotallys's breast milk, you politely decline the offer. Looking across at you as though you're mad, Meraxis exclaims, [meraxis.speech(My foolish nemesis, you don't understand what's on offer! If this is truly your chosen fate, then your milk shall be mine! Mwhahaha!)]
+		你不想喝米诺塔莉丝的母乳，所以礼貌地拒绝了她的好意。梅拉克西丝用看疯子的眼神看向你，然后惊呼道，[meraxis.speech(我愚蠢的宿敌，你不明白我正在做什么，如果这真是你所选择的命运，那你的牛奶就归我了，哇哈哈！)]
 	</p>
 	<p>
-		As Meraxis proceeds to quickly chug down both glasses of milk, Minotallys pouts at you, before rubbing her huge breasts and saying, [minotallys.speech(If you ever change your mind and would like to try some of my milk, then you're welcome to drop by at any time...)]
+		当梅拉克西丝开始快速喝下两杯牛奶时，米诺塔莉丝朝你噘了噘嘴，然后揉着她那巨大的乳房说道，[minotallys.speech(如果你改变主意想尝尝我的牛奶的话，我这里随时欢迎你……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_START_DRINK"><![CDATA[
 	<p>
-		Seeing no harm in drinking what is obviously Minotallys's breast milk, you pick up the glass and join Meraxis in gulping it down. Immediately thanking yourself for having chosen to drink it, you find yourself enjoying the creamiest, most delicious milk that you've ever tasted. While there's an underlying flavour of [minotallys.milkFlavour], it's very subtle, allowing you to fully enjoy the creamy goodness of the dairy beverage.
+		你认为喝下米诺塔莉丝的母乳并无坏处，于是拿起杯子，和梅拉克西丝一起大口大口地喝了起来。当喝下之后，你感觉这是你这辈子做过最正确的决定。你觉得自己正在享受着从未品尝过的最香浓、最美味的牛奶。尽管它潜藏着[minotallys.milkFlavour]的味道，但这种感觉依旧非常微妙，让你充分享受到乳制品的奶香。
 	</p>
 	<p>
-		As you and Meraxis proceed to quickly chug down your glasses of milk, Minotallys happily smiles at the two of you, and as you finish and put the empty glass back down on the desk, she rubs her huge breasts and says, [minotallys.speech(Come back tomorrow if you want to try a different flavour...)]
+		当你和梅拉克西丝快速喝下一杯牛奶时，米诺塔莉丝正满脸笑容的看着你们，当你喝完并把空杯子放回桌上时，她揉着自己那巨大的乳房说道：[minotallys.speech(如果您想尝试不同的口味，那就明天再来吧……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_START_DRINK_END"><![CDATA[
 	<p>
-		Clearing his throat, Arion steps around to the side of Minotallys's desk and says to his superior, [arion.speech(We really should get down to business. As Meraxis told us before, she and [pc.name] are here from Lyssieth, and I've just learned that they're here to discuss the matter of Lunette's daughters.)]
+		阿里昂清了清嗓子，绕到米诺塔莉丝办公桌的一侧，对他的上司说道，[arion.speech(我们真该谈正事了。正如梅拉克西丝之前告诉我们的，她和[pc.name]是从莉西丝那里来的，而我刚刚得知，他们来是为了商讨露内特的女儿们的事。)]
 	</p>
 	<p>
-		[meraxis.speech(That's right,)] Meraxis states as she sits down on one of the two chairs positioned in front of the desk. As you join the [meraxis.race] in taking a seat, she momentarily drops her chuuni mannerisms to seriously state, [meraxis.speech(It's real bad out there in Foloi Fields. The whole place is completely devastated, and the villages I remember seeing years ago when I was travelling about have all been burned to the ground... [pc.Name] and I have been sent by Lyssieth to help you to put an end to Lunette's tyranny.)]
+		[meraxis.speech(没错，)]梅拉克西丝一边说着一边坐在了桌子前摆着的两把椅子中的一把上，而当你和[meraxis.race]坐在一起时，她短暂地收起了她那中二的姿态，严肃地说道：[meraxis.speech(弗洛伊田野的情况真的很糟糕，整个地方都被彻底摧毁了，我记得多年前我四处游历时看到的村庄都被烧成了灰烬……我和[pc.Name]受莉西丝所托，来帮助你们结束露内特的暴政。)]
 	</p>
 	<p>
-		For some reason, Minotallys reacts to this statement by raising her eyebrows and giving the two of you a look of disbelief. Letting out a disapproving tut, she looks over to you and asks, [minotallys.speech(Is this true? You're here to oppose Lunette?)]
+		不知为何，米诺塔莉丝扬起了眉毛，在发出不赞同的咳嗽声之后，摆出一个难以置信的表情说道：[minotallys.speech(这是真的么？你们来这里是为了推翻露内特？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_EXPLAIN"><![CDATA[
 	<p>
-		Although it's clear that there's something off about Minotallys's reaction, you feel like the best thing to do is to tell the truth. Confirming what Meraxis has just said, you explain that Lyssieth has recognised you as being capable of dealing with Lunette, and that all of the political implications of an elder lilin being opposed are to be handled by her.
+		虽然米诺塔莉丝的反应明显有些不对劲，但你觉得最好还是说实话。你证实了梅拉克西丝刚才所说的话，并解释说莉西丝已经认可你有能力处理露内特的问题，而露内特作为莉琳长老，被推翻的所有政治影响都将由她来处理。
 	</p>
 	<p>
-		[minotallys.speech(I really can't believe what I'm hearing,)] Minotallys replies, shaking her head. Turning her chair to one side, she gestures towards the window behind her and states, [minotallys.speech(Does it look like Lunette is causing a problem? Do you really think that Lilith, our most perfect and benevolent ruler, would allow anything bad to happen to her subjects? Of course not. There's nothing bad happening in the Foloi Fields, and I won't hear otherwise!)]
+		[minotallys.speech(真不敢相信我听到了什么，)]米诺塔莉丝摇摇头，然后把椅子转到一边，朝身后的窗户比了个手势后继续说道：[minotallys.speech(这真的看起来像是露内特在制造麻烦吗？你真的认为莉莉丝，我们最完美，最仁慈的统治者，会允许她的臣民遭受任何苦难么？当然不会，弗洛伊田野没有发生任何坏事，我也没有听到任何其他的声音！)]
 	</p>
 	<p>
-		[arion.speech(You agreed to hear them out,)] Arion snaps, alarming you with the steely tone of his voice. You hadn't expected Minotallys's subordinate to talk to her in such an insolent manner, but much to your surprise, and relief, the lilin responds in a submissive manner. Crossing her arms beneath her huge breasts, she sinks down into her chair and pouts at Arion in a childish manner. Letting out an impatient sigh, the alicorn-boy continues, [arion.speech(You can't deny what's happening forever. Listen to what these two have to say, and remember that they carry the authority of Lyssieth herself.)]
+		[arion.speech(您应该听一听其他的声音，)]阿里昂冷冷地说道，他那坚定的语气让你感到震惊。你没想到米诺塔莉丝的下属会以如此无礼的方式对她说话，但更让你感到惊讶和欣慰的是，米诺塔莉丝以顺从的方式回应了你，她把双手交叉放在巨大的胸部下，重重地坐在椅子上，孩子气般的对阿里昂撅起了嘴并不耐烦地叹了口气，独角兽男则继续说道，[arion.speech(你不能永远否认正在发生的事，请听听这两位是怎么说的，记住，他们传达的是莉西丝本人的意志。)]
 	</p>
 	<p>
-		[minotallys.speech(Mmm, yes, well, the authority of a direct daughter of Lilith cannot be questioned,)] Minotallys concedes, before stubbornly stating, [minotallys.speech(That includes Lunette as well, you know. There's no way she would be responsible for anything bad that's happening in the Foloi Fields...)]
+		[minotallys.speech(嗯，对，好吧。莉莉丝亲生女儿的权威是不容质疑的，)]米诺塔莉丝承认了这一点，然后又固执地说道：[minotallys.speech(这也包括露内特，你知道的。她不可能对弗洛伊田野发生的任何坏事负责……)]
 	</p>
 	<p>
-		[meraxis.speech(Are you kidding me?)] Meraxis asks in disbelief. Clearly having been emotionally affected by witnessing the desolation of the surrounding farmlands, the [meraxis.race] insists, [meraxis.speech(There's barely anything left of the Foloi Fields! You know who's responsible? Lunette's daughters and their followers! There's no way that they're acting alone, or outside of the orders of Lunette herself! We need to stop her, before she decides that Elis is her next target!)]
+		[meraxis.speech(你在开玩笑吗？)]梅拉克西丝难以置信地问道。显然，在目睹周围农田的荒凉后，她的情绪受到了影响，[meraxis.race]喊道：[meraxis.speech(弗洛伊田野几乎什么都没留下，你知道是谁干的吗？露内特的女儿和她们的追随者！她们不可能单独行动，也不可能不受露内特的命令，在她决定把伊利斯作为下一个目标之前，我们必须阻止她！)]
 	</p>
 	<p>
-		Sinking down into her chair under the stony gaze of Arion, Minotallys pouts and grudgingly admits, [minotallys.speech(Maybe there are some slight issues in the Foloi Fields, but it can't be as bad as you're saying. If it were, then we'd have received news of Themiscyra being threatened, and as of today, there's been no request for assistance, nor any bad news coming from there at all.)]
+		米诺塔莉丝在阿里昂注视下坐回了椅子上，然后撅着嘴勉强承认道：[minotallys.speech(也许弗洛伊田野有些小问题，但不可能像你说的那么糟糕。如果是这样的话，我们就会收到特弥斯库拉受到威胁的消息，而到今天为止，那里还没有提出任何援助请求，也没有任何坏消息传来。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_THEMISCRYA"><![CDATA[
 	<p>
-		Wondering why Minotallys has mentioned this town of Themiscyra, you ask where it is and what significance it has.
+		你想知道米诺塔莉丝为什么会提到特弥斯库拉，便问它在哪里，有什么意义。
 	</p>
 	<p>
-		[arion.speech(It's located far to the north of Elis, deep in the middle of the Foloi forests,)] Arion explains, [arion.speech(If Lunette were to be seriously threatening Elis, then it's likely that Themiscyra would be targeted first, so that it couldn't interfere with her plans. After all, the Amazons who live there have quite a fearsome reputation, and they'd likely be seen as a serious threat by Lunette.)]
+		[arion.speech(它位于伊利斯的北方，深藏在弗洛伊田野的中央，)]阿里昂解释道，[arion.speech(如果露内特会威胁到伊利斯，那么她很可能会先针对特弥斯库拉，这样就不会干扰她的计划了。毕竟生活在那里的亚马逊人令人闻风丧胆，他们很可能会被露内特视为严重威胁。)]
 	</p>
 	<p>
-		[minotallys.speech(That's only if Lunette is even acting like you're saying she is,)] Minotallys objects, before turning her head to one side in order to avoid the severe gaze which Arion flashes her.
+		[minotallys.speech(这一切的前提是露内特完全按照你所说的那样才行。)]米诺塔莉丝提出异议，随后把头扭到一边，避开了阿里昂投向她的严厉的目光。
 	</p>
 	<p>
-		[arion.speech(If I could be so bold as to make a suggestion, what if [pc.name] and Meraxis were to travel to Themiscyra and find out what their situation is,)] Arion says, [arion.speech(If all is well, then the issue of Lunette can be left for another day. If, however, they're having trouble with Lunette's daughters, then you'll agree to take action.)]
+		[arion.speech(恕我冒昧提个建议，不如让[pc.name]和梅拉克西丝前往特弥斯库拉，查明她们的情况如何，)]阿里昂说道，[arion.speech(如果一切安好，露内特的事可以改日再议。但如果她们和露内特的女儿们起了纠纷，那您就同意采取行动。)]
 	</p>
 	<p>
-		Letting out a sigh and rolling her eyes, the stubborn lilin relents, [minotallys.speech(Fine, I suppose... So long as these two are willing to do this...)]
+		顽固的米诺塔莉丝叹了一口气，她看起来有所让步。[minotallys.speech(好吧，我想……只要他们俩愿意……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_THEMISCRYA_AGREE"><![CDATA[
 	<p>
-		With Minotallys refusing to accept that Lunette is a threat, you don't seem to have much choice but to agree to Arion's proposal, and so you tell the lilin that you'll travel to Themiscyra and find you what the situation is.
+		米诺塔莉丝拒绝接受露内特是个威胁的说法，你似乎别无选择，只能同意阿里昂的提议，于是你告诉莉琳，你将前往特弥斯库拉，看看情况如何。
 	</p>
 	<p>
-		[meraxis.speech(I can't believe that you're making us do this. Is it not obvious that Lunette needs dealing with?!)] Meraxis angrily objects, but as she sees the lilin avoid her gaze, she lets out a deep sigh and states, [meraxis.speech(Fine... Well, I know the way to Themiscyra, so I can lead you there when you're ready, [pc.name].)]
+		[meraxis.speech(真不敢相信你竟然让我们这么做，露内特是个麻烦，这还不明显吗？！)]梅拉克西丝愤怒地表示反对，但当她看到莉琳避开她的目光时，她深深地叹了一口气，然后说道：[meraxis.speech(好吧……我知道去特弥斯库拉的路，[PC.name]，你准备好了就告诉我，我可以带你过去。)]
 	</p>
 	<p>
-		Giving you an appreciative nod, Arion warns, [arion.speech(The woods have always been regarded as lawless, despite our Enforcers' best efforts to keep things under control. Be careful on your way there.)]
+		阿里昂感激地向你点点头，然后告知：[arion.speech(尽管我们的执法者在竭尽全力地控制局面，但这片森林一直被认为是无法无天的地带，还请小心前往。)]
 	</p>
 	<p>
-		[minotallys.speech(Yes, do take care of yourselves,)] Minotallys curtly states. Clearly being a little annoyed at having been ganged up on by the three of you, she dismisses you and Meraxis with a wave of her hands, saying, [minotallys.speech(You're welcome to drop in at any time, but for now Arion and I have work to do, so goodbye!)]
+		[minotallys.speech(是的，你们一定要照顾好自己，)]米诺塔莉丝委婉地说道。她显然对被你们三人合伙欺负感到有些恼火，在挥手打发你们离开之前，她开口说道：[minotallys.speech(欢迎你们随时再来，但现在我和阿里昂还有工作要做，所以再见！)]
 	</p>
 	<p>
-		Taking the hint, you and Meraxis stand up, before allowing Arion to escort you out of the office. Closing the door behind the three of you, the alicorn-boy sighs, [arion.speech(Thank you for helping me to convince Minotallys to finally do something about Lunette. She doesn't mean any harm, she's just so enamoured with Lilith that she refuses to see what's happening right in front of her eyes... Oh, and before you go, take this pass. It'll grant you access to this tower at any time of the day or night.)]
+		你和梅拉克西丝接受了暗示，在站起身来后让阿里昂护送你们走出办公室。在你们三人身后的门关上后，这个独角兽男叹了口气，[arion.speech(谢谢你帮我说服米诺塔莉丝最终对露内特采取了行动。她没有恶意，她只是太迷恋莉莉丝了，以至于拒绝看到眼前发生的一切……哦，在走之前，请拿着这个通行证，这样无论白天黑夜，你都可以进入这座塔。)]
 	</p>
 	<p>
-		Taking the small, plastic card which Arion holds out to you, you thank him for the help and say that you hope to be back with your report on Themiscyra soon. Giving you a curt nod, the alicorn-boy returns to the office, leaving you and Meraxis to head back down the stairs to the town hall's ground floor...
+		在接过阿里昂递给你的塑料小卡片后，你对他的帮助表示感谢并答应会尽快带着关于特弥斯库拉的报告回来。独角兽男礼貌地向你点了点头便返回了办公室，留下你和梅拉克西丝沿着楼梯回到市镇议会的一楼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MINOTALLYS_END"><![CDATA[
 	<p>
-		As you and Meraxis travel down the spiral staircase, the [meraxis.race] complains, [meraxis.speech(I can't believe her reaction! Why is she denying the situation? Just because she doesn't want to admit that one of Lilith's daughters is a massive cunt?!)]
+		当你和梅拉克西丝沿着螺旋楼梯往下走时，[meraxis.race]抱怨了起来：[meraxis.speech(我不敢相信她的反应！她为什么要否认？就因为她不想承认莉莉丝的一个女儿是个大婊子？！)]
 	</p>
 	<p>
-		Reaching the bottom of the stairs, Meraxis turns to you and states, [meraxis.speech(I need some time to calm down. Come and find me in 'The Red Dragon' again when you're ready to go to Themiscyra. See you later, [pc.name].)]
+		在到达楼梯底部后，梅拉克西丝转身对你说道：[meraxis.speech(我需要时间冷静一下，等你准备好去特弥斯库拉的时候，再来红龙酒馆找我吧，再见，[pc.name]。)]
 	</p>
 	<p>
-		Before you can say anything, the angry [meraxis.race] teleports away, leaving you standing there with just the succubus Enforcer for company. Although she widens her eyes and lets out a low whistle, this Enforcer doesn't make a comment on the scene she's just witnessed, and so with little else to do or say, you prepare to continue on your way...
+		还没等你开口，怒气冲冲的[meraxis.race]便传送走了，只留下你和魅魔执法者站在那里。虽然她睁大了眼睛并发出了一声低沉的口哨声，但这个尽心尽责的执法者并没有对她刚刚目睹的一幕发表任何评论，因此你也没什么可做或可说的了，现在的你该继续上路了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[Slightly raised lettering on the underside of the mask reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[面具底部有微微凸起的字母，上面写着：“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>1000</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一具]]></determiner>
 
-		<name><![CDATA[Enforcer's gas Mask]]></name>
+		<name><![CDATA[执法者防毒面具]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's gas mask]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者防毒面具]]></namePlural> 
 
-		<description><![CDATA[A gas mask made of tough hycar rubber. The dome-shaped polycarbonate visor offers a wide field of view without obstructing the brim of a helmet.]]></description> 
+		<description><![CDATA[一具由坚韧的合成橡胶制成的防毒面具。圆顶形状的聚碳酸酯面罩提供了广阔的视野，而不会被面罩周围遮蔽视线。]]></description> 
 
 		<physicalResistance>2</physicalResistance> 
 
@@ -81,27 +80,24 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the gas mask and [npc.verb(screw)] in a new filter cartridge.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(push)] the gas mask onto [npc2.namePos] [npc2.face] and [npc.verb(screw)] in a new filter cartridge.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the gas mask onto [npc2.namePos] [npc2.face] and hastily [npc.verb(screw)] in a new filter cartridge.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]戴上防毒面具并拧了一个新的滤芯上去。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将防毒面具戴在[npc2.namePos][npc2.face]并拧了一个新的滤芯上去。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将防毒面具戴在[npc2.namePos]的[npc2.face]上并草草的拧了一个滤芯上去。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] gas mask.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] gas mask off [npc2.her] [npc2.face].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] gas mask from [npc2.her] [npc2.face].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的防毒面具摘下。]]></self>
+		<other><![CDATA[
+			[npc.Name]把[npc2.namePos]防毒面具从[npc2.her][npc2.face]摘下。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将防毒面具从[npc2.namePos]的[npc2.face]上拽了下来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Butler]]></name>
+	<name><![CDATA[管家]]></name>
 	
 	<statusEffect>SET_BUTLER</statusEffect>
 	

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[The Crossed Blades]]></name>
-	<tooltipDescription><![CDATA[Within the alleyways of northern Elis, the seedy tavern 'The Crossed Blades' attracts the undesirable patrons who're not welcome in the town's more reputable establishments.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[outside of 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[十字利刃]]></name>
+	<tooltipDescription><![CDATA[在伊利斯北部的小巷里，臭名昭著的十字利刃旅店吸引着小镇里稍有声誉的场所都不欢迎的恶劣顾客。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在十字利刃外]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

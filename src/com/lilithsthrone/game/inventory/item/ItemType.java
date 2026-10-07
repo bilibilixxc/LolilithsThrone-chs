@@ -81,12 +81,12 @@ public class ItemType {
 	}
 	
 	public static AbstractItemType FETISH_UNREFINED = new AbstractItemType(500,
-			"a bottle of",
+			"一瓶",
 			false,
-			"Succubus's Kiss",
-			"Succubus's Kisses",
-			"A heart-shaped glass bottle, filled with a swirling, glowing-pink liquid."
-					+ " The words 'Succubus's Kiss' have been etched into the bottle in an ornate script, and beneath that the words 'Fool-proof love potion' make it clear what this liquid will do.",
+			"魅魔之吻",
+			"魅魔之吻",
+			"一个心形的玻璃瓶，装满了涌动的，荧光粉色的液体"
+					+ "瓶身上用华丽的字体刻着“魅魔之吻“的字样，而下面的“傻瓜式爱情药水”字样则清楚地表明了这种液体的作用。",
 			"fetishDrink",
 			Util.newArrayListOfValues(
 					PresetColour.CLOTHING_PINK,
@@ -116,26 +116,26 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You pull the stopper out from the top of the bottle of 'Succubus's Kiss', before bringing it to your [pc.lips] and gulping down the sweet pink liquid that's contained within.",
-					"You pull the stopper out from the top of the bottle of 'Succubus's Kiss', before bringing it to [npc.namePos] [npc.lips] and forcing [npc.herHim] to drink down the sweet pink liquid within.",
-					"[npc.Name] pulls out a bottle of 'Succubus's Kiss', and, after quickly pulling out the stopper, [npc.she] promptly downs the entire bottle.",
-					"[npc.Name] pulls out a bottle of 'Succubus's Kiss', and, after quickly pulling out the stopper,"
-							+ " [npc.she] brings it to your lips before tilting your head back and forcing you to quickly gulp down the sweet pink liquid that's contained within.");
+					"你把瓶塞从“魅魔之吻”的瓶颈上拔掉，然后送到嘴唇边，吞下里面甘甜的粉红色液体。",
+					"你把瓶塞从“魅魔之吻”的瓶颈上拔掉，然后把它送到[npc.namePos]唇边，给[npc.herHim]灌下了里面甘甜的粉红色液体。",
+					"[npc.Name]拿出一瓶“魅魔之吻”，迅速拔掉了瓶塞，将整瓶一饮而尽。",
+					"[npc.Name]拿出一瓶“魅魔之吻”，迅速拔掉了瓶塞，"
+							+ "[npc.she]把瓶口送到你[pc.lips]边，稍微仰起你的脑袋，强行给你灌下了里面甘甜的粉红色液体。");
 		}
 	};
 	
 	public static AbstractItemType FETISH_REFINED = new AbstractItemType(750,
-			"a vial of",
+			"一小瓶",
 			false,
-			"Fetish Endowment",
-			"Fetish Endowments",
-			"A vial of bubbling pink liquid, which was refined from a bottle of 'Succubus's Kiss'."
-					+ " Its potent enchantment is very different from the effects of the liquid that it was distilled from, and is able to add or remove specific fetishes.",
+			"天赐之癖",
+			"天赐之癖",
+			"一小瓶起泡的粉色液体，由“魅魔之吻”精炼而成。"
+					+ "其附魔和之蒸馏前的液体有所不同，能够添加或移除特定性癖。",
 			"fetishDrinkRefined",
 			PresetColour.FETISH,
 			null,
@@ -149,26 +149,26 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You pull the stopper out from the top of the glass vial of 'Fetish Endowment', before bringing it to your lips and gulping down the sickly sweet liquid that's contained within.",
-					"You pull the stopper out from the top of the glass vial of 'Fetish Endowment', before bringing it to [npc.namePos] lips and forcing [npc.herHim] to drink down the liquid within.",
-					"[npc.Name] pulls out a glass vial of 'Fetish Endowment', and, after quickly pulling out the stopper, [npc.she] promptly downs the entire bottle.",
-					"[npc.Name] pulls out a glass vial of 'Fetish Endowment', and, after quickly pulling out the stopper,"
-							+ " [npc.she] brings it to your lips before tilting your head back and forcing you to quickly gulp down the sickly sweet liquid that's contained within.");
+					"你把瓶塞从“天赐之癖”的瓶颈上拔掉，然后送到唇边，将里面甜腻的液体一饮而尽。",
+					"你把瓶塞从“天赐之癖”的瓶颈上拔掉，然后送到[npc.namePos]唇边，将里面甜腻的液体灌入[npc.herHim]的口中。",
+					"[npc.Name]拿出一瓶“天赐之癖”，迅速拔掉了瓶塞，将整瓶一饮而尽。",
+					"[npc.Name]拿出一瓶“天赐之癖”，迅速拔掉了瓶塞，"
+							+ "[npc.she]把瓶口送到你[pc.lips]边，稍微仰起你的脑袋，强行让你吞下了里面甜腻的液体。");
 		}
 	};
 	
 	public static AbstractItemType ADDICTION_REMOVAL = new AbstractItemType(750,
-			"a bottle of",
+			"一瓶",
 			false,
-			"Angel's Nectar",
-			"Angel's Nectars",
-			"A delicate crystal bottle, filled with a cool, blue liquid."
-					+ " Engraved into one side are the words 'Angel's Nectar', although you're unsure if this fluid really does have anything to do with them...",
+			"天使玉液",
+			"天使玉液",
+			"一个精致的玻璃瓶，里面装有清凉的蓝色液体。"
+					+ "瓶身一侧阳刻着几个字“天使玉液”，但你不清楚这跟里面的液体到底有没有关系……",
 			"addictionRemoval",
 			PresetColour.RACE_HUMAN,
 			null,
@@ -183,7 +183,7 @@ public class ItemType {
 					ItemTag.DRINK_QUALITY)) {
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		@Override
 		public AbstractItemEffectType getEnchantmentEffect() {
@@ -196,21 +196,21 @@ public class ItemType {
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You pull the crystal stopper out from the top of the bottle of 'Angel's Nectar', before bringing it to your lips and gulping down the tasteless liquid that's contained within.",
-					"You pull the crystal stopper out from the top of the bottle of 'Angel's Nectar', before bringing it to [npc.namePos] lips and forcing [npc.herHim] to drink down the liquid within.",
-					"[npc.Name] pulls out a bottle of 'Angel's Nectar', and, after quickly pulling out the crystal stopper, [npc.she] promptly downs the entire bottle.",
-					"[npc.Name] pulls out a bottle of 'Angel's Nectar', and, after quickly pulling out the crystal stopper,"
-							+ " [npc.she] brings it to your lips before tilting your head back and forcing you to quickly gulp down the tasteless liquid that's contained within.");
+					"你把水晶瓶塞从“天使玉液”的瓶颈上拔掉，然后送到唇边，将里面没什么味道的液体一饮而尽。",
+					"你把水晶瓶塞从“天使玉液”的瓶颈上拔掉，然后送到[npc.namePos]的唇边，将里面的液体灌入[npc.herHim]的口中。",
+					"[npc.Name]拿出一瓶“天使玉液”，迅速拔掉了水晶瓶塞，将整瓶一饮而尽。",
+					"[npc.Name]拿出一瓶“天使玉液”，迅速拔掉了水晶瓶塞，"
+							+ "[npc.she]把瓶口送到你[pc.lips]边，稍微仰起你的脑袋，强行让你吞下了里面没什么味道的液体。");
 		}
 	};
 	
 	public static AbstractItemType ADDICTION_REMOVAL_REFINED = new AbstractItemType(1500,
-			"a delicate vial of",
+			"一小瓶",
 			false,
-			"Angel's Purity",
-			"Angel's Purities",
-			"A vial of cool, light-blue liquid, which gives off a faint, steady glow."
-					+ " Being a refined form of 'Angel's Nectar', this liquid has lost its ability to remove addictions, but is instead able to permanently lower the corruption of whoever drinks it...",
+			"天使之纯洁",
+			"天使之纯洁",
+			"装有淡蓝色清凉液体的玻璃瓶，散发着微弱但持久的光芒。"
+					+ "是精炼后的“天使玉液”，这种液体已经无法再移除成瘾效果，但无论谁喝下，都能够永久降低堕落……",
 			"addictionRemovalRefined",
 			PresetColour.RACE_HUMAN,
 			null,
@@ -220,27 +220,27 @@ public class ItemType {
 			Util.newArrayListOfValues(ItemTag.DRINK_QUALITY)) {
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You pull the stopper out from the top of the glass vial of 'Angel's Purity', before bringing it to your lips and gulping down the cool, refreshing liquid which is contained within.",
-					"You pull the stopper out from the top of the glass vial of 'Angel's Purity', before bringing it to [npc.namePos] lips and forcing [npc.herHim] to drink down the liquid within.",
-					"[npc.Name] pulls out a glass vial of 'Angel's Purity', and, after quickly pulling out the stopper, [npc.she] promptly downs the entire bottle.",
-					"[npc.Name] pulls out a glass vial of 'Angel's Purity', and, after quickly pulling out the stopper,"
-							+ " [npc.she] brings it to your lips before tilting your head back and forcing you to quickly gulp down the cool, refreshing liquid which is contained within.");
+					"你把瓶塞从“天使之纯洁”的瓶颈上拔掉，然后送到唇边，将里面清凉爽口的液体一饮而尽。",
+					"你把瓶塞从“天使之纯洁”的瓶颈上拔掉，然后送到[npc.namePos]的唇边，将里面的液体灌入[npc.herHim]的口中。",
+					"[npc.Name]拿出一瓶“天使之纯洁”，迅速拔掉了瓶塞，将整瓶一饮而尽。",
+					"[npc.Name]拿出一瓶“天使之纯洁”，迅速拔掉了瓶塞，"
+							+ "[npc.she]把瓶口送到你[pc.lips]边，稍微仰起你的脑袋，强行让你吞下了里面清凉爽口的液体。");
 		}
 	};
 	
 	public static AbstractItemType MUSHROOM = new AbstractItemType(500,
-			"a cluster of",
+			"一把",
 			true,
-			"Glowing Mushroom",
-			"Glowing Mushrooms",
-			"Bioluminescent mushrooms such as these are commonly found growing in the Bat Caverns."
-					+ " The slimes which call those caverns their home are particularly fond of consuming these mushrooms, which is what causes their bodies to glow.",
+			"发光蘑菇",
+			"发光蘑菇",
+			"像这样的发光蘑菇通常生长在蝙蝠洞窟中。"
+					+ "那些以蝙蝠洞穴为家的史莱姆通常以这些蘑菇为食，这也是它们的身体会发光的原因。",
 			"mushrooms",
 			PresetColour.BASE_BLUE_LIGHT,
 			null,
@@ -256,15 +256,15 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "eat";
+			return "吃";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You pop the small cluster of glowing mushrooms into your mouth, and as you chew and swallow them down, you discover that they have a refreshing, minty taste.",
-					"You pop the small cluster of glowing mushrooms into [npc.namePos] mouth, before making sure that [npc.she] chews and swallows them down.",
-					"[npc.Name] pops a small cluster of glowing mushrooms into [npc.her] mouth, before chewing and swallowing them down.",
-					"[npc.Name] pops a small cluster of glowing mushrooms into your mouth, and as [npc.she] makes you chew and swallow them down, you discover that they have a refreshing, minty taste.");
+					"你拿出一小把发光蘑菇放进嘴里，咀嚼几下便咽了下去，忽然发现有一种清新的薄荷味。",
+					"你拿出一小把发光蘑菇放进[npc.namePos]嘴里，等到[npc.she]咀嚼几下咽到肚子里才算完。",
+					"[npc.Name]拿出一小把发光蘑菇放进嘴里，咀嚼几下便咽了下去。",
+					"[npc.Name]拿出一小把发光蘑菇放进你的嘴里，等到你咀嚼几下咽到肚子里才算完，你忽然发现有一种清新的薄荷味。");
 		}
 	};
 	
@@ -277,40 +277,40 @@ public class ItemType {
 
 							if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)) {
 								return "<p>"
-											+ "Pulling the cork stopper out from the top of the little bottle, you let out a gasp as the swirling light instantly darts out of its glass prison."
-											+ " Giving you no time to react, the essence immediately shoots straight towards you, and with a little "+essenceColour.getName()+" flash, it hits your chest and disappears from sight."
-											+ " You think that it would probably be best to go and ask Lilaya about what just happened..."
+											+ "你把瓶口的软木塞拔了出来，只见一道旋转的光彩顿时从玻璃牢笼中冲出，让你不禁倒吸一口气。"
+											+ "你还没来得及反应，精华便直直向你冲过来，随着一阵"+essenceColour.getName()+"的闪光，它便击中了你的胸膛，从视线中消失了。"
+											+ "你觉得最好去问问莉莱雅刚才发生的事……"
 										+ "</p>"
 										+(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)?Main.game.getPlayer().startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY):"");
 							} else {
 								return "<p>"
-										+ "Pulling the cork stopper out from the top of the little bottle, you let out a gasp as the swirling light instantly darts out of its glass prison."
-										+ " Giving you no time to react, the essence immediately shoots straight towards you, and with a little "+essenceColour.getName()+" flash, it hits your chest and disappears from sight."
-										+ " You suddenly remember what Lilaya told you about absorbing essences, and breathe a sigh of relief..."
+										+ "你把瓶口的软木塞拔了出来，只见一道旋转的光彩顿时从玻璃牢笼中冲出，让你不禁倒吸一口气。"
+										+ "你还没来得及反应，精华便直直向你冲过来，随着一阵"+essenceColour.getName()+"的闪光，它便击中了你的胸膛，从视线中消失了。"
+										+ "你忽然记起莉莱雅告诉你有关吸收精华的事情，这才长长的吁了一口气……"
 									+ "</p>";
 							}
 						}
 
 						if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)) {
 							return "<p>"
-										+ "Pulling the cork stopper out from the top of the little bottle, you release the arcane essence from its glass prison."
-										+ " Drawn towards your powerful arcane aura, the essence immediately darts towards you, and with a little "+essenceColour.getName()+" flash, it disappears from sight."
-										+ " You think that it would probably be best to go and ask Lilaya about what just happened..."
+										+ "你把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+										+ "那精华向着你强大的奥术灵气，直直地冲了过来，随着一阵"+essenceColour.getName()+"的闪光，它便从视线中消失了。"
+										+ "你觉得最好去问问莉莱雅刚才发生的事……"
 									+ "</p>";
 						} else {
 							return "<p>"
-									+ "Pulling the cork stopper out from the top of the little bottle, you release the arcane essence from its glass prison."
-									+ " Drawn towards your powerful arcane aura, the essence immediately darts towards you, and with a little "+essenceColour.getName()+" flash, it disappears from sight."
-									+ " You feel a subtle change in your aura, letting you know that you've successfully absorbed the essence."
+									+ "你把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+									+ "那精华向着你强大的奥术灵气，直直地冲了过来，随着一阵"+essenceColour.getName()+"的闪光，它便从视线中消失了。"
+									+ "你感觉到灵气发生了一些微小的变化，也就说明你成功将精华吸收了。"
 								+ "</p>";
 						}
 						
 					} else {
 						return UtilText.parse(target,
 								"<p>"
-									+ "Pulling the cork stopper out from the top of the little bottle, you release the arcane essence from its glass prison."
-									+ " Drawn towards [npc.namePos] powerful arcane aura, the essence immediately darts towards [npc.herHim], and with a little "
-										+essenceColour.getName()+" flash, it disappears from sight as it's absorbed into [npc.her] aura."
+									+ "你把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+									+ "那精华向着[npc.namePos]强大的奥术灵气，直直地冲了过去，随着一阵"
+										+essenceColour.getName()+"的闪光，它便从视线中消失，被吸收进入[npc.her]的灵气了。"
 								+ "</p>");
 					}
 				} else {
@@ -326,17 +326,17 @@ public class ItemType {
 							if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)) {
 								return UtilText.parse(user,
 										"<p>"
-											+ "Pulling the cork stopper out from the top of the little bottle, [npc.name] releases an arcane essence from its glass prison."
-											+ " Giving you no time to react, the essence immediately shoots straight towards you, and with a little "+essenceColour.getName()+" flash, it hits your chest and disappears from sight."
-											+ " You think that it would probably be best to go and ask Lilaya about what just happened..."
+											+ "[npc.Name]把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+											+ "你还没来得及反应，精华便直直向你冲过来，随着一阵"+essenceColour.getName()+"的闪光，它便击中了你的胸膛，从视线中消失了。"
+											+ "你觉得最好去问问莉莱雅刚才发生的事……"
 										+ "</p>"
 										+(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)?Main.game.getPlayer().startQuest(QuestLine.SIDE_ENCHANTMENT_DISCOVERY):""));
 							} else {
 								return UtilText.parse(user,
 										"<p>"
-											+ "Pulling the cork stopper out from the top of the little bottle, [npc.name] releases an arcane essence from its glass prison."
-											+ " Giving you no time to react, the essence immediately shoots straight towards you, and with a little "+essenceColour.getName()+" flash, it hits your chest and disappears from sight."
-											+ " You suddenly remember what Lilaya told you about absorbing essences, and breathe a sigh of relief..."
+											+ "[npc.Name]把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+											+ "你还没来得及反应，精华便直直向你冲过来，随着一阵"+essenceColour.getName()+"的闪光，它便击中了你的胸膛，从视线中消失了。"
+											+ "你忽然记起莉莱雅告诉你有关吸收精华的事情，这才长长的吁了一口气……"
 										+ "</p>");
 							}
 						}
@@ -344,25 +344,25 @@ public class ItemType {
 						if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ENCHANTMENT_DISCOVERY)) {
 							return UtilText.parse(user,
 									"<p>"
-										+ "Pulling the cork stopper out from the top of the little bottle, [npc.name] releases an arcane essence from its glass prison."
-										+ " Drawn towards your powerful arcane aura, the essence immediately darts towards you, and with a little "+essenceColour.getName()+" flash, it disappears from sight."
-										+ " You think that it would probably be best to go and ask Lilaya about what just happened..."
+										+ "[npc.Name]把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+										+ "那精华向着你强大的奥术灵气，直直地冲了过来，随着一阵"+essenceColour.getName()+"的闪光，它便从视线中消失了。"
+										+ "你觉得最好去问问莉莱雅刚才发生的事……"
 									+ "</p>");
 						} else {
 							return UtilText.parse(user,
 									"<p>"
-										+ "Pulling the cork stopper out from the top of the little bottle, [npc.name] releases an arcane essence from its glass prison."
-									+ " Drawn towards your powerful arcane aura, the essence immediately darts towards you, and with a little "+essenceColour.getName()+" flash, it disappears from sight."
-									+ " You feel a subtle change in your aura, letting you know that you've successfully absorbed the essence."
+										+ "[npc.Name]把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+									+ "那精华向着你强大的奥术灵气，直直地冲了过来，随着一阵"+essenceColour.getName()+"的闪光，它便从视线中消失了。"
+									+ "你感觉到灵气发生了一些微小的变化，也就说明你成功将精华吸收了。"
 								+ "</p>");
 						}
 						
 					} else {
 						return UtilText.parse(user, 
 								"<p>"
-									+ "Pulling the cork stopper out from the top of the little bottle, [npc.name] releases an arcane essence from its glass prison."
-									+ " Drawn towards [npc.her] powerful arcane aura, the essence immediately darts towards [npc.name], and with a little "
-										+essenceColour.getName()+" flash, it disappears from sight as it's absorbed into [npc.her] aura."
+									+ "[npc.Name]把瓶口的软木塞拔了出来，将奥术精华从玻璃牢笼中释放了出来。"
+									+ "那精华向着[npc.her]强大的奥术灵气，直直地冲了过去，随着一阵"
+										+essenceColour.getName()+"的闪光，它便从视线中消失，被吸收进入[npc.her]的灵气了。"
 								+"</p>");
 					}
 				} else {
@@ -377,10 +377,10 @@ public class ItemType {
 			40,
 			null,
 			false,
-			"Bottled Arcane Essence",
-			"Bottled Arcane Essences",
-			"A small glass bottle, with a little cork stopper wedged firmly in the top."
-					+ " Inside, the swirling "+PresetColour.GENERIC_ARCANE.getName()+" glow of an arcane essence flickers and swirls about in a mesmerising, cyclical pattern.",
+			"瓶装奥术精华",
+			"瓶装奥术精华",
+			"一个小玻璃瓶，瓶口紧紧的塞着一个小软木塞。"
+					+ "里面"+PresetColour.GENERIC_ARCANE.getName()+"光芒的奥术精华舞动闪烁着，不断飞旋，令人着迷。",
 			null,
 			PresetColour.GENERIC_ARCANE,
 			null,
@@ -390,7 +390,7 @@ public class ItemType {
 			Util.newArrayListOfValues(ItemTag.ESSENCE)) {
 		@Override
 		public String getUseName() {
-			return "absorb";
+			return "吸收";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
@@ -408,10 +408,10 @@ public class ItemType {
 	public static AbstractItemType HARPY_MATRIARCH_BIMBO_LOLLIPOP = new AbstractItemType(1250,
 			null,
 			false,
-			"[bimboHarpy.namePos] lollipop",
-			"[bimboHarpy.namePos] lollipops",
-			"A swirly lollipop that you got from the harpy matriarch [bimboHarpy.name]."
-				+ " Although it doesn't look out of the ordinary, you're pretty sure that eating it would result in a potent transformation...",
+			"[bimboHarpy.namePos]的棒棒糖",
+			"[bimboHarpy.namePos]的棒棒糖",
+			"从哈比族长[bimboHarpy.name]那里拿到的风车型棒棒糖。"
+				+ "尽管看上去平平无奇，但你确信一旦吃下去肯定会发生转化……",
 			"bimboLollipop",
 			PresetColour.RARITY_LEGENDARY,
 			null,
@@ -431,22 +431,22 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "suck";
+			return "舔";
 		}
 
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"Bringing the lollipop up to your [pc.lips+], you dart out your [pc.tongue] and give it a long, wet lick."
-						+ " An intense, sweet flavour fills your mouth, quite unlike anything you've ever tasted before."
-						+ " Before you know what you're doing, you're pressing your [pc.lips] up against the delicious candy, letting out little whining noises as you find yourself unable to stop sucking and licking it...",
-					"Bringing the lollipop up to [npc.namePos] [npc.lips+], you smile as [npc.she] darts out [npc.her] [npc.tongue] to give it a long, wet lick."
-						+ " The intoxicating taste quickly overwhelms [npc.her] senses, and [npc.she] eagerly presses [npc.her] [npc.lips] up against the delicious candy,"
-						+ " letting out little whining noises as [npc.she] finds [npc.herself] unable to stop sucking and licking it...",
-					"[npc.Name] produces a swirly lollipop and, after quickly pulling off the wrapper, starts licking and sucking it...",
-					"[npc.Name] produces a swirly lollipop and, after quickly pulling off the wrapper, forces it against your [pc.lips] and into your mouth."
-						+ " An intense, sweet flavour fills hits your tongue, quite unlike anything you've ever tasted before."
-						+ " Before you know what you're doing, you're pressing your [pc.lips] up against the delicious candy, letting out little whining noises as you find yourself unable to stop sucking and licking it...");
+					"你把棒棒糖放到[pc.lips+]边，伸出[pc.tongue]在上面留下了一道绵长的口水痕。"
+						+ "一股强烈的甜味充斥了你的口腔，跟你之前尝过的味道完全不同。"
+						+ "在你还没有反应过来的时候，你就把[pc.lips]吸在了这美味的糖果上，发出着小声的呜咽，你似乎阻止不了自己舔这根棒棒糖了……",
+					"[npc.name]把棒棒糖放到[npc.lips+]边，伸出[npc.tongue]在上面留下了一道绵长的口水痕。"
+						+ "那令人上瘾的味道迅速冲垮了[npc.her]的感官，[npc.she]急切地将[npc.lips]吸在这美味的糖果上，"
+						+ "发出着小声的呜咽，[npc.she]似乎阻止不了自己舔这根棒棒糖了……",
+					"[npc.Name]拿出了一根风车型的棒棒糖，麻利地打开包装，开始舔起来……",
+					"[npc.Name]拿出了一根风车型的棒棒糖，麻利地打开包装，硬塞进了你的嘴里。"
+						+ "一股强烈的甜味冲击着你的舌头，跟你之前尝过的味道完全不同。"
+						+ "在你还没有反应过来的时候，你就把[pc.lips]吸在了这美味的糖果上，发出着小声的呜咽，你似乎阻止不了自己舔这根棒棒糖了……");
 
 		}
 	};
@@ -454,10 +454,10 @@ public class ItemType {
 	public static AbstractItemType HARPY_MATRIARCH_NYMPHO_LOLLIPOP = new AbstractItemType(1250,
 			null,
 			false,
-			"[nymphoHarpy.namePos] lollipop",
-			"[nymphoHarpy.namePos] lollipops",
-			"A cock-shaped lollipop that you got from the harpy matriarch [nymphoHarpy.name]."
-				+ " Although it looks to be made from regular candy, you're pretty sure that eating it would result in a potent transformation...",
+			"[nymphoHarpy.namePos]的棒棒糖",
+			"[nymphoHarpy.namePos]的棒棒糖",
+			"从哈比族长[nymphoHarpy.name]那里拿到的屌状棒棒糖。"
+				+ "尽管看上去就是普通的糖果制成，但你确信一旦吃下去肯定会发生转化……",
 			"nymphoLollipop",
 			PresetColour.RARITY_LEGENDARY,
 			null,
@@ -477,32 +477,32 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "suck";
+			return "舔";
 		}
 
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"Bringing the lollipop up to your [pc.lips+], you dart out your [pc.tongue] and give it a long, wet lick."
-						+ " An intense, sweet flavour fills your mouth, quite unlike anything you've ever tasted before."
-						+ " Before you know what you're doing, you're pushing the delicious, cock-shaped candy into your mouth, letting out lewd moans as you find yourself unable to stop sucking and licking it...",
-					"Bringing the lollipop up to [npc.namePos] [npc.lips+], you smile as [npc.she] darts out [npc.her] [npc.tongue] to give it a long, wet lick."
-						+ " The intoxicating taste quickly overwhelms [npc.her] senses, and [npc.she] eagerly wraps [npc.her] [npc.lips] around the delicious, cock-shaped candy,"
-							+ " letting out lewd moans as [npc.she] finds [npc.herself] unable to stop sucking and licking it...",
-					"[npc.Name] produces a cock-shaped lollipop and, after quickly pulling off the wrapper, starts licking and sucking it...",
-					"[npc.Name] produces a cock-shaped lollipop and, after quickly pulling off the wrapper, forces it against your [pc.lips] and into your mouth."
-							+ " An intense, sweet flavour fills your mouth, quite unlike anything you've ever tasted before."
-							+ " Before you know what you're doing, you're pushing the delicious, cock-shaped candy into your mouth, letting out lewd moans as you find yourself unable to stop sucking and licking it...");
+					"你把棒棒糖放到[pc.lips+]边，伸出[pc.tongue]在上面留下了一道绵长的口水痕。"
+						+ "一股强烈的甜味充斥了你的口腔，跟你之前尝过的味道完全不同。"
+						+ "在你还没有反应过来的时候，你就开始把这美味的屌状糖果在嘴里进进出出，发出着淫荡的呻吟，你似乎阻止不了自己舔这根棒棒糖了……",
+					"[npc.name]把棒棒糖放到[npc.lips+]边，伸出[npc.tongue]在上面留下了一道绵长的口水痕。"
+						+ "那令人上瘾的味道迅速冲垮了[npc.her]的感官，[npc.she]急切地用[npc.lips]包裹住了这美味的屌状糖果，"
+							+ "发出着淫荡的呻吟，[npc.she]似乎阻止不了自己舔这根棒棒糖了……",
+					"[npc.Name]拿出了一根屌状的棒棒糖，麻利地打开包装，开始舔起来……",
+					"[npc.Name]拿出了一根屌状的棒棒糖，麻利地打开包装，硬塞进了你的嘴里。"
+							+ "一股强烈的甜味充斥了你的口腔，跟你之前尝过的味道完全不同。"
+							+ "在你还没有反应过来的时候，你就开始把这美味的屌状糖果在嘴里进进出出，发出着淫荡的呻吟，你似乎阻止不了自己舔这根棒棒糖了……");
 		}
 	};
 	
 	public static AbstractItemType HARPY_MATRIARCH_DOMINANT_PERFUME = new AbstractItemType(1250,
 			null,
 			false,
-			"[dominantHarpy.namePos] perfume",
-			"[dominantHarpy.namePos] perfumes",
-			"A bottle of perfume that you got from the harpy matriarch [dominantHarpy.name]."
-				+ " Although it looks to contain normal perfume, you're pretty sure that using it would result in a potent transformation...",
+			"[dominantHarpy.namePos]的香水",
+			"[dominantHarpy.namePos]的香水",
+			"从哈比族长[dominantHarpy.name]那里拿到的一瓶香水。"
+				+ "尽管看上去就是普通的香水，但你确信一旦喷在身上肯定会发生转化……",
 			"dominantPerfume",
 			PresetColour.RARITY_LEGENDARY,
 			null,
@@ -521,25 +521,25 @@ public class ItemType {
 		
 		@Override
 		public String getUseName() {
-			return "spray";
+			return "喷";
 		}
 
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"Bringing the bottle of perfume up to your neck, you give it a little squirt."
-							+ " Although only a small amount of liquid shoots out, the entire bottle's contents are instantly drained, leaving you holding an empty vessel."
-							+ " As you look down at it in surprise, the strong, feminine scent rises up to overpower your senses,"
-							+ " and you find yourself letting out a desperate moan as the nature of the perfume's powerful enchantment starts to make itself known...",
-					"Bringing the bottle of perfume up to [npc.namePos] neck, you give it a little squirt."
-							+ " Although only a small amount of liquid shoots out, the entire bottle's contents are instantly drained, leaving you holding an empty vessel."
-							+ " As you look down at it in surprise, the strong, feminine scent rises up to overpower [npc.namePos] senses,"
-							+ " and [npc.she] finds [npc.herself] letting out a desperate moan as the nature of the perfume's powerful enchantment starts to make itself known...",
-					"[npc.Name] produces a bottle of perfume and, after quickly pulling off the cap, squirts some onto [npc.her] neck...",
-					"[npc.Name] produces a bottle of perfume and, after quickly pulling off the cap, squirts some onto your neck."
-						+ " Although only a small amount of liquid shoots out, the entire bottle's contents are instantly drained, leaving [npc.name] holding an empty vessel."
-						+ " As you look down at it in surprise, the strong, feminine scent rises up to overpower your senses,"
-							+ " and you find yourself letting out a desperate moan as the nature of the perfume's powerful enchantment starts to make itself known...");
+					"你把香水瓶放在脖子旁，轻轻一喷。"
+							+ "尽管只释放出极少量的液体，但却瞬间用光了一整瓶，只剩下一个空壳子。"
+							+ "你惊讶地低头一看，一阵浓烈的女性香气却直接冲破了你的感官，"
+							+ "香水中强力的附魔似乎开始发挥作用，你意识到自己下意识渴望地呻吟起来……",
+					"你把香水瓶放在[npc.namePos]脖子旁，轻轻一喷。"
+							+ "尽管只释放出极少量的液体，但却瞬间用光了一整瓶，只剩下一个空壳子。"
+							+ "你惊讶地低头一看，一阵浓烈的女性香气却直接冲破了[npc.namePos]的感官，"
+							+ "香水中强力的附魔似乎开始发挥作用，[npc.she]意识到自己下意识渴望地呻吟起来……",
+					"[npc.Name]拿出了一瓶香水，麻利地掀开盖子，喷在了[npc.her]的脖子上……",
+					"[npc.Name]拿出了一瓶香水，麻利地掀开盖子，喷在了你的脖子上……"
+						+ "尽管只释放出极少量的液体，但却瞬间用光了一整瓶，只剩下一个空壳子。"
+						+ "你惊讶地低头一看，一阵浓烈的女性香气却直接冲破了你的感官，"
+							+ "香水中强力的附魔似乎开始发挥作用，你意识到自己下意识渴望地呻吟起来……");
 			
 		}
 	};
@@ -550,10 +550,10 @@ public class ItemType {
 	public static AbstractItemType POTION = new AbstractItemType(500,
 			"",
 			false,
-			"potion",
-			"potions",
-			"Created by infusing arcane essences with a consumable item, potions such as these can hold a huge number of restorative effects or performance enhancements."
-					+ " As potion creation is limited to those with a high level of arcane proficiency, such as demons, they are quite rare, and fetch a high price.",
+			"药水",
+			"药水",
+			"通过向消耗品中注入奥术精华而创造出的药水能够拥有强大的恢复效果或属性提升。"
+					+ "由于药水的制作仅限于那些精通奥术的人，比如恶魔。所以它们相当罕见，价格也很高。",
 			"refined_potion_container",
 			PresetColour.CLOTHING_PINK,
 			null,
@@ -567,27 +567,27 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"First removing the bottle's stopper, you then bring the potion up to your waiting lips."
-						+ " A sweet smell rises from the opening, and, after gulping down the delicious liquid, you feel a strange tingling feeling spreading throughout your body as the potion's effects start to make themselves known...",
-					"First removing the bottle's stopper, you then bring the potion up to [npc.namePos] waiting lips, before forcing [npc.herHim] to drink it all down.",
-					"[npc.Name] pulls out a potion of some sort, and, after quickly removing the bottle's stopper, [npc.she] promptly gulps downs the contents.",
-					"[npc.Name] brings the potion to your lips, before tilting your head back and forcing you to quickly gulp down the contents."
-						+ " You feel a strange tingling feeling spreading throughout your body as the potion's effects start to make themselves known...");
+					"你先拔出了瓶塞，然后迫不及待地送到了嘴边。"
+						+ "一股香甜味从瓶口涌出，你连忙吞下了这美味的液体，随后便感到一阵刺痛传遍了你的身体，药水似乎开始起效了……",
+					"你先拔出了瓶塞，然后送到了[npc.namePos]的嘴边，给[npc.herHim]全部灌了下去。",
+					"[npc.Name]拿出了一瓶某种液体，迅速拔掉了瓶塞，将整瓶一饮而尽。",
+					"[npc.Name]将药水送到你的嘴边，稍微仰起你的脑袋，强行让你吞下了里面的液体。"
+						+ "你感到一股奇特的刺痛感传遍了全身，药水似乎开始起效了……");
 		}
 	};
 	
 	public static AbstractItemType ELIXIR = new AbstractItemType(750,
 			"",
 			false,
-			"elixir",
-			"elixirs",
-			"Created by infusing arcane essences with a consumable item, elixirs such as these can hold a huge number of transformative effects."
-					+ " As elixir creation is limited to those with a high level of arcane proficiency, such as demons, they are quite rare, and fetch a high price.",
+			"灵药",
+			"灵药",
+			"通过将奥术精华注入消耗品后获得，这样的灵药可以拥有大量的转化效果。"
+					+ "只有奥术造诣极高的人——例如恶魔——才能酿造灵药，灵药十分稀有，价格也不俗。",
 			"refined_elixir_container",
 			PresetColour.CLOTHING_PINK,
 			null,
@@ -601,17 +601,17 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"First removing the bottle's stopper, you then bring the elixir up to your waiting lips."
-						+ " A sweet smell rises from the opening, and, after gulping down the delicious liquid, you feel a strange tingling feeling spreading throughout your body as the elixir's effects start to make themselves known...",
-					"First removing the bottle's stopper, you then bring the elixir up to [npc.namePos] waiting lips, before forcing [npc.herHim] to drink it all down.",
-					"[npc.Name] pulls out an elixir of some sort, and, after quickly removing the stopper, [npc.she] promptly gulps downs the contents.",
-					"[npc.Name] brings the elixir to your lips, before tilting your head back and forcing you to quickly gulp down the contents."
-						+ " You feel a strange tingling feeling spreading throughout your body as the elixir's effects start to make themselves known...");
+					"你先拔出了瓶塞，然后迫不及待地将灵药送到了嘴边。"
+						+ "一股香甜味从瓶口涌出，你连忙吞下了这美味的液体，随后便感到一阵刺痛传遍了你的身体，灵药似乎开始起效了……",
+					"你先拔出了瓶塞，然后将灵药送到了[npc.namePos]的嘴边，给[npc.herHim]全部灌了下去。",
+					"[npc.Name]拿出了一瓶某种灵药，迅速拔掉了瓶塞，将整瓶一饮而尽。",
+					"[npc.Name]将灵药送到你的嘴边，稍微仰起你的脑袋，强行让你吞下了里面的液体。"
+						+ "你感到一股奇特的刺痛感传遍了全身，灵药似乎开始起效了……");
 		}
 	};
 	
@@ -619,12 +619,12 @@ public class ItemType {
 	// Non-TF:
 
 	public static AbstractItemType DYE_BRUSH = new AbstractItemType(150,
-			"a",
+			"一把",
 			false,
-			"dye-brush",
-			"dye-brushes",
-			"A small, very ordinary-looking brush, of the sort used for fine detailing on canvas or models."
-					+ " On closer inspection, you notice a very faint purple glow emanating from the brush's tip, revealing its true nature as an arcane-enchanted dye-brush.",
+			"染色刷",
+			"染色刷",
+			"一把看上去极其不同的小刷子，看样子就是在画布或雕塑上描画细节的。"
+					+ "凑近仔细观察后，你注意到刷子的顶端散发出极其微弱的紫色光芒，表明其确实是一把奥术附魔的染色刷。",
 			"dyeBrush",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -636,7 +636,7 @@ public class ItemType {
 					ItemTag.SUBMISSION_TUNNEL_SPAWN)) {
 		@Override
 		public String getUseName() {
-			return "use";
+			return "使用";
 		}
 		@Override
 		public boolean isAbleToBeUsedInSex() {
@@ -649,10 +649,10 @@ public class ItemType {
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return "<p>"
-						+ "As you take hold of the Dye-brush, you see the purple glow around the tip growing in strength."
-						+ " The closer you move it to a piece of clothing, the brighter the glow becomes, until suddenly, images of different colours start flashing through your mind."
-						+ " As you touch the bristles to the piece of clothing, the Dye-brush instantly evaporates!"
-						+ " You see that the arcane enchantment has dyed your piece of clothing the colour you wanted."
+						+ "当你握住染色刷时，你看到刷头发出一阵紫色的强光。"
+						+ "当其越靠近那件衣物，光芒就越明亮，最后一瞬间，五颜六色的画面开始在你的脑中闪烁。"
+						+ "用毛刷触碰到衣物表面时，染色刷瞬间汽化了！"
+						+ "你看得出奥术附魔已经将衣物染成你想要的颜色了。"
 					+ "</p>";
 		}
 
@@ -663,12 +663,12 @@ public class ItemType {
 	};
 	
 	public static AbstractItemType REFORGE_HAMMER = new AbstractItemType(150,
-			"a",
+			"一把",
 			false,
-			"reforging hammer",
-			"reforging hammers",
-			"A small hammer, with a solid metal head and wooden shaft."
-					+ " It has been imbued with a unique arcane enchantment, which has not only made it as light as a feather, but has also granted it the ability to instantly reforge any weapon.",
+			"重铸锤",
+			"重铸锤",
+			"一把小锤子，有坚固的金属头和木制的锤柄。"
+					+ "它被注入了一种独特的奥术魔法，不仅轻如鸿毛，还能瞬间重铸任何武器。",
 			"reforge_hammer",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -680,7 +680,7 @@ public class ItemType {
 					ItemTag.SUBMISSION_TUNNEL_SPAWN)) {
 		@Override
 		public String getUseName() {
-			return "use";
+			return "使用";
 		}
 		@Override
 		public boolean isAbleToBeUsedInSex() {
@@ -693,10 +693,10 @@ public class ItemType {
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return "<p>"
-						+ "As you take hold of the reforging hammer, you see the metal head start to emit a deep purple glow."
-						+ " The closer you move it to a weapon, the brighter this glow becomes, until suddenly, images of different damage types start flashing through your mind."
-						+ " As you touch the metal head  to the weapon of your choice, the reforge hammer instantly evaporates!"
-						+ " You see that the arcane enchantment has reforged the weapon into the damage type you wanted."
+						+ "当你握住重铸锤时，你看到金属头发出一阵暗紫色的光芒。"
+						+ "当其越靠近你的武器，光芒就越明亮，最后一瞬间，各类伤害类型的画面开始在你的脑中闪烁。"
+						+ "用金属头触碰到武器表面时，重铸锤瞬间汽化了！"
+						+ "你注意到奥术附魔已经重铸了这把武器，成为了你想要伤害类型。"
 					+ "</p>";
 		}
 
@@ -707,11 +707,11 @@ public class ItemType {
 	};
 	
 	public static AbstractItemType CONDOM_USED_WEBBING = new AbstractItemType(1,
-			"a",
+			"一个",
 			false,
-			"used condom-webbing",
-			"used condom-webbings",
-			"A used, condom-like sheath of spider's webbing, tied at the top and filled with someone's cum. While most people would simply throw this away, those with a particularly dirty mind might find a use for it...",
+			"用过的避孕网",
+			"用过的避孕网",
+			"一个由蛛网制成的避孕套样的物体，已经使用过，里面装满了某人的精液，口部系了起来。虽然绝大多数人都只会单纯将其丢掉，但那些心灵肮脏的家伙总会另有他用……",
 			"condomUsedWebbing",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -747,11 +747,11 @@ public class ItemType {
 	};
 
 	public static AbstractItemType CONDOM_USED = new AbstractItemType(1,
-			"a",
+			"一个",
 			false,
-			"used condom",
-			"used condoms",
-			"A used condom, tied at the top and filled with someone's cum. While most people would simply throw this away, those with a particularly dirty mind might find a use for it...",
+			"用过的避孕套",
+			"用过的避孕套",
+			"一个使用过的避孕套样的物体，里面装满了某人的精液，口部系了起来。虽然绝大多数人都只会单纯将其丢掉，但那些心灵肮脏的家伙总会另有他用……",
 			"condomUsed",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -762,20 +762,20 @@ public class ItemType {
 					ItemTag.REMOVE_FROM_DEBUG_SPAWNER)) {
 		@Override
 		public String getUseName() {
-			return "open";
+			return "打开";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			if(user==target) {
-				return UtilText.parse(user, target, "Untying the top of the used condom, [npc.name] [npc.verb(wonder)] how best to use the contents.");
+				return UtilText.parse(user, target, "解开用过的避孕套，[npc.name]想知道如何最好地使用里面的东西。");
 			} else {
-				return UtilText.parse(user, target, "Untying the top of the used condom, [npc.name] [npc.verb(wonder)] how best to use the contents on [npc2.name].");
+				return UtilText.parse(user, target, "解开用过的避孕套，[npc.name]想知道如何在[npc2.name]身上最好地使用里面的东西。");
 			}
 		}
 		@Override
 		public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
-			return "You can't think of a use for this. Maybe it's best to throw it away...<br/>"
-					+ "(You need have at least a <b style='color:"+CorruptionLevel.THREE_DIRTY.getColour().toWebHexString()+";'>"+CorruptionLevel.THREE_DIRTY.getName()+"</b> level of corruption to know how to use this!)";
+			return "你想不到这东西还有什么用法。或许还是赶紧扔了吧……<br/>"
+					+ "(你的堕落度至少需要达到<b style='color:"+CorruptionLevel.THREE_DIRTY.getColour().toWebHexString()+";'>"+CorruptionLevel.THREE_DIRTY.getName()+"</b>才能得知该物品的用法！)";
 		}
 		@Override
 		public boolean isAbleToBeUsedInCombatAllies() {
@@ -792,11 +792,11 @@ public class ItemType {
 	};
 	
 	public static AbstractItemType ORIENTATION_HYPNO_WATCH = new AbstractItemType(50000,
-			"a",
+			"一个",
 			false,
-			"Hypno-Watch",
-			"Hypno-Watches",
-			"A unique, incredibly-powerful arcane instrument. When enchanted, this Hypno-Watch has the ability to change a person's sexual orientation, at the cost of increasing their corruption...",
+			"催眠怀表",
+			"催眠怀表",
+			"一个十分特殊又极其强大的奥术装置。附魔之后，这块催眠怀表就能够修改他人的性取向，只需提升一点对象的堕落度……",
 			"hypnoClockBase",
 			PresetColour.ANDROGYNOUS,
 			null,
@@ -833,27 +833,27 @@ public class ItemType {
 		
 		@Override
 		public String getUseName() {
-			return "hypnotise";
+			return "催眠";
 		}
 		
 		@Override
 		public String getUseTooltipDescription(GameCharacter user, GameCharacter target) {
 			if(user.equals(target)) {
-				return "Use the " + getName(false) + " to hypnotise yourself.";
+				return "使用" + getName(false) + "催眠自己。";
 			} else {
-				return UtilText.parse(target, "Use the " + getName(false) + " to hypnotise [npc.name].");
+				return UtilText.parse(target, "使用" + getName(false) + "催眠[npc.name]。");
 			}
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"Taking hold of the delicate chain, you start slowly swinging the Hypno-Watch back and forth, fixating your gaze on the swirling face as you allow the item's arcane power to seep into your mind...",
-					"Taking hold of the delicate chain, you start slowly swinging the Hypno-Watch back and forth in front of [npc.namePos] face, and,"
-							+ " just as you'd hoped, [npc.she] fixates [npc.her] gaze on the swirling face, allowing the item's arcane power to seep into [npc.her] mind...",
-					"Taking hold of the delicate chain, [npc.name] starts slowly swinging the Hypno-Watch back and forth, fixating [npc.her] gaze on the swirling face as [npc.she] allows the item's arcane power to seep into [npc.her] mind...",
-					"Taking hold of the delicate chain, [npc.name] starts slowly swinging the Hypno-Watch back and forth in front of your face,"
-							+ " and you find yourself unable to do anything but fixate your gaze on the swirling face as the item's arcane power seeps into your mind...");
+					"你捏住精致的表链，轻轻地将催眠怀表左右晃动起来，同时将自己的目光集中在转动的表盘上，从而让物品中的奥术之力渗入思想中……",
+					"你捏住精致的表链，轻轻地将催眠怀表在[npc.namePos]的面前左右晃动起来，"
+							+ "如你所料，[npc.she]将目光集中在了转动的表盘上，物品中的奥术之力从而得以渗入[npc.her]的思想中…… ",
+					"[npc.Name]捏住精致的表链，轻轻地将催眠怀表左右晃动起来，同时将自己的目光集中在转动的表盘上，从而让物品中的奥术之力渗入思想中……",
+					"[npc.Name]捏住精致的表链，轻轻地将催眠怀表在你的面前左右晃动起来，"
+							+ "你意识到自己难以自控，将目光集中在了旋涡状的表盘上，物品中的奥术之力从而得以渗入你的思想中…… ");
 		}
 		
 		@Override
@@ -930,11 +930,11 @@ public class ItemType {
 //	};
 	
 	public static AbstractItemType MOO_MILKER_EMPTY = new AbstractItemType(50,
-			"a",
+			"一个",
 			false,
-			"Moo Milker",
-			"Moo Milkers",
-			"A manual cow-themed breast pump, capable of holding up to "+Units.fluid(1000)+" of liquid in the attached plastic beaker.",
+			"哞哞挤奶器",
+			"哞哞挤奶器",
+			"一个手动的挤奶器，有奶牛风格的装饰，最多能够在相连接的塑料瓶中储存"+Units.fluid(1000)+"的液体。",
 			"breastPump",
 			PresetColour.BASE_PURPLE_LIGHT,
 			null,
@@ -950,20 +950,20 @@ public class ItemType {
 		
 		@Override
 		public String getUseName() {
-			return "milk";
+			return "挤奶";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"Bringing the Moo Milker up to your breast, you place the suction cup over your [pc.nipple(true)], before starting to pump the lever up and down."
-							+ " Your [pc.milk+] starts to squirt out into the attached beaker, and you can't help but let out a deeply satisfied sigh at the delightful sensation of milking yourself.",
-					"Bringing the Moo Milker up to [npc.namePos] breast, you place the suction cup over [npc.her] [npc.nipple(true)], before starting to pump the lever up and down."
-							+ " [npc.Her] [npc.milk+] starts to squirt out into the attached beaker, and [npc.she] can't help but let out a deeply satisfied sigh at the delightful sensation of being milked.",
-					"Bringing a Moo Milker up to [npc.her] breast, [npc.name] places the suction cup over [npc.her] [npc.nipple(true)], before starting to pump the lever up and down."
-							+ " [npc.Her] [npc.milk+] starts to squirt out into the attached beaker, and [npc.she] can't help but let out a deeply satisfied sigh at the delightful sensation of milking [npc.herself].",
-					"Bringing a Moo Milker up to your breast, [npc.name] places the suction cup over your [pc.nipple(true)], before starting to pump the lever up and down."
-							+ " Your [pc.milk+] starts to squirt out into the attached beaker, and you can't help but let out a deeply satisfied sigh at the delightful sensation of being milked.");
+					"你将哞哞挤奶器拿到自己的胸旁，把吸力罩安装在[pc.nipple(true)]上，然后开始按动上面的把手。"
+							+ "你[pc.milk+]渐渐地被泵入连接的瓶中，给自己挤奶的感觉令你按捺不住，发出一声满足的长叹。",
+					"你将哞哞挤奶器拿到[npc.namePos]的胸旁，把吸力罩安装在[pc.nipple(true)]上，然后开始按动上面的把手。"
+							+ "[npc.her][npc.milk+]渐渐地被泵入连接的瓶中，被挤奶的感觉令[npc.she]按捺不住，发出一声满足的长叹。",
+					"[npc.Name]将哞哞挤奶器拿到自己的胸旁，把吸力罩安装在[npc.nipple(true)]上，然后开始按动上面的把手。"
+							+ "[npc.her][npc.milk+]渐渐地被泵入连接的瓶中，给自己挤奶的感觉令[npc.she]按捺不住，发出一声满足的长叹。",
+					"[npc.Name]将哞哞挤奶器拿到你的胸旁，把吸力罩安装在[pc.nipple(true)]上，然后开始按动上面的把手。"
+							+ "你[pc.milk+]渐渐地被泵入连接的瓶中，被挤奶的感觉令你按捺不住，发出一声满足的长叹。");
 		}
 
 		@Override
@@ -975,28 +975,28 @@ public class ItemType {
 		public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
 			if(target.isPlayer()) {
 				if(!target.isAbleToAccessCoverableArea(CoverableArea.NIPPLES, true)) {
-					return "You need to be able to access your nipples in order to use this!";
+					return "要使用该物品必须先能够接触到你的乳头！";
 				} else {
-					return "You need to have at least "+Units.fluid(5)+" of milk stored in your breasts in order to use this!";
+					return "要使用该物品，你的乳房中至少需要储存着"+Units.fluid(5)+"乳汁！";
 				}
 				
 			} else {
 				if(!target.isAbleToAccessCoverableArea(CoverableArea.NIPPLES, true)) {
-					return UtilText.parse(target, "You need to be able to access [npc.namePos] nipples in order to use this!");
+					return UtilText.parse(target, "要使用该物品必须先能够接触到[npc.namePos]头！");
 				} else {
-					return UtilText.parse(target, "[npc.Name] needs to have at least "+Units.fluid(5)+" of milk stored in [npc.her] breasts in order to use this!");
+					return UtilText.parse(target, "要使用该物品，[npc.her]的乳房中至少需要储存着"+Units.fluid(5)+"乳汁！");
 				}
 			}
 		}
 	};
 	
 	public static AbstractItemType MOO_MILKER_FULL = new AbstractItemType(150,
-			"a",
+			"一块",
 			false,
-			"Filled Moo Milker",
-			"Filled Moo Milkers",
-			"A manual cow-themed breast pump."
-					+ " The attached plastic beaker has been filled with milk, and, by unscrewing the pumping mechanism on top, you can gain access to the liquid at any time.",
+			"装满的挤奶器",
+			"装满的挤奶器",
+			"一个手动的挤奶器，有奶牛风格的装饰。"
+					+ "连接在其上的塑料瓶已经装满了乳汁，只要拧开顶端的抽取装置，就能够随时享用到其中的液体。",
 			"breastPumpFilled",
 			PresetColour.BASE_PURPLE_LIGHT,
 			null,
@@ -1009,26 +1009,26 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You unscrew the top of the breast pump, and, bringing it up to your lips, you gulp down the contents.",
-					"You unscrew the top of the breast pump, and, bringing it up to [npc.namePos] [npc.lips], you force [npc.herHim] to gulp down the contents.",
-					"Unscrewing the top of the breast pump, [npc.name] brings it up to [npc.her] [npc.lips], before swallowing down the contents.",
-					"Unscrewing the top of the breast pump, [npc.name] brings it up to your [pc.lips], before forcing you to gulp down the contents.");
+					"你拧开了抽取头，将瓶口送到唇边，喝下了其中的液体。",
+					"你拧开了抽取头，将瓶口送到[npc.namePos][npc.lips]边，强行让[npc.herHim]喝下了其中的液体。",
+					"[npc.Name]拧开了抽取头，将瓶口送到[npc.lips]边，喝下了其中的液体。",
+					"[npc.Name]拧开了抽取头，将瓶口送到你[pc.lips]边，强行让你喝下了其中的液体。");
 		}
 	};
 	
 	public static AbstractItemType PREGNANCY_TEST = new AbstractItemType(100,
-			"an",
+			"一根",
 			false,
-			"Arcane Pregnancy Tester",
-			"Arcane Pregnancy Testers",
-			"A small plastic wand, no longer than "+Units.size(15)+", which has a digital readout embedded in the middle."
-					+ " The small instruction leaflet that came with it says to 'swipe the tester over the target's stomach to find out who the father is!'",
+			"奥术验孕棒",
+			"奥术验孕棒",
+			"一根小塑料棒，长不过"+Units.size(15)+"，中间嵌入着一块数字显示屏。"
+					+ "附带的小说明书上写到：“将检验棒在对象腹部扫过，就能判定父亲的身份！”",
 			"pregnancy_test",
 			PresetColour.CLOTHING_WHITE,
 			PresetColour.GENERIC_ARCANE,
@@ -1043,26 +1043,26 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "use";
+			return "使用";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You swipe the pregnancy tester over your stomach, waiting until you hear it beep before bringing it up to take a look at the readout.",
-					"You swipe the pregnancy tester over [npc.namePos] stomach, waiting until you hear it beep before bringing it up to take a look at the readout.",
-					"[npc.Name] swipes the pregnancy tester over [npc.her] stomach, waiting until [npc.she] hears it beep before bringing it up to take a look at the readout.",
-					"[npc.Name] swipes the pregnancy tester over your stomach, waiting until [npc.she] hears it beep before bringing it up to take a look at the readout.");
+					"你将验孕棒从肚子前扫过，听见滴的一声后便拿了起来检查读数。",
+					"你将验孕棒从[npc.namePos]的肚子前扫过，听见滴的一声后便拿了起来检查读数。",
+					"[npc.Name]将验孕棒从[npc.her]的肚子前扫过，听见滴的一声后便拿了起来检查读数。",
+					"[npc.Name]验孕棒从你的肚子前扫过，听见滴的一声后便拿了起来检查读数。");
 		}
 	};
 	
 	public static AbstractItemType MOTHERS_MILK = new AbstractItemType(100,
-			"a bottle of",
+			"一瓶",
 			false,
-			"Mother's Milk",
-			"Mother's Milks",
-			"A baby bottle filled with a rich, creamy milk."
-					+ " On the side, a little sticker declares that this drink is able to rapidly advance pregnancies and egg incubations.",
+			"母亲的奶水",
+			"母亲的奶水",
+			"装有醇厚液体的婴儿奶瓶。"
+					+ "在瓶身一边贴着一个标签，称该饮品能够快速缩短孕期和孵卵期。",
 			"mothers_milk",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -1078,26 +1078,26 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"Bringing the bottle up to your [pc.lips], you take the teat-like opening into your mouth, before greedily starting to suckle down the creamy liquid within.",
-					"Bringing the bottle up to [npc.namePos] [npc.lips], you push the teat-like opening into [npc.her] mouth, before forcing [npc.herHim] to suckle down the creamy liquid within.",
-					"[npc.Name] produces a bottle of 'Mother's Milk', and, taking the teat-like opening into [npc.her] mouth, [npc.she] greedily starts to suckle down the creamy liquid within.",
-					"[npc.Name] produces a bottle of 'Mother's Milk', and, pushing the teat-like opening into your mouth, [npc.she] forces you to suckle down the creamy liquid within.");
+					"你将瓶子送到[pc.lips]边，含住奶头形状的开口，贪婪地吮吸起其中浓郁的液体。",
+					"你将瓶子送到[npc.namePos][npc.lips]边，把奶头形状的开口塞进了[npc.her]的嘴里，强行让[npc.herHim]吮吸起其中浓郁的液体。",
+					"[npc.Name]将瓶子送到[npc.lips]边，含住奶头形状的开口，贪婪地吮吸起其中浓郁的液体。",
+					"[npc.Name]将瓶子送到你[pc.lips]边，把奶头形状的开口塞进了嘴里，强行让你吮吸起其中浓郁的液体。");
 		}
 	};
 	
 	public static AbstractItemType REJUVENATION_POTION = new AbstractItemType(1_000,
-			"a bottle of",
+			"一瓶",
 			false,
-			"rejuvenation potion",
-			"rejuvenation potions",
-			"A decorative glass bottle, filled with a light blue liquid and sealed with an ornate gold-and-glass stopper."
-					+ " An informative sticker on the underside of the bottle reads: '<i>Rejuvenation potion; guaranteed to restore over-used orifices and refill all of your fluids!</i>'",
+			"活力药剂",
+			"活力药剂",
+			"一个花纹繁复的玻璃瓶，瓶塞也是青铜镶嵌的玻璃塞。"
+					+ "在瓶底贴有有一张提示用的小标签，上面写着：'<i>活力药剂，能够重塑使用过度的腔穴以及恢复你所有的体液！</i>'",
 			"rejuvenation_potion",
 			PresetColour.CLOTHING_BLUE_LIGHT,
 			PresetColour.CLOTHING_GOLD,
@@ -1111,25 +1111,25 @@ public class ItemType {
 					ItemTag.DRINK)) {
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"Bringing the bottle up to your [pc.lips], you take the teat-like opening into your mouth, before greedily starting to suckle down the creamy liquid within.",
-					"Bringing the bottle up to [npc.namePos] [npc.lips], you push the teat-like opening into [npc.her] mouth, before forcing [npc.herHim] to suckle down the creamy liquid within.",
-					"[npc.Name] produces a bottle of 'Mother's Milk', and, taking the teat-like opening into [npc.her] mouth, [npc.she] greedily starts to suckle down the creamy liquid within.",
-					"[npc.Name] produces a bottle of 'Mother's Milk', and, pushing the teat-like opening into your mouth, [npc.she] forces you to suckle down the creamy liquid within.");
+					"你将瓶子送到[pc.lips]边，含住奶头形状的开口，贪婪地吮吸起其中浓郁的液体。",
+					"你将瓶子送到[npc.namePos][npc.lips]边，把奶头形状的开口塞进了[npc.her]的嘴里，强行让[npc.herHim]吮吸起其中浓郁的液体。",
+					"[npc.Name]将瓶子送到[npc.lips]边，含住奶头形状的开口，贪婪地吮吸起其中浓郁的液体。",
+					"[npc.Name]将瓶子送到你[pc.lips]边，把奶头形状的开口塞进了嘴里，强行让你吮吸起其中浓郁的液体。");
 		}
 	};
 	
 	public static AbstractItemType CIGARETTE_PACK = new AbstractItemType(350,
-			"a pack of",
+			"一包",
 			true,
-			"Starr Cigarette",
-			"Starr Cigarettes",
-			"An unopened, purple-and-white cardboard pack which contains twenty 'Starr Cigarettes'."
-					+ " According to the information printed on the back of the box, these cigarettes are both 'enhanced with aura-fortifying supplements' and 'guaranteed to make you look cool'.",
+			"斯塔香烟",
+			"斯塔香烟",
+			"一包还没开过的纸壳包装的烟盒，紫白配色，内涵二十根“斯塔香烟”。"
+					+ "根据盒子背面打印的信息，这些香烟不仅“添加了重振灵气的补剂”还“保证你回头率拉满”。",
 			"cigaretteBox",
 			PresetColour.CLOTHING_PURPLE_DARK,
 			PresetColour.CLOTHING_GOLD,
@@ -1143,26 +1143,26 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "open";
+			return "打开";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"By opening the top of the pack, you gain access to the twenty cigarettes stored within.",
-					"By opening the top of the pack, you gain access to the twenty cigarettes stored within, and then proceed to give them to [npc.name].",
-					"By opening the top of the pack, [npc.name] gains access to the twenty cigarettes stored within.",
-					"By opening the top of the pack, [npc.name] gains access to the twenty cigarettes stored within, and then proceeds to give them to you.");
+					"打开上方的包装后，你便能够取出其中的二十根香烟了。",
+					"打开上方的包装后，你便能够取出其中的二十根香烟给[npc.Name]了。",
+					"打开上方的包装后，[npc.Name]便能够取出其中的二十根香烟了。",
+					"打开上方的包装后，[npc.Name]便能够取出其中的二十根香烟给你了。");
 		}
 	};
 	
 	public static AbstractItemType CIGARETTE = new AbstractItemType(20,
-			"a",
+			"一个",
 			false,
-			"Starr Cigarette",
-			"Starr Cigarettes",
-			"A rolled up paper cylinder, fitted with a sponge-like filter, and packed with a combination of dried plant matter and aura-boosting supplements."
-					+ " It's been enchanted with a very weak fire spell, so that when placed in someone's mouth, it will self-ignite.",
+			"斯塔香烟",
+			"斯塔香烟",
+			"一根卷起的纸筒，塞着海绵样的滤嘴，内含物由烘干的烟草和奥术增幅补剂混合而成。"
+					+ "其上附魔有非常微弱的火系法术，放到嘴边时就能自动引火。",
 			"cigarette",
 			PresetColour.CLOTHING_ORANGE,
 			PresetColour.CLOTHING_BRASS,
@@ -1176,31 +1176,31 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "smoke";
+			return "抽";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You lift the cigarette to your [pc.lips] and put the end in your mouth, at which point the fire enchantment auto-ignites the opposite end."
-							+ " Breathing in, you inhale the smoke that's produced from the burning plant matter, before exhaling and creating a small white cloud in front of your face.",
-					"You lift the cigarette to [npc.namePos] [npc.lips] and put the end in [npc.her] mouth, at which point the fire enchantment auto-ignites the opposite end."
-							+ " Breathing in, [npc.she] inhales the smoke that's produced from the burning plant matter, before exhaling and creating a small white cloud in front of [npc.her] face.",
-					"[npc.NamePos] lifts the cigarette to [npc.her] [npc.lips] and puts the end in [npc.her] mouth, at which point the fire enchantment auto-ignites the opposite end."
-							+ " Breathing in, [npc.she] inhales the smoke that's produced from the burning plant matter, before exhaling and creating a small white cloud in front of [npc.her] face.",
-					"[npc.NamePos] lifts the cigarette to your [pc.lips] and puts the end in your mouth, at which point the fire enchantment auto-ignites the opposite end."
-							+ " Breathing in, you inhale the smoke that's produced from the burning plant matter, before exhaling and creating a small white cloud in front of your face.");
+					"你把香烟举到[pc.lips]边，将烟嘴塞到了嘴里，这时其上的火焰附魔便自动点燃了另一端。"
+							+ "你深吸一口，吸入了点燃烟草产生的烟雾，吐出后在面前形成了一小团白色烟气。",
+					"你把香烟举到[npc.namePos][npc.lips]边，将烟嘴塞到了嘴里，这时其上的火焰附魔便自动点燃了另一端。"
+							+ "[npc.she]深吸一口，吸入了点燃烟草产生的烟雾，吐出后在面前形成了一小团白色烟气。",
+					"[npc.namePos]把香烟举到[npc.lips]边，将烟嘴塞到了嘴里，这时其上的火焰附魔便自动点燃了另一端。"
+							+ "[npc.she]深吸一口，吸入了点燃烟草产生的烟雾，吐出后在面前形成了一小团白色烟气。",
+					"[npc.namePos]把香烟举到你[pc.lips]边，将烟嘴塞到了嘴里，这时其上的火焰附魔便自动点燃了另一端。"
+							+ "你深吸一口，吸入了点燃烟草产生的烟雾，吐出后在面前形成了一小团白色烟气。");
 		}
 	};
 
 	public static AbstractItemType MAKEUP_SET = new AbstractItemType(5000,
-			"an",
+			"一套",
 			false,
-			"arcane makeup set",
-			"arcane makeup set",
-			"A highly sought-after compact makeup set."
-				+ " The cosmetics contained within have been enchanted in such a way as to enable the user to change their colour at will."
-				+ " Even more impressively, no matter how much they're used, the makeup never expires.",
+			"奥术化妆套装",
+			"奥术化妆套装",
+			"一套广受好评的便携化妆套装。"
+				+ "其中的化妆品都拥有附魔，能够让使用者随意调整颜色。"
+				+ "更神奇的是，无论如何使用，里面的化妆品都不会耗尽。",
 			"makeupSet",
 			PresetColour.CLOTHING_BLACK,
 			PresetColour.CLOTHING_BLACK,
@@ -1224,7 +1224,7 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "use";
+			return "使用";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
@@ -1237,19 +1237,19 @@ public class ItemType {
 		@Override
 		public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
 			if(!target.isAbleToWearMakeup()) {
-				return UtilText.parse(target, "<i>As [npc.namePos] body is made of "+BodyChanging.getTarget().getBodyMaterial().getName()+", [npc.sheIsFull] [style.colourBad(unable to wear any makeup)]!</i>");
+				return UtilText.parse(target, "<i>由于[npc.namePos]的身体由"+BodyChanging.getTarget().getBodyMaterial().getName()+"构成，[npc.sheIsFull][style.colourBad(无法进行任何化妆)]！</i>");
 			}
-			return "This item cannot be used in this way!";
+			return "该物品无法这样使用！";
 		}
 	};
 
 	public static AbstractItemType DOLL_CONSOLE = new AbstractItemType(120000,
-			"a",
+			"一个",
 			false,
 			"D.E.C.K.",
-			"D.E.C.K.s",
-			"The <i>'Doll's Expedient Customisation Kit'</i> is the only way to transform an autonomous sex doll."
-				+ " By plugging the cable into a doll's rear neck port, the user can modify a wide range of the connected doll's physical attributes.",
+			"D.E.C.K.",
+			"<i>“玩偶专用客制化工具(Doll's Expedient Customisation Kit)”</i>是唯一能够转化自动性爱玩偶的方式。"
+				+ "将数据线插入玩偶后颈部的接口，使用者便能够调整玩偶大量的身体特性。",
 			"dollConsole",
 			PresetColour.CLOTHING_BLUE_LIGHT,
 			PresetColour.CLOTHING_PINK_LIGHT,
@@ -1275,7 +1275,7 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "use";
+			return "使用";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
@@ -1288,18 +1288,18 @@ public class ItemType {
 		@Override
 		public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
 			if(!target.isDoll()) {
-				return UtilText.parse(target, "<i>As [npc.nameIsFull] not a doll, the D.E.C.K. is of no use!</i>");
+				return UtilText.parse(target, "<i>[npc.nameIsFull]并非玩偶，D.E.C.K.没有效果！</i>");
 			}
-			return "This item cannot be used in this way!";
+			return "该物品无法这样使用！";
 		}
 	};
 	
 	public static AbstractItemType PRESENT = new AbstractItemType(250,
-			"a",
+			"一根",
 			false,
-			"Yuletide Gift",
-			"Yuletide Gift",
-			"A wrapped present, sold by one of the reindeer-morph overseers in Dominion. It contains a random item from their store, and can also be given as a gift to your offspring, slaves, or Lilaya.",
+			"圣诞节礼物",
+			"圣诞节礼物",
+			"一份包裹好的礼物，由御城区的某个驯鹿化形工头售卖。里面包含了他商店中的一件随机物品，同样也可以当作礼物送给后代、奴隶或者莉莱雅。",
 			"present",
 			PresetColour.GENERIC_ARCANE,
 			null,
@@ -1316,21 +1316,21 @@ public class ItemType {
 
 		@Override
 		public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
-			return "There's no space in your inventory or on the ground for whatever item is contained within!";
+			return "你的物品栏和地面都没有空间来容纳物品了！";
 		}
 		
 		@Override
 		public String getUseName() {
-			return "open";
+			return "打开";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You untie the ribbon and peel off the wrapping paper, before opening the box to discover what's inside...",
-					"You force [npc.name] to untie the ribbon and peel off the wrapping paper, before getting [npc.herHim] to open the box to discover what's inside...",
-					"[npc.Name] produces a present, and then proceeds to untie the ribbon and peel off the wrapping paper, before opening the box to discover what's inside...",
-					"[npc.Name] produces a present, and then proceeds to make you untie the ribbon and peel off the wrapping paper, before getting you to open the box to discover what's inside...");
+					"你解下丝带，撕开了包装纸，打开盒子后发现里面是……",
+					"你让[npc.name]解下丝带，撕开了包装纸，打开盒子后发现里面是……",
+					"[npc.Name]拿出一份礼物，随后解下丝带，撕开了包装纸，打开盒子后发现里面是……",
+					"[npc.Name]拿出一份礼物，随后让你解下丝带，撕开了包装纸，打开盒子后发现里面是……");
 		}
 	};
 	
@@ -1338,10 +1338,10 @@ public class ItemType {
 			500,
 			null,
 			false,
-			"Rose Bouquet",
-			"Rose Bouquets",
-			"A bouquet filled with roses of many colours, it smells pleasant even from a distance."
-				+ " [Ashley.speech(Just in case you're clueless to the point that you don't even know the favourite colour of your intended recipient, every natural colour is included here.)]",
+			"玫瑰花束",
+			"玫瑰花束",
+			"一束各色玫瑰组成的花束，即使相隔很远也能闻到怡人的香味。"
+				+ "[Ashley.speech(免得你都不知道心上人最喜欢的颜色是什么，所以里面每种颜色都有。)]",
 			//				+ " If their favourite happens to be blue, tough luck; maybe you should try getting acquainted with another species of flower instead of going with what's safe.)] ",
 			"giftRoseBouquet",
 			PresetColour.BASE_RED,
@@ -1355,25 +1355,25 @@ public class ItemType {
 		@Override
 		public String getDescription() {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.SHOPPING_ARCADE_ASHLEYS_SHOP)) {
-				return "A bouquet filled with roses of many colours, it smells pleasant even from a distance."
-						+ " [Ashley.speech(Just in case you're clueless to the point that you don't even know the favourite colour of your intended recipient, every natural colour is included here.)]";
+				return "一束各色玫瑰组成的花束，即使相隔很远也能闻到怡人的香味。"
+						+ "[Ashley.speech(免得你都不知道心上人最喜欢的颜色是什么，所以里面每种颜色都有。)]";
 			} else {
-				return "A bouquet filled with roses of many colours, it smells pleasant even from a distance.";
+				return "一束各色玫瑰组成的花束，即使相隔很远也能闻到怡人的香味。";
 			}
 		}
 		
 		@Override
 		public String getUseName() {
-			return "smell";
+			return "闻";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You take a smell of the delicate perfume given off by the rose bouquet.",
-					"You get [npc.name] to take a smell of the delicate perfume given off by the rose bouquet.",
-					"[npc.Name] takes a smell of the delicate perfume given off by the rose bouquet.",
-					"[npc.Name] gets you to take a smell of the delicate perfume given off by the rose bouquet.");
+					"你闻了闻玫瑰花束散发出的淡雅的香气。",
+					"你让[npc.Name]闻了闻玫瑰花束散发出的淡雅的香气。",
+					"[npc.Name]闻了闻玫瑰花束散发出的淡雅的香气。",
+					"[npc.Name]让你闻了闻玫瑰花束散发出的淡雅的香气。");
 		}
 		
 		@Override
@@ -1384,11 +1384,11 @@ public class ItemType {
 	
 	public static AbstractItemType GIFT_CHOCOLATES = new AbstractItemType(
 			300,
-			"a box of",
+			"一盒",
 			true,
-			"Chocolates",
-			"Chocolates",
-			"A box filled with various chocolates. [Ashley.speech(Generic, but tasty. Yeah, go ahead and pretend that you're buying this for someone other than yourself.)]",
+			"巧克力",
+			"巧克力",
+			"一盒各种口味的巧克力。[Ashley.speech(很普通但是很好吃。嗯，买吧，假装是给别人买的就好。)]",
 			"giftChocolates",
 			PresetColour.BASE_TAN,
 			PresetColour.BASE_BROWN_DARK,
@@ -1403,35 +1403,35 @@ public class ItemType {
 		@Override
 		public String getDescription() {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.SHOPPING_ARCADE_ASHLEYS_SHOP)) {
-				return "A box filled with various chocolates. [Ashley.speech(Generic, but tasty. Yeah, go ahead and pretend that you're buying this for someone other than yourself.)]";
+				return "一盒各种口味的巧克力。[Ashley.speech(很普通但是很好吃。嗯，买吧，假装是给别人买的就好。)]";
 			} else {
-				return "A box filled with various chocolates.";
+				return "一盒各种口味的巧克力。";
 			}
 		}
 		
 		@Override
 		public String getUseName() {
-			return "eat";
+			return "吃";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You remove the lid from the box of chocolates, and help yourself to the contents.",
-					"You remove the lid from the box of chocolates, and start feeding the contents to [npc.name].",
-					"[npc.Name] removes the lid from the box of chocolates, and starts eating the contents.",
-					"[npc.Name] removes the lid from the box of chocolates, and starts feeding the contents to you.");
+					"你拿开盒盖，自己吃了起来。",
+					"你拿开盒盖，喂给[npc.Name]吃了起来。",
+					"[npc.Name]拿开盒盖，自己吃了起来。",
+					"[npc.Name]拿开盒盖，喂给你吃了起来。");
 		}
 	};
 	
 	public static AbstractItemType GIFT_PERFUME = new AbstractItemType(
 			300,
-			"a bottle of",
+			"一瓶",
 			false,
-			"Rose Perfume",
-			"Rose Perfumes",
-			"A small bottle of perfume."
-					+ " [Ashley.speech(A generic scent that most people enjoy. Makes you more attractive to everyone, since nobody likes a stinker!)]",
+			"玫瑰香水",
+			"玫瑰香水",
+			"一小瓶香水。"
+					+ "[Ashley.speech(大多人都很欣赏的平常味道。能让你吸引到更多人，谁喜欢浑身臭气呢！)]",
 			"giftPerfume",
 			PresetColour.BASE_ROSE,
 			PresetColour.BASE_PURPLE_LIGHT,
@@ -1444,25 +1444,25 @@ public class ItemType {
 		@Override
 		public String getDescription() {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.SHOPPING_ARCADE_ASHLEYS_SHOP)) {
-				return "A small bottle of perfume."
-						+ " [Ashley.speech(A generic scent that most people enjoy. Makes you more attractive to everyone, since nobody likes a stinker!)]";
+				return "一小瓶香水。"
+						+ "[Ashley.speech(大多人都很欣赏的平常味道。能让你吸引到更多人，谁喜欢浑身臭气呢！)]";
 			} else {
-				return "A small bottle of perfume.";
+				return "一小瓶香水。";
 			}
 		}
 		
 		@Override
 		public String getUseName() {
-			return "spray";
+			return "喷";
 		}
 
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You take in a deep breath of the rose-scented fragrance as you spray a little squirt of the 'Rose Perfume' onto your neck.",
-					"You spray a little squirt of the 'Rose Perfume' onto [npc.namePos] neck.",
-					"[npc.Name] pulls out a bottle of 'Rose Perfume', and, after lifting it to [npc.her] neck, [npc.she] promptly sprays a little squirt onto [npc.her] [npc.skin].",
-					"[npc.Name] pulls out a bottle of 'Rose Perfume', and, after lifting it to your neck, [npc.she] sprays a little squirt onto your [pc.skin].");
+					"你深吸了一口玫瑰的芳香，便将“玫瑰香水”喷在了你的脖子上。",
+					"你将“玫瑰香水”喷在了[npc.namePos]的脖子上。",
+					"[npc.Name]拿出一瓶“玫瑰香水”，举到脖子边，立刻喷在了[npc.skin]上。",
+					"[npc.Name]拿出一瓶“玫瑰香水”，举到你的脖子边，立刻喷在了[pc.skin]上。");
 		}
 	};
 	
@@ -1470,10 +1470,10 @@ public class ItemType {
 			600,
 			null,
 			false,
-			"Teddy Bear",
-			"Teddy Bears",
-			"A cute brown teddy bear, with the words 'Hug me!' sewed onto a little heart that it's holding."
-				+ " [Ashley.speech(Warning, this is an inanimate object; it does not actually yearn for your affection and cannot protect you from monsters hiding under the bed!)]",
+			"泰迪熊",
+			"泰迪熊",
+			"一只可爱的棕色泰迪熊，抱着一个粉色的心，上面绣着“抱抱我！”。"
+				+ "[Ashley.speech(注意，这不是个活物；它其实并不渴望你的爱，也不能让你免受藏在床底下的怪物的伤害！)]",
 			"giftTeddyBear",
 			PresetColour.BASE_TAN,
 			null,
@@ -1486,25 +1486,25 @@ public class ItemType {
 		@Override
 		public String getDescription() {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType().equals(PlaceType.SHOPPING_ARCADE_ASHLEYS_SHOP)) {
-				return "A cute brown teddy bear, with the words 'Hug me!' sewed onto a little heart that it's holding."
-						+ " [Ashley.speech(Warning, this is an inanimate object; it does not actually yearn for your affection and cannot protect you from monsters hiding under the bed!)]";
+				return "一只可爱的棕色泰迪熊，抱着一个粉色的心，上面绣着“抱抱我！”。"
+						+ "[Ashley.speech(注意，这不是个活物；它其实并不渴望你的爱，也不能让你免受藏在床底下的怪物的伤害！)]";
 			} else {
-				return "A cute brown teddy bear, with the words 'Hug me!' sewed onto a little heart that it's holding.";
+				return "一只可爱的棕色泰迪熊，抱着一个粉色的心，上面绣着“抱抱我！”。";
 			}
 		}
 		
 		@Override
 		public String getUseName() {
-			return "hug";
+			return "拥抱";
 		}
 
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You hug the teddy bear. It's soft and fluffy...",
-					"You get [npc.name] to hug the teddy bear. [npc.She] remarks on how soft and fluffy it is...",
-					"[npc.Name] hugs the teddy bear. [npc.She] remarks on how soft and fluffy...",
-					"[npc.Name] gets you to hug the teddy bear. It's soft and fluffy...");
+					"你抱了抱泰迪熊，又松又软……",
+					"你让[npc.name]抱了抱泰迪熊，[npc.She]很惊讶竟然能这么松软……",
+					"[npc.Name]抱了抱泰迪熊，[npc.She]惊讶竟然能这么松软……",
+					"[npc.Name]让你抱了抱泰迪熊，又松又软……");
 		}
 		
 		@Override
@@ -1518,9 +1518,9 @@ public class ItemType {
 			25,
 			null,
 			false,
-			"Eggplant",
-			"Eggplants",
-			"A delicate, tropical perennial often cultivated as a tender or half-hardy annual in temperate climates. Also it kind of looks like a penis if you squint.",
+			"茄子",
+			"茄子",
+			"一种漂亮的热带多年生植物，通常在温带气候下作为不耐寒或半耐寒的一年生植物栽培。眯着眼睛看有点像个屌。",
 			"eggplant",
 			PresetColour.GENERIC_ARCANE,
 			null,
@@ -1541,16 +1541,16 @@ public class ItemType {
 		
 		@Override
 		public String getUseName() {
-			return "eat";
+			return "吃";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You eat the eggplant. The bitter taste of disappointment overwhelms you.",
-					"You force [npc.name] to eat the eggplant. The bitter taste of disappointment overwhelms you both.",
-					"[npc.Name] produces an eggplant, and then proceeds to eat it. The bitter taste of disappointment overwhelms you both.",
-					"[npc.Name] produces an eggplant, and then proceeds to force you to eat it. The bitter taste of disappointment overwhelms you both.");
+					"你吃了茄子。苦涩的口感让你很失望。",
+					"你让[npc.Name]吃下了茄子。苦涩的口感让你们很失望。",
+					"[npc.Name]拿出一根茄子，吃了下去。苦涩的口感让你们很失望。",
+					"[npc.Name]拿出一根茄子，让你吃了下去。苦涩的口感让你们很失望。");
 		}
 	};
 	
@@ -1558,9 +1558,9 @@ public class ItemType {
 			250,
 			null,
 			false,
-			"Eggplant Potion",
-			"Eggplant Potions",
-			"A potion made from the bitter flesh of an eggplant. Just like the berry from which it was made, the bottle containing this potion sort of looks like a penis if you squint at it.",
+			"茄子药剂",
+			"茄子药剂",
+			"一瓶由苦涩的茄子果肉制成的药剂。就跟作为其原料的果实一样，装有药水的瓶子眯着眼看也像个屌。",
 			"eggplant_potion",
 			PresetColour.GENERIC_ARCANE,
 			null,
@@ -1574,24 +1574,24 @@ public class ItemType {
 		}
 		@Override
 		public String getUseName() {
-			return "drink";
+			return "喝";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"You drink the eggplant potion. The rich, complex flavour is surprisingly delicious.",
-					"You force [npc.name] to drink the eggplant potion. The rich, complex flavour is surprisingly delicious.",
-					"[npc.Name] produces an eggplant potion, and then proceeds to drink it. The rich, complex flavour is surprisingly delicious.",
-					"[npc.Name] produces an eggplant potion, and then proceeds to force you to drink it. The rich, complex flavour is surprisingly delicious.");
+					"你喝下了茄子药剂，没想到丰富而复杂的味道还挺好喝。",
+					"你让[npc.name]喝下了茄子药剂，没想到丰富而复杂的味道还挺好喝。",
+					"[npc.Name]拿出一瓶茄子药剂喝了下去，没想到丰富而复杂的味道还挺好喝。",
+					"[npc.Name]拿出一瓶茄子药剂让你喝了下去，没想到丰富而复杂的味道还挺好喝。");
 		}
 	};
 
 	public static AbstractItemType ARTHURS_PACKAGE = new AbstractItemType(0,
 			"",
 			false,
-			"Arthur's Package",
-			"Arthur's Packages",
-			"A package that you collected from Arcane Arts. You need to deliver this to Arthur.",
+			"亚瑟的包裹",
+			"亚瑟的包裹",
+			"从“奥术艺术”拿回来的包裹，需要交给亚瑟。",
 			"arthursPackage",
 			PresetColour.ANDROGYNOUS,
 			null,
@@ -1603,16 +1603,16 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
 			return getGenericUseDescription(user, target,
-					"The package is quite small, measuring roughly "+Units.size(20)+" along each edge. It's constructed of brown cardboard, and sealed with packaging tape.",
-					"The package is quite small, measuring roughly "+Units.size(20)+" along each edge. It's constructed of brown cardboard, and sealed with packaging tape.",
-					"The package is quite small, measuring roughly "+Units.size(20)+" along each edge. It's constructed of brown cardboard, and sealed with packaging tape.",
-					"The package is quite small, measuring roughly "+Units.size(20)+" along each edge. It's constructed of brown cardboard, and sealed with packaging tape.");
+					"包裹很小，每边长大概"+Units.size(20)+"。外面包裹着棕色的纸板，用包装胶带密封着。",
+					"包裹很小，每边长大概"+Units.size(20)+"。外面包裹着棕色的纸板，用包装胶带密封着。",
+					"包裹很小，每边长大概"+Units.size(20)+"。外面包裹着棕色的纸板，用包装胶带密封着。",
+					"包裹很小，每边长大概"+Units.size(20)+"。外面包裹着棕色的纸板，用包装胶带密封着。");
 		}
 		
 		@Override
@@ -1625,9 +1625,9 @@ public class ItemType {
 	public static AbstractItemType IMP_FORTRESS_ARCANE_KEY = new AbstractItemType(0,
 			"",
 			false,
-			"Fyrsia's Key",
-			"Fyrsia's Keys",
-			"An arcane key that you obtained from Fyrsia, the leader of an imp fortress in Submission. When used in combination with keys obtained from the other two fortresses, it will grant entry to the central citadel.",
+			"菲尔西亚的钥匙",
+			"菲尔西亚的钥匙",
+			"一把奥术钥匙，从屈城区小恶魔要塞的首领菲尔西亚那里取得。与另两座要塞处获得的钥匙组合使用，就能进入中央城堡。",
 			"impArcaneKey",
 			PresetColour.CLOTHING_SILVER,
 			PresetColour.GENERIC_ARCANE,
@@ -1639,12 +1639,12 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return UtilText.parse(user, "You feel a weak arcane pulse being given off by the key as you turn it over in your [npc.hands].");
+			return UtilText.parse(user, "你将钥匙在[npc.hands]中把玩，感受到了其散发出微弱的奥术涌动。");
 		}
 		
 		@Override
@@ -1655,9 +1655,9 @@ public class ItemType {
 	public static AbstractItemType IMP_FORTRESS_ARCANE_KEY_2 = new AbstractItemType(0,
 			"",
 			false,
-			"Jhortrax's Key",
-			"Jhortrax's Keys",
-			"An arcane key that you obtained from Jhortrax, the leader of an imp fortress in Submission. When used in combination with keys obtained from the other two fortresses, it will grant entry to the central citadel.",
+			"卓特拉克斯的钥匙",
+			"卓特拉克斯的钥匙",
+			"一把奥术钥匙，从屈城区小恶魔要塞的首领卓特拉克斯那里取得。与另两座要塞处获得的钥匙组合使用，就能进入中央城堡。",
 			"impArcaneKey2",
 			PresetColour.CLOTHING_STEEL,
 			PresetColour.GENERIC_ARCANE,
@@ -1669,12 +1669,12 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return UtilText.parse(user, "You feel a weak arcane pulse being given off by the key as you turn it over in your [npc.hands].");
+			return UtilText.parse(user, "你将钥匙在[npc.hands]中把玩，感受到了其散发出微弱的奥术涌动。");
 		}
 		
 		@Override
@@ -1685,9 +1685,9 @@ public class ItemType {
 	public static AbstractItemType IMP_FORTRESS_ARCANE_KEY_3 = new AbstractItemType(0,
 			"",
 			false,
-			"Hyorlyss's Key",
-			"Hyorlyss's Keys",
-			"An arcane key that you obtained from Hyorlyss, the leader of an imp fortress in Submission. When used in combination with keys obtained from the other two fortresses, it will grant entry to the central citadel.",
+			"希尔莉丝的钥匙",
+			"希尔莉丝的钥匙",
+			"一把奥术钥匙，从屈城区小恶魔要塞的首领希尔莉丝那里取得。与另两座要塞处获得的钥匙组合使用，就能进入中央城堡。",
 			"impArcaneKey3",
 			PresetColour.CLOTHING_GOLD,
 			PresetColour.GENERIC_ARCANE,
@@ -1699,12 +1699,12 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return UtilText.parse(user, "You feel a weak arcane pulse being given off by the key as you turn it over in your [npc.hands].");
+			return UtilText.parse(user, "你将钥匙在[npc.hands]中把玩，感受到了其散发出微弱的奥术涌动。");
 		}
 		
 		@Override
@@ -1716,10 +1716,10 @@ public class ItemType {
 	public static AbstractItemType LYSSIETHS_RING = new AbstractItemType(0,
 			"",
 			false,
-			"Lyssieth's Trapped Signet Ring",
-			"Lyssieth's Trapped Signet Rings",
-			"Beautifully crafted from rose gold, and encrusted with precious gemstones, this ring has been enchanted to enslave whoever puts it on."
-					+ " If you were able to trick 'The Dark Siren' into wearing it, you could earn an audience with Lyssieth without needing to fight.",
+			"莉西丝的陷阱图章戒指",
+			"莉西丝的陷阱图章戒指",
+			"戒指由玫瑰金精铸而成，镶嵌着珍贵的珠宝，且其上有附魔，只要戴上就会被奴役。"
+					+ "如果你能骗“暗夜塞壬”戴上，兵不血刃便赢得莉西丝的赏识。",
 			"lyssiethsRing",
 			PresetColour.CLOTHING_ROSE_GOLD,
 			PresetColour.CLOTHING_RED_DARK,
@@ -1731,12 +1731,12 @@ public class ItemType {
 
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return UtilText.parse(user, "The ring feels warm to the touch, revealing the fact that it's carrying a potent enchantment. Maybe once all this is over, Lyssieth will allow you to keep it as a reward...");
+			return UtilText.parse(user, "这枚戒指摸上去有一股暖流，意味着其带有强大的附魔。或许一切结束后，莉西丝会让你留下它作为奖励……");
 		}
 		
 		@Override
@@ -1747,11 +1747,11 @@ public class ItemType {
 
 	
 	public static AbstractItemType OFFSPRING_MAP = new AbstractItemType(50_000,
-			"an",
+			"一张",
 			false,
-			"arcane offspring map",
-			"arcane offspring maps",
-			"An arcane-enchanted map, obtained from Dominion's city hall, which is able to track the rough location of any of your nearby offspring.",
+			"奥术后代地图",
+			"奥术后代地图",
+			"一张从御城区市政厅获得的奥术附魔地图，可以追踪到你附近任何一个孩子的大致位置。",
 			"offspring_map",
 			PresetColour.BASE_BROWN,
 			null,
@@ -1761,7 +1761,7 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "consult";
+			return "查阅";
 		}
 		@Override
 		public boolean isAbleToBeUsedInSex() {
@@ -1800,15 +1800,15 @@ public class ItemType {
 		}
 		@Override
 		public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
-			return "In order to be able to use the map, you need to be in a vacant tile of one of the following types: Dominion alleyways; Dominion canals; Harpy Nest walkways; Submission tunnels; Bat Caverns; Elis alleyways.";
+			return "要使用这张地图，你需要在以下几种类型的空地块上：御城区小巷、御城区运河、哈比巢穴通道、屈城区隧道、伊利斯小巷。";
 		}
 		@Override
 		public String getUseTooltipDescription(GameCharacter user, GameCharacter target) {
-			return "Consult the map to see if any of your offspring are in this area.";
+			return "查阅地图以寻找该区域是否有你的后代。";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "You consult the map...";
+			return "你查阅了地图……";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -1819,9 +1819,9 @@ public class ItemType {
 	public static AbstractItemType CANDI_PERFUMES = new AbstractItemType(500,
 			"",
 			true,
-			"Candi's Perfume",
-			"Candi's Perfumes",
-			"A couple of bottles of perfume which you collected from Kate at Succubi's Secrets. You need to deliver these to Candi back at the Enforcer Headquarters.",
+			"坎迪的香水",
+			"坎迪的香水",
+			"从“魅魔的秘密”的凯特那里拿来的几瓶香水。你需要交给执法者总部的坎迪。",
 			"candiPerfumes",
 			PresetColour.BASE_ROSE,
 			PresetColour.BASE_PURPLE_LIGHT,
@@ -1831,11 +1831,11 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "There's nothing really out of the ordinary about these bottles of perfume. It would be best to deliver them to Candi as soon as possible.";
+			return "这几瓶香水没什么特别的。还是赶紧交给坎迪吧。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -1846,9 +1846,9 @@ public class ItemType {
 	public static AbstractItemType CANDI_CONTRABAND = new AbstractItemType(1000,
 			"",
 			false,
-			"Box of Contraband Lollipops",
-			"Boxes of Contraband Lollipops",
-			"A box full of contraband lollipops, seized by the Enforcers up in the Harpy Nests, and very much desired by Candi.",
+			"违禁品棒棒糖",
+			"违禁品棒棒糖",
+			"装满了违禁品棒棒糖的箱子，从哈比之巢的执法者那里取来，坎迪对此垂涎欲滴。",
 			"contrabandBox",
 			PresetColour.BASE_PINK_DEEP,
 			null,
@@ -1858,12 +1858,12 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "This box has been marked with several large red crosses, making it clear that the contents are in some way dangerous."
-					+ " The Enforcer who handed this box over to you said that the lollipops contained within are some form of permanent aphrodisiac, and that the box should be immediately locked away in safe storage.";
+			return "箱子上标记了几道红叉，里面的东西显然某种程度上比较危险。"
+					+ "将箱子交给你的执法者曾说里面的棒棒糖是一种永久春药，应当立即被封锁在安全存储中。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -1874,9 +1874,9 @@ public class ItemType {
 	public static AbstractItemType CANDI_HUNDRED_KISSES = new AbstractItemType(50000,
 			"",
 			false,
-			"'A Hundred Kisses'",
-			"'A Hundred Kisses'",
-			"A limited-edition box containing a hundred differently-coloured lipsticks, produced by one of the most exclusive and upmarket cosmetics companies in all of Dominion.",
+			"“百万之吻”",
+			"“百万之吻”",
+			"一盒限定款的口红，包含着上百种不同的颜色，由整个御城区最独特、最高档的化妆品公司生产。",
 			"candiHundredKisses",
 			PresetColour.BASE_PINK_DEEP,
 			null,
@@ -1886,11 +1886,11 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "It's obvious from even a casual glance at this stylish box that it contains nothing other than the best lipsticks money can buy.";
+			return "随便看一眼就这华丽的盒子，就能知道里面装着的绝对是用钱能买到最上等的口红。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -1901,10 +1901,10 @@ public class ItemType {
 	public static AbstractItemType RESONANCE_STONE = new AbstractItemType(0,
 			"",
 			false,
-			"Claire's Resonance Stone",
-			"Claire's Resonance Stones",
-			"A small, polished sphere, which has a single groove running around its entire circumference."
-					+ " Normally prohibited to citizens, Claire has given you this one so that you can send a signal to the SWORD Enforcers stationed near the Rat Warrens.",
+			"克莱尔的回声石",
+			"克莱尔的回声石",
+			"一块光滑的小型球体，圆周上有一道浅浅的凹槽。"
+					+ "通常禁止平民所有，但克莱尔给了你一块，方便你向鼠窟旁边的SWORD执法者发送信号。",
 			"resonanceStone",
 			PresetColour.CLOTHING_PURPLE_VERY_DARK,
 			null,
@@ -1914,12 +1914,12 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "The resonance stone is made out of some kind of highly-polished stone, and by twisting its two halves in opposite directions, can be activated to send a signal to any other stones which are linked to it."
-					+ " Claire has told you that this one will trigger SWORD Enforcers to begin their raid on the Rat Warrens, and should only be used once you've confirmed that Vengar is present.";
+			return "这块回声石由某种精心抛光过的岩石制成，只要将上下两个半球朝不同方向扭动，就能将其启动，向连接的其他回声石发送信号。"
+					+ "克莱尔告诉过你，这一块会向SWORD执法者发出通知，让他们对鼠窟发动突袭，你应当在确认文加在场时再使用。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -1928,12 +1928,12 @@ public class ItemType {
 	};
 
 	public static AbstractItemType PAINT_CAN_PREMIUM = new AbstractItemType(1_500,
-			"a can of",
+			"一罐",
 			false,
-			"'Purple-star' golden paint",
-			"'Purple-star' golden paint",
-			"A can of golden paint, branded with the premium-grade 'Purple-star' logo, which you purchased from 'Argus's DIY Depot'."
-					+ " Hopefully Helena will appreciate how much this cost...",
+			"“紫星”金色油漆",
+			"“紫星”金色油漆",
+			"一罐金色油漆，带有高级的“紫星”标签，从“阿格斯的DIY仓库”买来的。"
+					+ "希望海伦娜明白这可不是小价钱……",
 			"paint_can",
 			PresetColour.CLOTHING_GOLD,
 			PresetColour.CLOTHING_PURPLE_DARK,
@@ -1943,11 +1943,11 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "Unless they're a true paint connoisseur, nobody would ever believe how much you paid for this can of premium-grade 'Purple-star' paint...";
+			return "除非是真正的专业漆匠，不然没有人会相信你为了买这罐“紫星”油漆花了多少钱……";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -1960,12 +1960,12 @@ public class ItemType {
 	};
 
 	public static AbstractItemType PAINT_CAN = new AbstractItemType(250,
-			"a can of",
+			"一罐",
 			false,
-			"'Bronze-star' golden paint",
-			"'Bronze-star' golden paint",
-			"A can of golden paint, branded with the standard-grade 'Bronze-star' logo, which you purchased from 'Argus's DIY Depot'."
-					+ " Hopefully Helena won't be disappointed with this...",
+			"“铜星”金色油漆",
+			"“铜星”金色油漆",
+			"一罐金色油漆，带有普通的“铜星”标签，从“阿格斯的DIY仓库”买来的。"
+					+ "希望海伦娜不会太失望……",
 			"paint_can",
 			PresetColour.CLOTHING_GOLD,
 			PresetColour.CLOTHING_BRONZE,
@@ -1975,11 +1975,11 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "Although it's not the premium-grade 'Purple-star' can of paint which Helena specifically requested, you're sure that this will be good enough to get the job done...";
+			return "尽管不是海伦娜指定的高级“紫星”油漆，但你肯定这个已经足够应付了……";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -1992,12 +1992,12 @@ public class ItemType {
 	};
 
 	public static AbstractItemType ROLLED_UP_POSTERS = new AbstractItemType(0,
-			"half a dozen",
+			"半打",
 			true,
-			"rolled-up enchanted poster",
-			"rolled-up enchanted posters",
-			"Half a dozen rolled-up posters, given to you by Helena with the order to paste them onto the walls near the entrance to Slaver Alley."
-					+ " Each one displays an enchanted, moving image of the beautiful harpy striking a seductive pose while wearing a skimpy bikini.",
+			"卷起来的附魔海报",
+			"卷起来的附魔海报",
+			"半打卷起来的附魔海报，海伦娜让你张贴在奴隶巷入口边的墙上。"
+					+ "每一张上都展示着附魔过的动态图像，一只风姿绰约的哈比身着暴露的比基尼，摆出诱惑的姿势。",
 			"rolled_up_posters",
 			PresetColour.CLOTHING_DESATURATED_BROWN,
 			null,
@@ -2007,13 +2007,13 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "Although they're meant to be advertising 'Helena's Boutique', there's no mention of the harpy's store on any of these posters."
-					+ " Instead, each one displays an enchanted, moving image of Helena striking a seductive pose while wearing a skimpy bikini."
-					+ " The only text to be seen is at the bottom of each poster, and simply reads 'Helena' in fancy, cursive writing.";
+			return "尽管是用来给“海伦娜精品店”打广告用的，但在海报上却丝毫没有提及那位哈比的店铺。"
+					+ "反而每一张上都展示着附魔过的动态图像，一只风姿绰约的哈比身着暴露的比基尼，摆出诱惑的姿势。"
+					+ "唯一可见的文字在海报底部，只是单纯地用优美的连笔写着“海伦娜”几个字。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -2053,10 +2053,10 @@ public class ItemType {
 	public static AbstractItemType NATALYA_BUSINESS_CARD = new AbstractItemType(0,
 			"",
 			false,
-			"Natalya's Business Card",
-			"Natalya's Business Cards",
-			"A business card given to you by Natalya, the dominant succutaur who holds the position of 'Stable Mistress' at the delivery company 'Dominion Express'."
-					+ " The address printed on the card directs you to Dominion's Warehouse District.",
+			"娜塔莉亚的名片",
+			"娜塔莉亚的名片",
+			"一张娜塔莉亚给你的名片，她是个征服欲很强的恶魔半人马，担任着快递公司“御城速递”的“马场主”。"
+					+ "名片上印着的地址指引你前往御城区的仓库区。",
 			"natalya_business_card",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -2066,12 +2066,12 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "Natalya's business card clearly displays her name and title of 'Stable Mistress'."
-					+ " The address of the company at which she works, 'Dominion Express', is also clearly displayed as being in Dominion's Warehouse District.";
+			return "娜塔莉亚的名片上写着她的名字和职位“马场主”。"
+					+ "她从事的公司“御城速递”的地址也写得清清楚楚，正在御城区的仓库区。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -2082,10 +2082,10 @@ public class ItemType {
 	public static AbstractItemType NATALYA_BUSINESS_CARD_STAMPED = new AbstractItemType(0,
 			"",
 			false,
-			"Natalya's Business Card (Stamped)",
-			"Natalya's Business Cards (Stamped)",
-			"A business card given to you by Natalya, the dominant succutaur who holds the position of 'Stable Mistress' at the delivery company 'Dominion Express'."
-					+ " The address printed on the card directs you to Dominion's Warehouse District.",
+			"娜塔莉亚的名片(盖章)",
+			"娜塔莉亚的名片(盖章)",
+			"一张娜塔莉亚给你的名片，她是个征服欲很强的恶魔半人马，担任着快递公司“御城速递”的“马场主”。"
+					+ "名片上印着的地址指引你前往御城区的仓库区。",
 			"natalya_business_card_stamped",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -2095,13 +2095,13 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "Natalya's business card clearly displays her name and title of 'Stable Mistress'."
-					+ " The address of the company at which she works, 'Dominion Express', is also clearly displayed as being in Dominion's Warehouse District."
-					+ " This particular card has been stamped by Natalya herself, and grants you instant access to Dominion Express's warehouse.";
+			return "娜塔莉亚的名片上写着她的名字和职位“马场主”。"
+					+ "她从事的公司“御城速递”的地址也写得清清楚楚，正在御城区的仓库区。"
+					+ "这张名片上已经由娜塔莉亚亲自盖章，准许你在御城速递的仓库中畅通无阻。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -2112,10 +2112,10 @@ public class ItemType {
 	public static AbstractItemType SLAVER_LICENSE = new AbstractItemType(5000,
 			"",
 			false,
-			"Slaver license",
-			"Slaver licenses",
-			"An official document declaring that you're legally entitled to own, purchase, sell, and even capture slaves."
-					+ " Although slaver licenses are extremely difficult to obtain, they only really have any value to their rightful owner...",
+			"贩奴许可",
+			"贩奴许可",
+			"一份官方文件，声明你在法律上有权拥有、购买、出售甚至捕获奴隶。"
+					+ "虽然贩奴许可极难获得，但只有对其合法拥有者来说才真正有价值……",
 			"slaver_license",
 			PresetColour.CLOTHING_WHITE,
 			null,
@@ -2125,12 +2125,12 @@ public class ItemType {
 			null) {
 		@Override
 		public String getUseName() {
-			return "inspect";
+			return "检查";
 		}
 		@Override
 		public String getUseDescription(GameCharacter user, GameCharacter target) {
-			return "This slaver license consists of a single piece of thick, high-quality paper."
-					+ " It has your name clearly printed near to the top, and has been signed by Finch.";
+			return "这张贩奴许可由一张高质量的厚纸印刷。"
+					+ "上面很清楚地印着你的名字，还有芬奇的签名。";
 		}
 		@Override
 		public boolean isConsumedOnUse() {
@@ -2662,7 +2662,7 @@ public class ItemType {
 			}
 			
 			List<String> effectsString = Util.newArrayListOfValues(
-					"[style.boldExcellent(Permanently)] gain the spell '<b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+"</b>'.");
+					"[style.boldExcellent(永久)]习得法术“<b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+"</b>”。");
 			
 			if(s == Spell.ELEMENTAL_EARTH) {
 				effectsString.add("Adds "+Subspecies.ELEMENTAL_EARTH.getName(null)+" encyclopedia entry.");
@@ -2711,59 +2711,59 @@ public class ItemType {
 					if(hasSpell) {
 						if(target.isPlayer()) {
 							return "<p style='text-align:center'>"
-										+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b> "+s.getDescription(target)+"</i>"
+										+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b>"+s.getDescription(target)+"</i>"
 									+"</p>"
 									+ "<p>"
-										+"Reading through the spell book again, you quickly discover that you've already learned all there is to know about the spell '"+s.getName()+"'."
-										+ " Apart from some well-detailed diagrams of a demon casting this spell, there's nothing within the tome's pages to hold your attention,"
-											+ " and you find yourself closing it after just a couple of minutes, having not learned anything new..."
+										+"再次通读了这本法术书，你很快就意识到自己已经完全掌握了法术“"+s.getName()+"”相关的知识。"
+										+ "除了几张恶魔释放该法术时的生动图像，这本书中已经没几页能引起你的注意了，"
+											+ "没过几分钟你就合上了书，并没有学到什么新东西……"
 									+ "</p>"
 									+raceKnowledgeGained;
 						} else {
 							return "<p style='text-align:center'>"
-										+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b> "+s.getDescription(target)+"</i>"
+										+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b>"+s.getDescription(target)+"</i>"
 									+"</p>"
 									+ "<p>"
 										+ UtilText.parse(target,
-												"Reading through the spell book again, [npc.name] quickly discovers that [npc.sheIs] already learned all there is to know about the spell '"+s.getName()+"'."
-												+ " Apart from some well-detailed diagrams of a demon casting this spell, there's nothing within the tome's pages to hold [npc.her] attention,"
-													+ " and [npc.she] closes it after just a couple of minutes, having not learned anything new...")
+												"再次通读了这本法术书，[npc.Name]很快就意识到自己已经完全掌握了法术“"+s.getName()+"”相关的知识。"
+												+ "除了几张恶魔释放该法术时的生动图像，这本书中已经没几页能引起[npc.her]的注意了，"
+													+ "没过几分钟[npc.she]就合上了书，并没有学到什么新东西……")
 									+ "</p>";
 						}
 						
 					} else {
 						if(target.isPlayer()) {
 							return "<p style='text-align:center'>"
-										+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b> "+s.getDescription(target)+"</i>"
+										+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b>"+s.getDescription(target)+"</i>"
 									+"</p>"
 									+ "<p>"
-										+ "As you read through the spell book, you discover that most of the pages are dedicated to helping the reader build up their arcane aura to the point where they'd be able to learn this spell."
-										+ " Seeing as your aura is already extremely powerful, these passages are of no use to you, and you quickly flick through to the final chapters,"
-											+ " where it's described exactly how to focus your aura into casting the spell '<i>"+s.getName()+"</i>'."
-										+ " It doesn't take you long to get the general idea of what to do, and after completing the book's practice exercises, you feel confident that you'll be able to cast this spell whenever you'd like."
+										+ "你通读了一下这本书，发现大部分内容都在教读者训练奥术灵气，以达到释放该法术的最低门槛。"
+										+ "鉴于你的灵气已经非常强大，这些段落对你来说毫无用处。你迅速地翻到最后几章，"
+											+ "这些章节详细介绍了如何集中你的奥术灵气来施放法术“<i>"+s.getName()+"</i>”。"
+										+ "你没花多长时间就大致了解了应该怎么做，在完成了书中的练习之后，你自信地认为自己可以随时施展这个法术。"
 									+ "</p>"
 									+ "<p style='text-align:center;'>"
-										+ "You learn the spell <b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+"</b>!"
-										+ "<br/><i>Having served its purpose, the spell book disappears in a flash of purple light!</i>"
-										+ "<br/>[style.italicsExcellent(Spell book added to Lilaya's library!)]"
+										+ "你学习了<b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+"</b>法术！"
+										+ "<br/><i>法术书完成了它的使命，在一道紫光中消失了！</i>"
+										+ "<br/>[style.italicsExcellent(法术书已被添加到莉莱雅的图书馆中！)]"
 									+ "</p>"
 									+raceKnowledgeGained;
 							
 						} else {
 							return "<p style='text-align:center'>"
-									+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b> "+s.getDescription(target)+"</i>"
+									+"<i><b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+":</b>"+s.getDescription(target)+"</i>"
 								+"</p>"
 								+ "<p>"
 									+ UtilText.parse(target,
-											"As [npc.name] reads through the spell book, [npc.she] discovers that most of the pages are dedicated to helping the reader build up their arcane aura to the point where they'd be able to learn this spell."
-											+ " Seeing as [npc.her] aura is already powerful enough for this, these passages are of no use to [npc.herHim], and [npc.she] quickly flicks through to the final chapters,"
-												+ " where it's described exactly how to focus [npc.her] aura into casting the spell '<i>"+s.getName()+"</i>'."
-											+ " It doesn't take [npc.herHim] long to get the general idea of what to do, and after completing the book's practice exercises,"
-												+ " [npc.she] feels confident that [npc.she]'ll be able to cast this spell whenever [npc.she]'d like.")
+											"[npc.Name]通读了一下这本书，发现大部分内容都在教读者训练奥术灵气，以达到释放该法术的最低门槛。"
+											+ "鉴于[npc.her]的灵气已经足够强大，这些段落对于[npc.herHim]毫无用处，[npc.she]迅速地翻到最后几章。"
+												+ "这些章节详细介绍了如何集中[npc.her]的奥术灵气来施放法术“<i>"+s.getName()+"</i>”。"
+											+ "[npc.herHim]没花多长时间就大致了解了应该怎么做，在完成了书中的练习之后，"
+												+ "[npc.herHim]自信地认为自己可以随时施展这个法术。")
 								+ "</p>"
 								+ "<p style='text-align:center;'>"
-									+ UtilText.parse(target, "[npc.Name] learns the spell <b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+"</b>!")
-									+ "<br/><i>Having served its purpose, the spell book disappears in a flash of purple light!</i>"
+									+ UtilText.parse(target, "[npc.Name]习得了法术<b style='color:"+s.getSpellSchool().getColour().toWebHexString()+";'>"+s.getName()+"</b>！")
+									+ "<br/><i>法术书完成了它的使命，在一道紫光中消失了！</i>"
 								+ "</p>";
 						}
 					}
@@ -2830,10 +2830,10 @@ public class ItemType {
 			AbstractItemType spellBook = new AbstractItemType(value,
 					null,
 					false,
-					"Spellbook: "+s.getName(),
-					"Spellbooks: "+s.getName(),
-					"An arcane tome which contains detailed instructions on how to cast the spell '"+s.getName()+"'."
-							+ " Reading this tome will permanently unlock the ability to cast this spell.",
+					"法术书："+s.getName(),
+					"法术书："+s.getName(),
+					"一本超厚的奥术宝典，内含手把手的“"+s.getName()+"”从入门到精通。"
+							+ "阅读此书后，便能习得该法术。",
 					"spell_book",
 					s.getSpellSchool().getColour(),
 					null,
@@ -2857,28 +2857,28 @@ public class ItemType {
 				@Override
 				public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
 					if(target.isPlayer()) {
-						return "You already know how to cast this spell!";
+						return "你已经知道怎么使用这个法术了！";
 						
 					} else if(target.isElemental()) {
-						return UtilText.parse(target, "[npc.Name], like all elementals, cannot learn spells from books."
-								+ " Instead, [npc.she] will need to focus on improving [npc.her] understanding of the arcane in order to learn new spells."
-								+ " (Elementals gain new spells via the perk tree.)");
+						return UtilText.parse(target, "就像其他元素体一样，[npc.Name]不能从书中学习法术。"
+								+ "相反[npc.she]需要专注于提高对于奥术的理解，从而才能学习新法术。"
+								+ "(元素体通过天赋树获得新法术。)");
 						
 					} else {
-						return UtilText.parse(target, "[npc.Name] does not have enough arcane skill to know how to learn this spell! (Requires arcane to be at least "+IntelligenceLevel.ONE_AVERAGE.getMinimumValue()+".)");
+						return UtilText.parse(target, "[npc.Name]没有足够的奥术技巧来学习这个法术！(需要奥术技巧至少为"+IntelligenceLevel.ONE_AVERAGE.getMinimumValue()+")");
 					}
 				}
 				@Override
 				public String getUseName() {
-					return "read";
+					return "阅读";
 				}
 				@Override
 				public String getUseDescription(GameCharacter user, GameCharacter target) {
 					return getGenericUseDescription(user, target,
-							"Opening the spell book, you read its contents...",
-							"Opening the spell book, you get [npc.name] to read its contents...",
-							"[npc.Name] produces a spell book, which [npc.she] then starts to read...",
-							"[npc.Name] produces a spell book, which [npc.she] then forces you to read...");
+							"你打开法术书，阅读了书中的内容……",
+							"你打开法术书，让[npc.Name]阅读书中的内容……",
+							"[npc.Name]拿出一本法术书，阅读起书中的内容……",
+							"[npc.Name]拿出一本法术书，让你阅读书中的内容……");
 				}
 				@Override
 				public boolean isAbleToBeUsedInSex() {
@@ -2899,15 +2899,15 @@ public class ItemType {
 		for(SpellSchool school : SpellSchool.values()) {
 			
 			AbstractItemEffectType effectType = new AbstractItemEffectType(Util.newArrayListOfValues(
-							"[style.boldExcellent(+1)] to <span style='color:"+school.getColour().toWebHexString()+";'>"+school.getName()+"</span> upgrade points."),
+							"<span style='color:"+school.getColour().toWebHexString()+";'>"+school.getName()+"</span>升级点数[style.boldExcellent(+1)]。"),
 							school.getColour()) {
 						
 						@Override
 						public String itemEffectOverride(TFModifier primaryModifier, TFModifier secondaryModifier, TFPotency potency, int limit, GameCharacter user, GameCharacter target, ItemEffectTimer timer) {
 							target.incrementSpellUpgradePoints(school, 1);
 							return "<p style='text-align:center;'>"
-										+ (target.isPlayer()?"You gain":UtilText.parse(target, "[npc.Name] gains"))+" an upgrade point for the spell school <b style='color:"+school.getColour().toWebHexString()+";'>"+school.getName()+"</b>!<br/>"
-										+ "<i>Having served its purpose, the scroll disappears in a flash of purple light!</i>"
+										+ (target.isPlayer()?"你获得了":UtilText.parse(target, "[npc.Name]获得了"))+"一点<b style='color:"+school.getColour().toWebHexString()+";'>"+school.getName()+"</b>学派的升级点数！<br/>"
+										+ "<i>卷轴完成了它的使命，在一道紫光中消失了！</i>"
 									+ "</p>";
 						}
 					};
@@ -2917,9 +2917,9 @@ public class ItemType {
 			AbstractItemType scroll = new AbstractItemType(1000,
 					null,
 					false,
-					"Scroll of "+Util.capitaliseSentence(school.getName()),
-					"Scrolls of "+Util.capitaliseSentence(school.getName()),
-					"An arcane scroll which, when read, imbues the reader with the power of the school of '"+Util.capitaliseSentence(school.getName())+"'.",
+					Util.capitaliseSentence(school.getName()) + "卷轴",
+					Util.capitaliseSentence(school.getName()) + "卷轴",
+					"一张奥术卷轴，阅读后会将"+Util.capitaliseSentence(school.getName())+"学派的力量注入到阅读者体内。",
 					"spell_scroll",
 					school.getColour(),
 					null,
@@ -2935,21 +2935,21 @@ public class ItemType {
 				@Override
 				public String getUnableToBeUsedDescription(GameCharacter user, GameCharacter target) {
 					if(target.isElemental()) {
-						return "Elementals cannot make use of scrolls, and instead must improve their spells via their perks!";
+						return "元素体无法使用卷轴，相反是通过天赋精进法术！";
 					}
-					return UtilText.parse(target, "[npc.Name] does not have enough arcane skill to know how to absorb the power of this scroll! (Requires arcane to be at least "+IntelligenceLevel.ONE_AVERAGE.getMinimumValue()+".)");
+					return UtilText.parse(target, "[npc.Name]没有足够的奥术技巧来得知吸收卷轴力量的方法！(需要奥术技巧至少为"+IntelligenceLevel.ONE_AVERAGE.getMinimumValue()+"。)");
 				}
 				@Override
 				public String getUseName() {
-					return "read";
+					return "阅读";
 				}
 				@Override
 				public String getUseDescription(GameCharacter user, GameCharacter target) {
 					return getGenericUseDescription(user, target,
-							"Unravelling the scroll, you read its contents...",
-							"Unravelling the scroll, you get [npc.name] to read its contents...",
-							"[npc.Name] produces a scroll, which [npc.she] then starts to read...",
-							"[npc.Name] produces a scroll, which [npc.she] then forces you to read...");
+							"你展开卷轴，阅读了其中的内容……",
+							"你展开卷轴，让[npc.Name]阅读了其中的内容……",
+							"[npc.Name]拿出一张卷轴，展开后阅读了其中的内容……",
+							"[npc.Name]拿出一张卷轴，展开后让你阅读了其中的内容……");
 				}
 				@Override
 				public boolean isAbleToBeUsedInSex() {
@@ -2991,7 +2991,7 @@ public class ItemType {
 							false,
 							mainSubspecies.getBookName(),
 							mainSubspecies.getBookNamePlural(),
-							"A book which contains advanced lore concerning "+mainSubspecies.getNamePlural(null)+".",
+							"包含着有关"+mainSubspecies.getNamePlural(null)+"更详细的知识。",
 							"race_book",
 							mainSubspecies.getColour(null),
 							PresetColour.CLOTHING_GOLD,
@@ -3002,7 +3002,7 @@ public class ItemType {
 				@Override
 				public String getDescription() {
 					return super.getDescription()
-							+(mainSubspecies.getBookAuthor().isEmpty()?"":" The book's author is identified as '"+mainSubspecies.getBookAuthor()+"'.");
+							+(mainSubspecies.getBookAuthor().isEmpty()?"":"这本书的作者为“"+mainSubspecies.getBookAuthor()+"”。");
 				}
 				@Override
 				public List<ItemEffect> getEffects() {
@@ -3037,15 +3037,15 @@ public class ItemType {
 				}
 				@Override
 				public String getUseName() {
-					return "read";
+					return "阅读";
 				}
 				@Override
 				public String getUseDescription(GameCharacter user, GameCharacter target) {
 					return getGenericUseDescription(user, target,
-							"Opening the book, you read its contents...",
-							"Opening the book, you force [npc.name] to read its contents...",
-							"[npc.Name] produces a book, titled '"+getName(false)+"', which [npc.she] then starts to read...",
-							"[npc.Name] produces a book, titled '"+getName(false)+"', which [npc.she] then forces you to read...");
+							"你翻开书，阅读了其中的内容……",
+							"你翻开书，让[npc.name]阅读了其中的内容……",
+							"[npc.Name]拿出一本名为“"+getName(false)+"”的书，阅读起其中的内容……",
+							"[npc.Name]拿出一本名为“"+getName(false)+"”的书，让你阅读了其中的内容……");
 				}
 			};
 			
@@ -3070,17 +3070,17 @@ public class ItemType {
 
 				AbstractStatusEffect statusEffect = new AbstractStatusEffect(80,
 						(mainSubspecies.getRace()==Race.ANGEL
-							?"angelic"
+							?"天使"
 							:(mainSubspecies.getRace()==Race.DEMON && override <= 2
-								?"impish"
+								?"小恶魔"
 								:(mainSubspecies.getRace()==Race.DEMON && override >= 5 && override <= 20
-									?"demonic"
+									?"恶魔"
 									:(mainSubspecies==Subspecies.LILIN
-										?"lilin"
+										?"莉琳"
 										:(mainSubspecies==Subspecies.ELDER_LILIN
-											?"elder lilin"
+											?"莉琳长老"
 											:raceName.toLowerCase())))))
-							+ " intuition",
+							+ "直觉",
 						null,
 						mainSubspecies.getColour(null),
 						true,
@@ -3100,8 +3100,8 @@ public class ItemType {
 						if(target == null) {
 							return "";
 						}
-						return UtilText.parse(target, "After absorbing a specially-enchanted arcane essence, [npc.nameIsFull] able to accurately predict how "
-								+ raceNamePlural.toLowerCase() +" will behave.");
+						return UtilText.parse(target, "[npc.nameIsFull]在吸收了特定附魔的奥术精华后，能够精准地预测"
+								+ raceNamePlural.toLowerCase() +"的行动方式了。");
 					}
 					@Override
 					public String getSVGString(GameCharacter owner) {
@@ -3116,7 +3116,7 @@ public class ItemType {
 				StatusEffect.allStatusEffects.add(statusEffect);
 
 				AbstractItemEffectType effectType = new AbstractItemEffectType(Util.newArrayListOfValues(
-						"[style.boldGood(+1)] [style.boldArcane(Arcane essence)]"),
+						"[style.boldGood(+1)][style.boldArcane(奥术精华)]"),
 						mainSubspecies.getColour(null)) {
 					@Override
 					public Map<AbstractStatusEffect, Integer> getAppliedStatusEffects() {
@@ -3136,14 +3136,14 @@ public class ItemType {
 						if(target.isDoll()) {
 							return UtilText.parse(target,
 										"<p style='text-align:center;'>"
-											+ "[style.colourDisabled(As [npc.sheIsFull] a sex doll, [npc.nameIsFull] unable to absorb essences...)]"
+											+ "[style.colourDisabled(由于[npc.sheIsFull]是个性爱玩偶，无法吸收精华……)]"
 										+ "</p>");
 						}
 						return target.incrementEssenceCount(1, false)
 								+ UtilText.parse(target,
 										"<p style='text-align:center;'>"
-											+"[npc.She] [npc.is] also temporarily far more effective at fighting "
-											+ "<b style='color:"+mainSubspecies.getColour(null).toWebHexString()+";'>" + raceNamePlural +"</b>!"
+											+"[npc.She]暂时能够更有效地对"
+											+ "<b style='color:"+mainSubspecies.getColour(null).toWebHexString()+";'>" + raceNamePlural +"</b>发起攻击！"
 										+ "</p>");
 					}
 				};
@@ -3154,12 +3154,12 @@ public class ItemType {
 						Math.min(Math.max((mainSubspecies.getBaseSlaveValue(null) / 250), 40), 10000), // i.e. 48 flames for cat-morphs, minimum 40 flames, 10000 maximum
 						null,
 						false,
-						"Bottled " + Util.capitaliseSentence(raceName) + " Essence",
-						"Bottled " + Util.capitaliseSentence(raceName) + " Essences",
-						"A small glass bottle, with a little cork stopper wedged firmly in the top."
-								+ " Inside, the swirling "+mainSubspecies.getColour(null).getName().toLowerCase() + " glow of an arcane essence,"
-								+ " imbued with the energy of "+UtilText.generateSingularDeterminer(raceName) + " " + raceName
-								+ ", flickers and swirls about in a mesmerising, cyclical pattern.",
+						"瓶装" + Util.capitaliseSentence(raceName) + "精华",
+						"瓶装" + Util.capitaliseSentence(raceName) + "精华",
+						"一个小玻璃瓶，顶部紧紧地塞着一颗小巧的软木塞。"
+								+ "里面"+PresetColour.GENERIC_ARCANE.getName()+"光芒的奥术精华舞动闪烁着，不断飞旋，令人着迷，"
+								+ "并且注入了"+UtilText.generateSingularDeterminer(raceName) + raceName
+								+ "的能量。",
 						null,
 						mainSubspecies.getColour(null),
 						null,
@@ -3172,7 +3172,7 @@ public class ItemType {
 						
 					@Override
 					public String getUseName() {
-						return "absorb";
+						return "吸收";
 					}
 					@Override
 					public String getUseDescription(GameCharacter user, GameCharacter target) {
@@ -3215,9 +3215,9 @@ public class ItemType {
 	
 	private static AbstractItemEffectType generateBookEffect(AbstractSubspecies mainSubspecies, List<AbstractSubspecies> additionalUnlockSubspecies) {
 		return new AbstractItemEffectType(Util.newArrayListOfValues(
-				"Adds "+mainSubspecies.getName(null)+" encyclopedia entry",
-				"Reveals racial status effect attributes",
-				"[style.colourExcellent(Grants Unique Perk:)]",
+				"添加"+mainSubspecies.getName(null)+"百科条目",
+				"揭示该种族的种族状态效果具体属性",
+				"[style.colourExcellent(获得独特天赋：)]",
 				Perk.getSubspeciesRelatedPerk(mainSubspecies).getName(null)
 				//"[style.boldExcellent(+10)] <b style='color:"+mainSubspecies.getColour(null).toWebHexString()+";'>"+mainSubspecies.getDamageMultiplier().getName()+"</b>"
 				),

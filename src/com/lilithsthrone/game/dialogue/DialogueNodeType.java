@@ -7,21 +7,21 @@ package com.lilithsthrone.game.dialogue;
  */
 public enum DialogueNodeType {
 	
-	NORMAL("normal"),
+	NORMAL("普通"),
 	
-	STATUS_EFFECT_MESSAGE("statusEffectMessage"),
+	STATUS_EFFECT_MESSAGE("状态效果信息"),
 	
-	INVENTORY("inventory"),
+	INVENTORY("物品栏"),
 	
-	PHONE("phone"),
+	PHONE("手机"),
 	
-	CHARACTERS_PRESENT("characters present"),
+	CHARACTERS_PRESENT("在场角色"),
 
-	OCCUPANT_MANAGEMENT("character management"),
+	OCCUPANT_MANAGEMENT("角色管理"),
 	
-	OPTIONS("options"),
+	OPTIONS("选项"),
 	
-	GIFT("gifts");
+	GIFT("送礼");
 
 	private String name;
 

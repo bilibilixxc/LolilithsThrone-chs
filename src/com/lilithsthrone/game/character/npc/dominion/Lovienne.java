@@ -50,8 +50,8 @@ public class Lovienne extends NPC {
 	
 	public Lovienne(boolean isImported) {
 		super(isImported,
-				new NameTriplet("Lovienne"), "Lilithmartuilani",
-				"One of the seven elder Lilin, Lovienne is one of the most powerful beings in existence.",
+				new NameTriplet("洛维耶纳"), "莉莉丝马尔图拉尼",
+				"洛维耶纳是最为强大的七位莉琳长老之一。",
 				7901, Month.MARCH, 22,
 				1000,
 				Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.GREATER,

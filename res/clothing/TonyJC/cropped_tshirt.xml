@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 	
-		<authorTag><![CDATA[The clothing's tag reads: 'Created by TonyJC, with implementation and editing by NeverLucky']]></authorTag>
+		<authorTag><![CDATA[衣服的标签上写着：“由TonyJC创作，NeverLucky负责实施和编辑”]]></authorTag>
 
 		<value>80</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[cropped T-shirt]]></name>
+		<name><![CDATA[露脐T恤]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[cropped T-shirt]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[露脐T恤]]></namePlural> 
 		
-		<description><![CDATA[A unisex revealing fabric shirt, named after the T shape of its body and sleeves.]]></description> 
+		<description><![CDATA[一件男女皆宜的短款面料衬衫，因其衣身和衣袖呈 T 字形而得名。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -60,12 +60,12 @@
 		
 		<incompatibleSlots/> 
 		
-		<primaryColours values ="ALL"/> 
+		<primaryColours values="ALL"/> 
 		<primaryColoursDye/>
 		<secondaryColours>
 			<colour>CLOTHING_WHITE</colour>
 		</secondaryColours>
-		<secondaryColoursDye values ="ALL"/>
+		<secondaryColoursDye values="ALL"/>
 		<tertiaryColours/>
 		<tertiaryColoursDye/>
 		<tertiaryColoursDye/>
@@ -75,8 +75,8 @@
 			<pattern>leopard_printed</pattern>
 		</defaultPatterns>
   
-		<patternPrimaryColours values ="ALL"/>
-		<patternSecondaryColours values ="ALL"/>
+		<patternPrimaryColours values="ALL"/>
+		<patternSecondaryColours values="ALL"/>
 		<patternTertiaryColours/>
 		
 		<itemTags> 
@@ -86,51 +86,51 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc.her] [npc.arms] through the cropped T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the cropped T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the cropped T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.arms]穿过露脐T恤衫的袖口，然后把它拉过[npc.her]的头。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]引导[npc2.namePos]把[npc2.arms]探出露脐T恤衫的袖口，直到[npc.she]从领口探出了[npc2.her]的头。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地逼迫[npc2.namePos]把[npc2.arms]伸出露脐T恤衫的袖口，直到[npc.she]从领口探出[npc2.her]的头。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] cropped T-shirt.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] cropped T-shirt.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] cropped T-shirt.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下[npc.her]的露脐T恤衫。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的T恤衫脱下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地脱下[npc2.namePos]的露脐T恤衫。
+]]></otherRough>
   </displacementText>
 	
   <replacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] T-shirt back down, covering [npc.her] cropped torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] T-shirt back down, covering [npc2.her] cropped torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] T-shirt back down, covering [npc2.her] cropped  torso.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的露脐T恤衫向下拉，遮住了[npc.her]的上身。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的露脐T恤衫向下拉，盖住了[npc2.her]的上半身。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地把[npc2.namePos]的露脐T恤衫向下拉，遮住了[npc2.her]的上身。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="PULLS_UP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] T-shirt up to just below [npc.her] chin, fully exposing [npc.her] cropped torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] T-shirt up to just below [npc2.her] chin, fully exposing [npc2.her] cropped torso.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] T-shirt up to just below [npc2.her] chin, fully exposing [npc2.her] cropped torso.]]>
-    </otherRough>
+    <self><![CDATA[
+ [npc.Name]把[npc.her]的露脐T恤衫向上拽，一直拽到脖颈处，[npc.her]的上半身完全暴露在外。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把[npc2.namePos]的露脐T恤衫向上拽，一直拽到脖颈处，[npc2.her]的上半身完全暴露在外。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的露脐T恤衫向上拽，一直拽到脖颈处，[npc2.her]的上半身完全暴露在外。
+    ]]></otherRough>
   </displacementText>
   
 </clothing>

@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>1000000</value>
 		<melee>false</melee>
 		<twoHanded>true</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name appendDamageName="false"><![CDATA[FAUXMAS]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[FAUXMASes]]></namePlural>
-		<description><![CDATA[A bullpup assault rifle which uses a delayed blowback operating system and carries a 25-round magazine. It functions best with French-specified steel-casing 5.56×45mm ammunition, and has a very high rate of fire at 1,100 rounds per minute. It is also known as <i>Le Clairon</i>.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription>Use your FAUXMAS to fire a single bullet at your target.</attackTooltipDescription>
+		<name appendDamageName="false"><![CDATA[法格玛斯]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[法格玛斯]]></namePlural>
+		<description><![CDATA[一把采用杠杆延迟反冲系统的无托式步枪，装备25发容量弹匣。它使用法国指定的5.56×45mm钢壳弹药效果最佳，射速极快，为1100RPM。它也被称为<i>军号</i>。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[使用你的法格玛斯向你的目标发射一颗子弹！]]></attackTooltipDescription>
 		
 		<rarity>LEGENDARY</rarity> 
 		<weaponSet/> 
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] out [npc.her] FAUXMAS, inserts a magazine, and pulls the charging handle, putting it into a state where it's ready to be used in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] FAUXMAS away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出[npc.her]的法格玛斯装上弹匣并拉动拉机柄，使其随时可以射击。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]丢下[npc.her]的法格玛斯。]]></unequipText>
 		<imageName>famase.svg</imageName>
 		<imageEquippedName>famase.svg</imageEquippedName> 
 		
@@ -66,14 +66,14 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Taking aim with [npc.her] FAUXMAS, [npc.name] [npc.verb(pull)] the trigger and [npc.verb(fire)] a bullet at [npc2.name], hitting [npc2.herHim] directly in the chest!<br/>Thankfully, there seems to be some kind of arcane force preventing [npc2.name] from being seriously wounded or killed...
-		]]></hitText>
+		[npc.Name]用[npc.her]的法格玛斯瞄准[npc2.name]并扣动扳机，[npc.she]成功命中[npc2.herHim]的胸部！<br/>幸好，似乎有某种奥术力量阻止[npc2.name]重伤或死亡……
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Taking aim with [npc.her] FAUXMAS, [npc.name] [npc.verb(pull)] the trigger and fires a bullet at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.Name]用[npc.her]的法格玛斯瞄准[npc2.name]并扣动扳机发射一发子弹射向[npc2.name]，但是最终还是没有击中[npc2.herHim]！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

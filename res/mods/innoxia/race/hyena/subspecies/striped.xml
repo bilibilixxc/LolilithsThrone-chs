@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_hyena</race>
 	<colour>innoxia_hyena</colour>
@@ -31,54 +31,54 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background_striped</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Laughing Hyenas</bookName>
+	<bookName><![CDATA[鬣狗之笑]]></bookName>
 	<basicDescriptionId>HYENA_BASIC</basicDescriptionId>
 	<advancedDescriptionId>HYENA_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[striped hyena-morph]]></name>
-			<namePlural><![CDATA[striped hyena-morphs]]></namePlural>
-			<singularMaleName><![CDATA[striped hyena-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[striped hyena-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[striped hyena-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[striped hyena-girls]]></pluralFemaleName>
+			<name><![CDATA[条纹鬣狗化形]]></name>
+			<namePlural><![CDATA[条纹鬣狗化形]]></namePlural>
+			<singularMaleName><![CDATA[条纹鬣狗男]]></singularMaleName>
+			<singularFemaleName><![CDATA[条纹鬣狗女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[条纹鬣狗男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[条纹鬣狗女]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="QUADRUPEDAL">
-			<name><![CDATA[striped hyenataur]]></name>
-			<namePlural><![CDATA[striped hyenataurs]]></namePlural>
-			<singularMaleName><![CDATA[striped hyenataur]]></singularMaleName>
-			<singularFemaleName><![CDATA[striped hyenatauress]]></singularFemaleName>
-			<pluralMaleName><![CDATA[striped hyenataurs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[striped hyenatauresses]]></pluralFemaleName>
+			<name><![CDATA[半人条纹鬣狗]]></name>
+			<namePlural><![CDATA[半人条纹鬣狗]]></namePlural>
+			<singularMaleName><![CDATA[半人条纹鬣狗]]></singularMaleName>
+			<singularFemaleName><![CDATA[半人条纹鬣狗]]></singularFemaleName>
+			<pluralMaleName><![CDATA[半人条纹鬣狗]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[半人条纹鬣狗]]></pluralFemaleName>
 		</names>
 	</nameAnthro>
-	<description><![CDATA[An anthropomorphic striped hyena, known as a 'striped hyena-morph' when bipedal, and a 'striped hyenataur' when the lower body is that of a typically-oversized feral striped hyena. To be identified as a striped hyena-morph, a character must be a hyena-morph that has striped fur.]]></description>
+	<description><![CDATA[一种人形的条纹鬣狗，当下肢拟人时被称为条纹鬣狗化形，而当下肢呈现出条纹鬣狗兽态时则称为半人条纹鬣狗。若要被判定为条纹鬣狗化形，角色必须是鬣狗化形，并且拥有条纹皮毛。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[kishi]]></name>
-			<namePlural><![CDATA[kishis]]></namePlural>
-			<singularMaleName><![CDATA[kishi]]></singularMaleName>
-			<singularFemaleName><![CDATA[kishi]]></singularFemaleName>
-			<pluralMaleName><![CDATA[kishis]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[kishi]]></pluralFemaleName>
+			<name><![CDATA[基什]]></name>
+			<namePlural><![CDATA[基什]]></namePlural>
+			<singularMaleName><![CDATA[基什]]></singularMaleName>
+			<singularFemaleName><![CDATA[基什]]></singularFemaleName>
+			<pluralMaleName><![CDATA[基什]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[基什]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="QUADRUPEDAL">
-			<name><![CDATA[kishitaur]]></name>
-			<namePlural><![CDATA[kishitaurs]]></namePlural>
-			<singularMaleName><![CDATA[kishitaur]]></singularMaleName>
-			<singularFemaleName><![CDATA[kishitauress]]></singularFemaleName>
-			<pluralMaleName><![CDATA[kishitaurs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[kishitauresses]]></pluralFemaleName>
+			<name><![CDATA[半人基什]]></name>
+			<namePlural><![CDATA[半人基什]]></namePlural>
+			<singularMaleName><![CDATA[半人基什]]></singularMaleName>
+			<singularFemaleName><![CDATA[半人基什]]></singularFemaleName>
+			<pluralMaleName><![CDATA[半人基什]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[半人基什]]></pluralFemaleName>
 		</names>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[striped hyena]]></feralName>
-		<feralNamePlural><![CDATA[striped hyenas]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[striped hyena]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[striped hyena]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[striped hyenas]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[striped hyenas]]></feralPluralFemaleName>
+		<feralName><![CDATA[条纹鬣狗]]></feralName>
+		<feralNamePlural><![CDATA[条纹鬣狗]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[条纹鬣狗]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[条纹鬣狗]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[条纹鬣狗]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[条纹鬣狗]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>85</size>
@@ -92,7 +92,7 @@
 		<hairPresent>true</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] hyena-like body is very strong, and [npc.she] [npc.has] a primal urge to make the most of opportunities which present themselves to [npc.herHim].
+		[npc.NamePos]鬣狗一般的身体非常强壮，而且[npc.she]有一种充分利用出现在[npc.herHim]眼前一切机会的原始冲动。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="20">MAJOR_PHYSIQUE</attribute>

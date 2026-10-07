@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>NoStepOnSnek_octopus</race>
-	<transformationName><![CDATA[octopus]]></transformationName>
+	<transformationName><![CDATA[章鱼]]></transformationName>
 	<coveringType>OCTOPUS_SKIN</coveringType>
 	<anusType>NoStepOnSnek_octopus_anus</anusType>
 	<names/>
@@ -9,9 +9,9 @@
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldOctopus(octopus-like)], [npc.assholeFullDescription].
+		[npc.She]现在拥有了[style.boldGoat(如章鱼般的)][npc.assholeFullDescription]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] an octopus-like, [npc.anusFullDescription(true)]
+		[npc.SheHasFull]拥有章鱼般[npc.anusFullDescription(true)]
 	]]></bodyDescription>
 </ass>

@@ -7,9 +7,9 @@ package com.lilithsthrone.game.character.markings;
  */
 public enum TattooWritingStyle {
 
-	ITALICISED("italicised"),
+	ITALICISED("斜体"),
 	
-	BOLD("bold");
+	BOLD("粗体");
 	
 	private String name;
 

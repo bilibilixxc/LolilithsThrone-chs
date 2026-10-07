@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
 	<category>BODY_HAIR</category>
 	
-	<determiner><![CDATA[a layer of]]></determiner>
-	<name><![CDATA[hair]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[hair]]></namePlural> 
+	<determiner><![CDATA[一层]]></determiner>
+	<name><![CDATA[毛发]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[毛发]]></namePlural> 
 	
 	<naturalCoveringModifiers>
 		<modifier>SHORT</modifier>

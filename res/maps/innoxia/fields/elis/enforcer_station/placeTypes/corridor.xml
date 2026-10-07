@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[corridor]]></name>
-	<tooltipDescription><![CDATA[The corridors in the Enforcer station are carpeted and have that faint, musty smell that you typically find in old buildings.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor at the Enforcer station in Elis]]></virginityLossDescription>
+	<name><![CDATA[入口]]></name>
+	<tooltipDescription><![CDATA[执法局的走廊上铺有地毯，散发着老旧建筑特有的淡淡霉味。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯执法局的走廊上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

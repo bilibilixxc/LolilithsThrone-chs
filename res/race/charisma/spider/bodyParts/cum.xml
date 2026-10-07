@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛]]></transformationName>
 	<baseFluidType>CUM</baseFluidType>
 	<flavour>CUM</flavour>
 	<namesMasculine>
-		<name><![CDATA[spider-]]></name>
+		<name><![CDATA[蜘蛛]]></name>
 	</namesMasculine>
 	<namesFeminine>
-		<name><![CDATA[spider-]]></name>
+		<name><![CDATA[蜘蛛]]></name>
 	</namesFeminine>
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>

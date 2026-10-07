@@ -68,8 +68,8 @@ public class Kay extends NPC {
 	}
 	
 	public Kay(boolean isImported) {
-		super(isImported, new NameTriplet("Jack", "Jack", "Jackie"), "Kay",
-				"Jack Kay, who prefers to always be referred to by his surname, is the owner of Kay's Textiles; a business which produces enchanted clothing for wholesale.",
+		super(isImported, new NameTriplet("杰克", "杰克", "婕柯伊"), "凯",
+				"杰克·凯更喜欢别人叫他凯。他开着一家“凯记纺织”，店铺主营魔法服装生产批发。",
 				24, Month.MAY, 11,
 				10,
 				Gender.M_P_MALE, Subspecies.CAT_MORPH, RaceStage.PARTIAL,

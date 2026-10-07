@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- OUTSIDE -->
@@ -6,529 +6,529 @@
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			The fear of falling prey to the ongoing arcane storm's effects has caused the vast majority of Dominion's residents to take shelter. As a result, the streets that you find yourself walking down are all eerily quiet, with only the occasional demon to be seen wandering about.
+			由于害怕受到持续不断的奥术风暴的影响，御城区的绝大多数居民都躲了起来。你所走过的街道都异常安静，只有偶尔能看到恶魔在游荡。
 		</p>
 		#IF(game.isExtendedWorkTime())
 			<p>
-				Travelling further up the road, you notice that there are curious amount of demons walking around in this area, and, what's more, you notice that most of them are carrying shopping bags of some sort or another. The cause of this unusual gathering is soon made apparent, as up ahead you see a huge shopping centre, with yet more demons loitering around the ornate entranceway.
+				沿着这条路继续前行，你发现这里有很多恶魔来往，而且大多数恶魔都拎着购物袋。这种不寻常聚集的原因很快就明了了，你在前方看到了一个巨大的购物中心，许多的恶魔在它华丽的入口处游荡。
 			</p>
 			<p>
-				As you approach, you take a good look at the massive building, noting that its style is very reminiscent of that of a grand Victorian shopping arcade. From what you can see through the entrance's glass doors, it looks as though the shops inside are all still [style.colourGood(open)] for business, despite the storm currently raging overhead. Sure enough, taking a look over to one side of the entrance, you notice a sign proclaiming that [style.colourMinorGood(most shops within the arcade are open from [units.time(6)]-[units.time(22)])].
+				你走近仔细打量了一下这座巨大的建筑，发现它的风格很像维多利亚时代的大型购物商场。透过入口处的玻璃门，你可以看到里面的商店似乎都还在[style.colourGood(营业)]，尽管风暴正在头顶肆虐。果然，在入口处的一侧，你看到一个标志上面写着[style.colourMinorGood(购物中心大多数的商店在[units.time(6)]到[units.time(22)]营业)]。
 			</p>
 			<p>
-				You wonder if you should take this opportunity to go and do some shopping...
+			你在想现在要不要去买点东西……
 			</p>
 		#ELSE
 			<p>
-				Travelling further up the road, you notice that there are several signs advertising the presence of 'Dominion's Largest Shopping Arcade'. Just as these signs promised, you soon catch sight of a huge shopping centre, and after just a few moments more, you find yourself standing outside the ornate entranceway.
+				你沿着公路继续前行，你注意到旁边有几块牌子上写着“御城区最大的购物中心”。正如这些标志所承诺的那样，你很快就看到了一个巨大的购物中心，再向前走一会，你已经站在了它华丽的入口外面。
 			</p>
 			<p>
-				Taking a good look at the massive building, you note that its style is very reminiscent of that of a grand Victorian shopping arcade. From what you can see through the entrance's glass doors, it looks as though the shops inside are currently [style.colourBad(closed)]. Sure enough, taking a look over to one side of the entrance, you notice a sign proclaiming that [style.colourMinorBad(most shops within the arcade are open from [units.time(6)]-[units.time(22)])].
+				你走近仔细打量了一下这座巨大的建筑，发现它的风格很像维多利亚时代的大型购物商场。透过入口处的玻璃门，你可以看到里面的商店似乎都已经[style.colourBad(打烊)]了。果然，在入口处的一侧，你发现了一块牌子，上面写着：[style.colourMinorBad(购物中心大多数的商店在[units.time(6)]到[units.time(22)]营业)]。
 			</p>
 			<p>
-				Despite the fact that the shops within are closed, the doors leading into the arcade itself are not locked, and you wonder if you should go inside to take a look around...
+				尽管里面的商店都关门了，但通往购物中心的门却没有上锁，你不知道是否应该进去看看……
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(game.isExtendedWorkTime())
 			<p>
-				The streets in this part of Dominion seem to be busier than usual, and you notice that many of the people surrounding you are holding shopping bags of all shapes and sizes. The cause of this unusual increase in traffic is soon made apparent, as up ahead you see a huge shopping centre, with yet more people loitering around the ornate entranceway.
+				御城区这一带的街道似乎比往常更加繁忙，你注意到周围的许多人都拿着各种形状和大小的购物袋。人流量异常增加的原因很快就明了了，因为你在前面看到了一个巨大的购物中心，许多的人在它华丽的入口处闲逛。
 			</p>
 			<p>
-				As you approach, you take a good look at the massive building, noting that its style is very reminiscent of that of a grand Victorian shopping arcade. From what you can see through the entrance's glass doors, it looks as though the shops inside are all [style.colourGood(open)] for business. Sure enough, taking a look over to one side of the entrance, you notice a sign proclaiming that [style.colourMinorGood(most shops within the arcade are open from [units.time(6)]-[units.time(22)])].
+				你走近仔细打量了一下这座巨大的建筑，发现它的风格很像维多利亚时代的大型购物商场。透过入口处的玻璃门，你可以看到里面的商店似乎都还在[style.colourGood(营业)]。果然，在入口处的一侧，你发现了一块牌子，上面写着：[style.colourMinorGood(购物中心大多数的商店在[units.time(6)]到[units.time(22)]营业)]。
 			</p>
 			<p>
-				You wonder if you should take this opportunity to go and do some shopping...
+			你在想现在要不要去买点东西……
 			</p>
 		#ELSE
 			<p>
-				Travelling further up the road, you notice that there are several signs advertising the presence of 'Dominion's Largest Shopping Arcade'. Just as these signs promised, you soon catch sight of a huge shopping centre, and after just a few moments more, you find yourself standing outside the ornate entranceway.
+				你沿着公路继续前行，你注意到旁边有几块牌子上写着“御城区最大的购物中心”。正如这些标志所承诺的那样，你很快就看到了一个巨大的购物中心，再向前走一会，你已经站在了它华丽的入口外面。
 			</p>
 			<p>
-				Taking a good look at the massive building, you note that its style is very reminiscent of that of a grand Victorian shopping arcade. From what you can see through the entrance's glass doors, it looks as though the shops inside are currently [style.colourBad(closed)]. Sure enough, taking a look over to one side of the entrance, you notice a sign proclaiming that [style.colourMinorBad(most shops within the arcade are open from [units.time(6)]-[units.time(22)])].
+				你走近仔细打量了一下这座巨大的建筑，发现它的风格很像维多利亚时代的大型购物商场。透过入口处的玻璃门，你可以看到里面的商店似乎都已经[style.colourBad(打烊)]了。果然，在入口处的一侧，你发现了一块牌子，上面写着：[style.colourMinorBad(购物中心大多数的商店在[units.time(6)]到[units.time(22)]营业)]。
 			</p>
 			<p>
-				Despite the fact that the shops within are closed, the doors leading into the arcade itself are not locked, and you wonder if you should go inside to take a look around...
+				尽管里面的商店都关门了，但通往购物中心的门却没有上锁，你不知道是否应该进去看看……
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRY -->
 	
 	<htmlContent tag="ENTRY"><![CDATA[
 	<p>
-		You find yourself standing in the entrance to the shopping arcade. A wide, marble-floored walkway stretches out before you, and on either side, huge glass windows proudly display a wide variety of different goods for sale. Looking up to the two-story-high ceiling, you see that the entire arcade is enclosed by a long, glass archway, offering protection not only from the wind and rain, but also shielding anyone below from the effects of an arcane storm.
+		你发现自己站在购物中心的入口处。宽阔的大理石人行道在你面前延伸着，两侧巨大的玻璃橱窗自豪地展示着各种待售商品。你抬头看向两层高的天花板，你可以看到整个购物中心被长长的玻璃拱顶所遮盖，不仅能遮风挡雨，还能让下面的人免受奥术风暴的影响。
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
-			Busy crowds of shoppers jostle amongst each other as they travel between the many shops found within the arcade. Their chatter reverberates off the windows and walls on either side to create a loud, energetic atmosphere all around you.
+			购物中心内繁忙的人群在众多商店之间彼此摩肩接踵。他们的交谈声在两侧的橱窗和墙壁上回荡，四周都充满了喧闹和活力。
 		#ELSE
-			As all of the shops found within the arcade are currently closed, the entire place is almost completely deserted. The only person other than yourself in this area is a wolf-boy security guard, who keeps a close watch on anyone entering or leaving the arcade.
+			购物中心内的所有商店都目前都已经打烊，整个地方几乎完全空无一人。除了你之外，唯一在这个地区的人是一位狼男保安，他密切监视着进出商场的任何人。
 		#ENDIF
 	</p>
 	<p>
-		There are several touristy-looking information boards placed nearby, and, after consulting one, you feel confident that you could easily find your way to any of the more interesting stores.
+		附近有几块看起来像旅游指南的宣传板，看完宣传板后，你有信心可以轻松找到任何更有趣的商店。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ARCADE -->
 	
 	<htmlContent tag="ARCADE"><![CDATA[
 	<p>
-		You walk down the wide, marble-floored walkway which loops around and through the shopping arcade. On either side of you, huge glass windows proudly display a wide variety of different goods for sale. Glancing up at the two-story-high ceiling, you see that the entire arcade is enclosed by a long, glass archway, offering protection not only from the wind and rain, but also shielding anyone below from the effects of an arcane storm.
+		你走在宽阔的大理石人行道上，人行道环绕着穿过购物中心。你两侧的巨大玻璃橱窗自豪地陈列着各种不同的代售商品。你抬头看向两层高的天花板，你可以看到整个购物中心被长长的玻璃拱顶所遮盖，不仅能遮风挡雨，还能让下面的人免受奥术风暴的影响。
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
-			Busy throngs of the arcade's patrons jostle to and fro, and you often find yourself having to push your way through idling crowds that inexplicably gather right in the middle of your path. Their chatter reverberates off the windows and walls on either side of you to create a loud, energetic atmosphere all the way through the arcade.
+			购物中心内繁忙的顾客人群来来往往，你经常不得不挤过那些莫名其妙地聚集在路中间的懒散人群他们的交谈声在两侧的橱窗和墙壁上回荡，整个商场都充满喧闹和活力的氛围。
 		#ELSE
-			As all of the shops in the arcade are currently closed, the entire place is almost completely deserted. The only other people that you see are the occasional patrolling security guard or curious citizen taking a leisurely stroll through the area.
+			购物中心内的所有商店都目前都已经打烊，整个地方几乎完全空无一人。除了偶尔巡逻的安保人员或好奇的市民在这个地区悠闲漫步，你几乎看不到其他人。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARCADE_WES_REMINDER"><![CDATA[
 	<p><i>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_wesQuestMet))
-			While this is the place where you can meet Wes, you've already refused to help him today, and so you'll be unable to see him again until tomorrow at the earliest...
+			这是你与韦斯见面的地方，但你已经拒绝了今天的帮助请求，因此你将无法再见到他，至少要等到明天才行……
 		#ELSEIF(game.getHourOfDay()==13)
-			This is both the time and place in which to
+			在这个地方正是时候
 			#IF(game.getDialogueFlags().hasFlag(FLAG_wesQuestRefused))
-				 [style.colourMinorGood(meet Wes)],
+				[style.colourMinorGood(去见韦斯)]，
 			#ELSE
-				 [style.colourMinorGood(meet the mysterious Enforcer)],
+				[style.colourMinorGood(去见那个神秘的执法者)]，
 			#ENDIF
-			 so if you were to look around for him for a while, you'd likely be able to get in contact with him...
+			如果你花一些时间搜寻一下，应该可以与他取得联系……
 		#ELSE
-			While this is the place where 
+			虽然这是
 			#IF(game.getDialogueFlags().hasFlag(FLAG_wesQuestRefused))
-				 Wes
+				韦斯可能出现的地方……
 			#ELSE
-				 the mysterious Enforcer
+				那个神秘的执法者可能出现的地方……
 			#ENDIF
-			 told you to meet him, he said that he'd only be here between the hours of [style.colourMinorBad([units.time(13)] and [units.time(14)])], so you'll have to come back then... 
+			韦斯告诉你要在这里见面，但他说他只会在[style.colourMinorBad([units.time(13)]到[units.time(14)])]，所以你需要在那个时间回来……
 		#ENDIF
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- GENERIC_SHOP -->
 	
 	<htmlContent tag="GENERIC_SHOP"><![CDATA[
 	<p>
 		#IF(game.isExtendedWorkTime())
-			Most of the shops in the arcade, like the one you find yourself entering, are relatively uninteresting, and you can't imagine yourself ever having a use for any of the mundane items that are for sale. Despite an enthusiastic attempt from one of the shop's attendants to get you to buy [util.random(an egg-whisk|a wooden spoon|a mop and bucket|a bedside lamp|a set of silver cutlery|an ironing board|a little heart-shaped plushie|a cheese-board|a little book of cheat-codes for some obscene text-based RPG|a fruit bowl)], you leave the premises empty-handed, wondering why you even bothered to take a look inside...
+			购物中心里的大多数商店，就像你现在进入的这家，都比较普通，你根本无法想象自己什么情况需要用上那些出售的普通物品。尽管一位店员热情地试图让你购买[util.random(一个打蛋器|一把木勺|一支拖把和水桶|一盏床头灯|一套银质餐具|一个熨衣板|一只小小的心形玩偶|一块砧板|一款涩情文字RPG游戏的作弊码册子|一个果盘)]，你还是空手离开了店铺，不禁思考自己为什么要进去看……
 		#ELSE
-			Most of the shops in the arcade, like the one you find yourself standing before, are relatively uninteresting, and you can't imagine yourself ever having a use for any of the mundane items that are for sale. After spending a moment taking a look through the large windows, you step away from the shuttered premises, thinking to yourself that there'd be no point in returning during opening hours...
+			购物中心里的大多数商店，就像你眼前的这家一样，都比较普通，你根本无法想象自己什么情况需要用上那些出售的普通物品。透过宽大的橱窗看了一会儿后，你便离开了这间打烊的店铺，心想在营业时间内回来也没什么意义……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- RESTAURANT -->
 	
 	<htmlContent tag="RESTAURANT"><![CDATA[
 	<p>
-		Tucked away in one corner of the Shopping Arcade, the restaurant 'The Oaken Glade' proudly displays its name in flowing gold lettering above its front door. The establishment's large windows allow you to look in on an incredible scene; the vast interior has been manipulated by some form of arcane-powered illusion, making it appear as though the restaurant is a portal directly into the middle of a summer-time forest clearing.
+		“橡木林荫”餐厅藏在购物中心的拐角，前门上挂着以流畅而优美的金色字体写就的牌匾。你转向超大橱窗，看到了不可思议的景象：广阔的餐厅内部受奥术驱动的幻术操控，仿佛是通往夏日林荫地中央的传送门。
 		#IF(game.isDayTime())
-			 Bright sunlight shines down through the leaves of the huge oak trees which border this clearing, covering the tables and chairs in a soft, dappled-green glow.
+			明亮的阳光透过巨大橡树的茂盛枝叶，投下斑驳的树影。光影交错，覆盖整片林荫，为桌椅染上柔和、斑斓的绿色光晕。
 		#ELSEIF(game.getCurrentDayPeriod()==DAY_PERIOD_NIGHT)
-			 Glowing lanterns have been hung from the branches of the huge oak trees which border this clearing, casting the tables and chairs in a soft, orange glow.
+			灯笼挂在巨大橡树的树枝上，为桌椅染上柔和、温暖的橘色光晕。
 		#ENDIF
 	</p>
 	<p>
-		The scene is so fascinating that it's able to draw in a continuous stream of passersby. Walking up to the menu displayed next to the entrance, these potential customers are almost all immediately turned away by what they see. Moving up to take a look yourself, you see the reason for their swift departure; the cheapest item on the menu is a three-course meal that's priced at almost one-thousand flames. The wine menu is even more outrageously expensive, and you imagine that it would be all too easy for a couple to generate an evening's bill of close to ten thousand flames.
+		如梦似幻的景象持续吸引着来来往往的人流。你走到入口处展示的菜单旁，许多潜在顾客都因看到它而立刻转身离开。你移近身子看了一眼，立刻明白了其他人迅速离开的原因：该餐厅最基础的只包含三道菜的套餐也价格惊人，要将近一千火币。酒品价格更是昂贵得令人难以置信，你可以想见，一对夫妇来吃晚餐就能轻松花掉一万火币。
 	</p>
 	<p>
-		The glass of the window beside the front door has been elaborately etched with decorative, flowing patterns, and in the middle of this, there's some writing which declares this restaurant to be
+		前门旁的窗户中央，印有精心设计的装饰性流动图案的雕花。还有些字注明这家餐厅：
 		#IF(game.getHourOfDay()>=18 && game.getHourOfDay()<23)
-			 [style.colourMinorGood('Open every evening, [unit.time(18)]-[unit.time(23)]. <b>Reservations only.</b>')], meaning that it is currently [style.colourGood(open)].
+			[style.colourMinorGood(每晚[unit.time(18)]-[unit.time(23)]营业。<b>仅限预定。</b>)]意味着餐厅现在[style.colourGood(营业)]。
 		#ELSE
-			 [style.colourMinorBad('Open every evening, [unit.time(18)]-[unit.time(23)]. <b>Reservations only.</b>')], meaning that it is currently [style.colourBad(closed)].
+			[style.colourMinorBad(每晚[unit.time(18)]-[unit.time(23)]营业。<b>仅限预定。</b>)]意味着餐厅现在[style.colourBad(休息)]。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANTIQUES -->
 	
 	<htmlContent tag="ANTIQUES"><![CDATA[
 	<p>
-		While most of the shops in the arcade have at least three large windows in which to display their goods, the store that you find yourself standing in front of has just the one, making it the smallest shop in all of the arcade. Looking through this solitary sheet of glass, you see that the store's gloomy interior is filled with all sorts of old furniture and miscellaneous items. This odd-looking arrangement is explained by an amphora-shaped sign hanging above the shop's entrance, which bears the words 'Antiques & Collectables'.
+		购物中心里的大多数商店都至少有三个大橱窗来展示商品，而你眼前的这家商店却只有一个，它是整个购物中心里最小的商店。透过这扇孤零零的玻璃，你可以看到这家店内充满了各种旧家具和杂项物品。店门口上方悬挂着一个双耳瓶形状的招牌，上面写着“古董与收藏品”。
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
-			A small sign hanging in the door's glass window declares this antiques shop to be [style.colourMinorGood('Open every day, [unit.time(6)]-[unit.time(22)]')], meaning that the store is currently [style.colourGood(open)].
+			门前的玻璃橱窗里挂着一个小牌子，写着这家古董店[style.colourMinorGood(“在每天的[unit.time(6)]到[unit.time(22)]营业”)]，这意味着它现在是[style.colourGood(营业)]时间。
 		#ELSE
-			A small sign hanging in the door's glass window declares this antiques shop to be [style.colourMinorBad('Open every day, [unit.time(6)]-[unit.time(22)]')], meaning that the store is currently [style.colourBad(closed)].
+			门前的玻璃橱窗里挂着一个小牌子，写着这家古董店[style.colourMinorBad(“在每天的[unit.time(6)]到[unit.time(22)]营业”)]，这意味着它现在[style.colourBad(打烊)]了。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANTIQUES_INTERIOR -->
 	
 	<htmlContent tag="ANTIQUES_INTERIOR"><![CDATA[
 	<p>
-		A small bell positioned above the door rings out to announce your entrance as you step inside the antiques shop. Finding that the interior isn't quite as dimly lit as it appeared to be when looking in from the outside, you're able to see that what the store lacks in width, it more than makes up for in depth, with the back wall being a considerable distance from where you're currently standing.
+		当你走进古玩店时，门上方的一只小铃铛响起，宣告了你的到来。你发现店内的灯光并没有从外面看起来那么昏暗，你可以看到店内宽度上的不足在深度上得到了弥补，后墙距和你所站的位置有相当长的一段距离。
 	</p>
 	<p>
-		As you join several other customers in ambling throughout the store, you end up passing an eclectic mix of creaky old furniture, obsolete arcane instruments, and all manner of outdated miscellaneous items. While they may be of some interest to dedicated collectors, these curious artefacts really are of no use to you.
+		当你与其他顾客一起在店内闲逛时，你会经过各种各样的古旧家具、过时的奥术仪器以及各种过时的杂项物品。虽然它们可能对一些收藏家有些许兴趣，但这些奇特的手工艺品对你来说真的没有什么用处。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT"><![CDATA[
 	<p>
-		You aren't here to shop for antiques, however, and as you walk down the narrow aisles formed between piles of old furniture, you look out for any possible sign of Scarlett's presence. Although your search for the elusive harpy proves to be fruitless, you're not out of options just yet, as you could always go and ask the employee behind the store's counter about her...
+		不过你并不是来购买古董的，当你走过堆放着古旧家具的狭窄通道时，你寻找着任何有斯嘉丽的迹象。虽然你没有搜索到任何这位难以捉摸的哈比的行踪，但你还有其他选择，你可以去店里柜台后面的员工问问有关她的消息……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_END"><![CDATA[
 	<p>
-		With nothing in here warranting your attention, there's little to do except turn around and leave via the same way you came...
+		这里没有任何东西吸引你的注意，除了转身原路离开，你无事可做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT_START"><![CDATA[
 	<p>
-		As there's no obvious sign of Scarlett anywhere in the store, you head over to the cat-girl employee standing behind the counter and ask her if she knows anything about the harpy you're looking for. As you mention your quarry's name, the cat-girl nervously glances over towards a nearby door marked as 'staff only', before revealing, [style.speechFeminine(Yes, she's a slave here, although she's not been allowed out of the storage room since she attacked that one customer...)]
+		店里没有斯嘉丽的踪迹，所以你走向站在柜台后面的猫女员工，询问她是否知道你要找的那个哈比。当你提到她的名字时，这位猫女员工紧张地看向标有附近那个“员工专用”的门，然后说道，[style.speechFeminine(是的，她是这里的奴隶，不过自从她袭击了那名顾客后，就不被允许走出储藏室了……)]
 	</p>
 	<p>
-		Relieved to discover that the harpy is close at hand, you ask the cat-girl if you could speak to Scarlett's owner. Happily nodding her head, she says, [style.speechFeminine(If you're here to do something about her, I'm sure the boss would want to talk to you. He's back there in the storage room at the moment; I think he's trying to train Scarlett to not be so rude to customers...)]
+		发现哈比就在附近后，你松了一口气，问猫女是否可以和斯嘉丽的主人谈谈。她高兴地点点头，说道，[style.speechFeminine(如果你是来处理她的事情的，我相信老板会想和你谈谈。他现在就在后面的储藏室里，我猜他正在训练斯嘉丽不要对顾客那么粗鲁……)]
 	</p>
 	<p>
-		Asking you to wait for just a moment, the cat-girl quickly steps over to the door, before pushing it ajar and poking her head into the room beyond, calling, [style.speechFeminine(Laurence! There's someone here who wants to talk to you about Scarlett!)]
+		猫女请你稍等片刻，她迅速走到门前，轻轻推门打开，探头进入房间里，喊道，[style.speechFeminine(劳伦斯！有人想与你谈谈斯嘉丽的事！)]
 	</p>
 	<p>
-		A flustered-sounding voice calls back, [style.speechMasculine(Thank goodness! The owner of that slave shop must have changed their mind about giving me a refund! Send them in!)] 
+		一个听起来有些慌乱的声音回道，[style.speechMasculine(谢天谢地！肯定是那家奴隶店的老板改变主意要给我退款了！让他进来！)] 
 	</p>
 	<p>
-		Holding the door open, the cat-girl waves you on through, waiting until you've [pc.stepped] forwards into the storage room before quickly returning to her place behind the counter. As the door swings shut behind you, the room's two occupants turn to face you.
+		猫女把门打开，向你招手，等你[pc.stepped]进了储藏室，她便回到了柜台后边。当门在你身后关上时，房间里的两个人转过身来面对着你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT_TRANSFORMED"><![CDATA[
 	<p>
-		You immediately recognise the figure furthest away from the door as being the harpy you're looking for. Although you'd transformed her before selling her, Scarlett has somehow managed to get her feathered hands on some transformation potions of her own, as she now looks exactly like she did the first time you met her. As the raven-harpy catches sight of you, she narrows her [scarlett.eyeColour] eyes and sneers, [scarlett.speech(Well, if it isn't the cunt who sold me! You've come back to beg for my forgiveness, have you, you fucking [pc.bitch]?)]
+		你一眼就认出了离门最远的那个人就是你要找的哈比。虽然你在把她卖掉之前已经把她转化过了，但斯嘉丽不知用什么方法把弄到了一些转化药水，因为她现在的样子和你第一次见到她时一模一样。当渡鸦哈比看到你时，她眯起[scarlett.eyeColour]的眼睛，冷笑道，[scarlett.speech(哈！这不是把我卖掉的那个贱人吗！你是回来乞求我的原谅吗，你这个该死的[pc.bitch]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT"><![CDATA[
 	<p>
-		You immediately recognise the figure furthest away from the door as being the exact raven-harpy you're looking for. As Scarlett catches sight of you, she narrows her [scarlett.eyeColour] eyes and sneers, [scarlett.speech(Well, if it isn't the cunt who sold me! You've come back to beg for my forgiveness, have you, you fucking [pc.bitch]?)]
+		你一眼就认出离门最远的那个身影正是你要找的渡鸦哈比。当斯嘉丽看到你时，她眯起[scarlett.eyeColour]眼睛并冷笑了一声，[scarlett.speech(哎呦，这不是那个把我卖掉的贱人吗？你是回来求我原谅的吧，你这个该死的[pc.bitch]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT_END"><![CDATA[
 	<p>
 		#IF(scarlett.getObedienceValue()>25)
-			Displaying no sign of her former obedience, Scarlett has clearly reverted to her old ways, and snarls menacingly at you as you turn to face her new owner, who takes the form of an extremely weary-looking squirrel-boy.
+			斯嘉丽显然又回到了以前的状态，不再有之前的服从，当你转身面对她的新主人时，她凶狠地向你咆哮。这名新主人是一名看起来十分疲惫的松鼠男。
 		#ELSE
-			As insolent as ever, Scarlett snarls menacingly at you as you turn to face her new owner, who takes the form of an extremely weary-looking squirrel-boy.
+			斯嘉丽一如既往地傲慢，当你转身面对她的新主人时，她凶狠地向你咆哮。这名新主人是一名看起来十分疲惫的松鼠男。
 		#ENDIF
-		 Realising from Scarlett's outburst that you might not be the person he was expecting, Laurence sighs, [style.speechMasculine(Please tell me that you're here from that blasted shop, and that you're going to give me a refund! This slave isn't at all what she was advertised as!)]
+		劳伦斯从斯嘉丽的爆发中意识到你可能不是他期待的那个人，他叹了口气，[style.speechMasculine(麻烦告诉我是从那该死的店来的，并且你打算给我退款！这个奴隶和广告上说的完全不一样！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANTIQUES_INTERIOR_SCARLETT_EXPLAIN -->
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT_EXPLAIN"><![CDATA[
 	<p>
-		Ignoring Scarlett's sneers, you explain to her owner that while you're not here to offer him a refund, you <i>are</i> interested in buying her freedom. As you reveal this fact, the insolent harpy steps in front of the squirrel-boy, cutting him off as she rudely asks, [scarlett.speech(Why the fuck would you want to do that?! Is this some kind of fucking trick?!)]
+		你无视斯嘉丽的嘲讽 ，向她的主人解释，虽然你不是来给他退款的，但你<i>有</i>兴趣购买她的自由。当你说明这个情况时，这位傲慢的哈比挡在松鼠男面前，打断了他，粗鲁地问道，[scarlett.speech(你他妈为什么要这么做？！又想捉弄我吗？！)]
 	</p>
 	<p>
-		[style.speechMasculine(Scarlett, please, could you just-)] Laurence starts to say, but the harpy simply turns around and shoots him a withering look, which turns out to be enough to immediately silence him.
+		[style.speechMasculine(斯嘉丽，求你了，你能不能——)]劳伦斯刚想说什么，哈比却转过身来，向他投来蔑视的目光，这足以让他立刻闭嘴。
 	</p>
 	<p>
-		Realising that you're not going to get anywhere with Scarlett acting in this manner, you tell her that the reason you're here to free her is so that Helena can employ her as her personal assistant. Upon hearing her old matriarch's name, the harpy lets out a defeated sigh and collapses down into a nearby chair, much to the dismay of Laurence, who objects, [style.speechMasculine(Scarlett! Please, don't sit on that! It's a one of a kind, and was made specially for Lyssieth herself!)]
+		你意识到如果斯嘉丽还是这种态度，这不会有任何进展，你告诉她你来这里是为了解救她，这样海伦娜可以雇佣她作为她的个人助手。一听到她原来主人的名字，哈比发出一声沮丧的叹息，倒在附近的椅子上，劳伦斯非常惊愕，他反对道，[style.speechMasculine(斯嘉丽！请不要坐在那上面！那是独一无二的，特别为莉西丝亲自制作的！)]
 	</p>
 	<p>
-		[scarlett.speech(Like I give a fuck,)] Scarlett replies, [scarlett.speech(Just get on with selling me already so I can get out of here.)]
+		[scarlett.speech(我才不在乎呢，)]斯嘉丽回答道，[scarlett.speech(快点卖掉我，我要走了。)]
 	</p>
 	<p>
-		Wringing his hands, the distraught squirrel-boy turns back towards you and complains, [style.speechMasculine(Look what I've been having to put up with; she's been an absolute nightmare! That salesman told me that she was well trained and always eager to work! I'm never buying any slaves ever again!)]
+		满脸痛苦的松鼠男搓着手，转身面向你抱怨，[style.speechMasculine(看看我一直在忍受什么！她绝对是个噩梦！那个推销员告诉我，她训练有素，渴望工作！我再也不去买奴隶了！)]
 	</p>
 	<p>
-		Pointing out to him that you'll be doing him a favour by taking Scarlett off his hands, you ask Laurence how much he's going to be asking for her. Letting out a weary sigh, he reveals, [style.speechMasculine(I paid twenty thousand for her, but I'm so desperate to get rid of her that I'll let you have her for just half that. Ten thousand, and she's all yours...)]
+		你向他指出，你把斯嘉丽从他手中买过来可是帮了他的大忙，你问劳伦斯他要多少钱。他疲惫地叹了口气，说：[style.speechMasculine(我花了两万块钱买她，但我实在受不了她了，所以我只要一半的钱。一万块，她就归你了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANTIQUES_INTERIOR_SCARLETT_PURCHASED -->
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT_PURCHASED"><![CDATA[
 	<p>
-		Deciding that you want to get this over and done with as quickly as possible, you produce the ten thousand flames which Laurence is asking for. Upon receiving Scarlett's ownership documentation in return, you make the necessary corrections to the information in order to declare her a free citizen once more. Handing these papers over to the harpy herself, you tell her that while she's now free, her matriarch is expecting to see her back in Slaver Alley right away.
+		你决定尽快了结此事，于是拿出了劳伦斯索要的一万火币。在收到斯嘉丽的所有权文件后，你对信息进行了必要的修改，宣布她再次成为自由公民。把这些文件交给哈比本人，你告诉她，虽然她现在自由了，但她的族长希望能马上在奴隶巷见到她。
 	</p>
 	<p>
-		[scarlett.speech(Yeah, yeah, I know what I'm supposed to be doing,)] she insolently replies as she pushes past you and swiftly exits the store.
+		[scarlett.speech(是的，是的，我知道我应该做什么，)]她傲慢地回答，然后推开你，迅速离开了店铺。
 	</p>
 	<p>
-		[style.speechMasculine(Thank goodness,)] Laurence sighs, [style.speechMasculine(I never have to see her again...)]
+		[style.speechMasculine(谢天谢地，)]劳伦斯叹了一口气，[style.speechMasculine(我再也不想见到她了……)]
 	</p>
 	<p>
-		Saying farewell to the unfortunate squirrel-boy, you follow in Scarlett's footsteps, and after quickly exiting the store room, you continue on back out into the Shopping Arcade. Looking around, you see no sign of the rude harpy, and assume that she must have immediately flown off back to Helena's shop. Thinking that it would be best to return there yourself as quickly as possible, you set off on your way once again...
+		告别了不幸的松鼠男，你跟上斯嘉丽的脚步，迅速走出储藏室，继续回到商场。环顾四周，你没有看到那个粗鲁的哈比，想必她已经立刻飞回海伦娜的店里去了。你想自己最好也尽快回去，于是再次踏上了旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ANTIQUES_INTERIOR_SCARLETT_HAGGLE -->
 	
 	<htmlContent tag="ANTIQUES_INTERIOR_SCARLETT_HAGGLE"><![CDATA[
 	<p>
-		Thinking that ten thousand flames is a high price to be paying for a slave as poorly-trained as Scarlett, you tell Laurence that he's going to have to offer you a more reasonable deal if he wants you to take the harpy off his hands. As the two of you start haggling over her value, Scarlett loudly complains, [scarlett.speech(Can you two hurry the fuck up? I want to get out of this dump as quickly as possible.)]
+		你觉得给斯嘉丽这样训练不佳的奴隶支付一万火币太贵了，你告诉劳伦斯，如果他想让你接手这名哈比，他必须提供一个更合理的价格。在你们开始就她的价值讨价还价时，斯嘉丽大声抱怨，[scarlett.speech(你们两个他妈的能不能快点？我想快点离开这个破地方。)]
 	</p>
 	<p>
-		Turning to face his slave, no doubt with the intention of asking her to be quiet, the squirrel-boy instead lets out a distressed cry as he sees that Scarlett has put her bird-like feet up on the antique coffee table sitting in front of her. Clearly not at all bothered by her owner's reaction, Scarlett sinks down into the chair, and as she does so, her talons make a loud scratching noise as they run over the table's wooden surface.
+		松鼠男转过身来面对他的奴隶，无疑是想让她安静下来，但当他看到斯嘉丽把她的鸟爪放在她面前的古董茶几上时，松鼠男却发出了一声痛苦的叫声。斯嘉丽显然一点也不在意主人的反应，她往椅子上一坐，爪子划过桌子的木质表面，发出刺耳的抓挠声。
 	</p>
 	<p>
-		[style.speechMasculine(No!)] Laurence shouts, [style.speechMasculine(Stop it! You're destroying it!)]
+		[style.speechMasculine(不！)]劳伦斯大叫，[style.speechMasculine(停停停！！你要毁了它了！！)]
 	</p>
 	<p>
-		[scarlett.speech(Shut the fuck up, I'm trying to relax here,)] Scarlett replies, sneering at her owner as she purposefully digs her talons into the table's surface.
+		[scarlett.speech(闭嘴，我只是在放松而已，)]斯嘉丽一边回答，一边故意用爪子刮着着桌子表面，嘲笑着她的主人。
 	</p>
 	<p>
-		Clearly not being strong-willed enough to deal with this type of behaviour, the squirrel-boy turns towards you and pleads, [style.speechMasculine(Please, just take her away! I don't even want any flames! Just get her out of here!)]
+		松鼠男没办法在承受这种事情了，他转身恳求你，[style.speechMasculine(求你了！赶紧带走她！我一分钱都不要了！快走！)]
 	</p>
 	<p>
-		Agreeing to take Scarlett off of his hands, you wait as Laurence frantically retrieves Scarlett's ownership documentation and signs her over to you. After making the necessary corrections to the information in order to declare her a free citizen once more, you hand these papers over to the harpy herself, telling her that while she's now free, her matriarch is expecting to see her back in Slaver Alley right away.
+		你同意接手斯嘉丽，然后等待劳伦斯慌忙地取回斯嘉丽的所有权文件，并将她交给你。在收到斯嘉丽的所有权文件后，你对信息进行了必要的修改，宣布她再次成为自由公民。把这些文件交给哈比本人，你告诉她，虽然她现在自由了，但她的族长希望能马上在奴隶巷见到她。
 	</p>
 	<p>
-		[scarlett.speech(Yeah, yeah, I know what I'm supposed to be doing,)] she insolently replies as she pushes past you and swiftly exits the store.
+		[scarlett.speech(是的，是的，我知道我应该做什么，)]她傲慢地回答，然后推开你，迅速离开了店铺。
 	</p>
 	<p>
-		[style.speechMasculine(Thank goodness,)] Laurence sighs, [style.speechMasculine(I never have to see her again...)]
+		[style.speechMasculine(谢天谢地，)]劳伦斯叹了一口气，[style.speechMasculine(我再也不想见到她了……)]
 	</p>
 	<p>
-		Saying farewell to the unfortunate squirrel-boy, you follow in Scarlett's footsteps, and after quickly exiting the store room, you continue on back out into the Shopping Arcade. Looking around, you see no sign of the rude harpy, and assume that she must have immediately flown off back to Helena's shop. Thinking that it would be best to return there yourself as quickly as possible, you set off on your way once again...
+		告别了不幸的松鼠男，你跟上斯嘉丽的脚步，迅速走出储藏室，回到商场。环顾四周，你没有看到那个粗鲁的哈比，想必她已经立刻飞回海伦娜的店里去了。你想自己最好也尽快回去，于是再次踏上了旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS -->
 	
 	<htmlContent tag="TOILETS"><![CDATA[
 	<p>
-		Conveniently located near to the entrance of the Arcade, these public toilets appear to be very regularly maintained, as they are nothing short of being spotlessly clean. They're also of a higher quality than a regular public restroom, as the walls, floor, and sinks are all made out of what appears to be marble. The dozen-or-so stalls are expertly crafted out of varnished, wooden panelling, while the excellent ventilation ensures that the air is always fresh and odour-free.
+		这些公共厕所位于购物中心入口附近，似乎定期保养，非常干净整洁。它们的质量也比普通的公共洗手间要高，因为墙壁、地面和洗手池都似乎是由大理石制成的。大约有十几个隔间都是用上过清漆的木板精心制作而成，良好的通风设备确保空气清新、无异味。
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
-			Due to the current time, these toilets are completely deserted. As you walk past the open stalls, you see that the wall separating the two at the far end has had a glory hole cut into it. While a piece of cardboard has been taped over this hole, there's really nothing that would be stopping someone from peeling this barrier off and making use of it...
+			由于现在的时间，这些厕所完全空无一人。当你走过敞开的隔间时，你看到最远的两个隔间之间的墙上开了一个寻欢洞。尽管一块纸板被贴在这个洞口上，但实际上没有什么能阻止有人把这个撕下来并使用它……
 		#ELSE
-			A few of the stalls are currently occupied, while a couple of members of the public are making use of the sinks before heading back out into the Arcade to continue their shopping. As you walk past these people, you see that the wall separating two of the stalls has had a glory hole cut into it. While a piece of cardboard has been taped over this hole, there's really nothing that would be stopping someone from peeling this barrier off and making use of it...
+			一些人正在使用隔间，一些人正在使用洗手池，并准备返回商场继续购物。当你走过这些人时，你看到最远的两个隔间之间的墙上开了一个寻欢洞。尽管一块纸板被贴在这个洞口上，但实际上没有什么能阻止有人把这个撕下来并使用它……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_USE -->
 	
 	<htmlContent tag="TOILETS_USE"><![CDATA[
 	<p>
-		Stepping into one of the empty stalls, you turn and lock the door behind you, before making use of the toilet. After you've finished, you flush the toilet before making your way over to one of the sinks and washing your [pc.hands]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你走进其中一个空隔间，转身锁上身后的门，然后上厕所。如厕完毕后，你冲完马桶，然后走到水槽前洗净双手，再从旁边的纸巾机拿起一张纸巾，迅速擦干。你转身面向房间，盘算着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_WASH -->
 	
 	<htmlContent tag="TOILETS_WASH"><![CDATA[
 	<p>
-		Feeling like you could do with having a quick clean, you step over to the sinks and thoroughly wash your [pc.hands], before splashing some water on your [pc.face]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你觉得可以快速冲洗一下，于是走到洗手池前洗了洗[pc.hands]，然后往[pc.face]上泼了些水。你从旁边的纸巾机拿起纸巾，迅速擦干自己。你转身面向房间，盘算着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_DOM -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM"><![CDATA[
 	<p>
-		Deciding that it would be fun to get serviced at the glory hole, you peel off the cardboard that's covering it up, before
+		你觉得在寻欢洞接受服务会很有趣，于是撕下了覆盖洞口的胶带，然后
 		#IF(pc.hasCompanions())
-			 telling [com.name] to wait outside and then locking the stall's door behind you.
+			告诉[com.name]在外面等着并锁上了身后的隔间门。
 		#ELSE
-			  locking the stall's door behind you.
+			锁上了身后的隔间门。
 		#ENDIF
 		#IF(game.isExtendedWorkTime())
-			 With the room being as relatively busy as it is, you know that you won't have to wait long before a stranger turns up who'll choose to service you through the glory hole...
+			房间里比较繁忙，你知道不用等多久就会有陌生人出现通过寻欢洞为你提供服务……
 		#ELSE
-			 With the room being completely deserted, you have little choice but to patiently wait and hope that a stranger turns up who'll choose to service you through the glory hole...
+			房间里空无一人，你别无选择，只能耐心等待，希望有陌生人出现通过寻欢洞为你提供服务……
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
-			Twenty
+			二十
 		#ELSE
-			Five
+			五
 		#ENDIF
-		 minutes later, you finally hear someone enter the stall on the other side. With the open glory hole obviously having been the reason they chose to enter this stall, the stranger chooses to immediately kneel down
+		分钟后，终于有人走进了另一边的隔间。开放的寻欢洞显然是他选择进入这个隔间的原因，陌生人立即跪下
 		#IF(npc.isMute())
-			 and push [npc.her] open mouth up to the hole. With an impatient tap on the wall to let you know that [npc.sheIs] there, the stranger prepares to orally service you.
+			并将[npc.her]张开的嘴巴贴向洞口。陌生人不耐烦地敲着墙壁，告诉你[npc.sheIs]就在那里，准备为你提供口交服务。
 		#ELSE
-			 and call out through the hole,
+			并通过洞口喊道，
 			#IF(pc.hasPenis())
-				 [npc.speech(Come on then! Put your cock through here and I'll give it a good suck!)]
+				[npc.speech(来吧！把你的阴茎插进来，我会好好地吮吸它！)]
 			#ELSEIF(pc.hasVagina())
-				 [npc.speech(Come on then! Push your pussy up against the hole and I'll eat you out!)]
+				[npc.speech(来吧！把你的小穴贴到洞口这让我吃掉它！)]
 			#ELSE
-				 [npc.speech(Come on then! Give me something to suck already!)]
+				[npc.speech(来吧！给我些可吸的东西！)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about receiving oral from some random stranger, you back away from the hole and wait for them to give up and leave...
+		对于接受陌生人的口交一事你又有了其他想法，于是你远离洞口，等待他们放弃并离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_START"><![CDATA[
 	<p>
-		Having already waited long enough, you quickly step up to the glory hole,
+		已经等了足够长时间，你快速地走到寻欢洞前，
 		#IF(pc.hasPenis())
-			 preparing to have your [pc.cock+] sucked by the stranger on the other side.
+			准备让对面的陌生人吮吸你[pc.cock+]。
 		#ELSEIF(pc.hasVagina())
-			 preparing to have your [pc.pussy+] licked by the stranger on the other side.
+			准备让对面的陌生人舔你[pc.pussy+]。
 		#ELSE
-			 preparing to have your genderless mound licked by the stranger on the other side.
+			准备让对面的陌生人舔你的无性的下体。
 		#ENDIF
 	</p>
 	<p>
-		As [npc.she] sees the approach of your groin, [npc.name] lets out [npc.a_moan+], before shuffling closer to the wall and firmly pressing [npc.her] open mouth up against the hole. 
+		[npc.she]看到你的腹股沟靠近时，[npc.name]发出[npc.a_moan+]，然后贴近墙壁，将[npc.her]张开的嘴紧紧地贴在洞口上。
 		#IF(!npc.isMute())
-			 Letting out [npc.a_moan+], [npc.she] impatiently encourages you to get started, [game.random(
-			[npc.speech(Oh yeah, come on! Let this whore show you what [npc.sheIs] capable of!)]
-			|[npc.speech(~Mmm!~ Oh yeah! Let's get started!)]
-			|[npc.speech(Oh yeah, babe! I'll show you how much of a slut I am!)])]
+			[npc.she]发出[npc.a_moan+]，不耐烦地鼓励你开始行动[game.random(
+			[npc.speech(哦~来吧！让我这个荡妇向你展示一下[npc.sheIs]能做些什么！)]
+			|[npc.speech(~嗯！~哦！让我们开始吧！)]
+			|[npc.speech(哦~宝贝！我来让你看看我有多淫荡！)])]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_DOM_POST_SEX -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_DOM_POST_SEX"><![CDATA[
 	<p>
-		You step back from the glory hole, grinning as you hear [npc.name] let out a happy little [npc.moan]. As you get your things in order, you see a flash of movement through the hole, before the creak of the adjoining stall's door announces the horny slut's exit.
+		你从寻欢洞前[pc.step]开，听到[npc.Name]发出快乐的小声[npc.moan]，你咧嘴一笑。你整理好东西，看到人影从洞中一闪而过，之后隔壁隔间的门吱吱作响，宣告这个淫荡的婊子出去了。
 	</p>
 	<p>
-		Just a moment later, you reach down to unlock the door of your own stall, and as you open it and step back out into the toilets, you see that [npc.name] has already left. With absolutely no idea as to who just orally serviced you, you wonder what to do next...
+		片刻之后，你打开了自己隔间的门锁。你打开门回到厕所，发现[npc.Name]已经离开了。你完全不知道刚才是谁在为你口交，思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_SUB -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB"><![CDATA[
 	<p>
-		Feeling horny and eager to pleasure some stranger's cock, you peel off the tape that's covering up the glory hole, before
+		你感到饥渴难耐，迫不及待地想要取悦一些陌生人的鸡巴，你剥开遮住寻欢洞的胶带
 		#IF(pc.hasCompanions())
-			 telling [com.name] to wait outside and then locking the stall's door behind you.
+			告诉[com.name]在外面等着并锁上了身后的隔间门。
 		#ELSE
-			  locking the stall's door behind you.
+			锁上了身后的隔间门。
 		#ENDIF
 		#IF(game.isExtendedWorkTime())
-			 With the room being as relatively busy as it is, you know that you won't have to wait long before a stranger turns up who'll want you to orally service them...
+			房间里十分繁忙，你知道不用等多久就会有陌生人来寻求口交服务……
 		#ELSE
-			 With the room being completely deserted, you have little choice but to patiently wait and hope that a stranger turns up who'll want you to orally service them...
+			房间里空无一人，你只能耐心等待，希望有陌生人出现来寻求口交服务……
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.isExtendedWorkTime())
-			Twenty
+			二十
 		#ELSE
-			Five
+			五
 		#ENDIF
-		 minutes later, and you finally hear someone enter the stall on the other side. With the open glory hole obviously having been the reason they chose to enter this stall, the stranger immediately steps up to it and starts shifting their clothing out of the way. Just a moment later, and their [npc.cockDescriptive(true)] is being pushed through the hole. Before you can make a move, [npc.name]
+		几分钟后，终于有人进入了一侧的隔间。开放的寻欢洞显然是他选择进入这个隔间的原因，这个陌生人立即走到寻欢洞前，开始移除他的衣物。过了一小会，他的[npc.cockDescriptive(true)]就被推进了洞内。还没等你有所行动，[npc.name]便
 		#IF(npc.isMute())
-			 impatiently taps the wall, encouraging you to get started on sucking [npc.her] cock...
+			不耐烦地敲着墙壁，催促你开始吮吸[npc.her]的鸡巴……
 		#ELSE
 			#IF(npc.isSelfish())
 				#IF(npc.isFeminine())
-					 barks out a sharp command,
+					尖声命令道，
 				#ELSE
-					 lets out a deep growl,
+					发出低沉地咆哮，
 				#ENDIF
-				 [game.random(
-				[npc.speech(Come on, slut, get to work!)]
-				|[npc.speech(Start sucking, slut!)]
-				|[npc.speech(Come on, you dirty slut, get started already!)])]
+				[game.random(
+				[npc.speech(来吧，荡妇，开始工作！)]
+				|[npc.speech(开始吸吧，荡妇！)]
+				|[npc.speech(来吧，你个肮脏的荡妇，已经开始了！)])]
 			#ELSE
 				#IF(npc.isFeminine())
-					 sensually [npc.moansVerb],
+					性感地[npc.moansVerb]，
 				#ELSE
-					 lets out a deep grunt,
+					发出低沉地咕哝声，
 				#ENDIF
-				 [game.random(
-				[npc.speech(Come on then, show me what you can do!)]
-				|[npc.speech(Get your lips wrapped around my cock!)]
-				|[npc.speech(Come on, get started already!)])]
+				[game.random(
+				[npc.speech(来吧，让我看看你能做些什么！)]
+				|[npc.speech(快点含住我的鸡巴！)]
+				|[npc.speech(来吧，已经开始了！)])]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_LEAVE"><![CDATA[
 	<p>
-		Having second thoughts about servicing some random stranger's cock, you back away from the hole and wait for them to give up and leave...
+		对于为陌生人的阴茎服务一事你又有了其他想法，于是你远离洞口，等待他们放弃并离开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_START"><![CDATA[
 	<p>
-		Having already waited long enough, you quickly kneel down in front of the glory hole,
+		已经等得够久了，你赶紧跪在了寻欢洞前，
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			 before opening your mouth and leaning in towards [npc.namePos] [npc.cock+].
+			然后张开嘴，靠近[npc.namePos][npc.cock+]。
 		#ELSE
-			 but as your mouth is blocked, all you can prepare to do is give [npc.name] a handjob.
+			但由于你的嘴被堵住了，你只能准备给[npc.Name]一个手交。
 		#ENDIF
 	</p>
 	<p>
-		Hearing you drop down in front of [npc.herHim], [npc.name] lets out an eager [npc.moan], and as [npc.her] cock starts to stiffen, [npc.she] impatiently bucks [npc.her] [npc.hips] up against the wall.
+		听到你跪在了[npc.herHim]跟前，[npc.Name]发出了急切的[npc.moan]，随着[npc.her]的阴茎变硬，[npc.she]急不可耐地将[npc.her]的[npc.hips]怼在墙上。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- TOILETS_GLORY_HOLE_SUB_POST_SEX -->
 	
 	<htmlContent tag="TOILETS_GLORY_HOLE_SUB_POST_SEX"><![CDATA[
 	<p>
-		You step back from the glory hole, grinning to yourself as you hear [npc.name] letting out a satisfied [npc.moan]. As you get your things in order, you see a flash of movement through the hole, before the creak of the adjoining stall's door announces the stranger's exit.
+		你从寻欢洞前离开，听到[npc.Name]发出快乐的小声[npc.moan]，你咧嘴一笑。你整理好东西，看到人影从洞中一闪而过，之后隔壁隔间的门吱吱作响，宣告这个淫荡的婊子出去了。
 	</p>
 	<p>
-		Just a moment later, you reach down to unlock the door of your own stall, and as you open it and step back out into the toilets, you see that [npc.name] has already left. With absolutely no idea as to whose cock you just serviced, you wonder what to do next...
+		片刻之后，你打开了自己隔间的门锁。你打开门回到厕所，发现[npc.Name]已经离开了。你完全不知道刚才是谁在为你口交，思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -8,25 +8,25 @@
 		
 		<twoHanded>false</twoHanded>
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name appendDamageName="false"><![CDATA[Western PPK]]></name>
+		<name appendDamageName="false"><![CDATA[瓦斯特PPK]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Western PPKs]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[瓦斯特PPK]]></namePlural> 
 		
-		<description><![CDATA[A blowback-operated semi-automatic pistol, featuring an exposed hammer, a traditional double-action trigger mechanism, a single-column magazine, and a fixed barrel that also acts as the guide rod for the recoil spring.]]></description> 
+		<description><![CDATA[一把反吹半自动手枪，设计使用外露击锤，双动式扳机结构，单排单进弹匣和固定枪管。]]></description> 
 		
-		<attackDescriptor>shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>The name's [npc.surname]. [npc.name(false)] [npc.surname]...</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[我叫[npc.surname]，[npc.name(false)]·[npc.surname]……]]></attackTooltipDescription>
 		
 		<rarity>LEGENDARY</rarity> 
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(draw)] [npc.her] Western PPK, ready to use it in combat.]]></equipText>
+		<equipText><![CDATA[[npc.Name]给[npc.her]的瓦斯特PPK装弹，准备用于战斗。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(holster)] [npc.her] Western PPK.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]把[npc.her]的瓦斯特PPK放回枪套中。]]></unequipText>
 		
 		<imageName>western_ppk_safe.svg</imageName> 
 		<imageEquippedName>western_ppk.svg</imageEquippedName> 
@@ -68,14 +68,14 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Taking aim with [npc.her] pistol, [npc.name] [npc.verb(pull)] the trigger and [npc.verb(fire)] a bullet at [npc2.name], hitting [npc2.herHim] directly in the chest!<br/>Thankfully, there seems to be some kind of arcane force preventing [npc2.name] from being seriously wounded or killed...
-		]]></hitText>
+		[npc.Name]用[npc.her]的手枪瞄准[npc2.name]并扣动扳机，[npc.she]成功命中[npc2.herHim]的胸部！<br/>幸好，似乎有某种奥术力量阻止[npc2.name]重伤或死亡……
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Taking aim with [npc.her] pistol, [npc.name] [npc.verb(pull)] the trigger and fires a bullet at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.Name]用[npc.her]的手枪瞄准[npc2.name]并扣动扳机发射一发子弹射向[npc2.name]，但是最终还是没有击中[npc2.herHim]！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

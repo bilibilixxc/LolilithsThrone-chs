@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Note: I use the words 'dialogue node' and 'scene' interchangeably in these comments, as the game's 'dialogue nodes' are simply different scenes which are presented to the player. -->
 	
 	<!-- Each one of these xml files can contain any number of dialogue nodes, each one of which is encompassed by 'scene' element tags. -->
-	<scene id ="berries_found">
+	<scene id="berries_found">
 		
 		<!-- What name you'd like to use to claim credit for creating this scene.
 		If omitted or left blank, then your mod's folder name will be used instead. -->
@@ -12,12 +12,12 @@
 		
 		<!-- The title of this scene, which will be displayed as the title at the top-centre of the UI.
 		This can be omitted entirely, and is done so in most of the game's scenes, as when omitted the game instead uses the name of the tile which the player is current in as the title. -->
-		<title><![CDATA[Berry bounty]]></title>
+		<title><![CDATA[浆果大餐]]></title>
 		
 		<!-- A scene's tooltip is almost always defined within a response to the scene which precedes it, and as such this field is almost never used or seen by the player.
 		The only time where this is actually used is when a scene immediately follows on from a sex scene, in which case this is seen as the tooltip to the action which ends sex.
 		As such, don't worry about filling this out (you can even omit it entirely). -->
-		<tooltip><![CDATA[You find berries!]]></tooltip>
+		<tooltip><![CDATA[你找到了浆果！]]></tooltip>
 		
 		<!-- This is a conditional statement which is executed before the scene's dialogue is parsed.
 		This allows you to make any gameplay changes before the scene is presented to the player (which can be very useful for making sure that transformed characters get parsed correctly).
@@ -87,12 +87,12 @@
 			Whatever text is returned by this element will be the tab's title. -->
 			<tab index="0"><![CDATA[
 				#IF(false)
-					This will never be seen!
+					这条绝对不会出现！
 				#ENDIF
 			]]></tab>
 			<tab index="1"><![CDATA[
 				#IF(false)
-					Neither will this!
+					不会这样！
 				#ENDIF
 			]]></tab>
 		</responseTabs>
@@ -129,10 +129,10 @@
 				<index><![CDATA[1]]></index>
 				
 				<!-- The title of this response, as seen by the player on the action button. -->
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				
 				<!-- The tooltip contents of this response, as seen by the player when they hover their mouse over this response's action button. -->
-				<responseTooltip><![CDATA[You don't think that eating wild berries is a very wise thing to do, and so decide to leave them untouched and continue on you way.]]></responseTooltip>
+				<responseTooltip><![CDATA[你认为吃野果并不是一个明智的选择，还是继续上路吧。]]></responseTooltip>
 				
 				<!-- The colour of the title's text, which should most likely be omitted or left blank, as action colouring should only be used to let the player know the action leads to combat, sex, trade, or a quest (which apart from quests are handled automatically).
 				You can define this as either a PresetColour value or a raw colour hex.
@@ -276,8 +276,8 @@
 					<!-- An optional element where you can define custom text for the opening dialogue for each character.
 					You can omit this section entirely, or omit as many of the combatants as you want (in which case they'll use a generic opening dialogue). -->
 					<openingDescriptions>
-						<combatant id="nyan"><![CDATA[Nyan points her minigun at Brax and exclaims, [nyan.speech(I've had enough!)]]]></combatant>
-						<combatant id="brax"><![CDATA[Brax looks rather worried and stutters, [brax.speech(W-Why am I always the one being picked on?)]]]></combatant>
+						<combatant id="nyan"><![CDATA[妮安用转轮机枪指着布拉克斯，大叫道， [nyan.speech(我他妈受够了！)]]]></combatant>
+						<combatant id="brax"><![CDATA[布拉克斯看起来相当恐惧，说话都结巴了，[brax.speech(为……为什么总是我被欺负？)]]]></combatant>
 					</openingDescriptions>
 					<!-- An optional element, which defaults to false.
 						If set to true, the option to try and escape from this combat scene is blocked. -->
@@ -411,8 +411,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Eat red berries]]></responseTitle>
-				<responseTooltip><![CDATA[Decide to eat the red berries and leave the purple ones behind.]]></responseTooltip>
+				<responseTitle><![CDATA[吃红色浆果]]></responseTitle>
+				<responseTooltip><![CDATA[决定吃红色浆果，留下紫色的。]]></responseTooltip>
 				<nextDialogue>innoxia_encounters_fields_elis_woods_berries_eaten</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -426,8 +426,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Eat purple berries]]></responseTitle>
-				<responseTooltip><![CDATA[Decide to eat the purple berries and leave the red ones behind.]]></responseTooltip>
+				<responseTitle><![CDATA[吃紫色浆果]]></responseTitle>
+				<responseTooltip><![CDATA[决定吃紫色浆果，留下红色的。]]></responseTooltip>
 				<nextDialogue>innoxia_encounters_fields_elis_woods_berries_eaten</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -442,8 +442,8 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
 				<colour><![CDATA[ATTRIBUTE_CORRUPTION]]></colour>
-				<responseTitle><![CDATA[Eat all berries]]></responseTitle>
-				<responseTooltip><![CDATA[Decide to eat both the red and purple berries, despite your instincts telling you that doing so will have [style.colourCorruption(corruptive effects)]!]]></responseTooltip>
+				<responseTitle><![CDATA[吃所有浆果]]></responseTitle>
+				<responseTooltip><![CDATA[小孩子才做选择，我全都要！你的直觉告诉你会有[style.colourCorruption(不好的影响)]！]]></responseTooltip>
 				<nextDialogue>innoxia_encounters_fields_elis_woods_berries_eaten_both</nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -473,8 +473,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Having consumed the berries and gained their effects, you're ready to continue on your way.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[吃完浆果并获得了效果后，你决定继续上路。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects/>
@@ -498,8 +498,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Calm down]]></responseTitle>
-				<responseTooltip><![CDATA[Spend some time calming down, before continuing on your way through the woods.]]></responseTooltip>
+				<responseTitle><![CDATA[平静下来]]></responseTitle>
+				<responseTooltip><![CDATA[花了一些时间冷静下来，你继续穿越森林。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[10]]></secondsPassed>
 				<effects><![CDATA[
@@ -511,8 +511,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Masturbate]]></responseTitle>
-				<responseTooltip><![CDATA[You can't control yourself! Besides, there'd be no harm in masturbating here in the middle of the woods.]]></responseTooltip>
+				<responseTitle><![CDATA[自慰]]></responseTitle>
+				<responseTooltip><![CDATA[你控制不住自己了！不过在这里奖励自己也没什么坏处。]]></responseTooltip>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -530,8 +530,8 @@
 	
 	<scene id="berries_after_masturbating">
 		<author><![CDATA[Innoxia]]></author>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough of masturbating, and so put a stop to it and prepare to move on...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你已经奖励过自己了，所以别再想着奖励自己，继续走吧……]]></tooltip>
 		<preParsingEffects/>
 		<content folderPath="txt/encounters/fields/elis/woods">BERRIES_AFTER_MASTURBATING</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -542,8 +542,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Continue on your way through the woods.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[继续穿过森林。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 				<effects/>
@@ -567,8 +567,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[You don't have time to relax, and so continue on your way past the clearing.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[没时间放松，继续上路吧。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -579,8 +579,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Relax]]></responseTitle>
-				<responseTooltip><![CDATA[Spend some time relaxing in the idyllic clearing.]]></responseTooltip>
+				<responseTitle><![CDATA[放松]]></responseTitle>
+				<responseTooltip><![CDATA[在这片田园搬的空地放松一下。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[35]]></secondsPassed>
 				<effects><![CDATA[

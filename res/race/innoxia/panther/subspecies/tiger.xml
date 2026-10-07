@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_panther</race>
 	<colour>RACE_CAT_MORPH_TIGER</colour>
@@ -47,24 +47,24 @@
 	<iconName displaySize="100">icon_tiger</iconName>
 	<backgroundName>background_tiger</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Big Cats</bookName>
+	<bookName><![CDATA[大猫咪]]></bookName>
 	<basicDescriptionId>PANTHER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>PANTHER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[tiger-morph]]></name>
-	<namePlural><![CDATA[tiger-morphs]]></namePlural>
-	<singularMaleName><![CDATA[tiger-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[tiger-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[tiger-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[tiger-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic tiger, known as a 'tiger-morph' when bipedal, and a 'tigertaur' when the lower body is that of a feral tiger. To be identified as a tiger-morph, a character must be a panther with striped fur.]]></description>
+	<name><![CDATA[虎化形]]></name>
+	<namePlural><![CDATA[虎化形]]></namePlural>
+	<singularMaleName><![CDATA[虎男]]></singularMaleName>
+	<singularFemaleName><![CDATA[虎女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[虎男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[虎女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的老虎，当下肢为双足时称为“虎化形”，而下肢呈现出老虎兽态时称为“半虎人”。要判定为虎化形，角色必须是一只条纹皮毛的大型猫科生物。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[tiger]]></feralName>
-		<feralNamePlural><![CDATA[tigers]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[tiger]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[tigeress]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[tigers]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[tigeresses]]></feralPluralFemaleName>
+		<feralName><![CDATA[虎]]></feralName>
+		<feralNamePlural><![CDATA[虎]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[虎]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[虎虎]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[虎]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[虎虎]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>100</size>
@@ -77,7 +77,7 @@
 		<hairPresent>true</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] body is extremely strong, and [npc.sheIsFull] capable of great feats of strength.
+		[npc.NamePos]的身体格外强壮，[npc.sheIsFull]能够完成强度极大的任务。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="35">MAJOR_PHYSIQUE</attribute>

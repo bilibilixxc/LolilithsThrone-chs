@@ -10,11 +10,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @author Innoxia
  */
 public enum BodySize {
-	ZERO_SKINNY("skinny", 0, 20, PresetColour.BODY_SIZE_ZERO),
-	ONE_SLENDER("slender", 20, 40, PresetColour.BODY_SIZE_ONE),
-	TWO_AVERAGE("average", 40, 60, PresetColour.BODY_SIZE_TWO),
-	THREE_LARGE("large", 60, 80, PresetColour.BODY_SIZE_THREE),
-	FOUR_HUGE("huge", 80, 100, PresetColour.BODY_SIZE_FOUR);
+	ZERO_SKINNY("瘦削", 0, 20, PresetColour.BODY_SIZE_ZERO),
+	ONE_SLENDER("苗条", 20, 40, PresetColour.BODY_SIZE_ONE),
+	TWO_AVERAGE("匀称", 40, 60, PresetColour.BODY_SIZE_TWO),
+	THREE_LARGE("硕大", 60, 80, PresetColour.BODY_SIZE_THREE),
+	FOUR_HUGE("庞大", 80, 100, PresetColour.BODY_SIZE_FOUR);
 
 	private String name;
 	private int minimumBodySize;
@@ -51,7 +51,7 @@ public enum BodySize {
 	
 	public String getName(boolean withDeterminer) {
 		if(withDeterminer) {
-			return UtilText.generateSingularDeterminer(name) + " " + name;
+			return UtilText.generateSingularDeterminer(name) + "" + name;
 		} else {
 			return name;
 		}

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[male glyph]]></name>
+		<name><![CDATA[男性符号]]></name>
 		
-		<description><![CDATA[This glyph represents the male sex and gender.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts a male symbol]]></bodyOverviewDescription> 
+		<description><![CDATA[这个符号代表男性的生理性别和性别认同。]]></description> 
+		<bodyOverviewDescription><![CDATA[男性符号的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>gender_male.svg</imageName> 
 		

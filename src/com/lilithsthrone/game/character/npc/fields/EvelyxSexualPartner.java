@@ -102,7 +102,7 @@ public class EvelyxSexualPartner extends NPC {
 			setName(Name.getRandomTriplet(this.getSubspecies()));
 			this.setPlayerKnowsName(false);
 			setDescription(UtilText.parse(this,
-					"[npc.Name] is a resident of the Foloi Fields, who travels to Evelyx's Dairy to pay for sex with one of the farm's cows."));
+					"[npc.Name]是弗洛伊田野的居民，一路来到艾弗利克斯乳业，只为花钱操农场的一头牛。"));
 			
 			// PERSONALITY & BACKGROUND:
 			

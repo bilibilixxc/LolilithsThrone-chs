@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small engraving on the belt buckle reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[皮带扣上的小雕塑印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>750</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's battle belt]]></name>
+		<name><![CDATA[执法者战斗腰带]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's battle belts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者战斗腰带]]></namePlural> 
 
-		<description><![CDATA[A two-layer belt made from ballistic nylon woven through heavy padding. The webbing could be used for all sorts of gear but this one only has a leg rig attached.]]></description> 
+		<description><![CDATA[双层腰带由防弹尼龙和厚衬垫编织而成。腰带可以挂载各种装备，但这条腰带只连接了腿部装备。]]></description> 
 
 		<physicalResistance>5</physicalResistance> 
 
@@ -68,27 +67,27 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the battle belt up around [npc.her] waist.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the battle belt up around [npc2.namePos] waist.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the battle belt around [npc2.namePos] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将战斗腰带系在[npc.her]腰间。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]在[npc2.namePos]腰间系上战斗腰带。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]强硬地扣上[npc2.namePos]腰间的战斗腰带。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] battle belt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] battle belt.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(rip)] the battle belt off [npc2.namePos] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开[npc.her]战斗腰带。
+	]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]战斗腰带。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]从[npc2.namePos]腰间扯下战斗腰带。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

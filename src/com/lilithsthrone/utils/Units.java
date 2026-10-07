@@ -70,11 +70,11 @@ public enum Units {
      * @param autoLocale Determines if automatic or manual detection is used
      */
     public void updateDateFormat(boolean autoLocale) {
-        Locale.setDefault(autoLocale ? defaultLocale : Locale.ENGLISH);
+        Locale.setDefault(autoLocale ? defaultLocale : Locale.CHINESE);
         shortDate = (autoLocale ? DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)
-                : DateTimeFormatter.ofPattern(Main.getProperties().hasValue(PropertyValue.internationalDate) ? "dd.MM.yy" : "MM/dd/yy"))
+                : DateTimeFormatter.ofPattern(Main.getProperties().hasValue(PropertyValue.internationalDate) ? "yy.MM.dd" : "yy.MM.dd"))
                 .withZone(ZoneId.systemDefault());
-        longDate = DateTimeFormatter.ofPattern("d'%o %m' yyyy")
+        longDate = DateTimeFormatter.ofPattern("yyyy年MM月dd日")
                 .withZone(ZoneId.systemDefault());
     }
 
@@ -84,7 +84,7 @@ public enum Units {
      */
     public void updateTimeFormat(boolean autoLocale) {
         time = (autoLocale ? DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)
-                : DateTimeFormatter.ofPattern(Main.getProperties().hasValue(PropertyValue.twentyFourHourTime) ? "HH:mm" : "hh:mm a"))
+                : DateTimeFormatter.ofPattern(Main.getProperties().hasValue(PropertyValue.twentyFourHourTime) ? "HH:mm" : "hh:mm a").withLocale(Locale.ENGLISH))
                 .withZone(ZoneId.systemDefault());
     }
 
@@ -94,7 +94,7 @@ public enum Units {
      * @param autoLocale Determines if automatic or manual detection is used
      */
     public void updateNumberFormat(boolean autoLocale) {
-        number = NumberFormat.getNumberInstance(autoLocale ? Locale.getDefault() : Locale.ENGLISH);
+        number = NumberFormat.getNumberInstance(autoLocale ? Locale.getDefault() : Locale.CHINESE);
         number.setRoundingMode(RoundingMode.HALF_UP);
         number.setMinimumFractionDigits(MIN_PRECISION);
         number.setMaximumFractionDigits(MAX_PRECISION);
@@ -289,26 +289,26 @@ public enum Units {
             case LONG:
                 if(Math.floor(inches) == 0 && vType != ValueType.PRECISE) {
                     output.setLength(0);
-                    return output.append("less than ")
-                            .append(vType == ValueType.TEXT ? "one" : "1")
-                            .append(" inch").toString();
+                    return output.append("不足")
+                            .append(vType == ValueType.TEXT ? "一" : "1")
+                            .append("英寸").toString();
                 }
                 
-                output.append(" ");
+                //output.append(" ");
                 if(Math.abs(usedValue) >= 1 + roundingFactor/2
                 		|| usedValue == 0) {
-                	output.append(wrap ? "feet" : "inches");
+                	output.append(wrap ? "英尺" : "英寸");
                 } else {
-                	output.append(wrap ? "foot" : "inch");
+                	output.append(wrap ? "英尺" : "英寸");
                 }
                 break;
             case LONG_SINGULAR:
-                output.append("-").append(wrap ? "foot" : "inch");
+                output.append(wrap ? "英尺" : "英寸");
         }
 
         // Append second unit for long or short notation and if neither value is 0
         if (both) {
-            if (uType == UnitType.LONG) output.append(" and ");
+            if (uType == UnitType.LONG) output.append("");
             if (uType == UnitType.LONG_SINGULAR) output.append("-");
             remainingInches = Math.abs(roundTo(remainingInches, roundingFactor));
             output.append(value(remainingInches, vType, true));
@@ -317,7 +317,7 @@ public enum Units {
                     output.append(INCH_SYMBOL);
                     break;
                 case LONG:
-                    output.append(" ").append(remainingInches >= 1 + roundingFactor/2 ? "inches" : "inch");
+                    output.append(remainingInches >= 1 + roundingFactor/2 ? "英寸" : "英寸");
                     break;
                 case LONG_SINGULAR:
                     break;
@@ -336,7 +336,7 @@ public enum Units {
      */
     public static String sizeAsMetric(double cm, ValueType vType, UnitType uType) {
         double m = cm / 100;
-        return valueWithUnit(cm, "cm", "centimetre"/*+(cm!=1?"s":"")*/, m, "m", "metre"/*+(cm!=100?"s":"")*/, vType, uType, false);
+        return valueWithUnit(cm, "cm", "厘米"/*+(cm!=1?"s":"")*/, m, "m", "米"/*+(cm!=100?"s":"")*/, vType, uType, false);
     }
 
     /**
@@ -391,7 +391,7 @@ public enum Units {
         double oz = ml / 28.4131;
 
         double gal = oz / 160;
-        return valueWithUnit(oz, "oz", "ounce", gal, "gal", "gallon", vType, uType, true);
+        return valueWithUnit(oz, "oz", "盎司", gal, "gal", "加仑", vType, uType, true);
     }
 
     /**
@@ -403,7 +403,7 @@ public enum Units {
      */
     public static String fluidAsMetric(double ml, ValueType vType, UnitType uType) {
         double l = ml / 1000;
-        return valueWithUnit(ml, "mL", "millilitre", l, "L", "litre", vType, uType, false); // Innoxia's note: I usually prefer the lowercase l for ml and l, but LT's font makes it look bad.
+        return valueWithUnit(ml, "mL", "毫升", l, "L", "升", vType, uType, false); // Innoxia's note: I usually prefer the lowercase l for ml and l, but LT's font makes it look bad.
     }
 
     /**
@@ -447,7 +447,7 @@ public enum Units {
         double oz = grams / 28.34952;
 
         double lb = oz / 16;
-        return valueWithUnit(oz, "oz", "ounce", lb, "lb", "pound", vType, uType, true);
+        return valueWithUnit(oz, "oz", "盎司", lb, "lb", "磅", vType, uType, true);
     }
 
     /**
@@ -459,7 +459,7 @@ public enum Units {
      */
     public static String weightAsMetric(double grams, ValueType vType, UnitType uType) {
         double kg = grams / 1000;
-        return valueWithUnit(grams, "g", "gram", kg, "kg", "kilogram", vType, uType, false);
+        return valueWithUnit(grams, "g", "克", kg, "kg", "千克", vType, uType, false);
     }
 
     private static String value(double value, ValueType vType, boolean useQuarters) {
@@ -503,16 +503,16 @@ public enum Units {
             case LONG:
                 if (Math.floor(value) == 0 && vType != ValueType.PRECISE) {
                     output.setLength(0);
-                    return output.append("less than ")
-                            .append(vType == ValueType.TEXT ? "one " : "1 ")
+                    return output.append("不足")
+                            .append(vType == ValueType.TEXT ? "一" : "1")
                             .append(unit).toString();
                 }
 
-                output.append(" ").append(wrap ? wrappedUnit : unit);
-                if (Math.abs(usedValue) != 1.0) output.append("s");
+                output.append(wrap ? wrappedUnit : unit);
+                //if (Math.abs(usedValue) != 1.0) output.append("s");
                 break;
             case LONG_SINGULAR:
-                output.append(" ").append((wrap ? wrappedUnit : unit));
+                output.append((wrap ? wrappedUnit : unit));
         }
 
         return output.toString();
@@ -562,18 +562,18 @@ public enum Units {
 
     public static String getMonthName(int month) {
         switch (month) {
-            case 1: return "January";
-            case 2: return "February";
-            case 3: return "March";
-            case 4: return "April";
-            case 5: return "May";
-            case 6: return "June";
-            case 7: return "July";
-            case 8: return "August";
-            case 9: return "September";
-            case 10: return "October";
-            case 11: return "November";
-            case 12: return "December";
+            case 1: return "1月";
+            case 2: return "2月";
+            case 3: return "3月";
+            case 4: return "4月";
+            case 5: return "5月";
+            case 6: return "6月";
+            case 7: return "7月";
+            case 8: return "8月";
+            case 9: return "9月";
+            case 10: return "10月";
+            case 11: return "11月";
+            case 12: return "12月";
         }
         return "";
     }

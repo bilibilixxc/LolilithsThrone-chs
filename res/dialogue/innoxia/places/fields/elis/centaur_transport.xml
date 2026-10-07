@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="exterior">
@@ -10,14 +10,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Barn]]></responseTitle>
+				<responseTitle><![CDATA[马厩]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_centaur_transport_introduced))
-						The barn looks to be well and truly deserted. There's nothing for you to do here except continue on your way.
+						这个马厩看起来真的荒废了。除了继续赶路，你在这里无事可做。
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_centaur_transport_setup_in_progress))
-						As Astrapi informed you that she and Vronti will not be offering rides for the rest of today, you'll have to come back tomorrow if you wanted to make use of their services.
+						阿斯特拉皮告诉你，如果你想使用他们的服务，请明天再来。
 					#ELSE
-						Approach the barn and see if you can find Astrapi or Vronti.
+						走近马厩，看看能否找到阿斯特拉皮或弗洛狄。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -40,12 +40,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Inside]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5.75, 15))
-						The barn is open between [style.italicsMinorGood([units.time(5.75)]-[units.time(15)])], and as such you could [pc.step] inside the intact barn and potentially find Astrapi or Vronti.
+						马厩目前正在开放，你可以进去寻找阿斯特拉皮或者弗洛狄。
 					#ELSE
-						The barn is open between [style.italicsMinorBad([units.time(5.75)]-[units.time(15)])], and as such is currently deserted. You'll have to come back during opening times if you wanted to meet Astrapi or Vronti again.
+						马厩只在[style.italicsMinorBad([units.time(5.75)]-[units.time(15)])]时间段开放，如果你想找阿斯特拉皮或者弗洛狄，你需要在正确的时间过来。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -62,8 +62,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wait & enter]]></responseTitle>
-				<responseTooltip><![CDATA[As the barn is currently closed, you could wait here until [units.time(5.75)] for it to open and then head inside, should you want to...]]></responseTooltip>
+				<responseTitle><![CDATA[等待&进入]]></responseTitle>
+				<responseTooltip><![CDATA[车站目前关闭了，你在考虑是否要在原地待到[units.time(5.75)]等车站开门再进去。你决定……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_centaur_transport_approach_inside]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
 					[#game.getMinutesUntilTimeInMinutes(5.75*60)]
@@ -77,12 +77,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.isHourBetween(5.75, 15))
-						Decide against heading inside the building.
+						你决定离开这个建筑。
 					#ELSE
-						As the barn is currently closed, there's nothing for you to do here. You'll have to come back between [style.italicsMinorBad([units.time(5.75)]-[units.time(15)])] if you wanted to meet Astrapi or Vronti again.
+						马厩只在[style.italicsMinorBad([units.time(5.75)]-[units.time(15)])]时间段开放，你应该在那个时候再来找阿斯特拉皮或者弗洛狄。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
@@ -118,8 +118,8 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Wait]]></responseTitle>
-				<responseTooltip><![CDATA[As neither Astrapi nor Vronti are here right now, you'll need to wait for the next departure time if you wanted to get a ride to Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[等待]]></responseTitle>
+				<responseTooltip><![CDATA[目前阿斯特拉皮和弗洛狄都不在，如果你还想坐车去伊利斯，你必须等到下次发车时间。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_centaur_transport_approach_inside]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
 					#IF(game.getHourOfDay()>12)
@@ -151,20 +151,20 @@
 				<index><![CDATA[1]]></index>
 				<responseTitle><![CDATA[
 					#IF(pc.getMoney()>=250)
-						Dominion [style.moneyFormat(250, span)]
+						御城区[style.moneyFormat(250, span)]
 					#ELSE
-						Dominion [style.moneyFormatUncoloured(250, span)]
+						御城区[style.moneyFormatUncoloured(250, span)]
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getMoney()>=250)
 						#IF(game.getCharactersPresent().contains(astrapi))
-							Take up Astrapi's offer and have her take you to Dominion now.
+							选择阿斯特拉皮的服务，让她载你到御城区。
 						#ELSE
-							Take up Vronti's offer and have him take you to Dominion now.
+							选择弗洛狄的服务，让他载你到御城区。
 						#ENDIF
 					#ELSE
-						You don't have enough money to get a ride to Dominion!
+						你没有足够的火币购买前往御城区的乘车服务。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -191,12 +191,12 @@
 				]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
+				<responseTitle><![CDATA[回绝]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(astrapi))
-						Tell Astrapi that you don't want a ride to Dominion right now and exit the barn.
+						告诉阿斯特拉皮你目前不想前往御城区，并离开马厩。
 					#ELSE
-						Tell Vronti that you don't want a ride to Dominion right now and exit the barn.
+						告诉弗洛狄你目前不想前往御城区，并离开马厩。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>

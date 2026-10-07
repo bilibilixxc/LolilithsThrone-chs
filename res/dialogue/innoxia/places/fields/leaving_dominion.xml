@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="start">
@@ -10,8 +10,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[North]]></responseTitle>
-				<responseTooltip><![CDATA[The yellow arrow lead you out to the north of Dominion.]]></responseTooltip>
+				<responseTitle><![CDATA[北方]]></responseTitle>
+				<responseTooltip><![CDATA[黄色箭头指引你前往御城区北部。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_leaving_dominion_moving_north</nextDialogue>
 			</response>
 		</responses>
@@ -29,8 +29,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Prepare]]></responseTitle>
-				<responseTooltip><![CDATA[Prepare yourself for whatever is about to appear!]]></responseTooltip>
+				<responseTitle><![CDATA[准备]]></responseTitle>
+				<responseTooltip><![CDATA[为即将出现的一切做好准备！]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_leaving_dominion_meraxis</nextDialogue>
 			</response>
 		</responses>
@@ -50,8 +50,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Question]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Meraxis what she's doing here.]]></responseTooltip>
+				<responseTitle><![CDATA[质疑]]></responseTitle>
+				<responseTooltip><![CDATA[问问梅拉克西丝，她在这里做什么？]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_leaving_dominion_meraxis_question</nextDialogue>
 			</response>
 		</responses>
@@ -66,8 +66,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Listen]]></responseTitle>
-				<responseTooltip><![CDATA[Listen to what Meraxis has to say.]]></responseTooltip>
+				<responseTitle><![CDATA[听]]></responseTitle>
+				<responseTooltip><![CDATA[听听梅拉克西丝怎么说。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_leaving_dominion_meraxis_info</nextDialogue>
 			</response>
 		</responses>
@@ -82,15 +82,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis that you're not interested in duelling her.]]></responseTooltip>
+				<responseTitle><![CDATA[回绝]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，你没兴趣和她对决。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_leaving_dominion_meraxis_no_duel</nextDialogue>
 			</response>
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Duel]]></responseTitle>
-				<responseTooltip><![CDATA[Accept Meraxis's offer of a duel!]]></responseTooltip>
+				<responseTitle><![CDATA[决斗]]></responseTitle>
+				<responseTooltip><![CDATA[应下梅拉克西丝的决斗邀请。]]></responseTooltip>
 				<nextDialogue>innoxia_characters_meraxis_duel_start</nextDialogue> <!-- This links to generic duel dialogues -->
 				<effects><![CDATA[
 					[#flags.setFlag(FLAG_innoxia_meraxis_duel_place_dominion, true)]
@@ -109,8 +109,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Goodbye]]></responseTitle>
-				<responseTooltip><![CDATA[Say goodbye to Meraxis and tell her that you look forward to seeing her at Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[道别]]></responseTitle>
+				<responseTooltip><![CDATA[向梅拉克西丝道别，期待着和她在伊利斯再次相见。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[

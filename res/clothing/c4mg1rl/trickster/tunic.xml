@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[A tag discreetly sewn into the dress' inner lining informs you that it was made by 'C4MG1RL'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[在长袍的衬里隐秘地缝着一个标签，告诉你它是由“C4MG1RL”制造的。]]></clothingAuthorTag>
 		<value>8000</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Trickster's tunic]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Sleeved tunics]]></namePlural> 
-		<description><![CDATA[A knee-length tunic lined with dozens of hidden pockets. These concealed compartments are perfect for holding all manner of surprises or pilfered trinkets. Expertly designed so as not to impede the wearer's flexibility, this tunic is ideal for both dancing and fighting!]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[诡术师的长袍]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[带袖长袍]]></namePlural> 
+		<description><![CDATA[有几十个隐藏口袋的及膝束腰外衣。这些隐蔽的隔间非常适合存放各种各样的惊喜或偷来的小饰品。专业设计，不妨碍穿着者的灵活性，可以适用于舞池或是战斗！]]></description> 
 		<physicalResistance>3</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>TORSO_UNDER</slot> 
@@ -81,48 +80,48 @@
 	
 	
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unties)] the sash, before [npc.verb(pull)] [npc.her] tunic off over [npc.her] head.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unties)] the sash, before [npc.verb(pull)] [npc2.namePos] tunic off over [npc2.her] head.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(unties)] the sash, before roughly [npc.verb(pull)] [npc2.namePos] tunic off over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了腰带，把长袍拉过[npc.her]头顶脱下。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开了腰带，把[npc2.namePos]的长袍拉过[npc2.her]头顶。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]解开了腰带，粗暴地把[npc2.namePos]的长袍拉过[npc2.her]头顶。
+]]></otherRough>
 	</displacementText>
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pulls)] the tunic down over [npc.her] head and torso, then [npc.verb(tie)] the sash tightly.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pulls)] the tunic down over [npc2.namePos] head and torso, then [npc.verb(ties)] the sash tightly.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pulls)] the tunic down over [npc2.namePos] head and torso, then [npc.verb(ties)] the sash tightly.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把长袍从[npc.her]的头上拉到肚子上，随后系紧了腰带。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把长袍从[npc2.namePos]的头上套到肚子上，随后系紧了腰带。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地把长袍从[npc2.namePos]的头上套到肚子上，随后系紧了腰带。
+]]></otherRough>
 	</replacementText>
 
 	
 	<displacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc.her] tunic.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] up the skirt of [npc2.namePos] tunic.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] up the skirt of [npc2.namePos] tunic.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]拉起[npc.her]的长袍的一角。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉起[npc2.namePos]的长袍的一角。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地拉起[npc2.namePos]的长袍的一角。
+]]></otherRough>
 	</displacementText><replacementText type="PULLS_UP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the skirt of [npc.her] tunic.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] down the skirt of [npc2.namePos] tunic.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] down the skirt of [npc2.namePos] tunic.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]放下[npc.her]长袍的边缘。
+]]></self>
+		<other><![CDATA[
+[npc.Name]放下[npc2.namePos]的长袍的边缘。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地放下[npc2.namePos]的长袍的边缘。
+]]></otherRough>
 	</replacementText>
 </clothing>

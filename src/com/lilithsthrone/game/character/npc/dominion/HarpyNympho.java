@@ -57,10 +57,10 @@ public class HarpyNympho extends NPC {
 	}
 	
 	public HarpyNympho(boolean isImported) {
-		super(isImported, new NameTriplet("Lexi"), "Holub",
-				"One of the more notable harpy matriarchs, Lexi is the leader of a flock of harpies."
-						+ " Either due to her obsession with sex, or perhaps because she's not as cruel as a typical harpy, Lexi is far more accepting of males than a typical matriarch."
-						+ " As a result, her flock serves as her personal harem; it's members constantly trying to sate their matriarch's never-ending lust.",
+		super(isImported, new NameTriplet("莱克西"), "霍拉勃",
+				"莱克西是一位更为尊贵的哈比族长，一群哈比的首领。"
+						+ "或许是由于她沉迷性爱，也可能是因为她不像一般哈比一样残忍，莱克西相比那些常见的族长，要更受男性的欢迎。"
+						+ "因此她的族群就相当于其后宫；其中成员会接连不断地尝试满足族长难以平息的欲望。",
 				22, Month.APRIL, 13,
 				7, Gender.F_V_B_FEMALE, Subspecies.HARPY, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HARPY_NEST_PINK, true);
@@ -337,8 +337,8 @@ public class HarpyNympho extends NPC {
 		if(user.isPlayer() && !target.isPlayer() && (item.getItemType().equals(ItemType.FETISH_UNREFINED) || item.getItemType().equals(ItemType.FETISH_REFINED))){
 			return new Value<>(false,
 					"<p>"
-						+ "You try to give [npc.name] your "+item.getName()+", but [npc.she] takes one look at it and sighs,"
-						+ " [npc.speechNoEffects(Mmm, yeah, that's not happening. I'm really not going to drink some random potion of yours!)]"
+						+ "你想把"+item.getName()+"交给[npc.name]，但[npc.she]却只是瞧了一眼，便叹道，"
+						+ "[npc.speechNoEffects(姆嗯·，是啊，不可能。我是不会喝你随便从哪里掏出来的药水的！)]"
 					+ "</p>");
 		}
 		

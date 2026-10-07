@@ -330,10 +330,10 @@ import static com.lilithsthrone.LolificationProject.Lexi.character.race.LexiSubs
 public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 
 	/** Calculations description as used in getAttributeValue() */
-	public static final String HEALTH_CALCULATION = "10 + (5*level) + (2*Physique) + Bonus Energy";
-	public static final String MANA_CALCULATION = "5 + (2*level) + (5*Arcane) + Bonus Aura";
-	public static final String RESTING_LUST_CALCULATION = "(Corruption/2) + Bonuses";
-	public static final String PREGNANCY_CALCULATION = "10% + (Cum-character's Virility% / 2) + (Womb-character's Fertility% / 2)";
+	public static final String HEALTH_CALCULATION = "10 + (5*等级) + (2*体格) + 能量加成";
+	public static final String MANA_CALCULATION = "5 + (2*等级) + (5*奥术) + 灵气加成";
+	public static final String RESTING_LUST_CALCULATION = "(堕落/2) + 加成";
+	public static final String PREGNANCY_CALCULATION = "10% + (射精者生殖力% / 2) + (受精者生育力% / 2)";
 
 	public static int LEVEL_CAP = 50, MAX_TRAITS = 6,
             MAX_COMBAT_MOVES = 8,DEFAULT_COMBAT_AP = 3;
@@ -3618,12 +3618,12 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 
 			// Reload the character's images
 			loadImages(true);
-			Main.game.addEvent(new EventLogEntry("[style.colourGood(Images imported)]",
-					imageFiles.size() + (imageFiles.size() > 1 ? " images were" : " image was") + " added"), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourGood(图像导入成功)]",
+					imageFiles.size() +"图像已加载"), false);
 		} catch (IOException e1) {
 			e1.printStackTrace();
-			Main.game.addEvent(new EventLogEntry("[style.colourBad(Image import failed)]",
-					"See error.log for details"), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourBad(图像导入失败)]",
+					"查看error.log以获得更多信息"), false);
 		}
 	}
 
@@ -3762,12 +3762,12 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						"<div style='position:relative; float:right; width:"+percentageWidth+"%; max-width:"+width+"; object-fit:scale-down;'>"
 							+ "<div style='width:100%; margin:0;'>"
 								+(imageString.isEmpty()
-									?"<div style='width:100%; margin:0; text-align:center;'>No image!</div>"
+									?"<div style='width:100%; margin:0; text-align:center;'>没有图像！</div>"
 									:"<img id='CHARACTER_IMAGE' style='"+(revealed ? "" : "-webkit-filter: brightness(0%);")+" width:100%;' src='"+imageString+"'/>")
 								+ "<div class='overlay no-pointer no-highlight' style='text-align:center;'>" // Add overlay div to stop javaFX's insane image drag+drop
 									+ (revealed || imageString.isEmpty()
 										? ""
-										: "<p style='margin-top:50%; font-weight:bold; color:"+PresetColour.BASE_GREY.toWebHexString()+";'>Unlocked through sex!</p>")
+										: "<p style='margin-top:50%; font-weight:bold; color:"+PresetColour.BASE_GREY.toWebHexString()+";'>通过性爱解锁！</p>")
 								+ "</div>"
                                 + (artwork.getArtist().getName().equals("Custom")?"<div class='title-button' id='ARTWORK_DELETE' style='background:transparent; left:auto; right:52px;'>"+SVGImages.SVG_IMAGE_PROVIDER.getDiskDelete()+"</div>":"")
 								+ "<div class='title-button' id='ARTWORK_ADD' style='background:transparent; left:auto; right:28px;'>"+SVGImages.SVG_IMAGE_PROVIDER.getAddIcon()+"</div>"
@@ -3789,7 +3789,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		infoScreenSB.append(
 				"<h6>"
 					+Util.capitaliseSentence(this.isPlayerKnowsName()
-						?this.getNameIgnoresPlayerKnowledge() + " " + this.getSurname()
+						?this.getNameIgnoresPlayerKnowledge() + "·" + this.getSurname()
 						:this.getName(true))
 				+"</h6>"
 				+ "<p>"
@@ -3802,21 +3802,21 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			append = true;
 			infoScreenSB.append(UtilText.parse(this,
 					(incubated
-						?" After being incubated by "+(this.getIncubator().isPlayer()?"yourself":this.getIncubator().getName())+", [npc.she] [npc.was] born"
-						:" You gave birth to [npc.herHim]")
-					+" on the "+this.getBirthdayString()));
+						?"在被"+(this.getIncubator().isPlayer()?"你":this.getIncubator().getName())+"孵化后，[npc.she]出生"
+						:"你将其分娩")
+					+"于"+this.getBirthdayString()));
 			
 		} else if(this.isPlayer() || (this.isPlayerKnowsName() && (this.getAffection(Main.game.getPlayer())>=AffectionLevel.POSITIVE_ONE_FRIENDLY.getMinimumValue() || this.isSlave()))) {
 			append = true;
 			if(this.isDoll()) {
-				infoScreenSB.append(UtilText.parse(this, " [npc.She] [npc.was] created on the "+this.getBirthdayString()));
+				infoScreenSB.append(UtilText.parse(this, "[npc.She]被制作于"+this.getBirthdayString()));
 				
 			} else {
 				infoScreenSB.append(UtilText.parse(this,
 						(incubated
-							?" After being incubated by "+(this.getIncubator().isPlayer()?"yourself":this.getIncubator().getName())+", [npc.she]"
-							:" [npc.She]")
-						+" [npc.was] born on the "+this.getBirthdayString()));
+							?"在被"+(this.getIncubator().isPlayer()?"yourself":this.getIncubator().getName())+"孵化后，[npc.she]"
+							:"[npc.She]")
+						+"出生于"+this.getBirthdayString()));
 			}
 
 		}
@@ -3825,7 +3825,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
             if(Main.getProperties().hasValue(PropertyValue.ageContent)) {
                 if(this.isDoll()) {
                     infoScreenSB.append(UtilText.parse(this,
-                            ", and [npc.she] [npc.is] considered to be <span style='color:"+this.getAge().getColour().toWebHexString()+";'>"+Util.intToString(this.getAgeValue())+"</span> years old."));
+                            ", [npc.she]看起来大概有<span style='color:"+this.getAge().getColour().toWebHexString()+";'>"+Util.intToString(this.getAgeValue())+"</span>岁左右。"));
                 } else {
                     infoScreenSB.append(UtilText.parse(this,
                                     ", but"
@@ -3844,7 +3844,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 
 		infoScreenSB.append("</p>");
 		
-		infoScreenSB.append("<h6>Relationships</h6>"
+		infoScreenSB.append("<h6>人物关系</h6>"
 				+ "<p>");
 		String relationships = this.getRelationshipStrTo(Main.game.getPlayer());
 		
@@ -3852,14 +3852,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(!this.isPlayer()) {
 				StringBuilder relationshipsSB = new StringBuilder();
 				if(this.getPartyLeader()!=null) {
-					relationshipsSB.append(UtilText.parse(this, this.getPartyLeader(), "[npc.She] [npc.is] currently following [npc2.name] around as [npc2.her] [style.colourCompanion(companion)]. "));
+					relationshipsSB.append(UtilText.parse(this, this.getPartyLeader(), "[npc.She]正作为[style.colourCompanion(同伴)]跟随在[npc2.name]身边。"));
 				}
 
 				if(!relationships.isEmpty()) {
 					if(relationshipsSB.length()>0) {
 						relationshipsSB.append("<br/>");
 					}
-					relationshipsSB.append(UtilText.parse(this, "[npc.She] is your <span style='color:"+this.getFemininity().getColour().toWebHexString()+"'>"+relationships+"</span>. "));
+					relationshipsSB.append(UtilText.parse(this, "[npc.She]是你的<span style='color:"+this.getFemininity().getColour().toWebHexString()+"'>"+relationships+"</span>。"));
 				}
 
 				List<GameCharacter> charactersPlayerHasEncountered = Main.game.getPlayer().getCharactersEncounteredAsGameCharacters(true);
@@ -3872,7 +3872,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								if(relationshipsSB.length()>0) {
 									relationshipsSB.append("<br/>");
 								}
-								relationshipsSB.append(UtilText.parse(this, npc, "[npc.She] is [npc2.namePos] <span style='color:"+this.getFemininity().getColour().toWebHexString()+"'>"+relationshipToOtherNpc+"</span>. "));
+								relationshipsSB.append(UtilText.parse(this, npc, "[npc.She]是[npc2.namePos]的<span style='color:"+this.getFemininity().getColour().toWebHexString()+"'>"+relationshipToOtherNpc+"</span>。"));
 							}
 						}
 					}
@@ -3898,7 +3898,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 											|| Main.game.getPlayer().getFriendlyOccupants().contains(target.getId()))) {
 								infoScreenSB.append("<br/>" + AffectionLevel.getDescription(this, target, true));
 								affection = (int)this.getAffection(target);
-								infoScreenSB.append(" (<span style='color:"+this.getAffectionLevel(target).getColour().toWebHexString()+";'>"+(affection>0?"+":"")+affection+"</span>)");
+								infoScreenSB.append("(<span style='color:"+this.getAffectionLevel(target).getColour().toWebHexString()+";'>"+(affection>0?"+":"")+affection+"</span>)");
 							}
 						}
 					} catch (Exception e) {
@@ -3908,31 +3908,31 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(this.isSlave()) {
 				infoScreenSB.append(
 							"<br/>"
-							+ UtilText.parse(this, "[npc.She] [npc.is] a [style.colourArcane(slave)]")
+							+ UtilText.parse(this, "[npc.She]是一名[style.colourArcane(奴隶)]")
 							+(getOwner() instanceof Finch
-								?"."
-								:", owned by "+(UtilText.parse(getOwner(), "[npc.name].")))
-							+ " "
+								?"。"
+								:"，主人是"+(UtilText.parse(getOwner(), "[npc.name]。")))
+							+ ""
 							+ ObedienceLevel.getDescription(this, ObedienceLevel.getObedienceLevelFromValue(this.getObedienceValue()), true, true));
 			}
 			if(!this.isPlayer()) {
 				if(!this.getSlavesOwned().isEmpty() && !(this instanceof Finch)) {
 					infoScreenSB.append("<br/>"
-							+ UtilText.parse(this, "[npc.She] owns "+Util.intToString(this.getSlavesOwned().size())+" "+(this.getSlavesOwned().size()==1?"slave":"slaves")+": "));
+							+ UtilText.parse(this, "[npc.She]拥有"+Util.intToString(this.getSlavesOwned().size())+"个"+(this.getSlavesOwned().size()==1?"奴隶":"奴隶")+":"));
 					List<String> slaveNames = new ArrayList<>();
 					for(String id : this.getSlavesOwned()) {
 						try {
 							slaveNames.add(UtilText.parse(Main.game.getNPCById(id), "[npc.name]"));
 						} catch (Exception e) {
-							slaveNames.add("Unknown (id:"+id+")");
+							slaveNames.add("未知(id:"+id+")");
 						}
 					}
-					infoScreenSB.append(Util.stringsToStringList(slaveNames, false)+".");
+					infoScreenSB.append(Util.stringsToStringList(slaveNames, false)+"。");
 				}
 			}
 			infoScreenSB.append("</p>");
 			
-			infoScreenSB.append("<h6>Personality</h6>"
+			infoScreenSB.append("<h6>个性</h6>"
 					+ "<p>");
 			int i=0;
 			for(PersonalityTrait trait : this.getPersonalityTraits()) {
@@ -3944,14 +3944,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			}
 			if(i==0) {
 				if(this.isDoll()) {
-					infoScreenSB.append(UtilText.parse(this, "[npc.NameIsFull] a sex doll, and as such [npc.has] no personality traits."));
+					infoScreenSB.append(UtilText.parse(this, "[npc.NameIsFull]是性爱玩偶，因而没有特性。"));
 				} else {
-					infoScreenSB.append(UtilText.parse(this, "[npc.NameHasFull] a well-rounded personality, with no exceptionally good nor bad traits."));
+					infoScreenSB.append(UtilText.parse(this, "[npc.NameHasFull]的性格很全面，没有格外好或格外坏的特性。"));
 				}
 			}
 			infoScreenSB.append("</p>");
 			
-			infoScreenSB.append("<h6>Appearance</h6>"
+			infoScreenSB.append("<h6>外观</h6>"
 					+ "<p>"
 						+ this.getBodyDescription()
 					+ "</p>");
@@ -3959,7 +3959,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			infoScreenSB.append(
 							"<div class='container-full-width'>"
 								+ "<details>"
-									+ "<summary class='quest-title'>Stats</summary>"
+									+ "<summary class='quest-title'>属性</summary>"
 									+PhoneDialogue.getBodyStatsPanel(this)
 								+ "</details>"
 							+"</div>");
@@ -3968,7 +3968,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				infoScreenSB.append(
 							"<div class='container-full-width'>"
 								+ "<details>"
-									+ "<summary class='quest-title'>Perk tree</summary>"
+									+ "<summary class='quest-title'>天赋树</summary>"
 									+ PerkManager.MANAGER.getPerkTreeDisplay(this, false)
 								+ "</details>"
 							+"</div>");
@@ -3977,9 +3977,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		} else {
 			infoScreenSB.append("</p>"
 					+ "<br/>"
-						+ "<h6>Appearance</h6>"
+						+ "<h6>外貌</h6>"
 					+ "<p>"
-						+ UtilText.parse(this, "As [npc.namePos] body is mostly concealed, your knowledge of [npc.her] appearance is severely limited...")
+						+ UtilText.parse(this, "由于[npc.namePos]的身体大部分都被遮盖，你对于[npc.her]外表的认识十分有限……")
 					+ "</p>"
 					+ (Main.game.getPlayer().isKnowsCharacterArea(CoverableArea.ANUS, this)
 							?"<p>"
@@ -4063,9 +4063,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			return getName(true);
 			
 		} else {
-			String nameText = (isPrependWingedToRaceName() ? "winged " : "") + getName(true);
+			String nameText = (isPrependWingedToRaceName() ? "长有翅膀的" : "") + getName(true);
 			if(this.isUnique()) {
-				determiner = "the";
+				determiner = "";
 			}
             return (determiner.equalsIgnoreCase("a") || determiner.equalsIgnoreCase("an")
                     ? (Character.isUpperCase(determiner.charAt(0))
@@ -4527,23 +4527,23 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(petName!=null) {
 			if(petName.equalsIgnoreCase("Mom") || petName.equalsIgnoreCase("Dad")) {
-				return target.isFeminine()?"mom":"dad";
+				return target.isFeminine()?"妈妈":"爸爸";
 				
 			} else if (petName.equalsIgnoreCase("Mommy") || petName.equalsIgnoreCase("Daddy")) {
-				return target.isFeminine()?"mommy":"daddy";
+				return target.isFeminine()?"妈咪":"爹地";
 				
 			} else if (petName.equalsIgnoreCase("Mistress") || petName.equalsIgnoreCase("Master")) {
-				return target.isFeminine()?"Mistress":"Master";
+				return target.isFeminine()?"主人":"主人";
 				
 			} else if (petName.equalsIgnoreCase("Ma'am") || petName.equalsIgnoreCase("Sir")) {
-				return target.isFeminine()?"Ma'am":"Sir";
+				return target.isFeminine()?"女士":"先生";
 				
 			} else if (petName.equalsIgnoreCase("Mr. "+target.getSurname()) || petName.equalsIgnoreCase("Mrs. "+target.getSurname()) || petName.equalsIgnoreCase("Miss "+target.getSurname())) {
 				return target.isFeminine()
-						?(petName.equalsIgnoreCase("Mrs. "+target.getSurname())
-							?"Mrs. "+target.getSurname()
-							:"Miss "+target.getSurname())
-						:"Mr. "+target.getSurname();
+						?(petName.equalsIgnoreCase(target.getSurname()+"女士")
+							?target.getSurname()+"女士"
+							:target.getSurname()+"小姐")
+						:target.getSurname()+"先生";
 			}
 			return petName;
 		}
@@ -4563,13 +4563,13 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					break;
 				case GrandGrandParent:
 				case GrandParent:
-					return target.isFeminine()?"grandma":"grandad";
+					return target.isFeminine()?"祖母":"祖父";
 				case Parent:
 				case IncubatorParent:
-					return target.isFeminine()?"mom":"dad";
+					return target.isFeminine()?"妈妈":"爸爸";
 				case GrandPibling:
 				case Pibling:
-					return target.isFeminine()?"auntie":"uncle";
+					return target.isFeminine()?"阿姨":"叔叔";
 			}
 		}
 		
@@ -4606,7 +4606,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 
 	public String getBirthdayString() {
 		boolean bce = this.getBirthday().getYear()<0;
-		return Util.intToDate(this.getBirthday().getDayOfMonth())+" "+this.getBirthday().getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH)+" "+Math.abs(this.getBirthday().getYear())+(bce?" BCE":"");
+		return (bce?"公元前":"") + Math.abs(this.getBirthday().getYear())+"年"+this.getBirthday().getMonth().getDisplayName(TextStyle.SHORT, Locale.CHINESE)+Util.intToDate(this.getBirthday().getDayOfMonth());
 	}
 	
 	public LocalDateTime getBirthday() {
@@ -4828,7 +4828,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_2)) {
 			return UtilText.parse(this,
 					"<p style='text-align:center;'>"
-							+ "[style.colourDisabled(As a sex doll, [npc.name] cannot gain any personality traits...)]"
+							+ "[style.colourDisabled(作为性爱玩偶，[npc.name]无法获得特性……)]"
 						+ "</p>");
 		}
 		StringBuilder sb = new StringBuilder();
@@ -5029,14 +5029,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.hasPerkAnywhereInTree(Perk.DOLL_LUST_2)) {
 			return UtilText.parse(this,
 					"<p style='text-align:center'>"
-						+ "[style.colourDisabled(As a sex doll, [npc.nameIs] always completely obedient...)]"
+						+ "[style.colourDisabled(作为性爱玩偶，[npc.NameIs]总会完全服从……)]"
 					+ "</p>");
 		}
 		this.obedience = Math.max(-100, Math.min(100, obedience));
 		
 		return UtilText.parse(this,
 				"<p style='text-align:center'>"
-						+ "[npc.She] now [npc.has] <b>"+(obedience>0?"+":"")+Units.round(obedience, 1)+"</b> [style.boldObedience(obedience)].<br/>"
+						+ "[npc.She]现在拥有<b>"+(obedience>0?"+":"")+Units.round(obedience, 1)+"</b>[style.boldObedience(服从)]。<br/>"
 						+ ObedienceLevel.getDescription(this, ObedienceLevel.getObedienceLevelFromValue(obedience), true, false)
 					+ "</p>");
 	}
@@ -5049,7 +5049,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.hasPerkAnywhereInTree(Perk.DOLL_LUST_2)) {
 			return UtilText.parse(this,
 					"<p style='text-align:center'>"
-						+ "[style.colourDisabled(As a sex doll, [npc.nameIs] always completely obedient...)]"
+						+ "[style.colourDisabled(作为性爱玩偶，[npc.NameIs]总会完全服从……)]"
 					+ "</p>");
 		}
 		boolean teacherPerkGain = false;
@@ -5063,21 +5063,21 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.isPlayer()) {
 			return UtilText.parse(this,
 					"<p style='text-align:center'>"
-							+ "[npc.Name] "+(increment>0?"[style.boldGrow(gain)]":"[style.boldShrink(lose)]")+" <b>"+Math.abs(increment)+"</b> [style.boldObedience(obedience)]!<br/>"
-							+ "[npc.She] now [npc.has] <b>"+(obedience>0?"+":"")+Units.round(obedience, 1)+"</b> [style.boldObedience(obedience)],"
-									+ " and feel <b style='color:"+this.getObedience().getColour().toWebHexString()+";'>"+this.getObedience().getName()+"</b>!"
+							+ "[npc.Name]"+(increment>0?"[style.boldGrow(获得了)]":"[style.boldShrink(失去了)]")+"<b>"+Math.abs(increment)+"</b>[style.boldObedience(服从)]！<br/>"
+							+ "[npc.She]现在拥有<b>"+(obedience>0?"+":"")+Units.round(obedience, 1)+"</b>[style.boldObedience(服从)]，"
+									+ "表现得<b style='color:"+this.getObedience().getColour().toWebHexString()+";'>"+this.getObedience().getName()+"</b>！"
 						+ "</p>");
 			
 		} else {
 			return UtilText.parse(this,
 					"<p style='text-align:center'>"
-							+ "[npc.Name] "+(increment>0?"[style.boldGrow(gains)]":"[style.boldShrink(loses)]")+" <b>"+Math.abs(increment)+"</b> [style.boldObedience(obedience)]!<br/>"
-							+ "[npc.She] now [npc.has] <b>"+(obedience>0?"+":"")+Units.round(obedience, 1)+"</b> [style.boldObedience(obedience)].<br/>"
+							+ "[npc.Name]"+(increment>0?"[style.boldGrow(获得了)]":"[style.boldShrink(失去了)]")+"<b>"+Math.abs(increment)+"</b>[style.boldObedience(服从)]！<br/>"
+							+ "[npc.She]现在拥有<b>"+(obedience>0?"+":"")+Units.round(obedience, 1)+"</b>[style.boldObedience(服从)]。<br/>"
 							+ ObedienceLevel.getDescription(this, ObedienceLevel.getObedienceLevelFromValue(obedience), true, false)
 						+ "</p>"
 						+ (teacherPerkGain
 							?"<p style='text-align:center'>"
-								+ UtilText.parse(this.getOwner(), "<i>Obedience gain was [style.colourExcellent(tripled)], as [npc.nameHas] the '"+Perk.JOB_TEACHER.getName(this.getOwner())+"' trait.</i>")
+								+ UtilText.parse(this.getOwner(), "<i>服从获取增加至[style.colourExcellent(三倍)]，因为[npc.nameHas]拥有“"+Perk.JOB_TEACHER.getName(this.getOwner())+"”特性。</i>")
 							+ "</p>"
 							:""));
 		}
@@ -5521,14 +5521,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
         if(this.isDoll()) {
 			return UtilText.parse(this,
 					"<p style='text-align:center'>"
-						+ "[style.colourDisabled(As a sex doll, [npc.name] cannot gain or lose affection towards anyone...)]"
+						+ "[style.colourDisabled(作为性爱玩偶，[npc.Name]无法获得或失去好感，无论对谁……)]"
 					+ "</p>");
 		}
 		setAffection(character.getId(), affection);
 		
 		return UtilText.parse(this, character,
 				"<p style='text-align:center'>"
-					+ "[npc.Name] now [npc.has] <b>"+(affection>0?"+":"")+Units.round(affection, 1)+"</b> [style.boldAffection(affection)] towards [npc2.name]."
+					+ "对于[npc2.name]，[npc.Name]现在拥有<b>"+(affection>0?"+":"")+Units.round(affection, 1)+"</b>[style.boldAffection(好感)]。"
 					+ "<br/>"
 					+ AffectionLevel.getDescription(this, character, true)
 				+ "</p>");
@@ -5554,7 +5554,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.isDoll()) {
 			return UtilText.parse(this,
 					"<p style='text-align:center'>"
-						+ "[style.colourDisabled(As a sex doll, [npc.name] cannot gain or lose affection towards anyone...)]"
+						+ "[style.colourDisabled(作为性爱玩偶，[npc.Name]无法获得或失去好感，无论对谁……)]"
 					+ "</p>");
 		}
 		setAffection(character, getAffection(character) + affectionIncrement);
@@ -5562,7 +5562,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		return UtilText.parse(this, character,
 				"<p style='text-align:center'>"
 					+ (affectionChangeDescription!=null && !affectionChangeDescription.isEmpty()?"<i>"+affectionChangeDescription+"</i><br/>":"")
-					+ "[npc.Name] "+(affectionIncrement>0?"[style.boldGood(gains)]":"[style.boldBad(loses)]")+" <b>"+Math.abs(affectionIncrement)+"</b> [style.boldAffection(affection)] towards [npc2.name]!<br/>"
+					+ "对于[npc2.name]，[npc.Name]"+(affectionIncrement>0?"[style.boldGood(获得了)]":"[style.boldBad(失去了)]")+"<b>"+Math.abs(affectionIncrement)+"</b>[style.boldAffection(好感)]！<br/>"
 					+ AffectionLevel.getDescription(this, character, true)
 				+ "</p>");
 	}
@@ -6174,11 +6174,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				&& this.getHistory().isAtWork(Main.game.getHourOfDay())) {
 			return UtilText.parse(this,
 					"<p>"
-						+ "[npc.speech(Ah! I need to get to work! Sorry, [pc.name], I'll see you later! Bye!)] [npc.name] suddenly says, before turning and running off..."
+						+ "[npc.speech(啊！我得去工作了！抱歉，[pc.name]，待会儿再见吧！拜拜！)][npc.name]忽然说道，接着就转身跑走了……"
 					+ "</p>");
 		}
 		
-		return this.getName(true)+" leaves your party for unknown reasons.";
+		return this.getName(true)+"不知因为什么原因离开了你的队伍。";
 	}
 	
 	public final boolean isCompanionAvailableForSex(boolean companionIsSub) {
@@ -6202,7 +6202,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.getLocationPlace().getPlaceType().isSexBlockedFromCharacterPresent()) {
 			for(GameCharacter character : Main.game.getCharactersPresent()) {
 				if(!character.isSlave() && !(character.isElemental()) && (this.getPartyLeader()==null || !this.getPartyLeader().getCompanions().contains(character))) {
-					return new Value<>(false, UtilText.parse(character, "You can't have sex in front of [npc.name]!"));
+					return new Value<>(false, UtilText.parse(character, "你不能在[npc.name]面前做爱！"));
 				}
 			}
 		}
@@ -6215,23 +6215,23 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public String getCompanionSexRejectionReason(boolean companionIsSub) {
 		if(Main.game.getSavedDialogueNode() != null && !Main.game.getSavedDialogueNode().equals(Main.game.getPlayerCell().getDialogue(false))) {
-			return "You're in the middle of something right now!";
+			return "你正在做其他事情！";
 		}
 		if(this.isElemental()) {
 			switch(this.getBodyMaterial()) {
 				case AIR:
 					if(((Elemental)this).getSummoner().hasSpellUpgrade(SpellUpgrade.ELEMENTAL_AIR_3A) && companionIsSub) {
-						return UtilText.parse(this, "As you have sworn subservience to the school of Air, while [npc.name] is bound in this form, [npc.she] refuses to let you act as the dominant partner in sex!");
+						return UtilText.parse(this, "由于向大气学派宣誓了效忠，而[npc.name]则是以该形式契约，所以[npc.she]拒绝你在性爱中占支配地位！");
 					}
 					break;
 				case ARCANE:
 					if(((Elemental)this).getSummoner().hasSpellUpgrade(SpellUpgrade.ELEMENTAL_ARCANE_3A) && companionIsSub) {
-						return UtilText.parse(this, "As you have sworn subservience to the school of Arcane, while [npc.name] is bound in this form, [npc.she] refuses to let you act as the dominant partner in sex!");
+						return UtilText.parse(this, "由于向奥术学派宣誓了效忠，而[npc.name]则是以该形式契约，所以[npc.she]拒绝你在性爱中占支配地位！");
 					}
 					break;
 				case FIRE:
 					if(((Elemental)this).getSummoner().hasSpellUpgrade(SpellUpgrade.ELEMENTAL_FIRE_3A) && companionIsSub) {
-						return UtilText.parse(this, "As you have sworn subservience to the school of Fire, while [npc.name] is bound in this form, [npc.she] refuses to let you act as the dominant partner in sex!");
+						return UtilText.parse(this, "由于向烈火学派宣誓了效忠，而[npc.name]则是以该形式契约，所以[npc.she]拒绝你在性爱中占支配地位！");
 					}
 					break;
 				case FLESH:
@@ -6241,13 +6241,13 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				case RUBBER:
 				case STONE:
 					if(((Elemental)this).getSummoner().hasSpellUpgrade(SpellUpgrade.ELEMENTAL_EARTH_3A) && companionIsSub) {
-						return UtilText.parse(this, "As you have sworn subservience to the school of Earth, while [npc.name] is bound in this form, [npc.she] refuses to let you act as the dominant partner in sex!");
+						return UtilText.parse(this, "由于向大地学派宣誓了效忠，而[npc.name]则是以该形式契约，所以[npc.she]拒绝你在性爱中占支配地位！");
 					}
 					break;
 				case ICE:
 				case WATER:
 					if(((Elemental)this).getSummoner().hasSpellUpgrade(SpellUpgrade.ELEMENTAL_WATER_3A) && companionIsSub) {
-						return UtilText.parse(this, "As you have sworn subservience to the school of Water, while [npc.name] is bound in this form, [npc.she] refuses to let you act as the dominant partner in sex!");
+						return UtilText.parse(this, "由于向激流学派宣誓了效忠，而[npc.name]则是以该形式契约，所以[npc.she]拒绝你在性爱中占支配地位！");
 					}
 					break;
 			}
@@ -6255,10 +6255,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(!this.isSlave()) {
 			if(!this.isAttractedTo(getPartyLeader())) {
-				return UtilText.parse(this, getPartyLeader(), "[npc.Name] doesn't want to have sex with [npc2.name]!");
+				return UtilText.parse(this, getPartyLeader(), "[npc.Name]不想和[npc2.name]做爱！");
 			}
 			if(!this.getFetishDesire(Fetish.FETISH_EXHIBITIONIST).isPositive() && this.getLocationPlace().getPlaceType().isPopulated()) {
-				return UtilText.parse(this, "As [npc.she] isn't an exhibitionist, [npc.name] is not going to agree to have sex in public!");
+				return UtilText.parse(this, "鉴于[npc.she]不是一个暴露狂，[npc.name]是不会同意在公共场所做爱的！");
 			}
 		}
 		
@@ -6624,7 +6624,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_2)) {
 			return UtilText.parse(this, 
 					"<p style='text-align:center; padding:0; margin:0;'>"
-							+ "As [npc.nameIsFull] a sex doll, [npc.she] cannot gain experience..."
+							+ "由于[npc.nameIsFull]是一个性爱玩偶，[npc.she]无法获得任何经验……"
 						+"</p>");
 		}
 		
@@ -6638,16 +6638,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		experience += xpIncrement;
 
 		if(Main.game.isStarted() && this.isPlayer()) {
-			Main.game.addEvent(new EventLogEntry("[style.colourGood(Gained)]", increment+" [style.colourExperience(experience)]"), false);
+			Main.game.addEvent(new EventLogEntry("[style.colourGood(已获得)]", increment+"[style.colourExperience(经验值)]"), false);
 		}
 		
 		String levelUpDescription = "";
 		if (experience >= getExperienceNeededForNextLevel()) {
 			levelUpDescription = levelUp();
 			if(Main.game.isStarted() && this.isPlayer()) {
-				Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Level up)]", "To level "+this.getLevel()), false);
+				Main.game.addEvent(new EventLogEntry("[style.colourExcellent(升级)]", "等级"+this.getLevel()), false);
 				if(LEVEL_CAP == this.getLevel()) {
-					Main.game.addEvent(new EventLogEntry("[style.colourExcellent(Maximum level)]", "You have reached the level cap!"), false);
+					Main.game.addEvent(new EventLogEntry("[style.colourExcellent(最高等级)]", "你已经到达等级上限！"), false);
 				}
 			}
 		}
@@ -6657,9 +6657,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		return UtilText.parse(this, 
 				"<p style='text-align:center; padding:0; margin:0;'>"
-					+ "[npc.Name] [style.italicsGood(gained)] [style.boldExperience("+xpIncrement+" xp)]!"
+					+ "[npc.Name][style.italicsGood(获得了)][style.boldExperience("+xpIncrement+"经验)]！"
 					+(withExtraModifiers && this.hasTrait(Perk.ORGASMIC_LEVEL_DRAIN, true)
-							?"<br/>[style.italicsBad(Experience gain was reduced by 95% due to having the '"+Perk.ORGASMIC_LEVEL_DRAIN.getName(this)+"' trait!)]"
+							?"<br/>[style.italicsBad(经验获取降低95%，原因是拥有“"+Perk.ORGASMIC_LEVEL_DRAIN.getName(this)+"”特性！)]"
 							:"")
 				+"</p>")
 				+ levelUpDescription;
@@ -6675,7 +6675,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("<p style='text-align:center; padding:0; margin:0;'>");
-			sb.append("[npc.Name] [style.italicsTerrible(lost)] [style.italicsExperience("+levels+" level"+(levels==1?"":"s")+")]!");
+			sb.append("[npc.Name][style.italicsTerrible(失去了)][style.italicsExperience("+levels+"等级)]！");
 			// Get list of perks which are at the end of the tree's branches, and remove a random one, preferring to remove non-traits first
 			while(this.getPerkPoints()<0) {
 				Map<Integer, Set<AbstractPerk>> removalPerks = new HashMap<>();
@@ -6700,14 +6700,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					int rndKey = Util.randomItemFrom(removalPerks.keySet());
 					AbstractPerk rndPerk = Util.randomItemFrom(removalPerks.get(rndKey));
 					this.removePerk(rndKey, rndPerk);
-					sb.append("<br/>[npc.She] [style.italicsTerrible(lost)] [npc.her] '<i style='color:"+rndPerk.getColour().toWebHexString()+";'>"+rndPerk.getName(this)+"</i>' [style.italicsPerk(perk)]!");
+					sb.append("<br/>[npc.She][style.italicsTerrible(失去了)]“<i style='color:"+rndPerk.getColour().toWebHexString()+";'>"+rndPerk.getName(this)+"</i>”[style.italicsPerk(天赋)]！");
 					
 				} else if(!removalTraits.isEmpty()) {
 					int rndKey = Util.randomItemFrom(removalTraits.keySet());
 					AbstractPerk rndPerk = Util.randomItemFrom(removalTraits.get(rndKey));
 					this.removeTrait(rndPerk);
 					this.removePerk(rndKey, rndPerk);
-					sb.append("<br/>[npc.She] [style.italicsTerrible(lost)] [npc.her] '<i style='color:"+rndPerk.getColour().toWebHexString()+";'>"+rndPerk.getName(this)+"</i>' [style.italicsTrait(trait)]!");
+					sb.append("<br/>[npc.she][style.italicsTerrible(失去了)]“<i style='color:"+rndPerk.getColour().toWebHexString()+";'>"+rndPerk.getName(this)+"</i>”[style.italicsTrait(特性)]！");
 					
 				} else {
 					break;
@@ -6738,7 +6738,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		setMana(getAttributeValue(Attribute.MANA_MAXIMUM) * manaPercentage);
 
 		sb.append("<p style='text-align:center; padding:0; margin:0;'>");
-			sb.append("[npc.Name] [style.italicsGood(gained)] [style.italicsExperience("+levelsGained+" level"+(levelsGained==1?"":"s")+")]!");
+			sb.append("[npc.Name][style.italicsGood(获得了)][style.italicsExperience("+levelsGained+"级)]！");
 			if(isPlayer()) {
 				Main.getProperties().setValue(PropertyValue.levelUpHightlight, true);
 				
@@ -6748,10 +6748,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				// NPCs who are not 'controlled' by the player automatically level up their perks:
 				Set<AbstractPerk> perksAdded = PerkManager.initialisePerks(this, true);
 				for(AbstractPerk perk : perksAdded) {
-					sb.append("<br/>[npc.She] [style.italicsExcellent(gained)] the '<i style='color:"+perk.getColour().toWebHexString()+";'>"+perk.getName(this)+"</i>'"
+					sb.append("<br/>[npc.She][style.italicsExcellent(获得了)]“<i style='color:"+perk.getColour().toWebHexString()+";'>"+perk.getName(this)+"</i>”"
 							+ (perk.isEquippableTrait()
-									?" [style.italicsTrait(trait)]!"
-									:" [style.italicsPerk(perk)]!"));
+									?"[style.italicsTrait(特性)]！"
+									:"[style.italicsPerk(天赋)]！"));
 				}
 			}
 			
@@ -6977,20 +6977,20 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if (value > 0) {
 			return UtilText.parse(this,
 					"<p style='text-align:center;'>"
-						+ "[npc.Name] [npc.verb(gain)] <b>" + value + "</b> <b style='color:" + att.getColour().toWebHexString() + ";'>" + att.getName() + "</b>!"
+						+ "[npc.Name]获得了<b>" + value + "</b><b style='color:" + att.getColour().toWebHexString() + ";'>" + att.getName() + "</b>！"
 					+ "</p>");
 
 		} else if (value < 0) {
 			return UtilText.parse(this,
 					"<p style='text-align:center;'>"
-						+ "[npc.Name] [npc.verb(lose)] <b>" + value + "</b> <b style='color:" + att.getColour().toWebHexString() + ";'>" + att.getName() + "</b>!"
+						+ "[npc.Name]失去了<b>" + value + "</b><b style='color:" + att.getColour().toWebHexString() + ";'>" + att.getName() + "</b>！"
 					+ "</p>");
 			
 
 		} else {
 			return UtilText.parse(this,
 					"<p style='text-align:center;'>"
-						+ "[npc.NamePos] <b style='color:" + att.getColour().toWebHexString() + ";'>" + att.getName() + "</b> remains unchanged..."
+						+ "[npc.NamePos]的<b style='color:" + att.getColour().toWebHexString() + ";'>" + att.getName() + "</b>没有变化……"
 					+ "</p>");
 		}
 	}
@@ -7087,27 +7087,27 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(potionAttributes.get(att)==null) {
 			return "<p style='text-align:center;'>"
 					+ UtilText.parse(this,
-						"[npc.NameIsFull] no longer experiencing a modifier to [npc.her] <b style='color:"+att.getColour().toWebHexString()+";'>"+att.getName()+"</b> from any potion effects!")
+						"[npc.NameIsFull]不再从药剂效果中获得对于<b style='color:"+att.getColour().toWebHexString()+";'>"+att.getName()+"</b>的调整！")
 				+ "</p>";
 			
 		} else if(potionAttributes.get(att)<0) {
 			return "<p style='text-align:center;'>"
 						+ UtilText.parse(this,
-							"[npc.Name] now [npc.has] [style.boldBad("+potionAttributes.get(att)+")] <b style='color:"+att.getColour().toWebHexString()+";'>"+att.getName()+"</b>"
+							"[npc.Name]现在拥有[style.boldBad("+potionAttributes.get(att)+")]<b style='color:"+att.getColour().toWebHexString()+";'>"+att.getName()+"</b>"
 							+(this.hasTrait(Perk.JOB_CHEF, true)
-									?" ([style.boldExcellent(doubled)] from <b style='color:"+Perk.JOB_CHEF.getColour().toWebHexString()+";'>"+Perk.JOB_CHEF.getName(this)+"</b>)"
+									?"(由于<b style='color:"+Perk.JOB_CHEF.getColour().toWebHexString()+";'>"+Perk.JOB_CHEF.getName(this)+"</b>而效果[style.boldExcellent(翻倍)])"
 									:"")
-							+" for as long as [npc.she] can maintain [npc.her] potion effects!")
+							+"持续至药剂效果消失为止！")
 					+ "</p>";
 			
 		} else {
 			return "<p style='text-align:center;'>"
 						+ UtilText.parse(this,
-							"[npc.Name] now [npc.has] [style.boldGood(+"+potionAttributes.get(att)+")] <b style='color:"+att.getColour().toWebHexString()+";'>"+att.getName()+"</b>"
+							"[npc.Name]现在拥有[style.boldGood(+"+potionAttributes.get(att)+")]<b style='color:"+att.getColour().toWebHexString()+";'>"+att.getName()+"</b>"
 							+(this.hasTrait(Perk.JOB_CHEF, true)
-									?" ([style.boldExcellent(doubled)] from <b style='color:"+Perk.JOB_CHEF.getColour().toWebHexString()+";'>"+Perk.JOB_CHEF.getName(this)+"</b>)"
+									?"(由于<b style='color:"+Perk.JOB_CHEF.getColour().toWebHexString()+";'>"+Perk.JOB_CHEF.getName(this)+"</b>而效果[style.boldExcellent(翻倍)])"
 									:"")
-							+" for as long as [npc.she] can maintain [npc.her] potion effects!")
+							+"持续至药剂效果消失为止！")
 					+ "</p>";
 		}
 	}
@@ -7379,7 +7379,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				return "";
 			}
 			return "<p style='text-align:center;'><b>"
-						+ UtilText.parse(this, "[npc.Name] [style.colourGood(gained)] the special perk, [style.colourExcellent("+perk.getName(this)+")]!")
+						+ UtilText.parse(this, "[npc.Name][style.colourGood(获得了)]该特殊天赋，[style.colourExcellent("+perk.getName(this)+")]！")
 					+ "</b></p>";
 		}
 		return "";
@@ -7477,12 +7477,12 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				return "";
 			}
 			return "<p style='text-align:center;'>"
-						+ UtilText.parse(this, "[style.colourDisabled(Nothing happens, as [npc.name] already [npc.has] the "+fetish.getName(this)+" fetish...)]")
+						+ UtilText.parse(this, "[style.colourDisabled([npc.Name]已经拥有了"+fetish.getName(this)+"性癖，所以无事发生……)]")
 					+"</p>";
 		}
 		if(this.isDoll()) {
 			return "<p style='text-align:center;'>"
-					+ UtilText.parse(this, "[style.colourDisabled(As a sex doll, [npc.nameIsFull] unable to gain fetishes...)]")
+					+ UtilText.parse(this, "[style.colourDisabled(作为性爱玩偶，[npc.nameIsFull]无法获得性癖……)]")
 				+"</p>";
 		}
 		
@@ -7495,10 +7495,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		return "<p style='text-align:center;'>"
 					+ (shortDescription
 						?UtilText.parse(this,
-							"[npc.NameHasFull] [style.boldGood(gained)] the [style.boldFetish("+fetish.getName(this)+" fetish)]!")
+							"[npc.NameHasFull][style.boldGood(获得了)][style.boldFetish("+fetish.getName(this)+"性癖)]！")
 						:UtilText.parse(this,
-							"A staggering wave of arcane energy crashes over [npc.name], the sheer strength of which almost causes [npc.herHim] to black out."
-									+ " As [npc.she] [npc.verb(stagger)] back from the brink of unconsciousness, [npc.she] [npc.verb(discover)] that [npc.sheHasFull] [style.boldGood(gained)] the [style.boldFetish("+fetish.getName(this)+" fetish)]!"))
+							"一股巨大的奥术能量向[npc.name]袭去，那汹涌的力量让[npc.herHim]差点昏死过去。"
+									+ "当[npc.she]从昏迷边缘勉强恢复过来时，[npc.she]发现自己[style.boldGood(获得了)][style.boldFetish("+fetish.getName(this)+"性癖)]！"))
 				+"</p>";
 	}
 	
@@ -7525,7 +7525,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				return "";
 			}
 			return "<p style='text-align:center;'>"
-						+UtilText.parse(this, "[style.colourDisabled(Nothing happens, as [npc.name] already [npc.verb(lack)] the "+fetish.getName(this)+" fetish...)]")
+						+UtilText.parse(this, "[style.colourDisabled([npc.Name]已经不再拥有"+fetish.getName(this)+"性癖，所以无事发生……)]")
 					+"</p>";
 		}
 		
@@ -7539,10 +7539,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		return "<p style='text-align:center;'>"
 					+ (shortDescription
 						?UtilText.parse(this,
-								"[npc.NameHasFull] [style.boldBad(lost)] [npc.her] [style.boldFetish("+fetish.getName(this)+" fetish)]!")
+								"[npc.NameHasFull][style.boldBad(失去了)][style.boldFetish("+fetish.getName(this)+"性癖)]！")
 						:UtilText.parse(this,
-							"A staggering wave of arcane energy crashes over [npc.name], the sheer strength of which almost causes [npc.herHim] to black out."
-							+ " As [npc.she] [npc.verb(stagger)] back from the brink of unconsciousness, [npc.she] [npc.verb(discover)] that [npc.sheHasFull] [style.boldBad(lost)] [npc.her] [style.boldFetish("+fetish.getName(this)+" fetish)]!"))
+							"一股巨大的奥术能量向[npc.name]袭去，那汹涌的力量让[npc.herHim]差点昏死过去。"
+							+ "当[npc.she]从昏迷边缘勉强恢复过来时，[npc.she]发现自己[style.boldBad(失去了)][style.boldFetish("+fetish.getName(this)+"性癖)]！"))
 				+"</p>";
 	}
 	
@@ -7618,22 +7618,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			}
 			if(this.isDoll()) {
 				return "<p style='text-align:center;'>"
-							+ UtilText.parse(this, "[style.colourDisabled(As a sex doll, [npc.nameIsFull] unable to have an opinion on any fetish...)]")
+							+ UtilText.parse(this, "[style.colourDisabled(作为性爱玩偶，[npc.nameIsFull]无法对任何性癖设置……)]")
 						+"</p>";
 			}
 			if(this.hasFetish(fetish)) {
 				return "<p style='text-align:center;'>"
-							+ UtilText.parse(this, "[style.colourDisabled(As [npc.she] [npc.has] the "+fetish.getName(this)+" fetish, [npc.her] love of it can't decrease...)]")
+							+ UtilText.parse(this, "[style.colourDisabled(由于[npc.she]拥有"+fetish.getName(this)+"性癖，[npc.her]对此的热爱不会减弱……)]")
 						+"</p>";
 			}
 			return "<p style='text-align:center;'>"
 					+ (shortDescription
-							?UtilText.parse(this, "[npc.Name] now <b style='color:"+desire.getColour().toWebHexString()+";'>"+(this.isPlayer()?desire.getNameAsPlayerVerb():desire.getNameAsVerb())
-									+"</b> [style.boldLust("+fetish.getShortDescriptor(this)+")]!")
-							:UtilText.parse(this, "A warm wave of arcane energy rises up within [npc.name], and as [npc.she] [npc.verb(feel)] its influential power seeping into [npc.her] mind,"
-								+ " [npc.she] [npc.verb(realise)] that [npc.she] now <b style='color:"+desire.getColour().toWebHexString()+";'>"+
+							?UtilText.parse(this, "[npc.Name]现在<b style='color:"+desire.getColour().toWebHexString()+";'>"+(this.isPlayer()?desire.getNameAsPlayerVerb():desire.getNameAsVerb())
+									+"</b>[style.boldLust("+fetish.getShortDescriptor(this)+")]！")
+							:UtilText.parse(this, "一股奥术能量的暖流在[npc.name]体内升起，[npc.she]觉得自己的心智受到了渗透，"
+								+ "[npc.she]意识到自己现在<b style='color:"+desire.getColour().toWebHexString()+";'>"+
 									(this.isPlayer()?desire.getNameAsPlayerVerb():desire.getNameAsVerb())
-								+"</b> [style.boldLust("+fetish.getShortDescriptor(this)+")]!"))
+								+"</b>[style.boldLust("+fetish.getShortDescriptor(this)+")]！"))
 				+"</p>";
 			
 		} else {
@@ -7641,7 +7641,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				return "";
 			}
 			return "<p style='text-align:center;'>"
-						+UtilText.parse(this, "[style.colourDisabled(Nothing happens, as [npc.she] already "+(this.isPlayer()?desire.getNameAsPlayerVerb():desire.getNameAsVerb())+" "+fetish.getShortDescriptor(this)+"...)]")
+						+UtilText.parse(this, "[style.colourDisabled(由于[npc.she]已经"+(this.isPlayer()?desire.getNameAsPlayerVerb():desire.getNameAsVerb())+fetish.getShortDescriptor(this)+"，所以无事发生……)]")
 					+"</p>";
 		}
 	}
@@ -7794,7 +7794,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				String tattooEffectDescription = ie.applyEffect(this, this, secondsPassed);
 				if (!tattooEffectDescription.isEmpty()) {
 					addStatusEffectDescription(StatusEffect.CLOTHING_EFFECT,
-							"<p style='margin:0 auto;padding:0 auto;'><b>"+ Util.capitaliseSentence(tattoo.getName())+" tattoo:</b></p>"
+							"<p style='margin:0 auto;padding:0 auto;'><b>"+ Util.capitaliseSentence(tattoo.getName())+"纹身:</b></p>"
 							+ tattooEffectDescription);
 				}
 			}
@@ -8005,7 +8005,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		statusEffectDescriptions.putIfAbsent(seconds, new HashMap<>());
 		statusEffectDescriptions.get(seconds).putIfAbsent(statusEffect, "");
 		statusEffectDescriptions.get(seconds).put(statusEffect, statusEffectDescriptions.get(seconds).get(statusEffect)+description);
-		Main.game.addEvent(new EventLogEntry("[style.colourStatusEffect(Status effect)]", statusEffect==null?"Miscellaneous Effects":Util.capitaliseSentence(statusEffect.getName(this))), false);
+		Main.game.addEvent(new EventLogEntry("[style.colourStatusEffect(状态效果)]", statusEffect==null?"杂项效果":Util.capitaliseSentence(statusEffect.getName(this))), false);
 	}
 
 	public void removeStatusEffectDescription(AbstractStatusEffect statusEffect) {
@@ -8079,9 +8079,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		return "<p>"
 				+ UtilText.parse(this,
 						UtilText.returnStringAtRandom(
-						"Letting out a wild scream, [npc.name] thrusts [npc.her] arm into mid air as [npc.she] casts a spell!",
-						"Spitting curses, [npc.name] locks [npc.her] eyes onto yours, before casting a spell!",
-						"With an angry curse, [npc.name] steps forwards and casts a spell!"))
+						"[npc.Name]高声急呼，手臂高举到半空，释放了法术！",
+						"[npc.Name]口吐咒言，目不转睛地盯着你的眼睛，释放了法术！",
+						"[npc.Name]怒骂一声，冲上前来释放了法术！"))
 			+ "</p>";
 	}
 	
@@ -8091,7 +8091,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		// LEGACY COMBAT SUPPORT
 		// TODO: Remove when legacy support is unnecessary
 		if(target == null) {
-			target = CombatMove.getCombatMoveFromId("tease").getPreferredTarget(this, Main.combat.getEnemies(this), Main.combat.getAllies(this));
+			target = CombatMove.getCombatMoveFromId("挑逗").getPreferredTarget(this, Main.combat.getEnemies(this), Main.combat.getAllies(this));
 		}
 
 		if(this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION)
@@ -8101,62 +8101,62 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(this.isFeminine()) {
 					return UtilText.parse(this, target,
 							UtilText.returnStringAtRandom(
-									"[npc.Name] puts on a smouldering look, and as her eyes meet yours, you hear an extremely lewd moan echoing around in your head, [npc.thought(~Aaah!~ "
+									"[npc.Name]露出一副积欲已久的表情，当你们四目相对时，你听见一声格外淫荡的呻吟，在脑内回响，[npc.thought(~啊啊啊！~"
 											+(this.hasVagina()
-													?"You're making me so wet!"
+													?"你让我湿透了！"
 													:this.hasPenis()
-														?"You're getting me so hard!"
-														:"You're turning me on so much!")+")]",
-									"[npc.Name] locks her big, innocent-looking eyes with yours, and as she pouts, you hear an echoing moan deep within your mind, [npc.thought("+
+														?"你让我硬得不行啊！"
+														:"你让我好兴奋啊！")+")]",
+									"[npc.Name]嘟起嘴，用无辜的大眼睛紧盯着你看，你忽然感到意识深处响起回荡的呻吟声，[npc.thought("+
 											(this.hasVagina()
-													?"~Mmm!~ Fuck me! ~Aaa!~ My pussy's wet and ready for you!"
+													?"~嗯嗯嗯！~操我啊！~啊啊！~我的小穴早就为你湿好了！"
 													:this.hasPenis()
-														?"~Mmm!~ I can't wait to fuck you! ~Aaa!~ You're going to love my cock!"
-														:"~Mmm!~ Fuck me! ~Aaa!~ I need you so badly!")+")]",
+														?"~唔姆！~ 我等不及要操你了！你肯定会喜欢我的肉棒的！"
+														:"~嗯嗯嗯！~操我啊！~啊啊！~我真的很想要你！")+")]",
 									(this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION)
 											|| this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_PROJECTED_TOUCH)
-											?"[npc.Name] pouts innocently at you, before blowing you a wet kiss. As she straightens back up, you feel a ghostly pair of wet lips press against your cheek."
+											?"[npc.Name]无辜地向你嘟起了嘴，接着便远远地送上了一记湿吻。随后她挺直身子，你却感到一对湿润的嘴唇的感觉鬼使神差地贴在了脸颊上。"
 											:"")));
 				} else {
 					return UtilText.parse(this, target,
 							UtilText.returnStringAtRandom(
-									"[npc.Name] puts on a confident look, and as his eyes meet yours, you hear an extremely lewd groan echoing around in your head, [npc.thought(~Mmm!~ "
+									"[npc.Name]换上了一副自信的表情，四目相对时，你忽然听到一股极其淫荡的呜咽声在脑中回响，[npc.thought(~嗯嗯嗯！~"
 											+(this.hasVagina()
-													?"You're making me so wet!"
+													?"你让我湿透了！"
 													:this.hasPenis()
-														?"You're getting me so hard!"
-														:"You're turning me on so much!")+")]",
-									"[npc.Name] locks his eyes with yours, and as he throws you a charming smile, you hear an echoing groan deep within your mind, [npc.thought("+
+														?"你让我硬得不行啊！"
+														:"你让我好兴奋啊！")+")]",
+									"[npc.Name]目不转睛地盯着你的眼睛，接着投来一抹魅惑的微笑，你的意识深处回响起一阵呜咽，[npc.thought("+
 											(this.hasVagina()
-													?"~Mmm!~ Fuck me! ~Aaa!~ My pussy's wet and ready for you!"
+													?"~嗯嗯嗯！~操我啊！~啊啊！~我的小穴早就为你湿好了！"
 													:this.hasPenis()
-														?"~Mmm!~ I can't wait to fuck you! You're going to love my cock!"
-														:"~Mmm!~ I can't wait to have some fun with you!")+")]",
+														?"~唔姆！~ 我等不及要操你了！你肯定会喜欢我的肉棒的！"
+														:"~嗯嗯嗯！~ 我等不及要和你爽一爽了！")+")]",
 									(this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION)
 											|| this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_PROJECTED_TOUCH)
-											?"[npc.Name] throws you a charming smile, before winking at you and striking a heroic pose. As he straightens back up, you feel a ghostly pair of arms pulling you into a strong, confident embrace."
+											?"[npc.Name]向你投来迷人的微笑，然后眨眨眼睛，摆出英雄一般的姿势。他重新挺直腰板，你感觉到一双鬼魅般的手臂将你拉入有力而自信的怀抱。"
 											:"")));
 				}
 			} else {
 				if(this.isFeminine()) {
 					return UtilText.parse(this, target,
 							UtilText.returnStringAtRandom(
-									"[npc.Name] puts on a smouldering look, before projecting a series of lewd moans and dirty suggestions directly into [npc2.namePos] mind!",
-									"[npc.Name] locks her big, innocent-looking eyes onto [npc2.nameHers], and as she pouts, [npc.she] projects a lewd moan directly into [npc2.her] mind!",
+									"[npc.Name]摆出一副饥渴骚气的表情，向[npc2.namePos]脑中投射了一连串淫荡的呻吟和下流的建议！",
+									"[npc.Name]天真无邪的眼睛盯着[npc2.nameHers]，噘噘嘴，[npc.she]投射了一连串淫荡的呻吟到[npc2.her]的脑子里！",
 									(this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION)
 											|| this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_PROJECTED_TOUCH)
-											?"[npc.Name] pouts innocently at [npc2.name], before blowing [npc2.herHim] a wet kiss."
-													+ " As she straightens back up, [npc2.name] feels a ghostly pair of wet lips press against [npc2.her] cheek."
+											?"[npc.Name]天真地对着[npc2.name]撅起嘴，然后给了[npc2.herHim]一个湿吻。"
+													+ "当她重新直起身子时，[npc2.name]感觉到一双湿润的嘴唇幽幽地贴在了[npc2.her]的脸颊上。"
 											:"")));
 				} else {
 					return UtilText.parse(this, target,
 							UtilText.returnStringAtRandom(
-									"[npc.Name] puts on a confident look, before projecting a series of lewd groans and dirty suggestions directly into [npc2.namePos] mind!",
-									"[npc.Name] locks his eyes onto [npc2.nameHers], and as he puts on a charming smile, [npc.she] projects a series of lewd suggestions directly into [npc2.her] mind!",
+									"[npc.Name]摆出一副自信的表情，向[npc2.namePos]脑中投射了一连串淫荡的呻吟和下流的建议！",
+									"[npc.Name]将目光锁定在[npc2.nameHers]身上，当他露出迷人的微笑时，[npc.she]直接向[npc2.her]的脑海中投射出一系列淫秽的建议！",
 									(this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_POWER_OF_SUGGESTION)
 											|| this.hasStatusEffect(StatusEffect.TELEPATHIC_COMMUNICATION_PROJECTED_TOUCH)
-											?"[npc.Name] throws [npc2.name] a charming smile, before winking at [npc2.herHim] and striking a heroic pose."
-													+ " As he straightens back up, [npc2.name] feels a ghostly pair of arms pulling [npc2.herHim] into a strong, confident embrace."
+											?"[npc.Name]向[npc2.name]露出迷人的微笑，然后向[npc2.herHim]眨眨眼睛，摆出英雄一般的姿势。"
+													+ "当他重新站直时，[npc2.name]感觉到一双鬼魅般的手臂将[npc2.herHim]拉入有力而自信的怀抱。"
 											:"")));
 				}
 			}
@@ -8166,52 +8166,52 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(target.isPlayer()) {
 				description = UtilText.parse(this, target,
 						UtilText.returnStringAtRandom(
-						"[npc.Name] erotically runs [npc.her] hands down [npc.her] legs and bends forwards as [npc.she] teases you, "
-								+ "[npc.speech(Come on baby, I can show you a good time!)]",
-						"[npc.Name] pushes out [npc.her] chest and lets out an erotic moan, "
-								+ "[npc.speech(Come play with me!)]",
-						"[npc.Name] slowly runs [npc.her] hands down between [npc.her] thighs, "
-								+ "[npc.speech(You know you want it!)]",
-						"[npc.Name] blows a kiss at you, before winking suggestively in your direction.",
-						"Biting [npc.her] lip and putting on [npc.her] most smouldering look, [npc.name] runs [npc.her] hands slowly up [npc.her] inner thighs.",
-						"[npc.Name] gives you [npc.her] most innocent look and blows you a kiss.",
-						"Turning around, [npc.name] lets out a playful giggle as [npc.she] gives [npc.her] [npc.ass+] a slap.",
-						"[npc.Name] slowly runs [npc.her] [npc.hands] up the length of [npc.her] body, before pouting at you."));
+						"[npc.Name]开始挑逗你，色情地将[npc.her]的手伸向[npc.her]的腿，并向前弯腰，"
+								+ "[npc.speech(来吧宝贝儿，我可以让你享受一段美好时光！)]",
+						"[npc.Name]挺了挺[npc.her]的胸部，发出色情的呻吟： "
+								+ "[npc.speech(来玩啊~！)]",
+						"[npc.Name]的手慢慢伸向[npc.her]的大腿之间，"
+								+ "[npc.speech(你知道你想要的！)]",
+						"[npc.Name]向你飞吻，然后朝你的方向暗示性地眨了眨眼睛。",
+						"[npc.name]轻咬下唇，显露出积欲已久的表情，手渐渐地向[npc.her]的大腿内侧摸去。",
+						"[npc.name]给你[npc.her]最纯真的眼神，还给了你一个飞吻。",
+						"[npc.name]转过身来，发出俏皮的咯咯笑声，因为[npc.she]给了[npc.her][npc.ass+]一巴掌。",
+						"[npc.Name]用[npc.hands]慢慢地抚摸自己的身体，撅起嘴看着你。"));
 				
 			} else {
 				description = UtilText.parse(this, target,
 						UtilText.returnStringAtRandom(
-						"[npc.Name] blows a kiss at [npc2.name], before winking suggestively in [npc2.her] direction.",
-						"Biting [npc.her] lip and putting on [npc.her] most smouldering look, [npc.name] runs [npc.her] hands slowly up [npc.her] inner thighs.",
-						"As [npc.name] gives [npc2.name] [npc.her] most innocent look, [npc.she] blows [npc2.herHim] a little kiss.",
-						"Turning around, [npc.name] lets out a playful giggle as [npc.she] gives [npc.her] [npc.ass+] a slap.",
-						"[npc.Name] slowly runs [npc.her] [npc.hands] up the length of [npc.her] body, before pouting at [npc2.name]."));
+						"[npc.Name]向[npc2.name]抛了一个飞吻，向[npc2.her]的方向媚眼如丝。",
+						"[npc.name]轻咬下唇，显露出积欲已久的表情，手渐渐地向[npc.her]的大腿内侧摸去。",
+						"[npc.name]向[npc2.name][npc.her]投去最纯真的目光，并向[npc2.herHim]轻轻一吻。",
+						"[npc.name]转过身来，发出俏皮的咯咯笑声，因为[npc.she]给了[npc.her][npc.ass+]一巴掌。",
+						"[npc.Name]慢慢将[npc.her]的[npc.hands]伸到[npc.her]的身体上，然后对[npc2.name]撅起了嘴。"));
 			}
 			
 		} else {
 			if(target.isPlayer()) {
 				description = UtilText.parse(this, target,
 						UtilText.returnStringAtRandom(
-						"[npc.Name] winks at you and flexes [npc.his] muscles, "
-								+ "[npc.speech(My body's aching for your touch!)]",
-						"[npc.Name] strikes a heroic pose before blowing a kiss your way, "
-								+ "[npc.speech(Come on, I can show you a good time!)]",
-						"[npc.Name] grins at you as [npc.he] reaches down and grabs [npc.his] crotch, "
-								+ "[npc.speech(You know you want a taste of this!)]",
-						"[npc.Name] blows a kiss at you, before winking suggestively in your direction.",
-						"Smiling confidently at you, [npc.name] slowly runs [npc.her] hands up [npc.her] inner thighs.",
-						"[npc.Name] gives you [npc.her] most seductive look and blows you a kiss.",
-						"Turning around, [npc.name] lets out a playful laugh as [npc.she] gives [npc.her] [npc.ass+] a slap.",
-						"[npc.Name] tries to look as commanding as possible as [npc.she] smirks playfully at you."));
+						"[npc.Name]向你眨眼睛，并展示[npc.his]的肌肉，"
+								+ "[npc.speech(我的身体正渴望着你的抚摸！)]",
+						"[npc.Name]摆出英雄的姿势，然后向你飞吻，"
+								+ "[npc.speech(来吧，我可以让你享受一段美好时光！)]",
+						"[npc.Name]向你咧嘴一笑，[npc.he]揉了揉自己的裤裆，"
+								+ "[npc.speech(你知道你想尝尝这个！)]",
+						"[npc.Name]向你飞吻，然后朝你的方向暗示性地眨了眨眼睛。",
+						"[npc.name]自信地对你微笑，双手慢慢地摸上自己的大腿内侧。",
+						"[npc.Name]诱人的目光落在了你的身上，飞吻紧接而至。",
+						"转过身，[npc.name]给了[npc.her][npc.ass+]一巴掌，[npc.she]发出一阵嬉笑。",
+						"[npc.name]对你嬉皮笑脸，而后尝试摆出一副命令的样子。"));
 				
 			} else {
 				description = UtilText.parse(this, target,
 						UtilText.returnStringAtRandom(
-						"[npc.Name] blows a kiss at [npc2.name], before winking suggestively in [npc2.her] direction.",
-						"Smiling confidently at [npc2.name], [npc.name] slowly runs [npc.her] hands up [npc.her] inner thighs.",
-						"As [npc.name] gives [npc2.name] [npc.her] most seductive look, [npc.she] blows [npc2.herHim] a kiss.",
-						"Turning around, [npc.name] lets out a playful laugh as [npc.she] gives [npc.her] [npc.ass+] a slap.",
-						"[npc.Name] tries to look as commanding as possible as [npc.she] smirks playfully at [npc2.name]."));
+						"[npc.Name]向[npc2.name]抛了一个飞吻，向[npc2.her]的方向媚眼如丝。",
+						"[npc.name]向[npc2.name]自信地微笑，缓缓地把手伸向股间内侧。",
+						"[npc.Name]诱人的目光落在了[npc2.name]的身上，飞吻紧接而至。",
+						"转过身，[npc.name]给了[npc.her][npc.ass+]一巴掌，[npc.she]发出一阵嬉笑。",
+						"[npc.name]对[npc2.name]嬉皮笑脸，而后尝试摆出一副命令的样子。"));
 			}
 		}
 		
@@ -9165,14 +9165,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 								partner.setPenisVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] penile virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的贞操！)]</p>"));
 								}
 								if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 									this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 									this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-											+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+											+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 									}
 								}
 							}
@@ -9182,10 +9182,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(partnerCummed) { // If the partner came, apply relevant effects
 								if(partnerCondom) { // Handle the partner wearing a condom:
 									if(GenericOrgasms.GENERIC_ORGASM_CREAMPIE.getCondomFailure(partner, this)!=CondomFailure.NONE) {
-										ingestFluidSB.append(UtilText.parse(partner, "<p class='centre noPad'>[npc.NamePos] [style.italicsTerrible(condom broke)] as [npc.she] [npc.was] cumming!</p>"));
+										ingestFluidSB.append(UtilText.parse(partner, "<p class='centre noPad'>在[npc.NamePos]射精时，[style.italicsTerrible(避孕套破了)]！</p>"));
 										partnerCondom = false;
 									} else {
-										ingestFluidSB.append(UtilText.parse(partner, "<p class='centre noPad'>[npc.NamePos] [npc.cum] was [style.boldGood(caught in [npc.her] condom)]!</p>"));
+										ingestFluidSB.append(UtilText.parse(partner, "<p class='centre noPad'>[npc.NamePos]精液被[style.boldGood(避孕套兜住了)]！</p>"));
 										if(condomAbleToBeAdded) {
 											ingestFluidSB.append(Main.game.getPlayer().addItem(
 													Main.game.getItemGen().generateFilledCondom(
@@ -9212,19 +9212,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 											if(partner.isInternalTesticles()) {
 												orgasmSB.append(UtilText.parse(this, partner,
 														"<p class='centre noPad'>"
-															+ "Driving [npc2.her] [npc2.cock+] deep into [npc.namePos] "+performingArea.getName(this)
-															+", [npc2.namePos] [npc2.balls+] tensed up and [style.colourCum(unloaded their cum)] inside of [npc.herHim]!"
+															+ "将[npc2.her][npc2.cock+]深深插入[npc.namePos]"+performingArea.getName(this)
+															+"，[npc2.namePos][npc2.balls+]突然缩紧，[style.colourCum(射)]在了[npc.herHim]的里面！"
 														+ "</p>"));
 											} else {
 												orgasmSB.append(UtilText.parse(this, partner,
 														"<p class='centre noPad'>"
-															+ "Driving [npc2.her] [npc2.cock+] deep into [npc.namePos] "+performingArea.getName(this)+", [npc2.name] let out [npc2.a_moan+] and [style.colourCum(came inside)] of [npc.herHim]!"
+															+ "[npc2.her][npc2.cock+]深深地插入了[npc.namePos]"+performingArea.getName(this)+"，[npc2.name]发出了[npc2.a_moan+]并[style.colourCum(内射)]在[npc.herHim]里面！"
 														+ "</p>"));
 											}
 										} else {
 											orgasmSB.append(UtilText.parse(this, partner,
 															"<p class='centre noPad'>"
-																+ "[npc2.Name] [style.colourCum(came inside)] of [npc.namePos] "+performingArea.getName(this)+"!"
+																+ "[npc2.Name][style.colourCum(内射)]在[npc.namePos]"+performingArea.getName(this)+"！"
 															+ "</p>"));
 										}
 									}
@@ -9233,7 +9233,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									if(descriptionNeeded) {
 										orgasmSB.append(UtilText.parse(this, partner,
 												"<p class='centre noPad'>"
-													+ "[npc2.Name] [style.colourCum(pulled out)] of [npc.namePos] "+performingArea.getName(this)+" just before [npc2.she] started cumming!"
+													+ "[npc2.Name]在射精前从[npc.namePos]的"+performingArea.getName(this)+"中[style.colourCum(拔出)]！"
 												+ "</p>"));
 									}
 								}
@@ -9269,11 +9269,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(descriptionNeeded) {
 								if(extendedDescription) {
 									ingestFluidSB.append(UtilText.parse(partner, this,
-											"<p class='centre noPad'>Due to performing oral on [npc2.namePos] wet [npc2.pussy], [npc.name] ended up [style.colourGirlcum(drinking [npc2.her] [npc2.girlcum])]!</p>"));
+											"<p class='centre noPad'>由于正给[npc2.namePos]湿漉漉的[npc2.pussy]口交，[npc.name]最终[style.colourGirlcum(喝下了[npc2.her]的[npc2.girlcum])]！</p>"));
 									
 								} else {
 									ingestFluidSB.append(UtilText.parse(partner, this,
-													"<p class='centre noPad'>[npc.Name] [style.colourGirlcum(drank [npc2.namePos] [npc2.girlcum])]!</p>"));
+													"<p class='centre noPad'>[npc.Name][style.colourGirlcum(喝下了[npc2.namePos]的[npc2.girlcum])]！</p>"));
 								}
 							}
 							
@@ -9294,11 +9294,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(descriptionNeeded) {
 								if(extendedDescription) {
 									ingestFluidSB.append(UtilText.parse(partner, this,
-											"<p class='centre noPad'>Due to suckling on [npc2.namePos] milky [npc2.nipples], [npc.name] ended up [style.colourMilk(drinking [npc2.her] [npc2.milk])]!</p>"));
+											"<p class='centre noPad'>由于正吮吸[npc2.namePos]奶香味的[npc2.nipples]，[npc.name]最终[style.colourMilk(喝下了[npc2.her]的[npc2.milk])]！</p>"));
 									
 								} else {
 									ingestFluidSB.append(UtilText.parse(partner, this,
-													"<p class='centre noPad'>[npc.Name] [style.colourMilk(drank [npc2.namePos] [npc2.milk])]!</p>"));
+													"<p class='centre noPad'>[npc.Name][style.colourMilk(喝下了[npc2.namePos]的[npc2.milk])]！</p>"));
 								}
 							}
 							
@@ -9320,11 +9320,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(descriptionNeeded) {
 								if(extendedDescription) {
 									ingestFluidSB.append(UtilText.parse(partner, this,
-											"<p class='centre noPad'>Due to suckling on [npc2.namePos] milky [npc2.crotchNipples], [npc.name] ended up [style.colourMilk(drinking [npc2.her] [npc2.crotchMilk])]!</p>"));
+											"<p class='centre noPad'>由于正在吮吸[npc2.namePos]分泌奶水的[npc2.crotchNipples]，[npc.name][style.colourMilk(喝下了[npc2.her]的[npc2.crotchMilk])]！</p>"));
 									
 								} else {
 									ingestFluidSB.append(UtilText.parse(partner, this,
-													"<p class='centre noPad'>[npc.Name] [style.colourMilk(drank [npc2.namePos] [npc2.crotchMilk])]!</p>"));
+													"<p class='centre noPad'>[npc.Name][style.colourMilk(喝了[npc2.namePos]的[npc2.crotchMilk])]！</p>"));
 								}
 							}
 							ingestFluidSB.append(partner.ingestFluid(
@@ -9351,7 +9351,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isAssVirgin()) {
 								this.setAssVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] anal virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了菊穴贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9359,8 +9359,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9378,7 +9378,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isFaceVirgin()) {
 								this.setFaceVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] oral virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了口穴贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9386,8 +9386,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9399,7 +9399,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isNippleVirgin()) {
 								this.setNippleVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] nipple virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了乳穴贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9407,8 +9407,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9420,7 +9420,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isNippleCrotchVirgin()) {
 								this.setNippleCrotchVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] crotch-nipple virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的胯乳乳头贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9428,8 +9428,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9443,7 +9443,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isUrethraVirgin()) {
 								this.setUrethraVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] penile urethra virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的阴茎尿道贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9451,8 +9451,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9464,7 +9464,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isVaginaUrethraVirgin()) {
 								this.setVaginaUrethraVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] vaginal urethra virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的阴道尿道贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9472,8 +9472,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9485,7 +9485,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isVaginaVirgin()) {
 								this.setVaginaVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9493,8 +9493,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9503,7 +9503,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							} else if(this.hasHymen()) {
 								this.setHymen(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.NamePos] hymen was torn!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.NamePos]的处女膜撕裂了！)]</p>"));
 								}
 							}
 							break;
@@ -9521,8 +9521,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
                                         partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
                                         partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
                                         if(descriptionNeeded) {
-                                            sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-                                                    + " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+                                            sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+                                                    + "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
                                         }
                                     }
                                 } else {
@@ -9535,7 +9535,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(this.isSpinneretVirgin()) {
 								this.setSpinneretVirgin(false);
 								if(descriptionNeeded) {
-									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] spinneret virginity!)]</p>"));
+									sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的丝囊贞操！)]</p>"));
 								}
 								if(partnerPresent) {
 									this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9543,8 +9543,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 										partner.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner), true);
 										partner.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(partner)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else {
@@ -9587,7 +9587,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						if(this.isPenisVirgin() && this.hasPenisIgnoreDildo()) {
 							this.setPenisVirgin(false);
 							if(descriptionNeeded) {
-								sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] penile virginity!)]</p>"));
+								sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的贞操！)]</p>"));
 							}
 							if(partnerPresent) {
 								this.setVirginityLoss(sexType, partner, partner.getLostVirginityDescriptor());
@@ -9610,10 +9610,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(thisCummed) { // If this character came, apply relevant effects
 								if(thisCondom) { // Handle this character wearing a condom:
 									if(GenericOrgasms.GENERIC_ORGASM_CREAMPIE.getCondomFailure(this, partner)!=CondomFailure.NONE) {
-										ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>[npc.NamePos] [style.italicsTerrible(condom broke)] as [npc.she] [npc.was] cumming!</p>"));
+										ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>在[npc.NamePos]射精时，[style.italicsTerrible(避孕套破了)]！</p>"));
 										thisCondom = false;
 									} else {
-										ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>[npc.NamePos] [npc.cum] was [style.boldGood(caught in [npc.her] condom)]!</p>"));
+										ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>[npc.NamePos]的精液被[style.boldGood(避孕套兜住了)]！</p>"));
 										if(condomAbleToBeAdded) {
 											ingestFluidSB.append(Main.game.getPlayer().addItem(
 													Main.game.getItemGen().generateFilledCondom(
@@ -9640,19 +9640,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 											if(this.isInternalTesticles()) {
 												orgasmSB.append(UtilText.parse(partner, this,
 														"<p class='centre noPad'>"
-															+ "Driving [npc2.her] [npc2.cock+] deep into [npc.namePos] "+targetedArea.getName(partner)
-															+", [npc2.namePos] [npc2.balls+] tensed up and [style.colourCum(unloaded their cum)] inside of [npc.herHim]!"
+															+ "将[npc2.her][npc2.cock+]深深插入[npc.namePos]"+targetedArea.getName(partner)
+															+"，[npc2.namePos][npc2.balls+]突然缩紧，[style.colourCum(射)]在了[npc.herHim]的里面！"
 														+ "</p>"));
 											} else {
 												orgasmSB.append(UtilText.parse(partner, this,
 														"<p class='centre noPad'>"
-															+ "Driving [npc2.her] [npc2.cock+] deep into [npc.namePos] "+targetedArea.getName(partner)+", [npc2.name] let out [npc2.a_moan+] and [style.colourCum(came inside)] of [npc.herHim]!"
+															+ "[npc2.her][npc2.cock+]深深地插入了[npc.namePos]"+targetedArea.getName(this)+"，[npc2.name]发出了[npc2.a_moan+]并[style.colourCum(内射)]在[npc.herHim]里面！"
 														+ "</p>"));
 											}
 										} else {
 											orgasmSB.append(UtilText.parse(partner, this,
 															"<p class='centre noPad'>"
-																+ "[npc2.Name] [style.colourCum(came inside)] of [npc.namePos] "+targetedArea.getName(partner)+"!"
+																+ "[npc2.Name][style.colourCum(内射)]在[npc.namePos]"+targetedArea.getName(this)+"！"
 															+ "</p>"));
 										}
 									}
@@ -9660,7 +9660,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									if(descriptionNeeded) {
 										orgasmSB.append(UtilText.parse(partner, this,
 												"<p class='centre noPad'>"
-													+ "[npc2.Name] [style.colourCum(pulled out)] of [npc.namePos] "+targetedArea.getName(partner)+" just before [npc2.she] started cumming!"
+													+ "[npc2.Name]在射精前从[npc.namePos]的"+targetedArea.getName(this)+"中[style.colourCum(拔出)]！"
 												+ "</p>"));
 									}
 								}
@@ -9685,11 +9685,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(descriptionNeeded) {
 								if(extendedDescription) {
 									ingestFluidSB.append(UtilText.parse(this, partner,
-											"<p class='centre noPad'>Due to performing oral on [npc2.namePos] wet [npc2.pussy], [npc.name] ended up [style.colourGirlcum(drinking [npc2.her] [npc2.girlcum])]!</p>"));
+											"<p class='centre noPad'>由于正给[npc2.namePos]湿漉漉的[npc2.pussy]口交，[npc.name]最终[style.colourGirlcum(喝下了[npc2.her]的[npc2.girlcum])]！</p>"));
 									
 								} else {
 									ingestFluidSB.append(UtilText.parse(this, partner,
-													"<p class='centre noPad'>[npc.Name] [style.colourGirlcum(drank [npc2.namePos] [npc2.girlcum])]!</p>"));
+													"<p class='centre noPad'>[npc.Name][style.colourGirlcum(喝下了[npc2.namePos]的[npc2.girlcum])]！</p>"));
 								}
 							}
 							
@@ -9721,11 +9721,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(descriptionNeeded) {
 								if(extendedDescription) {
 									ingestFluidSB.append(UtilText.parse(this, partner,
-											"<p class='centre noPad'>Due to suckling on [npc2.namePos] milky [npc2.nipples], [npc.name] ended up [style.colourMilk(drinking [npc2.her] [npc2.milk])]!</p>"));
+											"<p class='centre noPad'>由于正吮吸[npc2.namePos]奶香味的[npc2.nipples]，[npc.name]最终[style.colourMilk(喝下了[npc2.her]的[npc2.milk])]！</p>"));
 									
 								} else {
 									ingestFluidSB.append(UtilText.parse(this, partner,
-													"<p class='centre noPad'>[npc.Name] [style.colourMilk(drank [npc2.namePos] [npc2.milk])]!</p>"));
+													"<p class='centre noPad'>[npc.Name][style.colourMilk(喝下了[npc2.namePos]的[npc2.milk])]！</p>"));
 								}
 							}
 							
@@ -9758,11 +9758,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							if(descriptionNeeded) {
 								if(extendedDescription) {
 									ingestFluidSB.append(UtilText.parse(this, partner,
-											"<p class='centre noPad'>Due to suckling on [npc2.namePos] milky [npc2.crotchNipples], [npc.name] ended up [style.colourMilk(drinking [npc2.her] [npc2.crotchMilk])]!</p>"));
+											"<p class='centre noPad'>由于正在吮吸[npc2.namePos]分泌奶水的[npc2.crotchNipples]，[npc.name][style.colourMilk(喝下了[npc2.her]的[npc2.crotchMilk])]！</p>"));
 									
 								} else {
 									ingestFluidSB.append(UtilText.parse(this, partner,
-													"<p class='centre noPad'>[npc.Name] [style.colourMilk(drank [npc2.namePos] [npc2.crotchMilk])]!</p>"));
+													"<p class='centre noPad'>[npc.Name][style.colourMilk(喝了[npc2.namePos]的[npc2.crotchMilk])]！</p>"));
 								}
 							}
 							
@@ -9803,14 +9803,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setAssVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] anal virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的肛门贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 										this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								}
@@ -9826,14 +9826,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setFaceVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] oral virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了口穴贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 										this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								}
@@ -9843,14 +9843,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setNippleVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] nipple virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 										this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								}
@@ -9860,14 +9860,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setNippleCrotchVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] crotch-nipple virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner,  "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的胯乳乳头贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 										this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								}
@@ -9879,14 +9879,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setUrethraVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] penile urethra virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的阴茎尿道贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 										this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								}
@@ -9896,14 +9896,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setVaginaUrethraVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] vaginal urethra virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner,"<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的阴道尿道贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 										this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								}
@@ -9913,20 +9913,20 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setVaginaVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
 										this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
 										if(descriptionNeeded) {
-											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-												+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+											sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+												+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
 										}
 									}
 								} else if(partner.hasHymen()) {
 									partner.setHymen(false);
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.NamePos] hymen was torn!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.NamePos]的处女膜撕裂了！)]</p>"));
 									}
 								}
 								break;
@@ -9943,8 +9943,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
                                         this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
                                         this.incrementFetishExperience(Fetish.FETISH_DEFLOWERING, Fetish.FETISH_DEFLOWERING.getExperienceGainFromSexAction());
                                         if(descriptionNeeded) {
-                                            sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]"
-                                                    + " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")] [style.italicsArcane(experience!)]</p>"));
+                                            sexDescriptionSB.append(UtilText.parse(this, "<p class='centre noPad'>[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]"
+                                                    + "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(this)+")][style.italicsArcane(经验！)]</p>"));
                                         }
                                     }
                                 }
@@ -9954,7 +9954,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									partner.setSpinneretVirgin(false);
 									partner.setVirginityLoss(partnerSexType, this, this.getLostVirginityDescriptor());
 									if(descriptionNeeded) {
-										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name] lost [npc.her] spinneret virginity!)]</p>"));
+										sexDescriptionSB.append(UtilText.parse(partner, "<p class='centre noPad'>[style.italicsTerrible([npc.Name]失去了[npc.her]的丝囊贞操！)]</p>"));
 									}
 									if(this.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 										this.incrementExperience(AbstractFetish.getExperienceGainFromTakingOtherVirginity(this), true);
@@ -10002,7 +10002,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(partnerPresent && partner.isAbleToOrgasm() && partner.hasPenisIgnoreDildo() && partner.getPenisRawCumStorageValue()>0) {
 				if(partner.isWearingCondom()) { // Handle this character wearing a condom:
 					if(GenericOrgasms.GENERIC_ORGASM_CREAMPIE.getCondomFailure(partner, this)==CondomFailure.NONE) {
-						ingestFluidSB.append(UtilText.parse(partner, "<p class='centre noPad'>[npc.NamePos] [npc.cum] was [style.boldGood(caught in [npc.her] condom)]!</p>"));
+						ingestFluidSB.append(UtilText.parse(partner, "<p class='centre noPad'>[npc.NamePos]精液被[style.boldGood(避孕套兜住了)]！</p>"));
 						if(condomAbleToBeAdded) {
 							ingestFluidSB.append(Main.game.getPlayer().addItem(
 									Main.game.getItemGen().generateFilledCondom(
@@ -10024,7 +10024,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(this.isAbleToOrgasm() && this.hasPenisIgnoreDildo() && this.getPenisRawCumStorageValue()>0) {
 				if(this.isWearingCondom()) { // Handle this character wearing a condom:
 					if(GenericOrgasms.GENERIC_ORGASM_CREAMPIE.getCondomFailure(this, partner)==CondomFailure.NONE) {
-						ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>[npc.NamePos] [npc.cum] was [style.boldGood(caught in [npc.her] condom)]!</p>"));
+						ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>[npc.NamePos]的精液被[style.boldGood(避孕套兜住了)]！</p>"));
 						if(condomAbleToBeAdded) {
 							ingestFluidSB.append(Main.game.getPlayer().addItem(
 									Main.game.getItemGen().generateFilledCondom(
@@ -10061,7 +10061,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(cummedOnArea!=CoverableArea.NONE) {
 					if(partnerPresent) {
 						ingestFluidSB.append(UtilText.parse(partner, this,
-								"<p class='centre noPad'>[style.colourCum([npc.Name] came on [npc2.namePos] "+(cumTargetArea!=null && cumTargetArea.isRequiresPartner()?cumTargetArea.getSimpleName():cummedOnArea.getName())+")]!</p>"));
+								"<p class='centre noPad'>[style.colourCum([npc.Name]射在了[npc2.namePos]的"+(cumTargetArea!=null && cumTargetArea.isRequiresPartner()?cumTargetArea.getSimpleName():cummedOnArea.getName())+"上)]！</p>"));
 						ingestFluidSB.append(UtilText.parse(Main.sex.applyCummedOnEffects(cummedOnArea, partner, this, true)));
 
 						// Extra cum:
@@ -10070,15 +10070,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						List<CoverableArea> extraCoverableAreasHit = new ArrayList<>();
 						if(extraDirtySlots>0) {
 							ingestFluidSB.append("<p class='centre noPad'><i>[style.boldSex(");
-								ingestFluidSB.append(UtilText.parse(partner, this, "[npc.Name] came so much that [npc2.name] [npc2.was]"));
+								ingestFluidSB.append(UtilText.parse(partner, this, "[npc.Name]射的太多了，[npc2.name]"));
 								switch(cumProduction) {
 									case FOUR_LARGE:
 									case FIVE_HUGE:
 									case SIX_EXTREME:
-										ingestFluidSB.append(UtilText.parse(partner, " covered in [npc.her] [npc.cum+]!"));
+										ingestFluidSB.append(UtilText.parse(partner, "全身覆满了[npc.her][npc.cum+]！"));
 										break;
 									case SEVEN_MONSTROUS:
-										ingestFluidSB.append(UtilText.parse(partner, " absolutely drenched in [npc.her] [npc.cum+]!"));
+										ingestFluidSB.append(UtilText.parse(partner, "全身浸没在[npc.her][npc.cum+]当中！"));
 										break;
 									case THREE_AVERAGE:
 									case TWO_SMALL_AMOUNT:
@@ -10108,7 +10108,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								this.addDirtySlot(slot);
 								slotNames.add(slot.getName());
 							}
-							ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>[npc.Name] had [npc.her] "+Util.stringsToStringList(slotNames, false)+" [style.colourCum(covered in cum)]!</p>"));
+							ingestFluidSB.append(UtilText.parse(this, "<p class='centre noPad'>[npc.Name]的"+Util.stringsToStringList(slotNames, false)+"[style.colourCum(全是精液)]！</p>"));
 						}
 					}
 				}
@@ -10127,7 +10127,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					
 					if(cummedOnArea!=CoverableArea.NONE) {
 						ingestFluidSB.append(UtilText.parse(this, partner,
-								"<p class='centre noPad'>[style.colourCum([npc.Name] came on [npc2.namePos] "+(cumTargetArea!=null && cumTargetArea.isRequiresPartner()?cumTargetArea.getSimpleName():cummedOnArea.getName())+")]!</p>"));
+								"<p class='centre noPad'>[style.colourCum([npc.Name]射在了[npc2.namePos]的"+(cumTargetArea!=null && cumTargetArea.isRequiresPartner()?cumTargetArea.getSimpleName():cummedOnArea.getName())+"上)]！</p>"));
 						ingestFluidSB.append(UtilText.parse(Main.sex.applyCummedOnEffects(cummedOnArea, this, partner, true)));
 
 						// Extra cum:
@@ -10136,15 +10136,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						List<CoverableArea> extraCoverableAreasHit = new ArrayList<>();
 						if(extraDirtySlots>0) {
 							ingestFluidSB.append("<p class='centre noPad'><i>[style.boldSex(");
-								ingestFluidSB.append(UtilText.parse(this, partner, "[npc.Name] came so much that [npc2.name] [npc2.was]"));
+								ingestFluidSB.append(UtilText.parse(this, partner, "[npc.Name]射的太多了，[npc2.name]"));
 								switch(cumProduction) {
 									case FOUR_LARGE:
 									case FIVE_HUGE:
 									case SIX_EXTREME:
-										ingestFluidSB.append(UtilText.parse(this, " covered in [npc.her] [npc.cum+]!"));
+										ingestFluidSB.append(UtilText.parse(this, "全身覆满了[npc.her][npc.cum+]！"));
 										break;
 									case SEVEN_MONSTROUS:
-										ingestFluidSB.append(UtilText.parse(this, " absolutely drenched in [npc.her] [npc.cum+]!"));
+										ingestFluidSB.append(UtilText.parse(this, "全身浸没在[npc.her][npc.cum+]当中！"));
 										break;
 									case THREE_AVERAGE:
 									case TWO_SMALL_AMOUNT:
@@ -10892,94 +10892,94 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	
 	public String getVirginityLossDescription(SexType sexType) {
 		if(this.getVirginityLoss(sexType)==null || this.getVirginityLoss(sexType).getKey()==null) {
-			return UtilText.parse(this, "[npc.Name] lost [npc.her] virginity to someone [npc.she] can't remember."); // Catch bugged virginity loss save.
+			return UtilText.parse(this, "[npc.Name]不记得是谁夺走了[npc.her]的贞操。"); // Catch bugged virginity loss save.
 		}
 		
 		if(this.getVirginityLoss(sexType).getKey()!=null && this.getVirginityLoss(sexType).getKey().isEmpty()) { // Support for versions prior to 0.2.10
 			if(virginityLossMap.get(sexType).getValue().isEmpty()) { // Catch for if there's no description
-				return UtilText.parse(this, "[npc.Name] lost [npc.her] virginity to someone [npc.she] can't remember.");
+				return UtilText.parse(this, "[npc.Name]不记得是谁夺走了[npc.her]的贞操。");
 			} else {
-				return UtilText.parse(this, "[npc.Name] lost [npc.her] virginity to "+virginityLossMap.get(sexType).getValue()+".");
+				return UtilText.parse(this, "[npc.Name]将贞操给了"+virginityLossMap.get(sexType).getValue()+"。");
 			}
 			
 		} else {
 			try {
 				if(Main.game.getNPCById(this.getVirginityLoss(sexType).getKey()).equals(this)) {
-					return UtilText.parse(this, "[npc.Name] took [npc.her] own virginity "+virginityLossMap.get(sexType).getValue()+".");
+					return UtilText.parse(this, "[npc.Name]夺走了自己的贞操"+virginityLossMap.get(sexType).getValue()+"。");
 				}
 				String virginityLossPrefix = "";
 				if(sexType.getPerformingSexArea().isOrifice()) {
 					switch((SexAreaOrifice)sexType.getPerformingSexArea()) {
 						case ARMPITS:
-							virginityLossPrefix = "[npc2.NamePos] armpits were first used by [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.NamePos]第一次腋交经历属于[npc.name(a)]";
 							break;
 						case ANUS:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] anal virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的肛门贞操被[npc.name(a)]";
 							break;
 						case ASS:
-							virginityLossPrefix = "[npc2.NamePos] ass cheeks were first used by [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.NamePos]屁股瓣的第一次被[npc.name(a)]";
 							break;
 						case BREAST:
-							virginityLossPrefix = "[npc2.Name] first gave paizuri to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的第一次乳交经历属于[npc.name(a)]";
 							break;
 						case BREAST_CROTCH:
-							virginityLossPrefix = "[npc2.Name] first gave [npc2.crotchBoob]-paizuri to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的第一次[npc2.crotchBoob]乳交经历属于[npc.name(a)]";
 							break;
 						case MOUTH:
-							virginityLossPrefix = "[npc2.Name] first performed oral sex on [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的第一次口交被[npc.name(a)]";
 							break;
 						case NIPPLE:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] nipple virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的乳头贞操被[npc.name(a)]";
 							break;
 						case NIPPLE_CROTCH:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] [npc2.crotchNipple] virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的[npc2.crotchNipple]贞操被[npc.name(a)]";
 							break;
 						case THIGHS:
-							virginityLossPrefix = "[npc2.Name] first gave intercrural sex to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的第一次腿交经历属于[npc.name(a)]";
 							break;
 						case URETHRA_PENIS:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] penile urethra virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的阴茎尿道贞操被[npc.name(a)]";
 							break;
 						case URETHRA_VAGINA:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] vaginal urethra virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的阴部尿道贞操被[npc.name(a)]";
 							break;
 						case VAGINA:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]贞操被[npc.name(a)]";
 							break;
 						case TUSSY:
 							virginityLossPrefix = "[npc2.Name] lost [npc2.her] tail pussy virginity to [npc.name(a)] ";
 							break;
 						case SPINNERET:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] spinneret virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的丝囊贞操被[npc.name(a)]";
 							break;
 					}
 				} else {
 					switch((SexAreaPenetration)sexType.getPerformingSexArea()) {
 						case CLIT:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] clit virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的阴蒂贞操被[npc.name(a)]";
 							break;
 						case FINGER:
-							virginityLossPrefix = "[npc2.NamePos] first experience fingering someone was with [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.NamePos]第一次指交经历属于[npc.name(a)]";
 							break;
 						case FOOT:
-							virginityLossPrefix = "[npc2.NamePos] first experience giving a footjob was to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.NamePos]的第一次足交经历属于[npc.name(a)]";
 							break;
 						case PENIS:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] penile virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的阴茎贞操被[npc.name(a)]";
 							break;
 						case TAIL:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] tail virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的尾巴贞操被[npc.name(a)]";
 							break;
 						case TENTACLE:
-							virginityLossPrefix = "[npc2.Name] lost [npc2.her] tentacle virginity to [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的触手贞操被[npc.name(a)]";
 							break;
 						case TONGUE:
-							virginityLossPrefix = "[npc2.Name] first performed penetrative oral sex on [npc.name(a)] ";
+							virginityLossPrefix = "[npc2.Name]的第一次深喉被[npc.name(a)]";
 							break;
 					}
 				}
 				return UtilText.parse(Main.game.getNPCById(this.getVirginityLoss(sexType).getKey()), this,
-						virginityLossPrefix+virginityLossMap.get(sexType).getValue()+".");
+						virginityLossPrefix+virginityLossMap.get(sexType).getValue()+"夺走。");
 				
 			} catch(Exception e) {
 				// If the character who took the virginity has been deleted, then try to use a backup description:
@@ -10987,7 +10987,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					return getBackupVirginityLossMap().get(sexType);
 				}
 				Util.logGetNpcByIdError("getVirginityLossDescription()", this.getVirginityLoss(sexType).getKey());
-				return UtilText.parse(this, "[npc.Name] lost [npc.her] virginity to someone [npc.she] can't remember."); // Catch bugged virginity loss save.
+				return UtilText.parse(this, "[npc.Name]不记得是谁夺走了[npc.her]的贞操。"); // Catch bugged virginity loss save.
 			}
 		}
 	}
@@ -11002,9 +11002,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						return null;
 					}
 					return UtilText.parse(equipper, target,
-							"Holding out a condom to [npc2.name], [npc.name] [npc.verb(force)] [npc2.herHim] to take it and put it on."
-							+ " Quickly ripping it out of its little foil wrapper, [npc2.she] [npc2.verb(roll)] it down the length of [npc2.her] [npc2.cock+] as [npc2.she] [npc2.verb(whine)],"
-							+ " [npc2.speech(Do I really have to? It feels so much better without one...)]");
+							"[npc.Name]递给[npc2.name]一个避孕套，必须要[npc2.herHim]戴上。"
+							+ "[npc2.she]迅速撕开了铝箔包装，卷着将避孕套完整地戴在了[npc2.cock+]上，随后呜咽道，"
+							+ "[npc2.speech(真要这样吗？我觉得没有会更好……)]");
 					
 				} else {
 					if(((target.getFetishDesire(Fetish.FETISH_IMPREGNATION).isPositive() && equipper.hasVagina()) || target.getFetishDesire(Fetish.FETISH_CUM_STUD).isPositive())
@@ -11016,26 +11016,26 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						}
 						if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 							return UtilText.parse(equipper, target,
-									"[npc.Name] [npc.verb(direct)] [npc.her] spinneret at [npc2.namePos] [npc2.cock], but, sensing what [npc.sheIs] about to do, [npc2.name] [npc2.verb(slap)] it away and [npc2.verb(growl)],"
-									+ " [npc2.speech(I'm not wearing a condom for this!)]");
+									"[npc.Name]将[npc.her]的丝囊对准了[npc2.namePos]的[npc2.cock]，但当[npc2.name]意识到[npc.sheIs]的意图后，立刻将其拍开，低声吼叫着，"
+									+ "[npc2.speech(我可不会戴套的！)]");
 						}
 						return UtilText.parse(equipper, target,
-								"[npc.Name] [npc.verb(hold)] out a condom to [npc2.name], but instead of setting about rolling it down over [npc2.her] [npc2.cock] as [npc.she]'d hoped,"
-										+ " [npc2.name] [npc2.verb(let)] out an annoyed growl and [npc2.verb(tear)] the packet in two!"
-								+ " With yet another growl, [npc2.she] states,"
-								+ " [npc2.speech(I'm not wearing a condom for this!)]");
+								"[npc.name]向[npc2.name]掏出一个安全套，但并没有像[npc.she]希望的那样，把避孕套捋到[npc2.her]的[npc2.cock]上，"
+										+ "[npc2.name]恼羞成怒地咆哮，将包裹撕成了两半！"
+								+ "[npc2.she]再次发出一声咆哮，"
+								+ "[npc2.speech(我可不会戴套的！)]");
 						
 					} else {
 						if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 							return UtilText.parse(equipper, target,
-									"[npc.Name] [npc.verb(direct)] [npc.her] spinneret at [npc2.namePos] [npc2.cock], and after hearing [npc2.herHim] let out an approving growl, [npc.she] [npc.verb(shoot)] out a thick string of sticky silk."
-									+ " Within moments, [npc2.namePos] [npc2.cock+] is covered in a thick binding of spider-webbing, and [npc2.she] [npc2.verb(state)],"
-									+ " [npc2.speech(You'd better be glad that I'm in a good mood!)]");
+									"[npc.Name]将[npc.her]的吐丝孔对准[npc2.namePos]的[npc2.cock]，听到[npc2.herHim]发出赞许的叫声后，[npc.she]射出一串粗粗的粘丝。"
+									+ "不一会儿，[npc2.namePos][npc2.cock+]就被厚厚的蜘蛛网束缚住了，[npc2.she]也进入了状态，"
+									+ "[npc2.speech(你就庆幸我现在心情不错吧！)]");
 						}
 						return UtilText.parse(equipper, target,
-								"Holding out a condom to [npc2.name], [npc.name] [npc.verb(let)] out a sigh of relief as [npc2.she] reluctantly [npc2.verb(take)] it."
-								+ " Quickly ripping it out of its little foil wrapper, [npc2.she] [npc2.verb(roll)] it down the length of [npc2.her] [npc2.cock+] as [npc2.she] [npc2.verb(growl)],"
-								+ " [npc2.speech(You'd better be glad that I'm in a good mood!)]");
+								"[npc.Name]拿出一个避孕套递给[npc2.name]，[npc.name]松了一口气，[npc2.she]不情愿地接过来。"
+								+ "[npc2.she]迅速撕开了铝箔包装，卷着将避孕套完整地戴在了[npc2.cock+]上，随后咆哮道，"
+								+ "[npc2.speech(你就庆幸我现在心情不错吧！)]");
 					}
 				}
 			}
@@ -11073,7 +11073,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			return UtilText.parse(target, this,
 					"<p style='text-align:center; margin:0;'>"
 						+ this.getLevelDrainDescription(target)
-						+ "<br/>[style.italicsBad(As [npc.she] [npc.verb(orgasm)], [npc.name] [npc.verb(feel)] [npc.herself] getting weaker...)]"
+						+ "<br/>[style.italicsBad(随着[npc.name]达到高潮，[npc.she]感觉自己越来越虚弱……)]"
 					+ "</p>"
 					+ target.levelDown(1)
 					+ this.incrementExperience(exp, false));
@@ -11081,10 +11081,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		} else {
 			return UtilText.parse(target, this,
 					"<p style='text-align:center'>"
-						+ "Although [npc2.nameHasFull] the '"+Perk.ORGASMIC_LEVEL_DRAIN.getName(this)+"' perk, [npc.nameIsFull] already at the minimum level, so [npc.her] experience cannot be drained..."
+						+ "虽然[npc2.nameHasFull]拥有“"+Perk.ORGASMIC_LEVEL_DRAIN.getName(this)+"”天赋，但由于[npc.nameIsFull]的等级已达到最小值，所以[npc.her]不能被榨取经验……"
 						+ (target.getLevel()<=1
 							?""
-							:"<br/><i>Although [npc.her] level appears to be greater than 1, this is only due to your difficulty setting!</i>")
+							:"<br/><i>虽然[npc.her]的等级大于1，但这似乎是由于你的难度设定！</i>")
 					+ "</p>");
 		}
 	}
@@ -11097,22 +11097,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(Main.game.isInSex() && Main.sex.getInitialSexManager().isHidden(this)) { // For if this character is hidden during the sex scene:
 			sb.append(UtilText.returnStringAtRandom(
-					"Licking [npc.her] [npc.lips], [npc.name] [npc.verb(let)] out a quiet [npc.moan] and [npc.verb(concentrate)] on absorbing [npc2.namePos] power.",
-					"[npc.Name] [npc.verb(let)] out a quiet, horny [npc.moan] as [npc.she] greedily [npc.verb(absorb)] [npc2.namePos] energy.",
-					"Letting out a quiet, erotic [npc.moan], [npc.name] eagerly [npc.verb(absorb)] [npc2.namePos] energy."
+					"[npc.name]舔了舔[npc.lips]，低声[npc.moan]，专注于汲取[npc2.namePos]的力量。",
+					"[npc.Name]发出低微却淫靡的[npc.moan]，[npc.she]贪婪地汲取着[npc2.namePos]的能量。",
+					"[npc.Name]发出低位却情欲的[npc.moan]，急切地汲取着[npc2.namePos]的能量。"
 					));
 			
 		} else {
 			sb.append(UtilText.returnStringAtRandom(
-					"Licking [npc.her] [npc.lips], [npc.name] [npc.verb(let)] out a hungry [npc.moan] and [npc.verb(tease)], ",
-					"Greedily absorbing [npc2.namePos] energy, [npc.name] [npc.verb(let)] out an erotic [npc.moan] and [npc.verb(cry)] out, ",
-					"Letting out a deeply erotic [npc.moan], [npc.name] eagerly [npc.verb(absorb)] [npc2.namePos] energy and [npc.verb(tease)], "
+					"[npc.Name]舔舔[npc.lips]，发出饥渴的[npc.moan]，挑逗道，",
+					"贪婪地吸收着[npc2.namePos]的能量，[npc.name]发出了色情的[npc.moan]和喊叫，",
+					"[npc.Name]发出深沉且充满情欲的[npc.moan]，急切地汲取着[npc2.namePos]的能量，挑逗道，"
 					));
 			
 			sb.append(UtilText.returnStringAtRandom(
-					"[npc.speech(That's right... You don't need to be this powerful anymore!)]",
-					"[npc.speech(Oh yes... Give me all your power!)]",
-					"[npc.speech(You'll be completely powerless once I'm done with you!)]"));
+					"[npc.speech(没错……你不需要再这么强大了！)]",
+					"[npc.speech(真好……把你的力量全流给我吧！)]",
+					"[npc.speech(我和你做完，你就会失去力量！)]"));
 		}
 		
 		return UtilText.parse(this, target, sb.toString());
@@ -11123,10 +11123,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public String getSubmissiveTalk() { //TODO expand to be based on penetration type:
 		return UtilText.returnStringAtRandom(
-				"[npc.speech(Yes! I'm your little slut! Take me however you want!)]",
-				"[npc.speech(Yes! I'm yours! Use me! Do what you want with me!)]",
-				"[npc.speech(Yeah! I'm your worthless little bitch! Fuck me!)]",
-				"[npc.speech(Yes, I'm your worthless slut! Use me like your little fuck-toy!)]");
+				"[npc.speech(没错！我就是你的小骚货！你想怎样都可以！)]",
+				"[npc.speech(没错！我就是你的！尽情使用我！想做什么就做什么！)]",
+				"[npc.speech(对！我就是个没用的小贱货！操我吧！)]",
+				"[npc.speech(我就是一文不值的骚货！把我当成你的小肉便器吧！)]");
 	}
 
 	/**
@@ -11134,10 +11134,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public String getLovingTalk() { //TODO expand to be based on penetration type:
 		return UtilText.returnStringAtRandom(
-				"[npc.speech(I love you...)]",
-				"[npc.speech(Yes... I love you so much...)]",
-				"[npc.speech(I really do love you, you know...)]",
-				"[npc.speech(I love this... I love <i>you</i>...)]");
+				"[npc.speech(我爱你……)]",
+				"[npc.speech(真的……我太爱你了……)]",
+				"[npc.speech(我真的很爱你……你知道吗……)]",
+				"[npc.speech(我喜欢这样……我爱<i>你</i>……)]");
 	}
 
 	/**
@@ -11145,10 +11145,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public String getLovingResponseTalk() { //TODO expand to be based on penetration type:
 		return UtilText.returnStringAtRandom(
-				"[npc.speech(I love you too!)]",
-				"[npc.speech(You know that I love you too!)]",
-				"[npc.speech(I really do love you too!)]",
-				"[npc.speech(I love you more!)]");
+				"[npc.speech(我也爱你！)]",
+				"[npc.speech(你知道我也爱你！)]",
+				"[npc.speech(我也真的很爱你！)]",
+				"[npc.speech(我更爱你！)]");
 	}
 	
 	/**
@@ -11157,17 +11157,17 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String getRoughTalk() { //TODO expand to be based on penetration type:
 		if(Main.game.isInSex() && Main.sex.isCharacterEngagedInOngoingAction(this, Main.sex.getTargetedPartner(this))) {
 			return UtilText.returnStringAtRandom(
-					"[npc.speech(That's right, bitch, you're just my slutty little fuck-toy!)]",
-					"[npc.speech(Hah! I love fucking pathetic, submissive sluts like you!)]",
-					"[npc.speech(You're nothing but my worthless fuck-toy, understand?! You belong to me!)]",
-					"[npc.speech(That's right! You love being my worthless little fuck-toy, don't you slut?!)]");
+					"[npc.speech(明白了吧，婊子，你只不过是我的浪荡小肉便器罢了！)]",
+					"[npc.speech(哈！我最喜欢操你这种驯服的可怜小骚货了！)]",
+					"[npc.speech(你只是我没用的肉便器，懂了吗？！你是属于我的！)]",
+					"[npc.speech(这就对了！你很喜欢当我的肉便器，对吗骚货？！)]");
 			
 		} else {
 			return UtilText.returnStringAtRandom(
-					"[npc.speech(I bet you can't wait for me to give you a good, hard fuck, can you, you worthless slut?)]",
-					"[npc.speech(All you're good for is being my worthless fuck-toy!)]",
-					"[npc.speech(You're just my pathetic little fuck-toy now, understand?! You belong to me!)]",
-					"[npc.speech(I love fucking worthless sluts like you!)]");
+					"[npc.speech(我打赌你等不及让我狠狠地干你了，对吧，你这个没用的荡妇？)]",
+					"[npc.speech(你只能做我低贱的性玩具咯！)]",
+					"[npc.speech(你现在不过是我可怜的肉便器，懂了吗？！你是属于我的！)]",
+					"[npc.speech(我就喜欢干你这种没用的骚货！)]");
 		}
 	}
 	
@@ -11277,15 +11277,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			} else if(Main.sex.isCharacterEngagedInOngoingAction(this)) {
 				if(Main.sex.getSexPace(this)==SexPace.SUB_RESISTING) {
 					s = UtilText.returnStringAtRandom(
-							"Stop, please!",
-							"Leave me alone!",
-							"Stop it! Leave me alone!");
+							"住手，求你了！",
+							"放开我！",
+							"快停下！放开我！");
 					
 				} else {
 					s = UtilText.returnStringAtRandom(
-							"Fuck!",
-							"Yeah!",
-							"Oh yeah!");
+							"妈的！",
+							"嗯~！",
+							"哦，爽死了！");
 				}
 				s = UtilText.parse(this, "[npc.speech("+s+")]");
 				
@@ -11306,91 +11306,91 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		switch(Main.sex.getSexPace(this)) {
 			case DOM_GENTLE:
 				returnedLine = UtilText.returnStringAtRandom(
-						"I'll be gentle, don't worry!",
-						"You're going to be a good [npc2.girl] now, aren't you?",
-						"Let's have some fun!",
-						"You're going to love this!");
+						"我会很温柔的，放心好了！",
+						"你现在会做个乖乖[npc2.girl]，对吧？",
+						"让我们来找点儿乐子！",
+						"你肯定会喜欢的！");
 				break;
 			case DOM_NORMAL:
 				returnedLine = UtilText.returnStringAtRandom(
-						"This is going to be good!",
-						"How best to use you, I wonder...",
-						"You're going to be a good [npc2.girl]!",
-						"Ready for some fun?");
+						"肯定会很不错吧！",
+						"让我想想，该怎么使用你最好……",
+						"你会成为一个好[npc2.girl]的！",
+						"要玩玩吗？");
 				break;
 			case DOM_ROUGH:
 				returnedLine = UtilText.returnStringAtRandom(
-						"You ready to get fucked, slut?",
-						"I'm going to fuck you senseless!",
-						"You're my bitch now, understand?!",
-						"I'm going to use you however I want, you fucking slut!");
+						"你准备好挨操了吗？婊子？",
+						"我要干晕你！",
+						"你就是属于我的母狗，懂了吗？！",
+						"你这个小骚逼，我想怎么操你就怎么操你！");
 				break;
 			case SUB_EAGER:
 				if((this.isVaginaVirgin() || this.hasHymen()) && this.hasVagina()) {
 					if(this.hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
 						returnedLine = UtilText.returnStringAtRandom(
-								"Come on, fuck me already! But don't penetrate my pussy; I don't want to lose my virginity!",
-								"Please, fuck me! Don't penetrate my pussy, though; I want to remain a virgin!",
-								"Fuck me! But don't penetrate my pussy; I want to keep my virginity!");
+								"来吧，操我吧！只是不要插进小穴，我可不想丢了贞操！",
+								"求你了，操我！不过，别插我的小穴，我还想保持处女之身！",
+								"操我！但别插我的小穴！我不想失贞！");
 						
 					} else {
 						returnedLine = UtilText.returnStringAtRandom(
-								"Come on, fuck me already! Take my virginity!",
-								"I'm still a virgin! Please, break me in already!",
-								"What are you waiting for?! Fuck my virgin pussy already!",
-								"I'm so horny! Please, fuck my pussy! Take my virginity!");
+								"来吧，操我吧！夺走我的处女吧！",
+								"我还是处！求求你让我破处吧！",
+								"你还在等什么呀？快来操我的处女小穴呀！",
+								"我太饥渴了！求求你，操我的小穴！夺走我的贞操！");
 					}
 				} else {
 					returnedLine = UtilText.returnStringAtRandom(
-							"Come on, fuck me already! Please!",
-							"Fuck me! Please!",
-							"What are you waiting for?! Come on, fuck me!",
-							"I'm so horny! Please, fuck me!");
+							"来啊，操我吧！求你了！",
+							"求求你，操我吧！",
+							"你还在等什么呀？快点操我！",
+							"我好想要啊！求你了，干我吧！");
 				}
 				break;
 			case SUB_NORMAL:
 				if((this.isVaginaVirgin() || this.hasHymen()) && this.hasVagina()) {
 					if(this.hasFetish(Fetish.FETISH_PURE_VIRGIN)) {
 						returnedLine = UtilText.returnStringAtRandom(
-								"I'll be a good [npc1.girl]! Please don't penetrate my pussy; I don't want to lose my virginity!",
-								"I'll do whatever you want! Please don't penetrate my pussy, though; I want to remain a virgin!",
-								"Let's have some fun! But please don't penetrate my pussy; I want to keep my virginity!");
+								"我会做个乖乖[npc1.girl]！求求你，别插我的小穴。我不想失去第一次！",
+								"你要我做什么都行！但不要插进我的小穴！我想保持童贞！",
+								"我们来找点乐子吧！但请不要插入我的小穴，我不想失贞！");
 						
 					} else {
 						returnedLine = UtilText.returnStringAtRandom(
-								"I'll be a good [npc1.girl]! Just... I'm still a virgin, ok?",
-								"I'll do whatever you want! I'm still a virgin though...",
-								"Let's get started! But... I'm still a virgin...",
-								"Let's have some fun! But... I'm still a virgin, ok?");
+								"我会做个乖乖[npc1.girl]！只是……我还是处，可以吗？",
+								"我什么都会做的！虽然我还是处……",
+								"我们开始吧！不过……我还是处……",
+								"来爽一爽吧！只不过……我还是处女，知道吗？");
 					}
 				} else {
 					returnedLine = UtilText.returnStringAtRandom(
-							"I'll be a good [npc.girl]!",
-							"I'll do whatever you want!",
-							"Let's get started!",
-							"Let's have some fun!");
+							"我会做个乖[npc.girl]的！",
+							"你想我做什么都可以哦！",
+							"快点开始吧！",
+							"来爽一爽吧！");
 				}
 				break;
 			case SUB_RESISTING:
 				if((this.isVaginaVirgin() || this.hasHymen()) && this.hasVagina()) {
 					returnedLine = UtilText.returnStringAtRandom(
-							"Go away! I-I'm still a virgin! Leave me alone!",
-							"Stop it! Just go away! I-I'm still a virgin!",
-							"Please stop! I don't want to lose my virginity!",
-							"Don't do this! I'm still a virgin!");
+							"离我远点！我，我还是处女！不要过来！",
+							"住手！快离开我！我，我还是处女！",
+							"快停手！我不想失贞！",
+							"别这样！我还是处！");
 				} else {
 					returnedLine = UtilText.returnStringAtRandom(
-							"Go away! Leave me alone!",
-							"Stop it! Just go away!",
-							"Please stop! Don't do this!");
+							"滚开！别过来！",
+							"住手！快离开我！",
+							"请你停下来！不要再继续这样做了！");
 				}
 				break;
 			default:
 				returnedLine = UtilText.returnStringAtRandom(
-						"This is going to be good!",
-						"Time for some fun!",
-						"Let's get started!",
-						"Let's have some fun!");
+						"肯定会很不错吧！",
+						"舒服的时间到了哦！",
+						"快点开始吧！",
+						"来爽一爽吧！");
 		}
 		
 		if(returnedLine.isEmpty()) {
@@ -11413,45 +11413,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right, be a good [npc2.girl] now and push your [npc2.fingers] in deeper!",
-										"Good [npc2.girl]! Keep those [npc2.fingers] of yours busy!",
-										"What a good [npc2.girl]! My pussy loves the feeling of your [npc2.fingers]!");
+										"就是这样，[npc2.girl]，做个好孩子，把你那[npc2.fingers]插得再深点！",
+										"好[npc2.girl]！[npc2.fingers]一秒钟也不要停下来！",
+										"真是个好[npc2.girl]！我的小穴很中意你[npc2.fingers]的感觉哦！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right, push your [npc2.fingers] in deep!",
-										"Good [npc2.girl]! Get those [npc2.fingers] in deep!",
-										"Keep going! Curl your [npc2.fingers] up a bit!");
+										"这就对了，把你那[npc2.fingers]再插深点！",
+										"好[npc2.girl]！[npc2.fingers]再深一点！",
+										"继续！把[npc2.fingers]弯一下！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Come on slut, you can get your [npc2.fingers] in deeper than that!",
-										"Keep it up bitch! Get those [npc2.fingers] in deep!",
-										"Keep going slut! Curl your [npc2.fingers] up and put in a little more effort!");
+										"来啊骚货，你那[npc2.fingers]肯定还能进得更深！",
+										"继续，母狗！[npc2.fingers]再深点！",
+										"继续，骚货！弯一下[npc2.fingers]再用点力！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Keep fingering me!",
-										"Keep going! My pussy loves your attention!",
-										"Oh yes! I love being fingered!");
+										"对！继续扣！",
+										"继续！我下面很中意你的照顾哦！",
+										"啊，太棒了！被扣好爽！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Keep fingering me!",
-										"Keep going! I love this!",
-										"Oh yes!");
+										"继续扣！",
+										"继续！我简直爱死了这样的滋味！",
+										"噢，好爽！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get your [npc2.fingers] out of me! Stop! Please!",
-										"Stop fingering me! Please, no more!",
-										"Stop it! Stop! Please!");
+										"把你那[npc2.fingers]抽出去！快停下！求你了！",
+										"别扣我了！求你了，不要了！",
+										"停下来！停！求求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!");
+										"妈的！",
+										"爽！",
+										"哦，爽死了！");
 								break;
 						}
 						break;
@@ -11459,45 +11459,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"My pussy loves your [npc2.cock]!",
-										"Good [npc2.girl]! Keep sliding that delicious cock of yours in and out of me!",
-										"What a good [npc2.girl]! Enjoy my pussy as your reward now!");
+										"我的小穴爱吃你的[npc2.cock]！",
+										"好[npc2.girl]！继续让你那美味的鸡巴抽插我的身体吧！",
+										"真是个乖[npc2.girl]！让我用小穴好好的奖励你吧！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"You like feeling my pussy gripping down on your cock?!",
-										"Good [npc2.girl]! Push your [npc2.cock] in deep!",
-										"Keep going! Get that [npc2.cock] in deep like a good [npc2.girl]!");
+										"你喜欢我的小穴紧紧缠住你的肉棒的感觉吗？！",
+										"乖[npc2.girl]！[npc2.cock]再插深点！",
+										"加油哦！乖[npc2.girl]，把[npc2.cock]深深吃进去吧！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right slut, you're my little fuck toy now!",
-										"Come on bitch! You can get your worthless [npc2.cock] in deeper than that!",
-										"Fucking slut, put some more effort in! My pussy deserves better than your worthless [npc2.cock]!");
+										"明白了吗，小骚货，你只不过是我的小肉便器！",
+										"继续啊，浪货！把你一文不值的[npc2.cock]再插深点！",
+										"欠操的荡妇，再加把劲！我的小穴值得比你这没用的[npc2.cock]更好的东西！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me! Fuck me harder! Don't stop!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Fuck me! I love your [npc2.cock]!");
+										"来嘛！操我，用力操我！不要停！",
+										"不要停！用力！操我！啊……啊、对！",
+										"真厉害！操我吧！我爱上你的[npc2.cock]了！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!");
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"哦就是这样！操我！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get out of me! Stop! Please!",
-										"Please, no more! Take your cock out!",
-										"Get out of me! Stop! Please!");
+										"快拔出去！住手！求你了！",
+										"求求你，不要再继续了，把你的鸡巴拔出去！",
+										"从我里面出去！停下来！求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!");
+										"操我！是的！我还要更多！",
+										"噢，是的！请操我！",
+										"用力点！不要停下来！");
 								break;
 						}
 						break;
@@ -11505,45 +11505,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"My pussy loves your [npc2.tail]! Keep going!",
-										"Good [npc2.girl]! Keep fucking me with that [npc2.tail] of yours!",
-										"What a good [npc2.girl]! Enjoy my pussy as your reward now!");
+										"我下面好喜欢你的[npc2.tail]！不要停！",
+										"好[npc2.girl]！继续用你的[npc2.tail]干我吧！",
+										"真是个乖[npc2.girl]！让我用小穴好好的奖励你吧！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Oh yes! Your [npc2.tail] feels so good!",
-										"Good [npc2.girl]! Push your [npc2.tail] in deep!",
-										"Keep going! Get that [npc2.tail] in deep like a good [npc2.girl]!");
+										"啊啊，太棒了！你的[npc2.tail]感觉真舒服！",
+										"好[npc2.girl]！[npc2.tail]再深点！",
+										"继续！[npc2.tail]再深点，这才是乖[npc2.girl]！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right slut, get that [npc2.tail] in deep like a good little fuck toy!",
-										"Come on bitch! You can get your [npc2.tail] in deeper than that!",
-										"Fucking bitch, put some more effort in! My pussy deserves better than some slut's [npc2.tail]!");
+										"就是这样，荡妇！把你的尾巴再[npc2.tail]伸进去一些！就像一个不错的性爱玩具那样！",
+										"快一点儿，贱人！把你的[npc2.tail]插得深一些！",
+										"你这个欠操的婊子，再认真一点！我的肉穴比其他荡妇的[npc2.tail]更好！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me! Fuck me harder! Don't stop!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Fuck me! I love your [npc2.tail]! Get it deeper!");
+										"来嘛！操我，用力操我！不要停！",
+										"不要停！用力！操我！啊……啊、对！",
+										"对，对就这样没错！赶快操我！我爱死你的[npc2.tail]了！再深一点！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!");
+										"对！操我！",
+										"不要停！操我！",
+										"哦就是这样！操我！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get out of me! Stop! Please!",
-										"Please, no more! Take your tail out!",
-										"Get out of me! Stop! Please!");
+										"快拔出去！住手！求你了！",
+										"求你了，不行了！把尾巴抽出去吧！",
+										"从我里面出去！停下来！求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!");
+										"操我！对！用力点！",
+										"噢，是的！请操我！",
+										"用力点！不要停下来！");
 								break;
 						}
 						break;
@@ -11551,60 +11551,60 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right, keep eating me out!",
-										"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy!",
-										"What a good [npc2.girl]! You love the taste of my pussy, don't you?!");
+										"就是这样，继续舔直到我高潮！",
+										"棒[npc2.girl]！让你的[npc2.tongue]忙碌起来吧！",
+										"多么棒的[npc2.girl]！你喜欢我肉穴的味道，是这样的没错吧？！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Oh yes! Get that [npc2.tongue] in deep!",
-										"Good [npc2.girl]! Get that [npc2.tongue] of yours in deep!",
-										"Keep going! My pussy loves your [npc2.tongue]!");
+										"啊啊，太棒了！[npc2.tongue]再深一点！",
+										"好[npc2.girl]！[npc2.tongue]再深一点！",
+										"继续！我的肉穴爱死你的[npc2.tongue]了！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right slut, keep eating me out like the worthless little fuck toy you are!",
-										"Come on bitch! Get that [npc2.tongue] of yours in deeper!",
-										"Fucking bitch, put some more effort in! You know how lucky you are, being allowed to taste my pussy like this?!");
+										"就是这样，你这个娼妇！就这样继续舔我到高潮！你就是一个一文不值的性玩具！",
+										"贱人，再加把劲！让你的[npc2.tongue]再伸进去一些！",
+										"该死的贱人，再认真一点！你知道自己被允许舔舐我的肉穴是多么幸运的一件事吗？！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! I love your [npc2.tongue]! Don't stop!",
-										"Don't stop! Deeper! Eat me out! Yes, yes, yes!",
-										"Oh yes! Taste my pussy! I love your [npc2.tongue]! Get it deeper!");
+										"真棒！我爱上你的[npc2.tongue]了！别停下！",
+										"不要停！再深点！用力舔！啊~！啊~！啊~！",
+										"哦~！啊~！尝尝我的小穴！我喜欢你的舌头！再深入点！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Don't stop!",
-										"Don't stop! I love your [npc2.tongue]!",
-										"Oh yes! Eat me out!");
+										"没错！别停！",
+										"不要停！我超爱你的[npc2.tongue]！",
+										"真棒，舔我的下面吧！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get out of me! Stop! Please!",
-										"Please, no more! Take your tongue out!",
-										"Get out of me! Stop! Please!");
+										"快拔出去！住手！求你了！",
+										"求求你，不要再继续了，把你的舌头拔出去！",
+										"从我里面出去！停下来！求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Get that tongue deeper!",
-										"Oh yeah! Keep going!",
-										"Deeper! Don't stop!");
+										"对！舌头再深一些！",
+										"太棒了！继续继续！",
+										"再深一点！不要停下来！");
 						}
 						break;
 					default:
 						switch(Main.sex.getSexPace(this)) {
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Go away! Leave me alone!",
-										"Stop it! Just go away!",
-										"Please stop! Don't do this!");
+										"走开！让我一个人静静！",
+										"住手！快离开我！",
+										"请你停下来！不要再继续这样做了！");
 								break;
 							default:
 								returnedLine =  UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!");
+										"妈的！",
+										"嗯~！",
+										"噢，就是这样！");
 								break;
 						}
 				}
@@ -11632,44 +11632,44 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right, be a good [npc2.girl] now and push your [npc2.fingers] in deeper!",
-										"Good [npc2.girl]! Keep those [npc2.fingers] of yours busy!");
+										"没错，好[npc2.girl]，把你那[npc2.fingers]再插深点！",
+										"好[npc2.girl]！[npc2.fingers]一秒钟也不要停下来！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right, push your [npc2.fingers] in deep!",
-										"Good [npc2.girl]! Get those [npc2.fingers] in deep!",
-										"Keep going! Curl your [npc2.fingers] up a bit!");
+										"这就对了，把你那[npc2.fingers]再插深点！",
+										"好[npc2.girl]！[npc2.fingers]再深一点！",
+										"继续！把[npc2.fingers]弯一下！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Come on slut, you can get your [npc2.fingers] in deeper than that!",
-										"Keep it up bitch! Get those [npc2.fingers] in deep!",
-										"Keep going slut! Curl your [npc2.fingers] up and put in a little more effort!");
+										"来啊骚货，你那[npc2.fingers]肯定还能进得更深！",
+										"继续，母狗！[npc2.fingers]再深点！",
+										"继续，骚货！弯一下[npc2.fingers]再用点力！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Keep fingering me!",
-										"Keep going! Get those [npc2.fingers] in deep!",
-										"Oh yes! I love being fingered!");
+										"对！继续扣！",
+										"继续！[npc2.fingers]再深点！",
+										"啊，太棒了！被扣好爽！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Keep fingering me!",
-										"Keep going! I love this!",
-										"Oh yes!");
+										"继续扣！",
+										"不要停下来！我喜欢被你这样对待！",
+										"噢，好爽！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get your [npc2.fingers] out of me! Stop! Please!",
-										"Stop fingering me! Please, no more!",
-										"Stop it! Stop! Please!");
+										"把你那[npc2.fingers]抽出去！快停下！求你了！",
+										"别扣我了！求你了，不要了！",
+										"停下来！停！求求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!");
+										"妈的！",
+										"爽！",
+										"哦，爽死了！");
 								break;
 						}
 						break;
@@ -11677,45 +11677,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"I love the feeling of your [npc2.cock]!",
-										"Good [npc2.girl]! Keep sliding that delicious cock of yours in and out of me!",
-										"What a good [npc2.girl]! Enjoy my spinneret as your reward now!");
+										"我爱上了你[npc2.cock]的滋味了！",
+										"好[npc2.girl]！继续让你那美味的鸡巴抽插我的身体吧！",
+										"真是个乖[npc2.girl]！让我用丝囊好好的奖励你吧！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"You like feeling my spinneret gripping down on your cock?!",
-										"Good [npc2.girl]! Push your [npc2.cock] in deep!",
-										"Keep going! Get that [npc2.cock] in deep like a good [npc2.girl]!");
+										"你喜欢我的小穴紧紧缠住你的肉棒的感觉吗？！",
+										"乖[npc2.girl]！[npc2.cock]再插深点！",
+										"加油哦！乖[npc2.girl]，把[npc2.cock]深深吃进去吧！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right slut, you're my little fuck toy now!",
-										"Come on bitch! You can get your worthless [npc2.cock] in deeper than that!",
-										"Fucking slut, put some more effort in! My spinneret deserves better than your worthless [npc2.cock]!");
+										"明白了吗，小骚货，你只不过是我的小肉便器！",
+										"继续啊，浪货！把你一文不值的[npc2.cock]再插深点！",
+										"欠操的荡妇，再加把劲！我的丝囊值得比你这没用的[npc2.cock]更好的东西！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me! Fuck me harder! Don't stop!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Fuck me! I love your [npc2.cock]!");
+										"来嘛！操我，用力操我！不要停！",
+										"不要停！用力！操我！啊……啊、对！",
+										"真厉害！操我吧！我爱上你的[npc2.cock]了！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!");
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"哦就是这样！操我！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get out of me! Stop! Please!",
-										"Please, no more! Take your cock out!",
-										"Get out of me! Stop! Please!");
+										"快拔出去！住手！求你了！",
+										"求求你，不要再继续了，把你的鸡巴拔出去！",
+										"从我里面出去！停下来！求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!");
+										"操我！对！用力点！",
+										"哦太棒了！操我！",
+										"用力点！不要停下来！");
 								break;
 						}
 						break;
@@ -11723,45 +11723,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"I love the feeling of your [npc2.cock]!",
-										"Good [npc2.girl]! Keep fucking me with that [npc2.tail] of yours!",
-										"What a good [npc2.girl]! Enjoy my spinneret as your reward now!");
+										"我爱上了你[npc2.cock]的滋味了！",
+										"好[npc2.girl]！继续用你的[npc2.tail]干我吧！",
+										"真是个乖[npc2.girl]！让我用丝囊好好的奖励你吧！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Oh yes! Your [npc2.tail] feels so good!",
-										"Good [npc2.girl]! Push your [npc2.tail] in deep!",
-										"Keep going! Get that [npc2.tail] in deep like a good [npc2.girl]!");
+										"啊啊，太棒了！你的[npc2.tail]感觉真舒服！",
+										"好[npc2.girl]！[npc2.tail]再深点！",
+										"继续！[npc2.tail]再深点，这才是乖[npc2.girl]！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right slut, get that [npc2.tail] in deep like a good little fuck toy!",
-										"Come on bitch! You can get your [npc2.tail] in deeper than that!",
-										"Fucking bitch, put some more effort in! My spinneret deserves better than some slut's [npc2.tail]!");
+										"就是这样，荡妇！把[npc2.tail]插深点！像个不错的肉便器！",
+										"快一点儿，贱人！把你的[npc2.tail]插得深一些！",
+										"操他妈的婊子，更用力一点！我的丝囊值得比你的荡妇[npc2.tail]更好的款待！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me! Fuck me harder! Don't stop!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Fuck me! I love your [npc2.tail]! Get it deeper!");
+										"来嘛！操我，用力操我！不要停！",
+										"不要停！用力！操我！啊……啊、对！",
+										"对，对就这样没错！赶快操我！我爱死你的[npc2.tail]了！再深一点！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!");
+										"对！操我！",
+										"不要停！操我！",
+										"哦就是这样！操我！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get out of me! Stop! Please!",
-										"Please, no more! Take your tail out!",
-										"Get out of me! Stop! Please!");
+										"快拔出去！住手！求你了！",
+										"求你了，不行了！把尾巴抽出去吧！",
+										"从我里面出去！停下来！求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!");
+										"操我！是的！我还要更多！",
+										"噢，就是这样！请操我！",
+										"用力！别停！");
 								break;
 						}
 						break;
@@ -11769,60 +11769,60 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right, keep eating my spinneret out!",
-										"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy!",
-										"What a good [npc2.girl]! You love the taste of my spinneret, don't you?!");
+										"就是这样，继续舔舐我的吐丝孔直到我高潮！",
+										"好[npc2.girl]！让你的[npc2.tongue]忙碌起来！",
+										"真是个乖[npc2.girl]！你喜欢尝我的丝囊对吧？！");
 								break;
 							case DOM_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Oh yes! Get that [npc2.tongue] in deep!",
-										"Good [npc2.girl]! Get that [npc2.tongue] of yours in deep!",
-										"Keep going! My spinneret loves your [npc2.tongue]!");
+										"啊啊，太棒了！[npc2.tongue]再深一点！",
+										"好[npc2.girl]！[npc2.tongue]再深一点！",
+										"继续！我的丝囊爱死你的[npc2.tongue]了！");
 								break;
 							case DOM_ROUGH:
 								returnedLine = UtilText.returnStringAtRandom(
-										"That's right slut, keep eating my spinneret out like the worthless little fuck toy you are!",
-										"Come on bitch! Get that [npc2.tongue] of yours in deeper!",
-										"Fucking bitch, put some more effort in! You know how lucky you are, being allowed to taste my spinneret like this?!");
+										"就是这样荡妇，就像一个不值钱的性爱玩具一样舔舐我的吐丝孔直到我达到高潮吧！",
+										"贱人，再加把劲！让你的[npc2.tongue]再伸进去一些！",
+										"操他妈的婊子，更用力一点！能像这样品尝我的丝囊，你知道你有多幸运吗？！");
 								break;
 							case SUB_EAGER:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! I love your [npc2.tongue]! Don't stop!",
-										"Don't stop! Deeper! Eat me out! Yes, yes, yes!",
-										"Oh yes! Taste my spinneret! I love your [npc2.tongue]! Get it deeper!");
+										"真棒！我爱上你的[npc2.tongue]了！别停下！",
+										"别停！更深一点！把我吃干抹净！嗯，嗯，嗯！",
+										"好极了！尝我的丝囊吧！我喜欢你的[npc2.tongue]！再深一点！");
 								break;
 							case SUB_NORMAL:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Don't stop!",
-										"Don't stop! I love your [npc2.tongue]!",
-										"Oh yes! Eat me out!");
+										"太棒了！别停！",
+										"继续~啊~我爱上你的[npc2.tongue]了！",
+										"真棒，舔我的下面吧！");
 								break;
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Get out of me! Stop! Please!",
-										"Please, no more! Take your tongue out!",
-										"Get out of me! Stop! Please!");
+										"快拔出去！住手！求你了！",
+										"求求你，不要再继续了，把你的舌头拔出去！",
+										"从我里面出去！停下来！求你了！");
 								break;
 							default:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Yes! Get that tongue deeper!",
-										"Oh yeah! Keep going!",
-										"Deeper! Don't stop!");
+										"对！舌头再深一些！",
+										"太棒了！继续继续！",
+										"更深入些！不要停下来！");
 						}
 						break;
 					default:
 						switch(Main.sex.getSexPace(this)) {
 							case SUB_RESISTING:
 								returnedLine = UtilText.returnStringAtRandom(
-										"Go away! Leave me alone!",
-										"Stop it! Just go away!",
-										"Please stop! Don't do this!");
+										"走开！让我一个人呆着！",
+										"滚开！停下来！",
+										"请你停下来！不要再继续这样做了！");
 								break;
 							default:
 								returnedLine =  UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!");
+										"妈的！",
+										"爽！",
+										"哦，爽死了！");
 								break;
 						}
 				}
@@ -11848,45 +11848,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, be a good [npc2.girl] now and push your [npc2.fingers] in deeper!",
-									"Good [npc2.girl]! Keep those [npc2.fingers] of yours busy!",
-									"What a good [npc2.girl]! Keep fingering my ass!");
+									"没错，好[npc2.girl]，把你那[npc2.fingers]再插深点！",
+									"好[npc2.girl]！快让你那[npc2.fingers]都动起来！",
+									"多么听话的乖[npc2.girl]！继续用你的手指触摸我的屁股吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, push your [npc2.fingers] in deep!",
-									"Good [npc2.girl]! Get those [npc2.fingers] in deep!",
-									"Keep going! My ass loves the attention!");
+									"这就对了，把你那[npc2.fingers]再插深点！",
+									"好[npc2.girl]！快把你那[npc2.fingers]都伸进去吧！",
+									"继续！我的屁股爱死这种感觉了！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Come on slut, you can get your [npc2.fingers] in deeper than that!",
-									"Keep it up bitch! Get those [npc2.fingers] in deep!",
-									"Keep going slut! Get your [npc2.fingers] in deep and put in a little more effort!");
+									"继续荡妇，你可以把你那[npc2.fingers]伸的比之前还要深！",
+									"就这样继续，母狗！把你那[npc2.fingers]都放进去！",
+									"就这样继续，荡妇！你那[npc2.fingers]再用点力！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep fingering my ass! Don't stop!",
-									"Keep going! My ass loves the attention!",
-									"Oh yes! My ass loves being fingered!");
+									"就是这样！继续用你的手指触摸我的屁股，不要停下来！",
+									"继续！我的屁股爱死这种感觉了！",
+									"噢，太棒了！我的屁股爱死了被指交！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Keep fingering my ass!",
-									"Keep going! I love this!",
-									"Oh yes!");
+									"继续抚摸我的屁股！",
+									"不要停！我喜欢！",
+									"啊，太棒了！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop fingering my ass! Stop! Please!",
-									"Please, no more! Take your fingers out of my ass!",
-									"Get out of my ass! Stop! Please!");
+									"别扣我的屁穴了！求你了，不要了！",
+									"求求你，不要再继续了，把手指从我的屁股里拔出去！",
+									"请松开我的屁股，快停下来！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"爽！",
+									"哦，爽死了！");
 							break;
 					}
 					break;
@@ -11894,45 +11894,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My ass loves your [npc2.cock]!",
-									"Good [npc2.girl]! Keep sliding that delicious cock of yours in and out of my ass!",
-									"What a good [npc2.girl]! Enjoy my ass as your reward now!");
+									"我的屁股喜欢你的[npc2.cock]！",
+									"乖[npc2.girl]！用你可口的鸡巴继续操我的屁股吧！",
+									"真是个乖[npc2.girl]！让我用屁股好好的奖励你吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"You like feeling my slutty little asshole gripping down on your cock?!",
-									"Good [npc2.girl]! Push your [npc2.cock] deep into my ass!",
-									"Keep going! Get that [npc2.cock] deep in my ass like a good [npc2.girl]!");
+									"你喜欢我淫荡的屁眼就这样吸住你肉棒的滋味吗？！",
+									"乖[npc2.girl]！[npc2.cock]再往我的屁股里插深点！",
+									"加油哦！乖[npc2.girl]，把[npc2.cock]深深插进我屁股吧！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, you're my little anal fuck toy now!",
-									"Come on bitch! You can get your worthless [npc2.cock] deeper into my ass than that!",
-									"Fucking slut, put some more effort in! My ass deserves better than your worthless [npc2.cock]!");
+									"就是这样，荡妇，你现在就是我的肛交肉便器！",
+									"来吧婊子！你没用的[npc2.cock]可以插更深！",
+									"再卖力一点，骚婊子！我的屁股比你没用的[npc2.cock]更好！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my ass! Fuck me harder! Don't stop!",
-									"Don't stop! Harder! Fuck my ass! Yes, yes, yes!",
-									"Oh yes! Fuck my ass! I love your [npc2.cock]!");
+									"对对！操我的屁股！更粗暴一点！不要停！",
+									"不要停！更用力一点！操我的屁股！嗯，嗯，嗯！",
+									"真舒服！操我的屁股！我爱上你的[npc2.cock]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my ass!",
-									"Don't stop! Fuck my ass!",
-									"Oh yes! Fuck my ass!");
+									"好极了！操我的屁股！",
+									"不要停！操我的屁股！",
+									"太舒服了……操我的屁股吧！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your cock out of my ass!",
-									"Get out of my ass! Stop! Please!");
+									"停下来！停下！求求你了！放过我！",
+									"求求你，停下来！把鸡巴从我的屁股里拔出来！",
+									"请松开我的屁股，快停下来！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck my ass! Yes! Harder!",
-									"Oh yeah! Fuck my ass!",
-									"Harder! Don't stop!");
+									"操我的屁股！好极了！更用力一点！",
+									"好极了！操我的屁股！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -11940,45 +11940,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My ass loves your [npc2.tail]! Keep going!",
-									"Good [npc2.girl]! Keep fucking my ass with that [npc2.tail] of yours!",
-									"What a good [npc2.girl]! Enjoy my ass as your reward now!");
+									"我的屁股爱死了你的[npc2.tail]！就这样继续！",
+									"乖[npc2.girl]！继续用[npc2.tail]操我的屁股！",
+									"真是个乖[npc2.girl]！让我用屁股好好的奖励你吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Your [npc2.tail] feels so good!",
-									"Good [npc2.girl]! Push your [npc2.tail] in deep!",
-									"Keep going! Get that [npc2.tail] in deep like a good [npc2.girl]!");
+									"噢，没错！你[npc2.tail]的滋味尝起来实在是太棒了！",
+									"好[npc2.girl]！[npc2.tail]再深点！",
+									"继续！[npc2.tail]再深点，这才是乖[npc2.girl]！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, get that [npc2.tail] in deep like a good little fuck toy!",
-									"Come on bitch! You can get your [npc2.tail] in deeper than that!",
-									"Fucking bitch, put some more effort in! My ass deserves better than some slut's [npc2.tail]!");
+									"就是这样，荡妇！把[npc2.tail]插深点！像个不错的肉便器！",
+									"快一点儿，贱人！把你的[npc2.tail]插得深一些！",
+									"操他妈的婊子，更用力一点！我的屁股值得比你的荡妇[npc2.tail]更好的款待！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck me! Fuck me harder! Don't stop!",
-									"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-									"Oh yes! Fuck me! I love your [npc2.tail]! Get it deeper!");
+									"来嘛！操我，用力操我！不要停！",
+									"不要停！用力！操我！啊……啊、对！",
+									"对，对就这样没错！赶快操我！我爱死你的[npc2.tail]了！再深一点！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck me!",
-									"Don't stop! Fuck me!",
-									"Oh yes! Fuck me!");
+									"对！就这么操！",
+									"不要停！用力操我！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your tail out of my ass!",
-									"Get out of my ass! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求求你，停下来！把尾巴从我的屁股里拔出来！",
+									"请松开我的屁股，快停下来！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！是的！我还要更多！",
+									"噢，是的！请操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -11986,45 +11986,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, keep that rimjob going like a good [npc2.girl]!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy in my ass!",
-									"What a good [npc2.girl]! You love the taste of my ass, don't you?!");
+									"就是这样，好[npc2.girl]，继续给我口交吧！",
+									"乖[npc2.girl]！继续用[npc2.tongue]操我的屁股！",
+									"真是个乖[npc2.girl]！你好喜欢我屁股的味道哦？");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Get that [npc2.tongue] in deep!",
-									"Good [npc2.girl]! Get that [npc2.tongue] of yours in deep!",
-									"Keep going! My ass loves your [npc2.tongue]!");
+									"没错，就是这样！让你的[npc2.tongue]伸进去！",
+									"好[npc2.girl]！[npc2.tongue]再深一点！",
+									"不要停！我的屁股超爱你的[npc2.tongue]！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, keep that rimjob going like the worthless little fuck toy you are!",
-									"Come on bitch! Get that [npc2.tongue] of yours deeper into my ass!",
-									"Fucking bitch, put some more effort in! You know how lucky you are, being allowed to lick my ass like this?!");
+									"就是这样，荡妇！就像一个不值钱的性玩具一样给我口交吧！",
+									"继续啊，浪货！把你一文不值的[npc2.tongue]舔进我的屁股，再深点！",
+									"操他妈的婊子，更用力一点！能像这样舔我的肛门，你知道你有多幸运吗？！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! I love your [npc2.tongue]! Don't stop!",
-									"Don't stop! Deeper! Get your [npc2.tongue] into my ass! Yes, yes, yes!",
-									"Oh yes! Taste my ass! I love your [npc2.tongue]! Get it deeper!");
+									"真棒！我爱上你的[npc2.tongue]了！别停下！",
+									"不要停！更深一点！把[npc2.tongue]插进我的肛门！嗯嗯~",
+									"啊啊啊！快点尝尝我屁股的滋味！我爱死你的[npc2.tongue]了！再伸进去一点！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Don't stop!",
-									"Don't stop! I love your [npc2.tongue]!",
-									"Oh yes! Taste my ass!");
+									"太棒了！别停！",
+									"继续~啊~我爱上你的[npc2.tongue]了！",
+									"对，没错！尝尝我屁股的滋味吧！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your tongue out of my ass!",
-									"Get your tongue out of my ass! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求求你，不要再继续了！把你的舌头从我的肛门拔出去！",
+									"快把你的舌头从我的屁股上挪开！赶紧停下来吧，求求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Get that tongue deeper!",
-									"Oh yeah! Keep going!",
-									"Deeper! Don't stop!");
+									"对！舌头再深一些！",
+									"太棒了！继续继续！",
+									"更深入些！不要停下来！");
 							break;
 					}
 					break;
@@ -12032,15 +12032,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Go away! Leave me alone!",
-									"Stop it! Just go away!",
-									"Please stop! Don't do this!");
+									"滚开！让我一个人呆着！",
+									"住手！快离开我！",
+									"请停下来！不要再继续了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"好耶！",
+									"爽死了！");
 							break;
 					}
 			}
@@ -12065,44 +12065,44 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Your fingers taste good!",
-									"Good [npc2.girl]! Your [npc2.fingers] taste so good!",
-									"What a good [npc2.girl]!");
+									"你手指的滋味真棒！",
+									"好[npc2.girl]！你[npc2.fingers]的滋味品尝起来是如此的美妙！",
+									"真是个好[npc2.girl]！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Your fingers taste good!",
-									"Good [npc2.girl]! Your [npc2.fingers] taste so good!",
-									"What a good [npc2.girl]!");
+									"你手指的滋味真棒！",
+									"好[npc2.girl]！你[npc2.fingers]的滋味品尝起来是如此的美妙！",
+									"真是个好[npc2.girl]！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fucking slut, let's get your [npc2.fingers] all nice and wet now!",
-									"That's right bitch! Let's get your [npc2.fingers] nice and wet!",
-									"Hold still slut! I need your [npc2.fingers] all nice and lubed up!");
+									"该死的荡妇，现在开始让我把你那[npc2.fingers]弄的又爽又湿！",
+									"就是这样做，母狗！现在开始让我把你那[npc2.fingers]变得又爽又湿吧！",
+									"就这样别动，荡妇！我需要用你那[npc2.fingers]好好的润滑一下！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love the taste of your [npc2.fingers]! Don't stop!",
-									"Keep going! I love sucking on your [npc2.fingers]!",
-									"Oh yes! I love the taste of your [npc2.fingers]!");
+									"我爱死你[npc2.fingers]的滋味了！就这样别停！",
+									"继续！我喜欢就这样吮吸你那[npc2.fingers]！",
+									"没错，对！我爱死你[npc2.fingers]的滋味了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love the taste of your [npc2.fingers]!",
-									"I love sucking on your [npc2.fingers]!");
+									"我爱死你[npc2.fingers]的滋味了！",
+									"我喜欢吮吸你那[npc2.fingers]！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your fingers out of my mouth!",
-									"Get out of my mouth! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求求你了！不能再多了！把你的手指从我的嘴里取出来吧！",
+									"从我的嘴里拔出去！快停下！求求你！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"爽！",
+									"哦，爽死了！");
 							break;
 					}
 					break;
@@ -12110,45 +12110,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love your [npc2.cock]!",
-									"Good [npc2.girl]! Your delicious cock deserves this nice reward!",
-									"What a good [npc2.girl]! I hope you're enjoying your reward!");
+									"我爱上你的[npc2.cock]了！",
+									"好[npc2.girl]！你美味的肉棒值得这样的奖励！",
+									"多么棒的[npc2.girl]！我希望你可以享受你的这份奖励！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Your cock tastes so good!",
-									"I love sucking your [npc2.cock]!",
-									"Oh yes! Your [npc2.cock] tastes so good!");
+									"你鸡巴的滋味真棒！",
+									"我喜欢吸你的[npc2.cock]！",
+									"真不错~你的[npc2.cock]真美味！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Hold still slut, be a good little fuck toy and just be thankful that I love sucking cock!",
-									"Stay still bitch! You'd better be happy that your worthless [npc2.cock] is the only thing for me to suck right now!",
-									"Fucking slut, hold still! I need to practice my oral skills on your worthless [npc2.cock]!");
+									"别动荡妇，做个乖乖性玩具吧~要对我吮吸你的肉棒感激涕零哦！",
+									"别动，婊子！你最好庆幸你那没用的[npc2.cock]是我现在唯一想吸的东西！",
+									"操他妈的荡妇，别乱动！我要用你那根没用的[npc2.cock]练习口技！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! I love your [npc2.cock]! I need it! Use my throat!",
-									"Don't stop! Harder! Fuck my throat! Yes, yes, yes!",
-									"Oh yes! I love your [npc2.cock]! You taste so good!");
+									"对，没错！我爱死了你的[npc2.cock]！我离不开它了！快使用我的喉道吧！",
+									"不要停！更粗暴一点！操进我的喉咙！嗯嗯~",
+									"哦，啊~！我喜欢你的[npc2.cock]！你尝起来真棒！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love your [npc2.cock]! Use my throat!",
-									"Fuck my throat! Oh yes!",
-									"I love your [npc2.cock]! You taste so good!");
+									"我爱死你的[npc2.cock]了！快点使用我的喉道吧！",
+									"操进我的喉咙！呃唔~",
+									"我喜欢你的[npc2.cock]！你尝起来真棒！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your cock out of my mouth!",
-									"Get your cock away from me! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下来！把你的鸡巴从我嘴里拔出去！",
+									"把你的鸡巴拿开！住手！求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love sucking cock!",
-									"Oh yeah! I love your cock!",
-									"Don't stop!");
+									"我喜欢就这样吮吸你的肉棒！",
+									"啊~！我喜欢你的鸡巴！",
+									"不要停！");
 							break;
 					}
 					break;
@@ -12156,45 +12156,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love sucking your [npc2.tail]!",
-									"Good [npc2.girl]! Get this delicious [npc2.tail] of yours deep down my throat!",
-									"What a good [npc2.girl]! I hope you're enjoying your reward!");
+									"我喜欢就这样吮吸你的[npc2.tail]！",
+									"好[npc2.girl]！就这样把你这条美味的[npc2.tail]插到我的喉咙深处吧！",
+									"多么棒的[npc2.girl]！希望你可以享受奖励！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love sucking your [npc2.tail]!",
-									"Good [npc2.girl]! Get this delicious [npc2.tail] of yours deep down my throat!",
-									"What a good [npc2.girl]! I hope you're enjoying your reward!");
+									"我喜欢就这样吮吸你的[npc2.tail]！",
+									"好[npc2.girl]！就这样把你这条美味的[npc2.tail]插到我的喉咙深处吧！",
+									"多么棒的[npc2.girl]！我希望你可以享受你的这份奖励！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Hold still slut, be a good little fuck toy and just be thankful that I decided to practice oral on your [npc2.tail]!",
-									"Stay still bitch! You'd better be happy that I decided to practice my cock-sucking on your [npc2.tail]!",
-									"Fucking slut, hold still! I need to practice my oral skills on your [npc2.tail]!");
+									"别动荡妇，好好做个肉便器，好好感谢我愿意给你的[npc2.tail]口！",
+									"别动婊子！你最好高兴我愿意给你的[npc2.tail]口！",
+									"操他妈的荡妇，别动！我要给你的[npc2.tail]口！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! I love your [npc2.tail]! I need it! Use my throat!",
-									"Don't stop! Harder! Fuck my throat! Yes, yes, yes!",
-									"Oh yes! I love your [npc2.tail]! You taste so good!");
+									"没错！就是这样！我爱死你[npc2.tail]的滋味了！我需要它！快插到我的喉咙里！",
+									"不要停！更粗暴一点！操进我的喉咙！嗯唔~",
+									"唔呃！我喜欢你的[npc2.tail]！你的滋味真是棒极了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love your [npc2.tail]! Use my throat!",
-									"Fuck my throat! Oh yes!",
-									"I love your [npc2.tail]! You taste so good!");
+									"我爱死了你的[npc2.tail]！请尽情使用我的喉咙吧！",
+									"操进我的喉咙！呃唔~",
+									"我喜欢你的[npc2.tail]！你尝起来真是太棒了！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your tail out of my mouth!",
-									"Get your tail away from me! Stop! Please!");
+									"停下来！快停下来！求求你了！",
+									"求你了，停下了！把你的尾巴从我嘴里拿走！",
+									"把你的尾巴拿开！住手！求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"I love sucking your [npc2.tail]!",
-									"Oh yeah! I love your [npc2.tail]!",
-									"Don't stop!");
+									"我喜欢就这样吮吸你的[npc2.tail]！",
+									"好极了！我喜欢你的[npc2.tail]！",
+									"不要停！");
 							break;
 					}
 					break;
@@ -12202,40 +12202,40 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Good [npc2.girl]!",
-									"Good [npc2.girl]! I love your [npc2.lips]!");
+									"真棒！好[npc2.girl]！",
+									"棒[npc2.girl]！我爱死你[npc2.lips]的味道了！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Good [npc2.girl]!",
-									"Good [npc2.girl]! I love your [npc2.lips]!");
+									"真棒！好[npc2.girl]！",
+									"好[npc2.girl]！我对你[npc2.lips]的滋味上瘾了！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Good bitch!",
-									"Good slut! I love your [npc2.lips]!");
+									"好极了！乖婊子！",
+									"好个小骚货！我喜欢你的[npc2.lips]！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Good [npc2.girl]!",
-									"Good [npc2.girl]! I love your [npc2.lips]!");
+									"真棒！好[npc2.girl]！",
+									"棒[npc2.girl]！我爱死你[npc2.lips]的味道了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Good [npc2.girl]!",
-									"Good [npc2.girl]! I love your [npc2.lips]!");
+									"真棒！好[npc2.girl]！",
+									"好[npc2.girl]！我喜欢你[npc2.lips]！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Stop kissing me like this!",
-									"Get away from me! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！别再这样亲我了！",
+									"打住！请你离我远点！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Good [npc2.girl]!",
-									"Good [npc2.girl]! I love your [npc2.lips]!",
-									"Don't stop!");
+									"真棒！好[npc2.girl]！",
+									"好[npc2.girl]！我喜欢你的[npc2.lips]！",
+									"别停！");
 							break;
 					}
 					break;
@@ -12243,15 +12243,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Go away! Leave me alone!",
-									"Stop it! Just go away!",
-									"Please stop! Don't do this!");
+									"滚开！让我一个人呆着！",
+									"停下来滚开！",
+									"请你停下来！不要再继续这样做了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"嗯~！",
+									"哦，爽死了！");
 							break;
 					}
 			}
@@ -12276,45 +12276,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, be a good [npc2.girl] now and push your [npc2.fingers] deeper into my nipple!",
-									"Good [npc2.girl]! Keep those [npc2.fingers] of yours busy in my breast!",
-									"What a good [npc2.girl]! My nipples love the feeling of your [npc2.fingers]!");
+									"就是这样没错！乖[npc2.girl]！现在把你那[npc2.fingers]伸到我的乳头上！",
+									"好[npc2.girl]！让你的这些[npc2.fingers]用力揉捏我的乳房吧！",
+									"多么棒的好孩子！我的乳头简直爱死你[npc2.fingers]的款待了！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, push your [npc2.fingers] deep into my breast!",
-									"Good [npc2.girl]! Get those [npc2.fingers] deep into my nipple!",
-									"Keep going! Curl your [npc2.fingers] up a bit!");
+									"没错，就是这样！把你那[npc2.fingers]放到我的乳房上吧！",
+									"好孩子！用你那[npc2.fingers]玩弄我的乳头吧！",
+									"继续！把你那[npc2.fingers]曲起来一些！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Come on slut, you can get your [npc2.fingers] deeper into my breast than that!",
-									"Keep it up bitch! Get those [npc2.fingers] deep into my nipple!",
-									"Keep going slut! Curl your [npc2.fingers] up and put in a little more effort!");
+									"再用点力，你这个下贱的荡妇！我的乳房需要你[npc2.fingers]的进一步玩弄！",
+									"就这样坚持住，你这个欠操的臭婊子！我的乳头需要你[npc2.fingers]更尽心的玩弄！",
+									"就这样继续！荡妇！你卷曲那[npc2.fingers]还需要再用点力！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep fingering my nipple!",
-									"Keep going! My nipples love your attention!",
-									"Oh yes! I love getting my nipples fingered!");
+									"是这样的没错！请继续用指尖玩弄我发骚的乳头吧！",
+									"继续！我的骚乳头喜欢被你这样对待！",
+									"没错，对！我对我淫荡的乳头被人这样玩弄感到上瘾！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Keep fingering my nipple!",
-									"Keep going! I love this!",
-									"Oh yes!");
+									"请继续玩弄我的乳头！",
+									"不要停！我喜欢！",
+									"啊，太棒了！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your fingers out of my nipple!",
-									"Get out of my nipple! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！把你的手指从我的乳头里拔出来！",
+									"从我乳头里拔出去！停下来！求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"嗯~！",
+									"噢，没错！");
 							break;
 					}
 					break;
@@ -12322,45 +12322,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My nipples love your [npc2.cock]!",
-									"Good [npc2.girl]! Keep sliding that delicious cock of yours in and out of my tits!",
-									"What a good [npc2.girl]! Enjoy my tits as your reward now!");
+									"我的乳头喜欢你的[npc2.cock]！",
+									"乖[npc2.girl]！继续用你那美味的鸡巴抽插我的奶子！",
+									"没错没错，就这样草弄我的奶头吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"You like feeling my nipple gripping down on your cock?!",
-									"Good [npc2.girl]! Push your [npc2.cock] deep into my breast!",
-									"Keep going! Get that [npc2.cock] in deep like a good [npc2.girl]!");
+									"你喜欢品尝我用自己的骚乳头紧紧的贴住你肉棒的滋味吗？！",
+									"乖[npc2.girl]！把你的[npc2.cock]深深地插进我的奶子里！",
+									"加油哦！乖[npc2.girl]，把[npc2.cock]深深吃进去吧！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, my tits could use some attention from a little fuck toy like you!",
-									"Come on bitch! You can get your worthless [npc2.cock] deeper into my tits than that!",
-									"Fucking slut, put some more effort in! My breasts deserve better than your worthless [npc2.cock]!");
+									"就是这样的！你这个该死的荡妇！就像一个不值钱的性玩具一样服务我的奶头吧！",
+									"用力点！小浪货！让你这不值钱的[npc2.cock]更粗暴的玩弄我的奶头！",
+									"欠操的荡妇，再加把劲！我的奶子应该得到比你那没用的[npc2.cock]更好的！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my nipples! Yes, yes, yes!",
-									"Oh yes! Fuck my tits! I love your [npc2.cock]!");
+									"啊~！操我的奶子！用力操！别停！",
+									"不要停！再用力点！操我的乳头！啊~！嗯~！啊~！",
+									"真棒！操我的奶头吧！我爱上你的[npc2.cock]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits!",
-									"Don't stop! Fuck my nipples!",
-									"Oh yes! Fuck me!");
+									"没错没错，就这样草弄我的奶头吧！",
+									"别停！操我的乳头！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your cock out of my breast!",
-									"Get out of my nipple! Stop! Please!");
+									"停下来！住手！我已经不行了！求求你！",
+									"求你了，快停下！把你的鸡巴从我的奶子里拔出来！",
+									"从我乳头里拔出去！停下来！求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！对！用力点！",
+									"噢，是的！请操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -12368,45 +12368,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My tits love your [npc2.tail]! Keep going!",
-									"Good [npc2.girl]! Keep fucking my nipples with that [npc2.tail] of yours!",
-									"What a good [npc2.girl]! Enjoy my tits as your reward now!");
+									"我的奶头喜欢你的[npc2.tail]！就这样继续！",
+									"好[npc2.girl]！就这样继续用你的[npc2.tail]草弄我的乳头！",
+									"乖乖[npc2.girl]，用我的奶头奖励你吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Your [npc2.tail] feels so good!",
-									"Good [npc2.girl]! Push your [npc2.tail] deep into my breast!",
-									"Keep going! Get that [npc2.tail] deep into my tits like a good [npc2.girl]!");
+									"哈，没错！你[npc2.tail]的滋味品尝起来是如此的美妙！令人发狂！",
+									"乖宝贝！把你的[npc2.tail]伸到我的乳房上！",
+									"继续！像个乖[npc2.girl]一样，把[npc2.tail]深深地插进我的奶子里！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, get that [npc2.tail] deep into my nipple like a good little fuck toy!",
-									"Come on bitch! You can get your [npc2.tail] deeper into my tits than that!",
-									"Fucking bitch, put some more effort in! My breasts deserve better than some slut's [npc2.tail]!");
+									"就是这样的没错！你这个下贱的荡妇！把你那不值钱的、性玩具一样的[npc2.tail]就这样玩弄我的乳头吧！",
+									"臭母狗！给我再卖点力！用你的[npc2.tail]更粗暴的草弄我的乳头！",
+									"欠操的婊子，再加把劲！我的乳房应该得到比某些荡妇的[npc2.tail]更好的！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my nipples! Yes, yes, yes!",
-									"Oh yes! Fuck my tits! I love your [npc2.tail]!");
+									"啊~！操我的奶子！用力操！别停！",
+									"不要停！再用力点！操我的乳头！啊~！嗯~！啊~！",
+									"真棒！操我的奶头吧！我爱上你的[npc2.tail]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits!",
-									"Don't stop! Fuck my nipples!",
-									"Oh yes! Fuck me!");
+									"就是这样！草弄我的奶头吧！",
+									"别停！操我的乳头！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your tail out of my nipple!",
-									"Get out of my nipple! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！把你的尾巴从我的乳头里拔出来！",
+									"从我乳头里拔出去！停下来！求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！对！用力点！",
+									"噢，是的！请操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -12414,45 +12414,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, keep sucking on my nipples like a good [npc2.girl]!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy!",
-									"What a good [npc2.girl]! You love my tits, don't you?!");
+									"没错……没错！就这样继续吮吸我的乳头吧！令人上瘾的好孩子！",
+									"好[npc2.girl]！[npc2.tongue]一秒钟也不要停下来！",
+									"多乖的[npc2.girl]啊！你喜欢我的奶子，不是吗？");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Keep sucking on my nipples!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy!",
-									"Keep going! My tits love the feel of your [npc2.tongue]!");
+									"嗯啊！没错！就这样继续舔舐我的乳头吧！",
+									"好[npc2.girl]！[npc2.tongue]一秒钟也不要停下来！",
+									"就这样继续！我的奶头简直爱死了你[npc2.tongue]的玩弄！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, keep sucking on my tits like the worthless little fuck toy you are!",
-									"Come on bitch! Keep that [npc2.tongue] of yours busy!",
-									"Fucking bitch, put some more effort in! You know how lucky you are, being allowed to suck on my tits like this?!");
+									"就是这样，荡妇！你就像一个低贱的性爱玩具一样继续舔舐我的奶头吧！",
+									"使劲点，贱人！让你的[npc2.tongue]动作快些！",
+									"你这个该死的贱人！再专心点！你知道被允许吮吸我的奶头是多幸运的一件事吗？！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! I love the feeling of your lips on my tits! Don't stop!",
-									"Don't stop! Suck on my tits! Yes, yes, yes!",
-									"Oh yes! Lick my nipples! I love the feel of your [npc2.tongue]!");
+									"啊~！我喜欢你的嘴唇贴在我奶子上的感觉！别停！",
+									"别停！吸我的奶子！啊~！啊~！啊~！",
+									"哦~！没错！就这样舔我的乳头！我喜欢你[npc2.tongue]的感觉！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Don't stop!",
-									"Don't stop! I love your [npc2.tongue]!",
-									"Oh yes! Suck on my tits!");
+									"对！不要停下来！",
+									"不要停！我喜欢你的[npc2.tongue]！",
+									"啊啊~吸我的奶子！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get away from me!",
-									"Leave me alone! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！离我远点！",
+									"滚开！让我一个人呆着！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep that [npc2.tongue] of yours busy!",
-									"Oh yeah! Keep going!",
-									"Deeper! Don't stop!");
+									"啊~！就这样让你的[npc2.tongue]忙起来！",
+									"太棒了！继续继续！",
+									"更深入些！不要停下来！");
 							break;
 					}
 					break;
@@ -12460,15 +12460,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Go away! Leave me alone!",
-									"Stop it! Just go away!",
-									"Please stop! Don't do this!");
+									"滚开！让我一个人呆着！",
+									"住手！快离开我！",
+									"请你停下来！不要再继续这样做了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"爽！",
+									"哦，爽死了！");
 							break;
 					}
 			}
@@ -12493,45 +12493,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, be a good [npc2.girl] now and push your [npc2.fingers] deeper into my [npc.crotchNipple]!",
-									"Good [npc2.girl]! Keep those [npc2.fingers] of yours busy in my [npc.crotchNipple]!",
-									"What a good [npc2.girl]! My [npc.crotchNipples] love the feeling of your [npc2.fingers]!");
+									"是这样的没错！好孩子！现在开始把你那[npc2.fingers]更深的插入我的[npc.crotchNipple]里！",
+									"乖[npc2.girl]！让你那[npc2.fingers]在我的[npc.crotchNipple]里忙碌起来！我需要你的更热情的回应！",
+									"多么优秀的性爱专家！我的[npc.crotchNipples]简直爱死了你[npc2.fingers]在里面抽插的滋味！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, push your [npc2.fingers] deep into my [npc.crotchNipple]!",
-									"Good [npc2.girl]! Get those [npc2.fingers] deep into my [npc.crotchNipple]!",
-									"Keep going! Curl your [npc2.fingers] up a bit!");
+									"就是这样，把你那[npc2.fingers]伸进我的[npc.crotchNipple]里！",
+									"好[npc2.girl]！让我的[npc.crotchNipple]更深的感受你那[npc2.fingers]吧！",
+									"继续！把你那[npc2.fingers]曲起来一些！这样会更爽！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Come on slut, you can get your [npc2.fingers] deeper into my [npc.crotchNipple] than that!",
-									"Keep it up bitch! Get those [npc2.fingers] deep into my [npc.crotchNipple]!",
-									"Keep going slut! Curl your [npc2.fingers] up and put in a little more effort!");
+									"使劲点！荡妇！你快把你那[npc2.fingers]更深的插入我的[npc.crotchNipple]里！",
+									"就这样坚持住，贱人！让你那[npc2.fingers]就这样留在我的[npc.crotchNipple]里！",
+									"就这样继续，娼妇！给你蜷曲那[npc2.fingers]再用点力！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep fingering my [npc.crotchNipple]!",
-									"Keep going! My [npc.crotchNipples] love your attention!",
-									"Oh yes! I love getting my [npc.crotchNipples] fingered!");
+									"没错！就这样继续抚摸我的[npc.crotchNipple]！",
+									"不要停下来！我的[npc.crotchNipples]对你这样的光临感到上瘾！",
+									"没错，没错！我爱死了我的[npc.crotchNipples]被你的指尖这样玩弄！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Keep fingering my [npc.crotchNipple]!",
-									"Keep going! I love this!",
-									"Oh yes!");
+									"就这样继续触摸我的[npc.crotchNipple]吧！",
+									"不要停下来！我爱死这样的滋味了！",
+									"噢，好爽！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your fingers out of my [npc.crotchNipple]!",
-									"Get out of my [npc.crotchNipple]! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，别再这样了！把你的手指从我的[npc.crotchNipple]里拿出来！",
+									"放开我的[npc.crotchNipple]！求你了！快停下来！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"嗯~！",
+									"哦，爽死了！");
 							break;
 					}
 					break;
@@ -12539,45 +12539,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My [npc.crotchNipples] love your [npc2.cock]!",
-									"Good [npc2.girl]! Keep sliding that delicious cock of yours in and out of my [npc.crotchNipples]!",
-									"What a good [npc2.girl]! Enjoy my [npc.crotchNipples] as your reward now!");
+									"我的[npc.crotchNipples]喜欢你的[npc2.cock]！",
+									"好[npc2.girl]！继续把你那美味的鸡巴在我的[npc.crotchNipples]里抽插！",
+									"多好的[npc2.girl]！现在就享受我的[npc.crotchNipples]作为你的奖励吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"You like feeling my [npc.crotchNipple] gripping down on your cock?!",
-									"Good [npc2.girl]! Push your [npc2.cock] deep into my [npc.crotchNipple]!",
-									"Keep going! Get that [npc2.cock] in deep like a good [npc2.girl]!");
+									"你喜欢我淫荡的[npc.crotchNipple]就这样死死的缠住你的肉棒吗？！",
+									"听话的乖[npc2.girl]！用你的[npc2.cock]深入我的[npc.crotchNipple]里去吧！",
+									"加油哦！乖[npc2.girl]，把[npc2.cock]深深吃进去吧！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, my [npc.crotchNipples] could use some attention from a little fuck toy like you!",
-									"Come on bitch! You can get your worthless [npc2.cock] deeper into my [npc.crotchNipples] than that!",
-									"Fucking slut, put some more effort in! My [npc.crotchNipple]s deserve better than your worthless [npc2.cock]!");
+									"就是这样的！你这个该死的荡妇！就像一个不值钱的性玩具一样服务我的[npc.crotchNipples]吧！",
+									"行不行啊，浪货！把你一文不值的[npc2.cock]插进我的[npc.crotchNipples]，再深点！",
+									"欠操的荡妇，再加把劲！我的[npc.crotchNipple]应该得到比你那没用的[npc2.cock]更好的！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchNipples]! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my [npc.crotchNipples]! Yes, yes, yes!",
-									"Oh yes! Fuck my [npc.crotchNipples]! I love your [npc2.cock]!");
+									"啊~！操我的[npc.crotchNipples]！用力操！不要停！",
+									"不要停！用力点！操我的[npc.crotchNipples]！啊~！啊~！啊~！",
+									"哦~！啊~！操我的[npc.crotchNipples]！我太爱你的[npc2.cock]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchNipples]!",
-									"Don't stop! Fuck my [npc.crotchNipples]!",
-									"Oh yes! Fuck me!");
+									"啊·！操我的[npc.crotchNipples]！",
+									"不要停！操我的[npc.crotchNipples]！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your cock out of my [npc.crotchNipple]!",
-									"Get out of my [npc.crotchNipple]! Stop! Please!");
+									"住手！住手吧！求你了！",
+									"求你了，别再继续了！把你的鸡巴从我的[npc.crotchNipple]里抽出来！",
+									"放开我的[npc.crotchNipple]！求你了！快停下来！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！对！用力点！",
+									"噢，就是这样！请操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -12585,45 +12585,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My [npc.crotchNipples] love your [npc2.tail]! Keep going!",
-									"Good [npc2.girl]! Keep fucking my [npc.crotchNipples] with that [npc2.tail] of yours!",
-									"What a good [npc2.girl]! Enjoy my [npc.crotchNipples] as your reward now!");
+									"我的[npc.crotchNipples]爱死了你[npc2.tail]的滋味！就这样继续干我！离开它的话我会忍不住疯掉的！",
+									"优秀的好孩子！就这样继续用你的[npc2.tail]用力草弄我的[npc.crotchNipples]吧！",
+									"多好的[npc2.girl]！现在就享受我的[npc.crotchNipples]作为你的奖励吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Your [npc2.tail] feels so good!",
-									"Good [npc2.girl]! Push your [npc2.tail] deep into my [npc.crotchNipple]!",
-									"Keep going! Get that [npc2.tail] deep into my [npc.crotchNipples] like a good [npc2.girl]!");
+									"啊，没错！你的[npc2.tail]尝起来味道真是棒极了！",
+									"听话的乖[npc2.girl]！用你的[npc2.tail]深入我的[npc.crotchNipple]里去吧！",
+									"继续！[npc2.tail]再插进我[npc.crotchNipples]里一些，这才是乖[npc2.girl]！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, get that [npc2.tail] deep into my [npc.crotchNipple] like a good little fuck toy!",
-									"Come on bitch! You can get your [npc2.tail] deeper into my [npc.crotchNipples] than that!",
-									"Fucking bitch, put some more effort in! My [npc.crotchNipple]s deserve better than some slut's [npc2.tail]!");
+									"就是这样的荡妇！用你那像性玩具一样的低贱[npc2.tail]进入到我的[npc.crotchNipple]里去吧！",
+									"用力点！欠草的贱人！你快把你的[npc2.tail]更深的插入我的[npc.crotchNipples]里！",
+									"欠操的婊子，再加把劲！我的[npc.crotchNipple]应该得到比某些荡妇的[npc2.tail]更好的！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchNipples]! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my [npc.crotchNipples]! Yes, yes, yes!",
-									"Oh yes! Fuck my [npc.crotchNipples]! I love your [npc2.tail]!");
+									"啊~！操我的[npc.crotchNipples]！用力操！不要停！",
+									"不要停！用力点！操我的[npc.crotchNipples]！啊~！啊~！啊~！",
+									"太棒了~操我的[npc.crotchNipples]！我要爱上你的[npc2.tail]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchNipples]!",
-									"Don't stop! Fuck my [npc.crotchNipples]!",
-									"Oh yes! Fuck me!");
+									"好舒服！操进我的[npc.crotchNipples]吧！",
+									"不要停下~操我的[npc.crotchNipples]吧！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your tail out of my [npc.crotchNipple]!",
-									"Get out of my [npc.crotchNipple]! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，不行了！把尾巴从我的[npc.crotchNipple]抽出去吧！",
+									"放开我的[npc.crotchNipple]！求你了！快停下来！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！是的！我还要更多！",
+									"哦太棒了！操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -12631,45 +12631,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, keep sucking on my [npc.crotchNipples] like a good [npc2.girl]!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy!",
-									"What a good [npc2.girl]! You love my [npc.crotchNipples], don't you?!");
+									"没错，没错！你要像个乖孩子一样吮吸我的[npc.crotchNipples]！",
+									"好[npc2.girl]！让你的[npc2.tongue]更用力的动起来吧！",
+									"真是个乖[npc2.girl]！你还真喜欢我的[npc.crotchNipples]呢~");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Keep sucking on my [npc.crotchNipples]!",
-									"Good [npc2.girl]! Get that [npc2.tongue] of yours deep into my [npc.crotchNipples]!",
-									"Keep going! My [npc.crotchNipples] love the feel of your [npc2.tongue]!");
+									"就是这样没错！继续吮吸我的[npc.crotchNipples]吧！",
+									"好[npc2.girl]！把你的[npc2.tongue]深入我的[npc.crotchNipples]里去！",
+									"继续哦！我的[npc.crotchNipples]很喜欢你[npc2.tongue]的触感呢！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, keep sucking on my [npc.crotchNipples] like the worthless little fuck toy you are!",
-									"Come on bitch! Get that [npc2.tongue] of yours deeper into my [npc.crotchNipples]!",
-									"Fucking bitch, put some more effort in! You know how lucky you are, being allowed to suck on my [npc.crotchNipples] like this?!");
+									"就是这样的！荡妇！像个不值钱的性玩具一样舔舐我的[npc.crotchNipples]吧！",
+									"努把力！贱人！让你的[npc2.tongue]进入我的[npc.crotchNipples]深处！",
+									"欠操的婊子，再加把劲！你知道能被允许这样吮吸我的[npc.crotchNipples]你有多幸运吗？");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! I love the feeling of your lips on my [npc.crotchNipples]! Don't stop!",
-									"Don't stop! Suck on my [npc.crotchNipples]! Yes, yes, yes!",
-									"Oh yes! Lick my [npc.crotchNipples]! I love your [npc2.tongue]! Get it deeper!");
+									"我喜欢你的嘴唇贴在我的[npc.crotchNipples]上的感觉！不要停！",
+									"不要停！吸我的[npc.crotchNipples]！啊~！啊~！啊~！",
+									"嗯啊~舔我的[npc.crotchNipples]吧~！我爱上你的[npc2.tongue]了！再深一点！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Don't stop!",
-									"Don't stop! I love your [npc2.tongue]!",
-									"Oh yes! Suck on my [npc.crotchNipples]!");
+									"太棒了！别停！",
+									"继续~啊~我爱上你的[npc2.tongue]了！",
+									"好舒服……吸吸我的[npc.crotchNipples]吧！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Take your tongue out of my [npc.crotchNipple]!",
-									"Leave me alone! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求求你，不要再继续了，把舌头从我[npc.crotchNipple]里拔出去！",
+									"滚开！让我一个人呆着！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Get that tongue deeper!",
-									"Oh yeah! Keep going!",
-									"Deeper! Don't stop!");
+									"对！舌头再深一些！",
+									"太棒了！继续继续！",
+									"更深入些！不要停下来！");
 							break;
 					}
 					break;
@@ -12677,15 +12677,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Go away! Leave me alone!",
-									"Stop it! Just go away!",
-									"Please stop! Don't do this!");
+									"滚开！让我一个人呆着！",
+									"住手！快放开我！",
+									"请你停下来！不要再继续这样做了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"没错！",
+									"哦，爽死了！");
 							break;
 					}
 			}
@@ -12710,45 +12710,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, be a good [npc2.girl] and keep fondling my breasts!",
-									"Good [npc2.girl]! Keep those [npc2.hands] of yours busy with my breasts!",
-									"What a good [npc2.girl]! My tits love all of this attention!");
+									"就是这样！好[npc2.girl]！就这样抚摸我的乳房！",
+									"好孩子！让你玩弄我乳房的[npc2.hands]更加忙碌起来！",
+									"多么精通性爱的好孩子！我的奶头简直爱死了你的蹂躏！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, keep fondling my breasts!",
-									"Good [npc2.girl]! Keep those [npc2.hands] of yours busy with my breasts!",
-									"Keep going! My tits love all of this attention!");
+									"就是这样！继续抚摸我的胸部吧！",
+									"好[npc2.girl]！让你玩弄我胸部的[npc2.hands]更加忙碌一些吧！",
+									"就这样继续！我的奶头简直爱死了你这样蹂躏的滋味！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Come on slut, keep fondling my breasts!",
-									"Keep it up bitch! Keep those [npc2.hands] of yours busy with my breasts!",
-									"Keep going slut! My tits need more attention!");
+									"卖力点！贱人！我命令你继续爱抚我的胸部！",
+									"就这样坚持住！你这个该死的婊子！就让你的[npc2.hands]更加粗暴的玩弄我的胸部吧？！",
+									"继续！臭婊子！我的奶头需要得到更多的照顾！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep fondling my breasts!",
-									"Keep going! My tits love all this attention!",
-									"Oh yes! I love getting my breasts fondled!");
+									"对对，就是这样！我的胸部需要你的更多爱抚！",
+									"就这样继续！我的奶头简直爱死了你这样的淫荡行为！",
+									"哈，没错！我的胸部爱上了被你这样爱抚的感觉！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Keep fondling my breasts!",
-									"Keep going! I love this!",
-									"Oh yes!");
+									"请不要停下对我胸部的爱抚！",
+									"不要停！我喜欢！",
+									"噢，好爽！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get away from my breasts!",
-									"Get away from my breasts! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"别碰我的胸！打住！求你了！",
+									"别碰我的胸！打住！求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"爽！",
+									"哦，爽死了！");
 							break;
 					}
 					break;
@@ -12756,45 +12756,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My tits love your [npc2.cock]!",
-									"Good [npc2.girl]! Keep sliding that delicious cock of yours between my tits!",
-									"What a good [npc2.girl]! Enjoy my tits as your reward now!");
+									"我的奶子爱上你的[npc2.cock]了！",
+									"乖乖[npc2.girl]~接着在我奶子中间抽送你美味的大肉棒吧！",
+									"没错没错，就这样操弄我的奶头吧！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"You like feeling my tits gripping down around your cock?!",
-									"Good [npc2.girl]! Push your [npc2.cock] deep between my breasts!",
-									"Keep going! Get that [npc2.cock] between my tits like a good [npc2.girl]!");
+									"你喜欢我的骚奶头紧紧的贴在你肉棒上的滋味吗？！",
+									"乖[npc2.girl]~把你的[npc2.cock]深深插进我乳房里吧！",
+									"继续！让你的[npc2.cock]在我的奶头间摩擦吧！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, my tits could use some attention from a little fuck toy like you!",
-									"Come on bitch! You can get your worthless [npc2.cock] deeper between my tits than that!",
-									"Fucking slut, put some more effort in! My breasts deserve better than your worthless [npc2.cock]!");
+									"就是这样的！你这个该死的荡妇！就像一个不值钱的性玩具一样服务我的奶头吧！",
+									"行不行啊，浪货！把你一文不值的[npc2.cock]插进我的奶子，再深点！",
+									"欠操的荡妇，再加把劲！我的乳房应该得到比你那没用的[npc2.cock]更好的！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my tits! Yes, yes, yes!",
-									"Oh yes! Fuck my tits! I love your [npc2.cock]!");
+									"啊~！操我的奶子！用力操！别停！",
+									"不要停！再用力点！操我的奶子！嗯~！啊~！啊~！",
+									"真棒！操我的奶头吧！我爱上你的[npc2.cock]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits!",
-									"Don't stop! Fuck my breasts!",
-									"Oh yes! Fuck me!");
+									"没错没错，就这样操弄我的奶头吧！",
+									"别停！操我的奶子！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get your cock away from my breasts!",
-									"Get away from me! Stop! Please!");
+									"住手！住手吧！求你了！",
+									"求你了，快停下！把你的鸡巴从我胸里抽出来！",
+									"打住！请你离我远点！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！对！用力点！",
+									"哦太棒了！操我！",
+									"用力！别停！");
 							break;
 					}
 					break;
@@ -12802,45 +12802,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My tits love your [npc2.tail]!",
-									"Good [npc2.girl]! Keep sliding that delicious tail of yours between my tits!",
-									"What a good [npc2.girl]! Enjoy my tits as your reward now!");
+									"我的奶头爱死了你的[npc2.tail]！",
+									"好[npc2.girl]！继续在我的乳头间滑动你那美味的尾巴吧！",
+									"多么令人上瘾的存在！请尽情享用我的乳头吧！这是我对你的奖励！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"You like feeling my tits gripping down around your tail?!",
-									"Good [npc2.girl]! Push your [npc2.tail] deep between my breasts!",
-									"Keep going! Get that [npc2.tail] between my tits like a good [npc2.girl]!");
+									"你喜欢我奶头紧紧缠在你尾巴的滋味吗？！",
+									"乖[npc2.girl]~把你的[npc2.tail]深深插进我乳房里吧！",
+									"继续！让你的[npc2.tail]在我的奶头间摩擦吧！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, my tits could use some attention from a little fuck toy like you!",
-									"Come on bitch! You can get your worthless [npc2.tail] deeper between my tits than that!",
-									"Fucking slut, put some more effort in! My breasts deserve better than your worthless [npc2.tail]!");
+									"就是这样的！你这个该死的荡妇！就像一个不值钱的性玩具一样服务我的奶头吧！",
+									"用力点！人尽可夫的婊子！让你这不值钱的[npc2.tail]更粗暴的玩弄我的奶头！",
+									"他妈的臭婊子！再专心点！我的胸部肯定比你这不值一提的[npc2.tail]要更好！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my tits! Yes, yes, yes!",
-									"Oh yes! Fuck my tits! I love your [npc2.tail]!");
+									"啊~！操我的奶子！用力操！别停！",
+									"不要停！再用力点！操我的奶子！嗯~！啊~！啊~！",
+									"真棒！操我的奶头吧！我爱上你的[npc2.tail]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my tits!",
-									"Don't stop! Fuck my breasts!",
-									"Oh yes! Fuck me!");
+									"没错没错，就这样草弄我的奶头吧！",
+									"别停！操我的奶子！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get your tail away from my breasts!",
-									"Get away from me! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！把你的尾巴从我胸里拔出来！",
+									"打住！请你离我远点！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！是的！我还要更多！",
+									"噢，就是这样！请操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -12848,45 +12848,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, keep sucking on my tits like a good [npc2.girl]!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy on my tits!",
-									"What a good [npc2.girl]! You love my breasts, don't you?!");
+									"就是这样的，继续吮吸我的奶头吧，好[npc2.girl]！",
+									"乖[npc2.girl]！让你玩弄我奶头的[npc2.tongue]更加忙碌一些！",
+									"多么棒的[npc2.girl]！你喜欢我的胸部，我说的没错吧？！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Keep sucking on my tits!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy on my tits!",
-									"Keep going! My tits love the feel of your [npc2.tongue]!");
+									"对对，没错！就这样继续吮吸我的奶头吧！",
+									"乖[npc2.girl]！让你玩弄我奶头的[npc2.tongue]更加忙碌一些！",
+									"就这样继续！我的奶头简直爱死了你[npc2.tongue]的玩弄！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, keep sucking on my tits like the worthless little fuck toy you are!",
-									"Come on bitch! Keep that [npc2.tongue] of yours busy on my tits!",
-									"Fucking bitch, put some more effort in! You know how lucky you are, being allowed to suck on my tits like this?!");
+									"就是这样的！你这个荡妇！像个不值钱的性玩具一样继续服务我的奶头吧！",
+									"再用点力！你这个下贱的母狗！用你的[npc2.tongue]更加粗暴的玩弄我的奶头！",
+									"你这个该死的贱人！再专心点！你知道被允许吮吸我的奶头是多幸运的一件事吗？！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! I love the feeling of your lips on my tits! Don't stop!",
-									"Don't stop! Suck on my tits! Yes, yes, yes!",
-									"Oh yes! Lick my nipples! I love your [npc2.tongue]!");
+									"我喜欢你的嘴唇贴在我奶子上的感觉！别停！",
+									"别停！吸我的奶子！啊~！啊~！啊~！",
+									"真棒！舔我的奶头吧！我爱上你的[npc2.tongue]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Don't stop!",
-									"Don't stop! I love your [npc2.tongue]!",
-									"Oh yes! Suck on my tits!");
+									"太棒了！别停！",
+									"别停！我喜欢你的[npc2.tongue]！",
+									"啊啊~吸我的奶子！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get away from me!",
-									"Leave me alone! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！离我远点！",
+									"滚开！让我一个人呆着！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep going!",
-									"Oh yeah! Keep going!",
-									"Deeper! Don't stop!");
+									"就是这样！继续！",
+									"太棒了！继续继续！",
+									"再深一点！不要停下来！");
 							break;
 					}
 					break;
@@ -12894,15 +12894,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Go away! Leave me alone!",
-									"Stop it! Just go away!",
-									"Please stop! Don't do this!");
+									"走开！别烦我！",
+									"住手！快放开我！",
+									"请住手吧！不要再这么做了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"嗯~",
+									"哦，爽死了！");
 							break;
 					}
 			}
@@ -12928,45 +12928,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, be a good [npc2.girl] and keep fondling my [npc.crotchBoobs]!",
-									"Good [npc2.girl]! Keep those [npc2.hands] of yours busy with my [npc.crotchBoobs]!",
-									"What a good [npc2.girl]! My [npc.crotchBoobs] love all of this attention!");
+									"就是这样，当个好[npc2.girl]，继续挤好你的[npc.crotchBoobs]！",
+									"好[npc2.girl]！让你这对[npc2.hands]忙起来，继续服侍我的[npc.crotchBoobs]！",
+									"多么棒的[npc2.girl]！我的[npc.crotchBoobs]爱死你这样的照顾了！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, keep fondling my [npc.crotchBoobs]!",
-									"Good [npc2.girl]! Keep those [npc2.hands] of yours busy with my [npc.crotchBoobs]!",
-									"Keep going! My [npc.crotchBoobs] love all of this attention!");
+									"就是这样！继续抚摸我的[npc.crotchBoobs]！",
+									"好[npc2.girl]！让你这对[npc2.hands]忙起来，继续服侍我的[npc.crotchBoobs]！",
+									"继续！我[npc.crotchBoobs]爱死了这样的举动！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Come on slut, keep fondling my [npc.crotchBoobs]!",
-									"Keep it up bitch! Keep those [npc2.hands] of yours busy with my [npc.crotchBoobs]!",
-									"Keep going slut! My [npc.crotchBoobs] need more attention!");
+									"再认真点！你这个荡妇！就这样继续抚摸我的[npc.crotchBoobs]！",
+									"就这样坚持住，该死的母狗！让你的[npc2.hands]更好的服务我的[npc.crotchBoobs]！",
+									"继续！荡妇！我的[npc.crotchBoobs]需要更多的爱抚！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep fondling my [npc.crotchBoobs]!",
-									"Keep going! My [npc.crotchBoobs] love all this attention!",
-									"Oh yes! I love getting my [npc.crotchBoobs] fondled!");
+									"没错！就这样继续抚摸我的[npc.crotchBoobs]！",
+									"继续！我的[npc.crotchBoobs]简直爱死了你这样的对待！",
+									"是的，没错！我的[npc.crotchBoobs]喜欢这样的抚摸！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Keep fondling my [npc.crotchBoobs]!",
-									"Keep going! I love this!",
-									"Oh yes!");
+									"继续抚摸我的[npc.crotchBoobs]！",
+									"继续！我爱死了这样的滋味！",
+									"噢，好爽！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get away from my [npc.crotchBoobs]!",
-									"Get away from my [npc.crotchBoobs]! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！离我的[npc.crotchBoobs]远点！",
+									"从我[npc.crotchBoobs]里拔出去！停下来！求你了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"嗯~！",
+									"哦，爽死了！");
 							break;
 					}
 					break;
@@ -12974,45 +12974,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My [npc.crotchBoobs] love your [npc2.cock]!",
-									"Good [npc2.girl]! Keep sliding that delicious cock of yours between my [npc.crotchBoobs]!",
-									"What a good [npc2.girl]! Enjoy my [npc.crotchBoobs] as your reward now!");
+									"我的[npc.crotchBoobs]爱死你的[npc2.cock]了！",
+									"乖[npc2.girl]！继续用你那美味的鸡巴在我的[npc.crotchBoobs]之间抽插！",
+									"多么令人上瘾的[npc2.girl]！享用我的[npc.crotchBoobs]吧！这是对你的奖励！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"You like feeling my [npc.crotchBoobs] gripping down around your cock?!",
-									"Good [npc2.girl]! Push your [npc2.cock] deep between my [npc.crotchBoobs]!",
-									"Keep going! Get that [npc2.cock] between my [npc.crotchBoobs] like a good [npc2.girl]!");
+									"你喜欢我用[npc.crotchBoobs]夹着你的肉棒吗？！",
+									"好[npc2.girl]！把你的[npc2.cock]深深地插进我的[npc.crotchBoobs里]！",
+									"继续继续！让你的[npc2.cock]在我的[npc.crotchBoobs]之间疯狂抽插吧，乖[npc2.girl]！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, my [npc.crotchBoobs] could use some attention from a little fuck toy like you!",
-									"Come on bitch! You can get your worthless [npc2.cock] deeper between my [npc.crotchBoobs] than that!",
-									"Fucking slut, put some more effort in! My [npc.crotchBoobs] deserve better than your worthless [npc2.cock]!");
+									"就这样小骚货，把我的[npc.crotchBoobs]当成一个廉价性玩具一样用吧！",
+									"行不行啊，浪货！把你一文不值的[npc2.cock]插进我的[npc.crotchBoobs]，再深点！",
+									"欠操的荡妇，再加把劲！我的[npc.crotchBoobs]应该得到比你那没用的[npc2.cock]更好的！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchBoobs]! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my [npc.crotchBoobs]! Yes, yes, yes!",
-									"Oh yes! Fuck my [npc.crotchBoobs]! I love your [npc2.cock]!");
+									"继续！草我的[npc.crotchBoobs]！加把劲！别停啊！",
+									"继续继续！用力草我的[npc.crotchBoobs]！啊~！嗯~！啊~！",
+									"啊啊啊啊啊啊啊！操我的[npc.crotchBoobs]！我太爱你的[npc2.cock]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchBoobs]!",
-									"Don't stop! Fuck my [npc.crotchBoobs]!",
-									"Oh yes! Fuck me!");
+									"啊~！就这样操我的[npc.crotchBoobs]！",
+									"不要停！操我的[npc.crotchBoobs]！",
+									"哦就是这样！操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get your cock away from my [npc.crotchBoobs]!",
-									"Get away from me! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！把你的鸡巴从我的[npc.crotchBoobs]上拿开！",
+									"打住！请你离我远点！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！对！用力点！",
+									"噢，是的！请操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -13020,45 +13020,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"My [npc.crotchBoobs] love your [npc2.tail]!",
-									"Good [npc2.girl]! Keep sliding that delicious tail of yours between my [npc.crotchBoobs]!",
-									"What a good [npc2.girl]! Enjoy my [npc.crotchBoobs] as your reward now!");
+									"我的[npc.crotchBoobs]爱死了你的[npc2.tail]！",
+									"好[npc2.girl]！继续在我的[npc.crotchBoobs]之间滑动你那美味的尾巴！",
+									"多么令人上瘾的[npc2.girl]！享用我的[npc.crotchBoobs]吧！这是对你的奖励！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"You like feeling my [npc.crotchBoobs] gripping down around your tail?!",
-									"Good [npc2.girl]! Push your [npc2.tail] deep between my [npc.crotchBoobs]!",
-									"Keep going! Get that [npc2.tail] between my [npc.crotchBoobs] like a good [npc2.girl]!");
+									"你喜欢我的[npc.crotchBoobs]紧紧吸住你尾巴的滋味，我说的没错吧？！",
+									"好[npc2.girl]！把你的[npc2.tail]深深地插进我的[npc.crotchBoobs里]！",
+									"继续继续！让你的[npc2.tail]在我的[npc.crotchBoobs]之间疯狂抽插吧，[npc2.girl]！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, my [npc.crotchBoobs] could use some attention from a little fuck toy like you!",
-									"Come on bitch! You can get your worthless [npc2.tail] deeper between my [npc.crotchBoobs] than that!",
-									"Fucking slut, put some more effort in! My [npc.crotchBoobs] deserve better than your worthless [npc2.tail]!");
+									"就这样小骚货，把我的[npc.crotchBoobs]当成一个廉价性玩具一样用吧！",
+									"来吧小婊砸！把你那没用的[npc2.tail]插进我[npc.crotchBoobs]更深处吧！",
+									"你他妈的，行不行啊！你那没用的[npc2.tail]完全配不上我的[npc.crotchBoobs]！");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchBoobs]! Fuck them harder! Don't stop!",
-									"Don't stop! Harder! Fuck my [npc.crotchBoobs]! Yes, yes, yes!",
-									"Oh yes! Fuck my [npc.crotchBoobs]! I love your [npc2.tail]!");
+									"继续！草我的[npc.crotchBoobs]！加把劲！别停啊！",
+									"继续继续！用力草我的[npc.crotchBoobs]！啊~！嗯~！啊~！",
+									"啊啊啊啊啊啊啊！操我的[npc.crotchBoobs]！我太爱你的[npc2.tail]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Fuck my [npc.crotchBoobs]!",
-									"Don't stop! Fuck my [npc.crotchBoobs]!",
-									"Oh yes! Fuck me!");
+									"啊~！就这样操我的[npc.crotchBoobs]！",
+									"不要停！操我的[npc.crotchBoobs]！",
+									"没错！就这样操我！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get your tail away from my [npc.crotchBoobs]!",
-									"Get away from me! Stop! Please!");
+									"停下来！停下来！不要再这样继续了！求求你了！",
+									"求你了，不要啊！尾巴离我[npc.crotchBoobs]远点！",
+									"打住！请你离我远点！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck me! Yes! Harder!",
-									"Oh yeah! Fuck me!",
-									"Harder! Don't stop!");
+									"操我！是的！我还要更多！",
+									"哦太棒了！操我！",
+									"用力点！不要停下来！");
 							break;
 					}
 					break;
@@ -13066,45 +13066,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case DOM_GENTLE:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right, keep sucking on my [npc.crotchBoobs] like a good [npc2.girl]!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy on my [npc.crotchBoobs]!",
-									"What a good [npc2.girl]! You love my [npc.crotchBoobs], don't you?!");
+									"没错，好[npc2.girl]，用力吸我的[npc.crotchBoobs]！",
+									"乖[npc2.girl]！让你的[npc2.tongue]在我的[npc.crotchBoobs]上忙活起来！",
+									"多乖的[npc2.girl]啊！你喜欢我的[npc.crotchBoobs]，是不是？！");
 							break;
 						case DOM_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Oh yes! Keep sucking on my [npc.crotchBoobs]!",
-									"Good [npc2.girl]! Keep that [npc2.tongue] of yours busy on my [npc.crotchBoobs]!",
-									"Keep going! My [npc.crotchBoobs] love the feel of your [npc2.tongue]!");
+									"啊啊啊啊！接着吸我的[npc.crotchBoobs]！",
+									"乖[npc2.girl]！让你的[npc2.tongue]在我的[npc.crotchBoobs]上忙活起来！",
+									"就这样继续！我的[npc.crotchBoobs]简直爱死了你[npc2.tongue]的玩弄！");
 							break;
 						case DOM_ROUGH:
 							returnedLine = UtilText.returnStringAtRandom(
-									"That's right slut, keep sucking on my [npc.crotchBoobs] like the worthless little fuck toy you are!",
-									"Come on bitch! Keep that [npc2.tongue] of yours busy on my [npc.crotchBoobs]!",
-									"Fucking bitch, put some more effort in! You know how lucky you are, being allowed to suck on my [npc.crotchBoobs] like this?!");
+									"就这样小骚货，像个垃圾奶头乐一样吸我的[npc.crotchBoobs]！",
+									"行不行啊，浪货！用你一文不值的[npc2.tongue]好好舔我的[npc.crotchBoobs]！",
+									"欠操的婊子，再加把劲！能被允许这样吮吸我的[npc.crotchBoobs]你知道你有多幸运吗？");
 							break;
 						case SUB_EAGER:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! I love the feeling of your lips on my [npc.crotchBoobs]! Don't stop!",
-									"Don't stop! Suck on my [npc.crotchBoobs]! Yes, yes, yes!",
-									"Oh yes! Lick my nipples! I love your [npc2.tongue]!");
+									"啊啊啊啊！我爱死你在我[npc.crotchBoobs]狂舔一番的感觉了！别停下来啊！",
+									"继续继续！吸住我的[npc.crotchBoobs]！太棒了，太棒了！",
+									"真棒！舔我的奶头吧！我爱上你的[npc2.tongue]了！");
 							break;
 						case SUB_NORMAL:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Don't stop!",
-									"Don't stop! I love your [npc2.tongue]!",
-									"Oh yes! Suck on my [npc.crotchBoobs]!");
+									"没错！别停！",
+									"不要停！我喜欢你的[npc2.tongue]！",
+									"真厉害！吸我的[npc.crotchBoobs]！");
 							break;
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Stop it! Stop! Please!",
-									"Please, no more! Get away from me!",
-									"Leave me alone! Stop! Please!");
+									"停下来，停下来！求求你了！",
+									"求你了，快停下！离我远点！",
+									"行行好让我一个人静静吧！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Yes! Keep going!",
-									"Oh yeah! Keep going!",
-									"Deeper! Don't stop!");
+									"就是这样！继续！",
+									"太棒了！继续继续！",
+									"更深入些！不要停下来！");
 							break;
 					}
 					break;
@@ -13112,15 +13112,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					switch(Main.sex.getSexPace(this)) {
 						case SUB_RESISTING:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Go away! Leave me alone!",
-									"Stop it! Just go away!",
-									"Please stop! Don't do this!");
+									"走开！别烦我！",
+									"住手！快离开我！",
+									"请你停下来！不要再继续这样做了！");
 							break;
 						default:
 							returnedLine = UtilText.returnStringAtRandom(
-									"Fuck!",
-									"Yeah!",
-									"Oh yeah!");
+									"妈的！",
+									"嗯~！",
+									"哦，爽死了！");
 							break;
 					}
 			}
@@ -13152,45 +13152,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.fingers] deep in your ass, don't you?",
-										"I love fingering cute little asses like yours!",
-										"What a good [npc2.girl]! Your ass loves the feeling of my [npc1.fingers], doesn't it?"));
+										"真棒[npc2.girl]，你好像挺喜欢我的[npc1.fingers]插进你后庭的感觉呢，难道不是吗？",
+										"我就喜欢和你这种可爱的小屁眼指交！",
+										"多乖的[npc2.girl]啊！你的屁股喜欢我[npc1.fingers]的感觉，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.fingers] deep in your ass, don't you?!",
-										"I love fingering cute little asses like yours!",
-										"You like it when I curl my [npc1.fingers] up inside your ass, like <i>this</i>?!"));
+										"你好像挺喜欢我的[npc1.fingers]插进你后庭的感觉呢，难道不是吗？！",
+										"我就喜欢和可爱的小屁眼指交，你的就很不错哦！",
+										"你喜欢我把[npc1.fingers]卷进你的屁眼里，像是<i>这样</i>？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! I can feel your horny little ass clenching down on my [npc1.fingers]!",
-										"You love this, don't you bitch?! Feeling my [npc1.fingers] pushing deep into your slutty little asshole!",
-										"That's right slut! You love having my [npc1.fingers] stuffed deep in your slutty ass!"));
+										"真是个臭骚货！我都能感受到你的小骚屁眼在吸我的[npc1.fingers]了！",
+										"你喜欢这个，是不是？你这个婊子！好好感受我的[npc1.fingers]深深地插进你那性感的小屁眼里！",
+										"没错，荡妇！你喜欢我的[npc1.fingers]深深地插进你的骚屁眼！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my fingers deep inside your ass!",
-										"I love giving your ass the attention it deserves!",
-										"I love fingering your ass!"));
+										"太棒了！让我把手指伸进你的屁股里面去！",
+										"你的屁股摆在那儿就是用来被操的！",
+										"我喜欢用手指插你的屁眼！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love fingering your ass!",
-										"I love giving your ass the attention it deserves!",
-										"I love fingering your ass!"));
+										"我喜欢用手指插你的屁眼！",
+										"你的屁股摆在那儿就是用来被操的！",
+										"我喜欢用手指插你的屁眼！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"嗯~！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -13202,45 +13202,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love having your "+name+" fondled like this, don't you?",
-										"I love your "+name+"!",
-										"What a good [npc2.girl]! Your "+name+" love the feeling of my [npc1.fingers], don't they?"));
+										"好[npc2.girl]，你喜欢别人这样爱抚你的"+name+"，不是吗？",
+										"我爱你的 "+name+"！",
+										"多么完美的[npc2.girl]！你的"+name+" 爱上了我[npc1.fingers]的感觉，是这样没错吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of having your "+name+" fondled, don't you?!",
-										"I love your "+namePlus+"!",
-										"You like it when I press my [npc1.fingers] into your "+name+", like <i>this</i>?!"));
+										"好[npc2.girl]，你喜欢别人这样爱抚你的 "+name+"，不是吗？",
+										"我深深迷恋着你的 "+namePlus+"！",
+										"你喜欢我把[npc1.fingers]挤进你的"+name+"，就像<i>这样</i>对吗？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! Moaning as I grope your "+namePlus+"!",
-										"You love this, don't you bitch?! Having your "+name+" groped and fondled like <i>this</i>!",
-										"That's right slut! Your "+namePlus+" are mine to use however I want!"));
+										"真是个下流的荡妇！在我抚摸你的 "+namePlus+"时呻吟！",
+										"你喜欢这样，我说的没错吧贱人？！仅仅只是像<i>这样</i>抚摸着你的"+name+"！",
+										"就是这样！下贱的婊子！你的"+namePlus+"属于我！我可以任意使用！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love the feel of your "+name+"!",
-										"I love giving your "+name+" the attention they deserve!",
-										"I love your "+name+"!"));
+										"是的！我喜欢你的"+name+"的感觉！",
+										"我乐意对你的"+name+"多加照顾！",
+										"我爱死了你的"+name+"！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love the feel of your "+name+"!",
-										"I love giving your "+name+" the attention they deserve!",
-										"I love your "+name+"!"));
+										"是的！我喜欢你的"+name+"的感觉！",
+										"我乐意对你的"+name+"多加照顾！",
+										"我爱死了你的"+name+"！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -13248,45 +13248,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], keep sucking on my [npc1.fingers]!",
-										"That's right, keep swirling your [npc2.tongue] around my [npc1.fingers]!",
-										"What a good [npc2.girl]! You love sucking on my [npc1.fingers], don't you?"));
+										"好[npc2.girl]，继续吮吸我的[npc1.fingers]！",
+										"就是这样的没错！让你的[npc2.tongue]就这样舔舐我的[npc1.fingers]！",
+										"多么令人上瘾的[npc2.girl]！你就喜欢这样吮吸我的[npc1.fingers]，我说的对吧？！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love sucking on my [npc1.fingers], don't you?!",
-										"That's right, keep sucking on my [npc1.fingers]!",
-										"Keep sucking on my [npc1.fingers], just like that!"));
+										"你喜欢吮吸我的[npc1.fingers]，是吗？",
+										"就是这样的，没错！就这样继续吮吸我的[npc1.fingers]！",
+										"继续吮吸我的[npc1.fingers]，就像刚才一样！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut! Suck on my [npc1.fingers] like you would on a nice thick cock!",
-										"You love this, don't you bitch?! Having my [npc1.fingers] sliding in and out of your mouth!",
-										"That's right slut! Suck on my [npc1.fingers] as I stuff them deep down your throat!"));
+										"没错，荡妇！吸我的[npc1.fingers]，就像吮吸粗大的鸡巴一样！",
+										"你喜欢这样的滋味，我说的不错吧贱人！让我的[npc1.fingers]在你的嘴里抽插！",
+										"就是这样的，荡妇！吮吸我的[npc1.fingers]，我会把它们塞到你的喉咙深处！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Suck on my [npc1.fingers]! Just like that!",
-										"I love having my [npc1.fingers] sucked! Keep going!",
-										"Keep sucking my [npc1.fingers]! Yes! Just like that!"));
+										"啊~！吮吸我的[npc1.fingers]！对！就是这样！",
+										"我喜欢吸我的[npc1.fingers]！不要停，继续！",
+										"继续吸我的[npc1.fingers]！没错！就像刚才那样！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking on my [npc1.fingers]!",
-										"I love having my [npc1.fingers] sucked!",
-										"Keep sucking my [npc1.fingers]! Yes!"));
+										"啊~！继续吸我的[npc1.fingers]！",
+										"我喜欢[npc1.fingers]被舔的感觉！",
+										"继续吸我的[npc1.fingers]！就这样没错！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"好耶！",
+										"爽死了！"));
 						}
 						break;
 					case NIPPLE: case NIPPLE_CROTCH:
@@ -13295,45 +13295,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.fingers] deep in your "+nameNipple+", don't you?",
-										"I love fingering cute little "+nameNipple+" like yours!",
-										"What a good [npc2.girl]! Your "+nameNipplePlus+" love the feeling of my [npc1.fingers], don't they?"));
+										"乖[npc2.girl]，你喜欢感受我的[npc1.fingers]深入你的"+nameNipple+"，不是吗？",
+										"我喜欢指交像你这样可爱的小"+nameNipple+"！",
+										"多好的[npc2.girl]啊！你的"+nameNipplePlus+"喜欢我的[npc1.fingers]的感觉，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.fingers] deep in your "+nameNipple+", don't you?!",
-										"I love fingering cute little "+nameNipple+" like yours!",
-										"You like it when I curl my [npc1.fingers] up inside your "+nameNipplePlus+", like <i>this</i>?!"));
+										"你喜欢我的[npc1.fingers]深入你的"+nameNipple+"的感觉，是吗？！",
+										"我喜欢指交像你这样可爱的小"+nameNipple+"！",
+										"你喜欢我把[npc1.fingers]插进你的"+nameNipplePlus+"里，就像<i>这样</i>？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! Moaning as I stuff my [npc1.fingers] deep into your "+nameNipple+"!",
-										"You love this, don't you bitch?! Feeling my [npc1.fingers] pushing deep into your "+nameNipplePlus+"!",
-										"That's right slut! You love having my [npc1.fingers] stuffed deep in your slutty "+nameNipple+"!"));
+										"真是个下流的荡妇！听听我的[npc1.fingers]深入你"+nameNipple+"的呻吟声，很棒哦！",
+										"你爱死这个了？不是吗，婊子？！感受我的[npc1.fingers]深深插入你"+nameNipplePlus+"的感受吧！",
+										"就是这样荡妇！你淫荡的"+nameNipple+"喜欢被我的[npc1.fingers]深深插入！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my fingers deep inside your "+nameNipple+"!",
-										"I love giving your "+nameNipplePlus+" the attention they deserve!",
-										"I love fingering your "+nameNipple+"!"));
+										"啊~！让手指更深入你的"+nameNipple+"！",
+										"我乐意给你的"+nameNipplePlus+"多加关注！",
+										"我喜欢用手指磨蹭你的"+nameNipple+"！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love fingering your "+nameNipple+"!",
-										"I love giving your "+nameNipplePlus+" the attention they deserve!",
-										"I love fingering your "+nameNipple+"!"));
+										"我喜欢用手指磨蹭你的"+nameNipple+"！",
+										"我乐意给你的"+nameNipplePlus+"多加关注！",
+										"我喜欢用手指磨蹭你的"+nameNipple+"！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -13348,45 +13348,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.fingers] deep in your pussy, don't you?",
-										"I love fingering cute little things like you!",
-										"What a good [npc2.girl]! Your pussy loves the feeling of my [npc1.fingers], doesn't it?"));
+										"乖[npc2.girl]，你喜欢我的[npc1.fingers]深入小穴对吧？",
+										"我喜欢和你这样可爱的小东西指交！",
+										"真是个乖[npc2.girl]！你的小穴喜欢我[npc1.fingers]的触感对吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.fingers] deep in your pussy, don't you?!",
-										"I love fingering cute [npc2.girls] like you!",
-										"You like it when I curl my [npc1.fingers] up inside you, like <i>this</i>?!"));
+										"你喜欢我的[npc1.fingers]插进你小穴深处的感觉不是吗？",
+										"我喜欢和像你一样可爱的[npc2.girls]指交！",
+										"你喜欢我的[npc1.fingers]在里面勾起来，就像<i>这样</i>对吗？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! I can feel your horny pussy clenching down on my [npc1.fingers]!",
-										"You love this, don't you bitch?! Feeling my [npc1.fingers] pushing deep into your slutty cunt!",
-										"That's right slut! You love having my [npc1.fingers] stuffed deep in your slutty pussy!"));
+										"真是个臭骚货！我都能感受到你的小穴在吸我的[npc1.fingers]了！",
+										"你喜欢这样吧，婊子？！好好感受我的[npc1.fingers]怎么深深插入你的小穴！",
+										"做得好，荡妇！你喜欢我的[npc1.fingers]深入你淫荡的小穴！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my fingers deep inside your little pussy!",
-										"I love giving your pussy the attention it deserves!",
-										"I love fingering you!"));
+										"太好了！让我把我的手指伸入到你娇嫩的小穴里去！",
+										"我很乐意好好关照你的小穴！",
+										"我喜欢和你指交！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love fingering your pussy!",
-										"I love giving your pussy the attention it deserves!",
-										"I love fingering you!"));
+										"我喜欢用手指插你的小穴！",
+										"我很乐意好好关照你的小穴！",
+										"我喜欢和你指交！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想做这个！停下来吧！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"嗯~！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -13394,45 +13394,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.fingers] deep in your spinneret, don't you?",
-										"I love fingering cute little things like you!",
-										"What a good [npc2.girl]! Your spinneret loves the feeling of my [npc1.fingers], doesn't it?"));
+										"乖[npc2.girl]，你喜欢[npc1.fingers]深深插入你的丝囊对吧？",
+										"我喜欢和你这样可爱的小东西指交！",
+										"真是个乖[npc2.girl]！你的丝囊喜欢我[npc1.fingers]的触感对吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.fingers] deep in your spinneret, don't you?!",
-										"I love fingering cute [npc2.girls] like you!",
-										"You like it when I curl my [npc1.fingers] up inside you, like <i>this</i>?!"));
+										"你喜欢被[npc1.fingers]深入丝囊的感觉对吧？！",
+										"我喜欢和像你一样可爱的[npc2.girls]指交！",
+										"你喜欢我的[npc1.fingers]在里面勾起来，就像<i>这样</i>对吗？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! I can feel your horny spinneret clenching down on my [npc1.fingers]!",
-										"You love this, don't you bitch?! Feeling my [npc1.fingers] pushing deep into your slutty spinneret!",
-										"That's right slut! You love having my [npc1.fingers] stuffed deep in your slutty spinneret!"));
+										"真是个肮脏的荡妇！我能感觉到你饥渴的丝囊正紧紧吸着我的[npc1.fingers]！",
+										"你喜欢这个，是不是？你这个婊子！好好感受我的[npc1.fingers]深深地插入你的吐丝孔里！",
+										"就是这样的，荡妇！你喜欢我的[npc1.fingers]深深地塞进你那放荡的吐丝孔里！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my fingers deep inside your little spinneret!",
-										"I love giving your spinneret the attention it deserves!",
-										"I love fingering you!"));
+										"啊~！让我的手指深入你的小丝囊里！",
+										"我超爱让你的吐丝孔得到应有的关注！",
+										"我喜欢和你指交！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love fingering your spinneret!",
-										"I love giving your spinneret the attention it deserves!",
-										"I love fingering you!"));
+										"我喜欢用手指插你的吐丝孔！",
+										"我超爱让你的吐丝孔得到应有的关注！",
+										"我喜欢和你指交！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求求你让我停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -13461,40 +13461,40 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my cock slide over your [npc2.armpit+]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding over your [npc2.armpit+]!",
-										"Your [npc2.armpit+] feels so good against my [npc1.cock]!"));
+										"乖[npc2.girl]！好好感受我在你[npc2.armpit+]上滑动的鸡巴！",
+										"就是这样，像个乖[npc2.girl]对我呻吟！好好感受我在你[npc2.armpit+]上滑动的[npc1.cock]！",
+										"你的[npc2.armpit+]让我的[npc1.cock]感觉好棒！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your armpit feels so good to fuck!",
-										"Oh yes! Push your armpit against my cock!",
-										"Your armpit was made for my cock!"));
+										"操！你的腋下操起来真棒！",
+										"呜啊~你的腋窝夹住我的肉棒了哦！",
+										"你的腋窝简直是为我的鸡巴量身定做的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my cock! Push your armpit out and make this good for me!",
-										"What a horny bitch! Using your armpit to please my cock like a desperate slut!",
-										"You like this, fuck toy?! Pushing your [npc2.armpit+] against my cock and pleasing me like the slut you are?!"));
+										"就是这样荡妇，取悦我的鸡巴吧！乖乖把腋窝伸出来给我操！",
+										"真是个饥渴的婊子！像个迷乱的荡妇一样用腋窝取悦我吧！",
+										"你喜欢这样吧，性玩具？快像个荡妇一样用[npc2.armpit+]取悦我的鸡巴吧！"));
 								break;
 							case SUB_EAGER:
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my cock! I love your armpit!",
-										"Don't stop! More! Yes, yes, yes!",
-										"Oh yes! Use me! I love your armpit!"));
+										"太棒了！尽情使用我的鸡巴吧！我爱死你的腋窝了！",
+										"别停！我还想要更多！啊~，嗯~！",
+										"没错，就是这样！请尽情的使用我吧！我爱死你腋窝的感觉了！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my cock!",
-										"Please! Stop! I don't want this!"));
+										"我不要做这个！求求你让我停下吧！",
+										"放开我！放开我的鸡巴！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢对！操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -13502,45 +13502,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.cock] slide deep into your ass!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding deep into your hot ass!",
-										"Your ass feels so good squeezing down around my [npc1.cock]!"));
+										"乖[npc2.girl]！好好感受我的[npc1.cock]在屁股上滑动的感觉吧！",
+										"就是这样，像个乖[npc2.girl]对我呻吟！好好感受我的[npc1.cock]深入屁股的感觉吧！",
+										"我的[npc1.cock]被你的屁股套弄得好舒服！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your ass feels so good!",
-										"Oh yes! Take my cock! Take it deep!",
-										"Your ass was made for my cock!"));
+										"操！你的屁股感觉真好！",
+										"哦，太棒了！吃掉我的肉棒！吃得深一点！",
+										"你的屁股简直是为我的鸡巴量身定做的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my cock! Your ass belongs to me!",
-										"What a horny bitch! Take my cock you filthy little butt-slut!",
-										"You feel that, fuck toy?! Do you feel my cock sinking deep into your slutty little ass?!"));
+										"就是这样，荡妇，让我的鸡巴进去！你的屁股是我的！",
+										"真是个饥渴的婊子！让我插进你这个下流的荡妇！",
+										"感觉到了吗，性玩具？感受到我的鸡巴深入你的荡妇屁股里了吗？！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my cock! I love your ass!",
-										"Don't stop! Harder! Use my cock! Yes, yes, yes!",
-										"Oh yes! Use me! I love your ass!"));
+										"对！用我的鸡巴！我爱死你的屁眼了！",
+										"不要停！更粗暴一点！用我的鸡巴！啊~，嗯~！",
+										"哦，太棒了！使用我吧！我爱你的屁眼！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"哦太棒了！操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -13551,90 +13551,90 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							switch(Main.sex.getSexPace(this)) {
 								case DOM_GENTLE:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Good [npc2.girl]! Feel my cock slide up between your [npc2.breasts]!",
-											"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding up between your [npc2.breasts+]!",
-											"Your [npc2.breasts] feel so good squeezing down around my [npc1.cock]!"));
+											"好[npc2.girl]！你喜欢肉棒在你[npc2.breasts]之间滑动的滋味吗！",
+											"就是这样的没错，像个好孩子一样的为我呻吟吧！感觉到我的[npc1.cock]正在你[npc2.breasts+]滑动的感觉了吗？",
+											"你的[npc2.breasts]挤压我[npc1.cock]的感觉真好！"));
 									break;
 								case DOM_NORMAL:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Fuck! Your tits feel so good to fuck!",
-											"Oh yes! Wrap your tits around my cock!",
-											"Your tits were made for my cock!"));
+											"草！你的奶子操起来真不错！",
+											"啊啊啊啊啊啊啊！你的奶子包裹住了我的鸡巴！",
+											"你的奶子简直就是为了我的鸡巴而生的"));
 									break;
 								case DOM_ROUGH:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"That's right slut, pleasure my cock! Push your tits together and make this good for me!",
-											"What a horny bitch! Using your tits to please my cock like a desperate slut!",
-											"You like this, fuck toy?! Squeezing your [npc2.breasts] around my cock and pleasing me like the slut you are?!"));
+											"就是这样母狗，继续取悦我的鸡巴！把你的奶子挤在一起给我做的更好一点！",
+											"多么淫荡的婊子！用你的奶子来取悦我的鸡巴就像一条饥渴的母狗！",
+											"肉便器，你喜欢这样吗？！挤你的[npc2.breasts]像条母狗一样求我！"));
 									break;
 								case SUB_EAGER:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Yes! Use my cock! I love your tits!",
-											"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-											"Oh yes! Use me! I love your tits!"));
+											"太好了！使用我的鸡巴，我爱你的奶子！",
+											"不要停！用力！操我！啊……啊、对！",
+											"哦，太棒了！使用我吧！我爱你的奶子！"));
 									break;
 								case SUB_NORMAL:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Yes! Fuck me!",
-											"Don't stop! Fuck me!",
-											"Oh yes! Fuck me!"));
+											"对！就这么操！",
+											"不要停！操我！",
+											"没错！就这样操我！"));
 									break;
 								case SUB_RESISTING:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"I don't want to do this! Please let me stop!",
-											"Let me go! Get off my cock!",
-											"Please! Stop! I don't want this!"));
+											"我不想这样！求你停下来！",
+											"放开我！放开我的鸡巴！",
+											"求你！停下来！我不想这样！"));
 									break;
 								default:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Fuck me! Yes! Harder!",
-											"Oh yeah! Fuck me!",
-											"Harder! Don't stop!"));
+											"操我！对！用力点！",
+											"哦太棒了！操我！",
+											"用力操我！不要停！"));
 									break;
 							}
 						} else {
 							switch(Main.sex.getSexPace(this)) {
 								case DOM_GENTLE:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Good [npc2.girl]! Feel my cock slide over your [npc2.breasts]!",
-											"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding over your [npc2.breasts+]!",
-											"Your [npc2.breasts] feel so good squeezing down around my [npc1.cock]!"));
+											"乖[npc2.girl]！好好感受鸡巴在你[npc2.breasts]上滑动的感觉！",
+											"就是这样的没错，像个好孩子一样的为我呻吟吧！感觉到我的[npc1.cock]正在你[npc2.breasts+]滑动的感觉了吗？",
+											"你的[npc2.breasts]挤压我[npc1.cock]的感觉真好！"));
 									break;
 								case DOM_NORMAL:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Fuck! Your [npc2.breasts] feel so good to fuck!",
-											"Oh yes! Feel my [npc1.cock] sliding over your [npc2.breasts]!",
-											"Your [npc2.breasts] were made for my cock!"));
+											"操！你的[npc2.breasts]操起来真棒！",
+											"就是这样！享受我的[npc1.cock]插进你的[npc2.breasts]的感觉！",
+											"你的[npc2.breasts]就是为了我的屌而生的！"));
 									break;
 								case DOM_ROUGH:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"That's right slut, pleasure my cock! Push your [npc2.breasts] together and make this good for me!",
-											"What a horny bitch! Using your [npc2.breasts] to please my cock like a desperate slut!",
-											"You like this, fuck toy?! Squeezing your [npc2.breasts] around my cock and pleasing me like the slut you are?!"));
+											"就是这样，荡妇，取悦我的鸡巴！把[npc2.breasts]推起来，让我更舒服一点！",
+											"真是个淫荡的婊子！像个饥渴的荡妇一样用你[npc2.breasts]取悦我的屌！",
+											"肉便器，你喜欢这样吗？！挤你的奶子像条母狗一样求我！"));
 									break;
 								case SUB_EAGER:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Yes! Use my cock! I love your [npc2.breasts]!",
-											"Don't stop! Yes, yes, yes!",
-											"Oh yes! Use me! I love your [npc2.breasts]!"));
+											"对对！快用我的鸡巴！我爱死你的[npc2.breasts]了！",
+											"不要停！啊……啊、对！",
+											"哦是的！尽情使用我！我爱你的[npc2.breasts]！"));
 									break;
 								case SUB_NORMAL:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Yes! Let me fuck your [npc2.breasts]!",
-											"Don't stop! Oh yes!",
-											"Oh yes! I love your [npc2.breasts]!"));
+											"嗯~！让我操你的[npc2.breasts]！",
+											"不要停！啊……对！",
+											"哦太棒了！我爱你的[npc2.breasts]！"));
 									break;
 								case SUB_RESISTING:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"I don't want to do this! Please let me stop!",
-											"Let me go! Get off my cock!",
-											"Please! Stop! I don't want this!"));
+											"我不想这样！求你停下来！",
+											"放开我！放开我的鸡巴！",
+											"求你！停下来！我不想这样！"));
 									break;
 								default:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Fuck me! Yes! Harder!",
-											"Oh yeah! Fuck me!",
-											"Harder! Don't stop!"));
+											"操我！对！用力点！",
+											"哦太棒了！操我！",
+											"用力操我！不要停！"));
 									break;
 							}
 						}
@@ -13643,45 +13643,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my cock slide up between your [npc2.crotchBoobs]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding up between your [npc2.crotchBoobs+]!",
-										"Your [npc2.crotchBoobs] feel so good squeezing down around my [npc1.cock]!"));
+										"好[npc2.girl]！感受我在你[npc2.crotchBoobs]间滑动的肉棒！",
+										"就是这样，像个好孩子一样为我呻吟吧！感觉到我的[npc1.cock]正在你[npc2.crotchBoobs+]上滑动的感觉了吗？",
+										"你的[npc2.crotchBoobs]挤压我[npc1.cock]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchBoobs+] feel so good to fuck!",
-										"Oh yes! Wrap your [npc2.crotchBoobs+] around my cock!",
-										"Your [npc2.crotchBoobs+] were made for my cock!"));
+										"草！你[npc2.crotchBoobs+]操起来真不错！",
+										"哦就是这样！用你[npc2.crotchBoobs+]包裹住我的肉棒！",
+										"你[npc2.crotchBoobs+]就是为了我的肉棒而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my cock! Push your [npc2.crotchBoobs+] together and make this good for me!",
-										"What a horny bitch! Using your [npc2.crotchBoobs+] to please my cock like a desperate slut!",
-										"You like this, fuck toy?! Squeezing your [npc2.crotchBoobs] around my cock and pleasing me like the slut you are?!"));
+										"就是这样母狗，继续取悦我的鸡巴！把你[npc2.crotchBoobs+]挤在一起让我更舒服点！",
+										"多么淫荡的婊子！用你[npc2.crotchBoobs+]来取悦我的鸡巴就像一条饥渴的母狗！",
+										"肉便器，你喜欢这样嘛？！快用你的[npc2.crotchBoobs]来包裹住我的肉棒，像条母狗一样求我！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my cock! I love your [npc2.crotchBoobs+]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchBoobs+]!"));
+										"是的，太棒了！快用我的肉棒吧！我爱死你[npc2.crotchBoobs+]！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你[npc2.crotchBoobs+]！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my cock!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的鸡巴！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"哦太棒了！操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -13689,45 +13689,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], keep sucking my cock!",
-										"That's right, use your [npc2.tongue] as well! You're good at sucking cock!",
-										"What a good [npc2.girl]! You love sucking my cock, don't you?"));
+										"好[npc2.girl]，继续吸我的肉棒！",
+										"就是这样，继续用你的[npc2.tongue]取悦我！你很会吸肉棒嘛！",
+										"多么棒的[npc2.girl]！你喜欢吮吸我的肉棒，我说的没错吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You're good at sucking cock!",
-										"Oh yeah! Keep sucking my cock!",
-										"Use your tongue as well! Yeah, like that!"));
+										"你可真会吸鸡巴！",
+										"哦，真棒！继续嗦弄我的肉棒！",
+										"也用你的舌头！对了！就像这样！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Come on you slut! You can suck cock better than that!",
-										"That's right bitch! Take my cock deep down your throat!",
-										"Put some effort into it slut! You can suck cock better than that!"));
+										"加把油啊你这个浪货！你可以比这更好的口我的肉棒！",
+										"就是这样的，荡妇！把我的肉棒塞到你的喉咙深处去！",
+										"骚货，再用点力，你可以吸得更好！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my cock! Just like that!",
-										"Oh yes! Wrap those lips of yours around my cock! Keep going!",
-										"Keep sucking my cock! Yes! Just like that!"));
+										"对！继续吮吸我的肉棒！就像这样！",
+										"哦就是这样！用你的嘴唇包裹住我的肉棒！继续！",
+										"继续吮吸我的肉棒！对！就像这样！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my cock!",
-										"Wrap those lips of yours around my cock! Keep going!",
-										"Keep sucking my cock! Yes!"));
+										"对！继续吮吸我的肉棒！",
+										"用你的嘴唇包裹住我的肉棒！继续！",
+										"继续吮吸我的肉棒！太棒了！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my cock!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的鸡巴！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，是的！请操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -13735,45 +13735,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my cock slide deep into your breast!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding deep into your cute little nipple!",
-										"Your cute little nipple feels so good squeezing down around my [npc1.cock]!"));
+										"乖[npc2.girl]！好好感受鸡巴深入奶子的感觉！",
+										"做得好，做个乖[npc2.girl]，被我弄得呜呜叫。感觉到我的[npc1.cock]蹭在你可爱的小乳头上了吗？",
+										"你可爱的小乳头挤在我的[npc1.cock]上感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your tits feel so good to fuck!",
-										"Oh yes! Take my cock! Take it deep!",
-										"Your tits were made for my cock!"));
+										"草！你的奶子操起来真不错！",
+										"哦，太棒了！吃掉我的肉棒！吃得深一点！",
+										"你的奶子简直就是为了我的肉棒而生的"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my cock! Feel it pushing deep into your nipple!",
-										"What a horny bitch! Taking my cock deep into your tit like a slut!",
-										"You feel that, fuck toy?! Do you feel my cock sinking deep into your slutty little nipple?!"));
+										"就是这样，荡妇，迎合我的鸡巴！好好感受鸡巴深入乳头的感觉！",
+										"真是一个浪蹄子！像个荡妇一样把我的鸡巴深深地插进你的奶子里！",
+										"你感觉到了吗，肉便器？你感觉到我的大肉棒深深插进你淫荡的小乳头了吗？！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my cock! I love your tits!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your tits!"));
+										"太好了！使用我的鸡巴，我爱你的奶子！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my cock!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！让我停下吧求你了！",
+										"放开我！放开我的鸡巴！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"哦太棒了！操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -13781,45 +13781,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my cock slide deep into your [npc2.crotchNipple]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding deep into your cute little [npc2.crotchNipple]!",
-										"Your cute little [npc2.crotchNipple] feels so good squeezing down around my [npc1.cock]!"));
+										"乖[npc2.girl]！好好感受我的鸡巴深深地插入你的[npc2.crotchNipple]！",
+										"没错，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.cock]深深插入你可爱的[npc2.crotchNipple]！",
+										"你可爱的小[npc2.crotchNipple]挤压在我的[npc1.cock]周围的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchNipple] feels so good to fuck!",
-										"Oh yes! Take my cock! Take it deep!",
-										"Your [npc2.crotchNipples] were made for my cock!"));
+										"草！你的[npc2.crotchNipple]操起来真不错！",
+										"哦，太棒了！吃掉我的肉棒！吃得深一点！",
+										"你的[npc2.crotchNipples]就是为我的鸡巴而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my cock! Feel it pushing deep into your [npc2.crotchNipple]!",
-										"What a horny bitch! Taking my cock deep into your [npc2.crotchNipple] like a slut!",
-										"You feel that, fuck toy?! Do you feel my cock sinking deep into your slutty little [npc2.crotchNipple]?!"));
+										"就这样，荡妇，接好我的鸡巴！感受它深深地插入你的[npc2.crotchNipple]！",
+										"真是个骚货！像个荡妇一样把我的鸡巴深深地插进你的[npc2.crotchNipple]里！",
+										"你感觉到了吗，肉便器？你感觉到我的鸡巴深深插入你淫荡的小[npc2.crotchNipple]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my cock! I love your [npc2.crotchNipples]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchNipples]!"));
+										"啊~！用我的鸡巴！我喜欢你的[npc2.crotchNipples]！",
+										"不要停！用力！操我！啊……啊、对！",
+										"真棒！使用我吧！我爱上你的[npc2.crotchNipples]了！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"对！操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my cock!",
-										"Please! Stop! I don't want this!"));
+										"我不要！求求你让我停下来！",
+										"放开我！放开我的鸡巴！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢对！操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -13839,45 +13839,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							switch(Main.sex.getSexPace(this)) {
 								case DOM_GENTLE:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Good [npc2.girl]! Feel my [npc1.cock] slide deep into your little pussy!",
-											"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding deep into your cute little cunt!",
-											"Your cute little cunt feels so good squeezing down around my [npc1.cock]!"));
+											"乖[npc2.girl]！好好感受我的[npc1.cock]深深插入你的小穴吧！",
+											"就是这样，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.cock]深深插入你可爱的小穴！",
+											"你那可爱的小淫穴挤压我的[npc1.cock]的感觉真好！"));
 									break;
 								case DOM_NORMAL:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Fuck! Your pussy feels so good!",
-											"Oh yes! Take my cock! Take it deep!",
-											"Your pussy was made for my cock!"));
+											"操！你的小穴真舒服！",
+											"哦，太棒了！吃掉我的肉棒！吃得深一点！",
+											"你的小穴简直是为我的鸡巴量身定做的！"));
 									break;
 								case DOM_ROUGH:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"That's right slut, take my cock! Your pussy belongs to me!",
-											"What a horny bitch! Take my cock you slut!",
-											"You feel that, fuck toy?! Do you feel my cock sinking deep into your slutty little cunt?!"));
+											"就是这样，荡妇，含住我的鸡巴！你的小穴属于我！",
+											"真是一个淫荡的婊子！来试试我的鸡巴！",
+											"你感觉到了吗，肉便器？你感觉到我的大肉棒深深插进你淫荡的小穴了吗？"));
 									break;
 								case SUB_EAGER:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Yes! Use my cock! I love your pussy!",
-											"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-											"Oh yes! Use me! I love your pussy!"));
+											"对！用我的鸡巴！我爱死你的小穴了！",
+											"不要停！用力！操我！啊……啊、对！",
+											"哦，太棒了！使用我吧！我爱你的小穴！"));
 									break;
 								case SUB_NORMAL:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Yes! Fuck me!",
-											"Don't stop! Fuck me!",
-											"Oh yes! Fuck me!"));
+											"对！就这么操！",
+											"不要停！用力操我！",
+											"没错！操我！"));
 									break;
 								case SUB_RESISTING:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"I don't want to do this! Please let me stop!",
-											"Let me go! I don't want to do this!",
-											"Please! Stop! I don't want this!"));
+											"我不想这样！求你停下来！",
+											"放开我！我不想这么做！",
+											"求你！停下来！我不想这样！"));
 									break;
 								default:
 									availableLines.add(UtilText.returnStringAtRandom(
-											"Fuck me! Yes! Harder!",
-											"Oh yeah! Fuck me!",
-											"Harder! Don't stop!"));
+											"操我！对！用力点！",
+											"哦太棒了！操我！",
+											"用力操我！不要停！"));
 									break;
 							}
 						}
@@ -13886,45 +13886,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.cock] slide deep into your little spinneret!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.cock] sliding deep into your cute little spinneret!",
-										"Your cute little spinneret feels so good squeezing down around my [npc1.cock]!"));
+										"乖[npc2.girl]！好好感受我的[npc1.cock]深深地插入你的小丝囊！",
+										"就这样，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.cock]深深地插入你可爱的小喷丝孔！",
+										"你可爱的小丝囊挤压我的[npc1.cock]感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your spinneret feels so good!",
-										"Oh yes! Take my cock! Take it deep!",
-										"Your spinneret was made for my cock!"));
+										"草！你的丝囊操起来真不错！",
+										"哦，太棒了！吃掉我的肉棒！吃得深一点！",
+										"你的丝囊简直是为我的鸡巴量身定做的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my cock! Your spinneret belongs to me!",
-										"What a horny bitch! Take my cock you slut!",
-										"You feel that, fuck toy?! Do you feel my cock sinking deep into your slutty little spinneret?!"));
+										"没错，荡妇，接好我的鸡巴！你的丝囊属于我！",
+										"真是一个淫荡的婊子！来试试我的鸡巴！",
+										"你感觉到了吗，小肉便器？你感觉到我的大鸡巴深深插进你淫荡的小丝囊了吗？！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my cock! I love your spinneret!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your spinneret!"));
+										"啊~！接好我的鸡巴！我喜欢你的丝囊！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的吐丝孔！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！操我！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样做！请停下！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"哦太棒了！操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -13955,45 +13955,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tail] slide deep into your cute little ass!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tail] sliding deep into your cute little ass!",
-										"Your cute little ass feels so good squeezing down around my [npc1.tail]!"));
+										"乖[npc2.girl]！感受我的[npc1.tail]深入你可爱的小屁股吧！",
+										"没错，做个乖[npc2.girl]，为我呻吟吧！感受我的[npc1.tail]深入你可爱的小屁股！",
+										"你可爱的小屁股挤压我的[npc1.tail]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your ass feels so good!",
-										"Oh yes! Take my [npc1.tail]! Take it deep into your ass!",
-										"Your ass was made for a good tail-fucking!"));
+										"操！你的屁股感觉真好！",
+										"真厉害！你的屁股吃掉了我的[npc1.tail]呢！",
+										"你的屁股简直是天生为尾交而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right bitch, feel my [npc1.tail] pushing deep into your slutty ass!",
-										"What a horny slut! Now moan for me as I fuck your ass with my tail!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tail] sinking deep into your slutty little ass?!"));
+										"就这样婊子，感受我的[npc1.tail]深深插进你的骚屁股吧！",
+										"真是个骚货！现在，在我用尾巴操你的屁股的时候给我好好地浪叫出来！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小屁股的[npc1.tail]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tail]! I love your ass!",
-										"Don't stop! Harder! Use my [npc1.tail]! Yes, yes, yes!",
-										"Oh yes! Use me! I love your ass!"));
+										"啊~！继续玩我的[npc1.tail]！我喜欢你的屁股！",
+										"不要停！用力！用我的[npc1.tail]！啊~！啊~！啊~！",
+										"哦，太棒了！使用我吧！我爱你的屁眼！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，就是这样！请操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14003,45 +14003,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tail] slide up between your [npc2.breasts]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tail] sliding up between your [npc2.breasts+]!",
-										"Your [npc2.breasts] feel so good squeezing down around my [npc1.tail]!"));
+										"好[npc2.girl]！感受我[npc1.tail]在你[npc2.breasts]间滑动的感觉吧！",
+										"对了，就是这样，当个好[npc2.girl]，为我呻吟！我的[npc1.tail]在你[npc2.breasts+]间滑动的感觉如何！",
+										"你的[npc2.breasts]挤压我[npc1.tail]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your tits feel so good to fuck!",
-										"Oh yes! Wrap your tits around my [npc1.tail]!",
-										"Your tits were made for my [npc1.tail]!"));
+										"草！你的奶子操起来真不错！",
+										"太对了！用你的奶子包住我的[npc1.tail]！",
+										"你的奶子简直就是为了我的[npc1.tail]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my [npc1.tail]! Push your tits together and make this good for me!",
-										"What a horny bitch! Using your tits to please my [npc1.tail] like a desperate slut!",
-										"You like this, fuck toy?! Squeezing your [npc2.breasts] around my [npc1.tail] and pleasing me like the slut you are?!"));
+										"就是这样母狗，继续取悦我的[npc1.tail]！把你的奶子挤在一起给我做的更好一点！",
+										"多么淫荡的婊子！用你的奶子来取悦我的[npc1.tail]就像一条饥渴的母狗！",
+										"肉便器，你喜欢这样吗？！用你的奶子挤着我的[npc1.tail]，还像条母狗一样求我！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tail]! I love your tits!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your tits!"));
+										"对！用我的[npc1.tail]！我喜欢你的奶子！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my [npc1.tail]!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的[npc1.tail]！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，就是这样！请操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -14049,45 +14049,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tail] slide up between your [npc2.crotchBoobs]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tail] sliding up between your [npc2.crotchBoobs+]!",
-										"Your [npc2.crotchBoobs] feel so good squeezing down around my [npc1.tail]!"));
+										"好[npc2.girl]！感受我[npc1.tail]在你[npc2.crotchBoobs]间滑动的感觉吧！",
+										"对了，就是这样，当个好[npc2.girl]，为我呻吟！我的[npc1.tail]在你[npc2.crotchBoobs+]间滑动的感觉如何！",
+										"你的[npc2.crotchBoobs]挤压着我[npc1.tail]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchBoobs] feel so good to fuck!",
-										"Oh yes! Wrap your [npc2.crotchBoobs] around my [npc1.tail]!",
-										"Your [npc2.crotchBoobs] were made for my [npc1.tail]!"));
+										"草！你的[npc2.crotchBoobs]操起来真爽！",
+										"太对了！用你的[npc2.crotchBoobs]包住我的[npc1.tail]！",
+										"你的[npc2.crotchBoobs]就是为了我的[npc1.tail]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my [npc1.tail]! Push your [npc2.crotchBoobs] together and make this good for me!",
-										"What a horny bitch! Using your [npc2.crotchBoobs] to please my [npc1.tail] like a desperate slut!",
-										"You like this, fuck toy?! Squeezing your [npc2.crotchBoobs] around my [npc1.tail] and pleasing me like the slut you are?!"));
+										"就是这样母狗，继续取悦我的[npc1.tail]！把你的[npc2.crotchBoobs]挤在一起给我做的更好一点！",
+										"真是个淫荡的婊子！用你的[npc2.crotchBoobs]来取悦我的鸡巴就像一条饥渴的母狗！",
+										"肉便器，你喜欢这样吗？！用[npc2.crotchBoobs]挤着我的[npc1.tail]，还像条母狗一样求我！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tail]! I love your [npc2.crotchBoobs]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchBoobs]!"));
+										"对的！用我的[npc1.tail]！我喜欢你的[npc2.crotchBoobs]！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的[npc2.crotchBoobs]！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my [npc1.tail]!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的[npc1.tail]！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"哦太棒了！操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14095,45 +14095,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], keep sucking my [npc1.tail]!",
-										"That's right, use your [npc2.tongue] as well! You're good at this!",
-										"What a good [npc2.girl]! You love sucking my [npc1.tail], don't you?"));
+										"好[npc2.girl]，继续吸我的[npc1.tail]！",
+										"这就对了，把你的[npc2.tongue]也用上！你很擅长这个嘛！",
+										"真是个好[npc2.girl]！你很喜欢吸我的[npc1.tail]嘛，是不是呀？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Take my [npc1.tail] deep down your throat!",
-										"Oh yeah! Keep sucking my [npc1.tail]!",
-										"Use your tongue as well! Yeah, like that!"));
+										"把我的[npc1.tail]吞进你喉咙深处去！",
+										"啊！对！继续吸我的[npc1.tail]！",
+										"用上你的舌头！对了！就像这样！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Come on you slut! Take my [npc1.tail] deep down your throat!",
-										"That's right bitch! Take my [npc1.tail] deep down your throat!",
-										"Put some effort into it slut! You can suck my [npc1.tail] better than that!"));
+										"快点儿，你这母狗！把我的[npc1.tail]往你喉咙深处塞进去！",
+										"这就对了，婊子！把我的[npc1.tail]深深塞到你喉咙里去！",
+										"再用点力，骚货！你可以吸得更好！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my [npc1.tail]! Just like that!",
-										"Oh yes! Wrap those lips of yours around my [npc1.tail]! Keep going!",
-										"Keep sucking my [npc1.tail]! Yes! Just like that!"));
+										"太棒了！继续吮吸我的[npc1.tail]！就这样！",
+										"哦就是这样！用你的嘴唇包裹住我的[npc1.tail]！继续！",
+										"继续吮吸我的[npc1.tail]！就这样！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my [npc1.tail]!",
-										"Wrap those lips of yours around my [npc1.tail]! Keep going!",
-										"Keep sucking my [npc1.tail]! Yes!"));
+										"太棒了！继续吮吸我的[npc1.tail]！",
+										"用你的嘴唇包裹住我的[npc1.tail]！继续！",
+										"继续吸我的[npc1.tail]！就这样没错！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"哦太棒了！操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14141,45 +14141,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tail] slide deep into your breast!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tail] sliding deep into your cute little nipple!",
-										"Your cute little nipple feels so good squeezing down around my [npc1.tail]!"));
+										"好[npc2.girl]！我的[npc1.tail]进入你奶子里感觉怎么样！",
+										"真好，当个[npc2.girl]为我叫起来！来感受我的[npc1.tail]进入你那可爱的小乳头里！",
+										"你可爱的小乳头挤在我的[npc1.tail]上感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your tits feel so good to fuck!",
-										"Oh yes! Take my [npc1.tail] deep into your nipple!",
-										"Your tits were made for my [npc1.tail]!"));
+										"草！你的奶子操起来真不错！",
+										"太棒了！把我的[npc1.tail]深深吸进你的乳头里！",
+										"你的奶子简直就是为了我的[npc1.tail]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my [npc1.tail]! Feel it pushing deep into your nipple!",
-										"What a horny bitch! Taking my [npc1.tail] deep into your tit like a slut!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tail] sinking deep into your slutty little nipple?!"));
+										"这就对了骚货，吸紧我的[npc1.tail]！感受它深深插入你乳头的感觉！",
+										"真是个淫荡的婊子！像条母狗一样把我的[npc1.tail]深深吸进你的奶子里去！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小乳头的[npc1.tail]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tail]! I love your tits!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your tits!"));
+										"对！用我的[npc1.tail]！我喜欢你的奶子！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"噢，就是这样！请操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14187,45 +14187,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tail] slide deep into your [npc2.crotchNipple]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tail] sliding deep into your cute little [npc2.crotchNipple]!",
-										"Your cute little [npc2.crotchNipple] feels so good squeezing down around my [npc1.tail]!"));
+										"乖[npc2.girl]！好好感受我的[npc1.tail]插进你的[npc2.crotchNipple]深处！",
+										"没错，做个乖[npc2.girl]，为我呻吟吧！感受我的[npc1.tail]深入你可爱的[npc2.crotchNipple]！",
+										"你可爱的小[npc2.crotchNipple]挤压着我的[npc1.tail]感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchNipple] feels so good to fuck!",
-										"Oh yes! Take my [npc1.tail] deep into your [npc2.crotchNipple]!",
-										"Your [npc2.crotchNipples] were made for my [npc1.tail]!"));
+										"草！你的[npc2.crotchNipple]操起来真不错！",
+										"真厉害！你的[npc2.crotchNipple]吃掉了我的[npc1.tail]呢！",
+										"你的[npc2.crotchNipples]是为我的[npc1.tail]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my [npc1.tail]! Feel it pushing deep into your [npc2.crotchNipple]!",
-										"What a horny bitch! Taking my [npc1.tail] deep into your [npc2.crotchNipple] like a slut!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tail] sinking deep into your slutty little [npc2.crotchNipple]?!"));
+										"就这样，荡妇，接好我的[npc1.tail]！感受它深深地插进你的[npc2.crotchNipple] ！",
+										"真是个骚货！像个荡妇一样把我的[npc1.tail]深深插入你的[npc2.crotchNipple]！",
+										"你感觉到了吗，肉便器？感觉到我的[npc1.tail]深深插入你淫荡的小[npc2.crotchNipple]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tail]! I love your [npc2.crotchNipples]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchNipples]!"));
+										"对了！用我的[npc1.tail]！我喜欢你的[npc2.crotchNipples]",
+										"不要停！用力！操我！啊……啊、对！",
+										"真棒！使用我吧！我爱上你的[npc2.crotchNipples]了！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！操我！",
+										"不要停！操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"哦太棒了！操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -14240,45 +14240,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tail] slide deep into your little pussy!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tail] sliding deep into your cute little cunt!",
-										"Your cute little cunt feels so good squeezing down around my [npc1.tail]!"));
+										"乖[npc2.girl]！好好感受我的[npc1.tail]插进你的小穴深处！",
+										"这就对了，当个[npc2.girl]为我叫起来！来感受我的[npc1.tail]进入你那可爱的小淫穴里！",
+										"你那可爱的小淫穴挤压着我[npc1.tail]的感觉真爽！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your pussy feels so good!",
-										"Oh yes! Take my [npc1.tail]! Take it deep!",
-										"Your pussy was made for a good tail-fucking!"));
+										"操！你的小穴真舒服！",
+										"哦，太棒了！吃掉我的[npc1.tail]！吃得深一点！",
+										"你的小穴就是用来让人好好尾交的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, feel my [npc1.tail] pushing deep into your worthless little cunt! Your pussy belongs to me!",
-										"What a horny bitch! Now moan for me as I fuck you with my tail!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tail] sinking deep into your slutty little cunt?!"));
+										"就这样，荡妇，感受我的[npc1.tail]深入你那毫无价值的小穴吧！你的阴道属于我！",
+										"真是个淫荡的婊子！现在呜咽着求我用尾巴操你！",
+										"你感觉到了吗，小肉便器？你感觉到我深深插进你淫荡小穴的[npc1.tail]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tail]! I love your pussy!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your pussy!"));
+										"啊~！继续玩我的[npc1.tail]！我喜欢你的小穴！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的小穴！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，是的！请操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -14286,45 +14286,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tail] slide deep into your little spinneret!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tail] sliding deep into your cute little spinneret!",
-										"Your cute little spinneret feels so good squeezing down around my [npc1.tail]!"));
+										"乖[npc2.girl]！感受我的[npc1.tail]深入你的小丝囊吧！",
+										"就这样，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.tail]深入你可爱的小丝囊！",
+										"你可爱的小丝囊挤压我的[npc1.tail]感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your spinneret feels so good!",
-										"Oh yes! Take my [npc1.tail]! Take it deep!",
-										"Your spinneret was made for a good tail-fucking!"));
+										"草！你的丝囊操起来真不错！",
+										"哦，太棒了！吃掉我的[npc1.tail]！吃得深一点！",
+										"你的丝囊就是用来好好尾交的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, feel my [npc1.tail] pushing deep into your worthless little spinneret! You belong to me!",
-										"What a horny bitch! Now moan for me as I fuck you with my tail!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tail] sinking deep into your slutty little spinneret?!"));
+										"就这样，荡妇，好好感受我的[npc1.tail]深深插入你那毫无价值的小丝囊！你属于我！",
+										"真是个淫荡的婊子！现在呜咽着求我用尾巴操你！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小丝囊的[npc1.tail]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tail]! I love your spinneret!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your spinneret!"));
+										"啊~！继续玩我的[npc1.tail]！我喜欢你的丝囊！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的吐丝孔！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求求你，停下！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，是的！请操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -14355,45 +14355,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tentacle] slide deep into your cute little ass!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tentacle] sliding deep into your cute little ass!",
-										"Your cute little ass feels so good squeezing down around my [npc1.tentacle]!"));
+										"乖[npc2.girl]！感受我的[npc1.tentacle]深入你可爱的小屁股吧！",
+										"没错，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.tentacle]深入你可爱的小屁股！",
+										"你可爱的小屁股挤在我[npc1.tentacle]周围的滋味真不错！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your ass feels so good!",
-										"Oh yes! Take my [npc1.tentacle]! Take it deep into your ass!",
-										"Your ass was made for a good tentacle-fucking!"));
+										"操！你的屁股感觉真好！",
+										"真厉害！把我的[npc1.tentacle]吞进你的屁股！",
+										"你的屁股是为了触手交而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right bitch, feel my [npc1.tentacle] pushing deep into your slutty ass!",
-										"What a horny slut! Now moan for me as I fuck your ass with my tentacle!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tentacle] sinking deep into your slutty little ass?!"));
+										"就这样，婊子，感受我的[npc1.tentacle]深深插入你的骚屁股吧！",
+										"真是个好色的小骚货！我用触手操你屁股的时候尽情地呻吟吧！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小屁股的[npc1.tentacle]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tentacle]! I love your ass!",
-										"Don't stop! Harder! Use my [npc1.tentacle]! Yes, yes, yes!",
-										"Oh yes! Use me! I love your ass!"));
+										"啊~！继续玩我的[npc1.tentacle]！我喜欢你的屁股！",
+										"不要停！用力！用我的[npc1.tentacle]啊~！啊~！啊~！",
+										"哦，太棒了！使用我吧！我爱你的屁眼！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"噢，是的！请操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14403,45 +14403,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tentacle] slide up between your [npc2.breasts]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tentacle] sliding up between your [npc2.breasts+]!",
-										"Your [npc2.breasts] feel so good squeezing down around my [npc1.tentacle]!"));
+										"好[npc2.girl]！感受我[npc1.tentacle]在你[npc2.breasts]间滑动的感觉吧！",
+										"真棒，做个好[npc2.girl]，为我呻吟吧！体会我的[npc1.tentacle]在你[npc2.breasts+]上滑动的感觉！",
+										"你的[npc2.breasts]挤压我[npc1.tentacle]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your tits feel so good to fuck!",
-										"Oh yes! Wrap your tits around my [npc1.tentacle]!",
-										"Your tits were made for my [npc1.tentacle]!"));
+										"草！你的奶子操起来真不错！",
+										"太对了！用你的奶子包住我的[npc1.tentacle]！",
+										"你的奶子简直就是为了我的[npc1.tentacle]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my [npc1.tentacle]! Push your tits together and make this good for me!",
-										"What a horny bitch! Using your tits to please my [npc1.tentacle] like a desperate slut!",
-										"You like this, fuck toy?! Squeezing your [npc2.breasts] around my [npc1.tentacle] and pleasing me like the slut you are?!"));
+										"就是这样母狗，继续取悦我的[npc1.tentacle]！把你的奶子挤在一起，挤得再紧点！",
+										"多么淫荡的婊子！用你的奶子来取悦我的[npc1.tentacle]，就像一条饥渴的母狗！",
+										"肉便器，你喜欢这样吗？！用你的奶子挤着我的[npc1.tentacle]，还像条母狗一样求我！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tentacle]! I love your tits!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your tits!"));
+										"对！用我的[npc1.tentacle]！我喜欢你的奶子！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！操我！",
+										"不要停！用力操我！",
+										"没错！操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my [npc1.tentacle]!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的[npc1.tentacle]！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"噢，是的！请操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -14449,45 +14449,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tentacle] slide up between your [npc2.crotchBoobs]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tentacle] sliding up between your [npc2.crotchBoobs+]!",
-										"Your [npc2.crotchBoobs] feel so good squeezing down around my [npc1.tentacle]!"));
+										"好[npc2.girl]！体会我[npc1.tentacle]在你[npc2.crotchBoobs]间滑动的感觉吧！",
+										"就是这样，像个好孩子一样为我呻吟吧！感觉到我的[npc1.tentacle]正在你[npc2.crotchBoobs+]上滑动的感觉了吗？",
+										"你的[npc2.crotchBoobs]挤压我[npc1.tentacle]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchBoobs] feel so good to fuck!",
-										"Oh yes! Wrap your [npc2.crotchBoobs] around my [npc1.tentacle]!",
-										"Your [npc2.crotchBoobs] were made for my [npc1.tentacle]!"));
+										"草！你的[npc2.crotchBoobs]操起来真爽！",
+										"太对了！用你的[npc2.crotchBoobs]包住我的[npc1.tentacle]！",
+										"你的[npc2.crotchBoobs]就是为了我的[npc1.tentacle]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my [npc1.tentacle]! Push your [npc2.crotchBoobs] together and make this good for me!",
-										"What a horny bitch! Using your [npc2.crotchBoobs] to please my [npc1.tentacle] like a desperate slut!",
-										"You like this, fuck toy?! Squeezing your [npc2.crotchBoobs] around my [npc1.tentacle] and pleasing me like the slut you are?!"));
+										"就是这样母狗，继续取悦我的[npc1.tentacle]！把你的[npc2.crotchBoobs]挤在一起给我做的更好一点！",
+										"多么淫荡的婊子！用你的[npc2.crotchBoobs]来取悦我的[npc1.tentacle]，就像一条饥渴的母狗！",
+										"你很喜欢吧，小肉便器。[npc2.crotchBoobs]挤着我的[npc1.tentacle]，像婊子一样取悦我？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tentacle]! I love your [npc2.crotchBoobs]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchBoobs]!"));
+										"对的！用我的[npc1.tentacle]！我喜欢你的[npc2.crotchBoobs]！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的[npc2.crotchBoobs]！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my [npc1.tentacle]!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的[npc1.tentacle]！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，就是这样！请操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14495,45 +14495,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], keep sucking my [npc1.tentacle]!",
-										"That's right, use your [npc2.tongue] as well! You're good at this!",
-										"What a good [npc2.girl]! You love sucking my [npc1.tentacle], don't you?"));
+										"好[npc2.girl]，继续吸我的[npc1.tentacle]！",
+										"这就对了，把你的[npc2.tongue]也用上！你很擅长这个嘛！",
+										"真是个好[npc2.girl]！你很喜欢吸我的[npc1.tentacle]嘛，是不是呀？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Take my [npc1.tentacle] deep down your throat!",
-										"Oh yeah! Keep sucking my [npc1.tentacle]!",
-										"Use your tongue as well! Yeah, like that!"));
+										"把我的[npc1.tentacle]吞进你喉咙深处去！",
+										"啊！对！继续吸我的[npc1.tentacle]！",
+										"也用你的舌头！对了！就像这样！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Come on you slut! Take my [npc1.tentacle] deep down your throat!",
-										"That's right bitch! Take my [npc1.tentacle] deep down your throat!",
-										"Put some effort into it slut! You can suck my [npc1.tentacle] better than that!"));
+										"快点儿，你这贱货！把我的[npc1.tentacle]往你喉咙深处塞进去！",
+										"这就对了，婊子！把我的[npc1.tentacle]深深塞到你喉咙里去！",
+										"再用点力，骚货！你可以吸得更好！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my [npc1.tentacle]! Just like that!",
-										"Oh yes! Wrap those lips of yours around my [npc1.tentacle]! Keep going!",
-										"Keep sucking my [npc1.tentacle]! Yes! Just like that!"));
+										"太棒了！继续吮吸我的[npc1.tentacle]！就这样吸！",
+										"哦就是这样！用你的嘴唇裹住我的[npc1.tentacle]！继续！",
+										"继续吮吸我的[npc1.tentacle]！就这样！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my [npc1.tentacle]!",
-										"Wrap those lips of yours around my [npc1.tentacle]! Keep going!",
-										"Keep sucking my [npc1.tentacle]! Yes!"));
+										"太棒了！继续吮吸我的[npc1.tentacle]！",
+										"用你的嘴唇裹住我的[npc1.tentacle]！继续！",
+										"继续吮吸我的[npc1.tentacle]！太棒了！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，就是这样！请操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14541,45 +14541,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tentacle] slide deep into your breast!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tentacle] sliding deep into your cute little nipple!",
-										"Your cute little nipple feels so good squeezing down around my [npc1.tentacle]!"));
+										"好[npc2.girl]！我的[npc1.tentacle]进入你奶子里感觉怎么样！",
+										"做得好，做个乖[npc2.girl]，被我弄得呜呜叫。感觉到我的[npc1.tentacle]蹭在你可爱的小乳头上了吗？",
+										"你可爱的小乳头挤在我的[npc1.tentacle]上感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your tits feel so good to fuck!",
-										"Oh yes! Take my [npc1.tentacle] deep into your nipple!",
-										"Your tits were made for my [npc1.tentacle]!"));
+										"草！你的奶子操起来真不错！",
+										"太棒了！把我的[npc1.tentacle]深深吸进你的乳头里！",
+										"你的奶子简直就是为了我的[npc1.tentacle]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my [npc1.tentacle]! Feel it pushing deep into your nipple!",
-										"What a horny bitch! Taking my [npc1.tentacle] deep into your tit like a slut!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tentacle] sinking deep into your slutty little nipple?!"));
+										"这就对了骚货，吸紧我的[npc1.tentacle]！感受它深深插入你乳头的感觉！",
+										"真是个淫荡的婊子！像条母狗一样把我的[npc1.tentacle]深深吸进你的奶子里去！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小乳头的[npc1.tentacle]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tentacle]! I love your tits!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your tits!"));
+										"对！用我的[npc1.tentacle]！我喜欢你的奶子！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，就是这样！请操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14587,45 +14587,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tentacle] slide deep into your [npc2.crotchNipple]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tentacle] sliding deep into your cute little [npc2.crotchNipple]!",
-										"Your cute little [npc2.crotchNipple] feels so good squeezing down around my [npc1.tentacle]!"));
+										"乖[npc2.girl]！感受我的[npc1.tentacle]深深插入你的[npc2.crotchNipple]！",
+										"就这样，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.tentacle]深入你可爱的小[npc2.crotchNipple]！",
+										"你可爱的小[npc2.crotchNipple]挤压着我的[npc1.tentacle]感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchNipple] feels so good to fuck!",
-										"Oh yes! Take my [npc1.tentacle] deep into your [npc2.crotchNipple]!",
-										"Your [npc2.crotchNipples] were made for my [npc1.tentacle]!"));
+										"草！你的[npc2.crotchNipple]操起来真不错！",
+										"真厉害！把我的[npc1.tentacle]吞进你的[npc2.crotchNipple]！",
+										"你的[npc2.crotchNipples]就是为我的[npc1.tentacle]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my [npc1.tentacle]! Feel it pushing deep into your [npc2.crotchNipple]!",
-										"What a horny bitch! Taking my [npc1.tentacle] deep into your [npc2.crotchNipple] like a slut!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tentacle] sinking deep into your slutty little [npc2.crotchNipple]?!"));
+										"就这样，荡妇，接好我的[npc1.tentacle]！感受它深深插入你的[npc2.crotchNipple]！",
+										"真是个骚货！像个荡妇一样把我的[npc1.tentacle]深深插入你的[npc2.crotchNipple] ！",
+										"你感觉到了吗，肉便器？感觉到我的[npc1.tentacle]深入到你淫荡的小[npc2.crotchNipple]中了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tentacle]! I love your [npc2.crotchNipples]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchNipples]!"));
+										"对！用我的[npc1.tentacle]！我喜欢你的[npc2.crotchNipples]！",
+										"不要停！用力！操我！啊……啊、对！",
+										"真棒！使用我吧！我爱上你的[npc2.crotchNipples]了！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！操我！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"哦太棒了！操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -14640,45 +14640,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tentacle] slide deep into your little pussy!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tentacle] sliding deep into your cute little cunt!",
-										"Your cute little cunt feels so good squeezing down around my [npc1.tentacle]!"));
+										"好[npc2.girl]！我[npc1.tentacle]滑进你小穴的感觉如何！",
+										"没错，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.tentacle]深深插入你可爱的小穴吧！",
+										"你可爱的小穴挤在我的[npc1.tentacle]周围的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your pussy feels so good!",
-										"Oh yes! Take my [npc1.tentacle]! Take it deep!",
-										"Your pussy was made for a good tentacle-fucking!"));
+										"操！你的小穴真舒服！",
+										"哦，太棒了！吃掉我的[npc1.tentacle]！吃得深一点！",
+										"你的小穴就是用来触手交的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, feel my [npc1.tentacle] pushing deep into your worthless little cunt! Your pussy belongs to me!",
-										"What a horny bitch! Now moan for me as I fuck you with my tentacle!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tentacle] sinking deep into your slutty little cunt?!"));
+										"这就对了，骚货，感受我的[npc1.tentacle]深深插进你一文不值的下体的感觉吧！你的小穴归我了！",
+										"真是个淫荡的婊子！现在呜咽着求我用触手操你！",
+										"你感觉到了吗？肉便器？你感觉到我的[npc1.tentacle]深深插入你淫荡的小穴了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tentacle]! I love your pussy!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your pussy!"));
+										"对！用我的[npc1.tentacle]！我喜欢你的小穴！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的小穴！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"噢，是的！请操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -14686,45 +14686,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.tentacle] slide deep into your little spinneret!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.tentacle] sliding deep into your cute little spinneret!",
-										"Your cute little spinneret feels so good squeezing down around my [npc1.tentacle]!"));
+										"好[npc2.girl]！我[npc1.tentacle]滑进你丝囊的感觉如何！",
+										"真棒，做个好[npc2.girl]，娇喘给我听。感觉到我的[npc1.tentacle]滑进你可爱的小丝囊了吗？",
+										"你可爱的小丝囊挤在我[npc1.tentacle]周围的滋味真不错！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your spinneret feels so good!",
-										"Oh yes! Take my [npc1.tentacle]! Take it deep!",
-										"Your spinneret was made for a good tentacle-fucking!"));
+										"草！你的丝囊操起来真不错！",
+										"哦，太棒了！吃掉我的[npc1.tentacle]！吃得深一点！",
+										"你的丝囊是为了触手交而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, feel my [npc1.tentacle] pushing deep into your worthless little spinneret! You belong to me!",
-										"What a horny bitch! Now moan for me as I fuck you with my tentacle!",
-										"You feel that, fuck toy?! Do you feel my [npc1.tentacle] sinking deep into your slutty little spinneret?!"));
+										"这就对了，骚货，感受我的[npc1.tentacle]深深插进你一文不值的丝囊的感觉吧！你是我的！",
+										"真是个淫荡的婊子！现在呜咽着求我用触手操你！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小丝囊的[npc1.tentacle]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.tentacle]! I love your spinneret!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your spinneret!"));
+										"对！用我的[npc1.tentacle]！我喜欢你的丝囊！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的吐丝孔！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"哦太棒了！操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -14754,21 +14754,21 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				case SUB_EAGER:
 				case SUB_NORMAL:
 					availableLines.add(UtilText.returnStringAtRandom(
-							"Your pussy feels so good!",
-							"You like the feel of my pussy rubbing over yours?",
-							"That's it, push your pussy back against mine!"));
+							"你的小穴真舒服！",
+							"你喜欢我们的小穴彼此摩擦的感觉吗？",
+							"这就对了，把你的小穴贴住我的！"));
 					break;
 				case DOM_ROUGH:
 					availableLines.add(UtilText.returnStringAtRandom(
-							"Your dirty little cunt feels so good!",
-							"You like the feel of my pussy rubbing over your slutty cunt?",
-							"That's it, bitch, push your pussy back against mine!"));
+							"你这肮脏的小穴感觉真好！",
+							"你喜欢我的小穴在你骚屄上摩擦的感觉吗？",
+							"就是这样的，荡妇！把你的小穴贴住我的！"));
 					break;
 				case SUB_RESISTING:
 					availableLines.add(UtilText.returnStringAtRandom(
-							"I don't want to do this! Please let me stop!",
-							"Let me go! I don't want to do this!",
-							"Please! Stop! I don't want this!"));
+							"我不想这样！求你停下来！",
+							"放开我！我不想这么做！",
+							"求你！停下来！我不想这样！"));
 					break;
 			}
 		}
@@ -14782,45 +14782,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.clit] slide deep into your ass!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.clit] sliding deep into your hot ass!",
-										"Your ass feels so good squeezing down around my [npc1.clit]!"));
+										"乖[npc2.girl]！感受我的[npc1.clit]深深地插进你的菊花！",
+										"没错，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.clit]深入你性感的屁股！",
+										"你可爱的小屁股挤在我[npc1.clit]周围的滋味真不错！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your ass feels so good!",
-										"Oh yes! Take my clit! Take it deep!",
-										"Your ass was made for my clit!"));
+										"操！你的屁股感觉真好！",
+										"哦，太棒了！含住我的豆豆！把它深深吞入！",
+										"你的屁股简直就是为了我的豆豆而生的"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my clit! Your ass belongs to me!",
-										"What a horny bitch! Take my clit you filthy little butt-slut!",
-										"You feel that, fuck toy?! Do you feel my clit sinking deep into your slutty little ass?!"));
+										"就是这样，荡妇，接好我的阴蒂！你的屁股属于我！",
+										"真是个骚货！接好我的阴蒂，你这个肮脏的菊穴小荡妇！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小屁股的阴蒂了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my clit! I love your ass!",
-										"Don't stop! Harder! Use my clit! Yes, yes, yes!",
-										"Oh yes! Use me! I love your ass!"));
+										"对！用我的豆豆！我爱死你的屁眼了！",
+										"不要停！用力！用我的阴蒂！嗯~！啊~！啊~！",
+										"哦，太棒了！使用我吧！我爱你的屁眼！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，是的！请操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -14830,45 +14830,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my clit slide up between your [npc2.breasts]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.clit] sliding up between your [npc2.breasts+]!",
-										"Your [npc2.breasts] feel so good squeezing down around my [npc1.clit]!"));
+										"好[npc2.girl]！喜欢肉棒在你[npc2.breasts]之间滑动的滋味吗！",
+										"就是这样的没错，像个好孩子一样的为我呻吟吧！感觉到我的[npc1.clit]正在你[npc2.breasts+]滑动的感觉了吗？",
+										"你的[npc2.breasts]挤压我[npc1.clit]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your tits feel so good to fuck!",
-										"Oh yes! Wrap your tits around my clit!",
-										"Your tits were made for my clit!"));
+										"草！你的奶子操起来真不错！",
+										"啊啊啊啊啊啊啊！你的奶子包裹住了我的阴蒂！",
+										"你的奶子简直就是为了我的豆豆而生的"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my clit! Push your tits together and make this good for me!",
-										"What a horny bitch! Using your tits to please my clit like a desperate slut!",
-										"You like this, fuck toy?! Squeezing your [npc2.breasts] around my clit and pleasing me like the slut you are?!"));
+										"就是这样母狗，继续取悦我的豆豆！把你的奶子挤在一起给我做的更好一点！",
+										"多么淫荡的婊子！用你的奶子来取悦我的豆豆，就像一条饥渴的母狗！",
+										"肉便器，你喜欢这样吗？！用你的奶子挤着我的豆豆，还像条母狗一样求我！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my clit! I love your tits!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your tits!"));
+										"对！用我的小豆！我爱死你的奶子了！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！操我！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my clit!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的豆豆！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"噢，是的！请操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -14876,45 +14876,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.clit] slide up between your [npc2.crotchBoobs]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.clit] sliding up between your [npc2.crotchBoobs+]!",
-										"Your [npc2.crotchBoobs] feel so good squeezing down around my [npc1.clit]!"));
+										"好[npc2.girl]！感受我的[npc1.clit]在你[npc2.crotchBoobs]间滑动的感觉吧！",
+										"就是这样，像个好孩子一样为我呻吟吧！感觉到我的[npc1.clit]正在你[npc2.crotchBoobs+]上滑动的感觉了吗？",
+										"你的[npc2.crotchBoobs]挤压我[npc1.clit]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchBoobs] feel so good to fuck!",
-										"Oh yes! Wrap your [npc2.crotchBoobs] around my [npc1.clit]!",
-										"Your [npc2.crotchBoobs] were made for my [npc1.clit]!"));
+										"草！你的[npc2.crotchBoobs]操起来真爽！",
+										"太对了！用你的[npc2.crotchBoobs]包住我的[npc1.clit]！",
+										"你的[npc2.crotchBoobs]就是为了我的[npc1.clit]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, pleasure my [npc1.clit]! Push your [npc2.crotchBoobs] together and make this good for me!",
-										"What a horny bitch! Using your [npc2.crotchBoobs] to please my [npc1.clit] like a desperate slut!",
-										"You like this, fuck toy?! Squeezing your [npc2.crotchBoobs] around my [npc1.clit] and pleasing me like the slut you are?!"));
+										"就是这样母狗，继续取悦我的[npc1.clit]！把你的[npc2.crotchBoobs]挤在一起，给我做的更好一点！",
+										"真是个淫荡的婊子！用你的[npc2.crotchBoobs]来取悦我的[npc1.clit]，就像一条饥渴的母狗！",
+										"你很喜欢吧，小肉便器。[npc2.crotchBoobs]挤着我的[npc1.clit]，像婊子一样取悦我？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.clit]! I love your [npc2.crotchBoobs]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchBoobs]!"));
+										"对的！用我的[npc1.clit]！我喜欢你的[npc2.crotchBoobs]！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的[npc2.crotchBoobs]！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！操我！",
+										"不要停！用力操我！",
+										"没错！操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my [npc1.clit]!",
-										"Please! Stop! I don't want this!"));
+										"我不想做这个！请你让我停下来！",
+										"放开我！放开我的[npc1.clit]！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"哦太棒了！操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14922,45 +14922,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], keep sucking my clit!",
-										"That's right, use your [npc2.tongue] as well! You're good at sucking clit!",
-										"What a good [npc2.girl]! You love sucking my clit, don't you?"));
+										"好[npc2.girl]，继续吸我的豆豆！",
+										"就是这样，继续用你的[npc2.tongue]来取悦我！你很会吸豆豆嘛！",
+										"真是个好[npc2.girl]！你很喜欢吸我的豆豆嘛，是不是呀？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You're good at sucking clit!",
-										"Oh yeah! Keep sucking my clit!",
-										"Use your tongue as well! Yeah, like that!"));
+										"你可真会舔豆豆！",
+										"哦，真棒！继续嗦弄我的小豆豆！",
+										"也用你的舌头！对了！就像这样！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Come on you slut! You can suck clit better than that!",
-										"That's right bitch! Take my clit deep down your throat!",
-										"Put some effort into it slut! You can suck clit better than that!"));
+										"加把油啊你这个浪货！再努力点吸我的豆豆哦。",
+										"就是这样的，荡妇！把我的豆豆吞到你的喉咙深处去！",
+										"加把油啊你这个浪货！再努力点吸我的豆豆哦。"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my clit! Just like that!",
-										"Oh yes! Wrap those lips of yours around my clit! Keep going!",
-										"Keep sucking my clit! Yes! Just like that!"));
+										"对！继续吸我的豆豆！就这么吸！",
+										"哦就是这样！用你的嘴唇包裹住我的豆豆！继续！",
+										"对！继续吮吸我的豆豆！就像这样！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking my clit!",
-										"Wrap those lips of yours around my clit! Keep going!",
-										"Keep sucking my clit! Yes!"));
+										"对！继续吸我的豆豆！",
+										"用你的嘴唇裹住我的豆豆！继续！",
+										"继续吸我的豆豆！对！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my clit!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的豆豆！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，是的！请操我！",
+										"用力操我！不要停！"));
 								break;
 						}
 						break;
@@ -14968,45 +14968,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my clit slide deep into your breast!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.clit] sliding deep into your cute little nipple!",
-										"Your cute little nipple feels so good squeezing down around my [npc1.clit]!"));
+										"好[npc2.girl]！我的豆豆进入你奶子里感觉怎么样！",
+										"做得好，做个乖[npc2.girl]，被我弄得呜呜叫。感觉到我的[npc1.clit]蹭在你可爱的小乳头上了吗？",
+										"你可爱的小乳头挤在我的[npc1.clit]上感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your tits feel so good to fuck!",
-										"Oh yes! Take my clit! Take it deep!",
-										"Your tits were made for my clit!"));
+										"草！你的奶子操起来真不错！",
+										"哦，太棒了！吃掉我的豆豆！吃得深一点！",
+										"你的奶子简直就是为了我的豆豆而生的"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my clit! Feel it pushing deep into your nipple!",
-										"What a horny bitch! Taking my clit deep into your tit like a slut!",
-										"You feel that, fuck toy?! Do you feel my clit sinking deep into your slutty little nipple?!"));
+										"这就对了骚货，吸紧我的豆豆！感受它深深插入你乳头的感觉！",
+										"真是个浪婊子！像个妓女一样用乳头蹭我的阴蒂！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡乳头的阴蒂了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my clit! I love your tits!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your tits!"));
+										"对！用我的小豆！我爱死你的奶子了！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get off my clit!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！放开我的豆豆！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"哦太棒了！操我！",
+										"用力点！别停下！"));
 								break;
 						}
 						break;
@@ -15014,45 +15014,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.clit] slide deep into your [npc2.crotchNipple]!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.clit] sliding deep into your cute little [npc2.crotchNipple]!",
-										"Your cute little [npc2.crotchNipple] feels so good squeezing down around my [npc1.clit]!"));
+										"乖[npc2.girl]！好好感受我的[npc1.clit]插进你的[npc2.crotchNipple]深处！",
+										"就是这样，做个乖[npc2.girl]，为我浪叫吧！好好感受我的[npc1.clit]深入你可爱的[npc2.crotchNipple]！",
+										"你可爱的小[npc2.crotchNipple]挤压着我[npc1.clit]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your [npc2.crotchNipple] feels so good to fuck!",
-										"Oh yes! Take my [npc1.clit] deep into your [npc2.crotchNipple]!",
-										"Your [npc2.crotchNipples] were made for my [npc1.clit]!"));
+										"草！你的[npc2.crotchNipple]操起来真不错！",
+										"真棒！用你的[npc2.crotchNipple]把我的[npc1.clit]全含进去吧！",
+										"你的[npc2.crotchNipples]就是为我的[npc1.clit]而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my [npc1.clit]! Feel it pushing deep into your [npc2.crotchNipple]!",
-										"What a horny bitch! Taking my [npc1.clit] deep into your [npc2.crotchNipple] like a slut!",
-										"You feel that, fuck toy?! Do you feel my [npc1.clit] sinking deep into your slutty little [npc2.crotchNipple]?!"));
+										"就是这样，荡妇，接好我的[npc1.clit]！感受它深深地插入你的[npc2.crotchNipple]！",
+										"真是个骚货！像个荡妇一样把我的[npc1.clit]深深地插入你的[npc2.crotchNipple]里！",
+										"你感觉到了吗，肉便器？感觉到我的[npc1.clit]深深插入你淫荡的小[npc2.crotchNipple]了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my [npc1.clit]! I love your [npc2.crotchNipples]!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your [npc2.crotchNipples]!"));
+										"对的！用我的[npc1.clit]！我喜欢你的[npc2.crotchNipples]！",
+										"不要停！用力！操我！啊……啊、对！",
+										"真棒！使用我吧！我爱上你的[npc2.crotchNipples]了！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！操我！",
+										"对！操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，就是这样！请操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -15067,45 +15067,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.clit] slide deep into your little pussy!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.clit] sliding deep into your cute little cunt!",
-										"Your cute little cunt feels so good squeezing down around my [npc1.clit]!"));
+										"乖[npc2.girl]！感受我的[npc1.clit]深深地插进你的小穴！",
+										"做得好，做个乖[npc2.girl]，被我弄得呜呜叫。感觉到我的[npc1.clit]进入你可爱的小淫穴了吗？",
+										"你可爱的小淫穴挤在我的[npc1.clit]上感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your pussy feels so good!",
-										"Oh yes! Take my clit! Take it deep!",
-										"Your pussy was made for my clit!"));
+										"操！你的小穴真舒服！",
+										"哦，太棒了！含住我的豆豆！把它深深吞入！",
+										"你的小穴就是为我的阴蒂而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my clit! Your pussy belongs to me!",
-										"What a horny bitch! Take my clit you slut!",
-										"You feel that, fuck toy?! Do you feel my clit sinking deep into your slutty little cunt?!"));
+										"就是这样，荡妇，接好我的阴蒂！你的小穴是属于我的！",
+										"真是一个淫荡的婊子！来试试我的豆豆！",
+										"你感觉到了吗，小肉便器？你感觉到深深插进你淫荡的小穴的阴蒂了吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my clit! I love your pussy!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your pussy!"));
+										"对！用我的小豆！我爱死你的小穴了！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的小穴！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！是的！我还要更多！",
+										"噢，是的！请操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -15113,45 +15113,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl]! Feel my [npc1.clit] slide deep into your little spinneret!",
-										"That's right, be a good [npc2.girl] and moan for me! Feel my [npc1.clit] sliding deep into your cute little spinneret!",
-										"Your cute little spinneret feels so good squeezing down around my [npc1.clit]!"));
+										"乖[npc2.girl]！感受我的[npc1.clit]深深地插入你的小丝囊！",
+										"就这样，做个乖[npc2.girl]，为我浪叫吧！感受我的[npc1.clit]深入你可爱的小丝囊！",
+										"你可爱的小丝囊挤压我[npc1.clit]的感觉真好！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck! Your spinneret feels so good!",
-										"Oh yes! Take my clit! Take it deep!",
-										"Your spinneret was made for my clit!"));
+										"草！你的丝囊操起来真不错！",
+										"哦，太棒了！含住我的豆豆！把它深深吞入！",
+										"你的丝囊就是为了我的阴蒂而生的！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut, take my clit! Your spinneret belongs to me!",
-										"What a horny bitch! Take my clit you slut!",
-										"You feel that, fuck toy?! Do you feel my clit sinking deep into your slutty little spinneret?!"));
+										"就是这样，荡妇，接好我的阴蒂！你的丝囊是属于我的！",
+										"真是一个淫荡的婊子！来试试我的豆豆！",
+										"你感觉到了吗，小肉便器？你感觉到我的豆豆深深插进你淫荡的小丝囊了吗？！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Use my clit! I love your spinneret!",
-										"Don't stop! Harder! Fuck me! Yes, yes, yes!",
-										"Oh yes! Use me! I love your spinneret!"));
+										"对！用我的豆豆！我爱死你的丝囊了！",
+										"不要停！用力！操我！啊……啊、对！",
+										"哦，太棒了！使用我吧！我爱你的吐丝孔！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Fuck me!",
-										"Don't stop! Fuck me!",
-										"Oh yes! Fuck me!"));
+										"对！就这么操！",
+										"不要停！用力操我！",
+										"没错！就这样操我！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck me! Yes! Harder!",
-										"Oh yeah! Fuck me!",
-										"Harder! Don't stop!"));
+										"操我！对！用力点！",
+										"噢，就是这样！请操我！",
+										"用力点！不要停！"));
 								break;
 						}
 						break;
@@ -15182,45 +15182,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.toes] deep in your ass, don't you?",
-										"I love foot-fucking cute little asses like yours!",
-										"What a good [npc2.girl]! Your ass loves the feeling of my [npc1.toes], doesn't it?"));
+										"乖[npc2.girl]，你喜欢感觉我的[npc1.toes]深深插入你的屁眼，不是吗？",
+										"我喜欢用脚插你这样可爱的小屁股",
+										"真是个好[npc2.girl]！你的屁股很中意我[npc1.toes]的感觉哦！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.toes] deep in your ass, don't you?!",
-										"I love foot-fucking cute little asses like yours!",
-										"You like it when I curl my [npc1.toes] up inside your ass, like <i>this</i>?!"));
+										"你喜欢我的[npc1.toes]深深插入你屁眼的感觉，不是吗？",
+										"我喜欢用脚插你这样可爱的小屁股",
+										"你喜欢我的[npc1.toes]在里面勾起来，就像<i>这样</i>对吗？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! I can feel your horny little ass clenching down on my [npc1.toes]!",
-										"You love this, don't you bitch?! Feeling my [npc1.toes] pushing deep into your slutty little asshole!",
-										"That's right slut! You love having my [npc1.toes] stuffed deep in your slutty ass!"));
+										"真是个骚货！我能感觉到你淫荡的小屁股紧紧夹住我的[npc1.toes]！",
+										"你喜欢这样，不是吗你个婊子？感受我的[npc1.toes]深深插入你淫荡的小屁眼！",
+										"就是这样的，荡妇！你喜欢我的[npc1.toes]深深地塞进你那放荡的屁眼里！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my toes deep inside your ass!",
-										"I love giving your ass the attention it deserves!",
-										"I love foot-fucking your ass!"));
+										"嗯~！就这样让我的脚趾深入你的菊花吧！",
+										"你的屁股摆在那儿就是用来被操的！",
+										"我喜欢用脚趾插你的屁眼！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love foot-fucking your ass!",
-										"I love giving your ass the attention it deserves!",
-										"I love foot-fucking your ass!"));
+										"我喜欢用脚插你的屁股！",
+										"你的屁股摆在那儿就是用来被操的！",
+										"我喜欢用脚趾插你的屁眼！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -15230,45 +15230,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love having your [npc2.breasts] fondled like this, don't you?",
-										"I love your [npc2.breasts]!",
-										"What a good [npc2.girl]! Your tits love the feeling of my [npc1.toes], don't they?"));
+										"多么棒的[npc2.girl]！你喜欢你的[npc2.breasts]被这样对待，我说的没错吧？！",
+										"我超爱你的[npc2.breasts]！",
+										"真是个乖孩子！你的奶头也很喜欢我的[npc1.toes]，对吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of having your [npc2.breasts] fondled, don't you?!",
-										"I love your [npc2.breasts+]!",
-										"You like it when I press my [npc1.toes] into your [npc2.breasts], like <i>this</i>?!"));
+										"你喜欢别人玩弄你[npc2.breasts]的感觉，对吧？",
+										"我爱死你[npc2.breasts+]了！",
+										"你喜欢我把我的[npc1.toes]按到你的[npc2.breasts]上，就像<i>这样</i>？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! Moaning as I grope your [npc2.breasts+]!",
-										"You love this, don't you bitch?! Having your [npc2.breasts] groped and fondled like <i>this</i>!",
-										"That's right slut! Your [npc2.breasts+] are mine to use however I want!"));
+										"肮脏的荡妇！我一摸你这对淫荡奶子，你就娇喘！",
+										"婊子，你超爱的是不是？！只要像<i>这样</i>抓揉你的[npc2.breasts]！",
+										"就是这样，荡妇！你的[npc2.breasts+]是我的，我想怎么用就怎么用！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love the feel of your [npc2.breasts]!",
-										"I love giving your tits the attention they deserve!",
-										"I love your [npc2.breasts]!"));
+										"啊！我爱死这对奶子的手感了！",
+										"该关照一下你诱人的乳头了！",
+										"我喜欢你的[npc2.breasts]！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love the feel of your [npc2.breasts]!",
-										"I love giving your tits the attention they deserve!",
-										"I love your [npc2.breasts]!"));
+										"啊！你的胸部摸起来可真好！",
+										"你的奶子这么吸引人，我怎么能不好好疼爱下呢！",
+										"我喜欢你的[npc2.breasts]！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"嗯~！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -15276,45 +15276,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love having your [npc2.crotchBoobs] fondled like this, don't you?",
-										"I love your [npc2.crotchBoobs]!",
-										"What a good [npc2.girl]! Your [npc2.crotchBoobs] love the feeling of my [npc1.toes], don't they?"));
+										"好[npc2.girl]，你超喜欢你[npc2.crotchBoobs]被这么摸的，对吧？",
+										"我爱死你的[npc2.crotchBoobs]了！",
+										"真是个乖[npc2.girl]！你的[npc2.crotchBoobs]喜欢我的[npc1.toes]的感觉，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of having your [npc2.crotchBoobs] fondled, don't you?!",
-										"I love your [npc2.crotchBoobs+]!",
-										"You like it when I press my [npc1.toes] into your [npc2.crotchBoobs], like <i>this</i>?!"));
+										"你很喜欢有人这样揉你的[npc2.crotchBoobs]，是不是啊？！",
+										"我爱死你[npc2.crotchBoobs+]了！",
+										"你喜欢我把[npc1.toes]按到你的[npc2.crotchBoobs]上，就像<i>这样</i>？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! Moaning as I grope your [npc2.crotchBoobs+]!",
-										"You love this, don't you bitch?! Having your [npc2.crotchBoobs] groped and fondled like <i>this</i>!",
-										"That's right slut! Your [npc2.crotchBoobs+] are mine to use however I want!"));
+										"真是个下流的骚货！我抓你[npc2.crotchBoobs+]你居然叫成这样！",
+										"你个婊子，很喜欢吧？！<i>这样</i>对着你的[npc2.crotchBoobs]又抓又揉！",
+										"就是这样，荡妇！你[npc2.crotchBoobs+]是属于我的，我想怎么用就怎么用！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love the feel of your [npc2.crotchBoobs]!",
-										"I love giving your [npc2.crotchBoobs] the attention they deserve!",
-										"I love your [npc2.crotchBoobs]!"));
+										"真不错！你的[npc2.crotchBoobs]抓起来手感很棒啊！",
+										"我超爱让你的[npc2.crotchBoobs]得到应有的关注！",
+										"我喜欢你的[npc2.crotchBoobs]！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love the feel of your [npc2.crotchBoobs]!",
-										"I love giving your [npc2.crotchBoobs] the attention they deserve!",
-										"I love your [npc2.crotchBoobs]!"));
+										"真不错！你的[npc2.crotchBoobs]抓起来手感很棒啊！",
+										"我超爱让你的[npc2.crotchBoobs]得到应有的关注！",
+										"我喜欢你的[npc2.crotchBoobs]！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"嗯~！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -15322,90 +15322,90 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], keep sucking on my [npc1.toes]!",
-										"That's right, keep swirling your [npc2.tongue] around my [npc1.toes]!",
-										"What a good [npc2.girl]! You love sucking on my [npc1.toes], don't you?"));
+										"好[npc2.girl]，好好舔我的[npc1.toes]！",
+										"这就对了，继续用[npc2.tongue]缠住我的[npc1.toes]舔！",
+										"多乖的[npc2.girl]啊！你喜欢吮吸我的[npc1.toes]，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love sucking on my [npc1.toes], don't you?!",
-										"That's right, keep sucking on my [npc1.toes]!",
-										"Keep sucking on my [npc1.toes], just like that!"));
+										"你很喜欢舔我的[npc1.toes]吗？！",
+										"就是这样，继续吸我的[npc1.toes]吧！",
+										"继续吸我的[npc1.toes]，就是这样！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right slut! Suck on my [npc1.toes] like you would on a nice thick cock!",
-										"You love this, don't you bitch?! Having my [npc1.toes] sliding in and out of your mouth!",
-										"That's right slut! Suck on my [npc1.toes] as I stuff them deep down your throat!"));
+										"就是这样，骚货！像鸡巴一样舔我的[npc1.toes]吧！",
+										"让我的[npc1.toes]在你嘴巴里抽插！你个婊子，喜欢吧？！",
+										"就是这样，荡妇！吸我的[npc1.toes]，让我把它们塞进你的喉咙深处！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Suck on my [npc1.toes]! Just like that!",
-										"I love having my [npc1.toes] sucked! Keep going!",
-										"Keep sucking my [npc1.toes]! Yes! Just like that!"));
+										"真棒！对着我的[npc1.toes]吸！就这样！",
+										"[npc1.toes]被舔的感觉真棒！不要停！",
+										"继续吸我的[npc1.toes]！啊~！就是这样！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Keep sucking on my [npc1.toes]!",
-										"I love having my [npc1.toes] sucked!",
-										"Keep sucking my [npc1.toes]! Yes!"));
+										"没错，继续舔我的[npc1.toes]吧！",
+										"我喜欢[npc1.toes]被舔的感觉！",
+										"继续吸我的[npc1.toes]！嗯~！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！让我停下来，求你了！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 						}
 						break;
 					case NIPPLE:
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.toes] deep in your nipples, don't you?",
-										"I love foot-fucking cute little nipples like yours!",
-										"What a good [npc2.girl]! Your tits love the feeling of my [npc1.toes], don't they?"));
+										"乖[npc2.girl]，我[npc1.toes]插进你奶子的感觉很爽吧？",
+										"你这种可爱的小奶头，我最喜欢用脚去操了！",
+										"真是个乖孩子！你的奶头也很喜欢我的[npc1.toes]，对吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.toes] deep in your nipples, don't you?!",
-										"I love foot-fucking cute little nipples like yours!",
-										"You like it when I curl my [npc1.toes] up inside your tits, like <i>this</i>?!"));
+										"你喜欢我的[npc1.toes]插进你奶头里面的感觉，对不对？！",
+										"你这种可爱的小奶头，我最喜欢用脚去操了！",
+										"我的[npc1.toes]在你奶子里搅动的<i>感觉</i>，你喜欢吧？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! Moaning as I stuff my [npc1.toes] deep into your nipples!",
-										"You love this, don't you bitch?! Feeling my [npc1.toes] pushing deep into your tits!",
-										"That's right slut! You love having my [npc1.toes] stuffed deep in your slutty nipples!"));
+										"真是个贱货！把[npc1.toes]伸进你的奶子里就浪叫成这样！",
+										"你很喜欢吧，婊子？！好好感受一下我的[npc1.toes]在你奶头里的感觉！",
+										"这就对了骚货！你很喜欢我的[npc1.toes]塞满你淫荡的奶子吧！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my toes deep inside your nipples!",
-										"I love giving your tits the attention they deserve!",
-										"I love foot-fucking your nipples!"));
+										"真棒！让我的脚趾再插到你奶头里深一点吧！",
+										"你的奶子这么吸引人，我怎么能不好好疼爱下呢！",
+										"我太喜欢用脚插你的奶子了！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love foot-fucking your nipples!",
-										"I love giving your tits the attention they deserve!",
-										"I love foot-fucking your nipples!"));
+										"我太喜欢用脚插你的奶子了！",
+										"你的奶子这么吸引人，我怎么能不好好疼爱下呢！",
+										"我太喜欢用脚插你的奶子了！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -15413,45 +15413,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.toes] deep in your [npc2.crotchNipples], don't you?",
-										"I love foot-fucking cute little [npc2.crotchNipples] like yours!",
-										"What a good [npc2.girl]! Your [npc2.crotchNipples] love the feeling of my [npc1.toes], don't they?"));
+										"乖[npc2.girl]，你喜欢感觉我的[npc1.toes]深入你的[npc2.crotchNipples]，不是吗？",
+										"我喜欢用脚插像你这样可爱的小[npc2.crotchNipples]！",
+										"真是个乖[npc2.girl]！你的[npc2.crotchNipples]喜欢我[npc1.toes]的感觉，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.toes] deep in your [npc2.crotchNipple], don't you?!",
-										"I love foot-fucking cute little [npc2.crotchNipples] like yours!",
-										"You like it when I curl my [npc1.toes] up inside your [npc2.crotchNipples], like <i>this</i>?!"));
+										"你喜欢我的[npc1.toes]深深插入你的[npc2.crotchNipple]的感觉，不是吗？",
+										"我喜欢用脚插像你这样可爱的小[npc2.crotchNipples]！",
+										"你喜欢我把[npc1.toes]在你的[npc2.crotchNipples]上蜷曲，就像<i>这样</i>？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! Moaning as I stuff my [npc1.toes] deep into your [npc2.crotchNipples]!",
-										"You love this, don't you bitch?! Feeling my [npc1.toes] pushing deep into your [npc2.crotchNipples]!",
-										"That's right slut! You love having my [npc1.toes] stuffed deep in your slutty [npc2.crotchNipples]!"));
+										"真是个下流的荡妇！我的[npc1.toes]全塞进你[npc2.crotchNipples]里了哦！呻吟吧！",
+										"你喜欢这样，不是吗婊子？好好感受我的[npc1.toes]深深插入你的[npc2.crotchNipples]！",
+										"就是这样，荡妇！你喜欢把我的[npc1.toes]深深地塞进你淫荡的[npc2.crotchNipples]里！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my toes deep inside your [npc2.crotchNipples]!",
-										"I love giving your [npc2.crotchNipples] the attention they deserve!",
-										"I love foot-fucking your [npc2.crotchNipples]!"));
+										"啊~！让我的脚趾深深插入你的[npc2.crotchNipples]里！",
+										"我喜欢给你的[npc2.crotchNipples]应有的关注！",
+										"我喜欢用脚插你的[npc2.crotchNipples]！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love foot-fucking your [npc2.crotchNipples]!",
-										"I love giving your [npc2.crotchNipples] the attention they deserve!",
-										"I love foot-fucking your [npc2.crotchNipples]!"));
+										"我喜欢用脚插你的[npc2.crotchNipples]！",
+										"我喜欢给你的[npc2.crotchNipples]应有的关注！",
+										"我喜欢用脚插你的[npc2.crotchNipples]！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -15466,45 +15466,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.toes] deep in your pussy, don't you?",
-										"I love foot-fucking cute little things like you!",
-										"What a good [npc2.girl]! Your pussy loves the feeling of my [npc1.toes], doesn't it?"));
+										"乖[npc2.girl]，我[npc1.toes]插进你逼里的感觉很爽吧？",
+										"足交你这种小可爱真是太棒了呢~",
+										"多乖的[npc2.girl]啊！你的小穴喜欢我[npc1.toes]的感觉，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.toes] deep in your pussy, don't you?!",
-										"I love foot-fucking cute [npc2.girls] like you!",
-										"You like it when I curl my [npc1.toes] up inside you, like <i>this</i>?!"));
+										"你喜欢我的[npc1.toes]插进你逼里面的感觉，对不对？！",
+										"足交你这种[npc2.girls]真是太棒了呢~",
+										"我[npc1.toes]在里面搅弄其实挺爽的吧？<i>就 像 这 样</i>？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! I can feel your horny pussy clenching down on my [npc1.toes]!",
-										"You love this, don't you bitch?! Feeling my [npc1.toes] pushing deep into your slutty cunt!",
-										"That's right slut! You love having my [npc1.toes] stuffed deep in your slutty pussy!"));
+										"婊子挺骚的哈！吸我[npc1.fingers]的逼实在是太棒了！",
+										"你喜欢这样，是不是？好好感受我的[npc1.toes]深深插入你的骚屄！",
+										"就是这样荡妇！你喜欢被我的[npc1.toes]深深地插进你的骚逼！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my toes deep inside your little pussy!",
-										"I love giving your pussy the attention it deserves!",
-										"I love foot-fucking you!"));
+										"太棒了！让我用脚趾狠狠地草你的嫩逼！",
+										"我喜欢给你的小穴应有的关照！",
+										"我喜欢用脚趾插你！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love foot-fucking your pussy!",
-										"I love giving your pussy the attention it deserves!",
-										"I love foot-fucking you!"));
+										"足交真是妙啊！",
+										"我喜欢给你的小穴应有的关照！",
+										"我喜欢用脚趾插你！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"爽！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -15512,45 +15512,45 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Good [npc2.girl], you love feeling my [npc1.toes] deep in your spinneret, don't you?",
-										"I love foot-fucking cute little things like you!",
-										"What a good [npc2.girl]! Your spinneret loves the feeling of my [npc1.toes], doesn't it?"));
+										"乖[npc2.girl]，丝囊被我[npc1.toes]插进的感觉很爽吧？",
+										"足交你这种小可爱真是太棒了！",
+										"乖[npc2.girl]！丝囊被我[npc1.toes]插入其实爽得很吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"You love the feeling of my [npc1.toes] deep in your spinneret, don't you?!",
-										"I love foot-fucking cute [npc2.girls] like you!",
-										"You like it when I curl my [npc1.toes] up inside you, like <i>this</i>?!"));
+										"丝囊被我[npc1.toes]插入其实爽的狠吧？！",
+										"足交你这样的[npc2.girls]真是太棒了！",
+										"我[npc1.toes]在里面搅弄其实挺爽的吧？<i>就 像 这 样</i>？！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"What a dirty slut! I can feel your horny spinneret clenching down on my [npc1.toes]!",
-										"You love this, don't you bitch?! Feeling my [npc1.toes] pushing deep into your slutty spinneret!",
-										"That's right slut! You love having my [npc1.toes] stuffed deep in your slutty spinneret!"));
+										"婊子挺不错的嘛！我能感受到[npc1.toes]上你丝囊的吸力！",
+										"你这不是挺爽的啊？婊子？狠狠地用[npc1.toes]插入你的丝囊！",
+										"对！就是这样婊子！你不是挺喜欢丝囊被我[npc1.toes]深入的快感嘛！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! Let me get my toes deep inside your little spinneret!",
-										"I love giving your spinneret the attention it deserves!",
-										"I love foot-fucking you!"));
+										"太棒了！让我把脚趾狠狠地伸进你的小吐丝器里！",
+										"你的丝穴摆在那儿就是用来被草的！",
+										"我喜欢用脚趾操你！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love foot-fucking your spinneret!",
-										"I love giving your spinneret the attention it deserves!",
-										"I love foot-fucking you!"));
+										"我喜欢用脚趾插你的吐丝穴！",
+										"你的丝穴摆在那儿就是用来被草的！",
+										"我喜欢用脚趾插你！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 							default:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Fuck!",
-										"Yeah!",
-										"Oh yeah!"));
+										"妈的！",
+										"嗯~！",
+										"爽死了！"));
 								break;
 						}
 						break;
@@ -15579,34 +15579,34 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your armpit tastes so good!",
-										"Good [npc2.girl]! I love the taste of your armpit!",
-										"What a good [npc2.girl]! You love having your armpit kissed like this, don't you?"));
+										"你的腋下味道真好",
+										"乖[npc2.girl]！我喜欢你腋下的味道！",
+										"真是个乖[npc2.girl]！你喜欢别人这样亲你的腋窝，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your armpit tastes so good!",
-										"You like this? Feeling my tongue running over your armpit?!",
-										"I love the taste of your armpit!"));
+										"真不错~你的腋窝真美味！",
+										"你喜欢我的舌头滑过你腋窝的感觉吗？！",
+										"我爱死你的腋窝味道了"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Keep still slut, and be thankful that I'm giving your armpit some attention!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, having me lick your armpit?!"));
+										"骚货别乱动，你最好谢谢我照顾你的腋窝！",
+										"给我安分点，婊子！你只要娇喘然后享受过程就行了！",
+										"你最好感恩我你这个婊子！你知道你有多幸运，能让我舔你的腋窝？！"));
 								break;
 							case SUB_EAGER:
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your armpit!",
-										"Oh yes! Let me lick your armpit! Yes, yes, yes!",
-										"Oh yes! I love your armpit!"));
+										"太爽了，我爱死你的腋窝了！",
+										"噢对！让我来舔舔你的腋窝！对，对，对！",
+										"太棒了！我好喜欢你的腋窝！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我受不了了！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15614,39 +15614,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right, moan for me as I pleasure your ass!",
-										"Good [npc2.girl]! I love licking cute little asses like yours!",
-										"What a good [npc2.girl]! You love my tongue in your ass, don't you?"));
+										"就是这样，当我取悦你的屁股时，为我呻吟吧！",
+										"乖[npc2.girl]！我喜欢舔你这样可爱的小屁股！",
+										"真是个好[npc2.girl]！你很喜欢我舔你的屁眼，是不是呀？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"That's right, moan for me as I lick your ass!",
-										"Feel my tongue deep in your ass! Moan for me!",
-										"You love my tongue in your ass, don't you?"));
+										"就是这样，在我舔你屁股的时候为我呻吟吧！",
+										"感受我的舌头深入你的菊花！浪叫吧！",
+										"你喜欢我用舌头舔你的屁股，不是吗？"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Keep still slut, I need to practice my oral skills on your worthless ass!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, being used as oral practice?!"));
+										"别动，荡妇！我要在你那没用的屁穴上练习我的口技！",
+										"给我安分点，婊子！你只要娇喘然后享受过程就行了！",
+										"你最好珍惜这个！婊子！你知道你被当成口交练习器有多幸运吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your ass! Feel my [npc1.tongue] pushing deep!",
-										"Oh yes! Let me lick your ass! Yes, yes, yes!",
-										"Oh yes! I love licking ass! Let me get my [npc1.tongue] nice and deep!"));
+										"哦~！我喜欢你的屁股！感受我的[npc1.tongue]深入你的身体！",
+										"太棒了！我来舔舔你的屁股！嗯唔~",
+										"这就对了！我喜欢舔屁股！让我把[npc1.tongue]好好深入到里面去！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love licking your ass!",
-										"Let me lick your ass! I love this!",
-										"I love licking your ass!"));
+										"我喜欢舔你的屁股！",
+										"让我舔你的屁股！我喜欢这个！",
+										"我喜欢舔你的屁股！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! Get your ass away from my face!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样做！求求你让我停下来！",
+										"放开我！你的屁股离我的脸远点！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15656,39 +15656,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your tits taste so good!",
-										"Good [npc2.girl]! I love the taste of your tits!",
-										"What a good [npc2.girl]! You love having your tits kissed like this, don't you?"));
+										"你奶子的味道真好！",
+										"乖[npc2.girl]！我喜欢你奶子的味道！",
+										"多么棒的[npc2.girl]！你喜欢你的乳尖被这样亲亲，我说的没错吧？！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your tits taste so good!",
-										"You like this? Feeling my tongue running over your breasts?!",
-										"I love the taste of your tits!"));
+										"噢太棒了！你的奶子尝起来真棒！",
+										"你喜欢这样吗？感受我的舌头舔过你的奶子？！",
+										"我爱你这奶子的味道！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Keep still slut, and be thankful that I'm giving your tits some attention!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, having me lick your tits?!"));
+										"别乱动，臭婊子，你得多谢我正给你的奶子一些照顾！",
+										"给我安分点，婊子！你只要娇喘然后享受过程就行了！",
+										"你最好珍惜这个！婊子！你知道让我舔你的奶子你有多幸运吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your tits! Let me suck on your nipples!",
-										"Oh yes! Let me suck on your nipples! Yes, yes, yes!",
-										"Oh yes! I love your tits!"));
+										"哦~！我喜欢你的奶子！让我吸吸你的乳头！",
+										"太棒了！我来吸吸你的乳头！嗯唔~",
+										"噢不错嘛！我喜欢你的奶子！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love your tits! Let me suck on your nipples!",
-										"Oh yes! Let me suck on your nipples!",
-										"I love your tits!"));
+										"我爱你的奶子！让我吮吸你的乳头！",
+										"太棒了~我来吸吸你的乳头！",
+										"我爱你的奶子！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15696,39 +15696,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your [npc2.crotchBoobs] taste so good!",
-										"Good [npc2.girl]! I love the taste of your [npc2.crotchBoobs]!",
-										"What a good [npc2.girl]! You love having your [npc2.crotchBoobs] kissed like this, don't you?"));
+										"你的[npc2.crotchBoobs]尝起来真好！",
+										"乖[npc2.girl]！我喜欢你[npc2.crotchBoobs]的味道！",
+										"多好的[npc2.girl]啊！你喜欢别人这样亲你的[npc2.crotchBoobs]，不是吗？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your [npc2.crotchBoobs] taste so good!",
-										"You like this? Feeling my tongue running over your [npc2.crotchBoobs]?!",
-										"I love the taste of your [npc2.crotchBoobs]!"));
+										"哦，太棒了！你的[npc2.crotchBoobs]尝起来真好！",
+										"你喜欢这样吗？感觉我的舌头在你的[npc2.crotchBoobs]上游走？！",
+										"我喜欢你[npc2.crotchBoobs]的味道！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Keep still slut, and be thankful that I'm giving your [npc2.crotchBoobs] some attention!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, having me lick your [npc2.crotchBoobs]?!"));
+										"别乱动，臭婊子，你得多谢我正给你的[npc2.crotchBoobs]一些照顾！",
+										"给我安分点，婊子！你只要娇喘然后享受过程就行了！",
+										"你最好珍惜这个！婊子！你知道你有多幸运让我舔你的[npc2.crotchBoobs]吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your [npc2.crotchBoobs]! Let me suck on your [npc2.crotchNipples]!",
-										"Oh yes! Let me kiss your [npc2.crotchBoobs]! Yes, yes, yes!",
-										"Oh yes! I love your [npc2.crotchBoobs]!"));
+										"没错！我爱死你的[npc2.crotchBoobs]了！让我吸吸你的[npc2.crotchNipples]！",
+										"哦，没错！让我亲亲你的[npc2.crotchBoobs]！啊~！没错就是这样！",
+										"真舒服！我要爱上你的[npc2.crotchBoobs]了！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love your [npc2.crotchBoobs]! Let me suck on your [npc2.crotchNipples]!",
-										"Oh yes! Let me kiss your [npc2.crotchBoobs]!",
-										"I love your tits!"));
+										"我可太爱你的[npc2.crotchBoobs]了！给我吸一吸你的[npc2.crotchNipples]！",
+										"太棒了~我来亲亲你的[npc2.crotchBoobs]！",
+										"我爱你的奶子！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不要这样做！求求你让我停下！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15736,39 +15736,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your lips taste so good!",
-										"Good [npc2.girl]! Don't stop!",
-										"What a good [npc2.girl]!"));
+										"你的嘴唇真美味！",
+										"乖[npc2.girl]！不要停！",
+										"多好的[npc2.girl]啊！"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your lips taste so good!",
-										"Good [npc2.girl]! Don't stop!",
-										"What a good [npc2.girl]!"));
+										"你的嘴唇真美味！",
+										"乖[npc2.girl]！不要停！",
+										"多好的[npc2.girl]啊！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Come on slut, you can kiss better than that!",
-										"Put some more effort into this bitch! Kiss me like you mean it!",
-										"Fucking slut, you can kiss me better than this! Put some more effort into it!"));
+										"努力点，小浪货！再努力点和我接吻哦。",
+										"再给点力，婊子！像真的一样吻我！",
+										"欠操的荡妇！你可以吻得比这更好！再加把劲！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your lips taste so good! I need more!",
-										"I love kissing you! Yes, yes, yes!",
-										"Oh yes! Your lips taste so good!"));
+										"哦，太棒了！你的嘴唇尝起来真好！我还想要！",
+										"我喜欢吻你！是的~没错~就是这样~！",
+										"真棒！你的嘴尝起来真甜！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your lips taste so good! I need more!",
-										"I love kissing you!",
-										"Your lips taste so good!"));
+										"你的嘴唇味道真好！我要更多！",
+										"我喜欢和你接吻！",
+										"你的嘴唇真美味！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15776,49 +15776,49 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your nipples taste so good!",
-										"Good [npc2.girl]! I love the taste of your tits!",
+										"你的乳头真美味！",
+										"乖[npc2.girl]！我喜欢你奶子的味道！",
 										!target.isBreastFuckableNipplePenetration()
 											?""
-											:"What a good [npc2.girl]! You love having my tongue in your nipple, don't you?"));
+											:"真是个好[npc2.girl]！你很喜欢我舔你的乳头，是不是呀？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your tits taste so good!",
+										"噢太棒了！你的奶子尝起来真棒！",
 										!target.isBreastFuckableNipplePenetration()
 											?""
-											:"You like this? Feeling my tongue deep in your hot little nipple?!",
-										"I love the taste of your tits!"));
+											:"你喜欢吗？我的舌头正插着你火热的小乳头哦？！",
+										"我爱你奶子的味道！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
 										!target.isBreastFuckableNipplePenetration()
 											?""
-											:"Keep still slut, I need to practice my skills on fuckable nipples like yours!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, having me lick your nipples?!"));
+											:"别乱动，荡妇！我得在像你这样能操的奶头上练习我的技巧！",
+										"给我安分点，婊子！你只要娇喘然后享受过程就行了！",
+										"你最好珍惜这个！婊子！你知道让我舔你的乳头你有多幸运吗？！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your tits! Let me suck on your nipples!",
-										"Oh yes! Let me suck on your nipples! Yes, yes, yes!",
+										"哦~！我喜欢你的奶子！让我吸吸你的乳头！",
+										"太棒了！我来吸吸你的乳头！嗯唔~",
 										!target.isBreastFuckableNipplePenetration()
 											?""
-											:"Oh yes! I love your nipples! Let me get my [npc1.tongue] nice and deep!"));
+											:"嗯~好极了！我爱死你的奶子了！快让我的[npc1.tongue]深入！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love your tits! Let me suck on your nipples!",
-										"Oh yes! Let me suck on your nipples!",
+										"我爱你的奶子！让我吮吸你的乳头！",
+										"太棒了~我来吸吸你的乳头！",
 										!target.isBreastFuckableNipplePenetration()
 											?""
-											:"I love your nipples! Let me get my [npc1.tongue] nice and deep!"));
+											:"我爱死你的奶子了！快让我的[npc1.tongue]深入！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想要这样！停下吧求求了！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15826,39 +15826,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your [npc2.crotchNipples] taste so good!",
-										"Good [npc2.girl]! I love the taste of your [npc2.crotchNipples]!",
-										"What a good [npc2.girl]! You love having my tongue in your [npc2.crotchNipples], don't you?"));
+										"你[npc2.crotchNipples]的滋味真好！",
+										"好[npc2.girl]！我喜欢你[npc2.crotchNipples]的滋味！",
+										"真是个乖[npc2.girl]！你喜欢我把舌头插进[npc2.crotchNipples]的感觉对吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your [npc2.crotchNipples] taste so good!",
-										"You like this? Feeling my tongue deep in your hot little [npc2.crotchNipples]?!",
-										"I love the taste of your [npc2.crotchNipples]!"));
+										"真不错~你的[npc2.crotchNipples]真美味！",
+										"你喜欢这样吗？能感受我的舌头深入你性感的小[npc2.crotchNipples]？！",
+										"我爱极了你[npc2.crotchNipples]的滋味！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Keep still slut, I need to practice my skills on fuckable [npc2.crotchNipples] like yours!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, having me lick your [npc2.crotchNipples]?!"));
+										"别乱动，荡妇！我要用你欠操的[npc2.crotchNipples]来锻炼性交技巧！",
+										"别动，婊子！你就继续呻吟，好好享受吧！",
+										"感恩吧婊子！知不知道你有多幸运，能让我舔你的[npc2.crotchNipples]？！"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your [npc2.crotchBoobs]! Let me suck on your [npc2.crotchNipples]!",
-										"Oh yes! Let me suck on your [npc2.crotchNipples]! Yes, yes, yes!",
-										"Oh yes! I love your [npc2.crotchNipples]! Let me get my [npc1.tongue] nice and deep!"));
+										"没错！我爱死你的[npc2.crotchBoobs]了！让我吸吸你的[npc2.crotchNipples]！",
+										"嗯~好极了！让我吸吸你的[npc2.crotchNipples]！嗯嗯~！",
+										"嗯~好极了！爱极了你的[npc2.crotchNipples]！让我的[npc1.tongue]更深更舒服吧！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love your [npc2.crotchBoobs]! Let me suck on your [npc2.crotchNipples]!",
-										"Oh yes! Let me suck on your [npc2.crotchNipples]!",
-										"I love your [npc2.crotchNipples]! Let me get my [npc1.tongue] nice and deep!"));
+										"我可太爱你的[npc2.crotchBoobs]了！给我吸一吸你的[npc2.crotchNipples]！",
+										"太棒了~我来吸吸你的[npc2.crotchNipples]！",
+										"你的[npc2.crotchNipples]实在是太赞了！让我的[npc1.tongue]搅弄得更深一点！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please let me stop!",
-										"Let me go! I don't want to do this!",
-										"Please! Stop! I don't want this!"));
+										"我不想这样！求你停下来！",
+										"放开我！我不想这么做！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15873,39 +15873,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your pussy tastes so good!",
-										"Good [npc2.girl]! I love the taste of your pussy!",
-										"What a good [npc2.girl]! You love my tongue in your pussy, don't you?"));
+										"你的小穴尝起来真棒！",
+										"乖[npc2.girl]！我喜欢你小穴的滋味！",
+										"真是个好[npc2.girl]！你很喜欢我舔你的小穴，是不是呀？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your pussy tastes so good!",
-										"You like this? Feeling my tongue deep in your hot little cunt?!",
-										"I love the taste of your pussy!"));
+										"真不错~你的小穴真美味！",
+										"你喜欢这样吗？让你饥渴的小穴被我的舌头深入？！",
+										"我喜欢你小穴的滋味！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Keep still slut, I need to practice my oral skills on you!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, being used as oral practice?!"));
+										"别乱动，荡妇，我要用你锻炼口交技巧！",
+										"给我安分点，婊子！你只要娇喘然后享受过程就行了！",
+										"你最好珍惜这个！婊子！你知道你被当成口交练习器有多幸运吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your pussy! You taste so good!",
-										"Oh yes! Let me eat you out! Yes, yes, yes!",
-										"Oh yes! I love the taste of your pussy! Let me get my [npc1.tongue] nice and deep!"));
+										"嗯~！我喜欢你的小穴！尝起来真棒！",
+										"没错！让我舔你的下面！哦，哦，哦！",
+										"嗯~好极了！我喜欢你小穴的滋味！让我的[npc1.tongue]更深更舒服吧！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love your pussy! You taste so good!",
-										"Let me eat you out! You taste good!",
-										"I love the taste of your pussy!"));
+										"我喜欢你的小穴！尝起来真棒！",
+										"让我舔你的下面！你真好吃！",
+										"我喜欢你小穴的滋味！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please stop!",
-										"Let me go! Get your pussy away from my face!",
-										"Please! Stop! I don't want this!"));
+										"不要！求求你停下！",
+										"放开我！你的小穴离我的脸远点！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15913,39 +15913,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						switch(Main.sex.getSexPace(this)) {
 							case DOM_GENTLE:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Your spinneret tastes so good!",
-										"Good [npc2.girl]! I love the taste of your spinneret!",
-										"What a good [npc2.girl]! You love my tongue in your spinneret, don't you?"));
+										"你的丝囊味道好极了！",
+										"好[npc2.girl]！我喜欢你丝囊的滋味！",
+										"真是个乖[npc2.girl]！你喜欢丝囊被舌头插入的感觉对吧？"));
 								break;
 							case DOM_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Oh yes! Your spinneret tastes so good!",
-										"You like this? Feeling my tongue deep in your hot little spinneret?!",
-										"I love the taste of your spinneret!"));
+										"真不错~你的丝囊真美味！",
+										"你喜欢这样吗？让你饥渴的小丝囊被我的舌头深入？！",
+										"我喜欢你丝囊的滋味！"));
 								break;
 							case DOM_ROUGH:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Keep still slut, I need to practice my oral skills on you!",
-										"Stay still bitch! Just keep moaning and enjoying this while it lasts!",
-										"You'd better appreciate this bitch! You know how lucky you are, being used as oral practice?!"));
+										"别乱动，荡妇，我要用你锻炼口交技巧！",
+										"给我安分点，婊子！你只要娇喘然后享受过程就行了！",
+										"你最好珍惜这个！婊子！你知道你被当成口交练习器有多幸运吗？"));
 								break;
 							case SUB_EAGER:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"Yes! I love your spinneret! You taste so good!",
-										"Oh yes! Let me eat you out! Yes, yes, yes!",
-										"Oh yes! I love the taste of your spinneret! Let me get my [npc1.tongue] nice and deep!"));
+										"好极了！我爱极了你的丝囊！尝起来真棒！",
+										"没错！让我舔你的下面！哦，哦，哦！",
+										"啊啊啊~太赞了！你的丝穴真是太美妙了~让我的[npc1.tongue]搅得更深一点！"));
 								break;
 							case SUB_NORMAL:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I love your spinneret! You taste so good!",
-										"Let me eat you out! You taste good!",
-										"I love the taste of your spinneret!"));
+										"我爱极了你的丝囊！尝起来真棒！",
+										"让我舔你的下面！你真好吃！",
+										"我喜欢你丝囊的滋味！"));
 								break;
 							case SUB_RESISTING:
 								availableLines.add(UtilText.returnStringAtRandom(
-										"I don't want to do this! Please stop!",
-										"Let me go! Get your spinneret away from my face!",
-										"Please! Stop! I don't want this!"));
+										"我不想要这样！求你了，停下！",
+										"放开我！把你的丝囊从我脸上拿走！",
+										"求你！停下来！我不想这样！"));
 								break;
 						}
 						break;
@@ -15970,40 +15970,40 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		Map<ImmobilisationType, GameCharacter> immobilisation = Main.sex.getImmobilisationTypes(characterReacting);
 		// Prioritise sleeping, then command, then any other:
 		if(immobilisation.containsKey(ImmobilisationType.SLEEP)) {
-			sb.append("[npc.Name] [npc.verb(remain)] asleep and thus unable to react as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed.");
+			sb.append("[npc2.namePos]的"+areaString+"露出来了，但[npc.Name]睡着了，毫无反应。");
 			
 		} else if(immobilisation.containsKey(ImmobilisationType.COMMAND)) {
-			sb.append("[npc.Name] [npc.verb(remain)] completely motionless and [npc.do]n't react as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed.");
+			sb.append("[npc2.namePos]的"+areaString+"露出来了，但[npc.Name]一动不动，毫无反应。");
 			
 		} else {
 			Entry<ImmobilisationType, GameCharacter> entry = immobilisation.entrySet().iterator().next();
 			switch(entry.getKey()) {
 				case CHAINS:
-					sb.append("[npc.Name] [npc.verb(try)] to make a move as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed, but the chains binding [npc.her] body in place keep [npc.herHim] immobilised.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，努力扭动起来，却被锁链牢牢绑住身体，动弹不得。");
 					break;
 				case ROPE:
-					sb.append("[npc.Name] [npc.verb(try)] to make a move as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed, but the ropes binding [npc.her] body in place keep [npc.herHim] immobilised.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，努力扭动起来，却被绳索牢牢绑住身体，动弹不得。");
 					break;
 				case STOCKS:
-					sb.append("[npc.Name] [npc.verb(try)] to make a move as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed, but as [npc.sheIs] locked into a set of stocks [npc.sheIs] completely immobilised.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，努力扭动起来，却被颈手枷牢牢锁住，动弹不得。");
 					break;
 				case COCOON:
-					sb.append("[npc.Name] [npc.verb(try)] to make a move as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed, but [npc.her] cocoon's strong webbing keeps [npc.herHim] locked in place.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，努力扭动起来，却被茧丝缠绕，动弹不得。");
 					break;
 				case TAIL_CONSTRICTION:
 					immobiliser = entry.getValue();
-					sb.append("[npc.Name] [npc.verb(try)] to make a move as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed, but [npc3.name] [npc3.verb(use)] [npc3.her] long tail to keep [npc.herHim] constricted and firmly locked in place.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，努力扭动起来，却被[npc3.her]用尾巴牢牢束缚住。");
 					break;
 				case TENTACLE_RESTRICTION:
 					immobiliser = entry.getValue();
-					sb.append("[npc.Name] [npc.verb(try)] to make a move as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed, but [npc3.name] [npc3.verb(use)] [npc3.her] [npc3.tentacles] to keep [npc.herHim] firmly held in place.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，努力扭动起来，却被[npc3.her]用[npc3.tentacles]牢牢束缚住。");
 					break;
 				case WITCH_SEAL:
-					sb.append("[npc.Name] [npc.verb(try)] to make a move as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed, but the Witch's Seal keeps [npc.herHim] locked in place.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，努力扭动起来，却被魔女封锁术牢牢束缚住。");
 					break;
 				case SLEEP:
 				case COMMAND:
-					sb.append("[npc.Name] [npc.do]n't react as [npc2.namePos] "+areaString+" "+(plural?"are":"is")+" revealed.");
+					sb.append("[npc.Name]看到[npc2.namePos]露出"+areaString+"，毫无反应。");
 					break;
 			}
 		}
@@ -16040,19 +16040,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(characterBeingRevealed.isPlayer()) {
 			switch(reactingPace) {
 				case DOM_GENTLE:
-					return UtilText.parse(characterReacting, "[npc.Name] lets out a soft [npc.moan] as your [pc.asshole+] is revealed.");
+					return UtilText.parse(characterReacting, "[npc.Name]看到你露出[pc.asshole+]，轻吟出声。");
 				case DOM_NORMAL:
-					return UtilText.parse(characterReacting, "[npc.Name] lets out [npc.a_moan+] as your [pc.asshole+] is revealed.");
+					return UtilText.parse(characterReacting, "[npc.Name]看到你露出[pc.asshole+]，发出[npc.a_moan+]。");
 				case DOM_ROUGH:
-					return UtilText.parse(characterReacting, "[npc.Name] lets out a hungry growl as your [pc.asshole+] is revealed.");
+					return UtilText.parse(characterReacting, "[npc.Name]看到你露出[pc.asshole+]，发出渴望的低吼。");
 				case SUB_EAGER:
-					return UtilText.parse(characterReacting, "[npc.Name] lets out [npc.a_moan+] as your [pc.asshole+] is revealed.");
+					return UtilText.parse(characterReacting, "[npc.Name]看到你露出[pc.asshole+]，发出[npc.a_moan+]。");
 				case SUB_NORMAL:
-					return UtilText.parse(characterReacting, "[npc.Name] lets out [npc.a_moan] as your [pc.asshole+] is revealed.");
+					return UtilText.parse(characterReacting, "[npc.Name]看到你露出[pc.asshole+]，呻吟出声。");
 				case SUB_RESISTING:
-					return UtilText.parse(characterReacting, "[npc.Name] lets out [npc.a_sob+] as your [pc.asshole+] is revealed.");
+					return UtilText.parse(characterReacting, "当看到你[pc.asshole+]暴露出来时，[npc.Name]发出了[npc.a_sob+]。");
 				default:
-					return UtilText.parse(characterReacting, "[npc.Name] lets out [npc.a_moan] as your [pc.asshole+] is revealed.");
+					return UtilText.parse(characterReacting, "[npc.Name]看到你露出[pc.asshole+]，呻吟出声。");
 			}
 		}
 		return "";
@@ -16083,22 +16083,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(npcReacting.isFeminine()) {
 						if (characterBeingRevealed.isFeminine()) {
 							if (!characterBeingRevealed.hasBreasts()) {
-								sb.append("[npc2.Name] struggles to stifle a mocking laugh as [npc.namePos] flat chest is revealed, "
-										+ "[npc2.speech(Pfft-hahaha!)]");
+								sb.append("[npc.namePos]露出平坦的胸部，[npc2.Name]努力忍住嘲笑声， "
+										+ "[npc2.speech(嘛……哈啊！)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
 								if(this.getBreastSize().getMeasurement() >= characterBeingRevealed.getBreastSize().getMeasurement()) {
-									sb.append("[npc2.Name] [npc2.verb(put)] on a patronising smile as [npc.namePos] [pc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Aww... They're pretty cute!)]");
+									sb.append("[npc.namePos][npc.breastSize]胸部一暴露出来，[npc2.Name]便露出了傲慢的微笑，"
+											+ "[npc2.speech(呃唔……它们好可爱哦！)]");
 									
 								} else {
-									sb.append("[npc2.Name] [npc2.verb(shuffle)] about in embarrassment as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(They're so much bigger than mine...)]");
+									sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]尴尬地扭来扭去，"
+											+ "[npc2.speech(它们比我的大多了……)]");
 								}
 								
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-										+ "[npc2.speech(How did you manage to get your tits to be that huge?!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+										+ "[npc2.speech(你是怎么做到让奶子变得这么大的？！)]");
 							}
 							
 						} else {
@@ -16106,22 +16106,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								sb.append("");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.C.getMeasurement()) {
-								sb.append("In a very patronising voice, [npc2.name] [npc2.verb(react)] to [npc.namePos] breasts being revealed, "
-										+ "[npc2.speech(Aww, you trying to become a girl?)]");
+								sb.append("对于[npc.namePos]那露出来的胸部，[npc2.name]用居高临下的声音评判着，"
+										+ "[npc2.speech(噢，你在试着变成一个女孩？)]");
 			
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
 								if(this.getBreastSize().getMeasurement() >= characterBeingRevealed.getBreastSize().getMeasurement()) {
-									sb.append("[npc2.Name] [npc2.verb(gasp)] in surprise as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Why would a guy have tits like that?)]");
+									sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]惊讶地喘息起来，"
+											+ "[npc2.speech(为什么一个男人会有那样的奶子？)]");
 									
 								} else {
-									sb.append("[npc2.Name] [npc2.verb(fail)] to contain [npc2.her] surprise as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(A <i>guy</i> has bigger tits than me?!)]");
+									sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]无法隐藏[npc2.her]的惊喜，"
+											+ "[npc2.speech(一个<i>男人</i>奶子比我还大？！)]");
 								}
 			
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-										+ "[npc2.speech(How did you manage to get your tits to be that huge?!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+										+ "[npc2.speech(你是怎么做到让奶子变得这么大的？！)]");
 							}
 							
 						}
@@ -16130,20 +16130,20 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					} else {
 						if (characterBeingRevealed.isFeminine()) {
 							if (!characterBeingRevealed.hasBreasts()) {
-								sb.append("[npc2.Name] [npc2.verb(struggle)] to stifle a mocking laugh as [npc.namePos] flat chest is revealed, "
-										+ "[npc2.speech(Pfft-hahaha!)]");
+								sb.append("[npc.namePos]平坦的胸部露了出来，[npc2.Name]努力憋住[npc2.her]嘲讽的笑声，"
+										+ "[npc2.speech(嘛……哈啊！)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.C.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(let)] out a disappointed hum as [npc.namePos] [npc.breastSize] breasts are revealed, "
-										+ "[npc2.speech(Huh... They're pretty small you know...)]");
+								sb.append("[npc.namePos]的[npc.breastSize]胸部露出来后，[npc2.name]不由得失望地哼唔了一声， "
+										+ "[npc2.speech(Huh……它们很小，你知道的……)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
-								sb.append("[npc2.NamePos] eyes light up as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Oh fuck yeah... Look at the size of those tits!)]");
+								sb.append("[npc2.namePos][npc.breastSize]的乳房露了出来，[npc2.NamePos]的眼前一亮，"
+											+ "[npc2.speech(我了个去……看看这胸有多大！)]");
 								
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(How did you manage to get your tits to be that huge?!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+											+ "[npc2.speech(你是怎么做到让奶子变得这么大的？！)]");
 							}
 							
 						} else {
@@ -16151,20 +16151,20 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								sb.append("");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.C.getMeasurement()) {
-								sb.append("In a mocking tone, [npc2.name] [npc2.verb(question)] [npc.name] as [npc.her] tiny breasts are revealed, "
-											+ "[npc2.speech(Hah, you trying to become a girl?)]");
+								sb.append("[npc2.name]对着[npc.name]露出的那小小奶子嘲弄地问道，"
+											+ "[npc2.speech(哈，你是想变成一个女孩吗？)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.FF.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(let)] out a surprised gasp as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Why would a guy have tits like that?)]");
+								sb.append("[npc.namePos]那[npc.breastSize]罩杯胸部露出来，[npc2.Name]惊讶地倒吸了一口凉气，"
+											+ "[npc2.speech(为什么一个男人会有那样的奶子？)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(fail)] to contain [npc2.her] surprise as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(What's a <i>guy</i> doing with such massive tits?!)]");
+								sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]无法隐藏[npc2.her]的惊喜，"
+											+ "[npc2.speech(你一个<i>男的</i>长这么大奶子干嘛？！)]");
 								
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(How did you manage to get your tits to be that huge?!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+											+ "[npc2.speech(你是怎么做到让奶子变得这么大的？！)]");
 							}
 							
 						}
@@ -16175,22 +16175,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(this.isFeminine()) {
 						if (characterBeingRevealed.isFeminine()) {
 							if (!characterBeingRevealed.hasBreasts()) {
-								sb.append("[npc2.Name] [npc2.verb(let)] out a mocking laugh as [npc.namePos] flat chest is revealed, "
-										+ "[npc2.speech(Hahaha, I don't think I've ever seen a girl with a chest <i>that</i> flat before!)]");
+								sb.append("[npc.namePos]平坦的胸部露了出来，[npc2.Name]发出了嘲讽的笑声，"
+										+ "[npc2.speech(哈哈哈哈哈哈哈！我从来没见过有任何女孩有<i>这么</i>平的胸！)]");
 			
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
 								if(this.getBreastSize().getMeasurement() >= characterBeingRevealed.getBreastSize().getMeasurement()) {
-									sb.append("[npc2.Name] [npc2.verb(grin)] down at [npc.name] as [npc.her] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Hah! They aren't as big as mine!)]");
+									sb.append("[npc.her][npc.breastSize]的胸部露了出来，[npc2.Name]对着[npc.name]咧开嘴笑，"
+											+ "[npc2.speech(哈！它们没我的大！)]");
 									
 								} else {
-									sb.append("[npc2.Name] [npc2.verb(let)] out an annoyed huff as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Are you trying to put me to shame or something?!)]");
+									sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]发出恼怒的哼声，"
+											+ "[npc2.speech(你是想让我难堪还是怎么的？！)]");
 								}
 			
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-										+ "[npc2.speech(How did you manage to get your tits to be that huge?!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+										+ "[npc2.speech(你是怎么做到让奶子变得这么大的？！)]");
 							}
 			
 						} else {
@@ -16198,22 +16198,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								sb.append("");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.C.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(grin)] at [npc.name] as [npc.her] [npc.breastSize] breasts are revealed, "
-										+ "[npc2.speech(Aww, you trying to become a girl?)]");
+								sb.append("[npc.her][npc.breastSize]的乳房露了出来，[npc2.Name]对[npc.name]咧开嘴笑，"
+										+ "[npc2.speech(噢，你在试着变成一个女孩？)]");
 			
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
 								if(this.getBreastSize().getMeasurement() >= characterBeingRevealed.getBreastSize().getMeasurement()) {
-									sb.append("[npc2.Name] [npc2.verb(let)] out a surprised gasp as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Why would a guy have tits like that?)]");
+									sb.append("[npc.namePos]那[npc.breastSize]的胸部露出来的同时，[npc2.Name]惊讶地倒吸了一口凉气，"
+											+ "[npc2.speech(为什么一个男人会有那样的奶子？)]");
 									
 								} else {
-									sb.append("[npc2.Name] [npc2.verb(let)] out an annoyed huff as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Are you kidding me?! A <i>guy</i> has bigger tits than me?!)]");
+									sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]发出恼怒的哼声，"
+											+ "[npc2.speech(你特么在逗我？！一个<i>男的</i>奶子比我还大？！)]");
 								}
 			
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-										+ "[npc2.speech(How did you manage to get your tits to be that huge?!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+										+ "[npc2.speech(你是怎么做到让奶子变得这么大的？！)]");
 							}
 							
 						}
@@ -16222,24 +16222,24 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					} else {
 						if (characterBeingRevealed.isFeminine()) {
 							if (!characterBeingRevealed.hasBreasts()) {
-								sb.append("[npc2.Name] [npc2.verb(let)] out a mocking laugh as [npc.namePos] flat chest is revealed, "
-											+ "[npc2.speech(Hahaha, I don't think I've ever seen a girl with a chest <i>that</i> flat before!)]");
+								sb.append("[npc.namePos]平坦的胸部露了出来，[npc2.Name]发出了嘲讽的笑声，"
+											+ "[npc2.speech(哈哈哈哈哈哈哈！我从来没见过有任何女孩有<i>这么</i>平的胸！)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.C.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(growl)] at [npc.name] as [npc.her] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(I like my girls with bigger tits than that!)]");
+								sb.append("[npc.her][npc.breastSize]的乳房露了出来，[npc2.Name]对[npc.name]发出咆哮，"
+											+ "[npc2.speech(我喜欢我的姑娘有比这更大的奶子！)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.FF.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(grin)] as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Mmm yeah, those are some nice tits!)]");
+								sb.append("[npc.namePos]那[npc.breastSize]胸部一露出来，[npc2.Name]就咧嘴笑了起来， "
+											+ "[npc2.speech(嗯~哦~这对奶子真不错！)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(let)] out a delighted hum as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Oh fuck yeah! Look at the size of those things!)]");
+								sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]发出了一声愉悦的哼声，"
+											+ "[npc2.speech(真他妈棒！看看这些东西的尺寸！)]");
 								
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(How did you manage to get your tits to be that huge?! What a fucking tit-cow!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+											+ "[npc2.speech(你是怎么把奶子搞得这么大的？！简直特么的就是一头乳牛！)]");
 							}
 							
 						} else {
@@ -16247,20 +16247,20 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								sb.append("");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.C.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(burst)] out laughing as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Hahaha, you trying to become a girl?!)]");
+								sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]突然爆笑起来，"
+											+ "[npc2.speech(哈哈哈，你是想变成一个女孩吗？！)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.FF.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(let)] out a surprised gasp as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Why would a guy have tits like that?!)]");
+								sb.append("[npc.namePos]那[npc.breastSize]罩杯胸部露出来，[npc2.Name]惊讶地倒吸了一口凉气，"
+											+ "[npc2.speech(为什么一个男人会有这样的奶子？)]");
 								
 							} else if (characterBeingRevealed.getBreastRawSizeValue() <= CupSize.JJ.getMeasurement()) {
-								sb.append("[npc2.Name] [npc2.verb(let)] out a mocking laugh as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(Are you kidding me?! Why does a <i>guy</i> have tits like that?!)]");
+								sb.append("[npc.namePos][npc.breastSize]的乳房露了出来，[npc2.Name]发出嘲讽的笑声，"
+											+ "[npc2.speech(你他妈在逗我？！为什么一个<i>男人</i>有这样的胸啊？！)]");
 								
 							} else {
-								sb.append("[npc2.NamePos] jaw drops as [npc.namePos] [npc.breastSize] breasts are revealed, "
-											+ "[npc2.speech(How did you manage to get your tits to be that huge?!)]");
+								sb.append("[npc.namePos]露出那[npc.breastSize]胸部的同时，[npc2.namePos]被惊得下巴都掉了下来， "
+											+ "[npc2.speech(你是怎么做到让奶子变得这么大的？！)]");
 							}
 						}
 					}
@@ -16269,22 +16269,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			} else {
 				switch(reactingPace) {
 					case DOM_GENTLE:
-						sb.append("[npc2.Name] [npc2.verb(let)] out a soft [npc2.moan] as [npc.namePos] [npc.breasts+] are revealed.");
+						sb.append("[npc2.Name]发出一阵柔和[npc2.moan]，而[npc.namePos][npc.breasts+]也随之暴露了出来。");
 						break;
 					case DOM_NORMAL:
-						sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.breasts+] are revealed.");
+						sb.append("[npc2.Name]在[npc.namePos][npc.breasts+]被暴露的时候发出一声[npc2.moan+]。");
 						break;
 					case DOM_ROUGH:
-						sb.append("[npc2.Name] [npc2.verb(let)] out a hungry growl as [npc.namePos] [npc.breasts+] are revealed.");
+						sb.append("[npc.namePos][npc.breasts+]露了出来，[npc2.Name]发出一声饥渴的咆哮。");
 						break;
 					case SUB_EAGER:
-						sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.breasts+] are revealed.");
+						sb.append("[npc2.Name]在[npc.namePos][npc.breasts+]被暴露的时候发出一声[npc2.moan+]。");
 						break;
 					case SUB_NORMAL:
-						sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan] as [npc.namePos] [npc.breasts+] are revealed.");
+						sb.append("[npc.namePos][npc.breasts+]露了出来，[npc2.Name]发出了[npc2.a_moan]。");
 						break;
 					case SUB_RESISTING:
-						sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.namePos] [npc.breasts+] are revealed.");
+						sb.append("[npc2.Name]发出一阵[npc2.a_sob+]，[npc.namePos][npc.breasts+]露了出来。");
 						break;
 				}
 			}
@@ -16319,22 +16319,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 			switch(reactingPace) {
 				case DOM_GENTLE:
-					sb.append("[npc.Name] [npc.verb(let)] out a soft [npc.moan] as [npc.her] [npc.crotchBoobs+] are revealed.");
+					sb.append("随着[npc.her][npc.crotchBoobs+]暴露出来，[npc.Name]发出了柔软[npc.moan]声，");
 					break;
 				case DOM_NORMAL:
-					sb.append("[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.her] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.Name]不由得发出一声[npc.a_moan+]，[npc.her][npc.crotchBoobs+]暴露了出来。");
 					break;
 				case DOM_ROUGH:
-					sb.append("[npc.Name] [npc.verb(let)] out a hungry growl as [npc.her] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.Name]不由得发出一声饥渴的低喘，[npc.her][npc.crotchBoobs+]暴露了出来。");
 					break;
 				case SUB_EAGER:
-					sb.append("[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.her] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.Name]不由得发出一声[npc.a_moan+]，[npc.her][npc.crotchBoobs+]暴露了出来。");
 					break;
 				case SUB_NORMAL:
-					sb.append("[npc.Name] [npc.verb(let)] out [npc.a_moan] as [npc.her] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.Name]不由得发出一声[npc.a_moan]，[npc.her][npc.crotchBoobs+]暴露了出来。");
 					break;
 				case SUB_RESISTING:
-					sb.append("[npc.Name] [npc.verb(let)] out [npc.a_sob+] as [npc.her] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.Name]不由得发出一声[npc.a_sob+]，[npc.her][npc.crotchBoobs+]暴露了出来。");
 					break;
 			}
 			
@@ -16345,22 +16345,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 			switch(reactingPace) {
 				case DOM_GENTLE:
-					sb.append("[npc2.Name] [npc2.verb(let)] out a soft [npc2.moan] as [npc.namePos] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc2.Name]发出一阵柔和[npc2.moan]，而[npc.namePos][npc.crotchBoobs+]也随之暴露了出来。");
 					break;
 				case DOM_NORMAL:
-					sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.Name]看[npc2.namePos]露出[npc2.crotchBoobs+]，发出[npc2.a_moan+]。");
 					break;
 				case DOM_ROUGH:
-					sb.append("[npc2.Name] [npc2.verb(let)] out a hungry growl as [npc.namePos] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.namePos][npc.crotchBoobs+]露出来的同时，[npc2.name]不由得饥渴地低吼了一声。");
 					break;
 				case SUB_EAGER:
-					sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.namePos] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc.Name]看[npc2.namePos]露出[npc2.crotchBoobs+]，发出[npc2.a_moan+]。");
 					break;
 				case SUB_NORMAL:
-					sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan] as [npc.namePos] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc2.Name]发出一声[npc2.a_moan]，[npc.namePos][npc.crotchBoobs+]露了出来。");
 					break;
 				case SUB_RESISTING:
-					sb.append("[npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.namePos] [npc.crotchBoobs+] are revealed.");
+					sb.append("[npc2.Name]发出一阵[npc2.a_sob+]，[npc.namePos][npc.crotchBoobs+]露了出来。");
 					break;
 			}
 		}
@@ -16393,22 +16393,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(!characterBeingRevealed.equals(characterReacting) && !characterReacting.isPlayer()) {
 			if(reactingPace==SexPace.SUB_RESISTING) {
 				sb.append(UtilText.returnStringAtRandom(
-								"[npc.Name] [npc.verb(let)] out [npc.a_sob+] as [npc2.namePos] [npc2.penis+] is revealed.",
-								"[npc.speech(No! Please! Get away from me!)] [npc.name] [npc.sobsVerb] as [npc2.namePos] [npc2.penis+] is revealed."));
+								"[npc2.namePos]把[npc2.penis+]掏了出来，[npc.Name]发出一声[npc.a_sob+]。",
+								"[npc.speech(不要！求你了！离我远点！)]眼见[npc2.namePos]露出[npc2.penis+]，[npc.name][npc.sobsVerb]道。"));
 				
 			} else {
 				if(characterBeingRevealed.getPenisType()==PenisType.DILDO) {
-					sb.append("[npc.Name] [npc.verb(grin)] as [npc.she] [npc.verb(see)] that [npc2.nameIs] wearing a strap-on. "
-							+ "[npc.speech(Looking to have a little extra fun, huh?)]"
+					sb.append("[npc.Name]看到[npc2.nameIs]穿着一根假阳具，不禁露出满面的笑容。"
+							+ "[npc.speech(想多找点乐子，嗯？)]"
 						+ "</p>");
 					
 				} else if(characterReacting.getFetishDesire(Fetish.FETISH_PENIS_RECEIVING).isNegative()) {
 					sb.append(UtilText.returnStringAtRandom(
-							"[npc.Name] tuts in disappointment as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed, ",
-							"[npc.Name] [npc.verb(let)] out an annoyed whine as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed, "));
+							"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，失望地啧声连连，",
+							"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，顿时不爽地呜咽起来，"));
 					sb.append(UtilText.returnStringAtRandom(
-							"[npc.speech(I hate cocks!)]",
-							"[npc.speech(Get that thing away from me!)]"));
+							"[npc.speech(我恨鸡巴！)]",
+							"[npc.speech(把那玩意从我面前拿开！)]"));
 					
 				} else {
 					SexAreaOrifice orifice = characterReacting.hasVagina()?SexAreaOrifice.VAGINA:SexAreaOrifice.ANUS;
@@ -16418,105 +16418,105 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						if(characterReacting.isFeminine()) {
 							if(characterReacting.isKnowsCharacterArea(CoverableArea.PENIS, characterBeingRevealed)) {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(fail)] to suppress a mocking giggle as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a little giggle as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a derisive sneer as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed"));
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，不禁露出一抹窃笑",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，不禁嬉笑起来",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，便讥笑起来"));
 								if(!characterReacting.isMute() && !characterReacting.isSpeechMuffled()) {
 									if(characterBeingRevealed.getPenisRawSizeValue()<PenisLength.ONE_TINY.getMaximumValue()) {
 										sb.append(UtilText.returnStringAtRandom(
-												", [npc.speech(Your little clitty dick is so cute!)]",
-												", [npc.speech(That's just so unbelievably pathetic!)]",
-												", [npc.speech(What a pathetic little cock! I mean, can I even call it a cock?! It's more like a little clit!)]"));
+												"，[npc.speech(你这小不丁点的肉棒好可爱啊！)]",
+												"，[npc.speech(难以想象，真是可悲又可怜！)]",
+												"，[npc.speech(好可怜的小鸡鸡啊！我说，还这能叫鸡巴吗？！更像个小豆豆吧！)]"));
 									} else {
 										sb.append(UtilText.returnStringAtRandom(
-												", [npc.speech(You're far too small to satisfy me!)]",
-												", [npc.speech(That pathetic little thing is never going to satisfy me!)]",
-												", [npc.speech(~Eugh!~ How disappointing! I'm not going to have much fun with something so pathetically small!)]"));
+												"，[npc.speech(这么小根本没法满足我！)]",
+												"，[npc.speech(这可怜的小玩意不可能满足我的！)]",
+												"，[npc.speech(~噫！~太失望了！跟这么个小东西怎么开心的起来！)]"));
 									}
 								} else {
-									sb.append(".");
+									sb.append("。");
 								}
 								
 							} else {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(fail)] to suppress a mocking giggle as [npc.she] sees that [npc2.nameHas] got [npc2.a_cockSize] [npc2.cock]",
-										"[npc.Name] [npc.verb(let)] out a surprised laugh as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a derisive laugh as [npc.she] sees [npc2.namePos] [npc2.cockSize] [npc2.cock]"));
+										"[npc.Name]看到[npc2.name]长着[npc2.cockSize]的[npc2.cock]后，不禁露出一抹窃笑",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，惊讶地笑了起来",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]后，便讥笑起来"));
 								if(!characterReacting.isMute() && !characterReacting.isSpeechMuffled()) {
 									if(characterBeingRevealed.getPenisRawSizeValue()<PenisLength.ONE_TINY.getMaximumValue()) {
 										if(!characterBeingRevealed.getAppearsAsGender(true).getGenderName().isHasPenis()) {
 											sb.append(UtilText.returnStringAtRandom(
-													", [npc.speech(I didn't realise you were [npc2.a_gender]! What a cute little clitty dick you've got!)]",
-													", [npc.speech(Wait, you're [npc2.a_gender]?! What a pathetic little clitty dick you've got!)]"));
+													"，[npc.speech(我真没觉得你是个[npc2.a_gender]！你这肉棒怎么小得像个阴蒂似的！)]",
+													"，[npc.speech(等等，你是个[npc2.a_gender]？！你只长了这么一点点可怜的阴蒂肉棒哦？)]"));
 										} else {
 											sb.append(UtilText.returnStringAtRandom(
-													", [npc.speech(What a cute little clitty dick! A shame that it's never going to be enough to satisfy me!)]",
-													", [npc.speech(Hah! Look at that pathetic little thing! You're far too small to satisfy me!)]"));
+													"，[npc.speech(你这小不丁点肉棒真可爱！可惜是不可能让我满足了！)]",
+													"，[npc.speech(哈哈！你看看这可怜的小玩意儿！这么小根本没法满足我！)]"));
 										}
 									} else {
 										if(characterBeingRevealed.getPenisRawSizeValue()<PenisLength.ONE_TINY.getMaximumValue()) {
 											sb.append(UtilText.returnStringAtRandom(
-													", [npc.speech(What a cute little clitty dick! A shame that it's never going to satisfy me!)]",
-													", [npc.speech(That's just so unbelievably pathetic!)]",
-													", [npc.speech(What a pathetic little cock! I mean, can I even call it a cock?! It's more like a little clit!)]"));
+													"，[npc.speech(你这小不丁点肉棒真可爱！可惜是不可能让我满足了！)]",
+													"，[npc.speech(难以想象，真是可悲又可怜！)]",
+													"，[npc.speech(好可怜的小鸡鸡啊！我说，还这能叫鸡巴吗？！更像个小豆豆吧！)]"));
 										} else {
 											sb.append(UtilText.returnStringAtRandom(
-													", [npc.speech(You're far too small to satisfy me!)]",
-													", [npc.speech(That pathetic little thing is never going to satisfy me!)]",
-													", [npc.speech(~Eugh!~ How disappointing! I'm not going to have much fun with something so pathetically small!)]"));
+													"，[npc.speech(这么小根本没法满足我！)]",
+													"，[npc.speech(这可怜的小玩意不可能满足我的！)]",
+													"，[npc.speech(~噫！~太失望了！跟这么个小东西怎么开心的起来！)]"));
 										}
 									}
 								} else {
-									sb.append(".");
+									sb.append("。");
 								}
 							}
 							
 						} else {
 							if(characterReacting.isKnowsCharacterArea(CoverableArea.PENIS, characterBeingRevealed)) {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(fail)] to suppress a booming, mocking laugh as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a grunt as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a derisive grunt as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed"));
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，不禁爆发出一阵嘲笑",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，不禁咕哝了一声",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，不禁讥讽地哼哼着"));
 								if(!characterReacting.isMute() && !characterReacting.isSpeechMuffled()) {
 									if(characterBeingRevealed.getPenisRawSizeValue()<PenisLength.ONE_TINY.getMaximumValue()) {
 										sb.append(UtilText.returnStringAtRandom(
-												", [npc.speech(That thing's more like a clit than a real cock!)]",
-												", [npc.speech(That's just so unbelievably pathetic!)]",
-												", [npc.speech(Your cock is just so pathetic! Hah!)]"));
+												"，[npc.speech(这玩意不像鸡巴，更像个小豆豆吧！)]",
+												"，[npc.speech(难以想象，真是可悲又可怜！)]",
+												"，[npc.speech(你的鸡鸡真搞笑！哈哈！)]"));
 									} else {
 										sb.append(UtilText.returnStringAtRandom(
-												", [npc.speech(You can't expect me to take that little thing seriously!)]",
-												", [npc.speech(That's just so unbelievably pathetic!)]",
-												", [npc.speech(Your cock is just so pathetic! Hah!)]"));
+												"，[npc.speech(你不能让我把这东西当真事吧！)]",
+												"，[npc.speech(难以想象，真是可悲又可怜！)]",
+												"，[npc.speech(你的鸡鸡真搞笑！哈哈！)]"));
 									}
 								} else {
-									sb.append(".");
+									sb.append("。");
 								}
 								
 							} else {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(let)] out a booming, mocking laugh as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out an unamused grunt as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a derisive grunt as [npc.she] sees that [npc2.nameHas] got [npc2.a_cockSize] [npc2.cock]"));
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，爆发出一阵嘲笑",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，顿时烦躁地哼唧起来",
+										"[npc.Name]看到[npc2.namePos]有着个[npc2.cockSize]的[npc2.cock]，便讥讽地哼哼起来"));
 								if(!characterReacting.isMute() && !characterReacting.isSpeechMuffled()) {
 									if(!characterBeingRevealed.getAppearsAsGender(true).getGenderName().isHasPenis()) {
 										sb.append(UtilText.returnStringAtRandom(
-												", [npc.speech(Is that pathetic little thing your cock?! I didn't realise you were [npc2.a_gender]!)]",
-												", [npc.speech(Wait, you're [npc2.a_gender]?! What a pathetic excuse for a cock you've got!)]"));
+												"，[npc.speech(这可怜的小玩意就是你的屌？我真没觉得你是个[npc2.a_gender]！)]",
+												"，[npc.speech(等等，你是[npc2.a_gender]？！你只长了这么一点点可怜的小肉棒哦？)]"));
 									} else {
 										if(characterBeingRevealed.getPenisRawSizeValue()<PenisLength.ONE_TINY.getMaximumValue()) {
 											sb.append(UtilText.returnStringAtRandom(
-													", [npc.speech(What a pathetic little thing!)]",
-													", [npc.speech(That's just so unbelievably pathetic!)]",
-													", [npc.speech(What a pathetic little cock! I mean, can I even call it a cock?!)]"));
+													"，[npc.speech(这小玩意也太可怜了！)]",
+													"，[npc.speech(难以想象，真是可悲又可怜！)]",
+													"，[npc.speech(好可怜的小鸡鸡啊！我说，还这能叫鸡巴吗？！)]"));
 										} else {
 											sb.append(UtilText.returnStringAtRandom(
-													", [npc.speech(That thing's got to be too small to satisfy anyone!)]",
-													", [npc.speech(That pathetic little thing is never going to satisfy anyone!)]"));
+													"，[npc.speech(这玩意这么小根本没法满足我！)]",
+													"，[npc.speech(这可怜的小玩意不可能满足我的！)]"));
 										}
 									}
 								} else {
-									sb.append(".");
+									sb.append("。");
 								}
 							}
 						}
@@ -16524,76 +16524,76 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					} else if(characterBeingRevealed.isFullPenetrationTooShort(SexAreaPenetration.PENIS, characterReacting, orifice, false)) {
 						if(characterReacting.isKnowsCharacterArea(CoverableArea.PENIS, characterBeingRevealed)) {
 							sb.append(UtilText.returnStringAtRandom(
-									"[npc.Name] [npc.verb(let)] out a hungry [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-									"[npc.Name] [npc.verb(let)] out a delighted [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-									"[npc.Name] [npc.verb(let)] out a happy [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed"));
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻发出饥渴的[npc.moan]",
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻发出一声兴奋的[npc.moan]",
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻开心地[npc.moan]起来"));
 							sb.append(UtilText.returnStringAtRandom(
-									", [npc.speech(Your cock's looking good!)]",
-									", [npc.speech(Oh yeah, your cock's looking real good!)]",
-									", [npc.speech(Come on, put that cock of yours to use!)]"));
+									"，[npc.speech(你的鸡巴长得不错嘛！)]",
+									"，[npc.speech(好呀，你下面看着真不错！)]",
+									"，[npc.speech(来吧，赶紧拿肉棒出来耍耍！)]"));
 							
 						} else {
 							sb.append(UtilText.returnStringAtRandom(
-									"[npc.Name] [npc.verb(fail)] to suppress a flustered [npc.moan] as [npc.she] sees that [npc2.nameHas] got [npc2.a_cockSize] [npc2.cock]",
-									"[npc.Name] [npc.verb(let)] out a surprised [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-									"[npc.Name] [npc.verb(let)] out a startled [npc.moan] as [npc.she] sees [npc2.namePos] [npc2.cockSize] [npc2.cock]"));
+									"[npc.Name]看到[npc2.name]长着[npc2.cockSize]的[npc2.cock]后，不禁紧张地[npc.moan]起来",
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，惊讶地发出[npc.moan]",
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]后，忽然吃惊地[npc.moan]"));
 							if(!characterBeingRevealed.getAppearsAsGender(true).getGenderName().isHasPenis()) {
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(Hey! I didn't realise you were [npc2.a_gender]! Well, whatever...)]",
-										", [npc.speech(Wait, you're [npc2.a_gender]?! Well, whatever...)]"));
+										"，[npc.speech(喂！我没看出来你是个[npc2.a_gender]！不过，算了……)]",
+										"，[npc.speech(啊啊，你是个[npc2.a_gender]？！哦，行吧……)]"));
 							} else {
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(That's a nice cock you've got...)]",
-										", [npc.speech(~Mmm!~ That's a nice-looking cock...)]"));
+										"，[npc.speech(你的肉棒真漂亮……)]",
+										"，[npc.speech(~唔姆！~好漂亮的鸡巴……)]"));
 							}
 						}
 						
 					} else if(characterBeingRevealed.isFullPenetrationTooLong(SexAreaPenetration.PENIS, characterReacting, orifice, false)) {
 						if(characterReacting.isKnowsCharacterArea(CoverableArea.PENIS, characterBeingRevealed)) {
 							sb.append(UtilText.returnStringAtRandom(
-									"[npc.Name] [npc.verb(let)] out a hungry [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-									"[npc.Name] [npc.verb(let)] out a delighted [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-									"[npc.Name] [npc.verb(let)] out a happy [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed"));
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻发出饥渴的[npc.moan]",
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻发出一声兴奋的[npc.moan]",
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻开心地[npc.moan]起来"));
 							if(Main.game.isPenetrationLimitationsEnabled()) {
 								if(characterReacting.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 									sb.append(UtilText.returnStringAtRandom(
-											", [npc.speech(Oh, fuck yes! I want your huge cock <i>deep</i> inside of me!)]",
-											", [npc.speech(~Ooh!~ I want your huge cock pushing <i>deep</i> inside of me!)]",
-											", [npc.speech(Oh yeah! I want your huge cock hilted <i>deep</i> inside of me!)]"));
+											"，[npc.speech(太他妈棒了！好想让你的巨屌<i>深深地</i>插进来啊！)]",
+											"，[npc.speech(~哦哦！~快把你的大肉棒捅进我身体<i>深处</i>吧！)]",
+											"，[npc.speech(真不错！快把你的巨屌整根插进我身体<i>最深处</i>吧！)]"));
 								} else {
 									sb.append(UtilText.returnStringAtRandom(
-											", [npc.speech(Your cock's so huge! It might be too big for me...)]",
-											", [npc.speech(Your cock's massive... There's no way it's all going to fit...)]",
-											", [npc.speech(Wow! Your cock's just so huge! It might be <i>too</i> huge...)]"));
+											"，[npc.speech(你的鸡巴可真大！或许对我有点太大了……)]",
+											"，[npc.speech(好大的肉棒……进不去，怎么想都进不去吧……)]",
+											"，[npc.speech(哇哦！你的肉棒好大！就是有点<i>太</i>大了……)]"));
 								}
 								
 							} else {
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(Your cock's so huge!)]",
-										", [npc.speech(Your cock's massive!)]",
-										", [npc.speech(Your cock really is so huge!)]"));
+										"，[npc.speech(你鸡巴好大啊！)]",
+										"，[npc.speech(你的肉棒真不小！)]",
+										"，[npc.speech(你的鸡巴真的好大！)]"));
 							}
 							
 						} else {
 							sb.append(UtilText.returnStringAtRandom(
-									"[npc.Name] [npc.verb(fail)] to suppress [npc.a_moan] as [npc.she] sees that [npc2.nameHas] got [npc2.a_cockSize] [npc2.cock]",
-									"[npc.Name] [npc.verb(let)] out [npc.a_moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-									"[npc.Name] [npc.verb(let)] out [npc.a_moan] as [npc.she] sees [npc2.namePos] [npc2.cockSize] [npc2.cock]"));
+									"[npc.Name]看到[npc2.name]长着[npc2.cockSize]的[npc2.cock]后，不禁发出一声[npc.a_moan]",
+									"[npc.Name]看到[npc2.name][npc2.cockSize]的[npc2.cock]暴露出来后，不禁发出一声[npc.a_moan]",
+									"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]后，不禁发出一声[npc.a_moan]"));
 							if(Main.game.isPenetrationLimitationsEnabled()) {
 								if(characterReacting.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 									sb.append(UtilText.returnStringAtRandom(
-											", [npc.speech(Oh, fuck yes! Your cock's so huge! I want it <i>deep</i> inside of me!)]",
-											", [npc.speech(~Ooh!~ Your cock's so massive! That's going to feel <i>amazing</i>!)]",
-											", [npc.speech(Wow! Your cock's so huge! I want it hilted <i>deep</i> inside of me!)]"));
+											"，[npc.speech(太他妈棒了！你的肉棒好大！好想直接<i>深深地</i>插进来啊！)]",
+											"，[npc.speech(~哦哦！~好大的肉棒！肯定要<i>舒服死了</i>！)]",
+											"，[npc.speech(哇哦！你的鸡巴好大！真想整根都插进我身体<i>最深处</i>啊！)]"));
 								} else {
 									sb.append(UtilText.returnStringAtRandom(
-											", [npc.speech(That thing's huge! There's no way it's all going to fit!)]",
-											", [npc.speech(No way! Your cock's far too big for me!)]"));
+											"，[npc.speech(这玩意真大！不可能盛得下的！)]",
+											"，[npc.speech(不可能！你的肉棒对我太大了！)]"));
 								}
 							} else {
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(That thing's huge! This is going to be good!)]",
-										", [npc.speech(No way! Your cock's so huge!)]"));
+										"，[npc.speech(这家伙好大！肯定很舒服！)]",
+										"，[npc.speech(怎么可能！你的鸡巴好大！)]"));
 							}
 						}
 						
@@ -16601,40 +16601,40 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						if(Main.game.isPenetrationLimitationsEnabled()) {
 							if(characterReacting.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed"));
+										"[npc.Name]看到[npc2.name][npc2.cockSize]的[npc2.cock]暴露出来后，不禁发出一声[npc.a_moan+]"));
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(Oh, fuck yes! I want your massive cock pushed as <i>deep</i> as possible inside of me!)]",
-										", [npc.speech(~Ooh!~ Yes! I want your massive cock thrusting as <i>deep</i> as possible inside of me!)]",
-										", [npc.speech(Oh yeah! I want your massive cock rammed as <i>deep</i> as it'll go inside of me!)]"));
+										"，[npc.speech(真他妈的太妙了！快让你的巨根塞进我身体<i>最深处</i>吧！)]",
+										"，[npc.speech(～呃呜！~太棒了！我想让你的超大肉棒全插进来，顶到我身体<i>最深处</i>吧！)]",
+										"，[npc.speech(呜呼！好想让你巨大的肉棒在我身体<i>深处</i>猛操！)]"));
 							} else {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(let)] out nervous [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a worried-sounding [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a nervous [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed"));
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，不禁发出担忧的[npc.moan]",
+										"[npc.Name]在[npc2.namePos][npc2.cockSize]的[npc2.cock]被暴露时发出一声担心的[npc.moan]",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，不禁发出担忧的[npc.moan]"));
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(That thing is never going to fit inside of me! You're far too big!)]",
-										", [npc.speech(Your cock's far too big! There's no way it's ever going to fit!)]",
-										", [npc.speech(There's no way I can fit something that huge inside of me!)]"));
+										"，[npc.speech(太粗太大了……我绝对没办法吃下去！你也太大了吧！)]",
+										"，[npc.speech(你那里大得太过了！怎么想都进不去的！)]",
+										"，[npc.speech(我根本没办法含进这种巨根啊！)]"));
 							}
 							
 						} else {
 							if(characterReacting.isKnowsCharacterArea(CoverableArea.PENIS, characterBeingRevealed)) {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(let)] out a hungry [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a delighted [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out a happy [npc.moan] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed"));
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻发出饥渴的[npc.moan]",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻发出一声兴奋的[npc.moan]",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]暴露出来后，立刻开心地[npc.moan]起来"));
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(I can't believe how massive your cock is! I doubt anyone's got a bigger one than you...)]",
-										", [npc.speech(Oh yeah, bring that gigantic cock of yours over to me!)]",
-										", [npc.speech(Your cock's so huge! I don't think I'll ever get tired of it!)]"));
+										"，[npc.speech(没想到你的肉棒会这么大！估计没有别人能比你还大了……)]",
+										"，[npc.speech(太棒了，快把这根巨物送过来吧！)]",
+										"，[npc.speech(你的肉棒好大哦！我想不眠不休地被操下去呢！)]"));
 							} else {
 								sb.append(UtilText.returnStringAtRandom(
-										"[npc.Name] [npc.verb(fail)] to suppress [npc.a_moan+] as [npc.she] sees that [npc2.nameHas] got [npc2.a_cockSize] [npc2.cock]",
-										"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc2.namePos] [npc2.cockSize] [npc2.cock] is revealed",
-										"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] sees [npc2.namePos] [npc2.cockSize] [npc2.cock]"));
+										"[npc.Name]看到[npc2.name]长着[npc2.cockSize]的[npc2.cock]后，不禁发出一声[npc.a_moan+]",
+										"[npc.Name]看到[npc2.name][npc2.cockSize]的[npc2.cock]暴露出来后，不禁发出一声[npc.a_moan+]",
+										"[npc.Name]看到[npc2.namePos][npc2.cockSize]的[npc2.cock]后，不禁发出一声[npc.a_moan+]"));
 								sb.append(UtilText.returnStringAtRandom(
-										", [npc.speech(What?! Holy shit! Your cock's <i>huge</i>!)]",
-										", [npc.speech(Holy shit! I could see it was huge from your bulge, but... well... it's <i>massive</i>!)]"));
+										"，[npc.speech(什么？！我草！你的鸡巴也<i>太大了</i>！)]",
+										"，[npc.speech(我草！从你身下的帐篷我就看出不小，可是……好吧……真是<i>大得离谱</i>！)]"));
 							}
 						}
 					}
@@ -16643,57 +16643,57 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 		} else {
 			if(characterBeingRevealed.getPenisType()==PenisType.DILDO) {
-				sb.append("[npc.Name] grins as [npc.she] reveals the fact that [npc.sheIs] wearing a strap-on. "
-						+ "[npc.speech(Time for a little extra fun!)]");
+				sb.append("[npc.Name]将自己穿着的假阳具露出来后，不禁露出满面的笑容。"
+						+ "[npc.speech(现在是附赠乐趣的时间哦！)]");
 				
 			} else {
 				if(characterReacting.isAreaKnownByCharacter(CoverableArea.PENIS, characterBeingRevealed) || !isFeminine()) {
 					switch(selfPace) {
 						case DOM_GENTLE:
-							sb.append("[npc.Name] lets out a soft [npc.moan] as [npc.her] [npc.cock+] is revealed.");
+							sb.append("[npc.Name]见自己[npc.cock+]露出来，发出轻柔的[npc.moan]。");
 							break;
 						case DOM_NORMAL:
-							sb.append("[npc.Name] lets out an excited [npc.moan] as [npc.her] [npc.cock+] is revealed.");
+							sb.append("[npc.Name]见自己[npc.cock+]露出来，发出兴奋的[npc.moan]。");
 							break;
 						case DOM_ROUGH:
-							sb.append("[npc.Name] grins as [npc.her] [npc.cock+] is revealed.");
+							sb.append("[npc.Name]见自己[npc.cock+]露出来，笑起来。");
 							break;
 						case SUB_EAGER:
-							sb.append("[npc.Name] lets out an excited [npc.moan] as [npc.her] [npc.cock+] is revealed.");
+							sb.append("[npc.Name]见自己[npc.cock+]露出来，发出兴奋的[npc.moan]。");
 							break;
 						case SUB_NORMAL:
-							sb.append("[npc.Name] lets out [npc.a_moan] as [npc.her] [npc.cock+] is revealed.");
+							sb.append("当[npc.her][npc.cock+]暴露，[npc.Name]发出一阵[npc.a_moan]。");
 							break;
 						case SUB_RESISTING:
-							sb.append("[npc.Name] lets out [npc.a_sob+] and tries to pull away as [npc.her] [npc.cock+] is revealed.");
+							sb.append("[npc.Name]发出[npc.a_sob+]，努力缩起被迫暴露的[npc.cock+]。");
 							break;
 					}
 				
 				} else {
 					switch(selfPace) {
 						case DOM_GENTLE:
-							sb.append("[npc.Name] lets out a soft giggle as [npc.her] [npc.cock+] is revealed,"
-										+ " [npc.speech(Let's have some fun!)]");
+							sb.append("[npc.Name]一边掏出[npc.her][npc.cock+]一边发出咯咯的轻笑，"
+										+ "[npc.speech(我们一起做点快乐的事吧！)]");
 							break;
 						case DOM_NORMAL:
-							sb.append("[npc.Name] lets out a playful giggle as [npc.her] [npc.cock+] is revealed,"
-										+ " [npc.speech(That look on your face is priceless! Now let's have some fun!)]");
+							sb.append("[npc.Name]一边掏出[npc.her][npc.cock+]一边发出嬉笑声，"
+										+ "[npc.speech(这副表情算得上无价之宝哦！我们来干点快乐的事吧！)]");
 							break;
 						case DOM_ROUGH:
-							sb.append("[npc.Name] lets out a laugh as [npc.her] [npc.cock+] is revealed,"
-										+ " [npc.speech(Hah! I bet you didn't expect this!)]");
+							sb.append("[npc.Name]见自己[npc.cock+]露出来，大笑起来。"
+										+ "[npc.speech(哈！我打赌你没猜到这一招！)]");
 							break;
 						case SUB_EAGER:
-							sb.append("[npc.Name] lets out a playful giggle as [npc.her] [npc.cock+] is revealed,"
-										+ " [npc.speech(That look on your face is priceless! Now let's have some fun!)]");
+							sb.append("[npc.Name]一边掏出[npc.her][npc.cock+]一边发出嬉笑声，"
+										+ "[npc.speech(这副表情算得上无价之宝哦！我们来干点快乐的事吧！)]");
 							break;
 						case SUB_NORMAL:
-							sb.append("[npc.Name] lets out [npc.a_moan] as [npc.her] [npc.cock+] is revealed,"
-										+ " [npc.speech(Let's have some fun!)]");
+							sb.append("[npc.Name]一边掏出[npc.her][npc.cock+]一边发出[npc.a_moan]，"
+										+ "[npc.speech(我们一起做点快乐的事吧！)]");
 							break;
 						case SUB_RESISTING:
-							sb.append("[npc.Name] lets out [npc.a_sob] and tries to pull away as [npc.her] [npc.cock+] is revealed,"
-										+ " [npc.speech(Leave me alone!)]");
+							sb.append("[npc.Name]发出[npc.a_sob]，努力缩起被迫暴露的[npc.cock+]，"
+										+ "[npc.speech(一边去！)]");
 							break;
 					}
 				}
@@ -16727,62 +16727,62 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(reactingPace!=SexPace.SUB_RESISTING
 					&& characterReacting.getFetishDesire(Fetish.FETISH_VAGINAL_GIVING).isNegative()) {
 				sb.append(UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(tut)] in disappointment as [npc2.namePos] [npc2.pussy+] is revealed, ",
-						"[npc.Name] [npc.verb(let)] out an annoyed whine as [npc2.namePos] [npc2.pussy+] is revealed, "));
+						"看到[npc2.namePos]暴露出[npc2.pussy+]， [npc.Name]失望地发出嘘声，",
+						"[npc2.namePos][npc2.pussy+]露了出来，[npc.Name]发出一声恼怒的抱怨，"));
 				sb.append(UtilText.returnStringAtRandom(
-						"[npc.speech(I hate pussies!)]",
-						"[npc.speech(I'm not touching that!)]"));
+						"[npc.speech(我讨厌小穴！)]",
+						"[npc.speech(我才不会碰那种东西！)]"));
 					
 			} else {
 				if(reactingPace!=SexPace.SUB_RESISTING && !characterBeingRevealed.getAppearsAsGender(true).getGenderName().isHasVagina() && !characterReacting.isKnowsCharacterArea(CoverableArea.VAGINA, characterBeingRevealed)) {
-					sb.append("[npc.Name] [npc.verb(look)] surprised as [npc.she]  [npc.verb(exclaim)], ");
+					sb.append("[npc.Name]一脸惊讶地看着[npc.she]感叹道，");
 					sb.append(UtilText.returnStringAtRandom(
-							"[npc.speech(Hey! I didn't realise you were [npc2.a_gender]! Well, whatever...)]",
-							"[npc.speech(Wait, you're [npc2.a_gender]?! Well, whatever...)]"));
+							"[npc.speech(喂喂！我没看出来你是[npc2.a_gender]！行吧，不管了……)]",
+							"[npc.speech(等会，你是[npc2.a_gender]？！哦，行吧……)]"));
 					sb.append("<br/>");
 				}
 				switch(reactingPace) {
 					case DOM_GENTLE:
-						sb.append("[npc.Name] [npc.verb(let)] out a soft [npc.moan] as [npc.she] [npc.verb(see)] ");
+						sb.append("[npc.Name]发出了轻轻的[npc.moan]，当[npc.she]看到");
 						sb.append(Main.sex.hasLubricationTypeFromAnyone(characterBeingRevealed, SexAreaOrifice.VAGINA, LubricationType.GIRLCUM)
-                                ? "[npc2.namePos] wet [npc2.pussy] betraying [npc2.her] arousal, "
-                                : "[npc2.namePos] [npc2.pussy+], ");
+                                ? "[npc2.namePos]湿润的[npc2.pussy]背叛了[npc2.her]的快感，"
+                                : "[npc2.namePos][npc2.pussy+]，");
 						sb.append(this.hasPenis()
-                                ? "[npc.speech(You're going to love this, I promise...)]"
-                                : "[npc.speech(I'll make this feel good, I promise...)]");
+                                ? "[npc.speech(你会喜欢这个的，我保证……)]"
+                                : "[npc.speech(会很舒服的，我保证……)]");
 						break;
 					case DOM_NORMAL:
-						sb.append("[npc.Name] [npc.verb(let)] out a soft [npc.moan] as [npc.she] [npc.verb(see)] ");
+						sb.append("[npc.Name]发出了轻轻的[npc.moan]当[npc.she]看到");
 						sb.append(Main.sex.hasLubricationTypeFromAnyone(characterBeingRevealed, SexAreaOrifice.VAGINA, LubricationType.GIRLCUM)
-								? "[npc2.namePos] wet [npc2.pussy] betraying [npc2.her] arousal, "
-								: "[npc2.namePos] [npc2.pussy+], ");
+								? "[npc2.namePos]湿润的[npc2.pussy]背叛了[npc2.her]的快感，"
+								: "[npc2.namePos][npc2.pussy+]，");
 						sb.append(this.hasPenis()
-								?"[npc.speech(You're going to be a good fuck!)]"
-								:"[npc.speech(This is going to be fun!)]");
+								?"[npc.speech(你要被一顿好操了！)]"
+								:"[npc.speech(事情变得有意思起来了！)]");
 						break;
 					case DOM_ROUGH:
-						sb.append("[npc.Name] [npc.verb(smirk)] when [npc.she] [npc.verb(see)] ");
+						sb.append("[npc.Name]坏笑了一下，看到");
 						sb.append(Main.sex.hasLubricationTypeFromAnyone(characterBeingRevealed, SexAreaOrifice.VAGINA, LubricationType.GIRLCUM)
-								? "[npc2.namePos] wet [npc2.pussy] betraying [npc2.her] arousal, "
-								: "[npc2.namePos] [npc2.pussy+], ");
+								? "[npc2.namePos]湿润的[npc2.pussy]背叛了[npc2.her]的快感，"
+								: "[npc2.namePos][npc2.pussy+]，");
 						sb.append(this.hasPenis()
-								?"[npc.speech(Ready for a good hard fucking, slut?)]"
-								:"[npc.speech(Looking good, slut!)]");
+								?"[npc.speech(准备好被狠狠操一场了吗，嗯？小浪货？)]"
+								:"[npc.speech(看上去很好哦，小骚货！)]");
 						break;
 					case SUB_EAGER:
-						sb.append("[npc.NamePos] eyes light up when [npc.she] [npc.verb(see)] ");
+						sb.append("[npc.NamePos]双眼放光，看到了");
 						sb.append(Main.sex.hasLubricationTypeFromAnyone(characterBeingRevealed, SexAreaOrifice.VAGINA, LubricationType.GIRLCUM)
-								? "[npc2.namePos] wet [npc2.pussy] betraying [npc2.her] arousal."
-								: "[npc2.namePos] [npc2.pussy].");
+								? "[npc2.namePos]湿润的[npc2.pussy]暴露了[npc2.her]正在发情。"
+								: "[npc2.namePos]的[npc2.pussy]。");
 						break;
 					case SUB_NORMAL:
-						sb.append("[npc.Name] [npc.verb(let)] out [npc.a_moan] as [npc2.namePos] [npc2.pussy+] is revealed.");
+						sb.append("[npc2.namePos][npc2.pussy+]暴露出来了，[npc.Name]发出[npc.a_moan]。");
 						break;
 					case SUB_RESISTING:
-						sb.append("[npc.Name] [npc.verb(try)] to pull away from [npc2.name] as ");
+						sb.append("[npc.Name]试图推开[npc2.name]，");
 						sb.append(Main.sex.hasLubricationTypeFromAnyone(characterBeingRevealed, SexAreaOrifice.VAGINA, LubricationType.GIRLCUM)
-								? "[npc2.namePos] wet [npc2.pussy] is revealed."
-								: "[npc2.namePos] [npc2.pussy+] is revealed.");
+								? "[npc2.namePos]湿润的[npc2.pussy]露出来了。"
+								: "[npc2.namePos][npc2.pussy+]露出来了。");
 						break;
 				}
 			}
@@ -16790,22 +16790,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		} else if(this.isAreaKnownByCharacter(CoverableArea.VAGINA, Main.game.getPlayer()) || !characterReacting.equals(Main.game.getPlayer()) || isFeminine()) {
 			switch(selfPace) {
 				case DOM_GENTLE:
-					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name] lets out a soft [npc.moan] as [npc.her] [npc.pussy+] is revealed."));
+					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name][npc.pussy+]暴露出来了，[npc.her]发出柔和的[npc.moan]。"));
 					break;
 				case DOM_NORMAL:
-					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name] lets out an excited [npc.moan] as [npc.her] [npc.pussy+] is revealed."));
+					sb.append(UtilText.parse(characterBeingRevealed, "当[npc.her][npc.pussy+]被暴露出来时，[npc.Name]发出了一声兴奋的[npc.moan]。"));
 					break;
 				case DOM_ROUGH:
-					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name] grins as [npc.her] [npc.pussy+] is revealed."));
+					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name][npc.pussy+]暴露出来了，[npc.her]笑了笑。"));
 					break;
 				case SUB_EAGER:
-					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name] lets out an excited [npc.moan] as [npc.her] [npc.pussy+] is revealed."));
+					sb.append(UtilText.parse(characterBeingRevealed, "当[npc.her][npc.pussy+]被暴露出来时，[npc.Name]发出了一声兴奋的[npc.moan]。"));
 					break;
 				case SUB_NORMAL:
-					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name] lets out [npc.a_moan] as [npc.her] [npc.pussy+] is revealed."));
+					sb.append(UtilText.parse(characterBeingRevealed, "当[npc.her][npc.pussy+]暴露，[npc.Name]发出一阵[npc.a_moan]。"));
 					break;
 				case SUB_RESISTING:
-					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name] lets out [npc.a_sob] and tries to pull away from you as [npc.her] [npc.pussy+] is revealed."));
+					sb.append(UtilText.parse(characterBeingRevealed, "[npc.Name]发出了一声[npc.a_sob]，并且在[npc.her][npc.pussy+]露出来的同时还试图将你推开。"));
 					break;
 			}
 
@@ -16813,33 +16813,33 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			switch(selfPace) {
 				case DOM_GENTLE:
 					sb.append(UtilText.parse(characterBeingRevealed,
-							"[npc.Name] [npc.verb(let)] out a soft [npc.moan] as [npc.her] [npc.pussy+] is revealed,"
-								+ " [npc.speech(~Mmm!~ Like what you see?)]"));
+							"[npc.Name][npc.pussy+]露了出来，[npc.her]发出一声轻柔的[npc.moan]，"
+								+ "[npc.speech(~唔姆姆！~ 你看看这像什么样呀？)]"));
 					break;
 				case DOM_NORMAL:
 					sb.append(UtilText.parse(characterBeingRevealed,
-							"[npc.Name] [npc.verb(let)] out an excited [npc.moan] as [npc.she] sees you staring at [npc.her] [npc.pussy+],"
-								+ " [npc.speech(This is going to be good!)]"));
+							"[npc.Name]看到你正盯着[npc.her][npc.pussy+]，发出一声兴奋的[npc.moan]，"
+								+ "[npc.speech(会很舒服的哦！)]"));
 					break;
 				case DOM_ROUGH:
 					sb.append(UtilText.parse(characterBeingRevealed,
-							"[npc.Name] [npc.verb(grin)] as [npc.she] sees you staring at [npc.her] [npc.pussy+],"
-								+ " [npc.speech(Time to see what a bitch like you can do!)]"));
+							"[npc.Name]看见你正盯着[npc.her][npc.pussy+]，[npc.her]朝你咧嘴一笑，"
+								+ "[npc.speech(让我看看你这种婊子能做什么！)]"));
 					break;
 				case SUB_EAGER:
 					sb.append(UtilText.parse(characterBeingRevealed,
-							"[npc.Name] [npc.verb(let)] out an excited [npc.moan] as [npc.she] sees you staring at [npc.her] [npc.pussy+],"
-								+ " [npc.speech(~Ahh!~ Yes! My pussy's aching for your touch!)]"));
+							"[npc.Name]看到你正盯着[npc.her][npc.pussy+]，发出一声兴奋的[npc.moan]，"
+								+ "[npc.speech(~啊啊~对！我的小穴好想被摸哦！)]"));
 					break;
 				case SUB_NORMAL:
 					sb.append(UtilText.parse(characterBeingRevealed,
-							"[npc.Name] [npc.verb(let)] out [npc.a_moan] as [npc.she] sees you staring at [npc.her] [npc.pussy+],"
-								+ " [npc.speech(~Mmm!~ Come on, use my pussy!)]"));
+							"[npc.Name]看到你盯着[npc.her][npc.pussy+]，发出[npc.a_moan]，"
+								+ "[npc.speech(~嗯姆~来吧，使用我的小穴！)]"));
 					break;
 				case SUB_RESISTING:
 					sb.append(UtilText.parse(characterBeingRevealed,
-							"[npc.Name] [npc.verb(let)] out [npc.a_sob] and tries to pull away from you as [npc.her] [npc.pussy+] is revealed,"
-								+ " [npc.speech(No! Leave me alone!)]"));
+							"[npc.Name][npc.pussy+]露了出来，[npc.her]发出[npc.a_sob]并试图拉开你，"
+								+ "[npc.speech(不要啊！放开我！)]"));
 					break;
 			}
 		}
@@ -16858,7 +16858,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		}
 
 		if(Main.game.isInSex() && Main.sex.isCharacterImmobilised(characterReacting)) {
-			return getAreaRevealWhileImmobilised(characterBeingRevealed, characterReacting, "genderless mound", false);
+			return getAreaRevealWhileImmobilised(characterBeingRevealed, characterReacting, "无性别的下体", false);
 		}
 		
 		StringBuilder sb = new StringBuilder();
@@ -16868,27 +16868,27 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(reactingPace!=SexPace.SUB_RESISTING) {
 				if(isFeminine()) {
 					if (!Main.sex.isDom(this)) {
-						sb.append("[npc2.Name] looks confused for a moment before letting out a patronising sigh, "
-								+ "[npc2.speech(Awww... You're like a little doll down there! That's so cute!)]");
+						sb.append("[npc2.name]先是一脸困惑，然后发出一声叹息，"
+								+ "[npc2.speech(哦哦哦哦……你趴在那好像个小玩偶呢！太可爱啦！)]");
 					} else {
-						sb.append("[npc2.Name] looks confused for a moment before breaking out into a mocking laugh, "
-								+ "[npc2.speech(Hahaha! You're like a little doll down there!)]");
+						sb.append("[npc2.Name]先是一脸困惑，然后发出嘲讽的笑声，"
+								+ "[npc2.speech(哈哈哈！你像个玩偶一样！)]");
 					}
 				// Masculine NPC:
 				} else {
 					if(!Main.sex.isDom(this)) {
-						sb.append("[npc2.Name] looks confused for a moment before letting out a patronising sneer, "
-								+ "[npc2.speech(Awww... You're like a little doll down there! That's so cute!)]");
+						sb.append("[npc2.Name]先是一脸困惑，然后发出傲慢的笑声，"
+								+ "[npc2.speech(哦哦哦哦……你趴在那好像个小玩偶呢！太可爱啦！)]");
 					} else {
-						sb.append("[npc2.Name] looks confused for a moment before breaking out into a mocking laugh, "
-									+ "[npc2.speech(Hahaha! You're like a little doll down there!)]");
+						sb.append("[npc2.Name]先是一脸困惑，然后发出嘲讽的笑声，"
+									+ "[npc2.speech(哈哈哈！你像个玩偶一样！)]");
 					}
 				}
 				
 			} else {
 				sb.append(UtilText.returnStringAtRandom(
-								"[npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] as [npc.namePos] genderless mound is revealed.",
-								"[npc2.speech(Stop! Please! Get away from me!)] [npc2.name] [npc2.verb(scream)] as [npc.name] [npc.verb(reveal)] [npc.her] genderless mound."));
+								"[npc2.Name]发出一阵[npc2.a_sob+]，[npc.namePos]无性别的下体露了出来。",
+								"[npc2.speech(求你了！不要！离我远点！)][npc2.name]哀嚎哭泣，[npc.name]逼近了[npc.her]无性别的下体。"));
 			}
 			sb.append("</p>");
 			
@@ -16910,15 +16910,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(characterPenetrating.isAsleep()) {
 					return UtilText.parse(characterPenetrating, characterPenetrated,
 							UtilText.returnStringAtRandom(
-							"[npc.NamePos] [npc.verb(remain)] asleep as [npc.her] [npc.lips+] press against [npc2.namePos] mouth.",
-							"[npc.NamePos] [npc.do]n't show any sign of waking up as [npc.her] mouth presses against [npc2.namePos] [npc2.lips+].",
-							"Remaining deeply asleep, [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.nameHers]."));
+							"[npc.NamePos]依旧保持着睡眠状态，而[npc.her][npc.lips+]却紧贴着[npc2.namePos]的嘴。",
+							"即使[npc.NamePos]的嘴巴紧紧贴着[npc2.namePos][npc2.lips+]，也没有要醒来的迹象。",
+							"[npc.name]深睡着，仍将[npc.her][npc.lips+]紧贴着[npc2.nameHers]的。"));
 				} else {
 					return UtilText.parse(characterPenetrating, characterPenetrated,
 							UtilText.returnStringAtRandom(
-							"[npc.NamePos] [npc.verb(remain)] completely immobile as [npc.her] [npc.lips+] press against [npc2.namePos] mouth.",
-							"[npc.NamePos] [npc.do]n't move at all as [npc.her] mouth presses against [npc2.namePos] [npc2.lips+].",
-							"Acting like an inanimate sex doll, [npc.name] [npc.verb(stay)] totally still and silent as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.nameHers]."));
+							"[npc.NamePos]依旧保持着完全不动，而[npc.her][npc.lips+]紧贴着[npc2.namePos]的嘴。",
+							"[npc.namePos]并未做出任何动作，只是将[npc.her]的嘴唇紧紧贴上了[npc2.namePos]那[npc2.lips+]。",
+							"当[npc.she]将自己那[npc.lips+]贴上[npc2.name]时，[npc2.namePos]就像一个无生命的性爱玩偶一般保持完全地静止和沉默。"));
 				}
 				
 			} else {
@@ -16926,39 +16926,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					case DOM_GENTLE:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] soft [npc.moans] are muffled into [npc2.namePos] mouth as [npc.she] [npc.verb(continue)] kissing [npc2.herHim].",
-								"[npc.Name] gently [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] as [npc.she] [npc.verb(continue)] kissing [npc2.herHim].",
-								"Gently pressing [npc.her] [npc.lips+] against [npc2.nameHers], [npc.name] [npc.verb(continue)] making out with [npc2.herHim]."));
+								"[npc.she]持续吻着[npc2.herHim]，柔软的[npc.moans]被蒙在[npc2.namePos]嘴里。",
+								"[npc.Name]继续亲吻[npc2.herHim]，[npc.she]轻轻地将[npc.her][npc.lips+]贴住[npc2.namePos]。",
+								"[npc.name]将[npc.lips+]轻轻压在[npc2.nameHers]上，并继续与[npc2.herHim]亲热。"));
 					case DOM_NORMAL:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] [npc.moans+] are muffled into [npc2.namePos] mouth as [npc.she] [npc.verb(continue)] passionately kissing [npc2.herHim].",
-								"[npc.Name] eagerly [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] as [npc.she] [npc.verb(continue)] passionately kissing [npc2.herHim].",
-								"Passionately pressing [npc.her] [npc.lips+] against [npc2.nameHers], [npc.name] [npc.verb(continue)] making out with [npc2.herHim]."));
+								"当[npc.she]继续热情地亲吻[npc2.herHim]时，[npc.NamePos][npc.moans+]被闷进[npc2.namePos]的嘴里。",
+								"[npc.Name]急切地将[npc.her][npc.lips+]压向[npc2.namePos]，热情地亲吻[npc2.herHim]。",
+								"热情地将[npc.her][npc.lips+]压在[npc2.nameHers]上，[npc.name]继续与[npc2.herHim]亲热。"));
 					case DOM_ROUGH:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] [npc.moans+] are muffled into [npc2.namePos] mouth as [npc.she] [npc.verb(continue)] forcefully snogging [npc2.herHim].",
-								"[npc.Name] roughly [npc.verb(grind)] [npc.her] [npc.lips+] against [npc2.namePos] as [npc.she] [npc.verb(continue)] forcefully snogging [npc2.herHim].",
-								"Roughly grinding [npc.her] [npc.lips+] against [npc2.nameHers], [npc.name] [npc.verb(continue)] making out with [npc2.herHim]."));
+								"[npc.she]持续强吻[npc2.herHim]，[npc.NamePos][npc.moans+]被蒙在[npc2.namePos]的嘴里。",
+								"[npc.Name]继续与[npc2.herHim]强吻，[npc.she]粗暴地将[npc.her][npc.lips+]在[npc2.namePos]摩擦 。",
+								"粗暴地将[npc.her][npc.lips+]在[npc2.nameHers][npc2.lips+]上摩擦，[npc.name]继续与[npc2.herHim]亲热。"));
 					case SUB_EAGER:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] [npc.moans+] are muffled into [npc2.namePos] mouth as [npc.she] [npc.verb(continue)] passionately kissing [npc2.herHim].",
-								"[npc.Name] eagerly [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] as [npc.she] [npc.verb(continue)] passionately kissing [npc2.herHim].",
-								"Passionately pressing [npc.her] [npc.lips+] against [npc2.nameHers], [npc.name] [npc.verb(continue)] making out with [npc2.herHim]."));
+								"当[npc.she]继续热情地亲吻[npc2.herHim]时，[npc.NamePos][npc.moans+]被闷进[npc2.namePos]的嘴里。",
+								"[npc.Name]继续热情地亲吻[npc2.herHim]，[npc.she]迫不及待地将[npc.her][npc.lips+]抵在[npc2.namePos]上。",
+								"热情地将[npc.her][npc.lips+]压在[npc2.nameHers]上，[npc.name]继续与[npc2.herHim]亲热。"));
 					case SUB_NORMAL:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] [npc.moans] are muffled into [npc2.namePos] mouth as [npc.she] [npc.verb(continue)] kissing [npc2.herHim].",
-								"[npc.Name] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] as [npc.she] [npc.verb(continue)] kissing [npc2.herHim].",
-								"Pressing [npc.her] [npc.lips+] against [npc2.nameHers], [npc.name] [npc.verb(continue)] making out with [npc2.herHim]."));
+								"当[npc.she]继续亲吻[npc2.herHim]时，[npc.NamePos]的[npc.moans]被闷进[npc2.namePos]的嘴里。",
+								"[npc.Name]将[npc.her][npc.lips+]压向[npc2.namePos]，热情地亲吻[npc2.herHim]。",
+								"将[npc.her][npc.lips+]按在[npc2.nameHers]上，[npc.name]继续与[npc2.herHim]亲热。"));
 					case SUB_RESISTING:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] [npc.sobs+] are muffled into [npc2.namePos] mouth as [npc.she] desperately [npc.verb(try)] to push away from [npc2.herHim].",
-								"[npc.Name] [npc.verb(try)] to pull [npc.her] [npc.lips+] away from [npc2.namePos] as [npc.she] struggles against [npc2.herHim].",
-								"Trying to pull [npc.her] [npc.lips+] away from [npc2.nameHers], [npc.name] [npc.verb(continue)] struggling against [npc2.namePos] unwanted kiss."));
+								"[npc.she]拼命尝试推开[npc2.herHim]，[npc.namePos][npc.sobs+]被闷在[npc2.namePos]嘴里。",
+								"[npc.name]尝试将[npc.lips+]从[npc2.namePos]那里移开，不断抵抗着[npc2.name]。",
+								"试图将[npc.her][npc.lips+]从[npc2.nameHers]拉开，[npc.name]继续在[npc2.namePos]的强吻中挣扎。"));
 				}
 			}
 		}
@@ -16969,15 +16969,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(characterPenetrating.isAsleep()) {
 					return UtilText.parse(characterPenetrating, characterPenetrated,
 							UtilText.returnStringAtRandom(
-							"[npc.NamePos] [npc.verb(remain)] asleep with [npc.her] [npc.fingers+] wrapped around [npc2.namePos] [npc2.hand+].",
-							"[npc.NamePos] [npc.do]n't show any sign of waking up as [npc.she] [npc.verb(continue)] holding [npc2.namePos] [npc2.hand+].",
-							"Remaining deeply asleep, [npc.name] [npc.verb(hold)] [npc2.namePos] [npc2.hand+]."));
+							"[npc.NamePos]依旧保持着睡眠状态，但[npc.her]那[npc.fingers+]却被[npc2.namePos]握在[npc.her]的掌心之中。",
+							"即使[npc.NamePos]那[npc.hand+]被[npc2.namePos]紧紧握住，也没有要醒来的迹象。",
+							"[npc.name]一边深睡着，一边将紧握[npc2.namePos][npc2.hand+]。"));
 				} else {
 					return UtilText.parse(characterPenetrating, characterPenetrated,
 							UtilText.returnStringAtRandom(
-							"[npc.NamePos] [npc.verb(remain)] completely immobile with [npc.her] [npc.fingers+] wrapped around [npc2.namePos] [npc2.hand+].",
-							"[npc.NamePos] [npc.do]n't move at all as [npc.she] [npc.verb(continue)] holding [npc2.namePos] [npc2.hand+].",
-							"Acting like an inanimate sex doll, [npc.name] [npc.verb(hold)] [npc2.namePos] [npc2.hand+] while staying totally still and silent."));
+							"[npc.NamePos]依旧保持着完全不动，但[npc.her]那[npc.fingers+]却被[npc2.namePos]握在[npc.her]的掌心之中。",
+							"即使[npc.NamePos]那[npc.hand+]被[npc2.namePos]紧紧握住，也没有要移动的迹象。",
+							"[npc.Name]紧紧握住[npc2.namePos][npc2.hand+]，像一个无生命的性爱玩偶一般保持完全地静止和沉默。"));
 				}
 				
 			} else {
@@ -16985,34 +16985,34 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					case DOM_GENTLE:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] softly [npc.moansVerb] as [npc.she] [npc.verb(continue)] holding [npc2.namePos] [npc2.hand+].",
-								"[npc.Name] gently [npc.moansVerb] as [npc.she] [npc.verb(wrap)] [npc.her] [npc.fingers+] around [npc2.namePos] [npc2.hand+].",
-								"Gently holding [npc2.namePos] [npc2.hand+], [npc.name] [npc.verb(let)] out [npc.a_moan+]."));
+								"[npc.NamePos][npc.moansVerb]，继续牵着[npc2.namePos][npc2.hand+]。",
+								"[npc.Name]用[npc.her][npc.fingers+]环绕[npc2.namePos][npc2.hand+]，[npc.she]轻轻地[npc.moansVerb]。",
+								"[npc.name]温柔地牵着[npc2.namePos][npc2.hand+]，发出一声[npc.a_moan+]。"));
 					case DOM_NORMAL:
 					case SUB_EAGER:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-									"[npc.NamePos] eagerly [npc.moansVerb] as [npc.she] [npc.verb(continue)] holding [npc2.namePos] [npc2.hand+].",
-									"[npc.Name] passionately [npc.moansVerb] as [npc.she] [npc.verb(wrap)] [npc.her] [npc.fingers+] around [npc2.namePos] [npc2.hand+].",
-									"Lustfully holding [npc2.namePos] [npc2.hand+], [npc.name] [npc.verb(let)] out [npc.a_moan+]."));
+									"[npc.NamePos]急切地[npc.moansVerb]，因为[npc.she]继续握着[npc2.namePos][npc2.hand+]。",
+									"[npc.Name]热烈地[npc.moansVerb]，用[npc.her][npc.fingers+]包裹着[npc2.namePos][npc2.hand+]。",
+									"[npc.Name]色迷迷地牵着[npc2.namePos][npc2.hand+]，发出一阵[npc.a_moan+]。"));
 					case DOM_ROUGH:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-									"[npc.NamePos] roughly [npc.moansVerb] as [npc.she] [npc.verb(continue)] forcefully gripping [npc2.namePos] [npc2.hand+].",
-									"[npc.Name] roughly [npc.moansVerb] as [npc.she] tightly [npc.verb(wrap)] [npc.her] [npc.fingers+] around [npc2.namePos] [npc2.hand+].",
-									"Forcefully gripping [npc2.namePos] [npc2.hand+], [npc.name] [npc.verb(let)] out [npc.a_moan+]."));
+									"[npc.NamePos]粗暴地[npc.moansVerb]，[npc.she]继续用力抓住[npc2.namePos][npc2.hand+]。",
+									"当[npc.she]紧紧缠住[npc.her][npc.fingers+][npc2.namePos][npc2.hand+]时，[npc.Name]发出粗暴的[npc.moansVerb]。",
+									"[npc.Name]用力地握紧[npc2.namePos][npc2.hand+]，发出一阵[npc.a_moan+]。"));
 					case SUB_NORMAL:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-									"[npc.NamePos] [npc.moansVerb] as [npc.she] [npc.verb(continue)] holding [npc2.namePos] [npc2.hand+].",
-									"[npc.Name] [npc.moansVerb] as [npc.she] [npc.verb(wrap)] [npc.her] [npc.fingers+] around [npc2.namePos] [npc2.hand+].",
-									"Holding [npc2.namePos] [npc2.hand+], [npc.name] [npc.verb(let)] out [npc.a_moan+]."));
+									"[npc.namePos][npc.moansVerb]，[npc.she]继续握着[npc2.namePos][npc2.hand+]。",
+									"[npc.Name][npc.moansVerb]，用[npc.fingers+]包裹着[npc2.namePos][npc2.hand+]。",
+									"[npc.Name]牵着[npc2.namePos][npc2.hand+]，发出一阵[npc.a_moan+]。"));
 					case SUB_RESISTING:
 						return UtilText.parse(characterPenetrating, characterPenetrated,
 								UtilText.returnStringAtRandom(
-								"[npc.NamePos] [npc.sobsVerb+] as [npc.she] desperately [npc.verb(try)] to pull [npc.her] [npc.hand] away from [npc2.nameHers].",
-								"[npc.Name] [npc.verb(try)] to pull [npc.her] [npc.hand+] away from [npc2.namePos] as [npc.she] struggles against [npc2.herHim].",
-								"Trying to pull [npc.her] [npc.hand+] away from [npc2.nameHers], [npc.name] [npc.verb(continue)] struggling against [npc2.name]."));
+								"[npc.namePos][npc.sobsVerb+]，[npc.she]拼命将[npc.her]的[npc.hand]从[npc2.nameHers]上拉开。",
+								"[npc.name]尝试将[npc.hand+]从[npc2.namePos]那里移开，不断抵抗着[npc2.name]。",
+								"[npc2.name]持续挣扎着，尝试把[npc.her][npc.hand+]从[npc2.name]抽开。"));
 				}
 			}
 		}
@@ -17024,7 +17024,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			case FINGER:
 				penetratorName = "[npc.fingers]";
 				if(orifice == SexAreaPenetration.PENIS) {
-					penetratorName = UtilText.returnStringAtRandom("[npc.fingers]", "hand");
+					penetratorName = UtilText.returnStringAtRandom("[npc.fingers]", "手");
 				}
 				if(orifice == SexAreaPenetration.FINGER) {
 					penetratorName = UtilText.returnStringAtRandom("[npc.hand]");
@@ -17062,7 +17062,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					orificeName = "[npc2.ass+]";
 					break;
 				case MOUTH:
-					orificeName = "mouth";
+					orificeName = "嘴巴";
 					break;
 				case BREAST:
 					orificeName = "[npc2.breasts+]";
@@ -17078,19 +17078,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					break;
 				case URETHRA_PENIS:
 				case URETHRA_VAGINA:
-					orificeName = "urethra";
+					orificeName = "尿道";
 					break;
 				case VAGINA:
 					orificeName = "[npc2.pussy+]";
 					break;
 				case THIGHS:
-					orificeName = "thighs";
+					orificeName = "大腿";
 					break;
 				case TUSSY:
 					orificeName = "[npc2.tussy+]";
 					break;
 				case SPINNERET:
-					orificeName = "spinneret";
+					orificeName = "丝囊";
 					break;
 			}
 			
@@ -17136,126 +17136,126 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		switch(Main.sex.getSexPace(characterPenetrating)) {
 			case DOM_GENTLE:
-				penetratingQualifier = UtilText.returnStringAtRandom("gently", "slowly", "steadily");
+				penetratingQualifier = UtilText.returnStringAtRandom("轻柔", "慢慢", "缓缓");
 				penetratingAction = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("slide", "pump", "thrust")
-						:UtilText.returnStringAtRandom("slides", "pumps", "thrusts");
+						?UtilText.returnStringAtRandom("送入", "没入", "挺进")
+						:UtilText.returnStringAtRandom("送入", "没入", "挺进");
 				penetratingPrefix = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] drifts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc.Name] lets out [npc.a_moan+]", "[npc.A_moan+] drifts out from between [npc.namePos] [npc.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间漏出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc.Name]发出[npc.a_moan+]", "[npc.namePos][npc.lips+]间漏出一阵[npc.A_moan+]");
 			break;
 			case DOM_NORMAL:
-				penetratingQualifier = UtilText.returnStringAtRandom("eagerly", "enthusiastically", "readily", "happily");
+				penetratingQualifier = UtilText.returnStringAtRandom("渴求", "热切", "迫不及待", "愉悦");
 				penetratingAction = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("slide", "push", "drive", "thrust", "pump")
-						:UtilText.returnStringAtRandom("slides", "pushes", "drives", "thrusts", "pumps");
+						?UtilText.returnStringAtRandom("送入", "顶入", "挤入", "挺进", "没入")
+						:UtilText.returnStringAtRandom("送入", "顶入", "挤入", "挺进", "没入");
 				penetratingPrefix = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] bursts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc.Name] lets out [npc.a_moan+]", "[npc.A_moan+] bursts out from between [npc.namePos] [npc.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间溢出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc.Name]发出[npc.a_moan+]", "[npc.namePos][npc.lips+]间溢出一阵[npc.A_moan+]");
 			break;
 			case DOM_ROUGH:
-				penetratingQualifier = UtilText.returnStringAtRandom("roughly", "forcefully", "mercilessly");
+				penetratingQualifier = UtilText.returnStringAtRandom("粗鲁", "粗暴", "无情");
 				penetratingAction = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("slam", "hammer", "thrust", "pump", "piston")
-						:UtilText.returnStringAtRandom("slams", "hammers", "thrusts", "pumps", "pistons");
+						?UtilText.returnStringAtRandom("撞入", "捅进", "挺进", "埋入", "操进")
+						:UtilText.returnStringAtRandom("猛击", "锤击", "猛刺", "猛吸", "抽插");
 				penetratingPrefix = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] bursts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc.Name] lets out [npc.a_moan+]", "[npc.A_moan+] bursts out from between [npc.namePos] [npc.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间溢出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc.Name]发出[npc.a_moan+]", "[npc.namePos][npc.lips+]间溢出一阵[npc.A_moan+]");
 			break;
 			case SUB_EAGER:
-				penetratingQualifier = UtilText.returnStringAtRandom("desperately", "frantically", "eagerly", "enthusiastically");
+				penetratingQualifier = UtilText.returnStringAtRandom("迫切", "疯狂", "渴求", "热切");
 				penetratingAction = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("slam", "hammer", "thrust", "pump")
-						:UtilText.returnStringAtRandom("slams", "hammers", "thrusts", "pumps");
+						?UtilText.returnStringAtRandom("猛冲", "猛撞", "猛推", "猛吸")
+						:UtilText.returnStringAtRandom("猛冲", "猛撞", "猛推", "猛吸");
 				penetratingPrefix = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] bursts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc.Name] lets out [npc.a_moan+]", "[npc.A_moan+] bursts out from between [npc.namePos] [npc.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间溢出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc.Name]发出[npc.a_moan+]", "[npc.namePos][npc.lips+]间溢出一阵[npc.A_moan+]");
 			break;
 			case SUB_NORMAL:
-				penetratingQualifier = UtilText.returnStringAtRandom("happily", "willingly");
+				penetratingQualifier = UtilText.returnStringAtRandom("欣喜地", "乐意地");
 				penetratingAction = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("slide", "push", "drive", "thrust", "pump")
-						:UtilText.returnStringAtRandom("slides", "pushes", "drives", "thrusts", "pumps");
+						?UtilText.returnStringAtRandom("送入", "顶入", "挤入", "挺进", "没入")
+						:UtilText.returnStringAtRandom("送入", "顶入", "挤入", "挺进", "没入");
 				penetratingPrefix = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] drifts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc.Name] lets out [npc.a_moan+]", "[npc.A_moan+] drifts out from between [npc.namePos] [npc.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间漏出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc.Name]发出[npc.a_moan+]", "[npc.namePos][npc.lips+]间漏出一阵[npc.A_moan+]");
 			break;
 			case SUB_RESISTING:
-				penetratingQualifier = UtilText.returnStringAtRandom("reluctantly", "half-heartedly", "hesitantly");
+				penetratingQualifier = UtilText.returnStringAtRandom("不情愿地", "三心二意地", "犹豫地");
 				penetratingAction = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("slide", "push", "drive")
-						:UtilText.returnStringAtRandom("slides", "pushes", "drives");
+						?UtilText.returnStringAtRandom("送入", "顶入", "挤入")
+						:UtilText.returnStringAtRandom("送入", "顶入", "挤入");
 				penetratingPrefix = characterPenetrating.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] bursts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc.Name] lets out [npc.a_moan+]", "[npc.A_moan+] bursts out from between [npc.namePos] [npc.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间溢出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc.Name]发出[npc.a_moan+]", "[npc.namePos][npc.lips+]间溢出一阵[npc.A_moan+]");
 			break;
 		}
 		
 		switch(Main.sex.getSexPace(characterPenetrated)) {
 			case DOM_GENTLE:
 				penetratedPrefix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] drifts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc2.Name] lets out [npc2.a_moan+]", "[npc2.A_moan+] drifts out from between [npc2.namePos] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间漏出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc2.Name]发出一阵[npc2.a_moan+]", "一阵[npc2.A_moan+][npc2.namePos][npc2.lips+]间飘出");
 				penetratedPostfix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("causing you to let out [pc.a_moan+]", "causing [pc.a_moan+] to drift out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("causing [npc2.herHim] to let out [npc2.a_moan+]", "causing [npc2.a_moan+] to drift out from between [npc2.her] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("使你发出一阵[pc.a_moan+]", "你[pc.lips+]间飘出一阵[pc.a_moan+]")
+						:UtilText.returnStringAtRandom("让[npc2.herHim]发出一阵[npc2.a_moan+]", "[npc2.her][npc2.lips+]间飘出一阵[npc2.a_moan+]");
 				break;
 			case DOM_NORMAL:
 				penetratedPrefix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] bursts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc2.Name] lets out [npc2.a_moan+]", "[npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间溢出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc2.Name]发出一阵[npc2.a_moan+]", "一阵[npc2.A_moan+]从[npc2.namePos][npc2.lips+]间爆发而出");
 				penetratedPostfix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("causing you to let out [pc.a_moan+]", "causing [pc.a_moan+] to burst out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("causing [npc2.herHim] to let out [npc2.a_moan+]", "causing [npc2.a_moan+] to burst out from between [npc2.her] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("让你发出一阵[pc.a_moan+]", "你[pc.lips+]间爆发出一阵[pc.a_moan+]")
+						:UtilText.returnStringAtRandom("让[npc2.herHim]发出一阵[npc2.a_moan+]", "[npc2.her][npc2.lips+]间爆发出一阵[npc2.a_moan+]");
 				break;
 			case DOM_ROUGH:
 				penetratedPrefix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] bursts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc2.Name] lets out [npc2.a_moan+]", "[npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间溢出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc2.Name]发出一阵[npc2.a_moan+]", "一阵[npc2.A_moan+]从[npc2.namePos][npc2.lips+]间爆发而出");
 				penetratedPostfix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("causing you to let out [pc.a_moan+]", "causing [pc.a_moan+] to burst out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("causing [npc2.herHim] to let out [npc2.a_moan+]", "causing [npc2.a_moan+] to burst out from between [npc2.her] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("让你发出一阵[pc.a_moan+]", "你[pc.lips+]间爆发出一阵[pc.a_moan+]")
+						:UtilText.returnStringAtRandom("让[npc2.herHim]发出一阵[npc2.a_moan+]", "[npc2.her][npc2.lips+]间爆发出一阵[npc2.a_moan+]");
 				break;
 			case SUB_EAGER:
 				penetratedPrefix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] bursts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc2.Name] lets out [npc2.a_moan+]", "[npc2.A_moan+] bursts out from between [npc2.namePos] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间溢出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc2.Name]发出一阵[npc2.a_moan+]", "一阵[npc2.A_moan+]从[npc2.namePos][npc2.lips+]间爆发而出");
 				penetratedPostfix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("causing you to let out [pc.a_moan+]", "causing [pc.a_moan+] to burst out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("causing [npc2.herHim] to let out [npc2.a_moan+]", "causing [npc2.a_moan+] to burst out from between [npc2.her] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("让你发出一阵[pc.a_moan+]", "你[pc.lips+]间爆发出一阵[pc.a_moan+]")
+						:UtilText.returnStringAtRandom("让[npc2.herHim]发出一阵[npc2.a_moan+]", "[npc2.her][npc2.lips+]间爆发出一阵[npc2.a_moan+]");
 				break;
 			case SUB_NORMAL:
 				penetratedPrefix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("You let out [pc.a_moan+]", "[pc.A_moan+] drifts out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("[npc2.Name] lets out [npc2.a_moan+]", "[npc2.A_moan+] drifts out from between [npc2.namePos] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("你发出[pc.a_moan+]", "你[pc.lips+]间漏出一阵[pc.A_moan+]")
+						:UtilText.returnStringAtRandom("[npc2.Name]发出一阵[npc2.a_moan+]", "一阵[npc2.A_moan+][npc2.namePos][npc2.lips+]间飘出");
 				penetratedPostfix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("causing you to let out [pc.a_moan+]", "causing [pc.a_moan+] to drift out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("causing [npc2.herHim] to let out [npc2.a_moan+]", "causing [npc2.a_moan+] to drift out from between [npc2.her] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("使你发出一阵[pc.a_moan+]", "你[pc.lips+]间飘出一阵[pc.a_moan+]")
+						:UtilText.returnStringAtRandom("让[npc2.herHim]发出一阵[npc2.a_moan+]", "[npc2.her][npc2.lips+]间飘出一阵[npc2.a_moan+]");
 				break;
 			case SUB_RESISTING:
 				penetratedPrefix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("You struggle and try to protest", "You attempt to push [npc2.name] away", "You let out a protesting whine")
-						:UtilText.returnStringAtRandom("[npc2.Name] struggles and tries to protest", "[npc2.Name] attempts to push you away", "[npc2.Name] lets out a protesting whine");
+						?UtilText.returnStringAtRandom("你挣扎着抵抗", "你尝试推开[npc2.name]", "你发出抗议的哀嚎")
+						:UtilText.returnStringAtRandom("[npc2.Name]挣扎着抵抗", "[npc2.Name]尝试把你推开", "[npc2.Name]发出抗议的哀嚎");
 				penetratedPostfix = characterPenetrated.isPlayer()
-						?UtilText.returnStringAtRandom("causing you to let out [pc.a_moan+]", "causing [pc.a_moan+] to burst out from between your [pc.lips+]")
-						:UtilText.returnStringAtRandom("causing [npc2.herHim] to let out [npc2.a_moan+]", "causing [npc2.a_moan+] to burst out from between [npc2.her] [npc2.lips+]");
+						?UtilText.returnStringAtRandom("让你发出一阵[pc.a_moan+]", "你[pc.lips+]间爆发出一阵[pc.a_moan+]")
+						:UtilText.returnStringAtRandom("让[npc2.herHim]发出一阵[npc2.a_moan+]", "[npc2.her][npc2.lips+]间爆发出一阵[npc2.a_moan+]");
 				break;
 		}
 
 		String penetrationDescription = UtilText.returnStringAtRandom(
-				"in and out of",
-				"deep into");
+				"里进进出出",
+				"里深入");
 		if(orifice.isOrifice() && ((SexAreaOrifice)orifice).isInternalOrifice()) {
 			if(characterPenetrating.isFullPenetrationFarTooShort(penetrationType, characterPenetrated, (SexAreaOrifice)orifice)) {
 				penetrationDescription = UtilText.returnStringAtRandom(
-						"in and out of",
-						"a disappointingly short way into");
+						"里进进出出",
+						"里以一种令人失望的方式进入");
 				
 			} else if(characterPenetrating.isWantingToFullyPenetrate(characterPenetrated, penetrationType)
 					&& characterPenetrating.isFullPenetrationTooLongToFit(penetrationType, characterPenetrated, (SexAreaOrifice)orifice)) {
 				penetrationDescription = UtilText.returnStringAtRandom(
-						"deep in and out of",
-						"as deep as is comfortable into");
+						"里深深地抽插",
+						"里在舒适极限下尽可能深地插入");
 			}
 		}
 		
@@ -17263,28 +17263,28 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			switch((SexAreaOrifice)orifice) {
 				case ARMPITS:
 					penetrationDescription = UtilText.returnStringAtRandom(
-							"over",
-							"up and down over");
+							"上滑动",
+							"上上下滑动");
 					break;
 				case ASS:
 					penetrationDescription = UtilText.returnStringAtRandom(
-							"between the cheeks of",
-							"in and out between the cheeks of");
+							"颊间",
+							"颊间进进出出");
 					break;
 				case BREAST:
 				case BREAST_CROTCH:
 				case THIGHS:
 					penetrationDescription = UtilText.returnStringAtRandom(
-							"between",
-							"in and out between");
+							"之间",
+							"间抽插");
 					break;
 				case NIPPLE:
 					if(penetrationType == SexAreaPenetration.TONGUE) {
 						penetratorName = "[npc.lips]";
 						penetratingAction = characterPenetrating.isPlayer()
-								?UtilText.returnStringAtRandom("press")
-								:UtilText.returnStringAtRandom("presses");
-						penetrationDescription = UtilText.returnStringAtRandom("against");
+								?UtilText.returnStringAtRandom("按压")
+								:UtilText.returnStringAtRandom("按压");
+						penetrationDescription = UtilText.returnStringAtRandom("抵着");
 					}
 					break;
 				case ANUS:
@@ -17302,23 +17302,23 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				case PENIS:
 					if(penetrationType==SexAreaPenetration.FINGER) {
 						penetrationDescription = UtilText.returnStringAtRandom(
-								"up and down around",
-								"up and down");
+								"周往复",
+								"往复");
 						
 					} else if(penetrationType==SexAreaPenetration.FOOT) {
 						if(Main.sex.getSexPositionSlot(characterPenetrating).isStanding(characterPenetrating)) {
 							penetrationDescription = UtilText.returnStringAtRandom(
-									"up and down against",
-									"against");
+									"抵着往复",
+									"抵着");
 						} else {
 							penetrationDescription = UtilText.returnStringAtRandom(
-									"up and down around");
+									"周往复");
 						}
 						
 					} else if(penetrationType==SexAreaPenetration.PENIS) {
 						penetrationDescription = UtilText.returnStringAtRandom(
-								"up and down against",
-								"against");
+								"抵着往复",
+								"抵着");
 					}
 					break;
 				case FINGER:
@@ -17328,14 +17328,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				case FOOT:
 				case TONGUE:
 					penetrationDescription = UtilText.returnStringAtRandom(
-							"over");
+							"滑动");
 					break;
 			}
 		}
 		
-		String target = " [npc2.namePos] ";
+		String target = "[npc2.namePos]";
 		if(characterPenetrating.equals(characterPenetrated)) {
-			target = " [npc.her] ";
+			target = "[npc.her]";
 		}
 		
 		if(immobile) {
@@ -17346,32 +17346,32 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(characterPenetrating.isAsleep()) {
 				return UtilText.parse(characterPenetrating, characterPenetrated,
 						UtilText.returnStringAtRandom(
-								"[npc.Name] [npc.verb(remain)] deeply asleep with [npc.her] "+penetratorName+insertion+target+orificeName+".",
-								"Continuing to sleep, [npc.name] [npc.do]n't show any sign of waking up as [npc.her] "+penetratorName+" "+(orifice.isPlural()?"are":"is")+" "+insertion+target+orificeName+".",
-								"Remaining asleep, [npc.name] [npc.verb(keep)] [npc.her] "+penetratorName+insertion+target+orificeName+"."));
+								"[npc.Name]保持着熟睡，[npc.her]的"+penetratorName+insertion+target+orificeName+"。",
+								"[npc.Name]没有要醒来的迹象，[npc.her]的"+penetratorName+" "+(orifice.isPlural()?"":"")+" "+insertion+target+orificeName+".",
+								"[npc.Name]保持着熟睡，[npc.her]的"+penetratorName+insertion+target+orificeName+"。"));
 			} else {
 				return UtilText.parse(characterPenetrating, characterPenetrated,
 						UtilText.returnStringAtRandom(
-								"[npc.Name] [npc.verb(remain)] totally motionless with [npc.her] "+penetratorName+insertion+target+orificeName+".",
-								"Acting like an inanimate sex doll, [npc.name] [npc.do]n't make a move even as [npc.her] "+penetratorName+" "+(orifice.isPlural()?"are":"is")+" "+insertion+target+orificeName+".",
-								"Remaining still and silent, [npc.name] [npc.do]n't react to anything while keeping [npc.her] "+penetratorName+insertion+target+orificeName+"."));
+								"[npc.Name]保持着不动，[npc.her]的"+penetratorName+insertion+target+orificeName+"。",
+								"[npc.Name]像个无生命的性爱玩偶般一动不动，[npc.her]的"+penetratorName+" "+(orifice.isPlural()?"":"")+" "+insertion+target+orificeName+".",
+								"[npc.Name]保持着安静，对[npc.her]的"+penetratorName+insertion+target+orificeName+"不起任何反应。"));
 			}
 			
 		} else {
 			if(Math.random()<0.5f) {
 				return UtilText.parse(characterPenetrating, characterPenetrated,
 						UtilText.returnStringAtRandom(
-						penetratedPrefix+" as [npc.name] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+".",
-						penetratedPrefix+" as [npc.name] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+".",
-						"[npc.Name] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+", "+penetratedPostfix+".",
-						"[npc.Name] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+", "+penetratedPostfix+"."));	
+						"[npc.name]在"+target+"的"+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]"+penetratorName+"时，"+penetratingPrefix,
+						"[npc.name]在"+target+"的"+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]"+penetratorName+"时，"+penetratingPrefix,
+						"[npc.Name]在"+target+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]的"+penetratorName+"，"+penetratedPostfix+"。",
+						"[npc.Name]在"+target+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]的"+penetratorName+"，"+penetratedPostfix+"。"));	
 			} else {
 				return UtilText.parse(characterPenetrating, characterPenetrated,
 						UtilText.returnStringAtRandom(
-						penetratingPrefix+" as [npc.she] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+".",
-						penetratingPrefix+" as [npc.she] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+".",
-						"[npc.Name] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+", "+penetratedPostfix+".",
-						"[npc.Name] "+penetratingQualifier+" "+penetratingAction+" [npc.her] "+penetratorName+" "+penetrationDescription+target+orificeName+", "+penetratedPostfix+"."));
+						"[npc.Name]在"+target+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]的"+penetratorName+"，"+penetratedPostfix+"时，"+penetratingPrefix,
+						"[npc.Name]在"+target+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]的"+penetratorName+"，"+penetratedPostfix+"时，"+penetratingPrefix,
+						"[npc.Name]在"+target+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]的"+penetratorName+"，"+penetratedPostfix+"。",
+						"[npc.Name]在"+target+orificeName+penetrationDescription+penetratingQualifier+penetratingAction+"[npc.her]的"+penetratorName+"，"+penetratedPostfix+"。"));
 			}
 		}
 		
@@ -17383,28 +17383,28 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		switch(Main.sex.getSexPace(characterPenetrating)) {
 			case DOM_GENTLE:
-				penetrationAdverb = UtilText.returnStringAtRandom("slowly", "gently");
-				penetrationVerb = UtilText.returnStringAtRandom("slide", "push", "glide");
+				penetrationAdverb = UtilText.returnStringAtRandom("缓缓", "轻柔");
+				penetrationVerb = UtilText.returnStringAtRandom("抚动", "顶入", "滑入");
 				break;
 			case DOM_NORMAL:
 				penetrationAdverb = "";
-				penetrationVerb = UtilText.returnStringAtRandom("push");
+				penetrationVerb = UtilText.returnStringAtRandom("顶入");
 				break;
 			case DOM_ROUGH:
-				penetrationAdverb = UtilText.returnStringAtRandom("roughly", "violently", "forcefully");
-				penetrationVerb = UtilText.returnStringAtRandom("slam", "grind");
+				penetrationAdverb = UtilText.returnStringAtRandom("粗暴地", "凶残地", "大力地");
+				penetrationVerb = UtilText.returnStringAtRandom("深入", "摩擦");
 				break;
 			case SUB_EAGER:
-				penetrationAdverb = UtilText.returnStringAtRandom("eagerly", "desperately", "enthusiastically");
-				penetrationVerb = UtilText.returnStringAtRandom("slam", "grind");
+				penetrationAdverb = UtilText.returnStringAtRandom("渴求", "迫切", "热切");
+				penetrationVerb = UtilText.returnStringAtRandom("深入", "摩擦");
 				break;
 			case SUB_NORMAL:
 				penetrationAdverb = "";
-				penetrationVerb = UtilText.returnStringAtRandom("push");
+				penetrationVerb = UtilText.returnStringAtRandom("顶入");
 				break;
 			case SUB_RESISTING:
-				penetrationAdverb = UtilText.returnStringAtRandom("reluctantly", "hesitantly");
-				penetrationVerb = UtilText.returnStringAtRandom("push");
+				penetrationAdverb = UtilText.returnStringAtRandom("不情愿地", "犹豫地");
+				penetrationVerb = UtilText.returnStringAtRandom("顶入");
 				break;
 		}
 		
@@ -17433,18 +17433,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				break;
 		}
 		
-		String penetrationAdjective = "into";
+		String penetrationAdjective = "里面";
 		
 		if(orifice.isOrifice()) {
 			switch((SexAreaOrifice)orifice) {
 				case ARMPITS:
-					penetrationAdjective = "over";
+					penetrationAdjective = "上面";
 					break;
 				case ASS:
 				case BREAST:
 				case BREAST_CROTCH:
 				case THIGHS:
-					penetrationAdjective = "between";
+					penetrationAdjective = "之间";
 					break;
 				case ANUS:
 				case MOUTH:
@@ -17466,7 +17466,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				case TENTACLE:
 				case FOOT:
 				case TONGUE:
-					penetrationAdjective = "over";
+					penetrationAdjective = "上面";
 					break;
 			}
 		}
@@ -17477,15 +17477,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(immobile) {
 			if(characterPenetrating.isAsleep()) {
 				return UtilText.parse(characterPenetrating, characterPenetrated,
-						"[npc.Name] [npc.verb(remain)] deeply asleep as [npc.her] "+penetrationName+" pushes "+penetrationAdjective+" "+ownerName+" "+orifice.getName(characterPenetrated)+".");
+						"[npc.NamePos]的"+penetrationName+penetrationAdjective+"推入了"+ownerName+"的"+orifice.getName(characterPenetrated)+"内，而[npc.she]仍保持着熟睡。");
 			} else {
 				return UtilText.parse(characterPenetrating, characterPenetrated,
-						"[npc.Name] [npc.verb(remain)] totally motionless as [npc.her] "+penetrationName+" pushes "+penetrationAdjective+" "+ownerName+" "+orifice.getName(characterPenetrated)+".");
+						"[npc.NamePos]的"+penetrationName+penetrationAdjective+"推入了"+ownerName+"的"+orifice.getName(characterPenetrated)+"内，而[npc.she]仍保持着静止。");
 			}
 			
 		} else {
 			return UtilText.parse(characterPenetrating, characterPenetrated,
-					"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb("+penetrationAdverb+" "+penetrationVerb+")] [npc.her] "+penetrationName+" "+penetrationAdjective+" "+ownerName+" "+orifice.getName(characterPenetrated)+".");
+					"[npc.Name]发出一声[npc.a_moan+]，"+penetrationAdverb+"将[npc.her]的"+penetrationName+"推入了"+ownerName+"的"+orifice.getName(characterPenetrated)+penetrationAdjective+"。");
 		}
 	}
 	
@@ -17722,19 +17722,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(initialPenetration) {
 				if(characterPenetrating.equals(characterPenetrated)) {
 					return UtilText.parse(characterPenetrated, characterPenetrating,
-							"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(wrap)] [npc.her] [npc.fingers+] around [npc.her] [npc.cock+], before starting to give [npc.herself] a handjob.");
+							"[npc2.Name]发出一阵[npc.a_moan+]，[npc.she]将[npc.her][npc.fingers+]包裹着[npc.namePos][npc.cock+]，开始给[npc.herself]打飞机。");
 				} else {
 					if(immobilePenetrating) {
 						if(sleepingPenetrating) {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(continue)] to sleep as [npc2.her] [npc2.fingers+] are wrapped around [npc.namePos] [npc.cock+].");
+									"[npc2.Name]继续睡觉， [npc2.fingers+]环着[npc.namePos][npc.cock+]。");
 						} else {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(stay)] totally still as [npc2.her] [npc2.fingers+] are wrapped around [npc.namePos] [npc.cock+].");
+									"[npc2.Name]继续一动不动，[npc2.fingers+]环着[npc.namePos][npc.cock+]。");
 						}
 					} else {
 						return UtilText.parse(characterPenetrated, characterPenetrating,
-								"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(wrap)] [npc2.her] [npc2.fingers+] around [npc.namePos] [npc.cock+], before starting to give [npc.herHim] a handjob.");
+								"[npc2.Name]发出一阵[npc2.a_moan+]，[npc2.fingers+]环着[npc.namePos][npc.cock+]，开始给[npc.herHim]打飞机。");
 					}
 				}
 				
@@ -17747,10 +17747,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(initialPenetration) {
 				if(immobilePenetrating) {
 					return UtilText.parse(characterPenetrated, characterPenetrating,
-							"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(wrap)] [npc2.namePos] [npc2.fingers+] around [npc.her] [npc.cock+].");
+							"[npc2.Name]发出一阵[npc.a_moan+]，[npc2.fingers+]环着[npc.namePos][npc.cock+]。");
 				} else {
 					return UtilText.parse(characterPenetrated, characterPenetrating,
-							"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(get)] [npc2.name] to wrap [npc2.her] [npc2.fingers+] around [npc.her] [npc.cock+], before starting to receive a handjob from [npc.herHim].");
+							"[npc.Name]发出一阵[npc.a_moan+]，让[npc2.name]用[npc2.fingers+]包裹[npc.her][npc.cock+]，开始打飞机。");
 				}
 				
 			} else {
@@ -17765,34 +17765,34 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(immobilePenetrating) {
 						if(sleepingPenetrating) {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(remain)] deeply asleep as [npc2.her] [npc2.foot+] is pushed onto [npc.namePos] [npc.cock+].",
+									"[npc2.Name]继续熟睡， [npc2.foot+]推向[npc.namePos][npc.cock+]。",
 									ParserTag.SEX_DESCRIPTION);
 						} else {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"Silent and unmoving, [npc2.name] [npc2.verb(continue)] to act like an inanimate sex doll as [npc2.her] [npc2.foot+] is pushed onto [npc.namePos] [npc.cock+].",
+									"[npc2.Name]像无生命的性爱玩偶般继续一动不动， [npc2.foot+]推向[npc.namePos][npc.cock+]。",
 									ParserTag.SEX_DESCRIPTION);
 						}
 						
 					} else {
 						return UtilText.parse(characterPenetrated, characterPenetrating,
-								"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc2.her] [npc2.foot+] into [npc.namePos] groin, before starting to rub and press down on [npc.her] [npc.cock+].",
+								"[npc2.Name]把[npc2.her]的[npc2.foot+]伸进[npc.namePos]的下体，[npc2.she]发出了[npc2.a_moan+]，然后开始揉搓和按压[npc.her][npc.cock+]。",
 								ParserTag.SEX_DESCRIPTION);
 					}
 				} else {
 					if(immobilePenetrating) {
 						if(sleepingPenetrating) {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(remain)] deeply asleep as [npc2.her] [npc2.feet+] are pushed onto [npc.namePos] [npc.cock+].",
+									"[npc2.Name]继续熟睡，[npc2.feet+]推向[npc.namePos][npc.cock+]。",
 									ParserTag.SEX_DESCRIPTION);
 						} else {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"Silent and unmoving, [npc2.name] [npc2.verb(continue)] to act like an inanimate sex doll as [npc2.her] [npc2.feet+] are pushed onto [npc.namePos] [npc.cock+].",
+									"[npc2.Name]继续像无生命的性爱玩偶般一动不动， [npc2.feet+]推向[npc.namePos][npc.cock+]。",
 									ParserTag.SEX_DESCRIPTION);
 						}
 						
 					} else {
 						return UtilText.parse(characterPenetrated, characterPenetrating,
-								"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(wrap)] [npc2.her] [npc2.feet+] around [npc.namePos] [npc.cock+], before starting to give [npc.herHim] [npc2.a_footjob].",
+								"[npc2.Name]发出一阵[npc2.a_moan+]，[npc2.she]将[npc2.her][npc2.feet+]包裹着[npc.namePos][npc.cock+]，开始给[npc.herHim][npc2.a_footjob]。",
 								ParserTag.SEX_DESCRIPTION);
 					}
 				}
@@ -17808,33 +17808,33 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(immobilePenetrating) {
 						if(sleepingPenetrating) {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(show)] no sign of waking up as [npc2.her] [npc2.cock+] is pushed up against [npc.namePos] [npc.foot+].",
+									"[npc2.Name]没有醒来的迹象，[npc2.her][npc2.cock+]被推向[npc.namePos][npc.foot+]。",
 											ParserTag.SEX_DESCRIPTION);
 						} else {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.do]n't react in any way as [npc2.her] [npc2.cock+] is pushed up against [npc.namePos] [npc.foot+].",
+									"[npc2.Name]对[npc2.her][npc2.cock+]被推向[npc.namePos][npc.foot+]没有任何反应。",
 											ParserTag.SEX_DESCRIPTION);
 						}
 					} else {
 						return UtilText.parse(characterPenetrated, characterPenetrating,
-								"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc2.her] [npc2.cock+] up against [npc.namePos] [npc.foot+],"
-										+ " before getting [npc.herHim] to start giving [npc2.herHim] [npc.a_footjob].",
+								"[npc2.Name]把[npc2.her][npc2.cock+]顶到[npc.namePos][npc.foot+]，[npc2.she]发出了[npc2.a_moan+]的声音，"
+										+ "让[npc.herHim]开始给[npc2.herHim][npc.a_footjob]。",
 										ParserTag.SEX_DESCRIPTION);
 					}
 				} else {
 					if(immobilePenetrating) {
 						if(sleepingPenetrating) {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(show)] no sign of waking up as [npc2.her] [npc2.cock+] is pushed up against [npc.namePos] [npc.feet+].",
+									"[npc2.Name]没有醒来的迹象，[npc2.her][npc2.cock+]被推向[npc.namePos][npc.feet+]。",
 											ParserTag.SEX_DESCRIPTION);
 						} else {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.do]n't react in any way as [npc2.her] [npc2.cock+] is pushed up against [npc.namePos] [npc.feet+].",
+									"[npc2.Name]对[npc2.her][npc2.cock+]被推向[npc.namePos][npc.feet+]没有任何反应。",
 											ParserTag.SEX_DESCRIPTION);
 						}
 					} else {
 						return UtilText.parse(characterPenetrated, characterPenetrating,
-								"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(push)] [npc.namePos] [npc.feet+] together, before sliding [npc2.her] [npc2.cock+] between them and starting to receive [npc.a_footjob].",
+								"[npc2.Name]发出一阵[npc2.a_moan+]，将[npc.namePos][npc.feet+]聚在一起，夹住[npc2.her][npc2.cock+]，开始[npc.a_footjob].",
 								ParserTag.SEX_DESCRIPTION);
 					}
 				}
@@ -17848,19 +17848,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(initialPenetration) {
 				if(characterPenetrating.equals(characterPenetrated)) {
 					return UtilText.parse(characterPenetrated, characterPenetrating,
-							"[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(wrap)] [npc.her] [npc.fingers+] around [npc.her] own [npc.hand].");
+							"[npc.Name]连连发出[npc.moans+]，用[npc.fingers+]攥住自己的[npc.hand]。");
 				} else {
 					if(immobilePenetrating) {
 						if(sleepingPenetrating) {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(remain)] deeply asleep as [npc2.her] [npc2.fingers+] are wrapped around [npc.namePos] [npc.hand+].");
+									"[npc2.Name]继续熟睡，[npc2.fingers+]被[npc.namePos][npc.hand+]紧紧握住。");
 						} else {
 							return UtilText.parse(characterPenetrated, characterPenetrating,
-									"[npc2.Name] [npc2.verb(remain)] still and silent as [npc2.her] [npc2.fingers+] are wrapped around [npc.namePos] [npc.hand+].");
+									"[npc2.Name]继续一动不动，[npc2.fingers+]被[npc.namePos][npc.hand+]紧紧握住。");
 						}
 					} else {
 						return UtilText.parse(characterPenetrated, characterPenetrating,
-								"[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(wrap)] [npc2.her] [npc2.fingers+] around [npc.namePos] [npc.hand+].");
+								"[npc2.Name]发出一阵[npc2.a_moan+]， [npc2.fingers+]环着[npc.namePos][npc.hand+]。");
 					}
 				}
 				
@@ -17908,44 +17908,44 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						if(immobilePenetrated) {
 							if(sleepingPenetrated) {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(continue)] to sleep, showing no sign of waking up as [npc.namePos] [npc.cock+] pushes into [npc2.her] [npc2.asshole+].");
+										"即便[npc.namePos]将那[npc.cock+]推入[npc2.her][npc2.asshole+]，[npc2.Name]也继续睡觉，没有醒来的迹象。");
 							} else {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(continue)] acting like an inanimate sex doll, remaining frozen in place as [npc.namePos] [npc.cock+] pushes into [npc2.her] [npc2.asshole+].");
+										"即便[npc.namePos]将那[npc.cock+]推入[npc2.her][npc2.asshole+]，[npc2.Name]也继续像无生命的性爱玩偶般一动不动。");
 							}
 						}
-						initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cock+] push into [npc2.her] [npc2.asshole+].");
+						initialDescriptions.add("当[npc2.she]感觉到[npc.namePos][npc.cock+]进入[npc2.her][npc2.asshole+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 						for(PenetrationModifier mod : characterPenetrating.getPenisModifiers()) {
 							switch(mod) {
 								case BARBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the little barbs lining [npc.namePos] [npc.cock] rake the insides of [npc2.her] [npc2.asshole+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]带有小倒刺的[npc.cock]在[npc2.her][npc2.asshole+]扫过时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case BLUNT:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the blunt head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.asshole+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]钝头的[npc.cock]进入[npc2.her][npc2.asshole+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case FLARED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the flared head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.asshole+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]平头的[npc.cock]进入[npc2.her][npc2.asshole+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case KNOTTED:
 									if(feelsKnot) {
-										initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-												+ " the fat knot at the base of [npc.namePos] [npc.cock] bump up against [npc2.her] [npc2.asshole+] as [npc.she] fully [npc.verb(penetrate)] [npc2.herHim] in one thrust.");
+										initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+												+ "[npc.namePos][npc.cock]根部的结在[npc2.her][npc2.asshole+]内充血膨胀，[npc.she]一举顶进[npc2.herHim]，尽根没入。");
 									}
 									break;
 								case PREHENSILE:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] prehensile [npc.cock] exploring the insides of [npc2.her] [npc2.asshole+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]灵活可控的[npc.cock]进入[npc2.her][npc2.asshole+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case RIBBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] ribbed [npc.cock] push into [npc2.her] [npc2.asshole+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]有螺纹的[npc.cock]进入[npc2.her][npc2.asshole+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case SHEATHED:
 									break;
 								case TAPERED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the tapered head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.asshole+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]尖头的[npc.cock]进入[npc2.her][npc2.asshole+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-											+ " the little tentacles lining [npc.namePos] [npc.cock] squirm and wriggle against the insides of [npc2.her] [npc2.asshole+].");
+									initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+											+ "[npc.namePos][npc.cock]外侧的小触手在[npc2.her][npc2.asshole+]内蠕动。");
 									break;
 								case VEINY:
 								case OVIPOSITOR:
@@ -17955,22 +17955,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						penetrationSB.append(initialDescriptions.get(Util.random.nextInt(initialDescriptions.size())));
 						
 						initialDescriptions.clear();
-						initialDescriptions.add(" [npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc2.namePos] [npc2.asshole+] squeezes down around [npc.her] [npc.cock+].");
+						initialDescriptions.add("[npc2.namePos][npc2.asshole+]挤压包裹着[npc.her][npc.cock+]，[npc.Name]发出[npc.a_moan+]。");
 						for(OrificeModifier mod : characterPenetrated.getAssOrificeModifiers()) {
 							switch(mod) {
 								case MUSCLE_CONTROL:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.asshole+],"
-											+ " [npc.she] [npc.verb(feel)] a series of internal muscles instantly start to grip and squeeze down on [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]顶入[npc2.namePos][npc2.asshole+]，"
+											+ "[npc.she]感觉到一系列内部肌肉瞬间开始收缩，挤压[npc.her]颤动的肉棒。");
 									break;
 								case PUFFY:
 									break;
 								case RIBBED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.asshole+],"
-											+ " [npc.she] [npc.verb(feel)] the ribbed interior bumping down against [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]顶入[npc2.namePos][npc2.asshole+]，"
+											+ "[npc.she]感觉到内部的螺纹缠着[npc.her]颤动的肉棒。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.asshole+],"
-											+ " [npc.she] [npc.verb(feel)] a series of little writhing tentacles start to massage and stroke [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]顶入[npc2.namePos][npc2.asshole+]，"
+											+ "[npc.she]感觉到一系列蠕动的小触手开始按摩和抚摸[npc.her]悸动的身体。");
 									break;
 							}
 						}
@@ -17993,44 +17993,44 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						if(immobilePenetrated) {
 							if(sleepingPenetrated) {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(continue)] to sleep, showing no sign of waking up as [npc.namePos] [npc.cock+] pushes into [npc2.her] [npc2.vagina+].");
+										"即便[npc.namePos]将那[npc.cock+]推入[npc2.her][npc2.vagina+]，[npc2.Name]也继续睡觉，没有醒来的迹象。");
 							} else {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(continue)] acting like an inanimate sex doll, remaining frozen in place as [npc.namePos] [npc.cock+] pushes into [npc2.her] [npc2.vagina+].");
+										"即便[npc.namePos]将那[npc.cock+]推入[npc2.her][npc2.vagina+]，[npc2.Name]也继续像无生命的性爱玩偶般一动不动。");
 							}
 						}
-						initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cock+] push into [npc2.her] [npc2.vagina+].");
+						initialDescriptions.add("当[npc2.she]感觉到[npc.namePos][npc.cock+]进入[npc2.her][npc2.vagina+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 						for(PenetrationModifier mod : characterPenetrating.getPenisModifiers()) {
 							switch(mod) {
 								case BARBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the little barbs lining [npc.namePos] [npc.cock] rake the insides of [npc2.her] [npc2.vagina+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]带有小倒刺的[npc.cock]在[npc2.her][npc2.vagina+]扫过时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case BLUNT:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the blunt head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.vagina+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]钝头的[npc.cock]进入[npc2.her][npc2.vagina+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case FLARED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the flared head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.vagina+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]宽大平坦的龟头进入[npc2.her][npc2.vagina+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case KNOTTED:
 									if(feelsKnot) {
-										initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-												+ " the fat knot at the base of [npc.namePos] [npc.cock] bump up against [npc2.her] [npc2.vagina+] as [npc.she] fully [npc.verb(penetrate)] [npc2.herHim] in one thrust.");
+										initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+												+ "[npc.namePos][npc.cock]根部的结在[npc2.her][npc2.vagina+]内充血膨胀，[npc.she]一举顶进[npc2.herHim]，尽根没入。");
 									}
 									break;
 								case PREHENSILE:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] prehensile [npc.cock] exploring the insides of [npc2.her] [npc2.vagina+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]灵活可控的[npc.cock]进入[npc2.her][npc2.vagina+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case RIBBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] ribbed [npc.cock] push into [npc2.her] [npc2.vagina+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]有螺纹的[npc.cock]进入[npc2.her][npc2.vagina+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case SHEATHED:
 									break;
 								case TAPERED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the tapered head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.vagina+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]尖头的[npc.cock]进入[npc2.her][npc2.vagina+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-											+ " the little tentacles lining [npc.namePos] [npc.cock] squirm and wriggle against the insides of [npc2.her] [npc2.vagina+].");
+									initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+											+ "[npc.namePos][npc.cock]外侧的小触手在[npc2.her][npc2.vagina+]内蠕动。");
 									break;
 								case VEINY:
 								case OVIPOSITOR:
@@ -18040,22 +18040,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						penetrationSB.append(initialDescriptions.get(Util.random.nextInt(initialDescriptions.size())));
 						
 						initialDescriptions.clear();
-						initialDescriptions.add(" [npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc2.namePos] [npc2.vagina+] squeezes down around [npc.her] [npc.cock+].");
+						initialDescriptions.add("[npc2.namePos][npc2.vagina+]挤压包裹着[npc.her][npc.cock+]，[npc.Name]发出[npc.a_moan+]。");
 						for(OrificeModifier mod : characterPenetrated.getVaginaOrificeModifiers()) {
 							switch(mod) {
 								case MUSCLE_CONTROL:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.vagina+],"
-											+ " [npc.she] [npc.verb(feel)] a series of internal muscles instantly start to grip and squeeze down on [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]插入[npc2.namePos][npc2.vagina+]，"
+											+ "[npc.she]感觉到一系列内部肌肉瞬间开始收缩并挤压[npc.her]颤动的肉棒。");
 									break;
 								case PUFFY:
 									break;
 								case RIBBED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.vagina+],"
-											+ " [npc.she] [npc.verb(feel)] the ribbed interior bumping down against [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]插入[npc2.namePos][npc2.vagina+]，"
+											+ "[npc.she]感觉到内部的螺纹缠着[npc.her]颤动的肉棒。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.vagina+],"
-											+ " [npc.she] [npc.verb(feel)] a series of little writhing tentacles start to massage and stroke [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]插入[npc2.namePos][npc2.vagina+]，"
+											+ "[npc.she]感觉到一系列蠕动的小触手开始按摩和抚摸[npc.her]悸动的身体。");
 									break;
 							}
 						}
@@ -18077,44 +18077,44 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						if(immobilePenetrated) {
 							if(sleepingPenetrated) {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(continue)] to sleep, showing no sign of waking up as [npc.namePos] [npc.cock+] pushes into [npc2.her] [npc2.nipple+].");
+										"即便[npc.namePos]将那[npc.cock+]推入[npc2.her][npc2.nipple+]，[npc2.Name]也继续睡觉，没有醒来的迹象。");
 							} else {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(continue)] acting like an inanimate sex doll, remaining frozen in place as [npc.namePos] [npc.cock+] pushes into [npc2.her] [npc2.nipple+].");
+										"即便[npc.namePos]将那[npc.cock+]推入[npc2.her][npc2.nipple+]，[npc2.Name]也继续像无生命的性爱玩偶般一动不动。");
 							}
 						}
-						initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cock+] push into [npc2.her] [npc2.nipple+].");
+						initialDescriptions.add("当[npc2.she]感觉到[npc.namePos][npc.cock+]进入[npc2.her][npc2.nipple+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 						for(PenetrationModifier mod : characterPenetrating.getPenisModifiers()) {
 							switch(mod) {
 								case BARBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the little barbs lining [npc.namePos] [npc.cock] rake the insides of [npc2.her] [npc2.nipple+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]带有小倒刺的[npc.cock]在[npc2.her][npc2.nipple+]扫过时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case BLUNT:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the blunt head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.nipple+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]钝头的[npc.cock]进入[npc2.her][npc2.nipple+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case FLARED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the flared head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.nipple+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]尖头的[npc.cock]进入[npc2.her][npc2.nipple+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case KNOTTED:
 									if(feelsKnot) {
-										initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-												+ " the fat knot at the base of [npc.namePos] [npc.cock] bump up against [npc2.her] [npc2.nipple+] as [npc.she] fully [npc.verb(penetrate)] [npc2.herHim] in one thrust.");
+										initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+												+ "[npc.namePos][npc.cock]根部的结在[npc2.her][npc2.nipple+]内充血膨胀，[npc.she]一举顶进[npc2.herHim]，尽根没入。");
 									}
 									break;
 								case PREHENSILE:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] prehensile [npc.cock] exploring the insides of [npc2.her] [npc2.nipple+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]灵活可控的[npc.cock]进入[npc2.her][npc2.nipple+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case RIBBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] ribbed [npc.cock] push into [npc2.her] [npc2.nipple+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]有螺纹的[npc.cock]进入[npc2.her][npc2.nipple+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case SHEATHED:
 									break;
 								case TAPERED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the tapered head of [npc.namePos] [npc.cock] push inside [npc2.her] [npc2.nipple+].");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]尖头的[npc.cock]进入[npc2.her][npc2.nipple+]时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-											+ " the little tentacles lining [npc.namePos] [npc.cock] squirm and wriggle against the insides of [npc2.her] [npc2.nipple+].");
+									initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+											+ "[npc.namePos][npc.cock]外侧的小触手在[npc2.her][npc2.nipple+]内蠕动。");
 									break;
 								case VEINY:
 								case OVIPOSITOR:
@@ -18124,22 +18124,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						penetrationSB.append(initialDescriptions.get(Util.random.nextInt(initialDescriptions.size())));
 						
 						initialDescriptions.clear();
-						initialDescriptions.add(" [npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc2.namePos] [npc2.nipple+] squeezes down around [npc.her] [npc.cock+].");
+						initialDescriptions.add("[npc2.namePos][npc2.nipple+]挤压包裹着[npc.her][npc.cock+]，[npc.Name]发出[npc.a_moan+]。");
 						for(OrificeModifier mod : characterPenetrated.getNippleOrificeModifiers()) {
 							switch(mod) {
 								case MUSCLE_CONTROL:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.nipple+],"
-											+ " [npc.she] [npc.verb(feel)] a series of internal muscles instantly start to grip and squeeze down on [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]塞入[npc2.namePos][npc2.nipple+]，"
+											+ "[npc.she]感觉到一系列内部肌肉瞬间开始收缩，挤压[npc.her]颤动的肉棒。");
 									break;
 								case PUFFY:
 									break;
 								case RIBBED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.nipple+],"
-											+ " [npc.she] [npc.verb(feel)] the ribbed interior bumping down against [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]塞入[npc2.namePos][npc2.nipple+]，"
+											+ "[npc.she]感觉到内部的螺纹缠着[npc.her]颤动的肉棒。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] [npc2.nipple+],"
-											+ " [npc.she] [npc.verb(feel)] a series of little writhing tentacles start to massage and stroke [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cock+]的[npc.cockHead+]塞入[npc2.namePos][npc2.nipple+]，"
+											+ "[npc.she]感觉到一系列蠕动的小触手开始按摩和抚摸[npc.her]悸动的身体。");
 									break;
 							}
 						}
@@ -18156,39 +18156,39 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								case LIPS:
 									if(immobilePenetrating) {
 										if(sleepingPenetrating) {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(continue)] to sleep as [npc.her] [npc.lips+] are pressed against [npc2.namePos] mouth-like lipples.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在熟睡中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳唇。");
 										} else {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(stay)] still as [npc.her] [npc.lips+] are pressed against [npc2.namePos] mouth-like lipples.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在僵直中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳唇。");
 										}
 									}
-									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] [npc.verb(start)] kissing [npc2.namePos] mouth-like lipples.");
+									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]开始亲吻[npc2.namePos]的乳唇，发出了低沉的[npc.moan]。");
 								case INVERTED:
 									if(immobilePenetrating) {
 										if(sleepingPenetrating) {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(continue)] to sleep as [npc.her] [npc.lips+] are pressed against [npc2.namePos] inverted nipples.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在熟睡中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳头。");
 										} else {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(stay)] still as [npc.her] [npc.lips+] are pressed against [npc2.namePos] inverted nipples.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在僵直中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳头。");
 										}
 									}
-									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] [npc.verb(start)] sucking on [npc2.namePos] inverted nipples.");
+									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]开始吮吸[npc2.namePos]内陷的乳头，[npc.Name]发出一声低沉的[npc.moan]。");
 								case NORMAL:
 									if(immobilePenetrating) {
 										if(sleepingPenetrating) {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(continue)] to sleep as [npc.her] [npc.lips+] are pressed against [npc2.namePos] nipples.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在熟睡中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳头。");
 										} else {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(stay)] still as [npc.her] [npc.lips+] are pressed against [npc2.namePos] nipples.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在僵直中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳头。");
 										}
 									}
-									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] [npc.verb(start)] sucking on [npc2.namePos] nipples.");
+									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]开始吮吸[npc2.namePos]的乳头，[npc.she]发出一声低沉的[npc.moan]。");
 								case VAGINA:
 									if(immobilePenetrating) {
 										if(sleepingPenetrating) {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(continue)] to sleep as [npc.her] [npc.lips+] are pressed against [npc2.namePos] nipple-cunts.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在熟睡中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳穴。");
 										} else {
-											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(stay)] still as [npc.her] [npc.lips+] are pressed against [npc2.namePos] nipple-cunts.");
+											return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]在僵直中持续用[npc.her][npc.lips+]亲吻着[npc2.namePos]的乳穴。");
 										}
 									}
-									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name] [npc.verb(let)] out a muffled [npc.moan] as [npc.she] [npc.verb(start)] licking [npc2.namePos] nipple-cunts.");
+									return UtilText.parse(characterPenetrating, characterPenetrated, "[npc.Name]开始舔舐[npc2.namePos]乳穴，发出一声低沉的[npc.moan]。");
 							}
 						}
 						break;
@@ -18208,56 +18208,56 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						if(immobilePenetrated) {
 							if(sleepingPenetrated) {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(remain)] deeply asleep as [npc.name] [npc.verb(start)] kissing [npc2.herHim].");
+										"[npc.name]开始亲吻在熟睡中的[npc2.name]。");
 							} else {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] obediently [npc2.verb(remain)] silent and motionless as [npc.name] [npc.verb(start)] kissing [npc2.herHim].");
+										"[npc2.Name][npc2.name]乖乖地保持一动不动，被[npc.name]开始亲吻");
 							}
 						}
-						initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out a muffled [npc2.moan+] as [npc.name] [npc.verb(start)] kissing [npc2.herHim].");
+						initialDescriptions.add("[npc.name]开始亲吻[npc2.herHim]，并发出低沉[npc2.moan+]。");
 						break;
 					case PENIS:
 						if(immobilePenetrated) {
 							if(sleepingPenetrated) {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] [npc2.verb(start)] to choke and squirm about as [npc.namePos] [npc.cock+] slides down into [npc2.her] throat.");
+										"[npc2.name]开始窒息并颤抖，感觉到[npc.namePos][npc.cock+]滑入[npc2.her]的喉咙。");
 							} else {
 								return UtilText.parse(characterPenetrating, characterPenetrated,
-										"[npc2.Name] obediently [npc2.verb(remain)] silent and motionless as [npc.namePos] [npc.cock+] slides down into [npc2.her] throat.");
+										"[npc2.name]乖乖地一动不动，感觉到[npc.namePos][npc.cock+]滑入[npc2.her]的喉咙。");
 							}
 						}
-						initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] [npc.cock+] slide down into [npc2.her] throat.");
+						initialDescriptions.add("当[npc2.she]感觉到[npc.namePos][npc.cock+]滑入[npc2.her]的喉咙时，[npc2.name]发出一阵[npc2.a_moan+]。");
 						for(PenetrationModifier mod : characterPenetrating.getPenisModifiers()) {
 							switch(mod) {
 								case BARBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the little barbs lining [npc.namePos] [npc.cock] rake the insides of [npc2.her] throat.");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]带有小倒刺的[npc.cock]在[npc2.her]的喉咙扫过时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case BLUNT:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the blunt head of [npc.namePos] [npc.cock] push deep down [npc2.her] throat.");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]钝头的[npc.cock]进入[npc2.her]的喉咙时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case FLARED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the flared head of [npc.namePos] [npc.cock] push deep down [npc2.her] throat.");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]平头的[npc.cock]进入[npc2.her]的喉咙时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case KNOTTED:
 									if(feelsKnot) {
-										initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-												+ " the fat knot at the base of [npc.namePos] [npc.cock] bump against [npc2.her] [npc2.lips+] as [npc.she] fully [npc.verb(hilt)] [npc.herself] down [npc2.her] throat in one thrust.");
+										initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+												+ "[npc.namePos][npc.cock]根部的结在[npc2.her][npc2.lips+]内充血膨胀，[npc.she]一举顶进，尽根刺入[npc2.her]的喉咙。");
 									}
 									break;
 								case PREHENSILE:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] prehensile [npc.cock] exploring the insides of [npc2.her] throat.");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]灵活可控的[npc.cock]进入[npc2.her]的喉咙时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case RIBBED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] [npc.namePos] ribbed [npc.cock] push deep down [npc2.her] throat.");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]有螺纹的[npc.cock]进入[npc2.her]的喉咙时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case SHEATHED:
 									break;
 								case TAPERED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)] the tapered head of [npc.namePos] [npc.cock] push deep down [npc2.her] throat.");
+									initialDescriptions.add("当[npc2.she]感觉到[npc.namePos]尖头的[npc.cock]进入[npc2.her]的喉咙时，[npc2.name]发出一阵[npc2.a_moan+]。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add("[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc2.she] [npc2.verb(feel)]"
-											+ " the little tentacles lining [npc.namePos] [npc.cock] squirm and wriggle against the insides of [npc2.her] throat.");
+									initialDescriptions.add("[npc2.name]发出一阵[npc2.a_moan+]，[npc2.she]感受着"
+											+ "[npc.namePos][npc.cock]外侧的小触手在[npc2.her]的喉咙内蠕动。");
 									break;
 								case VEINY:
 								case OVIPOSITOR:
@@ -18267,24 +18267,24 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						penetrationSB.append(initialDescriptions.get(Util.random.nextInt(initialDescriptions.size())));
 						
 						initialDescriptions.clear();
-						initialDescriptions.add(" [npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc2.namePos] throat squeezes down around [npc.her] [npc.cock+].");
+						initialDescriptions.add("[npc2.namePos]的喉咙挤压包裹着[npc.her][npc.cock+]，[npc.Name]发出[npc.a_moan+]。");
 						for(OrificeModifier mod : characterPenetrated.getFaceOrificeModifiers()) {
 							switch(mod) {
 								case MUSCLE_CONTROL:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] throat,"
-											+ " [npc.she] [npc.verb(feel)] a series of internal muscles instantly start to grip and squeeze down on [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cockHead+][npc.cock+]插入[npc2.namePos]的喉咙，"
+											+ "[npc.she]感觉到一系列内部肌肉瞬间开始收缩并挤压[npc.her]颤动的肉棒。");
 									break;
 								case PUFFY:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] throat,"
-											+ " [npc.she] [npc.verb(feel)] [npc2.namePos] extra-puffy [npc2.lips] wrap around [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cockHead+][npc.cock+]插入[npc2.namePos]的喉咙，"
+											+ "[npc.she]感觉到[npc2.namePos]格外饱满的[npc2.lips]包裹着[npc.her]颤动的肉棒。");
 									break;
 								case RIBBED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] throat,"
-											+ " [npc.she] [npc.verb(feel)] the ribbed interior bumping down against [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cockHead+][npc.cock+]插入[npc2.namePos]的喉咙，"
+											+ "[npc.she]感觉到内部的螺纹缠着[npc.her]颤动的肉棒。");
 									break;
 								case TENTACLED:
-									initialDescriptions.add(" As the [npc.cockHead+] of [npc.namePos] [npc.cock+] pushes its way into [npc2.namePos] throat,"
-											+ " [npc.she] [npc.verb(feel)] a series of little writhing tentacles start to massage and stroke [npc.her] throbbing length.");
+									initialDescriptions.add("[npc.namePos][npc.cockHead+][npc.cock+]插入[npc2.namePos]的喉咙，"
+											+ "[npc.she]感觉到一系列蠕动的小触手开始按摩和抚摸[npc.her]悸动的身体。");
 									break;
 							}
 						}
@@ -18339,9 +18339,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									characterPenetrating.getVaginaRawClitorisSizeValue(),
 									characterPenetrated,
 									orifice,
-									"clit",
+									"阴蒂",
 									"[npc.clit+]",
-									"[npc.clitSize] [npc.clit]"));
+									"[npc.clitSize]的[npc.clit]"));
 							break;
 							
 						case PENIS:
@@ -18350,9 +18350,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 									characterPenetrating.getPenisRawSizeValue(),
 									characterPenetrated,
 									orifice,
-									"cock",
+									"肉棒",
 									"[npc.cock+]",
-									"[npc.cockSize] [npc.cock]"));
+									"[npc.cockSize]的[npc.cock]"));
 							break;
 							
 						case TAIL:
@@ -18394,9 +18394,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								characterPenetrating.getVaginaRawClitorisSizeValue(),
 								characterPenetrated,
 								orifice,
-								"clit",
+								"阴蒂",
 								"[npc.clit+]",
-								"[npc.clitSize] [npc.clit]"));
+								"[npc.clitSize]的[npc.clit]"));
 						break;
 						
 					case PENIS:
@@ -18405,9 +18405,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								characterPenetrating.getPenisRawSizeValue(),
 								characterPenetrated,
 								orifice,
-								"cock",
+								"肉棒",
 								"[npc.cock+]",
-								"[npc.cockSize] [npc.cock]"));
+								"[npc.cockSize]的[npc.cock]"));
 						break;
 						
 					case TAIL:
@@ -18465,7 +18465,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		boolean selfPenetration = characterPenetrating.equals(characterPenetrated);
 		
 		if(internalOrifice==SexAreaOrifice.MOUTH) {
-			orificeName = "throat";
+			orificeName = "喉咙";
 		}
 		
 		boolean knotting = penetrationType==SexAreaPenetration.PENIS && Main.game.isInSex() && Objects.equals(Main.sex.getCharacterKnotting(characterPenetrating), characterPenetrated);
@@ -18478,9 +18478,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(!Main.game.isInSex() || Main.sex.isDom(characterPenetrating)) { // The character doing the penetrating is the dom:
 			if(length<=comfortable) {
 				if(internalOrifice==SexAreaOrifice.MOUTH) {
-					sb.append("[npc.NameIsFull] able to sink [npc.her] "+nameDesc+" [style.italicsMinorGood(fully down [npc2.namePos] throat)] without going so deep as to cause [npc2.herHim] discomfort!");
+					sb.append("[npc.NameIsFull]能将[npc.her]"+nameDesc+"[style.italicsMinorGood(完全没入[npc2.namePos]的喉咙)]，而且不会深入到引起[npc2.herHim]的不适！");
 				} else {
-					sb.append("[npc.NameIsFull] able to sink [npc.her] "+nameDesc+" [style.italicsMinorGood(fully into [npc2.namePos] "+orificeName+")] without going so deep as to cause [npc2.herHim] discomfort!");
+					sb.append("[npc.NameIsFull]能将[npc.her]"+nameDesc+"[style.italicsMinorGood(完全没入[npc2.namePos]的"+orificeName+")]，而且不会深入到引起[npc2.herHim]的不适！");
 				}
 				
 				if(characterPenetrating.isFullPenetrationFarTooShort(penetrationType, characterPenetrated, internalOrifice)) {
@@ -18488,183 +18488,183 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						sb.append("<br/>");
 						if(immobile2) {
 							if(sleeping2) {
-								sb.append("[npc2.Name] [npc2.verb(remain)] deeply asleep, unaware that");
+								sb.append("[npc2.Name]保持熟睡，没有任何察觉");
 							} else {
-								sb.append("[npc2.Name] [npc2.do]n't react as [npc2.she] [npc2.verb(feel)] that");
+								sb.append("[npc2.name]仿佛没有感觉一样，没有任何反应。");
 							}
 						} else {
-							sb.append("[npc2.Name] [npc2.verb(let)] out a disappointed sigh as [npc2.she] [npc2.verb(feel)] that");
+							sb.append("[npc2.Name]发出失望的叹息，因为[npc2.she]觉得");
 						}
 						sb.append("[style.italicsBad(");
-							sb.append(" [npc.namePos] "+name+" isn't long enough");
+							sb.append("[npc.namePos]"+name+"不够长");
 						sb.append(")]");
 						if(internalOrifice==SexAreaOrifice.MOUTH) {
-							sb.append(" to reach even halfway down [npc2.her] throat.");
+							sb.append("，甚至连[npc2.her]喉咙的一半都够不到。");
 						} else {
-							sb.append(" to reach even halfway into [npc2.her] "+orificeNameStandard);
+							sb.append("，甚至连[npc2.her]"+orificeNameStandard+"的一半都不到");
 							if(penetrationType==SexAreaPenetration.PENIS && !immobile2) {
 								if(characterPenetrated.hasFetish(Fetish.FETISH_SADIST)) {
-									sb.append(", [npc2.speechNoEffects(");
+									sb.append("，[npc2.speechNoEffects(");
 									sb.append(UtilText.returnStringAtRandom(
-											"How pathetic...",
-											"You're so pathetic...",
-											"Is it even in yet?"));
+											"真可怜……",
+											"你太可悲了……",
+											"它还插在里面吗？"));
 									sb.append(")]");
 									
 								} else {
-									sb.append(", [npc2.speechNoEffects(");
+									sb.append("，[npc2.speechNoEffects(");
 									sb.append(UtilText.returnStringAtRandom(
-											"Is that really it?",
-											"You're so small...",
-											"Is it even in yet?"));
+											"就这？",
+											"你真小……",
+											"它还插在里面吗？"));
 									sb.append(")]");
 								}
 							} else {
-								sb.append(".");
+								sb.append("。");
 							}
 						}
 						
 						// Core penetration information is displayed last:
-						sb.append("<br/>[style.italicsBad(Being only [style.sizeShort("+length+")] long, [npc.namePos] "+nameDesc+" is too short, limiting [npc2.namePos] pleasure!)]");
+						sb.append("<br/>[style.italicsBad([npc.namePos]的"+nameDesc+"太短了，只有[style.sizeShort("+length+")]长，[npc2.namePos]得不到多少乐趣！)]");
 						
 					} else {
 						if(internalOrifice==SexAreaOrifice.MOUTH) {
-							sb.append("<br/>[style.italicsBad(Being only [style.sizeShort("+length+")] long, [npc.namePos] "+nameDesc+" is too short to reach even halfway down [npc2.namePos] throat.)]");
+							sb.append("<br/>[style.italicsBad([npc.namePos]的"+nameDesc+"太短了，只有[style.sizeShort("+length+")]长，甚至无法到达[npc2.namePos]喉咙的一半。)]");
 						} else {
-							sb.append("<br/>[style.italicsBad(Being only [style.sizeShort("+length+")] long, [npc.namePos] "+nameDesc+" is too short to reach even halfway into [npc2.namePos] "+orificeNameStandard+".)]");
+							sb.append("<br/>[npc.namePos]的"+nameDesc+"太短了，[style.italicsBad(只有[style.sizeShort("+length+")]长，以至于连[npc2.namePos]"+orificeNameStandard+"的一半都够不到。)]");
 						}
 					}
 					
 				} else {
 					// Core penetration information is displayed last:
-					sb.append("<br/>[style.italicsSex([npc.Name] [npc.is] hilting the entire [style.sizeShort("+length+")] length of [npc.her] "+name+" in [npc2.namePos] "+orificeName+"!)]");
+					sb.append("<br/>[style.italicsSex([npc.Name]将[npc.her][style.sizeShort("+length+")]长的"+name+"全部深深插入到[npc2.namePos]的"+orificeName+"！)]");
 				}
 				
 			} else if(!penetratingDeep) {
 				if(Main.sex.getSexPace(characterPenetrated)!=SexPace.SUB_RESISTING) {
 					if(immobile) {
 						if(sleeping) {
-							sb.append("[npc.Name] [npc.verb(remain)] deeply asleep, blissfully unaware that");
+							sb.append("[npc.Name]保持熟睡，幸福地没有任何察觉");
 						} else {
-							sb.append("[npc.Name] [npc.verb(remain)] silent and unmoving as [npc.she] [npc.verb(feel)] that");
+							sb.append("[npc.Name]就像感受不到似的安静并一动不动");
 						}
 					} else {
-						sb.append("[npc.Name] [npc.verb(let)] out a disappointed [npc.moan] as [npc.she] [npc.verb(feel)] that");
+						sb.append("[npc.Name]迷乱地[npc.moan]。[npc.she]感受到");
 					}
 					sb.append("[style.italicsBad(");
-						sb.append((selfPenetration?" [npc.her] ":" [npc2.namePos] ")+orificeName+" "+(orificePlural?"aren't":"isn't")+" deep enough");
+						sb.append((selfPenetration?"[npc.her]的":"[npc2.namePos]的")+orificeName+"不够深");
 					sb.append(")]");
-					sb.append(" to comfortably accommodate the full length of [npc.her] "+nameLength+".");
+					sb.append("，不能舒适地容纳[npc.her]的整根"+nameLength+"。");
 				}
 				// Core penetration information is displayed last:
-				sb.append("<br/>[style.italicsBad([npc.Name] [npc.is] holding back and only inserting [style.sizeShort("+comfortable+")] of [npc.her] "+name);
+				sb.append("<br/>[style.italicsBad([npc.Name]克制着，只插入[npc.her]"+name+"的[style.sizeShort("+comfortable+")]");
 				if(sleeping2) {
-					sb.append(" so as not to wake [npc2.name] up!)]");
+					sb.append("以免弄醒[npc2.name]！)]");
 				} else {
-					sb.append(" so as not to cause [npc2.name] discomfort!)]");
+					sb.append("以免引起[npc2.name]不适！)]");
 				}
 				
 				
 			} else {
 				if(immobile) {
 					if(sleeping) {
-						sb.append("Although [npc.name] [npc.verb(remain)] deeply asleep, [npc2.namePos] momentum forces [npc.name] to fully hilt [npc.her] "+nameDesc+" [style.italicsMinorGood(as deep as physically possible)] "
-								+(internalOrifice==SexAreaOrifice.MOUTH?"down":"into")+" [npc2.her] "+orificeName+"!");
+						sb.append("尽管[npc.name]保持熟睡，[npc2.namePos]的压力迫使[npc.name]完全握紧[npc.her]的"+nameDesc+" [style.italicsMinorGood(尽力深入)] "
+								+(internalOrifice==SexAreaOrifice.MOUTH?"下":"入")+" [npc2.her]的"+orificeName+"！");
 					} else {
-						sb.append("Although [npc.name] [npc.verb(remain)] completely still, [npc2.namePos] momentum forces [npc.name] to fully hilt [npc.her] "+nameDesc+" [style.italicsMinorGood(as deep as physically possible)] "
-								+(internalOrifice==SexAreaOrifice.MOUTH?"down":"into")+" [npc2.her] "+orificeName+"!");
+						sb.append("尽管[npc.name]保持一动不动，[npc2.namePos]的压力迫使[npc.name]完全握紧[npc.her]的"+nameDesc+" [style.italicsMinorGood(尽力深入)] "
+								+(internalOrifice==SexAreaOrifice.MOUTH?"下":"入")+" [npc2.her]的"+orificeName+"！");
 					}
 					
 				} else if(knotting) {
-					sb.append("Desperate to push [npc.her] fat knot inside of [npc2.name], [npc.name] fully [npc.verb(hilt)] [npc.her] "+nameDesc+" [style.italicsMinorGood(as deep as physically possible)] "
-							+(internalOrifice==SexAreaOrifice.MOUTH?"down":"into")+" [npc2.her] "+orificeName+"!");
+					sb.append("[npc.name]迷乱地将[npc.her]肥大的结塞入[npc2.name]体内，让[npc.name][style.italicsMinorGood(尽力深入)]"+nameDesc
+							+(internalOrifice==SexAreaOrifice.MOUTH?"下":"入")+" [npc2.her]的"+orificeName+"！");
 					
 					
 				} else if(characterPenetrated.hasFetish(Fetish.FETISH_SIZE_QUEEN)
 						&& Main.sex.getSexPace(characterPenetrated)!=SexPace.SUB_RESISTING
 						&& !immobile2) {
 					if(internalOrifice==SexAreaOrifice.MOUTH) {
-						sb.append("Encouraged by [npc2.namePos] eager [npc2.moans] betraying the fact that [npc2.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
-									+ ", [npc.name] [npc.verb(thrust)] [npc.her] "+name+" [style.italicsMinorGood(as deep as physically possible)] down [npc2.her] "+orificeName+"!");
+						sb.append("受到[npc2.namePos]饥渴的[npc2.moans]的鼓励，暴露了[npc2.sheIsFull]"+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
+									+ "，[npc.name]将"+name+"[style.italicsMinorGood(尽可能深)]地撞进[npc2.her]的"+orificeName+"！");
 					} else {
-						sb.append("Encouraged by [npc2.namePos] eager [npc2.moans] betraying the fact that [npc2.sheIsFull] a "+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
-									+ ", [npc.name] [npc.verb(thrust)] [npc.her] "+name+" [style.italicsMinorGood(as deep as physically possible)] into [npc2.her] "+orificeName+"!");
+						sb.append("受到[npc2.namePos]饥渴的[npc2.moans]的鼓励，暴露了[npc2.sheIsFull]"+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
+									+ "，[npc.name]将"+name+"[style.italicsMinorGood(尽可能深)]地插进[npc2.her]"+orificeName+"！");
 					}
 					
 				} else {
 					if(internalOrifice==SexAreaOrifice.MOUTH) {
 						if(characterPenetrating.hasFetish(Fetish.FETISH_SADIST)) {
-							sb.append("Only interested in [npc.her] own pleasure,"
-									+ " [npc.name] sadistically [npc.verb(thrust)] [npc.her] "+nameLength+"  [style.italicsTerrible(as deep as physically possible)] down [npc2.namePos] "+orificeName);
+							sb.append("[npc.name]只关心自己的愉悦，"
+									+ "[npc.she]残忍地将"+nameLength+"[style.italicsTerrible(尽可能深入地)]插进[npc2.namePos]"+orificeName);
 							
 						} else {
-							sb.append("Only interested in [npc.her] own pleasure,"
-									+ " [npc.name] [npc.verb(thrust)] [npc.her] "+nameLength+" [style.italicsTerrible(as deep as physically possible)] down [npc2.namePos] "+orificeName);
+							sb.append("[npc.name]只关心自己的愉悦，"
+									+ "[npc.she]将"+nameLength+"[style.italicsTerrible(尽可能深)]地没入[npc2.namePos]的"+orificeName);
 						}
 						if(immobile2) {
-							sb.append(".");
+							sb.append("。");
 							
 						} else if(characterPenetrated.hasFetish(Fetish.FETISH_MASOCHIST)) {
-							sb.append(", causing [npc2.herHim] to let out a gargled, masochistic scream of pleasure!");
+							sb.append("，让[npc2.herHim]从喉底发出因受虐而愉悦的尖叫！");
 							
 						} else {
 							if(Main.game.isSadisticSexContent()) {
-								sb.append(", causing [npc2.herHim] to let out a gargled, distressed scream!");
+								sb.append("，让[npc2.herHim]从喉底发出痛苦的尖叫！");
 							} else {
-								sb.append(", causing [npc2.herHim] to let out a gargled, uncomfortable wail!");
+								sb.append("，让[npc2.herHim]从喉底发出难受的哀号！");
 							}
 						}
 						
 					} else {
 						if(characterPenetrating.hasFetish(Fetish.FETISH_SADIST)) {
-							sb.append("Only interested in [npc.her] own pleasure,"
-									+ " [npc.name] sadistically [npc.verb(thrust)] [npc.her] "+nameLength+"  [style.italicsTerrible(as deep as physically possible)] into [npc2.namePos] "+orificeName);
+							sb.append("[npc.name]只关心自己的愉悦，"
+									+ "[npc.she]残忍地将"+nameLength+"[style.italicsTerrible(尽可能深)]地撞进[npc2.her]的"+orificeName);
 							
 						} else {
-							sb.append("Only interested in [npc.her] own pleasure,"
-									+ " [npc.name] [npc.verb(thrust)] [npc.her] "+nameLength+"  [style.italicsTerrible(as deep as physically possible)] into [npc2.namePos] "+orificeName);
+							sb.append("[npc.name]只关心自己的愉悦，"
+									+ "[npc.she]将"+nameLength+"[style.italicsTerrible(尽可能深)]地撞进[npc2.namePos]的"+orificeName);
 						}
 						if(immobile2) {
 							if(isStomachBulging(characterPenetrating, penetrationType, characterPenetrated, orifice)) {
-								sb.append(", which causes [npc2.her] stomach to visibly bulge out.");
+								sb.append("，这导致了[npc2.her]的腹部明显隆起。");
 							} else {
-								sb.append(".");
+								sb.append("。");
 							}
 							
 						} else {
 							if(characterPenetrated.hasFetish(Fetish.FETISH_MASOCHIST)) {
-								sb.append(", causing [npc2.herHim] to let out a masochistic scream of pleasure");
+								sb.append("，让[npc2.herHim]发出愉虐的尖叫");
 								
 							} else {
 								if(Main.game.isSadisticSexContent()) {
-									sb.append(", causing [npc2.herHim] to let out a distressed scream");
+									sb.append("，让[npc2.herHim]发出哀苦的尖叫");
 								} else {
-									sb.append(", causing [npc2.herHim] to let out an uncomfortable wail");
+									sb.append("，让[npc2.herHim]发出不适的哀嚎");
 								}
 							}
 							if(isStomachBulging(characterPenetrating, penetrationType, characterPenetrated, orifice)) {
-								sb.append(" as [npc2.her] stomach visibly bulges out");
+								sb.append("，[npc2.her]的腹部明显隆起");
 							}
 							
 							if(penetrationType==SexAreaPenetration.PENIS && Main.sex.getSexPace(characterPenetrated)!=SexPace.SUB_RESISTING) {
 								if(characterPenetrated.hasFetish(Fetish.FETISH_MASOCHIST)) {
-									sb.append(", [npc2.speechNoEffects(");
+									sb.append("，[npc2.speechNoEffects(");
 									sb.append(UtilText.returnStringAtRandom(
-											"~Aah!~ Yes! ~Ow!~ It hurts so good!",
-											"~Ow!~ You're so big! ~Ooh!~ Fuck!",
-											"~Ooh!~ Fuck! ~Ow!~ You're so big!"));
+											"~啊哈哈！~ 太棒了！~哦呜！~ 撞得好厉害！",
+											"~嗷！~你太大了！~哦哦哦！~ 操死我吧！",
+											"~哦呜！~ 操！~嗷呜！~ 你可真大！"));
 									sb.append(")]");
 									
 								} else {
-									sb.append(", [npc2.speechNoEffects(");
+									sb.append("，[npc2.speechNoEffects(");
 									sb.append(UtilText.returnStringAtRandom(
-											"~Aah!~ You're too big!",
-											"Fuck! ~Ooh!~ That's too much!",
-											"~Aah!~ That's too deep!"));
+											"~啊哈啊！~你太大了啦！",
+											"干！~哦嗯！~这也太多了！",
+											"~嗯唔~ 插得好深呢！"));
 									sb.append(")]");
 								}
 							} else {
-								sb.append(".");
+								sb.append("。");
 							}
 						}
 					}
@@ -18674,126 +18674,126 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					sb.append("<br/>");
 					if(immobile) {
 						if(sleeping) {
-							sb.append("[npc.Name] [npc.verb(show)] no sign of waking up, remaining totally unaware that");
+							sb.append("[npc.Name]没有任何醒来的迹象，对发生的事情依然全然不知");
 						} else {
-							sb.append("[npc.Name] [npc.do]n't react as [npc.she] [npc.verb(feel)] that");
+							sb.append("[npc.Name]就像感受不到一般没有反应");
 						}
 					} else {
-						sb.append("[npc.Name] [npc.verb(let)] out a disappointed "+(characterPenetrating.isFeminine()?"whine":"growl")+" as [npc.she] [npc.verb(feel)] that");
+						sb.append("[npc.Name]发出失望的"+(characterPenetrating.isFeminine()?"哀鸣":"嚎叫")+"，[npc.she]感受到");
 					}
 					sb.append("[style.italicsBad(");
-						sb.append((selfPenetration?" [npc.her] ":" [npc2.namePos] ")+orificeName+" "+(orificePlural?"aren't":"isn't")+" deep enough");
+						sb.append((selfPenetration?"[npc.her]的":"[npc2.namePos]的")+orificeName+"不够深");
 					sb.append(")]");
-					sb.append(" to accommodate the full length of [npc.her] "+nameLength+".");
+					sb.append("来容纳[npc.her]的整根"+nameLength+"。");
 					
 					// Core penetration information is displayed last:
-					sb.append("<br/>[style.italicsSex([npc.NamePos] "+name+(penetrationType.isPlural()?" are":" is")+" reaching the limit of [npc2.namePos] "+orificeName+", at [style.sizeShort("+uncomfortable+")] deep!)]");
+					sb.append("<br/>[style.italicsSex([npc.NamePos]的"+name+"插到了[npc2.namePos]"+orificeName+"的极限，达到了[style.sizeShort("+uncomfortable+")]深！)]");
 					
 				} else {
 					// Core penetration information is displayed last:
-					sb.append("<br/>[style.italicsSex([npc.Name] [npc.is] hilting the entire [style.sizeShort("+length+")] length of [npc.her] "+name+" in [npc2.namePos] "+orificeName+"!)]");
+					sb.append("<br/>[style.italicsSex([npc.Name]将[npc.her][style.sizeShort("+length+")]长的"+name+"全部深深插入到[npc2.namePos]的"+orificeName+"！)]");
 				}
 			}
 			
 		} else { // The character being penetrated is the dom:
 			if(length<=comfortable) {
 				if(internalOrifice==SexAreaOrifice.MOUTH) {
-					sb.append("[npc2.NameIsFull] able to take "+(selfPenetration?" [npc.her] ":" [npc.namePos] ")+" "+nameDesc+" [style.italicsMinorGood(fully down [npc2.her] throat)] without it going deep enough to cause any discomfort!");
+					sb.append("[npc2.NameIsFull]能够[style.italicsMinorGood(并完全用[npc2.her]的喉咙深深地)]吞下"+(selfPenetration?"自己":"[npc.namePos]")+"的"+nameDesc+"，同时不会引起不适！");
 				} else {
-					sb.append("[npc2.NameIsFull] able to take "+(selfPenetration?" [npc.her] ":" [npc.namePos] ")+" "+nameDesc+" [style.italicsMinorGood(fully into [npc2.her] "+orificeName+")] without it going deep enough to cause any discomfort!");
+					sb.append("[npc2.NameIsFull]能够[style.italicsMinorGood(并完全用[npc2.her]的"+orificeName+"深深地)]吞下"+(selfPenetration?"自己":"[npc.namePos]")+"的"+nameDesc+"，同时不会使其引起不适！");
 				}
 				
 				if(characterPenetrating.isFullPenetrationFarTooShort(penetrationType, characterPenetrated, internalOrifice)) {
 					sb.append("<br/>");
 					if(immobile2) {
 						if(sleeping2) {
-							sb.append("[npc2.Name] [npc2.verb(remain)] deeply asleep, unaware that");
+							sb.append("[npc2.Name]保持熟睡，没有任何察觉");
 						} else {
-							sb.append("[npc2.Name] [npc2.verb(remain)] silent and unmoving as [npc2.she] [npc2.verb(feel)] that");
+							sb.append("[npc2.name]就像感受不到一般安静并一动不动");
 						}
 					} else {
-						sb.append("[npc2.Name] [npc2.verb(let)] out a disappointed sigh as [npc2.she] [npc2.verb(feel)] that");
+						sb.append("[npc2.Name]发出失望的叹息，因为[npc2.she]觉得");
 					}
 					sb.append("[style.italicsBad(");
-						sb.append(" [npc.namePos] "+name+" isn't long enough");
+						sb.append("[npc.namePos]"+name+"不够长");
 					sb.append(")]");
 					if(internalOrifice==SexAreaOrifice.MOUTH) {
-						sb.append(" to reach even halfway down [npc2.her] throat.");
+						sb.append("，甚至连[npc2.her]喉咙的一半都够不到。");
 					} else {
-						sb.append(" to reach even halfway into [npc2.her] "+orificeNameStandard);
+						sb.append("，甚至连[npc2.her]"+orificeNameStandard+"的一半都不到");
 						if(penetrationType==SexAreaPenetration.PENIS && !immobile2) {
 							if(characterPenetrated.hasFetish(Fetish.FETISH_SADIST)) {
-								sb.append(", [npc2.speechNoEffects(");
+								sb.append("，[npc2.speechNoEffects(");
 								sb.append(UtilText.returnStringAtRandom(
-										"How pathetic...",
-										"You're so pathetic...",
-										"Is it even in yet?"));
+										"真可怜……",
+										"你太可悲了……",
+										"它还插在里面吗？"));
 								sb.append(")]");
 								
 							} else {
-								sb.append(", [npc2.speechNoEffects(");
+								sb.append("，[npc2.speechNoEffects(");
 								sb.append(UtilText.returnStringAtRandom(
-										"Is that really it?",
-										"You're so small...",
-										"Is it even in yet?"));
+										"就这？",
+										"你真小……",
+										"它还插在里面吗？"));
 								sb.append(")]");
 							}
 						} else {
-							sb.append(".");
+							sb.append("。");
 						}
 					}
 
 					// Core penetration information is displayed last:
-					sb.append("<br/>[style.italicsBad(Being only [style.sizeShort("+length+")] long, [npc.namePos] "+nameDesc+" is too short, limiting [npc2.namePos] pleasure!)]");
+					sb.append("<br/>[style.italicsBad([npc.namePos]的"+nameDesc+"太短了，只有[style.sizeShort("+length+")]长，[npc2.namePos]得不到多少乐趣！)]");
 					
 				} else {
 					// Core penetration information is displayed last:
-					sb.append("<br/>[style.italicsSex([npc2.Name] [npc2.is] taking the entire [style.sizeShort("+length+")] length of "+(selfPenetration?" [npc.her] ":" [npc.namePos] ")+" "+name+" in [npc2.her] "+orificeName+"!)]");
+					sb.append("<br/>[style.italicsSex([npc2.Name]用[npc2.her]的"+orificeName+"将"+(selfPenetration?"自己":"[npc.namePos]")+"[style.sizeShort("+length+")]长的"+name+"全部深深吞入！)]");
 				}
 				
 			} else if(!penetratingDeep) {
 				if(immobile) {
 					if(sleeping) {
-						sb.append("[npc.Name] [npc.verb(show)] no sign of waking up, remaining totally unaware that");
+						sb.append("[npc.Name]没有任何醒来的迹象，对发生的事情依然全然不知");
 					} else {
-						sb.append("[npc.Name] [npc.do]n't react as [npc.she] [npc.verb(feel)] that");
+						sb.append("[npc.Name]就像感受不到一般没有反应");
 					}
 				} else {
-					sb.append("[npc.Name] [npc.verb(let)] out a disappointed [npc.moan] as [npc.she] [npc.verb(feel)] that");
+					sb.append("[npc.Name]迷乱地[npc.moan]。[npc.she]感受到");
 				}
 				sb.append("[style.italicsBad(");
-					sb.append((selfPenetration?" [npc.her] ":" [npc2.namePos] ")+orificeName+" "+(orificePlural?"aren't":"isn't")+" deep enough");
+					sb.append((selfPenetration?"[npc.her]的":"[npc2.namePos]的")+orificeName+"不够深");
 				sb.append(")]");
-				sb.append(" to comfortably accommodate the full length of [npc.her] "+nameLength+".");
+				sb.append("，难以舒适地容纳[npc.her]的整根"+nameLength+"。");
 
 				// Core penetration information is displayed last:
-				sb.append("<br/>[style.italicsBad([npc2.Name] [npc2.is] only taking [style.sizeShort("+comfortable+")] of "+(selfPenetration?" [npc.her] ":" [npc.namePos] ")+" "+name+" so as not to experience any discomfort!)]");
+				sb.append("<br/>[style.italicsBad([npc2.Name]只能接受"+(selfPenetration?"自己":"[npc.namePos]")+""+name+"的[style.sizeShort("+comfortable+")]"+"以免不适！)]");
 				
 				
 			} else {
 				if(immobile2) {
 					if(sleeping2) {
-						sb.append("Although [npc2.name] [npc2.verb(remain)] deeply asleep, [npc.namePos] momentum forces [npc2.name] to take [npc.her] "+nameDesc+" [style.italicsMinorGood(as deep as physically possible)] "
-								+(internalOrifice==SexAreaOrifice.MOUTH?"down":"into")+" [npc2.her] "+orificeName+"!");
+						sb.append("尽管[npc2.name]保持熟睡，[npc.namePos]的压力迫使[npc2.name]完全握紧[npc.her]的"+nameDesc+" [style.italicsMinorGood(尽力深入)] "
+								+(internalOrifice==SexAreaOrifice.MOUTH?"下":"入")+"[npc2.her]的"+orificeName+"！");
 					} else {
-						sb.append("Although [npc2.name] [npc2.verb(remain)] completely still, [npc.namePos] momentum forces [npc2.name] to take [npc.her] "+nameDesc+" [style.italicsMinorGood(as deep as physically possible)] "
-								+(internalOrifice==SexAreaOrifice.MOUTH?"down":"into")+" [npc2.her] "+orificeName+"!");
+						sb.append("尽管[npc2.name]保持一动不动，[npc.namePos]的压力迫使[npc2.name]完全握紧[npc.her]的"+nameDesc+" [style.italicsMinorGood(尽力深入)] "
+								+(internalOrifice==SexAreaOrifice.MOUTH?"下":"入")+" [npc2.her]的"+orificeName+"！");
 					}
 					
 				} else if(knotting) {
 					if(internalOrifice==SexAreaOrifice.MOUTH) {
-						sb.append("Desperate to take [npc.namePos] fat knot inside of [npc2.herHim], [npc2.name] [npc2.verb(take)] [npc.her] "+nameDesc+" [style.italicsMinorGood(as deep as physically possible)] down [npc2.her] "+orificeName+"!");
+						sb.append("[npc2.name]狂乱地裹住体内[npc.namePos]粗大的结，又将"+nameDesc+"[style.italicsMinorGood(尽可能深)]地塞进[npc2.her]的"+orificeName+"！");
 					} else {
-						sb.append("Desperate to take [npc.namePos] fat knot inside of [npc2.herHim], [npc2.name] [npc2.verb(take)] [npc.her] "+nameDesc+" [style.italicsMinorGood(as deep as physically possible)] into [npc2.her] "+orificeName+"!");
+						sb.append("急于把[npc.namePos]的粗鞭插入自己，[npc2.name]把[npc.her]的"+nameDesc+"[style.italicsMinorGood(尽可能深地)]插入自己的"+orificeName+"！");
 					}
 					
 				} else if(characterPenetrated.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 					if(internalOrifice==SexAreaOrifice.MOUTH) {
-						sb.append("Being a "+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
-									+ ", [npc2.name] eagerly [npc2.verb(take)] [npc.namePos] "+name+" [style.italicsMinorGood(as deep as physically possible)] down [npc2.her] "+orificeName+"!");
+						sb.append("做个"+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
+									+ "，[npc2.name]急切地将[npc.namePos]的"+name+"[style.italicsMinorGood(尽可能深)]地吞入[npc2.her]的"+orificeName+"！");
 					} else {
-						sb.append("Being a "+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
-						+ ", [npc2.name] eagerly [npc2.verb(take)] [npc.namePos] "+name+" [style.italicsMinorGood(as deep as physically possible)] into [npc2.her] "+orificeName+"!");
+						sb.append("做个"+Fetish.FETISH_SIZE_QUEEN.getName(characterPenetrated)
+						+ "，[npc2.name]急切地将[npc.namePos]的"+name+"[style.italicsMinorGood(尽可能深)]地塞入[npc2.her]的"+orificeName+"！");
 					}
 //					if(characterPenetrating.isFullPenetrationTooLongToFit(penetrationType, characterPenetrated, internalOrifice)
 //							&& !characterPenetrated.isVisiblyPregnant()
@@ -18809,22 +18809,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						targetParsing = "[npc.her] own";
 					}
 					if(internalOrifice==SexAreaOrifice.MOUTH) {
-						sb.append("Wanting to feel as though [npc2.sheIs] being abused, [npc2.name] willingly [npc2.verb(take)] "+targetParsing+" "+nameLength+" [style.italicsTerrible(as deep as physically possible)] down [npc2.her] "+orificeName);
-						sb.append(", letting out a gargled, masochistic scream of pleasure in the process!");
+						sb.append("[npc2.name]想要被凌辱，便愉悦地将"+targetParsing+"的"+nameLength+"[style.italicsTerrible(尽可能深)]地吃进[npc2.her]的"+orificeName);
+						sb.append("，从喉底发出因受虐而愉悦的尖叫！");
 							
 					} else {
-						sb.append("Wanting to feel as though [npc2.sheIs] being abused, [npc2.name] willingly [npc2.verb(take)] "+targetParsing+" "+nameLength+" [style.italicsTerrible(as deep as physically possible)] into [npc2.her] "+orificeName);
+						sb.append("[npc2.name]想要被凌辱，便愉悦地将"+targetParsing+"的"+nameLength+"[style.italicsTerrible(尽可能深)]地顶进[npc2.her]的"+orificeName);
 						if(isStomachBulging(characterPenetrating, penetrationType, characterPenetrated, orifice)) {
-							sb.append(", letting out a masochistic scream of pleasure as [npc2.her] stomach visibly bulges out");
+							sb.append("，[npc2.she]的腹部明显隆起。[npc2.her]发出因受虐而愉悦的尖叫");
 						} else {
-							sb.append(", letting out a masochistic scream of pleasure in the process");
+							sb.append("，发出因受虐而愉悦的尖叫");
 						}
 						if(penetrationType==SexAreaPenetration.PENIS) {
-							sb.append(", [npc2.speechNoEffects(");
+							sb.append("，[npc2.speechNoEffects(");
 							sb.append(UtilText.returnStringAtRandom(
-									"~Aah!~ Yes! ~Ow!~ It hurts so good!",
-									"~Ow!~ You're so big! ~Ooh!~ Fuck!",
-									"~Ooh!~ Fuck! ~Ow!~ You're so big!"));
+									"~啊哈哈！~ 太棒了！~哦呜！~ 撞得好厉害！",
+									"~嗷！~你太大了！~哦哦哦！~ 操死我吧！",
+									"~哦呜！~ 操！~嗷呜！~ 你可真大！"));
 							sb.append(")]");
 						}
 					}
@@ -18835,25 +18835,25 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						sb.append("<br/>");
 						if(immobile) {
 							if(sleeping) {
-								sb.append("[npc.Name] [npc.verb(show)] no sign of waking up, remaining totally unaware that");
+								sb.append("[npc.Name]没有任何醒来的迹象，对发生的事情依然全然不知");
 							} else {
-								sb.append("[npc.Name] [npc.verb(remain)] frozen in place as [npc.she] [npc.verb(feel)] that");
+								sb.append("[npc.Name]就像感受不到似的一动不动");
 							}
 						} else {
-							sb.append("[npc.Name] [npc.verb(let)] out a disappointed "+(characterPenetrating.isFeminine()?"whine":"growl")+" as [npc.she] [npc.verb(feel)] that");
+							sb.append("[npc.Name]发出失望的"+(characterPenetrating.isFeminine()?"哀鸣":"嚎叫")+"，[npc.she]感受到");
 						}
 						sb.append("[style.italicsBad(");
-							sb.append((selfPenetration?" [npc.her] ":" [npc2.namePos] ")+orificeName+" "+(orificePlural?"aren't":"isn't")+" deep enough");
+							sb.append((selfPenetration?"[npc.her]的":"[npc2.namePos]的")+orificeName+"不够深");
 						sb.append(")]");
-						sb.append(" to accommodate the full length of [npc.her] "+nameLength+".");
+						sb.append("来容纳[npc.her]的整根"+nameLength+"。");
 					}
 					
 					// Core penetration information is displayed last:
-					sb.append("<br/>[style.italicsSex([npc2.NamePos] [npc2.is] taking "+(selfPenetration?" [npc.her] ":" [npc.namePos] ")+" "+name+" to the full, [style.sizeShort("+uncomfortable+")] limit of [npc2.her] "+orificeName+"!)]");
+					sb.append("<br/>[style.italicsSex([npc2.NamePos]完全吞入"+(selfPenetration?"自己":"[npc.namePos]")+"的"+name+"，[style.sizeShort("+uncomfortable+")]直达"+orificeName+"最深处！)]");
 					
 				} else {
 					// Core penetration information is displayed last:
-					sb.append("<br/>[style.italicsSex([npc2.Name] [npc2.is] taking the entire [style.sizeShort("+length+")] length of "+(selfPenetration?" [npc.her] ":" [npc.namePos] ")+" "+name+" in [npc2.her] "+orificeName+"!)]");
+					sb.append("<br/>[style.italicsSex([npc2.Name]用[npc2.her]的"+orificeName+"将"+(selfPenetration?"自己":"[npc.namePos]")+"[style.sizeShort("+length+")]长的"+name+"全部深深吞入！)]");
 				}
 			}
 		}
@@ -18861,7 +18861,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(sb.length()>0) {
 				sb.append("</br>");
 			}
-			sb.append("[style.italicsPinkDeep(The size of [npc.namePos] "+name+" is causing [npc2.namePos] stomach to bulge!)]");
+			sb.append("[style.italicsPinkDeep([npc.namePos]的"+name+"顶得[npc2.namePos]小腹隆起！)]");
 		}
 		
 		return UtilText.parse(characterPenetrating, characterPenetrated, sb.toString());
@@ -18888,37 +18888,37 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		boolean immobilePenetrated = Main.sex.isCharacterImmobilised(characterPenetrated) && Main.sex.isCharacterInanimateFromImmobilisation(characterPenetrated);
 		
 		if(internalOrifice==SexAreaOrifice.MOUTH) {
-			orificeName = "throat";
+			orificeName = "喉咙";
 		}
 		
 		if(length<=comfortable) {
 			if(characterPenetrating.isFullPenetrationFarTooShort(penetrationType, characterPenetrated, internalOrifice)) { // Too small:
 				sb.append("[style.italicsBad(");
-					sb.append("[npc.NamePos] "+name+" is too short to give [npc2.name] much pleasure!");
+					sb.append("[npc.NamePos]的"+name+"太短小了，无法取悦[npc2.name]！");
 				sb.append(")]");
 			}
 			
 		} else if(penetratingDeep) { // Too deep:
 			if(characterPenetrated.hasFetish(Fetish.FETISH_SIZE_QUEEN)) {
 				sb.append("[style.italicsSex(");
-					sb.append("[npc.NamePos] "+name+" is thrusting too deeply into [npc2.namePos] "+orificeName+", but as [npc2.sheIsFull] a size queen, [npc2.she] [npc2.verb(love)] it!");
+					sb.append("[npc.NamePos]"+name+"在[npc2.namePos]"+orificeName+"里一顶到底，但由于[npc2.sheIsFull]的尺寸为王性癖，[npc2.she]真的好爱！");
 				sb.append(")]");
 				
 			} else if(characterPenetrated.hasFetish(Fetish.FETISH_MASOCHIST)) {
 				sb.append("[style.italicsSex(");
-					sb.append("[npc.NamePos] "+name+" is thrusting too deeply into [npc2.namePos] "+orificeName+", but as [npc2.sheIsFull] a masochist, [npc2.she] [npc2.verb(love)] it!");
+					sb.append("[npc.NamePos]的"+name+"在[npc2.namePos]"+orificeName+"里一顶到底，但[npc2.sheIsFull]有受虐狂性癖，[npc2.she]超喜欢这样！");
 				sb.append(")]");
 				
 			} else {
 				sb.append("[style.italicsTerrible(");
 					if(internalOrifice==SexAreaOrifice.MOUTH) {
 						if(immobilePenetrated) {
-							sb.append("[npc.NamePos] "+name+" is thrusting too deeply down [npc2.namePos] "+orificeName+"!");
+							sb.append("[npc.NamePos]的"+name+"一口气顶到了[npc2.namePos]"+orificeName+"最深处！");
 						} else {
-							sb.append("[npc2.Name] [npc2.is] choking and spluttering on [npc.namePos] "+name+"!");
+							sb.append("[npc2.Name]因[npc.namePos]的"+name+"一边哽咽一边噗噗吐气！");
 						}
 					} else {
-						sb.append("[npc.NamePos] "+name+" is thrusting too deeply into [npc2.namePos] "+orificeName+"!");
+						sb.append("[npc.NamePos]的"+name+"一口气顶到了[npc2.namePos]"+orificeName+"最深处！");
 					}
 				sb.append(")]");
 			}
@@ -18927,7 +18927,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(sb.length()>0) {
 				sb.append("</br>");
 			}
-			sb.append("[style.italicsPinkDeep(The size of [npc.namePos] "+name+" is causing [npc2.namePos] stomach to bulge!)]");
+			sb.append("[style.italicsPinkDeep([npc.namePos]的"+name+"顶得[npc2.namePos]小腹隆起！)]");
 		}
 		
 		if(sb.length()!=0) {
@@ -19003,18 +19003,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(targetArea.isPenetration()
                         || (!nipplePenetrationDescription && (targetArea==SexAreaOrifice.NIPPLE || targetArea==SexAreaOrifice.NIPPLE_CROTCH))) {
 					return UtilText.parse(characterPerformer,
-							"[npc.Name] [npc.verb(take)] [npc.her] "+performerAreaName+" away from [npc.her] "+targetAreaName+".");
+							"[npc.Name]将[npc.her]的"+performerAreaName+"从"+targetAreaName+"上移开。");
 				} else {
 					return UtilText.parse(characterPerformer,
-							"[npc.Name] [npc.verb(slide)] [npc.her] "+performerAreaName+" out of [npc.her] "+targetAreaName+".");
+							"[npc.Name]将[npc.her]的"+performerAreaName+"从"+targetAreaName+"中抽出。");
 				}
 			} else {
 				if(targetArea.isPenetration()) {
 					return UtilText.parse(characterPerformer,
-							"[npc.Name] [npc.verb(slide)] [npc.her] "+targetAreaName+" out of [npc.her] "+performerAreaName+".");
+							"[npc.Name]将"+targetAreaName+"从"+performerAreaName+"中抽出。");
 				} else {
 					return UtilText.parse(characterPerformer,
-							"[npc.Name] [npc.verb(take)] [npc.her] "+performerAreaName+" away from [npc.her] "+targetAreaName+".");
+							"[npc.Name]将[npc.her]的"+performerAreaName+"从"+targetAreaName+"上移开。");
 				}
 			}
 			
@@ -19023,18 +19023,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(targetArea.isPenetration()
 				    || (!nipplePenetrationDescription && (targetArea==SexAreaOrifice.NIPPLE || targetArea==SexAreaOrifice.NIPPLE_CROTCH))){
 					return UtilText.parse(characterPerformer, characterTarget,
-							"[npc.Name] [npc.verb(take)] [npc.her] "+performerAreaName+" away from [npc2.namePos] "+targetAreaName+".");
+							"[npc.Name]将[npc.her]的"+performerAreaName+"从[npc2.namePos]的"+targetAreaName+"上移开。");
 				} else {
 					return UtilText.parse(characterPerformer, characterTarget,
-							"[npc.Name] [npc.verb(slide)] [npc.her] "+performerAreaName+" out of [npc2.namePos] "+targetAreaName+".");
+							"[npc.Name]将[npc.her]的"+performerAreaName+"从[npc2.namePos]的"+targetAreaName+"中抽出。");
 				}
 			} else {
 				if(targetArea.isPenetration()) {
 					return UtilText.parse(characterPerformer, characterTarget,
-							"[npc.Name] [npc.verb(slide)] [npc2.namePos] "+targetAreaName+" out of [npc.her] "+performerAreaName+".");
+							"[npc.Name]将[npc2.namePos]的"+targetAreaName+"从[npc.her]的"+performerAreaName+"中抽出。");
 				} else {
 					return UtilText.parse(characterPerformer, characterTarget,
-							"[npc.Name] [npc.verb(take)] [npc.her] "+performerAreaName+" away from [npc2.namePos] "+targetAreaName+".");
+							"[npc.Name]将[npc.her]的"+performerAreaName+"从[npc2.namePos]的"+targetAreaName+"上移开。");
 				}
 			}
 		}
@@ -19103,8 +19103,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	protected String getVirginityExperienceDescription(GameCharacter character) {
 		if(character.hasFetish(Fetish.FETISH_DEFLOWERING)) {
 			return "<p style='text-align:center;'>"
-						+ UtilText.parse(character, "[style.italicsArcane(Due to [npc.namePos] deflowering fetish, [npc.she] [npc.verb(gain)])]")
-							+ " [style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(character)+")] [style.italicsArcane(experience!)]"
+						+ UtilText.parse(character, "[style.italicsArcane(由于[npc.namePos]败坏贞操的性癖，[npc.she]获得了)]")
+							+ "[style.italicsExperience("+AbstractFetish.getExperienceGainFromTakingOtherVirginity(character)+")][style.italicsArcane(经验！)]"
 					+ "</p>";
 		}
 		return "";
@@ -19113,32 +19113,32 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	protected String getPenileVirginityLossDescription(GameCharacter characterPenetrated, SexAreaOrifice orifice){
 		return UtilText.parse(characterPenetrated, this,
 				(characterPenetrated.equals(this)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own penile virginity!")
-						:UtilText.formatVirginityLoss("[npc.Name] [npc.has] taken [npc2.namePos] penile virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的贞操！")
+						:UtilText.formatVirginityLoss("[npc.Name]已经夺走了[npc2.namePos]的贞操！"))
 				+getVirginityExperienceDescription(characterPenetrated));
 	}
 	
 	protected String getAnalVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own anal virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] anal virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的肛门贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的肛门贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 	
 	protected String getVaginaVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss((this.hasHymen()?"[npc.NamePos] hymen has been torn; [npc2.she] [npc2.has] taken [npc2.her] own virginity!":"[npc2.Name] [npc2.has] taken [npc2.her] own virginity!"))
-						:UtilText.formatVirginityLoss((this.hasHymen()?"[npc.NamePos] hymen has been torn; [npc2.name] [npc2.has] taken [npc.her] virginity!":"[npc2.Name] [npc2.has] taken [npc.namePos] virginity!")))
+						?UtilText.formatVirginityLoss((this.hasHymen()?"[npc.NamePos]的处女膜被撕裂了。[npc2.she]夺走了[npc2.her]自己的处女！":"[npc2.Name]夺走了[npc2.her]自己的处女！"))
+						:UtilText.formatVirginityLoss((this.hasHymen()?"[npc.NamePos]的处女膜被撕裂了。[npc2.name]夺走了[npc.her]的处女！":"[npc2.name]夺走了[npc.her]的处女！")))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 	
 	protected String getSpinneretVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own spinneret virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] spinneret virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的丝囊贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的丝囊贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
     protected String getTussyVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
@@ -19152,40 +19152,40 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	protected String getNippleVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own nipple virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] nipple virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的乳头贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的乳头贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 	
 	protected String getNippleCrotchVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own [npc2.crotchNipple] virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] [npc.crotchNipple] virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的[npc2.crotchNipple]贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的[npc.crotchNipple]贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 	
 	protected String getUrethraVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own urethral virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] urethral virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的尿道贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的尿道贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 	
 	protected String getVaginalUrethraVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc2.her] own urethral virginity!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] taken [npc.namePos] urethral virginity!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc2.her]自己的尿道贞操！")
+						:UtilText.formatVirginityLoss("[npc2.Name]已经夺走了[npc.namePos]的尿道贞操！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 	
 	protected String getMouthVirginityLossDescription(GameCharacter characterPenetrating, SexAreaPenetration penetration){
 		return UtilText.parse(this, characterPenetrating,
 				(this.equals(characterPenetrating)
-						?UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] given [npc2.herself] [npc.her] first oral experience!")
-						:UtilText.formatVirginityLoss("[npc2.Name] [npc2.has] given [npc.name] [npc.her] first oral experience!"))
+						?UtilText.formatVirginityLoss("[npc2.Name]把口部贞操献给了[npc.her]自己！")
+						:UtilText.formatVirginityLoss("[npc2.Name]让[npc.name]体验到第一次用嘴了！"))
 				+getVirginityExperienceDescription(characterPenetrating));
 	}
 	
@@ -19197,23 +19197,23 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			String plurality = orifice.isPlural()?"are":"is";
 			if(penetrationType==SexAreaPenetration.PENIS && Objects.equals(Main.sex.getCharacterKnotting(partner), this)) { // Knotted:
 				if(partner.equals(this)) {
-					return UtilText.parse(this, "[npc.NamePos] "+orifice.getName(this)+" "+plurality+" too tight for the fat knot at the base of [npc.her] "+penetrationType.getName(partner)+", and "+plurality+" being stretched out as a result!");
+					return UtilText.parse(this, "[npc.NamePos]"+orifice.getName(this)+"过分紧致，难以含住"+penetrationType.getName(partner)+"根部粗大的结，所以硬生生被撑开了！");
 				}
-				return UtilText.parse(this, partner, "[npc.NamePos] "+orifice.getName(this)+" "+plurality+" too tight for the fat knot at the base of [npc2.namePos] "+penetrationType.getName(partner)+", and "+plurality+" being stretched out as a result!");
+				return UtilText.parse(this, partner, "[npc.NamePos]"+orifice.getName(this)+"过分紧致，难以含住[npc2.namePos]"+penetrationType.getName(partner)+"根部粗大的结，所以硬生生被撑开了！");
 			}
 			if(partner.equals(this)) {
-				return UtilText.parse(this, "[npc.NamePos] "+orifice.getName(this)+" "+plurality+" too tight for [npc.her] "+penetrationType.getName(partner)+", and "+plurality+" being stretched out as a result!");
+				return UtilText.parse(this, "[npc.NamePos]的"+orifice.getName(this)+"对于[npc.her]的"+penetrationType.getName(partner)+"来说太紧了，被硬生生撑开了！");
 			}
-			return UtilText.parse(this, partner, "[npc.NamePos] "+orifice.getName(this)+" "+plurality+" too tight for [npc2.namePos] "+penetrationType.getName(partner)+", and "+plurality+" being stretched out as a result!");
+			return UtilText.parse(this, partner, "[npc.NamePos]的"+orifice.getName(this)+"对于[npc2.namePos]的"+penetrationType.getName(partner)+"来说太紧了，被硬生生撑开了！");
 		}
 		switch(orifice) {
 			case ANUS:
 				switch(penetrationType) {
 					case FINGER: case PENIS: case TONGUE: case TAIL: case TENTACLE: case FOOT: case CLIT:
 						if(pastTense) {
-							return UtilText.parse(this, "[npc.NamePos] [npc.asshole+] was stretched out.");
+							return UtilText.parse(this, "[npc.NamePos][npc.asshole+]被撑垮了。");
 						} else {
-							return UtilText.parse(this, "[npc.NamePos] [npc.asshole+] is being stretched.");
+							return UtilText.parse(this, "[npc.NamePos][npc.asshole+]被撑大了。");
 						}
 				}
 				break;
@@ -19225,70 +19225,70 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			case MOUTH:
 				if(partner==null) {
 					if(pastTense) {
-						return UtilText.parse(this, "[npc.Name] improved [npc.her] deep-throating skills.");
+						return UtilText.parse(this, "[npc.Name]增进了深喉技巧。");
 					} else {
-						return UtilText.parse(this, "[npc.NamePos] throat is being stretched out.");
+						return UtilText.parse(this, "[npc.NamePos]的喉咙被撑垮了。");
 					}
 				}
 				if(pastTense) {
 					switch(penetrationType) {
 						case FINGER:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.Name] struggled to fit [npc.her] fingers down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.Name]尽力适应着，将手指插入[npc.her]的喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.Name] struggled to fit [npc2.namePos] fingers down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.Name]想尽办法将[npc2.namePos]手指插进[npc.her]的喉咙。");
 						case PENIS:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.Name] struggled to fit [npc.her] [npc.cock+] down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.name]想尽办法将[npc.her][npc.cock+]插进[npc.her]的喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.Name] struggled to fit [npc2.namePos] [npc2.cock+] down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.name]想尽办法将[npc2.namePos][npc2.cock+]插进[npc.her]的喉咙。");
 						case TAIL:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.Name] struggled to fit [npc.her] [npc.tail+] down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.Name]想尽办法将[npc.her][npc.tail+]塞进[npc.her]的喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.Name] struggled to fit [npc2.namePos] [npc2.tail+] down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.Name]想尽办法将[npc2.namePos][npc2.tail+]塞进[npc.her]的喉咙。");
 						case TENTACLE:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.Name] struggled to fit [npc.her] [npc.tentacle+] down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.name]想尽办法将[npc.her][npc.tentacle+]插进[npc.her]的喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.Name] struggled to fit [npc2.namePos] [npc2.tentacle+] down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.name]想尽办法将[npc2.namePos][npc2.tentacle+]插进[npc.her]的喉咙。");
 						default:
-							return UtilText.parse(this, "[npc.NamePos] throat was being stretched out.");
+							return UtilText.parse(this, "[npc.NamePos]的喉咙被撑垮了。");
 					}
 					
 				} else {
 					switch(penetrationType) {
 						case FINGER:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.NameIsFull] struggling to fit [npc.her] fingers down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.NameIsFull]想尽办法把[npc.her]的手指塞进[npc.her]喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.NameIsFull] struggling to fit [npc2.namePos] fingers down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.NameIsFull]想尽办法让[npc2.namePos]的手指塞进[npc.her]喉咙。");
 						case PENIS:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.NameIsFull] struggling to fit [npc.her] [npc.cock+] down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.NameIsFull]想尽办法将[npc.her][npc.cock+]塞进[npc.her]的喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.NameIsFull] struggling to fit [npc2.namePos] [npc2.cock+] down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.NameIsFull]想尽办法将[npc2.namePos][npc2.cock+]塞进[npc.her]的喉咙。");
 						case TAIL:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.NameIsFull] struggling to fit [npc.her] [npc.tail+(true)] down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.NameIsFull]想尽办法把[npc.her][npc.tail+(true)]塞进[npc.her]的喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.NameIsFull] struggling to fit [npc2.namePos] [npc2.tail+(true)] down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.NameIsFull]想尽办法把[npc2.namePos][npc2.tail+(true)]塞进[npc.her]的喉咙。");
 						case TENTACLE:
 							if(partner.equals(this)) {
-								return UtilText.parse(this, "[npc.NameIsFull] struggling to fit [npc.her] [npc.tentacle+(true)] down [npc.her] throat.");
+								return UtilText.parse(this, "[npc.NameIsFull]想尽办法将[npc.her][npc.tentacle+(true)]塞进[npc.her]的喉咙。");
 							}
-							return UtilText.parse(this, partner, "[npc.NameIsFull] struggling to fit [npc2.namePos] [npc2.tentacle+(true)] down [npc.her] throat.");
+							return UtilText.parse(this, partner, "[npc.NameIsFull]想尽办法将[npc2.namePos][npc2.tentacle+(true)]塞进[npc.her]的喉咙。");
 						default:
-							return UtilText.parse(this, "[npc.NamePos] throat is being stretched out.");
+							return UtilText.parse(this, "[npc.NamePos]的喉咙被撑垮了。");
 					}
 				}
 			case NIPPLE:
 				switch(penetrationType) {
 					case FINGER: case PENIS: case TONGUE: case TAIL: case TENTACLE: case FOOT: case CLIT:
 						if(pastTense) {
-							return UtilText.parse(this, "[npc.NamePos] [npc.nipples+] were stretched out.");
+							return UtilText.parse(this, "[npc.NamePos][npc.nipples+]被撑垮了。");
 						} else {
-							return UtilText.parse(this, "[npc.NamePos] [npc.nipples+] are being stretched.");
+							return UtilText.parse(this, "[npc.NamePos][npc.nipples+]被撑大了。");
 						}
 				}
 				break;
@@ -19296,9 +19296,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				switch(penetrationType) {
 					case FINGER: case PENIS: case TONGUE: case TAIL: case TENTACLE: case FOOT: case CLIT:
 						if(pastTense) {
-							return UtilText.parse(this, "[npc.NamePos] [npc.crotchNipples+] were stretched out.");
+							return UtilText.parse(this, "[npc.NamePos][npc.crotchNipples+]被撑垮了。");
 						} else {
-							return UtilText.parse(this, "[npc.NamePos] [npc.crotchNipples+] are being stretched.");
+							return UtilText.parse(this, "[npc.NamePos][npc.crotchNipples+]被撑大了。");
 						}
 				}
 				break;
@@ -19308,9 +19308,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				switch(penetrationType) {
 					case FINGER: case PENIS: case TONGUE: case TAIL: case TENTACLE: case FOOT: case CLIT:
 						if(pastTense) {
-							return UtilText.parse(this, "[npc.NamePos] penile urethra was stretched out.");
+							return UtilText.parse(this, "[npc.NamePos]的阴茎尿道被撑垮了。");
 						} else {
-							return UtilText.parse(this, "[npc.NamePos] penile urethra is being stretched.");
+							return UtilText.parse(this, "[npc.NamePos]的阴茎尿道被撑大了。");
 						}
 				}
 				break;
@@ -19318,9 +19318,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				switch(penetrationType) {
 					case FINGER: case PENIS: case TONGUE: case TAIL: case TENTACLE: case FOOT: case CLIT:
 						if(pastTense) {
-							return UtilText.parse(this, "[npc.NamePos] vaginal urethra was stretched out.");
+							return UtilText.parse(this, "[npc.NamePos]的阴道尿道被撑垮了。");
 						} else {
-							return UtilText.parse(this, "[npc.NamePos] vaginal urethra is being stretched.");
+							return UtilText.parse(this, "[npc.NamePos]的阴道尿道被撑大了。");
 						}
 				}
 				break;
@@ -19338,9 +19338,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				switch(penetrationType) {
 					case FINGER: case PENIS: case TONGUE: case TAIL: case TENTACLE: case FOOT: case CLIT:
 						if(pastTense) {
-							return UtilText.parse(this, "[npc.NamePos] [npc.pussy+] was stretched out.");
+							return UtilText.parse(this, "[npc.NamePos][npc.pussy+]被撑垮了。");
 						} else {
-							return UtilText.parse(this, "[npc.NamePos] [npc.pussy+] is being stretched.");
+							return UtilText.parse(this, "[npc.NamePos][npc.pussy+]被撑大了。");
 						}
 				}
 				break;
@@ -19348,9 +19348,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				switch(penetrationType) {
 					case FINGER: case PENIS: case TONGUE: case TAIL: case TENTACLE: case FOOT: case CLIT:
 						if(pastTense) {
-							return UtilText.parse(this, "[npc.NamePos] spinneret was stretched out.");
+							return UtilText.parse(this, "[npc.NamePos]的丝囊被撑垮了。");
 						} else {
-							return UtilText.parse(this, "[npc.NamePos] spinneret is being stretched.");
+							return UtilText.parse(this, "[npc.NamePos]的丝囊被撑大了。");
 						}
 				}
 				break;
@@ -19363,22 +19363,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				&& Main.sex.isCharacterImmobilised(this)
 				&& (Main.sex.getImmobilisationTypes(this).containsKey(ImmobilisationType.COMMAND) || Main.sex.getImmobilisationTypes(this).containsKey(ImmobilisationType.SLEEP));
 		
-		String prefix = "[npc.Name] [npc.verb(let)] out [npc.a_moan+]";
+		String prefix = "[npc.Name]发出一声[npc.a_moan+]";
 		if(immobile) {
 			if(this.isAsleep()) {
-				prefix = "[npc.Name] [npc.verb(remain)] deeply asleep";
+				prefix = "[npc.Name]保持着深度沉睡";
 			} else {
-				prefix = "[npc.Name] [npc.verb(remain)] totally silent and unmoving";
+				prefix = "[npc.Name]完全沉默且一动不动";
 			}
 		} else if(orifice==SexAreaOrifice.MOUTH) {
-			prefix = "[npc.Name] [npc.verb(let)] out a muffled [npc.moan]";
+			prefix = "[npc.Name]发出了一声低沉的[npc.moan]";
 		}
 		
 		switch(orifice) {
 			case ARMPITS:
 				break;
 			case ANUS:
-				return UtilText.parse(this, prefix+" as [npc.her] [npc.asshole+] finishes stretching out to a comfortable size.");
+				return UtilText.parse(this, prefix+"，[npc.her][npc.asshole+]已拉伸到舒适的大小。");
 			case ASS:
 				break;
 			case BREAST:
@@ -19386,21 +19386,21 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			case BREAST_CROTCH:
 				break;
 			case MOUTH:
-				return UtilText.parse(this, prefix+" as [npc.her] throat finishes stretching out to a comfortable size.");
+				return UtilText.parse(this, prefix+"，[npc.her]的喉咙已拉伸到舒适的大小。");
 			case NIPPLE:
-				return UtilText.parse(this, prefix+" as [npc.her] [npc.nipples+] finish stretching out to a comfortable size.");
+				return UtilText.parse(this, prefix+"，[npc.her][npc.nipples+]已拉伸到舒适的大小。");
 			case NIPPLE_CROTCH:
-				return UtilText.parse(this, prefix+" as [npc.her] [npc.crotchNipples+] finish stretching out to a comfortable size.");
+				return UtilText.parse(this, prefix+"，[npc.her][npc.crotchNipples+]已拉伸到舒适的大小。");
 			case THIGHS:
 				break;
 			case URETHRA_PENIS: case URETHRA_VAGINA:
-				return UtilText.parse(this, prefix+" as [npc.her] urethra finishes stretching out to a comfortable size.");
+				return UtilText.parse(this, prefix+"，[npc.her]的尿道已拉伸到舒适的大小。");
 			case VAGINA:
-				return UtilText.parse(this, prefix+" as [npc.her] [npc.pussy+] finishes stretching out to a comfortable size.");
+				return UtilText.parse(this, prefix+"，[npc.her][npc.pussy+]已拉伸到舒适的大小。");
 			case TUSSY:
 				return UtilText.parse(this, prefix+" as [npc.her] [npc.tussy+] finishes stretching out to a comfortable size.");
 			case SPINNERET:
-				return UtilText.parse(this, prefix+" as [npc.her] spinneret finishes stretching out to a comfortable size.");
+				return UtilText.parse(this, prefix+"，[npc.her]的丝囊已拉伸到舒适的大小。");
 		}
 		return "";
 	}
@@ -19418,7 +19418,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			case ARMPITS:
 				break;
 			case ANUS:
-				return formatTooLoose(UtilText.parse(this, "[npc.Her] asshole is too loose to provide much pleasure..."));
+				return formatTooLoose(UtilText.parse(this, "[npc.Her]的屁眼太松了，无法提供太多的快感……"));
 			case ASS:
 				break;
 			case BREAST:
@@ -19428,19 +19428,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			case MOUTH:
 				break;
 			case NIPPLE:
-				return formatTooLoose(UtilText.parse(this, "[npc.Her] nipples are too loose to provide much pleasure..."));
+				return formatTooLoose(UtilText.parse(this, "[npc.Her]的乳头太松了，无法提供太多快感……"));
 			case NIPPLE_CROTCH:
-				return formatTooLoose(UtilText.parse(this, "[npc.Her] [npc.crotchNipples] are too loose to provide much pleasure..."));
+				return formatTooLoose(UtilText.parse(this, "[npc.Her]的[npc.crotchNipples]太松了，不能带来太多快感……"));
 			case THIGHS:
 				break;
 			case URETHRA_PENIS: case URETHRA_VAGINA:
-				return formatTooLoose(UtilText.parse(this, "[npc.Her] urethra is too loose to provide much pleasure..."));
+				return formatTooLoose(UtilText.parse(this, "[npc.Her]的尿道太松，无法提供太多快感……"));
 			case VAGINA:
-				return formatTooLoose(UtilText.parse(this, "[npc.Her] pussy is too loose to provide much pleasure..."));
+				return formatTooLoose(UtilText.parse(this, "[npc.Her]的小穴太松了，无法提供太多快感……"));
 			case TUSSY:
 				return formatTooLoose(UtilText.parse(this, "[npc.Her] tussy is too loose to provide much pleasure..."));
 			case SPINNERET:
-				return formatTooLoose(UtilText.parse(this, "[npc.Her] spinneret is too loose to provide much pleasure..."));
+				return formatTooLoose(UtilText.parse(this, "[npc.Her]丝囊过于松垮，无法提供太多快感……"));
 		}
 		
 		return "";
@@ -19602,51 +19602,51 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			switch(orificeIngestedThrough) {
 				case ANUS:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.asshole+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, charactersFluid,"[npc2.namePos]"+Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.asshole+]！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.asshole+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.asshole+]！"));
 					}
 					break;
 				case MOUTH:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, "[npc.Name] [npc.verb(swallow)] down "+Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+"!"));
+						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, "[npc.Name]吞下了"+Units.fluid(millilitres)+"[npc2.namePos]的"+fluid.getName(charactersFluid)+"！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, "[npc.Name] [npc.verb(swallow)] down "+Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+"!"));
+						fluidIngestionSB.append(UtilText.parse(this, "[npc.Name]吞下了"+Units.fluid(millilitres)+""+fluid.getName(charactersFluid)+"！"));
 					}
 					break;
 				case NIPPLE:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.nipples+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, charactersFluid,"[npc2.namePos]"+Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.nipples+]！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.nipples+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos]的[npc.nipples+]！"));
 					}
 					break;
 				case NIPPLE_CROTCH:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.crotchNipples+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc2.namePos][npc.crotchNipples+]！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.crotchNipples+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.crotchNipples+]！"));
 					}
 					break;
 				case URETHRA_PENIS:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.cockUrethra+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, charactersFluid,"[npc2.namePos]"+Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.cockUrethra+]！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.cockUrethra+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos]的[npc.cockUrethra+]！"));
 					}
 					break;
 				case URETHRA_VAGINA:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.pussyUrethra+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, charactersFluid,"[npc2.namePos]"+Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.pussyUrethra+]！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.pussyUrethra+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.pussyUrethra+]！"));
 					}
 					break;
 				case VAGINA:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.pussy+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, charactersFluid,"[npc2.namePos]"+Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.pussy+]！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] [npc.pussy+]!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos][npc.pussy+]！"));
 					}
 					break;
                 case TUSSY://Tussy Done
@@ -19660,9 +19660,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
                     break;
 				case SPINNERET:
 					if(charactersFluid!=null) {
-						fluidIngestionSB.append(UtilText.parse(this, charactersFluid, Units.fluid(millilitres)+" of [npc2.namePos] "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] spinneret!"));
+						fluidIngestionSB.append(UtilText.parse(this, charactersFluid,"[npc2.namePos]"+Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos]的丝囊穴！"));
 					} else {
-						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+" of "+fluid.getName(charactersFluid)+" is pumped into [npc.namePos] spinneret!"));
+						fluidIngestionSB.append(UtilText.parse(this, Units.fluid(millilitres)+"的"+fluid.getName(charactersFluid)+"灌入[npc.namePos]的丝囊穴！"));
 					}
 					break;
 				case ARMPITS:
@@ -19716,24 +19716,24 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String setAlcoholLevel(float alcoholLevel) {
 		if(this.hasPerkAnywhereInTree(Perk.DOLL_PHYSICAL_3)) {
 			return "<p style='text-align:center;'>"
-						+ UtilText.parse(this, "As a sex doll, [npc.nameIsFull] not affected by alcohol...")
+						+ UtilText.parse(this, "作为性爱玩偶，[npc.nameIsFull]不受酒精影响……")
 					+ "</p>";
 		}
 		this.alcoholLevel = Math.max(0, Math.min(1, alcoholLevel));
 		return "<p style='text-align:center;'>"
 				+UtilText.parse(this,
-				"[npc.Name] [npc.verb(start)] to feel "
+				"随着"
 					+(this.alcoholLevel>=0.75f
-					?"immensely dizzy and light headed as the alcohol quickly enters [npc.her] system."
+					?"酒精迅速进入[npc.name]体内，[npc.her]感到极度头晕目眩。"
 					:this.alcoholLevel>=0.5f
-					?"incredibly dizzy and light headed as the alcohol quickly enters [npc.her] system."
+					?"酒精迅速进入[npc.name]体内，[npc.her]感到强烈地头晕目眩。"
 					:this.alcoholLevel>=0.3f
-					?"very dizzy and light headed as the alcohol quickly enters [npc.her] system."
+					?"酒精迅速进入[npc.name]体内，[npc.her]感到非常头晕目眩。"
 					:this.alcoholLevel>=0.15f
-					?"dizzy and light headed as the alcohol quickly enters [npc.her] system."
-					:"a little dizzy and light headed as the alcohol quickly enters [npc.her] system.")
+					?"酒精迅速进入[npc.name]体内，[npc.her]感到头晕目眩。"
+					:"酒精迅速进入[npc.name]体内，[npc.her]感到有点头重脚轻。")
 				+"<br/>"
-				+ "[npc.NamePos] [style.boldAlcohol(intoxication level)] is now at "+((int)getIntoxicationPercentage())+"%")
+				+ "[npc.NamePos]的[style.boldAlcohol(醉酒度)]达到了"+((int)getIntoxicationPercentage())+"%")
 			+ "</p>";
 	}
 	
@@ -19989,7 +19989,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			sb.setLength(0);
 			sb.append(move.getValue().getPrediction(index, this, move.getKey(), enemies, allies));
 			if(selectedMovesDisruption.get(index) == true) {
-				sb.append("<b style='color: " + PresetColour.GENERIC_MINOR_BAD.toWebHexString() + "'>" + " (Disrupted!)</b>");
+				sb.append("<b style='color: " + PresetColour.GENERIC_MINOR_BAD.toWebHexString() + "'>" + "(被打断了！)</b>");
 			}
 			predictions.add(sb.toString());
 			index++;
@@ -20018,7 +20018,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(selectedMovesDisruption.get(index) == false) {
 					GameCharacter target = moveEntry.getKey();
 					float lustStart = target.getLust();
-					sb.append("<b style='text-align:center; color: " + move.getColourByDamageType(index, this).toWebHexString() + "'>" + Util.capitaliseSentence(move.getName(index, this)) + ":</b> "
+					sb.append("<b style='text-align:center; color: " + move.getColourByDamageType(index, this).toWebHexString() + "'>" + Util.capitaliseSentence(move.getName(index, this)) + ":</b>"
 								+ move.perform(index, this, target, enemies, allies));
 					float lustEnd = target.getLust();
 					if(lustStart!=lustEnd) {
@@ -20029,8 +20029,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 								target.incrementMana(-manaAbsorbed);
 								sb.append("<br/>"
 										+ UtilText.parse(this, target,
-												"Thanks to [npc.her] '<span style='color:"+Perk.LUSTPYRE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Perk.LUSTPYRE.getName(this))+"</span>' perk,"
-														+ " [npc.name] [npc.verb(absorb)] [style.colourMana("+manaAbsorbed+")] "+Attribute.MANA_MAXIMUM.getName()+" from [npc2.name]!"));
+												"多亏了[npc.her]的“<span style='color:"+Perk.LUSTPYRE.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Perk.LUSTPYRE.getName(this))+"</span>”天赋，"
+														+ "[npc.name]从[npc2.name]身上吸收了[style.colourMana("+manaAbsorbed+")] "+Attribute.MANA_MAXIMUM.getName()+"！"));
 							}
 						}
 						if(target.hasPerkAnywhereInTree(Perk.PURE_MIND)) {
@@ -20038,8 +20038,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							target.incrementMana(manaRestored);
 							sb.append("<br/>"
 									+ UtilText.parse(target,
-											"Thanks to [npc.namePos] '<span style='color:"+Perk.PURE_MIND.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Perk.PURE_MIND.getName(this))+"</span>' perk,"
-													+ " [npc.she] [npc.verb(recover)] [style.colourMana("+manaRestored+")] "+Attribute.MANA_MAXIMUM.getName()+" in response to taking "+Attribute.DAMAGE_LUST.getName()+"!"));
+											"多亏了[npc.namePos]的“<span style='color:"+Perk.PURE_MIND.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Perk.PURE_MIND.getName(this))+"</span>”天赋，"
+													+ "[npc.she]恢复了[style.colourMana("+manaRestored+")]"+Attribute.MANA_MAXIMUM.getName()+"，作为回应造成了"+Attribute.DAMAGE_LUST.getName()+"！"));
 						}
 					}
 					
@@ -20054,14 +20054,14 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 							}
 							Main.combat.addStatusEffectToApply(target, entry.getKey(), duration);
 							sb.append(UtilText.parse(target,
-									"<br/>[npc.NameIsFull] now affected by <b style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(target))+"</b>"
-											+ " for <b>"+Util.intToString(duration)+(duration==1?" turn":" turns")+"</b>!"));
+									"<br/>[npc.NameIsFull]现在受到<b style='color:"+entry.getKey().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(entry.getKey().getName(target))+"</b>"
+											+ "<b>"+Util.intToString(duration)+(duration==1?"回合":"回合")+"</b>！"));
 						}
 					}
 					
 				} else {
 					sb.append("<b style='text-align:center; color: " + move.getColourByDamageType(index, this).toWebHexString() + "'>" + Util.capitaliseSentence(move.getType().getName()) + ":</b><br/>"
-								+ "<b style='color: " + PresetColour.GENERIC_MINOR_BAD.toWebHexString() + "'>" + "The action was disrupted!</b>");
+								+ "<b style='color: " + PresetColour.GENERIC_MINOR_BAD.toWebHexString() + "'>" + "你的行动被打断了！</b>");
 				}
 				descriptionList.add(index, sb.toString());
 			} else {
@@ -20073,9 +20073,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(typeToPerform==null || typeToPerform==CombatMoveType.ATTACK) {
 			if(selectedMoves.isEmpty()) {
 				if(this.getAttributeValue(Attribute.ACTION_POINTS)<=0) {
-					descriptionList.add(UtilText.parse(this, "[npc.NameIsFull] [style.colourTerrible(unable)] to make a single move this turn!"));
+					descriptionList.add(UtilText.parse(this, "[npc.NameIsFull][style.colourTerrible(不能)]在本回合行动！"));
 				} else {
-					descriptionList.add(UtilText.parse(this, "[npc.Name] [npc.verb(decide)] not to make a move, and instead [npc.verb(try)] to brace [npc.herself] as best as possible against any incoming attacks."));
+					descriptionList.add(UtilText.parse(this, "[npc.Name]决定不采取任何行动，而是尽量为自己抵挡来袭。"));
 				}
 			}
 			
@@ -20083,8 +20083,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				int healthRecovery = Math.round(this.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.05f);
 				this.setHealth(this.getHealth()+healthRecovery);
 				descriptionList.add(descriptionList.size(), UtilText.parse(this,
-						"Thanks to [npc.her] '<span style='color:"+Perk.COMBAT_REGENERATION.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Perk.COMBAT_REGENERATION.getName(this))+"</span>' trait,"
-								+ " [npc.name] [npc.verb(recover)] [style.colourHealth("+healthRecovery+")] "+Attribute.HEALTH_MAXIMUM.getName()+"!"));
+						"多亏了[npc.her]的“<span style='color:"+Perk.COMBAT_REGENERATION.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(Perk.COMBAT_REGENERATION.getName(this))+"</span>”特性，"
+								+ "[npc.name]恢复了[style.colourHealth("+healthRecovery+")]"+Attribute.HEALTH_MAXIMUM.getName()+"！"));
 			}
 		}
 	}
@@ -20284,7 +20284,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public Value<Boolean, String> isMoveAvailable(String identifier) {
 		for(AbstractCombatMove move : knownMoves) {
 			if(move.getIdentifier().equals(identifier)) {
-				return new Value<>(true, "You have learned how to use this move during your adventures.");
+				return new Value<>(true, "你已经在冒险中学会了该动作。");
 			}
 		}
 		// Moves from weapons:
@@ -20292,7 +20292,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(weapon!=null) {
 				for(AbstractCombatMove move : weapon.getCombatMoves()) {
 					if(move.getIdentifier().equals(identifier)) {
-						return new Value<>(true, "You have obtained this move from your "+weapon.getName()+".");
+						return new Value<>(true, "你从"+weapon.getName()+"中学会了该动作。");
 					}	
 				}
 			}
@@ -20301,7 +20301,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(weapon!=null) {
 				for(AbstractCombatMove move : weapon.getCombatMoves()) {
 					if(move.getIdentifier().equals(identifier)) {
-						return new Value<>(true, "You have obtained this move from your "+weapon.getName()+".");
+						return new Value<>(true, "你从"+weapon.getName()+"中学会了该动作。");
 					}	
 				}
 			}
@@ -20506,15 +20506,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String getUnableToEscapeDescription() {
 		for(AbstractClothing clothing : this.getClothingCurrentlyEquipped()) {
 			if(clothing.isHindersLegMovement(clothing.getSlotEquippedTo()) && !this.isAbleToFly()) {
-				return UtilText.parse(this, "Escape is blocked due to [npc.namePos] "+clothing.getName()+" hindering [npc.her] movement!");
+				return UtilText.parse(this, "[npc.namePos]的"+clothing.getName()+"阻碍了[npc.her]行动，逃跑失败了！");
 			}
 			if(clothing.getItemTags().contains(ItemTag.PREVENTS_COMBAT_ESCAPE)) {
-				return UtilText.parse(this, "Escape is blocked due to the effect of [npc.namePos] "+clothing.getName()+"!");
+				return UtilText.parse(this, "[npc.namePos]的"+clothing.getName()+"效果使逃跑失败了！");
 			}
 		}
 		for(AbstractStatusEffect se : this.getStatusEffects()) {
 			if(se.getTags().contains(ItemTag.PREVENTS_COMBAT_ESCAPE)) {
-				return UtilText.parse(this, "The effect <i>'"+se.getName(this)+"'</i> is preventing [npc.name] from escaping!");
+				return UtilText.parse(this, "<i>'"+se.getName(this)+"'</i>的效果是阻止[npc.name]逃跑！");
 			}
 		}
 		return "";
@@ -20670,9 +20670,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	
 	public String getUnableToTeleportDescription() {
 		if(!this.hasSpell(Spell.TELEPORT)) {
-			return UtilText.parse(this, "[npc.Name] [npc.do] not know the teleport spell!");
+			return UtilText.parse(this, "[npc.Name]尚未学会传送术！");
 		}
-		return UtilText.parse(this, "[npc.Name] cannot teleport [npc.her] companions without the '"+SpellUpgrade.TELEPORT_2.getName()+"' spell upgrade!");
+		return UtilText.parse(this, "[npc.Name]无法传送同伴，因为没有“"+SpellUpgrade.TELEPORT_2.getName()+"”升级法术！");
 	}
 	
 	public float getRegenerationRate() {
@@ -20748,7 +20748,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				StringBuilder sb = new StringBuilder();
 				sb.append(UtilText.parse(this,
 						"<p style='padding-bottom:0; margin-bottom:0;'>"
-							+ "Due to [npc.namePos] [style.boldFetish(masochist fetish)], incoming damage is reduced by 25%, but [npc.she] [npc.verb(take)] [style.boldLust(lust damage)] as [npc.she] [npc.verb(get)] turned on from being hurt!"
+							+ "因为[npc.namePos]拥有[style.boldFetish(受虐狂性癖)]，受到的伤害减少25%，但[npc.she]受到了因疼痛而性奋的[style.boldLust(性欲伤害)]！"
 						+ "</p>"));
 				sb.append(incrementLust(manaLoss, true));
 				return sb.toString();
@@ -20773,7 +20773,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				StringBuilder sb = new StringBuilder();
 				sb.append(UtilText.parse(attacker,
 						"<p style='padding-bottom:0; margin-bottom:0;'>"
-							+ "Due to [npc.namePos] [style.boldFetish(sadist fetish)], [npc.name] [npc.verb(take)] [style.boldLust(lust damage)] as [npc.she] [npc.verb(see)] [npc.her] enemies being hurt!"
+							+ "因为[npc.namePos]拥有[style.boldFetish(施虐狂性癖)]。[npc.Name]看到敌人受虐，受到了[style.boldLust(性欲伤害)]！"
 						+ "</p>"));
 				sb.append(attacker.incrementLust(manaLoss, true));
 				return sb.toString();
@@ -20961,8 +20961,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		setLustNoText(lust);
 		
 		return "<p style='text-align:center;'>"
-				+ UtilText.parse(this, "[npc.Name] "+(increment>0?"[style.colourLust(gained)]":"[style.colourMinorBad(lost)]")+" [style.boldDmgLust("+Math.abs(increment)+" lust)], and [npc.is] now feeling"
-						+ " <b style='color:"+this.getLustLevel().getColour().toWebHexString()+";'>"+this.getLustLevel().getName()+"</b>.")
+				+ UtilText.parse(this, "[npc.Name]"+(increment>0?"[style.colourLust(获得)]":"[style.colourMinorBad(失去)]")+"了[style.boldDmgLust("+Math.abs(increment)+"性欲)]，现在表现得"
+						+ "<b style='color:"+this.getLustLevel().getColour().toWebHexString()+";'>"+this.getLustLevel().getName()+"</b>。")
 			+ "</p>";
 	}
 
@@ -20981,10 +20981,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.hasStatusEffect(StatusEffect.DESPERATE_FOR_SEX) && applyMaximumLustDamage) {
 			sb.append(UtilText.parse(this,
 						"<p>"
-							+ "<b>[npc.Name] [npc.verb(take)]"
-								+ " <b>" + (increment*2) + "</b> <b style='color:" + PresetColour.ATTRIBUTE_HEALTH.toWebHexString() + ";'>"+Attribute.HEALTH_MAXIMUM.getName()+" damage</b>"
-								+ " and <b>"+increment+"</b> <b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>aura damage</b>"
-								+ " as [npc.she] [npc.verb(struggle)] to control [npc.her] burning desire for sex!</b>"
+							+ "<b>[npc.Name]受到"
+								+ "<b>" + (increment*2) + "</b><b style='color:" + PresetColour.ATTRIBUTE_HEALTH.toWebHexString() + ";'>"+Attribute.HEALTH_MAXIMUM.getName()+"伤害</b>"
+								+ "和<b>"+increment+"</b><b style='color:" + PresetColour.ATTRIBUTE_MANA.toWebHexString() + ";'>灵气伤害</b>"
+								+ "，同时努力控制着高涨的性欲！</b>"
 						+ "</p>"));
 			
 			this.setHealth(this.getHealth() - (increment*2));
@@ -21194,10 +21194,10 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	
 	public String getInfertilityDescription() {
 		if(this.hasStatusEffect(StatusEffect.MENOPAUSE)) {
-			return  UtilText.parse(this, "[npc.NameHasFull] undergone menopause, so cannot get pregnant!");
+			return  UtilText.parse(this, "[npc.NameHasFull]正在经历更年期，因此不能怀孕！");
 			
 		} else if(this.getAttributeValue(Attribute.FERTILITY) <=0 && this.hasTraitActivated(Perk.BARREN)) {
-			return  UtilText.parse(this, "[npc.NameIsFull] barren, so cannot get pregnant!");
+			return  UtilText.parse(this, "[npc.NameIsFull]不育，因此无法怀孕！");
 		}
 		return "";
 	}
@@ -21211,7 +21211,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	
 	public String getNonVirileDescription(AbstractAttribute virilityAttribute) {
 		if(this.getAttributeValue(virilityAttribute) <=0 && this.hasTraitActivated(Perk.FIRING_BLANKS)) {
-			return  UtilText.parse(this, "[npc.NameIsFull] sterile, so cannot get anyone pregnant!");
+			return  UtilText.parse(this, "[npc.NameIsFull]不育，因此不能让任何人受孕！");
 		}
 		return "";
 	}
@@ -21251,13 +21251,13 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.isElemental()) {
 			return PregnancyDescriptor.NO_CHANCE.getDescriptor(this, partner, directSexInsemination)
 					+"<p style='text-align:center;'>"
-						+ "[style.italicsTerrible(Elementals cannot get pregnant!)]"
+						+ "[style.italicsTerrible(元素体不会怀孕！)]"
 					+ "</p>";
 		}
 		if(partnerBody.getRace()==Race.ELEMENTAL) {
 			return PregnancyDescriptor.NO_CHANCE.getDescriptor(this, partner, directSexInsemination)
 					+"<p style='text-align:center;'>"
-						+ "[style.italicsTerrible(Elementals cannot impregnate anyone!)]"
+						+ "[style.italicsTerrible(元素体不能使人受孕！)]"
 					+ "</p>";
 		}
 		
@@ -21265,13 +21265,13 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.hasPerkAnywhereInTree(Perk.DOLL_PHYSICAL_2)) {
 			return PregnancyDescriptor.NO_CHANCE.getDescriptor(this, partner, directSexInsemination)
 					+"<p style='text-align:center;'>"
-						+ "[style.italicsTerrible(Dolls cannot get pregnant!)]"
+						+ "[style.italicsTerrible(玩偶不会怀孕！)]"
 					+ "</p>";
 		}
 		if(partnerBody.isDoll()) {
 			return PregnancyDescriptor.NO_CHANCE.getDescriptor(this, partner, directSexInsemination)
 					+"<p style='text-align:center;'>"
-						+ "[style.italicsTerrible(Dolls cannot impregnate anyone!)]"
+						+ "[style.italicsTerrible(玩偶不能使人受孕！)]"
 					+ "</p>";
 		}
 
@@ -22289,18 +22289,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(orifice.isInternalOrifice()) {
 						if(this.getTotalFluidInArea(orifice)>0) {
 							washingSB.append(formatWashingArea(false,
-									"[npc.Name] [npc.verb(wash)] as much of the cum out of [npc.her] "+orifice.getName(this)+" as [npc.she] can, but there's so much in there that [npc.sheIs] unable to fully clean it all out!"));
+									"[npc.Name]尽可能地洗掉了[npc.her]"+orifice.getName(this)+"中流出的淫液，但实在太多了，[npc.she]洗不干净！"));
 						} else {
 							washingSB.append(formatWashingArea(true,
-									"[npc.Name] [npc.verb(wash)] all of the cum out of [npc.her] "+orifice.getName(this)+"."));
+									"[npc.Name]洗净了"+orifice.getName(this)+"流出的淫液。"));
 						}
 					} else {
 						if(this.getTotalFluidInArea(orifice)>0) {
 							washingSB.append(formatWashingArea(false,
-									"[npc.Name] [npc.verb(wash)] as much of the cum off of [npc.her] "+orifice.getName(this)+" as [npc.she] can, but there's just so much that [npc.sheIs] unable to fully clean it all off!"));
+									"[npc.Name]尽力去清洗"+orifice.getName(this)+"内的精液，但是量太大了，[npc.sheIs]无法彻底洗净！"));
 						} else {
 							washingSB.append(formatWashingArea(true,
-									"[npc.Name] [npc.verb(wash)] all of the cum off of [npc.her] "+orifice.getName(this)+"."));
+									"[npc.Name]洗净"+orifice.getName(this)+"内的精液。"));
 						}
 					}
 				}
@@ -22309,7 +22309,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(washingSB.length()==0) {
 			washingSB.append(formatWashingArea(true,
-					"[npc.NamePos] body is now clean!"));
+					"[npc.NamePos]的身体现在干干净净！"));
 		}
 		
 		return UtilText.parse(this, washingSB.toString());
@@ -22716,28 +22716,28 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public String getDescriptionSelfImmuneToDarkness() {
 		if(this.getBodyMaterial()==BodyMaterial.FIRE) {
-			return UtilText.parse(this, "thanks to the fact that [npc.her] body is made out of fire, and is therefore giving off a significant amount of light");
+			return UtilText.parse(this, "得益于火焰组成的身体，[npc.her]发出了大量的光");
 		}
 		for(BodyPartInterface bpi : this.getAllBodyParts()) {
 			if(bpi.getType().getTags().contains(BodyPartTag.NIGHT_VISION)) {
-				return UtilText.parse(this, "thanks to the fact that [npc.her] "+bpi.getType().getRace().getName(true)+" "+bpi.getName(this)+" "+(bpi.getType().isDefaultPlural(this)?"grant":"grants")+" [npc.herHim] excellent night vision");
+				return UtilText.parse(this, "得益于[npc.her]的"+bpi.getType().getRace().getName(true)+bpi.getName(this)+" 赋予[npc.herHim]极佳的夜视能力");
 			}
 			if(bpi.getType().getTags().contains(BodyPartTag.ECHO_LOCATION)) {
-				return UtilText.parse(this, "thanks to the echo-location ability which [npc.her] "+bpi.getType().getRace().getName(false)+" "+bpi.getName(this)+" grant [npc.herHim]");
+				return UtilText.parse(this, "得益于[npc.her]的"+bpi.getType().getRace().getName(false)+bpi.getName(this)+"赋予[npc.herHim]的回声定位能力");
 			}
 			if(bpi.getType().getTags().contains(BodyPartTag.THERMAL_VISION)) {
-				return UtilText.parse(this, "thanks to the fact that [npc.her] "+bpi.getType().getRace().getName(true)+" "+bpi.getName(this)+" "+(bpi.getType().isDefaultPlural(this)?"grant":"grants")+" [npc.herHim] thermal vision");
+				return UtilText.parse(this, "得益于[npc.her]的"+bpi.getType().getRace().getName(true)+bpi.getName(this)+"赋予[npc.herHim]的热成像视觉");
 			}
 		}
 		for(AbstractStatusEffect se : this.getStatusEffects()) {
 			if(se.getTags().contains(ItemTag.NIGHT_VISION_SELF) || se.getTags().contains(ItemTag.NIGHT_VISION_AREA)) {
-				return UtilText.parse(this, "thanks to the <i>'"+se.getName(this)+"'</i> effect that [npc.sheIsFull] currently experiencing");
+				return UtilText.parse(this, "得益于[npc.sheIsFull]正在经历的<i>'"+se.getName(this)+"'</i>效果");
 			}
 		}
 		for(AbstractClothing clothing : this.getClothingCurrentlyEquipped()) {
 			if(clothing.getClothingType().getItemTags(clothing.getSlotEquippedTo()).contains(ItemTag.NIGHT_VISION_SELF)
 					|| clothing.getClothingType().getItemTags(clothing.getSlotEquippedTo()).contains(ItemTag.NIGHT_VISION_AREA)) {
-				return UtilText.parse(this, "thanks to the "+clothing.getName()+" [npc.sheIsFull] wearing");
+				return UtilText.parse(this, "多亏了[npc.sheIsFull]穿戴的"+clothing.getName());
 			}
 		}
 		for(int i=0; i<Arm.MAXIMUM_ROWS; i++) {
@@ -22745,17 +22745,17 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if(weapon!=null
 					&& (weapon.getWeaponType().getItemTags().contains(ItemTag.NIGHT_VISION_SELF)
 							|| weapon.getWeaponType().getItemTags().contains(ItemTag.NIGHT_VISION_AREA))) {
-				return UtilText.parse(this, "thanks to the "+weapon.getName()+" [npc.sheHasFull] equipped");
+				return UtilText.parse(this, "得益于[npc.sheHasFull]装备的"+weapon.getName());
 			}
 			weapon = this.getOffhandWeapon(i);
 			if(weapon!=null
 					&& (weapon.getWeaponType().getItemTags().contains(ItemTag.NIGHT_VISION_SELF)
 							|| weapon.getWeaponType().getItemTags().contains(ItemTag.NIGHT_VISION_AREA))) {
-				return UtilText.parse(this, "thanks to the "+weapon.getName()+" [npc.sheHasFull] equipped");
+				return UtilText.parse(this, "得益于[npc.sheHasFull]装备的"+weapon.getName());
 			}
 		}
 		if(this.isSpellSchoolSpecialAbilityUnlocked(SpellSchool.FIRE)) {
-			return UtilText.parse(this, "thanks to the fact that [npc.she] [npc.has] mastered the arcane school of fire, and [npc.is] therefore able to indefinitely maintain an illuminating flame");
+			return UtilText.parse(this, "得益于[npc.she]已经掌握了奥术烈火学派，[npc.she]能无限保持照明火焰");
 		}
 		return null;
 	}
@@ -22771,27 +22771,27 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public String getDescriptionProvidingAreaImmunityToDarkness() {
 		if(this.getBodyMaterial()==BodyMaterial.FIRE) {
-			return UtilText.parse(this, "thanks to the fact that [npc.namePos] body is made out of fire, and is therefore giving off a significant amount of light");
+			return UtilText.parse(this, "得益于[npc.namePos]火焰组成的身体，[npc.her]能发出大量光");
 		}
 		for(AbstractStatusEffect se : this.getStatusEffects()) {
 			if(se.getTags().contains(ItemTag.NIGHT_VISION_AREA)) {
-				return UtilText.parse(this, "thanks to the <i>'"+se.getName(this)+"'</i> effect that [npc.nameIsFull] currently experiencing");
+				return UtilText.parse(this, "得益于[npc.sheIsFull]正在经历的<i>'"+se.getName(this)+"'</i>效果");
 			}
 		}
 		for(int i=0; i<Arm.MAXIMUM_ROWS; i++) {
 			AbstractWeapon weapon = this.getMainWeapon(i);
 			if(weapon!=null
 					&& weapon.getWeaponType().getItemTags().contains(ItemTag.NIGHT_VISION_AREA)) {
-				return UtilText.parse(this, "thanks to the "+weapon.getName()+" which [npc.name] [npc.has] equipped");
+				return UtilText.parse(this, "得益于[npc.Name]装备的"+weapon.getName());
 			}
 			weapon = this.getOffhandWeapon(i);
 			if(weapon!=null
 					&& weapon.getWeaponType().getItemTags().contains(ItemTag.NIGHT_VISION_AREA)) {
-				return UtilText.parse(this, "thanks to the "+weapon.getName()+" which [npc.name] [npc.has] equipped");
+				return UtilText.parse(this, "得益于[npc.Name]装备的"+weapon.getName());
 			}
 		}
 		if(this.isSpellSchoolSpecialAbilityUnlocked(SpellSchool.FIRE)) {
-			return UtilText.parse(this, "thanks to the fact that [npc.name] [npc.has] mastered the arcane school of fire, and [npc.is] therefore able to indefinitely maintain an illuminating flame");
+			return UtilText.parse(this, "得益于[npc.name]已经掌握了奥术烈火学派，[npc.she]能无限保持照明火焰");
 		}
 		return null;
 	}
@@ -22901,17 +22901,17 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.getLocationPlace().isItemsDisappear()) {
 			return UtilText.parse(this,
 				"<p style='text-align:center;'>"
-					+ "[npc.Name] [npc.verb(drop)] [npc.her] " + (count>1?count+" "+item.getNamePlural():item.getName()) + " on the floor."
+					+ "[npc.Name]掉了[npc.her]的" + (count>1?count+" "+item.getNamePlural():item.getName()) + "在地上。"
 					+ "<br/>"
-					+ "<span style='color:" + PresetColour.GENERIC_TERRIBLE.toWebHexString() + ";'>The " + (count>1?count+" "+item.getNamePlural():item.getName()) + " will be lost if you leave this location!</span>"
+					+ "<span style='color:" + PresetColour.GENERIC_TERRIBLE.toWebHexString() + ";'>" + (count>1?count+""+item.getNamePlural():item.getName()) + "在你离开后会消失！</span>"
 				+ "</p>");
 			
 		} else {
 			return UtilText.parse(this,
 				"<p style='text-align:center;'>"
-					+ "[npc.Name] [npc.verb(drop)] [npc.her] " + (count>1?count+" "+item.getNamePlural():item.getName()) + " on the floor."
+					+ "[npc.Name]掉了[npc.her]的" + (count>1?count+""+item.getNamePlural():item.getName()) + "在地上。"
 					+ "<br/>"
-					+ "<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>The " + (count>1?count+" "+item.getNamePlural():item.getName()) + " will be stored safely in this location!</span>"
+					+ "<span style='color:" + PresetColour.GENERIC_EXCELLENT.toWebHexString() + ";'>" + (count>1?count+item.getNamePlural():item.getName()) + "将被安全地存放在这个地方！</span>"
 				+ "</p>");
 		}
 	}
@@ -22921,24 +22921,24 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	}
 	
 	public String addedItemToInventoryText(AbstractCoreItem item, int count) {
-		String countText = "<b>"+count+"x</b> ";
+		String countText = "<b>"+count+"x</b>";
 		if(count ==1) {
 			countText="";
 		}
 		
-		String returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Item added to [npc.namePos] inventory:</b> "
+		String returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>物品添加到[npc.namePos]的物品栏:</b>"
 				+countText+"<b>" + (count>1?item.getNamePlural():item.getName()) + "</b>";
 		
 		if(item instanceof AbstractItem) {
-			returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Item added to [npc.namePos] inventory:</b> "
+			returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>物品添加到[npc.namePos]的物品栏:</b>"
 					+countText+"<b>" + (count>1?((AbstractItem)item).getDisplayNamePlural(true):((AbstractItem)item).getDisplayName(true)) + "</b>";
 			
 		} else if(item instanceof AbstractClothing) {
-			returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Clothing added to [npc.namePos] inventory:</b> "
+			returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>衣物添加到[npc.namePos]的物品栏:</b>"
 					+countText+"<b>" + ((AbstractClothing)item).getDisplayName(true) + "</b>";
 			
 		} else if(item instanceof AbstractWeapon) {
-			returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Weapon added to [npc.namePos] inventory:</b> "
+			returnString = "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>武器添加到[npc.namePos]的物品栏:</b>"
 					+countText+"<b>" + ((AbstractWeapon)item).getDisplayName(true) + "</b>";
 		}
 		
@@ -22946,11 +22946,11 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	}
 
 	public String removedItemFromInventoryText(AbstractItemType item) {
-		return "<p style='text-align:center;'>" + "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>You have lost '" + item.getName(false) + "'.</span>" + "</p>";
+		return "<p style='text-align:center;'>" + "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>你失去了“" + item.getName(false) + "”。</span>" + "</p>";
 	}
 
 	public String inventoryFullText() {
-		return "<p style='text-align:center;'>" + "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Your inventory is full!</b>" + "</p>";
+		return "<p style='text-align:center;'>" + "<b style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>你的物品栏已满！</b>" + "</p>";
 	}
 	
 	/**
@@ -23038,16 +23038,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(this.isPlayer()) {
 			if(money>0) {
-				Main.game.addEvent(new EventLogEntry("[style.colourGood(Gained)]", UtilText.formatAsMoney(money)), false);
+				Main.game.addEvent(new EventLogEntry("[style.colourGood(已获得)]", UtilText.formatAsMoney(money)), false);
 			} else {
-				Main.game.addEvent(new EventLogEntry("[style.colourBad(Lost)]", UtilText.formatAsMoney(Math.abs(money))), false);
+				Main.game.addEvent(new EventLogEntry("[style.colourBad(已失去)]", UtilText.formatAsMoney(Math.abs(money))), false);
 			}
 		}
 		
 		if(money>0) {
-			return "<p style='text-align:center; padding:0; margin:0;'>"+UtilText.parse(this, "[npc.Name]")+" [style.colourGood(gained)] " + UtilText.formatAsMoney(money) + "!</p>";
+			return "<p style='text-align:center; padding:0; margin:0;'>"+UtilText.parse(this, "[npc.Name]")+"[style.colourGood(获得了)]" + UtilText.formatAsMoney(money) + "！</p>";
 		} else {
-			return "<p style='text-align:center; padding:0; margin:0;'>"+UtilText.parse(this, "[npc.Name]")+" [style.colourBad(lost)] " + UtilText.formatAsMoney(moneyLoss) + "!</p>";
+			return "<p style='text-align:center; padding:0; margin:0;'>"+UtilText.parse(this, "[npc.Name]")+"[style.colourBad(失去了)]" + UtilText.formatAsMoney(moneyLoss) + "！</p>";
 		}
 	}
 	
@@ -23070,7 +23070,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(this.hasPerkAnywhereInTree(Perk.DOLL_ARCANE_1)) {
 			return UtilText.parse(this,
 						"<p style='text-align:center;'>"
-							+ "[style.colourDisabled(As [npc.sheIsFull] a sex doll, [npc.nameIsFull] unable to absorb essences...)]"
+							+ "[style.colourDisabled(由于[npc.sheIsFull]是个性爱玩偶，无法吸收精华……)]"
 						+ "</p>");
 		}
 		
@@ -23078,7 +23078,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(withGainModifiers && increment>0) {
 			if(this.hasStatusEffect(StatusEffect.WEATHER_STORM) || this.hasStatusEffect(StatusEffect.WEATHER_STORM_VULNERABLE)) {
 				increment *= 2;
-				additional = "<br/>Essence gain was [style.boldExcellent(doubled)] due to the ongoing arcane storm!";
+				additional = "<br/>由于奥术风暴正在肆虐，精华获取量现在[style.boldExcellent(翻倍)]！";
 			}
 		}
 		
@@ -23086,23 +23086,23 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(increment>0) {
 			if(Main.game.isStarted() && this.isPlayer()) {
-				Main.game.addEvent(new EventLogEntry("[style.colourMinorGood(Gained)]", increment+" <span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>arcane essence"+(increment>1?"s":"")+"</span>"),
+				Main.game.addEvent(new EventLogEntry("[style.colourMinorGood(获得)]", increment+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>奥术精华"+"</span>"),
 						false);
 			}
 			return UtilText.parse(this,
 					"<div style='text-align:center; padding:0; margin:0;'>"
-						+ "[npc.Name] [style.colourGood(gained)] "+UtilText.formatAsEssences(increment, "b", false)+" <b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>arcane essence"+(increment>1?"s":"")+"</b>!"
+						+ "[npc.Name][style.colourGood(获得了)]"+UtilText.formatAsEssences(increment, "b", false)+"<b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>奥术精华"+(increment>1?"":"")+"</b>！"
 						+ additional
 					+"</div>");
 			
 		} else {
 			if(Main.game.isStarted() && this.isPlayer()) {
-				Main.game.addEvent(new EventLogEntry("[style.colourMinorBad(Spent)]", Math.abs(increment)+" <span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>arcane essence"+(increment<-1?"s":"")+"</span>"),
+				Main.game.addEvent(new EventLogEntry("[style.colourMinorBad(已花费)]", Math.abs(increment)+"<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>奥术精华"+"</span>"),
 						false);
 			}
 			return UtilText.parse(this,
 					"<div style='text-align:center; padding:0; margin:0;'>"
-						+ "[npc.Name] [style.colourBad(lost)] "+UtilText.formatAsEssences(-increment, "b", false)+" <b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>arcane essence"+(increment<-1?"s":"")+"</b>!"
+						+ "[npc.Name][style.colourBad(失去了)]"+UtilText.formatAsEssences(-increment, "b", false)+"<b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>奥术精华"+(increment<-1?"":"")+"</b>！"
 					+ "</div>");
 		}
 	}
@@ -23454,7 +23454,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				updateInventoryListeners();
 				Main.game.getWorlds().get(getWorldLocation()).getCell(getLocation()).getInventory().removeItem(item, count);
 				if(appendTextToEventLog) {
-					Main.game.addEvent(new EventLogEntry("Gained", "<span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
+					Main.game.addEvent(new EventLogEntry("获得", "<span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
 				}
 				return "<p style='text-align:center;'>"+ addedItemToInventoryText(item, count)+"</p>";
 			} else {
@@ -23465,7 +23465,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (inventory.addItem(item, count)) {
 				updateInventoryListeners();
 				if(appendTextToEventLog) {
-					Main.game.addEvent(new EventLogEntry("Gained", "<span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
+					Main.game.addEvent(new EventLogEntry("获得", "<span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
 				}
 				return "<p style='text-align:center;'>"+ addedItemToInventoryText(item, count)+"</p>";
 			} else {
@@ -23485,7 +23485,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 
 	public void removeItem(AbstractItem item, int count, boolean appendTextToEventLog) {
 		if(appendTextToEventLog) {
-			Main.game.addEvent(new EventLogEntry("Lost", count+"x <span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
+			Main.game.addEvent(new EventLogEntry("已丢失", count+"x <span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
 		}
 		inventory.removeItem(item, count);
 		updateInventoryListeners();
@@ -23524,7 +23524,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public boolean removeItemByType(AbstractItemType item, int count, boolean appendTextToEventLog) {
 		if(appendTextToEventLog) {
-			Main.game.addEvent(new EventLogEntry("Lost", count+"x <span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName(false)+"</span>"), false);
+			Main.game.addEvent(new EventLogEntry("已丢失", count+"x <span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName(false)+"</span>"), false);
 		}
 		
 		boolean removed = inventory.removeItemByType(item, count);
@@ -23545,7 +23545,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String dropItem(AbstractItem item, int count, boolean appendTextToEventLog) {
 		if(inventory.dropItem(item, count, Main.game.getWorlds().get(this.worldLocation), location)) {
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Dropped", count+"x <span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("已掉落", count+"x <span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"), false);
 			}
 			updateInventoryListeners();
 			return droppedItemText(item, count);
@@ -23575,8 +23575,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 
 	public String useItem(AbstractItem item, GameCharacter target, boolean removingFromFloor, boolean onlyReturnEffects, boolean removeItem) {
 		if(ItemType.getAllItems().contains(item.getItemType()) && (isPlayer() || target.isPlayer())) {
-			Main.game.addEvent(new EventLogEntry("Used",
-							"<span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"+(target==null || target.equals(this)?"":UtilText.parse(target, " on [npc.name]"))),
+			Main.game.addEvent(new EventLogEntry("已使用",
+							"<span style='color:"+item.getRarity().getColour().toWebHexString()+";'>"+item.getName()+"</span>"+(target==null || target.equals(this)?"":UtilText.parse(target, "作用于[npc.name]"))),
 					false);
 			
 			if(Main.getProperties().addItemDiscovered(item.getItemType())) {
@@ -23629,7 +23629,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				Main.game.getWorlds().get(getWorldLocation()).getCell(getLocation()).getInventory().removeWeapon(weapon, count);
 			}
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Gained", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("获得", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
 			}
 			return "<p style='text-align:center;'>" + addedItemToInventoryText(weapon, count)+"</p>";
 			
@@ -23638,7 +23638,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				Main.game.getWorlds().get(getWorldLocation()).getCell(getLocation()).getInventory().addWeapon(weapon, count);
 			}
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Gained", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("获得", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
 			}
 			return inventoryFullText() + "<br/>" + droppedItemText(weapon, count);
 		}
@@ -23810,7 +23810,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		}
 		
 		if(appendTextToEventLog && weaponRemoved) {
-			Main.game.addEvent(new EventLogEntry("[style.colourMinorBad(Lost)]",
+			Main.game.addEvent(new EventLogEntry("[style.colourMinorBad(已丢失)]",
 					"<span style='color:"+weaponType.getRarity().getColour().toWebHexString()+";'>"+weaponType.getName()+"</span>"),
 					false);
 		}
@@ -23821,7 +23821,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String unequipWeapon(InventorySlot slot, AbstractWeapon weapon, boolean dropToFloor, boolean appendTextToEventLog) {
 		if(weapon==null) {
 			System.err.println("Attempted to unequip null weapon! "+UtilText.parse(this, "[npc.Name]"));
-			return "[style.italicsBad(Attempted to unequip null weapon!)]";
+			return "[style.italicsBad(试图解除空的武器！)]";
 		}
 		
 		AbstractWeapon w = null;
@@ -23867,7 +23867,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		}
 		
 		System.err.println("Attempted to unequip weapon that wasn't equipped! "+UtilText.parse(this, "[npc.Name]")+", "+weapon.getName());
-		return "[style.italicsBad(Attempted to unequip weapon that wasn't equipped!)]";
+		return "[style.italicsBad(试图解除未装备的武器！)]";
 	}
 
 	public void unequipWeaponIntoVoid(InventorySlot slot, AbstractWeapon weapon, boolean includeUniqueWeapons) {
@@ -23933,7 +23933,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String dropWeapon(AbstractWeapon weapon, int count, boolean appendTextToEventLog) {
 		if (inventory.dropWeapon(weapon, count, Main.game.getWorlds().get(this.worldLocation), location)) {
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Dropped", count+"x <span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("已掉落", count+"x <span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
 			}
 			updateInventoryListeners();
 			return droppedItemText(weapon, count);
@@ -24059,7 +24059,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		}
 
 		if(appendTextToEventLog) {
-			Main.game.addEvent(new EventLogEntry("Equipped", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
+			Main.game.addEvent(new EventLogEntry("已装备", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
 		}
 		inventory.equipMainWeapon(armRowToEquipTo, weapon);
 		updateInventoryListeners();
@@ -24090,7 +24090,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			}
 
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Unequipped", "<span style='color:"+getMainWeapon(armRow).getRarity().getColour().toWebHexString()+";'>"+getMainWeapon(armRow).getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("已卸下", "<span style='color:"+getMainWeapon(armRow).getRarity().getColour().toWebHexString()+";'>"+getMainWeapon(armRow).getName()+"</span>"), false);
 			}
 			inventory.unequipMainWeapon(armRow);
 			
@@ -24227,7 +24227,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		}
 
 		if(appendTextToEventLog) {
-			Main.game.addEvent(new EventLogEntry("Equipped", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
+			Main.game.addEvent(new EventLogEntry("已装备", "<span style='color:"+weapon.getRarity().getColour().toWebHexString()+";'>"+weapon.getName()+"</span>"), false);
 		}
 		inventory.equipOffhandWeapon(armRowToEquipTo, weapon);
 		
@@ -24257,7 +24257,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			}
 
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Unequipped", "<span style='color:"+getOffhandWeapon(armRow).getRarity().getColour().toWebHexString()+";'>"+getOffhandWeapon(armRow).getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("已卸下", "<span style='color:"+getOffhandWeapon(armRow).getRarity().getColour().toWebHexString()+";'>"+getOffhandWeapon(armRow).getName()+"</span>"), false);
 			}
 			inventory.unequipOffhandWeapon(armRow);
 			
@@ -24321,8 +24321,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		return "<p style='text-align:center;'>"
 					+ UtilText.parse(this,
 							includeNotEquippedClothing
-								?"[style.italicsExcellent(All of the clothes in [npc.namePos] inventory have been cleaned!)]"
-								:"[style.italicsGood([npc.NamePos] equipped clothes have been cleaned!)]")
+								?"[style.italicsExcellent([npc.namePos]物品栏中的所有衣物都已被清洁！)]"
+								:"[style.italicsGood([npc.NamePos]装备的衣物被清洁干净了！)]")
 				+ "</p>";
 	}
 
@@ -24342,7 +24342,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				Main.game.getWorlds().get(getWorldLocation()).getCell(getLocation()).getInventory().removeClothing(clothing, count);
 			}
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Gained", "<span style='color:"+clothing.getRarity().getColour().toWebHexString()+";'>"+clothing.getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("获得", "<span style='color:"+clothing.getRarity().getColour().toWebHexString()+";'>"+clothing.getName()+"</span>"), false);
 			}
 			return "<p style='text-align:center;'>" + addedItemToInventoryText(clothing, count)+"</p>";
 			
@@ -24351,7 +24351,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				Main.game.getWorlds().get(getWorldLocation()).getCell(getLocation()).getInventory().addClothing(clothing, count);
 			}
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Gained", "<span style='color:"+clothing.getRarity().getColour().toWebHexString()+";'>"+clothing.getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("获得", "<span style='color:"+clothing.getRarity().getColour().toWebHexString()+";'>"+clothing.getName()+"</span>"), false);
 			}
 			return inventoryFullText() + droppedItemText(clothing, count);
 		}
@@ -24383,7 +24383,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if (inventory.dropClothing(clothing, count, Main.game.getWorlds().get(this.worldLocation),location)) {
 			updateInventoryListeners();
 			if(appendTextToEventLog) {
-				Main.game.addEvent(new EventLogEntry("Dropped", count+"x <span style='color:"+clothing.getRarity().getColour().toWebHexString()+";'>"+clothing.getName()+"</span>"), false);
+				Main.game.addEvent(new EventLogEntry("已掉落", count+"x <span style='color:"+clothing.getRarity().getColour().toWebHexString()+";'>"+clothing.getName()+"</span>"), false);
 			}
 
 			return droppedItemText(clothing, count);
@@ -24544,7 +24544,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						foundAny = true;
 						if(!found) {
 							found= true;
-							sb.append(UtilText.parse(target, "Clothing worn by <b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>[npc.name]</b>:"));
+							sb.append(UtilText.parse(target, "Clothing worn by<b style='color:"+target.getFemininity().getColour().toWebHexString()+";'>[npc.name]</b>:"));
 						}
 						sb.append("<br/>- "+target.getClothingInSlot(slot).getDisplayName(true));
 					}
@@ -24556,7 +24556,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		}
 		
 		if(!foundAny) {
-			sb.append("[style.italicsDisabled(You don't own any clothing keys...)]");
+			sb.append("[style.italicsDisabled(你没有服装钥匙……)]");
 		}
 		
 		return sb.toString();
@@ -24564,7 +24564,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	
 	private void applyEquipClothingEffects(AbstractClothing newClothing, InventorySlot slot, GameCharacter characterClothingEquipper, boolean appendTextToEventLog) {
 		if(appendTextToEventLog) {
-			Main.game.addEvent(new EventLogEntry("Equipped", newClothing.getDisplayName(true)), false);
+			Main.game.addEvent(new EventLogEntry("已装备", newClothing.getDisplayName(true)), false);
 		}
 		
 		if (characterClothingEquipper!=null) { // If no equipper do not reset the seal status
@@ -24705,7 +24705,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	
 	private void applyUnequipClothingEffects(AbstractClothing clothing, InventorySlot slot, boolean appendTextToEventLog) {
 		if(appendTextToEventLog) {
-			Main.game.addEvent(new EventLogEntry("Unequipped", clothing.getDisplayName(true)), false);
+			Main.game.addEvent(new EventLogEntry("已卸下", clothing.getDisplayName(true)), false);
 		}
 		
 		// Making sure the key is no longer in anyone's possession:
@@ -26077,8 +26077,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis and vagina:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to the fact that both your [pc.vagina] and [pc.penis] are exposed, as well as the fact that you have [pc.breastSize] breasts, everyone can tell that you're [pc.a_gender("+colouredGender+")] on first glance."
-							:"Due to the fact that both [npc.her] [npc.vagina] and [npc.penis] are exposed, as well as the fact that [npc.sheHasFull] [npc.breastSize] breasts, everyone can tell that [npc.sheIs] [npc.a_gender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.vagina]和[pc.penis]都暴露在外，并且拥有[pc.breastSize]的乳房，每个人都能一眼看得出你是个[pc.a_gender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.vagina]和[npc.penis]都暴露在外，并且拥有[npc.breastSize]的乳房，每个人都能一眼看得出[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 							Gender.F_P_V_B_FUTANARI);
 						
 				} else if(visibleVagina) {
@@ -26086,15 +26086,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your exposed [pc.vagina] and [pc.breastSize] breasts, reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上暴露在外的[pc.vagina]和[pc.breastSize]的乳房，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上暴露在外的[npc.vagina]和[npc.breastSize]的乳房，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.F_P_V_B_FUTANARI);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your exposed [pc.vagina] and [pc.breastSize] breasts, reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上暴露在外的[pc.vagina]和[pc.breastSize]的乳房，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上暴露在外的[npc.vagina]和[npc.breastSize]的乳房，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.F_P_V_B_FUTANARI);
 					}
 					
@@ -26102,16 +26102,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina] and [pc.breastSize] breasts, and the fact that your [pc.penis] remains concealed, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]和[pc.breastSize]的乳房暴露在外，而[pc.penis]却遮盖着，所有人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]和[npc.breastSize]的乳房暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_B_FEMALE);
 						
 					} else {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina] and [pc.breastSize] breasts, everyone correctly assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]和[pc.breastSize]的乳房暴露在外，所有人第一眼都能正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]和[npc.breastSize]的乳房暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_B_FEMALE);
 					}
 					
@@ -26119,8 +26119,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to your exposed [pc.penis] and [pc.breastSize] breasts, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-							:"Due to [npc.her] exposed [npc.penis] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.penis]和[pc.breastSize]的乳房暴露在外，每个人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.penis]和[npc.breastSize]的乳房暴露在外，每个人第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 							Gender.F_P_B_SHEMALE);
 					
 				} else {
@@ -26128,15 +26128,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your feminine appearance and [pc.breastSize] breasts, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] feminine appearance and [npc.breastSize] breasts, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上你女性化的外表和[pc.breastSize]的乳房，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上[npc.her]女性化的外表和[npc.breastSize]的乳房，导致大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_P_B_SHEMALE);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your feminine appearance and [pc.breastSize] breasts, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] feminine appearance and [npc.breastSize] breasts, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上你女性化的外表和[pc.breastSize]的乳房，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上[npc.her]女性化的外表和[npc.breastSize]的乳房，导致大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_P_B_SHEMALE);
 					}
 					
@@ -26144,31 +26144,31 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your [pc.penis] is concealed, so, due to your feminine appearance and [pc.breastSize] breasts, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] feminine appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"你的[pc.penis]被遮盖着，所以由于你女性化的外表和[pc.breastSize]的乳房，大家第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]女性化的外表和[npc.breastSize]的乳房，大家第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_B_FEMALE);
 						
 					} else if(hasVagina()) {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your feminine appearance and [pc.breastSize] breasts leads everyone to correctly assume that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"Due to [npc.her] feminine appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你女性化的外表和[pc.breastSize]的乳房导致大家都正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]女性化的外表和[npc.breastSize]的乳房，大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_B_FEMALE);
 						
 					} else {
 						if(isCoverableAreaVisible(CoverableArea.VAGINA) && isCoverableAreaVisible(CoverableArea.PENIS)) {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is exposed, so, due to your feminine appearance and [pc.breastSize] breasts, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] genderless mound being exposed, combined with [npc.her] feminine appearance and [npc.breastSize] breasts, everyone can tell that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你暴露在外的下体性别难辨，所以由于你女性化的外表和[pc.breastSize]的乳房，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"[npc.her]暴露在外的下体性别难辨，所以由于[npc.her]女性化的外表和[npc.breastSize]的乳房，陌生人都觉得[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.F_B_DOLL);
 							
 						} else {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is concealed, so, due to your feminine appearance and [pc.breastSize] breasts, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] feminine appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你无性别特征的下体被遮盖着，所以由于你女性化的外表和[pc.breastSize]的乳房，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"由于[npc.her]女性化的外表和[npc.breastSize]的乳房，大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.F_V_B_FEMALE);
 						}
 					}
@@ -26180,8 +26180,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis and vagina:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to the fact that both your [pc.vagina] and [pc.penis] are exposed, everyone can tell that you're [pc.a_gender("+colouredGender+")] on first glance."
-							:"Due to the fact that both [npc.her] [npc.vagina] and [npc.penis] are exposed, everyone can tell that [npc.sheIs] [npc.a_gender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.vagina]和[pc.penis]都暴露在外，每个人都能一眼看得出你是个[pc.a_gender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.vagina]和[npc.penis]都暴露在外，每个人都能一眼看得出[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 							Gender.F_P_V_FUTANARI);
 						
 				} else if(visibleVagina) {
@@ -26189,15 +26189,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your exposed [pc.vagina], reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina], reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上暴露在外的[pc.vagina]，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上暴露在外的[npc.vagina]，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.F_P_V_FUTANARI);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your exposed [pc.vagina], reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina], reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上暴露在外的[pc.vagina]，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上暴露在外的[npc.vagina]，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.F_P_V_FUTANARI);
 					}
 					
@@ -26205,16 +26205,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina], and the fact that your [pc.penis] remains concealed, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]暴露在外，而[pc.penis]却遮盖着，所有人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_FEMALE);
 						
 					} else {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina], everyone correctly assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]暴露在外，所有人第一眼都能正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_FEMALE);
 					}
 					
@@ -26222,8 +26222,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to your exposed [pc.penis], everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-							:"Due to [npc.her] exposed [npc.penis], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.penis]暴露在外，每个人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.penis]暴露在外，每个人第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 							Gender.F_P_TRAP);
 					
 				} else {
@@ -26231,15 +26231,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your feminine appearance, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] feminine appearance, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上你女性化的外表，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上[npc.her]女性化的外表，导致大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_P_TRAP);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your feminine appearance, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] feminine appearance, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上你女性化的外表，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上[npc.her]女性化的外表，导致大家都认为你是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_P_TRAP);
 					}
 					
@@ -26247,31 +26247,31 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your [pc.penis] is concealed, so, due to your feminine appearance, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] feminine appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"你的[pc.penis]被遮盖着，所以由于你女性化的外表，大家第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]女性化的外表，每个人第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_FEMALE);
 						
 					} else if(hasVagina()) {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your feminine appearance leads everyone to correctly assume that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"Due to [npc.her] feminine appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你女性化的外表导致大家都正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]女性化的外表，大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.F_V_FEMALE);
 						
 					} else {
 						if(isCoverableAreaVisible(CoverableArea.VAGINA) && isCoverableAreaVisible(CoverableArea.PENIS)) {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is exposed, so, due to your feminine appearance, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] genderless mound being exposed, combined with [npc.her] feminine appearance, everyone can tell that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你暴露在外的下体性别难辨，所以由于你女性化的外表，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"[npc.her]暴露在外的下体性别难辨，所以由于[npc.her]女性化的外表，陌生人都觉得[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.F_DOLL);
 							
 						} else {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is concealed, so, due to your feminine appearance, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] feminine appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你无性别特征的下体被遮盖着，所以由于你女性化的外表，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"[npc.her]无性别特征的下体被遮盖着，所以由于[npc.her]女性化的外表，陌生人都觉得[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.F_V_FEMALE);
 						}
 					}
@@ -26285,8 +26285,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis and vagina:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to the fact that both your [pc.vagina] and [pc.penis] are exposed, as well as the fact that you have [pc.breastSize] breasts, everyone can tell that you're [pc.a_gender("+colouredGender+")] on first glance."
-							:"Due to the fact that both [npc.her] [npc.vagina] and [npc.penis] are exposed, as well as the fact that [npc.sheHasFull] [npc.breastSize] breasts, everyone can tell that [npc.sheIs] [npc.a_gender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.vagina]和[pc.penis]都暴露在外，并且拥有[pc.breastSize]的乳房，每个人都能一眼看得出你是个[pc.a_gender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.vagina]和[npc.penis]都暴露在外，并且拥有[npc.breastSize]的乳房，每个人都能一眼看得出[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 							Gender.N_P_V_B_HERMAPHRODITE);
 						
 				} else if(visibleVagina) {
@@ -26294,15 +26294,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your exposed [pc.vagina] and [pc.breastSize] breasts, reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上暴露在外的[pc.vagina]和[pc.breastSize]的乳房，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上暴露在外的[npc.vagina]和[npc.breastSize]的乳房，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.N_P_V_B_HERMAPHRODITE);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your exposed [pc.vagina] and [pc.breastSize] breasts, reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上暴露在外的[pc.vagina]和[pc.breastSize]的乳房，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上暴露在外的[npc.vagina]和[npc.breastSize]的乳房，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.N_P_V_B_HERMAPHRODITE);
 					}
 					
@@ -26310,16 +26310,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina] and [pc.breastSize] breasts, and the fact that your [pc.penis] remains concealed, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]和[pc.breastSize]的乳房暴露在外，而[pc.penis]却遮盖着，所有人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]和[npc.breastSize]的乳房暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_B_TOMBOY);
 						
 					} else {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina] and [pc.breastSize] breasts, everyone correctly assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]和[pc.breastSize]的乳房暴露在外，所有人第一眼都能正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]和[npc.breastSize]的乳房暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_B_TOMBOY);
 					}
 					
@@ -26327,8 +26327,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to your exposed [pc.penis] and [pc.breastSize] breasts, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-							:"Due to [npc.her] exposed [npc.penis] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.penis]和[pc.breastSize]的乳房暴露在外，每个人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.penis]和[npc.breastSize]的乳房暴露在外，每个人第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 							Gender.N_P_B_SHEMALE);
 					
 				} else {
@@ -26336,15 +26336,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your androgynous appearance and [pc.breastSize] breasts, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] androgynous appearance and [npc.breastSize] breasts, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上你中性的外表和[pc.breastSize]的乳房，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上[npc.her]中性的外表和[npc.breastSize]的乳房，导致大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_P_B_SHEMALE);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your androgynous appearance and [pc.breastSize] breasts, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] androgynous appearance and [npc.breastSize] breasts, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上你中性的外表和[pc.breastSize]的乳房，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上[npc.her]中性的外表和[npc.breastSize]的乳房，导致大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_P_B_SHEMALE);
 					}
 					
@@ -26352,31 +26352,31 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your [pc.penis] is concealed, so, due to your androgynous appearance and [pc.breastSize] breasts, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] androgynous appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"你的[pc.penis]被遮盖着，所以由于你中性的外表和[pc.breastSize]的乳房，大家第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]中性的外表和[npc.breastSize]的乳房，大家第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_B_TOMBOY);
 						
 					} else if(hasVagina()) {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your androgynous appearance and [pc.breastSize] breasts leads everyone to correctly assume that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"Due to [npc.her] androgynous appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你中性的外表和[pc.breastSize]的乳房导致大家都正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]中性的外表和[npc.breastSize]的乳房，大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_B_TOMBOY);
 						
 					} else {
 						if(isCoverableAreaVisible(CoverableArea.VAGINA) && isCoverableAreaVisible(CoverableArea.PENIS)) {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is exposed, so, due to your androgynous appearance and [pc.breastSize] breasts, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] genderless mound being exposed, combined with [npc.her] androgynous appearance and [npc.breastSize] breasts, everyone can tell that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你暴露在外的下体性别难辨，所以由于你中性的外表和[pc.breastSize]的乳房，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"[npc.her]暴露在外的下体性别难辨，所以由于[npc.her]中性的外表和[npc.breastSize]的乳房，陌生人都觉得[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.N_B_DOLL);
 							
 						} else {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is concealed, so, due to your androgynous appearance and [pc.breastSize] breasts, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] androgynous appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你无性别特征的下体被遮盖着，所以由于你中性的外表和[pc.breastSize]的乳房，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"由于[npc.her]中性的外表和[npc.breastSize]的乳房，大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.N_V_B_TOMBOY);
 						}
 					}
@@ -26388,8 +26388,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis and vagina:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to the fact that both your [pc.vagina] and [pc.penis] are exposed, everyone can tell that you're [pc.a_gender("+colouredGender+")] on first glance."
-							:"Due to the fact that both [npc.her] [npc.vagina] and [npc.penis] are exposed, everyone can tell that [npc.sheIs] [npc.a_gender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.vagina]和[pc.penis]都暴露在外，每个人都能一眼看得出你是个[pc.a_gender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.vagina]和[npc.penis]都暴露在外，每个人都能一眼看得出[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 							Gender.N_P_V_HERMAPHRODITE);
 						
 				} else if(visibleVagina) {
@@ -26397,15 +26397,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your exposed [pc.vagina], reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina], reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上暴露在外的[pc.vagina]，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上暴露在外的[npc.vagina]，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.N_P_V_HERMAPHRODITE);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your exposed [pc.vagina], reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina], reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上暴露在外的[pc.vagina]，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上暴露在外的[npc.vagina]，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.N_P_V_HERMAPHRODITE);
 					}
 					
@@ -26413,16 +26413,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina], and the fact that your [pc.penis] remains concealed, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]暴露在外，而[pc.penis]却遮盖着，所有人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_TOMBOY);
 						
 					} else {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina], everyone correctly assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]暴露在外，所有人第一眼都能正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_TOMBOY);
 					}
 					
@@ -26430,8 +26430,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to your exposed [pc.penis], everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-							:"Due to [npc.her] exposed [npc.penis], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.penis]暴露在外，每个人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.penis]暴露在外，每个人第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 							Gender.N_P_TRAP);
 					
 				} else {
@@ -26439,15 +26439,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your androgynous appearance, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] androgynous appearance, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上你中性的外表，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上[npc.her]中性的外表，导致大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_P_TRAP);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your androgynous appearance, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] androgynous appearance, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上你中性的外表，导致大家都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上[npc.her]中性的外表和[npc.breastSize]的乳房，导致大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_P_TRAP);
 					}
 					
@@ -26455,31 +26455,31 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your [pc.penis] is concealed, so, due to your androgynous appearance, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] androgynous appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"你的[pc.penis]被遮盖着，所以由于你中性的外表，大家第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]中性的外表，大家第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_TOMBOY);
 						
 					} else if(hasVagina()) {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your androgynous appearance leads everyone to correctly assume that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"Due to [npc.her] androgynous appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你中性的外表导致大家都正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]中性的外表，大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.N_V_TOMBOY);
 						
 					} else {
 						if(isCoverableAreaVisible(CoverableArea.VAGINA) && isCoverableAreaVisible(CoverableArea.PENIS)) {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is exposed, so, due to your androgynous appearance, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]"
-									:	"Due to [npc.her] genderless mound being exposed, combined with [npc.her] androgynous appearance, everyone can tell that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你暴露在外的下体性别难辨，所以由于你中性的外表，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"[npc.her]暴露在外的下体性别难辨，所以由于[npc.her]中性的外表，陌生人都觉得[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.N_NEUTER);
 							
 						} else {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is concealed, so, due to your androgynous appearance, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] androgynous appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你无性别特征的下体被遮盖着，所以由于你中性的外表，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"由于[npc.her]中性的外表，大家都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.N_V_TOMBOY);
 						}
 					}
@@ -26493,8 +26493,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis and vagina:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to the fact that both your [pc.vagina] and [pc.penis] are exposed, as well as the fact that you have [pc.breastSize] breasts, everyone can tell that you're [pc.a_gender("+colouredGender+")] on first glance."
-							:"Due to the fact that both [npc.her] [npc.vagina] and [npc.penis] are exposed, as well as the fact that [npc.sheHasFull] [npc.breastSize] breasts, everyone can tell that [npc.sheIs] [npc.a_gender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.vagina]和[pc.penis]都暴露在外，并且拥有[pc.breastSize]的乳房，每个人都能一眼看得出你是个[pc.a_gender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.vagina]和[npc.penis]都暴露在外，并且拥有[npc.breastSize]的乳房，每个人都能一眼看得出[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 							Gender.M_P_V_B_HERMAPHRODITE);
 						
 				} else if(visibleVagina) {
@@ -26502,15 +26502,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your exposed [pc.vagina] and [pc.breastSize] breasts, reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上暴露在外的[pc.vagina]和[pc.breastSize]的乳房，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上暴露在外的[npc.vagina]和[npc.breastSize]的乳房，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.M_P_V_B_HERMAPHRODITE);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your exposed [pc.vagina] and [pc.breastSize] breasts, reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上暴露在外的[pc.vagina]和[pc.breastSize]的乳房，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上暴露在外的[npc.vagina]和[npc.breastSize]的乳房，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.M_P_V_B_HERMAPHRODITE);
 					}
 					
@@ -26518,16 +26518,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume female, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina] and [pc.breastSize] breasts, and the fact that your [pc.penis] remains concealed, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]和[pc.breastSize]的乳房暴露在外，而[pc.penis]却遮盖着，所有人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]和[npc.breastSize]的乳房暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_V_B_BUTCH);
 						
 					} else {
 						// Correctly assume female:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina] and [pc.breastSize] breasts, everyone correctly assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]和[pc.breastSize]的乳房暴露在外，所有人第一眼都能正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]和[npc.breastSize]的乳房暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_V_B_BUTCH);
 					}
 					
@@ -26535,8 +26535,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to your exposed [pc.penis] and [pc.breastSize] breasts, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-							:"Due to [npc.her] exposed [npc.penis] and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.penis]和[pc.breastSize]的乳房暴露在外，每个人第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.penis]和[npc.breastSize]的乳房暴露在外，每个人第一眼都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 							Gender.M_P_B_BUSTYBOY);
 					
 				} else {
@@ -26544,15 +26544,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your masculine appearance and [pc.breastSize] breasts, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] masculine appearance and [npc.breastSize] breasts, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上你男性化的外表和[pc.breastSize]的乳房，导致大家都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上[npc.her]男性化的外表和[npc.breastSize]的乳房，导致大家都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_B_BUSTYBOY);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your masculine appearance and [pc.breastSize] breasts, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] masculine appearance and [npc.breastSize] breasts, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上你男性化的外表和[pc.breastSize]的乳房，导致大家都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上[npc.her]男性化的外表和[npc.breastSize]的乳房，导致大家都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_B_BUSTYBOY);
 					}
 					
@@ -26560,31 +26560,31 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Correctly assume busty boy:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your [pc.penis] is concealed, so, due to your masculine appearance and [pc.breastSize] breasts, everyone correctly assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] masculine appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"你的[pc.penis]被遮盖着，所以由于你男性化的外表和[pc.breastSize]的乳房，大家第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]男性化的外表和[npc.breastSize]的乳房，大家第一眼都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_B_BUSTYBOY);
 						
 					} else if(hasVagina()) {
 						// Assume bustyboy:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your masculine appearance and [pc.breastSize] breasts leads everyone to assume that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"Due to [npc.her] masculine appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你男性化的外表和[pc.breastSize]的乳房导致大家都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]男性化的外表和[npc.breastSize]的乳房，大家都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_B_BUSTYBOY);
 						
 					} else {
 						if(isCoverableAreaVisible(CoverableArea.VAGINA) && isCoverableAreaVisible(CoverableArea.PENIS)) {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is exposed, so, due to your masculine appearance and [pc.breastSize] breasts, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] genderless mound being exposed, combined with [npc.her] masculine appearance and [npc.breastSize] breasts, everyone can tell that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你暴露在外的下体性别难辨，所以由于你男性化的外表和[pc.breastSize]的乳房，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"[npc.her]暴露在外的下体性别难辨，所以由于[npc.her]男性化的外表和[npc.breastSize]的乳房，陌生人都觉得[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.M_B_MANNEQUIN);
 							
 						} else {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is concealed, so, due to your masculine appearance and [pc.breastSize] breasts, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] masculine appearance and [npc.breastSize] breasts, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你无性别特征的下体被遮盖着，所以由于你男性化的外表和[pc.breastSize]的乳房，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"由于[npc.her]男性化的外表和[npc.breastSize]的乳房，大家都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.M_V_B_BUTCH);
 						}
 					}
@@ -26596,8 +26596,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis and vagina:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to the fact that both your [pc.vagina] and [pc.penis] are exposed, everyone can tell that you're [pc.a_gender("+colouredGender+")] on first glance."
-							:"Due to the fact that both [npc.her] [npc.vagina] and [npc.penis] are exposed, everyone can tell that [npc.sheIs] [npc.a_gender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.vagina]和[pc.penis]都暴露在外，每个人都能一眼看得出你是个[pc.a_gender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.vagina]和[npc.penis]都暴露在外，每个人都能一眼看得出[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 							Gender.M_P_V_HERMAPHRODITE);
 						
 				} else if(visibleVagina) {
@@ -26605,15 +26605,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your exposed [pc.vagina], reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina], reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上暴露在外的[pc.vagina]，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上暴露在外的[npc.vagina]，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.M_P_V_HERMAPHRODITE);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your exposed [pc.vagina], reveals to everyone that you're [pc.a_gender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] exposed [npc.vagina], reveals to everyone that [npc.sheIs] [npc.a_gender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上暴露在外的[pc.vagina]，都在向众人表明你是个[pc.a_gender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上暴露在外的[npc.vagina]，都在向众人表明[npc.sheIs]是个[npc.a_gender("+colouredGender+")]。",
 								Gender.M_P_V_HERMAPHRODITE);
 					}
 					
@@ -26621,16 +26621,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume cuntboy, as penis is not visible:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina], and the fact that your [pc.penis] remains concealed, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]暴露在外，而[pc.penis]却遮盖着，所有人第一眼都认为你是[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_V_CUNTBOY);
 						
 					} else {
 						// Correctly assume cuntboy:
 						return new GenderAppearance(
 								isPlayer()
-								?"Due to your exposed [pc.vagina], everyone correctly assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] exposed [npc.vagina], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"由于你的[pc.vagina]暴露在外，所有人第一眼都能正确地认识到你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]的[npc.vagina]暴露在外，所有人第一眼都认定[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_V_CUNTBOY);
 					}
 					
@@ -26638,8 +26638,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					// Exposed penis:
 					return new GenderAppearance(
 							isPlayer()
-							?"Due to your exposed [pc.penis], everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-							:"Due to [npc.her] exposed [npc.penis], everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+							?"由于你的[pc.penis]暴露在外，每个人第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+							:"由于[npc.her]的[npc.penis]暴露在外，每个人第一眼都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 							Gender.M_P_MALE);
 					
 				} else {
@@ -26647,15 +26647,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					if(isPenisBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.cockSize] bulge between your legs, combined with your masculine appearance, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.cockSize] bulge between [npc.her] legs, combined with [npc.her] masculine appearance, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你的股间鼓起了一个[pc.cockSize]的帐篷，加上你男性化的外表，导致大家都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]的股间鼓起了一个[npc.cockSize]的帐篷，加上[npc.her]男性化的外表，导致大家都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_MALE);
 						
 					} else if (isTesticleBulgeVisible()) {
 						return new GenderAppearance(
 								isPlayer()
-								?"The [pc.ballSize] bulge of your [pc.balls] between your legs, combined with your masculine appearance, leads everyone to believe that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"The [npc.ballSize] bulge between [npc.her] legs, combined with [npc.her] masculine appearance, leads everyone to believe that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你股间[pc.balls]撑起的[pc.ballSize]鼓包，加上你男性化的外表，导致大家都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"[npc.her]股间撑起的[npc.ballSize]鼓包，加上[npc.her]男性化的外表，导致大家都认为[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_MALE);
 					}
 					
@@ -26663,31 +26663,31 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						// Assume male:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your [pc.penis] is concealed, so, due to your masculine appearance, everyone assumes that you're [pc.a_appearsAsGender("+colouredGender+")] on first glance."
-								:"Due to [npc.her] masculine appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")] on first glance.",
+								?"你的[pc.penis]被遮盖着，所以由于你男性化的外表，大家第一眼都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]男性化的外表，每个人第一眼都认为[npc.sheIs]是[npc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_MALE);
 						
 					} else if(hasVagina()) {
 						// Assume male:
 						return new GenderAppearance(
 								isPlayer()
-								?"Your masculine appearance leads everyone to assume that you're [pc.a_appearsAsGender("+colouredGender+")]."
-								:"Due to [npc.her] masculine appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+								?"你男性化的外表导致大家都认为你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+								:"由于[npc.her]男性化的外表，每个人都认为[npc.sheIs]是个[pc.a_appearsAsGender("+colouredGender+")]。",
 								Gender.M_P_MALE);
 						
 					} else {
 						if(isCoverableAreaVisible(CoverableArea.VAGINA) && isCoverableAreaVisible(CoverableArea.PENIS)) {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is exposed, so, due to your masculine appearance, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] genderless mound being exposed, combined with [npc.her] masculine appearance, everyone can tell that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你暴露在外的下体性别难辨，所以由于你男性化的外表，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"[npc.her]暴露在外的下体性别难辨，所以由于[npc.her]男性化的外表，陌生人都觉得[npc.sheIs]是个[npc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.M_MANNEQUIN);
 							
 						} else {
 							return new GenderAppearance(
 									isPlayer()
-									?"Your genderless mound is concealed, so, due to your masculine appearance, strangers treat you as [pc.a_appearsAsGender("+colouredGender+")]."
-									:	"Due to [npc.her] masculine appearance, everyone assumes that [npc.sheIs] [npc.a_appearsAsGender("+colouredGender+")].",
+									?"你无性别特征的下体被遮盖着，所以由于你男性化的外表，陌生人都觉得你是个[pc.a_appearsAsGender("+colouredGender+")]。"
+									:"由于[npc.her]男性化的外表，每个人都认为[npc.sheIs]是个[pc.a_appearsAsGender("+colouredGender+")]。",
 									Gender.M_P_MALE);
 						}
 					}
@@ -26801,19 +26801,19 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	 */
 	public String getUnableToTransformDescription() {
 		if(!getTrueSubspecies().isAbleToSelfTransform() || this.isDoll()) {
-			return UtilText.parse(this, "As [npc.sheIsFull] [npc.a_race], [npc.name] cannot transform [npc.her] body at will!");
+			return UtilText.parse(this, "由于[npc.sheIsFull]是个[npc.a_race]，[npc.name]无法随意转化[npc.her]的身体！");
 		}
 		if(this.isFeral()) {
-			return UtilText.parse(this, "As [npc.sheIsFull] a feral [npc.race], [npc.name] cannot have [npc.her] body transformed!");
+			return UtilText.parse(this, "由于[npc.sheIsFull]是个兽态[npc.race]，[npc.name]无法转化[npc.her]的身体！");
 		}
 		if(this.getClothingCurrentlyEquipped().stream().anyMatch(c -> c.isSelfTransformationInhibiting())) {
-			return UtilText.parse(this, "Although [npc.nameIsFull] normally able to self-transform, [npc.she] cannot do so due to an enchantment on [npc.her] clothing prohibiting the use of [npc.her] self-transformative powers!");
+			return UtilText.parse(this, "尽管[npc.nameIsFull]通常能够自我转化，但[npc.she]现在无法这么做，因为[npc.her]衣物上的附魔阻止了[npc.her]使用自我转化的能力！");
 		}
 		if(this.getTattoos().values().stream().anyMatch(c -> c.isSelfTransformationInhibiting())) {
-			return UtilText.parse(this, "Although [npc.nameIsFull] normally able to self-transform, [npc.she] cannot do so due to an enchantment on [npc.her] tattoos prohibiting the use of [npc.her] self-transformative powers!");
+			return UtilText.parse(this, "尽管[npc.nameIsFull]通常能够自我转化，但[npc.she]现在无法这么做，因为[npc.her]纹身上的附魔阻止了[npc.her]使用自我转化的能力！");
 		}
 		if(Main.game.isInSex() && Main.sex.isSelfTransformDisabled(this)) {
-			return UtilText.parse(this, "Although [npc.nameIsFull] normally able to self-transform, [npc.she] cannot do so during this sex scene!");
+			return UtilText.parse(this, "尽管[npc.nameIsFull]通常能够自我转化，但[npc.she]无法在性爱场景中这么做！");
 		}
 		return "";
 	}
@@ -26993,7 +26993,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					
 					if(displayColourDiscovered) {
 						postTFSB.append(UtilText.parse(this,
-								"<b>[npc.Name] [npc.has] discovered that the natural colour of [npc.her] "+bctName+" is "+getCovering(bct).getColourDescriptor(this, true, false)+"!</b>"));
+								"<b>[npc.Name]发现[npc.her]"+bctName+"的天然颜色是"+getCovering(bct).getColourDescriptor(this, true, false)+"！</b>"));
 					}
 				}
 			}
@@ -27071,7 +27071,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(sb.length()>0) {
 			return "<p style='text-align:center;'>"
-						+ "[style.boldTerrible(Additional Loss Effects)]"
+						+ "[style.boldTerrible(损失的效果)]"
 						+ "<br/>"
 						+ UtilText.parse(this, sb.toString())
 					+ "</p>";
@@ -27085,16 +27085,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		Scar scar = this.getScarInSlot(slot);
 		if(scar!=null) {
-			innerSb.append("<br/><i>[npc.She] [style.boldBad(lose)] [npc.her] '"+scar.getName()+"' [style.colourScar(scar)]!</i>");
+			innerSb.append("<br/><i>[npc.She]失去了“"+scar.getName()+"”[style.colourScar(伤疤)]！</i>");
 			this.setScar(slot, null);
 		}
 		Tattoo tattoo = this.getTattooInSlot(slot);
 		if(tattoo!=null) {
-			innerSb.append("<br/><i>[npc.She] [style.boldTerrible(lose)] [npc.her] '"+tattoo.getDisplayName(false)+"'!</i>");
+			innerSb.append("<br/><i>[npc.She]失去了“"+tattoo.getDisplayName(false)+"”！</i>");
 			this.removeTattoo(slot);
 		}
 		if(innerSb.length()>0) {
-			return "[npc.Name] no longer [npc.has] "+partLoss+", and as such:"
+			return "[npc.Name]不再拥有"+partLoss+"，因而："
 					+ innerSb.toString();
 		}
 		
@@ -27194,20 +27194,20 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				if(partner.equals(this)) {
 					return UtilText.parse(this, partner,
 							"<p style='text-align:center;'><i>"
-								+ "[npc.NamePos] "+invSlot.getNameOfAssociatedPart(this)+" "+(invSlot.isPlural(this)?"are":"is")+" [style.italicsPinkDeep(marked)] by [npc.her] "+lipstickToAdd.getFullDescription(partner, true)+"!"
+								+ "[npc.NamePos]的"+invSlot.getNameOfAssociatedPart(this)+"被[npc.her]的"+lipstickToAdd.getFullDescription(partner, true)+"[style.italicsPinkDeep(标记)]了！"
 							+ "</i></p>");
 					
 				} else {
 					return UtilText.parse(this, partner,
 							"<p style='text-align:center;'><i>"
-								+ "[npc.NamePos] "+invSlot.getNameOfAssociatedPart(this)+" "+(invSlot.isPlural(this)?"are":"is")+" [style.italicsPinkDeep(marked)] by [npc2.namePos] "+lipstickToAdd.getFullDescription(partner, true)+"!"
+								+ "[npc.NamePos]的"+invSlot.getNameOfAssociatedPart(this)+"被[npc2.namePos]的"+lipstickToAdd.getFullDescription(partner, true)+"[style.italicsPinkDeep(标记)]了！"
 							+ "</i></p>");
 				}
 				
 			} else {
 				return UtilText.parse(this,
 						"<p style='text-align:center;'><i>"
-							+ "[npc.NamePos] "+invSlot.getNameOfAssociatedPart(this)+" "+(invSlot.isPlural(this)?"are":"is")+" [style.italicsPinkDeep(marked)] by "+lipstickToAdd.getFullDescription(this, true)+"!"
+							+ "[npc.NamePos]的"+invSlot.getNameOfAssociatedPart(this)+"被"+lipstickToAdd.getFullDescription(this, true)+"[style.italicsPinkDeep(标记)]了！"
 						+ "</i></p>");
 			}
 		}
@@ -27462,18 +27462,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			loadImages(true);
 			return UtilText.parse(this,
 					"<p style='text-align:center;'>"
-						+ "[npc.NamePos] body subtly shifts to become "
+						+ "[npc.NamePos]的身体发生了略微的变化，现在"
 							+(isFem
-								?"[style.italicsFeminine(more feminine)]"
-								:"[style.italicsMasculine(more masculine)]")
-							+".<br/>"
-						+ "[npc.She] now [npc.has] <b style='color:"+ Femininity.valueOf(getFemininityValue()).getColour().toWebHexString() + ";'>" + Femininity.getFemininityName(getFemininityValue(), true) + "</b> body."
+								?"[style.italicsFeminine(更女性化)]"
+								:"[style.italicsMasculine(更男性化)]")
+							+"了。<br/>"
+						+ "[npc.She]现在拥有<b style='color:"+ Femininity.valueOf(getFemininityValue()).getColour().toWebHexString() + ";'>" + Femininity.getFemininityName(getFemininityValue(), true) + "</b>身体。"
 					+ "</p>"
 					+beardLoss);
 		}
 		
 		return "<p style='text-align:center;'>"
-				+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.NamePos] femininity doesn't change...</span>")
+				+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.NamePos]的女性化程度没有改变……</span>")
 			+ "</p>";
 	}
 
@@ -27496,16 +27496,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (body.setBodySize(bodySize)) {
 				if(isPlayer()) {
 					return "<p class='center'>"
-								+ "You feel your body shifting and expanding as <b style='color:" + PresetColour.BODY_SIZE_THREE.toWebHexString() + ";'>you grow larger</b>.<br/>"
-								+ "You now have <b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true)+ "</b>, "
-									+ Muscle.valueOf(getMuscleValue()).getName(false) + " body, giving you "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+								+ "你感觉到身体正在发生变化，<b style='color:" + PresetColour.BODY_SIZE_THREE.toWebHexString() + ";'>身躯变得更大了</b>。<br/>"
+								+ "你现在有<b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true)+ "</b>而"
+									+ Muscle.valueOf(getMuscleValue()).getName(false) + "的身体，塑造了你"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 							+ "</p>";
 				} else {
 					return UtilText.parse(this,
 							"<p class='center'>"
-								+ "[npc.NamePos] body shifts and expands as <b style='color:" + PresetColour.BODY_SIZE_THREE.toWebHexString() + ";'>[npc.she] grows larger</b>.<br/>"
-								+ "[npc.She] now has <b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true) + "</b>, "
-										+ Muscle.valueOf(getMuscleValue()).getName(false) + " body, giving [npc.herHim] "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+								+ "[npc.NamePos]的身体发生了变化，<b style='color:" + PresetColour.BODY_SIZE_THREE.toWebHexString() + ";'>身躯变得更大了</b>。<br/>"
+								+ "[npc.She]现在有<b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true) + "</b>而"
+										+ Muscle.valueOf(getMuscleValue()).getName(false) + "的身体，塑造了[npc.herHim]"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 							+ "</p>");
 				}
 			}
@@ -27513,16 +27513,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (body.setBodySize(bodySize)) {
 				if(isPlayer()) {
 					return "<p class='center'>"
-							+ "You feel your body shifting and narrowing down as <b style='color:" + PresetColour.BODY_SIZE_ONE.toWebHexString() + ";'>you get slimmer</b>.<br/>"
-							+ "You now have <b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true) + "</b>, "
-									+ Muscle.valueOf(getMuscleValue()).getName(false) + " body, giving you "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+							+ "你感觉到身体正在发生变化，<b style='color:" + PresetColour.BODY_SIZE_ONE.toWebHexString() + ";'>身躯更苗条了</b>。<br/>"
+							+ "你现在有<b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true) + "</b>而"
+									+ Muscle.valueOf(getMuscleValue()).getName(false) + "的身体，塑造了你"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 						+ "</p>";
 				} else {
 					return UtilText.parse(this,
 							"<p class='center'>"
-								+ "[npc.NamePos] body shifts and narrows down as <b style='color:" + PresetColour.BODY_SIZE_ONE.toWebHexString() + ";'>[npc.she] gets slimmer</b>.<br/>"
-								+ "[npc.She] now has <b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true) + "</b>, "
-										+ Muscle.valueOf(getMuscleValue()).getName(false) + " body, giving [npc.herHim] "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+								+ "[npc.NamePos]的身体发生了变化，<b style='color:" + PresetColour.BODY_SIZE_ONE.toWebHexString() + ";'>身躯更苗条了</b>。<br/>"
+								+ "[npc.She]现在有<b style='color:"+ BodySize.valueOf(getBodySizeValue()).getColour().toWebHexString() + ";'>" + BodySize.valueOf(getBodySizeValue()).getName(true) + "</b>而"
+										+ Muscle.valueOf(getMuscleValue()).getName(false) + "的身体，塑造了[npc.herHim]"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 							+ "</p>");
 				}
 			}
@@ -27530,18 +27530,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(isPlayer()) {
 			return "<p class='center'>"
-					+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Your body's size doesn't change...</span>"
+					+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>你的体型没有发生变化……</span>"
 				+ "</p>";
 		} else {
 			return "<p class='center'>"
-					+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.NamePos] body doesn't change...</span>")
+					+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.NamePos]的体型没有发生变化……</span>")
 				+ "</p>";
 		}
 	}
 
 	public String incrementBodySize(int increment) {
 		StringBuilder sb = new StringBuilder();
-		sb.append("<p style='text-align:center'>[style.bold"+(increment<0?"Bad":"Good")+"("+(increment>0?"+":"")+increment+")] <b style='color:"+PresetColour.BODY_SIZE_THREE.toWebHexString()+";'>Body Size</b></p>");
+		sb.append("<p style='text-align:center'>[style.bold"+(increment<0?"Bad":"Good")+"("+(increment>0?"+":"")+increment+")]<b style='color:"+PresetColour.BODY_SIZE_THREE.toWebHexString()+";'>体型</b></p>");
 		sb.append(setBodySize(getBodySizeValue() + increment));
 		return sb.toString();
 	}
@@ -27561,16 +27561,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (body.setMuscle(muscle)) {
 				if(isPlayer()) {
 					return "<p class='center'>"
-								+ "You feel your body shifting as <b style='color:" + PresetColour.MUSCLE_THREE.toWebHexString() + ";'>you get more muscular</b>.<br/>"
-								+ "You now have <b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>, "
-										+ BodySize.valueOf(getBodySizeValue()).getName(false) + " body, giving you "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+								+ "你感觉到身体正在发生变化，<b style='color:" + PresetColour.MUSCLE_THREE.toWebHexString() + ";'>肌肉量增多了</b>。<br/>"
+								+ "你现在有<b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>而"
+										+ BodySize.valueOf(getBodySizeValue()).getName(false) + "的身体，塑造了你"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 							+ "</p>";
 				} else {
 					return UtilText.parse(this,
 							"<p class='center'>"
-								+ "[npc.NamePos] body shifts as <b style='color:" + PresetColour.MUSCLE_THREE.toWebHexString() + ";'>[npc.she] gets more muscular</b>.<br/>"
-								+ "[npc.She] now has <b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>, "
-										+ BodySize.valueOf(getBodySizeValue()).getName(false) + " body, giving [npc.her] "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+								+ "[npc.NamePos]的身体发生了变化，<b style='color:" + PresetColour.MUSCLE_THREE.toWebHexString() + ";'>肌肉量更多了</b>。<br/>"
+								+ "[npc.She]现在拥有<b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>、"
+										+ BodySize.valueOf(getBodySizeValue()).getName(false) + "的身体，塑造了[npc.her]"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 							+ "</p>");
 				}
 			}
@@ -27578,16 +27578,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (body.setMuscle(muscle)) {
 				if(isPlayer()) {
 					return "<p class='center'>"
-							+ "You feel your body shifting as <b style='color:" + PresetColour.MUSCLE_ONE.toWebHexString() + ";'>you lose some of your muscle</b>.<br/>"
-							+ "You now have <b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>, "
-									+ BodySize.valueOf(getBodySizeValue()).getName(false) + " body, giving you "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+							+ "你感到自己的身体发生了变化，<b style='color:" + PresetColour.MUSCLE_ONE.toWebHexString() + ";'>你失去了一些肌肉</b>。<br/>"
+							+ "你现在有<b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>而"
+									+ BodySize.valueOf(getBodySizeValue()).getName(false) + "的身体，塑造了你"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 						+ "</p>";
 				} else {
 					return UtilText.parse(this,
 							"<p class='center'>"
-								+ "[npc.NamePos] body shifts as <b style='color:" + PresetColour.MUSCLE_ONE.toWebHexString() + ";'>[npc.she] loses some of [npc.her] muscle</b>.<br/>"
-								+ "[npc.She] now has <b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>, "
-										+ BodySize.valueOf(getBodySizeValue()).getName(false) + " body, giving [npc.her] "+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+" appearance."
+								+ "[npc.NamePos]的身体发生了变化，<b style='color:" + PresetColour.MUSCLE_ONE.toWebHexString() + ";'>失去了部分肌肉</b>。<br/>"
+								+ "[npc.She]现在有<b style='color:"+ Muscle.valueOf(getMuscleValue()).getColour().toWebHexString() + ";'>" + Muscle.valueOf(getMuscleValue()).getName(true) + "</b>而"
+										+ BodySize.valueOf(getBodySizeValue()).getName(false) + "的身体，塑造了[npc.her]"+BodyShape.valueOf(Muscle.valueOf(getMuscleValue()), BodySize.valueOf(getBodySizeValue())).getName(true)+"的身材。"
 							+ "</p>");
 				}
 			}
@@ -27595,18 +27595,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		
 		if(isPlayer()) {
 			return "<p class='center'>"
-					+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Your body's muscles don't change...</span>"
+					+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>你的肌肉量没有发生变化……</span>"
 				+ "</p>";
 		} else {
 			return "<p class='center'>"
-					+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.NamePos] muscles don't change...</span>")
+					+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.namePos]的肌肉量没有发生变化……</span>")
 				+ "</p>";
 		}
 	}
 
 	public String incrementMuscle(int increment) {
 		StringBuilder sb = new StringBuilder();
-		sb.append("<p style='text-align:center'>[style.bold"+(increment<0?"Bad":"Good")+"("+(increment>0?"+":"")+increment+")] <b style='color:"+PresetColour.MUSCLE_THREE.toWebHexString()+";'>Muscle Definition</b></p>");
+		sb.append("<p style='text-align:center'>[style.bold"+(increment<0?"Bad":"Good")+"("+(increment>0?"+":"")+increment+")]<b style='color:"+PresetColour.MUSCLE_THREE.toWebHexString()+";'>肌肉量</b></p>");
 		sb.append(setMuscle(getMuscleValue() + increment));
 		return sb.toString();
 	}
@@ -27678,13 +27678,13 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (body.setHeight(height)) {
 				return isPlayer()
 						? "<p class='center'>"
-							+ "The world around you seems slightly further away than it used to be, but after a moment you realise that you've just <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>grown taller</b>."
+							+ "你附近的世界仿佛突然向你远离，但片刻过后，你意识到不过是自己<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>长高了</b>。"
 							+ "<br/>"
-							+ "You are now <b>" + Units.size(getHeightValue(), Units.UnitType.LONG) + "</b> tall."
+							+ "你现在身高<b>" + Units.size(getHeightValue(), Units.UnitType.LONG) + "</b>。"
 						+ "</p>"
 						: UtilText.parse(this,
 							"<p class='center'>"
-								+ "[npc.She] sways from side to side a little, [npc.her] balance suddenly thrown off by the fact that [npc.sheIs] just <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>grown taller</b>."
+								+ "[npc.She]左右摇晃了一下身子，忽然差点失去平衡，这是因为[npc.sheIs]<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>长高了</b>。"
 							+ "</p>");
 			}
 			
@@ -27692,24 +27692,24 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (body.setHeight(height)) {
 				return isPlayer()
 						? "<p class='center'>"
-							+ "The world around you suddenly seems slightly closer than it used to be, but after a moment you realise that you've just <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>become shorter</b>."
+							+ "你附近的世界仿佛突然向你靠近，但片刻过后，你意识到不过是自己<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>变矮了</b>。"
 							+ "<br/>"
-							+ "You are now <b>" + Units.size(getHeightValue(), Units.UnitType.LONG) + "</b> tall."
+							+ "你现在身高<b>" + Units.size(getHeightValue(), Units.UnitType.LONG) + "</b>。"
 						+ "</p>"
 						: UtilText.parse(this,
 							"<p class='center'>"
-								+ "[npc.She] shrinks down, <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>becoming noticeably shorter</b>."
+								+ "[npc.She]身形收缩，<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>显然矮了不少</b>。"
 							+ "</p>");
 			}
 		}
 		
 		if(isPlayer()) {
 			return "<p class='center'>"
-					+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Your height doesn't change...</span>"
+					+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>你的身高并无变化……</span>"
 				+ "</p>";
 		} else {
 			return "<p class='center'>"
-					+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.NamePos] height doesn't change...</span>")
+					+ UtilText.parse(this, "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>[npc.NamePos]的身高并无变化……</span>")
 				+ "</p>";
 		}
 	}
@@ -27778,43 +27778,43 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String setPubicHair(BodyHair pubicHair) {
 		if(!isPubicHairAvailable()) {
 			if(this.hasPenis() && !getPenisType().isPubicHairAllowed()) {
-				return UtilText.parse(this, "<p style='text-align:center;'>[style.colourDisabled(As [npc.namePos] penis type prevents [npc.herHim] from growing any pubic hair, nothing happens...)]</p>");
+				return UtilText.parse(this, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.namePos]的阴茎类型不允许[npc.herHim]生长任何阴毛，所以无事发生……)]</p>");
 			} else if(this.hasVagina() && !getVaginaType().isPubicHairAllowed()) {
-				return UtilText.parse(this, "<p style='text-align:center;'>[style.colourDisabled(As [npc.namePos] vagina type prevents [npc.herHim] from growing any pubic hair, nothing happens...)]</p>");
+				return UtilText.parse(this, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.namePos]的阴道类型不允许[npc.herHim]生长任何阴毛，所以无事发生……)]</p>");
 			} else {
-				return UtilText.parse(this, "<p style='text-align:center;'>[style.colourDisabled(As [npc.namePos] lack of genitalia prevents [npc.herHim] from growing any pubic hair, nothing happens...)]</p>");
+				return UtilText.parse(this, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.namePos]没有生殖器，无法生长任何阴毛，所以无事发生……)]</p>");
 			}
 		}
 		if(getPubicHair() == pubicHair) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 			
 		} else {
 			StringBuilder sb = new StringBuilder();
 			
 			switch(pubicHair) {
 				case ZERO_NONE:
-					sb.append(UtilText.parse(this, "<p>There is no longer any trace of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.her]的阴部已经没有任何"+getPubicHairType().getFullDescription(this, true)+"的踪迹了。</p>"));
 					break;
 				case ONE_STUBBLE:
-					sb.append(UtilText.parse(this, "<p>[npc.Name] now [npc.has] a stubbly patch of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.Name]的阴部现在有着一小茬"+getPubicHairType().getFullDescription(this, true)+"。</p>"));
 					break;
 				case TWO_MANICURED:
-					sb.append(UtilText.parse(this, "<p>[npc.Name] now [npc.has] a well-manicured patch of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.Name]的阴部现在有一小片齐整的"+getPubicHairType().getFullDescription(this, true)+"。</p>"));
 					break;
 				case THREE_TRIMMED:
-					sb.append(UtilText.parse(this, "<p>[npc.Name] now [npc.has] a trimmed patch of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.Name]的阴部现在有一小片修剪过的"+getPubicHairType().getFullDescription(this, true)+"。</p>"));
 					break;
 				case FOUR_NATURAL:
-					sb.append(UtilText.parse(this, "<p>[npc.Name] now [npc.has] a natural bush of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.Name]的阴部自然生长着一片"+getPubicHairType().getFullDescription(this, true)+"。</p>"));
 					break;
 				case FIVE_UNKEMPT:
-					sb.append(UtilText.parse(this, "<p>[npc.Name] now [npc.has] an unkempt mass of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.Name]的阴部现在有一片凌乱的"+getPubicHairType().getFullDescription(this, true)+"。</p>"));
 					break;
 				case SIX_BUSHY:
-					sb.append(UtilText.parse(this, "<p>[npc.Name] now [npc.has] a thick mass of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.Name]的阴部现在有一片厚实浓密的"+getPubicHairType().getFullDescription(this, true)+"。</p>"));
 					break;
 				case SEVEN_WILD:
-					sb.append(UtilText.parse(this, "<p>[npc.Name] now [npc.has] a wild, bushy mass of "+getPubicHairType().getFullDescription(this, true)+" in [npc.her] pubic region.</p>"));
+					sb.append(UtilText.parse(this, "<p>[npc.Name]的阴部现在有一大片野蛮生长的"+getPubicHairType().getFullDescription(this, true)+"。</p>"));
 					break;
 			}
 			
@@ -27852,12 +27852,12 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			body.setPiercedStomach(true);
 			if(isPlayer()) {
 				return "<p>"
-							+ "Your navel is now <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>pierced</b>."
+							+ "你的肚脐现在<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>已穿孔</b>。"
 						+ "</p>";
 			}else {
 				return UtilText.parse(this,
 						"<p>"
-							+ "[npc.Her] navel is now <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>pierced</b>."
+							+ "[npc.Her]的肚脐现在<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>已穿孔</b>。"
 						+ "</p>");
 			}
 			
@@ -27873,20 +27873,20 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 			if(isPlayer()) {
 				return "<p>"
-							+ "Your navel is <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>no longer pierced</b>."
+							+ "你的肚脐现在<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>不再穿孔</b>。"
 						+ "</p>"
 						+piercingUnequip;
 			}else {
 				return UtilText.parse(this,
 						"<p>"
-							+ "[npc.Her] navel is <b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>no longer pierced</b>."
+							+ "[npc.Her]的肚脐现在<b style='color:" + PresetColour.TRANSFORMATION_GENERIC.toWebHexString() + ";'>不再穿孔</b>。"
 						+ "</p>"
 						+piercingUnequip);
 			}
 			
 		} else {
 			return "<p>"
-						+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Nothing seems to happen.</span>"
+						+ "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>似乎无事发生。</span>"
 					+ "</p>";
 		}
 	}
@@ -28047,22 +28047,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(isPlayer()) {
 			if(nailPolish.getPattern()==CoveringPattern.NONE) {
 				return "<p>"
-							+ "You are [style.boldShrink(not wearing)] any nail polish."
+							+ "你[style.boldShrink(没有涂)]指甲油。"
 						+ "</p>";
 			} else {
 				return "<p>"
-							+ "You are [style.boldGrow(now wearing)] "+nailPolish.getColourDescriptor(this, true, false)+" nail polish."
+							+ "你[style.boldGrow(涂着)] "+nailPolish.getColourDescriptor(this, true, false)+"指甲油。"
 						+ "</p>";
 			}
 			
 		} else {
 			if(nailPolish.getPattern()==CoveringPattern.NONE) {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldShrink(not wearing)] any nail polish."
+							+ "[npc.Name][style.boldShrink(没有涂)]指甲油。"
 						+ "</p>");
 			} else {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldGrow(now wearing)] "+nailPolish.getColourDescriptor(this, true, false)+" nail polish."
+							+ "[npc.Name][style.boldGrow(涂了)] "+nailPolish.getColourDescriptor(this, true, false)+"指甲油。"
 						+ "</p>");
 			}
 		}
@@ -28374,7 +28374,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 				|| this.getSubspeciesOverride()==Subspecies.ELDER_LILIN
 				|| (this.getBodyMaterial()==BodyMaterial.SILICONE && !forceChange)) { // Doll TF cannot be undone
 			return "<p>"
-						+ "[style.colourDisabled(Nothing happens...)]"
+						+ "[style.colourDisabled(无事发生……)]"
 					+ "</p>";
 		}
 
@@ -28382,18 +28382,18 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
         if(type==BodyMaterial.FLESH && this.getBodyMaterial()==BodyMaterial.SLIME && this.isPregnant()) {
            return UtilText.parse(this,
         		   "<p>"
-						+ "[npc.NamePos] slimy body starts to tingle all over, and as [npc.she] [npc.verb(look)] down at [npc.her] [npc.arms], [npc.she] [npc.verb(see)] the slime that they're made up of starting to get more and more opaque."
-						+ " As [npc.her] slime starts to solidify, the little glowing core in the place where [npc.her] heart should be suddenly glows brightly while a strange warmth starts to permeate all of [npc.her] body."
+						+ "[npc.NamePos]黏糊糊的身体开始全身刺痛，[npc.she]低头看向[npc.arms]，组成它们的粘液开始变得越来越不透明。"
+						+ "随着[npc.her]的粘液开始凝固，[npc.her]心脏位置的小发光核心突然发出耀眼的光芒，一股奇异的温暖在[npc.her]周身弥漫。"
 					+ "</p>"
 					+ "<p>"
-						+ "[npc.She] [npc.verb(feel)] the transformation slow down and then reverse until [npc.her] entire body has reverted to being made entirely out of slime!"
+						+ "[npc.She]感到转化速度逐渐减慢，随后逆转，直到[npc.her]的整个身体完全恢复成粘液！"
 					+ "</p>"
 					+ "<p>"
-						+ "It seems that the ongoing pregnancy is [style.italicsBad(preventing)] [npc.him] from turning into anything other than a slime,"
-							+ " and it looks like [npc.she] will have to give birth before it will be possible to transform into having a body made of flesh."
+						+ "似乎现行的怀孕过程[style.italicsBad(阻碍)]了[npc.him]变成其他形态，只能是一只史莱姆，"
+							+ "看来[npc.she]必须先分娩，才有可能把身体转化成血肉之躯。"
 					+ "</p>"
 					+ "<p>"
-						+ "[npc.NamePos] body is still made out of [style.boldTfGeneric(slime)]!"
+						+ "[npc.NamePos]的身体仍然由[style.boldTfGeneric(粘液)]构成！"
 					+ "</p>");
         }
         
@@ -28421,94 +28421,94 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 			if(this.isPlayer()) {
 				tfDescription = "<p>"
-							+ "Despite the fact that there's no sudden change in the weather, you feel as though the air around you is rapidly getting warmer and warmer,"
-								+ " and within the space of just a few seconds, it's as though you're standing in the middle of a sauna."
-							+ " Droplets of sweat quickly begin to bead on your [pc.skin], forming little rivulets of cool, "
-								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+" liquid, which quickly run down over your burning body to drip onto the floor beneath you."
+							+ "尽管天气没有突变，但你感觉四周的空气正迅速变热，"
+								+ "短短几秒钟时间里，你就仿佛站在桑拿房中央。"
+							+ "汗滴迅速在你的[pc.skin]上凝结，形成一股清爽的涓涓细流，"
+								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+"的液体从你火热的身躯上滴落，打在身下的地面上。"
 						+ "</p>"
 						+ "<p>"
-							+ "Despite your body's best efforts at cooling you down, you still find yourself getting hotter and hotter, and, with a heavy sigh, you feel your [pc.legs] collapse out from under you as the heavy heat beats you down."
-							+ " Lifting [pc.a_hand] to your face to wipe the sweat from your [pc.eyes], your heat-addled mind suddenly realises that something's very wrong,"
-							+ " [pc.thought(Wait... Why is my sweat "+colourBasic+"?!"
-									+ " And why is there so much of it?!)]"
+							+ "尽管你尽了最大努力给身体降温，但你还是越来越热。最后随着一声沉重的叹息，你双腿一软，倒了下来。"
+							+ "你抬[pc.a_hand]擦去[pc.eyes]上的汗水，热得头昏脑涨的你突然意识大事不妙，"
+							+ "[pc.thought(等等……为什么我的汗是"+colourBasic+"？！"
+									+ "为什么这里热成这样？！)]"
 						+ "</p>"
 						+ "<p>"
-							+ "You open your mouth to scream, only to discover that your throat is rapidly being filled with liquid, and all you can manage is a garbled cry,"
-							+ " [pc.speechNoEffects(~Bllgh!~ ~Blllgggh!~)]"
+							+ "你张开嘴想尖叫，却发现喉咙迅速被灌满了液体，只能发出模糊的呜呜声，"
+							+ "[pc.speechNoEffects(~噗噜！~ ~噗噗噜！~ )]"
 						+ "</p>"
 						+ "<p>"
-							+ "Thrashing around in a frenzied state of panic, your efforts to escape this mysterious goo prove to be completely fruitless, and within a matter of seconds your entire body is covered in slime."
-							+ " What's more, you suddenly realise that you've gotten a lot smaller, and, looking down, you see that your [pc.legs] have completely melted away to form more of the goo that's quickly overtaking you."
-							+ " Your struggles only seem to speed this alarming process up, and after just a minute more, your [pc.arms] have suffered the same fate as your [pc.legs], having melted away into yet more of the "
-								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+" liquid."
+							+ "在极度恐慌中，你试图甩开这些神秘的粘液，但徒劳无功，几秒钟后你就被史莱姆包裹全身了。"
+							+ "更糟的是，你突然发现自己变小了很多。你往下看，你的[pc.legs]已经完全融化为粘液，而且迅速向上蔓延。"
+							+ "你的挣扎只会加速这可怕的过程，再过一分钟，你的[pc.arms]也会像[pc.legs]一样融化成"
+								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+"液体。"
 						+ "</p>"
 						+ "<p>"
-							+ "As the rest of your body proceeds to turn into slime, the intense heat that started this whole process starts to fade away, quickly being replaced by the sense of a still, calm coolness all around you."
-							+ " Sinking down into the ever-increasing quantity of slime that's enveloping you, you're aware of the fact that the final solid parts of your body have now condensed down into a small sphere,"
-								+ " which is what's now housing your senses and consciousness."
-							+ " As this final stage of your transformation presents itself, you find yourself remarkably relaxed, considering that your entire being is now just a little core floating around in a sea of "
-								+colourBasic+"."
+							+ "当你身体的幸存部分也要变成粘液时，起初的高温开始消退，很快被一种平静的凉爽感所取代。"
+							+ "你沉入包裹你的不断增加的粘液中，发现你的身体现在已经凝聚成一个小球，"
+								+ "这是你感觉和意识现在所在的地方。"
+							+ "转化进入最后阶段，你非常放松，觉得你现在只是漂浮在海洋中的一个小核心"
+								+colourBasic+"。"
 						+ "</p>"
 						+ "<p>"
-							+ "The calm coolness that's surrounding you steadily starts to come under your control, and, having now undergone your complete transformation into a slime core,"
-								+ " you find that you can manipulate the liquid surrounding you in any way you like."
-							+ " Quickly reforming a slimy version of your old body around yourself, you discover that you can project your senses into the areas where they used to reside."
-							+ " Your vision travels up out of your core and into your slimy eyes, finally allowing you escape the world of "
-								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+" goo and see clearly out into your surroundings once again."
-							+ " Similarly, you restore your senses of hearing, taste, touch, and smell to their original homes, leaving you as very much the person you were before this alarming transformation, albeit now being composed entirely of slime."
+							+ "你开始可以控制这份平静的凉爽感，现在你已经完全转化成一个史莱姆，"
+								+ "你发现自己可以随心所欲操纵周围的液体。"
+							+ "迅速在你以前的身体周围形成粘液版本，你发现自己可以将感官投射到它们曾在的区域。"
+							+ "你的视觉从核心上移，钻入黏糊糊的眼部，终于逃离了满是"
+								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+"粘液的世界，重回光明，认清周遭的环境。"
+							+ "同样，听觉、味觉、触觉和嗅觉亦与以往无二。尽管你现在完全由粘液组成，但你仍然是发生惊人转化之前的你。"
 						+ "</p>"
 						+ "<p>"
-							+ "Your entire being is now condensed into a [style.boldSlime(slime core)]!<i>"
-							+ "<br/>- You have complete control over all of the slime which surrounds you, allowing you to morph your body parts at will!"
-								+ " [style.italicsMinorBad(You can only self-transform into races which you've previously encountered.)]" // Also referenced in BodyChanging
-							+ "<br/>- The wetness of your pussy and asshole can never be anything less than "+Wetness.SEVEN_DROOLING.getDescriptor()+"!"
-							+ "<br/>- You are unable to apply any makeup to your slimy body!"
-							+ "<br/>- You can now be impregnated through any orifice, even if you lack a vagina!"
-							+ "<br/>- Your orifices are able to accommodate significantly longer penetrations than before!"
+							+ "你的整个存在浓缩成了一个[style.boldSlime(史莱姆核心)]！<i>"
+							+ "<br/>-你可以完全控制周身的所有粘液，任意化形身体部位！"
+								+ " [style.italicsMinorBad(你只能自我转化成你之前遇到过的种族。)]" // Also referenced in BodyChanging
+							+ "<br/>-你的小穴和肛门湿度不会小于"+Wetness.SEVEN_DROOLING.getDescriptor()+"！"
+							+ "<br/>-你无法给你的史莱姆身体化妆！"
+							+ "<br/>-你现在任意腔穴都可以怀孕，即使你没有阴道！"
+							+ "<br/>-你的腔穴相比之前能容纳极深的插入！"
 							+ "</i>"
 						+ "</p>";
 				
 			} else {
 				tfDescription = UtilText.parse(this,
 						"<p>"
-							+ "[npc.NamePos] cheeks instantly flush, and [npc.she] starts panting and sighing as though [npc.sheIs] suffering from an intense heat stroke."
-							+ " Droplets of sweat quickly begin to bead on [npc.her] [npc.skin], forming little rivulets of cool, "
-								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+" liquid, which quickly run down over [npc.her] burning body to drip onto the floor beneath [npc.herHim]."
+							+ "[npc.NamePos]的脸颊立刻泛红，喘起大气，宛若中暑一般。"
+							+ "汗滴迅速在[npc.her]的[npc.skin]上凝结，形成一股清爽的涓涓细流，"
+								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+"的液体从[npc.her]火热的身躯上滴落，打在身下的地面上。"
 						+ "</p>"
 						+ "<p>"
-							+ "Despite [npc.her] body's best efforts at cooling [npc.her] down, [npc.she] lets out a heavy sigh, and [npc.her] [npc.legs] collapse out from under [npc.herHim] as [npc.sheIs] beaten down by the intense heat [npc.sheIs] feeling."
-							+ " Lifting [npc.a_hand] to [npc.her] face to wipe the sweat from [npc.her] [npc.eyes], [npc.her] heat-addled mind suddenly realises that something's very wrong, and [npc.she] exclaims,"
-							+ " [npc.speech(Wait... Why is my sweat "+colourBasic+"?!"
-									+ " What's happening?!)]"
+							+ "尽管身体竭尽全力调节体温，让[npc.her]冷下来，但[npc.she]还是重重叹了口气，随即瘫倒在地，完全被生发出的热度打败了。"
+							+ "[npc.her]伸出手，拂去[npc.eyes]上的汗水。热昏的头猛然意识到大事不好，惊呼道，"
+							+ "[npc.speech(等等……为什么我的汗是"+colourBasic+"？！"
+									+ "怎么回事？！)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[npc.She] tries to scream, but [npc.her] throat is rapidly being filled with liquid, and all [npc.she] can manage is a garbled cry,"
-							+ " [npc.speechNoEffects(~Bllgh!~ ~Blllgggh!~)]"
+							+ "[npc.She]试图尖叫，嗓子眼却被液体堵塞、浸没，所有的努力化为一声凄呼，"
+							+ "[npc.speechNoEffects(~噗噜！~噗噜！~)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Thrashing around in a frenzied state of panic, [npc.her] efforts to escape this mysterious goo prove to be completely fruitless, and within a matter of seconds [npc.her] entire body is covered in slime."
-							+ " What's more, [npc.she] suddenly realises that [npc.sheIs] gotten a lot smaller, and, looking down,"
-								+ " [npc.she] sees that [npc.her] [npc.legs] have completely melted away to form more of the goo that's quickly overtaking [npc.herHim]."
-							+ " [npc.Her] struggles only seem to speed this alarming process up, and after just a minute more, [npc.her] [npc.arms] have suffered the same fate as [npc.her] [npc.legs], having melted away into yet more of the "
-								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+" liquid."
+							+ "[npc.her]惊慌失措，四处乱窜，试图逃离神秘粘液。然而努力完全没有效果。几秒钟内，[npc.her]的整个身体就被粘液裹住了。"
+							+ "此外，[npc.she]突然意识到自己变得更矮小了，低头一看，"
+								+ "发现自己的[npc.legs]完全融化，化为更多粘液，迅速侵蚀着[npc.herHim]。"
+							+ "[npc.Her]的挣扎似乎只会加速这一令人震惊的进程。只过了一分钟，[npc.her]的[npc.arms]也陷落在与[npc.legs]相同的命运中，融化为更多"
+								+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+"液体。"
 						+ "</p>"
 						+ "<p>"
-							+ "As [npc.name] proceeds to turn into a slime, the final solid parts of [npc.her] body condense down into a small sphere, which is what now houses [npc.her] senses and consciousness."
-							+ " Transformed into a little core that's now floating around in a sea of " +colourBasic+", [npc.name] soon finds that [npc.she] can manipulate the liquid surrounding [npc.herHim] in any way [npc.she] likes."
+							+ "[npc.Name]逐渐变成史莱姆，身体最后的固态物凝结成一个小球，容纳着感知和意识。"
+							+ "转化出的微缩核心漂浮徜徉于"+colourBasic+"海洋中，[npc.name]很快发现自己能随心所欲地掌控周遭的液体。"
 						+"</p>"
 						+ "<p>"
-							+ "Quickly reforming a slimy version of [npc.her] old body around [npc.herself], [npc.she] discovers that [npc.she] can project [npc.her] senses into the areas where they used to reside."
-							+ " [npc.Her] slimy eyes slowly blink as [npc.she] escapes the world of "+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+" goo and sees clearly out into [npc.her] surroundings once again."
-							+ " Similarly, [npc.she] restores [npc.her] senses of hearing, taste, touch, and smell to their original homes, leaving [npc.herHim] as very much the person [npc.she] was before this alarming transformation,"
-								+ " albeit now being composed entirely of slime."
+							+ "[npc.her]迅速将旧身体重塑成黏糊糊的新版本，发现自己可以将感官投射到他们以前所在的地方。"
+							+ "史莱姆质感的眼睛慢慢眨动。终于摆脱"+this.getCovering(baseSlimeCoveringType).getPrimaryColour().getName()+"的粘液，方才再次清晰地观察到周围的环境。"
+							+ "同样，听觉、味觉、触觉和嗅觉亦与以往无二。[npc.she]仍然是发生惊人转化之前的那个[npc.herHim]，"
+								+ "尽管现在完全由粘液组成。"
 						+ "</p>"
 						+ "<p>"
-							+ "[npc.NamePos] entire being is now condensed into a [style.boldSlime(slime core)]!<br/><i>"
-							+ "- [npc.She] has complete control over all of the slime which surrounds [npc.herHim], allowing [npc.herHim] to morph [npc.her] body parts at will!<br/>"
-							+ "- The wetness of [npc.her] pussy and asshole can never be anything less than "+Wetness.SEVEN_DROOLING.getDescriptor()+"!<br/>"
-							+ "- [npc.She] is unable to apply any makeup to [npc.her] slimy body!<br/>"
-							+ "- [npc.She] can now be impregnated through any orifice, even if [npc.she] lacks a vagina!<br/>"
-							+ "- [npc.Her] orifices are able to accommodate significantly longer penetrations than before!"
+							+ "[npc.NamePos]的整个存在浓缩成了一个[style.boldSlime(史莱姆核心)]！<br/><i>"
+							+ "- [npc.She]可以完全控制周身的粘液，能够化形任意身体部位！<br/>"
+							+ "-[npc.her]小穴和肛门的湿度不会小于"+Wetness.SEVEN_DROOLING.getDescriptor()+"！<br/>"
+							+ "-[npc.She]拥有史莱姆身体，因此无法化妆！<br/>"
+							+ "-[npc.She]如今任意腔穴都可怀孕，即使[npc.she]没有阴道！<br/>"
+							+ "-[npc.Her]的腔穴能够容纳比以往更长的物体插入！"
 							+ "</i>"
 						+ "</p>");
 			}
@@ -28554,16 +28554,16 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 			tfDescription = UtilText.parse(this,
 					"<p>"
-						+ "[npc.NameIsFull] now an extremely high-quality sex doll, made entirely out of "+colourBasic+" silicone!"
+						+ "[npc.NameIsFull]现在是精致优良的性爱玩偶，通体由"+colourBasic+"硅胶构成！"
 					+ "</p>"
 					+ "<p>"
-						+ "- [npc.She] cannot gain experience and [npc.is] stuck at level 1!<br/>"
-						+ "- [npc.She] now [npc.has] a limited, doll-specific perk tree and occupational perk!<br/>"
-						+ "- [npc.Her] arcane-infused silicone body is extremely durable!<br/>"
-						+ "- [npc.She] [npc.has] no aura, so cannot harness the arcane nor generate essences from orgasming!<br/>"
-						+ "- [npc.She] can never be impregnated, nor impregnate others!<br/>"
-						+ "- As an object, normal transformation potions do not work on [npc.herHim]!<br/>"
-						+ "- [npc.Her] orifices are able to accommodate extremely long penetrations!"
+						+ "-[npc.She]不能获取经验，等级固定为1！<br/>"
+						+ "-[npc.She]现在拥有受限的玩偶独有天赋树，以及专属天赋！<br/>"
+						+ "-[npc.Her]灌注奥术的硅胶身体异常耐用！<br/>"
+						+ "-[npc.She]没有灵气, 所以无法使用奥术，也不能从高潮中产生精华！<br/>"
+						+ "-[npc.She]永远无法使自己或他人怀孕！<br/>"
+						+ "-作为一个物体，常规转化药水对[npc.herHim]无效！<br/>"
+						+ "-[npc.Her]的腔穴能够容纳极深的插入！"
 						+ "</i>"
 					+ "</p>");
 			
@@ -28575,22 +28575,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 			if(this.getBodyMaterial()==BodyMaterial.SILICONE) {
 				sb.append("<p>"
-						+ "[npc.NamePos] silicone body starts to tingle all over, and as [npc.she] [npc.verb(look)] down at [npc.her] [npc.arms], [npc.she] [npc.verb(see)] [npc.her] smooth skin starting to take on a natural texture."
-						+ " As [npc.she] [npc.verb(begin)] to transform, the little core in the place where [npc.her] heart should be starts to break up and disperse throughout [npc.her] torso."
+						+ "[npc.NamePos]的硅胶身体开始全身刺痛，[npc.she]低头看向[npc.arms]，上面光滑的皮肤开始呈现出血肉的质感。"
+						+ "随着[npc.she]的转化开始，位于[npc.her]心脏处的小核心开始碎裂，分散到整个躯干上。"
 					+ "</p>");
 				
 			} else {
 				sb.append("<p>"
-						+ "[npc.NamePos] slimy body starts to tingle all over, and as [npc.she] [npc.verb(look)] down at [npc.her] [npc.arms], [npc.she] [npc.verb(see)] the slime that they're made up of starting to get more and more opaque."
-						+ " As [npc.her] slime starts to solidify, the little glowing core in the place where [npc.her] heart should be starts to break up and disperse throughout [npc.her] torso."
+						+ "[npc.NamePos]黏糊糊的身体开始全身刺痛，[npc.she]低头看向[npc.arms]，组成它们的粘液开始变得越来越不透明。"
+						+ "粘液开始凝固，[npc.her]心脏位置的小发光核心开始碎裂，分散到躯干上。"
 					+ "</p>");
 			}
 			
 			sb.append("<p>"
-						+ "With a sharp gasp, [npc.she] [npc.verb(feel)] the transformation speed up, and within just a few moments, [npc.her] entire body has reverted to being made out of flesh and blood."
+						+ "[npc.she]发出急促的喘息，感到转化加速了，没过多久，[npc.her]全身就都恢复为血肉之躯。"
 					+ "</p>"
 					+ "<p>"
-						+ "[npc.NamePos] body is now made out of [style.boldTfGeneric(flesh)]!"
+						+ "[npc.NamePos]的身体现在由[style.boldTfGeneric(血肉)]构成！"
 					+ "</p>");
 			
 			tfDescription = UtilText.parse(this, sb.toString());
@@ -28665,7 +28665,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					this.getBody().calculateRace(this);
 					tfDescription += UtilText.parse(this,
 							"<p>"
-								+ "[npc.NamePos] body parts all shift back into their [style.colourDemon(demonic counterparts)] as [npc.her] body returns to being made of flesh."
+								+ "[npc.NamePos]所有的身体部位转换回了[style.colourDemon(恶魔对应部分)]，因为[npc.her]的身体变回了肉身。"
 							+ "</p>");
 				}
 				
@@ -28772,7 +28772,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					this.getBody().calculateRace(this);
 					tfDescription += UtilText.parse(this,
 							"<p>"
-								+ "[npc.NamePos] body parts all shift back into their [style.colourDemon(half-demonic counterparts)] as [npc.her] body returns to being made of flesh."
+								+ "[npc.NamePos]变回血肉之躯，同时身体的各个部位都变回[style.colourDemon(半恶魔)]的原样。"
 							+ "</p>");
 				}
 				
@@ -28847,7 +28847,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						this.getBody().calculateRace(this);
 						tfDescription += UtilText.parse(this,
 								"<p>"
-									+ "[npc.NamePos] [style.colourDemon(demonic)] body parts all shift into [style.colourHuman(human counterparts)] as [npc.her] body returns to being made of flesh."
+									+ "[npc.NamePos]的[style.colourDemon(恶魔)]身躯全部转化为了[style.colourHuman(人类身躯的对应部分)]，因为[npc.her]的身体重新变为了肉身。"
 								+ "</p>");
 					}
 
@@ -28922,7 +28922,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 						this.getBody().calculateRace(this);
 						tfDescription += UtilText.parse(this,
 								"<p>"
-									+ "[npc.NamePos] [style.colourAngel(angelic)] body parts all shift into [style.colourHuman(human counterparts)] as [npc.her] body returns to being made of flesh."
+									+ "[npc.NamePos]的[style.colourAngrl(天使)]身躯全部转化为了[style.colourHuman(人类身躯的对应部分)]，因为[npc.her]的身体重新变为了肉身。"
 								+ "</p>");
 					}
 				}
@@ -29089,7 +29089,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			MilkingRoom room = Main.game.getOccupancyUtil().getMilkingRoom(c.getType(), c.getLocation());
 			room.incrementFluidStored(new FluidStored(this.getId(), this.getMilk(), -increment), -increment);
 			milked = "<p style='text-align:center; padding:0; margin:0;'>"
-						+ UtilText.parse(this, "[style.italicsMilk([npc.NamePos] [npc.milk] is sucked down into the milking machine's storage vat!)]")
+						+ UtilText.parse(this, "[style.italicsMilk([npc.NamePos]的[npc.milk]被吸入到挤奶机的储罐中！)]")
 					+ "</p>";
 		}
 		return setBreastStoredMilk(getBreastRawStoredMilkValue() + increment)
@@ -29469,7 +29469,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			MilkingRoom room = Main.game.getOccupancyUtil().getMilkingRoom(c.getType(), c.getLocation());
 			room.incrementFluidStored(new FluidStored(this.getId(), this.getMilkCrotch(), -increment), -increment);
 			milked = "<p style='text-align:center; padding:0; margin:0;'>"
-						+ UtilText.parse(this, "[style.italicsMilk([npc.NamePos] [npc.crotchMilk] is sucked down into the milking machine's storage vat!)]")
+						+ UtilText.parse(this, "[style.italicsMilk([npc.NamePos]的[npc.crotchMilk]被吸入到挤奶机的储罐中！)]")
 					+ "</p>";
 		}
 		return setBreastCrotchStoredMilk(getBreastCrotchRawStoredMilkValue() + increment)
@@ -29821,22 +29821,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(isPlayer()) {
 			if(eyeLiner.getPattern()==CoveringPattern.NONE) {
 				return "<p>"
-							+ "You are [style.boldShrink(not wearing)] any eye liner."
+							+ "你[style.boldShrink(没有画)]眼线。"
 						+ "</p>";
 			} else {
 				return "<p>"
-							+ "You are [style.boldGrow(now wearing)] "+eyeLiner.getColourDescriptor(this, true, false)+" eye liner."
+							+ "你[style.boldGrow(画着)]"+eyeLiner.getColourDescriptor(this, true, false)+"眼线。"
 						+ "</p>";
 			}
 			
 		} else {
 			if(eyeLiner.getPattern()==CoveringPattern.NONE) {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldShrink(not wearing)] any eye liner."
+							+ "[npc.Name][style.boldShrink(没有画)]眼线。"
 						+ "</p>");
 			} else {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldGrow(now wearing)] "+eyeLiner.getColourDescriptor(this, true, false)+" eye liner."
+							+ "[npc.Name][style.boldGrow(没画)]"+eyeLiner.getColourDescriptor(this, true, false)+"眼线。"
 						+ "</p>");
 			}
 		}
@@ -29851,22 +29851,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(isPlayer()) {
 			if(eyeShadow.getPattern()==CoveringPattern.NONE) {
 				return "<p>"
-							+ "You are [style.boldShrink(not wearing)] any eye shadow."
+							+ "你[style.boldShrink(没有画)]眼影。"
 						+ "</p>";
 			} else {
 				return "<p>"
-							+ "You are [style.boldGrow(now wearing)] "+eyeShadow.getColourDescriptor(this, true, false)+" eye shadow."
+							+ "你[style.boldGrow(画着)]"+eyeShadow.getColourDescriptor(this, true, false)+"眼影。"
 						+ "</p>";
 			}
 			
 		} else {
 			if(eyeShadow.getPattern()==CoveringPattern.NONE) {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldShrink(not wearing)] any eye shadow."
+							+ "[npc.Name][style.boldShrink(没有画)]眼影。"
 						+ "</p>");
 			} else {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldGrow(now wearing)] "+eyeShadow.getColourDescriptor(this, true, false)+" eye shadow."
+							+ "[npc.Name][style.boldGrow(没画)]"+eyeShadow.getColourDescriptor(this, true, false)+"眼影。"
 						+ "</p>");
 			}
 		}
@@ -30038,22 +30038,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(isPlayer()) {
 			if(lipstick.getPattern()==CoveringPattern.NONE) {
 				return "<p>"
-							+ "You are [style.boldShrink(not wearing)] any lipstick."
+							+ "你[style.boldShrink(没涂)]口红。"
 						+ "</p>";
 			} else {
 				return "<p>"
-							+ "You are [style.boldGrow(now wearing)] "+lipstick.getColourDescriptor(this, true, false)+" lipstick."
+							+ "你[style.boldGrow(涂着)]"+lipstick.getColourDescriptor(this, true, false)+"口红。"
 						+ "</p>";
 			}
 			
 		} else {
 			if(lipstick.getPattern()==CoveringPattern.NONE) {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldShrink(not wearing)] any lipstick."
+							+ "[npc.Name][style.boldShrink(没涂)]口红。"
 						+ "</p>");
 			} else {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldGrow(now wearing)] "+lipstick.getColourDescriptor(this, true, false)+" lipstick."
+							+ "[npc.Name][style.boldGrow(涂着)]"+lipstick.getColourDescriptor(this, true, false)+"口红。"
 						+ "</p>");
 			}
 		}
@@ -30068,22 +30068,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(isPlayer()) {
 			if(blusher.getPattern()==CoveringPattern.NONE) {
 				return "<p>"
-							+ "You are [style.boldShrink(not wearing)] any blusher."
+							+ "你[style.boldShrink(没打)]腮红。"
 						+ "</p>";
 			} else {
 				return "<p>"
-							+ "You are [style.boldGrow(now wearing)] "+blusher.getColourDescriptor(this, true, false)+" blusher."
+							+ "你[style.boldGrow(打着)]"+blusher.getColourDescriptor(this, true, false)+"腮红。"
 						+ "</p>";
 			}
 			
 		} else {
 			if(blusher.getPattern()==CoveringPattern.NONE) {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldShrink(not wearing)] any blusher."
+							+ "[npc.Name][style.boldShrink(没打)]腮红。"
 						+ "</p>");
 			} else {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldGrow(now wearing)] "+blusher.getColourDescriptor(this, true, false)+" blusher."
+							+ "[npc.Name][style.boldGrow(打着)]"+blusher.getColourDescriptor(this, true, false)+"腮红。"
 						+ "</p>");
 			}
 		}
@@ -30237,12 +30237,12 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String setGenitalArrangement(GenitalArrangement type) {
 		if(this.getGenitalArrangement() == type) {
 			return "<p>"
-						+ UtilText.parse(this, "[style.italicsDisabled(Nothing happens, as [npc.namePos] genitals are already in this configuration...)]")
+						+ UtilText.parse(this, "[style.italicsDisabled(无事发生，因为[npc.namePos]的生殖器已经在这个配置中了……)]")
 					+ "</p>";
 		}
 		if(!this.getLegConfiguration().getAvailableGenitalConfigurations().contains(type)) {
 			return "<p>"
-						+ UtilText.parse(this, "[style.italicsDisabled(Nothing happens, as [npc.namePos] genital configuration cannot be transformed into '"+type.getName()+"' while [npc.her] lower body is of type '[npc.legConfiguration]'...)]")
+						+ UtilText.parse(this, "[style.italicsDisabled(无事发生，[npc.namePos]的生殖器结构不能被转化为“"+type.getName()+"”，因为[npc.her]的下半身是“[npc.legConfiguration]”……)]")
 					+ "</p>";
 		}
 		
@@ -30250,29 +30250,29 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		sb.append("<p>");
 		switch(this.getGenitalArrangement()) {
 			case CLOACA:
-				sb.append(UtilText.parse(this, "[npc.Name] [npc.verb(let)] out a surprised gasp as an intense, tingling sensation runs down into [npc.her] cloaca."));
+				sb.append(UtilText.parse(this, "[npc.Name]倒吸一口凉气，感到自己的泄殖腔有一种强烈的刺痛感。"));
 				break;
 			case CLOACA_BEHIND:
-				sb.append(UtilText.parse(this, "[npc.Name] [npc.verb(let)] out a surprised gasp as an intense, tingling sensation runs down into [npc.her] rear-facing cloaca."));
+				sb.append(UtilText.parse(this, "[npc.Name]倒吸一口凉气，感到自己的后向泄殖腔有一种强烈的刺痛感。"));
 				break;
 			case NORMAL:
-				sb.append(UtilText.parse(this, "[npc.Name] [npc.verb(let)] out a surprised gasp as an intense, tingling sensation runs down into [npc.her] crotch and ass."));
+				sb.append(UtilText.parse(this, "[npc.Name]惊声吸气，胯部和屁股流过强烈的刺痛感。"));
 				break;
 		}
 
 		body.setGenitalArrangement(type);
 		switch(type) {
 			case CLOACA:
-				sb.append(UtilText.parse(this, " Before [npc.sheHasFull] a chance to react, [npc.her] internal organs shift and transform;"
-						+ " [npc.her] genitals and asshole reposition themselves to be located within a [style.boldTfSex(front-facing, slit-like cloaca, in the place where [npc.her] genitals should normally be)]."));
+				sb.append(UtilText.parse(this, "[npc.sheHasFull]还没来得及反应，内脏便扭曲变形；"
+						+ "[npc.her]的生殖器和肛门缩入体内，[style.boldTfSex(生殖器该在的位置，长出了裂隙般的前向泄殖腔)]。"));
 				break;
 			case CLOACA_BEHIND:
-				sb.append(UtilText.parse(this, " Before [npc.sheHasFull] a chance to react, [npc.her] internal organs shift and transform;"
-						+ " [npc.her] genitals and asshole reposition themselves to be located within a [style.boldTfSex(rear-facing, slit-like cloaca, in the place where [npc.her] asshole should normally be)]."));
+				sb.append(UtilText.parse(this, "[npc.sheHasFull]还没来得及反应，内脏便扭曲变形；"
+						+ "[npc.her]的生殖器和肛门会重新定位在[style.boldTfSex(细缝状的后向泄殖腔处，肛门通常在的位置)]。"));
 				break;
 			case NORMAL:
-				sb.append(UtilText.parse(this, " Before [npc.sheHasFull] a chance to react, [npc.her] internal organs shift and transform;"
-						+ " [npc.her] cloaca quickly disappears, leaving [npc.her] [style.boldTfSex(genitals and asshole to be located in the places where they would normally be)]."));
+				sb.append(UtilText.parse(this, "[npc.sheHasFull]还没来得及反应，内脏便扭曲变形；"
+						+ "[npc.her]的泄殖腔迅速消失，取而代之的是[style.boldTfSex(生长在寻常位置的生殖器和肛门)]。"));
 				break;
 		}
 		sb.append("</p>");
@@ -30359,15 +30359,15 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			
 			if (isPlayer()) {
 				return "<p>"
-							+ "You let out a little gasp as your [pc.hair(true)] "+(getHairType().isDefaultPlural(this)?"change":"changes")+" colour.<br/>"
-							+ "You now have [style.boldTfGeneric([pc.hairFullDescription])]."
+							+ "你轻声喘息，[pc.hair(true)]的颜色改变了。<br/>"
+							+ "你现在有着[style.boldTfGeneric([pc.hairFullDescription])]。"
 						+ "</p>"
 						+ postTransformationCalculation();
 			} else {
 				return UtilText.parse(this,
 						"<p>"
-							+ "[npc.Name] lets out a little gasp as [npc.her] [npc.hair(true)] "+(getHairType().isDefaultPlural(this)?"change":"changes")+" colour.<br/>"
-							+ "[npc.She] now has [style.boldTfGeneric([npc.hairFullDescription])]."
+							+ "[npc.Name]轻声喘息，[npc.her]的[npc.hair(true)]颜色改变了。<br/>"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.hairFullDescription])]。"
 						+ "</p>"
 						+ postTransformationCalculation());
 			}
@@ -30375,7 +30375,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 
 		body.updateCoverings(false, false, updateBodyHair, false);
 		
-		return "<p>" + "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>Nothing seems to happen.</span>" + "</p>";
+		return "<p>" + "<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>看来无事发生。</span>" + "</p>";
 	}
 	
 	
@@ -30558,7 +30558,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String setLegConfiguration(AbstractLegType legType, LegConfiguration legConfiguration, boolean applyFullEffects) {
 		if(this.isFeral()) {
 			return "<p style='text-align:center;'>"
-						+ "[style.italicsDisabled(As [npc.sheIsFull] a feral [npc.race], [npc.name] cannot have [npc.her] leg configuration transformed!)]"
+						+ "[style.italicsDisabled(因为[npc.name]是兽态[npc.race]，所以[npc.her]的腿部配置不能转化！)]"
 					+ "</p>";
 		}
 		if(legType.isLegConfigurationAvailable(legConfiguration)) {
@@ -30645,22 +30645,22 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 		if(isPlayer()) {
 			if(nailPolish.getPattern()==CoveringPattern.NONE) {
 				return "<p>"
-							+ "You are [style.boldShrink(not wearing)] any toenail polish."
+							+ "你[style.boldShrink(没涂)]脚指甲油。"
 						+ "</p>";
 			} else {
 				return "<p>"
-							+ "You are [style.boldGrow(now wearing)] "+nailPolish.getColourDescriptor(this, true, false)+" toenail polish."
+							+ "你[style.boldGrow(没涂)] "+nailPolish.getColourDescriptor(this, true, false)+"脚指甲油。"
 						+ "</p>";
 			}
 			
 		} else {
 			if(nailPolish.getPattern()==CoveringPattern.NONE) {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldShrink(not wearing)] any toenail polish."
+							+ "[npc.Name][style.boldShrink(没涂)]脚指甲油。"
 						+ "</p>");
 			} else {
 				return UtilText.parse(this,"<p>"
-							+ "[npc.Name] is [style.boldGrow(now wearing)] "+nailPolish.getColourDescriptor(this, true, false)+" toenail polish."
+							+ "[npc.Name][style.boldGrow(没涂)] "+nailPolish.getColourDescriptor(this, true, false)+"脚指甲油。"
 						+ "</p>");
 			}
 		}
@@ -31117,8 +31117,8 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			}
 			milkedSB.append((Main.getProperties().hasValue(PropertyValue.cumRegenerationContent)
 									?"[npc.NamePos]"
-									:Units.fluid(Math.abs(increment))+" of [npc.namePos]")
-								+ " [npc.cum] is sucked down into the milking machine's storage vat!");
+									:"[npc.namePos]的"+Units.fluid(Math.abs(increment)))
+								+ "[npc.cum]被吸进挤奶机的储罐里！");
 			if(withFormatting) {
 				milkedSB.append(")]</p>");
 			}
@@ -31380,7 +31380,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 	public String setSkinCovering(Covering covering, boolean updateAllSkinColours) {
 		if(!this.isAbleToWearMakeup() && BodyCoveringType.getAllMakeupTypes().contains(covering.getType())) {
 			return "<p>"
-					+ "[style.colourDisabled(Makeup cannot be applied to "+this.getBodyMaterial().getName()+"...)]"
+					+ "[style.colourDisabled(妆容不能应用于"+this.getBodyMaterial().getName()+"……)]"
 				+ "</p>";
 		}
 		
@@ -31405,9 +31405,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			if (!affectedParts.isEmpty()) {
 				if (isPlayer()) {
 					return "<p>"
-								+ "The " + coveringType.getName(this) + " on your " + Util.stringsToStringList(affectedParts, false) + " suddenly start" + (coveringType.isDefaultPlural() ? "" : "s") + " to itch, and you let out a startled cry as "
-								+ (coveringType.isDefaultPlural() ? "they begin" : "it begins") + " to change colour.<br/>"
-								+ "You now have "+covering.getFullDescription(this, true)+"."
+								+ "你" + Util.stringsToStringList(affectedParts, false) + "表面的" + coveringType.getName(this) + "突然瘙痒起来，你惊呼一声，随即"
+								+ (coveringType.isDefaultPlural() ? "他们" : "它") + "的颜色开始变化。<br/>"
+								+ "你现在拥有了"+covering.getFullDescription(this, true)+"."
 							+ "</p>"
 							+ postTransformationCalculation();
 				} else {
@@ -31417,9 +31417,9 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 					}
 					return UtilText.parse(this,
 							"<p>"
-								+ "[npc.Name] feels the " + coveringType.getName(this) + " on [npc.her] " + Util.stringsToStringList(affectedParts, false) + " suddenly start to itch, and [npc.she] lets out a startled cry as "
-								+ (coveringType.isDefaultPlural() ? "they begin" : "it begins") + " to change colour.<br/>"
-								+ "[npc.She] now has "+covering.getFullDescription(this, true)+"."
+								+ "[npc.Name]感受到" + coveringType.getName(this) + "在[npc.her]身上" + Util.stringsToStringList(affectedParts, false) + "突然的发痒令[npc.she]发出惊呼："
+								+ (coveringType.isDefaultPlural() ? "他们" : "它") + "的颜色开始变化。<br/>"
+								+ "[npc.She]现在拥有了"+covering.getFullDescription(this, true)+"."
 							+ "</p>"
 							+ postTransformationCalculation());
 				}
@@ -31432,7 +31432,7 @@ public abstract class GameCharacter extends ModCharacter implements XMLSaving {
 			body.updateCoverings(false, false, false, updateAllSkinColours);
 		}
 
-		return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+		return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 	}
 	
 	

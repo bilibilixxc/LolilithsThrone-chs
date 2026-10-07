@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[narrow alleyways]]></name>
-	<tooltipDescription><![CDATA[Instead of cobbled streets, the northern part of Elis consists of a maze-like network of narrow alleyways.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the alleyways of Elis]]></virginityLossDescription>
+	<name><![CDATA[狭窄小巷]]></name>
+	<tooltipDescription><![CDATA[伊利斯的北部并非由铺设鹅卵石的街道，而是以一系列形成了迷宫般的网络的狭窄小巷组成。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的小巷中]]></virginityLossDescription>
 	<sexBlockedReason/>
 	<sexBlockedFromCharacterPresent>false</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLACK</colour>

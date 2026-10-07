@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Warning: -->
@@ -12,8 +12,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Leaving this ominous warning about a 'headless horseman' behind, you continue on your way through the Foloi Fields...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[把“无头骑士”的不祥警告抛在脑后，你继续穿过弗洛伊田野……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -36,7 +36,7 @@
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/encounters/fields/headless_horseman', 'START'))]
 			[#flags.setFlag(FLAG_innoxia_fields_headless_horseman_encountered, true)]
 		]]></preParsingEffects>
-		<title><![CDATA[The Headless Horseman]]></title>
+		<title><![CDATA[无头骑士]]></title>
 		<author><![CDATA[Innoxia]]></author>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -47,8 +47,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Fight]]></responseTitle>
-				<responseTooltip><![CDATA[Refuse to suck the horseman's cock and prepare to defend yourself!]]></responseTooltip>
+				<responseTitle><![CDATA[战斗]]></responseTitle>
+				<responseTooltip><![CDATA[拒绝给骑士吹箫，准备自卫！]]></responseTooltip>
 				<nextDialogue/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<combatVariables enabled="true">
@@ -59,8 +59,8 @@
 						<enemy leader="true"><![CDATA[headHorse]]></enemy>
 					</enemies>
 					<openingDescriptions>
-						<combatant id="pc"><![CDATA[Refusing to submit to the headless horseman, you tell him that [headHorse.sheIs] not going to get any head from you!]]></combatant>
-						<combatant id="headHorse"><![CDATA[Gripping his [headHorse.mainWeapon], the horseman booms, [headHorse.speech(It's pointless to resist! You'll have my cock deep down your throat soon enough!)]]]></combatant>
+						<combatant id="pc"><![CDATA[你拒绝向无头骑士屈服，告诉[headHorse.sheIs]不会从你这里得到任何头！]]></combatant>
+						<combatant id="headHorse"><![CDATA[骑士紧握[headHorse.mainWeapon]，他低沉洪亮的声音传来：[headHorse.speech(放弃抵抗！我的鸡巴马上会插进你的喉咙深处！)]]]></combatant>
 					</openingDescriptions>
 				</combatVariables>
 			</response>
@@ -68,8 +68,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Give head]]></responseTitle>
-				<responseTooltip><![CDATA[Give the horseman what he wants by dropping down before him and sucking his cock.]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[让骑士如愿以偿，趴下给他口交。]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 					<fetish><![CDATA[FETISH_ORAL_GIVING]]></fetish>
@@ -109,12 +109,12 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Fully submit]]></responseTitle>
+				<responseTitle><![CDATA[完全奉献]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(pc.getAddiction(FLUID_TYPE_CUM_HORSE_MORPH)==null)
-						You can only fully submit to the horseman if you're addicted to horse cum...
+						如果你沉迷马的精液，你只能对骑士完全献身……
 					#ELSE
-						Being addicted to the horseman's cum, you find yourself wanting to completely and utterly submit to him...
+						沉迷骑士的精液，你发现自己想要完全屈服于他……
 					#ENDIF
 				]]></responseTooltip>
 				<requiredFetishes>
@@ -141,8 +141,8 @@
 			[#headHorse.returnToHome()]
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/encounters/fields/headless_horseman', 'HORSEMAN_NO_ENCOUNTER_HINT'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having finally got some head, the horseman is finished with you...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[骑士在你嘴里完事了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/headless_horseman">AFTER_SEX_SUB</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -151,9 +151,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					As the horseman has left, there's nothing else for you to do except continue on your way...
+					当骑士离开，你除了继续赶路无事可做……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -173,9 +173,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Decide against doing anything further with the [headHorse.name] and continue on your way...
+					你决定不和[headHorse.name]扯上关系，于是继续赶路……
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -190,8 +190,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
-				<responseTooltip><![CDATA[Take advantage of your victory to have dominant sex with the [headHorse.name].]]></responseTooltip>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
+				<responseTooltip><![CDATA[乘胜追击，和[headHorse.name]来一场支配型性爱。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -214,8 +214,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Gentle sex]]></responseTitle>
-				<responseTooltip><![CDATA[Take advantage of your victory to have gentle, dominant sex with the [headHorse.name].]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(温柔)]]></responseTitle>
+				<responseTooltip><![CDATA[乘胜追击，和[headHorse.name]来一场温柔的支配型性爱。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -240,8 +240,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rough sex]]></responseTitle>
-				<responseTooltip><![CDATA[Take advantage of your victory to have rough, dominant sex with the [headHorse.name].]]></responseTooltip>
+				<responseTitle><![CDATA[做爱(粗暴)]]></responseTitle>
+				<responseTooltip><![CDATA[乘胜追击，和[headHorse.name]来一场粗暴的支配型性爱。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariables enabled="true">
 					<consensual><![CDATA[true]]></consensual>
@@ -267,8 +267,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Give head]]></responseTitle>
-				<responseTooltip><![CDATA[Feeling bad for the [headHorse.name], you decide to submit to [headHorse.herHim] and suck [headHorse.her] cock...]]></responseTooltip>
+				<responseTitle><![CDATA[口交]]></responseTitle>
+				<responseTooltip><![CDATA[你对[headHorse.name]感到内疚，你觉得顺从[headHorse.herHim]并给[headHorse.herHim]吹箫……]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_SUBMISSIVE]]></fetish>
 					<fetish><![CDATA[FETISH_ORAL_GIVING]]></fetish>
@@ -308,8 +308,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[Now that you've defeated the [headHorse.name], there's nothing stopping you from helping yourself to what little clothing and items he has...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[你打败了[headHorse.name]，此时再也没什么能阻挡你把手伸向他仅有的衣服和物品……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(headHorse, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -320,12 +320,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Question]]></responseTitle>
+				<responseTitle><![CDATA[质疑]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_fields_bandit_talked))
-						You've already questioned the [headHorse.name], and there's nothing more to be gained from doing so again...
+						你已经问过[headHorse.name]，没什么能知道的了……
 					#ELSE
-						Ask the [headHorse.name] why [headHorse.sheIs] trying to force innocent travellers to suck [headHorse.her] cock.
+						问问[headHorse.name]为什么[headHorse.sheIs]强迫无辜的游客嗦[headHorse.her]鸡巴。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -343,8 +343,8 @@
 	</scene>
 	
 	<scene id="after_sex_dom">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You've had enough fun with the [headHorse.name]...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你已经和[headHorse.name]爽够了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/headless_horseman">AFTER_SEX_DOM</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -353,9 +353,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Now that you've had your fun, you decide to leave the [headHorse.name] behind and continue on your way...
+					你爽过了，决定离开[headHorse.name]，继续上路……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -370,8 +370,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Inventory]]></responseTitle>
-				<responseTooltip><![CDATA[As you've defeated the [headHorse.name], there's nothing stopping you from helping yourself to what little clothing and items [headHorse.she] has...]]></responseTooltip>
+				<responseTitle><![CDATA[物品栏]]></responseTitle>
+				<responseTooltip><![CDATA[你打败了[headHorse.name]，此时再也没什么能阻挡你把手伸向[headHorse.she]仅有的衣服和物品……]]></responseTooltip>
 				<nextDialogue/>
 				<effects><![CDATA[
 					[#game.openInventoryDialogue(headHorse, INVENTORY_INTERACTION_FULL_MANAGEMENT)]
@@ -401,8 +401,8 @@
 				<availabilityConditional><![CDATA[[#game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Obey]]></responseTitle>
-				<responseTooltip><![CDATA[Do as the [headHorse.name] says and get him hard so that he can fuck your throat...]]></responseTooltip>
+				<responseTitle><![CDATA[服从]]></responseTitle>
+				<responseTooltip><![CDATA[按照[headHorse.name]所说的，让他石更以便他操你的喉咙……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -437,8 +437,8 @@
 				<availabilityConditional><![CDATA[[#game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Resist]]></responseTitle>
-				<responseTooltip><![CDATA[Try to resist and stop the [headHorse.name] from dominantly fucking your throat...]]></responseTooltip>
+				<responseTitle><![CDATA[抵抗]]></responseTitle>
+				<responseTooltip><![CDATA[试图反抗并阻止[headHorse.name]操你的喉咙……]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -475,9 +475,9 @@
 				<availabilityConditional><![CDATA[[#!game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Refuse]]></responseTitle>
+				<responseTitle><![CDATA[拒绝]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Refuse to submit to the headless horseman and wait for [headHorse.herHim] to leave before continuing on your way...
+					拒绝向无头骑士屈服，等[headHorse.herHim]离开后你继续行走……
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -491,9 +491,9 @@
 				<availabilityConditional><![CDATA[[#!game.isNonConEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Give head]]></responseTitle>
+				<responseTitle><![CDATA[口交]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Do as the headless horseman says and submit to [headHorse.herHim], allowing [headHorse.herHim] to dominantly fuck your face...
+					按照无头骑士说的做，允许[headHorse.herHim]操你的脸……
 				]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
@@ -540,8 +540,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Deepthroat]]></responseTitle>
-				<responseTooltip><![CDATA[Do as the horseman suggests and choke yourself on his cock...]]></responseTooltip>
+				<responseTitle><![CDATA[深喉]]></responseTitle>
+				<responseTooltip><![CDATA[你按照骑士的建议，用他的肉棒窒息自己……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fields_headless_horseman_oral]]></id>
@@ -575,8 +575,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Standing face-fuck]]></responseTitle>
-				<responseTooltip><![CDATA[Suggest to the horseman that he stand up and fuck your face...]]></responseTooltip>
+				<responseTitle><![CDATA[站立式深喉]]></responseTitle>
+				<responseTooltip><![CDATA[建议骑士站起来操你的嘴……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fields_headless_horseman_oral]]></id>
@@ -611,8 +611,8 @@
 				<availabilityConditional><![CDATA[[#game.isAnalContentEnabled()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Anilingus handjob]]></responseTitle>
-				<responseTooltip><![CDATA[Suggest to the horseman that you could perform anilingus on him while giving him a handjob, then after his first orgasm he can finish by fucking your face...]]></responseTooltip>
+				<responseTitle><![CDATA[吻肛打飞机]]></responseTitle>
+				<responseTooltip><![CDATA[建议骑士你可以一边吻肛你便给他打飞机，之后操你的嘴来达到高潮……]]></responseTooltip>
 				<requiredFetishes>
 					<fetish><![CDATA[FETISH_ANAL_GIVING]]></fetish>
 				</requiredFetishes>
@@ -663,8 +663,8 @@
 			[#headHorse.returnToHome()]
 			[#game.appendToTextEndStringBuilder(game.parseFromFile('txt/encounters/fields/headless_horseman', 'HORSEMAN_NO_ENCOUNTER_HINT'))]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having finally got some head, the horseman is finished with you...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[骑士在你嘴里完事了……]]></tooltip>
 		<content folderPath="txt/encounters/fields/headless_horseman">FULLY_SUBMIT_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -673,9 +673,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
-					As the horseman has left, there's nothing else for you to do except continue on your way...
+					当骑士离开，你除了继续赶路无事可做……
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -684,8 +684,8 @@
 	</scene>
 	
 	<scene id="fully_submit_after_sex_anilingus">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[Having had enough of your tongue in his ass, the horseman moves on to what he likes best...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你的舌头在他的屁眼上舔够了，骑士转向了他最喜欢的东西……]]></tooltip>
 		<content folderPath="txt/encounters/fields/headless_horseman">FULLY_SUBMIT_AFTER_SEX_ANILINGUS</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -694,8 +694,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Face-fucked]]></responseTitle>
-				<responseTooltip><![CDATA[Open wide and let the horseman fuck your face...]]></responseTooltip>
+				<responseTitle><![CDATA[深喉]]></responseTitle>
+				<responseTooltip><![CDATA[张开嘴巴让骑士操你的嘴……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_fields_headless_horseman_oral]]></id>

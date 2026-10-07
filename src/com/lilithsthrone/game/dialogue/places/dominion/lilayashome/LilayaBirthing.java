@@ -94,7 +94,7 @@ public class LilayaBirthing {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if (Main.game.getPlayer().hasStatusEffect(StatusEffect.PREGNANT_3)) {
-					return new Response("Give birth", "Tell Lilaya that you're ready to give birth.", LILAYA_DETECTS_BIRTHING_TYPE){
+					return new Response("分娩", "告诉莉莱雅，你准备好分娩了。", LILAYA_DETECTS_BIRTHING_TYPE){
 						@Override
 						public void effects() {
 							if (Main.game.getPlayer().isVisiblyPregnant() && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.reactedToPregnancyLilaya)) {
@@ -103,7 +103,7 @@ public class LilayaBirthing {
 						}
 					};
 				} else {
-					return new Response("Give birth", "You need to wait until your belly has finished growing before you're able to give birth.", null){
+					return new Response("分娩", "你需要等到肚子停止生长后才能分娩。", null){
 						@Override
 						public void effects() {
 							if (Main.game.getPlayer().isVisiblyPregnant() && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.reactedToPregnancyLilaya)) {
@@ -114,7 +114,7 @@ public class LilayaBirthing {
 				}
 
 			} else if (index == 0) {
-				return new Response("Back", "Tell Lilaya that you need a moment to think.", Lab.LAB_EXIT){
+				return new Response("返回", "告诉莉莱雅，你需要考虑一下。", Lab.LAB_EXIT){
 					@Override
 					public void effects() {
 						if (Main.game.getPlayer().isVisiblyPregnant() && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.reactedToPregnancyLilaya)) {
@@ -122,10 +122,10 @@ public class LilayaBirthing {
 						}
 						Main.game.getTextStartStringBuilder().append(
 								"<p>"
-									+ "[pc.speech(Thanks for your help, Lilaya, but can I just have a moment to think?)] you ask, smiling at your demonic [lilaya.relation(pc)]."
+									+ "[pc.speech(谢谢你的帮助，莉莱雅，但我能想一想吗？)]你问，微笑地看着你的恶魔[lilaya.relation(pc)]."
 								+ "</p>"
 								+ "<p>"
-									+ "[lilaya.speech(Sure, just let me know if you need anything else!)] she says, before backing off a little to give you some space."
+									+ "[lilaya.speech(当然，如果你还需要什么，请告诉我！)]她说，然后稍稍后退，给你一些空间。"
 								+ "</p>");
 					}
 				};
@@ -163,7 +163,7 @@ public class LilayaBirthing {
 
 		@Override
 		public String getLabel() {
-			return "Giving birth";
+			return "分娩";
 		}
 
 		@Override
@@ -175,7 +175,7 @@ public class LilayaBirthing {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getPlayer().isVaginaEggLayer()) {
-					return new Response("Follow Lilaya", "Allow Lilaya to lead you up to your room.", LILAYA_ASSISTS_EGG_LAYING) {
+					return new Response("跟随莉莱雅", "让莉莱雅带你去你的房间。", LILAYA_ASSISTS_EGG_LAYING) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Lilaya.class).setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_PLAYER, false);
@@ -183,7 +183,7 @@ public class LilayaBirthing {
 						}
 					};
 				} else {
-					return new Response("Follow Lilaya", "Allow Lilaya to lead you to the birthing room.", LILAYA_ASSISTS_BIRTHING) {
+					return new Response("跟随莉莱雅", "让莉莱雅带你去分娩室。", LILAYA_ASSISTS_BIRTHING) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Lilaya.class).setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_BIRTHING_ROOM, false);
@@ -207,7 +207,7 @@ public class LilayaBirthing {
 
 		@Override
 		public String getLabel() {
-			return "Birthing Room";
+			return "分娩室";
 		}
 
 		@Override
@@ -227,7 +227,7 @@ public class LilayaBirthing {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Start", "Tell Lilaya that you're ready to give birth now.", LILAYA_ASSISTS_BIRTHING_DELIVERS){
+				return new Response("开始", "告诉莉莱雅你已经准备好分娩了。", LILAYA_ASSISTS_BIRTHING_DELIVERS){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.reactedToPregnancyLilaya, false);
@@ -244,7 +244,7 @@ public class LilayaBirthing {
 				};
 
 			} else if (index == 2) {
-				return new Response("Knock out", "Ask Lilaya if she could give you something to knock you out. After all, she said you didn't need to be conscious for this.", LILAYA_ASSISTS_BIRTHING_KNOCK_OUT){
+				return new Response("麻醉", "问问莉莱雅能不能给你点药让你麻过去。毕竟，她说过你不需要有意识地去做这件事。", LILAYA_ASSISTS_BIRTHING_KNOCK_OUT){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.reactedToPregnancyLilaya, false);
@@ -281,16 +281,16 @@ public class LilayaBirthing {
 			
 			UtilText.nodeContentSB.append("<p>"
 					+ "<i>"
-					+ "You hear Lilaya speaking from somewhere beneath you, but you can't make out what she's saying..."
+					+ "你听到莉莱雅在你下面的某个地方说话，但你听不清她在说什么……"
 					+ "<br/><br/>");
 
 			if(Main.game.getPlayer().getBreastRawMilkStorageValue() > 0
 					&& Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.NIPPLES, true)
 					&& Main.game.getPlayer().getNippleShape()==NippleShape.NORMAL
 					&& Main.game.isLactationContentEnabled()) {
-				UtilText.nodeContentSB.append("You feel a desperate suckling at your nipples, and you're vaguely aware of something greedily drinking down mouthfuls of your [pc.milk]...");
+				UtilText.nodeContentSB.append("你感到乳头被拼命吮吸，你隐约意识到有什么东西在贪婪地喝下你的[pc.milk]……");
 			} else {
-				UtilText.nodeContentSB.append("You feel a weight on your chest, and you're vaguely aware of something greedily drinking a bottle of milk as you cradle it in your arms...");
+				UtilText.nodeContentSB.append("你感到胸口有一种重量，你隐约意识到有什么东西在贪婪地喝着一瓶牛奶，你把它抱在怀里……");
 			}
 			
 			String offspringId = Util.randomItemFrom(Main.game.getPlayer().getLastLitterBirthed().getOffspring());
@@ -298,25 +298,25 @@ public class LilayaBirthing {
 				if(offspringId.contains("NPCOffspring")) { // If the offspring is from the pre-offspring seed PR, handle them in the old way:
 					GameCharacter offspring = Main.game.getNPCById(offspringId);
 					if(offspring.isFeminine()) {
-						UtilText.nodeContentSB.append("<br/><br/>Some time later, you imagine seeing a strangely familiar "
+						UtilText.nodeContentSB.append("<br/><br/>一段时间后，你似乎看到了一个陌生而熟悉的"
 									+offspring.getSubspecies().getSingularFemaleName(offspring.getBody())
-									+" bending down over you, who gives you a loving hug and a kiss on your cheek before departing...");
+									+"在你面前俯下身子，给你一个深情的拥抱，在你的脸颊上亲吻一下，然后离去……");
 					} else {
-						UtilText.nodeContentSB.append("<br/><br/>Some time later, you imagine seeing a strangely familiar "
+						UtilText.nodeContentSB.append("<br/><br/>一段时间后，你似乎看到了一个陌生而熟悉的"
 									+offspring.getSubspecies().getSingularMaleName(offspring.getBody())
-									+" bending down over you, who plants a kiss on your cheek and mutters something in your ear before walking out the door...");
+									+"弯下腰，在你脸上亲了一下，并在你耳边嘀咕了几句，然后走出门去……");
 					}
 					
 				} else {
 					OffspringSeed offspring = Main.game.getOffspringSeedById(offspringId);
 					if(offspring.isFeminine()) {
-						UtilText.nodeContentSB.append("<br/><br/>Some time later, you imagine seeing a strangely familiar "
+						UtilText.nodeContentSB.append("<br/><br/>一段时间后，你似乎看到了一个陌生而熟悉的"
 									+offspring.getSubspecies().getSingularFemaleName(offspring.getBody())
-									+" bending down over you, who gives you a loving hug and a kiss on your cheek before departing...");
+									+"在你面前俯下身子，给你一个深情的拥抱，在你的脸颊上亲吻一下，然后离去……");
 					} else {
-						UtilText.nodeContentSB.append("<br/><br/>Some time later, you imagine seeing a strangely familiar "
+						UtilText.nodeContentSB.append("<br/><br/>一段时间后，你似乎看到了一个陌生而熟悉的"
 									+offspring.getSubspecies().getSingularMaleName(offspring.getBody())
-									+" bending down over you, who plants a kiss on your cheek and mutters something in your ear before walking out the door...");
+									+"弯下腰，在你脸上亲了一下，并在你耳边嘀咕了几句，然后走出门去……");
 					}
 				}
 			} catch(Exception ex) {
@@ -331,7 +331,7 @@ public class LilayaBirthing {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Pass out", "You have no energy left, and can't stay conscious any longer...", LILAYA_ASSISTS_BIRTHING_FINISHED){
+				return new Response("昏迷", "你已经没有力气了，无法再保持清醒……", LILAYA_ASSISTS_BIRTHING_FINISHED){
 					@Override
 					public void effects() {
 						if (Main.game.getPlayer().getQuest(QuestLine.SIDE_FIRST_TIME_PREGNANCY) == Quest.SIDE_PREGNANCY_LILAYA_THE_MIDWIFE) {
@@ -351,7 +351,7 @@ public class LilayaBirthing {
 		}
 	};
 	
-	public static final DialogueNode LILAYA_ASSISTS_BIRTHING_KNOCK_OUT = new DialogueNode("Your room", "", true, true) {
+	public static final DialogueNode LILAYA_ASSISTS_BIRTHING_KNOCK_OUT = new DialogueNode("你的房间", "", true, true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -366,7 +366,7 @@ public class LilayaBirthing {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Pass out", "The drink Lilaya gave you goes straight to your head, and you collapse back onto the bed as you lose consciousness.", LILAYA_ASSISTS_BIRTHING_FINISHED){
+				return new Response("昏迷", "莉莱雅给你的饮料直冲脑门，你失去知觉后倒在了床上。", LILAYA_ASSISTS_BIRTHING_FINISHED){
 					@Override
 					public void effects() {
 						if (Main.game.getPlayer().getQuest(QuestLine.SIDE_FIRST_TIME_PREGNANCY) == Quest.SIDE_PREGNANCY_LILAYA_THE_MIDWIFE) {
@@ -395,7 +395,7 @@ public class LilayaBirthing {
 
 		@Override
 		public String getLabel() {
-			return "Your room";
+			return "你的房间";
 		}
 
 		@Override
@@ -406,7 +406,7 @@ public class LilayaBirthing {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Lay eggs", "Tell Lilaya that you're ready to lay your eggs now.", LILAYA_ASSISTS_EGG_LAYING_DELIVERS){
+				return new Response("下蛋", "告诉莉莱雅，你现在可以下蛋了。", LILAYA_ASSISTS_EGG_LAYING_DELIVERS){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.reactedToPregnancyLilaya, false);
@@ -447,11 +447,11 @@ public class LilayaBirthing {
 			if (index == 1) {
 				return new Response(
 						Main.game.getPlayer().getLastLitterBirthed().getTotalLitterCount()==1
-							?"Protect the egg"
-							:"Protect the eggs!",
+							?"保护蛋"
+							:"保护蛋！",
 						Main.game.getPlayer().getLastLitterBirthed().getTotalLitterCount()==1
-							?"Why is Lilaya getting so close?! Maybe she wants to take your egg for herself!"
-							:"Why is Lilaya getting so close?! Maybe she wants to take your eggs for herself!",
+							?"为什么莉莱雅靠得这么近？也许她想把你的蛋占为己有！"
+							:"为什么莉莱雅靠得这么近？也许她想把你的蛋占为己有！",
 						LILAYA_ASSISTS_EGG_LAYING_PROTECT_THE_EGGS) {
 					@Override
 					public void effects() {
@@ -513,7 +513,7 @@ public class LilayaBirthing {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Some time later", "You eventually wake up from your exhausted slumber...", LILAYA_ASSISTS_BIRTHING_FINISHED){
+				return new Response("一段时间后", "你最终从疲惫的沉睡中醒来……", LILAYA_ASSISTS_BIRTHING_FINISHED){
 					@Override
 					public void effects() {
 						if (Main.game.getPlayer().getQuest(QuestLine.SIDE_FIRST_TIME_PREGNANCY) == Quest.SIDE_PREGNANCY_LILAYA_THE_MIDWIFE) {
@@ -529,7 +529,7 @@ public class LilayaBirthing {
 		}
 	};
 	
-	public static final DialogueNode LILAYA_ASSISTS_BIRTHING_FINISHED = new DialogueNode("Your room", "", true, true) {
+	public static final DialogueNode LILAYA_ASSISTS_BIRTHING_FINISHED = new DialogueNode("你的房间", "", true, true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -544,7 +544,7 @@ public class LilayaBirthing {
 			
 			UtilText.nodeContentSB.append(
 					"<p style='text-align:center;'>"
-					+ "In the picture you see:");
+					+ "在图片中你可以看到：");
 			
 			for(String id : Main.game.getPlayer().getLastLitterBirthed().getOffspring()) {
 				try {
@@ -552,19 +552,19 @@ public class LilayaBirthing {
 						GameCharacter offspring = Main.game.getNPCById(id);
 						String descriptor = getOffspringDescriptor(offspring);
 						UtilText.nodeContentSB.append("<br/>"
-								+ Util.capitaliseSentence(UtilText.generateSingularDeterminer(descriptor))+" "+descriptor
-								+ " <i style='color:"+offspring.getGender().getColour().toWebHexString()+";'>"+offspring.getGender().getName()+"</i>"
-								+ (offspring.isFeral() ? " <i style='color:"+RaceStage.FERAL.getColour().toWebHexString()+";'>"+RaceStage.FERAL.getName()+"</i>" : "")
-								+ " <i style='color:"+offspring.getSubspecies().getColour(offspring).toWebHexString()+";'>"+UtilText.parse(offspring,"[npc.race]")+"</i>");
+								+ Util.capitaliseSentence(UtilText.generateSingularDeterminer(descriptor))+descriptor+"的"
+								+ "<i style='color:"+offspring.getGender().getColour().toWebHexString()+";'>"+offspring.getGender().getName()+"</i>"
+								+ (offspring.isFeral() ? "<i style='color:"+RaceStage.FERAL.getColour().toWebHexString()+";'>"+RaceStage.FERAL.getName()+"</i>" : "")
+								+ "<i style='color:"+offspring.getSubspecies().getColour(offspring).toWebHexString()+";'>"+UtilText.parse(offspring,"[npc.race]")+"</i>");
 						
 					} else {
 						OffspringSeed offspring = Main.game.getOffspringSeedById(id);
 						String descriptor = getOffspringDescriptor(offspring);
 						UtilText.nodeContentSB.append("<br/>"
-								+ Util.capitaliseSentence(UtilText.generateSingularDeterminer(descriptor))+" "+descriptor
-								+ (offspring.isFeral() ? " <i style='color:"+RaceStage.FERAL.getColour().toWebHexString()+";'>"+RaceStage.FERAL.getName()+"</i>" : "")
-								+ " <i style='color:"+offspring.getSubspecies().getColour(null).toWebHexString()+";'>"+offspring.getSubspecies().getName(offspring.getBody())+"</i>"
-								+ " <i style='color:"+offspring.getGender().getColour().toWebHexString()+";'>"+offspring.getGenderName()+"</i>");
+								+ Util.capitaliseSentence(UtilText.generateSingularDeterminer(descriptor))+""+descriptor
+								+ (offspring.isFeral() ? "<i style='color:"+RaceStage.FERAL.getColour().toWebHexString()+";'>"+RaceStage.FERAL.getName()+"</i>" : "")
+								+ "<i style='color:"+offspring.getSubspecies().getColour(null).toWebHexString()+";'>"+offspring.getSubspecies().getName(offspring.getBody())+"</i>"
+								+ "<i style='color:"+offspring.getGender().getColour().toWebHexString()+";'>"+offspring.getGenderName()+"</i>");
 					}
 				} catch(Exception ex) {
 				}
@@ -572,7 +572,7 @@ public class LilayaBirthing {
 			
 			UtilText.nodeContentSB.append("</p>"
 					+ "<p>"
-					+ "After taking a minute to get your emotions under control, you put the picture away for safe-keeping, and think about what to do next."
+					+ "花了一分钟控制情绪后，你把照片收起来保管，并思考下一步该怎么做。"
 					+ "</p>");
 
 			return UtilText.nodeContentSB.toString();
@@ -581,7 +581,7 @@ public class LilayaBirthing {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Get up", "Get out of bed, ready for a new day.", RoomPlayer.ROOM);
+				return new Response("起床", "从床上爬起来，准备迎接新的一天。", RoomPlayer.ROOM);
 
 			} else {
 				return null;

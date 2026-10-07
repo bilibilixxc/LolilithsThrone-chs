@@ -80,10 +80,10 @@ public class Roxy extends NPC {
 	}
 	
 	public Roxy(boolean isImported) {
-		super(isImported, new NameTriplet("Roxy"), "Yap",
-				"Roxy is the rat-girl owner of the Gambling Den's shop, 'Roxy's Box'."
-					+ " With a patch over one eye, and visible scarring down one side of her face, Roxy is clearly no stranger to violence."
-					+ " She has some particularly vulgar mannerisms, and has little patience for any of her customers.",
+		super(isImported, new NameTriplet("罗克西"), "亚普",
+				"罗克西是一只鼠女，也是赌场里的商店“罗克西小店”的所有者。"
+					+ "罗克西的一只眼上带着眼罩，脸颊有一道肉眼可见的长疤，她显然没少干过架。"
+					+ "她行为举止特别粗俗，对顾客没有一点耐心。",
 				33, Month.AUGUST, 2,
 				15, Gender.F_V_B_FEMALE, Subspecies.RAT_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 30), WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_TRADER, true);
@@ -421,7 +421,7 @@ public class Roxy extends NPC {
 	@Override
 	public String getTraderDescription() {
 		return "<p>"
-					+ "Roxy grins as she points to the shelving behind you. [roxy.speech(I ain't gettin' up, so just grab whatever takes yer fancy and bring it over to me.)]"
+					+ "罗克西指着你身后的货架，笑得很开心。[roxy.speech(我就不站起来了，恁想要啥玩意就拿了来吧。)]"
 				+ "</p>";
 	}
 

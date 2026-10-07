@@ -1,159 +1,159 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="START"><![CDATA[
 	#IF(npc.hasFetish(FETISH_DOMINANT))
 		<p>
-			Your forward progress is brought to an abrupt halt as [npc.a_raceFull(true)] suddenly [npc.steps] out in front of you and gestures towards your chest as [npc.she]
+			当[npc.a_raceFull(true)]突然[npc.steps]到你面前，朝你胸口做了个[npc.she]的手势时，你停下脚步。
 			#IF(npc.hasPersonalityTrait(PERSONALITY_TRAIT_CONFIDENT))
-				 confidently
+				她自信地
 			#ENDIF
-			 declares, [npc.speech(I couldn't help but notice what you've got written on your t-shirt. You're not just wearing it for show, are you? Oh, and I'm [npc.name], by the way.)]
+			宣称，[npc.speech(我注意到你的T恤上写了什么，你穿它不只是为了炫耀吧？对了，我是[npc.name]。)]
 		</p>
 		<p>
-			Knowing what [npc.name] must be thinking, you ask [npc.herHim] if [npc.she] was hoping for you to be [npc.her] '[pc.mommy]'. Nodding [npc.her] head in enthusiastic response, [npc.she] replies, [npc.speech(Yes, I want you to be my [pc.mommy]! I can pay the [style.intFormat([#flags.getSavedLong('rentalPrice')])] flames your t-shirt's asking for. I want to
+			你知道[npc.name]一定在想什么，于是问[npc.herHim]，[npc.she]是不是希望你成为[npc.her]的“[pc.mommy]”。[npc.she]热情地点头，说：[npc.speech(是的，我想让你做我的[pc.mommy]！我可以支付[style.intFormat([#flags.getSavedLong('rentPrice')])]你T恤要求的价格。我想
 			#IF(npc.hasFetish(FETISH_EXHIBITIONIST))
-				 give you a good, hard fuck right here in front of anyone who wants to watch!
+				当着所有人的面，狠狠地干你一炮！
 			#ELSE
-				 take you back to my apartment and give you a good, hard fuck!
+				把你带回我的公寓，狠狠地操你！
 			#ENDIF
 			)]
 		</p>
 		<p>
-			Looking this [npc.race] up and down, you wonder whether to accept [npc.her] cash and
+			仔细思索这个[npc.race]，你不知道是否要接受[npc.her]的火币和
 			#IF(npc.hasFetish(FETISH_EXHIBITIONIST))
-				 get fucked by [npc.herHim] right here in public,
+				在这里当众被[npc.herHim]操、
 			#ELSE
-				 go back to [npc.her] apartment to get fucked by [npc.herHim],
+				回到[npc.her]公寓被[npc.herHim]操、
 			#ENDIF
-			 or instead to dismiss [npc.herHim] and continue on your way...
+			或者，拒绝[npc.herHim]，继续你要做的事情……
 		</p>
 	#ELSE
 		<p>
-			Your forward progress is brought to an abrupt halt as [npc.a_raceFull(true)] suddenly [npc.steps] out in front of you and gestures towards your chest as [npc.she]
+			当[npc.a_raceFull(true)]突然[npc.steps]到你面前，对着你胸口做手势时，你停下脚步，因为[npc.she]的[npc.a_raceFull(true)]出现打乱了你的节奏。
 			#IF(npc.hasPersonalityTrait(PERSONALITY_TRAIT_SHY))
-				 shyly
+				她害羞地
 			#ENDIF
-			 states, [npc.speech(I saw what's written on your t-shirt and wanted to ask you about it... I'm [npc.name], by the way...)]
+			说，[npc.speech(我看到了你T恤上写的东西，想问问你……顺便说一下，我是[npc.name]。)]
 		</p>
 		<p>
-			Knowing what [npc.name] must be thinking, you ask [npc.herHim] if [npc.she] was hoping for you to be [npc.her] '[pc.mommy]'. Nodding [npc.her] head in enthusiastic response, [npc.she] replies, [npc.speech(Yes, I want you to be my [pc.mommy]! I can pay the [style.intFormat([#flags.getSavedLong('rentalPrice')])] flames your t-shirt's asking for. Please, I want you to
+			你知道[npc.name]肯定在想什么，于是问[npc.herHim]是不是[npc.she]希望你成为[npc.her]的“[pc.mommy]”。[npc.she]热情地点头，说：[npc.speech(是的，我想让你做我的[pc.mommy]！我可以支付[style.intFormat([#flags.getSavedLong('rentPrice')])]你T恤要求的价格。请你
 			#IF(npc.hasFetish(FETISH_EXHIBITIONIST))
-				 give me a good, hard fuck right here in front of anyone who wants to watch!
+				当着所有人的面，狠狠地干我一炮！
 			#ELSE
-				 come back to my apartment and give me a good, hard fuck!
+				和我回到我的公寓，狠狠地干我！
 			#ENDIF
 			)]
 		</p>
 		<p>
-			Looking this [npc.race] up and down, you wonder whether to accept [npc.her] cash and
+			仔细思索这个[npc.race]，你不知道是否要接受[npc.her]的火币以及
 			#IF(npc.hasFetish(FETISH_EXHIBITIONIST))
-				 fuck [npc.herHim] right here in public,
+				在这里当众和[npc.herHim]做爱、
 			#ELSE
-				 go back to [npc.her] apartment to fuck [npc.herHim],
+				回到[npc.she]公寓操[npc.herHim]、
 			#ENDIF
-			 or instead to dismiss [npc.herHim] and continue on your way...
+			或者，拒绝[npc.herHim]，继续你要做的事情……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_REFUSED"><![CDATA[
 	<p>
-		Deciding to decline [npc.namePos] offer, you tell [npc.herHim] that you're not interested, and after [pc.stepping] past [npc.herHim], you leave the [npc.race] behind as you continue on your way...
+		你决定拒绝[npc.namePos]的提议，告诉[npc.herHim]你不感兴趣。在离开[npc.herHim]之后，你把[npc.race]抛之脑后，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APARTMENT_SEX_SUB"><![CDATA[
 	<p>
-		Deciding to accept [npc.namePos] offer, you take the [style.intFormat([#flags.getSavedLong('rentalPrice')])] flames which [npc.sheHas] offered. Barely even giving you time to stow away your cash, the [npc.race] impatiently takes hold of your [pc.arm(true)] and sets off to lead you to [npc.her] apartment. Clearly already getting turned on by the thought of what's to come, [npc.she] [npc.moans], [npc.speech(Come on, [pc.name], it's not far...)]
+		你决定接受[npc.namePos]的提议，拿起[npc.sheHas]给的[style.intFormat([#flags.getSavedLong('rentalPrice')])]火币。[npc.she]甚至没给你时间把钱放好，就迫不及待地拉住你的[pc.arm(true)]带你去[npc.her]的公寓。[npc.she]一想到即将发生的事情，马上就兴奋起来，[npc.moans]，[npc.speech(快点，[pc.name]，不远了……)]
 	</p>
 	<p>
-		Sure enough, only a few minutes later you find yourself being led into [npc.namePos] bedroom. Letting out an excited [npc.moan], [npc.she] can't resist planting a passionate kiss on your [pc.lips+] before panting, [npc.speech(Yes, [pc.name]... It's time to give you a good, hard fuck!)]
-	</p>
+		果然，几分钟后，你发现自己被领进了[npc.namePos]的卧室。[npc.she]发出兴奋的[npc.moan]后，忍不住在你[pc.lips+]上热吻，然后气喘吁吁地说：[npc.speech(啊，[pc.name]……是时候让你好好地、用力地干一炮了)]
+        </p>
 	<p>
-		Smiling at the [npc.race]'s words, you submissively lean into [npc.herHim] as [npc.she] dominantly kisses you once again. Breaking off the kiss with another heavy [npc.moan], [npc.name] moves to give you the fucking [npc.sheHas] paid for...
+		听了[npc.race]的话，你带着笑意顺从地靠向[npc.herHim]，[npc.she]再次霸道地吻住了你。[npc.Name]沉重地[npc.moan]，结束了亲吻，开始与你进行花钱买来的性爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="APARTMENT_SEX_DOM"><![CDATA[
 	<p>
-		Deciding to accept [npc.namePos] offer, you take the [style.intFormat([#flags.getSavedLong('rentalPrice')])] flames which [npc.sheHas] offered. Barely even giving you time to stow away your cash, the [npc.race] impatiently takes hold of your [pc.arm(true)] and pleads [npc.moans], [npc.speech(Come on, [pc.name], let's go to my apartment! I can't wait to get fucked by you...)]
+		你决定接受[npc.namePos]的提议，拿起[npc.sheHas]提供的[style.intFormat([#flags.getSavedLong('rentPrice')])]火币。[npc.race]甚至都没给你时间收好钱，就迫不及待地拉住你的[pc.arm(true)]并恳求[npc.moans]着，[npc.speech(来吧，[pc.name]，我们去我的公寓！我等不及要被你干了……)]
+       </p>
+	<p>
+		你很乐意配合，让[npc.name]带你去[npc.her]的公寓，几分钟后，你们俩进了[npc.her]的卧室。[npc.name]发出一声顺从的呜咽，转过身来面对着你，哀求道：[npc.speech(求求你，[pc.mommy]，好好地、用力地干我！)]
 	</p>
 	<p>
-		Happy to play along, you allow [npc.name] to lead you to [npc.her] apartment, and just a few minutes later, the two of you are stepping into [npc.her] bedroom. Letting out a submissive whine, [npc.name] turns to face you and begs, [npc.speech(Please, [pc.mommy], fuck me good and hard!)]
+		听了[npc.race]的话，你笑着满足了[npc.she]的要求，拉着[npc.herHim]来了一个霸道的吻，亲吻结束之后，你告诉[npc.herHim]是时候让“[pc.mommy]”给[npc.herHim]提供[npc.sheHas]购买的性爱服务了……
 	</p>
-	<p>
-		Smiling at the [npc.race]'s words, you give [npc.herHim] what [npc.she] wants by pulling [npc.herHim] into a dominant kiss, before breaking it off and telling [npc.herHim] that it's time for [npc.her] '[pc.mommy]' to give [npc.herHim] the fucking [npc.sheHas] paid for...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PUBLIC_SEX_SUB"><![CDATA[
 	<p>
-		Deciding to accept [npc.namePos] offer, you take the [style.intFormat([#flags.getSavedLong('rentalPrice')])] flames which [npc.sheHas] offered. Barely even giving you time to stow away your cash, the [npc.race] impatiently plants a passionate kiss on your [pc.lips+] before breaking off and panting, [npc.speech(I'm going to fuck you good and hard, [pc.name]. Let's put on a nice show for everyone...)]
-	</p>
+		你决定接受[npc.namePos]的提议，拿起[npc.sheHas]提供的[style.intFormat([#flags.getSavedLong('rentPrice')])]火币。[npc.race]甚至都没给你时间收好钱，就迫不及待地在你[pc.lips+]上留下一个热情的吻，断断续续地喘息着说，[npc.speech(我要好好地、狠狠地干你，[pc.name]。让我们为大家表演一场好戏吧……)]  	
+       </p>
 	<p>
-		Smiling at the [npc.race]'s words, you submissively lean into [npc.herHim] as [npc.she] dominantly kisses you once again. Breaking off the kiss with another heavy [npc.moan], [npc.name] moves to give you the public fucking [npc.sheHas] paid for...
+		听了[npc.race]的话，你带着笑意顺从地靠在[npc.herHim]身上，[npc.she]再次霸道地吻住了你。随着一声重重的[npc.moan]，[npc.Name]结束亲吻，开始与你进行花钱买来的公开性交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PUBLIC_SEX_DOM"><![CDATA[
 	<p>
-		Deciding to accept [npc.namePos] offer, you take the [style.intFormat([#flags.getSavedLong('rentalPrice')])] flames which [npc.sheHas] offered. Barely even giving you time to stow away your cash, the [npc.race] impatiently plants a passionate kiss on your [pc.lips+] before breaking off and panting, [npc.speech(Come on, [pc.name], fuck me already... Let's put on a nice show for everyone...)]
+		你决定接受[npc.namePos]的提议，拿起[npc.sheHas]提供的[style.intFormat([#flags.getSavedLong('rentPrice')])]火币。[npc.race]甚至没给你时间收好现金，就迫不及待地在你[pc.lips+]上亲吻了一下，断断续续地喘息着说，[npc.speech(来吧，[pc.name]，快干我……让我们为大家好好表演一下吧……)]
 	</p>
 	<p>
-		Smiling at the [npc.race]'s words, you give [npc.herHim] what [npc.she] wants by pulling [npc.herHim] into a dominant kiss, before breaking it off and telling [npc.herHim] that it's time for [npc.her] '[pc.mommy]' to give [npc.herHim] the public fucking [npc.sheHas] paid for...
+		听了[npc.race]的话，你微笑着给[npc.herHim]那些[npc.she]想要的，拉着[npc.herHim]来了一个霸道的吻，结束舌吻后，告诉[npc.herHim]是时候让[pc.mommy]给[npc.herHim]一个[npc.sheHas]花钱买来的公开性爱了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
 		#IF(npc.hasFetish(FETISH_DOMINANT))
-			Having had [npc.her] fun, [npc.name] plants one last dominant kiss on your [pc.lips+], before collapsing down onto [npc.her] bed with a satisfied [npc.moan] and sighing,
+			[npc.Name]完全满足了。[npc.her]最后霸道地亲了亲你[pc.lips+]，发出饕足的[npc.moan]，叹着气瘫倒在[npc.her]床上，
 		#ELSE
-			Feeling satisfied, [npc.name] submissively nuzzles into you, before collapsing down onto [npc.her] bed with a satisfied [npc.moan] and sighing,
+			[npc.name]感到满足。[npc.her]顺从地偎依着你，发出愉悦的[npc.moan]，叹着气瘫倒在[npc.her]床上，
 		#ENDIF
-		 [npc.speech([pc.Name]... That was great...)]
+		[npc.speech([pc.Name]……这太棒了……)]
 	</p>
 	<p>
-		Feeling that you've definitely given [npc.name] [npc.her] money's worth, you set about gathering your things as you tell the [npc.race] that [npc.she] was a very good [npc.boy] for [npc.her] [pc.mommy]. Smiling as [npc.name] thanks you for the fun, you head on over to the front door and prepare to leave the apartment...
+		你认为自己绝对让[npc.name]觉得[npc.her]钱花的很值。于是你一边收拾东西。一边告诉[npc.race]，对于[npc.her][pc.mommy]来说，[npc.she]真是个好[npc.boy]。[npc.name]笑着感谢你的称赞。你笑着走向前门，准备离开公寓……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_END"><![CDATA[
 	<p>
-		Exiting [npc.namePos] apartment, you head back out to where you were when [npc.she] first approached you, before preparing to continue on your way...
+		离开[npc.namePos]的公寓，你回到[npc.she]第一次接近你时的位置，准备继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_PUBLIC"><![CDATA[
 	<p>
 		#IF(npc.hasFetish(FETISH_DOMINANT))
-			Having had [npc.her] fun, [npc.name] plants one last dominant kiss on your [pc.lips+], before collapsing down onto a nearby bench with a satisfied [npc.moan] and sighing,
+			[npc.Name]完全满足了。[npc.her]最后霸道地亲了亲你[pc.lips+]，发出饕足的[npc.moan]，叹着气瘫倒在旁边的长椅上，
 		#ELSE
-			Feeling satisfied, [npc.name] submissively nuzzles into you, before collapsing down onto a nearby bench with a satisfied [npc.moan] and sighing,
+			[npc.name]感到满足。[npc.her]顺从地偎依着你，发出愉悦的[npc.moan]，叹着气瘫倒在旁边的长椅上，
 		#ENDIF
-		 [npc.speech([pc.Name]... That was great...)]
+		[npc.speech([pc.Name]……这太棒了……)]
 	</p>
 	<p>
-		As the crowd which had gathered to watch the show begins to disperse, you set about gathering your things, before telling the [npc.race] that [npc.she] was a very good [npc.boy] for [npc.her] [pc.mommy]. Smiling as [npc.name] thanks you for the fun, you prepare to leave [npc.herHim] behind and continue on your way...
+		你等到围观的人群散去，才开始收拾自己的东西。你告诉[npc.race]，对于[npc.her][pc.mommy]来说，[npc.she]真是个好[npc.boy]。[npc.name]笑着感谢你的称赞。你准备离开[npc.herHim]，继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_PUBLIC_END"><![CDATA[
 	<p>
-		Saying one last farewell, you leave [npc.name] behind and continue on your way...
+		最后一次道别，你离开了[npc.name]，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

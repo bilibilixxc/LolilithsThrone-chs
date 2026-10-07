@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>MAIN_CHITIN</category>
-	<determiner><![CDATA[a layer of]]></determiner>
-	<name><![CDATA[chitin]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[chitin]]></namePlural> 
+	<determiner><![CDATA[一层]]></determiner>
+	<name><![CDATA[几丁质外壳]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[几丁质外壳]]></namePlural> 
 	<naturalCoveringModifiers>
 		<modifier>SMOOTH</modifier>
 	</naturalCoveringModifiers>

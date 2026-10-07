@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[maintenance passage]]></name>
-	<tooltipDescription><![CDATA[A maintenance passage provides access to the ventilation ducts which keep the factory supplied with relatively fresh air from the surface.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the vents in the factory beneath Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[维修通道]]></name>
+	<tooltipDescription><![CDATA[维修通道通向通风管道，这些通风管道为工厂提供来自地面的相对新鲜的空气。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店下面的工厂的通风管道中]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>vents</svgName>
 	<colour>BASE_GREY_DARK</colour>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Entrance]]></name>
-	<tooltipDescription><![CDATA[The entrance to the Amazons' camp is guarded by half a dozen feminine warriors at all times of the day and night.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the entrance to the Amazons' camp]]></virginityLossDescription>
+	<name><![CDATA[入口]]></name>
+	<tooltipDescription><![CDATA[通往亚马逊人营地的入口不论昼夜都有六个女战士把守。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在亚马逊人营地的入口处]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

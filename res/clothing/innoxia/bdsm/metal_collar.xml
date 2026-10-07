@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>2500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[metal collar]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[metal collars]]></namePlural>
-		<description><![CDATA[A heavy metal collar, which is hinged at the back and locked shut via a mechanism beneath the front-facing ring. These collars are typically worn only by slaves, and are almost always found pre-enchanted with numerous arcane-draining effects.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[金属项圈]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[金属项圈]]></namePlural>
+		<description><![CDATA[一个重型金属项圈，项圈后部有铰链，并通过正面的环后面的装置锁紧。这种项圈通常只有奴隶才会佩戴，而且大多数都事先被赋予了许多附魔效果。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
     <equipSlots>
@@ -62,27 +61,27 @@
 	</coreAttributes>
 
 	<replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(clasp)] the heavy metal collar around [npc.her] neck.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(clasp)] the heavy metal collar around [npc2.namePos] neck.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before clasping the heavy metal collar around [npc2.her] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]把重型金属项圈锁紧在[npc.her]的脖子上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]把重型金属项圈锁紧在[npc2.namePos]的脖子上。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]，然后把重型金属项圈锁紧在[npc2.her]脖子上。
+		]]></otherRough>
 	</replacementText>
 	
 	<displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unlock)] [npc.her] heavy metal collar, before taking it off from around [npc.her] neck.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unlock)] [npc2.namePos] heavy metal collar, before taking it off from around [npc2.her] neck.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(unlock)] [npc2.namePos] heavy metal collar, before yanking it off from around [npc2.her] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开[npc.her]的重型项圈。然后从[npc.her]的脖子上取下。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]解开[npc2.namePos]的重型项圈。然后从[npc2.her]的脖子上取下。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地解开[npc2.namePos]的重型项圈。然后从[npc2.her]的脖子上扯下。
+		]]></otherRough>
 	</displacementText>
   
 </clothing>

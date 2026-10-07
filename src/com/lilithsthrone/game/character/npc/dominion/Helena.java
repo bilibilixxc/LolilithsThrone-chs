@@ -66,9 +66,9 @@ public class Helena extends NPC {
 	}
 	
 	public Helena(boolean isImported) {
-		super(isImported, new NameTriplet("Helena"), "Labelle",
-				"Helena is an extremely powerful harpy matriarch, and is in control of one of the largest harpy flocks in Dominion."
-						+ " Her beauty rivals that of even the most gorgeous of succubi, which, combined with her sharp mind and regal personality, makes her somewhat of an idol in harpy society.",
+		super(isImported, new NameTriplet("海伦娜"), "拉贝尔",
+				"海伦娜是一名相当强大的哈比族长，掌控着御城区最大的一支哈比族群。"
+						+ "其美貌倾城绝世，堪比魅魔，再加上敏锐的头脑和胜似皇族的举止，让她在哈比社会中成为了偶像般的人物。",
 				26, Month.MAY, 3,
 				10, Gender.F_V_B_FEMALE, Subspecies.HARPY_SWAN, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.HELENAS_APARTMENT, PlaceType.HELENA_APARTMENT_HELENA_BEDROOM, true);
@@ -100,7 +100,7 @@ public class Helena extends NPC {
 					PersonalityTrait.INNOCENT);
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.5.9")) {
-			this.setName(new NameTriplet("Helena"));
+			this.setName(new NameTriplet("海伦娜"));
 			this.getHomeCell().removeCharacterHomeId("-1,Alexa");
 			this.getHomeCell().addCharacterHomeId("-1,Helena");
 			this.getCell().removeCharacterPresentId("-1,Alexa");
@@ -108,7 +108,7 @@ public class Helena extends NPC {
 			this.setId("-1,Helena");
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.6.2")) {
-			this.setSurname("Labelle");
+			this.setSurname("拉贝尔");
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.6.9")) {
 			this.clearFetishes();
@@ -124,8 +124,8 @@ public class Helena extends NPC {
 			this.setFetishDesire(Fetish.FETISH_KINK_RECEIVING, FetishDesire.THREE_LIKE);
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.7.1")) {
-			this.setDescription("Helena is an extremely powerful harpy matriarch, and is in control of one of the largest harpy flocks in Dominion."
-						+ " Her beauty rivals that of even the most gorgeous of succubi, which, combined with her sharp mind and regal personality, makes her somewhat of an idol in harpy society.");
+			this.setDescription("海伦娜是一名相当强大的哈比族长，掌控着御城区最大的一支哈比族群。"
+						+ "其美貌倾城绝世，堪比魅魔，再加上敏锐的头脑和胜似皇族的举止，让她在哈比社会中成为了偶像般的人物。");
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.8.7")) {
 			this.setHomeLocation(WorldType.HELENAS_APARTMENT, PlaceType.HELENA_APARTMENT_HELENA_BEDROOM);

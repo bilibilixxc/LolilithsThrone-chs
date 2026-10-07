@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Western road]]></name>
-	<tooltipDescription><![CDATA[This road leads out of the western gate of Elis, leading in the direction of the Shinrin Highlands.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[on the western road leading out of Elis]]></virginityLossDescription>
+	<name><![CDATA[向西的路]]></name>
+	<tooltipDescription><![CDATA[这条路通伊利斯的西门而出，延伸向心林高地的方向。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯向西的路上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

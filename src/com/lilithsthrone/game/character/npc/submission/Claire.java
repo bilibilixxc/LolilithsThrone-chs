@@ -53,10 +53,10 @@ public class Claire extends NPC {
 	}
 	
 	public Claire(boolean isImported) {
-		super(isImported, new NameTriplet("Claire"), "Kasun",
-				"Claire is the messenger who's responsible for keeping all of Submission's Enforcer posts up-to-date with one another."
-					+ " Having been recognised by her superiors as a particularly hard-working and reliable individual, she's been granted permission to use the teleportation pads which link all of these posts together."
-					+ " As a result of this, she seems to be in multiple places at once, and whenever you enter one of these Enforcer posts, Claire is sure to already be there.",
+		super(isImported, new NameTriplet("克莱尔"), "凯旋",
+				"克莱尔是一名通信员，负责让整个屈城区执法者岗哨即时互通有无。"
+					+ "她通过辛勤而可靠的工作受到了上级的赏识，获得了使用传送板的许可，这种装置在所有岗哨之间都有连通。"
+					+ "因此，她似乎可以同时出现在多个地方，每当你进入这些执法者哨所时，克莱尔肯定已经在那里了。",
 				31, Month.DECEMBER, 14,
 				10, Gender.F_V_B_FEMALE, Subspecies.CAT_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 30), WorldType.SUBMISSION, PlaceType.SUBMISSION_ENTRANCE, true);
@@ -79,9 +79,9 @@ public class Claire extends NPC {
 			this.setStartingBody(false);
 			this.setHistory(Occupation.NPC_ENFORCER_PATROL_SERGEANT);
 			this.setDescription(
-				"Claire is the messenger who's responsible for keeping all of Submission's Enforcer posts up-to-date with one another."
-					+ " Having been recognised by her superiors as a particularly hard-working and reliable individual, she's been granted permission to use the teleportation pads which link all of these posts together."
-					+ " As a result of this, she seems to be in multiple places at once, and whenever you enter one of these Enforcer posts, Claire is sure to already be there.");
+				"克莱尔是一名通信员，负责让整个屈城区执法者岗哨即时互通有无。"
+					+ "她通过辛勤而可靠的工作受到了上级的赏识，获得了使用传送板的许可，这种装置在所有岗哨之间都有连通。"
+					+ "因此，她似乎可以同时出现在多个地方，每当你进入这些执法者哨所时，克莱尔肯定已经在那里了。");
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.5.1")) {
 			this.setPersonalityTraits(

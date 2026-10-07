@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
 	<value>200</value>
-	<determiner><![CDATA[a]]></determiner>
-	<name><![CDATA[leather belt]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[leather belts]]></namePlural>
-	<description><![CDATA[A plain, unisex leather belt, complete with metal buckle.]]></description>
+	<determiner><![CDATA[一条]]></determiner>
+	<name><![CDATA[皮带]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[皮带]]></namePlural>
+	<description><![CDATA[一条普通的皮带，配有金属扣。]]></description>
 	<physicalResistance>0</physicalResistance>
 	<femininity>ANDROGYNOUS</femininity>
 	<slot>HIPS</slot>
@@ -53,27 +52,27 @@
   </coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the leather belt around [npc.her] waist, before fastening the buckle.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the leather belt around [npc2.namePos] waist, before fastening the buckle.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] tightly [npc.verb(wrap)] the leather belt around [npc2.namePos] waist, before fastening the buckle.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将皮带缠绕在[npc.her]的腰上，然后扣上扣子。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将皮带缠绕在[npc2.namePos]的腰上，然后扣上皮带。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]紧紧地将皮带系在[npc2.namePos]腰上，然后扣上皮带。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] leather belt and [npc.verb(slip)] it off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] leather belt and [npc.verb(slip)] it off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] impatiently [npc.verb(unbuckle)] [npc2.namePos] leather belt and [npc.verb(pull)] it off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了[npc.her]的皮带并把它脱了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的皮带并把它脱了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]不耐烦地解开了[npc2.namePos]皮带，然后把它拽了下来。
+]]></otherRough>
   </displacementText>
   
   

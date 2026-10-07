@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Minotallys fountain]]></name>
-	<tooltipDescription><![CDATA[Dual streams of water spurt out from the exposed nipples of this statue of the town's mayor, Minotallys.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside the Minotallys fountain in the 'Wall's End' shopping precinct]]></virginityLossDescription>
+	<name><![CDATA[米诺塔莉丝喷泉]]></name>
+	<tooltipDescription><![CDATA[从镇长米诺塔莉丝的雕像裸露的双乳中，两股水流喷涌而出。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在墙之尽头购物区里的米诺塔莉丝喷泉旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND_GREEN</backgroundColour>

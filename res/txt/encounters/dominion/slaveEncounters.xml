@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- Slave abusing and using the player: -->
@@ -7,283 +7,283 @@
 	
 	<htmlContent tag="SLAVE_USES_YOU"><![CDATA[
 	<p>
-		As you [pc.walk] down one of the many corridors in Lilaya's mansion, a figure suddenly jumps out at you from an open doorway! Taking you completely by surprise, you're unable to react, and you find yourself being pinned up against the wall as your assailant
+		你正[pc.walk]在莉莱雅宅邸的某条走廊时，一道身影突然从敞开的门口向你扑来！你被打了个措手不及，根本来不及反应就被按在了墙上，袭击者
 		#IF(npc.isMute())
-			 hungrily growls into your ear.
+			贪婪地在你耳边咆哮着。
 		#ELSE
-			 growls into your ear, [npc.speech(Who's the bitch now?!)]
+			在你耳边咆哮道：[npc.speech(现在谁才是婊子？)]
 		#ENDIF
 	</p>
 	<p>
-		Looking into the grinning face of your slave, [npc.name], you let out a surprised cry as [npc.she] pulls you forwards into [npc.her] [npc.arms]. Before you can even start to say anything in response to this assault, [npc.name] clasps [npc.a_hand+] over your [pc.lips] and
+		你看到[npc.Name]咧开嘴笑了起来，用[npc.arms]将你拉到身前，你不由得发出了惊讶的叫声。还没等你开口说话，[npc.name]就用[npc.a_hand+]捂住了你的[pc.lips]，
 		#IF(npc.isMute())
-			 holds you still.
+			将你牢牢按在原处。
 		#ELSE
-			 [npc.moans], [npc.speech(Right now, you're no better than a slave yourself! I'm going to have some fun with you!)]
+			[npc.moans]着说道，[npc.speech(现在你自己还不如个奴隶，我要跟你好好玩玩了！)]
 		#ENDIF
 	</p>
 	<p>
-		Being caught totally unawares, you're in no position to fight back and find yourself at the mercy of your supposed 'slave'...
+		因为是突然袭击，所以你根本没有任何还手之力，只能任由你所谓的“奴隶”摆布……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_SEX"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and [npc.she] continues passionately making out with you for a few moments, before finally pulling away. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you realise that [npc.sheIs] probably not going to be content with just a kiss...
+		[npc.NamePos]的[npc.arms]环住你的腰抚摸你的背，热情地与你亲热了好一会儿才松开。[npc.she]饥渴地舔着[npc.lips]，对你邪魅地笑。你明白，[npc.sheIs]可能不仅仅满足于一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_SEX_EAGER"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you eagerly lean into [npc.herHim], passionately returning [npc.her] kiss for a few moments, before [npc.she] breaks away from you. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you feel a rush of excitement as you realise that [npc.sheIs] going to want more than just a kiss...
+		[npc.NamePos]用[npc.arms]环绕你的背，你热切地靠在[npc.herHim]身上。[npc.she]热情地回吻片刻，又推开你，露出邪魅的笑容，舔了舔[npc.lips]。你感到一阵兴奋，意识到[npc.she]想要的可不仅仅只是一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_SEX_RESIST"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you let out a distressed cry as [npc.she] pulls you into a forceful kiss. Summoning the last of your strength, you desperately try to push [npc.herHim] away, pleading for [npc.herHim] to stop. Giving you an evil grin, [npc.she] ignores your protests, and as you see [npc.herHim] hungrily licking [npc.her] [npc.lips], you realise that [npc.sheIs] not going to let you go...
+		[npc.NamePos]用[npc.arms]环住你的背，你被拉过去强制接吻，发出凌厉的哭号。你耗干了最后一丝气力，努力推开[npc.herHim]。你不断地乞求[npc.herHim]停下。[npc.she]邪恶地笑笑，完全无视了你的抵抗。你眼睁睁地看着[npc.herHim]饥渴地舔了舔[npc.lips]，明白过来[npc.sheIs]才不会放你走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- SLAVE_USES_YOU_POST_SEX -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_POST_SEX"><![CDATA[
 	<p>
-		As [npc.name] steps back and sorts [npc.her] clothes out, you sink to the floor, totally worn out from [npc.her] dominant treatment of you.
+		[npc.name]退后开始整理衣服，你因为[npc.she]对你的霸道支配而瘫软在地。
 		#IF(npc.isMute())
 			#IF(npc.isSatisfiedFromLastSex())
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with a very satisfied smirk on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，脸上露出饕足的坏笑。
 			#ELSE
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with an annoyed frown on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，恼怒地皱着眉头。
 			#ENDIF
 		#ELSE
 			#IF(npc.isSatisfiedFromLastSex())
-				 [npc.She] looks down at you with a very satisfied smirk on [npc.her] face, before sneering, [npc.speech(That was fun, <i>[npc.pcName]</i>!)]
+				[npc.she]低头看着你，脸上露出饕足的坏笑，不屑地说，[npc.speech(太有趣了，<i>[npc.pcName]</i>！)]
 			#ELSE
-				 [npc.She] looks down at you with an annoyed frown on [npc.her] face, before tutting, [npc.speech(Did you really have to end it so soon?)]
+				[npc.she]低头看着你，恼怒地皱着眉头，不满地咂咂嘴，[npc.speech(你结束的也太快了吧？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		With that, [npc.she] walks off, leaving you panting on the floor. It takes a little while for you to recover from your ordeal, but eventually you feel strong enough to get your things in order and carry on your way.
+		[npc.she]就这样离开了，留下你独自一人躺在地上喘气。你花了一点时间才从折磨中恢复过来，但你还是多躺了一会，直到有力气起来收拾东西之后才继续前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- SLAVE_USES_YOU_REFUSED -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_REFUSED"><![CDATA[
 	<p>
-		You really aren't in the mood for having sex with [npc.name] right now, and so you put a swift end to [npc.her] plans by firmly telling [npc.herHim] to stop.
+		你现在真的没心情和[npc.Name]做爱，所以你言简意赅地让[npc.herHim]停下，迅速终止了[npc.her]的计划。
 	</p>
 	<p>
 		#IF(npc.isMute())
-			Being mute, [npc.she] isn't able to reply to this, but makes [npc.her] displeasure known by giving you an annoyed look,
+			[npc.she]没法说话，因此无法做出回应，但[npc.she]给了你一个恼怒的眼神，以此来表达[npc.her]的不满，
 		#ELSE
-			[npc.speech(Fine...)] [npc.she] reluctantly
+			[npc.speech(好吧……)][npc.she]不情愿地
 			#IF(npc.isFeminine())
-				 whines,
+				抱怨了一声，
 			#ELSE
-				 grunts,
+				咕哝了一声，
 			#ENDIF
 		#ENDIF
-		 before [npc.walking] off and leaving you to continue on your way...
+		然后[npc.she]便离开了，留你自己继续之前的旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_YOU_DUNGEON -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_DUNGEON"><![CDATA[
 	<p>
-		As you [pc.walk] down the gloomy passageway which snakes its way through Lilaya's dungeon, a figure suddenly jumps out at you from a recessed doorway! Taking you completely by surprise, you're unable to react, and you find yourself being pinned up against the damp stone wall as your assailant
+		你正[pc.walk]在莉莱雅地牢的某条阴暗通道时，一道身影突然从凹陷的门口向你扑来！你被打了个措手不及，根本来不及反应就被按在了墙上，袭击者
 		#IF(npc.isMute())
-			 hungrily growls into your ear.
+			贪婪地在你耳边咆哮着。
 		#ELSE
-			 growls into your ear, [npc.speech(Well, well, well, look who I found down here!)]
+			在你耳边咆哮道：[npc.speech(好啊，好啊，看看我找到了谁？！)]
 		#ENDIF
 	</p>
 	<p>
-		Looking into the grinning face of your slave, [npc.name], you let out a surprised cry as [npc.she] pulls you forwards into [npc.her] [npc.arms]. Before you can even start to say anything in response to this assault, [npc.name] clasps [npc.a_hand+] over your [pc.lips] and
+		你看到[npc.Name]咧开嘴笑了起来，用[npc.arms]将你拉到身前，你不由得发出了惊讶的叫声。还没等你开口说话，[npc.name]就用[npc.a_hand+]捂住了你的[pc.lips]，
 		#IF(npc.isMute())
-			 holds you still.
+			将你牢牢按在原处。
 		#ELSE
-			 [npc.moans], [npc.speech(Nobody's going to hear your cries for help down here! I'm going to have some fun with you!)]
+			[npc.moans]着说道，[npc.speech(在这下面可没人会听到你的呼救声，我要跟你好好玩玩了！)]
 		#ENDIF
 	</p>
 	<p>
-		Being caught totally unawares, you're in no position to fight back, and are at the mercy of your supposed 'slave'...
+		因为是突然袭击，所以你根本没有任何还手之力，只能任由你所谓的“奴隶”摆布……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_DUNGEON_SEX"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and [npc.she] continues passionately making out with you for a few moments, before finally pulling away. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you realise that [npc.sheIs] not going to be content with just a kiss...
+		[npc.NamePos]的[npc.arms]环住你的腰抚摸你的背，热情地与你亲热了好一会儿才松开。[npc.she]饥渴地舔着[npc.lips]，对你邪魅地笑。你明白，[npc.sheIs]可能不仅仅满足于一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_DUNGEON_SEX_EAGER"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you eagerly lean into [npc.herHim], passionately returning [npc.her] kiss for a few moments, before [npc.she] breaks away from you. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you feel a rush of excitement as you realise that [npc.sheIs] going to want more than just a kiss...
+		[npc.NamePos]用[npc.arms]环绕你的背，你热切地靠在[npc.herHim]身上。[npc.she]热情地回吻片刻，又推开你，露出邪魅的笑容，舔了舔[npc.lips]。你感到一阵兴奋，意识到[npc.she]想要的可不仅仅只是一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_DUNGEON_SEX_RESIST"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you let out a distressed cry as [npc.she] pulls you into a forceful kiss. Summoning the last of your strength, you desperately try to push [npc.herHim] away, pleading for [npc.herHim] to stop. Giving you an evil grin, [npc.she] ignores your protests, and as you see [npc.herHim] hungrily licking [npc.her] [npc.lips], you realise that [npc.sheIs] not going to let you go...
+		[npc.NamePos]用[npc.arms]环住你的背，你被拉过去强制接吻，发出凌厉的哭号。你耗干了最后一丝气力，努力推开[npc.herHim]。你不断地乞求[npc.herHim]停下。[npc.she]邪恶地笑笑，完全无视了你的抵抗。你眼睁睁地看着[npc.herHim]饥渴地舔了舔[npc.lips]，明白过来[npc.sheIs]才不会放你走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- SLAVE_USES_YOU_DUNGEON_POST_SEX -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_DUNGEON_POST_SEX"><![CDATA[
 	<p>
-		As [npc.name] steps back and sorts [npc.her] clothes out, you sink to the floor, totally worn out from [npc.her] dominant treatment of you.
+		[npc.name]退后开始整理衣服，你因为[npc.she]对你的霸道支配而瘫软在地。
 		#IF(npc.isMute())
 			#IF(npc.isSatisfiedFromLastSex())
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with a very satisfied smirk on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，脸上露出饕足的坏笑。
 			#ELSE
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with an annoyed frown on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，恼怒地皱着眉头。
 			#ENDIF
 		#ELSE
 			#IF(npc.isSatisfiedFromLastSex())
-				 [npc.She] looks down at you with a very satisfied smirk on [npc.her] face, before sneering, [npc.speech(That was fun, <i>[npc.pcName]</i>!)]
+				[npc.she]低头看着你，脸上露出饕足的坏笑，不屑地说，[npc.speech(太有趣了，<i>[npc.pcName]</i>！)]
 			#ELSE
-				 [npc.She] looks down at you with an annoyed frown on [npc.her] face, before tutting, [npc.speech(Did you really have to end it so soon?)]
+				[npc.she]低头看着你，恼怒地皱着眉头，不满地咂咂嘴，[npc.speech(你结束的也太快了吧？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		With that, [npc.she] walks off, leaving you panting on the floor of Lilaya's dungeon. It takes a little while for you to recover from your ordeal, but eventually you feel strong enough to get your things in order and carry on your way.
+		[npc.she]就这样离开了，留下你独自一人躺在地上喘气。你花了一点时间才从折磨中恢复过来，但你还是在莉莱雅的地牢的地上多躺了一会，直到有力气起来收拾东西之后才继续前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- SLAVE_USES_YOU_DUNGEON_REFUSED -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_DUNGEON_REFUSED"><![CDATA[
 	<p>
-		You really aren't in the mood for having sex with [npc.name] right now, and so you put a swift end to [npc.her] plans by firmly telling [npc.herHim] to stop.
+		你现在真的没心情和[npc.Name]做爱，所以你言简意赅地让[npc.herHim]停下，迅速终止了[npc.her]的计划。
 	</p>
 	<p>
 		#IF(npc.isMute())
-			Being mute, [npc.she] isn't able to reply to this, but makes [npc.her] displeasure known by giving you an annoyed look,
+			[npc.she]没法说话，因此无法做出回应，但[npc.she]给了你一个恼怒的眼神，以此来表达[npc.her]的不满，
 		#ELSE
-			[npc.speech(Fine...)] [npc.she] reluctantly
+			[npc.speech(好吧……)][npc.she]不情愿地
 			#IF(npc.isFeminine())
-				 whines,
+				抱怨了一声，
 			#ELSE
-				 grunts,
+				咕哝了一声，
 			#ENDIF
 		#ENDIF
-		 before [npc.walking] off and leaving you to continue on your way...
+		然后[npc.she]便离开了，留你自己继续之前的旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_YOU_STREETS -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_STREETS"><![CDATA[
 	<p>
-		As you're walking down one of Dominion's busy streets, weaving your way around the crowds, you suddenly feel someone step up right behind you, and before you can react, they reach around and clasp [npc.a_hand+] over your mouth. You're taken completely by surprise, and as you turn your head to get a look at your assailant, you see that it's none other than your slave, [npc.name].
+		你在御城区的某条繁忙街道上人挤人时，你感觉到某个人站在了你的身后！在你反应过来之前，袭击者就用那[npc.a_hand+]捂住了你的嘴巴。你完全吓了一跳，连忙转头看向袭击者，你认出这是你的奴隶[npc.Name]。
 		#IF(npc.isMute())
-			 Pulling you back against [npc.her] body, [npc.she] hungrily growls into your [pc.ear(true)].
+			[npc.she]拉着你紧紧地贴在[npc.her]的身上，贪婪地在你[pc.ear(true)]边咆哮着。
 		#ELSE
-			 Pulling you back against [npc.her] body, [npc.she] hungrily growls into your [pc.ear(true)], [npc.speech(Well, well, well, look what I found!)]
+			[npc.she]拉着你紧紧地贴在[npc.her]的身上，贪婪地在你[pc.ear(true)]边咆哮着，[npc.speech(看呐，看呐，看我发现了什么？！)]
 		#ENDIF
 	</p>
 	<p>
-		Shifting [npc.her] grip from your mouth to take hold of your [pc.arm], [npc.name] spins you around, before pulling you forwards into [npc.her] [npc.arms]. Before you can even start to say anything in response to this assault, [npc.name] fixes you with a predatory gaze and
+		[npc.Name]松开你的嘴，转而抓住了你的[pc.arm]，将你转了一圈，再次用[npc.arms]抱住了你。还没等你做出任何回应，[npc.name]便用充满掠夺性的目光看着你，
 		#IF(npc.isMute())
-			 dominantly holds you still.
+			霸道地将你按在原处。
 		#ELSE
-			 dominantly [npc.moans], [npc.speech(You're mine! I'm going to have some fun with you right here in front of everyone!)]
+			霸道地[npc.moans]着，[npc.speech(你是我的了！就在这里，我要在所有人面前跟你好好玩玩！)]
 		#ENDIF
 	</p>
 	<p>
-		As [npc.she] moves to start having sex with you, members of the surrounding crowd, including a pair of Enforcers, step forwards to watch. With no help coming your way, you realise that you're at the mercy of your supposed 'slave'...
+		在[npc.she]开始和你发生关系时，周围的人群，包括一对执法者都只是选择过来围观。在意识到你得不到任何帮助之后，你明白你现在只能任由你的“奴隶”摆布了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_STREETS_SEX"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and [npc.she] continues passionately making out with you for a few moments, before finally pulling away. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you realise that [npc.sheIs] probably not going to be content with just a kiss...
+		[npc.NamePos]的[npc.arms]环住你的腰抚摸你的背，热情地与你亲热了好一会儿才松开。[npc.she]饥渴地舔着[npc.lips]，对你邪魅地笑。你明白，[npc.sheIs]可能不仅仅满足于一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_STREETS_SEX_EAGER"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you eagerly lean into [npc.herHim], passionately returning [npc.her] kiss for a few moments, before [npc.she] breaks away from you. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you feel a rush of excitement as you realise that [npc.sheIs] going to want more than just a kiss...
+		[npc.NamePos]用[npc.arms]环绕你的背，你热切地靠在[npc.herHim]身上。[npc.she]热情地回吻片刻，又推开你，露出邪魅的笑容，舔了舔[npc.lips]。你感到一阵兴奋，意识到[npc.she]想要的可不仅仅只是一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_STREETS_SEX_RESIST"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you let out a distressed cry as [npc.she] pulls you into a forceful kiss. Summoning the last of your strength, you desperately try to push [npc.herHim] away, pleading for [npc.herHim] to stop. Giving you an evil grin, [npc.she] ignores your protests, and as you see [npc.herHim] hungrily licking [npc.her] [npc.lips], you realise that [npc.sheIs] not going to let you go...
+		[npc.NamePos]用[npc.arms]环住你的背，你被拉过去强制接吻，发出凌厉的哭号。你耗干了最后一丝气力，努力推开[npc.herHim]。你不断地乞求[npc.herHim]停下。[npc.she]邪恶地笑笑，完全无视了你的抵抗。你眼睁睁地看着[npc.herHim]饥渴地舔了舔[npc.lips]，明白过来[npc.sheIs]才不会放你走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_YOU_POST_SEX_STREETS -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_POST_SEX_STREETS"><![CDATA[
 	<p>
-		As [npc.name] steps back and sorts [npc.her] clothes out, you sink to the floor, totally worn out from [npc.her] dominant treatment of you.
+		[npc.name]退后开始整理衣服，你因为[npc.she]对你的霸道支配而瘫软在地。
 		#IF(npc.isMute())
 			#IF(npc.isSatisfiedFromLastSex())
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with a very satisfied smirk on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，脸上露出饕足的坏笑。
 			#ELSE
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with an annoyed frown on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，恼怒地皱着眉头。
 			#ENDIF
 		#ELSE
 			#IF(npc.isSatisfiedFromLastSex())
-				 [npc.She] looks down at you with a very satisfied smirk on [npc.her] face, before sneering, [npc.speech(That was fun, <i>[npc.pcName]</i>!)]
+				[npc.she]低头看着你，脸上露出饕足的坏笑，不屑地说，[npc.speech(太有趣了，<i>[npc.pcName]</i>！)]
 			#ELSE
-				 [npc.She] looks down at you with an annoyed frown on [npc.her] face, before tutting, [npc.speech(Did you really have to end it so soon?)]
+				[npc.she]低头看着你，恼怒地皱着眉头，不满地咂咂嘴，[npc.speech(你结束的也太快了吧？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		With that, [npc.she] walks off, leaving you panting on the floor. It takes a little while for you to recover from your ordeal, but eventually you feel strong enough to get your things in order and carry on your way.
+		[npc.she]就这样离开了，留下你独自一人躺在地上喘气。你花了一点时间才从折磨中恢复过来，但你还是多躺了一会，直到有力气起来收拾东西之后才继续前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- SLAVE_USES_YOU_STREETS_REFUSED -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_STREETS_REFUSED"><![CDATA[
 	<p>
-		You really aren't in the mood for having sex with [npc.name] right now, and so you put a swift end to [npc.her] plans by firmly telling [npc.herHim] to stop.
+		你现在真的没心情和[npc.Name]做爱，所以你言简意赅地让[npc.herHim]停下，迅速终止了[npc.her]的计划。
 	</p>
 	<p>
 		#IF(npc.isMute())
-			Being mute, [npc.she] isn't able to reply to this, but makes [npc.her] displeasure known by giving you an annoyed look,
+			[npc.she]没法说话，因此无法做出回应，但[npc.she]给了你一个恼怒的眼神，以此来表达[npc.her]的不满，
 		#ELSE
-			[npc.speech(Fine...)] [npc.she] reluctantly
+			[npc.speech(好吧……)][npc.she]不情愿地
 			#IF(npc.isFeminine())
-				 whines,
+				抱怨了一声，
 			#ELSE
-				 grunts,
+				咕哝了一声，
 			#ENDIF
 		#ENDIF
-		 before [npc.walking] off and leaving you to continue on your way...
+		然后[npc.she]便离开了，留你自己继续之前的旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_YOU_ALLEYWAY -->
@@ -291,100 +291,100 @@
 	<htmlContent tag="SLAVE_USES_YOU_ALLEYWAY"><![CDATA[
 	<p>
 		#IF(pc.getLocationPlace().getPlaceType().equals(PLACE_TYPE_DOMINION_CANAL) || pc.getLocationPlace().getPlaceType().equals(PLACE_TYPE_DOMINION_CANAL_END))
-			As you're walking down the path that runs alongside one of Dominion's deserted canals, you suddenly feel someone step up right behind you, and before you can react, they reach around and clasp [npc.a_hand+] over your mouth.
+			当你沿着御城区运河旁的一条无人小路行走时，突然发现有人跟在你身后。你还没反应过来，那人就用[npc.a_hand+]捂住了你的嘴。
 		#ELSE
-			As you're walking down one of Dominion's deserted alleyways, you suddenly feel someone step up right behind you, and before you can react, they reach around and clasp [npc.a_hand+] over your mouth.
+			当你沿着御城区的一条无人小巷行走时，突然发现有人跟在你身后。你还没反应过来，那人就用[npc.a_hand+]捂住了你的嘴。
 		#ENDIF
-		 You're taken completely by surprise, and as you turn your head to get a look at your assailant, you see that it's none other than your slave, [npc.name].
+		你完全吓了一跳，连忙转头看向袭击者，你认出这是你的奴隶[npc.Name]。
 		#IF(npc.isMute())
-			 Pulling you back against [npc.her] body, [npc.she] hungrily growls into your [pc.ear(true)].
+			[npc.she]拉着你紧紧地贴在[npc.her]的身上，贪婪地在你[pc.ear(true)]边咆哮着。
 		#ELSE
-			 Pulling you back against [npc.her] body, [npc.she] hungrily growls into your [pc.ear(true)], [npc.speech(Well, well, well, look what I found!)]
+			[npc.she]拉着你紧紧地贴在[npc.her]的身上，贪婪地在你[pc.ear(true)]边咆哮着，[npc.speech(看呐，看呐，看我发现了什么？！)]
 		#ENDIF
 	</p>
 	<p>
-		Shifting [npc.her] grip from your mouth to take hold of your [pc.arm], [npc.name] spins you around, before pulling you forwards into [npc.her] [npc.arms]. Before you can even start to say anything in response to this assault, [npc.name] fixes you with a predatory gaze and
+		[npc.Name]松开你的嘴，转而抓住了你的[pc.arm]，将你转了一圈，再次用[npc.arms]抱住了你。还没等你做出任何回应，[npc.name]便用充满掠夺性的目光看着你，
 		#IF(npc.isMute())
-			 dominantly holds you still.
+			霸道地将你按在原处。
 		#ELSE
-			 dominantly [npc.moans], [npc.speech(You're mine! I'm going to have some fun with you!)]
+			霸道地[npc.moans]着，[npc.speech(你是我的了！我要跟你好好玩玩！)]
 		#ENDIF
 	</p>
 	<p>
-		Being caught totally unawares, you're in no position to fight back, and are at the mercy of your supposed 'slave'...
+		因为是突然袭击，所以你根本没有任何还手之力，只能任由你所谓的“奴隶”摆布……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_ALLEYWAY_SEX"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and [npc.she] continues passionately making out with you for a few moments, before finally pulling away." Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you realise that [npc.sheIs] probably not going to be content with just a kiss...
+		[npc.NamePos]的[npc.arms]环住你的腰抚摸你的背，热情地与你亲热了好一会儿才松开。[npc.she]饥渴地舔着[npc.lips]，对你邪魅地笑。你明白，[npc.sheIs]可能不仅仅满足于一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_ALLEYWAY_SEX_EAGER"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you eagerly lean into [npc.herHim], passionately returning [npc.her] kiss for a few moments, before [npc.she] breaks away from you. Giving you an evil grin, [npc.she] hungrily licks [npc.her] [npc.lips], and you feel a rush of excitement as you realise that [npc.sheIs] going to want more than just a kiss...
+		[npc.NamePos]用[npc.arms]环绕你的背，你热切地靠在[npc.herHim]身上。[npc.she]热情地回吻片刻，又推开你，露出邪魅的笑容，舔了舔[npc.lips]。你感到一阵兴奋，意识到[npc.she]想要的可不仅仅只是一个吻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_YOU_ALLEYWAY_SEX_RESISTING"><![CDATA[
 	<p>
-		[npc.NamePos] [npc.arms] wrap around your back, and you let out a distressed cry as [npc.she] pulls you into a forceful kiss. Summoning the last of your strength, you desperately try to push [npc.herHim] away, pleading for [npc.herHim] to stop. Giving you an evil grin, [npc.she] ignores your protests, and as you see [npc.herHim] hungrily licking [npc.her] [npc.lips], you realise that [npc.sheIs] not going to let you go...
+		[npc.NamePos]用[npc.arms]环住你的背，你被拉过去强制接吻，发出凌厉的哭号。你耗干了最后一丝气力，努力推开[npc.herHim]。你不断地乞求[npc.herHim]停下。[npc.she]邪恶地笑笑，完全无视了你的抵抗。你眼睁睁地看着[npc.herHim]饥渴地舔了舔[npc.lips]，明白过来[npc.sheIs]才不会放你走……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_YOU_POST_SEX_ALLEYWAY -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_POST_SEX_ALLEYWAY"><![CDATA[
 	<p>
-		As [npc.name] steps back and sorts [npc.her] clothes out, you sink to the floor, totally worn out from [npc.her] dominant treatment of you.
+		[npc.name]退后开始整理衣服，你因为[npc.she]对你的霸道支配而瘫软在地。
 		#IF(npc.isMute())
 			#IF(npc.isSatisfiedFromLastSex())
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with a very satisfied smirk on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，脸上露出饕足的坏笑。
 			#ELSE
-				 Looking up at your slave, you see that [npc.sheIs] looking down at you with an annoyed frown on [npc.her] face.
+				你抬头看向你的奴隶，[npc.sheIs]正低头看着你，恼怒地皱着眉头。
 			#ENDIF
 		#ELSE
 			#IF(npc.isSatisfiedFromLastSex())
-				 [npc.She] looks down at you with a very satisfied smirk on [npc.her] face, before sneering, [npc.speech(That was fun, <i>[npc.pcName]</i>!)]
+				[npc.she]低头看着你，脸上露出饕足的坏笑，不屑地说，[npc.speech(太有趣了，<i>[npc.pcName]</i>！)]
 			#ELSE
-				 [npc.She] looks down at you with an annoyed frown on [npc.her] face, before tutting, [npc.speech(Did you really have to end it so soon?)]
+				[npc.she]低头看着你，恼怒地皱着眉头，不满地咂咂嘴，[npc.speech(你结束的也太快了吧？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		With that, [npc.she] walks off, leaving you panting on the floor. It takes a little while for you to recover from your ordeal, but eventually you feel strong enough to get your things in order and carry on your way.
+		[npc.she]就这样离开了，留下你独自一人躺在地上喘气。你花了一点时间才从折磨中恢复过来，但你还是多躺了一会，直到有力气起来收拾东西之后才继续前进。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_YOU_ALLEYWAY_REFUSED -->
 	
 	<htmlContent tag="SLAVE_USES_YOU_ALLEYWAY_REFUSED"><![CDATA[
 	<p>
-		You really aren't in the mood for having sex with [npc.name] right now, and so you put a swift end to [npc.her] plans by firmly telling [npc.herHim] to stop.
+		你现在真的没心情和[npc.Name]做爱，所以你言简意赅地让[npc.herHim]停下，迅速终止了[npc.her]的计划。
 	</p>
 	<p>
 		#IF(npc.isMute())
-			Being mute, [npc.she] isn't able to reply to this, but makes [npc.her] displeasure known by giving you an annoyed look,
+			[npc.she]没法说话，因此无法做出回应，但[npc.she]给了你一个恼怒的眼神，以此来表达[npc.her]的不满，
 		#ELSE
-			[npc.speech(Fine...)] [npc.she] reluctantly
+			[npc.speech(好吧……)][npc.she]不情愿地
 			#IF(npc.isFeminine())
-				 whines,
+				抱怨了一声，
 			#ELSE
-				 grunts,
+				咕哝了一声，
 			#ENDIF
 		#ENDIF
-		 before [npc.walking] off and leaving you to continue on your way...
+		然后[npc.she]便离开了，留你自己继续之前的旅程……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Slave using other slave in Dominion's alleyways: -->
@@ -393,193 +393,193 @@
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_ALLEYWAY"><![CDATA[
 	<p>
-		As you make your way down the twisting alleyway, [npc2.a_moan+] abruptly shakes your mind from other thoughts. As this lewd noise fades away, you prepare to continue on your way, deciding that whoever made it will be fine without your intervention. Before you've able to make a move, however, you suddenly recognise a pair of voices around the corner.
+		当你沿着曲折的小巷前行时，一声[npc2.a_moan+]打断了你的思绪。当这淫荡的声音逐渐消失时，你准备继续前行，毕竟不管是谁干的，就算没有你的干预也不会有什么事。然而还没等你有所行动，你突然听见转角处传来了两个十分熟悉的声音。
 	</p>
 	<p>
-		Due to a fork in the path ahead, you're able to pass by without encountering the clearly-horny individuals. Then again, as the two of them sound like people you may know, you could stop and find out who they are...
+		由于前方有一个岔路口，你可以顺利通过而不会遇到这两个人。不过，这两个人听起来像是你认识的人，你可以停下来听一下他们到底是谁……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_ALLEYWAY_IGNORE"><![CDATA[
 	<p>
-		You don't care who it is, frankly, even if you do know them. Without a second thought towards the noise, you get back on your way...
+		老实说，即使你认识他们，你也不在乎他们是谁。在无视这些噪音之后，你开始继续赶路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_OTHER_SLAVE_ALLEYWAY_CHECK -->
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_ALLEYWAY_CHECK"><![CDATA[
 	<p>
-		Curious, you edge towards the source of the noise, trying your best to keep your presence concealed as you prepare to spy on the noisy duo. As you peek around the corner, you see a pair of your slaves, [npc.name] and [npc2.name].
+		你好奇地朝声音的来源走去，在一边尽量隐藏自己存在的同时一边准备看看究竟是谁在这里。当你在拐角处窥视时，你看到了你的奴隶们正在这里，是[npc.name]和[npc2.name]。
 		#IF(npc.hasPenis())
-			 [npc.Name] has [npc2.name] pinned, face-first, against the alley's wall,
+			[npc.Name]把[npc2.name]按在小巷的墙上并让其保持脸朝下的姿势，
 		#ELSE
-			 [npc.Name] has [npc2.name] pinned back against the alley's wall,
+			[npc.Name]将[npc2.name]逼退到了小巷的角落里，
 		#ENDIF
-		 with [npc2.her] clothes dishevelled and [npc2.her]
+		[npc2.name]衣冠凌乱，
 		#IF(npc2.isAbleToAccessCoverableArea(CA_VAGINA, true))
-			 genitals on full display.
+			生殖器一览无余地暴露着。
 		#ELSE
-			 hot body pressed up against [npc.hers].
+			火辣的身体紧贴着[npc.name]。
 		#ENDIF
 	</p>
 	<p>
-		The dominant [npc.race] looks more than ready to
+		占主导地位的[npc.race]看起来更愿意
 		#IF(npc.hasPenis() && (npc2.hasVagina() || game.isAnalContentEnabled()))
-			 penetrate [npc2.namePos]
+			插[npc2.namePos]
 			#IF(npc2.hasVagina())
-				 [npc2.pussy+],
+				[npc2.pussy+],
 			#ELSE
-				 [npc2.ass+],
+				[npc2.ass+],
 			#ENDIF
 		#ELSEIF(npc2.hasPenis() && (npc2.hasVagina() || game.isAnalContentEnabled()))
-			 get penetrated by [npc2.namePos] [npc2.cock+],
+			被[npc2.namePos][npc2.cock+]插，
 		#ELSE
-			 start fucking [npc2.name],
+			开始操[npc2.name]，
 		#ENDIF
-		 and as you watch,
+		而正当你观看的时候，
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE))
-				 [npc.she] evilly snarls at the [npc2.race].
+				[npc.she]恶毒地朝[npc2.race]咆哮。
 			#ELSEIF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				 [npc.she] hungrily grins at the [npc2.race].
+				[npc.she]饥渴地朝[npc2.race]坏笑。
 			#ELSE
-				 [npc.she] eagerly grins at the [npc2.race].
+				[npc.she]迫切地朝[npc2.race]媚笑。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE))
-				 [npc.she] leans in to snarl, [npc.speech(Glad I got a chance to catch you somewhere like this. It's time I show you your place!)]
+				[npc.she]俯身咆哮道：[npc.speech(总算让我抓到你了，是时候让你摆正自己的地位了！)]
 			#ELSEIF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				 [npc.she] leans in to declare, [npc.speech([pc.Name] told me that if I wanted to fuck somebody, it had to be you...)]
+				[npc.she]倾身宣布道：[npc.speech([pc.Name]说如果我想和某人做爱，那就一定是你……)]
 			#ELSEIF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
-				 [npc.she] leans in to [npc.moan], [npc.speech(I followed you all the way here, and now that there's nobody to interrupt us, it's time to give you a good fucking!)]
+				靠上去[npc.moan]道：[npc.speech(我一路跟着你来到这里，现在没人会来打扰我们了，是时候让你好好爽爽了！)]
 			#ELSE
-				 [npc.she] leans in to [npc.moan], [npc.speech(Fuck! I thought I'd never find you! I'm about to give you the fucking of a lifetime!)]
+				凑过去[npc.moan]道：[npc.speech(妈的！我以为再也找不到你了，我现在要让你爽上天！)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(npc2.isMute())
 			#IF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE) || (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-				Angrily pushing back against [npc.name], [npc2.name] furiously glares at the [npc.race] to let [npc.herHim] know exactly what [npc2.she] thinks of this.
+				在愤怒的推开[npc.name]后，[npc2.name]凶狠的瞪着[npc.race]，以此来表达[npc2.she]对此的感想。
 			#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				Letting out an annoyed huff, [npc2.name] coldly stares at the [npc.race] to let [npc.herHim] know exactly what [npc2.she] thinks of this.
+				在发出一声恼怒的冷哼后，[npc2.name]冷冰冰的盯着[npc.race]，以此来表达[npc2.she]对此的感想。
 			#ELSE
-				Seductively pushing back against [npc.name], [npc2.name] smiles back at the [npc.race] to let [npc.herHim] know exactly what [npc2.she] thinks of this.
+				在引诱般的轻推了一下[npc.name]后，[npc2.name]带着一丝笑意望向[npc.race]，以此来表达[npc2.she]对此的感想。
 			#ENDIF
 		#ELSE
 			#IF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE) || (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-				Angrily pushing back against [npc.name], [npc2.name] snaps, [npc2.speech(Well? Come on then, you fuck! We both know you aren't [npc.man] enough to do anything!)]
+				在愤怒的推开[npc.name]后，[npc2.name]咆哮道：[npc2.speech(怎么样？来啊，你个混蛋！我们都知道你根本不够[npc.man]，什么都做不了！)]
 			#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				Letting out an annoyed huff, [npc2.name] replies, [npc2.speech(Well, let's get started then, I have somewhere I want to be and you're wasting my time with talking!)]
+				[npc2.name]恼怒的哼了一声，然后 开口说道：[npc2.speech(行吧行吧，那赶紧开始吧，你现在简直就是在浪费我的时间！)]
 			#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
-				Seductively pushing back against [npc.name], [npc2.name] [npc2.moans], [npc2.speech(Come on then, fuck me already!)]
+				引诱般的轻推了一下[npc.name]，[npc2.name][npc2.moans]道：[npc2.speech(来呀！操我呀！)]
 			#ELSE
-				Erotically pushing [npc2.her] body back against [npc.name], [npc2.name] desperately [npc2.moans], [npc2.speech(Hurry, hurry! I've been needing this for ages!)]
+				[npc2.name]一边性奋的将自己的身体贴向[npc.name]，一边深情的[npc2.moans]着说道：[npc2.speech(快点！快点！我实在是太需要这个了！)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE) || (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-			Despite obviously not liking the situation [npc2.she] finds [npc2.herself] in, the prospect of getting off in accordance with your rules seems to have [npc2.name] surprisingly eager to get started. With moments before this little hate-fuck session begins, you realize it's time to choose between interrupting and getting in on the action, or hanging back and watching as they go at it.
+			尽管[npc2.she]不喜欢[npc2.herself]现在所处的场景，但在你的规则约束之下。[npc2.name]竟愿意为这场性爱献出身体。不过在这场性交开始之前，你可以选择打断并加入这场性爱，或者只是继续在这里偷看。
 		#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-			[npc2.Name] clearly isn't thrilled at being forced into this situation, but [npc2.she] seems horny enough that [npc2.sheIs] willing to put [npc2.her] ambivalence towards [npc.name] aside in return for a few orgasms. With the impromptu rendezvous about to get underway, you have the option to announce your presence and join them, or watch as the two use each other.
+				显然，[npc2.Name]并不喜欢这样的做爱方式，但[npc2.she]似乎也很饥渴了，所以[npc2.sheIs]愿意把[npc2.her]和[npc.name]之间的矛盾先放在一边，以此来先爽上几次再说。这场即兴做爱即将开始，你可以选择加入，也可以选择继续在这看着。
 		#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
-			It's clear from [npc2.her] eager [npc2.moan] that [npc2.name] is more than willing to submit to [npc.name] and be fucked by [npc.herHim]. As the two slaves prepare to get it on, you take a moment to decide whether to turn this into a threesome, or stay back and let them have their fun.
+			从[npc2.her]那急切的[npc2.moan]中可以听出，[npc2.name]非常愿意臣服于[npc.name]并被[npc.herHim]操。当这两个奴隶准备开干时，你可以选择加入变成3p，或者只是让他们尽情享受这场性爱。
 		#ELSE
-			[npc2.Name] seems every bit as enthusiastic about having sex with [npc.name] as [npc2.she] could possibly be. As [npc2.she] gets ready to tumble with [npc2.her] partner, it's time to choose whether or not you want to join them, or sit back and enjoy the sight them enjoying each other.
+			[npc2.Name]似乎十分热衷于和[npc.name]做爱。当[npc2.she]准备与[npc2.her]的伴侣翻云覆雨时，你可以选择是要加入他们，还是看着他们翻云覆雨。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_ALLEYWAY_START_SEX_DOM"><![CDATA[
 	<p>
-		Wanting to get in on the action, you make your presence known to your two slaves by [pc.stepping] around from behind the corner and [pc.walking] towards them. Catching sight of you, [npc.name] turns and
+		你决定也要一起享受一下，便从墙角[pc.walking]向你的两个奴隶，表明你的存在。[npc.name]注意到了你的接近，于是转身并
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 silently sneers at you.
+				沉默而冷淡地瞪着你。
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 silently stares at you.
+				安静的看着你。
 			#ELSE
-				 silently grins at you.
+				静静的看着你笑。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 sneers at you, before stating, [npc.speech(I'd prefer to fuck [npc2.name] alone, but I guess I've got no choice but to let you join in...)]
+				冷淡地瞪着你，随后不屑的说：[npc.speech(我更情愿独享[npc2.name]，但就这个情况来看，我只有让你加入了……)]
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 asks, [npc.speech(Are you going to join me, [pc.name]?)]
+				问道：[npc.speech(你也要来加入我们吗，[pc.name]？)]
 			#ELSE
-				 grins at you, before asking, [npc.speech(You'll join me for a good fuck, won't you, [pc.name]?)]
+				笑着看向你，随后问道：[npc.speech(你也想来和我们好好快活一场，对吧，[pc.name]？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(npc2.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE|| (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-			Clearly unhappy about seeing that you've arrived to join in with the fun, [npc2.name] lets out a protesting whine, but otherwise realises the futility of [npc2.her] situation as you prepare to join [npc.name] in fucking [npc2.herHim]...
+			[npc2.name]看到你加入，发出抗议的呜呜声。但除此之外，你准备和[npc.name]一起干[npc2.herHim]，[npc2.her]也意识到自己的所有不满和反抗都是徒劳的……
 		#ELSE
-			Pleased to see that you've arrived to join in with the fun, [npc2.name] lets out a horny whine, before preparing to submit to both you and [npc.name] as you move to fuck [npc2.herHim]...
+			[npc2.name]看到你加入，发出高兴且淫荡的呜呜声。[npc2.herHim]躬下身体，好让你和[npc.name]能尽情地干个痛快……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_ALLEYWAY_START_SEX_SUB"><![CDATA[
 	<p>
-		Wanting to get in on the action, you make your presence known to your two slaves by [pc.stepping] around from behind the corner and [pc.walking] towards them. Catching sight of you, [npc.name] turns and
+		你决定也要一起享受一下，便从墙角[pc.walking]向你的两个奴隶，表明你的存在。[npc.name]注意到了你的接近，于是转身并
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 silently sneers at you.
+				沉默而冷淡地瞪着你。
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 silently stares at you.
+				安静的看着你。
 			#ELSE
-				 silently grins at you.
+				静静的看着你笑。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 sneers at you, before stating, [npc.speech(I'd prefer to fuck [npc2.name] alone, but I guess I've got no choice but to let you join in...)]
+				冷淡地瞪着你，随后不屑的说：[npc.speech(我更情愿独享[npc2.name]，但就这个情况来看，我只有让你加入了……)]
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 asks, [npc.speech(Are you going to join me, [pc.name]?)]
+				问道：[npc.speech(你也要来加入我们吗，[pc.name]？)]
 			#ELSE
-				 grins at you, before asking, [npc.speech(You'll join me for a good fuck, won't you, [pc.name]?)]
+				笑着看向你，随后问道：[npc.speech(你也想来和我们好好快活一场，对吧，[pc.name]？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Moving forwards to lean back against the wall beside [npc2.name], you tell [npc.name] that you were actually hoping for [npc.herHim] to dominate you. Flashing you a hungry grin as [npc.she] hears you say this, your slave
+		你向前挪动了两步，靠在了[npc2.name]旁边的墙上，然后告诉[npc.name]其实你希望[npc.herHim]来支配你。在听到你这么说后，[npc.she]向你露出了饥渴的笑容，随后你的奴隶
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 leans in to forcefully plant a rough kiss on your [pc.lips+].
+				俯身粗暴地吻在你[pc.lips+]上。
 			#ELSE
-				 leans in to plant a quick kiss on your [pc.lips+].
+				俯身迅速地吻在了你[pc.lips+]上。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 leans in to forcefully plant a rough kiss on your [pc.lips+], before pulling back and snarling, [npc.speech(Sure, I'll give you a good hate-fucking, bitch!)]
+				俯身粗暴地吻在你[pc.lips+]上。然后凶狠地在你耳边说道：[npc.speech(当然，我会让你痛不欲生的，贱人！)]
 			#ELSE
-				 leans in to plant a quick kiss on your [pc.lips+], before pulling back and [npc.moaning], [npc.speech(Sure, I'll give you a good fucking, if that's what you're after!)]
+				俯身迅速地吻在了你[pc.lips+]上。然后在你耳边[npc.moaning]：[npc.speech(好哇，那就照你说的来咯，我会让你终生难忘的！)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_ALLEYWAY_START_SEX_WATCHING"><![CDATA[
 	<p>
-		Deciding that you'd like to simply watch your two slaves having some fun together, you remain hidden around the corner and prepare to find out how [npc.name] is planning on fucking [npc2.name]...
+		你决定只在一旁观看你的两个奴隶一起玩乐，于是你继续躲在角落里，准备看看[npc.Name]打算怎么操[npc2.name]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_ALLEYWAY_CHECK_LEAVE"><![CDATA[
 	<p>
-		Deciding that you really don't want to intervene or watch your two slaves having some fun together, you turn around and head off into the alleyways, leaving their erotic moans far behind...
+		你决定无视你的两个奴隶之间的寻欢作乐，于是转身向小巷走去，把他们色情的呻吟声远远地抛在身后……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_OTHER_SLAVE_ALLEYWAY_POST_SEX -->
@@ -588,68 +588,68 @@
 	#IF(sex.getAllParticipants(false).contains(pc))
 		#IF(sex.isDom(pc))
 			<p>
-				As you and [npc.name] [pc.step] back and start to get your clothing in order, [npc2.name] lets out
+				在你和[npc.name]彼此分开，并开始整理自己的衣物的时候，[npc2.name]
 				#IF(npc2.isMute())
 					#IF(npc2.isSatisfiedFromLastSex())
-						 a deeply satisfied [npc2.moan] and sinks to the ground in exhaustion.
+						发出了满足的[npc2.moan]声，然后瘫软在了地上。
 					#ELSE
-						 a frustrated whine and desperately pants as [npc2.she] sinks to the ground. 
+						喘息着倒在了地上，随后发出沮丧的呜咽声。
 					#ENDIF
 				#ELSE
 					#IF(npc2.isSatisfiedFromLastSex())
-						 a deeply satisfied [npc2.moan], and after sinking to the ground in exhaustion, [npc2.she] pants, [npc2.speech(Fuck... That was... Intense...)]
+						发出了满足的[npc2.moan]声，然后瘫软在了地上，喘息着说道：[npc2.speech(哦草……这可真是……爽到不行……)]
 					#ELSE
-						 a frustrated whine and sinks to the ground, before desperately panting, [npc2.speech(Fuck... You didn't give me enough...)]
+						沮丧的坐倒在地上，然后喘息着说道：[npc2.speech(草……你就是个废物……)]
 					#ENDIF
 				#ENDIF
 			</p>
 			<p>
-				Smirking down at your slave, you turn around and set off the way you came, happy that you were able to take a break and give [npc2.name] the fucking [npc2.she] deserves...
+			在对你的奴隶冷笑一声后，你开始原路返回，你很开心在休息一下的同时给[npc2.name]一个[npc2.she]应得的……	
 			</p>
 		#ELSE
 			<p>
-				Having had [npc.her] fun with you and [npc2.name], [npc.name] [npc.steps] back and lets out a satisfied sigh.
+				完事以后，[npc.name]向后[npc.steps]了一步，并且满意的叹了口气。
 				#IF(npc2.isMute())
 					#IF(npc2.isSatisfiedFromLastSex())
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a deeply satisfied [npc2.moan].
+						随后倒在了地上，和你瘫在一起。与此同时[npc2.name]也在不断发出满足的[npc2.moan]。
 					#ELSE
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a frustrated whine and starts desperately panting as [npc2.she] touches [npc2.herself].
+						随后倒在了地上，和你瘫在一起。而[npc2.name]则在一边发出不满的哀鸣，同时急切的用手抚慰着[npc2.herself]。
 					#ENDIF
 				#ELSE
 					#IF(npc2.isSatisfiedFromLastSex())
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] pants, [npc2.speech(Fuck... That was... Intense...)]
+						随后倒在了地上，和你瘫在一起。[npc2.name]喘息着说道：[npc2.speech(哦草……这可真是……爽到不行……)]
 					#ELSE
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a frustrated whine and desperately pants, [npc2.speech(Fuck... You didn't give me enough...)]
+						随后倒在了地上，和你瘫在一起。而[npc2.name]则在一边发出不满的哀鸣，一边喘息着说道：[npc2.speech(草……怎么这么快就完事了，我才刚进入状态！)]
 					#ENDIF
 				#ENDIF
 			</p>
 			<p>
-				Smirking down at you and [npc2.name], [npc.name] turns around and sets off down the alleyway, leaving the two of you to recover from your fucking. Soon enough, you feel like you're ready to continue on your way, and after parting ways with [npc2.name], you head back down the alleyways in the same direction from which you originally came...
+				[npc.name]在对你和[npc2.name]笑了一声后便直接离开了。在过了一会后，你感觉自己的体力恢复的差不多了。于是在和[npc2.name]分道扬镳之后，你沿着来时的方向离开了……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Having had [npc.her] fun with [npc2.name], [npc.name] [npc.steps] back and lets out a satisfied sigh.
+			在和[npc2.name]一起爽完之后，[npc.name]满足的叹了口气。
 			#IF(npc2.isMute())
 				#IF(npc2.isSatisfiedFromLastSex())
-					 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a deeply satisfied [npc2.moan].
+					随后也瘫软在了地上。与此同时[npc2.name]也在不断发出满足的[npc2.moan]。
 				#ELSE
-					 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a frustrated whine and starts desperately panting as [npc2.she] touches [npc2.herself].
+					随后也瘫软在了地上。而[npc2.name]则在一边发出不满的哀鸣，同时急切的用手抚慰着[npc2.herself]。
 				#ENDIF
 			#ELSE
 				#IF(npc2.isSatisfiedFromLastSex())
-					 Sinking to the ground from exhaustion, [npc2.name] pants, [npc2.speech(Fuck... That was... Intense...)]
+					随后也瘫软在了地上。[npc2.name]喘息着说道：[npc2.speech(哦草……这可真是……爽到不行……)]
 				#ELSE
-					 Letting out a frustrated whine and sinking to the ground, [npc2.name] desperately pants, [npc2.speech(Fuck... You didn't give me enough...)]
+					随后也瘫软在了地上。而[npc2.name]则在一边发出不满的哀鸣，一边喘息着说道：[npc2.speech(草……怎么这么快就完事了，我才刚进入状态！)]
 				#ENDIF
 			#ENDIF
 		</p>
 		<p>
-			After briefly smirking down at [npc2.name], [npc.name] turns around and sets off down the alleyway, leaving your other slave to recover from [npc2.her] fucking. Having had your fun by watching the two of them go at it, you feel like you're ready to continue on your way, and, leaving [npc2.name] behind, you head back down the alleyways in the same direction from which you originally came...
+			在对着[npc2.name]笑了笑之后，[npc.name]转身向巷子里走去，留下你的另一个奴隶趴在地上恢复体力。在看完他们俩干得不亦乐乎之后，你觉得自己该离开了，于是在抛下[npc2.name]后，你沿着来时的方向离开了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Slave using other slave in Lilaya's home corridor: -->
@@ -658,204 +658,204 @@
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR"><![CDATA[
 	<p>
-		With the rules that you have in place for your slaves, it's not uncommon for you to hear the lurid moans of a pair going at it from time to time. As you travel down the corridor, you hear a yelp coming out of a nearby storage room, and you realise that you've stumbled across two of your slaves about to have sex.
+		因为你为奴隶们制定的规则，所以可以时不时的听到一对奴隶淫荡的呻吟声。当你沿着走廊前行时，你听到附近的储藏室里传出一声尖叫，你意识到你碰巧遇到了两个奴隶正在做爱。
 	</p>
 	<p>
-		Due to the fact that they've chosen to fuck one another in the storage room, you're able to pass by without encountering the clearly-horny individuals. Then again, if you wanted to, you could take a look through the doorway and find out who they are...
+		由于他们选择在储藏室里互相做爱，所以你可以无视这些在你路过时遇到的家伙们。不过如果你愿意的话，你也可以从门缝里看一眼，看看他们到底是谁……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_IGNORE"><![CDATA[
 	<p>
-		It's just a pair of slaves, and if you wanted to watch them fuck you could make them do it whenever you felt the urge. With this thought in your mind, you ignore the noise and continue on your way...
+		这只是一对奴隶在做爱，如果你想看他们做爱，你可以随时让他们在你面前做爱。带着这样的想法，你无视噪音并继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_CHECK -->
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_CHECK"><![CDATA[
 	<p>
-		Although you already know what's going on in there, you find yourself feeling curious to discover exactly which of your slaves are having sex in the storage room. As quietly as you can, you position yourself so you can look around the edge of the doorway without being too obvious. Within the room, amongst the shelves and stacks of cleaning equipment, you see that [npc.name] has decided that this was the time and place to fuck your designated sex toy, [npc2.name].
+		尽管早已知道里面发生了什么，但你的内心还是十分好奇：想知道到底是哪几个奴隶在储藏室里做爱。你安静地找了个隐蔽位置，然后悄悄地透过门缝看向里面。你的目光扫过房中的货架和成堆的清洁设备，最后落在了[npc.name]身上：此刻，[npc.her]正对着你指定的那个性玩具——[npc2.name]大操特操。
 	</p>
 	<p>
-		As you watch, [npc.name]
+		在你的注视下，[npc.name]
 		#IF(npc.hasPenis())
-			 bends [npc2.name] over and pushes [npc2.herHim] forwards so that [npc2.sheHas] got [npc2.her] [npc2.hands] pressed firmly against the wall.
+			把[npc2.name]摆弄成弯腰的姿态，然后将[npc2.herHim]向前一推，让[npc2.her]保持双手贴墙。
 		#ELSE
-			 pushes [npc2.name] back against the wall and grinds [npc.her] hot body up against [npc2.hers].
+			将[npc2.name]推回墙边，用自己炙热的火辣身躯紧紧贴住[npc2.hers]。
 		#ENDIF
 		#IF(npc2.isAbleToAccessCoverableArea(CA_VAGINA, false))
-			 As [npc2.namePos] genitals are already fully display, [npc.name] is able to greedily reach down and give the [npc2.race]'s groin a good grope.
+			[npc2.namePos]的性器毫无遮掩地暴露在外，[npc.name]贪婪地伸出双手，在[npc2.race]的下体上恣意揉搓。
 		#ELSE
 			#IF(npc2.hasLegs())
-				 Reaching down between [npc2.namePos] [npc2.legs],
+				在[npc2.namePos]的双腿间来回游走，
 			#ELSE
-				 Reaching down to [npc2.namePos] crotch,
+				将手伸向[npc2.namePos]的胯部，
 			#ENDIF
 			#IF(npc2.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 [npc.name] quickly displaces the [npc2.race]'s clothing and gives [npc2.her] groin a good grope.
+				[npc.name]迅速扒光[npc2.race]的衣服，贪婪地抚摸着[npc2.her]的下体。
 			#ELSE
-				 [npc.name] gives the [npc2.race]'s groin a good grope.
+				[npc.name]贪婪地抚摸着[npc2.race]的下体。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		The dominant [npc.race] looks more than ready to
+		那个占据主动的[npc.race]已经做好了
 		#IF(npc.hasPenis() && (npc2.hasVagina() || game.isAnalContentEnabled()))
-			 penetrate [npc2.namePos]
+			透入[npc2.namePos]
 			#IF(npc2.hasVagina())
-				 [npc2.pussy+],
+				[npc2.pussy+]的准备，
 			#ELSE
-				 [npc2.ass+],
+				[npc2.ass+]的准备，
 			#ENDIF
 		#ELSEIF(npc2.hasPenis() && (npc2.hasVagina() || game.isAnalContentEnabled()))
-			 get penetrated by [npc2.namePos] [npc2.cock+],
+			被[npc2.namePos][npc2.cock+]塞得满满当当的准备，
 		#ELSE
-			 start fucking [npc2.name],
+			在[npc2.name]身上大操特操的准备，
 		#ENDIF
-		 and as you watch,
+		你看见
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE))
-				 [npc.she] evilly snarls at the [npc2.race].
+				[npc.she]恶毒地对[npc2.race]咆哮着。
 			#ELSEIF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				 [npc.she] hungrily grins at the [npc2.race].
+				[npc.she]对着[npc2.race]露出贪婪的笑容。
 			#ELSE
-				 [npc.she] eagerly grins at the [npc2.race].
+				[npc.she]对着[npc2.race]露出饥渴的笑容。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE))
-				 [npc.she] reaches up to roughly squeeze [npc2.namePos] neck and snarl, [npc.speech(Hope you're ready for this, little slut. I've been waiting to get you all alone for myself!)]
+				[npc.she]粗暴地捏着[npc2.namePos]的脖颈，而后低吼到：[npc.speech(你这个淫荡的小碧池，乖乖等着被我填满吧！)]
 			#ELSEIF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				 [npc.she] leans in to mutter, [npc.speech(Too bad it has to be you and me, huh? Still, it's nice to be able to get off once in a while.)]
+				[npc.she]倾身喃喃道：[npc.speech(可惜了，这里只有你我两人。不过偶尔放松一下也不错。)]
 			#ELSEIF(npc.getAffectionLevel(npc2).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
-				 [npc.she] leans in to [npc.moan], [npc.speech(Let's start this nice and slow, then we can change it up when you're ready.)]
+				[npc.she]贴近[npc2.name]轻吟到：[npc.speech(时间还很多，我们可以慢慢享受。可以等你准备好了再继续下一步。)]
 			#ELSE
-				 [npc.she] leans in to [npc.moan], [npc.speech(~Ooh!~ [npc2.Name]! I need you so bad! Stay still so I can fuck you!)]
+				[npc.she]贴近[npc2.name]轻吟到： [npc.speech(~嗷！~ 我现在就想要了你，我的[npc2.Name]小甜心！乖乖在这呆着别动，我这就来干你了！)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(npc2.isMute())
 			#IF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE) || (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-				Angrily pushing back against [npc.name], [npc2.name] furiously glares at the [npc.race] to let [npc.herHim] know exactly what [npc2.she] thinks of this.
+				[npc2.name]愤怒地推开了[npc.name]，怒视着[npc.race]，让[npc.herHim]明白自己的想法。
 			#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				Letting out an annoyed huff, [npc2.name] coldly stares at the [npc.race] to let [npc.herHim] know exactly what [npc2.she] thinks of this.
+				[npc2.name]羞恼地哼了一声，冷冷地注视着[npc.race]，让[npc.herHim]明白自己的想法。
 			#ELSE
-				Seductively pushing back against [npc.name], [npc2.name] smiles back at the [npc.race] to let [npc.herHim] know exactly what [npc2.she] thinks of this.
+				[npc2.name]色情地用后背贴向[npc.name]，微笑着回头看向[npc.race]，让[npc.herHim]明白自己的想法。
 			#ENDIF
 		#ELSE
 			#IF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE) || (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-				Angrily pushing back against [npc.name], [npc2.name] snaps, [npc2.speech(Come on, then! I always knew you were a freak! Let's get this over with!!)]
+				[npc2.name]愤怒地推开了[npc.name]，咆哮到：[npc2.speech(来呀！你这个怪胎！让我们来做个了断吧！)]
 			#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				Letting out an annoyed huff, [npc2.name] replies, [npc2.speech(Well, if you're gonna do it, then do it. Honestly, I really need this too!)]
+				[npc2.name]羞恼地哼了一声，回答：[npc2.speech(好吧，如果你真的想要的话，也不是不可以。不过话说回来，我确实也有些想要。)]
 			#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
-				Seductively pushing back against [npc.name], [npc2.name] [npc2.moans], [npc2.speech(Come on then, fuck me already!)]
+				[npc2.name]充满诱惑地贴向[npc.name]，[npc2.moans]道：[npc2.speech(来嘛……就等你插进来了！)]
 			#ELSE
-				Erotically pushing [npc2.her] body back against [npc.name], [npc2.name] desperately [npc2.moans], [npc2.speech(Hurry, hurry! I've been needing this for ages!)]
+				[npc2.name]色情地用后背贴向[npc.name]，[npc2.moans]道，[npc2.speech(快……快点嘛！我——我已经忍不住了！)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_NEGATIVE_TWO_DISLIKE) || (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-			Despite obviously not liking the situation [npc2.she] finds [npc2.herself] in, the prospect of getting off in accordance with your rules seems to have [npc2.name] surprisingly eager to get started. With moments before this little hate-fuck session begins, you realize it's time to choose between interrupting and getting in on the action, or hanging back and watching as they go at it.
+			尽管[npc2.she]不喜欢[npc2.herself]现在所处的场景，但在你的规则约束之下。[npc2.name]竟愿意为这场性爱献出身体。不过在这场性交开始之前，你可以选择打断并加入这场性爱，或者只是继续在这里偷看。
 		#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-			[npc2.Name] clearly isn't thrilled at being forced into this situation, but [npc2.she] seems horny enough that [npc2.sheIs] willing to put [npc2.her] ambivalence towards [npc.name] aside in return for a few orgasms. With the impromptu rendezvous about to get underway, you have the option to announce your presence and join them, or watch as the two use each other.
+				显然，[npc2.Name]并不喜欢这样的做爱方式，但[npc2.she]似乎也很饥渴了，所以[npc2.sheIs]愿意把[npc2.her]和[npc.name]之间的矛盾先放在一边，以此来先爽上几次再说。这场即兴做爱即将开始，你可以选择加入，也可以选择继续在这看着。
 		#ELSEIF(npc2.getAffectionLevel(npc).isLessThan(AFFECTION_POSITIVE_FOUR_LOVE))
-			It's clear from [npc2.her] eager [npc2.moan] that [npc2.name] is more than willing to submit to [npc.name] and be fucked by [npc.herHim]. As the two slaves prepare to get it on, you take a moment to decide whether to turn this into a threesome, or stay back and let them have their fun.
+			从[npc2.her]那急切的[npc2.moan]中可以听出，[npc2.name]非常愿意臣服于[npc.name]并被[npc.herHim]操。当这两个奴隶准备开干时，你可以选择加入变成3p，或者只是让他们尽情享受这场性爱。
 		#ELSE
-			[npc2.Name] seems every bit as enthusiastic about having sex with [npc.name] as [npc2.she] could possibly be. As [npc2.she] gets ready to tumble with [npc2.her] partner, it's time to choose whether or not you want to join them, or sit back and enjoy the sight them enjoying each other.
+			[npc2.Name]似乎十分热衷于和[npc.name]做爱。当[npc2.she]准备与[npc2.her]的伴侣翻云覆雨时，你可以选择是要加入他们，还是看着他们翻云覆雨。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_START_SEX_DOM"><![CDATA[
 	<p>
-		Wanting to get in on the action, you make your presence known to your two slaves by [pc.stepping] into the room and [pc.walking] towards them. Catching sight of you, [npc.name] turns and
+		你决定也要一起享受一下，便进入房间，[pc.walking]向你的两个奴隶，表明你的存在。[npc.name]注意到了你的接近，于是转身并
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 silently sneers at you.
+				沉默而冷淡地瞪着你。
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 silently stares at you.
+				安静的看着你。
 			#ELSE
-				 silently grins at you.
+				静静的看着你笑。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 sneers at you, before stating, [npc.speech(I'd prefer to fuck [npc2.name] alone, but I guess I've got no choice but to let you join in...)]
+				冷淡地瞪着你，随后不屑的说：[npc.speech(我更情愿独享[npc2.name]，但就这个情况来看，我只有让你加入了……)]
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 asks, [npc.speech(Are you going to join me, [pc.name]?)]
+				问道：[npc.speech(你也要来加入我们吗，[pc.name]？)]
 			#ELSE
-				 grins at you, before asking, [npc.speech(You'll join me for a good fuck, won't you, [pc.name]?)]
+				笑着看向你，随后问道：[npc.speech(你也想来和我们好好快活一场，对吧，[pc.name]？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(npc2.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE|| (!npc2.isAttractedTo(npc) && game.isNonConEnabled()))
-			Clearly unhappy about seeing that you've arrived to join in with the fun, [npc2.name] lets out a protesting whine, but otherwise realises the futility of [npc2.her] situation as you prepare to join [npc.name] in fucking [npc2.herHim]...
+			[npc2.name]看到你加入，发出抗议的呜呜声。但除此之外，你准备和[npc.name]一起干[npc2.herHim]，[npc2.her]也意识到自己的所有不满和反抗都是徒劳的……
 		#ELSE
-			Pleased to see that you've arrived to join in with the fun, [npc2.name] lets out a horny whine, before preparing to submit to both you and [npc.name] as you move to fuck [npc2.herHim]...
+			[npc2.name]看到你加入，发出高兴且淫荡的呜呜声。[npc2.herHim]躬下身体，好让你和[npc.name]能尽情地干个痛快……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_START_SEX_SUB"><![CDATA[
 	<p>
-		Wanting to get in on the action, you make your presence known to your two slaves by [pc.stepping] into the room and [pc.walking] towards them. Catching sight of you, [npc.name] turns and
+		你决定也要一起享受一下，便进入房间，[pc.walking]向你的两个奴隶，表明你的存在。[npc.name]注意到了你的接近，于是转身并
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 silently sneers at you.
+				沉默而冷淡地瞪着你。
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 silently stares at you.
+				安静的看着你。
 			#ELSE
-				 silently grins at you.
+				静静的看着你笑。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 sneers at you, before stating, [npc.speech(I'd prefer to fuck [npc2.name] alone, but I guess I've got no choice but to let you join in...)]
+				冷淡地瞪着你，随后不屑的说：[npc.speech(我更情愿独享[npc2.name]，但就这个情况来看，我只有让你加入了……)]
 			#ELSEIF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_NEUTRAL)
-				 asks, [npc.speech(Are you going to join me, [pc.name]?)]
+				问道：[npc.speech(你也要来加入我们吗，[pc.name]？)]
 			#ELSE
-				 grins at you, before asking, [npc.speech(You'll join me for a good fuck, won't you, [pc.name]?)]
+				笑着看向你，随后问道：[npc.speech(你也想来和我们好好快活一场，对吧，[pc.name]？)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Moving forwards to lean back against the wall beside [npc2.name], you tell [npc.name] that you were actually hoping for [npc.herHim] to dominate you. Flashing you a hungry grin as [npc.she] hears you say this, your slave
+		你向前挪动了两步，靠在了[npc2.name]旁边的墙上，然后告诉[npc.name]其实你希望[npc.herHim]来支配你。在听到你这么说后，[npc.she]向你露出了饥渴的笑容，随后你的奴隶
 		#IF(npc.isMute())
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 leans in to forcefully plant a rough kiss on your [pc.lips+].
+				俯身粗暴地吻在你[pc.lips+]上。
 			#ELSE
-				 leans in to plant a quick kiss on your [pc.lips+].
+				俯身迅速地吻在了你[pc.lips+]上。
 			#ENDIF
 		#ELSE
 			#IF(npc.getAffectionLevelBasic(pc)==AFFECTION_BASIC_DISLIKE)
-				 leans in to forcefully plant a rough kiss on your [pc.lips+], before pulling back and snarling, [npc.speech(Sure, I'll give you a good hate-fucking, bitch!)]
+				俯身粗暴地吻在你[pc.lips+]上。然后凶狠地在你耳边说道：[npc.speech(当然，我会让你痛不欲生的，贱人！)]
 			#ELSE
-				 leans in to plant a quick kiss on your [pc.lips+], before pulling back and [npc.moaning], [npc.speech(Sure, I'll give you a good fucking, if that's what you're after!)]
+				俯身迅速地吻在了你[pc.lips+]上。然后在你耳边[npc.moaning]：[npc.speech(好哇，那就照你说的来咯，我会让你终生难忘的！)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_START_SEX_WATCHING"><![CDATA[
 	<p>
-		Deciding that you'd like to simply watch your two slaves having some fun together, you remain hidden around the edge of the doorway and prepare to find out how [npc.name] is planning on fucking [npc2.name]...
+		你决定只在一旁观看你的两个奴隶玩乐，于是继续躲在门口，准备看看[npc.Name]打算怎么操[npc2.name]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_CHECK_LEAVE"><![CDATA[
 	<p>
-		Deciding that you really don't want to intervene or watch your two slaves having some fun together, you turn around and head off down the corridor, leaving their erotic moans far behind...
+		你决定无视你的两个奴隶之间的寻欢作乐，于是你继续前进，把他们色情的呻吟声远远地抛在身后……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SLAVE_USES_OTHER_SLAVE_LILAYA_CORRIDOR_POST_SEX -->
@@ -864,67 +864,67 @@
 	#IF(sex.getAllParticipants(false).contains(pc))
 		#IF(sex.isDom(pc))
 			<p>
-				As you and [npc.name] [pc.step] back and start to get your clothing in order, [npc2.name] lets out
+				在你和[npc.name]彼此分开，并开始整理自己的衣物的时候，[npc2.name]
 				#IF(npc2.isMute())
 					#IF(npc2.isSatisfiedFromLastSex())
-						 a deeply satisfied [npc2.moan] and sinks to the ground in exhaustion.
+						发出了满足的[npc2.moan]声，然后瘫软在了地上。
 					#ELSE
-						 a frustrated whine and desperately pants as [npc2.she] sinks to the ground. 
+						喘息着倒在了地上，随后发出沮丧的呜咽声。
 					#ENDIF
 				#ELSE
 					#IF(npc2.isSatisfiedFromLastSex())
-						 a deeply satisfied [npc2.moan], and after sinking to the ground in exhaustion, [npc2.she] pants, [npc2.speech(Fuck... That was... Intense...)]
+						发出了满足的[npc2.moan]声，然后瘫软在了地上，喘息着说道：[npc2.speech(哦草……这可真是……爽到不行……)]
 					#ELSE
-						 a frustrated whine and sinks to the ground, before desperately panting, [npc2.speech(Fuck... You didn't give me enough...)]
+						沮丧的坐倒在地上，然后喘息着说道：[npc2.speech(草……你就是个废物……)]
 					#ENDIF
 				#ENDIF
 			</p>
 			<p>
-				Smirking down at your slave, you swiftly exit the storage room and set off down the corridor, happy that you were able to take a break and give [npc2.name] the fucking [npc2.she] deserves...
+				看着里面的奴隶们，你只是轻轻笑了笑就离开了储藏室。重新回到长廊，你很高兴[npc2.name]能够“享受”到这场性爱，自己也能看得一乐……
 			</p>
 		#ELSE
 			<p>
-				Having had [npc.her] fun with you and [npc2.name], [npc.name] [npc.steps] back and lets out a satisfied sigh.
+				完事以后，[npc.name]向后[npc.steps]了一步，并且满意的叹了口气。
 				#IF(npc2.isMute())
 					#IF(npc2.isSatisfiedFromLastSex())
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a deeply satisfied [npc2.moan].
+						随后倒在了地上，和你瘫在一起。与此同时[npc2.name]也在不断发出满足的[npc2.moan]。
 					#ELSE
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a frustrated whine and starts desperately panting as [npc2.she] touches [npc2.herself].
+						随后倒在了地上，和你瘫在一起。而[npc2.name]则在一边发出不满的哀鸣，同时急切的用手抚慰着[npc2.herself]。
 					#ENDIF
 				#ELSE
 					#IF(npc2.isSatisfiedFromLastSex())
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] pants, [npc2.speech(Fuck... That was... Intense...)]
+						随后倒在了地上，和你瘫在一起。[npc2.name]喘息着说道：[npc2.speech(哦草……这可真是……爽到不行……)]
 					#ELSE
-						 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a frustrated whine and desperately pants, [npc2.speech(Fuck... You didn't give me enough...)]
+						随后倒在了地上，和你瘫在一起。而[npc2.name]则在一边发出不满的哀鸣，一边喘息着说道：[npc2.speech(草……怎么这么快就完事了，我才刚进入状态！)]
 					#ENDIF
 				#ENDIF
 			</p>
 			<p>
-				Smirking down at you and [npc2.name], [npc.name] swiftly exits the storage room and sets off down the corridor, leaving the two of you to recover from your fucking. Soon enough, you feel like you're ready to continue on your way, and after parting ways with [npc2.name], you head back into the corridor...
+				[npc.name]对着你和[npc2.name]笑了笑，然后就沿走廊离开了储藏室，留下你们两个因性交而力竭的人瘫坐在原地。<br>稍许之后，你觉得自己恢复了一些体力，于是便道别了[npc2.name]，重新回到走廊……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Having had [npc.her] fun with [npc2.name], [npc.name] [npc.steps] back and lets out a satisfied sigh.
+			在和[npc2.name]一起爽完之后，[npc.name]满足的叹了口气。
 			#IF(npc2.isMute())
 				#IF(npc2.isSatisfiedFromLastSex())
-					 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a deeply satisfied [npc2.moan].
+					随后也瘫软在了地上。与此同时[npc2.name]也在不断发出满足的[npc2.moan]。
 				#ELSE
-					 Joining you in sinking to the ground from exhaustion, [npc2.name] lets out a frustrated whine and starts desperately panting as [npc2.she] touches [npc2.herself].
+					随后也瘫软在了地上。而[npc2.name]则在一边发出不满的哀鸣，同时急切的用手抚慰着[npc2.herself]。
 				#ENDIF
 			#ELSE
 				#IF(npc2.isSatisfiedFromLastSex())
-					 Sinking to the ground from exhaustion, [npc2.name] pants, [npc2.speech(Fuck... That was... Intense...)]
+					随后也瘫软在了地上。[npc2.name]喘息着说道：[npc2.speech(哦草……这可真是……爽到不行……)]
 				#ELSE
-					 Letting out a frustrated whine and sinking to the ground, [npc2.name] desperately pants, [npc2.speech(Fuck... You didn't give me enough...)]
+					随后也瘫软在了地上。而[npc2.name]则在一边发出不满的哀鸣，一边喘息着说道：[npc2.speech(草……怎么这么快就完事了，我才刚进入状态！)]
 				#ENDIF
 			#ENDIF
 		</p>
 		<p>
-			After briefly smirking down at [npc2.name], [npc.name] swiftly exits the storage room and sets off down the corridor, leaving your other slave to recover from [npc2.her] fucking. Having had your fun by watching the two of them go at it, you feel like you're ready to continue on your way, and, leaving [npc2.name] behind, you head back into the corridor...
+			[npc.name]对着[npc2.name]笑了笑，然后就沿走廊离开了储藏室，只留下[npc2.name]因性交力竭而瘫坐在原地。看着他俩玩得酣畅淋漓，你觉得自己也快乐了起来。你充满了决心准备继续前进，将[npc2.name]一个人留在储藏室。<br>你又回到了走廊里……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

@@ -59,11 +59,11 @@ public class Race {
 	};
 
 
-	public static AbstractRace NONE = new AbstractRace("no race",
-			"no race",
-			"no race",
-			"no race",
-			"none",
+	public static AbstractRace NONE = new AbstractRace("无种族",
+			"无种族",
+			"无种族",
+			"无种族",
+			"无",
 			PresetColour.RACE_UNKNOWN,
 			Disposition.CIVILIZED,
 			RacialClass.MAMMAL,
@@ -81,11 +81,11 @@ public class Race {
 	};
 	
 	// HUMAN:
-	public static AbstractRace HUMAN = new AbstractRace("human",
-			"humans",
-			"human",
-			"humans",
-			"human",
+	public static AbstractRace HUMAN = new AbstractRace("人类",
+			"人类",
+			"人类",
+			"人类",
+			"人类",
 			PresetColour.RACE_HUMAN,
 			Disposition.CIVILIZED,
 			RacialClass.MAMMAL,
@@ -107,11 +107,11 @@ public class Race {
 	};
 
 	// ANGEL:
-	public static AbstractRace ANGEL = new AbstractRace("angel",
-			"angels",
-			"angel",
-			"angels",
-			"angelic",
+	public static AbstractRace ANGEL = new AbstractRace("天使",
+			"天使",
+			"天使",
+			"天使",
+			"天使",
 			PresetColour.CLOTHING_WHITE,
 			Disposition.CIVILIZED,
 			RacialClass.MAMMAL,
@@ -139,35 +139,35 @@ public class Race {
 	// DEMON:
 	private static HashMap<LegConfigurationAffinity, String> generateDemonNameFeralMap() {
 		HashMap<LegConfigurationAffinity, String> names = new HashMap<>();
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.BIPEDAL, "demon"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.ARACHNID, "demonic-spider"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.CEPHALOPOD, "demonic-octopus"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.QUADRUPEDAL, "demonic-horse"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.AVIAN, "demonic-eagle"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL, "demonic-fish"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL_LONG, "demonic-snake"));
-		names.put(new LegConfigurationAffinity(LegConfiguration.TAIL_LONG, Affinity.AQUATIC), "demonic-sea-serpent");
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.BIPEDAL, "恶魔"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.ARACHNID, "恶魔蛛"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.CEPHALOPOD, "恶魔章鱼"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.QUADRUPEDAL, "恶魔马"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.AVIAN, "恶魔鹰"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL, "恶魔鱼"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL_LONG, "恶魔蛇"));
+		names.put(new LegConfigurationAffinity(LegConfiguration.TAIL_LONG, Affinity.AQUATIC), "恶魔龙蛇");
 
 		return names;
 	}
 	private static HashMap<LegConfigurationAffinity, String> generateDemonNameFeralPluralMap() {
 		HashMap<LegConfigurationAffinity, String> names = new HashMap<>();
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.BIPEDAL, "demons"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.ARACHNID, "demonic-spiders"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.CEPHALOPOD, "demonic-octopuses"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.QUADRUPEDAL, "demonic-horses"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.AVIAN, "demonic-eagles"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL, "demonic-fish"));
-		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL_LONG, "demonic-snakes"));
-		names.put(new LegConfigurationAffinity(LegConfiguration.TAIL_LONG, Affinity.AQUATIC), "demonic-sea-serpents");
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.BIPEDAL, "恶魔"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.ARACHNID, "恶魔蛛"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.QUADRUPEDAL, "恶魔章鱼"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.QUADRUPEDAL, "恶魔马"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL_LONG, "恶魔鹰"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL, "恶魔鱼"));
+		names.putAll(LegConfigurationAffinity.getFeralNamesMap(LegConfiguration.TAIL_LONG, "恶魔蛇"));
+		names.put(new LegConfigurationAffinity(LegConfiguration.TAIL_LONG, Affinity.AQUATIC), "恶魔龙蛇");
 
 		return names;
 	}
-	public static AbstractRace DEMON = new AbstractRace("demon",
-			"demons",
+	public static AbstractRace DEMON = new AbstractRace("恶魔",
+			"恶魔",
 			generateDemonNameFeralMap(),
 			generateDemonNameFeralPluralMap(),
-			"demonic",
+			"恶魔",
 			PresetColour.RACE_DEMON,
 			Disposition.CIVILIZED,
 			RacialClass.MAMMAL,
@@ -186,7 +186,7 @@ public class Race {
 		public String getName(Body body, boolean feral) {
 			if(feral) {
 				if(body!=null && body.getHalfDemonSubspecies()!=null && body.getHalfDemonSubspecies()!=Subspecies.HUMAN) {
-					return "demonic-"+ body.getHalfDemonSubspecies().getFeralName(body);
+					return "恶魔"+ body.getHalfDemonSubspecies().getFeralName(body);
 				}
 				if(body!=null) {
 					AbstractRace r = body.getLegType().getRace();
@@ -194,7 +194,7 @@ public class Race {
 
 					switch(legConfiguration) {
 						case BIPEDAL:
-							return "demon";
+							return "恶魔";
 						case ARACHNID:
 						case CEPHALOPOD:
 						case QUADRUPEDAL:
@@ -203,9 +203,9 @@ public class Race {
 						case AVIAN:
 						case WINGED_BIPED:
 							if(r==Race.DEMON) {
-								return "demonic-horse";
+								return "恶魔马";
 							}
-							return "demonic-"+r.getName(body, true);
+							return "恶魔"+r.getName(body, true);
 					}
 				}
 //				return "demonic-horse";
@@ -216,7 +216,7 @@ public class Race {
 		public String getNamePlural(Body body, boolean feral) {
 			if(feral) {
 				if(body!=null && body.getHalfDemonSubspecies()!=null && body.getHalfDemonSubspecies()!=Subspecies.HUMAN) {
-					return "demonic-"+ body.getHalfDemonSubspecies().getFeralNamePlural(body);
+					return "恶魔"+ body.getHalfDemonSubspecies().getFeralNamePlural(body);
 				}
 				if(body!=null) {
 					AbstractRace r = body.getLegType().getRace();
@@ -224,7 +224,7 @@ public class Race {
 
 					switch(legConfiguration) {
 						case BIPEDAL:
-							return "demons";
+							return "恶魔";
 						case ARACHNID:
 						case CEPHALOPOD:
 						case QUADRUPEDAL:
@@ -233,9 +233,9 @@ public class Race {
 						case AVIAN:
 						case WINGED_BIPED:
 							if(r==Race.DEMON) {
-								return "demonic-horses";
+								return "恶魔马";
 							}
-							return "demonic-"+r.getNamePlural(body, true);
+							return "恶魔"+r.getNamePlural(body, true);
 					}
 				}
 //				return "demonic-horses";
@@ -327,11 +327,11 @@ public class Race {
 	};
 
 	// BOVINES:
-	public static AbstractRace COW_MORPH = new AbstractRace("cattle-morph",
-				"cattle-morphs",
-				"cattle",
-				"cattle",
-				"cattle",
+	public static AbstractRace COW_MORPH = new AbstractRace("牛化形",
+				"牛化形",
+				"牛",
+				"牛",
+				"牛",
 				PresetColour.RACE_COW_MORPH,
 				Disposition.CIVILIZED,
 				RacialClass.MAMMAL,
@@ -352,17 +352,17 @@ public class Race {
 			return Util.newHashMapOfValues(
 					new Value<>(Fetish.FETISH_BREASTS_SELF,
 							Util.newHashMapOfValues(
-									new Value<>("love", 5),
-									new Value<>("like", 5))));
+									new Value<>("爱恋", 5),
+									new Value<>("喜欢", 5))));
 		}
 	};
 
 	// CANINES:
-	public static AbstractRace DOG_MORPH = new AbstractRace("dog-morph",
-				"dog-morphs",
-				"dog",
-				"dogs",
-				"dog",
+	public static AbstractRace DOG_MORPH = new AbstractRace("犬化形",
+				"犬化形",
+				"犬",
+				"犬",
+				"犬",
 				PresetColour.RACE_DOG_MORPH,
 				Disposition.CIVILIZED,
 				RacialClass.MAMMAL,
@@ -387,11 +387,11 @@ public class Race {
 		}
 	};
 
-	public static AbstractRace WOLF_MORPH = new AbstractRace("wolf-morph",
-				"wolf-morphs",
-				"wolf",
-				"wolves",
-				"wolf",
+	public static AbstractRace WOLF_MORPH = new AbstractRace("狼化形",
+				"狼化形",
+				"狼",
+				"狼",
+				"狼",
 				PresetColour.RACE_WOLF_MORPH,
 				Disposition.SAVAGE,
 				RacialClass.MAMMAL,
@@ -406,9 +406,9 @@ public class Race {
 		public String getName(Body body, boolean feral) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled()) {
 				if(feral) {
-					return "awoo";
+					return "嗷呜";
 				}
-				return "awoo-morph";
+				return "嗷呜化形";
 			}
 			return super.getName(body, feral);
 		}
@@ -416,9 +416,9 @@ public class Race {
 		public String getNamePlural(Body body, boolean feral) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled()) {
 				if(feral) {
-					return "awoos";
+					return "嗷呜";
 				}
-				return "awoo-morphs";
+				return "嗷呜化形";
 			}
 			return super.getNamePlural(body, feral);
 		}
@@ -436,11 +436,11 @@ public class Race {
 		}
 	};
 	
-	public static AbstractRace FOX_MORPH = new AbstractRace("fox-morph",
-				"fox-morphs",
-				"fox",
-				"foxes",
-				"fox",
+	public static AbstractRace FOX_MORPH = new AbstractRace("狐化形",
+				"狐化形",
+				"狐狸",
+				"狐",
+				"狐狸",
 				PresetColour.RACE_FOX_MORPH,
 				Disposition.UNPREDICTABLE,
 				RacialClass.MAMMAL,
@@ -467,11 +467,11 @@ public class Race {
 	
 
 	// FELINES:
-	public static AbstractRace CAT_MORPH = new AbstractRace("cat-morph",
-				"cat-morphs",
-				"cat",
-				"cats",
-				"cat",
+	public static AbstractRace CAT_MORPH = new AbstractRace("猫化形",
+				"猫化形",
+				"猫",
+				"猫",
+				"猫",
 				PresetColour.RACE_CAT_MORPH,
 				Disposition.CIVILIZED,
 				RacialClass.MAMMAL,
@@ -486,9 +486,9 @@ public class Race {
 		public String getName(Body body, boolean feral) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled()) {
 				if(feral) {
-					return "catte";
+					return "喵";
 				}
-				return "catte-morph";
+				return "喵化形";
 			}
 			return super.getName(body, feral);
 		}
@@ -496,9 +496,9 @@ public class Race {
 		public String getNamePlural(Body body, boolean feral) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled()) {
 				if(feral) {
-					return "cattes";
+					return "喵";
 				}
-				return "catte-morphs";
+				return "喵化形";
 			}
 			return super.getNamePlural(body, feral);
 		}
@@ -524,11 +524,11 @@ public class Race {
 //			true),
 	
 	// EQUINE:
-	public static AbstractRace HORSE_MORPH = new AbstractRace("horse-morph",
-				"horse-morphs",
-				"horse",
-				"horses",
-				"horse",
+	public static AbstractRace HORSE_MORPH = new AbstractRace("马化形",
+				"马化形",
+				"马",
+				"马",
+				"马",
 				PresetColour.RACE_HORSE_MORPH,
 				Disposition.CIVILIZED,
 				RacialClass.MAMMAL,
@@ -573,11 +573,11 @@ public class Race {
 	};
 
 	
-	public static AbstractRace REINDEER_MORPH = new AbstractRace("reindeer-morph",
-				"reindeer-morphs",
-				"reindeer",
-				"reindeers",
-				"reindeer",
+	public static AbstractRace REINDEER_MORPH = new AbstractRace("驯鹿化形",
+				"驯鹿化形",
+				"驯鹿",
+				"驯鹿",
+				"驯鹿",
 				PresetColour.RACE_REINDEER_MORPH,
 				Disposition.CIVILIZED,
 				RacialClass.MAMMAL,
@@ -595,11 +595,11 @@ public class Race {
 	};
 			
 
-	public static AbstractRace SQUIRREL_MORPH = new AbstractRace("squirrel-morph",
-				"squirrel-morphs",
-				"squirrel",
-				"squirrels",
-				"squirrel",
+	public static AbstractRace SQUIRREL_MORPH = new AbstractRace("松鼠化形",
+				"松鼠化形",
+				"松鼠",
+				"松鼠",
+				"松鼠",
 				PresetColour.RACE_SQUIRREL_MORPH,
 				Disposition.CIVILIZED,
 				RacialClass.MAMMAL,
@@ -616,11 +616,11 @@ public class Race {
 		}
 	};
 
-	public static AbstractRace RAT_MORPH = new AbstractRace("rat-morph",
-				"rat-morphs",
-				"rat",
-				"rats",
-				"rat",
+	public static AbstractRace RAT_MORPH = new AbstractRace("鼠化形",
+				"鼠化形",
+				"老鼠",
+				"鼠",
+				"老鼠",
 				PresetColour.RACE_RAT_MORPH,
 				Disposition.NEUTRAL,
 				RacialClass.MAMMAL,
@@ -645,11 +645,11 @@ public class Race {
 		}
 	};
 
-	public static AbstractRace RABBIT_MORPH = new AbstractRace("rabbit-morph",
-				"rabbit-morphs",
-				"rabbit",
-				"rabbits",
-				"rabbit",
+	public static AbstractRace RABBIT_MORPH = new AbstractRace("兔化形",
+				"兔化形",
+				"兔",
+				"兔",
+				"兔",
 				PresetColour.RACE_RABBIT_MORPH,
 				Disposition.NEUTRAL,
 				RacialClass.MAMMAL,
@@ -670,20 +670,20 @@ public class Race {
 			return Util.newHashMapOfValues(
 					new Value<>(Fetish.FETISH_IMPREGNATION,
 							Util.newHashMapOfValues(
-									new Value<>("love", 5),
-									new Value<>("like", 5))),
+									new Value<>("爱恋", 5),
+									new Value<>("喜欢", 5))),
 					new Value<>(Fetish.FETISH_PREGNANCY,
 							Util.newHashMapOfValues(
-									new Value<>("love", 5),
-									new Value<>("like", 5))));
+									new Value<>("爱恋", 5),
+									new Value<>("喜欢", 5))));
 		}
 	};
 	
-	public static AbstractRace BAT_MORPH = new AbstractRace("bat-morph",
-				"bat-morphs",
-				"bat",
-				"bats",
-				"bat",
+	public static AbstractRace BAT_MORPH = new AbstractRace("蝙蝠化形",
+				"蝙蝠化形",
+				"蝙蝠",
+				"蝙蝠",
+				"蝙蝠",
 				PresetColour.RACE_BAT_MORPH,
 				Disposition.NEUTRAL,
 				RacialClass.MAMMAL,
@@ -704,11 +704,11 @@ public class Race {
 		}
 	};
 	
-	public static AbstractRace ALLIGATOR_MORPH = new AbstractRace("alligator-morph",
-				"alligator-morphs",
-				"alligator",
-				"alligators",
-				"alligator",
+	public static AbstractRace ALLIGATOR_MORPH = new AbstractRace("鳄化形",
+				"鳄化形",
+				"鳄鱼",
+				"鳄",
+				"鳄鱼",
 				PresetColour.RACE_ALLIGATOR_MORPH,
 				Disposition.NEUTRAL,
 				RacialClass.REPTILE,
@@ -726,11 +726,11 @@ public class Race {
 	};
 
 	// AVIAN:
-	public static AbstractRace HARPY = new AbstractRace("harpy",
-			"harpies",
-			"bird",
-			"birds",
-			"harpy",
+	public static AbstractRace HARPY = new AbstractRace("哈比",
+			"哈比",
+			"鸟",
+			"鸟",
+			"哈比",
 			PresetColour.RACE_HARPY,
 			Disposition.NEUTRAL,
 			RacialClass.BIRD,
@@ -744,14 +744,14 @@ public class Race {
 		@Override
 		public String getName(Body body, boolean feral) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled()) {
-				return "birb";
+				return "啾";
 			}
 			return super.getName(body, feral);
 		}
 		@Override
 		public String getNamePlural(Body body, boolean feral) {
 			if(Main.game!=null && Main.game.isSillyModeEnabled()) {
-				return "birbs";
+				return "啾";
 			}
 			return super.getNamePlural(body, feral);
 		}
@@ -770,11 +770,11 @@ public class Race {
 	
 	
 	// SLIME:
-	public static AbstractRace SLIME = new AbstractRace("slime",
-			"slimes",
-			"slime",
-			"slimes",
-			"slime",
+	public static AbstractRace SLIME = new AbstractRace("史莱姆",
+			"史莱姆",
+			"史莱姆",
+			"史莱姆",
+			"史莱姆",
 			PresetColour.RACE_SLIME,
 			Disposition.NEUTRAL,
 			RacialClass.OTHER,
@@ -796,11 +796,11 @@ public class Race {
 	};
 	
 	// DOLLS:
-	public static AbstractRace DOLL = new AbstractRace("doll",
-			"dolls",
-			"doll",
-			"dolls",
-			"doll",
+	public static AbstractRace DOLL = new AbstractRace("玩偶",
+			"玩偶",
+			"玩偶",
+			"玩偶",
+			"玩偶",
 			PresetColour.RACE_DOLL,
 			Disposition.NEUTRAL,
 			RacialClass.OTHER,
@@ -885,11 +885,11 @@ public class Race {
 	};*/
 
 	// ELEMENTALS:
-	public static AbstractRace ELEMENTAL = new AbstractRace("elemental",
-				"elementals",
-				"elemental",
-				"elementals",
-				"elemental",
+	public static AbstractRace ELEMENTAL = new AbstractRace("元素",
+				"元素",
+				"元素",
+				"元素",
+				"元素",
 				PresetColour.SPELL_SCHOOL_ARCANE,
 				Disposition.NEUTRAL,
 				RacialClass.OTHER,
@@ -1658,10 +1658,10 @@ public class Race {
 		for(AbstractRace race : Race.getAllRaces()) {
 			if(race!=Race.NONE) {
 				String name = race.getName(true);
-				AbstractAttribute racialAttribute = new AbstractAttribute(true, 0, -100, 100, name+" damage", Util.capitaliseSentence(name)+" damage", "swordIcon", race.getColour(), name+"-obliteration", name+"-mercy", null) {
+				AbstractAttribute racialAttribute = new AbstractAttribute(true, 0, -100, 100, name+" damage", Util.capitaliseSentence(name)+"伤害", "swordIcon", race.getColour(), "肃清"+name, "怜悯"+name, null) {
 					@Override
 					public String getDescription(GameCharacter owner) {
-						return "Increases damage vs "+race.getNamePlural(true)+".";
+						return "增加对于"+race.getNamePlural(true)+"的伤害。";
 					}
 					@Override
 					public int getOrderPriority() {

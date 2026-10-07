@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[toilets]]></name>
-	<tooltipDescription><![CDATA[The hideout's toilet facilities consist of a traditional Japanese-style squat toilet and a simple wash hand basin.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Meraxis's hideout]]></virginityLossDescription>
+	<name><![CDATA[厕所]]></name>
+	<tooltipDescription><![CDATA[藏身处的厕所内只有一个传统日式蹲厕以及一个简易的洗手盆。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于梅拉克西丝的藏身处]]></virginityLossDescription>
 	<sexBlockedReason/>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>

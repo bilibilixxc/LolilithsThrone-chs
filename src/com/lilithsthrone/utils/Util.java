@@ -383,7 +383,7 @@ public class Util {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return "Unknown";
+		return "未知";
 	}
 	
 	/**
@@ -614,60 +614,60 @@ public class Util {
 	}
 	
 	private static String[] numbersLessThanTwenty = {
-			"zero",
-			"one",
-			"two",
-			"three",
-			"four",
-			"five",
-			"six",
-			"seven",
-			"eight",
-			"nine",
-			"ten",
-			"eleven",
-			"twelve",
-			"thirteen",
-			"fourteen",
-			"fifteen",
-			"sixteen",
-			"seventeen",
-			"eighteen",
-			"nineteen"
+			"零",
+			"一",
+			"二",
+			"三",
+			"四",
+			"五",
+			"六",
+			"七",
+			"八",
+			"九",
+			"十",
+			"十一",
+			"十二",
+			"十三",
+			"十四",
+			"十五",
+			"十六",
+			"十七",
+			"十八",
+			"十九"
 	};
 	private static String[] positionsLessThanTwenty = {
-			"zero",
-			"first",
-			"second",
-			"third",
-			"fourth",
-			"fifth",
-			"sixth",
-			"seventh",
-			"eighth",
-			"ninth",
-			"tenth",
-			"eleventh",
-			"twelfth",
-			"thirteenth",
-			"fourteenth",
-			"fifteenth",
-			"sixteenth",
-			"seventeenth",
-			"eighteenth",
-			"nineteenth"
+			"零",
+			"第一",
+			"第二",
+			"第三",
+			"第四",
+			"第五",
+			"第六",
+			"第七",
+			"第八",
+			"第九",
+			"第十",
+			"第十一",
+			"第十二",
+			"第十三",
+			"第十四",
+			"第十五",
+			"第十六",
+			"第十七",
+			"第十八",
+			"第十九"
 	};
 	private static String[] tensGreaterThanNineteen = {
 			"",
 			"",
-			"twenty",
-			"thirty",
-			"forty",
-			"fifty",
-			"sixty",
-			"seventy",
-			"eighty",
-			"ninety"
+			"二十",
+			"三十",
+			"四十",
+			"五十",
+			"六十",
+			"七十",
+			"八十",
+			"九十"
 	};
 	
 	/**
@@ -677,7 +677,7 @@ public class Util {
 	 */
 	public static String intToString(long integer) {
 		if(integer==0) {
-			return "zero";
+			return "零";
 		}
 		
 		boolean minus = integer<0;
@@ -691,12 +691,12 @@ public class Util {
 			
 			int hundred = thousandths/100;
 			if(hundred>0) {
-				innerSB.append(numbersLessThanTwenty[hundred]+" hundred");
+				innerSB.append(numbersLessThanTwenty[hundred]+"百");
 			}
 			int tens = thousandths%100;
 			if(thousandths%100>0) {
 				if(innerSB.length()>0) {
-					innerSB.append(" and ");
+					innerSB.append("");
 				}
 				if(tens<20) {
 					innerSB.append(numbersLessThanTwenty[thousandths%100]);
@@ -711,26 +711,26 @@ public class Util {
 			if(innerSB.length()>0) {
 				switch(i) {
 					case 1:
-						innerSB.append(" thousand");
+						innerSB.append("千");
 						break;
 					case 2:
-						innerSB.append(" million");
+						innerSB.append("百万");
 						break;
 					case 3:
-						innerSB.append(" billion");
+						innerSB.append("十亿");
 						break;
 					case 4:
-						innerSB.append(" trillion");
+						innerSB.append("万亿");
 						break;
 					case 5:
-						innerSB.append(" quadrillion");
+						innerSB.append("千万亿");
 						break;
 					case 6:
-						innerSB.append(" quintillion");
+						innerSB.append("百京");
 						break;
 					// This isn't needed but whatever...
 					case 7:
-						innerSB.append(" sextillion"); // hehe it says sex
+						innerSB.append("十垓"); // hehe it says sex
 						break;
 				}
 			}
@@ -770,7 +770,7 @@ public class Util {
 
 		StringBuilder sb = new StringBuilder();
 		if(negative) {
-			sb.append("negative ");
+			sb.append("负");
 		}
 		while(!stringStack.isEmpty()) {
 			sb.append(stringStack.pop());
@@ -783,16 +783,16 @@ public class Util {
 	}
 	
 	private static String[] primarySequence = {
-			"primary",
-			"secondary",
-			"tertiary",
-			"quaternary",
-			"quinary",
-			"senary",
-			"septenary",
-			"octonary",
-			"nonary",
-			"denary"
+			"主要",
+			"次要",
+			"三级",
+			"四级",
+			"五级",
+			"六级",
+			"七级",
+			"八级",
+			"九级",
+			"十级"
 	};
 	
 	public static String intToPrimarySequence(int integer) {
@@ -807,14 +807,14 @@ public class Util {
 		int remainderHundred = integer%100;
 		if(remainderHundred<=10 || remainderHundred>20) {
 			if(integer%10==1) {
-				return integer+"st";
+				return integer+"日";
 			} else if(integer%10==2) {
-				return integer+"nd";
+				return integer+"日";
 			} else if(integer%10==3) {
-				return integer+"rd";
+				return integer+"日";
 			}
 		}
-		return integer+"th";
+		return integer+"日";
 	}
 	
 	/**
@@ -823,12 +823,12 @@ public class Util {
 	 */
 	public static String intToCount(int integer) {
 		if(integer==1) {
-			return "once";
+			return "一次";
 		} else if(integer==2) {
-			return "twice";
+			return "两次";
 		}
 		
-		return intToString(integer)+" times";
+		return intToString(integer)+"次";
 	}
 
 	/**
@@ -839,7 +839,7 @@ public class Util {
 		String intToString = "";
 		
 		if(integer<0) {
-			intToString = "minus ";
+			intToString = "负";
 		}
 		integer = Math.abs(integer);
 		if (integer >= 100_000) {
@@ -849,22 +849,22 @@ public class Util {
 		
 		if(integer>=1000) {
 			if((integer/1000)<20) {
-				intToString+=numbersLessThanTwenty[(integer/1000)]+" thousand";
+				intToString+=numbersLessThanTwenty[(integer/1000)]+"千";
 			} else {
-				intToString+=tensGreaterThanNineteen[integer/10000] + (((integer/1000)%10!=0)?"-"+numbersLessThanTwenty[(integer/1000)%10]:"")+" thousand";
+				intToString+=tensGreaterThanNineteen[integer/10000] + (((integer/1000)%10!=0)?""+numbersLessThanTwenty[(integer/1000)%10]:"")+"千";
 			}
 		}
 		
 		if(integer>=100) {
 			if(integer>=1000 && integer%1000 != 0) {
-				intToString+=", ";
+				intToString+="";
 			}
 			integer = integer % 1000;
 			if (intToString.isEmpty() || integer>=100) {
-				intToString += numbersLessThanTwenty[integer/100]+" hundred";
+				intToString += numbersLessThanTwenty[integer/100]+"百";
 			}
 			if(integer%100!=0) {
-				intToString+=" and ";
+				intToString+="";
 				integer = integer % 100;
 			}
 		}
@@ -872,13 +872,13 @@ public class Util {
 		if(integer%100<20) {
 			if (integer%100 == 0) {
 				if (intToString.isEmpty()) {
-					return "zero";
+					return "零";
 				}
 			} else {
 				intToString+=positionsLessThanTwenty[integer%100];
 			}
 		} else {
-			intToString+=tensGreaterThanNineteen[(integer%100)/10] + ((integer%10!=0)?"-"+positionsLessThanTwenty[integer%10]:"");
+			intToString+=tensGreaterThanNineteen[(integer%100)/10] + ((integer%10!=0)?""+positionsLessThanTwenty[integer%10]:"");
 		}
 		
 		return intToString;
@@ -922,7 +922,7 @@ public class Util {
 			numeralSB.append("I");
 		}
 		if(limit<integer) {
-			numeralSB.append("... (Total: "+integer+")");
+			numeralSB.append("…… (共计："+integer+")");
 		}
 		
 		return numeralSB.toString();
@@ -937,7 +937,7 @@ public class Util {
 
 		if(limit%5 != 0) numeralSB.append(zhengPhase[limit%5-1]);
 
-		if(limit<integer) numeralSB.append("... (Total: "+integer+")");
+		if(limit<integer) numeralSB.append("……(共计："+integer+")");
 		return numeralSB.toString();
 	}
 	
@@ -1040,7 +1040,7 @@ public class Util {
 		return modifiedSentence.toString();
 	}
 
-	private static Pattern endOfSentence = Pattern.compile("[,.!?]");
+	private static Pattern endOfSentence = Pattern.compile("[,.!?，。！？、]");
 	
 	private static boolean isEndOfSentence(char c) {
 		return endOfSentence.matcher(String.valueOf(c)).matches();
@@ -1341,7 +1341,7 @@ public class Util {
 		return insertIntoSentences(sentence, frequency, inserts, true);
 	}
 
-	public static String[] bimboWords = new String[] { ", like,", ", like,", ", like,", ", um,", ", uh,", ", ah," };
+	public static String[] bimboWords = new String[] { "，这个，", "，那个，", "，就是说，", "，嗯，", "，呃，", "，啊，" };
 	/**
 	 * Turns a normal sentence into the kind of thing a Bimbo would come out with.
 	 * Can be safely used in conjunction with addStutter.
@@ -1377,12 +1377,12 @@ public class Util {
 				case 0:
 					CharSequence cs = utilitiesStringBuilder.subSequence(deleteindex, utilitiesStringBuilder.length());
 					utilitiesStringBuilder.delete(deleteindex, utilitiesStringBuilder.length());
-					utilitiesStringBuilder.append(" and stuff");
+					utilitiesStringBuilder.append("啥的");
 					utilitiesStringBuilder.append(cs);
 					break;
 				case 1:
 					utilitiesStringBuilder.delete(deleteindex, utilitiesStringBuilder.length());
-					utilitiesStringBuilder.append(", y'know?");
+					utilitiesStringBuilder.append("，懂吧？");
 					break;
 				default:
 					break;
@@ -1390,14 +1390,14 @@ public class Util {
 		}
 
 		String returnString = utilitiesStringBuilder.toString();
-		returnString = returnString.replaceAll("Hello", "Heya");
-		returnString = returnString.replaceAll("hello", "heya");
-		returnString = returnString.replaceAll("Goodbye", "Bye");
-		returnString = returnString.replaceAll("goodbye", "bye");
+		returnString = returnString.replaceAll("你好", "嘿");
+		returnString = returnString.replaceAll("你好", "嘿");
+		returnString = returnString.replaceAll("再见", "拜拜");
+		returnString = returnString.replaceAll("再见", "拜拜");
 		return returnString;
 	}
 	
-	private static String[] broWords = new String[] { ", like,", ", like, dude,", ", like, bro,", ", like,", ", um,", ", uh,", ", ah," };
+	private static String[] broWords = new String[] { "，就是说，", "，哥们，", "，兄弟，", "，这个，", "，嗯，", "，呃，", "，啊，" };
 	public static String addBro(String sentence, int frequency) {
 		sentence = insertIntoSentences(sentence, frequency, broWords);
 		StringBuilder utilitiesStringBuilder = new StringBuilder();
@@ -1409,12 +1409,12 @@ public class Util {
 				case 0:
 					char end = utilitiesStringBuilder.charAt(utilitiesStringBuilder.length() - 1);
 					utilitiesStringBuilder.deleteCharAt(utilitiesStringBuilder.length() - 1);
-					utilitiesStringBuilder.append(" and stuff");
+					utilitiesStringBuilder.append("啥的");
 					utilitiesStringBuilder.append(end);
 					break;
 				case 1:
 					utilitiesStringBuilder.deleteCharAt(utilitiesStringBuilder.length() - 1);
-					utilitiesStringBuilder.append(UtilText.returnStringAtRandom(", y'know, bro?", ", y'know, dude?"));
+					utilitiesStringBuilder.append(UtilText.returnStringAtRandom("，是吗？", "，知道吧哥们？"));
 					break;
 				default:
 					break;
@@ -1426,7 +1426,7 @@ public class Util {
 		return utilitiesStringBuilder.toString();
 	}
 
-	private static String[] muteSexSounds = new String[] { "... ~Ooh!~", "... ~Mmm!~", "... ~Aah!~" };
+	private static String[] muteSexSounds = new String[] { "……~哦哦！~", "……~嗯嗯！~", "……~啊啊！~" };
 	/**
 	 * @param sentence The sentence to mute.
 	 * @param sexMoans If the character should moan/pant due to being in sex.
@@ -1438,17 +1438,17 @@ public class Util {
 		StringBuilder muteSB = new StringBuilder();
 		for(int i=0; i<length; i++) {
 			if(sexMoans) {
-				muteSB.append(muteSexSounds[random.nextInt(muteSexSounds.length)]+" ");
+				muteSB.append(muteSexSounds[random.nextInt(muteSexSounds.length)]+"");
 				
 			} else {
-				muteSB.append("... ");
+				muteSB.append("……");
 			}
 		}
 		muteSB.deleteCharAt(muteSB.length()-1);
 		return muteSB.toString();
 	}
 		
-	private static String[] muffledSounds = new String[] { " ~Mrph~", " ~Mmm~", " ~Mrmm~" };
+	private static String[] muffledSounds = new String[] { "~嗯哼~", "~嗯~", "~嗯额~" };
 	/**
 	 * Turns a normal sentence into a muffled sentence.<br/>
 	 * Example:<br/>
@@ -1476,8 +1476,8 @@ public class Util {
 		return muffleSB.toString();
 	}
 
-	private static String[] sexSounds = new String[] { " ~Aah!~", " ~Mmm!~", " ~Ooh!~" };
-	private static String[] sexSoundsResisting = new String[] { " ~Aah!~", " ~No!~", " ~Eugh!~" };
+	private static String[] sexSounds = new String[] { " ~啊啊！~", " ~嗯嗯！~", " ~哦哦！~" };
+	private static String[] sexSoundsResisting = new String[] { "~啊！~", " ~不！~", " ~呃啊！~" };
 	/**
 	 * Turns a normal sentence into a sexy sentence.<br/>
 	 * Example:<br/>
@@ -1495,7 +1495,7 @@ public class Util {
 		return insertIntoSentences(sentence, frequency, resisting?sexSoundsResisting:sexSounds);
 	}
 
-	private static String[] drunkSounds = new String[] { " ~Hic!~" };
+	private static String[] drunkSounds = new String[] { "~嗝！~" };
 	/**
 	 * Turns a normal sentence into a drunk one.<br/>
 	 * Example:<br/>
@@ -1802,10 +1802,10 @@ public class Util {
 			if (itemIterator.hasNext()) { // If more than one item, enter the loop
 				currentItem = itemIterator.next();
 				while (itemIterator.hasNext()) { // Use commas until we're on the last item
-					utilitiesStringBuilder.append(", " + stringExtractor.apply(currentItem));
+					utilitiesStringBuilder.append("、" + stringExtractor.apply(currentItem));
 					currentItem = itemIterator.next();
 				}
-				utilitiesStringBuilder.append((items.size()>2?", ":" ") + combiningWord + " " + stringExtractor.apply(currentItem));
+				utilitiesStringBuilder.append((items.size()>2?"":"") + combiningWord + "" + stringExtractor.apply(currentItem));
 			}
 		} catch(NoSuchElementException ex) {
 			System.err.println("Util.toStringList() error - NoSuchElementException! (It's probably nothing to worry about...)");
@@ -1822,7 +1822,7 @@ public class Util {
 							?Util.capitaliseSentence(o.getNamePlural(null))
 							:o.getNamePlural(null))
 					+"</span>",
-				"and");
+				"、");
 	}
 	
 	public static String charactersToStringListOfNames(Collection<GameCharacter> characters) {
@@ -1833,47 +1833,47 @@ public class Util {
 		return Util.toStringList(characters,
 				(GameCharacter c) -> 
 					UtilText.parse(c, (withColouring?"<span style='color:"+c.getFemininity().getColour().toWebHexString()+";'>":"")+"[npc.name]"+(withColouring?"</span>":"")),
-				"and");
+				"、");
 	}
 
 	public static String clothesToStringList(Collection<AbstractClothing> clothingSet, boolean capitalise) {
-		return Util.toStringList(clothingSet, (AbstractClothing o) -> (capitalise?Util.capitaliseSentence(o.getClothingType().getName()):o.getClothingType().getName()), "and");
+		return Util.toStringList(clothingSet, (AbstractClothing o) -> (capitalise?Util.capitaliseSentence(o.getClothingType().getName()):o.getClothingType().getName()), "、");
 	}
 
 	public static String setToStringListCoverableArea(Set<CoverableArea> coverableAreaSet) {
-		return Util.toStringList(coverableAreaSet, (CoverableArea o) -> Util.capitaliseSentence(o.getName()), "and");
+		return Util.toStringList(coverableAreaSet, (CoverableArea o) -> Util.capitaliseSentence(o.getName()), "、");
 	}
 
 	public static String stringsToStringList(List<String> list, boolean capitalise) {
-		return Util.toStringList(list, (String o) -> capitalise?Util.capitaliseSentence(o):o, "and");
+		return Util.toStringList(list, (String o) -> capitalise?Util.capitaliseSentence(o):o, "和");
 	}
 
 	public static String stringsToStringChoice(List<String> list, boolean capitalise) {
-		return Util.toStringList(list, (String o) -> capitalise?Util.capitaliseSentence(o):o, "or");
+		return Util.toStringList(list, (String o) -> capitalise?Util.capitaliseSentence(o):o, "或");
 	}
 
 	public static String coloursToStringList(Collection<Colour> colourSet) {
-		return Util.toStringList(colourSet, Colour::getName, "and");
+		return Util.toStringList(colourSet, Colour::getName, "、");
 	}
 
 	public static String coverableAreaListToStringList(List<CoverableArea> coverableAreaCollection) {
-		return Util.toStringList(coverableAreaCollection, CoverableArea::getName, "and");
+		return Util.toStringList(coverableAreaCollection, CoverableArea::getName, "、");
 	}
 
 	public static String inventorySlotsToStringList(List<InventorySlot> inventorySlots) {
-		return Util.toStringList(inventorySlots, InventorySlot::getName, "and");
+		return Util.toStringList(inventorySlots, InventorySlot::getName, "、");
 	}
 	
 	public static String inventorySlotsToParsedStringList(List<InventorySlot> inventorySlots, GameCharacter owner) {
-		return Util.toStringList(inventorySlots, ((slot) -> slot.getNameOfAssociatedPart(owner)), "and");
+		return Util.toStringList(inventorySlots, ((slot) -> slot.getNameOfAssociatedPart(owner)), "、");
 	}
 	
 	public static String tattooInventorySlotsToStringList(List<InventorySlot> inventorySlots) {
-		return Util.toStringList(inventorySlots, InventorySlot::getTattooSlotName, "and");
+		return Util.toStringList(inventorySlots, InventorySlot::getTattooSlotName, "、");
 	}
 
 	public static String displacementTypesToStringList(List<DisplacementType> displacedList) {
-		return Util.toStringList(displacedList, DisplacementType::getDescriptionPast, "and");
+		return Util.toStringList(displacedList, DisplacementType::getDescriptionPast, "、");
 	}
 
 	public static <Any> Any randomItemFrom(List<Any> list) {

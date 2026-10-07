@@ -133,25 +133,25 @@ public class Penis implements BodyPartInterface {
 		
 		if(owner.isPenisFeral()) {
 			list.add(Util.randomItemFrom(Util.newArrayListOfValues(
-					"feral",
-					"bestial",
-					"animalistic")));
+					"兽态",
+					"兽性",
+					"似兽")));
 		} else {
 			list.add(type.getDescriptor(owner));
 		}
 		
 		if(Main.game.isInSex() && Main.sex.getAllParticipants().contains(owner)) {
 			if(owner.hasErection()) {
-				list.add("hard");
+				list.add("坚硬");
 				if(this.getType()!=PenisType.DILDO) {
-					list.add("throbbing");
+					list.add("颤动");
 				}
 			} else {
-				list.add("soft");
-				list.add("flaccid");
+				list.add("柔软");
+				list.add("松弛");
 				if(owner.isErectionPreventedPhysically()) {
-					list.add("caged");
-					list.add("imprisoned");
+					list.add("带锁");
+					list.add("禁锢");
 				}
 			}
 		}
@@ -183,10 +183,10 @@ public class Penis implements BodyPartInterface {
 	
 	public String getPenisHeadName(GameCharacter gc) {
 		List<String> list = new ArrayList<>();
-		list.add("head");
+		list.add("龟头");
         
 		if(penisModifiers.contains(PenetrationModifier.TAPERED)) {
-			list.add("tip");
+			list.add("顶端");
 		}
 
 		return Util.randomItemFrom(list);
@@ -196,13 +196,13 @@ public class Penis implements BodyPartInterface {
 		List<String> list = new ArrayList<>();
         
 		if(penisModifiers.contains(PenetrationModifier.TAPERED)) {
-			list.add("tapered");
-			list.add("pointed");
+			list.add("锥形");
+			list.add("尖头");
 		}
 		if(penisModifiers.contains(PenetrationModifier.FLARED)) {
-			list.add("wide");
-			list.add("flared");
-			list.add("flat");
+			list.add("宽头");
+			list.add("平头");
+			list.add("平坦");
 		}
 
 		return Util.randomItemFrom(list);
@@ -239,9 +239,9 @@ public class Penis implements BodyPartInterface {
 		
 		if (type == getType()) {
 			if(type==PenisType.NONE) {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.verb(lack)] a cock, so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经没有阴茎了，所以无事发生……)]</p>");
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] [npc.a_cockRace]'s cock, so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_cockRace]的阴茎了，所以无事发生……)]</p>");
 			}
 		}
 		
@@ -253,45 +253,45 @@ public class Penis implements BodyPartInterface {
 					length = 1;
 				}
 				sb.append(
-					"[npc.Name] [npc.verb(feel)] an intense heat building up in [npc.her] groin, and [npc.she] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] the [npc.skin] "
+					"[npc.Name]感到一股热量涌上了自己的腹股沟，不自觉地发出一阵[npc.a_moan+]，感觉到"
 								+ (owner.hasVagina()
 										? (!owner.isTaur()
-											?"above [npc.her] pussy"
-											:"beneath [npc.her] pussy")
-										: "between [npc.her] legs")
-							+ " tighten up and start to press outwards."
-						+ " Within moments, a large bump has formed "
+											?"在[npc.her]淫穴上面"
+											:"在[npc.her]淫穴下面")
+										: "在[npc.her]双腿之间")
+							+ "的皮肤收紧并开始向外挤压。"
+						+ "转瞬之间，"
 							+ (owner.hasVagina()
 									? (!owner.isTaur()
-										?"above [npc.her] feminine slit"
-										:"beneath [npc.her] feminine slit")
-									: "in the middle of [npc.her] groin,")
-							+ " and with a sudden splitting sensation, the bump pushes out and forms into a penis.");
+										?"在[npc.her]阴柔的缝隙上"
+										:"在[npc.her]女性化的缝隙下")
+									: "在[npc.her]腹股沟中间")
+							+ "形成了一个明显的肿块，伴随着分裂的感觉，那肿块伸出并形成了一个阴茎。");
 			
 				if(owner.isInternalTesticles()) {
 					sb.append(
-							" As [npc.her] new cock flops down "
+							"[npc.her]新生的阴茎耷拉下来"
 								+ (owner.hasVagina()
 									? (!owner.isTaur()
-											?"to bump against [npc.her] pussy, [npc.she] [npc.verb(feel)] [npc.a_balls] growing within [npc.her] groin,"
-											:"beneath [npc.her] pussy, [npc.she] [npc.verb(feel)] [npc.a_balls] growing within [npc.her] groin,")
-									: "between [npc.her] legs, [npc.she] [npc.verb(feel)] [npc.a_balls] growing within [npc.her] groin,")
-							+ " and [npc.she] [npc.verb(let)] out an unwitting [npc.moan] as [npc.her] new sexual organ finishes growing.<br/>");
+											?"跟阴户贴在了一起，随后又感到[npc.a_balls]在腹股沟内部生长起来，"
+											:"在阴道下方，随后又感到[npc.a_balls]在腹股沟内部生长起来，")
+									: "位于股间，随后又感到[npc.a_balls]在腹股沟内部生长起来，")
+							+ "等到这套全新的性器生长完毕，[npc.she]才后知后觉地发出一声[npc.moan]。<br/>");
 				} else {
 					sb.append(
-							" As [npc.her] new cock flops down "
+							"[npc.her]新生的阴茎耷拉下来"
 								+ (owner.hasVagina()
 									? (!owner.isTaur()
-											?"to bump against [npc.her] pussy, [npc.she] [npc.verb(feel)] [npc.a_balls] pushing out between [npc.her] two sexes,"
-											:"beneath [npc.her] pussy, [npc.she] [npc.verb(feel)] [npc.a_balls] pushing out between [npc.her] two sexes,")
-									: "between [npc.her] legs, [npc.she] [npc.verb(feel)] [npc.a_balls] push out underneath the base of [npc.her] new shaft,")
-							+ " and [npc.she] [npc.verb(let)] out an unwitting [npc.moan] as [npc.her] new sexual organ finishes growing.<br/>");
+											?"跟阴户贴在了一起，随后又感到[npc.a_balls]出现在了两套性器间，"
+											:"在阴道下方，随后又感到[npc.a_balls]出现在了两套性器间，")
+									: "位于股间，随后又感到[npc.a_balls]出现在新生肉棒的基部，")
+							+ "等到这套全新的性器生长完毕，[npc.she]才后知后觉地发出一声[npc.moan]。<br/>");
 				}
 				
 			} else {
 				sb.append(
-						"[npc.Name] [npc.verb(let)] out a gasp as [npc.she] [npc.verb(feel)] [npc.her] [npc.cock] suddenly stand to attention,"
-								+ " and before [npc.sheIs] able to try and get [npc.her] unexpected erection under control, [npc.her] gasp turns into [npc.a_moan+] as [npc.her] cock starts to transform.<br/>");
+						"[npc.Name]感觉自己的[npc.cock]忽然立了起来，不禁微微吸了一口凉气，"
+								+ "还没等[npc.sheIs]控制住自己突然的勃起，原本的喘息声就变成了[npc.a_moan+]，阴茎已经开始发生了转化。<br/>");
 			}
 		sb.append("</p>");
 		
@@ -315,9 +315,9 @@ public class Penis implements BodyPartInterface {
 				penisModifiers.addAll(type.getDefaultRacialPenetrationModifiers());
 				
 				sb.append("<p>");
-					sb.append("Any old modifiers which [npc.her] penis might have had have [style.boldShrink(transformed away)]!");
+					sb.append("[npc.her]阴茎曾经拥有的所有修饰词都会因为转化而[style.boldShrink(消失)]！");
 					if(!penisModifiers.isEmpty()) {
-						sb.append("<br/>Instead, [npc.her] new cock is:");
+						sb.append("<br/>而[npc.her]新生的阴茎将会是:");
 						for(PenetrationModifier pm : penisModifiers) {
 							sb.append("<br/>[style.boldGrow("+Util.capitaliseSentence(pm.getName())+")]");
 						}
@@ -331,10 +331,10 @@ public class Penis implements BodyPartInterface {
 			AbstractRace penisRace = type.getRace();
 			
 			sb.append("<p>");
-				sb.append("[npc.She] now [npc.has] "+UtilText.generateSingularDeterminer(penisRace.getName(true))+" <b style='color:"+penisRace.getColour().toWebHexString()+";'>"+penisRace.getName(true)+"-like penis</b>,"
-						+ " [npc.materialDescriptor] [npc.penisFullDescription(true)].");
-				sb.append("<br/>[npc.She] [npc.has] <b style='color:"+penisRace.getColour().toWebHexString()+";'>[npc.ballsCount]#IF(npc.isInternalTesticles()) internal#ENDIF balls</b>,"
-						+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] <b style='color:"+penisRace.getColour().toWebHexString()+";'>"+penisRace.getName(true)+" cum</b>.");
+				sb.append("[npc.She]现在拥有了"+UtilText.generateSingularDeterminer(penisRace.getName(true))+"<b style='color:"+penisRace.getColour().toWebHexString()+";'>"+penisRace.getName(true)+"一般的阴茎</b>，"
+						+ "[npc.materialDescriptor][npc.penisFullDescription(true)]。");
+				sb.append("<br/>[npc.She]拥有<b style='color:"+penisRace.getColour().toWebHexString()+";'>[npc.ballsCount]颗#IF(npc.isInternalTesticles())体内#ENDIF阴囊</b>,"
+						+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的<b style='color:"+penisRace.getColour().toWebHexString()+";'>"+penisRace.getName(true)+"精液</b>。");
 			sb.append("</p>");
 		}
 		
@@ -374,7 +374,7 @@ public class Penis implements BodyPartInterface {
 		}
 		
 		if(!owner.hasPenisIgnoreDildo()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		int girthChange = 0;
@@ -397,25 +397,25 @@ public class Penis implements BodyPartInterface {
 		}
 		
 		if(girthChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The girth of [npc.namePos] [npc.cock] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.cock]的周长没有变化……)]</p>");
 		}
 		
 		if (girthChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] cock."
-						+ " [npc.Her] cheeks flush red as the feeling works its way up [npc.her] shaft, and as a trickle of precum leaks out from the head of [npc.her] now-hard member,"
-							+ " [npc.she] [npc.verb(realise)] that [npc.her] cock has [style.boldGrow(grown thicker)].<br/>"
-						+ "[npc.She] now [npc.has] [style.boldSex([npc.a_penisGirth] [npc.cock])]!"
+						+ "[npc.Name]感到阴茎的基部出现一股搏动感，不禁冒出一阵[npc.a_moan+]。"
+						+ "这感觉传遍了整根肉棒，[npc.Her]脸颊一下子红了，一小股先走液从已经硬邦邦的老二里挤了出来，"
+							+ "[npc.she]意识到阴茎变得[style.boldGrow(更粗)]了。<br/>"
+						+ "[npc.She]现在拥有[style.boldSex([npc.a_penisGirth]的[npc.cock])]！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] cock."
-						+ " [npc.Her] cheeks flush red as the feeling works its way up [npc.her] shaft, and as a trickle of precum leaks out from the head of [npc.her] now-hard member,"
-							+ " [npc.she] [npc.verb(realise)] that [npc.her] cock has [style.boldShrink(got thinner)].<br/>"
-						+ "[npc.She] now [npc.has] [style.boldSex([npc.a_penisGirth] [npc.cock])]!"
+						+ "[npc.Name]感到阴茎的基部出现一股搏动感，不禁冒出一阵[npc.a_moan+]。"
+						+ "这感觉传遍了整根肉棒，[npc.Her]脸颊一下子红了，一小股先走液从已经硬邦邦的老二里挤了出来，"
+							+ "[npc.she]意识到阴茎变得[style.boldShrink(更细)]了。<br/>"
+						+ "[npc.She]现在拥有[style.boldSex([npc.a_penisGirth]的[npc.cock])]！"
 					+ "</p>");
 		}
 	}
@@ -435,7 +435,7 @@ public class Penis implements BodyPartInterface {
 	 */
 	public String setPenisLength(GameCharacter owner, int length) {
 		if(owner!=null && !owner.hasPenisIgnoreDildo()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		int lengthChange = 0;
@@ -462,24 +462,24 @@ public class Penis implements BodyPartInterface {
 		}
 		
 		if(lengthChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The length of [npc.namePos] [npc.cock] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.cock]的长度没有变化……)]</p>");
 		}
 		
 		if (lengthChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] cock."
-						+ " [npc.Her] cheeks flush red as the feeling works its way up [npc.her] shaft, and as a trickle of precum leaks out from the head of [npc.her] now-hard member,"
-							+ " [npc.she] [npc.verb(realise)] that [npc.her] cock has [style.boldGrow(grown larger)].<br/>"
-						+ "[npc.She] now [npc.has] [style.boldSex([npc.a_penisSize] [npc.cock])]!"
+						+ "[npc.Name]感到阴茎的基部出现一股搏动感，不禁冒出一声[pc.a_moan]。"
+						+ "这感觉传遍了整根肉棒，[npc.Her]脸颊一下子红了，一小股先走液从已经硬邦邦的老二里挤了出来，"
+							+ "[npc.she]意识到阴茎变得[style.boldGrow(更长)]了。<br/>"
+						+ "[npc.she]现在拥有[style.boldSex([npc.a_penisSize]的[npc.cock])]！"
 					+ "</p>");
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(feel)] an intense tightening sensation building up at the base of [npc.her] cock."
-							+ " [npc.Her] cheeks flush red as the feeling works its way up [npc.her] shaft, and as a trickle of precum leaks out from the head of [npc.her] now-hard member,"
-								+ " [npc.she] [npc.verb(realise)] that [npc.her] cock has [style.boldShrink(shrunk)].<br/>"
-						+ "[npc.She] now [npc.has] [style.boldSex([npc.a_penisSize] [npc.cock])]!"
+							+ "[npc.Name]感到阴茎的基部出现一股紧缩感，不禁冒出一声[pc.a_moan]。"
+							+ "这感觉传遍了整根肉棒，[npc.Her]脸颊一下子红了，一小股先走液从已经硬邦邦的老二里挤了出来，"
+								+ "[npc.she]意识到阴茎变得[style.boldShrink(更短)]了。<br/>"
+						+ "[npc.she]现在拥有[style.boldSex([npc.a_penisSize]的[npc.cock])]！"
 					+ "</p>");
 		}
 	}
@@ -507,13 +507,13 @@ public class Penis implements BodyPartInterface {
 
 	public String setPierced(GameCharacter owner, boolean pierced) {
 		if(this.pierced == pierced || !owner.hasPenisIgnoreDildo()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.pierced = pierced;
 		
 		if(pierced) {
-			return UtilText.parse(owner, "<p>[npc.NamePos] [npc.cock] is now [style.boldGrow(pierced)]!</p>");
+			return UtilText.parse(owner, "<p>[npc.NamePos]的[npc.cock]现在已经[style.boldGrow(穿孔)]！</p>");
 			
 		} else {
 			AbstractClothing c = owner.getClothingInSlot(InventorySlot.PIERCING_PENIS);
@@ -524,7 +524,7 @@ public class Penis implements BodyPartInterface {
 			}
 			
 			return UtilText.parse(owner,
-					"<p>[npc.NamePos] [npc.cock] is [style.boldShrink(no longer pierced)]!</p>"
+					"<p>[npc.NamePos]的[npc.cock][style.boldShrink(不再有穿孔)]了！</p>"
 					+piercingUnequip);
 		}
 	}
@@ -547,7 +547,7 @@ public class Penis implements BodyPartInterface {
 
 	public String addPenisModifier(GameCharacter owner, PenetrationModifier modifier) {
 		if(hasPenisModifier(modifier)) {
-			return owner == null ? "" : "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return owner == null ? "" : "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		if(!isCharacterInitialised(owner) || owner.getBody()==null) {
@@ -556,7 +556,7 @@ public class Penis implements BodyPartInterface {
 		}
 		
 		if(!owner.hasPenisIgnoreDildo()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] [npc.do]n't have a penis, so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]没有阴茎，所以无事发生……)]</p>");
 		}
 		
 		penisModifiers.add(modifier);
@@ -571,62 +571,62 @@ public class Penis implements BodyPartInterface {
 		}
 		String removedText = "";
 		if(!pmsRemoved.isEmpty()) {
-			removedText = "<br/>[style.italicsMinorBad(Due to being mutually exclusive with the '"+modifier.getName()+"' modifier, [npc.namePos] cock is no longer "+Util.stringsToStringList(pmsRemoved, false)+".)]";
+			removedText = "<br/>[style.italicsMinorBad(由于与“"+modifier.getName()+"”修饰词冲突，[npc.namePos]的阴茎不再"+Util.stringsToStringList(pmsRemoved, false)+"了。)]";
 		}
 		
 		String returnText = "";
 		
 		switch(modifier) {
 			case RIBBED:
-				returnText = "An intense pressure builds up within [npc.namePos] [npc.cock], but before [npc.she] [npc.has] a chance to react, a series of [style.boldGrow(hard, fleshy ribs)] grow up all along its length."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now ribbed!)]";
+				returnText = "一股强烈的压迫感在[npc.namePos]的[npc.cock]上浮现，但没等[npc.she]有任何反应，整根上就出现了一连串[style.boldGrow(肉质的硬质凸起)]。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在长有螺纹！)]";
 				break;
 			case TENTACLED:
-				returnText = "A pulsating warmth builds up within [npc.namePos] [npc.cock], but before [npc.she] [npc.has] a chance to react, a series of [style.boldGrow(little wriggling tentacles)] grow up all along its length."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now covered with little tentacles, which wriggle with a mind of their own!)]";
+				returnText = "一股搏动的暖流在[npc.namePos]的[npc.cock]上浮现，但没等[npc.she]有任何反应，整根上就出现了一串[style.boldGrow(扭动的细小触手)]。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在覆盖着细小的触手，自行蜿蜒扭动着！)]";
 				break;
 			case BARBED:
-				returnText = "An intense warmth builds up within [npc.namePos] [npc.cock], but before [npc.she] [npc.has] a chance to react, a series of [style.boldGrow(little fleshy barbs)] grow up all along its length."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now lined with fleshy, backwards-facing barbs!)]";
+				returnText = "一股强烈的暖意在[npc.namePos]的[npc.cock]顶端浮现，但没等[npc.she]有任何反应，整根上就出现了一连串[style.boldGrow(微小的肉质倒刺)]。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在衬着肉质的倒刺！)]";
 				break;
 			case FLARED:
-				returnText = "An intense warmth builds up in the tip of [npc.namePos] [npc.cock], and before [npc.she] [npc.has] a chance to react, the [style.boldGrow(head flares out)], much like that of a horse's."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] now has a wide, flared head!)]";
+				returnText = "一股强烈的暖意在[npc.namePos]的[npc.cock]顶端浮现，但没等[npc.she]有任何反应，[style.boldGrow(顶端就变成了平头)]，跟马阴茎类似。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在有着宽大的平头！)]";
 				break;
 			case BLUNT:
-				returnText = "An intense warmth builds up in the tip of [npc.namePos] [npc.cock], and before [npc.she] [npc.has] a chance to react, the [style.boldGrow(head smoothes over)], much like that of a reptile's."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] now has a smooth, blunt head!)]";
+				returnText = "一股强烈的暖意在[npc.namePos]的[npc.cock]顶端浮现，但没等[npc.she]有任何反应，[style.boldGrow(顶端就变得非常光滑)]，跟爬行动物的阴茎类似。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在拥有光滑圆钝的龟头！)]";
 				break;
 			case KNOTTED:
-				returnText = "An intense warmth builds up in the base of [npc.namePos] [npc.cock], and before [npc.she] [npc.has] a chance to react, a [style.boldGrow(fat knot)] quickly grows up there."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] now has a fat knot at the base!)]";
+				returnText = "一股强烈的暖意在[npc.namePos]的[npc.cock]根部浮现，但没等[npc.she]有任何反应，一个[style.boldGrow(粗大的锁结)]立刻生长了出来。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在在根部长着粗大的锁结！)]";
 				break;
 			case PREHENSILE:
-				returnText = "A strange tingling sensation works its way up the length of [npc.namePos] [npc.cock], and [npc.she] suddenly becomes aware that it's transformed into being [style.boldGrow(prehensile)],"
-								+ " allowing [npc.herHim] to twist and move it around just like a primate's tail."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now prehensile!)]";
+				returnText = "一股奇妙的刺痒感传遍了[npc.namePos]的[npc.cock]，[npc.she]忽然意识到这根[npc.cock]变得[style.boldGrow(十分灵活)]。"
+								+ "这使得[npc.herHim]能够像灵长目的尾巴一样弯曲移动它。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在灵活可控！)]";
 				break;
 			case SHEATHED:
-				returnText = "An intense pressure builds up in the base of [npc.namePos] [npc.cock], and before [npc.she] [npc.has] a chance to react, it pulls back into a brand new [style.boldGrow(sheath)] that's just grown up there."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now sheathed!)]";
+				returnText = "一股强烈的压力在[npc.namePos]的[npc.cock]根部浮现，但没等[npc.she]有任何反应，[npc.cock]就迅速缩回了全新的[style.boldGrow(阴茎鞘)]中。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在被鞘保护着！)]";
 				break;
 			case TAPERED:
-				returnText = "An intense warmth builds up within [npc.namePos] [npc.cock], but before [npc.she] [npc.has] a chance to react, the shaft suddenly [style.boldGrow(tapers down)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now tapered!)]";
+				returnText = "一股强烈的暖意在[npc.namePos]的[npc.cock]上浮现，但没等[npc.she]有任何反应，肉竿就忽然[style.boldGrow(变尖)]了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在是尖头的！)]";
 				break;
 			case VEINY:
-				returnText = "An intense warmth builds up within [npc.namePos] [npc.cock], but before [npc.she] [npc.has] a chance to react, a series of [style.boldGrow(prominent veins)] grow up all along its length."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now veiny!)]";
+				returnText = "一股强烈的暖意在[npc.namePos]的[npc.cock]上浮现，但没等[npc.she]有任何反应，整根上就出现了一连串[style.boldGrow(突起的静脉)]。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在青筋暴起！)]";
 				break;
 			case OVIPOSITOR:
-				returnText = "An intense tingling sensation works its up [npc.namePos] [npc.cock], and [npc.she] can't help but let out [npc.a_moan+] as [npc.she] feels it transforming into [style.boldGrow(an ovipositor)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.cock] is now able to lay eggs!)]"
-							+ "<br/><i>(To be fully functional, [npc.name] [npc.verb(require)] [npc.her] eggs to be fertilised before laying can occur. Eggs cannot be laid in an already-pregnant target's vagina.)</i>";
+				returnText = "一股奇妙的刺痒感传遍了[npc.namePos]的[npc.cock]，[npc.she]感受到[npc.cock]正在变成[style.boldGrow(产卵器)]，一声[npc.a_moan+]脱口而出。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.cock]现在能够产卵了！)]"
+							+ "<br/><i>(若要具备完整功能，[npc.name]需要在产卵前使卵受精。卵无法产在已经怀孕的对象的阴道中。)</i>";
 				break;
 		}
 		
 		if(returnText.isEmpty()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		return UtilText.parse(owner,
@@ -638,7 +638,7 @@ public class Penis implements BodyPartInterface {
 
 	public String removePenisModifier(GameCharacter owner, PenetrationModifier modifier) {
 		if(!hasPenisModifier(modifier)) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		penisModifiers.remove(modifier);
@@ -646,64 +646,64 @@ public class Penis implements BodyPartInterface {
 		switch(modifier) {
 			case RIBBED:
 				return "<p>"
-							+ "An soothing coolness builds up within [npc.namePos] [npc.penis], but before [npc.she] [npc.has] a chance to react, [npc.her] hard, fleshy ribs suddenly [style.boldShrink(disappear)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer ribbed!)]"
+							+ "一股舒缓的凉意在[npc.namePos]的[npc.penis]上浮现，但没等[npc.she]有任何反应，那肉质的硬质螺纹[style.boldGrow(消失)]了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再有螺纹了！)]"
 						+ "</p>";
 			case TENTACLED:
 				return "<p>"
-							+ "A soothing coolness builds up within [npc.namePos] [npc.penis], and before [npc.she] [npc.has] a chance to react, [npc.her] little wriggling tentacles [style.boldShrink(disappear)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer covered with little tentacles!)]"
+							+ "一股舒缓的凉意在[npc.namePos]的[npc.penis]上浮现，但没等[npc.she]有任何反应，那扭动的细小触手就[style.boldGrow(消失)]了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再覆盖有细小的触手了！)]"
 						+ "</p>";
 			case BARBED:
 				return "<p>"
-							+ "A soothing coolness builds up within [npc.namePos] [npc.penis], but before [npc.she] [npc.has] a chance to react, [npc.her] little fleshy barbs [style.boldShrink(disappear)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer barbed!)]"
+							+ "一股舒缓的凉意在[npc.namePos]的[npc.penis]上浮现，但没等[npc.she]有任何反应，那小小的肉质倒刺便[style.boldGrow(消失)]了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再有倒刺了！)]"
 						+ "</p>";
 			case FLARED:
 				return "<p>"
-							+ "A soothing coolness builds up in the tip of [npc.namePos] [npc.penis], and before [npc.she] [npc.has] a chance to react, [npc.her] flared head [style.boldShrink(shrinks)] down into a regular, human-like one."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] no longer has a flared head!)]"
+							+ "一股舒缓的凉意在[npc.namePos]的[npc.penis]顶端浮现，但没等[npc.she]有任何反应，那平坦的龟头便[style.boldGrow(缩了下去)]。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再拥有平坦的龟头！)]"
 						+ "</p>";
 			case BLUNT:
 				return "<p>"
-							+ "A soothing coolness builds up in the tip of [npc.namePos] [npc.penis], and before [npc.she] [npc.has] a chance to react, [npc.her] blunt head [style.boldShrink(shrinks)] down into a regular, human-like one."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] no longer has a blunt head!)]"
+							+ "一股舒缓的凉意在[npc.namePos]的[npc.penis]顶端浮现，但没等[npc.she]有任何反应，那圆钝的龟头便[style.boldGrow(缩了下去)]，变成人类的样子。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再拥有圆钝的龟头！)]"
 						+ "</p>";
 			case KNOTTED:
 				return "<p>"
-							+ "A soothing coolness builds up in the base of [npc.namePos] [npc.penis], and before [npc.she] [npc.has] a chance to react, [npc.her] fat knot [style.boldShrink(shrinks)] and disappears."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer knotted!)]"
+							+ "一股舒缓的凉意在[npc.namePos]的[npc.penis]根部浮现，但没等[npc.she]有任何反应，那粗大的锁结便[style.boldGrow(缩了下去)]，最后消失了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再拥有锁结！)]"
 						+ "</p>";
 			case PREHENSILE:
 				return "<p>"
-							+ "A strange tingling sensation works its way up the length of [npc.namePos] [npc.penis], and [npc.she] suddenly becomes aware that it's [style.boldShrink(no longer prehensile)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer prehensile!)]"
+							+ "一股奇怪的刺痒感传遍了[npc.namePos]的[npc.penis]，[npc.she]忽然意识到[npc.penis]正在变得[style.boldShrink(不再灵活可控)]。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再灵活可控了！)]"
 						+ "</p>";
 			case SHEATHED:
 				return "<p>"
-							+ "A soothing coolness builds up in the base of [npc.namePos] [npc.penis], and before [npc.she] [npc.has] a chance to react, [npc.her] sheath [style.boldShrink(disappears)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer sheathed!)]"
+							+ "一股舒缓的凉意在[npc.namePos]的[npc.penis]根部浮现，但没等[npc.she]有任何反应，那阴茎鞘便[style.boldGrow(消失)]了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再有鞘保护了！)]"
 						+ "</p>";
 			case TAPERED:
 				return "<p>"
-							+ "An intense warmth builds up within [npc.namePos] [npc.penis], but before [npc.she] [npc.has] a chance to react, the shaft suddenly [style.boldShrink(widens)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer tapered!)]"
+							+ "一股强烈的暖意在[npc.namePos]的[npc.penis]上浮现，但没等[npc.she]有任何反应，肉竿就突然[style.boldGrow(变宽)]了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再是尖头的了！)]"
 						+ "</p>";
 			case VEINY:
 				return "<p>"
-							+ "An intense warmth builds up within [npc.namePos] [npc.penis], but before [npc.she] [npc.has] a chance to react, [npc.her] prominent veins [style.boldShrink(disappear)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer veiny!)]"
+							+ "一股强烈的暖意在[npc.namePos]的[npc.penis]上浮现，但没等[npc.she]有任何反应，那突起的静脉就[style.boldGrow(消失)]了。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再青筋暴起了！)]"
 						+ "</p>";
 			case OVIPOSITOR:
 				return "<p>"
-							+ "A strange tingling sensation works its way up the length of [npc.namePos] [npc.penis], and [npc.she] can't help but let out [npc.a_moan+] as [npc.she] feels it transforming to"
-								+ " [style.boldShrink(no longer function as an ovipositor)]."
-							+ "<br/>[style.boldSex([npc.NamePos] [npc.penis] is no longer an ovipositor!)]"
+							+ "一股奇怪的刺痒感传遍了[npc.namePos]的[npc.penis]，[npc.she]不禁发出一声[npc.a_moan+]，感觉到[npc.penis]正在转化为"
+								+ "[style.boldShrink(不再拥有产卵器的功能)]。"
+							+ "<br/>[style.boldSex([npc.NamePos]的[npc.penis]不再是产卵器了！)]"
 						+ "</p>";
 		}
 		
 		// Catch:
-		return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+		return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 	}
 	
 	public void clearPenisModifiers() {

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[swimming shorts]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[swimming shorts]]></namePlural>
-		<description><![CDATA[This pair of masculine swimwear covers the wearer's groin and extends a short way down the legs.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[泳裤]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[泳裤]]></namePlural>
+		<description><![CDATA[这款男性泳裤覆盖穿戴者的腹股沟并延伸到大腿上。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>MASCULINE</femininity>
 		<slot>GROIN</slot>
@@ -88,27 +88,27 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the swimming shorts, before pulling them up to cover [npc.her] private parts.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the swimming shorts up [npc2.namePos] [npc2.legs] to cover [npc2.her] private parts.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the swimming shorts up [npc2.namePos] [npc2.legs] to cover [npc2.her] private parts.]]>
-	  </otherRough>
+		<self><![CDATA[
+      [npc.Name]穿上泳裤，然后用内裤盖住[npc.her]的隐私部位。
+    ]]></self>
+		<other><![CDATA[
+[npc.Name]将泳裤拉上[npc2.namePos]的[npc2.legs]，遮盖[npc2.her]的私密部位。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将泳裤拉上[npc2.namePos]的[npc2.legs]，遮盖住[npc2.her]的私密部位。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] swimming shorts down and [npc.verb(kick)] them off [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] down [npc2.namePos] swimming shorts and [npc.verb(pull)] them off [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] swimming shorts and [npc.verb(yank)] them off [npc2.her] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的泳裤拉下来，然后用[npc.her]的[npc.feet]将它们踢掉。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉下[npc2.namePos]的泳裤，然后将它们从[npc2.her]的[npc2.feet]上拿走。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的泳裤拉下，然后用力将它们从[npc2.her]的[npc2.feet]上脱下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

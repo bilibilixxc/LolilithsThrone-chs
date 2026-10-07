@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>350</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[tagged choker]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[tagged chokers]]></namePlural>
-		<description><![CDATA[A leather choker with a loose metallic tag attached to the front. The text that's been etched into this tag reads: ]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[带标牌的项圈]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[带标牌的项圈]]></namePlural>
+		<description><![CDATA[一条皮质项圈，正面有着一个金属标牌，标牌上刻有如下文字：]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -22,10 +21,10 @@
 			<category id="top_txt" priority="1">
 				<categoryName><![CDATA[Top Tag Text]]></categoryName>
 				<sticker id="bound" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Bound]]></stickerName>
+					<stickerName><![CDATA[被缚]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Bound </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>被缚</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_bound.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -33,10 +32,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="good" priority="2" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Good]]></stickerName>
+					<stickerName><![CDATA[棒棒]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Good </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>棒棒</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_good.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -44,10 +43,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="bad" priority="3" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Bad]]></stickerName>
+					<stickerName><![CDATA[坏坏]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Bad </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>坏坏</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_bad.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -55,10 +54,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="obedient" priority="4" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Obedient]]></stickerName>
+					<stickerName><![CDATA[听话]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Obedient </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>听话</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_obedient.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -66,10 +65,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="broken" priority="5" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Broken]]></stickerName>
+					<stickerName><![CDATA[损坏]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Broken </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>损坏</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_broken.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -77,10 +76,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="worthless" priority="6" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Worthless]]></stickerName>
+					<stickerName><![CDATA[一文不值]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Worthless </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>一文不值</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_worthless.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -88,10 +87,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="cheap" priority="7" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Cheap]]></stickerName>
+					<stickerName><![CDATA[廉价]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Cheap </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>廉价</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_cheap.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -99,10 +98,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="dumb" priority="8" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Dumb]]></stickerName>
+					<stickerName><![CDATA[愚蠢]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Dumb </i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>愚蠢</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/top_dumb.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -113,10 +112,10 @@
 			<category id="btm_txt" priority="2">
 				<categoryName><![CDATA[Bottom Tag Text]]></categoryName>
 				<sticker id="bitch" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Bitch]]></stickerName>
+					<stickerName><![CDATA[婊子]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Bitch</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>婊子</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_bitch.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -124,10 +123,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="dog" priority="2" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Dog]]></stickerName>
+					<stickerName><![CDATA[小狗]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Dog</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>小狗</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_dog.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -135,10 +134,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="pet" priority="3" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Pet]]></stickerName>
+					<stickerName><![CDATA[宠物]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Pet</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>宠物</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_pet.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -146,10 +145,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="slut" priority="4" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Slut]]></stickerName>
+					<stickerName><![CDATA[骚货]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Slut</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>骚货</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_slut.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -157,10 +156,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="stud" priority="5" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Stud]]></stickerName>
+					<stickerName><![CDATA[种畜]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Stud</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>种畜</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_stud.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -168,10 +167,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="cunt" priority="6" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Cunt]]></stickerName>
+					<stickerName><![CDATA[淫穴]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Cunt</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>淫穴</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_cunt.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -179,10 +178,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="whore" priority="7" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Whore]]></stickerName>
+					<stickerName><![CDATA[妓女]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Whore</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>妓女</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_whore.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -190,10 +189,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="toy" priority="8" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Toy]]></stickerName>
+					<stickerName><![CDATA[玩具]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Toy</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>玩具</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_toy.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -201,10 +200,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="horsie" priority="9" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
-					<stickerName><![CDATA[Horsie]]></stickerName>
+					<stickerName><![CDATA[小马]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
-					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Horsie</i>]]></descriptionModification>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>小马</i>]]></descriptionModification>
 					<imageName zLayer="1" slot="NECK">choker_stickers/bottom_horsie.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -247,26 +246,26 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the choker around [npc.her] neck and [npc.verb(fasten)] the buckle.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(wrap)] the choker around [npc2.namePos] neck and [npc.verb(fasten)] the buckle.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(wrap)] the choker around [npc2.namePos] neck and tightly [npc.verb(fasten)] the buckle.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把项圈系在[npc.her]脖子上并扣上针扣。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把项圈系在[npc2.namePos]脖子上并扣上针扣。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把项圈系在[npc2.her]脖子上并扣紧。
+    ]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the choker's buckle and [npc.verb(remove)] it from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the buckle of [npc2.namePos] choker and [npc.verb(remove)] it from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] the buckle of [npc2.namePos] choker and [npc.verb(yank)] it off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开项圈上的针扣并把它从[npc.her]的脖子上取下。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的项圈上的针扣并把它从[npc2.her]的脖子上取下。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地解开[npc2.namePos]的项圈上的针扣并把它从[npc2.her]的脖子上扯下。
+    ]]></otherRough>
   </displacementText>
   
 </clothing>

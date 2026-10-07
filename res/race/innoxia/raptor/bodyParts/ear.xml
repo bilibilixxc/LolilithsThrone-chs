@@ -1,44 +1,44 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ear>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[raptor]]></transformationName>
+	<transformationName><![CDATA[猛禽]]></transformationName>
 	
 	<coveringType>innoxia_raptor_feathers</coveringType>
 	
 	<tags/>
 	
-	<name><![CDATA[ear]]></name>
-	<namePlural><![CDATA[ears]]></namePlural>
+	<name><![CDATA[耳]]></name>
+	<namePlural><![CDATA[耳朵]]></namePlural>
 	
 	<descriptorsMasculine>
-		<descriptor>feathered</descriptor>
-		<descriptor>feather-covered</descriptor>
-		<descriptor>raptor-like</descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[猛禽般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>feathered</descriptor>
-		<descriptor>feather-covered</descriptor>
-		<descriptor>raptor-like</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[覆羽]]></descriptor>
+		<descriptor><![CDATA[猛禽般]]></descriptor>
 	</descriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		They quickly shrink down into little nubs as most of the external cartilage shifts down into the sides of [npc.her] head.
+		它们迅速缩成小结，大部分外软骨转移到[npc.her]头部两侧。
 		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 A layer of [npc.earFullDescriptionColour] grow to cover [npc.her] now-fully-internal ears,
+			一层[npc.earFullDescriptionColour]长出来覆盖内耳，
 		#ELSE
-			 Just like the rest of [npc.her] body, [npc.her] now-fully-internal ears are made out of [npc.earFullDescription],
+			就像身体其他部分一样，内耳呈[npc.earFullDescription]，
 		#ENDIF
-		 and as the transformation finishes, [npc.sheIs] left with a pair of feathered raptor ears.
-		<br/>[npc.Name] now [npc.has] [style.boldRaptor(internal, feather-covered raptor ears)], which are [npc.materialCompositionDescriptor] [npc.earFullDescription].
+		转化完成了，[npc.she]拥有了一对羽毛覆盖的猛禽耳。
+		<br/>[npc.Name]现在拥有[style.boldRaptor(猛禽内耳)]，[npc.materialCompositionDescriptor][npc.earFullDescription]。
 	]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.Her] ears are an internal part of [npc.her] head, and are covered by a fan of [npc.earFullDescription(true)].
+		[npc.Her]的耳朵位于头内部，并被一扇[npc.earFullDescription(true)]覆盖。
 		#IF(npc.isPiercedEar())
-			 They have been cleverly pierced so as to allow [npc.herHim] to wear ear-specific jewellery.
+			它们很巧妙地穿了孔，从而能够戴上为耳部设计的首饰。
 		#ENDIF
 	]]></bodyDescription>
 	

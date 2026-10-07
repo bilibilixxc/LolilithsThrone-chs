@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>200</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[cami top]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[cami tops]]></namePlural> 
-		<description><![CDATA[A short cami top with straps that loop over the wearer's shoulders. It's short enough that the wearer's stomach is left on display.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[吊带背心]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[吊带背心]]></namePlural> 
+		<description><![CDATA[一件用带子系在穿着者肩膀上的短上衣。非常短，穿着者的腹部会暴露在外。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>TORSO_UNDER</slot> 

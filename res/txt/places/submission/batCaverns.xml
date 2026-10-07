@@ -1,267 +1,267 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="STAIRCASE"><![CDATA[
 	<p>
-		This area of the bat caverns is home to the staircase that leads back up to Submission. A wooden sign next to the staircase warns any traveller against consuming the mushrooms found in certain parts of the caverns. A picture of some glowing blue mushrooms is displayed next to this warning, and beneath that, there's some information that identifies this particular fungi to be an exception. Apparently, it's the only edible type of mushroom that grows down here, and is highly sought-after by the slimes which inhabit these caverns. Apparently, eating these mushrooms has caused the slimes down here to glow, and also causes them to experience psychedelic effects, which makes their behaviour highly unpredictable.
+		蝙蝠洞窟这个区域是通往屈城区的楼梯的所在地。楼梯旁边有一个木制标牌，警告任何游客不要食用在洞穴某些地方发现的蘑菇。标牌旁边展示着一些发光的蓝色蘑菇的图片，并在下方提供了一些信息，说明这种特殊的菌类是唯一可以在这里食用的蘑菇，非常受这些洞穴中的史莱姆追捧。显然，食用这些蘑菇使得这些洞穴中的粘液生物发光，并且让它们产生幻觉，使得它们的行为变得非常不可预测。
 	</p>
 	<p>
-		Looking up towards the top of the staircase, you see the relatively bright lighting of Submission's tunnels shining down to illuminate the top dozen or so steps. Perhaps because of that ever-present source of light, this area seems entirely deserted...
+		抬头望向楼梯顶端，你会看到屈城区隧道里相对明亮的灯光照射下来，照亮了最上面的十几级台阶。也许正因为有了这无处不在的光源，这里才显得冷冷清清……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHAFT"><![CDATA[
 	<p>
-		Here, on the far side of the Bat Caverns, the ceiling high up above you gives way to a huge, twisting shaft. Formed out of the rock either naturally or through arcane means,
+		在蝙蝠洞窟的远端，高高的洞顶被一个巨大蜿蜒的竖井所取代。这个竖井可能是自然形成的，也可能是利用奥术开凿的，
 		#IF(game.isDayTime())
-			 this shaft provides the only source of natural light to this cave system, which takes the form of a small amount of sunlight that manages to penetrate all the way down to dimly illuminate the cavern around you.
+			是这个洞穴系统唯一的自然光源。少量的阳光能够穿透竖井，微弱地照亮周围的洞穴。
 		#ELSE
-			 during daylight hours this shaft provides the only source of natural light to this cave system. As it's currently night-time, however, the shaft above is just as dark as the rest of the Bat Caverns.
+			在白天是这个洞穴系统唯一的自然光源。然而，由于当前是夜晚，竖井上方与蝙蝠洞窟的其他部分一样黑暗。
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.isAbleToFly())
 			#IF(!pc.isPartyAbleToFly())
-				Although you're able to fly, your companion cannot, and so you can't make use of this shaft to swiftly return to Dominion...
+				尽管你能飞行，但你的同伴不能，因此你不能利用这个竖井快速返回御城区……
 			#ELSE
-				As you're able to fly, you could travel up this shaft to swiftly return to Dominion...
+				由于你能够飞行，你可以沿着这个竖井上升，迅速返回御城区……
 			#ENDIF
 		#ELSE
-			As you're unable to fly, you can't make use of this shaft to swiftly return to Dominion...
+			由于你不能飞行，你不能利用这个竖井迅速返回御城区……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHAFT_FLY_UP_FIRST_TIME"><![CDATA[
 	<p>
-		Deciding that you want to find out where this shaft leads to, you launch yourself into the air and fly up into the rocky passage. As you enter the shaft, you discover that a series of dim lights and aggressive proximity warning buzzers have been fitted to the jagged walls, making it far safer to traverse than you expected.
+		你决定要找出这个竖井通向哪里，于是你腾空而起，飞进了岩石通道。当你进入竖井时，你发现嶙峋的墙壁上安装了一系列昏暗的灯光和咄咄逼人的接近警告蜂鸣器，这使得穿越竖井比你想象的要安全得多。
 	</p>
 	<p>
-		Within a couple of minutes, you're able to see the sky above you, and then a moment later you're out into the air above Dominion. After getting your bearings and seeing that you're above some alleyways in the north-west of the city, you swoop around to land. As you settle down beside the shaft's entrance, you see that it's completely concealed behind a brick wall that's topped with barbed wire. An old, rusted sign declares the shaft's presence, but if you didn't already know that it's there, you're sure that you'd never find it.
+		没过几分钟，你就能看到头顶的天空，片刻之后，你就飞到了御城区的上空。确定方位后，你看到自己正位于城市西北部的一些小巷上方，于是你俯冲着陆。当你在竖井入口旁边落脚时，你发现竖井完全被掩盖在一堵砖墙后面，砖墙顶上还有铁丝网。一块锈迹斑斑的旧牌子标明了竖井的存在，但如果你不知道它就在那里，你肯定永远也找不到它。
 	</p>
 	<p>
-		Knowing that the alleyways in Dominion are sketchy at the best of times, you look around to make sure that you're safe, and after confirming that you're in no immediate danger, you wonder where to go to from here...
+		你知道御城区的小巷在最好的情况下也是不安全的，你环顾四周以确保你的安全，在确认你没有直接危险后，你想知道从这里去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHAFT_FLY_UP"><![CDATA[
 	<p>
-		Deciding that you want to head back up into Dominion, you launch yourself into the air and fly up into the rocky passage. As you enter the shaft, you once again see the series of dim lights and aggressive proximity warning buzzers which have been fitted to the jagged walls, but as you're already familiar with the tunnel's twists and turns, you don't have to rely on them for guidance.
+		你决定返回御城区，于是腾空而起，飞入岩石通道。进入竖井后，你再次看到嶙峋的墙壁上安装了一系列昏暗的灯光和咄咄逼人的接近警告蜂鸣器，但由于你已经熟悉了隧道的曲折，所以不必依赖它们的指引。
 	</p>
 	<p>
-		Within a couple of minutes, you're able to see the sky above you, and then a moment later you're out into the air above Dominion. Swooping above the alleyways in the north-west of the city, you glide down to settle beside the shaft's entrance. With the tunnel now concealed from your position by a brick wall that's topped with barbed wire, you look around to make sure that you're safe, and after confirming that you're in no immediate danger, you wonder where to go to from here...
+		几分钟后，你就能看到头顶的天空，片刻之后，你就飞到了御城区的上空。你从城市西北部的小巷上空俯冲而下，滑翔到竖井入口旁边。隧道现在被一堵砖墙遮挡住了，砖墙顶上有铁丝网，你环顾四周以确保安全，在确认没有直接危险后，你想知道从这里该去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CAVERN_DARK"><![CDATA[
 	<p>
-		The oppressive, inky blackness of the bat caverns is kept at bay by the softly glowing moss beneath your feet. With every step, a new pool of the low light blooms outward as the previous one fades, allowing you to see out to roughly [unit.lSizes(1500)] all around you. Above your head, the cavern's roof is so high that all you can see is a blanket of completely impenetrable darkness. Occasionally you think you hear a sound, a high-pitched keening, from somewhere up there, but you try not to think too hard about it.
+		你脚下的青苔散发着柔和的光芒，驱散了蝙蝠洞窟中沉重如墨的黑暗。每走一步，新的一池微光就会随着前一步的消逝而向外绽放，让你得以望见周围大约[unit.lSizes(1500)]的景象。洞窟顶部极高，你只能看到一片完全无法穿透的幽暗。偶尔似乎有尖厉的啸叫从上方某处传来，但你尽量不去多想。
 	</p>
 	<p>
-		There's an ever-present dripping sound that echoes from everywhere and nowhere, giving the caverns its own ambient, if unfocused, melody. The air is also surprisingly fresh, clean and cool; not at all what you'd expect from a typical cave. Indeed, the fresh air down here is certainly chilly enough to raise goosebumps on any exposed skin and harden nipples beneath clothing. 
+		无处不在的滴水声从四面八方回荡而来，为岩洞增添了略显散漫的天然旋律。这里的空气异常清新、洁净、凉爽，完全不像你印象里的典型洞穴。事实上，这里的新鲜空气冷得足以让任何裸露的皮肤起鸡皮疙瘩、使衣服下的乳头变硬。
 	</p>
 	<p>
-		You weave through clusters of stalagmites as you proceed forwards through the darkness, reaching out to use the smooth, cool stone for support as you step over little streams and narrow cracks in the floor.
+		你在黑暗中前行，穿梭于石笋群中，以光滑冰凉的石头为支撑，跨过地上的小溪和狭窄裂缝。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CAVERN_LIGHT"><![CDATA[
 	<p>
-		Compared to the majority of the bat caverns, the area you find yourself standing in is lit up like a beacon. The moss carpet beneath your feet thrives in amongst bioluminescent fungi of all shapes, sizes, and colours, and forms trailing paths which wind through the area. While some of these mushroom-like plants approach the height of trees, the vast majority are no more than twenty-or-so [unit.sizes] tall. Pools of still, shallow water are to be found scattered throughout the floor of this underground forest, and by reflecting the many hues of light from the surrounding flora, they give this place an unearthly, almost ethereal ambiance.
+		与蝙蝠洞窟的大部分区域相比，你所处的地方就像一座灯塔。脚下的苔藓地毯在各种形状、大小和颜色的生物发光真菌中茁壮成长，并形成了蜿蜒穿过该区域的蔓生路径。一些蘑菇状植物能达到接近树木的高度，但绝大多数真菌不过二十几[unit.sizes]高。静止的浅水池散布在这片地下森林的地面上，通过反射周围植物发出的各种色调的光线，给这里增添了一种超凡脱俗、近乎空灵的氛围。
 	</p>
 	<p>
-		The luminescence given off by the fungi is bright enough to reveal just how colossal these caves are. The tips of stalactites, illuminated by the taller of the tree-sized mushrooms, look to be almost [unit.lSizes(10000)] above your head, while the base where they connect to the ceiling, still shrouded in darkness, is significantly higher even than that. Some of the largest of these spires have points of light shining out from them, and you realise that you're looking upon the carved-out windows of bat-morphs' roosts.
+		真菌发出的荧光足以显示出这些洞穴有多么巨大。钟乳石的顶端在高大的树状蘑菇的照耀下，看起来几乎高出你的头顶[unit.lSizes(10000)]，而钟乳石与洞顶连接的基部还笼罩在黑暗中，比这还要高得多。一些最大的钟乳石尖顶上闪烁着光点，你意识到那是蝙蝠化形在居所凿出的窗户。
 	</p>
 	<p>
-		Just like the dark parts of the caverns, there's an ever-present dripping sound that echoes from everywhere and nowhere, producing an ambient, if unfocused, melody. The air is also surprisingly fresh, clean and cool; not at all what you'd expect from a typical cave. Indeed, the fresh air down here is certainly chilly enough to raise goosebumps on any exposed skin and harden nipples beneath clothing. 
+		就像洞窟的黑暗部分一样，无处不在的滴水声从四面八方回荡而来，为岩洞增添了略显散漫的天然旋律。这里的空气也异常清新、洁净、凉爽，完全不像你印象里的典型洞穴。事实上，这里的新鲜空气冷得足以让任何裸露的皮肤起鸡皮疙瘩、使衣服下的乳头变硬。
 	</p>
 	<p>
-		Despite the fact that this area is well illuminated, there are enough of the tree-sized mushrooms present to provide any would-be attacker with a convenient hiding place...
+		尽管这个区域光线充足，但这里有足够多的树状蘑菇，为任何可能的攻击者提供了一个方便的藏身之处……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RIVER"><![CDATA[
 	<p>
-		A slow-moving underground river carves its way through the bat caverns, and it's beside this body of water that you find yourself travelling. While the river's surface is illuminated by the bioluminescent lichen, the light is too dim to penetrate the cool, dark depths, and you wonder what sort of creatures, if any, would call such an inhospitable place home.
+		一条缓慢流淌的地下河在蝙蝠洞窟中穿行，而你就是在这条河边旅行的。虽然河面被发光地衣照亮，但光线太暗，无法穿透阴冷幽暗的深处，你不知道什么样的生物(如果有的话)会把这样一个荒凉的地方当成家。
 	</p>
 	<p>
-		The air in this part of the caverns is particularly fresh and cool, and you feel a slight breeze blowing over the exposed parts of your body. Perhaps due to the immediate proximity of such a large body of water, the dripping sounds that are found all throughout the caverns are particularly loud here, and you often find yourself turning around to check that nobody's using the noise to mask their approach...
+		岩洞这一部分的空气特别清新凉爽，你会感到有微风吹过身体裸露的部分。也许是由于紧邻着这么大的水体，整个岩洞里的滴水声在这里显得格外响亮，你经常会发现自己转过身来检查有没有人在用这种声音来掩盖自己的靠近……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RIVER_BRIDGE"><![CDATA[
 	<p>
-		A slow-moving underground river carves its way through the bat caverns, and it's beside this body of water that you find yourself travelling. While the river's surface is illuminated by the bioluminescent lichen, the light is too dim to penetrate the cool, dark depths, and you wonder what sort of creatures, if any, would call such an inhospitable place home.
+		一条缓慢流淌的地下河在蝙蝠洞窟中穿行，而你就是在这条河边旅行的。虽然河面被发光地衣照亮，但光线太暗，无法穿透阴冷幽暗的深处，你不知道什么样的生物(如果有的话)会把这样一个荒凉的地方当成家。
 	</p>
 	<p>
-		Before you, small patches of glowing turquoise fungi grow along both sides of the river's sheer banks. A pair of tree-sized bioluminescent mushrooms grow out from the middle of these patches, and have been shaped into a horizontal, weaving pattern by the residents of these caverns in order to form a living bridge across the water's dark depths.
+		在你面前，河岸两侧长满了一小片发光的碧绿真菌。一对树干大小的生物发光的蘑菇被精心塑造成水平编织的模式，以形成一座跨越河流深处的活生生的桥梁。
 	</p>
 	<p>
-		Stepping up to this fascinating structure, you see that planks of wood have been tied to the mushrooms' stalks in order to provide sturdy footing. Rope-netting has also been cunningly erected to either side, making this bridge a very safe way to get to the path on the other side.
+		走上这座迷人的建筑，你会看到木板被绑在蘑菇的茎秆上，以便提供坚固的立足点。两侧还巧妙地架设了绳网，使这座桥成为通往另一侧小路的非常安全的通道。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RIVER_END"><![CDATA[
 	<p>
-		A slow-moving underground river carves its way through the bat caverns, and it's beside this body of water that you find yourself travelling. While the river's surface is illuminated by the bioluminescent lichen, the light is too dim to penetrate the cool, dark depths, and you wonder what sort of creatures, if any, would call such an inhospitable place home.
+		一条缓慢流淌的地下河在蝙蝠洞窟中穿行，而你就是在这条河边旅行的。虽然河面被发光地衣照亮，但光线太暗，无法穿透阴冷幽暗的深处，你不知道什么样的生物(如果有的话)会把这样一个荒凉的地方当成家。
 	</p>
 	<p>
-		The cavern's roof slopes down before you, and the path that you were walking on suddenly comes to an abrupt halt as it meets a solid wall of stone. The river to your side drops away into a pitch-black abyss, and by the light of the lichen underfoot, you see that a finely meshed metal grate has been built to save anyone from being swept down into the bottomless depths below.
+		洞顶在你面前倾斜下来，你走过的路突然戛然而止，因为它遇到了一堵坚固的石墙。脚下的地衣发出微弱的光亮，你可以看到，为了防止有人被卷入下面无底的深渊，洞穴里建起了一个网状的金属栅栏。
 	</p>
 	<p>
-		With no way forwards, you'll have to turn around and double-back on yourself...
+		无路可退，你只能转过身来，原路返回……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE"><![CDATA[
 	<p>
-		The underground river before you widens out into a huge, still body of water. You can't help but stop in your tracks as you find yourself looking upon a gigantic underground lake. Its still, black waters are illuminated by countless mushrooms which together form a great, bioluminescent-fungi forest which lines its banks.  
+		你面前的地下河逐渐变宽，变成一个巨大而静止的水体。你情不自禁地停下脚步，因为你发现自己正站在一个巨大的地下湖旁边。湖岸两旁，无数蘑菇组成了一片广袤的生物发光真菌森林，照亮了静谧的黑色湖水。
 	</p>
 	<p>
-		Out in the middle of the lake, you see a small island, covered in glowing lichens, mosses, and mushrooms. On the island's highest point, you can see that someone's built a stout stone tower, complete with medieval-style crenellations. Although it's quite some distance away, you can see light shining out from the arrow slits in the tower's walls, and at the base, a large wooden door appears to be firmly closed and barred. 
+		湖中央有一座小岛，岛上长满了发光的地衣、苔藓和蘑菇。在小岛的最高点，你可以看到有人建造了一座坚固的石塔，塔上还有中世纪风格的石笋。虽然距离很远，但你可以看到光线从塔壁上的箭缝中照射出来，而在塔底，一扇大木门似乎紧紧关闭着，并有铁栅栏。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_QUEEN_UNKNOWN"><![CDATA[
 	<p>
-		From this distance, it looks like there's no possible way to gain entry to such a well-fortified structure. You have no reason to visit the tower at the moment, but if ever you had business with a reclusive individual who might lock themselves away somewhere in the Bat Caverns, you now know where to look.
+		从远处看，你根本无法进入如此坚固的建筑。你现在没有理由去这座塔，但如果你和一个可能把自己关在蝙蝠洞窟某处的隐居者有生意往来，你现在知道该去哪里找了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_QUEEN_GUESS"><![CDATA[
 	<p>
-		You have a strong feeling that this is the place where the elusive 'Slime Queen' is hiding. Looking around for a way to cross the wide expanse of water, you soon find a small jetty, which has been built behind several particularly large mushroom-trees in order to try and keep it hidden from passersby. There are several little wooden boats tied up beside it, each one complete with a pair of oars. You suppose that this is how the Queen's visitors travel back and forth from her tower, and wonder if you should use one of these boats to pay her a visit.
+		你有一种强烈的感觉，这里就是难以捉摸的“史莱姆女王”的藏身之处。环顾四周，寻找横渡宽阔水域的方法，你很快就找到了一个小码头，它建在几棵特别大的蘑菇树后面，目的是为了不被路人发现。码头旁边拴着几艘小木船，每艘船上都有一对船桨。你猜想女王的访客们就是这样往返塔楼的，不知道该不该乘船去拜访她。
 		#IFpc.isAbleToFly()#THEN
-		 Then again, you could always just fly over there...
+		不过，你也可以直接飞过去……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_QUEEN_KNOWLEDGE"><![CDATA[
 	<p>
-		You now know that this is the place where the elusive 'Slime Queen' lives. Walking over to the place where the jetty is concealed, you see that there are several little wooden boats still tied up beside it. You suppose that this is how the Queen's visitors travel back and forth from her tower, and wonder if you should use one of the boats to pay her a visit.
+		你现在知道了，这里就是难以捉摸的“史莱姆女王”居住的地方。走到掩盖着栈桥的地方，你看到栈桥旁边还拴着几艘小木船。你猜这就是女王的访客们往返于她的塔楼的方式，不知道你是否应该用其中的一艘船去拜访她。
 		#IFpc.isAbleToFly()#THEN
-		 Then again, you could always just fly over there...
+		不过，你也可以直接飞过去……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_BOAT"><![CDATA[
 	<p>
-		You step down into the nearest wooden boat, before quickly sitting down and grabbing hold of the sides in order to stop it from rocking. Sliding the oars through the oarlocks, you push off from the jetty and start rowing towards the island.
+		你走下最近的一艘木船，然后迅速坐下，抓住船舷，以防止船摇晃。将船桨滑入船闸，然后从码头推开，开始向小岛划去。
 	</p>
 	<p>
-		Your journey across the lake is uneventful, and before you know it, you've reached your destination. Built into the lake's shore, you see a jetty which is very similar to the one from which you departed. Mooring your boat alongside this jetty, you start to walk up the island's gentle incline towards the stout stone tower.
+		穿越湖面的旅途并不顺利，不知不觉中，你已到达目的地。在湖岸边，你看到了一个与出发时非常相似的码头。将船停泊在栈桥旁，你开始沿着岛上的缓坡向坚固的石塔走去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_FLY"><![CDATA[
 	<p>
-		Seeing no need to use one of boats, you take a small run up towards the lake's shore, and#IF(!pc.isAbleToFlyFromExtraParts()), with a flap of your wings,#ENDIF launch yourself into the air. Circling around a couple of times to gain altitude, you glide over the lake's calm, still surface, speedily making your way towards the island.
+		你认为没有必要使用船只，于是小跑着飞向湖岸，#IF(!pc.isAbleToFlyFromExtraParts())扇动翅膀，#ENDIF 将自己带到空中。在空中盘旋几圈以增加高度，然后在平静无波的湖面上滑翔，快速向小岛飞去。
 	</p>
 	<p>
-		It only takes a minute or so to reach your destination, and#IF(!pc.isAbleToFlyFromExtraParts()), with a final flap of your wings,#ENDIF you land on the island's shore, right beside a wooden jetty that's the mirror image of the one on the lake's far side. Smiling to yourself as you think about those poor people who aren't able to fly, you begin to walk up the island's gentle incline towards the stout stone tower.
+		到达了目的地只用了一分钟左右。#IF(!pc.isAbleToFlyFromExtraParts())你最后扇动翅膀，#ENDIF降落在了小岛的岸边，身旁是一个木制码头，它和湖对岸的码头如出一辙。你想到那些不能飞的可怜人，不禁笑了笑，然后沿着岛上的缓坡向坚固的石塔走去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_PACIFIED"><![CDATA[
 	<p>
-		As you approach, you see that the front door is slightly ajar, and from within, a thin beam of golden light shines out onto the island's mossy knoll. Although there's no sign of life outside the tower, you know that [slimeIce.name] and [slimeFire.name] are standing guard just inside the entrance. As you've already come to an arrangement with the Slime Queen, you're free to come and go from her tower without having to worry about fighting her guards.
+		当你走近时，你发现前门微微虚掩着，从里面射出一束细细的金光，照在岛上长满青苔的小丘上。虽然塔外没有任何生命迹象，但你知道[slimeIce.name]和[slimeFire.name]正在入口处站岗。由于你已经和史莱姆女王达成了协议，所以你可以自由出入她的塔楼，不必担心和她的守卫发生冲突。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_READY_FIGHT"><![CDATA[
 	<p>
-		As you approach, you see that the front door is slightly ajar, and from within, a thin beam of golden light shines out onto the island's mossy knoll. Although there's no sign of life outside the tower, you're certain that there must be guards just inside the entrance, and ready yourself for a fight.
+		当你走近时，你看到前门微微虚掩着，从里面射出一束细细的金光，照在岛上长满青苔的小丘上。虽然塔外没有任何生命迹象，但你确信入口处一定有守卫，于是做好了战斗准备。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_BOAT_RETURN"><![CDATA[
 	<p>
-		Walking down to the lake's shore, you soon find the island's wooden jetty. Deciding upon the nearest boat, you quickly lower yourself into it and grab hold of the sides in order to stop it from rocking. Sliding the oars through the oarlocks, you push off from the jetty and start rowing towards the far shore.
+		走到湖边，你很快就找到了岛上的木制码头。你决定找一艘最近的小船，然后迅速爬上船，抓住船舷以防止船摇晃。将船桨滑入船桨锁中，然后推离码头，开始向远处的岸边划去。
 	</p>
 	<p>
-		Your journey across the lake is uneventful, and before you know it, you've reached your destination. Tying the boat up at the jetty, you step out onto solid ground once more.
+		横渡湖面的旅程并不顺利，不知不觉中，你已到达目的地。在码头系好船缆，你再次踏上坚实的土地。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLIME_LAKE_FLY_RETURN"><![CDATA[
 	<p>
-		Seeing no need to use the little wooden boat, you take a small run up towards the lake's shore, and#IF(!pc.isAbleToFlyFromExtraParts()), with a flap of your wings,#ENDIF launch yourself into the air. Circling around a couple of times to gain altitude, you glide over the lake's calm, still surface, speedily making your way towards the far shore.
+		你觉得没必要使用小木船了，于是小跑着冲向湖岸，#IF(!pc.isAbleToFlyFromExtraParts())扇动翅膀，#ENDIF将自己发射到空中。在湖面上盘旋几圈以增加高度，然后在平静无波的湖面上滑翔，快速飞向远处的湖岸。
 	</p>
 	<p>
-		It only takes a minute or so to reach your destination, and so#IF(!pc.isAbleToFlyFromExtraParts()), with a final flap of your wings,#ENDIF you quickly land on the edge of the underground mushroom forest. Smiling to yourself as you think about those poor people who aren't able to fly, you set off to continue on your journey.
+		只需一分钟左右就能到达目的地，#IF(!pc.isAbleToFlyFromExtraParts())你最后扇动翅膀，#ENDIF很快就降落在了地下蘑菇森林的边缘。你想到那些不能飞的可怜人，不禁笑了笑，然后继续踏上旅程。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MUSHROOMS_LIGHT"><![CDATA[
 	<p>
-		Although there's no shortage of bioluminescent fungi in this area, you can tell that the vast majority of it is poisonous, and is clearly unsuitable for consumption. As you walk past a particularly large mushroom-tree, however, you see a little cluster of glowing blue mushrooms that look to be quite different from all the rest. Crouching down, you take a look at this peculiar fungi, and, comparing it to the mushrooms on the sign at the entrance to the Bat Caverns, you're certain that these are the ones that are edible.
+		虽然这个地区不乏生物发光真菌，但你可以看出其中绝大多数都有毒，显然不适合食用。不过，当你走过一棵特别大的蘑菇树时，你看到了一小簇发光的蓝色蘑菇，看起来与其他的蘑菇很不一样。蹲下身来，你看了看这种奇特的真菌，并将它与蝙蝠洞窟入口处标志牌上的蘑菇进行了比较，你确信这些蘑菇是可以食用的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MUSHROOMS_DARK"><![CDATA[
 	<p>
 		#IF(pc.hasLegs())
-			With the weight of each of your footsteps
+			随着你每一个脚步的重量
 		#ELSE
-			With the weight of your [pc.legs]
+			随着你[pc.legs]上的重量
 		#ENDIF
-		 causing the carpet of bioluminescent lichen to light up and just about illuminate your way, you continue [pc.walking] through the otherwise dark caverns. As you continue to make forwards progress, you suddenly see a faint glimmer of light on the floor up ahead. Approaching this irregularity, you discover that this light source is in fact a small cluster of glowing blue mushrooms. Crouching down, you take a look at this peculiar fungi, and after mentally comparing it to the mushrooms on the sign at the entrance to the Bat Caverns, you're certain that these are the ones which are edible.
+		你继续[pc.walking]过原本黑暗的洞穴，地衣上的生物发光地毯亮起来，差不多照亮了你的路。当你继续前进时，突然看到前面的地面上有一丝微弱的亮光。走近这个不寻常的地方，你发现这个光源其实是一小簇发光的蓝色蘑菇。蹲下身子，你看了看这种奇特的真菌，并在心里将它与蝙蝠洞窟入口处标志牌上的蘑菇进行比较后，你确定这些蘑菇是可以食用的。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_ITEM_LIGHT"><![CDATA[
 	<p>
-		As you travel through the underground mushroom forest, you see a splash of bright purple slime sprayed up the side of a nearby mushroom-tree. First glancing around to check that the slime who left this mark is long gone, you then take a step towards this purple goo in order to investigate further.
+		当你穿过地下蘑菇森林时，你看到附近一棵蘑菇树的侧面喷出了一抹亮紫色的粘液。你先向四周看了看，确认留下这个印记的史莱姆早已不见踪影，然后迈步走向这些紫色粘液，以便进一步调查。
 	</p>
 	<p>
-		As you approach, you see that there's a similar patch of glowing slime on the floor at the base of the tree, but unlike the goo splashed up the trunk, this slime is a bright orange. Beside this pool of orange goo, you see that one of the participants of what you assume to have been a sexual encounter has dropped some sort of a package.
+		当你走近时，你会发现树底的地上也有一块类似的发光粘液，但与树干上溅起的粘液不同，这块粘液是亮橙色的。在这滩橙色粘液旁边，你看到其中一个你认为是性爱的参与者掉落了一个包裹。
 	</p>
 	<p>
-		Opening this package reveals:
+		打开包装发现：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_ITEM_DARK"><![CDATA[
 	<p>
 		#IF(pc.hasLegs())
-			With the weight of each of your footsteps
+			随着你每一个脚步的重量
 		#ELSE
-			With the weight of your [pc.legs]
+			随着你[pc.legs]的重量
 		#ENDIF
-		 causing the carpet of bioluminescent lichen to light up and just about illuminate your way, you continue [pc.walking] through the otherwise dark caverns. As you continue to move forwards, you suddenly see a splash of bright pink slime sprayed up the side of the wall up ahead. First glancing around to check that the slime who left this mark is long gone, you take a step towards this pink goo in order to investigate further.
+		你继续[pc.walking]过漆黑的洞穴。当你继续向前走的时候，突然看到前方的墙壁上喷出了一滩亮粉色的粘液。你先向四周扫了一眼，确认留下这个印记的史莱姆早已不见踪影，然后迈步走向这些粉红色的粘液，以便进一步调查。
 	</p>
 	<p>
-		As you approach, you see that there's a similar patch of glowing slime on the floor at the base of the wall, but unlike the goo which first drew your attention, this slime is a bright green. Beside this pool of green goo, you see that one of the participants of what you assume to have been a sexual encounter has dropped some sort of a package.
+		当你走近时，你会发现在墙根的地上也有一块类似的发光粘液，但与最初引起你注意的粘液不同，这块粘液是鲜绿色的。在这滩绿色粘液旁边，你看到其中一个你认为是性爱的参与者掉落的一个包裹。
 	</p>
 	<p>
-		Opening this package reveals:
+		打开包装后发现：
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- In the BatCavernsEncounterDialogue.java class -->
@@ -271,95 +271,95 @@
 	<htmlContent tag="REBEL_BASE_DISCOVERED"><![CDATA[
 	<p>
 		#IF(pc.hasLegs())
-			With the weight of each of your footsteps
+			随着你每一步的重量
 		#ELSE
-			With the weight of your [pc.legs]
+			随着你[pc.legs]的重量
 		#ENDIF
-		 causing the carpet of bioluminescent lichen to light up and just about illuminate your way, you continue [pc.walking] through the otherwise dark caverns. By a stroke of exceptional luck, as you pass by what at first appears to be yet another featureless cave wall, you just so happen to notice a sliver of a shadow that's being cast onto it by the dim light of the surrounding bioluminescent fungi. While a shadow ordinarily wouldn't be enough to catch your interest, this one has a suspiciously straight edge to it. With your curiosity piqued, you take a moment to investigate, and after approaching it you can see that this shadow is being cast by a well-hidden door handle that's just barely jutting out from the rock.
+		，地衣光毯亮起，路途随之通明。你继续[pc.walking]过漆黑的洞穴。幸运之神眷顾了你，你路过一处乍一看毫无特色的洞壁时，恰好注意到周围生物发光真菌的微弱光线投射在洞壁上的一丝阴影。一般来说，一个影子并不足以引起你的兴趣，但这个影子的边缘很直，直到让人起疑。你被激起了好奇心，于是花了一点时间调查；而走近之后你发现，影子是由一个拉杆投射出来的，它隐藏得很好，只勉强从岩石上探出一点。
 	</p>
 	<p>
-		Between the dim light and the thick layer of dust on it, you can't tell how old this handle is or how long it's been here. Briefly glancing around, you can see no obvious seams or hinges that might suggest the presence of a door.
+		由于光线昏暗，加上上面有一层厚厚的灰尘，你无法判断这个拉杆有多旧，也不知道它在这里呆了多久。简单扫了一眼，你看不到明显的接缝或铰链，这可能表明这里有一扇门。
 		#IF(pc.isCowardly())
-			 Your cowardly mind immediately jumps to the conclusion that this handle might activate some sort of trap. Nervously gulping, you fret to yourself about whether or not to try pulling it...
+			懦弱的你立刻得出结论，这个拉杆可能启动了某种陷阱。你紧张地咽了口唾沫，自言自语地考虑是否要试着拉一下……
 		#ELSEIF(pc.isBrave())
-			 Although a part of you recognises the fact that this handle might activate some sort of trap, you're far too brave to let such a possibility deter you from pulling it, aren't you?
+			虽然你的一部分意识到这个拉杆可能会启动某种陷阱，但你太勇敢了，不会因为这种可能性而不去拉它，不是吗？
 		#ELSE
-			 Although this handle might activate some sort of trap, you're not sure whether you can leave such an extraordinary find behind without at least trying to pull it... 
+			虽然这个拉杆可能会启动某种陷阱，但你不确定是否能在不尝试拉动拉杆的情况下还能发现这样一个非同寻常的发现……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REBEL_BASE_DOOR_NO_PASS -->
 	
 	<htmlContent tag="REBEL_BASE_DOOR_NO_PASS"><![CDATA[
 	<p>
-		Taking your chances, you grab the handle. To your surprise, the moment in which you make contact with what turns out to be cold metal, a series of glowing, light-blue letters materialise across the cavern wall before you, spelling out the question [style.glowBlueLight('Fiat Justitia?')]
+		抱着试试看的态度，你抓住了拉杆。出乎你意料的是，就在你接触到冰冷金属的一瞬间，一串发光的淡蓝色字母在你面前的洞壁上显现出来，拼出了一个问题[style.glowBlueLight(“Fiat Justitia?”)] (为了实现正义？)。
 	</p>
 	<p>
-		Steeling yourself for whatever might happen next, you proceed to give the handle an experimental tug, but much to your disappointment it remains fixed in place. It looks like the wall wants an answer to its question, and since you're not sure what the correct response would be there's nothing more that you can do at the moment. Letting go of the handle, you watch as the glowing letters rapidly fade away and return to their invisible, dormant state.
+		为了应对接下来可能发生的事情，你试探性地拽了拽拉杆，但令你失望的是，它依然纹丝不动。看来这面墙想要一个问题的答案，而你又不确定正确的答案是什么，所以目前你也无能为力了。松开拉杆，你看着发光的字母迅速消失，恢复到看不见的休眠状态。
 	</p>
 	<p>
-		[pc.Stepping] away from the handle, you think to yourself that surely by carrying out a thorough search of the vicinity will reveal some clues...
+		从拉杆旁边[pc.Stepping]开，你心想，对附近进行彻底搜查肯定会发现一些线索……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REBEL_BASE_DOOR_PASS_ONE -->
 	
 	<htmlContent tag="REBEL_BASE_DOOR_PASS_DARK"><![CDATA[
 	<p>
-		As you carefully navigate the myriad obstacles offered by the twisting passages of the cavern, you suddenly almost slip on something beneath your feet.
+		当你小心翼翼地穿过洞穴曲折通道中的无数障碍时，突然脚下一滑，差点滑倒。潮湿的洞穴里怎么没人来打理这滑溜溜的玩意，你
 		#IF(pc.isFeminine())
-			 Sighing
+			叹了口气
 		#ELSE
-			 Grumbling
+			抱怨着
 		#ENDIF
-		 to yourself about the responsible disposal of slippery objects in a damp cave, you find the cause of your near-faceplant to be a piece of laminated paper.
+		，忽然发现害得你差点摔倒的原来是一张层压纸。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REBEL_BASE_DOOR_PASS_LIGHT"><![CDATA[
 	<p>
-		[pc.Walking] through the bioluminescent forest, you find yourself passing by an absolutely gigantic specimen of mushroom-tree, as you do so, you just so happen to see something glinting by its base. Taking a closer look, you push a small patch of mushrooms aside to see that the source of the reflected light is a piece of laminated paper.
+		[pc.Walking]过生物发光森林时，你发现自己路过一棵绝对巨大的蘑菇树标本。走近一看，你把一小片蘑菇推到一边，发现反射光的来源是一张层压纸。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REBEL_BASE_DOOR_PASS_ONE"><![CDATA[
 	<p>
-		Picking up the paper to take a closer look, you see that it appears be a page from a journal of some sort that someone laminated after it had already been torn out. Even more strangely, someone tore it in half after going through all the trouble of laminating it. Water has gotten inside the seal and rendered most of the page unreadable but you can still make out an entry:
+		拿起纸仔细一看，你发现这似乎是某本日记的一页，有人在撕掉之后又把它叠了起来。更奇怪的是，有人费了九牛二虎之力把纸撕成了两半。封口处已经进水，导致大部分页面无法阅读，但你仍然可以辨认出一个条目：
 	</p>
 	<p align=right>
 		<i>
-			1st July 1990
+			1990年7月1日
 		</i>
 	</p>
 	<p>
 		<i>
-			Under Astrea's command, we have successfully broken through into the Bat Caverns. At last, a way into the wretched heart of Dominion! And not a moment too soon, if news from the other fronts is to be believed. A small hideout hidden in the cave wall will provide us a staging area for the operations to come, and in any case, the cool damp is a welcome relief from the sweltering heat above. The door has been enchanted to only open for those who know the password:</br><center>RUAT C</center>
+			在艾斯特莱雅的指挥下，我们成功闯入了蝙蝠洞窟。终于有办法进入御城区的心脏了！如果其他战线的消息属实的话，这一刻也不会太快。隐藏在洞壁上的一个小藏身处将为我们的行动提供一个中转站，无论如何，凉爽潮湿的环境能让我们从酷热中解脱出来。门被施了魔法，只有知道密码的人才能打开：</br><center>RUAT C</center>
 		</i>
 	</p>
 	<p>
-		Annoyingly, the rest of the password has been torn away. You'll have to find the half of the page which matches up with this one in order to complete the password.
+		令人讨厌的是，密码的其余部分已经被撕掉了。你必须找到与这页相符的那一半，才能完成密码。
 		#IF(game.getDialogueFlags().hasFlag(FLAG_rebelBaseDarkPassFound))
-			 You get the feeling that this missing half won't be found in these dark tunnels. Perhaps you should head into another part of the Bat Caverns and look in a place that's a little brighter?
+			你感觉在这些黑暗的隧道里找不到失踪的那一半。也许你应该去蝙蝠洞的另一个地方，在一个明亮一点的地方寻找？
 		#ELSE
-			 You get the feeling that this missing half won't be found in this bioluminescent forest. Perhaps you should head into another part of the Bat Caverns and look in a place that's a little darker?
+			你觉得，在这片生物发光森林里是找不到那缺失的一半的。也许你应该去蝙蝠洞的另一个地方，在稍微黑暗一点的地方寻找？
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REBEL_BASE_DOOR_PASS_TWO -->
 	
 	<htmlContent tag="REBEL_BASE_DOOR_PASS_TWO"><![CDATA[
 	<p>
-		Immediately recognising it as the other half of the torn journal page, you thank your lucky stars for this miraculously good stroke of fortune and quickly pick it up. Like its counterpart, this laminated sheet has been heavily damaged and is also barely legible, yet after brushing off the layer of muck which was obscuring most of the text, you breathe a sigh of relief as you see that the second part of the password can still be read:
+		你立刻认出这是被撕掉的那半页日记，感谢幸运之神给了你这个奇迹般的好运气，并迅速把它捡了起来。然而，在拂去那层遮住大部分文字的泥土后，你终于松了一口气，因为你看到密码的后半部分仍然可以读取：
 	</p>
 	<p align=center>
 		<i>
@@ -368,40 +368,40 @@
 	</p>
 	<p align=right>
 		<i>
-			3rd July 1990
+			1990年7月3日
 		</i>
 	</p>
 	<p>
 		<i>
-			Damn Enforcers were waiting for us in the canals! And we've lost one of our lead fighters. She didn't know the password or the exact location of the hideout but it's obvious she broke under interrogation. We found footprints that weren't ours outside this morning. This is going to be much harder than we imagined.
+			该死的执法者在运河里等着我们！我们失去了一名主力战士。她不知道口令，也不知道藏身处的具体位置，但很明显她在审问中崩溃了。今早我们在外面发现了不属于我们的脚印，这比我们想象的要难得多。
 		</i>
 	</p>
 	<p>
-		Putting together the two pages, you see that the password is <b>RUAT CAELUM</b>.
+		将这两页合在一起，可以看到密码是<b>RUAT CAELUM</b>(哪怕天崩地裂)。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- REBEL_BASE_DOOR_PASS_SEARCH_FAIL -->
 	
 	<htmlContent tag="REBEL_BASE_DOOR_PASS_SEARCH_FAIL"><![CDATA[
 	<p>
-		You carefully examine every nook and cranny of the area around you. Despite your best efforts, your search turns up nothing.
+		你仔细检查了周围的每一个角落。尽管你竭尽全力，但还是一无所获。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- REBEL_BASE_DOOR_PASS_SILLY -->
 	
 	<htmlContent tag="REBEL_BASE_DOOR_PASS_SILLY"><![CDATA[
 	<p>
-		You rage at having been given yet another pointless side quest. [pc.speech(Can't they see I have things to see and people to do?)] you rant at nobody in particular, [pc.speech(I bet there's not even anybody to fuck behind that stupid door!)]
+		你对又一个毫无意义的支线任务感到愤怒。[pc.speech(难道他们看不出我还有东西要找，还有事情要做吗？)]你不分青红皂白地咆哮，[pc.speech(我敢打赌，那扇破门后面连个可以操的人都没有！)]
 	</p>
 	<p>
-		As if in reply to your humble cry of anguish, a gust of wind howls through the caverns. You suddenly feel more accomplished but also terribly unsatisfied.
+		似乎是为了回应你卑微的痛苦呼喊，一阵风呼啸着穿过岩洞。你突然感到成就感大增，但同时也感到非常不满足。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- In the BatCaverns.java dialogue class -->
@@ -410,57 +410,57 @@
 	
 	<htmlContent tag="REBEL_BASE_ENTRANCE_EXTERIOR"><![CDATA[
 	<p>
-		Once again you find yourself passing by the entrance to the once-hidden cave. Nobody seems to have passed by this way since you were last here, or if they did then they decided not to explore the cave, as by looking through the still-open doorway you can just about see a layer of completely undisturbed glowing mushrooms inside, but nothing else.
+		你又一次发现自己路过了曾经隐藏的洞穴入口。自从你上次来过这里后，似乎没有人从这里经过，或者说如果有人经过，但他们也决定不探索这个洞穴，因为透过仍然敞开的门缝，你差不多可以看到里面有一层完全没有被打扰的发光蘑菇，但除此之外什么也没有。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="REBEL_BASE_ENTRANCE_EXTERIOR_COLLAPSED"><![CDATA[
 	<p>
-		Once again you find yourself passing by the caved-in entrance to the once-hidden cave. As there's no way back inside without digging through several hundred tonnes of rock, this section of the Bat Caverns is no longer any more interesting than any other.
+		你又一次路过了曾经那个隐藏洞穴的入口。由于不挖开数百吨重的岩石就无法返回洞内，蝙蝠洞窟的这一部分现在和其他地方一样，不再有任何特别之处。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REBEL_BASE_ENTRANCE_HANDLE (CAVERN_DARK.getContent() is appended before this) -->
 	
 	<htmlContent tag="REBEL_BASE_ENTRANCE_HANDLE"><![CDATA[
 	<p>
-		Once again you find yourself passing by the wall onto which the strange door handle is attached. If you didn't already know it was there, it'd be almost impossible to find, as it's only given away by its barely visible lichen-lit shadow.
+		你又一次发现自己路过了那面连接着奇怪拉杆的墙壁。如果你不知道它就在那里，几乎不可能找到它，因为它只能通过几乎看不见的地衣发出的光线产生的影子来显示。
 		#IF(pc.isQuestProgressLessThan(QUEST_LINE_SIDE_REBEL_BASE, QUEST_REBEL_BASE_PASSWORD_COMPLETE))
-			 As you're not yet in possession of the required password, trying to pull the handle again will undoubtedly prove to be a fruitless endeavour...
+			由于你尚未掌握所需的密码，再次拉动拉杆无疑是徒劳无功的……
 		#ELSE
-			 As you're now in possession of the password, you could try pulling the handle again...
+			既然你现在掌握了密码，你可以再试着拉一下拉杆……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REBEL_BASE_DOOR_OPENED -->
     
     <htmlContent tag="REBEL_BASE_DOOR_OPENED"><![CDATA[
 	<p>
-		Armed with the complete password, you [pc.step] forwards and grab the handle once more. Just as before, the series of glowing letters light up across the wall in front of you, spelling out, [style.glowBlueLight('Fiat Justitia?')]
+		有了完整的密码，你[pc.step]向前，再次抓住拉杆。和之前一样，面前的墙上亮起了一串发光的字母，拼出了[style.glowBlueLight(“Fiat Justitia?”)](为了实现正义？)
 	</p>
 	<p>
 		#IF(pc.isMute())
-			Being unable to talk, you trace one of your [pc.fingers] over the wall so as to spell out the words 'Ruat Caelum'.
+			由于无法说话，你用一根手指在墙上划出了“Ruat Caelum”(哪怕天崩地裂)的字样。
 		#ELSE
-			[pc.speech(Ruat Caelum,)] you answer
+			[pc.speech(Ruat Caelum(哪怕天崩地裂)，)]你用
 			#IF(pc.isConfident() || pc.isBrave())
-				 in your supremely-confident voice.
+				无比自信的声音说道。
 			#ELSEIF(pc.isCowardly())
-				 in a cowardly tone.
+				弱弱的语气说。
 			#ELSE
-				 in the most confident voice you can muster.
+				尽可能自信的声音说。
 			#ENDIF
 		#ENDIF
-		 The handle suddenly loosens and you pull it with all your might. The ground starts to vibrate as you pull, and before you know it a section of the cavern wall has swung open, revealing the entrance to another cave! You can just about see some clusters of glowing mushrooms inside, but nothing else.
+		拉杆突然松动了，你用尽全身力气拉动拉杆。随着你的拉动，地面开始震动，不知不觉间，洞穴的一部分墙壁已经打开，露出了另一个洞穴的入口！你只看到里面有几簇发光的蘑菇，但没有其他东西。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

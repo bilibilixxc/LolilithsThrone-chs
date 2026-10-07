@@ -51,9 +51,9 @@ public class HarpyDominantCompanion extends NPC {
 	}
 	
 	public HarpyDominantCompanion(boolean isImported) {
-		super(isImported, new NameTriplet("Harley"), "Orlov",
-				"Diana's favourite pet, Harley, does everything she can to please her matriarch."
-						+ " Just like most of the harpies in her mistress's nest, she does absolutely anything Diana orders her to do, which often involves administering humiliating punishments...",
+		super(isImported, new NameTriplet("哈莉"), "奥尔洛夫",
+				"狄安娜最喜爱的宠物，哈莉，会竭尽全力地取悦族长。"
+						+ "她跟其主人巢穴中其他大多数哈比一样，坚决听从狄安娜的指示，过程中经常包含了进行羞辱性的惩罚……",
 				19, Month.JUNE, 14,
 				5, Gender.M_P_MALE, Subspecies.HARPY, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HARPY_NEST_RED, true);

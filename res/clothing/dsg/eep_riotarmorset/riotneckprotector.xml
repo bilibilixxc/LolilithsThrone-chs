@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 		
 		<value>500</value> 
 		
-		<authorTag><![CDATA[On the inside of the collar, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在衣领内侧，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's riot neck protector]]></name>
+		<name><![CDATA[执法者防暴护颈]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's riot neck protectors]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者防暴护颈]]></namePlural> 
 
-		<description><![CDATA[A collar made from shock-absorbing foam and flame-retardant fabric. It is designed to protect the throat and neck from blows as well as keep flammable liquids from leaking down the wearer's front.]]></description> 
+		<description><![CDATA[由减震泡沫和阻燃织物制成的衣领。它的设计目的是保护喉咙和颈部免受打击，并防止易燃液体从佩戴者的前部流进衣服内部。]]></description> 
 
 		<physicalResistance>3</physicalResistance> 
 
@@ -64,27 +63,21 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(strap)] the neck protector around [npc.her] neck.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(strap)] the neck protector around [npc2.namePos] neck.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] hastily [npc.verb(strap)] the neck protector around [npc2.namePos] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将防暴护颈系在[npc.her]的脖子上。]]></self>
+		<other><![CDATA[
+[npc.Name]将防暴护颈系在[npc2.namePos]的脖子上。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]仓促地将防暴护颈系在[npc2.namePos]脖子上。]]></otherRough>
   </replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(take)] [npc.her] neck protector off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] neck protector off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] neck protector off [npc2.her] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的防暴护颈摘了下来。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的防暴护颈摘了下来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将防暴护颈从[npc2.namePos]的脖子上拽了下来。]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>5000</value>
-		<determiner><![CDATA[an amphora of]]></determiner>
-		<name><![CDATA[Amazonian Ambrosia]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Amazonian Ambrosias]]></namePlural>
-		<description><![CDATA[A miniature terracotta amphora, filled with a heady red wine. The description on the label is terse, but promises to 'make an Amazon' out of anyone who drinks it.]]></description>
-		<useDescriptor>drink</useDescriptor>
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[亚马逊佳酿]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[亚马逊佳酿]]></namePlural>
+		<description><![CDATA[一个微型陶制双耳瓶，装满了令人陶醉的红葡萄酒。标签上的描述简洁明了，承诺喝过它的人都会 "成为亚马逊人"。]]></description>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
 		<combatUseEnemies>false</combatUseEnemies>
@@ -23,14 +23,14 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.italicsSex(+5)] [style.italicsFeminine(femininity)]]]></line>
-			<line><![CDATA[[style.italicsGood(+3)] [style.italicsMuscleTwo(muscle)]]]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 10% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.italicsSex(+5)][style.italicsFeminine(女性化程度)]]]></line>
+			<line><![CDATA[[style.italicsGood(+3)][style.italicsMuscleTwo(肌肉量)]]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]10%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				As the rich wed wine begins to circulate through [npc.her] system, [npc.name] [npc.verb(feel)] [npc.her] body subtly changing...
+				随着馥郁的美酒在[npc.her]的体内循环，[npc.name]感觉[npc.her]的身体发生了微妙的变化……
 			</p>
 			[#npc.incrementFemininity(5)]
 			[#npc.incrementMuscle(3)]
@@ -45,12 +45,8 @@
 	</coreAttributes>
 
 	<useDescriptions>
-		<selfUse><![CDATA[
-			Opening the amphora of Amazonian Ambrosia, [npc.name] [npc.verb(tilt)] [npc.her] head back and [npc.verb(bring)] it up to [npc.her] waiting [npc.lips]. The rich, red wine contained within has a strong, heady fragrance, which seduces [npc.name] into quickly taking a deep draught. Discovering that the wine's taste is every bit as excellent as its smell, [npc.she] quickly drinks every last drop.
-		]]></selfUse>
-		<otherUse><![CDATA[
-			Opening the amphora of Amazonian Ambrosia, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips]. The rich, red wine contained within has a strong, heady fragrance, which seduces [npc2.name] into quickly taking a deep draught. Discovering that the wine's taste is every bit as excellent as its smell, [npc2.she] quickly drinks every last drop.
-		]]></otherUse>
+		<selfUse><![CDATA[打开亚马逊佳酿酒瓶，[npc.name]仰起头，将瓶口抬到等待已久[npc.lips]前。酒瓶中馥郁的红酒散发着令人陶醉的芳香，引诱着[npc.name]迅速深吸一口。酒的味道和它的香味一样美妙，[npc.she]很快便一饮而尽。]]></selfUse>
+		<otherUse><![CDATA[打开亚马逊佳酿酒瓶，[npc.name]拿起酒瓶将瓶口抬到[npc2.namePos]等待已久[npc.lips]前。酒瓶中馥郁的红酒散发着令人陶醉的芳香，引诱着[npc2.name]迅速深吸一口。酒的味道和它的香味一样美妙，[npc2.she]很快便一饮而尽。]]></otherUse>
 	</useDescriptions>
 
 	

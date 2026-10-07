@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>50</value> 
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[Monica's Moo Milker]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Monica's Moo Milkers]]></namePlural>
-		<description><![CDATA[A manual cow-themed breast pump, complete with plastic beaker, which used to belong to Monica.]]></description> 
+		<name><![CDATA[莫妮卡哞哞挤奶器]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[莫妮卡哞哞挤奶器]]></namePlural>
+		<description><![CDATA[一个手动的挤奶器，有奶牛风格的装饰，配有一个塑料杯，曾经属于莫妮卡。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,12 +23,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Has sentimental value to Monica]]></line>
+			<line><![CDATA[对莫妮卡来说有情感价值]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			This Moo Milker has a limited-edition custom colour scheme, and has also had its suction cup enlarged. The writing 'Monica's Milker' on the side makes it clear who its owner is.
+			这个哞哞挤奶器拥有限量版的定制颜色方案，而且其吸盘被增大了。一侧的字样“莫妮卡的挤奶器”清楚地标明了它的所有者是谁。
 		</p>
 		]]></applyEffects>
 		
@@ -38,10 +38,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the Moo Milker...
+		[npc.Name]仔细查看哞哞挤奶器……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off the Moo Milker to [npc2.name], who pretends to be impressed by its custom colour scheme...
+		[npc.Name]向[npc2.name]展示哞哞挤奶器，而[npc2.name]假装对其定制的颜色方案感到印象深刻……
 		]]></otherUse>
 	</useDescriptions>
 

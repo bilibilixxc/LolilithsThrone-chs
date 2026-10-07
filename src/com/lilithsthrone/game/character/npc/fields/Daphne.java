@@ -71,8 +71,8 @@ public class Daphne extends NPC {
 	}
 	
 	public Daphne(boolean isImported) {
-		super(isImported, new NameTriplet("Daphne"), "Hogget",
-				"A brown-wollen sheep-girl who works as a masseuse and prostitute at Elis's spa; 'Woolly Heaven'.",
+		super(isImported, new NameTriplet("达芙妮"), "霍杰特",
+				"一个年轻，棕色羊毛的绵羊女。在伊利斯的水疗中心“绵绵天堂”中作为按摩师兼妓女而工作。",
 				31, Month.JULY, 15, 
 				10,
 				Gender.F_V_B_FEMALE, Subspecies.getSubspeciesFromId("innoxia_sheep_subspecies_sheep"), RaceStage.GREATER,

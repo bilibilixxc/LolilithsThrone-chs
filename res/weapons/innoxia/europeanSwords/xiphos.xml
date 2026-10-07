@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>3500</value>
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[xiphos]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[xiphe]]></namePlural>
-		<description><![CDATA[A double-edged, one-handed shortsword, with a straight, #IF(game.isMetricSizes())60cm#ELSE24 inch#ENDIF blade. The ancient Greeks used it as a secondary battlefield weapon after the dory or javelin.]]></description> 
-		<attackDescriptor>slash</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Slash at [npc2.name] with your xiphos.]]></attackTooltipDescription>
+		<name><![CDATA[西福斯短剑]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[西福斯短剑]]></namePlural>
+		<description><![CDATA[一把双刃单手短剑，剑身笔直，刃长#IF(game.isMetricSizes())60cm#ELSE24 inch#ENDIF。古希腊人将其作为继长矛和标枪之后的第二战场武器。]]></description> 
+		<attackDescriptor><![CDATA[劈]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用短剑劈[npc2.name]。]]></attackTooltipDescription>
 		<rarity>COMMON</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(position)] [npc.her] xiphos at [npc.her] hip, ready to draw it at a moment's notice.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(sheath)] [npc.her] xiphos, before putting it away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]将短剑放在[npc.her]的腰间，以便[npc.she]拔剑。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]将短剑插回剑鞘，然后收好。]]></unequipText>
 		<imageName>xiphos_sheathed.svg</imageName> 
 		<imageEquippedName>xiphos.svg</imageEquippedName> 
 		<damage>25</damage>
@@ -61,26 +61,26 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(slash)] [npc.her] xiphos at [npc2.name], grinning as the ethereal arcane blade travels through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]挥动西福斯短剑劈砍[npc2.name]，虚幻的奥术刀刃穿过了[npc2.her]的身体，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		Slashing out at [npc2.name] with [npc.her] xiphos, [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(see)] the ethereal blade travel straight through [npc2.her] body!
-		]]></hitText>
+		[npc.Name]挥舞西福斯短剑砍向[npc2.name]，[npc.she]看到虚幻的刀刃直接穿过了[npc2.namePos]的身体，不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(slash)] at [npc2.name] with [npc.her] xiphos, causing [npc2.herHim] to stagger back as the ethereal blade passes right through [npc2.her] chest!
-		]]></hitText>
+		[npc.Name]用短剑砍向[npc2.name]，虚幻的刀刃穿过了[npc2.her]的胸膛，使得[npc2.herHim]向后踉跄！
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(slash)] [npc.her] xiphos at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+[npc.Name]用短剑砍向[npc2.name]，但最终没有击中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Slashing out at [npc2.name] with [npc.her] xiphos, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+[npc.Name]挥舞短剑砍向[npc2.name]，但最终没有击中[npc2.herHim]，[npc.her]发出一声沮丧的呼喊！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(slash)] at [npc2.name] with [npc.her] xiphos, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用短剑猛地劈向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

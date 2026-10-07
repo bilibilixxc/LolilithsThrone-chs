@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[information desk]]></name>
-	<tooltipDescription><![CDATA[Positioned immediately in front of the main entrance, the staff at this information desk offer help to members of the public.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[beside the information desk in Elis's town hall]]></virginityLossDescription>
+	<name><![CDATA[咨询台]]></name>
+	<tooltipDescription><![CDATA[该咨询台位于正门入口处，工作人员为公众提供帮助。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[伊利斯市政厅咨询台旁]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

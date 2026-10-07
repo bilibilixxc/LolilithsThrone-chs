@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<race>NoStepOnSnek_snake</race>
-	<transformationName><![CDATA[snake]]></transformationName>
+	<transformationName><![CDATA[蛇]]></transformationName>
 	<baseFluidType>MILK</baseFluidType>
 	<flavour>MILK</flavour>
 	<namesMasculine/>
 	<namesFeminine/>
 	<descriptorsMasculine>
-		<name><![CDATA[snake]]></name>
+		<name><![CDATA[蛇]]></name>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<name><![CDATA[snake]]></name>
+		<name><![CDATA[蛇]]></name>
 	</descriptorsFeminine>
 	<defaultFluidModifiers/>
 </fluid>

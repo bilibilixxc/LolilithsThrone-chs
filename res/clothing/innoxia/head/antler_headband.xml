@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>100</value>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[antler headband]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[antler headbands]]></namePlural>
-		<description><![CDATA[A felt-covered headband with a pair of novelty plush reindeer antlers attached to the top.]]></description>
+		<name><![CDATA[鹿角头饰]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[鹿角头饰]]></namePlural>
+		<description><![CDATA[一个顶部附有一对新奇的绒毛驯鹿鹿角盖着毡毯的头带，]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -47,27 +46,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the antler headband onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the antler headband onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the antler headband onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]把鹿角头饰戴到[npc.her]的头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将鹿角头饰戴到[npc2.namePos]头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将鹿角头饰推到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] antler headband.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] antler headband.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] antler headband.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]摘掉了[npc.her]的鹿角头饰。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将鹿角头饰从[npc2.namePos]头上取下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地将[npc2.namePos]的鹿角头饰夺下。
+]]></otherRough>
   </displacementText>
   
 </clothing>

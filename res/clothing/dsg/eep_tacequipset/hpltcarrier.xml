@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A tag sewn into the inside of the back reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[背部侧缝上有个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>3000</value> 
 
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一套]]></determiner>
 
-		<name><![CDATA[heavy plate carrier]]></name>
+		<name><![CDATA[重型插板防弹衣]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[heavy plate carriers]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[重型插板防弹衣]]></namePlural> 
 
-		<description><![CDATA[A standard plate carrier vest fitted with additional deltoid, groin, neck, and throat protection. It is intended for use in pitched battles rather than quick raids.]]></description>
+		<description><![CDATA[一套标准的防弹插板套装，配有额外的大臂、大腿根、颈部和喉部防护。它用于高烈度交战，而不是快速突袭。]]></description>
 
 		<physicalResistance>40</physicalResistance> 
 
@@ -35,7 +34,7 @@
 			<category id="branchtape" priority="1"> 
 				<categoryName><![CDATA[Branchtape]]></categoryName>
 				<sticker id="None" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
-					<stickerName><![CDATA[None]]></stickerName>
+					<stickerName><![CDATA[无]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -46,10 +45,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="enforcer" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 			
-					<stickerName><![CDATA[Enforcer]]></stickerName>
-					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix> 
+					<stickerName><![CDATA[执法者]]></stickerName>
+					<namePrefix priority="1"><![CDATA[执法者]]></namePrefix> 
 					<namePostfix/> 
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one is clearly labeled for Enforcer use.</i>]]></descriptionModification> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>它明确标注为执法者使用。</i>]]></descriptionModification> 
 					<imageName>hpltcarrier_st_enftape.svg</imageName> 
 					<itemTagsAdded>
 						<tag>CONTRABAND_HEAVY</tag>
@@ -154,51 +153,51 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] head through the plate carrier's neck hole and [npc.verb(secure)] the cummerbund on either side of [npc.her] torso.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] head through the plate carrier's neck hole and [npc.verb(secure)] the cummerbund on either side of [npc2.her] torso.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(shove)] [npc2.namePos] head through the plate carrier's neck hole and hastily [npc.verb(secure)] the cummerbund on either side of [npc2.her] torso.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的头套在护甲之间，并让腰封防护[npc.her]的两侧的躯干。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的头套在护甲之间，并让腰封防护[npc2.her]的两侧的躯干。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]塞进护甲里，让[npc2.her]的头从护颈里伸出来，并迅速的将腰封紧紧的缠在[npc2.her]躯干的两侧。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc.her] plate carrier, [npc.verb(withdraw)] [npc.her] [npc.arms] from the deltoid protectors, and [npc.verb(slide)] [npc.her] head through the neck hole.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc2.name] plate carrier, [npc.verb(guide)] [npc.her] [npc.arms] from the deltoid protectors, and [npc.verb(slide)] [npc2.her] head through the neck hole.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(rip)] open the cummerbund either side of [npc2.namePos] plate carrier, [npc.verb(force)] [npc.her] [npc.arms] from the deltoid protectors, and [npc.verb(yank)] the rest over [npc2.her] head.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]护甲两侧的腰封，从护臂里缩回[npc.her]的[npc.arms]，并将[npc.her]的头从护颈里退出来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.name]护甲两侧的腰封，从护臂里缩回[npc.her]的[npc.arms]，并将[npc2.her]的头从护颈里退出来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]撕开了[npc2.namePos]护甲两侧的腰封并迫使[npc.her]的[npc.arms]从护臂里退出，然后将护甲从[npc2.her]的头顶上拽走。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_DOWN">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the groin protector on [npc.her] heavy plate carrier back down.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the groin protector on [npc.her] heavy plate carrier back down.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(flip)] the groin protector on [npc.her] heavy plate carrier back down.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将护甲的护腿向下拉了拉。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将护甲的护腿向下拉了拉。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc.her]的护甲的护腿翻向下面。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(lift)] the groin protector on [npc.her] heavy plate carrier up.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(lift)] the groin protector on [npc2.namePos] heavy plate carrier up.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(flip)] the groin protector on [npc2.namePos] heavy plate carrier up.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将护甲的护腿向上提了提。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的护腿向上提了提。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.her]的护甲的护腿翻起来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

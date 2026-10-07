@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[meander ring]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[meander rings]]></namePlural>
-		<description><![CDATA[A thin band of metal, which has been skilfully worked to have a continuous line form a meandering, decorative inlay. Rings such as this one are the speciality of Themiscyra.]]></description>
+		<determiner><![CDATA[一枚]]></determiner>
+		<name><![CDATA[蜿蜒戒指]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[蜿蜒戒指]]></namePlural>
+		<description><![CDATA[一枚金属戒指，经过巧妙加工，形成连续线条的蜿蜒装饰镶嵌。像这样的戒指是特弥斯库拉的特产。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>FINGER</slot>
@@ -41,27 +40,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the meander ring onto [npc.her] [npc.finger].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the meander ring onto [npc2.namePos] [npc2.finger].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the meander ring onto [npc2.namePos] [npc2.finger].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将蜿蜒戒指戴到[npc.her]的[npc.finger]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将蜿蜒戒指戴到[npc2.namePos]的[npc2.finger]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将蜿蜒戒指戴在[npc2.namePos]的[npc2.finger]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the meander ring off [npc.her] [npc.finger].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the meander ring off [npc2.namePos] [npc2.finger].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] the meander ring off [npc2.namePos] [npc2.finger].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将蜿蜒戒指从[npc.her]的[npc.finger]上摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将蜿蜒戒指从[npc2.namePos]的[npc2.finger]上摘下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]抢下了[npc2.namePos][npc2.finger]上的蜿蜒戒指。
+]]></otherRough>
   </displacementText>
   
 </clothing>

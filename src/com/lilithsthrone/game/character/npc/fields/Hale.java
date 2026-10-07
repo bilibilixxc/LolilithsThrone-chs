@@ -78,9 +78,9 @@ public class Hale extends NPC {
 	}
 	
 	public Hale(boolean isImported) {
-		super(isImported, new NameTriplet("Hale"), "Loviennemartu",
-				"Hale is one of the two baphomets who operate the blacksmiths, 'The Ninth Strike', in Elis's shopping precinct."
-						+ " While most of his work involves manufacturing or repairing mundane items and machinery, his real passion is creating ranged weapons.",
+		super(isImported, new NameTriplet("黑尔"), "洛维耶纳马尔图",
+				"黑尔是伊利斯商业区“九炼”铁匠铺的巴风特铁匠二人之一。"
+						+ "虽然他的主要工作都是生产或修理小东西和机械，但他真正热爱的是制造远程武器。",
 				41, Month.MAY, 8,
 				25,
 				Gender.M_P_MALE, Subspecies.getSubspeciesFromId("innoxia_goat_subspecies_goat"), RaceStage.GREATER,
@@ -88,7 +88,7 @@ public class Hale extends NPC {
 				WorldType.getWorldTypeFromId("innoxia_fields_elis_shops"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_shops_blacksmith"),
 				true);
 
-		this.setGenericName("grey-furred baphomet");
+		this.setGenericName("灰毛巴风特");
 		
 		if(!isImported) {
 			dailyUpdate();

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA["MFD by DSG Beverages GmbH" is engraved into the bottle]]></authorTag>
+		<authorTag><![CDATA[瓶身上刻有“由DSG饮料有限公司生产”的字样]]></authorTag>
 		<value>30</value>
 		<melee>false</melee>
 		<twoHanded>false</twoHanded>
@@ -10,16 +10,16 @@
 		<oneShotWeaponChanceToRecoverAfterTurn>0</oneShotWeaponChanceToRecoverAfterTurn>
 		<oneShotWeaponChanceToRecoverAfterCombat>0</oneShotWeaponChanceToRecoverAfterCombat>
 		
-		<determiner><![CDATA[an]]></determiner>
-		<name appendDamageName="true"><![CDATA[arcane firebomb]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[arcane firebombs]]></namePlural>
-		<description><![CDATA[A glass bottle filled with highly flammable fish oil and a rag, designed to shatter on impact and shower the immediate area with burning oil.]]></description>
-		<attackDescriptor>immolate</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Throw your arcane firebomb at [npc2.name].]]></attackTooltipDescription>
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name appendDamageName="true"><![CDATA[奥术燃烧弹]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[奥术燃烧弹]]></namePlural>
+		<description><![CDATA[一个装满高度易燃的鱼油和一块抹布的玻璃瓶，用途是在受到撞击时碎裂，使附近区域充满燃烧的油。]]></description>
+		<attackDescriptor><![CDATA[焚烧]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[把奥术燃烧弹丢向[npc2.name]。]]></attackTooltipDescription>
 		<rarity>UNCOMMON</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(grab)] the arcane firebomb. The rag stuffed down the bottle's neck immediately ignites but the arcane flames don't seem to be consuming it.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] the arcane firebomb away. The rag immediately extinguishes itself.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]抓起奥术燃烧弹。塞在瓶颈处的抹布立即燃烧起来，但奥术的火焰似乎并没有吞噬它。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]收起了燃烧弹，抹布上的火焰立刻熄灭。]]></unequipText>
 		<imageName>pbomb_uneq.svg</imageName>
 		<imageEquippedName>pbomb.svg</imageEquippedName>
 		<physicalResistance>0</physicalResistance>
@@ -38,7 +38,7 @@
 		<effects/>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.boldFire(Lingering Flames)] for 6 turns on hit.]]></effect>
+			<effect><![CDATA[[style.boldFire(持续燃烧)]命中后持续六个回合。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect><![CDATA[
@@ -62,13 +62,13 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(throw)] the firebomb at [npc2.name]. The bottle shatters on impact with [npc2.namePos] aura, engulfing [npc2.herHim] in fire!
+		[npc.Name]把燃烧弹扔向[npc2.name]。瓶子在与[npc2.namePos]的灵气碰撞时破碎，火焰吞没了[npc2.herHim]！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(throw)] the firebomb at [npc2.name]. The bottle misses [npc2.herHim] completely and shatters in the distance, creating an impressive but useless fireball.
+		[npc.Name]把燃烧弹扔向[npc2.name]。瓶子完全没击中[npc2.herHim]并在远处碎掉，产生了一个令人印象深刻但毫无用处的火球。
 		]]></missText>
 	</missDescriptions>
 	

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <leg>
 	<race>innoxia_mouse</race>
 	
-	<transformationName><![CDATA[mouse]]></transformationName>
+	<transformationName><![CDATA[鼷鼠]]></transformationName>
 	
 	<coveringType>innoxia_mouse_fur</coveringType>
 	
@@ -21,44 +21,44 @@
 		<configuration>QUADRUPEDAL</configuration>
 	</allowedLegConfigurations>
 	
-	<name><![CDATA[leg]]></name>
-	<namePlural><![CDATA[legs]]></namePlural> 
+	<name><![CDATA[腿]]></name>
+	<namePlural><![CDATA[腿]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>masculine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>anthropomorphic, mouse-like</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[男性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[鼷鼠般拟人]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>furry</descriptor>
-		<descriptor>anthropomorphic, mouse-like</descriptor>
-		<descriptor>fur-coated</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[鼷鼠般拟人]]></descriptor>
+		<descriptor><![CDATA[覆盖皮毛]]></descriptor>
 	</descriptorsFeminine>
 	
 	<footDescriptorsMasculine>
-		<descriptor>mouse-like</descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
 	</footDescriptorsMasculine>
 	<footDescriptorsFeminine>
-		<descriptor>mouse-like</descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
 	</footDescriptorsFeminine>
 	
 	<toeDescriptorsMasculine>
-		<descriptor>mouse-like</descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
 	</toeDescriptorsMasculine>
 	<toeDescriptorsFeminine>
-		<descriptor>mouse-like</descriptor>
+		<descriptor><![CDATA[鼷鼠般]]></descriptor>
 	</toeDescriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		A layer of mouse-like fur quickly grows over [npc.her] legs as they shift into a new form. As [npc.her] new fur spreads down to the ends of [npc.her] toes, [npc.her] toenails thicken into sharp claws, and little pink pads grow to cover [npc.her] soles, leaving [npc.herHim] with paw-like feet. As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new fur smoothly transitions into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.
-		<br/>[npc.Name] now [npc.has] anthropomorphic, [style.boldMouse(mouse-like legs and hoofed feet)], which are [npc.materialDescriptor] [npc.legFullDescription].
+		[npc.her]的双腿转化成了新的形式，一层鼷鼠皮毛迅速覆盖了上去。新生的毛皮一直延伸到脚趾，指甲增厚变成了锋利的爪子，小巧粉嫩的肉垫覆盖了脚掌，给[npc.herHim]留下了脚爪般的脚。在转化的尾声，[npc.she]看到皮毛自然过渡成了覆盖身体和大腿其余部分的[npc.skin]。
+		<br/>[npc.Name]现在拥有似人非人的[style.boldMouse(鼷鼠般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。
 	]]></transformationDescription>
 	
 	
 	<bodyDescription><![CDATA[
-		[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are formed into anthropomorphic, mouse-like paws, complete with claws and leathery pads.
+		[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，脚却变成了拟人的鼷鼠脚爪，长着爪子和硬皮质感的肉垫。
 	]]></bodyDescription>
 </leg>

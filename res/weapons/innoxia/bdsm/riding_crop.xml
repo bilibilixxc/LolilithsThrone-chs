@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -6,15 +6,15 @@
 		<melee>true</melee>
 		<twoHanded>false</twoHanded>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[riding crop]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[riding crops]]></namePlural>
-		<description><![CDATA[Consisting of a long, flexible shaft, with a handle at one end and a thin leather tongue at the other, this riding crop can be used to swat at unruly slaves and animals alike.]]></description>
-		<attackDescriptor>swat</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Strike at [npc.name] with your riding crop!]]></attackTooltipDescription>
+		<name><![CDATA[马鞭]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[马鞭]]></namePlural>
+		<description><![CDATA[这根马鞭由一根有弹性的长杆组成，一端有手柄，另一端有薄皮舌，可以用来鞭打不听话的奴隶和动物。]]></description>
+		<attackDescriptor><![CDATA[拍打]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用马鞭拍打[npc.Name]。]]></attackTooltipDescription>
 		<rarity>COMMON</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] riding crop.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] riding crop away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出了马鞭。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]丢下[npc.her]的马鞭。]]></unequipText>
 		<imageName>riding_crop.svg</imageName> 
 		<imageEquippedName/> 
 		<damage>8</damage> 
@@ -54,22 +54,22 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swat)] at [npc2.namePos] [npc2.arm] with [npc.her] riding crop!
+		[npc.Name]用马鞭砸向[npc2.namePos][npc2.arm]！
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] riding crop at [npc2.name] and [npc.verb(manage)] to strike [npc2.her] on the [npc2.arm]!
+		[npc.Name]用马鞭朝着[npc2.name]扫去，成功击中了[npc2.her]的[npc2.arm]！
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] riding crop at [npc2.name], grinning as [npc.she] [npc.verb(swat)] [npc2.her] torso.
+		[npc.Name]挥着马鞭向[npc2.name]而去，一边笑一边挠[npc2.her]的身体。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swipe)] [npc.her] riding crop at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.Name]用马鞭朝着[npc2.name]扫去，却没能命中！
 		]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] riding crop at [npc2.name], but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]挥舞马鞭向[npc2.name]而去，但是打偏了！
 		]]></missText>
 	</missDescriptions>
 	

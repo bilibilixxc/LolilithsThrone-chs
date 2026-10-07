@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[storage area]]></name>
-	<tooltipDescription><![CDATA[Hundreds of sex dolls are lined up beside one another in identical poses, and dozens of crates hold what must be thousands of sex toys.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the storage area in the factory beneath Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[仓库区]]></name>
+	<tooltipDescription><![CDATA[数以百计的性爱玩偶以相同的姿势一字排开，几十个板条箱里装着数以千计的性玩具。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店下面的工厂的仓库区]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>storage_dolls</svgName>
 	<colour>BASE_BLACK</colour>

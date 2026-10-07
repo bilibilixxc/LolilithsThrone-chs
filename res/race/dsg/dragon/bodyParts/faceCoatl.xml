@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <face>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_dragon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[coatl]]></transformationName>
+	<transformationName><![CDATA[羽蛇]]></transformationName>
 	
 	<!-- The id of the material covering this face.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -44,21 +44,21 @@
 	<!-- The descriptors which should be drawn upon when describing a masculine character's face of this type.
 	Can be left blank. -->
 	<descriptorsMasculine>
-		<descriptor>anthropomorphic coatl-like</descriptor>
-		<descriptor>coatl-like</descriptor>
-		<descriptor>draconic</descriptor>
+		<descriptor><![CDATA[羽蛇般拟人]]></descriptor>
+		<descriptor><![CDATA[羽蛇般]]></descriptor>
+		<descriptor><![CDATA[龙]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor>anthropomorphic coatl-like</descriptor>
-		<descriptor>coatl-like</descriptor>
-		<descriptor>draconic</descriptor>
+		<descriptor><![CDATA[羽蛇般拟人]]></descriptor>
+		<descriptor><![CDATA[羽蛇般]]></descriptor>
+		<descriptor><![CDATA[龙]]></descriptor>
 	</descriptorsFeminine>
 	
 	
 	<!-- The singular and plural names of the nose associated with this face type.
 	For most faces, it will be 'nose' and 'noses'. -->
-	<noseName><![CDATA[nose]]></noseName>
+	<noseName><![CDATA[吻]]></noseName>
 	<noseNamePlural><![CDATA[noses]]></noseNamePlural>
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's nose of this type.
@@ -73,20 +73,20 @@
 	
 	<!-- The description which is shown when a character transforms to obtain this face type.
 	This description immediately follows a brief description of the face type beginning to transform. -->
-	<transformationDescription><![CDATA[
-		[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic coatl-like muzzle, and [npc.her] tongue tapers to fit, turning into a similarly animalistic one. The sides of [npc.her] head suddenly feel itchy as two plumes of colorful feathers sprout outwards.
-		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face, 
-		#ELSE
-			 Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+], 
-		#ENDIF
-		and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.
-		<br/>[npc.Name] now [npc.has] an anthropomorphic [style.boldDragon(dragon-like face)], [npc.materialDescriptor] [npc.faceFullDescription]. Within [npc.her] [npc.mouth], [npc.she] [npc.has] a [style.boldDragon(long, dragon-like tongue)].
-	]]></transformationDescription>
+	<transformationDescription><![CDATA[	
+[npc.Her]的鼻子和嘴微微抽动，随后便转化为了似人的羽蛇吻部，舌头也变得细长，与动物类似。[npc.her]头部两侧突然感觉痒痒的，两片五颜六色的羽毛向外冒出。
+	#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
+		一层[npc.faceSkin+]细毛迅速长出并覆盖了她的新脸，
+	#ELSE
+		就像她身体的其它部位一样，她的新脸[npc.materialDescriptor][npc.faceSkin+]，
+	#ENDIF
+	当转化彻底完成时，[npc.sheIs]试图喘口气，却发出了娇喘和呻吟。
+	<br/>[npc.Name]现在拥有一张似人的[style.boldDragon(龙脸)]，[npc.materialDescriptor][npc.faceFullDescription]。在[npc.her]嘴中有一根[style.boldDragon(长的龙舌)]。
+]]></transformationDescription>
 	
 	<!-- How this face is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, dragon-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] flanked by two plumes of feathers and complete with a blunt muzzle.
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的龙面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，两侧有两片羽毛，且有钝形的吻部。
 	]]></bodyDescription>
 	
 	<!-- Feral variant of the above. -->

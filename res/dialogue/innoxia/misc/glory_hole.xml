@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- To be used only for accessing the responses -->
@@ -13,38 +13,38 @@
 				<availabilityConditional><![CDATA[[#pc.isTaur()]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Glory hole (use)]]></responseTitle>
-				<responseTooltip><![CDATA[Due to the shape of your [pc.legRace]'s body, you cannot get into a suitable position for using the glory hole...]]></responseTooltip>
+				<responseTitle><![CDATA[寻欢洞(使用)]]></responseTitle>
+				<responseTooltip><![CDATA[由于你[pc.legRace]的身体形态，无法找到一个能够使用寻欢洞的合适位置……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#!pc.isTaur() && ((!pc.hasPenis() || !pc.isAbleToAccessCoverableArea(CA_PENIS, true)) && (!pc.hasVagina() || !pc.isAbleToAccessCoverableArea(CA_VAGINA, true)))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Glory hole (use)]]></responseTitle>
-				<responseTooltip><![CDATA[You can't get access to your genitals, so can't get serviced at a glory hole...]]></responseTooltip>
+				<responseTitle><![CDATA[寻欢洞(使用)]]></responseTitle>
+				<responseTooltip><![CDATA[你无法接触到下体，所以不能在寻欢洞接受服务……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 			<response>
 				<availabilityConditional><![CDATA[[#!pc.isTaur() && ((pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true)) || (pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true)))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Glory hole (use)]]></responseTitle>
-				<responseTooltip><![CDATA[Enter a stall which has a glory hole in it and wait for someone on the other side to service you...]]></responseTooltip>
+				<responseTitle><![CDATA[寻欢洞(使用)]]></responseTitle>
+				<responseTooltip><![CDATA[你进入了一个有寻欢洞的隔间，等待另一边有人来为你服务……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_misc_glory_hole_dom_start]]></nextDialogue>
 				<effects><![CDATA[
-					[#game.spawnSubGloryHoleNPC('stranger', 'glory')]
+					[#game.spawnSubGloryHoleNPC('陌生人', 'glory')]
 				]]></effects>
 			</response>
 			<!-- Servicing glory hole -->
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Glory hole (service)]]></responseTitle>
-				<responseTooltip><![CDATA[Enter a stall which has a glory hole in it and wait to service someone on the other side...]]></responseTooltip>
+				<responseTitle><![CDATA[寻欢洞(服务)]]></responseTitle>
+				<responseTooltip><![CDATA[你进入了一个带有寻欢洞的隔间，等待着为另一边的人提供服务……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_misc_glory_hole_sub_start]]></nextDialogue>
 				<effects><![CDATA[
-					[#game.spawnDomGloryHoleNPC('stranger', 'glory')]
+					[#game.spawnDomGloryHoleNPC('陌生人', 'glory')]
 					[#npc.setAreaKnownByCharacter(CA_PENIS, pc, true)]
 				]]></effects>
 			</response>
@@ -52,12 +52,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Glory hole (double service)]]></responseTitle>
-				<responseTooltip><![CDATA[Enter a stall which has a glory hole in both sides of it and wait to service two people at once...]]></responseTooltip>
+				<responseTitle><![CDATA[寻欢洞(双人服务)]]></responseTitle>
+				<responseTooltip><![CDATA[你进入了一个两边都有寻欢洞的隔间，等待着同时为两个人提供服务……]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_misc_glory_hole_sub_threesome_start]]></nextDialogue>
 				<effects><![CDATA[
-					[#game.spawnDomGloryHoleNPC('stranger', 'glory')]
-					[#game.spawnDomGloryHoleNPC('stranger', 'glory2')]
+					[#game.spawnDomGloryHoleNPC('陌生人', 'glory')]
+					[#game.spawnDomGloryHoleNPC('陌生人', 'glory2')]
 					[#glory.setAreaKnownByCharacter(CA_PENIS, pc, true)]
 					[#glory2.setAreaKnownByCharacter(CA_PENIS, pc, true)]
 				]]></effects>
@@ -74,8 +74,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[On second thoughts, you don't really want some stranger having fun with your private parts...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你重新思考了一下，发现自己并不想让某个陌生人用你的私密部位来寻欢……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -86,8 +86,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Start]]></responseTitle>
-				<responseTooltip><![CDATA[Do as [npc.name] says and [pc.step] up to the glory hole.]]></responseTooltip>
+				<responseTitle><![CDATA[开始]]></responseTitle>
+				<responseTooltip><![CDATA[听从[npc.Name]的命令，[pc.step]上前靠近寻欢洞。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_misc_glory_hole_dom]]></id>
@@ -117,8 +117,8 @@
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/misc/glory_hole', 'TOILETS_GLORY_HOLE_DOM_POST_SEX'))]
 			[#game.banishNPC(glory)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The stranger quickly exits their stall and heads out of the toilets, leaving you to do the same...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[陌生人迅速退出了隔间，向着厕所外走去，你也该离开了……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -127,8 +127,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] out of the stall.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.step]出隔间。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 			</response>
@@ -144,8 +144,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[On second thoughts, you don't really want to suck the cock of some random stranger...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你重新思考了一下，发现自己并不想吸随便哪个陌生人的鸡巴……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -156,8 +156,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Start]]></responseTitle>
-				<responseTooltip><![CDATA[Do as [npc.name] says and get ready to service [npc.her] glory hole.]]></responseTooltip>
+				<responseTitle><![CDATA[开始]]></responseTitle>
+				<responseTooltip><![CDATA[听从[npc.Name]的命令，准备好对[npc.her]的寻欢洞服务。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_misc_glory_hole_sub]]></id>
@@ -187,8 +187,8 @@
 			[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/misc/glory_hole', 'TOILETS_GLORY_HOLE_SUB_POST_SEX'))]
 			[#game.banishNPC(glory)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The stranger quickly exits their stall and heads out of the toilets, leaving you to do the same...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[陌生人迅速退出了隔间，向着厕所外走去，你也该离开了……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -197,8 +197,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] out of the stall.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.step]出隔间。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 			</response>
@@ -214,8 +214,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[On second thoughts, you don't really want to suck the cock of a couple of random strangers...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[你重新思考了一下，发现自己并不想吸随便出现的两个陌生人的鸡巴……]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -227,8 +227,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Start]]></responseTitle>
-				<responseTooltip><![CDATA[Do as these strangers say and get ready to service their glory holes.]]></responseTooltip>
+				<responseTitle><![CDATA[开始]]></responseTitle>
+				<responseTooltip><![CDATA[听从那两人的命令，准备好对他们的寻欢洞服务。]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_misc_glory_hole_threesome_sub]]></id>
@@ -263,8 +263,8 @@
 			[#game.banishNPC(glory)]
 			[#game.banishNPC(glory2)]
 		]]></preParsingEffects>
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[The strangers quickly exit their stalls and head out of the toilets, leaving you to do the same...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[陌生人迅速退出了隔间，向着厕所外走去，你也该离开了……]]></tooltip>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -273,8 +273,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Step] out of the stall.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.step]出隔间。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 			</response>

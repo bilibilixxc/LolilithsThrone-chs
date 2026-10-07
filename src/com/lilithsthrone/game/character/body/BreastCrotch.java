@@ -97,7 +97,7 @@ public class BreastCrotch implements BodyPartInterface {
 			if(!isCharacterInitialised(owner)) {
 				return "";
 			}
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already has "+shape.getDescriptor()+" [npc.crotchBoobs], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有"+shape.getDescriptor()+"[npc.crotchBoobs]了，所以无事发生……)]</p>");
 		}
 		
 		this.shape = shape;
@@ -111,14 +111,14 @@ public class BreastCrotch implements BodyPartInterface {
 		if(!owner.hasBreastsCrotch()) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A strange tingling feeling rises up into [npc.namePos] crotch, but as [npc.she] [npc.do]n't have any udders, nothing seems to happen...<br/>"
-						+ "If [npc.she] ever [npc.verb(grow)] any, [npc.name] will now have [style.boldSex("+shape.getDescriptor()+" udders)]!"
+						+ "一种奇怪的刺痛感在[npc.namePos]的胯部弥漫，但是[npc.she][npc.do]没有腹乳，什么事也没有发生……<br/>"
+						+ "如果[npc.she]曾长过腹乳，那[npc.name]现在会有[style.boldSex("+shape.getDescriptor()+"腹乳)]！"
 					+ "</p>");
 		}
 		return UtilText.parse(owner,
 				"<p>"
-					+ "A strange tingling feeling rises up into [npc.namePos] crotch, and before [npc.she] [npc.verb(know)] what's happening, [npc.her] [npc.crotchBoobs] transform into a new shape...<br/>"
-					+ "[npc.Name] now [npc.has] [style.boldSex("+shape.getDescriptor()+" [npc.crotchBoobs])]!"
+					+ "一种奇怪的刺痛感涌上[npc.namePos]的胯部，在[npc.she]还没来得及搞清发生了什么时，[npc.her]的[npc.crotchBoobs]已经转变成了新的模样……<br/>"
+					+ "[npc.Name]现在拥有了[style.boldSex("+shape.getDescriptor()+"[npc.crotchBoobs])]！"
 				+ "</p>");
 	}
 
@@ -150,7 +150,7 @@ public class BreastCrotch implements BodyPartInterface {
 	@Override
 	public String getNameSingular(GameCharacter gc) {
 		if(getShape()==BreastShape.UDDERS) {
-			return "udder";
+			return "腹乳";
 		}
 		return type.getCrotchNameSingular(gc);
 	}
@@ -158,7 +158,7 @@ public class BreastCrotch implements BodyPartInterface {
 	@Override
 	public String getNamePlural(GameCharacter gc) {
 		if(getShape()==BreastShape.UDDERS) {
-			return "udders";
+			return "腹乳";
 		}
 		return type.getCrotchNamePlural(gc);
 	}
@@ -167,11 +167,11 @@ public class BreastCrotch implements BodyPartInterface {
 		List<String> list = new ArrayList<>();
 		
 		if(nippleCountPerBreast == 4) {
-			list.add("quad-nippled");
+			list.add("四乳头");
 		} else if(nippleCountPerBreast == 3) {
-			list.add("tri-nippled");
+			list.add("三乳头");
 		} else if(nippleCountPerBreast == 2) {
-			list.add("dual-nippled");
+			list.add("双乳头");
 		} 
 		
 		list.add(type.getDescriptor(owner));
@@ -206,15 +206,15 @@ public class BreastCrotch implements BodyPartInterface {
 		}
 		
 		if(type==BreastType.NONE && owner.getIncubationLitter(SexAreaOrifice.NIPPLE_CROTCH)!=null) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>Due to the fact that [npc.nameIsFull] incubating eggs in [npc.her] [npc.crotchBoobs],"
-					+ " [style.colourMinorBad("+(getShape()==BreastShape.UDDERS && this.getRows()==0?"it":"they")+" cannot be removed)]!</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>由于[npc.nameIsFull]的[npc.crotchBoobs]正在孵卵，"
+					+ "[style.colourMinorBad("+(getShape()==BreastShape.UDDERS && this.getRows()==0?"":"")+"无法移除)]！</p>");
 		}
 		
 		if (type == getType()) {
 			if(type.equals(BreastType.NONE)) {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.verb(lack)] [npc.crotchBoobs], so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经没有[npc.crotchBoobs]了，所以无事发生……)]</p>");
 			}
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.crotchBoobs] of [npc.a_breastRace], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_breastRace]的[npc.crotchBoobs]了，所以无事发生……)]</p>");
 		}
 		
 		StringBuilder sb = new StringBuilder();
@@ -222,26 +222,26 @@ public class BreastCrotch implements BodyPartInterface {
 		if(type.equals(BreastType.NONE)) { // Removal:
 			sb.append(
 					"<p>"
-						+ "The area above [npc.namePos] crotch suddenly feels extremely soft and sensitive, and [npc.she] can't help but let out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a transformation start to take place."
-						+" [npc.Her] [npc.crotchBoobs] tingle and soften, and, with [npc.her] nipples and areolae leading the way, they quickly shrink down and disappear back into the [npc.skin] covering [npc.her] lower stomach."
+						+ "当[npc.namePos]感觉到身体开始发生变化时，突然觉得[npc.she]胯部往上的部位异常柔软且敏感，令[npc.she]情不自禁地发出[npc.a_moan+]。"
+						+"[npc.her][npc.crotchBoobs]处传来刺痛感且变得软化，乳头和乳晕首先产生转变，整个[npc.crotchBoobs]迅速缩小并消失在覆盖下腹部的[npc.skin]中。"
 						+ "<br/>");
 			
 		} else if(this.getType().equals(BreastType.NONE)) { // New addition:
 			sb.append(
 					"<p>"
-						+ "The area above [npc.namePos] crotch suddenly feels extremely soft and sensitive, and [npc.she] can't help but let out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a transformation start to take place."
-						+ " [npc.CrotchBoobsRows] hard little nubs start to grow out of the [npc.skin] covering [npc.her] lower stomach,"
-							+ " and [npc.she] can't help but let out a surprised gasp as they quickly swell out into [npc.crotchBoobsSize] [npc.crotchBoobs]."
+						+ "当[npc.namePos]感觉到身体开始发生变化时，突然觉得[npc.she]胯部往上的部位异常柔软且敏感，令[npc.she]情不自禁地发出[npc.a_moan+]。"
+						+ "在[npc.her]下腹部的[npc.skin]上，[npc.CrotchBoobsRows]开始长出坚硬的小疙瘩，"
+							+ "当它们迅速膨胀成[npc.crotchBoobsSize][npc.crotchBoobs]时，[npc.she]难以自抑地发出一声惊叹。"
 						+ "<br/>");
 			
 			
 		} else {
 			sb.append(
 					"<p>"
-						+ "The area above [npc.namePos] crotch suddenly feels extremely soft and sensitive, and [npc.she] can't help but let out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a transformation start to take place."
-						+" The nipples and areolae on [npc.her] [npc.crotchBoobs] tingle and harden, causing [npc.herHim] to pant and let out a lewd [npc.moan] as the intense transformation runs its course."
-						+ " While there's no change to their outwards appearance, [npc.she] [npc.verb(feel)] the interior structure of [npc.her] [npc.crotchBoobs] shifting and changing into a new form."
-						+ " After just a moment, the transformation ends, leaving [npc.herHim] with [npc.totalNipples] new nipples."
+						+ "当[npc.namePos]感觉到身体开始发生变化时，突然觉得[npc.she]胯部往上的部位异常柔软且敏感，令[npc.she]情不自禁地发出[npc.a_moan+]。"
+						+"[npc.her][npc.crotchBoobs]的乳头和乳晕感到刺痛并逐渐变硬，使得[npc.herHim]不断地喘息并发出淫荡的[npc.moan]。"
+						+ "虽然外貌没有变化，但[npc.she]感觉到[npc.her][npc.crotchBoobs]的内部结构发生了变化，变成了新的形态。"
+						+ "不一会，这种转化就结束了，留给[npc.herHim][npc.totalNipples]颗焕然一新的乳头。"
 						+ "<br/>");
 		}
 		
@@ -292,27 +292,27 @@ public class BreastCrotch implements BodyPartInterface {
 
 		if(!isAbleToIncubateEggs() && owner.getIncubationLitter(SexAreaOrifice.NIPPLE_CROTCH)!=null) {
 			this.size = CupSize.getMinimumCupSizeForEggIncubation().getMeasurement();
-			return UtilText.parse(owner, "<p style='text-align:center;'>Due to the fact that [npc.namePos] [npc.crotchBoobs] are incubating eggs,"
-					+ " [style.colourMinorBad("+(getShape()==BreastShape.UDDERS && this.getRows()==0?"its":"their")+" size cannot be reduced past "+CupSize.getMinimumCupSizeForEggIncubation().getCupSizeName()+"-cups)]!</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>由于[npc.namePos][npc.crotchBoobs]正在孵卵，"
+					+ "[style.colourMinorBad("+(getShape()==BreastShape.UDDERS && this.getRows()==0?"它":"它")+"无法缩小至"+CupSize.getMinimumCupSizeForEggIncubation().getCupSizeName()+"罩杯)]！</p>");
 		}
 
 		if (sizeChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] [npc.crotchBoobs] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]的[npc.crotchBoobs]尺寸没有变化……)]</p>");
 		}
 		
 		if (sizeChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] a tingling heat quickly spreading throughout [npc.her] lower torso, and [npc.she] can't help but let out [npc.a_moan+] as [npc.her] [npc.crotchBoobs] swell up and [style.boldGrow(grow larger)].<br/>"
-						+ "[npc.Name] now [npc.has] [style.boldSex([npc.crotchBoobsSize] [npc.crotchBoobs])]!"
+						+ "[npc.Name]感觉到一阵酥麻的热感迅速席卷了[npc.her]的下半躯干，在[npc.she]难以自抑地发出一声[npc.a_moan+]的同时，[npc.her]的[npc.crotchBoobs]膨胀着[style.boldGrow(变得更大了)]。<br/>"
+						+ "[npc.Name]现在拥有了[style.boldSex([npc.crotchBoobsSize][npc.crotchBoobs])]！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] a tingling heat quickly spreading throughout [npc.her] lower torso,"
-							+ " and [npc.she] can't help but let out a frustrated [npc.moan] as [npc.her] [npc.crotchBoobs] shrink down and [style.boldShrink(get smaller)].<br/>"
-						+ "[npc.Name] now [npc.has] [style.boldSex([npc.crotchBoobsSize] [npc.crotchBoobs])]!"
+						+ "[npc.Name]感觉到一阵酥麻的热感迅速席卷了[npc.her]的下半躯干，"
+							+ "令[npc.she]不禁发出一声苦闷的[npc.moan]，同时[npc.her]的[npc.crotchBoobs]也收缩着，[style.boldShrink(变得更小)]。<br/>"
+						+ "[npc.Name]现在拥有了[style.boldSex([npc.crotchBoobsSize][npc.crotchBoobs])]！"
 					+ "</p>");
 		}
 	}
@@ -339,24 +339,24 @@ public class BreastCrotch implements BodyPartInterface {
 		}
 		
 		if (lactationChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The amount of [npc.crotchMilk] that [npc.nameIsFull] able to produce doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.nameIsFull]所能产生的[npc.crotchMilk]总量没有变化……)]</p>");
 		}
 		
 		String lactationDescriptor = getMilkStorage().getDescriptor();
 		if (lactationChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] a strange bubbling and churning taking place deep within [npc.her] [npc.crotchBoobs], and [npc.a_moan+] drifts out from between [npc.her] [npc.lips] as a few drops of [npc.crotchMilk] suddenly leak"
-							+ " from [npc.her] [npc.crotchNipples]; clear evidence that [npc.her] [npc.crotchMilk] production has [style.boldGrow(increased)].<br/>"
-						+ "[npc.NameIsFull] now able to produce [style.boldSex(" + lactationDescriptor + " [npc.crotchMilk])]!"
+						+ "[npc.Name]感觉到[npc.her]的[npc.crotchBoobs]深处有种奇怪的感觉在沸腾并翻滚，[npc.a_moan+]从[npc.her][npc.lips]之间飘出，同时几滴[npc.crotchMilk]从"
+							+ "[npc.her]的[npc.crotchNipples]漏下；显然[npc.her]的[npc.crotchMilk]产量[style.boldGrow(增加)]了。<br/>"
+						+ "[npc.NameIsFull]现在可以生产[style.boldSex(" + lactationDescriptor + "[npc.crotchMilk])]了！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] a strange sucking sensation deep within [npc.her] [npc.crotchBoobs],"
-							+ " and a frustrated sigh drifts out from between [npc.her] [npc.lips] as [npc.she] [npc.verb(realise)] that [npc.sheIs] feeling [npc.her] [npc.crotchMilk] production [style.boldShrink(drying up)].<br/>"
-						+ "[npc.NameIsFull] now able to produce [style.boldSex(" + lactationDescriptor + " [npc.crotchMilk])]."
+						+ "[npc.Name]感觉到[npc.her]的[npc.crotchBoobs]深处有一种奇怪的吮吸感，"
+							+ "一声苦闷的叹息从[npc.her][npc.lips]间飘出，同时[npc.she]意识到这正是[npc.her][npc.crotchMilk]产量[style.boldShrink(枯竭)]的感觉。<br/>"
+						+ "[npc.NameIsFull]现在可以生产[style.boldSex(" + lactationDescriptor + "[npc.crotchMilk])]了。"
 					+ "</p>");
 			
 		}
@@ -390,13 +390,13 @@ public class BreastCrotch implements BodyPartInterface {
 			return UtilText.parse(owner,
 					"<p style='text-align:center;'><i style='color:"+PresetColour.BASE_YELLOW_LIGHT.toWebHexString()+";'>"
 							+ UtilText.returnStringAtRandom(
-									Units.fluid(lactationChange, Units.UnitType.LONG)+" of [npc.namePos] [npc.crotchMilk] squirts out of [npc.her] [npc.crotchNipples+].",
-									Units.fluid(lactationChange, Units.UnitType.LONG)+" of [npc.crotchMilk+] squirts out of [npc.namePos] [npc.crotchNipples+].",
-									Units.fluid(lactationChange, Units.UnitType.LONG)+" of [npc.namePos] [npc.crotchMilk] leaks out of [npc.her] [npc.crotchNipples+].",
-									Units.fluid(lactationChange, Units.UnitType.LONG)+" of [npc.crotchMilk+] leaks out of [npc.namePos] [npc.crotchNipples+].")
+									Units.fluid(lactationChange, Units.UnitType.LONG)+"[npc.namePos][npc.crotchMilk]从[npc.her][npc.crotchNipples+]中挤出。",
+									Units.fluid(lactationChange, Units.UnitType.LONG)+"的[npc.crotchMilk+]从[npc.namePos][npc.crotchNipples+]中挤出。",
+									Units.fluid(lactationChange, Units.UnitType.LONG)+"[npc.namePos][npc.crotchMilk]从[npc.her][npc.crotchNipples+]中漏出。",
+									Units.fluid(lactationChange, Units.UnitType.LONG)+"的[npc.crotchMilk+]从[npc.namePos][npc.crotchNipples+]中漏出。")
 					+ "</i>"
 					+ (this.milkStored==0
-						?"<br/><i>[npc.Name] now [npc.has] no more [npc.crotchMilk] stored in [npc.her] [npc.crotchBoobs]!</i>"
+						?"<br/><i>[npc.Name]的[npc.crotchBoobs]中已经没有更多的[npc.crotchMilk]存量了！</i>"
 						:"")
 					+ "</p>");
 		}
@@ -425,24 +425,24 @@ public class BreastCrotch implements BodyPartInterface {
 		}
 		
 		if (regenerationChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos] rate of [npc.crotchMilk] regeneration doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.crotchMilk]再生速率没有变化……)]</p>");
 		}
 		
 		String regenerationDescriptor = getLactationRegeneration().getName();
 		if (regenerationChange > 0) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] an alarming bubbling and churning taking place deep within [npc.her] [npc.crotchBoobs], and [npc.a_moan+] drifts out from between [npc.her] [npc.lips] as a few drops of [npc.crotchMilk] suddenly leak"
-							+ " from [npc.her] [npc.crotchNipples]; clear evidence that [npc.her] [npc.crotchMilk] regeneration has [style.boldGrow(increased)].<br/>"
-						+ "[npc.NamePos] rate of [npc.crotchMilk] regeneration is now [style.boldSex(" + regenerationDescriptor + ")] ("+Units.fluid(milkRegeneration)+"/day)!"
+						+ "[npc.Name]感觉到[npc.her]的[npc.crotchBoobs]深处有种惊人的感觉在沸腾并翻滚，[npc.a_moan+]从[npc.her][npc.lips]之间飘出，同时几滴[npc.crotchMilk]从"
+							+ "[npc.her]的[npc.crotchNipples]漏下；显然[npc.her]的[npc.crotchMilk]再生速率[style.boldGrow(增加)]了。<br/>"
+						+ "[npc.NamePos][npc.crotchMilk]再生速率现在是[style.boldSex(" + regenerationDescriptor + ")]("+Units.fluid(milkRegeneration)+"/日)！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(feel)] a strange sucking sensation deep within [npc.her] [npc.crotchBoobs],"
-							+ " and a frustrated sigh drifts out from between [npc.her] [npc.lips] as [npc.she] realises that [npc.sheIs] feeling [npc.her] [npc.crotchMilk] regeneration [style.boldShrink(decreasing)].<br/>"
-						+ "[npc.NamePos] rate of [npc.crotchMilk] regeneration is now [style.boldSex(" + regenerationDescriptor + ")] ("+Units.fluid(milkRegeneration)+"/day)!"
+						+ "[npc.Name]感觉到[npc.her]的[npc.crotchBoobs]深处有一种奇怪的吮吸感，"
+							+ "一声苦闷的叹息从[npc.her][npc.lips]间飘出，同时[npc.she]意识到这正是[npc.her]的[npc.crotchMilk]再生速率[style.boldShrink(减少)]的感觉。<br/>"
+						+ "[npc.NamePos][npc.crotchMilk]再生速率现在是[style.boldSex(" + regenerationDescriptor + ")]("+Units.fluid(milkRegeneration)+"/日)！"
 					+ "</p>");
 		}
 	}
@@ -472,7 +472,7 @@ public class BreastCrotch implements BodyPartInterface {
 		}
 		
 		if(rows == getRows()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The number of breast rows [npc.name] has doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.name]的胸部排数没有变化……)]</p>");
 		}
 		
 		StringBuilder sb = new StringBuilder();
@@ -481,49 +481,49 @@ public class BreastCrotch implements BodyPartInterface {
 		
 		if (rows < getRows()) {
 			sb.append("<p>"
-							+ "[npc.Name] [npc.verb(let)] out a worried gasp as [npc.she] [npc.verb(feel)] a strange tightening sensation just above [npc.her] groin, and before [npc.sheHasFull] time to react, [npc.her] ");
+							+ "[npc.Name]担心地向下瞄去，[npc.she]的腹股沟升起了一股奇怪的紧绷感，然后在[npc.she]还没有完全反应过来之前，");
 			
 			if(this.getShape()==BreastShape.UDDERS) {
 				sb.append((rowsDifference==1
-						?"highest pair of [npc.crotchNipples]"
-						:"highest "+Util.intToString(rowsDifference)+" pairs of [npc.crotchNipples]"));
-				sb.append(" rapidly shrink away and [style.boldShrink(disappear)] into [npc.her] udders.<br/>");
+						?"最顶上的那对[npc.crotchNipples]"
+						:"最顶上的"+Util.intToString(rowsDifference)+"那对[npc.crotchNipples]"));
+				sb.append("迅速地缩进[npc.her]腹乳之下，然后[style.boldShrink(消失)]了。<br/>");
 			} else {
 				sb.append((rowsDifference==1
-						?"highest pair of [npc.crotchBoobs]"
-						:"highest "+Util.intToString(rowsDifference)+" pairs of [npc.crotchBoobs]"));
-				sb.append(" rapidly shrink away and [style.boldShrink(disappear)] into the [npc.skin] of [npc.her] stomach.<br/>");
+						?"最顶上的那对[npc.crotchBoobs]"
+						:"最顶上的"+Util.intToString(rowsDifference)+"那对[npc.crotchBoobs]"));
+				sb.append("迅速地缩进[npc.her]腹部的[npc.skin]之下，然后[style.boldShrink(消失)]了。<br/>");
 			}
 			
 			
 			
 		} else if (rows > getRows()) {
 			sb.append("<p>"
-						+ "[npc.Name] [npc.verb(let)] out a surprised gasp as [npc.she] [npc.verb(feel)] a strange swelling sensation just above [npc.her] groin, and before [npc.sheHasFull] time to react, ");
+						+ "[npc.Name]的腹股沟升起了一股奇怪的肿胀感，[npc.she]惊讶地倒吸了口气，然后在[npc.she]还没有完全反应过来之前，");
 			
 			if(this.getShape()==BreastShape.UDDERS) {
 				sb.append((rowsDifference==1
-						?"an extra pair of [npc.crotchNipples]"
-						:Util.intToString(rowsDifference)+" extra pairs of [npc.crotchNipples]"));
-				sb.append(" rapidly [style.boldGrow(grow)] out at the top [npc.her] udders.<br/>");
+						?"一对额外的[npc.crotchNipples]"
+						:Util.intToString(rowsDifference)+"额外的一对[npc.crotchNipples]"));
+				sb.append("从[npc.her]腹乳的上方快速地[style.boldGrow(生长)]出来。<br/>");
 			} else {
 				sb.append((rowsDifference==1
-						?"an extra pair of [npc.crotchBoobs]"
-						:"extra pairs of [npc.crotchBoobs]"));
-				sb.append(" rapidly [style.boldGrow(grow)] out of the [npc.skin] of [npc.her] stomach.<br/>");
+						?"一对额外的[npc.crotchBoobs]"
+						:"额外的一对[npc.crotchBoobs]"));
+				sb.append("从[npc.her]腹部的[npc.skin]下快速地[style.boldGrow(生长)]出来。<br/>");
 			}
 		}
 
 		if(this.getShape()==BreastShape.UDDERS) {
 			if(rows==0) {
-				sb.append("[npc.Name] now [npc.has] [style.boldSex(a single udder)]!" 
+				sb.append("[npc.Name]现在拥有了[style.boldSex(一对腹乳)]！" 
 						+ "</p>");
 			} else {
-				sb.append("[npc.Name] now [npc.has] [style.boldSex("+ Util.intToString(rows) + " pair"+(rows > 1 ? "s" : "")+" of udders)]!" 
+				sb.append("[npc.Name]现在拥有[style.boldSex("+ Util.intToString(rows) + "对腹乳)]！" 
 						+ "</p>");
 			}
 		} else {
-			sb.append("[npc.Name] now [npc.has] [style.boldSex("+ Util.intToString(rows) + " pair"+ (rows > 1 ? "s" : "") + " of [npc.crotchBoobs])]!" 
+			sb.append("[npc.Name]现在拥有[style.boldSex("+ Util.intToString(rows) + "对"+ "[npc.crotchBoobs])]！" 
 					+ "</p>");
 		}
 
@@ -563,7 +563,7 @@ public class BreastCrotch implements BodyPartInterface {
 		}
 		
 		if (this.nippleCountPerBreast == nippleCountPerBreast) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The number of [npc.crotchNipples] [npc.nameHasFull] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.nameHasFull]的[npc.crotchNipples]数量没有变化……)]</p>");
 		}
 		
 		String transformation = "";
@@ -571,20 +571,20 @@ public class BreastCrotch implements BodyPartInterface {
 		if (nippleCountPerBreast < getNippleCountPerBreast()) {
 				transformation = UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(feel)] a strange tingling sensation running just beneath the surface of the [npc.breastCrotchSkin] that covers [npc.her] [npc.crotchBoobs]."
-							+ " A shocked gasp bursts from [npc.her] mouth as the force shoots up into [npc.her] [npc.crotchNipples],"
-								+ " and [npc.she] [npc.verb(continue)] [npc.moaning] as some of them [style.boldShrink(shrink)] into the flesh of [npc.her] [npc.crotchBoobs].<br/>"
-							+ "[npc.Name] now [npc.has] [style.boldSex("+ Util.intToString(nippleCountPerBreast) + " "+ (nippleCountPerBreast > 1 ? "[npc.crotchNipples]" : "[npc.crotchNipple]") + " on each of [npc.her] [npc.crotchBoobs])]!" 
+							+ "[npc.Name]感觉到在覆盖着[npc.her][npc.crotchBoobs]的[npc.breastCrotchSkin]表面下传来一阵奇异的麻刺感。"
+							+ "当那股力量从[npc.her]的[npc.crotchNipples]中突然冒出，[npc.her]口中发出一声震惊的吸气声，"
+								+ "[npc.she]接着[npc.moaning]，与此同时那些[npc.crotchBoobs][style.boldShrink(收缩)]进入了[npc.her]的[npc.breasts]之中。<br/>"
+							+ "[npc.Name]现在拥有[style.boldSex("+ Util.intToString(nippleCountPerBreast) + (nippleCountPerBreast > 1 ? "[npc.crotchNipples]" : "[npc.crotchNipple]") + "在[npc.her]每对[npc.crotchBoobs]的上)]！" 
 						+ "</p>");
 			
 			
 		} else if (nippleCountPerBreast > getNippleCountPerBreast()) {
 				transformation = UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(feel)] a strange tingling sensation running just beneath the surface of the [npc.breastCrotchSkin] that covers [npc.her] [npc.crotchBoobs]."
-							+ " A shocked gasp bursts from [npc.her] mouth as the force shoots up into [npc.her] [npc.crotchNipples],"
-								+ " and [npc.she] [npc.verb(continue)] [npc.moaning] as [npc.she] feels new ones [style.boldGrow(growing)] out of the flesh of [npc.her] [npc.crotchBoobs].<br/>"
-							+ "[npc.Name] now [npc.has] [style.boldSex("+ Util.intToString(nippleCountPerBreast) + " "+ (nippleCountPerBreast > 1 ? "[npc.crotchNipples]" : "[npc.crotchNipple]") + " on each of [npc.her] [npc.crotchBoobs])]!" 
+							+ "[npc.Name]感觉到在覆盖着[npc.her][npc.crotchBoobs]的[npc.breastCrotchSkin]表面下传来一阵奇异的麻刺感。"
+							+ "当那股力量从[npc.her]的[npc.crotchNipples]中突然冒出，[npc.her]口中发出一声震惊的吸气声，"
+								+ "[npc.she]接着[npc.moaning]，与此同时[npc.she]感觉到新的[npc.nipples]从[npc.crotchBoobs]上[style.boldGrow(生长)]出来。<br/>"
+							+ "[npc.Name]现在拥有[style.boldSex("+ Util.intToString(nippleCountPerBreast) + (nippleCountPerBreast > 1 ? "[npc.crotchNipples]" : "[npc.crotchNipple]") + "在[npc.her]每对[npc.crotchBoobs]的上)]！" 
 						+ "</p>");
 			
 		}

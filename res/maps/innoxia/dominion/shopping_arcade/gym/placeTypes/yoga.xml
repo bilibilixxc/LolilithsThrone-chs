@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[yoga studio]]></name>
-	<tooltipDescription><![CDATA[Partitioned off from the rest of the gym, this sound-proof studio offers a quiet place in which yoga classes are held.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the yoga studio at the gym, 'Pix's Playground']]></virginityLossDescription>
+	<name><![CDATA[瑜伽室]]></name>
+	<tooltipDescription><![CDATA[这个隔音房间与健身房的其他部分隔开，为瑜伽课程提供了一个安静的场所。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“皮克斯操练场”健身房的瑜伽室内]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREEN_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

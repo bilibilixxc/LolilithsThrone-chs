@@ -30,12 +30,12 @@ public class MissionaryDesk {
 		
 		@Override
 		public String getActionTitle() {
-			return "Spread legs";
+			return "张开双腿";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Spread your [npc.legs] wide open for [npc2.name].";
+			return "将你的[npc.legs]对着[npc2.name]大幅度张开。";
 		}
 		
 		@Override
@@ -70,31 +70,31 @@ public class MissionaryDesk {
 			if(vaginalSex) {
 				return UtilText.parse(Main.sex.getCharacterPerformingAction(), Main.sex.getTargetedPartner(Main.sex.getCharacterPerformingAction()),
 						UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(bite)] [npc.her] [npc.lip] and [npc.verb(let)] out [npc.moan+],"
-								+ " before [npc.spreadingHerLegs] in order to help sink [npc2.namePos] [npc2.cock+] deeper into [npc.her] [npc.pussy+].",
-						"[npc.Name] [npc.spreadsHerLegs] for [npc2.name], helping [npc2.herHim] to thrust [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+].",
-						"Pulling [npc.her] [npc.feet] back and to each side,"
-								+ " [npc.name] [npc.verb(help)] [npc2.name] to thrust [npc2.her] [npc2.cock+] deep into [npc.her] [npc.pussy+] by [npc.spreadingHerLegs].",
-						"[npc.Name] [npc.spreadsHerLegs], looking up at [npc2.name] and biting [npc.her] [npc.lip] as [npc2.she] [npc2.verb(continue)] fucking [npc.her] [npc.pussy+]."));
+						"[npc.Name]咬住[npc.her]的[npc.lip]并且发出[npc.moan+]，"
+								+ "准备[npc.spreadingHerLegs]来帮助[npc2.namePos]将[npc2.cock+]更深的插入[npc.her][npc.pussy+]。",
+						"[npc.Name]向[npc2.name][npc.spreadsHerLegs]，帮助[npc2.herHim]将[npc2.her][npc2.cock+]深深地推入[npc.her][npc.pussy+]。",
+						"收回[npc.her]的[npc.feet]，向两侧张开，"
+								+ "[npc.name]通过[npc.spreadingHerLegs]帮助[npc2.name]将[npc2.her][npc2.cock+]深深的插入[npc.her][npc.pussy+]。",
+						"[npc2.she]继续深入[npc.her][npc.pussy+]时，[npc.Name][npc.spreadsHerLegs]，看向[npc2.name]并咬住[npc.her]的[npc.lip]。"));
 			}
 			if(analSex) {
 				return UtilText.parse(Main.sex.getCharacterPerformingAction(), Main.sex.getTargetedPartner(Main.sex.getCharacterPerformingAction()),
 						UtilText.returnStringAtRandom(
-						"[npc.Name] [npc.verb(bite)] [npc.her] [npc.lip] and [npc.verb(let)] out [npc.moan+],"
-								+ " before raising [npc.her] [npc.ass+] and [npc.spreadingHerLegs] in order to help sink [npc2.namePos] [npc2.cock+] deeper into [npc.her] [npc.asshole+].",
-						"[npc.Name] [npc.spreadsHerLegs] and [npc.verb(raise)] [npc.her] [npc.ass+] for [npc2.name], helping [npc2.herHim] to thrust [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+].",
-						"Pulling [npc.her] [npc.feet] back and to each side,"
-								+ " [npc.name] [npc.verb(help)] [npc2.name] to thrust [npc2.her] [npc2.cock+] deep into [npc.her] [npc.asshole+] by raising [npc.her] [npc.ass] and [npc.spreadingHerLegs].",
-						"[npc.Name] [npc.spreadsHerLegs] and [npc.verb(raise)] [npc.her] [npc.ass+],"
-								+ " looking up at [npc2.name] and biting [npc.her] [npc.lip] as [npc2.she] [npc2.verb(continue)] fucking [npc.her] [npc.asshole+]."));
+						"[npc.Name]咬住[npc.her]的[npc.lip]并且发出[npc.moan+]，"
+								+ "准备抬起[npc.her][npc.ass+]并[npc.spreadingHerLegs]来帮助[npc2.namePos]将[npc2.cock+]更深的插入[npc.her][npc.asshole+]。",
+						"[npc.Name][npc.spreadsHerLegs]并抬起[npc.ass+]对向[npc2.name]，帮助[npc2.herHim]将[npc2.her][npc2.cock+]推进自己[npc.asshole+]。",
+						"收回[npc.her]的[npc.feet]，向两侧张开，"
+								+ "[npc.name]提高[npc.ass]并[npc.spreadingHerLegs]，以此帮助[npc2.name]将[npc2.her][npc2.cock+]深深的插入自己[npc.asshole+]。",
+						"[npc.Name][npc.spreadsHerLegs]并且抬高[npc.her][npc.ass+]，"
+								+ "看向[npc2.name]并咬住[npc.her]的[npc.lip]，[npc2.name]继续操干[npc.her][npc.asshole+]。"));
 			}
 			
 			return UtilText.parse(Main.sex.getCharacterPerformingAction(), Main.sex.getTargetedPartner(Main.sex.getCharacterPerformingAction()),
 					UtilText.returnStringAtRandom(
-					"Looking up at [npc2.name], [npc.name] [npc.verb(bite)] [npc.her] [npc.lip] and [npc.verb(let)] out [npc.moan+], before [npc.spreadingHerLegs] and submissively presenting [npc.herself], ready to be penetrated.",
-					"[npc.Name] [npc.spreadsHerLegs] for [npc2.name], presenting [npc.herself] in anticipation of being penetrated.",
-					"Pulling [npc.her] [npc.feet] back and to each side, [npc.name] [npc.spreadsHerLegs], enticing [npc2.name] to penetrate [npc.herHim].",
-					"[npc.Name] [npc.spreadsHerLegs], looking up at [npc2.name] and biting [npc.her] [npc.lip] as [npc.she] [npc.verb(entice)] [npc2.herHim] to penetrate [npc.herHim]."));
+					"抬头看向[npc2.name]，[npc.name]咬住[npc.her]的[npc.lip]并且发出[npc.moan+]，[npc.spreadingHerLegs]并且顺从的放低[npc.herself]，做好了被进入的准备。",
+					"[npc.Name]对着[npc2.name]的[npc.spreadsHerLegs]，将[npc.herself]作为接受一方呈现。",
+					"[npc.name]收回[npc.feet]，向两侧[npc.spreadsHerLegs]，诱使[npc2.name]插入其中。",
+					"[npc.Name][npc.spreadsHerLegs]，看向[npc2.name]并且咬住[npc.her]的[npc.lip]，因为[npc.she]在诱惑[npc2.herHim]来进入[npc.herHim]。"));
 		}
 	};
 	

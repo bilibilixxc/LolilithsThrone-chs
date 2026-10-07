@@ -1,50 +1,50 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <arm>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛]]></transformationName>
 	<coveringType>charisma_spider_chitinSmooth</coveringType>
 	<underarmHairAllowed>false</underarmHairAllowed>
 	<allowsFlight>false</allowsFlight>
 	<tags>
 		<tag>ARM_STANDARD</tag>
 	</tags>
-	<name><![CDATA[arm]]></name>
-	<namePlural><![CDATA[arms]]></namePlural> 
+	<name><![CDATA[手臂]]></name>
+	<namePlural><![CDATA[手臂]]></namePlural> 
 	<descriptorsMasculine>
-		<descriptor>smooth</descriptor>
-		<descriptor>hard</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[光滑]]></descriptor>
+		<descriptor><![CDATA[坚硬]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>smooth</descriptor>
-		<descriptor>hard</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[光滑]]></descriptor>
+		<descriptor><![CDATA[坚硬]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</descriptorsFeminine>
-	<handName><![CDATA[hand]]></handName>
-	<handNamePlural><![CDATA[hands]]></handNamePlural>
+	<handName><![CDATA[手]]></handName>
+	<handNamePlural><![CDATA[手]]></handNamePlural>
 	<handDescriptorsMasculine>
-		<descriptor>spider-like</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</handDescriptorsMasculine>
 	<handDescriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>spider-like</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[蜘蛛般]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</handDescriptorsFeminine>
-	<fingerName><![CDATA[finger]]></fingerName>
-	<fingerNamePlural><![CDATA[fingers]]></fingerNamePlural>
+	<fingerName><![CDATA[手指]]></fingerName>
+	<fingerNamePlural><![CDATA[手指]]></fingerNamePlural>
 	<fingerDescriptorsMasculine>
-		<descriptor>sharp</descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
 	</fingerDescriptorsMasculine>
 	<fingerDescriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>sharp</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
 	</fingerDescriptorsFeminine>
 	<transformationDescription><![CDATA[
-		Within a matter of moments, a layer of shiny chitin has quickly grown over them and, looking down, [npc.she] [npc.verb(see)] [npc.her] new chitin growing to encase [npc.her] hands. As they transform, the joints of [npc.her] fingers take on a segmented appearance, before tapering into sharp points at their tips. [npc.Her] elbows then alarmingly reshape themselves to be ball-jointed, and at [npc.her] shoulders, [npc.her] chitin finished growing so that it sharply transitions into the [npc.skin] that's covering the rest of [npc.her] body.
-		<br/>As the transformation comes to an end, [npc.nameIsFull] left with smooth, [style.boldSpider(spider-like arms and hands)], which are [npc.materialDescriptor] [npc.armFullDescription].
+		片刻之后，一层闪亮的几丁质长了出来并覆盖了它们，[npc.she]向下看去，看到几丁质层长了出来并将[npc.her]的手完全包裹住。[npc.her]的指关节在转化过程中呈现出一节节分段的外观，然后在指尖部分逐渐变得尖锐。[npc.Her]的肘部惊人地转化成了球关节，在[npc.her]的肩部，几丁质已经完成了生长，并且迅速过渡到覆盖[npc.her]身体其余部分的[npc.skin]上。
+		<br/>在转化的尾声，[npc.nameIsFull]留下了一对[style.boldSpider(蜘蛛般的手臂和手)]，[npc.materialDescriptor][npc.armFullDescription]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-	[npc.She] [npc.has] [npc.armRows] arms, which are [npc.materialCompositionDescriptor] [npc.armFullDescription(true)]. [npc.Her] hands have chitinous, joined fingers that taper into sharp points.
+	[npc.She]拥有[npc.armRows]蛛型肢体，[npc.materialCompositionDescriptor][npc.armFullDescription(true)]。手上长着分段且逐渐变尖的几丁质手指。
 	]]></bodyDescription>
 </arm>

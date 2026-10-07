@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<htmlContent tag="MOUSE_BASIC"><![CDATA[
 	<p>
-		Mouse-morphs are one of the more populous races within Lilith's Realm, and while they can be found almost anywhere, the vast majority of them make their home in the Foloi Fields. A spry, furry body, with a long, thin tail and a pair of rounded ears is usually enough to identify someone as a mouse-morph.
+		鼷鼠化形是莉莉丝王国中人口较多的种族之一，虽然他们在任何地方都能找到，但绝大多数都以弗洛伊田野为家。通常，拥有好动且毛茸茸的身体，一条又细又长的尾巴和一对圆圆的耳朵，就足以让人认出他们是鼷鼠化形。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="MOUSE_ADVANCED"><![CDATA[
 	<p>
-		Although they're treated much like any other morph within the cities throughout Lilith's Realm, within the Foloi Fields mouse-morphs have a particular reputation as being kind, honest, and hard-working. There are of course many exceptions to this rule, but it's more likely than not that a mouse-morph will choose to selflessly offer their help to those in need within their local community.
+		虽然在莉莉丝王国的各个城市中，他们的待遇与化形无异，但在弗洛伊田野，鼷鼠化形却有着善良、诚实和勤劳的美誉。当然也有很多例外情况，但大多数鼷鼠化形会选择无私地帮助当地社区中需要帮助的人。	</p>
+	<p>
+		整个弗洛伊田野的农场由各种不同的种族拥有和经营，而鼷鼠化形在耕地农民中占了很大一部分。他们每年在收获季节表现出的热情和开朗赢得了声誉。一大家子鼷鼠化形会齐心协力收割自家田里的小麦、玉米和大麦，之后他们会去邻近的农场帮忙。
 	</p>
 	<p>
-		Although the farms throughout the Foloi Fields are owned and run by a large variety of races, mouse-morphs make up a large portion of arable farmers. Their reputation has been earned from the enthusiasm and cheerful nature they display each year during harvest time. Large families of mouse-morphs will all work together to harvest their fields of wheat, corn, and barley, after which they'll travel to their neighbouring farms and help out wherever they can.
+		鼷鼠化形和其他普通种族一样，会受到奥术风暴的严重影响。受到奥术雷霆的影响，鼷鼠男会寻找伴侣交配，而鼷鼠女则会发情。
 	</p>
 	<p>
-		Mouse-morphs, like the other common races, get heavily affected by arcane storms. Being exposed to arcane thunder will make mouse-boys seek out a partner to mate with, while mouse-girls will go into heat.
+		鼷鼠化形的后代将是鼷鼠化形和其伴侣种族后代的混合体。
 	</p>
-	<p>
-		A mouse-morph's offspring will be a mixture of mouse-morphs and offspring of their partner's race.
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

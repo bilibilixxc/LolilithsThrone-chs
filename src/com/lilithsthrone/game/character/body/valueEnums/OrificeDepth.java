@@ -13,29 +13,29 @@ import com.lilithsthrone.utils.colours.PresetColour;
 public enum OrificeDepth {
 	
 	/** 50% of normal depth. */
-	ZERO_EXTREMELY_SHALLOW("very shallow", 0, 0.5f, PresetColour.GENERIC_SIZE_ONE),
+	ZERO_EXTREMELY_SHALLOW("极浅", 0, 0.5f, PresetColour.GENERIC_SIZE_ONE),
 
 	/** 75% of normal depth. */
-	ONE_SHALLOW("shallow", 1, 0.75f, PresetColour.GENERIC_SIZE_TWO),
+	ONE_SHALLOW("较浅", 1, 0.75f, PresetColour.GENERIC_SIZE_TWO),
 	
 	/*-------AVERAGE VALUE:---------*/
 	/** 100% of normal depth. */
-	TWO_AVERAGE("average-depth", 2, 1f, PresetColour.GENERIC_SIZE_THREE),
+	TWO_AVERAGE("平均深度", 2, 1f, PresetColour.GENERIC_SIZE_THREE),
 
 	/** 150% of normal depth. */
-	THREE_SPACIOUS("spacious", 3, 1.5f, PresetColour.GENERIC_SIZE_FOUR),
+	THREE_SPACIOUS("较深", 3, 1.5f, PresetColour.GENERIC_SIZE_FOUR),
 
 	/** 200% of normal depth. */
-	FOUR_DEEP("deep", 4, 2f, PresetColour.GENERIC_SIZE_FIVE),
+	FOUR_DEEP("过深", 4, 2f, PresetColour.GENERIC_SIZE_FIVE),
 
 	/** 250% of normal depth. */
-	FIVE_VERY_DEEP("very deep", 5, 2.5f, PresetColour.GENERIC_SIZE_SIX),
+	FIVE_VERY_DEEP("极深", 5, 2.5f, PresetColour.GENERIC_SIZE_SIX),
 
 	/** 300% of normal depth. */
-	SIX_CAVERNOUS("cavernous", 6, 3f, PresetColour.GENERIC_SIZE_SEVEN),
+	SIX_CAVERNOUS("深不见底", 6, 3f, PresetColour.GENERIC_SIZE_SEVEN),
 
 	/** 400% of normal depth. */
-	SEVEN_FATHOMLESS("fathomless", 7, 4f, PresetColour.GENERIC_SIZE_EIGHT);
+	SEVEN_FATHOMLESS("深不可测", 7, 4f, PresetColour.GENERIC_SIZE_EIGHT);
 
 	
 	private String descriptor;

@@ -49,8 +49,8 @@ public class Nizhoni extends NPC {
 	}
 	
 	public Nizhoni(boolean isImported) {
-		super(isImported, new NameTriplet("Nizhoni"), "Tsosie",
-				"On every day but Wednesday and Saturday, Nizhoni operates the darts game in the centre of Elis's Farmer's Market.",
+		super(isImported, new NameTriplet("尼佐尼"), "索西",
+				"除周三和周六外，尼佐尼每天都在伊利斯农贸市场的中心经营飞镖游戏。",
 				19, Month.JUNE, 3,
 				15,
 				Gender.F_V_B_FEMALE, Subspecies.getSubspeciesFromId("dsg_raccoon_subspecies_raccoon"), RaceStage.GREATER,
@@ -58,7 +58,7 @@ public class Nizhoni extends NPC {
 				WorldType.getWorldTypeFromId("innoxia_fields_elis_market"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_market_centre"),
 				true);
 
-		this.setGenericName("smiling raccoon-girl");
+		this.setGenericName("微笑着的浣熊女");
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);

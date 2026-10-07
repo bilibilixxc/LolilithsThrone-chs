@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>150</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[fishnet stocking]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[fishnet stockings]]></namePlural>
-		<description><![CDATA[A pair of fishnet stockings which reach up to the wearer's mid-thigh.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[渔网袜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[渔网袜]]></namePlural>
+		<description><![CDATA[一双长度到穿戴者大腿的渔网袜。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>SOCK</slot> 
@@ -46,27 +46,25 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] on the fishnet stockings before pulling them all the way up to [npc.her] upper-thigh.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the fishnet stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up to [npc2.her] upper-thigh.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the fishnet stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up to [npc2.her] upper-thigh.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的脚塞进渔网袜中，然后将它们拉到大腿根部。
+]]></self>
+    <other><![CDATA[
+[npc.Name]给[npc2.namePos]的[npc2.feet]套上渔网袜，然后将它们拉到[npc2.her]的大腿根部。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的[npc2.feet]强行塞进渔网袜中，然后用力将它们拉到[npc2.her]的大腿根部。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] fishnet stockings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] fishnet stockings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] fishnet stockings.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下了[npc.her]的渔网袜。]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的渔网袜脱下。]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的渔网袜并粗暴地扯下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

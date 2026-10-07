@@ -46,7 +46,7 @@ import com.lilithsthrone.utils.Util;
 public class GenericPositioning {
 
 	private static String getRequestTooltipText() {
-		return "[style.italicsSex(This is a request, which [npc2.name] might refuse!)]";
+		return "[style.italicsSex(这是一个要求，[npc2.name]可能会拒绝！)]";
 	}
 	
 	public static final SexAction POSITION_SWAP = new SexAction(
@@ -73,21 +73,21 @@ public class GenericPositioning {
 		
 		@Override
 		public String getActionTitle() {
-			return "Swap with [npc2.name]";
+			return "和[npc2.name]交换";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Swap position with [npc2.name].";
+			return "和[npc2.name]交换位置。";
 		}
 
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
-				return "Gently taking hold of [npc2.name], you take care not to wake [npc2.herHim] as you move [npc2.herHim] around and swap position with [npc2.herHim].";
+				return "你温柔地控制住[npc2.name]，小心翼翼地移动[npc2.herHim]，与之交换了位置，生怕惊醒[npc2.herHim]。";
 			}
-			return "Taking hold of [npc2.name], you move [npc2.herHim] around and swap position with [npc2.herHim], before [npc.moaning],"
-					+ " [npc.speech(It'll be more fun like this!)]";
+			return "你控制住[npc2.name]，跟[npc2.herHim]换了个位置，便[npc.moaning]道，"
+					+ "[npc.speech(这样会更爽哦！)]";
 		}
 
 		@Override
@@ -282,14 +282,14 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Standing receive oral";
+			return "站着被口交";
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Get [npc2.name] to perform oral on you. Once [npc2.sheHasFull] started, you can get [npc2.herHim] to switch between your front and back.";
+				return "让[npc2.name]给你口交。一旦[npc2.sheHasFull]开始，你就可以让[npc2.herHim]在你身体前后切换。";
 			} else {
-				return "Get [npc2.name] to perform oral on you. Once [npc2.sheHasFull] started, you can get [npc2.herHim] to switch between kneeling beneath or behind your animalistic body.";
+				return "让[npc2.name]给你口交。一旦[npc2.sheHasFull]开始，你就可以让[npc2.herHim]跪在下面或者在你动物化的后股前。";
 			}
 		}
 		@Override
@@ -297,46 +297,46 @@ public class GenericPositioning {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) { // Biped body:
 				if(generatePerformerOralData(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction()).get(0)==SexSlotStanding.PERFORMING_ORAL) {
 					if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-						return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(position)] [npc2.herHim] so that [npc2.sheIs] standing before [npc.herHim]."
-								+ " Grinning down at [npc2.herHim], [npc.name] [npc.verb(order)],"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]想让[npc2.name]给[npc.herHim]口交，让[npc2.herHim]站到[npc.herHim]身前。"
+								+ "[npc.Name]向下朝[npc2.herHim]咧嘴一笑，命令道，"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					} else {
-						return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling before [npc.herHim]."
-								+ " Grinning down at [npc2.herHim], [npc.name] [npc.verb(order)],"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]想让[npc2.name]给自己口交，便推倒了[npc2.herHim]，让[npc2.herHim]跪在身前。"
+								+ "[npc.Name]向下朝[npc2.herHim]咧嘴一笑，命令道，"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					}
 				} else {
 					if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-						return "Wanting [npc2.name] to perform anilingus, [npc.name] [npc.verb(position)] [npc2.herHim] so that [npc2.sheIs] standing behind [npc.herHim]."
-								+ " Looking back over [npc.her] shoulder, [npc.she] [npc.verb(grin)] down at [npc2.herHim], before ordering,"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]想要[npc2.name]给自己吻肛，便调整姿势，让[npc2.herHim]站在身后。"
+								+ "[npc.she]回头咧嘴一笑，命令道，"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					} else {
-						return "Wanting [npc2.name] to perform anilingus, [npc.name] [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling behind [npc.herHim]."
-								+ " Looking back over [npc.her] shoulder, [npc.she] [npc.verb(grin)] down at [npc2.herHim], before ordering,"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]想要[npc2.name]给自己吻肛，便推倒了[npc2.herHim]，让[npc2.herHim]跪在身前。"
+								+ "[npc.she]回头咧嘴一笑，命令道，"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					}
 				}
 				
 			} else { // Taur body:
 				if(generatePerformerOralData(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction()).get(0)==SexSlotStanding.PERFORMING_ORAL) {
 					if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-						return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(position)] [npc2.herHim] so that [npc2.sheIs] standing beneath [npc.her] lower [npc.legRace]'s body."
-								+ " Stepping forwards and pushing [npc.herself] against [npc2.herHim], [npc.name] [npc.verb(call)] out,"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]想要[npc2.name]给自己口交，便推倒[npc2.herHim]，让[npc2.herHim]站在[npc.legRace]身体下。"
+								+ "[npc.name]迈步向前，将[npc.herself]推向[npc2.herHim]，呼喊"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					} else {
-						return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling beneath [npc.her] lower [npc.legRace]'s body."
-								+ " Stepping forwards and pushing [npc.herself] against [npc2.herHim], [npc.name] [npc.verb(call)] out,"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]想要[npc2.name]给自己口交，于是推倒[npc2.herHim]，让[npc2.herHim]跪到[npc.legRace]身体下面。"
+								+ "[npc.name]迈步向前，将[npc.herself]推向[npc2.herHim]，呼喊"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					}
 				} else {
 					if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-						return "Wanting [npc2.name] to perform oral on the rear part of [npc.her] lower [npc.legRace]'s body, [npc.name] [npc.verb(position)] [npc2.herHim] so that [npc2.sheIs] standing behind [npc.herHim]."
-								+ " Looking back over [npc.her] shoulder, [npc.she] [npc.verb(grin)] down at [npc2.herHim], before ordering,"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]想要[npc2.name]给自己下半身口交，让便调整姿势，让[npc2.sheIs]站在身后。"
+								+ "[npc.she]回头咧嘴一笑，命令道，"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					} else {
-						return "Wanting [npc2.name] to perform oral on the rear part of [npc.her] lower [npc.legRace]'s body, [npc.name] [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling behind [npc.herHim]."
-								+ " Looking back over [npc.her] shoulder, [npc.she] [npc.verb(grin)] down at [npc2.herHim], before ordering,"
-								+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+						return "[npc.Name]推倒[npc2.herHim]，使之跪到[npc.her]的身下，意图让[npc2.name]给[npc.herHim]下半身口交。"
+								+ "[npc.she]回头咧嘴一笑，命令道，"
+								+ "[npc.speech(不要停，用用你的嘴！)]";
 					}
 				}
 			}
@@ -381,15 +381,15 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Standing receive oral (R)";
+			return "站立接受口交(请求)";
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Try and get [npc2.name] to perform oral on you. If [npc2.she] accepts, you can further request [npc2.herHim] to switch between your front and back.<br/>"
+				return "尝试让[npc2.name]给你口交。一旦[npc2.sheHasFull]接受，你可以要求[npc2.herHim]在你身体的前后切换。<br/>"
 						+ getRequestTooltipText();
 			} else {
-				return "Try and get [npc2.name] to perform oral on you. If [npc2.she] accepts, you can further request [npc2.herHim] to switch between kneeling beneath or behind your animalistic body.<br/>"
+				return "尝试让[npc2.name]给你口交。一旦[npc2.sheHasFull]接受，你就可以要求[npc2.herHim]跪在下面或者在你动物化的后股前。<br/>"
 						+ getRequestTooltipText();
 			}
 		}
@@ -397,24 +397,24 @@ public class GenericPositioning {
 		public String getDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) { // Biped body:
 				if(generatePerformerOralData(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction()).get(0)==SexSlotStanding.PERFORMING_ORAL) {
-					return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] standing before [npc2.herHim]."
-							+ " Gazing into [npc2.her] [npc2.eyes+], [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, I want you to use your mouth!)]";
+					return "[npc.Name]想让[npc2.name]给[npc.herHim]口交，站到[npc2.herHim]身前。"
+							+ "[npc.she]凝视着[npc2.her][npc2.eyes+]，恳求道，"
+							+ "[npc.speech(求你了，我想用用你的嘴！)]";
 				} else {
-					return "Wanting [npc2.name] to perform anilingus on [npc.herHim], [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] standing with [npc.her] back to [npc2.herHim]."
-							+ " Looking back over [npc.her] shoulder, [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, I want you to use your mouth!)]";
+					return "[npc.Name]想要[npc2.name]给[npc.herHim]吻肛，过到[npc2.herHim]身前。"
+							+ "[npc.her]回头恳求着，"
+							+ "[npc.speech(求你了，我想用用你的嘴！)]";
 				}
 				
 			} else { // Taur body:
 				if(generatePerformerOralData(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterPerformingAction()).get(0)==SexSlotStanding.PERFORMING_ORAL) {
-					return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] presenting the underside of [npc.her] lower [npc.legRace]'s body to [npc2.herHim]."
-							+ " Gazing into [npc2.her] [npc2.eyes+], [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, I want you to use your mouth!)]";
+					return "[npc.Name]想要[npc2.name]给[npc.herHim]口交，来到[npc2.herHim]下半[npc.legRace]的身体附近。"
+							+ "[npc.she]凝视着[npc2.her][npc2.eyes+]，恳求道，"
+							+ "[npc.speech(求你了，我想用用你的嘴！)]";
 				} else {
-					return "Wanting [npc2.name] to perform oral on the rear part of [npc.her] lower [npc.legRace]'s body, [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] presenting [npc.her] hindquarters to [npc2.herHim]."
-							+ " Gazing back over [npc.her] shoulder, [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, I want you to use your mouth!)]";
+					return "[npc.name]想让[npc2.name]在[npc.legRace]的身下口交后股，[npc.name]挪了挪身子，朝[npc2.herHim]露出[npc.her]的臀腿。"
+							+ "[npc.she]回头露出渴望的眼神，哀求道，"
+							+ "[npc.speech(求你了，我想用用你的嘴！)]";
 				}
 			}
 		}
@@ -452,38 +452,38 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Move [npc2.herHim] behind";
+			return "移动[npc2.herHim]到身后";
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Get [npc2.name] to switch position so that [npc2.sheIsFull] behind you, and so able to perform oral on your [npc.asshole].";
+				return "让[npc2.name]动动身子到你背后，方便口交你的[npc.asshole]。";
 			} else {
-				return "Get [npc2.name] to switch position so that [npc2.sheIsFull] behind you, and so able to perform oral on your [npc.asshole]"+(Main.sex.getCharacterPerformingAction().hasVagina()?" and [npc.pussy]":"")+".";
+				return "让[npc2.name]动动身子到你背后，方便口交你的[npc.asshole]"+(Main.sex.getCharacterPerformingAction().hasVagina()?"和[npc.pussy]":"")+"。";
 			}
 		}
 		@Override
 		public String getDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) { // Biped body:
 				if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-					return "Wanting [npc2.name] to perform anilingus on [npc.herHim], [npc.name] [npc.verb(reposition)] [npc2.herHim] so that [npc2.sheIs] standing behind [npc.herHim]."
-							+ " Pushing [npc.her] [npc.ass+] back against [npc2.her] [npc2.face], [npc.she] [npc.verb(order)],"
-							+ " [npc.speech(Go on, put your mouth to use!)]";
+					return "[npc.name]想要[npc2.name]给自己吻肛，便调整姿势，让[npc2.herHim]站在身后。"
+							+ "[npc.she]把自己[npc.ass+]压在[npc2.her][npc2.face]脸上，命令道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				} else {
-					return "Wanting [npc2.name] to perform anilingus on [npc.herHim], [npc.name] [npc.verb(reposition)] and [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling behind [npc.herHim]."
-							+ " Pushing [npc.her] [npc.ass+] back against [npc2.her] [npc2.face], [npc.she] [npc.verb(order)],"
-							+ " [npc.speech(Go on, put your mouth to use!)]";
+					return "[npc.Name]想要[npc2.name]吻肛，于是调整了姿势，让[npc2.herHim]跪倒在自己身后。"
+							+ "[npc.she]把自己[npc.ass+]压在[npc2.her][npc2.face]脸上，命令道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				}
 				
 			} else { // Taur body:
 				if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-					return "Wanting [npc2.name] to perform oral on the rear part of [npc.her] lower [npc.legRace]'s body, [npc.name] [npc.verb(reposition)] [npc2.herHim] so that [npc2.sheIs] standing behind [npc.herHim]."
-							+ " Pushing [npc.her] [npc.ass+] back against [npc2.her] [npc2.face], [npc.she] [npc.verb(order)],"
-							+ " [npc.speech(Go on, put your mouth to use!)]";
+					return "[npc.Name]想要[npc2.name]在[npc.legRace]身后给自己口交，便调整姿势，让[npc2.herHim]站在下面。"
+							+ "[npc.she]把自己[npc.ass+]压在[npc2.her][npc2.face]脸上，命令道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				} else {
-					return "Wanting [npc2.name] to perform oral on the rear part of [npc.her] lower [npc.legRace]'s body, [npc.name] [npc.verb(reposition)] and [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling behind [npc.herHim]."
-							+ " Pushing [npc.her] [npc.ass+] back against [npc2.her] [npc2.face], [npc.she] [npc.verb(order)],"
-							+ " [npc.speech(Go on, put your mouth to use!)]";
+					return "[npc.Name]想要让[npc2.name]给[npc.herHim]下半身口交，便调整姿势并将[npc2.herHim]推倒，让[npc2.herHim]跪在[npc.herHim]身下。"
+							+ "[npc.she]把自己[npc.ass+]压在[npc2.her][npc2.face]脸上，命令道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				}
 			}
 		}
@@ -548,20 +548,20 @@ public class GenericPositioning {
 		@Override
 		public String getActionTitle() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Move [npc2.herHim] in front";
+				return "移动[npc2.herHim]到前面";
 			} else {
-				return "Move [npc2.herHim] beneath";
+				return "移动[npc2.herHim]到身下";
 			}
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Get [npc2.name] to switch position so that [npc2.sheIsFull] in front of you, and so able to perform oral on your genitals.";
+				return "让[npc2.name]动动身子到你前面，方便口交你的阴部。";
 			} else {
 				if(Main.sex.getCharacterPerformingAction().hasPenis()) {
-					return "Get [npc2.name] to switch position so that [npc2.sheIsFull] kneeling beneath you, and so able to perform oral on your [npc.cock]"+(Main.sex.getCharacterPerformingAction().hasBreastsCrotch()?" and [npc.crotchBoobs]":"")+".";
+					return "让[npc2.name]调整姿势，使之完全跪在你身下，好方便口你的[npc.cock]"+(Main.sex.getCharacterPerformingAction().hasBreastsCrotch()?"和[npc.crotchBoobs]":"")+"。";
 				} else {
-					return "Get [npc2.name] to switch position so that [npc2.sheIsFull] kneeling beneath you"+(Main.sex.getCharacterPerformingAction().hasBreastsCrotch()?", and so able to perform oral on your [npc.crotchBoobs]":"")+".";
+					return "让[npc2.name]调整姿势，使之完全跪在你身下"+(Main.sex.getCharacterPerformingAction().hasBreastsCrotch()?"，好方便口你的[npc.crotchBoobs]":"")+"。";
 				}
 			}
 		}
@@ -569,24 +569,24 @@ public class GenericPositioning {
 		public String getDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) { // Biped body:
 				if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-					return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(reposition)] [npc2.herHim] so that [npc2.sheIs] standing in front of [npc.herHim]."
-							+ " Grinning down at [npc2.herHim], [npc.name] [npc.verb(order)],"
-							+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+					return "[npc.Name]想要[npc2.name]给自己口交，便调整[npc2.name]的位置，让[npc2.herHim]站到自己身前。"
+							+ "[npc.Name]向下朝[npc2.herHim]咧嘴一笑，命令道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				} else {
-					return "Wanting [npc2.name] to perform oral on [npc.herHim], [npc.name] [npc.verb(reposition)] and [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling in front of [npc.herHim]."
-							+ " Grinning down at [npc2.herHim], [npc.name] [npc.verb(order)],"
-							+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+					return "[npc.Name]想要[npc2.name]口交，于是调整了姿势，让[npc2.herHim]跪倒在自己身前。"
+							+ "[npc.Name]向下朝[npc2.herHim]咧嘴一笑，命令道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				}
 				
 			} else { // Taur body:
 				if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterTargetedForSexAction(this))) {
-					return "Wanting [npc2.name] to perform oral on the underside of [npc.her] lower [npc.legRace]'s body, [npc.name] [npc.verb(reposition)] [npc2.herHim] so that [npc2.sheIs] standing beneath [npc.herHim]."
-							+ " Stepping forwards and pushing [npc.herself] against [npc2.herHim], [npc.name] [npc.verb(call)] out,"
-							+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+					return "[npc.Name]想要[npc2.name]在[npc.legRace]身下给自己口交，便调整姿势，让[npc2.herHim]站在下面。"
+							+ "[npc.name]迈步向前，将[npc.herself]推向[npc2.herHim]，呼喊道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				} else {
-					return "Wanting [npc2.name] to perform oral on the underside of [npc.her] lower [npc.legRace]'s body, [npc.name] [npc.verb(reposition)] and [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] kneeling beneath [npc.herHim]."
-							+ " Stepping forwards and pushing [npc.herself] against [npc2.herHim], [npc.name] [npc.verb(call)] out,"
-							+ " [npc.speech(Go on, put that mouth of yours to use!)]";
+					return "[npc.Name]想要[npc2.name]在[npc.legRace]身下给自己口交，便推倒[npc2.herHim]，让[npc2.herHim]跪在下面。"
+							+ "[npc.name]迈步向前，将[npc.herself]推向[npc2.herHim]，呼喊道，"
+							+ "[npc.speech(不要停，用用你的嘴！)]";
 				}
 			}
 		}
@@ -638,14 +638,14 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Perform oral";
+			return "提供口交";
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Get down and perform oral on [npc2.name]. Once you have started, you can switch between [npc2.her] front and back.";
+				return "跪在[npc2.name]面前给[npc2.herHim]口交。一旦你开始，你就可以在[npc2.her]的前后之间切换。";
 			} else {
-				return "Get down and perform oral on [npc2.name]. Once you have started, you can switch between kneeling beneath or behind [npc2.her] animalistic body.";
+				return "跪在[npc2.name]面前给[npc2.herHim]口交。一旦你开始，你就可以选择跪在下面或去到[npc2.her]动物化的后股前。";
 			}
 		}
 		@Override
@@ -653,46 +653,46 @@ public class GenericPositioning {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) { // Biped body:
 				if(generatePerformerOralData(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this)).get(0)==SexSlotStanding.PERFORMING_ORAL) {
 					if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(move)] around so that [npc.sheIs] standing before [npc2.herHim]."
-								+ " Looking up into [npc2.her] [npc2.eyes+], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(That's right, let me put my mouth to use!)]";
+						return "[npc.Name]想给[npc2.name]口交，便过来站到[npc2.herHim]身前。"
+								+ "[npc.she]抬头对上[npc2.her][npc2.eyes+]，[npc.moansVerb]，"
+								+ "[npc.speech(很棒哦，看看我的口技！)]";
 					} else {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(move)] around and [npc.verb(kneel)] down before [npc2.herHim]."
-								+ " Looking up into [npc2.her] [npc2.eyes+], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(That's right, let me put my mouth to use!)]";
+						return "[npc.Name]想给[npc2.name]口交，过来跪在了[npc2.herHim]身前。"
+								+ "[npc.she]抬头对上[npc2.her][npc2.eyes+]，[npc.moansVerb]，"
+								+ "[npc.speech(很棒哦，看看我的口技！)]";
 					}
 				} else {
 					if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform anilingus on [npc2.name], [npc.name] [npc.verb(move)] around so that [npc.sheIs] standing behind [npc2.herHim]."
-								+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(Oh yes, let me eat your ass!)]";
+						return "[npc.Name]想舔[npc2.name]的肛门，过来站在了[npc2.herHim]身后。"
+								+ "[npc.she]抓住[npc2.her][npc2.hips+]，[npc.moansVerb]，"
+								+ "[npc.speech(真好，我来尝尝你的小屁股！)]";
 					} else {
-						return "Wanting [npc2.name] to perform anilingus, [npc.name] [npc.verb(move)] around and [npc.verb(kneel)] down behind [npc2.herHim]."
-								+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(Oh yes, let me eat your ass!)]";
+						return "[npc.Name]想舔吻[npc2.name]的肛门，过来跪在了[npc2.herHim]背后。"
+								+ "[npc.she]抓住[npc2.her][npc2.hips+]，[npc.moansVerb]，"
+								+ "[npc.speech(真好，我来尝尝你的小屁股！)]";
 					}
 				}
 				
 			} else { // Taur body:
 				if(generatePerformerOralData(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this)).get(0)==SexSlotStanding.PERFORMING_ORAL) {
 					if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(move)] around so that [npc.sheIs] standing beneath [npc2.her] lower [npc2.legRace]'s body."
-								+ " Running [npc.a_hand] up one of [npc2.her] rear [npc2.legs], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(Oh yes, time to put my mouth to use!)]";
+						return "[npc.name]想给[npc2.name]口交，过来站在了[npc2.legRace]后半身体的下面。"
+								+ "[npc.she]举起后[npc2.legs]的其中一只[npc.a_hand]，[npc.moansVerb]，"
+								+ "[npc.speech(啊~太棒了，我是时候动动嘴了！)]";
 					} else {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(move)] around and [npc.verb(kneel)] down beneath [npc2.her] lower [npc2.legRace]'s body."
-								+ " Running [npc.a_hand] up one of [npc2.her] rear [npc2.legs], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(Oh yes, time to put my mouth to use!)]";
+						return "[npc.name]想给[npc2.name]口交，过来跪在了[npc2.legRace]后半身体的下面。"
+								+ "[npc.she]举起后[npc2.legs]的其中一只[npc.a_hand]，[npc.moansVerb]，"
+								+ "[npc.speech(啊~太棒了，我是时候动动嘴了！)]";
 					}
 				} else {
 					if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform oral on the rear part of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(move)] around so that [npc.sheIs] standing behind [npc2.herHim]."
-								+ " Running [npc.a_hand] up and over [npc2.her] [npc2.ass+], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(Oh yes, time to put my mouth to use!)]";
+						return "[npc.Name]想要给[npc2.namePos]那[npc2.legRace]的后半身下部口交，[npc.sheIs]转到了[npc2.herHim]的身后并站好。"
+								+ "把[npc.a_hand]举过[npc2.her][npc2.ass+]，[npc.she][npc.moansVerb]，"
+								+ "[npc.speech(啊~太棒了，我是时候动动嘴了！)]";
 					} else {
-						return "Wanting to perform oral on the rear part of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(move)] around and [npc.verb(kneel)] down behind [npc2.herHim]."
-								+ " Running [npc.a_hand] up and over [npc2.her] [npc2.ass+], [npc.she] [npc.moansVerb],"
-								+ " [npc.speech(Oh yes, time to put my mouth to use!)]";
+						return "[npc.Name]想要给[npc2.namePos]那[npc2.legRace]的后半身下部口交，[npc.sheIs]转到了[npc2.herHim]的身后跪了下来。"
+								+ "把[npc.a_hand]举过[npc2.her][npc2.ass+]，[npc.she][npc.moansVerb]，"
+								+ "[npc.speech(啊~太棒了，我是时候动动嘴了！)]";
 					}
 				}
 			}
@@ -739,15 +739,15 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Perform oral (R)";
+			return "提供口交(请求)";
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Get down and try to convince [npc2.name] to let you perform oral on [npc2.herHim]. If [npc2.she] accepts, you can further request to switch between [npc2.her] front and back.<br/>"
+				return "冷静下来并试着说服[npc2.name]同意你为[npc2.herHim]提供口交。如果[npc2.she]同意，你就能进一步要求在[npc2.her]的身前与身后切换。<br/>"
 						+ getRequestTooltipText();
 			} else {
-				return "Get down and try to convince [npc2.name] to let you perform oral on [npc2.herHim]. If [npc2.she] accepts, you can further request to switch between kneeling beneath or behind [npc2.her] animalistic body.<br/>"
+				return "跪下努力说服[npc2.name]，让你给[npc2.herHim]口交。如果[npc2.she]接受了，你就可以更进一步，跪在下面或者去到[npc2.her]动物化的后股前。<br/>"
 						+ getRequestTooltipText();
 			}
 		}
@@ -756,46 +756,46 @@ public class GenericPositioning {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) { // Biped body:
 				if(generatePerformerOralData(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this)).get(0)==SexSlotStanding.PERFORMING_ORAL) {
 					if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] standing before [npc2.herHim]."
-								+ " Looking up into [npc2.her] [npc2.eyes+], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "[npc.Name]想给[npc2.name]口交，便站到[npc2.herHim]身前。"
+								+ "[npc.she]仰视着[npc2.her][npc2.eyes+]，恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					} else {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(drop)] down onto [npc.her] knees before [npc2.herHim]."
-								+ " Looking up into [npc2.her] [npc2.eyes+], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "[npc.Name]想给[npc2.name]口交，跪在了[npc2.herHim]身前。"
+								+ "[npc.she]仰视着[npc2.her][npc2.eyes+]，恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					}
 				} else {
 					if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform anilingus on [npc2.name], [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] standing behind [npc2.herHim]."
-								+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "[npc.Name]想要给[npc2.name]吻肛，过到[npc2.herHim]身后。"
+								+ "把住[npc2.her][npc2.hips+]，恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					} else {
-						return "Wanting to perform anilingus on [npc2.name], [npc.name] [npc.verb(drop)] down onto [npc.her] knees behind [npc2.herHim]."
-								+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "[npc.Name]想给[npc2.name]口交，便跪在了[npc2.herHim]身前。"
+								+ "把住[npc2.her][npc2.hips+]，恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					}
 				}
 				
 			} else { // Taur body:
 				if(generatePerformerOralData(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterPerformingAction()).get(0)==SexSlotStanding.PERFORMING_ORAL) {
 					if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] standing beneath [npc2.her] lower [npc2.legRace]'s body."
-								+ " Running [npc.a_hand] up one of [npc2.her] rear [npc2.legs], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "[npc.name]想给[npc2.name]口交，便站在了[npc2.legRace]后半身体的下面。"
+								+ "[npc.she]举起后[npc2.legs]的其中一只[npc.a_hand]，恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					} else {
-						return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(drop)] down onto [npc.her] knees beneath [npc2.her] lower [npc2.legRace]'s body."
-								+ " Running [npc.a_hand] up one of [npc2.her] rear [npc2.legs], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "想要为[npc2.name]口交，于是[npc.name]跪在了[npc2.her]的下方。"
+								+ "[npc.she]举起后[npc2.legs]的其中一只[npc.a_hand]，恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					}
 				} else {
 					if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterPerformingAction())) {
-						return "Wanting to perform oral on the rear part of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(position)] [npc.herself] so that [npc.sheIs] standing behind [npc2.herHim]."
-								+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "想要为[npc2.namePos][npc2.legRace]下半身的后面进行口交，于是[npc.name]让自己站在了[npc2.herHim]的后面。"
+								+ "把住[npc2.her][npc2.hips+]，恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					} else {
-						return "Wanting to perform oral on the rear part of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(drop)] down onto [npc.her] knees behind [npc2.herHim]."
-								+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.verb(plead)],"
-								+ " [npc.speech(Please, let me put my mouth to use!)]";
+						return "想要为[npc2.namePos]的[npc2.legRace]下半身进行口交，于是[npc.name]跪在[npc2.herHim]的后面。"
+								+ "在把住[npc2.her]那[npc2.hips+]后，[npc.she]恳求道，"
+								+ "[npc.speech(来嘛，试试我的口技！)]";
 					}
 				}
 			}
@@ -924,14 +924,14 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Move behind [npc2.herHim]";
+			return "移动到[npc2.herHim]身后";
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-				return "Switch position so that you are behind [npc2.name], and so able to perform oral on [npc2.her] [npc2.asshole].";
+				return "调整姿势，到[npc2.name]身后，方便你口交[npc2.her]的[npc2.asshole]。";
 			} else {
-				return "Switch position so that you are behind [npc2.name], and so able to perform oral on [npc2.her] [npc2.asshole]"+(Main.sex.getCharacterTargetedForSexAction(this).hasVagina()?" and [npc2.pussy]":"")+".";
+				return "调整姿势，到[npc2.name]身后，方便你口交[npc2.her]的[npc2.asshole]"+(Main.sex.getCharacterTargetedForSexAction(this).hasVagina()?"和[npc2.pussy]":"")+"。";
 			}
 		}
 		@Override
@@ -939,26 +939,26 @@ public class GenericPositioning {
 			StringBuilder sb = new StringBuilder();
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) { // Biped body:
 				if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterPerformingAction())) {
-					sb.append("Wanting to perform anilingus on [npc2.name], [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] standing behind [npc2.herHim]."
-							+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.verb(plead)],");
+					sb.append("[npc.Name]想要给[npc2.name]吻肛，过到[npc2.herHim]身后。"
+							+ "在把住[npc2.her]那[npc2.hips+]后，[npc.she]恳求道，");
 				} else {
-					sb.append("Wanting to perform anilingus on [npc2.name], [npc.name] [npc.verb(reposition)] [npc.herself] and [npc.verb(drop)] down onto [npc.her] knees behind [npc2.herHim]."
-							+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.verb(plead)],");
+					sb.append("(想要肛交[npc2.name]，于是[npc.name]调整他自己的位置并跪在[npc2.herHim]的后面。"
+							+ "在把住[npc2.her]那[npc2.hips+]后，[npc.she]恳求道，");
 				}
 				
 			} else { // Taur body:
 				if(SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterPerformingAction())) {
-					sb.append("Wanting to perform oral on the rear part of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] standing behind [npc2.herHim]."
-							+ " Running [npc.a_hand] up and over [npc2.her] [npc2.ass+], [npc.she] [npc.verb(plead)],");
+					sb.append("想要为[npc2.namePos][npc2.legRace]下半身进行口交，于是[npc.name]调整自己的位置并让自己重新站在了[npc2.herHim]的后面。"
+							+ "[npc.name]用[npc.a_hand]摸向[npc2.her][npc2.ass+]，恳求道，");
 				} else {
-					sb.append("Wanting to perform oral on the rear part of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(reposition)] [npc.herself] and [npc.verb(drop)] down onto [npc.her] knees behind [npc2.herHim]."
-							+ " Running [npc.a_hand] up and over [npc2.her] [npc2.ass+], [npc.she] [npc.verb(plead)],");
+					sb.append("想要为[npc2.namePos][npc2.legRace]下半身进行口交，于是[npc.name]调整自己的位置并重新跪在了[npc2.herHim]的后面。"
+							+ "[npc.name]用[npc.a_hand]摸向[npc2.her][npc2.ass+]，恳求道，");
 				}
 			}
 			if(Main.sex.isDom(Main.sex.getCharacterPerformingAction())) {
-				sb.append(" [npc.speech(Now to get a taste of your ass!)]");
+				sb.append("[npc.speech(现在来尝尝你的屁股！)]");
 			} else {
-				sb.append(" [npc.speech(Please, let me put my mouth to use!)]");
+				sb.append("[npc.speech(来嘛，试试我的口技！)]");
 			}
 			
 			return sb.toString();
@@ -1024,22 +1024,22 @@ public class GenericPositioning {
 		@Override
 		public String getActionTitle() {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-				return "Move in front";
+				return "挪到前面";
 			} else {
-				return "Move beneath [npc2.herHim]";
+				return "移动到[npc2.herHim]身下";
 			}
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-				return "Move around in front of [npc2.name] so that you're able to perform oral on [npc2.her] genitals.";
+				return "移动到[npc2.name]前面，方便口交[npc2.her]的阴部。";
 			} else {
 				if(Main.sex.getCharacterTargetedForSexAction(this).hasPenis()) {
-					return "Kneel down and shuffle forwards beneath [npc2.namePos] feral [npc2.legRaceFeral] body so that you're able to perform oral on [npc2.her] [npc2.cock]"
-								+(Main.sex.getCharacterTargetedForSexAction(this).hasBreastsCrotch()?" and [npc2.crotchBoobs]":"")+".";
+					return "跪在[npc2.namePos][npc2.legRaceFeral]躯干前，为[npc2.her]口交"
+								+(Main.sex.getCharacterTargetedForSexAction(this).hasBreastsCrotch()?"和[npc2.crotchBoobs]":"")+"。";
 				} else {
-					return "Kneel down and shuffle forwards beneath [npc2.namePos] feral [npc2.legRaceFeral] body"
-								+(Main.sex.getCharacterTargetedForSexAction(this).hasBreastsCrotch()?" so that you're able to perform oral on [npc2.her] [npc2.crotchBoobs]":"")+".";
+					return "跪在[npc2.namePos][npc2.legRaceFeral]躯干前"
+								+(Main.sex.getCharacterTargetedForSexAction(this).hasBreastsCrotch()?"这样你就可以给[npc2.her]的[npc2.crotchBoobs]口交了":"")+"。";
 				}
 			}
 		}
@@ -1047,24 +1047,24 @@ public class GenericPositioning {
 		public String getDescription() {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) { // Biped body:
 				if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterPerformingAction())) {
-					return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] standing in front of [npc2.herHim]."
-							+ " Gazing up into [npc2.her] [npc2.eyes+], [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, let me put my mouth to use!)]";
+					return "[npc.Name]想给[npc2.name]口交，便重新站到[npc2.herHim]身前。"
+							+ "[npc.she]向上凝视着[npc2.her][npc2.eyes+]，恳求道，"
+							+ "[npc.speech(来嘛，试试我的口技！)]";
 				} else {
-					return "Wanting to perform oral on [npc2.name], [npc.name] [npc.verb(reposition)] [npc.herself] and [npc.verb(drop)] down onto [npc.her] knees in front of [npc2.herHim]."
-							+ " Gazing up into [npc2.her] [npc2.eyes+], [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, let me put my mouth to use!)]";
+					return "[npc.Name]想要给[npc2.name]口交，于是调整位置并跪在[npc2.herHim]的前面。"
+							+ "[npc.she]向上凝视着[npc2.her][npc2.eyes+]，恳求道，"
+							+ "[npc.speech(来嘛，试试我的口技！)]";
 				}
 				
 			} else { // Taur body:
 				if(SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterPerformingAction())) {
-					return "Wanting to perform oral on the underside of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(reposition)] [npc.herself] so that [npc.sheIs] standing beneath [npc2.herHim]."
-							+ " Placing [npc.a_hand] on one of [npc2.her] rear [npc2.legs], [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, let me put my mouth to use!)]";
+					return "[npc.name]想在[npc2.namePos][npc2.legRace]的后半身下方进行口交，于是调整体位到[npc2.herHim]的身下。"
+							+ "[npc.she]将[npc.a_hand]的其中一只后[npc2.legs]上，恳求道，"
+							+ "[npc.speech(来嘛，试试我的口技！)]";
 				} else {
-					return "Wanting to perform oral on the underside of [npc2.namePos] lower [npc2.legRace]'s body, [npc.name] [npc.verb(reposition)] [npc.herself] and [npc.verb(drop)] down onto [npc.her] knees beneath [npc2.herHim]."
-							+ " Placing [npc.a_hand] on one of [npc2.her] rear [npc2.legs], [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, let me put my mouth to use!)]";
+					return "[npc.name]想为[npc2.namePos]口交，于是调整体位俯身跪在[npc2.herHim][npc2.legRace]躯干前。"
+							+ "[npc.she]将[npc.a_hand]的其中一只后[npc2.legs]上，恳求道，"
+							+ "[npc.speech(来嘛，试试我的口技！)]";
 				}
 			}
 		}
@@ -1126,17 +1126,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Face-to-[pc.wall]";
+			return "面向[pc.wall]";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] up against a nearby [pc.wall].";
+			return "让[npc2.name]面朝附近的[pc.wall]。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] up against a nearby [pc.wall]."
-					+ " Grinding [npc.her] body up against [npc2.her] back, [npc.she] [npc.moansVerb] into [npc2.her] [npc2.ear],"
-					+ " [npc.speech(Good [npc2.girl]! Now hold still while I fuck you!)]";
+			return "[npc.name]抓住[npc2.namePos]肩膀，把[npc2.herHim]推到附近的[pc.wall]上。"
+					+ "随后用整个身子压在[npc2.her]的背上，在[npc2.ear]边[npc.moansVerb]着，"
+					+ "[npc.speech(真乖！操你的时候别乱动！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1172,17 +1172,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Face-to-[pc.wall] (R)";
+			return "面对[pc.wall](请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and move into a position so that you're facing a nearby [pc.wall].<br/>"
+			return "尝试调整姿势，让自己面对附近的[pc.wall]。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Before [npc2.name] can react, you quickly move up against a nearby [pc.wall]."
-					+ " Placing your hands up against the solid surface that's now in front of you, you push your [npc.ass+] out, shaking it at [npc2.name] as you try to encourage [npc2.herHim] to fuck you like this.";
+			return "[npc2.name]还没来得及反应，你就面对旁边的[pc.wall]站着了。"
+					+ "你按住面前的墙面，把[npc.ass+]向后一探，对着[npc2.name]晃动起来，希望[npc2.herHim]能直接这样上了你。";
 		}
 		@Override
 		public void applyEffects() {
@@ -1209,17 +1209,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Back-to-[pc.wall]";
+			return "摁在[pc.wall]上";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] back against a nearby [pc.wall].";
+			return "让[npc2.name]背对附近的[pc.wall]。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] back against a nearby [pc.wall]."
-					+ " Grinding [npc.her] body up against [npc2.hers], [npc.she] [npc.moansVerb] into [npc2.her] [npc2.ear], "
-					+ "[npc.speech(Good [npc2.girl]! Now hold still while I fuck you!)]";
+			return "[npc.name]抓住[npc2.namePos]肩膀，把[npc2.herHim]推到附近的[pc.wall]上。"
+					+ "随后用整个身子压了过去，在[npc2.ear]边[npc.moansVerb]着，"
+					+ "[npc.speech(乖乖的，在我操你的时候不要乱动！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1255,17 +1255,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Back-to-[pc.wall] (R)";
+			return "摁在[pc.wall]上(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and move into a position so that your back is up against a nearby [pc.wall].<br/>"
+			return "尝试调整姿势，让自己背对附近的[pc.wall]。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Before [npc2.name] can react, you quickly move up against a nearby [pc.wall]."
-					+ " Leaning back against the solid surface that's now behind you, you give [npc2.name] your most seductive look, trying to encourage [npc2.herHim] to fuck you like this.";
+			return "[npc2.name]还没来得及反应，你就面对旁边的[pc.wall]站着了。"
+					+ "你背靠着墙面，向[npc2.name]投出一阵格外撩人的眼神，希望[npc2.herHim]能直接这样上了你。";
 		}
 		@Override
 		public void applyEffects() {
@@ -1298,31 +1298,31 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Missionary";
+			return "传教士体位";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] down onto [npc2.her] back and kneel between [npc2.her] [npc2.legs], ready to have sex in the missionary position.";
+			return "让[npc2.name]仰面躺下，跪在[npc2.her]的[npc2.legs]之间，准备以传教士体位开始性爱。";
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
-				return "Carefully moving around so as not to wake [npc2.name] up, [npc.name]"
+				return "[npc.name]小心翼翼地移动着[npc2.name]，以免弄醒[npc.her]，"
 						+ (Main.sex.getCharacterTargetedForSexAction(this).hasLegs()
-								?" [npc.verb(position)] [npc.herself] between [npc2.her] [npc2.legs]."
-								:" [npc.verb(kneel)] down over [npc2.her] groin.")
-						+ " With a lewd grin on [npc.her] [npc.face+], [npc.she] quietly [npc.verb(whisper)],"
-						+ " <i>[npc.speech(That's right, stay asleep and let me fuck you...)]</i>";
+								?"将自己夹在了[npc2.her]的[npc2.legs]之间。"
+								:"跪在[npc2.her]下体的上方。")
+						+ "[npc.she]脸上挂着淫荡的笑容，轻声耳语道，"
+						+ "<i>[npc.speech(没错，继续沉睡吧，我要操你了……)]</i>";
 			}
 			
 			if(Main.sex.getCharacterTargetedForSexAction(this).hasLegs()) {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto [npc2.her] back."
-						+ " Kneeling down between [npc2.her] [npc2.legs], [npc.she] [npc.moansVerb] as [npc.she] [npc.verb(look)] down into [npc2.her] [npc2.eyes+],"
-						+ " [npc.speech(That's right, spread your legs for me...)]";
+				return "[npc.name]抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒。"
+						+"倾身于[npc2.her][npc2.legs]间，[npc.she]低头对上[npc2.her][npc2.eyes+]，[npc.moansVerb]着，"
+						+ "[npc.speech(这就对啦，给我张开你的腿……)]";
 			} else {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto [npc2.her] back."
-						+ " Kneeling down over [npc2.her] groin, [npc.she] [npc.moansVerb] as [npc.she] [npc.verb(look)] down into [npc2.her] [npc2.eyes+],"
-						+ " [npc.speech(That's right, present yourself to me...)]";
+				return "[npc.name]抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒。"
+						+"跪在于[npc2.her]腹股沟上，[npc.she]低头对上[npc2.her][npc2.eyes+]，[npc.moansVerb]着，"
+						+ "[npc.speech(这就对啦，让我好好看看你……)]";
 			}
 		}
 		@Override
@@ -1359,21 +1359,21 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Missionary (R)";
+			return "传教士体位(请求)";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).hasLegs()) {
-				return "Try to get [npc2.name] to lie down on [npc2.her] back and spread [npc2.her] [npc2.legs] so that you can have sex with [npc2.herHim] in the missionary position.<br/>"
+				return "让[npc2.name]仰面躺下，伸开[npc2.legs]，用传教士体位和[npc2.herHim]做爱。<br/>"
 							+ getRequestTooltipText();
 			} else {
-				return "Try to get [npc2.name] to lie down on [npc2.her] back and present you with [npc2.her] groin so that you can have sex with [npc2.herHim] in the missionary position.<br/>"
+				return "让[npc2.name]仰面躺下，露出下体，用传教士体位和[npc2.herHim]做爱。<br/>"
 							+ getRequestTooltipText();
 			}
 		}
 		@Override
 		public String getDescription() {
-			return "You reach up to take hold of [npc2.namePos] shoulders, and, pushing down, you try to get [npc2.herHim] to lie down on [npc2.her] back.";
+			return "你抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒，试着让[npc2.herHim]仰面躺下。";
 		}
 		@Override
 		public void applyEffects() {
@@ -1400,34 +1400,34 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Prone bone";
+			return "俯卧位";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] down onto [npc2.her] front and kneel between [npc2.her] [npc2.legs], ready to fuck [npc2.herHim] in the prone bone position.";
+			return "将[npc2.name]面朝下按倒，跪在[npc2.her]的[npc2.legs]之间，准备以俯卧位跟[npc2.herHim]做爱。";
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
 				boolean rollsOver = !Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT);
-				return "Carefully moving around so as not to wake [npc2.name] up, [npc.name]"
+				return "[npc.name]小心翼翼地移动着[npc2.name]，以免弄醒[npc.her]，"
 						+(rollsOver
-								?" slowly [npc.verb(roll)] [npc2.herHim] over onto [npc2.her] stomach and then"
+								?"慢慢将[npc2.herHim]翻过身去，让[npc2.her]肚子朝下"
 								:"")
 						+ (Main.sex.getCharacterTargetedForSexAction(this).hasLegs()
-								?" [npc.verb(position)] [npc.herself] between [npc2.her] [npc2.legs]."
-								:" [npc.verb(lift)] up [npc2.her] [npc2.legs] to gain access to [npc2.her] groin.")
-						+ " With a lewd grin on [npc.her] [npc.face+], [npc.she] quietly [npc.verb(whisper)],"
-						+ " <i>[npc.speech(Don't wake up...)]</i>";
+								?"将自己夹在了[npc2.her]的[npc2.legs]之间。"
+								:"抬起[npc2.her]的[npc2.legs]，接触到了[npc2.her]的下体。")
+						+ "[npc.she]脸上挂着淫荡的笑容，轻声耳语道，"
+						+ "<i>[npc.speech(别醒过来……)]</i>";
 			}
 			if(Main.sex.getCharacterTargetedForSexAction(this).hasLegs()) {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] lying on [npc2.her] front."
-						+ " Kneeling down between [npc2.her] [npc2.legs], [npc.she] [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to fuck [npc2.herHim],"
-						+ " [npc.speech(Lie still and enjoy this...)]";
+				return "[npc.name]抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒使其俯卧在地。"
+						+"[npc.she]跪伏在[npc2.her]的[npc2.legs]之间，一边[npc.moansVerb]着一边准备进入[npc2.herHim]，"
+						+ "[npc.speech(乖乖躺着享受吧……)]";
 			} else {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down so that [npc2.sheIs] lying on [npc2.her] front."
-						+ " Pulling up [npc2.her] [npc2.legs], [npc.she] [npc.verb(gain)] access to [npc2.her] groin and [npc.moansVerb],"
-						+ " [npc.speech(Lie still and enjoy this...)]";
+				return "[npc.name]抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒使其俯卧在地。"
+						+ "抬起[npc2.her]的[npc2.legs]，以便能接触到[npc2.her]的下体，同时[npc.moansVerb]道，"
+						+ "[npc.speech(乖乖躺着享受吧……)]";
 			}
 		}
 		@Override
@@ -1464,21 +1464,21 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Prone bone (R)";
+			return "俯卧位(请求)";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).hasLegs()) {
-				return "Try to get [npc2.name] to lie down on [npc2.her] front and spread [npc2.her] [npc2.legs] so that you can fuck [npc2.herHim] in the prone bone position.<br/>"
+				return "尝试让[npc2.name]俯卧，分开[npc2.legs]，以便你能以俯卧位与[npc2.herHim]做爱。<br/>"
 							+ getRequestTooltipText();
 			} else {
-				return "Try to get [npc2.name] to lie down on [npc2.her] front and present you with [npc2.her] groin so that you can fuck [npc2.herHim] in the prone bone position.<br/>"
+				return "让[npc2.name]俯卧躺下，露出下体，这样你就可以用俯卧位和[npc2.herHim]做爱了。<br/>"
 							+ getRequestTooltipText();
 			}
 		}
 		@Override
 		public String getDescription() {
-			return "You reach up to take hold of [npc2.namePos] shoulders, and, pushing down, you try to get [npc2.herHim] to lie down on [npc2.her] front.";
+			return "你伸手抓住[npc2.namePos]的肩膀，用力下压，试图让[npc2.herHim]俯卧下来。";
 		}
 		@Override
 		public void applyEffects() {
@@ -1505,26 +1505,26 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Missionary (on back)";
+			return "传教士体位(被动)";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-				return "Lie down on your back and spread your [npc.legs], ready to have sex with [npc2.name] in the missionary position.";
+				return "你仰面躺下，张开[npc.legs]，准备以传教士体位与[npc2.name]开始性爱。";
 			} else {
-				return "Lie down on your back and present your groin, ready to have sex with [npc2.name] in the missionary position.";
+				return "你仰面躺下，露出下体，准备以传教士体位与[npc2.name]开始性爱。";
 			}
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto [npc2.her] knees."
-						+ " Kneeling down before [npc2.herHim], [npc.she] then [npc.verb(lie)] down on [npc.her] back, spreading [npc.her] [npc.legs] and looking up into [npc2.namePos] [npc2.eyes+] as [npc.she] [npc.moanVerb],"
-						+ " [npc.speech(Come and take me!)]";
+				return "[npc.name]抓住[npc2.namePos]的肩膀，让[npc2.herHim]跪倒在地。"
+						+"[npc.name]跪在[npc2.herHim]身前，然后仰身躺下，伸开腿看着[npc2.namePos][npc2.eyes+]眼睛，[npc.moanVerb]着，"
+						+ "[npc.speech(来上我啊！)]";
 			} else {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto [npc2.her] knees."
-						+ " Kneeling down before [npc2.herHim], [npc.she] then [npc.verb(lie)] down on [npc.her] back, presenting [npc.her] groin and looking up into [npc2.namePos] [npc2.eyes+] as [npc.she] [npc.moanVerb],"
-						+ " [npc.speech(Come and take me!)]";
+				return "[npc.name]抓住[npc2.namePos]的肩膀，让[npc2.herHim]跪倒在地。"
+						+"[npc.name]跪在[npc2.herHim]身前，然后仰身躺下，露出下体看着[npc2.namePos][npc2.eyes+]眼睛，[npc.moanVerb]着，"
+						+ "[npc.speech(来上我啊！)]";
 			}
 		}
 		@Override
@@ -1561,26 +1561,26 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Missionary (on back) (R)";
+			return "传教士体位(被动)(请求)";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-				return "Lie down on your back and spread your [npc.legs] to try and encourage [npc2.name] to have sex with you in the missionary position.<br/>"
+				return "你仰面躺下，张开[npc.legs]，鼓励[npc2.name]以传教士体位与你开始性爱。<br/>"
 							+ getRequestTooltipText();
 			} else {
-				return "Lie down on your back and present your groin to try and encourage [npc2.name] to have sex with you in the missionary position.<br/>"
+				return "你仰面躺下，露出下体，鼓励[npc2.name]以传教士体位与你开始性爱。<br/>"
 							+ getRequestTooltipText();
 			}
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-				return "[npc.Name] [npc.verb(lie)] down on [npc.her] back before [npc2.name],"
-						+ " letting out a little [npc.moan] as [npc.she] [npc.verb(spread)] [npc.her] [npc.legs] to try and encourage [npc2.name] to have sex with [npc.herHim] in the missionary position.";
+				return "[npc.Name]在[npc2.name]身前仰面躺下，"
+						+ "伸开腿，轻声用[npc.moan]鼓励[npc2.name]用传教士体位做爱。";
 			} else {
-				return "[npc.Name] [npc.verb(lie)] down on [npc.her] back before [npc2.name],"
-						+ " letting out a little [npc.moan] as [npc.she] [npc.verb(present)] [npc.her] groin to try and encourage [npc2.name] to have sex with [npc.herHim] in the missionary position.";
+				return "[npc.Name]在[npc2.name]身前仰面躺下，"
+						+ "露出下体，轻声用[npc.moan]鼓励[npc2.name]用传教士体位做爱。";
 			}
 		}
 		@Override
@@ -1606,17 +1606,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Prone bone (on front)";
+			return "俯卧位(在前)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Lie down on your front and present your [npc.ass+] and groin to [npc2.name] so that [npc2.she] can fuck you in the prone bone position.";
+			return "俯卧在地，把你[npc.ass+]和下体对着[npc2.name]，让[npc2.she]能以俯卧姿态从背后插入。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down into a kneeling position."
-					+ " [npc.She] then [npc.verb(lie)] down on [npc.her] front before [npc2.name], and as [npc.she] [npc.verb(present)] [npc.her] [npc.ass+] and groin, [npc.she] [npc.moanVerb],"
-					+ " [npc.speech(Come and take me!)]";
+			return "[npc.name]抓住[npc2.namePos]肩膀，将[npc2.herHim]按着跪倒在地。"
+					+"[npc.name]俯身趴在[npc2.name]面前，翘起[npc.ass+]露出下体，[npc.moanVerb]着，"
+					+ "[npc.speech(来上我啊！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1650,17 +1650,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Prone bone (on front) (R)";
+			return "俯卧位(在前)(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Lie down on your front and present your [npc.ass+] and groin to try and encourage [npc2.name] to have sex with you in the prone bone position.<br/>"
+			return "俯卧在地，翘起你[npc.ass+]，露出下体，引诱[npc2.name]用俯卧后入位和你做爱。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "[npc.Name] [npc.verb(lie)] down on [npc.her] front before [npc2.name],"
-					+ " letting out a little [npc.moan] as [npc.she] [npc.verb(present)] [npc.her] [npc.ass+] and groin to try and encourage [npc2.name] to have sex with [npc.herHim] in the prone bone position.";
+			return "[npc.Name]在[npc2.name]身前俯身趴下，"
+					+ "翘起[npc.ass+]，露出下体，轻声用[npc.moan]激励着[npc2.name]用俯卧位做爱。";
 		}
 		@Override
 		public void applyEffects() {
@@ -1687,29 +1687,29 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Sixty-nine (top)";
+			return "六九式(在上)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] down onto [npc2.her] back and straddle [npc2.her] face, in the sixty-nine position.";
+			return "推倒[npc2.name]并骑在[npc2.her]的脸上，呈六九式。";
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
 				boolean rollsOver = Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT);
-				return "Carefully moving around so as not to wake [npc2.name] up, [npc.name]"
+				return "[npc.name]小心翼翼地移动着[npc2.name]，以免弄醒[npc.her]，"
 						+(rollsOver
-								?" slowly [npc.verb(roll)] [npc2.herHim] over onto [npc2.her] back and then"
+								?"慢慢将[npc2.herHim]翻过身去，让[npc2.her]背部朝上，随后"
 								:"")
-						+ " [npc.verb(lower)] [npc.herself] over [npc2.herHim] to get into the sixty-nine position."
-						+ " After hungrily licking [npc.her] [npc.lips+], [npc.she] softly [npc.verb(whisper)],"
-						+ " <i>[npc.speech(Let me give you some sweet dreams...)]</i>";
+						+ "俯身贴近形成69体位。"
+						+ "[npc.she]饥渴地舔了舔[npc.lips+]，轻声地耳语道，"
+						+ "<i>[npc.speech(让我给你一些带来一场美梦吧……)]</i>";
 			}
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto [npc2.her] back."
-					+ " Quickly lowering [npc.herself] down onto all fours over the top of [npc2.herHim],"
-						+ " [npc.she] [npc.verb(drop)] [npc.her] crotch down over [npc2.her] face as [npc.she] similarly [npc.verb(position)] [npc.her] own head over [npc2.her] groin."
-					+ " Looking back beneath [npc.herHim], [npc.name] [npc.moansVerb], "
-					+ "[npc.speech(Good [npc2.girl]! Now let's have some fun!)]";
+			return "[npc.name]抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒。"
+					+ "[npc.her]快速放倒[npc.herself]，四肢着地在[npc2.herHim]上面，"
+						+ "[npc.she]将胯部躺到[npc2.her]的脸上，并同样伏到[npc2.her]的腹股沟处。"
+					+ "回头看看下面的[npc.herHim]，[npc.name][npc.moansVerb]，"
+					+ "[npc.speech(好[npc2.girl]！来爽一爽吧！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1736,17 +1736,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Sixty-nine (top) (R)";
+			return "六九式(在上)(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try and push [npc2.name] down onto [npc2.her] back so that you can sixty-nine with [npc2.herHim].<br/>"
+			return "尝试推倒[npc2.name]并骑在[npc2.her]的脸上，以便你能和[npc2.herHim]六九。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Reaching up to take hold of [npc2.namePos] shoulders, you put on the most enticing look you can muster as you try to push [npc2.herHim] down, pleading,"
-					+ " [npc.speech(I want to sixty-nine with you... Please!)]";
+			return "你抓住[npc2.namePos]的肩膀，用极具魅惑力的眼神请求[npc2.herHim]仰面躺下，"
+					+ "[npc.speech(我想和你做六九式……求你了！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1776,17 +1776,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Sixty-nine (bottom)";
+			return "六九式(在下)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Lie down on your back and let [npc2.name] straddle your face, in the sixty-nine position.";
+			return "仰面躺下，让[npc2.name]骑在你的脸上，呈六九式。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(tug)] [npc2.herHim] down on top of [npc.herHim] as [npc.she] [npc.verb(lie)] down on [npc.her] back."
-					+ " Pulling [npc2.her] [npc2.hips] back so that [npc2.sheIs] in a reversed all-fours position over the top of [npc.herHim], [npc.name] [npc.verb(look)] up at [npc2.her] crotch hovering over [npc.her] face, and [npc.moansVerb],"
-					+ " [npc.speech(Good [npc2.girl]! It's time for some oral fun!)]";
+			return "在[npc.name]仰面躺下时，[npc.herHim]抓住[npc2.namePos]的肩膀，将[npc2.herHim]拽倒并使其趴在[npc.herHim]的身上。"
+					+"[npc.Name]抓着[npc2.hips]把[npc2.name][npc2.hips]拉倒，让[npc2.sheIs]四肢着地地趴在你身上。看着近在脸前的胯部，[npc.Name][npc.moansVerb]着，"
+					+ "[npc.speech(好[npc2.girl]！来享受口交吧！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1813,17 +1813,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Sixty-nine (bottom) (R)";
+			return "六九式(在下)(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Lie down on your back and ask [npc2.name] to sixty-nine with you.<br/>"
+			return "仰面躺下，让[npc2.name]与你呈六九式。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Sinking down to lie on your back, you put on the most enticing look you can muster as you plead, "
-					+ "[npc.speech(I want to sixty-nine with you... Please!)]";
+			return "你低身仰躺，尽可能展现出你的魅力请求，"
+					+ "[npc.speech(我想和你玩六九式……求你了！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1850,28 +1850,28 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Cowgirl (riding)";
+			return "骑乘位(在上)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] down onto [npc2.her] back and straddle [npc2.her] groin, in the cow-girl position.";
+			return "让[npc2.name]仰面躺下，骑在[npc2.her]的下体上，呈骑乘位。";
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
 				boolean rollsOver = Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT);
-				return "Carefully moving around so as not to wake [npc2.name] up, [npc.name]"
+				return "[npc.name]小心翼翼地移动着[npc2.name]，以免弄醒[npc.her]，"
 						+(rollsOver
-								?" slowly [npc.verb(roll)] [npc2.herHim] over onto [npc2.her] back and then"
+								?"慢慢将[npc2.herHim]翻过身去，让[npc2.her]背部朝上，随后"
 								:"")
-						+ " [npc.verb(straddle)] [npc2.herHim] in the cowgirl position."
-						+ " Once [npc.sheHas] made [npc.herself] comfortable, [npc.she] [npc.verb(grin)] down at [npc2.name] and softly [npc.verb(whisper)],"
-						+ " <i>[npc.speech(Stay asleep while I ride you...)]</i>";
+						+ "以骑乘位姿势跨了上去。"
+						+"[npc.name]调整好姿势，俯视着[npc2.name]咧嘴一笑，轻声耳语道，"
+						+ "<i>[npc.speech(乖乖睡着让我骑上来……)]</i>";
 			}
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto [npc2.her] back."
-					+ " [npc.She] then lowers [npc.herself] down on top of [npc2.herHim], bringing [npc.her] crotch down to bump against [npc2.hers] as [npc.she] [npc.verb(straddle)] [npc2.herHim] in the cowgirl position."
-					+ " Once [npc.sheHas] made [npc.herself] comfortable, [npc.she] [npc.verb(grin)] down at [npc2.name] and [npc.moansVerb],"
-					+ " [npc.speech(Good [npc2.girl]! It's time to give you a ride!)]";
+			return "[npc.name]抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒。"
+					+"接着，[npc.name]保持上位俯身，用骑乘式跨坐在[npc2.name]身上，把胯部向下顶。"
+					+"调整好位置，[npc.name]咧嘴一笑，看着[npc2.name]，[npc.moansVerb]着，"
+					+ "[npc.speech(好[npc2.girl]！该给你骑一下了！)]"; 
 		}
 		@Override
 		public void applyEffects() {
@@ -1907,17 +1907,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Cowgirl (riding) (R)";
+			return "骑乘位(在上)(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try to push [npc2.name] down onto [npc2.her] back so that you can straddle [npc2.herHim] in the cowgirl position.<br/>"
+			return "尝试推倒[npc2.name]，以便你能以骑乘位坐在[npc2.herHim]身上。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Lifting your [npc.arms], you take hold of [npc2.namePos] shoulders, and with a little pressure, try to get [npc2.herHim] to drop down onto [npc2.her] back as you plead, "
-					+ "[npc.speech(Let me ride you... Please!)]";
+			return "你抓住[npc2.namePos]肩膀，稍稍用力，请求[npc2.herHim]仰面躺下，"
+					+ "[npc.speech(让我骑骑你……好不好嘛！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1944,18 +1944,18 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Cowgirl (bottom)";
+			return "骑乘位(在下)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Lie down onto your back and get [npc2.name] to straddle your groin, in the cow-girl position.";
+			return "仰面躺下，让[npc2.name]骑在你的下体上，呈骑乘位。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(pull)] [npc2.herHim] down with [npc.herHim] as [npc.she] [npc.verb(lie)] down on [npc.her] back."
-					+ " With a firm grip on [npc2.namePos] [npc2.hips], [npc.she] [npc.verb(push)] [npc2.herHim] back so that [npc2.sheIs] straddling [npc.herHim] in the cowgirl position."
-					+ " Once [npc.sheHas] made [npc.herself] comfortable, [npc.she] [npc.verb(grin)] up at [npc2.name] and [npc.moansVerb],"
-					+ " [npc.speech(Good [npc2.girl]! It's time for you to have a ride!)]";
+			return "[npc.Name]抓住[npc2.namePos]肩膀，仰面向上，拉着[npc2.herHim]一起躺下。"
+					+"[npc.name]紧紧抓住[npc2.namePos]的[npc2.hips]，让[npc2.sheIs]用骑乘位跨坐在自己身上。"
+					+"调整好位置，[npc.name]咧嘴一笑，看着[npc2.name]，[npc.moansVerb]着，"
+					+"[npc.speech(好[npc2.girl]！该骑上来了！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -1991,17 +1991,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Cowgirl (bottom) (R)";
+			return "骑乘位(在下)(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Lie down on your back and ask [npc2.name] to straddle you in the cowgirl position.<br/>"
+			return "仰面躺下，让[npc2.name]以骑乘位骑在你身上。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Dropping down and quickly lying on your back, you put on the most enticing look you can muster as you plead, "
-					+ "[npc.speech(Come and ride me... Please!)]";
+			return "你仰面躺下，尽可能展现你的魅力，恳求着，"
+					+ "[npc.speech(来骑我吧……求你了！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -2028,28 +2028,28 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Sit on face";
+			return "颜面骑乘";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Push [npc2.name] down onto [npc2.her] back and sit on [npc2.her] face.";
+			return "让[npc2.name]仰面躺下，坐在[npc2.her]的脸上。";
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
 				boolean rollsOver = Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.LYING_DOWN_ON_FRONT);
-				return "Carefully moving around so as not to wake [npc2.name] up, [npc.name]"
+				return "[npc.name]小心翼翼地移动着[npc2.name]，以免弄醒[npc.her]，"
 						+(rollsOver
-								?" slowly [npc.verb(roll)] [npc2.herHim] over onto [npc2.her] back and then"
+								?"慢慢将[npc2.herHim]翻过身去，让[npc2.her]背部朝上，随后"
 								:"")
-						+ " [npc.verb(lower)] [npc.herself] down onto [npc2.her] face."
-						+ " [npc.She] then gradually [npc.verb(allow)] [npc.her] [npc.legs] to give way and firmly [npc.verb(plant)] [npc.her] groin down against [npc2.namePos] mouth."
-						+ " With a big grin on [npc.her] [npc.face+], [npc.she] softly whispers,"
-						+ " <i>[npc.speech(You're such a deep sleeper... Now let me ride your face...)]</i>";
+						+ "将身体缓缓沉下，压在了[npc2.her]的面庞上。"
+						+ "[npc.name]缓缓分开[npc.legs]，将下体紧紧压在[npc2.namePos]的嘴上。"
+						+ "[npc.she]脸上挂着灿烂的笑容，轻声低语道，"
+						+ "<i>[npc.speech(你睡得可真沉……现在我要骑到你脸上咯……)]</i>";
 			}
-			return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto [npc2.her] back."
-					+ " [npc.She] then [npc.verb(lower)] [npc.herself] down over the top of [npc2.herHim], such that [npc.her] crotch is hovering just above [npc2.her] [npc2.face]."
-					+ " Once [npc.sheHas] made [npc.herself] comfortable, [npc.she] [npc.verb(allow)] [npc.her] [npc.legs] to give way, firmly planting [npc.her] groin down against [npc2.namePos] mouth.";
+			return "[npc.name]抓住[npc2.namePos]的肩膀，将[npc2.herHim]推倒。"
+					+"[npc.name]保持上位俯身，把小腹靠近[npc2.her]的脸。"
+					+"[npc.name]调整好位置，配合着分开[npc.legs]，把下体对准[npc2.namePos]的嘴。";
 		}
 		@Override
 		public void applyEffects() {
@@ -2076,17 +2076,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Sit on face (R)";
+			return "颜面骑乘(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try to push [npc2.name] down onto [npc2.her] back so that you can sit on [npc2.her] face.<br/>"
+			return "你把[npc2.name]仰面推倒，顺势骑在[npc2.her]的脸上。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Reaching up to take hold of [npc2.namePos] shoulders, you try to push [npc2.herHim] down onto [npc2.her] back, pleading, "
-					+ "[npc.speech(Please, let me sit on your face!)]";
+			return "你近身抓住[npc2.namePos]的肩膀，然后把他仰面推倒，请求道，"
+					+ "[npc.speech(求你了，让我坐在你脸上吧！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -2113,17 +2113,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Face sitting";
+			return "被颜面骑乘";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Lie down on your back and get [npc2.name] to sit on your face.";
+			return "仰面躺下，让[npc2.name]坐在你的脸上。";
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(pull)] [npc2.herHim] down with [npc.herHim] as [npc.she] [npc.verb(lie)] down on [npc.her] back."
-					+ " Reaching around to grab [npc2.her] thighs, [npc.she] then [npc.verb(pull)] [npc2.herHim] down on top of [npc.herHim], so that [npc2.her] crotch is hovering just over [npc.her] [npc.face]."
-					+ " At that moment, [npc2.namePos] [npc2.legs] suddenly give way, causing [npc2.herHim] to firmly plant [npc2.her] groin down against [npc.namePos] mouth.";
+			return "[npc.Name]抓住[npc2.namePos]的[npc2.arms]，拉着他对着自己躺下。"
+					+"[npc.name]贴身抓住[npc2.name]，把[npc2.her]的小腹拉到自己脸前。"
+					+"[npc2.namePos]接着张开腿，使自己的小腹正对[npc.namePos]的嘴。";
 		}
 		@Override
 		public void applyEffects() {
@@ -2150,17 +2150,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Face sitting (R)";
+			return "被颜面骑乘(请求)";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Try to lie down on your back so that [npc2.name] can sit on your face.<br/>"
+			return "试着仰面躺下，让[npc2.name]能坐在你的脸上。<br/>"
 						+ getRequestTooltipText();
 		}
 		@Override
 		public String getDescription() {
-			return "Taking hold of [npc2.namePos] [npc2.hands], you move to lie down on your back, pleading, "
-					+ "[npc.speech(Please, sit on my face!)]";
+			return "你抓住[npc2.namePos]的[npc2.hands]，躺下请求道，"
+					+ "[npc.speech(求你了，坐在我脸上吧！)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -2199,32 +2199,32 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Mating press";
+			return "授种式";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).hasLegs()) {
-				return "Force [npc2.name] down onto [npc2.her] back, push [npc2.her] [npc2.legs] apart and up towards [npc2.her] head, and then lie down on top of [npc2.herHim], in the 'mating press' position.";
+				return "让[npc2.name]仰面躺下，把[npc2.her]的[npc2.legs]分开，压向脑袋的方向，随后俯下身体压在[npc2.herHim]身上，呈“授种式”体位。";
 			} else {
-				return "Force [npc2.name] down onto [npc2.her] back, then lie down on top of [npc2.herHim], in the 'mating press' position.";
+				return "让[npc2.name]仰面躺下，随后俯下身体压在[npc2.herHim]身上，呈“授种式”体位。";
 			}
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterTargetedForSexAction(this).hasLegs()) {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto the ground, forcing [npc2.herHim] to lie on [npc2.her] back."
-						+ " Grabbing [npc2.her] [npc2.legs], [npc.name] [npc.verb(push)] them apart and back up towards [npc2.her] head, before lying down on top of [npc2.herHim] and bumping [npc.her] groin against [npc2.hers]."
-						+ " Pinning [npc2.namePos] wrists to the floor on either side of [npc2.her] head, [npc.name] [npc.moansVerb],"
-						+ " [npc.speech(It's time to"
+				return "[npc.Name]抓住[npc2.namePos]肩膀，顺势正面把他推倒在地。"
+						+ "[npc.Name]分开[npc2.her]的[npc2.legs]，靠了过去，然后俯身拉进彼此的小腹的距离。"
+						+"[npc.Name]抓住[npc2.namePos]的手腕，把他们固定在[npc2.her]头部两侧，小口喘气，"
+						+ "[npc.speech(是时候"
 						+ UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this),
-								"#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN give you a good hard fuck!#ELSE breed you!#ENDIF")
+								"#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN狠狠地操你一顿了！#ELSE给你配种了！#ENDIF")
 						+ ")]";
 			} else {
-				return "Taking hold of [npc2.namePos] shoulders, [npc.name] [npc.verb(push)] [npc2.herHim] down onto the ground, forcing [npc2.herHim] to lie on [npc2.her] back."
-						+ " Quickly lying down on top of [npc2.herHim], [npc.she] [npc.verb(bump)] [npc.her] groin against [npc2.hers], before pinning [npc2.namePos] wrists to the floor on either side of [npc2.her] head and [npc.moaning],"
-						+ " [npc.speech(It's time to"
+				return "[npc.Name]抓住[npc2.namePos]肩膀，顺势正面把他推倒在地。"
+						+ "[npc.name]迅速保持上位压在[npc2.namePos]身上，把[npc2.her]双手压在头部两侧，把自己的下身逼向[npc2.her]的，[npc.moaning]着，"
+						+ "[npc.speech(是时候"
 						+ UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this),
-								"#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN give you a good hard fuck!#ELSE breed you!#ENDIF")
+								"#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN狠狠地操你一顿了！#ELSE给你配种了！#ENDIF")
 						+ ")]";
 			}
 		}
@@ -2254,30 +2254,30 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Mating pressed (R)";
+			return "授种式(请求)";
 		}
 		@Override
 		public String getActionDescription() {
 			if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-				return "Get down on your back and pull your [npc.legs] apart and back up towards your head, presenting yourself to be mounted and bred in the 'mating press' position.<br/>"
+				return "你正面躺下，把两腿分开掰到头部两侧，以授种式展示自己的私处，等待对方骑上来操你，<br/>"
 							+ getRequestTooltipText();
 			} else {
-				return "Get down on your back and present your groin to [npc2.name] so that you're ready to be mounted and bred in the 'mating press' position.<br/>"
+				return "你正面躺下，以授种式展示自己的私处，等待对方骑上来操你，<br/>"
 							+ getRequestTooltipText();
 			}
 		}
 		@Override
 		public String getDescription() {
 			if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-				return "Before [npc2.name] can react, you quickly drop down onto your back, before spreading your [npc.legs] and pulling them back up towards your head."
-						+ " Presenting your groin to [npc2.name], you [npc.moansVerb],"
-						+ " [npc.speech(Pin me down and"
-						+ UtilText.parse(Main.sex.getCharacterPerformingAction(), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN fuck me!#ELSE breed me!#ENDIF")
+				return "[npc2.name]还没来得及反应，你就仰面躺下，然后把[npc.legs]分开，压向脑袋的方向。"
+						+"你晃动下体，[npc.moansVerb]道，"
+						+ "[npc.speech(压上来"
+						+ UtilText.parse(Main.sex.getCharacterPerformingAction(), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN操我！#ELSE给我配种！#ENDIF")
 						+ ")]";
 			} else {
-				return "Before [npc2.name] can react, you quickly drop down onto your back, before presenting your groin to [npc2.name] and [npc.moaning],"
-						+ " [npc.speech(Pin me down and"
-						+ UtilText.parse(Main.sex.getCharacterPerformingAction(), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN fuck me!#ELSE breed me!#ENDIF")
+				return "你不等[npc2.name]有所反应，直接躺在[npc2.her]面前，露出腹部[npc.moaning]道，"
+						+ "[npc.speech(压上来"
+						+ UtilText.parse(Main.sex.getCharacterPerformingAction(), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN操我！#ELSE给我配种！#ENDIF")
 						+ ")]";
 			}
 		}
@@ -2371,49 +2371,49 @@ public class GenericPositioning {
 		public String getActionTitle() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Doggy-style fucked";
+					return "被后入";
 				} else {
-					return "Get fucked";
+					return "开始被操";
 				}
 			} else {
-				return "Get mounted";
+				return "开始被骑乘";
 			}
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Drop down onto all fours so that [npc2.name] can fuck you, doggy-style.";
+					return "四肢跪地，以便[npc2.name]用后入式体位操你。";
 				} else {
-					return "Drop down onto all fours so that [npc2.name] can mount and rut you.";
+					return "四肢跪地，以便[npc2.name]骑上来跟你交配。";
 				}
 			} else {
-				return "Present your hindquarters to [npc2.name] and get [npc2.herHim] to mount your animalistic body.";
+				return "把你的臀部和后腿朝向[npc2.name]，以便[npc2.herHim]骑上你动物化的后股。";
 			}
 		}
 		@Override
 		public String getDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Wanting to get fucked by [npc2.name] in the doggy-style position, [npc.name] [npc.verb(drop)] down onto all fours before [npc2.herHim]."
-							+ " Crawling back and pushing [npc.her] [npc.ass+] against [npc2.namePos] groin, [npc.she] [npc.verb(look)] back over [npc.her] shoulder and [npc.moansVerb],"
-							+ " [npc.speech(Come on, fuck me like an animal!)]";
+					return "[npc.name]在[npc2.name]前四肢着地，想被[npc2.herHim]以后入式操干。"
+							+"[npc.name]回头，把自己[npc.ass+]凑向[npc2.namePos]小腹，[npc.moansVerb]着，"
+							+ "[npc.speech(来吧，像动物一样操我！)]";
 				} else {
-					return "Wanting [npc2.name] to mount [npc.herHim] and start rutting [npc.herHim] like an animal, [npc.name] [npc.verb(drop)] down onto all fours before [npc2.herHim]."
-							+ " Crawling back so that [npc.sheIs] under [npc2.namePos] feral [npc2.legRace]'s body, [npc.she] [npc.verb(raise)] [npc.her] [npc.hips+] and [npc.moansVerb],"
-							+ " [npc.speech(Come on, mount me already!)]";
+					return "[npc.name]四肢着地趴在[npc2.name]面前，挑动着[npc.herHim]的情欲，勾引着[npc2.herHim]骑上来像动物发情一样操[npc.her]。"
+							+ "[npc.she]像动物一样四肢着地后退，抬起[npc.hips+]凑向[npc2.namePos]野性的躯体，[npc.moansVerb]着，"
+							+ "[npc.speech(来吧，骑上我吧！)]";
 				}
 				
 			} else {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Wanting [npc2.name] to fuck [npc.herHim], [npc.name] [npc.verb(turn)] around and [npc.verb(present)] the rear end of [npc.her] feral [npc.legRace]'s body to [npc2.herHim]."
-							+ " Stepping back and pushing [npc.her] [npc.ass+] against [npc2.namePos] groin, [npc.she] [npc.verb(look)] back over [npc.her] shoulder and [npc.moansVerb],"
-							+ " [npc.speech(Come on, fuck me like an animal!)]";
+					return "[npc.Name]转身，露出自己[npc.legRace]态的后半身，示意[npc2.name]狠狠地操进来。"
+							+"[npc.namePos]转头退步，把[npc2.namePos]的小腹拉到自己[npc.ass+]前，[npc.moansVerb]道，"
+							+ "[npc.speech(来吧，像动物一样操我！)]";
 				} else {
-					return "Wanting [npc2.name] to mount [npc.herHim] and start rutting [npc.herHim], [npc.name] [npc.verb(present)] the rear end of [npc.her] feral [npc.legRace]'s body to [npc2.herHim]."
-							+ " Stepping back and pushing [npc.her] [npc.ass+] against [npc2.name], [npc.she] [npc.verb(force)] [npc2.herHim] to rear up and mount [npc.herHim]."
-							+ " Looking back over [npc.her] shoulder, [npc.she] [npc.moansVerb],"
-							+ " [npc.speech(That's right, fuck me like an animal!)]";
+					return "[npc.Name]露出自己[npc.legRace]态的后半身，挑动着[npc.Name]的兽性，暗示[npc.her]骑在上来像发情的动物一样操[npc.her]。"
+							+"[npc.name]往后退抬起屁股，强行让[npc2.name]骑上来。"
+							+"[npc.she]回头[npc.moansVerb]道，"
+							+"[npc.speech(就是这样！像动物一样操我！)]";
 				}
 			}
 		}
@@ -2475,26 +2475,26 @@ public class GenericPositioning {
 		public String getActionTitle() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Doggy-style fucked (R)";
+					return "被后入(请求)";
 				} else {
-					return "Get fucked (R)";
+					return "开始被操(请求)";
 				}
 			} else {
-				return "Get mounted (R)";
+				return "开始被骑乘(请求)";
 			}
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Drop down onto all fours and ask [npc2.name] to fuck you, doggy-style.<br/>"
+					return "你趴下身，让[npc2.name]后入你。<br/>"
 						+ getRequestTooltipText();
 				} else {
-					return "Drop down onto all fours and present yourself to [npc2.name] in the hopes that [npc2.she] wants to mount and rut you.<br/>"
+					return "你趴着露出自己私处，暗示[npc2.name]骑上来像发情的动物一样操你。<br/>"
 						+ getRequestTooltipText();
 				}
 			} else {
-				return "Present your hindquarters to [npc2.name], in the hopes that [npc2.she] wants to mount your animalistic body and fuck you.<br/>"
+				return "你露出后臀，暗示[npc2.name]骑上来像发情的动物一样操你。<br/>"
 						+ getRequestTooltipText();
 			}
 		}
@@ -2502,24 +2502,24 @@ public class GenericPositioning {
 		public String getDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Wanting to get fucked by [npc2.name] in the doggy-style position, [npc.name] [npc.verb(drop)] down onto all fours before [npc2.herHim]."
-							+ " Crawling back and pushing [npc.her] [npc.ass+] against [npc2.namePos] groin, [npc.she] [npc.verb(look)] back over [npc.her] shoulder and [npc.verb(plead)],"
-							+ " [npc.speech(Please, fuck me like an animal!)]";
+					return "[npc.name]在[npc2.name]前四肢着地，想被[npc2.herHim]以后入式操干。"
+							+ "[npc.name]倒退着爬行，用[npc.ass+]顶向[npc2.namePos]的小腹，回头恳求道，"
+							+ "[npc.speech(求你了，像动物一样操我吧！)]";
 				} else {
-					return "Wanting [npc2.name] to mount [npc.herHim] and start rutting [npc.herHim] like an animal, [npc.name] [npc.verb(drop)] down onto all fours before [npc2.herHim]."
-							+ " Crawling back so that [npc.sheIs] under [npc2.namePos] feral [npc2.legRace]'s body, [npc.she] [npc.verb(raise)] [npc.her] [npc.hips+] and [npc.verb(plead)],"
-							+ " [npc.speech(Please, fuck me like an animal!)]";
+					return "[npc.name]四肢着地趴在[npc2.name]面前，挑动着[npc.herHim]的情欲，勾引着[npc2.herHim]骑上来像动物发情一样操[npc.her]。"
+							+"[npc.name]倒退着爬到[npc2.namePos]兽态身躯下，抬起[npc.hips+]，恳求道，"
+							+ "[npc.speech(求你了，像动物一样操我吧！)]";
 				}
 				
 			} else {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Wanting [npc2.name] to fuck [npc.herHim], [npc.name] [npc.verb(turn)] around and [npc.verb(present)] the rear end of [npc.her] feral [npc.legRace]'s body to [npc2.herHim]."
-							+ " Stepping back and pushing [npc.her] [npc.ass+] against [npc2.namePos] groin, [npc.she] [npc.verb(look)] back over [npc.her] shoulder and [npc.verb(plead)],"
-							+ " [npc.speech(Please, fuck me like an animal!)]";
+					return "[npc.Name]转身，露出自己[npc.legRace]态的后半身，示意[npc2.name]狠狠地操进来。"
+							+"[npc.name]转头往后退对准[npc2.namePos]小腹抬起[npc.ass+]，请求道，"
+							+ "[npc.speech(求你了，像动物一样操我吧！)]";
 				} else {
-					return "Wanting [npc2.name] to mount [npc.herHim] and start rutting [npc.herHim] like an animal, [npc.name] [npc.verb(present)] the rear end of [npc.her] feral [npc.legRace]'s body to [npc2.herHim]."
-							+ " Stepping back and pushing [npc.her] [npc.ass+] against [npc2.name], [npc.she] [npc.verb(look)] back over [npc.her] shoulder and [npc.verb(plead)],"
-							+ " [npc.speech(Please, fuck me like an animal!)]";
+					return "[npc.Name]露出自己[npc.legRace]态的身躯的后部，挑动着[npc.Name]的兽性，暗示[npc.her]骑在上来像发情的动物一样操[npc.her]。"
+							+"[npc.name]转头往后退抬起[npc.ass+]，请求道，"
+							+ "[npc.speech(求你了，像动物一样操我吧！)]";
 				}
 			}
 		}
@@ -2550,48 +2550,48 @@ public class GenericPositioning {
 		public String getActionTitle() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Doggy-style [npc2.herHim]";
+					return "后入[npc2.herHim]";
 				} else {
-					return "Fuck [npc2.herHim]";
+					return "操[npc2.herHim]";
 				}
 			} else {
-				return "Mount [npc2.herHim]";
+				return "骑乘[npc2.herHim]";
 			}
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Make [npc2.name] get down on all fours so that you can fuck [npc2.herHim], doggy-style.";
+					return "让[npc2.name]四肢跪地，以便你用后入式体位操[npc2.herHim]。";
 				} else {
-					return "Make [npc2.name] present [npc2.herself] to you so that you can fuck [npc2.herHim].";
+					return "让[npc2.name]把[npc2.herself]自己朝向你，以便你可以操[npc2.herHim]。";
 				}
 			} else {
-				return "Make [npc2.name] present [npc2.her] hindquarters to you so that you can mount [npc2.herHim].";
+				return "让[npc2.name]把臀部和后腿朝向你，以便你骑上[npc2.herHim]动物化的后股。";
 			}
 		}
 		@Override
 		public String getDescription() {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
 				if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-					return "Wanting to fuck [npc2.name] in the doggy-style position, [npc.name] [npc.verb(push)] [npc2.herHim] down onto all fours before [npc.herHim]."
-							+ " Kneeling down behind [npc2.herHim], [npc.she] [npc.verb(grip)] [npc2.her] [npc2.hips+] and [npc.verb(pull)] [npc2.her] [npc2.ass+] back against [npc.her] groin, [npc.moaning],"
-							+ " [npc.speech(Time to fuck you like an animal!)]";
+					return "[npc.Name]把[npc2.herHim]摁倒在身前，让[npc2.herHim]四肢着地，准备后入[npc.herHim]。"
+							+ "跪在[npc2.herHim]后面，[npc.she]抓住[npc2.her][npc2.hips+]并将[npc2.her][npc2.ass+]对准[npc.her]的腹股沟，[npc.moaning]着，"
+							+ "[npc.speech(是时候像动物一样操你了！)]";
 				} else {
-					return "Wanting to mount [npc2.name] and start rutting [npc2.herHim] like an animal, [npc.name] [npc.verb(push)] [npc2.herHim] down onto all fours before [npc.herHim]."
-							+ " Stepping over [npc2.herHim] so that [npc2.sheIs] under [npc.her] feral [npc.legRace]'s body, [npc.she] [npc.verb(bend)] [npc.her] [npc.legs] a little and [npc.moansVerb],"
-							+ " [npc.speech(Oh yes, now to fuck you like an animal!)]";
+					return "[npc.Name]把[npc2.name]摁倒在身前，让[npc2.herHim]四肢着地，准备骑上去像发情的动物一样操[npc2.herHim]。"
+							+ "[npc.name]往前走，让[npc2.name]躺在自己[npc.legRace]态的身躯下，微微曲腿，[npc.moansVerb]道，"
+							+ "[npc.speech(没错，现在让我像动物一样操你！)]";
 				}
 				
 			} else {
 				if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-					return "Wanting to fuck [npc2.name], [npc.name] [npc.verb(move)] around behind [npc2.her] feral [npc2.legRace]'s body."
-							+ " With [npc2.her] rear end now presented to [npc.herHim], [npc.she] [npc.verb(grip)] [npc2.her] [npc2.hips] and [npc.verb(push)] [npc.her] groin against [npc2.her] [npc2.ass+], [npc.moaning],"
-							+ " [npc.speech(Time to fuck you like an animal!)]";
+					return "[npc.Name]移到[npc2.name][npc2.legRace]态的身躯后，准备操[npc2.her]。"
+							+"[npc.name]抓住[npc2.name]的[npc2.hips]把下体推到[npc2.her]身后，[npc.moaning]着，"
+							+ "[npc.speech(是时候像动物一样操你了！)]";
 				} else {
-					return "Wanting to mount [npc2.name] and start rutting [npc2.herHim] like an animal, [npc.name] [npc.verb(move)] around behind [npc2.her] feral [npc2.legRace]'s body."
-							+ " With [npc2.her] rear end now presented to [npc.herHim], [npc.she] [npc.verb(jolt)] forwards and [npc.verb(rear)] up, mounting [npc2.herHim] in one swift movement."
-							+ " [npc.speech(Oh yes, now to fuck you like an animal!)]";
+					return "[npc.Name]移到[npc2.name][npc2.legRace]态的身躯后，准备骑上去像动物一样狠狠地操[npc2.herHim]。"
+							+"[npc.name]靠过去，迅速骑了上去。"
+							+ "[npc.speech(没错，现在让我像动物一样操你！)]";
 				}
 			}
 		}
@@ -2653,25 +2653,25 @@ public class GenericPositioning {
 		public String getActionTitle() {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
 				if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-					return "Doggy-style [npc2.herHim] (R)";
+					return "后入[npc2.herHim](请求)";
 				} else {
-					return "Fuck [npc2.herHim] (R)";
+					return "操[npc2.herHim](请求)";
 				}
 			} else {
-				return "Mount [npc2.herHim] (R)";
+				return "骑乘[npc2.herHim](请求)";
 			}
 		}
 		@Override
 		public String getActionDescription() {
 			if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-				return "Try to get [npc2.name] down on all fours so that you can fuck [npc2.herHim], doggy-style.<br/>"
+				return "你让[npc2.name]四肢着地准备后入。<br/>"
 						+ getRequestTooltipText();
 			} else {
 				if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
-					return "Try to get [npc2.name] down on all fours so that you can mount [npc2.herHim].<br/>"
+					return "你让[npc2.name]四肢着地准备骑上去。<br/>"
 						+ getRequestTooltipText();
 				} else {
-					return "Try to get [npc2.name] to present [npc2.her] hindquarters to you so that you can mount [npc2.herHim].<br/>"
+					return "你让[npc2.name]露出后臀准备骑上去<br/>。"
 						+ getRequestTooltipText();
 				}
 			}
@@ -2680,24 +2680,24 @@ public class GenericPositioning {
 		public String getDescription() {
 			if(!Main.sex.getCharacterTargetedForSexAction(this).isTaur()) {
 				if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-					return "Wanting to fuck [npc2.name] in the doggy-style position, [npc.name] [npc.verb(try)] to push [npc2.herHim] down onto all fours before [npc.herHim]."
-							+ " Gripping [npc2.her] shoulders and exerting a downwards pressure, [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, get down and let me fuck you like an animal!)]";
+					return "[npc.Name]让[npc2.name]四肢着地准备后入。"
+							+ "[npc.name]抓住[npc2.namePos]的肩膀向下压，恳求道，"
+							+ "[npc.speech(求你了，趴下让我像动物一样操你！)]";
 				} else {
-					return "Wanting to mount [npc2.name] and start rutting [npc2.herHim] like an animal, [npc.name] [npc.verb(try)] to push [npc2.herHim] down onto all fours before [npc.herHim]."
-							+ " Gripping [npc2.her] shoulders and exerting a downwards pressure, [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, get down and let me fuck you like an animal!)]";
+					return "[npc.Name]让[npc2.name]四肢着地趴在身前准备骑上去。"
+							+ "[npc.name]抓住[npc2.namePos]的肩膀向下压，恳求道，"
+							+ "[npc.speech(求你了，趴下让我像动物一样操你！)]";
 				}
 				
 			} else {
 				if(!Main.sex.getCharacterPerformingAction().isTaur()) {
-					return "Wanting to fuck [npc2.name], [npc.name] [npc.verb(move)] around behind [npc2.her] feral [npc2.legRace]'s body."
-							+ " With [npc2.her] rear end now presented to [npc.herHim], [npc.she] [npc.verb(grip)] [npc2.her] [npc2.hips] and [npc.verb(plead)],"
-							+ " [npc.speech(Please, let me fuck you like an animal!)]";
+					return "[npc.Name]移到[npc2.name][npc2.legRace]态的身躯后，准备操[npc2.her]。"
+							+ "[npc2.name]的臀部展露在[npc.name]眼前，[npc.name]抓住[npc2.her]的[npc2.hips]，恳求道，"
+							+ "[npc.speech(求你了，让我像动物一样操你吧！)]";
 				} else {
-					return "Wanting to mount [npc2.name] and start rutting [npc2.herHim] like an animal, [npc.name] [npc.verb(move)] around behind [npc2.her] feral [npc2.legRace]'s body."
-							+ " With [npc2.her] rear end now presented to [npc.herHim], [npc.she] [npc.verb(plead)],"
-							+ " [npc.speech(Please, let me mount you!)]";
+					return "[npc.Name]移到[npc2.name][npc2.legRace]态的身躯后，准备骑上去像动物一样狠狠地操[npc2.herHim]。"
+							+ "[npc2.name]的臀部展露在[npc.name]眼前，[npc.she]恳求道，"
+							+ "[npc.speech(求你了，让我骑着你吧！)]";
 				}
 			}
 		}
@@ -2736,17 +2736,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Switch to sitting";
+			return "转成坐姿";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Sit down on a nearby surface, with [npc2.name] kneeling before you, ready to perform oral.";
+			return "坐在旁边的台子上，让[npc2.name]跪在你面前，准备进行口交。";
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc.she] [npc.verb(want)] to switch into a different position, [npc.name] [npc.verb(get)] [npc2.name] to kneel down before a nearby raised surface."
-					+ " Sitting down in front of [npc2.herHim], [npc.name] [npc.moansVerb], "
-					+ "[npc.speech(Yes... This is more like it...)]";
+			return "[npc.name]想换个姿势，于是让[npc2.name]跪在旁边的台子前面。"
+					+ "[npc.Name]坐在[npc2.herHim]面前，[npc.moansVerb]着，"
+					+ "[npc.speech(对……这下更好了……)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -2779,17 +2779,17 @@ public class GenericPositioning {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Switch to sitting";
+			return "转成坐姿";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Get [npc2.name] to sit down on a nearby surface, before stepping over [npc2.herHim] with your lower animalistic body, ready to start fucking [npc2.herHim].";
+			return "让[npc2.name]坐在旁边的台子上，用你动物化的下体靠向[npc2.herHim]，准备操[npc2.herHim]。";
 		}
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc.she] [npc.verb(want)] to switch into a different position, [npc.name] [npc.verb(get)] [npc2.name] to sit down on a nearby raised surface."
-					+ " Stepping up over the top of [npc.her] partner, [npc.name] [npc.moansVerb], "
-					+ "[npc.speech(Yes... It should be fun fucking you like this...)]";
+			return "[npc.name]想换个姿势，于是让[npc2.name]坐在了旁边的台子上。"
+					+ "[npc.name]靠向[npc.her]对象的上身，[npc.moansVerb]着，"
+					+ "[npc.speech(对……这样操你会更爽哦……)]";
 		}
 		@Override
 		public void applyEffects() {
@@ -2855,7 +2855,7 @@ public class GenericPositioning {
 		
 		@Override
 		public String getActionTitle() {
-			return "Respond to positioning request";
+			return "回应姿势切换";
 		}
 
 		@Override
@@ -2876,20 +2876,20 @@ public class GenericPositioning {
 					boolean standing = SexSlotStanding.PERFORMING_ORAL.isStanding(Main.sex.getCharacterPerformingAction());
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "[npc.speech(Don't think that this means you're the one in charge!)]"
-									+ " [npc.name] growls, before "+(standing?"stepping forwards":"kneeling down")+" and bringing [npc.her] [npc.face] to your groin."
-									+ " Reaching up to roughly grab hold of your [pc.hips], [npc.she] looks up into your [pc.eyes] and snarls,"
-									+ " [npc.speech(Just stay still and be thankful that I wanted to do this!)]";
+							return "[npc.speech(不要以为这就意味着你说了算！)]"
+									+"[npc.name]龇牙咆哮，"+(standing?"向前":"跪下")+"让脸凑近你的小腹。"
+									+ "[npc.she]瞪着你，凑过来，粗暴地抓住你的[pc.hips]，嘶声道，"
+									+"[npc.speech(保持安静，然后感激我这么做！)]";
 						default:
-							return "[npc.speech(Oh, yeah, that'd be fun!)]"
-									+ " [npc.name] happily replies, before "+(standing?"stepping forwards":"kneeling down")+" and bringing [npc.her] [npc.face] to your groin."
-									+ " Reaching up to take hold of your [pc.hips], [npc.she] looks up into your [pc.eyes] and [npc.moansVerb],"
-									+ " [npc.speech(Now stay still and enjoy this!)]";
+							return "[npc.speech(啊，太棒啦，那肯定很舒服呢！)]"
+									+ "[npc.name]愉悦地回答道，然后[npc.she]"+(standing?"走上前":"跪下来")+"，将[npc.face]靠近你的下体。"
+									+ "[npc.she]凝视着你，凑过来，抓住你的[pc.hips]，[npc.moansVerb]道，"
+									+ "[npc.speech(现在乖乖尝尝这个吧！)]";
 					}
 					
 				} else {
-					return "Outright refusing to do as you ask, [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(I'm <i>not</i> performing oral on you! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]公然拒绝了你的要求，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(我<i>才不会</i>那样给你口！你<i>敢不敢</i>再试试！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotStanding.PERFORMING_ORAL_BEHIND) {
@@ -2897,20 +2897,20 @@ public class GenericPositioning {
 					boolean standing = SexSlotStanding.PERFORMING_ORAL_BEHIND.isStanding(Main.sex.getCharacterPerformingAction());
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "[npc.speech(Don't think that this means you're the one in charge!)]"
-									+ " [npc.name] growls, before "+(standing?"stepping forwards":"kneeling down")+" and bringing [npc.her] [npc.face] to your [pc.ass+]."
-									+ " Reaching up to roughly grab hold of your [pc.hips], [npc.she] snarls,"
-									+ " [npc.speech(Just stay still and be thankful that I wanted to do this!)]";
+							return "[npc.speech(不要以为这就意味着你说了算！)]"
+									+ "[npc.name]龇牙咆哮，"+(standing?"向前":"跪下")+"让脸凑近你[pc.ass+]。"
+									+ "[npc.she]凑过来，粗暴地抓住你的[pc.hips]，嘶声道，"
+									+"[npc.speech(保持安静，然后感激我这么做！)]";
 						default:
-							return "[npc.speech(Oh, yeah, that'd be fun!)]"
-									+ " [npc.name] happily replies, before "+(standing?"stepping forwards":"kneeling down")+" and bringing [npc.her] [npc.face] to your [pc.ass+]."
-									+ " Reaching up to take hold of your [pc.hips], [npc.she] [npc.moansVerb],"
-									+ " [npc.speech(Now stay still and enjoy this!)]";
+							return "[npc.speech(啊，太棒啦，那肯定很舒服呢！)]"
+									+ "[npc.name]愉悦地回答道，然后[npc.she]"+(standing?"走上前":"跪下来")+"，将[npc.face]靠近你[pc.ass+]。"
+									+ "[npc.she]凑过来，抓住你的[pc.hips]，[npc.moansVerb]道，"
+									+ "[npc.speech(现在乖乖尝尝这个吧！)]";
 					}
 					
 				} else {
-					return "Outright refusing to do as you ask, [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(I'm <i>not</i> performing oral on you! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]公然拒绝了你的要求，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(我<i>才不会</i>那样给你口！你<i>敢不敢</i>再试试！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotStanding.STANDING_DOMINANT
@@ -2919,20 +2919,20 @@ public class GenericPositioning {
 					boolean biped = !Main.sex.getCharacterPerformingAction().isTaur();
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "[npc.speech(Don't think that this means you're the one in charge!)]"
-									+ " [npc.name] growls, before roughly pressing "+(!biped?"[npc.her] feral [npc.legRace] body":"[npc.herself]")+" against your [pc.face]."
-									+ " Bucking [npc.her] [pc.hips], [npc.she] snarls,"
-									+ " [npc.speech(Just get to it already, and be thankful that I wanted you to do this!)]";
+							return "[npc.speech(不要以为这就意味着你说了算！)]"
+									+ "[npc.name]咆哮道，然后将"+(!biped?"[npc.her]兽态的[npc.legRace]身体":"[npc.herself]")+"压向你的[pc.face]。"
+									+"[npc.she]晃着[pc.hips]，嘶声道，"
+									+ "[npc.speech(做好准备，然后感谢我让你这么做！)]";
 						default:
-							return "[npc.speech(Oh, yeah, that'd be fun!)]"
-									+ " [npc.name] happily replies, before pressing "+(!biped?"[npc.her] feral [npc.legRace] body":"[npc.herself]")+" against your [pc.face]."
-									+ " Bucking [npc.her] [pc.hips], [npc.she] [npc.moansVerb],"
-									+ " [npc.speech(Go on then, get to it!)]";
+							return "[npc.speech(啊，太棒啦，那肯定很舒服呢！)]"
+									+ "[npc.name]愉悦地回答道，然后"+(!biped?"将[npc.her]兽态的[npc.legRace]身体":"")+"压向你的[pc.face]。"
+									+ "[npc.she]扭动着[npc.her][pc.hips]，[npc.moansVerb]道，"
+									+ "[npc.speech(继续嘛，就这样干！)]";
 					}
 					
 				} else {
-					return "Outright refusing to do as you ask, [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(I'm <i>not</i> interested in having you perform oral on me! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]公然拒绝了你的要求，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(我<i>才不会</i>对你给我口感兴趣！你<i>敢不敢</i>再试试！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotAllFours.ALL_FOURS) {
@@ -2943,35 +2943,35 @@ public class GenericPositioning {
 					StringBuilder sb = new StringBuilder();
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							sb.append("[npc.speech(Don't think that this means you're the one in charge!)]"
-									+ " [npc.name] growls, before "+(!biped?"roughly pushing [npc.her] feral [npc.legRace] body":"dropping down onto all fours and pushing [npc.herself]")+" back against you."
-									+ " Bucking [npc.her] [pc.hips], [npc.she] snarls,"
-									+ " [npc.speech(Just get to it "+(!bipedPlayer?"and mount me":"and fuck me")+" already, and be thankful that I wanted you to do this!)]");
+							sb.append("[npc.speech(不要以为这就意味着你说了算！)]"
+									+ "[npc.name]咆哮道，然后"+(biped?"粗暴地将[npc.her]兽态的[npc.legRace]身体":"四肢跪地并将身体")+"压向你。"
+									+"[npc.she]晃着[pc.hips]，嘶声道，"
+									+"[npc.speech(过来准备"+(!bipedPlayer?"骑在我身上":"上来操我")+"，感谢我让你这么做！)]");
 							break;
 						default:
-							sb.append("[npc.speech(Oh, yeah, that'd be fun!)]"
-									+ " [npc.name] happily replies, before "+(biped?"eagerly pushing [npc.her] feral [npc.legRace] body":"dropping down onto all fours and pushing [npc.herself]")+" back against you."
-									+ " Bucking [npc.her] [pc.hips], [npc.she] [npc.moansVerb],"
-									+ " [npc.speech(Come on, "+(!bipedPlayer?"mount me":"fuck me")+" already!)]");
+							sb.append("[npc.speech(啊，太棒啦，那肯定很舒服呢！)]"
+									+ "[npc.name]愉悦地回答道，然后"+(biped?"饥渴地将[npc.her]兽态的[npc.legRace]身体":"四肢跪地并将身体")+"压向你。"
+									+"[npc.she]晃着[pc.hips]，[npc.moansVerb]道，"
+									+ "[npc.speech(来吧，"+(!bipedPlayer?"骑上我":"操我")+"吧！)]");
 							break;
 					}
 					sb.append((!bipedPlayer
 										?(!biped
 											?"<br/>"
-												+ "Doing as [npc.she] asks, you rear up onto your hind legs, and, jolting forwards, you mount [npc.herHim]."
-												+ " [npc.She] lets out a desperate [npc.moan] in response to your eager move, and,"
-													+ " allowing you to use [npc.her] body to support your weight, [npc.she] prepares for you to start rutting [npc.herHim] like an animal."
+												+"听到要求，你抬起前肢靠过去，骑了上去。"
+												+"看着你饥渴的样子，[npc.She]发出迷乱的[npc.moan]，"
+													+ "[npc.her]支撑着你，准备被你像发情的动物一样狠操。"
 											:"<br/>"
-												+ "Doing as [npc.she] asks, you step forwards so that you're standing over [npc.herHim], before lowering yourself down a little in order to mount [npc.herHim]."
-												+ " [npc.She] lets out a desperate [npc.moan] in response to your eager move, and prepares for you to start rutting [npc.herHim] like an animal.")
+												+"听到要求，你走过去，低身骑了上去。"
+												+ "[npc.she]看到你急切的样子，狂乱/迷乱地[npc.moansVerb]着，等待你像发情的动物一样狠狠操[npc.she]。")
 										:"<br/>"
-											+ "Doing as [npc.she] asks, you "+(standingPlayer?"step":"drop to your knees and shuffle")+" forwards so that your groin is pressing against [npc.her] [npc.ass+]."
-											+ " [npc.She] lets out a desperate [npc.moan] in response to your touch, and prepares for you to start fucking [npc.herHim] like an animal."));
+											+ "听到要求，你"+(standingPlayer?"走过去":"屈膝爬过去")+"用腹部压着[npc.her][npc.ass+]。"
+											+ "[npc.she]享受你的爱抚，迷乱地[npc.moanverb]出声，等待你像动物一样操[npc.she]。"));
 					return sb.toString();
 					
 				} else {
-					return "Outright refusing to do as you ask, [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(I'm <i>not</i> getting fucked by you! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]驳回了你的请求，把你拉回原来的位置，愤怒地斥责你，"
+							+ "[npc.speech(我<i>可不会</i>被你操！你<i>敢不敢</i>再试试！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotAllFours.BEHIND) {
@@ -2982,55 +2982,55 @@ public class GenericPositioning {
 					StringBuilder sb = new StringBuilder();
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							sb.append("[npc.speech(Don't think that this means you're the one in charge!)]"
-									+ " [npc.name] growls, before "
+							sb.append("[npc.speech(不要以为这就意味着你说了算！)]"
+									+ "[npc.name]咆哮着，然后"
 										+(!bipedPlayer
 											?(!biped
-												?" rearing up and jolting forwards, mounting you with [npc.her] feral [npc.legRace] body."
-												:(standing?"stepping forwards":"dropping to [npc.her] knees, shuffling forwards,")+" and pressing [npc.her] groin against your feral [pc.legRace] body.")
+												?"[npc.her]提起前腿靠过来，骑在你身上。"
+												:(standing?"走过来":"爬过来")+"把腹部压在你的[pc.legRace]态的身体上。")
 											:(!biped
-												?" stepping forwards over the top of you, mounting you with [npc.her] feral [npc.legRace] body."
-												:(standing?"stepping forwards":"dropping to [npc.her] knees, shuffling forwards,")+" and pressing [npc.her] groin against your [pc.ass+]."))
-									+ " Bucking [npc.her] [pc.hips], [npc.she] snarls,"
-									+ " [npc.speech(Be thankful that I wanted to fuck you like the dirty animal you are!)]");
+												?"靠过来骑在你身上。"
+												:(standing?"走过来":"爬过来")+"把腹部压在你[pc.ass+]上。"))
+									+"[npc.she]晃着[pc.hips]，嘶声道，"
+									+ "[npc.speech(感谢我像操卑贱的动物一样操你！)]");
 							break;
 						default:
-							sb.append("[npc.speech(Oh yeah, that sounds fun!)]"
-									+ " [npc.name] happily replies, before "
+							sb.append("[npc.speech(哦，太棒啦，听起来很舒服呢！)]"
+									+ "[npc.name]愉悦地回答道，然后"
 										+(!bipedPlayer
 											?(!biped
-												?" rearing up and jolting forwards, mounting you with [npc.her] feral [npc.legRace] body."
-												:(standing?"stepping forwards":"dropping to [npc.her] knees, shuffling forwards,")+" and pressing [npc.her] groin against your feral [pc.legRace] body.")
+												?"[npc.her]提起前腿靠过来，骑在你身上。"
+												:(standing?"走过来":"爬过来")+"把腹部压在你的[pc.legRace]态的身体上。")
 											:(!biped
-												?" stepping forwards over the top of you, mounting you with [npc.her] feral [npc.legRace] body."
-												:(standing?"stepping forwards":"dropping to [npc.her] knees, shuffling forwards,")+" and pressing [npc.her] groin against your [pc.ass+]."))
-									+ " Bucking [npc.her] [pc.hips], [npc.she] [npc.moansVerb],"
-									+ " [npc.speech(Now be a good [pc.girl] and enjoy your fucking!)]");
+												?"靠过来骑在你身上。"
+												:(standing?"走过来":"爬过来")+"把腹部压在你[pc.ass+]上。"))
+									+"[npc.she]晃着[pc.hips]，[npc.moansVerb]道，"
+									+"[npc.speech(现在做个好孩子过来乖乖挨操！)]");
 							break;
 					}
 					return sb.toString();
 					
 				} else {
-					return "Outright refusing to do as you ask, [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(I'm <i>not</i> fucking you like that! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]驳回了你的请求，把你拉回原来的位置，愤怒地斥责你，"
+							+ "[npc.speech(我<i>才不会</i>那样操你！你<i>敢不敢</i>再试试！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.SIXTY_NINE) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Jumping down onto all fours, [npc.name] lowers [npc.herself] down over the top of you, bringing [npc.her] crotch down to your face as [npc.she] drops [npc.her] head down between your [pc.legs]."
-									+ " Turning [npc.her] head back to look at you, [npc.she] growls, "
-									+ "[npc.speech(Good idea slut! Now <i>stay still</i> so I can use you properly!)]";
+							return "[npc.Name]跳到你身上，四肢着地，把脸移到你[pc.legs]间，用腹部对着你的脸。"
+									+ "转头看着你咆哮着，"
+									+ "[npc.speech(好主意，骚货！现在<i>别动</i>，这样才能好好地使用你！)]";
 						default:
-							return "Jumping down onto all fours, [npc.name] lowers [npc.herself] down over the top of you, bringing [npc.her] crotch down to your face as [npc.she] drops [npc.her] head down between your [pc.legs]."
-									+ " Turning [npc.her] head back to look at you, [npc.she] grins, "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]跳到你身上，四肢着地，把脸移到你[pc.legs]间，用腹部对着你的脸。"
+									+"转过头对着你咧嘴一笑，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Reaching down to grab you by the [pc.arm], [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]攥住你的[pc.arm]，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.LYING_DOWN
@@ -3038,36 +3038,36 @@ public class GenericPositioning {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Allowing you to push [npc.herHim] down, [npc.name] reaches up and takes a firm grip on your [pc.hips], before roughly tugging you down so that you're over the top of [npc.herHim] in a reversed all-fours position."
-									+ " Pulling your groin down to [npc.her] face, [npc.she] growls, "
-									+ "[npc.speech(Good idea, slut! Now put your mouth to use!)]";
+							return "[npc.Name]粗暴地抓住你的[pc.hips]，拽着你一起，让你四肢着地靠在[npc.herHim]身上。"
+									+"她把你的小腹拉到脸前，呲牙咆哮，"
+									+ "[npc.speech(好想法，荡妇！现在把嘴巴动起来吧！)]";
 						default:
-							return "Allowing you to push [npc.herHim] down, [npc.name] reaches up and takes a firm grip on your [pc.hips], before pulling you down so that you're over the top of [npc.herHim] in a reversed all-fours position."
-									+ " Pulling your groin down to [npc.her] face, [npc.she] [npc.moansVerb], "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]抓住你的[pc.hips]，拽着你一起，让你四肢着地压在[npc.herHim]身上。"
+									+ "[npc.she]把你的小腹拉到脸前，[npc.moansVerb]着，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Knocking your [pc.arms] away from [npc.her] shoulders, [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]把你的手从肩膀上拿开，把你拉回到之前的位置，愤怒地责备着，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.COWGIRL) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Jumping down over the top of you, [npc.name] lowers [npc.herself] down over your groin, bringing [npc.her] crotch down to yours as [npc.she] straddles you in the cowgirl position."
-									+ " Leaning forwards a little, [npc.she] growls down at you, "
-									+ "[npc.speech(Good idea, slut! Now <i>stay still</i> so I can use you properly!)]";
+							return "[npc.Name]跳到你身上形成骑乘位，用[npc.she]的小腹靠着你的。"
+									+"[npc.she]稍稍前倾，咆哮，"
+									+ "[npc.speech(好主意，骚货！现在<i>别动</i>，这样才能好好地使用你！)]";
 						default:
-							return "Jumping down over the top of you, [npc.name] lowers [npc.herself] down over your groin, bringing [npc.her] crotch down to yours as [npc.she] straddles you in the cowgirl position."
-									+ " Leaning forwards a little, [npc.she] grins down at you, "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]跳到你身上形成骑乘位，用[npc.she]的小腹靠着你的。"
+									+ "[npc.she]稍稍前倾，咧嘴一笑，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Reaching down to grab you by the [pc.arm], [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]攥住你的[pc.arm]，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.LYING_DOWN
@@ -3075,18 +3075,18 @@ public class GenericPositioning {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Allowing you to push [npc.herHim] down, [npc.name] reaches up and takes a firm grip on your [pc.hips], before roughly pulling you down so that you're straddling [npc.herHim] in the cowgirl position."
-									+ " Looking up into your [pc.eyes], [npc.she] growls, "
-									+ "[npc.speech(Good idea, slut! Now put some effort into it!)]";
+							return "[npc.Name]抓住你的[pc.hips]，粗暴地拽着你一起倒下，让你以骑乘位骑在[npc.herHim]身上。"
+									+ "[npc.she]抬头对上你的[pc.eyes]，咆哮着，"
+									+ "[npc.speech(好想法，荡妇！再用点力！)]";
 						default:
-							return "Allowing you to push [npc.herHim] down, [npc.name] reaches up and takes a firm grip on your [pc.hips], before pulling you down so that you're straddling [npc.herHim] in the cowgirl position."
-									+ " Looking up into your [pc.eyes], [npc.she] [npc.moansVerb], "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]抓住你的[pc.hips]，拽着你一起倒下，让你以骑乘位骑在[npc.herHim]身上。"
+									+ "[npc.she]抬头对上你的[pc.eyes]，[npc.moansVerb]，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Knocking your [pc.arms] away from [npc.her] shoulders, [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]把你的手从肩膀上拿开，把你拉回到之前的位置，愤怒地责备着，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.LYING_DOWN
@@ -3094,62 +3094,62 @@ public class GenericPositioning {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Slapping your [pc.hands] away from [npc.herHim], [npc.name] grabs you by the wrists and yanks you forwards, growling, "
-									+ "[npc.speech(Don't you <i>dare</i> try to take control here! I'll let you sit on my face, but only because <i>I</i> want it, understood?!)]"
+							return "[npc.Name]拍开你的[pc.hands]，抓住你的腕部拽着你往前，咆哮着，"
+									+ "[npc.speech(你怎么<i>敢</i>自己乱动的！我恩准你骑在我脸上，只是因为<i>我</i>想这么做，听懂了吗？！)]"
 									+ "<br/>"
-									+ "With that, [npc.she] quickly lies down on [npc.her] back, dragging you down with [npc.herHim]."
-									+ " Despite [npc.namePos] angry words, you've ended up getting exactly what you wanted, and happily plant your groin down on [npc.her] face.";
+									+"就这样，[npc.she]迅速拉着你躺下。"
+									+"你无视[npc.namePos]的话语，兴奋地把小腹靠向[npc.her]的脸。";
 						default:
-							return "Smiling at you, [npc.name] responds, "
-									+ "[npc.speech(That's a great idea! Oh, this is gonna be good!)]"
+							return "[npc.name]朝你微笑，回复道："
+									+ "[npc.speech(真是个好主意！哦，会很舒服的！)]"
 									+ "<br/>"
-									+ "With that, [npc.she] quickly lies down on [npc.her] back, pulling you down with [npc.herHim]."
-									+ " You let out a happy [pc.moan] as you find yourself getting exactly what you wanted, and eagerly plant your groin down on [npc.her] face.";
+									+"就这样，[npc.she]迅速拉着你躺下。"
+									+ "你发现自己正好得到了想要的，便愉悦[pc.moan]，急切地把下体压到[npc.her]脸上。";
 					}
 					
 				} else {
-					return "Slapping your [pc.hands] away from [npc.herHim], [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]拍开你的手，把你拉回到原来的位置，生气地说，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.FACE_SITTING) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Jumping down over the top of you, [npc.name] lowers [npc.herself] down over you, bringing [npc.her] crotch down over your face before planting [npc.her] groin down onto your mouth."
-									+ " Grinding roughly down against your face, [npc.she] growls, "
-									+ "[npc.speech(Good idea slut! Now <i>stay still</i> so I can use you properly!)]";
+							return "[npc.Name]趴到你身上，把脸对着你的胯部，而小腹对着你的嘴。"
+									+"[npc.she]粗暴地蹭着你的脸咆哮。"
+									+ "[npc.speech(好主意，骚货！现在<i>别动</i>，这样才能好好地使用你！)]";
 						default:
-							return "Jumping down over the top of you, [npc.name] lowers [npc.herself] down over you, bringing [npc.her] crotch down over your face before planting [npc.her] groin down onto your mouth."
-									+ " Grinding down against your face, [npc.she] [npc.moans], "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]趴到你身上，把脸对着你的胯部，而小腹对着你的嘴。"
+									+"[npc.she]蹭着你的脸[npc.moanverb]。"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Reaching down to grab you by the [pc.arm], [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]攥住你的[pc.arm]，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.MATING_PRESS) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "With an eager, lustful grin on [npc.her] face, [npc.name] does just as you say, and drops [npc.her] full weight down on top of you."
-									+ " Roughly grinding [npc.her] crotch against yours, [npc.she] pins your wrists to the floor on either side of your head and growls, "
-									+ "[npc.speech(You filthy slut!"
-									+ UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN I'm going to fuck you real good!#ELSE I'm going to breed you real good!#ENDIF")
+							return "[npc.Name]听到你说什么后，饥渴难耐，迫不及待，蹭着你的脸压在你身上。"
+									+"[npc.she]把你的手腕分别压在头的两边，粗暴地用小腹摩擦着你的小腹，咆哮着，"
+									+ "[npc.speech(你这下贱淫妇！"
+									+ UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN我要狠狠操你！#ELSE我要给你狠狠播种！#ENDIF")
 									+ ")]";
 						default:
-							return "With an eager, lustful smile on [npc.her] face, [npc.name] does just as you say, and lies down over the top of you."
-									+ " Desperately [npc.her] crotch against yours, [npc.she] pins your wrists to the floor on either side of your head and [npc.moansVerb], "
-									+ "[npc.speech(Good [pc.girl]!"
-									+ UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN I'm going to fuck you real good!#ELSE I'm going to breed you real good!#ENDIF")
+							return "[npc.Name]听到你说什么后，饥渴难耐，迫不及待，蹭着你的脸躺在你身上。"
+									+"[npc.she]急切地把你的手腕分别压在头的两边，用小腹摩擦着你的小腹，[npc.moansVerb]着，"
+									+ "[npc.speech(真是个乖[pc.girl]！"
+									+ UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), "#IFnpc.isVisiblyPregnant() || !npc.hasVagina()#THEN我要狠狠操你！#ELSE我要给你狠狠播种！#ENDIF")
 									+ ")]";
 					}
 					
 				} else {
-					return "Reaching down to grab you by the [pc.arm], [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]攥住你的[pc.arm]，把你拉回到原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.LYING_DOWN
@@ -3158,39 +3158,39 @@ public class GenericPositioning {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
 							if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-								return "Much to your delight, [npc.name] allows [npc.herself] to be pushed down onto [npc.her] back, but as [npc.she] spreads [npc.her] [npc.legs] for you, [npc.she] growls in a menacing tone, "
-										+ "[npc.speech(Don't get carried away, bitch! I'm still the one in charge here!)]";
+								return "你十分满意。[npc.Name]丝毫不抵抗，任你推到，还朝你张开[npc.legs]，暴露自己的私处，咆哮着威胁你，"
+										+ "[npc.speech(别得意忘形，贱人！这可是我说了算！)]";
 							} else {
-								return "Much to your delight, [npc.name] allows [npc.herself] to be pushed down onto [npc.her] back, but as [npc.she] presents [npc.her] groin to you, [npc.she] growls in a menacing tone, "
-										+ "[npc.speech(Don't get carried away, bitch! I'm still the one in charge here!)]";
+								return "你十分满意。[npc.Name]丝毫不抵抗，任你推到，还朝你露出小腹的私处，咆哮着威胁你，"
+										+ "[npc.speech(别得意忘形，贱人！这可是我说了算！)]";
 							}
 						default:
 							if(Main.sex.getCharacterPerformingAction().hasLegs()) {
-								return "Much to your delight, [npc.name] allows [npc.herself] to be pushed down onto [npc.her] back, and as [npc.she] spreads [npc.her] [npc.legs] for you, [npc.she] [npc.moansVerb], "
-										+ "[npc.speech(I like it when my partner shows a bit of initiative! Come take me!)]";
+								return "你十分满意。[npc.Name]丝毫不抵抗，任你推到，还朝你张开[npc.legs]，暴露自己的私处，[npc.moansVerb]道，"
+										+ "[npc.speech(我喜欢稍微主动点的对象呢！来引导我嘛！)]";
 							} else {
-								return "Much to your delight, [npc.name] allows [npc.herself] to be pushed down onto [npc.her] back, and as [npc.she] presents [npc.her] groin to you, [npc.she] [npc.moansVerb], "
-										+ "[npc.speech(I like it when my partner shows a bit of initiative! Come take me!)]";
+								return "你十分满意。[npc.Name]丝毫不抵抗，任你推到，还朝你露出小腹的私处，[npc.moansVerb]道，"
+										+ "[npc.speech(我喜欢稍微主动点的对象呢！来引导我嘛！)]";
 							}
 					}
 				} else {
-					return "Slapping your [pc.hands] away, [npc.name] pushes you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]拍开了你的[pc.hands]，让你变回原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.MISSIONARY) {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Much to your delight, [npc.name] kneels down between your [pc.legs], and as [npc.she] grabs your [npc.legs] to push them apart, [npc.she] growls, "
-									+ "[npc.speech(That's right, bitch! Spread your legs like the slut you are!)]";
+							return "让你喜出望外的是，[npc.name]跪到了你的[pc.legs]间，抓住并分开你的[npc.legs]，然后咆哮道，"
+									+ "[npc.speech(这就对了，婊子！像个骚货一样叉开腿吧！)]";
 						default:
-							return "Much to your delight, [npc.name] kneels down between your [pc.legs], and as [npc.she] takes hold of your [npc.legs] to help push them apart, [npc.she] [npc.moansVerb], "
-									+ "[npc.speech(Good idea! Spread your legs nice and wide, now!)]";
+							return "你十分满意。[npc.Name]跪在你[pc.legs]间，拉开你的[npc.legs]，[npc.moansVerb]道，"
+									+ "[npc.speech(真是好想法！腿好好张大点！现在就张开！)]";
 					}
 				} else {
-					return "Grabbing one of your [pc.arms], [npc.name] pulls you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]抓住了你的一只[pc.arms]，让你变回原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotLyingDown.LYING_DOWN_FRONT
@@ -3198,15 +3198,15 @@ public class GenericPositioning {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Much to your delight, [npc.name] allows [npc.herself] to be pushed down onto [npc.her] front, but as [npc.she] presents you with [npc.her] [npc.ass+] and groin, [npc.she] growls in a menacing tone,"
-									+ " [npc.speech(Don't get carried away, bitch! I'm still the one in charge here!)]";
+							return "让你喜出望外的是，[npc.name]很顺从地便被推倒趴下，还在你面前翘起了[npc.ass+]，露出下体，[npc.she]用威胁的语调低吼道，"
+									+ "[npc.speech(别得意忘形了，贱人！这里可是我说了算！)]";
 						default:
-							return "Much to your delight, [npc.name] allows [npc.herself] to be pushed down onto [npc.her] front, and as [npc.she] presents you with [npc.her] [npc.ass+] and groin, [npc.she] [npc.moansVerb],"
-									+ " [npc.speech(I like it when my partner shows a bit of initiative! Come take me!)]";
+							return "让你喜出望外的是，[npc.name]很顺从地便被推倒趴下，翘起[npc.ass+]，露出下体，[npc.moansVerb]道，"
+									+ "[npc.speech(我喜欢稍微主动点的同伴呢！来占有我吧！)]";
 					}
 				} else {
-					return "Slapping your [pc.hands] away, [npc.name] pushes you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]拍开了你的[pc.hands]，让你变回原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotAgainstWall.STANDING_WALL
@@ -3214,15 +3214,15 @@ public class GenericPositioning {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "Much to your delight, you feel [npc.name] reach down and roughly grab your hips, and, grinding [npc.herself] into your back, [npc.she] growls into your ear, "
-									+ "[npc.speech(I love fucking bitches like you from behind! Now <i>stay still</i> like a good slut!)]";
+							return "让你喜出望外的是，[npc.name]一把抓住了你的腰，整个身子就对着你的背贴了上来，在你耳边低哼道，"
+									+ "[npc.speech(我就喜欢从后面干你这种婊子！够骚就<i>站好了别动</i>！)]";
 						default:
-							return "Much to your delight, you feel [npc.name] reach down to take hold of your hips, and as [npc.she] leans in over your shoulder, [npc.she] [npc.moans] into your ear, "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "让你喜出望外的是，[npc.name]直接揽住了你的屁股，靠了上来，越过你的肩头在耳边[npc.moans]道，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 				} else {
-					return "Grabbing you by the shoulders, [npc.name] pulls you away from the [pc.wall], pushing you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]抓住了你的肩膀，把你从[pc.wall]边拉了回来，让你变回原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			} else if(Main.sex.getPositionRequest().getPartnerSlots().get(0)==SexSlotAgainstWall.STANDING_WALL
@@ -3230,18 +3230,18 @@ public class GenericPositioning {
 				if(isHappy) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 						case DOM_ROUGH:
-							return "[npc.Name] grins as you try to entice [npc.herHim] to come over and fuck you against the [pc.wall]."
-									+ " Moving up to roughly grind [npc.her] body against yours, [npc.she] leans in over your shoulder and growls into your ear, "
-									+ "[npc.speech(Good slut! Now <i>stay still</i> so I can give you a proper fucking!)]";
+							return "[npc.Name]看到你奋力引诱着[npc.herHim]抵着[pc.wall]上了你的样子，不禁面露笑意。"
+									+ "[npc.she]毫不在乎地把身子黏了上来，越过你的肩头在耳边低吼道，"
+									+ "[npc.speech(好个小骚货！给我<i>站好了</i>，我可要狠狠地操你一顿！)]";
 						default:
-							return "[npc.Name] grins as you try to entice [npc.herHim] to come over and fuck you against the [pc.wall]."
-									+ " Moving up to press [npc.her] body against yours, [npc.she] leans in over your shoulder and [npc.moans] into your ear, "
-									+ "[npc.speech(Good [pc.girl]! This is gonna be fun!)]";
+							return "[npc.Name]看到你奋力引诱着[npc.herHim]抵着[pc.wall]上了你的样子，不禁面露笑意。"
+									+ "[npc.she]把身子压了上来，越过你的肩头在耳边[npc.moans]道，"
+									+ "[npc.speech(真是个乖[pc.girl]！会很舒服的！)]";
 					}
 					
 				} else {
-					return "Grabbing you by the shoulders, [npc.name] pulls you away from the [pc.wall], pushing you back into your old position as [npc.she] angrily scolds you, "
-							+ "[npc.speech(What do you think you're doing?! Don't you <i>dare</i> try that again!)]";
+					return "[npc.Name]抓住了你的肩膀，把你从[pc.wall]边拉了回来，让你变回原来的姿势，怒斥道，"
+							+ "[npc.speech(你想想你在干嘛？！你最好别<i>敢</i>有下一次！)]";
 				}
 				
 			}

@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>2800</value>
 		<melee>false</melee>
 		<twoHanded>false</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[pistol crossbow]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[pistol crossbows]]></namePlural>
-		<description><![CDATA[Consisting of a bow-like assembly mounted horizontally on a pistol-shaped frame, this small crossbow can easily be wielded in one hand. When the string is drawn back, an arcane essence is extracted from the wielder and converted into an ethereal bolt, ready to be fired at a target.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription>Shoot [npc2.name] with your pistol crossbow.</attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name><![CDATA[手弩]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[手弩]]></namePlural>
+		<description><![CDATA[这把手弩由水平安装在手枪形框架上的弓臂等组件组装而成，单手即可轻松操控。当拉开弩弦时，持弩者体内的奥术精华就会被提取出来，并转化为虚无缥缈的弩箭，随时准备射向目标。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的手弩射向[npc2.name]。]]></attackTooltipDescription>
 		<rarity>COMMON</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(draw)] [npc.her] pistol crossbow, ready to use it in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(holster)] [npc.her] pistol crossbow.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]给[npc.her]的手弩充能，准备用于战斗。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]收回[npc.her]的手弩。]]></unequipText>
 		
 		<imageName>pistol_crossbow.svg</imageName> 
 		<imageEquippedName>pistol_crossbow_equipped.svg</imageEquippedName>
@@ -59,27 +59,27 @@
 	<!-- Descriptions that are used when hitting an enemy. One of the hitText values will be randomly selected each time the attacker hits their target. Follow the same guidelines as equipText. -->
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Aiming and firing [npc.her] pistol crossbow, [npc.name] [npc.verb(manage)] to hit [npc2.name] with a powerful arcane bolt!
-		]]></hitText>
+		[npc.Name]瞄准并用手弩射击，成功用威力强大的奥术弩箭命中了[npc2.name]！
+]]></hitText>
 		<hitText><![CDATA[
-		Taking aim at [npc2.name] with [npc.her] pistol crossbow, [npc.name] [npc.verb(pull)] the trigger, unleashing a powerful blast of arcane energy that slams into [npc2.namePos] torso!
-		]]></hitText>
+		[npc.name]用手弩瞄准[npc2.name]并扣下扳机，释放出一股强大的奥术能量击中[npc2.namePos]的躯干！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] pistol crossbow, and, pulling the trigger, [npc.she] [npc.verb(manage)] to hit [npc2.herHim] right in the chest!
-		]]></hitText>
+		[npc.Name]用[npc.her]的手弩瞄准[npc2.name]并扣动扳机，[npc.she]成功命中[npc2.herHim]的胸部！
+]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		Aiming and firing [npc.her] pistol crossbow, [npc.name] [npc.verb(miss)] [npc2.name]!
-		]]></missText>
+		[npc.Name]瞄准并用手弩射击，[npc.Name]未命中[npc2.name]！
+]]></missText>
 		<missText><![CDATA[
-		Taking aim at [npc2.name] with [npc.her] pistol crossbow, [npc.name] [npc.verb(pull)] the trigger, letting out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.name]用手弩瞄准[npc2.name]并扣下扳机，在[npc.she]射偏了[npc.her]目标时发出了沮丧的声音！
+]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] pistol crossbow and [npc.verb(pull)] the trigger, but [npc.she] [npc.verb(end)] up missing [npc.her] target!
-		]]></missText>
+		[npc.Name]用[npc.her]的手弩瞄准[npc2.name]并扣动扳机，但是[npc.she]最终还是没有击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

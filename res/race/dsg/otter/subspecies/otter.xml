@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -91,7 +91,7 @@
 	<bookIconName>ottericon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Frolicking Otters</bookName>
+	<bookName><![CDATA[嬉闹的水獭]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -104,38 +104,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[otter-morph]]></name>
-			<namePlural><![CDATA[otter-morphs]]></namePlural>
-			<singularMaleName><![CDATA[otter-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[otter-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[otter-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[otter-girls]]></pluralFemaleName>
+			<name><![CDATA[水獭化形]]></name>
+			<namePlural><![CDATA[水獭化形]]></namePlural>
+			<singularMaleName><![CDATA[水獭男]]></singularMaleName>
+			<singularFemaleName><![CDATA[水獭女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[水獭男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[水獭女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic otter, known as an 'otter-morph' when bipedal, and an 'ottertaur' when the lower body is that of a typically-oversized feral otter.]]></description>
+	<description><![CDATA[一种人形的水獭，当下肢拟人时被称为水獭化形，而当下肢呈现出水獭兽态时则称为半水獭人。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[kawauso]]></name>
-			<namePlural><![CDATA[kawauso]]></namePlural>
-			<singularMaleName><![CDATA[kawauso]]></singularMaleName>
-			<singularFemaleName><![CDATA[kawauso]]></singularFemaleName>
-			<pluralMaleName><![CDATA[kawauso]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[kawauso]]></pluralFemaleName>
+			<name><![CDATA[川獺]]></name>
+			<namePlural><![CDATA[川獺]]></namePlural>
+			<singularMaleName><![CDATA[川獺]]></singularMaleName>
+			<singularFemaleName><![CDATA[川獺]]></singularFemaleName>
+			<pluralMaleName><![CDATA[川獺]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[川獺]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[otter]]></feralName>
-		<feralNamePlural><![CDATA[otter]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[otter]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[otter]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[otters]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[otters]]></feralPluralFemaleName>
+		<feralName><![CDATA[水獭]]></feralName>
+		<feralNamePlural><![CDATA[水獭]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[水獭]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[水獭]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[水獭]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[水獭]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -165,9 +165,7 @@
 	</feralAttributes>
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
-	<statusEffectDescription><![CDATA[
-		[npc.NamePos] otter-like body is at home both on land and at sea, and [npc.she] [npc.has] a disarming aura of playfulness about [npc.herHim].
-	]]></statusEffectDescription>
+	<statusEffectDescription><![CDATA[[npc.NamePos]水獭般的身体在陆地和海洋中都行动自如，而且[npc.she]身旁围绕着[npc.herHim]有一种欢快的迷氛。]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.
 	The text inside the 'attribute' element corresponds to an Attribute found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/attributes/Attribute.java 

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <face>
 	<race>NoStepOnSnek_snake</race>
-	<transformationName><![CDATA[hooded-snake]]></transformationName>
+	<transformationName><![CDATA[眼镜蛇]]></transformationName>
 	<coveringType>SNAKE_SCALES</coveringType>
 	<mouthType>NoStepOnSnek_snake_mouth</mouthType>
 	<tags>
@@ -14,30 +14,30 @@
 	<names/>
 	<namesPlural/>
 	<descriptorsMasculine>
-		<descriptor>anthropomorphic snake-like</descriptor>
-		<descriptor>snake-like</descriptor>
+		<descriptor><![CDATA[蛇般拟人]]></descriptor>
+		<descriptor><![CDATA[蛇般]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>anthropomorphic snake-like</descriptor>
-		<descriptor>snake-like</descriptor>
+		<descriptor><![CDATA[蛇般拟人]]></descriptor>
+		<descriptor><![CDATA[蛇般]]></descriptor>
 	</descriptorsFeminine>
-	<noseName><![CDATA[nose]]></noseName>
+	<noseName><![CDATA[鼻子]]></noseName>
 	<noseNamePlural><![CDATA[noses]]></noseNamePlural>
 	<noseDescriptorsMasculine/>
 	<noseDescriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		[npc.Her] nose and mouth twitch and transform as they push out into an anthropomorphic, snake-like muzzle. [npc.Her] teeth grow out into a pair of long fangs, which can thankfully be folded up within [npc.her] mouth in order to tuck them out of the way. With the transformation not having yet run its course, [npc.namePos] neck suddenly stretches out and [npc.her] tongue narrows and splits, leaving [npc.herHim] with a distinctly snake-like head. Meanwhile, the back and sides of [npc.her] neck begin to flare out, and within moments [npc.she] [npc.has] a very distinctive, cobra-like hood.
+		[npc.Her]的鼻子和嘴微微抽动，随后便转化为了似人的蛇吻部。[npc.Her]的两颗牙齿生长成一对长长的毒牙，幸运的是，它们可以折叠起来，收进嘴里。转化尚未完成，[npc.namePos]的脖子突然延长，舌头变窄并分叉，使[npc.herHim]拥有了明显的蛇头。与此同时，[npc.her]的脖子后部和两侧开始膨胀，仅过片刻，[npc.her]便拥有了引人注目的、眼镜蛇般的颈部帽状膨胀。
 		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face, 
+			一层[npc.faceSkin+]细毛迅速长出并覆盖了[npc.her]的新脸，
 		#ELSE
-			 Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+], 
+			就像[npc.her]身体的其它部位一样，[npc.her]的新脸[npc.materialDescriptor][npc.faceSkin+]，
 		#ENDIF
-		and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.
-		<br/>[npc.Name] now [npc.has] an anthropomorphic [style.boldSnake(snake-like face)], which is [npc.materialDescriptor] [npc.faceFullDescription]. On the back and sides of [npc.her] elongated neck, [npc.she] [npc.has] a cobra-like hood, while in [npc.her] [npc.mouth], [npc.she] [npc.has] a [style.boldSnake(flat, snake-like tongue)].
+		当转化彻底完成时，[npc.sheIs]试图喘口气，却发出了娇喘和呻吟。
+		<br/>[npc.Name]现在拥有一张似人的[style.boldRaccoon(类蛇脸)]，[npc.materialDescriptor][npc.faceFullDescription]。[npc.her]延长后的脖子背部和两侧有着眼镜蛇般的帽状膨胀。在[npc.her]口中有一根[style.boldSnake(扁平的蛇信子)]。
 	]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, snake-like face, [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a muzzle, fangs, and cobra-like hood.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的蛇面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有完整的吻部。
+]]></bodyDescription>
 	<bodyDescriptionFeral><![CDATA[
 		[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a #IF(game.isSillyModeEnabled())very boopable snoot#ELSE muzzle#ENDIF, fangs, and cobra-like hood.
 	]]></bodyDescriptionFeral>

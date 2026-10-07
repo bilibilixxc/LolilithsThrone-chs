@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>50000</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Freedom Certification]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Freedom Certifications]]></namePlural>
-		<description><![CDATA[An official document which has the power to declare a slave as being legally freed. While it carries the Slavery Administration's official seal, both the slave's name and the owner's signature still need to be filled out before it can be considered a legitimate legal document.]]></description> 
+		<determiner><![CDATA[一份]]></determiner>
+		<name><![CDATA[自由证明]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[自由证明]]></namePlural>
+		<description><![CDATA[一份宣布奴隶获得合法自由的官方文件。虽然盖有奴隶管理局的蜡封，但仍需填写奴隶的姓名和奴隶主的签名才能被视为合法的法律文件。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,12 +23,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.colourGood(Sets a slave free)]]]></line>
+			<line><![CDATA[[style.colourGood(让一个奴隶自由)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			While the text is extremely boring legal talk, the enchanted paper upon which it's printed is quite interesting, as no matter how you bend or even attempt to tear it, it seems impossible to inflict any sort of damage to it. Both the signature and the wax seal at the bottom of the page are a dark purple in colour, and both appear to also be enchanted, as they emit a steady, faint purple glow.
+			虽然这些文字都是非常无聊的法律术语，但使用的附魔纸却相当有趣，无论你如何弯曲或者撕扯，似乎都无法对其造成任何伤害。页面底部的签名和蜡封都是深紫色的，而且似乎都被附魔了，因为它们会发出稳定而微弱的紫色光芒。
 		</p>
 		]]></applyEffects>
 		
@@ -38,10 +38,9 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the Freedom Certification...
-		]]></selfUse>
+		[npc.Name]仔细观察这份自由证明……		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off the Freedom Certification to [npc2.name], who is duly impressed by [npc.her] possession of it...
+		[npc.Name]向[npc2.name]炫耀着自由证明，给[npc2.name]留下了深刻的印象……
 		]]></otherUse>
 	</useDescriptions>
 

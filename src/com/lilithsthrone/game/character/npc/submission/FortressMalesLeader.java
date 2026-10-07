@@ -71,8 +71,8 @@ public class FortressMalesLeader extends NPC {
 	
 	public FortressMalesLeader(boolean isImported) {
 		super(isImported,
-				new NameTriplet("Jhortrax", "Jhortriss", "Jhortriss"), "Liannamartu",
-				"The leader of one of Submission's imp fortresses, [npc.name] and [npc.her] all-male gang of imps take great pleasure in breeding anyone foolish enough to oppose their ruler, 'The Dark Siren'...",
+				new NameTriplet("卓特拉克斯", "乔特里斯", "乔特里斯"), "莉安娜马尔图",
+				"[npc.Name]是屈城区一处小恶魔要塞的首领，带着一伙儿全是雄性的小恶魔，最大的乐趣就是让那些愚蠢到反对其统治者“暗夜塞壬”的家伙，怀上他们的孩子……",
 				65, Month.SEPTEMBER, 19,
 				20, Gender.M_P_MALE, Subspecies.DEMON, RaceStage.GREATER, new CharacterInventory(false, 10), WorldType.IMP_FORTRESS_MALES, PlaceType.FORTRESS_MALES_KEEP, true);
 
@@ -302,9 +302,9 @@ public class FortressMalesLeader extends NPC {
 	public String getDescription() {
 		if(this.isSlave()) {
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of ruling over [npc.her] imp fortress are now over. Having run afoul of the law, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+					"[npc.NamePos]统治着小恶魔要塞的日子已经结束。[npc.sheIs]因触犯法律成为了奴隶，不过是其主人的财产而已。"));
 		} else {
-			return (UtilText.parse(this, "The leader of one of Submission's imp fortresses, [npc.name] and [npc.her] all-male gang of imps take great pleasure in breeding anyone foolish enough to oppose their ruler, 'The Dark Siren'..."));
+			return (UtilText.parse(this, "[npc.Name]是屈城区一处小恶魔要塞的首领，带着一伙儿全是雄性的小恶魔，最大的乐趣就是让那些愚蠢到反对其统治者“暗夜塞壬”的家伙，怀上他们的孩子……"));
 		}
 	}
 	

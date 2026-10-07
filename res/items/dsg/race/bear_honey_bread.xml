@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the plate reads 'Packed by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[盘底刻着细小的字迹，写着“DSG食品有限公司包装”。]]></authorTag>
 		
 		<value>250</value> 
-		<determiner><![CDATA[a plate of]]></determiner>
-		<name><![CDATA[Honey Bread]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Honey Bread]]></namePlural>
-		<description><![CDATA[A plate of gingerbread made with honey split by a layer of plum jam and frosted with sugar frosting all underneath a glass cover. On the label is a pastoral painting of a bear-girl asleep at her kitchen table while raw dough sits out in the open and snow falls outside.]]></description> 
+		<determiner><![CDATA[一盘子]]></determiner>
+		<name><![CDATA[蜂蜜小面包]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[蜂蜜小面包]]></namePlural>
+		<description><![CDATA[一盘淋了蜂蜜的姜饼，挤了一层李子果酱，并装饰着糖霜，都盖在一个玻璃罩子下。标签上是一幅田园风光的画，画着趴在厨房桌旁睡觉的熊女，桌上的生面团正在发酵，窗外下着小雪。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -24,28 +24,29 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[bear]]></potionDescriptor>
+		<potionDescriptor><![CDATA[熊]]></potionDescriptor>
 		<associatedRace>dsg_bear</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 20% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(3)] to 'potion effects']]></line>
-			<line><![CDATA[If body size is less than [style.colourBodySizeThree('large')], increases body size by 1]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(3)]到“药剂效果”]]></line>
+			<line><![CDATA[若体型不足[style.colourBodySizeThree(“大型”)]，将体型增加一级]]></line>
+			<line><![CDATA[若体型不足[style.colourBodySizeThree(“大型”)]，将体型增加一级]]></line>
 		</effectTooltipLines>
 		
-		<applyEffects><![CDATA[
-			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/5)]
-			
-			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel heavier and stronger...
-			</p>
-			#IF(npc.getBodySizeValue()<60)
-				[#npc.incrementBodySize(1)]
-			#ENDIF
-			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 3)]
-		]]></applyEffects>
+		<applyEffects><![CDATA[[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/5)]
+
+<p style='margin-bottom:0; padding-bottom:0;'>
+    [npc.Name]开始感觉更强壮了……
+</p>
+
+#IF(npc.getBodySizeValue()<60)
+    [#npc.incrementBodySize(1)]
+#ENDIF
+
+[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 3)]
+]]></applyEffects>
 		
 		<itemTags>
 			<tag>FOOD</tag>
@@ -55,12 +56,8 @@
 	</coreAttributes>
 
 	<useDescriptions>
-		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] the glass cover and [npc.verb(savor)] the scent of the bread and its sugar frosting. Unable to resist the delicious looking confectionery inside, [npc.she] [npc.verb(start)] shoving pieces into [npc.her] mouth until the entire plate has been emptied.
-		]]></selfUse>
-		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(remove)] glass cover from the plate and [npc.verb(hold)] it out to [npc2.name], allowing [npc2.herHim] to savor the scent of the bread and its sugar frosting. Unable to resist the delicious-looking confectionery inside, [npc2.she] [npc2.verb(start)] shoving pieces into [npc2.her] mouth until the entire plate has been emptied.
-		]]></otherUse>
+		<selfUse><![CDATA[[npc.Name]掀开了玻璃罩，享受着面包和糖霜的香气。[npc.she]难以抵抗美味糖果的诱惑，开始把食物抓成碎片塞进[npc.her]的嘴里，直到整个盘子被清空。]]></selfUse>
+		<otherUse><![CDATA[[npc.Name]掀开了玻璃罩，然后把食物端给了[npc2.name]，让[npc2.herHim]品味面包和糖霜的香气。[npc2.she]难以抵抗美味糖果的诱惑，开始将食物抓成碎片塞进嘴里，直到整个盘子被清空。]]></otherUse>
 	</useDescriptions>
 
 	

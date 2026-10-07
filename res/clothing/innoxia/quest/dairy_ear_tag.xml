@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[an]]></determiner>
-		<name appendColourName="false"><![CDATA[Evelyx's Dairy ear tag]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Evelyx's Dairy ear tags]]></namePlural>
-		<description><![CDATA[A plastic tag with metal trimmings, of the sort typically worn in a pierced ear by domestic animals for identification purposes. This particular tag grants the holder access to ]]></description>
+		<determiner><![CDATA[一块]]></determiner>
+		<name appendColourName="false"><![CDATA[艾弗利克斯乳业耳标]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[艾弗利克斯乳业耳标]]></namePlural>
+		<description><![CDATA[一种带有金属装饰的塑料标签，通常由家畜穿在耳朵上以进行身份识别。这种特殊的标签可以让持有者获得某种访问权限。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>PIERCING_EAR</slot>
@@ -25,10 +25,10 @@
 			<category id="level" priority="1">
 				<categoryName><![CDATA[Access Level]]></categoryName>
 				<sticker id="trainee" priority="0" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="BASE_YELLOW_LIGHT">
-					<stickerName><![CDATA[Trainee]]></stickerName>
+					<stickerName><![CDATA[学徒]]></stickerName>
 					<namePrefix/>
-					<namePostfix priority="1"><![CDATA[(trainee)]]></namePostfix>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[ the 'Training' barn in Evelyx's Dairy.]]></descriptionModification>
+					<namePostfix priority="1"><![CDATA[(学徒)]]></namePostfix>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[艾弗利克斯乳业“培训”棚]]></descriptionModification>
 					<imageName zLayer="1" slot="PIERCING_EAR">dairy_ear_tag_level1.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -36,10 +36,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="heifer" priority="1" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="BASE_YELLOW">
-					<stickerName><![CDATA[Heifer]]></stickerName>
+					<stickerName><![CDATA[小母牛]]></stickerName>
 					<namePrefix/>
-					<namePostfix priority="1"><![CDATA[(heifer)]]></namePostfix>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[ the 'Breeding' barn in Evelyx's Dairy.]]></descriptionModification>
+					<namePostfix priority="1"><![CDATA[(小母牛)]]></namePostfix>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[艾弗利克斯乳业“饲育”棚]]></descriptionModification>
 					<imageName zLayer="1" slot="PIERCING_EAR">dairy_ear_tag_level2.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -47,10 +47,10 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="cow" priority="2" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="BASE_GOLD">
-					<stickerName><![CDATA[Cow]]></stickerName>
+					<stickerName><![CDATA[母牛]]></stickerName>
 					<namePrefix/>
-					<namePostfix priority="1"><![CDATA[(cow)]]></namePostfix>
-					<descriptionModification fullReplacement="false" priority="1"><![CDATA[ the 'Milking' barn in Evelyx's Dairy.]]></descriptionModification>
+					<namePostfix priority="1"><![CDATA[(母牛)]]></namePostfix>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[艾弗利克斯乳业“挤奶”棚]]></descriptionModification>
 					<imageName zLayer="1" slot="PIERCING_EAR">dairy_ear_tag_level3.svg</imageName>
 					<itemTagsAdded/>
 					<itemTagsRemoved/>
@@ -92,27 +92,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the tag into [npc.her] [npc.ear(true)].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the tag into [npc2.namePos] [npc2.ear(true)].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(clip)] the tag into [npc2.namePos] [npc2.ear(true)].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把标签戴在[npc.her]的[npc.ear(true)]上。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把标签戴在[npc2.namePos]的[npc2.ear(true)]上。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把标签戴在[npc2.namePos]的[npc2.ear(true)]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] tag and [npc.verb(take)] it out of [npc.her] [npc.ear(true)] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] tag and [npc.verb(take)] it out of [npc2.her] [npc2.ear(true)] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] tag and roughly [npc.verb(yank)] it out of [npc2.her] [npc2.ear(true)] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的标签并从[npc.her]的[npc.ear(true)]穿孔中取出。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的标签并从[npc2.her]的[npc2.ear(true)]的穿孔中取出。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]解开[npc2.namePos]的标签并粗暴地从[npc2.her]的[npc2.ear(true)]穿孔中扯下来。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

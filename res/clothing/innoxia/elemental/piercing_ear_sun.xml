@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>1000</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[sun earring]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[sun earrings]]></namePlural>
-		<description><![CDATA[A pair of decorative sun earrings. They are typically sold pre-enchanted with effects that boost the wearer's arcane fire damage and resistance.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[太阳耳坠]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[太阳耳坠]]></namePlural>
+		<description><![CDATA[一对装饰性的太阳耳环。它们通常是在附魔前出售的，具有增强佩戴者奥术火焰伤害和火抗力的效果。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>PIERCING_EAR</slot> 
@@ -46,27 +46,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the sun earrings into [npc.her] [npc.ears].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(clip)] the sun earrings into [npc2.namePos] [npc2.ears].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(clip)] the sun earrings into [npc2.namePos] [npc2.ears].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将太阳耳坠戴在[npc.her]的[npc.ears]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将太阳耳坠戴在[npc2.namePos]的[npc2.ears]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将太阳耳坠穿在[npc2.namePos]的[npc2.ears]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] sun earrings and [npc.verb(take)] them out.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] sun earrings and [npc.verb(take)] them out.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] sun earrings and roughly [npc.verb(pull)] them out.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的太阳耳坠摘了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的太阳耳坠摘了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的太阳耳坠扯了下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

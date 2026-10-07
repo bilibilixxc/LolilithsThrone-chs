@@ -60,9 +60,9 @@ public class Fae extends NPC {
 	}
 	
 	public Fae(boolean isImported) {
-		super(isImported, new NameTriplet("Fae"), "Woodward",
-				"Fae is the younger sister of Silvia, with whom she runs the clothing stall 'Rainbow's End' in the Farmer's Market at Elis."
-						+ " Being far more confident and assertive than her sister, Fae is the one who handles most of the interactions with their stall's customers.",
+		super(isImported, new NameTriplet("法埃"), "伍德沃德",
+				"法埃是西尔维娅的妹妹，她们在伊利斯农贸市场一起经营服装摊“彩虹尽头”。"
+						+ "法埃比她的姐姐坚定自信得多，她主要负责招呼摊位顾客。",
 				30, Month.JANUARY, 19,
 				15,
 				Gender.F_P_V_B_FUTANARI, Subspecies.FOX_MORPH, RaceStage.GREATER,
@@ -70,7 +70,7 @@ public class Fae extends NPC {
 				WorldType.getWorldTypeFromId("innoxia_fields_elis_market"), PlaceType.getPlaceTypeFromId("innoxia_fields_elis_market_clothing"),
 				true);
 
-		this.setGenericName("green-eyed foxtauress");
+		this.setGenericName("绿瞳半狐人");
 		
 		if(!isImported) {
 			dailyUpdate();

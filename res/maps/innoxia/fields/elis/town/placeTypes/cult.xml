@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[cultist's chapel]]></name>
-	<tooltipDescription><![CDATA[The Cult of Lilith's presence in Elis takes the form of not only a large custom-built chapel, but also several ancillary buildings to either side of it.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[outside the cultist's chapel in Elis]]></virginityLossDescription>
+	<name><![CDATA[狂信者的小礼拜堂]]></name>
+	<tooltipDescription><![CDATA[莉莉丝教在伊利斯的存在形式不仅包括一座定制的大型教堂，还包括教堂两侧的几座附属建筑。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在位于伊利斯的狂信者小礼拜堂外]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PINK</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

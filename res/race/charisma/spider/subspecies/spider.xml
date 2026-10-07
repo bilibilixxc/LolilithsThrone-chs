@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>charisma_spider</race>
 	<colour>charisma_spider_silk_white</colour>
@@ -45,54 +45,54 @@
 	<iconName>icon</iconName>
 	<backgroundName>raceBackground</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Deadly Spiders</bookName>
+	<bookName><![CDATA[致命蜘蛛]]></bookName>
 	<basicDescriptionId>SPIDER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>SPIDER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault> 
-			<name><![CDATA[spider-morph]]></name>
-			<namePlural><![CDATA[spider-morphs]]></namePlural>
-			<singularMaleName><![CDATA[spider-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[spider-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[spider-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[spider-girls]]></pluralFemaleName>
+			<name><![CDATA[蛛化形]]></name>
+			<namePlural><![CDATA[蛛化形]]></namePlural>
+			<singularMaleName><![CDATA[蜘蛛男]]></singularMaleName>
+			<singularFemaleName><![CDATA[蜘蛛女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[蜘蛛男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[蜘蛛女]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="ARACHNID"> 
-			<name><![CDATA[drider]]></name>
-			<namePlural><![CDATA[driders]]></namePlural>
-			<singularMaleName><![CDATA[drider]]></singularMaleName>
-			<singularFemaleName><![CDATA[drider]]></singularFemaleName>
-			<pluralMaleName><![CDATA[driders]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[driders]]></pluralFemaleName>
+			<name><![CDATA[卓尔夫蛛]]></name>
+			<namePlural><![CDATA[卓尔夫蛛]]></namePlural>
+			<singularMaleName><![CDATA[卓尔夫蛛]]></singularMaleName>
+			<singularFemaleName><![CDATA[卓尔夫蛛]]></singularFemaleName>
+			<pluralMaleName><![CDATA[卓尔夫蛛]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[卓尔夫蛛]]></pluralFemaleName>
 		</names>
 	</nameAnthro>
-	<description><![CDATA[An anthropomorphic spider, known as a 'spider-morph' when bipedal, and a 'drider' when the lower body is that of a typically-oversized feral spider.]]></description>
+	<description><![CDATA[一种人形的蜘蛛，当下肢似人时被称为蛛化形，而当下肢呈现出蜘蛛兽态时则称为半蛛人。]]></description>
 	<nameHalfDemon>
 		<namesDefault> 
-			<name><![CDATA[jorogumo]]></name>
-			<namePlural><![CDATA[jorogumos]]></namePlural>
-			<singularMaleName><![CDATA[jorogumo]]></singularMaleName>
-			<singularFemaleName><![CDATA[jorogumo]]></singularFemaleName>
-			<pluralMaleName><![CDATA[jorogumos]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[jorogumos]]></pluralFemaleName>
+			<name><![CDATA[络新妇]]></name>
+			<namePlural><![CDATA[络新妇]]></namePlural>
+			<singularMaleName><![CDATA[络新妇]]></singularMaleName>
+			<singularFemaleName><![CDATA[络新妇]]></singularFemaleName>
+			<pluralMaleName><![CDATA[络新妇]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[络新妇]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="ARACHNID">
-			<name><![CDATA[arachne]]></name>
-			<namePlural><![CDATA[arachnes]]></namePlural>
-			<singularMaleName><![CDATA[arachne]]></singularMaleName>
-			<singularFemaleName><![CDATA[arachne]]></singularFemaleName>
-			<pluralMaleName><![CDATA[arachnes]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[arachnes]]></pluralFemaleName>
+			<name><![CDATA[阿拉克涅]]></name>
+			<namePlural><![CDATA[阿拉克涅]]></namePlural>
+			<singularMaleName><![CDATA[阿拉克涅]]></singularMaleName>
+			<singularFemaleName><![CDATA[阿拉克涅]]></singularFemaleName>
+			<pluralMaleName><![CDATA[阿拉克涅]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[阿拉克涅]]></pluralFemaleName>
 		</names>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[spider]]></feralName>
-		<feralNamePlural><![CDATA[spiders]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[spider]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[spider]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[spiders]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[spiders]]></feralPluralFemaleName>
+		<feralName><![CDATA[蜘蛛]]></feralName>
+		<feralNamePlural><![CDATA[蜘蛛]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[蜘蛛]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[蜘蛛]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[蜘蛛]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[蜘蛛]]></feralPluralFemaleName>
 		<legConfiguration>ARACHNID</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>200</size>
@@ -104,9 +104,7 @@
 		<fingerActionsAvailable>false</fingerActionsAvailable>
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
-	<statusEffectDescription><![CDATA[
-		[npc.NamePos] spider-like body is strong and agile, and [npc.she] [npc.has] a primal urge to spin a web and wait for victims.
-	]]></statusEffectDescription>
+	<statusEffectDescription><![CDATA[[npc.NamePos]蜘蛛一般的身体强壮而灵活，[npc.she]总会有织网捕猎的原始冲动。]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="5">MAJOR_PHYSIQUE</attribute>
 		<attribute value="5">MAJOR_ARCANE</attribute> 

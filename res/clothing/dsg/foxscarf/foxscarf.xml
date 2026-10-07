@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help!
@@ -11,19 +11,19 @@
 		<!-- The base value of this clothing. I roughly base things on 1 flame = 10p, so 10 flames = £1. -->
 		<value>350</value> 
 		
-		<authorTag><![CDATA[Yarn sewn into the unpatterned side of the scarf reads "MFD by DSG Threadworks".]]></authorTag>
+		<authorTag><![CDATA[围巾没有图案的一侧刺绣着“DSG织厂生产。”]]></authorTag>
 		
 		<!-- The determiner that's displayed before this item's name. While usually 'a' or 'an', for things like socks or gloves, you'll want to use 'a pair of'. I use the CDATA tag for all text values, as it allows html markup to be embedded without causing issues.-->
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
 		<!-- The name of this clothing. -->
-		<name><![CDATA[fox-patterned scarf]]></name>
+		<name><![CDATA[印有狐狸图案的围巾]]></name>
 		
 		<!-- The plural form of the name. The attribute 'pluralByDefault' determines whther this item is naturally referred to as a plural (use true for things like socks or gloves).-->
-		<namePlural pluralByDefault="false"><![CDATA[fox-patterned scarves]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[印有狐狸图案的围巾]]></namePlural> 
 		
 		<!-- The description that's shown in tooltips and on the item's inspection page. -->
-		<description><![CDATA[A scarf made from cotton yarn, patterned to look like a fox on one side.]]></description> 
+		<description><![CDATA[一条由棉纱制成的围巾，在一侧印有狐狸图案。]]></description> 
 		
 		<!-- The default physical resistance for this piece of clothing. Usually use 0 or 1, but if it's armour, then values up to 5 would be fitting (any more than that might be very OP). -->
 		<physicalResistance>0</physicalResistance> 
@@ -120,28 +120,28 @@
 	
 	<!-- 'displacementText' is used for removal and displacement. -->
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] scarf.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] scarf.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tear)] [npc2.namePos] scarf away.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]摘掉了[npc.her]的围巾。
+]]></self>
+		<other><![CDATA[
+[npc.Name]摘掉了[npc2.namePos]的围巾。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]把[npc2.namePos]的围巾拽了下来。
+]]></otherRough>
 	</displacementText>
 
 	<!-- 'replacementText' is used for equipping and replacements. -->	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(wrap)] the scarf around [npc.her] neck.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(wrap)] the scarf around [npc2.her] neck.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] nearly [npc.verb(gag)] [npc2.name] with the scarf as [npc.name] roughly [npc.verb(gag)] it around [npc2.namePos] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把围巾围在[npc.her]的脖子上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]把围巾围在了[npc2.her]的脖子上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴的用围巾围住了[npc2.namePos]的脖子，差点就要将[npc2.name]窒息了。
+]]></otherRough>
   </replacementText>
 
   

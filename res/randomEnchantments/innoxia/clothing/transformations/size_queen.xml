@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <enchantment>
 	<positiveEnchantment><![CDATA[false]]></positiveEnchantment>
 	<applyDefaultSeal><![CDATA[true]]></applyDefaultSeal>
@@ -7,7 +7,7 @@
 		100
 	]]></spawnWeighting>
 	
-	<namePrefix><![CDATA[Size Queen's]]></namePrefix>
+	<namePrefix><![CDATA[尺寸为王的]]></namePrefix>
 	<namePostfix/>
 	<nameOverride/>
 	

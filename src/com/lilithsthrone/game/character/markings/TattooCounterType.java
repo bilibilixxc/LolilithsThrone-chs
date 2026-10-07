@@ -24,7 +24,7 @@ import com.lilithsthrone.utils.Units;
  */
 public enum TattooCounterType {
 	
-	NONE("none", "Do not add a tracker to this tattoo.") {
+	NONE("none", "不要在这个纹身上添加追踪器。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return 0;
@@ -36,7 +36,7 @@ public enum TattooCounterType {
 	},
 
 	
-	VALUE_AS_SLAVE("value as slave", "Displays how much the bearer is worth as a slave.") {
+	VALUE_AS_SLAVE("奴隶价值", "显示所有者作为奴隶时价值几何。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getValueAsSlave(false); 
@@ -47,35 +47,35 @@ public enum TattooCounterType {
 		}
 	},
 	
-	SEX_SUB("sub sex", "Keeps a count of how many times the bearer has had submissive sex.") {
+	SEX_SUB("服从性爱", "记录所有者进行过服从型性爱的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalSexAsSubCount();
 		}
 	},
 
-	SEX_DOM("dom sex", "Keeps a count of how many times the bearer has had dominant sex.") {
+	SEX_DOM("支配性爱", "记录所有者进行过支配型性爱的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalSexAsDomCount();
 		}
 	},
 
-	UNIQUE_SEX_PARTNERS("unique sex partners", "Keeps a count of how many different people the bearer has had sex with.") {
+	UNIQUE_SEX_PARTNERS("性伴侣数量", "记录所有者跟多少个不同的人进行过性爱。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getUniqueSexPartnerCount();
 		}
 	},
 
-	PUSSY_FUCKED("pussy penetrated", "Keeps a count of how many times the bearer's pussy has been penetrated.") {
+	PUSSY_FUCKED("小穴被插入", "记录所有者的小穴被插入的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesOrificePenetrated(SexAreaOrifice.VAGINA);
 		}
 	},
 
-	ANUS_FUCKED("anus penetrated", "Keeps a count of how many times the bearer's asshole has been penetrated.") {
+	ANUS_FUCKED("肛门被插入", "记录所有者的肛门被插入的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesOrificePenetrated(SexAreaOrifice.ANUS);
@@ -86,14 +86,14 @@ public enum TattooCounterType {
 		}
 	},
 	
-	ORAL_FUCKED("mouth penetrated", "Keeps a count of how many times the bearer's mouth has been penetrated.") {
+	ORAL_FUCKED("口穴被插入", "记录所有者的口穴被插入的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesOrificePenetrated(SexAreaOrifice.MOUTH);
 		}
 	},
 	
-	NIPPLES_FUCKED("nipples penetrated", "Keeps a count of how many times the bearer's nipples have been penetrated.") {
+	NIPPLES_FUCKED("乳头被插入", "记录所有者的乳头被插入的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesOrificePenetrated(SexAreaOrifice.NIPPLE);
@@ -104,7 +104,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	NIPPLES_CROTCH_FUCKED("crotch-nipples penetrated", "Keeps a count of how many times the bearer's crotch-nipples have been penetrated.") {
+	NIPPLES_CROTCH_FUCKED("胯乳乳头被插入", "记录所有者的胯乳乳头被插入的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesOrificePenetrated(SexAreaOrifice.NIPPLE_CROTCH);
@@ -115,42 +115,42 @@ public enum TattooCounterType {
 		}
 	},
 
-	PENIS_PENETRATIONS("penis penetrations", "Keeps a count of how many times the bearer's penis has penetrated orifices.") {
+	PENIS_PENETRATIONS("阴茎插入", "记录所有者的阴茎插入腔穴的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesPenetratedOrifices(SexAreaPenetration.PENIS);
 		}
 	},
 
-	TAIL_PENETRATIONS("tail penetrations", "Keeps a count of how many times the bearer's tail has penetrated orifices.") {
+	TAIL_PENETRATIONS("尾巴插入", "记录所有者的尾巴插入腔穴的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesPenetratedOrifices(SexAreaPenetration.TAIL);
 		}
 	},
 
-	TENTACLE_PENETRATIONS("tentacle penetrations", "Keeps a count of how many times the bearer's tentacles have penetrated orifices.") {
+	TENTACLE_PENETRATIONS("触手插入", "记录所有者的触手插入腔穴的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalTimesPenetratedOrifices(SexAreaPenetration.TENTACLE);
 		}
 	},
 	
-	CUM_GIVEN("total creampies given", "Keeps a count of how many times the bearer has cummed inside someone.") {
+	CUM_GIVEN("共计内射", "记录所有者内射的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCount(true, false);
 		}
 	},
 
-	CUM_GIVEN_PUSSY("pussy creampies given", "Keeps a count of how many times the bearer has cummed into someone's pussy.") {
+	CUM_GIVEN_PUSSY("小穴内射", "记录所有者射在小穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.VAGINA, true, false);
 		}
 	},
 
-	CUM_GIVEN_ANUS("anal creampies given", "Keeps a count of how many times the bearer has cummed into someone's ass.") {
+	CUM_GIVEN_ANUS("肛穴内射", "记录所有者射在肛穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.ANUS, true, false);
@@ -161,14 +161,14 @@ public enum TattooCounterType {
 		}
 	},
 
-	CUM_GIVEN_ORAL("oral loads given", "Keeps a count of how many times the bearer has cummed down someone's throat.") {
+	CUM_GIVEN_ORAL("口射次数", "记录所有者射在某人口中的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.MOUTH, true, false);
 		}
 	},
 
-	CUM_GIVEN_NIPPLES("nipple creampies given", "Keeps a count of how many times the bearer has cummed into someone's nipples.") {
+	CUM_GIVEN_NIPPLES("乳穴内射", "记录所有者射在乳穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.NIPPLE, true, false);
@@ -179,7 +179,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	CUM_GIVEN_NIPPLES_CROTCH("crotch-nipple creampies given", "Keeps a count of how many times the bearer has cummed into someone's crotch-nipple.") {
+	CUM_GIVEN_NIPPLES_CROTCH("胯乳乳穴内射", "记录所有者射在胯乳乳穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.NIPPLE_CROTCH, true, false);
@@ -190,7 +190,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	CUM_GIVEN_FEET("footjob climaxes received", "Keeps a count of how many times the bearer has cummed onto their partner's feet.") {
+	CUM_GIVEN_FEET("接受足交高潮", "记录所有者射在对象脚上的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaPenetration.FOOT, true, false);
@@ -201,7 +201,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	CUM_TAKEN("total creampies received", "Keeps a count of how many times the bearer has taken a load of cum in their orifices.") {
+	CUM_TAKEN("共计接受内射", "记录所有者被射进腔穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCount(false, true);
@@ -209,14 +209,14 @@ public enum TattooCounterType {
 
 	},
 
-	CUM_TAKEN_PUSSY("pussy creampies received", "Keeps a count of how many times the bearer has taken a load of cum in their pussy.") {
+	CUM_TAKEN_PUSSY("小穴接受内射", "记录所有者被射进小穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.VAGINA, false, true);
 		}
 	},
 
-	CUM_TAKEN_ANUS("anal creampies received", "Keeps a count of how many times the bearer has taken a load of cum in their ass.") {
+	CUM_TAKEN_ANUS("肛穴接受内射", "记录所有者被射进肛穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.ANUS, false, true);
@@ -227,14 +227,14 @@ public enum TattooCounterType {
 		}
 	},
 
-	CUM_TAKEN_ORAL("loads swallowed", "Keeps a count of how many times the bearer has swallowed a load of cum.") {
+	CUM_TAKEN_ORAL("吞咽次数", "记录所有者咽下精液的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.MOUTH, false, true);
 		}
 	},
 
-	CUM_TAKEN_NIPPLES("nipple creampies received", "Keeps a count of how many times the bearer has taken a load of cum in their nipples.") {
+	CUM_TAKEN_NIPPLES("乳穴接受内射", "记录所有者被射进乳穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.NIPPLE, false, true);
@@ -245,7 +245,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	CUM_TAKEN_NIPPLES_CROTCH("crotch-nipple creampies received", "Keeps a count of how many times the bearer has taken a load of cum in their crotch-nipples.") {
+	CUM_TAKEN_NIPPLES_CROTCH("胯乳乳穴接受内射", "记录所有者被射进胯乳乳穴内的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaOrifice.NIPPLE_CROTCH, false, true);
@@ -256,7 +256,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	CUM_TAKEN_FEET("footjob climaxes given", "Keeps a count of how many times the bearer has had their partner cum over their feet.") {
+	CUM_TAKEN_FEET("给予足交高潮", "记录所有者被某人的精液覆盖在脚上的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getTotalCumCountInArea(SexAreaPenetration.FOOT, false, true); 
@@ -268,7 +268,7 @@ public enum TattooCounterType {
 	},
 	
 
-	VIRGINITIES_TAKEN_TOTAL("total deflowerments", "Keeps a count of how many virginities of all types (vaginal, anal, oral, nipple, urethral) the bearer has taken.") {
+	VIRGINITIES_TAKEN_TOTAL("共计破处", "记录所有者夺去了多少次贞操(包括阴道、肛门、口部、乳头、尿道等)。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -310,7 +310,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	VIRGINITIES_TAKEN_VAGINAL("vaginal deflowerments", "Keeps a count of how many vaginal virginities the bearer has taken.") {
+	VIRGINITIES_TAKEN_VAGINAL("阴道破处", "记录所有者夺去了多少次阴道贞操。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -344,7 +344,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	VIRGINITIES_TAKEN_ANAL("anal deflowerments", "Keeps a count of how many anal virginities the bearer has taken.") {
+	VIRGINITIES_TAKEN_ANAL("肛门破处", "记录所有者夺去了多少次肛门贞操。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -382,7 +382,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	VIRGINITIES_TAKEN_ORAL("oral deflowerments", "Keeps a count of how many oral virginities the bearer has taken.") {
+	VIRGINITIES_TAKEN_ORAL("口部破处", "记录所有者夺去了多少次口部贞操。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -416,7 +416,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	VIRGINITIES_TAKEN_PENIS("penile deflowerments", "Keeps a count of how many penile virginities the bearer has taken.") {
+	VIRGINITIES_TAKEN_PENIS("夺取童贞", "记录所有者夺去了多少次阴茎童贞。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -450,7 +450,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	CURRENT_PREGNANCY("litter size", "Counts how many children the bearer is currently pregnant with.") {
+	CURRENT_PREGNANCY("产仔数量", "显示所有者现在怀着的孩子数量。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			if(bearer.getPregnantLitter()==null) {
@@ -464,7 +464,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	OFFSPRING_BIRTHED("offspring birthed", "Counts how many children the bearer has given birth to.") {
+	OFFSPRING_BIRTHED("娩出后代", "记录所有者分娩出的后代数量。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -475,7 +475,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	OFFSPRING_FATHERED("offspring fathered", "Counts how many children the bearer has fathered.") {
+	OFFSPRING_FATHERED("生殖后代", "记录所有者作为父亲拥有的后代数量。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -486,14 +486,14 @@ public enum TattooCounterType {
 		}
 	},
 	
-	PREGNANCY("pregnancy", "Keeps a count of how many times the bearer has been impregnated.") {
+	PREGNANCY("怀孕", "记录所有者受孕的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			return bearer.getLittersBirthed().size() + (bearer.isPregnant()?1:0);
 		}
 	},
 
-	PREGNANCY_PARTNERS("pregnancy partners", "Keeps a count of the number of unique partners with whom the bearer has completed a pregnancy with.") {
+	PREGNANCY_PARTNERS("怀孕对象", "记录所有者总共怀过多少个不同的人的孩子。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			Set<String> partners = new HashSet<>();
@@ -504,7 +504,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	IMPREGNATIONS("impregnation", "Keeps a count of the number of times the bearer has impregnated someone.") {
+	IMPREGNATIONS("授孕", "记录所有者授孕的次数。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int potentials = 0;
@@ -517,7 +517,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	IMPREGNATION_PARTNERS("impregnation partners", "Keeps a count of the number of unique partners whom the bearer has impregnated.") {
+	IMPREGNATION_PARTNERS("授孕对象", "记录所有者让多少个不同的人怀上过自己的孩子。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			Set<String> potentials = new HashSet<>();
@@ -534,7 +534,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	EGGS_IMPLANTED("eggs implanted", "Keeps a count of how many eggs the bearer has implanted in others.") {
+	EGGS_IMPLANTED("授卵数量", "记录所有者总共对他人授卵多少颗。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -545,7 +545,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	EGGS_INCUBATED("eggs incubated", "Keeps a count of how many implanted eggs the bearer has fully incubated and laid.") {
+	EGGS_INCUBATED("孵卵数量", "记录所有者总共对被授卵授卵多少颗，并且完全孵化后产下。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			int count = 0;
@@ -556,7 +556,7 @@ public enum TattooCounterType {
 		}
 	},
 
-	CUM_IN_VAGINA("cum in womb", "Displays how much cum is currently in the bearer's womb (in "+(Main.getProperties().hasValue(PropertyValue.metricFluids)?"mL":"oz")+").") {
+	CUM_IN_VAGINA("子宫精液", "显示所有者的子宫内现在有多少精液(单位为"+(Main.getProperties().hasValue(PropertyValue.metricFluids)?"mL":"oz")+")。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			if(Main.getProperties().hasValue(PropertyValue.metricFluids)) {
@@ -571,7 +571,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	CUM_IN_ASS("cum in ass", "Displays how much cum is currently in the bearer's ass (in "+(Main.getProperties().hasValue(PropertyValue.metricFluids)?"mL":"oz")+").") {
+	CUM_IN_ASS("肛内精液", "显示所有者的肛内现在有多少精液(单位为"+(Main.getProperties().hasValue(PropertyValue.metricFluids)?"mL":"oz")+")。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			if(Main.getProperties().hasValue(PropertyValue.metricFluids)) {
@@ -590,7 +590,7 @@ public enum TattooCounterType {
 		}
 	},
 	
-	CUM_IN_STOMACH("cum in stomach", "Displays how much cum is currently in the bearer's stomach (in "+(Main.getProperties().hasValue(PropertyValue.metricFluids)?"mL":"oz")+").") {
+	CUM_IN_STOMACH("腹部精液", "显示所有者的腹部现在有多少精液(单位为"+(Main.getProperties().hasValue(PropertyValue.metricFluids)?"mL":"oz")+")。") {
 		@Override
 		public int getCount(GameCharacter bearer) {
 			if(Main.getProperties().hasValue(PropertyValue.metricFluids)) {

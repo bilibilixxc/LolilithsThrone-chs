@@ -240,7 +240,7 @@ public class Pathing {
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(
 									"<p style='text-align:center;'>"
-											+ "[style.italicsBad(Your travel was interrupted!)]"
+											+ "[style.italicsBad(你的行进被中断了！)]"
 									+ "</p>");
 						}
 					};

@@ -9,43 +9,43 @@ import com.lilithsthrone.game.dialogue.utils.UtilText;
  */
 public enum CoveringModifier {
 
-	EYE("eye", false),
-	FLUID("fluid", false),
-	MAKEUP("makeup", false),
-	GLOSSY("glossy", false),
-	MATTE("matte", false),
-	SPARKLY("sparkly", false),
-	METALLIC("metallic", false),
+	EYE("眼睛", false),
+	FLUID("液体", false),
+	MAKEUP("妆容", false),
+	GLOSSY("光亮", false),
+	MATTE("哑光", false),
+	SPARKLY("闪闪发光", false),
+	METALLIC("金属光泽", false),
 
-	BLAZING("blazing", false),
-	SHIMMERING("shimmering", false),
-	GLITTERING("glittering", false),
-	SWIRLING("swirling", false),
+	BLAZING("耀眼", false),
+	SHIMMERING("闪烁", false),
+	GLITTERING("晶莹剔透", false),
+	SWIRLING("旋动", false),
 	
-	GOOEY("gooey", false) {
+	GOOEY("软黏", false) {
 		@Override
 		public String getName() {
 			return UtilText.returnStringAtRandom(
-					"gooey",
-					"wet",
-					"squishy");
+					"软黏",
+					"潮湿",
+					"黏糊");
 		}
 	},
 	
 	// Generic:
-	SMOOTH("smooth", false),
-	ROUGH("rough", false),
+	SMOOTH("光滑", false),
+	ROUGH("粗糙", false),
 	
 	//Skin:
-	LEATHERY("leathery", false),
+	LEATHERY("革质", false),
 	
 	// Fur/hair:
-	SHORT("short", true),
-	SILKEN("silken", true),
-	FLUFFY("fluffy", true),
-	SHAGGY("shaggy", true),
-	FURRY("fur-like", true), // FURRY is only used for head hair, not body-covering fur.
-	COARSE("coarse", true);
+	SHORT("较短", true),
+	SILKEN("柔顺", true),
+	FLUFFY("松软", true),
+	SHAGGY("蓬乱", true),
+	FURRY("皮毛般", true), // FURRY is only used for head hair, not body-covering fur.
+	COARSE("凌乱", true);
 	
 	private String descriptor;
 	private boolean furryModifier;

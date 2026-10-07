@@ -102,15 +102,15 @@ public class Tail implements BodyPartInterface {
 		
 		if(!owner.getLegConfiguration().isAbleToGrowTail() && type!=TailType.NONE) {
 			type = TailType.NONE;
-			sb.append(UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(Due to the fact that [npc.name] [npc.has] the '"+owner.getLegConfiguration().getName()+"' leg configuration, [npc.she] cannot grow a tail!)]</p>"));
+			sb.append(UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.name]拥有“"+owner.getLegConfiguration().getName()+"”腿部配置，所以无法长尾巴！)]</p>"));
 		}
 		
 		if(type == getType()) {
 			if(type == TailType.NONE) {
-				sb.append(UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.verb(lack)] a tail, so nothing happens...)]</p>"));
+				sb.append(UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经没有尾巴了，所以无事发生……)]</p>"));
 				
 			} else {
-				sb.append(UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.tail] of [npc.a_tailRace], so nothing happens...)]</p>"));
+				sb.append(UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_tailRace]的[npc.tail]了，所以无事发生……)]</p>"));
 			}
 			return UtilText.parse(owner, sb.toString());
 		}
@@ -118,13 +118,13 @@ public class Tail implements BodyPartInterface {
 		if(this.type == TailType.NONE) {
 			sb.append(
 					"<p>"
-						+ "[npc.Name] [npc.verb(rub)] at [npc.her] lower back as [npc.she] [npc.verb(feel)] it growing hot and sensitive, and as [npc.she] [npc.do] so, something starts pushing out from under [npc.her] [npc.skin].");
+						+ "[npc.Name]感到腰背间变得滚烫又敏感，连忙摸了摸，这才发现有什么东西正从[npc.skin]之下生长出来。");
 		} else {
 			sb.append(
 					"<p>"
 						+ (owner.getTailCount()==1
-							?"[npc.Name] [npc.verb(feel)] [npc.her] [npc.tail] growing hot and itchy, and after just a moment it starts to transform."
-							:"[npc.Name] [npc.verb(feel)] [npc.her] [npc.tails] growing hot and itchy, and after just a moment they start to transform."));
+							?"[npc.Name]感觉[npc.tail]渐渐燥热发痒起来，过了一会儿就开始了转化。"
+							:"[npc.Name]感觉[npc.tails]渐渐燥热发痒起来，过了一会儿就开始了转化。"));
 		}
 
 		if(this.getLengthAsPercentageOfHeight()==this.getType().getDefaultLengthAsPercentageOfHeight()) {
@@ -136,14 +136,14 @@ public class Tail implements BodyPartInterface {
 		
 		// If NONE, apply type change after. All else, before:
 		if(type == TailType.NONE) {
-			sb.append(" "+type.getTransformationDescription(owner));
+			sb.append(type.getTransformationDescription(owner));
 			this.type = type;
 			
 		} else {
 			this.type = type;
 //			System.out.println("1 "+type.getTransformName() + " | "+CharacterUtils.isGeneratingOwnerlessBody());
 //			System.out.println("2 "+owner.getTailCovering().getName(owner));
-			sb.append(" "+type.getTransformationDescription(owner));
+			sb.append(type.getTransformationDescription(owner));
 		}
 		
 		sb.append("</p>");
@@ -198,18 +198,18 @@ public class Tail implements BodyPartInterface {
 		}
 		
 		if(owner.getTailCount() == tailCount && !overrideYoukoLimitations) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		if(owner.getTailType().equals(TailType.FOX_MORPH_MAGIC)
 				&& tailCount > getMaxTailCount(owner)
 				&& !overrideYoukoLimitations) {
 				return "<p style='text-align:center;'>"
-							+ "[style.colourMinorBad([npc.NamePos] arcane-infused "
+							+ "[style.colourMinorBad([npc.NamePos]注入奥术的"
 							+ (this.tailCount == 1
-								? "tail absorbs and nullifies"
-								: "tails absorb and nullify")
-							+ " the transformative effect, preventing any alteration to the number of tails [npc.she] [npc.has]!)]"
+								? "尾巴吸收并且无效化了"
+								: "尾巴吸收并且无效化了")
+							+ "转化效果，尾巴数量没能发生变化！)]"
 						+ "</p>";
 		}
 
@@ -282,31 +282,31 @@ public class Tail implements BodyPartInterface {
 		}
 
 		if (owner.getTailType() == TailType.NONE) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		if(removingTails) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads over [npc.namePos] [npc.tails], before moving down and concentrating in [npc.her] lower back."
-						+ " [npc.She] can't help but let out a cry as [npc.she] [npc.verb(feel)] some of them [style.boldShrink(shrinking away)] and disappearing back down into [npc.her] [npc.skin].<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric("
+						+ "一股刺痛感传遍了[npc.namePos]的[npc.tails]，接着这种感觉继续向上，集中在了[npc.her]的腰背间。"
+						+ "[npc.She]不禁大叫一声，只觉得好像有一条[style.boldShrink(缩了下去)]，消失在[npc.her]的[npc.skin]之下。<br/>"
+						+ "片刻过后，[npc.sheIs]便有了[style.boldTfGeneric("
 								+(tailCount==1
-									?"a single [npc.tail]"
-									:Util.intToString(tailCount)+" [npc.tails]")
-						+ ")]."
+									?"一条[npc.tail]"
+									:Util.intToString(tailCount)+"条[npc.tails]")
+						+ ")]。"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads over [npc.namePos] [npc.tails], before moving down and concentrating in [npc.her] lower back."
-						+ " [npc.She] can't help but let out a little cry as [npc.she] [npc.verb(feel)] new [npc.tails] [style.boldGrow(pushing up)] and growing out of [npc.her] [npc.skin].<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric("
+						+ "一股刺痛感传遍了[npc.namePos]的[npc.tails]，接着这种感觉继续向上，集中在了[npc.her]的腰背间。"
+						+ "[npc.She]不禁轻呼一声，只觉得好像有新的[npc.tails][style.boldShrink(正在生长)]，突破[npc.skin]而出。<br/>"
+						+ "片刻过后，[npc.sheIs]便有了[style.boldTfGeneric("
 								+(tailCount==1
-									?"a single [npc.tail]"
-									:Util.intToString(tailCount)+" [npc.tails]")
-						+ ")]."
+									?"一条[npc.tail]"
+									:Util.intToString(tailCount)+"条[npc.tails]")
+						+ ")]。"
 					+ "</p>");
 		}
 	}
@@ -350,11 +350,11 @@ public class Tail implements BodyPartInterface {
 		}
 
 		if(!owner.hasTail()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(As [npc.name] [npc.do] not have a tail, nothing seems to happen...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.name]没有尾巴，所以无事发生……)]</p>");
 		}
 		
 		if(girthChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The girth of [npc.namePos] [npc.tail] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.tail]的周长没有变化……)]</p>");
 		}
 		
 		return owner.getTailType().getGirthTransformationDescription(owner, girthChange > 0);
@@ -396,11 +396,11 @@ public class Tail implements BodyPartInterface {
 		}
 		
 		if(!owner.hasTail()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(As [npc.name] [npc.do] not have a tail, nothing seems to happen...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(由于[npc.name]没有尾巴，所以无事发生……)]</p>");
 		}
 		
 		if(lengthChange == 0) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The length of [npc.namePos] [npc.tail] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.tail]的长度没有变化……)]</p>");
 		}
 		
 		return owner.getTailType().getLengthTransformationDescription(owner, lengthChange > 0);

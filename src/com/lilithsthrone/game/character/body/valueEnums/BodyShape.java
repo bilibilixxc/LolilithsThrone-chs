@@ -21,39 +21,39 @@ public enum BodyShape {
 	 */
 	
 	// BodySize == ZERO_SKINNY
-	SKINNY_SOFT("gaunt", BodySize.ZERO_SKINNY, Muscle.ZERO_SOFT, Util.newArrayListOfValues("slender", "skinny")),
-	SKINNY_LIGHTLY_MUSCLED("petite", BodySize.ZERO_SKINNY, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("slender", "skinny")),
-	SKINNY_TONED("willowy", BodySize.ZERO_SKINNY, Muscle.TWO_TONED, Util.newArrayListOfValues("slender")),
-	SKINNY_MUSCULAR("lean", BodySize.ZERO_SKINNY, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("slender", "toned")),
-	SKINNY_RIPPED("gymnastic", BodySize.ZERO_SKINNY, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("slender", "toned")),
+	SKINNY_SOFT("瘦削", BodySize.ZERO_SKINNY, Muscle.ZERO_SOFT, Util.newArrayListOfValues("纤细", "纤瘦")),
+	SKINNY_LIGHTLY_MUSCLED("纤瘦", BodySize.ZERO_SKINNY, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("纤细", "纤瘦")),
+	SKINNY_TONED("轻盈", BodySize.ZERO_SKINNY, Muscle.TWO_TONED, Util.newArrayListOfValues("纤细")),
+	SKINNY_MUSCULAR("精瘦", BodySize.ZERO_SKINNY, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("纤瘦", "肌肉分明")),
+	SKINNY_RIPPED("健美", BodySize.ZERO_SKINNY, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("纤细", "肌肉分明")),
 
 	// BodySize == ONE_SLENDER
-	SLENDER_SOFT("slim", BodySize.ONE_SLENDER, Muscle.ZERO_SOFT, Util.newArrayListOfValues("slim", "slender")),
-	SLENDER_LIGHTLY_MUSCLED("thin", BodySize.ONE_SLENDER, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("slim", "slender")),
-	SLENDER_TONED("spry", BodySize.ONE_SLENDER, Muscle.TWO_TONED, Util.newArrayListOfValues("slim", "slender", "toned")),
-	SLENDER_MUSCULAR("lithe", BodySize.ONE_SLENDER, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("slim", "toned")),
-	SLENDER_RIPPED("aerobicised", BodySize.ONE_SLENDER, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("slim", "toned")),
+	SLENDER_SOFT("苗条", BodySize.ONE_SLENDER, Muscle.ZERO_SOFT, Util.newArrayListOfValues("苗条", "纤瘦")),
+	SLENDER_LIGHTLY_MUSCLED("修美", BodySize.ONE_SLENDER, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("苗条", "纤瘦")),
+	SLENDER_TONED("精干", BodySize.ONE_SLENDER, Muscle.TWO_TONED, Util.newArrayListOfValues("苗条", "纤瘦", "肌肉分明")),
+	SLENDER_MUSCULAR("精壮", BodySize.ONE_SLENDER, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("苗条", "肌肉分明")),
+	SLENDER_RIPPED("矫健", BodySize.ONE_SLENDER, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("苗条", "肌肉分明")),
 	
 	// BodySize == TWO_AVERAGE
-	AVERAGE_SOFT("chubby", BodySize.TWO_AVERAGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("chubby", "soft")),
-	AVERAGE_LIGHTLY_MUSCLED("average", BodySize.TWO_AVERAGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("slightly toned")),
-	AVERAGE_TONED("healthy", BodySize.TWO_AVERAGE, Muscle.TWO_TONED, Util.newArrayListOfValues("toned")),
-	AVERAGE_MUSCULAR("fit", BodySize.TWO_AVERAGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("toned", "muscular")),
-	AVERAGE_RIPPED("athletic", BodySize.TWO_AVERAGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("toned", "muscular", "strong")),
+	AVERAGE_SOFT("圆润", BodySize.TWO_AVERAGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("圆润", "肌肉松弛")),
+	AVERAGE_LIGHTLY_MUSCLED("匀称", BodySize.TWO_AVERAGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("稍有肌肉")),
+	AVERAGE_TONED("协调", BodySize.TWO_AVERAGE, Muscle.TWO_TONED, Util.newArrayListOfValues("肌肉分明")),
+	AVERAGE_MUSCULAR("健壮", BodySize.TWO_AVERAGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("肌肉分明", "线条优美")),
+	AVERAGE_RIPPED("强健", BodySize.TWO_AVERAGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("肌肉分明", "线条优美", "强壮")),
 	
 	// BodySize == THREE_LARGE
-	LARGE_SOFT("fat", BodySize.THREE_LARGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("chubby", "soft", "fat")),
-	LARGE_LIGHTLY_MUSCLED("plump", BodySize.THREE_LARGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("chubby", "soft", "plump")),
-	LARGE_TONED("burly", BodySize.THREE_LARGE, Muscle.TWO_TONED, Util.newArrayListOfValues("large", "strong")),
-	LARGE_MUSCULAR("powerful", BodySize.THREE_LARGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("large", "muscular", "strong")),
-	LARGE_RIPPED("buff", BodySize.THREE_LARGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("huge", "muscular", "strong")),
+	LARGE_SOFT("肥胖", BodySize.THREE_LARGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("圆润", "肌肉松弛", "肥胖")),
+	LARGE_LIGHTLY_MUSCLED("丰满", BodySize.THREE_LARGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("圆润", "肌肉松弛", "丰满")),
+	LARGE_TONED("结实", BodySize.THREE_LARGE, Muscle.TWO_TONED, Util.newArrayListOfValues("硕大", "强壮")),
+	LARGE_MUSCULAR("壮实", BodySize.THREE_LARGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("硕大", "线条优美", "强壮")),
+	LARGE_RIPPED("魁梧", BodySize.THREE_LARGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("庞大", "线条优美", "强壮")),
 	
 	// BodySize == FOUR_HUGE
-	HUGE_SOFT("obese", BodySize.FOUR_HUGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("chubby", "soft", "fat")),
-	HUGE_LIGHTLY_MUSCLED("chunky", BodySize.FOUR_HUGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("chubby", "soft", "plump")),
-	HUGE_TONED("robust", BodySize.FOUR_HUGE, Muscle.TWO_TONED, Util.newArrayListOfValues("large", "strong")),
-	HUGE_MUSCULAR("thickset", BodySize.FOUR_HUGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("large", "muscular", "strong")),
-	HUGE_RIPPED("jacked", BodySize.FOUR_HUGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("huge", "muscular", "strong"));
+	HUGE_SOFT("臃肿", BodySize.FOUR_HUGE, Muscle.ZERO_SOFT, Util.newArrayListOfValues("圆润", "肌肉松弛", "肥胖")),
+	HUGE_LIGHTLY_MUSCLED("肥硕", BodySize.FOUR_HUGE, Muscle.ONE_LIGHTLY_MUSCLED, Util.newArrayListOfValues("肥硕", "肌肉松弛", "丰满")),
+	HUGE_TONED("粗壮", BodySize.FOUR_HUGE, Muscle.TWO_TONED, Util.newArrayListOfValues("硕大", "强壮")),
+	HUGE_MUSCULAR("膀大腰圆", BodySize.FOUR_HUGE, Muscle.THREE_MUSCULAR, Util.newArrayListOfValues("硕大", "线条优美", "强壮")),
+	HUGE_RIPPED("虎背熊腰", BodySize.FOUR_HUGE, Muscle.FOUR_RIPPED, Util.newArrayListOfValues("庞大", "线条优美", "强壮"));
 	
 	private String name;
 	private List<String> limbDescriptors;
@@ -69,7 +69,7 @@ public enum BodyShape {
 
 	public String getName(boolean withDeterminer) {
 		if(withDeterminer) {
-			return UtilText.generateSingularDeterminer(name) + " " + name;
+			return UtilText.generateSingularDeterminer(name) + "" + name;
 		} else {
 			return name;
 		}

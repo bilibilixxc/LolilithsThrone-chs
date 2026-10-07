@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[Takahashi's bedroom]]></name>
-	<tooltipDescription><![CDATA[Several bookshelves have been squeezed into Takahashi's bedroom, and are filled with books, potions, and stacks of papers.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Takahashi's bedroom]]></virginityLossDescription>
+	<name><![CDATA[高桥的卧室]]></name>
+	<tooltipDescription><![CDATA[高桥的卧室里塞进了好几个书架，上面放满了书、魔药，还有成堆的文件。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于高桥的卧室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>bedroom</svgName>
 	<colour>BASE_BLUE_LIGHT</colour>

@@ -11,7 +11,7 @@ import com.lilithsthrone.game.dialogue.utils.UtilText;
  */
 public class LilithsTower {
 	
-	public static final DialogueNode OUTSIDE = new DialogueNode("Lilith's Tower", "", false) {
+	public static final DialogueNode OUTSIDE = new DialogueNode("莉莉丝之塔", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return DominionPlaces.TRAVEL_TIME_STREET;
@@ -23,13 +23,13 @@ public class LilithsTower {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Approach", "Approach the archway and see if you can enter the tower's grounds.", LILITHS_DISTRICT_APPROACH);
+				return new Response("靠近", "靠近拱门，看看能否进入塔内。", LILITHS_DISTRICT_APPROACH);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode LILITHS_DISTRICT_APPROACH = new DialogueNode("Lilith's Tower", "", false, true) {
+	public static final DialogueNode LILITHS_DISTRICT_APPROACH = new DialogueNode("莉莉丝之塔", "", false, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;

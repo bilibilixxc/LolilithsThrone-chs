@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -9,15 +9,15 @@
 	
 	<!-- The determiner which should be used when describing this covering.
 	For feathers, it would be something like 'a plume of'. -->
-	<determiner><![CDATA[a layer of]]></determiner>
+	<determiner><![CDATA[一层]]></determiner>
 	
 	<!-- The name of this covering. -->
-	<name><![CDATA[smooth sharkskin]]></name>
+	<name><![CDATA[顺滑鲨鱼皮]]></name>
 	
 	<!-- The plural of this covering.
 	The 'pluralByDefault' attribute determines whether or not this covering is by default referred to as a plural.
 	For example, a covering of feathers would be pluralByDefault="true", as it should be referred to as 'a plume of feathers', not 'a plume of feather'. -->
-	<namePlural pluralByDefault="false"><![CDATA[smooth sharkskins]]></namePlural> 
+	<namePlural pluralByDefault="false"><![CDATA[顺滑鲨鱼皮]]></namePlural> 
 	
 	<!-- Which modifiers this covering should *naturally* have available to it.
 	The first modifier defined will be used as the default modifier, which in this case is 'FLUFFY'.

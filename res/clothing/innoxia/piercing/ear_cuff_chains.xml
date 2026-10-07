@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>200</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[ear cuff chain studs]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[ear cuff chain studs]]></namePlural>
-		<description><![CDATA[A pair of stud earrings, each one of which is connected to an ear cuff by means of thin chains.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[耳夹链耳钉]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[耳夹链耳钉]]></namePlural>
+		<description><![CDATA[一对通过细链连接到耳夹上的耳钉。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>PIERCING_EAR</slot> 
@@ -19,7 +19,7 @@
 			<category id="more_chains" priority="1">
 				<categoryName><![CDATA[Chain count]]></categoryName>
 				<sticker id="none" priority="0" defaultSticker="true" zLayer="0" colourSelected="GENERIC_GOOD">
-					<stickerName><![CDATA[One chain]]></stickerName>
+					<stickerName><![CDATA[一条链子]]></stickerName>
 					<namePrefix/>
 					<namePostfix/>
 					<descriptionModification/>
@@ -30,7 +30,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="add1" priority="1" defaultSticker="true" zLayer="-1">
-					<stickerName><![CDATA[Two chains]]></stickerName>
+					<stickerName><![CDATA[两条链子]]></stickerName>
 					<namePrefix/>
 					<descriptionModification/>
 					<imageName>ear_cuff_chains_extra_1.svg</imageName>
@@ -40,7 +40,7 @@
 					<availabilityText/>
 				</sticker>
 				<sticker id="add2" priority="2" defaultSticker="true" zLayer="-2">
-					<stickerName><![CDATA[Three chains]]></stickerName>
+					<stickerName><![CDATA[三条链子]]></stickerName>
 					<namePrefix/>
 					<descriptionModification/>
 					<imageName>ear_cuff_chains_extra_2.svg</imageName>
@@ -79,27 +79,26 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(clip)] the stud earrings into [npc.her] [npc.ears], before attaching the cuffs to [npc.her] upper [npc.ears] and allowing the chains to hang loose.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(clip)] the stud earrings into [npc2.namePos] [npc2.ears], before attaching the cuffs to [npc2.her] upper [npc2.ears] and allowing the chains to hang loose.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(clip)] the stud earrings into [npc2.namePos] [npc2.ears], before attaching the cuffs to [npc2.her] upper [npc2.ears] and allowing the chains to hang loose.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将耳钉戴在[npc.her]的[npc.ears]上，然后将耳夹系在[npc.her][npc.ears]上部，让链子垂下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将耳钉戴在[npc2.namePos]的[npc2.ears]上，然后将耳夹夹在[npc2.her][npc2.ears]上部，让链子垂落下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将耳钉戴在了[npc2.namePos]的[npc2.ears]上，然后将耳夹系在[npc2.her]的[npc2.ears]上部，让链条垂下。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unclip)] [npc.her] stud earrings and [npc.verb(take)] them out, before removing the cuffs.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] stud earrings and [npc.verb(take)] them out, before removing the cuffs.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(unclip)] [npc2.namePos] stud earrings and roughly [npc.verb(pull)] them out, before removing the cuffs.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]的耳钉并把它们取出，然后摘掉了耳夹。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的耳钉并取了出来，然后摘掉了耳夹。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的耳钉取下，然后粗暴地将耳钉拔出，最后取下耳夹。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

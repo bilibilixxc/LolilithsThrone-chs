@@ -28,7 +28,7 @@ public class SlaveryAdministration {
 		return (Finch) Main.game.getNpc(Finch.class);
 	}
 	
-	public static final DialogueNode SLAVERY_ADMINISTRATION_EXTERIOR = new DialogueNode("Slavery Administration", ".", false) {
+	public static final DialogueNode SLAVERY_ADMINISTRATION_EXTERIOR = new DialogueNode("奴隶管理局", ".", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 60;
@@ -40,19 +40,19 @@ public class SlaveryAdministration {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Enter", "Step inside the 'Slavery Administration' building.", SLAVERY_ADMINISTRATION);
+				return new Response("进入", "走进奴隶管理局。", SLAVERY_ADMINISTRATION);
 
 			} else if(index==2) {
 				if(Main.game.getCurrentDialogueNode()==SLAVERY_ADMINISTRATION_POSTERS) {
-					return new Response("Posters", "You're already taking a closer look at the posters...", null);
+					return new Response("海报", "你已经仔细看过海报了……", null);
 				}
-				return new Response("Posters", "Take a closer look at the posters which are plastered over the wall of the Slavery Administation building.", SLAVERY_ADMINISTRATION_POSTERS);
+				return new Response("海报", "仔细看一下张贴在奴隶管理局建筑墙上的海报。", SLAVERY_ADMINISTRATION_POSTERS);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode SLAVERY_ADMINISTRATION_POSTERS = new DialogueNode("Slavery Administration", ".", false) {
+	public static final DialogueNode SLAVERY_ADMINISTRATION_POSTERS = new DialogueNode("奴隶管理局", ".", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -67,7 +67,7 @@ public class SlaveryAdministration {
 		}
 	};
 	
-	public static final DialogueNode SLAVERY_ADMINISTRATION = new DialogueNode("Slavery Administration", ".", true) {
+	public static final DialogueNode SLAVERY_ADMINISTRATION = new DialogueNode("奴隶管理局", ".", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -80,10 +80,10 @@ public class SlaveryAdministration {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getPlayer().isHasSlaverLicense()) {
 				if (index == 1) {
-					return new ResponseTrade("Trade", "Buy slavery-related items.", getFinch());
+					return new ResponseTrade("交易", "购买奴役相关物品。", getFinch());
 
 				} else if (index == 2 && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.finchFreedomTalk)) {
-					return new Response("Freeing slaves", "Ask Finch about what sort of process you'd need to go through in order to set slaves free.", SLAVE_FREEDOM_TALK) {
+					return new Response("释放奴隶", "询问芬奇如果要释放奴隶，需要经过什么流程。", SLAVE_FREEDOM_TALK) {
 						@Override
 						public void effects() {
 							getFinch().addItem(Main.game.getItemGen().generateItem("innoxia_slavery_freedom_certification"), 10, false, false);
@@ -92,7 +92,7 @@ public class SlaveryAdministration {
 					};
 
 				} else if (index == 5) {
-					return new Response("Slave Manager", "Open the slave management screen.", SLAVERY_ADMINISTRATION) {
+					return new Response("奴隶管理", "打开奴隶管理界面。", SLAVERY_ADMINISTRATION) {
 						@Override
 						public boolean isTradeHighlight() {
 							return true;
@@ -105,7 +105,7 @@ public class SlaveryAdministration {
 					};
 
 				} else if (index == 0) {
-					return new Response("Leave", "Step back outside.", SLAVERY_ADMINISTRATION_EXTERIOR);
+					return new Response("离开", "回到外边。", SLAVERY_ADMINISTRATION_EXTERIOR);
 
 				} else {
 					return null;
@@ -113,7 +113,7 @@ public class SlaveryAdministration {
 			} else {
 				if (index == 1) {
 					if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_SLAVERY)) {
-						return new Response("Slaver license", "Ask Finch about obtaining a slaver license.", SLAVERY_ADMINISTRATION_ASK_ABOUT_SLAVER_LICENSE) {
+						return new Response("贩奴许可", "询问芬奇获得贩奴许可的事情。", SLAVERY_ADMINISTRATION_ASK_ABOUT_SLAVER_LICENSE) {
 							@Override
 							public void effects() {
 								Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().startQuest(QuestLine.SIDE_SLAVERY));
@@ -123,8 +123,8 @@ public class SlaveryAdministration {
 						
 					} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_SLAVERY) == Quest.SIDE_SLAVER_RECOMMENDATION_OBTAINED) {
 						if(Main.game.getPlayer().getMoney() >= slaverLicenseCost) {
-							return new Response("Present letter (<span style='color:" + PresetColour.CURRENCY_GOLD.toWebHexString() + ";'>" + UtilText.getCurrencySymbol() + "</span> "+slaverLicenseCost+")",
-									"Show Finch the letter of recommendation you obtained from Lilaya, and then pay "+slaverLicenseCost+" flames to obtain a slaver license.",
+							return new Response("递交信件(<span style='color:" + PresetColour.CURRENCY_GOLD.toWebHexString() + ";'>" + UtilText.getCurrencySymbol() + "</span> "+slaverLicenseCost+")",
+									"将你从莉莱雅处得到的推荐信交给芬奇，然后上交"+slaverLicenseCost+"火币以获取贩奴许可。",
 									SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED) {
 								@Override
 								public void effects() {
@@ -132,16 +132,16 @@ public class SlaveryAdministration {
 								}
 							};
 						} else {
-							return new Response("Present letter (" + UtilText.getCurrencySymbol() + " "+slaverLicenseCost+")", "You don't have enough money to buy a slaver license! You need at least "+slaverLicenseCost+" flames.", null);
+							return new Response("递交信件(" + UtilText.getCurrencySymbol() + ""+slaverLicenseCost+")", "你没有足够的钱来买贩奴许可！你至少需要"+slaverLicenseCost+"火币。", null);
 						}
 						
 					} else {
-						return new Response("Present letter (" + UtilText.getCurrencySymbol() + " "+slaverLicenseCost+")", "You need to obtain a letter of recommendation from Lilaya first!", null);
+						return new Response("递交信件(" + UtilText.getCurrencySymbol() + ""+slaverLicenseCost+")", "你需要先从莉莱雅那里拿到推荐信！", null);
 						
 					}
 					
 				} else if (index == 0) {
-					return new Response("Leave", "Step back outside.", SLAVERY_ADMINISTRATION_EXTERIOR) {
+					return new Response("离开", "回到外边。", SLAVERY_ADMINISTRATION_EXTERIOR) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().values.add(DialogueFlagValue.finchIntroduced);
@@ -155,7 +155,7 @@ public class SlaveryAdministration {
 		}
 	};
 	
-	public static final DialogueNode SLAVERY_ADMINISTRATION_ASK_ABOUT_SLAVER_LICENSE = new DialogueNode("Slavery Administration", ".", true) {
+	public static final DialogueNode SLAVERY_ADMINISTRATION_ASK_ABOUT_SLAVER_LICENSE = new DialogueNode("奴隶管理局", ".", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -170,7 +170,7 @@ public class SlaveryAdministration {
 		}
 	};
 	
-	public static final DialogueNode SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED = new DialogueNode("Slavery Administration", ".", true) {
+	public static final DialogueNode SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED = new DialogueNode("奴隶管理局", ".", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -182,7 +182,7 @@ public class SlaveryAdministration {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Rules", "Allow [finch.name] to explain the rules to you.", SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED_RULES) {
+				return new Response("规章", "让[finch.name]给你解释一下规矩。", SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED_RULES) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.SIDE_SLAVERY, Quest.SIDE_UTIL_COMPLETE));
@@ -196,7 +196,7 @@ public class SlaveryAdministration {
 		}
 	};
 	
-	public static final DialogueNode SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED_RULES = new DialogueNode("Slavery Administration", ".", true, true) {
+	public static final DialogueNode SLAVERY_ADMINISTRATION_SLAVER_LICENSE_OBTAINED_RULES = new DialogueNode("奴隶管理局", ".", true, true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;

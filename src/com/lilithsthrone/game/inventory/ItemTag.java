@@ -15,7 +15,7 @@ public enum ItemTag {
 
 	CHEAT_ITEM, // Cheat items are hidden in the debug spawner, and are also not added to the Encyclopedia.
 	SILLY_MODE, // Silly mode items only appear in shopkeepers inventories when silly mode is on.
-	FILLY_NAMING(Util.newArrayListOfValues("Replaces Natalya's 'mule' references to 'filly'"), false), // Special tag used for the mule/filly choker
+	FILLY_NAMING(Util.newArrayListOfValues("将娜塔莉亚文本中所有提及“骡子”之处替换为“雌驹”"), false), // 骡子/雌驹项圈专用tag
 	
 	REMOVE_FROM_DRESSING_ROOM_OUTFITS,
 	REMOVE_FROM_DEBUG_SPAWNER,
@@ -61,33 +61,33 @@ public enum ItemTag {
 	
 	// To mark consumables as containing caffeine, with the number representing the equivalent alcoholic level to be applied to spider-morphs
 	// Only one of these should be applied to an item
-	CAFFEINATED_005(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 5% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_010(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 10% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_015(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 15% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_020(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 20% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_025(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 25% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_030(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 30% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_040(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 40% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_050(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 50% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_075(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 75% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
-	CAFFEINATED_100(Util.newArrayListOfValues("[style.boldMinorBad(Adds)] 100% to [style.boldAlcohol(intoxication level)] for [style.boldSpider(spider-morphs)]"), false),
+	CAFFEINATED_005(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]5%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_010(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]10%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_015(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]15%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_020(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]20%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_025(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]25%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_030(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]30%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_040(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]40%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_050(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]50%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_075(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]75%[style.boldAlcohol(醉酒度)]"), false),
+	CAFFEINATED_100(Util.newArrayListOfValues("对于[style.boldSpider(蛛化形)][style.boldMinorBad(增加)]100%[style.boldAlcohol(醉酒度)]"), false),
 	
 	CONTRABAND_LIGHT(// 'Restricted' items will not be bought by honest shopkeepers
 			Util.newArrayListOfValues(
-					"[style.colourDarkBlue(Restricted)]",
-					"[style.colourMinorBad(Honest traders will not buy this)]"),
+					"[style.colourDarkBlue(受限)]",
+					"[style.colourMinorBad(诚信商人不会买账)]"),
 			false),
 	CONTRABAND_MEDIUM(// 'Illegal' items will not be bought by honest shopkeepers and will be confiscated by Enforcers
 			Util.newArrayListOfValues(
-					"[style.colourDarkBlue(Illegal)]",
-					"[style.colourMinorBad(Honest traders will not buy this)]",
-					"[style.colourBad(Enforcers will confiscate this)]"),
+					"[style.colourDarkBlue(非法)]",
+					"[style.colourMinorBad(诚信商人不会买账)]",
+					"[style.colourBad(执法者会没收这件物品)]"),
 			false),
 	CONTRABAND_HEAVY(// 'Highly Illegal' items will not be bought by honest shopkeepers and Enforcers will arrest anyone possessing them
 			Util.newArrayListOfValues(
-					"[style.colourDarkBlue(Highly Illegal)]",
-					"[style.colourMinorBad(Honest traders will not buy this)]",
-					"[style.colourTerrible(Enforcers will arrest people possessing this)]"),
+					"[style.colourDarkBlue(严重违法)]",
+					"[style.colourMinorBad(诚信商人不会买账)]",
+					"[style.colourTerrible(执法者会逮捕携带这件物品的人)]"),
 			false),
 	
 	//-------------- WEAPONS & CLOTHING --------------//
@@ -95,7 +95,7 @@ public enum ItemTag {
 	// ----- Weapon-specific tags: ----- //
 	WEAPON_FERAL_EQUIPPABLE( // Allows ferals to equip this weapon (as they cannot equip weapons by default)
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Can be equipped by ferals)]"),
+					"[style.colourFeral(可以被兽类装备)]"),
 			false),
 	
 	WEAPON_BLADE, // Should be added to all weapons that use an arcane blade
@@ -114,24 +114,24 @@ public enum ItemTag {
 
 	UNLOCKS_ENCOUNTER( // Special tag which has no effect other than displaying text for clothing stickers. Used for the 'rental mommy' tshirt, so look there for an example.
 			Util.newArrayListOfValues(
-			"[style.colourBlueLight(Can cause an encounter)]"),
+			"[style.colourBlueLight(可能引起遭遇战)]"),
 			false),
 	
 	NIGHT_VISION_SELF( // Makes this clothing or weapon provide immunity to the darkness debuff for just the wearer while equipped
 			Util.newArrayListOfValues(
-					"[style.colourGood(Negates 'Darkness' effect)]"),
+					"[style.colourGood(消除“黑暗”效果)]"),
 			false),
 	
 	NIGHT_VISION_AREA( // Makes this clothing or weapon provide immunity to the darkness debuff for all characters in the area in which the wearer is located while equipped
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(Negates 'Darkness' effect for all nearby characters)]"),
+					"[style.colourExcellent(消除所有附近角色的“黑暗”效果)]"),
 			false),
 	
 	REVEALS_CONCEALABLE_SLOT, // If a piece of clothing has this tag, it will always be visible, even if another item of clothing is concealing its slot. (Used for spreader bar.)
 
 	TRANSPARENT( // This item of clothing does not conceal any areas. Used for chastity cages & condoms (so penis is still visible). Could also be used for sheer clothing material.
 			Util.newArrayListOfValues(
-					"[style.colourSex(Cannot conceal any body parts)]"),
+					"[style.colourSex(不能隐藏任何身体部位)]"),
 			false),
 	
 	IGNORE_HAIR_RESTRICTION, // If a piece of clothing has this tag, it can always be equipped into the HAIR slot, even if the equipping character has no hair.
@@ -141,235 +141,235 @@ public enum ItemTag {
 	
 	PRESCRIPTION_GLASSES(  // Negates the blurry vision status effect
 			Util.newArrayListOfValues(
-					"[style.colourGood(Enchanted prescription lenses enhance the wearer's vision)]"),
+					"[style.colourGood(附魔的镜片可以增强佩戴者的视力)]"),
 			false),
 
 	PROVIDES_KEY( // The person who equips this clothing will get an unlock key, making the unsealing cost 0
 			Util.newArrayListOfValues(
-					"[style.colourGood(Provides equipper with key)]"),
+					"[style.colourGood(为装备者提供钥匙)]"),
 			false),
 	
 	UNENCHANTABLE(  // Prevents the player from enchanting this in the inventory menu.
 			Util.newArrayListOfValues(
-					"[style.colourBad(Unenchantable)]"),
+					"[style.colourBad(无法附魔)]"),
 			false),
 
 	// If clothing has these tags, then it will act as though the associated bodyPart is added to the blockedBodyParts list
 	// This is mainly useful for stickers, as normally you should be using the blockedBodyParts list to define blocked areas
 	// Look at the innoxia_latex_hood clothing item to see these in use
-	APPLIES_BLOCKED_BODY_PART_EYES(Util.newArrayListOfValues("[style.colourBad(Blocks eyes)]"), false),
-	APPLIES_BLOCKED_BODY_PART_MOUTH(Util.newArrayListOfValues("[style.colourBad(Blocks mouth)]"), false),
+	APPLIES_BLOCKED_BODY_PART_EYES(Util.newArrayListOfValues("[style.colourBad(遮挡眼部)]"), false),
+	APPLIES_BLOCKED_BODY_PART_MOUTH(Util.newArrayListOfValues("[style.colourBad(遮挡口部)]"), false),
 	
 	SPREADS_FEET( // Prevents double foot actions, like wrap-around footjobs
 			Util.newArrayListOfValues(
-					"[style.colourBad(Restricts sex actions)]"),
+					"[style.colourBad(限制性爱动作)]"),
 			false),
 
 	MUFFLES_SPEECH( // Causes the wearer to not be able to talk. E.g. Ball gags
 			Util.newArrayListOfValues(
-					"[style.colourBad(Muffles speech)]"),
+					"[style.colourBad(说话含糊不清)]"),
 			false),
 
 	BLOCKS_SIGHT( // Causes the wearer to suffer from 'blinded' status effect
 			Util.newArrayListOfValues(
-					"[style.colourBad(Blocks sight)]"),
+					"[style.colourBad(遮挡视线)]"),
 			false),
 	
 	HINDERS_ARM_MOVEMENT( // Hinders the ability of the wearer to use their arms. E.g. Hand cuffs
 			Util.newArrayListOfValues(
-					"[style.colourBad(Hinders arm movement)]",
-					"[style.colourTerrible(Blocks arm-wing flight)]"),
+					"[style.colourBad(妨碍手臂运动)]",
+					"[style.colourTerrible(阻止翼手战斗)]"),
 			false),
 
 	HINDERS_LEG_MOVEMENT(  // Hinders the ability of the wearer to run or use their legs properly. E.g. Spreader bar
 			Util.newArrayListOfValues(
-					"[style.colourBad(Hinders leg movement)]",
-					"[style.colourTerrible(Blocks non-flight combat escape)]"),
+					"[style.colourBad(妨碍腿部运动)]",
+					"[style.colourTerrible(阻止非飞行战斗逃跑)]"),
 			false),
 
 	PREVENTS_COMBAT_ESCAPE(  // Prevents the character from escaping from combat
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Prevents combat escape)]"),
+					"[style.colourTerrible(阻止战斗逃跑)]"),
 			false),
 	
 	DUPLICATE_WHEN_EQUIP,  // Instead of removing the clothing from the inventory it's in, duplicate the clothing and then equip the duplicate instead. This should probably be paired with DISCARDED_WHEN_UNEQUIPPED, and is used for the electrical tape roll.
 	
 	DISCARDED_WHEN_UNEQUIPPED( // Makes the clothing be thrown away when unequipped. E.g. Condoms
 			Util.newArrayListOfValues(
-					"[style.colourMinorBad(Discarded when unequipped)]"),
+					"[style.colourMinorBad(卸下时将被丢弃)]"),
 			false),
 
 	ENABLE_SEX_EQUIP( // Allows this clothing to be equipped during sex. E.g. Condoms or strapons
 			Util.newArrayListOfValues(
-					"[style.colourSex(Sex-equip enabled)]"),
+					"[style.colourSex(可在性交中装备)]"),
 			false),
 	
 	// Self-explanatory requirements in order to equip this clothing:
 	REQUIRES_PENIS(
 			Util.newArrayListOfValues(
-					"[style.colourSex(Requires penis)]"),
+					"[style.colourSex(需要拥有阴茎)]"),
 			false),
 	REQUIRES_NO_PENIS(
 			Util.newArrayListOfValues(
-					"[style.colourSex(Requires no penis)]"),
+					"[style.colourSex(需要没有阴茎)]"),
 			false),
 	REQUIRES_VAGINA(
 			Util.newArrayListOfValues(
-					"[style.colourSex(Requires vagina)]"),
+					"[style.colourSex(需要拥有阴道)]"),
 			false),
 	REQUIRES_NO_VAGINA(
 			Util.newArrayListOfValues(
-					"[style.colourSex(Requires no vagina)]"),
+					"[style.colourSex(需要没有阴道)]"),
 			false),
 	REQUIRES_FUCKABLE_NIPPLES(
 			Util.newArrayListOfValues(
-					"[style.colourSex(Requires fuckable nipples)]"),
+					"[style.colourSex(需要可操的乳头)]"),
 			false),
 	
 	// These 'FITS' tags are used to check for whether clothing is suitable for certain body parts. They should be pretty self-explanatory.
 	// Mouths (mouth clothing fits all mouth types by default, which is why there's no need for 'FITS_MUZZLES' or 'FITS_BEAKS'):
 	FITS_MUZZLES_EXCLUSIVE(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits muzzles)]"),
+					"[style.colourFeral(只适配口套)]"),
 			false),
 	FITS_BEAKS_EXCLUSIVE(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits beaks)]"),
+					"[style.colourFeral(只适配喙)]"),
 			false),
 	
 	// legs:
 	FITS_HOOFS_EXCLUSIVE(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits hoofs)]"),
+					"[style.colourFeral(只适配有蹄类)]"),
 			false),
 	FITS_HOOFS(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits hoofs)]"),
+					"[style.colourFeral(适配有蹄类)]"),
 			false),
 	
 	FITS_TALONS_EXCLUSIVE(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits talons)]"),
+					"[style.colourFeral(只适配鸟类的利爪)]"),
 			false),
 	FITS_TALONS(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits talons)]"),
+					"[style.colourFeral(适配鸟类的利爪)]"),
 			false),
 	
 	// Arms:
 	FITS_FEATHERED_ARM_WINGS_EXCLUSIVE(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits feathered arm-wings)]"),
+					"[style.colourTfGeneric(只适配羽毛翼手)]"),
 			false),
 	FITS_FEATHERED_ARM_WINGS(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Fits feathered arm-wings)]"),
+					"[style.colourTfGeneric(适配羽毛翼手)]"),
 			false),
 	FITS_LEATHERY_ARM_WINGS_EXCLUSIVE(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits leathery arm-wings)]"),
+					"[style.colourTfGeneric(只适配皮质翼手)]"),
 			false),
 	FITS_LEATHERY_ARM_WINGS(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Fits leathery arm-wings)]"),
+					"[style.colourTfGeneric(适配皮质翼手)]"),
 			false),
 	FITS_ARM_WINGS_EXCLUSIVE(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits arm-wings)]"),
+					"[style.colourTfGeneric(只适配翼手)]"),
 			false),
 	FITS_ARM_WINGS(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Fits arm-wings)]"),
+					"[style.colourTfGeneric(适配翼手)]"),
 			false),
 
 	// Bodies:
 	FITS_NON_BIPED_BODY_HUMANOID(
 			Util.newArrayListOfValues(
-					"[style.colourHuman(Fits humanoid parts of non-biped bodies)]"),
+					"[style.colourHuman(适配非两足动物身体的类人部分)]"),
 			false),
 	FITS_BIPEDS(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits bipedal bodies)]"),
+					"[style.colourTfGeneric(只适配双足身体)]"),
 			false),
 	FITS_TAUR_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits quadrupedal bodies)]"),
+					"[style.colourTfGeneric(只适配四足身体)]"),
 			false),
 	FITS_LONG_TAIL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits long-tailed bodies)]"),false), //lamia, eels
+					"[style.colourTfGeneric(只适配拥有长尾巴的身体)]"),false), //lamia, eels
 	FITS_TAIL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits tailed bodies)]"),false), //mermaids
+					"[style.colourTfGeneric(只适配拥有尾巴的身体)]"),false), //mermaids
 	FITS_ARACHNID_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits arachnid bodies)]"),false), //spiders and scorpions
+					"[style.colourTfGeneric(只适配蛛形身体)]"),false), //spiders and scorpions
 	FITS_CEPHALOPOD_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits cephalopod bodies)]"),false), //octopuses and squids
+					"[style.colourTfGeneric(只适配头足类身体)]"),false), //octopuses and squids
 	FITS_AVIAN_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourTfGeneric(Only fits avian bodies)]"),false), //bird-taurs
+					"[style.colourTfGeneric(只适配鸟类身体)]"),false), //bird-taurs
 
 	// Feral status:
 	// These tags are non-exclusive, so clothing with them can additionally be equipped by non-ferals:
 	FITS_FERAL_ALL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits all feral bodies)]"),false), //All feral bodies can equip clothing marked with this tag.
+					"[style.colourFeral(适配所有兽态身体)]"),false), //All feral bodies can equip clothing marked with this tag.
 	FITS_FERAL_QUADRUPED_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits quadrupedal feral bodies)]"),false), //Quadrupedal feral bodies can equip clothing marked with this tag
+					"[style.colourFeral(适配四足兽态身体)]"),false), //Quadrupedal feral bodies can equip clothing marked with this tag
 	FITS_FERAL_LONG_TAIL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits long-tailed feral bodies)]"),false), //Long-tailed feral bodies can equip clothing marked with this tag
+					"[style.colourFeral(适配拥有长尾巴的兽态身体)]"),false), //Long-tailed feral bodies can equip clothing marked with this tag
 	FITS_FERAL_TAIL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits tailed feral bodies)]"),false), //Tailed feral bodies can equip clothing marked with this tag
+					"[style.colourFeral(适配拥有尾巴的兽态身体)]"),false), //Tailed feral bodies can equip clothing marked with this tag
 	FITS_FERAL_ARACHNID_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits arachnid feral bodies)]"),false), //Arachnid feral bodies can equip clothing marked with this tag
+					"[style.colourFeral(适配蛛形兽态身体)]"),false), //Arachnid feral bodies can equip clothing marked with this tag
 	FITS_FERAL_CEPHALOPOD_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits cephalopod feral bodies)]"),false), //Cephalopod feral bodies can equip clothing marked with this tag
+					"[style.colourFeral(适配头足类兽态身体)]"),false), //Cephalopod feral bodies can equip clothing marked with this tag
 	FITS_FERAL_AVIAN_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Fits avian feral bodies)]"),false), //Avian feral bodies can equip clothing marked with this tag
+					"[style.colourFeral(适配鸟类兽态身体)]"),false), //Avian feral bodies can equip clothing marked with this tag
 	// These tags are exclusive, so clothing with them can ONLY be equipped by the corresponding body type (unless the clothing additionally has other permissive tags):
 	ONLY_FITS_FERAL_ALL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits feral bodies)]"),false),
+					"[style.colourFeral(只适配兽态身体)]"),false),
 	ONLY_FITS_FERAL_QUADRUPED_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits quadrupedal feral bodies)]"),false),
+					"[style.colourFeral(只适配四足兽态身体)]"),false),
 	ONLY_FITS_FERAL_LONG_TAIL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits long-tailed feral bodies)]"),false),
+					"[style.colourFeral(只适配拥有长尾巴的兽态身体)]"),false),
 	ONLY_FITS_FERAL_TAIL_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits tailed feral bodies)]"),false),
+					"[style.colourFeral(只适配拥有尾巴的兽态身体)]"),false),
 	ONLY_FITS_FERAL_ARACHNID_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits arachnid feral bodies)]"),false),
+					"[style.colourFeral(只适配蛛形兽态身体)]"),false),
 	ONLY_FITS_FERAL_CEPHALOPOD_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits cephalopod feral bodies)]"),false),
+					"[style.colourFeral(只适配头足类兽态身体)]"),false),
 	ONLY_FITS_FERAL_AVIAN_BODY(
 			Util.newArrayListOfValues(
-					"[style.colourFeral(Only fits avian feral bodies)]"),false),
+					"[style.colourFeral(只适配鸟类兽态身体)]"),false),
 	
 	
 	RIGID_MATERIAL( // The clothing is made out of a rigid material, and as such, groping actions cannot be performed on it. Used for chastity cages/belts.
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Blocks groping actions)]"),
+					"[style.colourTerrible(阻止触摸动作)]"),
 			false),
 	
 	PREVENTS_ERECTION_PHYSICAL( // Prevents the wearer from getting an erection during sex, by means of physically limiting the space into which the erection could take shape (i.e. chastity cages). As of 0.3.1, only affects descriptors.
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Prevents erection)]"),
+					"[style.colourTerrible(限制勃起)]"),
 			false),
 	PREVENTS_ERECTION_OTHER( // Prevents the wearer from getting an erection during sex, by means other than physical limitations. As of 0.3.1, only affects descriptors.
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Prevents erection)]"),
+					"[style.colourTerrible(限制勃起)]"),
 			false),
 	
 	// Sex-related clothing:
@@ -379,79 +379,79 @@ public enum ItemTag {
 	
 	CHOKER_SNAP( // Snaps (into wearer's inventory) if throat stretches.
 			Util.newArrayListOfValues(
-					"[style.colourSex(Snaps if throat bulges too much during sex)]"),
+					"[style.colourSex(性交时深喉过度会使其断裂)]"),
 			true),
 	
 	CHASTITY( // Tags the clothing as being some form of chastity device, meaning that it will apply the 'CHASTITY_1' status effect when equipped
 			Util.newArrayListOfValues(
-					"[style.colourTerrible(Chastity device)]"),
+					"[style.colourTerrible(贞操装置)]"),
 			true),
 	
 	// To detect whether creampies should leak out or not:
 	
 	PLUGS_ANUS( // Counts as being inserted into the wearer's anus. E.g. butt plugs or anal beads
 			Util.newArrayListOfValues(
-					"[style.colourSex(Plugs asshole (does not get dirty from creampies))]"),
+					"[style.colourSex(填塞肛门(防止被内射时弄脏))]"),
 			true),
 	SEALS_ANUS( // Counts as sealing, but not inserted into, the wearer's anus. E.g. Tape
 			Util.newArrayListOfValues(
-					"[style.colourSex(Seals asshole (does not get dirty from creampies))]"),
+					"[style.colourSex(遮盖肛门(防止被对方高潮时弄脏))]"),
 			true),
 	
 	PLUGS_VAGINA( // Counts as being inserted into the wearer's vagina. E.g. insertable dildo
 			Util.newArrayListOfValues(
-					"[style.colourSex(Plugs pussy (does not get dirty from creampies))]"),
+					"[style.colourSex(填塞阴道(防止被内射时弄脏))]"),
 			true),
 	SEALS_VAGINA( // Counts as sealing, but not inserted into, the wearer's vagina. E.g. Tape
 			Util.newArrayListOfValues(
-					"[style.colourSex(Seals pussy (does not get dirty from creampies))]"),
+					"[style.colourSex(遮盖阴道(防止被对方高潮时弄脏))]"),
 			true) {
 		@Override
 		public List<String> getClothingTooltipAdditions() {
 			if(Main.game.isUrethraEnabled()) {
-				return Util.newArrayListOfValues("[style.colourSex(Seals pussy (including urethra))]");
+				return Util.newArrayListOfValues("[style.colourSex(遮盖阴道(包括尿道))]");
 			} else {
-				return Util.newArrayListOfValues("[style.colourSex(Seals pussy)]");
+				return Util.newArrayListOfValues("[style.colourSex(遮盖阴道)]");
 			}
 		}
 	},
 	
 	PLUGS_NIPPLES( // Counts as being inserted into the wearer's nipples. E.g. insertable nipple-dildos
 			Util.newArrayListOfValues(
-					"[style.colourSex(Plugs nipples (does not get dirty from creampies))]"),
+					"[style.colourSex(填塞乳头(防止被内射时弄脏))]"),
 			true),
 	SEALS_NIPPLES( // Counts as sealing, but not inserted into, the wearer's nipples. E.g. Pasties
 			Util.newArrayListOfValues(
-					"[style.colourSex(Seals nipples (does not get dirty from creampies))]"),
+					"[style.colourSex(遮盖乳头(防止被对方高潮时弄脏))]"),
 			true),
 	
 	MILKING_EQUIPMENT(
 			Util.newArrayListOfValues(
-					"[style.colourMilk(Milking equipment (drains creampies))]"),
+					"[style.colourMilk(榨取装置(可榨取并吸收对应液体))]"),
 			true),
 	
 	/** <b>This is automatically assigned to items, and should not be manually added to ItemTags!</b> */
 	DILDO_SELF(
 			Util.newArrayListOfValues(
-					"[style.colourSub(Insertable)] [style.colourSex(dildo)]"),
+					"[style.colourSub(可插入式)][style.colourSex(假阳具)]"),
 			true),
 
 	/** <b>This is automatically assigned to items, and should not be manually added to ItemTags!</b> */
 	DILDO_OTHER(
 			Util.newArrayListOfValues(
-					"[style.colourDom(Wearable)] [style.colourSex(dildo)]"),
+					"[style.colourDom(可穿戴式)][style.colourSex(假阳具)]"),
 			true),
 
 	/** <b>This is automatically assigned to items, and should not be manually added to ItemTags!</b> */
 	ONAHOLE_SELF(
 			Util.newArrayListOfValues(
-					"[style.colourSex(Fuckable onahole)]"),
+					"[style.colourSex(可插入式飞机杯)]"),
 			true),
 
 	/** <b>This is automatically assigned to items, and should not be manually added to ItemTags!</b> */
 	ONAHOLE_OTHER(
 			Util.newArrayListOfValues(
-					"[style.colourSex(Wearable onahole)]"),
+					"[style.colourSex(可穿戴式飞机杯)]"),
 			true),
 	;
 

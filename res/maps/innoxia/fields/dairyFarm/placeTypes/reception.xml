@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Reception]]></name>
-	<tooltipDescription><![CDATA[A donkey-boy sits behind this reception desk, ready to deal with any visitors.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the reception to Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[接待处]]></name>
+	<tooltipDescription><![CDATA[一位驴男坐在接待台后，准备好接待任何来访者。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的接待处]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

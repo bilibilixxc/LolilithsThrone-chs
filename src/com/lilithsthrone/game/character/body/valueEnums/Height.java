@@ -14,37 +14,37 @@ public enum Height {
 	// Need to standardise to 1.5 each category
 
 	/**6" to 2'*/
-	NEGATIVE_THREE_MINIMUM("fairy-sized", 15, 61, PresetColour.GENERIC_SIZE_ONE),
+	NEGATIVE_THREE_MINIMUM("妖精大小", 15, 61, PresetColour.GENERIC_SIZE_ONE),
 	
 	/**2' to 3'6"*/
-	NEGATIVE_TWO_MINIMUM("very tiny", 61, 106, PresetColour.GENERIC_SIZE_ONE),
+	NEGATIVE_TWO_MINIMUM("十分较小", 61, 106, PresetColour.GENERIC_SIZE_ONE),
 	
 	/**3'6" to 4'*/
-	NEGATIVE_ONE_TINY("tiny", 106, 122, PresetColour.GENERIC_SIZE_ONE),
+	NEGATIVE_ONE_TINY("娇小", 106, 122, PresetColour.GENERIC_SIZE_ONE),
 	
 	/**4' to 5'*/
-	ZERO_TINY("small", 122, 152, PresetColour.GENERIC_SIZE_ONE),
+	ZERO_TINY("矮小", 122, 152, PresetColour.GENERIC_SIZE_ONE),
 	
 	/**5' to 5'6"*/
-	ONE_SHORT("short", 152, 166, PresetColour.GENERIC_SIZE_TWO),
+	ONE_SHORT("稍显矮小", 152, 166, PresetColour.GENERIC_SIZE_TWO),
 
 	/**5'6" to 6'*/
-	TWO_AVERAGE("average height", 166, 183, PresetColour.GENERIC_SIZE_THREE),
+	TWO_AVERAGE("一般身高", 166, 183, PresetColour.GENERIC_SIZE_THREE),
 
 	/**6' to 6'6"*/
-	THREE_TALL("tall", 183, 198, PresetColour.GENERIC_SIZE_FOUR),
+	THREE_TALL("高挑", 183, 198, PresetColour.GENERIC_SIZE_FOUR),
 
 	/**6'6" to 7'*/
-	FOUR_VERY_TALL("very tall", 198, 214, PresetColour.GENERIC_SIZE_FIVE),
+	FOUR_VERY_TALL("高大", 198, 214, PresetColour.GENERIC_SIZE_FIVE),
 
 	/**7' to 7'6"*/
-	FIVE_ENORMOUS("towering", 214, 228, PresetColour.GENERIC_SIZE_SIX),
+	FIVE_ENORMOUS("高耸", 214, 228, PresetColour.GENERIC_SIZE_SIX),
 
 	/**7'6" to 9'"*/
-	SIX_GIANT("gigantic", 228, 274, PresetColour.GENERIC_SIZE_SEVEN),
+	SIX_GIANT("巨大", 228, 274, PresetColour.GENERIC_SIZE_SEVEN),
 
 	/**9' to 12'*/
-	SEVEN_COLOSSAL("colossal", 274, 366, PresetColour.GENERIC_SIZE_EIGHT);
+	SEVEN_COLOSSAL("庞大", 274, 366, PresetColour.GENERIC_SIZE_EIGHT);
 	
 	private int minimumValue;
 	private int maximumValue;

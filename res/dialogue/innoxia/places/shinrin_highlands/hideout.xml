@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="world_map">
@@ -10,8 +10,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Hideout]]></responseTitle>
-				<responseTooltip><![CDATA[[pc.Walk] over to the building which serves as Meraxis's hideout and head inside.]]></responseTooltip>
+				<responseTitle><![CDATA[藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[[pc.Walk]向梅拉克西丝藏身处所在的建筑，然后进去。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_hideout_exit]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.setLocation(WORLD_TYPE_innoxia_shinrin_highlands_hideout, PLACE_TYPE_innoxia_shinrin_highlands_hideout_exit)]
@@ -46,8 +46,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Exit]]></responseTitle>
-				<responseTooltip><![CDATA[Head back out into the Shinrin Highlands.]]></responseTooltip>
+				<responseTitle><![CDATA[退出]]></responseTitle>
+				<responseTooltip><![CDATA[回到心林高地。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_hideout_world_map]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 				<effects><![CDATA[
@@ -71,10 +71,10 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Takahashi]]></responseTitle>
+				<responseTitle><![CDATA[高桥]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Talk to Takahashi.
-					<br/>[style.italicsMinorBad(Full Takahashi interactions will be added in the next update!)]
+					与高桥对话。
+					<br/>[style.italicsMinorBad(与高桥的完整互动内容将在下次更新中开放！)]
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue><!-- innoxia_places_shinrin_highlands_hideout_potion_lab_talk -->
 				<effects><![CDATA[
@@ -90,12 +90,12 @@
                 <availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_hideout_takahashi_talked_potions)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Youko potion]]></responseTitle>
+				<responseTitle><![CDATA[妖狐魔药]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_hideout_collected_potion_today))
-						You've already collected a youko potion today. If you want another one, you'll have to come back tomorrow.
+						你今天已经拿过妖狐魔药了。要是想再拿一瓶，就得等明天再来了。
 					#ELSE
-						Takahashi has left a youko potion on the counter-top for you to pick up.
+						高桥在台面上留了一瓶妖狐魔药，等你来取。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -132,8 +132,8 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Takahashi that you've got to go now.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[告诉高桥你得走了。]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/hideout', 'POTION_LAB_TALK_LEAVE'))]
@@ -144,12 +144,12 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Meraxis]]></responseTitle>
+				<responseTitle><![CDATA[梅拉克西丝]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCurrentDialogueNode()==DN_innoxia_places_shinrin_highlands_hideout_potion_lab_talk_meraxis)
-						You're already asking Takahashi about her relationship with Meraxis...
+						你已经在问高桥她与梅拉克西丝的关系了……
 					#ELSE
-						Ask Takahashi about her relationship with Meraxis.
+						询问高桥她与梅拉克西丝的关系。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -164,12 +164,12 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Shiranui]]></responseTitle>
+				<responseTitle><![CDATA[不知火]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCurrentDialogueNode()==DN_innoxia_places_shinrin_highlands_hideout_potion_lab_talk_shiranui)
-						You're already asking Takahashi about Shiranui...
+						你已经在向高桥打听不知火的事了……
 					#ELSE
-						Ask Takahashi about Shiranui.
+						向高桥打听不知火的事。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -184,12 +184,12 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Potions]]></responseTitle>
+				<responseTitle><![CDATA[药水]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCurrentDialogueNode()==DN_innoxia_places_shinrin_highlands_hideout_potion_lab_talk_potions)
-						You're already talking to Takahashi about the potions she's making...
+						你已经在和高桥聊起她正在调制的魔药了……
 					#ELSE
-						Ask Takahashi about the potions she's making.
+						询问高桥她正在调制什么魔药。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -206,17 +206,17 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
 				<colour><![CDATA[TRANSFORMATION_GENERIC]]></colour>
-				<responseTitle><![CDATA[Drink potion]]></responseTitle>
+				<responseTitle><![CDATA[饮用药水]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!pc.isFeminine() || (pc.getRace()!=RACE_FOX_MORPH || !pc.isAbleToHaveRaceTransformed()))
 						#IF(!pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-							You can't access your mouth, so you aren't able to drink Takahashi's potion....
+							你的口部受限，无法喝下高桥的魔药……
 						#ELSE
-							Agree to drink Takahashi's potion.
-							<br/>Takahashi's potion will [style.italicsTfGeneric(transform you into a fox-girl)], and is likely to apply some additional, non-racial, transformative effects!
+							同意喝下高桥的魔药。
+							<br/>高桥的魔药会[style.italicsTfGeneric(将你转化为狐女)]，还可能附带额外的非种族转化效果！
 						#ENDIF
 					#ELSE
-						You're already to Takahashi's liking, so she doesn't want to transform you.
+						你已经很符合高桥的心意，她不想把你转化。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -233,14 +233,14 @@
                 <availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_hideout_takahashi_talked_potions) && (flags.hasFlag(FLAG_innoxia_takahashi_daily_sex) || !takahashi.isAttractedTo(pc) || !pc.isAbleToAccessCoverableArea(CA_MOUTH, true))]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Eat her out]]></responseTitle>
+				<responseTitle><![CDATA[给她口]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_takahashi_daily_sex))
-						You've already had sex with Takahashi today, and she's unwilling to have sex with you again until tomorrow...
+						你今天已经和高桥做过爱了，在明天之前，她不愿意和你再做一次了……
 					#ELSEIF(!takahashi.isAttractedTo(pc))
-						Takahashi is not attracted to you, and so would be unwilling to let you eat her out...
+						高桥对你没有兴趣，所以她不愿意让你给她口……
 					#ELSE
-						As you're unable to gain access to your mouth, you cannot perform oral on Takahashi...
+						你的口部受限，无法为高桥口交……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
@@ -249,8 +249,8 @@
                 <availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_takahashi_daily_sex) && flags.hasFlag(FLAG_innoxia_hideout_takahashi_talked_potions) && takahashi.isAttractedTo(pc) && pc.isAbleToAccessCoverableArea(CA_MOUTH, true)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Eat her out]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Takahashi that you're willing to serve her by eating her out.]]></responseTooltip>
+				<responseTitle><![CDATA[给她口]]></responseTitle>
+				<responseTooltip><![CDATA[告诉高桥你愿意给她口。]]></responseTooltip>
 				<nextDialogue/>
 				<effects/>
 				<sexVariablesWithManager enabled="true">
@@ -289,12 +289,12 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[6]]></index>
-				<responseTitle><![CDATA[Youko]]></responseTitle>
+				<responseTitle><![CDATA[妖狐]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCurrentDialogueNode()==DN_innoxia_places_shinrin_highlands_hideout_potion_lab_talk_youko)
-						You're already talking to Takahashi about the youko...
+						你已经在和高桥聊妖狐的事了……
 					#ELSE
-						Ask Takahashi about the youko.
+						向高桥打听妖狐的事。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -309,12 +309,12 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi) && flags.hasFlag(FLAG_innoxia_hideout_takahashi_talked_youko)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[7]]></index>
-				<responseTitle><![CDATA[Kazuha]]></responseTitle>
+				<responseTitle><![CDATA[一叶]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCurrentDialogueNode()==DN_innoxia_places_shinrin_highlands_hideout_potion_lab_talk_kazuha)
-						You're already talking to Takahashi about Kazuha, the benevolent lilin youko...
+						你已经在和高桥谈论那位仁慈的莉琳妖狐一叶了……
 					#ELSE
-						Ask Takahashi about Kazuha, the benevolent lilin youko.
+						向高桥打听那位仁慈的莉琳妖狐一叶。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -329,14 +329,14 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(takahashi) && flags.hasFlag(FLAG_innoxia_hideout_takahashi_talked_youko)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[8]]></index>
-				<responseTitle><![CDATA[Kayo]]></responseTitle>
+				<responseTitle><![CDATA[加代]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_hideout_takahashi_talked_meraxis))
-						You need to talk to Takahashi about her relationship with Meraxis before being able to ask about Kayo.
+						在打听加代之前，得先和高桥聊聊她与梅拉克西丝的关系。
 					#ELSEIF(game.getCurrentDialogueNode()==DN_innoxia_places_shinrin_highlands_hideout_potion_lab_talk_kayo)
-						You're already talking to Takahashi about Kayo, the trickster lilin youko...
+						你已经在和高桥谈论那位爱捉弄人的莉琳妖狐加代了……
 					#ELSE
-						Ask Takahashi about Kayo, the trickster lilin youko.
+						向高桥打听那位爱捉弄人的莉琳妖狐加代。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -421,8 +421,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Transformed!]]></responseTitle>
-				<responseTooltip><![CDATA[Takahashi has transformed you into [pc.a_race]!]]></responseTooltip>
+				<responseTitle><![CDATA[已转化！]]></responseTitle>
+				<responseTooltip><![CDATA[高桥把你转化成了[pc.a_race]！]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_hideout_potion_lab_drink_potion_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -437,7 +437,7 @@
 	</scene>
 	
 	<scene id="potion_lab_after_sex_performing_oral">
-		<title><![CDATA[Finished]]></title>
+		<title><![CDATA[结束]]></title>
 		<content folderPath="txt/places/shinrin_highlands/hideout">POTION_LAB_AFTER_SEX_PERFORMING_ORAL</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -458,16 +458,16 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(meraxis)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Takahashi]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Meraxis about her relationship with Takahashi.]]></responseTooltip>
+				<responseTitle><![CDATA[高桥]]></responseTitle>
+				<responseTooltip><![CDATA[询问梅拉克西丝她与高桥的关系。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_hideout_seating_talk_takahashi]]></nextDialogue>
 			</response>
 			<response>
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(meraxis)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Hideout]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Meraxis why she made a hideout here in the Shinrin Highlands.]]></responseTooltip>
+				<responseTitle><![CDATA[藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[询问梅拉克西丝为什么在心林高地这里建了个藏身处。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_hideout_seating_talk_hideout]]></nextDialogue>
 			</response>
 			
@@ -476,12 +476,12 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(meraxis)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Duel]]></responseTitle>
+				<responseTitle><![CDATA[决斗]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_meraxis_duel_daily_complete))
-						As you and Meraxis have already duelled one another today, you'll have to wait until tomorrow to do it again...
+						今天已经和梅拉克西丝决斗过了，明天再来决斗吧……
 					#ELSE
-						Accept Meraxis's offer of a duel.
+						接受梅拉克西丝的决斗邀请。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -503,38 +503,38 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(meraxis)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[10]]></index>
-				<responseTitle><![CDATA[Sex]]></responseTitle>
+				<responseTitle><![CDATA[做爱]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_meraxis_daily_sex))
-						You've already had sex with Meraxis in her room today, and as such will have to wait until tomorrow before you can do it again...
+						今天你已经和梅拉克西丝在她的房间做过爱了，所以得等到明天才能再来一次……
 					#ELSEIF(flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked) && flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked) && (!game.isAnalContentEnabled() || flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked)))
-						Tell Meraxis that you want to have a 'duel' with her in her bedroom...
+						告诉梅拉克西丝，你想在她的卧室里和她来一场“决斗”……
 					#ELSE
-						<i>Meraxis needs to be comfortable with having
+						<i>梅拉克西丝需要先坦然接受你们之间的
 						#IF(flags.hasFlag(FLAG_innoxia_meraxis_oral_unlocked))
-							 [style.colourGood(oral)],
+							[style.colourGood(口交)]、
 						#ELSE
-							 [style.colourBad(oral)],
+							[style.colourBad(口交)]、
 						#ENDIF
 						#IF(flags.hasFlag(FLAG_innoxia_meraxis_vaginal_unlocked))
 							#IF(game.isAnalContentEnabled())
-								 [style.colourGood(vaginal)],
+								[style.colourGood(阴道性交)]、
 							#ELSE
-								 and [style.colourGood(vaginal)]
+								和[style.colourGood(阴道性交)]
 							#ENDIF
 						#ELSE
 							#IF(game.isAnalContentEnabled())
-								 [style.colourBad(vaginal)],
+								[style.colourBad(阴道性交)]、
 							#ELSE
-								 and [style.colourBad(vaginal)]
+								和[style.colourBad(阴道性交)]
 							#ENDIF
 						#ENDIF
 						#IF(flags.hasFlag(FLAG_innoxia_meraxis_anal_unlocked))
-							 and [style.colourGood(anal)]
+							和[style.colourGood(肛交)]
 						#ELSE
-							 and [style.colourBad(anal)]
+							和[style.colourBad(肛交)]
 						#ENDIF
-						 sex with you before she'd agree to have sex with you in her bedroom...</i>
+						行为，才肯答应在她的卧室里与你做爱……</i>
 					#ENDIF
 				]]></responseTooltip>
 				<colour><![CDATA[GENERIC_SEX]]></colour>
@@ -565,8 +565,8 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(meraxis)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Takahashi]]></responseTitle>
-				<responseTooltip><![CDATA[You're already talking to Meraxis about her relationship with Takahashi...]]></responseTooltip>
+				<responseTitle><![CDATA[高桥]]></responseTitle>
+				<responseTooltip><![CDATA[你已经在和梅拉克西丝聊起她与高桥的关系了……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -582,8 +582,8 @@
                 <availabilityConditional><![CDATA[[#game.getCharactersPresent().contains(meraxis)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Hideout]]></responseTitle>
-				<responseTooltip><![CDATA[You're already talking to Meraxis about her hideout...]]></responseTooltip>
+				<responseTitle><![CDATA[藏身处]]></responseTitle>
+				<responseTooltip><![CDATA[你已经在和梅拉克西丝聊她的藏身处了……]]></responseTooltip>
 				<nextDialogue><![CDATA[null]]></nextDialogue>
 			</response>
 		</responses>
@@ -599,8 +599,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Take charge]]></responseTitle>
-				<responseTooltip><![CDATA[Tell Meraxis that you're going to be the one who's in charge...]]></responseTooltip>
+				<responseTitle><![CDATA[做主]]></responseTitle>
+				<responseTooltip><![CDATA[告诉梅拉克西丝，你会对她负责的……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_meraxis_standard]]></id>
@@ -625,8 +625,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Submit]]></responseTitle>
-				<responseTooltip><![CDATA[Submit to Meraxis and allow her to take charge...]]></responseTooltip>
+				<responseTitle><![CDATA[顺从]]></responseTitle>
+				<responseTooltip><![CDATA[臣服于梅拉克西丝，让她掌控你……]]></responseTooltip>
 				<nextDialogue/>
 				<sexVariablesWithManager enabled="true">
 					<id><![CDATA[innoxia_meraxis_standard]]></id>
@@ -652,8 +652,8 @@
 	</scene>
 	
 	<scene id="seating_meraxis_after_sex">
-		<title><![CDATA[Finished]]></title>
-		<tooltip><![CDATA[You and Meraxis have finished having sex...]]></tooltip>
+		<title><![CDATA[结束]]></title>
+		<tooltip><![CDATA[你和梅拉克西丝做完了爱……]]></tooltip>
 		<content folderPath="txt/places/shinrin_highlands/hideout">SEATING_MERAXIS_AFTER_SEX</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -662,8 +662,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Leave Meraxis's room and continue on your way...]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[离开梅拉克西丝的房间，继续旅程……]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_shinrin_highlands_hideout_corridor"/>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/hideout', 'SEATING_MERAXIS_AFTER_SEX_LEAVE'))]
@@ -686,8 +686,8 @@
                 <availabilityConditional><![CDATA[[#!flags.hasFlag(FLAG_innoxia_hideout_youko_lore_book_obtained)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Book]]></responseTitle>
-				<responseTooltip><![CDATA[Take a look at the dusty old book.]]></responseTooltip>
+				<responseTitle><![CDATA[书]]></responseTitle>
+				<responseTooltip><![CDATA[看看这本落满灰尘的旧书。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_shinrin_highlands_hideout_table_book]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.addItem(game.getItemGen().generateItem(SUBSPECIES_FOX_ASCENDANT.getBook()), 1, false, true))]
@@ -741,8 +741,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Rest (1 hour)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for an hour. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息 (1小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息一小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_shinrin_highlands_hideout_bedroom_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[60]]></secondsPassed>
 				<effects><![CDATA[
@@ -753,8 +753,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Rest (4 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for four hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(4小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息四小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_shinrin_highlands_hideout_bedroom_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[240]]></secondsPassed>
 				<effects><![CDATA[
@@ -765,8 +765,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Rest (8 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for eight hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(8小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息八小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_shinrin_highlands_hideout_bedroom_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[480]]></secondsPassed>
 				<effects><![CDATA[
@@ -777,8 +777,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rest (12 hours)]]></responseTitle>
-				<responseTooltip><![CDATA[Rest for twelve hours. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.]]></responseTooltip>
+				<responseTitle><![CDATA[休息(12小时)]]></responseTitle>
+				<responseTooltip><![CDATA[休息十二小时，不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_shinrin_highlands_hideout_bedroom_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[720]]></secondsPassed>
 				<effects><![CDATA[
@@ -790,28 +790,28 @@
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
 				<responseTitle><![CDATA[
-					Rest until
+					休息直到
 					#IF(game.isDayTime())
-						 Sunset
+						日落
 					#ELSE
-						 Sunrise
+						日出
 					#ENDIF
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Rest for
+					五分钟后，休息
 					#IF(game.getMinutesUntilNextMorningOrEvening() >= 60)
-						 [#~~(game.getMinutesUntilNextMorningOrEvening()/60)] hours
+						[#~~(game.getMinutesUntilNextMorningOrEvening()/60)]时
 					#ENDIF
 					#IF(game.getMinutesUntilNextMorningOrEvening() % 60 != 0)
-						 [#~~(game.getMinutesUntilNextMorningOrEvening()%60)] minutes
+						[#~~(game.getMinutesUntilNextMorningOrEvening()%60)]分
 					#ENDIF
-					 until five minutes past
+					直到
 					#IF(game.isDayTime())
-						 sunset.
+						日落。
 					#ELSE
-						 sunrise.
+						天明。
 					#ENDIF
-					 As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.
+					不仅会恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]和[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能获得“充分休息”效果。
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_shinrin_highlands_hideout_bedroom_player]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[
@@ -827,8 +827,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[9]]></index>
-				<responseTitle><![CDATA[Set alarm]]></responseTitle>
-				<responseTooltip><![CDATA[Set the alarm on your phone, so that you can wake at a specific time.]]></responseTooltip>
+				<responseTitle><![CDATA[调闹钟]]></responseTitle>
+				<responseTooltip><![CDATA[在手机上设置闹钟，这样你就能在特定时间醒来。]]></responseTooltip>
 				<nextDialogue stripContent="false"><![CDATA[ROOM_SET_ALARM]]></nextDialogue>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[[#game.saveDialogueNode()]]]></effects>
@@ -838,9 +838,9 @@
 				<index><![CDATA[10]]></index>
 				<responseTitle><![CDATA[
 					#IF(flags.getSavedLong('player_phone_alarm') < 0)
-						Rest until alarm (unset)
+						睡到闹铃响起(未设置)
 					#ELSE
-						Rest until alarm ([#
+						睡到闹铃响起 ([#
 							var alarm = flags.getSavedLong('player_phone_alarm');
 							var alarmObj = game.getCustomTime(alarm/60, alarm%60, 0);
 							game.getDisplayTime(alarmObj)
@@ -849,20 +849,20 @@
 				]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.getSavedLong('player_phone_alarm') < 0)
-						[style.colourBad(Your alarm is unset!)]
+						[style.colourBad(未设定闹铃！)]
 					#ELSE
-						Rest for
+						休息
 						#IF(game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))==0)
-							 24 hours,
+							24小时
 						#ELSE
 							#IF(game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm')) >= 60)
-								 [#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) / 60)] hours,
+								[#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) / 60)]小时，
 							#ENDIF
 							#IF((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60 != 0)
-								 [#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60)] minutes,
+								[#~~((game.getMinutesUntilTimeInMinutes(flags.getSavedLong('player_phone_alarm'))) % 60)]分钟，
 							#ENDIF
 						#ENDIF
-						 until your alarm goes off. As well as replenishing your [#ATTRIBUTE_HEALTH_MAXIMUM.getName()] and [#ATTRIBUTE_MANA_MAXIMUM.getName()], you will also get the 'Well Rested' status effect.
+						直到闹钟响起。除了恢复[#ATTRIBUTE_HEALTH_MAXIMUM.getName()]与[#ATTRIBUTE_MANA_MAXIMUM.getName()]，还能使你获得“充分休息”效果。
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -902,8 +902,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Toilet]]></responseTitle>
-				<responseTooltip><![CDATA[Use the toilet.]]></responseTooltip>
+				<responseTitle><![CDATA[盥洗室]]></responseTitle>
+				<responseTooltip><![CDATA[使用厕所。]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_shinrin_highlands_hideout_toilets_use]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/places/shinrin_highlands/hideout', 'TOILET_USE'))]
@@ -912,10 +912,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wash]]></responseTitle>
+				<responseTitle><![CDATA[清洗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the sink to wash your hands and face.
-					<br/>[style.italicsGood(This will clean your head, eyes, mouth, neck, hair, fingers, hands, and wrists, as well as any clothing worn in these slots.)]
+					使用水槽洗脸洗手。
+					<br/>[style.italicsGood(这会清理你的头部、眼睛、嘴巴、脖子、头发、手指、手掌和手腕，以及在这些栏位穿着的衣物。)]
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[innoxia_places_shinrin_highlands_hideout_toilets_use]]></nextDialogue>
 				<effects><![CDATA[
@@ -943,14 +943,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Quick shower]]></responseTitle>
+				<responseTitle><![CDATA[快速淋浴]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(meraxis))
-						You'll have to wait until Meraxis is finished in the bathroom before being able to use it.
+						梅拉克西丝还没从浴室里出来，你得等她用完才能用。
 					#ELSE
-						Use the bathroom's shower to quickly wash yourself.
-						<br/>[style.italicsGood(Cleans <b>a maximum of [style.fluid(500)]</b> of fluids from all orifices.)]
-						<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]
+						使用浴室的淋浴头快速冲洗一下自己。
+						<br/>[style.italicsGood(可以冲洗掉所有腔穴内<b>最多[style.fluid(500)]</b>体液。)]
+						<br/>[style.italicsGood(<b>只会</b>清洁你当前正在穿着的衣物。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -969,14 +969,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Thorough shower]]></responseTitle>
+				<responseTitle><![CDATA[全身冲淋]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(meraxis))
-						You'll have to wait until Meraxis is finished in the bathroom before being able to use it.
+						梅拉克西丝还没从浴室里出来，你得等她用完才能用。
 					#ELSE
-						Use the bathroom's shower to thoroughly clean yourself.
-						<br/>[style.italicsExcellent(This will clean <b>all</b> fluids out of all your orifices.)]
-						<br/>[style.italicsGood(This will clean <b>only</b> your currently equipped clothing.)]
+						使用浴室的淋浴头把自己彻底清洗干净。
+						<br/>[style.italicsExcellent(这会把你所有腔穴内的体液<b>全部</b>清洗干净。)]
+						<br/>[style.italicsGood(<b>只会</b>清洁你当前正在穿着的衣物。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[
@@ -995,14 +995,14 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Bath time]]></responseTitle>
+				<responseTitle><![CDATA[入浴时间]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(game.getCharactersPresent().contains(meraxis))
-						You'll have to wait until Meraxis is finished in the bathroom before being able to use it.
+						梅拉克西丝还没从浴室里出来，你得等她用完才能用。
 					#ELSE
-						Use the bathroom's shower to thoroughly clean yourself and then spend some time soaking in the bath.
-						<br/>[style.italicsExcellent(This will clean <b>all</b> fluids out of all your orifices.)]
-						<br/>[style.italicsExcellent(This will clean <b>all</b> clothing in your inventory.)]
+						用浴室里的淋浴头把自己彻底清洗干净，然后再泡一会儿澡。
+						<br/>[style.italicsExcellent(这会把你所有腔穴内的体液<b>全部</b>清洗干净。)]
+						<br/>[style.italicsExcellent(这会把你物品栏里<b>所有</b>的衣物都清洗干净。)]
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue stripContent="true"><![CDATA[

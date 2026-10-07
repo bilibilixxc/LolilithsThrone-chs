@@ -41,32 +41,32 @@ public class DemonHome {
 		if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
 			sb.append(
 					"<p>"
-						+ "The arcane storm that's raging overhead has brought out a heavy presence of demon Enforcers in this area."
-						+ " Unaffected by the arousing power of the storm's thunder, these elite Enforcers keep a close watch on you as you pass through the all-but-deserted area known as Demon Home."
-						+ " There's no way anyone would be able to assault you while under their watchful gaze, allowing you continue on your way in peace..."
+						+ "头顶上肆虐的奥术风暴让这片区域出现了大量的恶魔执法者。"
+						+ "这些精英执法者不会受到奥术风暴催情之力的影响，他们会在你经过被称为恶魔之家的荒芜地区时密切关注你的动向。"
+						+ "在他们的注视下，任何人都不可能攻击你，让你安安静静地继续前行……"
 					+ "</p>");
 		}
 
 		if(Main.game.getDateNow().getMonth()==Month.OCTOBER) {
 			sb.append(
 				"<p>"
-					+ "<b style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+";'>October;</b> <b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Lilith's Month:</b><br/>"
-					+ "Orange, black, and purple flags fly from almost every window, and you look up to see that large banners have been hung across the street, each one bearing a different slogan celebrating Lilith's rule."
-					+ " The occasional demon that you see is usually dressed up in a Halloween-esque costume for the occasion, which does nothing to help alleviate the eerie atmosphere."
+					+ "<b style='color:"+PresetColour.BASE_ORANGE.toWebHexString()+";'>十月;</b><b style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>莉莉丝月:</b><br/>"
+					+ "几乎每扇窗户上都飘扬着橙色、黑色和紫色的旗帜，抬头一看，街道两旁挂满了巨大的横幅，每条横幅上都有不同的标语，歌颂着莉莉丝的统治。"
+					+ "偶尔看到的恶魔通常都穿着万圣节式的服装，这无助于缓解阴森恐怖的气氛。"
 				+ "</p>");
 		}
 		if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.hasSnowedThisWinter) && Main.game.getSeason()==Season.WINTER) {
 			sb.append(
 				"<p>"
-					+ "The reindeer-morph workers are doing a good job of keeping Dominion's streets clear from the snow, but the rooftops, trees, and tops of lamp posts are all home to a thick layer of white."
-					+ " You see your breath exiting your mouth in a little cloud of condensation, but despite the clear evidence of the air's freezing temperature, your arcane aura protects your body from feeling the cold."
+					+ "驯鹿化形的工人们很好地保持了御城区街道上的清洁，但屋顶、树木和灯柱顶上都覆盖了一层厚厚的白雪。"
+					+ "你看到自己呼出的气在口中凝结成一小团雾气，尽管空气中的冰冷温度一目了然，但你的奥术灵气却保护着你的身体，让你感觉不到寒冷。"
 				+ "</p>");
 		}
 		
 		return sb.toString();
     }
     
-	public static final DialogueNode DEMON_HOME_GATE = new DialogueNode("Demon Home (Gates)", "Demon Home", false) {
+	public static final DialogueNode DEMON_HOME_GATE = new DialogueNode("恶魔之家(大门)", "恶魔之家", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -79,12 +79,12 @@ public class DemonHome {
 
 			UtilText.nodeContentSB.append(
 					"<p>"
-						+ "A set of huge, iron gates have been built across the street here, separating the regular areas of Dominion from that known as 'Demon Home' beyond."
-						+ " Half a dozen elite demon Enforcers are stationed here, keeping a close eye on anyone who comes and goes."
+						+ "这里的街道对面建有一扇巨大的铁门，将御城区的常规区域与外面的“恶魔之家”分隔开来。"
+						+ "半打精英恶魔执法者驻扎在这里，密切地监视着路过的人。"
 					+ "</p>"
 					+ "<p>"
-						+ "As you walk forwards to pass through the gates, you see one of these demonic guards staring at you."
-						+ " Ignoring their penetrating gaze, you stride forwards, breathing a sigh of relief as you get through to the other side without being stopped."
+						+ "当你走过大门时，你注意到其中一位恶魔守卫正在盯着你"
+						+ "你无视守卫锐利的目光，大步向前走去。当你顺利到达另一侧时，你长长地舒了一口气。"
 					+ "</p>");
 			
 			UtilText.nodeContentSB.append(getAdditionalDescriptions());
@@ -98,7 +98,7 @@ public class DemonHome {
 		}
 	};
 	
-	public static final DialogueNode DEMON_HOME_STREET = new DialogueNode("Demon Home", "Demon Home", false) {
+	public static final DialogueNode DEMON_HOME_STREET = new DialogueNode("恶魔之家", "恶魔之家", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -112,21 +112,21 @@ public class DemonHome {
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-						+ "From the wide, marble-paved streets, to the immaculate frontages of the regency-style buildings, it's quite clear that this district of 'Demon Home' is one of the more upmarket areas of Dominion."
-						+ " Numerous masterfully-carved statues, the vast majority of which depict some form of demon or another, are dotted around the area, and, considering their subject matter,"
-							+ " you assume that these sculptures are what gives this area its name."
+						+ "从大理石铺就的宽阔街道，到摄政风格建筑完美无瑕的正面，“恶魔之家”所在区域显然是御城区较为高档的区域之一。"
+						+ "该地区分布着许多雕刻精美的雕像，其中绝大多数都描绘了某种形式的恶魔，"
+							+ "你认为这些雕塑就是这个地区的名称由来。"
 					+ "</p>"
 					+ "<p>"
-						+ "As you walk down the street, you pass several fenced-off private gardens; their lush splash of greenery helping to break up the monotony of the surrounding building's creamy-white stone facades."
-						+ " Despite the fact that Demon Home is a little quieter than most of the other areas of Dominion, you notice that there are slightly more Enforcers patrolling the streets;"
-									+ " evidence that the wealthy and influential residents of the city are afforded extra protection."
+						+ "走在街上，你经过几个用栅栏围起来的私人花园；它们郁郁葱葱，打破了周围建筑乳白色石头外墙的单调感。"
+						+ "尽管“恶魔之家”比御城区的其他大部分地区都要安静一些，但你注意到街上巡逻的执法者还是稍微多一些；"
+									+ "这些证据表明，城市里富有的和有影响力的居民受到了额外的保护。"
 					+ "</p>");
 			
 			if(Main.game.getPlayerCell().getPlace().getPlaceType().equals(PlaceType.DOMINION_DEMON_HOME_DADDY)) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "<b style='color:"+PresetColour.RACE_DEMON.toWebHexString()+";'>[daddy.NamePos] residence:</b><br/>"
-							+ "[daddy.NamePos] apartment is located in this particular area of Demon Home."
+							+ "<b style='color:"+PresetColour.RACE_DEMON.toWebHexString()+";'>[daddy.NamePos]住处：</b><br/>"
+							+ "[Daddy.NamePos]公寓位于恶魔之家的这一特定区域。"
 							+ Daddy.getAvailabilityText()
 						+ "</p>");
 			}
@@ -134,8 +134,8 @@ public class DemonHome {
 			if(Main.game.getPlayerCell().getPlace().getPlaceType().equals(PlaceType.DOMINION_DEMON_HOME_ARTHUR)) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "<b style='color:"+PresetColour.RACE_HUMAN.toWebHexString()+";'>Sawlty Towers:</b><br/>"
-							+ "Arthur's apartment building, 'Sawlty Towers', is located in this particular area of Demon Home."
+							+ "<b style='color:"+PresetColour.RACE_HUMAN.toWebHexString()+";'>圣尔蒂旅馆:</b><br/>"
+							+ "亚瑟的公寓楼“圣尔蒂旅馆”就位于恶魔之家的这一特殊区域。"
 						+ "</p>");
 			}
 
@@ -150,7 +150,7 @@ public class DemonHome {
 		}
 	};
 	
-	public static final DialogueNode DEMON_HOME_STREET_ARTHUR = new DialogueNode("Demon Home", "Demon Home", false) {
+	public static final DialogueNode DEMON_HOME_STREET_ARTHUR = new DialogueNode("恶魔之家", "恶魔之家", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -166,10 +166,10 @@ public class DemonHome {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_B_DEMON_HOME) {
-					return new Response("Sawlty Towers", "Find Arthur's apartment in the building using the instructions Lilaya gave to you.", DEMON_HOME_ARTHURS_APARTMENT);
+					return new Response("圣尔蒂旅馆", "按照莉莱雅给你的指示找到亚瑟在大楼里的公寓。", DEMON_HOME_ARTHURS_APARTMENT);
 					
 				} else if (Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_B_DEMON_HOME)) {
-					return new Response("Sawlty Towers", "Head over to the Sawlty Towers apartment building.", DEMON_HOME_ARTHURS_APARTMENT);
+					return new Response("圣尔蒂旅馆", "前往圣尔蒂旅馆公寓楼。", DEMON_HOME_ARTHURS_APARTMENT);
 					
 				} else {
 					return null;
@@ -181,7 +181,7 @@ public class DemonHome {
 		}
 	};
 	
-	public static final DialogueNode DEMON_HOME_STREET_ZARANIX = new DialogueNode("Demon Home", "Demon Home", false) {
+	public static final DialogueNode DEMON_HOME_STREET_ZARANIX = new DialogueNode("恶魔之家", "恶魔之家", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -197,10 +197,10 @@ public class DemonHome {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_H_THE_GREAT_ESCAPE) {
-					return new Response("Zaranix's Home", "A little way down the road from Arthur's apartment building stands the home of Zaranix; the demon that Scarlett told you about.", ZaranixHomeGroundFloor.OUTSIDE);
+					return new Response("扎拉尼克斯的家", "从亚瑟的公寓楼往下走一段路，就到了扎拉尼克斯的家，也就是斯嘉丽跟你说过的那个恶魔。", ZaranixHomeGroundFloor.OUTSIDE);
 					
 				} else if (Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_H_THE_GREAT_ESCAPE)) {
-					return new Response("Zaranix's Home", "Pay Zaranix another visit.", ZaranixHomeGroundFloorRepeat.OUTSIDE);
+					return new Response("扎拉尼克斯的家", "再次访问扎拉尼克斯。", ZaranixHomeGroundFloorRepeat.OUTSIDE);
 				}
 				return null;
 
@@ -210,7 +210,7 @@ public class DemonHome {
 		}
 	};
 	
-	public static final DialogueNode DEMON_HOME_STREET_DADDY = new DialogueNode("Demon Home", "Demon Home", false) {
+	public static final DialogueNode DEMON_HOME_STREET_DADDY = new DialogueNode("恶魔之家", "恶魔之家", false) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -232,12 +232,12 @@ public class DemonHome {
 					
 				} else if(Main.game.getPlayer().hasCompanions()) {
 					return new Response("[daddy.Name]",
-							"[style.italicsBad(You cannot meet [daddy.name] while you have companions in your party!)]",
+							"[style.italicsBad(在有同伴的情况下，你无法与[daddy.name]会面！)]",
 							null);
 					
 				} else {
 					return new Response("[daddy.Name]",
-							"Head over to [daddy.namePos] apartment and knock on [daddy.her] door.",
+							"前往[daddy.namePos]公寓，敲开[daddy.her]的门。",
 							DaddyDialogue.MEETING) {
 						@Override
 						public void effects() {
@@ -270,7 +270,7 @@ public class DemonHome {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_B_DEMON_HOME) {
-					return new Response("Arthur's room", "Head up to Arthur's room.", DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM){
+					return new Response("亚瑟的房间", "进入亚瑟的房间", DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM){
 						@Override
 						public void effects() {
 							if (Main.game.getPlayer().getQuest(QuestLine.MAIN) == Quest.MAIN_1_B_DEMON_HOME) {
@@ -280,23 +280,23 @@ public class DemonHome {
 					};
 					
 				} else if (Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_B_DEMON_HOME)) {
-					return new Response("Arthur's room", "Arthur is no longer living here...", null);
+					return new Response("亚瑟的房间", "亚瑟已经不住在这里了……", null);
 				}
 				
 			} else if (index == 2) {
 				if (Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_B_DEMON_HOME)) {
-					return new Response("[felicia.Name]'s room", "Head up to [felicia.namePos] room.", DEMON_HOME_ARTHURS_APARTMENT_FELICIAS_ROOM);
+					return new Response("[felicia.Name]的房间", "前往[felicia.namePos]的房间。", DEMON_HOME_ARTHURS_APARTMENT_FELICIAS_ROOM);
 				}
 				
 			} else if (index == 0) {
-				return new Response("Leave", "Leave the building and head back out into Demon Home.", DEMON_HOME_STREET_ARTHUR);
+				return new Response("离开", "离开建筑，回到恶魔之家的大街上", DEMON_HOME_STREET_ARTHUR);
 			}
 			
 			return null;
 		}
 	};
 
-	public static final DialogueNode DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM = new DialogueNode("Arthur's Room", "-", true) {
+	public static final DialogueNode DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM = new DialogueNode("亚瑟的房间", "-", true) {
 		@Override
 		public void applyPreParsingEffects() {
             getFelicia().equipOutsideClothing();
@@ -308,7 +308,7 @@ public class DemonHome {
 		}
 		@Override
 		public String getLabel() {
-			return "Arthur's Room";
+			return "亚瑟的房间";
 		}
 		@Override
 		public String getContent() {
@@ -317,13 +317,13 @@ public class DemonHome {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Question dog-girl", "Ask the dog-girl if she knows anything about Arthur's arrest.", DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM_END);
+				return new Response("询问犬女", "询问犬女是否知道有关亚瑟被捕的事情", DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM_END);
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM_END = new DialogueNode("Arthur's Room", "-", true, true) {
+	public static final DialogueNode DEMON_HOME_ARTHURS_APARTMENT_ARTHURS_ROOM_END = new DialogueNode("亚瑟的房间", "-", true, true) {
 		@Override
 		public void applyPreParsingEffects() {
             getFelicia().setPlayerKnowsName(true);
@@ -339,7 +339,7 @@ public class DemonHome {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "You've done all you can here. Head back outside to Demon Home.", DEMON_HOME_STREET_ARTHUR){
+				return new Response("离开", "你在这已经做了所有能做的。转身离开恶魔之家。", DEMON_HOME_STREET_ARTHUR){
                         @Override
                         public void effects() {
                             getFelicia().equipInsideClothing();
@@ -367,7 +367,7 @@ public class DemonHome {
 		}
 		@Override
 		public String getLabel() {
-			return "[felicia.NamePos] Room";
+			return "[felicia.NamePos]房间";
 		}
 		@Override
 		public String getContent() {
@@ -378,14 +378,14 @@ public class DemonHome {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.feliciaRejectedPlayer)) {
-	                 return new Response("Leave", "Looks like Felicia doesn't want to talk to you. Head back outside to Demon Home.", DEMON_HOME_STREET_ARTHUR);
+	                 return new Response("离开", "看来菲利希亚不想和你说话。回到外面的恶魔之家", DEMON_HOME_STREET_ARTHUR);
 				}
 				if(h < 6 || h > 14) {
-					return new Response("Leave", "Looks like [felicia.name] isn't here. Head back outside to Demon Home.", DEMON_HOME_STREET_ARTHUR);
+					return new Response("离开", "看起来[felicia.name]不在这里。回到恶魔之家门外。", DEMON_HOME_STREET_ARTHUR);
 					
 				} else if(h >= 6 && h <= 14) {
 	                if (!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.feliciaToldAboutArthur)) {
-	                    return new Response("Enter", "Enter [felicia.namePos] home.", FeliciaApartment.ARTHUR_WHEREABOUTS) {
+	                    return new Response("进入", "进入[felicia.namePos]家。", FeliciaApartment.ARTHUR_WHEREABOUTS) {
 	                        @Override
 	                        public void effects() {
 	                            getFelicia().setLocation(WorldType.FELICIA_APARTMENT, PlaceType.FELICIA_APARTMENT_LIVING_AREA, false);
@@ -394,7 +394,7 @@ public class DemonHome {
 	                    };
 	                    
 	                } else {
-	                   return new Response("Enter", "Enter [felicia.namePos] home.", FeliciaApartment.FELICIA_GREETINGS) {
+	                   return new Response("进入", "进入[felicia.namePos]家。", FeliciaApartment.FELICIA_GREETINGS) {
 	                        @Override
 	                        public void effects() {
 	                            getFelicia().setLocation(WorldType.FELICIA_APARTMENT, PlaceType.FELICIA_APARTMENT_LIVING_AREA, false);
@@ -420,14 +420,14 @@ public class DemonHome {
             		&& Main.game.getSecondsPassed() - Main.game.getDialogueFlags().getSavedLong("doll_quest_choice_time") < (7 * 24 * 60 * 60)) {
             	int daysToGo = 7 - (int) (((Main.game.getSecondsPassed() - Main.game.getDialogueFlags().getSavedLong("doll_quest_choice_time")) / (24 * 60 * 60)));
             	if(daysToGo<=1) {
-                	UtilText.addSpecialParsingString("[style.italicsGood(Lovienne's Luxuries will reopen in a day or so.)]", true);
+                	UtilText.addSpecialParsingString("[style.italicsGood(洛维耶纳奢侈品店将会在一两天后重新开张。)]", true);
             	} else {
-                	UtilText.addSpecialParsingString("[style.italicsMinorGood(Lovienne's Luxuries will reopen in about "+daysToGo+" days...)]", true);
+                	UtilText.addSpecialParsingString("[style.italicsMinorGood(洛维耶纳奢侈品店将会在"+daysToGo+"天后重新开张……)]", true);
             	}
             }
             if(Main.game.getPlayer().getQuest(QuestLine.SIDE_DOLL_FACTORY)==Quest.DOLL_FACTORY_7B
             		&& Main.game.getSecondsPassed() - Main.game.getDialogueFlags().getSavedLong("doll_quest_choice_time") < (1 * 24 * 60 * 60)) {
-            	UtilText.addSpecialParsingString("[style.italicsGood(Lovienne's Luxuries will reopen in a day or so.)]", true);
+            	UtilText.addSpecialParsingString("[style.italicsGood(洛维耶纳奢侈品店将会在一两天后重新开张。)]", true);
             }
 		}
 		@Override
@@ -471,8 +471,8 @@ public class DemonHome {
 							|| !Main.game.getDialogueFlags().hasFlag("innoxia_doll_factory_ending_riot_witnessed")
 							|| !Main.game.getDialogueFlags().hasFlag("innoxia_doll_factory_ending_reopen_scene_seen"))) {
 					if(!Main.game.getDialogueFlags().hasFlag("innoxia_doll_factory_ending_riot_witnessed")) {
-						return new Response("Goodbye",
-								"Say goodbye to Fiammetta.",
+						return new Response("告别",
+								"向菲亚梅塔道别。",
 								DEMON_HOME_SEX_SHOP_RIOT_CONTINUE) {
 							@Override
 							public void effects() {
@@ -487,8 +487,8 @@ public class DemonHome {
 						
 					} else if((Main.game.getSecondsPassed() - Main.game.getDialogueFlags().getSavedLong("doll_quest_choice_time") >= (7 * 24 * 60 * 60))
 							&& !Main.game.getDialogueFlags().hasFlag("innoxia_doll_factory_ending_reopen_scene_seen")) {
-						return new Response("Continue",
-								"Continue on your way.",
+						return new Response("继续",
+								"继续你的旅程。",
 								DEMON_HOME_SEX_SHOP) {
 							@Override
 							public void effects() {
@@ -499,28 +499,28 @@ public class DemonHome {
 					} else {
 						int daysRemaining = 7 - (int) ((Main.game.getSecondsPassed() - (Main.game.getDialogueFlags().getSavedLong("doll_quest_choice_time"))) / (24 * 60 * 60));
 						
-						return new Response("Lovienne's Luxuries",
-								"Due to the public unrest, Lovienne's Luxuries is currently [style.colourBad(closed)]."
-									+ "<br/>[style.italicsMinorGood(It's likely to reopen within "+Util.intToString(daysRemaining)+" "+(daysRemaining<=1?"day":"days")+" or so...)]",
+						return new Response("洛维耶纳奢侈品店",
+								"由于公众的骚乱，洛维耶纳奢侈品店现在[style.colourBad(关闭)]了。"
+									+ "<br/>[style.italicsMinorGood(大约会在"+Util.intToString(daysRemaining)+"天后重新开张……)]",
 								null);
 					}
 					
 				} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_DOLL_FACTORY)==Quest.DOLL_FACTORY_7B
 						&& Main.game.getDialogueFlags().hasSavedLong("doll_quest_choice_time")
 						&& (Main.game.getSecondsPassed() - Main.game.getDialogueFlags().getSavedLong("doll_quest_choice_time") < (1 * 24 * 60 * 60))) { // 1 day
-					return new Response("Lovienne's Luxuries",
-							"Due to having to deal with the situation with Fiammetta's article, Lovienne's Luxuries is currently [style.colourBad(closed)]."
-								+ "<br/>[style.italicsMinorGood(It's likely to reopen within a day or two...)]",
+					return new Response("洛维耶纳奢侈品店",
+							"由于需要处理菲亚梅塔的文章所引发的情况，洛维耶纳奢侈品店目前[style.colourBad(关闭)]了。"
+								+ "<br/>[style.italicsMinorGood(大约会在一两天后重新开张……)]",
 							null);
 					
 				} else if(!Main.game.isHourBetween(11, 23)) {
-					return new Response("Lovienne's Luxuries",
-							"Lovienne's Luxuries is open between [units.time(11)]-[units.time(23)], and as such is currently [style.colourBad(closed)].",
+					return new Response("洛维耶纳奢侈品店",
+							"洛维耶纳奢侈品店[units.time(11)]-[units.time(23)]开放，因此目前是[style.colourBad(关闭)]的。",
 							null);
 					
 				} else {
-					return new Response("Lovienne's Luxuries",
-							"Push open the front door and enter Lovienne's Luxuries.",
+					return new Response("洛维耶纳奢侈品店",
+							"推开前门，进入洛维耶纳奢侈品店",
 							DialogueManager.getDialogueFromId("innoxia_places_dominion_sex_shop_generic_enter")) {
 						@Override
 						public void effects() {
@@ -547,64 +547,64 @@ public class DemonHome {
 				
 				if(Main.game.getPlayer().getQuest(QuestLine.SIDE_DOLL_FACTORY)==Quest.DOLL_FACTORY_2) {
 					if(!Main.game.isHourBetween(1, 4)) {
-						return new Response("Find Fia",
-								"You need to wait until it's between [units.time(1)]-[units.time(4)] to break into Lovienne's Luxuries with Fia...",
+						return new Response("寻找菲亚",
+								"你需要等到[units.time(1)]到[units.time(4)]之间，再跟菲亚一起闯入洛维耶纳奢侈品店……",
 								null);
 						
 					} else if(Main.game.getCurrentWeather()==Weather.MAGIC_STORM) {
-						return new Response("Find Fia",
-								"Although you're here at the right time, between [units.time(1)]-[units.time(4)], Fia can't show up due to the ongoing arcane storm...",
+						return new Response("寻找菲亚",
+								"虽然你在[units.time(1)]到[units.time(4)]之间按时到达。可菲亚却由于奥术风暴无法现身……",
 								null);
 						
 					} else {
-						return new Response("Find Fia",
-								"Look for Fia so that the two of you can break into Lovienne's Luxuries and search for evidence of where the kidnapped people are being held."
-									+"<br/>[style.italicsCombat(Be prepared, for this will start a lengthy section of the side quest during which there may be difficult fights!)]",
+						return new Response("寻找菲亚",
+								"寻找菲亚的踪迹，准备两人一起闯入洛维耶纳奢侈品店，搜寻是否有些证据，记录了被绑架者的所在。"
+									+"<br/>[style.italicsCombat(请做好准备，因为这将开启一段漫长的支线任务，期间可能会有艰难的战斗！)]",
 								DialogueManager.getDialogueFromId("innoxia_places_dominion_sex_shop_factory_meet_fia_start"));
 					}
 					
 				} else if(Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_DOLL_FACTORY, Quest.DOLL_FACTORY_7A)) {
 					if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_DOLL_FACTORY)) {
-						return new Response("Fia",
-								"Fia hasn't come out of hiding yet, and will only do so after Loveinne's Luxuries reopens..."
+						return new Response("菲亚",
+								"菲亚还在继续躲着不再露面，现在唯一能做的只有等洛维耶纳奢侈品店重新开张……"
 									+ (!Main.game.getDialogueFlags().hasFlag("innoxia_doll_factory_ending_reopen_scene_seen")
-											?"<br/>[style.italics(Fia will return after you've entered the newly-reopened Loveinne's Luxuries.)]"
+											?"<br/>[style.italics(等你去过重新开张的洛维耶纳奢侈品店之后菲亚才会再次现身。)]"
 											:""),
 								null);
 					} else {
 						if(!Main.game.isHourBetween(19, 00)) {
-							return new Response("Fia",
-									"Fia isn't around at this time..."
-									+ "<br/><i>Return between the hours of [units.time(19)]-[units.time(00)] to find Fia.</i>",
+							return new Response("菲亚",
+									"菲亚这个时间不在这里……"
+									+ "<br/><i>等到[units.time(19)]-[units.time(00)]之间再回来找菲亚。</i>",
 									null);
 							
 						} else if(Main.game.getDialogueFlags().hasFlag("innoxia_fia_bar_seen")) {
-							return new Response("Find Fia",
-									"You've already met Fia this evening, and won't be able to find her again until tomorrow.",
+							return new Response("寻找菲亚",
+									"你今晚已经见过菲亚了，下次见面只能等明天了。",
 									null);
 								
 						} else {
-							return new Response("Fia",
-									"Look for Fia in the nearby bars.",
+							return new Response("菲亚",
+									"在附近的酒吧寻找菲亚。",
 									DialogueManager.getDialogueFromId("innoxia_places_dominion_demon_home_fia_start"));
 						}
 					}
 					
 				} else if(Main.game.getPlayer().hasQuestInLine(QuestLine.SIDE_DOLL_FACTORY, Quest.DOLL_FACTORY_7B) && Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_DOLL_FACTORY)) {
 					if(!Main.game.isHourBetween(16, 22)) {
-						return new Response("Angelixx",
-								"Angelixx and her sons are out at 'work' at this time, so you'll have to come back later if you wanted to see them."
-								+ "<br/><i>Return between the hours of [units.time(16)]-[units.time(22)] to meet Angelixx and her sons.</i>",
+						return new Response("安吉莉克丝",
+								"这个时间，安吉莉克丝和她的儿子应该在外面“工作”，如果想见到他们，你得晚点再来。"
+								+ "<br/><i>等到[units.time(16)]-[units.time(22)]之间再回来与安吉莉克丝和她的儿子们见面。</i>",
 								null);
 						
 					} else if(Main.game.getDialogueFlags().hasFlag("innoxia_angelixx_apartment_visited")) {
-							return new Response("Angelixx",
-									"You've already paid a visit to Angelixx's apartment this evening, and can't do so again until tomorrow.",
+							return new Response("安吉莉克丝",
+									"你今晚已经访问过安吉莉克丝的住处了，下次见面只能等明天了。",
 									null);
 							
 					} else {
-						return new Response("Angelixx",
-								"Head up to Angelixx's apartment and pay her and her sons a visit.",
+						return new Response("安吉莉克丝",
+								"去安吉莉克丝的住处拜访她和她的儿子们。",
 								DialogueManager.getDialogueFromId("innoxia_places_dominion_angelixx_apartment_generic_visit"));
 					}
 				}

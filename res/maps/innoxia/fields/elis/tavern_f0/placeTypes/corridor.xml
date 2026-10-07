@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[corridor]]></name>
-	<tooltipDescription><![CDATA[A narrow corridor leads off from one side of the bar.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the corridor at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[走廊]]></name>
+	<tooltipDescription><![CDATA[吧台一侧有一条狭窄的走廊。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“红龙酒馆”的入口]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

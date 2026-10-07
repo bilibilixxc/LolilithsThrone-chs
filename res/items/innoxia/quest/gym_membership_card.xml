@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>8000</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA['Pix's Playground' membership card]]></name>
-		<namePlural pluralByDefault="false"><![CDATA['Pix's Playground' membership card]]></namePlural>
-		<description><![CDATA[A cardboard card with laminate coating, declaring the holder as being a member of the gym, 'Pix's Playground'.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[“皮克斯操练场”会员卡]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[“皮克斯操练场”会员卡]]></namePlural>
+		<description><![CDATA[一张覆有塑料膜的卡纸卡片，宣告持有人是“皮克斯操练场”健身房的会员。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,12 +23,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.colourGood(Grants access)] to 'Pix's Playground']]></line>
+			<line><![CDATA[[style.colourGood(授予访问权限)]到皮克斯操练场]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			There's nothing about this card's appearance to suggest that it cost eight thousand flames. Made of flimsy cardboard, and with just a thin laminate coating to protect it from moisture, the simple design on the front leaves much to be desired. The words 'Pix's Playground', along with a basic icon of a dumbbell, are the only identifying marks which it carries.
+			从这张卡的外观来看，没有什么可以表明它价值8000个火币。它由薄薄的卡纸制成，表面只有薄薄的塑料膜来防潮，正面的简单设计也显得相当朴素。上面唯一的标识是“皮克斯操练场”的字样，以及一个基本的哑铃图标。
 		</p>
 		]]></applyEffects>
 		
@@ -38,11 +38,11 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the card...
+		[npc.Name]仔细查看这张卡片……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off [npc.her] card to [npc2.name], who is duly impressed by [npc.her] possession of it...
-		]]></otherUse>
+		[npc.Name]向[npc2.name]展示[npc.her]的卡片，[npc2.name]对[npc.Name]拥有它感到印象深刻……
+	]]></otherUse>
 	</useDescriptions>
 
 	

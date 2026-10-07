@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the cup reads 'Mixed by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[杯子底下刻着细小的字迹，写着“DSG食品有限公司包装”。]]></authorTag>
 		
 		<value>20</value> 
-		<determiner><![CDATA[a cup of]]></determiner>
-		<name><![CDATA[Two-Tone Slushie]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Grogs]]></namePlural>
-		<description><![CDATA[A kiwi-and-strawberry flavored two-tone slushie. The label depicts a gryphon-girl wearing only an apron handing a fountain cup resembling this one out towards an imaginary customer.]]></description> 
+		<determiner><![CDATA[一杯]]></determiner>
+		<name><![CDATA[双色冰沙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[混合饮料]]></namePlural>
+		<description><![CDATA[一杯奇异果和草莓口味的双色冰沙。标签上描绘着一只穿着围裙的狮鹫女，她正在递送一个类似这个杯子的冰沙给一位虚构的顾客。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -30,15 +30,15 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 15% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_FIRE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_FIRE.getFormattedValue(1)]到“药剂效果” ]]></line>
+			<line><![CDATA[[#ATTRIBUTE_RESISTANCE_FIRE.getFormattedValue(1)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM) * 0.15)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful wave of arcane energy washes over [npc.name]...
+				一股强大的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_RESISTANCE_FIRE, 1)]
 		]]></applyEffects>
@@ -52,10 +52,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(bring)] the cup of Two-Tone Slushie up to [npc.her] [npc.mouth]. The smell of kiwis and strawberries rises from the straw, and as [npc.she] [npc.verb(wrap)] [npc.her] lips around it and [npc.verb(start)] sucking down the cold semi-solid [npc.she] [npc.verb(feel)] much more refreshed.
+		[npc.Name]将双色冰沙杯提到[npc.her]的[npc.mouth]边。奇异果和草莓的香味从吸管上升起，当[npc.she]将嘴唇包裹在吸管上并吸入冷半固体时，[npc.she]感到更加清爽。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(bring)] the cup of Two-Tone Slushie up to [npc2.namePos] waiting [npc2.lips]. The smell of kiwis and strawberries rises from the straw, and as [npc2.she] [npc2.verb(warp)] [npc2.her] lips around it and [npc2.verb(start)] sucking down the cold semi-solid, [npc.she] [npc.verb(feel)] much more refreshed.
+		[npc.Name]将双色冰沙杯提到[npc2.namePos]等待[npc2.lips]边。奇异果和草莓的香味从吸管上升起，当[npc2.she]将嘴唇包裹在吸管上并吸入冷半固体时，[npc.she]感到更加清爽。
 		]]></otherUse>
 	</useDescriptions>
 

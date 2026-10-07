@@ -1,65 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- Exterior hard-coded to PixsPlayground.GYM_EXTERIOR: -->
 	
 	<htmlContent tag="GYM_EXTERIOR"><![CDATA[
 	<p>
-		You find yourself standing before one of the largest frontages in the Shopping Arcade. The words 'Pix's Playground' are emblazoned in bright red lettering above the entrance, and beneath, you read the words 'Dominions #1 Gym!'.
+		你发现自己站在购物中心最大的门面之一前。入口上方鲜红色的字体写着“皮克斯的操练场”，下面则是“御城区第一健身房！”。
 	</p>
 	<p>
-		Most of the gym's frontage is made up of large glass panels, allowing you to take a good look inside. From what you can see, the interior consists of a wide open space, filled with an impressive variety of gym equipment.
+		健身房的大部分门面由大块的玻璃面板组成，让你能好好地看看里面。据你所见，内部是一个开阔的空间，里面摆满了各种令人印象深刻的健身器材。
 		#IF(pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 			#IF(game.getDialogueFlags().hasFlag(FLAG_innoxia_pix_introduced))
-				 Moving your gaze over to look through the main entrance's glass doors, you see Pix sitting behind the reception desk.
+				当你将目光转向主入口的玻璃门，你看到皮克斯坐在接待台后面。
 			#ELSE
-				 Moving your gaze over to look through the main entrance's glass doors, you see a [pix.race] sitting behind the reception desk.
+				当你将目光转向主入口的玻璃门，你看到一个[pix.race]坐在接待台后面。
 			#ENDIF
 		#ELSE
-			 Moving your gaze over to look through the main entrance's glass doors, you see a rabbit-girl sitting behind the reception desk.
+			当你将目光转向主入口的玻璃门，你看到一个兔女坐在接待台后面。
 		#ENDIF
 	</p>
 	<p>
-		Although obvious from the fact that all the lights are on and the front desk is staffed, there's a sign hanging on the glass doors which confirms that the gym is currently [style.colourGood(open)], and remains so [style.colourMinorGood(24 hours a day, 7 days of the week)].
+		尽管从所有灯都亮着和前台有人值班这一事实就很明显，但玻璃门上挂着一个标志，确认了健身房当前[style.colourGood(营业)]，并且[style.colourMinorGood(一周7天，一天24小时)]都是如此。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Entrance/exit: -->
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		You find yourself standing before the glass doors which serve as the gym's main entrance. From here you could proceed forwards to the reception desk, or turn around and head back into the Shopping Arcade...
+		你发现自己站在健身房正门的玻璃门前。从这里，你可以向前走到接待台，也可以掉头返回购物中心……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_INITIAL_ENTRY"><![CDATA[
 	<p>
-		Pushing open the glass doors, you [pc.step] into the gym and take a quick look around. A short way in front of you stands the reception desk, behind which
+		推开玻璃门，你走进健身房，快速环顾四周。在你前面不远处矗立着接待台，后面
 		#IF(pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 			#IF(!flags.hasFlag(FLAG_innoxia_pix_introduced))
-				 the excitable [pix.race], Pix, is standing.
+				站着一个易怒的[pix.race]，皮克斯。
 			#ELSE
-				 a very excitable-looking [pix.race] is standing.
+				站着一个看起来易怒的[pix.race]。
 			#ENDIF
 		#ELSE
-			 a pretty greater rabbit-girl is standing.
+			站着一个漂亮的兔女。
 		#ENDIF
-		 Looking past her, you see that the building's cavernous interior is home to dozens of exercise machines, several of which are currently in use by members of this gym. 
+		越过她，你看到这座建筑宽敞的内部摆放着几十台健身器材，其中有几台正在被健身房的会员使用。
 	</p>
 	<p>
-		From here you could proceed forwards to the reception desk, or turn around and head back into the Shopping Arcade...
+		在这里，你可以向前走到接待处，或者掉头返回购物中心……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Deciding that you've had enough of the gym, you push open the glass doors and head back out into the Shopping Arcade...
+		你觉得在健身房玩够了，便推开玻璃门，回到购物中心……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Reception: -->
 	
@@ -67,100 +67,100 @@
 	#IF(game.getCharactersPresent().contains(pix))
 		#IF(!flags.hasFlag(FLAG_innoxia_pix_introduced))
 			<p>
-				Proceeding forwards into the gym, you approach the reception desk, where you're enthusiastically greeted by an extremely energetic dog-girl. Her fur is black with white markings, which, in combination with her folded ears, gives her the appearance of an anthropomorphised border-collie.
+				进入健身房，你走到接待台前，一位精力充沛的狗女热情地向你打招呼。她的皮毛是黑色的，上面有白色的斑纹，再加上折叠的耳朵，看起来就像一只拟人化的边境牧羊犬。
 			</p>
 			<p>
-				[pix.speech(Heya! Hi! How're ya doin'!)] she exclaims, reaching forwards to give your [pc.hand(true)] an enthusiastic shake with both of her paw-like hands.
+				[pix.speech(嗨呀！嗨！游泳健身了解一下~)]她呼喊道，伸出爪子般的双手热情地握住你的[pc.hand(true)]。
 			</p>
 			<p>
-				You start to offer this friendly dog-girl a hello, but in her excitement she quickly cuts you off and starts to speak over you.
+				你向这位友好的狗女问好，但她很快就打断了你，并开始和你说话。
 			</p>
 			<p>
-				[pix.speech(Wohoo! So, you've decided to come get fit, huh, huh, huh?)] she asks. Still not giving you a moment in which to reply, she immediately continues, [pix.speech(So don't just stand there! Oh, I'm Pix by the way! Come on, I'll give you a tour!)]
+				[pix.speech(哇哦！所以你决定来健身吗，哈、哈、呵？)]她问道。她还是不给你回答的机会，马上继续说道：[pix.speech(别傻站着了！对了，我叫皮克斯。来吧，我带你参观一下！)]
 			</p>
 			<p>
-				Pix releases your [pc.hand(true)], which she's been violently shaking this entire time, before starting to bound away into the gym, motioning for you to follow her. You notice that her tail hasn't stopped wagging this entire time, and you can't help but think to yourself that she's quite possibly the most energetic person you've ever met.
+				皮克斯松开了一直被猛烈摇着的你的[pc.hand(true)]，开始向健身房跑去，并示意你跟着她。你注意到她的尾巴一直在摇，你不禁想，她可能是你见过的最有活力的人了。
 			</p>
 		#ELSE
 			#IF(flags.hasFlag(FLAG_innoxia_pix_session_started))
 				<p>
-					Returning to the reception desk, you see that the energetic owner of this gym, Pix, is still standing here. As she catches sight of you, she greets you in her typical, enthusiastic manner.
+					你回到前台，看到这家健身房的老板皮克斯还站在这里，依然精力充沛。当她看到你时，便以她特有的热情方式向你打招呼。
 				</p>
 				<p>
-					[pix.speech(Heya, [pc.name]! How's it goin'?! Havin' a good workout?!)] she exclaims, before pausing to flash you a huge grin.
+					[pix.speech(嗨呀，[pc.name]！怎么样，锻炼得好吗？)]她呼喊道，向你露出大大得笑容。
 				</p>
 				<p>
 					#IF(!pc.hasItemType(ITEM_innoxia_quest_gym_membership_card))
-						As you start to return her greeting, the hyperactive dog-girl cuts you off, [pix.speech(The eight-thousand flames deal is still on y'know! Only for you! So, you ready to sign up?!)]
+						你正要向她问好，极度活跃的狗女打断了你：[pix.speech(八千火币的交易还在继续，知道吗？只给你的优惠！准备好报名了吗？！)]
 					#ELSE
 						#IF(pc.isVisiblyPregnant())
-							As you start to return her greeting, the hyperactive dog-girl pointedly looks down at your pregnant belly and cuts you off, [pix.speech(Sorry, but I'm not going to put you through any kind of strenuous activity while you're pregnant, so no personal training for you!)]
+							你正要向她问好，极度活跃的狗女指着你怀孕的肚子打断了你：[pix.speech(对不起，我不会让你在怀孕期间进行任何剧烈运动，没有私教训练给你哦！)]
 						#ELSE
-							As you start to return her greeting, the hyperactive dog-girl cuts you off,
+							你正要向她问好，极度活跃的狗女打断了你：
 							#IF(flags.hasFlag(FLAG_innoxia_pix_workout_pix_completed))
-								 [pix.speech(I had a lot of fun giving you that personal training earlier! Come back for some more once you've recovered!)]
+								[pix.speech(刚才的私人训练让我很开心！等你恢复了，再来找我吧！)]
 							#ELSE
-								 [pix.speech(You gonna want some personal training?! I'm ready for it whenever you are!)]
+								[pix.speech(你想要私教训练？！我随时都在！)]
 							#ENDIF
 						#ENDIF
 					#ENDIF
 				</p>
 			#ELSE
 				<p>
-					Proceeding forwards into the gym, you once again find yourself approaching the reception desk. The energetic owner of this gym, Pix, is here to greet you, and she does so in her typical, enthusiastic manner.
+					你走进健身房，又一次发现自己走近了前台。精力充沛的健身房老板皮克斯正以她特有的热情方式迎接你的到来。
 				</p>
 				<p>
-					[pix.speech(Heya, great to see you again, [pc.name]! How're ya doin'!)] she exclaims, before pausing to flash you a huge grin.
+					[pix.speech(嗨呀，很高兴再次见到你，[pc.name]！最近怎么样！)]她呼喊道，向你露出一个大大的笑容。
 				</p>
 				#IF(pix.isVisiblyPregnant())
 					#IF(!pix.isCharacterReactedToPregnancy(pc))
 						<p>
-							As you start to return her greeting, you notice that the hyperactive dog-girl is clutching what's clearly her [style.colourSex(pregnant belly)]. Letting out a laugh as she sees what it is you're looking at, Pix exclaims, [pix.speech(That's right, you knocked me up! Come here and have a feel!)]
+							你正要向她问好，就注意到这只活泼好动的狗女正紧紧抱着她的[style.colourSex(孕肚)]。当她看到你在看什么时，皮克斯发出了一阵笑声，并惊呼道：[pix.speech(没错，你把我肚子搞大了，过来摸摸！)]
 						</p>
 						<p>
-							Doing as the mother of your children says, you [pc.step] forwards and run [pc.a_hand(true)] over her swollen, furry tummy. As you do so, she sighs, [pix.speech(It kind of feels good... But I can't do any proper exercise while I'm like this...)]
+							按照孩他妈说的做，你向前走，用[pc.a_hand(true)]摸摸她肿胀、毛茸茸的肚子。同时，她叹了口气：[pix.speech(这感觉很好……但是我不能做任何锻炼了……)]
 						</p>
 					#ELSE
 						<p>
-							As you start to return her greeting, you notice that the hyperactive dog-girl is still clutching what's clearly her [style.colourSex(pregnant belly)]. Letting out a laugh as she sees what it is you're looking at, Pix exclaims, [pix.speech(That's right, I'm still pregnant, thanks to you! Come here and have another feel!)]
+							你正要向她问好，就注意到这只活泼好动的狗女正紧紧抱着她的[style.colourSex(孕肚)]。当她看到你在看什么时，皮克斯发出了一阵笑声，并惊呼道：[pix.speech(没错，我还是怀孕了，多亏了你！过来再摸摸！)]
 						</p>
 						<p>
-							Doing as the mother of your children says, you [pc.step] forwards and run [pc.a_hand(true)] over her swollen, furry tummy. As you do so, she sighs, [pix.speech(It kind of feels good... But I can't do any proper exercise while I'm like this...)]
+							按照孩他妈说的做，你向前走，用[pc.a_hand(true)]摸摸她肿胀、毛茸茸的肚子。同时，她叹了口气：[pix.speech(这感觉很好……但是我不能做任何锻炼了……)]
 						</p>
 					#ENDIF
 					#IF(pc.isVisiblyPregnant())
 						<p>
-							As you withdraw your [pc.hand(true)], the hyperactive dog-girl pointedly looks down at your pregnant belly and states, [pix.speech(Sorry, but I'm not going to put you through any kind of strenuous activity while you're pregnant, so no personal training for you!)]
+							当你收回[pc.hand(true)]时，活泼的狗女指着你怀孕的肚子说：[pix.speech(对不起，我不会让你在怀孕期间进行任何剧烈运动，没有私教训练给你哦！)]
 						</p>
 					#ELSE
 						<p>
-							Withdrawing your [pc.hand(true)], you smile at Pix and wonder what to do next...
+							你收回[pc.hand(true)]，对皮克斯微微一笑，下一步该做什么……
 						</p>
 					#ENDIF
 				#ELSE
 					<p>
-						As you start to return her greeting, the hyperactive dog-girl quickly starts to speak over you.
+						你向她问好，这个好动的狗女很快就开始和你说话了。
 					</p>
 					#IF(!flags.hasFlag(FLAG_innoxia_pix_had_tour))
 						<p>
-							[pix.speech(Wohoo! So, you've decided to come have that tour, huh, huh, huh?)] she asks, but before you can reply, she continues speaking, [pix.speech(So don't just stand there! Come on, follow me!)]
+							[pix.speech(哇哦！所以，你打算和我来参观一下吗，哈、哈、呵？)]她问道，但不等你回答，她就继续说：[pix.speech(别傻站着了！来吧，跟上！)]
 						</p>
 						<p>
-							Pix happily laughs and turns away before starting to bound into the gym, motioning for you to follow her.
+							皮克斯开心地笑了笑，转身离开，然后开始向健身房走去，并示意你跟着她。
 						</p>
 					#ELSEIF(!pc.hasItemType(ITEM_innoxia_quest_gym_membership_card))
 						<p>
-							You start to greet the energetic dog-girl, but, once again, she immediately cuts you off, [pix.speech(The eight-thousand flames deal is still on y'know! Only for you! So, you ready to sign up?!)]
+							你向活泼的狗女打招呼，但她又一次立刻打断了你[pix.speech(八千火币的交易还在继续，知道吗？只给你的优惠！准备好报名了吗？！)]
 						</p>
 					#ELSE
 						<p>
-							You start to greet the energetic dog-girl, but, once again, she immediately cuts you off,
+							你向活泼的狗女打招呼，但她又一次立刻打断了你
 							#IF(flags.hasFlag(FLAG_innoxia_pix_workout_pix_completed))
-								 [pix.speech(I had a lot of fun giving you that personal training earlier! Come back for some more once you've recovered!)]
+								[pix.speech(刚才的私人训练让我很开心！等你恢复了，再来找我吧！)]
 							#ELSEIF(pc.isVisiblyPregnant())
-								 [pix.speech(Sorry, but I'm not going to put you through any kind of strenuous activity while you're pregnant, so no personal training for you!)]
+								[pix.speech(对不起，我不会让你在怀孕期间进行任何剧烈运动，没有私教训练给你哦！)]
 							#ELSE
-								 [pix.speech(You gonna want some personal training?! I'm ready for it whenever you are!)]
+								[pix.speech(你想要私教训练？！我随时都在！)]
 							#ENDIF
 						</p>
 					#ENDIF
@@ -169,1139 +169,1139 @@
 		#ENDIF
 	#ELSE
 		<p>
-			Proceeding forwards into the gym, you approach the reception desk, where you're greeted by a pretty rabbit-girl, [style.speechFeminine(Hello! Pix isn't here at the moment, but she'll be back at six o'clock.)]
+			你进入健身房后，走到前台，接待你的是一位漂亮的兔女：[style.speechFeminine(您好！皮克斯现在不在，她预计六点回来。)]
 		</p>
 		<p>
 			#IF(pc.hasItemType(ITEM_innoxia_quest_gym_membership_card))
-				Showing the receptionist your membership card, the rabbit-girl smiles and waves you through, saying, [style.speechFeminine(Enjoy your session!)]
+				你向接待员出示会员卡后，兔女微笑着向你招手，说：[style.speechFeminine(祝您健身愉快！)]
 			#ELSE
-				As she realises that you don't have a membership card to show her, the rabbit-girl says, [style.speechFeminine(It's one-hundred flames per session. Pix handles the memberships, so if you wanted to sign up to become a member of our gym, then please come back during the day.)]
+				兔女意识到你没有会员卡给她看，说：[style.speechFeminine(每节课一百火币。皮克斯负责办理会员卡，如果您想注册成为我们健身房的会员，请在白天来办理。)]
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TALK_GYM"><![CDATA[
 	<p>
-		Wanting to know more Pix's history, you ask her about this gym and how she came to own it. 
+		想了解更多皮克斯的故事，你问她这个健身房是如何成立的，还有她是怎么成为它的老板的。
 	</p>
 	<p>
-		[pix.speech(Well, y'know, I've always been on the go, right from when I was born, so I kinda always knew that I wanted to be a fitness instructor!)] she happily exclaims, before continuing, [pix.speech(So I worked really hard at getting fit and strong, and so managed to get this place!)]
+		[pix.speech(嗯，你知道，我从出生开始就一直停不下来，所以我有点总是知道我想成为一名健身教练！)]她高兴地宣称，然后继续说到，[pix.speech(所以我非常努力地锻炼，变得强壮，因此得以拥有这个地方！)]
 	</p>
 	<p>
-		Thinking that there are a few gaps in Pix's story, you ask her how she managed to afford this gym just by 'working hard to get fit and strong'.
+		觉得皮克斯的故事里有几处空白，你问她仅凭“努力变得强壮”是如何能够负担得起这个健身房的。
 	</p>
 	<p>
-		[pix.speech(Oh, I didn't need to afford this place; my dad bought it for me!)] she reveals, [pix.speech(My mum and dad would always tease me by saying that I was 'driving them crazy' or that they 'couldn't take any more', and so to continue the joke my dad bought this gym and told me that I could have it, just so long as I don't go back to visit them more than once a month!)]
+		[pix.speech(哦，我不需要负担得起这个地方；是我爸爸给我买的！)]她透露，[pix.speech(我妈妈和爸爸总是逗我说我‘把他们逼疯了’或者‘他们受不了了’，所以为了延续这个玩笑，我爸爸买了这个健身房，并告诉我我可以拥有它，只要我一个月不回去拜访他们超过一次！)]
 	</p>
 	<p>
-		Realising that Pix has clearly been born into an extremely wealthy family, you ask her where she goes to visit her parents.
+		意识到皮克斯显然出生在一个极度富裕的家庭，你问她去哪里拜访她的父母。
 	</p>
 	<p>
-		[pix.speech(Oh, well I usually visit mum and dad at their mansion over in Demon Home, but sometimes I go to their place in Thinis, and last month I surprised them by turning up at their estate! You should have seen the looks on their faces!)] she laughs, before loudly asking, [pix.speech(So, is there anything else you wanted to know?)]
+		[pix.speech(哦，我通常是去恶魔之家那边拜访我妈妈和爸爸的府邸，但有时我也会去他们在提尼斯的住所，上个月我还去了他们的庄园给他们一个惊喜！你应该看看他们的表情！)]她笑了笑，然后大声问，[pix.speech(那么，还有其他什么你想知道的吗？)]
 	</p>
 	<p>
-		Having heard enough, you thank Pix for the information and wonder what to do next...
+		听够了，你感谢皮克斯提供的信息，并开始考虑接下来要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TALK_BOXING"><![CDATA[
 	<p>
-		Curious to hear more about Hannah, you ask Pix how the spotted hyena-girl came to work here as a boxing instructor.
+		你好奇地想了解更多关于汉娜的事，问皮克斯这位斑点鬣狗女是怎么来到这里担任拳击教练的。
 	</p>
 	<p>
-		[pix.speech(Oh, well I've known Hannah forever, and after I opened this gym I asked her if she'd like to work here,)] Pix reveals, [pix.speech(She refused the first few times, but persistence pays off, and she eventually agreed to taking the job!)]
+		[pix.speech(哦，其实我认识汉娜很久了，开设这个健身房后我问她想不想在这里工作，)]皮克斯透露，[pix.speech(她最初几次都拒绝了，但坚持就是胜利，最终她同意了接受这份工作！)]
 	</p>
 	<p>
-		Wanting to know a little more, you ask Pix how she met Hannah.
+		你想多了解点，问皮克斯是如何认识汉娜的。
 	</p>
 	<p>
-		[pix.speech(Well, it was over ten years ago now, but I can remember it like it was yesterday! I was taking a shortcut through some alleyways to get home in time for my nineteenth birthday party, when a group of muggers ambushed me!)] she exclaims. You notice that Pix's tail is excitedly wagging behind her as she continues, [pix.speech(Hannah turned up at that exact moment and beat them all up! I dragged her along to my party and we've been best friends ever since!)]
+		[pix.speech(嗯，现在都过去十多年了，但我记得就像是昨天一样！当时我正在穿过几个小巷子抄近道回家，好赶上我的十九岁生日派对，结果一群抢劫犯突然袭击了我！)]她激动地说。你注意到皮克斯的尾巴在她说话时兴奋地摇动，[pix.speech(就在那时，汉娜出现把他们都打倒了！我把她带到我的派对上，从那以后我们就成了最好的朋友！)]
 	</p>
 	<p>
-		Happily hopping up and down on the spot, the [pix.race] impatiently waits to hear what it is you'll ask of her next... 
+		[pix.race]高兴地在原地跳来跳去，不耐烦地等着听你接下来会问她什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TALK_YOGA"><![CDATA[
 	<p>
-		Wanting to know more about Brahman, you ask Pix what she can tell you about the bull-boy.
+		你想了解更多关于梵天的事，问皮克斯她能告诉你些什么关于这位公牛男的事。
 	</p>
 	<p>
-		[pix.speech(There's not really much to tell, really,)] she replies after thinking for a moment. Shrugging at you, she continues, [pix.speech(He turned up soon after I opened this gym and offered to work here as a yoga instructor. I accepted, and that was that.)]
+		[pix.speech(其实也没什么特别的，)]她在思考片刻后回答。耸了耸肩，她继续说，[pix.speech(他是在我开设这个健身房不久后出现的，提出要在这里担任瑜伽教练。我接受了他的提议，就这样了。)]
 	</p>
 	<p>
-		Pushing Pix a little further, you ask her if she knows anything about Brahman's history.
+		继续追问皮克斯，你问她是否知道关于梵天的背景。
 	</p>
 	<p>
-		[pix.speech(Well, if you've spoken with him, then you know how he is!)] she loudly replies with a laugh, [pix.speech(I can barely understand him at the best of times, and so I gave up trying to find out more about him a long time ago!)]
+		[pix.speech(嗯，如果你和他说过话，那你就知道他是个怎样的人了！)]她大笑着大声回答，[pix.speech(大多数时候我都很难听懂他在说什么，所以很久以前我就放弃进一步了解他了！)]
 	</p>
 	<p>
-		Flashing you a big smile, Pix waits to see what you'll do next... 
+		向你露出一个大大的微笑，皮克斯等着看你接下来会做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_LEAVE"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_innoxia_pix_had_tour))
-			You quickly tell Pix that you need a moment to think about her offer, but you might come back later. She doesn't seem fazed at all by your reluctant response, and calls out after you as you leave, [pix.speech(No worries! Come back at any time, I'll be waiting to see you again!)]
+			你很快告诉皮克斯你需要一点时间来考虑她的提议，但你稍后可能会回来。对你犹豫的回应，她一点儿也不感到不适，并在你离开时跟在你后面叫道，[pix.speech(没关系！随时欢迎回来，我会等着再次见到你！)]
 		#ELSE
-			You quickly tell Pix that you don't have time for her tour right now, but you might come back later. She doesn't seem fazed at all by your reluctant response, and calls out after you as you leave, [pix.speech(No worries! Come back at any time, I'll be waiting to see you again!)]
+			你快速地告诉皮克斯现在你没有时间参观，但你稍后可能会回来。对你犹豫的回应，她一点儿也不感到不适，并在你离开时跟在你后面叫道，[pix.speech(没关系！随时欢迎回来，我会等着再次见到你！)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TOUR"><![CDATA[
 	<p>
-		You decide to follow the excitable dog-girl, and hurry to catch up with her as she sets off. Following Pix into the cavernous interior of the building, you come to an abrupt halt as the [pix.race] stops in her tracks and turns to face you.
+		你决定跟着这个兴奋的犬女，快步赶上。跟随皮克斯进入这座巨大的建筑内部，你突然停了下来，因为[pix.race]突然停下脚步转身面对你。
 	</p>
 	<p>
-		[pix.speech(Right, so to begin with, there on your left are all the cardio machines!)] she loudly exclaims. Looking over to where she's pointing, you see a vast array of running, cycling, and rowing machines neatly lined up beside one another. There are a couple of gym members using these machines, but the vast majority of them are vacant. Keeping her voice raised, Pix happily declares, [pix.speech(It's usually not much busier than this, so when you sign up, you'll find that you never have to wait for any of the equipment! And our yoga studio right here always has space! Our instructor, Brahman, isn't here right now, but he holds regular sessions for gym members!)]
+		[pix.speech(好的，首先，在你的左边是所有的有氧运动器械！)]她大声地喊道。往她所指的方向看去，你看到一排排整齐地排列着的跑步机、健身车和划船机。有几个健身房会员在使用这些器械，但大多数都是空着的。保持高昂的声调，皮克斯高兴地宣布，[pix.speech(通常都不会比这更忙，所以当你注册后，你会发现你从不需要等待任何器械！而我们这里的瑜伽练习室总是有空位！我们的教练，梵天，现在不在，但他会为健身房会员定期举办课程！)]
 	</p>
 	<p>
-		As you're wondering if Pix is even capable of speaking at a normal volume, you look to your right to see a modern-looking, glass-walled studio. Looking into this sound-proofed room, you see that the far wall bears images of lotus flowers and silhouettes of different yoga poses, while about a dozen rolled up mats are stacked up in the corner. The studio is currently deserted, which, along with seeing how few people are in the gym, makes you wonder if Pix's overbearing, hyperactive personality has put people off from coming here.
+		当你在想皮克斯是否有用正常声音说话的能力时，你转头向右看到一个现代化的、玻璃围墙的练习室。望进这个隔音的房间，你看到远处的墙上有莲花和不同瑜伽姿势的剪影，而大约有十几个卷起来的垫子堆在角落里。练习室目前是空的，这让你怀疑，是不是皮克斯过于强势、活跃的性格让人们不愿来这里。
 	</p>
 	<p>
-		Not giving you much time to dwell on this, Pix bounces up and down on the spot and declares, [pix.speech(Come on, there's more to see!)]
+		没有给你太多时间思考这个问题，皮克斯在原地跳来跳去，并宣布，[pix.speech(来吧，还有更多东西要看！)]
 	</p>
 	<p>
-		Following Pix down the path which leads through the high-ceilinged building, you quickly arrive at your next stop, where the [pix.race] shouts, [pix.speech(Here's where we have all the resistance machines and free weights! Oh, and right here's the changing rooms and showers, which lead on through to our saunas and indoor pool! Now follow me! Follow me! Let's go see the boxing rings!)]
+		跟随皮克斯走过这座高屋顶的建筑，你很快就到了你的下一站，那里[pix.race]大喊，[pix.speech(这里是所有的阻力机和自由举重！哦，这里也有更衣室和淋浴，通往我们的桑拿和室内游泳池！现在跟着我！跟着我！我们去看拳击场！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TOUR_NEXT"><![CDATA[
 	<p>
-		Making a ninety-degree turn, Pix skips along through the gym, leaving you to hurry along behind her. Passing all of the resistance machines, and noting how there are once again only a couple of people using them, you soon arrive at your destination. 
+		皮克斯转了一个九十度的弯，穿过健身房，你跟在她身后匆匆赶路。经过所有的阻力训练器，只有几个人在使用它们。你很快就到达了目的地。
 	</p>
 	<p>
-		[pix.speech(Oh, great! Hannah's giving a lesson!)] Pix shouts as she comes to a halt in front of you.
+		[pix.speech(哦，不错！汉娜正在上课！)]皮克斯大喊着停下来。
 	</p>
 	<p>
-		Looking past the [pix.race], you see that the area in front of you holds two full-sized boxing rings, while lined up around them are dozens of punching bags, bench presses, and free weights. There are about a dozen people here, making it far more popular than the rest of the gym, and you see that they're all currently standing around one of the rings. In the arena, a huge, muscular stag-boy is engaged in a bout of bare-knuckle boxing with a greater spotted hyena-girl, who you assume to be Hannah.
+		越过[pix.race]，你看到前面的区域有两个全尺寸的拳击台，周围摆放着几十个沙袋、卧推和自由重量器械。这里大约有十几个人，因此比健身房的其他地方更受欢迎，你看到他们现在都站在其中一个拳击台周围。在擂台上，一个身材魁梧、肌肉发达的鹿男正在和一个大点的鬣狗女徒手拳击，你猜她就是汉娜。
 	</p>
 	<p>
-		[pix.speech(After you've signed up to be a member, then you can go to Hannah to get boxing lessons!)] Pix exclaims.
+		[pix.speech(你注册为会员之后，就可以找汉娜来上拳击课！)]皮克斯大声说。
 	</p>
 	<p>
-		As you continue to watch the pair of pugilists, you can't help but think that Hannah is vastly outmatched. Although the hyena-girl's furry stomach is formed into a rock-hard six-pack, and her muscular arms and legs look to be extremely strong, the stag-boy is both taller and bulkier than she is, and looks to be quite agile as he dances around in front of his opponent. You almost can't bear to watch as he suddenly throws a mighty punch at Hannah, but the hyena-girl ducks to one side at the last moment, before darting forwards and delivering a trio of lightning-fast punches to his torso.
+		当你继续观察这对拳击手时，你会情不自禁地认为汉娜远远比不上他们。虽然鬣狗女毛茸茸的腹部形成了坚硬的六块腹肌，肌肉发达的胳膊和腿看起来也非常强壮，但鹿男比她更高更壮，而且在对手面前手舞足蹈，看起来相当敏捷。他突然向汉娜挥出有力的一拳时，你几乎不忍直视，但鬣狗女在最后一刻躲到了一边，然后飞身向前，以迅雷不及掩耳之势向他的躯干连击三拳。
 	</p>
 	<p>
-		[pix.speech(Oh, wait, this doesn't look like a lesson...)] Pix sighs, and you find yourself more surprised at the fact that she isn't shouting for once than by her words. Shaking her head, she tuts and says, [pix.speech(I'd better stop this.)]
+		[pix.speech(哦，等等，这看上去不像上课……)]皮克斯叹了口气，你发现自己更惊讶于她这一次没有大喊大叫。她摇了摇头，说道：[pix.speech(我最好阻止他们。)]
 	</p>
 	<p>
-		As the [pix.race] strides towards the ring, you see the stag-boy staggering to one side as he tries to recover from the blows he's just received. Before Pix can bring an end to the fight, the stag-boy briefly drops one hand to clutch his bruised ribs, giving Hannah the opening she needs. Her left fist shoots out with such speed that her opponent has no time in which to react, and a moment later the stag-boy is tumbling to the ground, unconscious.
+		[pix.race]大步走向擂台，你看到鹿男踉踉跄跄地走到一边，试图从刚才的打击中恢复过来。在皮克斯结束战斗之前，鹿男短暂地放下一只手，紧紧抓住自己受伤的肋骨，这给了汉娜所需要的机会。她的左拳飞速击出，对手根本来不及反应，片刻之后，鹿男就倒在了地上，不省人事。
 	</p>
 	<p>
-		[pix.speech(Ok, that's enough!)] Pix shouts, [pix.speech(Hannah, I told you to stop accepting challenges!)]
+		[pix.speech(好了，够了！)]皮克斯大喊，[pix.speech(汉娜，我告诉过你不要再接挑战了！)]
 	</p>
 	<p>
-		[hannah.speech(Yeah, yeah, it won't happen again,)] the hyena-girl grunts, before spitting on the floor and leaping down out of the ring. Seeing that the stag-boy's friends are gathering around to help him out, Pix leaves matters to them and returns to where you're standing.
+		[hannah.speech(好，好，没有下次了，)]鬣狗女哼了一声，朝地上吐了一口唾沫，跳下了擂台。看到鹿男的朋友们正围过来帮他，皮克斯把后事交给他们，回到了你这里。
 	</p>
 	<p>
-		[pix.speech(Sorry about that!)] she exclaims, [pix.speech(Hannah's got a bit of a reputation, so we sometimes get people coming here just to challenge her! It doesn't end well for them... Anyway, let's head back to the front desk!)]
+		[pix.speech(抱歉，出这种事！)]她大喊道，[pix.speech(汉娜有点名气，所以有时会有人来挑战她。他们的下场可不好……总之，我们回前台吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_TOUR_END"><![CDATA[
 	<p>
-		Leaving Hannah and the boxing rings behind, you follow Pix as she leads you back to the reception area. Taking her place behind the desk, she flashes you a huge smile and shouts, [pix.speech(So, what'ya think?! Pretty awesome, huh?!)]
+		离开汉娜和拳击台，你跟着皮克斯回到接待区。她在办公桌后面就座后，向你露出一个灿烂的微笑，并大声喊道：[pix.speech(所以，你怎么想？！很酷，对吧？！)]
 	</p>
 	<p>
-		You only manage to get out a few words in response before the excitable [pix.race] cuts you off. Moving onto the business-side of things, she exclaims, [pix.speech(Now, life-time membership is ten-thousand flames, or you can just pay each time you come here, which is one-hundred flames per entry! So, what'll be?! If you get the life-time membership, that includes personal workout sessions with none other than your new friend, Pix!)]
+		你只来得及回答了几个字，就被兴奋的[pix.race]给打断了。在谈及生意方面的问题时，她大声说道：[pix.speech(现在，终身会员费是一万火币，或者你也可以每次来这里都付费，每次一百火币！还有什么呢？如果你买下终身会员资格，那还包括你的新朋友皮克斯的私人健身课程！)]
 	</p>
 	<p>
-		Although it's a life-time membership, you can't help but think that ten thousand flames seems a little steep. Clearly sensing your hesitation, Pix quickly offers you a deal, [pix.speech(You know, I don't do this often, but I can see that you're kinda special and I'd really like to get the chance to work with that body of yours, so just for you, I'll say life-time membership is only eight-thousand flames! Pretty good, huh? So, what'll it be?!)]
+		尽管是终身会员，但你不禁觉得一万火币似乎有点贵。皮克斯显然察觉到了你的犹豫，很快就给你开出了条件：[pix.speech(欸，我不经常这样做，但我看得出你有点特别。我真的很想与你的身体一起锻炼。所以，只是你，终身会员只需八千火币！不错吧？有没有说法？！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_MEMBERSHIP"><![CDATA[
 	<p>
-		You tell Pix that you want to sign up for a lifetime membership. A huge smile spreads over her face, and she leaps up, punching the air and letting out a triumphant shout.
+		你告诉皮克斯，你想注册成为终身会员。她脸上绽放出灿烂的笑容，一跃而起，对着空气猛击一拳，发出胜利的欢呼。
 	</p>
 	<p>
-		[pix.speech(Wohoo! That's fantastic! Now I can help you train and stuff, and you can come and go any time you want without paying anything extra!)] she explains, and without warning, she leaps forwards and gives you a hug.
+		[pix.speech(哇哦！太棒了，现在我就可以帮你训练什么的，你也可以随时来去，不用额外付钱！)]她解释道，毫无征兆地向前一跃，给了你一个拥抱。
 	</p>
 	<p>
-		You're somewhat taken aback by her sudden move, but before you can react, she releases you and ducks down to fetch a contract from beneath her desk. After grabbing the piece of paper and a pen, she slams them down onto the counter and excitedly booms, [pix.speech(Ok! So, sign here, here, and here!)]
+		她突然的举动让你有些措手不及，但还没等你反应过来，她就松开了你，低头从桌子下面拿起一份合同。拿起那张纸和一支笔后，她把它们摔在柜台上，兴奋地大叫起来：[pix.speech(好！来，在这里，这里和这里签字！)]
 	</p>
 	<p>
-		 After signing your name at three different places on the page, you hand over the eight thousand flame fee, thereby completing the contract. Handing you a rather disappointingly-flimsy cardboard membership card, the [pix.race] cheers, [pix.speech(Awesome! So, that's all done! Congratulations! Just call me over whenever you're ready for some personal training! Oh, and you can now take boxing lessons with Hannah, or attend yoga sessions with Brahman!)]
+		在纸上三个不同的地方签上你的名字后，你交出了八千火币，完成了合同。[pix.race]欢呼起来，递给你一张令人相当失望的薄纸板会员卡：[pix.speech(太棒了！那么，都完成了！恭喜你，只要你想要私教训练，随时都可以找我！哦，你现在也可以和汉娜一起上拳击课，或者和梵天一起上瑜伽课了！)]
 	</p>
 	<p>
-		Having now gained access to all that the gym has to offer, you wonder where to go first...
+		获得了健身房的所有服务，下一步先去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_SESSION"><![CDATA[
 	#IF(pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 		<p>
-			You tell Pix that you just want to pay for a single session in the gym, before handing over the one hundred flame fee.
+			你告诉皮克斯，你只付一次健身房课程的费用，然后递出了100火币。
 		</p>
 		<p>
-			[pix.speech(Thanks, [pc.name]! You've now got full access to the gym, but that's lost when you decide to leave, so if you go and come back later, you'll have to pay again!)] the [pix.race] happily shouts as you pass by the reception desk. Bouncing up and down on the spot, she calls after you, [pix.speech(Remember, if you get a life-time membership, I can help you to train!)]
+			[pix.speech(谢谢，[pc.name]！现在你可以完全使用健身房啦，但如果你要离开，你就会失去这个使用权，所以如果你之后要再来的话，你需要再次交钱！)][pix.race]高兴地在你经过前台时欢呼喊道。她跳起来，喊着对你说，[pix.speech(记住，如果你是终身会员的话，我可以帮你训练！)]
 		</p>
 		<p>
-			Having now gained access to the gym, you wonder where to go first...
+			现在你已经获得了进入健身房的权限，你在想该先去哪……
 		</p>
 	#ELSE
 		<p>
-			You tell the rabbit-girl that you want to pay for a single session in the gym, before handing over the one hundred flame fee.
+			你告诉兔女你想支付一次健身房的课程费用，然后递出100个火币。
 		</p>
 		<p>
-			[pix.speech(Thank you! You've now got full access to the gym, but that's lost when you decide to leave, so if you go and come back later, you'll have to pay again,)] the receptionist explains as you pass by her desk.
+			[pix.speech(谢谢你！现在你可以完全使用健身房了，但如果你决定离开，你就会失去这个使用权，所以如果你之后要再来的话，你需要再次交钱，)]前台接待员在你经过她的桌子时解释道。
 		</p>
 		<p>
-			Having now gained access to the gym, you wonder where to go first...
+			现在你已经获得了进入健身房的权限，你在想该先去哪……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT"><![CDATA[
 	<p>
-		Deciding that you'll take Pix up on her offer, you start to say that you'd like to have a personal workout session with her, but before you're even halfway through your first sentence, she hastily interrupts you in her eagerness to respond, [pix.speech(Wohoo! So, like, you want to have a good workout, huh?! Come on! Let's start over here!)]
+		你决定接受皮克斯的提议，说你想和她来次私人健身课程，但你的第一句话还没说到一半，她就急忙打断了你，[pix.speech(哇哦，你想好好锻炼一下吗？来吧，我们从这里开始！)]
 	</p>
 	<p>
-		Doing as she says, you follow Pix as she skips over to the area of the gym which houses the free weights. Directing you to pick up a pair of dumbbells, she begins to show you her special routine, and directs you as you work your way through every set of muscles on your body.
+		按照她说的，你跟着皮克斯来到健身房里放置自由重量器械的地方。她指导你拿起一对哑铃，开始向你展示她的特殊动作，并指导你如何锻炼身上的每一块肌肉。
 	</p>
 	<p>
-		[pix.speech(C'mon! You can do better than that, can'tcha?!)] Pix exclaims, energetically jumping up and down on the spot.
+		[pix.speech(加油！你能做到更好，对吗？！)]皮克斯高声说着，活力十足地在原地蹦蹦跳跳。
 	</p>
 	<p>
-		You feel as though you're already working quite hard, and if you were to push yourself any further, you'd quickly get very fatigued. Then again, you <i>are</i> trying to get fitter, and Pix is a professional... Maybe you should give it your all?
+		你觉得自己已经很努力了，如果再上强度，很快就会疲劳。不过话又说回来，你<i>的的确确</i>正在努力让自己变得更健康，而皮克斯是一名专业人士……也许你应该听她的，全力以赴？
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_FULL_EFFORT"><![CDATA[
 	<p>
-		Deciding that it'd be best to give Pix one hundred percent of your effort, you fully commit to the exercise. Following the [pix.race]'s instructions, you work your way through several sets of weights, before moving on to the resistance machines and continuing your workout there. By the time you're done, you're left panting and feeling thoroughly worn out.
+		你决定最好听皮克斯的，付出百分之百的努力，于是你全身心地投入到锻炼中。按照[pix.race]的指导，你先做了几组举重，然后转到阻力机上继续锻炼。完成后，你气喘吁吁，感觉疲惫不堪。
 	</p>
 	<p>
-		The routine isn't over just yet, however, for as soon as you're done with the weights, Pix excitably shouts, [pix.speech(Great job, [pc.name]! Now let's go get some cardio work in!)]
+		不过，这套训练还没有结束，因为你一举重完，皮克斯就兴奋地大叫起来，[pix.speech(做得好，[pc.name]！现在我们去做有氧运动吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_HELD_BACK"><![CDATA[
 	<p>
-		Not wanting to exhaust yourself, you decide to hold back a little. Following Pix's instructions, you work your way through several sets of weights, before moving on to the resistance machines and continuing your workout there. Although you maintain the impression that you're putting all of your effort into it, you don't fully commit yourself to the exercise routine.
+		为了不让自己筋疲力尽，你决定稍微偷点懒。按照皮克斯的指导，你先做了几组举重，然后到阻力机上继续锻炼。虽然你看起来是在全力以赴，但你并没有全身心地投入到锻炼中。
 	</p>
 	<p>
-		Pix doesn't seem to pick up on the fact that you're holding back, for as soon as you're done with the weights, she excitably shouts, [pix.speech(Great job, [pc.name]! Now let's go get some cardio work in!)]
+		皮克斯似乎没有察觉到你在偷懒，你一完成了哑铃训练，她就兴奋地喊道，[pix.speech(干得不错，[pc.name]！我们现在去做点有氧运动吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_CARDIO"><![CDATA[
 	<p>
-		[pix.speech(Come on now! No slacking!)] Pix shouts as she bounces over towards the running machines.
+		[pix.speech(来吧！不要偷懒！)]皮克斯喊道，她蹦跳地着跑向跑步机。
 	</p>
 	<p>
-		You can't help but let out a groan as you see what Pix has got in store for you. The dog-girl's tail, which up until now hasn't stopped wagging, flicks upright for a second, before continuing its seemingly uncontrollable motion.
+		当你看到皮克斯为你准备的训练内容时，你不禁发出一声呻吟。犬女的尾巴突然竖起了一会儿，然后继续摇摆起来。
 	</p>
 	<p>
-		[pix.speech(Hey! I heard that! Come on now, if you give me thirty more minutes, I'll make it worth your while!)] she teases, before giving you a wink and then pushing you onto one of the running machines.
+		[pix.speech(嘿！我听见了！来吧，如果你再坚持30分钟，你会觉得很值得的！)]她先是逗你，然后向你眨了眨眼，把你推到了一个跑步机上。
 	</p>
 	<p>
-		With her excitable manner of talking over you, combined with the fact that you've been breathing heavily throughout Pix's exercise routine, you've been completely unable to get out a single sentence. You wonder what she means by making it 'worth your while', but as the [pix.race] turns the machine on and gets you to start running, you're given a clear idea of what's on her mind. As you run, Pix moves around behind you, and you can almost feel her lustful gaze resting on your rear end.
+		她兴奋地对你滔滔不绝，再加上你在皮克斯的锻炼过程中一直大喘气，你根本没法说出一句话。你不知道她说的“很值得”是什么意思，但当[pix.race]打开机器，让你开始跑步时，你就清楚地知道她在想什么了。在你跑步时，皮克斯在你身后转来转去，你几乎能感觉到她色迷迷的目光一直停留在你的后臀上。
 	</p>
 	<p>
-		[pix.speech(Mmm! Y'know, you've got one hot ass!)] she giggles, [pix.speech(Now show me what you're made of!)]
+		[pix.speech(嗯！你的屁股可真性感！)]她咯咯地笑，[pix.speech(现在，让我看看你的厉害吧！)]
 	</p>
 	<p>
-		Once again, you find yourself with a choice to make. Should you put in your full amount of effort, or hold back and conserve your energy?
+		现在你需要再次做出选择。你是应该全力以赴，还是保留一些力气？
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_CARDIO_FULL_EFFORT"><![CDATA[
 	<p>
-		Wanting to show Pix what you can do, you decide to set the machine for a steady run. Pix lets out an impressed hum as she sees what speed you're setting the machine to, [pix.speech(Mmm... You're eager to show off for me, aren't ya?)]
+		为了向皮克斯展示你的能力，你将机器设置为稳定速度。当皮克斯看到你把机器调到什么速度时，她发出了令人印象深刻的哼声，[pix.speech(嗯……看起来你很渴望向我展示，不是吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_CARDIO_HELD_BACK"><![CDATA[
 	<p>
-		Unwilling to completely exhaust yourself on the running machine, you decide to settle for a slow jog. Pix lets out a mildly annoyed huff as she sees what speed you're setting the machine to, [pix.speech(Huh... You're more exhausted than I thought! You're gonna need to get fitter, aren't ya?)]
+		你不愿意在跑步机上精疲力尽，你决定慢跑。皮克斯看到你把跑步机调到的速度后，恼怒地哼了一声，[pix.speech(哈……你比我想象的要累，你需要多锻炼锻炼，不是吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PERK_PROGRESS_COMPLETE"><![CDATA[
 	<p style='text-align:center;'><i>
-		You feel completely exhausted from your workout, and will be unable to do any more exercise until you've had time to recover.
+		训练后，你感到筋疲力尽，恢复之前无法再做任何运动。
 		<br/>
-		You've [style.colourExcellent(completed your progress)] towards gaining a [style.colourPhysique(unique perk)]!
+		你[style.colourMinorGood(已完成)]某项[style.colourPhysique(独特天赋)]的进展！
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PERK_PROGRESS"><![CDATA[
 	<p style='text-align:center;'><i>
-		You feel completely exhausted from your workout, and will be unable to do any more exercise until you've had time to recover.
+		训练后，你感到筋疲力尽，恢复之前无法再做任何运动。
 		<br/>
-		You've [style.colourMinorGood(gained [#SPECIAL_PARSE_0]% progress)] towards gaining a [style.colourPhysique(unique perk)]!
-		<br/><b>Total progress: [#SPECIAL_PARSE_1]%</b>
+		某项[style.colourPhysique(独特天赋)][style.colourMinorGood(进度增长[#SPECIAL_PARSE_0]%)]！
+		<br/><b>累计：[#SPECIAL_PARSE_1]%</b>
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END"><![CDATA[
 	<p>
-		As you exercise, Pix uses the opportunity to check you out, making inappropriate comments every now and then about the state of your body, [pix.speech(That's right, keep working that ass for me... Mmm, yeah, that's good...)]
+		在你锻炼时，皮克斯用一直打量着你，时不时地对你的身体发表一些不恰当的评论，[pix.speech(这就对了，继续为我锻炼你的屁股吧……嗯嗯，这真的很棒……)]
 	</p>
 	<p>
-		As focused as you are on having to keep up with the treadmill's movement, you're unable to respond to the pervy comments, and just focus on what you're doing instead.
+		你正专注于跟上跑步机的速度，根本没法去回应那些变态的评论。
 	</p>
 	<p>
-		After what feels like an eternity, the [pix.race] finally leans over and dials the difficulty back, instructing you to take a few minutes to do a cooldown walk. As you pant from exertion, she leans over and uses a towel to wipe the sweat from your forehead. She brushes her hand over your body as she retracts, and reminds you of what she promised earlier, [pix.speech(You're like, my star pupil, y'know! I said I'd make it worth your while, remember?! How about we head on over to the showers so that I can give you a special one-to-one cooldown exercise?)]
+		似乎过了很久，[pix.race]终于俯下身来，把速度调慢，安排你花几分钟时间做一个慢速跑。你累得气喘吁吁，她俯身用毛巾擦拭你额头上的汗水。她收回手的时候轻轻抚摸你的身体，并提醒你她之前的承诺，[pix.speech(你知道吗，你简直就像我的得意门生！你还记得我说会让你觉得很值得吗？！要不要跟着我去淋浴间，我可以给你一个特别的一对一冷却锻炼？)]
 	</p>
 	<p>
-		Enticingly sliding her paw-like hands over her breasts, Pix bites her lip and waits to hear your response...
+		皮克斯用她的爪子在自己的乳房上滑过，咬着嘴唇，等待着你的回答……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_NO_REWARD"><![CDATA[
 	<p>
-		You don't like the sound of Pix's 'special one-to-one cooldown exercise', so you tell her that you'll give it a miss this time.
+		你并不喜欢皮克斯提出的“特别一对一冷却锻炼”，所以你告诉她这一次就算了吧。
 	</p>
 	<p>
-		[pix.speech(Aww... That's too bad!)] she exclaims, before pouting and laughing, [pix.speech(Well, once you've recovered, come back to see me again and we can do another workout session!)]
+		[pix.speech(嗷……这可太可惜了！)]她说道，然后又笑起来，[pix.speech(好吧，一旦你恢复好了，再回来找我，我们可以再做一次训练！)]
 	</p>
 	<p>
-		With that, the [pix.race] skips off to the reception desk, leaving you wondering what to do next...
+		[pix.race]跳着轻快的步子走向接待台，你在想接下来该去做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Consensual shower assault sex: -->
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD"><![CDATA[
 	<p>
-		Deciding that you don't want to let Pix down, you tell her that you'll join her in the showers. Joyously bouncing up and down as she hears your response, the [pix.race] exclaims, [pix.speech(Wohoo! See you there!)]
+		你觉得还是不要扫皮克斯的兴，所以告诉她你会和她一起去淋浴间。听到你的回答，[pix.race]高兴地蹦跳着回答你，[pix.speech(芜湖！等会见！)]
 	</p>
 	<p>
-		With that, she leaves you behind as she sprints off full-pelt in the direction of the showers. As you watch her go, a wave of exhaustion suddenly crashes over you. Pix's exercise routine seems to have been designed specifically to completely wear you out, and you wonder if you've even got the energy for the 'special one-to-one cooldown exercise' that you've accepted.
+		就这样，她一个人冲向淋浴间。看着她离去的背影，一股疲惫感突然涌上心头。皮克斯的锻炼方式似乎是专门为了让你筋疲力尽而设计的，你怀疑自己还有没有力气去做那个“一对一特殊冷却锻炼”。
 	</p>
 	<p>
-		Heading over to the showers, you quickly strip out of your clothes, before scanning around for any sign of your over-enthusiastic personal trainer. The place looks to be completely deserted, and, assuming that Pix will show up once you've got the taps running, you step into the shower and start to clean yourself off.
+		来到淋浴间，你迅速脱掉衣服，然后环顾四周，寻找那个热情过度的私人教练。这个地方看起来空无一人，你猜或许洗澡的时候皮克斯就会出现，你走进淋浴间，开始清洗自己。
 	</p>
 	<p>
-		Over the crashing noise of the falling water, you're unable to hear the dog-girl as she sneaks up on you. Facing the wall, you don't even have the chance to spot her approach, or to see the predatory grin that she fails to conceal upon sighting your naked body. In fact, you're completely oblivious to Pix's presence, right up until the moment she pounces forwards and pins you up against the wall.
+		在冲刷的水流声音里，你没听到犬女偷偷地靠近的声音。你面朝着墙壁，也没看见她，也没看见她在看到你赤裸的身体时露出的侵略性笑容。事实上，你完全没有注意到皮克斯的存在，直到她扑上来把你摁在墙上的时候。
 	</p>
 	<p>
-		You start to let out a yell in surprise, but the dog-girl quickly clasps a paw-like hand over your mouth as she leans in, pressing her naked body against yours as she growls in your ear, [pix.speech(Haha! So, like, you ready for your special cooldown?! Y'know, I'm like, super into punishments, orgasm denial, and all that good stuff, so if you aren't interested in that kinda thing, now's your chance to let me know!)]
+		你被吓得大叫起来，但很快犬女就用爪子捂住了你的嘴，她靠过来，把赤裸的身体贴在你身上，一边在你耳边咆哮：[pix.speech(哈哈！你准备好开始我的特殊冷却了吗！你知道吗，我超级喜欢惩罚、寸止之类的好东西，所以如果你对这类东西不感兴趣，现在是你唯一可以拒绝的机会了！)]
 	</p>
 	<p>
-		As she lifts her hand from over your mouth, you're given a chance to respond...
+		她松开捂住你的嘴的手，你现在有机会回答了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_START"><![CDATA[
 	<p>
-		As tired as you are, Pix's offer seems too good to turn down, and so you turn your head to one side and eagerly tell her to get started. Although you can't see her reaction, you feel her grip on your wrists tighten as you try to turn to face her. Leaning into your back, Pix growls into your ear once more, [pix.speech(That's the spirit! This is gonna be, like, super fun!)]
+		虽然你很累，但皮克斯的提议有些太好了，让你根本没法拒绝，于是你把头转向一边，迫不及待地告诉她开始吧。虽然你看不到她的反应，但你试图转过身去面对她，却感到她将你的手腕攥得更紧了。犬女靠在你背上，再次在你耳边咆哮：[pix.speech(真有精神！这会非常，非常舒服的！)]
 	</p>
 	<p>
-		As she speaks, she releases the grip on one of your wrists, and as she crushes you up against the wall of the shower, you feel her hand slip around and down #IF(pc.hasLegs())between your legs#ELSEto your groin#ENDIF. You let out a gasp as she starts stroking your crotch, and as her naked breasts squish into your back, her growls soften down a little, [pix.speech(You're gonna be a good [pc.girl] for Pix now, aren't ya?!)]
+		她边说边松开你的手。她把你压在淋浴间的墙上，你感觉到她的手抚摸着#IF(pc.hasLegs())你双腿之间#ELSE你的肚子#ENDIF。当她开始抚摸你的胯部时，你喘息起来。她将赤裸的乳房压在你背上，咆哮声稍微温和下来，[pix.speech(你现在是皮克斯的乖[pc.girl]，对不对？！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_DECLINED"><![CDATA[
 	<p>
-		You're far too tired for any more physical exercise right now, and so tell Pix as such. As she hears this, the [pix.race]'s grip on your wrists instantly loosens, and she steps back, letting out a disappointed whine, [pix.speech(Aww, that's, like too bad! Well, maybe we can have some fun the next time you're here!)]
+		你告诉皮克斯，你现在实在是太累了，没法在做体力训练了。听到这话，[pix.race]立刻松开了你的手腕，她退后一步，发出了失望的呜呜声，[pix.speech(啊……那，好像太糟糕了！好吧，或许你下次来的时候我们再找点乐子！)]
 	</p>
 	<p>
-		Throwing you a mischievous grin, she bolts off towards the exit, calling out behind her as she goes, [pix.speech(Please do come back soon! You're, like, my star pupil!)]
+		她向你投来一个调皮的微笑，然后向出口跑去，边跑边喊道：[pix.speech(请一定要早点回来！你可是我的得意门生！)]
 	</p>
 	<p>
-		Smiling to yourself, you continue with your shower, wondering if you'll take up Pix's offer in the future. After you're done, you head back into the changing rooms, and without further incident, dry yourself off, get changed, and wonder where to go next...
+		你笑了一下，继续洗着澡，想着以后会不会接受皮克斯的邀请。洗完后，你回到更衣室，擦干身体，换好衣服，想着等下该去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_AFTER_SEX"><![CDATA[
 	<p>
-		Pix hooks her arms under yours and helps you to stagger out from the showers. Leaving you standing in the locker room, she quickly darts of to fetch a towel, before rushing back and starting to gently dry your body off.
+		皮克斯用胳膊夹住你，带着你踉踉跄跄地从淋浴间出来。她把你留在更衣室里，飞快地跑去拿毛巾，然后冲回来轻轻地擦干你的身体。
 	</p>
 	<p>
-		[pix.speech(You're, like, the best, y'know! Thanks for letting me have some fun, I hope you enjoyed it too!)]
+		[pix.speech(你是，嗯，最棒的，知道吗？谢谢你让我玩得开心，希望你也有享受到！)]
 	</p>
 	<p>
-		You're far too tired to respond, and instead simply let out a satisfied groan as the dog-girl quickly helps to dress you. After making sure that you're sitting down comfortably on one of the benches, she gives you one last passionate kiss before giggling and running off, her tail happily wagging behind her as she leaves.
+		你太累了，没法去回答她，只能发出一声满足的呻吟，犬女很快帮你穿好衣服。在确保你舒舒服服地坐在长凳上后，她最后给了你一个热情的吻，然后笑着跑开了，离开时她的尾巴在身后欢快地摇摆着。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_AFTER_SEX_LEAVE"><![CDATA[
 	<p>
-		It takes some time before you finally recover enough energy to get up. Letting out a weary sigh, you push yourself up off the bench and wonder where to go next...
+		过了好一会儿，你才终于恢复了足够的体力站起来。你疲惫地叹了口气，从长凳上站起来，想着等下该去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Non-con shower assault sex: -->
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON"><![CDATA[
 	<p>
-		Deciding that you don't want to let Pix down, you tell her that you'll join her in the showers. Joyously bouncing up and down as she hears your response, the [pix.race] exclaims, [pix.speech(Wohoo! See you there!)]
+		你觉得还是不要扫皮克斯的兴，所以告诉她你会和她一起去淋浴间。听到你的回答，[pix.race]高兴地蹦跳着回答你，[pix.speech(芜湖！等会见！)]
 	</p>
 	<p>
-		With that, she leaves you behind as she sprints off full-pelt in the direction of the showers. As you watch her go, a wave of exhaustion suddenly crashes over you. Pix's exercise routine seems to have been designed specifically to completely wear you out, and you wonder if you've even got the energy for the 'special one-to-one cooldown exercise' that you've accepted.
+		就这样，她一个人冲向淋浴间。看着她离去的背影，一股疲惫感突然涌上心头。皮克斯的锻炼方式似乎是专门为了让你筋疲力尽而设计的，你怀疑自己还有没有力气去做那个“一对一特殊冷却锻炼”。
 	</p>
 	<p>
-		Heading over to the showers, you quickly strip out of your clothes, before scanning around for any sign of your over-enthusiastic personal trainer. The place looks to be completely deserted, and, assuming that Pix will show up once you've got the taps running, you step into the shower and start to clean yourself off.
+		你来到淋浴间，迅速地脱掉衣服，然后环顾四周，寻找那个热情过度的私人教练。这个地方看起来空无一人，你猜或许洗澡的时候皮克斯就会出现，你走进淋浴间，开始清洗自己。
 	</p>
 	<p>
-		Over the crashing noise of the shower, you're unable to hear the dog-girl as she sneaks up on you. Facing the wall, you don't even have the chance to spot her approach, or to see the predatory grin that she fails to conceal upon sighting your naked body. In fact, you're completely oblivious to Pix's presence, right up until the moment she pounces forwards and pins you up against the wall.
+		在冲刷的水流声音里，你没听到犬女偷偷地靠近的声音。你面朝着墙壁，也没看见她，也没看见她在看到你赤裸的身体时露出的侵略性笑容。事实上，你完全没有注意到皮克斯的存在，直到她扑上来把你摁在墙上的时候。
 	</p>
 	<p>
-		You start to let out a yell in surprise, but the dog-girl quickly clasps a paw-like hand over your mouth as she leans in, pressing her naked body against yours as she growls in your ear, [pix.speech(Haha! So, like, were you trying to avoid me or something?! 'Cause that kinda makes me sad! And y'know, it also kinda makes me think that you need a little punishment! So, whattya got to say for yourself, huh, huh, huh?!)]
+		你被吓得大叫起来，但很快犬女就用爪子捂住了你的嘴，她靠过来，把赤裸的身体贴在你身上，一边在你耳边咆哮：[pix.speech(哈哈！你是想躲着我还是怎么的？这让我有点难过呢，我觉得你需要一点惩罚。你还有什么想说的？嗯？)]
 	</p>
 	<p>
-		 As she lifts her hand from over your mouth, you're given a chance to respond...
+		她松开捂住你的嘴的手，你现在有机会回答了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_EXHAUSTED"><![CDATA[
 	<p>
-		[style.italicsBad(You are completely exhausted from Pix's exercise routine, which, looking back at it, might have been exactly what she was after all this time...)]
+		[style.italicsBad(皮克斯的锻炼方式让你筋疲力尽，回想起来，这可能正是她一直想要的……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_WEAKER"><![CDATA[
 	<p>
-		[style.italicsGood(As you decided to hold back a little, you think you have enough energy to break free, but seeing as Pix is stronger and fitter than you, you don't think you could turn the tables on her...)]
+		[style.italicsGood(由于你之前偷懒了一会，你认为你有足够的体力挣脱，但皮克斯比你强壮，你不认为你能扭转局面……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_STRONGER"><![CDATA[
 	<p>
-		[style.italicsExcellent(As you decided to hold back a little, you think you have enough energy to break free, and seeing as you're both stronger and fitter than Pix, you think you could even turn the tables on her...)]
+		[style.italicsExcellent(由于你之前偷懒了一会，你认为你有足够的体力挣脱，而且你比皮克斯更强壮，你认为你可以扭转局面……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_TOO_TIRED"><![CDATA[
 	<p>
-		You're far too tired to do any more physical exercise right now, and so tell Pix as such. Although you can't see her reaction, you feel her grip on your wrists tighten as you try to make this excuse. Leaning into your back, the [pix.race] growls into your ear once more, sending a shiver down your spine as you hear the icy tone in her voice, [pix.speech(Y'know, that's not what I wanted to hear. Not what I wanted to hear at all.)]
+		你告诉皮克斯，你现在实在是太累了，没法在做体力训练了。虽然你看不到她的反应，但你感觉到当你试图找借口时，她握着你手腕的手更紧了。[pix.race]靠在你的背上，再次在你耳边咆哮，听着她冰冷的语气，你不禁打了个寒颤，[pix.speech(你知道，这不是我想听到的。根本不是我想听到的。)]
 	</p>
 	<p>
-		As she speaks, she releases the grip on one of your wrists, and as she crushes you up against the wall of the shower, you feel her hand slip around and down #IF(pc.hasLegs())between your legs#ELSEto your groin#ENDIF. You let out a gasp as she starts stroking your crotch, and as her three pairs of naked breasts squish into your back, her growls start to soften down a little.
+		她一边说话，一边松开了你的手，当她把你压在淋浴间的墙上时，你感觉到她的手抚摸着#IF(pc.hasLegs())你的双腿之间#ELSE你的腹部#ENDIF。当她开始抚摸你的胯部时，你发出了一声喘息，当她赤裸的三对乳房压在你的背上时，她的咆哮声稍微温和了一些。
 	</p>
 	<p>
-		[pix.speech(Didya notice how empty the gym was? Y'know, most of them stop coming after I have a little fun with them in here. I can see that you're made of tougher stuff though, so I'm sure you won't mind helping me have a little fun!)]
+		[pix.speech(你没有注意到体育馆有多空吗？要知道，我在这里和他们玩了一会儿后，他们大多就不来了。不过我看得出你很坚强，我相信你不会介意帮我找点乐子的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_OFFER_SEX"><![CDATA[
 	<p>
-		As tired as you are, Pix turns you on far too much to refuse her advances, and so you turn your head to one side as you eagerly tell her to get started. Although you can't see her reaction, you feel her grip on your wrists tighten as you try to turn to face her. Leaning into your back, Pix growls into your ear once more, sending a shiver down your spine as you hear the icy tone in her voice, [pix.speech(Y'know, you didn't exactly have a choice here.)]
+		虽然你很累，但皮克斯让你兴奋得无法拒绝她的挑逗，于是你把头转向一边，迫不及待地告诉她开始吧。虽然你看不到她的反应，但当你试图转过身去面对她时，她握着你手腕的手更紧了。靠在你的背上，皮克斯再次在你耳边咆哮，听着她冰冷的语气，你不禁打了个寒颤，[pix.speech(你知道，在这里你别无选择。)]
 	</p>
 	<p>
-		As she speaks, she releases the grip on one of your wrists, and as she crushes you up against the wall of the shower, you feel her hand slip around and down #IF(pc.hasLegs())between your legs#ELSEto your groin#ENDIF. You let out a gasp as she starts stroking your crotch, and as her three pairs of naked breasts squish into your back, her growls start to soften down a little.
+		她一边说话，一边松开了你的手，当她把你压在淋浴间的墙上时，你感觉到她的手抚摸着#IF(pc.hasLegs())你的双腿之间#ELSE你的腹部#ENDIF。当她开始抚摸你的胯部时，你发出了一声喘息，当她赤裸的三对乳房压在你的背上时，她的咆哮声稍微温和了一些。
 	</p>
 	<p>
-		[pix.speech(Didya notice how empty the gym was? Y'know, most of them stop coming after I have a little fun with them in here. I can see that you're made of tougher stuff though, so I'm sure you won't mind helping me have a little fun!)]
+		[pix.speech(你没有注意到体育馆有多空吗？要知道，我在这里和他们玩了一会儿后，他们大多就不来了。不过我看得出你很坚强，我相信你不会介意帮我找点乐子的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_ACCEPT_PUNISHMENT"><![CDATA[
 	<p>
-		You don't want Pix to think that you've been avoiding her, and so you turn your head to one side as you offer her an apology. Although you can't see her reaction, you feel her grip on your wrists tighten as you say you're sorry. Leaning into your back, Pix growls into your ear once more, sending a shiver down your spine as you hear the icy tone in her voice, [pix.speech(Y'know, that ain't gonna cut it! No, I think you still need a little punishment.)]
+		你不想让皮克斯认为你一直在躲着她，所以你把头转向一边，向她道歉。虽然你看不到她的反应，但你感觉到她握着你手腕的手在你说对不起的时候收紧了。靠在你的背上，皮克斯再次在你耳边咆哮，听着她冰冷的语气，你不禁打了个寒颤，[pix.speech(你知道的，这样根本不够！不，我觉得你还需要一点惩罚。)]
 	</p>
 	<p>
-		As she speaks, she releases the grip on one of your wrists, and as she crushes you up against the wall of the shower, you feel her hand slip around and down #IF(pc.hasLegs())between your legs#ELSEto your groin#ENDIF. You let out a gasp as she starts stroking your crotch, and as her three pairs of naked breasts squish into your back, her growls start to soften down a little.
+		她一边说话，一边松开了你的手，当她把你压在淋浴间的墙上时，你感觉到她的手抚摸着#IF(pc.hasLegs())你的双腿之间#ELSE你的腹部#ENDIF。当她开始抚摸你的胯部时，你发出了一声喘息，当她赤裸的三对乳房压在你的背上时，她的咆哮声稍微温和了一些。
 	</p>
 	<p>
-		[pix.speech(Didya notice how empty the gym was? Y'know, most of them stop coming after I have a little fun with them in here. I can see that you're made of tougher stuff though, so I'm sure you won't mind helping me have a little fun!)]
+		[pix.speech(你没有注意到体育馆有多空吗？要知道，我在这里和他们玩了一会儿后，他们大多就不来了。不过我看得出你很坚强，我相信你不会介意帮我找点乐子的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_TURN_TABLES"><![CDATA[
 	<p>
-		Summoning the energy that you've saved by holding back during Pix's exercise, you push yourself off from the shower wall, causing Pix to stumble backwards. Twisting to one side, you break free of her grip, before spinning around and grabbing the startled dog-girl. In one swift move, you're behind her, and, locking her arms behind her back, you completely turn the tables as you end up pinning the dog-girl up against the shower wall.
+		你使用自己攒下的力气，在淋浴间墙上撑起自己，逼着皮克斯踉跄地后退。你转向一侧，挣脱了她的钳制，然后转过身来，抓住了被吓了一跳的犬女。你迅速移动到她身后，将她的双臂反锁在背后，最终将犬女按在淋浴间墙上，彻底扭转了局面。
 	</p>
 	<p>
-		[pix.speech(~Aah!~)] Pix cries, with more than a little excitement in her voice. [pix.speech(Like, nobody's ever managed to do <i>this</i> before!)]
+		[pix.speech(~啊！~)]皮克斯大叫一声，声音更加兴奋。[pix.speech(以前好像从来没有人做到过<i>这个</i>！)]
 	</p>
 	<p>
-		Leaning in over her shoulder, you can't help but grin as you growl into Pix's ear and tell her that <i>she's</i> the one who's in need of some punishment...
+		你趴在皮克斯的肩膀上，对着她的耳朵咆哮，告诉她，<i>她才是</i>那个需要一些惩罚的人……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_NON_CON_BREAK_FREE"><![CDATA[
 	<p>
-		Summoning the energy that you've saved by holding back during Pix's exercise, you push yourself off from the shower wall, causing Pix to stumble backwards. Twisting to one side, you break free of her grip, before spinning around to face the naked dog-girl.
+		你使用自己攒下的力气，在淋浴间墙上撑起自己，逼着皮克斯踉跄地后退。你转向一侧，挣脱了她的钳制，然后转过身来面对赤裸的犬女。
 	</p>
 	<p>
-		[pix.speech(Hah!)] She cries. [pix.speech(I knew ya were holdin' back! Well, I guess I'll just have ta get ya another time!)]
+		[pix.speech(哈！)]她喊道。[pix.speech(我就知道你一直在保留力气！好吧，我猜我只能在其他时候抓你了！)]
 	</p>
 	<p>
-		Throwing you a mischievous grin, she bolts off towards the exit, calling out behind her as she goes, [pix.speech(Come back soon! You're, like, still my star pupil!)]
+		她向你投来调皮的微笑，然后向出口跑去，边跑边喊，[pix.speech(有空就来！你可是我的得意门生！)]
 	</p>
 	<p>
-		Shaking your head, you continue with your shower, making sure to keep an eye on the entrance. After you're done, you head back into the changing rooms, and without further incident, dry yourself off, get changed, and wonder where to go next...
+		你摇了摇头，继续冲澡，同时注意着入口。洗完后，你回到更衣室，擦干身体，换好衣服，想着等下该去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_PIX_WORKOUT_END_REWARD_AFTER_SEX_AS_DOM"><![CDATA[
 	<p>
-		Hooking your arms under Pix's, you drag the exhausted dog-girl out from the showers, and into the changing rooms. Lying her down on one of the wooden benches, you grab a nearby towel, before quickly drying her body off. You can't help but grin as she sighs, [pix.speech(Ahh... Thanks, [pc.name]... That sure was fun, y'know...)]
+		你用胳膊架起皮克斯，把这个筋疲力尽的犬女从淋浴间带到更衣室，让她躺在一张木凳上，你拿起旁边的毛巾，迅速擦干她的身体。她叹了口气，你不禁笑了起来，[pix.speech(啊……谢谢，[pc.name]……那真的很有趣，你知道的……)]
 	</p>
 	<p>
-		You let out a satisfied sigh of your own in response, and, as the dog-girl lies back on the bench, you dry yourself off and get changed. Knowing that she's going to need some time to recover from her special 'one-to-one cooldown exercise', you pat the dog-girl on the head, before wondering where to go next...
+		你回应着，发出了满足的叹息。犬女躺在长凳上，你擦干自己，换好衣服。你知道她需要一些时间来从她特殊的“一对一冷却锻炼”中恢复，你轻拍了一下犬女的头，然后想着等下该去哪……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Gym interior: -->
 	
 	<htmlContent tag="PATH"><![CDATA[
 	<p>
-		A path leading through the gym's cavernous interior has been kept clear of exercise machines and other equipment, allowing you to travel through the entire length of the building without encountering any obstacles. Your surroundings are brightly lit in a cool, white light that's being emitted by the dozens of arcane lamps that hang down from the ceiling high up overhead.
+		通往健身房宽敞内部的道路没有放置锻炼器材或其他设备，畅通无阻。十几个挂在天花板上的奥术灯发出的冷白光照射在你身旁。
 	</p>
 	<p>
-		As you [pc.walk] over the rubber matting which covers the gym's entire floor, you look around at the cardio and resistance machines that are lined up in their respective areas. Behind these machines, huge posters of all sorts of exercising animal-morphs have been hung up on the walls, with some of them having been enchanted into being moving pictures. Motivational slogans such as 'Do your best!' and 'No pain, no gain!' are displayed alongside these posters, but nobody seems to pay any attention to them.
+		你[pc.walk]过铺满健身房整个地板的橡胶垫时，你环顾四周，有氧运动器械和阻力器械在各自的区域一字排开。在这些器械的后面，墙上挂满了各种各样的动物化形进行锻炼的巨大海报，其中一些还附魔成了会动的图片。一些激励口号，例如“尽力而为！”“不劳无获！”挂在这些海报旁边，但似乎没人注意到它们。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Cardio: -->
 	
 	<htmlContent tag="CARDIO"><![CDATA[
 	<p>
-		Several dozen running, cycling, and rowing machines have been lined up next to one another in this section of the gym. Although there a couple of people exercising here, the vast majority of the machines are vacant.
+		在健身房的这个区域，有几十台跑步机、单车机和划船机并排摆放着。这里有一些人在锻炼，但绝大多数机器都是空闲的。
 	</p>
 	<p>
 		#IF(pc.hasStatusEffect(SE_GYM_FATIGUE))
-			Having recently done some exercise, you feel far too tired to do any more right now...
+			你最近才做过一些锻炼，现在太累了，你没法再锻炼了……
 		#ELSE
-			Looking over the machines, you wonder whether to make use of them. Doing so would surely result in losing some body weight...
+			你看着这些机器，想着要不要锻炼一下。这样做肯定会减轻体重……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CARDIO_WORKOUT_RUNNING"><![CDATA[
 	<p>
-		Deciding that you could do with a cardio workout, you hop on to one of the running machines. Setting it to a slow speed so that you can get warmed up, you spend the first five minutes of your exercise jogging at a leisurely pace.
+		你决定进行一次有氧运动，走上了其中一台跑步机。为了做好热身运动，你将跑步机调到慢速，在锻炼的前五分钟里悠闲地慢跑。
 	</p>
 	#IF(pix.getSexCount(pc).getTotalTimesHadSex()>0 && pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 		<p>
-			After that, you increase the speed and start your workout. As you begin to run, a very familiar voice calls out from behind you, [pix.speech(~Mmm!~ Nice ass!)]
+			然后，你加快速度，开始了你的锻炼。当你开始奔跑时，一个非常熟悉的声音从你身后传来，[pix.speech(~嗯！~ 好棒的屁股！)]
 		</p>
 		<p>
-			A second later, and the excitable [pix.race] skips around to stand in front of your machine. Flashing you a lustful look, she leans forwards and increases the speed, before teasing, [pix.speech(Sprint at that pace for sixty seconds and I'll give you a reward!)]
+			一秒钟后，兴奋的[pix.race]跳到你跑步机面前。给你投去一个色情的眼神，她向前倾身加速，然后挑逗地说道，[pix.speech(以这个速度冲刺六十秒，我会给你一个奖励！)]
 		</p>
 		<p>
-			Pix's increase in the running machine's speed is so severe that you immediately find yourself sprinting at full tilt. With all of your effort and balance now concentrated on trying to keep up with the zooming surface beneath your [pc.feet], you find yourself unable to slow the machine down even if you wanted to. As such, you're forced to complete the sixty second sprint which Pix has demanded of you, after which she leans forwards and thankfully slows it back down to jogging pace.
+			皮克斯提高了跑步机的速度，你立刻发现自己正在全力冲刺。现在，你所有的精力和平衡都集中在努力跟上你[pc.feet]下疾驰的跑步机履带，就算你想要减速也毫无办法。就这样，你被迫完成了皮克斯要求你完成的六十秒冲刺，之后她前倾，把速度降回了慢跑。
 		</p>
 		<p>
-			[pix.speech(Nice work, [pc.name]!)] she exclaims, before hooking her thumbs under the band of her sports bra and pulling it up. As her [pix.breasts+] bounce free, she giggles and moans, [pix.speech(~Mmm!~ That's it, get a good look!)]
+			[pix.speech(干得漂亮！[pc.name]！)]她赞叹道，然后用指头勾住运动胸罩的带子，把它拉了起来。当她的[pix.breasts+]自由弹跳时，她咯咯地笑着，呻吟着，[pix.speech(~嗯！~就是这样！仔细看着吧！)]
 		</p>
 		<p>
-			Leaving her chest completely exposed, Pix stands before you and watches as you continue to jog for ten minutes, before again leaning forwards and increasing the speed. Finding yourself once more at the mercy of the whirring belt, you sprint for another sixty seconds, after which the [pix.race] mercifully turns it back down.
+			皮克斯站在你面前，将她的胸部完全暴露在外，看着你继续慢跑十分钟，然后再次向前倾，加快速度。你发现自己又一次被疾驰的跑步机所摆布，你又冲刺了六十秒，然后，[pix.race]仁慈地把速度调了下来。
 		</p>
 		<p>
-			[pix.speech(Great job! Now you get the full package!)] she declares, before shamelessly dropping her shorts and presenting you with her [pix.pussy+]. After playfully teasing her furry fingers over her [pix.labia+] for a couple of minutes, she licks her lips and moans, [pix.speech(~Ooh!~ This was fun, wasn't it, [pc.name]?)]
+			[pix.speech(干得漂亮！现在你得到了全部的奖励！)]她宣布道，然后毫不羞耻地脱下短裤，向你展示她[pix.pussy+]。她调皮地用爪子挑逗了几分钟[pix.labia+]，她舔了舔嘴唇，呻吟着说道，[pix.speech(~哦！~这真的很有趣，不是吗，[pc.name]？)]
 		</p>
 		<p>
-			Before you can answer, she returns her bra and shorts to their proper positions, and with one final giggle, she sprints off to return to the reception desk. With the image of Pix's tits and pussy fresh in your mind, you complete the remaining hour of your workout, at the end of which you find yourself panting and covered in sweat. You feel like you've definitely lost some weight, even if it's only a small amount.
+			你还没来得及回答，她就将胸罩和短裤放回原位，最后轻笑一声，跑回前台去了。你对皮克斯的乳房和阴部记忆犹新，完成了最后一小时的锻炼，结束时你气喘吁吁，浑身是汗。你感觉自己确实轻了一些，即使只是一点点。
 		</p>
 	#ELSE
 		<p>
-			After that, you increase the speed and start your workout.
+			然后，你加快速度，开始锻炼。
 			#IF(pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
-				 Although you catch Pix looking your way a few times throughout your exercise, it seems like she's unwilling to approach you. Maybe she'll have something to say after she gets to know you better.
+				你好几次发现皮克斯看向你，但她似乎不愿意靠近。也许在她更了解你之后，她会说些什么。
 			#ENDIF
-			 After an hour of running, with a few sprints mixed in, you're left panting and covered in sweat. You feel like you've definitely lost some weight, even if it's only a small amount.
+			经过一个小时的跑步和一些冲刺，你气喘吁吁，浑身是汗。你觉得自己肯定轻了一些，即使只是一点点。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CARDIO_WORKOUT_CYCLING"><![CDATA[
 	<p>
-		Deciding that you could do with a cardio workout, you hop on to one of the cycling machines. Setting it to a slow speed so that you can get warmed up, you spend the first five minutes of your exercise cycling at a leisurely pace.
+		你决定做有氧运动，于是骑上了一台单车机。你想做好热身，便调到慢速，准备前五分钟轻松地骑。
 	</p>
 	#IF(pix.getSexCount(pc).getTotalTimesHadSex()>0 && pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 		<p>
-			After that, you increase the speed and start your workout. As you begin to put some real effort into turning the pedals, you catch sight of Pix approaching you from out of the corner of your eye. Skipping up to come to a halt right beside you, she exclaims, [pix.speech(Oh wow, you're really going for it, huh, [pc.name]?!)]
+			然后，你加快速度，开始锻炼。你正使劲踩着踏板，就瞥见皮克斯向你走来。她跳到你身边停下，惊呼道，[pix.speech(哇哦， 你真的很努力啊！[pc.name]！)]
 		</p>
 		<p>
-			As you're putting so much effort into your workout, you don't have much breath with which to respond. Letting out a mischievous giggle as she realises the state you're in, the excitable [pix.race] moves around behind you to stare at your ass and moan, [pix.speech(~Mmm!~ Now this is a view that I'd never get tired of!)]
+			你因为正在全力以赴地锻炼，所以没有太多的气力回应。[pix.race]意识到你的情况，兴奋地咯咯笑，移动到你背后盯着你的屁股，呻吟着，[pix.speech(~嗯！~这真是我百看不厌的风景！)]
 		</p>
 		<p>
-			Suddenly, Pix's paw-like hands grab hold of your shoulders, and she applies gentle, yet firm, pressure on you as she instructs, [pix.speech(Your posture is all wrong, but if you just lean down a little then it'll be much better, y'know?)]
+			突然，皮克斯用爪子抓住了你的肩膀，她温柔而坚定地向你施加力度，指导道，[pix.speech(你的姿势完全不对，但如果你稍微往下压一点，就会好很多，知道吗？)]
 		</p>
 		<p>
-			Doing as Pix says, you bend down over the bars of the exercise bike. Unable to help herself, the [pix.race] keeps her paws pressed firmly against your shoulders, and as you continue to cycle, she moves them down and around your torso to
+			你按照皮克斯说的弯下腰，趴在单车的把手上。[pix.race]情不自禁地将爪子牢牢地压在你的肩膀上。当你继续骑车时，她将爪子向下移动，挪到你身体附近
 			#IF(pc.hasBreasts())
-				 greedily grope and squeeze your [pc.breasts+].
+				饥渴地抚摸和挤压你[pc.breasts+]。
 			#ELSE
-				 hungrily grope and stroke your pecs.
+				饥渴地摸索和抚摸你的胸肌。
 			#ENDIF
-			 Before you can react, she then suddenly drops one hand down between your [pc.legs], and after giving your
+			在你做出反应之前，她突然将一只手伸向你双[pc.legs]之间，抚摸着你
 			#IF(pc.hasPenisIgnoreDildo())
-				 [pc.cock+]
+				[pc.cock+]
 				#IF(pc.hasVagina())
-					 and [pc.pussy+]
+				和[pc.pussy+]
 				#ENDIF
 			#ELSEIF(pc.hasVagina())
-				 [pc.pussy+]
+				[pc.pussy+]
 			#ELSE
-				 groin
+				的腹股沟
 			#ENDIF
-			 a good feel, she giggles and exclaims, [pix.speech(Keep up the good work, [pc.name]! ~Mmm!~ You're, like, one of my favourites!)]
+			。她咯咯笑着喊道，[pix.speech(继续加油，[pc.name]！~嗯！~你是我的最爱之一！)]
 		</p>
 		<p>
-			With that, Pix happily skips off to return to the reception desk, leaving you to complete the remaining hour of your workout without being subjected to any further harassment. By the time your exercise is at an end, you find yourself panting and covered in sweat. You feel like you've definitely lost some weight, even if it's only a small amount.
+			就这样，皮克斯愉快地回到了前台，让你一个人完成剩下的一个小时的锻炼，并且没有受到任何进一步的骚扰。锻炼结束时，你气喘吁吁，浑身是汗。你感觉自己确实减轻了一点重量，即使只是一点点。
 		</p>
 	#ELSE
 		<p>
-			After that, you increase the speed and start your workout.
+			然后，你加快速度，开始了你的锻炼。
 			#IF(pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
-				 Although you catch Pix looking your way a few times throughout your exercise, it seems like she's unwilling to approach you. Maybe she'll have something to say after she gets to know you better.
+				在锻炼过程中你好几次发现皮克斯看向你，但她似乎不愿意靠近你。也许在她更了解你之后，她会说些什么。
 			#ENDIF
-			 After an hour of cycling, with a few sprints mixed in, you're left panting and covered in sweat. You feel like you've definitely lost some weight, even if it's only a small amount.
+			经过一个小时的骑行，你气喘吁吁，浑身是汗。你觉得自己肯定减轻了一些体重，即使只是一点点。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CARDIO_WORKOUT_ROWING"><![CDATA[
 	<p>
-		Deciding that you could do with a cardio workout, you hop on to one of the rowing machines. Deciding that you should spend some time warming up before anything else, you go at leisurely pace for the first five minutes of your exercise.
+		你决定进行一次有氧运动，上了其中一台划船机。你决定先花些时间热身，然后再做其他运动，你在锻炼的前五分钟里轻松地速度划动。
 	</p>
 	#IF(pix.getSexCount(pc).getTotalTimesHadSex()>0 && pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 		<p>
-			After that, you get started on your workout and begin to row at a faster speed. Just as you start to get into a good flow, Pix suddenly skips up to come to a halt right in front of your machine. Covered in sweat, it looks like she's just been doing some exercise of her own, and she confirms this as she pants, [pix.speech(Hey, [pc.name]... I need to cool down for a bit... I'm going to use your machine's fan, ok?)]
+			然后，你加快速度，开始了你的锻炼。就在你开始进入良好状态时，皮克斯突然跳过来停在你机器的正前方。浑身是汗，看起来她刚刚做了一些锻炼，而她也在喘着气说道，[pix.speech(嘿，[pc.name]……我需要冷却一下……我要用下你机器的风扇，可以吗？)]
 		</p>
 		<p>
-			Gesturing to the large fan at the front of your rowing machine that's being powered by your strokes, Pix grins and then suddenly hooks her thumbs into the band of her shorts and pulls them down around her feet. With her pussy and ass now completely exposed, she turns around and backs up over the top of your machine's fan. Lowering herself down, and lifting her tail to shamelessly present you with her [pix.pussy+] and [pix.asshole+], she lets out a giggle and sighs, [pix.speech(~Ooh!~ That feels great! Keep on rowing, [pc.name]!)]
+			皮克斯指了指划船机前端的大风扇，风扇的动力来自你的划动，她咧嘴一笑，然后突然用拇指勾住短裤的带子，把短裤拉到脚边。她的阴部和臀部完全暴露出来，她转过身，退到机器风扇上方。她低下身子，翘起尾巴，毫不害羞地向你展示[pix.pussy+]和[pix.asshole+]，她咯咯笑着长舒一口气，[pix.speech(~哦！~感觉真不错！继续划，[pc.name]！)]
 		</p>
 		<p>
-			Continuing with your exercise, you can't help but stare at Pix's pussy and ass as you slide forwards and backwards on the machine's seat. As if the sight of her genitals wasn't enough, the heady scent of her sweat is soon being blown all over you by your machine's fan. Giggling as she raises her hips and shakes her ass at you, Pix teases, [pix.speech(~Mmm!~ Thinking back to our time together in the shower? I know I am!)]
+			你继续锻炼，但当你在机器座椅上前后滑动时，你情不自禁地盯着皮克斯的小穴和屁股看。如果你觉得看她的生殖器还不够，那么机器的风扇很快就会把她的汗水吹得你满身都是。皮克斯咯咯笑着，抬起臀部，对着你摇晃屁股，挑逗道，[pix.speech(~嗯！~回想一下我们一起洗澡的时光？我知道我在想！)]
 		</p>
 		<p>
-			After continuing to tease you in this manner for another minute or two, Pix suddenly stands back up and pulls her shorts back on. Winking at you, she skips off to return to the reception desk, leaving you to complete the remaining hour of your workout alone. By the time your exercise is at an end, you find yourself panting and covered in sweat. You feel like you've definitely lost some weight, even if it's only a small amount.
+			就这样继续挑逗了一两分钟后，皮克斯突然又站了起来，重新穿上了短裤。她对你眨了眨眼睛，然后溜回到前台，留下你一个人完成剩下的一个小时锻炼。结束时你气喘吁吁，浑身是汗。你感觉自己确实轻了一些，即使只是一点点。
 		</p>
 	#ELSE
 		<p>
-			After that, you increase the speed and start your workout.
+			之后，你加快速度开始训练。
 			#IF(pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
-				 Although you catch Pix looking your way a few times throughout your exercise, it seems like she's unwilling to approach you. Maybe she'll have something to say after she gets to know you better.
+				虽然你在练习过程中发现皮克斯瞅了你几次，但她似乎不愿意过来。也许等她更了解你一点，才会有话讲。
 			#ENDIF
-			 After an hour of rowing, with a few sprints mixed in, you're left panting and covered in sweat. You feel like you've definitely lost some weight, even if it's only a small amount.
+			你划了一小时船，又短跑了一会。气喘吁吁，浑身是汗。你感觉自己瘦下来了点，虽然只是一点点。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Weights: -->
 	
 	<htmlContent tag="WEIGHTS"><![CDATA[
 	<p>
-		Sets of free weights and many different types of resistance machines have been lined up next to one another in this section of the gym. Although there a couple of people exercising here, the vast majority of the machines and weights are vacant.
+		健身房的这片区域，几套的自由重量器械和许多各类的阻力机并排排列。虽然有些锻炼的人，但绝大多数器械和举重器材都是闲置的。
 	</p>
 	<p>
 		#IF(pc.hasStatusEffect(SE_GYM_FATIGUE))
-			Having recently done some exercise, you feel far too tired to do any more right now...
+			你最近才锻炼过，十分疲劳，不能继续了……
 		#ELSE
-			Looking over the machines, you wonder whether to make use of them. Doing so would surely result in gaining some muscle...
+			你看向那些器械，心想能否利用一下，这样一来肯定能增长些肌肉……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WEIGHTS_WORKOUT_WEIGHTS"><![CDATA[
 	<p>
-		Deciding that you'd like to build up some more muscle, you head on over to where the free weights are stacked up. Looking at yourself in the wall-length mirror as you select the weights that are suitable for your level, you get started on your routine.
+		你决定再练练肌肉，于是来到了堆放自由重量器械的地方。你选择适合自己水平的重量，看着墙上的镜子中的自己，开始了你的日常训练。
 	</p>
 	#IF(pix.getSexCount(pc).getTotalTimesHadSex()>0 && pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 		<p>
-			Your session gets off to a good start, and you manage to work your way through some dumbbell curls and squats before deciding upon doing some bench presses.
+			这一轮锻炼十分顺利，举了几组哑铃，做过几组深蹲后，你决定来几组卧推。
 			#IF(pc.isTaur())
-				 Although your [pc.legRace]'s lower body would give you some difficulty on a normal bench, there are a couple that are designed to accommodate taurs, and so you choose one of these and load up the weights.
+				由于下半身是[pc.a_legRace]，在平常的平板凳上并不方便躺下，但旁边还有一个专门为四足设计的器材，于是你选择了其中一套，装上了配重。
 			#ELSE
-				 Heading on over to a free bench, you load up the weights and prepare to get started.
+				你找了个空的平板凳，装上配重后就准备开始了。
 			#ENDIF
-			 Lying down, you grab hold of the bar and lift it up, but as you do this, the familiar figure of Pix suddenly fills your vision. Standing over you, she grins down and declares, [pix.speech(I saw you had nobody to spot for you, [pc.name], so here I am!)]
+			你躺下身子，攥住杠杆用力推起，正此时皮克斯那熟悉的身影忽然映入眼帘。她俯视着你，神采奕奕地说道，[pix.speech([pc.name]，我看没有人给你保护，所以赶紧过来了！)]
 		</p>
 		<p>
-			As the excitable [pix.race] hovers her hands beneath the bar, ready to help you push it back up if you find it to be too heavy, you suddenly realise that there's something very wrong. Although she's wearing her sports bra, Pix's shorts have vanished, leaving her pussy and ass completely exposed. Giggling as you complete your first rep, she teases, [pix.speech(I thought you could do with some motivation, so for each rep you complete, I'll let you kiss my pussy!)]
+			这一惊一乍的[pix.race]把手悬在杠杆的下方，在你感觉太重的时候可以帮你向上推上去，可忽然你觉得有什么地方很不对劲。虽然皮克斯穿着健身内衣，但那条短裤却不见了踪影，如此小穴和屁股都展露无遗。你才刚做完第一个，她忽然咯咯笑了起来，调戏到，[pix.speech(我觉得你可以多点动力，这样吧，你每做完一个，我就让你亲一下下面怎么样！)]
 		</p>
 		<p>
-			With all of your effort put into controlling the weight, you're not able to reply to this, and so after you've completed eight bench presses and lowered the bar onto the supports, you suddenly find Pix's [pix.pussy+] being dropped down over your face. As you open your mouth to say something, her [pix.labia+] smother your [pc.lips+], forcing you to kiss her pussy. Standing back up, Pix giggles and repeats the process, moaning as she does so, [pix.speech(That's one... Now two... ~Mmm!~ Three... Four... ~Aah!~ That's it, use your tongue a little if you want... Five... Six.. Seven... ~Ooh!~ And... Eight!)]
+			你现在全身心控制着重量，根本没法回应，等到做完八次卧推，将杠铃放回架子上，忽然发现皮克斯[pix.pussy+]已经往你脸上坐了过来。你张口正向说什么，她[pix.labia+]就压住了你[pc.lips+]，让你不得不亲吻她的小穴。皮克斯随后稍稍站起，嬉笑着又继续坐下、站起，与此同时还呻吟道，[pix.speech(第一次……二了……~姆嗯！~三……四……~啊啊！~没错，喜欢的话就动动舌头呀……五……六……七……~哦哦！~最后……八！)]
 		</p>
 		<p>
-			Having been practically forced to kiss Pix's pussy eight times, you let out a sigh and move on to your next two sets. Repeating the whole process again, Pix makes you kiss her pussy a total of twenty-four times, after which she grabs her shorts and pulls them back on. Grinning down at you, she exclaims, [pix.speech(Great job, [pc.name]! You're, like, super great at that!)]
+			你被强迫着亲吻过八次皮克斯那秘缝，长叹一声后就继续做起第二组。皮克斯也重复着整个流程，最后一共让你亲了二十四次，才抓起短裤穿了上去。她低头笑看着，高喊道：[pix.speech(真棒啊，[pc.name]！怎么说，你可真熟练！)]
 		</p>
 		<p>
-			Leaving you wondering whether she's referring to your bench presses or kissing skills, the [pix.race] skips off to return to the reception desk. Finishing your routine, and completely exhausting yourself by the end of it, you're left feeling very pleased with yourself, for your muscles will have definitely have grown, even if only by a small amount.
+			你还寻思着她到底指的是卧推还是口技，那[pix.race]就已经一下子跳回了前台。你一天的锻炼结束，此时已经精疲力竭，但却对自己非常满意，毕竟这样一来肌肉肯定有所增长，哪怕并不算多。
 		</p>
 	#ELSE
 		<p>
-			For the next hour you work your way through sets of dumbbell curls, bench presses, squats, and many others. Although you're completely exhausted by the end of it, you're left feeling very pleased with yourself, for your muscles will have definitely have grown, even if only by a small amount.
+			接下来的一个小时，你哑铃、卧推、深蹲之类做了好几组。结束时虽然已经精疲力竭，但你却对自己非常满意，毕竟这样一来肌肉肯定有所增长，哪怕并不算多。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WEIGHTS_WORKOUT_MACHINES"><![CDATA[
 	<p>
-		Deciding that you'd like to build up some more muscle, you head on over to where the resistance machines are located. Consulting a couple of posters that show what muscle groups are affected by each machine, you decide upon a routine and set to work.
+		你决定再多练练肌肉，于是来到阻力机的位置。几张海报上标明了每台机器所能锻炼到的肌肉群，你看了看这些海报，决定了一套动作，然后开始训练。
 	</p>
 	#IF(pix.getSexCount(pc).getTotalTimesHadSex()>0 && pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 		<p>
-			Your session gets off to a good start, and you manage to work your way through some dumbbell curls and lat pulldowns before deciding upon doing some leg presses.
+			你的训练开端良好，在决定做一些腿部推举之前，你设法做了一些哑铃卷腹和下蹲动作。
 			#IF(pc.isTaur())
-				 Although your [pc.legRace]'s lower body would make it impossible for you to complete these exercises on a regular leg press machine, there's a variant of it that's designed to accommodate taurs, and so you [pc.step] into it and prepare to get started.
+				虽然你的[pc.legRace]下半身使你无法在普通压腿机上完成这些练习，但有一种压腿机是专为半兽身人设计的，你[pc.step]到对应的压腿机处并准备开始练习。
 			#ELSE
-				 Heading on over to a free leg press machine, you seat yourself in it and prepare to get started.
+				你走到一台自由压腿机前，然后坐在上面准备开始运动。
 			#ENDIF
-			 Setting the correct weight, you extend your legs and complete your first rep. At that exact moment, Pix suddenly skips forwards and skids to a halt beside you. Flashing you a huge grin, she exclaims, [pix.speech(Make sure not to lock your legs, y'know! Do a good job, and I'll give you a reward!)]
+			你设定好正确的重量，伸开双腿并完成了第一个动作。就在这时，皮克斯突然向前一跳，滑到你身边，她向你露出一个大大的笑容，并惊呼道：[pix.speech(一定不要锁住腿，知道吗？好好做，我会给你奖励的！)]
 		</p>
 		<p>
-			As you focus on completing your set of leg presses, you hope that Pix's reward isn't going to be too extreme. With the excitable [pix.race] impatiently bouncing up and down on the spot beside your machine, you complete your eight reps and wonder what's going to happen.
+			当你专注于完成一组压腿动作时，你心里希望皮克斯的奖励不会太极端。因为兴奋的[pix.race]正不耐烦地在你的机器旁上下跳动，你完成了八个动作，不知道接下来会发生什么。
 		</p>
 		<p>
-			[pix.speech(Great job, [pc.name]!)] Pix exclaims, before reaching up with one of her paw-like hands to pat your head. As she does this, she uses her free hand to grab one of yours, and smiles happily at you as she declares, [pix.speech(Here's your reward! Head pats and hand holding!)]
+			[pix.speech(太棒了！[pc.name]！)]皮克斯感叹道，然后用爪子般的手伸过来拍拍你的头。她一边拍着你的头，一边用空闲的手抓住你的手，高兴地笑着对你说，[pix.speech(这是你的奖励！拍拍头，握住手！)]
 		</p>
 		<p>
-			Surprised to discover that her reward doesn't involve anything lewd being forced upon you, you relax and enjoy the feeling of Pix's furry, paw-like hand clutching tightly onto your own. Letting out a soft sigh, she gives your head a few more pats and strokes, before skipping back and loudly shouting, [pix.speech(That's enough for now! Do another set and I'll give you some more!)] 
+			你惊讶地发现，她的奖励并没有强迫你做下流的事情，于是放松下来，享受着皮克斯毛茸茸的爪子紧紧抓住你的手的感觉。她轻轻地叹了口气，又拍了拍你的头，在抚摸了几下后，她跳着回去并说道：[pix.speech(现在够了！再做一组！我就给你更多！)] 
 		</p>
 		<p>
-			Doing as Pix says, you complete another set of leg presses, and then after that another. Rewarding you with more hand holding and head pats after both of these sets, Pix finally grins and states, [pix.speech(Good work, [pc.name]! Keep it up and, like, you might even be as fit as me one day!)]
+			你于是听了皮克斯的话，又接连做了两组压腿。每做完一组，皮克斯都会跟你牵牵手，摸摸你的头，以此作为奖励，随后她开心地说，[pix.speech(做的漂亮，[pc.name]！这样坚持下去的话，嗯……你总有一天也能像我一样强壮的！)]
 		</p>
 		<p>
-			Giggling to herself, the [pix.race] skips off to return to the reception desk. Finishing your routine, and completely exhausting yourself by the end of it, you're left feeling very pleased with yourself, for your muscles will have definitely have grown, even if only by a small amount.
+			那[pix.race]自顾自地笑了一会儿，就一下子跳回了前台。你一天的锻炼结束，此时已经精疲力竭，但却对自己非常满意，毕竟这样一来肌肉肯定有所增长，哪怕并不算多。
 		</p>
 	#ELSE
 		<p>
-			For the next hour you make use of over a dozen different types of resistance machine. Although you're completely exhausted by the end of it, you're left feeling very pleased with yourself, for your muscles will have definitely have grown, even if only by a small amount.
+			接下来的一个小时，你做了多种不同类型的阻力锻炼。结束时虽然已经精疲力竭，但你却对自己非常满意，毕竟这样一来肌肉肯定有所增长，哪怕并不算多。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WEIGHTS_WORKOUT_BODY_WEIGHT"><![CDATA[
 	<p>
-		Deciding that you'd like to build up some more muscle, you head on over to where the pull-up bars and gym mats are located. Consulting a couple of posters that show what muscle groups are affected by different body weight exercises, you decide upon a routine and set to work.
+		你决定再多练练肌肉，于是来到放置引体向上杆和健身垫的地方。你看了几张海报，上面标明了不同的体重练习对哪些肌肉群有影响，你决定了一套动作，并开始练习。
 	</p>
 	#IF(pix.getSexCount(pc).getTotalTimesHadSex()>0 && pix.getWorldLocation()==WORLD_TYPE_innoxia_dominion_shopping_arcade_gym)
 		<p>
-			Your session gets off to a good start, and you manage to work your way through some push ups and squats before deciding upon doing some sit ups.
+			这一轮锻炼十分顺利，做了几组俯卧撑和深蹲过后，你决定来几组仰卧起坐。
 			#IF(pc.isTaur())
-				 As you have the lower body of [pc.a_legRace], you can't complete sit ups in the regular fashion, but by first lying down and then leaning back with your upper body, you can approximate it well enough.
+				由于下半身是[pc.a_legRace]，你没办法用常规的姿势做仰卧起坐，但只要先躺下，然后后仰身体，就可以模仿得差不多。
 			#ELSE
-				 Lying down on a free mat, you get into position and prepare to start your set.
+				你找了个垫子躺下来，摆好姿势准备开始。
 			#ENDIF
-			 Using your stomach muscles to pull yourself up, you curl into your first rep, before leaning back and resetting for the next one. You have a surprise as you sit up for a second time, for as you reach the top of your rep, you see Pix skipping forwards and skidding to a halt in front of you.
+			运用腹部肌肉将身体抬起，完成了一次动作，然后躺回垫子上准备做下一个。再次抬起身子到最高点时，你吓了一跳，只见皮克斯蹦蹦跳跳地上前，丝滑地停在了你的身前。
 		</p>
 		<p>
-			[pix.speech(Heya, [pc.name]!)] she loudly shouts, [pix.speech(You're doing a great job! Hey, I know what, how about for every eight sit ups you complete, you can get a kiss as a reward?!)]
+			[pix.speech(嘿呀，[pc.name]！)]她大喊，[pix.speech(干得不错！嘿，我想到个事，要不你每做八个，就亲你一口作奖励怎么样？)]
 		</p>
 		<p>
-			With that, the excitable [pix.race] kneels down before you. With a big grin on her face, she counts down as she watches you complete your reps, [pix.speech(Six... Five... Four... Come on, [pc.name]! Three... Two... One... Kiss time!)]
+			这一惊一乍的[pix.race]说着就在你面前跪下来，带着满面的笑容，每看到你做完一次就帮你数一下，[pix.speech(六……五……四……加油啊，[pc.name]！三……二……一……亲亲时间！)]
 		</p>
 		<p>
-			As you complete your sit up, Pix giggles and leans forwards, and before you can say or do anything, she's pressing her lips against yours and giving you a big, wet kiss. Dropping back to continue with your set, you can feel Pix's saliva on your [pc.lips+] as she begins the countdown again. By the time you've finished your exercise, you've been kissed half a dozen times, and when you finally lie back at the end, the excitable [pix.race] pounces on you and gives you one final, passionate smooch.
+			你才刚做完，皮克斯就咯咯笑着贴了上来，没等你说话，就把嘴唇压了上来，献上了一记热情的吻。你躺了回去准备下一次仰卧起坐，甚至还能感觉到皮克斯的唾液留在了嘴唇上，她也又开始了新一轮的倒计时。锻炼结束时，你被亲了整整六次，最后躺倒在地的时候，那激动的[pix.race]又扑向你，送上了最后的激情一吻。
 		</p>
 		<p>
-			[pix.speech(Nice work, [pc.name]!)] she laughs as she pulls back from the kiss. Licking her lips, she winks at you and shouts, [pix.speech(See you around!)]
+			[pix.speech(干得不错嘛，[pc.name]！)]她跟你分开后，笑着说完，又舔了舔嘴唇，向你眨了眨眼，高声道，[pix.speech(下次再见！)]
 		</p>
 		<p>
-			With that, the [pix.race] skips off to return to the reception desk. Finishing your routine, and completely exhausting yourself by the end of it, you're left feeling very pleased with yourself, for your muscles will have definitely have grown, even if only by a small amount.
+			这[pix.race]说完就一下子跳开，回到了前台。你一天的锻炼结束，此时已经精疲力竭，但却对自己非常满意，毕竟这样一来肌肉肯定有所增长，哪怕并不算多。
 		</p>
 	#ELSE
 		<p>
-			For the next hour you work your way through many different types of body weight exercise. Although you're completely exhausted by the end of it, you're left feeling very pleased with yourself, for your muscles will have definitely have grown, even if only by a small amount.
+			接下来的一个小时，你做了多种不同类型的负重锻炼。结束时，你虽然筋疲力尽，但对自己非常满意。因为你的肌肉肯定已经长出来了，哪怕只是一点点。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_WORKOUT_FATIGUE"><![CDATA[
 	<p style='text-align:center;'><i>
-		You feel completely exhausted from your workout, and will be unable to do any more exercise until you've had time to recover.
+		训练后，你感到筋疲力尽，恢复之前无法再做任何运动。
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Yoga: -->
 	
 	<htmlContent tag="YOGA"><![CDATA[
 	<p>
-		Before you is the modern-looking, glass-walled studio in which yoga lessons are held. Looking into this sound-proofed room, you see that the far wall bears images of lotus flowers and silhouettes of different yoga poses, while about a dozen rolled up mats are stacked up in the corner.
+		映入眼帘的一间现代风格的透明玻璃墙的房间，里面举办瑜伽课程。向这个隔音室中望去，只见远处的墙上挂着莲花的图像和不同瑜伽姿势的剪影，而角落里堆放着十几个卷起来的垫子。
 	</p>
 	<p>
-		The studio is currently deserted, although a handwritten note stuck to the door says that 'Brahman will be resuming yoga lessons soon'...
+		这间房目前空无一人，一张手写的字条贴在门上，上面写到：“不久之后Brahman就会重开瑜伽课程”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOWERS"><![CDATA[
 	<p>
-		Finding yourself standing in the gym's changing rooms, you see that a dozen cubicles offer privacy to anyone who wants to use them. Adjoining this room there are two sets of showers, which are marked as being for use by either feminine or masculine members of the gym. Arcane washing machines have been positioned near to the entrances of these showers, and bear signs declaring that they're free to use, allowing you to clean your clothes while washing your body.
+		你站在健身房的更衣室。这里有十几个供人换衣服的小隔间，与之相邻的是两间淋浴室，分别为男性会员和女性会员提供。淋浴室入口附近摆着奥术洗衣机，贴有“免费使用”的标志。你在洗澡的时候可以顺便洗衣服。
 	</p>
 	<p>
-		There's nobody in here at the moment, and you wonder whether to make use of the showers or instead continue on to either the main area of the gym or to the saunas and pool...
+		这里现在没有人，你不知道是该使用淋浴间，还是继续前往健身房的主区域或桑拿房和游泳池……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOWERS_QUICK"><![CDATA[
 	<p>
-		Thinking that it would be a good idea to clean yourself, you disrobe and put your clothing into a nearby arcane washing machine. [pc.Stepping] into the shower, you turn on the tap and let out a relaxed sigh as you feel the warm water flowing down over your naked body. Not wanting to spend too much time in here, you focus on quickly cleaning yourself.
+		你觉得清理一下身体应该不赖，于是褪去衣物，放进附近的奥术洗衣机中。随后进到淋浴间，打开了花洒，汩汩暖流顺着裸露的皮肤流淌而下，惹得你不禁放松地长叹一声。你并不想在这里浪费太多时间，抓紧清理起自己的身体。
 	</p>
 	<p>
-		After a short while spent cleaning your body under the flowing water, you feel as though you've spent enough time in the shower, and so turn off the tap and dry yourself with a fluffy towel. Retrieving your now-clean clothing from the arcane washing machine, you get dressed and [pc.step] back into the changing room...
+		在淋浴下冲洗了一会儿身体，你感觉时间差不多了，便关上花洒，用软绵绵的毛巾擦干了身体。随后从奥术洗衣机中取回洁净如新的衣物，穿戴整齐后就回到了更衣室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOWERS_THOROUGH"><![CDATA[
 	<p>
-		Thinking that it would be a good idea to clean yourself, you disrobe and put your clothing into a nearby arcane washing machine. [pc.Stepping] into the shower, you turn on the tap and let out a relaxed sigh as you feel the warm water flowing down over your naked body. Deciding that it wouldn't be so bad to take some time out in order to relax, you set about thoroughly cleaning yourself.
+		你觉得清理一下身体应该不赖，于是褪去衣物，放进附近的奥术洗衣机中。随后进到淋浴间，打开了花洒，汩汩暖流顺着裸露的皮肤流淌而下，惹得你不禁放松地长叹一声。你心想用一会儿来休息一下也无伤大雅，就准备给身子来个全面清洗。
 	</p>
 	<p>
-		After a while spent cleaning your body under the flowing water, you feel as though you've spent enough time in the shower, and so turn off the tap and dry yourself with a fluffy towel. Retrieving your now-clean clothing from the arcane washing machine, you get dressed and [pc.step] back into the changing room...
+		在淋浴下冲洗了身体，你感觉时间差不多了，便关上花洒，用软绵绵的毛巾擦干了身体。随后从奥术洗衣机中取回洁净如新的衣物，穿戴整齐后就回到了更衣室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SAUNA"><![CDATA[
 	<p>
-		A couple of saunas are located on both sides of the corridor which connects the showers to the pool. A couple of gym members are using one, but the other three are currently vacant.
+		走廊两侧设有几间桑拿室，连接着淋浴区和游泳池。几位健身房会员正在使用其中一间，但其他三间目前空着。
 	</p>
 	<p>
-		If you wanted to, you could enter one of these saunas and spend some time in the heat...
+		如果你想，就可以进入其中一间蒸个桑拿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POOL"><![CDATA[
 	<p>
-		Standing on the edge of the gym's large, deep pool, you see that it's been split into multiple lanes by a series of floats. A couple of gym members are using two of the lanes, but all of the rest are free.
+		你站在健身房宽敞而深的泳池边上，泳池被几排浮标隔出了多条泳道。几个健身房会员正在使用其中的两条泳道，其他泳道都还空着。
 	</p>
 	<p>
-		If you wanted to, you could slip into the pool and spend some time swimming...
+		如果你想的话，可以滑进泳池游上一会……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Hannah boxing content: -->
 	
 	<htmlContent tag="BOXING"><![CDATA[
 	<p>
-		The area in front of you holds two full-sized boxing rings, while lined up around them are dozens of punching bags, bench presses, and free weights. A couple of people are using the equipment here, but there's so much of it that there's plenty left for you to use.
+		你面前的区域有两个全尺寸的拳击台，周围排着数十个沙袋、卧推器和自由重量器械。有几个人正在使用这些器械，不过这里器械很多，还剩了不少给你用。
 	</p>
 	<p>
-		A poster has been stuck to the side of one of the boxing rings, and upon closer inspection you see that it declares that Hannah, the greater [hannah.race] who works here, is available to give boxing lessons to gym members from
+		一张海报贴在拳击台的一侧，仔细看时，你发现它宣称，这里工作的[Hannah.race]汉娜可以为健身房会员上拳击课，时间从
 		#IF(game.getCharactersPresent().contains(hannah))
-			 [style.italicsMinorGood([units.time(8)]-[units.time(20)])]. Sure enough, you can see that she's over in one corner of this area,
+			[style.italicsMinorGood([units.time(8)]-[units.time(20)])]。果然，你看到她在该区域的一角，
 			#IF(hannah.isVisiblyPregnant())
-				 and looks to be organising and cleaning down some of the equipment.
+				似乎正在清洁整理一些设备。
 			#ELSE
-				 and is energetically striking one of the punching bags over and over again.
+				正在充满活力地一次又一次打沙袋。
 			#ENDIF
 			#IF(!pc.hasItemType(ITEM_innoxia_quest_gym_membership_card))
-				 As you're not a member of the gym, you can't get lessons from her, and so there's nothing for you to do here...
+				由于你不是健身房的会员，无法跟她上课，所以这里对你来说没有什么可做的……
 			#ELSE
 				#IF(pc.hasStatusEffect(SE_GYM_FATIGUE))
-					 Although you're a member of the gym, you're too tired at the moment to ask Hannah for boxing lessons...
+					尽管你是健身房的会员，但你现在太累了，无法跟汉娜上拳击课……
 				#ELSE
-					 As you're a member of the gym, you could ask Hannah for boxing lessons...
+					你是健身房的会员，可以跟汉娜上拳击课……
 				#ENDIF
 			#ENDIF
 		#ELSE
-			 [style.italicsMinorBad([units.time(8)]-[units.time(20)])].
+			[style.italicsMinorBad([units.time(8)]-[units.time(20)])]。
 			#IF(pc.hasItemType(ITEM_innoxia_quest_gym_membership_card))
-				 Although you're a member of the gym, you can't get lessons at the moment as Hannah isn't here...
+				尽管你是健身房的会员，但目前不能上课，因为汉娜不在这里……
 			#ELSE
-				 Even if Hannah were here, which she's not, you wouldn't be able to get boxing lessons from her as you're not a member of the gym...
+				汉娜不在这里。其实无论汉娜在不在，你都没法跟她上拳击课，因为你不是健身房的会员……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_HANNAH_INTRO"><![CDATA[
 	<p>
-		Thinking that you might like to receive boxing lessons at some point, you decide to head on over and introduce yourself to Hannah. As you approach the [hannah.race], who's energetically striking the punching bag in front of her, you take this opportunity to get a good look at her.
+		你对拳击课有点兴趣，所以你决定去向汉娜介绍自己。当你靠近[hannah.race]时，她正精力充沛地击打着面前的沙袋，你趁机好好打量了一下她。
 	</p>
 	<p>
-		Standing at [hannah.heightValue] tall, she's wearing a similar outfit to Pix, which consists of a black sports bra, black shorts, and a dark red sweatband
+		她身高[hannah.heightValue]，穿着黑色运动文胸和黑色短裤，与皮克斯的运动装相似。一条深红色的汗带
 		#IF(game.isFurryHairEnabled())
-			 that's restraining her black, slicked-back hair.
+			束着她黑色的大背头。
 		#ELSE
-			 that's positioned around her forehead.
+			紧贴在她的前额上。
 		#ENDIF
-		 Thanks to her revealing clothing, you're able to see that her furry stomach is formed into a rock-hard six-pack, while her arms and legs look to be extremely muscular and strong. As you get closer, you see that she's got numerous scars all over her body, letting you know that she's seen a lot of violence in her time. Giving the target in front of her one final punch, she turns to face you.
+		因为她穿着暴露，你可以看到她毛茸茸的腹部上有六块坚硬的腹肌，她的胳膊和腿十分结实，肌肉紧致。走近点看，你发现她身上有许多伤疤，你猜她以前可能经历过许多暴力事件。她又挥出一拳，然后停下来转身看向你。
 	</p>
 	<p>
-		[hannah.speech(Fresh meat, huh?)] she asks in a deep, rumbling voice as she grabs a nearby drink bottle. Opening her mouth as she starts to drink, Hannah reveals the pointed, crushing teeth within her hyena-like muzzle. Listening as you introduce yourself to her, she gazes at you with her big, [hannah.eyeColour] eyes, before lowering the bottle and stating, [hannah.speech(I'm guessing Pix already told you who I am, but the name's Hannah. If you want to learn how to fight then I'm your gal.)]
+		[hannah.speech(新人，是吗？)]汉娜抓起旁边的饮料瓶，用低沉的声音问。她喝水的时候，鬣狗般的嘴里露出尖锐的牙齿。听着你向她介绍自己，她用那双[hannah.eyeColour]的大眼睛凝视着你，然后放下瓶子，说道，[hannah.speech(我猜皮克斯已经告诉过你我是谁了，我叫汉娜。如果你想学习战斗技巧，那就找对人了。)]
 	</p>
 	<p>
-		Although she looks intimidating, and is quite clearly a force to be reckoned with, there's a soft, caring undertone to Hannah's deep voice which makes you instinctively think that you can trust her. As if to confirm what it is that's going through your mind, she lets out a wild, barking laugh, which sounds like it's about half-way between a hyena's and a human's, before exclaiming,
+		虽然她看起来很吓人，但汉娜低沉的嗓音中又透着一股温柔和体贴，让你本能地认为可以信任她。就像是要证实你的想法一般，她发出了一阵野性的狂笑，听起来就像是鬣狗和人类的混合，然后喊道，
 		#IF(pc.isVisiblyPregnant())
-			 [hannah.speech(Don't worry, I don't bite! I'm not going to give you boxing lessons while you're pregnant, but once you've given birth then come back for a lesson!)]
+			[hannah.speech(别担心，我不咬人！我不会在你怀孕的时候教你拳击，等你生完孩子再来上课！)]
 		#ELSE
-			 [hannah.speech(Don't worry, I don't bite! Just let me know when you want a lesson and we can start right away!)]
+			[hannah.speech(别担心，我不咬人！只要告诉我你什么时候想上课，我们就可以马上开始！)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.isVisiblyPregnant())
-			Picking up a nearby towel, she starts to wipe the sweat from her body as she waits to hear what it is you want...
+			她拿起附近的一条毛巾，开始擦拭身上的汗水，同时等着听你想要做什么……
 		#ELSE
-			Picking up a nearby towel, she starts to wipe the sweat from her body as she waits to hear whether or not you want a boxing lesson...
+			她拿起附近的一条毛巾，开始擦拭身上的汗水，同时等着听你是否想要上一堂拳击课……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_HANNAH"><![CDATA[
 	<p>
-		Deciding that you'd like to speak with Hannah again, you [pc.walk] over to her and say hello.
+		你决定再和汉娜聊聊，便[pc.walk]过去和她打招呼。
 		#IF(hannah.isVisiblyPregnant())
-			 Putting down the spray bottle and cloth which she was using to clean the equipment,
+			她放下清理设备的喷雾瓶和抹布，
 		#ELSE
-			 Striking the punching bag in front of her one final time,
+			她又打了一拳面前的沙袋，
 		#ENDIF
 		#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_last_night_sex))
-			 she turns to face you with a sheepish grin on her face. Rubbing her head, she says, [hannah.speech(Hey, [pc.name]. I had a great time with you last night... Although I'm kind of paying for it with this hangover. Anyway, let's keep business and personal stuff separate... What's up?)]
+			转过身面对你，脸上带着腼腆的笑容，揉着脑袋说，[hannah.speech(嘿，[pc.name]。昨晚和你一起真的很有意思……虽然我现在有点宿醉未醒的感觉。总之，我们还是公私分明吧……有什么事吗？)]
 		#ELSEIF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_last_night_met))
-			 she turns to face you with a slight smile on her face. Rubbing her head, she says, [hannah.speech(Hey, [pc.name]. I had fun last night, but I'm kind of paying for it with this hangover... Anyway, let's keep business and personal stuff separate... What's up?)]
+			转过身来面对你，脸上带着一丝微笑，揉着脑袋说，[hannah.speech(嘿，[pc.name]。昨晚我玩得很开心，但我现在有点宿醉未醒的感觉……总之，我们还是公私分明吧……有什么事吗？)]
 		#ELSE
-			 she turns to face you and says in a deep voice, [hannah.speech(Hi, [pc.name]. What's up?)]
+			转向你，用低沉的声音说道，[hannah.speech(嗨，[pc.name]。有什么事吗？)]
 		#ENDIF
 	</p>
 	#IF(hannah.isVisiblyPregnant())
 		#IF(!hannah.isCharacterReactedToPregnancy(pc))
 			<p>
-				You thought that it was odd to see Hannah cleaning instead of working out, but as she turns to face you the reason for this immediately becomes clear. Her toned six-pack has vanished, and in its place, she's now sporting a swollen, [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, the [hannah.race] reveals, [hannah.speech(Yeah, you got me pregnant. I guess it's kind of my fault for getting drunk and horny... Anyway, I'm not going to be able to train until after I've given birth. Want a feel?)]
+				你对汉娜在做清洁而不是锻炼这件事感到奇怪，但是在她转身面对你的时候，原因一下子明了了。她的六块腹肌不见了，取而代之的是硕大的[style.colourSex(孕肚)]。[hannah.race]注意到你的目光，回答道，[hannah.speech(是的，你把我搞怀孕了。我猜这是我喝醉太兴奋惹的祸……无论如何，我也得等生完孩子才能继续锻炼，你想摸一下吗？)]
 			</p>
 			<p>
-				Replying in the affirmative, you [pc.step] forwards and place your [pc.hands] on her furry tummy. Giving her swollen bump a few loving strokes, you ask Hannah if there's anything you can do for her, to which she waves you off and lets out another of her bark-like laughs, [hannah.speech(I'm fine, don't worry about me! So, what is it you're here for?)]
+				你给她一个肯定的回答，[pc.step]向前，将你的[pc.hands]放在她毛茸茸的腹部上。你轻轻地抚摸着她鼓胀的肚子，问她有什么你可以做的，她挥手示意你不用担心，并发出狗叫般的笑声，[hannah.speech(我没事，不用担心我！你来这里有什么事吗？)]
 			</p>
 		#ELSE
 			<p>
-				Having seen that Hannah was cleaning instead of working out, you assumed that she must still be pregnant, and as she turns to face you this assumption is confirmed. Her toned six-pack has vanished, and in its place, she's sporting a swollen, [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, the [hannah.race] says, [hannah.speech(Yeah, I'm still pregnant, thanks to you. I guess it's kind of my fault for getting drunk and horny... Anyway, I'm not going to be able to train until after I've given birth. Want to have another feel?)]
+				你看到汉娜没有去健身而是在打扫卫生，你猜她一定还在怀孕，当她转过身来面对你时，你的猜测得到了证实。她的六块腹肌不见了，取而代之的是硕大的[style.colourSex(孕肚)]。[hannah.race]注意到你的目光，回答道，[hannah.speech(是的，多亏了你，我还在怀孕。我猜这是我喝醉太兴奋惹的祸……无论如何，我也得等生完孩子才能继续锻炼，你还想再摸一次吗？)]
 			</p>
 			<p>
-				Replying in the affirmative, you [pc.step] forwards and place your [pc.hands] on her furry tummy. Giving her swollen bump a few loving strokes, you ask Hannah if there's anything you can do for her, to which she waves you off and lets out another of her bark-like laughs, [hannah.speech(I'm fine, don't worry about me! So, what is it you're here for?)]
+				你给她一个肯定的回答，[pc.step]向前，将你的[pc.hands]放在她毛茸茸的腹部上。你轻轻地抚摸着她鼓胀的肚子，问她有什么你可以做的，她挥手示意你不用担心，并发出狗叫般的笑声，[hannah.speech(我没事，不用担心我！你来这里有什么事吗？)]
 			</p>
 		#ENDIF
 	#ENDIF
 	#IF(pc.isVisiblyPregnant())
 		<p>
-			Pointing towards your pregnant belly, the [hannah.race] shakes her head and states, [hannah.speech(I'm not going to give you boxing lessons while you're pregnant, so don't even ask.)]
+			[hannah.race]指着你的孕肚摇摇头说道，[hannah.speech(我不会在你怀孕的时候给你上拳击课，所以别问了。)]
 		</p>
 	#ENDIF
 	<p>
-		As the [hannah.race] expectantly stares at you with her big, [hannah.eyeColour] eyes, you wonder what to say to her...
+		当[hannah.race]用她那双[hannah.eyeColour]的大眼睛期待地盯着你时，你想你要对她说什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_HANNAH_LEAVE"><![CDATA[
 	<p>
-		Thanking Hannah for her time, you say that you've got to be going now and so say goodbye to her. Giving you a brief nod, she says, [hannah.speech(See you around, [pc.name].)]
+		你感谢汉娜为你抽出时间，告诉她你现在要走了，并向她道别。她轻轻点头，回道，[hannah.speech(下次见，[pc.name]。)]
 	</p>
 	<p>
-		Turning your back on the [hannah.race], you head back into the main area of the gym and wonder what to do next...
+		你转身背对着[hannah.race]，向健身房的主区域走去，并想着你等下该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_TALK_HISTORY"><![CDATA[
 	<p>
-		Curious to hear Hannah's account of how she came to work here, you ask her what led to her giving boxing lessons in this gym.
+		你很好奇汉娜是如何来到这里工作的，于是问她为什么在这家健身房教拳击。
 	</p>
 	<p>
-		[hannah.speech(Well, it was mostly due to Pix's persistence,)] she replies, [hannah.speech(She kept on asking me to come and work for her, and eventually I just said yes.)]
+		[hannah.speech(哦，主要是皮克斯的坚持，)]她回答，[hannah.speech(她不停地邀请我过来工作，最终我就答应了。)]
 	</p>
 	<p>
-		Thinking that there must be more to it than that, you ask Hannah what she was doing before coming to work here.
+		你觉得肯定还有更多原因，所以你问汉娜在这之前是做什么的。
 	</p>
 	<p>
-		[hannah.speech(I was a professional boxer, and was pretty good at it. That's why people sometimes come here to 'challenge' me,)] she reveals, [hannah.speech(I decided that I didn't want to do it any more, and accepted Pix's offer to work here instead.)]
+		[hannah.speech(我以前是职业拳击手，打得也不错。这就是为什么老有人来这‘挑战’我。)]她透露道，[hannah.speech(我不想再做这个了，所以接受了皮克斯的工作邀请。)]
 	</p>
 	<p>
-		It doesn't sound like Hannah wants to share any more details on this matter, so you decide to ask something else...
+		汉娜听起来不想再聊这个问题了，你决定问点别的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_TALK_PIX"><![CDATA[
 	<p>
-		Wanting to know about Hannah's relationship with Pix, you ask her how the two of them met.
+		你想知道汉娜和皮克斯的关系，于是你问她们两个是怎么认识的。
 	</p>
 	<p>
-		[hannah.speech(It was about ten years ago now. I was taking a shortcut back home through some alleyways and ran into a gang of muggers who'd just ambushed Pix,)] she states, before flexing her muscles and laughing, [hannah.speech(I wasn't as strong back then as I am now, but I was still more than they could handle. After I'd knocked them all out, Pix grabbed me and dragged me along to her birthday party.)]
+		[hannah.speech(那大概是十年前。我当时正在小巷子抄近路回家，碰巧遇到了一帮刚袭击完皮克斯的抢劫犯，)]她说，然后展示了一下自己的肌肉，笑了起来，[hannah.speech(我当时还没有现在这么强壮，但是解决他们还是绰绰有余。在我把他们都打昏之后，皮克斯拽着我去参加她的生日派对。)]
 	</p>
 	<p>
-		Although she has the habit of letting out her odd, bark-like laugh now and again, Hannah doesn't smile very often, but as she thinks back to that day a big grin spreads across her face. As she lets out a happy sigh at the memory of her first encounter with Pix, you ask Hannah if there's any more she can tell you about the excitable [pix.race].
+		虽然汉娜时不时会发出她奇怪的、像狗吠一样的笑声，但她并不经常笑，不过当她回想起那天的情景时，她的脸上露出了灿烂的笑容。她回忆起与皮克斯的初次见面，发出了一声幸福的叹息，你问汉娜有没有更多关于这个兴奋的[pix.race]的信息。
 	</p>
 	<p>
-		[hannah.speech(Well, you've met her, so you already know what she's like,)] she replies, [hannah.speech(The only thing I'd say is to be careful with her if she takes a liking to you. She doesn't care much for boundaries, and doesn't take 'no' for an answer.)]
+		[hannah.speech(嗯，你已经见过她了，所以你已经知道她是什么样子的，)]她回答道，[hannah.speech(唯一要注意的是，如果她对你有好感的话，小心一点。她不太有边界感，也不接受‘不’的答案。)]
 	</p>
 	<p>
-		Crossing her arms, the [hannah.race] waits to hear if you're going to ask her anything else...
+		[hannah.race]叉着手臂，等着你是否还有其他问题要问……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_TALK_YOGA"><![CDATA[
 	<p>
-		Wondering if Hannah knows much about the bull-boy, Brahman, who runs yoga classes here in the gym, you ask her if she's ever had any lessons from him.
+		你想知道汉娜是否了解那个教瑜伽课的牛男梵天，于是你问她有没有上过他的课。
 	</p>
 	<p>
-		[hannah.speech(No, and I'm not interested,)] she bluntly replies, [hannah.speech(There's something odd about that guy, and the less I have to do with him, the better.)]
+		[hannah.speech(没有，而且我不感兴趣，)]她直截了当地回答道，[hannah.speech(那家伙有点怪，我越少和他扯上关系越好。)]
 	</p>
 	<p>
-		It sounds like Hannah doesn't want to talk about Brahman any more, and so you wonder what to ask her next...
+		听起来汉娜可能不想再谈论梵天了，于是你在想下一个问她什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_LESSON"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_hannah_training_complete))
 		<p>
-			Although you've already learned everything there is to know from Hannah, you ask her if you could have a boxing lesson to keep your skills sharp. 
+			虽然你已经从汉娜那里学到了所有的知识，你还是问她能不能给你上一堂拳击课，来保持熟练。
 		</p>
 		<p>
-			[hannah.speech(Sure thing, [pc.name],)] she replies as she leads you over to a nearby punching bag. Gesturing towards it, she steps back and states, [hannah.speech(Let's work on your form first. You punch, and I'll correct you.)]
+			[hannah.speech(当然可以，[pc.name]，)]她边回答，边带你到附近的沙袋前。汉娜指着沙袋退后一步，说，[hannah.speech(先练习你的姿势。你出拳，我来纠正。)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to improve your skills at unarmed fighting, you tell Hannah that you'd like to have a boxing lesson from her. 
+			你想精进徒手战斗的技巧，于是告诉汉娜说你想上她的课。
 		</p>
 		<p>
-			[hannah.speech(Great, I only teach boxing league rules here, so that means only using your fists, no gloves allowed, and no spells,)] she states as she leads you over to a nearby punching bag. Gesturing towards it, she steps back and states, [hannah.speech(Let's work on your form first. You punch, and I'll correct you.)]
+			[hannah.speech(很好，我这里只教拳击联赛的规则，意思是你只能用拳头，不能戴拳套，也不能使用咒语，)]她边回答，边带你到附近的沙袋前。汉娜指着沙袋退后一步，说，[hannah.speech(先练习你的姿势。你出拳，我来纠正。)]
 		</p>
 	#ENDIF
 	<p>
-		Doing as you're told, you start striking the target in front of you. Hannah interrupts to provide some pointers on how to position yourself and how to deliver different types of punches. After you're done there, she gets you to use the gym's equipment to work on your agility, speed, and reflexes. Finally, after a total of one hour spent practising in this manner, Hannah declares, [hannah.speech(Good work, [pc.name]! Now it's time for some sparring.)]
+		你听从命令，拳击着面前的目标。汉娜时不时地打断，教了如何摆好姿势，以及一些不同的拳法。做完后，她又带你到健身房的器械那里，锻炼灵活性、速度和反应能力。最终你练了整整一个小时。汉娜宣称道，[hannah.speech(干得不错，[pc.name]！不过搏击时间到了！)]
 	</p>
 	#IF(hannah.isVisiblyPregnant())
 		<p>
-			After gesturing to her swollen, pregnant belly to excuse herself from being your sparring partner, Hannah calls out to one of the other gym members who are working out nearby, [hannah.speech(Hey, [style.random(Toby|Rob|Jack|Dan|Mike)]! [pc.Name] needs a sparring partner, you up for it?!)]
+			汉娜指了指自己的孕肚，示意没法陪练。然后叫住了正在附近锻炼的健身房成员，[hannah.speech(喂，[style.random(托比|罗伯|杰克|丹|麦克)]！[pc.Name]需要搏击对象，想来吗？！)]
 		</p>
 		<p>
-			Returning a response in the affirmative, your new sparring partner walks over to where you're standing and says hello. Getting into the ring with him, you spend the next thirty minutes sparring under the supervision of Hannah. Finally, as you start to feel worn out and your movements become sluggish, she declares that you've done enough and thanks your partner for their time.
+			在得到积极回应后，你的新搭档走到你站立的地方，友好地向你打了个招呼。随后，你们一同踏入拳击场，在汉娜的监督下进行了接下来的30分钟的搏击对练。最终，当你感到体力逐渐透支，动作变得略显迟缓时，汉娜宣布你已经完成了足够的训练，并对你的搭档表示感谢。
 		</p>
 	#ELSE
 		<p>
-			Following Hannah into the ring, you listen to her instructions before starting to trade blows with one another. You can tell that she's holding back a lot, but even so you struggle to keep up with her footwork, and only manage to land one blow for every four or five of hers. After thirty minutes of sparring with her, you start to feel really worn out and your movements become sluggish. Calling an end to the session, Hannah declares that you've done enough and it's time to rest.
+			跟随着汉娜进入拳击场，你聆听她对拳击的指导，然后开始与对方交手。你可以感觉到她有所保留，尽管如此，你仍努力跟随着她的步法，但是每四五招中才能成功还击一次。在与她对练了三十分钟后，你感到相当疲惫，动作也变得迟缓。结束这一回合，汉娜宣布你已经付出了足够的努力，现在是时候休息了。
 		</p>
 	#ENDIF
 	#IF(flags.hasFlag(FLAG_innoxia_hannah_training_complete))
 		<p>
-			Getting out of the ring, you sit down on a nearby bench to get your breath back. Patting you on the shoulder, the [hannah.race] lets out another of her half-hyena, half-human laughs and declares, [hannah.speech(You really are a natural at this! There's nothing more I can teach you!)]
+			你走出拳击场，坐在附近的长椅上喘着气。[hannah.race]拍着你的肩膀，又发出了半人半鬣狗的笑声，宣布道，[hannah.speech(你真是天生的高手！我没有什么可以再教你的了！)]
 		</p>
 		<p>
-			Thanking Hannah for her time, you stand up and wonder what to do next...
+			你感谢汉娜抽出时间，站起身，想着接下来该做什么……
 		</p>
 	#ELSE
 		<p>
-			Getting out of the ring, you sit down on a nearby bench to get your breath back. Patting you on the shoulder, the [hannah.race] lets out another of her half-hyena, half-human laughs and declares, [hannah.speech(I don't say this to everyone, but you're a natural! Keep working hard and you'll be a formidable boxer in no time!)]
+			你走出拳击场，坐在附近的长椅上喘气。[hannah.race]拍拍你的肩膀，又发出了半人半鬣狗的笑声，并宣布：[hannah.speech(我不是对每个人都这么说，但你很有天赋！继续努力，你很快就会成为一名出色的拳击手！)]
 		</p>
 		<p>
-			Thanking Hannah for her tutelage, you stand up and wonder what to do next...
+			你谢过汉娜的指导，站起身，想着接下来该做什么……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_LESSON_FINAL"><![CDATA[
 	<p>
-		Although you've already learned a great deal from Hannah, you're sure that there's still more she can teach you, and so ask her for another boxing lesson.
+		虽然你从汉娜那里学到很多，但她肯定还有能教你的。于是你向她继续约拳击课。
 	</p>
 	<p>
-		[hannah.speech(Sure thing, [pc.name],)] she replies as she leads you over to a nearby punching bag. Gesturing towards it, she steps back and states, [hannah.speech(Same routine as usual. You punch, and I'll correct your form.)]
+		[hannah.speech(当然，[pc.name]。)]她一边回答，一边把你带到附近的一个沙袋前。她朝它做了个手势，后退几步说，[hannah.speech(和往常一样。你打，然后我来纠正你的动作。)]
 	</p>
 	<p>
-		Doing as you're told, you start striking the target in front of you. Hannah interrupts to provide some pointers on how to position yourself and how to deliver different types of punches. After you're done there, she gets you to use the gym's equipment to work on your agility, speed, and reflexes. Finally, after a total of one hour spent practising in this manner, Hannah declares, [hannah.speech(Good work, [pc.name]! Now it's time for some sparring.)]
+		你听从命令，拳击着面前的目标。汉娜时不时地打断，教了如何摆好姿势，以及一些不同的拳法。做完后，她又带你到健身房的器械那里，锻炼灵活性、速度和反应能力。最终你练了整整一个小时。汉娜宣称道，[hannah.speech(干得不错，[pc.name]！不过搏击时间到了！)]
 	</p>
 	#IF(hannah.isVisiblyPregnant())
 		<p>
-			After gesturing to her swollen, pregnant belly to excuse herself from being your sparring partner, Hannah calls out to one of the other gym members who are working out nearby, [hannah.speech(Hey, [style.random(Toby|Rob|Jack|Dan|Mike)]! [pc.Name] needs a sparring partner, you up for it?!)]
+			汉娜指了指自己的孕肚，示意没法陪练。然后叫住了正在附近锻炼的健身房成员，[hannah.speech(喂，[style.random(托比|罗伯|杰克|丹|麦克)]！[pc.Name]需要搏击对象，想来吗？！)]
 		</p>
 		<p>
-			Returning a response in the affirmative, your new sparring partner walks over to where you're standing and says hello. Getting into the ring with him, you spend the next thirty minutes sparring under the supervision of Hannah. Finally, as you start to feel worn out and your movements become sluggish, she declares that you've done enough and thanks your partner for their time.
+			在得到积极回应后，你的新搭档走到你站立的地方，友好地向你打了个招呼。随后，你们一同踏入拳击场，在汉娜的监督下进行了接下来的30分钟的搏击对练。最终，当你感到体力逐渐透支，动作变得略显迟缓时，汉娜宣布你已经完成了足够的训练，并对你的搭档表示感谢。
 		</p>
 	#ELSE
 		<p>
-			Following Hannah into the ring, you listen to her instructions before starting to trade blows with one another. You can tell that she's holding back a lot, but even so you struggle to keep up with her footwork, and only manage to land one blow for every four or five of hers. After thirty minutes of sparring with her, you start to feel really worn out and your movements become sluggish. Calling an end to the session, Hannah declares that you've done enough and it's time to rest.
+			跟随着汉娜进入拳击场，你聆听她对拳击的指导，然后开始与对方交手。你可以感觉到她有所保留，尽管如此，你仍努力跟随着她的步法，但是每四五招中才能成功还击一次。在与她对练了三十分钟后，你感到相当疲惫，动作也变得迟缓。结束这一回合，汉娜宣布你已经付出了足够的努力，现在是时候休息了。
 		</p>
 	#ENDIF
 	<p>
-		Getting out of the ring, you sit down on a nearby bench to get your breath back. Patting you on the shoulder, the [hannah.race] lets out another of her half-hyena, half-human laughs and declares, [hannah.speech(You really are a natural at this! There's nothing more I can teach you!)]
+		你走出拳击场，坐在附近的长椅上喘口气。[hannah.race]拍着你的肩膀，又发出了半人半鬣狗的笑声，宣布道，[hannah.speech(你真是天生的高手！我没有什么可以再教你的了！)]
 	</p>
 	<p>
-		As you think back over all of the techniques that you've learned, you realise that the [hannah.race] is right, and that you no longer need any lessons from her. As you take a moment to appreciate your satisfaction at becoming a formidable martial artist, Hannah sits down next to you and asks, [hannah.speech(Hey, [pc.name], you ever heard of the bar, 'Lights Out'?)]
+		你回顾了一下之前学过的技巧，才意识到这[hannah.race]说得对，你不需要再上她的课了。成为一名优秀的武术家所带来的满足感让你沉浸许久，这是汉娜坐到了你身旁，问道，[hannah.speech(嘿，[pc.name]，你有没有听说过‘影液’这家酒吧？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_LESSON_FINAL_END"><![CDATA[
 	<p>
-		Telling her that you haven't, you ask her what made her ask that question. Flashing you a grin, she answers your question by stating, [hannah.speech(It's where I go after work, and I was hoping that I'd see you there one evening. It's in the nightlife district, near to that popular place, 'The Watering Hole'. Just mention my name to the bouncer to get in.)]
+		你告诉她你没有，然后问她为什么问这个问题。她向你咧嘴一笑，回答道，[hannah.speech(那是我下班后常去的地方，我希望某天晚上能在那里见到你。它在夜生活区，离那个很受欢迎的‘饮水洼夜店’很近。你只用向保镖提一下我的名字就能进去。)]
 	</p>
 	<p>
-		After you've told Hannah that you'll try to meet her there one evening, she reveals, [hannah.speech(I don't offer this to every student I get, you know. You're a natural at boxing, and saw my training through to the end, which is more than I can say for most of the people who come here. That's why I've invited you... That, and I've kind of grown to like you.)]
+		你告诉汉娜你会想办法在某个晚上在那里与她见面，她透露道，[hannah.speech(你要知道，我并没有给每个学生都这么说。你比来我这里的大多数人都厉害得多，能把我的训练进行到底，简直是个天生的拳击手，这就是我邀请你的原因……这也是我越来越喜欢你的原因。)]
 	</p>
 	<p>
-		Before you can reply to this, Hannah stands up and turns to face you, before stating, [hannah.speech(I like to keep my work and private life separate, so let's leave it at that for now. If you're interested, meet me at 'Lights Out'; I'm there every evening between nine and midnight. Now, is there anything else I can do for you while you're here?)]
+		汉娜在你回答之前就站起身，转身面对着你，说道，[hannah.speech(我比较喜欢工作和私人生活分开，所以就到这吧。如果你感兴趣，可以在晚上九点到午夜之间到‘影液’找到我。现在还有什么别的事我可以为你做的吗？)]
 	</p>
 	<p>
-		Wondering whether or not to pay Hannah a visit at this bar, you stand up and prepare to make your next move...
+		你考虑着要不要去柜台看看汉娜，站在原地，决定下一步动作……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_PERK_PROGRESS_COMPLETE"><![CDATA[
 	<p style='text-align:center;'><i>
-		You feel completely exhausted from your boxing lesson, and will be unable to do any more exercise until you've had time to recover.
+		拳击课后，你感到筋疲力尽，恢复之前无法再做任何运动。
 		<br/>
-		You've [style.colourExcellent(completed your progress)] towards gaining a [style.colourPhysique(unique perk)]!
+		你[style.colourMinorGood(已完成)]某项[style.colourPhysique(独特天赋)]的进展！
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BOXING_PERK_PROGRESS"><![CDATA[
 	<p style='text-align:center;'><i>
-		You feel completely exhausted from your boxing lesson, and will be unable to do any more exercise until you've had time to recover.
+		拳击课后，你感到筋疲力尽，恢复之前无法再做任何运动。
 		<br/>
-		You've [style.colourMinorGood(gained [#SPECIAL_PARSE_0]% progress)] towards gaining a [style.colourPhysique(unique perk)]!
-		<br/><b>Total progress: [#SPECIAL_PARSE_1]%</b>
+		某项[style.colourPhysique(独特天赋)][style.colourMinorGood(进度增长[#SPECIAL_PARSE_0]%)]！
+		<br/><b>累计：[#SPECIAL_PARSE_1]%</b>
 	</i></p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

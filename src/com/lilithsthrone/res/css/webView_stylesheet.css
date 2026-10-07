@@ -1,8 +1,8 @@
 html {
 	background: #1e1e20;
-	font-family: Calibri, Carlito, sans-serif;
-	font-size:18px; /*font-size:2vw;*/
-	line-height:24px;
+	font-family:"Source Han Sans CN", Calibri, Carlito, sans-serif;
+	font-size:14px; /*font-size:2vw;*/
+	line-height:21px;
 	color: #DDDDDD;
 	margin:0;
 	padding:0;
@@ -94,29 +94,29 @@ div.list {
 div.list code {
 	background-color: #19191a;
 	/* Font-stack from: https://css-tricks.com/snippets/css/font-stacks/ */
-	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-	font-size: 18px;
+	font-family:"Source Han Sans CN", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	font-size: 14px;
 }
 
 div.list h2 {
-	font-size: 22px;
-	line-height: 26px;
+	font-size: 17px;
+	line-height: 23px;
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
 }
 
 div.list h3 {
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 16px;
+	line-height: 21px;
 	font-weight: bold;
 	margin: 0;
 	padding: 12px 0 4px;
 }
 
 div.list h4 {
-	font-size: 18px;
-	line-height: 22px;
+	font-size: 14px;
+	line-height: 19px;
 	font-weight: bold;
 	margin: 0;
 	padding: 8px 0 4px;
@@ -140,44 +140,44 @@ div.list > ul > li:before {
 }
 
 h1{
-	font-size:32px;
-	line-height:36px;
+	font-size:25px;
+	line-height:32px;
 	font-weight: bold;
 	margin:0 auto;
 	padding:8px;
 }
 h2{
-	font-size:30px;
-	line-height:34px;
+	font-size:24px;
+	line-height:30px;
 	font-weight: bold;
 	margin:0 auto;
 	padding:8px;
 	max-width:800px;
 }
 h3{
-	font-size:28px;
-	line-height:32px;
-	font-weight: bold;
-	margin:0 auto;
-	padding:8px;
-}
-h4{
-	font-size:26px;
-	line-height:30px;
-	font-weight: bold;
-	margin:0 auto;
-	padding:8px;
-}
-h5{
-	font-size:24px;
+	font-size:22px;
 	line-height:28px;
 	font-weight: bold;
 	margin:0 auto;
 	padding:8px;
 }
+h4{
+	font-size:20px;
+	line-height:27px;
+	font-weight: bold;
+	margin:0 auto;
+	padding:8px;
+}
+h5{
+	font-size:19px;
+	line-height:25px;
+	font-weight: bold;
+	margin:0 auto;
+	padding:8px;
+}
 h6{
-	font-size:22px;
-	line-height:26px;
+	font-size:17px;
+	line-height:23px;
 	font-weight: bold;
 	margin:0 auto;
 	padding:8px;
@@ -213,9 +213,9 @@ td, th{
 
 input {
 	background:#333;
-	font-family: Calibri, Carlito, sans-serif;
-	font-size:18px; /*font-size:2vw;*/
-	line-height:24px;
+	font-family:"Source Han Sans CN", Calibri, Carlito, sans-serif;
+	font-size:14px; /*font-size:2vw;*/
+	line-height:21px;
 	color: #DDDDDD;
 	border: 2px solid #666;
     border-radius: 4px;
@@ -225,9 +225,9 @@ input:focus {
 }
 textarea {
 	background:#333;
-	font-family: Calibri, Carlito, sans-serif;
-	font-size:18px; /*font-size:2vw;*/
-	line-height:24px;
+	font-family:"Source Han Sans CN", Calibri, Carlito, sans-serif;
+	font-size:14px; /*font-size:2vw;*/
+	line-height:21px;
 	color: #DDDDDD;
 	border: 2px solid #666;
 	border-radius: 4px;
@@ -448,7 +448,7 @@ textarea:focus {
 	font-size:1.2em;
 	font-weight: bold;
 	text-align:center;
-	line-height:20px;
+	line-height:18px;
 	
 	width:88vw;
 	height:20px;
@@ -487,7 +487,7 @@ textarea:focus {
 	position:absolute;
 	width:40%;
 	height:18px;
-	font-size:16px;
+	font-size:14px;
 	line-height:12px;
 }
 
@@ -509,8 +509,8 @@ textarea:focus {
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:18px;
-	line-height:22px;
+	font-size:14px;
+	line-height:19px;
 	
 	padding:1%;
 	margin:1%;
@@ -534,7 +534,7 @@ textarea:focus {
 	font-size:1.4em;
 	font-weight: bold;
 	text-align:center;
-	line-height:20px;
+	line-height:18px;
 	
 	width:96%;
 	height:20px;
@@ -567,10 +567,10 @@ textarea:focus {
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	width:31%;
 	margin:1%;
@@ -591,7 +591,7 @@ textarea:focus {
 	width:24px;
 	height:24px;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	cursor:pointer;
 	
 	background-color: #333;
@@ -697,7 +697,7 @@ position:relative;
 	
 	text-align:center;
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 16px;
 
 	border-radius: 5px;
@@ -745,10 +745,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	margin:4px 8px 4px 8px;
 	padding:8px;
@@ -764,10 +764,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	padding:1%;
 	margin:1%;
@@ -839,8 +839,8 @@ position:relative;
 	height: auto;
 }
 .combat-display{
-	font-size:18px;
-	line-height:24px;
+	font-size:14px;
+	line-height:21px;
 	width:28%;
 	margin:1%;
 	padding:0;
@@ -1155,7 +1155,7 @@ position:relative;
 	vertical-align: middle;
 }
 .item-count{
-	font-size:14px;
+	font-size:12px;
 	line-height:14px;
 	position:absolute;
 	text-align: right;
@@ -1165,7 +1165,7 @@ position:relative;
 	text-shadow: 2px 0 0 #19191a, -2px 0 0 #19191a, 0 2px 0 #19191a, 0 -2px 0 #19191a, 1px 1px #19191a, -1px -1px 0 #19191a, 1px -1px 0 #19191a, -1px 1px 0 #19191a;
 }
 .item-price{
-	font-size:14px;
+	font-size:12px;
 	line-height:14px;
 	position:absolute;
 	text-align: right;
@@ -1251,10 +1251,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	margin:4px 1%;
 	padding:8px;
@@ -1269,10 +1269,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	margin:4px 1%;
 	padding:8px;
@@ -1295,10 +1295,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	margin:4px 1%;
 	padding:8px;
@@ -1312,10 +1312,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:18px;
+	font-size:14px;
 	font-weight: bold;
 	text-align:center;
-	line-height:22px;
+	line-height:19px;
 	
 	margin:4px 1%;
 	padding:8px;
@@ -1329,10 +1329,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	margin:4px 1%;
 	padding:8px;
@@ -1351,10 +1351,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	margin:4px 1%;
 	padding:8px;
@@ -1426,7 +1426,7 @@ position:relative;
 	width:80px;
 	height:24px;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	cursor:pointer;
 	
 	float:left;
@@ -1552,12 +1552,12 @@ position:relative;
 }
 @media screen and (min-width: 666px) {
 	.enchanting-text{
-		font-size:20px;
-		line-height:20px;
+		font-size:16px;
+		line-height:18px;
 	}
 	.enchant-button-add{
-		font-size:20px;
-		line-height:20px;
+		font-size:16px;
+		line-height:18px;
 	}
 }
 
@@ -1661,10 +1661,10 @@ position:relative;
 	background:#19191a;
 	border-radius:5px;
 	
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:24px;
+	line-height:21px;
 	
 	margin:0;
 	padding:8px;
@@ -1822,8 +1822,8 @@ position:relative;
     border-radius: 5px;
     margin:0 8px 8px 8px;
     padding:8px;
-	font-size:16px;
-	line-height:22px;
+	font-size:14px;
+	line-height:19px;
 }
 
 .speech{
@@ -1837,7 +1837,7 @@ position:relative;
     content: '"';
 }
 .speech.doll {
-	font-family: consolas, serif;
+	font-family:"Source Han Sans CN", consolas, serif;
 	font-size:0.8em;
 	/*line-height:1.2em;*/
 }
@@ -1961,7 +1961,7 @@ position:relative;
 	left:0;
 	right:0;
 	text-align:center;
-	font-size:24px;
+	font-size:19px;
 	opacity: 0.0;
 	text-shadow: 2px 0 0 #19191a, -2px 0 0 #19191a, 0 2px 0 #19191a, 0 -2px 0 #19191a, 1px 1px #19191a, -1px -1px 0 #19191a, 1px -1px 0 #19191a, -1px 1px 0 #19191a;
 	pointer-events: none;
@@ -2226,7 +2226,7 @@ position:relative;
 	border-radius: 5px;
 	background-color: #333333;
 	text-align: center;
-	line-height:94px;
+	line-height:84px;
 	-webkit-user-select: none;
 	
 	background: -webkit-gradient(
@@ -2284,7 +2284,7 @@ position:relative;
 	position:absolute;
 	width:50%;
 	height:18px;
-	font-size:10px;
+	font-size:9px;
 	line-height:12px;
 	right:2px;
 	top:1px;
@@ -2400,11 +2400,11 @@ position:relative;
 	padding: 4px 4px 4px 4px;
 	margin:0;
 	font-size:1em;
-	line-height:24px;
+	line-height:21px;
 	-webkit-user-select: none;
 }
 .response-text.selected{
-	line-height:20px;
+	line-height:18px;
 }
 
 .response-icon-leftTop{

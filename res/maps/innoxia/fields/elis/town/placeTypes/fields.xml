@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[fields]]></name>
-	<tooltipDescription><![CDATA[The land around Elis consists of either natural meadows or fields of crops.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the fields outside Elis]]></virginityLossDescription>
+	<name><![CDATA[田野]]></name>
+	<tooltipDescription><![CDATA[伊利斯郊外要么是天然草场，要么是庄稼地。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯城外的田野里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>false</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND_GREEN</backgroundColour>

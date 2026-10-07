@@ -103,7 +103,7 @@ public class PregnancyRoulette {
 		}
 	}
 	
-	public static final DialogueNode PREGNANCY_ROULETTE = new DialogueNode("Pregnancy Roulette Counter", "", false) {
+	public static final DialogueNode PREGNANCY_ROULETTE = new DialogueNode("怀孕轮盘赌柜台", "", false) {
 		
 		@Override
 		public boolean isTravelDisabled() {
@@ -144,19 +144,19 @@ public class PregnancyRoulette {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.playedPregnancyRouletteAsBreeder) || Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.playedPregnancyRouletteAsMother)) {
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "Returning her greeting, you walk up to the counter, where the happy horse-girl asks, [epona.speech(You interested in having another go at pregnancy roulette?");
+								+ "你走到柜台旁，也向她问好，那满面春光的马女问起来，[epona.speech(还有兴趣再来一场怀孕轮盘赌吗？");
 					
 					if(Main.game.getDialogueFlags().eponaStamps>=6) {
-						UtilText.nodeContentSB.append(" Or perhaps you want to cash in your stamps and take me for a ride!)]"
+						UtilText.nodeContentSB.append("或者你想兑现印章，来骑一场！)]"
 								+ "</p>");
 					} else {
-						UtilText.nodeContentSB.append(" You've got "+Util.intToString(6-Main.game.getDialogueFlags().eponaStamps)+" stamps to go until you get to take me for a ride!)]"
+						UtilText.nodeContentSB.append("你还需要"+Util.intToString(6-Main.game.getDialogueFlags().eponaStamps)+"个印章才能来骑呢！)]"
 								+ "</p>");
 					}
 				}  else {
 					UtilText.nodeContentSB.append(
 							"<p>"
-								+ "Returning her greeting, you walk up to the counter, where the happy horse-girl asks, [epona.speech(You interested in having a go at pregnancy roulette? Gotta start collecting those stamps!)]"
+								+ "你走到柜台旁，也向她问好，那满面春光的马女问起来，[epona.speech(有兴趣再来一场怀孕轮盘赌吗？开始收集印章吧！)]"
 							+ "</p>");
 				}
 			}
@@ -168,7 +168,7 @@ public class PregnancyRoulette {
 		public Response getResponse(int responseTab, int index) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.eponaIntroduced)) {
 				if(index==1) {
-					return new Response("Continue", "Now that Epona has told you about the game of pregnancy roulette, you wonder what you should do next...", PREGNANCY_ROULETTE_GREETING_UTIL) {
+					return new Response("继续", "伊波娜已经告诉了你怀孕轮盘赌的规则，你思索着接下来该做什么……", PREGNANCY_ROULETTE_GREETING_UTIL) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.eponaIntroduced, true);
@@ -181,7 +181,7 @@ public class PregnancyRoulette {
 				
 			} else if(Main.game.getNpc(Epona.class).isVisiblyPregnant() && !Main.game.getNpc(Epona.class).isCharacterReactedToPregnancy(Main.game.getPlayer())) {
 				if(index==1) {
-					return new Response("Continue", "You're happy to see how delighted Epona is to be the mother of your children.", PREGNANCY_ROULETTE_GREETING_UTIL) {
+					return new Response("继续", "见到伊波娜做了孩子的妈妈，你开心得很。", PREGNANCY_ROULETTE_GREETING_UTIL) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Epona.class).setCharacterReactedToPregnancy(Main.game.getPlayer(), true);
@@ -194,29 +194,29 @@ public class PregnancyRoulette {
 				
 			} else {
 				if(index == 1) {
-					return new Response("Rules", "Ask Epona about the rules for pregnancy roulette.", PREGNANCY_ROULETTE_RULES);
+					return new Response("规则", "询问伊波娜怀孕轮盘赌的规则。", PREGNANCY_ROULETTE_RULES);
 					
 				} else if(index==2) {
 					if(Main.game.getPlayer().isPregnant()) {
-						return new Response("Male Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You are already pregnant, so you can't sign up to be the mother!", null);
+						return new Response("雄性配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你已经怀孕了，所以无法报名“母亲”一方！", null);
 						
 					} else if(Main.game.getPlayer().hasIncubationLitter(SexAreaOrifice.VAGINA)) {
-						return new Response("Male Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "Your womb is full of eggs, so you can't sign up to be the mother!", null);
+						return new Response("雄性配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你的子宫里装满了卵，所以无法报名“母亲”一方！", null);
 						
 					} else if(Main.game.getPlayer().getTotalFluidInArea(SexAreaOrifice.VAGINA)>0) {
-						return new Response("Male Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You can't sign up for pregnancy roulette if your pussy already is full of cum!", null);
+						return new Response("雄性配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "如果小穴里已经装满精液，就无法报名怀孕轮盘赌了！", null);
 						
 					} else if(!Main.game.getPlayer().hasVagina()) {
-						return new Response("Male Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You don't have a vagina, so you can't sign up to be the mother!", null);
+						return new Response("雄性配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你没有阴道，所以无法报名“母亲”一方！", null);
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						return new Response("Male Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You aren't able to gain access to your vagina, so you can't sign up to be the mother!", null);
+						return new Response("雄性配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你不能使用自己的阴道，所以无法报名“母亲”一方！", null);
 						
 					} else if(Main.game.getPlayer().getMoney()<10000) {
-						return new Response("Male Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You don't have enough money, so you can't sign up to be the mother!", null);
+						return new Response("雄性配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你的钱不够，所以无法报名“母亲”一方！", null);
 						
 					} else {
-						return new Response("Male Bred ("+UtilText.formatAsMoney(10000, "span")+")", "Sign up as the mother for pregnancy roulette, asking to bred by the males.", PREGNANCY_ROULETTE_MOTHER_PRE_SELECTION) {
+						return new Response("雄性配种("+UtilText.formatAsMoney(10000, "span")+")", "报名成为怀孕轮盘赌的“母亲”一方，被雄性配种。", PREGNANCY_ROULETTE_MOTHER_PRE_SELECTION) {
 							@Override
 							public Colour getHighlightColour() {
 								return PresetColour.GENERIC_SEX;
@@ -244,25 +244,25 @@ public class PregnancyRoulette {
 					
 				} else if(index==3) {
 					if(Main.game.getPlayer().isPregnant()) {
-						return new Response("Futa Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You are already pregnant, so you can't sign up to be the mother!", null);
+						return new Response("扶她配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你已经怀孕了，所以无法报名“母亲”一方！", null);
 						
 					} else if(Main.game.getPlayer().hasIncubationLitter(SexAreaOrifice.VAGINA)) {
-						return new Response("Futa Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "Your womb is full of eggs, so you can't sign up to be the mother!", null);
+						return new Response("扶她配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你的子宫里装满了卵，所以无法报名“母亲”一方！", null);
 						
 					} else if(Main.game.getPlayer().getTotalFluidInArea(SexAreaOrifice.VAGINA)>0) {
-						return new Response("Futa Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You can't sign up for pregnancy roulette if your pussy already is full of cum!", null);
+						return new Response("扶她配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "如果小穴里已经装满精液，就无法报名怀孕轮盘赌了！", null);
 						
 					} else if(!Main.game.getPlayer().hasVagina()) {
-						return new Response("Futa Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You don't have a vagina, so you can't sign up to be the mother!", null);
+						return new Response("扶她配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你没有阴道，所以无法报名“母亲”一方！", null);
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-						return new Response("Futa Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You aren't able to gain access to your vagina, so you can't sign up to be the mother!", null);
+						return new Response("扶她配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你不能使用自己的阴道，所以无法报名“母亲”一方！", null);
 						
 					} else if(Main.game.getPlayer().getMoney()<10000) {
-						return new Response("Futa Bred ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You don't have enough money, so you can't sign up to be the mother!", null);
+						return new Response("扶她配种("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你的钱不够，所以无法报名“母亲”一方！", null);
 						
 					} else {
-						return new Response("Futa Bred ("+UtilText.formatAsMoney(10000, "span")+")", "Sign up as the mother for pregnancy roulette, asking to bred by the futas.", PREGNANCY_ROULETTE_MOTHER_PRE_SELECTION) {
+						return new Response("扶她配种("+UtilText.formatAsMoney(10000, "span")+")", "报名成为怀孕轮盘赌的“母亲”一方，被扶她配种。", PREGNANCY_ROULETTE_MOTHER_PRE_SELECTION) {
 							@Override
 							public Colour getHighlightColour() {
 								return PresetColour.GENERIC_SEX;
@@ -290,19 +290,19 @@ public class PregnancyRoulette {
 					
 				} else if(index==4) {
 					if(!Main.game.getPlayer().hasPenisIgnoreDildo()) {
-						return new Response("Breeder ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You don't have a penis, so you can't sign up to be one of the breeders!", null);
+						return new Response("繁育者("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你没有阴茎，所以无法报名“繁育者”一方！", null);
 						
 					} else if(!Main.game.getPlayer().isAbleToOrgasm()) {
-						return new Response("Breeder ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You are unable to orgasm, so you can't sign up to be one of the breeders!", null);
+						return new Response("繁育者("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你无法高潮，所以无法报名“繁育者”一方！", null);
 						
 					} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
-						return new Response("Breeder ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You aren't able to gain access to your penis, so you can't sign up to be one of the breeders!", null);
+						return new Response("繁育者("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你不能使用自己的阴茎，所以无法报名“繁育者”一方！", null);
 						
 					} else if(Main.game.getPlayer().getMoney()<10000) {
-						return new Response("Breeder ("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "You don't have enough money, so you can't sign up to be one of the breeders!", null);
+						return new Response("繁育者("+UtilText.formatAsMoneyUncoloured(10000, "span")+")", "你的钱不够，所以无法报名“繁育者”一方！", null);
 						
 					} else {
-						return new Response("Breeder ("+UtilText.formatAsMoney(10000, "span")+")", "Sign up as one of the breeders for pregnancy roulette.", PREGNANCY_ROULETTE_BREEDER) {
+						return new Response("繁育者("+UtilText.formatAsMoney(10000, "span")+")", "报名成为怀孕轮盘赌的繁育者。", PREGNANCY_ROULETTE_BREEDER) {
 							@Override
 							public Colour getHighlightColour() {
 								return PresetColour.GENERIC_SEX;
@@ -353,10 +353,10 @@ public class PregnancyRoulette {
 					
 				} else if(index==6) {
 					if(Main.game.getDialogueFlags().eponaStamps<6) {
-						return new Response("Ride Epona", "You haven't collected enough stamps to take Epona for a ride! You have "+Util.intToString(Main.game.getDialogueFlags().eponaStamps)+", and you need at least six.", null);
+						return new Response("骑乘伊波娜", "你没收集到足够的印章，不能骑乘伊波娜！至少需要六个印章，你现在拥有"+Util.intToString(Main.game.getDialogueFlags().eponaStamps)+"个。", null);
 						
 					} else {
-						return new ResponseSex("Ride Epona", "Tell Epona that you want to cash in your stamps and take her for a ride. (Have sex as the dominant partner.)",
+						return new ResponseSex("骑乘伊波娜", "告诉伊波娜你想交出印章，来骑乘她。(作为支配方开始性爱。)",
 								null, null, null, null, null, null,
 								true, true,
 								new SMGeneric(
@@ -380,10 +380,10 @@ public class PregnancyRoulette {
 					
 				} else if(index==7) {
 					if(Main.game.getDialogueFlags().eponaStamps<6) {
-						return new Response("Epona Rides", "You haven't collected enough stamps to get Epona to take you for a ride! You have "+Util.intToString(Main.game.getDialogueFlags().eponaStamps)+", and you need at least six.", null);
+						return new Response("伊波娜骑乘", "你没收集到足够的印章，不能被伊波娜骑！至少需要六个印章，你现在拥有"+Util.intToString(Main.game.getDialogueFlags().eponaStamps)+"个。", null);
 						
 					} else {
-						return new ResponseSex("Epona Rides", "Tell Epona that you want to cash in your stamps and have her take you for a ride. (Have sex as the submissive partner.)",
+						return new ResponseSex("伊波娜骑乘", "告诉伊波娜你想交出印章，让她骑你。(作为服从方开始性爱。)",
 								null, null, null, null, null, null,
 								true, true,
 								new SMGeneric(
@@ -406,7 +406,7 @@ public class PregnancyRoulette {
 					}
 					
 				} else if(index==11 && Main.game.getNpc(Murk.class).isSlave()) {
-					return new Response("[murk.Name]", "Ask Epona if you can see [murk.name].", MURK);
+					return new Response("[murk.Name]", "问伊波娜你能不能看看[murk.name]。", MURK);
 					
 				} else {
 					return null;
@@ -415,7 +415,7 @@ public class PregnancyRoulette {
 		}
 	};
 	
-	public static final DialogueNode EPONA_POST_SEX = new DialogueNode("Finished", "Epona takes a moment to catch her breath, before getting ready to return to work.", false) {
+	public static final DialogueNode EPONA_POST_SEX = new DialogueNode("结束", "伊波娜花了一会调整呼吸，准备回去工作。", false) {
 		
 		@Override
 		public String getContent() {
@@ -433,7 +433,7 @@ public class PregnancyRoulette {
 		
 	};
 	
-	public static final DialogueNode PREGNANCY_ROULETTE_GREETING_UTIL = new DialogueNode("Pregnancy Roulette Counter", "", false, true) {
+	public static final DialogueNode PREGNANCY_ROULETTE_GREETING_UTIL = new DialogueNode("怀孕轮盘赌柜台", "", false, true) {
 		
 		@Override
 		public String getContent() {
@@ -447,7 +447,7 @@ public class PregnancyRoulette {
 		
 	};
 	
-	public static final DialogueNode PREGNANCY_ROULETTE_RULES = new DialogueNode("Pregnancy Roulette Counter", "", false) {
+	public static final DialogueNode PREGNANCY_ROULETTE_RULES = new DialogueNode("怀孕轮盘赌柜台", "", false) {
 		
 		@Override
 		public String getContent() {
@@ -465,7 +465,7 @@ public class PregnancyRoulette {
 		
 		sb.append("<div class='container-half-width'>"
 				+ "[npc.Name] - [npc.FullRace(true)]<br/>"
-				+ "[npc.CockGirth], [npc.penisValue], [npc.cockColour(true)] [npc.cockRace] [npc.cock], with [npc.ballSize] balls."
+				+ "[pc.cockColour(true)]的[pc.cockRace][pc.cock]有[pc.penisValue]长，[pc.CockGirth]的棒体，阴囊[pc.ballSize]。"
 				+ "</div>");
 		
 		return UtilText.parse(breeder, sb.toString());
@@ -491,7 +491,7 @@ public class PregnancyRoulette {
 				return null;
 				
 			} else if(index==1) {
-				return new Response("Wait", "Wait for Epona to lead the breeders into the room.", PREGNANCY_ROULETTE_MOTHER_SELECTION) {
+				return new Response("等待", "等待伊波娜带领繁育者进入房间。", PREGNANCY_ROULETTE_MOTHER_SELECTION) {
 					@Override
 					public void effects() {
 						Main.game.getNpc(Epona.class).useItem(Main.game.getItemGen().generateItem("innoxia_pills_fertility"), Main.game.getPlayer(), false);
@@ -533,7 +533,7 @@ public class PregnancyRoulette {
 				
 			} else if(index<=breeders.size()) {
 				NPC breeder = breeders.get(index-1);
-				return new Response(breeder.getName(true), "Tell Epona that you think "+breeder.getName(true)+" will get you pregnant.", PREGNANCY_ROULETTE_MOTHER_START) {
+				return new Response(breeder.getName(true), "告诉伊波娜你觉得"+breeder.getName(true)+"能让你怀孕。", PREGNANCY_ROULETTE_MOTHER_START) {
 					@Override
 					public void effects() {
 						selectedBreeder=breeder;
@@ -560,12 +560,12 @@ public class PregnancyRoulette {
 				NPC breeder = breeders.get(breederIndex);
 				
 				if(!Main.game.getPlayer().isTaur() && !Main.game.getPlayer().hasLegs() && Main.game.getPlayer().getGenitalArrangement()!=GenitalArrangement.CLOACA_BEHIND) {
-					return new Response("Front "+breeder.getName(true),
-							"Due to your lack of legs and fact that you have a front-facing vagina, you're unable to be bred by lying on your front. You'll have to lie down on your back instead...",
+					return new Response("面对"+breeder.getName(true),
+							"由于你没有腿，而且阴道位置向前，没法趴着接受配种。你不得不躺下来……",
 							null);
 				}
 				
-				return new ResponseSex("Front "+breeder.getName(true), "Lie on your front, where "+breeder.getName(true)+" will be the first to move up to fuck you.",
+				return new ResponseSex("面对"+breeder.getName(true), "面朝上躺下，让"+breeder.getName(true)+"第一个来上你。",
 						null, null, null, null, null, null,
 						true, false,
 						new SMBreedingStall(
@@ -591,18 +591,18 @@ public class PregnancyRoulette {
 				NPC breeder = breeders.get(breederIndex);
 
 				if(Main.game.getPlayer().isTaur()) {
-					return new Response("Back "+breeder.getName(true),
-							"Due to your lower body being that of a feral [pc.legRace], you're unable to fit into the breeding stall by lying on your back. You'll have to lie down on your front instead...",
+					return new Response("背对"+breeder.getName(true),
+							"由于你的下半身是兽态的[pc.legRace]，所以没法躺到配种台上。你不得不趴下来……",
 							null);
 				}
 				
 				if(!Main.game.getPlayer().hasLegs() && Main.game.getPlayer().getGenitalArrangement()==GenitalArrangement.CLOACA_BEHIND) {
-					return new Response("Back "+breeder.getName(true),
-							"Due to your lack of legs and fact that you have a rear-facing vagina, you're unable to be bred by lying on your back. You'll have to lie down on your front instead...",
+					return new Response("背对"+breeder.getName(true),
+							"由于你没有腿，而且阴道位置向后，没法躺着接受配种。你不得不趴下来……",
 							null);
 				}
 				
-				return new ResponseSex("Back "+breeder.getName(true), "Lie on your back, where "+breeder.getName(true)+" will be the first to move up to fuck you.",
+				return new ResponseSex("背对"+breeder.getName(true), "面朝下趴下，让"+breeder.getName(true)+"第一个来上你。",
 						null, null, null, null, null, null,
 						true, false,
 						new SMBreedingStall(
@@ -633,11 +633,11 @@ public class PregnancyRoulette {
 	public static final DialogueNode AFTER_ROULETTE_SEX = new DialogueNode("", "", true) {
 		@Override
 		public String getLabel() {
-			return breeders.get(breederIndex-1).getName(true)+" is done";
+			return breeders.get(breederIndex-1).getName(true)+"完事了";
 		}
 		@Override
 		public String getDescription() {
-			return UtilText.parse(breeders.get(breederIndex-1), "Now that [npc.name] has had [npc.her] turn and given you a creampie, [npc.sheHasFull] to [npc.step] back...");
+			return UtilText.parse(breeders.get(breederIndex-1), "[npc.name]已经给你内射，结束了回合，于是退了下去……");
 		}
 		@Override
 		public String getContent() {
@@ -650,7 +650,7 @@ public class PregnancyRoulette {
 				if(index==1) {
 					NPC breeder = breeders.get(breederIndex);
 					
-					return new ResponseSex("Front "+breeder.getName(true), "Position yourself so that you're lying on your front, where "+breeder.getName(true)+" will be the next breeder to move up to fuck you.",
+					return new ResponseSex("面对"+breeder.getName(true), "调整姿势面朝上躺下，让"+breeder.getName(true)+"下一个来上你。",
 							null, null, null, null, null, null,
 							true, false,
 							new SMBreedingStall(
@@ -676,12 +676,12 @@ public class PregnancyRoulette {
 					NPC breeder = breeders.get(breederIndex);
 
 					if(Main.game.getPlayer().isTaur()) {
-						return new Response("Back "+breeder.getName(true),
-								"Due to your lower body being that of a feral [pc.legRace], you're unable to fit into the breeding stall by lying on your back. You'll have to lie down on your front instead...",
+						return new Response("背对"+breeder.getName(true),
+								"由于你的下半身是兽态的[pc.legRace]，所以没法躺到配种台上。你不得不趴下来……",
 								null);
 					}
 					
-					return new ResponseSex("Back "+breeder.getName(true), "Position yourself so that you're lying on your back, where "+breeder.getName(true)+" will be the next breeder to move up to fuck you.",
+					return new ResponseSex("背对"+breeder.getName(true), "调整姿势面朝下趴着，让"+breeder.getName(true)+"下一个来上你。",
 							null, null, null, null, null, null,
 							true, false,
 							new SMBreedingStall(
@@ -709,7 +709,7 @@ public class PregnancyRoulette {
 				
 			} else {
 				if(index==1) {
-					return new Response("Finished", "All six of the breeders have deposited their cum in your [pc.pussy+].", PREGNANCY_ROULETTE_MOTHER_FINISHED) {
+					return new Response("结束", "所有六名繁育者都在你[pc.pussy+]中留下精液了。", PREGNANCY_ROULETTE_MOTHER_FINISHED) {
 						@Override
 						public void effects() {
 							Main.game.getTextEndStringBuilder().append(Main.game.getNpc(Epona.class).useItem(Main.game.getItemGen().generateItem(ItemType.PREGNANCY_TEST), Main.game.getPlayer(), false));
@@ -739,7 +739,7 @@ public class PregnancyRoulette {
 			if(index==1) {
 				if(Main.game.getPlayer().isPregnant()) {
 					if(Objects.equals(Main.game.getPlayer().getPregnantLitter().getFather(), selectedBreeder)) {
-						return new Response("Winner!", "You correctly guessed that "+selectedBreeder.getName(true)+" would be the father!", PREGNANCY_ROULETTE_MOTHER_WINNER) {
+						return new Response("你赢了！", "你成功猜中了，"+selectedBreeder.getName(true)+"正是孩子的父亲！", PREGNANCY_ROULETTE_MOTHER_WINNER) {
 							@Override
 							public void effects() {
 								Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE);
@@ -752,7 +752,7 @@ public class PregnancyRoulette {
 						};
 						
 					} else {
-						return new Response("Loser", "You incorrectly guessed that "+selectedBreeder.getName(true)+" would be the father, so lost your bet...", PREGNANCY_ROULETTE_MOTHER_LOSER){
+						return new Response("你输了", "你没有猜中"+selectedBreeder.getName(true)+"是孩子的父亲，所以输掉了赌注……", PREGNANCY_ROULETTE_MOTHER_LOSER){
 							@Override
 							public void effects() {
 								Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE);
@@ -765,7 +765,7 @@ public class PregnancyRoulette {
 					}
 						
 				} else {
-					return new Response("Loser", "You didn't get pregnant, so everyone loses their bets...", PREGNANCY_ROULETTE_MOTHER_LOSER_NO_PREGNANCY){
+					return new Response("你输了", "你没有怀上，所以所有人都输掉了赌注……", PREGNANCY_ROULETTE_MOTHER_LOSER_NO_PREGNANCY){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE);
@@ -834,18 +834,18 @@ public class PregnancyRoulette {
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-						+ "Epona rolls the dice, and you watch as it clatters to a halt on the number "+Util.intToString(roll)+"."
-						+ " [epona.speech(Alright, [pc.name], that means you're going "+Util.intToPosition(roll)+"! Now I'll keep rolling for the rest of you!)]"
+						+ "伊波娜投出骰子，你盯着骰子经过一番滚动，停在了数字"+Util.intToString(roll, false)+"上。"
+						+ "[epona.speech(那好吧，[pc.name]，你"+Util.intToPosition(roll)+"个上！我会继续给剩下的人投！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You all then have to wait while Epona rolls for each of the other breeders."
-						+ " Every time she rolls an already-rolled number, she has to re-roll the dice, which results in you all having to wait for far longer than if she'd just used a more efficient method of deciding who goes first."
+						+ "你们随后都在原地等侯伊波娜给其他繁育者投点数。"
+						+ "每次她投出已经出现的数字就会重投，如果她能选个更有效率的方式，你们大概不至于等这么久。"
 					+ "</p>"
 					+ "<p>"
-						+ "Eventually, however, Epona has finished, and you move forwards to take your place in the line..."
+						+ "不过，最终伊波娜还是完成了排序，你们走上前按顺序排成了一排……"
 					+ "</p>"
 					+ "<p style='text-align:center;'>"
-						+ "<i>You are going <b>"+Util.intToPosition(roll)+"</b>!</i>"
+						+ "<i>你是<b>"+Util.intToPosition(roll)+"个</b>！</i>"
 					+ "</p>");
 			
 			return UtilText.nodeContentSB.toString();
@@ -854,10 +854,10 @@ public class PregnancyRoulette {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1){
-				return new ResponseSex(roll==1?"First":"Your turn",
+				return new ResponseSex(roll==1?"先发":"你的回合",
 						roll==1
-							?"As you rolled a one, you're the first to have a go at fucking the volunteer."
-							:"As the breeder steps away from the volunteer, you step forwards to take your turn at fucking her creampied-pussy.",
+							?"由于你投出了一，所以你是第一个上场配种的。"
+							:"上一个繁育者已经退下，现在是你的回合，上前去准备开始干那溢满了精液的小穴。",
 						null, null, null, null, null, null,
 						true, false,
 						new SMBreedingStall(
@@ -892,10 +892,10 @@ public class PregnancyRoulette {
 		}
 	};
 	
-	public static final DialogueNode PREGNANCY_ROULETTE_BREEDER_POST_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode PREGNANCY_ROULETTE_BREEDER_POST_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(mother, "Now that you've had your turn and orgasmed, you have to step away from [npc.name]...");
+			return UtilText.parse(mother, "你已经高潮过，结束了回合，是时候从[npc.name]身边退开了……");
 		}
 		@Override
 		public String getContent() {
@@ -904,7 +904,7 @@ public class PregnancyRoulette {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wait", "Wait for Epona to return.", PREGNANCY_ROULETTE_BREEDER_FINISHED) {
+				return new Response("等待", "等伊波娜回来。", PREGNANCY_ROULETTE_BREEDER_FINISHED) {
 					@Override
 					public void effects() {
 						for(int i=roll-1; i<breeders.size(); i++) {
@@ -937,7 +937,7 @@ public class PregnancyRoulette {
 			if(index==1) {
 				if(mother.isPregnant()) {
 					if(mother.getPregnantLitter().getFather()!=null && mother.getPregnantLitter().getFather().isPlayer()) {
-						return new Response("Winner!", "You got "+mother.getName(true)+" pregnant!", PREGNANCY_ROULETTE_BREEDER_WINNER) {
+						return new Response("赢家！", "你让"+mother.getName(true)+"怀孕了！", PREGNANCY_ROULETTE_BREEDER_WINNER) {
 							@Override
 							public void effects() {
 								Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE);
@@ -951,7 +951,7 @@ public class PregnancyRoulette {
 						};
 						
 					} else {
-						return new Response("Loser", "You didn't get "+mother.getName(true)+" pregnant, so lost your bet...", PREGNANCY_ROULETTE_BREEDER_LOSER){
+						return new Response("你输了", "你没能让"+mother.getName(true)+"怀孕，所以你输掉了赌注……", PREGNANCY_ROULETTE_BREEDER_LOSER){
 							@Override
 							public void effects() {
 								Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE);
@@ -965,7 +965,7 @@ public class PregnancyRoulette {
 					}
 						
 				} else {
-					return new Response("Loser", "Nobody got "+mother.getName(true)+" pregnant, so everyone loses their bets...", PREGNANCY_ROULETTE_BREEDER_LOSER_NO_PREGNANCY){
+					return new Response("你输了", "没有人让"+mother.getName(true)+"怀孕，所以所有人都输掉了赌注……", PREGNANCY_ROULETTE_BREEDER_LOSER_NO_PREGNANCY){
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.GAMBLING_DEN, PlaceType.GAMBLING_DEN_PREGNANCY_ROULETTE);
@@ -1034,7 +1034,7 @@ public class PregnancyRoulette {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Enter", "Enter the room which [murk.name] is being kept in...", MURK_ALONE) {
+				return new Response("进入", "进入关押[murk.name]的房间……", MURK_ALONE) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.eponaMurkOwnerIntroduced, true);
@@ -1042,7 +1042,7 @@ public class PregnancyRoulette {
 				};
 				
 			} else if(index==0) {
-				return new Response("Leave", "Have second thoughts about visiting [murk.name] and instead turn around and leave...", MURK_BACK) {
+				return new Response("离开", "你对拜访[murk.name]心生了犹豫，还是选择了转身离开……", MURK_BACK) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.eponaMurkOwnerIntroduced, true);
@@ -1109,7 +1109,7 @@ public class PregnancyRoulette {
 		public Response getResponse(int responseTab, int index) {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.murkMaster)) {
 				if(index==1) {
-					return new Response("Obey", "Do as your Master commands and get down on your knees to worship his cock.", MURK_SUBMIT_ACCEPT) {
+					return new Response("服从", "听从主人的命令，跪下来侍奉他的鸡巴。", MURK_SUBMIT_ACCEPT) {
 						@Override
 						public boolean isSexHighlight() {
 							return true;
@@ -1123,7 +1123,7 @@ public class PregnancyRoulette {
 				
 			} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.eponaMurkSubmitted)) {
 				if(index==1) {
-					return new Response("Obey", "Do as [murk.name] commands and get down on your knees to worship [murk.her] cock.", MURK_SUBMIT_ACCEPT) {
+					return new Response("服从", "听从[murk.name]的命令，跪下来侍奉[murk.her]的鸡巴。", MURK_SUBMIT_ACCEPT) {
 						@Override
 						public boolean isSexHighlight() {
 							return true;
@@ -1135,7 +1135,7 @@ public class PregnancyRoulette {
 					};
 					
 				} else if(index==2) {
-					return new Response("Refuse", "Tell [murk.name] not to get cocky and refuse to submit to [murk.herHim].", MURK_SUBMIT_REFUSE) {
+					return new Response("拒绝", "让[murk.name]别牛逼了，你是不会屈服于[murk.herHim]的。", MURK_SUBMIT_REFUSE) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.eponaMurkSubmitted, false);
@@ -1147,9 +1147,9 @@ public class PregnancyRoulette {
 			} else {
 				if(index==1) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.murkLectured)) {
-						return new Response("Lecture", "You've already lectured [murk.name] today, and feel like there'd be no point in doing it again until tomorrow...", null);
+						return new Response("教训", "你今天已经教训过[murk.name]了，明天之前没有理由再这样来一次……", null);
 					}
-					return new Response("Lecture", "Spend some time lecturing [murk.name] on why what [murk.she] did was wrong.", MURK_LECTURING) {
+					return new Response("教训", "花时间教训[murk.name]一下，让[murk.she]直到自己错在哪了。", MURK_LECTURING) {
 						@Override
 						public void effects() {
 							applyMurkReactions();
@@ -1163,9 +1163,9 @@ public class PregnancyRoulette {
 					
 				} else if(index==2) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.murkSpanked)) {
-						return new Response("Spank", "You've already spanked [murk.name] today, and feel like there'd be no point in doing it again until tomorrow...", null);
+						return new Response("打屁股", "你已经打过[murk.name]的屁股了，你只能明天再来……", null);
 					}
-					return new Response("Spank", "Spend some time spanking [murk.name].", MURK_SPANKING) {
+					return new Response("打屁股", "花些时间打[murk.name]的屁股。", MURK_SPANKING) {
 						@Override
 						public void effects() {
 							applyMurkReactions();
@@ -1179,8 +1179,8 @@ public class PregnancyRoulette {
 					
 				} else if(index==3) {
 					return new ResponseSex(
-							"Fuck",
-							"Dominantly fuck [murk.name].",
+							"操",
+							"强硬地上了[murk.name]。",
 							true,
 							false,
 							new SMLyingDown(
@@ -1205,8 +1205,8 @@ public class PregnancyRoulette {
 					
 				} else if(index==4 && !Main.game.getNpc(Murk.class).isFeminine()) {
 					return new ResponseSex(
-							"Submit",
-							"Tell [murk.name] that you want [murk.herHim] to dominate you...",
+							"顺从",
+							"告诉[murk.name]你想让[murk.herHim]支配你……",
 							true,
 							false,
 							new SMAllFours(
@@ -1296,9 +1296,9 @@ public class PregnancyRoulette {
 					};
 					
 				} else if(index==5 && !Main.game.getNpc(Murk.class).isFeminine()) {
-					return new Response("Feminise",
-							"Use the potion on the top shelf to feminise [murk.name] into a submissive rat-girl."
-									+ "<br/>[style.italicsGenericTf(This is a permanent transformation, after which you will no longer be able to choose the 'Submit' action with her.)]",
+					return new Response("雌化",
+							"使用架子顶端的药水将[murk.name]雌化成一个唯命是从的鼠女。"
+									+ "<br/>[style.italicsGenericTf(这是永久转化，选择后你无法再对她使用“顺从”选项。)]",
 							MURK_FEMINISE) {
 						@Override
 						public void effects() {
@@ -1311,7 +1311,7 @@ public class PregnancyRoulette {
 					};
 					
 				} else if(index==0) {
-					return new Response("Leave", "Head back out of the storage room and let Epona know that you've finished with [murk.name].", MURK_LEAVE) {
+					return new Response("离开", "离开储藏室，告诉伊波娜你跟[murk.name]的事情干完了。", MURK_LEAVE) {
 						@Override
 						public void effects() {
 							applyMurkReactions();
@@ -1362,14 +1362,14 @@ public class PregnancyRoulette {
 		}
 	};
 
-	public static final DialogueNode AFTER_MURK_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_MURK_SEX = new DialogueNode("结束", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
 		}
 		@Override
 		public String getDescription() {
-			return "[murk.Name] has had enough for now...";
+			return "[murk.Name]已经享受够了……";
 		}
 		@Override
 		public String getContent() {
@@ -1382,7 +1382,7 @@ public class PregnancyRoulette {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.sex.isDom(Main.game.getPlayer())) {
-					return new Response("Leave", "Leave [murk.name] panting on the floor and leave", MURK_LEAVE){
+					return new Response("离开", "让[murk.name]躺在地上继续喘息，转身离开", MURK_LEAVE){
 						@Override
 						public void effects() {
 							Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/gamblingDen/pregnancyRoulette", "AFTER_MURK_SEX_DOM_LEAVE"));
@@ -1390,7 +1390,7 @@ public class PregnancyRoulette {
 					};
 					
 				} else {
-						return new Response("Leave", "Do as [murk.name] says and leave", MURK_LEAVE){
+						return new Response("离开", "按[murk.name]说的做，离开", MURK_LEAVE){
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/submission/gamblingDen/pregnancyRoulette", "AFTER_MURK_SEX_SUB_LEAVE"));
@@ -1449,8 +1449,8 @@ public class PregnancyRoulette {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				return new ResponseSex(
-						"Submit",
-						"You submit to your Master and let him dominate you...",
+						"顺从",
+						"你向主人屈服，任他支配你……",
 						true,
 						false,
 						new SMAllFours(

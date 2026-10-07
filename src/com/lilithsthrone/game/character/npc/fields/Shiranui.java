@@ -99,7 +99,7 @@ public class Shiranui extends NPC {
 	}
 	
 	public Shiranui(boolean isImported) {
-		super(isImported, new NameTriplet("Aya"), "Shiranui",
+		super(isImported, new NameTriplet("绫"), "Shiranui",
 				"",
 				47, Month.JANUARY, 1,
 				40, Gender.F_P_V_B_FUTANARI, Subspecies.FOX_ASCENDANT, RaceStage.PARTIAL_FULL,
@@ -342,7 +342,7 @@ public class Shiranui extends NPC {
 	@Override
 	public String getDescription() {
 		return UtilText.parse(this,
-				"[npc.Name] is a trickster youko, who took over Meraxis's hideout and the surrounding area.");
+				"[npc.Name]是一只恶作剧妖狐，她占据了梅拉克西丝的藏身处及其周边区域。");
 	}
 
 	@Override
@@ -549,16 +549,16 @@ public class Shiranui extends NPC {
 			setBody(new Body(Main.game.getNpc(DarkSiren.class).getBody()), true);
 			this.setAgeAppearanceAbsolute(18);
 			if(nameChange) {
-				this.setName("Meraxis");
-				this.setSurname("Lyssiethmartuilani");
+				this.setName("梅拉克西丝");
+				this.setSurname("莉西丝马尔图拉尼");
 			}
 			
 		} else {
 			this.setStartingBody(true);
 			this.setAgeAppearanceAbsolute(25);
 			if(nameChange) {
-				this.setName("Aya");
-				this.setSurname("Shiranui");
+				this.setName("绫");
+				this.setSurname("不知火");
 			}
 			
 			// Reset pregnancy as otherwise it will be demon or half-demon due to Meraxis form:
@@ -577,23 +577,23 @@ public class Shiranui extends NPC {
 		if(target.isBipedal()) {
 			AbstractClothing stockings = Main.game.getItemGen().generateClothing("sage_latex_stockings", colour, false);
 			stockings.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SPECIAL, TFModifier.CLOTHING_SEALING, TFPotency.MAJOR_DRAIN, 0));
-			stockings.setName("Shiranui's Stockings");
+			stockings.setName("不知火的长袜");
 			target.equipClothingFromNowhere(stockings, true, this);
 			
 			AbstractClothing heels = Main.game.getItemGen().generateClothing("innoxia_foot_stiletto_heels", colour, false);
 			heels.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SPECIAL, TFModifier.CLOTHING_SEALING, TFPotency.MAJOR_DRAIN, 0));
-			heels.setName("Shiranui's Heels");
+			heels.setName("不知火的高跟鞋");
 			target.equipClothingFromNowhere(heels, true, this);
 		}
 
 		AbstractClothing croptop = Main.game.getItemGen().generateClothing("sage_latex_croptop", colour, false);
 		croptop.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SPECIAL, TFModifier.CLOTHING_SEALING, TFPotency.MAJOR_DRAIN, 0));
-		croptop.setName("Shiranui's Croptop");
+		croptop.setName("不知火的露脐上衣");
 		target.equipClothingFromNowhere(croptop, true, this);
 
 		AbstractClothing microskirt = Main.game.getItemGen().generateClothing("innoxia_leg_micro_skirt_pleated", colour, false);
 		microskirt.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SPECIAL, TFModifier.CLOTHING_SEALING, TFPotency.MAJOR_DRAIN, 0));
-		microskirt.setName("Shiranui's Microskirt");
+		microskirt.setName("不知火的超短裙");
 		target.equipClothingFromNowhere(microskirt, true, this);
 		
 		dressTargetInFetishGearChoker(target, colour);
@@ -619,7 +619,7 @@ public class Shiranui extends NPC {
 		choker.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_VAGINA, TFModifier.TF_MOD_WETNESS, TFPotency.MAJOR_BOOST, 7));
 		choker.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.TF_VAGINA, TFModifier.TF_MOD_DEPTH, TFPotency.MAJOR_BOOST, 6));
 		
-		choker.setName("Shiranui's Choker");
+		choker.setName("不知火的项圈");
 		
 		target.equipClothingFromNowhere(choker, true, this);
 	}
@@ -635,7 +635,7 @@ public class Shiranui extends NPC {
 		AbstractItem potion = EnchantingUtils.craftItem(
 			Main.game.getItemGen().generateItem(tfPotion.getItemType()),
 			tfPotion.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-		potion.setName("Shiranui's Gift");
+		potion.setName("不知火的礼物");
 		sb.append(recipient.addItem(potion, 1, false, true));
 		
 		if(recipient.isPlayer() && appendToDialogue) {

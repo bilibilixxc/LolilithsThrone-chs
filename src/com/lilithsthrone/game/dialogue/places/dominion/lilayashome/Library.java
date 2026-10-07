@@ -103,11 +103,11 @@ public class Library {
 			if(!charactersPresent.isEmpty()) {
 				for(NPC slave : charactersPresent) {
 					UtilText.nodeContentSB.append(LilayaHomeGeneric.getSlavePresentDescription(slave,
-							"is not even bothering to pretend that [npc.sheIs] working.",
-							"appears to be half-heartedly rearranging some books.",
-							"is currently dusting the shelves and making sure that everything is in order.",
-							"is currently reorganising one of the shelves.",
-							"is dutifully making a catalogue of all the books available in the library."));
+							"甚至懒得假装[npc.sheIs]在工作。",
+							"似乎在心猿意马地重新排列书籍。",
+							"目前正在清理货架上的灰尘，确保一切井然有序。",
+							"目前正在重新整理其中一个货架。",
+							"正在尽职尽责地为图书馆现有的所有书籍编制目录。"));
 				}
 			}
 			
@@ -117,16 +117,16 @@ public class Library {
 		@Override
 		public String getResponseTabTitle(int index) {
 			if(index==0) {
-				return "Library";
+				return "图书馆";
 				
 			} else if(index==1) {
-				return "Fast Travel";
+				return "快速旅行";
 				
 			} else if(index==2) {
-				return "Spells";
+				return "法术";
 				
 			} else if(index==3) {
-				return "Races";
+				return "种族";
 			}
 			
 			return null;
@@ -139,9 +139,9 @@ public class Library {
 				
 				if (index == 1) {
 					if(Main.game.getCurrentDialogueNode()==ARCANE_AROUSAL) {
-						return new Response("Arcane Arousal", "You are already reading this book!", null);
+						return new Response("奥术狂欲", "你已经在读这本书了！", null);
 					}
-					return new Response("Arcane Arousal", "A leather-bound tome that seems to offer an insight into how the arcane works.", ARCANE_AROUSAL) {
+					return new Response("奥术狂欲", "一本皮面装订的大部头，似乎能让人了解奥术的运作方式。", ARCANE_AROUSAL) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.readBook1, true);
@@ -150,9 +150,9 @@ public class Library {
 
 				} else if (index == 2) {
 					if(Main.game.getCurrentDialogueNode()==LILITHS_DYNASTY) {
-						return new Response("Lilith's Dynasty", "You are already reading this book!", null);
+						return new Response("莉莉丝的王朝", "你已经在读这本书了！", null);
 					}
-					return new Response("Lilith's Dynasty", "A hardback book that might give some clues as to who exactly Lilith is.", LILITHS_DYNASTY) {
+					return new Response("莉莉丝的王朝", "莉莉丝，何许人也？这本精装书或许能带我们一探究竟。", LILITHS_DYNASTY) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.readBook2, true);
@@ -161,9 +161,9 @@ public class Library {
 
 				} else if (index == 3) {
 					if(Main.game.getCurrentDialogueNode()==DOMINION_HISTORY) {
-						return new Response("Dominion's History", "You are already reading this book!", null);
+						return new Response("御城区通史", "你已经在读这本书了！", null);
 					}
-					return new Response("Dominion's History", "A paperback book describing the events that led to the creation of the city you currently find yourself in.", DOMINION_HISTORY) {
+					return new Response("御城区通史", "一本平装书，描述了这座城市诞生以来的历史纪事。", DOMINION_HISTORY) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.readBook3, true);
@@ -172,9 +172,9 @@ public class Library {
 
 				} else if (index == 4) {
 					if(Main.game.getCurrentDialogueNode()==PREGNANCY_INFO) {
-						return new Response("Knocked Up", "You are already reading this book!", null);
+						return new Response("好孕临门", "你已经在读这本书了！", null);
 					}
-					return new Response("Knocked Up", "A small paperback book which contains all the information you'd ever need concerning pregnancies in this world.", PREGNANCY_INFO) {
+					return new Response("好孕临门", "小开本的书籍，里面记载了很多怀孕相关的知识。", PREGNANCY_INFO) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.readBook4, true);
@@ -183,9 +183,9 @@ public class Library {
 
 				} else if(index==5) {
 					if(Main.game.getCurrentDialogueNode()==FERAL_HISTORY) {
-						return new Response("The History of Ferals", "You are already reading this book!", null);
+						return new Response("兽态人的兴与衰", "你已经在读这本书了！", null);
 					}
-					return new Response("The History of Ferals", "A hardback book detailing the history of feral transformations in the society of Lilith's Realm.", FERAL_HISTORY) {
+					return new Response("兽态人的兴与衰", "一本精装书，详细描述了兽态转化在莉莉丝王国社会中的历史故事。", FERAL_HISTORY) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.readBook5, true);
@@ -194,9 +194,9 @@ public class Library {
 					
 				} else if (index == 6) {
 					if(Main.game.getCurrentDialogueNode()==DOMINION_MAP) {
-						return new Response("City Map", "You are already viewing the map of Dominion!", null);
+						return new Response("城市地图", "你已经在查看御城区的地图了！", null);
 					}
-					return new Response("City Map", "A large, framed map of Dominion hangs on one wall. Take a picture of it.", DOMINION_MAP) {
+					return new Response("城市地图", "一面墙上挂着一幅巨大的、装裱好的御城区地图。给它拍张照。", DOMINION_MAP) {
 						@Override
 						public void effects() {
 							Cell[][] grid = Main.game.getWorlds().get(WorldType.DOMINION).getGrid();
@@ -210,9 +210,9 @@ public class Library {
 	
 				} else if (index == 7 && Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.SIDE_SLAVERY, Quest.SIDE_SLAVER_NEED_RECOMMENDATION)) {
 					if(Main.game.getCurrentDialogueNode()==SLAVERY_HISTORY) {
-						return new Response("People as Property", "You are already reading this book!", null);
+						return new Response("以人为产", "你已经在读这本书了！", null);
 					}
-					return new Response("People as Property", "A thick, hardback book detailing the history and legality of slavery in Lilith's Realm.", SLAVERY_HISTORY) {
+					return new Response("以人为产", "一本厚厚的精装书，详细介绍了莉莉丝王国奴隶制的历史和合法性。", SLAVERY_HISTORY) {
 						@Override
 						public void effects() {
 							Main.game.appendToTextStartStringBuilder(UtilText.parseFromXMLFile("places/dominion/lilayasHome/library", "SLAVERY_HISTORY"));
@@ -222,8 +222,8 @@ public class Library {
 	
 				} else if (index == 8 && Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.readBookSlavery)) {
 					if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("acexp_dungeon_found"))) {
-						return new Response("Lilaya's dungeon",
-								"Pull the thick book bearing the title 'Lilaya's Dirty Secrets' to open the secret passage down to Lilaya's dungeon.",
+						return new Response("莉莱雅的地牢",
+								"拉出《莉莱雅的肮脏秘密》这本厚书，打开通往莉莱雅地牢的秘密通道。",
 								DialogueManager.getDialogueFromId("acexp_dominion_lilaya_dungeon_stairsUp")) {
 							@Override
 							public void effects() {
@@ -234,7 +234,7 @@ public class Library {
 						};
 						
 					} else {
-						return new Response("'Lilaya's Dirty Secrets'", "A thick book bearing the title 'Lilaya's Dirty Secrets' has caught your eye...", DUNGEON_TRIGGER) {
+						return new Response("莉莱雅的肮脏秘密", "一本印有“莉莱雅的肮脏秘密”的大部头引起了你的注意……", DUNGEON_TRIGGER) {
 							@Override
 							public void effects() {
 								Main.game.getDialogueFlags().setFlag(DialogueFlagValue.getDialogueFlagValueFromId("acexp_dungeon_found"), true);
@@ -274,25 +274,25 @@ public class Library {
 				
 			} else if(responseTab==3) {
 				if (index == 1) {
-					return new Response("Ancient Ones", "A section of the library dedicated to books concerning demonic and angelic races.", ELDER_RACES);
+					return new Response("太古生物", "图书馆中专门收藏有关恶魔和天使种族书籍的区域。", ELDER_RACES);
 
 				} else if (index == 2) {
-					return new Response("Races of Dominion", "A section of the library dedicated to books concerning the predominant races within the city.", DOMINION_RACES);
+					return new Response("御城区的种族", "图书馆的一部分专门用来收藏与城市中主要种族有关的书籍。", DOMINION_RACES);
 
 				} else if (index == 3) {
-					return new Response("Foloi Fields", "A section of the library dedicated to books about the area known as the Foloi Fields.", FIELDS_BOOKS);
+					return new Response("弗洛伊田野", "图书馆有一部分专门用来收藏有关被称为 “弗洛伊田野” 的地区的书籍。", FIELDS_BOOKS);
 
 				} else if (index == 4) {
-					return new Response("Mountains", "A section of the library dedicated to books on the area known as the Mountains of the Moon.", MOUNTAIN_BOOKS);
+					return new Response("山脉", "图书馆有一部分专门用来收藏有关被称为 “皎月山脉” 地区的书籍。", MOUNTAIN_BOOKS);
 
 				} else if (index == 5) {
-					return new Response("Endless Sea", "A section of the library dedicated to books on the area known as the Endless Sea.", SEA_BOOKS);
+					return new Response("无尽之海", "图书馆有一部分专门用来收藏有关 “无尽之海” 的书籍。", SEA_BOOKS);
 
 				} else if (index == 6) {
-					return new Response("The Jungle", "A section of the library dedicated to books on the area known as the Jungle.", JUNGLE_BOOKS);
+					return new Response("丛林", "图书馆有一部分专门用来收藏有关丛林地区的书籍。", JUNGLE_BOOKS);
 
 				} else if (index == 7) {
-					return new Response("The Desert", "A section of the library dedicated to books about the desert to the south of Lilith's Realm.", DESERT_BOOKS);
+					return new Response("沙漠", "图书馆的一部分专门用来收藏有关莉莉丝王国南部沙漠的书籍。", DESERT_BOOKS);
 				}
 			}
 			
@@ -301,7 +301,7 @@ public class Library {
 	};
 	
 	private static Response getSpellResponse(Spell spell) {
-		return new Response(spell.getName(), "Read about the spell '"+spell.getName()+"'.", SPELL_BOOK) {
+		return new Response(spell.getName(), "阅读了解法术'"+spell.getName()+"'。", SPELL_BOOK) {
 			@Override
 			public void effects() {
 				Main.game.getTextEndStringBuilder().append(ItemType.getSpellBookType(spell).getEffects().get(0).applyEffect(Main.game.getPlayer(), Main.game.getPlayer(), 0));
@@ -442,8 +442,8 @@ public class Library {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Lilaya's dungeon",
-						"Head down the spiral staircase to Lilaya's dungeon.",
+				return new Response("莉莱雅的地牢",
+						"沿着螺旋楼梯前往莉莱雅的地牢。",
 						DialogueManager.getDialogueFromId("acexp_dominion_lilaya_dungeon_stairsUp")) {
 					@Override
 					public void effects() {
@@ -452,7 +452,7 @@ public class Library {
 					}
 				};
 			} else if(index==2) {
-				return new Response("Maybe later", "Decide against heading down to Lilaya's dungeon for now...", DUNGEON_TRIGGER_BACK);
+				return new Response("以后再说", "决定暂时不去莉莱雅的地牢……", DUNGEON_TRIGGER_BACK);
 			}
 			return null;
 		}
@@ -477,11 +477,11 @@ public class Library {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Walking down one of the aisles, you find yourself surrounded by shelving that's been carved out of dark purple stone, and as you pass, the polished surface glistens and sparkles as it reflects the light from the overhead lamps."
-						+ " You're alarmed to discover that as you touch this strange material, a sexual thrill runs through your body."
+						+ "走过其中一条过道，你发现自己被深紫色石头雕刻而成的货架所包围。当你经过时，抛光的表面在头顶灯的照射下闪闪发光。"
+						+ "当你触摸这种奇怪的材料时，性快感闪电般贯穿了你的身体。你感到又惊又怕。"
 					+ "</p>"
 					+ "<p>"
-						+ "It looks as though the books in this particular section are concerned with demonic history and trivia, and while most of them wouldn't really be worth your time, there are a few that catch your attention..."
+						+ "这些书看起来都是关于恶魔的八卦和老掉牙的轶事，大部分都没什么看头。不过，还是有几本勾起了你的兴趣……"
 					+ "</p>";
 		}
 
@@ -501,7 +501,7 @@ public class Library {
 					}
 				}
 				if(index == 0) {
-					return new Response("Back", "Return to the race index.", LIBRARY);
+					return new Response("返回", "回到种族目录。", LIBRARY);
 					
 				} else if(index>0 && index-1<raceResponses.size()) {
 					return raceResponses.get(index-1);
@@ -520,17 +520,17 @@ public class Library {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Walking down one of the aisles, you find yourself surrounded by heavy wooden shelves, fastened together by prominent beams of iron and steel."
-						+ " A lot of the books here seem to be about local history of Dominion's many districts, and, while fascinating for a historian, they don't offer much use to you."
+						+ "你走过一条通道，发现自己被一堆厚实的木头架子围住了，这些木头架子是被凸出来的钢铁横梁连在一起的。"
+						+ "这儿很多书都在讲御城区的地方历史，虽然对历史研究者来说应该很有趣，但对你来说就没什么营养了。"
 					+ "</p>"
 					+ "<p>"
-						+ "You notice that a couple of the shelves look a little different from the others."
-						+ " The top-most shelf seems to be decorated to make it look as though it's crafted from twigs, just like a bird's nest."
-						+ " The shelf nearest to the floor has a very smooth surface, almost like the wood as been transmuted into stone."
-						+ " It looks like it would be moist to the touch."
+						+ "你敏锐地发现，有几个货架看起来有点与众不同。"
+						+ "最上面的架子似乎是用树枝装饰而成，就像鸟巢一样。"
+						+ "最靠近地板的架子表面非常光滑，就像木头变成了石头。"
+						+ "摸起来好像很湿润。"
 					+ "</p>"
 					+ "<p>"
-						+ "Despite most of these books not being worth your time, there are a few here and there that detail the many races found within the city, and you wonder if you should give them a read..."
+						+ "虽然这些书大部分都没什么可读的，但有几本详细介绍了城市里的各种族群，你考虑是不是应该读一读这几本……"
 					+ "</p>";
 		}
 
@@ -550,7 +550,7 @@ public class Library {
 					}
 				}
 				if(index == 0) {
-					return new Response("Back", "Return to the race index.", LIBRARY);
+					return new Response("返回", "回到种族目录。", LIBRARY);
 					
 				} else if(index>0 && index-1<raceResponses.size()) {
 					return raceResponses.get(index-1);
@@ -569,13 +569,13 @@ public class Library {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "As you walk down one of the library's many aisles, you notice that the air feels somehow fresher than normal."
-						+ " Realising that it must be an arcane enchantment of some sort, you take a closer look at some of the shelves around you."
+						+ "你漫步在图书馆走廊，发现这儿空气比平时清新多了。"
+						+ "你心想，这大概是一种奥术附魔。于是你开始观察四周的书架，想找到蛛丝马迹。"
 					+ "</p>"
 					+ "<p>"
-						+ "At first glance, they look to be crafted from blocks of sod, but upon closer inspection, you see that it's actually masterfully-engraved pieces of wood."
-						+ " One shelf looks like the sod is covered in snow, and you can feel the cold wafting off of it."
-						+ " The books that they hold all seem to be related to the Foloi Fields and the many races found there, which would explain the pastoral scent and appearance of this particular section."
+						+ "乍一看，它们似乎是用草皮块制作的，但仔细一看，就会发现它们其实是经过巧妙雕刻的木块。"
+						+ "有个架子上的草皮像是被雪覆盖了，还能感到它散发出丝丝寒气。"
+						+ "果不其然，这儿的书籍都是和弗洛伊田野以及生活在那里的种族有关。这一区域的田园气质也是因此配置的吧。"
 					+ "</p>";
 		}
 
@@ -595,7 +595,7 @@ public class Library {
 					}
 				}
 				if(index == 0) {
-					return new Response("Back", "Return to the race index.", LIBRARY);
+					return new Response("返回", "回到种族目录。", LIBRARY);
 					
 				} else if(index>0 && index-1<raceResponses.size()) {
 					return raceResponses.get(index-1);
@@ -613,12 +613,12 @@ public class Library {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "The aisle you find yourself [pc.walking] down has had an arcane enchantment placed upon it, which is creating a hot, humid atmosphere."
-						+ " The shelves to either side of you have been formed from huge, living pieces of dark wood, and here and there, small tropical plants are growing from its surface."
+						+ "你发现自己[pc.walking]过的通道被施加了奥术附魔，弥漫着闷热潮湿的气氛。"
+						+ "两边的架子是由巨大的、有生命的深色木块拼接而成的，表面还不时长出一些小巧的热带植物。"
 					+ "</p>"
 					+ "<p>"
-						+ "Thanks once again to the arcane enchantment, this environment doesn't seem to be damaging the many books which are on display, and as you pass them by, you see that they're almost exclusively related to jungle topics."
-						+ " Coming to a halt half-way down the aisle, you see that some of the nearby books are related to the many races found in the northern jungles, and you wonder whether you should stop and read some of them..."
+						+ "再次感谢奇妙的法术，这样的环境也并没有损坏陈列的许多书籍。你匆匆扫了几眼，发现它们都是丛林主题的。"
+						+ "走到过道中途，你看见一些记载了北方丛林种族的书，要不要稍微停下来读一读呢……"
 					+ "</p>";
 		}
 		@Override
@@ -636,7 +636,7 @@ public class Library {
 					}
 				}
 				if(index == 0) {
-					return new Response("Back", "Return to the race index.", LIBRARY);
+					return new Response("返回", "回到种族目录。", LIBRARY);
 					
 				} else if(index>0 && index-1<raceResponses.size()) {
 					return raceResponses.get(index-1);
@@ -654,12 +654,12 @@ public class Library {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "[pc.Walking] down one of the many aisles in Lilaya's library, you become aware of the fact that the air around you is significantly colder and thinner than it should be."
-						+ " Realising that it must be due to an arcane enchantment of some sort, you look around at the shelves to either side of you and see that they're made out of roughly-hewn rock."
-						+ " The books sitting upon them seem to all be related to mountainous topics, letting you know that the arcane enchantment must be to give a sense of atmosphere to the high-altitude theme of this area."
+						+ "你[pc.Walking]在莉莱雅图书馆的众多过道中，忽然感觉氧气变得稀薄，空气也开始发干发冷。"
+						+ "你相信这是某种奥术附魔的影响，于是环顾了一下两边的书架，发现它们都是从粗野的岩石里凿出的。"
+						+ "书架上摆放的书籍似乎都与山区有关。这些奥术附魔一定是在努力渲染高海拔的气氛。"
 					+ "</p>"
 					+ "<p>"
-						+ "A collection of books near to hand appear to be related to the many races which call the Mountains of the Moon their home, and you wonder whether you should stop and read some of them..."
+						+ "手边的书籍描写了许多居住在皎月山脉的种族，要不要稍微停下来读一读呢……"
 					+ "</p>";
 		}
 		@Override
@@ -677,7 +677,7 @@ public class Library {
 					}
 				}
 				if(index == 0) {
-					return new Response("Back", "Return to the race index.", LIBRARY);
+					return new Response("返回", "回到种族目录。", LIBRARY);
 					
 				} else if(index>0 && index-1<raceResponses.size()) {
 					return raceResponses.get(index-1);
@@ -695,12 +695,12 @@ public class Library {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "The faint sound of waves lapping on the shore can be heard as you [pc.walk] down one of the many aisles of books in Lilaya's library."
-						+ " Breathing in the refreshing, salty smell of the sea, you realise that this section has had an arcane enchantment placed upon it."
-						+ " With the shelves made out of what appears to be living coral and pieces of driftwood, you're given all the clues you need to deduce that this aisle is dedicated to books on the topic of the sea."
+						+ "你[pc.walk]在莉莱雅图书馆众多书籍中的一条过道上，隐隐约约听到拍打海岸的浪潮声。"
+						+ "呼吸着沁人心脾的咸咸海味，你知道这是奥术发挥的效果。"
+						+ "书架上摆放着看似活珊瑚和漂流木的物品，你可以根据这些线索推断出这个过道是专门用来摆放有关海洋主题的书籍的。"
 					+ "</p>"
 					+ "<p>"
-						+ "Stopping to take a closer look at some of the tomes on offer, you see that there are several related to the many races found in the Endless Sea, and you wonder whether you should take some time out to do a spot of reading..."
+						+ "你停下脚步，仔细观察了架上的书脊，发现有几本和无尽之海的众多种族有关，你在考虑要不要花点时间稍微读读……"
 					+ "</p>";
 		}
 		@Override
@@ -718,7 +718,7 @@ public class Library {
 					}
 				}
 				if(index == 0) {
-					return new Response("Back", "Return to the race index.", LIBRARY);
+					return new Response("返回", "回到种族目录。", LIBRARY);
 					
 				} else if(index>0 && index-1<raceResponses.size()) {
 					return raceResponses.get(index-1);
@@ -736,13 +736,13 @@ public class Library {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "[pc.Walking] down one of the library's many aisles, you can't help but notice how the air is significantly hotter and drier than elsewhere in the room."
-						+ " The arcane enchantment responsible for this effect seems to have been created to fit with the theme of the books on the shelves, as they appear to all be about topics related to the desert to the south of Lilith's Realm."
-						+ " The shelves themselves are also in keeping with this theme, as they're built out of thick blocks of marble, with curious hieroglyphics carved into their surface."
+						+ "[pc.Walking]在图书馆的过道上，你不禁觉得，比起往常，这儿的空气未免也太干太热了。"
+						+ "这好像是为了配合书架主题而施放的奥术法术。因为架上这些书和莉莉丝王国的南部沙漠有关。"
+						+ "书架本身也与这一主题相吻合，由厚厚的大理石块砌成，表面刻有奇特的象形文字。"
 					+ "</p>"
 					+ "<p>"
-						+ "Stopping half-way down the aisle, you look over the books and see that several of them are related to the races found in the desert."
-						+ " Wondering if they may contain useful information, you think that it may be a good idea to stop and read through them..."
+						+ "在过道中途停下，你随意挑了几本书来翻看，发现它们与沙漠中发现的种族有关。"
+						+ "你不确定它们对你有没有用，决定稍稍驻足，把它们通读一遍……"
 					+ "</p>";
 		}
 		@Override
@@ -760,7 +760,7 @@ public class Library {
 					}
 				}
 				if(index == 0) {
-					return new Response("Back", "Return to the race index.", LIBRARY);
+					return new Response("返回", "回到种族目录。", LIBRARY);
 					
 				} else if(index>0 && index-1<raceResponses.size()) {
 					return raceResponses.get(index-1);
@@ -786,7 +786,7 @@ public class Library {
 			};
 			
 		} else {
-			return new Response(book.getName(false), "You haven't discovered this book yet!", null);
+			return new Response(book.getName(false), "你还没发现这本书呢！", null);
 		}
 	}
 }

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>750</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[cowboy hat]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[cowboy hats]]></namePlural>
-		<description><![CDATA[A high-crowned, wide-brimmed hat. The high crown helps to keep the wearer's head insulated, while the brim keeps sunlight off their face and neck.]]></description>
+		<determiner><![CDATA[一顶]]></determiner>
+		<name><![CDATA[牛仔帽]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[牛仔帽]]></namePlural>
+		<description><![CDATA[一顶高顶宽檐帽。高顶有助于保持佩戴者的头部保温，而宽檐则可以遮挡阳光，保护他们的脸部和颈部。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>
@@ -43,27 +42,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(place)] the cowboy hat onto [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(place)] the cowboy hat onto [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the cowboy hat onto [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将牛仔帽戴在[npc.her]头上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将牛仔帽戴在[npc2.namePos]的头上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将牛仔帽戴到[npc2.namePos]的头上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] cowboy hat.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] off [npc2.namePos] cowboy hat.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] off [npc2.namePos] cowboy hat.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的牛仔帽脱下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的牛仔帽脱下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]猛地夺走[npc2.namePos]的牛仔帽。
+]]></otherRough>
   </displacementText>
   
 </clothing>

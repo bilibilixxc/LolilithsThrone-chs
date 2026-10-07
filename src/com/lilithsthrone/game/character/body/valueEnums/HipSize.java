@@ -13,21 +13,21 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum HipSize {
 	
-	ZERO_NO_HIPS("completely straight", 0, PresetColour.GENERIC_SIZE_ONE),
+	ZERO_NO_HIPS("干瘪", 0, PresetColour.GENERIC_SIZE_ONE),
 	
-	ONE_VERY_NARROW("very narrow", 1, PresetColour.GENERIC_SIZE_TWO),
+	ONE_VERY_NARROW("非常平坦", 1, PresetColour.GENERIC_SIZE_TWO),
 	
-	TWO_NARROW("narrow", 2, PresetColour.GENERIC_SIZE_THREE),
+	TWO_NARROW("平坦", 2, PresetColour.GENERIC_SIZE_THREE),
 	
-	THREE_GIRLY("girly", 3, PresetColour.GENERIC_SIZE_FOUR),
+	THREE_GIRLY("翘挺", 3, PresetColour.GENERIC_SIZE_FOUR),
 	
-	FOUR_WOMANLY("womanly", 4, PresetColour.GENERIC_SIZE_FIVE),
+	FOUR_WOMANLY("丰满", 4, PresetColour.GENERIC_SIZE_FIVE),
 	
-	FIVE_VERY_WIDE("very wide", 5, PresetColour.GENERIC_SIZE_SIX),
+	FIVE_VERY_WIDE("宽大", 5, PresetColour.GENERIC_SIZE_SIX),
 	
-	SIX_EXTREMELY_WIDE("extremely wide", 6, PresetColour.GENERIC_SIZE_SEVEN),
+	SIX_EXTREMELY_WIDE("非常宽大", 6, PresetColour.GENERIC_SIZE_SEVEN),
 	
-	SEVEN_ABSURDLY_WIDE("absurdly wide", 7, PresetColour.GENERIC_SIZE_EIGHT);
+	SEVEN_ABSURDLY_WIDE("宽大得离谱", 7, PresetColour.GENERIC_SIZE_EIGHT);
 
 	
 	private String descriptor;
@@ -56,11 +56,11 @@ public enum HipSize {
 		if(Main.game.isSillyModeEnabled()) {
 			switch(this) {
 				case FIVE_VERY_WIDE:
-					return "thicc";
+					return "肥肥";
 				case SIX_EXTREMELY_WIDE:
-					return "extremely thicc";
+					return "超级肥肥";
 				case SEVEN_ABSURDLY_WIDE:
-					return "absurdly thicc";
+					return "荒唐肥肥";
 				case ZERO_NO_HIPS:
 				case ONE_VERY_NARROW:
 				case TWO_NARROW:

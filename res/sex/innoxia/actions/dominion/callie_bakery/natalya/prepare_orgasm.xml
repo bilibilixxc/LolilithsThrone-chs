@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -25,27 +25,27 @@
 	<areasCummedIn/>
 	<areasCummedOn/>
 	<title><![CDATA[
-		Make her cum
+		让她高潮
 	]]></title>
 	<tooltip><![CDATA[
-		Tongue [npc2.namePos] puffy asshole and make her cum from receiving anilingus.
+		用舌头舔弄[npc2.namePos]充满肉感的肛门，通过吻肛让她高潮。
 	]]></tooltip>
 	<descriptions>
 		<description>
 			<text><![CDATA[
 				#IF(npc2==natalya)
-					You can sense that Mistress Natalya is rapidly approaching her climax, and you're determined to make her cum from the feeling of your [pc.tongue+] in her ebony doughnut. Grabbing hold of her hindquarters, you bury your face in her feral horse's ass and press your [pc.lips+] against her puffy asshole. Passionately making out with her feral anus, you greedily tongue her hot hole, and are rewarded for your efforts by hearing a series of increasingly-lewd moans burst out from between her lips.
+					你能感觉到主人娜塔莉亚即将达到高潮，决心要用[pc.tongue+]在她乌黑的菊花中抽插，让她攀上巅峰，于是抓住她的后臀，将脸埋进那马屁股里，用[pc.lips+]紧贴着丰满的肛门，热情地与其交缠着，贪婪地舔舐着那炽热的肉洞，你的努力很快得到了回报——她唇间溢出一连串愈发淫荡的呻吟。
 					
 					<br/><br/>
 					
-					[natalya.speechNoEffects(~Ooh!~ Oh fuck!)] your Mistress exclaims, [natalya.speechNoEffects(That's it, [style.mule]! ~Mmm!~ Yes! Make me cum!)]
+					[natalya.speechNoEffects(~哦！~妈的！)]你的主人娇喘着，[natalya.speechNoEffects(就是这样，[style.mule]！~嗯~！继续！让我高潮！)]
 					
 				#ELSE
-					From her increasingly-horny moans and high-pitched squeals, it's obvious that Callie is rapidly approaching her climax. Determined to make her cum from the feeling of your [pc.tongue+] in her ebony doughnut, you grab hold of her thighs and bury your face in her ass. Pressing your [pc.lips+] against her puffy asshole, you passionately make out with her equine anus, and as you greedily tongue her hot hole, her huge horse-cock wildly twitches in time with her frantic moans.
+					从卡丽越来越淫荡的呻吟和高亢的尖叫中，明显能看出她即将达到高潮。你决心要用[pc.tongue+]在她乌黑的菊花中抽插，于是抓住大腿，将脸埋进了她的屁股。用[pc.lips+]紧贴着丰满的肛门，热情地与其交缠着，贪婪地舔舐着那炽热的肉洞。终于她那巨大的马鞭抽动起来，狂乱的呻吟从唇间溢出。
 					
 					<br/><br/>
 					
-					[callie.speechNoEffects(~Aah!~ Yes!)] the horse-girl exclaims, [natalya.speechNoEffects(Keep going! ~Ooh!~ I'm... I'm going to cum!)]
+					[callie.speechNoEffects(~啊！~继续！)]马女娇喘着，[natalya.speechNoEffects(不要停！~哦~！我……我要去了！)]
 				#ENDIF
 			]]></text>
 		</description>

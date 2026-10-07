@@ -17,7 +17,7 @@ public class EventLogEntryAttributeChange extends EventLogEntry {
 	
 	public EventLogEntryAttributeChange(AbstractAttribute attribute, float change, boolean isCore) {
 		super((isCore
-						?"<span style='color:"+attribute.getColour().toWebHexString()+";'>Core "+Util.capitaliseSentence(attribute.getName())+"</span>"
+						?"<span style='color:"+attribute.getColour().toWebHexString()+";'>核心"+Util.capitaliseSentence(attribute.getName())+"</span>"
 						:"<span style='color:"+attribute.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(attribute.getName())+"</span>"),
 				(isCore
 						?(change>0

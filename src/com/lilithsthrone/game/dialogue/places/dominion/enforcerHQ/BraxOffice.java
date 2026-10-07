@@ -121,11 +121,11 @@ public class BraxOffice {
 		AbstractItem potion = EnchantingUtils.craftItem(
 			Main.game.getItemGen().generateItem(tfPotion.getItemType()),
 			tfPotion.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-		potion.setName("Brax's Surprise");
+		potion.setName("布拉克斯的小惊喜");
 		sb.append(Main.game.getPlayer().addItem(potion, false));
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX = new DialogueNode("[brax.namePos] Office", "-", true) {
+	public static final DialogueNode INTERIOR_BRAX = new DialogueNode("[brax.namePos]的办公室", "-", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -137,7 +137,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Truth", "Tell [brax.name] who you are, and that you're here to find out what happened to Arthur.", INTERIOR_BRAX_TRUTH) {
+				return new Response("真相", "告诉[brax.name]，你究竟是谁，以及你来这是为了寻找亚瑟的下落的。", INTERIOR_BRAX_TRUTH) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(DialogueFlagValue.braxEncountered, true);
@@ -145,7 +145,7 @@ public class BraxOffice {
 				};
 					
 			} else if (index == 2) {
-				return new Response("Lie", "You notice that all of the models in the posters are wolf-girls. Perhaps you could pretend that Arthur is a patron of an exclusive wolf-girl themed brothel that you so happen to own...",
+				return new Response("说谎", "你注意到四周海报的模特全都是狼女。或许可以骗他说亚瑟是某个狼女主题妓院的赞助人，你刚好继承了过来……",
 						INTERIOR_BRAX_LIE,
 						null, null, Util.newArrayListOfValues(Perk.OBSERVANT), null, null) {
 					@Override
@@ -155,7 +155,7 @@ public class BraxOffice {
 				};
 					
 			} else if (index == 3) {
-				return new Response("Wolf-tease", "Use your feminine wolf-like body to tease [brax.name] into giving you information about Arthur.", INTERIOR_BRAX_GETTING_TEASED,
+				return new Response("动之以狼貌", "借助你充满女性魅力的狼一般的身躯，勾引[brax.name]让他告诉你亚瑟的消息。", INTERIOR_BRAX_GETTING_TEASED,
 						null, null, null, Femininity.FEMININE, Util.newArrayListOfValues(Subspecies.WOLF_MORPH, Subspecies.getSubspeciesFromId("innoxia_wolf_subspecies_arctic"))){
 					@Override
 					public void effects(){
@@ -169,7 +169,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_REPEAT = new DialogueNode("[brax.namePos] Office", "-", true) {
+	public static final DialogueNode INTERIOR_BRAX_REPEAT = new DialogueNode("[brax.namePos]的办公室", "-", true) {
 		@Override
 		public boolean isTravelDisabled() {
 			return !Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_C_WOLFS_DEN);
@@ -181,13 +181,13 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1 && !Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_C_WOLFS_DEN)) {
-				return new ResponseCombat("Fight", "[brax.name] looks like he's ready to give you another beating!", Main.game.getNpc(Brax.class));
+				return new ResponseCombat("战斗", "[brax.name]看着像是要好好揍你一顿！", Main.game.getNpc(Brax.class));
 			}
 			return null;
 		}
 	};
 
-	public static final DialogueNode INTERIOR_BRAX_TRUTH = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_TRUTH = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -197,7 +197,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight", "If you want to find out what happened to Arthur, you're going to have to fight [brax.name]!", Main.game.getNpc(Brax.class));
+				return new ResponseCombat("战斗", "如果你想找出亚瑟的情报，那你必须要跟[brax.name]战斗！", Main.game.getNpc(Brax.class));
 					
 			} else {
 				return null;
@@ -205,7 +205,7 @@ public class BraxOffice {
 		}
 	};
 
-	public static final DialogueNode INTERIOR_BRAX_LIE = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_LIE = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -215,10 +215,10 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Keep on bluffing", "Imply that 'The She-wolf's Den' is a brothel you own. If he'll give you information about Arthur, you'll give him VIP status.", INTERIOR_BRAX_LIE_BLUFFING);
+				return new Response("继续唬骗", "暗示“母狼巢穴”就是你旗下的妓院。如果他能告诉你亚瑟的消息，那你就会给他VIP。", INTERIOR_BRAX_LIE_BLUFFING);
 					
 			} else if (index == 2) {
-				return new Response("Drop the act", "Tell [brax.name] that he's an idiot and you're here to find out what he's done with Arthur.", INTERIOR_BRAX_LIE_IDIOT_BRAX);
+				return new Response("不演了", "告诉[brax.name]他就是个憨憨，而你来这是想弄明白他到底对亚瑟做了什么。", INTERIOR_BRAX_LIE_IDIOT_BRAX);
 					
 			} else {
 				return null;
@@ -226,7 +226,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_LIE_IDIOT_BRAX = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_LIE_IDIOT_BRAX = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -236,7 +236,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight", "[brax.name] looks extremely embarrassed, and you're sure that you've given yourself at least a small advantage by tricking him like this!", Main.game.getNpc(Brax.class)){
+				return new ResponseCombat("战斗", "[brax.name]看着非常尴尬，你确信这样戏弄他，至少能给你带来一点点优势！", Main.game.getNpc(Brax.class)){
 					@Override
 					public void effects(){
 						Main.game.getNpc(Brax.class).setLustNoText(30);
@@ -249,7 +249,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_LIE_BLUFFING = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_LIE_BLUFFING = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -259,7 +259,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Let him go", "Tell [brax.name] to have fun. From your directions, it'll take at least a couple of hours before he figures out he's been fooled.", INTERIOR_BRAX_LIE_BLUFFING_SUCCESS){
+				return new Response("放他走", "祝[brax.name]玩得开心。你觉得他至少得花上好几个小时才能明白自己是被人耍了。", INTERIOR_BRAX_LIE_BLUFFING_SUCCESS){
 					@Override
 					public void effects(){
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.MAIN, Quest.MAIN_1_D_SLAVERY));
@@ -267,7 +267,7 @@ public class BraxOffice {
 				};
 					
 			} else if (index == 2) {
-				return new Response("Stop [brax.name]", "Tell [brax.name] that he's an idiot and you're going to beat him up for being such a gullible fool.", INTERIOR_BRAX_LIE_BLUFFING_IDIOT_BRAX) {
+				return new Response("阻止[brax.name]", "告诉[brax.name]他就是个憨憨，而你要给他这个容易上当受骗的傻瓜好好“上一堂课”。", INTERIOR_BRAX_LIE_BLUFFING_IDIOT_BRAX) {
 					@Override
 					public boolean isCombatHighlight() {
 						return true;
@@ -280,7 +280,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_LIE_BLUFFING_SUCCESS = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_LIE_BLUFFING_SUCCESS = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -290,7 +290,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Fem. uniform", "Take the feminine uniform and leave the Enforcer HQ.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("女性制服", "拿一套女性制服，离开执法者总部。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(), 1);
@@ -299,7 +299,7 @@ public class BraxOffice {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Masc. uniform", "Take the masculine uniform and leave the Enforcer HQ.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("男性制服", "拿一套男性制服，离开执法者总部。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(), 0);
@@ -312,7 +312,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_LIE_BLUFFING_IDIOT_BRAX = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_LIE_BLUFFING_IDIOT_BRAX = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -322,7 +322,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight", "[brax.name] looks extremely embarrassed, and you're sure that you've given yourself a big advantage by tricking him like this!", Main.game.getNpc(Brax.class)){
+				return new ResponseCombat("战斗", "[brax.name]看着非常尴尬，你确信这样戏弄他，能给你带来很大优势！", Main.game.getNpc(Brax.class)){
 					@Override
 					public void effects(){
 						Main.game.getNpc(Brax.class).setLustNoText(50);
@@ -335,7 +335,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_GETTING_TEASED = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_GETTING_TEASED = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -345,7 +345,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Read", "Read the piece of paper [brax.name] just handed to you.", INTERIOR_BRAX_GETTING_TEASED_UH_OH) {
+				return new Response("阅读", "阅读[brax.name]刚刚递给你的文件。", INTERIOR_BRAX_GETTING_TEASED_UH_OH) {
 					@Override
 					public void effects(){
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.MAIN, Quest.MAIN_1_D_SLAVERY));
@@ -358,7 +358,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_GETTING_TEASED_UH_OH = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_GETTING_TEASED_UH_OH = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -368,12 +368,12 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Escape", "Push [brax.name] off of you and make a quick excuse before running away.", INTERIOR_BRAX_GETTING_TEASED_ESCAPE) {
+				return new Response("快逃！", "把[brax.name]推开，借口迅速逃离。", INTERIOR_BRAX_GETTING_TEASED_ESCAPE) {
 					
 				};
 					
 			} else if (index == 2) {
-				return new ResponseSex("Get fucked", "Let [brax.name] take control and fuck you.",
+				return new ResponseSex("挨操", "让[brax.name]控制住你，然后挨操。",
 						true, false, 
 						new SMBraxDoggy(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Brax.class), SexSlotAllFours.BEHIND)),
@@ -384,7 +384,7 @@ public class BraxOffice {
 						UtilText.parseFromXMLFile("places/dominion/enforcerHQ/brax", "INTERIOR_BRAX_GETTING_TEASED_UH_OH_GET_FUCKED"));
 					
 			} else if (index == 3) {
-				return new ResponseSex("Take control", "Take control of the situation and turn [brax.name] into your little bitch.", Util.newArrayListOfValues(Fetish.FETISH_DOMINANT),
+				return new ResponseSex("反客为主", "反过来掌控局势，把[brax.name]变成你胯下的小母狗。", Util.newArrayListOfValues(Fetish.FETISH_DOMINANT),
 						null, null, null, null, null,
 						true, false,
 						new SMGeneric(
@@ -401,7 +401,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_BRAX_GETTING_TEASED_ESCAPE = new DialogueNode("[brax.namePos] Office", "-", true, true) {
+	public static final DialogueNode INTERIOR_BRAX_GETTING_TEASED_ESCAPE = new DialogueNode("[brax.namePos]的办公室", "-", true, true) {
 
 		@Override
 		public String getContent() {
@@ -411,7 +411,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Fem. uniform", "You take the feminine uniform and leave the enforcer HQ.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("女性制服", "拿一套女性制服，离开执法者总部。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(), 1);
@@ -420,7 +420,7 @@ public class BraxOffice {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Masc. uniform", "You take the manly uniform and leave the enforcer HQ.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("男性制服", "拿一套男性制服，离开执法者总部。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(), 0);
@@ -438,11 +438,11 @@ public class BraxOffice {
 	//----------- BRAX COMBAT/SEX -----------
 	
 
-	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 
 		@Override
 		public String getDescription() {
-			return "You have defeated Brax!";
+			return "你已击败了布拉克斯！";
 		}
 
 		@Override
@@ -453,13 +453,13 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Leave", "You really don't want to have sex with Brax. Leave his office and continue on your way.", AFTER_COMBAT_VICTORY_NO_SEX){
+				return new Response("离开", "你真的不想和布拉克斯做爱，便决定离开他的办公室，继续做别的事情。", AFTER_COMBAT_VICTORY_NO_SEX){
 					
 				};
 				
 			} else if (index == 2) {
-				return new ResponseSex("Dominate Brax",
-						"Brax's broken, horny form is too much for you to resist, and you can't help but smile down deviously at the wolf-boy as you prepare to make him your bitch.",
+				return new ResponseSex("支配布拉克斯",
+						"布拉克斯一败涂地且饥渴难耐的模样令你无法抗拒，你忍不住对着狼男露出狡黠的笑容，准备将他变成你的母狗。",
 						Util.newArrayListOfValues(Fetish.FETISH_DOMINANT), null, CorruptionLevel.TWO_HORNY, null, null, null,
 						false, false,
 						new SMStanding(
@@ -471,8 +471,8 @@ public class BraxOffice {
 						UtilText.parseFromXMLFile("places/dominion/enforcerHQ/brax", "AFTER_COMBAT_VICTORY_DOMINATE"));
 				
 			} else if (index == 3) {
-				return new ResponseSex("Submit to Brax",
-						"Although you've defeated him, your submissive nature is causing you to consider letting Brax dominantly fuck you...",
+				return new ResponseSex("向布拉克斯屈服",
+						"虽然你已经击败了他，但你那顺从的天性使你开始考虑起让布拉克斯以支配位上你……",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.TWO_HORNY, null, Femininity.FEMININE, null,
 						false, true,
 						new SMBraxDoggy(
@@ -498,7 +498,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Fem. Uniform", "You take the feminine uniform and find yourself back outside once more, but this time, with new knowledge of Arthur's location.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("女性制服", "你拿了一套女性制服，再次回到外面，但现在已经有了亚瑟位置的新线索。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(),1);
@@ -507,7 +507,7 @@ public class BraxOffice {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Masc. Uniform", "You take the manly uniform and find yourself outside once more, but this time, with new knowledge of Arthur's location.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("男性制服", "你拿了一套男性制服，再次回到外面，但现在已经有了亚瑟位置的新线索。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(),0);
@@ -520,11 +520,11 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("Defeat", "", true) {
+	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("落败", "", true) {
 		
 		@Override
 		public String getDescription() {
-			return "You have been defeated by Brax!";
+			return "你已被布拉克斯击败！";
 		}
 
 		@Override
@@ -539,17 +539,17 @@ public class BraxOffice {
 					return Response.getDisallowedSpittingResponse();
 				}
 				if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-					return new Response("Spit",
-							"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-								+"</b> fetish, you love being transformed so much that you can't bring yourself to spit out the transformative liquid!",
+					return new Response("吐出",
+							"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+								+"</b>的性癖，你乐于被转化，所以无法把转化液体吐出来！",
 							null);
 				} else {
-					return new Response("Spit", "Spit out the transformative liquid.", AFTER_DEFEAT_TRANSFORMATION_REFUSED);
+					return new Response("吐出", "吐出转化液体。", AFTER_DEFEAT_TRANSFORMATION_REFUSED);
 				}
 				
 			} else if (index == 2) {
-				return new Response("Swallow",
-						"Do as Brax says and swallow the strange liquid.",
+				return new Response("咽下",
+						"按布拉克斯说的做，吞下奇怪的液体。",
 						AFTER_DEFEAT_TRANSFORMATION,
 						Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING),
 						Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel(),
@@ -564,7 +564,7 @@ public class BraxOffice {
 						AbstractItem potion = EnchantingUtils.craftItem(
 							Main.game.getItemGen().generateItem(tfPotion.getItemType()),
 							tfPotion.getEffects().stream().map(x -> x.getEffect()).collect(Collectors.toList()));
-						potion.setName("Brax's Surprise");
+						potion.setName("布拉克斯的小惊喜");
 						
 						Main.game.getNpc(Brax.class).useItem(potion, Main.game.getPlayer(), false);
 						
@@ -587,7 +587,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode AFTER_DEFEAT_TRANSFORMATION_REFUSED = new DialogueNode("Brax's Office", "In Brax's Office after being forced to drink the potion.", true, true) {
+	public static final DialogueNode AFTER_DEFEAT_TRANSFORMATION_REFUSED = new DialogueNode("布拉克斯的办公室", "被强行灌入药水后，布拉克斯的办公室内。", true, true) {
 
 		@Override
 		public String getContent() {
@@ -597,7 +597,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Dominated", "Brax is far too strong for you to resist...",
+				return new ResponseSex("被支配", "布拉克斯太过强大，你无可阻挡……",
 						false, false,
 						new SMBraxDoggy(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Brax.class), SexSlotAllFours.BEHIND)),
@@ -612,7 +612,7 @@ public class BraxOffice {
 		}
 	};
 	
-	public static final DialogueNode AFTER_DEFEAT_TRANSFORMATION = new DialogueNode("Brax's Office", "In Brax's Office after being forced to drink the potion.", true, true) {
+	public static final DialogueNode AFTER_DEFEAT_TRANSFORMATION = new DialogueNode("布拉克斯的办公室", "被强行灌入药水后，布拉克斯的办公室内。", true, true) {
 
 		@Override
 		public String getContent() {
@@ -622,8 +622,8 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Obey",
-						"The arousing liquid you've just been forced to drink is forcing you to obey, and you eagerly fall down on all fours so that Brax can fuck you, doggy-style.",
+				return new ResponseSex("屈服",
+						"你刚刚被灌入的药水能够勾起情欲，迫使你屈服了，你极其渴求地四肢着地趴了下去，让布拉克斯能够后入你。",
 						false, false,
 						new SMBraxDoggy(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Brax.class), SexSlotAllFours.BEHIND)),
@@ -639,7 +639,7 @@ public class BraxOffice {
 		}
 	};
 
-	public static final DialogueNode AFTER_SUBMISSIVE_SEX = new DialogueNode("Brax is done", "Brax has finished having his fun with you.", true) {
+	public static final DialogueNode AFTER_SUBMISSIVE_SEX = new DialogueNode("布拉克斯完事了", "布拉克斯跟你爽过了。", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 30*60;
@@ -654,7 +654,7 @@ public class BraxOffice {
 		public Response getResponse(int responseTab, int index) {
 			if (Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_1_C_WOLFS_DEN)) {
 				if (index == 1) {
-					return new Response ("Fem. Uniform", "You take the feminine uniform and continue on your way.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+					return new Response ("女性制服", "拿一套女性制服，继续赶路。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 						@Override
 						public void effects() {
 							givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(),1);
@@ -663,7 +663,7 @@ public class BraxOffice {
 					};
 					
 				} else if (index == 2) {
-					return new Response("Masc. Uniform", "You take the masculine uniform and continue on your way.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+					return new Response("男性制服", "拿一套男性制服，继续赶路。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 						public void effects( ) {
 							givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(),0);
 							setBraxsPostQuestStatus(true);
@@ -673,7 +673,7 @@ public class BraxOffice {
 				
 			} else {
 				if (index == 1) {
-					return new Response("Carry on", "Get up and carry on your way.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+					return new Response("继续", "起身继续你的旅程。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 						@Override
 						public void effects() {
 							Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_ENFORCER_HQ, false);
@@ -685,7 +685,7 @@ public class BraxOffice {
 		}
 	};
 
-	public static final DialogueNode AFTER_DOMINANT_SEX = new DialogueNode("Brax collapses", "Brax collapses and you return to his office.", true) {
+	public static final DialogueNode AFTER_DOMINANT_SEX = new DialogueNode("布拉克斯瘫倒在地", "布拉克斯倒下了，你返回了他的办公室。", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/enforcerHQ/brax", "AFTER_DOMINANT_SEX");
@@ -694,7 +694,7 @@ public class BraxOffice {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Fem. Uniform", "You take the feminine uniform and find yourself back outside once more, but this time, with new knowledge of Arthur's location.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("女性制服", "你拿了一套女性制服，再次回到外面，但现在已经有了亚瑟位置的新线索。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(), 1);
@@ -703,7 +703,7 @@ public class BraxOffice {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Masc. Uniform", "You take the manly uniform and find yourself back outside once more, but this time, with new knowledge of Arthur's location.", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
+				return new Response("男性制服", "你拿了一套男性制服，再次回到外面，但现在已经有了亚瑟位置的新线索。", PlaceType.DOMINION_ENFORCER_HQ.getDialogue(false)) {
 					@Override
 					public void effects() {
 						givePlayerEnforcerUniform(Main.game.getTextEndStringBuilder(), 0);

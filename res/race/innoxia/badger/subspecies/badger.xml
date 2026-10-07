@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_badger</race>
 	<colour>innoxia_badger</colour>
@@ -23,24 +23,24 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Moonlit Stripes</bookName>
+	<bookName><![CDATA[月光之纹]]></bookName>
 	<basicDescriptionId>BADGER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>BADGER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[badger-morph]]></name>
-	<namePlural><![CDATA[badger-morphs]]></namePlural>
-	<singularMaleName><![CDATA[badger-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[badger-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[badger-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[badger-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic badger, known as a 'badger-morph' when bipedal, and a 'badgertaur' when the lower body is that of a feral badger.]]></description>
+	<name><![CDATA[獾化形]]></name>
+	<namePlural><![CDATA[獾化形]]></namePlural>
+	<singularMaleName><![CDATA[獾男]]></singularMaleName>
+	<singularFemaleName><![CDATA[獾女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[獾男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[獾女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的獾，当下肢为双足时称为“獾化形”，而下肢呈现出鹿兽态时称为“半獾人”。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[badger]]></feralName>
-		<feralNamePlural><![CDATA[badger]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[badger]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[badger]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[badgers]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[badgers]]></feralPluralFemaleName>
+		<feralName><![CDATA[獾]]></feralName>
+		<feralNamePlural><![CDATA[獾]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[獾]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[獾]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[獾]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[獾]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>false</sizeHeight>
 		<size>90</size>
@@ -53,7 +53,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] body is quite strong, and is also slightly resistant to both natural and arcane cold.
+		[npc.NamePos]的身体相当强壮，还对自然和奥术寒冷有一定的抗性。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="10">MAJOR_PHYSIQUE</attribute>

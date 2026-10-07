@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[door]]></name>
-	<tooltipDescription><![CDATA[Doors separate the kitchen area from the bakery's shop floor.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[by one of the doors in the abandoned bakery in Elis]]></virginityLossDescription>
+	<name><![CDATA[门]]></name>
+	<tooltipDescription><![CDATA[几扇门将厨房从面包店的主体隔开。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯废弃面包店的一扇门后]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

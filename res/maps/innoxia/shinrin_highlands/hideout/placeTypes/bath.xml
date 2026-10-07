@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[bath]]></name>
-	<tooltipDescription><![CDATA[This room contains a shower and a traditional Japanese bath, which is a deep, steep-sided tub designed for soaking rather than washing.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Meraxis's hideout]]></virginityLossDescription>
+	<name><![CDATA[泡澡]]></name>
+	<tooltipDescription><![CDATA[房间内包含一只淋浴头和一个传统日式风格的浴桶，桶壁又陡又深，专供泡澡使用，而非用来清洗身体。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于梅拉克西丝的藏身处]]></virginityLossDescription>
 	<sexBlockedReason/>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE</colour>

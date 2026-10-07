@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[hooded cloak]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[hooded cloaks]]></namePlural>
-		<description><![CDATA[A floor-length cloak, complete with hood. It's able to almost completely conceal the wearer's body.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[连帽斗篷]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[连帽斗篷]]></namePlural>
+		<description><![CDATA[一件及地长的斗篷，带兜帽。它几乎可以完全遮盖住穿戴者的身体。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>TORSO_OVER</slot>
@@ -129,25 +129,25 @@
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] on the cloak.
-		]]></self>
+[npc.Name]穿上了斗篷。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] the cloak onto [npc2.name].
-		]]></other>
+[npc.Name]将斗篷套在[npc2.name]的身上。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(force)] the cloak onto [npc2.name].
-		]]></otherRough>
+[npc.Name]粗暴地将斗篷套在[npc2.name]的身上。
+]]></otherRough>
 	</replacementText>
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] off [npc.her] cloak.
-		]]></self>
+[npc.Name]脱下了[npc.her]的斗篷。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] off [npc2.namePos] cloak.
-		]]></other>
+[npc.Name]将[npc2.namePos]的斗篷脱下。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] cloak.
-		]]></otherRough>
+			[npc.Name]抓住[npc2.namePos]的斗篷并粗暴地扯下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	<additionalPlaceTypeTriggers>
 		<placeType>dsg_fields_elis_eisek_sillymode_dungeon_passage</placeType>
@@ -6,7 +6,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[A Cardboard Warrior]]></name>
+			<name><![CDATA[硬纸板勇士]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				15
 			]]></chanceToTrigger>

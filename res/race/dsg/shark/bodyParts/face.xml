@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <face>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_shark</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[shark]]></transformationName>
+	<transformationName><![CDATA[鲨鱼]]></transformationName>
 	
 	<!-- The id of the material covering this face.
 	The id will typically take the form of 'innoxia_hyena_fur'.
@@ -44,21 +44,21 @@
 	<!-- The descriptors which should be drawn upon when describing a masculine character's face of this type.
 	Can be left blank. -->
 	<descriptorsMasculine>
-		<descriptor>anthropomorphic shark-like</descriptor>
-		<descriptor>shark-like</descriptor>
-		<descriptor>angular-muzzled</descriptor>
+		<descriptor><![CDATA[鲨鱼般拟人]]></descriptor>
+		<descriptor><![CDATA[鲨鱼般]]></descriptor>
+		<descriptor><![CDATA[棱角分明的吻部]]></descriptor>
 	</descriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<descriptorsFeminine>
-		<descriptor>anthropomorphic shark-like</descriptor>
-		<descriptor>shark-like</descriptor>
-		<descriptor>angular-muzzled</descriptor>
+		<descriptor><![CDATA[鲨鱼般拟人]]></descriptor>
+		<descriptor><![CDATA[鲨鱼般]]></descriptor>
+		<descriptor><![CDATA[棱角分明的吻部]]></descriptor>
 	</descriptorsFeminine>
 	
 	
 	<!-- The singular and plural names of the nose associated with this face type.
 	For most faces, it will be 'nose' and 'noses'. -->
-	<noseName><![CDATA[nose]]></noseName>
+	<noseName><![CDATA[吻部]]></noseName>
 	<noseNamePlural><![CDATA[noses]]></noseNamePlural>
 	
 	<!-- The descriptors which should be drawn upon when describing a masculine character's nose of this type.
@@ -68,30 +68,30 @@
 	</noseDescriptorsMasculine>
 	-->
 	<noseDescriptorsMasculine>
-		<descriptor>pointed</descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
 	</noseDescriptorsMasculine>
 	<!-- Same as above, but for feminine characters. -->
 	<noseDescriptorsFeminine>
-		<descriptor>pointed</descriptor>
+		<descriptor><![CDATA[锐利]]></descriptor>
 	</noseDescriptorsFeminine>
 	
 	<!-- The description which is shown when a character transforms to obtain this face type.
 	This description immediately follows a brief description of the face type beginning to transform. -->
 	<transformationDescription><![CDATA[
-		[npc.Her] nose and mouth twitch and transform as they push out to become more angular and hydrodynamic until they're formed into an anthropomorphic shark-like muzzle, and [npc.her] tongue tapers slightly, turning into a similarly animalistic one that sits in a mouth rapidly filling up with very sharp triangular teeth.
-		#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
-			 A layer of [npc.faceSkin+] quickly grows to cover [npc.her] new face, 
-		#ELSE
-			 Just like the rest of [npc.her] body, [npc.her] new face is [npc.materialDescriptor] [npc.faceSkin+], 
-		#ENDIF
-		and as the transformation finally comes to an end, [npc.sheIs] left panting and sighing as [npc.she] [npc.verb(try)] to catch [npc.her] breath.
-		<br/>[npc.Name] now [npc.has] an anthropomorphic [style.boldShark(shark-like face)], [npc.materialDescriptor] [npc.faceFullDescription]. Within [npc.her] [npc.mouth], [npc.she] [npc.has] a [style.boldShark(flat, shark-like tongue)].
-	]]></transformationDescription>
+		[npc.she]的鼻子和嘴巴微微抽动，不断向外推出，变得更加棱角分明和流线，直到形成一个似人的鲨鱼嘴，[npc.she]的舌头略微变细，与动物类似，嘴里迅速长满非常锋利的三角形牙齿。
+	#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
+		一层[npc.faceSkin+]细毛迅速长出并覆盖了她的新脸，
+	#ELSE
+		就像她身体的其它部位一样，她的新脸[npc.materialDescriptor][npc.faceSkin+]，
+	#ENDIF
+	当转化彻底完成时，[npc.sheIs]试图喘口气，却发出了娇喘和呻吟。
+	<br/>[npc.Name]现在拥有一张似人的[style.boldShark(类鲨鱼脸)]，[npc.materialDescriptor][npc.faceFullDescription]。在[npc.her]嘴中有一根[style.boldShark(扁平的鲨鱼舌头)]。
+]]></transformationDescription>
 	
 	<!-- How this face is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.a_feminineDescriptor(true)], anthropomorphic, shark-like face [npc.materialCompositionDescriptor] [npc.faceFullDescription(true)] and complete with a sleek angular muzzle that ends in a pointed nose.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的鲨鱼面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，圆润的口吻棱角分明，吻部末端呈尖形。
+]]></bodyDescription>
 	
 	<!-- Feral variant of the above. -->
 	<bodyDescriptionFeral><![CDATA[

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<additionalPlaceTypeTriggers>
@@ -7,7 +7,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[dairy farm discovered]]></name>
+			<name><![CDATA[已发现乳业农场]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(pc.getLocation().equals(13, 23))
 					101

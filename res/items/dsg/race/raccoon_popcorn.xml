@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA[A faint inscription underneath the plate reads 'Packed by DSG Foodstuffs LLC']]></authorTag>
+		<authorTag><![CDATA[盘底刻着细小的字迹，写着“DSG食品有限公司包装”。]]></authorTag>
 		
 		<value>15</value> 
-		<determiner><![CDATA[a bag of]]></determiner>
-		<name><![CDATA[Popcorn]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Popcorn]]></namePlural>
-		<description><![CDATA[A plastic bag of lightly buttered popcorn. The label on the cover depicts a raccoon-girl in denim overalls triumphantly raising an ear of corn above her while popcorn kernels explode off of it.]]></description> 
+		<determiner><![CDATA[一袋]]></determiner>
+		<name><![CDATA[爆米花]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[爆米花]]></namePlural>
+		<description><![CDATA[一袋黄油爆米花。包装上描绘了一位穿着牛仔背带裤的浣熊女得意洋洋地高举着一根玉米棒，爆米花粒从中四溅而出。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -24,21 +24,21 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[raccoon]]></potionDescriptor>
+		<potionDescriptor><![CDATA[浣熊]]></potionDescriptor>
 		<associatedRace>dsg_raccoon</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel stronger...
+				[npc.Name]开始感到更加强壮……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 		]]></applyEffects>
@@ -52,10 +52,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the bag and [npc.verb(breathe)] in the rich scent of butter and hot starch. Unable to resist the delicious looking snack, [npc.she] eagerly [npc.verb(start)] wolfing it all down and [npc.verb(empty)] the bag in moments.
+		[npc.Name]打开了袋子，深深吸了口充满黄油和热淀粉的芳香。无法抵御这美味的零食，[npc.she]急不可耐地开始大口吃着，不一会就吃完了整袋。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(open)] the bag and [npc.verb(hold)] it out to [npc2.name], allowing [npc2.herHim] to [npc2.verb(breathe)] in the rich scent of butter and hot starch. Unable to resist the delicious-looking popcorn inside, [npc2.she] [npc2.verb(start)] wolfing it all down and [npc.verb(empty)] the bag in moments.
+		[npc.Name]打开袋子，将其递给[npc2.name]，让[npc2.herHim]闻到其中浓郁的黄油和热淀粉的香气。无法抵挡这美味的爆米花，[npc2.she]急不可耐地开始大口吃着，不一会便将整袋都吃光了。
 		]]></otherUse>
 	</useDescriptions>
 

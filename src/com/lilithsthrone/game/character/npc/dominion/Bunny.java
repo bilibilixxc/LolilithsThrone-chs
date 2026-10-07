@@ -72,9 +72,9 @@ public class Bunny extends NPC {
 	}
 	
 	public Bunny(boolean isImported) {
-		super(isImported, new NameTriplet("Bunny"), "Hasenkamp",
-				"Bunny is one of the two prostitutes Angel has working for her."
-						+ " Just like her older sister, Loppy, Bunny is a rabbit-morph, and seems to genuinely love her line of work.",
+		super(isImported, new NameTriplet("兔兔"), "哈森坎普",
+				"兔兔是安吉尔手下的两名妓女之一。"
+						+ "就像她的长姐耷耷那样，兔兔是兔化形，并似乎真心热爱她的工作。",
 				19, Month.FEBRUARY, 13,
 				10, Gender.F_V_B_FEMALE, Subspecies.RABBIT_MORPH, RaceStage.PARTIAL,
 				new CharacterInventory(false, 30), WorldType.ANGELS_KISS_FIRST_FLOOR, PlaceType.ANGELS_KISS_BEDROOM_BUNNY, true);
@@ -86,8 +86,8 @@ public class Bunny extends NPC {
 		
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.2.10.5")) {
 			resetBodyAfterVersion_2_10_5();
-			this.setDescription("Bunny is one of the two prostitutes Angel has working for her."
-						+ " Just like her older sister, Loppy, Bunny is a rabbit-morph, and seems to genuinely love her line of work.");
+			this.setDescription("兔兔是安吉尔手下的两名妓女之一。"
+						+ "就像她的长姐耷耷那样，兔兔是兔化形，并似乎真心热爱她的工作。");
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.3.6")) {
 			this.resetPerksMap(true);
@@ -324,8 +324,8 @@ public class Bunny extends NPC {
 			return new Value<>(false,
 					UtilText.parse(user, target,
 						"<p>"
-							+ "[npc.Name] [npc.verb(take)] out "+UtilText.generateSingularDeterminer(itemName)+" "+itemName+" from [npc.her] inventory and [npc.verb(try)] to give it to [npc2.name],"
-								+ " but [npc2.she] dismisses it with a wave of [npc2.her] hand and says, [npc2.speech(Sorry, [npc.babe], but that's not part of the deal!)]"
+							+ "[npc.Name]拿出了"+UtilText.generateSingularDeterminer(itemName)+itemName+"，递给了[npc2.name]，"
+								+ "但[npc2.she]摆摆手说道：[npc2.speech(不好意思啦，[npc.babe]，这可不是交易的一部分！)]"
 						+ "</p>"));
 		}
 		return super.getItemUseEffects(item, itemOwner, user, target);

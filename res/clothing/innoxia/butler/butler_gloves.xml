@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>350</value> 
 		
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一双]]></determiner>
 		
-		<name><![CDATA[Butler's Glove]]></name>
+		<name><![CDATA[管家手套]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[Butler's Gloves]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[管家手套]]></namePlural> 
 		
-		<description><![CDATA[A pair of white gloves, of the sort worn by butlers and valets.]]></description> 
+		<description><![CDATA[管家男仆穿的那种白色手套。]]></description> 
 		
 		<physicalResistance>0</physicalResistance>
 		
@@ -67,27 +67,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the gloves onto [npc.her] [npc.hands], before giving [npc.her] [npc.fingers] an experimental wiggle.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the gloves onto [npc2.namePos] [npc2.hands].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(force)] the gloves onto [npc2.namePos] [npc2.hands].]]>
-	  </otherRough>
+		<self><![CDATA[
+		[npc.Name]给[npc.her]的[npc.hands]戴上手套，之后试探性地动了动[npc.fingers]。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]给[npc2.namePos]的[npc2.hands]戴上手套。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地给[npc2.namePos]的[npc2.hands]戴上手套。
+	]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] gloves.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] gloves.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(yank)] off [npc2.namePos] gloves.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]脱下了[npc.her]的手套。
+		]]></self>
+		<other><![CDATA[
+		[npc.Name]脱掉了[npc2.namePos]的手套。
+		]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]粗暴地扯掉[npc2.namePos]的手套。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

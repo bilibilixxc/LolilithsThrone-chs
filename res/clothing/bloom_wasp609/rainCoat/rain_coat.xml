@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>750</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[raincoat]]></name>
+		<name><![CDATA[雨衣]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[raincoats]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[雨衣]]></namePlural> 
 		
-		<description><![CDATA[A waterproof raincoat, complete with hood and soft inner-lining. It's long enough in the leg to keep the wearer's groin hidden from sight.]]></description> 
+		<description><![CDATA[有兜帽和柔软内衬的雨衣，下摆长度足以遮挡住下体。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

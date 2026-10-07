@@ -108,7 +108,7 @@ public class Nipples implements BodyPartInterface {
 					case SIX_SOPPING_WET:
 					case SEVEN_DROOLING:
 //						descriptorList.add(owner.getBreastCrotchMilkStorage().getAssociatedWetness().getDescriptor());
-						descriptorList.add("milky");
+						descriptorList.add("乳汁状");
 						break;
 					default:
 						break;
@@ -130,7 +130,7 @@ public class Nipples implements BodyPartInterface {
 					case SIX_SOPPING_WET:
 					case SEVEN_DROOLING:
 //						descriptorList.add(owner.getBreastMilkStorage().getAssociatedWetness().getDescriptor());
-						descriptorList.add("milky");
+						descriptorList.add("乳汁状");
 						break;
 					default:
 						break;
@@ -140,13 +140,13 @@ public class Nipples implements BodyPartInterface {
 		
 		if(Main.game.isInSex() && Main.sex.getAllParticipants().contains(owner)) {
 			if(Main.sex.hasLubricationTypeFromAnyone(owner, SexAreaOrifice.NIPPLE)) {
-				descriptorList.add("wet");
+				descriptorList.add("湿漉漉");
 			}
 		}
 
 		switch(this.getNippleShape()) {
 			case INVERTED:
-				descriptorList.add("inverted");
+				descriptorList.add("内陷");
 				break;
 			case LIPS:
 			case NORMAL:
@@ -195,21 +195,21 @@ public class Nipples implements BodyPartInterface {
 			return "";
 		}
 		if(this.nippleSize == boundNippleSize) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] [npc.nipples] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.nipples]的大小并没有改变……)]</p>");
 		}
 		
 		String transformation = "";
 		
 		if(this.nippleSize > boundNippleSize) {
-			transformation = UtilText.parse(owner, "<p>A soothing coolness rises up into [npc.namePos] [npc.nipples], causing [npc.herHim] to let out a surprised gasp as [npc.she] [npc.verb(feel)] them start to [style.boldShrink(shrink)].<br/>");
+			transformation = UtilText.parse(owner, "<p>当[npc.Name]感觉到[npc.nipples]升起一股舒缓的凉意时，[npc.she]忍不住惊呼一声，感觉到[npc.nipples]紧接着[style.boldShrink(缩小)]了。<br/>");
 			
 		} else {
-			transformation = UtilText.parse(owner, "<p>A pulsating warmth rises up into [npc.namePos] [npc.nipples], causing [npc.herHim] to let out a surprised gasp as [npc.she] [npc.verb(feel)] them start to [style.boldGrow(grow larger)].<br/>");
+			transformation = UtilText.parse(owner, "<p>当[npc.Name]感觉到[npc.nipples]升起一股脉动似的暖意时，[npc.she]忍不住惊呼一声，感觉到[npc.nipples]紧接着[style.boldGrow(变大)]了。<br/>");
 		}
 		
 		this.nippleSize = boundNippleSize;
 
-		return transformation + UtilText.parse(owner, "[npc.Name] now [npc.has] [style.boldSex([npc.nippleSize] [npc.nipples])]!</p>");
+		return transformation + UtilText.parse(owner, "[npc.Name]现在有了[style.boldSex([npc.nippleSize]的[npc.nipples])]！</p>");
 		
 	}
 
@@ -224,7 +224,7 @@ public class Nipples implements BodyPartInterface {
 		}
 		
 		if(this.nippleShape == nippleShape) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The shape of [npc.namePos] [npc.nipples] doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos][npc.nipples]的形状并无改变……)]</p>");
 		}
 		
 		String transformation = "";
@@ -276,7 +276,7 @@ public class Nipples implements BodyPartInterface {
 		}
 		
 		if(this.areolaeShape == areolaeShape) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The shape of [npc.namePos] areolae doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]乳晕的形状并无改变……)]</p>");
 		}
 
 		this.areolaeShape = areolaeShape;
@@ -319,23 +319,23 @@ public class Nipples implements BodyPartInterface {
 			return "";
 		}
 		if (this.areolaeSize == boundAreolaeSize) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] areolae doesn't change...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]乳晕的大小并无改变……)]</p>");
 		}
 		
 		String transformation = "";
 		
 		if (this.areolaeSize > boundAreolaeSize) {
 			transformation = UtilText.parse(owner,
-					"<p>[npc.Name] [npc.verb(let)] out a shocked gasp as [npc.she] [npc.verb(feel)] a strange tingling sensation suddenly build up around [npc.her] [npc.nipples], before [npc.her] areolae suddenly [style.boldShrink(shrink)].<br/>");
+					"<p>[npc.Name]的乳晕突然[style.boldShrink(缩小)]了，[npc.her]还感觉到[npc.nipples]周围突然产生一种奇怪的刺痛感，这令[npc.her]发出一声震惊的喘息声。<br/>");
 			
 		} else {
 			transformation = UtilText.parse(owner,
-					"<p>[npc.Name] [npc.verb(let)] out a shocked gasp as [npc.she] [npc.verb(feel)] a strange tingling sensation suddenly build up around [npc.her] [npc.nipples], before [npc.her] areolae suddenly [style.boldGrow(grow larger)].<br/>");
+					"<p>[npc.Name]的乳晕突然[style.boldGrow(变大)]了，[npc.her]还感觉到[npc.nipples]周围突然产生一种奇怪的刺痛感，这令[npc.her]发出一声震惊的喘息声。<br/>");
 		}
 		
 		this.areolaeSize = boundAreolaeSize;
 
-		return transformation + UtilText.parse(owner, "[npc.Name] now [npc.has] [style.boldSex([npc.areolaeSize] areolae)]!</p>");
+		return transformation + UtilText.parse(owner, "[npc.Name]现在有了[style.boldSex([npc.areolaeSize]的乳晕)]！</p>");
 	}
 
 	public boolean isPierced() {
@@ -344,13 +344,13 @@ public class Nipples implements BodyPartInterface {
 	
 	public String setPierced(GameCharacter owner, boolean pierced) {
 		if(this.pierced == pierced) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.pierced = pierced;
 		
 		if(pierced) {
-			return UtilText.parse(owner, "<p>[npc.NamePos] [npc.nipples] are now [style.boldGrow(pierced)]!</p>");
+			return UtilText.parse(owner, "<p>[npc.NamePos]的[npc.nipples]现在已[style.boldGrow(穿孔)]！</p>");
 			
 		} else {
 			AbstractClothing c = owner.getClothingInSlot(InventorySlot.PIERCING_NIPPLE);
@@ -362,7 +362,7 @@ public class Nipples implements BodyPartInterface {
 			
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.NamePos] [npc.nipples] are [style.boldShrink(no longer pierced)]!"
+						+ "[npc.NamePos]的[npc.nipples]已[style.boldShrink(不再有穿孔了)]！"
 					+ "</p>"
 					+piercingUnequip);
 		}

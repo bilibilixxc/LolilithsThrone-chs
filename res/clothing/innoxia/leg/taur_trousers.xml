@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>2000</value> 
 		
-		<determiner><![CDATA[a set of]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
-		<name><![CDATA[taur-trousers]]></name>
+		<name><![CDATA[马衣]]></name>
 		
-		<namePlural pluralByDefault="true"><![CDATA[taur-trousers]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[马衣]]></namePlural> 
 		
-		<description><![CDATA[A set of specially-designed trousers, suitable to be fit onto the lower body of any taur race. A very weak telekinetic enchantment helps the wearer put them on without assistance. There is a zip running down beneath the rear portion, which grants access to the wearer's genitals.]]></description> 
+		<description><![CDATA[一套专为半兽身人设计的特殊长裤，完美贴合各类半兽身人的下半身。微弱的念力附魔让穿戴者无需协助就能轻松穿脱。后部下方设有拉链，方便穿戴者处理私密需求。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -86,27 +86,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the unzipped taur-trousers down over [npc.her] head, before allowing the weak telekinetic enchantment to zip them up beneath [npc.her] [npc.legRace]'s body.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the unzipped taur-trousers down over [npc2.namePos] head, before zipping them up beneath [npc2.her] [npc2.legRace]'s body.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] the unzipped taur-trousers down over [npc2.namePos] head, before roughly zipping them up beneath [npc2.her] [npc2.legRace]'s body.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将没有拉拉链的马衣从头上拉下，然后允许微弱的念力附魔在[npc.her][npc.legRace]的身体下面拉上拉链。
+]]></self>
+    <other><![CDATA[
+[npc.Name]把没有拉上拉链的马衣拉下[npc2.namePos]的头部，然后在[npc2.her][npc2.legRace]的身体下拉上拉链。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗鲁地将没有拉上拉链的马衣往下拉，然后强行拉上位于[npc2.namePos][npc2.legRace]的身体下的拉链。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] focuses [npc.her] thoughts on unzipping [npc.her] taur-trousers, and, sure enough, the weak telekinetic enchantment sets to work, soon allowing [npc.herHim] to take them off by pulling them up and over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unzip)] [npc2.namePos] taur-trousers, before pulling them up and over [npc2.her] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unzip)] [npc2.namePos] taur-trousers, before yanking them up and over [npc2.her] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]专注于解开[npc.her]马衣的拉链，毫不意外，微弱的念力附魔开始工作，很快允许[npc.herHim]通过把它们拉上头部来脱下它们。
+]]></self>
+    <other><![CDATA[
+[npc.Name]抓住[npc.her]的马衣，然后把它拉过[npc2.namePos]的头顶。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]抓住[npc.her]的马衣，然后把它拽过[npc2.namePos]的头顶。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

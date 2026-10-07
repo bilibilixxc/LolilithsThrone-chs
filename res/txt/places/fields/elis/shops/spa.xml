@@ -1,1165 +1,1164 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="TRANSACTION_START"><![CDATA[
 	<p>
-		After you've informed her that you're thinking of purchasing some jewellery, Penelope leads you a short way over to the display cabinet in which she keeps such items, before politely saying in her posh accent, [penelope.speech(Please let me know if you'd like to try anything on.)]
+		你告诉佩内洛普自己想买珠宝。她带着你走了一小段路，来到展示珠宝的柜台前，以优雅的口音礼貌地说：[penelope.speech(如果您想试戴什么，请告诉我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="BUY_TRANSACTION_COMPLETE"><![CDATA[
 	<p>
-		Informing Penelope that you'd like to purchase the [#SPECIAL_PARSE_0], you hand over [#SPECIAL_PARSE_1] flames and wait for her to retrieve it from the display cabinet. Presenting you with your purchase, Penelope smiles and asks, [penelope.speech(Will that be all for today, [pc.sir], or do you have another transaction in mind?)]
+		你告诉佩内洛普你想买[#SPECIAL_PARSE_0]。你付了[#SPECIAL_PARSE_1]火币，等她从柜台里把东西拿出来。佩内洛普将[#SPECIAL_PARSE_0]递给你，微笑着问：[penelope.speech(就买这些吗，[pc.sir]？您想不想做些别的交易？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SELL_TRANSACTION_COMPLETE"><![CDATA[
 	<p>
-		Asking Penelope if she'd like to buy your [#SPECIAL_PARSE_0], you wait as she thinks for a moment, before offering you [#SPECIAL_PARSE_1] flames for it. Agreeing to the sale, you hand over the [#SPECIAL_PARSE_0] in exchange for the agreed upon price, after which Penelope politely asks, [penelope.speech(Is there anything else I can do for you today, [pc.sir]?)]
+		你问佩内洛普要不要买[#SPECIAL_PARSE_0]。她思考片刻，只想出[#SPECIAL_PARSE_1]火币来买。你同意了，以谈妥的价格把[#SPECIAL_PARSE_0]卖给她。佩内洛普礼貌地问：[penelope.speech(还能为您做什么吗，[pc.sir]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- All of these are linked to the 'dialogue/innoxia/places/fields/elis/shops/spa.xml' dialogue nodes. -->
 	
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		Over in one of the far corners of the shopping precinct, a sign hanging from the upper floor of a timber-framed building shows a stylised pair of sheep-girls holding up the words 'Woolly Heaven'. Blinds have been half-closed over most of the windows on the ground floor, and the spots which aren't concealed in this manner are home to shelves stacked full of potted plants and cosmetics products, making it all but impossible to see into the building's interior. Thankfully for potential customers, the nature of this business is revealed from the writing that's etched into the glass of its front door. [pc.Stepping] forwards to take a closer look, you read: 'Woolly Heaven: Spa, Massage Parlour, & Beauticians'
+		在购物区的一个偏僻角落，一栋木结构建筑的上层悬挂着一个招牌，上面写着“绵绵天堂”几个大字，招牌上是一对造型独特的绵羊女。一楼的大部分窗户都被百叶窗半遮半掩，没有被遮住的地方则摆放着堆满盆栽和化妆品的货架，让人根本无法看到建筑内部的情况。对于潜在的顾客来说，幸好这家店的性质可以从刻在门前玻璃上的文字中看出来。[pc.Stepping]近一看，上面写着：“绵绵天堂： 水疗中心、按摩院和美容师”
 	</p>
 	<p>
-		Beneath this brief overview, you see that the business's opening hours are 
+		在这个简短的概述下面，你看到该公司的营业时间是
 		#IF(game.isHourBetween(9, 24))
-			'[style.colourMinorGood([units.time(9)]-[units.time(0)])]', meaning that it's currently [style.colourGood(open)]. If you wanted to make use of any of the three services which this business provides, there's nothing stopping you from heading inside... 
+			‘[style.colourMinorGood([units.time(9)]——[units.time(0)])]’，也就是说它目前是[style.colorGood(营业)]的。如果你想使用这家公司提供的服务，可以直接进入……
 		#ELSE
-			'[style.colourMinorBad([units.time(9)]-[units.time(0)])]', meaning that it's currently [style.colourBad(closed)]. If you wanted to make use of any of the three services which this business provides, then you'll have to come back during its opening hours...
+			‘[style.colourMinorBad([units.time(9)]——[units.time(0)])]’，也就是说它已经[style.colourBad(打烊)]了。如果你想使用这家公司提供的服务，得在营业时间来……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTER"><![CDATA[
 	#IF(!flags.hasFlag(FLAG_innoxia_elis_spa_visited))
 		<p>
-			Wanting to find out what's inside this 'Woolly Heaven' establishment, you push open the front door and [pc.step] inside. Within, you find yourself standing in a large, modern-looking reception area, with polished wooden floorboards underfoot and trendy oversized light bulbs hanging from the high ceiling. Standing behind a long, tall counter that's been roughly hewn from the trunk of a large tree and topped with frosted glass, a border collie-girl is giving you a warm smile. As the door swings shut behind you, she calls out in a very posh accent, [penelope.speech(Good [style.afternoon], [pc.sir], and welcome to 'Woolly Heaven'. My name is Penelope Fear, and I'm the manager and owner of this establishment.)]
+			为了搞清楚“绵绵天堂”店内的情况，你推开前门[pc.step]进去。你进去后，发现里面是个大型现代化接待区，脚踩抛光木地板，头顶的巨型时髦灯泡安静地悬挂在高高的天花板上。面前的柜台由粗大树干草草改造而成，又高又长，顶上还镶嵌着磨砂玻璃。柜台前站着个边牧女，她热情地向你微笑。你关上门，她以高雅的腔调招待，[penelope.speech([style.afternoon]好，[pc.sir]，欢迎光临‘绵绵天堂’。我姓菲尔，你可以叫我佩内洛普。我是这家店的经理兼老板。)]
 		</p>
 		<p>
-			As you return her greeting, you see that Penelope is wearing a very suggestive, burgundy 'virgin-killer' sweater, and is sporting several pieces of gold jewellery. While this eye-catching outfit would undoubtedly look too daring on most people, Penelope's beautiful features and perfectly proportioned body allow her to carry it off. Her anthropomorphic, border collie-like face is absolutely gorgeous, and as she bats her large, [penelope.eyeColour] eyes at you, she leans forwards a little in order to flaunt her [penelope.cupSize]-cup breasts.
+			你礼貌回应。你看到佩内洛普穿着一件极具暗示性的深红色“童贞杀手”毛衣，身上还佩戴着几件金首饰。这套惹眼的服装穿在大多数人身上无疑会显得标新立异，但佩内洛普漂亮的特征和完美匀称的身材使她能够轻松驾驭。她那人形的脸庞，带着些许边牧的特点真是迷人至极，尤其是当她眨动那双大大的[penelope.eyeColour]眼睛时，稍稍朝你前倾的身体隐秘地炫耀她[penelope.cupSize]杯的胸部。
 		</p>
 		<p>
-			Her effortless beauty grants her the same sort of aura that's radiated by the harpy matriarch, Helena, and just like that swan-harpy, Penelope also appears to have spent some time pursuing a career in modelling. Posters and pages from fashion magazines have been framed and hung all over the walls of this reception area, with each one showing Penelope posing in a different outfit. There are even a couple from what look to be soft-core pornography publications, in which the border collie-girl is baring her naked breasts and making suggestive expressions at the viewer.
+			她的美貌毋庸置疑，灵气足以匹敌哈比族长海伦娜，就像那个天鹅哈比一样，佩内洛普也花了一些时间追求模特事业。时尚杂志的海报和页面被装裱起来，挂满了接待区的墙壁，每张照片都展示着不同风格的佩内洛普，她穿着各式服装摆弄着姿势。甚至有几张照片似乎是来自色情杂志，照片里的这个边牧女正裸露双乳，带着挑逗意味地朝观众做出暗示性表情。
 		</p>
 		<p>
-			[penelope.speech(Unless I'm mistaken, I haven't had the pleasure of meeting you before. May I ask for your name?)] Penelope asks, before resting her chin on her interlaced hands and giving you a delightful smile.
+			[penelope.speech(恕我直言，我以前似乎从未见过您，请问尊姓大名？)]佩内洛普询问着，把下巴搭在交错的双手上，向你露出一个愉快的微笑。
 		</p>
 	#ELSE
 		<p>
-			Deciding to once again pay a visit to this 'Woolly Heaven' establishment, you push open the front door and [pc.step] inside. Within, you find yourself standing in a large, modern-looking reception area, with polished wooden floorboards underfoot and trendy oversized light bulbs hanging from the high ceiling. Standing behind a long, tall counter that's been roughly hewn from the trunk of a large tree and topped with frosted glass, the familiar, beautiful figure of Penelope is giving you a warm smile. As the door swings shut behind you, the border collie-girl calls out in her posh accent, [penelope.speech(Good [style.afternoon], [pc.sir], and welcome once again to 'Woolly Heaven'.)]
+			决定再次造访这家“绵绵天堂”，你推开前门[pc.step]进去。你进去后，发现里面是个大型现代化接待区，脚踩抛光木地板，头顶的巨型时髦灯泡安静地悬挂在高高的天花板上。面前的柜台由粗大树干草草改造而成，又高又长，顶上还镶嵌着磨砂玻璃。佩内洛普熟悉又靓丽的身形出现在柜台前，她朝你露出温柔的微笑。你关上门，这个边牧女以高雅的腔调招待，[penelope.speech([style.afternoon]好，[pc.sir]，欢迎再次光临‘绵绵天堂’。)]
 		</p>
 		<p>
-			As you return her greeting, you see that Penelope is wearing a very suggestive, burgundy 'virgin-killer' sweater, and is sporting several pieces of gold jewellery. While this eye-catching outfit would undoubtedly look too daring on most people, Penelope's beautiful features and perfectly proportioned body allow her to carry it off. Her anthropomorphic, border collie-like face is absolutely gorgeous, and as she bats her large, [penelope.eyeColour] eyes at you, she leans forwards a little in order to flaunt her [penelope.cupSize]-cup breasts.
+			你礼貌回应。你看到佩内洛普穿着一件极具暗示性的深红色“童贞杀手”毛衣，身上还佩戴着几件金首饰。这套惹眼的服装穿在大多数人身上无疑会显得标新立异，但佩内洛普漂亮的特征和完美匀称的身材使她能够轻松驾驭。她那人形的脸庞，带着些许边牧的特点真是迷人至极，尤其是当她眨动那双大大的[penelope.eyeColour]眼睛时，稍稍朝你前倾的身体隐秘地炫耀她[penelope.cupSize]杯的胸部。
 		</p>
 		<p>
-			Her effortless beauty grants her the same sort of aura that's radiated by the harpy matriarch, Helena, and just like that swan-harpy, Penelope also appears to have spent some time pursuing a career in modelling. Posters and pages from fashion magazines have been framed and hung all over the walls of this reception area, with each one showing Penelope posing in a different outfit. There are even a couple from what look to be soft-core pornography publications, in which the border collie-girl is baring her naked breasts and making suggestive expressions at the viewer.
+			她的美貌毋庸置疑，灵气足以匹敌哈比族长海伦娜，就像那个天鹅哈比一样，佩内洛普也花了一些时间追求模特事业。时尚杂志的海报和页面被装裱起来，挂满了接待区的墙壁，每张照片都展示着不同风格的佩内洛普，她穿着各式服装摆弄着姿势。甚至有几张照片似乎是来自色情杂志，照片里的这个边牧女正裸露双乳，带着挑逗意味地朝观众做出暗示性表情。
 		</p>
 		<p>
-			As you approach her counter, Penelope states in her posh voice, [penelope.speech(Please let me know which of our services you require, [pc.sir]. Oh, and remember that my sheep-girls and I all have prostitution licenses, so paying for sex once you're in a massage room is all completely legal and above board.)]
+			当你走近她的柜台时，佩内洛普用她那优雅的声音说道，[penelope.speech(请告诉我您需要我们的哪些服务，[pc.sir]。哦，请记住，我和我的绵羊女们都有卖淫执照，所以一旦您进入按摩室，支付性费用是完全合法和光明正大的。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COSMETICS_START"><![CDATA[
 	<p>
-		You tell Penelope that you'd like to make use of her services as an arcane beautician. Guiding you over to one side of the large reception area, she asks you to take a seat in front of a stylish mirror, before asking, [penelope.speech(So, what'll it be, [pc.sir]? Would you like to try a new hair style, or were you thinking of something a little more adventurous than that?)]
+		你告诉佩内洛普，你想让她为你提供奥术美容师的服务。她把你引到大接待区的一侧，让你在一面时尚的镜子前坐下，然后问道：[penelope.speech(那么，你有什么想法，[pc.sir]？你想尝试新的发型，还是比这更冒险的发型？)]
 	</p>
 	<p>
-		Gesturing over to a jewellery display cabinet situated a short distance from where you're sitting, the beautiful border collie-girl reminds you, [penelope.speech(I also have several items of jewellery for sale, so please don't hesitate to ask if you'd like to try anything on.)]
+		这位美丽的边牧女指了指离你坐的地方不远的一个珠宝展示柜，提醒你，[penelope.speech(我还有几件珠宝出售，如果您想试戴，请不要犹豫。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TALK_POSTERS"><![CDATA[
 	<p>
-		Gesturing to the framed posters and pages from fashion magazines which have been hung on the surrounding walls, you ask Penelope if she's still pursuing a career in modelling.
-	</p>
+	你指向周围墙壁上挂着的装裱好的海报和时尚杂志页面，询问佩内洛普是否仍在从事模特的工作。
+</p>
 	<p>
-		[penelope.speech(Oh, no, I left all of that behind me when I departed from Dominion,)] she replies. Taking a moment to look around at the posters, she smiles and reveals, [penelope.speech(I was a model for almost ten years, and by the end I'd had enough of it. Don't get me wrong, it was a lot of fun to be doing all of that travelling around and getting to model all of the latest designer outfits, but after almost a decade of doing it I really felt like I needed a change.)]
-	</p>
+	[penelope.speech(哦，不，当我离开御城区时就已告别了那个世界)] ，她环顾了一下四周的海报，微笑着回忆道:[penelope.speech(我做了近十年的模特，在最后我彻底厌倦了这个行业。别误会，到处旅行并有机会穿戴各种最新设计师品牌的服装的确很有趣，但在将近十年的职业生涯后，我真的觉得自己需要改变一下生活方式。)]
+</p>
 	<p>
-		With that, Penelope pauses for a moment, allowing you to ask if that's when she decided to move here to Elis.
-	</p>
+	在这之后佩内洛普停顿了一下，这让你留机会询问她是否就在那个时候决定搬到伊利斯。
+</p>
 	<p>
-		[penelope.speech(That's right,)] she says, [penelope.speech(I'd always wanted to have my own spa, and thanks to the money I'd made from being a top model, I was able to purchase this building and have it converted into 'Woolly Heaven'. I'd actually always planned to open this place in the middle of Dominion, but I felt like I had to leave the city to get away from my twin sister, Pix. I don't know if you've ever had the pleasure of meeting her; she runs a gym in Dominion's Shopping Arcade.)]
-	</p>
+	[penelope.speech(没错，)]她说道：[penelope.speech(我一直梦想拥有一家属于自己的水疗中心，多亏了我在模特时期赚的钱，我才得以买下这座建筑，并将其改造成现在的‘绵绵天堂’。其实我原本计划在御城区的市中心开设这个地方，但我觉得为了远离我的双胞胎妹妹皮克斯，我不得不离开那座城市。不知道你是否有幸见过她；她在御城区的购物中心经营着一家健身房。)]
+</p>
 	#IF(flags.hasFlag(FLAG_innoxia_pix_introduced))
 		<p>
-			Having visited Pix's gym, you tell Penelope that you have indeed met her, but you don't recall her mentioning that she had a twin sister.
+			你去过皮克斯的健身房，于是告诉佩内洛普你的确见过她，但不曾记得她说过她有个双胞胎姐妹。
 		</p>
 		<p>
-			[penelope.speech(Oh, that'd be because we didn't part on the best of terms,)] Penelope sighs, [penelope.speech(No matter how many times I told her that I had no interest in such an arrangement, she kept on insisting that I come and work at her gym. When I told her that I'd be leaving Dominion to set up a business in Elis, she started ranting about me betraying her... Oh, pardon me, I didn't mean to bore you with my silly family feud. Is there anything else I can do for you today, [pc.name]?)]
-		</p>
+			[penelope.speech(那是因为我们的理念有了分歧，)]佩内洛普叹息道，[penelope.speech(不管我多少次告诉她我对那种安排毫无兴趣，她仍然坚持要我去她的健身房工作。当我告诉她我打算离开御城区前往伊利斯创业时，她开始大肆指责我背叛了她……哦，抱歉，我不是有意用我那无聊的家庭纷争让您厌烦的。今天还有我能为您效劳的地方吗，[pc.name]？)]
+</p>
 	#ELSE
 		<p>
-			Having not visited Pix's gym in Dominion, you tell Penelope that you haven't met her twin sister.
+			你从没去过什么皮克斯的健身房，于是你告诉佩内洛普你从未见过她的双胞胎姐妹。
 		</p>
 		<p>
-			[penelope.speech(Ah, well if you do meet her, it might be best to not mention me. We didn't part on the best of terms, and she might get annoyed if you ask her about me,)] Penelope sighs, before continuing, [penelope.speech(You see, no matter how many times I told her that I had no interest in such an arrangement, she kept on insisting that I come and work at her gym. When I told her that I'd be leaving Dominion to set up a business in Elis, she started ranting about me betraying her... Oh, pardon me, I didn't mean to bore you with my silly family feud. Is there anything else I can do for you today, [pc.sir]?)]
+			[penelope.speech(啊，那如果你遇到她的话，最好不要提起我。毕竟我们分开的时候闹得并不愉快，要是你问起我，她可能会生气的。)]佩内洛普叹了口气，然后说道：[penelope.speech(不管我多少次告诉她我对那种安排毫无兴趣，她仍然坚持要我去她的健身房工作。当我告诉她我打算离开御城区前往伊利斯创业时，她开始大肆指责我背叛了她……哦，抱歉，我不是有意用我那无聊的家庭纷争让您厌烦的。今天还有我能为您效劳的地方吗，[pc.name]？)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TALK_SHEEP"><![CDATA[
 	<p>
-		Curious to find out why all of Penelope's employees are sheep-morphs, you ask her if that was a conscious choice to fit with the name of her spa, or if it came about naturally and the name 'Woolly Heaven' was chosen afterwards.
-	</p>
+	出于好奇，想知道为何佩内洛普这的所有员工都是绵羊化形，你询问她这是不是有意为了配合她水疗中心的名字而做的选择，还是因为来应聘的员工大多都是绵羊，所以后来才自然而然地选择了“绵绵天堂”这个名字。
+</p>
 	<p>
-		[penelope.speech(I'd always planned to hire only sheep-morphs,)] Penelope reveals, before stating, [penelope.speech(I find sheep-girls to be particularly easy to manage and control, and clients seem to really love their woolly bodies. Unlike feral sheep, the wool which covers a sheep-morph is soft and luxurious to the touch, doubly so after it's been treated with the right shampoo and conditioner.)]
-	</p>
+	[penelope.speech(我从一开始就计划只雇佣绵羊化形的员工，)]佩内洛普接着补充道：[penelope.speech(我发现绵羊女们十分容易管理和操控，并且客户们似乎非常喜欢她们毛茸茸的身体。不同于野生绵羊，绵羊化形身上的羊毛触感柔软且奢华，尤其是在使用合适的洗发水和护发素护理后，其舒适程度更是翻倍。)]
+</p>
 	<p>
-		Wondering why she finds sheep-morphs easy to manage, you ask Penelope what the reason for this is.
-	</p>
+	出于好奇，你询问佩内洛普为什么觉得绵羊化形更容易管理。
+</p>
 	<p>
-		[penelope.speech(I honestly couldn't say,)] she replies, before taking a moment to think and then ponder out loud, [penelope.speech(I suppose it must be due to my instincts as a border collie-morph... Every time I see a sheep-morph I get this strong desire to tell them what to do... Well, whatever the case may be, having sheep-morphs as my employees makes it very easy for me to manage my spa. Now, can I interest you in any of our services, [pc.sir]?)]
-	</p>
-	]]>
-	</htmlContent>
+		[penelope.speech(说实话，我也说不出个确切原因，)]在花了一些时间思考后，她接着自言自语道：[penelope.speech(我想可能是因为我身为边牧的血脉本能吧……每次看到绵羊化形的生物，我都会有强烈的欲望想要指挥他们做事……嘛，不论原因为何，拥有一群绵羊化形的员工的确让我能轻松管理这家水疗中心。那么，[pc.sir]，你有没有对我们的某项服务感兴趣呢？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE"><![CDATA[
 	<p>
-		Saying goodbye to Penelope, you exit Woolly Heaven and find yourself [pc.stepping] back out into Wall's End...
+		你告别佩内洛普，离开了绵绵天堂，发现自己又回到了墙之尽头……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTRODUCTION"><![CDATA[
 	<p>
-		[pc.Stepping] up to the counter, you give Penelope your name, to which she happily replies in her posh accent, [penelope.speech(It's a pleasure to meet you, [pc.name]. Would you like to hear what services we offer here at Woolly Heaven?)]
+		你走柜台前，告诉佩内洛普你的名字，她高兴地用她那优雅的口音回答说：[penelope.speech(很高兴见到你，[pc.name]。您想听听我们绵绵天堂提供哪些服务吗？)]
 	</p>
 	<p>
-		Replying in the positive, you listen as the border collie-girl reels off a sales pitch that she's no doubt repeated many dozens of times before, [penelope.speech(Our main attraction is our indoor spa; we have steam rooms, saunas, a pool, and both cold and heated baths. Entry to the spa costs one hundred and fifty flames. I'm also trained and fully qualified as an arcane beautician, so I can alter almost any aspect of your appearance, including applying, removing, and even enchanting tattoos. I also have several items of jewellery for sale at our cosmetics station, if you're interested in that.)]
+		你一边给予肯定回答，一边听着这位边牧女的推销，毫无疑问，她已经重复过几十遍了，[penelope.speech(我们的主要景点是室内水疗；有蒸汽浴室、桑拿浴室、游泳池，冷水浴和温水浴。水疗中心的门票是一百五十个火币。我还受训并得到奥术美容师资格，我几乎可以改变您外表的任何方面，包括添加、去除甚至附魔纹身。如果您感兴趣，我们的化妆品站还出售首饰。)]
 	</p>
 	<p>
-		Although she's not yet finished with her recitation of offered services, Penelope pauses for a moment to flash you a flirtatious grin. Slightly altering the tone of her voice so as to grant her posh accent an air of seduction, she continues, [penelope.speech(We also offer massages, which start at two hundred and fifty flames for a session with one of my sheep-girls. For an extra seven hundred and fifty flames, I'll personally give you your massage. If you choose to receive a massage, then once it's started you'll be able to purchase some more... <i>exciting</i> services from your masseuse.)]
+		尽管佩内洛普还没有说完，她停顿了片刻，向你露出一个妩媚的笑容。她稍微改变了一下语调，让她那优雅的口音充满一种诱惑的感觉，继续说道，[penelope.speech(我们还提供按摩服务，和咱家一个绵羊女一起按摩一次，起价是250火币。如果再加七百五十火币，我将亲自为您按摩。如果您选择按摩服务，按摩开始后您就可以加一些……<i>更刺激</i>的服务。)]
 	</p>
 	<p>
-		As you take a moment to think about what services, if any, you'd like to use, Penelope smirks and bluntly states in her posh voice, [penelope.speech(Just so that I've made myself clear, my sheep-girls and I all have prostitution licenses, so you can pay for sex once you're in a massage room. So, what'll it be, [pc.sir]?)]
+		你正花时间考虑想要什么服务时，佩内洛普笑了笑，用她那优雅的声音直截了当地说道：[penelope.speech(我已经说得很清楚了，我和我的姑娘们都有卖淫执照，您只要进了按摩室，就可以花钱买性。所以，您要来点什么，[pc.sir]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_COSMETICS"><![CDATA[
 	<p>
-		Having got everything you wanted from Penelope's arcane cosmetics service, you tell her that you're happy with how you look, and that you don't need anything more from her. Flashing you a warm smile, the border collie-girl leads you back over to her desk, before asking, [penelope.speech(Is there anything else I can do for you today, [pc.sir]?)]
-	</p>
-	]]>
-	</htmlContent>
+		在从佩内洛普的奥术化妆品服务中得到了你想要的一切后，你告诉她你对自己现在的样子很满意，不再需要她的任何其他服务。这只边牧女向你报以热情的微笑，然后领你回到她的办公桌前并问道：[penelope.speech(今天还有什么我能为您效劳的吗，[pc.sir]？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RELAX"><![CDATA[
 	<p>
-		Feeling as though you're in need of some time in which to relax and unwind, you tell Penelope that you'd like to have a session in the spa. After you've handed over the one hundred and fifty flames which she asks for, Penelope leads you over to a doorway on the far side of the reception area. Standing to one side, she gestures towards it and says, [penelope.speech(You'll find the changing rooms and lockers in the room beyond. Please spend as much time as you'd like in the spa, and if there's any issue please don't hesitate to report it to a member of staff.)]
-	</p>
+	你觉得你需要一些时间来放松和休息，于是你告诉佩内洛普你想在水疗区接受一次疗程。在你交纳了她所要求的一百五十火币后，佩内洛普引领你穿过接待区，来到远处的一扇门旁。她站在一旁，指着那扇门说：[penelope.speech(在那个房间你会找到更衣室和储物柜。在水疗中心你可以随心所欲地停留，如果有任何问题，请立刻向我们的工作人员反映。)]
+</p>
 	<p>
-		Thanking Penelope, you [pc.step] forwards through the doorway, and after turning a corner, find yourself in a large, unisex changing room. A politely-worded sign fixed to a nearby wall informs you that there's no dress code, and so you're free to wear as much or as little as you like while in the spa. Stripping out of your clothes, you make use of one of the lockers in which to store your personal belongings, before proceeding into the showers beyond.
-	</p>
+在感谢完佩内洛普之后，你[pc.step]进门廊，你现在身处于一间宽敞的男女通用更衣室。一块挂在附近墙上的礼貌提示牌告诉你，这里没有着装规定，所以你在水疗中心可以自由选择穿着多少衣物。你脱下衣物，将个人物品存放在其中一个储物柜中，然后继续前往更远的淋浴区。
+</p>
 	<p>
-		A quick wash later, and you're [pc.stepping] out into the main area of the spa, which contains a couple of large pools surrounded by dozens of loungers. Signs around the edge of this cavernous interior offer directions to the steam rooms, saunas, and baths. Looking around, you see that there are several clients making use of the spa facilities, and a sheep-girl member of staff is watching over the area to make sure that everything remains calm and under control. None of the people who are present show any sign of being interested in anything other than quietly relaxing, and so with your only real option being to follow their example, you prepare to spend some alone time in which to relax and unwind...
-	</p>
-	]]>
-	</htmlContent>
+在短暂洗漱后，你[pc.stepping]到了水疗中心的主要区域，这里有数个大型泳池环绕着数十个躺椅。这极致宽敞的内部空间的边缘设有标识牌，指向蒸汽房、桑拿房和浴池的方向。环顾四周，你看到有几个客户正在充分利用水疗设施，一名绵羊化形的工作人员正在区域内监督，确保一切都保持宁静有序。在场的所有人似乎都只专注于安静地放松身心，没有任何迹象表明他们有其他兴趣。因此，鉴于当前环境，你只能效仿他们，准备花些独处的时间，让自己放松和舒缓压力……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RELAX_END"><![CDATA[
 	<p>
-		For the next couple of hours you make your way around the spa, using all of the facilities which it has to offer. Eventually, having had your fill of the pool, steam room, sauna, and baths, you feel like you're as relaxed and calm as you've ever been. Deciding that you've had enough of the spa for now, you head on back to the changing rooms.
-	</p>
+	接下来几个小时，你充分利用了水疗中心的所有设施。最终，在畅游了泳池、蒸气浴房、桑拿房以及浴室之后，你觉得前所未有的放松和平静。考虑到已充分体验了水疗中心的各项服务，你决定现在回到更衣室。
+</p>
 	<p>
-		Retrieve your belongings from your locker, you get dressed and return to the reception area, where you see the beautiful border collie-girl, Penelope, standing behind the counter. Looking over at you as you [pc.step] over towards her, she smiles and asks in her posh accent, [penelope.speech(I trust everything was to your satisfaction in the spa, [pc.sir]?)]
-	</p>
+		你从储物柜取回你的物品后，穿好衣服回到接待区，看到美丽优雅的边牧女佩内洛普正站在柜台后面。当你[pc.step]向她时，她用那特有的高贵口音微笑着问：[penelope.speech(我相信在水疗中心的体验一切都令您满意，您觉得呢，[pc.sir]？)]
+</p>
 	<p>
-		Responding in the positive, you tell Penelope that you enjoyed using the facilities, and that you're now feeling well and truly relaxed and refreshed. Leaning forwards over her counter, the border collie-girl pushes out her chest to show off her [penelope.cupSize]-cup breasts and teases, [penelope.speech(Perhaps after that you're feeling in the mood for fucking one of my sheep-girls? Or perhaps even myself? How about you have a nice massage and see where it leads...)]
-	</p>
+		你给予了肯定的回应，告诉佩内洛普你很喜欢这里的设施，现在感到确实彻底地放松和焕然一新。这位边牧牧女身子前倾倚在柜台边，挺胸展示着她那对[penelope.cupSize]罩杯的胸部并调笑道：[penelope.speech(也许在这样放松之后，你有了与我的绵羊女孩们共度良宵的心情？甚至是和我？不如先享受一个舒适的按摩，看看会发生什么……)]
+</p>
 	<p>
-		Playfully winking at you, Penelope waits to hear if you'll take her up on her offer, or perhaps ask for something else...
-	</p>
-	]]>
-	</htmlContent>
+	佩内洛普顽皮地向你眨眼，她正在等待你是否会接受她的提议，或者也许你会要求别的什么……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_INTRO"><![CDATA[
 	<p>
-		Wanting to have the tension worked out of your muscles, you tell Penelope that you'd like to have a massage, and then proceed to give her the two hundred and fifty flames which she asks for. Giving you a warm smile, she states, [penelope.speech(I have many sheep-girls who work for me, but there are three who are undoubtedly my best. As it so happens, all three are available at the moment, so you'll be free to choose any one of them.)]
-	</p>
+	为了舒缓肌肉紧张，你告诉佩内洛普你想要接受一次按摩，并递给她所需的两百五十火币。她向你回报了一个亲切的微笑，然后说道：[penelope.speech(我手下有许多绵羊女在这工作，但其中有三位无疑是最出色的。恰巧的是，此刻她们三人都有空，所以你可以自由选择其中任意一位为你服务。)]
+</p>
 	<p>
-		With that, the border collie-girl reaches down under her counter and presses three buttons, one after the other. As each of these buttons are pressed, you hear three faint chimes – each one of which having a slightly different pitch – ring out from down the corridor which leads off from behind where Penelope is standing. Just a moment later, and one of the corridor's many doors swings open. After looking back to see who's the first sheep-girl to appear, Penelope turns to smile at you and say in her posh accent, [penelope.speech(It seems as though the first masseuse to arrive is Belle...)]
-	</p>
+		说完，这只边牧女在柜台下面连续按下了三个按钮。每按下其中一个按钮，你便会听见从佩内洛普身后走廊深处传来的三声微弱的铃音——每个铃音都有微妙的不同音调。过了一会儿，众多门中的一扇门缓缓打开。在回头看了一眼第一个出现的绵羊女是谁后，佩内洛普回过头向你微笑着用那高贵的口音说道：[penelope.speech(看来第一位到达的按摩师似乎是贝儿……)]
+</p>
 	<p>
-		Looking past Penelope, you see a beautiful, white-woollen sheep-girl, who looks to be in her late teens, excitedly skipping down the corridor towards you. As she approaches, you see that her light-pink outfit consists of a microskirt, crotchless thong, and a conspicuously-untied croptop. As such, this sheep-girl's tight pussy and small, [belle.cupSize]-cup breasts are completely exposed. Coming to a halt in front of you, she lewdly squeezes her tits, before teasing her fingers over her exposed pussy and giggling, [belle.speech(Heya! You lookin' for a massage, or are you here to fuck this hot little cunt of mine?)]
-	</p>
+越过佩内洛普，你看见一位美丽的白色羊毛少女正蹦跳着沿着走廊向你跑来，她看上大概刚成年的样子。当她靠近时，你注意到她那浅粉色的装扮，包括一条迷你裙、一条无裆丁字裤和一件显然没系好的露脐上衣。因此，这位绵羊女紧致的私处和小巧玲珑的[belle.cupSize]罩杯完全暴露在外。她站在你面前，挑逗性地挤了挤自己的胸部，接着又用手指撩拨着裸露在外的私处并嬉笑着说道：[belle.speech(嗨呀！你是来找我按摩的，还是来跟我这个火辣小美女滚床单的？)]
+</p>
 	<p>
-		Before you can respond to this blunt question, Belle leans forwards and reaches up to her neck, drawing your attention to the restraints around her wrists and ankles as she does so. Taking hold of the metal tag that's fixed to the front of her leather choker, she lifts it up so that you can see that it bears the words 'Worthless Cunt'. Letting out another giggle, she moves her hands to start playfully tugging on the silver rings which have been fitted to her large, pierced nipples, before locking her light blue eyes on yours and moaning, [belle.speech(As a special service, I let my clients tie me up and punish me like the dirty slut that I am! I want you to make me scream like a filthy whore!)]
-	</p>
+        在你能够回应这个直白的问题之前，贝儿向前倾身，并伸手摸向自己的脖子，这一动作引得你注意到了她手腕和脚踝上的束缚。她抓住固定在皮项圈前部的一枚金属铭牌，将其举起让你看清了上面刻着“无价值的娼妓”几个字。接着，她再次发出轻笑声，并将双手移到自己那穿环的乳头上，开始顽皮地拽弄银色的环状饰品，最后她用那双淡蓝色的眼睛紧紧盯着你，娇喘道：[belle.speech(作为特殊服务，我让我的客人把我绑起来，像对待一个肮脏的婊子那样惩罚我！我要让你狠狠的蹂躏欺辱我，就像对待一个污秽的妓女那样！)]
+</p>
 	<p>
-		At that moment, another door down the corridor swings open, and Penelope sharply orders Belle to quieten down before announcing, [penelope.speech(It looks as though Daphne is the second masseuse to answer her summons...)]
-	</p>
-	]]>
-	</htmlContent>
+	就在这个时候，走廊另一头的一扇门缓缓打开，佩内洛普厉声命令贝儿安静下来，然后说到，[penelope.speech(看起来达芙妮是第二个响应召唤的呢……)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_INTRO_NEXT"><![CDATA[
 	<p>
-		Once again looking past Penelope, you see that Daphne takes the form of a brown-woollen sheep-girl, who looks to be in her early thirties. Equally as attractive as Belle, although in a more mature way, this masseuse is wearing a dark brown outfit, which consists of a microskirt, crotchless panties, and an unzipped leather jacket. Just like with Belle, these items of clothing leave her slightly-loose pussy and [daphne.cupSize]-cup breasts completely exposed. The bell collar which is fitted around her neck softly jingles as she comes to a halt beside her younger co-worker, and after submissively batting her eyelids at you, she teases, [daphne.speech(I'm not into the rough stuff like Belle, but I do enjoy being dominated... After your massage, I'd like it if you'd give me a good fuck.)]
-	</p>
+	再次越过佩内洛普，你看到这位名叫达芙妮的棕色绵羊女按摩师，她看起来大约三十出头。与贝儿同样迷人，只是更具成熟韵味，这位按摩师身穿一套深棕色服饰，包括迷你裙、开裆内裤以及一件拉链未拉上的皮夹克。与贝儿一样，这些衣物使得她微微松弛的阴道和[daphne.cupSize]罩杯的乳房完全裸露在外。当她站在年轻同事身边时，戴在她脖子上的铃铛项圈随着动作轻轻作响。她羞涩地对你眨了眨眼，然后挑逗道：[daphne.speech(我不喜欢贝儿那样激烈的玩法，但我确实喜欢被支配……按摩结束后，我希望你能好好地疼爱我一番。)]
+</p>
 	<p>
-		[belle.speech(No way, Daph! [pc.SheIs] going to pick me!)] Belle objects.
-	</p>
+	[belle.speech(不可能的，达妮！[pc.SheIs]肯定会选我的！)]贝儿在一旁提出了异议。
+</p>
 	<p>
-		[daphne.speech(Well, that's only if [pc.sheIs] not interested in a sheep-girl who has some real assets,)] Daphne teases as she steps forwards and presses her comparatively huge breasts against Belle's. The younger sheep-girl lets out an annoyed huff in response to Daphne's move, which the brown-woollen masseuse takes as a sign of surrender. Patronisingly patting Belle on the head, she states, [daphne.speech(Besides, not everybody's into the sort of masochism which you love.)]
-	</p>
+	[daphne.speech(那得看[pc.sheIs]是不是对一个真正有料的绵羊女感兴趣了！)]当达芙妮将自己那相对丰满的胸部与贝儿的胸部贴在一起时，她如此戏谑道。面对达芙妮的挑衅，年纪较小的绵羊女贝儿以不满地哼声作为回应，而这在达芙妮看来是一种认输的信号。她带着几分居高临下的意味拍了拍贝儿的头，说道：[daphne.speech(你要知道，并不是所有人都喜欢你那种受虐倾向的玩法。)]
+</p>
 	<p>
-		Stepping back from the muttering Belle, Daphne reaches down to tease her fingers over her dark labia, before moving up beside you and lowering her voice to whisper into your ear, [daphne.speech(I've got a very special service for my clients. I love doing a little pet-play, you see, and so if you choose me, I can pretend to be a dumb sheep as you fuck me like an animal...)]
-	</p>
+	在从嘟囔着的贝儿身边退开后，达芙妮用指尖轻轻抚过她那深色阴唇，然后走到你身旁，压低声音在你耳边悄声道：[daphne.speech(我会为我的客户提供一项非常特别的服务。你知道吗，我很喜欢宠物扮演这种小游戏，所以如果你选择我，我可以假装成一只愚蠢的绵羊，任由你像对待动物一样与我交欢……)]
+</p>
 	<p>
-		At that moment a third door down the corridor begins to slowly swing open, and Penelope issues yet another sharp order to silence both Belle and Daphne before saying, [penelope.speech(The last masseuse which I have for you is our dear Farah...)]
-	</p>
-	]]>
-	</htmlContent>
+	就在这个时候，走廊尽头的第三个门缓缓打开，佩内洛普又一次厉声命令贝儿和达芙妮安静下来，然后说到，[penelope.speech(我要为你介绍最后一位按摩师，是我们亲爱的法拉……)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_INTRO_FINAL"><![CDATA[
 	<p>
-		For the final time, you look past Penelope to see a black-woollen sheep-girl, who looks to be in her late forties, walking down the corridor towards you. Just like the other two sheep-girls, she's very attractive, although in a much more mature way than Belle or Daphne. The only items of clothing which she's wearing are some gold jewellery and a black corset, which she might have chosen to wear to help conceal the fact that she's a little on the chubby side. Swaying her womanly hips as she advances to stand in front of you, this mature sheep-girl smiles and says in a soft voice, [farah.speech(Hello there, sugar. If you're looking for an experienced masseuse, then I'm the one for you.)]
-	</p>
+	你越过佩内洛普，看向走廊尽头走来的那位黑色绵羊女。她看上去大约四十几岁，尽管不像贝儿或达芙妮那样青春活力，却展现出一种更为成熟迷人的魅力。她身上唯一的衣物是一些金色饰品和一件黑色紧身胸衣，或许是为了巧妙掩饰她略微丰腴的身材，她摇曳着女性特有的腰肢走向你。这位成熟的绵羊女站在你的面前，微笑着用柔和的声音说道：[farah.speech(你好啊，甜心。如果你在寻找一位经验丰富的按摩师，那我正是你要找的人。)]
+</p>
 	<p>
-		Jealously glancing at Farah's exposed, [farah.cupSize]-cup breasts, Daphne mutters, [daphne.speech(You don't let the clients have any fun though...)]
-	</p>
+	望着法拉袒露在外的[farah.cupSize]罩杯，达芙妮醋意十足地咕哝道：[daphne.speech(但是你没有让客户们得到任何乐趣啊……)]
+</p>
 	<p>
-		[farah.speech(That's not true at all,)] Farah responds, before dominantly stepping forwards and pressing her huge breasts up against your torso. Locking her big, hazel eyes onto yours, she gently strokes one of her hands up your [pc.leg(true)] and reveals, [farah.speech(What Daphne means is that I insist on always being the one in charge. We can have plenty of gentle fun together, but I'm not going to be your submissive little fuck-toy. Choose one of these younger girls if you want that sort of thing.)]
-	</p>
+	[farah.speech(并不是那样的哦，)]法拉反驳道，随后自信地走上前，将她硕大的乳房抵在你的胸膛上。她那双淡褐色的明亮眼神牢牢锁定在你的眼眸之中，一只手温柔地沿着你的[pc.leg(true)]向上抚摸，并解释道：[farah.speech(达芙妮的意思是，我每次始终坚持掌握着主动权。尽管我们可以共享许多温和的乐趣，但我绝不会成为你顺从的玩物。如果你想要那种类型的体验，就去选择这些年轻女孩吧。)]
+</p>
 	<p>
-		As if to demonstrate her commitment to being the dominant partner, Farah takes hold of your [pc.hand] and gets you to tease your fingers over her [farah.labia+] as she leans forwards to softly moan, [farah.speech(If you like risky sex or trying to get girls pregnant, then my special service is for you. After giving you your massage, I'll be willing to take a fertility pill and give you the chance to knock me up...)]
-	</p>
+	为了证明自己作为支配方的决心，法拉握住你的[pc.hand]，引导你的手指轻轻爱抚她[farah.labia+]，同时她俯身向前，柔声低吟道：[farah.speech(如果你喜欢刺激的性爱或者尝试让女孩怀孕，那么我的特殊服务绝对适合你。在为你做完按摩后，我会愿意服用生育药，给你一个使我受孕的机会……)]
+</p>
 	<p>
-		With Farah having completed her introduction, Penelope sharply orders her to step back. Letting out a soft sigh, the black-woollen sheep-girl does as she's told and falls back to stand in line with Belle and Daphne, allowing Penelope to move forwards and address you once again...
-	</p>
-	]]>
-	</htmlContent>
+	在法拉完成自我介绍后，佩内洛普严厉地命令她退后一步。这位黑色绵羊女轻叹一口气，与贝儿和达芙妮并肩站立。此时，佩内洛普再度上前，准备再次和你讲话……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_INTRO_FINAL_PENELOPE"><![CDATA[
 	<p>
-		[penelope.speech(So there you have it,)] the border collie-girl states, [penelope.speech(Belle's into being used and abused, Daphne loves being a submissive little sheep, and Farah always demands to be in charge. If you've got an extra seven hundred and fifty flames, then you can always pay to personally receive a massage from me instead. If you've got the cash, then we can fuck after your massage as well, but first you should see what you'll be in for...)]
+	[penelope.speech(大概就这样了，)]佩内洛普说道：[penelope.speech(贝儿喜欢被人使用和虐待，达芙妮热衷于扮演顺从的小绵羊角色，而法拉总是坚持掌控一切。如果你有额外的七百五十火币，那么你可以选择让我亲自为你提供按摩服务。同时如果你还有足够的火币，我们也可以在按摩后小小的亲热一下，但首先你应该了解自己将会体验到什么……)]
+</p>
+	<p>
+	随后，佩内洛普迅速绕到柜台的另一侧，在你面前将她穿着的超短性感毛衣下摆撩起，然后用食指勾住蕾丝内裤边缘。她拉下内裤，将自己的生殖器完全暴露在你面前。低头看去，你发现这个边牧女的双腿之间不仅拥有你预料之中的犬形阴道，而且还有一根包在鞘里的犬类阴茎。佩内洛普用手指挑逗着她的下体，随后淫荡地叹气道：[penelope.speech(我喜欢我的阴茎和阴道被使用，所以无论你喜欢哪种我都无所谓。哦，对了，我也是双性取向，所如果你想强势上我或者让我来主导一切，我都乐意为之。)]
+</p>
+	<p>
+		[belle.speech(她的鸡巴真是让人惊喜，)]贝儿揶揄道。
 	</p>
 	<p>
-		With that, Penelope quickly steps around to your side of the counter, before suddenly hiking up the bottom of her virgin-killer sweater and hooking her thumbs into her lacy panties. A moment later, and she's pulled down her underwear so as to fully expose her genitals to you. Looking down, you see that this border collie-girl not only has the dog-pussy that you expected between her legs, but she also has a sheathed canine cock. Teasing her fingers over her hermaphroditic groin, Penelope lewdly sighs, [penelope.speech(I like having both my cock and pussy used, so whatever you're into will be fine with me. Oh, and I'm a bit of a switch, so if you want me to submit or take charge, then I'm happy to do either.)]
+		[daphne.speech(是啊，尤其是那个结插进来的时候，我每次都会忍不住高潮，)]达芙妮附和道。
 	</p>
 	<p>
-		[belle.speech(Her cock feels amazing,)] Belle teases.
+		[farah.speech(就我个人来说，我更喜欢她的小穴，)]法拉的话让你明白了，这三个绵羊女都和佩内洛普做过爱。
 	</p>
 	<p>
-		[daphne.speech(Yeah, taking her knot makes me orgasm every time,)] Daphne confirms.
-	</p>
+		佩内洛普把内裤拉回原位并将毛衣重新整理好，她无视了那些按摩小姐的调笑，再次转向你说道：[penelope.speech(我还会提供两种特别的按摩后服务，我可以穿上我过去的一些服装，为你举办一场小型时装秀，或者我可以同时使用我的阴茎和阴道，给你一个我所谓的‘双重面部护理’服务。那么，[pc.sir]，你第一次按摩想要选择哪个呢？)]
+</p>
 	<p>
-		[farah.speech(I prefer her pussy, myself,)] Farah states, letting you know that all three of these sheep-girls have had sex with Penelope.
-	</p>
-	<p>
-		Pulling her underwear back up and moving her sweater back down into its previous position, Penelope ignores her masseuses' comments and addresses you once again, [penelope.speech(I offer a couple of special post-massage services. I can either dress up in one of my old outfits and do a little fashion show for you, or I can use both my cock and pussy to give you what I like to call a 'double facial'. So, what would you like for your first massage, [pc.sir]?)]
-	</p>
-	<p>
-		With that, Penelope joins the three sheep-girls in waiting to hear who you'll choose for your first massage...
-	</p>
-	]]>
-	</htmlContent>
+	在说完之后，佩内洛普便加入到了三位绵羊女的行列中，她们都在等待你宣布会选择谁来为你进行第一次按摩……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE"><![CDATA[
 	<p>
-		Wanting to have the tension worked out of your muscles, you tell Penelope that you'd like to have a massage, and then proceed to give her the two hundred and fifty flames which she asks for. Giving you a warm smile, she states, [penelope.speech(Belle, Daphne, and Farah are once again available at the moment. Please wait one moment while I call them here for you.)]
+	为了舒缓肌肉紧张，你告诉佩内洛普你想要接受一次按摩，并递给她所需的两百五十火币。她向你回报了一个亲切的微笑，然后说道：[penelope.speech(目前贝儿、达芙妮和法拉都在待命。请稍等片刻，我这就呼叫她们过来为您服务。)]
+</p>
+	<p>
+说完之后，这只边牧女在柜台下面连续按下了三个按钮。每按下其中一个按钮，你便会听见从佩内洛普身后走廊深处传来的三声微弱的铃音——每个铃音都有微妙的不同音调。过了一会儿，几扇门缓缓打开。越过佩内洛普看向走廊，你看到了熟悉的身影——贝儿、达芙妮和法拉正朝着你走来。
+</p>
+	<p>
+		[belle.speech(嘿，[pc.name]！)]白毛羊女贝儿快速跑向你所在的位置，她指着脖子上项圈上印着的“无用婊子”字样，咧嘴一笑并戏谑道：[belle.speech(按摩之后，你可以把我绑起来，然后随你想怎么操我就怎么操我！)]
 	</p>
 	<p>
-		With that, the border collie-girl reaches down under her counter and presses three buttons, one after the other. As each of these buttons are pressed, you hear three faint chimes – each one of which having a slightly different pitch – ring out from down the corridor which leads off from behind where Penelope is standing. Just a moment later, and three of the corridor's many doors swing open, one after the other. Looking past Penelope, you see the familiar figures of Belle, Daphne, and Farah walking towards you.
+		[daphne.speech(如果你喜欢的是那种play，比贝儿所想的稍微温和一点的那种，那么，我们三个可以一起来玩些宠物play，)]达芙妮边说边走到贝儿身边，捏了捏自己暴露在外的乳头，咬了咬嘴唇，诱惑着你。
 	</p>
 	<p>
-		[belle.speech(Heya, [pc.name]!)] the white-woollen Belle teases calls out as she rushes up to where you're standing. Drawing your attention to the words 'Worthless Cunt' which are stamped on the metallic tag of her choker, she grins and teases, [belle.speech(After your massage, you can tie me up and fuck me as hard as you want!)]
-	</p>
-	<p>
-		[daphne.speech(If you fancy something a little gentler than what Belle has in mind, then we could do a bit of pet-play together,)] Daphne suggests as she steps up beside Belle, before seductively pinching her exposed nipples and biting her lip.
-	</p>
-	<p>
-		[farah.speech(I'll leave those submissive games to the younger sheep,)] Farah says with a smirk as she approaches.
+		[farah.speech(那些顺从的游戏就留给年轻的羊群吧，)]当法拉走近时，她面带坏笑地说。
 		#IF(farah.isPregnant())
-			 Rubbing her hands over her
+			她抚摸着自己
 			#IF(farah.isVisiblyPregnant())
-				 visibly-pregnant
+				明显孕态
 			#ENDIF
-			 belly, she winks at you and teases, [farah.speech(As you've already got me knocked up, my special service obviously isn't available, but we can still have a nice, gentle fuck after your massage.)]
+			的肚子，并向你调侃道：[farah.speech(既然你已经让我怀孕了，我的特殊服务暂时就无法提供了，不过按摩之后我们可以好好地、温柔地云雨一番。)]
 		#ELSE
-			 Placing one hand on her hip, she uses her other to stroke her pussy as she teases, [farah.speech(Remember that I'll be the one who's in charge if you want a nice, gentle fuck with me.)]
+			她一只手扶着腰，另一只手抚弄着下体，调笑道：[farah.speech(记住，如果你想和我来一场舒适且温柔的缠绵，不过那将会由我来掌控节奏。)]
 		#ENDIF
 	</p>
 	<p>
-		[penelope.speech(So there you have it,)] Penelope states, [penelope.speech(Belle's into being used and abused, Daphne loves being a submissive little sheep, and Farah always demands to be in charge. If you've got an extra seven hundred and fifty flames, then you can always pay to personally receive a massage from me instead. If you've got the cash, then we can fuck after your massage as well, but just remember that I'm packing a cock as well as a cunt, so if that's not your thing then don't waste my time.)]
-	</p>
+	[penelope.speech(大概就这样了，)]佩内洛普说道：[penelope.speech(贝儿喜欢被人使用和虐待，达芙妮热衷于扮演顺从的小绵羊角色，而法拉总是坚持掌控一切。如果你有额外的七百五十火币，那么你可以选择让我亲自为你提供按摩服务。同时如果你还有足够的火币，我们也可以在按摩后小小的亲热一下，不过请记住，我既是雌性也具备雄性特征，所以我既有阴道也有阴茎。如果不适合你的口味，那就别浪费我的时间。)]
+</p>
 	<p>
-		With that, Penelope joins the three sheep-girls in waiting to hear who you'll choose for your first massage...
-	</p>
-	]]>
-	</htmlContent>
+	在说完之后，佩内洛普便加入到了三位绵羊女的行列中，她们都在等待你宣布会选择谁来为你进行第一次按摩……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BACK"><![CDATA[
 	<p>
-		Changing your mind, you tell Penelope that you don't want a massage after all. The three sheep-girls each let out disappointed whines and sighs as they hear this, before turning around and walking off back to their rooms. Giving you a polite smile, Penelope hands you back your flames and states, [penelope.speech(Very well, [pc.sir]. Here's your two hundred and fifty flames. Please let me know if there's anything else I can do for you today.)]
+		你改变了主意，告诉佩内洛普你不想按摩了。三个羊女听后各自发出了失望的抱怨和叹息，然后转身走回自己的房间。佩内洛普给了你一个礼貌的微笑，然后把火币递还给你，并说：[penelope.speech(好的[pc.sir]。这是你的250块。如果还需要什么帮忙的，请告诉我。)]
 	</p>
 	<p>
-		Thanking the border collie-girl, you wonder what to ask of her next...
+		你感谢了这位边牧女，下一步该向她提出什么要求……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Belle massage: -->
 	
 	<htmlContent tag="MASSAGE_BELLE_START"><![CDATA[
 	<p>
-		Deciding that you'd like a massage from Belle, you tell the young, white-woollen sheep-girl that you've chosen her. Happily jumping up and down on the spot, she exclaims, [belle.speech(Hooray! Hey, after your massage, you're gonna want to wreck my hot little cunt, aren't you?)]
+		决定想要贝儿给你做按摩，你告诉这位年轻的白毛羊女，你选择了她。她高兴地在原地蹦跶，欢呼道：[belle.speech(好耶！嘿，按摩之后，你肯定想要狂草我的火辣小逼，对吧？)]
 	</p>
 	<p>
-		[penelope.speech(There'll be plenty of time to discuss that once you've started giving [pc.name] [pc.her] massage,)] Penelope reprimands her excitable employee, before addressing you in her calm, posh accent, [penelope.speech(Please follow Belle to her massage room, and I hope that you'll enjoy your time with her.)]
+		[penelope.speech(你开始给[pc.name]按摩后，就有很多时间讨论这个问题了)]佩内洛普先是训斥了她那兴奋的员工，然后才用她那沉稳、高贵的口音对你说道：[penelope.speech(请跟随贝儿到她的按摩室，我希望你们能享受与她在一起的时光。)]
 	</p>
 	<p>
-		With Penelope's admonishment having done very little to calm the excitable sheep-girl, Belle eagerly grabs hold of your [pc.hand] and impatiently pulls you along after her as she leads you down the corridor to her room. A moment later, and she's closing the door behind you as you take a look around the room in which you're to receive your massage. 
+		佩内洛普训斥过后，激动的贝儿并没有冷静下来，她兴冲冲地抓住了你的[pc.hand]，迫不及待地拉着你跟着她走下走廊，来到她的房间。片刻之后，她在你身后关闭了房门，你环顾四周，准备接受按摩。
 	</p>
 	<p>
-		Just like the reception area, this massage room has been furnished in a modern, trendy style. The floor consists of the same polished wooden floorboards which are found throughout the rest of the establishment, and on all four sides the pale pink walls are illuminated via oversized light bulbs which hang down from the high ceiling. Industrial-style shelving covers one wall, and is filled with all manner of potted plants, miscellaneous ornaments, and beauty products. Wooden blinds cover the window that's set into the opposite wall, granting you and Belle total privacy for what's about to happen on the large, modular massage table that's located right in the centre of the room.
+		就像接待区一样，这个按摩间也采用了现代时尚的装饰风格。地板由抛光木地板构成，四面墙壁以淡粉色为主，挂在高高天花板上的超大灯泡进行照明。一面工业风格的架子覆盖着一面墙，上面摆满了各种盆栽植物、杂项装饰品和美容产品。木制百叶窗遮盖着嵌入对面墙壁的窗户，为你和贝儿提供了完全的隐私，让你们可以在房间中央的大型模块化按摩桌上做事。
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			[belle.speech(Hold on one moment; I'll just adjust the table to fit your body type,)]
+			[belle.speech(稍等一会；我调整一下按摩桌来贴和你的身体构造，)]
 		#ELSE
-			[belle.speech(Hold on one moment; I'll just adjust the table to fit your height,)]
+			[belle.speech(稍等一会；我调整一下按摩桌来贴和你的身高，)]
 		#ENDIF
-		 Belle happily says, before skipping over to the massage table and adjusting some of its padded surfaces. After she's finished, she gestures to the table and smiles at you as she says, [belle.speech(If you'll just strip naked and then lie down on here, I'll begin your massage straight away!)]
+		贝儿欣然说道，然后欢快地跳到按摩桌前，调整一些垫子的表面。完成一切后，她指向桌子，微笑着对你说：[belle.speech(快脱光衣服躺在这儿，我可以立刻开始为你做按摩了！)]
 	</p>
 	<p>
-		Doing as Belle asks, you strip naked for her, and after you've lain down on the massage table, she places her soft hands on your torso and starts to give you a firm, enthusiastic massage. Despite her young age, she's extremely proficient at her job, and you find yourself melting in pleasure under the pressure which she applies to every part of your body.
+		你按照贝儿的要求脱下衣服，躺在按摩桌上。她把柔软的双手放在你的躯干上，开始给你施加坚定而热情的按摩。尽管她年纪轻轻，但在工作上非常娴熟，你在她的按压下，享受着快乐而如沐春风的感觉。
 	</p>
 	<p>
-		After almost ten minutes have flown by in this manner, your masseuse lets out a cheeky little giggle, before asking, [belle.speech(So, would you like me to continue with the rest of your massage, or would you prefer one of my special services? I can give you a nice groin 'massage' for a hundred flames, an oral 'massage' for two hundred and fifty, or we can get right on to fucking for five hundred. If you'd like to indulge me in my favourite fetish, then for seven hundred and fifty flames you can tie me up to this table and fuck me senseless... So, what'll it be?)]
+		在这样的状态下，差不多过了十分钟。你的按摩师发出一声俏皮的笑声，然后问道：[belle.speech(那么，你想让我继续为你按摩，还是更想尝试我的特殊服务呢？我可以为你提供一次愉悦的腹股沟‘按摩’，只需一百火币；口部‘按摩’则为两百五十火币；或者我们可以直接做爱，五百火币。如果你想来点刺激的，七百五十火币可以将我捆绑在这张桌子上，然后尽情地与我做爱……那么，你的决定？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_HANDS"><![CDATA[
 	<p>
-		Liking the sound of having Belle's hands focused on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+		想要贝儿的手在你的
+#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy,
+				肉棒和小穴
 			#ELSE
-				 cock,
+				肉棒
 			#ENDIF
 		#ELSE
-			 pussy,
+			小穴
 		#ENDIF
-		 you tell her that you want her special groin 'massage', before handing over the hundred flames which she's asked for. Letting out an excited squeal, the sheep-girl quickly stores your money in a nearby cabinet, before hastily returning to kneel down before your groin. Teasing her fingers down towards your genitals, she bites her lip and lustfully moans, [belle.speech(I'll make you cum in no time... Just lie back and enjoy this...)]
+上，你告诉她你想要她专注于你的下体“按摩”，然后递给她她要求的一百火币。羊女兴奋地尖叫一声，迅速把你的钱存放在附近的柜子里，然后匆忙回到你的下体前跪下。她挑逗着手指在你的性器上滑下，咬着嘴唇，充满欲望地呻吟着：[belle.speech(我会让你很快高潮的……躺下来，享受……)]
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				Gripping your hard cock in one hand, the sheep-girl starts to slide her fingers up and down around your throbbing length, letting out hungry little moans as she does so. After a few strokes, she starts to move her free hand towards your pussy, and once it's there, she quickly slides her fingers into your cunt and starts to finger you while simultaneously continuing to give you a handjob. With both of your sexual organs being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Belle, who teases, [belle.speech(That's it, let yourself go! ~Mmm!~ You'll be climaxing soon enough...)]
+				你的坚硬肉棒被羊女紧握在手中，她开始在你的跳动的二弟周围来回上下滑动手指，发出饥渴的小呻吟。经过几次抚摸，她开始用另一只手向你的小穴移动。她迅速把手指插进你的小穴，一边玩弄你，一边继续给你手交。在这种方式下同时刺激你的两个性器官，你很快发出一连串[pc.moans+]，这让贝儿感到非常愉悦，她挑逗地说道：[belle.speech(就是这样，尽情释放吧！嗯！你很快就会去了……)]
 			#ELSE
-				Gripping your hard cock in one hand, the sheep-girl starts to slide her fingers up and down around your throbbing length, letting out hungry little moans as she does so. With your [pc.cock+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Belle, who teases, [belle.speech(That's it, let yourself go! ~Mmm!~ You'll be cumming soon enough...)]
+				紧握着你坚硬的[pc.cock+]，羊女开始用一只手在你悸动的二弟周围上下滑动手指，发出饥渴的小呻吟。在这种刺激下，你很快就发现自己发出一连串[pc.moans+]，这让贝儿感到非常愉悦，她调笑道：[belle.speech(就是这样，让自己放松吧！嗯！你很快就会射的……)]
 			#ENDIF
 		#ELSE
-			After teasing her fingers up and down over your [pc.labia+], the sheep-girl pauses for a moment to play with your clit, before suddenly sliding her fingers into your cunt and starting to finger you. With your [pc.pussy+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Belle, who teases, [belle.speech(That's it, let yourself go! ~Mmm!~ You'll be climaxing soon enough...)]
+			在轻抚着你[pc.labia+]上下游走了一会儿后，羊女停下来玩弄你的阴蒂，然后突然将手指滑入你的小穴，开始插入。在这样的刺激下，你很快就发现自己发出一连串[pc.moans+]，这让贝儿欣喜万分，她调侃道：[belle.speech(就是这样，尽情释放自己吧！嗯你很快就会高潮的……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_ORAL"><![CDATA[
 	<p>
-		Liking the sound of having Belle continue her massage with her mouth, you tell her that you want her special oral 'massage', before handing over the two hundred and fifty flames which she's asked for. Letting out an excited squeal, the sheep-girl quickly stores your money in a nearby cabinet, before hastily returning to kneel down before your groin. Leaning forwards so that you can feel her hot breath on your
+		想要贝儿继续用嘴巴按摩，你告诉她你想要她特别的口部“按摩”，然后递给她要求的两百五十火币。贝儿兴奋地尖叫一声，羊女迅速把你的钱存放在附近的柜子里，然后匆忙地回到你的胯下跪下。身体前倾，你能感受到她热热的呼吸在你的
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy, Belle bites her lip and lustfully moans, [belle.speech(I'll make you cum in no time... Just lie back and enjoy this... Oh, and just let me know whenever you want me to switch to eating you out...)]
+				肉棒和小穴，贝儿咬着嘴唇，充满欲望地呻吟着：[belle.speech(我会让你很快高潮的……只需躺下来享受……哦，当你想让我切换到口你的时候告诉我……)]
 			#ELSE
-				 cock, Belle bites her lip and lustfully moans, [belle.speech(I'll make you cum in no time... Just lie back and enjoy this...)]
+				肉棒，贝儿咬着嘴唇，充满欲望地呻吟着：[belle.speech(我会让你很快高潮的……只需躺下来享受……)]
 			#ENDIF
 		#ELSE
-			 pussy, Belle bites her lip and lustfully moans, [belle.speech(I'll make you climax in no time... Just lie back and enjoy this...)]
+			小穴，贝儿咬着嘴唇，充满欲望地呻吟着：[belle.speech(我会让你很快高潮的……只需躺下来享受……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Parting her lips, the sheep-girl darts out her tongue and delivers a long, wet lick up the underside of your hard cock, before opening wide and taking your [pc.cockHead+] into her mouth. Letting out hungry, muffled moans, she starts enthusiastically bobbing her head up and down as she gives you a blowjob. As you feel your [pc.cock+] being taken deep down the sheep-girl's tight, wet throat, you quickly find yourself letting out a series of [pc.moans+], which encourages Belle to suddenly deepthroat you. After gazing longingly up into your eyes for a moment, she pulls her head up and wetly sucks the [pc.cockHead+] of your [pc.cock+], before continuing to give you head...
+			羊女分开嘴唇，伸出舌头，用舌尖沿着你坚硬的肉棒底部舔了一大口，然后张开嘴巴，将你[pc.cockHead+]吞入口中。她发出饥渴的闷哼声，热情地上下摇晃着头部，给你口交。你感觉到你[pc.cock+]被羊女紧紧、湿润的喉咙深深地吞噬，你迅速发出一连串[pc.moans+]，这激励着贝儿突然将你深深咽入。她渴望地凝视着你的眼睛片刻后，将头抬起，深情地吸吮着你[pc.cock+][pc.cockHead+]，继续给你口交……
 		#ELSE
-			After leaning in to plant a big, wet kiss on your [pc.clit+], the sheep-girl darts out her tongue and delivers a series of long, wet licks to your [pc.labia+]. Letting out hungry, muffled moans, she then presses her face into your groin and starts enthusiastically darting her tongue into your [pc.pussy+]. As the sheep-girl starts to perform cunnilingus, you quickly find yourself letting out a series of [pc.moans+], which encourages Belle to grind her face into your cunt and thrust her tongue as deep as possible into your hot, wet pussy. After gazing longingly up into your eyes for a moment, she pulls back and lifts her head up to wetly suck on your [pc.clit+], before continuing to eat you out...
+			羊女倾身凑近，给你[pc.clit+]一个深情地热吻后，她伸出舌头，连续舔舐着你[pc.labia+]，发出饥渴的，压抑的呻吟声。她将脸贴近你的腹部，热情地用舌头探入你[pc.pussy+]。你很快就发现自己发出一连串[pc.moans+]，这激励着贝儿将她的脸埋入你的小穴，并将舌头尽可能地深入你炽热、湿润的蜜穴中。在向你投去渴望的目光后，她缓缓抽回头，抬起头深情地吸吮你[pc.clit+]，继续舔舐你……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_SEX"><![CDATA[
 	<p>
-		Wanting to have a session of full-on sex with Belle, you give her five hundred flames and tell her that you're going to fuck her. Letting out an excited squeal, the sheep-girl quickly stores your money in a nearby cabinet as you get up from the massage table and prepare to get started.
+		渴望与贝儿进行一场激烈的性爱，你递给她五百火币，并告诉她你打算与她做爱。她发出一声兴奋的尖叫，迅速将你的钱存放在附近的柜子里，与此同时，你从按摩桌上站起，准备开始。
 	</p>
 	<p>
-		[belle.speech(You can fuck me like this if you want,)] Belle teases as she lies back on the table that you've just vacated. Spreading her legs, she reaches down to her exposed pussy and uses two of her digits to spread her [belle.labia+]. Lewdly presenting her tight cunt to you, she bites her lip and whines, [belle.speech(I love getting a good, hard fuck, so be as rough with me as you want! I'll be your good little bitch!)]
+		贝儿挑逗地说着：[belle.speech(你可以像这样随便操我，)]，躺到你刚刚离开的桌子上。她张开双腿，伸手到她裸露的阴部，用两根手指分开她[belle.labia+]。淫荡地将她紧致的小穴展示给你，咬着嘴唇哼道：[belle.speech(我喜欢被强烈地插着，所以尽管对我粗暴吧！我会做你的小贱货！)]
 	</p>
 	<p>
-		[pc.Stepping] forwards and preparing to take advantage of Belle's submissive position, you wonder how best to start...
+		你上前一步，准备利用贝儿顺从的体位，准备开始……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_BONDAGE"><![CDATA[
 	<p>
-		Liking the sound of getting to tie Belle to the table and fuck her as hard as you want, you give her seven hundred and fifty flames and tell her that you're going to bind her up tight. Letting out an excited squeal, the sheep-girl quickly stores your money in a nearby cabinet, before producing a length of rope and instructing you to trade places with her.
+		你喜欢把贝儿绑在桌子上，然后尽情地干她，于是你给了她七百五十个火币，并告诉她你要把她绑得紧紧的。羊女兴奋地尖叫一声，迅速把你的钱放进旁边的柜子里，然后拿出一段绳子，指示你和她交换位置。
 	</p>
 	<p>
-		[belle.speech(Tie it up nice and tight around my legs and arms,)] Belle tells you as she hands you the rope and lies back on the massage table. Spreading her legs, she reaches down to her exposed pussy and uses two of her digits to spread her [belle.labia+]. Lewdly presenting her tight cunt to you, she bites her lip and whines, [belle.speech(Tie me up and then show my dirty little pussy no mercy!)]
+		[belle.speech(把我的腿和胳膊绑得紧紧的~)]贝儿一边说着，一边把绳子递给你，然后躺回按摩床上。她张开双腿，将手伸向暴露的小穴，用两根手指分开[belle.labia+]。她淫荡地向你展示她紧致的小穴，咬着嘴唇，发出呜呜的声音[belle.speech(把我绑起来，别对我的小淫穴留情！)]
 	</p>
 	<p>
-		More than happy to do as she asks, you start by tying Belle's legs to the massage table, and thanks to the leather restraints which she's wearing around her ankles, you're able to tightly bind her lower limbs to the table's legs. Moving up, you then take hold of the sheep-girl's arms, and one after the other, you securely tie them down to a pair of metal struts which seem to have been added to the table for just such a binding. Finding herself now securely tied down, Belle pouts at you and struggle a little to show that she's unable to escape, before passionately moaning, [belle.speech(Yes! ~Mmm!~ Come on, give me a hard, rough fuck! Abuse me as much as you want! ~Aah!~ I'm your good little fuck-toy! Break me!)] 
+		你非常乐意满足她的要求，开始将贝儿的双腿系在按摩桌上，由于她脚踝上戴着的皮革束缚，你能够将她的下肢紧紧地绑在桌子的腿上。接着，你抓住羊女的手臂，依次将它们牢牢地绑在似乎专门为此类绑缚而添加到桌子上的金属支架上。贝儿发现自己被牢牢地束缚着，向你噘了噘嘴，并稍稍挣扎以显示她无法逃脱，然后热情地呻吟着：[belle.speech(啊！~嗯！~来吧，猛烈粗暴的操我！尽情虐待我吧！~啊！~我是你的乖乖肉便器！操烂我！)]
 	</p>
 	<p>
-		[pc.Stepping] forwards and preparing to take advantage of Belle's immobility, you wonder how best to start...
+		你向前一步，准备利用贝尔的无法动弹，要怎么开始……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_CONTINUE_MASSAGE"><![CDATA[
 	<p>
-		Not wanting this massage session to turn into anything sexual, you tell Belle that you don't want to purchase any of her special services. Letting out a disappointed whine, she teases, [belle.speech(Aww, fine... Well, maybe next time you'll be in the mood for something fun!)]
+		不想让这次按摩变成性交，你告诉贝儿你不想购买她的特殊服务。她失望地哼了一声，调侃道：[belle.speech(唉，好吧……也许下次你会想要来点乐子！)]
 	</p>
 	<p>
-		With that, the sheep-girl lets out a little laugh, before pressing her hands down into your torso and continuing to give you your massage. Working her hands all over your body, she once again demonstrates her proficiency at her job, and within just a matter of moments you find yourself letting out a steady stream of satisfied hums and sighs...
+		听到这个，羊女发出一阵轻笑，然后将双手按在你的躯干上，继续为你按摩。她的双手在你的身体上快速移动，再次展现出她工作的熟练技巧，仅仅几刹那间，你就发现自己发出一连串满足的哼声和叹息……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_FINISHED"><![CDATA[
 	<p>
-		Ten minutes later, and with your body feeling well and truly relaxed, Belle steps back and happily announces, [belle.speech(There we go, we're all finished for this session!)]
+		十分钟后，你的身体确实感觉放松了许多，贝儿退后一步，高兴地宣布说：[belle.speech(好了，我们这次的按摩结束了！)]
 	</p>
 	<p>
-		Getting up off the massage table and getting dressed, you thank Belle for her service and tell her what an excellent job she's done. Giving you a big grin as she hears your praise, the sheep-girl happily claps her hands together and replies, [belle.speech(You're welcome! Maybe next time you'll be in the mood for some other services as well, and then you can see how good I am at those, too!)]
+		你从按摩床上站起来，穿好衣服。你感谢贝儿的服务并告诉她做得多么出色。在听到你的赞扬时，羊女满脸笑容，高兴地拍手回答道：[belle.speech(不客气！也许下次你会想尝试其他的服务，届时你就能看到我在『那』些方面也同样出色！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_FINISHED_END"><![CDATA[
 	<p>
-		With that, Belle asks you to accompany her back to reception, and so after exiting the room, you follow her down the corridor and find yourself once again standing before Penelope's counter. Smiling at the two of you, the border collie-girl asks, [penelope.speech(I trust that Belle was able to satisfy you, [pc.sir]?)]
-	</p>
+		之后，贝儿请你跟她一起回到接待处，于是在离开房间后，你跟着她走过走廊，再次站在佩内洛普的柜台前。边牧女对着你们微笑，问道：[penelope.speech(我相信贝儿能够满足你，[pc.sir]，是吗？)]	</p>
 	<p>
-		After you've responded in the positive, Penelope tells Belle that she's done a good job, before dismissing the sheep-girl and turning her attention back to you. Leaning forwards over her counter and playfully pushing her large, [penelope.cupSize]-cup breasts towards you, she asks in her posh accent, [penelope.speech(Is there anything else which I can do for you today, [pc.sir]?)]
+		在你肯定地回答后，佩内洛普告诉贝儿她做得很好，然后打发走了羊女，将注意力重新转向你。她俯身在柜台上，俏皮地将她那双大约有[penelope.cupSize]的胸部向你推过来，用她优雅的口音问道：[penelope.speech(今天还有什么我可以为你效劳的吗，[pc.sir]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_BELLE_AFTER_SEX"><![CDATA[
 	<p>
-		Having finished giving you her special service, Belle lets out one last passionate moan, before informing you that the fun's over. Disentangling yourself from the panting sheep-girl, you set about getting your things back in order while Belle proceeds to clean herself up.
+		在为你提供了她的特殊服务之后，贝儿发出最后一声充满激情的呻吟，然后告诉你快乐结束了。你从喘着气的羊女身上挣脱出来，开始整理你的东西，而贝儿也开始清理自己。
 	</p>
 	<p>
-		[belle.speech(That was a lot of fun! Thanks for choosing me, [pc.name], and for buying one of my special services,)] Belle says as she steps over to unlock the door. Telling her that you had a lot of fun too, you make sure that you've retrieved all of your possessions before preparing to head back to reception...
+		[belle.speech(这太开心了了，谢谢您选择了我，[pc.name]，感谢购买了我的特殊服务。)]贝儿边说边走过去打开门锁。你告诉她你也玩得很开心，然后确保你已经收拾好了所有物品，准备返回接待处……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Daphne massage: -->
 	
 	<htmlContent tag="MASSAGE_DAPHNE_START"><![CDATA[
 	<p>
-		Deciding that you'd like a massage from Daphne, you tell the brown-woollen sheep-girl that you've chosen her. Letting out a happy little laugh, she flashes you a submissive smile and says, [daphne.speech(Thank you for choosing me. If you'll please follow me to my room, we can get started on your massage right away... And then after that, you can fuck me...)]
+		你决定选达芙妮来按摩，于是告诉这位棕色的羊女你选择了她。她快乐地小声笑了一下，向你露出顺从的微笑，说道：[daphne.speech(谢谢您选择了我。跟着我到我的房间来，我们马上开始按摩……然后在那之后，您就可以操我……)]
 	</p>
 	<p>
-		Gesturing for you to follow her, Daphne sets off down the corridor, and you fall in behind her as she leads you to her room. A moment later, and she's closing the door behind you as you take a look around the room in which you're to receive your massage. 
+		达芙妮沿着走廊向前走，你紧随其后，她带你来到她的房间。片刻后，她在你身后关上了门，你环顾四周，这就是按摩的房间了。
 	</p>
 	<p>
-		Just like the reception area, this massage room has been furnished in a modern, trendy style. The floor consists of the same polished wooden floorboards which are found throughout the rest of the establishment, and on all four sides the pale pink walls are illuminated via oversized light bulbs which hang down from the high ceiling. Industrial-style shelving covers one wall, and is filled with all manner of potted plants, miscellaneous ornaments, and beauty products. Wooden blinds cover the window that's set into the opposite wall, granting you and Daphne total privacy for what's about to happen on the large, modular massage table that's located right in the centre of the room.
+		就像接待区一样，这个按摩间也采用了现代时尚的装饰风格。地板由抛光木地板构成，四面墙壁以淡粉色为主，挂在高高天花板上的超大灯泡进行照明。一面工业风格的架子覆盖着一面墙，上面摆满了各种盆栽植物、杂项装饰品和美容产品。木制百叶窗遮盖着嵌入对面墙壁的窗户，为你和达芙妮提供了完全的隐私，让你们可以在房间中央的大型模块化按摩桌上做事。
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			[daphne.speech(Please wait for just one moment; I'll just adjust the table to fit your body type,)]
+			[daphne.speech(稍等一会；我调整一下按摩桌来贴和你的身体构造，)]
 		#ELSE
-			[daphne.speech(Please wait for just one moment; I'll just adjust the table to fit your height,)]
+			[daphne.speech(稍等一会；我调整一下按摩桌来贴和你的身高，)]
 		#ENDIF
-		 Daphne says, before hurrying over to the massage table and adjusting some of its padded surfaces. After she's finished, she gestures to the table and smiles at you as she says, [daphne.speech(If you'll just strip naked and then lie down on here, I'll begin your massage straight away!)]
+		达芙妮欣然说道，然后欢快地跳到按摩桌前，调整一些垫子的表面。完成一切后，她指向桌子，微笑着对你说：[daphne.speech(快脱光衣服躺在这儿，我可以立刻开始为你做按摩了！)]
 	</p>
 	<p>
-		Doing as Daphne asks, you strip naked for her, and after you've lain down on the massage table, she places her soft hands on your torso and starts to firmly massage your muscles. It very quickly becomes apparent that Daphne is exceptionally proficient at her job, as you soon find yourself melting in pleasure under the pressure which she applies to every part of your body.
+		你按照达芙妮的要求脱下衣服，躺在按摩桌上。她把柔软的双手放在你的躯干上，开始给你施加坚定而热情的按摩。尽管她年纪轻轻，但在工作上非常娴熟，你在她的按压下，享受着快乐而如沐春风的感觉。
 	</p>
 	<p>
-		After almost ten minutes have flown by in this manner, your masseuse lets out a quiet, hungry moan, before asking, [daphne.speech(Should I continue with the rest of your massage, or would you prefer one of my special services? I can offer you a groin 'massage' for a hundred flames, an oral 'massage' for two hundred and fifty, or you can dominantly fuck me for five hundred. If you'd like to indulge me in my favourite fetish, then for seven hundred and fifty flames I'll pretend to be a dumb, horny little sheep for you to fuck... So, what'll it be?)]
+		在这样的状态下，差不多过了十分钟。你的按摩师发出一阵安静又饥渴的笑声，然后问道：[daphne.speech(那么，你想让我继续为你按摩，还是更想尝试我的特殊服务呢？我可以为你提供一次愉悦的腹股沟‘按摩’，只需一百火币；口部‘按摩’则为两百五十火币；或者我们可以直接做爱，五百火币。如果你想来点刺激的，七百五十火币可以让我变成色色小羊，让你尽情操我……那么，你的决定？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_HANDS"><![CDATA[
 	<p>
-		Liking the sound of having Daphne's hands focused on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+		想要达芙妮的手在你的
+#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy,
+				肉棒和小穴
 			#ELSE
-				 cock,
+				肉棒
 			#ENDIF
 		#ELSE
-			 pussy,
+			小穴
 		#ENDIF
-		 you tell her that you want her special groin 'massage', before handing over the hundred flames which she's asked for. Letting out an excited moan, the sheep-girl quickly stores your money in a nearby cabinet, before hastily returning to kneel down before your groin. Teasing her fingers down towards your genitals, she bites her lip and lustfully sighs, [daphne.speech(I'll be a good girl and make you cum... Please lie back and enjoy this...)]
+上，你告诉她你想要她专注于你的下体“按摩”，然后递给她她要求的一百火币。羊女兴奋地尖叫一声，迅速把你的钱存放在附近的柜子里，然后匆忙回到你的下体前跪下。她挑逗着手指在你的性器上滑下，咬着嘴唇，充满欲望地呻吟着：[daphne.speech(我会好好服务让你很快高潮的……躺下来，享受……)]
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				Gripping your hard cock in one hand, the sheep-girl starts to slide her fingers up and down around your throbbing length, letting out hungry little moans as she does so. After a few strokes, she starts to move her free hand towards your pussy, and once it's there, she quickly slides her fingers into your cunt and starts to finger you while simultaneously continuing to give you a handjob. With both of your sexual organs being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Daphne, who happily pants, [daphne.speech(That's it, let your good little sheep pleasure you... ~Mmm!~ You'll be climaxing soon enough...)]
+				你的坚硬肉棒被羊女紧握在手中，她开始在你的跳动的二弟周围来回上下滑动手指，发出饥渴的小呻吟。经过几次抚摸，她开始用另一只手向你的小穴移动。她迅速把手指插进你的小穴，一边玩弄你，一边继续给你手交。在这种方式下同时刺激你的两个性器官，你很快发出一连串[pc.moans+]，这让达芙妮感到非常愉悦，她开心地喘息着：[daphne.speech(就是这样，你的小羊羊会帮你释放……嗯！你很快就会去了……)]
 			#ELSE
-				Gripping your hard cock in one hand, the sheep-girl starts to slide her fingers up and down around your throbbing length, letting out hungry little moans as she does so. With your [pc.cock+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Daphne, who happily pants, [daphne.speech(That's it, let your good little sheep pleasure you... ~Mmm!~ You'll be cumming soon enough...)]
+				紧握着你坚硬的[pc.cock+]，羊女开始用一只手在你悸动的二弟周围上下滑动手指，发出饥渴的小呻吟。在这种刺激下，你很快就发现自己发出一连串[pc.moans+]，这让达芙妮感到非常愉悦，她开心地喘息着：[daphne.speech(就是这样，你的小羊羊会帮你释放……嗯！你很快就会射的……)]
 			#ENDIF
 		#ELSE
-			After teasing her fingers up and down over your [pc.labia+], the sheep-girl pauses for a moment to play with your clit, before suddenly sliding her fingers into your cunt and starting to finger you. With your [pc.pussy+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Daphne, who happily pants, [daphne.speech(That's it, let your good little sheep pleasure you... ~Mmm!~ You'll be climaxing soon enough...)]
+			在轻抚着你[pc.labia+]上下游走了一会儿后，羊女停下来玩弄你的阴蒂，然后突然将手指滑入你的小穴，开始插入。在这样的刺激下，你很快就发现自己发出一连串[pc.moans+]，这让达芙妮欣喜万分，她开心地喘息着：[daphne.speech(就是这样，你的小羊羊会帮你释放……嗯你很快就会高潮的……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_ORAL"><![CDATA[
 	<p>
-		Liking the sound of having Daphne continue her massage with her mouth, you tell her that you want her special oral 'massage', before handing over the two hundred and fifty flames which she's asked for. Letting out an excited moan, the sheep-girl quickly stores your money in a nearby cabinet, before hastily returning to kneel down before your groin. Leaning forwards so that you can feel her hot breath on your
+		想要达芙妮继续用嘴巴按摩，你告诉她你想要她特别的口部“按摩”，然后递给她要求的两百五十火币。羊女兴奋地尖叫一声，迅速把你的钱存放在附近的柜子里，然后匆忙地回到你的胯下跪下。身体前倾，你能感受到她热热的呼吸在你的
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy, Daphne bites her lip and lustfully moans, [daphne.speech(I'll be a good little sheep and make you cum in no time... Please lie back and enjoy this... Oh, and please let me know whenever you want me to switch to eating you out...)]
+				肉棒和小穴，达芙妮咬着嘴唇，充满欲望地呻吟着：[daphne.speech(我会做乖乖小羊，让你很快高潮的……只需躺下来享受……哦，当你想让我切换到口你的时候告诉我……)]
 			#ELSE
-				 cock, Daphne bites her lip and lustfully moans, [daphne.speech(I'll be a good little sheep and make you cum in no time... Please lie back and enjoy this...)]
+				肉棒，达芙妮咬着嘴唇，充满欲望地呻吟着：[belle.speech(我会做乖乖小羊，让你很快高潮的……只需躺下来享受……)]
 			#ENDIF
 		#ELSE
-			 pussy, Daphne bites her lip and lustfully moans, [daphne.speech(I'll be a good little sheep and make you climax in no time... Please lie back and enjoy this...)]
+			小穴，达芙妮咬着嘴唇，充满欲望地呻吟着：[belle.speech(我会做乖乖小羊，让你很快高潮的……只需躺下来享受……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Parting her lips, the sheep-girl darts out her tongue and delivers a long, wet lick up the underside of your hard cock, before opening wide and taking your [pc.cockHead+] into her mouth. Letting out hungry, muffled moans, she starts enthusiastically bobbing her head up and down as she gives you a blowjob. As you feel your [pc.cock+] being taken deep down the sheep-girl's tight, wet throat, you quickly find yourself letting out a series of [pc.moans+], which encourages Daphne to suddenly deepthroat you. After gazing longingly up into your eyes for a moment, she pulls her head up and wetly sucks the [pc.cockHead+] of your [pc.cock+], before continuing to give you head...
+			羊女分开嘴唇，伸出舌头，用舌尖沿着你坚硬的肉棒底部舔了一大口，然后张开嘴巴，将你[pc.cockHead+]吞入口中。她发出饥渴的闷哼声，热情地上下摇晃着头部，给你口交。你感觉到你[pc.cock+]被羊女紧紧、湿润的喉咙深深地吞噬，你迅速发出一连串[pc.moans+]，这激励着达芙妮突然将你深深咽入。她渴望地凝视着你的眼睛片刻后，将头抬起，深情地吸吮着你[pc.cock+][pc.cockHead+]，继续给你口交……
 		#ELSE
-			After leaning in to plant a big, wet kiss on your [pc.clit+], the sheep-girl darts out her tongue and delivers a series of long, wet licks to your [pc.labia+]. Letting out hungry, muffled moans, she then presses her face into your groin and starts enthusiastically darting her tongue into your [pc.pussy+]. As the sheep-girl starts to perform cunnilingus, you quickly find yourself letting out a series of [pc.moans+], which encourages Daphne to grind her face into your cunt and thrust her tongue as deep as possible into your hot, wet pussy. After gazing longingly up into your eyes for a moment, she pulls back and lifts her head up to wetly suck on your [pc.clit+], before continuing to eat you out...
+			羊女倾身凑近，给你[pc.clit+]一个深情地热吻后，她伸出舌头，连续舔舐着你[pc.labia+]，发出饥渴的，压抑的呻吟声。她将脸贴近你的腹部，热情地用舌头探入你[pc.pussy+]。你很快就发现自己发出一连串[pc.moans+]，这激励着达芙妮将她的脸埋入你的小穴，并将舌头尽可能地深入你炽热、湿润的蜜穴中。在向你投去渴望的目光后，她缓缓抽回头，抬起头深情地吸吮你[pc.clit+]，继续舔舐你……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_SEX"><![CDATA[
 	<p>
-		Wanting to have a session of full-on sex with Daphne, you give her five hundred flames and tell her that you're going to dominantly fuck her. Letting out an excited squeal, the sheep-girl quickly stores your money in a nearby cabinet as you get up from the massage table and prepare to get started.
+		渴望与达芙妮进行一场激烈的性爱，你递给她五百火币，并告诉她你打算与她支配地操她。她发出一声兴奋的尖叫，迅速将你的钱存放在附近的柜子里，与此同时，你从按摩桌上站起，准备开始。
 	</p>
 	<p>
-		[daphne.speech(I'll be your good little sheep,)] Daphne moans as she lies back on the table that you've just vacated. Spreading her legs, she reaches down to her exposed pussy and uses two of her digits to spread her [daphne.labia+]. Lewdly presenting her [daphne.pussyCapacity] cunt to you, she bites her lip and whines, [daphne.speech(Come on... ~Mmm!~ Dominate me!)]
+		[daphne.speech(我会做你的乖乖小羊，)]达芙妮躺在你刚刚离开的桌子上呻吟着。她张开双腿，伸手到她暴露的小穴，用两根手指展开她[daphne.labia+]。她淫荡地向你展示她[daphne.pussyCapacity]的阴道，咬着嘴唇哀求道：[daphne.speech(来吧……~嗯！~支配我！)]
 	</p>
 	<p>
-		[pc.Stepping] forwards and preparing to take advantage of Daphne's submissive position, you wonder how best to start...
+		你上前一步，准备利用达芙妮顺从的体位，准备开始……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_PET_PLAY"><![CDATA[
 	<p>
-		Liking the sound of getting Daphne to engage in a little pet-play, you stand up, hand over seven hundred and fifty flames, and tell her that you want to fuck her while she's pretending to be a dumb sheep. Your masseuse's eyes light up as she hears what it is that you want, and after letting out an extremely horny moan, she hurries to store your money in a nearby cabinet. Rushing to take off all of her clothing and jewellery, with the exception of the bell collar around her neck, Daphne bites her lip and breathlessly sighs, [daphne.speech(Yes... I'll be your good, horny little sheep...)]
+		你想让达芙妮来点宠物游戏，于是你站起身，交出七百五十火币，告诉她你想让她变成一只傻傻的羊挨操。你的按摩师听到你的要求，眼睛闪烁着兴奋的光芒，发出极其淫荡的呻吟，然后匆忙将你的钱存放在附近的柜子里。达芙妮急忙脱下除了她脖子上的铃铛项圈之外地所有的衣物和珠宝，她咬着嘴唇，喘着气，[daphne.speech(是的……我会做你的好好淫荡小羊……)]
 	</p>
 	<p>
-		With that, the sheep-girl drops down onto all fours and slowly crawls forwards, before turning around and presenting her rear-end to you. Submissively raising her ass, she turns back to give you an innocent look and lets out a surprisingly-convincing, [daphne.speech(~Baa!~)]
+		之后，羊女四肢着地，缓慢地匍匐前进，然后转身顺从地抬起她的屁股，她转身向你投来一副无辜的眼神，发出逼真到令人惊讶的声音，[daphne.speech(~咩！~)]
 	</p>
 	<p>
-		Finding yourself quickly getting aroused at the sight of Daphne's commitment to acting like a dumb sheep, you [pc.step] forwards and prepare to fuck her. Turning her head back once more to watch your approach, Daphne spreads her legs a little and pushes her ass even further up into the air, and as she presents you with her
+		你看到达芙妮全身心扮演愚蠢小羊的样子，迅速兴奋起来，你向前一步，准备操她。达芙妮再次转过头，注视着你的举动，她微微张开双腿，将她的屁股更进一步地高高挺起。呈现给你她
 		#IF(game.isAnalContentEnabled())
-			 [daphne.pussy+] and [daphne.asshole+],
+			[daphne.pussy+]和她[daphne.asshole+]，
 		#ELSE
-			 [daphne.pussy+],
+			[daphne.pussy+]，
 		#ENDIF
-		 she allows her sheep impersonation to take on a more lustful tone as she bleats once more, [daphne.speech(~Baa!~ ~Baa!~)]
+		她让她的模仿带上了更加欲望的调子，再次发出一声咩咩的叫声：[daphne.speech(~咩！~ ~咩！~)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_CONTINUE_MASSAGE"><![CDATA[
 	<p>
-		Not wanting this massage session to turn into anything sexual, you tell Daphne that you don't want to purchase any of her special services. Letting out a disappointed sigh, she states, [daphne.speech(As you wish... Maybe next time you'll be in the mood for something a little more fun...)]
+		不想让这次按摩变成性交，你告诉达芙妮你不想购买她的特殊服务。她失望地哼了一声，调侃道：[daphne.speech(唉，好吧……也许下次你会想要来点乐子！)]
 	</p>
 	<p>
-		With that, the sheep-girl flashes you a warm smile, before pressing her hands down into your torso and continuing to give you your massage. Working her hands all over your body, she once again demonstrates her proficiency at her job, and within just a matter of moments you find yourself letting out a steady stream of satisfied hums and sighs...
+		听到这个，羊女露出了一个温暖的微笑，然后用手轻压在你的躯体上，继续为你按摩。她的双手在你的身体上快速移动，再次展现出她工作的熟练技巧。很快你就发现自己发出一连串满足的哼声和叹息……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_FINISHED"><![CDATA[
 	<p>
-		Ten minutes later, and with your body feeling well and truly relaxed, Daphne steps back and announces with a slight note of satisfaction in her voice, [daphne.speech(Your massage is complete. I trust that it was enjoyable for you?)]
+		十分钟后，你的身体确实感觉放松了，达芙妮退后一步，带着一丝满意的语气宣布：[daphne.speech(您的按摩完成了。我相信您还满意吧？)]
 	</p>
 	<p>
-		Getting up off the massage table and getting dressed, you thank Daphne for her service and tell her what an excellent job she's done. Giving you a big smile as she hears your praise, the sheep-girl happily bows her head a little and replies, [daphne.speech(You're very welcome. Maybe next time you'll be in the mood for some other services as well, and then you can really see what a good, submissive little sheep I am...)]
+		起身从按摩床上站起来穿好衣服，你感谢了达芙妮的服务，并告诉她她做得非常出色。听到你的赞美，羊女露出了灿烂的笑容，高兴地微微低头回答道：[daphne.speech(非常感谢。也许下次您会想要一些其他服务，那时您就能知道我是一个多么优秀、顺从的小羊了……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_FINISHED_END"><![CDATA[
 	<p>
-		With that, Daphne asks you to accompany her back to reception, and so after exiting the room, you follow her down the corridor and find yourself once again standing before Penelope's counter. Smiling at the two of you, the border collie-girl asks, [penelope.speech(I trust that Daphne was able to satisfy you, [pc.sir]?)]
+		之后，达芙妮请你跟她一起回到接待处。在走出房间后，你跟随她穿过走廊，再次站在佩内洛普的柜台前。对着你们微笑的边牧女问道：[penelope.speech(我相信达芙妮能够满足你，[pc.sir]，你满意吗？)]
 	</p>
 	<p>
-		After you've responded in the positive, Penelope tells Daphne that she's done a good job, before dismissing the sheep-girl and turning her attention back to you. Leaning forwards over her counter and playfully pushing her large, [penelope.cupSize]-cup breasts towards you, she asks in her posh accent, [penelope.speech(Is there anything else which I can do for you today, [pc.sir]?)]
+		在你肯定地回答后，佩内洛普告诉达芙妮她做得很好，然后打发走了羊女，将注意力重新转向你。她俯身在柜台上，俏皮地将她那双大约有[penelope.cupSize]的胸部向你推过来，用她优雅的口音问道：[penelope.speech(今天还有什么我可以为你效劳的吗，[pc.sir]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_DAPHNE_AFTER_SEX"><![CDATA[
 	<p>
-		Having finished giving you her special service, Daphne lets out one last passionate moan, before informing you that the fun's over. Disentangling yourself from the panting sheep-girl, you set about getting your things back in order while Daphne proceeds to clean herself up.
+		在为你提供完特殊服务后，达芙妮发出最后一声热烈的呻吟，然后告诉你美好的时光总是短暂。你从喘息着的羊女身边挣脱出来，开始整理自己的东西，而达芙妮则开始清理自己。
 	</p>
 	<p>
-		[daphne.speech(That was a lot of fun... Thank you for choosing me, [pc.name], and for buying one of my special services,)] Daphne says as she steps over to unlock the door. Telling her that you had a lot of fun too, you make sure that you've retrieved all of your possessions before preparing to head back to reception...
+		达芙妮边走向门旁打开门锁，边说道：[daphne.speech(真的很开心……谢谢你选择了我，[pc.name]，也感谢你购买了我的特殊服务。)]你告诉她你也玩得很开心，然后确保已经取回了所有的物品，准备返回前台。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Farah massage: -->
 	
 	<htmlContent tag="MASSAGE_FARAH_START"><![CDATA[
 	<p>
-		Deciding that you'd like a massage from Farah, you tell the mature, black-woollen sheep-girl that you've chosen her.
-		#IF(farah.isPregnant())
-			#IF(farah.isVisiblyPregnant())
-				 Letting out an amused chuckle, she strokes her swollen belly and teases, [farah.speech(You just want me to fuck you while I'm pregnant, don't you, sugar?)]
-			#ELSE
-				 Letting out an amused chuckle, she strokes her belly and teases, [farah.speech(You just want me to fuck you while knowing that I'm pregnant, don't you, sugar?)]
-			#ENDIF
+	你想让法拉为你按摩，于是你告诉这位成熟的黑毛羊女，你想要她来为你服务。
+	#IF(farah.isPregnant())
+		#IF(farah.isVisiblyPregnant())
+			她发出一声轻笑，然后抚摸着自己隆起的肚子调笑道：[farah.speech(你就是想在我怀孕的时候跟我嘿咻，对不对呀，甜心？)]
 		#ELSE
-			 Letting out a soft chuckle, she flashes you a sly grin and teases, [farah.speech(What are you really wanting, sugar? A massage, or for to me to fuck you?)]
+			她发出一声轻笑，然后抚摸着自己的肚子调笑道：[farah.speech(你就是知道我怀孕了还想跟我嘿咻，对不对呀，甜心？)]
 		#ENDIF
+	#ELSE
+		她发出一声温柔的轻笑，向你狡黠一笑并调侃道：[farah.speech(哦~亲爱的！你到底想要什么呢？是真的想要按摩，还是希望和我来一发呢？)]
+	#ENDIF
+</p>
+	<p>
+		[penelope.speech(在你开始为[pc.her]按摩后，讨论[pc.name]是否想要性爱的时间还有很多，)]佩内洛普斥责她的员工，然后以她冷静、优雅的口音对你说道：[penelope.speech(请跟随法拉去她的按摩室，希望你会喜欢与她共度的时光。)]
 	</p>
 	<p>
-		[penelope.speech(There'll be plenty of time to discuss whether or not [pc.name] wants sex after you've started [pc.her] massage,)] Penelope reprimands her employee, before addressing you in her calm, posh accent, [penelope.speech(Please follow Farah to her massage room, and I hope that you'll enjoy your time with her.)]
+		法拉显然不想惹毛佩内洛普，她向这只边牧女礼貌地点了点头，然后示意你跟在她后面。照着她的指示，你跟在这只黑毛羊女的身后，忍不住注视着她裸露的臀部缓慢地摇摆，徐徐走向她的房间。片刻之后，她在你身后关闭了房门，你环顾四周，发现这是你要接受按摩的房间。
 	</p>
 	<p>
-		Clearly not wanting to get into Penelope's bad books, Farah offers the border collie-girl a polite nod, before gesturing for you to follow along after her. Doing as she instructs, you tag along behind the black-woollen sheep-girl, and can't help but watch her exposed ass sway from side to side as she slowly struts down the corridor to her room. A moment later, and she's closing the door behind you as you take a look around the room in which you're to receive your massage. 
-	</p>
-	<p>
-		Just like the reception area, this massage room has been furnished in a modern, trendy style. The floor consists of the same polished wooden floorboards which are found throughout the rest of the establishment, and on all four sides the pale pink walls are illuminated via oversized light bulbs which hang down from the high ceiling. Industrial-style shelving covers one wall, and is filled with all manner of potted plants, miscellaneous ornaments, and beauty products. Wooden blinds cover the window that's set into the opposite wall, granting you and Farah total privacy for what's about to happen on the large, modular massage table that's located right in the centre of the room.
+		就像接待区一样，这个按摩间也采用了现代时尚的装饰风格。地板由抛光木地板构成，四面墙壁以淡粉色为主，挂在高高天花板上的超大灯泡进行照明。一面工业风格的架子覆盖着一面墙，上面摆满了各种盆栽植物、杂项装饰品和美容产品。木制百叶窗遮盖着嵌入对面墙壁的窗户，为你和法拉提供了完全的隐私，让你们可以在房间中央的大型模块化按摩桌上做事。
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			[farah.speech(I know you were staring at my ass just now, sugar. You be a good [pc.girl] and keep watching while I adjust the table to fit your body type,)]
+			[farah.speech(我知道刚才你盯着我的屁股看了，亲爱的。当个乖[pc.girl]，继续看着，我要调整按摩桌，让它贴合你的体型。)]
 		#ELSE
-			[farah.speech(I know you were staring at my ass just now, sugar. You be a good [pc.girl] and keep watching while I adjust the table to fit your height,)]
+			[farah.speech(我知道刚才你盯着我的屁股看了，亲爱的。当个乖[pc.girl]，继续看着，我要调整按摩桌，让它贴合你的身高。)]
 		#ENDIF
-		 Farah teases, before sauntering over to the massage table and pushing her ass out towards you as she bends over to adjust some of its padded surfaces. After she's finished, she gestures to the table and smiles at you as she softly orders, [farah.speech(Strip naked and then lie down on here, sugar. I'm as keen to get this massage started as you are.)]
+		法拉挑逗着，然后走到按摩桌前，将她的屁股推向你，同时弯腰调整按摩桌的一些衬垫。调整完后，她指着桌子，对你微笑，轻声吩咐道： [farah.speech(脱光你的衣服然后躺在这儿，亲爱的。我和你一样迫不及待想要开始这次按摩了。)]
 	</p>
 	<p>
-		Doing as Farah asks, you strip naked for her, and after you've lain down on the massage table, she places her soft hands on your torso and starts to firmly massage your muscles. It very quickly becomes apparent that Farah is absolutely exceptional at her job, as you almost immediately find yourself melting in pleasure under the pressure which she applies to every part of your body.
+		你按照法拉的要求脱光衣服，躺在按摩桌上。她轻柔地把双手放在你的躯干上，开始有力地按摩你的肌肉。很快你就会发现法拉在她的工作中绝对是出类拔萃的，因为你几乎立即发现自己在她对你身体各个部位施加的压力下融化在快乐中。
 	</p>
 	<p>
-		After almost ten minutes have flown by in this manner, your masseuse lets out a soft, horny moan, before asking, [farah.speech(Should I continue with the rest of your massage, sugar, or would you prefer one of my special services? I can offer you a groin 'massage' for a hundred flames, an oral 'massage' for two hundred and fifty, or I can fuck you for five hundred.
+		就这样过了近十分钟，你的按摩师发出一声轻柔的、饥渴的呻吟，然后问道：[farah.speech(你想让我继续为你按摩，还是更想尝试我的特殊服务呢？我可以为你提供一次愉悦的腹股沟‘按摩’，只需一百火币；口部‘按摩’则为两百五十火币；或者我们可以直接做爱，五百火币。
 		#IF(farah.isPregnant())
-			 Seeing as you've already got me pregnant, I can't offer you my fertile sex special, so it'll have to be one of the other options if you're looking for some fun.
+			因为你已经让我怀孕了，我无法给你我的受孕性爱特殊服务，所以如果你想找点乐子的话只能选其他的了。
 		#ELSE
-			 If you were looking for something a little extra, and if you've got a thing for risky sex or knocking girls up, then for seven hundred and fifty flames I'll take a breeder pill and give you a shot at getting me pregnant.
+			如果你想要玩点刺激的，喜欢冒险性行为或者让女孩怀孕，那么七百五十火币，我会服用繁育药，给你一个搞大我肚子的机会。
 		#ENDIF
-		 So, what'll it be?)]
+		那么，你要选哪一种呢？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_HANDS"><![CDATA[
 	<p>
-		Liking the sound of having Farah's hands focused on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+		想要达芙妮的手在你的
+#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy,
+				肉棒和小穴
 			#ELSE
-				 cock,
+				肉棒
 			#ENDIF
 		#ELSE
-			 pussy,
+			小穴
 		#ENDIF
-		 you tell her that you want her special groin 'massage', before handing over the hundred flames which she's asked for. Letting out a soft moan, the sheep-girl takes her time as she safely stores your money in a nearby cabinet, before stepping back towards you and kneeling down before your groin. Teasing her fingers down towards your genitals, she gives you a sly look and lustfully sighs, [farah.speech(Be a good [pc.girl] for me and relax... I'll make this good for you...)]
+上，你告诉她你想要她专注于你的下体“按摩”，然后递给她她要求的一百火币。羊女发出轻柔的呻吟，花了些时间将你的钱安全地存放在附近的柜子里，然后回到你的下体前跪下。她挑逗着手指在你的性器上滑下，向你投去一个狡黠的目光，色情地叹息道：[farah.speech(做个好[pc.girl]，我会让你很舒服的……)]
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				Dominantly taking hold of your hard cock in one hand, the sheep-girl starts to slide her fingers up and down around your throbbing length, letting out deep, quiet moans as she does so. After a few strokes, she starts to move her free hand towards your pussy, and once it's there, she slowly slides her fingers into your cunt and starts to gently finger you while simultaneously continuing to give you a handjob. With both of your sexual organs being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Farah, who happily teases, [farah.speech(That's it, sugar, let me take care of you... ~Mmm!~ You'll be climaxing for me soon enough...)]
+				羊女支配地用一只手牢牢握住你坚硬的阴茎，你的跳动的二弟周围来回上下滑动手指，发出深沉而安静的呻吟声。你[pc.cock+]在这样的刺激下，很快发现自己发出一连串[pc.moans+]，这让法拉感到非常高兴，她愉快地戏弄着说道：[farah.speech(就是这样，宝贝，让我来照顾你……~嗯！~你很快就会高潮的……)]
 			#ELSE
-				Dominantly taking hold of your hard cock in one hand, the sheep-girl starts to gently slide her fingers up and down around your throbbing length, letting out deep, quiet moans as she does so. With your [pc.cock+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Farah, who happily teases, [farah.speech(That's it, sugar, let me take care of you... ~Mmm!~ You'll be cumming soon enough...)]
+				羊女支配地用一只手牢牢握住你坚硬的阴茎，你的跳动的二弟周围来回上下滑动手指，发出深沉而安静的呻吟声。几次抚摸后，她开始将另一只手移向你的小穴。她慢慢将手指滑入你的阴道，开始轻轻地抽插，同时继续给你手淫。在这种方式下，两个性器官都被刺激着，你很快发现自己发出一连串的呻吟声，这让法拉感到非常高兴，她愉快地戏弄着说道：[farah.speech(就是这样，宝贝，让我来照顾你……~嗯！~你很快就会射的……)]
 			#ENDIF
 		#ELSE
-			After dominantly teasing her fingers up and down over your [pc.labia+], the sheep-girl pauses for a moment to play with your clit, before slowly sliding her fingers into your cunt and starting to gently finger you. With your [pc.pussy+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Farah, who happily teases, [farah.speech(That's it, sugar, let me take care of you... ~Mmm!~ You'll be climaxing soon enough...)]
+			羊女支配地你[pc.labia+]上下游走了一会儿后，停下来玩弄你的阴蒂，然后突然将手指滑入你的小穴，开始抽查。在这样的刺激下，你很快就发现自己发出一连串[pc.moans+]，这让法拉感到非常高兴，她愉快地戏弄着说道：[farah.speech(就是这样，宝贝，让我来照顾你……~嗯！~你很快就会高潮的……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_ORAL"><![CDATA[
 	<p>
-		Liking the sound of having Farah continue her massage with her mouth, you tell her that you want her special oral 'massage', before handing over the two hundred and fifty flames which she's asked for. Letting out a soft moan, the sheep-girl takes her time as she safely stores your money in a nearby cabinet, before stepping back towards you and kneeling down before your groin. Leaning forwards so that you can feel her hot breath on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+		你想要法拉用嘴巴继续按摩，便告诉她你想要她特别的口腔“按摩”，然后交付了她要求的两百五十个火币。羊女发出轻柔的呻吟声，花了一点时间将钱安全地存放在附近的柜子里，然后走回你身边，跪在你的下体前。她向前倾身，你感受到她温热的呼气吹在你的
+#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy, Farah gives you a sly look and lustfully sighs, [farah.speech(Be a good [pc.girl] for me and relax... I'll make this good for you, sugar... Oh, and do let me know if you want me to switch to eating you out...)]
+				肉棒和小穴上，法拉狡黠地看着你，淫荡地叹息着：[farah.speech(做个好[pc.girl]，放松……我会让你感受到美好的……噢，如果你想让我改为舔你的话，请告诉我……)]
 			#ELSE
-				 cock, Farah gives you a sly look and lustfully sighs, [farah.speech(Be a good [pc.girl] for me and relax... I'll make this good for you, sugar...)]
+				肉棒上，法拉狡黠地看着你，淫荡地叹息着：[farah.speech(做个好[pc.girl]，放松……我会让你感受到美好的……)]
 			#ENDIF
 		#ELSE
-			 pussy, Farah gives you a sly look and lustfully sighs, [farah.speech(Be a good [pc.girl] for me and relax... I'll make this good for you, sugar...)]
+			小穴上，法拉狡黠地看着你，淫荡地叹息着：[farah.speech(做个好[pc.girl]，放松……我会让你感受到美好的……)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Parting her lips, the sheep-girl darts out her tongue and delivers a long, wet lick up the underside of your hard cock, before opening wide and taking your [pc.cockHead+] into her mouth. Letting out soft, muffled moans, she starts slowly bobbing her head up and down as she gives you a dominant blowjob. As you feel your [pc.cock+] being taken deep down the sheep-girl's tight, wet throat, you quickly find yourself letting out a series of [pc.moans+], which encourages Farah to suddenly deepthroat you. After gazing lovingly up into your eyes for a moment, she pulls her head up and wetly sucks the [pc.cockHead+] of your [pc.cock+], before continuing to give you head...
+			羊女分开嘴唇，伸出舌头，用舌尖沿着你坚硬的肉棒底部舔了一大口，然后张开嘴巴，将你[pc.cockHead+]吞入口中。她发出柔缓的闷哼声，上下摇晃着头部，支配地给你口交。你感觉到你[pc.cock+]被羊女紧紧、湿润的喉咙深深地吞噬，你迅速发出一连串[pc.moans+]，这激励着法拉突然将你深深咽入。她渴望地凝视着你的眼睛片刻后，将头抬起，深情地吸吮着你[pc.cock+][pc.cockHead+]，继续给你口交……
 		#ELSE
-			After leaning in to plant a big, wet kiss on your [pc.clit+], the sheep-girl darts out her tongue and delivers a series of long, wet licks to your [pc.labia+]. Letting out soft, muffled moans, she then presses her face into your groin and starts slowly pushing her tongue into your [pc.pussy+]. As the sheep-girl starts to dominantly perform cunnilingus, you quickly find yourself letting out a series of [pc.moans+], which encourages Farah to press her face into your cunt and slide her tongue as deep as possible into your hot, wet pussy. After gazing lovingly up into your eyes for a moment, she pulls back and lifts her head up to wetly suck on your [pc.clit+], before continuing to eat you out...
+			羊女倾身凑近，给你[pc.clit+]一个深情地热吻后，她伸出舌头，连续舔舐着你[pc.labia+]，发出柔缓的，压抑的呻吟声。她将脸贴近你的腹部，缓缓用舌头探入你[pc.pussy+]。你很快就发现自己发出一连串[pc.moans+]，这激励着法拉将她的脸埋入你的小穴，并将舌头尽可能地深入你炽热、湿润的蜜穴中。在向你投去渴望的目光后，她缓缓抽回头，抬起头深情地吸吮你[pc.clit+]，继续舔舐你……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_SEX"><![CDATA[
 	<p>
-		Wanting to have a session of full-on sex with Farah, you give her five hundred flames and tell her that you want to fuck her. Letting out a soft moan, the sheep-girl safely stores your money in a nearby cabinet as you get up from the massage table and prepare to get started.
+		渴望与法拉进行一场全面的性爱，你给了她五百火币，并告诉她你想与她做爱。羊女发出轻柔的呻吟，将你的钱安全地存放在附近的柜子里，而你则从按摩床上站起身来做开始。
 	</p>
 	<p>
-		[farah.speech(Remember, sugar, I'm the one in charge here,)] Farah confidently states as she steps over to lie back on the table that you've just vacated. Spreading her legs, she reaches down to her exposed pussy and uses two of her digits to spread her [farah.labia+]. Lewdly presenting her [farah.pussyCapacity] cunt to you, she flashes you a sly smirk and says, [farah.speech(Come here, sugar. This pussy's been getting hot and wet at the thought of getting you to fuck it...)]
+		[farah.speech(记住，亲爱的，我才是这里的主人。)]法拉自信地说着，一边走过来躺在你刚刚离开的桌子上。她张开双腿，用两个手指分开她[farah.labia+]。淫荡地向你展示她[farah.pussyCapacity]的阴道，她冲你扬了扬眉，说道：[farah.speech(过来，亲爱的。这个小穴变得炽热湿润，它准备好挨操了……)]
 	</p>
 	<p>
-		Doing as you're told, you [pc.step] forwards and prepare to follow Farah's further instructions as she starts to dominantly have sex with you...
+		你听从指示，向前一步，准备跟随法拉的进一步指示，她开始支配地与你做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_FERTILE_SEX"><![CDATA[
 	<p>
-		Wanting to have a session of full-on sex with Farah, and eager to have the chance to get her pregnant, you give her seven hundred and fifty flames and tell her that you want to knock her up. Letting out a soft moan, the sheep-girl safely stores your money in a nearby cabinet as you get up from the massage table and prepare to get started.
+		你渴望与法拉进行一场激烈的性爱，并迫切希望让她怀孕，于是递给她七百五十火币，并告诉她你想让她怀孕。在一阵轻柔的呻吟声中，这位羊女将你的钱安全地存放在附近的柜子里，而你则从按摩床上站起，准备开始。
 	</p>
 	<p>
-		[farah.speech(Remember, sugar, I'm the one in charge here,)] Farah confidently states as she steps over to lie back on the table that you've just vacated. Producing a breeder pill, she pops it out of its protective packaging and swallows it, before spreading her legs she's reaching down to use two of her digits to spread her [farah.labia+]. Lewdly presenting her [farah.pussyCapacity] cunt to you, she flashes you a sly smirk and says, [farah.speech(Come here, sugar. This pussy's getting hot and wet at the thought of being fertile and ready to receive a big creampie...)]
+		[farah.speech(记住，亲爱的，我才是这里的主人。)]法拉自信地说着，一边走过来躺在你刚刚离开的桌子上。她取出一个繁殖药丸，打开包装并吞下，然后她张开双腿，用两个手指分开她[farah.labia+]。淫荡地向你展示她[farah.pussyCapacity]的阴道，她冲你扬了扬眉，说道：[farah.speech(过来，亲爱的。这个小穴变得炽热湿润，它即将怀孕并准备好接受注满……)]
 	</p>
 	<p>
-		Doing as you're told, you [pc.step] forwards and prepare to follow Farah's further instructions as she starts to dominantly have sex with you...
+		你听从指示，向前一步，准备跟随法拉的进一步指示，她开始支配地与你做爱……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="MASSAGE_FARAH_CONTINUE_MASSAGE"><![CDATA[
 	<p>
-		Not wanting this massage session to turn into anything sexual, you tell Farah that you don't want to purchase any of her special services. Letting out a disappointed sigh, she states, [farah.speech(Suit yourself, sugar... Maybe next time you'll be in the mood for something a little more fun...)]
+		不想让这次按摩变成性交，你告诉法拉你不想购买她的特殊服务。她失望地哼了一声，调侃道：[farah.speech(随便你吧……也许下次你会想要来点乐子……)]
 	</p>
 	<p>
-		With that, the sheep-girl flashes you a warm smile, before pressing her hands down into your torso and continuing to give you your massage. Working her hands all over your body, she once again demonstrates her proficiency at her job, and within just a matter of moments you find yourself letting out a steady stream of satisfied hums and sighs...
+		听到这个，羊女露出了一个温暖的微笑，然后用手轻压在你的躯体上，继续为你按摩。她的双手在你的身体上快速移动，再次展现出她工作的熟练技巧。很快你就发现自己发出一连串满足的哼声和叹息……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_FINISHED"><![CDATA[
 	<p>
-		Ten minutes later, and with your body feeling well and truly relaxed, Farah steps back and announces with a soft sigh, [farah.speech(Your massage is complete, sugar. Did you enjoy it?)]
+		十分钟后，你的身体确实感觉放松了，法拉退后一步，带着一丝满意的语气宣布：[farah.speech(您的按摩完成了。我相信您还满意吧？)]
 	</p>
 	<p>
-		Getting up off the massage table and getting dressed, you thank Farah for her service and tell her what an excellent job she's done. Giving you a warm smile as she hears your praise, the sheep-girl replies, [farah.speech(You're very welcome, sugar. Maybe next time you'll be in the mood for some other services as well...)]
+		起身从按摩床上站起来穿好衣服，你感谢法拉的服务，并告诉她她做得非常出色。听到你的赞美，羊女给了你一个温暖的微笑，回答道，[farah.speech(不客气，亲爱的。也许下次你会对其他服务感兴趣呢……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_FINISHED_END"><![CDATA[
 	<p>
-		With that, Farah asks you to accompany her back to reception, and so after exiting the room, you follow her down the corridor and find yourself once again standing before Penelope's counter. Smiling at the two of you, the border collie-girl asks, [penelope.speech(I trust that Farah was able to satisfy you, [pc.sir]?)]
+		之后，法拉请你跟她一起回到接待处。在走出房间后，你跟随她穿过走廊，再次站在佩内洛普的柜台前。对着你们微笑的边牧女问道：[penelope.speech(我相信达芙妮能够满足你，[pc.sir]，你满意吗？)]
 	</p>
 	<p>
-		After you've responded in the positive, Penelope tells Farah that she's done a good job, before dismissing the sheep-girl and turning her attention back to you. Leaning forwards over her counter and playfully pushing her large, [penelope.cupSize]-cup breasts towards you, she asks in her posh accent, [penelope.speech(Is there anything else which I can do for you today, [pc.sir]?)]
+		在你肯定地回答后，佩内洛普告诉法拉她做得很好，然后打发走了羊女，将注意力重新转向你。她俯身在柜台上，俏皮地将她那双大约有[penelope.cupSize]的胸部向你推过来，用她优雅的口音问道：[penelope.speech(今天还有什么我可以为你效劳的吗，[pc.sir]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_AFTER_SEX"><![CDATA[
 	<p>
-		Having finished giving you her special service, Farah lets out one last soft moan, before informing you that the fun's over. Disentangling yourself from the panting sheep-girl, you set about getting your things back in order while Farah proceeds to clean herself up.
+		在为你提供完特殊服务后，法拉发出最后一声热烈的呻吟，然后告诉你美好的时光总是短暂。你从喘息着的羊女身边挣脱出来，开始整理自己的东西，而法拉则开始清理自己。
 	</p>
 	<p>
-		[farah.speech(Thanks for the fun, sugar,)] Farah says as she steps over to unlock the door. Telling her that you had a lot of fun too, you make sure that you've retrieved all of your possessions before preparing to head back to reception...
+		[farah.speech(谢谢你带来的欢乐，亲爱的。)]法拉说着，一边走过去开门。你告诉她你也玩得很开心，然后确保你已经收拾好了所有的物品，准备回到前台……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_AFTER_SEX_FERTILE"><![CDATA[
 	#IF(farah.hasStatusEffect(SE_PREGNANT_0))
 		<p>
-			Having finished giving you her special service, Farah lets out one last soft moan, before informing you that the fun's over. Disentangling yourself from the panting sheep-girl, you set about getting your things back in order while Farah produces an arcane pregnancy tester and declares, [farah.speech(I'm not one to wait around and find out if I'm pregnant or not. Hold on a moment, sugar, and I'll let you know if you've gone and made me a mother...)]
+			完成了特别服务后，法拉发出最后一声轻柔的呻吟，然后告诉你欢乐结束了。你从喘息着的羊女身上挣脱开来，开始收拾你的东西，而法拉拿出了一枚奥术验孕器，说道：[farah.speech(我等不及知道是否怀孕了。等一下，亲爱的，我会告诉你你是否让我成为了母亲……)]
 		</p>
 		<p>
-			Not giving you any chance to object, the sheep-girl quickly swipes the pregnancy tester down over her belly...
+			不给你任何反对的机会，羊女迅速在她的腹部滑过验孕器……
 		</p>
 	#ELSE
 		<p>
-			Having finished giving you her special service, Farah lets out one last soft moan, before informing you that the fun's over. Disentangling yourself from the panting sheep-girl, you set about getting your things back in order while Farah proceeds to clean herself up.
-		</p>
+		在为你提供完特殊服务后，法拉发出最后一声热烈的呻吟，然后告诉你美好的时光总是短暂。你从喘息着的羊女身边挣脱出来，开始整理自己的东西，而法拉则开始清理自己。
+	</p>
 		<p>
-			[farah.speech(Thanks for the fun, sugar, although I'm a little disappointed that you didn't even try to get me pregnant,)] Farah says as she steps over to unlock the door. Telling her that you had a lot of fun too, you make sure that you've retrieved all of your possessions before preparing to head back to reception...
+			[farah.speech(谢谢你带来的欢乐，亲爱的，虽然我有点失望，你甚至都没有试着让我怀孕，)]法拉说着，一边走过去开门。你告诉她自己也玩得很开心，你确认已经收拾好了所有的物品，准备回到前台……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_FARAH_AFTER_SEX_FERTILE_RESULT"><![CDATA[
 	#IF(farah.isPregnant())
 		<p>
-			[farah.speech(Well, how about that, sugar? You've gone and got me pregnant,)] Farah states with a big grin on her face. Rubbing her hands over her slightly-chubby belly, she says, [farah.speech(I don't bother using any arcane tricks to speed up my pregnancies, so there'll be plenty of time for you to come back and fuck me while I'm pregnant, if that's something you're into. Oh, and before you ask, no, I don't need anything from you; this isn't the first time I've had kids, and I can handle myself just fine.)]
+			[farah.speech(嘿，亲爱的，怎么回事？你竟然让我怀孕了，)]法拉满脸笑容地说道。她用手轻抚着微微凸起的肚子，继续说道：[farah.speech(我不会使用任何奥术法术来加快怀孕过程，所以你完全有足够的时间回来，在我怀孕的时候享受一下。噢，在你问之前，我得告诉你，不，我并不需要你提供什么；这可不是我第一次当妈，我完全能照顾好自己。)]
 		</p>
 		<p>
-			With Farah telling you that she doesn't need any help with the pregnancy, all there is for you to do is wish her well and prepare to leave. Telling you to come back and see her again soon, the sheep-girl helps to make sure that you've retrieved all of your possessions before preparing to lead you back to reception...
+			法拉告诉你她不需要任何帮助来应对怀孕，你只能祝她一切顺利，准备离开了。她告诉你要尽快再来看她，然后帮你收拾好东西，准备带你返回接待处……
 		</p>
 	#ELSE
 		<p>
-			[farah.speech(Well, sugar, looks like you didn't manage to get me pregnant,)] Farah states. Rubbing her hands over her slightly-chubby belly, she says, [farah.speech(There's always next time, I suppose... You will come back and try again, won't you?)]
+			[farah.speech(嗯，亲爱的，看来你没能让我怀孕，)]法拉说道。她用手轻抚着微微凸起的肚子，继续说道，[farah.speech(下次再试试吧，我想……你会回来再尝试的，对吧？)]
 		</p>
 		<p>
-			Telling Farah that you'll come back if you get the chance, you make sure that you've retrieved all of your possessions before preparing to head back to reception...
+			告诉法拉如果有机会的话你会再回来，你收拾好东西，然后准备返回接待处……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Penelope massage: -->
 	
 	<htmlContent tag="MASSAGE_PENELOPE_START"><![CDATA[
 	<p>
-		Wanting to personally receive a massage from Penelope herself, you hand the beautiful border collie-girl the seven hundred and fifty flames which she's asked for and tell her that you've chosen her. Telling Daphne to take over at the reception desk, Penelope dismisses the other two sheep-girls with a wave of her paw-like hand, before smiling at you and teasing, [penelope.speech(You've got a thing for girls with cocks, huh? Or maybe it's my pussy you're after...)]
-	</p>
+		为了亲自接受来自佩内洛普本人的按摩服务，你将七百五十火币交给了这位美丽的边牧女，并告诉她你选择了她。佩内洛普挥手示意达芙妮接手接待处的工作，同时挥手打发走了另外两名绵羊女。她对着你微笑并调侃道：[penelope.speech(你喜欢有阴茎的女孩儿，对吧？或许你更钟意我的蜜桃……)]
+</p>
 	<p>
-		Not giving you a chance to respond, the border collie-girl turns around and sets off down the corridor behind the counter, gesturing for you to follow along after her as she does so. [pc.Stepping] past Penelope, you tag along behind the spa's owner, and can't help but watch her ass and tail sway from side to side as she struts down the corridor to her room. A moment later, and she's closing the door behind you as you take a look around the room in which you're to receive your massage. 
-	</p>
+		不给你回应的机会，这名边牧犬女转过身，径直走向柜台后面的小走廊，并示意你跟着她。你紧跟在这家水疗馆主人的身后，同时目不转睛地盯着她在走廊上摇曳生姿的蜜桃臀和毛茸茸的尾巴，直至她走进了自己的房间你才收回目光。她在离开时顺便关上了这个房间的门，而你此时才有时间观察即将接受按摩的房间。
+</p>
 	<p>
-		Just like the reception area, this massage room has been furnished in a modern, trendy style. The floor consists of the same polished wooden floorboards which are found throughout the rest of the establishment, and on all four sides the pale pink walls are illuminated via oversized light bulbs which hang down from the high ceiling. Industrial-style shelving covers one wall, and is filled with all manner of potted plants, miscellaneous ornaments, and beauty products. Wooden blinds cover the window that's set into the opposite wall, granting you and Penelope total privacy for what's about to happen on the large, modular massage table that's located right in the centre of the room.
-	</p>
+		和接待区一样，这个按摩室也被布置成了现代且时尚的风格。地板采用与店铺其他区域相同的抛光实木地板，四面淡粉色的墙壁均通过悬挂在高天花板上的超大型灯泡照明。一面墙上安装了工业风格的架子，上面摆满了各式各样的盆栽植物、杂项装饰品以及美容产品。对面墙壁上镶嵌的窗户挂有木质百叶窗，为即将在房间中央宽敞、模块化设计的按摩台上发生的活动提供了绝对的隐私保障。
+</p>
 	<p>
-		#IF(pc.isTaur())
-			[penelope.speech(Please wait for one moment while I adjust the table to fit your body type,)]
-		#ELSE
-			[penelope.speech(Please wait for one moment while I adjust the table to fit your height,)]
-		#ENDIF
-		 Penelope asks, before stepping over to the massage table and bending over to adjust some of its padded surfaces. After she's finished, she gestures to the table and smiles at you as she instructs, [penelope.speech(If you'll please strip naked and lie down on here, then I'll start your massage right away.)]
-	</p>
+	#IF(pc.isTaur())
+		[penelope.speech(请稍等一下，我来调整按摩台以适应您的体型，)]
+	#ELSE
+		[penelope.speech(请稍等一下，我来调整按摩台以适应您的身高，)]
+	#ENDIF
+	佩内洛普一边说着一边走到按摩台前去调整一些带有软垫的表面。在完成调整后，她指向按摩台，微笑着指引道：[penelope.speech(如果您能脱掉衣服躺在这上面，我就可以立刻开始为您按摩了。)]
+</p>
 	<p>
-		Doing as Penelope asks, you strip naked for her, and after you've lain down on the massage table, she places her soft hands on your torso and starts to firmly massage your muscles. It very quickly becomes apparent that Penelope is an outstanding masseuse, as you almost immediately find yourself melting in pleasure under the pressure which she applies to every part of your body.
-	</p>
+		按照佩内洛普的要求，你脱去了全部衣物，当你在按摩台上躺下后，她便将她那柔软的手放在你的躯干上并开始有力地按摩你的肌肉。很快，佩内洛普施加在你身体各部位的压力几乎立即将你沉浸在愉悦之中，这让你确信佩内洛普是一位杰出的按摩师。
+</p>
 	<p>
-		After almost ten minutes have flown by in this manner, the border collie-girl lets out a quiet, horny moan, before asking, [penelope.speech(So, do you want the rest of your massage, or would you prefer to purchase one of my special services instead? I can offer you a groin 'massage' for two hundred flames, an oral 'massage' for five hundred, or we can fuck for a thousand. I'm a bit of a switch, so just let me know if you'd prefer me to be submissive or to take control...)]
-	</p>
+		在经过近十分钟的正常按摩流程后，这个边牧女发出一声隐秘又情欲的娇喘，随后问道：[penelope.speech(那么，您是要继续剩余的普通按摩，还是选择购买我的特色服务呢？我可以为您提供收费二百火币的私密部位‘按摩’，五百火币的口部‘按摩’，或者一千火币的性爱服务。我比较随和，无论是被动服从还是主动掌控，只要您告诉我您的喜好即可……)]
+</p>
 	<p>
-		Pausing your massage for a moment, Penelope playfully teases her paw-like fingers over your body and offers, [penelope.speech(I can also give you one of my other very special services, both of which cost one thousand five hundred flames. One of these is where I give you what I like to call a double facial; I get you to eat me out then suck my cock, and then I cum and squirt all over your face...)]
-	</p>
+在按摩暂歇之际，佩内洛普俏皮地用她那宛如爪子般的手指在你身上轻轻划过，并提议道：[penelope.speech(我还可以为你提供另外两项非常特别的服务，这两项服务的费用都是1500火币。其中一项是我所谓的双重面部护理服务；首先我会让你为我口交，接着我会吸吮你的阴茎，然后在我达到高潮时，我会在你的脸上喷射精液，同时让淫液覆盖在你的脸上……)]
+</p>
 	<p>
-		Letting out a playful laugh as she pointedly traces her fingers down over the growing bulge that's poking out beneath the bottom of her virgin-killer sweater, the border collie-girl finishes by explaining, [penelope.speech(The final thing I offer is to give you a little mock fashion show. I've got five of my favourite outfits from my time working as a model, and I can show one of these off to you before letting you fuck me while I'm still wearing it... So, what'll it be?)]
+		边牧女故意用手指滑过童贞杀手毛衣下逐渐隆起的鼓包，她带着俏皮的笑声结束了介绍，[penelope.speech(我提供的最后一个项目是一场小小的模拟时装秀。我有五套担任模特时最喜欢的服装，我可以先为你展示其中一套，然后在穿着它的情况下与你发生性行为……所以，你要选哪一项呢？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_CONTINUE"><![CDATA[
 	<p>
-		Not wanting this massage session to turn into anything sexual, you tell Penelope that you don't want to purchase any of her special services. Professionally nodding as she hears you say this, she states, [penelope.speech(Very good, [pc.sir]. Now please relax while I give you the rest of your massage...)]
-	</p>
+为了避免此次按摩变成任何性相关的行为，你告诉佩内洛普你不打算购买她的特色服务。在听到你这样说之后，她专业地点点头，说道：[penelope.speech(非常好，[pc.sir]。现在请你放松，接下来我会继续为你完成余下的按摩服务……)]
+</p>
 	<p>
-		With that, the beautiful border collie-girl flashes you a warm smile, before pressing her hands down into your torso and continuing to give you your massage. Working her hands all over your body, she once again demonstrates her proficiency at her job, and within just a matter of moments you find yourself letting out a steady stream of satisfied hums and sighs...
-	</p>
-	]]>
-	</htmlContent>
+          这位美丽的边牧女向你绽放出一个热情的笑容，继而将双手按压在你的躯干上，继续为你进行按摩。她的双手熟练地在你全身游走，再次证明了她在按摩领域的精湛技艺。短短几分钟之内，你就发现自己身体已经彻底沉迷在这舒缓的感觉当中……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_HANDS"><![CDATA[
 	<p>
-		Liking the sound of having Penelope's hands focused on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy,
-			#ELSE
-				 cock,
-			#ENDIF
-		#ELSE
-			 pussy,
-		#ENDIF
-		 you tell her that you want her to give you a submissive groin 'massage', before handing over the two hundred flames which she's asked for. Letting out a horny moan, the beautiful border collie-girl safely stores your money in a nearby cabinet, before stepping back towards you and kneeling down before your groin. Teasing her fingers down towards your genitals, she gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you...)]
-	</p>
+你喜欢佩内洛普专注在你
+#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+    #IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
+        阴茎和阴道，
+    #ELSE
+        阴茎，
+    #ENDIF
+#ELSE
+    阴道，
+#ENDIF
+上的想法，你告诉她你想要一次顺从式的下体“按摩”，然后递给了她索要的两百火币。这位美丽的边牧女发出轻柔的呻吟，在花了些时间将你的钱安全地存放在附近的柜子里，然后回到你的下体前跪下。她挑逗着手指在你的性器上滑下，向你投去一个狡黠的目光，色情地叹息道：[penelope.speech(请放松并享受这一切，[pc.sir]……我会让你感觉很棒的……)]
+</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				Taking hold of your hard cock in one hand, Penelope starts to slide her fingers up and down around your throbbing length, letting out erotic moans as she does so. After a few strokes, she starts to move her free hand towards your pussy, and once it's there, she eagerly slides her fingers into your cunt and starts to finger you while simultaneously continuing to give you a handjob. With both of your sexual organs being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of the border collie-girl, who happily teases, [penelope.speech(That's it, let me take care of you... ~Mmm!~ You'll be climaxing for me soon enough...)]
+				佩内洛普用一只手握住你坚硬的阴茎，开始用手指上下滑弄你那跳动的阴茎，同时发出色情的呻吟声。在抚摸了几下后，她开始将空闲的手移向你的小穴，在将手伸到你的下体后，她就迫不及待地将手指伸进你的阴道并扣弄了起来。随着你的两个性器官都受到这样的刺激，你不由自主地发出了一连串[pc.moans+]，这让边牧女高兴地挑逗道：[penelope.speech(就是这样，让我来照顾你……~你很快就会为我达到高潮的……)
 			#ELSE
-				Taking hold of your hard cock in one hand, Penelope starts to eagerly slide her fingers up and down around your throbbing length, letting out erotic moans as she does so. With your [pc.cock+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of the border collie-girl, who happily teases, [penelope.speech(That's it, let me take care of you... ~Mmm!~ You'll be cumming soon enough...)]
+				佩内洛普用一只手握住你坚硬的阴茎，迫不及待地用手指上下滑弄你那跳动的阴茎，同时发出色情的呻吟声。随着你[pc.cock+]受到这样的刺激，你不由自主地发出了一连串[pc.moans+]，这让边牧女高兴地挑逗道：[penelope.speech(就是这样，让我来照顾你……~你很快就会为我达到高潮的……)
 			#ENDIF
 		#ELSE
-			After teasing her fingers up and down over your [pc.labia+], Penelope pauses for a moment to play with your clit, before sliding her fingers into your cunt and starting to eagerly finger you. With your [pc.pussy+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of the border collie-girl, who happily teases, [penelope.speech(That's it, let me take care of you... ~Mmm!~ You'll be climaxing soon enough...)]
+			佩内洛普用手指来回磨蹭你[pc.labia+]，她玩弄了一会你的阴蒂后，就迫不及待地将手指伸进你的阴道并扣弄了起来。随着你[pc.pussy+]受到这样的刺激，你不由自主地发出了一连串[pc.moans+]，这让边牧女高兴地挑逗道：[penelope.speech(就是这样，让我来照顾你……~你很快就会为我达到高潮的……)
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_ORAL"><![CDATA[
 	<p>
-		Liking the sound of having Penelope continue her massage with her mouth, you tell her that you want her to give you a submissive oral 'massage', before handing over the five hundred flames which she's asked for. Letting out an excited moan, the beautiful border collie-girl safely stores your money in a nearby cabinet, before stepping back towards you and kneeling down before your groin. Leaning forwards so that you can feel her hot breath on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+你喜欢佩内洛普说的用嘴继续按摩，于是你告诉她你想让她来一次顺从式的口舌“按摩”，并在那之后将她索要的五百火币交给了她。这位美丽的边牧女发出轻柔的呻吟，在花了些时间将你的钱安全地存放在附近的柜子里，然后回到你的下体前跪下。她向前倾身，让你感受到她炽热的吐息吹拂在你的
+	#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy, Penelope gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you... Oh, and do let me know if you want me to switch to eating you out...)]
-			#ELSE
-				 cock, Penelope gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you...)]
-			#ENDIF
+			阴茎和阴道上，佩内洛普狡黠地瞥了你一眼，带着淫欲的叹息说道：[penelope.speech(请您放松享受这一切，[pc.sir]……我会让您感觉很好的……哦，如果您想让我转换为舔舐您的阴道，请一定要告诉我……)]
 		#ELSE
-			 pussy, Penelope gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you...)]
+			阴茎上，佩内洛普狡黠地瞥了你一眼，带着淫欲的叹息说道：[penelope.speech(请您放松享受这一切，[pc.sir]……我会让您感觉很好的……)]
 		#ENDIF
-	</p>
+	#ELSE
+		阴道上，佩内洛普佩内洛普狡黠地瞥了你一眼，带着淫欲的叹息说道：[penelope.speech(请您放松享受这一切，[pc.sir]……我会让您感觉很好的……)]
+	#ENDIF
+</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Parting her lips, Penelope darts out her tongue and delivers a long, wet lick up the underside of your hard cock, before opening wide and taking your [pc.cockHead+] into her mouth. Letting out horny, muffled moans, she starts rapidly bobbing her head up and down as she gives you a submissive blowjob. As you feel your [pc.cock+] being taken deep down the beautiful border collie-girl's tight, wet throat, you quickly find yourself letting out a series of [pc.moans+], which encourages her to suddenly deepthroat you. After gazing lovingly up into your eyes for a moment, she pulls her head up and wetly sucks the [pc.cockHead+] of your [pc.cock+], before continuing to give you head...
+			佩内洛普轻轻分开嘴唇，迅速伸出舌头，从你坚硬阴茎的底部往上长长湿湿地舔舐，然后她张大嘴巴，将你[pc.cockHead+]含入口中。伴随着情欲满满、含糊不清的呻吟声，她开始快速上下摆动头部，顺从地为你进行口交。你感觉到你[pc.cock+]深深陷入这美丽的边牧女紧实湿润的喉咙，你很快就忍不住发出一连串[pc.moans+]，这激励她突然开始深喉你。在深情凝视你的眼睛片刻后，她抬起头部，湿漉漉地吮吸着你[pc.cockHead+]，继续为你口交……
 		#ELSE
-			After leaning in to plant a big, wet kiss on your [pc.clit+], Penelope darts out her tongue and delivers a series of long, wet licks to your [pc.labia+]. Letting out horny, muffled moans, she then presses her face into your groin and starts greedily pushing her tongue into your [pc.pussy+]. As the beautiful border collie-girl starts to submissively perform cunnilingus, you quickly find yourself letting out a series of [pc.moans+], which encourages her to press her face into your cunt and slide her tongue as deep as possible into your hot, wet pussy. After gazing lovingly up into your eyes for a moment, she pulls back and lifts her head up to wetly suck on your [pc.clit+], before continuing to eat you out...
+			佩内洛普为你[pc.clit+]献上了一个又大又湿的吻，然后她快速伸出舌头，对你[pc.labia+]进行了一连串长且湿滑的舔舐。她发出充满欲望的、低沉的呻吟声，将脸埋入你的腹股沟，贪婪地将舌头探入你[pc.pussy+]。这美丽的边牧女开始顺从地为你进行舔阴，你很快就忍不住发出一连串[pc.moans+]，这激励她更加深入地将脸贴紧你的蜜穴，并尽可能地将舌头伸入你灼热湿润的蜜穴深处。在深情凝视你的眼睛片刻后，她退回来，抬起头湿滑地吮吸着你[pc.clit+]，继续为你舔阴……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_SEX"><![CDATA[
 	<p>
-		Wanting to have a session of full-on sex with Penelope, you give her a thousand flames and tell her that you're going to dominantly fuck her. Letting out a hungry moan, the beautiful border collie-girl safely stores your money in a nearby cabinet as you get up from the massage table and prepare to get started.
+你想要与佩内洛普进行一场彻底的性爱，于是你给了她一千火币，并告诉她你想主导与她的性爱过程。当你从按摩台上起身并做好准备开始时，这位美丽的边牧羊女发出了一声饥渴的娇喘，随后将你的钱安全存放在附近的柜子里。
+</p>
+	<p>
+		[penelope.speech(我会为你做个好女孩的，)]佩内洛普走到你刚刚腾出的桌子上躺好，然后张开双腿，将手伸向暴露在外的小穴，用两根手指分开[penelope.labia+]。她淫荡地向你展示她那[penelope.pussyCapacity]的阴户，并用另一只手挑逗她迅速勃起的犬类鸡巴，随后咬着嘴唇，顺从的呜呜道：[penelope.speech(一想到能让你操，我的小穴就又热又湿……~我的阴茎也渴望被使用……求你了，[pc.sir]，操我吧！)]
 	</p>
 	<p>
-		[penelope.speech(I'll be a good girl for you,)] Penelope moans as she lies back on the table that you've just vacated. Spreading her legs, she reaches down to her exposed pussy and uses two of her digits to spread her [penelope.labia+]. Lewdly presenting her [penelope.pussyCapacity] cunt to you, she uses her other hand to tease her rapidly-hardening dog-cock, before biting her lip and submissively whining, [penelope.speech(My pussy's getting hot and wet at the thought of getting you to fuck it... ~Mmm!~ My cock's desperate to be used as well... Please, [pc.sir], fuck me!)]
+		你上前一步，准备和顺从姿势的佩内洛普好好地爽上那么一爽……
 	</p>
-	<p>
-		[pc.Stepping] forwards and preparing to take advantage of Penelope's submissive position, you wonder how best to start...
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_CONTINUE_REVERSAL"><![CDATA[
 	<p>
-		Wanting to submit to Penelope, you tell her that you want the massage to continue, but that you want to reverse the roles and be the one massaging her. Smirking as she hears this, the beautiful border collie-girl teases, [penelope.speech(You want to feel me up, huh? Sure, that's fine with me. Get up then, so that we can swap places.)]
-	</p>
+你渴望臣服于佩内洛普，于是你告诉她你想让按摩继续，但希望由你来为她按摩。这位美丽的边牧女在听到后调笑道：[penelope.speech(你想摸摸我，对吧？没问题，我无所谓。那就起来吧，我们交换位置。)]
+</p>
 	<p>
-		Hurrying to obey, you stand up and vacate the massage table, allowing Penelope to take your place and lie down on the padded surface. Letting out a soft sigh, she dominantly commands, [penelope.speech(Get started then; I don't have all day.)]
-	</p>
+你赶紧遵照吩咐离开按摩台，让佩内洛普取代你的位置。在躺在那张铺有软垫的表面上后，她轻轻地叹了口气，以一种主导的口吻命令道，[penelope.speech(那就开始吧，我可没一整天的时间。)]
+</p>
 	<p>
-		Once more hastening to carry out Penelope's orders, you press your [pc.hands] down on her furry body and start to give her a massage...
-	</p>
-	]]>
-	</htmlContent>
+	你迅速执行佩内洛普的指示，将[pc.hands]放在她的毛茸茸的身体上，开始给她做按摩……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_HANDS_AS_DOM"><![CDATA[
 	<p>
-		Liking the sound of having Penelope's hands focused on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy,
-			#ELSE
-				 cock,
-			#ENDIF
-		#ELSE
-			 pussy,
-		#ENDIF
-		 you tell her that you want her to give you a dominant groin 'massage', before handing over the two hundred flames which she's asked for. Letting out a horny moan, the beautiful border collie-girl safely stores your money in a nearby cabinet, before stepping back towards you and kneeling down before your groin. Teasing her fingers down towards your genitals, she gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you...)]
-	</p>
+你喜欢佩内洛普专注在你
+#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+    #IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
+        阴茎和阴道，
+    #ELSE
+        阴茎，
+    #ENDIF
+#ELSE
+    阴道，
+#ENDIF
+上的想法，你告诉她你想要一次由她主导的下体“按摩”，然后递给了她索要的两百火币。这位美丽的边牧女发出轻柔的呻吟，在花了些时间将你的钱安全地存放在附近的柜子里，然后回到你的下体前跪下。她挑逗着手指在你的性器上滑下，向你投去一个狡黠的目光，色情地叹息道：[penelope.speech(请放松并享受这一切，[pc.sir]……我会让你感觉很棒的……)]
+</p>
 	<p>
 		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				Dominantly taking hold of your hard cock in one hand, the sheep-girl starts to slide her fingers up and down around your throbbing length, letting out erotic moans as she does so. After a few strokes, she starts to move her free hand towards your pussy, and once it's there, she eagerly slides her fingers into your cunt and starts to finger you while simultaneously continuing to give you a handjob. With both of your sexual organs being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Penelope, who happily teases, [penelope.speech(That's it, let me take care of you... ~Mmm!~ You'll be climaxing for me soon enough...)]
+				绵羊女霸道地用一只手握住你坚硬的阴茎，迫不及待地用手指上下滑弄你那跳动的阴茎，同时发出色情的呻吟声。在抚摸了几下后，她开始将空闲的手移向你的阴部，在将手伸到你的下体后，她就急切地将手指伸进你的阴道并扣弄了起来。随着你的两个性器官都受到这样的刺激，你不由自主地发出了一连串[pc.moans+]，这让佩内洛普高兴地挑逗道：[penelope.speech(就是这样，让我来照顾你……~你很快就会为我达到高潮的……)
 			#ELSE
-				Dominantly taking hold of your hard cock in one hand, the sheep-girl starts to eagerly slide her fingers up and down around your throbbing length, letting out erotic moans as she does so. With your [pc.cock+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Penelope, who happily teases, [penelope.speech(That's it, let me take care of you... ~Mmm!~ You'll be cumming soon enough...)]
+				绵羊女霸道地用一只手握住你坚硬的阴茎，迫不及待地用手指上下滑弄你那跳动的阴茎，同时发出色情的呻吟声。随着你[pc.cock+]受到这样的刺激，你不由自主地发出了一连串[pc.moans+]，这让佩内洛普高兴地挑逗道：[penelope.speech(就是这样，让我来照顾你……~你很快就会为我达到高潮的……)
 			#ENDIF
 		#ELSE
-			After dominantly teasing her fingers up and down over your [pc.labia+], the sheep-girl pauses for a moment to play with your clit, before eagerly sliding her fingers into your cunt and starting to finger you. With your [pc.pussy+] being stimulated in this manner, you quickly find yourself letting out a series of [pc.moans+], much to the delight of Penelope, who happily teases, [penelope.speech(That's it, let me take care of you... ~Mmm!~ You'll be climaxing soon enough...)]
+			绵羊女霸道地用手指来回磨蹭你[pc.labia+]，她玩弄了一会你的阴蒂后，就迫不及待地将手指伸进你的阴道并扣弄了起来。随着你[pc.pussy+]受到这样的刺激，你不由自主地发出了一连串[pc.moans+]，这让佩内洛普高兴地挑逗道：[penelope.speech(就是这样，让我来照顾你……~你很快就会为我达到高潮的……)
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_ORAL_AS_DOM"><![CDATA[
 	<p>
-		Liking the sound of having Penelope continue her massage with her mouth, you tell her that you want her to give you a dominant oral 'massage', before handing over the five hundred flames which she's asked for. Letting out an excited moan, the beautiful border collie-girl safely stores your money in a nearby cabinet, before stepping back towards you and kneeling down before your groin. Leaning forwards so that you can feel her hot breath on your
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
-				 cock and pussy, Penelope gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you... Oh, and do let me know if you want me to switch to eating you out...)]
-			#ELSE
-				 cock, Penelope gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you...)]
-			#ENDIF
+你喜欢佩内洛普说的用嘴继续按摩，于是你告诉她你想让她主导一次口舌之中的“按摩”，并在那之后将她索要的五百火币交给了她。这位美丽的边牧女发出轻柔的呻吟，在花了些时间将你的钱安全地存放在附近的柜子里，然后回到你的下体前跪下。她向前倾身，让你感受到她炽热的吐息吹拂在你的
+	#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+		#IF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
+			阴茎和阴道上，佩内洛普狡黠地瞥了你一眼，带着淫欲的叹息说道：[penelope.speech(请您放松享受这一切，[pc.sir]……我会让您感觉很好的……哦，如果您想让我转换为舔舐您的阴道，请一定要告诉我……)]
 		#ELSE
-			 pussy, Penelope gives you a sly look and lustfully sighs, [penelope.speech(Please relax and enjoy this, [pc.sir]... I'll make this good for you...)]
+			阴茎上，佩内洛普狡黠地瞥了你一眼，带着淫欲的叹息说道：[penelope.speech(请您放松享受这一切，[pc.sir]……我会让您感觉很好的……)]
 		#ENDIF
-	</p>
+	#ELSE
+		阴道上，佩内洛普佩内洛普狡黠地瞥了你一眼，带着淫欲的叹息说道：[penelope.speech(请您放松享受这一切，[pc.sir]……我会让您感觉很好的……)]
+	#ENDIF
+</p>
 	<p>
-		#IF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
-			Parting her lips, Penelope darts out her tongue and delivers a long, wet lick up the underside of your hard cock, before opening wide and taking your [pc.cockHead+] into her mouth. Letting out horny, muffled moans, she starts rapidly bobbing her head up and down as she gives you a dominant blowjob. As you feel your [pc.cock+] being taken deep down the beautiful border collie-girl's tight, wet throat, you quickly find yourself letting out a series of [pc.moans+], which encourages her to suddenly deepthroat you. After gazing lovingly up into your eyes for a moment, she pulls her head up and wetly sucks the [pc.cockHead+] of your [pc.cock+], before continuing to give you head...
-		#ELSE
-			After leaning in to plant a big, wet kiss on your [pc.clit+], Penelope darts out her tongue and delivers a series of long, wet licks to your [pc.labia+]. Letting out horny, muffled moans, she then presses her face into your groin and starts greedily pushing her tongue into your [pc.pussy+]. As the beautiful border collie-girl starts to dominantly perform cunnilingus, you quickly find yourself letting out a series of [pc.moans+], which encourages her to press her face into your cunt and slide her tongue as deep as possible into your hot, wet pussy. After gazing lovingly up into your eyes for a moment, she pulls back and lifts her head up to wetly suck on your [pc.clit+], before continuing to eat you out...
-		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+	#IFDEF(pc.hasPenisIgnoreDildo() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
+		佩内洛普迅速伸出舌头，在你坚挺的阴茎下方送上长长地湿滑一舔，接着张开嘴巴，将你[pc.cockHead+]含入口中。伴随着闷热而情欲满满的低吟，她开始用力上下摆动头部，为你提供一场充满控制力的口交服务。当你感觉到你[pc.cock+]深入到美丽边牧女紧致湿润的喉咙深处时，你很快便不由自主地发出一系列淫荡的呻吟。这激励她突然开始深喉。在深情地凝视你的眼睛片刻后，她抬起头部，湿润地吸吮着你[pc.cock+][pc.cockHead+]，然后继续为你口交……
+	#ELSE
+		佩内洛普在为你[pc.clit+]献上一个又大又湿的吻后，伸出她那灵巧地舌头，连续在你[pc.labia+]上送上一连串长长的湿滑舔舐。情欲满溢的她发出闷声低吟，继而将脸贴近你的耻部，贪婪地将舌头探入你[pc.pussy+]内。当这位美丽的边牧女开始强势地为你执行舔阴服务时，你很快就忍不住发出一系列[pc.moans+]。这激发了她将脸颊深深埋入你的蜜穴，并尽可能将舌头深入你炙热湿润的蜜穴深处。在温情脉脉地向上注视你的眼睛一会儿后，她略微收回身子，抬起头部湿润地吸吮你[pc.clit+]，然后继续为你口交服务……
+	#ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_SEX_AS_DOM"><![CDATA[
 	<p>
-		Wanting to have a session of full-on sex with Penelope, you give her a thousand flames and tell her that you want her to dominantly fuck you. Letting out a hungry moan, the beautiful border collie-girl safely stores your money in a nearby cabinet as you get up from the massage table and prepare to get started.
+你想要与佩内洛普进行一场彻底的性爱，于是你给了她一千火币，并告诉她你想让她主导与你的性爱过程。当你从按摩台上起身并做好准备开始时，这位美丽的边牧羊女发出了一声饥渴的娇喘，随后将你的钱安全存放在附近的柜子里。
+</p>
+	<p>
+		[penelope.speech(别忘了，现在我才是老大！)]佩内洛普一边自信地说着，一边脱掉身上的衣服，她走到你刚刚腾出的桌子旁，在上面躺好。她张开双腿，将手伸向暴露在外的小穴，用两根手指分开[penelope.labia+]。她淫荡地向你展示她那[penelope.pussyCapacity]的阴户，并用另一只手挑逗她迅速勃起的犬类鸡巴，她向你露出得意的坏笑，霸气地命令道：[penelope.speech(过来！一想到能让你操我，我的小穴就又热又湿，我的鸡巴也迫不及待想要深深地插进你的身体……)]
 	</p>
 	<p>
-		[penelope.speech(Don't forget that I'm the one in charge now,)] Penelope confidently states as she strips out of her clothing and steps over to lie back on the table that you've just vacated. Spreading her legs, she reaches down to her exposed pussy and uses two of her digits to spread her [penelope.labia+]. Lewdly presenting her [penelope.pussyCapacity] cunt to you, she uses her other hand to tease her rapidly-hardening dog-cock, before flashing you a sly smirk and dominantly ordering, [penelope.speech(Get over here. My pussy's getting hot and wet at the thought of getting you to fuck it, and my cock's desperate to get hilted deep inside of you...)]
-	</p>
-	<p>
-		Doing as you're told, you [pc.step] forwards and prepare to follow Penelope's further instructions as she starts to dominantly have sex with you...
-	</p>
-	]]>
-	</htmlContent>
+你按照指示[pc.step]向前，准备接受以她为主导的性爱活动……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FINISHED"><![CDATA[
 	<p>
-		Ten minutes later, and with your body feeling well and truly relaxed, Penelope steps back and announces in her posh accent, [penelope.speech(Your massage is complete, [pc.sir]. I trust that you're satisfied?)]
+		十分钟后，当你的身体感到无比松弛时，佩内洛普向后退一步，用她那优雅的口音宣告道：[penelope.speech(您的按摩疗程已完成，[pc.sir]。我相信你已经感到满意了吧？)]
 	</p>
 	<p>
-		Getting up off the massage table and getting dressed, you thank Penelope for her service and tell her what an excellent job she's done. Giving you a warm smile as she hears your praise, the beautiful border collie-girl replies, [penelope.speech(I'm happy to hear that you're pleased with your massage. Perhaps next time you'll also choose to purchase one of my special services...)]
-	</p>
-	]]>
-	</htmlContent>
+从按摩床上起来并穿好衣服后，你向佩内洛普表达了感谢，并称赞她的按摩做得非常出色。在听到你的夸奖时，这位美丽的边牧女微笑着回应：[penelope.speech(很高兴听到您对这次按摩感到满意，或许下次您可以考虑购买我的特色服务……)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FINISHED_REVERSAL"><![CDATA[
 	<p>
-		Ten minutes later, and you've given Penelope's body a thorough massage. Letting out a satisfied sigh, the border collie-girl stands up and announces in her posh accent, [penelope.speech(That'll be enough for one day, [pc.sir]. I trust that you're satisfied?)]
+		十分钟后，你已为佩内洛普的身体进行了全面的按摩。边牧女满足地叹了口气，站起身，用她那优雅的口音宣布道：[penelope.speech(今天就到这里吧，[pc.sir]。我相信您已经很满意了吧？)]
 	</p>
 	<p>
-		[pc.Stepping] back and starting to get dressed, you thank Penelope for allowing you to massage her, and express your pleasure at the massage she gave to you before that. Giving you a warm smile as she hears your praise, the beautiful border collie-girl replies, [penelope.speech(I'm happy to hear that you're pleased with your massage. Perhaps next time you'll also choose to purchase one of my special services...)]
-	</p>
-	]]>
-	</htmlContent>
+你穿起衣服，感谢佩内洛普允许你为她按摩，并对她之前为你所做的按摩表示满意。当听见你的赞扬时，这位美丽的边牧女微笑着回答道：[penelope.speech(我很高兴听到你对这次按摩感到满意，也许下次你会选择购买我的特殊服务项目……)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FINISHED_END"><![CDATA[
 	<p>
-		With that, Penelope asks you to accompany her back to reception, and so after exiting the room, you follow her down the corridor and find yourself once again standing before the reception's counter. After dismissing Daphne, the border collie-girl leans forwards over her counter and playfully pushes her large, [penelope.cupSize]-cup breasts towards you, before asking, [penelope.speech(Is there anything else which I can do for you today, [pc.sir]?)]
+		之后，佩内洛普请你跟她一起回到接待处。你跟随她走出房间，穿过走廊，再次来到接待台前。边牧女打发走达芙妮，俯身在柜台上，俏皮地将她那丰满的[penelope.cupSize]罩杯胸部推向你，问道：[penelope.speech(今天还有什么我能为您效劳的吗，[pc.sir]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_DOUBLE_FACIAL"><![CDATA[
 	<p>
-		Liking the sound of orally servicing Penelope's cunt and cock, you tell her that you want to receive a double facial form her and hand over the one thousand five hundred flames which she's asked for. After smirking down at you and letting out a horny moan, the beautiful border collie-girl steps over to a nearby cabinet and safely stores your money in it, before returning to the massage table. After pulling off her virgin-killer sweater, she hooks her thumbs into her lacy panties and slides them all the way down her legs, before kicking them off and leaving her dog-like pussy and cock fully exposed.
-	</p>
+你想要为佩内洛普口交，于是你告诉她你想要体验她提供的双重面部服务，并递给她索要的1500火币。在低头对你邪魅一笑并发出充满情欲的娇喘后，这位美丽的边牧女走向旁边的柜子，将你的钱安全存入其中，然后回到按摩桌旁。她先是脱下那件诱人的“童贞杀手”毛衣，接着用拇指勾住蕾丝内裤边缘，一路向下拉至腿间，踢掉内裤后，她那类似犬类的私密部位与生殖器完全暴露了出来。
+</p>
 	<p>
-		[penelope.speech(Let's start by putting that tongue of yours to work,)] she states in her posh accent, before stepping over your face and dropping her wet cunt down onto your mouth. Eager to get started, you immediately part your [pc.lips] and push your [pc.tongue+] into Penelope's wet, canine cunt. Dominantly grinding her pussy down, the beautiful border collie-girl moans, [penelope.speech(~Mmm!~ That's it! ~Aah!~ Eat me out... You'll be getting a taste of my cock soon enough...)]
-	</p>
+[penelope.speech(让我们先让你的小舌头派上用场吧)]，她一边优雅的说着，一边跨过你的脸庞，将她湿润的私处贴在了你的嘴上。急于开始的你立刻张开[pc.lips]，将[pc.tongue+]探入佩内洛普湿滑的犬类阴道。这位美丽的边牧女以统治者的姿态磨擦着她的蜜穴并低吟道：[penelope.speech(~嗯！~就是这样！~啊哈！~好好舔舐我吧……不久你就能尝到我的宝贝了……)]
+</p>
 	<p>
-		As you eagerly obey the dominant dog-girl and keep thrusting your tongue deep into her hot cunt, she starts stroking her rapidly-hardening dog-cock in order to get it fully erect for the blowjob you're soon to be giving her...
-	</p>
-	]]>
-	</htmlContent>
+当你热切地遵从处于支配位的边牧女指示，持续将舌头深深插入她炽热的蜜穴时，她开始抚摸她快速勃起的犬类肉棒，为接下来你要为的她口交做好充分勃起的准备……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW"><![CDATA[
 	<p>
-		Wanting to have sex with Penelope while she's wearing one of her special outfits, you tell her that you want her to do a mock fashion show for you and hand over the one thousand five hundred flames which she's asked for. Happily taking your flames, the beautiful border collie-girl steps over to a nearby cabinet and safely stores your money in it, before beginning to run through a description of each of her five outfits.
-	</p>
+你想要与穿着特色服装的佩内洛普发生性行为，于是你告诉她你希望她为你举办一场模拟时装秀，并递给她索要的一千五百火币。这位美丽的边牧女高兴地接过火币，在将你的钱妥善存放在柜子里后，她开始逐一介绍她的五套服装。
+</p>
 	<p>
-		[penelope.speech(First of all, I have a little number which I like to call 'At the ball'. As the name suggests, this involves me donning a ballgown, a pair of elbow-length gloves, and some pieces of expensive jewellery,)] Penelope says in her posh accent. Moving swiftly on, she continues, [penelope.speech(If you'd prefer something a little more casual, then my 'About town' outfit might be for you. It's stylish in its simplicity, and includes a blouse, cardigan, and tight-fitting jeans.)]
-	</p>
+[penelope.speech(首先，我有一套我称之为‘舞会盛装’的小礼服。顾名思义，这套服装包括一件舞会礼服、一对长手套和几件贵重珠宝，)]佩内洛普用她那高贵的口音说道。接着她迅速过渡到下一个话题，[penelope.speech(如果你偏爱稍微休闲一点的打扮，那么我的‘城市休闲装’或许更适合你。它简约而不失时尚感，由一件衬衫、开襟羊毛衫和紧身牛仔裤组成。)]
+</p>
 	<p>
-		After giving you these two options, the border collie-girl flashes you a dirty look, and with a smirk settling on her beautiful face, she teases, [penelope.speech(If those two sound too boring, then I've got some more risqué choices for you. First up is what I like to call 'Drunken alley', which takes the form of a daring, bright-pink outfit consisting of a clubbing dress, strappy sandals, and plenty of accessories. It's the sort of thing you'd see some drunken slut wearing while she's getting fucked in a dirty backalley.)]
-	</p>
+在给你提供了这两种选择后，这个边牧女向你抛了个挑逗的眼神，那美丽的面庞上浮现出一丝坏笑，她接着调侃道：[penelope.speech(如果前面两种听起来太平淡无奇，我这里还有些更为大胆奔放的选择。首先是被我称为‘醉汉巷’的装扮，它是一套大胆醒目的亮粉色套装，包括夜店连衣裙、细带凉鞋以及众多配饰。就像那种你能在脏乱后巷看见某个烂醉如泥的风骚女子被人侵犯时所穿的衣服。)]
+</p>
 	<p>
-		It's clear from Penelope's sultry tone of voice that she's getting turned on at the thought of wearing such a slutty getup, but before you have the chance to make a comment on this, she quickly continues, [penelope.speech(I've also got an outfit which I like to call 'Less is more', which basically just consists of me wearing some revealing lingerie. It's not the most imaginative of my outfits, but it's nevertheless a very popular choice. Anyway, that leads me on to my final offering, which I call 'Latex indulgence'. As you might guess, this consists of me squeezing into several pieces of bright-red latex gear. It also includes a little surprise which I have fun with during my strip-tease... So, which outfit would you like to fuck me in?)] 
-	</p>
+从佩内洛普那充满诱惑的语气中可以明显感觉到，她对穿上这样一套性感暴露的服装充满了兴奋之情。然而还没等你对此发表意见，她就迅速接续道：[penelope.speech(我还有一套名为‘色即是空’的服装，基本上就是我穿着一些非常性感撩人的内衣。虽然这不是我最具创意的装扮，但仍然是个非常受欢迎的选择。好了，说到这儿，我要介绍我的最后一套服装，那就是‘乳胶癖’。正如你可能猜到的那样，这套服装包括我穿着几件鲜红色的乳胶装备。此外，还附带一个小惊喜，我在脱衣舞表演中会用它来增加乐趣……那么，你希望我在哪套服装下与你共度激情时刻呢？)]
+</p>
 	<p>
-		With that, Penelope finishes explaining her outfit choices to you, and she seductively bites her lip and gives you a playful wink as she waits to hear what your choice will be...
-	</p>
-	]]>
-	</htmlContent>
+佩内洛普完成了对她所有服装选择的介绍。她诱人地咬了一下唇瓣，俏皮地向你眨了眨眼，期待着听取你最终的决定……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW_BALL"><![CDATA[
 	<p>
-		Wanting to see and have sex with Penelope while she's wearing a ballgown, you tell her that you'd like to see her 'At the ball' outfit. Flashing you a sly smile, she steps over to the door and says, [penelope.speech(I'll get changed as quickly as I can, but it will still take me several minutes. Please wait here until I return.)]
-	</p>
+你渴望看到佩内洛普穿着华丽舞会礼服，于是你告诉她你想看她穿“舞会盛装”那套服装。她向你投来一抹邪魅的微笑，然后走向门口说道：[penelope.speech(我会尽快换衣服的，不过仍然需要几分钟时间。请在这里等到我回来。)]
+</p>
 	<p>
-		With that, the border collie-girl exits the room, leaving you waiting on the massage table for her return. Thankfully, her time estimate was accurate, and after just a few minutes the door opens once again, and in steps Penelope. Just as you requested, she's wearing a flowing ballgown, which along with a pair of elbow-length gloves and high heels, is a pretty shade of light blue. A silver tiara sits atop her head, and you see that she's also wearing a diamond necklace and pair of pearl earrings. Performing a little curtsy as she enters, this gorgeous dog-girl slowly walks up to you, before doing a little roleplay by teasing in her posh accent, [penelope.speech(Good [style.afternoon], [pc.sir]. Would you care for a dance? Or perhaps you'd rather I hike my gown up so that we can have a good fuck?)]
-	</p>
+		就这样，边牧女离开了房间，留下你在按摩桌上等待她的归来。幸运的是，她预计的时间很准确，仅仅过了几分钟，门再次打开，佩内洛普穿着你所要求的那样走了进来，她身着一件飘逸的淡蓝色舞会礼服，配上一双肘长手套和一双高跟鞋，显得格外动人。一顶银质王冠戴在她的头顶，你还能看到她佩戴了一条钻石项链和一对珍珠耳环。在进屋时，她优雅地行了个屈膝礼，这位美丽的边牧女慢慢地走向你，然后用那上流社会的口音进行了一场小型的角色扮演：[penelope.speech(下午好，[pc.sir]。您愿不愿意陪我跳支舞呢？或者，您更希望我把礼服裙摆撩起来，我们可以尽情享受一番美好的鱼水之欢？)]
+</p>
 	<p>
-		Letting out a playful laugh after asking this lewd question, Penelope does a little spin on the spot, before pulling up her gown and flashing you the lacy burgundy thong which she's wearing. Allowing her gown to fall back into position, she asks, [penelope.speech(So, would you like me to be a good, submissive little doggy for you, or should I take charge?)]
-	</p>
-	]]>
-	</htmlContent>
+在提出这个略显猥亵的问题后，佩内洛普调皮地笑了起来，紧接着原地转了个圈，然后提起裙子，向你展示了她所穿着的深红色蕾丝丁字裤。在将裙子整理好后，她开口询问道：[penelope.speech(那么，您希望我是您的乖巧顺从的小狗狗，还是应该由我来掌握主动权呢？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW_TOWN"><![CDATA[
 	<p>
-		Wanting to see and have sex with Penelope while she's wearing a casual outfit, you tell her that you'd like to see her 'About town' outfit. Flashing you a quick smile, she steps over to the door and says, [penelope.speech(I'll get changed as quickly as I can, but it will still take me several minutes. Please wait here until I return.)]
-	</p>
+你渴望看到佩内洛普穿着休闲装，于是你告诉她你想看她穿“城市休闲装”那套服装。她向你投来一抹邪魅的微笑，然后走向门口说道：[penelope.speech(我会尽快换衣服的，不过仍然需要几分钟时间。请在这里等到我回来。)]
+</p>
 	<p>
-		With that, the border collie-girl exits the room, leaving you waiting on the massage table for her return. Thankfully, her time estimate was accurate, and after just a few minutes the door opens once again, and in steps Penelope. Just as you requested, she's wearing a stylish, casual outfit, consisting of a white blouse, tight, blue jeans, and a tan cardigan. A pair of aviators, gold jewellery, and a white watch make up her accessories. Blowing you a little kiss as she enters, this gorgeous dog-girl slowly walks up to you, before doing a little roleplay by teasing in her posh accent, [penelope.speech(Hey there, #IF(pc.isFeminine())beautiful#ELSEhandsome#ENDIF. I haven't seen you in this part of town before. How about we go and get a drink, or perhaps you'd rather we go straight over to my place and have a good fuck?)]
-	</p>
+		就这样，边牧女离开了房间，留下你在按摩桌上等待她的归来。幸运的是，她预计的时间很准确，仅仅过了几分钟，门再次打开，佩内洛普穿着你所要求的那样走了进来，她穿着一身时尚休闲的装扮，包括一件白色衬衫、紧身蓝色牛仔裤以及一件米色开襟羊毛衫。一副飞行员墨镜、金制首饰和一只白色手表构成了她的配饰。她在进门时向你吹了一个飞吻，这位美丽的边牧女慢慢地走向你，然后用那上流社会的口音进行了一场小规模的角色扮演：[penelope.speech(嘿，亲爱的#IF(pc.isFeminine())美女#ELSE帅哥#ENDIF，以前好像没见过你在这个街区出现。要不我们一起去喝一杯，或者也许你更愿意我们现在就直接去我家，好好享受一番美妙的亲密时光？)]
+</p>
 	<p>
-		Letting out a playful laugh after asking this lewd question, Penelope steps forwards and takes hold of you hand, before planting it on her chest and getting you to fondle her [penelope.cupSize]-cup breasts. Letting out an erotic sigh, she asks, [penelope.speech(So, would you like me to be a good, submissive little doggy for you, or should I take charge?)]
-	</p>
-	]]>
-	</htmlContent>
+在提出这个挑逗性问题后，佩内洛普玩笑般地笑了起来，随后向前握住你的手，让你抚摸她那对[penelope.cupSize]罩杯的乳房。伴随着一声充满情欲的叹息道：[penelope.speech(那么，您希望我是您的乖巧顺从的小狗狗，还是应该由我来掌握主动权呢？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW_ALLEY"><![CDATA[
 	<p>
-		Wanting to see and have sex with Penelope while she's wearing a slutty clubbing outfit, you tell her that you'd like to see her 'Drunken alley' outfit. Flashing you a dirty smirk, she steps over to the door and says, [penelope.speech(I'll get changed as quickly as I can, but it will still take me several minutes. Please wait here until I return.)]
-	</p>
+你渴望看到佩内洛普穿着性感夜店装束并与她发生性行为，于是你告诉她你想看她穿“醉酒巷”那套服装。她向你投来一抹邪魅的微笑，然后走向门口说道：[penelope.speech(我会尽快换衣服的，不过仍然需要几分钟时间。请在这里等到我回来。)]
+</p>
 	<p>
-		With that, the border collie-girl exits the room, leaving you waiting on the massage table for her return. Thankfully, her time estimate was accurate, and after just a few minutes the door opens once again, and in steps Penelope. Just as you requested, she's wearing a slutty clubbing dress, choker and strappy heels, each of which are an offensively-bright shade of pink. Her accessories take the form of a significant amount of rose gold jewellery, which includes hoop earrings, a nose ring, and a pair of nipple barbells which can be seen pushing out beneath the fabric of her dress. Licking her lips as she enters, this gorgeous dog-girl puts on a drunken swagger as she steps up to you, before doing a little roleplay by teasing, [penelope.speech(Hey babe, I'm feeling, like, totally wasted... How about you take me down that alley, pull down my thong, and give me a good, hard fuck?)]
-	</p>
+说完之后，边牧女离开了房间，留下你在按摩桌上等待她的归来。幸运的是，她预计的时间很准确，仅仅过了几分钟，门再次打开，佩内洛普穿着你所要求的那样走了进来，她身穿一件极其性感的夜店连衣裙，颈圈和细带高跟鞋，每一件都是刺眼的亮粉色。她的配饰包含大量的玫瑰金色首饰，其中包括圈形耳环、鼻环，以及一对透过裙子面料隐约可见的乳头环。在进门时她舔了舔嘴唇，这位迷人的边牧女模仿喝醉酒的样子走到你面前，开始了一段角色扮演，她假装醉醺醺地调笑道：[penelope.speech(嘿，宝贝，我现在感觉，哎呀，超级醉的……不如你带我去那个巷子里，拉下我的丁字裤，给我一个激烈的啪啪啪怎么样？)]
+</p>
 	<p>
-		Breaking her roleplay to let out a playful laugh after asking this lewd question, Penelope shamelessly lifts the bottom of her dress and flashes you the trashy, tiger-striped v-string panties which are just barely managing to cover her cunt and sheathed cock. Letting out an erotic moan, she asks, [penelope.speech(So, would you like me to be a good, submissive little doggy for you, or should I take charge?)]
-	</p>
-	]]>
-	</htmlContent>
+在提出这个淫靡问题后，佩内洛普打破了角色扮演，发出一阵戏谑的笑声。她毫不羞涩地掀起裙摆，向你展示那条勉强遮住她私密部位和包裹着阴茎的虎纹V字型小内裤。她发出一声充满情欲的娇喘，[penelope.speech(那么，你是希望我成为一个乖巧顺从的小狗，还是主导一切的醉汉呢？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW_LINGERIE"><![CDATA[
 	<p>
-		Wanting to see and have sex with Penelope while she's wearing nothing but lingerie, you tell her that you'd like to see her 'Less is more' outfit. Biting her lip and flashing you a playful smirk, she steps over to the door and says, [penelope.speech(I'll get changed as quickly as I can, but it will still take me several minutes. Please wait here until I return.)]
-	</p>
+你想要和只穿着内衣的佩内洛普发生性行为，你告诉她你想看她穿“色即是空”的那套装扮。她咬着嘴唇，冲你顽皮地笑了笑，然后走向门口说道：[penelope.speech(我会尽快换衣服的，不过仍然需要几分钟时间。请在这里等到我回来。)]
+</p>
 	<p>
-		With that, the border collie-girl exits the room, leaving you waiting on the massage table for her return. Thankfully, her time estimate was accurate, and after just a few minutes the door opens once again, and in steps Penelope. Just as you requested, she's wearing nothing but a set of dark purple lingerie, which consists of a chemise, a crotchless thong, and a pair of toeless stockings which are held up by a suspender belt. Dropping her hand down to tease over her exposed cock and cunt as she enters, this gorgeous dog-girl slowly walks up to you, before doing a little roleplay by teasing in her posh accent, [penelope.speech(I thought that we could have some fun before going to bed... You know that you can't resist me when I wear this... You want to fuck me, don't you?)]
-	</p>
+		就这样，边牧女离开了房间，留下你在按摩桌上等待她的归来。幸运的是，她预计的时间很准确，仅仅过了几分钟，门再次打开，佩内洛普穿着你所要求的那样走了进来，包括一件轻薄吊带连衣裙，一条无裆丁字裤，以及一双没有脚趾的吊带丝袜，由吊袜带固定在大腿上。在走进来之后，她将手下滑至她裸露的阴茎和私密部位并轻轻挑逗了起来，随后这位美艳的犬女慢慢走向你，用她那高贵的口音玩味地进行了一段角色扮演，[penelope.speech(我想我们可以在上床睡觉前先玩乐一番……你知道当我穿上这套衣服的时候，你是无法抗拒我的……你现在就想和我做爱，不是吗？)]
+</p>
 	<p>
-		Breaking her roleplay to let out a playful laugh after asking this lewd question, Penelope shamelessly reaches down to spread her [penelope.labia+] and flash you her [penelope.pussy+]. Letting out an erotic moan, she asks, [penelope.speech(So, would you like me to be a good, submissive little doggy for you, or should I take charge?)]
-	</p>
-	]]>
-	</htmlContent>
+在提出这个淫靡问题后，佩内洛普打破了角色扮演，发出一阵戏谑的笑声。随后大胆地分开自己的[penelope.labia+]，向你展示她的[penelope.pussy+]。她随后发出一声充满情欲的娇喘，[penelope.speech(那么，你是希望我成为一个乖巧顺从的小狗，还是主导一切的醉汉呢？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW_LATEX"><![CDATA[
 	<p>
-		Wanting to see and have sex with Penelope while she's wearing latex gear, you tell her that you'd like to see her 'Latex indulgence' outfit. Biting her lip and flashing you a dirty smirk, she steps over to the door and says, [penelope.speech(I'll get changed as quickly as I can, but it will still take me several minutes. Please wait here until I return.)]
-	</p>
+你渴望看到佩内洛普穿着乳胶装束并与她发生性行为，于是你告诉她你想看她穿“乳胶癖”那套服装。她向你投来一抹邪魅的微笑，然后走向门口说道：[penelope.speech(我会尽快换衣服的，不过仍然需要几分钟时间。请在这里等到我回来。)]
+</p>
 	<p>
-		With that, the border collie-girl exits the room, leaving you waiting on the massage table for her return. Thankfully, her time estimate was accurate, and after just a few minutes the door opens once again, and in steps Penelope. Just as you requested, she's wearing a set of bright-red latex gear, consisting of a long-sleeved crop top, a corset, stocking, bra, panties, and stiletto heels. Letting out a sensual moan as she enters, this gorgeous dog-girl slowly struts up to you, before doing a little roleplay by teasing in her posh accent, [penelope.speech(You be a good [pc.girl] now and sit still while I make myself more comfortable...)]
-	</p>
+		就这样，边牧女离开了房间，留下你在按摩桌上等待她的归来。幸运的是，她预计的时间很准确，仅仅过了几分钟，门再次打开，佩内洛普穿着你所要求的那样走了进来，包括长袖露脐上衣、紧身胸衣、吊袜带、文胸、内裤以及细高跟鞋。在进入房间时，她发出了性感的呻吟，这位绝美的犬女缓缓向你走来，然后以她那贵族式的口音玩起了角色扮演，[penelope.speech(你现在要做个好[pc.girl]，乖乖坐着不动，让我给你一点‘小惊喜’……)]
+</p>
 	
 	<p>
-		With that, Penelope slowly unzips her latex bra, before shrugging out of it to fully expose her big, [penelope.cupSize]-cup breasts. Teasing her paw-like hands over her tits, she gives her erect nipples a playful pinch, before letting out a sensual moan and sliding her fingers down over her corset towards her groin. Unzipping her latex panties, she tosses them over to join her bra on the floor, leaving her dog-cock, pussy, and asshole completely exposed. It's at this moment that you find out what the 'little surprise' which she alluded to earlier is, for as she teases her fingers down over her pussy, she starts to pull on something, and you watch in amazement as she slides a full-sized, realistic purple dildo out of her dripping cunt. Lifting it to her lips, she pushes it into her mouth, before letting out a wet gagging noise as she hilts it fully down her throat. After lewdly sucking and choking on it for a few moments, Penelope slides the dildo out of her mouth, before pushing the slimy, saliva-coated toy back into her hot twat.
+		说着，佩内洛普慢慢拉开了乳胶胸罩的拉链，然后将它甩落，完全露出了她[penelope.cupSize]罩杯的大乳房。她用爪子般的手在乳房上逗弄，俏皮地捏了捏勃起的乳头，然后发出了一声性感的呻吟，让手指顺着胸衣滑向腹股沟。她拉开乳胶内裤的拉链，把内裤和胸罩一样扔在地上，让她那犬化形的肉棒、阴部和屁眼完全暴露出来。就在这个时候，你发现了她之前提到的“小惊喜”是什么，当她用手指在阴户上逗弄的时候，她开始拉扯什么东西，你惊讶地看着她从滴着水的阴户里滑出一个全尺寸的逼真紫色假阳具。她把假阳具举到嘴边，然后一点点的往嘴里塞去，发出一阵湿漉漉的吞咽声，她就这样把假阳具完全塞进了自己的喉咙。在淫荡地吮吸了片刻之后，佩内洛普将假阳具从嘴里滑出，然后它塞回她火热的阴道里。
 	</p>
 	<p>
-		[penelope.speech(I do so love playing with toys while wearing this outfit,)] she sighs, before letting out a deeply erotic moan and asking, [penelope.speech(So, would you like me to be a good, submissive little doggy for you, or should I take charge?)]
-	</p>
-	]]>
-	</htmlContent>
+[penelope.speech(穿着这身衣服玩弄玩具真是太有趣了，)]她轻叹一声，接着发出了深沉而充满情欲的呻吟，[penelope.speech(那么，你是希望我做个乖巧顺从的小狗狗服侍你呢，还是希望我来主导一切呢？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW_SEX_START"><![CDATA[
 	<p>
-		Responding to Penelope's query with action, you [pc.step] forwards and dominantly pull the beautiful border collie-girl into your [pc.arms]. Letting out a submissive moan, she looks lovingly into your eyes as you prepare to fuck her...
+		你向前[pc.step]了一步，霸道地将这美丽的边牧女拉进你的[pc.arms]。在确认了你的回应后，她发出顺从的呻吟并充满爱意地看着你的眼睛，你做好了操她的准备……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_FASHION_SHOW_SEX_START_AS_SUB"><![CDATA[
 	<p>
-		Wanting Penelope to take the lead, you tell her that you'd prefer to be the submissive partner. Letting out a hungry moan, the beautiful border collie-girl responds to your declaration by stepping forwards and dominantly pulling you into her arms before preparing to fuck you...
+			你想让佩内洛普占据主导位，于是你告诉她你更愿意做顺从的伴侣。美丽的边牧女以饥渴的呻吟声来回应你的宣言，她向前一步并霸道地把你拉进怀里，现在她准备和你做爱了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MASSAGE_PENELOPE_AFTER_SEX"><![CDATA[
 	<p>
-		Having finished giving you her special service, Penelope lets out one last passionate moan, before informing you that the fun's over. Disentangling yourself from the beautiful border collie-girl, you set about getting your things back in order while Penelope proceeds to clean herself up.
-	</p>
+佩内洛普发出一声充满激情的呻吟，随后告诉你快乐时光已经结束。你从这位美丽的边牧女身边抽身，然后开始整理自己的物品，而佩内洛普则继续清理起了自己。
+</p>
 	<p>
-		[penelope.speech(That was a lot of fun... Thank you for purchasing one of my special services, [pc.sir],)] Penelope says as she steps over to unlock the door. Telling her that you had a lot of fun too, you make sure that you've retrieved all of your possessions before preparing to head back to reception...
-	</p>
-	]]>
-	</htmlContent>
+[penelope.speech(刚才真的很开心……谢谢你购买了我的特殊服务，[pc.sir]，)]当佩内洛普走过去开锁时，她这样对你说道。你告诉她你也玩得很开心，并在准备返回接待区之前开始检查个人物品……
+</p>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

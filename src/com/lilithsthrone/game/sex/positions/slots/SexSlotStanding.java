@@ -13,37 +13,37 @@ import com.lilithsthrone.main.Main;
 public class SexSlotStanding {
 
 	public static final SexSlot STANDING_DOMINANT = new SexSlot(
-			"Standing",
-			"standing",
-			"[npc.Name] [npc.verb(lean)] heavily into [npc2.namePos] [npc2.breasts] and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"站立",
+			"站立",
+			"[npc.Name]向前抵在[npc2.namePos]的[npc2.breasts]上，发出[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			true,
 			SexSlotTag.STANDING) {
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
 			SexSlot targetedSlot = Main.sex.getSexPositionSlot(targetedCharacter);
 			if(orgasmingCharacter.equals(targetedCharacter)) {
-				return "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.";
+				return "[npc.Name]发出了[npc.a_moan+]，即将迎来高潮。";
 			}
 			if(targetedSlot.hasTag(SexSlotTag.PERFORMING_ORAL)) {
-				return "With a small thrust of [npc.her] [npc.hips], [npc.name] [npc.verb(push)] [npc.her] groin into [npc2.namePos] [npc2.face], before letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.";
+				return "[npc.Name]轻推臀部，将下体压在[npc2.namePos]的[npc2.face]上，随着[npc.a_moan+]，[npc.she]即将迎来高潮。";
 			}
 			if(targetedSlot.hasTag(SexSlotTag.PERFORMING_ORAL_BEHIND)) {
-				return "With a small backwards thrust of [npc.her] [npc.hips], [npc.name] [npc.verb(push)] [npc.her] rear end back into [npc2.namePos] [npc2.face], before letting out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.";
+				return "[npc.Name]稍微一缩腰，之后便在[npc2.namePos]的[npc2.mouth]里抽插起来，随着[npc.a_moan+]，[npc.she]即将迎来高潮。";
 			}
 			if(targetedSlot.hasTag(SexSlotTag.STANDING_BEHIND)) {
-				return "Leaning back into [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(reach)] [npc.her] climax.";
+				return "[npc.Name]后倚在[npc2.name]身上，发出[npc.a_moan+]，即将到达高潮。";
 			}
 			if(targetedCharacter.isTaur()) {
-				return "[npc.Name] [npc.verb(reach)] around and [npc.verb(wrap)] [npc.her] [npc.arms] around [npc2.namePos] back, pulling [npc2.herHim] close and letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.";
+				return "[npc.Name]环抱住了[npc2.namePos]的背部，将[npc2.herHim]拉得更近，伴随着[npc.a_moan+]，[npc.she]马上要迎来高潮。";
 			}
-			return "[npc.Name] [npc.verb(reach)] around and [npc.verb(grab)] [npc2.namePos] [npc2.ass+], pulling [npc2.herHim] close and letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.";
+			return "[npc.Name]环抱住了[npc2.namePos][npc2.ass+]，将[npc2.herHim]拉的更近，伴随着[npc.a_moan+]，[npc.she]即将迎来高潮。";
 		}
 	};
 	
 	public static final SexSlot STANDING_DOMINANT_TWO = new SexSlot(STANDING_DOMINANT) {
 		@Override
 		public String getDescription() {
-			return "standing (2nd)";
+			return "站立(二)";
 		}
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
@@ -53,7 +53,7 @@ public class SexSlotStanding {
 	public static final SexSlot STANDING_DOMINANT_THREE = new SexSlot(STANDING_DOMINANT) {
 		@Override
 		public String getDescription() {
-			return "standing (3rd)";
+			return "站立(三)";
 		}
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
@@ -63,7 +63,7 @@ public class SexSlotStanding {
 	public static final SexSlot STANDING_DOMINANT_FOUR = new SexSlot(STANDING_DOMINANT) {
 		@Override
 		public String getDescription() {
-			return "standing (4th)";
+			return "站立(四)";
 		}
 		@Override
 		public String getOrgasmDescription(GameCharacter orgasmingCharacter, GameCharacter targetedCharacter) {
@@ -72,60 +72,60 @@ public class SexSlotStanding {
 	};
 
 	public static final SexSlot STANDING_SUBMISSIVE = new SexSlot(
-			"Standing",
-			"standing (in front)",
-			"[npc.Name] [npc.verb(lean)] heavily into [npc2.namePos] [npc2.breasts] and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"站立",
+			"站立(在前)",
+			"[npc.Name]向前抵在[npc2.namePos]的[npc2.breasts]上，发出[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			true);
 
 	public static final SexSlot STANDING_SUBMISSIVE_TWO = new SexSlot(STANDING_SUBMISSIVE) {
 		@Override
 		public String getDescription() {
-			return "standing (2nd in front)";
+			return "站立(在前)(二)";
 		}
 	};
 	public static final SexSlot STANDING_SUBMISSIVE_THREE = new SexSlot(STANDING_SUBMISSIVE) {
 		@Override
 		public String getDescription() {
-			return "standing (3rd in front)";
+			return "站立(在前)(三)";
 		}
 	};
 	public static final SexSlot STANDING_SUBMISSIVE_FOUR = new SexSlot(STANDING_SUBMISSIVE) {
 		@Override
 		public String getDescription() {
-			return "standing (4th in front)";
+			return "站立(在前)(四)";
 		}
 	};
 
 	public static final SexSlot STANDING_SUBMISSIVE_BEHIND = new SexSlot(
-			"Standing",
-			"standing (behind)",
-			"[npc.Name] [npc.verb(pull)] [npc2.name] back in against [npc.her] [npc.breasts] and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"站立",
+			"站立(在后)",
+			"[npc.Name]将[npc2.name]拉到怀里，紧紧贴着[npc.her]的[npc.breasts]，随后便发出一声[npc.a_moan+]，即将迎来了高潮。",
 			true,
 			SexSlotTag.STANDING_BEHIND);
 
 	public static final SexSlot STANDING_SUBMISSIVE_BEHIND_TWO = new SexSlot(STANDING_SUBMISSIVE) {
 		@Override
 		public String getDescription() {
-			return "standing (2nd behind)";
+			return "站立(在后)(二)";
 		}
 	};
 	public static final SexSlot STANDING_SUBMISSIVE_BEHIND_THREE = new SexSlot(STANDING_SUBMISSIVE) {
 		@Override
 		public String getDescription() {
-			return "standing (3rd behind)";
+			return "站立(在后)(三)";
 		}
 	};
 	public static final SexSlot STANDING_SUBMISSIVE_BEHIND_FOUR = new SexSlot(STANDING_SUBMISSIVE) {
 		@Override
 		public String getDescription() {
-			return "standing (4th behind)";
+			return "站立(在后)(四)";
 		}
 	};
 
 	public static final SexSlot PERFORMING_ORAL = new SexSlot(
-			"Performing oral (front)",
-			"performing oral (front)",
-			"[npc.Name] [npc.verb(reach)] up and [npc.verb(place)] a [npc.hand] on one of [npc2.namePos] [npc2.legs], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"提供口交(在前)",
+			"提供口交(在前)",
+			"[npc.Name]伸出[npc.hand]放在[npc2.namePos]的[npc2.legs]上，接着就发出一声[npc.a_moan+]，[npc.she]已经准备要迎来高潮了。",
 			false,
 			SexSlotTag.PERFORMING_ORAL) {
 		@Override
@@ -135,8 +135,8 @@ public class SexSlotStanding {
 	};
 	
 	public static final SexSlot PERFORMING_ORAL_TWO = new SexSlot(
-			"Performing oral (front)",
-			"performing oral (2nd front)",
+			"提供口交(在前)",
+			"提供口交(在前)(二)",
 			null,
 			false,
 			SexSlotTag.PERFORMING_ORAL) {
@@ -147,8 +147,8 @@ public class SexSlotStanding {
 	};
 
 	public static final SexSlot PERFORMING_ORAL_THREE = new SexSlot(
-			"Performing oral (front)",
-			"performing oral (3rd front)",
+			"提供口交(在前)",
+			"提供口交(在前)(三)",
 			null,
 			false,
 			SexSlotTag.PERFORMING_ORAL) {
@@ -159,8 +159,8 @@ public class SexSlotStanding {
 	};
 
 	public static final SexSlot PERFORMING_ORAL_FOUR = new SexSlot(
-			"Performing oral (front)",
-			"performing oral (4th front)",
+			"提供口交(在前)",
+			"提供口交(在前)(四)",
 			null,
 			false,
 			SexSlotTag.PERFORMING_ORAL) {
@@ -171,9 +171,9 @@ public class SexSlotStanding {
 	};
 
 	public static final SexSlot PERFORMING_ORAL_BEHIND = new SexSlot(
-			"Performing oral (behind)",
-			"performing oral (behind)",
-			"[npc.Name] [npc.verb(reach)] up and [npc.verb(place)] a [npc.hand] on one of [npc2.namePos] [npc2.legs], before letting out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"提供口交(在后)",
+			"提供口交(在后)",
+			"[npc.Name]伸出[npc.hand]放在[npc2.namePos]的[npc2.legs]上，接着就发出一声[npc.a_moan+]，[npc.she]已经准备要迎来高潮了。",
 			false,
 			SexSlotTag.PERFORMING_ORAL_BEHIND) {
 		@Override
@@ -183,8 +183,8 @@ public class SexSlotStanding {
 	};
 
 	public static final SexSlot PERFORMING_ORAL_BEHIND_TWO = new SexSlot(
-			"Performing oral (behind)",
-			"performing oral (2nd behind)",
+			"提供口交(在后)",
+			"提供口交(在后)(二)",
 			null,
 			false,
 			SexSlotTag.PERFORMING_ORAL_BEHIND) {
@@ -195,8 +195,8 @@ public class SexSlotStanding {
 	};
 
 	public static final SexSlot PERFORMING_ORAL_BEHIND_THREE = new SexSlot(
-			"Performing oral (behind)",
-			"performing oral (3rd behind)",
+			"提供口交(在后)",
+			"提供口交(在后)(三)",
 			null,
 			false,
 			SexSlotTag.PERFORMING_ORAL_BEHIND) {
@@ -207,8 +207,8 @@ public class SexSlotStanding {
 	};
 
 	public static final SexSlot PERFORMING_ORAL_BEHIND_FOUR = new SexSlot(
-			"Performing oral (behind)",
-			"performing oral (4th behind)",
+			"提供口交(在后)",
+			"提供口交(在后)(四)",
 			null,
 			false,
 			SexSlotTag.PERFORMING_ORAL_BEHIND) {

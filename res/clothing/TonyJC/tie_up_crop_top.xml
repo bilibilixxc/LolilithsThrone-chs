@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 	
-		<authorTag><![CDATA[The clothing's tag reads: 'Created by TonyJC, with implementation and editing by NeverLucky']]></authorTag>
+		<authorTag><![CDATA[衣服的标签上写着：“由TonyJC创作，NeverLucky负责实施和编辑”]]></authorTag>
 	
 		<value>500</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[tied-up croptop]]></name>
+		<name><![CDATA[系结短上衣]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[tied-up croptops]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[系结短上衣]]></namePlural> 
 		
-		<description><![CDATA[A fabric rag tied together that barely attempts to conceal the wearer's breasts. The plunging neckline reveals much of the wearer's cleavage.]]></description> 
+		<description><![CDATA[一件勉强遮住了穿戴者胸部的系结短上衣。下垂的领口露出了穿戴者的乳沟。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

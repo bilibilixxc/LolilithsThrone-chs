@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Entrance]]></name>
-	<tooltipDescription><![CDATA[A large sign is positioned above the entrance to this shopping precinct, informing shoppers that it's called 'Wall's End'.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the entrance to the 'Wall's End' shopping precinct]]></virginityLossDescription>
+	<name><![CDATA[入口]]></name>
+	<tooltipDescription><![CDATA[一个巨大的标识固定在商业区入口上方，告诉购物者这片区域叫墙之尽头。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在墙之尽头购物区的入口处]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_RED</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

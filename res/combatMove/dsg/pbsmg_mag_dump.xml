@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Spray n' Pray]]></name>
+	<name><![CDATA[遍地开花]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -25,11 +25,11 @@
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[ 
 		#IF(npc.getEssenceCount() < 18)
-			Fire [style.colorArcane([#npc.getEssenceCount()])]
+			射击[style.colorArcane([#npc.getEssenceCount()])]
 		#ELSE
-			Fire all [style.colorArcane(18)]
+			清空弹匣[style.colorArcane(18)]
 		#ENDIF
-		rounds from [npc.her] pepperball submachine gun's magazine, dealing a highly variable amount of damage.
+		胡椒弹从[npc.her]的冲锋枪弹匣中倾泻而出，造成了可观的伤害。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -111,7 +111,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters carrying a pepperball submachine gun with more than 1 essence.
+		适用于携带有一个及一个以上精华的胡椒弹冲锋枪的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -138,8 +138,8 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target resistance to fire is less than -10.
-	]]></criticalDescription>
+		目标的火焰抗性需小于10。
+]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
 	The parsing target of 'npc' corresponds to the character who is using the move.
@@ -151,21 +151,21 @@
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
 		#IF(npc.getEssenceCount() < 18)
-			Fire [style.colorArcane([#npc.getEssenceCount()])]
+			射击[style.colorArcane([#npc.getEssenceCount()])]
 		#ELSE
-			Fire all [style.colorArcane(18)]
+			清空弹匣[style.colorArcane(18)]
 		#ENDIF
-		rounds from [npc.her] submachine gun's magazine at [npc2.name], dealing a highly variable amount of damage.
+		胡椒弹从[npc.her]冲锋枪弹匣中倾泻而出，射向[npc2.name]，造成了可观的伤害。
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
 		#IF(npc.getEssenceCount() < 18)
-			Fire [style.colorArcane([#npc.getEssenceCount()])]
+			射击[style.colorArcane([#npc.getEssenceCount()])]
 		#ELSE
-			Fire all [style.colorArcane(18)]
+			清空弹匣[style.colorArcane(18)]
 		#ENDIF
-		rounds from [npc.her] submachine gun's magazine at [npc.her] target, dealing a highly variable amount of damage.
+		胡椒弹从[npc.her]冲锋枪的弹匣中倾泻而出，射向[npc.her]的目标，造成了可观的伤害。
 	]]></movePredictionDescriptionNoTarget>
 	
 	<!-- The code that's executed when this move is performed.
@@ -180,26 +180,26 @@
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
 			#IF(hits>0)
-				Holding down the trigger, [npc.name] [npc.verb(manage)] to get [style.colorArcane([#~~(hits)])] hits on [npc2.name]!
+				[npc.name]持续按住扳机，成功对[npc2.name]造成[style.colorArcane([#~~(hits)])]次打击！
 			#ELSE
-				Unfortunately, [npc.name] didn't manage to land a single shot on [npc2.name]!
+				不幸的是，[npc.name]一枪都没能打中[npc2.name]！
 			#ENDIF
 			formattedHealthDamage
-			Expending so much ammo costs [npc.herHim] 
+			使用这些弹药消耗了[npc.herHim] 
 			#IF(npc.getEssenceCount() < 18)
-				[style.colorArcane([#npc.getEssenceCount()])] essences.
+				[style.colorArcane([#npc.getEssenceCount()])]点精华。
 				[##npc.setEssenceCount(0)]
 			#ELSE
-				[style.colorArcane(18)] essences.
+				[style.colorArcane(18)]点精华。
 				[##npc.incrementEssenceCount(-18, false)]
 			#ENDIF
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc2.NamePos] is especially vulnerable to fire damage, it's super effective!
+			[npc2.NamePos]被火焰伤害克制，非常有效的攻击！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			The hot pepper oil lingers around [npc2.name]!
-		]]></critEffectDescription>
+			胡椒的余味环绕着[npc2.name]！
+]]></critEffectDescription>
 	</performMove>
 	
 </combatMove>

@@ -7,37 +7,37 @@ package com.lilithsthrone.world.population;
  */
 public enum PopulationDensity {
 
-	ONE("a single"),
+	ONE("一位"),
 	
-	OCCASIONAL("an occasional"),
+	OCCASIONAL("偶尔有一个"),
 	
-	COUPLE("couple of"),
+	COUPLE("几个"),
 	
-	FEW("few"),
+	FEW("没几个"),
 	
-	TRIO("trio of"),
+	TRIO("三个"),
 	
-	SPARSE("sparse"),
+	SPARSE("稀少的"),
 	
-	SEVERAL("several"),
+	SEVERAL("一些"),
 	
-	HALF_DOZEN("half a dozen"),
+	HALF_DOZEN("六个"),
 	
-	DOZEN("a dozen"),
+	DOZEN("一打"),
 
-	DOZENS("dozens of"),
+	DOZENS("几十个"),
 	
-	MANY("many"),
+	MANY("许多"),
 	
-	NUMEROUS("numerous"),
+	NUMEROUS("大量"),
 	
-	DENSE("dense"),
+	DENSE("密集的"),
 	
-	SMALL("a small"),
+	SMALL("少批"),
 	
-	HUNDREDS("hundreds of"),
+	HUNDREDS("成百"),
 	
-	THOUSANDS("thousands of");
+	THOUSANDS("上千");
 
 	String name;
 	

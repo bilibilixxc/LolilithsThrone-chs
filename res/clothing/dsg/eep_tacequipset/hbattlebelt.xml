@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small engraving on the belt buckle reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[皮带扣上的小雕塑印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>1200</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's heavy battle belt]]></name>
+		<name><![CDATA[执法者重型战斗腰带]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's heavy battle belts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者重型战斗腰带]]></namePlural> 
 
-		<description><![CDATA[A standard battle belt with ballistic thigh panels attached.]]></description> 
+		<description><![CDATA[一条标准的战斗腰带，带有防弹大腿护板。]]></description> 
 
 		<physicalResistance>20</physicalResistance> 
 
@@ -70,27 +69,24 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the heavy battle belt up around [npc.her] waist and [npc.verb(adjust)] the thigh panels they're comfortable.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(buckle)] the heavy battle belt up around [npc2.namePos] waist and [npc.verb(help)] [npc2.her] [npc2.verb(adjust)] the thigh panels until they're comfortable.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the heavy battle belt around [npc2.namePos] waist and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将战斗腰带系在[npc.her]的腰上，并调整了护腿板的位置，直到变得能够活动自如。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将战斗腰带围在[npc2.namePos]的身上，并帮助[npc2.her]调整护腿，直到能够活动自如。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行将战斗腰带围在[npc2.namePos]的身上，并匆忙的拉紧卡扣。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the thigh panel straps on [npc.her] heavy battle belt before unbuckling it.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the thigh panel straps on [npc2.namePos] heavy battle belt before unbuckling it.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the thigh panel straps on [npc2.namePos] heavy battle belt before unbuckling it and tossing them aside.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了战斗腰带的护腿板并脱了下来。]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]重型战斗腰带上的护腿板并将其解开。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]扯开[npc2.namePos]重型战斗腰带上的护腿板并将其撕开。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

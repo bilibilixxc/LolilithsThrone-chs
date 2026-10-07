@@ -1,544 +1,544 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- Entrance: -->
 	
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		You once again find yourself standing at the main entrance to the bar. From here you could either take your leave and head back out into Dominion, or turn around and return to the bar.
+		你注意到自己正站在酒吧的正门口。你可以离开这里回到御城区，或者转身回到酒吧里。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_INITIAL_ENTRY"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_lights_out_visited))
 		<p>
-			[pc.Walking] down the steep set of stairs which lead down to 'Lights Out', you arrive at the bottom to find your way being blocked by a burly dog-boy bouncer. Recognising you from before, he grunts, [style.speechMasculineHeavy(Hey, you're Hannah's friend, right? Go on in...)]
+			你[pc.Walking]下陡峭的楼梯，来到“影液”门前。当你到达门口时，强壮的狗男保镖挡住了你。他认出了你，哼了一声后开口：[style.speechMasculineHeavy(嘿，你是汉娜的朋友对吧？进去吧……)]
 		</p>
 	#ELSE
 		<p>
-			[pc.Walking] down the steep set of stairs which lead down to 'Lights Out', you arrive at the bottom to find your way being blocked by a burly dog-boy bouncer. In a rough voice, he grunts, [style.speechMasculineHeavy(I haven't seen you around before. This bar's invite-only, so you're not getting in.)]
+		你[pc.Walking]下陡峭的楼梯，来到“影液”门前。当你到达门口时，强壮的狗男保镖挡住了你。他用粗犷的声音说：[style.speechMasculineHeavy(我从来没有见过你，这家酒吧属于邀请制，所以请回吧……)]
 		</p>
 		<p>
-			Remembering what it is that Hannah told you, you tell the bouncer that a [hannah.race] named Hannah has sent you. Raising his eyebrows in surprise, the bouncer exclaims, [style.speechMasculineHeavy(<i>Hannah</i> sent you?! Well, shit, you'd better go on in then.)]
+		你想起汉娜告诉你的事，告诉保镖是一个叫汉娜的[hannah.race]派你来的。保镖挑了挑眉，然后开口：[style.speechMasculineHeavy(<i>汉娜</i>邀请你来的？！好吧他妈的，快进去吧。)]
 		</p>
 	#ENDIF
 	<p>
-		Uncrossing his muscular arms, the bouncer steps aside, allowing you to push open the door and enter the basement bar. Concrete flooring, dim lights protected by wire cages, and metal tables and chairs all combine to give the place a rough, industrial vibe. Looking around, you see that boxing gloves, pictures of fights, and other types of boxing memorabilia have been hung up on the walls.
+		保镖活动了一下他那肌肉发达的胳膊，然后退到一边。你推开大门走进这家地下酒吧。在进去之后，脚下的混凝土地板、由铁丝笼保护的昏暗灯光以及金属桌椅给了你一种粗糙而富有工业气息的氛围。仔细的环顾四周后，你看到了一些拳击手套，拳击照片以及其他类型的拳击纪念品被挂在了墙上。
 	</p>
 	<p>
-		Although not a very big place, the bar has enough of a floor area to house a dozen tables, around which people of all races are sitting. Although they vary in species, the vast majority of the bar's patrons look to be incredibly strong, and you realise that most of them must be fighters of one sort or another. While a few of them turn their heads as you enter, most don't give you any notice.
+		酒吧虽然不是很大，但也足够容纳十几张桌子，在周围坐满了不同种族的生物。虽然他们的种族各不相同，但酒吧里的绝大多数顾客看起来都非常的强壮，你意识到他们中的大多数人肯定是战士或者在做重体力活相关的工作。虽然有几个人在你进来时看向了你，但其中大多数人并没有注意到你的出现。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Having had enough of the bar, you push open the door and climb the steep set of stairs beyond...
+		你在酒吧玩够了，推开门爬上陡峭的楼梯……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Tables: -->
 	
 	<htmlContent tag="TABLES"><![CDATA[
 	<p>
-		You find yourself [pc.walking] through the main floor area of the bar, which is filled with about a dozen large, metal tables. Hung up on the walls are boxing gloves, pictures of fights, and other types of boxing memorabilia. The dim, caged lights and concrete flooring combine with the metal furniture to give this place a rough, industrial vibe.
+		你注意到你正[pc.walking]过酒吧的一楼，这里摆着约十几张金属制大桌子。墙上挂着拳击手套，拳击比赛照片和其他拳击相关的纪念品。昏暗的笼形吊灯，与混凝土地面和金属家具混杂在一起，营造出一股粗犷的工业感。
 	</p>
 	<p>
-		Seated around the tables are people of all races, who seem to all be engaged in either talking or drinking. Although they vary in species, the vast majority of them look to be very strong, and you realise that most of them must be fighters of one sort or another. While a few of them turn their heads as you pass, most don't give you any notice.
+		各种种族的人坐在桌子周围，似乎是在聊天或喝酒。尽管它们的物种各不相同，但绝大多数看起来都非常强壮，你认为它们中的大多数一定某方面的战士。你经过他们身边时，有几个人会扭头看你一眼，但更多的人不会注意到你。
 	</p>
 	<p>
-		In one corner of the room there's the main bar area, while in the opposite corner there's a sign pointing the way to the toilets. There doesn't seem to be much room at any of the tables, so the bar, the toilets, or the exit should be your next port of call...
+		主吧台在房间的角落，它对面有一个指向厕所的标志。每张桌子周围都被挤得满满的，所以接下来你可以去往吧台、厕所或者出口……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Toilets: -->
 	
 	<htmlContent tag="TOILETS"><![CDATA[
 	<p>
-		As is to be expected of a bar of this sort, the toilet facilities are very primitive, and not exactly the most hygienic of places. What's more, due to the quantity of drink consumed on these premises, they're in constant use, and it looks like most of the stalls are currently occupied.
+		这种酒吧的卫生间理所当然非常简陋，也说不上有多干净。而且由于酒水销量很大，络绎不绝，一眼看去绝大多数的隔间都有人。
 	</p>
 	<p>
-		Looking into a couple of these empty stalls, you see that glory holes have been cut into the walls. Looking down at the dirty floor, you can't help but
+		你朝一两个空隔间里瞧了一眼，之间隔间墙壁上俨然就是寻欢洞。再看向脏兮兮的地板，你下意识地
 		#IF(pc.hasFetish(FETISH_MASOCHIST))
-			 feel turned on as you imagine how degrading it would be to service one of these holes.
+			就性奋了起来，开始幻想自己在寻欢洞服务的样子，该会表现得多么下贱。
 		#ELSE
-			 shudder as you imagine how degrading it would be for someone to service one of these holes.
+			打了个寒颤，想象着在寻欢洞服务的家伙该会表现得多么下贱。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_USE"><![CDATA[
 	<p>
-		After heading over to a free stall, you [pc.step] into it and lock the door behind you, before making use of the toilet. After you've finished, you flush the toilet before making your way over to one of the sinks and washing your [pc.hands]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你走到一个自由摊位，[pc.step]进它并锁上你身后的门，然后上了厕所。完事后，你冲了马桶，然后走到其中一个水槽前洗你的[pc.hands]。你从附近的自动取物器里拿起一张纸巾，迅速擦干自己，然后转身面对房间，想着下一步该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOILETS_WASH"><![CDATA[
 	<p>
-		Feeling like you could do with having a quick clean, you step over to the sinks and thoroughly wash your [pc.hands], before splashing some water on your [pc.face]. Grabbing a paper towel from the nearby dispenser, you quickly dry yourself off, before turning to face the room and wondering what to do next...
+		你觉得自己可以做个快速清洁，于是走到水池边仔细洗了洗[pc.hands]，然后往[pc.face]上扑了些水。结束后，你从旁边的纸巾机抽出纸巾，迅速擦干皮肤，然后转身面向房间，下一步要做什么呢……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Bar: -->
 	
 	<htmlContent tag="BAR"><![CDATA[
 	<p>
-		A full two dozen seats have been lined up in front of the long, metal-topped bar before you. Behind the bar, rows upon rows of spirits have been lined up on shelves, but there's no sign of beer, wine, or non-alcoholic drinks. Most of the seats are occupied by large, muscular morphs of all different races.
+		在你面前，有整整24个座位排列在长长的金属吧台前。吧台后面，成排成排的烈酒整齐地摆放在架子上，却找不到啤酒，葡萄酒或无酒精饮品的踪影。大多数座位上坐着体型魁梧，肌肉紧致的其他种族。
 	</p>
 	<p>
-		Taking pride of place on the wall behind the bar, a dozen golden trophy cups have been placed upon a metal shelf. Engraved into their gleaming surfaces are masterfully detailed depictions of boxers delivering knock-out blows to their opponents. You can't help but notice that upon three of these cups the depiction of the victorious boxer is none other than Hannah.
+		在吧台后面的墙上，十二个金色奖杯骄傲地摆放在一个金属架上。奖杯光滑的表面上细腻地雕刻着拳击手给对手致命一击的场面，其中有三个奖杯的上面都绘制着获胜拳击手：汉娜。
 	</p>
 	<p>
-		A burly, grumpy-looking bear-boy is standing behind the bar. Giving the briefest of grunts in response to his patrons' orders, he mutely pours out shots of vodka, rum, or whiskey, which are more often than not immediately downed.
+		一个身材魁梧、面带不悦的熊男站在吧台后面。他对顾客的点单轻哼一声作为回应，然后无言地倒出伏特加、朗姆酒或威士忌，这些酒几乎立刻就被一饮而尽。
 	</p>
 	#IF(game.getCharactersPresent().contains(hannah))
 		<p>
-			Looking down the row of seats, you see the familiar figure of Hannah sitting at the bar. Instead of the usual sports bra and shorts which she wears while at the gym, she's now wearing a black leather jacket that's unzipped to reveal a dark purple cropped tank top. Navy blue distressed jeans are covering her legs, while on her feet she's wearing a pair of dark purple skater shoes. She never wears jewellery to the gym, but here you notice that the dim lights of the bar are glinting off of silver ball studs that are fixed into her ears and nose.
+			你向吧台座位的那一排望去，看到了一道熟悉身影坐在那里，是汉娜。她此时没有穿平常去健身房时的运动胸衣和短裤，换上了一件敞开的黑色皮衣外套，露出里面深紫色的紧身吊带背心。她的腿部是一条深蓝色的做旧牛仔裤，脚上蹬着一双深紫色的溜冰鞋。汉娜在健身房从不戴珠宝，但在酒吧朦胧的灯光下，你注意到她的耳朵和鼻孔上都戴着银色的圆钉。
 		</p>
 		<p>
-			Clearly having felt your gaze upon her back, Hannah turns and notices that you're here. After giving you a silent nod, she turns back to face the bar and then downs the shot that's placed before her. It looks like she's not bothered if you're here to see her or not, so you could either go and sit down next to her and say hello, or take a seat somewhere else and do your own thing...
+			显然，汉娜察觉到了你的目光，她转过身来，发现你也在这里。她默默地朝你点点头，转回吧台，喝下了面前的酒。汉娜似乎并不介意你在这里看到她，那么你可以选择坐到旁边与她打招呼，或者坐到别处干自己的事……
 		</p>
 	#ELSE
 		<p>
-			Looking down the row of seats, you see that Hannah isn't here at the moment. As such, you could either sit down at an empty seat and order a drink, or turn around and head off to another part of the bar...
+			你向吧台座位的那一排望去，并没有发现汉娜在场。这样的话，你可以坐在空位上点一杯饮料，也可以转身去酒吧的另一个地方……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT"><![CDATA[
 	<p>
 		#IF(game.getCharactersPresent().contains(hannah))
-			Knowing that Hannah isn't the sort of person to care about being left to drink alone, you decide to sit at the other end of the bar to her and spend some time alone.
+			你明白汉娜对独自喝闷酒没什么意见，于是就做到了吧台的另一端，准备单独待一会儿。
 		#ELSE
-			Deciding that you'd like to spend some time at the bar, you head on over to a free seat and sit down.
+			你想在吧台边待一会儿，于是找了个空位子坐下。
 		#ENDIF
-		 The grumpy-looking bartender looks over to you as you take your place at the bar, and as you catch his eye, he gives you the briefest of nods to acknowledge your presence.
+		在吧台坐下之后，那个一脸阴沉的酒保朝你看了一眼，四目相对后，他朝你微微点一点头，表示知道你在了。
 	</p>
 	<p>
-		Looking over the many bottles of spirits that are lined up on the shelves before you, you wonder whether to order a drink right away, or perhaps to spend a moment sitting and relaxing here first.
+		你看着面前酒架上排列的几瓶烈酒，想着是赶紧点一杯，还是先在这坐着放松休息一会儿。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT_LEAVE"><![CDATA[
 	<p>
-		Having had enough of sitting at the bar, you stand up and [pc.step] back, before wondering what to do next...
+		你觉得在吧台边做得差不多了，于是起身推开，思考着下一步要做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT_DRINK"><![CDATA[
 	<p>
-		Deciding that you'd like to order a drink, you manage to get the attention of the bear-boy bartender, who slowly ambles over to stand before you. Silently crossing his muscular, furry arms, he waits to hear what it is you want with an impatient frown on his face. Deciding that you'd better not waste his time, you quickly tell him that you want a shot of [#SPECIAL_PARSE_0].
+		你决定要来一杯，于是招呼了一下那个熊男酒保，他慢慢地走过来，站在你面前。他静静地交叉着肌肉发达、毛茸茸的手臂，皱着眉头不耐烦地等着听你的要求。你想最好还是不要浪费他的时间，便迅速告诉他，你想要一杯[#SPECIAL_PARSE_0]。
 	</p>
 	<p>
-		Producing a shot glass from under the counter, the bartender places it down on the metal bar-top, before grabbing a bottle of [#SPECIAL_PARSE_0] from off the shelves and filling it to the brim. After handing over your flames to the bear-boy, you pick up the shot glass and down the spirit in one swift gulp.
+		酒保从吧台下面取来一个玻璃杯，摆到金属台面上，从酒架上抓起一瓶[#SPECIAL_PARSE_0]就到满了一杯。你把火币递给熊男，就取来玻璃杯，仰头一口就灌下了其中的酒精。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- One night stand: -->
 	
 	<htmlContent tag="BAR_SIT_RELAX"><![CDATA[
 	<p>
-		Wanting to take some time to simply sit and relax at the bar, you lean against the metal counter and listen to whatever snippets of conversation you can catch. After about ten minutes spent in this manner, you're suddenly aware of a muscled figure sitting down next to you.
+		你只是想单纯坐着在吧台旁休息一会儿，于是依靠在金属台面上，漫不经心地听着跳进耳朵里的散乱对话。大概这样过了十分钟，你忽然注意到有个健壮的身影在你身旁坐了下来。
 	</p>
 	<p>
-		[partner.speech([style.random(If being sexy was a crime, then I'd be calling the Enforcers right now,|What does it feel like to be the hottest [pc.girl] in here?|I had a pickup line, but you're so hot that it made me forget,|You know, I'm a boxer, but the only knockout I'm interested in right now is you,|I was only here for a drink, but you keep on distracting me,)])] a [partner.feminine] voice says, causing you to look over to the person who's just sat down next to you. Sure enough, that cheesy pickup line was meant for you, as the [partner.raceFull(true)] who delivered it is looking straight into your eyes. Before you can respond, [partner.she] introduces [partner.herself] by saying, [partner.speech(I'm [partner.name]. Now it's your turn.)]
+		[partner.speech([style.random(如果性感也是罪，那我可要喊执法者过来了，|当这儿最火辣的[pc.girl]是个什么感觉？|我本来还有句搭讪的台词的，可你太正了，给我整忘了，|你知道吗，我是个拳击手，可现在唯一能击倒我的，就是你，|我只是来喝一杯的，但你老是让我专心不下来啊，)])]一个[partner.feminine]的声音响起，让你下意识地向刚坐在你身旁的家伙看去。果然这些俗套的搭讪是朝着你来的，出言的[partner.raceFull(true)]正直勾勾地盯着你的眼睛。没等你回应，[partner.she]便自我介绍了起来，[partner.speech(我是[partner.name]。该你说了。)]
 	</p>
 	<p>
-		Taking a good look at [partner.name], you wonder whether to give [partner.herHim] your name and flirt back with [partner.herHim], or to instead reject [partner.herHim]...
+		你仔细瞧了瞧[partner.name]，想着是该报上名字挑逗回去，还是直截了当地拒绝[partner.herHim]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT_RELAX_REJECT"><![CDATA[
 	<p>
-		You really aren't interested in this [partner.race], and so you bluntly tell [partner.herHim] to find someone else to bother. Letting out a defeated sigh, [partner.she] stands up and walks off, leaving you alone at the bar once again.
+		你对这个[partner.race]确实没什么兴趣，于是直白地告诉[partner.herHim]去烦别人去吧。[partner.she]有些挫败地叹了口气，便走开了，又只留你一个待在吧台旁。
 	</p>
 	<p>
-		Looking over the bottles of spirits that line the shelves, you wonder whether to order a drink or to instead spend some more time relaxing at the bar...
+		你看着货架上排列的烈酒瓶，想着是点一杯喝，还是花更多的时间在酒吧放松一下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT_RELAX_FLIRT"><![CDATA[
 	<p>
-		Liking the look of [partner.name], you give [partner.herHim] your name, to which [partner.she] replies, [partner.speech(I don't think I've had a one night stand with #IF(game.isVowel(pc.getName().charAt(0)))an#ELSEa#ENDIF '[pc.name]' before. Oh well, there's always a first for everything.)]
+		你很中意[partner.name]的外貌，于是把名字报给了[partner.herHim]，[partner.she]回应道，[partner.speech(我可不记得之前跟哪个‘[pc.name]’打过炮呢。好吧，毕竟总有第一次。)]
 	</p>
 	<p>
-		Rolling your eyes, you ask [partner.name] how [partner.sheIs] so sure that this evening is going to end in a one night stand, to which [partner.she] states, [partner.speech(Well, you haven't told me to get lost yet, so that's always a good sign. Anyway, tell me more about yourself; I'd like to know more about the cute [pc.race] I'll be fucking later tonight.)]
+		你翻了个白眼，就问[partner.name][partner.sheIs]怎么知道今晚最后就要打炮了呢，[partner.she]听后立刻道，[partner.speech(很好，至少你还没让我滚，这就是个好兆头。总之，再跟我讲讲你自己吧；我还想多了解了解今晚要操的小[pc.race]呢。)]
 	</p>
 	<p>
-		Laughing at [partner.namePos] confidence, you do as [partner.she] asks and start telling [partner.herHim] about yourself. From there the two of you continue flirting back and forth for a while, before eventually the [partner.race] asks, [partner.speech(So, are you ready to show me back to your place, or are we going to do it in an alleyway?)]
+		你见[partner.namePos]这么自信，顿时乐得不行，于是就照[partner.she]说的开始讲述自己的事情。接下来一段时间，你们两个便开始相互挑逗起来，最终还是[partner.race]开口问道，[partner.speech(所以呢，是准备让我瞧瞧你住的地方，还是找个巷子解决了？)]
 	</p>
 	<p>
-		Having been given this ultimatum, you wonder whether to invite [partner.name] back to your room, or perhaps instead you should flat-out reject [partner.herHim]...
+		收到“最后通牒”之后，你便思索起来，是该邀请[partner.name]回自己房间，还是斩钉截铁地拒绝[partner.herHim]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT_RELAX_FLIRT_REJECT"><![CDATA[
 	<p>
-		Although you enjoyed flirting with this [partner.race], you aren't interested in a one night stand, and so you bluntly tell [partner.herHim] that the fun's over. Letting out a defeated sigh, [partner.name] stands up and walks off, leaving you alone at the bar once again.
+		你喜欢和这个[partner.race]调情，但对一夜情不感兴趣，所以直截了当地告诉[partner.herHim]，乐趣已经结束了。[partner.name]发出一声失败的叹息，站起身走开了，令你再次孤身一人待在酒吧里。
 	</p>
 	<p>
-		Looking over the bottles of spirits that line the shelves, you wonder whether to order a drink or to instead spend some more time relaxing at the bar...
+		你看着货架上排列的烈酒瓶，想着是点一杯喝，还是花更多的时间在酒吧放松一下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT_RELAX_FLIRT_SEX_START_ALLEYWAY"><![CDATA[
 	<p>
-		Not wanting to take the time to make the journey back to your room at Lilaya's mansion, you tell [partner.name] that an alleyway suits you fine. Encouraged by this, [partner.she] takes you by the [pc.hand(true)] and leads you out of the bar. Passing through the neon-lit streets of nightlife, you soon find yourself being led into a quiet, dark alley.
+		你不想费时间回到自己在莉莱雅宅邸的屋子，于是告诉[partner.name]你们找个巷子就够了。[partner.she]听了也跃跃欲试，于是牵着你的[pc.hand(true)]走出了酒吧。穿梭在霓虹灯四射的夜生活区街道上，没过多久就到了一条安静、昏暗的巷子里。
 	</p>
 	<p>
-		[partner.speech(This is as good a place as any other,)] [partner.name] says, before pulling you into [partner.him] and planting a deep, passionate kiss on your [pc.lips]. As [partner.her] [partner.hands] roam all over your body, you find yourself letting out a horny [pc.moan] and willingly submitting to [partner.herHim]...
+		[partner.speech(这地方就不错，差不了多少，)][partner.name]说完，就拉着你来了一场深沉而激情的吻。[partner.her]的[partner.hands]在你身上四处游走，你也不禁冒出几声躁动的[pc.moan]，心甘情愿地向[partner.herHim]屈服了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_SIT_RELAX_FLIRT_SEX_START_BEDROOM"><![CDATA[
 	<p>
-		Telling [partner.name] that one night stands in dark alleyways aren't your thing, you suggest that the bed in your room would be far more comfortable. Grinning as [partner.she] hears you say this, [partner.name] takes you by the [pc.hand(true)] and leads you out of the bar. 
+		你告诉[partner.name]找个黑乎乎的巷子就完事不是你的风格，建议到自己房间的床上可要舒服得多。[partner.name]听你这么说，顿时笑逐颜开，牵着你的[pc.hand(true)]就出了酒吧。
 	</p>
 	<p>
-		Soon enough you're arriving back at Lilaya's mansion, and the a minute later the two of you are bursting into your bedroom. Grabbing hold of you, [partner.name] pulls you into [partner.her] body and plants a deep, passionate kiss on your [pc.lips]. As [partner.her] [partner.hands] roam all over your body, you find yourself letting out a horny [pc.moan] and willingly submitting to [partner.herHim]...
+		没过多久你们就回到了莉莱雅的宅邸，又只是一分钟后，你们两个便冲进了你的卧室。[partner.name]紧紧把你抱住，在你的[pc.lips]上留下了一个激情的吻。[partner.her]的[partner.hands]在你身上四处游走，你也不禁冒出几声躁动的[pc.moan]，心甘情愿地向[partner.herHim]屈服了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ONE_NIGHT_STAND_AFTER_SEX_ALLEYWAY"><![CDATA[
 	<p>
-		With the two of you having had your fun, and the one night stand now at an end, both you and [partner.name] move away from one another and start getting your clothing in order.
+		你们两人爽够了，一夜情也算是到了头，你和[partner.name]分开了贴近的身体，穿起衣服来。
 	</p>
 	<p>
-		[partner.speech(I knew you'd be a good fuck as soon as I saw you sitting there at the bar,)] the [partner.race] teases, before turning [partner.her] back on you and [partner.walking] off down the alley. As [partner.she] disappears from sight, you're left alone in the dark alleyway, wondering what to do next...
+		[partner.speech(你坐到吧台上那会儿，我一眼就看出你是会玩的，)]那[partner.race]调笑完就转身离开了巷子。等到[partner.she]从视线中消失，你独自站在昏暗的小巷中，思索着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ONE_NIGHT_STAND_AFTER_SEX_BEDROOM"><![CDATA[
 	<p>
-		With the two of you having had your fun, and the one night stand now at an end, both you and [partner.name] move away from one another and start getting your clothing in order.
+		你们两人爽够了，一夜情也算是到了头，你和[partner.name]分开了贴近的身体，穿起衣服来。
 	</p>
 	<p>
-		[partner.speech(I knew you'd be a good fuck as soon as I saw you sitting there at the bar,)] the [partner.race] teases, before making a quick excuse to leave, [partner.speech(I need to be on the other side of the city first thing tomorrow, so I've got to go.)]
+		[partner.speech(你坐到吧台上那会儿，我一眼就看出你是会玩的，)]那[partner.race]调笑完就随口借口要离开了，[partner.speech(我明天要先去城那一边有事情，得走了。)]
 	</p>
 	<p>
-		Saying goodbye to the [partner.race], you use the bell-pull in your room to summon Rose so that she can escort [partner.herHim] out of the house. As your partner [partner.steps] out of your room and disappears from sight, you're left wondering what to do next...
+		跟那[partner.race]道别过后，你用房间里的拉铃叫来了萝丝，让她带着[partner.herHim]离开宅邸。炮友离开了房间，从你的视线中消失后，你开始思考接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- Hannah interactions: -->
 	
 	<htmlContent tag="BAR_HANNAH"><![CDATA[
 	<p>
-		Wanting to spend some time with Hannah, you approach the [hannah.race] and take the vacant seat next to her. As you sit down, she looks across at you and briefly grunts, [hannah.speech(Hey, [pc.name]. I was wondering if you'd be here tonight.)]
+		你想跟汉娜待一会儿，于是接近那[hannah.race]，在她旁边找了个空位子坐了下来。她看到你坐过来，咕哝了一句，[hannah.speech(嘿，[pc.name]。我正想你今晚来不来呢。)]
 	</p>
 	#IF(hannah.isVisiblyPregnant())
 		#IF(!hannah.isCharacterReactedToPregnancy(pc))
 			<p>
-				As you return her greeting and sit down beside the [hannah.race], you suddenly notice that something's different. Hannah's toned six-pack has vanished, and in its place she's now sporting a swollen, [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, the [hannah.race] reveals, [hannah.speech(Yeah, you got me pregnant. I guess it's kind of my fault for getting drunk and horny... Hey, want a feel?)]
+				回应过后你便坐在了那[hannah.race]身旁，忽然就发现有些地方不太一样了。汉娜结实的六块腹肌已经在看不到，取而代之的则是鼓起来的[style.colourSex(孕肚)]。那[hannah.race]注意到你在看的地方，于是也摆明说道，[hannah.speech(是啊，你让我怀上了。我猜这是我喝醉太兴奋惹的祸……那个，想摸一下吗？)]
 			</p>
 		#ELSE
 			<p>
-				As you return her greeting and sit down beside the [hannah.race], you see that her toned six-pack is still missing, and instead she's got a swollen, [style.colourSex(pregnant belly)]. Seeing what it is you're looking at, the [hannah.race] reveals, [hannah.speech(Yeah, I'm still pregnant, thanks to you. I guess it's kind of my fault for getting drunk and horny... Hey, want a feel?)]
+				回应过后你便坐在了那[hannah.race]身旁，结实的六块腹肌还是看不见，取而代之的则是鼓起来的[style.colourSex(孕肚)]。那[hannah.race]注意到你在看的地方，于是也摆明说道，[hannah.speech(是啊，多亏了你，我还怀着呢。我猜这是我喝醉太兴奋惹的祸……那个，想摸一下吗？)]
 			</p>
 		#ENDIF
 		<p>
-			Replying in the affirmative, you place your [pc.hands] on her furry tummy. Giving her swollen bump a few loving strokes, you ask Hannah if there's anything you can do for her, to which she waves you off and lets out another of her bark-like laughs, [hannah.speech(I'm fine, don't worry about me! Anyway, let me get you your first drink. It's my way of thanks for persisting with my lessons until the end)]
+			你给出个肯定的答复，就伸出[pc.hands]放到了她毛茸茸的肚皮上。你爱抚着那鼓起的肚子，问汉娜你能帮她做些什么，她却只是朝你摆摆手，吠叫似的笑了几声，[hannah.speech(我没事，不用担心我！对了，让我请你一杯吧。我一般都是这样感谢那些一直坚持下来的学员的。)]
 		</p>
 		<p>
-			With your instinct kicking in, you ask Hannah if it's wise to be drinking alcohol while pregnant. Giving you a questioning look, she replies with a question of her own, [hannah.speech(Why wouldn't it be? As far as I understand it, the arcane protects kids from all that stuff. Drinking, smoking, even heavy exercise is meant to be safe, but I personally don't like the idea of that last one. Anyway, come on, what can I get you?)]
+			你出于本能地问汉娜，怀孕期间还喝酒没问题吗。她听了顿时一脸疑问，用问题回答了你的询问，[hannah.speech(能有什么问题？据我所知，奥术能够完完全全地保护好宝宝的。喝酒啦，吸烟啦，哪怕是繁重的锻炼也很安全，只不过我并不愿意做最后那个。总之，说吧，你想要杯什么？)]
 		</p>
 		<p>
-			Thanking her for the offer, you wonder whether to order a drink right away, or to spend some time talking with Hannah first...
+			你谢过她的邀请，于是思索起来接下来该喝些什么，或者再跟汉娜聊聊……
 		</p>
 	#ELSE
 		<p>
-			Returning her greeting, you sit down beside the [hannah.race] and briefly look over the many bottles of spirits that are lined up on the shelves before you. Swatting an empty shot glass back and forth over the bar-top between her paw-like hands, Hannah offers, [hannah.speech(Let me get you your first drink. It's my way of thanks for persisting with my lessons until the end.)]
+			回英国后你便坐在了那[hannah.race]身旁，扫了一眼摆在眼前酒架上的几瓶烈酒。汉娜在吧台上边用爪子来回拍打着喝空的小酒杯，忽然说道，[hannah.speech(让我请你一杯吧。我一般都是这样感谢那些一直坚持下来的学员的。)]
 		</p>
 		<p>
-			Thanking her for the offer, you wonder whether to order a drink right away, or to spend some time talking with Hannah first...
+			你谢过她的邀请，于是思索起来接下来该喝些什么，或者再跟汉娜聊聊……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_DRINK"><![CDATA[
 	<p>
-		Deciding that you'd like to order a drink, you manage to get the attention of the bear-boy bartender, who slowly ambles over to stand before you. Silently crossing his muscular, furry arms, he waits to hear what it is you want with an impatient frown on his face. Deciding that you'd better not waste his time, you quickly tell him that you want a shot of [#SPECIAL_PARSE_0].
+		你决定要来一杯，于是招呼了一下那个熊男酒保，他慢慢地走过来，站在你面前。他静静地交叉着肌肉发达、毛茸茸的手臂，皱着眉头不耐烦地等着听你的要求。你想最好还是不要浪费他的时间，便迅速告诉他，你想要一杯[#SPECIAL_PARSE_0]。
 	</p>
 	<p>
-		Producing a shot glass from under the counter, the bartender places it down on the metal bar-top, before grabbing a bottle of [#SPECIAL_PARSE_0] from off the shelves and filling it to the brim.
+		酒保从柜台下面拿出一个酒杯，把它放在金属吧台上，然后从架子上拿起一瓶[#SPECIAL_PARSE_0]将它倒满。
 		#IF(flags.hasFlag(FLAG_innoxia_lights_out_free_drink))
-				 Keeping her promise, Hannah leans forwards and says to the bear-boy, [hannah.speech(Put this one on my tab, would you?)]
+				汉娜遵守她的承诺，她向前倾身，对熊男说：[hannah.speech(这个记在我账上，可以吗？)]
 			</p>
 			<p>
-				Silently nodding, the bartender walks off to serve another customer. After thanking Hannah for the drink, you pick up the shot glass and down the spirit in one swift gulp.
+				酒保默默地点了点头，便走开去招呼另一位顾客了。感谢汉娜的酒水后，你拿起酒杯一饮而尽。
 		#ELSE
-			 After handing over your flames to the bear-boy, you pick up the shot glass and down the spirit in one swift gulp.
+			将火币交给熊男后，你拿起酒杯一饮而尽。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_DRINK_WARNING"><![CDATA[
 	<p style='text-align:center;'>
-		[style.italicsMinorBad(You've had far too much alcohol and are at your limit!)]
+		[style.italicsMinorBad(你喝了太多的酒，已经到了极限！)]
 		<br/>
-		[style.italicsBad(Who knows what could happen if you drink any more...)]
+		[style.italicsBad(谁知道你再喝下去会发生什么呢……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_LEAVE"><![CDATA[
 	<p>
-		Feeling like you need to get some space, you stand up and tell Hannah that you've got to be going.
+		感觉自己需要给这段关系留有余地，你站起来对汉娜说，你得走了。
 	</p>
 	<p>
-		[hannah.speech(I guess I should be leaving now too,)] she grunts, before ordering and downing one last shot of whiskey. Giving you a sly look, she teases, [hannah.speech(Next time you're here, you should stick around for a while... Who knows where things might lead?)]
+		[hannah.speech(我想我现在也该走了，)]她嘟囔着，点了一杯威士忌，一口饮下。她狡猾地看了你一眼，戏谑道，[hannah.speech(下次你来的时候，应该多待一会……谁知道事情会往哪个方向发展呢？)]
 	</p>
 	<p>
-		Letting out one of her half-hyena, half-human laughs, she strides over to the exit and pulls open the door, before disappearing into the neon-lit night beyond. Looking around, you wonder whether to follow in her footsteps, or to instead spend a little more time in the bar...
+		你听到她笑出了声，给你一种既像人，又像鬣狗的奇异感觉。她大步走到出口，一把拉开门，消失在门外灯红酒绿的夜色中。你环顾四周，犹豫着要不要跟上她的脚步，或者再在酒吧里多待一会儿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_TALK"><![CDATA[
 	<p>
-		Wanting to relax and chat with Hannah for a little while, and knowing that she likes boxing more than anything, you begin by asking her how her training at the gym went today. Sure enough, this is the key to getting her talking, and soon enough the two of you are discussing different training techniques, the quality of her students, and how many challengers she's defeated this week.
+		你想休息一下，跟汉娜聊会儿天，向着她最喜欢的就是拳击，于是开始问她今天在健身房里都是怎么训练的。这的确是打开她话匣子的正确方式，没过多一会儿，你们两个就聊的火热，例如不同的训练技巧、她学生的质量和她这周又击败了几个挑战者。
 	</p>
 	#IF(flags.hasFlag(FLAG_innoxia_lights_out_hannah_had_initial_talk))
 		<p>
-			[hannah.speech(Speaking of challengers, you know why they keep coming to me?)] she asks. Before you can respond to remind her that she has indeed told you of this before, Hannah points to three of the dozen trophy cups that are lined up behind the bar. As you see that these three have engravings of her likeness on them, she continues, [hannah.speech(I was champion three years running. Back then the sport was still all about the fight, but after my second victory, the organisers started cheapening it by focusing more on the promotions and showmanship.)]
+			[hannah.speech(说起那些挑战者，你知道他们为什么乐此不疲地来找我吗？)]她忽然问。没等你提醒她这件事情之前已经告诉过你了，汉娜就指着那十来座摆在吧台后面的奖杯里面的三座。仔细一看，那三座奖杯上面都雕刻着她的图像，她继续讲道，[hannah.speech(我连续卫冕了三次冠军。当时这项运动还是单纯的战斗，但在我第二次夺冠之后，组织者就将重心转移到了推广和表演上，比赛变得廉价了。)]
 		</p>
 		<p>
-			Clearly disgusted by this turn of events in her past, the [hannah.race] angrily slams her shot glass down onto the counter. As if possessing prescience, the bartender appears at that exact moment to pour another shot of whiskey into Hannah's glass. Instantly downing it, she continues her story by grumbling, [hannah.speech(After my third victory, I told the organisers that they were sell-outs. We exchanged some words, at the end of which I quit their championship. I'm still classed as being undefeated, so that's why challengers come seeking me out.)]
+			那[hannah.race]显然是回忆起往事越想越气，怒把酒杯狠砸在了柜台上。酒保仿佛是有所察觉，恰到好处地出现，又在汉娜的玻璃杯中送上一杯威士忌。她举杯就灌了下去，继续迷迷糊糊地讲起故事来，[hannah.speech(我赢过第三次之后，就大骂那组织者说他出卖了自己。我们吵了几句，最后我就退出了锦标赛。我依然保持着不败的荣誉，所以总是有那么多挑战者来找我。)]
 		</p>
 		<p>
-			Remembering what she told you before, you remark upon that being the point when she decided to go and work for Pix. Letting out one of her half-hyena, half-human laughs as you say this, she exclaims, [hannah.speech(That's right! She must have known where things were going, because when I got back to my apartment I found her waiting there. In the morning she offered me the job again, and I accepted.)]
+			你回想起她之前告诉过你的，便说这似乎就是你决定去给皮克斯工作的时候。她顿时发出一阵带着鬣狗味道的大笑，高喊起来，[hannah.speech(没错！她知道的可清楚了，因为我刚一回到公寓，就发现她已经等在那儿了。第二天一大早她又一次提出了那份工作，我就接受了。)]
 		</p>
 		<p>
-			Knowing from your previous discussion that she and Pix aren't in a relationship, you ask the [hannah.race] if that's still the case.
+			你从之前的对话中得知，她和皮克斯并没有交往，于是就问[hannah.race]现在是不是还是如此。
 		</p>
 		<p>
-			[hannah.speech(Yeah, we've never really been a couple, we just spend the night together every now and then,)] Hannah replies. Downing yet another shot that the bartender has poured for her, she flashes you a grin and somewhat-clumsily teases, [hannah.speech(But you know that there's someone else I've got my eye on at the moment... Someone who's pretty hot and knows the way to please me...)]
+			[hannah.speech(对啊，我们从来就算不上一对，知识每天晚上一起过罢了，)]汉娜如此回应。酒保续上之后，她立刻灌了下去，向你甩了一抹笑容，有些笨拙地调戏起来，[hannah.speech(不过现在我看上了另一个家伙……很性感的家伙，很会让我高兴……)]
 		</p>
 		<p>
-			Although Hannah's sober state is to be a little prude, the several shots she's recently downed are making her show her true feelings, and you wonder whether or not to flirt back with her...
+			虽说汉娜清醒的时候有些拘谨，但刚刚几杯酒下肚，让她逐渐显露出了真情实感，你思索起来到底要不要调戏回去……
 		</p>
 	#ELSE
 		<p>
-			[hannah.speech(Speaking of challengers, you know why they keep coming to me?)] she asks. Before you can respond, she points to three of the dozen trophy cups that are lined up behind the bar. As you see that these three have engravings of Hannah's likeness on them, she continues, [hannah.speech(I was champion three years running. Back then the sport was still all about the fight, but after my second victory, the organisers started cheapening it by focusing more on the promotions and showmanship.)]
+			[hannah.speech(说起那些挑战的家伙，你知道他们为什么乐此不疲地来找我吗？)]她忽然问。没等你回答，汉娜就指着那十来座摆在吧台后面的奖杯里面的三座。仔细一看，那三座奖杯上面都雕刻着她的图像，她继续讲道，[hannah.speech(我连续卫冕了三次冠军。当时这项运动还是单纯的战斗，但在我第二次夺冠之后，组织者就将重心转移到了推广和表演上，比赛变得廉价了。)]
 		</p>
 		<p>
-			Clearly disgusted by this turn of events in her past, the [hannah.race] angrily slams her shot glass down onto the counter. As if possessing prescience, the bartender appears at that exact moment to pour another shot of whiskey into Hannah's glass. Instantly downing it, she continues her story by grumbling, [hannah.speech(After my third victory, I told the organisers that they were sell-outs. We exchanged some words, at the end of which I quit their championship. I'm still classed as being undefeated, so that's why challengers come seeking me out.)]
+			那[hannah.race]显然是回忆起往事越想越气，怒把酒杯狠砸在了柜台上。酒保仿佛是有所察觉，恰到好处地出现，又在汉娜的玻璃杯中送上一杯威士忌。她举杯就灌了下去，继续迷迷糊糊地讲起故事来，[hannah.speech(我赢过第三次之后，就大骂那组织者说他出卖了自己。我们吵了几句，最后我就退出了锦标赛。我依然保持着不败的荣誉，所以总是有那么多挑战者来找我。)]
 		</p>
 		<p>
-			You ask her if that's when she decided to go and work for Pix, to which Hannah lets out one of her half-hyena, half-human laughs and exclaims, [hannah.speech(That's right! She must have known where things were going, because when I got back to my apartment I found her waiting there. In the morning she offered me the job again, and I accepted.)]
+			你问她又是什么时候决定去给皮克斯打工的，汉娜听后顿时发出一阵带着鬣狗味道的大笑，高喊起来，[hannah.speech(没错！她知道的可清楚了，因为我刚一回到公寓，就发现她已经等在那儿了。第二天一大早她又一次提出了那份工作，我就接受了。)]
 		</p>
 		<p>
-			Picking up on the meaning of Pix still being around to offer Hannah the job in the morning, you ask the [hannah.race] if she and Pix are still seeing one another.
+			你想起皮克斯白天还在给汉娜提供工作，于是就问那[hannah.race]现在还在和皮克斯交往吗。
 		</p>
 		<p>
-			[hannah.speech(We've never really been a couple, we just spend the night together every now and then,)] Hannah reveals. Downing yet another shot that the bartender has poured for her, she flashes you a grin and somewhat-clumsily teases, [hannah.speech(But there's someone else I've got my eye on at the moment... Someone who's pretty hot...)]
+			[hannah.speech(我们从来就算不上一对，只是每天晚上一起过罢了，)]汉娜叹了口气。酒保续上之后，她立刻灌了下去，向你甩了一抹笑容，有些笨拙地调戏起来，[hannah.speech(不过现在我看上了另一个家伙……很性感的家伙……)]
 		</p>
 		<p>
-			Although you can tell that she's genuinely into you, it seems as though Hannah's sober state is to be a little prude. Thanks to the several shots she's recently downed, she's starting to show her true feelings, and you wonder whether or not to flirt back with her...
+			虽说你确实感觉得到她真的对你有兴趣，但但汉娜清醒时确实有些拘谨。不过多亏她刚刚几杯酒下肚，她逐渐显露出真情实感，你思索起来到底要不要调戏回去……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_FLIRT"><![CDATA[
 	<p>
-		Deciding to take things a little further, you start to flirt back with Hannah. Teasing her by pretending not to know that she's talking about you, you get her to reveal more of her feelings for you.
+		你想和她更进一步，便开始与汉娜调情。你假装自己听不懂并借此挑逗她，想更深入地知道她对你到底是什么感觉。
 	</p>
 	<p>
 		#IF(hannah.getTotalTimesHadSex(pc)>0)
-			[hannah.speech(Stop playing with me, [pc.name],)] she finally moans. Downing another shot to give herself some more courage, she laments, [hannah.speech(Eugh! It's so easy to deal with people in the ring. We've already had sex as well, so why is it so hard to do this sort of stuff?)]
+			[hannah.speech(别逗我了，[pc.name]，)]她终于埋怨起来，又灌下一口酒，才鼓起勇气，感叹道，[hannah.speech(呃啊！在拳击场上搞定对面要简单多了。明明我们都做过了，但做起这个来怎么就这么难？)]
 		#ELSE
-			[hannah.speech(You know, I really do like you, [pc.name],)] she finally says. Downing another shot to give herself some more courage, she laments, [hannah.speech(Eugh! It's so easy to deal with people in the ring. Why is it so hard to do this sort of stuff?)]
+			[hannah.speech(其实，我真的很喜欢你，[pc.name]，)]她总算开了口，灌下一口酒，鼓起勇气感叹道，[hannah.speech(呃啊！在拳击场上搞定对面要简单多了。这种事情做起来怎么就这么难？)]
 		#ENDIF
 	</p>
 	<p>
-		Pushing her a little further, you tell Hannah to relax and just show you her true feelings. Although you're the one who suggested it, you're still taken a little aback by the forcefulness of Hannah's next move. Dragging her chair so that she's sitting right next to you, she grabs you and pulls you into her [hannah.breasts+].
+		你告诉她放松并略微将她推远了一点，她毫无保留地将真实感受展示给你。虽然这是你提议的，但你随即为汉娜接下来的力道感到吃惊。她拖着椅子到你跟前，拥你入怀中，埋在[hannah.breasts+]里。
 	</p>
 	<p>
-		[hannah.speech(You mean like this?)] she asks. As she rubs her muscular body up against yours, it seems like she wants you to make the next move...
+		[hannah.speech(你是说这样？)]她问道。她用那肌肉发达的身躯贴着你磨蹭着，看样子是想让你做出下一步……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_KISS"><![CDATA[
 	<p>
-		Giving the [hannah.race] what she wants, you lean into her and press your [pc.lips+] against hers. Letting out a deep, satisfied moan, she parts her lips and sloppily returns your gesture. What her kiss lacks in finesse it more than makes up for in passion, for she happily spends the next couple of minutes grinding into you and greedily exploring the inside of your mouth with her large, flat tongue.
+		你于是决定让这[hannah.race]如愿，一倾身子，就用[pc.lips+]吻了上去。她此刻也放出一阵低沉而满足的呻吟，张开了双唇，有意无意地回应着你的动作。尽管吻技有所欠缺，但热情足以弥补，接下来几分钟，她都愉悦地跟你缠绵在一起，用那根薄薄的舌头贪婪地在你的口中探索。
 	</p>
 	<p>
-		Finally breaking off the kiss with a lewd, wet smacking noise, your partner moans, [hannah.speech(That's what I wanted... You're so hot, [pc.name]...)]
+		一声湿哒哒的淫靡的咂嘴声过后，两人终于分开，你的伴侣呻吟起来，[hannah.speech(我正是这么想的……你可真懂啊，[pc.name]……)]
 	</p>
 	<p>
 		#IF(hannah.getTotalTimesHadSex(pc)>0)
-			After downing yet another shot, the [hannah.race] leans forwards and locks her [hannah.eyeColour] eyes onto yours. Running her paw-like hands up your [pc.legs], she breathlessly moans, [hannah.speech(I want more... I want to fuck you again, [pc.name]... Just like last time...)]
+			那[hannah.race]又是一杯下肚，便把身子倚了过来，那双[hannah.eyeColour]的眼睛紧紧跟你对视着。兽爪一般的大手沿着你的[pc.legs]摸来摸去，她的声音几乎有些断断续续了，[hannah.speech(我还想要……我想再操你一次，[pc.name]……就像上次那样……)]
 		#ELSE
-			After downing yet another shot, the [hannah.race] leans forwards and locks her [hannah.eyeColour] eyes onto yours. Running her paw-like hands up your [pc.legs], she breathlessly moans, [hannah.speech(I want more... I want to fuck you, [pc.name]...)]
+			那[hannah.race]又是一杯下肚，便把身子倚了过来，那双[hannah.eyeColour]的眼睛紧紧跟你对视着。兽爪一般的大手沿着你的[pc.legs]摸来摸去，她的声音几乎有些断断续续了，[hannah.speech(我还想要……我好想操你，[pc.name]……)]
 		#ENDIF
 	</p>
 	<p>
-		With the alcohol in her system having broken down all of her inhibitions, Hannah continues to hungrily stare at you as she awaits your answer...
+		体内的酒精让她的理智也消失殆尽，汉娜一直紧紧盯着你，满脸饥渴地等待着你的回答……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_SEX_START_ALLEYWAY"><![CDATA[
 	<p>
-		Wanting it as much as she does, you ask Hannah if she'd like to get out of here and find somewhere a little more private.
+		你和她正是情投意合，于是问汉娜要不要先离开这里，找个稍微更私密些的地方。
 	</p>
 	<p>
-		[hannah.speech(Come on, [pc.name], let's go!)] the impatient [hannah.race] exclaims in response to your suggestion. Grabbing you by the [pc.hand(true)], she drags you through the bar and out into the neon-lit streets of Nightlife.
+		[hannah.speech(好啊，[pc.name]。直接走吧！)]这个早就迫不及待的[hannah.race]高声回应着你的建议。她一把抓住了你的[pc.hand(true)]，拖着你穿过了酒吧，回到了霓虹灯四射的夜生活区街道上。
 	</p>
 	<p>
-		As the two of you search for a private place in which to continue your evening, you suddenly spot a dark, quiet alleyway nestled between two buildings. Taking charge, you pull Hannah along as you make a beeline for it. A moment later and the two of you are deep within the gloomy alley, with the lights and sounds of Nightlife having been left far behind.
+		正当你们两个满大街找着私密去处来共度今宵，你忽然发现一条昏暗寂静的小巷，夹在两栋建筑之间。你立马一转攻势，拉着汉娜径直向那边走去。没过多久，你们两个就已经身处阴暗的小巷深处，夜生活区的光与声早被抛之脑后。
 	</p>
 	<p>
-		Impassioned and desperate to fuck one another, the two of you pay your seedy surroundings no heed as you share yet another clumsy, sloppy kiss. Pulling back, the [hannah.race] desperately moans, [hannah.speech(Fuck me, [pc.name]!)]
+		你们二人敬请澎湃，早已按捺不住开干的心情，也不顾周围脏乱的环境，又来了一场笨拙而草率的吻。那[hannah.race]一仰身子，倚着墙面，迫不及待地呻吟道，[hannah.speech(快干我吧，[pc.name]！)]
 	</p>
 	<p>
-		More than happy to do as she asks, you prepare to get started...
+		你自然是恭敬不如从命，便准备开始了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_SEX_START_BEDROOM"><![CDATA[
 	<p>
-		Wanting it as much as she does, you ask Hannah if she'd like to get out of here and find somewhere a little more private.
+		你和她正是情投意合，于是问汉娜要不要先离开这里，找个稍微更私密些的地方。
 	</p>
 	<p>
-		[hannah.speech(Come on, [pc.name], let's go!)] the impatient [hannah.race] exclaims in response to your suggestion. Grabbing you by the [pc.hand(true)], she drags you through the bar and out into the neon-lit streets of Nightlife.
+		[hannah.speech(好啊，[pc.name]。直接走吧！)]这个早就迫不及待的[hannah.race]高声回应着你的建议。她一把抓住了你的[pc.hand(true)]，拖着你穿过了酒吧，回到了霓虹灯四射的夜生活区街道上。
 	</p>
 	<p>
-		Although you're a fair distance from Lilaya's house, you know that it won't take more than half an hour to get there. As such, you tell your drunk, horny companion that you want to take her back to your place.
+		虽说距离莉莱雅的房子有一段距离，但你估计再多也不过半个小时。于是你告诉这位醉醺醺的饥渴的同伴，你想带她回自己家里。
 	</p>
 	<p>
-		[hannah.speech(Can't we just do it down an alleyway?)] she slurs, but after hearing you say that it'd be far more comfortable to have a bed, she relents, [hannah.speech(Fine, but let's hurry!)]
+		[hannah.speech(找个巷子解决了不行吗？)]她咕哝了一声，但听你说有张床会舒服不少，她终于还是屈服了，[hannah.speech(那好吧，赶快就是了！)]
 	</p>
 	<p>
-		Pulling her along beside you, the two of you soon find yourself at Lilaya's mansion. Too drunk to notice, or perhaps too horny to care, Hannah doesn't comment on the size of the place, and in fact doesn't say much at all until you're finally staggering into your bedroom.
+		你牵手把她带在身边，两人很快就到了莉莱雅的宅邸。汉娜不知是醉得没注意到，还是欲望让她无暇顾及，总之并没有感叹此处的宽阔，实际上甚至一句话也没说，就跟着你撞进了卧室。
 	</p>
 	<p>
-		[hannah.speech(Yeah, this is a better place to fuck than an alley,)] she declares, before pulling you into another clumsy, sloppy kiss. Pulling back, the [hannah.race] desperately moans, [hannah.speech(Now fuck me, [pc.name]!)]
+		[hannah.speech(对，这地方可比巷子里适合做多了，)]她说完之后，就又拉着你来了一场笨拙而草率的吻。分开后，那[hannah.race]迫不及待地呻吟道，[hannah.speech(那快干我吧，[pc.name]！)]
 	</p>
 	<p>
-		More than happy to do as she asks, you prepare to get started...
+		你自然是恭敬不如从命，便准备开始了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_ALLEYWAY"><![CDATA[
 	<p>
-		Having satisfied your carnal desires with one another, you and Hannah step back and start getting your clothing back in order. For the first time since entering this dark, narrow alleyway, the two of you begin to become aware that you might be in danger of being set upon by muggers. As the two of you are proficient fighters, you see the possibility of being set upon as more of an inconvenience than a real threat, but you'd still like to avoid it if at all possible.
+		满足了彼此的性欲后，你和汉娜退后并开始整理自己的衣物。自从进入这条又黑又窄的小巷以来，你们俩第一次开始意识到自己可能有被歹徒抢劫的危险。你们两个都是精通格斗的人，因此认为被歹徒袭击的可能性更多是一种不便，而不是真正的威胁。但如果可能的话，你们还是希望避免这种情况。
 	</p>
 	<p>
-		[hannah.speech(I guess we shouldn't hang around here any longer,)] Hannah states, clearly thinking the same thing that you are. After giving you one last, sloppy kiss, she steps back and says, [hannah.speech(I'd better get back home to sleep... See you around, [pc.name]...)]
+		[hannah.speech(我想我们不应该再在这里逗留了，)]汉娜说道，她显然和你想的一样。在给了你最后一个湿吻后，她退后一步说：[hannah.speech(我还是回家睡觉好了…… 回头见，[pc.name]……)]
 	</p>
 	<p>
-		With that, the [hannah.race] staggers off, leaving you alone and wondering what to do next...
+		就这样，[hannah.race]踉踉跄跄地走了，留下你一个人，想着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_ALLEYWAY_CONTINUE"><![CDATA[
 	<p>
-		With Hannah having departed, and the pleasant memory of your encounter still fresh in your mind, you get your things in order and continue on your way...
+		汉娜已经离开，你对邂逅的美好回忆仍历历在目，你收拾好一切，继续上路……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_BEDROOM"><![CDATA[
 	<p>
-		Having satisfied your carnal desires with one another, you and Hannah break off and collapse down onto your bed. After a couple of minutes spent panting as you try to get your breath back, you're the first to break the happy silence by asking Hannah if she's going to spend the rest of the night here.
+		满足了彼此的肉欲之后，你和汉娜分开，倒在床上。你花了几分钟喘气，试图恢复呼吸，你率先打破快乐的沉默，询问汉娜是否要在这里过夜。
 	</p>
 	<p>
-		[hannah.speech(Yeah, there's no way I'm walking all the back home now,)] she replies, before throwing back the covers and dragging you into bed with her. Wrapping her muscular, furry arms around you, she tightly embraces you as she presses her lips against yours and once again gives you a clumsy, sloppy kiss. Pulling back a moment later, she sleepily sighs, [hannah.speech(Good night, [pc.name]...)]
+		[hannah.speech(好啊，我现在可没办法一直走回家。)]她回答道，然后掀开被子，将你拖到床上。她用肌肉发达、毛茸茸的手臂环抱着你，紧紧地把你搂住，她的嘴唇贴在你的嘴唇上，再次给了你一个笨拙而动情的吻。片刻后她退了回去，困倦地叹息道：[hannah.speech(晚安，[pc.name]……)]
 	</p>
 	<p>
-		Before you've even finished saying good night back to her, the [hannah.race] is loudly snoring. Her arms are still tightly wrapped around you, and as you try to move, she mumbles in her sleep and pulls you even tighter in against her [hannah.breasts+]. Realising that you're going to have to spend the night acting as Hannah's teddy bear, you relax and allow yourself to drift off to sleep beside her...
+		你甚至还没来得及对她说晚安，这名[hannah.race]就打起了如雷的鼾声。她的手臂仍然紧紧搂着你，当你试图移开时，她在睡梦中咕哝了几声，并把你拉得更近，贴上了她[hannah.breasts+]。看样子不得不充当汉娜的泰迪熊度过这一夜了，你索性换了个更舒服的姿势，让自己贴着她温暖的身体进入梦乡……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_BEDROOM_MORNING"><![CDATA[
 	<p>
-		The next thing you know, you're waking up as Hannah pulls her arms out from under you and then rolls out of bed. Looking across to the gap in the curtains, you see that it's only just first light.
+		紧接着，你在汉娜从你身下抽出胳膊时醒了过来，然后从床上滚了下来。你透过窗帘的缝隙看到天刚蒙蒙亮。
 	</p>
 	<p>
-		[hannah.speech(Thanks for last night, [pc.name],)] the [hannah.race] sighs, before clutching her head and groaning, [hannah.speech(Eugh... I drank too much again... See you at the gym or the bar again...)]
+		[hannah.speech(昨晚谢谢你，[pc.name]，)]那[hannah.race]叹了口气，然后抱着头呻吟起来，[hannah.speech(呃……我又喝多了……健身房或酒吧见……)]
 	</p>
 	<p>
-		As she staggers out of the room, you call after Hannah to tell her to use one of the bell-pulls to summon Rose, who'll give her a drink and let her out. Raising her paw-like hand to show that she's got the message, Hannah departs, leaving you with both the fond memory of last night, as well as with a noticeable smell of alcohol and sex...
+		你在汉娜踉踉跄跄地走出房间时叫住了她，告诉她用其中一个拉铃传唤萝丝，后者会给她一杯酒，然后让她离开。汉娜举起爪子状的手表示她知道了，然后离开，留给你昨晚美好的回忆，以及明显的酒精和性爱的味道……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="AFTER_SEX_BEDROOM_MORNING_CONTINUE"><![CDATA[
 	<p>
-		Lying back in bed, you wonder whether to get up and get moving yourself, or whether to get a little more sleep first...
+		躺在床上，你不知道是该自己起来活动活动，还是先多睡一会儿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_WASTED"><![CDATA[
 	<p>
-		As the burning spirit washes down your throat, you feel your head spinning, and before you know what's happening you've completely lost track of what's going on around you...
+		辛辣的酒精在灌进了喉咙，你顿时感觉有些头晕，等你意识到发生了什么，你早已与周围的事情脱了节……
 	</p>
 	<p>
-		The next thing you know, you're breathing in the relatively fresh air of Dominion. Looking around as you stumble forwards, you see that Hannah's leading you down a dark, narrow alleyway. After turning a corner, and leaving the lights and sounds of Nightlife behind, the [hannah.race] stops and turns to face you.
+		紧接着，你只觉得自己呼吸到了御城区的新鲜空气。摇摇晃晃地往前走着，你朝四周看了看，只见汉娜领着你进了一条昏暗狭窄的小巷。转过一个拐角后，夜生活区的光影和喧嚣消失得无影无踪，那[hannah.race]也停了下来，回头看向你。
 	</p>
 	<p>
-		[hannah.speech(This spot'll do,)] she slurs, before pulling you into a clumsy, sloppy kiss. Breaking it off a moment later, she moans, [hannah.speech(Now let's fuck!)]
+		[hannah.speech(这地方就行，)]她不清不楚地说完之后，就拉着你来了一场笨拙而草率的吻。两人分开后，她呻吟道，[hannah.speech(该干了！)]
 	</p>
 	<p>
-		Having taken charge, Hannah grabs you and prepares to get what she wants. In a moment of relative clarity, you realise that you only have this one moment in which to put a stop to this. Then again, perhaps this is what you wanted all along...
+		汉娜占据了主导权，抓住你就准备开始为所欲为。你一瞬间稍微清醒过来，意识到自己再不阻止这一切就晚了。不过，或许这正是你一直想要的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_WASTED_LEAVE"><![CDATA[
 	<p>
-		Not wanting to have sex in such a seedy, potentially-dangerous place, you push Hannah away and mumble something about needing to go.
+		你并不想在这么个肮脏，甚至可能还会有危险的地方做爱，于是把汉娜退开，糊弄了几句自己该走了。
 	</p>
 	<p>
-		[hannah.speech(I guess I came on too strongly,)] Hannah states, before stepping back and continuing, [hannah.speech(I'd better get back home to sleep... See you around, [pc.name]...)]
+		[hannah.speech(看来是我操之过急了，)]汉娜说完就退开了，继续道，[hannah.speech(我还是回家睡觉吧……回头见了，[pc.name]……)]
 	</p>
 	<p>
-		With that, the [hannah.race] staggers off, leaving you alone and wondering what to do next...
+		就这样，[hannah.race]踉踉跄跄地走了，留下你一个人，想着接下来该做些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="BAR_HANNAH_WASTED_SEX_START"><![CDATA[
 	<p>
-		Impassioned and desperate to fuck Hannah as much as she is to fuck you, you pay your seedy surroundings no heed as you tell her to get started. Happily moaning, the [hannah.race] pulls you into her [hannah.breasts+] and desperately moans, [hannah.speech(Yes, [pc.name], I'll fuck you so good!)]
+		跟汉娜想跟你打炮的冲动一样，你也饥渴难耐，把肮脏的环境顿时抛之脑后，告诉她赶紧开始吧。那[hannah.race]也愉悦地呻吟了一声，便把你拉进了她那[hannah.breasts+]中，迫不及待地咕哝道，[hannah.speech(好啊，[pc.name]，我可要干个爽了！)]
 	</p>
 	<p>
-		With the [hannah.race] having taken charge, you submit to her and prepare to get started...
+		你让[hannah.race]站住了主导权，屈服于对方，就这样准备开始了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

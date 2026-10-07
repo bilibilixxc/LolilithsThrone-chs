@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA['Woven by the DSG Textile Guild' is printed on one end of the board.]]></authorTag>
+		<authorTag><![CDATA[“DSG织厂编制”被印在布匹的一端。]]></authorTag>
 		
 		<value>20</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[bolt of green cloth]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[bolts of green cloth]]></namePlural>
-		<description><![CDATA[A cut of dark green fabric wrapped around cardboard for easy transport. You selected the colour based on Eisek's stated preferences.]]></description> 
+		<determiner><![CDATA[一]]></determiner>
+		<name><![CDATA[匹绿布]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[匹绿布]]></namePlural>
+		<description><![CDATA[一块深绿色的织物，包裹在硬纸板上，便于携带。你基于艾瑟克的喜好选择了这种颜色。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -25,14 +25,14 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[One of [style.colourGood(three)] items that you need to fix up Eisek's stall.]]></line>
+			<line><![CDATA[[style.colourGood(三)]个你需要来修理艾瑟克的摊位的物品中的其中一个。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			The cotton fabric is as simple as can be, dyed green and somewhat coarse but seems luxurious compared to the burlap that currently adorns Eisek's stall.
+			这块棉质织物非常简单，染成了绿色，有点粗糙，但与目前装点艾瑟克摊位的麻布相比，看起来相当豪华。
 		</p>
-		]]></applyEffects>
+	]]></applyEffects>
 		
 		<itemTags/>
 		
@@ -40,10 +40,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unroll)] the bolt to get a closer look at the fabric...
+		[npc.Name]展开这块布来仔细看看……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unroll)] the bolt to show it off to [npc2.name], who [npc.verb(lean)] in to get a closer look at the fabric...
+		[npc.Name]展开这块布，向[npc2.name]展示，[npc2.name]则凑近来仔细看这块布……
 		]]></otherUse>
 	</useDescriptions>
 

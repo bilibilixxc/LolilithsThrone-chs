@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<renderingPriority>70</renderingPriority>
 	<renderInEffectsPanel>true</renderInEffectsPanel>
@@ -6,9 +6,9 @@
 	<beneficial>BENEFICIAL</beneficial>
 	<combatEffect>false</combatEffect>
 	<sexEffect>false</sexEffect>
-	<name><![CDATA[HLF Insurgent]]></name>
+	<name><![CDATA[HLF叛军]]></name>
 	<description><![CDATA[
-		Dressing like an HLF insurgent fills [npc.name] with the strength to fight back against an unjust system no matter the odds.
+		穿上HLF叛军的服装，让[npc.name]充满力量，不畏艰险，反抗不公。
 	]]></description>
 	<imageName>set_hlf_icon.svg</imageName>
 	<colourPrimary>CLOTHING_WHITE</colourPrimary> 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tongue>
 	<race>innoxia_sheep</race>
 	
@@ -6,20 +6,20 @@
 	
 	<defaultLength>12</defaultLength>
 	
-	<name><![CDATA[tongue]]></name>
-	<namePlural><![CDATA[tongues]]></namePlural>
+	<name><![CDATA[舌头]]></name>
+	<namePlural><![CDATA[舌头]]></namePlural>
 	
 	<descriptorsMasculine>
-		<descriptor><![CDATA[sheep-like]]></descriptor>
+		<descriptor><![CDATA[绵羊般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor><![CDATA[sheep-like]]></descriptor>
+		<descriptor><![CDATA[绵羊般]]></descriptor>
 	</descriptorsFeminine>
 	
 	<bodyDescription><![CDATA[
-		[npc.Her] mouth holds [npc.a_tongueLength], [npc.tongueColour(true)], sheep-like [npc.tongue]#IF(npc.isPiercedTongue()), which has been pierced#ENDIF.
-	]]></bodyDescription>
+		[npc.Her]的嘴里有一根绵羊般[npc.a_tongueLength]的[npc.tongue]，呈现[npc.tongueColour(true)]#IF(npc.isPiercedTongue())，且已经穿孔#ENDIF。
+]]></bodyDescription>
 	
 	<defaultTongueModifiers>
 		<modifier>STRONG</modifier>

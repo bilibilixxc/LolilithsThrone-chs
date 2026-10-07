@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -37,19 +37,19 @@
 	<areasCummedIn/>
 	<areasCummedOn/>
 	<title><![CDATA[
-		[style.colourFetish(Push her)]
+		[style.colourFetish(引诱她)]
 	]]></title>
 	<tooltip><![CDATA[
 		#IF(sex.getOngoingCharactersUsingAreas(meraxis, ORIFICE_VAGINA, PENETRATION_FINGER).contains(pc))
-			Make Meraxis admit to you that she loves being fingered as you frantically tease her clit and make her cum.
+			让梅拉克西丝向你承认，她喜欢被你用手指抚摸，你疯狂地挑逗她的阴蒂，让她高潮。
 		#ELSEIF(sex.getOngoingCharactersUsingAreas(pc, PENETRATION_FINGER, ORIFICE_VAGINA).contains(meraxis))
-			Make Meraxis admit that she loves fingering you as she orgasms from it.
+			让梅拉克西丝承认她喜欢指交你，并让她达到高潮。
 		#ELSEIF(sex.getOngoingCharactersUsingAreas(pc, PENETRATION_FINGER, ORIFICE_ANUS).contains(meraxis))
-			Make Meraxis admit that she loves fingering your ass as she orgasms from it.
+			让梅拉克西丝承认，她喜欢一边指交你的屁股，并让她达到高潮。
 		#ELSE
-			Make Meraxis admit that she loves stroking your cock as she orgasms from it.
+			让梅拉克西丝承认，她喜欢一边给你打飞机，并让她达到高潮。
 		#ENDIF
-		<br/>[style.italicsSex(Meraxis will gain the '[#FETISH_MASTURBATION.getName(meraxis)]' fetish from this!)]
+		<br/>[style.italicsSex(梅拉克西丝会获得“[#FETISH_MASTURBATION.getName(meraxis)]”性癖！)]
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -57,19 +57,19 @@
 				[#sex.getOngoingCharactersUsingAreas(meraxis, ORIFICE_VAGINA, PENETRATION_FINGER).contains(pc)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Realising that she's about to reach her climax, and wanting to leave a lasting impression on her, you move your [pc.fingers+] up to start stroking Meraxis's [meraxis.clit+] as you tease, [pc.speech(You like this, Meraxis?)]
+				你意识到她即将达到高潮，并想给她留下深刻的印象。你将[pc.fingers+]向上移动，开始抚摸梅拉克西斯[meraxis.clit+]，挑逗她说：[pc.speech(你喜欢这样吗，梅拉克西丝？)]
 				<br/><br/>
-				[meraxis.speechNoEffects(~Aah!~ Yes! ~Ooh!~ I-I'm going to cum!)]
+				[meraxis.speechNoEffects(~啊！~对！~哦！~ 我-我要去了！)]
 				<br/><br/>
-				Upon hearing that, you stop stimulating the [meraxis.race]'s pussy, causing her to let out a desperate, frustrated whine. Knowing that this is your chance to permanently influence Meraxis's sexual preferences, you demand, [pc.speech(Go on, beg for it! Tell me that you're a horny slut who loves to get off from having her dirty pussy fingered!)]
+				听到这番话后，你停止刺激[meraxis.race]的阴部，导致她发出绝望、沮丧的呜咽声。你知道这是你永久影响她性取向的机会，你要求道：[pc.speech(继续，求我！告诉我，你是个淫荡的骚货，喜欢被人用手指玩弄她下流的淫穴！)]
 				<br/><br/>
-				Although she furiously blushes as she hears you say this, Meraxis nevertheless does as you say and squeals, [meraxis.speechNoEffects(~Ooh!~ Yes, I'm a horny slut! Please, let me orgasm! Come on, keep on fingering me!)]
+				虽然听到此话她脸红了，但梅拉克西丝还是照你说的做，并尖叫起来：[meraxis.speechNoEffects(~哦！~对，我是淫荡骚货！求求你，让我高潮吧！继续，继续玩弄我！)]
 				<br/><br/>
-				Teasing your [pc.fingers+] over her [meraxis.labia+], you cement the idea of loving to be fingered in Meraxis's mind by saying, [pc.speech(Once more. Tell me how much you like being fingered...)]
+				你用[pc.fingers+]在她[meraxis.labia+]上挑逗，你的一句话坚定了梅拉克西丝喜欢被指交的想法：[pc.speech(再来一次，告诉我你有多喜欢被扣穴……)]
 				<br/><br/>
-				[meraxis.speechNoEffects(Please, [pc.name]! ~Mmm!~ I <i>need</i> this! Come on, just finger me already and let me cum!)]
+				[meraxis.speechNoEffects(求求你，[pc.name]！~嗯~ 我<i>想要</i>！快点，继续，继续让我高潮！)]
 				<br/><br/>
-				Confident that you've done enough to give Meraxis a permanent love for being fingered, you slide your [pc.fingers+] into her [meraxis.pussy+] and continue where you left off. As the panting [meraxis.race] starts to once again let out a stream of horny moans, you realise that she's about to reach her climax...
+				确信已经做了足够多的事情，让梅拉克西丝永远爱上了被指交，于是你将[pc.fingers+]滑入她[meraxis.pussy+]中，继续你之前的工作。当气喘吁吁的[meraxis.race]再次发出淫荡的呻吟时，你意识到她即将达到高潮……
 			]]></text>
 		</description>
 		<description>
@@ -77,19 +77,19 @@
 				[#sex.getOngoingCharactersUsingAreas(pc, PENETRATION_FINGER, ORIFICE_VAGINA).contains(meraxis)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Realising that she's about to reach her climax, and wanting to leave a lasting impression on her, you push your [pc.pussy+] out against Meraxis's [meraxis.fingers+] as you tease, [pc.speech(You like this, Meraxis?)]
+				你意识到她即将达到高潮，并希望给她留下深刻印象，于是你将自己[pc.pussy+]顶在梅拉克西丝[meraxis.fingers+]上，挑逗地说：[pc.speech(你喜欢这样吗，梅拉克西丝？)]
 				<br/><br/>
-				[meraxis.speechNoEffects(~Aah!~ Yes! ~Ooh!~ I-I think I'm going to cum!)]
+				[meraxis.speechNoEffects(~啊！~对！~哦！~ 我-我要去了！)]
 				<br/><br/>
-				Upon hearing that, you pull your [pc.pussy+] away from the [meraxis.race]'s hand, causing her to let out a desperate, frustrated whine. Knowing that this is your chance to permanently influence Meraxis's sexual preferences, you demand, [pc.speech(Go on, beg for it! Tell me that you're a horny slut who loves to get off from fingering my pussy!)]
+				听到这句话后，你把[pc.pussy+]从[meraxis.race]的手上拉开，她发出绝望而沮丧的呜咽声。你知道这是你永久影响梅拉克西丝性取向的机会，你要求道：[pc.speech(继续，求我！告诉我，你是个淫荡的骚货，喜欢用手指抚摸我的小穴！)]
 				<br/><br/>
-				Although she furiously blushes as she hears you say this, Meraxis nevertheless does as you say and squeals, [meraxis.speechNoEffects(~Ooh!~ Yes, I'm a horny slut! Please, let me orgasm! Come on, let me finger you!)]
+				虽然听到此话她脸红了，但梅拉克西丝还是照你说的做，并尖叫起来：[meraxis.speechNoEffects(~哦！~对，我是淫荡骚货！求求你，让我高潮吧！继续，让我摸摸你的！)]
 				<br/><br/>
-				Allowing her to tease her fingers over your [pc.labia+], you cement the idea of loving to finger others in Meraxis's mind by saying, [pc.speech(Once more. Tell me how much you like this...)]
+				让她用手指挑逗你[pc.labia+]，你的一句话让梅拉克西丝更加坚定了喜欢指交别人的想法：[pc.speech(再来一次，告诉我你有多喜欢扣穴……)]
 				<br/><br/>
-				[meraxis.speechNoEffects(Please, [pc.name]! ~Mmm!~ I <i>need</i> this! Come on, just let me finger you already and let me cum!)]
+				[meraxis.speechNoEffects(求求你，[pc.name]！~嗯~ 我<i>想要</i>！快点，继续，继续让我高潮！)]
 				<br/><br/>
-				Confident that you've done enough to give Meraxis a permanent love for fingering you, you allow her to slide her [meraxis.fingers+] into your [pc.pussy+] and continue where she left off. As the panting [meraxis.race] starts to once again let out a stream of horny moans, you realise that she's about to reach her climax...
+				你确信你做的已经足够了，让梅拉克西丝永远爱上了指交你，你允许她将[meraxis.fingers+]滑入你[pc.pussy+]并继续她的动作。当气喘吁吁的[meraxis.race]再次发出淫荡的呻吟时，你意识到她即将达到高潮……
 			]]></text>
 		</description>
 		<description>
@@ -97,19 +97,19 @@
 				[#sex.getOngoingCharactersUsingAreas(pc, PENETRATION_FINGER, ORIFICE_ANUS).contains(meraxis) && !sex.getOngoingCharactersUsingAreas(pc, PENETRATION_FINGER, ORIFICE_VAGINA).contains(meraxis)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Realising that she's about to reach her climax, and wanting to leave a lasting impression on her, you push your [pc.assCloaca+] out against Meraxis's [meraxis.fingers+] as you tease, [pc.speech(You like this, Meraxis?)]
+				你意识到她即将达到高潮，并希望给她留下深刻印象，于是你将自己[pc.assCloaca+]顶在梅拉克西丝[meraxis.fingers+]上，挑逗地说：[pc.speech(你喜欢这样吗，梅拉克西丝？)]
 				<br/><br/>
-				[meraxis.speechNoEffects(~Aah!~ Yes! ~Ooh!~ I-I think I'm going to cum!)]
+				[meraxis.speechNoEffects(~啊！~对！~哦！~ 我-我要去了！)]
 				<br/><br/>
-				Upon hearing that, you pull your [pc.asshole+] away from the [meraxis.race]'s hand, causing her to let out a desperate, frustrated whine. Knowing that this is your chance to permanently influence Meraxis's sexual preferences, you demand, [pc.speech(Go on, beg for it! Tell me that you're a horny slut who loves to get off from fingering my asshole!)]
+				听到这句话后，你把[pc.asshole+]从[meraxis.race]的手上拉开，她发出绝望而沮丧的呜咽声。你知道这是你永久影响梅拉克西丝性取向的机会，你要求道：[pc.speech(继续，求我！告诉我，你是个淫荡的骚货，喜欢用手指抚摸我的菊穴！)]
 				<br/><br/>
-				Although she furiously blushes as she hears you say this, Meraxis nevertheless does as you say and squeals, [meraxis.speechNoEffects(~Ooh!~ Yes, I'm a horny slut! Please, let me orgasm! Come on, let me finger your ass!)]
+				虽然听到此话她脸红了，但梅拉克西丝还是照你说的做，并尖叫起来：[meraxis.speechNoEffects(~哦！~对，我是淫荡骚货！求求你，让我高潮吧！继续，让我扣扣你的！)]
 				<br/><br/>
-				Allowing her to tease her fingers over your [pc.assCloaca+], you cement the idea of loving to finger others in Meraxis's mind by saying, [pc.speech(Once more. Tell me how much you like this...)]
+				让她用手指挑逗你[pc.assCloaca+]，你的一句话让梅拉克西丝更加坚定了喜欢指交别人的想法：[pc.speech(再来一次，告诉我你有多喜欢扣穴……)]
 				<br/><br/>
-				[meraxis.speechNoEffects(Please, [pc.name]! ~Mmm!~ I <i>need</i> this! Come on, just let me finger you already and let me cum!)]
+				[meraxis.speechNoEffects(求求你，[pc.name]！~嗯~ 我<i>想要</i>！快点，继续，继续让我高潮！)]
 				<br/><br/>
-				Confident that you've done enough to give Meraxis a permanent love for fingering your ass, you allow her to slide her [meraxis.fingers+] into your [pc.asshole+] and continue where she left off. As the panting [meraxis.race] starts to once again let out a stream of horny moans, you realise that she's about to reach her climax...
+				你确信你做的已经足够了，让梅拉克西丝永远爱上了指交你，你允许她将[meraxis.fingers+]滑入你[pc.asshole+]并继续她的动作。当气喘吁吁的[meraxis.race]再次发出淫荡的呻吟时，你意识到她即将达到高潮……
 			]]></text>
 		</description>
 		<description>
@@ -117,19 +117,19 @@
 				[#sex.getOngoingCharactersUsingAreas(pc, PENETRATION_PENIS, PENETRATION_FINGER).contains(meraxis)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Realising that she's about to reach her climax, and wanting to leave a lasting impression on her, you push your [pc.cock+] out against Meraxis's [meraxis.fingers+] as you tease, [pc.speech(You like this, Meraxis?)]
+				你意识到她即将达到高潮，并希望给她留下深刻印象，于是你将自己[pc.cock+]抵在梅拉克西丝[meraxis.fingers+]上，挑逗地说：[pc.speech(你喜欢这样吗，梅拉克西丝？)]
 				<br/><br/>
-				[meraxis.speechNoEffects(~Aah!~ Yes! ~Ooh!~ I-I think I'm going to cum!)]
+				[meraxis.speechNoEffects(~啊！~对！~哦！~ 我-我要去了！)]
 				<br/><br/>
-				Upon hearing that, you pull your [pc.cock+] away from the [meraxis.race]'s hand, causing her to let out a desperate, frustrated whine. Knowing that this is your chance to permanently influence Meraxis's sexual preferences, you demand, [pc.speech(Go on, beg for it! Tell me that you're a horny slut who loves to get off from giving me a handjob!)]
+				听到这句话后，你把[pc.cock+]从[meraxis.race]的手上拉开，她发出绝望而沮丧的呜咽声。你知道这是你永久影响梅拉克西丝性取向的机会，你要求道：[pc.speech(继续，求我！告诉我，你是个淫荡的骚货，喜欢给我打飞机！)]
 				<br/><br/>
-				Although she furiously blushes as she hears you say this, Meraxis nevertheless does as you say and squeals, [meraxis.speechNoEffects(~Ooh!~ Yes, I'm a horny slut! Please, let me orgasm! Come on, let me stroke your cock!)]
+				虽然听到此话她脸红了，但梅拉克西丝还是照你说的做，并尖叫起来：[meraxis.speechNoEffects(~哦！~对，我是淫荡骚货！求求你，让我高潮吧！继续，让我撸撸你的！)]
 				<br/><br/>
-				Allowing her to tease her fingers over the [pc.cockHead+] of your throbbing shaft, you cement the idea of loving to stroke cocks in Meraxis's mind by saying, [pc.speech(Once more. Tell me how much you like this...)]
+				让她用手指挑逗你跳动的[pc.cockHead+]，你的一句话让梅拉克西丝更加坚定了喜欢打飞机的想法：[pc.speech(再来一次，告诉我你有多喜欢打飞机……)]
 				<br/><br/>
-				[meraxis.speechNoEffects(Please, [pc.name]! ~Mmm!~ I <i>need</i> this! Come on, just let me jerk you off already and let me cum!)]
+				[meraxis.speechNoEffects(求求你，[pc.name]！~嗯~ 我<i>想要</i>！快点，继续让我给你撸撸，继续让我高潮！)]
 				<br/><br/>
-				Confident that you've done enough to give Meraxis a permanent love for performing handjobs, you allow her to slide her [meraxis.fingers+] around your [pc.cock+] and continue where she left off. As the panting [meraxis.race] starts to once again let out a stream of horny moans, you realise that she's about to reach her climax...
+				你确信你做的已经足够了，让梅拉克西丝永远爱上了给你打飞机，你让她[meraxis.fingers+]在你[pc.cock+]上滑动并继续她的动作。当气喘吁吁的[meraxis.race]再次发出淫荡的呻吟时，你意识到她即将达到高潮……
 			]]></text>
 		</description>
 	</descriptions>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
 
 	<!-- Sex managers are used to define behaviour and limitations during sex scenes, and can be reused in as many responses as you want by calling its id.
@@ -129,7 +129,7 @@
 			OPTIONAL: Default is for a generic description to be displayed
 			PARSER: Initial -->
 		<startingDescription><![CDATA[
-			Several people are drawn to the area by Lilaya's lewd squeals, and as the two of you start having sex, they shamelessly stand nearby and watch...
+			几个人被莉莱雅的淫叫声吸引过来，他们不知羞耻地围观起你们做爱……
 		]]></startingDescription>
 		<!-- The descriptions which are appended to the end of sex action descriptions during sex itself.
 			One of the defined 'description' elements will be chosen at random each turn.
@@ -138,9 +138,9 @@
 			OPTIONAL: Default is for generic descriptions to be displayed
 			PARSER: Every check -->
 		<randomDescriptions enabled="true">
-			<description><![CDATA[One of the onlookers loudly comments on how thick Lilaya's tail is.]]></description>
-			<description><![CDATA[A member of the crowd wolf-whistles.]]></description>
-			<description><![CDATA[You receive some lewd encouragement from a particularly enthusiastic member of the crowd.]]></description>
+			<description><![CDATA[一位围观者大声评论着，说莉莱雅的尾巴真粗。]]></description>
+			<description><![CDATA[人群中有人发出狼嚎。]]></description>
+			<description><![CDATA[你从人群中一个极度狂热者那里得到了一些下流的鼓励。]]></description>
 		</randomDescriptions>
 	</publicSex>
 	
@@ -516,10 +516,10 @@
 							Style advice: You should probably not replace the player's default lines, or if you do then please only make them as specific as the sex scene itself.
 								i.e. If you make a generic sex scene, it would be jarring for the player to have their character use very specific fetish talk towards their partner.
 								However, if your sex scene is a special one with a lot of custom behaviour, then it would enhance the scene to give the player some specific dirty talk. -->
-						<line><![CDATA[Keep on playing with your tits!]]></line>
-						<line><![CDATA[That's it, push your tits together!]]></line>
-						<line><![CDATA[Don't stop; keep on squeezing your tits!]]></line>
-						<line><![CDATA[Look how hard your nipples are! Go on, pinch them!]]></line>
+						<line><![CDATA[继续玩你的奶子！]]></line>
+						<line><![CDATA[就是这样，把你的奶子挤在一起！]]></line>
+						<line><![CDATA[别停下；继续挤你的奶子！]]></line>
+						<line><![CDATA[看你的乳头有多硬！继续，捏住它们！]]></line>
 					</standard>
 					<!-- 'submissive' lines are used when using the 'Submissive talk' action, and are not seen as often as standard lines.
 						The 'additionToDefault' attribute works in the same way as it does for 'standard'.
@@ -605,10 +605,10 @@
 			<dirtyTalk>
 				<character id="pc">
 					<standard additionToDefault="false">
-						<line><![CDATA[This is so embarrassing... But kind of hot...]]></line>
-						<line><![CDATA[Why is this turning me on so much?!]]></line>
-						<line><![CDATA[Do you like them? Am I doing this right?]]></line>
-						<line><![CDATA[I hope you appreciate me doing this for you...]]></line>
+						<line><![CDATA[这挺尴尬的……不过也有点性感……]]></line>
+						<line><![CDATA[这为何能让我如此欲火焚身？！]]></line>
+						<line><![CDATA[你喜欢它们吗？我这样做对吗？]]></line>
+						<line><![CDATA[我希望你好好感激我为你做的这些事……]]></line>
 					</standard>
 				</character>
 			</dirtyTalk>

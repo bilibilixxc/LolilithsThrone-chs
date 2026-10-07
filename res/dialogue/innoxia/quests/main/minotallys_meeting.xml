@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<scene id="start">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content folderPath="txt/quests/main/minotallys_meeting">START</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -11,15 +11,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Town hall]]></responseTitle>
-				<responseTooltip><![CDATA[Accompany Meraxis to the town hall.]]></responseTooltip>
+				<responseTitle><![CDATA[市镇议会]]></responseTitle>
+				<responseTooltip><![CDATA[陪同梅拉克西丝前往市镇议会。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_town_hall]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 	
 	<scene id="town_hall">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<preParsingEffects><![CDATA[
 			[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_town, PLACE_TYPE_innoxia_fields_elis_town_town_hall)]
 			[#meraxis.setLocation(pc)]
@@ -32,15 +32,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
-				<responseTooltip><![CDATA[Follow Meraxis into the town hall.]]></responseTooltip>
+				<responseTitle><![CDATA[进入]]></responseTitle>
+				<responseTooltip><![CDATA[跟随梅拉克西丝进入市镇议会。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_town_hall_entry]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 	
 	<scene id="town_hall_entry">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<preParsingEffects><![CDATA[
 			[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_town_hall_f0, PLACE_TYPE_innoxia_fields_elis_town_hall_f0_info)]
 			[#meraxis.setLocation(pc)]
@@ -53,15 +53,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Head over towards the staircase which leads up to Minotallys's office.]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[朝通往米诺塔莉丝办公室的楼梯走去。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_town_hall_stairs]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 	
 	<scene id="town_hall_stairs">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<preParsingEffects><![CDATA[
 			[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_town_hall_f0, PLACE_TYPE_innoxia_fields_elis_town_hall_f0_stairs)]
 			[#meraxis.setLocation(pc)]
@@ -74,15 +74,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Upstairs]]></responseTitle>
-				<responseTooltip><![CDATA[Head up the stairs to finally meet Minotallys.]]></responseTooltip>
+				<responseTitle><![CDATA[上楼]]></responseTitle>
+				<responseTooltip><![CDATA[沿着楼梯向上走，最后就能见到米诺塔莉丝。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_town_hall_upstairs]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 	
 	<scene id="town_hall_upstairs">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<preParsingEffects><![CDATA[
 			[#pc.setLocation(WORLD_TYPE_innoxia_fields_elis_town_hall_f1, PLACE_TYPE_innoxia_fields_elis_town_hall_f1_stairs)]
 			[#meraxis.setLocation(pc)]
@@ -97,12 +97,12 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Introduction]]></responseTitle>
+				<responseTitle><![CDATA[介绍]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_introduced))
-						You've already introduced yourself to Arion.
+						你已经向阿里昂介绍过你自己了。
 					#ELSE
-						Tell Arion who you are.
+						告诉阿里昂你的身份.
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -122,12 +122,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_introduced)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Duties]]></responseTitle>
+				<responseTitle><![CDATA[职责]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_duties))
-						You've already asked Arion about what he and Minotallys do here.
+						你已经问过阿里昂他和米诺塔莉丝在这里做什么.
 					#ELSE
-						Ask Arion what he and Minotallys do here.
+						问问阿里昂和米诺塔莉丝在这里做些什么.
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -150,14 +150,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_introduced)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[3]]></index>
-				<responseTitle><![CDATA[Paintings]]></responseTitle>
-				<responseTooltip><![CDATA[
-					#IF(flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_paintings))
-						You've already asked Arion about the paintings which hang on the walls around you.
+				<responseTitle><![CDATA[画作]]></responseTitle>
+				<responseTooltip><![CDATA[#IF(flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_paintings))
+						你已经向阿里昂打听过附近的墙上挂的这些画作了。
 					#ELSE
-						Ask Arion about the paintings which hang on the walls around you.
-					#ENDIF
-				]]></responseTooltip>
+						询问阿里昂你附近的墙上挂的画作的信息。
+					#ENDIF]]></responseTooltip>
 				<nextDialogue><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_paintings))
 						null
@@ -178,12 +176,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_introduced)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[4]]></index>
-				<responseTitle><![CDATA[Rooms]]></responseTitle>
+				<responseTitle><![CDATA[房间]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_rooms))
-						You've already asked Arion about the rooms found in this tower.
+						你已经向阿里昂打听过塔楼里的这些房间了。
 					#ELSE
-						Ask Arion what all of the rooms are for on this level of the tower.
+						询问阿里昂塔楼这一层的所有房间是做什么的？
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -206,12 +204,12 @@
 				<availabilityConditional><![CDATA[[#flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_introduced)]]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[5]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
+				<responseTitle><![CDATA[继续]]></responseTitle>
 				<responseTooltip><![CDATA[
 					#IF(!flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_duties) || !flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_paintings) || !flags.hasFlag(FLAG_innoxia_minotallys_arion_talk_rooms))
-						You need to wait for Minotallys to finish her business before being able to meet her, so you should spend the time talking with Arion.
+						你得等到米诺塔莉丝忙完她的活儿才能见她，先跟阿里昂打发时间吧。
 					#ELSE
-						Now that Minotallys has finished her business, you can finally meet her...
+						米诺塔莉丝忙完了手里的活儿，你终于可以见她了……
 					#ENDIF
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[
@@ -226,7 +224,7 @@
 	</scene>
 	
 	<scene id="arion_talking">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content/>
 		<secondsPassed minutes="true"><![CDATA[3]]></secondsPassed>
 		<continuesDialogue>true</continuesDialogue>
@@ -241,7 +239,7 @@
 			[#arion.setLocation(pc)]
 			[#minotallys.setLocation(pc)]
 		]]></preParsingEffects>
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content folderPath="txt/quests/main/minotallys_meeting">MINOTALLYS_START</content>
 		<secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -250,8 +248,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Decline]]></responseTitle>
-				<responseTooltip><![CDATA[Politely decline Minotallys's offer.]]></responseTooltip>
+				<responseTitle><![CDATA[回绝]]></responseTitle>
+				<responseTooltip><![CDATA[礼貌回绝米诺塔莉丝的邀请。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_minotallys_drink]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/quests/main/minotallys_meeting', 'MINOTALLYS_START_DECLINE'))]
@@ -261,8 +259,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Drink]]></responseTitle>
-				<responseTooltip><![CDATA[Drink the glass of what is quite clearly Minotallys's breast milk.]]></responseTooltip>
+				<responseTitle><![CDATA[饮用]]></responseTitle>
+				<responseTooltip><![CDATA[喝一杯母乳，显而易见是米诺塔莉丝的。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_minotallys_drink]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextStartStringBuilder(game.parseFromFile('txt/quests/main/minotallys_meeting', 'MINOTALLYS_START_DRINK'))]
@@ -274,7 +272,7 @@
 	</scene>
 	
 	<scene id="minotallys_drink">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content folderPath="txt/quests/main/minotallys_meeting">MINOTALLYS_START_DRINK_END</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>true</continuesDialogue>
@@ -283,15 +281,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Confirm]]></responseTitle>
-				<responseTooltip><![CDATA[Confirm Meraxis's explanation by telling Minotallys and Arion that Lyssieth has sent you to help deal with Lunette.]]></responseTooltip>
+				<responseTitle><![CDATA[确认]]></responseTitle>
+				<responseTooltip><![CDATA[向米诺塔莉丝和阿里昂确认梅拉克西丝的说辞，莉西丝派我来帮忙对付露内特。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_minotallys_explain]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 	
 	<scene id="minotallys_explain">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content folderPath="txt/quests/main/minotallys_meeting">MINOTALLYS_EXPLAIN</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>true</continuesDialogue>
@@ -300,15 +298,15 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Themiscyra?]]></responseTitle>
-				<responseTooltip><![CDATA[Ask Minotallys what's so important about this town of 'Themiscyra'.]]></responseTooltip>
+				<responseTitle><![CDATA[特弥斯库拉？]]></responseTitle>
+				<responseTooltip><![CDATA[询问米诺塔莉丝这个名叫“特弥斯库拉”的小镇为什么这么重要。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_minotallys_themiscyra]]></nextDialogue>
 			</response>
 		</responses>
 	</scene>
 	
 	<scene id="minotallys_themiscyra">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content folderPath="txt/quests/main/minotallys_meeting">MINOTALLYS_THEMISCRYA</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>true</continuesDialogue>
@@ -317,8 +315,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Agree]]></responseTitle>
-				<responseTooltip><![CDATA[Agree to Arion's suggestion and say that you and Meraxis will travel to Themiscyra to see how they're faring against Lunette.]]></responseTooltip>
+				<responseTitle><![CDATA[赞同]]></responseTitle>
+				<responseTooltip><![CDATA[赞同阿里昂的建议，表示你和梅拉克西丝会去特弥斯库拉游历，观察他们和露内特的战况如何。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_minotallys_themiscyra_agree]]></nextDialogue>
 				<effects><![CDATA[
 					[#game.appendToTextEndStringBuilder(pc.setQuestProgress(QUEST_LINE_MAIN, QUEST_MAIN_3_D_TO_THEMISCYRA))]
@@ -330,7 +328,7 @@
 	</scene>
 	
 	<scene id="minotallys_themiscyra_agree">
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content folderPath="txt/quests/main/minotallys_meeting">MINOTALLYS_THEMISCRYA_AGREE</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>true</continuesDialogue>
@@ -339,8 +337,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Downstairs]]></responseTitle>
-				<responseTooltip><![CDATA[Head back down to the ground floor.]]></responseTooltip>
+				<responseTitle><![CDATA[下楼]]></responseTitle>
+				<responseTooltip><![CDATA[回到一楼。]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_quests_main_minotallys_meeting_minotallys_end]]></nextDialogue>
 			</response>
 		</responses>
@@ -352,7 +350,7 @@
 			[#meraxis.returnToHome()]
 			[#meraxis.hourlyUpdate()]
 		]]></preParsingEffects>
-		<title><![CDATA[Meeting Minotallys]]></title>
+		<title><![CDATA[与米诺塔莉丝会面]]></title>
 		<content folderPath="txt/quests/main/minotallys_meeting">MINOTALLYS_END</content>
 		<secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
 		<continuesDialogue>false</continuesDialogue>
@@ -361,8 +359,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Continue]]></responseTitle>
-				<responseTooltip><![CDATA[Now that your meeting with Minotallys is over, you wonder where to go to next...]]></responseTooltip>
+				<responseTitle><![CDATA[继续]]></responseTitle>
+				<responseTooltip><![CDATA[与米诺塔莉丝的会面结束后，你想知道接下来该去哪里……]]></responseTooltip>
 				<nextDialogue><![CDATA[default]]></nextDialogue>
 			</response>
 		</responses>

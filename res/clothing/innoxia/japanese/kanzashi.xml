@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[kanzashi]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[kanzashi]]></namePlural>
-		<description><![CDATA[A traditional Japanese hair ornament, composed primarily of folded cloth flowers.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[簪花]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[簪花]]></namePlural>
+		<description><![CDATA[一个日本传统发饰，主要由折叠的布花组成。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>HAIR</slot>
@@ -30,11 +29,11 @@
 		
 		<incompatibleSlots/>
 		
-		<primaryColours values ="KIMONO"/>
+		<primaryColours values="KIMONO"/>
 		<primaryColoursDye values="ALL"/>
 		<secondaryColours values="JUST_WHITE"/>
 		<secondaryColoursDye values="ALL"/>
-		<tertiaryColours values ="KIMONO"/>
+		<tertiaryColours values="KIMONO"/>
 		<tertiaryColoursDye values="ALL"/>
 	
 		<itemTags>
@@ -44,26 +43,20 @@
 
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(tie)] up [npc.her] [npc.hair(true)] and [npc.verb(fasten)] the kanzashi in place.
-		]]></self>
-		<other> <![CDATA[
-			[npc.Name] [npc.verb(tie)] up [npc2.namePos] [npc2.hair(true)] and [npc.verb(fasten)] the kanzashi in place.
-		]]></other>
+[npc.Name]把[npc.her]的头发绑起来，然后别上了簪花。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的头发扎起来，然后别上了簪花。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(scrunch)] up [npc2.namePos] [npc2.hair(true)] and [npc.verb(fasten)] the kanzashi in place.
-		]]></otherRough>
+[npc.Name]粗暴地拽起[npc2.namePos]的头发，然后将簪子固定在位。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(slide)] [npc.her] kanzashi out of [npc.her] [npc.hair(true)].
-		]]></self>
+[npc.Name]从[npc.her]的头发中取出了簪花。]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(slide)] [npc2.namePos] kanzashi out of [npc2.her] [npc2.hair(true)].
-		]]></other>
+[npc.Name]将[npc2.namePos]的簪花从她的头发中取出。]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] kanzashi out of [npc2.her] [npc2.hair(true)].
-		]]></otherRough>
+[npc.Name]粗暴地从[npc2.namePos]的头发中拔出簪花。]]></otherRough>
 	</displacementText>
 	
 </clothing>

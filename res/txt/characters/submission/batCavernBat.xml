@@ -1,162 +1,162 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="ATTACK_REPEAT_PREGNANCY_REACT"><![CDATA[
 	<p>
-		In your peripheral vision, you suddenly see a figure swooping down towards you from high up above. Turning towards them, you ready yourself for a fight, and within just a moment, the familiar figure of [npc.name] lands just in front of you.
+		你视野边缘突然看到一个身影从高处俯冲而下，你转身准备迎战，一瞬之后，你发现[npc.name]熟悉的身影降落在你面前。
 	</p>
 	<p>
-		[npc.speech(Well, well, well!)] [npc.she] states, placing one of [npc.her] [npc.hands] on [npc.her] [npc.hips+], while the other strokes [npc.her] rounded belly. [npc.speech(Take a look at what you did! See? You got me pregnant! That's right, you've gone and got me knocked up! I'm carrying your kids now, see, see, see?)]
+		[npc.speech(别，别，别！)][npc.she]念叨着，一只[npc.her][npc.hands]按在[npc.her][npc.hips+]上，另一只轻抚着[npc.her]的大肚子。[npc.speech(看看你都干了什么！看见了吗？你把我搞怀孕了！对，你搞大我的肚子就跑了！我现在怀着你的孩子，你看，看，看啊？)]
 	</p>
 	<p>
-		You look down at [npc.her] swollen belly, but before you can make a comment, the talkative [npc.race] continues chattering away, [npc.speech(So, now, I was talking with my friends, and we were all in agreement. You're going to have to give me some money. I'm going to need to buy clothes, food, all that stuff, y'know? And it's kind of unfair that I have to pay for all of that. I mean, this is kinda all your fault, not pulling out and everything, so you should really pay me for all that. Oh, oh, and also, if you don't, then I'm gonna have to kinda make you. My friends and I agreed, you see? We decided that I'd be well within my rights to force you to give me that money. I was just kinda being nice briefly explaining all this to you, but I'm going to have to put my foot down now. You hand over that money, and I'll be on my way, ok? If you don't, I'm going to attack you and make you! And you don't want that, do you? Of course you don't! To think, the mother of your children, attacking you just so that [npc.she] can get some money for our kids! That's kind of wrong, don't you think? So hand it over now, ok. Five hundred flames. That should do it. My friends and I agreed, you see? That's far less than others would ask, so just hand it over, ok? Ok?)]
+		你看着[npc.her]挺着大肚子，但在你开口询问之前，[npc.race]接着滔滔不绝：[npc.speech(这么说吧，我和朋友们商量过，我们都觉得你得给我钱。我需要买穿的、吃的，总之，所有这些东西，你都懂的吧？问题是，我觉得这有点不公平，我得为这一切买单。我是说，这都是你的错，不采取避孕措施什么的，所以我觉得你应该负担这些费用。另外，如果你不愿意给钱，我可能就不得不采取行动了。我和朋友们已经商量好了，我们一致同意我完全有权利强迫你给我钱。虽然刚才我还客气地跟你解释，但现在我必须坚定一点了。如果你能把钱交出来，我就离开，好吗？如果你不愿意，我可能就要攻击你，逼你交出来！当然，你可不想这样，对吗？当然不想！毕竟，想想看，你孩子的母亲，因为要为我们的孩子拿点钱用，而攻击孩子的父亲！你不觉得这样不对吗？所以现在就拿钱，好吗？我只需要五百火币，差不多够了。我和朋友们商量过，你能懂吧？而且这比其他人要求的要少得多，所以快点拿钱，好吗？好吗？)]
 	</p>
 	<p>
-		With [npc.name]'s fast-paced rant finally at an end, you're given a moment in which to think about your situation. You can tell that [npc.name] is willing to fight you in order to get some money, so you could choose to defend yourself, or just hand over the cash that [npc.she]'s asking for...
+		随着[npc.name]一番独角戏般的唇枪舌剑落幕，你缓了一下，思考自己的处境。你明白过来：为了拿到钱，[npc.name]愿意和你战斗。你可以选择为自己辩护，或者按照要求拿钱给[npc.she]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ATTACK_REPEAT_PREGNANCY"><![CDATA[
 	<p>
-		In your peripheral vision, you suddenly see a figure swooping down towards you from high up above. Turning towards them, you ready yourself for a fight, and within just a moment, the familiar figure of [npc.name] lands just in front of you.
+		你视野边缘突然看到一个身影从高处俯冲而下，你转身准备迎战，一瞬之后，你发现[npc.name]熟悉的身影降落在你面前。
 	</p>
 	<p>
-		[npc.speech(Well, well, well!)] [npc.she] states, placing one of [npc.her] [npc.hands] on [npc.her] [npc.hips+], while the other strokes [npc.her] rounded belly. [npc.speech(Look who it is! I'm still carrying our kids around, see?)]
+		[npc.speech(别，别，别！)][npc.she]念叨着，一只[npc.hands]按在[npc.her][npc.hips+]上，另一只轻抚着[npc.her]的大肚子。[npc.speech(看看这是谁啊！我还怀着我们的孩子呢，看到没？)]
 	</p>
 	<p>
-		You look down at [npc.her] swollen belly, but before you can make a comment, the talkative [npc.race] continues chattering away, [npc.speech(So, now, I was talking with my friends, and we were all in agreement. You're going to have to give me some money. I'm going to need to buy clothes, food, all that stuff, y'know? And it's kind of unfair that I have to pay for all of that. I mean, this is kinda all your fault, not pulling out and everything, so you should really pay me for all that. Oh, oh, and also, if you don't, then I'm gonna have to kinda make you. My friends and I agreed, you see? We decided that I'd be well within my rights to force you to give me that money. I was just kinda being nice briefly explaining all this to you, but I'm going to have to put my foot down now. You hand over that money, and I'll be on my way, ok? If you don't, I'm going to attack you and make you! And you don't want that, do you? Of course you don't! To think, the mother of your children, attacking you just so that [npc.she] can get some money for our kids! That's kind of wrong, don't you think? So hand it over now, ok. Five hundred flames. That should do it. My friends and I agreed, you see? That's far less than others would ask, so just hand it over, ok? Ok?)]
+		你看着[npc.her]挺着大肚子，但在你开口询问之前，[npc.race]接着滔滔不绝：[npc.speech(这么说吧，我和朋友们商量过，我们都觉得你得给我钱。我需要买穿的、吃的，总之，所有这些东西，你都懂的吧？问题是，我觉得这有点不公平，我得为这一切买单。我是说，这都是你的错，不采取避孕措施什么的，所以我觉得你应该负担这些费用。另外，如果你不愿意给钱，我可能就不得不采取行动了。我和朋友们已经商量好了，我们一致同意我完全有权利强迫你给我钱。虽然刚才我还客气地跟你解释，但现在我必须坚定一点了。如果你能把钱交出来，我就离开，好吗？如果你不愿意，我可能就要攻击你，逼你交出来！当然，你可不想这样，对吗？当然不想！毕竟，想想看，你孩子的母亲，因为要为我们的孩子拿点钱用，而攻击孩子的父亲！你不觉得这样不对吗？所以现在就拿钱，好吗？我只需要五百火币，差不多够了。我和朋友们商量过，你能懂吧？而且这比其他人要求的要少得多，所以快点拿钱，好吗？好吗？)]
 	</p>
 	<p>
-		With [npc.name]'s fast-paced rant finally at an end, you're given a moment in which to think about your situation. You can tell that [npc.name] is willing to fight you in order to get some money, so you could choose to defend yourself, or just hand over the cash that [npc.she]'s asking for...
+		随着[npc.name]一番独角戏般的唇枪舌剑落幕，你缓了一下，思考自己的处境。你明白过来：为了拿到钱，[npc.name]愿意和你战斗。你可以选择为自己辩护，或者按照要求拿钱给[npc.she]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ATTACK_REPEAT"><![CDATA[
 	<p>
-		In your peripheral vision, you suddenly see a figure swooping down towards you from high up above. Turning towards them, you ready yourself for a fight, and within just a moment, the familiar figure of [npc.name] lands just in front of you.
+		你视野边缘突然看到一个身影从高处俯冲而下，你转身准备迎战，一瞬之后，你发现[npc.name]熟悉的身影降落在你面前。
 	</p>
 	<p>
-		[npc.speech(Well, well, well!)] [npc.she] states, placing [npc.her] [npc.hands] on [npc.her] [npc.hips+] and striking a confident pose. [npc.speech(Look who it is! You didn't have enough of me the last time, huh?)]
+		[npc.speech(看啊，看啊！)][npc.she]说着，一边把[npc.her][npc.hands]放在[npc.her][npc.hips+]上，摆弄出自信的姿态。[npc.speech(看看这是谁！你上次还没和我玩够，是吗？)]
 	</p>
 	<p>
-		Before you can make a comment, the talkative [npc.race] continues chattering away, [npc.speech(So you thought you'd come back into my territory, hmm? I mean, not that it's really <i>my</i> territory, there are loads of us living up in the roosts, but I mean that this is the place that I call home. And you came walking past, obviously up to no good, and so I thought to myself, 'Hmmm, that person looks like they're up to no good!'. And so then I swooped down to see who it was, and it was you! And I know that <i>you're</i> up to no good, so then I thought, 'Hmmmmmm, I'd better put them in their place!'. Y'know what I mean? I can't just be watching you walk past and choose not to do anything! That would make me, like, irresponsible or something! So now I'm here, and you're there, and I'm gonna have to teach you a lesson! My friends and I were talking about this sort of thing just the other day, y'know? We were saying how we can't just let people go without trying to confront them first! So here I am, confronting you! And now you're going to have to pay me. Yes, that's right, pay me! Five hundred flames, to be exact! So you pay me, or else I'm gonna make you pay! Funny how that works, huh? Anyway, what's it going to be? I tried to keep this brief, as I'm very busy right now, so I'd appreciate it if you could do the same. Just hand over your money, and that'll be that, ok?)]
+		在你开口询问之前，[npc.race]便开始滔滔不绝：[npc.speech(所以你觉得你可以就这样回来我的领地？我是说，虽然这不是真的<i>我的</i>领地，这里还住着我们许多人，但是这是我称之为家的地方。然后你就这样，径直走了进来，明显没什么好事，所以我就想，‘嗯？那个人看起来居心不良！’。于是我就飞下来准备看看到底是啥，结果竟然是你！而我知道<i>你</i>没安好心，所以我想，‘哼，我得看好他了！’。你懂吧？我不能就这样把你直接放进来！那样我就好像有点不负责任，还是什么别的了！现在我们都在这，我得给你好好上堂课了！我朋友前几天才刚刚和我聊过这种事，知道不？我们一致决定不能没和别人谈过话就放他去了！所以现在我在和你面谈！而你要给我交钱。没错，给钱！正好五百火币！要么你主动付钱，要么我手动让你给钱！很有趣对吧？总而言之，我尽量节省时间，因为我现在很忙，所以如果你也能和我一样就好了。乖乖把钱拿出来，你就可以过去了，懂吧？)]
 	</p>
 	<p>
-		With [npc.name]'s fast-paced rant finally at an end, you're given a moment in which to think about your situation. You can tell that [npc.name] is willing to fight you in order to get some money, so you could choose to defend yourself, or just hand over the cash that [npc.she]'s asking for...
+		随着[npc.name]一番独角戏般的唇枪舌剑落幕，你缓了一下，思考自己的处境。你明白过来：为了拿到钱，[npc.name]愿意和你战斗。你可以选择为自己辩护，或者按照要求拿钱给[npc.she]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ATTACK"><![CDATA[
 	<p>
-		In your peripheral vision, you suddenly see a figure swooping down towards you from high up above. Turning towards them, you ready yourself for a fight, and within just a moment, [npc.a_fullRace(true)] lands just in front of you.
+		你视野边缘突然看到一个身影从高处俯冲而下，你转身准备迎战，一瞬之后，你发现[npc.a_fullRace(true)]降落在你面前。
 	</p>
 	<p>
-		[npc.speech(Well, well, well!)] [npc.she] states, placing [npc.her] [npc.hands] on [npc.her] [npc.hips+] and striking a confident pose. [npc.speech(A trespasser! What kind of business do you have down here?!)]
+		[npc.speech(看啊，看啊！)][npc.she]说着，一边把[npc.her][npc.hands]按在[npc.her][npc.hips+]上，摆弄出自信的姿态。[npc.speech(一个过路人！你来这是有什么事？！)]
 	</p>
 	<p>
-		Before you can even start to answer, the talkative [npc.race] continues chattering away, [npc.speech(So you thought you'd just waltz right into my territory, hmm? I mean, not that it's really <i>my</i> territory, there are loads of us living up in the roosts, but I mean that this is the place that I call home. And you came walking past, obviously up to no good, and so I thought to myself, 'Hmmm, that person looks like they're up to no good!'. And so then I swooped down to see who it was, and it was you! And I can just tell from looking at you that you're up to no good, so then I thought, 'Hmmmmmm, I'd better put them in their place!'. Y'know what I mean? I can't just be watching you walk past and choose not to do anything! That would make me, like, irresponsible or something! So now I'm here, and you're there, and I'm gonna have to teach you a lesson! My friends and I were talking about this sort of thing just the other day, y'know? We were saying how we can't just let people go without trying to confront them first! So here I am, confronting you! And now you're going to have to pay me. Yes, that's right, pay me! Five hundred flames, to be exact! So you pay me, or else I'm gonna make you pay! Funny how that works, huh? Anyway, what's it going to be? I tried to keep this brief, as I'm very busy right now, so I'd appreciate it if you could do the same. Just hand over your money, and that'll be that, ok?)]
+		在你开口回答之前，[npc.race]便开始滔滔不绝起来：[npc.speech(所以你觉得你可以就这样回来我的领地？我是说，虽然这不是真的<i>我的</i>领地，这里还住着我们许多人，但是这是我称之为家的地方。然后你就这样，径直走了进来，明显没什么好事，所以我就想，‘嗯？那个人看起来居心不良！’。于是我就飞下来准备看看到底是啥，结果竟然是你！而你看起来就没安好心，所以我想，‘哼，我得看好他了！’。你懂吧？我不能就这样把你直接放进来！那样我就好像有点不负责任，还是什么别的了！现在我们都在这，我得给你好好上堂课了！我朋友前几天才刚刚和我聊过这种事，知道不？我们一致决定不能没和别人谈过话就放他去了！所以现在我在和你面谈！而你要给我交钱。没错，给钱！正好五百火币！要么你主动付钱，要么我手动让你给钱！很有趣对吧？总而言之，我尽量节省时间，因为我现在很忙，所以如果你也能和我一样就好了。乖乖把钱拿出来，你就可以过去了，懂吧？)]
 	</p>
 	<p>
-		With [npc.name]'s fast-paced rant finally at an end, you're given a moment in which to think about your situation. You can tell that [npc.name] is willing to fight you in order to get some money, so you could choose to defend yourself, or just hand over the cash that [npc.she]'s asking for...
+		随着[npc.name]一番独角戏般的唇枪舌剑落幕，你缓了一下，思考自己的处境。你明白过来：为了拿到钱，[npc.name]愿意和你战斗。你可以选择为自己辩护，或者按照要求拿钱给[npc.she]……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ATTRACTED_TO_PLAYER"><![CDATA[
 	<p>
-		From the way [npc.she] keeps on glancing hungrily down at your body, you can tell that [npc.name] is attracted to you. If you were to fight [npc.herHim], and lose, [npc.she]'d be sure to force [npc.herself] on you...
+		从[npc.she]炙热的目光中，你可以看出[npc.name]对你的身体很有兴趣。如果你向[npc.herHim]发起战斗而落败的话，[npc.she]一定不会让[npc.herself]放过你的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="NOT_ATTRACTED_TO_PLAYER"><![CDATA[
 	<p>
-		You can tell that [npc.name] isn't attracted to you. If you were to fight [npc.herHim], and lose, [npc.she]'d most likely only be interested in stealing your flames...
+		你可以看出[npc.name]对你并不感兴趣。如果你向[npc.herHim]发起战斗而落败的话，[npc.she]大概只会偷走你的火币……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="ATTACK_PAID_OFF"><![CDATA[
 	<p>
-		You really don't want to fight [npc.name], and take a step backwards as you agree to [npc.her] demands. [pc.speech(Ok, ok. I'll give you your money. There's no need for violence, ok?)]
+		你不想和[npc.name]发生冲突，所以选择答应[npc.her]的要求。[pc.speech(好吧，好吧。我这就给你钱，没有使用暴力的必要，对吧？)]
 	</p>
 	<p>
-		[npc.speech(Good, that's good!)] [npc.name] replies, stepping forwards and holding out [npc.her] [npc.hands]. [npc.speech(So hand it over, ok? I need that money, or else I'll have failed to confront you! And I can't go back to my friends and say that, now, can I? So give me the money! That's right, five hundred flames!)]
+		[npc.speech(好，好极了！)][npc.name]答道，一边往前走，伸出[npc.her]的[npc.hands]。[npc.speech(拿过来吧，懂吧？我需要这笔钱，不然我就算谈判失败了！我不能就这样回去面对我的朋友们，对吗？所以把钱拿过来！就是这样，五百火币！)]
 	</p>
 	<p>
-		Wanting to put an end to the [npc.race]'s incessant chattering, you quickly give [npc.herHim] the five hundred flames. As soon as you've handed the money over, [npc.she] lets out a happy little giggle, before turning around and quickly flying off in the direction from whence [npc.she] came.
+		为了让这唠叨的[npc.race]闭上嘴，你马上交给了[npc.herHim]那五百火币。拿到手后[npc.she]高兴地低声笑了出来，接着就即刻转身，快速向先前[npc.she]来的方向飞了回去。
 	</p>
 	<p>
-		You let out a sigh of relief as you see [npc.herHim] go, and, happy that you were able to avoid a fight, you continue on your way...
+		你看见[npc.herHim]走掉，如释重负地叹了口气。你很高兴没引起一场冲突。你继续向前走去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ATTACK_OFFER_BODY"><![CDATA[
 	<p>
-		Wanting to avoid a fight, and unwilling to hand over any of your money, you decide to do the only other thing you can think of, and step forwards smiling seductively at [npc.name]. 
-		 [pc.speech(There's no need to fight. If you're looking for a bit of fun, all you had to do was ask...)]
+		你不想引发冲突，也不愿交出这笔钱，于是决定做你唯一能想到的事。你走上前，挑逗地对着[npc.name]微笑。
+		[pc.speech(打斗有什么必要呢，如果你想找点乐子，只要开口就好了……)]
 	</p>
 	<p>
-		[npc.speech(Oh really?)]
-		 [npc.name] replies, stepping forwards in an intimidating manner.
-		 You remain in place, putting on your most seductive look and trying to make yourself as small as possible as you attempt to entice [npc.name] into using you for some sexual relief.
+		[npc.speech(哦？真的是这样吗？)]
+		[npc.name]说着，一边向前走来，令你感到一阵胆寒。
+		你站在原地，为了引诱[npc.name]，摆弄出你最妩媚的表情，让自己看起来尽可能的娇小诱人。
 	</p>
 	<p>
-		Much to your delight, your would-be attacker reaches up and grabs you by the [pc.arms], before pulling you forwards into a tight embrace.
-		 Pressing [npc.her] [npc.lips] against yours, [npc.she] thrusts [npc.her] [npc.tongue] into your mouth, aggressively kissing you for a moment before pulling back, growling,
-		 [npc.speech(You're going to be a good [pc.girl] now, aren't you bitch?)]
+		令你欣喜的是，你没有被攻击，而是被抓住[pc.arms]拉了过去，紧紧地抱着。
+		[npc.her]的[npc.lips]紧压着你的，[npc.she]猛地把[npc.tongue]伸进你的嘴里，粗暴地亲吻你后往后拉开，低声咆哮着，
+		[npc.speech(你会做个好[pc.girl]的，对吗？婊子。)]
 	</p>
 	<p>
-		Whimpering in the affirmative, you surrender yourself to [npc.name]'s dominant touch, allowing yourself to be used as payment for trespassing on [npc.her] territory...
+		你呜咽着表示肯定，屈服在[npc.name]的支配之下，用自己的身体支付了通过[npc.her]的领地的过路费……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENEMY_DEFEATED_WANTS_SEX"><![CDATA[
 	<p>
-		[npc.Name] collapses to the floor, letting out a defeated sigh as [npc.she] gazes up at you. Looking down at the vanquished [npc.race] before you, you see that [npc.she]'s got a desperately hungry look in [npc.her] eyes. Before you can say anything, [npc.she] suddenly #IF(npc.isTaur())starts bucking [npc.her] hips in a humping motion,#ELSEreaches down to [npc.her] crotch and starts stroking [npc.herself],#ENDIF making pitiful little whining noises as [npc.she] squirms on the floor.
+		[npc.Name]瘫倒在地，抬头望向你，泄气地发出一声叹息。你俯视着眼前战败的[npc.race]，感受到[npc.she]饥渴难耐的神情与欲火闪动的目光。你还没来得及开口，[npc.she]便忽然#IF(npc.isTaur())开始耸动腰胯，做出交合般的动作，#ELSE伸手探向胯下，开始抚摸自己，#ENDIF[npc.she]一边在地上来回扭动，一边可怜地呜叫着。
 	</p>
 	<p>
-		[npc.speech(Aaah! What are you waiting for?! Come fuck me!)] [npc.she] pleads, biting [npc.her] [npc.lip] as [npc.she] continues touching [npc.herself].
+		[npc.speech(啊啊！你在等什么？！正面上我啊！)][npc.she]恳求你，咬着[npc.her]的[npc.lip]说，一边继续抚摸自己。
 	</p>
 	<p>
-		You wonder if you should indulge [npc.her] request. After all, [npc.she] <i>was</i> going to do the same to you, and [npc.she] quite clearly wants it. Then again, maybe it's best to just leave...
+		你在想自己是否要满足[npc.her]的请求。毕竟，[npc.she]<i>原本</i>就要这样对你做这种事，而且很显然，[npc.she]饥渴难耐。但话又说回来，也许直接离开才是最好的选择……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENEMY_DEFEATED"><![CDATA[
 	<p>
-		[npc.Name] collapses to the floor, letting out a defeated sigh as [npc.she] gazes up at you. Looking down at the vanquished [npc.race] before you, you see that [npc.she]'s got a desperate look of regret in [npc.her] eyes. Making pitiful little whining noises, [npc.she] tries to shuffle away from you, clearly worried about what your intentions might be.
+		[npc.Name]战败倒下，[npc.she]的双眼凝视着你，发出一声叹息。看着眼前战败的[npc.race]，你能感受到[npc.she]后悔万分的眼神。[npc.she]发出呜咽声，显然害怕你会趁人之危，于是试图从你身旁逃开。
 	</p>
 	<p>
-		[npc.speech(J-Just take my money and leave me alone!)] [npc.she] pleads, throwing some flames at your feet.
+		[npc.speech(钱-钱都给你，你快走吧！)][npc.she]恳求着你，并把一些火币扔到你的脚边。
 	</p>
 	<p>
-		You wonder if you should do as [npc.she] says, and leave [npc.herHim] alone. Then again, you <i>could</i> take advantage of [npc.her] weakened, vulnerable body...
+		你在想是否应该按[npc.she]说的做， 不管[npc.herHim]直接离开。但话又说回来，你完全<i>可以</i>趁现在享受一下[npc.her]脆弱的肉体……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENEMY_DEFEATED_SUBMIT"><![CDATA[
 	<p>
-		You really aren't sure what to do next, and start to feel pretty uncomfortable with the fact that you just beat up this poor [npc.race]. Leaning down, you do the first thing that comes into your mind, and start apologising. [pc.speech(Sorry... I was just trying to defend myself, you know... Erm... Is there anything I can do to make it up to you?)]
+		你手足无措地站在原地。回想起刚刚被击败的[npc.race]，你心里有些不舒服。你俯下身，第一时间开始向对方道歉。[pc.speech(抱歉……我刚刚只是想自卫来着，你应该明白吧……呃……我能怎么做来补偿你吗？)]
 	</p>
 	<p>
-		For a moment, a look of confusion crosses over [npc.name]'s face, but, as [npc.she] sees that you're genuinely troubled by what you've just done, an evil grin crosses [npc.her] face. [npc.She] stands up, and, grabbing you by the [pc.arm], roughly pulls you into [npc.her] as [npc.she] growls, [npc.speech(How about you start by apologising properly?!)]
+		[npc.name]浮现出困惑的神情。[npc.she]看到了你似乎真的为所作所为感到愧疚，却露出邪恶的笑容。[npc.she]站了起来，粗暴地抓住你的[pc.arm]，想要把你拉进[npc.her]怀里，咆哮着，[npc.speech(你这妓女，好好向我道歉！)]
 	</p>
 	<p>
-		[npc.Name]'s strong, dominant grip on your [pc.arm] causes you to let out a lewd little moan, and your submissive nature takes over as you do as [npc.she] asks. [pc.speech(I'm really sorry! Please forgive me! I'll do anything! Anything you ask! Just please, don't be mad!)]
+		[npc.Name]用力抓着你的[pc.arm]， 让你轻轻发出一声呻吟。照[npc.she]说的做时，你顺从的本性占据主导。[pc.speech(我真的很抱歉！求你原谅我吧！我什么都会做的，只要你开口就行！只要你别生气！求你了！)]
 	</p>
 	<p>
-		[npc.Name] roughly yanks you forwards, and with a menacing growl, [npc.she] forces [npc.her] tongue into your mouth. You let out a muffled yelp as your opponent takes charge, but as you feel [npc.her] [npc.hands] reaching down to start roughly groping your ass, you realise that you couldn't be happier with how things have turned out...
+		[npc.Name]恶狠狠地低声咆哮着，俯身压向你，把[npc.her]的舌头伸进你的嘴里。见对方如此，你诧异地发出闷声的尖叫，但当[npc.her]用[npc.hands]开始粗鲁地揉捏你的屁股时，你意识到你很享受事情的走向……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

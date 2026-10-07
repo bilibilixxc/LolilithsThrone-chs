@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[Bone crush]]></name>
+	<name><![CDATA[碎骨猛击]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] powerful hyena jaws to deliver a bone-crushing bite to [npc.her] target, dealing formattedDamageInflicted damage.
+		使用[npc.her]强劲的狼颚对目标进行足以粉碎骨头的啃击，造成formattedDamageInflicted伤害。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -106,7 +106,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have a hyena face type.
+		仅适用于鬣狗面部的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -137,7 +137,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target's physique is less than half of the attacker's physique.
+		目标的体格要小于攻击者体格的一半。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -149,17 +149,17 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] powerful hyena jaws to deliver a bone-crushing bite to [npc2.name], dealing formattedDamageInflicted damage.
+		使用[npc.her]强劲的狼颚对[npc2.name]进行足以粉碎骨头的啃击，造成formattedDamageInflicted伤害。
 		#IF(!npc.isCoverableAreaExposed(CA_MOUTH))
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] mouth is blocked!)]
+			[style.italicsTerrible([npc.her]的啃击被抵挡住了，造成的伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] powerful hyena jaws to deliver a bone-crushing bite to [npc.her] target, dealing formattedDamageInflicted damage.
+		使用[npc.her]强劲的狼颚对目标进行足以粉碎骨头的啃击，造成formatted-DamageInflicted伤害。
 		#IF(!npc.isCoverableAreaExposed(CA_MOUTH))
-			 [style.italicsTerrible(Damage is reduced to 0 as [npc.her] mouth is blocked!)]
+			[style.italicsTerrible([npc.her]的啃击被抵挡住了，造成的伤害降为0！)]
 		#ENDIF
 	]]></movePredictionDescriptionNoTarget>
 	
@@ -175,17 +175,17 @@
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
 			#IF(!npc.isCoverableAreaExposed(CA_MOUTH))
-				As [npc.her] mouth is blocked, [npc.name] [npc.verb(fail)] to bite [npc2.name], and [npc.verb(end)] up doing no damage at all...
+				[npc.her]的啃击被挡住了，[npc.name]未能命中[npc2.name]，最终毫无伤害造成……
 			#ELSE
-				[npc.Name] [npc.verb(open)] [npc.her] mouth, and after letting out a hyena-like laugh, [npc.verb(lunge)] at [npc2.name] and [npc.verb(succeed)] in delivering a bone-crushing bite!
+				[npc.Name]张大嘴，令鬣狗似的笑声尽情倾泻，随即冲向[npc2.name]，成功送上一记碎骨猛击！
 			#ENDIF
 			formattedHealthDamage
 		]]></execute>
 		<critDescription><![CDATA[
-			[npc.NamePos] bone-crushing bite was extremely effective!
+			[npc.NamePos]的碎骨猛击造成了超出预期的效果！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] been crippled by the attack!
+			[npc2.Name]已被攻击的效果削弱！
 		]]></critEffectDescription>
 	</performMove>
 	

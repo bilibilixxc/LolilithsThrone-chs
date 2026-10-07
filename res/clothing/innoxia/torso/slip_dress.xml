@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>800</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[slip dress]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[slip dresses]]></namePlural>
-		<description><![CDATA[A long, silky, sleeveless dress.]]></description>
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[丝质吊带裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[丝质吊带裙]]></namePlural>
+		<description><![CDATA[一条很长的丝质无袖裙。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot> 
@@ -82,75 +82,74 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(step)] into the slip dress, before pulling it up around [npc.her] torso. Once in place, [npc.she] [npc.verb(reach)] back to zip [npc.herself] up.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(guide)] the slip dress up around [npc2.namePos] [npc2.legs], before pulling it up around [npc2.her] torso. Once it's in place, [npc.she] zips [npc2.name] up at the back.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the slip dress up around [npc2.namePos] [npc2.legs], before yanking it up around [npc2.her] torso. Once it's in place, [npc.she] quickly zips [npc2.name] up at the back.]]>
-	  </otherRough>
+		<self><![CDATA[
+			[npc.Name]踏入丝质吊带裙，将其拉到腰部周围。等到穿好，[npc.she]伸手到背后，自己拉上拉链。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将丝质吊带裙顺着[npc2.namePos]的[npc2.legs]向上拉，然后将其拉到[npc2.her]的躯干处。整理到位后，[npc.she]从后面为[npc2.name]拉上了拉链。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地拉起吊带裙套在[npc2.namePos]的[npc2.legs]上，猛地拽到腰间。整理到位后，[npc.she]迅速从背后为[npc2.name]拉上了拉链。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(unzip)] [npc.her] slip dress and [npc.verb(wriggle)] out of it as it drops to [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(unzip)] [npc2.namePos] slip dress and [npc.verb(pull)] it down off [npc2.her] body and past [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] hastily [npc.verb(unzip)] [npc2.namePos] slip dress and roughly [npc.verb(pull)] it down off [npc2.her] body and past [npc2.her] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开丝质吊带裙的拉链，扭动身子让它滑到[npc.her][npc.feet]边。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]拉开[npc2.namePos]丝质吊带裙的拉链，将裙子从[npc2.her]身上褪下，从[npc2.her]的[npc2.feet]上穿过。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]匆忙拉开[npc2.namePos]丝质吊带裙的拉链，粗暴地将其从[npc2.her]身上拽下，从[npc2.her]的[npc2.feet]上穿过。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the lower half of [npc.her] slip dress back down into the proper position.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the lower half of [npc2.namePos] slip dress back down into the proper position.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the lower half of [npc2.namePos] slip dress back down into the proper position.]]>
-	  </otherRough>
+		<self><![CDATA[
+			[npc.Name]将丝质吊带裙的下摆拉回正确的位置。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将[npc2.namePos]丝质吊带裙的下半部分重新拉回原位。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos]丝质吊带裙的下摆拉回正确的位置。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] up the lower half of [npc.her] slip dress.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] up the lower half of [npc2.namePos] slip dress.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(grab)] hold of the lower half of [npc2.namePos] slip dress, before roughly pulling it up.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]拉起丝质吊带裙的下摆。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]拉起[npc2.namePos]丝质吊带裙的下摆。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]吊带裙的下摆，粗暴地拉了起来。
+]]></otherRough>
 	</displacementText>
 
 	<displacementText type="PULLS_DOWN">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(shrug)] off the shoulder straps of [npc.her] slip dress and [npc.verb(allow)] the top half to fall down around [npc.her] waist.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the straps of [npc2.namePos] slip dress down off [npc2.her] shoulders, before tugging it down around [npc.her] waist.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the straps of [npc2.namePos] slip dress down off [npc2.her] shoulders, before forcefully yanking it down around [npc.her] waist.]]>
-	  </otherRough>
+		<self><![CDATA[
+			[npc.Name]耸耸肩，脱掉丝质吊带裙的肩带，上半部分垂落到腰部。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将[npc2.namePos]丝质无袖裙的肩带从[npc2.her]肩膀上滑下，然后拽到了腰部。
+]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地拽下[npc2.namePos]丝质吊带裙的肩带，然后激烈地将其拽到[npc.her]的腰部。
+	]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_DOWN">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the top half of [npc.her] slip dress back up into its proper position.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the top half of [npc2.namePos] slip dress back up into its proper position.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(yank)] the top half of [npc2.namePos] slip dress back up into its proper position.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将丝质吊带裙的上半部分拉回原位。
+]]></self>
+		<other><![CDATA[
+			[npc.Name]将[npc2.namePos]的丝质吊带裙上半部分拉回原位。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos]丝质吊带裙的上半部分猛力拉回原位。
+]]></otherRough>
 	</replacementText>
 	
 </clothing>

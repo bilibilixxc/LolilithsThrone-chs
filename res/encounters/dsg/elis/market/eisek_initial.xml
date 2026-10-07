@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	<additionalPlaceTypeTriggers>
 		<placeType>dsg_fields_elis_market_produce</placeType>
@@ -6,7 +6,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[Heckling A Dragon]]></name>
+			<name><![CDATA[与龙争斗]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(!flags.hasFlag(FLAG_dsg_elis_eisek_introduced) && eisek.getLocationPlaceType() == PLACE_TYPE_dsg_fields_elis_market_produce)
 					100

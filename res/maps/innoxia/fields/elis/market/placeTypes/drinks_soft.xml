@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Freshly Squeezed]]></name>
-	<tooltipDescription><![CDATA[A family of rabbit-morphs run this non-alcoholic drinks stall.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the Farmer's Market in Elis]]></virginityLossDescription>
+	<name><![CDATA[鲜榨小屋]]></name>
+	<tooltipDescription><![CDATA[兔化形一家经营者这个非酒水饮料摊位。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>drinks</svgName>
 	<colour>BASE_YELLOW_PALE</colour>

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>10</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Bubblegum Lollipop]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Bubblegum Lollipop]]></namePlural>
-		<description><![CDATA[A bright pink lollipop, with a little ball of gum at its core. Although it doesn't look out of the ordinary, it's somewhat unusual in the fact that it has an incredibly strong smell of bubblegum.]]></description> 
+		<determiner><![CDATA[一根]]></determiner>
+		<name><![CDATA[泡泡糖棒棒糖]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[泡泡糖棒棒糖]]></namePlural>
+		<description><![CDATA[一根亮粉色的棒棒糖，核心是一小颗泡泡糖。虽然它看起来没什么特别的，但却有一股令人难以置信的浓郁泡泡糖味。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/harpy/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/harpy/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">harpy_bubblegum_lollipop.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,7 +25,7 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[harpy]]></potionDescriptor>
+		<potionDescriptor><![CDATA[哈比]]></potionDescriptor>
 		<associatedRace>HARPY</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
@@ -35,13 +35,13 @@
 		</statusEffects>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[#ATTRIBUTE_DAMAGE_LUST.getFormattedValue(10)] to 'potion effects']]></line>
-			<line><![CDATA[[style.italicsSex(+3)] [style.italicsFeminine(femininity)]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_DAMAGE_LUST.getFormattedValue(10)]到“药剂效果” ]]></line>
+			<line><![CDATA[[style.italicsSex(+3)][style.italicsFeminine(女性化程度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(start)] to feel more feminine...
+				[npc.Name]开始感到变得更加女性化……
 			</p>
 			[#npc.incrementFemininity(3)]
 			[#npc.addPotionEffect(ATTRIBUTE_DAMAGE_LUST, 10)]
@@ -56,10 +56,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(push)] the bright pink lollipop past [npc.her] [npc.lips], causing [npc.her] taste buds to be overwhelmed by the sweet, sugary flavour of bubblegum. Before [npc.she] [npc.verb(know)] what [npc.sheIs] doing, [npc.sheIs] letting out soft, feminine moans, which soon turn into lewd whines as [npc.she] [npc.verb(find)] [npc.herself] unable to think about anything other than wildly sucking on the object in [npc.her] mouth.
+		[npc.Name]将亮粉色的棒棒糖推进[npc.her][npc.lips]里，使[npc.her]的味蕾被甜甜的、含糖的泡泡糖味道淹没。在[npc.she]意识到她在做什么之前，[npc.sheIs]发出了轻柔、妩媚的呻吟声，很快就变成了淫荡的呜咽声，因为[npc.she]发现[npc.herself]除了疯狂地吸吮[npc.her]嘴里的东西之外，什么都顾不上了。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(push)] the bright pink lollipop past [npc2.namePos] [npc2.lips], causing [npc2.her] taste buds to be overwhelmed by the sweet, sugary flavour of bubblegum. Before [npc2.she] [npc2.verb(know)] what [npc2.sheIs] doing, [npc2.nameIs] letting out soft, feminine moans, which soon turn into lewd whines as [npc2.she] [npc2.verb(find)] [npc2.herself] unable to think about anything other than wildly sucking on the object in [npc2.her] mouth.
+		[npc.Name]将亮粉色棒棒糖推进[npc2.namePos][npc2.lips]，让[npc2.her]的味蕾被泡泡糖的甜美糖味淹没。在[npc2.she]知道[npc2.she]在做什么之前，[npc2.nameIs]发出了轻柔、妩媚的呻吟，很快就变成了淫荡的呜咽，因为[npc2.she]发现[npc2.herself]除了疯狂地吸吮[npc2.her]嘴里的东西之外，什么都顾不上了。
 		]]></otherUse>
 	</useDescriptions>
 

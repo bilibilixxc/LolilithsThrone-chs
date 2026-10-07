@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 	
@@ -10,23 +10,23 @@
 		
 		<determiner><![CDATA[]]></determiner>
 		
-		<name><![CDATA[arcane sledgehammer]]></name>
+		<name><![CDATA[奥术大锤]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[arcane sledgehammers]]></namePlural>
+		<namePlural pluralByDefault="false"><![CDATA[奥术大锤]]></namePlural>
 		
-		<description><![CDATA[A large, long-handled hammer, bearing the brand 'Dominion Steel'. Despite the name of its manufacturer, this particular tool's head is made out of ethereal arcane energy instead of steel, thereby granting it superior durability and the ability to be easily reforged.]]></description> 
+		<description><![CDATA[一把长柄大锤，烙有 "御城区钢铁 "的印记。尽管锤子的制造商叫 "御城区钢铁"，但这把锤子的锤头是用虚无缥缈的奥术能量而不是钢铁制成的，因此具有超强的耐久性和易于重新锻造的能力。]]></description> 
 		
-		<attackDescriptor>hammer</attackDescriptor>
+		<attackDescriptor><![CDATA[锤击]]></attackDescriptor>
 		
-		<attackTooltipDescription><![CDATA[Hammer [npc2.name] with your sledgehammer.]]></attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用大锤锤击[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>COMMON</rarity> 
 		
 		<weaponSet/> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(heft)] [npc.her] sledgehammer, ready to swing it at a moment's notice.]]></equipText>
+		<equipText><![CDATA[[npc.Name]举起大锤，随时准备挥舞它。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] sledgehammer away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]放下[npc.her]的大锤。]]></unequipText>
 		
 		<imageName>sledgehammer.svg</imageName> 
 		
@@ -67,26 +67,26 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] sledgehammer at [npc2.name], grinning as the ethereal arcane head smacks into [npc2.her] body!
-		]]></hitText>
+		[npc.Name]挥舞大锤砸向[npc2.name]，虚幻的奥术锤头撞向了[npc2.her]的身体，[npc.Name]不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		Lunging out at [npc2.name] with [npc.her] sledgehammer, [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(see)] the ethereal arcane head connect with [npc2.her] body!
-		]]></hitText>
+		[npc.Name]用大锤砸向[npc2.name]，[npc.she]看到虚幻的奥术锤头直直撞向了[npc2.namePos]的身体，不禁咧嘴大笑！
+]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(swing)] at [npc2.name] with [npc.her] sledgehammer, causing [npc2.herHim] to stagger back as the ethereal arcane head whacks into [npc2.her] chest!
+		[npc.Name]舞着大锤挥向[npc2.name]，虚幻的奥术锤头砸穿了[npc2.her]的胸膛，使得[npc2.herHim]向后踉跄！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(swing)] [npc.her] sledgehammer at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.Name]舞着大锤挥向[npc2.name]，但最终没有击中[npc2.herHim]！
 		]]></missText>
 		<missText><![CDATA[
-		Lunging out at [npc2.name] with [npc.her] sledgehammer, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+[npc.Name]挥舞大锤砸向[npc2.name]，但最终没有击中[npc2.herHim]，[npc.her]发出一声沮丧的呼喊！
+]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(swing)] at [npc2.name] with [npc.her] sledgehammer, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.Name]前踏一步，用大锤猛地砸向[npc2.name]，却没能击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

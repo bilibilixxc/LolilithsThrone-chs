@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[lines]]></name>
+		<name><![CDATA[线条]]></name>
 		
-		<description><![CDATA[A series of flowing, swirling lines.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which consists of a series of flowing, swirling lines]]></bodyOverviewDescription> 
+		<description><![CDATA[流动盘旋的线条。]]></description> 
+		<bodyOverviewDescription><![CDATA[流动盘旋的线条纹身]]></bodyOverviewDescription> 
 		
 		<imageName>lines.svg</imageName> 
 		

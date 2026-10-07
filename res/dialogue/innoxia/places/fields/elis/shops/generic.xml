@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
 	<!-- Place type id: innoxia_fields_elis_shops_exit -->
@@ -14,8 +14,8 @@
 				<availabilityConditional><![CDATA[true]]></availabilityConditional>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
-				<responseTooltip><![CDATA[Exit the shopping precinct and head back out into the rest of Elis.]]></responseTooltip>
+				<responseTitle><![CDATA[离开]]></responseTitle>
+				<responseTooltip><![CDATA[走出购物区，回到伊利斯。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_town_street"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -27,8 +27,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Information sign]]></responseTitle>
-				<responseTooltip><![CDATA[Take a moment to read the touristy-looking information sign positioned in the middle of the path.]]></responseTooltip>
+				<responseTitle><![CDATA[信息标牌]]></responseTitle>
+				<responseTooltip><![CDATA[花点时间阅读立在道路中央的游览信息牌。]]></responseTooltip>
 				<nextDialogue>innoxia_places_fields_elis_shops_generic_exit_info</nextDialogue>
 			</response>
 		</responses>
@@ -47,8 +47,8 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Back]]></responseTitle>
-				<responseTooltip><![CDATA[You've finished reading and so [pc.step] away from the sign.]]></responseTooltip>
+				<responseTitle><![CDATA[返回]]></responseTitle>
+				<responseTooltip><![CDATA[你读完了，离开标牌。]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_shops_exit"/>
 				<secondsPassed><![CDATA[30]]></secondsPassed>
 				<effects/>
@@ -88,9 +88,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Enter]]></responseTitle>
+				<responseTitle><![CDATA[进入]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Enter the toilets.
+					进入厕所。
 				]]></responseTooltip>
 				<nextDialogue><![CDATA[innoxia_places_fields_elis_shops_generic_toilets_interior]]></nextDialogue>
 			</response>
@@ -105,10 +105,10 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[0]]></index>
-				<responseTitle><![CDATA[Leave]]></responseTitle>
+				<responseTitle><![CDATA[离开]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Exit the toilets and head back out into the shopping precinct.
-				]]></responseTooltip>
+					走出厕所，回到购物区。
+]]></responseTooltip>
 				<nextDialogue defaultPlaceType="innoxia_fields_elis_shops_street"/>
 				<secondsPassed minutes="true"><![CDATA[1]]></secondsPassed>
 				<effects><![CDATA[
@@ -119,9 +119,9 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[1]]></index>
-				<responseTitle><![CDATA[Toilet]]></responseTitle>
+				<responseTitle><![CDATA[盥洗室]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the toilet.
+					使用厕所。
 				]]></responseTooltip>
 				<nextDialogue forceContinue="true" stripContent="true"><![CDATA[innoxia_places_fields_elis_shops_generic_toilets_interior]]></nextDialogue>
 				<effects><![CDATA[
@@ -131,11 +131,11 @@
 			<response>
 				<responseTabIndex><![CDATA[0]]></responseTabIndex>
 				<index><![CDATA[2]]></index>
-				<responseTitle><![CDATA[Wash]]></responseTitle>
+				<responseTitle><![CDATA[清洗]]></responseTitle>
 				<responseTooltip><![CDATA[
-					Use the sinks to wash your [pc.hands] and face.
-					<br/>[style.italicsGood(This will clean all inventory slots associated with head and hand slots, as well as any clothing worn in these slots.)]
-				]]></responseTooltip>
+					用水槽洗脸洗[pc.hands]。
+					<br/>[style.italicsGood(这会清理你的头部、手部，以及在这些栏位穿着的衣物。)]
+]]></responseTooltip>
 				<nextDialogue forceContinue="true" stripContent="true"><![CDATA[innoxia_places_fields_elis_shops_generic_toilets_interior]]></nextDialogue>
 				<effects><![CDATA[
 					[#pc.applyLimitedWash(IS_HEAD, IS_EYES, IS_MOUTH, IS_NECK, IS_HAIR, IS_FINGER, IS_HAND, IS_WRIST)]

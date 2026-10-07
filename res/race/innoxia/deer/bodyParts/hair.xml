@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <hair>
 	<race>innoxia_deer</race>
 	
-	<transformationName><![CDATA[deer]]></transformationName>
+	<transformationName><![CDATA[鹿]]></transformationName>
 	
 	<coveringType>innoxia_deer_hair</coveringType>
 	
@@ -10,27 +10,27 @@
 		<tag>HAIR_HANDLES_IN_SEX</tag>
 	</tags>
 	
-	<determiner><![CDATA[a head of]]></determiner>
+	<determiner><![CDATA[一头]]></determiner>
 	
-	<name><![CDATA[hair]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[hairs]]></namePlural> 
+	<name><![CDATA[头发]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[头发]]></namePlural> 
 	
 	<descriptorsMasculine>
-		<descriptor>furry</descriptor>
-		<descriptor>fur-like</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[皮毛般]]></descriptor>
 	</descriptorsMasculine>
 	
 	<descriptorsFeminine>
-		<descriptor>furry</descriptor>
-		<descriptor>fur-like</descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[兽毛般的]]></descriptor>
 	</descriptorsFeminine>
 	
 	<transformationDescription><![CDATA[
-		The transformation only lasts a matter of moments, leaving [npc.herHim] with fur-like hair.
-		<br/>[npc.Name] now [npc.has] [npc.hairColour] [style.boldGoat(deer hair)].
-	]]></transformationDescription>
+		转化仅持续了很短的时间，便得到了皮毛般的头发。
+		<br/>[npc.Name]现在拥有[npc.hairColour][style.boldGoat(鹿毛发)]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.hairDeterminer] [npc.hairLength], [npc.hairColour(true)], deer-like hair
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.hairDeterminer]鹿一般[npc.hairColour(true)]的[npc.hairLength]发
+]]></bodyDescription>
 </hair>

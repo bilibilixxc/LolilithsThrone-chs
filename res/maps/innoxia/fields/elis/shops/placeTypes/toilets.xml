@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[public toilets]]></name>
-	<tooltipDescription><![CDATA[Offering a place for shoppers to relieve themselves, these public toilets are well maintained and cleaned at least once every hour.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the toilets in the 'Wall's End' shopping precinct]]></virginityLossDescription>
+	<name><![CDATA[公共厕所]]></name>
+	<tooltipDescription><![CDATA[这些公共厕所为购物者提供了一个解手的地方，维护良好，至少每小时打扫一次。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在墙之尽头购物区的厕所里]]></virginityLossDescription>
 	<sexBlockedReason/>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>

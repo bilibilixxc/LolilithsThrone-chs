@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_panther</race>
 	<colour>RACE_CAT_MORPH_LEOPARD</colour>
@@ -32,24 +32,24 @@
 	<iconName displaySize="100">icon_leopard</iconName>
 	<backgroundName>background_leopard</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Big Cats</bookName>
+	<bookName><![CDATA[大猫咪]]></bookName>
 	<basicDescriptionId>PANTHER_BASIC</basicDescriptionId>
 	<advancedDescriptionId>PANTHER_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[leopard-morph]]></name>
-	<namePlural><![CDATA[leopard-morphs]]></namePlural>
-	<singularMaleName><![CDATA[leopard-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[leopard-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[leopard-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[leopard-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic leopard, known as a 'leopard-morph' when bipedal, and a 'leopardtaur' when the lower body is that of a feral leopard. To be identified as a leopard-morph, a character must be a panther with short, spotted fur.]]></description>
+	<name><![CDATA[花豹化形]]></name>
+	<namePlural><![CDATA[花豹化形]]></namePlural>
+	<singularMaleName><![CDATA[花豹男]]></singularMaleName>
+	<singularFemaleName><![CDATA[花豹女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[花豹男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[花豹女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的花豹子，当下肢为双足时称为“花豹化形”，而下肢呈现出花豹子兽态时称为“半花豹人”。要判定为花豹化形，角色必须是一只长着斑点短毛的大型猫科生物。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[leopard]]></feralName>
-		<feralNamePlural><![CDATA[leopards]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[leopard]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[leopardess]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[leopards]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[leopardesses]]></feralPluralFemaleName>
+		<feralName><![CDATA[花豹]]></feralName>
+		<feralNamePlural><![CDATA[花豹]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[花豹]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[花豹]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[花豹]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[花豹]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>100</size>
@@ -62,7 +62,7 @@
 		<hairPresent>true</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] body is very strong and agile, and [npc.sheIsFull] capable of great feats of strength and stealth alike. [npc.She] also [npc.has] a high resistance to both natural and arcane heat.
+		[npc.NamePos]的身体格外强壮敏捷，[npc.she]能够轻松运用力量和隐蔽自身。还对自然和奥术热力有很高的抗性。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="25">MAJOR_PHYSIQUE</attribute>

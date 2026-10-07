@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[true]]></actionConditional>
@@ -32,19 +32,15 @@
 	]]></applyEndEffects>
 	<areasCummedIn/>
 	<areasCummedOn/>
-	<title><![CDATA[Focus on [pc.name]]]></title>
-	<tooltip><![CDATA[
-		Sink your [shiranui.cock+] down [pc.namePos] throat.
-	]]></tooltip>
+	<title><![CDATA[专注于[pc.name]]]></title>
+	<tooltip><![CDATA[将你的[shiranui.cock+]深深插入[pc.namePos]的喉咙。]]></tooltip>
 	<descriptions>
 		<!-- starting this turn -->
 		<description>
 			<descriptionConditional><![CDATA[
 				[#!sex.getPrimaryOngoingActionPerformer(shiranui, PENETRATION_PENIS).isPlayer() || flags.hasFlag(FLAG_innoxia_shiranui_sex_kissing) || flags.hasFlag(FLAG_innoxia_shiranui_sex_cock_worship)]
 			]]></descriptionConditional>
-			<text><![CDATA[
-				Shiranui commands the leather bindings to turn your head to face her, leaving Meraxis kissing your cheek. Lining her [shiranui.cock+] up to your [pc.lips], the youko pushes forwards, moaning in delight as she sinks her [shiranui.cock+] down your throat.
-			]]></text>
+			<text><![CDATA[不知火命令皮革绑带将你的头转向她，让梅拉克西丝只能亲吻你的脸颊。妖狐将她的[shiranui.cock+]对准你的[pc.lips]，向前一挺，愉悦地呻吟着将自己的[shiranui.cock+]深深插入你的喉咙。]]></text>
 		</description>
 		<!-- ongoing -->
 		<description>
@@ -52,7 +48,7 @@
 				[#sex.getPrimaryOngoingActionPerformer(shiranui, PENETRATION_PENIS).isPlayer() && !flags.hasFlag(FLAG_innoxia_shiranui_sex_kissing) && !flags.hasFlag(FLAG_innoxia_shiranui_sex_cock_worship)]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Shiranui continues to moan in delight as she sinks her [shiranui.cock+] down your throat.
+				不知火将[shiranui.cock+]深深顶入你的喉咙，畅快地呻吟不止。
 			]]></text>
 		</description>
 	</descriptions>

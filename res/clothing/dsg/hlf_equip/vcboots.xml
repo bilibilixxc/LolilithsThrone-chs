@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAtributes>
-		<authorTag><![CDATA[Inside the tongue of each boot, a small engraving reads "MFD by DSG Threadworks".]]></authorTag>
+		<authorTag><![CDATA[每双鞋子的鞋舌内侧都刻着“DSG织厂生产。”]]></authorTag>
 		<value>350</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[vintage combat boots]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[vintage combat boots]]></namePlural>
-		<description><![CDATA[A pair of sturdy, traditional-style combat boots. Unlike their modern counterparts, these are designed more for durability than for comfort or agility. Luckily for you, someone has already mostly broken these in.]]></description> 
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[复古作战靴]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[复古作战靴]]></namePlural>
+		<description><![CDATA[一双坚固的传统风格作战靴。与现代款式不同，这些靴子更多地设计于耐用性而不是舒适或敏捷。幸运的是，已经有人穿过了这双靴子。]]></description> 
 		<physicalResistance>2</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>FOOT</slot>
@@ -46,27 +45,27 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] the boots on and [npc.verb(adjust)] the laces until they're comfortable. [npc.She] then [npc.verb(wind)] the laces around the upper a few times, [npc.verb(tie)] a sturdy knot and [npc.verb(tuck)] the excess neatly between the lacing and the tongue.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(put)] [npc2.namePos] [npc2.feet] into the boots and [npc.verb(adjust)] the laces until they're comfortable. [npc.She] then [npc.verb(wind)] the laces around the upper a few times, [npc.verb(tie)] a sturdy knot and [npc.verb(tuck)] the excess neatly between the lacing and the tongue.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] [npc2.feet] into the boots and [npc.verb(pull)] the laces as tightly as possible before tying a hasty knot.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将靴子穿上并调整鞋带直到舒适。然后，[npc.She]将鞋带绕靴筒上部绕几圈，系上坚固的结，并将多余部分整齐地夹在鞋带和舌头之间。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos][npc2.feet]放进靴子里，然后调整鞋带直到感到舒适。接着，[npc.She]将鞋带绕靴筒上部绕几圈，系上坚固的结，将多余部分整齐地夹在鞋带和舌头之间。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.namePos][npc2.feet]塞进靴子里，然后尽可能紧紧地拉紧鞋带，急忙系了个结。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the laces and pull the boots from [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(untie)] the laces and pull the boots from [npc2.namePos] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(rip)] the lace open and yank the boots from [npc2.namePos] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开鞋带，然后从[npc.her]的[npc.feet]上脱下靴子。	
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开鞋带，然后从[npc2.namePos][npc2.feet]上脱下靴子。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]撕开鞋带并猛力从[npc2.namePos][npc2.feet]上拽下靴子。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

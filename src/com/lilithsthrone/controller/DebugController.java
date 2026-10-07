@@ -165,11 +165,11 @@ public class DebugController {
 
 				MainController.addEventListener(MainController.document, id, "mousemove", MainController.moveTooltipListener, false);
 				MainController.addEventListener(MainController.document, id, "mouseleave", MainController.hideTooltipListener, false);
-				TooltipInformationEventListener el =  new TooltipInformationEventListener().setInformation("Apply Outfit",
-						"Click to apply this outfit to the Dress-up doll."
-						+ " The outfit's femininity, outfit type, and conditional statement are all ignored for this purpose."
-						+ " The doll's leg configuration will change if needed."
-						+ " Click this multiple times to see many variations.");
+				TooltipInformationEventListener el =  new TooltipInformationEventListener().setInformation("应用套装",
+						"点击将该套装应用在换装玩偶上。"
+						+ "因此该套装的女性化程度、套装类型和条件描述都会被无视。"
+						+ "玩偶的腿部配置会按需改变。"
+						+ "多次点击可以看到多种变体。");
 				MainController.addEventListener(MainController.document, id, "mouseenter", el, false);
 			}
 		}

@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
 	<htmlContent tag="GOAT_BASIC"><![CDATA[
 	<p>
-		Goat-morphs can be found all over Lilith's Realm, although they're most commonly found working on one of the many farms in the Foloi Fields. A tough, furry body, with the possibility of having horns, is usually enough to identify someone as a goat-morph.
+		山羊化形在莉莉丝王国随处可见，不过他们最常见的工作场所是在弗洛伊田野的众多农场之一。结实、毛茸茸的身体和可能长出的角通常就足以让人认出他们是山羊化形。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="GOAT_ADVANCED"><![CDATA[
 	<p>
-		While the personality of a goat-morph is likely to vary wildly between individuals, they have a propensity for being strong-headed and rebellious. If someone is able to overcome this and become friends with a goat-morph, they're sure to have a solid friendship, for goat-morphs are known for forming close bonds with those who they trust.
+		虽然山羊化形的性格因人而异，但他们都有刚强、叛逆的倾向。如果有人能克服这一点，与山羊化形成为朋友，他们一定会有一段牢固的友谊，因为山羊化形以与他们信任的人建立紧密的联系而闻名。
 	</p>
 	<p>
-		Along with cow, horse, and sheep-morphs, goat-morphs form the core of the workforce in most of the farms found scattered throughout the Foloi Fields. While not as prized as that of cattle-morphs, goat-morphs are able to sell their milk, which is often turned into a strong cheese.
+		山羊化形与牛、马和绵羊化形一起，构成了散布在弗洛伊田野的大多数农场的核心劳动力。虽然山羊化形不像牛化形那样珍贵，但它们可以出售自己的奶，这些奶通常被制成风味浓郁的奶酪。
 	</p>
 	<p>
-		The elder lilin, Lovienne, is known for having a particular fondness for half-demon goat-morphs, which are referred to as baphomets. Due to this association with an elder lilin, goat-morphs are sometimes erroneously assumed to have strong connections to demons, although in truth they're no more likely to have demonic connections than any other race.
+		众所周知，莉琳长老洛维耶纳特别喜欢半恶魔山羊化形，它们被称为巴风特。由于与莉琳长老的这种联系，山羊化形常常会被错误地认为与恶魔有密切联系，尽管事实上他们与恶魔有联系的可能性并不比其他种族高。
 	</p>
 	<p>
-		Goat-morphs, like the other common races, get heavily affected by arcane storms. Being exposed to arcane thunder will make goat-boys seek out a partner to mate with, while goat-girls will go into heat.
+		山羊化形和其他普通种族一样，会受到奥术风暴的严重影响。受到奥术雷霆的影响，山羊男会寻找伴侣交配，而山羊女则会发情。
 	</p>
 	<p>
-		A goat-morph's offspring will be a mixture of goat-morphs and offspring of their partner's race.
+		山羊化形的后代将是山羊化形和其伴侣种族后代的混合体。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </bookText>

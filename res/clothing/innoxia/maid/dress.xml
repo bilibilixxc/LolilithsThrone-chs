@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	
 	<coreAttributes>
 		<value>2500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[maid's dress]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[maid's dresses]]></namePlural>
-		<description><![CDATA[A heavily stylised Maid's dress, it consists of a coloured one-piece dress with decorative white lace trimmings. A small white apron is attached to the front, and is similarly trimmed in white lace.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[女仆裙]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[女仆裙]]></namePlural>
+		<description><![CDATA[一件很有风格的女仆裙装，彩色的裙身上带有白色的蕾丝边。前面有一个带着蕾丝边的白色小围裙。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot>
@@ -80,50 +80,50 @@
 	
 	<displacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(reach)] back and [npc.verb(unzip)] [npc.her] maid's dress, before pulling [npc.her] [npc.arms] out, sliding it down [npc.her] body, and finally [npc.stepping] out of it.
-		]]></self>
+[npc.Name]伸手到后面，拉下了[npc.her]的女仆装，然后把[npc.her]的[npc.arms]伸出来，把它从[npc.her]身上滑下来，最后[npc.stepping]了出来。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(unzip)] the back of [npc2.namePos] maid's dress, before pulling [npc2.her] [npc2.arms] free to allow the dress to fall to the floor.
-		]]></other>
+[npc.Name]解开了[npc2.namePos]女仆装的后背，然后将[npc2.her]的[npc2.arms]拉出来，让裙子滑落到地上。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] impatiently [npc.verb(unzip)] the back of [npc2.namePos] maid's dress, before roughly pulling [npc2.her] [npc2.arms] free and yanking the dress to the floor.
-		]]></otherRough>
+[npc.Name]着急地解开了[npc2.namePos]女仆裙的后面拉链，然后粗暴地拽出[npc2.her]的[npc2.arms]，将女仆裙一把扯到地上。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
 		<self><![CDATA[
-			[npc.Name] [npc.step] into the dress and [npc.verb(pull)] it up over [npc.her] torso, zipping [npc.herself] up at the back before making sure the trimmings and apron are neatly arranged.
-		]]></self>
+[npc.Name]踏进裙子里，把它拉到胸前，然后在背后拉上拉链，确保装饰和围裙整齐摆放。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(get)] [npc2.name] to [npc2.step] into the dress, before pulling it up over [npc2.her] torso. Zipping [npc2.herHim] up at the back, [npc.she] then [npc.verb(make)] sure that the trimmings and apron are neatly arranged.
-		]]></other>
+[npc.Name]让[npc2.name][npc2.step]进入裙子，然后将裙子拉到[npc2.her]的躯干上。在背后拉上拉链后，[npc.she]确保装饰和围裙整齐摆放。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] [npc.verb(force)] [npc2.name] to [npc2.step] into the dress, before yanking it up over [npc2.her] torso. Forcefully zipping [npc2.herHim] up at the back, [npc.she] then [npc.verb(make)] sure that the trimmings and apron are neatly arranged.
-		]]></otherRough>
+[npc.Name]强迫[npc2.name][npc2.step]进了连衣裙，然后猛地将它拉过[npc2.her]躯干。粗暴地在后面拉上[npc2.herHim]的拉链，然后[npc.she]确保修边和围裙整齐地摆放。
+]]></otherRough>
 	</replacementText>
 
 	
 	<displacementText type="PULLS_UP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] up the skirt of [npc.her] maid's dress.
-		]]></self>
+[npc.Name]提起[npc.her]女仆装的裙子。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] up the skirt of [npc2.namePos] maid's dress.
-		]]></other>
+[npc.Name]拉起[npc2.namePos]女仆装的裙子的下摆。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] up the skirt of [npc2.namePos] maid's dress.
-		]]></otherRough>
+[npc.Name]粗暴地拉起[npc2.namePos]女仆装的裙子的下摆。
+]]></otherRough>
 	</displacementText>
 	
 	<replacementText type="PULLS_UP">
 		<self><![CDATA[
-			[npc.Name] [npc.verb(pull)] down the skirt of [npc.her] maid's dress.
-		]]></self>
+[npc.Name]拉下[npc.her]女仆装的裙子。
+]]></self>
 		<other><![CDATA[
-			[npc.Name] [npc.verb(pull)] down the skirt of [npc2.namePos] maid's dress.
-		]]></other>
+[npc.Name]放下[npc2.namePos]的女仆装裙子的下摆。
+]]></other>
 		<otherRough><![CDATA[
-			[npc.Name] roughly [npc.verb(pull)] down the skirt of [npc2.namePos] maid's dress.
-		]]></otherRough>
+[npc.Name]粗暴地放下[npc2.namePos]的女仆装裙子的下摆。
+]]></otherRough>
 	</replacementText>
 </clothing>

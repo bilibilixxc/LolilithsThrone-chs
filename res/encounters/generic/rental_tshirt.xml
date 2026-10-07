@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <encounterRoot>
 	
 	<additionalPlaceTypeTriggers>
@@ -9,7 +9,7 @@
 	
 	<possibleEncounters>
 		<encounter>
-			<name><![CDATA[rental parental figure detected]]></name>
+			<name><![CDATA[检测到代理家长角色]]></name>
 			<chanceToTrigger opportunisticEncounter="false"><![CDATA[
 				#IF(pc.getClothingInSlot(IS_TORSO_UNDER)!=null
 					&& !pc.getInventorySlotsConcealed(npc).containsKey(IS_TORSO_UNDER)

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[VIP area]]></name>
-	<tooltipDescription><![CDATA[Large, comfortable sofas and a private bar can be found within this VIP area.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the VIP area at 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[VIP区]]></name>
+	<tooltipDescription><![CDATA[贵宾区内有宽大舒适的沙发和私人酒吧。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“十字利刃”的VIP区域]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>seating</svgName>
 	<colour>BASE_GOLD</colour>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <breast>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_dragon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[dragon]]></transformationName>
+	<transformationName><![CDATA[龙]]></transformationName>
 	
 	<!-- The id of the material covering this ass.
 	Hard-coded values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/body/coverings/BodyCoveringType.java -->
@@ -65,12 +65,12 @@
 	<!-- The description which is shown when a character transforms to obtain this breast type.
 	This description immediately follows a brief description of the ass type undergoing a transformation. -->
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldDragon(dragon-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldDragon(dragon milk)].
-	]]></transformationDescription>
+		[npc.She]现在有[style.boldDragon(龙般)][npc.nipplesFullDescription]，[npc.she]在哺乳期会分泌[style.boldDragon(龙乳汁)]。
+]]></transformationDescription>
 	
 	<!-- How this breast type is described in a character's description page. -->
 	<bodyDescription><![CDATA[
-		[npc.Her] [npc.breastSize] [npc.breasts] are covered in fine scales, and each is tipped with [npc.nipplesPerBreast] dragon-like, [npc.nipplesFullDescription].
+		[npc.Her]的[npc.breastSize][npc.breasts]都长着细鳞，每个都长着龙般的[npc.nipplesPerBreast][npc.nipplesFullDescription]。
 	]]></bodyDescription>
 	
 	
@@ -78,11 +78,11 @@
 	These 2 transformation descriptions are used when this breast type is being used for crotch-boobs. i.e. Breasts located on the character's lower stomach. -->
 	
 	<crotchBoobsTransformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldDragon(dragon-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldDragon(dragon milk)].
+		[npc.She]现在拥有[style.boldDragon(龙般)][npc.crotchNipplesFullDescription]，[npc.she]在哺乳期内会分泌[style.boldDragon(龙乳汁)]。
 	]]></crotchBoobsTransformationDescription>
 	
 	<crotchBoobsBodyDescription><![CDATA[
-		[npc.Her] [npc.crotchBoobSize] [npc.crotchBoobs] are covered in fine scales, and each is tipped with [npc.crotchNipplesPerBreast] dragon-like, [npc.crotchNipplesFullDescription].
-	]]></crotchBoobsBodyDescription>
+		[npc.her]的每个[npc.crotchBoobSize][npc.crotchBoobs]都覆盖着细鳞，长着[npc.crotchNipplesPerBreast]颗龙般[npc.crotchNipplesFullDescription]。
+]]></crotchBoobsBodyDescription>
 	
 </breast>

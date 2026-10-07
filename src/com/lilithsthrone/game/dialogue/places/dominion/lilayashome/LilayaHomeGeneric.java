@@ -60,7 +60,7 @@ import com.lilithsthrone.world.places.PlaceUpgrade;
 public class LilayaHomeGeneric {
 	
 	static Response interactWithNPC(GameCharacter slave) {
-		return new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "Interact with [npc.name]."), slave.isSlave()?SlaveDialogue.SLAVE_START:OccupantDialogue.OCCUPANT_START) {
+		return new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "和[npc.name]互动。"), slave.isSlave()?SlaveDialogue.SLAVE_START:OccupantDialogue.OCCUPANT_START) {
 			@Override
 			public Colour getHighlightColour() {
 				return slave.getFemininity().getColour();
@@ -104,12 +104,12 @@ public class LilayaHomeGeneric {
 		AbstractPlaceType playerPlaceType = Main.game.getPlayer().getLocationPlace().getPlaceType();
 		switch(i) {
 			case 0:
-				return "Actions";
+				return "行动";
 			case 1:
-				return "Fast Travel";
+				return "快速旅行";
 			case 2:
 				if(playerPlaceType==PlaceType.LILAYA_HOME_ROOM_PLAYER) {
-					return "Bathroom";
+					return "浴室";
 				}
 				if(isPlayerHasDolls()
 						&& (playerPlaceType==PlaceType.LILAYA_HOME_ENTRANCE_HALL
@@ -120,7 +120,7 @@ public class LilayaHomeGeneric {
 							|| playerPlaceType==PlaceType.LILAYA_HOME_STAIR_DOWN_SECONDARY
 							|| playerPlaceType==PlaceType.LILAYA_HOME_STAIR_UP
 							|| playerPlaceType==PlaceType.LILAYA_HOME_STAIR_UP_SECONDARY)) {
-					return "Doll Stations";
+					return "玩偶安置";
 				}
 				break;
 				
@@ -142,13 +142,13 @@ public class LilayaHomeGeneric {
 			responses.add(new Response(
 					UtilText.parse(doll, "[npc.Name]"),
 					UtilText.parse(doll, 
-							"Set this cell as <span style='color:"+doll.getFemininity().getColour().toWebHexString()+"'>[npc.name]"+(doll.hasSurname()?" [npc.surname]'s":"'s")+"</span> station for when [npc.sheIs] working as a statue."
+							"将这个地块设置为<span style='color:"+doll.getFemininity().getColour().toWebHexString()+"'>[npc.name]"+(doll.hasSurname()?" [npc.surname]":"")+"</span>扮演雕像时的安置地点。"
 							+ "<br/>[style.italics("
 							+ (doll.getSlaveStationWorldType()==null
-								?"As [npc.sheHasFull] no station set, [npc.name] will use a random corridor tile as [npc.her] station."
+								?"[npc.name]没有指定安置地点，[npc.sheHasFull]会随机选择一个走廊地块作为安置地点。"
 								:(alreadyActive
-										?"[style.colourExcellent(This tile is already set as [npc.namePos] station.)]"
-										:"[style.colourMinorGood(Although this tile is not [npc.namePos] station, [npc.she] already has one set elsewhere.)]"))
+										?"[style.colourExcellent(这个地块已被指定为[npc.namePos]的安置地点。)]"
+										:"[style.colourMinorGood(这个地块不是[npc.namePos]的安置地点，[npc.she]已经被指定在其它位置了。)]"))
 							+ ")]"),
 					Main.game.getDefaultDialogue(false)) {
 				@Override
@@ -177,9 +177,9 @@ public class LilayaHomeGeneric {
 	public static Response getLilayasHouseFastTravelResponses(int index) {
 		 if (index == 1) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType()==PlaceType.LILAYA_HOME_ROOM_PLAYER) {
-				return new Response("Your room", "You are already in your room, so there is no need to fast travel there...", null);
+				return new Response("你的房间", "你已经在你的房间里了，所以不需要快速旅行……", null);
 			}
-			return new Response("Your room", "Fast travel up to your room.", PlaceType.LILAYA_HOME_ROOM_PLAYER.getDialogue(false)){
+			return new Response("你的房间", "快速旅行到你的房间", PlaceType.LILAYA_HOME_ROOM_PLAYER.getDialogue(false)){
 				@Override
 				public void effects() {
 					Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_ROOM_PLAYER, false);
@@ -189,9 +189,9 @@ public class LilayaHomeGeneric {
 
 		} else if (index == 2) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType()==PlaceType.LILAYA_HOME_LAB) {
-				return new Response("Lilaya's Lab", "You are already in Lilaya's lab, so there is no need to fast travel there...", null);
+				return new Response("莉莱雅的实验室", "你已经在莉莱雅的实验室里了，所以不需要快速旅行……", null);
 			}
-			return new Response("Lilaya's Lab", "Fast travel to Lilaya's Lab.", PlaceType.LILAYA_HOME_LAB.getDialogue(false)){
+			return new Response("莉莱雅的实验室", "快速旅行到莉莱雅的实验室", PlaceType.LILAYA_HOME_LAB.getDialogue(false)){
 				@Override
 				public void effects() {
 					Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB, false);
@@ -201,9 +201,9 @@ public class LilayaHomeGeneric {
 			
 		} else if (index == 3) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType()==PlaceType.LILAYA_HOME_KITCHEN) {
-				return new Response("Kitchen", "You are already in the kitchen, so there is no need to fast travel there...", null);
+				return new Response("厨房", "你已经在厨房里了，所以不需要快速旅行……", null);
 			}
-			return new Response("Kitchen", "Fast travel to the kitchen.", PlaceType.LILAYA_HOME_KITCHEN.getDialogue(false)){
+			return new Response("厨房", "快速旅行到厨房", PlaceType.LILAYA_HOME_KITCHEN.getDialogue(false)){
 				@Override
 				public void effects() {
 					Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_KITCHEN, false);
@@ -213,9 +213,9 @@ public class LilayaHomeGeneric {
 			
 		} else if (index == 4) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType()==PlaceType.LILAYA_HOME_LIBRARY) {
-				return new Response("Library", "You are already in the library, so there is no need to fast travel there...", null);
+				return new Response("图书馆", "你已经在图书馆里了，所以不需要快速旅行……", null);
 			}
-			return new Response("Library", "Fast travel to the library.", PlaceType.LILAYA_HOME_LIBRARY.getDialogue(false)){
+			return new Response("图书馆", "快速旅行到图书馆", PlaceType.LILAYA_HOME_LIBRARY.getDialogue(false)){
 				@Override
 				public void effects() {
 					Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LIBRARY, false);
@@ -225,9 +225,9 @@ public class LilayaHomeGeneric {
 			
 		} else if (index == 5) {
 			if(Main.game.getPlayer().getLocationPlace().getPlaceType()==PlaceType.LILAYA_HOME_ENTRANCE_HALL) {
-				return new Response("Entrance hall", "You are already in the entrance hall, so there is no need to fast travel there...", null);
+				return new Response("门厅", "你已经在门厅了，不需要快速旅行……", null);
 			}
-			return new Response("Entrance hall", "Fast travel to the entrance hall.",PlaceType.LILAYA_HOME_ENTRANCE_HALL.getDialogue(false)){
+			return new Response("门厅", "快速旅行到门厅。",PlaceType.LILAYA_HOME_ENTRANCE_HALL.getDialogue(false)){
 				@Override
 				public void effects() {
 					Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_ENTRANCE_HALL, false);
@@ -278,19 +278,19 @@ public class LilayaHomeGeneric {
 			
 		} else if (index == 1) {
 			if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-				return new Response("Manage room", "Enter the management screen for this particular room.", OccupantManagementDialogue.ROOM_UPGRADES) {
+				return new Response("管理房间", "进入该房间的管理界面。", OccupantManagementDialogue.ROOM_UPGRADES) {
 					@Override
 					public void effects() {
 						OccupantManagementDialogue.cellToInspect = Main.game.getPlayerCell();
 					}
 				};
 			} else {
-				return new Response("Manage room", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+				return new Response("管理房间", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 			}
 			
 		}  else if (index == 2) {
 			if(Main.game.getPlayer().isAbleToAccessRoomManagement()) {
-				return new Response("Manage people", "Enter the management screen for your slaves and friendly occupants.", CORRIDOR) {
+				return new Response("人员管理", "进入奴隶和友人住客的管理界面。", CORRIDOR) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return OccupantManagementDialogue.getSlaveryRoomListDialogue(null, null);
@@ -301,7 +301,7 @@ public class LilayaHomeGeneric {
 					}
 				};
 			} else {
-				return new Response("Manage people", "You need a slaver license or permission from Lilaya to house your friends or dolls in order to access this menu!",  null);
+				return new Response("管理人员", "在进入该界面前，你需要获得贩奴许可；莉莱雅要是允许你带人或玩偶住下的话那也行。",  null);
 			}
 		}
 		
@@ -310,7 +310,7 @@ public class LilayaHomeGeneric {
 		if(coreUpgrade==PlaceUpgrade.LILAYA_OFFICE) {
 			indexPresentStart = 4;
 			if(index==3) {
-				return new Response("Occupancy ledger", "Open the occupancy ledger screen, from which you can manage all rooms, slaves, and friendly occupants.", CORRIDOR) {
+				return new Response("住户名单", "打开住户名单，从中可以管理所有的房间、奴隶和友好居民。", CORRIDOR) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return OccupantManagementDialogue.getSlaveryOverviewDialogue(null);
@@ -336,10 +336,10 @@ public class LilayaHomeGeneric {
 				return interactWithNPC(character);
 			} else {
 				return new Response(UtilText.parse(character, "[npc.Name]"), 
-						UtilText.parse(character, "Although this is [npc.namePos] room, [npc.sheIs] "
+						UtilText.parse(character, "虽然这里是[npc.namePos]的房间，但[npc.sheIs]"
 								+(character.getLocationPlace().getPlaceUpgrades().contains(PlaceUpgrade.LILAYA_SLAVE_LOUNGE)
-										?"relaxing in a slave lounge at the moment."
-										:"out at work at the moment.")), null);
+										?"现在正在奴隶休息室休息。"
+										:"现在正在外面工作。")), null);
 			}
 		}
 		
@@ -349,26 +349,26 @@ public class LilayaHomeGeneric {
 	public static String getBaseRoomDescription() {
 		if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.LILAYA_HOME_ROOM_WINDOW_GROUND_FLOOR) {
 			return "<p>"
-						+ "This particular room has a series of large windows set into one wall, which allow a generous amount of natural daylight to flood out into the corridor when the door is left open."
-						+ " Through these windows it's possible to look out onto the hustle and bustle of Dominion's busy streets."
+						+ "这个房间的一面墙上有一系列的大窗户，当门打开时，大量的自然光就会从窗户射入走廊。"
+						+ "透过这些窗户，可以看到御城区繁忙街道上熙熙攘攘的景象。"
 					+ "</p>";
 			
 		} else if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.LILAYA_HOME_ROOM_WINDOW_FIRST_FLOOR) {
 			return "<p>"
-						+ "This particular room has a series of large windows set into one wall, which allow a generous amount of natural daylight to flood out into the corridor when the door is left open."
-						+ " Through these windows it's possible to look out on the hustle and bustle of Dominion's busy streets."
+						+ "这个房间的一面墙上有一系列的大窗户，当门打开时，大量的自然光就会从窗户射入走廊。"
+						+ "透过这些窗户，可以看到御城区繁忙街道上熙熙攘攘的景象。"
 					+ "</p>";
 			
 		} else if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.LILAYA_HOME_ROOM_GARDEN_GROUND_FLOOR) {
 			return "<p>"
-						+ "This room has a pair of French doors which connect it to the adjoining courtyard garden."
-						+ " Through these doors, and the windows alongside them, it's possible to look out on a large portion of the garden."
+						+ "这个房间有一对法式门，将它与毗邻的庭院花园相连。"
+						+ "通过这些门和它们旁边的窗户，可以看到花园的很大一部分。"
 					+ "</p>";
 			
 		} else if(Main.game.getPlayerCell().getPlace().getPlaceType()==PlaceType.LILAYA_HOME_ROOM_GARDEN_FIRST_FLOOR) {
 			return "<p>"
-						+ "This room has a series of large windows set into one wall, which allow a generous amount of natural daylight to flood out into the corridor when the door is left open."
-						+ " Through these windows it's possible to look down on to the courtyard garden."
+						+ "这个房间的一面墙上有一系列的大窗户，当门打开时，大量的自然光就会从窗户射入走廊。"
+						+ "透过这些窗户可以俯视庭院花园。"
 					+ "</p>";
 		}
 		return "";
@@ -413,68 +413,68 @@ public class LilayaHomeGeneric {
 				sb.append("<span style='color:"+npc.getFemininity().getColour().toWebHexString()+";'>");
 				sb.append(UtilText.parse(npc, "[npc.Name]"));
 				sb.append("</span>");
-				sb.append(" ");
+				sb.append("");
 				
 				if(Main.game.getPlayer().getFriendlyOccupants().contains(npc.getId())) { // Friendly occupant:
 					if(!Main.game.getCharactersPresent().contains(npc)) {
 						sb.append(UtilText.parse(npc,
-									"[style.colourMinorBad(is not here)] at the moment, and as you briefly scan the room for any sign of [npc.herHim], you see a little note has been left on [npc.her] bedside cabinet."
-								+" Walking over and picking it up, you read:"
+									"现在[style.colourMinorBad(不在这)]，你简单扫视房间，寻找任何可能和[npc.herHim]有关的线索，你看到一张小纸条被落在[npc.her]的床头柜上。"
+								+"走过去捡起它，你读道："
 								+"</p>"+
 								"<p style='text-align:center;'><i>"
-								+"Hi, [pc.name]!<br/>"));
+								+"嗨，[pc.name]！<br/>"));
 						if(npc.hasJob()) {
-							sb.append("I'm out at work at the moment, my hours are from "+npc.getHistory().getWorkHourStart()+":00 to "+npc.getHistory().getWorkHourEnd()+":00, "
-									+npc.getHistory().getStartDay().getDisplayName(TextStyle.FULL, Locale.ENGLISH)+"-"+npc.getHistory().getEndDay().getDisplayName(TextStyle.FULL, Locale.ENGLISH)+"<br/>");
+							sb.append("我现在在外面工作，我的工作时间是从"+npc.getHistory().getWorkHourStart()+":00到"+npc.getHistory().getWorkHourEnd()+":00，"
+									+npc.getHistory().getStartDay().getDisplayName(TextStyle.FULL, Locale.CHINESE)+"-"+npc.getHistory().getEndDay().getDisplayName(TextStyle.FULL, Locale.CHINESE)+"<br/>");
 						} else {
-							sb.append(UtilText.parse(npc, "I'm helping around the mansion right now<br/>"));
+							sb.append(UtilText.parse(npc, "我现在正在府上帮忙<br/>"));
 						}
 						sb.append(UtilText.parse(npc,
 								"- [npc.Name]"
 								+"</i>"
 							+ "</p>"
 							+ "<p>"));
-						sb.append(UtilText.parse(npc, "<i>[npc.Name] sleeps between the hours of [style.time("+npc.getSleepStartHour()+")]-[style.time("+npc.getSleepEndHour()+")]</i>"));
+						sb.append(UtilText.parse(npc, "<i>[npc.Name]在[style.time("+npc.getSleepStartHour()+")]-[style.time("+npc.getSleepEndHour()+")]之间睡觉。</i>"));
 						
 					} else {
-						sb.append(UtilText.parse(npc, "[style.colourMinorGood(is here)] at the moment,"));
+						sb.append(UtilText.parse(npc, "现在[style.colourMinorGood(在这里)]，"));
 						if(npc.isAsleep()) {
-							sb.append(UtilText.parse(npc, " but [npc.sheIs] currently [style.colourSleep(sleeping)]..."));
+							sb.append(UtilText.parse(npc, "但[npc.sheIs]目前[style.colourSleep(在睡觉)]……"));
 						} else {
-							sb.append(UtilText.parse(npc, " and so you could interact with [npc.herHim] if you wanted to..."));
+							sb.append(UtilText.parse(npc, " 如果你愿意，你可以和[npc.herHim]互动……"));
 						}
 						sb.append("<br/>");
-						sb.append(UtilText.parse(npc, "<i>[npc.Name] sleeps between the hours of [style.time("+npc.getSleepStartHour()+")]-[style.time("+npc.getSleepEndHour()+")]</i>"));
+						sb.append(UtilText.parse(npc, "<i>[npc.Name]在[style.time("+npc.getSleepStartHour()+")]-[style.time("+npc.getSleepEndHour()+")]之间睡觉。</i>"));
 					}
 					
 				} else { // Slave:
 					if(!Main.game.getCharactersPresent().contains(npc)) {
-						sb.append(UtilText.parse(npc, "[style.colourMinorBad(is not here)] at the moment,"));
+						sb.append(UtilText.parse(npc, "现在[style.colourMinorBad(不在这里)]。"));
 						if(npc.isAtWork()) {
 							String jobName = npc.getSlaveJob(Main.game.getHourOfDay()).getName(npc);
-							sb.append(UtilText.parse(npc, " as [npc.sheIs] working as "+UtilText.generateSingularDeterminer(jobName)+" "+jobName+" at this time."));
+							sb.append(UtilText.parse(npc, "[npc.sheIs]此时的工作是"+jobName+"。"));
 						} else {
 							boolean houseFree = npc.hasSlavePermissionSetting(SlavePermissionSetting.GENERAL_HOUSE_FREEDOM);
 							boolean outsideFree = npc.hasSlavePermissionSetting(SlavePermissionSetting.GENERAL_OUTSIDE_FREEDOM);
 							if(houseFree) {
 								if(outsideFree) {
-									sb.append(" and so must be either somewhere in the mansion or out in Dominion...");
+									sb.append("所以一定在府上或者外面御城区的某个地方……");
 								} else {
-									sb.append(" and so must be somewhere in the mansion...");
+									sb.append("所以一定在府上的某个地方……");
 								}
 							} else if(outsideFree) {
-								sb.append(" and so must be out somewhere in Dominion...");
+								sb.append("所以一定在外面御城区的某个地方……");
 							} else {
-								sb.append(" but will likely return here soon...");
+								sb.append("但很快会回到这里……");
 							}
 						}
 						
 					} else  {
-						sb.append(UtilText.parse(npc, "[style.colourMinorGood(is here)] at the moment,"));
+						sb.append(UtilText.parse(npc, "现在[style.colourMinorGood(在这里)]，"));
 						if(npc.isAsleep()) {
-							sb.append(UtilText.parse(npc, " but [npc.sheIs] currently [style.colourSleep(sleeping)]..."));
+							sb.append(UtilText.parse(npc, "但[npc.sheIs]目前[style.colourSleep(在睡觉)]……"));
 						} else {
-							sb.append(UtilText.parse(npc, " and so you could interact with [npc.herHim] if you wanted to..."));
+							sb.append(UtilText.parse(npc, " 如果你愿意，你可以和[npc.herHim]互动……"));
 						}
 					}
 				}
@@ -499,47 +499,47 @@ public class LilayaHomeGeneric {
 		sb.append("<p>");
 		
 		if(slave.getSlaveJob(Main.game.getHourOfDay())==SlaveJob.DOLL_STATUE) {
-			sb.append(UtilText.parse(slave, "Having been ordered to pose as a statue, <b style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>[npc.name]</b> is present in this area."));
+			sb.append(UtilText.parse(slave, "<b style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>[npc.name]</b>被命令假扮成一座雕像，目前正在这片区域。"));
 			
 			for(SlaveJobSetting sjs : slave.getSlaveJobSettings(SlaveJob.DOLL_STATUE)) {
 				switch(sjs) {
 					case DOLL_STATUE_ALL_FOURS:
-						sb.append(UtilText.parse(slave, " [npc.SheIsFull] down on all fours"));
+						sb.append(UtilText.parse(slave, "[npc.SheIsFull]四肢跪地"));
 						break;
 					case DOLL_STATUE_ARTISTIC:
-						sb.append(UtilText.parse(slave, " [npc.SheIsFull] striking an artistic pose"));
+						sb.append(UtilText.parse(slave, "[npc.SheIsFull]摆出艺术性姿势"));
 						break;
 					case DOLL_STATUE_ATTENTION:
-						sb.append(UtilText.parse(slave, " [npc.SheIsFull] standing to attention"));
+						sb.append(UtilText.parse(slave, "[npc.SheIsFull]立正站定"));
 						break;
 					case DOLL_STATUE_BRIDGE:
-						sb.append(UtilText.parse(slave, " [npc.nameHasFull] bent over backwards to perform a gymnastic brige"));
+						sb.append(UtilText.parse(slave, "[npc.nameHasFull]向后下腰，做出桥式体操的姿势"));
 						break;
 					case DOLL_STATUE_MISSIONARY:
-						sb.append(UtilText.parse(slave, " [npc.SheIsFull] lying back with [npc.her] [npc.legs] spread"));
+						sb.append(UtilText.parse(slave, "[npc.SheIsFull]张开[npc.legs]向后躺下"));
 						break;
 					case DOLL_STATUE_SQUATTING:
-						sb.append(UtilText.parse(slave, " [npc.SheIsFull] squatting down with [npc.her] knees spread and [npc.her] [npc.hands] behind [npc.her] head"));
+						sb.append(UtilText.parse(slave, "[npc.SheIsFull]双膝分开并蹲下，[npc.hands]放在头后面"));
 						break;
 					case DOLL_STATUE_STANDING_SPLIT:
-						sb.append(UtilText.parse(slave, " [npc.SheIsFull] standing one-legged, with [npc.her] other leg held up vertically"));
+						sb.append(UtilText.parse(slave, "[npc.SheIsFull]单腿站立，另一条腿竖直举起"));
 						break;
 					default:
 						break;
 				}
 			}
-			sb.append(UtilText.parse(slave, ", and is completely and utterly motionless."));
+			sb.append(UtilText.parse(slave, "，保持着完全的静止。"));
 			
 		} else {
-			sb.append(UtilText.parse(slave, "Having been assigned to work as a "+(slave.getSlaveJob(Main.game.getHourOfDay()).getName(slave))
-					+", <b style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>[npc.name]</b> is present in this area."));
+			sb.append(UtilText.parse(slave, "<b style='color:"+slave.getFemininity().getColour().toWebHexString()+";'>[npc.name]</b>被安排做"+(slave.getSlaveJob(Main.game.getHourOfDay()).getName(slave))
+					+"，目前正在这片区域。"));
 			
 			if(slave.hasSlavePermissionSetting(SlavePermissionSetting.GENERAL_CRAWLING)) {
 				sb.append(UtilText.parse(slave,
-						" As you've instructed [npc.herHim] to crawl, [npc.sheIs] down on all fours, and "));
+						"由于你命令[npc.herHim]爬行，[npc.sheIs]趴在地上，然后"));
 			} else {
 				sb.append(UtilText.parse(slave,
-						" [npc.She] "));
+						"[npc.She]"));
 			}
 			switch(slave.getObedience()) {
 				case NEGATIVE_FIVE_REBELLIOUS: case NEGATIVE_FOUR_DEFIANT: case NEGATIVE_THREE_STRONG_INSUBORDINATE:
@@ -580,7 +580,7 @@ public class LilayaHomeGeneric {
 
 		@Override
 		public String getLabel() {
-			return "Lilaya's Home - Street";
+			return "莉莱雅的家 - 街道";
 		}
 
 		@Override
@@ -607,7 +607,7 @@ public class LilayaHomeGeneric {
 						&& Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_2_D_MEETING_A_LILIN) // Only trigger after having met Lyssieth
 						&& Main.game.isExtendedWorkTime()
 						&& time.getMonth().equals(Month.JUNE) && time.getDayOfMonth()>=14 && time.getDayOfMonth()<=21) { // Father's day timing, 3rd week of June
-					return new Response("Enter", UtilText.parse(characterAnsweringDoor, "Knock on the door and wait for [npc.name] to let you in."), DaddyDialogue.FIRST_ENCOUNTER) {
+					return new Response("进入", UtilText.parse(characterAnsweringDoor, "敲门并等[npc.name]让你进去。"), DaddyDialogue.FIRST_ENCOUNTER) {
 						@Override
 						public void effects() {
 							Main.game.getNpc(Daddy.class).setLocation(Main.game.getPlayer(), false);
@@ -616,7 +616,7 @@ public class LilayaHomeGeneric {
 					};
 					
 				} else if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.daddySendingReward)) {
-					return new Response("Enter", UtilText.parse(characterAnsweringDoor, "Knock on the door and wait for Rose to let you in."), DADDY_PACKAGE) {
+					return new Response("进入", UtilText.parse(characterAnsweringDoor, "敲门并等待萝丝让你进去。"), DADDY_PACKAGE) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.daddySendingReward, false);
@@ -635,7 +635,7 @@ public class LilayaHomeGeneric {
 					};
 					
 				} else {
-					return new Response("Enter", UtilText.parse(characterAnsweringDoor, "Knock on the door and wait for Rose to let you in."), PlaceType.LILAYA_HOME_ENTRANCE_HALL.getDialogue(false)){
+					return new Response("进入", UtilText.parse(characterAnsweringDoor, "敲门并等待萝丝让你进去。"), PlaceType.LILAYA_HOME_ENTRANCE_HALL.getDialogue(false)){
 						@Override
 						public void effects() {
 							if(characterAnsweringDoor.equals(Main.game.getNpc(Rose.class))) {
@@ -653,7 +653,7 @@ public class LilayaHomeGeneric {
 			}
 		}
 	};
-	public static final DialogueNode DADDY_PACKAGE = new DialogueNode("Entrance hall", "", true) {
+	public static final DialogueNode DADDY_PACKAGE = new DialogueNode("门厅", "", true) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -668,13 +668,13 @@ public class LilayaHomeGeneric {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Continue onwards into Lilaya's house.", ENTRANCE_HALL);
+				return new Response("继续", "继续探索莉莱雅的家。", ENTRANCE_HALL);
 			}
 			return null;
 		}
 	};
 	
-	public static final DialogueNode CORRIDOR = new DialogueNode("Corridor", ".", false) {
+	public static final DialogueNode CORRIDOR = new DialogueNode("走廊", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -690,26 +690,26 @@ public class LilayaHomeGeneric {
 			
 			if(charactersPresent.isEmpty()) {
 				UtilText.nodeContentSB.append("<p>"
-							+ "This corridor is deserted at the moment, and there doesn't really seem to be much to do here."
+							+ "这条走廊现在很冷清，似乎没什么可做的。"
 						+ "</p>");
 			} else {
 				for(NPC slave : charactersPresent) {
 					SlaveJob job = slave.getSlaveJob(Main.game.getHourOfDay());
 					if(job==SlaveJob.CLEANING) {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave,
-								"is not even bothering to pretend that [npc.sheIs] cleaning.",
-								"is half-heartedly cleaning the carpet.",
-								"is dusting the skirting boards.",
-								"is busily polishing the floorboards.",
-								"is dutifully dusting, polishing, and cleaning everything in this area."));
+								"甚至懒得假装[npc.sheIs]在打扫。",
+								"正在心猿意马地清扫地毯。",
+								"正在擦拭踢脚线。",
+								"正忙着抛光地板。",
+								"正忠实地擦拭、抛光和清洁这个区域中的一切"));
 						
 					} else if(job==SlaveJob.SECURITY) {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave,
-								"is not even bothering to pretend that [npc.sheIs] looking out for trouble.",
-								"is half-heartedly looking out for trouble.",
-								"is looking out for any sign of trouble.",
-								"is alert and on the lookout for any sign of trouble.",
-								"is highly alert and dutifully looking out for any sign of trouble."));
+								"甚至懒得假装[npc.sheIs]在看守。",
+								"正心猿意马地看守着。",
+								"正机警地关注着所有风吹草动。",
+								"正高度紧张且机警地关注着所有风吹草动。",
+								"正高度紧张且认真负责地关注着所有风吹草动。"));
 					} else {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave));
 					}
@@ -747,7 +747,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode ROOM_WINDOW = new DialogueNode("Room", ".", false) {
+	public static final DialogueNode ROOM_WINDOW = new DialogueNode("房间", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 10;
@@ -771,7 +771,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode ROOM_GARDEN_GROUND_FLOOR = new DialogueNode("Garden-view room", ".", false) {
+	public static final DialogueNode ROOM_GARDEN_GROUND_FLOOR = new DialogueNode("园景房", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 10;
@@ -795,7 +795,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode ROOM_GARDEN = new DialogueNode("Garden-view room", ".", false) {
+	public static final DialogueNode ROOM_GARDEN = new DialogueNode("园景房", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 10;
@@ -819,7 +819,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode DUNGEON_CELL = new DialogueNode("Dungeon cell", ".", false) {
+	public static final DialogueNode DUNGEON_CELL = new DialogueNode("地牢牢房", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 10;
@@ -842,7 +842,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode BIRTHING_ROOM = new DialogueNode("Birthing room", ".", false) {
+	public static final DialogueNode BIRTHING_ROOM = new DialogueNode("产房", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -852,16 +852,16 @@ public class LilayaHomeGeneric {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Lilaya has had this room repurposed in order to be a suitable place for delivering children."
+						+ "莉莱雅改造了这个房间，如今它成了合适的产房。"
 					+ "</p>"
 					+ "<p>"
-						+ "Instead of being carpeted, like most of the other rooms in this house, clean white tiles have been chosen for this room's flooring."
-						+ " A surprisingly modern-looking birthing bed is sitting against one wall of the room, but apart from that, there isn't much else in the way of medical equipment."
-						+ " A few comfortable chairs have been placed around the edges of the room, but other than those, and a drinks cabinet that's sitting in one corner, the room is devoid of any other furniture."
+						+ "与这座房子的大多数房间不同，这个房间的地面铺设着干净洁白的瓷砖，却没铺地毯。"
+						+ "一张看起来出奇现代化的产床靠在墙边，除此之外，几乎没有其他医疗设备。"
+						+ "房间的角落散落着几把舒适的椅子，但除了椅子们和另一个角落的饮料柜之外，房间没有其他家具。"
 					+ "</p>"
 					+ "<p>"
-						+ "In anyone else's house, finding a room dedicated to delivering pregnancies might come as a bit of a shock, but Lilaya seems to be involved in all manner of strange things,"
-							+ " so you shrug it off as just another peculiarity of this world."
+						+ "换做别人家，发现一个专门的产房可能会有点让人震惊，但莉莱雅似乎参与了各种奇怪的事情，"
+							+ "所以你只是把它当作异世界的又一个怪现象。"
 					+ "</p>";
 		}
 
@@ -879,7 +879,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode KITCHEN = new DialogueNode("Kitchen", ".", false) {
+	public static final DialogueNode KITCHEN = new DialogueNode("厨房", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -892,28 +892,28 @@ public class LilayaHomeGeneric {
 			List<NPC> charactersPresent = getSlavesAndOccupantsPresent();
 			
 			UtilText.nodeContentSB.append("<p>"
-						+ "Just like every other room in Lilaya's house, the kitchen is far larger than any you've ever set foot in before."
-						+ " A row of wooden cabinets, topped with polished granite, line the edge of the room, and a pair of long, free-standing worktops sit in the middle of the cavernous space."
-						+ " The kitchen's trio of cast iron ovens, combined with its rustic oak flooring and lack of any modern-looking appliances, give it a rather vintage look."
+						+ "与莉莱雅家的其他房间情况相同，这间厨房比你以前踏足过的任何厨房都大得多。"
+						+ "房间的边缘摆放着一排木制橱柜，橱柜顶部铺有抛光的花岗岩，一对长长的独立工作台设置在宽敞的房间中央。"
+						+ "放置的三台铸铁烤箱、铺就的原木地板和缺乏现代化设备的内饰，赋予了厨房一种相当复古的观感。"
 					+ "</p>"
 					+ "<p>"
-						+ "There's an open doorway set into one side of the room, and, looking through the opening, you see a series of fridges, freezers and larder units."
-						+ " Ingredients and foodstuffs of all shapes and sizes sit on open shelves, and you find yourself marvelling at the quantity and variety of supplies that are kept in stock."
+						+ "房间的一侧有个敞开的门，透过门的缝隙，你看到一排冰箱、冷冻设备和食品储藏柜。"
+						+ "品类各异、品种繁多的配料和食材摆在开放式货架上，你不禁对储藏数量和品种多样性感到惊讶。"
 					+ "</p>");
 			
 			if(charactersPresent.isEmpty()) {
 				UtilText.nodeContentSB.append("<p>"
-							+ "The kitchen is deserted at the moment, and there doesn't really seem to be much to do here."
+							+ "厨房现在很冷清，似乎没什么可做的。"
 						+ "</p>");
 			} else {
 				for(NPC slave : charactersPresent) {
 					if(slave.getSlaveJob(Main.game.getHourOfDay())==SlaveJob.KITCHEN) {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave,
-								"is quite clearly not doing any cooking. To make matters worse, [npc.she] doesn't seem to care that you're watching [npc.herHim], and turns [npc.her] back on you.",
-								"is currently half-heartedly preparing some food on the other side of the kitchen.",
-								"is busy cooking something in one of the kitchen's ovens.",
-								"is currently preparing some food. You can see that [npc.sheIs] putting a lot of effort into making sure that [npc.sheIs] doing a good job.",
-								"is dutifully making Lilaya a meal. You notice that [npc.sheIs] taking care to prepare it just the way your demonic [lilaya.relation(pc)] likes."));
+								"很明显没在烹饪任何东西。更糟糕的是，[npc.she]并不在乎你发现[npc.herHim]偷懒，[npc.her]转过身去。",
+								"正在厨房角落心猿意马地准备食物。",
+								"正在厨房的其中一台烤箱旁忙着烹饪食物。",
+								"目前正在准备食物。你能发现[npc.sheIs]非常努力地保证[npc.sheIs]干得很好。",
+								"正在忠实地为莉莱雅做饭，你注意到[npc.sheIs]很用心地准备饭菜，来讨你恶魔[lilaya.relation(pc)]的欢心。"));
 					} else {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave));
 					}
@@ -947,7 +947,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode ROOM_ROSE = new DialogueNode("Rose's Room", ".", false) {
+	public static final DialogueNode ROOM_ROSE = new DialogueNode("萝丝的房间", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -977,10 +977,10 @@ public class LilayaHomeGeneric {
 			}
 			if (index == 1) {
 				if(!Main.game.isExtendedWorkTime()) {
-					return new Response("Call for Rose", "The sign hanging beside Rose's door explicitly says not to disturb her, so it would be best to return during the day if you wanted to talk to her about anything.", null);
+					return new Response("呼叫萝丝", "挂在萝丝门旁的牌子写明了不要打扰她，如果你想和她谈什么事情，最好白天再来。", null);
 				}
 				
-				return new Response("Call for Rose", "Lilaya's slave, Rose, is always close at hand. If you were to ring the little bell beside her bedroom's door, she'd be sure to come running.", AUNT_HOME_ROSE){
+				return new Response("呼叫萝丝", "莉莱雅的女仆萝丝总是近在咫尺。如果你按响她卧室门旁的小铃，她肯定会迅速赶来。", AUNT_HOME_ROSE){
 					@Override
 					public void effects() {
 						roseContent = UtilText.parseFromXMLFile("places/dominion/lilayasHome/room_rose", "ROOM_ROSE_INITIAL_CALL");
@@ -996,8 +996,8 @@ public class LilayaHomeGeneric {
 					&& Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.dressingRoomLyssiethsWardrobeActivated)
 					&& (!Main.game.getDialogueFlags().hasSavedLong("innoxia_lilaya_kitty_time_seen")
 							|| (Main.game.getSecondsPassed() - Main.game.getDialogueFlags().getSavedLong("innoxia_lilaya_kitty_time_seen") > 60*60*24*7))) {
-				return new Response("Keyhole",
-						"Look through the keyhole to see if you can identify the source of the loud meowing.",
+				return new Response("锁眼",
+						"透过锁眼看看能否找到那声巨大猫叫的来源。",
 						DialogueManager.getDialogueFromId("innoxia_places_dominion_lilayas_home_room_rose_lilaya_kitty")) {
 					@Override
 					public void effects() {
@@ -1021,7 +1021,7 @@ public class LilayaHomeGeneric {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Lilaya", "Ask Rose about her owner, Lilaya.", AUNT_HOME_ROSE){
+				return new Response("莉莱雅", "向萝丝打听她的主人莉莱雅。", AUNT_HOME_ROSE){
 					@Override
 					public void effects() {
 						roseContent = UtilText.parseFromXMLFile("places/dominion/lilayasHome/generic", "ROSE_TALK_LILAYA");
@@ -1029,7 +1029,7 @@ public class LilayaHomeGeneric {
 				};
 
 			} else if (index == 2) {
-				return new Response("Slavery", "Ask Rose how she became a slave.", AUNT_HOME_ROSE){
+				return new Response("奴役", "问问萝丝她怎么变成奴隶的。", AUNT_HOME_ROSE){
 					@Override
 					public void effects() {
 						roseContent = UtilText.parseFromXMLFile("places/dominion/lilayasHome/generic", "ROSE_TALK_SLAVE");
@@ -1037,7 +1037,7 @@ public class LilayaHomeGeneric {
 				};
 
 			} else if (index == 3) {
-				return new Response("World", "Ask Rose to tell you something about this world.", AUNT_HOME_ROSE){
+				return new Response("世界", "让萝丝给你讲些关于这个世界的事情。", AUNT_HOME_ROSE){
 					@Override
 					public void effects() {
 						roseContent = UtilText.parseFromXMLFile("places/dominion/lilayasHome/generic", "ROSE_TALK_WORLD");
@@ -1045,7 +1045,7 @@ public class LilayaHomeGeneric {
 				};
 
 			} else if (index == 4) {
-				return new Response("Duties", "Ask Rose about what duties she's expected to perform.", AUNT_HOME_ROSE){
+				return new Response("职责", "问问萝丝她的职责是什么。", AUNT_HOME_ROSE){
 					@Override
 					public void effects() {
 						roseContent = UtilText.parseFromXMLFile("places/dominion/lilayasHome/generic", "ROSE_TALK_DUTIES");
@@ -1054,7 +1054,7 @@ public class LilayaHomeGeneric {
 
 			} else if (index == 5) {
 				if(Main.game.getPlayer().hasClothingType(ClothingType.getClothingTypeFromId("innoxia_hair_rose"), false) && !giftedRose) {
-					return new Response("Offer rose", "Offer Rose the rose you have in your inventory.", AUNT_HOME_ROSE) {
+					return new Response("送上玫瑰", "送给萝丝一朵物品栏中的玫瑰。", AUNT_HOME_ROSE) {
 						@Override
 						public void effects() {
 							roseContent = UtilText.parseFromXMLFile("places/dominion/lilayasHome/generic", "ROSE_TALK_OFFER_ROSE");
@@ -1064,7 +1064,7 @@ public class LilayaHomeGeneric {
 					};
 					
 				} else if(giftedRose) {
-					return new Response("Rose's hands", "You've never noticed how amazing Rose's hands are before...", ROSE_HANDS) {
+					return new Response("萝丝的手", "你之前一直没注意到过，萝丝的手竟然如此美妙……", ROSE_HANDS) {
 						@Override
 						public boolean isSexHighlight() {
 							return true;
@@ -1076,14 +1076,14 @@ public class LilayaHomeGeneric {
 					};
 					
 				} else {
-					return new Response("Offer rose", "You do not have a rose to offer to Rose.", null);
+					return new Response("送上玫瑰", "你没有玫瑰可以送给萝丝。", null);
 				}
 				
 			} else if (index == 6
 					&& (Main.game.getNpc(Lilaya.class).isPregnant() && Main.game.getNpc(Lilaya.class).isCharacterReactedToPregnancy(Main.game.getPlayer()))) {
 
 				if(Main.game.getPlayer().hasItemType(ItemType.MOTHERS_MILK)) {
-					return new Response("Mother's milk", "Give Rose one of the Mother's milk from your inventory, and ask her to give it to Lilaya so that her pregnancy can be over quicker.", AUNT_HOME_ROSE) {
+					return new Response("母亲的乳汁", "从物品中给萝丝一瓶母亲的乳汁，并请她把它给莉莱雅，以缩短她的孕期。", AUNT_HOME_ROSE) {
 						@Override
 						public void effects() {
 							giftedRose = false;
@@ -1094,11 +1094,11 @@ public class LilayaHomeGeneric {
 					};
 					
 				} else {
-					return new Response("Mother's milk", "If you were to have a 'Mother's milk' in your inventory, you could ask Rose to give it to Lilaya so that her pregnancy can be over quicker.", null);
+					return new Response("母亲的乳汁", "如果你的物品中有 “母亲的乳汁”，你可以要求萝丝把它给莉莱雅，以缩短她的孕期。", null);
 				}
 				
 			} else if (index == 0) {
-				return new Response("Dismiss", "Let Rose get back on with her work.", ROOM_ROSE) {
+				return new Response("取消", "让萝丝继续工作。", ROOM_ROSE) {
 					@Override
 					public void effects() {
 						giftedRose = false;
@@ -1121,7 +1121,7 @@ public class LilayaHomeGeneric {
 
 		@Override
 		public String getLabel() {
-			return "Rose's hands";
+			return "萝丝的手";
 		}
 
 		@Override
@@ -1132,8 +1132,8 @@ public class LilayaHomeGeneric {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Hand-holding", "Warning: This content contains extreme descriptions of hand-holding, finger sucking, and even palm-licking."
-						+ " <b>Please remember that you need to have read the disclaimer before playing this game!</b> <b style='color:"+BaseColour.CRIMSON.toWebHexString()+";'>18+ only!</b>",
+				return new ResponseSex("牵手", "警告：该内容包括牵手、吮吸手指、舔舐手掌等细节极端的描述。"
+						+ "<b>请记住，开始游戏之前必须阅读游戏声明！</b><b style='color:"+BaseColour.CRIMSON.toWebHexString()+";'>限制18岁以上游玩！</b>",
 						true, false,
 						new SMRoseHands(
 								Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotUnique.HAND_SEX_DOM_ROSE)),
@@ -1153,21 +1153,21 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode END_HAND_SEX = new DialogueNode("Recover", "Both you and Rose and exhausted from your hand-holding session.", true) {
+	public static final DialogueNode END_HAND_SEX = new DialogueNode("恢复", "你和萝丝都因手拉手疲惫不堪。", true) {
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Rose staggers over and retrieves her little feather-duster, casting a sultry look back your way before biting her lip and hurrying off to another part of the house, no doubt to recover from your extreme hand-holding session."
+						+ "萝丝蹒跚地走过去，拿起她的小羽毛扫帚。她朝你投来妩媚的眼神，咬了咬嘴唇，然后匆匆离开前往房子的另一边。毫无疑问，她想从你们极其亲密的手拉手时刻中恢复过来。"
 					+ "</p>"
 					+ "<p>"
-						+ "With an exhausted sigh, you collapse down onto the room's bed, your thoughts dwelling on the amazing experience you've just had."
+						+ "你发出一声精疲力竭的叹息，瘫倒在房间的床上。你回想着自己刚刚的奇妙经历。"
 					+ "</p>";
 		}
 		
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "You've finally recovered from your intense hand-holding session with Rose.", RoomPlayer.ROOM){
+				return new Response("继续", "你终于从与萝丝的手拉手状态中恢复过来。", RoomPlayer.ROOM){
 					@Override
 					public void effects() {
 						Main.game.getNpc(Rose.class).setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_LAB, false);
@@ -1184,7 +1184,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode GARDEN = new DialogueNode("Garden courtyard", "", false) {
+	public static final DialogueNode GARDEN = new DialogueNode("园景房", "", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 10;
@@ -1200,11 +1200,11 @@ public class LilayaHomeGeneric {
 				for(NPC slave : charactersPresent) {
 					if(slave.getSlaveJob(Main.game.getHourOfDay())==SlaveJob.GARDEN) {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave,
-								"is quite clearly not doing any gardening. To make matters worse, [npc.she] doesn't seem to care that you're watching [npc.herHim], and turns [npc.her] back on you.",
-								"is currently half-heartedly trimming a hedge.",
-								"is busy weeding one of the many paths which wind through the garden.",
-								"is currently dead-heading one of the rose bushes. You can see that [npc.sheIs] putting a lot of effort into making sure that [npc.sheIs] doing a good job.",
-								"is dutifully planting bulbs and pulling out weeds. You notice that [npc.sheIs] taking care to plant each and every bulb in its correct place."));
+								"很明显地没在干园艺工作。更糟糕的是，[npc.she]并不在乎你发现[npc.herHim]在偷懒，[npc.her]转过身去。",
+								"正心猿意马地修剪树篱。",
+								"正在忙着沿着一条蜿蜒穿过花园的小路在花园中除草。",
+								"正在忙着修整玫瑰丛。你可以看到[npc.sheIs]非常努力地确保[npc.sheIs]剪掉每一朵凋零的玫瑰。",
+								"忠实地种植鳞茎并拔掉杂草。你注意到[npc.sheIs]特别小心地将每一颗鳞茎都种在了恰当的位置。"));
 					} else {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave));
 					}
@@ -1232,9 +1232,9 @@ public class LilayaHomeGeneric {
 				
 			} else if(index==1) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.lilayaGardenPickRose)) {
-					return new Response("Pick rose", "You've already picked a rose today, and wouldn't want to upset Lilaya by taking too many...", null);
+					return new Response("采摘玫瑰", "你今天已经摘了一朵玫瑰，你担心摘太多会惹恼莉莱雅……", null);
 				} else {
-					return new Response("Pick rose", "Pick a flower from one of the magnificent rose bushes.", GARDEN) {
+					return new Response("采摘玫瑰", "从繁茂的玫瑰丛中摘一朵花。", GARDEN) {
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().setFlag(DialogueFlagValue.lilayaGardenPickRose, true);
@@ -1249,7 +1249,7 @@ public class LilayaHomeGeneric {
 				
 			} else if(index-2<charactersPresent.size()) {
 				GameCharacter slave = charactersPresent.get(index-2);
-				return new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "Interact with [npc.name]."), SlaveDialogue.SLAVE_START) {
+				return new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "和[npc.name]互动。"), SlaveDialogue.SLAVE_START) {
 					@Override
 					public Colour getHighlightColour() {
 						return slave.getFemininity().getColour();
@@ -1265,7 +1265,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode FOUNTAIN = new DialogueNode("Water fountain", ".", false) {
+	public static final DialogueNode FOUNTAIN = new DialogueNode("喷水池", "。", false) {
 
 		@Override
 		public int getSecondsPassed() {
@@ -1283,11 +1283,11 @@ public class LilayaHomeGeneric {
 				for(NPC slave : charactersPresent) {
 					if(slave.getSlaveJob(Main.game.getHourOfDay())==SlaveJob.GARDEN) {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave,
-								"is quite clearly not doing any gardening. To make matters worse, [npc.she] doesn't seem to care that you're watching [npc.herHim], and turns [npc.her] back on you.",
-								"is currently half-heartedly trimming a hedge.",
-								"is busy weeding one of the many paths which wind through the garden.",
-								"is currently dead-heading one of the rose bushes. You can see that [npc.sheIs] putting a lot of effort into making sure that [npc.sheIs] doing a good job.",
-								"is dutifully planting bulbs and pulling out weeds. You notice that [npc.sheIs] taking care to plant each and every bulb in its correct place."));
+								"很明显地没在干园艺工作。更糟糕的是，[npc.she]并不在乎你发现[npc.herHim]在偷懒，[npc.her]转过身去。",
+								"正心猿意马地修剪树篱。",
+								"正在忙着沿着一条蜿蜒穿过花园的小路在花园中除草。",
+								"正在忙着修整玫瑰丛。你可以看到[npc.sheIs]非常努力地确保[npc.sheIs]剪掉每一朵凋零的玫瑰。",
+								"忠实地种植鳞茎并拔掉杂草。你注意到[npc.sheIs]特别小心地将每一颗鳞茎都种在了恰当的位置。"));
 					} else {
 						UtilText.nodeContentSB.append(getSlavePresentDescription(slave));
 					}
@@ -1318,8 +1318,8 @@ public class LilayaHomeGeneric {
 
 			List<Response> responses = new ArrayList<>();
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.getDialogueFlagValueFromId("acexp_dungeon_garden_access_found"))) {
-				responses.add(new Response("Lilaya's dungeon",
-						"Press the disguised button to open the secret passage down to Lilaya's dungeon.",
+				responses.add(new Response("莉莱雅的地牢",
+						"按下隐藏按钮开启通往莉莱雅地牢的秘密通道。",
 						DialogueManager.getDialogueFromId("acexp_dominion_lilaya_dungeon_stairsUp_garden")) {
 					@Override
 					public void effects() {
@@ -1332,7 +1332,7 @@ public class LilayaHomeGeneric {
 			}
 			for(int i=0; i<charactersPresent.size(); i++) {
 				GameCharacter slave = charactersPresent.get(i);
-				responses.add(new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "Interact with [npc.name]."), SlaveDialogue.SLAVE_START) {
+				responses.add(new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "和[npc.name]互动。"), SlaveDialogue.SLAVE_START) {
 					@Override
 					public Colour getHighlightColour() {
 						return slave.getFemininity().getColour();
@@ -1351,7 +1351,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode ENTRANCE_HALL = new DialogueNode("Entrance hall", ".", false) {
+	public static final DialogueNode ENTRANCE_HALL = new DialogueNode("门厅", "。", false) {
 		private boolean fiammettaMessage = false;
 		@Override
 		public void applyPreParsingEffects() {
@@ -1393,11 +1393,11 @@ public class LilayaHomeGeneric {
 				for(NPC slave : charactersPresent) {
 					if(slave.getSlaveJob(Main.game.getHourOfDay())==SlaveJob.SECURITY) {
 						sb.append(getSlavePresentDescription(slave,
-								"is not even bothering to pretend that [npc.sheIs] looking out for trouble.",
-								"is half-heartedly looking out for trouble.",
-								"is looking out for any sign of trouble.",
-								"is alert and on the lookout for any sign of trouble.",
-								"is highly alert and dutifully looking out for any sign of trouble."));
+								"甚至懒得假装[npc.sheIs]在看守。",
+								"正心猿意马地看守着。",
+								"正机警地关注着所有风吹草动。",
+								"正高度紧张且机警地关注着所有风吹草动。",
+								"正高度紧张且认真负责地关注着所有风吹草动。"));
 					} else {
 						sb.append(getSlavePresentDescription(slave));
 					}
@@ -1417,7 +1417,7 @@ public class LilayaHomeGeneric {
 		public Response getResponse(int responseTab, int index) {
 			if(fiammettaMessage) {
 				if(index==1) {
-					return new Response("Follow Rose", "Follow Rose to the library to see who this guest is.", DialogueManager.getDialogueFromId("innoxia_places_dominion_lilayas_home_doll_quest_start"));
+					return new Response("跟随萝丝", "跟着萝丝去图书馆看看客人是谁。", DialogueManager.getDialogueFromId("innoxia_places_dominion_lilayas_home_doll_quest_start"));
 				}
 				return null;
 			}
@@ -1435,7 +1435,7 @@ public class LilayaHomeGeneric {
 				return null;
 				
 			} else if (index == 1) {
-				return new Response("Exit", "Leave Lilaya's house.", PlaceType.DOMINION_AUNTS_HOME.getDialogue(false)){
+				return new Response("离开", "离开莉莱雅的家", PlaceType.DOMINION_AUNTS_HOME.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_AUNTS_HOME, false);
@@ -1444,7 +1444,7 @@ public class LilayaHomeGeneric {
 
 			} else if(index-2<charactersPresent.size()) {
 				GameCharacter slave = charactersPresent.get(index-2);
-				return new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "Interact with [npc.name]."), SlaveDialogue.SLAVE_START) {
+				return new Response(UtilText.parse(slave, "[npc.Name]"), UtilText.parse(slave, "和[npc.name]互动。"), SlaveDialogue.SLAVE_START) {
 					@Override
 					public Colour getHighlightColour() {
 						return slave.getFemininity().getColour();
@@ -1460,7 +1460,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode STAIRCASE_UP = new DialogueNode("Staircase up", ".", false) {
+	public static final DialogueNode STAIRCASE_UP = new DialogueNode("上楼", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 20;
@@ -1492,7 +1492,7 @@ public class LilayaHomeGeneric {
 				return null;
 				
 			} else if (index == 1) {
-				return new Response("Upstairs", "Go upstairs to the first floor.", PlaceType.LILAYA_HOME_STAIR_DOWN.getDialogue(false)){
+				return new Response("上楼", "上到二楼", PlaceType.LILAYA_HOME_STAIR_DOWN.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, PlaceType.LILAYA_HOME_STAIR_DOWN, false);
@@ -1508,7 +1508,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode STAIRCASE_UP_SECONDARY = new DialogueNode("Staircase up", ".", false) {
+	public static final DialogueNode STAIRCASE_UP_SECONDARY = new DialogueNode("上楼", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 20;
@@ -1541,7 +1541,7 @@ public class LilayaHomeGeneric {
 				return null;
 				
 			} else if (index == 1) {
-				return new Response("Upstairs", "Go upstairs to the first floor.", STAIRCASE_DOWN_SECONDARY){
+				return new Response("上楼", "上到二楼", STAIRCASE_DOWN_SECONDARY){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_FIRST_FLOOR, Main.game.getPlayer().getLocation(), false);
@@ -1556,7 +1556,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode STAIRCASE_DOWN = new DialogueNode("Staircase down", ".", false) {
+	public static final DialogueNode STAIRCASE_DOWN = new DialogueNode("下楼", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 20;
@@ -1588,7 +1588,7 @@ public class LilayaHomeGeneric {
 				return null;
 				
 			} else if (index == 1) {
-				return new Response("Downstairs", "Go back downstairs to the ground floor.",PlaceType.LILAYA_HOME_STAIR_UP.getDialogue(false)){
+				return new Response("下楼", "回到一楼",PlaceType.LILAYA_HOME_STAIR_UP.getDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, PlaceType.LILAYA_HOME_STAIR_UP, false);
@@ -1603,7 +1603,7 @@ public class LilayaHomeGeneric {
 		}
 	};
 	
-	public static final DialogueNode STAIRCASE_DOWN_SECONDARY = new DialogueNode("Staircase down", ".", false) {
+	public static final DialogueNode STAIRCASE_DOWN_SECONDARY = new DialogueNode("下楼", "。", false) {
 		@Override
 		public int getSecondsPassed() {
 			return 20;
@@ -1636,7 +1636,7 @@ public class LilayaHomeGeneric {
 				return null;
 				
 			} else if (index == 1) {
-				return new Response("Downstairs", "Go back downstairs to the ground floor.", STAIRCASE_UP_SECONDARY){
+				return new Response("下楼", "回到一楼", STAIRCASE_UP_SECONDARY){
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.LILAYAS_HOUSE_GROUND_FLOOR, Main.game.getPlayer().getLocation(), false);

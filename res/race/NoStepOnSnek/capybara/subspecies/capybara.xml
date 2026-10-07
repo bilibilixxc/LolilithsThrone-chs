@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>NoStepOnSnek_capybara</race>
 	<colour>NoStepOnSnek_capybara</colour>
@@ -12,7 +12,7 @@
 	<nocturnality>CREPUSCULAR</nocturnality>
 	<shortStature>false</shortStature>
 	<bipedalSubspecies>true</bipedalSubspecies>
-	<applySubspeciesChanges></applySubspeciesChanges>
+	<applySubspeciesChanges/>
 	<subspeciesWeighting><![CDATA[
 		#IF(targetedRace==RACE_NoStepOnSnek_capybara)
 			100
@@ -23,38 +23,38 @@
 	<iconName displaySize="80">capybara</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>capybara</bookIconName>
-	<bookName>Friendshaped Serenity</bookName>
+	<bookName><![CDATA[从容友谊的化身]]></bookName>
 	<basicDescriptionId>CAPYBARA_BASIC</basicDescriptionId>
 	<advancedDescriptionId>CAPYBARA_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[capybara-morph]]></name>
-			<namePlural><![CDATA[capybara-morphs]]></namePlural>
-			<singularMaleName><![CDATA[capybara-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[capybara-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[capybara-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[capybara-girls]]></pluralFemaleName>
+			<name><![CDATA[水豚化形]]></name>
+			<namePlural><![CDATA[水豚化形]]></namePlural>
+			<singularMaleName><![CDATA[水豚男]]></singularMaleName>
+			<singularFemaleName><![CDATA[水豚女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[水豚男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[水豚女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
-	<description><![CDATA[An anthropomorphic capybara, known as a 'capybara-morph' when bipedal, and a 'capybarataur' when the lower body is that of a typically-oversized feral capybara.]]></description>
+	<description><![CDATA[一种人形的水豚，两足行走时被称为“水豚化形”，而下半身是典型的超大兽态水豚时，则被称为“半水豚人”。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[demonic-capybara]]></name>
-			<namePlural><![CDATA[demonic-capybaras]]></namePlural>
-			<singularMaleName><![CDATA[demonic-capybara-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[demonic-capybara-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[demonic-capybara-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[demonic-capybara-girls]]></pluralFemaleName>
+			<name><![CDATA[恶魔水豚]]></name>
+			<namePlural><![CDATA[恶魔水豚]]></namePlural>
+			<singularMaleName><![CDATA[恶魔水豚男]]></singularMaleName>
+			<singularFemaleName><![CDATA[恶魔水豚女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[恶魔水豚男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[恶魔水豚女]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[capybara]]></feralName>
-		<feralNamePlural><![CDATA[capybara]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[capybara]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[capybara]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[capybara]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[capybara]]></feralPluralFemaleName>
+		<feralName><![CDATA[水豚]]></feralName>
+		<feralNamePlural><![CDATA[水豚]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[水豚]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[水豚]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[水豚]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[水豚]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>50</size>
@@ -67,7 +67,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] capybara-like body predisposes [npc.herHim] towards serenity, resulting in better arcane focus and an easier time dealing with arousal.
+		[npc.NamePos]水豚般的身体使[npc.herHim]倾向于宁静，从而有更好地奥术专注力，更容易处理性欲。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="0">MAJOR_PHYSIQUE</attribute>

@@ -1,280 +1,280 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<htmlContent tag="LIBRARY"><![CDATA[
 	<p>
-		Pushing open the heavy wooden door, you find yourself walking into Lilaya's library. Much like her lab, all four walls are covered in shelving; each one of them is stacked full of what must be in total many thousands of books of all shapes and sizes. Much of the room is taken up by free-standing book cases, although there's a little space on one side of the room, where a couple of comfortable leather-bound chairs flank an ornate fireplace.
+		你推开厚重的木门，走进了莉莱雅的图书馆。这里和她的实验室一样，四面墙壁都摆满了书架，堆满了浩如烟海的各种形状和大小的书籍。房间的大部分空间都被独立的书柜占据，不过在房间的一侧还留出了一点空间，那里的华丽壁炉两侧摆放着几张舒适的皮质椅子。
 	</p>
 	<p>
-		Walking down one of the aisles, you see a great deal of organisation has gone into the design of the room, and upon closer inspection, you see that the shelves are immaculately clean; evidence that a lot of care goes into its maintenance. As you walk, you scan the titles printed onto the spines of the books, but there's not really much that catches your eye. Only a few shelves really look to be of any interest, and you wonder if you should take some time to do a spot of reading.
+		你走过其中一条过道，发现房间的设计非常有条理，你仔细观察，发现书架干净整洁，看得出来，平日的维护保养工作非常细致。你一边走，一边扫视着印在书脊上的书名，但真正吸引你眼球的并不多。走了一圈，只有几个书架看起来有点意思，你在考虑要不要花点时间来读书。
 	</p>
 	<p>
-		On the back wall at the end of the shelves is a huge map of the city of Dominion. You wonder if you should take a picture of it with your phone's camera.
+		书架尽头的后墙上挂着一张巨大的御城区地图。你在考虑要不要用手机将它拍下来。
 	</p>
 	<p>
-		One of the library's aisles is dedicated to holding copies of the spell books that you've discovered and read in your travels. As you walk down this aisle, you see that the shelves in this section are fashioned out of shimmering purple energy, and seem to shift and move with a life of their own.
+		图书馆有个过道，你在旅行中发现和阅读过的法术书，其副本都专门存放于此。你走过这条过道，发现这个区域的货架是由闪烁的紫色能量构成的，像是有自己的生命一样移动着。
 	</p>
 	#IF(game.getNonCompanionCharactersPresent().isEmpty())
 		<p style='text-align:center;'>
-			[style.italicsDisabled(The library is deserted at the moment...)]
+			[style.italicsDisabled(图书馆此刻冷冷清清……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ARCANE_AROUSAL"><![CDATA[
 	<p>
-		Sliding the large leather-bound tome out from the bookshelf, you then walk over to sit down on one of the library's comfortable chairs. The spine creaks as you open the cover, and as you start reading, you quickly discover that this book is way above your level of understanding. You decide to persist, and by flipping through the pages and skimming over some of the more intelligible passages, you do manage to discover some things.
+		从书架上拿下那本皮面装订的大部头，然后找到图书馆里一把舒适的椅子坐下。当你打开封面时，书脊开始吱吱作响。而当你开始阅读这本大部头时，你很快就发现这本书的内容远超出了你的理解水平，但你决定坚持阅读下去。通过翻阅和略读一些较易理解的段落，你确实获得了一些信息。
 	</p>
 	<p>
-		For one, it seems as though arcane power is found all throughout this world, and although it's mostly concentrated in people's arcane auras, you discover that there are some places out in the wilderness where the arcane condenses into little micro-storms of activity. These places allow even the most novice of arcane users to harness its power, but for the most part, a person can only use arcane spells if they train their aura to become strong enough. This training process appears to take several years, and you realise how fortunate you are to have an aura with demon-like strength.
+		首先，奥能似乎在这个世界上无处不在，虽然多数情况下奥能会集中在人们的奥术灵气当中，但你发现在荒野的一些地区，奥术会凝聚成一股小型的奥术风暴，即使是一个奥术菜鸟也能轻易地利用其中的力量。不过大多数情况下，一个人只有将自己的奥术灵气训练得足够强大，才能使用奥术法术。这个训练过程通常需要数年的时间，而你也认识到了自己一开始就拥有如恶魔般强大的奥术灵气有多么幸运。
 	</p>
 	<p>
-		After reading through these technical aspects of the arcane, you move on to the nature of the arcane itself. You realise that this section is what must have given the book its title; 'Arcane Arousal'. It appears as though the arcane is some kind of primal force that feeds on a person's sexual energy. Although a person may normally be able to easily resist their aura's influence, when they get fatigued, their own aura will amplify their sexual desires, causing them to become obsessed with sex. This is the power that's behind the arcane storms that often erupt over Dominion, and you once again reflect on how lucky you are to have an aura powerful enough to cancel out the storm's potent effects.
+		而在阅读了这些奥术技术层面的内容之后，你开始了解奥术本身的性质。你意识到，这部分就是关于这本书的标题“奥术狂欲”的来源。看起来奥术是一种以人体“性能量”为食的原始能量，虽然人在正常情况下可以轻易抵御奥术带来的影响，但当疲劳时，奥术就会放大他们的性欲，使他们沉迷于性交。这也就是在御城区上空频繁爆发的奥术风暴背后的力量。再一次的，你为拥有着强大到足以抵消这一影响的奥术灵气而感到幸运。
 	</p>
 	<p>
-		Finally, you skim over the book's last few chapters, which define 'arcane essences'. These essences are described as being physical, gaseous manifestations of arcane power, and are able to be infused into clothing and items of food in order to create enchanted items and potions. People who have a very high level of arcane power are able to absorb arcane essences from out of the aura of people orgasming or being defeated in combat near them, with lilin even being able to passively absorb essences in a radius of several thousand metres. This does <i>not</i> diminish the aura of the orgasming person, but it does cause their aura to strengthen, preventing additional essence absorption for a few hours.
+		最后，你浏览了书的最后几章，其中对“奥术精华”做了定义。这些“精华”表现为奥术能量的三态形式，并且可以被注入到物品或是食物中以创造附魔物品或是附魔药水。奥术灵气达到极高水平的人能够从在其附近达到高潮或在战斗中击败的人的灵气中吸收奥术精华，其中莉琳甚至能够被动地吸收方圆几千米内的精华。这<i>并不会</i>削弱被吸收者的灵气，反而会巩固被吸收者的灵气，使得接下来数个小时被吸收者不会再被吸收精华。
 	</p>
 	<p>
-		The book finishes by noting that, due to the sexual pleasure derived from beating others, powerful arcane users who are sadists are able to absorb essences from those they abuse or beat in fights. Conversely, powerful arcane users who are masochists absorb essences from being beaten.
+		在书的最后，作者指出，由于虐待他人带来的性快感，如果一个拥有着强大奥术灵气的奥术使用者是虐待狂，他便能从虐待行为中吸取精华。相反的，如果奥术使用者是受虐狂，那他们将从受虐行为当中吸取精华。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LILITHS_DYNASTY"><![CDATA[
 	<p>
-		You take the hardback book out of the bookshelf and walk over to sit down on one of the library's comfortable chairs. Opening the cover and flipping through the pages reveals that most of this book is taken up by descriptions of trivial events and tedious demon politics. In general, however, it does provide a good insight into how this world is ruled, and you spend a short while reading through the pages as you familiarise yourself with Lilith's dynasty.
+		你从书架上将这本精装书取了下来，走去图书馆一把舒适的椅子边坐了下来。打开封皮翻了几页，便发现这本书绝大多数都只是记载着鸡毛蒜皮的事件和枯燥的恶魔政治。不过这本书确实能为这个世界的运作方式提供重要的信息。你读了一会儿，逐渐对于莉莉丝的王朝有了一些了解。
 	</p>
 	<p>
-		You already knew that the demon queen Lilith was the reigning monarch of this world, but what you find interesting is that there is no record of her predecessor. In fact, from what you're reading, it sounds as though Lilith has ruled this world since the beginning of recorded history, and you can't help but wonder how she's managed to keep control for such a length of time.
+		你已经知道恶魔女王莉莉丝是主宰这个世界的君主，但有意思的是各处都没有关于其前任的记载。实际上，根据你看到的内容，似乎莉莉丝自历史记载以来便已经统治着这个世界了。你不由得暗自忖度她如何才能维持如此漫长的统治。
 	</p>
 	<p>
-		Your question is answered as you turn the next few pages. Instead of relying on her own immense power alone, Lilith has created a race of extremely powerful demons called 'lilin' who rule in her name. Seven of these lilin are described as being even more powerful than all the rest, and are referred to as the 'elder lilin'. These elder lilin are Lilith's natural-born daughters and are a result of Lilith choosing to impregnate herself. In order of seniority, these seven elder lilin are:
-		<br/><i>Lirecea, Lovienne, Lasielle, Lyssieth, Lunette, Lyxias, and Lisophia.</i>
+		翻到下面几页后，你的问题得到了解答。莉莉丝并非只依赖于她本身恐怖的力量，她还创造了一种被称作“莉琳”的强大恶魔，并以自己的名义统领着她们。书上提到这些莉琳中有七位比其余莉琳更加强大，一般被称为“莉琳长老”。这七位莉琳长老是莉莉丝的亲生女儿，是莉莉丝自我受孕的产物。按长幼排序，这七位莉琳长老分别是：
+		<br/><i>莉瑞恰，洛维耶纳，拉谢尔，莉西丝，露内特，莉西亚斯，莉索菲亚。</i>
 	</p>
 	<p>
-		The rest of the lilin, of which there are hundreds, have been created in one of two ways. Many were corrupted from common races into lilin by Lilith herself, and as they were exceptional enough to draw the attention of the queen of demons herself, these lilin are regarded as being the highest-ranking of all, being lesser only to Lilith and the seven elders. The rest of the lilin were born in a natural manner from the coupling between Lilith, an elder lilin, or one of the already-existing lilin.
+		剩下的百余位莉琳是由以下两种方式之一创造的。一部分是被莉莉丝亲自从寻常种族腐化成莉琳，由于她们特殊到足以引起恶魔女王的注意，这些莉琳也被认为是其余莉琳中地位最高的，仅次于莉莉丝和七位莉琳长老。其余的莉琳是由莉莉丝，莉琳长老或是另一位莉琳之间自然结合而诞生的。
 	</p>
 	<p>
-		The final part of the introduction describes how Lilith and the lilin usually corrupt their partners into demons before sex, so that the resulting offspring will be pure demons. Half-demons are considered to be lower in social standing than pure demons, with half-demons being born of a lilin and human being regarded as particularly shameful.
+		导言的最后一部分描述了莉莉丝和莉琳通常会在性爱前将对象腐化为恶魔，因此生育的后代也会是纯种恶魔。半恶魔是莉琳与人类的后代，这种行为是极其可耻的，因而其社会地位也不如纯种恶魔。
 	</p>
 	<p>
-		Apparently, although many lilin end up giving birth to hundreds, if not thousands, of demons, it's incredibly rare for a lilin to publicly acknowledge any of her demonic children as her own. Even if they're the rare sort of demon who prefers the form of an incubus to that of a succubus, a lilin's recognised offspring are always called daughters, and a recognised daughter of a lilin is considered to be at the very peak of society. Recognised half-demons seem to be almost unheard of, with just a handful of mentions throughout the entire book.
+		虽然许多莉琳最终都会诞下成百上千的恶魔，但莉琳公开亲自承认的恶魔子嗣却是少之又少。即便有很少的一部分恶魔比起魅魔形态更偏好淫梦魔形态，但被莉琳承认的子嗣仍会被叫做女儿，被莉琳承认的女儿已经处于社会阶层的顶端了。被承认的半恶魔更是几乎闻所未闻，整本书中提及的次数一只手都数得过来。
 	</p>
 	<p style='text-align:center;'>
-		In the book's centre-fold, there's a table which shows how demonic breeding works:
+		书本的中心大页上描绘着一张表格，展示了恶魔繁育后代的细节：
 		<br/><br/>
 		<table style='margin: 0px auto;'>
 		<tr style='font-weight:bold; text-align:left;'>
-			<td>[style.boldFeminine(Mother)]/[style.boldMasculine(Father)]</td><td>Lilin</td><td>Demon</td><td>Half-demon</td><td>Human half-demon</td><td>Non-demon</td><td>Human</td><td>Imp</td>
+			<td>[style.boldFeminine(母亲)]/[style.boldMasculine(父亲)]</td><td>莉琳</td><td>恶魔</td><td>半恶魔</td><td>人类半恶魔</td><td>非恶魔</td><td>人类</td><td>小恶魔</td>
 		</tr>
 		<tr>
-			<td style='font-weight:bold;'>Lilin</td><td>[style.boldtfGreater(Ln)]</td><td>[style.boldtfLesser(Dn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldBad(Ip)]</td>
+			<td style='font-weight:bold;'>莉琳</td><td>[style.boldtfGreater(Ln)]</td><td>[style.boldtfLesser(Dn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldBad(Ip)]</td>
 		</tr>
 		<tr>
-			<td style='font-weight:bold;'>Demon</td><td>[style.boldtfLesser(Dn)]</td><td>[style.boldtfLesser(Dn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldBad(Ip)]</td>
+			<td style='font-weight:bold;'>恶魔</td><td>[style.boldtfLesser(Dn)]</td><td>[style.boldtfLesser(Dn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldBad(Ip)]</td>
 		</tr>
 		<tr>
-			<td style='font-weight:bold;'>Half-demon</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldBad(Ip)]</td>
+			<td style='font-weight:bold;'>半恶魔</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldBad(Ip)]</td>
 		</tr>
 		<tr>
-			<td style='font-weight:bold;'>Human half-demon</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td>
+			<td style='font-weight:bold;'>人类半恶魔</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldtfPartial(Hhdn)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td>
 		</tr>
 		<tr>
-			<td style='font-weight:bold;'>Non-demon</td><td>[style.boldtfMinor(Hdn)]</td</td><td>[style.boldtfMinor(Hdn)]</td</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldtfGeneric(Nd)]</td><td>[style.boldtfGeneric(Nd)]</td><td>[style.boldBad(Ip)]</td>
+			<td style='font-weight:bold;'>非恶魔</td><td>[style.boldtfMinor(Hdn)]</td</td><td>[style.boldtfMinor(Hdn)]</td</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldtfGeneric(Nd)]</td><td>[style.boldtfGeneric(Nd)]</td><td>[style.boldBad(Ip)]</td>
 		</tr>
 		<tr>
-			<td style='font-weight:bold;'>Human</td><td>[style.boldtfPartial(Hhdn)]</td</td><td>[style.boldtfPartial(Hhdn)]</td</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldtfGeneric(Nd)]</td><td>[style.boldHuman(Hn)]</td><td>[style.boldBad(Ip)]</td>
+			<td style='font-weight:bold;'>人类</td><td>[style.boldtfPartial(Hhdn)]</td</td><td>[style.boldtfPartial(Hhdn)]</td</td><td>[style.boldtfMinor(Hdn)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldtfGeneric(Nd)]</td><td>[style.boldHuman(Hn)]</td><td>[style.boldBad(Ip)]</td>
 		</tr>
 		<tr>
-			<td style='font-weight:bold;'>Imp</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td>
+			<td style='font-weight:bold;'>小恶魔</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td><td>[style.boldBad(Ip)]</td>
 		</tr>
 		</table>
 		<br/>
-		[style.boldtfGreater(Ln)] = Lilin&nbsp;&nbsp;&nbsp;&nbsp;
-		[style.boldtfLesser(Dn)] = Demon&nbsp;&nbsp;&nbsp;&nbsp;
-		[style.boldtfMinor(Hdn)] = Half-demon&nbsp;&nbsp;&nbsp;&nbsp;
-		[style.boldtfPartial(Hhdn)] = Human half-demon</br>
-		[style.boldtfGeneric(Nd)] = Non-demon (non-human)&nbsp;&nbsp;&nbsp;&nbsp;
-		[style.boldHuman(Hn)] = Human&nbsp;&nbsp;&nbsp;&nbsp;
-		[style.boldBad(Ip)] = Imp
+		[style.boldtfGreater(Ln)] =莉琳&nbsp;&nbsp;&nbsp;&nbsp;
+		[style.boldtfLesser(Dn)] =恶魔&nbsp;&nbsp;&nbsp;&nbsp;
+		[style.boldtfMinor(Hdn)] =半恶魔&nbsp;&nbsp;&nbsp;&nbsp;
+		[style.boldtfPartial(Hhdn)] =人类半恶魔</br>
+		[style.boldtfGeneric(Nd)] =非恶魔(非人类)&nbsp;&nbsp;&nbsp;&nbsp;
+		[style.boldHuman(Hn)] =人类&nbsp;&nbsp;&nbsp;&nbsp;
+		[style.boldBad(Ip)] = 小恶魔
 		<br/>
 		<br/>
 		#IF(game.isFeralContentEnabled())
-			<i>[style.colourFeral(Feral mothers)] always give birth to the tauric version of their subspecies, such as centaurs for feral horses and driders for feral spiders.</i>
+			<i>[style.colourFeral(母亲为兽态时)]分娩生下的下一代永远会是其对应亚种的半兽身人态，例如兽态马会生出半人马以及兽态蜘蛛会生出卓尔夫蛛。</i>
 		#ENDIF
 	</p>
 	<p>
-		After this, the book goes on to describe human half-demons as being particularly despised in the demon's social hierarchy. It explains that this is due to the fact that they are the only demon-kind to produce imp offspring, and imps are considered to be the lowest of all (even below humans). While still of a higher social standing than any non-demon, human half-demons are typically treated very poorly by their 'purer' relatives, who will often insult them with terms such as 'imp-breeder', 'imp-factory', 'imp-fucker', or other such profanities.
+		此后这本书继续讲述道，人类半恶魔在恶魔社会阶层中被格外鄙视。书中解释道，这是因为他们是唯一能够繁育出小恶魔后代的一种恶魔，而小恶魔则是社会的最底层(甚至低于人类)。尽管社会地位比之其他非恶魔种族仍然较高，但人类半恶魔却非常不受那些“更纯洁”的同胞的待见，他们经常会使用“生小恶魔的”、“小恶魔工厂”、“操小恶魔的”或者其他类似的脏话来侮辱人类半恶魔。
 	</p>
 	<p>
-		Your eyes widen as you read that Lilaya is one of only two recorded human half-demons in history to be publicly recognised by their lilin mother (who, in Lilaya's case, is the elder lilin, Lyssieth).
+		当你读到莉莱雅是有史以来唯二被其莉琳母亲(对于莉莱雅来说，就是莉琳长老莉西丝)公开承认的半恶魔时，你惊愕了。
 		#IF(flags.hasFlag(FLAG_impFortressDemonBossEncountered))
-			 The other half-demon mentioned is Lilaya's sister, [siren.name].
+			另一位提到的人类半恶魔则是莉莱雅的妹妹，[siren.name]。
 		#ELSE
-			 The other half-demon to be mentioned is someone by the name of [siren.name], who is another of Lyssieth's daughters.
+			另一位提到的人类半恶魔则被称作[siren.name]，也是莉西丝的女儿。
 		#ENDIF
-		 After reading about this, you can understand why Lilaya is extremely sensitive about her human half-demon form.
+		读完之后，你理解了为什么莉莱雅对于她人类半恶魔的形态如此敏感了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOMINION_HISTORY"><![CDATA[
 	<p>
-		As you slide the history book out from the bookshelf and flip through the pages, you see that the content is written in a very simplistic manner, and most of the pages are taken up by large illustrations. Looking at the front cover again, you see that the title is 'A horse-morph's guide to Dominion's history'. Tutting at the author's apparent assumption about the intelligence of horse-morphs, you nevertheless have a quick read through the book's pages.
+		当你从书架上拿下这本历史书，翻开书页时，你发现这本书中的行文非常简洁易懂，大部分书页还都被插图所占据。再看了看封面，你发现这本历史书的书名是“连马化形都能看懂的御城区通史”。虽然你对作者对马化形智力的显著偏见感到不满，但你还是决定快速浏览一遍这本书。
 	</p>
 	<p>
-		There isn't really much useful information inside, and you quickly finish the book from cover to cover. There's an interesting passage about the construction of Dominion by Lilith and the demons many centuries ago, but it doesn't really go into any detail.
+		这本书里面并没有多少有用的信息，所以你可以快速把这本书看完。尽管书中有一些关于数个世纪前莉莉丝与恶魔建造御城区的有趣段落，但却没有提供任何有用的细节。
 	</p>
 	<p>
-		Apart from that, the only other part of the book that piques your interest is a small section justifying the practice of slavery as a necessary evil. The passage explains how demons, not including half-demons, are the only race which are almost never seen to be enslaved. Apparently, this is due to the fact that a demonic slave being owned by a non-demon is considered completely unacceptable in Dominion's society, and requires a very hard-to-obtain license. It also mentions that Enforcers are very hesitant to sign off on any demon enslavement order, as for all they know, the demon in question could turn out to be the favourite offspring of a lilin, who would be sure to bring their wrath down upon them...
+		除此以外，书中唯一能引起你兴趣的部分是有一小段文字为奴隶制辩护，认为这是必要之恶。这段文字说明了恶魔(不包括半恶魔)是唯一几乎未见过被奴役的种族。显然，这是因为在御城区社会中，恶魔奴隶被非恶魔种族拥有这件事是完全不可接受的，而且需要非常难以获得的许可证。书中还提到，执法者在签署任何奴役恶魔的命令时都会非常犹豫，因为他们知道，这个恶魔可能是一个莉琳最喜欢的子嗣，而莉琳一定会将他们的愤怒降到他们身上……
 	</p>
 	<p>
-		Other than that snippet of trivia, the book doesn't contain anything useful.
+		除了那一小段琐事外，这本书就再也没有任何有用的内容了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="PREGNANCY_INFO"><![CDATA[
 	<p>
-		You slide the small paperback book out from the shelf, and, turning it over in your [pc.hands], you take a look at the front cover. On it, the title 'Knocked up' is displayed in bold pink lettering, and beneath that, there's a picture of a heavily-pregnant rabbit-girl cradling her swollen belly. A little speech-bubble is drawn coming from her mouth, and in it, you read the words 'All you need to know about being a parent!'.
+	你从书架上抽出一本平装书，转手翻向你这边，看了一眼封皮。上面用粗体的粉色字写着标题“好孕临门”，下面则是图像，一只孕中后期的兔女怀抱着隆起的小腹。一个小对话泡从她的嘴边探出，写着这样一句话：“为人父母全知道！”。
+</p>
+	<p>
+		你翻开书页，只见书中的内容都以简介清晰的形式排列着，不消几分钟你便读完了整本。其中最令你震惊的事实是，这个世界里，完整的孕期最多也只会持续几周，而母亲临盆后，则可以无限期地保持这种状态，直到自身愿意分娩为止。
 	</p>
 	<p>
-		Opening its pages, you find that the information contained within the book is laid out in a very neat and easy-to-read format, and it only takes you a few minutes to read through the entire thing. One of the most striking facts is that in this world, the full cycle of pregnancy only lasts for a few weeks. What's more, once the mother is ready to give birth, she's able to stay in that state indefinitely, until such time as she feels comfortable giving birth.
+		这些书页中另一个令人不安的事实则是与婴孩的成长有关。新生儿只需要几分钟就可以成长为成年人，并且会从父母处继承所有常识。当然并不包括特定的记忆，比如说，一个孩子的母亲懂得如何认字写字，那孩子也一定会，但是却并没有学习此类知识的记忆。
 	</p>
 	<p>
-		The second alarming fact contained within these pages is related to the development of children. It only takes a few minutes for newborns to develop and mature into adults, and they will inherit all of the common knowledge held by their parents. This doesn't include specific memories, so for example, if a child's mother knows how to read and write, they will too, but they won't have the memory of their mother learning this information.
-	</p>
-	<p>
-		After reaching full maturity within a matter of hours, the vast majority of children will immediately leave their parents in order to strike out for themselves and become fully independent. Despite this almost-immediate separation, a parent will always share special maternal or paternal bonds with their children, and, whether due to the arcane or some natural intuition, a parent and child, as well as siblings, will always recognise each other at first sight.
-	</p>
-	]]>
-	</htmlContent>
+	在数个小时后，绝大多数的婴孩都会达到完全成熟，并且会立刻离开父母，完全独立地为自己奋斗。尽管几乎是见面即离别，但父母依然与孩子拥有特殊的母性或父性的联结，而且不知是由于奥术还是天性使然，父母与孩子，也包括兄弟姐妹，总能一眼就认出对方。
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FERAL_HISTORY"><![CDATA[
 	<p>
-		The title, 'The History of Ferals', that's printed down the spine of a blue, hardback book catches your attention, and so you slide it off the shelf and open it.
+		一本书脊上印着“兽态人的兴与衰”的蓝皮精装书吸引了你的注意，于是你把它从书架上取下来并翻开阅读。
 	</p>
 	<p>
-		Skimming through the pages, you see that the first chapter covers the background of animals and animal rights within Lilith's Realm. The book explains how a spell that allows for organic matter replication was perfected many decades ago. With the ability to clone an animal's meat, there was no need to slaughter them or keep them in vast herds, and so today even the largest farms only keep a dozen or so animals. Driven by the empathy which animal-morphs feel for the creatures whose features they share, more and more rights were demanded for these animals, and now they enjoy legal protections which are almost of the same level as citizens of the Realm. Bestiality was always frowned upon, but with the expansion of animals' rights, it became a serious crime.
+		你略读了一遍书籍，发现第一章涵盖了莉莉丝王国中的动物以及动物权利的过往历史。这本书讲述了一个能够复制有机物质的法术是如何在几十年间被完善的。有了克隆动物肉的能力，就不需要屠宰动物或将它们饲养在庞大的畜群中，因此如今即便是最大的农场也只会饲养十几只动物。同时，兽化形们对这些与他们具有相同特征的生物怀有同理心，在这种力量的驱使下，动物们被赋予了越来越多的权利，现如今，它们享有几乎与王国公民相同水平的法律保护。兽交一直是不受欢迎的，而且随着动物权利的提高，兽交变成了一种严重的犯罪行为。
 	</p>
 	<p>
-		The next chapter describes how feral transformations came to be, which took place in the summer of 2005. With bestiality outlawed, the small percentage of the population who were attracted to animals spent many years seeking a way to transform themselves into bestial forms in order to satisfy their carnal desires. A lilin in the desert city of Thinis, who'd already broken societal norms by rejecting a feminine form and transforming himself into a jackal-boy, was the one to discover the secret behind this transformation. Named Anubis, this lilin found out that the powerful enchantment which facilitated a feral transformation could only be bound into objects of significant mass. Boulders were the obvious choice, and the thousands of huge lumps of rock which were enchanted by Anubis came to be known as 'beast stones'. Contact with a beast stone for ten minutes transformed an individual into the feral form of the animal they most closely resembled for four hours.
+		下一章节描述了兽态转化是如何在2005年的夏天被发明出来的。由于人兽交配被法律禁止，一小部分恋兽者便用了很多年的时间寻找一种将自己转化为野兽形态的方法，以满足他们的肉欲。沙漠城市提尼斯有一位打破了社会规范的莉琳，他拒绝了女性的形态，将自己转化成了胡狼男，也正是他发现了这种转化背后的秘密。这名叫阿努比斯的莉琳发现，促使兽态转化的强大附魔只能依附在质量很大的物体上。巨石就成为了显而易见的选择，阿努比斯附魔过的数千块巨石被称为“野兽石”，与野兽石接触十分钟，人就会在四个小时内转化成最相近动物的野兽形态。
 	</p>
 	<p>
-		The next chapter describes what came next. Encouraged by a lilin, and eager to experience the wild, primal lust that accompanied the feral transformation, citizens all throughout the Realm started experimenting with beast stones. Within weeks, they stopped keeping their activities behind closed doors, and it became a common sight in every town and city in the Realm to see ferals roaming the streets in broad daylight. Incidents of innocent citizens being 
+		下一章节描述了之后发生的事情。在莉琳的鼓励下，人们渴望着体验兽态转化所伴随的那种野性、原始的欲望，王国各处的公民都开始尝试接触野兽石。几周过后，他们便不再私下进行活动，在王国的每个乡镇和城市，兽态人光天化日之下上街游荡已经成为了一种司空见惯的景象。无辜公民
 		#IF(game.isNonConEnabled())
-			 exposed to feral sex, attacked by ferals, and even raped by them,
+			目睹兽态人交配，遭到兽态人袭击，甚至被他们强奸
 		#ELSE
-			 exposed to feral sex and attacked by ferals
+			目睹兽态人交配，遭到兽态人袭击
 		#ENDIF
-		 started to increase, but Lilith and the elder lilin chose not to act. After several months, during which time ferals had gained a reputation as being little better than lust-crazed beasts, Anubis managed to refine the enchantment and he created dozens of pebble-sized beast stones. Instead of touching them to activate their power, these small stones needed to be inserted inside someone to trigger the feral transformation. They were far more potent than the larger beast stones, as for each minute these smaller stones spent inside someone's body, they gained a year of a feral form.
+		的恶性事件开始激增，但莉莉丝和莉琳长老却无动于衷。过了几个月的时间，兽态人的风评已经降到了比疯狂发情的野兽好不了多少的程度，而与此同时，阿努比斯设法改进了附魔，他创造了几十块鹅卵石大小的野兽石。这些小石头不再以触摸的形式激活力量，而是需要将它们插入某人体内，以触发兽态转化。相较于大型的野兽石，它们的效力更加强大，这些小型野兽石在人体内每呆一分钟，就可以让他们拥有长达一年的野兽形态。
 	</p>
 	<p>
-		The penultimate chapter describes the downfall of feral transformations. One of Lisophia's recognised daughters was an outspoken critic of ferals, and one day as she was walking to her mother's palace, she was attacked by Anubis and a pack of feral jackals. Having by now perfected the feral enchantment, Anubis forced his victim to kiss what he called a 'beast gem', and despite being a demon, she was permanently transformed into a feral jackal bitch.
+		倒数第二章描述了兽态转化的衰落。一名被莉索菲亚的承认的女儿曾直言不讳地反对过兽态人，而当她某天走去母亲的宫殿时，她遭到了阿努比斯和一群兽态胡狼的袭击。在那时，阿努比斯已经彻底完善了兽态附魔，他强迫受害者亲吻他所谓的“野兽宝石”，尽管受害者是一名恶魔，但她还是被永久地转化成了一只兽态的胡狼婊子。
 		#IF(game.isNonConEnabled())
-			 Right there in public, and to the shock and horror of bystanders, she was then raped by Anubis and his pack.
+			令旁观者更为震惊和恐惧的是，她随后被阿努比斯和他的团伙在大庭广众之下强奸了。
 		#ENDIF
-		 This proved to be the straw that broke the camel's back, for as word of what was happening reached Lisophia's palace, the elder demon teleported to the aid of her daughter. Although normally choosing to remain in the form of a dragon-girl, Lisophia took on her true, demonic appearance, and in a furious rage she enslaved Anubis and every feral she could find.
+		这件事是压垮骆驼的最后一根稻草，当此处正在发生的事情传到莉索菲亚的宫殿时，这名长老恶魔立即传送到了她女儿的身边。虽然莉索菲亚通常保持着龙女的形象，但此刻她展现出了真正的恶魔形态，盛怒之下，她奴役了阿努比斯和她能找到的所有兽态人。
 	</p>
 	<p>
-		The final chapter covers what happened after this incident. Word of Lisophia's actions quickly spread throughout Thinis, and public opinion, which was already turning against ferals, fully swung against Anubis and his enchantments. Those who loved their feral forms fled to Dominion and elsewhere in the Realm, but they found little acceptance there. All throughout the Realm, the news of Anubis's actions and Lisophia's vengeance had spread, and just as quickly as the craze had started, feral transformations completely vanished. They were never explicitly banned, but these days the only people still willing to experiment with feral forms are outcasts, degenerates, and those seeking the rush of breaking a taboo.
+		最后一章介绍了事件发生后的情况。莉索菲亚的举动很快传遍了整个提尼斯，公众早就已经受够兽态人了，阿努比斯和他的附魔遭到了舆论的猛烈抨击。那些喜欢野兽形态的人逃向了御城区和王国的其他地区，但在别处他们也没能被接受。阿努比斯的行动和莉索菲亚的复仇很快传遍了整个王国，兽态转化的消亡与它的兴起一样迅速，最终完全销声匿迹。尽管兽态转化从未被明令禁止，但如今，愿意尝试野兽形态的人只有被驱逐者、堕落者和那些渴望打破禁忌的人了。
 	</p>
 	<p>
-		In the epilogue, the book says that Anubis was never seen again, but there's a rumour that those who displease Lisophia are given to her enslaved jackal and permanently transformed into one of his feral bitches.
+		在后记中，作者提到阿努比斯再也没有出现过，但有传言说，那些得罪了莉索菲亚的人会被交给她的那名胡狼奴隶，永久地转化成他的一只兽态婊子。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DOMINION_MAP"><![CDATA[
 	<p>
-		Hanging on one of the walls of the library, a huge map of Dominion is displayed in a wooden frame. Using your phone, you take a picture of it for future reference.
+		图书馆的一面墙上用木框装裱着一张巨大的御城区地图，你用手机给这张地图拍了一张照片以备不时之需。
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsExcellent(Dominion Map fully revealed!)]
+		[style.italicsExcellent(获得了完整的御城区地图！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SLAVERY_HISTORY"><![CDATA[
 	<p>
-		Following Rose's instructions, you [pc.walk] down one of the library's many aisles and soon manage to find the section which contains books about slavery. Although the vast majority of these tomes look to be dry, legal texts, there's a hardback book titled 'People as Property' which appears to be aimed at the general public. Sliding this book out from its resting place, you open it up and briefly skim over its pages to see if you can find any interesting information.
+		你按照萝丝的指引，沿着图书馆错综复杂的走廊搜寻，很快就找到了存放有奴隶制相关书籍的区域。尽管绝大部分大部头都只是无聊透顶的法律条文，但还是有一本名为“以人为产”的精装书看上去是面向大众的。你将这本书从坐落处抽出，翻开后浏览了几页，看看能不能发现什么有趣的信息。
 	</p>
 	<p>
-		The first half of the book is a rambling treatise seeking to justify slavery by positing that it's a natural part of societal hierarchies. After making the claim that slavery is morally justifiable from a philosophical point of view, the author of this book then attempts to champion slavery from a more practical point of view, arguing that the undesirable, criminal, and even unproductive elements of society are better off being put to use as slaves rather than being supported by the hard-working public.
+		书本的前半部分是一篇冗长而模糊的论文，试图通过假设奴隶制是社会等级制度的自然组成部分来证明奴隶制的合理性。从哲学的角度声称奴隶制在道德上合理后，本书的作者又尝试从更实际的角度来支持奴隶制，认为社会中不受欢迎的、与犯罪相关的、甚至是不从事生产的因素被纳作奴隶，总比让那些辛勤工作的公众养活他们要来的更好。
 	</p>
 	<p>
-		After leafing through this lengthy opening to the book, you find that the rest of the pages are dedicated to the history and legal status of slaves in Lilith's Realm. Apparently, slavery has always been legal, and although there have been a couple of attempts to petition Lilith for a change in the law, these efforts ended with the petitioners becoming slaves themselves, which apparently did quite an excellent job of dissuading any further dissent over the matter. Reading on, you're somewhat surprised to read that only Lilith and the elder lilin are exempt from ever being enslaved, meaning that it's technically legal for even lilin to become slaves, although of course in practice this has never happened.
+		翻阅完这本书的冗长开头后，你注意到剩下的页数则专门介绍了莉莉丝王国中奴隶的历史及其法律地位。显然，奴隶制一直是合法的，尽管有过几次向莉莉丝请愿修改法律的尝试，但这些努力最终都以请愿者自己成为奴隶而告终，显然这样能够一劳永逸地阻止后续的异议。继续读下去，你稍感惊讶地发现，只有莉莉丝和莉琳长老可以免于被奴役，这意味着理论上即使莉琳成为奴隶，那也是合法的，尽管实际上这种事情从未发生。
 	</p>
 	<p>
-		The final part of the book deals with the somewhat prickly issue of demons being enslaved. Although it's perfectly legal, most non-demon slave owners would never choose to purchase a demon slave, due to the risk of potentially angering the demon's siblings, parents, or even the lilin at the head of their lineage. Other demons don't have the same reluctance to own demonic slaves, as it's widely considered to be socially acceptable for a demon to own another demon.
+		书本的最后部分讨论了恶魔被奴役这一稍显棘手的问题。尽管确实完全合法，但大多数非恶魔奴隶主却永远不会选择购买恶魔奴隶，因为这可能会激怒恶魔的兄弟姐妹、父母，甚至是血统之上的莉琳长老。而其他恶魔却并非不愿拥有恶魔奴隶，因为社会普遍认为一个恶魔拥有另一个恶魔完全是可以接受的。
 	</p>
 	<p>
-		Finally, taking up the last two pages, there's an abstract, double-spread map of Lilith's Realm. Although it's completely useless from a navigational perspective, it does an excellent job of showing the density of slaves in each part of the Realm. The highest concentration of slaves is, unsurprisingly, in Dominion itself, with the southern desert city of Thinis taking a relatively close second place. The jungle city of Itza'aak up to the north is also a hotbed of slavery, and finally there's a not-insignificant amount of slaves in the underwater city of Lyonesse. Conversely, the town of Elis out in the Foloi Fields, along with the vast majority of the Realm's countryside, is almost completely absent of slaves.
+		最后两页是莉莉丝王国简略的双开页地图。虽然从导航的角度完全没有用，但至少清晰地展示了王国各个部分的奴隶密度。不出所料，奴隶最集中的地区正是御城区，南部沙漠城市提尼斯紧随其后位居第二，北部的丛林城市伊察阿克同样是奴隶制的温床，最后水下城市莱昂内斯也有不少奴隶。相反，弗洛伊原野的伊利斯镇以及王国的大部分乡村则几乎完全见不到奴隶。
 	</p>
 	<p>
-		With nothing more to be gained from continuing to read this book, you return it to its place on the shelf.
+		再读下去已经不会有什么收获，你将书本放回了书架。
 		#IF(flags.hasFlag(FLAG_readBookSlavery))
-			 Looking across to the book titled 'Lilaya's Dirty Secrets', you wonder whether to
+			你瞄见有一本标题为“莉莱雅的阴暗秘密”的书，便思索起来是否要
 			#IF(flags.hasFlag(FLAG_acexp_dungeon_found))
-				 pull on it and go down to Lilaya's dungeon, or instead head elsewhere...
+				轻拉一下然后去往莉莱雅的地牢，或是前去别处……
 			#ELSE
-				 take the time to have a look at it...
+				拿来看上一看……
 			#ENDIF
 		#ELSE
-			 As you turn to [pc.step] back into the aisle, the title of a nearby book suddenly grabs your attention, and you find yourself staring in surprise at the words 'Lilaya's Dirty Secrets' embossed in silver lettering on the tome's spine. From the slight wear on the wooden shelf in front of this book, it looks to have been regularly taken out in the past, but a thin layer of dust on its top hints at the fact that it hasn't been read for some time. After quickly glancing up and down the aisle to make sure that you're not being watched, you wonder whether or not to take this book out and see what secrets it contains...
+			当你转头[pc.step]回到过道时，附近的一本书的名字突然吸引了你的注意力，你大惊失色地紧盯着书脊上银色字体浮雕的“莉莱雅的肮脏秘密”字样。根据这本书前面的木架上的轻微磨损来看，似乎曾经经常被取出，但上面一层薄薄的灰尘却暗示着已经有一段时间没有人读过了。你连忙向四周扫视一番，确认自己没有被监视后，便思索起来是否要把这本书拿出来，看看里面到底包含着何等秘密……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
     <htmlContent tag="DUNGEON_TRIGGER"><![CDATA[
    	<p>
-        Quickly convincing yourself that your demonic [lilaya.relation(pc)] wouldn't object to it, you decide to take a look at the tome which promises to contain her dirty secrets. Reaching up to take hold of the top of the tome titled 'Lilaya's Dirty Secrets', you pull it forwards to draw it out of the shelf. As you do this, you're surprised to discover that the book doesn't slide out of its position as you'd expected, but instead tilts forwards, revealing that it's fixed in place and somehow hinged on the bottom. As the tome moves, a rumbling, grinding sound of stone sliding across stone fills the aisle, and you watch in wonder as the bookcase swings open to reveal a secret, spiral staircase that leads down into darkness.
-	</p>
+	你很快就说服自己，你的恶魔[lilaya.relation(pc)]绝不会反对，所以决定浏览一下这本保证记载了她阴暗秘密的秘书。你伸手抓住那本“莉莱雅的阴暗秘密”的顶部，向后一扯，欲将其从书架上拉出来。而这是你却意识到这本书没有如愿从位置上移出来，而是只是向后倾斜，这意味着书的底部一定是以某种方式铰接在了书架上。当书本发生移动后，过道里便响起了石砖滑动的轰隆声和摩擦声，你惊愕地看着书架向两侧打开，显露出一个秘密的螺旋楼梯，通向底部的黑暗。
+</p>
    	<p>
-		Either due to the noise of this passage opening, or more likely from a hidden link to the mansion's bell system, your inadvertent discovery of this secret passage summons Rose, who you hear calling out as she rushes towards your position from the library's entrance, [rose.speech(Mistress! Have you finally decided to use the dungeon again?! I'd been hoping- Oh! It's <i><b>you</b></i>?!)]
-	</p>
+	或许是由于通道打开时的噪音，又或许是与宅邸的铃声系统本就有联系，你意料之外地发现了这条秘密通道直接引来了萝丝，她一边从图书馆入口向你的位置冲过来，一边高喊着，[rose.speech(主人！你终于决定重启地牢了吗？！我期待了——哦！怎么是<i><b>你</b></i>？！)]
+</p>
    	<p>
-        As she comes a skidding to a halt in front of you, you can tell both from her words and the look of stern disapproval on her face that the cat-girl maid is not at all amused at finding you here instead of Lilaya. Quickly regaining her composure, she curtsies before you and asks, [rose.speech(How may I help you this time, [pc.name]?)]
-	</p>
+	她在你面前来了个急刹车，你从她的话语和她脸上严厉的愤懑的表情看出，猫女仆在这里发现的是你而不是莉莱雅并不觉得有丝毫的好笑。但她很快恢复了平静，在你面前行过屈膝礼，问道，[rose.speech(有什么能帮您的吗，[pc.name]？)]
+</p>
    	<p>
-        Motioning towards the secret passageway, you tell Rose that you accidentally discovered it, but now that it's been opened, you're wondering what's down there. A faint blush creeps up on Rose's cheeks as she answers, [rose.speech(It leads down to... Well, I suppose you might call it a dungeon, but it's really more of a <i>recreational facility</i>... It's no longer in use, although of course I still keep it clean. Now that you've found it, I don't think that Mistress Lilaya wouldn't mind if you wanted to make use of it. She seems to have forgotten that it even exists...)]
-	</p>
+	你指着秘密通道，告诉萝丝你只是意外发现了这里，但既然已经打开了，你还是想知道下面到底是什么。萝丝的脸上泛起了淡淡的红晕，她回答道，[rose.speech(这条路通向……好吧，我觉得应该是叫地牢，但其实那里更像个<i>娱乐设施</i>……虽然已经弃用了，不过我当然还是会继续打扫那里的卫生。既然您找到了这里，我想您就算用了主人莉莱雅应该也不会介意。她似乎已经忘了还有这么一个地方……)]
+</p>
    	<p>
-   	    With that, Rose takes a single step forwards, which causes a series of arcane torches to burst into life. With the spiral staircase now illuminated by these flickering arcane flames, the cat-girl maid turns to face you, and after flashing you a somewhat-sinister smirk, she teases, [rose.speech(~Mmm!~ This does bring back memories... If you'd like me to give you a good time while you're down there, then use the bell-pull in the bedroom to call me... Just make sure that you're comfortable with the equipment you find in there being used on you first, ok?)]
-	</p>
+	说完萝丝便向前迈出一步，一根根奥术火炬随之燃起。旋转楼梯被闪烁的奥术火焰照亮，猫女仆转过身看向你，露出了一丝阴险的笑容，调侃道，[rose.speech(~嗯！~回忆涌上心头……如果您希望我在下面给您带来一段欢乐的时光，就请使用卧室的门铃召唤即可……只要您同意，在下面找到的装备先用在您的身上，可以吗？)]
+</p>
    	<p>
-	    #IF(pc.hasFetish(FETISH_MASOCHIST) || pc.hasFetish(FETISH_SUBMISSIVE) || pc.hasFetish(FETISH_BONDAGE_VICTIM))
-	        Having a pretty good idea what this dominant cat-girl has in mind, you can't help but let out a horny whine and shiver in anticipation. Smirking at your reaction, Rose turns her back on you, and as she struts off down the aisle, she calls out behind her, [rose.speech(I look forward to punishing you, [pc.name]...)]
-	    #ELSE
-	        Not entirely sure or comfortable with what this dominant cat-girl has in mind, you give her a non-committal response and turn your attention back to the secret passage. Seeing that you have no further need of her, Rose turns her back on you, and as she struts off down the aisle, she calls out behind her, [rose.speech(Please enjoy yourself down there, [pc.name]...)]
-	    #ENDIF
-	</p>
-	]]>
-    </htmlContent>
+	#IF(pc.hasFetish(FETISH_MASOCHIST) || pc.hasFetish(FETISH_SUBMISSIVE) || pc.hasFetish(FETISH_BONDAGE_VICTIM))
+		你很清楚这个高高在上的猫女在想什么，于是激动地应和着，发出一声淫荡的呜咽，浑身颤抖起来。萝丝看到你的反应，露出一抹窃笑，转身走出了过道，背着身子说道，[rose.speech(我很期待能惩罚您哦，[pc.name]……)]
+	#ELSE
+		你意识到这个高高在上的猫女在想什么后，或是不太乐意，或是打不定主意，只是给出个不置可否的回答，便又转身看向了秘密通道。萝丝见你没有其他需要，便转身走出了过道，背着身子说道，[rose.speech(祝您在下面玩得愉快，[pc.name]……)]
+	#ENDIF
+</p>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="DUNGEON_TRIGGER_BACK"><![CDATA[
    	<p>
-        Deciding against heading down the spiral staircase and exploring Lilaya's dungeon, you take a [pc.step] back. By some arcane enchantment, the secret passageway senses that you're not making use of it, and after the arcane torches all suddenly extinguish themselves, the bookcase slides back into position, leaving no external hint of what's behind it.
-	</p>
+	你决定不要走下螺旋楼梯探索莉莱雅的地牢，便退了回去。或许是通过某种奥术结界，秘密通道感知到没有人使用，就瞬间熄灭了所有奥术火把，让书本返回原位，没有留下任何外部线索。
+</p>
 	<p>
-		Looking up and down the aisle, you wonder where to go to next...
-	</p>
-	]]>
-    </htmlContent>
+	你左右看了看过道，心想接下来要去哪里……
+</p>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="DUNGEON_OPENS"><![CDATA[
    	<p>
-        #IF(!flags.hasFlag(FLAG_acexp_dungeon_explored))
-			Having been granted permission to do so by Rose, you decide that now's the time to head down and explore Lilaya's dungeon.
-		#ELSE
-			Deciding that you'd like to head down into Lilaya's dungeon, you [pc.step] over to the bookcase which conceals the secret passage.
-		#ENDIF
-         Reaching up to take hold of the top of the tome titled 'Lilaya's Dirty Secrets', you pull it forwards, finding once again that it's fixed in place and hinged on the bottom, allowing it to tilt but not be drawn out from its resting place. As the tome moves, a rumbling sound of grinding stone fills the aisle, and you watch as the bookcase swings open to reveal a secret, spiral staircase which leads down into darkness. As you begin to move forwards, the wall-mounted arcane torches burst into flame, casting the staircase in a dancing, flickering light.
-	</p>
-	]]>
-    </htmlContent>
+	#IF(!flags.hasFlag(FLAG_acexp_dungeon_explored))
+		既然萝丝已经许可你使用，你便决定当即走下去，将莉莱雅的地牢探索一番。
+	#ELSE
+		你决定下去到莉莱雅的地牢一探，于是[pc.step]到遮蔽着隐藏通道的书架旁。
+	#ENDIF
+	伸手抓住那本“莉莱雅的阴暗秘密”的顶部，将其向前一拉，底部铰接的书本再次固定在适当的位置，使其只会倾斜而不至于被抽出。随着书本的移动，过道里便响起了石砖滑动的轰隆声，你看着书架向两边打开，显露出一个秘密的螺旋楼梯，通向底部的黑暗。当你开始向前移动时，插在墙壁上的奥术火把忽然亮燃起来，在楼梯上投射出舞动闪烁的光芒。
+</p>
+	
+    ]]></htmlContent>
 	
 	
 </dialogue>

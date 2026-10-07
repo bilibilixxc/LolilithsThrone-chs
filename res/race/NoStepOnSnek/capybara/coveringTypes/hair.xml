@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>HAIR</category>
-	<determiner><![CDATA[a layer of]]></determiner>
-	<name><![CDATA[hair]]></name>
-	<namePlural pluralByDefault="false"><![CDATA[hair]]></namePlural> 
+	<determiner><![CDATA[一层]]></determiner>
+	<name><![CDATA[头发]]></name>
+	<namePlural pluralByDefault="false"><![CDATA[头发]]></namePlural> 
 	<naturalCoveringModifiers>
 		<modifier>FLUFFY</modifier>
 	</naturalCoveringModifiers>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
 	<title/>
 	<consensual><![CDATA[true]]></consensual>
@@ -96,11 +96,11 @@
 			<dirtyTalk>
 				<character id="pc">
 					<standard additionToDefault="false">
-						<line><![CDATA[Fuck...]]></line>
-						<line><![CDATA[Yes... This feels good...]]></line>
-						<line><![CDATA[Yes... Fuck me...]]></line>
-						<line><![CDATA[That's it... Fuck...]]></line>
-						<line><![CDATA[This is good...]]></line>
+						<line><![CDATA[操……]]></line>
+						<line><![CDATA[没错……这感觉棒极了……]]></line>
+						<line><![CDATA[对……操我……]]></line>
+						<line><![CDATA[就是这样……操……]]></line>
+						<line><![CDATA[真不错……]]></line>
 					</standard>
 				</character>
 			</dirtyTalk>

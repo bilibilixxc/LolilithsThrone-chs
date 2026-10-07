@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	
 	<!-- STALL -->
@@ -6,14 +6,14 @@
 	<htmlContent tag="STALL"><![CDATA[
 		#IF(game.getDayNumber() - flags.getSavedLong("elis_eisek_banished_date") >= 1)
 			<p>
-				The space previously occupied by that [eisek.race]'s stall still hasn't found a new occupant, but at least the ruins and the pile of pulverised produce have been cleared away.
+				之前那个[eisek.race]的摊位仍未找到新的主人，但至少废墟和一堆粉碎的农产品已经被清理干净了。
 			</p>
 		#ELSE
 			<p>
-				The ruins of that [eisek.race]'s stall still occupy this space. It seems no one has come by to clean up the place yet.
+				那个[eisek.race]的摊位的废墟仍然占据着这个地方。看来还没有人来清理这里。
 			</p>
 		#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

@@ -97,9 +97,9 @@ public class Kate extends NPC {
 	}
 	
 	public Kate(boolean isImported) {
-		super(isImported, new NameTriplet("Kate"), "Lasiellemartu",
-				"Kate is a demon who owns the beauty salon 'Succubi's Secrets'."
-						+ " Despite being incredibly good at what she does, she's exceedingly lazy, and prefers to keep the exterior of her shop looking run-down so as to scare off potential customers.",
+		super(isImported, new NameTriplet("凯特"), "拉谢尔马尔图",
+				"凯特是个恶魔，经营着美容沙龙“魅魔的秘密”。"
+						+ "她尽管非常擅长自己的工作，但非常懒惰，并喜欢让店铺看起来破旧不堪以吓退潜在的顾客。",
 				361, Month.SEPTEMBER, 9,
 				10, Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.GREATER,
 				new CharacterInventory(false, 10), WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_KATES_SHOP, true);
@@ -245,7 +245,7 @@ public class Kate extends NPC {
 							null,
 							false,
 							new TattooWriting(
-									"Don't pull out!",
+									"不要拔出来！",
 									PresetColour.CLOTHING_BLACK,
 									false),
 							null));
@@ -455,8 +455,8 @@ public class Kate extends NPC {
 				String useDesc = itemOwner.useItem(item, target, false, true);
 				return new Value<>(true,
 						"<p>"
-							+ "Producing a "+item.getName(false, false)+" from your inventory, you pop it out of its plastic wrapper before pushing it into Kate's mouth."
-							+ " She giggles as she happily swallows the little "+item.getColour(0).getName()+" pill, knowing that it's going to make her womb far more fertile."
+							+ "你从物品栏中拿出一个"+item.getName(false, false)+"，打开塑料包装后塞到凯特嘴里。"
+							+ "她咯咯笑着，欣然咽下了那小小的"+item.getColour(0).getName()+"药片，因为她知道这药片会让她的子宫更容易受孕。"
 						+ "</p>"
 						+ useDesc);
 				
@@ -467,36 +467,36 @@ public class Kate extends NPC {
 					String litterCount = Util.intToString(this.getPregnantLitter().getTotalLitterCount());
 					return new Value<>(true,
 							"<p>"
-								+ "Producing "+item.getName(true, false)+" from your inventory, you pass it over Kate's tummy and take a look at the results..."
+								+ "你从物品栏中拿出"+item.getName(true, false)+"放到凯特的肚子上并观察结果……"
 							+ "</p>"
 							+ useDesc
 							+"<p>"
 								+ (this.isVisiblyPregnant()
-									?"[kate.speechNoEffects(What were you expecting?)] Kate laughs, before rubbing her pregnant belly and winking at you. [kate.speech(You can already see I'm knocked up, can't you?)]"
-									:"[kate.speechNoEffects(~Ooh!~ I'm pregnant!)]"
+									?"[kate.speechNoEffects(你在期待些什么？)]凯特笑着，揉了揉孕肚并冲你眨了眨眼睛。[kate.speech(你已经看出我怀孕了，对吧？)]"
+									:"[kate.speechNoEffects(~哦呜！~我怀孕了！)]"
 											+ (this.getPregnantLitter().getTotalLitterCount()>2
-													?" Kate exclaims, before rubbing her belly and biting her lip. [kate.speechNoEffects(I've got "+litterCount+" kids in here? ~Mmm!~ My tummy's gonna be so big...)]"
-													:" Kate moans, before rubbing her belly and winking at you. [kate.speech(I'm gonna have a big, round tummy soon!)]"))
+													?"凯特惊叫着，揉了揉肚子，咬着嘴唇说：[kate.speechNoEffects(我这里有"+litterCount+"个孩子？~唔姆！~我的肚子会变得好大好大……)]"
+													:"凯特呻吟着，揉了揉肚子并冲你眨了眨眼睛，[kate.speech(我很快就会有个又大又圆的肚子！)]"))
 							+ "</p>");
 					
 				} else {
 					return new Value<>(true,
 							"<p>"
-									+ "Producing "+item.getName(true, false)+" from your inventory, you pass it over Kate's tummy and take a look at the results..."
+									+ "你从物品栏中拿出"+item.getName(true, false)+"放到凯特的肚子上并观察结果……"
 							+ "</p>"
 							+ useDesc
 							+"<p>"
 								+ (this.hasStatusEffect(StatusEffect.PREGNANT_0)
-									?"[kate.speechNoEffects(~Aww!~ I'm not pregnant!)] Kate whines, before rubbing her belly and pouting at you. [kate.speech(Come on, [pc.name], there's plenty of time for you to change that!)]"
-									:"[kate.speechNoEffects(What were you expecting? Of course I'm not going to be pregnant!)] Kate laughs, before rubbing her belly and biting her lip."
-											+ " [kate.speech(Although there's plenty of time for you to change that...)]")
+									?"[kate.speechNoEffects(~噢！~我没有怀孕！)]凯特抱怨着，揉了揉肚子撅着嘴看你。[kate.speech(来吧，[pc.name]，你还有很多时间来改变！)]"
+									:"[kate.speechNoEffects(你在期待些什么？我当然不会怀孕！)]凯特大笑着说，她咬着嘴唇，揉了揉肚子。"
+											+ "[kate.speech(虽然你还有很多机会来改变我……)]")
 							+ "</p>");
 				}
 				
 			} else {
 				return new Value<>(false,
 						"<p>"
-							+ "You start to pull "+item.getItemType().getDeterminer()+" "+item.getName()+" out from your inventory, but Kate quickly kicks your hand away and frowns at you."
+							+ "你开始从背包中拿出"+item.getItemType().getDeterminer()+" "+item.getName()+"但凯特皱了皱眉，飞快地踢开了你的手。"
 						+ "</p>");
 			}
 		}
@@ -511,9 +511,9 @@ public class Kate extends NPC {
 					return null;
 				}
 				return "<p>"
-							+ "Holding out a condom to [kate.name], you force [kate.herHim] to take it and put it on."
-							+ " Quickly ripping it out of its little foil wrapper, [kate.she] rolls it down the length of [kate.her] [kate.cock+] as [kate.she] whines at you,"
-							+ " [kate.speech(Do I really have to? It feels so much better without one...)]"
+							+ "掏出一个避孕套，强迫[kate.name]拿起并戴上。"
+							+ "[kate.she]迅速把它从小小的铝箔包装纸中撕开，捋到[kate.her][kate.cock+]的根部并向你抱怨，"
+							+ "[kate.speech(一定要这样吗？不戴着可舒服多了……)]"
 						+ "</p>";
 			}
 			if(target.equals(equipper) && target.isPlayer() && !this.isAsleep()) {
@@ -524,16 +524,16 @@ public class Kate extends NPC {
 				}
 				if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 					return UtilText.parse(equipper, target,
-							"You direct your spinneret at your own [npc.cock], with the intention of weaving a silky web condom around it, but as Kate sees what it is you're about to do, she firmly slaps it away and giggles,"
-							+ " [kate.speech(Don't do that! It's no fun if I don't get any cum!)]");
+							"你将丝囊对准自己的[npc.cock]，想要织个丝网避孕套，但凯特见状一巴掌将其拍开，咯咯笑了起来，"
+							+ " [kate.speech(别这样！没有精液射进来还有什么意思！)]");
 				}
 				return "<p>"
-							+ "As you pull out a condom, a worried frown flashes across Kate's face, "
-							+ "[kate.speech(Oh! Erm, let me put that on for you!)]"
+							+ "你拿出一个避孕套，凯特脸上掠过一丝担忧，"
+							+ "[kate.speech(哦！呃，我帮你戴上吧！)]"
 							+"<br/>"
-							+ "Before you can react, Kate snatches the condom out of your hands, and with a devious smile, uses her sharp little canines to [style.colourBad(tear a big hole in it)]."
-							+ " She laughs at your shocked reaction and declares, "
-							+ "[kate.speech(It's no fun if I don't get any cum!)]"
+							+ "还没等你反应过来，凯特就从你手中夺过避孕套，奸诈地一笑，用她锋利的小犬齿直接在中间[style.colourBad(咬了一个大洞)]。"
+							+ "她被你震惊的反应逗笑了，"
+							+ "[kate.speech(不被精液射到就没意思了！)]"
 						+ "</p>";
 			}
 		}
@@ -550,9 +550,9 @@ public class Kate extends NPC {
 	public String getDirtyTalkNoPenetration(GameCharacter target, boolean isPlayerDom){
 		List<String> speech = new ArrayList<>();
 
-		speech.add("Come on! Fuck me already!");
-		speech.add("Please, let's get started!");
-		speech.add("My little pussy needs you so bad!");
+		speech.add("来吧！操我吧！");
+		speech.add("求你了，快点开始吧！");
+		speech.add("我的小骚穴太需要你了！");
 
 		String returnedLine = speech.get(Util.random.nextInt(speech.size()));
 		return UtilText.parse(this, target, "[npc.speech("+returnedLine+")]");
@@ -566,7 +566,7 @@ public class Kate extends NPC {
 				PresetColour.CLOTHING_PURPLE,
 				true,
 				new TattooWriting(
-						"Breed me!",
+						"让我怀孕！",
 						PresetColour.CLOTHING_PINK_LIGHT,
 						true,
 						TattooWritingStyle.ITALICISED),

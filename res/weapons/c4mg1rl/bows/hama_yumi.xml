@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>10000</value> 
 		<melee>false</melee>
 		<twoHanded>true</twoHanded>
-		<determiner><![CDATA[the]]></determiner>
-		<name appendDamageName="false"><![CDATA[Hama Yumi]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Cheater's Yumi]]></namePlural> 
-		<description><![CDATA[A yumi crafted for the youko lilin to smite those who threaten the weak. Arcane arrows fired from this weapon strike hard, strike true, and with grace to match.]]></description> 
-		<attackDescriptor>loose</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Loose an ethereal arrow at [npc2.name].]]></attackTooltipDescription>
+		<determiner><![CDATA[​]]></determiner>
+		<name appendDamageName="false"><![CDATA[破魔弓]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[欺骗者的弓]]></namePlural> 
+		<description><![CDATA[一把为妖狐莉琳打造的为了保护弱小的弓。这把奥术弓射出的箭精准并强而有力，同时还十分优雅。]]></description> 
+		<attackDescriptor><![CDATA[放箭]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[向[npc2.name]射出一支奥术箭。]]></attackTooltipDescription>
 		<rarity>LEGENDARY</rarity> 
 		<weaponSet>c4mg1rl_benevolent</weaponSet>
-		<equipText><![CDATA[[npc.Name] [npc.verb(draw)] the Hama Yumi, readying it for combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] puts away [npc.her] yumi.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拉开破魔弓，准备战斗。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]收起[npc.her]的弓。]]></unequipText>
 		<imageName>hama_yumi.svg</imageName> 
 		<imageEquippedName>hama_yumi.svg</imageEquippedName>
 		<physicalResistance>0</physicalResistance> 
@@ -45,28 +45,28 @@
 	</coreAttributes>
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Taking aim with [npc.her] yumi, [npc.name] [npc.verb(manage)] to strike [npc2.name] in the chest; the ethereal arcane arrow passing through [npc2.her] torso to drain [npc2.her] energy!
-		]]></hitText>
+用[npc.name]的弓瞄准，成功射中[npc2.name]的胸口；虚幻的奥术箭穿过[npc2.her]的躯体，吸取[npc2.her]的能量！
+]]></hitText>
 		<hitText><![CDATA[
-		Taking aim with [npc.her] yumi, [npc.name] [npc.verb(manage)] to strike through [npc2.her] [npc2.arm] with the ethereal arrow and drain [npc2.her] energy!
-		]]></hitText>
+用[npc.name]的弓矢瞄准，成功用奥术箭射穿[npc2.her]的[npc2.arm]，吸取[npc2.her]的能量！
+]]></hitText>
 		<hitText><![CDATA[
-		With a bated breath, [npc.name] looses an ethereal arrow at [npc2.name], sinking into [npc2.her] shoulder and causing [npc2.herHim] to lose some energy!
-		]]></hitText>
+[npc.name]急切地发射了一支虚幻的箭矢，射入[npc2.name]的肩膀，导致[npc2.herHim]失去了一些能量！
+]]></hitText>
 		<criticalHitText><![CDATA[
-		With focused breath [npc.name] let loose a charged arrow delivering a devastating shot to [npc2.her] neck!
-		]]></criticalHitText>
+[npc.name]屏息，放出一支充能箭矢，对[npc2.her]的脖子造成了毁灭性的打击！
+]]></criticalHitText>
 	</hitDescriptions>
 	<missDescriptions>
 		<missText><![CDATA[
-		Taking aim with [npc.her] yumi, [npc.name] [npc.verb(attempt)] to strike [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+[npc.Name]用[npc.her]的弓瞄准，试图射击[npc2.name]的胸部，但没有命中[npc2.herHim]！
+]]></missText>
 		<missText><![CDATA[
-		Taking aim at [npc2.name] with [npc.her] yumi, [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+用[npc.her]的弓瞄准[npc2.name]，但[npc.she]没能击中目标，[npc.name]沮丧地大叫着！
+]]></missText>
 		<missText><![CDATA[
-		With a bated breath, [npc.name] looses an ethereal arrow at [npc2.name] with [npc.her] yumi, but [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+[npc.name]紧咬牙关，用[npc.her]的弓射出了一支虚幻的箭矢，但[npc.her]没能命中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

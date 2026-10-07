@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>5</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 		
-		<name><![CDATA[ragged skirt]]></name>
+		<name><![CDATA[破布裙子]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[ragged skirts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[破布裙子]]></namePlural> 
 		
-		<description><![CDATA[A particularly crude and ragged skirt. Even the most destitute and disadvantaged residents of Dominion wouldn't be seen dead in this.]]></description> 
+		<description><![CDATA[一条特别粗糙和破烂的裙子。就算是御城区最贫困和不幸的居民也不会穿上它。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		
@@ -71,27 +71,27 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(step)] into the ragged skirt and [npc.verb(pull)] it up to fit around [npc.her] waist.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(get)] [npc2.name] to step into the ragged skirt, before pulling it up around [npc2.her] waist.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step into the ragged skirt, before yanking it up around [npc2.her] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]穿上破布裙子，然后把裙子提到[npc.her]的腰部。
+    ]]></self>
+		<other><![CDATA[
+[npc.Name]让[npc2.name]踏入破布裙子，然后拉上以合适[npc2.her]的腰部。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强迫[npc2.name]踩进破布裙子，然后猛地将它们拉上围上[npc2.her]的腰部。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] down [npc.her] ragged skirt, before slipping it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] down [npc2.namePos] ragged skirt, before slipping it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] ragged skirt, before yanking it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开破布裙子，然后脱下它。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉下[npc2.namePos]破布裙子，然后脱下它。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地拉下[npc2.namePos]的破布裙子，随后用力将它们拽掉。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

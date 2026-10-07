@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 	
-		<authorTag><![CDATA[The clothing's tag reads: 'Created by TonyJC, with implementation and editing by NeverLucky']]></authorTag>
+		<authorTag><![CDATA[衣服的标签上写着：“由TonyJC创作，NeverLucky负责实施和编辑”]]></authorTag>
 
 		<value>600</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[denim overalls]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[denim overalls]]></namePlural> 
-		<description><![CDATA[A one-piece made out of hardy denim. It's sturdy, and designed for continuous use.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[牛仔背带裤]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[牛仔背带裤]]></namePlural> 
+		<description><![CDATA[一条牛仔背带裤。它坚固耐用，专为长期使用而设计。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>ANDROGYNOUS</femininity> 
 		<slot>LEG</slot>
@@ -98,74 +98,74 @@
 	</coreAttributes>
 
 <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] up the overalls from [npc.her] feet, fastening the straps over [npc.her] shoulders and buttoning them to [npc.her] chest.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] up the overalls from [npc2.her] feet, fastening the straps over [npc2.her] shoulders and buttoning them to [npc2.her] chest.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] up the overalls from [npc2.her] feet, fastening the straps over [npc2.her] shoulders and buttoning them to [npc2.her] chest.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]从脚上拉上了背带裤，系好了肩带并扣好了胸前的钮扣。
+]]></self>
+    <other><![CDATA[
+[npc.Name]从[npc2.her]的脚上拉上了背带裤，系好了肩带并扣好了胸前的钮扣。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地从[npc2.her]的脚上拉上了背带裤，系好了肩带并扣好了胸前的钮扣。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unbutton)] the straps on [npc.her] chest, freeing [npc.her] [npc.arms] and allowing [npc.Name] to pull it down to [npc.her] feet and remove it.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unbutton)] the straps on [npc2.her] chest, freeing [npc2.her] [npc2.arms] and allowing [npc.Name] to pull it down to [npc2.her] feet and remove it.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unbutton)] the straps on [npc2.her] chest, freeing [npc2.her] [npc2.arms] and allowing [npc.Name] to pull it down to [npc2.her] feet and remove it.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了胸前的钮扣，抽出了[npc.her]的[npc.arms]，然后将背带裤拉到了[npc.her]的脚上并脱掉了它。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开了[npc2.her]胸前的钮扣，抽出了[npc2.her]的[npc2.arms]，然后将背带裤拉到了[npc2.her]的脚上并脱掉了它。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开了[npc2.her]胸前的钮扣，拽出了[npc2.her]的[npc2.arms]，然后将背带裤拉到了[npc2.her]的脚上并脱掉了它。
+]]></otherRough>
   </displacementText>
 	
   <replacementText type="UNBUTTONS">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(button)] up [npc.her] top and straps, recovering [npc.her] torso.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(button)] [npc2.namePos] overalls back up, covering [npc2.her] torso.]]>
-    </other>
-    <otherRough>
-	<![CDATA[[npc.Name] quickly [npc.verb(pull)] up [npc2.namePos] overalls without even bother to adjusting it for [npc2.her].]]>    </otherRough>
+    <self><![CDATA[
+[npc.Name]重新扣好了[npc.her]的上衣和吊带，盖住了[npc.her]的躯干。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的背带裤穿好，盖住[npc2.her]的躯干。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]迅速地把[npc2.namePos]背带裤拉上，甚至都没有帮[npc2.her]调整。]]></otherRough>
   </replacementText>
 
   <displacementText type="UNBUTTONS">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unbutton)] the straps on [npc.her] chest, allowing [npc.Name] to pull chest piece to expose exposing [npc.her] chest.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] away [npc2.namePos] straps and top down to hang loose, exposing [npc2.her] chest.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(yank)] down [npc2.her] top, letting it hang loosely and exposing [npc2.her] chest.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开[npc.her]胸部的带子并使得[npc.Name]的胸部露出来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的带子解开并使得上半部分耷拉下来，露出[npc2.her]的胸部。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]的带子拽开并使得上半部分耷拉下来，露出[npc2.her]的胸部。
+]]></otherRough>
   </displacementText>
   
   <replacementText type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] up the overalls from [npc.her] feet, fastening the straps over [npc.her] shoulders and buttoning them to place.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] up the overalls from [npc2.her] feet, fastening the straps over [npc2.her] shoulders and buttoning them to place]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] up the overalls from [npc2.her] feet, fastening the straps over [npc2.her] shoulders and buttoning them to [npc2.her] chest.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]从脚上拉上了背带裤，系好了肩带并扣好了钮扣。
+]]></self>
+    <other><![CDATA[
+[npc.Name]从[npc2.her]的脚上拉上了背带裤，系好了肩带并扣好了胸前的钮扣。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地从[npc2.her]的脚上拉上了背带裤，系好了肩带并扣好了胸前的钮扣。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="PULLS_DOWN">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unbutton)] the straps on [npc.her] chest, freeing [npc.her] [npc.arms] and allowing [npc.Name] to pull it down to [npc.her] ankles.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unbutton)] the straps on [npc2.her] chest, freeing [npc2.her] [npc2.arms] and allowing [npc.Name] to pull it down to [npc2.her] ankles.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unbutton)] the straps on [npc2.her] chest, freeing [npc2.her] [npc2.arms] and allowing [npc.Name] to pull it down to [npc2.her] ankles.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了胸前的钮扣，抽出了[npc.her]的[npc.arms]，然后将背带裤拉到了[npc.her]的脚踝上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开了[npc2.her]胸前的钮扣，抽出了[npc2.her]的[npc2.arms]，然后将背带裤拉到了[npc2.her]的脚踝上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地解开了[npc2.her]胸前的钮扣，拽出了[npc2.her]的[npc2.arms]，然后将背带裤拉到了[npc2.her]的脚踝上。
+]]></otherRough>
   </displacementText>
   
 </clothing>

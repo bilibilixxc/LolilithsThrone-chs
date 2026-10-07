@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -43,14 +43,14 @@
 		PREVENTS_ERECTION_PHYSICAL
 		PREVENTS_ERECTION_OTHER
 	It is unlikely that additional tags will be supported in the future, but if any are added, this section will be updated. -->
-	<tags></tags>
+	<tags/>
 	
 	<!-- The name of this set bonus. The character under the effect is passed in as the 'npc' parsing argument, so if you want to, you can include parsing elements such as [npc.name]. -->
-	<name><![CDATA[Blinded]]></name>
+	<name><![CDATA[致盲]]></name>
 	
 	<!-- The description of this status effect. The character under the effect is passed in as the 'npc' parsing argument, so if you want to, you can include parsing elements such as [npc.name]. -->
 	<description><![CDATA[
-		A cloud of ink has left [npc.name] temporarily dazzled, and [npc.sheIsFull] struggling to regain control of [npc.her] senses!
+		[npc.name]被一团墨汁暂时蒙蔽了双目，[npc.her]正试图恢复其感知！
 	]]></description>
 	
 	<!-- The name of the icon which should be used to represent this status effect. The icon must be an svg file, and must be placed in the same folder as this XML file. -->

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_raptor</race>
 	<colour>BASE_WHITE</colour>
@@ -42,34 +42,34 @@
 	<iconName displaySize="80">neverLucky_bald_eagle</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>The Sharpest Talons</bookName>
+	<bookName><![CDATA[极锐之爪]]></bookName>
 	<basicDescriptionId>RAPTOR_BASIC</basicDescriptionId>
 	<advancedDescriptionId>RAPTOR_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[bald-eagle-morph]]></name>
-	<namePlural><![CDATA[bald-eagle-morphs]]></namePlural>
-	<singularMaleName><![CDATA[bald-eagle-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[bald-eagle-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[bald-eagle-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[bald-eagle-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic bald-eagle, known as a 'bald-eagle-morph' when bipedal, and a 'bald-eagle-taur' when the lower body is that of a feral bald-eagle.]]></description>
+	<name><![CDATA[白头雕化形]]></name>
+	<namePlural><![CDATA[白头雕化形]]></namePlural>
+	<singularMaleName><![CDATA[白头雕男]]></singularMaleName>
+	<singularFemaleName><![CDATA[白头雕女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[白头雕男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[白头雕女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的白头雕，当下肢拟人时被称为白头雕化形，而当下肢呈现出白头雕兽态时则称为半白头雕人。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[tengu]]></name>
-			<namePlural><![CDATA[tengu]]></namePlural>
-			<singularMaleName><![CDATA[tengu]]></singularMaleName>
-			<singularFemaleName><![CDATA[tengu]]></singularFemaleName>
-			<pluralMaleName><![CDATA[tengu]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[tengu]]></pluralFemaleName>
+			<name><![CDATA[天狗]]></name>
+			<namePlural><![CDATA[天狗]]></namePlural>
+			<singularMaleName><![CDATA[天狗]]></singularMaleName>
+			<singularFemaleName><![CDATA[天狗]]></singularFemaleName>
+			<pluralMaleName><![CDATA[天狗]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[天狗]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[bald-eagle]]></feralName>
-		<feralNamePlural><![CDATA[bald-eagles]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[bald-eagle]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[bald-eagle]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[bald-eagles]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[bald-eagles]]></feralPluralFemaleName>
+		<feralName><![CDATA[白头雕]]></feralName>
+		<feralNamePlural><![CDATA[白头雕]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[白头雕]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[白头雕]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[白头雕]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[白头雕]]></feralPluralFemaleName>
 		<legConfiguration>AVIAN</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>90</size>
@@ -82,8 +82,8 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] speed and power helps [npc.herHim] to land particularly hard-hitting strikes in combat.
-	]]></statusEffectDescription>
+		[npc.NamePos]的速度和力量有助于[npc.herHim]在战斗中造成超级强力的打击。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="15">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

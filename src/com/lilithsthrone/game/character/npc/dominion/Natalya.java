@@ -100,9 +100,9 @@ public class Natalya extends NPC {
 	}
 	
 	public Natalya(boolean isImported) {
-		super(isImported, new NameTriplet("Natalya"), "Lunettemartu",
-				"Holding the prestigious title of 'Stable Mistress' at the delivery company, 'Dominion Express', Natalya is responsible for the training and care of over fifty centaur slaves."
-					+ " While she tries her best to remain calm and professional at all times, her lustful demonic urges sometimes get the better of her...",
+		super(isImported, new NameTriplet("娜塔莉亚"), "露内特马尔图",
+				"娜塔莉亚在御城速递享有“马场主”的威名，负责训练和照顾五十名半人马奴隶。"
+					+ "虽然她在任何时候都尽最大努力保持冷静和专业，她的欲望恶魔的冲动有时会不可收拾地战胜理智……",
 				84, Month.OCTOBER, 12,
 				15,
 				null, null, null,
@@ -112,7 +112,7 @@ public class Natalya extends NPC {
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
-			this.setGenericName("strict succutaur");
+			this.setGenericName("严厉的四足魅魔");
 		}
 	}
 
@@ -349,7 +349,7 @@ public class Natalya extends NPC {
 		if(this.isPlayerKnowsName()) {
 			return super.getDescription();
 		}
-		return UtilText.parse(this, "This smartly dressed succutaur has an air of superiorty about her...");
+		return UtilText.parse(this, "这个衣着华丽的四足魅魔身边萦绕着一股强势的气息……");
 	}
 	
 	@Override
@@ -418,8 +418,8 @@ public class Natalya extends NPC {
 			String itemName = item.getName();
 			return new Value<>(false,
 					UtilText.parse(user, target,
-						"[npc.Name] [npc.verb(take)] out "+UtilText.generateSingularDeterminer(itemName)+" "+itemName+" from [npc.her] inventory and [npc.verb(try)] to give it to [npc2.name],"
-							+ " but [npc2.she] dismisses it with an angry shout, [npc2.speech(Put that away, you stupid slut!)]"));
+						"[npc.Name]从物品栏里拿出"+UtilText.generateSingularDeterminer(itemName)+itemName+"，准备递给[npc2.name]，"
+							+ "但[npc2.she]却怒吼一声将其推开，[npc2.speech(把那东西收起来，你这骚货是傻吗！)]"));
 		}
 		return super.getItemUseEffects(item, itemOwner, user, target);
 	}
@@ -434,13 +434,13 @@ public class Natalya extends NPC {
 			}
 			if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 				return UtilText.parse(equipper, target,
-						"You direct your spinneret at [npc2.namePos] [npc2.cock], with the intention of weaving a silky web condom around it, but as she sees what it is you're about to do, Natalya angrily slaps it away and shouts,"
-						+ " [natalya.speech(How dare you! Keep that filthy little web-spinner to yourself!)]");
+						"你将丝囊对准[npc2.name]的[npc2.cock]，正想织个丝网避孕套裹住，娜塔莉亚见状却怒拍开你的手，喝道，"
+						+ "[natalya.speech(大胆！把你那脏兮兮的吐网的玩意管好了！)]");
 			}
 			return UtilText.parse(equipper, target,
-					"Not wanting [npc2.name] to cum on or inside of you, you pull out a condom and quickly extract it from its foil packaging."
-						+ " Seeing what it is you're doing, Natalya lets out a furious shout, before snatching the condom out of your [pc.hands] and [style.colourBad(tearing it in half)]."
-						+ " Glaring at you, she snaps, [kate.speech(You disrespectful slut! You'll take "+(target instanceof Natalya?"my":"[npc2.namePos]")+" cum and you'll love it!)]");
+					"你不想让[npc2.name]把精液弄在你身上或体内，于是拿出一个避孕套，迅速剥开铝箔包装。"
+						+ "娜塔莉亚看到你的举动后发出一声怒吼，一把从你[pc.hands]中夺过避孕套，[style.colourBad(将其撕成两半)]。"
+						+ "她恶狠狠得盯着你，厉声喝到，[kate.speech(你这无礼的婊子！你给我好好接下"+(target instanceof Natalya?"我的":"[npc2.namePos]的")+"精液，你肯定喜欢！)]");
 		}
 		return null;
 	}
@@ -449,7 +449,7 @@ public class Natalya extends NPC {
 		AbstractClothing dildo = Main.game.getItemGen().generateClothing("innoxia_anus_ribbed_dildo", PresetColour.CLOTHING_BLACK, false);
 		
 		dildo.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SEXUAL, TFModifier.CLOTHING_VIBRATION, TFPotency.MAJOR_BOOST, 0));
-		dildo.setName("Natalya's "+UtilText.applyVibration("vibrating", dildo.getRarity().getColour())+" dildo");
+		dildo.setName("娜塔莉亚的"+UtilText.applyVibration("振动", dildo.getRarity().getColour())+"假屌");
 		
 		this.equipClothingFromNowhere(dildo, true, this);
 	}
@@ -567,11 +567,11 @@ public class Natalya extends NPC {
 			
 			sb.append("<p>");
 				sb.append(UtilText.parse(characterBeingRevealed, characterReacting,
-						"[npc2.Name] [npc2.verb(sneer)] when [npc2.she] [npc2.verb(see)] "
+						"[npc2.Name]看到 "
 								+ (Main.sex.hasLubricationTypeFromAnyone(characterBeingRevealed, SexAreaOrifice.VAGINA, LubricationType.GIRLCUM)
-										? "[npc.namePos] wet [npc.pussy] betraying [npc.her] arousal, and in a tone of absolute disgust, [npc2.she] snaps, "
-										: "[npc.namePos] [npc.pussy+], and in a tone of absolute disgust, [npc2.she] snaps, ")
-								+ "[npc2.speech(How repulsive! I <i>hate</i> seeing dirty little fuck-holes! I'll have that removed later...)]"));
+										? "[npc.namePos]湿润的[npc.pussy]已经出卖了[npc.her]欲望高涨的事实，不禁讥笑起来，用恶心的口吻斩钉截铁地说道，"
+										: "[npc.namePos][npc.pussy+]，不禁讥笑起来，用恶心的口吻斩钉截铁地说道，")
+								+ "[npc2.speech(真恶心！这么脏的洞我<i>看都不想看</i>！我得给你去掉……)]"));
 			sb.append("</p>");
 			
 			return sb.toString();

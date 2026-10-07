@@ -1,385 +1,385 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- OUTSIDE -->
 	
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	<p>
-		Positioned near the very centre of Dominion, Lilaya's home would be more aptly described as a palace, rather than a town-house. While the surrounding buildings are of an impressive size, you reckon that you could fit at least two or three of them into the plot which your [lilaya.relation(pc)]'s dwelling occupies.
-	</p>
+		莉莱雅的家坐落于御城区市中心。它比起住宅更像是一座宫殿。虽然附近的建筑也算得上规模庞大，但粗略估计，你[lilaya.relation(pc)]的家至少是它们的两三倍大。
+</p>
 	<p>
-		With your demonic [lilaya.relation(pc)] happily treating you as one of her blood-relatives, you've been given full permission to come and go from here as you please. If you wanted to enter the house right now, all you'd need to do is knock on the front door, and you can be sure that Lilaya's cat-girl maid, Rose, will respond in mere moments.
-	</p>
-	]]>
-	</htmlContent>
+		恶魔[lilaya.relation(pc)]认为你算得上她的血亲，兴高采烈地收留了你。所以你暂时拥有了出入权限。如果你敲门进屋，莉莱雅的猫女仆萝丝会立刻应门。
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_DADDY_PACKAGE"><![CDATA[
 	<p>
-		You knock on the front door, and after only a brief moment, it swings open.
+		你敲了敲前门。片刻后，门开了。
 	</p>
 	<p>
-		[rose.speech(Welcome back, [pc.name],)] Rose says, curtsying to you as she steps back in order to grant you access to Lilaya's house, [rose.speech(While you were out, a package arrived for you.)]
+		[rose.speech(欢迎回家，[pc.name]。)]萝丝说。她行了个屈膝礼，后退几步让你进门。[rose.speech(你不在家的时候，有个包裹到了。)]
 	</p>
 	<p>
-		As you forwards into the impressive entrance hall, the cat-girl maid retrieves a small box, wrapped in brown packaging paper, from off of the top of a nearby table. Smiling at you one last time, Rose hands the package to you, before excusing herself and quickly hurrying off
+		你走进宏伟的门厅，猫女仆从旁边的桌子下面取出一个棕色包装纸裹着的小盒子。萝丝把包裹递给你，微笑着向你道别，然后匆匆离开。
 		#IF(game.isExtendedWorkTime())
-			 in the direction of your [lilaya.relation(pc)]'s laboratory.
+			径直走进[lilaya.relation(pc)]的实验室。
 		#ELSE
-			 upstairs to go back to sleep.
+			上楼去睡觉。
 		#ENDIF
 	</p>
 	<p>
-		Opening the package, you discover that it contains a spell book and several scrolls, along with a small note which reads;
+		你打开包裹，看到了里面的一本法术教材和几张卷轴。还有一张小纸条，上面写着：
 	</p>
 	<p style='text-align:center;'><i>
-		Hi [pc.name],<br/>
-		Here are the scrolls and spell book which I promised to send to you. Hope this letter finds you well, and look forwards to seeing you again soon!<br/>
-		Love,<br/>
+		嘿，[pc.name]，<br/>
+		这是答应好的法术教材和卷轴，希望你能亲自读到这封信，祝你一切安好，希望能赶快再见面！<br/>
+		爱你的，<br/>
 		[daddy.Dad]
 	</i></p>
 	<p>
-		Smiling to yourself as you finish reading the note, you put the contents of the package into your inventory, before discarding the now-empty box and packaging into a nearby waste-paper bin.
+		你笑着读完纸条，把教材和卷轴放入包中，空空如也的盒子和包装纸则丢进附近的垃圾桶。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_DADDY_PACKAGE_SECURITY"><![CDATA[
 	<p>
-		You knock on the front door, and after only a brief moment, it swings open to reveal the familiar figure of your slave, [npc.name].
+		你敲了敲前门。片刻后，门开了。门口探出熟悉的面孔，是你的奴隶，[npc.name]。
 	</p>
 	<p>
 		#IF(npc.isMute())
-			As [npc.sheIs] mute, the [npc.race] simply nods and 
+			[npc.sheIs]沉默不语，[npc.race]点点头
 			#IF(npc.isFeminine())
-				 curtsies
+				行了个屈膝礼，
 			#ELSE
-				 bows
+				鞠了一躬，
 			#ENDIF
-			 to you as [npc.she] [npc.steps] back in order to grant you access to Lilaya's house.
+			[npc.she]后退几步，把你迎进莉莱雅的家。
 		#ELSE
-			[npc.speech(Welcome back, [pc.name],)] the [npc.race] says,
+			[npc.speech(欢迎回来，[pc.name]。)]，[npc.race]边说边
 			#IF(npc.isFeminine())
-				 curtsying
+				行了个屈膝礼，
 			#ELSE
-				 bowing
+				鞠了一躬，
 			#ENDIF
-			  to you as [npc.she] [npc.steps] back in order to grant you access to Lilaya's house. [npc.speech(While you were out, a package arrived for you.)]
+			[npc.she][npc.steps]后退几步，把你迎进莉莱雅的家。[npc.speech(你不在家的时候，有个包裹到了。)]
 		#ENDIF
 	</p>
 	<p>
-		As you forwards into the impressive entrance hall, the security guard retrieves a small box, wrapped in brown packaging paper, from off of the top of a nearby table. Handing you this package, the [npc.race] moves back into position beside the front door.
+		你走进宏伟的门厅，保安从旁边的桌子下面取出一个棕色包装纸裹着的小盒子。[npc.race]把包裹递给你，后退几步关上了前门。
 	</p>
 	<p>
-		Opening the package, you discover that it contains a spell book and several scrolls, along with a small note which reads;
+		你打开包裹，看到了里面的一本法术教材和几张卷轴。还有一张小纸条，上面写着：
 	</p>
 	<p style='text-align:center;'><i>
-		Hi [pc.name],<br/>
-		Here are the scrolls and spell book which I promised to send to you. Hope this letter finds you well, and look forwards to seeing you again soon!<br/>
-		Love,<br/>
+		嘿，[pc.name]，<br/>
+		这是答应好的法术教材和卷轴，希望你能亲自读到这封信，祝你一切安好，希望能赶快再见面！<br/>
+		爱你的，<br/>
 		[daddy.Dad]
 	</i></p>
 	<p>
-		Smiling to yourself as you finish reading the note, you put the contents of the package into your inventory, before discarding the now-empty box and packaging into a nearby waste-paper bin. Looking ahead, you wonder whether to proceed into Lilaya's home, or to say something else to [npc.name] first...
+		你笑着读完纸条，把教材和卷轴放入包中，空空如也的盒子和包装纸则丢进附近的垃圾桶。你考虑是直接回莉莱雅的家，还是先找[npc.name]说点事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_KNOCK_ON_DOOR"><![CDATA[
 	<p>
-		You knock on the front door, and after only a brief moment, it swings open.
+		你敲了敲前门。片刻后，门开了。
 	</p>
 	<p>
-		[rose.speech(Welcome back, [pc.name],)] Rose says, curtsying to you as she steps back in order to grant you access to Lilaya's house.
+		[rose.speech(欢迎回家，[pc.name]。)]萝丝说。她行了个屈膝礼，后退几步让你进门。
 	</p>
 	<p>
-		Moving forwards into the impressive entrance hall, you greet the cat-girl maid as she closes the door behind you. Turning to smile at you one last time, Rose then excuses herself, before quickly hurrying off 
+		你走进宏伟的门厅，和猫女仆打了声招呼。萝丝跟在你身后关上门，她微笑着向你道别，然后匆匆离开。
 		#IF(game.isExtendedWorkTime())
-			 in the direction of your [lilaya.relation(pc)]'s laboratory.
+			径直走进[lilaya.relation(pc)]的实验室。
 		#ELSE
-			 upstairs to go back to sleep.
+			上楼去睡觉。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_KNOCK_ON_DOOR_SECURITY"><![CDATA[
 	<p>
-		You knock on the front door, and after only a brief moment, it swings open to reveal the familiar figure of your slave, [npc.name].
+		你敲了敲前门。片刻后，门开了。门口探出熟悉的面孔，是你的奴隶，[npc.name]。
 	</p>
 	<p>
 		#IF(npc.isMute())
-			As [npc.sheIs] mute, the [npc.race] simply nods and 
+			[npc.sheIs]沉默不语，[npc.race]点点头
 			#IF(npc.isFeminine())
-				 curtsies
+				行了个屈膝礼，
 			#ELSE
-				 bows
+				鞠了一躬，
 			#ENDIF
-			 to you as [npc.she] [npc.steps] back in order to grant you access to Lilaya's house.
+			[npc.she]后退几步，把你迎进莉莱雅的家。
 		#ELSE
-			[npc.speech(Welcome back, [pc.name],)] the [npc.race] says,
+			[npc.speech(欢迎回来，[pc.name]。)]，[npc.race]边说边
 			#IF(npc.isFeminine())
-				 curtsying
+				行了个屈膝礼，
 			#ELSE
-				 bowing
+				鞠了一躬，
 			#ENDIF
-			  to you as [npc.she] [npc.steps] back in order to grant you access to Lilaya's house.
+			[npc.she][npc.steps]后退几步，把你迎进莉莱雅的家。
 		#ENDIF
-		 Moving forwards into the impressive entrance hall, you greet the security guard as [npc.she] closes the door behind you.
+		你走进宏伟的门厅，跟保安打了个招呼。[npc.she]跟在你身后关上门。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CORRIDOR -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		Immaculately-clean red carpet runs down the centre of the wide corridor which you're currently [pc.walking] down, while the walls are decorated in a pale, light-blue wallpaper that sports a series of delicate white floral patterns. Fine landscape paintings and portraits of beautiful demons are hung up on the walls at regular intervals, while all manner of antique curiosities are perched upon the many wooden cabinets which line the sides of these hallways.
+		一尘不染的红地毯铺在你正[pc.walking]在的宽阔走廊的中央，墙壁被粉刷成白色，上面贴着有着一系列精致的白色花卉图案的淡蓝色壁纸 。每隔一段距离，就挂着精美的山水画和美丽的恶魔肖像，走廊两旁的许多木柜里，摆放着各式各样的古玩。
 	</p>
 	<p>
 		#IF(game.isDayTime())
-			Large glass windows flood the corridor with an impressive amount of natural daylight, and you notice that Rose seems to be taking care to leave some of them open every now and again, making sure that the air in the house always feels fresh.
+			自然光透过巨大的玻璃窗充盈着走廊，让人印象深刻。你发现萝丝似乎会时不时地敞开一些窗户，让新鲜的空气涌入屋子。
 		#ELSE
-			As it's currently night time, heavy fabric curtains have been drawn over the corridor's large glass windows, leaving the area to be illuminated by the many arcane-powered wall-lights.
+			现在是晚上，走廊的大玻璃窗都被沉沉垂下的织物窗帘遮盖。四下都有奥术驱动的壁灯，将走廊点亮。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROSE -->
 	
 	<htmlContent tag="ROSE_TALK_LILAYA"><![CDATA[
 	<p>
-		[pc.speech(What can you tell me about Lilaya?)] you ask, wanting to know more about Rose's mistress.
+		[pc.speech(你能告诉我关于莉莱雅的一些情况吗？)]你问道。你想了解萝丝的主人。
 	</p>
 	<p>
-		[rose.speech(Well, I can tell you what's publicly known, but as you must understand, I cannot reveal any personal information,)] Rose replies, [rose.speech(My mistress is the recognised daughter of the elder lilin Lyssieth, and as such is at the very top of Dominion's social hierarchy. Despite being invited to nearly every single prestigious social gathering in the city, she prefers to keep herself busy with her arcane experiments and research. This house in which she lives was once owned by her mother, but was given to her as a place in which she could continue with her work without being disturbed.)]
+		[rose.speech(嗯，我能告诉你一些公开情报，但你也知道，我不方便透露她的隐私，)]萝丝回答道，[rose.speech(我的主人是莉琳长老莉西丝膝下的女儿，在御城区享有最高的社会地位。尽管她受邀参加了几乎每一场名流社交，但她更加醉心于奥术实验和研究。她现在的住所曾经是她母亲的，但后来被送给了她，以供她心无旁骛地工作。)]
 	</p>
 	<p>
-		Having given you a brief overview of what's publicly known about her mistress, Rose smiles in a somewhat-dutiful manner, before asking, [rose.speech(Is there anything else I can help you with, [pc.sir]?)]
+		萝丝讲完主人的公开情报，脸上依旧挂着职业微笑，她询问道，[rose.speech(我还能帮上什么忙吗，[pc.sir]？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROSE_TALK_SLAVE"><![CDATA[
 	<p>
-		Not really sure about the best way to approach the subject, you decide to just ask your question outright and hope that it doesn't cause Rose any offence, [pc.speech(If you don't mind me asking, how did you end up as a slave?)]
+		你不知道该怎么开口，最终决定直截了当地提问，暗自祈祷不会冒犯萝丝，[pc.speech(如果你不介意的话，我想问，你是怎么成为奴隶的？)]
 	</p>
 	<p>
-		Rose smiles to put you at ease, obviously sensing that you're a bit hesitant to broach the subject. [rose.speech(Well, like a lot of other slaves, I sold myself into slavery, under a contract stipulating that I am non-transferable. In other words, that I am only ever to be owned by Lilaya.)]
+		你看到萝丝的微笑毫无变化，放下心来。萝丝感觉到了你的犹豫不决，[rose.speech(嗯，和许许多多的奴隶一样，我卖掉了自己，签订了一份不可转让的奴隶契约。换句话说，只有莉莱雅能奴役我。)]
 	</p>
 	<p>
-		You can't help but feel shocked as you hear that Rose willingly became a slave, but before you can ask why, she seems to sense your incoming question and continues, [rose.speech(When you sell yourself as a slave, all your debts and crimes are forgiven, so many people choose a life of slavery in order to escape their past. I suppose I'm somewhat of an unusual case, though, because I didn't have anything to run away from. You see, I was originally hired through an agency to serve as one of Lilaya's personal maids, and while working for her, we grew very close...)]
+		你听了萝丝“自愿成为奴隶”的话，大受震撼。你还没来得及问，她猜到了你的心思，接着说，[rose.speech(如果你把自己卖掉，变成奴隶，那么你的所有债务和罪行都会被宽恕，因此许多人选择奴役生活以摆脱他们的过去。不过，我可能有些特殊，因为我没有什么需要逃避的东西。你知道，最初我是通过一家中介公司受雇来担任莉莱雅的个人女仆的，而在为她工作的过程中，我们变得非常亲近……)]
 	</p>
 	<p>
-		Rose suddenly blushes, and you notice that her tail has wrapped itself tightly around her leg. She's obviously thinking back to when she first met Lilaya, and after taking a moment to move past her recollection of the past, she continues, [rose.speech(Lyssieth didn't approve of how much time we were spending together, and when Lilaya and I were discovered kissing one another, her mother didn't take it well... I was soon informed that I was to be fired, and instructed never to speak to Lilaya again. As you might understand, Lilaya and I were distraught. At my suggestion, we agreed that the only way Lyssieth would tolerate my continued presence would be if I were to become Lilaya's slave. True enough, her mother accepted my new place as her daughter's property, and from that point on we took extra care not to be discovered in one another's embrace...)]
+		突然，萝丝脸红了，你注意到她的尾巴紧紧缠绕在她的腿周围。显然她正在回想她与莉莱雅的初遇，经过一会儿，她继续说道，[rose.speech(莉西丝讨厌我们泡在一起。莉莱雅和我被发现在接吻后，她的母亲更是极度反对……不久我得知要被解雇，并禁止与莉莱雅说话。正如你所理解的那样，莉莱雅和我都很伤心。我给出了提议，我们最终达成一致，只有我变成莉莱雅的奴隶，我们才能在一起。确实，她的母亲接受了作为她女儿财产的我，从那时起，我们就格外小心，避免被发现抱在一起……)]
 	</p>
 	<p>
-		From the moment you saw them interacting with each other, you knew Lilaya and Rose were close, but even so, the revelation that Rose sacrificed her freedom so that they could be together takes you by surprise. As Rose starts blushing, you realise that they must deeply care for one another, and you feel a little bit awkward at having Rose tell you about this intimate part of their relationship.
+		从你看到她们互动的那一刻起，就知道她们很亲昵，但即使如此，萝丝为了让她们能在一起而牺牲了自己的自由，这还是让你大吃一惊。你看着脸红的萝丝，意识到他们一定深深关心彼此。让萝丝告诉你她们关系的这一亲密部分，你又觉得有点尴尬。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROSE_TALK_WORLD"><![CDATA[
 	<p>
-		Wondering if Rose is able to give you any interesting information about Dominion, you ask, [pc.speech(What can you tell me about this world?)]
+		你期待萝丝能告诉你一些御城区有趣的信息，于是问道，[pc.speech(你能跟我讲讲这个世界吗？)]
 	</p>
 	<p>
-		[rose.speech(Really, [pc.sir], I'm happy to help in any way I can, but you'd be better off consulting the books in Mistress's library if you're looking for that sort of information,)] Rose replies, [rose.speech(If you want some basic knowledge, however, then I can tell you that this world is ruled by Lilith, who's the most powerful demon to ever have existed. She lives here in Dominion, in that huge tower that can be seen from miles around. Although she personally rules over this city, she allows her daughters, the elder lilin, to control other parts of her domain. Surrounding Dominion, there's plenty of farmland and woodland, which collectively is called the 'Foloi Fields', and is ruled by Lunette. Other than that, I know that there's a jungle to the north, ruled by Lyxias; a desert to the south, ruled by Lisophia; and the Endless Sea to the East, ruled by Lirecea.)]
+		[rose.speech([pc.sir]，我很荣幸能提供任何帮助，但您如果在寻找那种信息，最好先去主人的图书馆查阅一下书籍，)]萝丝回复道，[rose.speech(不过如果您想知道些基础知识，我可以告诉您，这个世界由莉莉丝统领，她是有史以来最强大的恶魔。她就住在御城区，数里之外的高塔之上。虽然她亲自统治着这个城市，但也准许她的女儿——莉琳长老——去管理治下的其他地区。御城区周围是大片的农田和树林，一般统称为‘弗洛伊田野’，由露内特统治。除此之外，我只知道北方有一片丛林，统治者是莉西亚斯；南方的沙漠是莉索菲亚统领；而东方的无尽之海则是莉瑞恰。)]
 	</p>
 	<p>
-		It seems as though every elder lilin's name begins with an 'L', and you wonder how Rose is able to remember them all. Even though the maid's information was quite limited, you're still grateful that she's told you a little more about how this world works. It doesn't look like she's finished just yet, however, and takes a little breath before continuing, [rose.speech(If you're looking for more information about the culture and ways of Dominion, then I suppose I can give you a few pointers as well. The most common races that you'll see walking the streets are demons, cat, dog, and horse-morphs. Although there are countless other races that inhabit this world, they mostly tend to stay in their home regions, so you'll see plenty of cattle-morphs and rabbit-morphs out in the fields, but almost none in the jungle or desert.)]
+		看上去莉琳长老的名字都是“L”开头，你很想知道萝丝都是怎么全记住的。虽然女仆提供的信息非常有限，但你还是很感激她能够或多或少地提供一些世界的样貌。她似乎还没有说完，稍稍喘了一口气，继续道，[rose.speech(如果您对御城区的人文风俗有兴趣，我或许也可以稍稍提一两句。在道路上能见到的最常见的种族就是恶魔、猫、狗和马的化形。虽然世界上还存在着其他数不清的种族，但大多都生活在家乡附近，所以去到田野上就能见到许多牛化形和兔化形，但在森林或者沙漠里就几乎找不到。)]
 	</p>
 	<p>
-		Coming to the end, Rose finishes by saying, [rose.speech(The number of humans in our world seems to decrease every year. In order to escape the discrimination and prejudice against humans, they're more and more often choosing to transform themselves. Oh, speaking of which, don't drink any unmarked bottles of liquid, as while they're a little expensive, transformative potions are readily available for anyone to purchase, and they'll alter your body in a flash.)]
+		萝丝最后说道，[rose.speech(我们世界人类的数量每年都在减少。为了躲避针对人类的偏见和歧视，他们只得转化自己。哦，说起来，没有标签的液体可不要喝，虽然价格稍高，但是人人都可以在商店里买到转化药水，能够瞬间变化你的身体。)]
 	</p>
 	<p>
-		With that last warning, Rose looks like she's finished, and you wonder if you should ask her anything else, or leave her to carry on with her dusting.
+		最后警告过后，萝丝看上去说完了，你思考着能否再问些别的，或者让她继续打扫房间。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROSE_TALK_DUTIES"><![CDATA[
 	<p>
-		Being curious about the sort of work Rose is expected to carry out, you ask her, [pc.speech(So, what sort of things do you have to do for Lilaya?)]
-	</p>
+	你很好奇萝丝平常都会做什么工作，于是问道，[pc.speech(那么，你都给莉莱雅做什么工作？)]
+</p>
 	<p>
-		Rose's cheeks suddenly flush red, and although you asked your question in innocence, you realise that Rose's thoughts have instantly turned to some of her more intimate duties. [rose.speech(E-Erm, well, y-you know, demons get pretty horny, and Lilaya's no different. I attend to all of m-mistress's needs...)] she stammers, before starting to regain her composure. [rose.speech(B-But other than that, I spend most of my time cleaning and cooking. You've got no idea how much dusting this place requires!)]
-	</p>
+	萝丝的脸刷的一下变得通红，虽然你问的时候没什么别的意思，但你立马意识到萝丝先想到的是那些亲密的职责。[rose.speech(呃，嗯，你，你知道的吧，恶魔性欲是很强的，莉莱雅也不例外。我会迎合主，主人的任何需要……)]她磕磕绊绊地说着，慢慢地才镇静下来。[rose.speech(不，不过还有别的事情，我大多数事件都在打扫卫生和做饭。你绝对想象不到打扫这里会有多麻烦！)]
+</p>
 	<p>
-		As she says this, you suddenly become aware that she's holding a little feather duster, of the same 'French-maid' style as the rest of her uniform. Looking at the little instrument, you find your gaze being curiously drawn to Rose's delicate hands.
-	</p>
+	她说到这个，你才突然注意到她手上拿着一把小羽毛掸子，跟她的制服非常配合，是“法式女仆”的造型。你看了看那个小玩意，视线却不由自主地被萝丝精致的手吸引了。
+</p>
 	<p>
-		Sensing what you're looking at, Rose suddenly blushes, and blurts out, [rose.speech(I use a duster like this so I don't have to get my hands dirty! You know, I take really good care of them, but Lilaya never seems to notice...)]
-	</p>
+	萝丝注意到你的目光，忽然又是脸颊一红，立马说道，[rose.speech(我用掸子就是为了不弄脏我的手！其实，我一直都很注意保养，但是莉莱雅却都没注意到……)]
+</p>
 	<p>
-		You don't quite know what's come over you, but you're finding it hard to think of anything other than Rose's perfect, feminine hands. As you watch, she places her duster down on a little table next to you, and, with a little step forwards, she starts to gently rub her hands together, sliding her slender, feminine fingers over each other and making little moaning noises. With a gulp, you suddenly realise that she's displaying them for your benefit, and as she looks up into your eyes, she makes a pleading little whine.
-	</p>
-	]]>
-	</htmlContent>
+	你不知道自己怎么了，但就是不住地去想萝丝那双柔嫩而完美的手。你看着看着，萝丝却把掸子放在了你身边的桌子上，前踏一步，一双纤手相互揉捏起来，接着又让纤细而柔美的手指交错摩挲着，口中发出微微的呻吟声。你顿时倒吸一口凉气，她就是在为你表演。随后她抬头看向你的眼睛，开心地小声呜咽着。
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROSE_TALK_MOTHERS_MILK"><![CDATA[
 	<p>
-		Wanting to help Lilaya to get her pregnancy over with as soon as possible, you produce a bottle of 'Mother's milk' from your inventory, before handing it over to Rose with the words, [pc.speech(Could you please give this to Lilaya? As you no doubt know, I got her pregnant, and I'd like to help her get it over with as soon as possible.)]
-	</p>
+	你想帮莉莱雅赶紧度过孕期，于是从身上拿出一瓶“母亲的奶水”，交给了萝丝，[pc.speech(能请你把这个给莉莱雅吗？你也知道，我让她中招了，我也想让她赶紧结束这一切。)]
+</p>
 	<p>
-		[rose.speech(Of course, [pc.sir],)] the maid dutifully replies, taking the bottle from you. [rose.speech(I know that mistress isn't opposed to drinking these, so I shall deliver it to her as soon as we're finished. I can assure you that she'll consume it straight away. If you had any more of these, it would be a good idea to wait for a couple of hours before handing them over to me, as I believe that the enchantment needs some time in which to work before any subsequent effects can be applied.)]
-	</p>
+	[rose.speech(明白，[pc.sir]，)]女仆拿走了那瓶药剂，尽职地回应道。[rose.speech(主人是不会反对的，结束之后我会尽快交出去。我向你保证，她二话不说就会喝下去。如果你还有，最好等几个小时再交给我，附魔效果可能需要一些时间才能发挥作用。)]
+</p>
 	<p>
-		Thanking Rose for doing as you've asked, as well as for the information, you wonder what you should do next...
-	</p>
-	]]>
-	</htmlContent>
+	你谢过萝丝同意了你的请求，还告诉了你一些别的信息，你思考着接下来要做什么……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ROSE_TALK_OFFER_ROSE"><![CDATA[
 	<p>
-		Feeling that it would be fitting to offer this cat-girl maid her namesake as a gift, you hold out the red rose which you've been carrying with you towards her, and say, [pc.speech(This is for you, Rose, as thanks for all of your hard work.)]
-	</p>
+	你觉得送这位猫女女仆一件贴合她名字(Roes)的礼物应当会很合适，于是拿出随身携带的红玫瑰，对她说，[pc.speech(这个送给你，萝丝，多谢你每日的辛勤工作。)]
+</p>
 	<p>
-		As she sees what it is you're giving to her, Rose's cheeks flush to almost the same deep scarlet as the delicate flower's petals, and as she takes the gift from you, she shyly smiles and shuffles her feet. [rose.speech([pc.Name]... That's so thoughtful of you! Thank you so much!)]
-	</p>
+	萝丝看到你送的东西，脸颊顿时变得绯红一片，就像是优美的花瓣一般，她接过了你的礼物，露出羞答答的微笑，慌乱地挪着脚。[rose.speech([pc.Name]……你考虑得真周到！谢谢！)]
+</p>
 	<p>
-		As you watch her take the rose from you, you suddenly notice how delicate and perfectly-formed Rose's hands are. Even after all of the cleaning and manual labour she does as part of her duties around the house, she's somehow managed to keep her hands perfectly spotless, with nails that are manicured to a perfect finish.
-	</p>
+	看着她收下玫瑰的时候，你突然注意到萝丝的手竟然如此精致完美。尽管每天都要完成职责，打扫卫生、做体力劳动，但却还能让手保持如此完美无瑕，连指甲都修剪得恰到好处。
+</p>
 	<p>
-		[pc.thought(Wow... Her hands are flawless!)]
-	</p>
-	]]>
-	</htmlContent>
+	[pc.thought(哇哦……她的手太完美了！)]
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ROSE_HANDS -->
 	
 	<htmlContent tag="ROSE_HANDS"><![CDATA[
 	<p>
-		As Rose places the gifted rose into a nearby vase, you find yourself unable to look at anything but her hands... her amazing hands...
+		当萝丝将收到的礼物放在附近的花瓶里时，你意识到自己无法将视线从她的手上移开……她那双惊艳的纤手……
 	</p>
 	<p>
-		[pc.thought(Holy shit... Look at those hands!)]
+		[pc.thought(见鬼……看看这双手吧！)]
 	</p>
 	<p>
-		With her cat-like tail swishing excitedly behind her, Rose sees what it is that's caught your attention, and holds up her perfect, angelic hands for you to admire. Her soft, pale skin almost seems to glow as she steps up in front of you, and you subconsciously start reaching out towards her delicate fingers. Her nails are painted a soft shade of pink, and as your fingertips touch with hers, you feel her soft warmth radiating into your [pc.armSkin].
+		萝丝猫一样的尾巴在身后激动地甩动着，看来她发现了是什么让你如此失神，接着她举起那双天使般完美的手，供你瞻仰。她上前几步，那柔嫩白皙的皮肤几乎要发出光来，你下意识地朝着她精致的手指伸出了手。她的指甲上散落着一抹淡粉色，当两人的指尖相触碰时，你顿时感到从对方那里传来的温暖，蔓延到了你的[pc.armSkin]中。
 	</p>
 	<p>
-		The moment you make physical contact, Rose lets out a desperate moan, and as her cheeks somehow manage to flush an ever deeper shade of crimson, she sighs, [rose.speech(~Aah!~ Yes! Lilaya never appreciates how much effort I put into keeping my hands so nice and soft! ~Yes!~ Take me! Take me now!)]
+		在你们身体接触的那一刻，萝丝不受控制地发出了一声呻吟，接着她的双颊就染上了一抹绯红，她叹了口气，[rose.speech(~啊啊！~就是嘛！莉莱雅一点也不懂我为了让这双手一直漂亮又软和，费了多少心思！~来吧！~握住吧！快握住吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- GARDEN -->
 	
 	<htmlContent tag="GARDEN"><![CDATA[
 	<p>
-		The garden courtyard consists of a series of wide, perfectly trimmed grass pathways, each one lined with beds of brightly-coloured flowers. Although Rose is now the one responsible for maintaining it, you guess that Lilaya must have hired a professional company in order to have had this area landscaped so perfectly.
-	</p>
+	花园庭院由一道道宽阔且修剪整齐的草坪小径组成，每条小径两旁都种满了色彩鲜艳的花圃。虽然现在由萝丝负责维护，但你猜莉莱雅一定是请了专业公司，才把这块地方布置得如此完美。
+</p>
 	<p>
-		Clearly being fond of her maid's namesake, you see that several magnificent rose bushes have been planted throughout the garden.
-		#IF(flags.hasFlag(FLAG_lilayaGardenPickRose))
-			 As you've already picked one of the beautiful flowers today, you probably shouldn't take any more until tomorrow...
-		#ELSE
-			 You're sure that Lilaya wouldn't mind if you took one of the beautiful flowers...
-		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+	显然她很喜欢自己女仆的名字，花园各处都种上了瑰丽的玫瑰。
+	#IF(flags.hasFlag(FLAG_lilayaGardenPickRose))
+		今天你已经摘过一朵美丽的鲜花，还是等明天吧……
+	#ELSE
+		你敢肯定只是摘一朵美丽的鲜花，莉莱雅不会介意的……
+	#ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GARDEN_PICK ROSE"><![CDATA[
 	<p>
-		[pc.Stepping] over to one of the magnificent rose bushes which are found throughout Lilaya's courtyard garden, you select a particularly beautiful flower and cut it from the plant. After taking a moment to smell its delicate perfume, you place the rose in your inventory and wonder where to go next...
-	</p>
-	]]>
-	</htmlContent>
+	你在莉莱雅庭院花园中遍布的瑰丽玫瑰中选定了一丛，[pc.Stepping]到旁边后又精心挑选了尤其漂亮的一朵，摘了下来。你感受了好一阵子那迷人的香气，才将玫瑰放入包内，思考着接下来要做什么……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- FOUNTAIN -->
 	
 	<htmlContent tag="FOUNTAIN"><![CDATA[
 	<p>
-		In the very centre of the garden courtyard, a huge, ornate water fountain happily bubbles away with a mind of its own. The structure is made up of a collection of intricate statues; each one of a beautiful woman in some manner of indecent pose.
-	</p>
+	在花园庭院的正中间，伫立着一座巨大而华丽的喷泉，正开心地吐露着自己的心绪。这座建筑由一系列精美的雕塑构成；每一位曼妙的女性都摆着不甚雅观的造型。
+</p>
 	#IF(flags.hasFlag(FLAG_acexp_dungeon_garden_access_found))
 		<p>
-			Knowing that the nearby button that's disguised as part of the fountain's decorative stonework will grant you access to Lilaya's dungeon, you wonder whether to press it and head down into the subterranean gloom, or instead continue on your way elsewhere...
-		</p>
+		你知道附近有一个按钮被伪装成了喷泉装饰石雕的一部分，能够带你去往莉莱雅的地牢，你在思考是要按下按钮，去往阴暗的地下，还是继续走你的路呢……
+	</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
     <htmlContent tag="DUNGEON_OPENS_FOUNTAIN"><![CDATA[
    	<p>
-        Deciding that you'd like to head down into Lilaya's dungeon, you [pc.step] forwards and press the button that's been disguised as part of the fountain's stonework. A rumbling sound of grinding stone immediately breaks out to your side, and you turn to watch as a nearby slab slides open to reveal the secret, spiral staircase which leads down into the darkness of Lilaya's dungeon. As you begin to move forwards, the wall-mounted arcane torches burst into flame, casting staircase in a dancing, flickering light.
-	</p>
-	]]>
-    </htmlContent>
+	你决定下去莉莱雅的地牢，于是[pc.step]上前去，按下了被伪装成喷泉石雕一部分的按钮。磨制石块轰隆的响声顿时在你耳边响起，你转过身，只见一块厚石板缓缓移开，露出了一座隐秘的螺旋状楼梯，引向莉莱雅黑暗的地牢。你缓缓前进着，嵌入墙内的奥术火炬瞬间点亮，用摇曳闪动的光芒照亮了楼梯。
+</p>
+	
+    ]]></htmlContent>
 	
 	
 	<!-- ENTRANCE_HALL -->
 	
 	<htmlContent tag="ENTRANCE_HALL"><![CDATA[
 	<p>
-		Lilaya's house is by far the most impressive building you've ever been in. The entrance hall that you find yourself standing in is, on its own, far larger than your old flat, and is extravagantly decorated in a style befitting a royal palace. Fine paintings and marble busts line the walls, and a huge crystal chandelier hangs from the double-height ceiling, casting its warm light over a grand, red-carpeted staircase that leads to the upper floor.
+		莉莱雅的家无疑是你曾见过的最令人震撼的建筑。你站在门厅，单它的面积就比你过去居住的公寓大得多，还配有皇宫规格的奢华风装饰：房间的墙上挂着精致的画作，摆放着大理石半身像，双层高的天花板上悬挂着巨大的水晶吊灯，将温暖的光线投射到通向上层铺着红地毯的宽大楼梯上。
 	</p>
 	<p>
-		From previous explorations, you know that the rest of the house is furnished in much the same manner. You tried to count all the rooms once but gave up after reaching well over one hundred. Despite its grand appearance and impressive size, the only member of staff you've ever seen is Lilaya's slave; the cat-girl maid called Rose. Lilaya herself spends almost every waking moment working in her lab, resulting in the house being eerily quiet for most of the time.
+		你从之前的探索中获悉，其他房间的内饰也与之相似。你曾经想数出房间的个数，但在数到一百多个后就放弃了。尽管莉莱雅的家富丽堂皇、规模庞大，但你唯二见过的人是莉莱雅和她的奴隶，名叫萝丝的猫女仆。莉莱雅醒着的绝大部分时间都在实验室工作，因此家里异常安静。
 	</p>
 	#IF(pc.getQuest(QUEST_LINE_SIDE_DOLL_FACTORY)==QUEST_DOLL_FACTORY_6)
 		<p style='text-align:center;'>
-			[style.italicsMinorBad(There's no message for you from Fiammetta yet. You're sure to hear from her soon, however...)]
+			[style.italicsMinorBad(菲亚梅塔还没有给你留言。不过，你肯定很快就会收到她的信……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STAIRCASE_UP -->
 	
 	<htmlContent tag="STAIRCASE_UP"><![CDATA[
 	<p>
-		The grand, red-carpeted staircase is one of the first things you see when entering Lilaya's home. Half-way up the shallow steps, there's a secondary landing area, which is home to a couple of antique-looking cabinets and well looked after house plants. Branching off from the sides of this landing, two slightly-narrower staircases wrap around and lead up to the floor above.
-	</p>
+	在进入莉莱雅的家中时，首先映入眼帘的便是这铺着红地毯的宏伟楼梯。随着浅浅的楼梯走到一半，便是一处二级平台，上面摆放着一对古色古香的陈列柜和一些精心照料的盆栽。平台两侧分出两条稍窄的楼梯，环绕着通向上面的楼层。
+</p>
 	<p>
-		A huge portrait of two women hangs on the wall of the landing area, overlooking the entire entrance hall. You immediately recognise the half-demon sitting in the chair as Lilaya, and you can only assume that the gorgeous figure standing behind her is her Lilin mother, Lyssieth. Although Lilin can change their appearance at will, Lyssieth has chosen to appear as a beautiful half-demon in her mid-forties, and you wonder if she did this to make Lilaya feel more comfortable, or whether that's simply the form she prefers to take.
-	</p>
+	平台的墙上挂着一幅巨大的双人画像，俯瞰着整个入口大厅。你一眼就认出坐在椅子上的半恶魔是莉莱雅，而她身后的迷人身影则只能猜测是她的莉琳母亲——莉西丝。虽然莉琳可以随意变换外貌，但莉西丝却选择以一位美貌的半恶魔的形象出现，看上去四十余岁，你不知道她这样做只是为了让莉莱雅安心，还是她单纯喜欢这种形态。
+</p>
 	<p>
-		Remarking one last time upon how beautiful the mother-daughter pair are, you continue on your way...
-	</p>
-	]]>
-	</htmlContent>
+	你又一次默默称赞这一对母女的美貌，然后便继续前行……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STAIRCASE_UP_SECONDARY -->
 	
 	<htmlContent tag="STAIRCASE_UP_SECONDARY"><![CDATA[
 	<p>
-		In this particular section of the corridor, there's a large recess set into the wall which is home to a series of carpeted stairs. While not as grand as the one positioned in front of the mansion's main entrance, this wide, sweeping staircase is nevertheless far more impressive than any you'd find in a regular house, and you wonder whether you should make use of it to travel up to the first floor...
-	</p>
-	]]>
-	</htmlContent>
+	在这一段走廊内，墙壁上有一处凹进，矗立着铺好地毯的楼梯。虽然不比位于大宅正厅前的楼梯那般宏伟，但也非常宽敞，比起寻常房屋的那种还是要惊艳许多，你在思考是否要通过楼梯上到二楼……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STAIRCASE_DOWN -->
 	
 	<htmlContent tag="STAIRCASE_DOWN"><![CDATA[
 	<p>
-		Standing at the top of the grand, red-carpeted staircase, you find yourself looking down at the huge portrait of Lilaya and her mother. Although you didn't notice it from the ground floor, you seem to detect a hint of annoyance in Lyssieth's eyes, giving you the impression that she's trying her best to hide her resentment towards either the artist, or someone who must have been close by.
-	</p>
+	你站在铺满红地毯的宏伟楼梯顶端，发现自己正俯视着莉莱雅和她母亲的巨幅肖像画。虽然你在一楼的时候没有注意到，但此时却仿佛从莉西丝的眼神中察觉到一丝恼怒，感觉像是她正在竭力掩饰对画家或某个人的怨恨，而那个人一定就在附近。
+</p>
 	<p>
-		Wondering if you'll ever get to ask Lilaya, or perhaps even Lyssieth herself, about the circumstances under which this portrait was painted, you look away and continue on your way...
-	</p>
-	]]>
-	</htmlContent>
+	你不知道是否有机会向莉莱雅，甚至是莉西丝本人打听一下，这幅肖像画是在什么情况下画的，你转过头去，继续前行……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STAIRCASE_DOWN_SECONDARY -->
 	
 	<htmlContent tag="STAIRCASE_DOWN_SECONDARY"><![CDATA[
 	<p>
-		In this particular section of the corridor, there's a large recess set into the wall which is home to a series of carpeted stairs. While not as grand as the one positioned in front of the mansion's main entrance, this wide, sweeping staircase is nevertheless far more impressive than any you'd find in a regular house, and you wonder whether you should make use of it to travel down to the ground floor...
-	</p>
-	]]>
-	</htmlContent>
+	在这一段走廊内，墙壁上有一处凹进，矗立着铺好地毯的楼梯。虽然不比位于大宅正厅前的楼梯那般宏伟，但也非常宽敞，比起寻常房屋的那种还是要惊艳许多，你在思考是否要通过楼梯下到一楼……
+</p>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

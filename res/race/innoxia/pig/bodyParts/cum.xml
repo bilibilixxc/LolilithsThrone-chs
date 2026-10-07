@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <fluid>
 	<race>innoxia_pig</race>
 	
-	<transformationName><![CDATA[pig]]></transformationName>
+	<transformationName><![CDATA[猪]]></transformationName>
 	
 	<baseFluidType>CUM</baseFluidType>
 	
 	<flavour>CUM</flavour>
 	
 	<namesMasculine>
-		<name><![CDATA[pig-]]></name>
+		<name><![CDATA[猪]]></name>
 	</namesMasculine>
 	
 	<namesFeminine>
-		<name><![CDATA[pig-]]></name>
+		<name><![CDATA[猪]]></name>
 	</namesFeminine>
 	
 	<descriptorsMasculine/>

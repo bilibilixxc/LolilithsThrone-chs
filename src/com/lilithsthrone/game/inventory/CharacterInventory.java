@@ -1283,7 +1283,7 @@ public class CharacterInventory implements XMLSaving {
 		if (tempSB.length() != 0) {
 			tempSB.append("<br/><br/>");
 		}
-		tempSB.append("<br/><span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>"+UtilText.parse(character, "Due to the loss of [npc.her] extra pair of arms, [npc.name] can no longer hold the "+w.getName()+"!")+"</span>");
+		tempSB.append("<br/><span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>"+UtilText.parse(character, "由于[npc.name]失去了额外的手臂，无法再握持"+w.getName()+"！")+"</span>");
 		
 		tempSB.append("<br/>" + description);
 	}
@@ -1331,12 +1331,12 @@ public class CharacterInventory implements XMLSaving {
 		if (getClothingInSlot(slotToEquipInto) != null) {
 			if(getClothingInSlot(slotToEquipInto).isSealed()) {
 				if(characterClothingOwner.isPlayer()) {
-					equipTextSB.append("You can't equip the "+newClothing.getName()+", as your <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "
-								+ getClothingInSlot(slotToEquipInto).getName() + " can't be removed!");
+					equipTextSB.append("你无法装备"+newClothing.getName()+"，因为你<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"
+								+ getClothingInSlot(slotToEquipInto).getName() + "无法被移除！");
 				} else {
 					equipTextSB.append(UtilText.parse(characterClothingOwner,
-							"[npc.Name] can't equip the "+newClothing.getName()+", as [npc.her] <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "
-							+ getClothingInSlot(slotToEquipInto).getName() + " can't be removed!"));
+							"[npc.Name]无法装备"+newClothing.getName()+"，因为[npc.her]<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"
+							+ getClothingInSlot(slotToEquipInto).getName() + "无法被移除！"));
 				}
 				return false;
 			}
@@ -1373,9 +1373,9 @@ public class CharacterInventory implements XMLSaving {
 			for(AbstractClothing c : incompatibleUnequippableClothing) {
 				if(c.isSealed()) {
 					equipTextSB.append(characterClothingOwner.isPlayer()
-							?"<br/>You can't equip the " + newClothing.getName() + " because your <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "+c.getName()+(c.getClothingType().isPlural()?" are":" is")+" in the way."
+							?"<br/>你无法装备" + newClothing.getName() + "，因为你<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"+c.getName()+"挡住了。"
 							:UtilText.parse(characterClothingOwner,
-									"<br/>[npc.Name] can't equip the " + newClothing.getName() + " because [npc.her] <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "+c.getName()+(c.getClothingType().isPlural()?" are":" is")+" in the way."));
+									"<br/>[npc.Name]无法装备" + newClothing.getName() + "，因为[npc.her]<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"+c.getName()+"挡住了。"));
 				}
 			}
 			return false;
@@ -1403,11 +1403,11 @@ public class CharacterInventory implements XMLSaving {
 											
 										} else {
 											equipTextSB.append(characterClothingOwner.isPlayer()
-													?"<br/>Your <b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b> "
-														+ (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " preventing you from being able to equip the "+newClothing.getName()+"!"
+													?"<br/>你的<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b>"
+														+ "阻止了你装备"+newClothing.getName()+"！"
 													:UtilText.parse(characterClothingOwner,
-															"<br/>[npc.NamePos] <b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b> "
-																	+ (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " preventing [npc.herHim] from being able to equip the "+newClothing.getName()+"!"));
+															"<br/>[npc.NamePos]的<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b>"
+																	+ "阻止了[npc.herHim]装备"+newClothing.getName()+"！"));
 											blockingClothing = equippedClothing;
 											return false;
 										}
@@ -1418,18 +1418,18 @@ public class CharacterInventory implements XMLSaving {
 										} else {
 											if(equippedClothing.isSealed()) {
 												equipTextSB.append(characterClothingOwner.isPlayer()
-														?"<br/>You can't equip the " + newClothing.getName() + " because your <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "
-															+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"
+														?"<br/>你无法装备" + newClothing.getName() + "，因为你<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"
+															+equippedClothing.getName()+"挡住了！"
 														:UtilText.parse(characterClothingOwner,
-																"<br/>[npc.Name] can't equip the " + newClothing.getName() + " because [npc.her] <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "
-																		+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"));
+																"<br/>[npc.Name]无法装备" + newClothing.getName() + "，因为[npc.her]<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"
+																		+equippedClothing.getName()+"挡住了！"));
 												
 											} else {
 												equipTextSB.append(characterClothingOwner.isPlayer()
-														?"<br/>You can't equip the " + newClothing.getName() + " because your "+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"
+														?"<br/>你无法装备" + newClothing.getName() + "，因为你的"+equippedClothing.getName()+"挡住了！"
 														:UtilText.parse(characterClothingOwner,
-																"<br/>[npc.Name] can't equip the " + newClothing.getName() + " because [npc.her] "
-																		+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"));
+																"<br/>[npc.Name]无法装备" + newClothing.getName() + "，因为[npc.her]的"
+																		+equippedClothing.getName()+"挡住了！"));
 											}
 											blockingClothing = equippedClothing;
 											return false;
@@ -1459,17 +1459,17 @@ public class CharacterInventory implements XMLSaving {
 					} else {
 						if(equippedClothing.isSealed()) {
 							equipTextSB.append(characterClothingOwner.isPlayer()
-									?"You can't equip the " + newClothing.getName() + " because your <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "
-										+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"
+									?"你无法装备" + newClothing.getName() + "，因为你<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"
+										+equippedClothing.getName()+"挡住了！"
 									:UtilText.parse(characterClothingOwner,
-											"[npc.Name] can't equip the " + newClothing.getName() + " because [npc.her] <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b> "
-													+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"));
+											"[npc.Name]无法装备" + newClothing.getName() + "，因为[npc.her]<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>被封印的</b>"
+													+equippedClothing.getName()+"挡住了！"));
 							
 						} else {
 							equipTextSB.append(characterClothingOwner.isPlayer()
-									?"You can't equip the " + newClothing.getName() + " because your "+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"
+									?"你无法装备" + newClothing.getName() + "，因为你的"+equippedClothing.getName()+"挡住了！"
 									:UtilText.parse(characterClothingOwner,
-											"[npc.Name] can't equip the " + newClothing.getName() + " because [npc.her] "+equippedClothing.getName()+ " "+(equippedClothing.getClothingType().isPlural()?"are":"is")+" in the way!"));
+											"[npc.Name]无法装备" + newClothing.getName() + "，因为[npc.her]的"+equippedClothing.getName()+"挡住了！"));
 						}
 						blockingClothing = equippedClothing;
 						return false;
@@ -1508,8 +1508,8 @@ public class CharacterInventory implements XMLSaving {
 								+ (!clothingToRemove.containsKey(c) || clothingToRemove.get(c) == DisplacementType.REMOVE_OR_EQUIP
 									? c.onUnequipText(characterClothingOwner, characterClothingEquipper, (Main.game.isInSex()?Main.sex.getSexPace(characterClothingEquipper)==SexPace.DOM_ROUGH:false))
 									: (characterClothingOwner.isPlayer()
-											?"You " + clothingToRemove.get(c).getDescription() + " your " + c.getName() + "."
-											:"[npc.Name] " + clothingToRemove.get(c).getDescriptionThirdPerson() + " [npc.her] " + c.getName() + ".")));
+											?"你" + clothingToRemove.get(c).getDescription() + "你的" + c.getName() + "。"
+											:"[npc.Name]" + clothingToRemove.get(c).getDescriptionThirdPerson() + "[npc.her]的" + c.getName() + "。")));
 				}
 				
 				// Remove all clothing that is incompatible with newClothing using the owner's accessor method.
@@ -1568,14 +1568,14 @@ public class CharacterInventory implements XMLSaving {
 				clothingToBeReplaced.sort(new ReverseClothingZLayerComparator());
 				if (!clothingToBeReplaced.isEmpty()) {// clothingCountToBeReplaced-incompatibleUnequippableClothing.size()>0)
 					equipTextSB.append(characterClothingOwner.isPlayer()
-							?"<br/>You replace your " + Util.clothesToStringList(clothingToBeReplaced, false) + "."
+							?"<br/>你恢复了你的" + Util.clothesToStringList(clothingToBeReplaced, false) + "。"
 							:UtilText.parse(characterClothingOwner,
-									"<br/>[npc.Name] replaces [npc.her] " + Util.clothesToStringList(clothingToBeReplaced, false) + "."));
+									"<br/>[npc.Name]恢复了[npc.her]的" + Util.clothesToStringList(clothingToBeReplaced, false) + "。"));
 				}
 				
 				if(newClothing.getItemTags().contains(ItemTag.PROVIDES_KEY) && newClothing.isSealed()) {
 					equipTextSB.append(UtilText.parse(characterClothingEquipper,
-							"<br/>[style.italicsGood([npc.Name] obtained a key to unlock the "+newClothing.getName()+"!)]"));
+							"<br/>[style.italicsGood([npc.Name]获得了解锁"+newClothing.getName()+"的钥匙！)]"));
 				}
 				
 				// Check for clothing sets:
@@ -1590,11 +1590,11 @@ public class CharacterInventory implements XMLSaving {
 
 		} else {
 			if(clothingToRemove.isEmpty()) {
-				equipTextSB.append(Util.capitaliseSentence(newClothing.getName(true))+ " "+(newClothing.getClothingType().isPlural()?"are":"is")+" able to be equipped.");
+				equipTextSB.append(Util.capitaliseSentence(newClothing.getName(true))+"可以装备。");
 			} else {
-				equipTextSB.append(Util.capitaliseSentence("Before" + newClothing.getClothingType().getDeterminer()) + " " + newClothing.getName()
-					+ " is able to be equipped, " + Util.clothesToStringList(clothingToRemove.keySet(), false) + " need"
-						+ (clothingToRemove.size() > 1 ? "" : "s") + " to be removed.");
+				equipTextSB.append(Util.capitaliseSentence("在装备" + newClothing.getClothingType().getDeterminer()) + newClothing.getName()
+					+ "之前，必须先移除" + Util.clothesToStringList(clothingToRemove.keySet(), false)
+						+ "。");
 			}
 		}
 
@@ -1630,9 +1630,9 @@ public class CharacterInventory implements XMLSaving {
 
 		if(clothing.isSealed()) {
 			equipTextSB.append(characterClothingOwner.isPlayer()
-					?"Your " + clothing.getName() + " can't be removed because "+(clothing.getClothingType().isPlural()?"they are":"it is")+" <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b>!"
+					?"你的" + clothing.getName() + "无法被移除，因为被<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>封印</b>了！"
 					:UtilText.parse(characterClothingOwner,
-							"[npc.NamePos] " + clothing.getName() + " can't be removed because "+(clothing.getClothingType().isPlural()?"they are":"it is")+" <b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>sealed</b>!"));
+							"[npc.NamePos]的" + clothing.getName() + "无法被移除，因为被<b style='color:" + PresetColour.SEALED.toWebHexString() + ";'>封印</b>了！"));
 			
 			blockingClothing = clothing;
 			return false;
@@ -1665,11 +1665,11 @@ public class CharacterInventory implements XMLSaving {
 									
 								} else { // Cannot be removed, so return false:
 									equipTextSB.append(characterClothingOwner.isPlayer()
-											?"<br/>Your " + clothing.getName() + " can't be unequipped because your " + equippedClothing.getName() + " "
-											+ (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " in the way."
+											?"<br/>你的" + clothing.getName() + "无法卸下，因为你的" + equippedClothing.getName()
+											+ "挡住了。"
 											:UtilText.parse(characterClothingOwner,
-													"<br/>[npc.NamePos] " + clothing.getName() + " can't be unequipped because [npc.her] " + equippedClothing.getName() + " "
-											+ (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " in the way."));
+													"<br/>[npc.NamePos]的" + clothing.getName() + "无法卸下，因为[npc.her]的" + equippedClothing.getName()
+											+ "挡住了。"));
 									
 									blockingClothing = equippedClothing;
 									return false;
@@ -1683,11 +1683,11 @@ public class CharacterInventory implements XMLSaving {
 										
 									} else {
 										equipTextSB.append(characterClothingOwner.isPlayer()
-												?"Your <b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b> "
-												+ (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " preventing your "+clothing.getName()+" from being removed!"
+												?"你的<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b>"
+												+"阻止了你的"+clothing.getName()+"被移除！"
 												:UtilText.parse(characterClothingOwner,
-														"[npc.NamePos] <b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b> "
-												+ (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " preventing [npc.her] "+clothing.getName()+" from being removed!"));
+														"[npc.NamePos]的<b style='color:"+PresetColour.GENERIC_BAD.toWebHexString()+";'>" + equippedClothing.getName() + "</b>"
+												+"阻止了[npc.her]的"+clothing.getName()+"被移除！"));
 										
 										blockingClothing = equippedClothing;
 										return false;
@@ -1710,11 +1710,11 @@ public class CharacterInventory implements XMLSaving {
 			blockingClothingSet.removeIf(c -> c == clothing);
 			
 			equipTextSB.append(characterClothingOwner.isPlayer()
-					?"Before your " + clothing.getName() + " "+(clothing.getClothingType().isPlural()?"are":"is")+" able to be removed, your " + Util.clothesToStringList(blockingClothingSet, false) + " need"
-						+ (blockingClothingSet.size() > 1 ? "" : "s") + " to be removed."
+					?"在移除" + clothing.getName() +"之前，你必须先移除" + Util.clothesToStringList(blockingClothingSet, false)
+						+ "。"
 					:UtilText.parse(characterClothingOwner,
-							"Before [npc.namePos] " + clothing.getName() + " "+(clothing.getClothingType().isPlural()?"are":"is")+" able to be removed, [npc.her] " + Util.clothesToStringList(blockingClothingSet, false) + " need"
-									+ (blockingClothingSet.size() > 1 ? "" : "s") + " to be removed."));
+							"在移除" + clothing.getName() +"之前，[npc.name]必须先移除" + Util.clothesToStringList(blockingClothingSet, false)
+									+"。"));
 			
 			blockingClothing = blockingClothingSet.stream().findAny().orElse(blockingClothing);
 			
@@ -1775,9 +1775,9 @@ public class CharacterInventory implements XMLSaving {
 
 			if (!clothingToBeReplaced.isEmpty() && !continuingIsAbleToEquip) {
 				equipTextSB.append(characterClothingOwner.isPlayer()
-						?"<br/>You replace your " + Util.clothesToStringList(clothingToBeReplaced, false) + "."
+						?"<br/>你恢复了你的" + Util.clothesToStringList(clothingToBeReplaced, false) + "。"
 						:UtilText.parse(characterClothingOwner,
-								"<br/>You replace [npc.namePos] " + Util.clothesToStringList(clothingToBeReplaced, false) + "."));
+								"<br/>你恢复了[npc.namePos]的" + Util.clothesToStringList(clothingToBeReplaced, false) + "。"));
 			}
 			
 			// Check for clothing sets:
@@ -1875,8 +1875,8 @@ public class CharacterInventory implements XMLSaving {
 													if(automaticClothingManagement) {
 														clothingToRemove.put(equippedClothing, bpEquipped.displacementType);
 													} else {
-														unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " can't be displaced because "
-																+ equippedClothing.getClothingType().getDeterminer() + " " + equippedClothing.getName() + " " + (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " in the way.");
+														unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + clothing.getName() + "无法被移开，因为"
+																+ equippedClothing.getClothingType().getDeterminer() + equippedClothing.getName() + "挡住了。");
 														blockingClothing = equippedClothing;
 														return false;
 													}
@@ -1886,8 +1886,8 @@ public class CharacterInventory implements XMLSaving {
 												if (automaticClothingManagement && isAbleToUnequip(equippedClothing, false, automaticClothingManagement, characterClothingOwner, characterRemovingClothing, true)) { // Can be removed:
 													clothingToRemove.put(equippedClothing, DisplacementType.REMOVE_OR_EQUIP);
 												} else {
-													unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " can't be displaced because "
-															+ equippedClothing.getClothingType().getDeterminer() + " " + equippedClothing.getName() + " " + (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " in the way.");
+													unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + clothing.getName() + "无法被移开，因为"
+															+ equippedClothing.getClothingType().getDeterminer() + equippedClothing.getName() + "挡住了。");
 													blockingClothing = equippedClothing;
 													return false;
 												}
@@ -1912,7 +1912,7 @@ public class CharacterInventory implements XMLSaving {
 
 		if (displaceIfAble) {
 			if (clothing.getDisplacedList().contains(dt)) {
-				unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " is already displaced!");
+				unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + clothing.getName() + "已经被移开了！");
 				return false;
 			}
 
@@ -1947,12 +1947,12 @@ public class CharacterInventory implements XMLSaving {
 			replaceClothingList.remove(clothing);
 			replaceClothingList.sort(new ReverseClothingZLayerComparator());
 			if (!replaceClothingList.isEmpty()) {
-				unableToDisplaceText.append(UtilText.parse(characterClothingOwner, "<br/>You replace [npc.namePos] ") + Util.clothesToStringList(replaceClothingList, false) + ".");
+				unableToDisplaceText.append(UtilText.parse(characterClothingOwner, "<br/>你恢复了[npc.namePos]的") + Util.clothesToStringList(replaceClothingList, false) + "。");
 			}
 			
 			return true;
 		}
-		unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " is able to be displaced.");
+		unableToDisplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) +  clothing.getName() + "可以被移开。");
 		return true;
 	}
 
@@ -1997,8 +1997,8 @@ public class CharacterInventory implements XMLSaving {
 											if(automaticClothingManagement)
 												clothingToRemove.put(equippedClothing, bpEquipped.displacementType);
 											else{
-												unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " can't be replaced because "
-														+ equippedClothing.getClothingType().getDeterminer() + " " + equippedClothing.getName() + " " + (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " in the way.");
+												unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + clothing.getName() + "无法恢复，因为"
+														+ equippedClothing.getClothingType().getDeterminer() + equippedClothing.getName() + "挡住了。");
 												blockingClothing = equippedClothing;
 												return false;
 											}
@@ -2007,8 +2007,8 @@ public class CharacterInventory implements XMLSaving {
 										if (isAbleToUnequip(equippedClothing, false, automaticClothingManagement, characterClothingOwner, characterRemovingClothing, true)) // Can  be removed:
 											clothingToRemove.put(equippedClothing, DisplacementType.REMOVE_OR_EQUIP);
 										else {
-											unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " can't be replaced because "
-													+ equippedClothing.getClothingType().getDeterminer() + " " + equippedClothing.getName() + " " + (equippedClothing.getClothingType().isPlural() ? "are" : "is") + " in the way.");
+											unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + clothing.getName() + "无法恢复，因为"
+													+ equippedClothing.getClothingType().getDeterminer() + equippedClothing.getName() + "挡住了。");
 											blockingClothing = equippedClothing;
 											return false;
 										}
@@ -2031,7 +2031,7 @@ public class CharacterInventory implements XMLSaving {
 
 		if (replaceIfAble) {
 			if (!clothing.getDisplacedList().contains(dt)) {
-				unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " is already replaced!");
+				unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + clothing.getName() + "已经恢复了！");
 				return false;
 			}
 
@@ -2064,13 +2064,13 @@ public class CharacterInventory implements XMLSaving {
 			replaceClothingList.addAll(clothingToRemove.keySet());
 			replaceClothingList.sort(new ReverseClothingZLayerComparator());
 			if (!replaceClothingList.isEmpty()) {
-				unableToReplaceText.append(UtilText.parse(characterClothingOwner, "<br/>You replace [npc.namePos] ") + Util.clothesToStringList(replaceClothingList, false) + ".");
+				unableToReplaceText.append(UtilText.parse(characterClothingOwner, "<br/>你恢复了[npc.namePos]的") + Util.clothesToStringList(replaceClothingList, false) + "。");
 			}
 			
 			return true;
 		}
 
-		unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + " " + clothing.getName() + " is able to be replaced.");
+		unableToReplaceText = new StringBuilder(Util.capitaliseSentence(clothing.getClothingType().getDeterminer()) + clothing.getName() + "可以恢复原状。");
 		return true;
 	}
 

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
-	<deskName><![CDATA[bench]]></deskName>
+	<deskName><![CDATA[长凳]]></deskName>
 	<title/>
 	<consensual><![CDATA[true]]></consensual>
 	<subHasEqualControl><![CDATA[true]]></subHasEqualControl>
@@ -13,14 +13,14 @@
 	<publicSex>
 		<isPublic><![CDATA[true]]></isPublic>
 		<startingDescription><![CDATA[
-			As [npc.name] loudly declares that [npc.sheIs] going to enjoy
+			[npc.name]大声宣布[npc.sheIs]将享受
 			#IF(npc.hasFetish(FETISH_DOMINANT))
-				 fucking [npc.her] [npc.petName(pc)],
+				操[npc.her]的[npc.petName(pc)]，
 			#ELSE
-				 getting fucking by [npc.her] [npc.petName(pc)],
+				被[npc.her]的[npc.petName(pc)]操，
 			#ENDIF
-			 several passersby stop and watch to find out what's about to happen. Clearly being turned on by the prospect of putting on a show for the public, [npc.name] lets out an erotic [npc.moan] and hurries to get started...
-		]]></startingDescription>
+			一些路人驻足观看，想知道即将发生什么。一想到要在公众面前性爱表演，[npc.name]就欲火攻心，[npc.she]发出一声色情的[npc.moan]，并急忙开始……
+]]></startingDescription>
 		<randomDescriptions enabled="false"/>
 	</publicSex>
 	<characterInformationContainer>

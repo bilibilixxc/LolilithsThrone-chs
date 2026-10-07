@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>0</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[beer-bitch token]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[beer-bitch tokens]]></namePlural>
-		<description><![CDATA[A token which was given to you by Oglix upon purchase of a pint of beer. Collecting five of these tokens allows you to trade them in for a fuck of Oglix's beer-bitch.]]></description> 
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[奶啤妓代币]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[奶啤妓代币]]></namePlural>
+		<description><![CDATA[这是奥格利克斯在购买一品脱啤酒时送给你的代币。收集五个这样的代币可以用来兑换一次操奥格利克斯的奶啤妓的服务。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -23,12 +23,12 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[Exchanged for a fuck of a beer-bitch at the bar in the tavern, 'The Crossed Blades']]></line>
+			<line><![CDATA[兑换一次在十字利刃旅店操奶啤妓的服务]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			This token is nothing more than a bottle cap that's been painted green and then crudely stamped with an 'O' marking. Remembering what Oglix told you, five of these tokens can be traded in for a fuck of the beer-bitch behind her bar.
+			这个代币实际上不过是一个涂成绿色的瓶盖，然后粗糙地印上了一个'O'标记。根据Oglix告诉你的内容，收集五个这样的代币可以用来兑换操她酒吧后面的奶啤妓的服务。
 		</p>
 		]]></applyEffects>
 		
@@ -38,10 +38,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(take)] a closer look at the beer-bitch token...
+		[npc.Name]仔细观察这个奶啤妓代币……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(show)] off [npc.her] beer-bitch token to [npc2.name]...
+		[npc.Name]向[npc2.name]展示[npc.her]的奶啤妓代币……
 		]]></otherUse>
 	</useDescriptions>
 

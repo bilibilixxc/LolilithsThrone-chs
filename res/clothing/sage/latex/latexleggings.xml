@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[tight latex leggings]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[tight latex leggings]]></namePlural>
-		<description><![CDATA[A pair of tight latex leggings that are butter-soft to touch and shiny to behold. Form fitting even without the arcane, they are sure to fit tightly and snugly to anyone that wears them.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[乳胶紧身裤]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乳胶紧身裤]]></namePlural>
+		<description><![CDATA[一条乳胶紧身裤，外观闪亮，触感丝滑。设计上即使没有奥术，它也能让任何人穿上都紧紧贴合。]]></description> 
 		<physicalResistance>1</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>LEG</slot>
@@ -62,27 +62,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(step)] into the latex leggings, before pulling them up and fastening the zip at [npc.her] waist.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(get)] [npc2.name] to step into the latex leggings, before pulling them up and fastening the zip at [npc2.her] waist.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(force)] [npc2.name] to step into the latex leggings, before yanking them up and fastening the zip at [npc2.her] waist.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]穿进乳胶紧身裤，然后拉起它并拉上腰部的拉链。
+]]></self>
+    <other><![CDATA[
+[npc.Name]让[npc2.name]穿进乳胶紧身裤，然后拉起它并拉上[npc2.her]腰部的拉链。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]强迫[npc2.name]穿进乳胶紧身裤，然后拉起它并拉上[npc2.her]腰部的拉链。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the zip on [npc.her] latex leggings, before slipping them off.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the zip on [npc2.namePos] latex leggings, before slipping them off.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] the zip on [npc2.namePos] latex leggings, before yanking them off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]拉开乳胶紧身裤上的拉链，然后脱下它。
+]]></self>
+    <other><![CDATA[
+[npc.Name]拉开[npc2.namePos]乳胶紧身裤上的拉链，然后脱下它。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]拉开[npc2.namePos]乳胶紧身裤上的拉链，然后扯下它。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

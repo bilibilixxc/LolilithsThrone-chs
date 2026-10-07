@@ -10,54 +10,54 @@ package com.lilithsthrone.game.inventory.clothing;
 public enum ClothingAccess {
 
 	/** Placing something onto your eyes, like glasses. */
-	EYES("place onto eyes"),
+	EYES("放在眼睛上"),
 
 	/** Placing something into your mouth, like a ball-gag. */
-	MOUTH("place onto mouth"),
+	MOUTH("戴在嘴上"),
 
 	/** Pulling something down over your head, like a t-shirt. */
-	HEAD("pull down over head"),
+	HEAD("盖在头上"),
 
 	/**
 	 * Sliding something up your arms to rest on your shoulders, like the loops in a bra.
 	 */
-	ARMS_UP_TO_SHOULDER("slide over arms"),
+	ARMS_UP_TO_SHOULDER("穿过手臂"),
 
 	/** Sliding something up your wrists, like elbow-length gloves. */
-	WRISTS("slide up wrists"),
+	WRISTS("穿过手腕"),
 
 	/** Sliding something down your fingers, like a ring. */
-	FINGERS("slide down fingers"),
+	FINGERS("穿过手指"),
 
 	/** Sliding something over your chest, like the cups of a bra. */
-	CHEST("slide over chest"),
+	CHEST("穿过胸部"),
 
 	/** Sliding something over your waist, like a corset or swimsuit. */
-	WAIST("slide over waist"),
+	WAIST("穿过腰部"),
 
 	/** Pulling something up your legs, like a pair of panties. */
-	LEGS_UP_TO_GROIN_LOW_LEVEL("pull up between legs"),
+	LEGS_UP_TO_GROIN_LOW_LEVEL("拉到腿上"),
 
 	/** Sliding something up your legs, like the holes in a pair of trousers. */
-	LEGS_UP_TO_GROIN("slide up legs"),
+	LEGS_UP_TO_GROIN("穿过腿"),
 
 	/** Sliding something over your groin, like a pair of panties.*/
-	GROIN("slide over groin"),
+	GROIN("滑上腹股沟"),
 
 	/** Sliding something onto your penis, like a condom. */
-	PENIS("slide onto penis"), // This gets automatically added to 'clothingAccessBlocked' values if clothing has 'PENIS' in 'blockedBodyParts'.
+	PENIS("套到阴茎上"), // This gets automatically added to 'clothingAccessBlocked' values if clothing has 'PENIS' in 'blockedBodyParts'.
 
 	/** Inserting something into your vagina, like a dildo. */
-	VAGINA("insert into vagina"), // This gets automatically added to 'clothingAccessBlocked' values if clothing has 'VAGINA' in 'blockedBodyParts'.
+	VAGINA("插进阴道里"), // This gets automatically added to 'clothingAccessBlocked' values if clothing has 'VAGINA' in 'blockedBodyParts'.
 
 	/** Inserting something into your anus, like a butt-plug. */
-	ANUS("insert into anus"),
+	ANUS("插进肛门里"),
 
 	/** Sliding something over your calves, like a pair of knee-high socks. */
-	CALVES("slide over calves"),
+	CALVES("穿过小腿"),
 
 	/** Sliding something over your feet, like a pair of socks. */
-	FEET("slide over feet");
+	FEET("穿过脚");
 
 	String descriptor;
 

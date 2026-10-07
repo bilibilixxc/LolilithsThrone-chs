@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[beer garden]]></name>
-	<tooltipDescription><![CDATA[At the back of 'The Red Dragon' tavern, there's a modestly-sized beer garden, complete with wooden tables and chairs.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the beer garden at 'The Red Dragon' tavern]]></virginityLossDescription>
+	<name><![CDATA[啤酒花园]]></name>
+	<tooltipDescription><![CDATA[在红龙酒馆背后，有一个大小适中的啤酒花园，配有木制桌椅。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在红龙酒馆啤酒花园]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREEN</colour>
 	<backgroundColour>MAP_BACKGROUND_GREEN</backgroundColour>

@@ -10,11 +10,11 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum WingSize {
 
-	ZERO_TINY(0, "tiny", PresetColour.GENERIC_SIZE_ONE),
-	ONE_SMALL(1, "small", PresetColour.GENERIC_SIZE_TWO),
-	TWO_AVERAGE(2, "average-sized", PresetColour.GENERIC_SIZE_THREE),
-	THREE_LARGE(3, "large", PresetColour.GENERIC_SIZE_FOUR),
-	FOUR_HUGE(4, "huge", PresetColour.GENERIC_SIZE_FIVE);
+	ZERO_TINY(0, "微型", PresetColour.GENERIC_SIZE_ONE),
+	ONE_SMALL(1, "小型", PresetColour.GENERIC_SIZE_TWO),
+	TWO_AVERAGE(2, "中型", PresetColour.GENERIC_SIZE_THREE),
+	THREE_LARGE(3, "大型", PresetColour.GENERIC_SIZE_FOUR),
+	FOUR_HUGE(4, "巨型", PresetColour.GENERIC_SIZE_FIVE);
 	
 	
 	private int value;

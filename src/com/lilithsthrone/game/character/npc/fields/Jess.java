@@ -80,9 +80,9 @@ public class Jess extends NPC {
 	}
 	
 	public Jess(boolean isImported) {
-		super(isImported, new NameTriplet("Jess"), "Fyxen",
-				"A permanent fixture of The Red Dragon tavern, Jess happily entertains the establishment's patrons by drinking and talking with them."
-				+ " Of course, if some more intimate entertainment is desired, she's always willing to negotiate the price...",
+		super(isImported, new NameTriplet("婕斯"), "福森",
+				"红龙酒馆的招待婕斯开心地与顾客们饮酒打趣。"
+				+ "当然，如果想和她更进一步，有钱都好商量……",
 				22, Month.MARCH, 7,
 				10, Gender.F_V_B_FEMALE, Subspecies.FOX_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 10),
@@ -404,8 +404,8 @@ public class Jess extends NPC {
 			return new Value<>(false,
 					UtilText.parse(user, target,
 						"<p>"
-							+ "[npc.Name] [npc.verb(take)] out "+UtilText.generateSingularDeterminer(itemName)+" "+itemName+" from [npc.her] inventory and [npc.verb(try)] to give it to [npc2.name],"
-								+ " but [npc2.she] dismisses it with a wave of [npc2.her] hand and says, [npc2.speech(Sorry, [npc.babe], but that's not part of the deal!)]"
+							+ "[npc.Name]拿出"+UtilText.generateSingularDeterminer(itemName)+""+itemName+"并试着递给[npc2.name],"
+								+ "但[npc2.she]摆摆手说道：[npc2.speech(不好意思啦，[npc.babe]，这可不是交易的一部分！)]"
 						+ "</p>"));
 		}
 		return super.getItemUseEffects(item, itemOwner, user, target);

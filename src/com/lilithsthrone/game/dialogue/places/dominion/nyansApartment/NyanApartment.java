@@ -255,7 +255,7 @@ public class NyanApartment {
 			boolean vaginaAccess = Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true);
 			
 			responses.add(
-				new ResponseSex("Cunnilingus", "Give the horny cat-girl what she wants by eating her out.",
+				new ResponseSex("舔阴", "舔舐她的阴部，给淫荡小猫女想要的。",
 					true, true,
 					new SMNyanSex(
 							SexPosition.SITTING,
@@ -286,7 +286,7 @@ public class NyanApartment {
 			});
 			
 			responses.add(
-				new ResponseSex("Fingering", UtilText.parse(getActiveSexPartner(), "Push [npc.name] down on the bed and finger her while kissing her."),
+				new ResponseSex("指交", UtilText.parse(getActiveSexPartner(), "把[npc.name]压倒在床，边亲吻边指交。"),
 					true, true,
 					new SMNyanSex(
 							Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN_TWO)),
@@ -318,17 +318,17 @@ public class NyanApartment {
 			
 			if(Main.game.getPlayer().hasPenis()) {
 				if(!penisAccess) {
-					responses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (blowjob)":""),
-							UtilText.parse(getActiveSexPartner(), "As you are unable to access your penis, you cannot sixty-nine with [npc.name]!"),
+					responses.add(new Response("六九式"+(Main.game.getPlayer().hasVagina()?"(口交)":""),
+							UtilText.parse(getActiveSexPartner(), "你无法控制自己的肉棒，你不能和[npc.name]玩六九式！"),
 							null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (blowjob)":""), "Due to your [pc.legRace]'s lower body, you cannot use this position!", null));
+					responses.add(new Response("六九式"+(Main.game.getPlayer().hasVagina()?"(口交)":""), "因为你[pc.legRace]的下半身，你不能采用这个体位！", null));
 							
 				} else {
 					responses.add(
-							new ResponseSex("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (blowjob)":""),
-									UtilText.parse(getActiveSexPartner(), "Get [npc.name] to straddle your face and bend down to suck your cock while you're eating her out."),
+							new ResponseSex("六九式"+(Main.game.getPlayer().hasVagina()?" (blowjob)":""),
+									UtilText.parse(getActiveSexPartner(), "让[npc.name]跨坐在你脸上，她屈身吸吮你的鸡巴，你也舔着她的下面。"),
 									true, true,
 									new SMNyanSex(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN)),
@@ -361,17 +361,17 @@ public class NyanApartment {
 			}
 			if(Main.game.getPlayer().hasVagina()) {
 				if(!vaginaAccess) {
-					responses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasPenis()?" (cunnilingus)":""),
-							UtilText.parse(getActiveSexPartner(), "As you are unable to access your vagina, you cannot sixty-nine with [npc.name]!"),
+					responses.add(new Response("六九式"+(Main.game.getPlayer().hasPenis()?"(舔阴)":""),
+							UtilText.parse(getActiveSexPartner(), "你无法控制自己的阴部，你不能和[npc.name]玩六九式！"),
 							null)); 
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Sixty-nine"+(Main.game.getPlayer().hasVagina()?" (cunnilingus)":""), "Due to your [pc.legRace]'s lower body, you cannot use this position!", null));
+					responses.add(new Response("六九式"+(Main.game.getPlayer().hasVagina()?" (舔阴)":""), "因为你[pc.legRace]的下半身，你不能采用这个体位！", null));
 							
 				} else {
 					responses.add(
-							new ResponseSex("Sixty-nine"+(Main.game.getPlayer().hasPenis()?" (cunnilingus)":""),
-									UtilText.parse(getActiveSexPartner(), "Get [npc.name] to straddle your face and bend down to eat you out while you're returning the favour."),
+							new ResponseSex("六九式"+(Main.game.getPlayer().hasPenis()?"(舔阴)":""),
+									UtilText.parse(getActiveSexPartner(), "让[npc.name]跨坐在你脸上，她屈身舔着你的下面，你也回敬她。"),
 									true, true,
 									new SMNyanSex(
 											Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN)),
@@ -405,13 +405,13 @@ public class NyanApartment {
 			
 			if(Main.game.getPlayer().hasPenis()) {
 				if(!penisAccess) {
-					responses.add(new Response("Receive blowjob",
-							UtilText.parse(getActiveSexPartner(), "As you are unable to access your penis, you cannot get [npc.name] to suck your cock!"),
+					responses.add(new Response("被口交",
+							UtilText.parse(getActiveSexPartner(), "你无法控制自己的阴茎，你不能让[npc.name]吸你的鸡巴！"),
 							null)); 
 				} else {
 					responses.add(
-							new ResponseSex("Receive blowjob",
-									UtilText.parse(getActiveSexPartner(), "Get [npc.name] to suck your cock."),
+							new ResponseSex("被口交",
+									UtilText.parse(getActiveSexPartner(), "让[npc.name]吸你的鸡巴。"),
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -445,15 +445,15 @@ public class NyanApartment {
 				}
 				if(!penisAccess) {
 					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "[npc.Paizuri]"),
-							UtilText.parse(getActiveSexPartner(), "As you are unable to access your penis, you cannot get [npc.name] to give you a tit-fuck!"),
+							UtilText.parse(getActiveSexPartner(), "你无法控制自己的阴茎，所以你没法让[npc.name]给你乳交！"),
 							null)); 
 				} else {
 					responses.add(
 							new ResponseSex(UtilText.parse(getActiveSexPartner(), "[npc.Paizuri]"),
 									UtilText.parse(getActiveSexPartner(),
 											getActiveSexPartner().isBreastFuckablePaizuri()
-												?"Get [npc.name] to kneel down and wrap her [npc.breasts+] around your cock so that you can get a tit-fuck."
-												:"Get [npc.name] to kneel down and press her [npc.breasts+] against your cock so that you can grind up against them."),
+												?"让[npc.name]跪下，露出她[npc.breasts+]包裹你的鸡巴，你和她乳交。"
+												:"让[npc.name]跪下，露出她[npc.breasts+]包裹你的鸡巴，你能在乳穴里抽插。"),
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -493,13 +493,13 @@ public class NyanApartment {
 			}
 			if(Main.game.getPlayer().hasVagina()) {
 				if(!vaginaAccess) {
-					responses.add(new Response("Receive cunnilingus",
-							UtilText.parse(getActiveSexPartner(), "As you are unable to access your vagina, you cannot get [npc.name] to perform cunnilingus on you!"),
+					responses.add(new Response("被舔阴",
+							UtilText.parse(getActiveSexPartner(), "你的阴道不可被触及，所以你不能让[npc.Name]给你舔阴！"),
 							null)); 
 				} else {
 					responses.add(
-							new ResponseSex("Receive cunnilingus",
-									UtilText.parse(getActiveSexPartner(), "Get [npc.name] to eat you out."),
+							new ResponseSex("被舔阴",
+									UtilText.parse(getActiveSexPartner(), "让[npc.name]舔舐你的下体。"),
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -534,8 +534,8 @@ public class NyanApartment {
 			}
 			
 			responses.add(
-					new ResponseSex("Face-sitting",
-							UtilText.parse(getActiveSexPartner(), "Get [npc.name] to sit on your face and eat her out."), 
+					new ResponseSex("颜面骑乘",
+							UtilText.parse(getActiveSexPartner(), "让[npc.name]骑在你脸上，你舔舐着她的下体。"), 
 							true, true,
 							new SMNyanSex(
 									Util.newHashMapOfValues(new Value<>(Main.game.getPlayer(), SexSlotLyingDown.LYING_DOWN)),
@@ -566,15 +566,15 @@ public class NyanApartment {
 
 			if(Main.game.isAnalContentEnabled()) {
 				if((getActiveSexPartner() instanceof Nyan) && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanAnalTalk)) {
-						responses.add(new Response("Ask about anal", "Ask Nyan if she'd be comfortable doing anal stuff with you.", SOLO_FOREPLAY_ANAL_TALK));
+						responses.add(new Response("提议肛交", "问问妮安愿不愿意跟你尝试肛门的新玩法。", SOLO_FOREPLAY_ANAL_TALK));
 					
 				} else if((getActiveSexPartner() instanceof NyanMum) && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumAnalTalk)) {
-					responses.add(new Response("Ask about anal", "Ask [nyanmum.name] if she'd be comfortable doing anal stuff with you.", SOLO_FOREPLAY_ANAL_TALK));
+					responses.add(new Response("提议肛交", "问问[nyanmum.name]愿不愿意跟你尝试肛门的新玩法。", SOLO_FOREPLAY_ANAL_TALK));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Perform anilingus",
-								"Get the horny cat-girl to present you with her ass and start rimming her.",
+							new ResponseSex("吻肛",
+								"让淫荡的猫女向你展示屁股，为她吻肛。",
 								true, true,
 								new SMNyanSex(
 										SexPosition.ALL_FOURS,
@@ -644,10 +644,10 @@ public class NyanApartment {
 		}
 	};
 
-	public static final DialogueNode SOLO_SEX_MAIN = new DialogueNode("Moving on", "", true) {
+	public static final DialogueNode SOLO_SEX_MAIN = new DialogueNode("继续", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getActiveSexPartner(), "[npc.Name] has had enough of foreplay...");
+			return UtilText.parse(getActiveSexPartner(), "[npc.Name]已经享受够前戏了……");
 		}
 		@Override
 		public int getSecondsPassed() {
@@ -666,14 +666,14 @@ public class NyanApartment {
 			
 			if(Main.game.getPlayer().hasPenis()) {
 				if(!penisAccess) {
-					responses.add(new Response("Missionary", UtilText.parse(getActiveSexPartner(), "As you are unable to access your penis, you cannot fuck [npc.name]!"), null)); 
+					responses.add(new Response("传教士体位", UtilText.parse(getActiveSexPartner(), "因为你不能使用自己的阴茎，所以你没法操[npc.name]！"), null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Missionary",
+							new ResponseSex("传教士体位",
 									getActiveSexPartner() instanceof Nyan && getNyan().isVaginaVirgin()
-										?"Get Nyan to lie back and present herself to you, before taking her virginity."
-										:UtilText.parse(getActiveSexPartner(), "Get [npc.name] to lie back and present herself to you, before fucking her."),
+										?"在夺走妮安的贞操前，先让她躺下，向你展示自己。"
+										:UtilText.parse(getActiveSexPartner(), "在操她前，先让[npc.name]向后躺下，向你展示自己。"),
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -713,14 +713,14 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Doggy-style", UtilText.parse(getActiveSexPartner(), "As you are unable to access your penis, you cannot fuck [npc.name]!"), null)); 
+					responses.add(new Response("后入式", UtilText.parse(getActiveSexPartner(), "因为你不能使用自己的阴茎，所以你不能操[npc.name]！"), null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Doggy-style",
+							new ResponseSex("后入式",
 									getActiveSexPartner() instanceof Nyan && getNyan().isVaginaVirgin()
-										?"Get Nyan to drop down on all fours and present herself to you, before taking her virginity."
-										:UtilText.parse(getActiveSexPartner(), "Get [npc.name] to drop down on all fours and present herself to you, before fucking her."),
+										?"在夺走妮安的贞操之前，让她先四肢着地，向你展示自己。"
+										:UtilText.parse(getActiveSexPartner(), "在操[npc.Name]前，让她先四肢着地，向你展示自己。"),
 									true, true,
 									new SMNyanSex(
 											SexPosition.ALL_FOURS,
@@ -760,17 +760,17 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Cowgirl", UtilText.parse(getActiveSexPartner(), "As you are unable to access your penis, you cannot fuck [npc.name]!"), null)); 
+					responses.add(new Response("骑乘位", UtilText.parse(getActiveSexPartner(), "因为你不能使用自己的阴茎，所以你没法操[npc.Name]！"), null)); 
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Cowgirl", "Due to your lower [pc.legRace]'s body, you cannot use this position...", null)); 
+					responses.add(new Response("骑乘位", "因为你[pc.legRace]的下半身，你不能采用这个体位……", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Cowgirl",
+							new ResponseSex("骑乘位",
 									getActiveSexPartner() instanceof Nyan && getNyan().isVaginaVirgin()
-										?"Take Nyan's virginity by having her ride your cock."
-										:UtilText.parse(getActiveSexPartner(), "Have [npc.name] ride your cock in the cowgirl position."),
+										?"让她自己骑上你的阴茎，给出贞操。"
+										:UtilText.parse(getActiveSexPartner(), "让[npc.name]用骑乘位骑上你的阴茎。"),
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -810,10 +810,10 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Receive blowjob", "As you are unable to access your penis, you cannot have your cock sucked!", null)); 
+					responses.add(new Response("被口交", "你的阴茎不可被触及，所以你没法被口交！", null)); 
 				} else {
 					responses.add(
-							new ResponseSex("Receive blowjob", UtilText.parse(getActiveSexPartner(), "Get [npc.name] to suck your cock."),
+							new ResponseSex("接受口交", UtilText.parse(getActiveSexPartner(), "让[npc.name]口你的阴茎。"),
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -857,17 +857,17 @@ public class NyanApartment {
 			}
 			if(Main.game.getPlayer().hasVagina()) {
 				if(!vaginaAccess) {
-					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "Scissor ([npc.name] bottom)"),
-							UtilText.parse(getActiveSexPartner(), "As you are unable to access your vagina, you cannot scissor with [npc.name]!"),
+					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "跟([npc.name]玩剪刀式体位，磨蹭下体。)"),
+							UtilText.parse(getActiveSexPartner(), "你的阴部不可被触及，所以你不能和[npc.name]玩剪刀式！"),
 							null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "Scissor ([npc.name] bottom)"), "Due to your lower [pc.legRace]'s body, you cannot use this position...", null));
+					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "剪刀式体位([npc.name]在下)"), "因为你[pc.legRace]的下半身，你不能采用这个体位……", null));
 					
 				} else {
 					responses.add(
-							new ResponseSex(UtilText.parse(getActiveSexPartner(), "Scissor ([npc.name] bottom)"),
-									UtilText.parse(getActiveSexPartner(), "Get [npc.name] to lie back and scissor with her."),
+							new ResponseSex(UtilText.parse(getActiveSexPartner(), "跟[npc.name]玩剪刀式体位，磨蹭下体。"),
+									UtilText.parse(getActiveSexPartner(), "让[npc.name]躺好，跟她玩剪刀式体位。"),
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -907,15 +907,15 @@ public class NyanApartment {
 							});
 				}
 				if(!vaginaAccess) {
-					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "Scissor ([npc.name] top)"), UtilText.parse(getActiveSexPartner(), "As you are unable to access your vagina, you cannot scissor with [npc.name]!"), null));
+					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "剪刀式([npc.name]在上)"), UtilText.parse(getActiveSexPartner(), "你的阴部不可触及，所以你不能和[npc.name]玩剪刀式！"), null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "Scissor ([npc.name] top)"), "Due to your lower [pc.legRace]'s body, you cannot use this position...", null));
+					responses.add(new Response(UtilText.parse(getActiveSexPartner(), "剪刀式体位([npc.name]在上)"), "因为你[pc.legRace]的下半身，你不能采用这个体位……", null));
 					
 				} else {
 					responses.add(
-							new ResponseSex(UtilText.parse(getActiveSexPartner(), "Scissor ([npc.name] top)"),
-									UtilText.parse(getActiveSexPartner(), "Lie back and get [npc.name] to scissor with you."),
+							new ResponseSex(UtilText.parse(getActiveSexPartner(), "剪刀式体位([npc.name]在上)"),
+									UtilText.parse(getActiveSexPartner(), "躺好，让[npc.name]跟你用剪刀式体位做。"),
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -955,12 +955,12 @@ public class NyanApartment {
 							});
 				}
 				if(!vaginaAccess) {
-					responses.add(new Response("Receive cunnilingus", "As you are unable to access your vagina, you cannot receive cunnilingus!", null)); 
+					responses.add(new Response("被舔阴", "你的阴部不可触及，所以你不能被舔阴！", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Receive cunnilingus",
-									UtilText.parse(getActiveSexPartner(), "Get [npc.name] to eat you out."),
+							new ResponseSex("被舔阴",
+									UtilText.parse(getActiveSexPartner(), "让[npc.name]舔舐你的下体。"),
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -1002,8 +1002,8 @@ public class NyanApartment {
 							});
 				}
 				responses.add(
-						new ResponseSex("Perform cunnilingus",
-							"Get the horny cat-girl to present you with her pussy and eat her out.",
+						new ResponseSex("舔阴",
+							"让欲火中烧的猫女展示小穴，将她舔上高潮。",
 							true, true,
 							new SMNyanSex(
 									SexPosition.LYING_DOWN,
@@ -1045,15 +1045,15 @@ public class NyanApartment {
 			
 			if(Main.game.isAnalContentEnabled()) {
 				if((getActiveSexPartner() instanceof Nyan) && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanAnalTalk)) {
-						responses.add(new Response("Ask about anal", "Ask Nyan if she'd be comfortable doing anal stuff with you.", SOLO_SEX_ANAL_TALK));
+						responses.add(new Response("提议肛交", "问问妮安愿不愿意跟你尝试肛门的新玩法。", SOLO_SEX_ANAL_TALK));
 					
 				} else if((getActiveSexPartner() instanceof NyanMum) && !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumAnalTalk)) {
-					responses.add(new Response("Ask about anal", "Ask [nyanmum.name] if she'd be comfortable doing anal stuff with you.", SOLO_SEX_ANAL_TALK));
+					responses.add(new Response("Ask about anal", "问问[nyanmum.name]愿不愿意跟你尝试肛门的新玩法。", SOLO_SEX_ANAL_TALK));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Perform anilingus",
-								"Get the horny cat-girl to present you with her ass and start rimming her.",
+							new ResponseSex("吻肛",
+								"让饥渴的猫女展示菊穴，为她舔肛。",
 								true, true,
 								new SMNyanSex(
 										SexPosition.ALL_FOURS,
@@ -1093,14 +1093,14 @@ public class NyanApartment {
 						});
 					if(Main.game.getPlayer().hasPenis()) {
 						if(!penisAccess) {
-							responses.add(new Response("Anal", UtilText.parse(getActiveSexPartner(), "As you are unable to access your penis, you cannot fuck [npc.name]!"), null)); 
+							responses.add(new Response("肛交", UtilText.parse(getActiveSexPartner(), "因为你不能使用自己的阴茎，所以你不能操[npc.name]！"), null)); 
 							
 						} else {
 							responses.add(
-									new ResponseSex("Anal",
+									new ResponseSex("肛交",
 											getActiveSexPartner() instanceof Nyan && getNyan().isAssVirgin()
-												?"Get Nyan to drop down on all fours and present herself to you, before taking her anal virginity."
-												:"Get [pc.name] to drop down on all fours and present herself to you, before fucking her ass.",
+												?"让妮安四肢着地，献上自己，你可以夺取她的肛门童贞。"
+												:"让[pc.name]四肢着地，献上自己，你可以操她的屁眼。",
 											true, true,
 											new SMNyanSex(
 													SexPosition.ALL_FOURS,
@@ -1173,10 +1173,10 @@ public class NyanApartment {
 		}
 	};
 	
-	public static final DialogueNode POST_SOLO_SEX = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode POST_SOLO_SEX = new DialogueNode("完成", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(getActiveSexPartner(), "[npc.Name] is satisfied and puts an end to the sex...");
+			return UtilText.parse(getActiveSexPartner(), "[npc.Name]满意地结束了性爱……");
 		}
 		@Override
 		public void applyPreParsingEffects() {
@@ -1195,7 +1195,7 @@ public class NyanApartment {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sleep", UtilText.parse(getActiveSexPartner(), "Let [npc.name] rest and go sleep with her in her bed."), POST_SOLO_SEX_SLEEP);
+				return new Response("睡觉", UtilText.parse(getActiveSexPartner(), "让[npc.name]和你一起在她床上休息。"), POST_SOLO_SEX_SLEEP);
 			}
 			return null;
 		}
@@ -1223,7 +1223,7 @@ public class NyanApartment {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Kitchen", "Head into the kitchen...", POST_SOLO_SEX_KITCHEN);
+				return new Response("厨房", "走向厨房……", POST_SOLO_SEX_KITCHEN);
 			}
 			return null;
 		}
@@ -1262,10 +1262,10 @@ public class NyanApartment {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Goodbye",
+				return new Response("告别",
 						Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumGirlfriend)
-							?"Kiss Nyan and [nyanmum.name] goodbye and tell them that you'll see them soon."
-							:"Kiss Nyan goodbye and tell her that you'll see her soon.",
+							?"亲亲妮安，和[nyanmum.name]来告别，告诉对方很快就会再见。"
+							:"和妮安吻别，跟她说你很快会回来见她。",
 						POST_SEX_MORNING_NO_CONTENT) {
 					@Override
 					public void effects() {
@@ -1325,7 +1325,7 @@ public class NyanApartment {
 			boolean vaginaAccess = Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true);
 			
 			if(index==1) {
-				return new ResponseSex("Perform cunnilingus", "Get the horny cat-girls to present you with their pussies and eat them both out.",
+				return new ResponseSex("舔阴", "让淫荡的猫女们向你展示阴部，为她们舔阴。",
 						true, true,
 						new SMNyanSex(
 								SexPosition.LYING_DOWN,
@@ -1378,7 +1378,7 @@ public class NyanApartment {
 				};
 				
 			} else if(index==2) {
-				return new ResponseSex("Fingering", "Push the horny cat-girls down on [nyanmum.namePos] bed and start fingering them.",
+				return new ResponseSex("指交", "把饥渴的猫女们推倒在[nyanmum.namePos]的床上，开始为她们指交。",
 						true, true,
 						new SMNyanSex(
 								SexPosition.LYING_DOWN,
@@ -1423,10 +1423,10 @@ public class NyanApartment {
 			}
 			if(Main.game.getPlayer().hasPenis()) {
 				if(!penisAccess) {
-					responses.add(new Response("Receive blowjob", "As you are unable to access your penis, you cannot have your cock sucked!", null)); 
+					responses.add(new Response("被口交", "你的阴茎不可被触及，所以你没法被口交！", null)); 
 				} else {
 					responses.add(
-							new ResponseSex("Receive blowjob", "Get Nyan and [nyanmum.name] to suck your cock.",
+							new ResponseSex("被口交", "让妮安和[nyanmum.name]为你口交。",
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -1473,10 +1473,10 @@ public class NyanApartment {
 			}
 			if(Main.game.getPlayer().hasVagina()) {
 				if(!vaginaAccess) {
-					responses.add(new Response("Receive cunnilingus", "As you are unable to access your vagina, you cannot receive cunnilingus!", null)); 
+					responses.add(new Response("被舔阴", "你的阴部不可触及，所以你不能被舔阴！", null)); 
 				} else {
 					responses.add(
-							new ResponseSex("Receive cunnilingus", "Get Nyan and [nyanmum.name] to eat you out.",
+							new ResponseSex("舔阴", "让妮安和[nyanmum.name]舔你小穴。",
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -1523,11 +1523,11 @@ public class NyanApartment {
 			}
 			if(Main.game.isAnalContentEnabled()) {
 				if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanAnalTalk) || !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumAnalTalk)) {
-					responses.add(new Response("Ask about anal", "Ask Nyan and [nyanmum.name] if they'd be comfortable doing anal stuff with you.", DOUBLE_FOREPLAY_ANAL_TALK));
+					responses.add(new Response("提议肛交", "问问妮安和[nyanmum.name]愿不愿意跟你尝试肛门的新玩法。", DOUBLE_FOREPLAY_ANAL_TALK));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Perform anilingus", "Get the horny cat-girls to present you with their asses and start rimming them.",
+							new ResponseSex("吻肛", "让这些饥渴的猫女们为你展现肛穴，给她们舔肛。",
 								true, true,
 								new SMNyanSex(
 										SexPosition.ALL_FOURS,
@@ -1604,7 +1604,7 @@ public class NyanApartment {
 		}
 	};
 	
-	public static final DialogueNode DOUBLE_SEX_MAIN = new DialogueNode("Moving on", "Nyan and [nyanmum.name] seem to have had enough of foreplay for now...", true) {
+	public static final DialogueNode DOUBLE_SEX_MAIN = new DialogueNode("继续", "妮安和[nyanmum.name]看起来已经享受够前戏了……", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -1622,14 +1622,14 @@ public class NyanApartment {
 			
 			if(Main.game.getPlayer().hasPenis()) {
 				if(!penisAccess) {
-					responses.add(new Response("Missionary (Nyan)", "As you are unable to access your penis, you cannot fuck Nyan or [nyanmum.name]!", null)); 
+					responses.add(new Response("传教士体位(妮安)", "因为你不能使用自己的阴茎，所以你没法操妮安或者[nyanmum.name]！", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Missionary (Nyan)",
+							new ResponseSex("传教士体位(妮安)",
 									getNyan().isVaginaVirgin()
-										?"Get Nyan and [nyanmum.name] to lie back on the bed and present themselves to you, before taking Nyan's virginity."
-										:"Get Nyan and [nyanmum.name] to lie back on the bed and present themselves to you, before penetrating Nyan's pussy.",
+										?"让妮安和[nyanmum.name]在床上躺好，展示胴体，然后夺走妮安的贞操。"
+										:"让妮安和[nyanmum.name]在床上躺好，向你呈现小穴，然后插入妮安的小穴。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -1686,11 +1686,11 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Missionary ([nyanmum.name])", "As you are unable to access your penis, you cannot fuck Nyan or [nyanmum.name]!", null)); 
+					responses.add(new Response("传教士体位([nyanmum.name])", "因为你不能使用自己的阴茎，所以你没法操妮安或者[nyanmum.name]！", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Missionary ([nyanmum.name])", "Get Nyan and [nyanmum.name] to lie back on the bed and present themselves to you, before penetrating [nyanmum.namePos] [nyanmum.pussy+].",
+							new ResponseSex("传教士体位([nyanmum.name])", "让妮安和[nyanmum.name]在床上躺好，向你展示小穴，然后插入[nyanmum.namePos][nyanmum.pussy+]。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -1747,14 +1747,14 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Doggy-style (Nyan)", "As you are unable to access your penis, you cannot fuck Nyan or [nyanmum.name]!", null)); 
+					responses.add(new Response("后入式(妮安)", "因为你无法控制自己的阴茎，所以你不能操妮安或者[nyanmum.name]！", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Doggy-style (Nyan)",
+							new ResponseSex("后入式(妮安)",
 									getNyan().isVaginaVirgin()
-										?"Get Nyan and [nyanmum.name] to get down on all fours and present themselves to you, before taking Nyan's virginity."
-										:"Get Nyan and [nyanmum.name] to get down on all fours and present themselves to you, before penetrating Nyan's pussy.",
+										?"让妮安和[nyanmum.name]四肢着地，向你献上自己，然后夺走妮安的贞操。"
+										:"让妮安和[nyanmum.name]四肢着地，向你献上自己，然后插入妮安的小穴。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.ALL_FOURS,
@@ -1811,11 +1811,11 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Doggy-style ([nyanmum.name])", "As you are unable to access your penis, you cannot fuck Nyan or [nyanmum.name]!", null)); 
+					responses.add(new Response("后入式([nyanmum.name])", "因为你不能使用自己的阴茎，所以你没法操妮安或[nyanmum.name]！", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Doggy-style ([nyanmum.name])", "Get Nyan and [nyanmum.name] to get down on all fours and present themselves to you, before penetrating [nyanmum.namePos] [nyanmum.pussy+].",
+							new ResponseSex("后入式([nyanmum.name])", "让妮安和[nyanmum.name]四肢着地，向你展示小穴，然后插入[nyanmum.namePos][nyanmum.pussy+]。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.ALL_FOURS,
@@ -1872,17 +1872,17 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Cowgirl (Nyan)", "As you are unable to access your penis, you cannot fuck Nyan or [nyanmum.name]!", null)); 
+					responses.add(new Response("骑乘位(妮安)", "因为你不能使用自己的阴茎，所以你没法操妮安或者[nyanmum.name]！", null)); 
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Cowgirl (Nyan)", "Due to your lower [pc.legRace]'s body, you cannot use this position...", null)); 
+					responses.add(new Response("骑乘位(妮安)", "因为你[pc.legRace]的下半身，你不能采用这个体位……", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Cowgirl (Nyan)",
+							new ResponseSex("骑乘位(妮安)",
 									getNyan().isVaginaVirgin()
-										?"Take Nyan's virginity by having her ride your cock, while [nyanmum.name] sits on your face."
-										:"Get Nyan to ride your cock, while [nyanmum.name] sits on your face.",
+										?"夺走妮安的贞操，让她骑上你的阴茎，同时让[nyanmum.name]坐在你的脸上。"
+										:"让妮安骑上你的阴茎，同时让[nyanmum.name]坐在你的脸上。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -1939,14 +1939,14 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Cowgirl ([nyanmum.name])", "As you are unable to access your penis, you cannot fuck Nyan or [nyanmum.name]!", null)); 
+					responses.add(new Response("骑乘位([nyanmum.name])", "因为你不能使用自己的阴茎，所以你不能操妮安或[nyanmum.name]！", null)); 
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Cowgirl ([nyanmum.name])", "Due to your lower [pc.legRace]'s body, you cannot use this position...", null)); 
+					responses.add(new Response("骑乘位([nyanmum.name])", "因为你[pc.legRace]的下半身，你不能采用这个体位……", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Cowgirl ([nyanmum.name])", "Get [nyanmum.name] to ride your cock, while Nyan sits on your face.",
+							new ResponseSex("骑乘位([nyanmum.name])", "让[nyanmum.name]骑上你的阴茎，同时让妮安坐在你的脸上。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -2003,10 +2003,10 @@ public class NyanApartment {
 							});
 				}
 				if(!penisAccess) {
-					responses.add(new Response("Receive blowjob", "As you are unable to access your penis, you cannot have your cock sucked!", null)); 
+					responses.add(new Response("被口交", "你的阴茎不可被触及，所以你没法被口交！", null)); 
 				} else {
 					responses.add(
-							new ResponseSex("Receive blowjob", "Get Nyan and [nyanmum.name] to suck your cock.",
+							new ResponseSex("被口交", "让妮安和[nyanmum.name]口你的阴茎。",
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -2066,14 +2066,14 @@ public class NyanApartment {
 			}
 			if(Main.game.getPlayer().hasVagina()) {
 				if(!vaginaAccess) {
-					responses.add(new Response("Scissor (Nyan bottom)", "As you are unable to access your vagina, you cannot scissor with Nyan!", null));
+					responses.add(new Response("剪刀式(妮安在下)", "你的阴部不可触及，所以你没法和妮安玩剪刀式！", null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Scissor (Nyan bottom)", "Due to your lower [pc.legRace]'s body, you cannot use this position...", null));
+					responses.add(new Response("剪刀式体位(妮安在下)", "因为你[pc.legRace]的下半身，你不能采用这个体位……", null));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Scissor (Nyan bottom)", "Get Nyan to lie back and scissor with her while [nyanmum.name] sits on her face.",
+							new ResponseSex("剪刀式体位(妮安下体)", "让妮安躺好，跟她玩剪刀式，同时让[nyanmum.name]坐在她的脸上。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -2130,14 +2130,14 @@ public class NyanApartment {
 							});
 				}
 				if(!vaginaAccess) {
-					responses.add(new Response("Scissor ([nyanmum.name] bottom)", "As you are unable to access your vagina, you cannot scissor with [nyanmum.name]!", null));
+					responses.add(new Response("剪刀式([nyanmum.name]在下)", "你的阴部不可被触及，所以你不能和[nyanmum.name]玩剪刀式！", null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Scissor ([nyanmum.name] bottom)", "Due to your lower [pc.legRace]'s body, you cannot use this position...", null));
+					responses.add(new Response("剪刀式体位([nyanmum.name]在下)", "因为你[pc.legRace]的下半身，你不能采用这个体位……", null));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Scissor ([nyanmum.name] bottom)", "Get [nyanmum.name] to lie back and scissor with her while [nyan.name] sits on her face.",
+							new ResponseSex("剪刀式体位([nyanmum.name]下体)", "让[nyanmum.name]躺好，跟她玩剪刀式，同时让[nyan.name]坐在她的脸上。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -2194,14 +2194,14 @@ public class NyanApartment {
 							});
 				}
 				if(!vaginaAccess) {
-					responses.add(new Response("Scissored (Nyan top)", "As you are unable to access your vagina, you cannot scissor with Nyan!", null));
+					responses.add(new Response("剪刀式体位 (妮安在上)", "你的阴部不可触及，所以你没法跟妮安玩剪刀式体位！", null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Scissored (Nyan top)", "Due to your lower [pc.legRace]'s body, you cannot use this position...", null));
+					responses.add(new Response("剪刀式体位(妮安在上)", "因为你[pc.legRace]的下半身，你不能采用这个体位……", null));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Scissored (Nyan top)", "Lie back and get Nyan to scissor with you while [nyanmum.name] sits on your face.",
+							new ResponseSex("接受剪刀式(妮安)", "躺好，让妮安跟你玩剪刀式，同时让[nyanmum.name]坐在你的脸上。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -2258,14 +2258,14 @@ public class NyanApartment {
 							});
 				}
 				if(!vaginaAccess) {
-					responses.add(new Response("Scissored ([nyanmum.name] top)", "As you are unable to access your vagina, you cannot scissor with [nyanmum.name]!", null));
+					responses.add(new Response("剪刀式体位([nyanmum.name]在上)", "你的阴部不可触及，所以你没法和[nyanmum.name]剪刀式体位！", null));
 					
 				} else if(Main.game.getPlayer().isTaur()) {
-					responses.add(new Response("Scissored ([nyanmum.name] top)", "Due to your lower [pc.legRace]'s body, you cannot use this position...", null));
+					responses.add(new Response("剪刀式体位([nyanmum.name]在上)", "因为你[pc.legRace]的下半身，你不能采用这个体位……", null));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Scissored ([nyanmum.name] top)", "Lie back and get Nyan to scissor with you while [nyanmum.name] sits on your face.",
+							new ResponseSex("剪刀式体位([nyanmum.name]在上)", "向后仰躺，让妮安和你剪刀式磨镜，[nyanmum.name]坐在你脸上。",
 									true, true,
 									new SMNyanSex(
 											SexPosition.LYING_DOWN,
@@ -2322,11 +2322,11 @@ public class NyanApartment {
 							});
 				}
 				if(!vaginaAccess) {
-					responses.add(new Response("Receive cunnilingus", "As you are unable to access your vagina, you cannot receive cunnilingus!", null)); 
+					responses.add(new Response("被舔阴", "你的阴部不可触及，所以你不能被舔阴！", null)); 
 					
 				} else {
 					responses.add(
-							new ResponseSex("Receive cunnilingus", "Get Nyan and [nyanmum.name] to eat you out.",
+							new ResponseSex("被舔阴", "让妮安和[nyanmum.name]舔舐你的下体。",
 									true, true,
 									new SMNyanSex(
 											Main.game.getPlayer().isTaur()
@@ -2379,7 +2379,7 @@ public class NyanApartment {
 							});
 				}
 				responses.add(
-						new ResponseSex("Perform cunnilingus", "Get the horny cat-girls to present you with their pussies and eat them both out.",
+						new ResponseSex("舔阴", "让这些饥渴的猫女们向你展示小穴，给她们舔阴。",
 							true, true,
 							new SMNyanSex(
 									SexPosition.LYING_DOWN,
@@ -2433,11 +2433,11 @@ public class NyanApartment {
 			
 			if(Main.game.isAnalContentEnabled()) {
 				if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanAnalTalk) || !Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.nyanmumAnalTalk)) {
-					responses.add(new Response("Ask about anal", "Ask Nyan and [nyanmum.name] if they'd be comfortable doing anal stuff with you.", DOUBLE_SEX_ANAL_TALK));
+					responses.add(new Response("寻求肛交", "询问妮安和[nyanmum.name]能不能和你做点玩弄菊花的事。", DOUBLE_SEX_ANAL_TALK));
 					
 				} else {
 					responses.add(
-							new ResponseSex("Perform anilingus", "Get the horny cat-girls to present you with their asses and start rimming them.",
+							new ResponseSex("吻肛", "让这些欲火中烧的猫女展示菊穴，给她们舔肛。",
 								true, true,
 								new SMNyanSex(
 										SexPosition.ALL_FOURS,
@@ -2490,14 +2490,14 @@ public class NyanApartment {
 					
 					if(Main.game.getPlayer().hasPenis()) {
 						if(!penisAccess) {
-							responses.add(new Response("Anal (Nyan)", "As you are unable to access your penis, you cannot fuck Nyan's ass!", null)); 
+							responses.add(new Response("肛交(妮安)", "你不能使用自己的阴茎，所以你没法操妮安的屁眼！", null)); 
 							
 						} else {
 							responses.add(
-									new ResponseSex("Anal (Nyan)",
+									new ResponseSex("肛交(妮安)",
 											getNyan().isAssVirgin()
-												?"Get Nyan and [nyanmum.name] to get down on all fours and present themselves to you, before taking Nyan's anal virginity."
-												:"Get Nyan and [nyanmum.name] to get down on all fours and present themselves to you, before penetrating Nyan's asshole.",
+												?"让妮安和[nyanmum.name]四肢着地，向你展示菊穴，然后夺走妮安菊穴的贞操。"
+												:"让妮安和[nyanmum.name]四肢着地，向你展示肛穴，然后插入妮安的肛穴。",
 											true, true,
 											new SMNyanSex(
 													SexPosition.ALL_FOURS,
@@ -2554,12 +2554,12 @@ public class NyanApartment {
 									});
 						}
 						if(!penisAccess) {
-							responses.add(new Response("Anal ([nyanmum.name])", "As you are unable to access your penis, you cannot fuck [nyanmum.namePos] ass!", null)); 
+							responses.add(new Response("肛交([nyanmum.name])", "因为你不能使用自己的阴茎，所以你没法操[nyanmum.namePos]的屁眼！", null)); 
 							
 						} else {
 							responses.add(
-									new ResponseSex("Anal ([nyanmum.name])",
-											"Get Nyan and [nyanmum.name] to get down on all fours and present themselves to you, before penetrating [nyanmum.namePos] asshole.",
+									new ResponseSex("肛交([nyanmum.name])",
+											"让妮安和[nyanmum.name]四肢着地，向你展示菊穴，然后插入[nyanmum.namePos]的菊穴。",
 											true, true,
 											new SMNyanSex(
 													SexPosition.ALL_FOURS,
@@ -2654,7 +2654,7 @@ public class NyanApartment {
 		}
 	};
 	
-	public static final DialogueNode POST_DOUBLE_SEX = new DialogueNode("Finished", "Nyan and [nyanmum.name] are satisfied and put an end to the sex...", true) {
+	public static final DialogueNode POST_DOUBLE_SEX = new DialogueNode("结束", "妮安和[nyanmum.name]都已满足，该结束这场性爱了……", true) {
 		@Override
 		public void applyPreParsingEffects() {
 			getNyan().applyWash(true, true, StatusEffect.CLEANED_SHOWER, 8*60);
@@ -2674,7 +2674,7 @@ public class NyanApartment {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Sleep", "Let the cat-girls rest and go sleep with them.", POST_DOUBLE_SEX_SLEEP);
+				return new Response("睡觉", "让猫女们好好休息，跟她们一块入眠。", POST_DOUBLE_SEX_SLEEP);
 			}
 			return null;
 		}
@@ -2702,7 +2702,7 @@ public class NyanApartment {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Kitchen", "Head into the kitchen...", POST_DOUBLE_SEX_KITCHEN);
+				return new Response("厨房", "前往厨房……", POST_DOUBLE_SEX_KITCHEN);
 			}
 			return null;
 		}
@@ -2741,7 +2741,7 @@ public class NyanApartment {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Goodbye", "Kiss Nyan and [nyanmum.name] goodbye and tell them that you'll see them soon.", POST_SEX_MORNING_NO_CONTENT) {
+				return new Response("道别", "跟妮安和[nyanmum.name]吻别，告诉她们你会很快再来见她们的。", POST_SEX_MORNING_NO_CONTENT) {
 					@Override
 					public void effects() {
 						getNyan().setCharacterReactedToPregnancy(Main.game.getPlayer(), true);

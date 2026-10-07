@@ -689,17 +689,17 @@ public enum RenderingEngine {
 					"<p style='width:100%; text-align:center; padding:0; margin:0;'>"
 					+ "<b style='color:"+Femininity.valueOf(charactersInventoryToRender.getFemininityValue()).getColour().toWebHexString()+";'>"
 						+(charactersInventoryToRender.isPlayer()
-							?"Your</b> <b>Inventory | Page "+(pageLeft+1)+"</b>"
-							:(UtilText.parse(charactersInventoryToRender, "[npc.NamePos]"))+"</b> <b>Inventory | "+(buyback?"[style.colourCurrency(Buyback)]":"Page "+(pageRight+1))+"</b>")
+							?"你的</b><b>物品栏 | 第"+(pageLeft+1)+"页</b>"
+							:(UtilText.parse(charactersInventoryToRender, "[npc.NamePos]"))+"</b><b>的物品栏 | "+(buyback?"[style.colourCurrency(Buyback)]":"第"+(pageRight+1))+"页</b>")
 					+"</p>");
 			
 		} else {
 			inventorySB.append(
 					"<p style='width:100%; text-align:center; padding:0; margin:0;'>"
 						+(InventoryDialogue.getNPCInventoryInteraction() ==  InventoryInteraction.CHARACTER_CREATION
-								?"<b style='color:"+PresetColour.BASE_TAN.toWebHexString()+";'>Your wardrobe</b>"
-								:"<b style='color:"+PresetColour.BASE_TAN.toWebHexString()+";'>In this Area</b>")
-						+"<b> | Page "+(pageRight+1)+"</b>"
+								?"<b style='color:"+PresetColour.BASE_TAN.toWebHexString()+";'>你的衣橱</b>"
+								:"<b style='color:"+PresetColour.BASE_TAN.toWebHexString()+";'>当前区域</b>")
+						+"<b>| 第"+(pageRight+1)+"页</b>"
 					+"</p>");
 		}
 		
@@ -749,7 +749,7 @@ public enum RenderingEngine {
 				inventorySB.append("</div>");
 
 				inventorySB.append("<div style='width:"+centreDivWidth+"%; padding:0; margin:0; float:left; display:flex; justify-content:center; align-items:center;'>");
-					inventorySB.append("Page "+(pageRight+1)+" [style.colourDisabled((of "+(maxPages+1)+"))]");
+					inventorySB.append("第"+(pageRight+1)+"页，[style.colourDisabled((共"+(maxPages+1)+"页))]");
 				inventorySB.append("</div>");
 				
 				inventorySB.append("<div class='inventory-item-slot-button"+(rightButtonDisabled?" disabled":"")+"' id='"+idModifier+"SCROLL_RIGHT"+(rightButtonDisabled?"_DISABLED":"")+"' style='"+buttonStyle+"'>");
@@ -890,7 +890,7 @@ public enum RenderingEngine {
 						"<div class='normal-button"+(transferDisabled?" disabled":"")+"' id='"+idModifier+"MONEY_TRANSFER_BIG' style='"+buttonStyle+"'>[style."+(transferDisabled?"colourDisabled":"colourExcellent")+"(&lt;)]</div>"
 						+ "<div class='normal-button"+(transferDisabled?" disabled":"")+"' id='"+idModifier+"MONEY_TRANSFER_AVERAGE' style='"+buttonStyle+"'>[style."+(transferDisabled?"colourDisabled":"colourGood")+"(&lt;)]</div>"
 						+ "<div class='normal-button"+(transferDisabled?" disabled":"")+"' id='"+idModifier+"MONEY_TRANSFER_SMALL' style='"+buttonStyle+"'>[style."+(transferDisabled?"colourDisabled":"colourMinorGood")+"(&lt;)]</div>"
-						+ "<div style='"+style+" width:"+styleWidth+";'>"+ (transferDisabled?UtilText.formatAsMoney("[style.colourUnknown(Unknown)]", "b"):UtilText.formatAsMoney(charactersInventoryToRender.getMoney(), "b")) +"</div>"
+						+ "<div style='"+style+" width:"+styleWidth+";'>"+ (transferDisabled?UtilText.formatAsMoney("[style.colourUnknown(未知)]", "b"):UtilText.formatAsMoney(charactersInventoryToRender.getMoney(), "b")) +"</div>"
 						+ "<div style='"+style+" width:"+styleWidth+";'>"+ UtilText.formatAsEssences(charactersInventoryToRender.getEssenceCount(), "b", true) +"</div>");
 			}
 			
@@ -930,13 +930,13 @@ public enum RenderingEngine {
 		if(giftsAvailable.isEmpty()) {
 			inventorySB.append("<div class='container-full-width'>"
 					+ "<p style='width:100%; text-align:center; padding:0 margin:0;'>"
-						+"<b style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>No Suitable Gifts In Inventory</b>"
+						+"<b style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>物品栏中无可用礼物</b>"
 					+"</p>"
 					+ "</div>");
 		} else {
 			inventorySB.append("<div class='container-full-width'>"
 					+ "<p style='width:100%; text-align:center; padding:0 margin:0;'>"
-						+"<b style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Available Gifts</b>"
+						+"<b style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>可用礼物</b>"
 					+"</p>"
 					+ "<div class='inventory-not-equipped'>");
 			
@@ -1264,7 +1264,7 @@ public enum RenderingEngine {
 			if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.badEnd)) {
 				return "<div class='full-width-container'>"
 							+ "<p class='character-name' style='color:"+ PresetColour.GENERIC_BAD_END.toWebHexString() + ";'>"
-								+ "Bad End"
+								+ "坏结局"
 							+ "</p>"
 						+ "</div>"
 						+ "<div class='full-width-container' style='margin:0;padding:0;'>"
@@ -1283,16 +1283,16 @@ public enum RenderingEngine {
 				String mainTitle = "";
 				if(place.isLand()) {
 					if(place.isWater()) {
-						mainTitle = "[style.colourTan(Land)] &amp; [style.colourBlueLight(Water)]";
+						mainTitle = "[style.colourTan(陆地)] & [style.colourBlueLight(水面)]";
 					} else {
-						mainTitle = "[style.colourTan(Land)]";
+						mainTitle = "[style.colourTan(陆地)]";
 					}
 					
 				} else {
-					mainTitle = "[style.colourBlueLight(Water)]";
+					mainTitle = "[style.colourBlueLight(水面)]";
 				}
 
-				String placeTitle = place.isDangerous()?"[style.colourBad(Dangerous)]":"[style.colourGood(Safe)]";
+				String placeTitle = place.isDangerous()?"[style.colourBad(危险)]":"[style.colourGood(安全)]";
 				
 				return "<div class='full-width-container'>"
 							+ "<p class='character-name'>"
@@ -1382,7 +1382,7 @@ public enum RenderingEngine {
 				"<div class='full-width-container' style='background-color:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; border-radius:5px; margin-bottom:8px;'>"
 					+ "<div class='full-width-container'>"
 						+ "<p class='character-name' style='color:"+ PresetColour.BASE_GREEN.toWebHexString()+";'>"
-								+ "Allies"
+								+ "友方"
 						+"</p>"
 					+ "</div>"
 				+ "</div>"
@@ -1467,17 +1467,17 @@ public enum RenderingEngine {
 					
 					uiAttributeSB.append((Main.getProperties().hasValue(PropertyValue.calendarDisplay)
 													? Main.game.getDisplayDate(false)
-													:"Day "+Main.game.getDayNumber()));
+													:"第"+Main.game.getDayNumber() + "天"));
 
 					// Day-of-week indicator:
 					uiAttributeSB.append("<div class='full-width-container' style='text-align:center; float:left; margin:0; padding:0; width:100%;'>");
-						String[] weekDays = new String[] {"M", "T", "W", "T", "F", "S", "S"};
+						String[] weekDays = new String[] {"一", "二", "三", "四", "五", "六", "日"};
 						for(int i=0; i<7; i++) {
 							if(!Main.game.isBadEnd() && Main.game.getDateNow().getDayOfWeek().getValue()==i+1) {
-								uiAttributeSB.append("<div class='full-width-container' style='height:12px; box-sizing:border-box; text-align:center; border-radius:5px; font-size:10px;"
+								uiAttributeSB.append("<div class='full-width-container' style='height:12px; box-sizing:border-box; text-align:center; border-radius:5px; font-size:9px;"
 										+ " border:1px solid "+PresetColour.TEXT.toWebHexString()+"; float:left; margin:0; padding:0; width:14.28%;'>");
 							} else {
-								uiAttributeSB.append("<div class='full-width-container' style='height:12px; text-align:center; font-size:10px; float:left; margin:0; padding:0; width:14.28%; color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>");
+								uiAttributeSB.append("<div class='full-width-container' style='height:12px; text-align:center; font-size:9px; float:left; margin:0; padding:0; width:14.28%; color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>");
 							}
 							uiAttributeSB.append(weekDays[i]);
 							uiAttributeSB.append("</div>");
@@ -1614,7 +1614,7 @@ public enum RenderingEngine {
 		
 		uiAttributeSB.append(
 				"<body onLoad='scrollEventLogToBottom()' style='"+Main.game.getBodyStyle()+"'>"
-					+ " <script>"
+					+ "<script>"
 						+"function scrollEventLogToBottom() {document.getElementById('event-log-inner-id').scrollTop = document.getElementById('event-log-inner-id').scrollHeight;}"
 					+ "</script>");
 			
@@ -1625,8 +1625,8 @@ public enum RenderingEngine {
 						"<div class='full-width-container' style='background-color:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; border-radius:5px; margin-bottom:8px;'>"
 						+ "<div class='full-width-container'>"
 							+ "<p class='character-name' style='color:"+ (!Main.sex.isDom(Main.game.getPlayer())
-									?PresetColour.GENERIC_SEX_AS_DOM.toWebHexString()+";'>Dominant"+(Main.sex.getDominantParticipants(true).size()>1?"s":"")
-									:PresetColour.GENERIC_SEX.toWebHexString()+";'>Submissive"+(Main.sex.getSubmissiveParticipants(true).size()>1?"s":""))
+									?PresetColour.GENERIC_SEX_AS_DOM.toWebHexString()+";'>支配方"
+									:PresetColour.GENERIC_SEX.toWebHexString()+";'>服从方")
 							+"</p>"
 						+ "</div>"
 					+ "</div>"
@@ -1652,7 +1652,7 @@ public enum RenderingEngine {
 					"<div class='full-width-container' style='background-color:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; border-radius:5px; margin-bottom:8px;'>"
 						+ "<div class='full-width-container'>"
 							+ "<p class='character-name' style='color:"+ PresetColour.BASE_CRIMSON.toWebHexString()+";'>"
-								+ (Main.combat.getEnemies(Main.game.getPlayer()).size()>1?"Enemies":"Enemy")
+								+ (Main.combat.getEnemies(Main.game.getPlayer()).size()>1?"敌人":"敌人")
 							+"</p>"
 						+ "</div>"
 					+ "</div>"
@@ -1701,8 +1701,8 @@ public enum RenderingEngine {
 								"<div class='full-width-container' style='text-align:center;'>"
 										+ "<p style='white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis;'>"
 											+ (getCharacterToRender()==null
-												?"No Character"
-												:UtilText.parse(getCharacterToRender(), "[npc.NamePos] "+(isRenderingTattoosRight()?"Markings":"Inventory")))
+												?"没有角色"
+												:UtilText.parse(getCharacterToRender(), "[npc.NamePos]的"+(isRenderingTattoosRight()?"纹身":"物品栏")))
 										+ "</p>"
 								+ "</div>");
 			}
@@ -1725,7 +1725,7 @@ public enum RenderingEngine {
 			
 			// Characters Present:
 			uiAttributeSB.append("<div class='attribute-container effects'>"
-								+ "<p style='text-align:center;padding:0;margin:0;'><b>Characters Present</b></p>");
+								+ "<p style='text-align:center;padding:0;margin:0;'><b>在场角色</b></p>");
 			List <NPC> charactersPresent = Main.game.getCharactersPresent();
 			for(GameCharacter c : Main.game.getCharactersPresent()) {
 				if(c.isElementalSummoned() && !c.getElemental().isActive()) {
@@ -1739,7 +1739,7 @@ public enum RenderingEngine {
 				}
 			}
 			if(charactersPresent.isEmpty() && (place.getPopulation()==null || place.getPopulation().isEmpty() || subspeciesSet.isEmpty())) {
-				uiAttributeSB.append("<p style='text-align:center;padding:0;margin:0;'><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>None...</span></p>");
+				uiAttributeSB.append("<p style='text-align:center;padding:0;margin:0;'><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>空无一人……</span></p>");
 				
 			} else {
 				int count = 0;
@@ -1752,7 +1752,7 @@ public enum RenderingEngine {
 											+ (character.isRaceConcealed()?SVGImages.SVG_IMAGE_PROVIDER.getRaceUnknown():character.getMapIcon())
 										+ "</div>"
 									+ "</div>"
-									+" <div style='color:"+character.getFemininity().getColour().toWebHexString()+";'>"
+									+"<div style='color:"+character.getFemininity().getColour().toWebHexString()+";'>"
 										+(!character.getArtworkList().isEmpty() && Main.getProperties().hasValue(PropertyValue.artwork)?"&#128247; ":"")
 											+UtilText.parse(character, "[npc.Name(A)]")
 										+ "<div class='overlay-inventory' id='NPC_" + character.getId() + "_" + Attribute.EXPERIENCE.getName() + "' style='width:calc(11% + 8px);'></div>"
@@ -1791,7 +1791,7 @@ public enum RenderingEngine {
 															:pop.getSpecies().keySet().iterator().next().getSVGString(null))
 												+ "</div>"
 											+ "</div>"
-											+" <div style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>"
+											+"<div style='color:"+PresetColour.BASE_GREY.toWebHexString()+";'>"
 												+Util.capitaliseSentence(pop.getDescription(true))
 												+ "<div class='overlay-inventory' id='PLACE_POPULATION_"+i+"' style='width:100%;'></div>"
 											+"</div>"
@@ -1806,7 +1806,7 @@ public enum RenderingEngine {
 			
 			// Items Present:
 			uiAttributeSB.append("<div class='attribute-container effects'>"
-								+ "<p style='text-align:center;padding:0;margin:0;'><b>Items Present</b></p>");
+								+ "<p style='text-align:center;padding:0;margin:0;'><b>附近物品</b></p>");
 			
 			int count = 0;
 			if(Main.game.isInNewWorld()) {
@@ -1882,7 +1882,7 @@ public enum RenderingEngine {
 				}
 			}
 			if(count==0) {
-				uiAttributeSB.append("<p style='text-align:center;padding:0;margin:0;'><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>None...</span></p>");
+				uiAttributeSB.append("<p style='text-align:center;padding:0;margin:0;'><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>空无一物……</span></p>");
 			}
 			uiAttributeSB.append(
 					"</div>");
@@ -1892,11 +1892,11 @@ public enum RenderingEngine {
 			uiAttributeSB.append(
 					"</div>"
 						+ "<div class='event-log'>"
-							+ "<p style='text-align:center;padding:0;margin:0;'><b>Event Log</b></p>"
+							+ "<p style='text-align:center;padding:0;margin:0;'><b>事件日志</b></p>"
 							+ "<div class='event-log-inner' id='event-log-inner-id'>");
 			
 			if(Main.game.getEventLog().isEmpty()) {
-				uiAttributeSB.append("<p style='text-align:center;padding:0;margin:0;'><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>No events yet...</span></p>");
+				uiAttributeSB.append("<p style='text-align:center;padding:0;margin:0;'><span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>无事发生……</span></p>");
 			}
 			
 			count = 0;
@@ -2051,7 +2051,7 @@ public enum RenderingEngine {
 			String buttonStyle= "width:60%; min-width:0; margin:0 20% 4px 20%;";
 			mapSB.append("</div>"
 						+ "<div class='container-full-width' style='width:28%; margin:0 0 0 2%; padding:0; float:left;'>"
-							+ "<p style='text-align:center;'>[style.bold(Fast Travel)]</p>");
+							+ "<p style='text-align:center;'>[style.bold(快速旅行)]</p>");
 			
 			for(MapTravelType type : MapTravelType.values()) {
 				if(!type.isAvailable(null, Main.game.getPlayer())) {
@@ -2080,10 +2080,10 @@ public enum RenderingEngine {
 			
 			if(!travelDestinationSelected) {
 				if(!world.equals(Main.game.getPlayer().getWorldLocation()) && Pathing.getMapTravelType()!=MapTravelType.TELEPORT) {
-					mapSB.append("[style.italicsBad(You cannot use this fast travel method to travel between different maps.)]");
+					mapSB.append("[style.italicsBad(你不能使用快速旅行在不同的地图间移动。)]");
 					
 				} else if(Main.game.getSavedDialogueNode()!=null && Main.game.getSavedDialogueNode().isTravelDisabled()) {
-					mapSB.append("[style.italicsBad(You cannot fast travel while in the middle of a scene!)]");
+					mapSB.append("[style.italicsBad(你不能在场景里快速旅行！)]");
 					
 				} else if(!Pathing.getMapTravelType().isAvailable(null, Main.game.getPlayer())){
 					mapSB.append("[style.italicsBad("+Pathing.getMapTravelType().getUnavailablilityDescription(null, Main.game.getPlayer())+")]");
@@ -2097,35 +2097,35 @@ public enum RenderingEngine {
 				int hours = minutes/60;
 				String time =
 						hours>0
-							?Util.capitaliseSentence(Util.intToString(hours))+" hour"+(hours==1?"":"s")
+							?Util.capitaliseSentence(Util.intToString(hours))+"小时"
 								+(minutes%60==0
 									?""
-									:", "+Util.intToString(minutes%60)+" minute"+(minutes==1?"":"s"))
+									:Util.intToString(minutes%60)+"分钟")
 							:(minutes==0
-								?"Less than a minute"
-								:Util.capitaliseSentence(Util.intToString(minutes%60))+" minute"+(minutes==1?"":"s"));
+								?"少于一分钟"
+								:Util.capitaliseSentence(Util.intToString(minutes%60))+"分钟");
 								
 				int dangerousTiles = Pathing.getDangerousTilesCrossed();
 				
 				switch(Pathing.getMapTravelType()) {
 					case FLYING:
-						mapSB.append("Estimated travel time:<br/>"+(hours>0?"[style.boldMinorBad(":"[style.boldMinorGood(")+time+")]"
+						mapSB.append("预计旅行时间：<br/>"+(hours>0?"[style.boldMinorBad(":"[style.boldMinorGood(")+time+")]"
 								+"<br/><br/>"
 								+ (dangerousTiles==0
-									?"[style.colourGood(Zero)] dangerous tiles will be encountered, as you fly over any in your way!"
-									:"[style.colourBad(One)] dangerous tile will be encountered (that being your destination)."));
+									?"[style.colourGood(不会)]遭遇危险地块，因为你是飞过去的！"
+									:"会遭遇[style.colourBad(一个)]危险地块(目标所在地)。"));
 						break;
 					case TELEPORT:
-						mapSB.append("Estimated travel time:<br/>[style.boldExcellent(Five seconds)]"
+						mapSB.append("预计旅行时间：<br/>[style.boldExcellent(五秒钟)]"
 								+ "<br/><br/>"
 								+ (dangerousTiles==0
-									?"[style.colourGood(Zero)] dangerous tiles will be encountered, as you teleport past them all!"
-									:"[style.colourBad(One)] dangerous tile will be encountered (that being your destination)."));
+									?"[style.colourGood(不会)]遭遇危险地块，因为你是传送过去的！"
+									:"会遭遇[style.colourBad(一个)]危险地块(目标所在地)。"));
 						break;
 					case WALK_DANGEROUS:
 					case WALK_SAFE:
-						mapSB.append("Estimated travel time:<br/>"+(hours>0?"[style.boldMinorBad(":"[style.boldMinorGood(")+time+")]"
-								+"<br/><br/>"+(dangerousTiles>0?"[style.colourBad(":"[style.colourGood(")+Util.capitaliseSentence(Util.intToString(dangerousTiles))+")] dangerous tile"+(dangerousTiles==1?"":"s")+" will be encountered!");
+						mapSB.append("预计旅行时间：<br/>"+(hours>0?"[style.boldMinorBad(":"[style.boldMinorGood(")+time+")]"
+								+"<br/><br/>会遭遇"+(dangerousTiles>0?"[style.colourBad(":"[style.colourGood(")+Util.capitaliseSentence(Util.intToString(dangerousTiles))+")]个危险地块！");
 						break;
 				}
 			}
@@ -2736,7 +2736,7 @@ public enum RenderingEngine {
 													?character.getName(true)
 													:UtilText.parse(character, "[npc.Name]")))
 								+"</b>"
-								+ " - Level "+ character.getLevel()
+								+ " - "+ character.getLevel() + "级"
 							+"</div>"
 							+ "<div class='full-width-container' style='text-align:center;padding:0;margin:0;background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+"; border-radius: 2px;'>"
 								+ (character.getLevel() != GameCharacter.LEVEL_CAP

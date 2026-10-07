@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Slutty Enforcer]]></name>
+	<name><![CDATA[风骚执法者]]></name>
 	
 	<statusEffect>SET_SLUTTY_ENFORCER</statusEffect>
 	

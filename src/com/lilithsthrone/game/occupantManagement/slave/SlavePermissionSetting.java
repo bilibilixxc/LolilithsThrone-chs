@@ -19,24 +19,24 @@ public enum SlavePermissionSetting {
 
 	// General/Misc.:
 	
-	GENERAL_SILENCE(false, "Silence", "Forbid this slave from talking. [style.italics(This slave will be treated as though they're mute while this permission is active.)]"),
-	GENERAL_CRAWLING(false, "Crawling", "Forbid this slave from walking, forcing them to crawl around on all fours."),
-	GENERAL_HOUSE_FREEDOM(false, "House Freedom", "Grant this slave the freedom to walk around Lilaya's house in their free time."),
-	GENERAL_OUTSIDE_FREEDOM(false, "Outside Freedom", "Grant this slave the freedom to leave Lilaya's house in their free time."),
+	GENERAL_SILENCE(false, "沉默", "禁止该奴隶说话。[style.italics(许可激活时，该奴隶会被当做哑巴对待。)]"),
+	GENERAL_CRAWLING(false, "爬行", "禁止奴隶行走，强制其四肢跪地爬行。"),
+	GENERAL_HOUSE_FREEDOM(false, "屋内自由", "给予该奴隶空闲时在莉莱雅的家里随意行走的权利。"),
+	GENERAL_OUTSIDE_FREEDOM(false, "自由外出", "给予该奴隶空闲时离开莉莱雅的家的权利。"),
 	
 	
 	// Behaviour:
 	
-	BEHAVIOUR_WHOLESOME(false, "Wholesome", "Get this slave to act in a loving and wholesome manner around you. [style.italics(This will only take effect if they like you or are obedient.)]"),
-	BEHAVIOUR_PROFESSIONAL(false, "Professional", "Get this slave to act in a professional manner when interacting with you. [style.italics(This will only take effect if they like you or are obedient.)]"),
-	BEHAVIOUR_STANDARD(true, "Standard", "Do not give this slave any instructions as to how they should act around you."),
-	BEHAVIOUR_SEDUCTIVE(false, "Seductive", "Get this slave to act in a refined, seductive manner when interacting with you. [style.italics(This will only take effect if they like you or are obedient.)]"),
-	BEHAVIOUR_SLUTTY(false, "Slutty", "Get this slave to act in a trashy, slutty manner when interacting with you. [style.italics(This will only take effect if they like you or are obedient.)]"),
+	BEHAVIOUR_WHOLESOME(false, "关照", "让该奴隶在与你交互时显出宠爱关照的姿态。[style.italics(只有在喜欢你或顺从的情况下有效。)]"),
+	BEHAVIOUR_PROFESSIONAL(false, "专业", "让该奴隶在于你交互时显出专业的姿态。[style.italics(只有在喜欢你或顺从的情况下有效。)]"),
+	BEHAVIOUR_STANDARD(true, "常规", "对于该奴隶在你身边的行事方式，没有任何指示。"),
+	BEHAVIOUR_SEDUCTIVE(false, "勾引", "让该奴隶在与你交互时显出优雅而充满魅惑的姿态。[style.italics(只有在喜欢你或顺从的情况下有效。)]"),
+	BEHAVIOUR_SLUTTY(false, "淫荡", "让该奴隶在与你交互时显出自贱、淫荡的姿态。[style.italics(只有在喜欢你或顺从的情况下有效。)]"),
 
 	
 	// Sex:
 	
-	SEX_LUBE_PILL(false, "Lube pills", "Keep this slave on lube pills, which will result in their entire body being lubricated in sex scenes.") {
+	SEX_LUBE_PILL(false, "润滑药", "让奴隶服用润滑药，这会导致他们的整个身体都会在性爱场景中保持润滑。") {
 		@Override
 		public void applyEffectsOnAddition(GameCharacter character) {
 			character.useItem(Main.game.getItemGen().generateItem("innoxia_pills_lubrication"), character, false);
@@ -46,44 +46,44 @@ public enum SlavePermissionSetting {
 			character.removeStatusEffect(StatusEffect.LUBE_PILL);
 		}
 	},
-	SEX_MASTURBATE(false, "Masturbation", "Allow this slave to masturbate."),
-	SEX_INITIATE_SLAVES(false, "Initiate Sex", "") {
+	SEX_MASTURBATE(false, "自慰", "允许该奴隶自慰。"),
+	SEX_INITIATE_SLAVES(false, "发起性爱", "") {
 		@Override
 		public String getDescription() {
 			if(Main.game.isNonConEnabled()) {
-				return "Allow this slave to initiate sex with any other slave that has the 'Sex Toy' permission enabled."
-						+ " They will only initiate sex with slaves who they are attracted to, and if they do not have the 'Rapist' permission, then they will also only initiate sex with slaves who are attracted to them in turn."
-						+ " They will only have sex with slaves who they can find, either by working in the same location as them or by having the 'House Freedom' permission or both sharing the 'Outside Freedom' permission.";
+				return "允许该奴隶向其他获得“性玩具”许可的奴隶发起性爱。"
+						+ "只会与感兴趣的奴隶发起性爱，如果没有开启“强奸”许可，那么对方也必须对其感兴趣。"
+						+ "只会与能找得到的奴隶发起性爱，即在同一个位置工作，或者是拥有“屋内自由”许可，亦或是两者均有“自由外出”许可。";
 			}
-			return "Allow this slave to initiate sex with any other slave that has the 'Sex Toy' permission enabled."
-					+ " They will only initiate sex with slaves who they are attracted to, and who are attracted to them in turn."
-					+ " They will only have sex with slaves who they can find, either by working in the same location as them or by having the 'House Freedom' permission or both sharing the 'Outside Freedom' permission.";
+			return "允许该奴隶向其他获得“性玩具”许可的奴隶发起性爱。"
+					+ "只会与感兴趣的奴隶发起性爱，对方也必须对其感兴趣。"
+					+ "只会与能找得到的奴隶发起性爱，即在同一个位置工作，或者是拥有“屋内自由”许可，亦或是两者均有“自由外出”许可。";
 		}
 		@Override
 		public int getAdditionalDescriptionLines() {
 			return 6;
 		}
 	},
-	SEX_INITIATE_PLAYER(false, "Use You", "") {
+	SEX_INITIATE_PLAYER(false, "用你解决", "") {
 		@Override
 		public String getDescription() {
 			if(Main.game.isNonConEnabled()) {
-				return "Allow this slave to use you for sexual relief."
-						+ " This will allow them to proposition you for sex at any time, and if they have the 'Rapist' permission, then you will not be able to refuse their advances."
-						+ " They will also need the 'House Freedom' and/or 'Outside Freedom' to be able to find you within the mansion or out in Dominion's alleyways.";
+				return "允许该奴隶使用你来释放性欲。"
+						+ "这使其可以随时对你发起性爱，如果他们得到了强奸许可，那么你将无法拒绝他们的求爱。"
+						+ "还需要“屋内自由”或“自由外出”许可，才能在宅邸中或御城区的小巷中找到你。";
 			}
-			return "Allow this slave to use you for sexual relief. This will allow them to proposition you for sex at any time."
-					+ "They will also need the 'House Freedom' and/or 'Outside Freedom' to be able to find you within the mansion or out in Dominion's alleyways.";
+			return "允许该奴隶使用你来释放性欲。这使其可以随时对你发起性爱。"
+					+ "还需要“屋内自由”或“自由外出”许可，才能在宅邸中或御城区的小巷中找到你。";
 		}
 		@Override
 		public int getAdditionalDescriptionLines() {
 			return 3;
 		}
 	},
-	SEX_RAPIST(false, "Rapist",
-			"Allow this slave to ignore the sexual preferences of others, including yourself."
-				+ " If this slave has a negative desire towards the '"+Fetish.FETISH_NON_CON_DOM.getName(null)+"' fetish,"
-						+ " or if they like their partner and their partner does not have a positive desire towards the '"+Fetish.FETISH_NON_CON_SUB.getName(null)+"' fetish, then even with this permission this slave will not rape their partner.") {
+	SEX_RAPIST(false, "强奸",
+			"允许这个奴隶无视他人的性偏好，也包括你。"
+				+ "如果该奴隶对于“"+Fetish.FETISH_NON_CON_DOM.getName(null)+"”性癖有负面情绪，"
+						+ "或者自身喜欢对手，而对手对于“"+Fetish.FETISH_NON_CON_SUB.getName(null)+"”性癖也没有正面情绪，那么即使有这项许可也不会选择强奸对手。") {
 		@Override
 		public boolean isAvailableForCharacter(GameCharacter character) {
 			return Main.game.isNonConEnabled();
@@ -93,15 +93,15 @@ public enum SlavePermissionSetting {
 			return 3;
 		}
 	},
-	SEX_RECEIVE_SLAVES(false, "Sex Toy", "Allow this slave to be used for sexual relief by any of your slaves with the 'Initiate Sex' permission enabled."),
-	SEX_SAVE_VIRGINITY(true, "Save Virginity", "Do not let any other slaves take this slave's virginity during sex."),
-	SEX_IMPREGNATED(false, "Breeding Bitch", "Allow this slave to be impregnated during sexual events with any other slave that has the 'Slave Stud' permission enabled.") {
+	SEX_RECEIVE_SLAVES(false, "性玩具", "允许该奴隶被任何拥有“发起性爱”许可的奴隶用以释放性欲。"),
+	SEX_SAVE_VIRGINITY(true, "保留贞操", "不允许其他奴隶在性爱中夺去该奴隶的贞操。"),
+	SEX_IMPREGNATED(false, "受种母狗", "允许该奴隶在性爱事件中被其他拥有“奴隶种马”许可的奴隶授孕。") {
 		@Override
 		public boolean isAvailableForCharacter(GameCharacter character) {
 			return !character.isDoll();
 		}	
 	},
-	SEX_IMPREGNATE(false, "Slave Stud", "Allow this slave to impregnate any other slave that has the 'Breeding Bitch' permission enabled during sexual events.") {
+	SEX_IMPREGNATE(false, "奴隶种马", "允许该奴隶在性爱事件中使其他拥有“受种母狗”许可的奴隶授孕。") {
 		@Override
 		public boolean isAvailableForCharacter(GameCharacter character) {
 			return !character.isDoll();
@@ -111,7 +111,7 @@ public enum SlavePermissionSetting {
 	
 	// Pills:
 
-	PILLS_NO_PILLS(true, "No Pills", "Don't give this slave any sort of fertility modification pills, resulting in a natural chance of them getting pregnant."),
+	PILLS_NO_PILLS(true, "不服药", "不给该奴隶影响生育力的药物，使其受孕概率保持正常。"),
 	
 	PILLS_PROMISCUITY_PILLS(false, "", "") {
 		@Override
@@ -120,7 +120,7 @@ public enum SlavePermissionSetting {
 		}
 		@Override
 		public String getDescription() {
-			return UtilText.parse("Keep this slave on [#ITEM_innoxia_pills_sterility.getNamePlural(false)], greatly reducing both their fertility and virility.");
+			return UtilText.parse("让该奴隶持续服用[#ITEM_innoxia_pills_sterility.getNamePlural(false)]，极大降低其生育力和生殖力。");
 		}
 		@Override
 		public void applyEffectsOnAddition(GameCharacter character) {
@@ -139,7 +139,7 @@ public enum SlavePermissionSetting {
 		}
 		@Override
 		public String getDescription() {
-			return UtilText.parse("Keep this slave on [#ITEM_innoxia_pills_fertility.getNamePlural(false)], greatly increasing both their fertility and virility.");
+			return UtilText.parse("让该奴隶持续服用[#ITEM_innoxia_pills_fertility.getNamePlural(false)]，极大提高其生育力和生殖力。");
 		}
 		@Override
 		public void applyEffectsOnAddition(GameCharacter character) {
@@ -158,7 +158,7 @@ public enum SlavePermissionSetting {
 		}
 		@Override
 		public String getDescription() {
-			return UtilText.parse("Keep this slave on [#ITEM_innoxia_pills_broodmother.getNamePlural(false)], massively increasing both their fertility and virility and [style.colourExcellent(doubling)] how many offspring they conceive.");
+			return UtilText.parse("让该奴隶持续服用[#ITEM_innoxia_pills_broodmother.getNamePlural(false)]，巨幅提高其生育力和生殖力，并且[style.colourExcellent(加倍)]怀胎数量。");
 		}
 		@Override
 		public void applyEffectsOnAddition(GameCharacter character) {
@@ -173,88 +173,88 @@ public enum SlavePermissionSetting {
 	
 	// Pregnancy:
 
-	PREGNANCY_MOTHERS_MILK(false, "Mother's Milk", "Order this slave to regularly consume Mother's Milk while pregnant, which will result in them completing their pregnancy within a few hours of becoming visibly pregnant."),
-	PREGNANCY_ALLOW_BIRTHING(true, "Allow Birthing", "Allow this slave to go to Lilaya's birthing room to give birth whenever they need to."),
-	PREGNANCY_ALLOW_EGG_LAYING(true, "Allow Egg Laying", "Allow this slave to go to Lilaya's birthing room to lay any eggs which have been implanted in them whenever they need to."),
+	PREGNANCY_MOTHERS_MILK(false, "母亲的奶水", "命令该奴隶怀孕时定期服用“母亲的奶水”，使其在明显怀孕后数个小时即可结束孕期。"),
+	PREGNANCY_ALLOW_BIRTHING(true, "允许生育", "允许该奴隶在需要时随时去往莉莱雅的分娩室完成分娩。"),
+	PREGNANCY_ALLOW_EGG_LAYING(true, "允许产卵", "允许该奴隶需要时随时去往莉莱雅的分娩室，产下被注入体内的卵。"),
 	
 	
 	// Diet/Body size:
 	
 	FOOD_DIET_EXTREME(false,
 			Util.capitaliseSentence(BodySize.ZERO_SKINNY.getName(false)),
-			"Severely limit the amount of food available to this slave, which will result in a large daily change to their body size,"
-					+ " eventually making them <b style='color:"+BodySize.ZERO_SKINNY.getColour().toWebHexString()+";'>"+BodySize.ZERO_SKINNY.getName(false)+"</b>."),
+			"严格限制该奴隶的食物量，这将导致其体型每天都发生很大变化，"
+					+ "最终会使其变得<b style='color:"+BodySize.ZERO_SKINNY.getColour().toWebHexString()+";'>"+BodySize.ZERO_SKINNY.getName(false)+"</b>。"),
 	
 	FOOD_DIET(false,
 			Util.capitaliseSentence(BodySize.ONE_SLENDER.getName(false)),
-			"Restrict the amount of food available to this slave, which will result in a daily change to their body size,"
-					+ " eventually making them <b style='color:"+BodySize.ONE_SLENDER.getColour().toWebHexString()+";'>"+BodySize.ONE_SLENDER.getName(false)+"</b>."),
+			"控制该奴隶的食物量，这将导致其体型每天都会发生变化，"
+					+ "最终会使其变得<b style='color:"+BodySize.ONE_SLENDER.getColour().toWebHexString()+";'>"+BodySize.ONE_SLENDER.getName(false)+"</b>.。"),
 	
 	FOOD_NORMAL(true,
 			Util.capitaliseSentence(BodySize.TWO_AVERAGE.getName(false)),
-			"Give this slave a healthy amount of food, which will result in a daily change to their body size,"
-					+ " eventually making them <b style='color:"+BodySize.TWO_AVERAGE.getColour().toWebHexString()+";'>"+BodySize.TWO_AVERAGE.getName(false)+"</b>."),
+			"给予该奴隶相对健康的食物量，这将导致其体型每天都会发生变化，"
+					+ "最终会使其变得<b style='color:"+BodySize.TWO_AVERAGE.getColour().toWebHexString()+";'>"+BodySize.TWO_AVERAGE.getName(false)+"</b>。"),
 	
 	FOOD_PLUS(false,
 			Util.capitaliseSentence(BodySize.THREE_LARGE.getName(false)),
-			"Give this slave an extra meal every day, which will result in a daily change to their body size,"
-					+ " eventually making them <b style='color:"+BodySize.THREE_LARGE.getColour().toWebHexString()+";'>"+BodySize.THREE_LARGE.getName(false)+"</b>."),
+			"每天给予该奴隶额外的食物，这将导致其体型每天都会发生变化，"
+					+ "最终会使其变得<b style='color:"+BodySize.THREE_LARGE.getColour().toWebHexString()+";'>"+BodySize.THREE_LARGE.getName(false)+"</b>.。"),
 	
 	FOOD_LAVISH(false,
 			Util.capitaliseSentence(BodySize.FOUR_HUGE.getName(false)),
-			"Make an abundance of food available to this slave, which will result in a large daily change to their body size,"
-					+ " eventually making them <b style='color:"+BodySize.FOUR_HUGE.getColour().toWebHexString()+";'>"+BodySize.FOUR_HUGE.getName(false)+"</b>."),
+			"让该奴隶想吃就吃，这将导致其体型每天都发生很大变化，"
+					+ "最终会使其变得<b style='color:"+BodySize.FOUR_HUGE.getColour().toWebHexString()+";'>"+BodySize.FOUR_HUGE.getName(false)+"</b>。"),
 
 	
 	// Exercise/Muscle:
 	
 	EXERCISE_FORBIDDEN(false,
 			Util.capitaliseSentence(Muscle.ZERO_SOFT.getName(false)),
-			"Forbid this slave from performing any strenuous activities, which will result in their muscles getting a lot smaller every day,"
-					+ " eventually making them <b style='color:"+Muscle.ZERO_SOFT.getColour().toWebHexString()+";'>"+Muscle.ZERO_SOFT.getName(false)+"</b>."),
+			"禁止该奴隶体力活动，这将导致其肌肉量每天都大幅减少，"
+					+ "最终会使其变得<b style='color:"+Muscle.ZERO_SOFT.getColour().toWebHexString()+";'>"+Muscle.ZERO_SOFT.getName(false)+"</b>。"),
 	
 	EXERCISE_REST(false,
 			Util.capitaliseSentence(Muscle.ONE_LIGHTLY_MUSCLED.getName(false)),
-			"Do not give this slave any exercise routine, which will result in a daily change to their muscle mass,"
-					+ " eventually making them <b style='color:"+Muscle.ONE_LIGHTLY_MUSCLED.getColour().toWebHexString()+";'>"+Muscle.ONE_LIGHTLY_MUSCLED.getName(false)+"</b>."),
+			"不给奴隶安排日常锻炼，这将导致其肌肉量每天都会发生变化，"
+					+ "最终会使其变得<b style='color:"+Muscle.ONE_LIGHTLY_MUSCLED.getColour().toWebHexString()+";'>"+Muscle.ONE_LIGHTLY_MUSCLED.getName(false)+"</b>。"),
 	
 	EXERCISE_NORMAL(true,
 			Util.capitaliseSentence(Muscle.TWO_TONED.getName(false)),
-			"Set this slave to perform a healthy amount of exercise, which will result in a daily change to their muscle mass,"
-					+ " eventually making them <b style='color:"+Muscle.TWO_TONED.getColour().toWebHexString()+";'>"+Muscle.TWO_TONED.getName(false)+"</b>."),
+			"奴隶安排健康的锻炼量，这将导致其肌肉量每天都会发生变化，"
+					+ "最终会使其变得<b style='color:"+Muscle.TWO_TONED.getColour().toWebHexString()+";'>"+Muscle.TWO_TONED.getName(false)+"</b>。"),
 	
 	EXERCISE_TRAINING(false,
 			Util.capitaliseSentence(Muscle.THREE_MUSCULAR.getName(false)),
-			"Give this slave a workout routine, which will result in a daily change to their muscle mass,"
-					+ " eventually making them <b style='color:"+Muscle.THREE_MUSCULAR.getColour().toWebHexString()+";'>"+Muscle.THREE_MUSCULAR.getName(false)+"</b>."),
+			"给奴隶提供日常健身计划，这将导致其肌肉量每天都会发生变化，"
+					+ "最终会使其变得<b style='color:"+Muscle.THREE_MUSCULAR.getColour().toWebHexString()+";'>"+Muscle.THREE_MUSCULAR.getName(false)+"</b>。"),
 	
 	EXERCISE_BODY_BUILDING(false,
 			Util.capitaliseSentence(Muscle.FOUR_RIPPED.getName(false)),
-			"Give this slave a strenuous exercise routine, which will result in their muscles getting a lot bigger every day,"
-					+ " eventually making them <b style='color:"+Muscle.FOUR_RIPPED.getColour().toWebHexString()+";'>"+Muscle.FOUR_RIPPED.getName(false)+"</b>."),
+			"给予该奴隶大量的体力锻炼，这将导致其肌肉量每天都大幅增加，"
+					+ "最终会使其变得<b style='color:"+Muscle.FOUR_RIPPED.getColour().toWebHexString()+";'>"+Muscle.FOUR_RIPPED.getName(false)+"</b>。"),
 	
 	
 	// Cleanliness:
 	
-	CLEANLINESS_WASH_CLOTHES(true, "Wash Clothing", "Tell this slave to keep their clothing washed and clean."),
-	CLEANLINESS_WASH_BODY(true, "Wash Body", "Tell this slave to keep their body washed and clean, which will keep their orifices free of creampies."),
-	CLEANLINESS_WASH_THOROUGH(false, "Remove Odours", "When this slave washes their body, they will also remove any musky odours they might be marked with."),
+	CLEANLINESS_WASH_CLOTHES(true, "清洗衣物", "让该奴隶时刻保持衣物清洁干净。"),
+	CLEANLINESS_WASH_BODY(true, "清洗身体", "让该奴隶时刻保持身体清洁干净，同样也会清空腔穴的精液。"),
+	CLEANLINESS_WASH_THOROUGH(false, "去除气味", "该奴隶清洗身体时，也会去除浓重的气味标记。"),
 	
 	
 	// Sleeping:
-	SLEEPING_DEFAULT(true, "Sleep Whenever", "Tell this slave to sleep whenever they like, which will be during the night for diurnal races and during the day for nocturnal races.") {
+	SLEEPING_DEFAULT(true, "随时睡眠", "该奴隶可以随时睡眠，日行性种族在夜晚睡眠，而夜行性种族在白天睡眠。") {
 		@Override
 		public void applyEffectsOnAddition(GameCharacter character) {
 			character.recalculateSleepHours();
 		}
 	},
-	SLEEPING_NIGHT(false, "Sleep At Night", "Tell this slave to sleep during the night. This will have neither a positive nor negative effect on them.") {
+	SLEEPING_NIGHT(false, "夜晚睡眠", "让奴隶在夜晚睡眠，对其并无正面或负面效果。") {
 		@Override
 		public void applyEffectsOnAddition(GameCharacter character) {
 			character.recalculateSleepHours();
 		}
 	},
-	SLEEPING_DAY(false, "Sleep During Day", "Tell this slave to sleep during the day. This will have neither a positive nor negative effect on them.") {
+	SLEEPING_DAY(false, "白天睡眠", "让该奴隶在白天睡眠，对其并无正面或负面效果。") {
 		@Override
 		public void applyEffectsOnAddition(GameCharacter character) {
 			character.recalculateSleepHours();

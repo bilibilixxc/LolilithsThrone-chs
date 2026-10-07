@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>100</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[arm wrap]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[arm wraps]]></namePlural>
-		<description><![CDATA[A long strip of thick cotton, wrapped around the hands and forearms as an added layer of protection.]]></description>
+		<determiner><![CDATA[一副]]></determiner>
+		<name><![CDATA[手臂绑带]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[手臂绑带]]></namePlural>
+		<description><![CDATA[一条长而厚实的棉布带，包裹在手和前臂上，作为额外的保护层。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HAND</slot>
@@ -41,27 +41,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(wrap)] the strip of thick cotton around [npc.her] [npc.arms].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(wrap)] the strip of thick cotton around [npc2.namePos] [npc2.arms].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(wrap)] the strip of thick cotton around [npc2.namePos] [npc2.arms].]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将棉布带绕在[npc.her]的[npc.arms]上。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将棉布带绕在[npc2.namePos]的[npc2.arms]上。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将棉布带缠在[npc2.namePos]的[npc2.arms]上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unwrap)] the strip of thick cotton from around [npc.her] [npc.arms].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unwrap)] the strip of thick cotton from around [npc2.namePos] [npc2.arms].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(unwrap)] the strip of thick cotton from around [npc2.namePos] [npc2.arms].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将棉布带从[npc.her]的[npc.arms]上解开。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将棉布带从[npc2.namePos]的[npc2.arms]上解开。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将棉布带从[npc2.namePos]的[npc2.arms]上拽掉。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

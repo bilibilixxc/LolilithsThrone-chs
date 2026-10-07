@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Evelyx's Office]]></name>
-	<tooltipDescription><![CDATA[Out of this luxuriously-furnished office, the farm's succubus owner manages her business.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Evelyx's office at Evelyx's Dairy]]></virginityLossDescription>
+	<name><![CDATA[艾弗利克斯的办公室]]></name>
+	<tooltipDescription><![CDATA[在这间装饰奢华的办公室里，农场的魅魔主人在此办公。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在艾弗利克斯乳业的艾弗利克斯办公室里]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

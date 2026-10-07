@@ -178,7 +178,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Large Increase", "Increase the rate at which NPCs spawn as full humans. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("大幅提高", "提高纯种人类NPC的生成概率。(默认为5%)", 24));
 		}
 		id = "HUMAN_SPAWN_RATE_INCREASE";
 		if (MainController.document.getElementById(id) != null) {
@@ -187,7 +187,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Increase", "Increase the rate at which NPCs spawn as full humans. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("提高", "提高纯种人类NPC的生成概率。(默认为5%)", 24));
 		}
 		id = "HUMAN_SPAWN_RATE_DECREASE";
 		if (MainController.document.getElementById(id) != null) {
@@ -196,7 +196,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Decrease", "Decrease the rate at which NPCs spawn as full humans. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("减低", "降低纯种人类NPC的生成概率。(默认为5%)", 24));
 		}
 		id = "HUMAN_SPAWN_RATE_DECREASE_LARGE";
 		if (MainController.document.getElementById(id) != null) {
@@ -205,7 +205,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Large Decrease", "Decrease the rate at which NPCs spawn as full humans. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("大幅降低", "降低纯种人类NPC的生成概率。(默认为5%)", 24));
 		}
 		
 		// Taur spawn rates:
@@ -216,7 +216,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Large Increase", "Increase the rate at which non-human NPCs spawn with a tauric lower body. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("大幅提高", "提高下半身为兽态的非人类NPC的生成概率。(默认为5%)", 24));
 		}
 		id = "TAUR_SPAWN_RATE_INCREASE";
 		if (MainController.document.getElementById(id) != null) {
@@ -225,7 +225,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Increase", "Increase the rate at which non-human NPCs spawn with a tauric lower body. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("提高", "提高下半身为兽态的非人类NPC的生成概率。", 24));
 		}
 		id = "TAUR_SPAWN_RATE_DECREASE";
 		if (MainController.document.getElementById(id) != null) {
@@ -234,7 +234,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Decrease", "Decrease the rate at which non-human NPCs spawn with a tauric lower body. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("减低", "降低下半身为兽态的非人类NPC的生成概率。", 24));
 		}
 		id = "TAUR_SPAWN_RATE_DECREASE_LARGE";
 		if (MainController.document.getElementById(id) != null) {
@@ -243,7 +243,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Large Decrease", "Decrease the rate at which non-human NPCs spawn with a tauric lower body. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("大幅降低", "降低下半身为兽态的非人类NPC的生成概率。", 24));
 		}
 		
 		// Human spawn rates:
@@ -254,7 +254,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Large Increase", "Increase the rate at which NPCs spawn as half-demons. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("大幅提高", "提高半恶魔NPC的生成概率。(默认为5%)", 24));
 		}
 		id = "HALF_DEMON_SPAWN_RATE_INCREASE";
 		if (MainController.document.getElementById(id) != null) {
@@ -263,7 +263,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Increase", "Increase the rate at which NPCs spawn as half-demons. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("提高", "提高半恶魔NPC的生成概率。(默认为5%)", 24));
 		}
 		id = "HALF_DEMON_SPAWN_RATE_DECREASE";
 		if (MainController.document.getElementById(id) != null) {
@@ -272,7 +272,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Decrease", "Decrease the rate at which NPCs spawn as half-demons. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("降低", "降低半恶魔NPC的生成概率。(默认为5%)", 24));
 		}
 		id = "HALF_DEMON_SPAWN_RATE_DECREASE_LARGE";
 		if (MainController.document.getElementById(id) != null) {
@@ -281,7 +281,7 @@ public class OptionsController {
 				Main.saveProperties();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Large Decrease", "Decrease the rate at which NPCs spawn as half-demons. (Default value is 5%.)", 24));
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("大幅降低", "降低半恶魔NPC的生成概率。(默认为5%)", 24));
 		}
 		
 		// Taur furry spawns:
@@ -354,7 +354,7 @@ public class OptionsController {
 							preference.getName(),
 							subspecies.isFurryPreferencesEnabled()
 									?preference.getDescriptionFeminine(subspecies)
-									:"This subspecies cannot have its furry preference changed!"
+									:"不能修改该亚种的福瑞程度偏好设置！"
 					));
 				}
 				id = "MASCULINE_"+preference+"_"+subspeciesId;
@@ -377,7 +377,7 @@ public class OptionsController {
 							preference.getName(),
 							subspecies.isFurryPreferencesEnabled()
 									?preference.getDescriptionMasculine(subspecies)
-									:"This subspecies cannot have its furry preference changed!"));
+									:"不能修改该亚种的福瑞程度偏好设置！"));
 				}
 			}
 			for (SubspeciesPreference preference : SubspeciesPreference.values()) {
@@ -399,9 +399,9 @@ public class OptionsController {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 							Util.capitaliseSentence(preference.getName()),
 							subspecies.isSpawnPreferencesEnabled()
-									?"Set the weighted chance for feminine genders of this subspecies to spawn. The spawn frequency of '"+preference.getName()+"' has a weight of: <b>"+preference.getValue()+"</b><br/>"
-									+"<i>This weighting is further affected by map-specific spawn frequencies.</i>"
-									:"This subspecies cannot have its spawn preference changed!"));
+									?"设置雌性该亚种的生成概率。频率'"+preference.getName()+"'的生成比重为:<b>"+preference.getValue()+"</b><br/>"
+									+"<i>该比重还会受到特定地图的生成偏向影响。</i>"
+									:"不能修改该亚种的福瑞偏好设置！"));
 				}
 				id = "MASCULINE_SPAWN_"+preference+"_"+subspeciesId;
 				if (MainController.document.getElementById(id) != null) {
@@ -422,9 +422,9 @@ public class OptionsController {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 							Util.capitaliseSentence(preference.getName()),
 							subspecies.isSpawnPreferencesEnabled()
-									?"Set the weighted chance for masculine genders of this subspecies to spawn. The spawn frequency of '"+preference.getName()+"' has a weight of: <b>"+preference.getValue()+"</b><br/>"
-									+"<i>This weighting is further affected by map-specific spawn frequencies.</i>"
-									:"This subspecies cannot have its spawn preference changed!"));
+									?"设置雄性该亚种的生成概率。频率'"+preference.getName()+"'的生成比重为:<b>"+preference.getValue()+"</b><br/>"
+									+"<i>该比重还会受到特定地图的生成偏向影响。</i>"
+									:"不能修改该亚种的福瑞偏好设置！"));
 				}
 			}
 		}
@@ -562,24 +562,24 @@ public class OptionsController {
 				String description = "";
 				switch (fp) {
 					case HUMAN:
-						title = "Human Only";
-						description = "Forced transformations from NPCs will only ever affect your body's non-racial stats, and if a new part is required (such as a vagina or penis) it will always grow to be a human one.";
+						title = "仅限人类";
+						description = "NPC的强制转化只会影响你身体与种族无关的数值，如果会生成新的身体部位(如阴道或阴茎)则总会生成人类的。";
 						break;
 					case MINIMUM:
-						title = "Minimum Furry";
-						description = "Forced transformations from NPCs will have the chance to give you non-human hair, ears, eyes, tails, horns, antenna, and wings. All other parts will always remain human.";
+						title = "最低程度福瑞";
+						description = "NPC的强制转化有可能给予你非人类的头发、耳朵、眼睛、尾巴、角、触角和翅膀。其他部位仍会保留为人类。";
 						break;
 					case REDUCED:
-						title = "Lesser Furry";
-						description = "Forced transformations from NPCs will have the chance to give you non-human hair, ears, eyes, tails, horns, antenna, wings, breasts, ass, genitalia, arms, and legs. Your skin and face will always remain human.";
+						title = "亚福瑞化";
+						description = "NPC的强制转化有可能给予你非人类的头发、耳朵、眼睛、尾巴、角、触角、翅膀、胸部、臀部、生殖器、手臂和腿。皮肤与脸部仍会保留为人类。";
 						break;
 					case NORMAL:
-						title = "Greater Furry";
-						description = "Forced transformations from NPCs will have the chance to give you non-human hair, ears, eyes, tails, horns, antenna, wings, breasts, ass, genitalia, arms, legs, skin, and face. (So everything can be affected.)";
+						title = "纯福瑞化";
+						description = "NPC的强制转化有可能给予你非人类的头发、耳朵、眼睛、尾巴、角、触角、翅膀、胸部、臀部、生殖器、手臂、腿、皮肤和脸部。(也就是所有部位)";
 						break;
 					case MAXIMUM:
-						title = "Maximum Furry";
-						description = "Forced transformations from NPCs will always give you non-human hair, ears, eyes, tails, horns, antenna, wings, breasts, genitalia, ass, arms, legs, skin, and face. (So everything will be affected.)";
+						title = "完全福瑞";
+						description = "NPC的强制转化总会给予你非人类的头发、耳朵、眼睛、尾巴、角、触须、翅膀、胸部、生殖器、屁股、手臂、腿、皮肤和面部。(也就是所有部位)";
 						break;
 				}
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(title, description));
@@ -694,7 +694,7 @@ public class OptionsController {
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Properties.uddersLabels[i],
 						Properties.uddersDescriptions[i]
-								+"<br/><i>Characters can always gain udders/crotch-boobs via transformations after they've spawned.</i>"));
+								+"<br/><i>角色在生成后总能通过转化获得腹乳/胯乳。</i>"));
 			}
 		}
 

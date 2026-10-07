@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>150</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[latex thigh-high stockings]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[latex thigh-high stockings]]></namePlural>
-		<description><![CDATA[A pair of thigh-high latex stockings. They are made from shiny latex that leaves nothing to the imagination.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[乳胶长袜]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[乳胶长袜]]></namePlural>
+		<description><![CDATA[一双乳胶过膝长袜。由闪亮的乳胶制成，让人无法想象。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>SOCK</slot> 
@@ -50,27 +50,25 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] on the latex stockings before pulling them all the way up to [npc.her] mid-thigh.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] the latex stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up to [npc2.her] mid-thigh.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the latex stockings onto [npc2.namePos] [npc2.feet], before pulling them all the way up to [npc2.her] mid-thigh.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的脚塞进乳胶长袜中，然后将它们拉到大腿中间。
+]]></self>
+    <other><![CDATA[
+[npc.Name]给[npc2.namePos]的[npc2.feet]套上乳胶长袜，然后将它们拉到[npc2.her]的大腿中部。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的[npc2.feet]强行塞进乳胶长袜中，然后用力将它们拉到[npc2.her]的大腿中部。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] thigh-high latex stockings.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] thigh-high latex stockings.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] thigh-high latex stockings.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]脱下[npc.her]的乳胶踩脚袜。]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的乳胶长袜脱下。]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]抓住[npc2.namePos]的乳胶长袜并粗暴地扯下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

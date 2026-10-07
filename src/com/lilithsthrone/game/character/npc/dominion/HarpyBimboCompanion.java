@@ -70,9 +70,9 @@ public class HarpyBimboCompanion extends NPC {
 	}
 	
 	public HarpyBimboCompanion(boolean isImported) {
-		super(isImported, new NameTriplet("Lauren"), "Nystrom",
-				"Brittany's girlfriend, Lauren, does everything she can to please her matriarch."
-						+ " Just like most of the harpies in Brittany's nest, she's a ditzy bimbo, and does absolutely anything her matriarch orders her to.",
+		super(isImported, new NameTriplet("劳伦"), "尼斯特罗姆",
+				"布里塔尼的女友，劳伦，会竭尽全力地取悦族长。"
+						+ "她跟布里塔尼巢穴中其他大多数哈比一样，是个傻乎乎的花瓶，族长让她做什么，她就做什么。",
 				22, Month.JULY, 6,
 				5, Gender.F_V_B_FEMALE, Subspecies.HARPY, RaceStage.LESSER,
 				new CharacterInventory(false, 30), WorldType.HARPY_NEST, PlaceType.HARPY_NESTS_HARPY_NEST_YELLOW, true);

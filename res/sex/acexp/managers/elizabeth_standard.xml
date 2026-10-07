@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexManager>
     <title/>
     <wallName/>
-    <deskName><![CDATA[sofa]]></deskName>
+    <deskName><![CDATA[沙发]]></deskName>
     <consensual><![CDATA[true]]></consensual>
     <subHasEqualControl><![CDATA[true]]></subHasEqualControl>
     <canSkipSex><![CDATA[true]]></canSkipSex>
@@ -13,14 +13,14 @@
     <positionsAvailable/>
     <publicSex>
         <startingDescription><![CDATA[
-			The maids that are present in the room pretend not to pay any attention to what is happening in front of them...
+			房间里的女仆假装完全没注意到眼前发生的一切……
 		]]></startingDescription>
         <randomDescriptions enabled="true">
-            <description><![CDATA[One of the maids casts a quick glance at the pair of you.]]></description>
-            <description><![CDATA[A maid sucks in her breath and then exhales sharply.]]></description>
-            <description><![CDATA[You see one of the maids groping herself.]]></description>
-            <description><![CDATA[One of the maids is moaning audibly.]]></description>
-            <description><![CDATA[A maid licks her lips while pretending to look the other way.]]></description>
+            <description><![CDATA[其中一位女仆快速扫了你们一眼。]]></description>
+            <description><![CDATA[一位女仆吸气然后用力呼出。]]></description>
+            <description><![CDATA[你看到一位女仆正在自渎。]]></description>
+            <description><![CDATA[其中一位女仆呻吟出声。]]></description>
+            <description><![CDATA[一位女仆舔嘴唇装作在看向别处。]]></description>
         </randomDescriptions>
     </publicSex>
     <characterInformationContainer>

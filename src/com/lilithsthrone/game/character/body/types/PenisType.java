@@ -29,8 +29,8 @@ public class PenisType {
 	public static AbstractPenisType NONE = new AbstractPenisType(null,
 			Race.NONE,
 			TesticleType.NONE,
-			"[npc.She] [npc.verb(squirm)] and [npc.moansVerb] as [npc.her] cock and balls rapidly shrink away, and within seconds, nothing's left to remind [npc.herHim] of [npc.her] manhood.<br/>"
-				+ "[npc.Name] now [npc.has] [style.boldSex(no penis)].",
+			"[npc.her]的阴茎和阴囊迅速收缩着，[npc.She]发出[npc.moansVerb]，身体扭动起来，没过几秒钟，曾经雄性的象征便无影无踪。<br/>"
+				+ "[npc.Name]现在[style.boldSex(没有阴茎)]。",
 			"", // Shouldn't need a description of no cock.
 			null) {
 		@Override
@@ -45,66 +45,66 @@ public class PenisType {
 	public static AbstractPenisType DILDO = new AbstractPenisType(BodyCoveringType.DILDO,
 			Race.NONE,
 			TesticleType.DILDO,
-			Util.newArrayListOfValues("dildo"),
-			Util.newArrayListOfValues("dildos"),
-			Util.newArrayListOfValues("dildo"),
-			Util.newArrayListOfValues("dildos"),
-			Util.newArrayListOfValues("rubber", "rubbery", "silicone", "artificial"),
-			"You have somehow transformed your penis into a dildo, which is a bug. (Please let Innoxia know!)", // Dildos are not a transformable option
-			"[npc.She] [npc.is] currently wearing [npc.a_cockGirth], [npc.cockLengthValue] dildo, which is made out of [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("假阳具"),
+			Util.newArrayListOfValues("假阳具"),
+			Util.newArrayListOfValues("假阳具"),
+			Util.newArrayListOfValues("假阳具"),
+			Util.newArrayListOfValues("橡胶", "有弹性", "硅胶", "人造"),
+			"你不知怎么把阴茎变成了假阳具，这是个bug。(请告知Innoxia！或汉化组)", // Dildos are not a transformable option
+			"[npc.She]正戴着[npc.a_cockGirth]的假阳具，有[npc.cockLengthValue]长，由[npc.cockFullDescription(true)]制成。",
 			null) {
 	};
 	
 	public static AbstractPenisType HUMAN = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.HUMAN,
 			TesticleType.HUMAN,
-			"[npc.She] now [npc.has] a [style.boldHuman(human penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldHuman([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF human balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldHuman(human cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] human cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.She]现在拥有[style.boldHuman(人类的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldHuman([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF人类阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldHuman(人类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的人类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			null) {
 	};
 
 	public static AbstractPenisType ANGEL = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.ANGEL,
 			TesticleType.ANGEL,
-			Util.newArrayListOfValues("angel-"),
-			Util.newArrayListOfValues("angel-"),
-			Util.newArrayListOfValues("angel-"),
-			Util.newArrayListOfValues("angel-"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
+			Util.newArrayListOfValues("天使"),
 			Util.newArrayListOfValues(""),
-			"[npc.She] now [npc.has] an [style.boldAngel(angelic penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldAngel([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF angelic balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldAngel(angel cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] angel cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.She]现在拥有[style.boldAngel(天使的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldAngel([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF天使阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldAngel(天使精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的天使阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			null) {
 	};
 
 	public static AbstractPenisType DEMON_COMMON = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.DEMON,
 			TesticleType.DEMON_COMMON,
-			Util.newArrayListOfValues("succubus-"),
-			Util.newArrayListOfValues("succubus-"),
-			Util.newArrayListOfValues("incubus-"),
-			Util.newArrayListOfValues("incubus-"),
-			Util.newArrayListOfValues("demonic"),
-			"[npc.She] [npc.verb(squirm)] and [npc.moansVerb] as the skin covering [npc.her] cock transforms into a smooth, highly sensitive demonic counterpart."
-				+ " Slimy precum starts drooling from the tip, and [npc.she] [npc.verb(let)] out [npc.a_moan+] as thick ridges suddenly press out all along its length."
-				+ " As if that wasn't enough, rows of little bumps start to press out and form into little tentacles, which then start wriggling with a mind of their own.<br/>"
-				+ "[npc.She] now [npc.has] a"
+			Util.newArrayListOfValues("魅魔"),
+			Util.newArrayListOfValues("魅魔"),
+			Util.newArrayListOfValues("淫梦魔"),
+			Util.newArrayListOfValues("淫梦魔"),
+			Util.newArrayListOfValues("恶魔"),
+			"[npc.She]浑身扭动起来，发出一声[npc.moansVerb]，覆盖[npc.her]阴茎的皮肤变得跟恶魔一般，十分光滑，也极度敏感。"
+				+ "粘滑的先走液慢慢从尖端渗出，整根肉棒上都浮现出明显的青筋，[npc.she]发出了[npc.a_moan+]。"
+				+ "转化还没有结束，上面逐渐长出许多突起，变作了细小的触手，自行蜿蜒扭动着。<br/>"
+				+ "[npc.She]现在拥有"
 				+ "#IF(npc.isShortStature())"
-					+ " [style.boldImp(impish penis)]"
+					+ "[style.boldImp(小恶魔的阴茎)]"
 				+ "#ELSE"
-					+ " [style.boldDemon(demonic penis)]"
+					+ "[style.boldDemon(恶魔的阴茎)]"
 				+ "#ENDIF"
-				+ ", [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] now [npc.has]"
+				+ "，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]现在拥有"
 					+ "#IF(npc.isShortStature())"
-						+ " [style.boldImp([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF impish balls)], [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldImp(imp cum)]."
+						+ "[style.boldImp([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF小恶魔阴囊)]，[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldImp(小恶魔精液)]。"
 					+ "#ELSE"
-						+ " [style.boldDemon([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF demonic balls)], [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldDemon(demon cum)]."
+						+ "[style.boldDemon([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF恶魔阴囊)]，[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldDemon(恶魔精液)]。"
 					+ "#ENDIF",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] demonic cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.She]有着[npc.a_cockGirth]的恶魔阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.RIBBED,
 				PenetrationModifier.TENTACLED,
@@ -114,16 +114,16 @@ public class PenisType {
 	public static AbstractPenisType COW_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.COW_MORPH,
 			TesticleType.BOVINE,
-			Util.newArrayListOfValues("cow-"),
-			Util.newArrayListOfValues("cow-"),
-			Util.newArrayListOfValues("bull-"),
-			Util.newArrayListOfValues("bull-"),
+			Util.newArrayListOfValues("牛"),
+			Util.newArrayListOfValues("牛"),
+			Util.newArrayListOfValues("牛"),
+			Util.newArrayListOfValues("牛"),
 			Util.newArrayListOfValues(""),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as [npc.her] shaft grows wider and the head tapers down into a point.<br/>"
-				+ "[npc.She] now [npc.has] a [style.boldCowMorph(bovine penis)], [npc.materialDescriptor] [npc.penisFullDescription].<br/>"
-				+ "[npc.She] [npc.has] [style.boldCowMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF bovine balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldCowMorph(bovine cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] #IF(npc.isFeminine())cow#ELSEbull#ENDIF cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉竿变得粗壮起来，龟头也逐渐变尖。<br/>"
+				+ "[npc.She]现在拥有[style.boldCowMorph(牛类阴茎)]，[npc.materialDescriptor][npc.penisFullDescription]。<br/>"
+				+ "[npc.She]有着[style.boldCowMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF牛类阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldCowMorph(牛类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的牛类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.TAPERED,
 				PenetrationModifier.VEINY,
@@ -133,17 +133,17 @@ public class PenisType {
 	public static AbstractPenisType DOG_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.DOG_MORPH,
 			TesticleType.CANINE,
-			Util.newArrayListOfValues("dog-", "bitch-"),
-			Util.newArrayListOfValues("dog-", "bitch-"),
-			Util.newArrayListOfValues("dog-"),
-			Util.newArrayListOfValues("dog-"),
-			Util.newArrayListOfValues("canine"),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as a thick knot suddenly presses out at the base of [npc.her] shaft."
-				+ " As [npc.she] [npc.verb(pant)] and [npc.verb(gasp)] for air, the tip of [npc.her] cock narrows down as it tapers into its new form.<br/>"
-				+ "[npc.She] now [npc.has] a [style.boldDogMorph(canine penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldDogMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF canine balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldDogMorph(canine cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] dog cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("犬", "狗"),
+			Util.newArrayListOfValues("犬", "狗"),
+			Util.newArrayListOfValues("犬"),
+			Util.newArrayListOfValues("犬"),
+			Util.newArrayListOfValues("犬类"),
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉棒根部忽然鼓起一个粗壮的结。"
+				+ "[npc.she]急促喘息着，阴茎的顶端渐渐变窄，成了完全不同的样子。<br/>"
+				+ "[npc.She]现在拥有[style.boldDogMorph(犬类的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldDogMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF犬类阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldDogMorph(犬类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的犬类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.KNOTTED,
 				PenetrationModifier.SHEATHED,
@@ -160,17 +160,17 @@ public class PenisType {
 	public static AbstractPenisType WOLF_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.WOLF_MORPH,
 			TesticleType.LUPINE,
-			Util.newArrayListOfValues("wolf-"),
-			Util.newArrayListOfValues("wolf-"),
-			Util.newArrayListOfValues("wolf-"),
-			Util.newArrayListOfValues("wolf-"),
-			Util.newArrayListOfValues("lupine"),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as a thick knot suddenly presses out at the base of [npc.her] shaft."
-				+ " As [npc.she] [npc.verb(pant)] and [npc.verb(gasp)] for air, the tip of [npc.her] cock narrows down as it tapers into its new form.<br/>"
-				+ "[npc.She] now [npc.has] a [style.boldWolfMorph(wolf-like penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldWolfMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF lupine balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldWolfMorph(wolf cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] wolf cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("狼"),
+			Util.newArrayListOfValues("狼"),
+			Util.newArrayListOfValues("狼"),
+			Util.newArrayListOfValues("狼"),
+			Util.newArrayListOfValues("狼类"),
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉棒根部忽然鼓起一个粗壮的结。"
+				+ "[npc.she]急促喘息着，阴茎的顶端渐渐变窄，成了完全不同的样子。<br/>"
+				+ "[npc.She]现在拥有[style.boldWolfMorph(狼类的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldWolfMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF狼类阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldWolfMorph(狼类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的狼类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.KNOTTED,
 				PenetrationModifier.SHEATHED,
@@ -187,17 +187,17 @@ public class PenisType {
 	public static AbstractPenisType FOX_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.FOX_MORPH,
 			TesticleType.FOX_MORPH,
-			Util.newArrayListOfValues("fox-", "vixen-"),
-			Util.newArrayListOfValues("fox-", "vixen-"),
-			Util.newArrayListOfValues("fox-"),
-			Util.newArrayListOfValues("fox-"),
-			Util.newArrayListOfValues("vulpine"),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as a thick knot suddenly presses out at the base of [npc.her] shaft."
-				+ " As [npc.she] [npc.verb(pant)] and [npc.verb(gasp)] for air, the tip of [npc.her] cock narrows down as it tapers into its new form.<br/>"
-				+ "[npc.She] now [npc.has] a [style.boldFoxMorph(fox-like penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldFoxMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF vulpine balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldFoxMorph(fox cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] fox cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("狐", "狐狸"),
+			Util.newArrayListOfValues("狐", "狐狸"),
+			Util.newArrayListOfValues("狐"),
+			Util.newArrayListOfValues("狐"),
+			Util.newArrayListOfValues("狐类"),
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉棒根部忽然鼓起一个粗壮的结。"
+				+ "[npc.she]急促喘息着，阴茎的顶端渐渐变窄，成了完全不同的样子。<br/>"
+				+ "[npc.She]现在拥有[style.boldFoxMorph(狐类的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldFoxMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF狐类阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldFoxMorph(狐类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的狐类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.KNOTTED,
 				PenetrationModifier.SHEATHED,
@@ -214,17 +214,17 @@ public class PenisType {
 	public static AbstractPenisType CAT_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.CAT_MORPH,
 			TesticleType.FELINE,
-			Util.newArrayListOfValues("cat-"),
-			Util.newArrayListOfValues("cat-"),
-			Util.newArrayListOfValues("cat-"),
-			Util.newArrayListOfValues("cat-"),
-			Util.newArrayListOfValues("feline"),
-			"Letting out an involuntary moan, [npc.she] [npc.verb(feel)] [npc.her] penis shifting into a new form,"
-					+ " and [npc.sheIs] hit by a wave of overwhelming arousal as rows of fleshy little backwards-facing barbs press out all along [npc.her] shaft.<br/>"
-				+ "[npc.She] now [npc.has] a [style.boldCatMorph(feline penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldCatMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF feline balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldCatMorph(feline cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] cat cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("猫"),
+			Util.newArrayListOfValues("猫"),
+			Util.newArrayListOfValues("猫"),
+			Util.newArrayListOfValues("猫"),
+			Util.newArrayListOfValues("猫类"),
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，"
+					+ "[npc.sheIs]忽然被一股无法抗拒的快感袭击，一行行肉质的倒刺在肉竿上浮现出来。<br/>"
+				+ "[npc.She]现在拥有[style.boldCatMorph(猫类的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldCatMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF猫类阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldCatMorph(猫类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的猫类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.BARBED,
 				PenetrationModifier.SHEATHED)) {
@@ -233,16 +233,16 @@ public class PenisType {
 	public static AbstractPenisType ALLIGATOR_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.ALLIGATOR_MORPH,
 			TesticleType.ALLIGATOR_MORPH,
-			Util.newArrayListOfValues("alligator-"),
-			Util.newArrayListOfValues("alligator-"),
-			Util.newArrayListOfValues("alligator-"),
-			Util.newArrayListOfValues("alligator-"),
-			Util.newArrayListOfValues("reptilian"),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as [npc.her] shaft grows erect and the head smoothes over.<br/>"
-				+ "[npc.She] now [npc.has] an [style.boldGatorMorph(alligator penis)], [npc.materialDescriptor] [npc.penisFullDescription].<br/>"
-				+ "[npc.She] [npc.has] [style.boldGatorMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF reptilian balls)],"
-						+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldGatorMorph(alligator-morph cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] alligator cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("鳄鱼"),
+			Util.newArrayListOfValues("鳄鱼"),
+			Util.newArrayListOfValues("鳄鱼"),
+			Util.newArrayListOfValues("鳄鱼"),
+			Util.newArrayListOfValues("爬行类"),
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉竿挺立起来，也变成了圆头。<br/>"
+				+ "[npc.She]现在拥有[style.boldGatorMorph(鳄鱼般的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldGatorMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF爬行类阴囊)]，"
+						+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldGatorMorph(鳄鱼精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的鳄鱼阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.BLUNT)) {
 	};
@@ -250,16 +250,16 @@ public class PenisType {
 	public static AbstractPenisType EQUINE = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.HORSE_MORPH,
 			TesticleType.EQUINE,
-			Util.newArrayListOfValues("mare-", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF-", "equine-"),
-			Util.newArrayListOfValues("mare-", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF-", "equine-"),
-			Util.newArrayListOfValues("stallion-", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF-", "equine-"),
-			Util.newArrayListOfValues("stallion-", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF-", "equine-"),
+			Util.newArrayListOfValues("马", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF", "马类"),
+			Util.newArrayListOfValues("马", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF", "马类"),
+			Util.newArrayListOfValues("马", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF", "马类"),
+			Util.newArrayListOfValues("马", "#IF(npc.getRace()==npc.getPenisRace())[npc.raceFeral]#ELSE[npc.cockRaceFeral]#ENDIF", "马类"),
 			Util.newArrayListOfValues(""),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as [npc.her] shaft grows wider and the head flattens down.<br/>"
-				+ "[npc.She] now [npc.has] an [style.boldHorseMorph(equine penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldHorseMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF equine balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldHorseMorph(equine cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] horse cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉竿变得粗壮起来，龟头也变得平坦。<br/>"
+				+ "[npc.She]现在拥有[style.boldHorseMorph(马类阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldHorseMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF马类阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldHorseMorph(马类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的马类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.FLARED,
 				PenetrationModifier.VEINY,
@@ -269,16 +269,16 @@ public class PenisType {
 	public static AbstractPenisType REINDEER_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.REINDEER_MORPH,
 			TesticleType.REINDEER_MORPH,
-			Util.newArrayListOfValues("reindeer-"),
-			Util.newArrayListOfValues("reindeer-"),
-			Util.newArrayListOfValues("reindeer-"),
-			Util.newArrayListOfValues("reindeer-"),
+			Util.newArrayListOfValues("驯鹿"),
+			Util.newArrayListOfValues("驯鹿"),
+			Util.newArrayListOfValues("驯鹿"),
+			Util.newArrayListOfValues("驯鹿"),
 			Util.newArrayListOfValues(""),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as [npc.her] shaft grows wider and the head flattens down.<br/>"
-				+ "[npc.She] now [npc.has] an [style.boldReindeerMorph(reindeer-like penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldReindeerMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF reindeer balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldReindeerMorph(reindeer cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] reindeer cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉竿变得粗壮起来，龟头也变得平坦。<br/>"
+				+ "[npc.She]现在拥有[style.boldReindeerMorph(驯鹿般的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldReindeerMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内#ENDIF驯鹿般的阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldReindeerMorph(驯鹿精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的驯鹿阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.TAPERED,
 				PenetrationModifier.SHEATHED)) {
@@ -287,15 +287,15 @@ public class PenisType {
 	public static AbstractPenisType HARPY = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.HARPY,
 			TesticleType.AVIAN,
-			Util.newArrayListOfValues("harpy-"),
-			Util.newArrayListOfValues("harpy-"),
-			Util.newArrayListOfValues("harpy-"),
-			Util.newArrayListOfValues("harpy-"),
-			Util.newArrayListOfValues("avian"),
-			"Letting out an involuntary moan, [npc.name] [npc.verb(feel)] [npc.her] penis shifting into a new form, and [npc.sheIs] hit by a wave of overwhelming arousal as it retreats down into a new sheath that's formed at the base.<br/>"
-				+ "[npc.She] now [npc.has] an [style.boldHarpy(avian penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldHarpy([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF avian balls)], [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldHarpy(bird cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] bird cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("哈比"),
+			Util.newArrayListOfValues("哈比"),
+			Util.newArrayListOfValues("哈比"),
+			Util.newArrayListOfValues("哈比"),
+			Util.newArrayListOfValues("鸟类"),
+			"[npc.Name]意识到[npc.her]的阴茎开始转化成其他形态，发出了一声不情愿的呻吟，[npc.sheIs]忽然被一股无法抗拒的快感袭击，肉棒收回了根部刚刚出现的阴茎鞘中。<br/>"
+				+ "[npc.She]现在拥有[style.boldHarpy(鸟类的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldHarpy([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF鸟类阴囊)]，[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldHarpy(鸟类精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的鸟类阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.SHEATHED)) {
 	};
@@ -303,15 +303,15 @@ public class PenisType {
 	public static AbstractPenisType SQUIRREL_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.SQUIRREL_MORPH,
 			TesticleType.SQUIRREL,
-			Util.newArrayListOfValues("squirrel-"),
-			Util.newArrayListOfValues("squirrel-"),
-			Util.newArrayListOfValues("squirrel-"),
-			Util.newArrayListOfValues("squirrel-"),
-			Util.newArrayListOfValues("rodent"),
-			"[npc.She] now [npc.has] a [style.boldSquirrelMorph(squirrel-morph's penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldSquirrelMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF squirrel balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldSquirrelMorph(squirrel cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] squirrel cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			Util.newArrayListOfValues("松鼠"),
+			Util.newArrayListOfValues("松鼠"),
+			Util.newArrayListOfValues("松鼠"),
+			Util.newArrayListOfValues("松鼠"),
+			Util.newArrayListOfValues("啮齿类"),
+			"[npc.She]现在拥有[style.boldSquirrelMorph(松鼠般的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldSquirrelMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF松鼠阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldSquirrelMorph(松鼠精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的松鼠阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.SHEATHED)) {
 	};
@@ -319,15 +319,15 @@ public class PenisType {
 	public static AbstractPenisType RAT_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.RAT_MORPH,
 			TesticleType.RAT_MORPH,
-			Util.newArrayListOfValues("rat-"),
-			Util.newArrayListOfValues("rat-"),
-			Util.newArrayListOfValues("rat-"),
-			Util.newArrayListOfValues("rat-"),
+			Util.newArrayListOfValues("鼠"),
+			Util.newArrayListOfValues("鼠"),
+			Util.newArrayListOfValues("鼠"),
+			Util.newArrayListOfValues("鼠"),
 			Util.newArrayListOfValues(""),
-			"[npc.She] now [npc.has] a [style.boldRatMorph(rat penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldRatMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF rat balls)], [npc.materialDescriptor] [npc.ballsFullDescription(true)],"
-					+ " which produce [npc.cumColour(true)] [style.boldRatMorph(rat cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] rat cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.She]现在拥有[style.boldRatMorph(老鼠般的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldRatMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF老鼠阴囊)]，"
+					+ "，能够生产[npc.cumColour(true)]的[style.boldRatMorph(老鼠精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的老鼠阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.SHEATHED)) {
 	};
@@ -335,15 +335,15 @@ public class PenisType {
 	public static AbstractPenisType RABBIT_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.RABBIT_MORPH,
 			TesticleType.RABBIT_MORPH,
-			Util.newArrayListOfValues("rabbit-"),
-			Util.newArrayListOfValues("rabbit-"),
-			Util.newArrayListOfValues("rabbit-"),
-			Util.newArrayListOfValues("rabbit-"),
+			Util.newArrayListOfValues("兔"),
+			Util.newArrayListOfValues("兔"),
+			Util.newArrayListOfValues("兔"),
+			Util.newArrayListOfValues("兔"),
 			Util.newArrayListOfValues(""),
-			"[npc.She] now [npc.has] a [style.boldRabbitMorph(rabbit penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldRabbitMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF rabbit balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldRabbitMorph(rabbit cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] rabbit cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.She]现在拥有[style.boldRabbitMorph(兔子般的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldRabbitMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF兔子阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldRabbitMorph(兔子精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的兔子阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.SHEATHED)) {
 	};
@@ -351,15 +351,15 @@ public class PenisType {
 	public static AbstractPenisType BAT_MORPH = new AbstractPenisType(BodyCoveringType.PENIS,
 			Race.BAT_MORPH,
 			TesticleType.BAT_MORPH,
-			Util.newArrayListOfValues("bat-"),
-			Util.newArrayListOfValues("bat-"),
-			Util.newArrayListOfValues("bat-"),
-			Util.newArrayListOfValues("bat-"),
+			Util.newArrayListOfValues("蝙蝠"),
+			Util.newArrayListOfValues("蝙蝠"),
+			Util.newArrayListOfValues("蝙蝠"),
+			Util.newArrayListOfValues("蝙蝠"),
 			Util.newArrayListOfValues(""),
-			"[npc.She] now [npc.has] a [style.boldBatMorph(bat penis)], [npc.materialDescriptor] [npc.penisFullDescription(true)].<br/>"
-				+ "[npc.She] [npc.has] [style.boldBatMorph([npc.ballsCount]#IF(npc.isInternalTesticles()) internal,#ENDIF bat balls)],"
-					+ " [npc.materialDescriptor] [npc.ballsFullDescription(true)], which produce [npc.cumColour(true)] [style.boldBatMorph(bat cum)].",
-			"[npc.She] [npc.has] [npc.a_cockGirth], [npc.cockLengthValue] bat cock, which is [npc.materialCompositionDescriptor] [npc.cockFullDescription(true)].",
+			"[npc.She]现在拥有[style.boldBatMorph(蝙蝠般的阴茎)]，[npc.materialDescriptor][npc.penisFullDescription(true)]。<br/>"
+				+ "[npc.She]有着[style.boldBatMorph([npc.ballsCount]颗#IF(npc.isInternalTesticles())体内的#ENDIF蝙蝠阴囊)]，"
+					+ "[npc.materialDescriptor][npc.ballsFullDescription(true)]，能够生产[npc.cumColour(true)]的[style.boldBatMorph(蝙蝠精液)]。",
+			"[npc.She]有着[npc.a_cockGirth]的蝙蝠阴茎，[npc.cockLengthValue]长，[npc.materialCompositionDescriptor][npc.cockFullDescription(true)]。",
 			Util.newArrayListOfValues(
 				PenetrationModifier.SHEATHED)) {
 	};

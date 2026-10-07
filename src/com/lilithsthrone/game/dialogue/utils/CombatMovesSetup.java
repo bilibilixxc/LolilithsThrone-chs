@@ -29,24 +29,24 @@ public class CombatMovesSetup {
         CombatMovesSetup.dialogueReturn = dialogueReturn;
     }
 
-    public static final DialogueNode COMBAT_MOVES_CORE = new DialogueNode("Combat Moves", "", true) {
+    public static final DialogueNode COMBAT_MOVES_CORE = new DialogueNode("战斗动作", "", true) {
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
 
             UtilText.nodeContentSB.append(
                     "<div class='container-full-width' style='padding:8px; text-align:center;'>"
-                            + "While there is no limit on the number of moves which a character can know and use in combat,"
-                            	+ " it's only possible for "+String.valueOf(GameCharacter.MAX_COMBAT_MOVES)+" [style.colourMinorGood(core combat moves)] to be selected at a time."
-                            + " Any [style.colourMinorBad(non-core moves)] cost [style.colourBad(+1 action point)] to use in combat, and will suffer a [style.colourBad(+1 turn cooldown)].<br/>"
+                            + "虽然角色在战斗中可以认知和使用的招式数量没有限制，"
+                            	+ "但同一时间只能选择"+String.valueOf(GameCharacter.MAX_COMBAT_MOVES)+"种[style.colourMinorGood(核心战斗动作)]。"
+                            + "任何[style.colourMinorBad(非核心动作)]在战斗中消耗的[style.colourBad(行动点+1)]，且[style.colourBad(冷却回合+1)]。<br/>"
                             + UtilText.parse(getTarget(),
-                            		"<i>(You can click on the icons below to add and remove them from [npc.namePos] core combat moves.)</i>"
+                            		"<i>(你可以点击下面的图标从[npc.namePos]的核心战斗行为中添加或删除它们。)</i>"
                             		+(getTarget().isPlayer()
                             				?""
-                            				:"<i>([npc.Name] will only choose to use [npc.her] core moves when in combat, unless [npc.sheHasFull] none available, in which case [npc.she] will choose from [npc.her] non-core moves.)</i>"))
+                            				:"<i>(战斗中[npc.Name]只会使用[npc.her]的核心动作，除非没有任何可用的核心动作，在此情况下[npc.she]将从非核心动作中选取。)</i>"))
                             + "</div>"
                             + "<div class='container-full-width' style='padding:8px; text-align:center;'>"
-                            + "<h6 style='text-align:center;'>[style.colourMinorGood(Core Combat Moves)]</h6>");
+                            + "<h6 style='text-align:center;'>[style.colourMinorGood(核心战斗动作)]</h6>");
 
             for(int i=0;i<GameCharacter.MAX_COMBAT_MOVES;i++) {
                 AbstractCombatMove mv = null;
@@ -67,7 +67,7 @@ public class CombatMovesSetup {
 
             UtilText.nodeContentSB.append(
                             "<div class='container-full-width' style='padding:8px; text-align:center;'>"
-                            + "<h6 style='text-align:center;'>[style.colourMinorBad(Non-Core Combat Moves)]</h6>");
+                            + "<h6 style='text-align:center;'>[style.colourMinorBad(非核心战斗动作)]</h6>");
 
             for(int i=0;i<target.getAvailableMoves().size();i++) {
                 AbstractCombatMove mv = target.getAvailableMoves().get(i);

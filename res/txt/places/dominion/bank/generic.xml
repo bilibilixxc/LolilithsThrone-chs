@@ -1,188 +1,188 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		Positioned at the end of a short road, which branches off from Dominion's main boulevard, stands a huge building. Constructed in a classical architectural style, with a row of massive stone columns holding up its grand façade, this building is identified by the words 'Bank of Dominion', which have been carved into its stone frieze.
+		在御城区主干道分支的一条小路尽头，矗立着一座巨大的建筑。这座建筑采用古典建筑风格，由一排巨大的石柱支撑着宏伟的外墙，石楣上刻有“御城区银行”的字样。
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			 Each strike of arcane lightning casts the white stone of this imposing building into an extraordinary shade of pink. Due to the expected presence of demonic Enforcers in this area, you're at no risk of being assaulted during this storm.
+			每一道奥术闪电都会将构成这座宏伟建筑的白色石头染成异乎寻常的粉红色。由于恶魔执法者预计会出现在这一区域，因此在这场风暴中你不会有被袭击的风险。
 		#ELSEIF(game.isDayTime())
-			 The white stone of this imposing building almost glows in the light of day, making its sheer size seem even more impressive.
+			构成这座宏伟建筑的白色石头在日光下近乎闪闪发光，使其巨大的规模更加令人印象深刻。
 		#ELSE
-			 The white stone of this imposing building is illuminated by a large number of arcane lights, making its sheer size seem even more impressive in the dark.
+			构成这座雄伟建筑的白色石头被大量奥术灯光照亮，使其巨大的规模在黑暗中更加令人印象深刻。
 		#ENDIF
 	</p>
 	<p>
-		As you approach this building, you see brass plaques have been fitted to the wall on either side of the huge wooden doors which serve as the bank's main entrance. Reading the inscriptions upon these plaques, you discover that as this is the only legal bank within Dominion, it operates twenty-four hours a day, seven days of the week. As such it is currently [style.colourGood(open)], and so you could head inside if you wanted to...
+		当你走近这座建筑时，你看到有黄铜牌匾镶嵌在作为银行主要入口的巨大木门两侧的墙上。阅读这些牌匾上的铭文，你发现这是御城区境内唯一一家合法银行，每周七天，每天二十四小时营业。因此，它现在是[style.colorGood(营业中)]状态，如果你想要进去的话，你可以进去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTER"><![CDATA[
 	<p>
-		You decide to enter the bank, and so after [pc.walking] up to the large wooden doors which serve as the main entrance, you push one open and [pc.step] inside...
+		你决定进入银行，于是[pc.walking]向一扇作为银行入口的大型木门，推开它并[pc.step]了进去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FOYER"><![CDATA[
 	<p>
-		The bank's cavernous main foyer is every bit as large and impressive as its entrance hall. A vaulted stone ceiling towers above your head, while underfoot polished marble stretches out before you. Arcane chandeliers hang down from above, flooding the interior with cool, bright light.
+		银行宽敞的大堂与其门厅一样宏伟壮观。石制穹顶高悬于上，足下洁净的大理石延展于前，垂挂着的奥术水晶吊灯使厅内溢满清冷明亮的光芒。
 	</p>
 	<p>
-		Looking around, you see clients of all races queuing up before counters, walking about, or waiting upon the provided seating. There are also a few of the bank's clerks walking to and fro here, and you notice that every one of them without exception is a demon. There are also a couple of security guards keeping watch over this area, and you can't help but notice that they're not only equipped with the expected batons and tasers, but are also carrying pepperball rifles.
+		你环顾四周，看到各种族客户在柜台前排队、走动或坐在银行提供的座位上等待。这儿也有一些银行职员穿梭往返，无一例外都是恶魔。几个保安守在这里，你注意到他们除了装备惯有的警棍和电击枪，还携带了胡椒弹步枪。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="EXIT"><![CDATA[
 	<p>
-		The entrance hall to the bank is every bit as large and impressive as you'd expect from the building's outward appearance. A vaulted stone ceiling towers above your head, while underfoot polished marble stretches out before you. Arcane chandeliers hang down from above, flooding the interior with cool, bright light. 
+		银行的门厅与其建筑外观所表现的一样宏伟壮观。石制穹顶高悬于上，足下洁净的大理石延展于前，垂挂着的奥术水晶吊灯使厅内溢满清冷明亮的光芒。
 	</p>
 	<p>
-		Before you lies the cavernous space of the bank's main foyer, in which clients of all races can be seen queuing up before counters, walking about, or waiting upon the provided seating. The large, wooden doors behind you will take you back out into Dominion, should you wish to leave...
+		你面前是银行大堂的宽阔空间，各种族客户在柜台前排队、走动或坐在银行提供的座位上等待。如果你想离开，通过身后的巨大木门便能回到御城区……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_LEAVE"><![CDATA[
 	<p>
-		Having concluded your business with the bank, you push open one of the large wooden doors and [pc.step] back out into Dominion...
+		在银行办理完业务后，你推开其中一扇大型木门，[pc.step]回了御城区……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<!-- Counter, opening account: -->
 	
 	<htmlContent tag="COUNTER"><![CDATA[
 	<p>
-		Approaching the far side of the bank's cavernous foyer, you find yourself standing near a long line of counters, each of which is staffed by a demonic bank clerk. As with the main foyer, heavily armed security guards are never too far away, and are keeping a close watch over everyone in the area.
+		你来到银行宽敞大厅的另一端，发现自己站在一排排柜台旁，每个柜台都有一个恶魔银行柜员。与大堂一样，全副武装的保安从不离得太远，他们密切监视着这里的每个人。
 	</p>
 	<p>
 		#IF(pc.hasItemType(ITEM_innoxia_quest_bank_card))
-			Having already obtained a platinum account, there's little for you to discuss with the clerks behind the counters. Instead, if you have business here, all you need to do is head on over to the VIP deposit boxes and manage your funds and stored items directly there.
+			你已经拥有了一个白金账户，没什么需要和柜员沟通的了。如果你有业务需求，只需前往VIP保管箱，直接管理你的财物。
 		#ELSE
-			As you have yet to open an account with this bank, you suppose that the only thing to do here would be to approach one of the counters and inquire as to the procedure for becoming a client.
+			由于你还没在这家银行开设账户，你认为你在这里唯一能做的事情就是前往其中一个柜台，询问成为客户需要办理的手续。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COUNTER_OPEN_ACCOUNT"><![CDATA[
 	<p>
-		Deciding that you'd like to open an account with this bank, you [pc.step] up to one of the available counters and inform the clerk of your decision.
+		你决定在这家银行开户，于是[pc.step]到一个空闲的柜台前，告诉柜员你的打算。
 	</p>
 	<p>
-		[style.speechFeminineHeavy(Oh, a new customer? Excellent!)] the succubus happily declares. Producing a form from under the counter, she places it down before you and explains the process, [style.speechFeminineHeavy(If you could start by giving me your name and address, we'll then check your criminal record and employment status. Most of our clients are given a bronze account, but if you have a particularly important profession, then you might qualify for silver.)]
+		[style.speechFeminineHeavy(啊，新客户？太好啦！)]魅魔愉快地答道。她从柜台下面拿出一张表格放在你面前，并解释流程，[style.speechFeminineHeavy(请您先提供您的姓名和地址，我们会审核您的犯罪记录和就业状况。大多数客户会获得青铜账户，但如果您的职业特别重要，那您或许有资格获得白银账户。)]
 	</p>
 	<p>
-		After giving the clerk your name, you proceed to give her the address of Lilaya's mansion as your own. As she writes this down on the form, you see a concerned look flash over the succubus's face. Turning her head, she raises her arm and makes a beckoning gesture. As you turn to see who it is she's calling over, you see a pair of the heavily armed security guards striding towards you.
+		你告诉柜员你的名字后，又把莉莱雅宅邸的地址作为你的地址告诉了她。魅魔在表格上记录这些信息的同时，脸上闪过一丝担忧。她转过头，抬起手臂，做了一个招手的动作。你转身看她在叫谁，结果瞧见两个全副武装的保安大步向你走来。
 	</p>
 	<p>
-		[style.speechFeminineHeavy(As I'm sure you're aware, it is an offence to give false information,)] the clerk states in an icy tone. As the security guards come to a halt on either side of you, she continues, [style.speechFeminineHeavy(I am of course not suggesting that you have committed such an offence, but the fact that you've provided your address as that of a recognised daughter of Lyssieth does raise a red flag. I'm going to have to ask you to remain here until I can verify whether or not the information you've provided is accurate.)]
+		[style.speechFeminineHeavy(你应该知晓提供虚假信息是违法行为。)]柜员冷冷地开口，当保安在你两侧停下，她继续说道，[style.speechFeminineHeavy(当然，我不是说你犯了这样的罪。但你提供的地址属于受承认的莉西丝之女，这很难不让人警觉。在我核实你的信息准确性之前，我不得不请你在此等候。)]
 	</p>
 	<p>
-		With that, the clerk motions towards a bench that's situated a short distance to your right. Even if you could beat the two security guards who are now standing beside you, there are at least a dozen more scattered throughout the bank, and who knows how many more could potentially arrive as backup. It seems like your only option is to do as the clerk asks and wait here while she verifies your address...
+		柜员一边说着，一边指向你右边不远处的长椅。即使你能打败站在你身边的两名保安，整个银行至少还有十几名保安分散在各处，而且谁知道还会有多少后备力量赶来。看来你唯一的选择就是按照柜员的要求，待在这里等她核实你的地址……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COUNTER_OPEN_ACCOUNT_WAIT"><![CDATA[
 	<p>
-		Escorted over to the nearby bench by the two security guards, you sit down and watch as the clerk hurries over to the bank's entrance and leaves the building. Knowing that Lilaya's mansion is roughly a fifteen minute walk away, you relax and settle in for the wait.
+		你被两名保安护送到附近的长椅坐下，看着柜员匆匆走到银行门口并离开大楼。你知道从这里走到莉莱雅的府邸只需要大约十五分钟，所以你放松下来，静静等待着。
 	</p>
 	<p>
-		Just over thirty minutes later, the clerk reappears. Allowing the entrance's large wooden door to swing shut behind her, she rushes through the foyer and comes to a sliding halt before you. Bowing her head, she profusely apologises, [style.speechFeminineHeavy(On behalf of the Bank of Dominion, please let me offer you our most sincere apologies. I had the pleasure of meeting with your aunt, who confirmed everything. Please understand that I was only following procedure, and never meant to call your word into question. Please be assured that we'll be granting you our highest level of account, as befits your station as a direct relative of an elder lilin.)]
+		三十多分钟后，柜员再次出现。入口的大型木门在她身后自动关上，她冲过大厅，在你面前踉跄着停住，然后低下头，一再道歉：[style.speechFeminineHeavy(我谨代表御城区银行，向您表达最诚挚的歉意。我有幸与您的姨妈见面，她证实了一切。我之前只是遵循流程，并非有意质疑您，请您谅解。您放心，我们会为您提供最高级别的账户，以符合您作为莉琳长老直系亲属的身份。)]
 	</p>
 	<p>
-		Upon hearing this, you realise that you have nothing further to gain by demanding more of this clerk, and so after saying that you accept the bank's apology, you allow her to lead you back to the counter. As the two security guards wander off to return to their stations, the clerk simply strikes a line through almost every remaining section of the form, explaining as she goes, [style.speechFeminineHeavy(As I just mentioned, due to your lineage you've qualified for a platinum account. You'll have access to the VIP deposit boxes, and so won't need to go through the hassle of dealing with a clerk any time you want to deposit or withdraw your money. You'll also get our highest annual percentage rate of interest at twelve percent, which will be placed into your deposit box every day at midnight.)]
+		你听到这番话，意识到即使再要求这名柜员做什么，也是徒劳无功。因此，你表示接受银行的歉意，让她带你返回柜台。两名保安走回岗位时，柜员在表格几乎所有剩余部分都画上删除线，一边划一边解释道：[style.speechFeminineHeavy(正如我刚才提到的，由于您的血统，您有资格获得白金账户。您可以使用VIP保管箱，在任何时候存取款都不需要与柜员打交道。您还可以享受我们12%的最高年利率，利息将在每天午夜直接存入您的保管箱。)]
 	</p>
 	<p>
-		Unlocking a safe beneath the counter, the clerk produces a small, plastic card. After writing the name of Lilaya's mother, Lyssieth, onto a dotted line which asks for the bearer's lilin lineage, she strikes a line through the expiry date, explaining, [style.speechFeminineHeavy(Platinum cards no longer expire; we stopped requiring renewals after several of Lunette's daughters registered a rather forceful complaint...)]
+		柜员打开柜台下的保险箱，拿出一张塑料小卡片。她在记录持有者莉琳血统的虚线上填写了莉莱雅母亲的名字，莉西丝，然后划掉了有效期。[style.speechFeminineHeavy(白金卡永不过期；在露内特的几个女儿提出强烈抗议后，我们不再要求续卡……)]
 	</p>
 	<p>
-		Producing a glowing purple stamp from out of the unlocked safe, the clerk asks you to place its pentagram mark onto the card three times. After doing so, you return the stamp to the clerk as she explains, [style.speechFeminineHeavy(Show this card to the clerk at the door to the VIP area, and you'll be given access to the deposit boxes. Any items which you place into the box will be automatically teleported to any of our other branches when your card's presence is detected there. We have branches in Elis, Thinis, Itza'aak, and Lyonesse. Your flames, as well as any interest earned, can also be deposited or retrieved from any branch. Thank you for opening an account with us today, #IF(pc.hasSurname())[pc.miss] [pc.surname]#ELSE[pc.sir]#ENDIF.)]
+		柜员从打开的保险箱里拿出一个发光的紫色印章，让你在卡片上盖三个五角星标记。你盖完后将印章还给柜员，她向你解释：[style.speechFeminineHeavy(您只需向VIP区域门口的职员出示这张卡，就可以进入保管箱区域。当您的卡在其他分行被检测到时，您放入保管箱的任何物品都会自动传送到那边。我们在伊利斯、提尼斯、伊察阿克和莱昂内斯都设有分行，您的火币以及待收取的所有利息可以在任意一个分行存取。感谢您今天在我们银行开户，#IF(pc.hasSurname())[pc.surname][pc.miss]#ELSE[pc.sir]#ENDIF。)]
 	</p>
 	<p>
-		With that, the clerk hands you your card, apologising once again for making you wait as she does so.
+		说完，柜员将卡片交给你，并再次为让你久等道歉。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="COUNTER_OPEN_ACCOUNT_END"><![CDATA[
 	<p>
-		Thanking the clerk, you take the platinum account card and [pc.step] away from the counter. Looking down at the small, rectangular piece of plastic, you see that the three pentagram-shaped stamps which you placed upon it have started to glow. This behaviour is explained by the small print on the front of the card, which states that the three arcane stamps glow when the card is in possession of its rightful owner. A warning beneath this text instructs citizens to immediately notify the nearest security guard if the stamps are not glowing.
+		你向柜员道谢，接过白金账户卡[pc.step]离柜台。你低头打量这个长方形的小塑料片，发现盖在上面的三个五角星印记已经开始发光了。卡片正面的小字解释了这一现象：三个奥术印记会在该卡被合法的拥有者持有时发光。小字下方的警告提醒市民，如果印记没有发光，应立即通知最近的执法者。
 	</p>
 	<p>
-		Carefully putting the card away, you look around the cavernous foyer and wonder where to go to next. A door on one side of the vast room is signposted as leading to the VIP deposit boxes, and as your card now grants you access to that area, perhaps you should head over there to find out how it all works...
+		你小心地把卡片收起来，环顾宽敞的大厅，思索接下来该去哪。大厅的一侧有扇门，门上标示通往VIP保管箱区，而你的卡让你现在可以进入那个区域。也许你该去看看那里是如何运作的……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<!-- Deposit boxes: -->
 	
 	<htmlContent tag="VIP_DOOR"><![CDATA[
 	#IF(pc.getLastCell().getPlace().getPlaceType()==PLACE_TYPE_innoxia_dominion_bank_foyer)
 		<p>
-			The door before you is quite clearly signposted as leading to 'VIP deposit boxes'. A succubi clerk is standing beside this door, and as she sees you approach she smiles and asks, [style.speechFeminineHeavy(Please may I see your platinum account card, [pc.miss]?)]
+			你眼前的门明确地标着“VIP保管箱”。一名魅魔职员站在门边，看到你靠近，她微笑着问：[style.speechFeminineHeavy([pc.miss]，我能看看您的白金账户卡吗？)]
 		</p>
 		#IF(pc.hasItemType(ITEM_innoxia_quest_bank_card))
 			<p>
-				Producing your platinum account card, you show it to the clerk, who upon seeing the glowing stamps on its front, immediately stands aside and gestures towards the door, saying, [style.speechFeminineHeavy(The presence of your card will automatically unlock the door. If you require any assistance, please don't hesitate to contact one of my colleagues who you'll find nearby.)]
+				你向这名职员出示白金账户卡，她看到卡面发光的印记后立即让到一旁，用手将你请到门前并介绍道：[style.speechFeminineHeavy(您只要出示这张卡，门便会自动打开。若您需要任何帮助，请随时联系我的同事，他们就在附近。)]
 			</p>
 			<p>
-				Thanking the clerk, you prepare to pass through the door and enter the VIP area beyond...
+				你向职员道谢，准备穿过那扇门进入VIP区……
 			</p>
 		#ELSE
 			<p>
-				As you tell the succubus that you don't have a 'platinum account card', she frowns and states in a firm voice, [style.speechFeminineHeavy(I'm sorry, [pc.miss], but only platinum account holders are granted access to the deposit boxes. Please step back.)]
+				你告诉魅魔你没有“白金账户卡”，她皱起眉头，语气坚决，[style.speechFeminineHeavy(我很抱歉，[pc.miss]，但只有白金客户才能进入保管箱区域。请您退后。)]
 			</p>
 			<p>
-				There doesn't seem to be any chance of persuading this succubus to let you through, and as there are dozens of security guards nearby, using force is completely out of the question. It looks like you have no choice but to [pc.step] back into the foyer...
+				看起来你没法说服她让你通过，而且附近有许多保安，暴力闯入完全不可行。你别无选择，只能[pc.step]回大厅……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Having concluded your business with your deposit box, you pass through the door to head back out into the foyer. As you pass her, the demonic clerk bows a little and says, [style.speechFeminineHeavy(Thank you for visiting us today, [pc.miss].)]
+			你在保管箱区办完业务，穿过大门返回大厅。经过魅魔职员身边时，她微微鞠躬并说道：[style.speechFeminineHeavy([pc.miss]，感谢您今天的光临。)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="VIP_DOOR_STEP_BACK"><![CDATA[
 	<p>
-		With little option other that to do as the clerk says, you [pc.step] back and return to the bank's foyer...
+		你别无选择，只得按柜员说的做，退后并[pc.step]回银行大厅……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="DEPOSIT_BOX"><![CDATA[
 	<p>
-		Although large, the circular room you find yourself standing in is a lot smaller than the bank's foyer. With polished marble flooring underfoot, and sculptures and paintings lining the walls, it's no less grand that the other areas of the bank. As you [pc.walk] forwards, you see that a pair of clerks, both succubi, are standing behind a long marble desk in the middle of the room.
+		你所处的圆形房间虽然大，但比银行大厅小得多。光洁大理石在地面铺开，雕塑和画作沿墙陈列，这里的气派丝毫不逊于银行其他区域。你向前[pc.walk]去，看到房间中央有一张大理石长桌，桌后站着两位魅魔职员。
 	</p>
 	<p>
-		[style.speechFeminineHeavy(Please let us know if you require any assistance, [pc.sir],)] they say in unison as you approach. Clearly having been made aware of who you are via some kind of detection spell placed upon your platinum account card, they direct you towards one of several alcoves set into the room's curving wall.
+		[style.speechFeminineHeavy([pc.sir]，如果需要任何帮助，请随时告知我们。)]你走近时，她们异口同声地说。曲面墙上有许多凹室，她们将你引向其中之一，显然已经通过你白金账户卡上的某种侦测法术知道了你的身份。
 	</p>
 	<p>
-		[pc.Stepping] into the alcove, you pull shut a curtain behind you, before turning your attention to the large deposit boxes lining the wall before you. Detecting your card, one of them swings open for you, granting you access to your private stash of items and flames. An arcane enchantment projects a series of purple letters into the air above your deposit box, which lets you know that you have
+		你[pc.Stepping]入凹室，在身后拉上帘幕，然后将注意力转向眼前的大号保管箱。其中一个保管箱检测到了你的卡片并为你开启，让你可以使用存储物品和火币的私人贮藏室。奥术附魔在你的保管箱上方投射出一串紫色文字，提示你当前待收取的利息为
 		#IF(game.getDialogueFlags().getSavedLong('bank_interest')<=0)
-			 [style.moneyFormatUncoloured(0, b)]
+			[style.moneyFormatUncoloured(0, b)]
 		#ELSE
-			 [style.moneyFormat([#game.getDialogueFlags().getSavedLong('bank_interest')], b)]
+			[style.moneyFormat([#game.getDialogueFlags().getSavedLong('bank_interest')], b)]
 		#ENDIF
-		 in interest to collect.
+		。
 	</p>
 	<p style='text-align:center'>
-		[style.italicsMinorGood(Any items or flames stored in this area can be accessed at any of the bank's branches.)]
+		[style.italicsMinorGood(存放在该区域的物品和火币可以在银行的任意分行取用。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DEPOSIT_BOX_INTEREST_COLLECTED"><![CDATA[
 	<p>
-		Deciding that now is as good a time as any to collect your interest, you retrieve your flames and wonder whether to add them to your deposit box, or to hold on to them for now...
+		你觉得现在是个收取利息的好时机。你取出火币，并思索是将这些钱存进保管箱还是暂时留着……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 </dialogue>

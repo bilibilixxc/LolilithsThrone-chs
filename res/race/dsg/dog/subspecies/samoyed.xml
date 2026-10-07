@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -98,7 +98,7 @@
 	<bookIconName>samoyedicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Canine Cultures</bookName>
+	<bookName><![CDATA[犬类文化]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -111,38 +111,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[samoyed-morph]]></name>
-			<namePlural><![CDATA[samoyed-morphs]]></namePlural>
-			<singularMaleName><![CDATA[samoyed-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[samoyed-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[samoyed-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[samoyed-girls]]></pluralFemaleName>
+			<name><![CDATA[萨摩耶化形]]></name>
+			<namePlural><![CDATA[萨摩耶化形]]></namePlural>
+			<singularMaleName><![CDATA[萨摩耶男]]></singularMaleName>
+			<singularFemaleName><![CDATA[萨摩耶女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[萨摩耶男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[萨摩耶女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[A smart, industrious subspecies of dog-morph with a pelt that can endure the coldest climates. Known as a 'samoyed-morph' when bipedal, and a 'samoyedtaur' when the lower body is that of a typically-oversized feral samoyed. To be identified as a samoyed-morph, a character must be a dog-morph with fluffy, un-patterned white fur.]]></description>
+	<description><![CDATA[一种聪明、勤劳的犬化形亚种，其皮毛可以忍受最寒冷的气候。双足行走时被称为“萨摩耶化形”，下半身是超大兽态萨摩耶时则被称为“半萨摩耶人”。要被认定为萨摩耶化形，角色必须是拥有松软、无花纹白毛的犬化形。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[hellhound]]></name>
-			<namePlural><![CDATA[hellhounds]]></namePlural>
-			<singularMaleName><![CDATA[hellhound]]></singularMaleName>
-			<singularFemaleName><![CDATA[hellhound]]></singularFemaleName>
-			<pluralMaleName><![CDATA[hellhounds]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[hellhounds]]></pluralFemaleName>
+			<name><![CDATA[地狱猎犬]]></name>
+			<namePlural><![CDATA[地狱猎犬]]></namePlural>
+			<singularMaleName><![CDATA[地狱猎犬]]></singularMaleName>
+			<singularFemaleName><![CDATA[地狱猎犬]]></singularFemaleName>
+			<pluralMaleName><![CDATA[地狱猎犬]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[地狱猎犬]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[samoyed]]></feralName>
-		<feralNamePlural><![CDATA[samoyeds]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[samoyed]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[samoyed]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[samoyeds]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[samoyeds]]></feralPluralFemaleName>
+		<feralName><![CDATA[萨摩耶]]></feralName>
+		<feralNamePlural><![CDATA[萨摩耶]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[萨摩耶]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[萨摩耶]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[萨摩耶]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[萨摩耶]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -173,7 +173,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] samoyed-like body is hearty and well protected against the cold, and [npc.she] [npc.verb(tend)] to find purpose and comfort in doing work.
+		[npc.NamePos]萨摩耶一般的躯体精力充沛，善于御寒。一旦对某事产生兴趣，[npc.she]倾向于在工作中找到目标和慰藉。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

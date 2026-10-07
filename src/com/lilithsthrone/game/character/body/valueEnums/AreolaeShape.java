@@ -7,9 +7,9 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum AreolaeShape {
 
-	NORMAL("normal"),
-	HEART("heart"),
-	STAR("star");
+	NORMAL("普通"),
+	HEART("心形"),
+	STAR("星形");
 	
 	private String descriptor;
 

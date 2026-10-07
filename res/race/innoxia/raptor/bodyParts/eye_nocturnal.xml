@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <eye>
 	<race>innoxia_raptor</race>
 	
-	<transformationName><![CDATA[owl]]></transformationName>
+	<transformationName><![CDATA[鸮]]></transformationName>
 	
 	<coveringType>innoxia_raptor_eye</coveringType>
 	
@@ -17,21 +17,21 @@
 	
 	<defaultPupilShape>ROUND</defaultPupilShape>
 	
-	<name><![CDATA[eye]]></name>
-	<namePlural><![CDATA[eyes]]></namePlural>
+	<name><![CDATA[眼睛]]></name>
+	<namePlural><![CDATA[眼睛]]></namePlural>
 	
 	<descriptorsMasculine/>
 	
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		By the time [npc.she] hesitantly [npc.verb(open)] them again, they've changed into large, owl-like eyes, which provide [npc.herHim] with excellent night vision.
-		<br/>
-		[npc.Name] now [npc.has] [style.boldGoat(raptor-like eyes)] with [style.boldGenericTF([npc.irisShape])], [npc.irisFullDescription(true)] and [style.boldGenericTF([npc.pupilShape])], [npc.pupilFullDescription(true)].
-	]]></transformationDescription>
+		当[npc.she]犹豫地再次睁开双眼时，它们变成了一对大虹膜的鸮眼睛，提供了极好的夜间视力。
+		<br/>[npc.Name]现在拥有[style.boldGoat(猛禽一般的眼睛)]，有着[style.boldGenericTF([npc.irisShape])]的[npc.irisFullDescription(true)]和[style.boldGenericTF([npc.pupilShape])]的[npc.pupilFullDescription(true)]。
+
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] [npc.eyePairs] large, owl-like eyes, which provide [npc.herHim] with excellent night vision. They have [npc.irisShape], [npc.irisColour(true)] irises, [npc.pupilShape], [npc.pupilColour(true)] pupils, and [npc.scleraColour(true)] sclerae.
-	]]></bodyDescription>
+		[npc.SheHasFull]拥有[npc.eyePairs]巨大的鸮眼睛，能提供绝佳的夜视能力。[npc.irisColour(true)]虹膜呈[npc.irisShape]，[npc.pupilColour(true)]瞳孔呈[npc.pupilShape]，还有着[npc.scleraColour(true)]的巩膜。
+]]></bodyDescription>
 	
 </eye>

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>NoStepOnSnek_snake</race>
-	<transformationName><![CDATA[snake]]></transformationName>
+	<transformationName><![CDATA[蛇]]></transformationName>
 	<coveringType>SNAKE_SCALES</coveringType>
 	<anusType>NoStepOnSnek_snake_anus</anusType>
 	<names/>
@@ -9,9 +9,9 @@
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldSnake(snake-like)], [npc.assholeFullDescription].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldSnake(蛇般)][npc.assholeFullDescription]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] a snake-like, [npc.anusFullDescription(true)]
-	]]></bodyDescription>
+		拥有蛇般[npc.anusFullDescription(true)]
+]]></bodyDescription>
 </ass>

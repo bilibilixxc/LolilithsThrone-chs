@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -6,9 +6,9 @@
 	
 	<category>EYE_IRIS</category>
 	
-	<determiner><![CDATA[a pair of]]></determiner>
-	<name><![CDATA[eye]]></name>
-	<namePlural pluralByDefault="true"><![CDATA[eyes]]></namePlural> 
+	<determiner><![CDATA[一双]]></determiner>
+	<name><![CDATA[眼睛]]></name>
+	<namePlural pluralByDefault="true"><![CDATA[眼睛]]></namePlural> 
 	
 	<naturalCoveringModifiers>
 		<modifier>EYE</modifier>

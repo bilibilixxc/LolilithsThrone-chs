@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>600</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[snowflake nose stud]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[snowflake nose studs]]></namePlural>
-		<description><![CDATA[A nose stud in the shape of a snowflake. It is typically sold pre-enchanted with effects that boost the wearer's arcane cold damage and resistance.]]></description>
+		<determiner><![CDATA[一颗]]></determiner>
+		<name><![CDATA[雪花鼻钉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[雪花鼻钉]]></namePlural>
+		<description><![CDATA[雪花形状的鼻钉。它通常是在附魔前出售的，具有增强佩戴者奥术寒冷伤害和抵抗力的效果。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>PIERCING_NOSE</slot> 
@@ -46,27 +46,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the snowflake stud into [npc.her] [npc.nose] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the snowflake stud into [npc2.namePos] [npc2.nose] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(slide)] the snowflake stud into [npc2.namePos] [npc2.nose] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把雪花鼻钉戴在[npc.her]的[npc.nose]穿孔。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把雪花鼻钉戴在[npc2.namePos]的[npc2.nose]穿孔。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把雪花鼻钉戴在[npc2.namePos]的[npc2.nose]穿孔。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] snowflake stud out of [npc.her] [npc.nose] piercing.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] snowflake stud out of [npc2.her] [npc2.nose] piercing.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] snowflake stud out of [npc2.her] [npc2.nose] piercing.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把[npc.her]的雪花鼻钉从[npc.her]的[npc.nose]穿孔中取下。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]把[npc2.namePos]的雪花鼻钉从[npc2.her]的[npc2.nose]穿孔中取下。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的雪花鼻钉从[npc2.her]的[npc2.nose]穿孔中取下。
+    ]]></otherRough>
   </displacementText>
 	
 </clothing>

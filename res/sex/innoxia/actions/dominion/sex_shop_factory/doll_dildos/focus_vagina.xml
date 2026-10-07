@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <sexAction>
 	<buttonPriority>-1</buttonPriority>
 	<actionConditional><![CDATA[
@@ -34,13 +34,13 @@
 	<areasCummedOn/>
 	<title><![CDATA[
 		#IF(sex.getNumberOfOrgasms(pc)==0)
-			Focus
+			专注
 		#ELSE
-			Hard fuck
+			猛操
 		#ENDIF
 	]]></title>
 	<tooltip><![CDATA[
-		Do as the doll commands and focus on the pleasure of the vibrating dildo in your pussy.
+		按照玩偶的命令，专注于小穴内振动假阳具的快感。
 	]]></tooltip>
 	<descriptions>
 		<description>
@@ -48,7 +48,7 @@
 				[#sex.getNumberOfOrgasms(pc)==0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Obediently doing as you're told, you focus on the pleasure of the vibrating toy that the doll has stuffed deep in your [pc.pussy+]. Being used as no more than an object to test sex toys fills you with an intense, submissive pleasure that would be troubling if it didn't feel so good. For a moment you can think of yourself as nothing more than a mindless sex doll, willing to do anything that's asked of you. As you snap out of this brief fantasy, you're once again hit by an intense rush of arousal, and you realise that it won't take much more to push you to the brink of an orgasm. 
+				你乖乖地照做，忘却作为一个测试性玩具的对象所处的困境，享受着玩偶深深塞进你[pc.pussy+]的振动玩具带来的强烈、顺从的快感。有那么一刻，你会觉得自己只不过是一个没有头脑的性玩偶，愿意服从一切要求。当你从这个短暂的幻想中清醒过来时，你再次被强烈的性冲动所击中，你意识到，用不了多久，你就能达到高潮的边缘。
 			]]></text>
 		</description>
 		<description>
@@ -56,7 +56,7 @@
 				[#sex.getNumberOfOrgasms(pc)>0]
 			]]></descriptionConditional>
 			<text><![CDATA[
-				Yet again, you obediently do as the doll commands, and after leaning back on your knees, you get a good grip on the equine dildo's fat balls with both hands and pull it half-way out of your stretched twat. Wanting to push both the toy and your new body to their limits, you slam the huge toy back into your pussy as hard as you can. Moaning in depraved joy as you force the toy deep into your wet orifice, you quickly draw it out and repeat the process, fucking your abused cunt as hard and as fast as you can. As your slick juices coat the thick shaft and drip down onto the floor between your legs, you find yourself once again rapidly approaching your climax.
+				你再次乖乖地按照玩偶的命令做，靠在膝盖上，双手紧紧抓住马用假阳具的肥球，将其从你撑开的小穴中拔出一半。你想将玩具和你的新身体都推向极限，于是你用尽全力将巨大的玩具塞回你的小穴。当你将玩具深深地插入你湿润的小穴时，你发出淫荡的快乐呻吟，然后迅速将其拔出并重复这个过程，用尽全力、尽可能快地操弄你那被虐待的小穴。当你滑溜溜的爱液覆盖在粗壮的阴茎上并滴落到你两腿之间的地板上时，你发现自己再次迅速接近高潮。
 			]]></text>
 		</description>
 	</descriptions>

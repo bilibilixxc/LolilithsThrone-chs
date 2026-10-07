@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>200</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Slavery Administration shirt]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Slavery Administration shirts]]></namePlural>	
-		<description><![CDATA[A form-fitting short-sleeved shirt, with a nametag used by Slavery Administration staff.]]></description>	
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[奴隶管理局衬衫]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[奴隶管理局衬衫]]></namePlural>	
+		<description><![CDATA[一件贴身短袖衬衫，带有奴隶管理局铭牌。]]></description>	
 		<physicalResistance>0</physicalResistance>	
 		<femininity>ANDROGYNOUS</femininity>	
 		<slot>TORSO_UNDER</slot>

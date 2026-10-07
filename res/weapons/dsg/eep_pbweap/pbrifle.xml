@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		
-		<authorTag><![CDATA[On the inside of the magazine well, a small engraving reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在弹匣室的内部，雕刻着一行小字：“执法者官方分配，DSG铸造厂生产。”]]></authorTag>
 		
 		<value>5500</value> 
 		
@@ -10,23 +10,23 @@
 		
 		<twoHanded>true</twoHanded>
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一把]]></determiner>
 		
-		<name><![CDATA[pepperball rifle]]></name>
+		<name><![CDATA[胡椒弹步枪]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[pepperball rifles]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[胡椒弹步枪]]></namePlural> 
 		
-		<description><![CDATA[This weapon uses an air spell to propel fin-stabilized capsules much farther than a conventional paintball marker. The capsules shatter on impact with auras, showering the immediate area with a pepper-based oil that produces an extremely painful burning sensation akin to being on fire.]]></description> 
+		<description><![CDATA[这把武器用风系法术将鳍状胶囊射到比传统彩弹枪更远的地方。胶囊在撞到灵气时会碎裂，并向周围洒上胡椒油，这种油会产生类似于着火的灼烧感，非常痛苦。]]></description> 
 		
-		<attackDescriptor>shoot</attackDescriptor>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Shoot [npc2.name] with your pepperball rifle.</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[用你的胡椒弹步枪射向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>RARE</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(bring)] out the rifle, [npc.verb(load)] a drum magazine, [npc.verb(opens)] the gas regulator, and [npc.verb(turns)] on the attached red-dot sight.]]></equipText>
+		<equipText><![CDATA[[npc.Name]拿出步枪，装入弹鼓后开启了调压器，并且打开了附带的红点瞄准镜。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(turn)] off the attached red-dot sight, [npc.verb(close)] the gas regulator, [npc.verb(unload)] the drum magazine, and [npc.verb(put)] the rifle away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]关闭了红点瞄准镜，关上调压器后卸下了弹鼓，将步枪放了起来。]]></unequipText>
 		
 		<imageName>pbrifle_nomag.svg</imageName> 
 		
@@ -68,38 +68,38 @@
 	<!-- Descriptions that are used when hitting an enemy. One of the hitText values will be randomly selected each time the attacker hits their target. Follow the same guidelines as equipText. -->
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.arm] with bright orange oil.
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，明橙色的油飞溅到[npc2.her][npc2.arm]上。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.leg] with bright orange oil.
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，明橙色的油飞溅到[npc2.her][npc2.leg]上。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.face] with bright orange oil.
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，明橙色的油飞溅到[npc2.her][npc2.face]上。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.arm] with stinging, burning oil.
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，燃烧灼痛的油飞溅到[npc2.her][npc2.arm]上。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.leg] with stinging, burning oil.
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，燃烧灼痛的油飞溅到[npc2.her][npc2.leg]上。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.face] with stinging, burning oil.
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，燃烧灼痛的油飞溅到[npc2.her][npc2.face]上。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.arm] with painful oil that quickly forms a slick on [npc2.her] [npc2.skin].
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，胡椒油飞溅到[npc2.her][npc2.arm]上，迅速覆盖了附近的[npc2.skin]。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.leg] with painful oil that quickly forms a slick on [npc2.her] [npc2.skin].
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，胡椒油飞溅到[npc2.her][npc2.leg]上，迅速覆盖了附近的[npc2.skin]。
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The round shatters on [npc2.namePos] aura, splashing [npc2.her] [npc2.face] with painful oil that quickly forms a slick on [npc2.her] [npc2.skin].
+		[npc.Name]瞄准[npc2.name]并扣动扳机。胡椒弹在[npc2.name]的灵气上破碎，胡椒油飞溅到[npc2.her][npc2.face]上，迅速覆盖了附近的[npc2.skin]。
 		]]></hitText>
 	</hitDescriptions>
 
 	<!-- Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText. -->
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] [npc2.name] up in [npc.her] sights and [npc.verb(pull)] the trigger. The shot goes wide! The capsule shatters uselessly on the ground.
+		[npc.Name]瞄准[npc2.name]并扣动扳机。子弹偏向了一边！胡椒弹毫无用处地在地面上破碎了。
 		]]></missText>
 	</missDescriptions>
 	

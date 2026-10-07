@@ -68,8 +68,8 @@ public class Farah extends NPC {
 	}
 	
 	public Farah(boolean isImported) {
-		super(isImported, new NameTriplet("Farah"), "Mutton",
-				"A black-wollen sheep-girl who works as a masseuse and prostitute at Elis's spa; 'Woolly Heaven'.",
+		super(isImported, new NameTriplet("法拉"), "马顿",
+				"一个年轻，黑羊毛的绵羊女。在伊利斯的水疗中心“绵绵天堂”中作为按摩师兼妓女而工作。",
 				47, Month.NOVEMBER, 26, 
 				10,
 				Gender.F_V_B_FEMALE, Subspecies.getSubspeciesFromId("innoxia_sheep_subspecies_sheep"), RaceStage.GREATER,

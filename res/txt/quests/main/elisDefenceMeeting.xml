@@ -1,418 +1,419 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- All of these are linked to the 'dialogue/innoxia/quests/main/elisDefenceMeeting.xml' dialogue nodes. -->
 	
 	<htmlContent tag="START"><![CDATA[
 	<p>
-		Now that you've secured the assistance of Hammer and Ghost, you inform Minotallys that the SWORD Enforcers are getting to work on drawing up plans for how to defend Elis.
+		你已请到锤子与幽灵相助，于是告知米诺塔莉丝：SWORD执法者已着手拟定如何守卫伊利斯的计划。
 	</p>
 	<p>
-		[arion.speech(So, they were willing to help after all?)] Arion muses, [arion.speech(I was under the impression that they were distrustful of Minotallys and I, so well done. How did you convince them to help us?)]
+		[arion.speech(这么说，他们终究还是愿意帮忙了？)]阿里昂若有所思，又说： [arion.speech(我本以为他们信不过我和米诺塔莉丝，没想到你居然说服了他们，干得漂亮。你是怎么说服他们来帮我们的？)]
 	</p>
 	<p>
-		Knowing that you can trust the two of them to keep this a secret, and so protect the SWORD Enforcers from potential reprisals from Angelixx or her elder lilin mother, you tell Minotallys and Arion how you helped Hammer and Ghost to take down the demon's gang. Minotallys nods in approval as you finish your story and says, [minotallys.speech(It sounds like we owe these Enforcers our thanks.)]
+		你信得过他们两位会守口如瓶，不会让安吉莉克丝或她那莉琳长老母亲来找 SWORD 执法者麻烦，于是便把自己如何协助锤子和幽灵端掉恶魔帮派的事，原原本本地讲给了米诺塔莉丝和阿里昂听。你讲完，米诺塔莉丝赞许地点了点头，说：[minotallys.speech(听起来，我们真该好好谢谢这些执法者。)]
 	</p>
 	<p>
-		[arion.speech(As they're now willing to help, we should meet with them immediately to discuss plans for how to defend Elis from Lunette,)] Arion states, [arion.speech([pc.Name], could you fetch Meraxis? I'll go and get the Enforcers, and if Minotallys could summon Ursa, then we'll have all of the key people here.)]
+		[arion.speech(既然他们现在愿意帮忙，我们最好马上碰个面，商量该怎么保卫伊利斯、对付露内特。)]阿里昂说道，[arion.speech([pc.Name]，你能去叫梅拉克西丝吗？我去召集执法者。要是米诺塔莉丝能把乌萨请来，关键的人就都到齐了。)]
 	</p>
 	<p>
-		Agreeing to fetch Meraxis, you look over at Minotallys as she nods and stands up from behind her desk.
+		你答应去找梅拉克西丝，便看向米诺塔莉丝。她点点头，从桌后站起身来。
 	</p>
 	<p>
-		[minotallys.speech(Good thinking, Arion. The Amazons will need to be kept in the loop,)] the lilin says, [minotallys.speech(I'm sure that we'll have to rely on their strength in order to defeat Lunette and her daughters.)]
+		[minotallys.speech(说得好，阿里昂。亚马逊人那边也得让她们知晓，)]莉琳说道，[minotallys.speech(我有把握，要击败露内特和她的女儿们，恐怕非得借助她们的力量不可。)]
 	</p>
 	<p>
-		[arion.speech(Let's meet back here as soon as possible then,)] Arion says as he heads to the door.
+		[arion.speech(那我们尽快回到这里碰头吧，)]阿里昂说着，朝门口走去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS"><![CDATA[
 	<p>
-		Exiting the town hall with Minotallys and Arion, the three of you say a brief goodbye before splitting up to go and fetch your assigned parties. Heading back to The Red Dragon, you see that Meraxis isn't in her usual corner. Thinking that she must have gone up to her room, you head upstairs and knock on her door. There's no answer, and further knocking producing similar results.
+		你和米诺塔莉丝、阿里昂一同走出市镇议会，三人简短道别后，便分头去召集各自负责的队伍。回到红龙酒馆，你发现梅拉克西丝没有待在她常待的那个角落里，想必是回房去了。你便上楼敲响她的房门，没有人应答，再敲了几下，依旧如故。
 	</p>
 	<p>
-		Wondering where she's gone off to, you head on back downstairs. [pc.Walking] over to the bar, you get Flash's attention and ask him if he's seen the chunni demon.
+		你正纳闷她跑哪儿去了，便又回到楼下。你[pc.Walking]到吧台前，叫住弗拉什，问他有没有见过那个中二恶魔。
 	</p>
 	<p>
-		[flash.speech(She was here just ten minutes ago,)] the badger-boy reveals in his deep, gruff voice. Nodding his striped head over towards the door, he continues, [flash.speech(Her and those demons she hangs out with all left together. I think I heard them saying something about going to Wall's End.)]
+		[flash.speech(她十分钟前还在这里，)]獾男用低沉粗哑的声音说道。他朝门口点了点他那长着条纹的头，接着说， [flash.speech(她和那些总跟她混在一起的恶魔一起离开了。我好像听到他们说要去墙之尽头。)]
 	</p>
 	<p>
-		At that moment, someone further down the bar calls over to Flash asking to be served, and so you thank him for the information and leave him to deal with the customer. It seems like Wall's End is where you'll have to go to find Meraxis...
+		这时，吧台更远处有人招呼弗拉什，让他过去招待客人。你谢过他提供的信息，便让他去忙了。看来要找到梅拉克西丝，你只能去墙之尽头了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS_WALLS_END"><![CDATA[
 	<p>
-		Exiting The Red Dragon, you turn in the direction of Wall's End and set off down the street. It doesn't take you long to reach the shopping precinct, and after passing by the well-stocked plant boxes which line the sides of the entranceway, you enter the precinct's main square.
+		走出红龙酒馆，你转向墙之尽头的方向，沿街而去。没走多久便到了购物区，经过入口门廊两侧摆满花草的箱子后，你进入了购物区的主广场。
 	</p>
 	<p>
-		Casting your gaze around, you don't see any sign of Meraxis, but there is an unusually-large crowd gathered around the square's central fountain. From where you're standing, it sounds like there's a fight going on in the middle of this crowd. A feminine voices shouts out, then another one makes some kind of battle cry, and then finally you hear a shout which sounds very much like Meraxis's voice.
+		你举目四望，没看到梅拉克西丝的身影，但中央喷泉边却围了一大群人，场面大得不同寻常。从你站的地方听来，人群中间像是打起来了。一个女性化的声音厉声喊叫，另一个声音随即发出某种战吼，最后你听到一声呼喊，听着很像梅拉克西丝。
 	</p>
 	<p>
 		#IF(pc.isAbleToFly())
-			Quickly taking off into the air, you fly up and over the crowd, and as you look down you're able to confirm that the voice you just heard does indeed belong to Meraxis. The chuuni [meraxis.race] is standing in front of her succubi followers, and from the way they're lined up and the exaggerated forms of the heroic poses which they're striking, Meraxis looks to be instructing them in her style of performative combat. Swooping down to land in front of the crowd, you [pc.step] forwards and prepare to call out to Meraxis.
+			你迅速腾空而起，飞过人群头顶。低头一看，刚才听到的嗓音果然来自梅拉克西丝。那位中二病[meraxis.race]正站在她的魅魔追随者们面前，看她们站成一排、摆出各种夸张的英雄姿势，显然是在传授她那套表演式战法。你俯冲而下，落在人群前，[pc.step]上前准备向梅拉克西丝喊话。
 		#ELSEIF(pc.getRace()==RACE_DEMON)
-			[pc.Stepping] forwards, you loudly demand that the crowd makes way for you, and as the members of this gathering turn to see that you're demon, they hurriedly move aside to give you a clear path. Passing through these dutifully-subservient citizens of Elis, you're able to reach the fountain and confirm that the voice you just heard does indeed belong to Meraxis. The chuuni [meraxis.race] is standing in front of her succubi followers, and from the way they're lined up and the exaggerated forms of the heroic poses which they're striking, Meraxis looks to be instructing them in her style of performative combat.
+			你[pc.Stepping]上前，大声喝令人群让路。聚集的人们回身看到你是恶魔，急忙让出一条通路。你穿过这群恭顺的伊利斯市民，来到喷泉前，确认刚才听到的嗓音确实是梅拉克西丝。那位中二病[meraxis.race]正站在她的魅魔追随者们面前，看她们站成一排、摆出各种夸张的英雄姿势，显然是在传授她那套表演式战法。
 		#ELSE
-			[pc.Stepping] forwards, you push your way through the crowd, and although there's some jostling about, you're able to quickly reach the fountain and confirm that the voice you just heard does indeed belong to Meraxis. The chuuni [meraxis.race] is standing in front of her succubi followers, and from the way they're lined up and the exaggerated forms of the heroic poses which they're striking, Meraxis looks to be instructing them in her style of performative combat.
+			你[pc.Stepping]上前，在人群中挤出一条路。虽然免不了一阵推搡，但你很快来到喷泉旁，确认刚才听到的嗓音确实是梅拉克西丝。那位中二病[meraxis.race]正站在她的魅魔追随者们面前，看她们站成一排、摆出各种夸张的英雄姿势，显然是在传授她那套表演式战法。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS_WALLS_END_CONTINUE"><![CDATA[
 	<p>
-		As Minotallys and everyone else will be waiting for the two of you back in the town hall, you're going to have to interrupt Meraxis's lesson. Before you get the chance to do so, however, one of the succubi suddenly drops out of her pose and lets out a mortified groan.
+		米诺塔莉丝和其他人都在市镇议会等着你们两个，你只好打断梅拉克西丝的授课。可你还没来得及开口，一个魅魔先撑不住了，收起架势，发出一声窘迫的呻吟。
 	</p>
 	<p>
-		[style.speechFeminineStrong(I can't take any more of this!)] she shouts while covering her face with her hands, [style.speechFeminineStrong(I'm going to die of embarrassment!)]
+		[style.speechFeminineStrong(我受不了了！)]她双手捂脸，大喊，[style.speechFeminineStrong(我要羞死了！)]
 	</p>
 	<p>
-		[style.speechFeminine(There's got to be another way to get close to an elder lilin,)] another one of the succubi, who's profusely blushing, adds, [style.speechFeminine(I'm through with this.)]
+		[style.speechFeminine(总该有别的办法能接近莉琳长老吧，)]另一个魅魔涨红了脸，插嘴道，[style.speechFeminine(我可不想再这样下去了。)]
 	</p>
 	<p>
-		The other succubi all agree, and after dropping out of their poses, they gather up and walk off together.
+		其他魅魔都表示同意，随即收起姿势，聚到一起离开了。
 	</p>
 	<p>
-		[meraxis.speech(Weakness!)] Meraxis boldly declares as her followers abandon her, [meraxis.speech(You're not cut out be my minions if you can't even learn how to perform the most basic of the ultimate poses!)]
+		[meraxis.speech(太弱了！)]梅拉克西丝见追随者纷纷离她而去，仍然大言不惭地宣称：[meraxis.speech(连最基本的终极姿势都学不会，你们可不配当我的爪牙！)]
 	</p>
 	<p>
-		[style.speechFeminineStrong(You are so fucking cringe,)] the first succubus derisively snorts. The succubi all laugh as she says this, and as the crowd makes way for their exit, you hear her loudly complaining to her friends, [style.speechFeminineStrong(I can't believe that we put up with all that shit for so long.)]
+		[style.speechFeminineStrong(你他妈尬死了，)]第一个魅魔鄙夷地冷哼道。她这么一说，众魅魔都笑了。趁着人群给她们让开路，你听见她大声向同伴抱怨：[style.speechFeminineStrong(我真不敢相信我们居然忍了那些破事那么久。)]
 	</p>
 	<p>
-		It's at that moment that Meraxis catches sight of you. She appears to be completely unbothered by the loss of her minions and their insulting words, and in her usual, energetic manner, she levels a finger at you and loudly proclaims to the crowd, [meraxis.speech(My ultimate nemesis has arrived! Those losers couldn't show the crowd a real ultimate pose, but you surely can! Show me what you've got, [pc.name]!)]
+		就在这时，梅拉克西丝一眼看到了你。她似乎完全没把那些手下的背叛和冷嘲热讽放在心上，依旧精神十足，伸手指向你，当着众人高声宣布，[meraxis.speech(我的终极宿敌终于来了！那帮窝囊废可没法让大家见识真正的究极姿态，但你一定可以！让我瞧瞧你的本事吧，[pc.name]！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS_WALLS_END_NO_TIME"><![CDATA[
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			Although it pains you to have to deny Meraxis the pleasure of witnessing one of your earth-shattering ultimate poses, you quickly inform her that there's no time to be doing this.
+			尽管不得不让梅拉克西丝错过亲眼目睹你那惊天动地的终极姿势，你还是很快告诉她现在没时间做这些。
 		#ELSE
-			You really don't want to embarrass yourself in front of all these people, and so you quickly tell Meraxis that there's no time to be doing this.
+			你实在不想在这么多人面前丢脸，于是赶紧告诉梅拉克西丝现在没时间做这些。
 		#ENDIF
 	</p>
 	<p>
-		[meraxis.speech(Oh, and what could be so important that you couldn't spare a few minutes to show me what you're made of?)] the chuuni [meraxis.race] demands, before crossing her arms and frowning at you.
+		[meraxis.speech(哦？究竟有什么了不得的事，让你连抽几分钟让我见识见识你的本事都不肯？)]这个中二病[meraxis.race]质问道，然后双臂交叉，皱眉看着你。
 	</p>
 	<p>
-		[pc.Stepping] over to her, you inform Meraxis that there's about to be a very important meeting in the town hall, and that the two of you need to get over there as quickly as possible.
+		你[pc.Stepping]到守卫面前，告诉梅拉克西丝，市镇议会那边马上要召开一场极为重要的会议，你们两个必须尽快赶过去。
 	</p>
 	<p>
-		[meraxis.speech(Of course, the fate of this town, and that of the very world itself, rests in our hands, does it not?)] she replies with a smirk on her face, before swishing her cloak out behind her and declaring, [meraxis.speech(Let us depart henceforth!)]
+		[meraxis.speech(当然，这座小镇的命运，乃至整个世界的命运，都掌握在我们手中，不是吗？)]她脸上带着得意的坏笑回答，随后把斗篷往身后一甩，朗声宣布，[meraxis.speech(我们即刻启程吧！)]
 	</p>
 	<p>
-		The crowd beings to disperse as they see that the show's over, and Meraxis cheerfully bounces along at your side as the two of you head over towards the precinct's exit. As you depart, you notice that Meraxis's ex-minions are hanging out over in one corner of the shopping precinct. Letting out a laugh, the chuuni [meraxis.race] points at these succubi and asks, [meraxis.speech(Pathetic, aren't they? I was attempting to show them the key to true power, but they simply couldn't comprehend it. Out of the hundreds of followers that I've had, only a handful have ever truly understood me.)]
+		人群见没有好戏可看，便渐渐散开。梅拉克西丝却兴致勃勃，蹦蹦跳跳地走在你身边。两人一起往商场出口走去，这时你注意到，她从前那帮手下正聚在商场一角闲晃。中二病[meraxis.race]见状，大笑一声，指着那群魅魔问，[meraxis.speech(真可悲，对吧？我想让她们瞧瞧真正力量的门道，可她们根本领会不了。我带过的追随者少说也有几百个，可真正懂我的，就那么几个。)] 
 	</p>
 	<p>
-		Although she doesn't seem to need to hear it, you still tell Meraxis that she's better off without them. Nodding in agreement, the chuuni [meraxis.race] stays by your side as the two of you turn your backs on the succubi and set off in the direction of the town hall...
+		尽管她看起来并不需要听，你还是告诉梅拉克西丝，离开她们她才会更好。这位中二病的[meraxis.race]点头赞同，留在你身边。你们背过身去，不再理会那群魅魔，朝着市镇议会走去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS_WALLS_END_POSE"><![CDATA[
 	<p>
-		Feeling a little sorry for Meraxis after witnessing herfollowers abandon her in such a public fashion, you decide to humour her request. Trying not to think about how many people are watching, you do your best to mimic one of the poses which you've seen Meraxis perform in the past. 
+		目睹梅拉克西丝的追随者当众弃她而去，你有点替她难过，于是决定顺着她的请求来。尽量不去想有多少人在看，你竭力模仿一个曾经见过梅拉克西丝摆出的姿势。 
 	</p>
 	<p>
-		Although there a couple of chuckles from the crowd, it doesn't seem like you've done too bad a job. By Meraxis's standards, however, you seem to be sorely lacking, for she laughs and loudly asks, [meraxis.speech(What's that meant to be? I'll show you a real ultimate pose!)]
+		人群中传来几声轻笑，但你的表现似乎还不算太糟。不过在梅拉克西丝眼里，你还差得远呢。她大笑着高声问道，[meraxis.speech(那算什么东西？让你见识见识真正的终极姿势！)]
 	</p>
 	<p>
-		Raising her scythe, Meraxis sweeps it around in a huge arc, before striking it down onto the ground and loudly cracking a paving stone in the process. Either oblivious to, or unbothered by, this act of vandalism, the chuuni [meraxis.race] confidently shouts, [meraxis.speech(I am the beginning and the end; the alpha and the omega; I herald the coming apocalypse and before me all of creation shall be swept aside!)]
+		梅拉克西丝举起镰刀，划出一道巨大的弧线，再狠狠劈向地面，砸裂了一块石板。
+		不知是没察觉自己砸坏了路面，还是根本不在乎，中二病[meraxis.race]自信地大喊，[meraxis.speech(我即初始，我即终末；我是阿尔法，也是欧米伽；我宣告末日将至，万事万物皆要在我面前灰飞烟灭！)]
 	</p>
 	<p>
-		Before you can react to this, she raises her scythe and once again sweeps it around, before holding it up behind her and taking on a stance which makes it look like she's about to attack. With an evil-looking smirk on her face, she tilts her head forwards and laughs, [meraxis.speech(The very fundamental forces of the universe itself are mine to control! Shall I give you a taste of the cosmic powers which I wield?)]
+		你还没来得及反应，她便举起镰刀再次横扫一圈，随后将镰刀竖在身后，摆出即将进攻的架势。她脸上带着邪恶的得意坏笑，头向前一倾，大笑道：[meraxis.speech(宇宙最根本的力量本身就归我掌控！要不要让你尝尝我所驾驭的宇宙之力？)]
 	</p>
 	<p>
-		The crowd mutters and some visibly cringe at this performance. Not wanting to give her an excuse to start throwing out spells, which would no doubt cause significantly more damage than simply cracking a paving stone, you tell Meraxis that you're suitably impressed, and that everyone can see what an immensely powerful demon she is. Not giving her any time in which to respond, you [pc.step] over to the chuuni [meraxis.race] and inform her that there's about to be a very important meeting in the town hall, and that the two of you need to get over there as quickly as possible.
+		人群低声议论，有几个看着这场面更是直缩脖子。你不想给她借口动手放法术，她真放起法术来，造成的破坏肯定远超砸裂一块地砖。于是你对梅拉克西丝说，你算是大开眼界，也让大家见识到她这位恶魔有何等可怖的力量。不给她接话的机会，你[pc.step]到那个中二病的[meraxis.race]身边，告诉她市镇议会马上要召开一场极重要的会议，你俩必须尽快赶过去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS_WALLS_END_CHUUNI"><![CDATA[
 	<p>
-		With a smug chuckle, you declare to both Meraxis and the crowd that, just this once, you've decided to show off your true power outside of combat. Placing one of your [pc.hands] over one side of your face, you reveal that you are master of both darkness and light, before swishing your arms outwards in a wide, sweeping motion.
+		你得意地轻笑一声，向梅拉克西丝和围观的人群同时宣布：就这么一次，你决定在战斗之外秀一秀自己的真正实力。你抬起[pc.hands]遮住半边脸，称你同时是黑暗与光明的主宰，然后双臂向外一挥，划出一道宽阔的弧线。
 	</p>
 	<p>
-		[meraxis.speech(Impressive, but the very fundamental forces of the universe itself are mine to control! What are darkness and light compared to the cosmic powers which I wield?!)] Meraxis boasts, and after sweeping her scythe around in an unbelievably-cool manner, she strikes it down onto the ground, cracking a paving stone in the process.
+		[meraxis.speech(不错嘛，但宇宙最根本的力量本身就归我掌控！黑暗与光明，也配与我驾驭的宇宙之力相提并论？！)]梅拉克西丝夸耀道，随后以帅气到爆的姿势把镰刀凌空一挥，再猛地扎向地面，顿时劈裂了一块铺路石板。
 	</p>
 	<p>
-		Not yet finished, you respond with a similar statement. Although you wanted to keep it a secret, you reveal to everyone around you that you are the catalyst of the apocalypse, and while a twisted part of you seeks to destroy this world, you are sworn to defend those who you hold dear. Finishing your boast by spinning around and ducking into a panther-like crouch, you keep your arms extended behind you, making you look like a wild animal ready to strike at a moment's notice.
+		你意犹未尽，又以相似的话回应。尽管你想保守秘密，却还是向周围所有人坦白：你就是这场末日的催化剂。纵然心底有个扭曲的角落渴望毁掉这个世界，你也立誓守护自己珍视的人。说完这番豪言，你旋身压低，摆出豹般的蹲伏，双臂向后伸展，活像一头随时准备扑击的野兽。
 	</p>
 	<p>
-		[meraxis.speech(I am the beginning and the end; the alpha and the omega; your apocalypse is nothing but a speck of dust for me to sweep aside!)] Meraxis proclaims, before raising her scythe and once again sweeping it around, before holding it up behind her and taking on a stance which makes it look like she's about to attack.
+		[meraxis.speech(我是初始，也是终结；我是阿尔法，也是欧米伽；你们的末日，不过是我随手拂去的一粒灰尘！)]梅拉克西丝高声宣告，然后举起镰刀再次横扫一圈，随后将镰刀竖到身后，摆出即将攻来的架势。
 	</p>
 	<p>
-		Needless to say, the crowd is stunned by your awesome display. They can't muster the words to describe the incredible showdown that they're witnessing, and so, hopelessly stupefied by their inability to process your cataclysmic might, they sheepishly disperse and return to their mundane lives.
+		不用说，你露的这一手让全场看得目瞪口呆。他们搜肠刮肚也想不出词来形容眼前这场惊天较量；你排山倒海的力量将他们震得脑中一片空白，最后只能灰溜溜地散去，回到各自平淡的生活。
 	</p>
 	<p>
-		Smirking at one another, you and Meraxis break off your poses and step forwards to meet. Remembering why you're here, inform her that there's about to be a very important meeting in the town hall, and that the two of you need to get over there as quickly as possible.
+		你和梅拉克西丝相视一眼，得意地坏笑，接着收起架势，迈步上前。想到自己为何而来，你告诉她，市镇议会马上要召开一场极为重要的会议，两人必须尽快赶过去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS_WALLS_END_SHARED_ENDING"><![CDATA[
 	<p>
-		[meraxis.speech(Of course, the fate of this town, and that of the very world itself, rests in our hands, does it not?)] she replies with a smirk on her face, before swishing her cloak out behind her and declaring, [meraxis.speech(Let us depart henceforth!)]
+		[meraxis.speech(当然，这座小镇的命运，乃至整个世界的命运，都掌握在我们手中，不是吗？)]她脸上带着得意的坏笑回答，随后把斗篷往身后一甩，朗声宣布，[meraxis.speech(我们即刻启程吧！)]
 	</p>
 	<p>
-		The crowd beings to disperse as they see that the show's over, and Meraxis cheerfully bounces along at your side as the two of you head over towards the precinct's exit. As you depart, you notice that Meraxis's ex-minions are hanging out over in one corner of the shopping precinct. Letting out a laugh, the chuuni [meraxis.race] points at these succubi and asks, [meraxis.speech(Pathetic, aren't they? I was attempting to show them the key to true power, but they simply couldn't comprehend it. Out of the hundreds of followers that I've had, only a handful have ever truly understood me.)]
+		人群见没有好戏可看，便渐渐散开。梅拉克西丝却兴致勃勃，蹦蹦跳跳地走在你身边。两人一起往商场出口走去，这时你注意到，她从前那帮手下正聚在商场一角闲晃。中二病[meraxis.race]见状，大笑一声，指着那群魅魔问，[meraxis.speech(真可悲，对吧？我想让她们瞧瞧真正力量的门道，可她们根本领会不了。我带过的追随者少说也有几百个，可真正懂我的，就那么几个。)] 
 	</p>
 	<p>
-		Although she doesn't seem to need to hear it, you still tell Meraxis that she's better off without them. Nodding in agreement, the chuuni [meraxis.race] stays by your side as the two of you turn your backs on the succubi and set off in the direction of the town hall...
+		尽管她看起来并不需要听，你还是告诉梅拉克西丝，离开她们她才会更好。这位中二病的[meraxis.race]点头赞同，留在你身边。你们背过身去，不再理会那群魅魔，朝着市镇议会走去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIND_MERAXIS_WALLS_END_RETURN"><![CDATA[
 	<p>
-		As the two of you head over to the town hall, Meraxis demands to know more about the details of this meeting. One question leads to another, and by the time you reach your destination, you've told her all about your mission with Hammer and Ghost.
+		你们俩前往市镇议会时，梅拉克西丝追问这次会面的细节。问题接二连三，等到了目的地，你已经把和锤子、幽灵一起执行的任务全都告诉了她。
 	</p>
 	<p>
-		[meraxis.speech(You should have brought me along!)] the chuuni [meraxis.race] complains as you enter the town hall, and as you pass by the Enforcer guard and head up the stairs, she pouting at you a little and grumbles, [meraxis.speech(I'd have caught Angelixx before she could escape...)]
+		那个中二病的[meraxis.race]见你走进市镇议会，便抱怨道：[meraxis.speech(你也该带我一起去！)]你经过执法者守卫、踏上楼梯时，她还噘着嘴，略带不满地嘀咕：[meraxis.speech(我本可以在安吉莉克丝逃掉之前就逮住她的……)]
 	</p>
 	<p>
-		As it's taken significantly longer to fetch Meraxis than you expected, you don't waste any more time and immediately knock on the door to Minotallys's office. As the two of you enter, you're not surprised to see that everyone else is already here.
+		因为去接梅拉克西丝花的时间比你预想的要长得多，你不再耽搁，立刻敲响了米诺塔莉丝办公室的门。你们两人走进来时，看到其他人早已经在场，你并不意外。
 	</p>
 	<p>
-		[ursa.speech(Good to see you again,)] Ursa nods at you in greeting, before looking over to Meraxis and doing the same.
+		[ursa.speech(又见到你了，)]乌萨朝你点头致意，接着望向梅拉克西丝，也同样点头致意。
 	</p>
 	<p>
-		[hammer.speech(You took your time,)] Hammer growls in his usual, deep voice.
+		[hammer.speech(你可算来了，)]锤子照例低吼道。
 	</p>
 	<p>
-		[minotallys.speech(You all know why we're here,)] Minotallys says from behind her desk, [minotallys.speech(After destroying Themiscyra, Lunette's daughters now intend to march on Elis, and this time the elder lilin herself is likely to show herself. We need a plan to defend the town and defeat her.)]
+		[minotallys.speech(你们都清楚我们为何齐聚于此，)]米诺塔莉丝在桌后说道，[minotallys.speech(露内特的女儿们毁掉特弥斯库拉后，眼下正打算进军伊利斯。这回，那位莉琳长老本人也可能亲自现身。我们得拟个对策，既要守住城镇，又要击败她。)]
 	</p>
 	<p>
-		[ghost.speech(The situation doesn't look good,)] Ghost sighs, before looking at you and saying, [ghost.speech(If we'd realised the situation was so dire, we wouldn't have asked for your help and instead would have immediately started planning.)]
+		[ghost.speech(情况不妙，)]幽灵叹了口气，随后看着你说，[ghost.speech(要是我们早知道形势如此严峻，就不会请你帮忙，而是会立刻着手筹划。)]
 	</p>
 	<p>
-		[arion.speech(Tell us where we stand, then we can go from there,)] Arion says.
+		[arion.speech(先说说我们的处境吧，然后我们再商量下一步。)]阿里昂说。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_START"><![CDATA[
 	<p>
-		[hammer.speech(Well, let's start with the good,)] Hammer says in his gruff voice, [hammer.speech(We don't have to worry about Lunette's daughters simply teleporting into the town and attacking us from within. None of them have set foot in here, and as I understand it you need to know the place you're teleporting to for it to work.)]
+		[hammer.speech(好吧，先说好消息，)]锤子用粗哑的声音说道，[hammer.speech(我们不必担心露内特的女儿们能直接传送到镇子里，从内部袭击我们。她们还没有谁踏足过这里，而且据我所知，你得先熟悉要传送去的地方，传送才会生效。)]
 	</p>
 	<p>
-		[meraxis.speech(That's right; I can't teleport to place I haven't been before, but surely Lunette herself has visited Elis before?)] Meraxis asks.
+		[meraxis.speech(没错，我没法传送去自己没去过的地方，不过露内特本人肯定去过伊利斯吧？)]梅拉克西丝问道。
 	</p>
 	<p>
-		[hammer.speech(We did consider that. The Enforcer station has some telportation inhibitors in storage, and if we place them correctly they should be able to just about cover the entire town,)] Hammer reveals, [hammer.speech(So we don't have to worry about teleportation.)]
+		[hammer.speech(这点我们确实考虑到了。执法局仓库里备着些传送抑制器，只要布置得当，差不多能覆盖整座城镇，)]锤子说道，[hammer.speech(所以传送这块用不着担心。)]
 	</p>
 	<p>
-		[arion.speech(So they'll have to attack us directly if they want to get into the town?)] Arion asks, [arion.speech(What if they decide to simply fly over the walls?)]
+		[arion.speech(那他们想进城，就只能正面攻打我们了吗？)]阿里昂问道，[arion.speech(要是他们干脆飞过城墙呢？)]
 	</p>
 	<p>
-		[ghost.speech(They're experienced fighters; they won't fly if there's a serious threat of ranged attacks. It's hard to defend yourself from missiles coming from below while flying, and that's especially true when you've got the lower body of a horse. They'll attempt to use shields and attack the gates instead,)] Ghost replies, before giving Minotallys a cautious smile and asking, [ghost.speech(Any chance of Lilith commanding her daughter to stop? That'd save us all a lot of bother.)]
+		[ghost.speech(他们是经验丰富的战士；只要远程攻击的威胁不小，就不会飞到天上。飞的时候，想挡住从下方射来的箭矢可不容易，尤其是下半身还是马身的时候。所以他们会改用盾牌，转去攻打城门，)]幽灵回答，然后谨慎地对米诺塔莉丝笑了笑，问道： [ghost.speech(有没有可能让莉莉丝命令她女儿收手？这样咱们都省不少麻烦。)]
 	</p>
 	<p>
-		[minotallys.speech(She's abandoned us,)] Minotallys angrily snaps, before shaking her head and apologising, [minotallys.speech(Sorry, I'm not angry at you, I'm frustrated with myself for having trusted Lilith so blindly in the past... You're aware that we have Lunexis prisoner? I spent some time questioning her under the influence of the Lilith's Command spell, and so I know for a fact that Lilith gave Lunette explicit permission to use any methods she deems necessary to 'enslave or otherwise subjugate all traitors within the Foloi Fields'. Anyone who doesn't blindly obey even the most outrageous of demands from any of Lunette's daughters is considered to be a traitor, and is punished accordingly. My authority outranks theirs, which is why they've left Elis alone for so long, but now that Lunette herself is planning on getting involved, we'll all be declared traitors the moment we refuse to submit to her.)]
+		[minotallys.speech(她抛弃了我们，)]米诺塔莉丝气冲冲地喝道，随即又摇了摇头，语带歉意：[minotallys.speech(抱歉，我不是在冲你发火，我是气自己过去居然那样轻信莉莉丝……你总该知道，露内克西丝如今就在我们手上关着吧？我那时候花了不少功夫，趁她受“莉莉丝的命令”影响时盘问她，所以这事我知道得清清楚楚：莉莉丝明确授权露内特，允许她使用自己认为必要的一切手段，去“奴役或以其他方式降伏弗洛伊田野内的所有叛徒”。露内特那些女儿们的要求，哪怕再荒唐，谁不盲目照办，谁就会被当成叛徒，受到严惩。我的地位比她们高，所以这么久以来她们才一直没敢来伊利斯找麻烦。可如今露内特本人准备亲自下场，我们只要拒绝向她臣服，她们立刻就会把我们统统打成叛徒。)]
 	</p>
 	<p>
-		[ghost.speech([pc.Name] told us that Lunexis had been defeated in Themiscyra, but I didn't know that she was your prisoner. At least that'll give us a way to trigger Lunette's attack when we're ready. All we need to do is publicly show off that a recognised daughter of hers is our prisoner, and she'll be outside the walls within a couple of days,)] Ghost muses, before nodding to Ursa and revealing, [ghost.speech(Thanks to Ursa's scouts, we know that Lunette isn't likely to attack Elis any time soon, and so thankfully it seems that we have some time in which to fix the issues we've got with defending Elis...)]
+		[ghost.speech([pc.Name]跟我们提过露内克西丝在特弥斯库拉落败的事，但我没想到她成了你的俘虏。至少等我们准备周全，就有办法引露内特来攻了。我们只要公开宣称抓了她认可的女儿，不出几天她就会兵临城下，)]幽灵若有所思，随后朝乌萨点了点头，说道，[ghost.speech(多亏了乌萨手下的斥候，我们知道露内特短时间内不大可能攻打伊利斯，万幸我们还有时间来解决伊利斯防务上的问题……)]
 	</p>
 	<p>
-		[arion.speech(Can we be sure that we have time?)] Arion asks, [arion.speech(By destroying Themiscyra, Lunette has already demonstrated that she has the strength to assault Elis, so why would she wait?)]
+		[arion.speech(我们能确定还有时间吗？)]阿里昂问道。[arion.speech(露内特摧毁了特弥斯库拉，足以证明她有实力攻打伊利斯，那她为何还要等待？)]
 	</p>
 	<p>
-		[ursa.speech(She's having too much <i>fun</i>,)] Ursa grumbles through clenched teeth. Her fists clench, and for a moment the huge, muscular bear-girl looks absolutely terrifying as an expression of pure hatred flashes over her face. Ghost and Hammer instinctively react to this by dropping their hands down to the weapons on their belts, but thankfully the moment quickly passes and Ursa regains her composure. Shaking her head, she sighs, [ursa.speech(Not all of us managed to escape from our home. The Amazons who stayed behind to hold off Lunette's daughters, and those who were taken off-guard by their sudden assault, were captured. Lunette arrived in my town shortly after it fell to find out what became of Lunexis, but she quickly forgot about tracking her daughter down and is now enjoying the spoils of victory. It should take many months for Lunette and her daughters to drink their way through our stocks of wine, deface what remains of our homes, and... break all of their prisoners...)]
+		[ursa.speech(她倒是玩得挺开心，)]乌萨咬紧牙关低声抱怨。她双拳紧握，一刹那，这头高大健壮的熊女脸上杀气毕露，模样狰狞得吓人。幽灵和锤子本能地把手按向腰间的武器，所幸这股气势转瞬即逝，乌萨很快恢复了冷静。她摇了摇头，叹道，[ursa.speech(不是所有人都逃出了家园。留下来阻挡露内特女儿们的亚马逊人，以及因她们突然袭击而措手不及的族人，全都落入敌手。我的城镇陷落后，露内特没过多久便亲自前来，想查明露内克西丝的下落。可她很快就把寻女的事抛到脑后，一心享受胜利的果实。露内特和她的女儿们要喝光我们库存的美酒、捣毁我们残存的家园、再把所有俘虏都调教到崩溃，怕是要花上好几个月……)]
 	</p>
 	<p>
-		[hammer.speech(In that case, we'll make our move as soon as we're able,)] Hammer growls, his rumbling tone suggesting that he shares Ursa's hatred of Lunette. Looking up at the towering bear-girl, he continues, [hammer.speech(Other than us Enforcers, you Amazons are the only ones who have combat training or experience. Can we count on all of your people to fight?)]
+		[hammer.speech(既然如此，我们一有机会就动手，)]锤子低吼道。他嗓音隆隆，听得出来，他像乌萨一样痛恨露内特。他抬头望向那高壮的熊女，接着说：[hammer.speech(除了我们执法者，你们亚马逊人是唯一受过战斗训练或有实战经验的人。你们的人都能上阵吗？)]
 	</p>
 	<p>
-		[ursa.speech(We'll not only fight, but we can help to train volunteers into a militia,)] Ursa replies, [ursa.speech(There won't be time to turn them into truly competent fighters, but we'll do our best. I'm sure that we'll have enough volunteers to train once the population knows that their options are either to fight or be enslaved by Lunette's daughters.)]
+		[ursa.speech(我们不仅要作战，还能帮忙训练志愿者，组成民兵。)]乌萨答道，[ursa.speech(虽然没时间把他们练成真正精干的战士，但我们会尽全力。一旦大家明白自己的选择要么是抗争、要么是被露内特的女儿们奴役，我相信会有足够的志愿者供我们训练。)]
 	</p>
 	<p>
-		[ghost.speech(You're right, manpower should be no issue, and the walls will give us an excellent defensive advantage,)] Ghost interjects, before counting off the issues you're facing on her furry fingers, [ghost.speech(The two real problems we have are; one, we don't have enough weapons to equip a militia; two, I seriously doubt that we'll have enough arcane users to shield us from all of the spells that Lunette's daughters will be throwing our way.)]
+		[ghost.speech(你说得对，人手应该不成问题，有城墙在，防守上我们稳占优势，)]幽灵插话道，随即掰着毛茸茸的手指，一件件数起你眼下的难题，[ghost.speech(真正的麻烦有两个：一是武器不够，凑不齐一支民兵队；二是我很怀疑奥术施法者够不够，能不能挡下露内特的女儿们朝我们扔来的所有法术。)]
 	</p>
 	<p>
-		[arion.speech(All of the town's weapons are in your armoury, so we can't help on that front,)] Arion states, before sighing, [arion.speech(You're right about the lack of arcane users as well. I'm sure there will be some demons who'll join us, but it's not hard to imagine that the vast majority of those who live in Elis will feel more loyal to Lilith and her daughters than to the town...)]
+		[arion.speech(镇上的武器都在你的军械库里，这方面我们帮不上忙。)]阿里昂说着，叹了口气， [arion.speech(你说得对，奥术使用者同样稀缺。我相信总会有一些恶魔愿意加入我们，但不难想象，住在伊利斯的大部分人，恐怕还是更忠于莉莉丝和她的女儿们，而不是这座城镇……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_WEAPONS"><![CDATA[
 	<p>
-		Wanting to find out if there are any solutions to the lack of weapons, you turn to Hammer and Ghost and ask them if there's any way you can get more from Dominion's Enforcers.
+		你想知道武器短缺有没有解决办法，便去问锤子和幽灵，能不能从御城区的执法者那里弄到更多武器。
 	</p>
 	<p>
-		[ghost.speech(For the hundreds of weapons we'd need to properly outfit a militia? There's no chance of that,)] Ghost regretfully sighs, [ghost.speech(For standing up to a lilin, we were effectively banished from Dominion, and anyone there who's caught doing favours for us would receive a similar treatment. Even if any of the Dominion Enforcers were willing to help us, a transfer of weapons of the size we're talking about would require approval from the Commissioner herself. Even if she didn't hate our guts, there's no way she'd ever sign off on something like that.)]
+		[ghost.speech(要凑齐数百件武器来好好武装一支民兵队伍？那是没希望了，)]幽灵遗憾地叹了口气，[ghost.speech(因为反抗莉琳，我们实际上被驱逐出了御城区，任何在那里被发现帮我们忙的人，都会落得同样的下场。就算御城区的执法者里有人愿意帮我们，要调动我们说的那个规模的武器，也得由专员亲自批准。就算她不恨我们入骨，也绝不可能批准这种事。)]
 	</p>
 	<p>
-		[hammer.speech(We did have a huge cache of seized HLF weapons, which really would have come in handy about now, but <i>someone</i> ordered them destroyed a couple of years ago,)] Hammer growls, before looking over at Minotallys.
+		[hammer.speech(我们确实有一大批从HLF缴获的武器，现在要是在，准能派上用场，可<i>某人</i>几年前就下令销毁了，)]锤子低吼道，然后看向米诺塔莉丝。
 	</p>
 	<p>
-		[minotallys.speech(That wasn't my idea, I was simply carrying out orders from Lilith,)] Minotallys protests, [minotallys.speech(You should have pretended to destroy them and kept them in secret.)]
+		[minotallys.speech(那并非我的主意，我只是奉命行事，是莉莉丝的命令，)]米诺塔莉丝辩解道，[minotallys.speech(你当时该假装毁掉它们，再秘密藏起来。)]
 	</p>
 	<p>
-		[hammer.speech(So it's our fault? You lilin are all the same,)] Hammer grunts and crosses his arms.
+		[hammer.speech(这么说，是我们的错了？你们莉琳都是一个德行，)]锤子哼了一声，抱起双臂。
 	</p>
 	<p>
-		[arion.speech(We're all on the same side here,)] Arion cuts in, before giving Minotallys a pointed look to stop her from making a response. Turning to Ursa, he asks, [arion.speech(Do your Amazons have any weapons we could use?)]
+		[arion.speech(这里我们都站在同一阵线。)]阿里昂插话，给了米诺塔莉丝一个意味深长的眼神，示意她别回嘴。他转向乌萨问道，[arion.speech(你们亚马逊人有我们能用的武器吗？)]
 	</p>
 	<p>
-		[ursa.speech(We only have what we could carry out from Themiscyra,)] Ursa says with a shake of her head, [ursa.speech(Along with what we could get from the Enforcers, we could equip no more than twenty people. We'd need to have enough weapons for at least five hundred to properly man the walls.)]
+		[ursa.speech(我们从特弥斯库拉撤出来时只带出了这些，)]乌萨摇了摇头， [ursa.speech(再加上从执法者手里弄来的，也只够装备二十人。要守住城墙，至少得有五百人的武器。)]
 	</p>
 	<p>
-		It looks like you're going to struggle to get enough weapons to equip the town's milita...
+		看起来，想凑够武器武装镇上的民兵，怕是没那么容易……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_SPELLS"><![CDATA[
 	<p>
-		As Minotallys is a lilin, and as such is capable of wielding immense arcane power, you ask her if she's powerful enough to shield the town from the spells which Lunette's daughters will undoubtedly be sending your way.
+		米诺塔莉丝是莉琳，能驾驭庞大的奥术之力，你便问她，露内特的女儿们必定会施展法术袭来，她有没有足够的力量为城镇撑起防护。
 	</p>
 	<p>
-		[minotallys.speech(I could put up shields which would protect one section of the wall for a while,)] she says, [minotallys.speech(but against an army of Lunette's daughters throwing fireballs, ice shards, and whatever else at me? I wouldn't last for very long.)]
+		[minotallys.speech(我倒是能支起护盾，暂时护住一段城墙，)]她说，[minotallys.speech(可要是露内特的女儿们成群结队杀过来，火球、冰锥，什么乱七八糟的都往我身上招呼，我可撑不了太久。)]
 	</p>
 	<p>
-		After taking a moment to think about it, she concludes, [minotallys.speech(We'd need at least a hundred skilled spell casters, or several hundred amateurs, in order to counter the spells of Lunette's army. If all the demons in Elis stood with us, we might just about do it, but I guarantee that the vast majority of them will choose to flee instead of fight an elder lilin.)]
+		她想了一会儿，最后说：[minotallys.speech(要抵挡露内特军队的法术，我们至少需要一百名熟练的施法者，或者几百个业余的也行。要是伊利斯所有恶魔都肯与我们并肩作战，或许还能勉强一搏，但我敢保证，绝大多数恶魔宁愿逃跑，也不敢去对抗一位莉琳长老。)]
 	</p>
 	<p>
-		With not enough spell casters to shield the town, the situation seems quite grim...
+		施法者不足，难以守护城镇，形势看来相当严峻……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_MERAXIS_SOLUTION"><![CDATA[
 	<p>
-		Meraxis, who up until now has been quietly listening with a growing grin on her face, suddenly laughs and loudly declares, [meraxis.speech(How fortunate for you that I am on your side! I can solve both of these problems!)]
+		梅拉克西丝方才一直静静听着，脸上笑意渐浓。此刻她忽然放声大笑，朗声道：[meraxis.speech(算你走运，有我在你这边！这两个问题，我都能一并解决！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_TAKAHASHI"><![CDATA[
 	<p>
 		#IF(pc.hasTraitActivated(PERK_CHUUNI))
-			With all eyes now on Meraxis, you turn towards her and ask her what her plan is.
+			现在所有人的目光都落在梅拉克西丝身上，你转向她，问她有什么计划。
 		#ELSE
-			With all eyes now on Meraxis, you silently pray that she's not about embarrass you in front of everyone and ask her what her plan is.
+			现在所有人的目光都落在梅拉克西丝身上，你暗暗祈祷她可别在大家面前让你出丑，然后问她打算做什么。
 		#ENDIF
 	</p>
 	<p>
-		[meraxis.speech(If we need a hundred or so arcane users, we can just get the help of the youko! They're literally right next to Elis up in the Shinrin Highlands, so we don't even have to go very far to ask them for help,)] Meraxis states, [meraxis.speech(I have a three-tailed youko friend, who's called Takahashi by the way, so she can help us to get the support of the other youko. Even mommy said that getting the help of the youko would be a good idea.)]
+		[meraxis.speech(若需要百来名奥术使用者，直接请妖狐相助便是！他们就在心林高地，紧挨着伊利斯，连路都不用多跑。)]梅拉克西丝说道，[meraxis.speech(我有个三尾妖狐朋友，她叫高桥，可以帮我们说动其他妖狐。就连妈咪也说，能得到妖狐的帮助是件好事。)]
 	</p>
 	<p>
-		Suddenly realising that she called Lyssieth 'mommy' in front of everyone, Meraxis begins to blush. Thankfully for her, Minotallys takes everyone's attention away from this by saying, [minotallys.speech(I seriously doubt that the youko will help us. Putting that aside for a moment, how do you suggest that we get enough weapons to equip a milita?)]
+		梅拉克西丝突然意识到自己刚才当着大家的面喊了莉西丝一声“妈咪”，脸顿时红了。幸好米诺塔莉丝把大家的注意力引开，说道：[minotallys.speech(我真怀疑那妖狐会帮我们。先不说这个，你觉得我们该从哪儿弄到足够的武器来装备一支民团？)]
+</p>
+	<p>
+		[meraxis.speech(几年前，我偷藏了一大批<i>莉西丝</i>造的枪，正好拿来用，)]梅拉克西丝说道，特意在母亲的名字上加重语气，试图弥补刚才失言的尴尬。其他人听到她提起妖狐时倒没太大反应，但一听到这批枪，锤子和Ghost都挑了挑眉。见两人这副神情，中二病[meraxis.race]忍不住得意地坏笑起来，解释道：[meraxis.speech(莉西丝原本打算让她那些不被承认的女儿们穿上滑稽的红制服，扛着枪四处游行。我觉得实在太暴殄天物了，就花了好几个晚上，一箱一箱全从她宫殿里传送了出来。我琢磨着把这些枪发给我在屈城区的小恶魔大军，肯定特别有意思！)]
 	</p>
 	<p>
-		[meraxis.speech(A few years ago, I stole a huge cache of guns that <i>Lyssieth</i> made, so we can use those,)] Meraxis says, putting emphasis on her mother's name in an attempt to compensate for her previous blunder. While the others didn't seem too impressed when meraxis mentioned the youko, Hammer and Ghsot both raise their eyebrows as Meraxis mentions these guns. Seeing their reactions, the chuuni [meraxis.race] can't help but smirk as she explains, [meraxis.speech(Lyssieth planned on having her unrecognised daughters wear some funny red uniforms and march around with those guns. I thought that was a waste, so over the course of a few nights, I teleported them out of her palace box-by-box. I thought it would be fun to give them to my army of imps in Submission!)]
+		[hammer.speech(我还从没听说过小恶魔拿着枪组成一支军队，)]锤子咕哝道。
 	</p>
 	<p>
-		[hammer.speech(I've never heard of an army of gun-wielding imps,)] Hammer grunts.
+		[meraxis.speech(是啊，那些枪对小恶魔来说太大了，用着不趁手，所以我就运到心林高地的藏身处，想琢磨琢磨别的用法，)]梅拉克西丝答道，接着解释说，[meraxis.speech(不过莉西丝还是查出是我拿的，气得够呛。我本想帮她找回来，结果早就被偷了。就因为这事，莉西丝罚我给她当了整整一年的秘书……)]
 	</p>
 	<p>
-		[meraxis.speech(Yeah, the guns are kind of too big for imps to use, so I moved them to my hideout in the Shinrin Highlands and tried to think of another way to use them,)] Meraxis replies, before explaining, [meraxis.speech(Lyssieth found out that it was me who took them, though, and she was pretty pissed off. I went to get them back for her, but they'd been stolen. Lyssieth made me work as her secretary for an entire year for that...)]
+		[ghost.speech(你是说，你曾经有能帮上我们的武器，可现在没有了？)]幽灵问道。
 	</p>
 	<p>
-		[ghost.speech(So what you mean to say is that you once had weapons which could have helped us, but now you no longer do?)] Ghost asks.
+		[meraxis.speech(可我知道它们在哪儿！)]梅拉克西丝反驳道：[meraxis.speech(嗯……我想我应该知道。就在[pc.name]毁掉我的要塞之前不久，高桥说她查明了偷走武器的是个九尾妖狐。我知道那个九尾妖狐住在哪儿，所以咱—)]
 	</p>
 	<p>
-		[meraxis.speech(I know where they are though!)] Meraxis objects, [meraxis.speech(Well, I think I know. Shortly before [pc.name] here destroyed my fortress, Takahashi said that she'd found out that a nine-tailed youko was the one who stole the weapons. I know where that nine-tailed youko lives, so we-)]
+		[ursa.speech(你该不会是想去挑战一只<i>九尾</i>妖狐吧？而且是在她的地盘上，还想抢走一件她显然视若珍宝的东西？)]乌萨难以置信地说。她摇了摇头，不再看着梅拉克西丝，问道，[ursa.speech(有没有人能提出点实际建议，告诉我们到底去哪儿弄武器？)]
 	</p>
 	<p>
-		[ursa.speech(So you want to go and take on a <i>nine-tailed</i> youko, in her own territory, with the intention of taking something from her that she clearly considers to be valuable?)] Ursa says in disbelief. Shaking her head, she turns away form Meraxis and asks, [ursa.speech(Does anyone have any real suggestions as to where we can get weapons?)]
+		[meraxis.speech(嘿！我能做到！尤其是[pc.name]和我在一起的时候！)]梅拉克西丝不服气地喊道，[meraxis.speech(我知道大家都不信任妖狐，但就像我之前说的，连“妈咪”都说请他们帮忙是个好主意！)]
 	</p>
 	<p>
-		[meraxis.speech(Hey! I can do it! Especially if [pc.name] is with me!)] Meraxis defiantly shouts, [meraxis.speech(I know everyone doesn't trust the youko, but like I said before, even mommy said it was a good idea to get their help!)]
+		梅拉克西丝又唤了莉西丝一声“妈咪”，随即一顿，脸颊绯红，给你留了个插话的空儿。
 	</p>
-	<p>
-		Having once again called Lyssieth 'mommy', Meraxis pauses and blushes, giving you a moment in which to interject.
-	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_YOUKO"><![CDATA[
 	<p>
-		Everyone seems dismissive of Meraxis's suggestions, so you ask what the problem with the youko is.
+		大家对梅拉克西丝的建议似乎都不以为然，于是你问妖狐到底有什么问题。
 	</p>
 	<p>
-		[hammer.speech(They're only interested in their own affairs, and even the kindest youko will do nothing to help the world outside of their Shinrin Highlands,)] Hammer grunts, before looking at Meraxis and saying in a accusatory tone, [hammer.speech(I've looked through the file on you; that youko friend of yours is a follower of the trickster youko lilin, isn't she? I'd sooner trust an imp than a servant of Kayo.)]
+		[hammer.speech(他们只对自己的事上心，哪怕妖狐中最善良的，也不会为心林高地以外的世界费心。)]锤子咕哝一声，又看向梅拉克西丝，语气带着指责说道， [hammer.speech(我翻过你的档案。你那个妖狐朋友信奉的是狡诈妖狐莉琳，对吧？我宁可相信小恶魔，也不肯相信加代的仆人。)]
 	</p>
 	<p>
-		[meraxis.speech(So what does it matter if she serves Kayo? She's my friend, and she'll help us!)] Meraxis says, stomping her foot on the ground in the process.
+		[meraxis.speech(那就算她为加代效力又怎样？她是我朋友，她会帮我们的！)]梅拉克西丝说着，还跺了跺脚。
 	</p>
 	<p>
-		[minotallys.speech(The youko lilin; Kayo and Kazuha...)] Minotallys sighs, [minotallys.speech(I've had dealings with them before, and I don't wish to get involved with them ever again. Even if you could somehow convince a hundred youko to leave their homes and come to our aid, you'd have to have the blessing of both of the youko lilin, or else they'd act to ruin everything. I imagine that Kazhua, being the benevolent one, could be convinced to help us once she understands the threat which Lunette poses. It's Kayo who'll be the problem. You'll be lucky to ever be seen again if you somehow manage to track her down, and as to convincing her to help us? No chance.)]
+		[minotallys.speech(妖狐族的莉琳——加代和一叶……)]米诺塔莉丝叹了口气，[minotallys.speech(我以前和她们打过交道，往后也不想再有任何牵扯。就算你能说动上百名妖狐背井离乡来援，也得先让那两位妖狐族的莉琳点头，否则她们肯定会出手坏事的。我想一叶是心善之人，等她明白露内特的威胁后，应当会答应帮忙。麻烦的是加代。你若真有办法找到她，能活着回来见人就该偷笑了。至于劝她帮忙？绝无可能。)]
 	</p>
 	<p>
-		[meraxis.speech(Ok, so what are your ideas?)] Meraxis demands, [meraxis.speech(Who else knows where we can find hundreds of weapons? Who can convince a hundred demons to come and fight against Lunette on our behalf?)]
+		[meraxis.speech(好吧，你到底有什么主意？)]梅拉克西丝追问道，[meraxis.speech(还有谁知道哪里能找到成百上千件武器？谁能说服上百个恶魔替我们前来讨伐露内特？)]
 	</p>
 	<p>
-		[ghost.speech(She's got a point,)] Ghost says, [ghost.speech(There might be almost no chance of retrieving those guns, nor of getting the help we need from the youko, but almost no chance is better than definitely no chance.)]
+		[ghost.speech(她说得有道理，)]幽灵说，[ghost.speech(找回那批枪的希望微乎其微，指望妖狐帮忙也一样。但几乎没希望，总比彻底没希望要好。)]
 	</p>
 	<p>
-		[hammer.speech(I don't like it, and those youko are dangerous,)] Hammer stubbornly growls, [hammer.speech(Forget Kayo, forget Kazuha, and forget that nine-tail who holds the weapons; even a two-tailed youko can be a serious threat to anyone who stumbles into their territory. You run into one of those followers of Kayo, and the next thing you know you're trapped in a web of illusion spells. There's a long list of names back in the Enforcer station of people who ventured into the Shinrin Highlands and were never seen again.)]
+		[hammer.speech(我觉得不行，那些妖狐可危险得很。)]锤子固执地低吼，[hammer.speech(别管加代，别管一叶，也别管那个握着兵器的九尾；哪怕只有两条尾巴的妖狐，误闯它们的地盘也足以致命。你要是撞见哪个加代的信徒，一转眼就会陷进幻术织成的罗网。执法局里列着一长串名字，都是闯进心林高地之后便再没回来的人。)]
 	</p>
 	<p>
-		[ghost.speech(We all know that [pc.Name] can handle [pc.herself],)] Ghost sharply responds to her comrade, [ghost.speech(and Meraxis is a recognised daughter of an elder lilin. Together, they'll be able to deal with the youko, and with Meraxis's friend, they really might be able to convince the youko to help us.)]
+		[ghost.speech(我们都清楚，[pc.Name]应付得来，)]幽灵冷冷回敬同伴， [ghost.speech(而梅拉克西丝是莉琳长老认可的女儿。两人联手足以对付那妖狐，再加上梅拉克西丝的朋友相助，说不定真能说服那妖狐帮我们。)]
 	</p>
 	<p>
-		As Hammer lets out a sigh of resignation, Arion declares, [arion.speech(Unless anybody else has a solution to our weapon and spellcaster problems, we're going to have to place our trust in Meraxis.)]
+		锤子无奈地叹了口气，阿里昂宣布：[arion.speech(除非还有人能解决我们的武器和施法者难题，否则我们只能信任梅拉克西丝了。)]
 	</p>
 	<p>
-		[ursa.speech(I wish I could offer you some assistance, but my Amazons and I will be busy training the militia and shoring up the defences here in Elis,)] Ursa says as she looks at you and Meraxis, [ursa.speech(We'll have to leave this to the two of you.)]
+		[ursa.speech(我也想帮上忙，但我和亚马逊姐妹们要忙着操练民兵、加固伊利斯的城防。)]乌萨看着你和梅拉克西丝说，[ursa.speech(这件事只能交给你们俩了。)]
 	</p>
 	<p>
-		[ghost.speech(We're too old to be trekking through youko territory,)] Ghost says, [ghost.speech(and I think we'll also be needed here. I'm sorry that Hammer and I can't come with you.)]
+		[ghost.speech(我们太老了，不该再去妖狐的地盘上长途跋涉，)]幽灵说，[ghost.speech(而且这边怕是也需要我们。抱歉，锤子和我不能陪你去了。)]
 	</p>
 	<p>
-		[minotallys.speech(That's all settled then,)] Minotallys states, before looking at you and asking, [minotallys.speech(That is, so long as you're willing to do this? The youko are dangerous, and I understand if you don't want to go along with Meraxis's plan. Perhaps we can find another way?)]
+		[minotallys.speech(那就这么定了。)]米诺塔莉丝说着，将视线转向你，又问道，[minotallys.speech(当然，前提是你愿意做这件事？妖狐很危险。如果你不愿意配合梅拉克西丝的计划，我也能理解。或许我们可以另想办法？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_FINAL"><![CDATA[
 	<p>
-		There really doesn't seem to be any alternative. If you want a shot at defeating Lunette here at Elis, the town will need weapons and arcane users, and other than what Meraxis suggests, it seems like there's no solution. Turning to look at Meraxis, you say you'll go along with her plan.
+		虽然米诺塔莉丝的反应明显有些不对劲，但你觉得最好的办法还是实话实说。你肯定了梅拉克西丝刚才说的话，并解释说，莉西丝已经认可你有能力对付露内特；至于反抗一位莉琳长老所牵涉的一切政治影响，都会由莉西丝来处理。
 	</p>
 	<p>
-		[meraxis.speech(Of course you will!)] she triumphantly smirks. Placing her hands on her [meraxis.hips+], she strikes a confident pose and laughs, [meraxis.speech(My plans always work! Together, my nemesis, we shall recover the weapons and obtain the aid of the youko!)]
+		[meraxis.speech(你当然会！)]她得意地坏笑，双手放在[meraxis.hips+]上，摆出自信姿态笑道：[meraxis.speech(我的计划从不会落空！我的宿敌，我们一起夺回武器、求得妖狐相助吧！)]
 	</p>
 	<p>
-		[hammer.speech(Your nemesis? Are you two enemies or something?)] Hammer asks, before waving his hand and grunting, [hammer.speech(Actually, nevermind, I don't want to know the details. Just be careful out there.)]
+		[hammer.speech(宿敌？你们俩是仇人还是怎么着？)]锤子问道，摆摆手，哼了一声，[hammer.speech(算了，没什么，我不想知道细节。到外面小心点。)]
 	</p>
 	<p>
-		[minotallys.speech(Thank you everyone for coming to the aid of Elis, Arion and I wouldn't know what to do without all of you,)] Minotallys says, before looking over at Meraxis and stating, [minotallys.speech(During the defence of the town, there's going to be the matter of Lunette herself to deal with, and we might have to rely on some help from your mother to deal with her. We'll get the details of that hammered out once you've got the weapons and spell casters we need. I really wish I could have done more to help, or even to prevent all of this from happening in the first place; I never expected to be betrayed by Lilith like this...)]
+		[minotallys.speech(谢谢大家前来帮助伊利斯。要是没有你们，阿里昂和我真不知道该怎么办。)]米诺塔莉丝说完，看向梅拉克西丝，又说道：[minotallys.speech(守卫城镇的时候，还得应付露内特本人。到时候我们恐怕得借助你母亲的力量来对付她。等你找齐了我们需要的武器和施法者，再把细节敲定。我真的很想多出点力，甚至从一开始就别让这一切发生。我万万没想到，莉莉丝会这样背叛我……)]
 	</p>
 	<p>
-		As she says this, you notice that Hammer and Ghost exchange glances which seem to say that they're not surprised by Lilith's betrayal. Turning to look at you, Ghost says, [ghost.speech(Ursa, Hammer, and I will start putting a militia together. If you could get those weapons here as soon as possible, it would really help with our training. There's only so much we'll be able to do with broomsticks...)]
+		听她这么说，你注意到锤子和幽灵交换了个眼色，两人对莉莉丝的背叛似乎并不意外。幽灵转过身来看着你，说：[ghost.speech(乌萨、锤子，还有我，会先把民兵队伍组织起来。你要是能尽快把那些武器弄来，对训练会大有帮助。光靠扫帚，我们能做的实在有限……)]
 	</p>
 	<p>
-		[meraxis.speech(Ok, we'll find the weapons first, then get Kazuha and Kayo to help us!)] Meraxis confidently says, [meraxis.speech(This meeting is over!)]
+		[meraxis.speech(好，先找到武器，再叫一叶和加代来帮忙！)]梅拉克西丝自信地说，[meraxis.speech(会议到此结束！)]
 	</p>
 	<p>
-		[minotallys.speech(Yes it is, but don't get ahead of yourself,)] Minotallys tuts, [minotallys.speech(It's my job to say that... This meeting is over!)]
+		[minotallys.speech(没错，但你先别高兴得太早，)]米诺塔莉丝啧了一声， [minotallys.speech(这话该由我来说……会议到此结束！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MEETING_END"><![CDATA[
 	<p>
-		Along with everyone else, you leave Minotallys's office.
+		你和大家一起离开了米诺塔莉丝的办公室。
 	</p>
 	<p>
-		As you [pc.walk] down the stairs, Hammer says, [hammer.speech(It'll take us some time to put the milita together, so until we've got that organised and the training really begins, you'll still be able to find us in the usual room in the Enforcer station.)]
+		当你走下楼梯时，锤子说：[hammer.speech(要把民兵组织起来还需要一些时间，所以在一切安排妥当、训练真正开始之前，你仍然可以在执法局的老房间里找到我们。)]
 	</p>
 	<p>
-		[ursa.speech(I'll be in my usual tent as well,)] Ursa says, [ursa.speech(Once the militia is formed and the training starts, that might change, but for now I'll be in our camp.)]
+		[ursa.speech(我也会像往常一样待在自己的帐篷里，)]乌萨说，[ursa.speech(等民兵组建起来、训练开始之后，也许就不一定了，但眼下我还是会待在营地里。)]
 	</p>
 	<p>
-		[meraxis.speech(And I'll be in The Red Dragon,)] Meraxis cheerfully joins in, [meraxis.speech(Come and find me as soon as you're ready to set off to the Shinrin Highlands. The first thing we need to do is find Takahashi. She should have made contact with me by now, but seeing as she hasn't, we need to go and check our backup rendezvous spot, which is my old hideout in the Shinrin Highlands.)]
+		[meraxis.speech(那我会在红龙酒馆，)]梅拉克西丝兴冲冲地搭话道，[meraxis.speech(等你准备好动身去心林高地，就来找我。当务之急是先找到高桥。她早该跟我联络了，可到现在还没动静，我们得去备用会合点瞧瞧——就是我以前在心林高地的藏身处。)]
 	</p>
 	<p>
-		Exiting the town hall, you tell Meraxis that you'll come and see her soon. Saying goodbye to everyone, you watch them go their separate ways and wonder what to do next...
+		走出市镇议会，你告诉梅拉克西丝，自己很快会再来看她。与大家一一道别后，目送他们各自离去，你心里盘算着接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

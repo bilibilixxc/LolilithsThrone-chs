@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[pool]]></name>
-	<tooltipDescription><![CDATA[A large, deep pool has been split into multiple lanes.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the pool at the gym, 'Pix's Playground']]></virginityLossDescription>
+	<name><![CDATA[游泳池]]></name>
+	<tooltipDescription><![CDATA[一个分割了多条泳道的深游泳池。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在“皮克斯操练场”健身房的游泳池内]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_AQUA</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

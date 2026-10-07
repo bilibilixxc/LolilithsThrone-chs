@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	
 	<category>SPECIAL</category>
@@ -7,10 +7,10 @@
 	
 	<equipWeighting>10</equipWeighting>
 	
-	<name><![CDATA[Tentacle-grab]]></name>
+	<name><![CDATA[缠绕之触]]></name>
 	
 	<description><![CDATA[
-		Use [npc.her] [npc.tentacles] to constrict [npc.her] target.
+		用[npc.her]的触手缠绕目标。
 	]]></description>
 	
 	<damageType><![CDATA[
@@ -54,7 +54,7 @@
 	</availabilityCondition>
 	
 	<availabilityDescription><![CDATA[
-		Available to characters who have tentacles.
+		仅适用于有触手的角色。
 	]]></availabilityDescription>
 	
 	<!-- Once started to constrict a target, the AI will become more and more interested in finishing the process off. -->
@@ -75,37 +75,37 @@
 	]]></criticalCondition>
 	
 	<criticalDescription><![CDATA[
-		Cannot critically hit.
+		无法暴击。
 	]]></criticalDescription>
 	
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] strong tentacles to constrict [npc2.name].
+		用[npc.her]强壮的触手缠绕住[npc2.name].
 	]]></movePredictionDescriptionWithTarget>
 	
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] strong tentacles to constrict [npc.her] target.
+		用[npc.her]用强壮的触手缠绕目标
 	]]></movePredictionDescriptionNoTarget>
 	
 	<performMove>
 		<execute><![CDATA[
-			[npc.Name] [npc.verb(lurch)] forwards and [npc.verb(coil)] [npc.her] strong tentacles around [npc2.name]!
+			[npc.Name]向前猛冲并用触手缠住[npc2.name]！
 			#IF(npc2.hasStatusEffect(SE_TENTACLE_RESTRAIN_3))
 				[##npc2.setHealth(0)]
-				<br/>[style.italicsTerrible([npc2.NameIsFull] now totally constricted by [npc.namePos] tentacles, and as such [npc2.is] completely defeated!)]
+				<br/>[style.italicsTerrible([npc2.NameIsFull]被[npc.namePos]的触手完全束缚，[npc2.her]被完全打败了！)]
 			#ELSEIF(npc2.hasStatusEffect(SE_TENTACLE_RESTRAIN_2))
 				[##npc2.removeStatusEffectCombat(SE_TENTACLE_RESTRAIN_2)]
 				[##npc2.addStatusEffect(SE_TENTACLE_RESTRAIN_3, 10)]
-				<br/>[style.italicsTerrible([npc2.NameIsFull] almost totally constricted by [npc.namePos] tentacles, and as such [npc2.is] near to being completely defeated!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] tentacle-grabbed again, [npc2.she] will be instantly defeated!)]
+				<br/>[style.italicsTerrible([npc2.NameIsFull]几乎完全被[npc.namePos]的触手束缚，[npc2.her]马上要被击败了！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再继续被触手束缚，[npc2.she]将立刻被击败！)]
 			#ELSEIF(npc2.hasStatusEffect(SE_TENTACLE_RESTRAIN_1))
 				[##npc2.removeStatusEffectCombat(SE_TENTACLE_RESTRAIN_1)]
 				[##npc2.addStatusEffect(SE_TENTACLE_RESTRAIN_2, 10)]
-				<br/>[style.italicsBad([npc2.NameIsFull] seriously constricted by [npc.namePos] tentacles, and as such [npc2.is] struggling to fight back!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] tentacle-grabbed again, this effect will become extremely serious!)]
+				<br/>[style.italicsBad([npc2.NameIsFull]被[npc.namePos]的触手束缚牢固，[npc2.her]正在奋力反抗！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再继续被触手束缚，束缚会更加严重！)]
 			#ELSE
 				[##npc2.addStatusEffect(SE_TENTACLE_RESTRAIN_1, 10)]
-				<br/>[style.italicsBad([npc2.NameIsFull] partially constricted by [npc.namePos] tentacles, and as such [npc2.her] ability to fight back is impaired!)]
-				<br/>[style.italicsTerrible(If [npc2.name] [npc2.verb(get)] tentacle-grabbed again, this effect will become more serious!)]
+				<br/>[style.italicsBad([npc2.NameIsFull]被被[npc.namePos]的触手缠住，[npc2.her]的反抗能力受限！)]
+				<br/>[style.italicsTerrible(如果[npc2.name]再继续被触手束缚，束缚会更加严重！)]
 			#ENDIF
 		]]></execute>
 		<critDescription><![CDATA[

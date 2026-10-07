@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -10,7 +10,7 @@
 	<race>dsg_raccoon</race>
 	
 	<!-- The name that will be used when referring to transformations related to this type (such as when changing body parts in the self-TF menu). -->
-	<transformationName><![CDATA[raccoon]]></transformationName>
+	<transformationName><![CDATA[浣熊]]></transformationName>
 	
 	<!-- The id of the material covering this ass.
 	Hard-coded values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/body/coverings/BodyCoveringType.java -->
@@ -57,13 +57,13 @@
 	<!-- The description which is shown when a character transforms to obtain this ass type.
 	This description immediately follows a brief description of the ass type undergoing a transformation. -->
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldRaccoon(raccoon-like)], [npc.assholeFullDescription].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldRaccoon(浣熊般)][npc.assholeFullDescription]。
+]]></transformationDescription>
 	
 	<!-- How this ass is described in a character's description page.
 	You should not end this particular description with any punctuation, as the game adds an additional description onto the end of it. -->
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] a raccoon-like, [npc.anusFullDescription(true)]
-	]]></bodyDescription>
+		拥有浣熊般[npc.anusFullDescription(true)]
+]]></bodyDescription>
 	
 </ass>

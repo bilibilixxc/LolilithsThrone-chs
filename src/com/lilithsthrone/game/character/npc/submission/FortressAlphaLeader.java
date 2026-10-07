@@ -96,8 +96,8 @@ public class FortressAlphaLeader extends NPC {
 	
 	public FortressAlphaLeader(boolean isImported) {
 		super(isImported,
-				new NameTriplet("Fyrsia", "Fyrsia", "Fyrsia"), "Lilyshamartu",
-				"The leader of one of Submission's imp fortresses, [npc.name] rules over [npc.her] followers with an iron fist, and shows very little respect towards anyone but [npc.her] boss, 'The Dark Siren'...",
+				new NameTriplet("菲尔西亚", "菲尔西亚", "菲尔西亚"), "莉莉莎马尔图",
+				"[npc.Name]是屈城区一处小恶魔要塞的首领，以铁拳统治着追随者，对他人毫无尊敬之意，除了[npc.her]的老大，“暗夜塞壬”……",
 				27, Month.JANUARY, 28,
 				20, Gender.F_P_V_B_FUTANARI, Subspecies.DEMON, RaceStage.GREATER, new CharacterInventory(false, 10), WorldType.IMP_FORTRESS_ALPHA, PlaceType.FORTRESS_ALPHA_KEEP, true);
 
@@ -352,7 +352,7 @@ public class FortressAlphaLeader extends NPC {
 					PresetColour.CLOTHING_BLACK,
 					PresetColour.CLOTHING_BLACK,
 					false,
-					new TattooWriting("Choke on it, bitch!", PresetColour.CLOTHING_BLACK, false, TattooWritingStyle.ITALICISED),
+					new TattooWriting("给我含住，母狗！", PresetColour.CLOTHING_BLACK, false, TattooWritingStyle.ITALICISED),
 					null);
 			this.addTattoo(InventorySlot.GROIN, tat);
 			
@@ -392,9 +392,9 @@ public class FortressAlphaLeader extends NPC {
 	public String getDescription() {
 		if(this.isSlave()) {
 			return (UtilText.parse(this,
-					"[npc.NamePos] days of ruling over [npc.her] imp fortress are now over. Having run afoul of the law, [npc.sheIs] now a slave, and is no more than [npc.her] owner's property."));
+					"[npc.NamePos]统治着小恶魔要塞的日子已经结束。[npc.sheIs]因触犯法律成为了奴隶，不过是其主人的财产而已。"));
 		} else {
-			return (UtilText.parse(this, "The leader of one of Submission's imp fortresses, [npc.name] rules over [npc.her] followers with an iron fist, and shows very little respect towards anyone but [npc.her] boss, 'The Dark Siren'..."));
+			return (UtilText.parse(this, "[npc.Name]是屈城区一处小恶魔要塞的首领，以铁拳统治着追随者，无论对谁都没有任何尊敬，除了[npc.her]的老大，“暗夜塞壬”……"));
 		}
 	}
 	

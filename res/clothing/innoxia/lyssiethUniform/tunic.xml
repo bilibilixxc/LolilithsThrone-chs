@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>5000</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[service dress tunic]]></name>
+		<name><![CDATA[军装礼服上衣]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[service dress tunics]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[军装礼服上衣]]></namePlural> 
 		
-		<description><![CDATA[A four pocket officer's service dress tunic, complete with metal buttons, shoulder rank pips, and a cord lanyard. This style of uniform is worn only by Lyssieth's elite guards.]]></description> 
+		<description><![CDATA[一件带有四个口袋的军装礼服外套，配有金属钮扣、肩章和系绳。这种制服只有莉西丝的精英卫兵才能穿戴。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

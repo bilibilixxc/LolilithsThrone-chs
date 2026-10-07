@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -106,7 +106,7 @@
 	<bookIconName>dragonicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Mysterious Dragons</bookName>
+	<bookName><![CDATA[隐秘龙族]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -119,38 +119,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[drake-morph]]></name>
-			<namePlural><![CDATA[drake-morphs]]></namePlural>
-			<singularMaleName><![CDATA[drake-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[drake-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[drake-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[drake-girls]]></pluralFemaleName>
+			<name><![CDATA[龙兽化形]]></name>
+			<namePlural><![CDATA[龙兽化形]]></namePlural>
+			<singularMaleName><![CDATA[龙兽男]]></singularMaleName>
+			<singularFemaleName><![CDATA[龙兽女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[龙兽男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[龙兽女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic dragon, known as a 'drake-morph' when bipedal, and a 'draketaur' when the lower body is that of a typically-oversized feral dragon. To be identified as a drake-morph, a character must be a dragon-morph with no wings or arm-wings.]]></description>
+	<description><![CDATA[一种人形的龙，当下肢拟人时被称为龙兽化形，而当下肢呈现出龙兽态时则称为半龙兽人。要判定为“龙兽化形”，角色必须先为“龙化形”，且没有翅膀和翼手。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[jabberwock]]></name>
-			<namePlural><![CDATA[jabberwocks]]></namePlural>
-			<singularMaleName><![CDATA[jabberwock]]></singularMaleName>
-			<singularFemaleName><![CDATA[jabberwock]]></singularFemaleName>
-			<pluralMaleName><![CDATA[jabberwocks]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[jabberwocks]]></pluralFemaleName>
+			<name><![CDATA[贾巴沃克]]></name>
+			<namePlural><![CDATA[贾巴沃克]]></namePlural>
+			<singularMaleName><![CDATA[贾巴沃克]]></singularMaleName>
+			<singularFemaleName><![CDATA[贾巴沃克]]></singularFemaleName>
+			<pluralMaleName><![CDATA[贾巴沃克]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[贾巴沃克]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[drake]]></feralName>
-		<feralNamePlural><![CDATA[drake]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[drake]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[drakess]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[drakes]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[drakesses]]></feralPluralFemaleName>
+		<feralName><![CDATA[龙兽]]></feralName>
+		<feralNamePlural><![CDATA[龙兽]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[龙兽]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[龙兽]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[龙兽]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[龙兽]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -181,7 +181,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] drake-like body is very powerful, and as a mythological creature [npc.she] [npc.has] a close arcane affinity with both the strengths and weaknesses that it brings.
+		[npc.NamePos]龙兽一般的身体强健有力，[npc.she]作为神话生物，拥有紧密的奥术亲和力，既能发挥它的强大之处，也熟悉它的脆弱之处。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

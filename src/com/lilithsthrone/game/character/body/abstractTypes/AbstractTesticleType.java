@@ -139,9 +139,9 @@ public abstract class AbstractTesticleType implements BodyPartTypeInterface {
 	@Override
 	public String getDeterminer(GameCharacter gc) {
 		if(gc.getTesticleCount()==2) {
-			return "a pair of";
+			return "一对";
 		} else if(gc.getTesticleCount()==3) {
-			return "a trio of";
+			return "三个";
 		} else {
 			return Util.intToString(gc.getTesticleCount());
 		}
@@ -155,7 +155,7 @@ public abstract class AbstractTesticleType implements BodyPartTypeInterface {
 	@Override
 	public String getNameSingular(GameCharacter gc) {
 		if(names==null || names.isEmpty()) {
-			return UtilText.returnStringAtRandom("ball", "testicle");
+			return UtilText.returnStringAtRandom("蛋蛋", "阴囊");
 		}
 		return Util.randomItemFrom(names);
 	}
@@ -163,7 +163,7 @@ public abstract class AbstractTesticleType implements BodyPartTypeInterface {
 	@Override
 	public String getNamePlural(GameCharacter gc) {
 		if(namesPlural==null || namesPlural.isEmpty()) {
-			return UtilText.returnStringAtRandom("balls", "testicles");
+			return UtilText.returnStringAtRandom("蛋蛋", "阴囊");
 		}
 		return Util.randomItemFrom(namesPlural);
 	}

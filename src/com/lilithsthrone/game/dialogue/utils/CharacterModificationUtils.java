@@ -181,22 +181,22 @@ public class CharacterModificationUtils {
 		contentSB.setLength(0);
 		
 		contentSB.append("<div class='cosmetics-inner-container full'>");
-			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Start Date</b></p>");
+			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>起始日期</b></p>");
 			contentSB.append("<p style='text-align:center;'>"
-								+ "Select the month in which the game starts."
+								+ "选择游戏开始时的月份。"
 							+ "</p>");
 	
 			for(Month month : Month.values()) {
 				if(Main.game.getStartingDate().getMonth() == month) {
 					contentSB.append(
 							"<div class='cosmetics-button active'>"
-								+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>"+Util.capitaliseSentence(month.getDisplayName(TextStyle.FULL, Locale.ENGLISH))+"</span>"
+								+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>"+Util.capitaliseSentence(month.getDisplayName(TextStyle.FULL, Locale.CHINESE))+"</span>"
 							+ "</div>");
 					
 				} else {
 					contentSB.append(
 							"<div id='STARTING_MONTH_"+month+"' class='cosmetics-button'>"
-								+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.getShades()[0]+";'>"+Util.capitaliseSentence(month.getDisplayName(TextStyle.FULL, Locale.ENGLISH))+"</span>"
+								+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.getShades()[0]+";'>"+Util.capitaliseSentence(month.getDisplayName(TextStyle.FULL, Locale.CHINESE))+"</span>"
 							+ "</div>");
 				}
 			}
@@ -212,29 +212,29 @@ public class CharacterModificationUtils {
 		contentSB.setLength(0);
 		
 		contentSB.append("<div class='container-half-width' style='text-align:center;'>");
-			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Gender</b></p>");
+			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>性别</b></p>");
 		
 			if(BodyChanging.getTarget().isPlayer()) {
 				contentSB.append("<p style='text-align:center;'>"
-								+ "Your gender is used to determine what genitals you start the game with."
+								+ "你的性别决定了你开始游戏时所拥有的生殖器。"
 							+ "</p>");
 			}
 			
 			if(BodyChanging.getTarget().getGender().getGenderName().isHasVagina()) {
 				contentSB.append(
 						"<div id='CHOOSE_GENDER_MALE' class='cosmetics-button'>"
-							+ "<span style='color:"+PresetColour.MASCULINE.getShades()[0]+";'>Male</span>"
+							+ "<span style='color:"+PresetColour.MASCULINE.getShades()[0]+";'>男性</span>"
 						+ "</div>"
 						+ "<div class='cosmetics-button active'>"
-							+ "[style.boldFeminine(Female)]"
+							+ "[style.boldFeminine(女性)]"
 						+ "</div>");
 			} else {
 				contentSB.append(
 						"<div class='cosmetics-button active'>"
-							+ "[style.colourMasculine(Male)]"
+							+ "[style.colourMasculine(男性)]"
 						+ "</div>"
 						+ "<div id='CHOOSE_GENDER_FEMALE' class='cosmetics-button'>"
-							+ "<span style='color:"+PresetColour.FEMININE.getShades()[0]+";'>Female</span>"
+							+ "<span style='color:"+PresetColour.FEMININE.getShades()[0]+";'>女性</span>"
 						+ "</div>");
 			}
 		
@@ -247,11 +247,11 @@ public class CharacterModificationUtils {
 		contentSB.setLength(0);
 
 		contentSB.append("<div class='container-half-width' style='text-align:center;'>");
-			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Femininity</b></p>");
+			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>女性化程度</b></p>");
 		
 			if(BodyChanging.getTarget().isPlayer()) {
 				contentSB.append("<p style='text-align:center;'>"
-									+ "Femininity is a measure of how masculine or feminine your face and body are."
+									+ "“女性化程度”控制你的外表有多接近女性或者男性"
 								+ "</p>");
 			}
 			
@@ -270,58 +270,58 @@ public class CharacterModificationUtils {
         if(BodyChanging.getTarget().getFemininity()==Femininity.FEMININE_STRONG) {
             contentSB.append(
                     "<div class='cosmetics-button active'>"
-                        + "[style.colourFeminineStrong(Very Feminine)]"
+                        + "[style.colourFeminineStrong(极端女性化)]"
                     + "</div>");
         } else {
             contentSB.append(
                     "<div id='CHOOSE_FEM_FEMININE_STRONG' class='cosmetics-button'>"
-                        + "<span style='color:"+PresetColour.FEMININE_PLUS.getShades()[0]+";'>Very Feminine</span>"
+                        + "<span style='color:"+PresetColour.FEMININE_PLUS.getShades()[0]+";'>极端女性化</span>"
                     + "</div>");
         }
 
         if(BodyChanging.getTarget().getFemininity()==Femininity.FEMININE) {
             contentSB.append(
                     "<div class='cosmetics-button active'>"
-                            + "[style.colourFeminine(Feminine)]"
+                            + "[style.colourFeminine(女性化)]"
                             + "</div>");
         } else {
             contentSB.append(
                     "<div id='CHOOSE_FEM_FEMININE' class='cosmetics-button'>"
-                            + "<span style='color:"+PresetColour.FEMININE.getShades()[0]+";'>Feminine</span>"
+                            + "<span style='color:"+PresetColour.FEMININE.getShades()[0]+";'>女性化</span>"
                             + "</div>");
         }
 //			} else {
         if(BodyChanging.getTarget().getFemininity()==Femininity.ANDROGYNOUS) {
             contentSB.append(
                     "<div class='cosmetics-button active'>"
-                        + "[style.colourAndrogynous(Androgynous)]"
+                        + "[style.colourAndrogynous(中性)]"
                     + "</div>");
         } else {
             contentSB.append(
                     "<div id='CHOOSE_FEM_ANDROGYNOUS' class='cosmetics-button'>"
-                        + "<span style='color:"+PresetColour.ANDROGYNOUS.getShades()[0]+";'>Androgynous</span>"
+                        + "<span style='color:"+PresetColour.ANDROGYNOUS.getShades()[0]+";'>中性</span>"
                     + "</div>");
         }
         if(BodyChanging.getTarget().getFemininity()==Femininity.MASCULINE) {
             contentSB.append(
                     "<div class='cosmetics-button active'>"
-                        + "[style.colourMasculine(Masculine)]"
+                        + "[style.colourMasculine(男性化)]"
                     + "</div>");
         } else {
             contentSB.append(
                     "<div id='CHOOSE_FEM_MASCULINE' class='cosmetics-button'>"
-                        + "<span style='color:"+PresetColour.MASCULINE.getShades()[0]+";'>Masculine</span>"
+                        + "<span style='color:"+PresetColour.MASCULINE.getShades()[0]+";'>男性化</span>"
                     + "</div>");
         }
         if(BodyChanging.getTarget().getFemininity()==Femininity.MASCULINE_STRONG) {
             contentSB.append(
                     "<div class='cosmetics-button active'>"
-                        + "[style.colourMasculineStrong(Very Masculine)]"
+                        + "[style.colourMasculineStrong(极端男性化)]"
                     + "</div>");
         } else {
             contentSB.append(
                     "<div id='CHOOSE_FEM_MASCULINE_STRONG' class='cosmetics-button'>"
-                        + "<span style='color:"+PresetColour.MASCULINE_PLUS.getShades()[0]+";'>Very Masculine</span>"
+                        + "<span style='color:"+PresetColour.MASCULINE_PLUS.getShades()[0]+";'>极端男性化</span>"
                     + "</div>");
         }
 //			}
@@ -336,12 +336,12 @@ public class CharacterModificationUtils {
 		
 		contentSB.append("<div class='container-full-width' style='text-align:center;'>");
 		
-				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Personality</b></p>");
+				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>个性</b></p>");
 				
 				if(BodyChanging.getTarget().isPlayer()) {
 					contentSB.append("<p style='text-align:center;'>"
-									+ "Your personality will have a minor influence in some situations."
-									+ " It will not lock out any options during the game, and is more for roleplaying purposes."
+									+ "你的性格会在一些情况下产生少量影响。"
+									+ "但不会在游戏中锁定任何选项，这些选项主要是为了满足角色扮演的需求。"
 								+ "</p>");
 				}
 				
@@ -373,7 +373,7 @@ public class CharacterModificationUtils {
 		contentSB.append("<div class='container-full-width'>");
 		
 			contentSB.append("<div class='cosmetics-inner-container full'>");
-				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Obedience</b></p>");
+				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>服从</b></p>");
 				
 				for(ObedienceLevel obedience : ObedienceLevel.values()) {
 					if(BodyChanging.getTarget().getObedience()==obedience) {
@@ -403,7 +403,7 @@ public class CharacterModificationUtils {
 		contentSB.append("<div class='container-full-width'>");
 		
 			contentSB.append("<div class='cosmetics-inner-container full'>");
-				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Affection</b></p>");
+				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>好感</b></p>");
 				
 				for(AffectionLevel affection : AffectionLevel.values()) {
 					if(BodyChanging.getTarget().getAffectionLevel(Main.game.getPlayer())==affection) {
@@ -458,27 +458,27 @@ public class CharacterModificationUtils {
 		contentSB.setLength(0);
 
 		contentSB.append("<div class='container-full-width'>");
-			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Birthday</b></p>");
+			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>生日</b></p>");
 			
 			if(BodyChanging.getTarget().isPlayer()) {
 				contentSB.append("<p style='text-align:center;'>"
-									+ "You were born on the "
-										+Units.date(BodyChanging.getTarget().getBirthday(), Units.DateType.LONG)+", making you "+Util.intToString(BodyChanging.getTarget().getAgeValue())+" years old."
+									+ "你出生于"
+										+Units.date(BodyChanging.getTarget().getBirthday(), Units.DateType.LONG)+"，因而你"+Util.intToString(BodyChanging.getTarget().getAgeValue())+"岁。"
 								+ "</p>");
 			}
 			
 			contentSB.append("<div class='container-full-width' style='margin:0;padding;0;width:100%;'>");
 			
 				contentSB.append("<div class='container-full-width' style='width:calc(33.3% - 16px);'>");
-					contentSB.append(applyDateWrapper("Day", "BIRTH_DAY", "", "", String.valueOf(BodyChanging.getTarget().getBirthday().getDayOfMonth()), false, false));
+					contentSB.append(applyDateWrapper("日期", "BIRTH_DAY", "", "", String.valueOf(BodyChanging.getTarget().getBirthday().getDayOfMonth()), false, false));
 				contentSB.append("</div>");
 
 				contentSB.append("<div class='container-full-width' style='width:calc(33.3% - 16px);'>");
-					contentSB.append(applyDateWrapper("Month", "BIRTH_MONTH", "", "", BodyChanging.getTarget().getBirthday().getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH), false, false));
+					contentSB.append(applyDateWrapper("月份", "BIRTH_MONTH", "", "", BodyChanging.getTarget().getBirthday().getMonth().getDisplayName(TextStyle.FULL, Locale.CHINESE), false, false));
 				contentSB.append("</div>");
 
 				contentSB.append("<div class='container-full-width' style='width:calc(33.3% - 16px);'>");
-					contentSB.append(applyDateWrapper("Age", "AGE", "", "",
+					contentSB.append(applyDateWrapper("年龄", "AGE", "", "",
 							String.valueOf(BodyChanging.getTarget().getAgeValue()),
 							BodyChanging.getTarget().getAgeValue()<=MINIMUM_AGE,
 							BodyChanging.getTarget().getAgeValue()>=MAXIMUM_AGE));
@@ -520,7 +520,7 @@ public class CharacterModificationUtils {
 		contentSB.setLength(0);
 		
 		contentSB.append("<div class='container-half-width'>");
-			contentSB.append(applyDateWrapper("Age", "AGE", "", "",
+			contentSB.append(applyDateWrapper("年龄", "AGE", "", "",
 					String.valueOf(BodyChanging.getTarget().getAgeValue()),
 					BodyChanging.getTarget().getAgeValue()<=MINIMUM_AGE,
 					BodyChanging.getTarget().isPlayer()
@@ -539,12 +539,12 @@ public class CharacterModificationUtils {
 		} else {
 			contentSB.append("<div class='container-half-width' style='text-align:center;'>");
 		}
-			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Sexual Orientation</b></p>");
+			contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>性取向</b></p>");
 			
 			if(BodyChanging.getTarget().isPlayer()) {
 				contentSB.append("<p style='text-align:center;'>"
-								+ "Sexual orientation is determined by your attraction towards femininity or masculinity."
-								+ "<br/><i>Hover over the orientation icon in your character's status effects panel to see the effects.</i>"
+								+"性取向是由你受到女性特质或男性特质的吸引程度所决定的。"
+								+ "<br/><i>将鼠标悬停在角色状态效果栏中的取向图标上以查看效果。</i>"
 							+ "</p>");
 			}
 			
@@ -573,7 +573,7 @@ public class CharacterModificationUtils {
 		
 		contentSB.append("<div class='container-full-width'>");
 			contentSB.append("<div class='container-full-width' style='padding:0;'>");
-				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>Fetishes</b></p>");
+				contentSB.append("<p style='text-align:center; margin:0; padding:0;'><b>性癖</b></p>");
 				
 				int i=0;
 				for(AbstractFetish fetish : Fetish.getAllFetishes()) {
@@ -621,8 +621,8 @@ public class CharacterModificationUtils {
 	public static float[] sexExperienceCorruption = new float[] {0, 0.5f, 1, 2.5f, 5};
 	
 	private static Colour[] sexColours = new Colour[] {PresetColour.GENERIC_EXCELLENT, PresetColour.BASE_PINK_LIGHT, PresetColour.BASE_PINK_SALMON, PresetColour.BASE_PINK, PresetColour.BASE_PINK_DEEP};
-	public static String[] feminineNames = new String[] {"Virgin", "Inexperienced", "Experienced", "Expert", "Slut"};
-	public static String[] masculineNames = new String[] {"Virgin", "Inexperienced", "Experienced", "Expert", "Stud"};
+	public static String[] feminineNames = new String[] {"初探", "青涩", "熟练", "专家", "荡妇"};
+	public static String[] masculineNames = new String[] {"初探", "青涩", "熟练", "专家", "种马"};
 	
 //	public static String[] virginityLossesGynephilic = new String[] {"your girlfriend", "", "some girl in your apartment", "some girl in a club's restroom"};
 //	public static String[] virginityLossesAmbiphilic = new String[] {"your girlfriend in her apartment", "your girlfriend in your apartment", "some girl in her apartment", "some girl in your apartment", "some girl in a club's restroom",
@@ -635,98 +635,98 @@ public class CharacterModificationUtils {
 		contentSB.setLength(0);
 		
 		contentSB.append("<div class='container-full-width'>"
-							+ "<div class='container-full-width' style='text-align:center;'><b>Sex Actions [style.colourSex(Performed)]</b></div>");
+							+ "<div class='container-full-width' style='text-align:center;'><b>性行为[style.colourSex(已执行)]</b></div>");
 		
 			contentSB.append(
 							getSexExperienceEntry("HANDJOBS_GIVEN",
-									"Handjobs",
-									"you've jerked someone off",
+									"手淫",
+									"你给别人撸管过",
 									new SexType(SexParticipantType.NORMAL, SexAreaPenetration.FINGER, SexAreaPenetration.PENIS))
 							
 							+ getSexExperienceEntry("FINGERINGS_GIVEN",
-									"Fingerings",
-									"you've fingered someone",
+									"指交",
+									"你给别人指交过",
 									new SexType(SexParticipantType.NORMAL, SexAreaPenetration.FINGER, SexAreaOrifice.VAGINA))
 							
 							+ getSexExperienceEntry("BLOWJOBS_GIVEN",
-									"Blowjobs",
-									"you've sucked someone's cock",
+									"口交",
+									"你吃过别人的鸡巴",
 									new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, SexAreaPenetration.PENIS))
 							
 							+ getSexExperienceEntry("CUNNILINGUS_GIVEN",
-									"Cunnilingus",
-									"you've eaten someone out",
+									"舔阴",
+									"你给别人舔过逼",
 									new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.VAGINA))
 
 							+ (Main.game.isAnalContentEnabled()
 									?getSexExperienceEntry("ANILINGUS_GIVEN",
-										"Anilingus",
-										"you've orally pleasured someone's asshole",
+										"吻肛",
+										"你舔过别人的肛门",
 										new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.ANUS))
 									:"")
 			
 							+ getSexExperienceEntry("VAGINAL_GIVEN",
-									"Vaginal Sex",
-									"you've fucked someone's pussy",
+									"阴道性交",
+									"你操过别人的小穴",
 									new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA))
 							
 							+ (Main.game.isAnalContentEnabled()
 									?getSexExperienceEntry("ANAL_GIVEN",
-										"Anal Sex",
-										"you've fucked someone's ass",
+										"肛交",
+										"你操过别人的屁股",
 										new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ANUS))
 									:""));
 		contentSB.append("</div>");
 
 		contentSB.append("<div class='container-full-width'>"
-							+ "<div class='container-full-width' style='text-align:center;'><b>Sex Actions [style.colourSexDom(Received)]</b></div>");
+							+ "<div class='container-full-width' style='text-align:center;'><b>性行为[style.colourSexDom(接受)]</b></div>");
 			contentSB.append(
 							(BodyChanging.getTarget().hasPenis()
 									?getSexExperienceEntry("HANDJOBS_TAKEN",
-										"Handjobs",
-										"someone's jerked you off",
+										"手淫",
+										"别人给你撸管过",
 										new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaPenetration.FINGER))
 									:"")
 							
 							+ (BodyChanging.getTarget().hasVagina()
 									?getSexExperienceEntry("FINGERINGS_TAKEN",
-										"Fingerings",
-										"you've been fingered by someone",
+										"指交",
+										"别人为你指交过",
 										new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.FINGER))
 									:"")
 							
 							+ (BodyChanging.getTarget().hasPenis()
 									?getSexExperienceEntry("BLOWJOBS_TAKEN",
-										"Blowjobs",
-										"someone's sucked your cock",
+										"口交",
+										"有人吃过你的鸡巴",
 										new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.MOUTH))
 									:"")
 							
 							+ (BodyChanging.getTarget().hasVagina()
 									?getSexExperienceEntry("CUNNILINGUS_TAKEN",
-										"Cunnilingus",
-										"you've been eaten out",
+										"舔阴",
+										"你的小穴被舔过",
 										new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.TONGUE))
 									:"")
 							
 							+ (Main.game.isAnalContentEnabled()
 									?getSexExperienceEntry("ANILINGUS_TAKEN",
-										"Anilingus",
-										"someone's orally pleasured your asshole",
+										"吻肛",
+										"你的肛门被别人舔过",
 										new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.TONGUE))
 									:"")
 							
 							+ (BodyChanging.getTarget().hasVagina()
 									?getSexExperienceEntry("VAGINAL_TAKEN",
-										"Vaginal Sex",
-										"your pussy has been fucked",
+										"阴道性交",
+										"你的小穴被操过",
 										new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS))
 									:"")
 
 							+ (Main.game.isAnalContentEnabled()
 									?getSexExperienceEntry("ANAL_TAKEN",
-										"Anal Sex",
-										"your ass has been fucked",
+										"肛交",
+										"你的屁眼被操过",
 										new SexType(SexParticipantType.NORMAL, SexAreaOrifice.ANUS, SexAreaPenetration.PENIS))
 									:""));
 		contentSB.append("</div>");
@@ -863,7 +863,7 @@ public class CharacterModificationUtils {
 						+ title
 					+ "</div>"
 					+ "<div class='container-full-width inner' style='width:75%;margin:0;padding:0;text-align:center;'>"
-						+ "<i>The number of times "+description+".</i>"
+						+ "<i>"+description+"的次数。</i>"
 					+ "</div>"
 					
 					+ "<div class='container-full-width' style='width:100%;margin:0;padding:0; display:flex; align-items:baseline;'>"
@@ -894,7 +894,7 @@ public class CharacterModificationUtils {
 						+ "</div>"
 						+ "<div class='container-full-width inner' style='width:40%; margin:0;padding:0;text-align:center;'>"
 							+"<span style='color:"+sexColours[index].toWebHexString()+";'>"+names[index]+"</span>"
-							+" ([style.colourCorruption(+"+sexExperienceCorruption[index]+" corruption)])"
+							+" ([style.colourCorruption(+"+sexExperienceCorruption[index]+"堕落)])"
 						+ "</div>"
 					+ "</div>"
 				+ "</div>";
@@ -1028,12 +1028,12 @@ public class CharacterModificationUtils {
 
 	public static String getAgeAppearanceChoiceDiv() {
 		return applyFullVariableWrapper(
-				"Age Appearance",
+				"外表年龄",
 				UtilText.parse(BodyChanging.getTarget(),
 						"Change how old [npc.name] [npc.verb(appear)] to be. [npc.She] [npc.is] limited to looking as young as " + MINIMUM_AGE + ", or up to "
 						+ Util.intToString(BodyChanging.getTarget().getAgeDifferenceUpperLimit())
-						+ " years older than [npc.her] real age."
-						+ "<br/><i>This is purely a cosmetic change, and doesn't affect any in-game choices.</i>"),
+						+ "岁。"
+						+ "<br/><i>单纯只是外表改变，不会影响游戏内的选择。</i>"),
 				"AGE_APPEARANCE",
 				"1",
 				"5",
@@ -1041,24 +1041,24 @@ public class CharacterModificationUtils {
 				BodyChanging.getTarget().getAppearsAsAgeValue()<=18,
 				BodyChanging.getTarget().getAppearsAsAgeValue()>=(BodyChanging.getTarget().getAgeValue()+BodyChanging.getTarget().getAgeDifferenceUpperLimit()))
 				
-				+ applyWrapper("Birthday",
-						UtilText.parse(BodyChanging.getTarget(), "[npc.NamePos] birthday can never be changed, but by transforming [npc.her] body, [npc.she] may appear to be younger or older than [npc.she] really [npc.is]."),
+				+ applyWrapper("生日",
+						UtilText.parse(BodyChanging.getTarget(), "[npc.NamePos]的生日无法被改变，但可以通过转化[npc.her]的身体，使其显得比真实年龄更加年轻或年长。"),
 						"BIRTHDAY",
 						"<p style='text-align:center; margin:0; padding:0;'>"
 							+ BodyChanging.getTarget().getBirthdayString()
 								+ UtilText.parse(BodyChanging.getTarget(),
-									"</br>Making [npc.namePos] real age: <b style='color:"+BodyChanging.getTarget().getAge().getColour().toWebHexString()+"'>"+BodyChanging.getTarget().getAgeValue()+"</b>")
+									"</br>设置[npc.namePos]的真实年龄：<b style='color:"+BodyChanging.getTarget().getAge().getColour().toWebHexString()+"'>"+BodyChanging.getTarget().getAgeValue()+"</b>")
 						+"</p>",
 						true);
 	}
 	
 	public static String getHeightChoiceDiv(boolean fullWidth) {
-		return applyFullVariableWrapperSizes("Height",
-				UtilText.parse(BodyChanging.getTarget(), "Change how tall [npc.name] [npc.is]."
-						+ "<br/><i>This affects some minor descriptions and is also used for determining if a sex scene is categorised as 'size-difference' or not.</i>"
+		return applyFullVariableWrapperSizes("身高",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.name]的身高。"
+						+ "<br/><i>这影响部分细微的描述，并且用以决定某个性交场景是否有“体型差”。</i>"
 						+ (!Main.game.isInNewWorld()
-							?"<br/>[style.italicsMinorBad(Height is limited to [units.sizes("+Height.getMaximumHeightForCharacterCreation()+")]"
-									+ " during character creation, but can later be raised to [units.sizes("+Height.SEVEN_COLOSSAL.getMaximumValue()+")].)]"
+							?"<br/>[style.italicsMinorBad(角色创建时身高最大为[units.sizes("+Height.getMaximumHeightForCharacterCreation()+")]"
+									+ "在角色创建时设定，但后续可提升至[units.sizes("+Height.SEVEN_COLOSSAL.getMaximumValue()+")]。)]"
 							:"")),
 				"HEIGHT",
 				BodyChanging.getTarget().getHeightValue(),
@@ -1072,9 +1072,9 @@ public class CharacterModificationUtils {
 	
 	public static String getSelfTransformFemininityChoiceDiv() {
 		return applyFullVariableWrapper(
-				"Femininity",
-				UtilText.parse(BodyChanging.getTarget(), "Change how feminine or masculine [npc.namePos] body is."
-						+ "<br/><i>This affects speech colour text, determines whether clothing is too feminine or masculine for [npc.herHim] to wear, and is also used for determining sexual attraction (based on others' orientation).</i>"),
+				"女性化程度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的身体有多女性化或男性化。"
+						+ "<br/><i>这影响对话上色，并且决定了某件衣服对于[npc.herHim]来说是否太过女性化或男性化，并且同样会被用来决定性吸引力(基于他人的去向)。</i>"),
 				"FEMININITY",
 				"1",
 				"5",
@@ -1134,9 +1134,9 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Body Material",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] body material."
-						+ "<br/><i>Different body material types give different passive bonuses. Hover over this character's racial status effect tooltip to see them!</i>"),
+		return applyWrapper("身体材质",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的身体材质。"
+						+ "<br/><i>不同的身体材质类型支持不同的被动增益。将鼠标悬浮在该角色的种族状态效果上查看提示！</i>"),
 				"BODY_MATERIAL",
 				contentSB.toString(),
 				false);
@@ -1193,9 +1193,9 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Tail",
+		return applyWrapper("尾巴",
 				UtilText.parse(BodyChanging.getTarget(),
-						"<i>Tails must be suitable for penetration (*), and either be prehensile (&#8314;) or at least 50% of [npc.namePos] height to be used to penetrate orifices in sex."
+						"<i>尾巴必须要适合插入(*)，并且灵活可控(⁺)，或至少有[npc.namePos]身高50%的长度，才能在性交中用于插入。"
 						+ " Ovipositor-equipped tails (&deg;) can lay eggs in orifices during sex. Tussy-equipped tails (&macr;) can be used as a fuckable orifice.</i>"),
 				"TAIL_TYPE",
 				contentSB.toString(),
@@ -1206,10 +1206,10 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().getLegConfiguration()==LegConfiguration.TAIL_LONG) {
 			float percentageMinimum = BodyChanging.getTarget().isFeral()?Leg.LENGTH_PERCENTAGE_MIN_FERAL:Leg.LENGTH_PERCENTAGE_MIN;
 			
-			return applyFullVariableWrapper(Util.capitaliseSentence(LegConfiguration.TAIL_LONG.getName())+" Length",
+			return applyFullVariableWrapper(Util.capitaliseSentence(LegConfiguration.TAIL_LONG.getName())+"长度",
 					UtilText.parse(BodyChanging.getTarget(),
-						"Change the length of [npc.namePos] [npc.tail]. This is defined as a percentage of [npc.namePos] height,"
-								+ " and is limited to values of between "+Math.round(percentageMinimum*100)+"% and "+Math.round(Leg.LENGTH_PERCENTAGE_MAX*100)+"%."),
+						"修改[npc.namePos][npc.tail]的长度。通过设置长度为[npc.namePos]身高的百分比确定，"
+								+ "数值限制在"+Math.round(percentageMinimum*100)+"%到"+Math.round(Leg.LENGTH_PERCENTAGE_MAX*100)+"%之间。"),
 					"TAIL_LENGTH",
 					"5%",
 					"25%",
@@ -1220,20 +1220,20 @@ public class CharacterModificationUtils {
 					BodyChanging.getTarget().getLegTailLengthAsPercentageOfHeight()>=Leg.LENGTH_PERCENTAGE_MAX);
 			
 		} else {
-			return applyFullVariableWrapper("Tail Length",
+			return applyFullVariableWrapper("尾巴长度",
 					UtilText.parse(BodyChanging.getTarget(),
 							BodyChanging.getTarget().hasTail()
-								?"Change the length of [npc.namePos] [npc.tail]. This is defined as a percentage of [npc.namePos] height,"
-										+ " and is limited to values of between "+Math.round(Tail.LENGTH_PERCENTAGE_MIN*100)+"% and "+Math.round(Tail.LENGTH_PERCENTAGE_MAX*100)+"%."
-								:"[npc.Name] [npc.do] not have a tail, so the length cannot be changed!"),
+								?"修改[npc.namePos][npc.tail]的长度。通过设置长度为[npc.namePos]身高的百分比确定，"
+										+ "数值限制在"+Math.round(Tail.LENGTH_PERCENTAGE_MIN*100)+"%到"+Math.round(Tail.LENGTH_PERCENTAGE_MAX*100)+"%之间。"
+								:"[npc.Name]没有尾巴，所以无法修改长度！"),
 					"TAIL_LENGTH",
 					"5%",
 					"25%",
 					Math.round(BodyChanging.getTarget().getTailLengthAsPercentageOfHeight()*100)+"%"
 						+ "<br/>"
 						+ Units.size(BodyChanging.getTarget().getTailLength(false))
-						+ "<br/><i>Base Diameter: "+Units.size(BodyChanging.getTarget().getTailDiameter(0))+"</i>"
-						+ "<br/><i>Tip Diameter: "+Units.size(BodyChanging.getTarget().getTailDiameter(BodyChanging.getTarget().getTailLength(false)))+"</i>",
+						+ "<br/><i>根部直径："+Units.size(BodyChanging.getTarget().getTailDiameter(0))+"</i>"
+						+ "<br/><i>顶端直径："+Units.size(BodyChanging.getTarget().getTailDiameter(BodyChanging.getTarget().getTailLength(false)))+"</i>",
 					BodyChanging.getTarget().getTailLengthAsPercentageOfHeight()<=Tail.LENGTH_PERCENTAGE_MIN || !BodyChanging.getTarget().hasTail(),
 					BodyChanging.getTarget().getTailLengthAsPercentageOfHeight()>=Tail.LENGTH_PERCENTAGE_MAX || !BodyChanging.getTarget().hasTail());
 		}
@@ -1245,7 +1245,7 @@ public class CharacterModificationUtils {
 		if(!BodyChanging.getTarget().hasTail()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-						+ Util.capitaliseSentence("Zero")
+						+ Util.capitaliseSentence("零")
 					+ "</div>");
 			
 		} else {
@@ -1273,14 +1273,14 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Tail Count",
+		return applyWrapper("尾巴数量",
 				UtilText.parse(BodyChanging.getTarget(),
 						!BodyChanging.getTarget().hasTail()
-							?"As [npc.name] [npc.do] not have a tail, [npc.she] cannot change how many [npc.she] [npc.has]!"
+							?"由于[npc.name]没有尾巴，所以无法修改尾巴的数量！"
 							:((BodyChanging.getTarget().isYouko()
-								?"As [npc.nameIsFull] a youko, [npc.she] can change the number of tails [npc.she] [npc.verb(appear)] to have!"
-								:"Change how many [npc.tails] [npc.name] [npc.has].")
-							+ "<br/><i>The number of tails is taken into consideration when checking to see if there's a tail available for penetrative actions during sex.</i>")),
+								?"由于[npc.nameIsFull]是一只妖狐，[npc.she]能够修改拥有的尾巴数量！"
+								:"修改[npc.name]拥有多少[npc.tails]。")
+							+ "<br/><i>尾巴的数量会在检测某条尾巴在性交中是否适合插入时纳入考虑。</i>")),
 				"TAIL_COUNT",
 				contentSB.toString(),
 				true);
@@ -1312,26 +1312,26 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Tail Girth",
+		return applyWrapper("尾巴周长",
 				UtilText.parse(BodyChanging.getTarget(),
 						!BodyChanging.getTarget().hasTail()
-							?("As [npc.name] [npc.do] not have a tail, [npc.she] cannot change [npc.her] tail girth!"
+							?("由于[npc.name]没有尾巴，所以无法修改尾巴周长！"
 									+(BodyChanging.getTarget().getLegConfiguration()==LegConfiguration.TAIL_LONG
-										?"<br/>(<i>The girth of [npc.her] serpent-tail is based on [npc.her] hip size.</i>)"
+										?"<br/>(<i>[npc.her]蛇尾的周长基于屁股大小。</i>)"
 										:""))
-							:("Change the girth of [npc.namePos] [npc.tail]."
-									+ "<br/><i>Tail girth has an impact in determining whether a tail is too large for the orifice it is penetrating.</i>")),
+							:("修改[npc.namePos]的[npc.tail]周长。"
+									+ "<br/><i>尾巴周长影响插入时是否对于腔穴过大。</i>")),
 				"TAIL_GIRTH",
 				contentSB.toString(),
 				true);
 	}
 
 	public static String getSelfTransformTentacleLengthDiv() {
-		return applyFullVariableWrapper("Tentacle Length",
+		return applyFullVariableWrapper("触手长度",
 				UtilText.parse(BodyChanging.getTarget(),
 						BodyChanging.getTarget().hasTentacle()
-							?"Change the length of [npc.namePos] [npc.tentacles]. This is defined as a percentage of [npc.namePos] height, and is limited to values of between 100% and 500%."
-							:"[npc.Name] [npc.do] not have any tentacles, so the length cannot be changed!"),
+							?"修改[npc.namePos][npc.tentacles]的长度。通过设置长度为[npc.namePos]身高的百分比确定，数值限制在100%至500%之内。"
+							:"[npc.Name]没有触手，所以无法修改长度！"),
 				"TENTACLE_LENGTH",
 				"5%",
 				"25%",
@@ -1368,12 +1368,12 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Tentacle Girth",
+		return applyWrapper("触手周长",
 				UtilText.parse(BodyChanging.getTarget(),
 						!BodyChanging.getTarget().hasTentacle()
-							?"As [npc.name] [npc.do] not have a tentacle, [npc.she] cannot change [npc.her] tentacle girth!"
-							:("Change the girth of [npc.namePos] [npc.tentacle]."
-									+ "<br/><i>Tentacle girth has an impact in determining whether a tentacle is too large for the orifice it is penetrating.</i>")),
+							?"由于[npc.name]没有触手，所以无法修改触手周长！"
+							:("修改[npc.namePos]的[npc.tentacle]周长。"
+									+ "<br/><i>触手周长影响插入时是否对于腔穴过大。</i>")),
 				"TENTACLE_GIRTH",
 				contentSB.toString(),
 				true);
@@ -1417,10 +1417,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Wing Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] wings."
-						+ "<br/><i>Wing size affects [npc.namePos] ability to fly."
-						+ " This varies based on leg configuration, with suitable sizes for [npc.namePos] '[npc.legConfiguration]' body being marked by an asterisk. Some wing types do not support all possible wing sizes.</i>"),
+		return applyWrapper("翅膀尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]翅膀的大小。"
+						+ "<br/><i>翅膀大小影响[npc.namePos]的飞行能力。"
+						+ "要求基于腿部配置，适合[npc.namePos]“[npc.legConfiguration]”的大小则会被标记星号(*)。部分翅膀类型不支持所有翅膀大小等级。</i>"),
 				"WING_SIZE",
 				contentSB.toString(),
 				true);
@@ -1465,9 +1465,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Wings",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] wing type."
-						+ "<br/><i>Wing types which enable flight (when their size is also sufficiently large enough) are marked by an asterisk.</i>"),
+		return applyWrapper("翅膀",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的翅膀类型。"
+						+ "<br/><i>支持飞行的翅膀类型(只要尺寸足够大)会用星号标记(*)。</i>"),
 				"WING_TYPE",
 				contentSB.toString(),
 				true);
@@ -1518,9 +1518,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Horns",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] horn type."
-						+ "<br/><i>Horns of a sufficient length can be used as handles for some sex actions, and are also used for subspecies identification.</i>"),
+		return applyWrapper("角",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]角的类型。"
+						+ "<br/><i>拥有足够长度的角能够当作部分性动作的把手，也会用于亚种识别。</i>"),
 				"HORN_TYPE",
 				contentSB.toString(),
 				true);
@@ -1551,9 +1551,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Horn Length",
-				UtilText.parse(BodyChanging.getTarget(), "Change the length of [npc.namePos] horns."
-						+ "<br/><i>Horns of a sufficient length can be used as handles for some sex actions (marked by an asterisk), and are also used for subspecies identification.</i>"),
+		return applyWrapper("角长度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]角的长度。"
+						+ "<br/><i>拥有足够长度的角能够当作部分性动作的把手(标记为星号*)，也会用于亚种识别。</i>"),
 				"HORN_LENGTH",
 				contentSB.toString(),
 				true);
@@ -1584,9 +1584,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Horn Rows Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many pairs of [npc.horns] [npc.name] has."
-						+ "<br/><i>This is mostly a cosmetic change, but is also taken into account for subspecies identification (such as unicorns having one 'row' of a single horn).</i>"),
+		return applyWrapper("成组角的数量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]有几组[npc.horns]。"
+						+ "<br/><i>通常只是外表修改，但在亚种识别会纳入考量(如独角兽就有一组独角)。</i>"),
 				"HORN_COUNT",
 				contentSB.toString(),
 				true);
@@ -1617,9 +1617,9 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Horns per Row Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many [npc.horns] are in each row."
-						+ "<br/><i>This is mostly a cosmetic change, but is also taken into account for subspecies identification (such as unicorns having one 'row' of a single horn).</i>"),
+		return applyWrapper("每组角的数量",
+				UtilText.parse(BodyChanging.getTarget(), "修改一组[npc.horns]有几个。"
+						+ "<br/><i>通常只是外表修改，但在亚种识别会纳入考量(如独角兽就有一组独角)。</i>"),
 				"HORN_COUNT_ROWS",
 				contentSB.toString(),
 				true);
@@ -1652,9 +1652,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Antennae",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] antenna type."
-						+ "<br/><i>This is only used for subspecies identification.</i>"),
+		return applyWrapper("触须",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的触须类型。"
+						+ "<br/><i>仅用于亚种识别。</i>"),
 				"ANTENNAE_TYPE",
 				contentSB.toString(),
 				true);
@@ -1685,9 +1685,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Antenna Length",
-				UtilText.parse(BodyChanging.getTarget(), "Change the length of [npc.namePos] antennae."
-						+ "<br/><i>Antennae of a sufficient length can be used as handles for some sex actions (marked by an asterisk), and are also used for subspecies identification.</i>"),
+		return applyWrapper("触须长度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]触须的长度。"
+						+ "<br/><i>拥有足够长度的触须能够当作部分性动作的把手(标记为星号*)，也会用于亚种识别。</i>"),
 				"ANTENNA_LENGTH",
 				contentSB.toString(),
 				true);
@@ -1718,9 +1718,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Antenna Rows Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many pairs of [npc.antennae] [npc.name] has."
-						+ "<br/><i>This is mostly a cosmetic change, but is also taken into account for subspecies identification (such as unicorns having one 'row' of a single antenna).</i>"),
+		return applyWrapper("触须组数",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]有几组[npc.antennae]。"
+						+ "<br/><i>通常只是外表修改，但在亚种识别会纳入考量(如独角兽就有一组单触须)。</i>"),
 				"ANTENNA_COUNT",
 				contentSB.toString(),
 				true);
@@ -1751,9 +1751,9 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Antennae per Row Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many [npc.antennae] are in each row."
-						+ "<br/><i>This is mostly a cosmetic change, but is also taken into account for subspecies identification (such as unicorns having one 'row' of a single antenna).</i>"),
+		return applyWrapper("每组触须数量",
+				UtilText.parse(BodyChanging.getTarget(), "修改一组[npc.antennae]有几个。"
+						+ "<br/><i>通常只是外表修改，但在亚种识别会纳入考量(如独角兽就有一组单触须)。</i>"),
 				"ANTENNA_COUNT_ROWS",
 				contentSB.toString(),
 				true);
@@ -1779,9 +1779,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Hair",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] hair type."
-						+ "<br/><i>This is only used for subspecies identification.</i>"),
+		return applyWrapper("头发",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的头发类型。"
+						+ "<br/><i>仅用于亚种识别。</i>"),
 				"HAIR_TYPE",
 				contentSB.toString(),
 				false);
@@ -1805,9 +1805,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Hair Length",
-				UtilText.parse(BodyChanging.getTarget(), "Change the length of [npc.namePos] [npc.hair(true)]."
-						+ "<br/><i>Hair of a sufficient length (marked by an asterisk) can be pulled in some sex actions.</i>"),
+		return applyWrapper("头发长度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.hair(true)]的长度。"
+						+ "<br/><i>足够长的头发(标记星号*)可以在部分性动作中被拉扯。</i>"),
 				"HAIR_LENGTH",
 				contentSB.toString(),
 				true);
@@ -1819,25 +1819,25 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().isNeckFluff()) {
 			contentSB.append(
 					"<div id='NECK_FLUFF_OFF' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.TRANSFORMATION_SHRINK.getShades()[0]+";'>No neck fluff</span>"
+						+ "<span style='color:"+PresetColour.TRANSFORMATION_SHRINK.getShades()[0]+";'>无颈部毛团</span>"
 					+ "</div>"
 					+"<div class='cosmetics-button active'>"
-						+ "<span style='color:"+PresetColour.TRANSFORMATION_GROW.toWebHexString()+";'>Neck fluff</span>"
+						+ "<span style='color:"+PresetColour.TRANSFORMATION_GROW.toWebHexString()+";'>有颈部毛团</span>"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button active'>"
-							+ "<span style='color:"+PresetColour.TRANSFORMATION_SHRINK.toWebHexString()+";'>No neck fluff</span>"
+							+ "<span style='color:"+PresetColour.TRANSFORMATION_SHRINK.toWebHexString()+";'>无颈部毛团</span>"
 					+ "</div>"
 					+"<div id='NECK_FLUFF_ON' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.TRANSFORMATION_GROW.getShades()[0]+";'>Neck fluff</span>"
+						+ "<span style='color:"+PresetColour.TRANSFORMATION_GROW.getShades()[0]+";'>有颈部毛团</span>"
 					+ "</div>");
 		}
 		
 
-		return applyWrapper("Neck Fluff",
-				UtilText.parse(BodyChanging.getTarget(), "Set whether [npc.name] [npc.has] a lot of additional fluff around [npc.her] neck and upper chest."
-						+ "<br/><i>This is a purely cosmetic transformation.</i>"),
+		return applyWrapper("颈部毛团",
+				UtilText.parse(BodyChanging.getTarget(), "设置[npc.name]是否在颈部和上胸部有额外的毛绒团。"
+						+ "<br/><i>单纯只是外表转化。</i>"),
 				"NECK_FLUFF",
 				contentSB.toString(),
 				true);
@@ -1867,10 +1867,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Hair Style",
+		return applyWrapper("发型",
 				description
-					+ "<br/><i>'"+Util.capitaliseSentence(HairStyle.TWIN_TAILS.getName(BodyChanging.getTarget()))+"' and '"+Util.capitaliseSentence(HairStyle.TWIN_BRAIDS.getName(BodyChanging.getTarget()))+"'"
-							+ " can be used as handles in some sex actions.</i>",
+					+ "<br/><i>“"+Util.capitaliseSentence(HairStyle.TWIN_TAILS.getName(BodyChanging.getTarget()))+"”和“"+Util.capitaliseSentence(HairStyle.TWIN_BRAIDS.getName(BodyChanging.getTarget()))+"”"
+							+ "可以在部分性动作中作为把手使用。</i>",
 				"HAIR_STYLE",
 				contentSB.toString(),
 				false);
@@ -1897,9 +1897,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Anus",
-				UtilText.parse(BodyChanging.getTarget(), "Change the type of [npc.namePos] asshole."
-						+ "<br/><i>Anus type affects the asshole modifiers which characters spawn with, as well as descriptions and subspecies identification.</i>"),
+		return applyWrapper("肛门",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]肛门的类型。"
+						+ "<br/><i>肛门类型影响角色生成时肛门的修饰词，也会修改描述和用作亚种识别。</i>"),
 				"ASSHOLE_TYPE",
 				contentSB.toString(),
 				false);
@@ -1925,9 +1925,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipples",
-				UtilText.parse(BodyChanging.getTarget(), "Change the type of [npc.namePos] nipples."
-						+ "<br/><i>Nipple type affects the nipple modifiers which characters spawn with, as well as the type of milk [npc.her] breasts produce. It is also used for character descriptions and subspecies identification.</i>"),
+		return applyWrapper("乳头",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳头的类型。"
+						+ "<br/><i>乳头类型影响角色生成时乳头的修饰词，同样也会影响乳房产生的乳汁类型。同时还会修改角色描述和用作亚种识别。</i>"),
 				"NIPPLE_TYPE",
 				contentSB.toString(),
 				false);
@@ -1953,10 +1953,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper(Util.capitaliseSentence(getCrotchBoobName(false))+" Type",
-				UtilText.parse(BodyChanging.getTarget(), "Change the type of the nipples on [npc.namePos] "+getCrotchBoobName(true)
-						+ "<br/><i>Crotch-nipple type affects the nipple modifiers which characters spawn with, as well as the type of milk [npc.her] "+getCrotchBoobName(true)+" produce."
-								+ " It is also used for character descriptions and subspecies identification.</i>"),
+		return applyWrapper(Util.capitaliseSentence(getCrotchBoobName(false))+"类型",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]" +getCrotchBoobName(true) + "上的乳头类型。"
+						+ "<br/><i>胯乳乳头类型影响角色生成时乳头的修饰词，同样也会影响"+getCrotchBoobName(true)+"产生的乳汁类型。"
+								+ "同时还会修改角色描述和用作亚种识别。</i>"),
 				"CROTCH_NIPPLE_TYPE",
 				contentSB.toString(),
 				false);
@@ -1982,9 +1982,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Arms",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] arm type."
-						+ "<br/><i>Arm type is only used for character descriptions and subspecies identification.</i>"),
+		return applyWrapper("手臂",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的手臂类型。"
+						+ "<br/><i>手臂类型只会修改角色描述和用于亚种识别。</i>"),
 				"ARM_TYPE",
 				contentSB.toString(),
 				true);
@@ -2008,9 +2008,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Arm Rows Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many pairs of [npc.arms] [npc.name] has."
-						+ "<br/><i>Arm count is used for character descriptions and subspecies identification, as well as determining if there are any free hands to use for sex actions.</i>"),
+		return applyWrapper("手臂对数",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]有多少对[npc.arms]。"
+						+ "<br/><i>手臂对数会修改角色描述和用于亚种识别，同时也会决定是否拥有空闲的手臂用于性动作。</i>"),
 				"ARM_COUNT",
 				contentSB.toString(),
 				true);
@@ -2036,9 +2036,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Legs",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] leg type."
-						+ "<br/><i>Leg type is used for character descriptions and subspecies identification. Different leg types have different leg configurations available to them.</i>"),
+		return applyWrapper("腿部",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的腿部类型。"
+						+ "<br/><i>腿部类型会修改角色描述和用于亚种识别。不同的腿部类型有不同可用的腿部配置。</i>"),
 				"LEG_TYPE",
 				contentSB.toString(),
 				true);
@@ -2065,9 +2065,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Foot Structure",
-				UtilText.parse(BodyChanging.getTarget(), "Change the structure of [npc.namePos] [npc.feet]."
-						+ "<br/><i>Foot type is used for both character and sex descriptions, and also may limit foot-related clothing which can be worn.</i>"),
+		return applyWrapper("脚部结构",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.feet]的结构。"
+						+ "<br/><i>脚部类型修改了角色描述和性场面的描述，而且可能会限制穿着脚部相关的衣物。</i>"),
 				"FOOT_STRUCTURE",
 				contentSB.toString(),
 				true);
@@ -2093,10 +2093,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Face",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] face type."
-						+ "<br/><i>Face type determines mouth and tongue types."
-						+ " It also determines subspecies identification, and can grant thermal vision capabilities (marked by an asterisk).</i>"),
+		return applyWrapper("面部",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的面部类型。"
+						+ "<br/><i>面部类型决定了嘴巴和舌头类型。"
+						+ "还会决定亚种识别，并提供红外视觉能力(标记为星号*)。</i>"),
 				"FACE_TYPE",
 				contentSB.toString(),
 				true);
@@ -2122,9 +2122,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Body",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] body type."
-						+ "<br/><i>Body type influences what sort of material is covering [npc.namePos] body, and can range from skin or fur, to scales or feathers.</i>"),
+		return applyWrapper("身体",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的身体类型。"
+						+ "<br/><i>身体类型影响[npc.namePos]体表覆盖的材质，包括皮肤、皮毛、鳞片和羽毛。</i>"),
 				"BODY_TYPE",
 				contentSB.toString(),
 				true);
@@ -2158,12 +2158,12 @@ public class CharacterModificationUtils {
 //			}
 		}
 
-		return applyWrapper("Genital Arrangement",
+		return applyWrapper("生殖器排列",
 				UtilText.parse(BodyChanging.getTarget(),
-						"Change the [npc.namePos] genital configuration."
-								+ "<br/><i>This determines where [npc.namePos] genitals and asshole are located. It is limited to '"+GenitalArrangement.NORMAL.getName()+"' for most leg configurations.</i>"
+						"修改[npc.namePos]生殖器的配置。"
+								+ "<br/><i>这决定了[npc.namePos]生殖器和肛门的位置。对于绝大多数腿部配置，都限制于'"+GenitalArrangement.NORMAL.getName()+"'。</i>"
 						+ (!Main.getProperties().hasValue(PropertyValue.bipedalCloaca)
-							?" [style.italicsDisabled(Bipedal cloacas are disabled in your content options.)]"
+							?"[style.italicsDisabled(双足泄殖腔在内容选项中被禁用。)]"
 							:"")),
 				"GENITAL_ARRANGEMENT",
 				contentSB.toString(),
@@ -2190,9 +2190,9 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Leg Configuration",
-				UtilText.parse(BodyChanging.getTarget(), "Change what [npc.namePos] lower body is like."
-						+ "<br/><i>Applying this change causes all body parts below the waist to be transformed! Some leg configurations (marked by an asterisk) will prevent [npc.namePos] from growing a tail!</i>"),
+		return applyWrapper("腿部配置",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]下半身的样子。"
+						+ "<br/><i>应用该修改会导致腰部以下的所有身体部位被转化！部分腿部配置(标记为星号*)会禁止[npc.namePos]长尾巴！</i>"),
 				"LEG_CONFIGURATION",
 				contentSB.toString(),
 				true);
@@ -2227,9 +2227,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Ears",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] ear type."
-						+ "<br/><i>Ear type helps to determine subspecies identification. Some are long enough to be pulled during sex (*), or can grant echo-location (&#8314;).</i>"),
+		return applyWrapper("耳朵",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的耳朵类型。"
+						+ "<br/><i>耳朵类型有助于亚种识别。部分足够长的可以在性交过程中被拉扯(*), ，或者提供回声定位(⁺;)。</i>"),
 				"EAR_TYPE",
 				contentSB.toString(),
 				false);
@@ -2263,10 +2263,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Eyes",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] eye type."
-						+ "<br/><i>Eye type determines what iris and pupil shape characters spawn with, is used for subspecies identification,"
-						+ " and can grant night vision capabilities (*), or perfect vision (&#8314;).</i>"),
+		return applyWrapper("眼部",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的眼睛类型。"
+						+ "<br/><i>眼睛类型决定了角色生成时虹膜和瞳孔形状，并拥有亚种识别，"
+						+ " 且能够提供夜视能力(*)，或完美视力(⁺;).</i>"),
 				"EYE_TYPE",
 				contentSB.toString(),
 				true);
@@ -2290,9 +2290,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Iris Shape",
-				UtilText.parse(BodyChanging.getTarget(), "Change the shape of [npc.namePos] irises."
-						+ "<br/><i>This is a purely cosmetic transformation.</i>"),
+		return applyWrapper("虹膜形状",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]虹膜的形状。"
+						+ "<br/><i>单纯只是外表转化。</i>"),
 				"IRIS_SHAPE",
 				contentSB.toString(),
 				true);
@@ -2316,9 +2316,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Pupil Shape",
-				UtilText.parse(BodyChanging.getTarget(), "Change the shape of [npc.namePos] pupils."
-						+ "<br/><i>This is a purely cosmetic transformation.</i>"),
+		return applyWrapper("瞳孔形状",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]瞳孔的形状。"
+						+ "<br/><i>单纯只是外表转化。</i>"),
 				"PUPIL_SHAPE",
 				contentSB.toString(),
 				true);
@@ -2342,9 +2342,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Eye Pairs Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many pairs of [npc.eyes] [npc.name] [npc.has]."
-						+ "<br/><i>This is a purely cosmetic transformation.</i>"),
+		return applyWrapper("眼睛对数",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]有几对[npc.eyes]。"
+						+ "<br/><i>单纯只是外表转化。</i>"),
 				"EYE_COUNT",
 				contentSB.toString(),
 				true);
@@ -2368,11 +2368,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Lip Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] lips."
+		return applyWrapper("嘴唇尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]嘴唇的大小。"
 						+ (Main.game.isLipLispEnabled()
-								?"<br/><i>While mostly a cosmetic transformation, very large lip sizes (marked by an asterisk) will also cause [npc.name] to speak with a lisp.</i>"
-								:"<br/><i>This is a purely cosmetic transformation, as 'Lip lisps' content is turned off.</i>")),
+								?"<br/><i>尽管绝大多数情况只是外表转化，但嘴唇足够大(用星号*标记)将会使[npc.name]说话口齿不清。</i>"
+								:"<br/><i>由于“唇音不清”选项被关闭，这单纯只是外表转化。</i>")),
 				"LIP_SIZE",
 				contentSB.toString(),
 				false);
@@ -2396,9 +2396,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Lip & Throat Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] lips and throat."
-						+ "<br/><i>These modifiers affect descriptions when performing oral sex.</i>"),
+		return applyWrapper("嘴唇与喉咙修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]嘴唇与喉咙的修饰词。"
+						+ "<br/><i>这些修饰词会影响提供口交时的描述。</i>"),
 				"THROAT_MODS",
 				contentSB.toString(),
 				true);
@@ -2432,11 +2432,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Throat Wetness",
-				UtilText.parse(BodyChanging.getTarget(), "Change the wetness of [npc.namePos] throat."
-							+ "<br/><i>This affects pleasure in sex, as non-lubricated orifices negatively affect arousal gains.</i>"
+		return applyWrapper("喉部湿润度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]喉咙的湿润度。"
+							+ "<br/><i>影响性交中的快感，未润滑的腔穴会削弱快感的获取。</i>"
 							+(BodyChanging.getTarget().getBodyMaterial().isOrificesAlwaysMaximumWetness()
-									?"<br/>[style.italicsWetness8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'!)]"
+									?"<br/>[style.italicsWetness8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴润滑度永远不会低于'"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'！)]"
 									:"")),
 				"THROAT_WETNESS",
 				contentSB.toString(),
@@ -2461,9 +2461,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Throat Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] throat."
-						+ "<br/><i>This affects the size of penetrative objects that [npc.namePos] throat can take. If capacity is too small or too large for a penetrative object, arousal gains are affected.</i>"),
+		return applyWrapper("喉部容量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]喉咙的容量。"
+						+ "<br/><i>该部分影响[npc.namePos]喉咙能够接受的插入物的尺寸。如果对于插入物来说容量太小或太大，就会影响快感获取。</i>"),
 				"THROAT_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -2497,11 +2497,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Throat Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] throat."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("喉部深度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]喉咙的深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"THROAT_DEPTH",
 				contentSB.toString(),
@@ -2532,10 +2532,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Throat Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] throat."
-						+ "<br/><i>This determines how quickly [npc.namePos] throat will stretch out if a penetrating object is too thick for it."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] throat.":""))
+		return applyWrapper("喉部弹性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]喉咙的弹性。"
+						+ "<br/><i>该部分决定了[npc.namePos]的喉咙在被过于粗壮的插入物撑开后，能够多快地适应。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?"标记为星号(*)的数值会增加喉咙的最大不适深度。":""))
 						+"</i>",
 				"THROAT_ELASTICITY",
 				contentSB.toString(),
@@ -2560,9 +2560,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Throat Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] throat."
-						+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("喉部可塑性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]喉咙的可塑性。"
+						+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"THROAT_PLASTICITY",
 				contentSB.toString(),
 				true);
@@ -2586,9 +2586,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Tongue Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] tongue."
-						+ "<br/><i>Tongue modifiers affect descriptions when performing oral sex.</i>"),
+		return applyWrapper("舌头修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]舌头的修饰词。"
+						+ "<br/><i>舌头修饰词会影响提供口交时的描述。</i>"),
 				"TONGUE_MODS",
 				contentSB.toString(),
 				true);
@@ -2612,9 +2612,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Tongue Length",
-				UtilText.parse(BodyChanging.getTarget(), "Change the length of [npc.namePos] tongue."
-						+ "<br/><i>This affects descriptions when performing oral sex.</i>"),
+		return applyWrapper("舌头长度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]舌头的长度。"
+						+ "<br/><i>影响提供口交时的描述。</i>"),
 				"TONGUE_LENGTH",
 				contentSB.toString(),
 				true);
@@ -2638,9 +2638,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Ass Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] ass."
-						+ "<br/><i>This is a purely cosmetic change.</i>"),
+		return applyWrapper("屁股尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]屁股的尺寸。"
+						+ "<br/><i>单纯只是外表修改。</i>"),
 				"ASS_SIZE",
 				contentSB.toString(),
 				true);
@@ -2664,12 +2664,12 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Hip Size",
+		return applyWrapper("臀部尺寸",
 				UtilText.parse(BodyChanging.getTarget(),
-						"Change the size of [npc.namePos] hips."
+						"修改[npc.namePos]臀部的大小。"
 						+ (BodyChanging.getTarget().getLegConfiguration()==LegConfiguration.TAIL_LONG
-								?"<br/>This affects the girth of [npc.her] serpent-tail."
-								:"<br/>If [npc.she] ever gains a serpent-tail lower-body, this will affect its girth.")),
+								?"<br/>会影响[npc.her]蛇尾的周长。"
+								:"<br/>若[npc.she]获得了蛇尾样的下半身，这也会影响其周长。")),
 				"HIP_SIZE",
 				contentSB.toString(),
 				true);
@@ -2703,11 +2703,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Anus Wetness",
-				UtilText.parse(BodyChanging.getTarget(), "Change the wetness of [npc.namePos] asshole."
-						+ "<br/><i>This affects pleasure in sex, as non-lubricated orifices negatively affect arousal gains.</i>"
+		return applyWrapper("肛门湿润度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]肛门的湿润度。"
+						+ "<br/><i>影响性交中的快感，未润滑的腔穴会削弱快感的获取。</i>"
 						+(BodyChanging.getTarget().getBodyMaterial().isOrificesAlwaysMaximumWetness()
-							?"<br/>[style.italicsWetness8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'!)]"
+							?"<br/>[style.italicsWetness8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴润滑度永远不会低于'"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'！)]"
 							:"")),
 				"ASSHOLE_WETNESS",
 				contentSB.toString(),
@@ -2732,9 +2732,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Anus Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] asshole."
-						+ "<br/><i>This affects the size of penetrative objects that [npc.namePos] asshole can take. If capacity is too small or too large for a penetrative object, arousal gains are affected.</i>"),
+		return applyWrapper("肛门容量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]肛门的容量。"
+						+ "<br/><i>该部分影响[npc.namePos]肛门能够接受的插入物的尺寸。如果对于插入物来说容量太小或太大，就会影响快感获取。</i>"),
 				"ASSHOLE_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -2768,11 +2768,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Anus Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] asshole."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("肛门深度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]肛门的深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"ANUS_DEPTH",
 				contentSB.toString(),
@@ -2803,10 +2803,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Anus Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] asshole."
-						+ "<br/><i>This determines how quickly [npc.namePos] asshole will stretch out if a penetrating object is too thick for it."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] asshole.":""))
+		return applyWrapper("肛门弹性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]肛门的弹性。"
+						+ "<br/><i>该部分决定了[npc.namePos]的肛门在被过于粗壮的插入物撑开后，能够多快地适应。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" 标记为星号(*)的数值会增加肛门的最大不适深度。":""))
 						+"</i>",
 				"ASSHOLE_ELASTICITY",
 				contentSB.toString(),
@@ -2831,9 +2831,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Anus Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] asshole."
-						+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("肛门可塑性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]肛门的可塑性。"
+						+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"ASSHOLE_PLASTICITY",
 				contentSB.toString(),
 				true);
@@ -2857,24 +2857,24 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Anus Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] anus."
-						+ "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("肛门修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]肛门的修饰词。"
+						+ "<br/><i>腔穴修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"ANUS_MOD",
 				contentSB.toString(),
 				true);
 	}
 	
 	public static String getSelfTransformBreastSizeDiv() {
-		return applyFullVariableWrapper("Breast Size",
+		return applyFullVariableWrapper("乳房尺寸",
 				BodyChanging.getTarget().isPlayer()
-					?"Change the size of your breasts."
-					:UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] breasts."),
+					?"修改你乳房的尺寸。"
+					:UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳房的尺寸。"),
 				"BREAST_SIZE",
 				"1",
 				"5",
 				BodyChanging.getTarget().getBreastRawSizeValue()
-					+"<br/><i>"+Util.capitaliseSentence(BodyChanging.getTarget().getBreastSize().getCupSizeName())+(BodyChanging.getTarget().getBreastSize()==CupSize.FLAT?"":"-cup")+"</i>",
+					+"<br/><i>"+Util.capitaliseSentence(BodyChanging.getTarget().getBreastSize().getCupSizeName())+(BodyChanging.getTarget().getBreastSize()==CupSize.FLAT?"":"罩杯")+"</i>",
 				BodyChanging.getTarget().getBreastRawSizeValue()<=0
 					|| (BodyChanging.getTarget().getBreastRawSizeValue()<=CupSize.getMinimumCupSizeForEggIncubation().getMeasurement() && BodyChanging.getTarget().getIncubationLitter(SexAreaOrifice.NIPPLE)!=null),
 				BodyChanging.getTarget().getBreastRawSizeValue()>=CupSize.XXX_N.getMeasurement());
@@ -2883,19 +2883,19 @@ public class CharacterModificationUtils {
 	// This is to stop variable-length names from being generated every time a button is clicked (i.e. stop "crotch-tits", "crotch-breasts")
 	private static String getCrotchBoobName(boolean plural) {
 		if(BodyChanging.getTarget().getBreastCrotchShape()==BreastShape.UDDERS) {
-			return plural?"udders":"udder";
+			return plural?"腹乳":"腹乳";
 		} else {
-			return plural?"crotch-boobs":"crotch-boob";
+			return plural?"胯乳":"胯乳";
 		}
 	}
 	
 	public static String getSelfTransformBreastCrotchSizeDiv() {
 		return applyFullVariableWrapper(
-				UtilText.parse(BodyChanging.getTarget(), Util.capitaliseSentence(getCrotchBoobName(false))+" Size"),
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] "+getCrotchBoobName(true)+"."),
+				UtilText.parse(BodyChanging.getTarget(), Util.capitaliseSentence(getCrotchBoobName(false))+"尺寸"),
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]"+getCrotchBoobName(true)+"的尺寸。"),
 				"BREAST_CROTCH_SIZE",
-				" cup",
-				" cup",
+				"罩杯",
+				"罩杯",
 				Util.capitaliseSentence(BodyChanging.getTarget().getBreastCrotchSize().getCupSizeName())
 					+"<br/>("+BodyChanging.getTarget().getBreastCrotchRawSizeValue()+")",
 				BodyChanging.getTarget().getBreastCrotchRawSizeValue()<=0
@@ -2923,9 +2923,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Breast Shape",
-				UtilText.parse(BodyChanging.getTarget(), "Change the shape of [npc.namePos] breasts."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects some descriptions in sex.</i>"),
+		return applyWrapper("乳房形状",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳房的形状。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"BREAST_SHAPE",
 				contentSB.toString(),
 				true);
@@ -2950,9 +2950,9 @@ public class CharacterModificationUtils {
 		}
 
 		return applyWrapper(
-				UtilText.parse(BodyChanging.getTarget(), Util.capitaliseSentence(getCrotchBoobName(false))+" Shape"),
-				UtilText.parse(BodyChanging.getTarget(), "Change the shape of [npc.namePos] "+getCrotchBoobName(true)+"."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects some descriptions in sex.</i>"),
+				UtilText.parse(BodyChanging.getTarget(), Util.capitaliseSentence(getCrotchBoobName(false))+"形状"),
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]"+getCrotchBoobName(true)+"的形状。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"BREAST_CROTCH_SHAPE",
 				contentSB.toString(),
 				true);
@@ -2964,7 +2964,7 @@ public class CharacterModificationUtils {
 		if (Main.getProperties().multiBreasts == 0) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("One")
+							+Util.capitaliseSentence("一")
 							+"</div>");
 		} else {
 			for (int i = 1; i<=Breast.MAXIMUM_BREAST_ROWS; i++) {
@@ -2983,11 +2983,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Breast Pairs",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many pairs of breasts [npc.name] [npc.has]."
-						+ "<br/><i>This is a mostly a cosmetic change, but is also taken into account when determining if there are any free nipples for use in sex.</i>"
+		return applyWrapper("乳房对数",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]有几对乳房。"
+						+ "<br/><i>通常只是外表修改，同时也会决定是否拥有空闲的乳头用于性动作。</i>"
 						+(Main.getProperties().multiBreasts == 0
-							?"<br/>[style.italicsBad(Multi-Breasts are disabled in the content settings!)]"
+							?"<br/>[style.italicsBad(多对乳房在内容选项中被禁用！)]"
 							:"")),
 				"BREAST_ROWS",
 				contentSB.toString(),
@@ -3005,7 +3005,7 @@ public class CharacterModificationUtils {
 		for(int i=minimum; i <= BreastCrotch.MAXIMUM_BREAST_ROWS; i++) {
 			String name = Util.capitaliseSentence(Util.intToString(i));
 			if(i==0) {
-				name = "(Single)";
+				name = "(单个)";
 			}
 			if(BodyChanging.getTarget().getBreastCrotchRows()==i) {
 				contentSB.append(
@@ -3022,9 +3022,9 @@ public class CharacterModificationUtils {
 		}
 
 		return applyWrapper(
-				UtilText.parse(BodyChanging.getTarget(), Util.capitaliseSentence(getCrotchBoobName(false))+" Pairs"),
-				UtilText.parse(BodyChanging.getTarget(), "Change how many pairs of "+getCrotchBoobName(false)+" [npc.name] [npc.has]."
-						+ "<br/><i>This is a mostly a cosmetic change, but is also taken into account when determining if there are any free crotch-nipples for use in sex.</i>"),
+				UtilText.parse(BodyChanging.getTarget(), Util.capitaliseSentence(getCrotchBoobName(false))+"对"),
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]有几对"+getCrotchBoobName(false)+"。"
+						+ "<br/><i>通常只是外表修改，同时也会决定是否拥有空闲的胯乳乳头用于性动作。</i>"),
 				"BREAST_CROTCH_ROWS",
 				contentSB.toString(),
 				true);
@@ -3050,9 +3050,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change the number of nipples [npc.name] has on each breast."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions in sex.</i>"),
+		return applyWrapper("乳头数量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]每个乳房上的乳头数量。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"NIPPLE_COUNT",
 				contentSB.toString(),true);
 	}
@@ -3080,9 +3080,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change the number of nipples [npc.name] [npc.has] on each "+getCrotchBoobName(false)+"."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions in sex.</i>"),
+		return applyWrapper("乳头数量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]每个"+getCrotchBoobName(false)+"上的乳头数量。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"NIPPLE_CROTCH_COUNT",
 				contentSB.toString(),
 				true);
@@ -3106,9 +3106,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] nipples."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions in sex.</i>"),
+		return applyWrapper("乳头尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳头的尺寸。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"NIPPLE_SIZE",
 				contentSB.toString(),
 				true);
@@ -3132,9 +3132,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] [npc.crotchNipples]."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions in sex.</i>"),
+		return applyWrapper("乳头尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.crotchNipples]的尺寸。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"NIPPLE_CROTCH_SIZE",
 				contentSB.toString(),
 				true);
@@ -3158,9 +3158,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Areolae Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] areolae."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions in sex.</i>"),
+		return applyWrapper("乳晕尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳晕的尺寸。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"AREOLAE_SIZE",
 				contentSB.toString(),
 				true);
@@ -3184,9 +3184,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Areolae Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] areolae around [npc.her] [npc.crotchNipples]."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions in sex.</i>"),
+		return applyWrapper("乳晕尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.crotchNipples]乳晕的尺寸。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述。</i>"),
 				"CROTCH_AREOLAE_SIZE",
 				contentSB.toString(),
 				true);
@@ -3212,9 +3212,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Shape",
-				UtilText.parse(BodyChanging.getTarget(), "Change the shape of [npc.namePos] nipples."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions and availability of some actions in sex.</i>"),
+		return applyWrapper("乳头形状",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳头的形状。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述和可用动作。</i>"),
 				"NIPPLE_SHAPE",
 				contentSB.toString(),
 				true);
@@ -3240,9 +3240,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Crotch-nipple Shape",
-				UtilText.parse(BodyChanging.getTarget(), "Change the shape of [npc.namePos] [npc.crotchNipples]."
-						+ "<br/><i>This is primarily a cosmetic change, but also affects descriptions and availability of some actions in sex.</i>"),
+		return applyWrapper("胯乳乳头形状",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.crotchNipples]的形状。"
+						+ "<br/><i>大多数情况下只是外表修改，但也会影响性交中的部分描述和可用动作。</i>"),
 				"NIPPLE_CROTCH_SHAPE",
 				contentSB.toString(),
 				true);
@@ -3254,7 +3254,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (Capacity value : Capacity.getCapacityListFromPreferences()) {
@@ -3273,9 +3273,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] nipples."
-						+ "<br/><i>Anything other than a value of zero qualifies [npc.namePos] nipples as being able to be penetrated during sex. (Subject to your 'nipple penetration' preference in the content options.)</i>"),
+		return applyWrapper("乳头容量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳头的容量。"
+						+ "<br/><i>任意非0的数值都会使得[npc.namePos]的乳头在性交中可以被插入(取决于内容选项中“乳头插入”偏好的设置。)</i>"),
 				"NIPPLE_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -3287,7 +3287,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (Capacity value : Capacity.getCapacityListFromPreferences()) {
@@ -3306,9 +3306,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] [npc.crotchNipples]."
-						+ "<br/><i>Anything other than a value of zero qualifies [npc.namePos] nipples as being able to be penetrated during sex. (Subject to your 'nipple penetration' preference in the content options.)</i>"),
+		return applyWrapper("乳头容量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.crotchNipples]的容量。"
+						+ "<br/><i>任意非0的数值都会使得[npc.namePos]的乳头在性交中可以被插入(取决于内容选项中“乳头插入”偏好的设置。)</i>"),
 				"NIPPLE_CROTCH_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -3323,14 +3323,14 @@ public class CharacterModificationUtils {
 	}
 	
 	public static String getSelfTransformLactationDiv() {
-		String title = "Lactation";
-		String description = UtilText.parse(BodyChanging.getTarget(), "Change the maximum amount of milk [npc.name] can store in [npc.her] [npc.breasts]."
-				+"<br/><i>Once drained, [npc.namePos] breasts fill with milk up to this value at a rate determined by [npc.her] milk regeneration value.</i>");
+		String title = "泌乳";
+		String description = UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]乳房中可以容纳的最大乳汁量。"
+				+"<br/><i>耗尽后，[npc.namePos]的乳房需要以一定速度恢复乳汁，基于其乳汁再生速度。</i>");
 		String id = "MILK_PRODUCTION";
 		if (!Main.game.isLactationContentEnabled()) {
 			return applyWrapper(title, description, id,
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>", true);
 		} else {
 			return applyVariableWrapperFluids(title,
@@ -3352,14 +3352,14 @@ public class CharacterModificationUtils {
 	}
 	
 	public static String getSelfTransformLactationCrotchDiv() {
-		String title = "Lactation";
-		String description = UtilText.parse(BodyChanging.getTarget(), "Change the maximum amount of milk [npc.name] can store in [npc.her] [npc.crotchBoobs]."
-				+ "<br/><i>Once drained, [npc.namePos] [npc.crotchBoobs] fill with milk up to this value at a rate determined by [npc.her] crotch-milk regeneration value.</i>");
+		String title = "泌乳";
+		String description = UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name][npc.crotchBoobs]中可以容纳的最大乳汁量。"
+				+"<br/><i>耗尽后，[npc.namePos]的[npc.crotchBoobs]需要以一定速度恢复乳汁，基于其乳汁再生速度。</i>");
 		String id = "MILK_CROTCH_PRODUCTION";
 		if (!Main.game.isLactationContentEnabled()) {
 			return applyWrapper(title, description, id,
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>", true);
 		} else {
 			return applyVariableWrapperFluids(title,
@@ -3377,21 +3377,21 @@ public class CharacterModificationUtils {
 	}
 	
 	public static String getSelfTransformLactationRegenerationDiv() {
-		String title = "Milk Regeneration Per Breast";
-		String description = UtilText.parse(BodyChanging.getTarget(), "Alter the rate at which milk is produced in <b>each</b> of [npc.namePos] breasts. The more breasts [npc.sheHasFull], the more milk [npc.she] produces per second."
-				+ "<br/><i>Once drained, [npc.namePos] breasts fill with milk up to their maximum storage value at this rate.</i>");
+		String title = "乳汁再生速度(每乳房)";
+		String description = UtilText.parse(BodyChanging.getTarget(), "调整[npc.namePos]<b>每个</b>乳房产生乳汁的速度。[npc.sheHasFull]拥有越多乳房，每秒产生的乳汁就越多。"
+				+"<br/><i>耗尽后，[npc.namePos]的乳房需要以该速度恢复乳汁至最大储量。</i>");
 		String id = "MILK_REGENERATION";
 		if (!Main.game.isLactationContentEnabled()) {
 			return applyWrapper(title, description, id,
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>", true);
 		} else {
 			return applyVariableWrapperFluids(title,
 					description,
 					id,
-					Units.fluid(BodyChanging.getTarget().getBreastRawLactationRegenerationValue(), ValueType.PRECISE)+"/day"
-							+"<br/>("+Units.fluid(BodyChanging.getTarget().getLactationRegenerationPerSecond(false)*60, ValueType.PRECISE)+"/minute)"
+					Units.fluid(BodyChanging.getTarget().getBreastRawLactationRegenerationValue(), ValueType.PRECISE)+"/天"
+							+"<br/>("+Units.fluid(BodyChanging.getTarget().getLactationRegenerationPerSecond(false)*60, ValueType.PRECISE)+"/分钟)"
 							+"<br/><i>"+Util.capitaliseSentence(BodyChanging.getTarget().getBreastLactationRegeneration().getName())+"</i>",
 					BodyChanging.getTarget().getBreastRawLactationRegenerationValue()<=0,
 					BodyChanging.getTarget().getBreastRawLactationRegenerationValue()>=FluidRegeneration.FOUR_VERY_RAPID.getMaximumRegenerationValuePerDay(),
@@ -3403,21 +3403,21 @@ public class CharacterModificationUtils {
 	}
 
 	public static String getSelfTransformLactationCrotchRegenerationDiv() {
-		String title = "Milk Regeneration Per Crotch-boob";
-		String description = UtilText.parse(BodyChanging.getTarget(), "Alter the rate at which milk is produced in <b>each</b> of [npc.namePos] [npc.crotchBoobs]. The more [npc.crotchBoobs] [npc.sheHasFull], the more milk [npc.she] produces per second."
-				+"<br/><i>Once drained, [npc.namePos] [npc.crotchBoobs] fill with milk up to their maximum storage value at this rate.</i>");
+		String title = "乳汁再生速度(每胯乳)";
+		String description = UtilText.parse(BodyChanging.getTarget(), "调整[npc.namePos]<b>每个</b>[npc.crotchBoobs]产生乳汁的速度。[npc.sheHasFull]拥有越多[npc.crotchBoobs]，每秒产生的乳汁就越多。"
+				+"<br/><i>耗尽后，[npc.namePos]的[npc.crotchBoobs]需要以该速度恢复乳汁至最大储量。</i>");
 		String id = "MILK_CROTCH_REGENERATION";
 		if (!Main.game.isLactationContentEnabled()) {
 			return applyWrapper(title, description, id,
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>", true);
 		} else {
 			return applyVariableWrapperFluids(title,
 					description,
 					id,
-					Units.fluid(BodyChanging.getTarget().getBreastCrotchRawLactationRegenerationValue(), ValueType.PRECISE)+"/day"
-							+"<br/>("+Units.fluid(BodyChanging.getTarget().getCrotchLactationRegenerationPerSecond(false)*60, ValueType.PRECISE)+"/minute)"
+					Units.fluid(BodyChanging.getTarget().getBreastCrotchRawLactationRegenerationValue(), ValueType.PRECISE)+"/天"
+							+"<br/>("+Units.fluid(BodyChanging.getTarget().getCrotchLactationRegenerationPerSecond(false)*60, ValueType.PRECISE)+"/分钟)"
 							+"<br/><i>"+Util.capitaliseSentence(BodyChanging.getTarget().getBreastCrotchLactationRegeneration().getName())+"</i>",
 					BodyChanging.getTarget().getBreastCrotchRawLactationRegenerationValue()<=0,
 					BodyChanging.getTarget().getBreastCrotchRawLactationRegenerationValue()>=FluidRegeneration.FOUR_VERY_RAPID.getMaximumRegenerationValuePerDay(),
@@ -3434,7 +3434,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isLactationContentEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>");
 		} else {
 			for (FluidFlavour flavour : FluidFlavour.values()) {
@@ -3453,9 +3453,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Milk Flavour",
-				UtilText.parse(BodyChanging.getTarget(), "Change the flavour of [npc.namePos] milk."
-							+ "<br/><i>This will affect descriptions both in and out of sex.</i>"),
+		return applyWrapper("乳汁风味",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳汁的风味。"
+							+ "<br/><i>会影响性交内外的描述。</i>"),
 				"MILK_FLAVOUR",
 				contentSB.toString(),
 				true);
@@ -3467,7 +3467,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isLactationContentEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>");
 		} else {
 			for (FluidModifier modifier : FluidModifier.values()) {
@@ -3486,9 +3486,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Milk Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Add or remove modifiers to [npc.namePos] milk."
-							+ "<br/><i>This will affect descriptions both in and out of sex. The modifiers with an asterisk next to their name have special in-game effects, such as the application of status effects when ingested.</i>"),
+		return applyWrapper("乳汁修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "为[npc.namePos]的乳汁添加或移除修饰词。"
+							+ "<br/><i>会影响性交内外的描述。在游戏内有特殊效果的修饰词将会被标记为星号*，如摄入后会获得状态效果等。</i>"),
 				"MILK_MODIFIER",
 				contentSB.toString(),
 				true);
@@ -3500,7 +3500,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isLactationContentEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>");
 		} else {
 			for (FluidFlavour flavour : FluidFlavour.values()) {
@@ -3519,9 +3519,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Milk Flavour",
-				UtilText.parse(BodyChanging.getTarget(), "Change the flavour of [npc.namePos] [npc.crotchMilk]."
-							+ "<br/><i>This will affect descriptions both in and out of sex.</i>"),
+		return applyWrapper("乳汁风味",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.crotchMilk]的风味。"
+							+ "<br/><i>会影响性交内外的描述。</i>"),
 				"MILK_CROTCH_FLAVOUR",
 				contentSB.toString(),
 				true);
@@ -3533,7 +3533,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isLactationContentEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Lactation Disabled")
+							+Util.capitaliseSentence("禁用泌乳")
 							+"</div>");
 		} else {
 			for (FluidModifier modifier : FluidModifier.values()) {
@@ -3552,9 +3552,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Milk Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Add or remove modifiers to [npc.namePos] [npc.crotchMilk]."
-							+ "<br/><i>This will affect descriptions both in and out of sex. The modifiers with an asterisk next to their name have special in-game effects, such as the application of status effects when ingested.</i>"),
+		return applyWrapper("乳汁修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "为[npc.namePos]的[npc.crotchMilk]添加或移除修饰词。"
+							+ "<br/><i>会影响性交内外的描述。在游戏内有特殊效果的修饰词将会被标记为星号*，如摄入后会获得状态效果等。</i>"),
 				"MILK_CROTCH_MODIFIER",
 				contentSB.toString(),
 				true);
@@ -3566,7 +3566,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificeDepth value : OrificeDepth.values()) {
@@ -3595,11 +3595,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] [npc.nipples]."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("乳头深度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.nipples]的深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"NIPPLE_DEPTH",
 				contentSB.toString(),
@@ -3612,7 +3612,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificeDepth value : OrificeDepth.values()) {
@@ -3641,11 +3641,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] [npc.crotchNipples]."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("乳头深度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.crotchNipples]的深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"NIPPLE_CROTCH_DEPTH",
 				contentSB.toString(),
@@ -3658,7 +3658,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificeElasticity value : OrificeElasticity.values()) {
@@ -3683,10 +3683,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] nipples."
-						+ "<br/><i>This determines how quickly [npc.namePos] nipples will stretch out if a penetrating object is too thick for them."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] nipples.":""))
+		return applyWrapper("乳头弹性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳头的弹性。"
+						+ "<br/><i>该部分决定了[npc.namePos]的乳头被过分扩张后的适应速度。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" 标有星号的数值会增加[npc.her]乳头的最大不适深度。":""))
 						+"</i>",
 				"NIPPLE_ELASTICITY",
 				contentSB.toString(),
@@ -3699,7 +3699,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificeElasticity value : OrificeElasticity.values()) {
@@ -3724,10 +3724,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] [npc.crotchNipples]."
-						+ "<br/><i>This determines how quickly [npc.namePos] [npc.crotchNipples] will stretch out if a penetrating object is too thick for them."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] [npc.crotchNipples].":""))
+		return applyWrapper("乳头弹性",
+				UtilText.parse(BodyChanging.getTarget(), "改变[npc.namePos][npc.crotchNipples]的弹性等级。"
+						+ "<br/><i>该部分决定了[npc.namePos]的[npc.crotchNipples]被过分扩张后的适应速度。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" 标记为星号(*)的数值会增加[npc.crotchNipples]的最大不适深度。":""))
 						+"</i>",
 				"NIPPLE_CROTCH_ELASTICITY",
 				contentSB.toString(),
@@ -3740,7 +3740,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificePlasticity value : OrificePlasticity.values()) {
@@ -3759,9 +3759,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] nipples."
-						+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("乳头可塑性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的乳头可塑性"
+						+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"NIPPLE_PLASTICITY",
 				contentSB.toString(),
 				true);
@@ -3773,7 +3773,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificePlasticity value : OrificePlasticity.values()) {
@@ -3792,9 +3792,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] [npc.crotchNipples]."
-							+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("乳头可塑性",
+				UtilText.parse(BodyChanging.getTarget(), "改变[npc.namePos][npc.crotchNipples]的可塑性。"
+							+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"NIPPLE_CROTCH_PLASTICITY",
 				contentSB.toString(),
 				true);
@@ -3806,7 +3806,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificeModifier orificeMod : OrificeModifier.values()) {
@@ -3825,9 +3825,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] nipples."
-							+ "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("乳头修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]乳头的修饰词"
+							+ "<br/><i>腔穴修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"NIPPLE_MODS",
 				contentSB.toString(),
 				true);
@@ -3839,7 +3839,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isNipplePenEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Nipple Pen Disabled")
+							+Util.capitaliseSentence("禁用乳头插入")
 							+"</div>");
 		} else {
 			for (OrificeModifier orificeMod : OrificeModifier.values()) {
@@ -3858,9 +3858,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Nipple Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] [npc.crotchNipples]."
-							+ "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("乳头修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "改变[npc.namePos][npc.crotchNipples]的修饰词。"
+							+ "<br/><i>腔穴修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"NIPPLE_CROTCH_MODS",
 				contentSB.toString(),
 				true);
@@ -3902,10 +3902,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Vagina",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] vagina type. Types with an asterisk by their names [style.colourEgg(lay eggs)] by default."
+		return applyWrapper("阴道",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的阴道类型。标记为星号*的类型默认能够产卵。"
 //					+ "<br/><i>Vagina type affects default vagina attributes and descriptions.</i>"
-					+ "<br/>[style.italicsMinorBad(A character's vagina cannot be removed while incubating eggs or having a possibility of being pregnant!)]"),
+					+ "<br/>[style.italicsMinorBad(有可能怀孕或正在孵卵时无法移除阴道！)]"),
 				"VAGINA_TYPE",
 				contentSB.toString(),
 				false);
@@ -3929,9 +3929,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Girlcum Flavour",
-				UtilText.parse(BodyChanging.getTarget(), "Change the flavour of [npc.namePos] girlcum."
-							+ "<br/><i>This will affect descriptions both in and out of sex.</i>"),
+		return applyWrapper("爱液风味",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]爱液的风味。"
+							+ "<br/><i>会影响性交内外的描述。</i>"),
 				"GIRLCUM_FLAVOUR",
 				contentSB.toString(),
 				false);
@@ -3955,9 +3955,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Girlcum Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Add or remove modifiers to [npc.namePos] girlcum."
-							+ "<br/><i>This will affect descriptions both in and out of sex. The modifiers with an asterisk next to their name have special in-game effects, such as the application of status effects when ingested.</i>"),
+		return applyWrapper("爱液修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "为[npc.namePos]的爱液添加或移除修饰词"
+							+ "<br/><i>会影响性交内外的描述。在游戏内有特殊效果的修饰词将会被标记为星号*，如摄入后会获得状态效果等。</i>"),
 				"GIRLCUM_MODIFIER",
 				contentSB.toString(),
 				false);
@@ -3981,9 +3981,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Vagina Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] vagina."
-							+ "<br/><i>This affects the size of penetrative objects that [npc.namePos] pussy can take. If capacity is too small or too large for a penetrative object, arousal gains are affected.</i>"),
+		return applyWrapper("阴道直径",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴道的直径。"
+							+ "<br/><i>该部分影响[npc.namePos]阴道能够接受的插入物的尺寸。如果对于插入物来说直径太小或太大，就会影响快感获取。</i>"),
 				"VAGINA_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -3995,26 +3995,26 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().isVaginaSquirter()) {
 			contentSB.append(
 					"<div id='VAGINA_SQUIRTER_OFF' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.GENERIC_WETNESS_ONE.getShades()[0]+";'>Not squirter</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_WETNESS_ONE.getShades()[0]+";'>无潮吹</span>"
 					+ "</div>"
 					+"<div class='cosmetics-button active'>"
-						+ "<span style='color:"+PresetColour.GENERIC_WETNESS_FIVE.toWebHexString()+";'>Squirter</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_WETNESS_FIVE.toWebHexString()+";'>有潮吹</span>"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button active'>"
-							+ "<span style='color:"+PresetColour.GENERIC_WETNESS_ONE.toWebHexString()+";'>Not squirter</span>"
+							+ "<span style='color:"+PresetColour.GENERIC_WETNESS_ONE.toWebHexString()+";'>无潮吹</span>"
 					+ "</div>"
 					+"<div id='VAGINA_SQUIRTER_ON' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.GENERIC_WETNESS_FIVE.getShades()[0]+";'>Squirter</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_WETNESS_FIVE.getShades()[0]+";'>有潮吹</span>"
 					+ "</div>");
 		}
 		
 
-		return applyWrapper("Squirter",
-				UtilText.parse(BodyChanging.getTarget(), "Set whether [npc.namePos] vagina squirts fluids when [npc.she] [npc.verb(orgasm)]."
-						+ "<br/><i>If [npc.nameIsFull] a squirter, then when [npc.she] [npc.verb(orgasm)] [npc.she] will dirty clothes [npc.she] [npc.verb(squirt)] on."
-							+ " Also, if someone is eating [npc.herHim] out, they will ingest [npc.her] fluids.</i>"),
+		return applyWrapper("潮吹",
+				UtilText.parse(BodyChanging.getTarget(), "设置[npc.namePos]的阴道是否会在高潮时潮吹。"
+						+ "<br/><i>若[npc.nameIsFull]可以潮吹，那么当高潮时，将会脏污潮吹溅射到的衣物。"
+							+ "同样，如果有人正在舔弄阴道，也会喝下液体。</i>"),
 				"VAGINA_SQUIRTER",
 				contentSB.toString(),
 				true);
@@ -4026,24 +4026,24 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().hasHymen()) {
 			contentSB.append(
 					"<div id='VAGINA_HYMEN_OFF' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.getShades()[0]+";'>Lost</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.getShades()[0]+";'>失去</span>"
 					+ "</div>"
 					+"<div class='cosmetics-button active'>"
-						+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>Intact</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.toWebHexString()+";'>完好</span>"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button active'>"
-							+ "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>Lost</span>"
+							+ "<span style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>失去</span>"
 					+ "</div>"
 					+"<div id='VAGINA_HYMEN_ON' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.getShades()[0]+";'>Intact</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_MINOR_GOOD.getShades()[0]+";'>完好</span>"
 					+ "</div>");
 		}
 		
 
-		return applyWrapper("Hymen",
-				UtilText.parse(BodyChanging.getTarget(), "Set whether [npc.namePos] hymen is intact or not."),
+		return applyWrapper("处女膜",
+				UtilText.parse(BodyChanging.getTarget(), "设定[npc.namePos]的处女膜完好与否"),
 				"VAGINA_HYMEN",
 				contentSB.toString(),
 				true);
@@ -4057,24 +4057,24 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().isVaginaEggLayer()) {
 			contentSB.append(
 					"<div id='VAGINA_EGG_LAYER_OFF' class='cosmetics-button"+(disabled?" disabled":"")+"'>"
-						+ "<span style='color:"+PresetColour.GENERIC_SEX.getShades()[0]+";'>Live birth</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_SEX.getShades()[0]+";'>胎生</span>"
 					+ "</div>"
 					+"<div class='cosmetics-button"+(disabled?" disabled":" active")+"'>"
-						+ "<span style='color:"+PresetColour.EGG.toWebHexString()+";'>Egg-layer</span>"
+						+ "<span style='color:"+PresetColour.EGG.toWebHexString()+";'>卵生</span>"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button"+(disabled?" disabled":" active")+"'>"
-							+ "<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>Live birth</span>"
+							+ "<span style='color:"+PresetColour.GENERIC_SEX.toWebHexString()+";'>胎生</span>"
 					+ "</div>"
 					+"<div id='VAGINA_EGG_LAYER_ON' class='cosmetics-button"+(disabled?" disabled":"")+"'>"
-						+ "<span style='color:"+PresetColour.EGG.getShades()[0]+";'>Egg-layer</span>"
+						+ "<span style='color:"+PresetColour.EGG.getShades()[0]+";'>卵生</span>"
 					+ "</div>");
 		}
 		
-		return applyWrapper("Birth Type",
-				UtilText.parse(BodyChanging.getTarget(), "Set whether [npc.namePos] gives birth to live young or lays eggs. [style.italicsMinorBad(Cannot be changed while pregnant.)]"
-						+ "<br/><i>Every time vagina type is changed, this value is reset to the vagina type's default birth type value.</i>"),
+		return applyWrapper("生育类型",
+				UtilText.parse(BodyChanging.getTarget(), "设定[npc.namePos]是胎生还是卵生，[style.italicsMinorBad(怀孕时不可修改)]"
+						+ "<br/><i>每次阴道类型修改时，改值会重置为阴道类型的默认生育类型。</i>"),
 				"VAGINA_EGG_LAYER",
 				contentSB.toString(),
 				true);
@@ -4108,11 +4108,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Vagina Wetness",
-				UtilText.parse(BodyChanging.getTarget(), "Change the wetness of [npc.namePos] vagina."
-							+ "<br/><i>This affects pleasure in sex, as non-lubricated orifices negatively affect arousal gains.</i>"
+		return applyWrapper("阴道湿润度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴道的湿润度"
+							+ "<br/><i>影响性交中的快感，未润滑的腔穴会削弱快感的获取。</i>"
 							+(BodyChanging.getTarget().getBodyMaterial().isOrificesAlwaysMaximumWetness()
-									?"<br/>[style.italicsWetness8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'!)]"
+									?"<br/>[style.italicsWetness8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴润滑度永远不会低于'"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'！)]"
 									:"")),
 				"VAGINA_WETNESS",
 				contentSB.toString(),
@@ -4147,11 +4147,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Vagina Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] vagina."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("阴道深度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴道的深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"VAGINA_DEPTH",
 				contentSB.toString(),
@@ -4182,10 +4182,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Vagina Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] vagina."
-						+ "<br/><i>This determines how quickly [npc.namePos] vagina will stretch out if a penetrating object is too thick for it."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] vagina.":""))
+		return applyWrapper("阴道弹性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴道的弹性。"
+						+ "<br/><i>该部分决定了[npc.namePos]的阴道被过分扩张后的适应速度。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" 标记为星号(*)的数值会增加阴道的最大不适深度。":""))
 						+"</i>",
 				"VAGINA_ELASTICITY",
 				contentSB.toString(),
@@ -4210,20 +4210,20 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Vagina Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] vagina."
-							+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("阴道可塑性等级",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴道的可塑性。"
+							+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"VAGINA_PLASTICITY",
 				contentSB.toString(),
 				true);
 	}
 	
 	public static String getSelfTransformClitorisSizeDiv() {
-		return applyFullVariableWrapper("Clitoris Length",
-				UtilText.parse(BodyChanging.getTarget(), "Change the length of [npc.namePos] clitoris."
-						+ " All sizes larger than '<i style='color:"+ClitorisSize.ONE_BIG.getColour().toWebHexString()+";'>"
-							+ Util.capitaliseSentence(ClitorisSize.ONE_BIG.getDescriptor())+"</i>' enable [npc.her] clitoris to be used for penetrative actions in sex."
-									+ " (Size will be marked by an asterisk when large enough to be used as a pseudo penis.)"),
+		return applyFullVariableWrapper("阴蒂长度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴蒂的长度"
+						+ "所有大于'<i style='color:"+ClitorisSize.ONE_BIG.getColour().toWebHexString()+";'>"
+							+ Util.capitaliseSentence(ClitorisSize.ONE_BIG.getDescriptor())+"</i>'的尺寸都支持在性交中进行插入行为。"
+									+ "(当尺寸大到足够作为假阴茎使用时，会用星号(*)标记)"),
 				"CLITORIS_SIZE",
 				Units.size(1),
 				Units.size(5),
@@ -4231,7 +4231,7 @@ public class CharacterModificationUtils {
 					+"<br/><i style='color:"+BodyChanging.getTarget().getVaginaClitorisSize().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(BodyChanging.getTarget().getVaginaClitorisSize().getDescriptor())
 						+ (BodyChanging.getTarget().getVaginaClitorisSize().isPseudoPenisSize()?"*":"")
 					+"</i>"
-					+ "<br/><i>Diameter: "+Units.size(BodyChanging.getTarget().getClitorisDiameter())+"</i>",
+					+ "<br/><i>直径:"+Units.size(BodyChanging.getTarget().getClitorisDiameter())+"</i>",
 				BodyChanging.getTarget().getVaginaRawClitorisSizeValue()<=0,
 				BodyChanging.getTarget().getVaginaRawClitorisSizeValue()>=ClitorisSize.SEVEN_STALLION.getMaximumValue());
 	}
@@ -4254,9 +4254,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Clitoris Girth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the girth of [npc.namePos] clitoris."
-						+ "<br/><i>Clitoris girth has an impact in determining whether it is too thick for the orifice it is penetrating.</i>"),
+		return applyWrapper("阴蒂周长",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴蒂的周长。"
+						+ "<br/><i>阴蒂周长影响插入时是否对于腔穴过大。</i>"),
 				"CLITORIS_GIRTH",
 				contentSB.toString(),
 				true);
@@ -4280,9 +4280,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Labia Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] labia."
-						+ "<br/><i>This is a purely cosmetic change, affecting descriptions in and out of sex.</i>"),
+		return applyWrapper("阴唇尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴唇的尺寸。"
+						+ "<br/><i>单纯只是外表修改，影响性交内外的描述。</i>"),
 				"LABIA_SIZE",
 				contentSB.toString(),
 				true);
@@ -4306,9 +4306,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Vagina Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] vagina."
-							+ "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("阴道修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴道的修饰词。"
+							+ "<br/><i>腔穴修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"VAGINA_MODS",
 				contentSB.toString(),
 				true);
@@ -4320,7 +4320,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (Capacity value : Capacity.getCapacityListFromPreferences()) {
@@ -4339,9 +4339,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] urethra."
-							+ "<br/><i>Anything other than a value of zero qualifies [npc.namePos] vaginal urethra as being able to be penetrated during sex. (Subject to your 'urethra penetration' preference in the content options.)</i>"),
+		return applyWrapper("尿道直径",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的直径。"
+							+ "<br/><i>任意非0的数值都会使得[npc.namePos]的尿道在性交中可以被插入。(取决于内容选项中“尿道插入”偏好的设置)</i>"),
 				"VAGINA_URETHRA_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -4353,7 +4353,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificeDepth value : OrificeDepth.values()) {
@@ -4382,11 +4382,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] urethra."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("尿道深度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"VAGINA_URETHRA_DEPTH",
 				contentSB.toString(),
@@ -4399,7 +4399,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificeElasticity value : OrificeElasticity.values()) {
@@ -4424,10 +4424,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] urethra."
-						+ "<br/><i>This determines how quickly [npc.namePos] urethra will stretch out if a penetrating object is too thick for it."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] urethra.":""))
+		return applyWrapper("尿道弹性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的弹性。"
+						+ "<br/><i>该部分决定了[npc.namePos]的尿道被过分扩张后的适应速度。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?"标记为星号(*)的数值会增加尿道的最大不适深度。":""))
 						+"</i>",
 				"VAGINA_URETHRA_ELASTICITY",
 				contentSB.toString(),
@@ -4440,7 +4440,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificePlasticity value : OrificePlasticity.values()) {
@@ -4459,9 +4459,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] urethra."
-							+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("尿道可塑性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的可塑性。"
+							+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"VAGINA_URETHRA_PLASTICITY",
 				contentSB.toString(),
 				true);
@@ -4473,7 +4473,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificeModifier orificeMod : OrificeModifier.values()) {
@@ -4492,9 +4492,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] urethra."
-							+ "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("尿道修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的修饰词。"
+							+ "<br/><i>腔穴修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"VAGINA_URETHRA_MODS",
 				contentSB.toString(),
 				true);
@@ -4529,25 +4529,25 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Penis",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] penis type."
-						+ "<br/><i>Penis type affects the modifiers and other attributes of the penis which characters spawn in with, as well as descriptions both in and out of sex.</i>"),
+		return applyWrapper("阴茎",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的阴茎类型。"
+						+ "<br/><i>阴茎类型影响着角色生成时的修饰词和其他属性，包括性交内外的描述。</i>"),
 				"PENIS_TYPE",
 				contentSB.toString(),
 				halfWidth);
 	}
 	
 	public static String getSelfTransformPenisSizeDiv() {
-		return applyFullVariableWrapper("Penis Length",
+		return applyFullVariableWrapper("阴茎长度",
 				(BodyChanging.getTarget().isPlayer()
-						?"Change the length of your penis."
-						:UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] penis.")),
+						?"修改你阴茎的长度。"
+						:UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴茎的长度。")),
 				"PENIS_SIZE",
 				Units.size(1),
 				Units.size(5),
 				Units.size(BodyChanging.getTarget().getPenisRawSizeValue(), Units.ValueType.PRECISE, Units.UnitType.SHORT)
 					+"<br/><i style='color:"+BodyChanging.getTarget().getPenisSize().getColour().toWebHexString()+";'>"+Util.capitaliseSentence(BodyChanging.getTarget().getPenisSize().getDescriptor())+"</i>"
-					+ "<br/><i>Diameter: "+Units.size(BodyChanging.getTarget().getPenisDiameter())+"</i>",
+					+ "<br/><i>直径:"+Units.size(BodyChanging.getTarget().getPenisDiameter())+"</i>",
 				BodyChanging.getTarget().getPenisRawSizeValue()<=0,
 				BodyChanging.getTarget().getPenisRawSizeValue()>=PenisLength.SEVEN_STALLION.getMaximumValue());
 	}
@@ -4570,9 +4570,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Penis Girth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the girth of [npc.namePos] penis."
-						+ "<br/><i>Penis girth has an impact in determining whether a penis is too large for the orifice it is penetrating.</i>"),
+		return applyWrapper("阴茎周长",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴茎的周长。"
+						+ "<br/><i>阴茎周长影响插入时是否对于腔穴过大。</i>"),
 				"PENIS_GIRTH",
 				contentSB.toString(),
 				true);
@@ -4596,9 +4596,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Testicle Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change the size of [npc.namePos] testicles."
-						+ "<br/><i>Testicle size is a cosmetic transformation, and affects descriptions both in and out of sex.</i>"),
+		return applyWrapper("阴囊尺寸",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴囊的尺寸。"
+						+ "<br/><i>阴囊尺寸只是外表转化，影响性交内外的描述。</i>"),
 				"TESTICLE_SIZE",
 				contentSB.toString(),
 				true);
@@ -4622,9 +4622,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Testicle Count",
-				UtilText.parse(BodyChanging.getTarget(), "Change how many testicles [npc.name] has."
-							+ "<br/><i>Testicle count is a cosmetic transformation, and affects descriptions both in and out of sex.</i>"),
+		return applyWrapper("阴囊数量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]阴囊的数量。"
+							+ "<br/><i>阴囊数量只是外表转化，影响性交内外的描述。</i>"),
 				"TESTICLE_COUNT",
 				contentSB.toString(),
 				true);
@@ -4637,25 +4637,25 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().isInternalTesticles()) {
 			contentSB.append(
 					"<div id='TESTICLES_INTERNAL_OFF' class='cosmetics-button'>"
-							+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.getShades()[0]+";'>External</span>"
+							+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.getShades()[0]+";'>外露</span>"
 					+ "</div>"
 					+"<div class='cosmetics-button active'>"
-						+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.toWebHexString()+";'>Internal</span>"
+						+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.toWebHexString()+";'>体内</span>"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button active'>"
-							+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.toWebHexString()+";'>External</span>"
+							+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.toWebHexString()+";'>外露</span>"
 					+ "</div>"
 					+"<div id='TESTICLES_INTERNAL_ON' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.getShades()[0]+";'>Internal</span>"
+						+ "<span style='color:"+PresetColour.TRANSFORMATION_SEXUAL.getShades()[0]+";'>体内</span>"
 					+ "</div>");
 		}
 		
 
-		return applyWrapper("Internal Testicles",
-				UtilText.parse(BodyChanging.getTarget(), "Set whether [npc.namePos] testicles are internal or not."
-						+ "<br/><i>This affects descriptions and the availability of some actions in sex. (On futa characters, it is subject to your 'futanari testicles' content option.)</i>"),
+		return applyWrapper("体内阴囊",
+				UtilText.parse(BodyChanging.getTarget(), "设置[npc.namePos]的阴囊是否位于体内。"
+						+ "<br/><i>影响性交中的部分描述和可用动作。(对于扶她角色，取决于内容选项中的“扶她阴囊”)</i>"),
 				"INTERNAL_TESTICLES",
 				contentSB.toString(),
 				true);
@@ -4667,7 +4667,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (Capacity value : Capacity.getCapacityListFromPreferences()) {
@@ -4686,9 +4686,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] urethra."
-							+ "<br/><i>Anything other than a value of zero qualifies [npc.namePos] penile urethra as being able to be penetrated during sex. (Subject to your 'urethra penetration' preference in the content options.)</i>"),
+		return applyWrapper("尿道容量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的容量。"
+							+ "<br/><i>意非0的数值都会使得[npc.namePos]的尿道在性交中可以被插入。(取决于内容选项中“尿道插入”偏好的设置)</i>"),
 				"PENIS_URETHRA_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -4700,7 +4700,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificeDepth value : OrificeDepth.values()) {
@@ -4729,11 +4729,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] urethra."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("尿道深度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"URETHRA_DEPTH",
 				contentSB.toString(),
@@ -4749,9 +4749,9 @@ public class CharacterModificationUtils {
 	}
 	
 	public static String getSelfTransformCumProductionDiv() {
-		return applyVariableWrapperFluids("Cum Storage",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] maximum cum storage."
-						+ "<br/><i>Once drained, [npc.namePos] balls fill with cum up to this value at a rate determined by [npc.her] cum regeneration value.</i>"),
+		return applyVariableWrapperFluids("精液储量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的最大精液储量。"
+						+ "<br/><i>耗尽后，[npc.namePos]的睾丸需要以一定速度恢复精液，基于其精液再生速度。</i>"),
 				"CUM_PRODUCTION",
 				Util.capitaliseSentence(BodyChanging.getTarget().getPenisCumStorage().getName())
 					+"<br/>("+Units.fluid(BodyChanging.getTarget().getPenisRawCumStorageValue(), ValueType.PRECISE)+")",
@@ -4764,12 +4764,12 @@ public class CharacterModificationUtils {
 	}
 	
 	public static String getSelfTransformCumRegenerationDiv() {
-		return applyVariableWrapperFluids("Cum Regeneration",
-				UtilText.parse(BodyChanging.getTarget(), "Alter the rate at which [npc.name] [npc.verb(produce)] cum."
-						+ "<br/><i>Once drained, [npc.namePos] balls fill with cum up to their maximum storage value at this rate.</i>"),
+		return applyVariableWrapperFluids("精液再生速度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.Name]产生精液的速度。"
+						+ "<br/><i>耗尽后，[npc.namePos]的睾丸需要以该速度恢复精液至最大储量。</i>"),
 				"CUM_REGENERATION",
-				Units.fluid(BodyChanging.getTarget().getPenisRawCumProductionRegenerationValue(), ValueType.PRECISE)+"/day"
-					+"<br/>("+Units.fluid(BodyChanging.getTarget().getCumRegenerationPerSecond()*60, ValueType.PRECISE)+"/minute)"
+				Units.fluid(BodyChanging.getTarget().getPenisRawCumProductionRegenerationValue(), ValueType.PRECISE)+"/天"
+					+"<br/>("+Units.fluid(BodyChanging.getTarget().getCumRegenerationPerSecond()*60, ValueType.PRECISE)+"/分钟)"
 					+"<br/><i>"+Util.capitaliseSentence(BodyChanging.getTarget().getPenisCumProductionRegeneration().getName())+"</i>",
 				BodyChanging.getTarget().getPenisRawCumProductionRegenerationValue()<=0,
 				BodyChanging.getTarget().getPenisRawCumProductionRegenerationValue()>=FluidRegeneration.FOUR_VERY_RAPID.getMaximumRegenerationValuePerDay(),
@@ -4782,9 +4782,9 @@ public class CharacterModificationUtils {
 	public static String getSelfTransformCumExplusionDiv() {
 		CumProduction expelledValue = CumProduction.getCumProductionFromInt(BodyChanging.getTarget().getPenisMaximumOrgasmCumQuantity());
 		int extraSlotsDirtied = expelledValue.getAdditionalSlotsDirtiedUponOrgasm();
-		return applyFullVariableWrapper("Cum Expulsion",
-				UtilText.parse(BodyChanging.getTarget(), "Alter how much of [npc.namePos] stored cum is expelled at each orgasm."
-						+ "<br/><i>If the amount of stored cum is less than or equal to "+Units.fluid(Testicle.MINIMUM_VALUE_FOR_ALL_CUM_TO_BE_EXPELLED)+", 100% of cum left in [npc.namePos] balls will be expelled.</i>"),
+		return applyFullVariableWrapper("射精量",
+				UtilText.parse(BodyChanging.getTarget(), "修改每次高潮会射出多少[npc.namePos]储存的精液。"
+						+ "<br/><i>若储存的精液量小于等于"+Units.fluid(Testicle.MINIMUM_VALUE_FOR_ALL_CUM_TO_BE_EXPELLED)+"，将会射出睾丸中所有剩余的精液。</i>"),
 				"CUM_EXPULSION",
 				"1",
 				"10",
@@ -4793,7 +4793,7 @@ public class CharacterModificationUtils {
 //					+"<br/><i>"+Util.capitaliseSentence(BodyChanging.getTarget().getPenisCumExpulsion().getDescriptor())+"</i>",
 				BodyChanging.getTarget().getPenisRawCumExpulsionValue()<=5 || !Main.getProperties().hasValue(PropertyValue.cumRegenerationContent),
 				BodyChanging.getTarget().getPenisRawCumExpulsionValue()>=100 || !Main.getProperties().hasValue(PropertyValue.cumRegenerationContent),
-				"<i>Dirties <b style='color:"+expelledValue.getColour().toWebHexString()+";'>"+Util.intToString(extraSlotsDirtied)+"</b> extra inventory slot"+(extraSlotsDirtied==1?"":"s")+" during targeted orgasm.</i>");
+				"<i>高潮时脏污额外<b style='color:"+expelledValue.getColour().toWebHexString()+";'>"+Util.intToString(extraSlotsDirtied)+"</b>个无装备栏位"+(extraSlotsDirtied==1?"":"")+"。</i>");
 	}
 
 	public static String getSelfTransformCumFlavourDiv() {
@@ -4814,9 +4814,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Cum Flavour",
-				UtilText.parse(BodyChanging.getTarget(), "Change the flavour of [npc.namePos] cum."
-							+ "<br/><i>This will affect descriptions both in and out of sex.</i>"),
+		return applyWrapper("精液风味",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]精液的风味。"
+							+ "<br/><i>会影响性交内外的描述。</i>"),
 				"CUM_FLAVOUR",
 				contentSB.toString(),
 				true);
@@ -4840,9 +4840,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Cum Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Add or remove modifiers to [npc.namePos] cum."
-							+ "<br/><i>This will affect descriptions both in and out of sex. The modifiers with an asterisk next to their name have special in-game effects, such as the application of status effects when ingested.</i>"),
+		return applyWrapper("精液修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "为[npc.namePos]的精液添加或移除修饰词。"
+							+ "<br/><i>会影响性交内外的描述。在游戏内有特殊效果的修饰词将会被标记为星号*，如摄入后会获得状态效果等。</i>"),
 				"CUM_MODIFIER",
 				contentSB.toString(),
 				true);
@@ -4854,7 +4854,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificeElasticity value : OrificeElasticity.values()) {
@@ -4879,10 +4879,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] urethra."
-						+ "<br/><i>This determines how quickly [npc.namePos] urethra will stretch out if a penetrating object is too thick for it."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] urethra.":""))
+		return applyWrapper("尿道弹性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的弹性。"
+						+ "<br/><i>该部分决定了[npc.namePos]的尿道被过分扩张后的适应速度。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?"标记为星号(*)的数值会增加尿道的最大不适深度。":""))
 						+"</i>",
 				"PENIS_URETHRA_ELASTICITY",
 				contentSB.toString(),
@@ -4895,7 +4895,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificePlasticity value : OrificePlasticity.values()) {
@@ -4914,9 +4914,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] urethra."
-							+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("尿道可塑性",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的可塑性。"
+							+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"PENIS_URETHRA_PLASTICITY",
 				contentSB.toString(),
 				true);
@@ -4940,9 +4940,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Penis Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] penis."
-							+ "<br/><i>Penis modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("阴茎修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴茎的修饰词。"
+							+ "<br/><i>阴茎修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"PENIS_MODS",
 				contentSB.toString(),
 				true);
@@ -4954,7 +4954,7 @@ public class CharacterModificationUtils {
 		if (!Main.game.isUrethraEnabled()) {
 			contentSB.append(
 					"<div class='cosmetics-button disabled'>"
-							+Util.capitaliseSentence("Urethra Pen Disabled")
+							+Util.capitaliseSentence("禁用尿道插入")
 							+"</div>");
 		} else {
 			for (OrificeModifier orificeMod : OrificeModifier.values()) {
@@ -4973,9 +4973,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Urethra Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] urethra."
-							+ "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("尿道修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]尿道的修饰词。"
+							+ "<br/><i>腔穴修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"PENIS_URETHRA_MODS",
 				contentSB.toString(),
 				true);
@@ -4999,9 +4999,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Body Size",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] body size."
-						+ "<br/><i>This determines how much body fat [npc.namePos] [npc.has], and is a purely cosmetic transformation.</i>"),
+		return applyWrapper("体型",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的体型。"
+						+ "<br/><i>决定了[npc.namePos]有多少脂肪，单纯只是外表转化。</i>"),
 				"BODY_SIZE",
 				contentSB.toString(),
 				true);
@@ -5025,9 +5025,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Muscle Definition",
-				UtilText.parse(BodyChanging.getTarget(), "Change [npc.namePos] muscle definition."+(!Main.game.isInNewWorld()?" This does not affect the physique attribute of your character.":"")
-							+ "<br/><i>This determines how much muscle [npc.namePos] [npc.has], and is a purely cosmetic transformation.</i>"),
+		return applyWrapper("肌肉量",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]的肌肉量。"+(!Main.game.isInNewWorld()?"并不会影响角色的体格属性。":"")
+							+ "<br/><i>决定了[npc.namePos]拥有多少肌肉，单纯只是外表转化。</i>"),
 				"MUSCLE",
 				contentSB.toString(),
 				true);
@@ -5040,10 +5040,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Lip Size"
+							+"嘴唇尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your lips are."
+							+ "选择你嘴唇的大小。"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5077,10 +5077,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+ "<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Puffy Lips"
+							+"肉唇"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose whether your lips are extra puffy or not."
+							+ "选择你的嘴唇是否会更有肉感些。"
 						+ "</p>"
 					+ "</div>"
 					+ "<div class='cosmetics-inner-container right'>");
@@ -5088,18 +5088,18 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().hasFaceOrificeModifier(OrificeModifier.PUFFY)) {
 			contentSB.append(
 					"<div id='LIP_PUFFY_OFF' class='cosmetics-button'>"
-							+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>Normal</span>"
+							+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>普通</span>"
 					+ "</div>"
 					+ "<div class='cosmetics-button active'>"
-						+ "[style.boldGood(Puffy)]"
+						+ "[style.boldGood(肉感)]"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button active'>"
-						+ "[style.boldGood(Normal)]"
+						+ "[style.boldGood(普通)]"
 					+ "</div>"
 					+ "<div id='LIP_PUFFY_ON' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>Puffy</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>肉感</span>"
 					+ "</div>");
 		}
 		
@@ -5126,10 +5126,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Breast Size"
+							+"乳房尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your breasts are, in cup size."
+							+ "选择你的乳房的大小，以罩杯表示"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5163,10 +5163,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Breast Shape"
+							+"乳房形状"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose the shape of your breasts."
+							+ "选择你乳房的形状。"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5208,10 +5208,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Nipple Size"
+							+"乳头尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your nipples are."
+							+ "选择你的乳头的大小"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5253,10 +5253,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Areolae Size"
+							+"乳晕尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your areolae are."
+							+ "选择你乳晕的大小"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5290,10 +5290,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+ "<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Puffy Nipples"
+							+"肉感乳头"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose whether your nipples are extra puffy or not."
+							+ "选择你的乳头是否会更有肉感。"
 						+ "</p>"
 					+ "</div>"
 					+ "<div class='cosmetics-inner-container right'>");
@@ -5301,18 +5301,18 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().hasNippleOrificeModifier(OrificeModifier.PUFFY)) {
 			contentSB.append(
 					"<div id='NIPPLE_PUFFY_OFF' class='cosmetics-button'>"
-							+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>Normal</span>"
+							+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>正常</span>"
 					+ "</div>"
 					+ "<div class='cosmetics-button active'>"
-						+ "[style.boldGood(Puffy)]"
+						+ "[style.boldGood(肉感)]"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button active'>"
-						+ "[style.boldGood(Normal)]"
+						+ "[style.boldGood(正常)]"
 					+ "</div>"
 					+ "<div id='NIPPLE_PUFFY_ON' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>Puffy</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>肉感</span>"
 					+ "</div>");
 		}
 		
@@ -5338,10 +5338,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Ass Size"
+							+"屁股尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your ass is."
+							+ "选择你屁股的大小。"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5383,10 +5383,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Hip Size"
+							+"臀部尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your hips are."
+							+ "选择你臀部的大小。"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5420,10 +5420,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+ "<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Bleached Anus"
+							+"已漂白的肛门"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose whether your anus has been bleached to have the same skin tone as the rest of your body."
+							+ "选择你的肛门是否漂白至与其余皮肤同色。"
 						+ "</p>"
 					+ "</div>"
 					+ "<div class='cosmetics-inner-container right'>");
@@ -5431,18 +5431,18 @@ public class CharacterModificationUtils {
 		if(BodyChanging.getTarget().isAssBleached()) {
 			contentSB.append(
 					"<div id='BLEACHING_OFF' class='cosmetics-button'>"
-							+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>Normal</span>"
+							+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>正常</span>"
 					+ "</div>"
 					+ "<div class='cosmetics-button active'>"
-						+ "[style.boldGood(Bleached)]"
+						+ "[style.boldGood(已漂白)]"
 					+ "</div>");
 		} else {
 			contentSB.append(
 					"<div class='cosmetics-button active'>"
-						+ "[style.boldGood(Normal)]"
+						+ "[style.boldGood(正常)]"
 					+ "</div>"
 					+ "<div id='BLEACHING_ON' class='cosmetics-button'>"
-						+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>Bleached</span>"
+						+ "<span style='color:"+PresetColour.GENERIC_GOOD.getShades()[0]+";'>已漂白</span>"
 					+ "</div>");
 		}
 		
@@ -5464,10 +5464,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Penis Length"
+							+"阴茎长度"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how long your penis is."
+							+ "选择你阴茎的长度"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5505,10 +5505,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Testicle Size"
+							+"阴囊尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your testicles are."
+							+ "选择你阴囊的大小。"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5542,10 +5542,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Vagina Capacity"
+							+"阴道直径"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Select the capacity of your vagina. A higher capacity means that you'll be able to take larger insertions easier, but if it's too loose, it won't be very pleasurable for partners with small cocks."
+							+ "选择你阴道的直径，更大的直径意味着你可以更轻松的接受大号物体的插入，但如果太松，对于阴茎较小的伴侣就不会有太大的快感。"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5588,9 +5588,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Clitoris Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] clitoris."
-							+ "<br/><i>Clitoris modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("阴蒂修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]阴蒂的修饰词"
+							+ "<br/><i>阴蒂修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"CLITORIS_MODS",
 				contentSB.toString(),
 				true);
@@ -5607,10 +5607,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Clitoris Length"
+							+"阴蒂长度"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how long your clitoris is."
+							+ "选择你阴蒂的大小"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5644,10 +5644,10 @@ public class CharacterModificationUtils {
 				"<div class='container-full-width'>"
 					+"<div class='cosmetics-inner-container left'>"
 						+ "<h5 style='text-align:center;'>"
-							+"Labia Size"
+							+"阴唇尺寸"
 						+"</h5>"
 						+ "<p style='text-align:center;'>"
-							+ "Choose how large your labia are."
+							+ "选择你阴唇的大小"
 						+ "</p>"
 						+ "</div>"
 						+ "<div class='cosmetics-inner-container right'>");
@@ -5690,9 +5690,9 @@ public class CharacterModificationUtils {
 			}
 		}
 		
-		return applyWrapper("Spinneret Modifiers",
-				UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] spinneret."
-							+ "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+		return applyWrapper("丝囊修饰词",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]丝囊的修饰词"
+							+ "<br/><i>腔穴修饰词影响性交过程中的描述和部分动作。不止影响描述的修饰词将会被标记为星号*。</i>"),
 				"SPINNERET_MODS",
 				contentSB.toString(),
 				true);
@@ -5716,9 +5716,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Spinneret Capacity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] spinneret."
-							+ "<br/><i>This affects the size of penetrative objects that [npc.namePos] spinneret can take. If capacity is too small or too large for a penetrative object, arousal gains are affected.</i>"),
+		return applyWrapper("丝囊直径",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]丝囊的直径"
+							+ "<br/><i>该部分影响[npc.namePos]丝囊能够接受的插入物的尺寸。如果对于插入物来说容量太小或太大，就会影响快感获取。</i>"),
 				"SPINNERET_CAPACITY",
 				contentSB.toString(),
 				true);
@@ -5752,11 +5752,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Spinneret Wetness",
-				UtilText.parse(BodyChanging.getTarget(), "Change the wetness of [npc.namePos] spinneret."
-							+ "<br/><i>This affects pleasure in sex, as non-lubricated orifices negatively affect arousal gains.</i>"
+		return applyWrapper("丝囊湿润度",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]丝囊的湿润度。"
+							+ "<br/><i>影响性交中的快感，未润滑的腔穴会削弱快感的获取。</i>"
 							+(BodyChanging.getTarget().getBodyMaterial().isOrificesAlwaysMaximumWetness()
-									?"<br/>[style.italicsWetness8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'!)]"
+									?"<br/>[style.italicsWetness8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴润滑度永远不会低于'"+Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor())+"'！)]"
 									:"")),
 				"SPINNERET_WETNESS",
 				contentSB.toString(),
@@ -5791,11 +5791,11 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Spinneret Depth",
-				UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] spinneret."
-						+ "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+		return applyWrapper("丝囊深度",
+				UtilText.parse(BodyChanging.getTarget(), "改变[npc.namePos]的丝囊深度。"
+						+ "<br/><i>腔穴的深度决定了多长的物体可以被舒服地容纳入腔穴之中。</i>"
 						+(!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-								?"<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'!)]"
+								?"<br/>[style.italicsSize8(由于[npc.namePos]的身体完全由[npc.bodyMaterial]制成，[npc.her]的腔穴深度永远不会低于'"+Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor())+"'！)]"
 								:"")),
 				"SPINNERET_DEPTH",
 				contentSB.toString(),
@@ -5826,10 +5826,10 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Spinneret Elasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] spinneret."
-						+ "<br/><i>This determines how quickly [npc.namePos] spinneret will stretch out if a penetrating object is too thick for it."
-						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] spinneret.":""))
+		return applyWrapper("丝囊弹性等级",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]丝囊的弹性等级。"
+						+ "<br/><i>该部分决定了[npc.namePos]的尿道被过分扩张后的适应速度。"
+						+ (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled()?" 标记为星号(*)的数值会增加丝囊的最大不适深度。":""))
 						+"</i>",
 				"SPINNERET_ELASTICITY",
 				contentSB.toString(),
@@ -5854,9 +5854,9 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Spinneret Plasticity",
-				UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] spinneret."
-							+ "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+		return applyWrapper("丝囊可塑性等级",
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos]丝囊的可塑性等级。"
+							+ "<br/><i>一个腔穴的可塑性等级决定了这个腔穴在被扩张之后恢复的速度。</i>"),
 				"SPINNERET_PLASTICITY",
 				contentSB.toString(),
 				true);
@@ -5889,14 +5889,14 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Hair Length"
+		return applyWrapper("头发长度"
 				+(noCost
 					?""
-					:" "+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_HAIR_LENGTH_COST
+					:""+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_HAIR_LENGTH_COST
 							? UtilText.formatAsMoney(SuccubisSecrets.BASE_HAIR_LENGTH_COST, "b")
 							: UtilText.formatAsMoney(SuccubisSecrets.BASE_HAIR_LENGTH_COST, "b", PresetColour.GENERIC_BAD))),
-				UtilText.parse(BodyChanging.getTarget(), "Change the length of [npc.namePos] [npc.hair(true)]."
-						+ "<br/><i>Hair of a sufficient length (marked by an asterisk) can be pulled in some sex actions.</i>"),
+				UtilText.parse(BodyChanging.getTarget(), "修改[npc.namePos][npc.hair(true)]的长度。"
+						+ "<br/><i>足够长的头发(标记星号*)可以在部分性动作中被拉扯。</i>"),
 				"HAIR_LENGTH",
 				contentSB.toString(),
 				false);
@@ -5929,15 +5929,15 @@ public class CharacterModificationUtils {
 			}
 		}
 
-		return applyWrapper("Hair Style"
+		return applyWrapper("发型"
 				+(noCost
 						?""
-						:" "+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_HAIR_STYLE_COST
+						:""+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_HAIR_STYLE_COST
 								? UtilText.formatAsMoney(SuccubisSecrets.BASE_HAIR_STYLE_COST, "b")
 								: UtilText.formatAsMoney(SuccubisSecrets.BASE_HAIR_STYLE_COST, "b", PresetColour.GENERIC_BAD))),
 				UtilText.parse(BodyChanging.getTarget(), description)
-					+ "<br/><i>'"+Util.capitaliseSentence(HairStyle.TWIN_TAILS.getName(BodyChanging.getTarget()))
-						+"' and '"+Util.capitaliseSentence(HairStyle.TWIN_BRAIDS.getName(BodyChanging.getTarget()))+"' can be used as handles in some sex actions.</i>",
+					+ "<br/><i>“"+Util.capitaliseSentence(HairStyle.TWIN_TAILS.getName(BodyChanging.getTarget()))
+						+"”和“"+Util.capitaliseSentence(HairStyle.TWIN_BRAIDS.getName(BodyChanging.getTarget()))+"”可以在部分性动作中作为把手使用。</i>",
 				"HAIR_STYLE",
 				contentSB.toString(),
 				false);
@@ -5950,7 +5950,7 @@ public class CharacterModificationUtils {
 				description
 					+(BodyChanging.getTarget().isAssHairAvailable()
 						?""
-						:"<br/><i>Due to [npc.namePos] anus type, [npc.she] cannot grow any ass hair!</i>"),
+						:"<br/><i>基于[npc.namePos]的肛门类型，[npc.she]无法长出任何肛毛！</i>"),
 				BodyChanging.getTarget().getAssHair(),
 				"ASS_HAIR_",
 				!BodyChanging.getTarget().isAssHairAvailable());
@@ -5962,7 +5962,7 @@ public class CharacterModificationUtils {
 				description
 					+(BodyChanging.getTarget().isUnderarmHairAvailable()
 						?""
-						:"<br/><i>Due to [npc.namePos] arm type, [npc.she] cannot grow any underam hair!</i>"),
+						:"<br/><i>基于[npc.namePos]的手臂类型，[npc.she]无法长出任何腋毛！</i>"),
 				BodyChanging.getTarget().getUnderarmHair(),
 				"UNDERARM_HAIR_",
 				!BodyChanging.getTarget().isUnderarmHairAvailable());
@@ -5973,10 +5973,10 @@ public class CharacterModificationUtils {
 				title,
 				description
 					+(BodyChanging.getTarget().isFeminine() && !Main.game.isFemaleFacialHairEnabled()
-						?"<br/><i>Due to the fact that [npc.nameIsFull] feminine, [npc.she] cannot grow a beard!</i>"
+						?"<br/><i>由于[npc.nameIsFull]偏女性化，所以无法长出胡子！</i>"
 						:(BodyChanging.getTarget().isUnderarmHairAvailable()
 							?""
-							:"<br/><i>Due to [npc.namePos] face type, [npc.she] cannot grow a beard!</i>")),
+							:"<br/><i>基于[npc.namePos]的脸部类型，[npc.she]无法长出胡子！</i>")),
 				BodyChanging.getTarget().getFacialHair(),
 				"FACIAL_HAIR_",
 				!BodyChanging.getTarget().isFacialHairAvailable() || (BodyChanging.getTarget().isFeminine() && !Main.game.isFemaleFacialHairEnabled()));
@@ -5987,12 +5987,12 @@ public class CharacterModificationUtils {
 				title,
 				description
 					+(BodyChanging.getTarget().hasPenisIgnoreDildo() && !BodyChanging.getTarget().getPenisType().isPubicHairAllowed()
-						?"<br/><i>Due to [npc.namePos] penis type, [npc.she] cannot grow any pubic hair!</i>"
+						?"<br/><i>基于[npc.namePos]的阴茎类型，[npc.she]无法长出阴毛！</i>"
 						:(BodyChanging.getTarget().hasVagina() && !BodyChanging.getTarget().getVaginaType().isPubicHairAllowed()
-							?"<br/><i>Due to [npc.namePos] vagina type, [npc.she] cannot grow any pubic hair!</i>"
+							?"<br/><i>基于[npc.namePos]的阴道类型，[npc.she]无法长出阴毛！</i>"
 							:(BodyChanging.getTarget().hasPenisIgnoreDildo() || BodyChanging.getTarget().hasVagina()
 							?""
-							:"<br/><i>Due to the fact that [npc.she] [npc.verb(lack)] genitalia, [npc.name] cannot grow any pubic hair!</i>"))),
+							:"<br/><i>因为[npc.she]缺失性器，[npc.name]无法长出阴毛！</i>"))),
 				BodyChanging.getTarget().getPubicHair(),
 				"PUBIC_HAIR_",
 				!BodyChanging.getTarget().isPubicHairAvailable());
@@ -6028,7 +6028,7 @@ public class CharacterModificationUtils {
 		return applyWrapper(title
 				+(noCost
 						?""
-						:" "+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_BODY_HAIR_COST
+						:""+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_BODY_HAIR_COST
 								? UtilText.formatAsMoney(SuccubisSecrets.BASE_BODY_HAIR_COST, "b")
 								: UtilText.formatAsMoney(SuccubisSecrets.BASE_BODY_HAIR_COST, "b", PresetColour.GENERIC_BAD))),
 				UtilText.parse(BodyChanging.getTarget(), description),
@@ -6069,10 +6069,10 @@ public class CharacterModificationUtils {
 
 			contentSB.append(
 						 "<div class='container-full-width' style='text-align:center; width:100%;padding:0;margin:0;'>"
-							+ "<b>Anal bleaching</b>"
+							+ "<b>肛门漂白</b>"
 							+ (noCost
 								?""
-								:" "+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_ANAL_BLEACHING_COST
+								:""+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_ANAL_BLEACHING_COST
 									? UtilText.formatAsMoney(SuccubisSecrets.BASE_ANAL_BLEACHING_COST, "b")
 									: UtilText.formatAsMoney(SuccubisSecrets.BASE_ANAL_BLEACHING_COST, "b", PresetColour.GENERIC_BAD)))
 						+ "</div>");
@@ -6080,27 +6080,27 @@ public class CharacterModificationUtils {
 			contentSB.append(
 					getInformationDiv(
 							"ANAL_BLEACHING",
-							new TooltipInformationEventListener().setInformation("Anal bleaching", "Anal bleaching is the process of lightening the colour of the skin around the anus so as to make it blend in with the surrounding area."),
+							new TooltipInformationEventListener().setInformation("肛门漂白", "肛门漂白即减轻肛门附近皮肤颜色的过程，使其与周围的颜色相贴合。"),
 							false));
 			
 			contentSB.append("<div class='container-full-width' style='text-align:center; width:100%;padding:0;margin:0;'>");
 			if(BodyChanging.getTarget().isAssBleached()) {
 				contentSB.append(
 						"<div id='BLEACHING_OFF' class='cosmetics-button'>"
-							+ "[style.colourDisabled(Normal)]"
+							+ "[style.colourDisabled(普通)]"
 						+ "</div>"
 						+ "<div class='cosmetics-button active'>"
-							+ "[style.boldArcane(Bleached)]"
+							+ "[style.boldArcane(已漂白)]"
 						+ "</div>");
 			} else {
 				contentSB.append(
 						"<div class='cosmetics-button active'>"
-							+ "Normal"
+							+ "普通"
 						+ "</div>"
 						+ "<div id='BLEACHING_ON' class='cosmetics-button'>"
 							+ (Main.game.getPlayer().getMoney()>=SuccubisSecrets.BASE_ANAL_BLEACHING_COST
-								?"<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>Bleached</span>"
-								:"[style.colourDisabled(Bleached)]")
+								?"<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>已漂白</span>"
+								:"[style.colourDisabled(已漂白)]")
 						+ "</div>");
 			}
 	
@@ -6166,7 +6166,7 @@ public class CharacterModificationUtils {
 			sb.append("<div class='container-full-width' style='padding:0; margin:0; text-align:center;'>");
 				sb.append("<b>"+Util.capitaliseSentence(title)+"</b>");
 				if(race!=Race.NONE) {
-					sb.append(" - <b style='color:"+(race.getColour().toWebHexString())+"'>"+Util.capitaliseSentence(race.getName(BodyChanging.getTarget().getBody(), BodyChanging.getTarget().isFeral()))+"</b>");
+					sb.append(" -<b style='color:"+(race.getColour().toWebHexString())+"'>"+Util.capitaliseSentence(race.getName(BodyChanging.getTarget().getBody(), BodyChanging.getTarget().isFeral()))+"</b>");
 				}
 			sb.append("</div>");
 			sb.append("<div class='container-full-width' style='padding:0; margin:0; text-align:center;'>");
@@ -6178,7 +6178,7 @@ public class CharacterModificationUtils {
 			
 				// Covering Pattern:
 				sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; "+border+"'>");
-					sb.append("<p style='padding:0;margin:0;text-align:center;'>Pattern:</p>");
+					sb.append("<p style='padding:0;margin:0;text-align:center;'>图案：</p>");
 					for (CoveringPattern pattern : availablePatterns) {
 						if (activeCovering.getPattern() == pattern) {
 							sb.append(
@@ -6198,7 +6198,7 @@ public class CharacterModificationUtils {
 				
 				// Covering Modifiers:
 				sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; "+border+"'>");
-					sb.append("<p style='padding:0;margin:0;text-align:center;'>Modifiers:</p>");
+					sb.append("<p style='padding:0;margin:0;text-align:center;'>修饰词:</p>");
 					if(activeCovering.getType().getNaturalModifiers().size() + activeCovering.getType().getExtraModifiers().size()>1) {
 //						sb.append("<div class='container-full-width'>");
 						for(CoveringModifier mod : activeCovering.getType().getNaturalModifiers()) {
@@ -6234,7 +6234,7 @@ public class CharacterModificationUtils {
 //						sb.append("</div>");
 						
 					} else {
-						sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(None Available)]</p>");
+						sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(无可用)]</p>");
 					}
 				sb.append("</div>");
 				
@@ -6246,7 +6246,7 @@ public class CharacterModificationUtils {
 				// Primary:
 				sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; "+border+"'>");
 					sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; background:transparent;'>");
-						sb.append("Primary Colour");
+						sb.append("主要颜色");
 						sb.append(" | <span style='color:"+activeCovering.getPrimaryColour().toWebHexString()+";"
 										+(activeCovering.isPrimaryGlowing()
 												?"text-shadow: 0px 0px 4px "+activeCovering.getPrimaryColour().getShades()[4]+";"
@@ -6278,12 +6278,12 @@ public class CharacterModificationUtils {
 						if(activeCovering.isPrimaryGlowing()) {
 							sb.append(
 									"<div class='normal-button active' id='"+BodyCoveringType.getIdFromBodyCoveringType(coveringType)+"_PRIMARY_GLOW_OFF' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-										+ "[style.boldArcane(Arcane Glow)]"
+										+ "[style.boldArcane(奥术光芒)]"
 									+ "</div>");
 						} else {
 							sb.append(
 									"<div id='"+BodyCoveringType.getIdFromBodyCoveringType(coveringType)+"_PRIMARY_GLOW_ON' class='normal-button' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-										+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>Arcane Glow</span>"
+										+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>奥术光芒</span>"
 									+ "</div>");
 						}
 					}
@@ -6292,7 +6292,7 @@ public class CharacterModificationUtils {
 				// Secondary:
 				sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; "+border+"'>");
 					sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; background:transparent;'>");
-						sb.append("Secondary Colour");
+						sb.append("次要颜色");
 						if(!secondaryDisabled) {
 							sb.append(" | <span style='color:"+activeCovering.getSecondaryColour().toWebHexString()+";"
 											+(activeCovering.isSecondaryGlowing()
@@ -6303,7 +6303,7 @@ public class CharacterModificationUtils {
 						}
 					sb.append("</div>");
 					if(secondaryDisabled) {
-						sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(None Available)]</p>");
+						sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(无可用)]</p>");
 						
 					} else {
 						for (Colour c : availableSecondaryColours) {
@@ -6331,12 +6331,12 @@ public class CharacterModificationUtils {
 						if(activeCovering.isSecondaryGlowing()) {
 							sb.append(
 									"<div class='normal-button active' id='"+BodyCoveringType.getIdFromBodyCoveringType(coveringType)+"_SECONDARY_GLOW_OFF' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-										+ "[style.boldArcane(Arcane Glow)]"
+										+ "[style.boldArcane(奥术光芒)]"
 									+ "</div>");
 						} else {
 							sb.append(
 									"<div id='"+BodyCoveringType.getIdFromBodyCoveringType(coveringType)+"_SECONDARY_GLOW_ON' class='normal-button' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-										+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>Arcane Glow</span>"
+										+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>奥术光芒</span>"
 									+ "</div>");
 						}
 					}
@@ -6349,30 +6349,30 @@ public class CharacterModificationUtils {
 				sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; "+border+"'>");
 					sb.append("<div class='container-full-width' style='width:60%; padding:0; margin:0; text-align:center;'>");
 						sb.append(UtilText.parse(BodyChanging.getTarget(),
-								"By applying a heavy layer of lipstick, [npc.name] will leave marks on any part [npc.she] [npc.verb(kiss)]!"
-								+ "<br/>[style.italics(Heavy lipstick needs to be re-applied after a sex scene in which it's used.)]"));
+								"涂上浓重的口红后，[npc.name]可以在亲吻的部位留下唇印！"
+								+ "<br/>[style.italics(在性交中使用过后，浓重的口红需要重涂。)]"));
 					sb.append("</div>");
 					sb.append("<div class='container-full-width' style='width:40%; padding:0; margin:0; text-align:center;'>");
 						if(!heavyLipstick) {
 							sb.append(
 									"<div class='cosmetics-button active'>"
-										+ "<span style='color:" + PresetColour.BASE_PINK_LIGHT.toWebHexString() + ";'>Normal</span>"
+										+ "<span style='color:" + PresetColour.BASE_PINK_LIGHT.toWebHexString() + ";'>普通</span>"
 									+ "</div>");
 						} else {
 							sb.append(
 									"<div id='MAKEUP_LIPSTICK_HEAVY_OFF' class='cosmetics-button'>"
-										+ "<span style='color:"+PresetColour.BASE_PINK_LIGHT.getShades()[0]+";'>Normal</span>"
+										+ "<span style='color:"+PresetColour.BASE_PINK_LIGHT.getShades()[0]+";'>普通</span>"
 									+ "</div>");
 						}
 						if(heavyLipstick) {
 							sb.append(
 									"<div class='cosmetics-button active'>"
-										+ "<span style='color:" + PresetColour.BASE_PINK_DEEP.toWebHexString() + ";'>Heavy</span>"
+										+ "<span style='color:" + PresetColour.BASE_PINK_DEEP.toWebHexString() + ";'>浓重</span>"
 									+ "</div>");
 						} else {
 							sb.append(
 									"<div id='MAKEUP_LIPSTICK_HEAVY_ON' class='cosmetics-button'>"
-										+ "<span style='color:"+PresetColour.BASE_PINK_DEEP.getShades()[0]+";'>Heavy</span>"
+										+ "<span style='color:"+PresetColour.BASE_PINK_DEEP.getShades()[0]+";'>浓重</span>"
 									+ "</div>");
 						}
 					sb.append("</div>");
@@ -6384,18 +6384,18 @@ public class CharacterModificationUtils {
 				sb.append("<div class='container-full-width' style='width:50%; padding:0; margin:0; text-align:center;'>");
 					if(disabledButton) {
 						sb.append("<div class='normal-button disabled' style='width:80%; margin:2% auto; padding:0; text-align:center; bottom:0;'>"
-									+"<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>Reset Changes</span>"
+									+"<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>重置修改</span>"
 								+ "</div>");
 					} else {
 						sb.append("<div class='normal-button' style='width:80%; margin:2% auto; padding:0; text-align:center; bottom:0;' id='RESET_COVERING_"+BodyCoveringType.getIdFromBodyCoveringType(coveringType)+"'>"
-										+ "[style.colourMinorBad(Reset Changes)]"
+										+ "[style.colourMinorBad(重置修改)]"
 									+ "</div>");
 					}
 				sb.append("</div>");
 				sb.append("<div class='container-full-width' style='width:50%; padding:0; margin:0; text-align:center;'>");
 					if(disabledButton) {
 						sb.append("<div class='normal-button disabled' style='width:80%; margin:2% auto; padding:0; text-align:center; bottom:0;'>"
-									+"<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>Apply Changes"
+									+"<span style='color:"+PresetColour.TEXT_GREY.toWebHexString()+";'>应用修改"
 										+ (withCost
 											?" ("+UtilText.formatAsMoneyUncoloured(SuccubisSecrets.getBodyCoveringTypeCost(coveringType), "span")+")"
 											:"")
@@ -6403,7 +6403,7 @@ public class CharacterModificationUtils {
 								+ "</div>");
 					} else {
 						sb.append("<div class='normal-button' style='width:80%; margin:2% auto; padding:0; text-align:center; bottom:0;' id='APPLY_COVERING_"+BodyCoveringType.getIdFromBodyCoveringType(coveringType)+"'>"
-									+ "[style.colourMinorGood(Apply Changes)]"
+									+ "[style.colourMinorGood(应用修改)]"
 									+ (withCost
 										?" ("
 											+(Main.game.getPlayer().getMoney()>=SuccubisSecrets.getBodyCoveringTypeCost(coveringType)
@@ -6431,7 +6431,7 @@ public class CharacterModificationUtils {
 		int i=0;
 		
 		for(PiercingType piercingType : PiercingType.values()) {
-			title = Util.capitaliseSentence(piercingType.getName())+" Piercing";
+			title = Util.capitaliseSentence(piercingType.getName())+"穿孔";
 			description = piercingType.getDescription();
 			
 			switch(piercingType) {
@@ -6503,31 +6503,31 @@ public class CharacterModificationUtils {
 					if(isPierced) {
 						contentSB.append(
 								"<div id='"+piercingType+"_PIERCE_REMOVE' class='cosmetics-button'>"
-									+ "[style.colourDisabled(Unpierced)]"
+									+ "[style.colourDisabled(未穿孔)]"
 								+ "</div>");
 						
 						contentSB.append(
 								"<div class='cosmetics-button active'>"
-									+ "[style.boldArcane(Pierced)]"
+									+ "[style.boldArcane(已穿孔)]"
 								+ "</div>");
 					} else {
 						contentSB.append(
 								"<div class='cosmetics-button active'>"
-									+ "Unpierced"
+									+ "未穿孔"
 								+ "</div>");
 						
 						if(canPierce) {
 							contentSB.append(
 									"<div id='"+piercingType+"_PIERCE' class='cosmetics-button'>"
 										+ (Main.game.getPlayer().getMoney()>=SuccubisSecrets.getPiercingCost(piercingType) || noCost
-											?"<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>Pierced</span>"
-											:"[style.colourDisabled(Pierced)]")
+											?"<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>已穿孔</span>"
+											:"[style.colourDisabled(已穿孔)]")
 									+ "</div>");
 							
 						} else {
 							contentSB.append(
 									"<div class='cosmetics-button disabled'>"
-										+ "[style.colourDisabled(Pierced)]"
+										+ "[style.colourDisabled(已穿孔)]"
 									+ "</div>");
 						}
 					}
@@ -6615,18 +6615,18 @@ public class CharacterModificationUtils {
 					+ "<div style='float:left; width:98%; margin:0 1%; padding:0;'>"
 						+ "<div class='normal-button"+(disabled?" disabled":"")+"' "+(!disabled?"id='TATTOO_ADD_REMOVE_"+invSlot.toString()+"'":"")+" style='width:100%;'>"
 							+(tattooInSlot==null
-								?"Add"
-								:(SuccubisSecrets.invSlotTattooToRemove==invSlot || !Main.getProperties().hasValue(PropertyValue.tattooRemovalConfirmations)?"[style.colourBad(Remove)]":"Remove"))
+								?"添加"
+								:(SuccubisSecrets.invSlotTattooToRemove==invSlot || !Main.getProperties().hasValue(PropertyValue.tattooRemovalConfirmations)?"[style.colourBad(去除)]":"去除"))
 						+"</div>"
 					+ "</div>"
 					+ (Main.game.isInNewWorld()
 							?"<div style='float:left; width:98%; margin:0 1%; padding:0;'>"
-									+ "<div class='normal-button"+(disabled || tattooInSlot==null?" disabled":"")+"' "+(!disabled && tattooInSlot!=null?"id='TATTOO_MODIFY_"+invSlot.toString()+"'":"")+" style='width:100%;'>Modify</div>"
+									+ "<div class='normal-button"+(disabled || tattooInSlot==null?" disabled":"")+"' "+(!disabled && tattooInSlot!=null?"id='TATTOO_MODIFY_"+invSlot.toString()+"'":"")+" style='width:100%;'>自定义</div>"
 								+ "</div>"
 							:"")
 					+ (Main.game.isInNewWorld()
 						?"<div style='float:left; width:98%; margin:0 1%; padding:0;'>"
-								+ "<div class='normal-button"+(disabled || tattooInSlot==null?" disabled":"")+"' "+(!disabled && tattooInSlot!=null?"id='TATTOO_ENCHANT_"+invSlot.toString()+"'":"")+" style='width:100%;'>Enchant</div>"
+								+ "<div class='normal-button"+(disabled || tattooInSlot==null?" disabled":"")+"' "+(!disabled && tattooInSlot!=null?"id='TATTOO_ENCHANT_"+invSlot.toString()+"'":"")+" style='width:100%;'>附魔</div>"
 							+ "</div>"
 						:"")
 				+ "</div>"
@@ -6691,7 +6691,7 @@ public class CharacterModificationUtils {
 	
 		contentSB.append("<div class='container-full-width'>");
 			contentSB.append("<div class='container-full-width' style='width:75%; margin:0; position:relative; text-align:center;'>");
-				contentSB.append("<h5 style='width:100%; text-align:center;'>Select Type</h5>");
+				contentSB.append("<h5 style='width:100%; text-align:center;'>选择类型</h5>");
 		
 				for(AbstractTattooType type : TattooType.getConditionalTattooTypes(BodyChanging.getTarget())) {
 					if(type.getSlotAvailability().contains(tattooInventorySlot)) {
@@ -6723,7 +6723,7 @@ public class CharacterModificationUtils {
 		// Colours:
 
 		contentSB.append("<div class='container-full-width'>"
-				+ "<h5 style='width:100%; text-align:center;'>Select Colours</h5>");
+				+ "<h5 style='width:100%; text-align:center;'>选择颜色</h5>");
 			
 			// Primary:
 			contentSB.append("<div class='container-full-width' style='width:33.3%; margin:0;'>");
@@ -6739,7 +6739,7 @@ public class CharacterModificationUtils {
 			contentSB.append("<div class='container-full-width' style='width:33.3%; margin:0;'>");
 			if(tattoo.getType().getAvailableSecondaryColours().isEmpty()) {
 				contentSB.append(
-						"<p style='text-align:center;'>[style.italicsDisabled(No secondary colours available...)]</p>");
+						"<p style='text-align:center;'>[style.italicsDisabled(无可用的二级颜色……)]</p>");
 				
 			} else {
 				for (Colour c : tattoo.getType().getAvailableSecondaryColours()) {
@@ -6755,7 +6755,7 @@ public class CharacterModificationUtils {
 			contentSB.append("<div class='container-full-width' style='width:33.3%; margin:0;'>");
 			if(tattoo.getType().getAvailableTertiaryColours().isEmpty()) {
 				contentSB.append(
-						"<p style='text-align:center;'>[style.italicsDisabled(No tertiary colours available...)]</p>");
+						"<p style='text-align:center;'>[style.italicsDisabled(无可用的三级颜色……)]</p>");
 				
 			} else {
 				for (Colour c : tattoo.getType().getAvailableTertiaryColours()) {
@@ -6772,18 +6772,18 @@ public class CharacterModificationUtils {
 					if(tattoo.getType().equals(TattooType.getTattooTypeFromId("innoxia_misc_none"))) {
 						contentSB.append(
 								"<div class='normal-button disabled' style='width:20%; margin:2% 40%; padding:0; text-align:center;'>"
-									+ "Glow"
+									+ "光芒"
 								+ "</div>");
 						
 					} else if(tattoo.isGlowing()) {
 						contentSB.append(
 								"<div class='normal-button active' id='TATTOO_GLOW' style='width:20%; margin:2% 40%; padding:0; text-align:center;'>"
-									+ "[style.boldArcane(Arcane Glow)]"
+									+ "[style.boldArcane(奥术光芒)]"
 								+ "</div>");
 					} else {
 						contentSB.append(
 								"<div id='TATTOO_GLOW' class='normal-button' style='width:20%; margin:2% 40%; padding:0; text-align:center;'>"
-									+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>Arcane Glow</span>"
+									+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>奥术光芒</span>"
 								+ "</div>");
 					}
 				contentSB.append("</div>");
@@ -6794,13 +6794,13 @@ public class CharacterModificationUtils {
 		// Writing:
 
 		contentSB.append("<div class='container-full-width'>"
-				+ "<h5 style='width:100%; text-align:center;'>Select Writing</h5>");
+				+ "<h5 style='width:100%; text-align:center;'>选择文字</h5>");
 		
 			contentSB.append("<div class='container-full-width' style='width:66.6%; margin:0; position:relative; text-align:center;'>"
 					+"<form style='padding:0; margin:0 0 4px 0; text-align:center;'>"
 						+ "<input type='text' id='tattoo_name' value='" +UtilText.parseForHTMLDisplay(tattoo.getWriting().getText())+"' style='padding:0;margin:0;width:80%;'>"// "+(tattoo.getWriting().getStyle()==TattooWritingStyle.NONE?"disabled":"")+">"
 					+ "</form>"
-					+ "<p style='width:100%; text-align:center;'>Writing Style</p>");
+					+ "<p style='width:100%; text-align:center;'>文字风格</p>");
 			for(TattooWritingStyle style : TattooWritingStyle.values()) {
 				contentSB.append("<div style='width:18%; margin:0 1%; padding:0; display:inline-block;'>"
 									+ "<div class='normal-button"+(tattoo.getWriting().getStyles().contains(style)?" selected":"")+"' id='TATTOO_WRITING_STYLE_"+style.toString()+"'"
@@ -6808,7 +6808,7 @@ public class CharacterModificationUtils {
 								+ "</div>");
 			}
 			contentSB.append("<div class='container-full-width'>"
-					+ "Output: "+tattoo.getFormattedWritingOutput()
+					+ "结果:"+tattoo.getFormattedWritingOutput()
 					+ "</div>");
 			contentSB.append("</div>");
 			
@@ -6824,12 +6824,12 @@ public class CharacterModificationUtils {
 					if(tattoo.getWriting().isGlow()) {
 						contentSB.append(
 								"<div class='normal-button selected' id='TATTOO_WRITING_GLOW' style='width:50%; margin:2% 25%; padding:0; text-align:center;'>"
-									+ "[style.boldArcane(Arcane Glow)]"
+									+ "[style.boldArcane(奥术光芒)]"
 								+ "</div>");
 					} else {
 						contentSB.append(
 								"<div id='TATTOO_WRITING_GLOW' class='normal-button' style='width:50%; margin:2% 25%; padding:0; text-align:center;'>"
-									+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>Arcane Glow</span>"
+									+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>奥术光芒</span>"
 								+ "</div>");
 					}
 				}
@@ -6841,21 +6841,21 @@ public class CharacterModificationUtils {
 			contentSB.append("<div class='container-full-width'>");
 
 			contentSB.append("<div class='container-full-width inner' style='margin:0; padding:0; width:100%; text-align:center; background:transparent;'>");
-				contentSB.append("<h5 style='width:100%; text-align:center;'>Select Counter</h5>");
+				contentSB.append("<h5 style='width:100%; text-align:center;'>选择计数指示</h5>");
 			contentSB.append("</div>");
 			
 			contentSB.append(getInformationDiv(
 					"TATTOO_COUNTER_INFO",
 					new TooltipInformationEventListener().setInformation(
-							"Tattoo Counter",
-							"Tattoo counters are enchanted to make them automatically update as the counter type increments."
-								+ " Most counter types can either be started 0 or show all previous experiences."
-								+ " Some, however, can only show current values, and these are marked by an asterisk."),
+							"纹身计数指示",
+							"已附魔的纹身计数指示能够在对应计数类型的数值增加时自动更新数字。"
+								+ "绝大部分计数类型可选择从0开始重新计数，或是追溯过往的所有经历继续计数。"
+								+ "然而，另外一部分只能显示当前的数值，这部分计数类型已经用星号*标记。"),
 					false));
 			
 				contentSB.append("<div class='container-full-width' style='width:66.6%; margin:0;'>");
 					contentSB.append("<div class='container-full-width' style='position:relative; text-align:center; margin-top:0; padding-top:0;'>");
-						contentSB.append("<p style='width:100%; text-align:center;'>Counter Type</p>");
+						contentSB.append("<p style='width:100%; text-align:center;'>计数类型</p>");
 						for(TattooCounterType counterType : TattooCounterType.getTattooCounterTypesWithContentFiltersApplied()) {
 							contentSB.append("<div style='width:48%; margin:1%; padding:0; display:inline-block;'>"
 												+ "<div class='normal-button"+(tattoo.getCounter().getType()==counterType?" selected":"")+"' id='TATTOO_COUNTER_TYPE_"+counterType.toString()+"'"
@@ -6879,44 +6879,44 @@ public class CharacterModificationUtils {
 					if(tattoo.getCounter().isGlow()) {
 						contentSB.append(
 								"<div class='normal-button selected' id='TATTOO_COUNTER_GLOW' style='width:50%; margin:2% 25%; padding:0; text-align:center;'>"
-									+ "[style.boldArcane(Arcane Glow)]"
+									+ "[style.boldArcane(奥术光芒)]"
 								+ "</div>");
 					} else {
 						contentSB.append(
 								"<div id='TATTOO_COUNTER_GLOW' class='normal-button' style='width:50%; margin:2% 25%; padding:0; text-align:center;'>"
-									+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>Arcane Glow</span>"
+									+ "<span style='color:"+PresetColour.GENERIC_ARCANE.getShades()[0]+";'>奥术光芒</span>"
 								+ "</div>");
 					}
 					
 					boolean activeButtonZero = tattoo.getCounter().getType().getNonRetroactiveOffset(BodyChanging.getTarget())==0?retroactiveApplicationPreferZeroStart:tattoo.getCounter().isRetroactiveApplication();
 					
 					contentSB.append("<div class='container-full-width' style='position:relative; text-align:center;'>");
-						contentSB.append("<p style='width:100%; text-align:center;'>Initial Count</p>");
+						contentSB.append("<p style='width:100%; text-align:center;'>初始计数</p>");
 
 						if(tattoo.getCounter().getType().isRetroactiveApplicationAvailable()) {
 							contentSB.append("<div style='width:98%; margin:1%; padding:0; display:inline-block;'>");
 								contentSB.append("<div class='normal-button"+(activeButtonZero?" selected":"")+"' id='TATTOO_COUNT_RETROACTIVE_DISABLED'"
 														+ " style='width:100%; margin:0; color:"+(activeButtonZero?PresetColour.GENERIC_GOOD:PresetColour.TEXT_HALF_GREY).toWebHexString()+";'>");
-									contentSB.append("Start from 0");
+									contentSB.append("从0开始");
 								contentSB.append("</div>");
 							contentSB.append("</div>");
 							contentSB.append("<div style='width:98%; margin:1%; padding:0; display:inline-block;'>");
 								contentSB.append("<div class='normal-button"+(!activeButtonZero?" selected":"")+"' id='TATTOO_COUNT_RETROACTIVE_ENABLED'"
 														+ " style='width:100%; margin:0; color:"+(!activeButtonZero?PresetColour.GENERIC_GOOD:PresetColour.TEXT_HALF_GREY).toWebHexString()+";'>");
-									contentSB.append("Show all");
+									contentSB.append("追溯过往经历");
 								contentSB.append("</div>");
 							contentSB.append("</div>");
 							
 						} else {
 							contentSB.append("<div class='container-full-width' style='margin:0; padding:0;'>");
-								contentSB.append("[style.colourDisabled(<i>This counter type always shows the current value, so the initial count is inapplicable.</i>)]");
+								contentSB.append("[style.colourDisabled(<i>此计数类型总会显示当前数值，因此无法修改初始计数。</i>)]");
 							contentSB.append("</div>");
 						}
 							
 					contentSB.append("</div>");
 					
 					contentSB.append("<div class='container-full-width' style='position:relative; text-align:center;'>");
-						contentSB.append("<p style='width:100%; text-align:center;'>Counter Style</p>");
+						contentSB.append("<p style='width:100%; text-align:center;'>计数标识风格</p>");
 						for(TattooCountType countType : TattooCountType.values()) {
 							contentSB.append("<div style='width:98%; margin:1%; padding:0; display:inline-block;'>"
 												+ "<div class='normal-button"+(tattoo.getCounter().getCountType()==countType?" selected":"")+"' id='TATTOO_COUNT_TYPE_"+countType.toString()+"'"
@@ -6928,9 +6928,9 @@ public class CharacterModificationUtils {
 					
 					contentSB.append("<div class='container-full-width'>");
 						if(tattoo.getCounter().getType()==TattooCounterType.NONE) {
-							contentSB.append("[style.colourDisabled(Output: <i>(The counter type is 'none', so this tattoo will not have a counter.)</i>)]");
+							contentSB.append("[style.colourDisabled(结果：<i>(此计数类型为“空”，该纹身将不会被添加计数指示。)</i>)]");
 						} else {
-							contentSB.append("Output: "+tattoo.getFormattedCounterOutput(BodyChanging.getTarget()));
+							contentSB.append("结果："+tattoo.getFormattedCounterOutput(BodyChanging.getTarget()));
 						}
 					contentSB.append("</div>");
 				contentSB.append("</div>");

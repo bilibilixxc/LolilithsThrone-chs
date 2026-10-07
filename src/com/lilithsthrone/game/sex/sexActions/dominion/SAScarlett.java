@@ -44,7 +44,7 @@ public class SAScarlett {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Buttslut tease";
+			return "玩弄菊花";
 		}
 		@Override
 		public String getActionDescription() {
@@ -52,8 +52,8 @@ public class SAScarlett {
 		}
 		@Override
 		public String getDescription() {
-			return "Realising that you're close to reaching your climax, [scarlett.name] slams [scarlett.her] [scarlett.cock+] deep into your [pc.asshole+] and teases,"
-					+ " [scarlett.speechNoEffects(Come on, bitch! ~Mmm!~ Prove to me that you're a dirty buttslut and cum from the feeling of my cock in your ass!)]";
+			return "知道你要高潮了，[scarlett.name]把[scarlett.her][scarlett.cock+]深深刺入你[pc.asshole+]，猛力抽插。"
+					+ "[scarlett.speechNoEffects(来吧，婊子！~嗯！~向我证明你是个淫荡的骚货，看我的鸡巴插进你的屁眼，叫你爱液狂飙！)]";
 		}
 	};
 	
@@ -68,7 +68,7 @@ public class SAScarlett {
 		public boolean isBaseRequirementsMet() {
 			return !Main.sex.getCharacterPerformingAction().isPlayer()
 					&& (Main.sex.getInitialSexManager() instanceof SMScarlettShopOral)
-					&& (!SexFlags.genericFlags.containsKey("scarlettInterruptedTurn") || Main.sex.getTurn()-SexFlags.genericFlags.get("scarlettInterruptedTurn") > 10) // Make this very infrequent
+					&& (!SexFlags.genericFlags.containsKey("scarlettInterruptedTurn") || Main.sex.getTurn()-SexFlags.genericFlags.get("scarlettInterruptedTurn") > 10) // 注释：这真的很少见，但我可以顺便刷下PP
 					&& Main.sex.getTurn()>2
 					&& Main.game.getPlayer().getArousal()<75
 					&& Main.game.getNpc(Scarlett.class).getArousal()<75
@@ -80,7 +80,7 @@ public class SAScarlett {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Customer interruption";
+			return "顾客中止";
 		}
 		@Override
 		public String getActionDescription() {
@@ -118,7 +118,7 @@ public class SAScarlett {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Helena interruption";
+			return "海伦娜中止";
 		}
 		@Override
 		public String getActionDescription() {

@@ -369,7 +369,7 @@ public class Litter implements XMLSaving {
 	
 	public String getFatherName() {
 		if(getFather()==null) {
-			return "someone";
+			return "某人";
 		}
 		return getFather().getName();
 	}
@@ -494,28 +494,28 @@ public class Litter implements XMLSaving {
 		List<String> entries = new ArrayList<>();
 		
 		for(Entry<String, Integer> entry : sons.entrySet()) {
-			entries.add("<b>"+Util.intToString(entry.getValue())+"</b> <b style='color:"+ PresetColour.MASCULINE.toWebHexString()+ ";'>"
+			entries.add("<b>"+Util.intToString(entry.getValue())+"</b>个<b style='color:"+ PresetColour.MASCULINE.toWebHexString()+ ";'>"
 						+(entry.getValue() > 1
 							? entry.getKey().split("\\|")[1]
 							: entry.getKey().split("\\|")[0])
 						+"</b>");
 		}
 		for(Entry<String, Integer> entry : feralSons.entrySet()) {
-			entries.add("<b>"+Util.intToString(entry.getValue())+"</b> "+feralString+" <b style='color:"+ PresetColour.MASCULINE.toWebHexString()+ ";'>"
+			entries.add("<b>"+Util.intToString(entry.getValue())+"</b>只"+feralString+"<b style='color:"+ PresetColour.MASCULINE.toWebHexString()+ ";'>"
 						+(entry.getValue() > 1
 							? entry.getKey().split("\\|")[1]
 							: entry.getKey().split("\\|")[0])
 						+"</b>");
 		}
 		for(Entry<String, Integer> entry : daughters.entrySet()) {
-			entries.add("<b>"+Util.intToString(entry.getValue())+"</b> <b style='color:"+ PresetColour.FEMININE.toWebHexString()+ ";'>"
+			entries.add("<b>"+Util.intToString(entry.getValue())+"</b>个<b style='color:"+ PresetColour.FEMININE.toWebHexString()+ ";'>"
 						+(entry.getValue() > 1
 							? entry.getKey().split("\\|")[1]
 							: entry.getKey().split("\\|")[0])
 						+"</b>");
 		}
 		for(Entry<String, Integer> entry : feralDaughters.entrySet()) {
-			entries.add("<b>"+Util.intToString(entry.getValue())+"</b> "+feralString+" <b style='color:"+ PresetColour.FEMININE.toWebHexString()+ ";'>"
+			entries.add("<b>"+Util.intToString(entry.getValue())+"</b>只"+feralString+"<b style='color:"+ PresetColour.FEMININE.toWebHexString()+ ";'>"
 						+(entry.getValue() > 1
 							? entry.getKey().split("\\|")[1]
 							: entry.getKey().split("\\|")[0])

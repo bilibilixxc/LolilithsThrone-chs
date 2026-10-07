@@ -1,625 +1,625 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<htmlContent tag="HARPY_NEST_DOMINANT"><![CDATA[
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_dominantEncountered))
-				Due to the ongoing arcane storm, [harpyDominant.namePos] nest is completely deserted. Her entire flock has retreated into the safety of the upper-floor of the building below, leaving you with no choice but to return at another time if you wanted to speak to her.
+				由于当前的奥术风暴，[harpyDominant.namePos]的巢空无一人。她的整个族群躲进了自己巢穴下方建筑物上层的安全区。如果你想和她说话，恐怕只能另找时间再来了。
 			#ELSE
-				Due to the ongoing arcane storm, this nest is completely deserted. The entire flock has retreated into the safety of the upper-floor of the building below, leaving you with no choice but to return at another time if you wanted to speak to the matriarch of this particular nest.
+				由于当前的奥术风暴，这个鸟巢空无一人。整个族群躲进了自己巢穴下方建筑物上层的安全区。如果你想和族长说话，恐怕只能另找时间再来了。
 			#ENDIF
 		</p>
 	#ELSEIF(!game.isExtendedWorkTime())
 		<p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_dominantEncountered))
-				Due to the current hour, [dominantHarpy.namePos] nest is completed deserted; both she and her flock have retired to the comfort of the buildings below in order to get a good night's rest. With the entrances to their night-time residence being securely locked, you're left with no choice but to return at another time if you wanted to speak to her.
+				目前[dominantHarpy.namePos]的巢空无一人；她和她的族群都已经回到巢穴下方舒适的建筑里，以便好好休息一晚。由于他们夜间住所的入口被牢牢锁住，如果你想和她说话，恐怕只能另找时间再来了。
 			#ELSE
-				Due to the current hour, this nest is completed deserted; both the matriarch and her flock have retired to the comfort of the buildings below in order to get a good night's rest. With the entrances to their night-time residence being securely locked, you're left with no choice but to return at another time if you wanted to speak to her.
+				目前巢内空无一人；族长和她的族群都已经回到巢穴下方舒适的建筑里，以便好好休息一晚。由于他们夜间住所的入口被牢牢锁住，如果你想和她说话，恐怕只能另找时间再来了。
 			#ENDIF
 		</p>
 	#ELSE
 		#IF(game.getDialogueFlags().hasFlag(FLAG_dominantEncountered))
 			<p>
-				You find yourself standing on the outskirts of [harpyDominant.namePos] nest; one of the largest and most populous of all the nests in Dominion. A single, gigantic platform spans the roof-tops of several buildings, with little raised podiums scattered about its surface.
+				你发现自己站在[harpyDominant.namePos]的鸟巢旁；这也是御城区面积最大、人口最多的鸟巢之一。一个巨大的平台横跨几栋建筑的屋顶，表面散落着凸起的高台。
 				#IF(!game.isDayTime())
-					 A series of bright, arcane-powered lights illuminate the entire area, and from what you can see, the harpies here are just as active at night as they are during daylight hours.
+					由奥术驱动的明亮灯光照亮了整个区域，由你所见，这里的哈比无论昼夜都很活跃。
 				#ENDIF
 			</p>
 			<p>
-				Looking closer at the nest's peculiar podiums, you see that there's a red-and-black feathered harpy perched on top of each one. Around the base of each one of these podiums, a crowd of harpies can be seen huddling together, and upon further inspection you notice that they're all bowing down in submission. Curiously, although you can see harpies of almost every colour, the only ones with red or black feathers seem to be those who are sitting on top of those podiums, leading you to believe that those particular colours designate the important members of this particular flock.
+				仔细观察鸟巢中奇特的高台，你会发现每个高台上都栖息着一只羽毛红黑相间的哈比。在每个高台的底部周围，你都可以看到一群哈比聚集在一起，仔细观察后，你发现他们都顺从地低着头。奇怪的是，尽管你几乎可以看到各种颜色的哈比，但羽毛红黑相间的哈比似乎只有那些坐在高台上的人，这让你相信，这些特定的颜色代表了这个特定群体的重要成员。
 			</p>
 			<p>
-				At the very centre of the platform, you see a podium that's higher than all the rest, and, lounging about on top of it, you see the familiar shape of [harpyDominant.name]. The group surrounding her is unlike all the others, as it's made up solely of the same red-and-black feathered harpies that you can see on top of the other podiums. Despite their somewhat aggressive appearance, the harpies of this flock don't seem to be too bothered by your presence, allowing you to approach [harpyDominant.name] if you had any business with her.
+				在平台的正中央，一个比所有高台都高的高台耸立于此，你看到了[harpyDominant.name]熟悉的身影。她周围的人群与其他高台下的不同，完全由你在其他高台上见到的有着红黑相间羽毛的哈比组成。尽管它们看上去咄咄逼人，但似乎并不太在意你的存在，如果你和[harpyDominant.name]有事要谈，它们会放你通过。
 			</p>
 		#ELSE
 			<p>
-				You find yourself standing on the outskirts of one of the largest and most populous of all the nests in Dominion. A single, gigantic platform spans the roof-tops of several buildings, with little raised podiums scattered about its surface.
+				你发现自己站在御城区面积最大、人口最多的鸟巢之一旁边。一个巨大的平台横跨几栋建筑的屋顶，表面散落着凸起的高台。
 				#IF(!game.isDayTime())
-					 A series of bright, arcane-powered lights illuminate the entire area, and from what you can see, the harpies here are just as active at night as they are during daylight hours.
+					由奥术驱动的明亮灯光照亮了整个区域，由你所见，这里的哈比无论昼夜都很活跃。
 				#ENDIF
 			</p>
 			<p>
-				Looking closer at the nest's peculiar podiums, you see that there's a red-and-black feathered harpy perched on top of each one. Around the base of each one of these podiums, a crowd of harpies can be seen huddling together, and upon further inspection you notice that they're all bowing down in submission. Curiously, although you can see harpies of almost every colour, the only ones with red or black feathers seem to be those who are sitting on top of those podiums, leading you to believe that those particular colours designate the important members of this particular flock.
+				仔细观察鸟巢中奇特的高台，你会发现每个高台上都栖息着一只羽毛红黑相间的哈比。在每个高台的底部周围，你都可以看到一群哈比聚集在一起，仔细观察后，你发现他们都顺从地低着头。奇怪的是，尽管你几乎可以看到各种颜色的哈比，但羽毛红黑相间的哈比似乎只有那些坐在高台上的人，这让你相信，这些特定的颜色代表了这个特定群体的重要成员。
 			</p>
 			<p>
-				At the very centre of the platform, you see a podium that's higher than all the rest, and, lounging about on top of it, you see what must be this nest's matriarch. The group surrounding her is unlike all the others, as it's made up solely of the same red-and-black feathered harpies that you can see on top of the other podiums. Despite their somewhat aggressive appearance, the harpies of this flock don't seem to be too bothered by your presence, allowing you to approach their matriarch if you had any business with her.
+				在平台的正中央，一个比所有高台都高的高台耸立于此，你看到了族群的族长。她周围的人群与其他高台下的不同，完全由你在其他高台上见到的有着红黑相间羽毛的哈比组成。尽管它们看上去咄咄逼人，但似乎并不太在意你的存在，如果你和族长有事要谈，它们会放你通过。
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<htmlContent tag="HARPY_NEST_DOMINANT_APPROACH"><![CDATA[
 	#IF(flags.hasFlag(FLAG_dominantEncountered))
 		#IF(flags.hasFlag(FLAG_dominantPacified))
 			<p>
-				Deciding to pay [harpyDominant.Name] another visit, you set off towards the centre podium. As you make your way towards the dominant matriarch, you get a good look at the harpies that make up her flock. Just as you've seen before, there's a red-and-black-feathered harpy sitting on top of each of the small podiums that are scattered about the area.
+				你打算看望一番[harpyDominant.Name]， 便向中央平台出发。当你向这位铁血统治的族长走去时，你可以清楚地看到她身边的哈比。正如先前所见，这里的每个小平台上都坐着一只红黑羽毛的哈比。
 			</p>
 			<p>
-				The groups that are huddled around each one of these podiums are, unlike their apparent leaders, made up of all sorts of differently coloured harpies. Most of them are on their knees, preening each other's feathers, or talking in hushed tones to one another. Those that aren't on their knees are found at the very base of these podiums, and as you pass, you get yet another look at these unfortunate few.
+			与他们的领导者不同，围在平台周围的哈比肤色各不相同。他们大多数都跪在地上，互相梳理羽毛，或者彼此低声交谈。那些没有跪在地上的哈比则待在平台的最底层，当你走近时，你再次注意到这群不幸的小部分哈比。
+		</p>
+			<p>
+				显然，这些哈比惹恼了他们的领袖，因此被剥光了衣服后关进木制颈手枷中。你经过每个平台都能看到各种当众羞辱的场面。这些哈比正在被其他哈比凌辱，小到打屁股、挠痒痒，大到粗暴的群交。
 			</p>
 			<p>
-				Obviously having displeased their leader in some way, these harpies have been stripped naked and locked into wooden stocks. Some of the flock are taking full advantage of their compromised position, and as you pass each podium, you see all manner of public humiliation taking place. From light spanking and tickling, all the way up to rough group sex, these harpies are being used and abused by rest of their flock.
-			</p>
+			不过，你没有多少时间来思考这个问题，毕竟你已经走到平台中央了。尽管这群哈比的数量要多得多，并且全都环绕着红黑相间的哈比“首领”，但围绕在族长平台周围的这群哈比和你之前经过的哈比都差不多：大多数哈比都跪在地上相互攀谈，也有几个其他颜色的哈比被关在颈手枷里。
+		</p>
 			<p>
-				You don't have much time to dwell on any thoughts about this, however, as before you know it, you've reached the centre of the platform. Although larger and made up solely of the red-and-black 'leader' harpies, the group surrounding [harpyDominant.NamePos] podium is similar to all those that you've previously passed. Most are on their knees, talking to one another, but there are several others, not all of them red-and-black, who are locked up in this podium's stocks.
-			</p>
+				当你接近[harpyDominant.Name]时，你的视线无法从眼前枷锁中的最新受害者的身上移开。她正痛苦并大声地呻吟着，那挑起她情欲之声的原因是一位外表非常女性化的哈比正在猛烈冲击她的裸露臀部。当你在平台前停住脚步时，你能听到[harpyDominantCompanion.name]发出的低吼，[harpyDominantCompanion.speech(该死的小荡妇！就是这样！给我叫唤，婊子！)]
+</p>
 			<p>
-				As you approach [harpyDominant.Name], your eyes are drawn to the latest of [harpyDominantCompanion.namePos] victims in the stocks in front of you. She's moaning and squealing out loud; the cause of her erotic noises taking the form of a very feminine-looking harpy thrusting away at her exposed rear end. Coming to a halt in front of the podium, you hear [harpyDominantCompanion.name] growling out, [harpyDominantCompanion.speech(Fucking slut! That's right! Moan for me, whore!)]
-			</p>
-			<p>
-				Just as you're about to say something, [harpyDominant.Name], only just noticing your presence, calls out, [harpyDominant.speech([pc.Mistress]! You're back!)]
-			</p>
+正当你要开口说话的时候，刚刚注意到你到来的[harpyDominant.Name]喊道：[harpyDominant.speech([pc.Mistress]，你回来了！)]
+</p>
 			#IF(harpyDominant.isVisiblyPregnant())
 				<p>
 					#IF(!harpyDominant.isCharacterReactedToPregnancy(pc))
-						As she jumps down off of her podium, you see that [harpyDominant.name] is sporting a [style.colourSex(pregnant belly)], and as she gestures towards it, she reveals, [harpyDominant.speech(You got me pregnant, [pc.mistress]...)]
+						当她跳下平台时，你发现[harpyDominant.name]腹部明显隆起，她怀孕了。她指着肚子说道：[harpyDominant.speech(是你让我怀孕了，[pc.mistress]……)]
 					#ELSE
-						Jumping down off of her podium, [harpyDominant.name] gestures towards her [style.colourSex(pregnant belly)] and states, [harpyDominant.speech(I'm still pregnant from when you knocked me up, [pc.mistress]...)]
+						[harpyDominant.name]跳下平台，指向自己隆起的孕肚，然后说道：[harpyDominant.speech(因为你上次让我受孕，我还没生下来呢，[pc.mistress]……)]
 					#ENDIF
 				</p>
 				<p>
-					Noticing what's going on, [harpyDominantCompanion.name] lets out a little squeak, and after quickly pulling out of her fuck-toy, jumps down onto her knees beside her matriarch. Not giving you a moment in which to comment on her pregnancy, [harpyDominant.Name] bows her head and asks, [harpyDominant.speech(What can I do for you [pc.mistress]?)]
+					在注意到发生的事情后，[harpyDominantCompanion.name]发出一声小小的尖叫，然后迅速从她的玩物身上退开，然后跳下来跪在族长身边。[harpyDominant.Name]没给你任何评论她怀孕的机会，她低下头，恭敬地问道：[harpyDominant.speech(有什么我可以为您做的吗，[pc.mistress]？)]
 				</p>
 			#ELSE
 				<p>
-					Jumping down off of her podium, [harpyDominant.name] falls to her knees before you. Noticing what's going on, [harpyDominantCompanion.name] lets out a little squeak, and after quickly pulling out of her fuck-toy, jumps down onto her knees beside her matriarch. Shuffling forwards, [harpyDominant.Name] bows her head, before asking, [harpyDominant.speech(What can I do for you [pc.mistress]?)]
-				</p>
+					[harpyDominant.name]从平台上跳下，跪在你的面前。当她这样做时，[harpyDominantCompanion.name]注意到了这一幕，在发出了一声小小的惊叫，迅速从她正在“享乐”的对象上撤身，也跟着跳下跪在族长身旁。[harpyDominant.Name]缓缓向前挪动身体，跪着询问道：[harpyDominant.speech(我可以为您做些什么，[pc.mistress]？)]
+</p>
 			#ENDIF
 		#ELSE
 			<p>
-				Deciding to pay [harpyDominant.Name] another visit, you set off towards the centre podium. As you make your way towards the dominant matriarch, you get a good look at the harpies that make up her flock. Just as you've seen before, there's a red-and-black-feathered harpy sitting on top of each of the small podiums that are scattered about the area.
+				你打算看望一番[harpyDominant.Name]， 便向中央平台出发。当你向这位铁血统治的族长走去时，你可以清楚地看到她身边的哈比。正如先前所见，这里的每个小平台上都坐着一只红黑羽毛的哈比。
 			</p>
 			<p>
-				The groups that are huddled around each one of these podiums are, unlike their apparent leaders, made up of all sorts of differently coloured harpies. Most of them are on their knees, preening each other's feathers, or talking in hushed tones to one another. Those that aren't on their knees are found at the very base of these podiums, and as you pass, you get yet another look at these unfortunate few.
+			与他们的领导者不同，围在平台周围的哈比肤色各不相同。他们大多数都跪在地上，互相梳理羽毛，或者彼此低声交谈。那些没有跪在地上的哈比则待在平台的最底层，当你走近时，你再次注意到这群不幸的小部分哈比。
+		</p>
+			<p>
+				显然，这些哈比惹恼了他们的领袖，因此被剥光了衣服后关进木制颈手枷中。你经过每个平台都能看到各种当众羞辱的场面。这些哈比正在被其他哈比凌辱，小到打屁股、挠痒痒，大到粗暴的群交。
 			</p>
 			<p>
-				Obviously having displeased their leader in some way, these harpies have been stripped naked and locked into wooden stocks. Some of the flock are taking full advantage of their compromised position, and as you pass each podium, you see all manner of public humiliation taking place. From light spanking and tickling, all the way up to rough group sex, these harpies are being used and abused by rest of their flock.
-			</p>
+			不过，你没有多少时间来思考这个问题，毕竟你已经走到平台中央了。尽管这群哈比的数量要多得多，并且全都环绕着红黑相间的哈比“首领”，但围绕在族长平台周围的这群哈比和你之前经过的哈比都差不多：大多数哈比都跪在地上相互攀谈，也有几个其他颜色的哈比被关在颈手枷里。
+		</p>
 			<p>
-				You don't have much time to dwell on any thoughts about this, however, as before you know it, you've reached the centre of the platform. Although larger and made up solely of the red-and-black 'leader' harpies, the group surrounding [harpyDominant.NamePos] podium is similar to all those that you've previously passed. Most are on their knees, talking to one another, but there are several others, not all of them red-and-black, who are locked up in this podium's stocks.
-			</p>
+				当你接近[harpyDominant.Name]时，你的视线无法从眼前枷锁中的最新受害者的身上移开。她正痛苦并大声地呻吟着，那挑起她情欲之声的原因是一位外表非常女性化的哈比正在猛烈冲击她的裸露臀部。当你在平台前停住脚步时，你能听到[harpyDominantCompanion.name]发出的低吼，[harpyDominantCompanion.speech(该死的小荡妇！就是这样！给我叫唤，婊子！)]
+</p>
 			<p>
-				As you approach [harpyDominant.Name], your eyes are drawn to the latest of [harpyDominantCompanion.namePos] victims in the stocks in front of you. She's moaning and squealing out loud; the cause of her erotic noises taking the form of a very feminine-looking harpy thrusting away at her exposed rear end. Coming to a halt in front of the podium, you hear [harpyDominantCompanion.name] growling out, [harpyDominantCompanion.speech(Fucking slut! That's right! Moan for me, whore!)]
-			</p>
-			<p>
-				Just as you're about to say something, [harpyDominant.Name], up until now having ignored your presence, calls out,
+				就在你准备开口说话之际，直到此刻都未曾留意到你存在的[harpyDominant.Name]突然喊道，
 				#IF(pc.getFemininityValue()>FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-					 [harpyDominant.speech([harpyDominantCompanion.Name]! That hungry slut is back for more of our attention!)]
+					[harpyDominant.speech([harpyDominantCompanion.Name]！那个饥渴的小骚货又回来寻求我们的关注了！)]
 				#ELSE
-					 [harpyDominant.speech([harpyDominantCompanion.Name]! That bitch is back for more of our attention!)]
+					[harpyDominant.speech([harpyDominantCompanion.Name]！那个贱货又回来找更多麻烦了！)]
 				#ENDIF
 			</p>
 			<p>
-				[harpyDominantCompanion.speech(Yes, [harpyDominant.name]!)] the harpy calls out, before growling at her victim. [harpyDominantCompanion.speech(Once I'm done with this, I'm using your ass next!)]
-			</p>
+    [harpyDominantCompanion.speech(是的，[harpyDominant.name]大人！)]那个哈比朝你低吼道：[harpyDominantCompanion.speech(一旦我解决完这个，下一个就要对付你了！)]
+</p>
 			<p>
-				Standing up on top of her podium, [harpyDominant.name] growls down at you, 
-				#IF(pc.getFemininityValue()>FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-					 [harpyDominant.speech(So?! What do you want, whore?!)]
-				#ELSE
-					 [harpyDominant.speech(So?! What do you want, bitch?!)]
-				#ENDIF
-			</p>
+站在她高高的平台上，[harpyDominant.name]向下冲你怒吼道：
+#IF(pc.getFemininityValue()>FEMININITY_FEMININE_STRONG.getMinimumFemininity())
+[harpyDominant.speech(所以呢？！你这个荡妇到底想要什么？！)]
+#ELSE
+[harpyDominant.speech(所以呢？！你这个臭婊子到底想要什么？！)]
+#ENDIF
+</p>
 		#ENDIF
 	#ELSE
 		 <p>
-			Recognising this as one of the nests that you agreed to pacify, you start walking towards the centre podium. As you make your way towards the matriarch, you get a good look at the harpies that reside in this particular nest. Just as you saw from the outskirts, there's a red-feathered harpy sitting on top of each of the small podiums that are scattered about the area. Each one has a plume of jet-black feathers on top of their heads, and the skin that covers their human parts is invariably a light olive colour.
+			这是你同意安抚的巢穴之一，于是你向巢穴中心走去。在行进途中，你看清了这群哈比的模样。正如你在外围看到的那样，散落在这里的每个小平台上都坐着一只红羽哈比，头顶上都有一缕漆黑的羽毛，皮肤无一例外都是浅橄榄色。
 		</p>
 		<p>
-			The groups that are huddled around each one of these podiums are, unlike their apparent leaders, made up of all sorts of differently coloured harpies. Most of them are on their knees, preening each other's feathers, or talking in hushed tones to one another. Those that aren't on their knees are found at the very base of these podiums, and as you get closer, you find yourself staring, wide-eyed, at these unfortunate few.
+			与他们的领导者不同，围在平台周围的哈比肤色各不相同。他们大多数都跪在地上，互相梳理羽毛，或者彼此低声交谈。那些没有跪在地上的哈比则待在平台的最底层，当你走近时，自己正瞪大眼睛看着这些可怜的家伙。
 		</p>
 		<p>
-			Obviously having displeased their leader in some way, these harpies have been stripped naked and locked into wooden stocks. Some of the flock are taking full advantage of their compromised position, and as you pass each podium, you see all manner of public humiliation taking place. From light spanking and tickling, all the way up to rough group sex, these harpies are being used and abused by rest of their flock.
+			显然，这些哈比惹恼了他们的领袖，因此被剥光了衣服后关进木制颈手枷中。你经过每个平台都能看到各种当众羞辱的场面。这些哈比正在被其他哈比凌辱，小到打屁股、挠痒痒，大到粗暴的群交。
 		</p>
 		<p>
-			You don't have much time to dwell on any thoughts about this, however, as before you know it, you've reached the centre of the platform. Although larger and made up solely of the red-and-black 'leader' harpies, the group surrounding the matriarch's podium is similar to all those that you've previously passed. Most are on their knees, talking to one another, but there are several others, not all of them red-and-black, who are locked up in this podium's stocks.
+			不过，你没有多少时间来思考这个问题，毕竟你已经走到平台中央了。尽管这群哈比的数量要多得多，并且全都环绕着红黑相间的哈比“首领”，但围绕在族长平台周围的这群哈比和你之前经过的哈比都差不多：大多数哈比都跪在地上相互攀谈，也有几个被关在颈手枷里，他们并不都是红黑色的。
 		</p>
 		<p>
-			As you approach the matriarch, your eyes are drawn to a particular pink-feathered harpy in the stocks in front of you. She's moaning and squealing out loud; the cause of her erotic noises taking the form of a very feminine-looking harpy thrusting away at her exposed rear end. Coming to a halt in front of the podium, you hear the dominant harpy growling out, [harpyDominantCompanion.speech(That's right, bitch! I knew you'd end up loving it eventually!)]
+			当你走近族长时，你的目光被前方颈手枷中的一只粉色羽毛的哈比吸引住了。一个妩媚的哈比正在抽插她裸露的后臀，惹得她高声呻吟浪叫。你在平台前停下，听到那霸道的哈比咆哮道：[harpyDominantCompanion.speech(就是这样，婊子！我知道你最后会爱上它的！)]
 		</p>
 		<p>
-			Just as you're about to say something, the matriarch, up until now having ignored your presence, calls out,
+			正当你想开口的时候，一直无视你的族长叫了起来：
 			#IF(pc.getFemininityValue()>FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-				 [harpyDominant.speech([harpyDominantCompanion.Name]! You can finish with your fuck-toy later! There's another hungry slut right here that needs our attention!)]
+				[harpyDominant.speech([harpyDominantCompanion.Name]！你可以晚点再和你的肉便器做爱！这里还有一个饥渴的荡妇需要我们关照！)]
 			#ELSE
-				 [harpyDominant.speech([harpyDominantCompanion.Name]! You can finish with your fuck-toy later! There's some bitch here that needs our attention!)]
+				[harpyDominant.speech([harpyDominantCompanion.Name]！你可以晚点再和你的肉便器做爱！来了一个婊子需要我们关照！)]
 			#ENDIF
 		</p>
 		<p>
-			[harpyDominantCompanion.speech(Yes, [harpyDominant.name]!)] the harpy calls out, before growling at her victim. [harpyDominantCompanion.speech(Don't think this is over whore! I'm gonna use your ass next time!)]
+			[harpyDominantCompanion.speech(是，[harpyDominant.name]！)]哈比喊道，又对着受害者咆哮：[harpyDominantCompanion.speech(别以为这就结束了，骚货！等下我还要用你的屁股！)]
 		</p>
 		<p>
-			As the matriarch, [harpyDominant.Name], stands up on top of her podium, you finally get a good look at her. Just like the other harpy leaders that you've seen, the feathers covering [harpyDominant.NamePos] wings and tail-feathers are bright red, and instead of hair, she's got a long plume of jet-black feathers on top of her head. Her face, one the most beautiful that you've ever seen, is covered in flawless, olive skin, just like the rest of her human body parts. She has average-sized breasts for a harpy, being B-cups, which are covered by her silky black plunge dress.
+			当族长[harpyDominant.Name]站上高台时，你终于看清了她的样子。正如你所见过的其他哈比首领，[harpyDominant.NamePos]有着鲜红色的翅膀和尾羽，头顶没有头发，而是长长的漆黑羽毛。她有着你见过的最美的脸与无瑕的橄榄色肌肤。她的胸部在哈比中算是中等大小，有B罩杯，裹在丝质的黑色深V领连衣裙里。
 		</p>
 		<p>
-			As you're taking in her gorgeous appearance, she growls down at you, 
+			你正欣赏她美丽的外表，她却对你低声咆哮：
 			#IF(pc.getFemininityValue()>FEMININITY_FEMININE_STRONG.getMinimumFemininity())
-				 [harpyDominant.speech(So?! What do you want, whore?!)]
+				[harpyDominant.speech(所以？！你想要什么，骚货？！)]
 			#ELSE
-				 [harpyDominant.speech(So?! What do you want, bitch?!)]
+				[harpyDominant.speech(所以？！你想要什么，婊子？！)]
 			#ENDIF
 		</p>
 	#ENDIF
 	#IF(!flags.hasFlag(FLAG_dominantPacified) && game.isBadEndsEnabled() && pc.isAbleToHaveRaceTransformed())
 		<p style='text-align:center;'><i>
-			[style.italicsBadEnd(You get the feeling that you'd be in serious trouble if you were to lose a fight against these harpies...)]
+			[style.italicsBadEnd(你有预感，如果你在与这些哈比的战斗中落败，你会有很大的麻烦……)]
 		</i></p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- Angry scenes: -->
 	
     <htmlContent tag="DOMINANT_LEAVE"><![CDATA[
     <p>
-        Deciding that now isn't the best time to be confronting [harpyDominant.name], you turn around and hurry away from the podium. You hear [harpyDominant.name] growling to [harpyDominantCompanion.name] as you leave, [harpyDominant.speechNoEffects(What the fuck was that all about?! Whatever! [harpyDominantCompanion.Name], you can carry on playing with your fuck-toy now...)]
+        你觉得现在不是与[harpyDominant.name]正面冲突的最佳时机，于是你转身匆匆离去。在你离开时，你听到[harpyDominant.name]对[harpyDominantCompanion.name]咆哮道：[harpyDominant.speechNoEffects(这他妈到底是怎么回事？算了！[harpyDominantCompanion.Name]，你现在可以继续玩弄你的玩具了……)]
     </p>
     <p>
-        Ignoring her words, you continue down the steps and back across the main platform, quickly finding yourself back on the outskirts of the nest.
+        你无视了她的废话，继续走下台阶，穿过平台，回到了巢穴的边缘。
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
 	<!-- Pacified scenes: -->
 	
     <htmlContent tag="PACIFIED_DOMINANT_LEAVE"><![CDATA[
     <p>
-        Deciding that you don't want to talk to [harpyDominant.name] right now, you turn around and take your leave. You hear [harpyDominant.name] sighing to [harpyDominantCompanion.name] as you walk away, [harpyDominant.speechNoEffects(Aww! I was hoping for some fun...)]
+        你现在不想与[harpyDominant.name]交谈，于是转身离去。在你走远时，你听到[harpyDominant.name]对着[harpyDominantCompanion.name]叹息道，[harpyDominant.speechNoEffects(唉！我还期待能找些乐子呢……)]
     </p>
     <p>
-        Ignoring her words, you continue down the steps and back across the main platform, quickly finding yourself back on the outskirts of the nest.
+        你无视了她的废话，继续走下台阶，穿过平台，回到了巢穴的边缘。
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="PACIFIED_DOMINANT_SEX_START"><![CDATA[
     <p>
-        Eager to put [harpyDominant.name] in her place in front of her inner-circle, you reach down and grab her by her wings. Pulling her to her feet, you [pc.step] forwards, before planting a deep kiss on her [harpyDominant.lips+].
+        为了在[harpyDominant.name]的巢穴里彰显你的地位，你抓住她的翅膀。将她抱起并在她的[harpyDominant.lips+]上留下深深的一吻。
     </p>
     <p>
-        [harpyDominant.Name] responds to your dominant move by letting out a submissive little whine, and, wrapping her wings around your back, she passionately starts returning your kiss...
+        面对你的主导举动，[harpyDominant.Name]发出了一声温顺的嘤咛，然后展开翅膀搂住你的背部，热烈地回应起你的吻……
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="PACIFIED_DOMINANT_SEX_START_AS_SUB"><![CDATA[
     <p>
-        Although you've asserted your superiority over [harpyDominant.name], you find yourself wanting nothing more than to submit to her. Revealing your desire to the harpy matriarch, you ask her to dominate you and put you in your place.
-    </p>
+尽管你已经确立了对[harpyDominant.name]的统治地位，但此刻你发现自己无比渴望臣服于她。于是你向哈比族长袒露了你的愿望，请求她主宰你，并让你明白自己的位置所在。
+</p>
     <p>
-        A wicked smirk flashes across [harpyDominant.namePos] face as she hears this, and after swiftly stepping forwards and wrapping her wings around your back, she roughly pulls you into a deep, passionate kiss...
+        [harpyDominant.namePos]的脸上掠过一抹邪魅的微笑。她迅速向前跨步，展开翅膀环绕住你的背部，然后粗暴而热烈地将你拉入一个深深的吻之中……
     </p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="DOMINANT_SEX_START_ORAL"><![CDATA[
     <p>
-        Eager to put [harpyDominant.name] and [harpyDominantCompanion.name] in their place in front of their nest's inner-circle, you reach down and grab the dominant matriarch's wings. Pulling her to her feet, you [pc.step] forwards and plant a deep kiss on her [harpyDominant.lips+], drawing a series of lustful moans from the surrounding harpies as you do so.
+        你迫切希望能在这巢穴的小圈子里让[harpyDominant.name]和[harpyDominantCompanion.name]重新认清自己的地位，于是伸手抓住花痴族长的翅膀，把她拽了起来。等她站稳后，你上前一步，在她[harpyDominant.lips+]上留下了深深一吻，周围的哈比们随即发出此起彼伏的淫乱喘息声。
     </p>
 	#IF(!harpyDominantCompanion.isAttractedTo(pc))
 		<p>
-			[harpyDominant.Name] responds to your dominant move by wrapping her wings around your back, grinding herself up against you, and passionately returning your kiss. Letting out an angry tut, [harpyDominantCompanion.name] sneers, [harpyDominantCompanion.speech(I can't believe [harpyDominant.name] is submitting to you... There's no way I'd let you kiss me like that...)]
-		</p>
+	[harpyDominant.Name]对你的主导行为作出回应，她展开她的翅膀环绕住你的背部并紧贴着你热烈地回吻。而[harpyDominantCompanion.name]却发出一声愤怒的轻蔑:[harpyDominantCompanion.speech(真不敢相信！[harpyDominant.name]竟然会屈服于你……我才不会让你那样亲我……)]
+</p>
 		<p>
-			Breaking off your kiss with [harpyDominant.Name], you tell [harpyDominantCompanion.name] that as you're in charge of this next, she doesn't have any say in the matter. Grabbing the matriarch's subordinate, you pull her into your embrace and give her a taste of your [pc.tongue+]. As the shocked harpy lets out a muffled cry of protest into your mouth, nervous laughter breaks out amongst the surrounding harpies.
-		</p>
+	结束与[harpyDominant.Name]的热吻后，你告诉[harpyDominantCompanion.name]，接下来将由你主导，她在这件事上没有发言权。你抓住了族长的随从，将她揽入怀中，让她体验了一下你的[pc.tongue+]。当这名震惊的哈比因为抗议而发出闷声抽泣时，周围的哈比们爆发出一阵紧张又尴尬的笑声。
+</p>
 		<p>
-			Wanting the matriarch's and her subordinate's lips to be employed elsewhere, you break off your kiss, before taking hold of both of the harpies' shoulders and pushing them to their knees before you. Realising what it is you want, [harpyDominant.Name] eagerly shuffles forwards towards your groin, pulling [harpyDominantCompanion.name] along beside her as she does so. Gazing up into your eyes, she moans, [harpyDominant.speech(Don't worry about [harpyDominantCompanion.name]. She'll do what I tell her to.)]
-		</p>
+	了使族长及其随从的嘴唇在别处发挥效用，你在结束亲吻后抓住两位哈比的肩膀，将她们推至你的面前跪下。在意识到你的意图后，[harpyDominant.Name]迫不及待地朝你跨下挪动身体，同时拽着[harpyDominantCompanion.name]一同前行。她抬头凝视着你的眼睛，娇喘道：[harpyDominant.speech(不用担心[harpyDominantCompanion.name]，她会听从我的命令行事。)]
+</p>
 		<p>
-			[harpyDominantCompanion.speech(Eugh... Yes, I'll do what you say, Mistress...)] [harpyDominantCompanion.name] groans as her matriarch forces her to join in with performing oral on you...
-		</p>
+	[harpyDominantCompanion.speech(呃……是的，我会照你说的做，女主人……)]当她的族长强迫[harpyDominantCompanion.name]一起为你服务时，她呻吟着回复道……
+</p>
 	#ELSE
 		<p>
-			[harpyDominant.Name] responds to your dominant move by wrapping her wings around your back, grinding herself up against you as she passionately returns your kiss. Letting out a hungry moan, [harpyDominantCompanion.name] eagerly asks, [harpyDominantCompanion.speech(You're not going to leave me to stand back and watch, are you?)]
-		</p>
+		[harpyDominant.Name]用翅膀环过你的腰，热情地回吻着你，在你的身上蹭来蹭去，以回应你的主动。在发出一声饥渴的娇喘后，[harpyDominantCompanion.name]问道，[harpyDominantCompanion.speech(你不打算连我一起操吗，来吧！)]
+	</p>
 		<p>
-			With [harpyDominant.name] continuing to desperately kiss you, you motion for [harpyDominantCompanion.name] to step forwards and join in. As she happily strides forwards, you pull back from [harpyDominant.namePos] lips, before swiftly grabbing [harpyDominant.namePos] head and giving her a taste of your [pc.tongue+]. As the lustful harpy leans heavily into you, subdued chatter breaks out amongst the surrounding dominant harpies.
-		</p>
+	在[harpyDominant.name]持续热烈地亲吻你时，你示意[harpyDominantCompanion.name]上前加入。当她欢快地走上前来时，你轻轻地从[harpyDominant.namePos]的唇边退开，接着迅速抓住[harpyDominant.namePos]的头部，让她尝到了你的[pc.tongue+]。就在这个充满欲望的哈比紧紧倚靠在你身上时，周围的那些哈比们开始低声窃窃私语起来。
+</p>
 		<p>
-			Wanting the matriarch's and her subordinate's lips to be employed elsewhere, you break off your kiss, before taking hold of both of the harpies' shoulders and pushing them to their knees before you. Realising what it is you want, they both eagerly shuffle forwards towards your groin. Looking up at you, [harpyDominant.name] hungrily moans, [harpyDominant.speech(We'll take good care of you... Isn't that right, [harpyDominantCompanion.name]?)]
-		</p>
+	为了让族长和她的随从接受命令，你在结束亲吻后抓住两位哈比的肩膀，将她们推至你的面前跪下。在意识到你的意图后，她们迫不及待地朝你的跨下挪动身体。她抬头凝视着你的眼睛，娇喘道：[harpyDominant.speech(我们会好好服侍你的……对不对，[harpyDominantCompanion.name]？)]
+</p>
 		<p>
-			[harpyDominantCompanion.speech(Yes, Mistress...)] [harpyDominantCompanion.name] replies, and you can't help but grin as she and her matriarch eagerly prepare to perform oral on you...
-		</p>
+	[harpyDominantCompanion.speech(是的，女主人……)][harpyDominantCompanion.name]回答道，你看到她和她的族长迫不及待地准备为你进行口交，不禁露出了得意的微笑……
+</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="DOMINANT_SEX_START_DOGGY"><![CDATA[
     <p>
-        Eager to put [harpyDominant.name] and [harpyDominantCompanion.name] in their place in front of their nest's inner-circle, you grab hold of both of them and push them down onto their hands and knees before you. As you drop down behind them, [harpyDominant.name] passionately moans, [harpyDominant.speech(Come on, give the two of us a real good fuck! Use me and [harpyDominantCompanion.name] as much as you want!)]
+        你想快点在[harpyDominant.name]和[harpyDominantCompanion.name]所属的哈比下属面前展现你的主导地位，于是你一把抓住她们两人，将她们推倒在你面前，迫使她们跪趴在地。当你俯身至她们身后时，[harpyDominant.name]娇吟道：[harpyDominant.speech(来吧，让我们两个真正享受一场激烈的交媾吧！尽情利用我和[harpyDominantCompanion.name]，随你所愿！)]
     </p>
 	#IF(!harpyDominantCompanion.isAttractedTo(pc))
 		<p>
-			Letting out a disgusted groan, the matriarch's subordinate looks back over her shoulder and grunts in disapproval, [harpyDominantCompanion.speech(Eugh... I'm only doing this because I have no other choice!)]
+			女首领的副手发出一声厌恶的呻吟，她回头瞥了一眼，不满地咕哝道：[harpyDominantCompanion.speech(唉……我只是因为没有其他选择才这么做！)]
 		</p>
 		<p>
-			Ignoring her words, you lustfully gaze down at [harpyDominantCompanion.name] and her matriarch as you prepare to fuck them side-by-side...
+			无视她的抱怨，你用满是欲望的眼神凝视着[harpyDominantCompanion.name]和她的首领[harpyDominant.name]，准备并排与她们发生性关系……
 		</p>
 	#ELSE
 		<p>
-			Letting out a hungry moan, the matriarch's subordinate looks back over her shoulder and cries out, [harpyDominantCompanion.speech(Yes! Please, fuck me!)]
+			族长的随从发出一声饥渴的低吼，回过头来并大声呼喊道：[harpyDominantCompanion.speech(是的，就这样，快来操我！)]
 		</p>
 		<p>
-			Pleased to hear that she's more than happy to be involved in this threesome, you lustfully gaze down at [harpyDominantCompanion.name] and her matriarch as you prepare to fuck them side-by-side...
-		</p>
+			你很高兴[harpyDominantCompanion.name]乐意参与这场三人游戏，你情欲满满地凝视着她和她的领袖[harpyDominant.name]，准备与她们来一场酣畅淋漓地3p……		
+</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="DOMINANT_AFTER_SEX"><![CDATA[
 	#IF(sex.isSatisfiedFromOrgasms(harpyDominant, true))
 		<p>
-			As you [pc.step] back from [harpyDominant.name], she sinks to the floor, totally worn out from her
+			当你从[harpyDominant.name]身边离开时，她因为
 			#IF(sex.getNumberOfOrgasms(harpyDominant)>1)
-				 orgasms.
+					多次高潮
 			#ELSE
-				 orgasm.
+					一次高潮
 			#ENDIF
-			 Biting her lip and flashing you a dirty look, she teases, [harpyDominant.speech(I could get used to this, you know...)]
+			而筋疲力尽地瘫坐在地板上。她咬着嘴唇，抛给你一个妩媚的眼神并调笑道：[harpyDominant.speech(你知道吗，我可以习惯这种感觉的……)]
 		</p>
 	#ELSE
 		<p>
-			As you [pc.step] back from [harpyDominant.name], she sinks to the floor, letting out a desperate whine as she realises that you've finished with her. Her feathered hands dart down between her legs, and she frantically starts masturbating as she seeks to finish what you started.
+			当你从[harpyDominant.name]身边离开时，她无力地跌坐在地板上并发出一声绝望的哀鸣，在意识到你已经结束了与她的互动后。她那覆满羽毛的手迅速滑向两腿之间开始疯狂自慰，试图完成你刚刚激起的欲望。
 		</p>
 	#ENDIF
 	#IF(sex.getAllParticipants(false).contains(harpyDominantCompanion))
 		#IF(sex.isSatisfiedFromOrgasms(harpyDominantCompanion, true))
 			<p>
-				Letting out a deeply satisfied sigh, [harpyDominantCompanion.name] looks to be completely exhausted from the
+				伴着一声满足的吐气，[harpyDominantCompanion.name]看起来完全沉醉于你给她带来的
 				#IF(sex.getNumberOfOrgasms(harpyDominantCompanion)>1)
-					 orgasms
+					多次高潮
 				#ELSE
-					 orgasm
+					高潮
 				#ENDIF
-				 you gave her. Panting and looking up into your eyes, she moans, [harpyDominantCompanion.speech(That was... Wow...)]
+				中，她气喘吁吁地抬起头望着你的眼睛，呻吟道，[harpyDominantCompanion.speech(哇……那真是……)]
 			</p>
 		#ELSE
 			<p>
-				Not being satisfied from this sexual experience, [harpyDominantCompanion.name] looks over at her matriarch, and as she watches [harpyDominant.namePos] [harpyDominant.breasts+] rise and fall, she starts shamelessly masturbating right there in front of the rest of the surrounding harpies.
+				对这场性爱仍不满足，[harpyDominantCompanion.name]望向她的族长，观赏着[harpyDominant.namePos][harpyDominant.breasts+]上下翻涌，她就在这群围绕着自己的哈比们面前，恬不知耻地自慰起来。
 			</p>
 		#ENDIF
 	#ENDIF
 	<p>
-		[harpyDominant.NamePos] inner-circle of harpies, having watched the whole thing, kneel down in submission as you finish with their matriarch. Excitedly chattering amongst themselves, they talk about your performance and wonder aloud how long it will be before you're back for more...
+		[harpyDominant.NamePos]领地内层的哈比们在见证了族长的性交全程后，纷纷跪下来表示臣服于你。然后他们围坐一团叽叽喳喳地谈论着你的英勇的表现，兴奋地表示想知道你什么时候还会再来一次……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="DOMINANT_LEAVE_AFTER_SEX"><![CDATA[
 	#IF(sex.getAllParticipants(false).contains(harpyDominantCompanion))
 		<p>
-			Having shown these harpies their place, you set off down the staircase, and after walking back across the lower platform, you quickly find yourself on the outskirts of [harpyDominant.namePos] nest once again.
+			你告诉他们要认清自己的地位之后，就走下了楼梯，来到更低的平台上。在快速穿过整个平台之后，你发现自己又回到了[harpyDominant.namePos]巢穴的边缘。
 		</p>
 	#ELSE
 		<p>
-			Having shown [harpyDominant.name] her place, you set off down the staircase, and after walking back across the lower platform, you quickly find yourself on the outskirts of [harpyDominant.namePos] nest once again.
+			在让[harpyDominant.name]认清自己的地位之后，你走下楼梯，在穿过下层的平台后，你很快又回到了[harpyDominant.namePos]巢穴的边缘地带。
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 	
 	<!-- After losing fight: -->
 	
     <htmlContent tag="COMBAT_LOST"><![CDATA[
 	<p>
-		You fall to the floor, totally beaten. As you collapse, [harpyDominantCompanion.name] jumps down on top of you, pinning you to the floor as she calls out to her matriarch, [harpyDominantCompanion.speechNoEffects([harpyDominant.Name]! The stupid bitch is ready for [pc.her] punishment now!)]
+		你精疲力竭地躺倒在地上，就在你倒下的时候，[harpyDominantCompanion.name]跳到你身上，将你牢牢地压在地板上，并朝她的首领呼喊，[harpyDominantCompanion.speechNoEffects([harpyDominant.Name]！这个愚蠢的家伙现在准备好接受[pc.her]的惩罚了！)]
 	</p>
 	<p>
-		[harpyDominant.speech(Good girl, [harpyDominantCompanion.name]!)] you hear her respond. [harpyDominant.speech(I think it's time to teach this insolent little [pc.race] a lesson!)]
+		[harpyDominant.speech(做得好，[harpyDominantCompanion.name]！)]你听到她回应道。[harpyDominant.speech(我认为是时候给这个不知天高地厚的小[pc.race]一点教训了！)]
 	</p>
 	<p>
-		As [harpyDominantCompanion.name] continues holding you down, [harpyDominant.name] calls out for the rest of the surrounding harpies to help. Rushing to obey their mistress, several of the red-and-black harpies dash forwards and help to pin your [pc.arms] and [pc.legs] to the floor.
+		当[harpyDominantCompanion.name]持续压制着你时，[harpyDominant.name]召唤周围的其他哈比前来帮忙。数名红黑相间的哈比听命于她们的主人，立即冲过来将你的[pc.arms]和[pc.legs]牢牢地按在地上。
 	</p>
 	<p>
-		[harpyDominant.speech(That's right, hold [pc.herHim] still!)] [harpyDominant.name] calls out, stepping down from her podium before strutting over to you. [harpyDominant.speech(Fucking bitch! I know just what you need! Coming into <i>my</i> nest, then trying to act all tough?! You just want to be one of my bitches, don't you?!)]
-	</p>
-    ]]>
-    </htmlContent>
+		[harpyDominant.speech(没错，给我抓住[pc.herHim]！)][harpyDominant.name]大声说着的同时从台上趾高气昂地走向你。[harpyDominant.speech(混账东西！我太清楚你需要什么了！闯进<i>我的</i>领地，还试图装硬汉？！你不过是想成为我的扈从之一，是不是？！)]
+</p>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_MATRIARCH"><![CDATA[
 	<p>
-		You fall to the floor, totally beaten. As you collapse, [dominantHarpy.name] orders her flock to hold you still, and, rushing to obey their matriarch, you're quickly pinned to the floor.
+		你彻底落败并倒在了地上。当你倒下时，[dominantHarpy.name]命令她的哈比们将你抓住，为了遵从她们的族长，你马上就被紧紧地按在了地板上。
 	</p>
 	<p>
-		[dominantHarpy.speech([dominantHarpyCompanion.name], get up!)] you hear [dominantHarpy.name] shouting to her companion. [dominantHarpy.speech(It's time to teach this insolent [pc.race] a lesson!)]
+		[dominantHarpy.speech([dominantHarpyCompanion.name]，站起来！)]你听见[dominantHarpy.name]向她的同伴喊道。[dominantHarpy.speech(是时候给这个无礼的[pc.race]一点儿教训了！)]
 	</p>
 	<p>
-		As the members of [dominantHarpy.namePos] inner-circle continue to hold you down, you hear the dominant matriarch and her companion walking towards you. The harpies start laughing as you try to wriggle free, but you're too weak from the fight to offer any real resistance.
+		在[dominantHarpy.namePos]鸟巢的成员继续将你压制在地时，你听见了那个主导一切的族长及其同伴正向你走来。当你试图挣扎逃脱时，哈比们开始嘲笑你，但战斗后的虚弱使你无法做出有效的反抗。
 	</p>
 	<p>
-		[dominantHarpy.speech(Time for some revenge, [dominantHarpyCompanion.name]!)] [dominantHarpy.name] shouts out, and as her companion moves to help the other harpies hold you down, she laughs, [harpyDominant.speech(You dumb cunt! I know just what you need! Coming into <i>my</i> nest, then trying to act all tough?! You just want to be one of my bitches, don't you?!)]
+		[dominantHarpy.speech(是时候报复一下了，[dominantHarpyCompanion.name]！)][dominantHarpy.name]大喊道。当她的同伴上前协助其他哈比将你压制在地时，她大笑道，[harpyDominant.speech(你这个蠢货！我太了解你需要什么了！闯进<i>我的</i>领地，还想摆出一副强硬姿态？！你不过是想成为我的一名奴仆，对不对？！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_END"><![CDATA[
 	<p>
-		[pc.speechNoEffects(Let me go!)] you shout, struggling against the harpies holding you down. You're too weak to shake them off, however, and they easily continue to pin you to the floor, holding you quite still as [harpyDominant.name] sneers down at you.
+		[pc.speechNoEffects(放开我！)]你大喊着，并试图挣脱按住你的哈比们。然而，你此刻太过虚弱，无法摆脱她们，所以她们轻易地继续将你压在地上，当你试图挣扎时，[harpyDominant.name]则在一旁冷笑地俯视着你。
 	</p>
 	#IF(game.isBadEndsEnabled())
 		<p>
-			[harpyDominant.speech([dominantHarpyCompanion.Name], strip this bitch!)] she commands her subordinate, and as she watches you helplessly trying to resist as her harpies strip you out of all your clothing, she teases, [harpyDominant.speech(You're so feisty! I can already see that you're going to turn out to be one of my most interesting pets!)]
+			[harpyDominant.speech([dominantHarpyCompanion.Name]，把这个贱货的衣服扒光！)]她这样命令她的下属，当她看着你无助地试图抵抗，在她的哈比们将你身上所有的衣物剥个精光后，她戏谑道，[harpyDominant.speech(你真有股子倔强劲儿！我已经看出你将会成为我最有趣的宠物之一！)]
 		</p>
 		<p>
-			Now completely naked, you're once again forced down onto your back, before [dominantHarpyCompanion.name] sits on your chest. As the sadistic harpy laughs at your fruitless attempts to pull free, her matriarch brings a dark red perfume bottle up to your face. Grinning evilly, she leans in to you, and as she prepares to spray the bottle's contents onto your helpless body, she teases, [harpyDominant.speech(Breathe in deeply! In just a moment you'll be nothing more than one of my angry little bitches!)]
+			现在赤身裸体的你再次被迫仰面倒下，接着[dominantHarpyCompanion.name]坐在了你的胸膛上。当这个残忍的哈比嘲笑你徒劳无功的挣扎时，她的族长拿出一瓶深红色的香水瓶来到你的面前。她带着邪恶的笑容，倾身靠向你，准备将香水瓶里的液体喷洒到你无助的身体上，同时嘲弄道：[harpyDominant.speech(深深吸气！再过一会儿，你就只不过是我众多愤怒的小雌鸟中的一员罢了！)]
 		</p>
 	#ELSE
 		<p>
-			[harpyDominant.speech(That's the spirit!)] she laughs. [harpyDominant.speech(You're so feisty! It's better to channel all that pent up energy elsewhere though. Don't worry, <i>this</i> will help you with that!)]
+			[harpyDominant.speech(这才对嘛！)]她笑着说道。[harpyDominant.speech(你真是个烈性子！不过最好还是把那股压抑的能量转移到别处。别担心，<i>这个</i>会帮你做到这一点！)]
 		</p>
 		<p>
-			As [dominantHarpyCompanion.name] sits on your chest, laughing at your fruitless attempts to pull free, [harpyDominant.name] brings a dark red perfume bottle up to your face. Grinning evilly, she leans in to you, ready to spray the bottle's contents onto your helpless body...
+			正当[dominantHarpyCompanion.name]坐在你的胸口，嘲笑你徒劳无功的挣扎时，[harpyDominant.name]手持一瓶深红色的香水瓶来到你的面前。她带着邪恶的笑容向你走来，准备将香水瓶里的液体喷洒到你无助的身体上……
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_NO_TF"><![CDATA[
 	<p>
-		Unwilling to be transformed into one of [harpyDominant.namePos] harpies, you furiously yank your arm free of their grip. In the seconds you have before you're restrained again, you reach up to grab the bottle of perfume from [harpyDominant.namePos] feathered had, before hurling it across the nest to smash into pieces against the hard wooden floor.
+		你可不想成为[harpyDominant.namePos]所属的哈比，你愤怒地挣脱了她们的束缚。在再次被控制前的短短几秒钟内，你迅速伸出手从[harpyDominant.namePos]羽翼般的手中夺过那瓶香水，然后将其奋力投掷出去，那可怜地瓶子撞在坚硬的木制地板上摔得粉碎。
 	</p>
 	<p>
-		[harpyDominant.speech(You fucking bitch!)] [harpyDominant.name] screams, grabbing your chin and squeezing cruelly down as she scowls at you. [harpyDominant.speech(You're going to fucking pay for that! [harpyDominantCompanion.Name]! This bitch wants my full attention! How about you help [pc.herHim] entertain me?!)]
+		[harpyDominant.speech(你这该死的臭娘们儿！)][harpyDominant.name]大声尖叫并狠狠地抓起你的下巴，狠狠地捏住，瞪着你怒吼。[harpyDominant.speech(你要为此付出代价！[harpyDominantCompanion.Name]！这个臭娘们儿想要我全力以赴的关注！不如你帮[pc.herHim]好好取悦我怎么样？！)]
 	</p>
 	<p>
-		Any protests or objections that you might have are muffled as [harpyDominantCompanion.namePos] feathered hand clamps down over your mouth. Leaning down to stare into your eyes, she chuckles, [harpyDominantCompanion.speech(Let's put on a show!)]
+		[harpyDominantCompanion.namePos]用那覆盖羽毛的手掌紧紧捂住了你的嘴巴，使你的一切抗议和反对都无法发声。随后她俯下身直视着你的眼睛，轻轻笑道：[harpyDominantCompanion.speech(我们来演一场好戏吧！)]
 	</p>
 	<p>
-		For the next few hours, you're forced to act as [harpyDominantCompanion.namePos] play-thing. Tying you up in bondage, publicly spanking you in front of [harpyDominant.name], and being walked around the nest on a leash are amongst the least humiliating things you suffer. Thankfully, the harpies don't show any interest in forcing you to perform any penetrative sexual acts, and they eventually all lose interest.
+		在接下来的几个小时里，你将被迫充当[harpyDominantCompanion.namePos]的玩物。她把你捆绑起来，当着所有哈比的面公开打你的屁股，用绳子拴着你在巢穴里走来走去，这些都是你遭受的最轻微的羞辱。值得庆幸的是，哈比们并没有表现出强迫你进行任何插入性行为的兴趣，而且她们最终都会失去兴趣。
 	</p>
 	<p>
-		As [harpyDominantCompanion.name] declares that she's bored of playing with you, [harpyDominant.name] finally sets you free. [harpyDominant.speech(Alright bitch! I think you've had enough! Now get the fuck out of my nest!)]
+		当[harpyDominantCompanion.name]宣布她已经厌倦了与你玩耍时，[harpyDominant.name]终于放了你自由。[harpyDominant.speech(好吧，小贱人！我想你已经得到足够的教训了！现在立刻滚出我的巢穴！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_TF_START"><![CDATA[
 	<p>
-		You stay still, allowing [harpyDominant.name] to spray the bottle's contents onto your face and neck as she taunts you, [harpyDominant.speech(You want to act like an angry, bitchy little harpy? You'd better have the body to match it!)]
+		你保持不动，任由[harpyDominant.name]将瓶子里的液体喷洒在你的脸部和颈部，而她则趁机嘲讽道：[harpyDominant.speech(你想表现得像一只脾气暴躁的小哈比？那你最好也拥有相应的身体条件才行！)]
 	</p>
 	<p>
-		You try to make a response, but as you open your mouth, the choking perfume enters your airways, leaving you coughing and spluttering on the floor. Before you know what you're doing, you're breathing in deeply, letting out little whining noises as you find yourself desperate to inhale as much of the sweet-smelling perfume as you possibly can...
+		你试图做出回应，但当你张开嘴时，呛人的香水味刺激了你的呼吸道，让你咳嗽不止。不等大脑反应过来，你的身体已经开始不由自主地深深地吸气，发出呜呜的声音，急切地想要吸入尽可能多的香甜的香水……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_TF_END"><![CDATA[
 	<p>
-		As the perfume's transformative effects come to an end, the harpies' grip on your [pc.arms] and [pc.legs] loosens. Blinking slowly a few times, you let out an exhausted moan, [pc.speech(~Ahh!~ You bitch...)]
+		随着香水的变形效果逐渐消失，哈比们对你[pc.arms]和[pc.legs]的束缚也随之减轻。你缓慢地眨了几下眼睛，疲惫地呻吟了起来：[pc.speech(~啊!~ 你这个婊子……)]
 	</p>
 	<p>
-		The flock of harpies bursts out into laughter, and the ones who were holding you down finally release you before backing off. Scrambling to your knees, you find yourself looking up at [harpyDominant.Name] as she continues towering over you.
+		哈比们突然爆发出一阵笑声，原本压制住你的那些哈比终于松开了你，并退到一旁。你狼狈地站起身，抬头望着仍旧高高在上俯视着你的[harpyDominant.Name]。
 	</p>
 	<p>
-		[harpyDominant.speech(Good little harpy! Now, after you apologise, you can fuck off and make your own flock!)]
+		[harpyDominant.speech(不错的小哈比！那么，在你道歉之后你就可以滚了，自己去组建一个巢穴吧！)]
 	</p>
 	<p>
-		With the effects of the perfume still lingering in your mind, you find yourself blurting out, [pc.speech(I'm not apologising to you! Fucking bitch, I'm out of here!)]
+		香水的药效还在你的脑海中挥之不去，你猛地脱口而出：[pc.speech(我不会向你道歉的！该死的婊子，我要离开这里！)] 
 	</p>
 	<p>
-		[harpyDominant.Name] grins down at you, and, to the background noise of dozens of harpies' laughter, she shouts, [harpyDominant.speech([harpyDominantCompanion.Name]! This bitch wants my full attention! How about you help [pc.herHim] entertain me?!)]
+		[harpyDominant.Name]向你得意地狞笑，伴随着数十只哈比的嘲笑声，她高声喊道：[harpyDominant.speech([harpyDominantCompanion.Name]！这个家伙想要得到我全部的关注！你何不帮帮[pc.herHim]，让我乐呵一下？！)]
 	</p>
 	<p>
-		Any protests or objections that you might have are muffled as [harpyDominantCompanion.namePos] feathered hand clamps down over your mouth. Leaning down to stare into your eyes, she chuckles, [harpyDominantCompanion.speech(Let's put on a show!)]
+		[harpyDominantCompanion.namePos]用那覆盖羽毛的手掌紧紧捂住了你的嘴巴，使你的一切抗议和反对都无法发声。随后她俯下身直视着你的眼睛，轻轻笑道：[harpyDominantCompanion.speech(我们来演一场好戏吧！)]
 	</p>
 	<p>
-		For the next few hours, you're forced to act as [harpyDominantCompanion.namePos] play-thing. Tying you up in bondage, publicly spanking you in front of [harpyDominant.name], and being walked around the nest on a leash are amongst the least humiliating things you suffer. Thankfully, the harpies don't show any interest in forcing you to perform any penetrative sexual acts, and they eventually all lose interest.
+		在接下来的几个小时里，你将被迫充当[harpyDominantCompanion.namePos]的玩物。她把你捆绑起来，当着所有哈比的面公开打你的屁股，用绳子拴着你在巢穴里走来走去，这些都是你遭受的最轻微的羞辱。值得庆幸的是，哈比们并没有表现出强迫你进行任何插入性行为的兴趣，而且她们最终都会失去兴趣。
 	</p>
 	<p>
-		As [harpyDominantCompanion.name] declares that she's bored of playing with you, [harpyDominant.name] finally sets you free. [harpyDominant.speech(Alright, bitch! I think you've had enough! Now get the fuck out of my nest!)]
+		当[harpyDominantCompanion.name]表示她已经玩腻了之后，[harpyDominant.name]终于放过了你。[harpyDominant.speech(好了，小贱人！我看你也受够了！现在赶快滚出我的巢穴！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_THROWN_OUT"><![CDATA[
 	<p>
-		Finally given an opportunity to leave, you do as [harpyDominant.name] commands. Running away from the harpies' mocking laughter, you dash across the platform, and before you know it, you find yourself back on the outskirts of the nest...
+		在获得了离开的机会后，你按照[harpyDominant.name]的命令行事。无视身后那些哈比们嘲讽的笑声，你飞快地跑了起来，不知不觉间，你发现自己又回到了巢穴的边缘地带……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 	<!-- Bad end: -->
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_TF_START"><![CDATA[
 	<p>
-		Completely overpowered by the aggressive harpies and totally at their mercy, you can't do anything but obey [dominantHarpy.namePos] command. As she starts liberally spraying you with the sweet-smelling perfume, you're unable to prevent the choking vapour from entering your airways, leaving you coughing and spluttering on the floor. Before you know what you're doing, you're breathing in deeply, letting out little whining noises as you find yourself desperate to inhale as much of the sweet-smelling perfume as you possibly can.
+		面对这些凶猛的哈比，你完全无力反抗，只能听从[dominantHarpy.namePos]的命令。当她开始肆意地向你喷洒香气四溢的香水时，你无法阻止那令人窒息的气体进入呼吸道，这导致你在地上剧烈咳嗽并喘气不止。在你还未反应过来的时候，你本能地深深吸气，口中发出微弱的哀鸣声，因为你发现自己迫切地渴望吸入尽可能多的甜美香水气息。
 	</p>
 	<p>
-		[dominantHarpy.speechNoEffects(That's right, you pathetic bitch, breathe it all in!)] she mocks, [dominantHarpy.speechNoEffects(Now turn into an angry little harpy bitch for me!)]
-	</p>
-    ]]>
-    </htmlContent>
+		[dominantHarpy.speechNoEffects(就是这样，你这没用的东西，全吸进去！)]她嘲讽道，[dominantHarpy.speechNoEffects(现在给我变成一只愤怒的小哈比吧！)]
+</p>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_TF_END"><![CDATA[
 	<p>
-		As the perfume's transformative effects come to an end, the harpies' grip on your [pc.arms] and [pc.legs] loosens. Blinking slowly a few times, you let out an exhausted moan, [pc.speech(~Ahh!~ You bitch...)]
+		随着香水的变形效果逐渐消失，哈比们对你[pc.arms]和[pc.legs]的束缚也随之减轻。你缓慢地眨了几下眼睛，疲惫地呻吟了起来：[pc.speech(~啊!~ 你这个婊子……)]
 	</p>
 	<p>
-		The flock of harpies bursts out into laughter, and the ones who were holding you down finally release you before backing off. Scrambling to your knees, you find yourself looking up at [harpyDominant.Name] as she continues towering over you. With an evil smirk on her face, she demands, [harpyDominant.speech(Apologise to me, you worthless slut! Grovel before me and tell me that you'll serve me!)]
+		这群哈比爆发出一阵笑声，那些按住你不放的哈比最终放开了你并退到一边。你挣扎着跪起身来，抬头看见[harpyDominant.Name]依旧居高临下地看着你。她的脸上挂着邪恶的笑容，厉声命令道：[harpyDominant.speech(给我道歉，你这个没用的贱货！在我面前磕头，并告诉我你会为我效力！)]
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="COMBAT_LOST_BAD_END_RETORT"><![CDATA[
 	<p>
-		With the effects of the perfume still lingering in your mind, you find yourself furiously shouting out, [pc.speech(Fuck you, bitch! I'm not saying sorry!)]
+		香水的效果仍纠缠在你的脑海之中，你不假思索地发出带有怒音的吼声，[pc.speech(操你妈，贱婊子！谁他妈要和你道歉！)]
 	</p>
 	<p>
-		Clearly having expected this, [harpyDominant.name] continues evilly grinning down at you, and to the background noise of dozens of dominant harpies hurling insults at you, she shouts, [harpyDominant.speech(So, it would seem that I need to put you in your place! You're just one of my worthless harpy bitches now, understand? I'm your matriarch, and I'll do whatever I want with you!)]
+		显然，[harpyDominant.name]早已料到了这一点，她朝你露出不怀好意的笑容，在十多个充满支配欲的哈比对你进行凌辱和奚落的背景声里，她大声喊道，[harpyDominant.speech(看来我该让你明白一下你的地位了！你现在只不过是我那些废物哈比婊子中的一员，懂吗？我是你的族长，我想怎么玩弄你，就怎么玩弄你！)]
 	</p>
 	<p>
-		Before you can respond to this, the matriarch snaps her fingers and orders her subordinates, [harpyDominant.speech(Restrain this bitch! I know just how to train her!)]
-	</p>
+		在你能够作出回应之前，这位首领突然打了个响指并命令起了她的下属们，[harpyDominant.speech(把这个婊子绑起来！我知道怎样训练她！)]
+</p>
 	#IF(pc.hasVagina())
 		<p>
-			Once again, you find yourself being overpowered by [harpyDominant.namePos] harpies, and as they roughly restrain you, the sadistic matriarch sneers, [harpyDominant.speech(Some time in the stocks will make it clear to you what your place is... [harpyDominantCompanion.Name]! Break this bitch!)]
+			你发现自己再一次被[harpyDominant.namePos]的哈比们压制，当她们粗暴地束缚住你时，这位施虐成性的族长嗤笑道，[harpyDominant.speech(在枷锁里待一会儿会让你明白自己应该处在什么位置……[harpyDominantCompanion.Name]！给我好好教训这个家伙！)]
 		</p>
 		<p>
-			Although you struggle against them, the harpies manage to manhandle you over to a nearby set of stocks, and after a brief scuffle, you find your [pc.arms] and head securely locked into the wooden device. From the big grin on her face, you can see that [harpyDominantCompanion.name] is delighted to be carrying out her matriarch's orders, and with a skip in her step she swiftly moves around behind you.
+        你觉得现在不是与[harpyDominant.name]正面冲突的最佳时机，于是你转身匆匆离去。在你离开时，你听到[harpyDominant.name]对[harpyDominantCompanion.name]咆哮道：[harpyDominant.speechNoEffects(这他妈到底是怎么回事？算了！[harpyDominantCompanion.Name]，你现在可以继续玩弄你的玩具了……)]
+    </p>
+		<p>
+			[harpyDominantCompanion.speech(请尽量抵抗得久一点，否则就没意思啦！)][harpyDominantCompanion.name]笑着说道，紧接着她用力挥下手臂，猛烈地拍打你裸露的臀部。听到你因疼痛而不自主地发出惊恐的叫声后，[harpyDominantCompanion.name]兴奋地笑了起来，毫不迟疑地再度举起手再次拍打你的臀部。她反复重复这个动作，很快就把你折磨到哭泣不止。
 		</p>
 		<p>
-			[harpyDominantCompanion.speech(Please do try to resist for as long as you can. It's no fun otherwise!)] [harpyDominantCompanion.name] laughs, before swinging her hand down as hard as she can to forcefully slap your exposed ass. Moaning in delight in response to the alarmed cry which involuntarily bursts out from between your [pc.lips], [harpyDominantCompanion.name] wastes no time in lifting her hand and slapping your ass once again. Repeating this movement over and over again, [harpyDominantCompanion.name] soon reduces you to a squirming, crying mess.
+			[pc.speech(不要再来了！求求你！)]你再也承受不住这无情的惩罚了，于是你绝望地喊叫了出来。
 		</p>
 		<p>
-			[pc.speech(No more! Please!)] you desperately cry out, unable to endure any more of this ruthless punishment.
+			[harpyDominantCompanion.speech(这么快就受不住了吗？)][harpyDominantCompanion.name]失望地抱怨着，随即急切地娇喘道，[harpyDominantCompanion.speech(看来是时候开始你的训练了！你将成为我的小宝贝儿！)]
 		</p>
 		<p>
-			[harpyDominantCompanion.speech(Had enough already?)] [harpyDominantCompanion.name] whines in disappointment, before eagerly moaning, [harpyDominantCompanion.speech(It's time to start your training then! You're going to be my bitch!)]
-		</p>
-		<p>
-			After a brief moment as she displaces her clothing, [harpyDominantCompanion.name] steps up right behind you, and you can't help but let out a shocked gasp as you feel the head of her cock sliding up and down over your [pc.labia+]...
+			[harpyDominantCompanion.name]迅速脱去衣物，紧贴在你的身后，当你感觉到她的性器在你[pc.labia+]上来回滑动时，你不禁发出了一声震惊的喘息……
 		</p>
 	#ELSE
 		<p>
-			Once again, you find yourself being overpowered by [harpyDominant.namePos] harpies, and as they roughly restrain you, the sadistic matriarch sneers, [harpyDominant.speech(Giving you your new uniform should show you what your place is... [harpyDominantCompanion.Name]! Dress this bitch!)]
+			你发现自己再一次被[harpyDominant.namePos]的哈比们制服，当她们粗鲁地将你捆绑起来时，这位施虐成性的族长冷笑道：[harpyDominant.speech(让你穿上新制服就应该能让你明白自己的地位了……[harpyDominantCompanion.Name]！给这个婊子穿上制服！)]
 		</p>
 		<p>
-			Although you struggle against them, the harpies prove to be too strong for you, and so after a brief scuffle, you're left with a ballgag firmly fitted into your mouth, a choker fastened around your neck, and a set of revealing, dark purple latex clothing snugly hugging your legs, stomach, and arms. Although your [pc.breasts+] are fully on display, a pair of tape crosses have been stuck over your nipples, and as you reach up to touch them, [harpyDominantCompanion.name] suddenly slaps you and hisses, [harpyDominantCompanion.speech(You're not to move unless ordered to, bitch! Now kneel down before your matriarch!)]
+			虽然你奋力反抗，但事实证明哈比远比你更强壮，所以，在短暂的混战之后，你的嘴里被牢牢塞上了一个球形口塞，脖子上被戴上了一个颈圈，一套暴露的深紫色乳胶衣服紧紧地包裹着你的双腿、腹部和手臂。虽然你[pc.breasts+]已经暴露无遗，但你的乳头上还贴着一对十字胶带，当你伸手去摸它们时，[harpyDominantCompanion.name]突然打了你一巴掌，并发出嘶鸣声，[harpyDominantCompanion.speech(贱婊子，在我给你下命令之前，不许乱动！现在，跪在你的族长面前！)]
 		</p>
 		<p>
-			Not giving you any choice in the matter, [harpyDominantCompanion.name] forcefully pushes you down before [harpyDominant.name], who lets out a cruel, mocking laugh and declares, [harpyDominant.speech(That's better! Do you understand your place now, slut? That tag on your choker says 'obedient toy', and that's exactly what you'll be, <i>or else</i>!)]
+			没有给你任何选择的余地，[harpyDominantCompanion.name]强行把你按倒在[harpyDominant.name]面前，她发出残忍、嘲讽的笑声，宣告道，[harpyDominant.speech(这样才对！现在，明白你的地位了吗，骚货？就像你的项圈上写的‘顺从的玩具’，<i>不懂事的话</i>这就是你的未来！)]
 		</p>
 		<p>
-			With those final, threatening words, the matriarch stoops down to deliver a stinging slap across your face. Unable to respond due to the ballgag in your mouth, you have no other option but to kneel before her and wait to see what it is these harpies will do with you. You're not waiting for long, however, as after straightening up, [harpyDominant.name] calls out, [harpyDominant.speech(Bring that slut, [harpyDominantVictim.name], here! It's time for her punishment!)]
+			族长用威慑的语气将最后一个字说完，随后俯下身，在你脸上狠狠地扇了一巴掌。由于嘴里塞着口球，你无法做出任何反应，只能跪在她面前，等着看这些哈比会怎么处置你。不过，你并没有等太久，因为在直起身子后，[harpyDominant.name]叫了起来，[harpyDominant.speech(把那个骚货，[harpyDominantVictim.name]，带到这里！现在该给她来点惩罚了！)]
 		</p>
 		<p>
-			A few moments later, a female harpy is led into the area. Blindfolded and bound from head-to-toe in bondage gear, she's forced to crawl forwards on all fours, and as she comes to a halt before [harpyDominant.name], you see that her breasts and groin are exposed in much the same way that yours are. After briefly smirking down at this unfortunate harpy, the matriarch looks over to you and states, [harpyDominant.speech(This worthless bitch is being punished for bringing me the wrong drink that I'd asked for. To remind her of what a dumb cunt she is, she's going to be publicly fucked by an equally-worthless slut. So go on, bitch, mount her! Look, the slut's already wet and ready for it!)]
+			片刻之后，一只女哈比被带入该区域。她被蒙上眼睛，从头到脚都被捆绑着，被迫四肢着地向前爬行，当她在[harpyDominant.name]面前停住时，你看到她的胸部和下体暴露在外，和你一样。族长低头对着这只不幸的哈比发出嘲笑，然后看向你，[harpyDominant.speech(这个没用的婊子给我上错了酒，现在正在接受惩罚。为了让她明白她是个不需要说话的骚货，现在我要让你这个同样一无是处的婊子，当着众人的面操她。去吧，看，那个荡妇的下面已经湿透了，等着你干她呢！)]
 		</p>
 		<p>
-			Looking over at [harpyDominantVictim.name], you see that her pussy is indeed already wet, and as she lifts her hips so as to present herself, you realise that you've got very little choice but to do as you're told...
+			你看向[harpyDominantVictim.name]，她已经抬起了屁股，做好了挨操的准备，那暴露的小穴同族长所说的一样，湿润的一塌糊涂。除了按她说的做，恐怕你别无选择……
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_SEX_VAGINA_START"><![CDATA[
 	<p>
-		Locked in the stocks and unable to do resist, you're powerless to prevent [harpyDominantCompanion.name] from continuing to tease her cock up and down over your [pc.labia+]. Grabbing your [pc.hips+], she teases, [harpyDominantCompanion.speech(Come on, bitch, beg for it! Or would you like to go back to the spanking?)]
+		你被锁在颈手枷上，无可抵抗，根本无法阻止[harpyDominantCompanion.name]把她的鸡巴顶着你[pc.labia+]上下挑弄。她忽然抓住了你[pc.hips+]，调戏道，[harpyDominantCompanion.speech(来啊，骚货，你求我啊！要不然我可要继续打你屁股了？)]
 	</p>
 	<p>
-		With your sore ass proving to be a potent reminder of the pain you were just forced to endure, you find yourself opting for the easier choice, and find yourself moaning, [pc.speech(Please, fuck me! No more spankings!)]
+		屁股的疼痛让你想起了刚才被迫忍受的痛苦，你决定选择不那么痛苦的方式，于是呻吟起来，[pc.speech(求你了，来操我吧！不要再打屁股了！)]
 	</p>
 	<p>
-		[harpyDominantCompanion.speech(Good bitch!)] [harpyDominantCompanion.name] triumphantly moans, before thrusting forwards and roughly ramming her [harpyDominantCompanion.cock+] deep into your [pc.pussy+]. Letting out a series of dominant groans, she proceeds to rhythmically fuck you in front of all the other harpies...
+		[harpyDominantCompanion.speech(好婊子！)][harpyDominantCompanion.name]得意洋洋地呻吟着，然后向前挺进，粗暴地将她[harpyDominantCompanion.cock+]深深插进你[pc.pussy+]里。她发出一连串霸道的喘息声，当着其他哈比的面，一下接着一下地操你……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_SEX_PENIS_START"><![CDATA[
 	<p>
-		Before you can make a move, [harpyDominantCompanion.name] aggressively hisses down at you, [harpyDominantCompanion.speech(Either fuck her, or else I'll spend the rest of today making you wish you'd never even heard of harpies!)]
+		你还没来得及动，[harpyDominantCompanion.name]就压着嗓子，恶狠狠地威胁道，[harpyDominantCompanion.speech(给我操她，要不我今天就让你后悔终生！)]
 	</p>
 	<p>
-		With a choice between fucking [harpyDominantVictim.name] or being forced to endure some kind of brutal punishment, you decide to go with the easier of the two options. Shuffling forwards, you clamber up over [harpyDominantVictim.namePos] back, and once you've mounted her, you feel your rapidly-hardening cock prod at her [harpyDominantVictim.labia+].
+		面前的两个选项，要不操[harpyDominantVictim.name]，要不接受某种残酷的惩罚，你还是决定两害相权取其轻。你拖拖拉拉地挪动上前，趴在了[harpyDominantVictim.namePos]背上，就感觉到自己忽然胀大的肉棒直接顶到了她[harpyDominantVictim.labia+]。
 	</p>
 	<p>
-		[harpyDominant.speech(You can put your tongue to work while my pet fucks you,)] [harpyDominant.name] suddenly states, and after quickly exposing her pussy, she roughly pulls [harpyDominantVictim.namePos] face into her groin. Forcing her victim to eat her out, the sadistic matriarch growls down at you, [harpyDominant.speech(What are you waiting for, bitch? Fuck her worthless cunt!)]
+		[harpyDominant.speech(我的小宠物干你的时候舌头也不准停下，)][harpyDominant.name]忽然又说，接着就麻利地把蜜穴露出，猛地把[harpyDominantVictim.namePos]的脸按了上去。族长这个施虐狂一面强迫着那可怜的家伙给她舔阴，一面又朝你喝道，[harpyDominant.speech(你还等着干什么，婊子？给我操她的臭逼！)]
 	</p>
 	<p>
-		The matriarch's order, combined with the feeling of [harpyDominantVictim.namePos] wet pussy rubbing against your cock, is too much for you to refuse, and so with a buck of your hips, you thrust your [pc.cock+] into [harpyDominantVictim.namePos] cunt and start fucking her while she eats out [harpyDominant.name]...
+		族长的命令，加上[harpyDominantVictim.namePos]湿穴紧贴着肉棒的感觉，让你难以抗拒，于是腰身一挺，便将[pc.cock+]捅进了[harpyDominantVictim.namePos]的细缝，让她一边给[harpyDominant.name]舔阴，一边操干起来……
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_AFTER_SEX"><![CDATA[
 	#IF(pc.hasVagina())
 		<p>
-			Having had her fun, [harpyDominantCompanion.name] pulls her softening cock out of your well-fucked pussy, and after giving your ass one final, stinging slap, she struts off to another part of the nest. A moment later another male harpy approaches you, and without even saying a word, steps around behind you and impatiently shoves her cock into your pussy. As your new partner starts groaning and frantically thrusting her cock in and out of your quivering cunt, [harpyDominantCompanion.name] returns with a very familiar-looking bottle of perfume in her hands.
+			[harpyDominantCompanion.name]爽过之后，便将疲软下来的鸡巴从你被狠狠操过的穴中拔了出来，最后朝着你的屁股狠狠地来了一巴掌，就仰头挺胸地走向了巢穴另一处。过了一会儿，又一只雄性哈比上前来，二话不说就站定在你身后，迫不及待地将肉棒塞进了你的秘缝之内。这家伙嗯嗯啊啊的，疯狂地将肉棒在你不断收缩的蜜穴中抽插，正这时[harpyDominantCompanion.name]回来了，还拿着一瓶很眼熟的香水。
 		</p>
 		<p>
-			[harpyDominant.speech(The mind-altering effects of this perfume can wear off after a while, but I've been reliably informed that prolonged exposure to it will make the changes permanent,)] [harpyDominant.name] sneers as she steps up beside [harpyDominantCompanion.name]. Giving her subordinate a nod, she commands, [harpyDominant.speech(Keep on spraying her until she sees herself as nothing more than another one of my bitches.)]
+			[harpyDominant.speech(这种香水能改变心智，效果会在一段时间后消失。但是我可听说，长期接触后这些变化将会永久保留下来，)][harpyDominant.name]冷笑着，走到[harpyDominantCompanion.name]旁边。她向下属点头示意，[harpyDominant.speech(继续喷，直到她接受自己只是我的一个婊子。)]
 		</p>
 		<p>
-			Letting out a cruel laugh, [harpyDominant.name] then struts off, leaving [harpyDominantCompanion.name] to carry out her orders. As your pussy continues to stretch and spasm around the cock that's hammering in and out of it, the matriarch's subordinate delights in repeatedly spraying the perfume bottle's contents directly into your face. With each inhalation, you find yourself getting angrier and angrier, while at the same time coming to think of [harpyDominant.name], [harpyDominantCompanion.name], and all of the other harpies as your superiors.
+			残忍地笑出声，[harpyDominant.name]大摇大摆地离开了，留下[harpyDominantCompanion.name]执行命令。你的小穴被不断进出的阴茎撑开，不堪重负地抽搐着。族长的下属反复将香水喷到你的脸上，每一次吸入，都会让你更加愤怒。可同时却又觉得[harpyDominant.name]，[harpyDominantCompanion.name]和其他的哈比，他们都是你的主人。
 		</p>
 		<p>
-			Several bottles of perfume, and multiple sexual partners later, and [harpyDominantCompanion.name] finally releases you from the stocks. Although you want to slap her and scream obscenities directly in her face, you don't dare to displease a harpy who's of a higher social standing than you are. Looking to one side, you see your matriarch, [harpyDominant.name], looking at you with an expression of arrogant amusement on her face. Snapping her fingers, she points to the floor and commands, [harpyDominantCompanion.speech(Kneel down before me, bitch, and tell me who's your matriarch.)]
+			历经香水洗礼和多人运动后，[harpyDominantCompanion.name]终于将你从枷锁中释放出来。虽然你很想狠狠扇她一耳光，当面把她骂得狗血淋头，但你并不敢招惹一个社会地位比你高的哈比。向另一侧望去，你看到了你的族长，[harpyDominant.name]。她打了个响指，傲慢地看着你，指着地面命令，[harpyDominantCompanion.speech(跪下，婊子。告诉我，谁是你的族长。)]
 		</p>
 	#ELSE
 		<p>
-			Having had her fun, [harpyDominant.name] kicks [harpyDominantVictim.name] away from her, before looking at you and commanding, [harpyDominant.speech(Get off her, bitch! Your work is done!)]
+			[harpyDominant.name]爽过之后，直接就把[harpyDominantVictim.name]丢在一旁，望着你命令道，[harpyDominant.speech(混蛋，别再碰她了！你的任务已经结束了！)]
 		</p>
 		<p>
-			Sliding your cock out of [harpyDominantVictim.namePos] quivering pussy, you decide that the only option for you right now is to play the obedient pet, and so dutifully kneel down and await further orders. You don't have to wait long for your next command, as the matriarch snaps her fingers and exclaims, [harpyDominant.speech(Lie on your back, bitch! [harpyDominantVictim.Name], if you can swallow five of her loads, then your punishment is over.)]
+			把阴茎滑出[harpyDominantVictim.namePos]颤抖的小穴，你别无选择，只能扮演一条听话的宠物。你恭恭敬敬地跪下，等待下一步指示。你没有等多久，族长打了个响指，命令道，[harpyDominant.speech(躺下，贱人！[harpyDominantVictim.Name]，如果你能承受住她的五次进攻，那么你的惩罚就结束了。)]
 		</p>
 		<p>
-			As you do as you're told and lie on your back, [harpyDominantVictim.name] frantically pounces on you, and within a moment, she's got your cock in her mouth. Doing her best to give you the best blowjob she can, [harpyDominantVictim.name] keeps you pinned to the floor and as you see [harpyDominantCompanion.name] approaching with a very familiar-looking bottle of perfume in her hands.
+			你乖乖躺下。[harpyDominantVictim.name]疯了一样地扑向你，就一刹那的功夫，她就把你的阴茎含入了嘴里，尽她所能，给与你最佳的口活体验。[harpyDominantVictim.name]控制住你，使你无法动弹。[harpyDominantCompanion.name]手里拿着一瓶你非常熟悉的香水，慢慢靠近你。
 		</p>
 		<p>
-			[harpyDominant.speech(The mind-altering effects of this perfume can wear off after a while, but I've been reliably informed that prolonged exposure to it will make the changes permanent,)] [harpyDominant.name] sneers as she steps up beside [harpyDominantCompanion.name]. Giving her subordinate a nod, she commands, [harpyDominant.speech(Keep on spraying her until she sees herself as nothing more than another one of my bitches.)]
+			[harpyDominant.speech(这种香水能改变心智，效果会在一段时间后消失。但是我可听说，长期接触后这些变化将会永久保留下来，)][harpyDominant.name]冷笑着，走到[harpyDominantCompanion.name]旁边。她向下属点头示意，[harpyDominant.speech(继续喷，直到她接受自己只是我的一个婊子。)]
 		</p>
 		<p>
-			Letting out a cruel laugh, [harpyDominant.name] then struts off, leaving [harpyDominantCompanion.name] to carry out her orders. As [harpyDominantVictim.namePos] lips slide up and down around your cock, the matriarch's subordinate delights in repeatedly spraying the perfume bottle's contents directly into your face. With each inhalation, you find yourself getting angrier and angrier, while at the same time coming to think of [harpyDominant.name], [harpyDominantCompanion.name], and all of the other harpies as your superiors.
+			残忍地笑出声，[harpyDominant.name]大摇大摆地离开了，留下[harpyDominantCompanion.name]执行命令。[harpyDominantVictim.namePos]的[harpyDominantVictim.lips]裹住你的肉棒，上下滑动着，而族长的仆从则拿着香水往你脸上喷，仿佛乐在其中。每一次吸入，都会让你更加愤怒。可同时却又觉得[harpyDominant.name]，[harpyDominantCompanion.name]和其他的哈比，他们都是你的主人。
 		</p>
 		<p>
-			Several bottles of perfume, and multiple orgasms later, and [harpyDominantVictim.name] is finally pulled off of you by [harpyDominantCompanion.name]. Although you want to slap her and scream obscenities directly in her face, you don't dare to displease a harpy who's of a higher social standing than you are. Looking to one side, you see your matriarch, [harpyDominant.name], looking at you with an expression of arrogant amusement on her face. Snapping her fingers, she points to the floor and commands, [harpyDominantCompanion.speech(Kneel down before me, bitch, and tell me who's your matriarch.)]
+			历经香水洗礼和多人运动后，[harpyDominantVictim.name]终于被[harpyDominantCompanion.name]拉了来开。虽然你很想狠狠扇她一耳光，当面把她骂得狗血淋头，但你并不敢招惹一个社会地位比你高的哈比。向另一侧望去，你看到了你的族长，[harpyDominant.name]。她打了个响指，傲慢地看着你，指着地面命令，[harpyDominantCompanion.speech(跪下，婊子。告诉我，谁是你的族长。)]
 		</p>
 	#ENDIF
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
     <htmlContent tag="BAD_END_FINAL"><![CDATA[
 	<p>
-		Obediently kneeling down before her, you declare, [pc.speech(You're my matriarch, [harpyDominant.name]... I'll do whatever you command...)]
+		你屈从地在她面前跪下，表示道，[pc.speech(您就是我的族长，[harpyDominant.name]……我听从您的一切命令……)]
 	</p>
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	#IF(pc.hasVagina())
 		<p>
-			Months later, [harpyDominantCompanion.name] is pinning you to the floor as she thrusts her cock in and out of your pussy. Well and truly established as a harpy at the bottom of the nest's female hierarchy, you're often used like this, and more often than not it's [harpyDominantCompanion.name] who's the one to be enjoying your cunt. Soon enough, she's letting out a series of desperate moans, and then a moment later you feel her hot cum filling your pussy.
+			数月后的某日，[harpyDominantCompanion.name]将你死死按在地面上，疯狂蹂躏着你的小穴。你已经被完全塑造为一只哈比，身处巢中雌性地位的最底层，被如此使用也是家常便饭，而通常享受你肉穴的正是[harpyDominantCompanion.name]。没过多久，她便娇喘连连，滚烫的精液很快就填满了你的小穴。
 		</p>
 		<p>
 			#IF(game.isAnalContentEnabled())
-				[harpyDominantCompanion.speech(Next time I'm using your ass, bitch!)]
+				[harpyDominantCompanion.speech(下次我要用你的屁股，婊子！)]
 			#ELSE
-				[harpyDominantCompanion.speech(Next time I'm using your mouth, bitch!)]
+				[harpyDominantCompanion.speech(下次我要用你的嘴，婊子！)]
 			#ENDIF
-			 the harpy sneers, before slapping you across the face and strutting off to another part of the nest.
+			哈比冷笑一声，扇了你一巴掌，大摇大摆地走到巢穴的另一个地方去了。
 		</p>
 		<p>
-			As you watch [harpyDominantCompanion.name] depart, you furiously summon a nearby male harpy to your side; she's one of a few who are actually beneath you in the flock's pecking order. Taking out your frustrations on her, you sadistically slap her ass before forcing her to clean your pussy, muttering under your breath that one day you'll be above [harpyDominantCompanion.name], and then she'll pay...
+			你眼看着[harpyDominantCompanion.name]离开，怒气冲冲地喊来了附近一只雄哈比；她是族群等级中仅有的几个在你之下的家伙。你把一肚子火气都撒在了她身上，先是狠狠打了一顿屁股，又强迫她帮你清理小穴，嘴里还念念有词，总有一天你会踩在[harpyDominantCompanion.name]头上，让她付出代价的……
 		</p>
 	#ELSE
 		<p>
-			Months later, [harpyDominant.name] is once again using you to punish a disobedient harpy. Well and truly established as a harpy at the bottom of the nest's male hierarchy, you're exclusively used by [harpyDominant.name] to punish those who have displeased her, a job which you've grown to love.
+			又是几个月后，[harpyDominant.name]再次让你来教训不忠的哈比。你已经被完全塑造为一只哈比，身处巢中雄性地位的最底层，专门被[harpyDominant.name]用来惩罚那些惹她不爽的家伙，这工作你越做越喜欢。
 		</p>
 		<p>
-			You mount the disobedient harpy and pin her to the floor, before roughly forcing your cock into her wet pussy and energetically pounding her cunt. Soon enough, you're finishing inside of her, and after giving her ass a rough slap, you're recalled to your matriarch's side, ready to do it all again to the next harpy unfortunate enough to displease [harpyDominant.name]...
+			你骑上了那个不从的哈比，把她死死压在地上，硬生生将鸡巴塞进了她湿润的穴内，快速抽插起来。没过多久，你就在她体内释放了出来，随后朝她的屁股用力扇了一巴掌，就被叫回了族长身旁，等待下一个不幸惹恼[harpyDominant.name]的可怜哈比，再重复一遍之前的流程……
 		</p>
 	#ENDIF
 	<p style='text-align:center;'>
-		...
+		……
 	</p>
 	<p><i>
-		With your mind having been permanently changed by being subjected to such a huge quantity of transformative perfume, you never once think of trying to escape from [harpyDominant.namePos] nest. Even if you did somehow become aware of what had happened, you're far too angry to listen to reason, and can't see yourself as anything more than one of [harpyDominant.namePos] bitches...
+		在巨量转化香水的影响下，你的心智永久发生了转变，永远不会再产生逃离[harpyDominant.namePos]巢穴的想法。哪怕勉强理清了曾经发生的事情，无法散去的怒火也让你失去理智，只会将自己视作属于[harpyDominant.namePos]婊子罢了……
 	</i></p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 	
 </dialogue>

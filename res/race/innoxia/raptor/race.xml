@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_raptor</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[raptor-morph]]></name>
-	<namePlural><![CDATA[raptor-morphs]]></namePlural>
+	<name><![CDATA[猛禽化形]]></name>
+	<namePlural><![CDATA[猛禽化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[raptor]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[猛禽]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[raptor]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[猛禽]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[raptor]]></defaultTransformName>
+	<defaultTransformName><![CDATA[猛禽]]></defaultTransformName>
 	
 	<colour>innoxia_raptor</colour>
 	

@@ -234,9 +234,9 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			return "";
 		}
 		if(gc.getTailCount()==1) {
-			return Util.intToString(gc.getTailCount())+" "+determiner;
+			return Util.intToString(gc.getTailCount())+"根";
 		}
-		return Util.intToString(gc.getTailCount())+" "+determinerPlural;
+		return Util.intToString(gc.getTailCount())+"根";
 	}
 	
 	@Override
@@ -323,199 +323,199 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 		
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_SKIN) || this.getTags().contains(BodyPartTag.TAIL_TYPE_SCALES)) {
 			if(owner.getTailCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tails] are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的尾巴"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tail] is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的尾巴"));
 			}
 			switch(owner.getTailGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " <colourStart>very thin<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常纤细<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " <colourStart>slender<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>十分修长<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " <colourStart>quite narrow<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>比较细<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an <colourStart>average thickness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>粗细适中<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " <colourStart>quite thick<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>比较粗大<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " <colourStart>very thick<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>十分粗壮<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " <colourStart>incredibly thick and girthy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>格外粗壮<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " <colourStart>extremely thick and girthy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>极其粗壮<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_FUR)) {
 			if(owner.getTailCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tails] are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的尾巴"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tail] is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的尾巴"));
 			}
 			switch(owner.getTailGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " <colourStart>very thin and severely lacking in fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常纤细也没什么绒毛<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " <colourStart>slender and lacking in fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>比较修长，绒毛也不多<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " <colourStart>quite narrow and a little lacking in fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>比较细，相比于身体其他部分绒毛稍少。<colourEnd>"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an <colourStart>average thickness and fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>粗细合适，和身体其他部分绒毛差不多浓密。<colourEnd>"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " <colourStart>quite big and very fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>相当蓬松，相比于身体其他部分很多毛。<colourEnd>"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " <colourStart>very big and fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>十分粗壮，相比于身体其他部分更松软。<colourEnd>"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " <colourStart>incredibly thick and fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>难以置信的蓬松，相比于身体其他部分更松软。<colourEnd>"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " <colourStart>extremely thick and fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>极其蓬松，相比于身体其他部分更松软。<colourEnd>"));
 					break;
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_TUFT)) {
 			if(owner.getTailCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] tufted tails are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]簇毛的尾巴"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] tufted tail is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]簇毛的尾巴"));
 			}
 			switch(owner.getTailGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " <colourStart>very small and significantly lacking in fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常细小，相比于身体其他部分绒毛不多。<colourEnd>"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " <colourStart>quite small and lacking in fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>相当小，相比于身体其他部分绒毛不多。<colourEnd>"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " <colourStart>a little small and lacking in fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>有点小，相比于身体其他部分绒毛不多。<colourEnd>"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an <colourStart>average size and fluffiness<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>大小适中，和身体其他部分差不多蓬松。<colourEnd>"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " <colourStart>quite big and very fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>相当蓬松，相比于身体其他部分很多毛。<colourEnd>"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " <colourStart>very big and extremely fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>十分蓬松，相比于身体其他部分非常蓬松。<colourEnd>"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " <colourStart>incredibly thick and fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>难以置信的蓬松，相比于身体其他部分更松软。<colourEnd>"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " <colourStart>extremely thick and fluffy<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>极其蓬松，相比于身体其他部分更松软。<colourEnd>"));
 					break;
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_HAIR)) {
 			if(owner.getTailCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] horse tails are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的马尾巴"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] horse tail is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的马尾巴"));
 			}
 			switch(owner.getTailGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " <colourStart>very much lacking in volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "与[npc.her]身体的其他部分相比，<colourStart>显得太小了。<colourEnd>"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " <colourStart>lacking in volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "与[npc.her]身体的其他部分相比，<colourStart>显得很小。<colourEnd>"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " <colourStart>a little lacking in volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "与[npc.her]身体的其他部分相比，<colourStart>就显得有点小了。<colourEnd>"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an <colourStart>average volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>大小适中<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " <colourStart>quite voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>相当丰满<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " <colourStart>very voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常丰满<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " <colourStart>incredibly voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>难以置信的丰满<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " <colourStart>extremely voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>超级丰满<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_FEATHER)) {
 			if(owner.getTailCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] plumes of feathers are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的翎毛"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] plume of feathers is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的翎毛"));
 			}
 			switch(owner.getTailGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " <colourStart>very small and lacking in volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常小而且缺少体积感<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " <colourStart>small and somewhat lacking in volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>很小而且有些缺少体积感<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " <colourStart>a little narrow and lacking in volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>有些细而且缺少体积感<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an <colourStart>average size and volume<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>尺寸和大小都适中<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " <colourStart>quite large and voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>相当大而且很松<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " <colourStart>very large and voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常大而且很松<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " <colourStart>incredibly voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>难以置信的丰满<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " <colourStart>extremely voluminous<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>超级丰满<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_GENERIC)) {
 			if(owner.getTailCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] tails are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的尾巴"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] tail is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的尾巴"));
 			}
 			switch(owner.getTailGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " <colourStart>very small<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常纤细<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " <colourStart>somewhat small<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>有点纤细<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " <colourStart>a little narrow<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, " <colourStart>有点细<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an <colourStart>average size<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>粗细适中<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " <colourStart>quite large<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>比较大<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " <colourStart>very large<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>非常大<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " <colourStart>incredibly large<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>格外粗大<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " <colourStart>extremely large<colourEnd> in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "<colourStart>超级粗大<colourEnd>，考虑到身体的其他部分的话。"));
 					break;
 			}
 		}
@@ -542,122 +542,122 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 				|| this.getTags().contains(BodyPartTag.TAIL_TYPE_SCALES)) {
 			switch(girth) {
 				case ZERO_THIN:
-					return "thin";
+					return "纤细";
 				case ONE_SLENDER:
-					return "slender";
+					return "修长";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "average";
+					return "适中";
 				case FOUR_GIRTHY:
-					return "thick";
+					return "较粗";
 				case FIVE_THICK:
-					return "extra-thick";
+					return "粗壮";
 				case SIX_CHUBBY:
-					return "extremely-thick";
+					return "极粗";
 				case SEVEN_FAT:
-					return "unbelievably-thick";
+					return "粗到离谱";
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_FUR)) {
 			switch(girth) {
 				case ZERO_THIN:
-					return "thin";
+					return "纤细";
 				case ONE_SLENDER:
-					return "slender";
+					return "修长";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "fluffy";
+					return "毛茸茸";
 				case FOUR_GIRTHY:
-					return "very-fluffy";
+					return "松软";
 				case FIVE_THICK:
-					return "extra-fluffy";
+					return "很松软";
 				case SIX_CHUBBY:
-					return "extremely-fluffy";
+					return "极其松软";
 				case SEVEN_FAT:
-					return "unbelievably-fluffy";
+					return "松软到离谱";
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_TUFT)) {
 			switch(girth) {
 				case ZERO_THIN:
-					return "tiny";
+					return "娇小";
 				case ONE_SLENDER:
-					return "small";
+					return "较小";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "fluffy";
+					return "毛茸茸";
 				case FOUR_GIRTHY:
-					return "very-fluffy";
+					return "松软";
 				case FIVE_THICK:
-					return "extra-fluffy";
+					return "很松软";
 				case SIX_CHUBBY:
-					return "extremely-fluffy";
+					return "极其松软";
 				case SEVEN_FAT:
-					return "unbelievably-fluffy";
+					return "松软到离谱";
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_HAIR)) {
 			switch(girth) {
 				case ZERO_THIN:
-					return "thin";
+					return "纤细";
 				case ONE_SLENDER:
-					return "small";
+					return "较小";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "average";
+					return "适中";
 				case FOUR_GIRTHY:
-					return "voluminous";
+					return "蓬松";
 				case FIVE_THICK:
-					return "extra-voluminous";
+					return "格外蓬松";
 				case SIX_CHUBBY:
-					return "extremely-voluminous";
+					return "异常蓬松";
 				case SEVEN_FAT:
-					return "unbelievably-voluminous";
+					return "蓬到离谱";
 			}
 		}
 
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_FEATHER)) {
 			switch(girth) {
 				case ZERO_THIN:
-					return "thin";
+					return "纤细";
 				case ONE_SLENDER:
-					return "small";
+					return "较小";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "average";
+					return "适中";
 				case FOUR_GIRTHY:
-					return "voluminous";
+					return "庞大";
 				case FIVE_THICK:
-					return "extra-voluminous";
+					return "格外庞大";
 				case SIX_CHUBBY:
-					return "extremely-voluminous";
+					return "异常庞大";
 				case SEVEN_FAT:
-					return "unbelievably-voluminous";
+					return "大到离谱";
 			}
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_GENERIC)) {
 			switch(girth) {
 				case ZERO_THIN:
-					return "tiny";
+					return "娇小";
 				case ONE_SLENDER:
-					return "small";
+					return "较小";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "average";
+					return "适中";
 				case FOUR_GIRTHY:
-					return "large";
+					return "大";
 				case FIVE_THICK:
-					return "huge";
+					return "庞大";
 				case SIX_CHUBBY:
-					return "massive";
+					return "巨大";
 				case SEVEN_FAT:
-					return "colossal";
+					return "大得离谱";
 			}
 		}
 		
@@ -665,9 +665,9 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 	}
 	
 	public String getGirthTransformationDescription(GameCharacter owner, boolean positive) {
-		String tailText = "[npc.a_tailGirth] [npc.tail]";
+		String tailText = "[npc.a_tailGirth][npc.tail]";
 		if(owner.getTailCount()>1) {
-			tailText = "[npc.tailGirth] [npc.tails]";
+			tailText = "[npc.tailGirth][npc.tails]";
 		}
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_SKIN)
 				|| this.getTags().contains(BodyPartTag.TAIL_TYPE_SCALES)
@@ -675,25 +675,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(grow thicker)]."
-									:" [npc.tail] suddenly [style.boldGrow(grows thicker)].")
+									?"[npc.tails]突然[style.boldGrow(变粗了)]。"
+									:"[npc.tail]突然[style.boldGrow(变粗了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shrink down)]."
-										:" [npc.tail] suddenly [style.boldShrink(shrinks down)].")
+										?"[npc.tails]突然[style.boldGrow(变细了)]。"
+										:"[npc.tail]突然[style.boldGrow(变细了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 			}
 		}
@@ -701,25 +701,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(fluff up and grow bigger)]."
-									:" [npc.tail] suddenly [style.boldGrow(fluffs up and grows bigger)].")
+									?"[npc.tails]突然[style.boldGrow(变得更加蓬松和粗大了)]。"
+									:"[npc.tail]突然[style.boldGrow(变得更加蓬松和粗大了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shrink down)]."
-										:" [npc.tail] suddenly [style.boldShrink(shrinks down)].")
+										?"[npc.tails]突然[style.boldGrow(变细了)]。"
+										:"[npc.tail]突然[style.boldGrow(变细了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 			}
 		}
@@ -727,25 +727,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(fill out and expand in volume)]."
-									:" [npc.tail] suddenly [style.boldGrow(fills out and expands in volume)].")
+									?"[npc.tails]突然[style.boldGrow(膨胀，变得更粗大了)]。"
+									:"[npc.tail]突然[style.boldGrow(膨胀，变得更粗大了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shrink down and lose volume)]."
-										:" [npc.tail] suddenly [style.boldShrink(shrinks down and loses volume)].")
+										?"[npc.tails]突然[style.boldGrow(变细，体积也缩小了)]。"
+										:"[npc.tail]突然[style.boldGrow(变细，体积也缩小了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 			}
 		}
@@ -753,25 +753,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(fill out and expand in volume)]."
-									:" [npc.tail] suddenly [style.boldGrow(fills out and expands in volume)].")
+									?"[npc.tails]突然[style.boldGrow(膨胀，变得更粗大了)]。"
+									:"[npc.tail]突然[style.boldGrow(膨胀，变得更粗大了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shrink down and lose volume)]."
-										:" [npc.tail] suddenly [style.boldShrink(shrinks down and loses volume)].")
+										?"[npc.tails]突然[style.boldGrow(变细，体积也缩小了)]。"
+										:"[npc.tail]突然[style.boldGrow(变细，体积也缩小了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 			}
 		}
@@ -779,25 +779,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(grow larger)]."
-									:" [npc.tail] suddenly [style.boldGrow(grows larger)].")
+									?"[npc.tails]突然[style.boldGrow(变大了)]。"
+									:"[npc.tail]突然[style.boldGrow(变大了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shrink down)]."
-										:" [npc.tail] suddenly [style.boldShrink(shrinks down)].")
+										?"[npc.tail]突然[style.boldShrink(变细了)]。"
+										:"[npc.tail]突然[style.boldGrow(变细了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric("+tailText+")]!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric("+tailText+")]了！"
 						+ "</p>");
 			}
 		}
@@ -805,32 +805,32 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 	}
 	
 	public String getLengthTransformationDescription(GameCharacter owner, boolean positive) {
-		String heightPercentageDescription = " (length is "+((int)(owner.getTailLengthAsPercentageOfHeight()*100))+"% of [npc.namePos] height)";
+		String heightPercentageDescription = " (长度为[npc.namePos]身高的"+((int)(owner.getTailLengthAsPercentageOfHeight()*100))+"%)";
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_SKIN)
 				|| this.getTags().contains(BodyPartTag.TAIL_TYPE_SCALES)
 				|| this.getTags().contains(BodyPartTag.TAIL_TYPE_FUR)) {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(grow longer)]."
-									:" [npc.tail] suddenly [style.boldGrow(grows longer)].")
+									?"[npc.tails]突然[style.boldGrow(变长了)]。"
+									:"[npc.tail]突然[style.boldGrow(变长了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shorten)]."
-										:" [npc.tail] suddenly [style.boldShrink(shortens)].")
+										?"[npc.tails]突然[style.boldGrow(变短了)]。"
+										:"[npc.tail]突然[style.boldGrow(变短了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 			}
 		}
@@ -838,25 +838,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(fluff up and grow longer)]."
-									:" [npc.tail] suddenly [style.boldGrow(fluffs up and grows longer)].")
+									?"[npc.tails]突然[style.boldGrow(变得更加蓬松，且更长了)]。"
+									:"[npc.tail]突然[style.boldGrow(变得更加蓬松，且更长了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shorten)]."
-										:" [npc.tail] suddenly [style.boldShrink(shortens)].")
+										?"[npc.tails]突然[style.boldGrow(变短了)]。"
+										:"[npc.tail]突然[style.boldGrow(变短了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 			}
 		}
@@ -864,25 +864,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(grow longer)]."
-									:" [npc.tail] suddenly [style.boldGrow(grows longer)].")
+									?"[npc.tails]突然[style.boldGrow(变长了)]。"
+									:"[npc.tail]突然[style.boldGrow(变长了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shorten)]."
-										:" [npc.tail] suddenly [style.boldShrink(shortens)].")
+										?"[npc.tails]突然[style.boldGrow(变短了)]。"
+										:"[npc.tail]突然[style.boldGrow(变短了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 			}
 		}
@@ -890,25 +890,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(grow longer)]."
-									:" [npc.tail] suddenly [style.boldGrow(grows longer)].")
+									?"[npc.tails]突然[style.boldGrow(变长了)]。"
+									:"[npc.tail]突然[style.boldGrow(变长了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shorten)]."
-										:" [npc.tail] suddenly [style.boldShrink(shortens)].")
+										?"[npc.tails]突然[style.boldGrow(变短了)]。"
+										:"[npc.tail]突然[style.boldGrow(变短了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 			}
 		}
@@ -916,25 +916,25 @@ public abstract class AbstractTailType implements BodyPartTypeInterface {
 			if(positive) {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTailCount()>1
-									?" [npc.tails] suddenly [style.boldGrow(grow longer)]."
-									:" [npc.tail] suddenly [style.boldGrow(grows longer)].")
+									?"[npc.tails]突然[style.boldGrow(变长了)]。"
+									:"[npc.tail]突然[style.boldGrow(变长了)]。")
 							+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 					
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-								+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] spine."
-								+ " Without any further warning of what's to come, [npc.her]"
+								+ "[npc.Name]感觉到[npc.her]的脊柱根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+								+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 								+(owner.getTailCount()>1
-										?" [npc.tails] suddenly [style.boldShrink(shorten)]."
-										:" [npc.tail] suddenly [style.boldShrink(shortens)].")
+										?"[npc.tails]突然[style.boldGrow(变短了)]。"
+										:"[npc.tail]突然[style.boldGrow(变短了)]。")
 								+ "<br/>"
-							+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.a_tailLength] [npc.tail])]"+heightPercentageDescription+"!"
+							+ "[npc.She]现在拥有[style.boldTfGeneric([npc.a_tailLength][npc.tail])]"+heightPercentageDescription+"！"
 						+ "</p>");
 			}
 		}

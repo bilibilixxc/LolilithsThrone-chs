@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small tag sewn into the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[腰部有一个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>300</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's uniform skirt]]></name>
+		<name><![CDATA[执法者制服裙]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's uniform skirts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者制服裙]]></namePlural> 
 
-		<description><![CDATA[A below-the-knee length skirt with two pleats and belt loops. While somewhat suitable for patrol duty, it is almost never used for this purpose due to the increased risk of getting caught on something.]]></description> 
+		<description><![CDATA[一条有两个褶和皮带环的过膝裙，虽然它很适合巡逻，但由于被东西挂住的风险增加，它几乎从未用于此目的。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -67,27 +66,21 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the uniform skirt and [npc.verb(pull)] them up to [npc.her] waist before buttoning up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the uniform skirt up around [npc2.namePos] legs up to [npc2.her] waist before buttoning up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(yank)] the uniform skirt up around [npc2.namePos] legs up to [npc2.her] waist before roughly buttoning up the front.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]穿上制服裙，把裙子提到[npc.her]的腰部，然后扣上前面的扣子。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.her]的裙子拉到[npc2.namePos]的腰部，并扣好了前面的扣子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将[npc2.her]的裙子拉到[npc2.namePos]的腰部，并匆忙的扣好了前面的扣子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] uniform skirt and [npc.verb(pull)] them down before kicking them from [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] uniform skirt and [npc.verb(pull)] them down before sliding them from [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] uniform skirt and [npc.verb(yank)] them off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的制服裙的扣子，把裙子拉下来，然后把它从[npc.her]的[npc.feet]上踢开。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.name]的裙子并把它拉了下来，然后把它从[npc2.her]的[npc2.feet]上踢开。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]强行解开[npc2.name]的裙子的扣子，然后把它们扯了下来。]]></otherRough>
 	</displacementText>	
 	
 </clothing>

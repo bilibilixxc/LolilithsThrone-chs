@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[doll storage]]></name>
-	<tooltipDescription><![CDATA[Having completed their journey down the assembly line, finished sex dolls are stored here.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the back of Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[玩偶仓库]]></name>
+	<tooltipDescription><![CDATA[完成装配线之旅的性爱玩偶成品就存放在这里。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店后面]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>dolls</svgName>
 	<colour>BASE_PURPLE_DARK</colour>

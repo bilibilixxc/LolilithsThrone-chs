@@ -10,27 +10,27 @@ package com.lilithsthrone.game.sex.positions.slots;
 public class SexSlotMasturbation {
 
 	public static final SexSlot STANDING = new SexSlot(
-			"Standing",
-			"standing ",
-			"[npc.Name] [npc.verb(bite)] [npc.her] lip and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"站立",
+			"站立",
+			"[npc.Name]紧咬下唇，发出[npc.a_moan+]后，已经准备迎来高潮。",
 			false);
 
 	public static final SexSlot SITTING = new SexSlot(
-			"Sitting",
-			"sitting",
-			"[npc.Name] [npc.verb(bite)] [npc.her] lip and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"坐下",
+			"坐下",
+			"[npc.Name]紧咬下唇，发出[npc.a_moan+]后，已经准备迎来高潮。",
 			false);
 	
 	public static final SexSlot KNEELING = new SexSlot(
-			"Kneeling",
-			"kneeling",
-			"[npc.Name] [npc.verb(let)] [npc.her] [npc.legs] slide out from under [npc.herHim], and, letting out [npc.a_moan+], [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"跪下",
+			"跪下",
+			"[npc.Name]让[npc.legs]从身下伸出，发出[npc.a_moan+]，[npc.she]即将迎来高潮。",
 			false);
 
 	public static final SexSlot KNEELING_PANTIES = new SexSlot(
-			"Kneeling",
-			"kneeling",
-			"[npc.Name] [npc.verb(let)] [npc.her] [npc.legs] slide out from under [npc.herHim], and, tightly gripping Lilaya's panties, [npc.she] [npc.verb(prepare)] to reach [npc.her] climax.",
+			"跪下",
+			"跪下",
+			"[npc.Name]让[npc.legs]从身下伸出，紧紧地攥住莉莱雅的内裤，即将迎来高潮。",
 			false);
 
 }

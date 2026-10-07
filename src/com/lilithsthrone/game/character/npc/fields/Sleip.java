@@ -65,8 +65,8 @@ public class Sleip extends NPC {
 	}
 	
 	public Sleip(boolean isImported) {
-		super(isImported, new NameTriplet("Sleip"), "Loviennemartu",
-				"Sleip is one of two nightmare bodyguards who protect Angelixx at all times.",
+		super(isImported, new NameTriplet("斯雷普"), "洛维耶纳马尔图",
+				" 斯雷普是一直保护安吉莉克丝的两个梦魇守卫之一。",
 				28, Month.AUGUST, 28,
 				20, Gender.M_P_MALE, Subspecies.HORSE_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 30),
@@ -74,7 +74,7 @@ public class Sleip extends NPC {
 				true);
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
-			this.setGenericName("furious nightmare");
+			this.setGenericName("暴怒的梦魇");
 		}
 	}
 	
@@ -327,7 +327,7 @@ public class Sleip extends NPC {
 		necklace.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.DAMAGE_PHYSICAL, TFPotency.MAJOR_BOOST, 0));
 		necklace.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_ATTRIBUTE, TFModifier.DAMAGE_PHYSICAL, TFPotency.MINOR_BOOST, 0));
 		this.equipClothingFromNowhere(necklace, true, this);
-		necklace.setName("Angelixx's Gift");
+		necklace.setName("安吉莉克丝的赠礼");
 		
 		this.equipMainWeaponFromNowhere(Main.game.getItemGen().generateWeapon("innoxia_bat_metal", DamageType.PHYSICAL));
 		
@@ -548,14 +548,14 @@ public class Sleip extends NPC {
 		if(receivingCharacter.isPlayer() && receivingCharacter.isDoll() && penetrated==SexAreaOrifice.VAGINA) {
 			StringBuilder sb = new StringBuilder();
 			sb.append("<p>");
-				sb.append("[sleip.speechNoEffects(It doesn't get better than breaking in a virgin doll pussy!)]"
-						+ " Sleip hungrily grunts as he slams his fat horse-cock deep into your silicone twat."
-						+ " Having been the first to penetrate your new pussy, the nightmare taunts you by growling,"
-						+ " [sleip.speechNoEffects(You'll always remember my cock as being your first, doll, but to me you're just a forgettable fuck!)]");
+				sb.append("[sleip.speechNoEffects(没有比给玩偶的处女小穴破处更爽的事了！)]"
+						+ "斯雷普饥渴地低吼着，将他肥硕的马屌深深捅进你的硅胶屄里。"
+						+ "那梦魇成了头一个品尝你新获得的小穴的家伙，他低声嘲讽道，"
+						+ " [sleip.speechNoEffects(你永远也不会忘记，我用鸡巴夺走了你的第一次，小玩偶，但对我来说，你不过就是随便一个让我操的家伙罢了！)]");
 			sb.append("</p>");
 			sb.append("<p>");
-				sb.append("You can't help but moan and shuffle about on the table as the demonic horse-boy hilts his massive, bestial shaft deep into your artificial cunt."
-						+ " Losing your virginity in such a rough, dominant manner sends a wave of submissive pleasure through your new body, and suddenly all you can think about is being a good doll for whoever wants to fuck you.");
+				sb.append("恶魔样子的马男将他巨大、野兽般的阴茎深深插入你的人造阴道，你按捺不住，在桌子上呻吟着，身体剧烈地扭动。"
+						+ "以如此粗暴、压迫的方式失去处女，快感的浪潮冲刷着你新生的身体，突然间你满脑子只剩下了一个想法，成为任人玩弄的乖巧玩偶。");
 			sb.append("</p>");
 			
 			return sb.toString();

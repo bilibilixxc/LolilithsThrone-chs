@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
   <coreAttributes>
     <value>540</value>
-    <determiner><![CDATA[a pair of]]></determiner>
-    <name><![CDATA[clover clamps]]></name>
-    <namePlural pluralByDefault="true"><![CDATA[clover clamps]]></namePlural>
-    <description><![CDATA[A pair of metal clover clamps designed to tightly pinch onto the wearer's skin. The attached weights pull down to apply a constant, painful pressure.]]></description>
+    <determiner><![CDATA[一对]]></determiner>
+    <name><![CDATA[蝴蝶夹]]></name>
+    <namePlural pluralByDefault="true"><![CDATA[蝴蝶夹]]></namePlural>
+    <description><![CDATA[一对金属蝴蝶夹，可以紧紧夹住穿戴者的皮肤。附带的重物会给穿戴者持续而痛苦的压力。]]></description>
     
     <physicalResistance>0</physicalResistance>
     <femininity>ANDROGYNOUS</femininity>
@@ -92,71 +91,71 @@
   </coreAttributes>
 
   <displacementText slot="NIPPLE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] carefully [npc.verb(remove)] the clover clamps from [npc.her] [npc.nipples+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] carefully [npc.verb(remove)] the clover clamps from [npc2.namePos] [npc2.nipples+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(give)] [npc2.namePos] clover clamps a rough tug before removing them from [npc2.her] [npc2.nipples+].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]小心地从[npc.her][npc.nipples+]取下蝴蝶夹。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]小心地从[npc2.namePos][npc2.nipples+]上取下蝴蝶夹。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]抓住[npc2.namePos]的蝴蝶夹粗暴地扯了一下以后才从[npc2.her][npc2.nipples+]上取下。
+    ]]></otherRough>
   </displacementText>
   <replacementText slot="NIPPLE" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wince)] as [npc.she] [npc.verb(affix)] the clover clamps on [npc.her] [npc.nipples+].]]>
-    </self>
-    <other>
-      <![CDATA[[npc2.Name] [npc2.verb(wince)] as [npc.name] [npc.verb(affix)] the clover clamps on [npc2.her] [npc2.nipples+].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(affix)] the clover clamps to [npc2.namePos] [npc2.nipples+] before giving them a sharp tug.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]因把蝴蝶夹夹在[npc.her][npc.nipples+]上而痛苦地皱了一下眉。
+    ]]></self>
+    <other><![CDATA[
+      [npc2.name]因[npc.Name]把蝴蝶夹夹在[npc2.her][npc2.nipples+]上而痛苦地皱了一下眉。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]把蝴蝶夹夹在[npc2.namePos][npc2.nipples+]上后用力扯了一下。
+    ]]></otherRough>
   </replacementText>
 
   <displacementText slot="VAGINA" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] carefully [npc.verb(remove)] the clover clamps from [npc.her] [npc.vaginaColourSecondary] [npc.vagina] lips.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] carefully [npc.verb(remove)] the clover clamps from [npc2.namePos] [npc2.vaginaColourSecondary] [npc2.vagina] lips.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(give)] [npc2.namePos] clover clamps a rough tug before removing them from [npc2.her] [npc2.vaginaColourSecondary] [npc2.vagina] lips.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]小心地从[npc.her][npc.vaginaColourSecondary]的阴唇上取下蝴蝶夹。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]小心地从[npc2.her][npc2.vaginaColourSecondary]的阴唇上取下蝴蝶夹。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]抓住[npc2.namePos]的蝴蝶夹粗暴地扯了一下以后才从[npc2.her][npc2.vaginaColourSecondary]的阴唇上取下。
+]]></otherRough>
   </displacementText>
   <replacementText slot="VAGINA" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wince)] as [npc.she] [npc.verb(affix)] the clover clamps on [npc.her] [npc.vaginaColourSecondary] [npc.vagina] lips.]]>
-    </self>
-    <other>
-      <![CDATA[[npc2.Name] [npc2.verb(wince)] as [npc.name] [npc.verb(affix)] the clover clamps on [npc2.her] [npc2.vaginaColourSecondary] [npc2.vagina] lips.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(affix)] the clover clamps to [npc2.namePos] [npc2.vaginaColourSecondary] [npc2.vagina] lips before giving them a sharp tug.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]因把蝴蝶夹夹在[npc.her][npc.vaginaColourSecondary]的阴唇上而痛苦地皱了一下眉。
+]]></self>
+    <other><![CDATA[
+      [npc2.Name]因[npc.Name]把蝴蝶夹夹在[npc2.her][npc2.vaginaColourSecondary]的阴唇上而痛苦地皱了一下眉。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]把蝴蝶夹夹在[npc2.namePos][npc2.vaginaColourSecondary]的阴唇上后用力扯了一下。
+]]></otherRough>
   </replacementText>
 
   <displacementText slot="VAGINA" type="SHIFTS_ASIDE">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(use)] the clover clamps to spread [npc.her] [npc.vaginaColourSecondary] [npc.vagina].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(use)] the clover clamps to spread [npc2.namePos] [npc2.vaginaColourSecondary] [npc2.vagina].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(tug)] on [npc2.namePos] clover clamps, painfully spreading [npc2.her] [npc2.vaginaColourSecondary] [npc2.vagina].]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]从[npc.her][npc.vaginaColourSecondary]的[npc.vagina]上取下蝴蝶夹。
+    ]]></self>
+    <other><![CDATA[
+      [npc.Name]从[npc2.her][npc2.vaginaColourSecondary]的[npc2.vagina]上取下蝴蝶夹。
+    ]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]抓住[npc2.namePos]的蝴蝶夹粗暴地扯了一下以后才从[npc2.her][npc2.vaginaColourSecondary]的[npc2.vagina]上取下。
+]]></otherRough>
   </displacementText>
   <replacementText slot="VAGINA" type="SHIFTS_ASIDE">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(wince)] as the clover clamps bite into [npc.her] [npc.vaginaColourSecondary] [npc.vagina].]]>
-    </self>
-    <other>
-      <![CDATA[[npc2.Name] [npc2.verb(wince)] as the clover clamps bite into [npc2.her] [npc2.vaginaColourSecondary] [npc2.vagina].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc2.Name] [npc2.verb(yelp)] as [npc.name] [npc.verb(tug)] the clover clamps on [npc2.her] [npc2.vaginaColourSecondary] [npc2.vagina] before letting them hang free.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]因把蝴蝶夹咬在[npc.her][npc.vaginaColourSecondary]的[npc.vagina]上而痛苦地皱了一下眉。
+]]></self>
+    <other><![CDATA[
+      [npc2.Name]因[npc.name]把蝴蝶夹咬在[npc2.her][npc2.vaginaColourSecondary]的[npc2.vagina]上而痛苦地皱了一下眉。
+]]></other>
+    <otherRough><![CDATA[
+      [npc2.Name]因[npc.Name]把蝴蝶夹夹在[npc2.her][npc2.vaginaColourSecondary]的[npc2.vagina]上而痛苦地皱了一下眉。
+]]></otherRough>
   </replacementText>
 </clothing>

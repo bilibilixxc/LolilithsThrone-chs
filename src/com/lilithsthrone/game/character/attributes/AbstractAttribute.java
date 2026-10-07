@@ -115,11 +115,11 @@ public abstract class AbstractAttribute implements Comparable<AbstractAttribute>
 	}
 	
 	public String getName() {
-		return name;
+		return nameAbbreviation;
 	}
 	
 	public String getColouredName(String tag) {
-		return "<"+tag+" style='color:"+this.getColour().toWebHexString()+";'>"+name+"</"+tag+">";
+		return "<"+tag+" style='color:"+this.getColour().toWebHexString()+";'>"+nameAbbreviation+"</"+tag+">";
 	}
 	
 	public String getFormattedValue(float value) {
@@ -138,7 +138,7 @@ public abstract class AbstractAttribute implements Comparable<AbstractAttribute>
 			if(!this.getInfiniteDescription().isEmpty()) {
 				returnValue = this.getInfiniteDescription();
 			} else {
-				returnValue = "[style.colourExcellent(Infinite)] <span style='color: "+ this.getColour().toWebHexString()+ ";'>"+ Util.capitaliseSentence(this.getAbbreviatedName())+ "</span>";
+				returnValue = "[style.colourExcellent(无限)]<span style='color: "+ this.getColour().toWebHexString()+ ";'>"+ Util.capitaliseSentence(this.getAbbreviatedName())+ "</span>";
 			}
 			
 		} else {
@@ -148,7 +148,7 @@ public abstract class AbstractAttribute implements Comparable<AbstractAttribute>
 				valueForDisplay = valueForDisplay+"%";
 			}
 			returnValue = (value>0?"[style.colour"+minorColour+"Good(+":"[style.colour"+minorColour+"Bad(")+valueForDisplay+")]"
-					+ " <span style='color:"+this.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(this.getAbbreviatedName())+"</span>";
+					+ "<span style='color:"+this.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(this.getAbbreviatedName())+"</span>";
 		}
 		
 		if(htmlTag!=null) {

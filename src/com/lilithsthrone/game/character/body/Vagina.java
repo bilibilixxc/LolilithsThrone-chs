@@ -113,12 +113,12 @@ public class Vagina implements BodyPartInterface {
 		String wetnessDescriptor = orificeVagina.getWetness(owner).getDescriptor();
 		if(Main.game.isInSex() && Main.sex.getAllParticipants().contains(owner)) {
 			if(Main.sex.hasLubricationTypeFromAnyone(owner, SexAreaOrifice.VAGINA)) {
-				wetnessDescriptor = "wet";
+				wetnessDescriptor = "湿润";
 			}
 		}
 		descriptorList.add(wetnessDescriptor);
 		if(owner.getPubicHair().getValue()>=BodyHair.FOUR_NATURAL.getValue() && Main.game.isPubicHairEnabled()) {
-			descriptorList.add("hairy");
+			descriptorList.add("多毛");
 		}
 		
 		// It doesn't make much sense to be referencing taste in a generic context
@@ -128,9 +128,9 @@ public class Vagina implements BodyPartInterface {
 		
 		if(owner.isVaginaFeral()) {
 			descriptorList.add(Util.randomItemFrom(Util.newArrayListOfValues(
-					"feral",
-					"bestial",
-					"animalistic")));
+					"兽态",
+					"兽性",
+					"动物化")));
 		} else {
 			descriptorList.add(type.getDescriptor(owner));
 		}
@@ -186,9 +186,9 @@ public class Vagina implements BodyPartInterface {
 		
 		if (type == owner.getVaginaType()) {
 			if(type == VaginaType.NONE) {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.verb(lack)] a vagina, so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经没有阴道了，所以无事发生……)]</p>");
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] [npc.a_vaginaRace] pussy, so nothing happens...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_vaginaRace]的小穴了，所以无事发生……)]</p>");
 			}
 		}
 		
@@ -200,16 +200,16 @@ public class Vagina implements BodyPartInterface {
 				&& (owner.isPregnant() || owner.hasStatusEffect(StatusEffect.PREGNANT_0) || owner.getIncubationLitter(SexAreaOrifice.VAGINA)!=null)) {
 			sb.append(UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a lewd moan as [npc.she] [npc.verb(feel)] [npc.her] [npc.pussy+] starting to grow hot and sensitive,"
-							+ " and as a wave of tingling excitement washes through [npc.her] lower abdomen, [npc.her] moan turns into a desperate gasp."
-						+ " Much to [npc.her] surprise, the feeling fades away almost as quickly as it came, and with a sigh, [npc.she] [npc.verb(realise)] that "
+						+ "[npc.Name]发出一声淫荡的呻吟，感到[npc.her][npc.pussy+]开始发烫并变得敏感，"
+							+ "当一阵刺痛的兴奋感席卷[npc.her]的下腹部时，[npc.her]的呻吟变成了绝望的喘息。"
+						+ "令[npc.her]惊讶的是，这种感觉来得快去得也快，[npc.she]叹了口气，意识到"
 						+ (owner.getIncubationLitter(SexAreaOrifice.VAGINA)!=null
-							?"<b>the eggs being incubated in [npc.her] womb have prevented [npc.her] vagina from being removed</b>!"
+							?"<b>着床在[npc.her]子宫中的受精卵阻止了[npc.her]的阴道被移除</b>！"
 							:(owner.hasStatusEffect(StatusEffect.PREGNANT_0)
-								?"<b>the possibility of being pregnant has prevented [npc.her] vagina from being removed</b>!"
-								:"<b>[npc.her] ongoing pregnancy has prevented [npc.her] vagina from being removed</b>!"))
+								?"<b>[npc.her]可能受孕，因此无法移除[npc.her]的阴道</b>！"
+								:"<b>[npc.her]正在怀孕，因此无法移除[npc.her]的阴道</b>！"))
 						+ "<br/>"
-						+ "[npc.NamePos] pussy remains [style.boldTfSex(unchanged)]."
+						+ "[npc.NamePos]的小穴保持[style.boldTfSex(不变)]。"
 					+ "</p>"));
 			
 			return sb.toString()
@@ -222,31 +222,31 @@ public class Vagina implements BodyPartInterface {
 		if(owner.getVaginaType() == VaginaType.NONE) {
 			sb.append(UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(blush)] as [npc.she] [npc.verb(feel)] a strange heat spreading through [npc.her] groin, and can't help but let out a low [npc.moan] as the [npc.skin] "
+						+ "[npc.Name]感到一股奇怪的热量在腹股沟处蔓延开来，脸上泛起红晕并情不自禁地低声发出[npc.moan]，"
 						+ (!owner.hasPenisIgnoreDildo()
-							? "in the middle of [npc.her] groin"
+							? "在[npc.her]腹股沟中间"
 							: (!owner.isTaur()
-									?"beneath [npc.her] cock"
-									:"above and behind [npc.her] cock"))
-						+ " starts to cave inwards and form a shallow furrow."
-						+ " Showing no sign of stopping, this strange new indentation continues to deepen, sending another burst of heat shooting up into [npc.namePos] lower abdomen."
-						+ " As this second wave of heat fades away, a sharp, penetrating sensation shoots up into [npc.her] groin, and while it isn't painful,"
-							+ " [npc.she] can't help but cry out in shock as this groove suddenly splits and opens up to reveal a deep channel."
-						+ " The opening to this new orifice then quickly transforms into the distinctive shape of a vagina, complete with a [npc.clitSize] clit and [npc.labiaSize] labia."
+									?"在[npc.her]阴茎下面"
+									:"在[npc.her]阴茎上方和后方"))
+						+ "开始向内凹陷并形成一条浅沟。"
+						+ "这个奇怪的新凹痕继续加深，似乎毫无停下的意思，又一阵热浪迅速向[npc.namePos]下腹部冲去。"
+						+ "当第二波热浪褪去，一股突然的插入感向[npc.her]的下体袭来，虽然并不疼，"
+							+ "但[npc.she]还是不禁大叫一声，下体突然分开一道缝，露出深深的穴道。"
+						+ "这个新开口迅速转变成阴道的独特形状，有着[npc.clitSize]的阴蒂和[npc.labiaSize]的阴唇。"
 					+ "</p>"
 					+ "<p>"
-						+ "Just as [npc.she] [npc.verb(start)] to think that the transformation is over, one final intense wave of heat pulses up into [npc.namePos] lower abdomen,"
-							+ " and [npc.she] can't help but let out a desperate [npc.moan] as [npc.she] instinctively [npc.verb(realise)] that a completely-functional female reproductive system has grown inside of [npc.herHim]."
-						+ " As [npc.her] transformation finally comes to an end, [npc.namePos] suddenly [npc.verb(become)] aware of the fact that [npc.her] new cunt is already soaking wet from arousal, "
-							+ "causing [npc.herHim] to let out one final, sensual [npc.moan]."
+						+ "正当[npc.she]以为转化已经步入尾声，最后一阵强烈的灼热感在[npc.namePos]的下腹部躁动起来，"
+							+ "[npc.she]禁不住发出一声[npc.moan]，只靠直觉就反应过来一套功能完全的女性生殖器官已经在体内幻化而出。"
+						+ "转化终于结束，[npc.namePos]忽然意识到[npc.her]新生的秘缝已经由于快感润湿了，"
+							+ "惹得[npc.herHim]发出最后一声畅快的[npc.moan]。"
 						+ "<br/>"));
 			
 			if(owner.isVaginaVirgin()) {
 				sb.append(UtilText.parse(owner,
-						"[npc.Name] now [npc.has] a [style.colourExcellent(virgin)] [style.boldTfSex(vagina)], complete with an [style.colourExcellent(unbroken hymen)]!"));
+						"[npc.Name]现在拥有[style.colourExcellent(依然纯洁)]的[style.boldTfSex(阴道)]，[style.colourExcellent(处女膜完整如初)]！"));
 			} else {
 				sb.append(UtilText.parse(owner,
-						"[npc.Name] now [npc.has] a new [style.boldTfSex(vagina)], and although [npc.she] can't consider [npc.herself] a virgin, [npc.she] at least [npc.has] an [style.colourExcellent(unbroken hymen)]!"));
+						"[npc.Name]现在长出了[style.boldTfSex(阴道)]，虽然[npc.she]已经并不觉得自己是处女了，但至少[style.colourExcellent(处女膜还完整如初)]！"));
 			}
 					
 			sb.append("</p>");
@@ -255,30 +255,30 @@ public class Vagina implements BodyPartInterface {
 				if(owner.isVaginaVirgin()) {
 					sb.append(UtilText.parse(owner,
 							"<p style='text-align:center;'>"
-								+ "[style.boldExcellent(Pure Virgin)]"
+								+ "[style.boldExcellent(贞洁处女)]"
 								+ "<br/><i>"
-								+ "Now that [npc.name] [npc.has] a vagina, [npc.she] can finally consider [npc.herself] to be a truly pure virgin!"
-								+ " Letting a delighted smile settle on [npc.her] [npc.face], [npc.she] can't help but feel extremely elated, and that for as long as [npc.she] [npc.verb(retain)] [npc.her] virginity,"
-									+ " [npc.she]'ll represent the perfect image of a proud, virtuous being!"
+								+ "[npc.name]已经有了阴道，终于能够认为自己是个真正的贞洁处女了！"
+								+ "[npc.she]欣然露出了笑容，不禁感到无比的喜悦，只要[npc.she]还保有贞洁，"
+									+ "就总能代表那自豪而善良的完美形象！"
 								+ "</i>"
 								+ "<br/>"
-								+ "[npc.NameIsFull] now a [style.boldExcellent(Pure Virgin)]!"
+								+ "[npc.NameIsFull]现在是个[style.boldExcellent(贞洁处女)]！"
 							+ "</p>"));
 				} else {
 					sb.append(UtilText.parse(owner,
 							"<p style='text-align:center;'>"
-								+ "[style.boldGood(Pure 'Virgin')]"
+								+ "[style.boldGood(贞洁“处女”)]"
 								+ "<br/><i>"
-								+ "Finding [npc.herself] once again in possession of an unspoiled vagina, a huge wave of euphoria crashes over [npc.name]."
-								+ " Convincing [npc.herself] that [npc.her] unbroken hymen means that [npc.sheIs] technically a virgin again, [npc.she] [npc.verb(feel)] tears of joy start to well up in [npc.her] [npc.eyes]."
-								+ " Despite this feeling of elation, however, there's a small nagging voice in the back of [npc.her] mind which reminds [npc.herHim] that [npc.she]'ll never be a 'real' virgin ever again."
+								+ "[npc.Name]发现自己的阴道依然完好如初，顿时感到一阵狂喜。"
+								+ "[npc.she]心中暗暗说服自己，只要处女膜尚在，那理论上就又是处女了，想着想着，喜悦的泪水就从[npc.eyes]中溢出。"
+								+ "尽管表面上确实喜悦，但[npc.her]脑海深处却总是萦绕着一阵无法驱散的唠叨声，时刻提醒着[npc.herHim]永远也不能在成为“真正”的处女了。"
 								+ "<br/>"
-								+ "Shaking [npc.her] head clear of this unwelcome thought, [npc.name] [npc.verb(focus)] on the fact that for as long as [npc.her] hymen remains intact, [npc.she] can at least pretend that [npc.sheHas] never been fucked before."
-								+ " Not even wanting to consider the notion that [npc.her] pussy might at some point be broken in again,"
-									+ " [npc.she] [npc.verb(hold)] [npc.her] head up high and [npc.verb(tell)] [npc.herself] that [npc.sheIs] once again the perfect image of a proud, virtuous being!"
+								+ "[npc.Name]晃了晃脑袋，想把这扫兴的想法抛之脑后，而是专心到另一件事上，就是只要[npc.her]的处女膜完好无损，那至少就能假装自己从来还没被插进去过。"
+								+ "[npc.she]甚至不愿去想自己的小穴此后或许会再次失守，"
+									+ "只是昂着头挺着胸，告诉自己她又变回那个自豪而善良的完美形象了！"
 								+ "</i>"
 								+ "<br/>"
-								+ "[npc.NameIsFull] now a [style.boldGood(Pure 'Virgin')]!"
+								+ "[npc.NameIsFull]现在是个[style.boldGood(贞洁“处女”)]！"
 							+ "</p>"));
 				}
 			}
@@ -300,7 +300,7 @@ public class Vagina implements BodyPartInterface {
 		} else {
 			sb.append(UtilText.parse(owner,
 					"<p>"
-						+"[npc.Name] [npc.verb(feel)] a strange heat throbbing within [npc.her] pussy, and [npc.she] can't help but blush and pant for breath as [npc.her] pussy begins to transform.<br/>"));
+						+"[npc.Name]感到一阵奇怪的灼热感在阴道内部躁动着，[npc.she]不禁脸红心跳，喘了起来，而此时转化也正式开始。<br/>"));
 		}
 
 		sb.append(this.type.applyAdditionalTransformationEffects(owner, false));
@@ -316,9 +316,9 @@ public class Vagina implements BodyPartInterface {
 		if(this.type != VaginaType.NONE) {
 			sb.append("<p style='text-align:center;'>");
 				if(this.eggLayer) {
-					sb.append(UtilText.parse(owner,"<i>Instead of giving birth to live young, [npc.name] now [style.colourEgg([npc.verb(lay)] eggs)]!</i>"));
+					sb.append(UtilText.parse(owner,"<i>[npc.name]不再通过分娩繁育后代，而是[style.colourEgg(产卵)]！</i>"));
 				} else {
-					sb.append(UtilText.parse(owner,"<i>[npc.Name] now [style.colourSex([npc.verb(give)] birth to live young)]!</i>"));
+					sb.append(UtilText.parse(owner,"<i>[npc.Name]现在[style.colourSex(通过分娩繁育后代)]！</i>"));
 				}
 			sb.append("</p>");
 		}
@@ -329,13 +329,13 @@ public class Vagina implements BodyPartInterface {
 		}
 		
 		sb.append(UtilText.parse(owner,"<p>"
-				+ "Any old modifiers which [npc.her] pussy might have had have [style.boldShrink(transformed away)]!"));
+				+ "[npc.her]的阴道原有的所有修饰词都有可能[style.boldShrink(因转化而消失)]！"));
 		
 		if(orificeVagina.getOrificeModifiers().isEmpty()) {
 			sb.append("</p>");
 		} else {
 			sb.append(UtilText.parse(owner,"<br/>"
-					+ "Instead, [npc.her] new pussy is:"));
+					+ "取而代之的是，[npc.her]新生的阴道现在:"));
 			
 			for(OrificeModifier om : orificeVagina.getOrificeModifiers()) {
 				sb.append("<br/>[style.boldGrow("+Util.capitaliseSentence(om.getName())+")]");
@@ -360,7 +360,7 @@ public class Vagina implements BodyPartInterface {
 	
 	public String setLabiaSize(GameCharacter owner, int labiaSize) {
 		if(!owner.hasVagina()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		int oldSize = this.labiaSize;
@@ -373,38 +373,38 @@ public class Vagina implements BodyPartInterface {
 		
 		if (sizeChange == 0) {
 			if(owner.isPlayer()) {
-				return "<p style='text-align:center;'>[style.colourDisabled(The size of your labia doesn't change...)]</p>";
+				return "<p style='text-align:center;'>[style.colourDisabled(你的阴唇大小没有变化……)]</p>";
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(The size of [npc.namePos] labia doesn't change...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]的阴唇大小没有变化……)]</p>");
 			}
 		} else if (sizeChange > 0) {
 			if (owner.isPlayer()) {
 				return "<p>"
-							+ "[pc.A_moan+] bursts out from between your [pc.lips+] as you feel a warm tingling sensation run up into your [pc.pussy]."
-							+ " Squirming about on the spot, your exclamation turns into a surprised gasp as you feel your labia swell up and [style.boldGrow(grow larger)].<br/>"
-							+ "You now have [style.boldSex([pc.labiaSize] labia)]!"
+							+ "一声[pc.A_moan+]从你[pc.lips+]间溢出，你感到一股温暖的刺痒感传到了[pc.pussy]上。"
+							+ "你扭动着身子，忽然倒吸了一口凉气，你感到自己的阴唇肿了起来，[style.boldGrow(变得更大)]了。<br/>"
+							+ "你现在拥有[style.boldSex([pc.labiaSize]的阴唇)]！"
 						+ "</p>";
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.A_moan+] bursts out from between [npc.name] [pc.lips+] as [npc.she] feels a warm tingling sensation run up into [npc.her] [npc.pussy]."
-							+ " Squirming about on the spot, [npc.her] exclamation turns into a surprised gasp as [npc.she] feels [npc.her] labia swell up and [style.boldGrow(grow larger)].<br/>"
-							+ "[npc.Name] now has [style.boldSex([npc.labiaSize] labia)]!"
+							+ "一声[pc.A_moan+]从[npc.Name][npc.lips+]间溢出，[npc.she]感到一股温暖的刺痒感传到了[npc.pussy]上。"
+							+ "[npc.her]扭动着身子，忽然倒吸了一口凉气，[npc.she]感到自己的阴唇肿了起来，[style.boldGrow(变得更大)]了。<br/>"
+							+ "[npc.Name]现在拥有[style.boldSex([npc.labiaSize]的阴唇)]！"
 						+ "</p>");
 			}
 		} else {
 			if (owner.isPlayer()) {
 				return "<p>"
-						+ "[pc.A_moan+] bursts out from between your [pc.lips+] as you feel a cool tingling sensation spread up into your [pc.pussy]."
-						+ " Squirming about on the spot, your exclamation turns into a surprised gasp as you feel your labia shrink down and [style.boldShrink(get smaller)].<br/>"
-						+ "You now have [style.boldSex([pc.labiaSize] labia)]!"
+						+ "一声[pc.A_moan+]从你[pc.lips+]间溢出，你感到一股微凉的刺痒感传到了[pc.pussy]上。"
+						+ "你扭动着身子，忽然倒吸了一口凉气，你感到自己的阴唇缩了下去，[style.boldShrink(变得更小)]了。<br/>"
+						+ "你现在拥有[style.boldSex([pc.labiaSize]的阴唇)]！"
 					+ "</p>";
 			} else {
 				return UtilText.parse(owner,
 						"<p>"
-							+ "[npc.A_moan+] bursts out from between [npc.name] [pc.lips+] as [npc.she] feels a cool tingling sensation spread up into [npc.her] [npc.pussy]."
-							+ " Squirming about on the spot, [npc.her] exclamation turns into a surprised gasp as [npc.she] feels [npc.her] labia shrink down and [style.boldShrink(get smaller)].<br/>"
-							+ "[npc.Name] now has [style.boldSex([npc.labiaSize] labia)]!"
+							+ "一声[pc.A_moan+]从[npc.Name][npc.lips+]间溢出，[npc.she]感到一股微凉的刺痒感传到了[npc.pussy]上。"
+							+ "[npc.her]扭动着身子，忽然倒吸了一口凉气，[npc.she]感到自己的阴唇缩了下去，[style.boldShrink(变得更小)]了。<br/>"
+							+ "[npc.Name]现在拥有[style.boldSex([npc.labiaSize]的阴唇)]！"
 						+ "</p>");
 			}
 		}
@@ -421,13 +421,13 @@ public class Vagina implements BodyPartInterface {
 		}
 		
 		if(this.pierced == pierced || !owner.hasVagina()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.pierced = pierced;
 		
 		if(pierced) {
-			return UtilText.parse(owner, "<p>[npc.NamePos] [npc.pussy] is now [style.boldGrow(pierced)]!</p>");
+			return UtilText.parse(owner, "<p>[npc.NamePos]的[npc.pussy]现在已经[style.boldGrow(穿孔)]！</p>");
 			
 		} else {
 			AbstractClothing c = owner.getClothingInSlot(InventorySlot.PIERCING_VAGINA);
@@ -439,7 +439,7 @@ public class Vagina implements BodyPartInterface {
 			
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.NamePos] [npc.pussy] is [style.boldShrink(no longer pierced)]!"
+						+ "[npc.NamePos]的[npc.pussy][style.boldShrink(不在有穿孔了)]！"
 					+ "</p>"
 					+piercingUnequip);
 		}
@@ -456,14 +456,14 @@ public class Vagina implements BodyPartInterface {
 		}
 		
 		if(this.eggLayer == eggLayer || !owner.hasVagina()) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		if(owner.isPregnant()) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a shocked gasp as an unpleasant tingling sensation suddenly spreads throughout [npc.her] lower abdomen."
-						+ " Almost as soon as it arrived, however, this alarming feeling fades away, and [npc.name] [npc.verb(realise)] that [npc.her] ongoing pregnancy is preventing [npc.her] womb from being transformed!"
+						+ "[npc.Name]惊讶地喘息一声，一股不适的刺痒感瞬间传遍了[npc.her]的下腹部。"
+						+ "然而不安感转瞬即逝，[npc.name]忽然意识到是因为自己怀了孕，子宫才无法发生变化！"
 					+ "</p>");
 		}
 		
@@ -472,19 +472,19 @@ public class Vagina implements BodyPartInterface {
 		if(eggLayer) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a shocked gasp as an unpleasant tingling sensation suddenly spreads throughout [npc.her] lower abdomen."
-						+ " An intense cramp quickly replaces this feeling, causing [npc.namePos] gasp to turn into a distressed groan."
+						+ "[npc.Name]惊讶地喘息一声，一股不适的刺痒感瞬间传遍了[npc.her]的下腹部。"
+						+ "随之而来的是强烈的痉挛，让原先的喘息变成了痛苦的呻吟。"
 						+ "<br/>"
-						+ "Thankfully, this uncomfortable transformation quickly runs its course, leaving [npc.name] panting for breath and instinctively knowing that [style.boldEgg([npc.she] will now lay eggs instead of birthing live young)]!"
+						+ "所幸，令人不适的转化很快就结束了，[npc.Name]惊喘了一口气，立刻便知晓[style.boldEgg([npc.she]现在将会产产卵，而不再是生育孩童了)]！"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out a shocked gasp as an unpleasant tingling sensation suddenly spreads throughout [npc.her] lower abdomen."
-						+ " An intense cramp quickly replaces this feeling, causing [npc.namePos] gasp to turn into a distressed groan."
+						+ "[npc.Name]惊讶地喘息一声，一股不适的刺痒感瞬间传遍了[npc.her]的下腹部。"
+						+ "随之而来的是强烈的痉挛，让原先的喘息变成了痛苦的呻吟。"
 						+ "<br/>"
-						+ "Thankfully, this uncomfortable transformation quickly runs its course, leaving [npc.name] panting for breath and instinctively knowing that [style.boldSex([npc.she] will now birth live young instead of laying eggs)]!"
+						+ "所幸，令人不适的转化很快就结束了，[npc.Name]惊喘了一口气，立刻便知晓[style.boldSex([npc.she]现在将会生育孩童，而不再是产产卵了)]！"
 					+ "</p>");
 		}
 	

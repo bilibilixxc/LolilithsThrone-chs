@@ -1,43 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- HOTEL_TRAVEL_TO_NEST -->
 	
 	<htmlContent tag="HOTEL_TRAVEL_TO_NEST"><![CDATA[
 	<p>
-		Now that you're aware of the fact that there's an elevator linking 'The Golden Feather' hotel to Helena's nest up above, you head inside and make your way across the opulent foyer to where the lift is located. The harpy who's standing on duty beside the elevator doors looks you over as you approach, and after you've told her that you're an intimate acquaintance of Helena's, she respectfully curtsies and says, [style.speechFeminine(Please, [pc.sir], allow me to call the elevator for you.)]
+		你已得知“金羽毛”酒店和楼上海伦娜的巢穴之间有电梯相连，于是走进去，穿过富丽堂皇的门厅，来到电梯所在的位置。当你走近时，站在电梯门边的哈比接待员仔细打量了你一番，在你告诉她你是海伦娜亲密的熟人后，她恭敬地行了一礼，然后说：[style.speechFeminine(欢迎，尊敬的[pc.sir]，请允许我为您呼叫电梯。)]。
 	</p>
 	<p>
-		Doing as the harpy says, you watch as she presses the button to call for the lift, before stepping aside and curtsying towards you once again. A few moments and a lot of mechanical whirring later, the doors automatically slide open with a ping, allowing you to step inside the elevator and press the button marked for the roof. After a short ride up,
+		你礼貌地微笑着点头，迎合酒店高雅的氛围，端庄地站立着。她熟练地按下呼叫电梯的按钮，然后小步站到一旁，再次向你弯腰行礼。过了一会儿，一阵机械的运作声过后，电梯门“叮”地一声向你敞开。你走进干净发亮的，散发香水芬芳的电梯，按下标有屋顶的按钮。在短暂的上升之后，
 		#IF(pc.hasCompanions())
-			 you and [com.name] soon find yourselves [pc.stepping] out into Helena's nest once again...
+			你和[com.name]再一次来到了海伦娜的鸟巢……
 		#ELSE
-			 you [pc.step] soon find yourself [pc.stepping] out into Helena's nest once again...
+			你再一次来到了海伦娜的鸟巢……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HOTEL_TRAVEL_TO_DOMINION -->
 	
 	<htmlContent tag="HOTEL_TRAVEL_TO_DOMINION"><![CDATA[
 	<p>
-		Now that you're aware of the fact that there's an elevator linking Helena's nest to 'The Golden Feather' hotel below, you head over to the small building in which it's located, before pushing open the door and [pc.stepping] inside. The harpy who's on duty behind the nearby desk looks you over as you enter, and after you've informed her that you're an intimate acquaintance of Helena's, she gestures towards the elevator doors on the other side of the room and says, [style.speechFeminine(Please, [pc.sir], go right ahead.)]
+		你知道海伦娜的巢穴和楼下的“金羽毛”酒店之间有电梯相通，于是你走向电梯所在的小楼。当你进去时，坐在附近办公桌后面值班的哈比仔细地打量着你。在你告诉她你是海伦娜的亲密熟人后，她朝房间另一侧的电梯门做了个手势，说：[style.speechFeminine(请便，尊敬的[pc.sir]。)]。
 	</p>
 	<p>
-		Doing as the harpy says, you [pc.step] over to the doors and press the button to call for the lift. A few moments and a lot of mechanical whirring later, the doors automatically slide open with a ping, allowing you to step inside the elevator and press the button marked for the ground floor.
+		你走进按下按钮呼叫电梯。一阵机械的运作声过后，电梯门“叮”的一声向你打开。你进入电梯，按下标有一楼的按钮。
 	</p>
 	<p>
-		After a short ride down and a brief journey across the hotel's opulent foyer,
+		你乘坐电梯下行并穿过酒店富丽堂皇的门厅之后，
 		#IF(pc.hasCompanions())
-			 you and [com.name] [pc.step] out through the grand entrance to once again find yourselves in the streets of Dominion...
+			你和[com.name]离开了酒店，再次来到了御城区的街道上……
 		#ELSE
-			 you [pc.step] out through the grand entrance to once again find yourself in the streets of Dominion...
+			你离开了酒店，再次来到了御城区的街道上……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

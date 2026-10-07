@@ -89,17 +89,17 @@ public class MilkingStall {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Attach pumps";
+			return "连接挤奶器";
 		}
 		@Override
 		public String getActionDescription() {
 			List<InventorySlot> pumps = getPumpSlots();
 			if(pumps.isEmpty()) {
 				//"[npc2.Name] doesn't have any accessible areas for milking pumps to be attached to!"
-				return "<i>[style.italicsBad(Requires:)] One of the following slots to be freely available: 'nipple', 'penis', 'vagina', or 'stomach' (for udder milking)."
-						+ " Also for [npc2.namePos] milking job permissions to allow the equipping of pumps into that slot.</i>";
+				return "<i>[style.italicsBad(需求：)]其中一个栏位处于可用状态：乳头、阴茎、阴道和腹部(有腹乳时)。"
+						+ "此外，[npc2.namePos]的挤奶工作权限允许在该装备栏中配备奶泵。</i>";
 			}
-			return "Attach the milking machine's pumps to [npc2.namePos] "+Util.inventorySlotsToStringList(pumps)+".";
+			return "将挤奶机的奶泵连接到[npc2.namePos]的身上"+Util.inventorySlotsToStringList(pumps)+".";
 		}
 		@Override
 		public boolean isBaseRequirementsMet() {
@@ -116,10 +116,10 @@ public class MilkingStall {
 			List<InventorySlot> pumps = getPumpSlots();
 			
 			if(pumps.size()>1 || pumps.contains(InventorySlot.NIPPLE) || pumps.contains(InventorySlot.STOMACH)) {
-				return "Deciding to get [npc2.name] hooked up to the milking machine, [npc.name] [npc.verb(move)] around to one side of the stall and [npc.verb(grab)] the as-yet unused pumps...";
+				return "决定将[npc2.name]连接上挤奶机，[npc.name]绕到摊位的一侧并且拿起一些尚未使用的奶泵……";
 				
 			} else {
-				return "Deciding to get [npc2.name] hooked up to the milking machine, [npc.name] [npc.verb(move)] around to one side of the stall and [npc.verb(grab)] the as-yet unused pump...";
+				return "决定将[npc2.name]连接上挤奶机，[npc.name]绕到摊位的一侧并且拿起一个尚未使用的奶泵……";
 			}
 		}
 
@@ -173,20 +173,20 @@ public class MilkingStall {
 		
 		@Override
 		public String getActionTitle() {
-			return "Move behind";
+			return "移动到后面";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Move around behind [npc2.name] and get ready to fuck [npc2.herHim].";
+			return "移动到[npc2.name]身后，准备好插入[npc2.herHim]。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc.she] [npc.verb(want)] to fuck [npc2.name] while [npc2.sheIs] locked in the stocks,"
-						+ " [npc.name] #IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF up behind [npc2.herHim] and [npc.verb(start)] grinding [npc.her] groin up against [npc2.her] [npc2.ass+]."
-					+ " Taking hold of [npc2.her] [npc2.hips+], [npc.she] [npc.moanVerb], "
-					+ "[npc.speech(Be a good [npc2.girl] and hold still while I fuck you!)]";
+			return "[npc.name]想趁着[npc2.name]被锁在颈手枷的时候干[npc2.her]，"
+						+ "便[npc.step]向[npc2.herHim]的身后，将下体紧紧贴在了[npc2.her][npc2.ass+]。"
+					+ "[npc.she]牢牢地抓住[npc2.her][npc2.hips+]，[npc.moanVerb]道，"
+					+ "[npc.speech(乖乖的，在我操你的时候不要乱动！)]";
 		}
 
 		@Override
@@ -217,20 +217,20 @@ public class MilkingStall {
 		
 		@Override
 		public String getActionTitle() {
-			return "All fours";
+			return "四肢跪地";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Drop down on all fours beneath [npc2.name] and push your [npc.ass+] up against [npc2.her] groin, ready to be fucked by [npc2.herHim].";
+			return "在[npc2.name]的身下四肢跪地，将你[npc.ass+]抵住[npc2.her]的下体，准备好被[npc2.herHim]操了。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Wanting to get fucked by [npc2.name], [npc.name] [npc.verb(drop)] down onto all fours and [npc.verb(crawl)] forwards beneath [npc2.her] stocks."
-					+ " Shuffling around to get into a comfortable position, [npc.she] [npc.verb(lift)] [npc.her] [npc.hips+] and [npc.verb(push)] [npc.her] [npc.ass+] back against [npc2.her] groin."
-					+ " With an excited [npc.moan], [npc.name] [npc.verb(call)] out,"
-					+ " [npc.speech(Lucky you! I'm going to let you fuck me!)]";
+			return "[npc.Name]想被[npc2.name]插入，于是四肢跪地，趴在[npc2.her]的颈手枷之下。"
+					+ "挪动身子摆到了个舒服的姿势，抬起[npc.hips+]，将[npc.ass+]抵在了[npc2.her]的下体上。"
+					+ "[npc.Name]带着激动的[npc.moan]高喊道，"
+					+ "[npc.speech(你赚到了哦！我正准备让你干我呢！)]";
 		}
 
 		@Override
@@ -259,19 +259,19 @@ public class MilkingStall {
 		
 		@Override
 		public String getActionTitle() {
-			return "Perform oral";
+			return "提供口交";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Kneel behind [npc2.name] and perform oral on [npc2.herHim].";
+			return "跪在[npc2.name]后面并且为[npc2.herHim]口交 。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc.she] [npc.verb(want)] to perform oral on [npc2.name], [npc.name] [npc.verb(kneel)]down behind [npc2.herHim]."
-					+ " Bringing [npc.her] mouth up to [npc2.her] groin, [npc.she] [npc.moanVerb],"
-					+ " [npc.speech(You're going to love this!)]";
+			return "[npc.name]决定给[npc2.name]口交，便跪在[npc2.herHim]后面。"
+					+ "[npc.her]把嘴巴贴向[npc2.her]的下体，[npc.moansVerb]道，"
+					+ "[npc.speech(你会喜欢这个的！)]";
 		}
 
 		@Override
@@ -301,19 +301,19 @@ public class MilkingStall {
 		
 		@Override
 		public String getActionTitle() {
-			return "Move to front";
+			return "挪到前面";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Decide to use [npc2.namePos] mouth.";
+			return "决定使用[npc2.namePos]的嘴。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Deciding that [npc.she] [npc.verb(want)] to use [npc2.namePos] mouth, [npc.name] #IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF back, before moving around in front of [npc2.her] [npc2.face]."
-					+ " Bringing [npc.her] groin up to [npc2.her] mouth, [npc.she] [npc.moanVerb],"
-					+ " [npc.speech(You're going to love this!)]";
+			return "[npc.she]决定使用他的嘴，[npc.name]#IF(npc.isPlayer())[npc.step]#ELSE[npc.steps]#ENDIF返回，然后在[npc2.face]前面晃来晃去。"
+					+ "[npc.her]把下体贴向[npc2.her]的嘴巴，[npc.moansVerb]"
+					+ "[npc.speech(你会喜欢这个的！)]";
 		}
 
 		@Override

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -128,7 +128,7 @@
 	<bookIconName>icon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Laughing Hyenas</bookName>
+	<bookName><![CDATA[鬣狗之笑]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -143,20 +143,20 @@
 	Formatting for bipeds (which should probably be left to be covered by the 'namesDefault' element) should usually follow the pattern of X-morph, X-boy, X-girl. -->
 	<nameAnthro>
 		<namesDefault> <!-- You must include this 'namesDefault' element, which will be used for any undefined legConfiguration names (for example, if the player somehow became a TAIL_LONG hyena). -->
-			<name><![CDATA[spotted hyena-morph]]></name>
-			<namePlural><![CDATA[spotted hyena-morphs]]></namePlural>
-			<singularMaleName><![CDATA[spotted hyena-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[spotted hyena-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[spotted hyena-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[spotted hyena-girls]]></pluralFemaleName>
+			<name><![CDATA[斑鬣狗化形]]></name>
+			<namePlural><![CDATA[斑鬣狗化形]]></namePlural>
+			<singularMaleName><![CDATA[斑鬣狗男]]></singularMaleName>
+			<singularFemaleName><![CDATA[斑鬣狗女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[斑鬣狗男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[斑鬣狗女]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="QUADRUPEDAL"> <!-- This is the usual naming pattern for quadrupeds, even if the names do get a little unwieldy at times... -->
-			<name><![CDATA[spotted hyenataur]]></name>
-			<namePlural><![CDATA[spotted hyenataurs]]></namePlural>
-			<singularMaleName><![CDATA[spotted hyenataur]]></singularMaleName>
-			<singularFemaleName><![CDATA[spotted hyenatauress]]></singularFemaleName>
-			<pluralMaleName><![CDATA[spotted hyenataurs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[spotted hyenatauresses]]></pluralFemaleName>
+			<name><![CDATA[半人斑鬣狗]]></name>
+			<namePlural><![CDATA[半人斑鬣狗]]></namePlural>
+			<singularMaleName><![CDATA[半人斑鬣狗]]></singularMaleName>
+			<singularFemaleName><![CDATA[半人斑鬣狗]]></singularFemaleName>
+			<pluralMaleName><![CDATA[半人斑鬣狗]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[半人斑鬣狗]]></pluralFemaleName>
 		</names>
 	</nameAnthro>
 	
@@ -164,26 +164,26 @@
 	See the 'res/race/NoStepOnSnek/snake/subspecies/snake.xml' file for an example in use. -->
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic spotted hyena, known as a 'spotted hyena-morph' when bipedal, and a 'spotted hyenataur' when the lower body is that of a typically-oversized feral spotted hyena. To be identified as a spotted hyena-morph, a character must be a hyena-morph that has spotted fur.]]></description>
+	<description><![CDATA[一种人形的斑鬣狗，当下肢拟人时被称为斑鬣狗化形，而当下肢呈现出斑鬣狗兽态时则称为半人斑鬣狗。若要被判定为斑鬣狗化形，角色必须是鬣狗化形，并且拥有斑点皮毛。]]></description>
 	
 	<!-- Names for this subspecies when the character is a half-demon.
 	You can omit these altogether, in which case the game will automatically generate a generic half-demon name for your subspecies, based on the names you've defined in the 'nameAnthro' element up above. -->
 	<nameHalfDemon>
 		<namesDefault> <!-- If you include the parent element 'nameHalfDemon', you must define this 'namesDefault' element. -->
-			<name><![CDATA[kishi]]></name>
-			<namePlural><![CDATA[kishis]]></namePlural>
-			<singularMaleName><![CDATA[kishi]]></singularMaleName>
-			<singularFemaleName><![CDATA[kishi]]></singularFemaleName>
-			<pluralMaleName><![CDATA[kishis]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[kishi]]></pluralFemaleName>
+			<name><![CDATA[基什]]></name>
+			<namePlural><![CDATA[基什]]></namePlural>
+			<singularMaleName><![CDATA[基什]]></singularMaleName>
+			<singularFemaleName><![CDATA[基什]]></singularFemaleName>
+			<pluralMaleName><![CDATA[基什]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[基什]]></pluralFemaleName>
 		</namesDefault>
 		<names legConfiguration="QUADRUPEDAL">
-			<name><![CDATA[kishitaur]]></name>
-			<namePlural><![CDATA[kishitaurs]]></namePlural>
-			<singularMaleName><![CDATA[kishitaur]]></singularMaleName>
-			<singularFemaleName><![CDATA[kishitauress]]></singularFemaleName>
-			<pluralMaleName><![CDATA[kishitaurs]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[kishitauresses]]></pluralFemaleName>
+			<name><![CDATA[半人基什]]></name>
+			<namePlural><![CDATA[半人基什]]></namePlural>
+			<singularMaleName><![CDATA[半人基什]]></singularMaleName>
+			<singularFemaleName><![CDATA[半人基什]]></singularFemaleName>
+			<pluralMaleName><![CDATA[半人基什]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[半人基什]]></pluralFemaleName>
 		</names>
 	</nameHalfDemon>
 	
@@ -191,12 +191,12 @@
 	<feralAttributes>
 		<!-- As ferals can only be of one leg configuration, there is no need to define names based on a 'legConfiguration' attribute as done with half-demons and anthro names.
 		As such, just define your names like so: -->
-		<name><![CDATA[spotted hyena]]></name>
-		<namePlural><![CDATA[spotted hyenas]]></namePlural>
-		<singularMaleName><![CDATA[spotted hyena]]></singularMaleName>
-		<singularFemaleName><![CDATA[spotted hyena]]></singularFemaleName>
-		<pluralMaleName><![CDATA[spotted hyenas]]></pluralMaleName>
-		<pluralFemaleName><![CDATA[spotted hyenas]]></pluralFemaleName>
+		<name><![CDATA[斑鬣狗]]></name>
+		<namePlural><![CDATA[斑鬣狗]]></namePlural>
+		<singularMaleName><![CDATA[斑鬣狗]]></singularMaleName>
+		<singularFemaleName><![CDATA[斑鬣狗]]></singularFemaleName>
+		<pluralMaleName><![CDATA[斑鬣狗]]></pluralMaleName>
+		<pluralFemaleName><![CDATA[斑鬣狗]]></pluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -234,7 +234,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] hyena-like body is very strong, and [npc.she] [npc.has] a primal urge to make the most of opportunities which present themselves to [npc.herHim].
+		[npc.NamePos]鬣狗一般的身体非常强壮，而且[npc.she]有一种充分利用出现在[npc.herHim]眼前一切机会的原始冲动。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

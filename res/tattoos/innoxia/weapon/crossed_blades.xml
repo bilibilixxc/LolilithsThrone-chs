@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[crossed blades]]></name>
+		<name><![CDATA[交叉军刀]]></name>
 		
-		<description><![CDATA[A stylised depiction of a pair of sabres, crossed over one another to form an 'X'.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts a pair of crossed sabres]]></bodyOverviewDescription> 
+		<description><![CDATA[一种风格化的表现，描绘了一对军刀，交叉叠在一起形成一个“X”。]]></description> 
+		<bodyOverviewDescription><![CDATA[交叉的军刀的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>crossed_blades.svg</imageName> 
 		

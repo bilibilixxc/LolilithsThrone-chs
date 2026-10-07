@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>NoStepOnSnek_snake</race>
 	<colour>NoStepOnSnek_snake</colour>
@@ -23,48 +23,48 @@
 	<iconName displaySize="60">snake</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>snake</bookIconName>
-	<bookName>Clutching Coils</bookName>
+	<bookName><![CDATA[缠紧盘绕]]></bookName>
 	<basicDescriptionId>SNAKE_BASIC</basicDescriptionId>
 	<advancedDescriptionId>SNAKE_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[snake-morph]]></name>
-			<namePlural><![CDATA[snake-morphs]]></namePlural>
-			<singularMaleName><![CDATA[snake-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[snake-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[snake-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[snake-girls]]></pluralFemaleName>
+			<name><![CDATA[蛇化形]]></name>
+			<namePlural><![CDATA[蛇化形]]></namePlural>
+			<singularMaleName><![CDATA[蛇男]]></singularMaleName>
+			<singularFemaleName><![CDATA[蛇女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[蛇男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[蛇女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	<nameAnthroSillyMode>
 		<namesDefault>
-			<name><![CDATA[snek-morph]]></name>
-			<namePlural><![CDATA[snek-morphs]]></namePlural>
-			<singularMaleName><![CDATA[snek-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[snek-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[snek-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[snek-girls]]></pluralFemaleName>
+			<name><![CDATA[虫它化形]]></name>
+			<namePlural><![CDATA[虫它化形]]></namePlural>
+			<singularMaleName><![CDATA[虫它男]]></singularMaleName>
+			<singularFemaleName><![CDATA[虫它女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[虫它男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[虫它女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthroSillyMode>
-	<description><![CDATA[An anthropomorphic snake, known as a 'snake-morph'.]]></description>
+	<description><![CDATA[一种人形的蛇，被称为‘蛇化形’。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[basilisk]]></name>
-			<namePlural><![CDATA[basilisks]]></namePlural>
-			<singularMaleName><![CDATA[basilisk]]></singularMaleName>
-			<singularFemaleName><![CDATA[basilisk]]></singularFemaleName>
-			<pluralMaleName><![CDATA[basilisks]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[basilisk]]></pluralFemaleName>
+			<name><![CDATA[巴西利斯克]]></name>
+			<namePlural><![CDATA[巴西利斯克]]></namePlural>
+			<singularMaleName><![CDATA[巴西利斯克]]></singularMaleName>
+			<singularFemaleName><![CDATA[巴西利斯克]]></singularFemaleName>
+			<pluralMaleName><![CDATA[巴西利斯克]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[巴西利斯克]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[snake]]></feralName>
-		<feralNamePlural><![CDATA[snakes]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[snake]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[snake]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[snakes]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[snakes]]></feralPluralFemaleName>
+		<feralName><![CDATA[蛇]]></feralName>
+		<feralNamePlural><![CDATA[蛇]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[蛇]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[蛇]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[蛇]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[蛇]]></feralPluralFemaleName>
 		<legConfiguration>TAIL_LONG</legConfiguration>
 		<sizeHeight>false</sizeHeight>
 		<size>180</size>
@@ -78,7 +78,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		Although [npc.namePos] snake-like body is quick and strong, [npc.she] can't regulate [npc.her] body temperature very well, and so [npc.sheIs] weak to both arcane ice and fire. On the positive side, [npc.she] [npc.has] a strong affinity with arcane poison.
+		尽管[npc.name]蛇一般的身体迅捷而强壮，但[npc.she]不能很好地调节[npc.her]的体温，因此对奥术冰和火的亲和力都很弱。但好的一面是，[npc.she]对奥术毒素有很强的亲和性。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="5">MAJOR_PHYSIQUE</attribute>

@@ -12,23 +12,23 @@ import com.lilithsthrone.utils.colours.PresetColour;
  */
 public enum LubricationType {
 	
-	SALIVA("saliva", "saliva", false, PresetColour.BASE_BLUE_LIGHT),
+	SALIVA("口水", "口水", false, PresetColour.BASE_BLUE_LIGHT),
 	
-	MILK("[npc.milk]", "milk", false, PresetColour.MILK),
+	MILK("[npc.milk]", "乳汁", false, PresetColour.MILK),
 	
-	PRECUM("precum", "precum", false, PresetColour.CUM),
+	PRECUM("先走液", "先走液", false, PresetColour.CUM),
 	
-	CUM("[npc.cum]", "cum", false, PresetColour.CUM),
+	CUM("[npc.cum]", "精液", false, PresetColour.CUM),
 	
-	GIRLCUM("girlcum", "girlcum", false, PresetColour.GIRLCUM),
+	GIRLCUM("爱液", "爱液", false, PresetColour.GIRLCUM),
 	
-	ANAL_LUBE("anal lubricant", "anal lubricant", false, PresetColour.BASE_BLUE_LIGHT), // This is only present if the anus has been transformed to be 'wetter' than usual
+	ANAL_LUBE("肠液", "肠液", false, PresetColour.BASE_BLUE_LIGHT), // This is only present if the anus has been transformed to be 'wetter' than usual
 
-	SLIME("slime", "slime", false, PresetColour.RACE_SLIME),
+	SLIME("粘液", "粘液", false, PresetColour.RACE_SLIME),
 	
-	WATER("water", "water", false, PresetColour.BASE_AQUA),
+	WATER("水", "水", false, PresetColour.BASE_AQUA),
 	
-	OTHER("lubrication", "lubrication", false, PresetColour.BASE_BLUE_LIGHT);
+	OTHER("润滑剂", "润滑剂", false, PresetColour.BASE_BLUE_LIGHT);
 	
 	private String name;
 	private String nullOwnerName;

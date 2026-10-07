@@ -25,7 +25,7 @@ public class DominionEncounterDialogue {
 		return Main.game.getPlayer().getLocationPlace().getPlaceType()==PlaceType.DOMINION_CANAL || Main.game.getPlayer().getLocationPlace().getPlaceType()==PlaceType.DOMINION_CANAL_END;
 	}
 	
-	public static final DialogueNode ALLEY_FIND_ITEM = new DialogueNode("Abandoned package", "", true) {
+	public static final DialogueNode ALLEY_FIND_ITEM = new DialogueNode("丢弃的包裹", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -42,7 +42,7 @@ public class DominionEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Take", "Add the " + AbstractEncounter.getRandomItem().getName() + " to your inventory.", Main.game.getDefaultDialogue(false)){
+				return new Response("拿走", "把" + AbstractEncounter.getRandomItem().getName() + "加入你的物品栏。", Main.game.getDefaultDialogue(false)){
 					@Override
 					public void effects() {
 						if(AbstractEncounter.getRandomItem() instanceof AbstractWeapon) {
@@ -58,7 +58,7 @@ public class DominionEncounterDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Leave", "Leave the " + AbstractEncounter.getRandomItem().getName() + " on the floor.", Main.game.getDefaultDialogue(false));
+				return new Response("离开", "把" + AbstractEncounter.getRandomItem().getName() + "留在地上。", Main.game.getDefaultDialogue(false));
 				
 			} else {
 				return null;
@@ -66,7 +66,7 @@ public class DominionEncounterDialogue {
 		}
 	};
 	
-	public static final DialogueNode HARPY_NESTS_FIND_ITEM = new DialogueNode("Dropped item", "", true) {
+	public static final DialogueNode HARPY_NESTS_FIND_ITEM = new DialogueNode("遗落的物品", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 2*60;
@@ -80,7 +80,7 @@ public class DominionEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Take", "Add the " + AbstractEncounter.getRandomItem().getName() + " to your inventory.", Main.game.getDefaultDialogue(false)){
+				return new Response("拿走", "把" + AbstractEncounter.getRandomItem().getName() + "加入你的物品栏。", Main.game.getDefaultDialogue(false)){
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(Main.game.getPlayer().addItem((AbstractItem) AbstractEncounter.getRandomItem(), true, true));
@@ -88,7 +88,7 @@ public class DominionEncounterDialogue {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Leave", "Leave the " + AbstractEncounter.getRandomItem().getName() + " on the floor.", Main.game.getDefaultDialogue(false));
+				return new Response("离开", "把" + AbstractEncounter.getRandomItem().getName() + "留在地上。", Main.game.getDefaultDialogue(false));
 				
 			} else {
 				return null;
@@ -96,7 +96,7 @@ public class DominionEncounterDialogue {
 		}
 	};
 	
-	public static final DialogueNode DOMINION_STREET_FIND_HAPPINESS = new DialogueNode("Finding Happiness", "", true) {
+	public static final DialogueNode DOMINION_STREET_FIND_HAPPINESS = new DialogueNode("找到“欢欣”", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 5*60;
@@ -108,7 +108,7 @@ public class DominionEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Continue on your way.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false));
 				
 			} else {
 				return null;
@@ -121,9 +121,9 @@ public class DominionEncounterDialogue {
 		@Override
 		public String getLabel() {
 			if(Main.game.getDateNow().getMonth()==Month.MAY) {
-				return "Mother's Week Gift";
+				return "母亲周的礼物";
 			} else {
-				return "Father's Week Gift";
+				return "父亲周的礼物";
 			}
 		}
 		@Override
@@ -134,7 +134,7 @@ public class DominionEncounterDialogue {
 		public String getContent() {
 			if(Main.game.getDateNow().getMonth()==Month.MAY) { // Mother's day:
 				String name = Util.randomItemFrom(Subspecies.getWorldSpecies(WorldType.DOMINION, PlaceType.DOMINION_STREET, false).keySet()).getSingularFemaleName(null);
-				String litter = Util.randomItemFrom(new String[] {"twins", "triplets", "quadruplets", "quintuplets", "sextuplets"});
+				String litter = Util.randomItemFrom(new String[] {"双胞胎", "三胞胎", "四胞胎", "五胞胎", "六胞胎"});
 				UtilText.addSpecialParsingString(name, true);
 				UtilText.addSpecialParsingString(litter, false);
 
@@ -150,7 +150,7 @@ public class DominionEncounterDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Continue on your way.", Main.game.getDefaultDialogue(false));
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false));
 				
 			} else {
 				return null;

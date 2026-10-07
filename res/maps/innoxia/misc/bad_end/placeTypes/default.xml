@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
 	<name><![CDATA[unknown]]></name>
-	<tooltipDescription><![CDATA[An unknown location...]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in an unknown location]]></virginityLossDescription>
+	<tooltipDescription><![CDATA[一个未知地点……]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在一个未知地点]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

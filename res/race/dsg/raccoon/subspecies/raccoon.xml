@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -91,7 +91,7 @@
 	<bookIconName>raccoonicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Foraging Raccoons</bookName>
+	<bookName><![CDATA[搜寻食物的浣熊]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -104,38 +104,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[raccoon-morph]]></name>
-			<namePlural><![CDATA[raccoon-morphs]]></namePlural>
-			<singularMaleName><![CDATA[raccoon-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[raccoon-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[raccoon-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[raccoon-girls]]></pluralFemaleName>
+			<name><![CDATA[浣熊化形]]></name>
+			<namePlural><![CDATA[浣熊化形]]></namePlural>
+			<singularMaleName><![CDATA[浣熊男]]></singularMaleName>
+			<singularFemaleName><![CDATA[浣熊女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[浣熊男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[浣熊女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic raccoon, known as a 'raccoon-morph' when bipedal, and a 'raccoontaur' when the lower body is that of a typically-oversized feral raccoon.]]></description>
+	<description><![CDATA[一种人形的浣熊，当下肢拟人时被称为浣熊化形，而当下肢呈现出浣熊兽态时则称为半浣熊人。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[azeban]]></name>
-			<namePlural><![CDATA[azeban]]></namePlural>
-			<singularMaleName><![CDATA[azeban]]></singularMaleName>
-			<singularFemaleName><![CDATA[azeban]]></singularFemaleName>
-			<pluralMaleName><![CDATA[azeban]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[azeban]]></pluralFemaleName>
+			<name><![CDATA[阿泽班]]></name>
+			<namePlural><![CDATA[阿泽班]]></namePlural>
+			<singularMaleName><![CDATA[阿泽班]]></singularMaleName>
+			<singularFemaleName><![CDATA[阿泽班]]></singularFemaleName>
+			<pluralMaleName><![CDATA[阿泽班]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[阿泽班]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[raccoon]]></feralName>
-		<feralNamePlural><![CDATA[raccoon]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[raccoon]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[raccoon]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[raccoons]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[raccoons]]></feralPluralFemaleName>
+		<feralName><![CDATA[浣熊]]></feralName>
+		<feralNamePlural><![CDATA[浣熊]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[浣熊]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[浣熊]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[浣熊]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[浣熊]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -166,8 +166,8 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] raccoon-like body is very adaptable, and [npc.she] [npc.has] a primal urge to fondle things [npc.she] [npc.verb(want)] to examine.
-	]]></statusEffectDescription>
+		[npc.NamePos]浣熊一般的身体适应性极强，而且[npc.she]总会生发出抚摸[npc.hers]所发现事物的原始冲动。
+]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.
 	The text inside the 'attribute' element corresponds to an Attribute found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/attributes/Attribute.java 

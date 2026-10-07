@@ -1,304 +1,304 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
     <!-- Elizabeth encounter: -->
 	
     <htmlContent tag="INTRO"><![CDATA[
 	<p>
-		In the evening, the palace corridors are mostly empty, with only the occasional half-demon or human maid to be seen.
+		到了傍晚，宫殿的走廊大部分都是空荡荡的，只偶尔能看到一两个半恶魔或人类的女仆。
 		#IF(flags.hasFlag(FLAG_acexp_elizabeth_introduced))
-		     Once again, as you pass by one of the palace's many rooms, you hear a familiar melody being played on a piano. Immediately recognising the pianist's style, you realise that it's [elizabeth.name] who must be playing the instrument.
+		接着，当你经过宫殿里的众多房间中的一个时，你听到了一首熟悉的旋律在钢琴上演奏。你立刻识别出了那位钢琴家的风格，你意识到那一定是[elizabeth.name]在弹奏这架乐器。
 		#ELSE
-		     As you pass by one of the palace's many rooms, you hear a familiar melody being played on a piano. Drifting out through the half-open door, this soft and gentle music has a sad, wistful sound, and strikes you as being full of regret and longing.
+		当你经过宫殿中的一个房间时，你听到了一段熟悉的钢琴旋律。这段柔和而温馨的音乐从半开的门中飘出，带着一种悲伤而怅惘的音调，让你感觉到满满的后悔和渴望。
 		#ENDIF
 	</p>
 	#IF(!flags.hasFlag(FLAG_acexp_elizabeth_introduced))
 		<p>
 			#IF(pc.hasTraitActivated(PERK_JOB_MUSICIAN))
-				Being a musician yourself, you instantly identify the tune as <i>F&uuml;r Elise</i>, and can tell that it's being played on a grand piano of exceptional quality. The performance is nothing short of exceptional, with all the expression and tempo variations of someone who knows the piece inside out. Ludwig von Beethoven really was at his best with this.
+				作为一名音乐家，你立即识别出这首曲子是<i>《致爱丽丝》</i>，并且可以判断出它是由一部品质上乘的三角钢琴演奏的。演奏者的表现无疑是出类拔萃，所有的情感和节奏变化都准确到位，展现出了对这首曲子的深入了解。这部作品真的是贝多芬巅峰时期的最佳代表。
 			#ELSE
-				Although you can tell that it's being played on a piano, you lack the musical knowledge to determine anything else about the piece. While you're unsure of the name of the piece of music, it does sound quite familiar, and must be one of those classics you hear everywhere.
+				虽然你能辨认出这是钢琴演奏的音乐，但你的音乐知识不足以让你判断出这首曲子的其他信息。虽然你不确定这首音乐的名字，但它听起来确实很熟悉，一定是你在各处都能听到的那些经典曲目之一。
 			#ENDIF
 		</p>
 	#ENDIF
 	<p>
 		#IF(flags.hasFlag(FLAG_acexp_elizabeth_introduced))
-		    Taking a look at the half-open door, you wonder whether to head on inside and pay [elizabeth.name] another visit...
+		你看着半开的门，不知道是否应该进去，再次拜访[elizabeth.name]……
 		#ELSE
-    		Taking a look at the half-open door, you wonder whether you should investigate and find out who's playing this music at this hour...
+    		你看着半开的门，心里在想，这么晚了，到底应不应该去调查一下是谁在放这音乐……
     	#ENDIF
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="INTRO_EXIT"><![CDATA[
 	<p>
 		#IF(flags.hasFlag(FLAG_acexp_elizabeth_introduced))
-			Deciding that you don't want to see Elizabeth again right now, you turn around and head back out into the corridor...
+			决定此刻你不想再见到伊丽莎白，你转身离开，回到走廊中……
 		#ELSE
-			Deciding that you don't want to head inside and find out who's playing the piano, you turn around and head back out into the corridor...
+			决定不想进去看看是谁在弹钢琴，你转身走回了走廊……
 		#ENDIF
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="MUSIC"><![CDATA[
 	<p>
-		Pushing open the door, you [pc.step] forwards and enter what looks to be a well-furnished drawing room. Plush sofas, extravagantly-carved coffee tables, and a magnificent grand piano are just a few of the many items of furniture within this cavernous room. In a similar fashion to the palace's corridors, portraits of demons and humans hang from the walls, while underfoot, luxuriant carpeting provides a comfortable surface upon which to stand.
+		你推开门，[pc.step]向前方，进入了一个看似装饰精美的会客厅。豪华的沙发，雕琢精细的咖啡桌，以及一架宏伟的三角钢琴，只是这个宽敞房间内众多家具中的一部分。与宫殿的走廊类似，恶魔和人类的肖像挂在墙上，而脚下，则是奢华的地毯提供了一个舒适的站立面。
 	</p>
 	<p>
-		A couple of maids are standing to attention on one side of the room, but it's the room's third occupant which draws your attention. Sitting behind the grand piano, you see the familiar figure of Elizabeth, who's playing the instrument with such gusto that she's subconsciously sweeping her [elizabeth.tail+] from side to side in time with the music.
+		房间一侧有几个女仆在专心致志地等待，但是吸引你注意力的却是房间里的第三个人。坐在大钢琴后面的，你看到了伊丽莎白熟悉的身影，她全神贯注地弹奏着乐器，甚至在不自觉地随着音乐节奏将[elizabeth.tail+]从一边摇摆到另一边。
 	</p>
 	<p>
-		Not wanting to disturb the [elizabeth.race], you quietly take a seat on one of the sofas and listen to her fabulous performance. Not noticing your presence, Elizabeth continues playing for the next several minutes, and when she finishes, you stand up and applaud her. Upon hearing you, [elizabeth.name] quickly turns around and exclaims, [elizabeth.speech(Oh, [pc.name]! How long have you been here?)]
+		你不想打扰[elizabeth.race]，悄悄地在一张沙发上坐下，倾听她美妙的演奏。伊丽莎白并未注意到你的存在，她接下来的几分钟里继续演奏。当她结束时，你站起来为她鼓掌。听到你的声音，[elizabeth.name]快速转过身，惊叫道，[elizabeth.speech(哦，[pc.name]！你在这里待了多久了？)]
 	</p>
 	#IF(flags.hasFlag(FLAG_acexp_elizabeth_introduced))
 		#IF(elizabeth.isVisiblyPregnant())
 			#IF(!elizabeth.isCharacterReactedToPregnancy(pc))
 				<p>
-					It's at this moment that you suddenly notice the fact that Elizabeth is sporting a [style.colourSex(pregnant belly)]. Smiling at you as she notices what it is you're looking at, the [elizabeth.race] confirms, [elizabeth.speech(Yes, [pc.name], you're the one who got me pregnant. Please don't be concerned, however, there's nothing that I require from you.)]
+					就在这时，你突然注意到了伊丽莎白挺着一个[style.colourSex(孕肚)]。她看到你的目光后，向你露出了微笑。[elizabeth.race]向你确认道，[elizabeth.speech(没错，[pc.name]，是你让我怀孕的。但请不要担心，我并不需要你为此负责。)]
 				</p>
 				<p>
-					Despite her words, you find yourself asking the mother of your children if there's anything that you can do to help her. Shaking her head, she holds up a hand to prevent you from asking the same thing again, before repeating herself and stating, [elizabeth.speech(Thank you, [pc.name], but I really can manage fine by myself. Now, is there anything I can do for you?)]
+					尽管听到她的话，你还是忍不住问你孩子的母亲是否有什么你可以帮忙的地方。她摇了摇头，举起手阻止你再次询问同样的问题，然后重复自己的话，说道，[elizabeth.speech(谢谢你，[pc.name]，但我真的可以自己应对。现在，有什么我可以帮你的吗？)]
 				</p>
 			#ELSE
 				<p>
-					It's at this moment that you notice the fact that Elizabeth is still sporting a [style.colourSex(pregnant belly)]. Smiling at you as she notices what it is you're looking at, the [elizabeth.race] once again states, [elizabeth.speech(Don't worry about me, [pc.name], I really can manage this pregnancy by myself. Now, is there anything I can do for you?)]
+					就在这时，你注意到伊丽莎白仍然带着[style.colourSex(孕肚)]。当她注意到你在看什么时，[elizabeth.race]再次对你说，[elizabeth.speech(别担心我，[pc.name]，我真的可以自己应对这个孕期。现在，我能为你做些什么吗？)]
 				</p>
 			#ENDIF
 			<p>
-				From the way she's beaming at you, it's obvious that Elizabeth is genuinely happy to see you again. Encouraged by this, you wonder what your next move should be...
+				从她对你洋溢的喜悦之情来看，很明显伊丽莎白真的很高兴再次见到你。受此鼓舞，你开始思考接下来应该怎么做……
 			</p>
 		#ELSE
 			<p>
-				Responding that you've been here long enough to appreciate her skill at playing the piano, you tell the [elizabeth.race] that you've once again enjoyed her performance.
+				你对[elizabeth.race]表示，你已经在这里待了一段时间以欣赏她的钢琴技艺，她的演奏再一次让你感到了愉快。
 			</p>
 			<p>
-				[elizabeth.speech(Thank you, [pc.Name]. I'm happy to hear that you like it,)] [elizabeth.name] responds with a big smile on her face. Placing her hands in her lap, she asks, [elizabeth.speech(So, is there anything I can do for you?)]
+				[elizabeth.speech(谢谢你，[pc.Name]。很高兴听到你喜欢它，)][elizabeth.name]满脸灿烂的笑容回应着。她将手放在膝盖上，问道，[elizabeth.speech(那么，有什么我可以帮忙的吗？)]
 			</p>
 			<p>
-				From the way she's beaming at you, it's obvious that Elizabeth is genuinely liking the attention that you're giving her. Encouraged by this, you wonder what your next move should be...
+				从她对你灿烂的笑容中，不难看出伊丽莎白真心享受你给予她的关注。受此鼓舞，你在思考接下来应该怎么做……
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			You respond by explaining that you heard music playing, and after entering the room to investigate, you sat down and have been listening to her play for just a short while. At the end of your response, you finish by asking the [elizabeth.race] if she plays the piano often.
+			你回答说，你是因为听到音乐声才进来的，而且你只是短暂地坐下来听她弹琴。最后，你向着[elizabeth.race]询问道她是否经常弹钢琴。
 		</p>
 		<p>
-			[elizabeth.speech(Well, not very often, but every once in a while. It helps me relax after a long day of guarding the gates of Mommy- ~Ahem!~ I mean Her Highness's palace,)] she responds in a slightly flustered manner. Quickly regaining her composure, she continues, [elizabeth.speech(So, is there anything I can do for you?)]
+			[elizabeth.speech(嗯，不是经常，但偶尔会这样。在守护妈咪~咳咳！~我是说，守护女王陛下宫殿一整天后，这能帮助我放松。)]她稍显慌乱地回应。但很快恢复了镇定，她接着说，[elizabeth.speech(那么，有什么我可以帮你的吗？)]
 		</p>
 		<p>
-			Discovering that this stern soldier is also an excellent pianist strikes you as a rather unexpected turn of events. Encouraged by the friendly smile on Elizabeth's face, you wonder what your next move should be...
+			发现这位严肃的士兵竟然也是一位杰出的钢琴家，这对你来说无疑是一次出乎意料的转折。伊丽莎白脸上友好的微笑让你鼓起了勇气，你在想接下来应该怎么做……
 		</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="MUSIC_EXIT"><![CDATA[
 	<p>
-		Telling Elizabeth that you simply wanted to hear her playing the piano for a short while, you excuse yourself and prepare to head back out into the corridor. As you turn to leave, the [elizabeth.race] strides forwards to join you, and as the two of you exit the room, she states, [elizabeth.speech(I've got other matters to attend to this evening, so I'll see you another time, [pc.name].)]
+		你告诉伊丽莎白，你只是想听她弹一会儿钢琴，然后找了个借口，准备回到走廊里去。当你转身离开时，[elizabeth.race]追上你，在你俩离开房间时，她说，[elizabeth.speech(今晚我还有别的事要办，所以下次见[pc.name]。)]
 	</p>
 	<p>
-		With that, Elizabeth hurries off down the corridor, leaving you wondering where to go to next...
+		说完，伊丽莎白匆匆离开了走廊，留下不知所措的你……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="CHAT"><![CDATA[
 	<p>
-	    Wanting to spend some time getting to know her, you tell Elizabeth that you were hoping to talk with her, and ask her if she'd like to sit with you for a while.
+	你想花点时间了解她，你告诉伊丽莎白你想和她谈谈，问她是否愿意和你坐一会儿。
 		#IF(elizabeth.getAffection(pc)>=25)
-			 The smile on her face subtly shifts to a little grin, and as she happily stands up and steps over to sit beside you, she states, [elizabeth.speech(I'd love to, [pc.name]. So, tell me what you'd like to talk about.)]
+			她脸上的微笑逐渐变成了露齿而笑，她高兴地站起来，走到你身边坐下，并说，[elizabeth.speech([pc.name]，我很乐意。那么，告诉我你想谈什么。)]
 		#ELSE
-			 Although the smile on her face remains, you can tell that the [elizabeth.race] is a little hesitant as she stands up and steps over to sit beside you. Crossing her legs, she somewhat-stiffly asks, [elizabeth.speech(So, what did you want to talk about?)]
+			虽然她脸上的笑容还在，但你可以看出[elizabeth.race]走过去坐在你旁边时，她有点犹豫。她跷起二郎腿，有点僵硬地问道，[elizabeth.speech(那么，你想谈什么？)]
 		#ENDIF
 	</p>
 	<p>
-	    #IF(pc.hasTraitActivated(PERK_JOB_SOLDIER))
-			Telling Elizabeth that the two of you have more in common that she might think, you tell her that you used to be a soldier, and so you know a lot about the sort of guard duties she's expected to perform. The [elizabeth.race]'s [elizabeth.eyes+] light up as she hears this, and at her eager encouragement, you soon find yourself recounting stories from your life in the forces to her. As you talk, you see Elizabeth's rigid posture visibly softening, and as you finish one of your more exciting tales, she exclaims, [elizabeth.speech(I've never heard of these places you're speaking of, but I wish I could have been there! You have no idea how boring my life is, guarding the gates all the time... You've lived such an interesting life, [pc.name].)]
-	    #ELSE
+	#IF(pc.hasTraitActivated(PERK_JOB_SOLDIER))
+			你告诉伊丽莎白，你们俩的共同点比她想象的要多，你告诉她，你曾经是一名士兵，所以你很了解她的守卫工作。当她听到这话时，[elizabeth.race][elizabeth.eyes+]亮了。在她热切的鼓励下，你不经意间向她讲述了自己的军旅生涯。在你讲述时，伊丽莎白放松了原本僵硬的姿势，当你讲完一个更激动人心的故事时，她惊呼道，[elizabeth.speech(我从来没有听说过你说的这些地方，但我希望有朝一日我能去那里！你不知道我的生活有多无聊，整天守着大门……[pc.name]，你的生活真是丰富多彩。)]
+	#ELSE
             #IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE)>=50)
-				Not having anything in particular that you wanted to talk to Elizabeth about, you find yourself making small talk by asking her about her daily life. As she mentions the fact that she works out every day, you seize upon this and tell her that you also work hard to maintain your physique. The [elizabeth.race]'s [elizabeth.eyes+] light up as she hears this, and at her encouragement, you soon find yourself talking about all that you've learned regarding nutrition, health, and fitness. As you talk, you see Elizabeth's rigid posture visibly softening, and as you finish, she excitedly reveals, [elizabeth.speech(None of my sisters ever like to talk about this kind of thing. I'm so happy that I've got you to talk to, [pc.name]!)]
+				你没有什么特别想和伊丽莎白谈的，只能通过询问她的日常生活来闲聊。当她提到她每天都会锻炼时，你抓住这一点，告诉她你也在努力地保持你的体格。当她听到这话时，[elizabeth.race][elizabeth.eyes+]亮了。在她的鼓励下，你不经意间和她谈论你所学到的关于营养、健康和健身的知识。在你讲述时，伊丽莎白放松了原本僵硬的姿势。谈论结束时，她兴奋地说，[elizabeth.speech(我的姐妹们都不喜欢谈论这种事。[pc.name]，我很高兴能和你聊天！)]
             #ELSE
-                Not having anything in particular that you wanted to talk to Elizabeth about, you find yourself making small talk by asking her about her daily life. Although she politely engages in conversation with you, it seems like the [elizabeth.race] isn't particularly interested in what you have to say. Nevertheless, the more you talk, the more her rigid posture visibly softens, and as your conversation comes to an end, she smiles and says in a genuine tone of voice, [elizabeth.speech(I enjoyed talking with you, [pc.name]. It makes a nice change to be able to speak to someone other than my sisters.)]
+                你没有什么特别想和伊丽莎白谈的，只能通过询问她的日常生活来闲聊。虽然她礼貌地和你交谈，[elizabeth.race]对你所说的话不太感兴趣。然而，你说得越多，她就越放松原本僵硬的姿势。谈论结束时，她微笑着用真诚的语气说：[elizabeth.speech([pc.name]，我很高兴和你聊天。我能和我妹妹以外的人说话真是个重大进展。)]
             #ENDIF
         #ENDIF
 	</p>
 	<p>
-	    #IF(elizabeth.getAffection(pc)>=25)
+	#IF(elizabeth.getAffection(pc)>=25)
 			#IF(pc.hasTraitActivated(PERK_JOB_SOLDIER) || pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE)>=50)
-				Having bonded over the subject matter of your conversation, you feel that you and Elizabeth have got a lot closer to one another.
+				找到了共同话题，你觉得和伊丽莎白更亲近了。
 			#ELSE
-				Although the two of you haven't managed to find anything in common to talk about, you feel that from your repeated meetings you've by now got a lot closer to one another.
+				虽然你俩还没有找到共同话题，但你认为一回生，二回熟。
 			#ENDIF
-			 Telling her that you've enjoyed her company, you suggest that the two of you could do this again some time. Instead of politely responding in the affirmative as you expected, however, the [elizabeth.race] shuffles a little closer to you and reveals her true feelings.
+			你告诉她你很喜欢她的陪伴，并建议找个时间再聚一次。然而，[elizabeth.race]向你靠近一点，透露她的真实感受，并不是像你期望的那样礼貌地给予肯定回答。
 		#ELSE
-			Although she seems to have enjoyed your time together, you can tell that Elizabeth is wanting to head off and do something else now. Telling her that you've enjoyed her company, you suggest that the two of you could do this again some time. 
+			虽然她似乎很享受你们在一起的时光，但你可以看出伊丽莎白现在想要离开。你告诉她你很喜欢她的陪伴，并建议找个时间再聚一次。
 		#ENDIF
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="PRAISE"><![CDATA[
 	<p>
-	    Wanting to spend some time with this [elizabeth.race], you compliment Elizabeth on her proficiency at playing the piano, and ask her if she'd like to sit with you for a while.
+	由于想要在这个[elizabeth.race]上面花点时间，你称赞了伊丽莎白对于钢琴的精通，然后问她愿不愿我陪她坐一会。
 		#IF(elizabeth.getAffection(pc)>=25)
-			 The smile on her face subtly shifts to a little grin, and as she happily stands up and steps over to sit beside you, she states, [elizabeth.speech(I'd love to, [pc.name]. So, you care about music, do you?)]
+			她的脸上不易察觉地微微一笑，然后她高兴地站起来靠近你坐在你的旁边，她说道，[elizabeth.speech(好呀，[pc.name]。所以你关注过音乐吗？)]
 		#ELSE
-			 Although the smile on her face remains, you can tell that the [elizabeth.race] is a little hesitant as she stands up and steps over to sit beside you. Crossing her legs, she somewhat-stiffly asks, [elizabeth.speech(So, you care about music, do you?)]
+			尽管她脸上保持着笑容，站起来靠近你坐在你的旁边，你还是猜得出这个[elizabeth.race]有点犹豫。交叉着双腿，她略带僵硬地问道，[elizabeth.speech(所以你关注过音乐吗？)]
 		#ENDIF
 	</p>
 	<p>
-	    #IF(pc.hasTraitActivated(PERK_JOB_MUSICIAN))
-			Revealing to Elizabeth your background as a musician, you tell her that you're also able to play the piano, and once again compliment her on her proficiency with the instrument. The [elizabeth.race]'s [elizabeth.eyes+] light up as you reveal this to her, and she eagerly asks you to tell her more about your musical background. Soon enough, the two of you are engaged in an animated discussion concerning the finer points of playing the piano. Before long, you notice Elizabeth's rigid posture visibly softening, and as you recount how you've played in several concerts, she exclaims, [elizabeth.speech(Oh, I wish that I could perform for a large audience one day! You have no idea how boring my life is, guarding these gates all the time... Music is my one escape; I love playing the piano!)]
-	    #ELSE
+	#IF(pc.hasTraitActivated(PERK_JOB_MUSICIAN))
+			向伊丽莎白展示了你的音乐家背景，你告诉她你也可以弹钢琴，然后你又一次恭维了她对乐器的精通。当你说到这个，[elizabeth.race][elizabeth.eyes+]亮了起来，她渴望地让你告诉她更多你的音乐背景。很快，你们两个兴致勃勃地讨论起了弹钢琴的细节。不久之后，你注意到伊丽莎白的僵硬肉眼可见地消失了，然后当你说你还参与过几场音乐会的时候，她惊呼道，[elizabeth.speech(天呐，我也想有一天在这么多人面前表演！你想不到我的生活有多无聊，成天守着这些门……只有音乐是我的唯一解脱；我喜欢弹钢琴！)]
+	#ELSE
             #IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_ARCANE)>=50)
-				Although you truthfully tell Elizabeth that you appreciate music, you feel compelled to reveal to her that you can't play an instrument yourself. Seeing the disappointment in the [elizabeth.race]'s [elizabeth.eyes+], you quickly tell her that you do have a real interest in music, and suggest that harnessing the arcane feels sort of like playing an instrument at times. This remark saves the day, as Elizabeth's look of disappointment rapidly shifts into one of excitement, and she begins explaining in an animated manner how casting spells and playing instruments are indeed alike. Soon enough, the two of you are having an engaging discussion on the similarities of music and spell casting, and as you reveal how harnessing the arcane comes naturally to you, Elizabeth exclaims, [elizabeth.speech(Oh, I'm so envious! I have to spend so much time guarding the palace gates that I'm not able to study the arcane as much as I'd like... What little free time I have, I devote to playing the piano.)]
+				尽管你如实地告诉了伊丽莎白你欣赏音乐，但是你觉得你有必要告诉她自己其实不会弹奏乐器。看见这个[elizabeth.race][elizabeth.eyes+]流露的失望，你快速地告诉她你对音乐确实有兴趣，并且表示自己施展奥术的时候也有和演奏乐器一样的感觉。这句话挽救了局面，伊丽莎白的失望神情迅速转变为兴奋，然后她开始向你热情地解释吟唱咒语和演奏乐器有多么相似。很快，你们两个讨论起了音乐和施咒的共同性，然后当你说施展奥术对你而言十分自然的时候，她惊呼道，[elizabeth.speech(天呐，我要嫉妒了！我不得不花超多的时间守卫宫殿大门，这让我不能如我所愿地研究奥术……我一有一些空闲的时间，我就投入到钢琴里面去了。)]
             #ELSE
-                Although you truthfully tell Elizabeth that you appreciate music, you feel compelled to reveal to her that you can't play an instrument yourself. Although she politely responds to your follow-up requests to tell her more about her musical hobby, it seems like the [elizabeth.race] isn't particularly interested in what you have to say. Nevertheless, the more you talk about music, the more her rigid posture visibly softens, and as your conversation comes to an end, she smiles and says in a genuine tone of voice, [elizabeth.speech(I enjoyed talking with you, [pc.name]. It makes a nice change to be able to speak to someone other than my sisters.)]
+               尽管你如实地告诉了伊丽莎白你欣赏音乐，但是你觉得你有必要告诉她自己其实不会弹奏乐器。尽管她诚实地回答了你后续的对她音乐爱好的提问，不过似乎这个[elizabeth.race]对你想说的没有兴趣。然而，随着你谈了越来越多的音乐有关的事情，伊丽莎白的僵硬肉眼可见地消失了，当你们谈话即将结束的时候，她笑着用真诚的语气说，[elizabeth.speech(我喜欢和你说话，[pc.name]。能和我姐妹以外的人说话实在是太好了。)]
             #ENDIF
         #ENDIF
 	</p>
 	<p>
-	    #IF(elizabeth.getAffection(pc)>=25)
+	#IF(elizabeth.getAffection(pc)>=25)
 			#IF(pc.hasTraitActivated(PERK_JOB_MUSICIAN) || pc.getAttributeValue(ATTRIBUTE_MAJOR_ARCANE)>=50)
-				Having bonded over the subject of music, you feel that you and Elizabeth have got a lot closer to one another.
+				因为音乐的关系，你感觉自己和伊丽莎白之间的关系更进一步了。
 			#ELSE
-				Although the two of you haven't really managed to get on the same page regarding music, you feel that from your repeated meetings you've by now got a lot closer to one another.
+				尽管你们两个没有在音乐上面达成共识，你感觉通过多次的谈话，你们之间的关系变得更加亲密了。
 			#ENDIF
-			 Telling her that you've enjoyed her company, you suggest that the two of you could do this again some time. Instead of politely responding in the affirmative as you expected, however, the [elizabeth.race] shuffles a little closer to you and reveals her true feelings.
+			告诉她你很喜欢她陪着你，你提议你们俩改天再继续。然而，她没有如你想象的那般的礼貌回应，这个[elizabeth.race]慢慢靠近你，告诉了你她的真实想法。
 		#ELSE
-			Although she seems to have enjoyed your time together, you can tell that Elizabeth is wanting to head off and do something else now. Telling her that you've enjoyed her company, you suggest that the two of you could do this again some time. 
+			尽管她看起来很享受和你在一起的时光，你猜的出伊丽莎白不想继续下去了，而是想做其他事情。告诉她你很喜欢她陪着你，你提议你们俩改天再继续。
 		#ENDIF
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="FLIRT"><![CDATA[
 	<p>
-	    Finding Elizabeth to be irresistibly attractive, you decide to make a move on her, and so ask her if she'd like to sit with you and chat for a while.
+	你发现伊丽莎白具有不可抗拒的魅力，决定对她下手，于是问她是否愿意和你坐下来聊一会儿天。
 		#IF(elizabeth.getAffection(pc)>=25)
-			 Sensing what it is you're after, the smile on the [elizabeth.race]'s face subtly shifts to a sly smirk, and as she happily stands up and steps over to sit beside you, she teases, [elizabeth.speech(Go on then, hit me with your best pick-up line.)]
+			察觉到你的意图后，[elizabeth.race]脸上的微笑悄悄变成狡黠的假笑。她高兴地站起来，走过来并坐在你旁边时，她开玩笑说，[elizabeth.speech(来吧，给我讲讲你最精彩的搭讪词。)]
 		#ELSE
-			 Although the smile on her face remains, you can tell that the [elizabeth.race] is a little hesitant as she stands up and steps over to sit beside you. Clearly having realised what it is you're after, she crosses her legs and somewhat-stiffly sighs, [elizabeth.speech(Go on then, hit me with your best pick-up line.)]
+			尽管她脸上笑容仍在，但你可以看出[elizabeth.race]走过来并坐在你旁边时有一点犹豫。显然，她已经意识到你想要的是什么，她跷起二郎腿，有点僵硬地叹了口气，[elizabeth.speech(来吧，给我讲讲你最精彩的搭讪词。)]
 		#ENDIF
 	</p>
 	<p>
-	    #IF(pc.hasTraitActivated(PERK_JOB_ARISTOCRAT))
-			Deciding to rely on the conversational skills taught to you during your aristocratic upbringing, you tactfully compliment Elizabeth's appearance, before telling her that you hope that she's engaging with you willingly, and not out of obligation due to noblesse oblige. Quickly charmed by your smooth talking, Elizabeth visibly relaxes and seems more comfortable in your presence when you go on to reveal to her that you're also from an aristocratic family. Soon enough, the two of you are alternating between flirting and talking about the finer points of duty and nobility. After delivering a compliment that makes your companion blush and smile, you remark upon the fact that the obligations of nobility are expected to come before personal happiness. It's at this point that the [elizabeth.race]'s [elizabeth.eyes+] light up and she exclaims, [elizabeth.speech(You're right! Oh, how I wish that I could abandon my boring duties, but I couldn't betray the expectations of my mother or sisters... I'm sure you know how that feels too, [pc.name].)]
-	    #ELSE
+	#IF(pc.hasTraitActivated(PERK_JOB_ARISTOCRAT))
+			你决定依靠你在贵族教养中学到的谈话技巧，你巧妙地赞美了伊丽莎白的外表，然后告诉她你希望她是自愿和你交往的，而不是出于贵族义务。伊丽莎白很快就被你的甜言蜜语迷住了，当你继续向她透露你也来自一个贵族家庭时，她明显放松了，在你面前似乎更自在了。很快，你们聊天的内容就在调情和谈论贵族礼节之间反复横跳。在说了一句让你的同伴脸红微笑的恭维话之后，你继续说，身既许国，何以许妾。听闻此言，[elizabeth.race][elizabeth.eyes+]亮起，并惊呼，[elizabeth.speech(你是对的！我多么希望我能放弃这无聊的工作，但我不能辜负我母亲或姐妹们的期望……[pc.name]，我相信你也知道那是什么感觉。)]
+	#ELSE
             #IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_CORRUPTION)>=50)
-				Doing as she asks, you give the [elizabeth.race] your best line, which results in her blushing a little and reluctantly admitting that it wasn't too bad. Following up with a flirtatious comment, you soon have Elizabeth giggling and responding in kind. Both from her reaction and the grin which soon settles on her face, you can tell that you're making a very good impression, and you soon notice that Elizabeth's rigid posture has visibly softened. As you give the pretty [elizabeth.race] another flirtatious compliment, she can't help but playfully laugh and exclaim, [elizabeth.speech(Oh really, [pc.name]! Now I understand how you were able to so easily deal with Lyssieth...)]
+				按照她的要求，你对[elizabeth.race]穷尽毕生所学的溢美之词，这导致她有点脸红，不情愿地承认这不是太糟糕。接着，你用一句轻浮的话让伊丽莎白咯咯地笑起来，并以同样的方式回应你。从她的反应和脸上的笑容，你可以看出你给她留下了良好的印象，你很快就注意到伊丽莎白原本僵硬的姿势放松了。当你再次给[elizabeth.race]一句轻浮的赞美时，她憋不住笑了，叫道，[elizabeth.speech(天呐，[pc.name]！现在我明白你怎么能轻易地对付莉西丝了……)]
             #ELSE
-				Doing as she asks, you give the [elizabeth.race] your best line, which unfortunately falls flat and results in her letting out an awkward laugh. Doing your best to salvage the situation, you follow up with a flirtatious comment, which seems to be appreciated by Elizabeth, but in itself is not enough to wipe away the memory of your failed pick-up line. Not letting your initial failure discourage you, you continue to flirt with your companion, and after a short while you see her rigid posture visibly softening. Eventually, however, your flirtatious conversation comes to an end, and Elizabeth smiles and says in a slightly horny manner, [elizabeth.speech(That was fun, [pc.name]. It makes a nice change to be able to speak to someone other than my sisters.)]
+				按照她的要求，你对[elizabeth.race]穷尽毕生所学的溢美之词，但不幸的是，此举没有奏效，结果她尴尬地笑了出来。你尽你所能挽救局面，接着说了一句调情的话，这似乎得到了伊丽莎白的赞赏，但这本身并不足以抹去你失败搭讪的记忆。你没有因为最初的失败而气馁，而是继续和伊丽莎白调情。过了一会儿，你看到她原本僵硬的姿势放松了。然而，天下没有不散的筵席，伊丽莎白笑了笑，用一种略带淫荡的口吻说，[elizabeth.speech([pc.name]，你真有趣。我能和我妹妹以外的人说话真是个不错的改变。)]
             #ENDIF
         #ENDIF
 	</p>
 	<p>
-	    #IF(elizabeth.getAffection(pc)>=25)
+	#IF(elizabeth.getAffection(pc)>=25)
 			#IF(pc.hasTraitActivated(PERK_JOB_ARISTOCRAT) || pc.getAttributeValue(ATTRIBUTE_MAJOR_CORRUPTION)>=50)
-				Having her right where you want her, you tell Elizabeth that you feel like the two of you have got a lot closer to one another.
+				一切尽在掌控，你告诉伊丽莎白你觉得你们俩更亲近了。
 			#ELSE
-				Although the two of you haven't really managed to hit it off, you feel that from your repeated meetings you've by now got a lot closer to one another.
+				虽然你们两个还没有真正做到一拍即合，但你觉得通过反复的会面，生米快煮成熟饭了。
 			#ENDIF
-			 Telling her that you've enjoyed her company, you suggest that the two of you could do this again some time. Instead of politely responding in the affirmative as you expected, however, the [elizabeth.race] shuffles a little closer to you and reveals her true feelings.
+			你告诉她你很喜欢和她在一起，并建议找个时间再聚一次。然而，[elizabeth.race]向你靠近一点，透露她的真实感受，而不是像你期望的那样礼貌地给予肯定的回答。
 		#ELSE
-			Although she seems to have enjoyed your time together, you can tell that Elizabeth is wanting to head off and do something else now. Telling her that you've enjoyed her company, you suggest that the two of you could do this again some time. 
+			虽然她似乎很享受你们在一起的时光，但你可以看出伊丽莎白现在想要离开。你告诉她你很喜欢和她在一起，并建议找个时间再聚一次。
 		#ENDIF
 	</p>
-    ]]>
-    </htmlContent>
+    
+    ]]></htmlContent>
 
     <htmlContent tag="INTERACTION_END"><![CDATA[
 	<p>
-	    #IF(elizabeth.getAffection(pc)>=25)
-            [elizabeth.speech(You know [pc.name], I may look mostly human, but in times like this I feel more like a succubus,)] [elizabeth.name] teases, and as her tail snakes around to wrap around your [pc.leg(true)], she gazes at you with an unmistakable hunger in [elizabeth.her] eyes. Placing one of her feminine hands on your [pc.arm(true)], she leans in a little closer and suggests, [elizabeth.speech(Why don't we take this a bit further? I can tell that you want it...)]
+	#IF(elizabeth.getAffection(pc)>=25)
+            [elizabeth.speech([pc.name]，你知道的，我可能在平时表现得像人类，但在此时，我觉得自己更像魅魔，)][elizabeth.name]一边挑逗，一边用她的蛇形尾巴缠绕你的[pc.leg(true)]，[elizabeth.her]眼睛带着一种明显的饥渴凝视着你。她一边将曲线优美的手臂搭在你的[pc.arm(true)]上，一边接近你，说，[elizabeth.speech(我们为什么不更进一步呢？我知道你想要的……)]
         #ELSE
-            [elizabeth.speech(Yes, it's been nice spending time with you [pc.name],)] [elizabeth.Name] says, and as she stands up she states, [elizabeth.speech(I wouldn't mind doing this again. For now, however, I have other matters to attend to...)]
+            [elizabeth.speech(是的，[pc.name]，和你在一起很愉快，)][elizabeth.Name]边起身边说，[elizabeth.speech(我不介意再来一次。不过现在，我还有别的事要处理……)]
         #ENDIF
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="INTERACTION_EXIT"><![CDATA[
 	<p>
-	    #IF(elizabeth.getAffection(pc)>=25)
-			Not wanting to go all the way and have sex with Elizabeth, you let her down as gently as you can. Excusing yourself, you then stand up and prepare to head back out into the corridor. As you turn to leave, the [elizabeth.race] strides forwards to join you, and as the two of you exit the room, she states in a disappointed tone, [elizabeth.speech(Well, I suppose that I've got other matters to attend to this evening... I'll see you another time, [pc.name].)]
+	#IF(elizabeth.getAffection(pc)>=25)
+			你不愿结果是和伊丽莎白上床，所以你尽量委婉地拒绝她。你找了个借口，然后站起来准备返回走廊。当你转身离开的时候，[elizabeth.race]大步走到你身边。当你俩离开房间时，她失望地说，[elizabeth.speech(嗯，我想今晚我还有别的事要办……[pc.name]，下次见。)]
 		#ELSE
-			Sensing that your time with Elizabeth is at an end, you excuse yourself and stand up. As you turn to leave, the [elizabeth.race] strides forwards to join you, and as the two of you exit the room, she states, [elizabeth.speech(Well, I suppose that I'll see you another time, [pc.name].)]
+			你感觉时候不早了，找个借口站了起来。当你转身离开的时候，[elizabeth.race]大步走到你身边。当你俩离开房间时，她说，[elizabeth.speech(好吧，[pc.name]，我想我们下次再见吧。)]
 		#ENDIF
 	</p>
 	<p>
-		With that, Elizabeth hurries off down the corridor, leaving you wondering where to go to next...
+		说完，伊丽莎白匆匆离开了走廊，留下不知所措的你……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
     <htmlContent tag="SEX_START"><![CDATA[
 	<p>
-	    Unable to deny your feelings towards this horny [elizabeth.race], you ask her what exactly she had in mind.
+	无法否认你对色情[elizabeth.race]的感觉，你问她到底有什么想法。
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, true))
-			Choosing to give you a physical response, Elizabeth leans in towards you, and before you can react, she presses her [elizabeth.lips+] against yours and desperately thrusts her tongue into your mouth. Making erotic, muffled moans, she passionately starts making out with you.
+			选择给你身体上的回应，伊丽莎白靠在你身上，在你可以反应之前，她就把[elizabeth.lips+]印了上来，故意把舌头塞进你的嘴巴里面。发出色情又迷迷糊糊的呻吟，她热情地挑逗着你。
 		#ELSE
-			Choosing to give you a physical response, Elizabeth leans in towards you, and before you can react, she plants a series of passionate kisses over your body.
+			选择给你身体上的回应，伊丽莎白靠在你身上，在你可以反应之前，她就在你的身体上种下一连串热情的吻。
 		#ENDIF
 	</p>
 	<p>
-		Out of the corner of your eye you see the couple of maids standing on one side of the room casting fleeting glances at you and Elizabeth. Not deterred by the onlookers, your partner continues passionately grinding up against you and showering you with kisses.
+		从眼角的余光里面，你看见了站在房间一侧的那对女仆向你和伊丽莎白投来了短暂的目光。没有被观众打扰，你的同伴继续激情地与你厮磨，并向你献上香吻。
 	</p>
 	#IF(pc.hasPenis() && pc.isAbleToAccessCoverableArea(CA_PENIS, true))
 		<p>
-			Her [elizabeth.hands+] then find their way down to your groin, before quickly freeing your [pc.penis+]. Breaking off the kiss, she lies back on the sofa and pushes her thighs together, before grabbing your hard [pc.penis] and guiding it between her [elizabeth.legs+]. Letting out a deep, erotic moan as your cock slides between her thighs, the [elizabeth.race] exclaims, [elizabeth.speech(~Ooh!~ Come on, [pc.name]! Let me give you the best thigh-job ever!)]
+			她的[elizabeth.hands+]随后伸到你的腹部下面，然后快速地掏出了你的[pc.penis+]。停止亲吻之后，她躺到了沙发上，把腿并拢，然后握住你的硬[pc.penis]，把它夹在她的[elizabeth.legs+]之间。你的鸡巴在她的大腿间滑动，她发出了一声深深的艳叫，这个[elizabeth.race]叫道，[elizabeth.speech(~啊！~ 快点，[pc.name]！让我给你做一次最爽的腿交！)]
 		</p>
 	#ELSEIF(pc.hasVagina() && pc.isAbleToAccessCoverableArea(CA_VAGINA, true))
 		<p>
-			Her [elizabeth.hands+] then find their way down to your groin, before quickly freeing your [pc.pussy+]. Breaking off the kiss, she pushes you back on the sofa, before moving up between your [pc.legs]. Letting out a deep, erotic moan, she presses her pussy down against yours, and as she starts tribbing with you, she exclaims, [elizabeth.speech(~Ooh!~ Yes, [pc.name]! Your pussy feels so good!)]
+			她的[elizabeth.hands+]随后伸到你的腹部下面，然后快速地露出了你[pc.pussy+]。停止亲吻之后，她把你推到在沙发上，然后移动到你的[pc.legs]上。发出了一声深深的艳叫，她把自己的小穴紧紧贴在你的上面，并开始与你摩擦，她尖叫道，[elizabeth.speech(~啊！~ 爽啊，[pc.name]！你的逼太舒服了！)]
 		</p>
 	#ELSE
 		<p>
-			[elizabeth.speech(~Mmm!~ Come on, [pc.name]! Let's fuck!)] she passionately exclaims.
+			[elizabeth.speech(~嗯！~ 快点！[pc.name]！我要操你！)]她激情地叫道。
 		</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="AFTER_SEX"><![CDATA[
 	#IF(sex.isSatisfiedFromOrgasms(elizabeth, true))
 		<p>
-			Letting out a deeply satisfied sigh, Elizabeth pulls back and collapses down onto the plush sofa. With her [elizabeth.breasts+] rising and falling with every breath, the [elizabeth.race] smiles at you and states, [elizabeth.speech(Damn, that was good... We should do this more often!)]
+			发出了满足之后的叹息，伊丽莎白向后退了一步，倒在了长毛绒沙发上。她[elizabeth.breasts+]随着呼吸起伏着，这个[elizabeth.race]对你笑着说，[elizabeth.speech(妈的，真爽……我们要经常做！)]
 		</p>
 		<p>
-			Agreeing with her statement, you copy Elizabeth as she starts gathering her discarded clothing and getting dressed. A moment later, and the two of you are ready to go, at which point your partner reveals, [elizabeth.speech(I've got some other things to be doing this evening, so I'll see you around, [pc.name]!)]
+			同意了她的说法，你也和她一样，捡起四散的衣物然后穿好。过了一会，你们两个打算走了，在这时你的同伴说到，[elizabeth.speech(我晚上还有其他事情要做，所以再见啦，[pc.name]！)]
 		</p>
 		<p>
-	        With your intimate experience with Elizabeth at an end, you join her in heading over to the room's exit, leaving a couple of furiously blushing maids in your wake...
+	随着你和伊丽莎白的私密体验结束，你和她一起走向房间的出口，把一对脸色通红的女仆留在身后……
 		</p>
 	#ELSE
 		<p>
-			Seeing that you've had enough, Elizabeth lets out a frustrated sigh, before pulling back and collapsing down onto the plush sofa. With her [elizabeth.breasts+] rising and falling with every breath, the [elizabeth.race] frowns at you and exclaims, [elizabeth.speech(Well! That really wasn't good enough, [pc.name]!)]
+			看见你玩累了，伊丽莎白失望地叹了一声，然后向后退了一步，倒在了长毛绒沙发上。她[elizabeth.breasts+]随着呼吸起伏着，这个[elizabeth.race]朝你皱眉，然后叫道，[elizabeth.speech(好吧！一点也不够，[pc.name]！)]
 		</p>
 		<p>
-			Huffing and puffing in annoyance, the [elizabeth.race] quickly sets about gathering her discarded clothing and getting dressed. A moment later, and the two of you are ready to go, at which point your partner pouts and exclaims, [elizabeth.speech(Next time, pay some more attention to my needs!)]
+			气喘吁吁地烦恼着，这个[elizabeth.race]快速开始捡起四散的衣物然后穿好。过了一会，你们两个打算走了，在这时你的同伴噘嘴说道，[elizabeth.speech(下一次要更加注意满足我的需求呀！)]
 		</p>
 		<p>
-	        With your intimate experience with Elizabeth at an end, you join her in heading over to the room's exit, leaving a couple of furiously blushing maids in your wake...
+	随着你和伊丽莎白的私密体验结束，你和她一起走向房间的出口，把一对脸色通红的女仆留在身后……
 		</p>
 	#ENDIF
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 
     <htmlContent tag="AFTER_SEX_EXIT"><![CDATA[
 	<p>
-		You and Elizabeth exit the room, at which point the [elizabeth.race]
+		你和伊丽莎白离开了房间，在这个时候，这个[elizabeth.race]
 		#IF(sex.isSatisfiedFromOrgasms(elizabeth, true))
-			 winks at you and teases, [elizabeth.speech(I look forward to your next visit, [pc.name]...)]
+			对你眨眨眼，戏弄道，[elizabeth.speech(我十分期待你的下一次到来哦，[pc.name]……)]
 		#ELSE
-			 pouts at you one last time and demands, [elizabeth.speech(Next time, [pc.name], make sure that I'm satisfied too!)]
+			最后再一次对你噘了噘嘴，命令道，[elizabeth.speech(下次，[pc.name]，也要满足我！)]
 		#ENDIF
 	</p>
 	<p>
-		With that, Elizabeth hurries off down the corridor, leaving you wondering where to go to next...
+		说完这个，伊丽莎白迅速消失在了走廊，留下你思考该去哪里……
 	</p>
-	]]>
-    </htmlContent>
+	
+    ]]></htmlContent>
 	
 </dialogue>

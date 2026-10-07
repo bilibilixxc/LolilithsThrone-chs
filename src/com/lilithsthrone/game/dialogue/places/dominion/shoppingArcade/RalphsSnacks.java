@@ -48,7 +48,7 @@ public class RalphsSnacks {
 		}
 	}
 	
-	public static final DialogueNode EXTERIOR = new DialogueNode("Ralph's Snacks (Exterior)", "-", false) {
+	public static final DialogueNode EXTERIOR = new DialogueNode("拉尔夫小吃店(外部)", "-", false) {
 
 		@Override
 		public String getContent() {
@@ -65,9 +65,9 @@ public class RalphsSnacks {
 			if(responseTab==0) {
 				if (index == 1) {
 					if(!Main.game.isExtendedWorkTime()) {
-						return new Response("Enter", "'Ralph's Snacks' is currently closed, so you'll have to come back during opening hours if you wanted to take a look inside.", null);
+						return new Response("进入", "“拉尔夫小吃店”现在打烊了。如果你想进去转转，得等营业时间再来。", null);
 					}
-					return new Response("Enter", "Step inside Ralph's Snacks.", INTERIOR){
+					return new Response("进入", "进入拉尔夫小吃店。", INTERIOR){
 						@Override
 						public void effects() {
 							resetDiscountCheck();
@@ -79,47 +79,47 @@ public class RalphsSnacks {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR = new DialogueNode("Ralph's Snacks", "-", true) {
+	public static final DialogueNode INTERIOR = new DialogueNode("拉尔夫小吃店", "-", true) {
 
 		@Override
 		public String getContent() {
 			
 			if(!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.ralphIntroduced)) {
 				return "<p>"
-							+ "You push the door open and step inside, looking up as a little bell rings to announce your arrival."
-							+ " [ralph.speech(Hey there! If you need any help, just ask!)] a horse-boy shouts to you from behind the counter."
+							+ "你推开门走了进去，一声欢迎的铃声响起，让你下意识向上瞧了一眼。"
+							+ "[ralph.speech(你好啊！有什么事情说就是了！)]一位马男在柜台后面朝你喊道。"
 						+ "</p>"
 						+ "<p>"
-							+ "You thank the horse-boy, who you assume to be Ralph, and start to have a look around his shop."
-							+ " Most of the goods aren't anything special, and are just the typical sorts of food and drink that you could pick up almost anywhere."
-							+ " What sets this shop apart, however, is a special display of arcane-imbued consumables."
-							+ " The prices aren't listed, and instead, a little label reads 'Please ask Ralph for assistance with these items'."
+							+ "你谢过了那马男，他应该就是拉尔夫，开始在商店里环顾四周。"
+							+ "大多数商品都没什么特殊之处，就是各种随处可见的食物饮料。"
+							+ "但真正让这家商店与众不同的，确是那些特别展示出来的注入奥术的消耗品。"
+							+ "价格并没有标出来，只是有个标签上写着：“这些物品请向拉尔夫寻求帮助”。"
 						+ "</p>";
 				
 			} else {
 				UtilText.nodeContentSB.setLength(0);
 				
 				UtilText.nodeContentSB.append("<p>"
-							+ "You make your way over, once again, to the only place in the shopping arcade that sells food to go."
-							+ " From the outside, it looks like an old-fashioned sweet shop, with large glass windows displaying all manner of exotic-looking food and drink."
-							+ " The words 'Ralph's Snacks' are painted in gold cursive letters above the entrance, and as you push the door open and step inside, a little bell rings to announce your arrival."
+							+ "你再一次走进来，这个购物中心唯一售卖食品的地方。"
+							+ "从外面看，这家店就像是一间旧式的糖果店，巨大的玻璃窗展示着形色各异的食物和饮料。"
+							+ "“拉尔夫小吃店”几个字用金色的草书写着挂在入口正上，你推开门走了进去，一枚小铃铛叮铃作响，欢迎着你的到来。"
 						+ "</p>"
 						+ "<p>"
 						+ (Main.game.getDialogueFlags().getSavedLong(Ralph.RALPH_DISCOUNT_TIMER_ID)>0
-								?"As you enter the shop, Ralph winks at you and calls out from behind the very-familiar counter,"
-									+" [ralph.speech(Ah, well if it isn't my favourite regular! If you need any help, you know how to ask!)]"
-								:"[ralph.speech(Hello again! If you need any help, just ask!)] the familiar horse-boy shouts to you from behind the counter.")
+								?"你进入商店时，拉尔夫朝眨了眨眼，从那个是已经十分熟悉的柜台后喊道，"
+									+"[ralph.speech(啊，这不是我最爱的老顾客吗！如果有什么要帮忙的，我想你知道该怎么问的！)]"
+								:"[ralph.speech(又见面了！有什么事情说就是了！)]那个熟悉的马男又从柜台后朝你喊道。")
 						+ "</p>"
 						+ "<p>"
-							+ "You thank Ralph, and start to have a look around his shop."
-							+ " Most of the goods aren't anything special, and are just the typical sorts of food and drink that you could pick up anywhere."
-							+ " What sets this shop apart, however, is a special display of arcane-imbued consumables."
-							+ " The prices aren't listed, and instead, a little label reads 'Please ask Ralph for assistance with these items'."
+							+ "你谢过拉尔夫，开始在商店里打量起来。"
+							+ "大多数商品都没什么特殊之处，就是各种随处可见的食物饮料。"
+							+ "但真正让这家商店与众不同的，确是那些特别展示出来的注入奥术的消耗品。"
+							+ "价格并没有标出来，只是有个标签上写着：“这些物品请向拉尔夫寻求帮助”。"
 						+ "</p>");
 					
 				if(((Ralph)Main.game.getNpc(Ralph.class)).isDiscountActive()){
 					UtilText.nodeContentSB.append("<p>"
-									+ "<b>Ralph is giving you a</b> <b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>"+Main.game.getDialogueFlags().ralphDiscount+"%</b> <b>discount!</b>"
+									+ "<b>拉尔夫会给你</b><b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>"+Main.game.getDialogueFlags().ralphDiscount+"%</b>的<b>折扣！</b>"
 								+ "</p>");
 				}
 				
@@ -131,7 +131,7 @@ public class RalphsSnacks {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseTrade("Trade with Ralph", "Go and ask Ralph about the special consumables on display.", Main.game.getNpc(Ralph.class)){
+				return new ResponseTrade("跟拉尔夫交易", "问一下拉尔夫那些展示出来的特别消耗品。", Main.game.getNpc(Ralph.class)){
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().values.add(DialogueFlagValue.ralphIntroduced);
@@ -141,7 +141,7 @@ public class RalphsSnacks {
 				
 			} else if (index == 2) {
 				if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					return new Response("Discount", "Ask Ralph if there's anything you can do to get a discount.", INTERIOR_ASK_FOR_DISCOUNT){
+					return new Response("折扣", "询问拉尔夫能不能给你一点折扣。", INTERIOR_ASK_FOR_DISCOUNT){
 						@Override
 						public void effects() {
 							Main.game.getDialogueFlags().values.add(DialogueFlagValue.ralphIntroduced);
@@ -150,7 +150,7 @@ public class RalphsSnacks {
 					};
 					
 				} else {
-					return new Response("Discount", "You can only get a discount from Ralph if he's able to gain access to your mouth!", null);
+					return new Response("折扣", "只有在能使用嘴巴的时候才能从拉尔夫那里取得折扣！", null);
 					
 				}
 
@@ -158,10 +158,10 @@ public class RalphsSnacks {
 					&& Main.game.getPlayer().hasQuest(QuestLine.SIDE_BUYING_BRAX)
 					&& Main.game.getPlayer().getQuest(QuestLine.SIDE_BUYING_BRAX)==Quest.BUYING_BRAX_LIPSTICK
 					&& !Main.game.getPlayer().hasItemType(ItemType.CANDI_HUNDRED_KISSES)) {
-					return new Response("Candi's lipstick",
+					return new Response("坎迪的口红",
 							!Main.game.getDialogueFlags().values.contains(DialogueFlagValue.ralphAskedAboutHundredKisses)
-								?"Ask Ralph if he has a box of 'A Hundred Kisses', and if he'd be willing to sell it to you."
-								:"Ask Ralph if he still has the box of 'A Hundred Kisses' for sale.",
+								?"询问拉尔夫有没有“百万之吻”，愿不愿意卖给你。"
+								:"询问拉尔夫那盒“百万之吻”还卖不卖。",
 							CANDI_LIPSTICK) {
 						@Override
 						public void effects() {
@@ -170,7 +170,7 @@ public class RalphsSnacks {
 					};
 
 			} else if (index == 0) {
-				return new Response("Leave", "Leave Ralph's shop.", EXTERIOR){
+				return new Response("离开", "离开拉尔夫的商店。", EXTERIOR){
 					@Override
 					public void effects() {
 						Main.game.setResponseTab(0);
@@ -185,67 +185,67 @@ public class RalphsSnacks {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_ASK_FOR_DISCOUNT = new DialogueNode("Ralph's Snacks", "-", true, true) {
+	public static final DialogueNode INTERIOR_ASK_FOR_DISCOUNT = new DialogueNode("拉尔夫小吃店", "-", true, true) {
 		@Override
 		public String getContent() {
 			if(Main.game.getDialogueFlags().getSavedLong(Ralph.RALPH_DISCOUNT_TIMER_ID)>0){
 				return "<p>"
-						+"Glancing over to the other side of the shop, you see Ralph giving you a cheerful wave from behind the counter."
-						+ " Images of his massive equine cock flash across your mind, and you let out a tiny moan as you remember it sliding deep down your throat..."
-						+ " His wide, flared head ramming its way past your lips... And the taste of his salty precum as saliva drools from your mouth..."
+						+"你望向商店的另一边，只见满面春光的拉尔夫正在柜台后向你招手。"
+						+ "他巨大的马屌的样子从你的脑中一闪而过，那深深送入咽喉的感觉，让你不禁轻声呻吟出来……"
+						+ "他宽大平坦的龟头在你的嘴唇间肆虐……那微咸的先走液的味道让你口水直流……"
 					+ "</p>"
 					+ "<p>"
-						+"A familiar voice suddenly snaps you out of your daydream, "
-						+ "[ralph.speech(Hey, are you alright?)]"
+						+"一个熟悉的声音突然将你从白日梦中唤醒，"
+						+ "[ralph.speech(嘿，你没事吧？)]"
 					+ "</p>"
 					+ "<p>"
-					 	+ "You were so engrossed in your fantasy that you didn't notice Ralph walking up to you, and, having been caught completely off-guard, you blurt out a reply in the affirmative."
-					 	+ " As you turn to face the muscular horse-boy, you notice that his eyes have started to roam up and down your body, and you get the feeling that he knows exactly what you were imagining."
-						+ " Glancing down, you see a distinctive bulge forming between his legs, but before you can react to the sight of Ralph's growing erection, he steps forwards, pinning you back against the wall."
+					 	+ "你深深沉迷于幻想之中，没有注意到拉尔夫已经走了过来。你一时间措手不及，不假思索地表示自己没事。"
+					 	+ "你转身看到那肌肉充盈的马男时，发现他的眼神已经在你身上游走，你觉得他早就知道你在幻想什么了。"
+						+ "你低头瞄了一眼，他的股间已经撑起了格外明显的帐篷，没等你对拉尔夫勃起的景象做出反应，他便已经迅速上前一步，把你按在了墙上。"
 					+ "</p>"
 					+ "<p>"
-						+ "[ralph.speech(Fancy another taste?)] he slyly asks, before grinning deviously at you and leaning in a little closer."
-						+ " As you feel his hot breath on your face, the horse-boy continues, "
-						+ "[ralph.speech(Let me blow a load down that pretty little throat of yours, and I'll give you twenty-five percent off everything I have in stock for a few days.)]"
+						+ "[ralph.speech(还想再尝尝吗？)]他狡猾地问道，接着笑得更加奸诈，身体也更近一分。"
+						+ "你感受到他灼热的呼吸扑打在你的脸上，那马男继续道，"
+						+ "[ralph.speech(那就让我在你可爱的喉咙里释放一下吧，这几天商店里所有的东西都给你七五折。)]"
 					+ "</p>"
 					+ "<p>"
-						+ "As Ralph steps forwards and presses his hot body against yours, you struggle to get the image of his massive, throbbing black horse-cock out of your mind,"
-							+ " and as the tent in his trousers comes into contact with your leg, you blurt out your reply."
+						+ "拉尔夫又踏前一步，把他燥热的身子跟你紧贴在一起，他深黑色的巨大马屌颤动不已的样子，在你的脑海中挥之不去，"
+							+ "他裤子上的帐篷已经碰到了你的腿，你的回应顿时脱口而出。"
 					+ "</p>";
 				
 			}else{
 				return "<p>"
-							+ "You get the feeling that the price of many of these items is inflated past what would be considered a fair markup."
-							+ " Glancing over to the other side of the shop, you see Ralph giving you a cheerful wave from behind the counter."
-							+ " Encouraged by his disarming smile and friendly face, you decide to ask him if there's any way you can get a discount on some of these transformative items, and start to walk over to him."
+							+ "你觉得商品的价格都被抬高了，远超人们认为的合理价格。"
+							+ "你瞄向商店的另一边，只见满面春光的拉尔夫正在柜台后向你招手"
+							+ "在他迷人的微笑和友好的面孔的激励下，你决定问一问他，有没有什么方法可以让你打折购买这些特殊的物品，于是向他走去。"
 						+ "</p>"
 						+ "<p>"
-							+ "As he sees you approaching, Ralph calls out to you, [ralph.speech(Hello! Is there anything I can help you with?)]"
+							+ "拉尔夫看到你走了过来，直接高声喊道，[ralph.speech(你好啊！我能帮到你什么吗？)]"
 						+ "</p>"
 						+ "<p>"
-							+ "[pc.speech(Hi there, I was wondering if you could show me the prices of some of these items,)] you reply." 
+							+ "[pc.speech(你好，不知道你能不能给我看看这些物品的价格，)]你回应道。" 
 						+ "</p>"
 						+ "<p>"
-							+ "Ralph cheerfully leads you back over to the special display, and as he informs you of some of the prices, your suspicions prove to be correct."
-							+ " While some of the items are a reasonable price, the more exotic foodstuffs are quite expensive."
-							+ " Looking across at the friendly shopkeeper, you ask him if there's any way he'd drop the prices a little."
+							+ "拉尔夫兴高采烈地把你带回了特殊展柜前，告诉了你这些物品的价格，你的怀疑坐实了。"
+							+ "虽然有些东西价格还算合适，但越是少见的食物就越是溢价严重。"
+							+ "你看着这位友善的店主，便问他能不能稍稍降一下价格。"
 						+ "</p>"
 						+ "<p>"
-							+ "[ralph.speech(Hmm,)] he says, glancing over at you, "
-							+ "[ralph.speech(I suppose we could work something out...)]"
+							+ "[ralph.speech(哼嗯，)]他朝你扫了一眼，"
+							+ "[ralph.speech(我觉得还是有办法的……)]"
 						+ "</p>"
 						+ "<p>"
-							+ "You notice that his smile has suddenly lost its friendly appearance, and as his eyes roam up and down your body, you get the feeling that this horse-boy is having some dirty thoughts."
-							+ " Glancing down, you see a distinctive bulge forming between his legs, but before you can react to the sight of Ralph's growing erection, he steps forwards, pinning you back against the wall."
+							+ "你注意到他的笑容不再留有一丝善意，眼睛也在你身上来回游走起来，你觉得这马男一定是在想什么不好的事情。"
+							+ "你低头瞄了一眼，他的股间已经撑起了格外明显的帐篷，没等你对拉尔夫勃起的景象做出任何反应，他便已经迅速上前一步，把你按在了墙上。"
 						+ "</p>"
 						+ "<p>"
-							+ "[ralph.speech(Fancy a taste?)] he slyly asks, before grinning deviously at you and leaning in a little closer."
-							+ " As you feel his hot breath on your face, the horse-boy continues, "
-							+ "[ralph.speech(Let me blow a load down that pretty little throat of yours, and I'll give you twenty-five percent off everything I have in stock for a few days.)]"
+							+ "[ralph.speech(想尝尝吗？)]他狡黠地问道，接着邪魅一笑，又凑近了些。"
+							+ "你感受到他灼热的呼吸扑打在你的脸上，那马男继续道，"
+							+ "[ralph.speech(那就让我在你可爱的喉咙里释放一下吧，这几天商店里所有的东西都给你七五折。)]"
 						+ "</p>"
 						+ "<p>"
-							+ "As Ralph steps forwards and presses his hot body against yours, you struggle to get the image of his massive, throbbing black horse-cock out of your mind,"
-								+ " and as the tent in his trousers comes into contact with your leg, you blurt out your reply."
+							+ "拉尔夫又踏前一步，把他燥热的身子跟你紧贴在一起，他深黑色的巨大马屌颤动不已的样子，在你的脑海中挥之不去，"
+								+ "他裤子上的帐篷已经碰到了你的腿，你的回应顿时脱口而出。"
 						+ "</p>";
 			}
 		}
@@ -253,7 +253,7 @@ public class RalphsSnacks {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Agree", "Agree to do as Ralph says and suck his cock.", Util.newArrayListOfValues(Fetish.FETISH_ORAL_GIVING),
+				return new ResponseSex("同意", "按拉尔夫说的做，吮吸他的鸡巴。", Util.newArrayListOfValues(Fetish.FETISH_ORAL_GIVING),
 						null, CorruptionLevel.TWO_HORNY, null, null, null,
 						true, true,
 						new SMRalphDiscount(
@@ -263,41 +263,41 @@ public class RalphsSnacks {
 						null,
 						AFTER_SEX,
 						"<p>"
-							+ UtilText.parsePlayerSpeech("Ok, I'll do it,") + " you say, looking up at Ralph to see his smile grow even wider." + "</p>" + "<p>"
-							+ "He leans in, and you half-expect him to try and kiss you, but instead, he simply grabs your " + Main.game.getPlayer().getArmNameSingular() + " and starts to drag you back to his desk."
-							+ " As he walks, he starts instructing you on what's about to happen."
+							+ UtilText.parsePlayerSpeech("好吧，我会去做的。") + "你回应道，抬头看到拉尔夫笑得更欢了。" + "</p>" + "<p>"
+							+ "他将身子靠了过来，你以为他要亲上来了，但却并非如此，他只是抓住你的" + Main.game.getPlayer().getArmNameSingular() + "，把你拖向了他的桌子旁。"
+							+ "过程中他便开始告诉你接下来将要发生的事情。"
 						+ "</p>"
 						+ "<p>"
-							+ UtilText.parseSpeech("You're going to kneel under my desk over here, and I don't expect to have to do any of the work, understood?", Main.game.getNpc(Ralph.class))
-							+ " he asks, and as you answer in the affirmative, he continues, "
-							+ UtilText.parseSpeech("This is a respectable shop, so if anyone comes in, you're to keep quiet! For each customer that hears you, I'm going to knock five percent off our deal.", Main.game.getNpc(Ralph.class))
+							+ UtilText.parseSpeech("你跪在桌子下面就好，而且不要妄想我主动做什么，明白了吗？", Main.game.getNpc(Ralph.class))
+							+ "他问完后，你肯定地回答了他，他便继续道，"
+							+ UtilText.parseSpeech("这家店是很体面的，有人进来的时候你就保持安静！每有一个顾客听见你的声音，那我就要从折扣中扣除半折。", Main.game.getNpc(Ralph.class))
 						+ "</p>"
 						+ "<p>"
-							+ "By this time, Ralph has led you behind the shop's front desk, and you see that there's a hollow space beneath the counter-top"
+							+ "此时拉尔夫已经带你到了柜台的后面，你发现柜台下方有一块空间，"
 							+(Main.game.getPlayer().isTaur()
-								?". Even with the size of your lower [pc.legRace]'s body, there's just about enough room for you to duck down into."
-								:", large enough for you to kneel inside quite comfortably.")
-							+ " The desk's solid front conceals you from the rest of the shop, and you realise that if you keep quiet, any customers will be completely oblivious as to what's going on."
-							+ " Ralph places his hands on your shoulders, and, feeling that it's too late to back out now, you allow him to push you to your knees."
-							+ " Shuffling back, you occupy the space under his desk, and Ralph steps forwards, bringing the massive bulge in his trousers right up to your face."
+								?"即使是你[pc.legRace]的下半身，这块地方也足够你勉强缩身钻进去。"
+								:"刚好够你舒服地跪在下面。")
+							+ "柜台前面是实心的，在商店的其他位置都看不到你，你意识到只要保持安静，就不会有顾客注意到发生了什么。"
+							+ "拉尔夫用双手按住了你的肩头，你觉得现在再反悔已经来不及了，于是就任他把你按了下去。"
+							+ "你向后挪动了一点，进入了柜台底下的空间，拉尔夫此时也走了上来，裤子上那庞大的鼓包正顶在你的脸上。"
 						+ "</p>"
 						+ "<p>"
-							+ UtilText.parseSpeech("Make sure you give my balls some attention as well,", Main.game.getNpc(Ralph.class)) + " you hear him command."
+							+ UtilText.parseSpeech("别忘了关注一下我的蛋蛋，", Main.game.getNpc(Ralph.class)) + "你听到他命令道。"
 						+ "</p>"
 						+ "<p>"
-							+ "Just as you're about to answer him, you hear the little bell over the shop's front door ring out, announcing the arrival of a customer."
-							+ " You hear Ralph calling out his friendly greeting, but as he does so, he pushes his hips forwards, making it quite clear that he wants you to get started."
-							+ " There isn't much room for you to move around, and you realise that you're going to be totally restricted to using just your mouth in order to earn your discount."
+							+ "你正准备回答，却听到商店正门想起了铃声，这说明有顾客来了。"
+							+ "你又听见了拉尔夫那熟悉而友善的招呼，同时他也把腰向前一顶，显然是想告诉你该开始了。"
+							+ "你没有太多躲闪的空间，看样子为了得到折扣，你必须要用嘴豁出去了。"
 						+ "</p>"
 						+ "<p>"
-							+ "As the customer walks off to another part of the shop, Ralph reaches down and unbuttons his trousers."
-							+ " With a quick tug, he pulls them, along with his boxers, down to pool around his ankles."
-							+ " You feel your eyes go wide as you see the gigantic length of Ralph's rapidly-hardening horse-cock rise up to bump against your chin."
-							+ " His huge pair of black-skinned balls droop down loosely at the base of his bestial shaft, and you gulp at the thought of what's about to happen..."
+							+ "那顾客移动到了商店的另一边，拉尔夫趁机伸手，解开了裤子的纽扣。"
+							+ "他迅速一拽，就把裤子连同着内裤一起拉到了脚踝处。"
+							+ "你看到那根巨物立刻弹了出来，坚硬的马屌抵在了你的下巴上，你不禁瞪大了双眼。"
+							+ "他那对巨大的黑皮玉袋荡悠在那根野兽样子的肉棒之下，你幻想着接下来的场面，登时倒吸一口凉气……"
 						+ "</p>" 
 						+ "<p>" 
-							+ "<b>There are</b> <b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>no customers</b> <b>near the counter.</b>"
-							+ " <b>You will earn a</b> <b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>25%</b> <b>discount.</b>"
+							+ "<b>现在柜台附近</b><b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>没有顾客</b>。"
+							+ "<b>你将会获得</b><b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>25%</b>的<b>折扣。</b>"
 						+ "</p>"){
 					@Override
 					public void effects() {
@@ -309,7 +309,7 @@ public class RalphsSnacks {
 				};
 				
 			} else if (index == 2) {
-				return new Response("Refuse", "Tell him that you're not willing to do that.", INTERIOR_REFUSE_DISCOUNT_CONDITIONS);
+				return new Response("拒绝", "告诉他你不愿意。", INTERIOR_REFUSE_DISCOUNT_CONDITIONS);
 
 			} else {
 				return null;
@@ -317,32 +317,32 @@ public class RalphsSnacks {
 		}
 	};
 	
-	public static final DialogueNode INTERIOR_REFUSE_DISCOUNT_CONDITIONS = new DialogueNode("Ralph's Snacks", "-", true) {
+	public static final DialogueNode INTERIOR_REFUSE_DISCOUNT_CONDITIONS = new DialogueNode("拉尔夫小吃店", "-", true) {
 
 		@Override
 		public String getContent() {
 			if(Main.game.getDialogueFlags().getSavedLong(Ralph.RALPH_DISCOUNT_TIMER_ID)>0){
 				return "<p>"
-						+ "[pc.speech(No thanks,)] you force yourself to say, stepping to one side and moving away from the horny shopkeeper."
+						+ "[pc.speech(不必了，)]你强迫自己如此说道，从这个淫荡的店主身边躲开了。"
 					+ "</p>"
 					+ "<p>"
-						+ "[ralph.speech(Well, if you get a craving, I'm always ready to satisfy it!)] he laughs, turning around and heading back to his counter, "
-						+ "[ralph.speech(If you need anything else, just let me know.)]" 
+						+ "[ralph.speech(好吧，但你想要的话，我随时都可以满足你！)]他笑道，说完便转身回到了柜台后面，"
+						+ "[ralph.speech(还有什么别的需要就告诉我。)]" 
 					+ "</p>"
 					+ "<p>"
-						+ "You go back to browsing the shop's wares, the images of Ralph's massive black horse-cock refusing to budge from your head."
+						+ "你继续浏览起店里商品，可拉尔夫巨大的黑色马屌却总是在你脑内萦绕。"
 					+ "</p>";
 				
 			}else{
 				return "<p>"
-							+ "[pc.speech(No thanks,)] you say, stepping to one side and moving away from the horny shopkeeper."
+							+ "[pc.speech(不必了，)]你说道，从这个淫荡的店主身边躲开了。"
 						+ "</p>"
 						+ "<p>"
-							+ "[ralph.speech(Well, no harm in either of us asking!)] he laughs, turning around and heading back to his counter. "
-							+ "[ralph.speech(If you need anything else, just let me know.)]" 
+							+ "[ralph.speech(好吧，问问又没有坏处！)]他笑道，说完便转身回到了柜台后面。"
+							+ "[ralph.speech(还有什么别的需要就告诉我。)]" 
 						+ "</p>"
 						+ "<p>"
-							+ "You go back to browsing the shop's wares, but you find it hard to shake the image of Ralph's massive bulge from your head."
+							+ "你继续浏览起店里商品，但你脑中却总是不时想起拉尔夫胯下巨大的鼓起。"
 						+ "</p>";
 			}
 		}
@@ -353,20 +353,20 @@ public class RalphsSnacks {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Shopping", "Return to browsing the wares in Ralph's shop.", true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("购物", "继续浏览拉尔夫商店里的商品。", true) {
 		
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Ralph returns to running his shop, and you walk back over to the transformative consumables section, wondering if you should buy anything with your discount."
-						+ " When he's sure that nobody else is watching, Ralph gazes lustfully at your body, and you're pretty sure that you could convince him to give you another \"discount\" any time you wanted it."
+						+ "拉尔夫也继续经营店铺了，你又走到转化消耗品的位置，思考着要不要利用折扣买些东西。"
+						+ "拉尔夫确定附近没有别人在看着，便向你的身体投来了淫荡的目光，你敢肯定如果自己想要，随时都能说服他再给你一次“折扣”。"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on browsing the wares in Ralph's shop.", RalphsSnacks.INTERIOR);
+				return new Response("继续", "继续浏览拉尔夫店内的商品。", RalphsSnacks.INTERIOR);
 			} else {
 				return null;
 			}
@@ -381,7 +381,7 @@ public class RalphsSnacks {
 		return price;
 	}
 	
-	public static final DialogueNode CANDI_LIPSTICK = new DialogueNode("Ralph's Snacks", "-", true) {
+	public static final DialogueNode CANDI_LIPSTICK = new DialogueNode("拉尔夫小吃店", "-", true) {
 
 		@Override
 		public String getContent() {
@@ -394,10 +394,10 @@ public class RalphsSnacks {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getPlayer().getMoney()<getLipstickPrice()) {
-					return new Response("Pay "+UtilText.formatAsMoneyUncoloured(getLipstickPrice(), "span"), "You cannot afford to pay "+UtilText.formatAsMoney(getLipstickPrice(), "span")+" in exchange for the box of 'A Hundred Kisses'!", null);
+					return new Response("支付"+UtilText.formatAsMoneyUncoloured(getLipstickPrice(), "span"), "你付不起"+UtilText.formatAsMoney(getLipstickPrice(), "span")+"来交换“百万之吻”！", null);
 				}
-				return new Response("Pay "+UtilText.formatAsMoney(getLipstickPrice(), "span"),
-						"Pay Ralph "+UtilText.formatAsMoney(getLipstickPrice(), "span")+" in exchange for the box of 'A Hundred Kisses'.",
+				return new Response("支付"+UtilText.formatAsMoney(getLipstickPrice(), "span"),
+						"付给拉尔夫"+UtilText.formatAsMoney(getLipstickPrice(), "span")+"以交换“百万之吻”。",
 						CANDI_LIPSTICK_PURCHASE) {
 					@Override
 					public void effects() {
@@ -410,22 +410,22 @@ public class RalphsSnacks {
 
 			} else if (index == 2) {
 				if(Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.ralphDailyBred)) {
-					return new Response("Accept breeding", "Ralph is too busy running his shop to keep on trying to get you knocked up. Perhaps you should come back and try to get bred again tomorrow.", null);
+					return new Response("接受配种", "拉尔夫还忙着经营店铺，没时间让你怀孕。或许明天再来请求交配吧。", null);
 					
 				} else if(!Main.game.getPlayer().hasVagina()) {
-					return new Response("Accept breeding", "As you don't have a vagina, there's no other option but to pay Ralph "+UtilText.formatAsMoney(getLipstickPrice(), "span")+" for the box of 'A Hundred Kisses'.", null);
+					return new Response("接受配种", "你没有阴道，只能付给拉尔夫"+UtilText.formatAsMoney(getLipstickPrice(), "span")+"来交换那盒“百万之吻”。", null);
 					
 				} else if(Main.game.getPlayer().isPregnant()) {
-					return new Response("Accept breeding", "As you're already pregnant, there's no other option but to pay Ralph "+UtilText.formatAsMoney(getLipstickPrice(), "span")+" for the box of 'A Hundred Kisses'.", null);
+					return new Response("接受配种", "你已经怀孕了，只能付给拉尔夫"+UtilText.formatAsMoney(getLipstickPrice(), "span")+"来交换那盒“百万之吻”。", null);
 					
 				} else if(Main.game.getPlayer().hasIncubationLitter(SexAreaOrifice.VAGINA)) {
-					return new Response("Accept breeding", "As your womb is full of eggs, there's no other option but to pay Ralph "+UtilText.formatAsMoney(getLipstickPrice(), "span")+" for the box of 'A Hundred Kisses'.", null);
+					return new Response("接受配种", "你的子宫里已经装满了卵，只能付给拉尔夫"+UtilText.formatAsMoney(getLipstickPrice(), "span")+"来交换那盒“百万之吻”。", null);
 					
 				} else if(!Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					return new Response("Accept breeding", "As you're unable to get access to your vagina, there's no other option but to pay Ralph "+UtilText.formatAsMoney(getLipstickPrice(), "span")+" for the box of 'A Hundred Kisses'.", null);
+					return new Response("接受配种", "你无法使用自己的阴道，只能付给拉尔夫"+UtilText.formatAsMoney(getLipstickPrice(), "span")+"来交换那盒“百万之吻”。", null);
 				}
-				return new ResponseSex("Accept breeding",
-						"Tell Ralph that you'll let him breed you in exchange for the box of 'A Hundred Kisses'.",
+				return new ResponseSex("接受配种",
+						"告诉拉尔夫可以让他跟你配种，来换取那盒“百万之吻”。",
 						Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY),
 						null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true,
@@ -478,7 +478,7 @@ public class RalphsSnacks {
 				};
 
 			} else if (index == 0) {
-				return new Response("Decline", "Tell Ralph that you'll think about it...", BACK_TO_INTERIOR) {
+				return new Response("拒绝", "告诉拉尔夫你得思考一下……", BACK_TO_INTERIOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/shoppingArcade/ralphsSnacks", "CANDI_LIPSTICK_PURCHASE_DECLINE"));
@@ -493,7 +493,7 @@ public class RalphsSnacks {
 		}
 	};
 	
-	public static final DialogueNode CANDI_LIPSTICK_PURCHASE = new DialogueNode("Ralph's Snacks", "-", true) {
+	public static final DialogueNode CANDI_LIPSTICK_PURCHASE = new DialogueNode("拉尔夫小吃店", "-", true) {
 
 		@Override
 		public String getContent() {
@@ -508,7 +508,7 @@ public class RalphsSnacks {
 		}
 	};
 	
-	public static final DialogueNode AFTER_BREEDING = new DialogueNode("Finished", "Now that your womb has been filled with his potent cum, Ralph has had enough.", true) {
+	public static final DialogueNode AFTER_BREEDING = new DialogueNode("结束", "你的子宫里已经装满了他活跃的精液，拉尔夫很满足。", true) {
 
 		@Override
 		public String getContent() {
@@ -520,9 +520,9 @@ public class RalphsSnacks {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().isPregnant() && Objects.equals(Main.game.getPlayer().getPregnantLitter().getFather(), Main.game.getNpc(Ralph.class))) {
-					return new Response("Success",
-							"Not only are you now the proud owner of the limited edition box of 'A Hundred Kisses', but you've also become the mother of Ralph's "
-									+(Main.game.getPlayer().getPregnantLitter().getTotalLitterCount()==1?"child":"children")+"!",
+					return new Response("成功",
+							"你不仅自豪地成为了那盒限定款“百万之吻”的拥有者，还做了拉尔夫"
+									+"孩子的母亲！",
 									BACK_TO_INTERIOR) {
 						@Override
 						public void effects() {
@@ -533,8 +533,8 @@ public class RalphsSnacks {
 					};
 					
 				} else {
-					return new Response("Failure...",
-							"Ralph didn't manage to get you pregnant, and as such, he's unwilling to hand over the box of 'A Hundred Kisses'...",
+					return new Response("失败……",
+							"拉尔夫没能让你怀孕，所以也不愿意将那盒“百万之吻”交给你……",
 							BACK_TO_INTERIOR) {
 						@Override
 						public void effects() {
@@ -547,7 +547,7 @@ public class RalphsSnacks {
 		}
 	};
 	
-	public static final DialogueNode BACK_TO_INTERIOR = new DialogueNode("Ralph's Snacks", "-", true) {
+	public static final DialogueNode BACK_TO_INTERIOR = new DialogueNode("拉尔夫小吃店", "-", true) {
 
 		@Override
 		public String getContent() {

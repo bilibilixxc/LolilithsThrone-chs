@@ -62,8 +62,8 @@ public class Ralph extends NPC {
 	}
 	
 	public Ralph(boolean isImported) {
-		super(isImported, new NameTriplet("Ralph"), "Armstrong",
-				"Ralph is the owner of the shop 'Ralph's Snacks'. There's an air of confidence in the way he holds himself, and he behaves in a professional manner at all times.",
+		super(isImported, new NameTriplet("拉尔夫"), "阿姆斯特朗",
+				"拉尔夫是“拉尔夫小吃店”的店主。他的举止充满自信，而且始终保持着职业风范。",
 				34, Month.MAY, 17,
 				10, Gender.M_P_MALE, Subspecies.HORSE_MORPH, RaceStage.GREATER,
 				new CharacterInventory(false, 10), WorldType.SHOPPING_ARCADE, PlaceType.SHOPPING_ARCADE_RALPHS_SHOP, true);
@@ -353,28 +353,28 @@ public class Ralph extends NPC {
 			StringBuilder descriptionSB = new StringBuilder();
 			
 			descriptionSB.append("<p>"
-						+ "You look over at the counter to see Ralph smiling back at you. Sensing that you might need some assistance, he briskly walks over to where you're standing."
+						+ "你看了看柜台，发现拉尔夫正微笑着看着你。他感觉到你可能需要一些帮助，便轻快地走到你这里。"
 					+ "</p>"
 					+ "<p>"
-						+ "Although the memory of you submissively pleasuring Ralph's huge horse-cock is still fresh in both of your minds, he treats you with the utmost respect and politely lists off the prices of the transformative consumables on display."
+						+ "虽然你们对顺从地取悦拉尔夫的巨大马鸡巴记忆犹新，但他对你们非常尊重，并礼貌地列出了展示的改造消耗品的价格。"
 						+ (this.hasItemType(ItemType.getItemTypeFromId("innoxia_pills_sterility"))
-								?" While most of them seem to have a reasonable markup, the small blue '"+ItemType.getItemTypeFromId("innoxia_pills_sterility").getNamePlural(false)+"' appear to be unreasonably pricy,"
-								+ " and Ralph once again notes that there's a huge tax levied on their sale."
+								?"大多数商品标价似乎都很合理，但小号蓝色的‘"+ItemType.getItemTypeFromId("innoxia_pills_sterility").getNamePlural(false)+"’价格似乎不对劲，"
+								+ "并且拉尔夫再次注意到，出售它们需要缴纳巨额税款。"
 							+ "</p>"
 							+ "<p>"
 						:"")
-						+ " He reminds you that he's also interested in buying any transformative consumables that you're willing to sell."
-						+ " As you turn back to look at the goods, Ralph tells you that he refreshes his stock every day."
+						+ "他提醒你，他也有兴趣购买你愿意出售的任何改造消耗品。"
+						+ "当你回头看货物时，拉尔夫告诉你，他每天都会更新存货。"
 					+ "</p>");
 			
 			if(isDiscountActive()){
 				descriptionSB.append("<p>"
-						+ "<b>Ralph is giving you a</b> <b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>"+Main.game.getDialogueFlags().ralphDiscount+"%</b> <b>discount!</b>"
+						+ "<b>拉尔夫会给你</b><b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>"+Main.game.getDialogueFlags().ralphDiscount+"%</b>的<b>折扣！</b>"
 							+ "</p>");
 			}else{
 				descriptionSB.append("<p>"
-						+ "Before he turns to walk back to the counter, he leans in and whispers in your ear, "
-						+ UtilText.parseSpeech("If you're interested in earning a little discount again, just call me over.", Main.game.getNpc(Ralph.class))
+						+ "在他转身走回柜台之前，俯身在你耳边低语了几句，"
+						+ UtilText.parseSpeech("如果你有兴趣再赚点折扣，再来找我吧。", Main.game.getNpc(Ralph.class))
 							+ "</p>");
 			}
 			
@@ -382,18 +382,18 @@ public class Ralph extends NPC {
 			
 		} else {
 			return "<p>"
-						+ "You look over at the counter to see Ralph smiling back at you. Sensing that you might need some assistance, he briskly walks over to where you're standing."
+						+ "你看了看柜台，发现拉尔夫正微笑着看着你。他感觉到你可能需要一些帮助，便轻快地走到你这里。"
 					+ "</p>"
 					+ "<p>"
-						+ "After a brief greeting, you ask him about the transformative consumables on display. He politely informs you that they're all for sale and quickly lists off their prices."
+						+ "简短的问候之后，你向他打听展示的转化消耗品。他礼貌地告诉你，这些东西都在出售，并很快列出了它们的价格"
 						+ (this.hasItemType(ItemType.getItemTypeFromId("innoxia_pills_sterility"))
-							?" While most of them seem to have a reasonable markup, the small blue '"+ItemType.getItemTypeFromId("innoxia_pills_sterility").getNamePlural(false)+"' appear to be unreasonably pricy,"
-									+ " and after asking Ralph about their high cost, he explains that there's a huge tax levied on their sale."
+							?"大多数商品标价似乎都很合理，但小号蓝色的‘"+ItemType.getItemTypeFromId("innoxia_pills_sterility").getNamePlural(false)+"’价格似乎不对劲，"
+									+ "向拉尔夫询问了其高昂的价格后，他解释说，出售这些产品需要缴纳巨额税款。"
 								+ "</p>"
 								+ "<p>"
 							:"")
-						+ " Sensing that you might not be a typical customer, he tells you that he's also interested in buying any transformative consumables that you're willing to sell."
-						+ " As you turn back to look at the goods, Ralph tells you that he refreshes his stock every day."
+						+ "他感觉到你可能不是一个寻常的客户，于是告诉你，他也有兴趣购买你愿意出售的任何转化消耗品。"
+						+ "当你回头看货物时，拉尔夫告诉你，他每天都会更新存货。"
 					+ "</p>";
 		}
 		
@@ -467,13 +467,13 @@ public class Ralph extends NPC {
 				}
 				if(condomClothingType.equals(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"))) {
 					return UtilText.parse(equipper, target,
-							"[npc.Name] [npc.verb(direct)] [npc.her] spinneret at [npc2.namePos] [npc2.cock], but, sensing what [npc.sheIs] about to do, he slaps it away and grunts,"
-							+ " [npc2.speech(I don't think so! You agreed to let me breed you, and that's exactly what I'm going to do!)]");
+							"[npc.Name]将[npc.her]的丝囊对准了[npc2.namePos]的[npc2.cock]，但当意识到[npc.sheIs]的意图后，他一巴掌拍了上去，然后哼了一声，"
+							+ "[npc2.speech(我可不这么想！你同意让我给你配种的，而我也正打算这么做！)]");
 				}
 				return UtilText.parse(target,
 						"<p>"
-							+ "You pull out a condom and hold it out to Ralph, but as he sees what it is you've got, he grabs it and tears it in two, before dismissively grunting,"
-							+ " [npc.speech(I don't think so! You agreed to let me breed you, and that's exactly what I'm going to do!)]"
+							+ "你掏出一个避孕套递给拉尔夫，但当他看到你拿的是什么东西时，他一把抓住避孕套并撕烂，然后不屑地哼了一声，"
+							+ "[npc.speech(我可不这么想！你同意让我给你配种的，而我也正打算这么做！)]"
 						+ "</p>");
 			}
 			
@@ -483,32 +483,32 @@ public class Ralph extends NPC {
 				}
 				if(Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.MOUTH, Main.game.getNpc(Ralph.class)).contains(SexAreaPenetration.PENIS)) {
 					return "<p>"
-							+ "You pull out a condom from your inventory, and, making a muffled questioning sound, hold it up to Ralph."
-								+ " He looks down at you before nodding and stepping back, sliding his huge cock free from your mouth."
-								+ " You get a moment to catch your breath as Ralph tears opens the little foil package before rolling the condom down the length of his massive shaft."
-								+ " Stepping forwards once more, he shoves his rubber-bound dick back down your throat, and you let out a muffled sigh of relief, happy that he did as you asked."
+							+ "你从包里拿出一个避孕套，发出低沉的质问声，举到拉尔夫面前。"
+								+ "他低头看了看你，然后点点头，退后一步，把他的巨大鸡巴从你嘴里抽出来。"
+								+ "当拉尔夫撕开铝箔小包装，将避孕套顺着他巨大的阴茎捋到根部时，你有片刻的喘息时间。"
+								+ "他再次向前一步，把避孕套包裹着的鸡巴塞回你的喉咙，你松了一口气，很高兴他按照你的要求做了。"
 						+ "</p>";
 				} else if(Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.VAGINA, Main.game.getNpc(Ralph.class)).contains(SexAreaPenetration.PENIS)) {
 					return "<p>"
-								+ "As Ralph carries on slamming his huge cock in and out of your pussy, you fumble around in your inventory and produce a condom."
-									+ " Suppressing your moans, you turn back, holding out your hand as you ask him to put it on."
-									+ " He lets out a disappointed sigh, but doesn't openly object as he pulls his cock free from your pussy, giving you a moment to breathe as he"
-										+ " tears opens the little foil package before rolling the condom down the length of his massive shaft."
-									+ " Once the condom is securely in place, he lines himself up and pushes forwards, burying his rubber-bound dick deep into your pussy."
+								+ "拉尔夫继续用他巨大的肉棒剧烈抽插着你的小穴，你摸索物品栏，取出一个避孕套。"
+									+ "你抑制住自己的呻吟，回头伸出手，让他给你戴上。"
+									+ "他失望地叹了口气，但并没有表示拒绝，而是把鸡巴从你的阴道里抽了出来， 给你一点时间来喘气，"
+										+ "而他扯开了铝箔小包装，然后将避孕套顺着他巨大的阴茎捋到了根部。"
+									+ "随着避孕套被牢牢戴好，他将自己的鸡巴对准，然后向前一推，将避孕套包裹的鸡巴深深地插进你的小穴。"
 							+ "</p>";
 				} else if(Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.ANUS, Main.game.getNpc(Ralph.class)).contains(SexAreaPenetration.PENIS)) {
 					return "<p>"
-						+ "As Ralph carries on slamming his huge cock in and out of your ass, you fumble around in your inventory and produce a condom."
-							+ " Suppressing your groans, you turn back, holding out your hand as you ask him to put it on."
-							+ " He lets out a disappointed sigh, but doesn't openly object as he pulls his cock free from your rear entrance, giving you a moment to breathe as he"
-								+ " tears opens the little foil package before rolling the condom down the length of his massive shaft."
-							+ " Once the condom is securely in place, he lines himself up and pushes forwards, burying his rubber-bound dick deep into your waiting asshole."
+						+ "拉尔夫继续用他巨大的肉棒剧烈抽插着你的屁眼，你摸索物品栏，取出一个避孕套。"
+							+ "你抑制住自己的呻吟，回头伸出手，让他给你戴上。"
+							+ "他发出一声失望的叹息，但并没有表示拒绝，而是将他的鸡巴从你的后庭中抽出，让你有片刻的喘息时间，"
+								+ "而他扯开了铝箔小包装，然后将避孕套顺着他巨大的阴茎捋到了根部。"
+							+ "随着避孕套被牢牢戴好，他将自己的鸡巴对准，然后向前一推，将避孕套包裹的鸡巴深深地插进你的肛门。"
 						+ "</p>";
 				} else {
 					return "<p>"
-						+ "Producing a condom from your inventory, you lean forwards, looking up at Ralph and asking him to put it on as you hold the little foil package up to him."
-								+ " With a sigh, he takes the condom from you, and, tearing the package open, quickly rolls the condom down the length of his massive shaft."
-								+ " You thank him for doing as you asked, and he replies that he's happy to respect your request."
+						+ "你从物品栏中取出一个避孕套，看向拉尔夫，把小铝箔包装举到他面前，让他戴上。"
+								+ "他叹了口气，从你手中接过避孕套，撕开包装，迅速将避孕套捋到他巨大的阴茎上。"
+								+ "你感谢他按照你的要求做了，他回答说他很乐意尊重你的要求。"
 					+ "</p>";
 				}
 			}
@@ -522,18 +522,18 @@ public class Ralph extends NPC {
 		if(Math.random()>0.3) {
 			if(penetrationType == SexAreaPenetration.PENIS && orifice == SexAreaOrifice.VAGINA) {
 				return UtilText.returnStringAtRandom(
-						"Ralph carries on driving you into the counter-top as he fucks your [pc.pussy+].",
-						"You feel Ralph's strong grip on your hips as his [ralph.cock+] pounds away at your [pc.pussy+].",
-						"Ralph's [ralph.cock+] carries on slamming in and out of your greedy [pc.pussy].",
-						"Your pussy lips spread around Ralph's [ralph.cock+] as he fucks you on the counter-top.");
+						"拉尔夫一边操你[pc.pussy+]，一边把你推向台面。",
+						"拉尔夫的[ralph.cock+]你[pc.pussy+]上猛烈撞击，你感觉到拉尔夫有力地抓住了你的臀部。",
+						"拉尔夫的[ralph.cock+]继续在你贪婪的[pc.pussy]里进进出出。",
+						"拉尔夫在台面上操你，你的阴唇紧紧包住他的[ralph.cock+]。");
 			}
 			
 			if(penetrationType == SexAreaPenetration.PENIS && orifice == SexAreaOrifice.MOUTH) {
 				return UtilText.returnStringAtRandom(
-						"Slimy saliva drools down your chin as you carry on sucking Ralph's [ralph.cock+].",
-						"You look down at the [ralph.cock+] sliding in and out of your mouth.",
-						"Ralph's [ralph.cock+] pushes its way past your lips as you kneel beneath him.",
-						"You bob your head back and forth as you carry on servicing Ralph's [ralph.cock+].");
+						"你继续吸吮拉尔夫的[ralph.cock+]，黏糊糊的唾液顺着你的下巴流了下来。",
+						"你低头看着[ralph.cock+]在你嘴里抽插。",
+						"你跪在他身下，拉尔夫的[ralph.cock+]从你的唇边挤了过去。",
+						"你一边前后晃动脑袋，一边继续为拉尔夫的[ralph.cock+]提供服务。");
 			}
 		}
 
@@ -550,20 +550,20 @@ public class Ralph extends NPC {
 					return super.getStretchingDescription(initialPenetration, partner, penetrationType, orifice, pastTense);
 				} else {
 					return UtilText.returnStringAtRandom(
-							"You feel tears streaming down your face as you force the [ralph.cock+] down your throat.",
-							"You aren't skilled enough at giving head to be able to comfortably handle Ralph's [ralph.cock+].",
-							"You squirm and choke as you do your best to fit the [ralph.cock+] down your throat.",
-							"You struggle to fit Ralph's [ralph.cock+] down your throat.");
+							"你把[ralph.cock+]硬塞进喉咙，瞬间感到泪流满面。",
+							"你的技术还不够娴熟，无法自如地驾驭拉尔夫的[ralph.cock+]。",
+							"你一边扭动，一边干呕着，竭尽全力把[ralph.cock+]塞进喉咙。",
+							"你努力把拉尔夫的[ralph.cock+]塞进喉咙。");
 				}
 			case VAGINA:
 				if(Math.random()<0.3) {
 					return super.getStretchingDescription(initialPenetration, partner, penetrationType, orifice, pastTense);
 				} else {
 					return UtilText.returnStringAtRandom(
-							"You squirm about uncomfortably on the counter-top as Ralph's [ralph.cock+] struggles to fit in your [pc.pussyCapacity] [pc.pussy].",
-							"Ralph's [ralph.cock+] painfully stretches you out as it rams its way in and out of your [pc.pussyCapacity] [pc.pussy].",
-							"Ralph's [ralph.cock+] is too large for your [pc.pussyCapacity] [pc.pussy], and you let out an uncomfortable whine as it stretches you out.",
-							"Your [pc.pussyCapacity] [pc.pussy] struggles to accommodate the sheer size of Ralph's [ralph.cock+].");
+							"拉尔夫的[ralph.cock+]奋力插入你的[pc.pussyCapacity][pc.pussy]，你不舒服地在台面上扭动。",
+							"拉尔夫的[ralph.cock+]在你[pc.pussyCapacity]的[pc.pussy]里抽插让你痛不欲生。",
+							"拉尔夫[ralph.cock+]对你的[pc.pussyCapacity][pc.pussy]来说太大了，当你伸展身体时，你发出难受的呜呜声。",
+							"你的[pc.pussyCapacity][pc.pussy]努力适应拉尔夫巨大的[ralph.cock+]。");
 				}
 			default:
 				return super.getStretchingDescription(initialPenetration, partner, penetrationType, orifice, pastTense);
@@ -574,11 +574,11 @@ public class Ralph extends NPC {
 	public String getStretchingFinishedDescription(SexAreaOrifice orifice) {
 		switch(orifice) {
 			case MOUTH:
-				return "The next time Ralph gently pushes forwards, you feel your throat instinctively opening up to accommodate his flared equine member,"
-						+ " and with a muffled moan of delight, you realise that you're now able to comfortably suck Ralph's massive black horse-cock!";
+				return "拉尔夫温和向前推进，你感觉喉咙本能地张开以容纳他涨得像马一般的阴茎，"
+						+ "你发出一声沉闷的呻吟，意识到自己现在能够舒适地吮吸拉尔夫巨大的黑色马屌！";
 			case VAGINA:
-				return "The next time Ralph slams forwards, you feel your pussy easily stretching out to accommodate his flared equine member, and with a squeal of delight,"
-						+ " you realise that you're now able to comfortably fit Ralph's massive black horse-cock in your [pc.pussy+]!";
+				return "拉尔夫再次向前冲刺时，伴随着愉悦的呻吟声，你感觉到小穴被拉尔夫膨胀的马屌轻易撑开。"
+						+ "你意识到自己[pc.pussy+]现在能够舒适地迎合拉尔夫巨大的黑色马屌！";
 			default:
 				return super.getStretchingFinishedDescription(orifice);
 		}
@@ -593,41 +593,41 @@ public class Ralph extends NPC {
 				if(Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.MOUTH, Main.game.getNpc(Ralph.class)).contains(SexAreaPenetration.PENIS)) {
 					return new Value<>(true,
 							"<p>"
-								+ "You pull out a "+item.getName(false, false)+" from your inventory, and, making a muffled questioning sound, hold it up to Ralph."
-								+ " He looks down at you, letting out a little laugh and shrugging his shoulders as he sees what you're trying to give him."
-								+ " Quickly popping the pill out of its plastic container, he swallows it, and you let out a happy, although somewhat muffled, giggle, knowing that his sperm just got a lot more potent."
+								+ "你从包里拿出一个 "+item.getName(false, false)+" ，发出低沉的质问声，举到拉尔夫面前。"
+								+ "他看到了你试图让他看到的东西后，低头看向你，耸了耸肩，发出了轻笑。"
+								+ "他很快把药丸从塑料壳里取出吞下，你发出了尽管有点压抑但快乐的咯咯声，你知道他的精子变得更强大了。"
 							+ "</p>");
 				
 				} else if(Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.VAGINA, Main.game.getNpc(Ralph.class)).contains(SexAreaPenetration.PENIS)) {
 					return new Value<>(true,
 							"<p>"
-								+ "As Ralph carries on slamming his huge cock in and out of your pussy, you fumble around in your inventory and produce a "+item.getName(false, false)+"."
-								+ " Suppressing your moans, you turn back, holding out your hand as you ask him to swallow it."
-								+ " He lets out a little laugh as he sees what you're giving him, and, quickly popping the pill out of its plastic container and swallowing it,"
-								+ " he takes a moment to say a few words before continuing to fuck you, "
+								+ "拉尔夫继续用他巨大的肉棒剧烈抽插着你的小穴，你摸索物品栏，取出一个"+item.getName(false, false)+"。"
+								+ "你抑制住自己的呻吟，回头伸出手，让他把它吞下去。"
+								+ "当他看到你给他的东西时，他发出了一阵笑声，并迅速从包装里挤出药片吞了下去，"
+								+ "他花了一点时间说了几句话然后继续操你，"
 								+ (Main.game.getNpc(Ralph.class).isWearingCondom()
-									?" [ralph.speech(You do realise I'm wearing a condom, right?)]"
+									?"[ralph.speech(你知道我戴着避孕套的，对吧？)]"
 									:(Main.game.getPlayer().isVisiblyPregnant()
-											?" [ralph.speech(Uhh, you're already pregnant, but sure, why not?)]"
-											:" [ralph.speech(Hoping to get pregnant, huh? Well, I'm more than happy to help with that!)]"))
+											?"[ralph.speech(呃--，你怀孕了，但当然了，为什么没有呢？)]"
+											:"[ralph.speech(想要怀孕？嗯？我非常乐意帮忙！)]"))
 							+ "</p>");
 					
 				} else if(Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.ANUS, Main.game.getNpc(Ralph.class)).contains(SexAreaPenetration.PENIS)) {
 					return new Value<>(true,
 								"<p>"
-									+ "As Ralph carries on slamming his huge cock in and out of your ass, you fumble around in your inventory and produce a "+item.getName(false, false)+"."
-									+ " Suppressing your groans, you turn back, holding out your hand as you ask him to swallow it."
-									+ " He lets out a little laugh as he sees what you're giving him, and, quickly popping the pill out of its plastic container and swallowing it,"
-									+ " he takes a moment to say a few words before continuing to fuck you, "
-									+ "[ralph.speech(You do know you can't get pregnant from this, right?)]"
+									+ "拉尔夫继续用他巨大的肉棒剧烈抽插着你的屁眼，你摸索物品栏，取出一个"+item.getName(false, false)+"。"
+									+ "你抑制住自己的呻吟，回头伸出手，让他把它吞下去。"
+									+ "当他看到你给他的东西时，他发出了一阵笑声，并迅速从包装里挤出药片吞了下去，"
+									+ "他花了一点时间说了几句话然后继续操你，"
+									+ "[ralph.speech(你知道这样做不会怀孕，对吧？)]"
 								+ "</p>");
 					
 				} else {
 					return new Value<>(true,
 							"<p>"
-								+ "Producing a "+item.getName(false, false)+" from your inventory, you lean forwards, looking up at Ralph and asking him to swallow it as you hold it up to him."
-									+ " He looks down at you, letting out a little laugh and shrugging his shoulders as he sees what you're trying to give him."
-									+ " Quickly popping the pill out of its plastic container, he swallows it, and you let out a happy giggle, knowing that his sperm just got a lot more potent."
+								+ "拿出"+item.getName(false, false)+"你向前倾身，抬起头看着拉尔夫，一边举着一边让他吞下去。"
+									+ "他看到了你试图让他看到的东西后，低头看向你，耸了耸肩，发出了轻笑。"
+									+ "他迅速从包装中挤出药丸，吞了下去，你开心地笑了，因为你知道他的精子变得更有活力了。"
 							+ "</p>");
 				}
 				
@@ -635,31 +635,31 @@ public class Ralph extends NPC {
 				if(!Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.MOUTH, Main.game.getNpc(Ralph.class)).isEmpty()) {
 					return new Value<>(false,
 							"<p>"
-								+ "You pull out "+item.getItemType().getDeterminer()+" "+item.getName()+" from your inventory, and, making a muffled questioning sound, hold it up to Ralph."
-								+ " He looks down at you before making a dismissive grunt and stepping forwards slightly, ramming his cock that little bit further down your throat as you put the "+item.getName()+" back in your inventory."
+								+ "你从包里拿出一个"+item.getItemType().getDeterminer()+" "+item.getName()+"然后发出低沉的询问声，把它举到拉尔夫面前。"
+								+ "当你把"+item.getName()+"放回包里时，他低头看了你一眼，然后轻蔑地哼了一声，微微向前走了一步，把他的鸡巴又往你喉咙里塞了一点。"
 							+ "</p>");
 					
 				} else if(!Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.VAGINA, Main.game.getNpc(Ralph.class)).isEmpty()) {
 					return new Value<>(false,
 							"<p>"
-								+ "As Ralph carries on slamming his huge cock in and out of your pussy, you fumble around in your inventory and produce a "+item.getItemType().getDeterminer()+" "+item.getName()+"."
-								+ " Suppressing your moans, you ask him if he'd like to "+item.getItemType().getUseName()+" it, but he simply makes a dismissive grunt and carries on fucking you."
-								+ " You start sighing and crying out in pleasure once more as you put the "+item.getName()+" back in your inventory."
+								+ "拉尔夫继续用他巨大的肉棒剧烈抽插着你的小穴，你摸索物品栏，取出一个"+item.getItemType().getDeterminer()+" "+item.getName()+"。"
+								+ "你抑制住自己的呻吟，问他是否愿意"+item.getItemType().getUseName()+"它，但他只是轻蔑地哼了一声，继续操你。"
+								+ "你把 "+item.getName()+"放回背包，又开始喘息，并愉悦地叫出来。"
 							+ "</p>");
 					
 				} else if(!Main.sex.getOngoingSexAreas(Main.game.getPlayer(), SexAreaOrifice.ANUS, Main.game.getNpc(Ralph.class)).isEmpty()) {
 					return new Value<>(false,
 							"<p>"
-								+ "As Ralph carries on slamming his huge cock in and out of your ass, you fumble around in your inventory and produce a "+item.getItemType().getDeterminer()+" "+item.getName()+"."
-								+ " Suppressing your groans, you ask him if he'd like to "+item.getItemType().getUseName()+" it, but he simply makes a dismissive grunt and carries on fucking you."
-								+ " You start sighing and crying out in pleasure once more as you put the "+item.getName()+" back in your inventory."
+								+ "拉尔夫继续用他巨大的肉棒剧烈抽插着你的屁眼，你摸索物品栏，取出一个"+item.getItemType().getDeterminer()+" "+item.getName()+"。"
+								+ "你强忍着呻吟，问他是否愿意"+item.getItemType().getUseName()+"，但他只是轻蔑地哼了一声，继续操你。"
+								+ "你把 "+item.getName()+"放回背包，又开始喘息，并愉悦地叫出来。"
 							+ "</p>");
 					
 				} else {
 					return new Value<>(false,
 							"<p>"
-								+ "You ask Ralph if he'd like to use "+item.getItemType().getDeterminer()+" "+item.getName()+" that you've got, but he simply makes a dismissive grunt and tells you he's not interested."
-								+ " With a sigh, you put the "+item.getName()+" back in your inventory."
+								+ "你问拉尔夫是否愿意使用你的 "+item.getItemType().getDeterminer()+""+item.getName()+"，但他只是轻蔑地哼了一声，告诉你他不感兴趣。"
+								+ "你叹了口气，把"+item.getName()+"放回物品栏。"
 							+ "</p>");
 				}
 			}

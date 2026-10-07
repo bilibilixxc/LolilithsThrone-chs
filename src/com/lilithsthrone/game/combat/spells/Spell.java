@@ -54,9 +54,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.FIRE,
 			false,
-			"Fireball",
+			"火球术",
 			"fireball",
-			"Summons a ball of arcane flames that can be launched at a target.",
+			"召唤一个奥术火焰球，向目标发射。",
 			30,
 			DamageVariance.LOW,
 			75,
@@ -102,17 +102,17 @@ public enum Spell {
 
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By the fires of eternity, I release this seal upon the maelstrom within! Come forth, flames of destruction!",
-													"From beyond the veil of flames, I hear the arcane's call! Through me, now is hell unleashed!",
-													"May the dark void shatter the ancient seals which keep the fires of hell itself at bay! Go forth, flaming fury!"),
-											"Summoning a swirling vortex of arcane fire around your [pc.arm], you focus its raw power into a ball of roiling flames before launching it at yourself!",
-											"Summoning a swirling vortex of arcane fire around your [pc.arm], you focus its raw power into a ball of roiling flames before launching it at [npc.name]!",
+													"永恒之火啊，我将体内漩涡的封印解除！出来吧，毁灭之焰！",
+													"从火焰的面纱之外，我听到了奥术的召唤！现在，通过我，地狱降临！",
+													"黑暗的虚空啊，我命令你粉碎古老的封印，让地狱之火永世不熄！去吧，红莲怒火！"),
+											"你在[pc.arm]周围召唤出一个奥术火焰漩涡，将其原始力量集中到一团熊熊燃烧的火球，然后向自己发射！",
+											"你在[pc.arm]周围召唤出一个奥术火焰漩涡，将其原始力量集中到一团熊熊燃烧的火球，然后向[npc.Name]发射！",
 											"",
-											"Summoning a swirling vortex of arcane fire around [npc.her] [npc.arm], [npc.she] focuses its raw power into a ball of roiling flames before launching it directly at you!",
-											"Summoning a swirling vortex of arcane fire around [npc1.her] [npc1.arm], [npc1.name] focuses its raw power into a ball of roiling flames before launching it directly at [npc2.name]!")
+											"[npc.she]在[npc.arm]周围召唤出一个奥术火焰漩涡，将其原始力量集中到一团熊熊燃烧的火球，然后向你发射！",
+											"[npc1.her]在[npc1.arm]周围召唤出一个奥术火焰漩涡，将其原始力量集中到一团熊熊燃烧的火球，然后向[npc2.name]发射！")
 								);
 			if(caster.hasSpellUpgrade(SpellUpgrade.FIREBALL_2)) {
-				descriptionSB.append(" The fireball instantly splits in two after being cast!");
+				descriptionSB.append("刚发射，火球便立刻一分为二！");
 			}
 			
 			descriptionSB.append(getDamageDescription(caster, target, damage, isHit, isCritical));
@@ -133,14 +133,14 @@ public enum Spell {
 					
 					if(secondaryTarget.equals(target)) {
 						descriptionSB.append("<br/>"
-								+"The second Fireball swerves around to hit "+UtilText.parse(target,"[npc.name]")+" for a second time!");
+								+"第二枚火球转向，对"+UtilText.parse(target,"[npc.name]")+"二次连击！");
 						
 						descriptionSB.append(getDamageDescription(caster, target, damage, isHit, isCritical));
 						descriptionSB.append(applyDamage(caster, target, damage));
 						
 					} else {
 						descriptionSB.append("<br/>"
-								+"The second Fireball swerves around to hit "+(secondaryTarget.isPlayer()?"you":UtilText.parse(secondaryTarget,"[npc.name]"))+"!");
+								+"第二枚火球忽然转向，击中了"+(secondaryTarget.isPlayer()?"你":UtilText.parse(secondaryTarget,"[npc.name]"))+"！");
 						
 						descriptionSB.append(getDamageDescription(caster, secondaryTarget, damage, isHit, isCritical));
 						descriptionSB.append(applyDamage(caster, secondaryTarget, damage));
@@ -162,9 +162,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.FIRE,
 			false,
-			"Flash",
+			"闪光术",
 			"flash",
-			"Creates a blinding flash of light which dazzles the target.",
+			"产生耀眼的闪光，使目标眼花缭乱。",
 			0,
 			DamageVariance.LOW,
 			50,
@@ -174,7 +174,7 @@ public enum Spell {
 					SpellUpgrade.FLASH_2,
 					SpellUpgrade.FLASH_3),
 			null,
-			Util.newArrayListOfValues("[style.colourExcellent(Dazzles)] the target for [style.colourTerrible(-1)] [style.colourActionPoints(action points)]!")) {
+			Util.newArrayListOfValues("[style.colourExcellent(眩晕)]目标，使其[style.colourTerrible(-1)][style.colourActionPoints(行动点)]！")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -197,9 +197,9 @@ public enum Spell {
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
 			if(caster!=null && caster.hasSpellUpgrade(SpellUpgrade.FLASH_1)) {
-				return "Dazzles for [style.colourTerrible(-2)] action points!";
+				return "造成眩晕，[style.colourTerrible(-2)]行动点！";
 			}
-			return "Dazzles for [style.colourTerrible(-1)] action points!";
+			return "造成眩晕，[style.colourTerrible(-1)]行动点！";
 		}
 		
 		@Override
@@ -214,17 +214,17 @@ public enum Spell {
 
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Locked away for a thousand years, the powers lying dormant within me have awoken! Now, bear witness to the blinding fury of a universe being born!",
-													"The light of a million stars are as nothing to the power that I now unleash! May my arcane seals be broken, and blind all who dare stand before me!",
-													"By fury of sun, and gaze of moon, may the heavens themselves bear witness to the power that I now unleash! Gaze upon the end of worlds, and despair!"),
-											"With a flick of your wrist, you summon a blinding flash of light right in front of your own face!",
-											"With a flick of your wrist, you summon a blinding flash of light right in front of [npc.namePos] face!",
+													"沉寂于吾体内的力量啊，历经数千载封印已然苏醒！现在，请见证宇宙诞生时耀眼的怒火吧！",
+													"百万星体之光耀仍不及我爆发出的力量！奥术封印解除，将我面前的蝼蚁致盲吧！",
+													"烈日之怒火，皎月之凝视，愿苍天见证我的力量！望见世界的尽头吧，绝望吧！"),
+											"你一甩手腕，便在你的面前召唤出一道炫目的闪光！",
+											"你一甩手腕，便在[npc.namePos]的面前召唤出一道炫目的闪光！",
 											"",
-											"With a flick of [npc.her] wrist, [npc.name] summons a blinding flash of light right in front of your face!",
-											"With a flick of [npc1.her] wrist, [npc1.name] summons a blinding flash of light right in front of [npc2.namePos] face!")
+											"[npc.Name]一甩手腕，便在[npc.her]的面前召唤出一道炫目的闪光！",
+											"[npc1.name]一甩手腕，便在[npc2.namePos]的面前召唤出一道炫目的闪光！")
 								);
 			if(caster.hasSpellUpgrade(SpellUpgrade.FLASH_2)) {
-				descriptionSB.append(" A secondary flash of light arcs away from the first, seeking out another target!");
+				descriptionSB.append("另一道光芒从第一道中分出，搜寻着另一个目标！");
 			}
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
@@ -240,11 +240,11 @@ public enum Spell {
 					
 					if(secondaryTarget.equals(target)) {
 						descriptionSB.append("<br/>"
-								+"The second Flash fails to find another target, and quickly fizzles out...");
+								+"第二道闪光没能找到其他目标，迅速消散了……");
 						
 					} else {
 						descriptionSB.append("<br/>"
-								+"The second Flash shoots out in front of "+UtilText.parse(secondaryTarget,"[npc.namePos] face, dazzling [npc.herHim] as well!"));
+								+"第二道闪光冲向"+UtilText.parse(secondaryTarget,"[npc.namePos]的面前，令其[npc.herHim]也眼花缭乱起来！"));
 
 						descriptionSB.append(getDamageDescription(caster, secondaryTarget, 0, isHit, isCritical));
 						applyStatusEffects(caster, secondaryTarget, isCritical);
@@ -255,7 +255,7 @@ public enum Spell {
 				
 			} else {
 				descriptionSB.append("<p style='text-align:center;'>"
-						+ "[style.italicsBad(The flash misses!)]"
+						+ "[style.italicsBad(闪光没能命中！)]"
 						+ "</p>");
 			}
 			
@@ -270,9 +270,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT,
 			DamageType.FIRE,
 			true,
-			"Cloak of Flames",
+			"火焰斗篷",
 			"cloak_of_flames",
-			"Shrouds the target in a protective cloak of arcane flames, granting them improved fire and ice resistance.",
+			"为目标披上奥术火焰的保护斗篷，使其获得更好的冰火抗性。",
 			0,
 			DamageVariance.LOW,
 			50,
@@ -284,7 +284,7 @@ public enum Spell {
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.RESISTANCE_FIRE, 5),
 					new Value<>(Attribute.RESISTANCE_ICE, 10)),
-			Util.newArrayListOfValues("Lasts for [style.colourGood(3 turns)]")) {
+			Util.newArrayListOfValues("持续[style.colourGood(3回合)]")) {
 
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -304,7 +304,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Grants the target a protective cloak of flames.";
+			return "给予目标用于保护的火焰斗篷。";
 		}
 		
 		@Override
@@ -319,14 +319,14 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By my power, shall glaciers melt, and a thousand suns be extinguished! Oh, fury of the stars, I call upon thee to shield your [npc.master]!",
-													"Know now that the flames of hell itself obey my every command, and from the fiery chasm of the dimension of flame, I summon forth the power to shield me from all harm!",
-													"By fire and fury, I unleash the infernal flames of the sun itself! Come now, arcane inferno, shield your [npc.master] from all that dare harm [npc.herHim]!"),
-											"With a swipe of your [pc.arm], you summon a protective cloak of arcane fire around yourself!",
-											"With a swipe of your [pc.arm], you summon a protective cloak of arcane fire around [npc.name]!",
-											"With a swipe of [npc.her] [npc.arm], [npc.name] summons a protective cloak of arcane fire around [npc.herself]!",
-											"With a swipe of [npc.her] [npc.arm], [npc.name] summons a protective cloak of arcane fire around you!",
-											"With a swipe of [npc1.her] [npc1.arm], [npc1.name] summons a protective cloak of arcane fire around [npc2.name]!"));
+													"在我的力量之下，冰川将融，千星失色！啊，群星之怒，我命令汝庇护[npc.master]！",
+													"汝需知晓，地狱之火臣服于我的一举一动，我自火焰位面的炽热深渊中，召唤出保护我免受一切伤害的力量！",
+													"以火焰与狂怒的力量，我将释放烈日的地狱之火！来吧，奥术的狱火，庇护你的[npc.master]，击退任何胆敢袭来的家伙！"),
+											"你[pc.arm]一挥，便在身边召唤出一件用于保护的奥术火焰斗篷！",
+											"你[pc.arm]一挥，便在[npc.Name]身边召唤出一件用于保护的奥术火焰斗篷！",
+											"[npc.Name][npc.arm]一挥，便在身边召唤出一件用于保护的奥术火焰斗篷！",
+											"[npc.Name][npc.arm]一挥，便在你身边召唤出一件用于保护的奥术火焰斗篷！",
+											"[npc1.name][npc1.arm]一挥，便在[npc2.name]身边召唤出一件用于保护的奥术火焰斗篷！"));
 			
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -351,9 +351,9 @@ public enum Spell {
 			SpellType.SUMMON,
 			DamageType.FIRE,
 			true,
-			"Elemental Fire",
+			"元素之火",
 			"elemental_fire",
-			"Summon forth your elemental in a physical form by binding them to the school of Fire.",
+			"将元素体与烈火学派绑定，召唤出实体形态的火元素。",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -363,37 +363,37 @@ public enum Spell {
 					SpellUpgrade.ELEMENTAL_FIRE_2,
 					SpellUpgrade.ELEMENTAL_FIRE_3A,
 					SpellUpgrade.ELEMENTAL_FIRE_3B),
-			null, Util.newArrayListOfValues("Summons [style.colourArcane(Elemental)] in form of [style.colourSchoolFire(Fire)]")) {
+			null, Util.newArrayListOfValues("以[style.colourSchoolFire(火焰)]的形态召唤[style.colourArcane(元素)]")) {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]没有学会该法术，所以无法释放！"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "被俘虏时无法释放法术！"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "战斗中只能以战斗动作释放法术！"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_FIRE?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "只能在中立场景释放法术！");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner) && !owner.isSpellSchoolSpecialAbilityUnlocked(SpellSchool.FIRE)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]需要至少<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]才能释放该法术！"));
 				
 			} else {
-				String description = owner.isPlayer()?"Summon your elemental by binding it to the school of Fire!":"Get [npc.name] to summon [npc.her] elemental by binding it to the school of Fire!";
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String description = owner.isPlayer()?"将元素体与烈火学派绑定后召唤！":"让[npc.name]将元素体与烈火学派绑定后召唤！";
+				String cost = "将消耗<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]！";
 				if(owner.getMana()<this.getModifiedCost(owner)) {
-					cost = " This will cost <b>"+Math.round((owner.getMana()-this.getModifiedCost(owner))*-0.25f)+"</b> [style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]!";
+					cost = "将消耗<b>"+Math.round((owner.getMana()-this.getModifiedCost(owner))*-0.25f)+"</b>[style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]！";
 				}
 				return new Value<>(true, UtilText.parse(owner, description+"<br/>"+cost));
 			}
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons your elemental in the form of fire.";
+			return "以火焰的形态召唤元素。";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -420,13 +420,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 									?Util.randomItemFrom(
 									Util.newArrayListOfValues(
-										"[npc.speech(By the ancient rites of flame, I summon forth hell and fury incarnate! Answer your [npc.master]'s call, [npc2.name], and, by the incineration of a million dimensions, be bound to my will!)] ",
-										"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! I call upon the dimension of flame itself, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-										"[npc.speech(Let fire consume, and the inferno within me be unleashed! Flame and fury, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+										"[npc.speech(古老的火焰仪式下，我召唤出地狱与愤怒的化身！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的焚烧，服从我的意志！)] ",
+										"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向火焰位面发出召唤，出来吧，[npc2.name]！)] ",
+										"[npc.speech(让火焰吞噬一切，愿我体内的狱火迸发而出吧！烈焰与怒火，这是[npc.master]召唤！服从我，现身吧，[npc2.name]！)] "))
 									:"")
 								+(caster.isPlayer()
-									?"With a flash of light and a burst of flames, you bind your elemental, [npc2.name], to the school of Fire!"
-									:"With a flash of light and a burst of flames, [npc1.name] binds [npc1.her] elemental, [npc2.name], to the school of Fire!")));
+									?"随着炫目的闪光和火焰的爆裂声，你将元素体[npc2.name]与烈火学派绑定！"
+									:"随着炫目的闪光和火焰的爆裂声，[npc1.name]将元素体[npc2.name]与烈火学派绑定！")));
 				
 			} else {
 				//caster.addCompanion(caster.getElemental());
@@ -434,13 +434,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rites of flame, I summon forth hell and fury incarnate! Answer your [npc.master]'s call, [npc2.name], and, by the incineration of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! I call upon the dimension of flame itself, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let fire consume, and the inferno within me be unleashed! Flame and fury, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(火焰的古老仪式下，我召唤出地狱与愤怒的化身！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的焚烧，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向火焰位面发出召唤，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让火焰吞噬一切，愿我体内的狱火迸发而出吧！烈焰与怒火，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+(caster.isPlayer()
-									?"With a flash of light and a burst of flames, you summon forth your elemental, [npc2.name], by binding [npc2.herHim] to the school of Fire!"
-									:"With a flash of light and a burst of flames, [npc1.name] summons forth [npc1.her] elemental, [npc2.name], by binding [npc2.herHim] to the school of Fire!")));
+									?"随着炫目的闪光和火焰的爆裂声，你召唤出元素体[npc2.name]，并与烈火学派绑定！"
+									:"随着炫目的闪光和火焰的爆裂声，[npc1.name]召唤出元素体[npc2.name]，并与烈火学派绑定！")));
 				
 				if(Main.game.isInCombat()) {
 					caster.getElemental().setLocation(caster, false);
@@ -465,9 +465,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.ICE,
 			false,
-			"Ice Shard",
+			"冰刃术",
 			"ice_shard",
-			"Summons a shard of ice that can be launched at a target.",
+			"召唤一枚冰霜裂片，向目标发射。",
 			25,
 			DamageVariance.LOW,
 			35,
@@ -507,22 +507,22 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Witness now, the terror of the starless void! By hail of ice, and fury of the blizzard, let my arcane power be unleashed!",
-													"The seals within me have been broken, and by my power, now will the universe itself freeze! Hail, sleet, and ice, hear my call, and come forth!",
-													"From beyond the frozen void, now is my power unleashed! Crossing the boundary from the frozen realm of chaos, let my power be manifest!"),
-											"Summoning a swirling vortex of water from the moisture in the air, you focus your energy on freezing it in place, creating a shard of ice that you then launch at yourself!",
-											"Summoning a swirling vortex of water from the moisture in the air, you focus your energy on freezing it in place, creating a shard of ice that you then launch at [npc.name]!",
+													"见证无光虚无的恐怖吧！冰雪的呼唤，雪暴的狂怒，释放吧，我的奥术之力！",
+													"我已经挣脱体内的枷锁，我将用力量，冻结整个宇宙！狂风、冰雹、寒冰，听我号令，无畏地冲锋吧！",
+													"在冻结的虚空之外，我的力量自此迸发！我将展现这力量，跨越冻结的混沌领域的界限！"),
+											"你从空气的水汽中召唤出一道旋转的水涡，将能量集中后便将其冻结，制造出一块冰刃，随后向自己身上投去！",
+											"你从空气的水汽中召唤出一道旋转的水涡，将能量集中后便将其冻结，制造出一块冰刃，随后向[npc.Name]身上投去！",
 											"",
-											"Summoning a swirling vortex of water from the moisture in the air, [npc1.name] focuses [npc1.her] energy on freezing it in place, creating a shard of ice that [npc.she] then launches at you!",
-											"Summoning a swirling vortex of water from the moisture in the air, [npc1.name] focuses [npc1.her] energy on freezing it in place, creating a shard of ice that [npc.she] then launches at [npc2.name]!")
+											"[npc1.name]从空气的水汽中召唤出一道旋转的水涡，将能量集中后便将其冻结，制造出一块冰刃，随后向你身上投去！",
+											"[npc1.name]从空气的水汽中召唤出一道旋转的水涡，将能量集中后便将其冻结，制造出一块冰刃，随后向[npc2.name]身上投去！")
 								);
 			
 			if(isHit && isCritical && caster.hasSpellUpgrade(SpellUpgrade.ICE_SHARD_2)) {
-				descriptionSB.append(" The freezing fog detonates as the Ice Shard travels through it");
+				descriptionSB.append("冰刃破空而过时爆发出一阵冻结的雾气");
 				if(caster.hasSpellUpgrade(SpellUpgrade.ICE_SHARD_3)) {
-					descriptionSB.append(", entombing everything in the immediate vicinity in a thin layer of ice!");
+					descriptionSB.append("，把周围的一切都冰封在了薄薄的冰层中！");
 				} else {
-					descriptionSB.append("!");
+					descriptionSB.append("！");
 				}
 			}
 			
@@ -546,7 +546,7 @@ public enum Spell {
 		}
 		
 		public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-	    	return Util.newArrayListOfValues("Target has the 'freezing fog' status effect.");
+	    	return Util.newArrayListOfValues("目标拥有“冻人寒雾”状态效果。");
 	    }
 		
 		//Differs from normal version; spells have special crit requirements.
@@ -560,9 +560,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.ICE,
 			false,
-			"Rain Cloud",
+			"雨云术",
 			"rain_cloud",
-			"Summons a small cloud of arcane-enchanted rain above the target's head, which saps their ability to cast spells.",
+			"在目标头顶召唤一小团奥术魔法雨云，削弱他们的施法能力。",
 			0,
 			DamageVariance.LOW,
 			33,
@@ -572,7 +572,7 @@ public enum Spell {
 					SpellUpgrade.RAIN_CLOUD_2,
 					SpellUpgrade.RAIN_CLOUD_3),
 			Util.newHashMapOfValues(
-					new Value<>(Attribute.SPELL_COST_MODIFIER, -25)), Util.newArrayListOfValues("Lasts for [style.colourGood(3 turns)]")) {
+					new Value<>(Attribute.SPELL_COST_MODIFIER, -25)), Util.newArrayListOfValues("持续[style.colourGood(3回合)]")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -595,7 +595,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons a raincloud above the target.";
+			return "在目标头顶召唤一团雨云。";
 		}
 		
 		@Override
@@ -607,12 +607,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(//TODO chuuni three from here
-													"May the heavens burst, and floods sweep the Earth! By the powers manifest within me, I tear open the skies, and deliver unto you your watery grave!"),
-											"With an upwards thrust of your [pc.arm], you summon forth a cloud of rain above your own head!",
-											"With an upwards thrust of your [pc.arm], you summon forth a cloud of rain above [npc.namePos] head!",
+													"愿苍穹震怒，洪水席卷大地！我将展现体内的洪荒之力，撕裂天空，将你送入水之坟墓！"),
+											"你高挥[pc.arm]，在你自己头顶召唤出一团雨云！",
+											"你高挥[pc.arm]，在[npc.namePos]头顶召唤出一团雨云！",
 											"",
-											"With an upwards thrust of [npc.her] [npc.arm], [npc.name] summons forth a cloud of rain above your head!",
-											"With an upwards thrust of [npc1.her] [npc1.arm], [npc1.name] summons forth a cloud of rain above [npc2.namePos] head!"));
+											"[npc.Name]高挥[npc.arm]，在你头顶召唤出一团雨云！",
+											"[npc.Name]高挥[npc.arm]，在[npc2.namePos]头顶召唤出一团雨云！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -640,9 +640,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_HEAL,
 			DamageType.ICE,
 			true,
-			"Soothing Waters",
+			"抚慰之水",
 			"soothing_waters",
-			"Summons an orb of soothing arcane-infused water, which restores the "+Attribute.HEALTH_MAXIMUM.getName()+" of anyone who drinks it.",
+			"召唤一团注入了安抚奥术的水，恢复饮用者的"+Attribute.HEALTH_MAXIMUM.getName()+"。",
 			0,
 			DamageVariance.LOW,
 			100,
@@ -653,7 +653,7 @@ public enum Spell {
 					SpellUpgrade.SOOTHING_WATERS_1,
 					SpellUpgrade.SOOTHING_WATERS_2,
 					SpellUpgrade.SOOTHING_WATERS_3),
-			null, Util.newArrayListOfValues("[style.boldGood(Restores)] 20% [style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
+			null, Util.newArrayListOfValues("[style.boldGood(恢复)]20%[style.boldHealth("+Attribute.HEALTH_MAXIMUM.getName()+")]")) {
 		@Override
 		public Map<Integer, List<TreeEntry<SpellSchool, SpellUpgrade>>> getSpellUpgradeTree() {
 			return Spell.soothingWatersUpgradeTree;
@@ -661,29 +661,29 @@ public enum Spell {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]没有学会该法术，所以无法释放！"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "被俘虏时无法释放法术！"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "战斗中只能以战斗动作释放法术！"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_WATER?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "只能在中立场景释放法术！");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]需要至少<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]才能释放该法术！"));
 				
 			} else {
-				String description = owner.isPlayer()?"Cast Soothing Waters":"Get [npc.name] to cast Soothing Waters";
+				String description = owner.isPlayer()?"释放“抚慰之水”":"让[npc.name]释放“抚慰之水”";
 				if(owner==target) {
-					description+=" on [npc.herself]!";
+					description+=" 目标为[npc.herself]！";
 				} else {
-					description+=" on [npc2.name]!";
+					description+="目标为[npc2.name]！";
 				}
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String cost = "将消耗<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]！";
 				return new Value<>(true, UtilText.parse(owner, target, description+"<br/>"+cost));
 			}
 		}
@@ -693,7 +693,7 @@ public enum Spell {
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Heals the target.";
+			return "治愈目标";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -704,15 +704,15 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By stream and brook, river and sea, I call upon the eternal currents that know no end! I cast my power unto thee, and bring forth the fountain of eternal life!"),
-											"With a gentle swish of your [pc.hand], you summon forth an orb of healing water, which you quickly drink.",
-											"With a gentle swish of your [pc.hand], you summon forth an orb of healing water, which you send to [npc.name] to drink.",
-											"With a gentle swish of [npc.her] [npc.hand], [npc.name] summons forth an orb of healing water, which [npc.she] quickly drinks.",
-											"With a gentle swish of [npc.her] [npc.hand], [npc.name] summons forth an orb of healing water, which [npc.she] sends to you to drink.",
-											"With a gentle swish of [npc.her] [npc.hand], [npc.name] summons forth an orb of healing water, which [npc.she] sends to [npc2.name]to drink."));
+													"水流、溪水、河川、海洋啊，我呼唤这川流不息的循环！我将力量释放于汝，带来永恒生命的源泉！"),
+											"你将[pc.hand]轻轻一挥，便召唤出一颗小球大小的治愈之水，并将其一饮而尽。",
+											"你将[pc.hand]轻轻一挥，便召唤出一颗小球大小的治愈之水，送到[npc.Name]身边供其饮用。",
+											"[npc.Name]将[npc.hand]轻轻一挥，便召唤出一颗小球大小的治愈之水，并将其一饮而尽。",
+											"[npc.Name]将[npc.hand]轻轻一挥，便召唤出一颗小球大小的治愈之水，送到你身边供你饮用。",
+											"[npc.Name]将[npc.hand]轻轻一挥，便召唤出一颗小球大小的治愈之水，送到[npc2.name]身边供其饮用。"));
 
 			if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_3) ) {
-				descriptionSB.append(" Smaller globes of water split off from the primary orb!");
+				descriptionSB.append("从原本的球体中分裂出了一颗更小的水球！");
 			}
 			
 			// If attack hits, apply damage and effects:
@@ -721,9 +721,9 @@ public enum Spell {
 					descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 
 					descriptionSB.append("<br/>"
-								+ "The orb of water heals "+UtilText.parse(target,"[npc.name]")+" for a total of "
-									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f)+" "+Attribute.HEALTH_MAXIMUM.getColouredName("b")+" and "
-									+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f)+" "+Attribute.MANA_MAXIMUM.getColouredName("b")+"!");
+								+ "水球恢复了"+UtilText.parse(target,"[npc.name]")
+									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f)+Attribute.HEALTH_MAXIMUM.getColouredName("b")+"和"
+									+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f)+Attribute.MANA_MAXIMUM.getColouredName("b")+"！");
 					descriptionSB.append(applyDamage(caster, target, -target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f));
 					target.incrementMana(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f);
 					
@@ -739,18 +739,18 @@ public enum Spell {
 						alliesPlusCaster.add(caster);
 						for(GameCharacter combatant : alliesPlusCaster) {
 							descriptionSB.append("<br/>"
-									+ UtilText.parse(combatant, "One of the small orbs flies towards [npc.name], healing [npc.herHim] for a total of "
-																+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.1f)+" "+Attribute.HEALTH_MAXIMUM.getColouredName("b")+" and "
-																+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.1f)+" "+Attribute.MANA_MAXIMUM.getColouredName("b")+"!"));
+									+ UtilText.parse(combatant, "较小的水球飞向[npc.name]，恢复了[npc.herHim]"
+																+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.1f)+Attribute.HEALTH_MAXIMUM.getColouredName("b")+"和"
+																+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.1f)+Attribute.MANA_MAXIMUM.getColouredName("b")+"！"));
 							descriptionSB.append(applyDamage(caster, combatant, -combatant.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.1f));
 							combatant.incrementMana(combatant.getAttributeValue(Attribute.MANA_MAXIMUM)*0.1f);
 							if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_1_CLEAN)) {
-								descriptionSB.append(UtilText.parse(combatant, "<br/>[npc.NamePos] body and all of [npc.her] worn clothing is [style.colourAqua(cleaned)] by the spell!"));
+								descriptionSB.append(UtilText.parse(combatant, "<br/>[npc.NamePos]的身体和穿着的衣物都借助法术[style.colourAqua(清理干净)]了！"));
 								combatant.cleanAllClothing(false, false);
 								combatant.cleanAllDirtySlots(true);
 							}
 							if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_2_CLEAN)) {
-								descriptionSB.append(UtilText.parse(combatant, "<br/>[npc.NamePos] body is [style.colourAqua(thoroughly washed)] by the spell!"));
+								descriptionSB.append(UtilText.parse(combatant, "<br/>[npc.NamePos]的身体借助法术[style.colourAqua(完全清理)]了！"));
 								combatant.drainTotalFluidsStored(SexAreaOrifice.ANUS, 250);
 								combatant.drainTotalFluidsStored(SexAreaOrifice.VAGINA, 250);
 								combatant.drainTotalFluidsStored(SexAreaOrifice.NIPPLE, 250);
@@ -764,35 +764,35 @@ public enum Spell {
 				} else if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_2)) {
 					descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 					descriptionSB.append("<br/>"
-								+ "The orb of water heals "+UtilText.parse(target,"[npc.name]")+" for a total of "
-									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f)+" "+Attribute.HEALTH_MAXIMUM.getColouredName("b")+" and "
-									+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f)+" "+Attribute.MANA_MAXIMUM.getColouredName("b")+"!");
+								+ "水球恢复了"+UtilText.parse(target,"[npc.name]")
+									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f)+Attribute.HEALTH_MAXIMUM.getColouredName("b")+"和"
+									+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f)+Attribute.MANA_MAXIMUM.getColouredName("b")+"！");
 					descriptionSB.append(applyDamage(caster, target, -target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.4f));
 					target.incrementMana(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f);
 					
 				} else if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_1)) {
 					descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 					descriptionSB.append("<br/>"
-								+"The orb of water heals "+UtilText.parse(target,"[npc.name]")+" for a total of "
-									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.2f)+" "+Attribute.HEALTH_MAXIMUM.getColouredName("b")+" and "
-									+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f)+" "+Attribute.MANA_MAXIMUM.getColouredName("b")+"!");
+								+ "水球恢复了"+UtilText.parse(target,"[npc.name]")
+									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.2f)+Attribute.HEALTH_MAXIMUM.getColouredName("b")+"和"
+									+(int)(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f)+Attribute.MANA_MAXIMUM.getColouredName("b")+"！");
 					descriptionSB.append(applyDamage(caster, target, -target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.2f));
 					target.incrementMana(target.getAttributeValue(Attribute.MANA_MAXIMUM)*0.2f);
 					
 				} else {
 					descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 					descriptionSB.append("<br/>"
-								+ "The orb of water heals "+UtilText.parse(target,"[npc.name]")+" for a total of "
-									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.2f)+" "+Attribute.HEALTH_MAXIMUM.getColouredName("b")+"!");
+								+ "水球恢复了"+UtilText.parse(target,"[npc.name]")
+									+(int)(target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.2f)+Attribute.HEALTH_MAXIMUM.getColouredName("b")+"！");
 					descriptionSB.append(applyDamage(caster, target, -target.getAttributeValue(Attribute.HEALTH_MAXIMUM)*0.2f));
 				}
 				if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_1_CLEAN)) {
-					descriptionSB.append(UtilText.parse(target, "<br/>[npc.NamePos] body and all of [npc.her] worn clothing is [style.colourAqua(cleaned)] by the spell!"));
+					descriptionSB.append(UtilText.parse(target, "<br/>[npc.NamePos]的身体和穿着的衣物都借助法术[style.colourAqua(清理干净)]了！"));
 					target.cleanAllClothing(false, false);
 					target.cleanAllDirtySlots(true);
 				}
 				if(caster.hasSpellUpgrade(SpellUpgrade.SOOTHING_WATERS_2_CLEAN)) {
-					descriptionSB.append(UtilText.parse(target, "<br/>[npc.NamePos] body is [style.colourAqua(thoroughly washed)] by the spell!"));
+					descriptionSB.append(UtilText.parse(target, "<br/>[npc.NamePos]的身体借助法术[style.colourAqua(完全清理)]了！"));
 					target.drainTotalFluidsStored(SexAreaOrifice.ANUS, 250);
 					target.drainTotalFluidsStored(SexAreaOrifice.VAGINA, 250);
 					target.drainTotalFluidsStored(SexAreaOrifice.NIPPLE, 250);
@@ -813,9 +813,9 @@ public enum Spell {
 			SpellType.SUMMON,
 			DamageType.ICE,
 			true,
-			"Elemental Water",
+			"元素之水",
 			"elemental_water",
-			"Summon forth your elemental in a physical form by binding them to the school of Water.",
+			"将元素体与激流学派绑定，召唤出实体形态的水元素。",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -825,34 +825,34 @@ public enum Spell {
 					SpellUpgrade.ELEMENTAL_WATER_2,
 					SpellUpgrade.ELEMENTAL_WATER_3A,
 					SpellUpgrade.ELEMENTAL_WATER_3B),
-			null, Util.newArrayListOfValues("Summons [style.colourArcane(Elemental)] in form of [style.colourSchoolWater(Water)]")) {
+			null, Util.newArrayListOfValues("以[style.colourSchoolWater(水流)]的形态召唤[style.colourArcane(元素)]")) {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]没有学会该法术，所以无法释放！"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "被俘虏时无法释放法术！"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "战斗中只能以战斗动作释放法术！"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_WATER?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "只能在中立场景释放法术！");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]需要至少<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]才能释放该法术！"));
 				
 			} else {
-				String description = owner.isPlayer()?"Summon your elemental by binding it to the school of Water!":"Get [npc.name] to summon [npc.her] elemental by binding it to the school of Water!";
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String description = owner.isPlayer()?"将元素体与激流学派绑定后召唤！":"让[npc.name]将元素体与激流学派绑定后召唤！";
+				String cost = "将消耗<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]！";
 				return new Value<>(true, UtilText.parse(owner, description+"<br/>"+cost));
 			}
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons your elemental in the form of water.";
+			return "以水流的形态召唤元素。";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -876,13 +876,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of sea and sky, I summon forth the eternal torrent! Answer your [npc.master]'s call, [npc2.name], and, by the drowning of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May all waters be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the seas rise, and the tsunami within me be unleashed! Flood and deluge, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(海与天的古老仪式下，我召唤出永恒的激流！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的淹没，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，水流听我号令，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让惊涛袭来，愿我体内的海啸迸发而出吧！洪流与暴雨，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a huge splash, you bind your elemental, [npc2.name], to the school of Water!"
-									:"With a huge splash, [npc1.name] binds [npc1.her] elemental, [npc2.name], to the school of Water!")));
+									?"随着巨大的浪涛声，你将元素体[npc2.name]与激流学派绑定！"
+									:"随着巨大的浪涛声，[npc1.name]将元素体[npc2.name]与激流学派绑定！")));
 				
 			} else {
 				//caster.addCompanion(caster.getElemental());
@@ -890,13 +890,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of sea and sky, I summon forth the eternal torrent! Answer your [npc.master]'s call, [npc2.name], and, by the drowning of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May all waters be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the seas rise, and the tsunami within me be unleashed! Flood and deluge, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(海与天的古老仪式下，我召唤出永恒的激流！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的淹没，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，水流听我号令，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让惊涛袭来，愿我体内的海啸迸发而出吧！洪流与暴雨，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a huge splash, you summon forth your elemental, [npc2.name], by binding [npc2.herHim] to the school of Water!"
-									:"With a huge splash, [npc1.name] summons forth [npc1.her] elemental, [npc2.name], by binding [npc2.herHim] to the school of Water!")));
+									?"随着巨大的浪涛声，你召唤出元素体[npc2.name]，并与激流学派绑定！"
+									:"随着巨大的浪涛声，[npc1.name]召唤出元素体[npc2.name]，并与激流学派绑定！")));
 				
 				if(Main.game.isInCombat()) {
 					caster.getElemental().setLocation(caster, false);
@@ -922,9 +922,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.POISON,
 			false,
-			"Poison Vapours",
+			"毒云术",
 			"poison_vapours",
-			"Summons a cloud of poisonous gas around a target.",
+			"在目标周围召唤一团有毒气体。",
 			0,
 			DamageVariance.LOW,
 			50,
@@ -934,7 +934,7 @@ public enum Spell {
 					SpellUpgrade.POISON_VAPOURS_2,
 					SpellUpgrade.POISON_VAPOURS_3),
 			null,
-			Util.newArrayListOfValues("<b>25</b> [style.colourPoison(Poison Damage)] per turn for [style.colourGood(3 turns)]")) {
+			Util.newArrayListOfValues("每回合造成<b>25</b>[style.colourPoison(毒素伤害)]，持续[style.colourGood(3回合)]")) {
 
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -957,7 +957,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons a poison cloud around the target.";
+			return "在目标周围召唤一团毒云";
 		}
 		
 		@Override
@@ -969,12 +969,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Let seal be broken, and by true power be unleashed! Now, by haze and smog, the air itself obeys my command!"),
-											"With a sweeping motion of your [pc.arm], you summon forth a cloud of poison vapours around yourself!",
-											"With a sweeping motion of your [pc.arm], you summon forth a cloud of poison vapours around [npc.name]!",
+													"打破这封印，让真正的力量释放而出吧！来吧，阴霾与烟雾，让气流听我号令！"),
+											"你[pc.arm]一扫，便在自己身边召唤出一团毒性蒸汽云！",
+											"你[pc.arm]一扫，便在[npc.Name]身边召唤出一团毒性蒸汽云！",
 											"",
-											"With a sweeping motion of [npc.her] [npc.arm], [npc.name] summons forth a cloud of poison vapours around you!",
-											"With a sweeping motion of [npc1.her] [npc1.arm], [npc1.name] summons forth a cloud of poison vapours around [npc2.name]!"));
+											"[npc.her][npc.arm]一扫，便在你身边召唤出一团毒性蒸汽云！",
+											"[npc.her][npc.arm]一扫，便在[npc2.name]身边召唤出一团毒性蒸汽云！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -1001,9 +1001,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT_MINOR_DAMAGE,
 			DamageType.PHYSICAL,
 			false,
-			"Vacuum",
+			"真空术",
 			"vacuum",
-			"Creates a void in the air, dealing a small amount of initial damage as it sucks in the target, before lingering around to continue to disrupt their movements.",
+			"创造一部分真空环境，先通过吸力造成少量伤害，并在停留在周围，继续阻碍目标的行动。",
 			5,
 			DamageVariance.LOW,
 			60,
@@ -1013,7 +1013,7 @@ public enum Spell {
 					SpellUpgrade.VACUUM_2,
 					SpellUpgrade.VACUUM_3),
 			Util.newHashMapOfValues(new Value<>(Attribute.ENERGY_SHIELDING, -5)),
-			Util.newArrayListOfValues("Lasts for [style.colourGood(4 turns)]")) {
+			Util.newArrayListOfValues("持续[style.colourGood(4回合)]")) {
 
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -1036,7 +1036,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons a disruptive vacuum next to the target.";
+			return "在目标周围召唤出一部分干扰的真空。";
 		}
 		
 		@Override
@@ -1049,12 +1049,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Darkness blacker than black! I call upon the eternal void, and by rift through time and space, is my power made manifest!"),
-											"With a clench of your fist, you summon forth a vacuum right next to yourself!",
-											"With a clench of your fist, you summon forth a vacuum right next to [npc.name]!",
+													"比黑色更加深邃的黑暗！我召唤不灭的虚无，穿越时空的裂缝，让我的力量展现出来吧！"),
+											"你紧握拳头，在自己身边召唤出一部分真空！",
+											"你紧握拳头，在[npc.Name]身边召唤出一部分真空！",
 											"",
-											"With a clench of [npc.her] fist, [npc.name] summons forth a vacuum right next to you!",
-											"With a clench of [npc.her] fist, [npc.name] summons forth a vacuum right next to [npc2.name]!"));
+											"[npc.Name]紧握拳头，在你身边召唤出一部分真空！",
+											"[npc.Name]紧握拳头，在[npc2.name]身边召唤出一部分真空！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, damage, isHit, isCritical));
 			
@@ -1082,9 +1082,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT,
 			DamageType.PHYSICAL,
 			true,
-			"Protective Gusts",
+			"护体之风",
 			"protective_gusts",
-			"Summons a benevolent wind to protect the target, as well as to help guide their attacks.",
+			"召唤仁慈之风保护目标，并帮助引导目标攻击。",
 			0,
 			DamageVariance.LOW,
 			50,
@@ -1096,7 +1096,7 @@ public enum Spell {
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.RESISTANCE_POISON, 5),
 					new Value<>(Attribute.ENERGY_SHIELDING, 1)),
-			Util.newArrayListOfValues("Lasts for [style.colourGood(3 turns)]")) {
+			Util.newArrayListOfValues("持续[style.colourGood(3回合)]")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -1119,7 +1119,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons a benevolent wind to protect the target.";
+			return "召唤一道仁慈之风保护目标。";
 		}
 		
 		@Override
@@ -1130,12 +1130,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"The very air itself obeys my command! Now, may my true power be unleashed, and bind the wind itself to my will!"),
-											"Swishing both of your [pc.arms] up into the air, you summon forth a benevolent wind to help protect you!",
-											"Swishing both of your [pc.arms] up into the air, you summon forth a benevolent wind to help protect [npc.name]!",
-											"Swishing both of [npc.her] [npc.arms] up into the air, [npc.name] summons forth a benevolent wind to help protect [npc.herHim]!",
-											"Swishing both of [npc.her] [npc.arms] up into the air, [npc.name] summons forth a benevolent wind to help protect you!",
-											"Swishing both of [npc.her] [npc.arms] up into the air, [npc.name] summons forth a benevolent wind to help protect [npc2.name]!"));
+													"大气，服从我的命令！我将释放出真正的力量，狂风与我的意志同一！"),
+											"你将[pc.arms]张向两边，召唤出一道仁慈之风保护着你！",
+											"你将[pc.arms]张开向两边，召唤出一道仁慈之风保护着[npc.Name]！",
+											"[npc.Name]将[npc.arms]张向两边，召唤出一道仁慈之风保护自己！",
+											"[npc.Name]将[npc.arms]张开向两边，召唤出一道仁慈之风保护着你！",
+											"[npc.Name]将[npc.arms]张开向两边，召唤出一道仁慈之风保护着[npc2.name]！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -1161,9 +1161,9 @@ public enum Spell {
 			SpellType.SUMMON,
 			DamageType.PHYSICAL,
 			true,
-			"Elemental Air",
+			"元素之风",
 			"elemental_air",
-			"Summon forth your elemental in a physical form by binding them to the school of Air.",
+			"将元素体与大气学派绑定，召唤出实体形态的风元素。",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -1173,34 +1173,34 @@ public enum Spell {
 					SpellUpgrade.ELEMENTAL_AIR_2,
 					SpellUpgrade.ELEMENTAL_AIR_3A,
 					SpellUpgrade.ELEMENTAL_AIR_3B),
-			null, Util.newArrayListOfValues("Summons [style.colourArcane(Elemental)] in form of [style.colourSchoolAir(Air)]")) {
+			null, Util.newArrayListOfValues("以[style.colourArcane(元素)]的形态召唤[style.colourSchoolAir(风)]")) {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]没有学会该法术，所以无法释放！"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "被俘虏时无法释放法术！"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "战斗中只能以战斗动作释放法术！"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_AIR?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "只能在中立场景释放法术！");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]需要至少<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]才能释放该法术！"));
 				
 			} else {
-				String description = owner.isPlayer()?"Summon your elemental by binding it to the school of Air!":"Get [npc.name] to summon [npc.her] elemental by binding it to the school of Air!";
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String description = owner.isPlayer()?"将元素体与大气学派绑定后召唤！":"让[npc.name]将元素体与大气学派绑定后召唤！";
+				String cost = "将消耗<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]！";
 				return new Value<>(true, UtilText.parse(owner, description+"<br/>"+cost));
 			}
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons your elemental in the form of air.";
+			return "以大气的形态召唤元素。";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -1224,13 +1224,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of wind and gale, I summon forth the hurricane itself! Answer your [npc.master]'s call, [npc2.name], and, by the offering of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May the air itself be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the winds rise, and the hurricane within me be unleashed! Storm and chaos, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(狂风的古老仪式下，我召唤出那台风！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的呼啸，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向大气发出召唤，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让狂风袭来，愿我体内的飓风迸发而出吧！风暴与混沌，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a tremendous gust of wind, you bind your elemental, [npc2.name], to the school of Air!"
-									:"With a tremendous gust of wind, [npc1.name] binds [npc1.her] elemental, [npc2.name], to the school of Air!")));
+									?"随着震撼的风声，你将元素体[npc2.name]与大气学派绑定！"
+									:"随着震撼的风声，[npc1.name]将元素体[npc2.name]与大气学派绑定！")));
 				
 			} else {
 				//caster.addCompanion(caster.getElemental());
@@ -1238,13 +1238,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of wind and gale, I summon forth the hurricane itself! Answer your [npc.master]'s call, [npc2.name], and, by the offering of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May the air itself be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the winds rise, and the hurricane within me be unleashed! Storm and chaos, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(狂风的古老仪式下，我召唤出那台风！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的呼啸，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向大气发出召唤，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让狂风袭来，愿我体内的飓风迸发而出吧！风暴与混沌，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a tremendous gust of wind, you summon forth your elemental, [npc2.name], by binding [npc2.herHim] to the school of Air!"
-									:"With a tremendous gust of wind, [npc1.name] summons forth [npc1.her] elemental, [npc2.name], by binding [npc2.herHim] to the school of Air!")));
+									?"随着震撼的风声，你召唤出元素体[npc2.name]，并与大气学派绑定！"
+									:"随着震撼的风声，[npc1.name]召唤出元素体[npc2.name]，并与大气学派绑定！")));
 				
 				if(Main.game.isInCombat()) {
 					caster.getElemental().setLocation(caster, false);
@@ -1269,9 +1269,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.PHYSICAL,
 			false,
-			"Slam",
+			"重击术",
 			"slam",
-			"Summons a crushing wave of force that slams down onto a target.",
+			"召唤一股碾压的力量波，猛击目标。",
 			40,
 			DamageVariance.LOW,
 			60,
@@ -1309,19 +1309,19 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"May the mountains shake, and the earth be split asunder! My power now shall be unleashed, and the cosmic forces at my command deliver unto you your demise!"),
-											"With a downward, striking gesture, you summon forth a huge wave of pure force, which slams down on yourself!",
-											"With a downward, striking gesture, you summon forth a huge wave of pure force, which slams down on [npc.name]!",
+													"山峦震颤，大地纵裂！我将释放力量，无穷之力将任我使役，令你灰飞烟灭！"),
+											"你重重地向下一挥，便召唤出一道纯粹的力波，砸向了自己！",
+											"你重重地向下一挥，便召唤出一道纯粹的力波，砸向了[npc.Name]！",
 											"",
-											"With a downward, striking gesture, [npc.name] summons forth a huge wave of pure force, which slams down on you!",
-											"With a downward, striking gesture, [npc.name] summons forth a huge wave of pure force, which slams down on [npc2.name]!")
+											"[npc.Name]重重地向下一挥，便召唤出一道纯粹的力波，砸向了你！",
+											"[npc.Name]重重地向下一挥，便召唤出一道纯粹的力波，砸向了[npc2.name]！")
 								);
 			
 			if(isHit) {
 				if(caster.hasSpellUpgrade(SpellUpgrade.SLAM_3)) {
-					descriptionSB.append(" The force then strikes down into the ground, causing a huge earthquake!");
+					descriptionSB.append("力随后击向地面，造成了剧烈的地震！");
 				} else if(caster.hasSpellUpgrade(SpellUpgrade.SLAM_1)) {
-					descriptionSB.append(" The force then strikes down into the ground, causing the ground to shake!");
+					descriptionSB.append("力随后击向地面，造成了明显的震动！");
 				}
 			}
 			
@@ -1357,9 +1357,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.PHYSICAL,
 			false,
-			"Telekinetic Shower",
+			"念力之雨",
 			"telekinetic_shower",
-			"Lifts any small objects in the surrounding area into the air, before hurling them at the target.",
+			"将周围的小物体举起至空中，一齐向目标砸去。",
 			0,
 			DamageVariance.LOW,
 			125,
@@ -1368,7 +1368,7 @@ public enum Spell {
 					SpellUpgrade.TELEKENETIC_SHOWER_1,
 					SpellUpgrade.TELEKENETIC_SHOWER_2,
 					SpellUpgrade.TELEKENETIC_SHOWER_3),
-			null, Util.newArrayListOfValues("<b>25</b> [style.colourPhysical(Physical Damage)] per turn for [style.colourGood(3 turns)]")) {
+			null, Util.newArrayListOfValues("每回合造成<b>25</b>[style.colourPhysical(物理伤害)]，持续[style.colourGood(3回合)]")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -1391,7 +1391,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Launch small objects at your target to damage and disrupt them.";
+			return "向目标发射出一些小物体，并干扰对方。";
 		}
 		
 		@Override
@@ -1403,12 +1403,12 @@ public enum Spell {
 
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"The cosmic forces of the universe obey my every command! With this dimensional vortex, shall I warp the boundaries of space and time!"),
-											"Raising your [pc.arms], you lift all manner of small objects in the immediate vicinity up into the air, before hurling them at yourself!",
-											"Raising your [pc.arms], you lift all manner of small objects in the immediate vicinity up into the air, before hurling them at [npc.name]!",
+													"宇宙星辰之力听我号令！在这位面的涡流中，我将扭曲时空的边界！"),
+											"你抬起[pc.arms]，身边各种小物件便同时飞起至半空，接着就向你自己砸去！",
+											"你抬起[pc.arms]，身边各种小物件便同时飞起至半空，接着就向[npc.Name]砸去！",
 											"",
-											"Raising [npc.her] [npc.arms], [npc.name] lifts all manner of small objects in the immediate vicinity up into the air, before hurling them at you!",
-											"Raising [npc.her] [npc.arms], [npc.name] lifts all manner of small objects in the immediate vicinity up into the air, before hurling them at [npc2.name]!"));
+											"[npc.Name]抬起[npc.arms]，身边各种小物件便同时飞起至半空，接着就向你砸来！",
+											"[npc.Name]抬起[npc.arms]，身边各种小物件便同时飞起至半空，接着就向[npc2.name]砸去！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -1434,9 +1434,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT,
 			DamageType.PHYSICAL,
 			true,
-			"Stone Shell",
+			"磐石之壳",
 			"stone_shell",
-			"Summons a protective layer of stone around the target.",
+			"在目标周围召唤一层用于保护的磐石。",
 			0,
 			DamageVariance.LOW,
 			25,
@@ -1447,7 +1447,7 @@ public enum Spell {
 					SpellUpgrade.STONE_SHELL_3),
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, 5)),
-			Util.newArrayListOfValues("Lasts for [style.colourGood(3 turns)]")) {
+			Util.newArrayListOfValues("持续[style.colourGood(3回合)]")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -1470,7 +1470,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summon a shield to protect your target.";
+			return "召唤一道护盾来保护你的目标";
 		}
 		
 		@Override
@@ -1480,12 +1480,12 @@ public enum Spell {
 			descriptionSB.setLength(0);
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"The confinement of my astral powers is at an end! By my power unleashed, the very Earth itself serves its [npc.master]'s call!"),
-											"Thrusting your [pc.hand] forwards, you summon forth a levitating stone shell to protect you from incoming attacks!",
-											"Thrusting your [pc.hand] forwards, you summon forth a levitating stone shell to protect [npc.name] from incoming attacks!",
-											"Thrusting [npc.her] [npc.hand] forwards, [npc.name] summons forth a levitating stone shell to protect [npc.herHim] from incoming attacks!",
-											"Thrusting [npc.her] [npc.hand] forwards, [npc.name] summons forth a levitating stone shell to protect you from incoming attacks!",
-											"Thrusting [npc1.her] [npc1.hand] forwards, [npc1.name] summons forth a levitating stone shell to protect [npc2.name] from incoming attacks!"));
+													"星辰之力的禁锢已经结束！我将释放力量，大地也将听从[npc.master]的召唤！"),
+											"你伸出[pc.hand]向前一甩，便召唤出漂浮的石盾，从接下来的攻击中保护着你！",
+											"你伸出[pc.hand]向前一甩，便召唤出漂浮的石盾，从接下来的攻击中保护着[npc.Name]！",
+											"[npc.Name]伸出[npc.hand]向前一甩，便召唤出漂浮的石盾，从接下来的攻击中保护着[npc.herHim]！",
+											"[npc.Name]伸出[npc.hand]向前一甩，便召唤出漂浮的石盾，从接下来的攻击中保护着你！",
+											"[npc.Name]伸出[npc.hand]向前一甩，便召唤出漂浮的石盾，从接下来的攻击中保护着[npc2.name]！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -1511,9 +1511,9 @@ public enum Spell {
 			SpellType.SUMMON,
 			DamageType.PHYSICAL,
 			false,
-			"Elemental Earth",
+			"元素之土",
 			"elemental_earth",
-			"Summon forth your elemental in a physical form by binding them to the school of Earth.",
+			"将元素体与大地学派绑定，召唤出实体形态的土元素。",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -1523,34 +1523,34 @@ public enum Spell {
 					SpellUpgrade.ELEMENTAL_EARTH_2,
 					SpellUpgrade.ELEMENTAL_EARTH_3A,
 					SpellUpgrade.ELEMENTAL_EARTH_3B),
-			null, Util.newArrayListOfValues("Summons [style.colourArcane(Elemental)] in form of [style.colourSchoolEarth(Earth)]")) {
+			null, Util.newArrayListOfValues("以[style.colourArcane(元素)]的形态召唤[style.colourSchoolAir(土)]")) {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]没有学会该法术，所以无法释放！"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "被俘虏时无法释放法术！"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "战斗中只能以战斗动作释放法术！"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_EARTH?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "只能在中立场景释放法术！");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]需要至少<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]才能释放该法术！"));
 				
 			} else {
-				String description = owner.isPlayer()?"Summon your elemental by binding it to the school of Earth!":"Get [npc.name] to summon [npc.her] elemental by binding it to the school of Earth!";
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String description = owner.isPlayer()?"将元素体与大地学派绑定后召唤！":"让[npc.name]将元素体与大地学派绑定后召唤！";
+				String cost = "将消耗<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]！";
 				return new Value<>(true, UtilText.parse(owner, description+"<br/>"+cost));
 			}
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons your elemental in the form of earth.";
+			return "以大地的形态召唤元素。";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -1575,13 +1575,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of sand and stone, I summon forth the earthquake itself! Answer your [npc.master]'s call, [npc2.name], and, by the crushing of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May the earth itself be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the earth shake, and the power within me be unleashed! Boulder and mountain, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(砂石的古老仪式下，我召唤出那地震！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的冲撞，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向大地发出召唤，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让地面震动，愿我体内的力量迸发而出吧！巨石与群山，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a burst of rocks and debris, you bind your elemental, [npc2.name], to the school of Earth!"
-									:"With a burst of rocks and debris, [npc1.name] binds [npc1.her] elemental, [npc2.name], to the school of Earth!")));
+									?"随着岩石与瓦砾的撞击声，你将元素体[npc2.name]与大地学派绑定！"
+									:"随着岩石与瓦砾的撞击声，[npc1.name]将元素体[npc2.name]与大地学派绑定！")));
 				
 			} else {
 				//caster.addCompanion(caster.getElemental());
@@ -1589,13 +1589,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of sand and stone, I summon forth the earthquake itself! Answer your [npc.master]'s call, [npc2.name], and, by the crushing of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May the earth itself be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the earth shake, and the power within me be unleashed! Boulder and mountain, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(砂石的古老仪式下，我召唤出那地震！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的冲撞，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向大地发出召唤，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让地面震动，愿我体内的力量迸发而出吧！巨石与群山，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a burst of rocks and debris, you summon forth your elemental, [npc2.name], by binding [npc2.herHim] to the school of Earth!"
-									:"With a burst of rocks and debris, [npc1.name] summons forth [npc1.her] elemental, [npc2.name], by binding [npc2.herHim] to the school of Earth!")));
+									?"随着岩石与瓦砾的撞击声，你召唤出元素体[npc2.name]，并与大地学派绑定！"
+									:"随着岩石与瓦砾的撞击声，[npc1.name]召唤出元素体[npc2.name]，并与大地学派绑定！")));
 				
 				if(Main.game.isInCombat()) {
 					caster.getElemental().setLocation(caster, false);
@@ -1620,9 +1620,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.LUST,
 			false,
-			"Arcane Arousal",
+			"奥术狂欲",
 			"arcane_arousal",
-			"Causes the target to witness a highly arousing arcane vision.",
+			"使目标看到一段由奥术构成的激情画面。",
 			15,
 			DamageVariance.LOW,
 			50,
@@ -1668,12 +1668,12 @@ public enum Spell {
 
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By the true nature of the arcane, do I deliver unto you the prophecy of Lilith herself! Behold, the fate that awaits all mortals who dare stand against me!"),
-											"You focus your arcane energy on projecting an arousing vision into your own mind",
-											"You focus your arcane energy on projecting an arousing vision into [npc.namePos] mind.",
+													"以奥术最本质的面貌，我要以莉莉丝的神言加之你身！看哪，这就是胆敢直视我的芸芸众生的命运！"),
+											"你集中奥术能量，在自己脑内投射了一副激情的画面。",
+											"你集中奥术能量，在[npc.namePos]脑内投射了一副激情的画面。",
 											"",
-											"[npc.Name] focuses [npc.her] arcane energy on projecting an arousing vision into your mind!",
-											"[npc.Name] focuses [npc.her] arcane energy on projecting an arousing vision into [npc2.namePos] mind!"));
+											"[npc.Name]集中奥术能量，在你脑内投射了一副激情的画面！",
+											"[npc.Name]集中奥术能量，在[npc2.namePos]脑内投射了一副激情的画面！"));
 			
 			descriptionSB.append(getDamageDescription(caster, target, damage, isHit, isCritical));
 			
@@ -1704,9 +1704,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT,
 			DamageType.PHYSICAL,
 			true,
-			"Telepathic Communication",
+			"心灵低语",
 			"telepathic_communication",
-			"The caster projects seductive voices into the mind of the target.",
+			"施法者向目标的脑海中投射一段魅惑之声。",
 			0,
 			DamageVariance.LOW,
 			75,
@@ -1716,7 +1716,7 @@ public enum Spell {
 					SpellUpgrade.TELEPATHIC_COMMUNICATION_2,
 					SpellUpgrade.TELEPATHIC_COMMUNICATION_3),
 			Util.newHashMapOfValues(
-					new Value<>(Attribute.DAMAGE_LUST, 15)), Util.newArrayListOfValues("Lasts for [style.colourGood(5 turns)]")) {
+					new Value<>(Attribute.DAMAGE_LUST, 15)), Util.newArrayListOfValues("持续[style.colourGood(5回合)]")) {
 		
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -1739,7 +1739,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Speak directly into the target's mind.";
+			return "直接在目标脑内发出低语。";
 		}
 		
 		@Override
@@ -1750,12 +1750,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By my mastery of all dimensions, I now shatter the boundaries of space and time! The heavens themselves shall hear my voice, and despair!"),
-											"You focus your arcane energy on enabling your thoughts to be projected into others' minds!",
-											"You focus your arcane energy on enabling [npc.namePos] thoughts to be projected into others' minds!",
-											"[npc.Name] focuses [npc.her] arcane energy on enabling [npc.her] thoughts to be projected into others' minds!",
-											"[npc.Name] focuses [npc.her] arcane energy on enabling your thoughts to be projected into others' minds!",
-											"[npc1.Name] focuses [npc1.her] arcane energy on enabling [npc2.namePos] thoughts to be projected into others' minds!"));
+													"我驾驭着所有位面，而如今将动摇时空的界限！苍穹也当聆听我的声音，并深陷绝望！"),
+											"你集中奥术能量，使得自己的思想能够直接投射到他人的脑内！",
+											"你集中奥术能量，使得[npc.namePos]的思想能够直接投射到他人的脑内！",
+											"[npc.Name]集中奥术能量，使得自己的思想能够直接投射到他人的脑内！",
+											"[npc.Name]集中奥术能量，使得你的思想能够直接投射到他人的脑内！",
+											"[npc1.name]集中奥术能量，使得[npc2.namePos]的思想能够直接投射到他人的脑内！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -1780,9 +1780,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.LUST,
 			false,
-			"Arcane Cloud",
+			"奥术之云",
 			"arcane_cloud",
-			"Summons an arcane-imbued stormcloud over the target's head.",
+			"在目标的头顶召唤一股充满奥术的风暴。",
 			0,
 			DamageVariance.LOW,
 			150,
@@ -1792,7 +1792,7 @@ public enum Spell {
 					SpellUpgrade.ARCANE_CLOUD_2,
 					SpellUpgrade.ARCANE_CLOUD_3),
 			Util.newHashMapOfValues(
-					new Value<>(Attribute.RESISTANCE_LUST, -25)), Util.newArrayListOfValues("Lasts for [style.colourGood(3 turns)]")) {
+					new Value<>(Attribute.RESISTANCE_LUST, -25)), Util.newArrayListOfValues("持续[style.colourGood(3回合)]")) {
 
 		@Override
 		public Map<AbstractStatusEffect, Integer> getStatusEffects(GameCharacter caster, GameCharacter target, boolean isCritical) {
@@ -1815,7 +1815,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summon an arcane cloud above the target.";
+			return "在目标头顶召唤一团奥术之云。";
 		}
 		
 		@Override
@@ -1827,12 +1827,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Oh, dark seals containing my ultimate power, now be rend to pieces! Let arcane manifestations be summoned forth, to deliver unto my enemies their final judgement!"),
-											"With an upwards thrust of your [pc.arm], you summon forth an arcane cloud above your own head!",
-											"With an upwards thrust of your [pc.arm], you summon forth an arcane cloud above [npc.namePos] head!",
+													"啊，压抑着我无穷力量的黑暗封印，如今已经灰飞烟灭！现身吧，奥术之源，为我的敌人送上最终审判吧！"),
+											"你高挥[pc.arm]，在你自己头顶召唤出一团奥术之云！",
+											"你高挥[pc.arm]，在[npc.namePos]头顶召唤出一团奥术之云！",
 											"",
-											"With an upwards thrust of [npc.her] [npc.arm], [npc.name] summons forth an arcane cloud above your head!",
-											"With an upwards thrust of [npc1.her] [npc1.arm], [npc1.name] summons forth an arcane cloud above [npc2.namePos] head!"));
+											"[npc.Name]高挥[npc.arm]，在你头顶召唤出一团奥术之云！",
+											"[npc.Name]高挥[npc.arm]，在[npc2.namePos]头顶召唤出一团奥术之云！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -1858,9 +1858,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT_CLEAR,
 			DamageType.PHYSICAL,
 			true,
-			"Cleanse",
+			"净化术",
 			"cleanse",
-			"A cleansing wave of arcane energy bursts forth from the target, removing all of their status effects.",
+			"一股奥术能量的波动向目标袭去，移除对方所有的状态效果。",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -1870,12 +1870,12 @@ public enum Spell {
 					SpellUpgrade.CLEANSE_2,
 					SpellUpgrade.CLEANSE_3),
 			null, Util.newArrayListOfValues(
-					"[style.colourGood(Removes all)] combat status effects from",
-					"both the targeted ally and enemy")) {
+					"从目标盟友或敌人身上[style.colourGood(移除所有)]",
+					"战斗状态效果")) {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Removes combat status effects from the targeted ally and enemy.";
+			return "从目标盟友和敌人身上移除所有战斗状态效果。";
 		}
 		
 		@Override
@@ -1907,16 +1907,16 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"By Lilith's power, I do shatter the world's illusions! Let time and space be torn asunder, and by my arcane dominance, shall reality itself be warped to my will!"),
-											"Thrusting your [pc.hand] forwards, you summon forth an explosion of cleansing arcane energy upon yourself!",
-											"Thrusting your [pc.hand] forwards, you summon forth an explosion of cleansing arcane energy upon [npc.name]!",
-											"Thrusting [npc.her] [npc.hand] forwards, [npc.name] summons forth an explosion of cleansing arcane energy upon [npc.herself]!",
-											"Thrusting [npc.her] [npc.hand] forwards, [npc.name] summons forth an explosion of cleansing arcane energy upon you!",
-											"Thrusting [npc.her] [npc.hand] forwards, [npc.name] summons forth an explosion of cleansing arcane energy upon [npc2.name]!")
+													"以莉莉丝之力，我将打破世界的幻象！碎裂吧，时间与空间，我的奥术将主宰一切，现实也将为之扭曲！"),
+											"你伸出[pc.hand]向前一甩，便在自己身边召唤出一阵爆炸，充满了净化的奥术能量！",
+											"你伸出[pc.hand]向前一甩，便在[npc.Name]身边召唤出一阵爆炸，充满了净化的奥术能量！",
+											"[npc.Name]伸出[npc.hand]向前一甩，便在自己身边召唤出一阵爆炸，充满了净化的奥术能量！",
+											"[npc.Name]伸出[npc.hand]向前一甩，便在你身边召唤出一阵爆炸，充满了净化的奥术能量！",
+											"[npc.Name]伸出[npc.hand]向前一甩，便在[npc2.name]身边召唤出一阵爆炸，充满了净化的奥术能量！")
 								);
 
 			descriptionSB.append(UtilText.parse(this.getPreferredTarget(caster, enemies, allies),
-					" The energy then shoots off and explodes around [npc.name]!"));
+					"那股能量随后便喷射向[npc.Name]周围，引发了爆炸！"));
 			
 			
 			// If attack hits, apply damage and effects: TODO
@@ -1958,9 +1958,9 @@ public enum Spell {
 			SpellType.MISC,
 			DamageType.PHYSICAL,
 			false,
-			"Steal",
+			"窃取术",
 			"steal",
-			"A lesser form of teleport, this spell enables the caster to steal an item from out of the target's inventory.",
+			"传送术的低阶形态，该法术允许施法者从对方的物品栏中偷取一件物品。",
 			0,
 			DamageVariance.LOW,
 			100,
@@ -1970,11 +1970,11 @@ public enum Spell {
 					SpellUpgrade.STEAL_2,
 					SpellUpgrade.STEAL_3A,
 					SpellUpgrade.STEAL_3B),
-			null, Util.newArrayListOfValues("[style.colourExcellent(Steals)] a random item from the target's inventory")) {
+			null, Util.newArrayListOfValues("从目标的物品栏中[style.colourExcellent(偷取)]随机物品")) {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Steals the target's items.";
+			return "窃取目标的物品。";
 		}
 		
 		@Override
@@ -1986,12 +1986,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"The fabric of space and time is mine to command! Cosmic dimensions, obey my command, and deliver unto me the assets of my hated foes!"),
-											"Thrusting out your [pc.hand] and clenching your fist, you channel your arcane power into stealing one of your own items...", // ...
-											"Thrusting out your [pc.hand] and clenching your fist, you channel your arcane power into stealing one of [npc.namePos] items!",
+													"交织的时空也将听我号令！宇宙位面，服从我的命令吧，仇敌之物将归我所有！"),
+											"你伸出[pc.hand]向前一甩，然后攥紧了拳头，便将奥术能量传导出去，偷取了一件你自己的物品……",
+											"你伸出[pc.hand]向前一甩，然后攥紧了拳头，便将奥术能量传导出去，偷取了一件[npc.namePos]的物品！",
 											"",
-											"Thrusting out [npc.her] [npc.hand] and clenching [npc.her] fist, [npc.name] channels [npc.her] arcane power into stealing one of your items!",
-											"Thrusting out [npc.her] [npc.hand] and clenching [npc.her] fist, [npc.name] channels [npc.her] arcane power into stealing one of [npc2.namePos] items!"));
+											"[npc.Name]伸出[npc.hand]向前一甩，然后攥紧了拳头，便将奥术能量传导出去，偷取了一件你的物品！",
+											"[npc.Name]伸出[npc.hand]向前一甩，然后攥紧了拳头，便将奥术能量传导出去，偷取了一件[npc2.namePos]的物品！"));
 			
 			// If attack hits, apply damage and effects:
 			if (isHit) {
@@ -2007,13 +2007,13 @@ public enum Spell {
 						descriptionSB.append("<br/>"
 								+getCastDescription(caster, target,
 										null,
-										"You stole your own "+clothingToSteal.getName()+"...",
-										"[npc.Name] lets out an embarrassed cry as you steal the "+clothingToSteal.getName()+" that [npc.sheIs] currently wearing, [npc.speech(Y-You pervert!)]",
+										"你窃取了自己的"+clothingToSteal.getName()+"……",
+										"你窃取了[npc.Name]正穿在身上的"+clothingToSteal.getName()+"，害[npc.sheIs]惊叫一声，[npc.speech(你，你个流氓！)]",
 										"",
-										"You can't help but let out an embarrassed cry as [npc.name] steals the "+clothingToSteal.getName()+" that you're currently wearing, [pc.speech(Y-You pervert!)]",
-										"[npc2.Name] lets out an embarrassed cry as [npc1.name] steals the "+clothingToSteal.getName()+" that [npc2.sheIs] currently wearing, [npc2.speech(Y-You pervert!)]")
+										"[npc.Name]窃取了你正穿在身上的"+clothingToSteal.getName()+"，你不禁惊叫一声，[pc.speech(你，你个流氓！)]",
+										"[npc1.Name]窃取了[npc2.name]正穿在身上的"+clothingToSteal.getName()+"，害[npc2.sheIs]惊叫一声，[npc2.speech(你，你个流氓！)]")
 								+ "<br/>");
-						clothingToSteal.setName(target.getNameIgnoresPlayerKnowledge() + "'s " +clothingToSteal.getName());
+						clothingToSteal.setName(target.getNameIgnoresPlayerKnowledge() + "'" +clothingToSteal.getName());
 						descriptionSB.append(caster.addClothing(clothingToSteal, true));
 					}
 				}
@@ -2083,11 +2083,11 @@ public enum Spell {
 						descriptionSB.append("<br/>"
 								+ getCastDescription(caster, target,
 										null,
-										"You stole your own "+mainWeapon.getName()+"...",
-										"You stole [npc.namePos] "+mainWeapon.getName()+" from out of [npc.her] [npc.hands]!",
+										"你窃取了自己的"+mainWeapon.getName()+"……",
+										"你从[npc.namePos]的[npc.hands]上窃取了"+mainWeapon.getName()+"！",
 										"",
-										"[npc.Name] stole your "+mainWeapon.getName()+" from out of your [pc.hands]!",
-										"[npc1.Name] stole [npc2.namePos] "+mainWeapon.getName()+" from out of [npc2.her] [npc2.hands]!")
+										"[npc.Name]从你的[pc.hands]上窃取了"+mainWeapon.getName()+"！",
+										"[npc1.name]从[npc2.namePos]的[npc2.hands]上窃取了"+mainWeapon.getName()+"！")
 								+ "<br/>"
 								+ caster.addWeapon(mainWeapon, true));
 						
@@ -2096,11 +2096,11 @@ public enum Spell {
 						descriptionSB.append("<br/>"
 								+ getCastDescription(caster, target,
 										null,
-										"You stole your own "+offhandWeapon.getName()+"...",
-										"You stole [npc.namePos] "+offhandWeapon.getName()+" from out of [npc.her] [npc.hands]!",
+										"你窃取了自己的"+offhandWeapon.getName()+"……",
+										"你从[npc.namePos]的[npc.hands]上窃取了"+offhandWeapon.getName()+"！",
 										"",
-										"[npc.Name] stole your "+offhandWeapon.getName()+" from out of your [pc.hands]!",
-										"[npc1.Name] stole [npc2.namePos] "+offhandWeapon.getName()+" from out of [npc2.her] [npc2.hands]!")
+										"[npc.Name]从你的[pc.hands]上窃取了"+offhandWeapon.getName()+"！",
+										"[npc1.name]从[npc2.namePos]的[npc2.hands]上窃取了"+offhandWeapon.getName()+"！")
 								+ "<br/>"
 								+ caster.addWeapon(offhandWeapon, true));
 						
@@ -2123,11 +2123,11 @@ public enum Spell {
 							descriptionSB.append("<br/>"
 									+ getCastDescription(caster, target,
 											null,
-											"You stole your own "+item.getName()+"...",
-											"You stole [npc.namePos] "+item.getName()+" from out of [npc.her] inventory!",
+											"你窃取了自己的"+item.getName()+"……",
+											"你从[npc.namePos]的物品栏窃取了"+item.getName()+"！",
 											"",
-											"[npc.Name] stole your "+item.getName()+" from out of your inventory!",
-											"[npc1.Name] stole [npc2.namePos] "+item.getName()+" from out of [npc2.her] inventory!")
+											"[npc.Name]从你的物品栏窃取了"+item.getName()+"！",
+											"[npc1.Name]从[npc2.namePos]的物品栏窃取了"+item.getName()+"！")
 									+ "<br/>"
 									+ caster.addItem(item, false));
 							
@@ -2136,11 +2136,11 @@ public enum Spell {
 							descriptionSB.append("<br/>"
 									+ getCastDescription(caster, target,
 											null,
-											"You stole your own "+weapon.getName()+"...",
-											"You stole [npc.namePos] "+weapon.getName()+" from out of [npc.her] inventory!",
+											"你窃取了自己的"+weapon.getName()+"……",
+											"你从[npc.namePos]的物品栏窃取了"+weapon.getName()+"！",
 											"",
-											"[npc.Name] stole your "+weapon.getName()+" from out of your inventory!",
-											"[npc1.Name] stole [npc2.namePos] "+weapon.getName()+" from out of [npc2.her] inventory!")
+											"[npc.Name]从你的物品栏窃取了"+weapon.getName()+"！",
+											"[npc1.Name]从[npc2.namePos]的物品栏窃取了"+weapon.getName()+"！")
 									+ "<br/>"
 									+ caster.addWeapon(weapon, false));
 							
@@ -2149,11 +2149,11 @@ public enum Spell {
 							descriptionSB.append("<br/>"
 									+ getCastDescription(caster, target,
 											null,
-											"You stole your own "+clothing.getName()+"...",
-											"You stole [npc.namePos] "+clothing.getName()+" from out of [npc.her] inventory!",
+											"你窃取了自己的"+clothing.getName()+"……",
+											"你从[npc.namePos]的物品栏窃取了"+clothing.getName()+"！",
 											"",
-											"[npc.Name] stole your "+clothing.getName()+" from out of your inventory!",
-											"[npc1.Name] stole [npc2.namePos] "+clothing.getName()+" from out of [npc2.her] inventory!")
+											"[npc.Name]从你的物品栏窃取了"+clothing.getName()+"！",
+											"[npc1.Name]从[npc2.namePos]的物品栏窃取了"+clothing.getName()+"！")
 									+ "<br/>"
 									+ caster.addClothing(clothing, false));
 						}
@@ -2163,17 +2163,17 @@ public enum Spell {
 						descriptionSB.append("<br/>"
 								+ getCastDescription(caster, target,
 										null,
-										"You stole your own "+clothingToSteal.getName()+"...",
-										"[npc.Name] lets out an embarrassed cry as you steal the "+clothingToSteal.getName()+" that [npc.sheIs] currently wearing!",
+										"你窃取了自己的"+clothingToSteal.getName()+"……",
+										"你窃取了[npc.Name]正穿在身上的"+clothingToSteal.getName()+"，害[npc.sheIs]惊叫一声！",
 										"",
-										"You can't help but let out an embarrassed cry as [npc.name] steals the "+clothingToSteal.getName()+" that you're currently wearing!",
-										"[npc2.Name] lets out an embarrassed cry as [npc1.name] steals the "+clothingToSteal.getName()+" that [npc2.sheIs] currently wearing!")
+										"[npc.Name]窃取了你正穿在身上的"+clothingToSteal.getName()+"，你不禁惊叫一声！",
+										"[npc1.Name]窃取了[npc2.name]正穿在身上的"+clothingToSteal.getName()+"，害[npc2.sheIs]惊叫一声！")
 								+ "<br/>");
-						clothingToSteal.setName(target.getNameIgnoresPlayerKnowledge() + "'s " +clothingToSteal.getName());
+						clothingToSteal.setName(target.getNameIgnoresPlayerKnowledge() + "'" +clothingToSteal.getName());
 						descriptionSB.append(caster.addClothing(clothingToSteal, true));
 						
 					} else {
-						descriptionSB.append("<br/>[style.italicsDisabled(There's nothing to steal...)]");
+						descriptionSB.append("<br/>[style.italicsDisabled(没有东西可偷……)]");
 					}
 				}
 			}
@@ -2194,9 +2194,9 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT,
 			DamageType.PHYSICAL,
 			true,
-			"Teleport",
+			"传送术",
 			"teleport",
-			"The target is teleported behind their enemies, granting a huge boost to dodge chance.",
+			"目标将会被传送至敌人背后，闪避概率大大提高。",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -2207,13 +2207,13 @@ public enum Spell {
 					SpellUpgrade.TELEPORT_3),
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.ENERGY_SHIELDING, 100)), Util.newArrayListOfValues(
-					"Lasts for [style.colourGood(1 turn)]",
-					"[style.colourExcellent(Unlocks)] map teleport",
-					"Map teleport [style.colourTerrible(blocked)] by companions")) {
+					"持续[style.colourGood(1回合)]",
+					"[style.colourExcellent(解锁)]地图传送",
+					"同伴[style.colourTerrible(会阻碍)]地图传送")) {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Teleport behind your target.";
+			return "传送至目标身后。";
 		}
 
 		@Override
@@ -2241,22 +2241,22 @@ public enum Spell {
 			if(caster.hasSpellUpgrade(SpellUpgrade.TELEPORT_2) && !allies.isEmpty()) {
 				descriptionSB.append(getCastDescription(caster, target,
 						Util.newArrayListOfValues(
-								"Through a thousand dimensions, and across a million worlds, have I wandered! Distance and time are nothing more than the insignificant trappings of the ignorant masses!"),
-						"With a quick, cutting motion from one of your [pc.hands], you teleport both yourself and your allies behind your enemies!",
-						"With a quick, cutting motion from one of your [pc.hands], you teleport both yourself and your allies behind your enemies!",
-						"With a quick, cutting motion from one of [npc.her] [npc.hands], [npc.name] teleports both [npc.herself] and [npc.her] allies behind [npc.her] enemies!",
-						"With a quick, cutting motion from one of [npc.her] [npc.hands], [npc.name] teleports both [npc.herself] and [npc.her] allies behind [npc.her] enemies!",
-						"With a quick, cutting motion from one of [npc.her] [npc.hands], [npc.name] teleports both [npc.herself] and [npc.her] allies behind [npc.her] enemies!"));
+								"我已然，穿越千百个位面，跨越万亿个位面！距离与时间不过是庞然巨物前微不足道的装饰！"),
+						"你用一只[pc.hands]迅速切划过空气，便将自己的盟友都传送到了敌人身后！",
+						"你用一只[pc.hands]迅速切划过空气，便将自己的盟友都传送到了敌人身后！",
+						"[npc.Name]用一只[npc.hands]迅速切划过空气，便将自己的盟友都传送到了敌人身后！",
+						"[npc.Name]用一只[npc.hands]迅速切划过空气，便将自己的盟友都传送到了敌人身后！",
+						"[npc.Name]用一只[npc.hands]迅速切划过空气，便将自己的盟友都传送到了敌人身后！"));
 				
 			} else {
 				descriptionSB.append(getCastDescription(caster, target,
 						Util.newArrayListOfValues(
-								"Through a thousand dimensions, and across a million worlds, have I wandered! Distance and time are nothing more than the insignificant trappings of the ignorant masses!"),
-						"With a quick, cutting motion from one of your [pc.hands], you teleport behind your enemies!",
-						"With a quick, cutting motion from one of your [pc.hands], you teleport [npc.name] behind [npc.her] enemies!",
-						"With a quick, cutting motion from one of [npc.her] [npc.hands], [npc.name] teleports behind [npc.her] enemies!",
-						"With a quick, cutting motion from one of [npc.her] [npc.hands], [npc.name] teleports you behind your enemies!",
-						"With a quick, cutting motion from one of [npc.her] [npc.hands], [npc.name] teleports [npc2.name] behind [npc2.her] enemies!"));
+								"我已然，穿越千百个位面，跨越万亿个位面！距离与时间不过是庞然巨物前微不足道的装饰！"),
+						"你用一只[pc.hands]迅速切划过空气，便将自己传送到了敌人身后！",
+						"你用一只[pc.hands]迅速切划过空气，便将[npc.Name]传送到了[npc.her]的敌人身后！",
+						"[npc.Name]用一只[npc.hands]迅速切划过空气，便将自己传送到了[npc.her]的敌人身后！",
+						"[npc.Name]用一只[npc.hands]迅速切划过空气，便将你传送到了你的敌人身后！",
+						"[npc.Name]用一只[npc.hands]迅速切划过空气，便将[npc2.name]传送到了[npc2.her]的敌人身后！"));
 			}
 			
 			// If attack hits, apply damage and effects:
@@ -2291,9 +2291,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.PHYSICAL,
 			false,
-			"Lilith's Command",
+			"莉莉丝之律令",
 			"liliths_command",
-			"Imbues the caster's words with the power of Lilith herself, forcing the target to instantly submit.",
+			"为施法者的言语注入莉莉丝之力，强迫对手立刻屈服。",
 			0,
 			DamageVariance.LOW,
 			400,
@@ -2303,11 +2303,11 @@ public enum Spell {
 					SpellUpgrade.LILITHS_COMMAND_2,
 					SpellUpgrade.LILITHS_COMMAND_3),
 			null,
-			Util.newArrayListOfValues("[style.colourGood(25%)] chance for target to [style.colourExcellent(instantly submit)]")) {
+			Util.newArrayListOfValues("[style.colourGood(25%)]的概率使目标[style.colourExcellent(立刻屈服)]")) {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Force your target to submit.";
+			return "强迫目标屈服。";
 		}
 		
 		@Override
@@ -2318,12 +2318,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Through me, is Lilith made manifest! Across the gulf of time and space, her command is infinite, and does order you to obey!"),
+													"莉莉丝由我现出神力！跨越时间和空间的鸿沟，她的命令永无尽头，你必将服从！"),
 											"",
-											"Drawing an immense amount of power from your arcane aura, you project the words of Lilith herself into the mind of [npc.name], ordering [npc.herHim] to submit.",
+											"你从奥术灵气中攫取了大量的能量，将莉莉丝本人的圣言注入[npc.name]的脑内，命令其屈服。",
 											"",
-											"Drawing an immense amount of power from [npc.her] arcane aura, [npc.name] projects the words of Lilith herself into your mind, ordering you to submit!",
-											"Drawing an immense amount of power from [npc1.her] arcane aura, [npc1.name] projects the words of Lilith herself into [npc2.namePos] mind, ordering [npc2.herHim] to submit!"));
+											"[npc.Name]从奥术灵气中攫取了大量的能量，将莉莉丝本人的圣言注入你的脑内，命令你屈服。",
+											"[npc1.name]从奥术灵气中攫取了大量的能量，将莉莉丝本人的圣言注入[npc2.namePos]的脑内，命令其屈服。"));
 			
 			// If attack hits, apply damage and effects:
 			if (isHit) {
@@ -2349,26 +2349,26 @@ public enum Spell {
 					if(target.isPlayer()) {
 						descriptionSB.append(
 								"<br/>"
-								+ "You find yourself standing face-to-face with the queen of all demons herself."
-								+ " Snapping her fingers, Lilith points to the floor, and as she does so, you find yourself dropping to your knees in front of her."
-								+ " Eager to please her, you look up into Lilith's eyes as you [pc.moan], [pc.speech(Please, Lilith... Do what you want with me... I'm your loyal slave...)]");
+								+ "你突然意识到自己正直面众恶魔之主。"
+								+ "莉莉丝只是一伸手指，向着地面，等你反应过来，自己已经跪在了她面前。"
+								+ "你油然而生一股取悦对方的想法，于是抬头看向莉莉丝的眼眸，[pc.moan]着，[pc.speech(求您了，莉莉丝……随意地使用我吧……我是您忠诚的奴隶……)]");
 						
 					} else {
 						descriptionSB.append(UtilText.parse(target,
 								"<br/>"
-								+ "[npc.Name] sinks to [npc.her] knees as the effect of Lilith's Command completely overwhelms [npc.herHim]."
-										+ " Letting out [npc.a_moan+], [npc.she] starts touching [npc.herself] as [npc.she] pleads, [npc.speech(Please, Lilith... Do what you want with me... I'm your loyal slave...)]"));
+								+ "[npc.Name]受到莉莉丝之律令的压迫，跪了下来。"
+										+ "[npc.she]开始抚摸着自己的身子，一边发出[npc.a_moan+]，一边祈求道，[npc.speech(求您了，莉莉丝……随意地使用我吧……我是您忠诚的奴隶……)]"));
 					}
 					
 				} else {
 					if(target.isPlayer()) {
 						descriptionSB.append(
-								"<br/>You shake your head and jump back as you resist the effects of Lilith's Command!");
+								"<br/>你连忙晃了晃脑袋，向后一跳，成功抵抗了莉莉丝之律令！");
 						
 					} else if(target.isVulnerableToArcaneStorm() || !caster.hasSpellUpgrade(SpellUpgrade.LILITHS_COMMAND_2)) {
-						descriptionSB.append(UtilText.parse(target, "<br/>[npc.Name] shakes [npc.her] head and jumps back as [npc.she] resists the effects of Lilith's Command!"));
+						descriptionSB.append(UtilText.parse(target, "<br/>[npc.Name]连忙晃了晃脑袋，向后一跳，成功抵抗了莉莉丝之律令！"));
 					} else {
-						descriptionSB.append(UtilText.parse(target, "<br/>[npc.Name] grins as [npc.she] taunts, [npc.speech(That cheap trick isn't going to affect [npc.a_race] like me!)]"));
+						descriptionSB.append(UtilText.parse(target, "<br/>[npc.Name]咧嘴一笑，嘲讽道，[npc.speech(这种小把戏可吓不倒我这种[npc.a_race]！)]"));
 					}
 				}
 			}
@@ -2384,9 +2384,9 @@ public enum Spell {
 			SpellType.SUMMON,
 			DamageType.LUST,
 			false,
-			"Elemental Arcane",
+			"元素奥术",
 			"elemental_arcane",
-			"Summon forth your elemental in a physical form by binding them to the school of Arcane.",
+			"将元素体与奥术学派绑定，召唤出实体形态的奥术元素。",
 			0,
 			DamageVariance.LOW,
 			200,
@@ -2396,34 +2396,34 @@ public enum Spell {
 					SpellUpgrade.ELEMENTAL_ARCANE_2,
 					SpellUpgrade.ELEMENTAL_ARCANE_3A,
 					SpellUpgrade.ELEMENTAL_ARCANE_3B),
-			null, Util.newArrayListOfValues("Summons [style.colourArcane(Elemental)] in form of [style.colourArcane(Arcane)]")) {
+			null, Util.newArrayListOfValues("以[style.colourArcane(奥术)]的形态召唤[style.colourArcane(元素)]")) {
 		@Override
 		public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 			if(!owner.hasSpell(this)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]没有学会该法术，所以无法释放！"));
 				
 			} else if(owner.isCaptive()) {
-				return new Value<>(false, UtilText.parse(owner, "Spells cannot be cast while in captivity!"));
+				return new Value<>(false, UtilText.parse(owner, "被俘虏时无法释放法术！"));
 				
 			} else if(Main.game.isInCombat()) {
-				return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+				return new Value<>(false, UtilText.parse(owner, "战斗中只能以战斗动作释放法术！"));
 				
 			} else if(!Main.game.isSavedDialogueNeutral()
 					&& (Main.game.getCurrentDialogueNode()!=SpellManagement.CHARACTER_SPELLS_ARCANE?false:SpellManagement.getDialogueReturn().getDialogueNodeType()!=DialogueNodeType.OCCUPANT_MANAGEMENT)) {
-				return new Value<>(false, "Spells can only be cast in a neutral scene!");
+				return new Value<>(false, "只能在中立场景释放法术！");
 				
 			} else if(owner.getMana()<this.getModifiedCost(owner)) {
-				return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.verb(need)] at least <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)] in order to cast this spell!"));
+				return new Value<>(false, UtilText.parse(owner, "[npc.Name]需要至少<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]才能释放该法术！"));
 				
 			} else {
-				String description = owner.isPlayer()?"Summon your elemental by binding it to the school of Arcane!":"Get [npc.name] to summon [npc.her] elemental by binding it to the school of Arcane!";
-				String cost = " This will cost <b>"+this.getModifiedCost(owner)+"</b> [style.boldMana(aura)]!";
+				String description = owner.isPlayer()?"将元素体与奥术学派绑定后召唤！":"让[npc.name]将元素体与奥术学派绑定后召唤！";
+				String cost = "将消耗<b>"+this.getModifiedCost(owner)+"</b>[style.boldMana(灵气)]！";
 				return new Value<>(true, UtilText.parse(owner, description+"<br/>"+cost));
 			}
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Summons your elemental in the form of arcane energy.";
+			return "以奥术的形态召唤元素。";
 		}
 		@Override
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -2446,13 +2446,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of devil and demon, I summon forth the arcane itself! Answer your [npc.master]'s call, [npc2.name], and, by the conquest of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May the arcane itself be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the arcane be mine, and the power within me be unleashed! The spirit of arcane itself, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(魔鬼与恶魔的古老仪式下，我召唤出那奥术！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的征服，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向奥术本身发出召唤，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让奥术为我所用，愿我体内的力量迸发而出吧！奥术的精魂，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a flash of purple arcane lightning, you bind your elemental, [npc2.name], to the school of Arcane!"
-									:"With a flash of purple arcane lightning, [npc1.name] binds [npc1.her] elemental, [npc2.name], to the school of Arcane!")));
+									?"随着一道紫色的奥术闪电，你将元素体[npc2.name]与奥术学派绑定！"
+									:"随着一道紫色的奥术闪电，[npc1.name]将元素体[npc2.name]与奥术学派绑定！")));
 				
 			} else {
 				//caster.addCompanion(caster.getElemental());
@@ -2460,13 +2460,13 @@ public enum Spell {
 								(caster.hasTraitActivated(Perk.CHUUNI)
 										?Util.randomItemFrom(
 										Util.newArrayListOfValues(
-											"[npc.speech(By the ancient rite of devil and demon, I summon forth the arcane itself! Answer your [npc.master]'s call, [npc2.name], and, by the conquest of a million dimensions, be bound to my will!)] ",
-											"[npc.speech(May the powers sealed away within me for a thousand years now be unleashed! May the arcane itself be at my command, and, through our eternal contract, I summon you forth, [npc2.name]!)] ",
-											"[npc.speech(Let the arcane be mine, and the power within me be unleashed! The spirit of arcane itself, your [npc.master] calls! Obey, and be summoned forth, [npc2.name]!)] "))
+											"[npc.speech(魔鬼与恶魔的古老仪式下，我召唤出那奥术！回应你[npc.master]的召唤吧，[npc2.name]，经历百万位面的征服，服从我的意志！)] ",
+											"[npc.speech(愿封印于我体内数千载的力量一朝迸发！通过永恒的链接，我向奥术本身发出召唤，出来吧，[npc2.name]！)] ",
+											"[npc.speech(让奥术为我所用，愿我体内的力量迸发而出吧！奥术的精魂，这是[npc.master]的召唤！服从我，现身吧，[npc2.name]！)] "))
 										:"")
 								+ (caster.isPlayer()
-									?"With a flash of purple arcane lightning, you summon forth your elemental, [npc2.name], by binding [npc2.herHim] to the school of Arcane!"
-									:"With a flash of purple arcane lightning, [npc1.name] summons forth [npc1.her] elemental, [npc2.name], by binding [npc2.herHim] to the school of Arcane!")));
+									?"随着一道紫色的奥术闪电，你召唤出元素体[npc2.name]，并与奥术学派绑定！"
+									:"随着一道紫色的奥术闪电，[npc1.name]召唤出元素体[npc2.name]，并与奥术学派绑定！")));
 				
 				if(Main.game.isInCombat()) {
 					caster.getElemental().setLocation(caster, false);
@@ -2491,9 +2491,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT,
 			DamageType.MISC,
 			false,
-			"Witch's Seal",
+			"魔女封锁术",
 			"spell_witch_seal",
-			"Places an arcane seal upon the target, completely preventing them from moving.",
+			"再目标身上附加奥术封印，使其失去行动能力。",
 			0,
 			DamageVariance.NONE,
 			80,
@@ -2501,7 +2501,7 @@ public enum Spell {
 			null,
 			null,
 			Util.newArrayListOfValues(
-					"[style.colourExcellent(Seals)] the target for [style.colourTerrible(-3)] [style.colourActionPoints(action points)]!")) {
+					"[style.colourExcellent(封印)]目标，[style.colourTerrible(-3)][style.colourActionPoints(行动点)]！")) {
 		
 		@Override
 		public boolean isSpellBook() {
@@ -2510,7 +2510,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Seals for [style.colourTerrible(-3)] action points!";
+			return "封印使行动点[style.colourTerrible(-3)]！";
 		}
 		
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -2521,12 +2521,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Let the seal which once contained my arcane power now obey my command! Render unto my foe the debilitating darkness of absolute submission, and bind them to their fate!"),
+													"曾经禁锢我的奥术之力的封印，听我号令！让敌方屈服于绝对服从的黑暗之下吧，自此无所遁逃！"),
 										"",
-										"Concentrating on the arcane power within your broomstick, you summon forth a powerful seal, which traps [npc.name] in place!",
+										"你将奥术之力集中在扫把上，召唤出一道强大的封印，把[npc.name]控制在原地！",
 										"",
-										"Concentrating on the arcane power within [npc.her] broomstick, [npc.name] summons forth a powerful seal, which traps you in place!",
-										"Concentrating on the arcane power within [npc1.her] broomstick, [npc1.name] [npc.verb(summon)] forth a powerful seal, which traps [npc2.name] in place!"));
+										"[npc.Name]将奥术之力集中在扫把上，召唤出一道强大的封印，把你控制在原地！",
+										"[npc1.name]将奥术之力集中在扫把上，召唤出一道强大的封印，把[npc2.name]控制在原地！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -2546,16 +2546,16 @@ public enum Spell {
 			SpellType.DEFENSIVE_STATUS_EFFECT,
 			DamageType.MISC,
 			true,
-			"Witch's Charm",
+			"魔女魅惑术",
 			"spell_witch_charm",
-			"Places an arcane enchantment upon the target, causing them to appear irresistibly beautiful to anyone who looks upon them.",
+			"对目标释放奥术附魔，只要有人看向他，便无法抵挡其魅力。",
 			0,
 			DamageVariance.NONE,
 			40,
 			Util.newHashMapOfValues(new Value<AbstractStatusEffect, Integer>(StatusEffect.WITCH_CHARM, 5)),
 			null,
 			Util.newHashMapOfValues(
-					new Value<>(Attribute.DAMAGE_LUST, 25)), Util.newArrayListOfValues("Lasts for [style.colourGood(5 turns)]")) {
+					new Value<>(Attribute.DAMAGE_LUST, 25)), Util.newArrayListOfValues("持续[style.colourGood(5回合)]")) {
 		
 		@Override
 		public boolean isSpellBook() {
@@ -2564,7 +2564,7 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Increases seduction damage.";
+			return "增加诱惑伤害。";
 		}
 		
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -2575,12 +2575,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Let reality itself be warped by my ultimate power! All who gaze upon my visage be bewitched, and see their heart's true desire!"),
-										"Concentrating on the arcane power within your broomstick, you cast a bewitching charm upon yourself!",
-										"Concentrating on the arcane power within your broomstick, you cast a bewitching charm upon [npc.name]!",
-										"Concentrating on the arcane power within [npc.her] broomstick, [npc.name] casts a bewitching charm upon [npc.herself]!",
-										"Concentrating on the arcane power within [npc.her] broomstick, [npc.name] casts a bewitching charm upon you!",
-										"Concentrating on the arcane power within [npc1.her] broomstick, [npc.name] casts a bewitching charm upon [npc2.name]!"));
+													"现实也将由我无穷的力量所扭曲！凝视容颜者心魂俱惑，眼前将是自己内心真正的渴望！"),
+										"你将奥术之力集中在扫把上，在自己身上施加了迷人的魅惑！",
+										"你将奥术之力集中在扫把上，在[npc.Name]身上施加了迷人的魅惑！",
+										"[npc.Name]将奥术之力集中在扫把上，在自己身上施加了迷人的魅惑！",
+										"[npc.Name]将奥术之力集中在扫把上，在你身上施加了迷人的魅惑！",
+										"[npc.Name]将奥术之力集中在扫把上，在[npc2.name]身上施加了迷人的魅惑！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, 0, isHit, isCritical));
 			
@@ -2602,9 +2602,9 @@ public enum Spell {
 			SpellType.OFFENSIVE_STATUS_EFFECT_MINOR_DAMAGE,
 			DamageType.PHYSICAL,
 			false,
-			"Siren's Call",
+			"塞壬的呼唤",
 			"dark_siren_sirens_call",
-			"Unleashes a reverberating scream, the power of which causes the ground to split open. From this fissure, poisonous vapours rise to choke and stifle all nearby enemies.",
+			"发出山崩地裂的尖啸使大地崩坏，裂缝中涌出的毒气会窒息附近的所有敌人。",
 			10,
 			DamageVariance.NONE,
 			200,
@@ -2612,8 +2612,8 @@ public enum Spell {
 			null,
 			null,
 			Util.newArrayListOfValues(
-					"<b>25</b> [style.colourPoison(Poison Damage)] per turn for [style.colourGood(10 turns)]",
-					"Affects [style.colourExcellent(all enemies)]")) {
+					"每回合造成<b>25</b>[style.colourPoison(毒素伤害)]，持续[style.colourGood(10回合)]",
+					"影响[style.colourExcellent(所有敌人)]")) {
 
 		@Override
 		public boolean isSpellBook() {
@@ -2634,12 +2634,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Powers beneath the earth, obey your [npc.master]'s command! Rend unto the end of time a chasm of darkness, from which the suffocating miasma of toxic dimensions may pour forth!"),
+													"地底的强者们，听从你们[npc.master]的号令！在时间的尽头开辟一条黑暗的鸿沟，让窒息绝望的剧毒瘴气喷涌而出吧！"),
 										"",
-										"Concentrating on the immense arcane power within your scythe, you smite down into the ground beneath [npc.namePos] [npc.feet], splitting the earth and summoning forth poison fumes!",
+										"你集中镰刀中巨大的奥术力量，向[npc.namePos][npc.feet]下方的地面砸去，劈开大地并召唤出毒气！",
 										"",
-										"Concentrating on the immense arcane power within [npc.her] scythe, [npc.name] smites down into the ground beneath your [pc.feet], splitting the earth and summoning forth poison fumes!",
-										"Concentrating on the immense arcane power within [npc.her] scythe, [npc.name] smites down into the ground beneath [npc2.namePos] [npc2.feet], splitting the earth and summoning forth poison fumes!"));
+										"[npc.Name]集中镰刀中巨大的奥术力量，向你[pc.feet]下方的地面砸去，劈开大地并召唤出毒气！",
+										"[npc.Name]集中镰刀中巨大的奥术力量，向[npc2.namePos][npc2.feet]下方的地面砸去，劈开大地并召唤出毒气！"));
 
 			descriptionSB.append(getDamageDescription(caster, target, damage, isHit, isCritical));
 			
@@ -2668,9 +2668,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.LUST,
 			false,
-			"Lightning Discharge",
+			"电能释放",
 			"arcane_lightning_sphere_discharge",
-			"By drawing a small amount of aura from its wielder, the arcane lightning globe can discharge a burst of arousing arcane lightning, hitting everyone, [style.colourBad(including the caster)], in its immediate vicinity.",
+			"奥术闪电球从持用者处吸取了少量灵气，爆发出一阵催情的奥术闪电，击中了周围[style.colourBad(包括施法者)]的所有人。",
 			10,
 			DamageVariance.MEDIUM,
 			50,
@@ -2678,9 +2678,9 @@ public enum Spell {
 			null,
 			null,
 			Util.newArrayListOfValues(
-					"Affects [style.colourExcellent(all enemies)]",
-					"Affects [style.colourTerrible(the caster)]",
-					"Affects [style.colourTerrible(all allies)]")) {
+					"影响[style.colourExcellent(所有敌人)]",
+					"影响[style.colourTerrible(施法者)]",
+					"影响[style.colourTerrible(所有盟友)]")) {
 
 		@Override
 		public int getAPCost() {
@@ -2699,13 +2699,13 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Deals [style.colourDmgLust("
+			return "造成[style.colourDmgLust("
 					+Attack.getMinimumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance())
 					+"-"
 					+Attack.getMaximumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance())
-					+ " " +damageType.getName()
+					+damageType.getName()
 					+ ")]"
-					+ " damage to [style.colourExcellent(all enemies)] <i>and</i> [style.colourTerrible(all allies, including the caster)].";
+					+ "伤害，对[style.colourExcellent(所有敌人)]<i>以及</i>[style.colourTerrible(所有盟友，包括施法者)]生效。";
 		}
 		
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -2715,12 +2715,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Sealed away for countless millennia, this infinite cosmic power shall now be unleashed! Witness the arcane maelstrom I call forth, then submit to your fate as my lust-crazed puppet!"),
-										"Channelling some of your aura into the arcane lightning globe, you force it to unleash a portion of its power in the form of a lightning discharge!",
-										"Channelling some of your aura into the arcane lightning globe, you force it to unleash a portion of its power in the form of a lightning discharge!",
-										"Channelling some of [npc.her] aura into the arcane lightning globe, [npc.name] [npc.verb(force)] it to unleash a portion of its power in the form of a lightning discharge!",
-										"Channelling some of [npc.her] aura into the arcane lightning globe, [npc.name] [npc.verb(force)] it to unleash a portion of its power in the form of a lightning discharge!",
-										"Channelling some of [npc.her] aura into the arcane lightning globe, [npc.name] [npc.verb(force)] it to unleash a portion of its power in the form of a lightning discharge!"));
+													"永恒而广袤的力量啊，被封印成千上万年后，终于得以释放！目睹我唤出的奥术风暴，成为为情欲而狂的傀儡，屈服吧！"),
+										"你将部分灵气导入到奥术闪电球中，强制其以电能释放的形式放出一些能量！",
+										"你将部分灵气导入到奥术闪电球中，强制其以电能释放的形式放出一些能量！",
+										"[npc.Name]将部分灵气导入到奥术闪电球中，强制其以电能释放的形式放出一些能量！",
+										"[npc.Name]将部分灵气导入到奥术闪电球中，强制其以电能释放的形式放出一些能量！",
+										"[npc.Name]将部分灵气导入到奥术闪电球中，强制其以电能释放的形式放出一些能量！"));
 			
 			// If attack hits, apply damage. Status effect always applies.:
 			if (isHit) {
@@ -2744,7 +2744,7 @@ public enum Spell {
 		
 		@Override
 	    public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-	    	return Util.newArrayListOfValues("Cannot crit.");
+	    	return Util.newArrayListOfValues("无法暴击。");
 	    }
 
 		@Override
@@ -2758,9 +2758,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.LUST,
 			false,
-			"Lightning Overcharge",
+			"电能过载",
 			"arcane_lightning_sphere_overcharge",
-			"By drawing a huge amount of aura from its wielder, the arcane lightning globe can discharge a massive burst of arousing arcane lightning, hitting everyone, [style.colourBad(including the caster)], in its immediate vicinity.",
+			"奥术闪电球从持用者处吸取了大量灵气，爆发出一阵狂野的催情奥术闪电，击中了周围[style.colourBad(包括施法者)]的所有人。",
 			30,
 			DamageVariance.HIGH,
 			250,
@@ -2768,9 +2768,9 @@ public enum Spell {
 			null,
 			null,
 			Util.newArrayListOfValues(
-					"Affects [style.colourExcellent(all enemies)]",
-					"Affects [style.colourTerrible(the caster)]",
-					"Affects [style.colourTerrible(all allies)]")) {
+					"影响[style.colourExcellent(所有敌人)]",
+					"影响[style.colourTerrible(施法者)]",
+					"影响[style.colourTerrible(所有盟友)]")) {
 
 		@Override
 		public int getAPCost() {
@@ -2789,13 +2789,13 @@ public enum Spell {
 		
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Deals [style.colourDmgLust("
+			return "造成[style.colourDmgLust("
 					+Attack.getMinimumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance())
 					+"-"
 					+Attack.getMaximumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance())
-					+ " " +damageType.getName()
+					+damageType.getName()
 					+ ")]"
-					+ " damage to [style.colourExcellent(all enemies)] <i>and</i> [style.colourTerrible(all allies, including the caster)].";
+					+ "伤害，对[style.colourExcellent(所有敌人)]<i>以及</i>[style.colourTerrible(所有盟友，包括施法者)]生效。";
 		}
 		
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
@@ -2805,12 +2805,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Sealed away for countless millennia, this infinite cosmic power shall now be unleashed! Witness the arcane maelstrom I call forth, then submit to your fate as my lust-crazed puppet!"),
-										"Channelling your aura into the arcane lightning globe, you force it to unleash its power in the form of an almighty lightning discharge!",
-										"Channelling your aura into the arcane lightning globe, you force it to unleash its power in the form of an almighty lightning discharge!",
-										"Channelling [npc.her] aura into the arcane lightning globe, [npc.name] [npc.verb(force)] it to unleash its power in the form of an almighty lightning discharge!",
-										"Channelling [npc.her] aura into the arcane lightning globe, [npc.name] [npc.verb(force)] it to unleash its power in the form of an almighty lightning discharge!",
-										"Channelling [npc.her] aura into the arcane lightning globe, [npc.name] [npc.verb(force)] it to unleash its power in the form of an almighty lightning discharge!"));
+													"永恒而广袤的力量啊，被封印成千上万年后，终于得以释放！目睹我唤出的奥术风暴，成为为情欲而狂的傀儡，屈服吧！"),
+										"你将部分灵气导入到奥术闪电球中，强制其以强烈电能释放的形式放出能量！",
+										"你将部分灵气导入到奥术闪电球中，强制其以强烈电能释放的形式放出能量！",
+										"[npc.Name]将部分灵气导入到奥术闪电球中，强制其以强烈电能释放的形式放出能量！",
+										"[npc.Name]将部分灵气导入到奥术闪电球中，强制其以强烈电能释放的形式放出能量！",
+										"[npc.Name]将部分灵气导入到奥术闪电球中，强制其以强烈电能释放的形式放出能量！"));
 			
 			// If attack hits, apply damage. Status effect always applies.:
 			if (isHit) {
@@ -2835,7 +2835,7 @@ public enum Spell {
 		
 		@Override
 	    public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-	    	return Util.newArrayListOfValues("Cannot crit.");
+	    	return Util.newArrayListOfValues("无法暴击。");
 	    }
 
 		@Override
@@ -2849,9 +2849,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.LUST,
 			false,
-			"Chain Lightning",
+			"连锁闪电",
 			"arcane_lightning_chain",
-			"The caster is able to summon forth a crackling manifestation of arcane lightning, which leaps from target to target, causing each person struck to become uncontrollably aroused.",
+			"施法者能召唤出噼啪作响的奥术闪电，在目标间跳跃，使每个被击中的人都无法控制地兴奋起来。",
 			15,
 			DamageVariance.MEDIUM,
 			40,
@@ -2859,7 +2859,7 @@ public enum Spell {
 			null,
 			null,
 			Util.newArrayListOfValues(
-					"Affects [style.colourExcellent(all enemies)]")) {
+					"影响[style.colourExcellent(所有敌人)]")) {
 		@Override
 		public int getAPCost() {
 			return 1;
@@ -2874,13 +2874,13 @@ public enum Spell {
 		}
 		@Override
 		public String getBasicEffectsString(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-			return "Deals [style.colourDmgLust("
+			return "造成[style.colourDmgLust("
 					+Attack.getMinimumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance())
 					+"-"
 					+Attack.getMaximumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance())
-					+ " " +damageType.getName()
+					+damageType.getName()
 					+ ")]"
-					+ " damage to [style.colourExcellent(all enemies)].";
+					+ "伤害，对[style.colourExcellent(所有敌人)]生效。";
 		}
 		public String applyEffect(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies, boolean isHit, boolean isCritical) {
 			descriptionSB.setLength(0);
@@ -2889,12 +2889,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Sealed away for countless millennia, this infinite cosmic power shall now be unleashed! Witness the arcane maelstrom I call forth, then submit to your fate as my lust-crazed puppet!"),
-													"After taking a moment to focus your aura, you summon forth a crackling manifestation of arcane lightning!",
-													"After taking a moment to focus your aura, you summon forth a crackling manifestation of arcane lightning!",
-													"After taking a moment to focus [npc.her] aura, [npc.name] [npc.verb(summon)] forth a crackling manifestation of arcane lightning!",
-													"After taking a moment to focus [npc.her] aura, [npc.name] [npc.verb(summon)] forth a crackling manifestation of arcane lightning!",
-													"After taking a moment to focus [npc.her] aura, [npc.name] [npc.verb(summon)] forth a crackling manifestation of arcane lightning!"));
+													"永恒而广袤的力量啊，被封印成千上万年后，终于得以释放！目睹我唤出的奥术风暴，成为为情欲而狂的傀儡，屈服吧！"),
+													"你稍微将精力集中在灵气上，随后释放出一道噼啪作响的奥术闪电！",
+													"你稍微将精力集中在灵气上，随后释放出一道噼啪作响的奥术闪电！",
+													"[npc.Name]稍微将精力集中在灵气上，随后释放出一道噼啪作响的奥术闪电！",
+													"[npc.Name]稍微将精力集中在灵气上，随后释放出一道噼啪作响的奥术闪电！",
+													"[npc.Name]稍微将精力集中在灵气上，随后释放出一道噼啪作响的奥术闪电！"));
 			
 			// If attack hits, apply damage. Status effect always applies.:
 			if (isHit) {
@@ -2919,7 +2919,7 @@ public enum Spell {
 		}
 		@Override
 	    public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-	    	return Util.newArrayListOfValues("Cannot crit.");
+	    	return Util.newArrayListOfValues("无法暴击。");
 	    }
 		@Override
 		public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -2932,9 +2932,9 @@ public enum Spell {
 			SpellType.OFFENSIVE,
 			DamageType.LUST,
 			false,
-			"Lightning Superbolt",
+			"究极闪电",
 			"arcane_lightning_superbolt",
-			"The caster summons forth an almighty arcane lightning superbolt and fires it at their target, causing the person who's struck to experience an incredible surge in arousal.",
+			"施法者召唤出强大的奥术闪电，向目标发射，受击者无不高潮绝顶。",
 			50,
 			DamageVariance.HIGH,
 			200,
@@ -2966,12 +2966,12 @@ public enum Spell {
 			
 			descriptionSB.append(getCastDescription(caster, target,
 											Util.newArrayListOfValues(
-													"Sealed away for countless millennia, this infinite cosmic power shall now be unleashed! Witness the arcane apocalypse I call forth, then submit to your fate as my lust-crazed puppet!"),
-													"After taking a moment to focus your aura, you summon forth an almighty arcane lightning superbolt, before launching it directly at yourself!",
-													"After taking a moment to focus your aura, you summon forth an almighty arcane lightning superbolt, before launching it directly at [npc.name]!",
-													"After taking a moment to focus [npc.her] aura, [npc.name] [npc.verb(summon)] forth an almighty arcane lightning superbolt, before launching it directly at [npc.herself]!",
-													"After taking a moment to focus [npc.her] aura, [npc.name] [npc.verb(summon)] forth an almighty arcane lightning superbolt, before launching it directly at you!",
-													"After taking a moment to focus [npc.her] aura, [npc.name] [npc.verb(summon)] forth an almighty arcane lightning superbolt, before launching it directly at [npc2.name]!"));
+													"永恒而广袤的力量啊，被封印成千上万年后，终于得以释放！目睹我唤出的奥术末日，成为为情欲而狂的傀儡，屈服吧！"),
+													"你稍微将精力集中在灵气上，随后释放出一道噼啪作响的强力奥术闪电束，冲向了你自己！",
+													"你稍微将精力集中在灵气上，随后释放出一道噼啪作响的强力奥术闪电束，冲向了[npc.Name]！",
+													"[npc.Name]稍微将精力集中在灵气上，随后释放出一道噼啪作响的强力奥术闪电束，冲向了自己！",
+													"[npc.Name]稍微将精力集中在灵气上，随后释放出一道噼啪作响的强力奥术闪电束，冲向了你！",
+													"[npc.Name]稍微将精力集中在灵气上，随后释放出一道噼啪作响的强力奥术闪电束，冲向了[npc2.name]！"));
 			
 			// If attack hits, apply damage. Status effect always applies.:
 			if (isHit) {
@@ -2992,7 +2992,7 @@ public enum Spell {
 		
 		@Override
 	    public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-	    	return Util.newArrayListOfValues("Cannot crit.");
+	    	return Util.newArrayListOfValues("无法暴击。");
 	    }
 
 		@Override
@@ -3128,7 +3128,7 @@ public enum Spell {
 		if (attributeModifiers != null) {
 			for (Entry<AbstractAttribute, Integer> e : attributeModifiers.entrySet())
 				modifiersList.add("<b>" + (e.getValue() > 0 ? "+" : "") + e.getValue() + "</b>"
-						+ " <b style='color: " + e.getKey().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(e.getKey().getAbbreviatedName()) + "</b>");
+						+ "<b style='color: " + e.getKey().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(e.getKey().getAbbreviatedName()) + "</b>");
 		}
 		
 		if (extraEffects != null) {
@@ -3283,12 +3283,12 @@ public enum Spell {
 	}
 
 	protected String getFormattedSpellDamageRange(GameCharacter caster, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
-		return "Deals <span style='color:"+getDamageType().getColour().toWebHexString()+";'>"
+		return "造成<span style='color:"+getDamageType().getColour().toWebHexString()+";'>"
 				+Math.round(Attack.getMinimumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance()))
 				+"-"
 				+Math.round(Attack.getMaximumSpellDamage(caster, target, getDamageType(), this.getDamage(caster), this.getDamageVariance()))
-				+ " " +damageType.getName()
-				+ "</span> damage";
+				+damageType.getName()
+				+ "</span>伤害";
 	}
 	
 	protected String getDamageDescription(GameCharacter caster, GameCharacter target, float damage, boolean isHit, boolean isCritical) {
@@ -3300,23 +3300,23 @@ public enum Spell {
 			if (caster.isPlayer()) {
 				if (isCritical) {
 					if(!isHit) {
-						damageCostDescriptionSB.append("[style.italicsBad(You missed!)]");
+						damageCostDescriptionSB.append("[style.italicsBad(你没有命中！)]");
 					} else {
 						if(damage>0) {
 							damageCostDescriptionSB.append(UtilText.parse(target,
-									"You [style.boldExcellent(critically)] hit [npc.name] for <b>" + damage + "</b> " + damageType.getMultiplierAttribute().getColouredName("b") + "!"));
+									"你击中了[npc.Name]的[style.boldExcellent(要害)]，造成<b>" + damage + "</b>" + damageType.getMultiplierAttribute().getColouredName("b") + "！"));
 						}
 						if(appliesEffects) {
-							damageCostDescriptionSB.append(" You [style.boldExcellent(critically)] cast the spell, doubling its duration!");
+							damageCostDescriptionSB.append("你的法术造成了[style.boldExcellent(暴击)]，持续时间翻倍！");
 						}
 					}
 				} else {
 					if(!isHit) {
-						damageCostDescriptionSB.append("[style.italicsBad(You missed!)]");
+						damageCostDescriptionSB.append("[style.italicsBad(你没有命中！)]");
 					} else {
 						if(damage>0) {
 							damageCostDescriptionSB.append(UtilText.parse(target,
-									"You hit [npc.name] for <b>" + damage + "</b> " + damageType.getMultiplierAttribute().getColouredName("b") + "!"));
+									"你击中了[npc.Name]，造成<b>" + damage + "</b>" + damageType.getMultiplierAttribute().getColouredName("b") + "！"));
 						}
 					}
 				}
@@ -3324,23 +3324,23 @@ public enum Spell {
 			} else {
 				if (isCritical) {
 					if(!isHit) {
-						damageCostDescriptionSB.append(UtilText.parse(caster, "[style.italicsBad([npc1.Name] missed!)]"));
+						damageCostDescriptionSB.append(UtilText.parse(caster, "[style.italicsBad([npc1.Name]没有命中！)]"));
 					} else {
 						if(damage>0) {
 							damageCostDescriptionSB.append(UtilText.parse(caster, target,
-									"[npc1.Name] [style.boldExcellent(critically)] hits " + (target.isPlayer()?"you":"[npc2.name]")+" for <b>" + damage + "</b> " + damageType.getMultiplierAttribute().getColouredName("b") + "!"));
+									"[npc1.name]击中了" + (target.isPlayer()?"你":"[npc2.name]")+"的[style.boldExcellent(要害)]，造成<b>" + damage + "</b>" + damageType.getMultiplierAttribute().getColouredName("b") + "！"));
 						}
 						if(appliesEffects) {
-							damageCostDescriptionSB.append(UtilText.parse(caster, " [npc.Name] [style.boldExcellent(critically)] casts the spell, doubling its duration!"));
+							damageCostDescriptionSB.append(UtilText.parse(caster, "[npc.Name]的法术造成了[style.boldExcellent(暴击)]，持续时间翻倍！"));
 						}
 					}
 				} else {
 					if(!isHit) {
-						damageCostDescriptionSB.append(UtilText.parse(caster, "[style.italicsBad([npc1.Name] missed!)]"));
+						damageCostDescriptionSB.append(UtilText.parse(caster, "[style.italicsBad([npc1.Name]没有命中！)]"));
 					} else {
 						if(damage>0) {
 							damageCostDescriptionSB.append(UtilText.parse(caster, target,
-									"[npc1.Name] hits " + (target.isPlayer()?"you":"[npc2.name]")+" for <b>" + damage + "</b> " + damageType.getMultiplierAttribute().getColouredName("b") + "!"));
+									"[npc1.name]击中了" + (target.isPlayer()?"你":"[npc2.name]")+"，造成<b>" + damage + "</b>" + damageType.getMultiplierAttribute().getColouredName("b") + "！"));
 						}
 					}
 				}
@@ -3364,30 +3364,30 @@ public enum Spell {
 			damageCostDescriptionSB.append(
 					"<br/>"+UtilText.parse(target,
 								(!target.isPlayer()
-									? "[npc.Name] is now "
-									: "You are now ")
+									? "[npc.Name]现在"
+									: "你现在")
 								+(this.isBeneficial()
-										?"benefiting from "
-										:"suffering from ")));
+										?"受到"
+										:"受到")));
 			
 			int i = 0;
 			for (Entry<AbstractStatusEffect, Integer> seEntry : this.getStatusEffects(caster, target, isCritical).entrySet()) {
 				if (i != 0) {
 					if (i == statusEffects.size() - 1) {
-						damageCostDescriptionSB.append(" and ");
+						damageCostDescriptionSB.append("、");
 					} else {
-						damageCostDescriptionSB.append(", ");
+						damageCostDescriptionSB.append("的影响。");
 					}
 				}
-				damageCostDescriptionSB.append("<b>" + seEntry.getValue() * (caster.isPlayer() && caster.hasTrait(Perk.JOB_MUSICIAN, true)?2:1) * (isCritical?2:1)
-						+ "</b> turns"
+				damageCostDescriptionSB.append("持续<b>" + seEntry.getValue() * (caster.isPlayer() && caster.hasTrait(Perk.JOB_MUSICIAN, true)?2:1) * (isCritical?2:1)
+						+ "</b>回合"
 						+(caster.hasTrait(Perk.JOB_MUSICIAN, true)
-								?" ([style.boldExcellent(doubled)] from <b style='color:"+Perk.JOB_MUSICIAN.getColour().toWebHexString()+";'>"+Perk.JOB_MUSICIAN.getName(caster)+"</b>)"
+								?"(由于<b style='color:"+Perk.JOB_MUSICIAN.getColour().toWebHexString()+";'>"+Perk.JOB_MUSICIAN.getName(caster)+"</b>而[style.boldExcellent(翻倍)])"
 								:"")
-						+ " of <b style='color:" + seEntry.getKey().getColour().toWebHexString() + ";'>" + seEntry.getKey().getName(target) + "</b>");
+						+ "<b style='color:" + seEntry.getKey().getColour().toWebHexString() + ";'>" + seEntry.getKey().getName(target) + "</b>");
 				i++;
 			}
-			damageCostDescriptionSB.append(".");
+			damageCostDescriptionSB.append("的影响。");
 		}
 		
 		return damageCostDescriptionSB.toString();
@@ -3399,36 +3399,36 @@ public enum Spell {
 		damageCostDescriptionSB.append(
 				"<br/>"+UtilText.parse(target,
 							(!target.isPlayer()
-								? "[npc.She] is now "
-								: "You are now ")
+								? "[npc.She]现在"
+								: "你现在")
 							+(beneficial
-									?"benefiting from "
-									:"suffering from ")));
+									?"受到"
+									:"受到")));
 		
 		int i = 0;
 		for (Entry<AbstractStatusEffect, Integer> seEntry : statusEffects.entrySet()) {
 			if (i != 0) {
 				if (i == statusEffects.size() - 1) {
-					damageCostDescriptionSB.append(" and ");
+					damageCostDescriptionSB.append("、");
 				} else {
-					damageCostDescriptionSB.append(", ");
+					damageCostDescriptionSB.append("、");
 				}
 			}
-			damageCostDescriptionSB.append("<b>" + seEntry.getValue() + "</b> turns of <b style='color:" + seEntry.getKey().getColour().toWebHexString() + ";'>" + seEntry.getKey().getName(target) + "</b>");
+			damageCostDescriptionSB.append("<b>" + seEntry.getValue() + "</b>回合<b style='color:" + seEntry.getKey().getColour().toWebHexString() + ";'>" + seEntry.getKey().getName(target) + "</b>");
 			i++;
 		}
-		damageCostDescriptionSB.append(".");
+		damageCostDescriptionSB.append("的影响。");
 		
 		return damageCostDescriptionSB.toString();
 	}
 
 	protected String getCostDescription(GameCharacter caster, float cost) {
 		if(cost<0) {
-			return "<br/>Casting this spell cost "+(caster.isPlayer()?"you":UtilText.parse(caster, "[npc.name]"))+" <b>"
-					+ -cost + "</b> <b style='color:" + Attribute.HEALTH_MAXIMUM.getColour().toWebHexString() + ";'>"+Attribute.HEALTH_MAXIMUM.getName()+"</b>!</b>";
+			return "<br/>释放该法术需要消耗"+(caster.isPlayer()?"你":UtilText.parse(caster, "[npc.name]"))+"<b>"
+					+ -cost + "</b><b style='color:" + Attribute.HEALTH_MAXIMUM.getColour().toWebHexString() + ";'>"+Attribute.HEALTH_MAXIMUM.getName()+"</b>！</b>";
 		} else {
-			return "<br/>Casting this spell cost "+(caster.isPlayer()?"you":UtilText.parse(caster, "[npc.name]"))+" <b>"
-					+ cost + "</b> <b style='color:" + Attribute.MANA_MAXIMUM.getColour().toWebHexString() + ";'>aura</b>!</b>";
+			return "<br/>释放该法术需要消耗"+(caster.isPlayer()?"你":UtilText.parse(caster, "[npc.name]"))+"<b>"
+					+ cost + "</b><b style='color:" + Attribute.MANA_MAXIMUM.getColour().toWebHexString() + ";'>灵气</b>！</b>";
 		}
 	}
 
@@ -3481,7 +3481,7 @@ public enum Spell {
 		treeSB.setLength(0);
 
 		treeSB.append("<div class='container-full-width' style='width:100%; padding:0; margin:0;'>"
-				+ "<div class='container-full-width' style='text-align:center;'><h6 style='color:"+PresetColour.DAMAGE_TYPE_SPELL.toWebHexString()+";'>Miscellaneous</h6></div>");
+				+ "<div class='container-full-width' style='text-align:center;'><h6 style='color:"+PresetColour.DAMAGE_TYPE_SPELL.toWebHexString()+";'>秘术</h6></div>");
 		
 		for(Spell spell : Spell.values()) {
 			if(!spell.isSpellBook()) { // Only append special spells obtained from weapons & other sources
@@ -3505,7 +3505,7 @@ public enum Spell {
 	private static void appendSpellSchool(SpellSchool spellSchool, GameCharacter character, GameCharacter target) {
 		treeSB.append("<div class='container-full-width' style='width:100%; padding:0; margin:0;'>"
 				+ "<div class='container-full-width' style='text-align:center;'><h6 style='color:"+spellSchool.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(spellSchool.getName())+"</h6>"
-						+"<b style='color:"+spellSchool.getColour().toWebHexString()+";'>"+character.getSpellUpgradePoints(spellSchool)+"</b> <b>Upgrade Points Available</b></div>");
+						+"<b style='color:"+spellSchool.getColour().toWebHexString()+";'>"+character.getSpellUpgradePoints(spellSchool)+"</b><b>可用升级点数</b></div>");
 		
 		for(Spell spell : Spell.getSpellsFromSchoolMap().get(spellSchool)) {
 			if(spell.isSpellBook()) { // Do not append spells obtained from weapons & other sources
@@ -3546,7 +3546,7 @@ public enum Spell {
 				
 				Value<Boolean, String> useDesc = spell.getSpellCastOutOfCombatDescription(character, target);
 				spellSB.append("<div class='normal-button "+(useDesc.getKey()?"":"disabled")+"' id='SPELL_TREE_CAST_"+spell+"' style='width:50%; margin:8px 25% "+(miscSpell?"8px":"0")+" 25%; text-align:center;'>");
-				spellSB.append("Cast");
+				spellSB.append("施法");
 				spellSB.append("</div>");
 				
 			} else {
@@ -3735,13 +3735,13 @@ public enum Spell {
 
 	public Value<Boolean, String> getSpellCastOutOfCombatDescription(GameCharacter owner, GameCharacter target) {
 		if(!owner.hasSpell(this)) {
-			return new Value<>(false, UtilText.parse(owner, "[npc.Name] [npc.do]n't know this spell, so cannot cast it!"));
+			return new Value<>(false, UtilText.parse(owner, "[npc.Name]没有学会该法术，所以无法释放！"));
 			
 		} else if(Main.game.isInCombat()) {
-			return new Value<>(false, UtilText.parse(owner, "While in combat, spells can only be cast as a combat move!"));
+			return new Value<>(false, UtilText.parse(owner, "战斗中只能以战斗动作释放法术！"));
 		}
 		
-		return new Value<>(false, "This spell can only be cast during combat!");
+		return new Value<>(false, "该法术只能在战斗中释放！");
 	}
 
 	public float getWeight(GameCharacter source, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -3935,15 +3935,15 @@ public enum Spell {
         StringBuilder predictionSB = new StringBuilder();
         
         predictionSB.append(
-				(isCrit?"[style.colourExcellent(Critical)]: ":"")
-				+ "<span style='color:" + getSpellSchool().getColour().toWebHexString() + ";'>Cast spell '"+ getName() + "'</span>"
-				+ " on [npc2.name].");
+				(isCrit?"[style.colourExcellent(暴击)]: ":"")
+				+ "对[npc2.name]<span style='color:" + getSpellSchool().getColour().toWebHexString() + ";'>施放法术“"+ getName() + "”</span>"
+				+ "。");
 
     	if(getSpellSchool()==SpellSchool.FIRE && source.hasStatusEffect(StatusEffect.FIRE_MANA_BURN) && Main.combat.getManaBurnStack().get(source).size()>0 && Main.combat.getManaBurnStack().get(source).peek()<0) {
-    		predictionSB.append("<br/>This will cost <b style='color:"+PresetColour.ATTRIBUTE_HEALTH.toWebHexString()+";'>"+Units.round((-Main.combat.getManaBurnStack().get(source).peek()), 1)+" "+Attribute.HEALTH_MAXIMUM.getName()+"</b>"
-    				+ " ([style.colourFire("+StatusEffect.FIRE_MANA_BURN.getName(source)+")]).");
+    		predictionSB.append("<br/>将会消耗<b style='color:"+PresetColour.ATTRIBUTE_HEALTH.toWebHexString()+";'>"+Units.round((-Main.combat.getManaBurnStack().get(source).peek()), 1)+Attribute.HEALTH_MAXIMUM.getName()+"</b>"
+    				+ "([style.colourFire("+StatusEffect.FIRE_MANA_BURN.getName(source)+")])。");
     	} else {
-    		predictionSB.append("<br/>This will cost <b style='color:"+PresetColour.ATTRIBUTE_MANA.toWebHexString()+";'>"+this.getModifiedCost(source)+" aura</b>.");
+    		predictionSB.append("<br/>将会消耗<b style='color:"+PresetColour.ATTRIBUTE_MANA.toWebHexString()+";'>"+this.getModifiedCost(source)+"灵气</b>。");
     	}
     	
         predictionSB.append("<br/><i>"+getBasicEffectsString(source, target, enemies, allies)+"</i>");
@@ -3959,12 +3959,12 @@ public enum Spell {
 		sb.append(this.applyEffect(source, target, enemies, allies, true, isCrit));
 		
 		if(isCrit && !this.isBeneficial() && source.hasPerkAnywhereInTree(Perk.ARCANE_CRITICALS)) {
-			sb.append(UtilText.parse(source, "<br/>[npc.NamePos] [style.boldExcellent(critical)] spell applies [style.boldArcane(arcane weakness)] to "+(target.isPlayer()?"you":UtilText.parse(target, "[npc.name]"))+"!"));
+			sb.append(UtilText.parse(source, "<br/>[npc.NamePos]的法术[style.boldExcellent(暴击)]使"+(target.isPlayer()?"你":UtilText.parse(target, "[npc.name]"))+"承受了[style.boldArcane(奥术弱点)]的效果！"));
 			target.addStatusEffect(StatusEffect.ARCANE_WEAKNESS, 2);
 			sb.append(
 					UtilText.parse(target,
-							"<br/>[npc.NameIsFull] now affected by <b style='color:"+StatusEffect.ARCANE_WEAKNESS.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(StatusEffect.ARCANE_WEAKNESS.getName(target))+"</b>"
-									+ " for <b>two turns</b>!"));
+							"<br/>[npc.NameIsFull]现在受到了<b style='color:"+StatusEffect.ARCANE_WEAKNESS.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(StatusEffect.ARCANE_WEAKNESS.getName(target))+"</b>"
+									+ "的影响，持续<b>两回合</b>！"));
 		}
 		
 		return sb.toString();
@@ -4006,9 +4006,9 @@ public enum Spell {
     	List<String> critReqs = new ArrayList<>();
 
     	if(this.getSpellSchool() == SpellSchool.FIRE) {
-    		critReqs.add(UtilText.parse(source, "[npc.NamePos] "+Attribute.HEALTH_MAXIMUM.getName()+" is below 25%."));
+    		critReqs.add(UtilText.parse(source, "[npc.NamePos]的"+Attribute.HEALTH_MAXIMUM.getName()+"低于25%。"));
     	} else {
-        	return Util.newArrayListOfValues("It's the only action being used.");
+        	return Util.newArrayListOfValues("是唯一的行动。");
     	}
     	
     	return critReqs;

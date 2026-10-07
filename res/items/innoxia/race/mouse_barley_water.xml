@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>50</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Harvest Mouse's barley water]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Harvest Mouse's barley waters]]></namePlural>
-		<description><![CDATA[A bottle of barley water, bearing the brand of 'Harvest Mouse'. On the reverse label, there's a lewd image of a mouse-girl hiking up her skirt to show off her tight, wet pussy.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[丰收鼠大麦水]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[丰收鼠大麦水]]></namePlural>
+		<description><![CDATA[一瓶印有“丰收鼠”商标的大麦水。在标签背面，有一个老鼠女撩起裙子，露出又紧又湿的阴部的淫秽图片。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,18 +28,18 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A cool wave of arcane energy washes over [npc.name]...
+				一股清爽的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_ARCANE, 1)]
-		]]></applyEffects>
+	]]></applyEffects>
 		
 		<itemTags>
 			<tag>DRINK</tag>
@@ -52,10 +52,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Harvest Mouse's barley water, before tilting [npc.her] head back and bringing it up to [npc.her] waiting [npc.lips]. Gulping down the cool liquid, [npc.sheIs] pleased to discover that it has a mild, refreshing taste of barley.
+		[npc.Name]拧开了丰收鼠大麦水的瓶盖，然后仰起头，送到了等待[npc.lips]前。一口气喝下这冰凉的液体，[npc.sheIs]高兴地发现它有着温和而清爽的大麦味道。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unscrew)] the cap from the bottle of Harvest Mouse's barley water, before bringing it up to [npc2.namePos] waiting [npc2.lips]. Gulping down the cool liquid, [npc2.sheIs] pleased to discover that it has a mild, refreshing taste of barley.
+		[npc.Name]拧开了丰收鼠大麦水的瓶盖，然后把它送到[npc2.namePos]等待[npc2.lips]前。一口气喝下这冰凉的液体，[npc2.sheIs]高兴地发现它有着温和而清爽的大麦味道。
 		]]></otherUse>
 	</useDescriptions>
 

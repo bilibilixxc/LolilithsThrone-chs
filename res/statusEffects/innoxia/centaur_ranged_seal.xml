@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <statusEffect>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -12,10 +12,10 @@
 		<tag>HINDERS_ARM_MOVEMENT</tag>
 		<tag>HINDERS_LEG_MOVEMENT</tag>
 	</tags>
-	<name><![CDATA[Raider's Seal]]></name>
+	<name><![CDATA[突击者印记]]></name>
 	<description><![CDATA[
-		After being defeated by a centauress raider, you've had a debilitating arcane spell cast upon you! It's not only hindering your arm and leg movement, but is also sending out an arcane signal to any demonic centaur slavers who might be in the area...
-	]]></description>
+            半人马掠夺者击败你之后，施放了使人虚弱的奥术咒语！它不仅阻碍你的手脚活动，还向附近可能存在的恶魔半人马奴隶主发出了奥术信号……
+]]></description>
 	<imageName>centaur_seal.svg</imageName>
 	<colourPrimary>DAMAGE_TYPE_RANGED</colourPrimary>
 	<colourSecondary/>
@@ -27,8 +27,8 @@
 	<spells/>
 	<extraEffects>
 		<effect><![CDATA[
-			[style.colourPurple(Attracting slavers!)]
-		]]></effect>
+                     [style.colourPurple(引诱奴隶主！)]
+]]></effect>
 	</extraEffects>
 	
 	<!-- Effect logic -->

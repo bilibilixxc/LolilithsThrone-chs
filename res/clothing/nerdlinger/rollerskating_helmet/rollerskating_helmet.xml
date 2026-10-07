@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-	<authorTag><![CDATA[A tag discreetly printed on the inside reads, "Safer Play brought to you by the Friendly Neighbourhood Co.".]]></authorTag>
+	<authorTag><![CDATA[一个标签隐秘地印在内部，上面写着：“友好邻里公司助你安全游戏。”]]></authorTag>
 		<value>650</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[roller skating helmet]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[roller skating helmets]]></namePlural>
-		<description><![CDATA[A low-profile, lightweight helmet, consisting of a rugged plastic shell over shock-absorbing foam padding and sweat-wicking inner liner.]]></description>
+		<determiner><![CDATA[一顶]]></determiner>
+		<name><![CDATA[轮滑头盔]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[轮滑头盔]]></namePlural>
+		<description><![CDATA[一款低调轻便的头盔，由坚固的塑料外壳、吸震泡沫填充和吸汗内衬组成。]]></description>
 		<physicalResistance>3.0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>HEAD</slot>

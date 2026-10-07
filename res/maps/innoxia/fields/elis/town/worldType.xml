@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	
 	<!-- The region which this map is associated with.
@@ -6,7 +6,7 @@
 	<worldRegion>FIELD_CITY</worldRegion>
 	
 	<!-- The name of this map. -->
-	<name><![CDATA[Elis]]></name>
+	<name><![CDATA[伊利斯]]></name>
 	
 	<!-- The colour which should be used for this map (will affect the colouring of the name of the map in the game's UI).
 	You can define this as either a PresetColour value or a raw colour hex.

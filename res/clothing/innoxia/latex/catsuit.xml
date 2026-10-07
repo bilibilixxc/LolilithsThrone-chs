@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>2400</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[latex catsuit]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[latex catsuits]]></namePlural>
-		<description><![CDATA[This item of fetish clothing covers almost all of the wearer's body. The hands, feet, and head are left exposed, and thanks to a cut-out in the groin area, so are the wearer's genitals and asshole.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[乳胶连体紧身衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[乳胶连体紧身衣]]></namePlural>
+		<description><![CDATA[这件性癖服装几乎覆盖了穿戴者的整个身体。只有手部、足部和头部是裸露的，以及得益于腹股沟部位的开口，穿戴者的生殖器和肛门也能裸露在外。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>TORSO_UNDER</slot>
@@ -67,27 +67,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-	<self>
-		<![CDATA[With some effort and much stretching of latex, [npc.name] [npc.verb(manage)] to squeeze into the skin-tight catsuit.]]>
-	</self>
-	<other>
-		<![CDATA[With some effort and much stretching of latex, [npc.name] [npc.verb(manage)] to squeeze [npc2.name] into the skin-tight catsuit.]]>
-	</other>
-	<otherRough>
-		<![CDATA[With some effort and much stretching of latex, [npc.name] [npc.verb(manage)] to roughly force [npc2.name] into the skin-tight catsuit.]]>
-	</otherRough>
+	<self><![CDATA[
+		经过一番努力以及对乳胶的剧烈拉伸，[npc.name]成功挤进了连体紧身衣中。
+	]]></self>
+	<other><![CDATA[
+		经过一番努力以及对乳胶的剧烈拉伸，[npc.name]成功将[npc2.name]挤进了连体紧身衣中。
+	]]></other>
+	<otherRough><![CDATA[
+		经过一番努力以及对乳胶的剧烈拉伸，[npc.name]粗暴地将[npc2.name]强行塞进了连体紧身衣中。
+	]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-	<self>
-		<![CDATA[Although it takes quite a lot of effort, [npc.name] [npc.verb(manage)] to pull off [npc.her] skin-tight latex catsuit.]]>
-	</self>
-	<other>
-		<![CDATA[Although it takes quite a lot of effort, [npc.name] [npc.verb(manage)] to pull off [npc2.namePos] skin-tight latex catsuit.]]>
-	</other>
-	<otherRough>
-		<![CDATA[Although it takes quite a lot of effort and force, [npc.name] [npc.verb(manage)] to pull off [npc2.namePos] skin-tight latex catsuit.]]>
-	</otherRough>
+	<self><![CDATA[
+		尽管需要相当程度的努力，[npc.name]还是设法脱下了[npc.her]的乳胶连体紧身衣。
+	]]></self>
+	<other><![CDATA[
+		尽管需要相当程度的努力，[npc.name]还是设法脱下了[npc2.namePos]的乳胶连体紧身衣。
+	]]></other>
+	<otherRough><![CDATA[
+		尽管需要相当程度的努力和力量，[npc.name]还是设法脱下了[npc2.namePos]的乳胶连体紧身衣。
+	]]></otherRough>
 	</displacementText>
   
 </clothing>

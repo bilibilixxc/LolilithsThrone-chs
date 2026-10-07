@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>15000</value>
 		<melee>false</melee>
 		<twoHanded>true</twoHanded>
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[arcane musket]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[arcane muskets]]></namePlural>
-		<description><![CDATA[Thanks to the efforts of you and Meraxis, the township of Elis is producing as many of these arcane muskets as they possibly can. Instead of bullets, these smoothbore long guns fire bolts of arcane energy, and give even the most inexperienced member of the militia a fighting chance against Lunette's demonic centaurs.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription>Point your musket at [npc.name] and fire!</attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name><![CDATA[奥术滑膛枪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[奥术滑膛枪]]></namePlural>
+		<description><![CDATA[在你和梅拉克西丝的努力下，伊利斯镇正在尽可能多地生产这种奥术滑膛枪。这些滑膛长枪发射的不是子弹而是奥术能量，即使是最缺乏经验的民兵也有机会与露内特的恶魔半人马一战。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[将你的火枪对准[npc.Name]并开火！]]></attackTooltipDescription>
 		<rarity>LEGENDARY</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(ready)] [npc.her] arcane musket.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] arcane musket away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]装填[npc.her]的奥术滑膛枪。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]放下[npc.her]的奥术滑膛枪。]]></unequipText>
 		<imageName>arcane_musket.svg</imageName>
 		<imageEquippedName/>
 		<damage>150</damage>
@@ -40,26 +40,26 @@
 	
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Aiming and firing [npc.her] arcane musket, [npc.name] [npc.verb(manage)] to hit [npc2.name] with a powerful arcane bullet!
+		[npc.Name]瞄准并用奥术滑膛枪射击，[npc.Name]成功用威力强大的奥术子弹击中了[npc2.name]！
 		]]></hitText>
 		<hitText><![CDATA[
-		Taking aim at [npc2.name] with [npc.her] arcane musket, [npc.name] [npc.verb(pull)] the trigger, unleashing a powerful blast of arcane energy that slams into [npc2.namePos] torso!
+		[npc.name]用奥术滑膛枪瞄准[npc2.name]并扣下扳机，释放出一股强大的奥术能量击中[npc2.namePos]的躯干！
 		]]></hitText>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] arcane musket, and, pulling the trigger, [npc.she] [npc.verb(manage)] to hit [npc2.herHim] right in the chest!
+		[npc.Name]用[npc.her]的奥术滑膛枪瞄准[npc2.name]并扣动扳机，[npc.she]成功命中[npc2.herHim]的胸部！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Aiming and firing [npc.her] arcane musket, [npc.name] [npc.verb(miss)] [npc2.name]!
-		]]></missText>
+		[npc.Name]瞄准并用奥术滑膛枪射击，[npc.Name]未命中[npc2.name]！
+]]></missText>
 		<missText><![CDATA[
-		Taking aim at [npc2.name] with [npc.her] arcane musket, [npc.name] [npc.verb(pull)] the trigger, letting out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
-		]]></missText>
+		[npc.name]用奥术滑膛枪瞄准[npc2.name]并扣下扳机，在[npc.she]射偏了[npc.her]目标时发出了沮丧的声音！
+]]></missText>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(aim)] at [npc2.name] with [npc.her] arcane musket and [npc.verb(pull)] the trigger, but [npc.she] [npc.verb(end)] up missing [npc.her] target!
-		]]></missText>
+		[npc.Name]用[npc.her]的奥术滑膛枪瞄准[npc2.name]并扣动扳机，但是[npc.she]最终还是没有击中目标！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

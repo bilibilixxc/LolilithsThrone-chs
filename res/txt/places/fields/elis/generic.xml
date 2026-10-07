@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- All of these are linked to the 'dialogue/innoxia/places/fields/elis/generic.xml' dialogue nodes.
@@ -6,102 +6,102 @@
 	
 	<htmlContent tag="EXTERNAL_ROAD"><![CDATA[
 	<p>
-		Leading out from Elis via gatehouses in the Eastern and Western walls, the main road which you find yourself standing on is well maintained and
+		从伊利斯出发，要经过东城墙和西城墙上的门楼，而你现在所处的这条主干道维护得很好，安全也有得到保障，同时
 		#IF(game.isDayTime())
-			 flanked
+			两侧
 		#ELSE
-			 illuminated
+			被照亮的两侧
 		#ENDIF
-		 by a series of arcane-powered lampposts. Consisting of countless tightly-packed and perfectly-levelled cobblestones, the road's firm surface is ideal for both pedestrians and centaur or horse-drawn carts.
+		各树立着一排由奥术驱动的灯柱，路面则由无数密密麻麻且完全平整的鹅卵石组成，这坚实的路面非常适合行人、半人马或马车通行。
 		#IF(game.isDayTime())
-			 Of these, there are very few to be seen out here on the roads outside Elis, although you can see through the open gatehouse that the town itself is very busy.
+			虽然在伊利斯城外的道路上很少能看到行人，不过透过敞开的门楼可以看到，这座小镇本身还是非常繁忙的。
 		#ELSE
-			 Due to the current hour, there are none of these to be seen out here on the roads outside Elis, although you can see through the open gatehouse that there are some people out and about within the town itself.
+			由于时间关系，在伊利斯城外的道路上还是很冷清，不过透过敞开的门楼可以看到，城内还是有一些人在外面走动着。
 		#ENDIF
 	</p>
 	<p>
-		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-			Although the surrounding trees and fields are covered in a thick blanket of snow, the road remains completely clear, thanks to what you assume to be some kind of spell.
-			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				 As the fluffy white flakes touch the cobblestone surface, you see them immediately melt and evaporate, confirming your suspicions that the arcane has been put to work on heating the road.
-			#ELSE
-				 Casually looking around, you see that there's absolutely no sign of ice or even a single flurry of snow on the cobblestone surface, all but confirming your suspicions that the arcane has been put to work on heating the road.
-			#ENDIF
-		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-			Being completely exposed to the elements, you watch as the rain bounces off the cobblestone surface and runs down into the stone gutters which run parallel to the road's edges.
-		#ELSEIF(game.getCurrentWeather()==WEATHER_CLEAR)
-			With the clear skies overhead showing no sign of rain in the immediate future, you continue on your way down the cobblestone road.
-		#ELSE
-			With the clouded skies overhead hinting at the possibility of rain, you continue on your way down the cobblestone road.
-		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+    #IF (game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
+        尽管周围的树木和田野被厚厚的雪层覆盖，但道路依然保持清晰，你认为这得益于一种神秘的力量。
+        #IF (game.getCurrentWeather()==WEATHER_SNOW)
+                当蓬松的白色雪花触及石板路面，你看见它们迅速溶解蒸发，这证实了你对道路被施加供暖法术的猜想。
+        #ELSE
+                随意扫视四周，石板路面上丝毫不见冰雪痕迹，基本印证了你关于道路被施展了供暖法术的怀疑。
+        #ENDIF
+    #ELSEIF (game.getCurrentWeather()==WEATHER_RAIN)
+        面对完全暴露在自然环境中的雨天，你注视雨水击打在石板路面上，然后汇入路边平行的石制排水沟中。
+    #ELSEIF (game.getCurrentWeather()==WEATHER_CLEAR)
+        头顶上方蓝天白云，未来短时间内似乎并无降雨迹象，你继续沿石板路前进。
+    #ELSE
+        头顶上方天空阴云密布，似乎预示着可能会下雨，你继续沿着石板路前进。
+    #ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LEAVE_ELIS"><![CDATA[
 	<p style='text-align:center;'>
 		<i>
-			From here you can leave Elis and head back out into the Foloi Fields.
+			你可以从这里离开伊利斯，返回弗洛伊田野。
 		</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTER_ELIS"><![CDATA[
 	<p>
-		Starting off as no more than just a grey strip on the horizon, the silhouette of Elis gets larger and larger as you approach. Soon enough you're able to pick out the distinctive shape of towers embedded into the corners of the ramparts, as well as the roofs of the taller buildings within the town itself. The one which stands out the most, and the one which truly defines the town's silhouette, is the tall, highly-steepled roof of the town hall's tower.
+		伊利斯的轮廓开始只是地平线上的一条灰色条纹，随着你的接近变得越来越大。很快，你分辨出嵌在城墙四角的塔楼的独特形状，以及城内高层建筑的屋顶。其中最引人注目的，也是最能体现城镇轮廓的，是市镇议会塔楼高大、陡峭的屋顶。
 	</p>
 	<p>
-		As you get ever closer to Elis, you're able to pick out the crenellations of its walls, and can thankfully see that the gatehouse has its gates wide open.
+	当越来越接近伊利斯时，你可以远远地看到城墙上的石垛口，并值得庆幸的是，大门是敞开着的。
 		#IF(game.isDayTime())
-			 While there aren't many people leaving or entering the town via the same cobblestone road which you find yourself on, you can see through the entrance that the interior of the town looks to be quite busy.
+			虽然经由同一条鹅卵石路进出小镇的人并不多，但从入口处可以看到小镇内部看起来相当热闹。
 		#ELSE
-			 Due to the current hour, there isn't a single person leaving or entering the town via the same cobblestone road which you find yourself on, although you can see through the entrance that the interior of the town looks to be not completely deserted.
+			鉴于时间的原因，现在基本没有人从这条鹅卵石路进出小镇，不过从入口处依旧可以看出小镇内部至少是还没有完全荒废的样子。
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_lunetteTerrorEnded))
-			Thanks to the close proximity of the town, the nearby fields are very well protected from raiders or bandits. Despite this, however, there doesn't appear to be a single residential building outside of the walls, giving the surrounding area a very rural feel to it.
+			由于距离城镇很近，所以附近的田野受到很好的保护，并没有受到袭击者或强盗的侵扰。同时城墙外似乎没有一栋居民楼，这让周围地区充满了乡土气息。
 		#ELSE
-			Taking a look around at the nearby fields, you notice that they don't seem to have suffered the same sort of damage from Lunette's centaurs as those out in the Foloi Fields. Despite the apparent protection from raids, however, there doesn't appear to be a single residential building outside of the walls, giving these fields a very rural feel to them.
+			你环顾了一下附近的田野，发现这些田野似乎并没有像弗洛伊田野那样遭受露内特半人马的破坏。虽然这些田地受到了良好地保护，但城墙外没有一栋居民楼，给人了一种满是乡村气息地感觉。
 		#ENDIF
 	</p>
 	<p>
-		Continuing on your way towards Elis, 
+		在前往伊利斯时，
 		#IF(!game.isDayTime())
-			 you see
+			你看见
 		#ELSE
-			 you're able to see from the light of the lampposts which flank the road
+			借助道路两旁灯柱的光亮，你可以看见
 		#ENDIF
-		 that there are a couple of Enforcers standing guard over to one side of the gatehouse. They don't seem to be paying much attention to who's coming and going from their town, and so it looks like you'll be able to continue on your way into Elis without any trouble.
+		门房的一侧有几个执法者正在站岗，他们似乎并不太注意镇上的来来往往的人，所以看起来你可以继续前往伊利斯而不会遇到任何麻烦。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="EXIT_TO_WORLD_MAP"><![CDATA[
 	<p>
-		Deciding to leave Elis, you set off on your journey away from the town. After about half an hour of travelling, and with Elis being no more than a grey strip off in the distance, you find yourself back out in the Foloi Fields...
+		你踏上了远离伊利斯的旅程，大约走了半个小时后，伊利斯在远处只剩下一条淡淡的影子，你现在又回到了弗洛伊田野上了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ALLEY"><![CDATA[
 	<p>
-		The northern half of Elis is quite unlike the rest of the town, as it's home to an intricate, twisting network of narrow alleyways. Permanently cast in shade from the ramshackle buildings teetering precariously overhead, the poorly-maintained cobblestone path is littered with potholes and puddles.
+		伊利斯镇的北半部与镇上的其他地方大不相同，这里的小巷狭窄，交错的道路交织成蜘蛛网般复杂。两边的房屋摇摇欲坠，把这里的路笼罩在终年不散的阴影下。常年不经维护的鹅卵石路面坑坑洼洼，到处都是水坑。
 	</p>
 	#IF(game.isDayTime())
 		<p>
-			Despite their claustrophobic nature and the dilapidated state of the surrounding structures, these alleyways don't have the same dangerous feeling to them as those in Dominion, largely due to the fact that there's always at least a few harmless residents either loitering about or travelling past you. There are also numerous clotheslines linking the buildings above your head, and the bright colours of the clothing hung out to dry helps to lend a cheery atmosphere to what would otherwise be some very drab surroundings.
+			尽管这些小巷幽深隐蔽，周围的建筑也破旧不堪，但和御城区的小巷比起来，这里并没有那种危险的感觉，也许很大程度上是因为路上总有几个纯良的居民在闲逛，偶尔从你身边经过。你的头顶上悬挂着晾衣绳，它们在许多屋檐之间拉起，在这上面，随风飘扬的衣物五彩缤纷，让这暗淡的环境看上去亮丽不少。
 		</p>
 		<p>
-			While you're confident that these alleyways are safe to be travelling through during daylight hours, you can't help but notice how they're home to the town's more disreputable elements. Thanks to the fact that there's a back-alley brothel or a sleazy gambling den never more than a few turns away, you find yourself often having to filter out the sounds of whorish moaning or drunken laughter. As you travel ever onwards, you find yourself spotting countless places from which an ambush could be sprung, and you realise that these alleyways must be a very dangerous place to be at night... 
+			尽管你相信这些小巷在白天还算安全，但你仍然注意到这里聚集着镇里那些声名狼藉的家伙们的家。由于每隔几个拐弯就会有一个后巷妓院或低级赌场，你得经常要自我过滤那些淫荡的呻吟或醉汉的大笑。越往前走，你发现有无数个完美的袭击点，这让你意识到，这里一到夜晚就会变得非常危险……
 		</p>
 	#ELSE
 		<p>
-			Although safe to travel through during daylight hours, these claustrophobic alleyways have a particularly dangerous feeling to them at night. The harmless residents who can be found loitering about while the sun's out have all disappeared into the surrounding dilapidated structures which they call home, leaving the area completely deserted.
+			在白天通过这些阴暗压抑的小巷还算安全，但是到了夜晚，这里会让你感到极度危险。那些在太阳下转悠的纯良居民们已经都回到了他们所谓的破破烂烂的“家”中，让这个地方再次回归灰暗。
 		</p>
 		<p>
-			Apart from the occasional sounds of whorish moaning or drunken laughter which burst out from an upper-floor window, there's absolutely no sign of life as you continue down the dark, twisting passageways. Feeling like you're being watched, you realise that it must only be a matter of time before you encounter one of the town's more disreputable elements...
+			你继续沿着这黑暗蜿蜒的小巷前行，除了偶尔从楼上窗户里飘出来淫荡的呻吟或醉汉的大笑，这里就听不到其他生命的痕迹了。你感觉自己正被人注视着，或许在这里遇到那些声名狼藉的家伙们只是时间早晚的问题……
 		</p>
 	#ENDIF
 	#IF(!game.getNonCompanionCharactersPresent().isEmpty())
@@ -109,356 +109,356 @@
 	#ELSEIF(!game.getCharactersTreatingCellAsHome(pc.getCell()).isEmpty())
 		[#game.getCharactersTreatingCellAsHome(pc.getCell()).get(0).getPresentInTileDescription(true)]
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CULT"><![CDATA[
 	<p>
-		Positioned on the western side of town, one otherwise-ordinary building stands out from those around it due to the copious amount of flags which hang from its windows. With each one bearing the black pentagram of Lilith, the fanatical loyalty of the building's occupants is apparent to anyone who so much as glances its way.
+		在镇子西部坐落着一栋与周围建筑风格迥然相异的房屋，它的窗户上挂满了印有莉莉丝黑色五角星的旗帜。建筑内的所有人无不充斥着对莉莉丝的崇拜与忠诚——这种狂热的态度显而易见，无论是谁都能一目了然。
 	</p>
 	<p>
-		The reason for this unusual display isn't hard to figure out, for there's a large sign over the building's entrance which reads: 'Cult of Lilith; Elis Headquarters'. A pair of attractive succubi handing out promotional pamphlets are stationed to either side of the entrance, and as they see you looking in their general direction, one of them flashes you a disarming smile and beckons you forwards.
+		会出现这种不寻常的画面的原因并不难理解——大楼入口处挂着一块巨大的牌匾，上面写着：“莉莉丝教 伊利斯总部”。<br>大门两侧站着一对迷人的、正在散发宣传手册的魅魔。发现你正打量着她们，其中一人向你露出一个妩媚的微笑，同时对你招了招手。
 	</p>
 	<p>
-		You're not sure if you want to get caught up in the cult's affairs at the moment, so you break eye contact with the succubus and prepare to continue on your way...
+		你确定自己暂时还不想卷入宗教的旋涡，因此你将目光从魅魔身上挪开，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENFORCERS"><![CDATA[
 	<p>
-		While nowhere near as huge or imposing as its Dominion counterpart, the building which houses the Elis Enforcers is nevertheless a suitably large and official-looking one. Although it's of the same timber-framed style as most of the other structures in the town, the Enforcer station differs from those around it by nature of the fact that it sits back from the road, and is separated from where you're standing by an attractive knot garden. If it wasn't for the large sign declaring this to be the Enforcer's headquarters for the Elis region, as well as the Enforcers themselves occasionally coming and going from the main entrance, you could easily be mistaken for thinking that this building was simply a wealthy resident's manor.
+		执法者在伊利斯的办公点虽远不如御城区里的那样高大气派，但却充满了一种庄严、肃穆的正式感。虽然和镇里的其他建筑一样都是木质结构，但执法者站的风格与周围的建筑还是形成了鲜明对比——它背靠着另一条路，正门处设有一个漂亮的花坛。如果不是门口的匾额标明这里是执法者在伊利斯地区的总部，并且有执法者不时从中进出，你很可能会以为这只是座富人的庄园。
 	</p>
 	<p>
 		#IF(!game.isLunetteDefeated())
-			With Lunette's destruction of the Fields causing serious issues both within and without the walls of Elis, the Enforcers which you see all seem to have a melancholy look about them.
+			露内特对田野的破坏似乎引发了一大堆问题，无论是在伊利斯的城内还是城外，你看到执法者们的眉间都充斥着浓浓的忧郁。
 		#ELSE
-			With Lunette having been defeated, and Elis now experiencing a level of peace and security which hasn't been felt for many years, all of the Enforcers you see have a relaxed, friendly look about them.
+			随着露内特被击败，伊利斯现在正享受着多年来从未有过的和平与安全，你看到的所有执法者脸上都浮现出轻松、欢快的神情。
 		#ENDIF
-		 A sign beside the main entrance to the station declares that non-emergency visiting hours for members of the public is between
+		车站正门旁边的告示牌上写着，公众的正常访问时间为
 		#IF(game.isHourBetween(8, 20))
-			 [style.colourMinorGood([units.time(8)]-[units.time(20)])], and as such it's currently [style.colourGood(open)], allowing you to head on in and take a look inside if you wanted to...
+			[style.colourMinorGood([units.time(8)]-[units.time(20)])]，它目前正在[style.colourGood(开放)]，如果你想的话，现在就可以进去看看……
 		#ELSE
-			 [style.colourMinorBad([units.time(8)]-[units.time(20)])], and as such it's currently [style.colourBad(closed)]. If you wanted to head inside, you'll have to come back later...
+			[style.colourMinorBad([units.time(8)]-[units.time(20)])]，它目前已经[style.colourBad(关闭)]。如果你想进去，就只有晚些时候再来了……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIELDS"><![CDATA[
 	<p>
-		Just like those out in the rest of the Foloi Fields, the fields surrounding Elis
+		正如这片弗洛伊田野其他区域的情况一样，环绕伊利斯的农田
 		#IF(game.getSeason()==SEASON_WINTER)
-			 have been ploughed and slurried in preparation for the coming year.
+			已经犁耕并施肥，为接下来的一年做准备。
 		#ELSE
-			 are primarily given over to the production of crops, which at this time of year include, among many others, things such as
+			在每年这个时候主要致力于农作物生产，其中包括但不限于
 		#ENDIF
 		#IF(game.getSeason()==SEASON_SPRING)
-			 potatoes, rhubarb, and cauliflower. Although not as common as these crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are filled with beautifully-blossoming trees.
+			土豆、大黄、花椰菜等。虽然不像这些农田那样常见，但也有大量土地专门用于果园，此时正值春天，果树上绽放着美丽的花朵。
 		#ELSEIF(game.getSeason()==SEASON_SUMMER)
-			 corn, hops, and wheat. Although not as common as these crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are filled with leafy green trees already showing signs of the fruit they'll bear come autumn.
+			玉米、啤酒花、小麦等。虽然不像这些农田那样常见，但也有相当大的面积土地用于果园，此时正值夏季，果树枝叶繁茂，已然显现出秋天将结出累累果实的迹象。
 		#ELSEIF(game.getSeason()==SEASON_AUTUMN)
-			 beetroot, artichoke, and pumpkins. Although not as common as these crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are either heavily-laden with fruit, or have already been picked clean of their produce.
+			甜菜根、洋蓟、南瓜等。虽然不像这些农田那样常见，但也有大面积土地专用于果园，此时正值秋季，果树要么挂满了硕果，要么已经被采摘得干干净净。
 		#ELSE
-			 Although not as common as these currently-barren crop fields, there's also a significant amount of land dedicated to fruit orchards, which at this time of year are filled with leafless trees.
+			尽管不像这些目前看似贫瘠的农田那样常见，但也有相当大的面积土地用于果园，此时的果树树枝光秃秃的。
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_lunetteTerrorEnded))
-			Thanks to the close proximity of the town, these fields are very well protected from raiders or bandits. Despite this, however, there doesn't appear to be a single residential building outside of the walls, giving the surrounding area a very rural feel to it.
+			由于临近城镇，这些田地受到了很好的保护，不受劫匪或强盗侵扰。尽管如此，城墙之外似乎也没有一座住宅建筑，使得周边地区具有浓郁的乡村风味。
 		#ELSE
-			Thanks to the close proximity of the town, these fields haven't been subjected to the same sort of damage as those out in the rest of the Foloi Fields. Despite the apparent protection from Lunette's raiding, however, there doesn't appear to be a single residential building outside of the walls, giving the surrounding area a very rural feel to it.
+			由于邻近城镇，这些田地并未遭受与弗洛伊田野其他地方相同程度的破坏。尽管从表面上就能看出这里对露内特恐怖袭击有所防护，但在城墙之外并未发现任何住宅建筑，使得周边地区呈现出浓郁的乡村风味。
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-			The trees and fields around you are all covered in a thick blanket of snow,
+			周围的树木和田地都被厚厚的雪层覆盖，
 			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				 and with fluffy white flakes continuing to drift down from the dark grey clouds overhead, it looks as though your surroundings are going to remain encased in ice for some time yet...
+				来自头顶上方深灰色云层中不断飘落的蓬松白色雪花，看来周围的环境将继续保持一段时间……
 			#ELSE
-				 although thankfully there are several animal tracks which you can use to efficiently travel through the icy landscape...
+				幸运的是，你可以利用几条动物足迹有效地穿越这片被冰雪覆盖的地方……
 			#ENDIF
 		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-			The rain splashes down all around you as you travel through the fields, forming puddles of wildly-varying sizes and sending the local wildlife ducking for cover...
+			当你穿越田野时，雨水四溅开来，形成大小各异的水洼，使得当地野生动物纷纷寻找遮蔽处……
 		#ELSEIF(game.getCurrentWeather()==WEATHER_CLEAR)
-			With the clear skies overhead showing no sign of rain in the immediate future, you continue on your way through the fields...
+			头顶开阔的蓝天预示着近期无降雨迹象，你继续前行穿越田野……
 		#ELSE
-			With the clouded skies overhead hinting at the possibility of rain, you continue on your way through the fields...
+			头顶上方的阴云似乎预示着可能会下雨，但你仍要穿越田野……
 		#ENDIF
 	</p>
 	#IF(pc.getNearestCellDistance(PLACE_TYPE_innoxia_fields_elis_town_wall)<3 || pc.getNearestCellDistance(PLACE_TYPE_innoxia_fields_elis_town_tower)<3)
 		<p>
-			#IF(pc.isAbleToFly())
-				The nearby stone walls of Elis form an impassable barrier to anyone who can't fly, preventing them from entering the town from this area. As you're capable of flight, however, you don't need to [pc.walk] to the nearest gatehouse and can instead simply fly up onto the wall if you wanted to gain access to Elis...
-			#ELSE
-				The nearby stone walls of Elis form an impassable barrier, preventing you from entering the town from this area. You'll have to [pc.walk] to the nearest gatehouse if you wanted to gain access to Elis...
-			#ENDIF
-		</p>
+    #IF(pc.isAbleToFly())
+       伊利斯附近的石墙对于无法飞行的人来说是一个无法逾越的屏障，这意味着他们无法从这个区域进入小镇。但既然你具备飞行能力，你无需[pc.walk]到最近的城门，而是可以选择直接飞上城墙进入伊利斯……
+    #ELSE
+      伊利斯附近的石墙形成了一道无法穿越的障碍，阻碍了你从这个区域进入小镇。如果你想进入伊利斯，你需要[pc.walk]到最近的城门处……
+    #ENDIF
+</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIELDS_FLY_TO_WALL"><![CDATA[
 	<p>
-		Wanting to head back into town, but not liking the idea of [pc.walking] all the way to the nearest gatehouse, you take a short run-up and launch yourself into the air, before flying up above the walls of Elis. Smoothly gliding down, you land on the wooden ramparts, before looking around and wondering where to go from here...
+		你想回城，但又不想[pc.walking]回最近的城楼，于是你飞身一跃，腾空而起，飞到伊利斯城墙的上空。你平稳地一路滑翔，降落在木制城墙处，接着你环顾四周，思索着该何去何从……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="FIELDS_FLY_TO_TOWER"><![CDATA[
 	<p>
-		Wanting to head back into town, but not liking the idea of [pc.walking] all the way to the nearest gatehouse, you take a short run-up and launch yourself into the air, before flying up above the walls of Elis. Smoothly gliding down, you land beside the nearest of the crenellated towers, before looking around and wondering where to go from here...
+		你想回城，但又不想[pc.walking]回最近的城楼，于是你飞身一跃，腾空而起，飞到伊利斯城墙的上空。你平稳地一路滑翔，降落在最近的一座城楼旁，接着你环顾四周，思索着该何去何从……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GATEHOUSE"><![CDATA[
 	<p>
-		Consisting of a pair of crenellated towers flanking a pair of huge wooden gates, this gatehouse guards one of the two roads which grant access to the town of Elis. Standing guard to one side of the open gates, a pair of Enforcers are keeping a very casual watch over anyone who passes them by.
+		这座门楼由两个带有城垛的塔楼组成，其间夹着一扇巨大的木门，守卫着通往伊利斯的两条道路之一。两个守卫分站在敞开的大门两侧，漫不经心地观察着每一个行人。
 	</p>
 	<p>
-		#IF(pc.getLastPlaceType()==PLACE_TYPE_innoxia_fields_elis_town_wall)
-			As you're currently travelling along the wall's wooden ramparts, you have to pass through the gatehouse in order to continue on your way. Thankfully it's fully open to members of the public, and as you [pc.walk] through the stone structure, you see that there's another Enforcer guarding what appears to be a raised portcullis. Although this Enforcer offers you a polite greeting, they don't pay you much attention, allowing you to continue on your way without being stopped...
-		#ELSE
-			As you travel past these Enforcers, you look up to see that there's a raised portcullis which can be dropped to provide additional strength and protection to the already-sturdy gates. With the Enforcers continuing to talk to one another and paying you very little attention, you're able to continue on your way without being stopped...
-		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+    #IF(pc.getLastPlaceType() === PLACE_TYPE_innoxia_fields_elis_town_wall)
+        由于你现在正沿着城墙的木质城垛行进，你必须穿过城门楼才能继续前进。幸运的是，城门完全向公众开放，当你[pc.walk]穿过这座石砌建筑时，你会发现有一名守卫正站在看似提升起来的吊闸前。尽管这名守卫礼貌地向你打招呼，但他们并未过多关注你，这使你得以顺利通行而没有受到阻拦……
+    #ELSE
+        当你经过这些守卫时，你抬头看到有一个升起的吊闸，当放下时，它可以为原本就很坚固的大门提供额外的防护和稳固。守卫们继续彼此交谈，并未对你投入太多注意，这使你能够不受阻挡地继续前行……
+    #ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAKE"><![CDATA[
 	<p>
-		To the north-east of Elis, there lies a relatively large body of fresh water, and it's by the sandy shore of this lake which you currently find yourself standing.
-		#IF(game.getSeason()==SEASON_WINTER)
-			 Due to the ambient temperature at this time of year, the edges of the water have frozen solid, with the rest of the lake's bluish-grey surface looking particularly cold and uninviting. Despite this, however, as you look out across the water, you suddenly spot the distinctive shape of a shark-like fin circling around in the middle of the lake, before it quickly dips down out of sight.
-		#ELSE
-			 Looking out across the water's bluish-grey surface, you suddenly spot the distinctive shape of a shark-like fin circling around in the middle of the lake, before it quickly dips down out of sight.
-		#ENDIF
-	</p>
+    在伊利斯的东北部有一个相对较大的淡水湖，此刻你正站立在湖边的沙岸上。
+    #IF(game.getSeason() === SEASON_WINTER)
+        由于此时节的气温影响，湖水边缘已经冻结成固态，湖面呈现出冷冽而不友好的蓝灰色调。尽管如此，当你眺望水面时，你突然发现湖中央有个类似鲨鱼鳍的独特形状在游动，随后迅速潜入水中消失不见。
+    #ELSE
+        当你凝视着湖面上那片蓝灰色水域时，你突然发现湖中央有个类似鲨鱼鳍的独特形状在游动，随后迅速潜入水中消失不见。
+    #ENDIF
+</p>
 	<p>
-		Equally spaced around the shoreline, there are about a dozen or so wooden signposts, and with the nearest one being close to where you're standing, you're able to quickly walk over to it and read:
+		湖滨线上等距离分布着十几个木制路标，其中一个离你不远，你迅速走近阅读上面的内容：
 	</p>
 	<p style='text-align:center;'>
 		<i>
-		<b>Attention!</b>
+		<b>注意！</b>
 		<br/>
-		The residents of this lake prefer not to be disturbed.<br/>
-		Please refrain from the following activities:
+		湖中的居民不喜欢被打扰。<br/>
+		请避免以下行为：
 		<br/>
-		- Swimming<br/>
-		- Stone skipping<br/>
-		- Littering<br/>
-		- Noisy gatherings<br/>
-		[style.italicsBrown(Annoy me and I'll eat ya!)]
+		-游泳<br/>
+		-打水漂<br/>
+		-丢垃圾<br/>
+		-喧闹的聚会<br/>
+		[style.italicsBrown(敢烦我就吃了尼！)]
 		</i>
 	</p>
 	<p>
-		That last sentence appears to have been carved into the signpost some time after it was erected. Although you seriously doubt anyone runs the actual risk of being eaten as punishment for annoying the residents of this lake, you imagine that they wouldn't be too happy about being disturbed.
+		最后一句话似乎是在路标竖立后过了段时间才刻上去的。虽然你不太相信真的会因为惹恼了湖中居民而被吃掉，但你可以想象，他们一定不会太乐意被打扰。
 	</p>
 	<p>
-		Deciding against doing anything more here, you turn away from the lake and prepare to continue on your way...
+		你不打算再做任何事情，转身离开湖边，继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LAKE_DEEP"><![CDATA[
 	<p>
-		You shouldn't be able to get here yet!
+		这儿不是你该来的地方！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MARKET"><![CDATA[
 	<p>
-		Located at the intersection between the town's major roads, a huge public square has been constructed. Unlike the cobblestone of the streets, this square has been paved using large blocks of stone, the smooth surface of which is broken only by a series of shallow channels which lead into drains. At all four entrances to this square, large, touristy-looking signs offer information on the market's history to people who might be interested in it, as well as declaring in large, bold font that this area is 'The Farmer's Market; Open every day between
+		超大型广场坐落于小镇主干道的交叉路口。与路上的鹅卵石地面不同，广场地面是由大块的石砖铺就的。只有通向排水沟的几条浅浅水道切分开平整的表面。四个大号游客导览标志分别位于广场的四个入口，为感兴趣的人介绍市场的历史。标志牌上面醒目的大字写着“农贸市场，每天
 		#IF(game.getHourOfDay()>=8 && game.getHourOfDay()<=17)
-			[style.colourMinorGood([units.time(8)]-[units.time(18)])]'.
+			[style.colourMinorGood([units.time(8)]-[units.time(18)])]开放”。
 		#ELSE
-			[style.colourMinorBad([units.time(8)]-[units.time(18)])]'.
+			[style.colourMinorBad([units.time(8)]-[units.time(18)])]开放”。
 		#ENDIF
 	</p>
 	#IF(game.getHourOfDay()>=8 && game.getHourOfDay()<=17)
 		<p>
-			Sure enough, the market is currently open, and as you look down one of the busy avenues formed between countless brightly-coloured stalls, you see all manner of food, drink, and other items for sale. Unlike a regular farmer's market, the one here in Elis seems to have evolved into a type of low-key festival, complete with a band somewhere in the distance playing live music. Stopping for a moment, you wonder whether to head into the market and take a closer look around...
-		</p>
+    现在的市场正在营业，当你浏览那由无数鲜艳摊位构筑而成的繁华街道时，你可以看到形形色色的食品、饮料以及其他各类商品。与普通农家市场有所不同，伊利斯这里的市场仿佛演化成了一场低调而热烈的节日活动，而在不远处，甚至有一支乐队正在现场演奏音乐。你暂时停顿了一下，思索着是否应该踏入市场，进一步地细细探索其中的每一处角落……
+</p>
 	#ELSE
 		<p>
-			#IF(game.getHourOfDay()==7)
-				Due to the early hour, the market's many stalls are still being set up, and as such they aren't ready to start trading just yet. If you wanted to buy something from the market, you'll have to come back in an hour or so. 
-			#ELSEIF(game.getHourOfDay()==18)
-				Due to the late hour, the market's many stalls are being packed up and wheeled away, with the vendors having ceased trading for the day. If you wanted to buy something from the market, you'll have to come back tomorrow.
-			#ELSE
-				Due to the current hour, the market's many stalls have all been packed up and taken away,
-				#IF(game.getSeason()==SEASON_WINTER)
-					 and due to the cold temperatures at this time of year, the square isn't being used in any capacity whatsoever.
-				#ELSEIF(game.getHourOfDay()<=23)
-					 leaving the square to be used by some of the surrounding restaurants as a convenient place in which to put out their tables and chairs for outdoor eating.
-				#ELSE
-					 leaving the square completely deserted.
-				#ENDIF
-				 If you wanted to buy something from the market, you'll have to come back some time after eight in the morning.
-			#ENDIF
-		</p>
+    #IF(game.getHourOfDay()==7)
+        因为现在时间尚早，市场的许多摊位还在搭建中，因此尚未开始交易。如果你想在市场上买东西，你需要大约一小时后再来。
+    #ELSEIF(game.getHourOfDay()==18)
+        因为现在已是晚时分，市场的许多摊位正在被收起并推走，商贩们已经结束了一天的交易。如果你想在市场上买东西，你需要等到明天再来。
+    #ELSE
+        由于当前时间的原因，市场的许多摊位都已经打包并撤离，
+        #IF(game.getSeason()==SEASON_WINTER)
+            并且由于一年中这个时候的低温，广场完全没有任何用途。
+        #ELSEIF(game.getHourOfDay()<=23)
+            留给周边一些餐厅作为放置户外餐桌椅、方便顾客露天就餐的理想之地。
+        #ELSE
+            使得广场变得完全荒无人烟。
+        #ENDIF
+        如果你想在市场上买东西，你需要在早上八点之后再来。
+    #ENDIF
+</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MARKET_ENTER"><![CDATA[
 	<p>
-		Wanting to spend some time looking around and potentially doing some shopping, you [pc.step] forwards and enter the Farmer's Market...
-	</p>
-	]]>
-	</htmlContent>
+    你想花点时间逛一逛，或许还能买点东西，于是你[pc.step]进了农贸市场……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="MARKET_INFO"><![CDATA[
 	<p>
-		Heading over to the nearest entrance to the market, you approach the touristy-looking sign and spend a few minutes reading over the information it contains:
-	</p>
+    你走向市场最近的入口，你看见一块看起来就很吸引游客的招牌，并花了几分钟阅读上面包含的信息：
+</p>
 	<hr/>
 	<i>
 		<p style='text-align:center; font-size:1.1em'>
-			<b>The Farmer's Market; Open every day</b>
+			<b>农贸市场；每日开放</b>
 		</p>
 		<p>
-			<b>History</b>
+			<b>历史</b>
 			<br/>
-			Did you know that the town of Elis started right here where you're standing? That's right, before there was a town at all, Elis was no more than a tiny hamlet and a livestock market. Despite its position on the outskirts of the Foloi Fields, Elis rose to become the region's largest and most prosperous town, and it was all thanks to this very market!
+			你知道么？伊利斯镇就是从你现在站的这个地方开始的。没错，在建镇之前，伊利斯只不过是一个小村庄和一个牲畜市场。尽管伊利斯地处弗洛伊田野的外围，但它却一跃成为该地区最大、最繁荣的城镇，而这一切都要归功于这个市场！
 			<br/><br/>
-			But how did that happen, you ask? Well, the answer's an easy one! The youko of the nearby Shinrin Highlands, who up until a hundred or so years ago had mostly kept to themselves, started using the market here at Elis as a way to obtain food and drink which they otherwise didn't have access to. With the youko's considerable arcane abilities sometimes being offered in exchange for goods, the tiny hamlet of Elis was able to embark on several ambitious construction projects, allowing it to quickly grow into a thriving village!
+			你会问，这是怎么发生的呢？答案很简单！直到一百多年前，附近心林高地的妖狐们一直独来独往，他们开始利用伊利斯的市场来获取他们无法获得的食物和饮料。由于妖狐们有时会用自己强大的奥术能力来换取物品，伊利斯的小村庄得以开展了最初的建设项目，并使其迅速发展成为一个繁荣的村庄！
 			<br/><br/>
-			And what next? I'm glad you asked! From there, the village continued to grow, with this very market continuing to be the focal point. Unfortunately, the village's new-found prosperity attracted the attention of bandits. Striking from out of the Foloi Forests, they brought Elis to the brink of utter ruin. It was only thanks to the help of a mysterious youko, who built the first walls of Elis, that everything you see around you was made possible!
+		在那之后，村庄继续发展壮大，而这个市场始终是其发展的中心点。然而，不幸的是，村庄新获得的繁荣引起了强盗们的注意。这些强盗从弗洛伊森林中发动袭击，一度将伊利斯推向了彻底毁灭的边缘。所幸的是，多亏了一只神秘的妖狐的帮助，这只妖狐建造了伊利斯的第一道城墙，这才使得你现在所见的一切变为可能。正是因为它的英勇举动和智慧贡献，伊利斯镇才能够抵挡住强盗的侵袭，并逐步恢复并扩大其规模，最终发展成为现在这样一个安全而又繁荣的社区。
 			<br/><br/>
-			Over time, the village of Elis grew into a town, although despite the size of our settlement, the threat of bandit raids has never gone away. Due to this, the walls had to be expanded to the north, and have since been filled with new buildings and fellow residents! And the market which started off as a field beside a tiny hamlet has expanded into the one before your eyes; the best market in all of Lilith's Realm!
+			随着时间的推移，伊利斯这个小村庄逐渐发展成了一座城镇，尽管我们的定居点规模不断扩大，但强盗袭击的威胁始终未曾消除。正因为如此，为了抵御强盗，城墙不得不向北扩展。自那时起，新的建筑和更多的居民涌入其中，使城墙内的区域更加充实和繁华。当初仅是位于一个小小村庄旁的那片田地上的市场，如今已经演变为你眼前所见的这片广阔而繁荣的市场——在整个莉莉丝领域内都是首屈一指的！
 		</p>
 		<br/>
 		<p>
-			<b>Today's Market</b>
+			<b>今日市场</b>
 			<br/>
-			The market as it exists today offers everything you could possibly ever need! From food and drink to entertainment (and maybe even love?), it's the best place for both shopping and relaxation.
+		现今的市场提供了你可能所需要的一切商品和服务！从基本的食物和饮品，到丰富的娱乐项目(甚至有可能邂逅浪漫爱情)，这里是购物与休闲的最佳去处。
 			<br/><br/>
-			The market is open every day, between [units.time(8)]-[units.time(18)]. Please note that a large part of the market is used as a traditional livestock market on Wednesdays and Saturdays.
+			市场每天在[units.time(8)]-[units.time(18)]之间开放。请注意，市场的大部分区域在周三和周六被用作传统的牲畜市场。
 		</p>
 		<p style='text-align:center; font-size:0.75em'>
-			This information has been provided by the Elis tourism board. For complaints or queries, please inquire at the town hall.
+			这些信息由伊利斯旅游局提供。有任何投诉或疑问，请咨询市镇议会。
 		</p>
 	</i>
 	<hr/>
 	<p>
-		Having read through all of the information the sign contains, you take a [pc.step] back and wonder what to do next...
+			读完了标牌上所有的信息后，你转身[pc.step]开，并开始思考接下来要去哪里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POND"><![CDATA[
 	<p>
-		A short distance from the southern walls of Elis, a large pond can be found, and its in front of this pool of still water that you find yourself standing. Choked by algae and with thick bushes of tall reeds growing all around its perimeter, this body of water looks, and smells, more like a swamp than a pond. What little of the murky green water which you're able to see through the blanket of algae looks extremely uninviting, and you can't imagine that many creatures are able to survive in a place such as this.
-	</p>
+    距离艾利斯南城墙不远的地方有一片面积颇大的池塘，而此刻，你正站在这里。池塘被藻类充斥，周遭环绕着密集的高大芦苇丛，整体看来，与其说是一片池塘，倒更像是一个沼泽。透过厚重的藻类层，你能窥见的那少量浑浊的绿色水面显得极不吸引人，很难想象这样的环境中能有多少生物存活下来。
+</p>
 	<p>
-		Despite the absence of any sign of fauna, there are a few warning signs scattered about near to the pond's edges. Other than advising you not to swim in the water, these signs also warn of a 'pond monster' which has been known to attack people who linger beside the murky water for too long. Almost as if to prove to you that the sign's warning should be heeded, ripples suddenly start spreading over the pond's surface, the size of which look to be far too large to have been formed by a simple fish or frog.
-	</p>
+尽管池塘周围并未出现任何动物踪影，但在池塘边缘仍散布着几块警示牌。这些警示牌不仅告诫你不得在此池水中游泳，同时还警告称，有一种被称为“池塘怪物”的存在，该怪物曾有过攻击在浑浊水边久留之人的情况。仿佛是为了印证警示牌上的话语并非玩笑，就在这一刻，池塘水面突然扩散出阵阵波纹，而这些波纹的规模看上去远非寻常鱼类或青蛙所造成的。
+</p>
 	<p>
-		Unless you want to run the risk of being attacked by the 'pond monster' which calls this fetid, swampy pond its home, you'd better leave...
+		除非你愿意冒被那只把这恶臭沼泽般的池塘当作家园的“池塘怪物”袭击的风险，否则最好离开这里……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SHOPS"><![CDATA[
 	<p>
-		Although Elis has most of its commercial needs met by its large farmer's market, there still exists a need for more permanent stores, and it's within the town's open-air shopping precinct that this need is met. A wide gap between the houses on the northern side of this street forms the entrance to this precinct, which is clearly signposted and named as 'Wall's End'.
-	</p>
+尽管伊利斯的大部分商业需求可以通过其大型的农贸市场得到满足，但其仍然存在着对更为永久性商店的需求。这个需求正是通过镇上的露天购物中心得到满足。这条街道北侧房屋间的一大片开阔地带形成了通往该购物区的入口，该入口清晰地标记并命名为“墙之尽头”。
+</p>
 	<p>
-		There's no form of barrier or other mechanism to restrict entry to this shopping precinct, and so if you wanted to you could head through its entrance and take a look around...
-	</p>
-	]]>
-	</htmlContent>
+通往这个购物区并没有设置任何形式的障碍或其他限制进入的条件，因此，如果你想的话，完全可以穿过入口进去参观一下……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STREET"><![CDATA[
 	<p>
-		The cobblestone streets of Elis are flanked by timber-framed buildings, the vast majority of which are either two or three stories tall. The late-medieval aesthetic of this town is further enhanced by the old, ornate design of the arcane street lamps,
-		#IF(game.isDayTime())
-			 which once night falls will cast their surroundings in a pale yellow glow.
-		#ELSE
-			 which are casting their surroundings in a pale yellow glow.
-		#ENDIF
-		 Most of the structures which you pass are residential in nature, although you are able to spot a few local businesses situated on the ground floor of the odd building.
-	</p>
+伊利斯的鹅卵石街道两旁矗立着木框架结构的建筑，绝大多数建筑都有两到三层的高度。这个小镇的晚期中世纪风格在古老的装饰华丽的魔法路灯的衬托下更加突出，
+    #IF(game.isDayTime())
+        当夜幕降临后，这些路灯将为其周围环境洒上一层淡淡的黄色光芒。
+    #ELSE
+        此刻，这些路灯正为其周围环境洒上一层淡淡的黄色光芒。
+    #ENDIF
+尽管你路过的大多数建筑主要是住宅性质，但也能在个别建筑的底层发现几家当地店铺。
+</p>
 	<p>
-		#IF(game.isDayTime())
-			Due to the current hour, there are a lot of people out and about, with those that you see walking the streets mostly taking the form of some kind of domestic animal-morph. Cows, sheep, dogs, and all other manner of morphs are able to be sighted.
-		#ELSE
-			Due to the current hour, there are far fewer people out and about, with those that you do see walking the streets mostly taking the form of a nocturnal animal-morph. Foxes, badgers, and even the occasional owl-harpy who's decided to walk instead of fly are just some of the morphs which you're able to see.
-		#ENDIF
-		 Although this town is far smaller than Dominion, it's not so rural as to be home to the sort of behaviour where strangers say hello to one another, and so none of the people who you pass pay you any attention as they continue on their way to whatever destination awaits them.
-	</p>
+    #IF(game.isDayTime())
+        由于现在是白天，街上有很多人在活动，你所见到的走在街头的人大多数都具有某种家养动物形态。奶牛、绵羊、狗以及其他各种形态各异的化形随处可见。
+    #ELSE
+        由于现在是夜晚，外出的人明显减少，而你偶尔见到的仍在街头行走的人，大多是夜间活动的动物形态化形者。狐狸、獾，甚至偶尔会见到选择步行而非飞翔的鸮或哈比族人，这些都是你在夜晚能见到的一些化形。
+    #ENDIF
+    尽管这个小镇比御城区要小得多，但它并不是那种陌生人互相问候的乡野之地，所以你路过的人们都各自专注于前往自己的目的地，并未对你投以特别的关注。
+</p>
 	<p>
-		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-			Although the roofs and tops of the lamp posts are covered in a thick blanket of snow, the road remains completely clear, thanks to what you assume to be some kind of spell.
-			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				 As the fluffy white flakes touch the cobblestone surface, you see them immediately melt and evaporate, confirming your suspicions that the arcane has been put to work on heating the road.
-			#ELSE
-				 Casually looking around, you see that there's absolutely no sign of ice or even a single flurry of snow on the cobblestone surface, all but confirming your suspicions that the arcane has been put to work on heating the road.
-			#ENDIF
-		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-			Being completely exposed to the elements, you watch as the rain bounces off the roofs and tops of the lamp posts before running down into the stone gutters which run parallel to the road's edges.
-		#ELSEIF(game.getCurrentWeather()==WEATHER_CLEAR)
-			With the clear skies overhead showing no sign of rain in the immediate future, you continue on your way down the cobblestone road.
-		#ELSE
-			With the clouded skies overhead hinting at the possibility of rain, you continue on your way down the cobblestone road.
-		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+    #IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
+        尽管屋顶和路灯柱顶都被厚厚的积雪覆盖，但路面依然保持得十分干净，这大概得益于某种魔法的作用。
+        #IF(game.getCurrentWeather()==WEATHER_SNOW)
+                当蓬松的白色雪花接触到鹅卵石路面时，你看到它们立刻融化并蒸发，这进一步证实了你的猜测——某种神秘力量正在为道路加热。
+        #ELSE
+                随意环顾四周，你会发现鹅卵石路面上完全没有冰块或者哪怕一丝雪花的痕迹，几乎可以确定有人使用了神秘力量对道路进行了加热处理。
+        #ENDIF
+    #ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
+       你看着雨水打在屋顶和路灯柱顶上，然后顺着路边与道路平行的石质排水沟流下。
+    #ELSEIF(game.getCurrentWeather()==WEATHER_CLEAR)
+        头顶上晴朗的天空预示着近期不会有降雨，你继续在鹅卵石道路上前行。
+    #ELSE
+        头顶上阴沉的天空暗示着可能下雨，你继续在鹅卵石道路上前行。
+    #ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TAVERN"><![CDATA[
 	<p>
-		Likely due to the original owner's business acumen, 'The Red Dragon' tavern is one of the first buildings to be seen by people entering Elis via the eastern gate. Although it's of a similar timber-framed design to those around it, this two-story tavern is at least twice their length, and despite whatever age it might be, looks to be an impressive example of late medieval architecture. It's due to this size that the tavern has two entrances, both of which display the opening times as being twenty four hours a day, seven days of the week.
+很可能因为原主人的商业头脑，“红龙”酒馆是通过东门进入伊利斯时最先映入眼帘的建筑之一。虽然它的设计与周围的木构架建筑相似，但这栋两层楼高的酒馆至少是它们长度的两倍，不论其年代多久远，这栋建筑都堪称晚期中世纪建筑的杰出典范。正因其庞大的规模，酒馆设有两个入口，两个入口均显示营业时间为全天候24小时，一周7天无休。
+</p>
+	<p>
+		酒馆的招牌挂在二楼突出的一根杆子上，上面绘着非写实的图案，一只巨大的红龙正将一堆金灿灿的宝藏交给一个表情茫然的绵羊男。在其下方，“红龙酒馆”字样被漆成了深酒红色。
 	</p>
 	<p>
-		The tavern's main sign hangs from a pole which juts out from the building's upper floor, and displays a stylised image of a huge red dragon giving a pile of golden treasure to a bewildered-looking sheep-boy. Beneath this, the words 'The Red Dragon' are painted in a dark burgundy hue. 
-	</p>
-	<p>
-		Through the tavern's leaded windows, you can see that the
+		透过酒馆的铅框窗户，你可以看到
 		#IF(!game.isDayTime())
-			 well-lit
+			里面照明良好，
 		#ENDIF
-		 interior is
+		室内
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			 very busy, and the typical sounds of drunken revelry which spill out into the street inform you that the patrons are having a good time.
+			异常繁忙，从街上就能听到的醉汉欢闹声表明，顾客们正沉浸在欢乐的气氛中。
 		#ELSE
-			 not particularly busy, although there are still several patrons sitting at some of the tables or leaning against the wooden bar.
+			不算太忙，尽管仍有几位顾客坐在几张桌旁或依靠在木质吧台上。
 		#ENDIF
-		 If you wanted to, you could head inside and take a look around...
+		如果你有兴趣，完全可以进去一探究竟……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TAVERN_ENTER"><![CDATA[
 	<p>
-		Deciding that you want to head inside the tavern, you approach the nearest of the two entrances and push open the door, before [pc.stepping] into 'The Red Dragon'...
+		你决定进入酒馆，便推开一扇最近的门，[pc.stepping]进“红龙酒馆”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TAVERN_SEEDY"><![CDATA[
 	#IF(game.getHourOfDay()<5 || game.getHourOfDay()>=14)
 		<p>
-			An oddity in amongst the narrow alleyways of the northern half of Elis, the large, paved courtyard in front of you is filled with wooden picnic tables, at which a dozen or so locals are sitting and passing the hours by drinking and gambling with one another. The establishment responsible for their supply of alcohol is situated on the far side of the courtyard, and takes the form of a rather dilapidated, timber-framed structure. A weathered sign hanging precariously from a drooping metal pole displays an image of two crossed daggers, with the words 'The Crossed Blades' written in black, bold letting below.
+			在伊利斯北半部狭窄的小巷中，眼前这个铺设了路面的大院子里摆满了木制野餐桌，十来个当地人正坐在桌边喝酒、赌博，打发时间。酒水供应处在院子的另一侧，是一座相当破旧的木房子。一个饱经风霜的招牌岌岌可危地吊在一根下垂的金属杆上，招牌上是两把交叉的匕首，下面用黑色粗体字写着“十字利刃”。
 		</p>
 		<p>
-			While the patrons who're sitting out in the courtyard seem to be relatively well-behaved, there are some very rowdy sounds of laughter, cursing, and the occasional cheer coming from within the tavern itself. Although there are large, leaded windows on the ground floor, they're so grimy that
+			虽然坐在院子里的客人看起来都比较规矩，但酒馆里却满是笑声、咒骂声，偶尔还会传来欢呼声，喧闹异常。一楼有宽大的落地窗，但窗子已经脏得不成样子，
 			#IF(game.isDayTime())
-				 you can't see much of the interior through them, 
+				你根本看不清内部的情况。
 			#ELSE
-				 you can only barely tell that the lights are on inside,
+				你只能勉强看出里面亮着灯。
 			#ENDIF
-			 and so if you wanted to find out what this tavern is like, you'll have to risk heading inside. As you approach the door, you see that there's an old, weathered sign which declares the tavern's opening hours to be from [style.colourMinorGood([units.time(14)]-[units.time(5)])].
+			因此，如果你想了解这家酒馆，就必须自己走进去看看。走近酒馆大门，映入眼帘的是门上一块饱经风霜的老旧招牌，上面写着酒馆的营业时间是[style.colourMinorGood([units.time(14)]-[units.time(5)])]。
 		</p>
 	#ELSE
 		<p>
-			An oddity in amongst the narrow alleyways of the northern half of Elis, the large, paved courtyard in front of you is filled with wooden picnic tables, each one of which is vacant. The establishment to which this array of empty seating belongs is situated on the far side of the courtyard, and takes the form of a rather dilapidated, timber-framed structure. A weathered sign hanging precariously from a drooping metal pole displays an image of two crossed daggers, with the words 'The Crossed Blades' written in black, bold letting below.
+			在伊利斯北半部狭窄的小巷中，眼前这个铺设了路面的大院子里摆满了木制野餐桌，但每张餐桌都是空着的。这些空着的座位所属的餐馆位于庭院的另一侧，是一座相当破旧的木房子。一个饱经风霜的招牌岌岌可危地吊在一根下垂的金属杆上，招牌上是两把交叉的匕首，下面用黑色粗体字写着“十字利刃”。
 		</p>
 		<p>
-			Just like the empty courtyard before you suggests, the tavern itself seems to be closed, as there's no light nor sounds coming from within. Although there are large, leaded windows on the ground floor, they're so grimy that you can't see much of the interior through them, and so if you wanted to find out what this tavern is like, you'll have to come back again when it's open. Looking across to the tavern's front door, you see that there's an old, weathered sign which declares its opening hours to be from [style.colourMinorBad([units.time(14)]-[units.time(5)])].
+			眼前的庭院空空荡荡，酒馆内部也既无灯光，也无声音，似乎是打烊了。虽然一楼有大玻璃窗，但窗子灰蒙蒙的，你根本看不清内部的情况。因此，如果你想了解这家酒馆，就得等它开门时再来。你望向酒馆大门，映入眼帘的是门上一块饱经风霜的老旧招牌，上面写着酒馆的营业时间是[style.colourMinorGood([units.time(14)]-[units.time(5)])]。
 		</p>
 	#ENDIF
 	#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_OGLIX_BEER_BARRELS))
@@ -466,16 +466,16 @@
 			<i>
 			#IF(game.isHourBetween(6, 7))
 				#IF(flags.hasFlag(FLAG_innoxia_oglix_kheiron_spectated_today))
-					You've already seen what Kheiron and Golix get up to in the old stables today. If you wanted to watch them again, then you'll have to come back tomorrow between [units.time(6)]-[units.time(7)]...
+					你们今天已经看过戈利克斯在旧马厩里对喀戎做了什么了。如果你想再看一遍，那就明天[units.time(6)]-[units.time(7)]再来吧……
 				#ELSE
-					Remembering what Oglix said, as it's currently between [units.time(6)]-[units.time(7)], you could sneak around behind the tavern to the old stables, where Kheiron and Golix should be having their meeting...
+					你还记得奥格利克斯说过的话，而且现在正处于[units.time(6)]-[units.time(7)]之间，你可以偷偷绕到酒馆后面的旧马厩，喀戎和戈利克斯应该在那里会面……
 				#ENDIF
 			#ELSE
-				Remembering what Oglix said, if you were to come back here
+				你还记得奥格利克斯说过的话，如果你
 				#IF(game.getHourOfDay()>7)
-					 tomorrow
+					明天
 				#ENDIF
-				 between [units.time(6)]-[units.time(7)], you could sneak around behind the tavern to the old stables, where Kheiron and Golix will be having their meeting...
+				在[units.time(6)]-[units.time(7)]间回到这里来，你可以偷偷绕到酒馆后面的旧马厩，喀戎和戈利克斯斯将在那里会面……
 			#ENDIF
 			</i>
 		</p>
@@ -484,311 +484,311 @@
 	#IF(flags.hasFlag(FLAG_innoxia_yui_public_toy_unlocked))
 		<p>
 			#IF(flags.hasFlag(FLAG_innoxia_yui_public_toy_unavailable_today))
-				Although this is the place where Yui wants to meet you, you've already refused her offer today, so she won't show up again until next Friday...
+				虽然这是唯想和你见面的地方，但你已经拒绝了今天的邀约，所以她直到下周五才会再次出现……
 			#ELSE
-				This is the place where Yui wants to meet you
-				#IF(game.isHourBetween(20, 23))
-					 between [style.colourMinorGood([units.time(20)]-[units.time(23)])] on a
-				#ELSE
-					 between [style.colourMinorBad([units.time(20)]-[units.time(23)])] on a
-				#ENDIF
+				这是唯想和你见面的地方，时间是
 				#IF(game.getDayOfWeek()==DOW_FRIDAY)
-					 [style.colourMinorGood(Friday)].
+					[style.colourMinorGood(周五)]
 				#ELSE
-					 [style.colourMinorBad(Friday)].
+					[style.colourMinorBad(周五)]
+				#ENDIF
+				#IF(game.isHourBetween(20, 23))
+					[style.colourMinorGood([units.time(20)]-[units.time(23)])]时。
+				#ELSE
+					[style.colourMinorBad([units.time(20)]-[units.time(23)])]时。
 				#ENDIF
 				#IF(game.isHourBetween(20, 23) && game.getDayOfWeek()==DOW_FRIDAY)
-					 As such, you could remain here and wait for her to appear and make contact with you.
+					所以你可以留在这里等待她出现并与你联系。
 				#ELSE
-					 As such, you're not going to be able to meet with her at the moment, but if you were to return here at the appropriate time, you could make contact with her.
+					所以你现在无法见到她，但如果你在正确的时间回来，就能与她取得联系。
 				#ENDIF
 			#ENDIF
 		</p>
 		#IF(!flags.hasFlag(FLAG_innoxia_yui_public_toy_unavailable_today) && (!pc.hasFetish(FETISH_MASOCHIST) || pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects() || pc.getDirtySlots().size()>0 || (!game.isAnalContentEnabled() && !pc.hasVagina()) || pc.getLegConfiguration()!=LEG_CONFIGURATION_BIPEDAL))
 			<p>
 				#IF(!pc.hasFetish(FETISH_MASOCHIST))
-					As you think about Yui's sadistic nature, you realise that whatever offer she's going to make is sure to involve putting you in a situation where you'll be abused. As [style.italicsBad(you're not a masochist)], you've got a bad feeling about this and [style.italicsBad(decide not to meet with Yui)]...
+					你想到唯的施虐本性，意识到无论她提出怎样的邀约，都必定会让你处于一个受虐待的境地。由于[style.italicsBad(你并非受虐狂)]，所以你对此感到不安，并[style.italicsBad(决定不与唯会面)]……
 				#ELSE
-					Remembering Yui's conditions for your meeting, you realise that she's not going to show up.
+					你回想起唯与你会面的条件，意识到她此时不会现身。
 					#IF(pc.isAnyEquippedClothingSealed())
-						 You [style.colourBad(have)] sealed clothing equipped,
+						你目前[style.colourBad(穿着)]被封印的衣物，
 					#ELSE
-						 You [style.colourGood(don't have)] sealed clothing equipped,
+						你[style.colourGood(没有穿着)]被封印的衣物，
 					#ENDIF
 					#IF(pc.isHasAnyPregnancyEffects())
-						 you [style.colourBad(have)] a pregnancy-related status effect active,
+						你目前[style.colourBad(有)]怀孕相关的状态效果，
 					#ELSE
-						 you [style.colourGood(don't have)] a pregnancy-related status effect active,
+						你[style.colourGood(没有)]怀孕相关的状态效果，
 					#ENDIF
 					#IF(pc.getDirtySlots().size()>0)
-						 you [style.colourBad(have)] dirty inventory slots,
+						你目前[style.colourBad(有)]脏污的物品栏位，
 					#ELSE
-						 you [style.colourGood(don't have)] dirty inventory slots,
+						你[style.colourGood(没有)]脏污的物品栏位，
 					#ENDIF
 					#IF(!game.isAnalContentEnabled() && !pc.hasVagina())
-						 you [style.colourGood(don't have)] a pussy,
+						你[style.colourGood(没有)]小穴，
 					#ENDIF
 					#IF(pc.getLegConfiguration()!=LEG_CONFIGURATION_BIPEDAL)
-						 and you [style.colourBad(don't have)] a bipedal lower body...
+						并且你[style.colourBad(没有)]双足行走的下半身……
 					#ELSE
-						 and you [style.colourGood(have)] a bipedal lower body...
+						并且你[style.colourGood(有)]双足行走的下半身……
 					#ENDIF
 				#ENDIF
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TAVERN_TAUR"><![CDATA[
 	<p>
-		Positioned on the street corner directly adjacent to the Farmer's Market, 'The Centaur's Sword' tavern occupies one of the largest two-story buildings within Elis. Prominently displayed beside each of its two remarkably-wide entrances, information boards declare this tavern to have a 'taur-friendly interior design' and a bar that's able to 'accommodate more than a dozen centaurs'.
-	</p>
+“半人马之剑”酒馆位于与农贸市场相邻的街角，它占据了伊利斯内最大的两层建筑之一。在酒馆两个极其宽敞的入口旁边，醒目的信息板宣称这家酒馆采用了“半人马友好型内部设计”，并且吧台能够“同时容纳超过十二位半人马顾客”。
+</p>
 	<p>
-		The tavern's sign hangs from a purpose-built post situated a few [style.lSizes] away from the building's corner, and displays an image of a naked, muscular centaur showing off his enormous erection. The words 'The Centaur's Sword' are written beneath this in flowing gold script, while an additional sign hanging beneath that reads '[style.colourMinorGood(Open 24/7)]'.
-	</p>
+酒馆的招牌悬挂在距离建筑转角几[style.lSizes]远的特制杆子上，上面绘有一幅裸体且肌肉发达的半人马正炫耀着他巨大的肉棒。招牌下方以流畅的金色字体书写着“半人马之剑”的字样，而在其下还悬挂着另一块标牌，上面写着“[style.colourMinorGood(全天候24小时营业)]”。
+</p>
 	<p>
 		#IF((game.getHourOfDay()>=15 && game.getHourOfDay()<=23))
-			The sounds of laughter and the distinctive stomping of hoofs on wooden floorboards can quite clearly be heard from where you're standing, letting you know that the tavern's occupants are having a good time. Looking through the leaded windows, you see that there are a large number of taurs at the bar, and you wonder whether to head inside and take a look around...
+			从你站立的地方，可以清楚地听到欢笑声和蹄子踏在木质地板上的独特声音，这让你知道酒馆里的客人们正在尽享欢乐时光。透过镶嵌玻璃的窗户望去，你能看到吧台旁聚集了大量的四足兽人，不禁思索是否应该走进去一探究竟……
 		#ELSE
-			The odd sound of laughter or the distinctive stomping of hoofs on wooden floorboards can occasionally be heard from where you're standing, letting you know that there are at least a few people inside the tavern. Looking through the leaded windows, you confirm this by seeing that there are several taurs at the bar, and you wonder whether to head inside and take a look around...
+			偶尔你会从现在站的位置听到一阵阵笑声或是蹄子踏在木质地板上的独特声响，这让你意识到至少有几个人在酒馆内。透过镶嵌玻璃的窗户确认这一点后，你发现吧台那里确实有几个四足兽人，不禁考虑是否要进去看看周围环境……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TAVERN_TAUR_ENTER"><![CDATA[
 	<p>
-		Deciding that you want to head inside the tavern, you approach the nearest of the two entrances and push open the door, before [pc.stepping] into 'The Centaur's Sword'...
-	</p>
-	]]>
-	</htmlContent>
+在决心进入酒馆后，你走向最近的两个入口之一，推开门，然后[pc.stepping]进了“半人马之剑”酒馆……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWER"><![CDATA[
 	<p>
-		Constructed out of the same large, stone blocks as the connecting walls, this square tower is three stories tall. A wide, spiral staircase links all three of its floors, as well as providing access to the flat wooden platform which serves as the roof. Unlike the town's walls, this tall vantage point is manned by a member of the town guard, who's able to look over the crenellated walls and survey the surrounding landscape for any sign of approaching bandits or raiders.
+		这座方塔由与连接墙壁相同的大型石块砌成，共有三层楼高。一条宽阔的螺旋形楼梯将三层楼都连接起来，还可以通往作为屋顶的木制平台。与城墙不同的是，这个高高的制高点由一名镇卫队成员把守，他可以越过墙垛来观察周围的地形，寻找任何靠近的强盗或突袭者的踪迹。
 	</p>
 	#IF(pc.getLocationPlaceType()==PLACE_TYPE_innoxia_fields_elis_town_tower_yui && flags.hasFlag(FLAG_innoxia_yui_dungeon_unlocked))
 		<p>
-			Access to this tower is completely unrestricted, and there seems to always be at least one member of the public who's decided to travel up to the top in order to enjoy the view or keep the guard company.
+			这座塔完全开放参观，似乎总会有至少一位游客登顶，或为欣赏风景，或为与守卫作伴。
 		</p>
 		<p>
 			#IF(flags.hasFlag(FLAG_innoxia_yui_dungeon_unavailable_today))
-				Although you know that that this is where Yui has her secret bondage basement, you've already refused her offer this evening, so she won't show up again until
+				虽然你知道这里是唯的秘密束缚地下室，但你今晚已经拒绝了她的邀约，所以她直到
 				#IF(game.getDayOfWeek()==DOW_MONDAY)
-					 Wednesday...
+					周三才会再次出现……
 				#ELSE
-					 Monday...
+					下周一才会再次出现……
 				#ENDIF
 			#ELSE
 				#IF(flags.hasFlag(FLAG_innoxia_yui_dungeon_refused) || flags.hasFlag(FLAG_innoxia_yui_dungeon_completed_stage_1))
-					Knowing that this is where Yui has her secret bondage basement, you can expect to find her here
+					你已经知道了这里就是唯的秘密束缚地下室，可以试着在
 				#ELSE
-					This is the tower which Yui told you about, and she said to expect to find her here
-				#ENDIF
-				#IF(game.isHourBetween(20, 23))
-					 between [style.colourMinorGood([units.time(20)]-[units.time(23)])] every
-				#ELSE
-					 between [style.colourMinorBad([units.time(20)]-[units.time(23)])] every
+					这里就是唯跟你提到过的塔楼，她说你可以在
 				#ENDIF
 				#IF(game.getDayOfWeek()==DOW_MONDAY)
-					 [style.colourMinorGood(Monday)] and Wednesday.
+					每[style.colourMinorGood(周一)]和周三
 				#ELSEIF(game.getDayOfWeek()==DOW_WEDNESDAY)
-					 Monday and [style.colourMinorGood(Wednesday)].
+					每周一和[style.colourMinorGood(周三)]
 				#ELSE
-					 [style.colourMinorBad(Monday and Wednesday)].
+					[style.colourMinorBad(每周一和周三)]
+				#ENDIF				
+				#IF(game.isHourBetween(20, 23))
+					的[style.colourMinorGood([units.time(20)]-[units.time(23)])]时间段在这里找到她。
+				#ELSE
+					的[style.colourMinorBad([units.time(20)]-[units.time(23)])]时间段在这里找到她。
 				#ENDIF
 				#IF(game.isHourBetween(20, 23) && (game.getDayOfWeek()==DOW_MONDAY || game.getDayOfWeek()==DOW_WEDNESDAY))
-					 As such, you could remain here and wait for her to appear and make contact with you in order to 
+					因此，你可以留在这里等待她出现并与你见面，以便
 				#ELSE
-					 As such, you're not going to be able to meet with her at the moment, but if you were to return here at the appropriate time, you could 
+					因此，你现在无法与她见面，但如果你在合适的时间回来，你就能
 				#ENDIF
 				#IF(flags.hasFlag(FLAG_innoxia_yui_dungeon_refused) || flags.hasFlag(FLAG_innoxia_yui_dungeon_completed_stage_1))
-					 accept her offer again...
+					再次接受她的邀约……
 				#ELSE
-					 find out what her offer is...
+					了解她的邀约是什么……
 				#ENDIF
 			#ENDIF
 		</p>
 		#IF(!flags.hasFlag(FLAG_innoxia_yui_dungeon_unavailable_today) && (!pc.hasFetish(FETISH_MASOCHIST) || pc.isAnyEquippedClothingSealed() || pc.isHasAnyPregnancyEffects() || pc.getDirtySlots().size()>0))
 			<p>
 				#IF(!pc.hasFetish(FETISH_MASOCHIST))
-					As you think about Yui's sadistic nature, you realise that whatever offer she's going to make is sure to involve putting you in a situation where you'll be abused. As [style.italicsBad(you're not a masochist)], you've got a bad feeling about this and [style.italicsBad(decide not to meet with Yui)]...
+					你想到唯的施虐本性，意识到无论她提出什么提议，都必定会让你处于一个受虐待的境地。由于[style.italicsBad(你并非受虐狂)]，所以你对此感到不安，并[style.italicsBad(决定不与唯会面)]……
 				#ELSE
-					Remembering Yui's conditions for your meeting, you realise that she's not going to show up.
+					你回想起唯与你会面的条件，意识到她此时不会现身。
 					#IF(pc.isAnyEquippedClothingSealed())
-						 You [style.colourBad(have)] sealed clothing equipped,
+						你目前[style.colourBad(穿着)]被封印的衣物，
 					#ELSE
-						 You [style.colourGood(don't have)] sealed clothing equipped,
+						你[style.colourGood(没有穿着)]被封印的衣物，
 					#ENDIF
 					#IF(pc.isHasAnyPregnancyEffects())
-						 you [style.colourBad(have)] a pregnancy-related status effect active,
+						你目前[style.colourBad(有)]怀孕相关的状态效果，
 					#ELSE
-						 you [style.colourGood(don't have)] a pregnancy-related status effect active,
+						你[style.colourGood(没有)]怀孕相关的状态效果，
 					#ENDIF
 					#IF(pc.getDirtySlots().size()>0)
-						 and you [style.colourBad(have)] dirty inventory slots...
+						并且你目前[style.colourBad(有)]脏污的物品栏位……
 					#ELSE
-						 and you [style.colourGood(don't have)] dirty inventory slots...
+						并且你[style.colourGood(没有)]脏污的物品栏位……
 					#ENDIF
 				#ENDIF
 			</p>
 		#ENDIF
 	#ELSE
 		<p>
-			Access to this tower is completely unrestricted, and there seems to always be at least one member of the public who's decided to travel up to the top in order to enjoy the view or keep the guard company. With little to keep you here, you quickly find yourself leaving the tower behind as you continue on your way...
+			这座塔完全开放参观，似乎总会有至少一位游客登顶，或为欣赏风景，或为与守卫作伴。此处没什么可在意的，你很快便继续前行，将塔留在身后……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWER_FLY_TO_FIELDS"><![CDATA[
 	<p>
-		Deciding that you want to head down into the fields which surround Elis, you [pc.step] out onto the wall beside the tower, and after taking a short run-up, launch yourself into the air and gracefully fly down to the grass below. Smoothly landing on a flat, clear patch of land, you look around and wonder where to go from here...
+		决定前往环绕艾利斯的田野，你[pc.step]到塔旁的城墙边缘。在短暂蓄力后，你腾跃而起，如飞鸟般翩然降落在下方的草地上。稳稳站定在一片平坦无垠的绿地上，你眺望四周，心中思考着下一步该往哪去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWN_HALL"><![CDATA[
 	<p>
-		Consisting of two long, timber-framed buildings joined in the middle by a five-story, steepled tower, the town hall is by far the largest structure in all of Elis. Serving as the centre of administration not only for the town itself but also a significant portion of the Foloi Fields, the town hall has very long opening hours, which are listed beside each of its many entrances as being
+		市政厅由两座长长的木结构建筑组成，中间由一座五层高的尖塔连接，是伊利斯迄今为止最大的建筑。市政厅不仅是城镇本身的行政中心，也是弗洛伊田野相当一部分地区的行政中心。市政厅的开放时间很长，在它的许多入口处都列有开放时间： 
 		#IF((game.getHourOfDay()<7 || game.getHourOfDay()>21))
-			 [style.colourMinorBad([units.time(7)]-[units.time(21)])].
+			[style.colourMinorBad([units.time(7)]-[units.time(21)])].
 		#ELSE
-			 [style.colourMinorGood([units.time(7)]-[units.time(21)])].
+			[style.colourMinorGood([units.time(7)]-[units.time(21)])].
 		#ENDIF
 	</p>
 	<p>
 		#IF((game.getHourOfDay()<7 || game.getHourOfDay()>21))
 			#IF(flags.hasFlag(FLAG_innoxia_elis_minotallys_introduced))
-				Due to the fact that it's currently closed to members of the public, all but one of the doors are firmly shut and locked, and only a couple of lights can be seen to still be on in some of the rooms on the upper floors. As you're in possession of an [style.colourGood(access pass)], however, these closing times don't affect you, and you could easily get past the Enforcer stationed beside the main entrance and enter the town hall if you so wished...
+				由于目前不对公众开放，除了一扇门之外的其他所有的门都紧紧关闭并上了锁，只有楼上的一些房间还亮着几盏灯。不过，由于你持有[style.colorGood(通行证)]，这些关闭时间对你并无影响，只要你愿意，你可以轻松通过正门旁边执法者的检查，进入市政厅……
 			#ELSE
-				Due to the fact that it's currently [style.colourBad(closed)] to members of the public, all but one of the doors are firmly shut and locked, and only a couple of lights can be seen to still be on in some of the rooms on the upper floors. An Enforcer is guarding the only door that's been left open, preventing you from entering the town hall at this time. If you wanted to go inside, you'll have to come back during opening hours...
+				由于目前不对公众开放，除了一扇门之外的其他所有的门都紧紧关闭并上了锁，只有楼上的一些房间还亮着几盏灯。一名执法者守在唯一一扇敞开的门前，阻止你进入市政厅。如果你想进去，只能在营业时间再来了……
 			#ENDIF
 		#ELSE
-			Due to the fact that it's currently [style.colourGood(open)] to members of the public, you can witness the odd person heading in or out of the building. If you wanted to, you could follow their example and make use of one of the door signposted as the public entrance to head inside...
+			由于这里目前对公众开放，你可以看到一些人正在进出大楼。如果你愿意的话，你可以学着他们的样子，利用其中一扇标有公共入口的门进去……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="TOWN_HALL_ENTER"><![CDATA[
 	<p>
 		#IF(game.getHourOfDay()>=7 && game.getHourOfDay()<21)
-			Heading over to the door marked as the public entrance, you push it open and [pc.step] into Elis's town hall...
+			走到标有公众入口的门前推开门，[pc.step]进伊利斯市政厅……
 		#ELSE
-			Heading over to the door marked as the public entrance, you show the Enforcer on duty your pass, before [pc.stepping] past them and entering Elis's town hall...
+			你走到标有公众入口的门前，随后在向值班的执法者出示你的通行证后，你直接[pc.step]进了伊利斯市政厅……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALL"><![CDATA[
 	<p>
-		While they seem to be very strong and sturdy from the outside, the walls of Elis are not particularly impressive from up close. Although the stone blocks from which these walls are constructed are very large, there's only a single layer of them, with the stairs, ramparts, and supporting scaffolding being made out of thick beams of wood. Standing at a little over two-stories tall, they're large enough to stop any force short of a well-prepared army, and so even despite their relative weakness, these walls are able to completely protect the residents of Elis from bandits and Lunette's raiders.
+		虽然从外观上看伊利斯的城墙非常坚固，但从近处看却并不令人印象深刻。毕竟建造城墙的石块虽然非常大，但只有一层，同时楼梯、城墙和支撑脚手架都是用粗大的木梁做成的。这些城墙有两层多一点高，足以阻挡任何一支准备充分的军队，因此，尽管相对薄弱，这些城墙仍能完全保护伊利斯居民不受强盗和露内特袭击者的伤害。
 	</p>
 	<p>
-		Due to there being no imminent threat of attack, there are no guards or Enforcers manning the parapets, and with no signs prohibiting access to members of the public, you're able to freely head up and travel along the wide, wooden walkway. Although there's a road running parallel to the wall, it seems a lot more interesting to travel along this elevated platform, which seems to be the opinion of several other residents of Elis, who have similarly decided to take the high road.
+		因为不存在即将发生袭击的危险，护栏上既没有守卫或执法者，也没有禁止公众进入的标志，所以你可以在宽敞的木制走道上随意行走。虽然有一条路与城墙平行，但沿着这个高架平台行走似乎更有趣。英雄所见略同，有几个伊利斯居民同样决定走高架路。
 	</p>
 	<p>
-		Looking over the stone crenellations, 
+		通过墙垛眺望，
 		#IF(game.isDayTime())
-			 you're able to get a fine view of the surrounding fields and woodland.
+			你就能将周围的田野和林地尽收眼底。
 		#ELSE
-			 you're able to get a view of the surrounding fields and woodland as they appear during the night.
+			你可以看到周围田野和林地的夜景。
 		#ENDIF
 		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-			 Everything apart from the lake and roads are covered in a thick blanket of snow,
+			除了湖泊和道路，其他地方都被厚厚的积雪覆盖，
 			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				 and as the fluffy white flakes continue to fall, you take a moment to look over the winter scene before continuing on your way...
+				蓬松的白色雪花不断飘落，你花点时间欣赏了一下冬日的景色，之后继续前行……
 			#ELSE
-				 and you take a moment to look over the winter scene before continuing on your way...
+				你花点时间欣赏了一下冬日的景色，之后继续前行……
 			#ENDIF
 		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-			 Despite the fact that it's currently raining, the vista is pleasant enough to draw you in for a few moments, and you pause to appreciate the view before continuing on your way...
+			尽管目前正在下雨，但这里的美景足以吸引你驻足片刻，你停下来欣赏美景，之后继续前行……
 		#ELSEIF(game.getCurrentWeather()==WEATHER_CLEAR)
-			 The vista is pleasant enough to draw you in for a few moments, and you pause to appreciate the view before continuing on your way...
+			美景足以吸引你驻足片刻，你停下来欣赏美景，之后继续前行……
 		#ELSE
-			 Despite the fact that the overcast skies are casting a deep shade over the surrounding landscape, the vista is pleasant enough to draw you in for a few moments, and you pause to appreciate the view before continuing on your way...
+			尽管天空阴沉沉的，给周围的景色蒙上了一层阴影，但远处的景色仍足以吸引你驻足片刻，你停下来欣赏美景，之后继续前行……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALL_FLY_TO_FIELDS"><![CDATA[
 	<p>
-		Deciding that you want to head down into the fields which surround Elis, you take a short run-up and launch yourself into the air, before gracefully flying down to the grass below. Smoothly landing on a flat, clear patch of land, you look around and wonder where to go from here...
+		你决定下到伊利斯周围的田野里去，于是在空中飞了一小段，然后优雅地飞到下面的草地上。稳稳站定在一片平坦无垠的绿地上，你眺望四周，心中思考着下一步该往哪去……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WOOD_HUT"><![CDATA[
 	<p>
-		Looking over to the edge of the nearby woodland, you see what must be the only residential structure to be found outside of the walls of Elis. Taking the form of a single-story log cabin, this modest dwelling looks to be occupied, as a lazy stream of thin white smoke rises from its single metal chimney.
+		你向附近的林地边缘望去，看到伊利斯城墙外唯一的一座住宅建筑。这是一座单层木屋，金属烟囱正悠悠冒出一股稀薄白烟，看来有人居住。
 	</p>
 	<p>
-		A short distance away from this cabin sits a very large, open-sided storage shed, which you can see is mostly filled with chopped logs. The only remaining space inside this shed is taken up by a section of tree trunk, which looks to be used as a chopping block due to the fact that a large wood-cutting axe has been sunk into it at a low angle. A sign nailed to the wall of this shed reads: 'Firewood for sale. Deliveries available. Please knock.'
+		小屋不远处有一个非常大的开放式储藏室，可以看到里面快被木块堆满了。棚子里仅剩的空间被一段树干占据，上面斜插着一把砍木巨斧，看起来这是个砧板。棚子的墙上钉着一块牌子，上面写着：“木柴出售，可送货上门。请敲门。”
 	</p>
 	<p>
-		Although you don't have much of a need for firewood, there's nothing stopping you from knocking on the log cabin's door and introducing yourself...
+		虽然你不怎么需要木柴，但敲开木屋的门，介绍自己又何妨……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WOODS"><![CDATA[
 	<p>
-		The patches of woodland surrounding Elis are composed primarily of deciduous trees, although there are a few coniferous species scattered about here and there.
+		伊利斯周围的大片林地主要是落叶乔木，但也零星散布着一些针叶树种。
 		#IF(game.isDayTime())
 			#IF(game.getSeason()==SEASON_SPRING)
-				 Thanks to the safety offered by the close proximity of Elis, you can take the time to truly appreciate the woodland's spring-time beauty. Small, leafy shoots are mixed in amongst the many trees' blossoms, and in the light of day, these woods have an almost enchanted feel to it. The tweeting of birds and gentle rustle of the wind in the branches is soothing to your [pc.ears], and you can't help but smile as you find yourself being put at ease by nature's calm ambience.
+				由于伊利斯近在咫尺，附近足够安全，你有闲情雅致欣赏这片林地的春日美景。刚冒尖的小嫩芽夹杂在花丛中，在日光的照耀下，美得令人陶醉。风轻日暖，燕语莺啼，树叶的沙沙声令人心旷神怡，你也被大自然的宁静氛围所感染，不禁莞尔一笑。
 			#ELSEIF(game.getSeason()==SEASON_SUMMER)
-				 Thanks to the safety offered by the close proximity of Elis, you can take the time to truly appreciate the woodland's summer-time beauty. Large, semi-translucent leaves cast the light of day into a mottled green covering overhead, giving these woods an almost enchanted feel to it. The tweeting of birds and the soft whisper of wind in the branches is soothing to your [pc.ears], and you can't help but smile as you find yourself being put at ease by nature's calm ambience.
+				由于伊利斯近在咫尺，附近足够安全，你有闲情雅致欣赏这片林地的夏日美景。树叶在日光的照射下更显青翠欲滴，为这片树林增添了几分迷人的气息。莺歌燕语，暖风吹拂，树叶的沙沙声令人心旷神怡，你也被大自然的宁静氛围所感染，不禁莞尔一笑。
 			#ELSEIF(game.getSeason()==SEASON_AUTUMN)
-				 Thanks to the safety offered by the close proximity of Elis, you can take the time to truly appreciate the woodland's autumnal beauty. The canopy's countless leaves are casting the light of day into a mottled orange, brown, and red, and with the faint smell of mulch, as well as the slight chill in the air, you can definitely feel that winter is not too far away. The tweeting of birds and the gentle rustle of wind in the branches is soothing to your [pc.ears], and you can't help but smile as you find yourself being put at ease by nature's calm ambience.
+				由于伊利斯近在咫尺，附近足够安全，你有闲情雅致欣赏这片林地的秋日美景。树冠上繁茂的树叶在日光照耀下交织着斑驳的橙色、棕色和红色，空气中弥漫着泥土的芬芳，伴随着一丝丝的凉意，你感受到冬日的脚步已经悄然临近。莺歌燕语，凉风吹拂，树叶的沙沙声令人心旷神怡，你也被大自然的宁静氛围所感染，不禁莞尔一笑。
 			#ELSE
-				 Despite the safety offered by the close proximity of Elis, you can't help but feel a little uneasy as you travel through the dreary and lifeless wintertime woodland. With the trees having shed all of their leaves, the cool light of day shines down unobstructed onto the
+				尽管伊利斯近在咫尺，附近足够安全，但穿行在沉闷而毫无生气的冬季林地中时，你还是不禁感到有些不安。草木零落，清冷的日光毫无遮挡地照耀在
 				#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-					 snow-covered
+					覆雪的
 				#ELSE
-					 muddy brown
+					泥褐色
 				#ENDIF
-				 floor of the forest, offering almost no warmth to take the chill out of the air. The occasional tweet of a non-migratory bird, or the sudden, rustling gust of wind in the barren branches keeps you on edge, and you find yourself ruing the inconsistency of nature's winter ambience.
+				的林地上，几乎没有任何温暖可以消除空气中的寒意。偶尔传来不迁徙的鸟儿的鸣叫声，抑或是突如其来的风穿过光秃的枝桠所发出的沙沙声，都令你心神不宁，你发现自己开始怀念自然在冬季氛围中的那份恒定与宁静，对这个季节的变化无常感到一丝遗憾。
 			#ENDIF
 		#ELSE
 			#IF(game.getSeason()!=SEASON_WINTER)
-				 Although pleasant enough during daylight hours, the woodland feels particularly ominous at night. The ground beneath your [pc.feet] has transformed into a mat of inky blackness, and with oddly-shaped shadows lurking behind every tree, it's hard to convince yourself that the proximity of Elis makes these woods safe to travel through. An odd owl's hoot or distant wolf's howl leaves you wondering if a wild animal is close by, and every time there's a gentle rustle of wind in the branches, you have to stop and listen to make sure that nothing's sneaking up on you.
+				尽管白日里的林地充满了宁静与舒适，但一旦夜幕降临，这片林地便被一层神秘的阴影笼罩，给人一种不安的预感。你的[pc.feet]下被黑暗吞噬，树影都好似鬼魅，很难让人相信伊利斯的存在会让这片树林变得安全。鸮的诡异啼鸣和远处狼群的长嚎不时划破夜空，总是让你怀疑是否有野生动物就在附近，每当树枝上传来沙沙的风声，你你都会本能地停下脚步侧耳倾听，以确保没有什么东西在偷偷靠近你。
 			#ELSE
-				 Although dreary and depressing enough in daylight hours at this time of year, the winter woodland feels particularly ominous at night. The ground beneath your [pc.feet] has transformed into a twisted mass of shadows, and with the inky-blackness behind each tree offering places from which to spring an ambush, it's hard to convince yourself that the proximity of Elis makes these woods safe to travel through. An odd owl's hoot or distant wolf's howl leaves you wondering if a wild animal is close by, and every time there's a sudden, rustling gust of wind in the branches, you have to stop and listen to make sure that nothing's sneaking up on you.
+				每年的这个时候，白天就足够沉闷和压抑，冬季的林地在夜晚更是不祥。你[pc.feet]下的土地变成了一团扭曲的阴影，每棵树后都是墨黑一片，让人有伏击的可能，很难让人相信伊利斯的存在会让这片树林变得安全。鸮的诡异啼鸣和远处狼群的长嚎不时划破夜空，总是让你怀疑是否有野生动物就在附近，每当树枝上传来沙沙的风声，你你都会本能地停下脚步侧耳倾听，以确保没有什么东西在偷偷靠近你。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter) && game.getSeason()==SEASON_WINTER)
-			Thanks to the snow which
+		#IF(game.getDialogueFlags().hasFlag(FLAG_hasSnowedThisWinter)&&game.getSeason()==SEASON_WINTER)
+			这场雪
 			#IF(game.getCurrentWeather()==WEATHER_SNOW)
-				 has not only covered the land, but which is also currently falling in big flurries,
+				覆盖了大地，目前还在纷纷扬扬地下着，
 			#ELSE
-				 has covered the land,
+				覆盖了大地，
 			#ENDIF
-			 the forest floor is transformed into a clean, white blanket, which crunches loudly
+			森林地面仿佛铺上了洁白的地毯，走在上面，
 			#IF(pc.hasLegs())
-				 underfoot.
+				你的脚下发出嘎吱嘎吱的响声。
 			#ELSE
-				 beneath your [pc.feet].
+				你的[pc.feet]下发出嘎吱嘎吱的响声。
 			#ENDIF
 		#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
 			#IF(game.getSeason()!=SEASON_WINTER)
-				The drops of rain falling on the canopy up above adds another layer of sound to the forest, and every now and again a leaf bends down to deposit a particularly large drop of accumulated water onto either the ground or your head.
+				雨滴落在上面的树冠上，为森林增添了另一层声响，时不时有一片树叶弯下腰，将一滴特别大的雨水滴在地上或你的头上。
 			#ELSE
-				Thanks to the fact that the trees bear no leaves at this time of year, the rain freely falls through the forest's canopy, quickly saturating the ground beneath your [pc.feet] and adding another obstacle in the form of patches of thick, squelching mud.
+				由于树木在这个季节不长叶子，雨水可以自由地穿过森林的树冠，很快就让你[pc.feet]下的地面达到饱和，厚厚的泥泞变成了你前行的另一个障碍。
 			#ENDIF
 		#ELSEIF(game.getCurrentWeather()==WEATHER_CLEAR)
-			With the clear skies above promising no chance of precipitation, you continue on your way through the woods...
+			晴空万里，没有降水的可能，你继续穿过树林……
 		#ELSE
-			With the cloudy skies above threatening to burst at any moment, you continue on your way through the woods...
+			多云的天气好像随时都会爆发一样，你继续穿过树林……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

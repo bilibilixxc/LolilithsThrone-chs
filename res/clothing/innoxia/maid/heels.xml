@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>800</value>
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[maid's high heel]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[maid's high heels]]></namePlural>
-		<description><![CDATA[A pair of stylised, maid-themed high heels. They're made of coloured leather and sport a small amount of decorative lace.]]></description>
+		<determiner><![CDATA[一双]]></determiner>
+		<name><![CDATA[女仆高跟鞋]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[女仆高跟鞋]]></namePlural>
+		<description><![CDATA[一双造型独特的女仆风格高跟鞋，它们由彩色皮革和蕾丝装饰组成。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>FOOT</slot> 
@@ -49,27 +49,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-		<![CDATA[[npc.Name] [npc.verb(slip)] [npc.her] [npc.feet] into the heels and [npc.verb(buckle)] up the straps.]]>
-    </self>
-    <other>
-		<![CDATA[[npc.Name] [npc.verb(slip)] [npc2.namePos] [npc2.feet] into the heels and [npc.verb(buckle)] up the straps.]]>
-    </other>
-    <otherRough>
-		<![CDATA[[npc.Name] roughly [npc.verb(push)] [npc2.namePos] [npc2.feet] into the heels and impatiently [npc.verb(buckle)] up the straps.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的[npc.feet]穿入高跟鞋中，并系好带子。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将高跟鞋穿到[npc2.namePos]的[npc2.feet]上，然后扣上了带子。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]将[npc2.namePos]脚粗暴地推进了高跟鞋，然后不耐烦地扣上了鞋带。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-		<![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] heels and [npc.verb(slip)] them off.]]>
-    </self>
-    <other>
-		<![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] heels and [npc.verb(slip)] them off.]]>
-    </other>
-    <otherRough>
-		<![CDATA[[npc.Name] roughly [npc.verb(unbuckle)] [npc2.namePos] heels and [npc.verb(slip)] them off.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]解开了[npc.her]的高跟鞋并将它们脱了下来。
+]]></self>
+    <other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的高跟鞋并将它们脱了下来。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的高跟鞋解开并脱下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

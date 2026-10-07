@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>MAIN_HAIR</category>
 	
-	<determiner><![CDATA[a layer of]]></determiner>
+	<determiner><![CDATA[一层]]></determiner>
 	
-	<name><![CDATA[hair]]></name>
+	<name><![CDATA[头发]]></name>
 	
-	<namePlural pluralByDefault="false"><![CDATA[hair]]></namePlural> 
+	<namePlural pluralByDefault="false"><![CDATA[头发]]></namePlural> 
 	
 	<naturalCoveringModifiers>
 		<modifier>SHORT</modifier>

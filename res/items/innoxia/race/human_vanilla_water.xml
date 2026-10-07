@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>10</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Vanilla Water]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Vanilla Waters]]></namePlural>
-		<description><![CDATA[A plastic bottle filled with what appears to be nothing but water. While there's no label on the bottle, there is a slight indentation on its surface, and, holding it up to the light to get a better look, you see that the impression spells the words 'Vanilla Water'.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[香草水]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[香草水]]></namePlural>
+		<description><![CDATA[一个塑料瓶，里面装的似乎只是水。虽然瓶子上没有标签，但瓶子表面有一个轻微的凹痕，把瓶子对着光看清楚，你会发现凹痕上写着“香草水”几个字。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,15 +28,15 @@
 		<enchantmentEffectId>ATTRIBUTE_ARCANE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldMana([#ATTRIBUTE_MANA_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_ARCANE.getFormattedValue(1)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementMana(npc.getAttributeValue(ATTRIBUTE_MANA_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A cool wave of arcane energy washes over [npc.name]...
+				一股清爽的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_ARCANE, 1)]
 		]]></applyEffects>
@@ -51,10 +51,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		After first unscrewing the cap, [npc.name] [npc.verb(bring)] the plastic bottle of Vanilla Water up to [npc.her] [npc.mouth]. A faint sweet smell informs [npc.herHim] that this isn't any ordinary water, and as [npc.she] [npc.verb(tilt)] [npc.her] head back and [npc.verb(start)] drinking the cool liquid, the taste of vanilla overwhelms [npc.her] senses.
+		拧开瓶盖后，[npc.name]将香草水的塑料瓶送到[npc.her]的嘴边。一股淡淡的甜香味告诉[npc.herHim]，这不是普通的水，当[npc.she]仰起头，开始喝这冰凉的液体时，香草的味道淹没了[npc.her]的感官。(译注：Vanilla Water的Vanilla有香草味的意思，也有寻常、纯粹、原味的意思。)
 		]]></selfUse>
 		<otherUse><![CDATA[
-		After first unscrewing the cap, [npc.name] [npc.verb(bring)] the plastic bottle of Vanilla Water up to [npc2.namePos] waiting [npc2.lips]. A faint sweet smell informs [npc2.herHim] that this isn't any ordinary water, and as [npc2.she] [npc2.verb(tilt)] [npc2.her] head back and [npc2.verb(start)] drinking the cool liquid, the taste of vanilla overwhelms [npc2.her] senses.
+		首先拧开瓶盖后，[npc.name]将香草水的塑料瓶送到[npc2.namePos]等待[npc2.lips]前。一股淡淡的甜香味告诉[npc2.herHim]，这不是普通的水，[npc2.she]仰起头，开始喝这冰凉的液体，香草的味道淹没了[npc2.her]的感官。(译注：Vanilla Water的Vanilla有香草味的意思，也有寻常、纯粹、原味的意思。)
 		]]></otherUse>
 	</useDescriptions>
 

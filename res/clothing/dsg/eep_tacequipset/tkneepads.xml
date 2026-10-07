@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[Faintly raised lettering on each pad reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[每块垫板上都有微微凸起的字母，写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>350</value> 
 
-		<determiner><![CDATA[a pair of]]></determiner>
+		<determiner><![CDATA[一副]]></determiner>
 
-		<name><![CDATA[Enforcer's tactical kneepads]]></name>
+		<name><![CDATA[执法者战术护膝]]></name>
 
-		<namePlural pluralByDefault="true"><![CDATA[Enforcer's tactical kneepads]]></namePlural> 
+		<namePlural pluralByDefault="true"><![CDATA[执法者战术护膝]]></namePlural> 
 
-		<description><![CDATA[A set of hard plastic plates that protect the wearer's knees.]]></description> 
+		<description><![CDATA[一组金属板，用于保护穿戴者的膝盖。]]></description> 
 
 		<physicalResistance>3</physicalResistance> 
 
@@ -68,27 +67,17 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the tactical kneepads over [npc.her] knees and [npc.verb(tighten)] the straps.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slip)] the tactical kneepads over [npc2.namePos] knees and [npc.verb(tighten)] the straps.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] legs through the tactical kneepads and hastily [npc.verb(tighten)] the straps.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]把战术护膝套在[npc.her]的膝盖上，拉紧了绑带。]]></self>
+		<other><![CDATA[[npc.Name]将战术护膝滑到[npc2.namePos]的膝盖上，拉紧了绑带。]]></other>
+		<otherRough><![CDATA[[npc.Name]将[npc2.namePos]的腿穿过战术护膝，匆忙地拉紧了绑带。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] tactical kneepads and [npc.verb(slip)] them off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] tactical kneepads and [npc.verb(slip)] them off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] tactical kneepads until they're loose enough and [npc.verb(toss)] them aside.]]>
-		</otherRough>
+		<self><![CDATA[[npc.Name]松开了[npc.her]战术护膝的绑带，把它们滑下来。]]></self>
+		<other><![CDATA[[npc.Name]松开了[npc2.namePos]战术护膝的绑带，然后将它们滑下来。]]></other>
+		<otherRough><![CDATA[[npc.Name]撕扯着[npc2.namePos]战术护膝的绑带，直到它们松脱，然后将护膝一把扯下并扔到一边。]]></otherRough>
 	</displacementText>
 	
 </clothing>

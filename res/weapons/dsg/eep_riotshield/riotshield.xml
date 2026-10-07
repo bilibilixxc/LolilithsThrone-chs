@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA[On the back of the shield, slightly raised lettering reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[在盾牌的背面，有几个微微凸起的字：“执法者官方分配，由DSG锻造厂生产。”]]></authorTag>
 		
 		<value>2000</value> 
 		
@@ -9,23 +9,23 @@
 		
 		<twoHanded>false</twoHanded>
 		
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一面]]></determiner>
 		
-		<name><![CDATA[Enforcer's riot shield]]></name>
+		<name><![CDATA[执法者防暴盾]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's riot shields]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者防暴盾]]></namePlural> 
 		
-		<description><![CDATA[A medium-sized shield made of transparent polycarbonate, it covers an average-sized bearer from the top of their head to their knees. It is enchanted to protect against weapons typically used by rioters as well as offer limited offensive capabilities.]]></description> 
+		<description><![CDATA[一面由透明聚碳酸酯制成的中等大小盾牌，可覆盖一般体型持盾者从头顶到膝盖的部分。它的附魔让持有者可以抵挡暴乱者通常使用的武器，并提供有限的攻击能力。]]></description> 
 		
-		<attackDescriptor>bash</attackDescriptor>
+		<attackDescriptor><![CDATA[撞击]]></attackDescriptor>
 		
-		<attackTooltipDescription>Bash your shield against [npc2.name].</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[你用盾牌撞向[npc2.name]。]]></attackTooltipDescription>
 		
 		<rarity>UNCOMMON</rarity> 
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(bring)] out the shield and [npc.verb(strap)] it to [npc.her] arm.]]></equipText>
+		<equipText><![CDATA[[npc.Name]拿出盾牌，绑在[npc.arm]上。]]></equipText>
 		
-		<unequipText><![CDATA[[npc.Name] [npc.verb(unstrap)] the shield from [npc.her] arm before putting it away.]]></unequipText>
+		<unequipText><![CDATA[[npc.Name]从[npc.arm]上把盾牌解下来，放了起来。]]></unequipText>
 		
 		<imageName>riotshield.svg</imageName> 
 		
@@ -51,14 +51,14 @@
 		</effects>
 		
 		<extraEffects>
-			<effect><![CDATA[[style.boldPhysical("Dazed")] on critical hit.]]></effect>
+			<effect><![CDATA[暴击附带[style.boldPhysical(“击晕”)]效果。]]></effect>
 		</extraEffects>
 		
 		<onHitEffect/>
 		
 		<onCriticalHitEffect><![CDATA[
 		#IF !npc2.hasStatusEffect(SE_DAZED)
-		#THEN [##npc2.addStatusEffect(SE_DAZED, 4)] [npc.Name] managed to body [npc2.name] to the ground! [npc2.She] [style.boldPhysical([npc2.verb(feel)] unsteady)] as [npc2.she] gets up. 
+		#THEN [##npc2.addStatusEffect(SE_DAZED, 4)][npc.Name]成功把[npc2.name]撞倒在地！[npc2.She]起身之后依然[style.boldPhysical(摇摇晃晃)]。
 		#ENDIF
 		]]></onCriticalHitEffect>
 		
@@ -75,16 +75,16 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Charging forward with [npc.her] riot shield, [npc.name] [npc.verb(manage)] to hit [npc2.name] dead on. The enchanted polycarbonate bounces off [npc2.her] aura and knocks [npc2.herHim] back, draining [npc.her] energy!
+		[npc.Name]带着防暴盾冲上前去，精准地命中了[npc2.name]。附魔的聚碳酸酯挡开了[npc2.her]的灵气，将其撞开，令其流失了一些能量！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Charging forward with [npc.her] riot shield, [npc.name] [npc.verb(attempt)] to hit [npc2.name] dead on but stumbles and misses completely!
+		[npc.Name]带着防暴盾冲上前去，企图正中[npc2.name]，但最后一个踉跄，完全打歪了！
 		]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(swings)] [npc.her] riot shield out at [npc2.name] but misses!
+		[npc.Name]快步上前，用防暴盾砸向[npc2.name]却没能命中！
 		]]></missText>
 	</missDescriptions>
 	

@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
 	
 	<name><![CDATA[
 		#IF(eisek.isPlayerKnowsName() && !pc.isQuestCompleted(QUEST_LINE_SIDE_EISEK_STALL))
-			Eisek's Produce Stall
+			艾瑟克的农产品摊
 		#ELSEIF(pc.isQuestCompleted(QUEST_LINE_SIDE_EISEK_STALL))
-			Eisek's Alpine Produce
+			艾瑟克高山农产品
 		#ELSE
-			Produce Stall
+			农产品摊
 		#ENDIF
 	]]></name>
 
-	<tooltipDescription><![CDATA[[eisek.A_race] runs this produce stall.]]></tooltipDescription>
+	<tooltipDescription><![CDATA[[eisek.A_race]经营着这个农产品摊位。]]></tooltipDescription>
 	
-	<virginityLossDescription><![CDATA[in the Farmer's Market in Elis]]></virginityLossDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的农贸市场]]></virginityLossDescription>
 	
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	

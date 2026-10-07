@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>FIELDS</worldRegion>
-	<name><![CDATA[Amazons' Camp]]></name>
+	<name><![CDATA[亚马逊人营地]]></name>
 	<colour>BASE_TEAL</colour>
 	<sexBlockedReason/>
 	<furniturePresent>true</furniturePresent>

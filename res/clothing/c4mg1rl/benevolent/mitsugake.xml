@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>	
 	<coreAttributes>
 		<value>6000</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[mitsugake]]></name> 
-		<namePlural pluralByDefault="false"><![CDATA[mitsugake]]></namePlural>
-		<description><![CDATA[A glove ordinarily meant to assist beginners to youko archery. This one, however, has been enchanted to summon stronger arcane arrows]]></description>
+		<determiner><![CDATA[一只]]></determiner>
+		<name><![CDATA[三指手套]]></name> 
+		<namePlural pluralByDefault="false"><![CDATA[三指手套]]></namePlural>
+		<description><![CDATA[一只妖狐弓道初学者用的辅助手套——不过这一只附有可以召唤强力奥术弓箭的魔法。]]></description>
 		<physicalResistance>1</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -47,26 +46,26 @@
 		</itemTags>
 	</coreAttributes>
 	<replacementText slot="HAND" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the mitsugake on to cover [npc.her] [npc.hand] before wrapping and securing the wrist strap.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the mitsugake onto [npc2.namePos] [npc2.hand] before wrapping and securing the wrist strap.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the mitsugake onto [npc2.namePos] [npc2.hand] before wrapping and securing the wrist strap.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将三指手套穿在[npc.hand]上，随后缠上保护手腕的绑带。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将三指手套穿在[npc2.namePos]的[npc.hand]上，随后缠上保护手腕的绑带。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗鲁地将三指手套穿在[npc2.namePos]的[npc.hand]上，随后缠上保护手腕的绑带。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="HAND" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the mitsugake off of [npc.her] [npc.hand] after unwrapping the wrist strap.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(pull)] the mitsugake off of [npc2.namePos] [npc2.hand] after unwrapping the wrist strap.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] the mitsugake off of [npc2.namePos] [npc2.hand] after unwrapping the wrist strap.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]解开手腕上的绑带，随后将三指手套从[npc.her][npc.hand]上脱下。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]解开[npc2.namePos]手腕上的绑带，随后将三指手套从[npc2.namePos]的[npc.hand]上脱下。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地解开[npc2.namePos]手腕上的绑带，随后将三指手套从[npc2.namePos]的[npc.hand]上脱下。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

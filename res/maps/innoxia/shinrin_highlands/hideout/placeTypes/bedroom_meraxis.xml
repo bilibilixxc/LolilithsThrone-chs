@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>YOUKO_FOREST</worldRegion>
-	<name><![CDATA[Meraxis's bedroom]]></name>
-	<tooltipDescription><![CDATA[Posters of demons striking heroic poses cover the walls of Meraxis's bedroom, while weapons, clothing, and miscellaneous objects of all kinds are strewn about over the place.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Meraxis's bedroom]]></virginityLossDescription>
+	<name><![CDATA[梅拉克西丝的卧室]]></name>
+	<tooltipDescription><![CDATA[梅拉克西丝卧室的墙上贴满了恶魔海报，画中的恶魔们摆出英雄登场的姿势；房间内到处都是散落的武器、衣物和各式杂物。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于梅拉克西丝的卧室]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>bedroom</svgName>
 	<colour>BASE_PURPLE</colour>

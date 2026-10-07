@@ -1,508 +1,508 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- SCARLETTS_SHOP_EXTERIOR -->
 	
 	<htmlContent tag="SCARLETTS_SHOP_EXTERIOR_CLOSED"><![CDATA[
 	<p>
-		Tucked away in one corner of Slaver Alley, you see a shop that's quite unlike all the others. Looking down from the words 'Scarlett's Shop' painted in fancy gold lettering above the door, you see that there's a sign hanging in one of the large glass windows, which reads, [style.italicsMinorBad('Open every day, [unit.time(6)]-[unit.time(22)]')].
+		在奴隶巷的一个角落里，你看到了一家与众不同的商店。从门上方用花哨的金色字母绘制的“斯嘉丽商店”向下看，你会看到一个挂在一个大玻璃窗户上的招牌，上面写着：[style.italicsMinorBad(“在每天的[unit.time(6)]-[unit.time(22)]开门”)]。
 	</p>
 	#IF(pc.getQuest(QUEST_LINE_MAIN) == QUEST_MAIN_1_E_REPORT_TO_HELENA)
 		<p>
-			As the shop is currently [style.colourBad(closed)], there's nothing more for you to do here except turn around and leave. You also haven't yet gone to report to Scarlett's matriarch, [helena.name], so there wouldn't be much for you to do here even if the shop was open. Scarlett said that you can find [helena.name] up in the Harpy Nests...
+			由于商店目前在[style.colourBad(打烊)]，除了转身离开，你在这里已经无事可做了。你也还没有去向斯嘉丽的族长[helena.name]报告，所以即使商店开着，你也没什么可做的。斯嘉丽说，你可以在哈比巢穴里找到[helena.name]……
 		</p>
 	#ELSE
 		<p>
-			As the shop is currently [style.colourBad(closed)], there's nothing more for you to do here except turn around and leave. If you wanted to talk to Scarlett, you'll have to come back at some time after six in the morning...
+			由于商店目前是[style.colourBad(打烊)]的，你只能转身离开。如果你想和斯嘉丽谈谈，你必须在早上六点以后的某个时间再来……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SCARLETTS_SHOP_EXTERIOR"><![CDATA[
 	<p>
-		Tucked away in one corner of Slaver Alley, you see a shop that's quite unlike all the others. Looking down from the words 'Scarlett's Shop' painted in fancy gold lettering above the door, you see that there's a sign hanging in one of the large glass windows, which reads, [style.italicsMinorGood('Open every day, [unit.time(6)]-[unit.time(22)]')].
+		在奴隶巷的一个角落里，你看到了一家与众不同的商店。从门上方用花哨的金色字母绘制的“斯嘉丽商店”向下看，你会看到一个挂在一个大玻璃窗户上的招牌，上面写着：[style.italicsMinorBad(“在每天的[unit.time(6)]-[unit.time(22)]开门”)]。
 	</p>
 	<p>
-		Despite the fact that this shop should be [style.colourGood(open)] for business at this time, you don't see any sign of activity inside. Furthermore, while the other shops in Slaver Alley use the area in front of their premises to proudly display advertisement boards and platforms upon which to display their goods, the area in front of 'Scarlett's Shop' is noticeably barren; yet further proof that this particular store must have fallen upon hard times.
+		尽管这家商店此时应该在[style.colourGood(营业)]的时间，但你却看不到里面有任何活动的迹象。此外，奴隶巷中的其他商店都会在店门口摆放广告牌和展示商品的平台，而“斯嘉丽商店”门前的区域却明显荒芜，这进一步证明这家特殊的商店一定是陷入了困境。
 	</p>
 	#IF(pc.getQuest(QUEST_LINE_MAIN) == QUEST_MAIN_1_E_REPORT_TO_HELENA)
 		<p>
-			You haven't yet gone to report to Scarlett's matriarch, [helena.name], and you don't really want to have to talk to the rude harpy again until you've done as she's asked. Scarlett said that you can find [helena.name] up in the Harpy Nests, so you'll need to go there report to her before stepping foot inside this shop again.
+			你还没有去向斯嘉丽的族长[helena.name]报告，在你完成她的要求之前，你真的不想再和这个粗鲁的哈比说话。斯嘉丽说你可以在哈比之巢里找到[helena.name]，所以你需要先去那里向她报告，然后再踏进这家店。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SCARLETTS_SHOP -->
 	
 	<htmlContent tag="SCARLETTS_SHOP_INTRO"><![CDATA[
 	<p>
-		Pushing open the door and stepping inside, you quickly discover that the interior of 'Scarlett's Shop' is just as bare as it appeared to be from the outside. There isn't a single slave for sale in sight, and the only sign of life is a rather defeated-looking, black-feathered harpy slouched down behind a counter at the far end of the shop.
+		推开门走进去，你很快就发现“斯嘉丽商店”的内部和外面看起来一样光秃秃的。店内没有一个待售的奴隶，唯一的生命迹象是店内最里面的柜台后面懒洋洋地躺着一只看起来相当失败的黑色羽毛的哈比。
 	</p>
 	<p>
-		Looking up as she hears you enter the shop, the harpy lets out an annoyed huff, before shouting out, [scarlett.speech(If you aren't here to donate any slaves, then you'd better turn around and fuck right off! I'm not in the mood to deal with any fucking morons like you today.)]
+		听到你进店的声音，哈比抬起头，恼怒地哼了一声，然后大声喊道：[scarlett.speech(如果你不是来捐赠奴隶的，那你最好掉头滚蛋！我今天没心情和像你这样的白痴打交道。)]
 	</p>
 	<p>
-		As she's quite clearly the shop's owner, this extremely rude harpy must be 'Scarlett', who's the exact person you're looking for. As she rudely repeats her demand for you to get out of her store, you wonder if you should ask her about Arthur right now, or do as she says and come back at another time.
+		很显然，她是这家店的老板，这个极其粗鲁的哈比一定是“斯嘉丽”，她正是你要找的人。她粗鲁地重复着让你滚出她的店的要求，你不知道是该现在就向她打听亚瑟的事，还是按她说的改天再来。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="SCARLETTS_SHOP"><![CDATA[
 	<p>
-		Pushing open the door and stepping inside, you quickly discover that the interior of 'Scarlett's Shop' is just as bare as it appeared to be from the outside. There isn't a single slave for sale in sight, and the only sign of life is a rather defeated-looking harpy slouched down behind a counter at the far end of the shop.
+		推开门走进去，你很快就发现“斯嘉丽商店”的内部和外面看起来一样光秃秃的。店内没有一个待售的奴隶，唯一的生命迹象是店内最里面的柜台后面懒洋洋地坐着一个看起来相当失败的哈比。
 	</p>
 	<p>
-		Looking up as she hears you enter the shop, the harpy lets out an annoyed huff, before shouting out, [scarlett.speech(If you aren't here to donate any slaves, then you'd better turn around and fuck right off! I'm not in the mood to deal with any fucking morons like you today.)]
+		听到你进店的声音，哈比抬起头，恼怒地哼了一声，然后大声喊道：[scarlett.speech(如果你不是来捐赠奴隶的，那你最好掉头滚蛋！我今天没心情和像你这样的白痴打交道。)]
 	</p>
 	<p>
-		You're quite taken aback at Scarlett's rude words, and deciding that it's probably best not to get involved with someone like that, you turn around and head for the exit.
+		斯嘉丽的粗鲁言辞让你大吃一惊，你决定最好不要和这样的人打交道，于是转身向出口走去。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SCARLETT_IS_A_BITCH -->
 	
 	<htmlContent tag="SCARLETT_IS_A_BITCH"><![CDATA[
 	<p>
-		Letting out a defeated sigh as you wonder why everything has to be so difficult, you walk towards the front desk where Scarlett is sitting.
+		你不禁叹了口气，心想为什么每件事都要这么麻烦，于是你走向斯嘉丽坐着的前台。
 	</p>
 	<p>
-		[scarlett.speech(Did you not hear what I just said?! Fuck off already!)] the rude harpy shouts, sitting up in her chair and throwing a menacing sneer your way.
+		[scarlett.speech(你没听见我刚才说的话吗？滚出去！)]这个粗鲁的哈比大喊着，从椅子上坐了起来，向你投来威胁性的冷笑。
 	</p>
 	<p>
-		[pc.speech(I just need to know if you've got a slave for sale going by the name of 'Arthur',)] you explain, hoping that you can resolve your business with the harpy as quickly as possible.
+		[pc.speech(我只是想知道你是否有一名名叫‘亚瑟’的奴隶待售，)]你解释道，希望能尽快解决你和这个哈比之间的问题。
 	</p>
 	<p>
-		As you mention the name 'Arthur', Scarlett stands up from behind her desk, and her cheeks flush red as she rants, [scarlett.speech(If I hear that fucking name one more time, I swear I'm going to kill someone! Are you working with them?! Huh?! Those fucking cunts who fucked me over?! Tell me who the fuck you are, right fucking now!)]
+		当你提到“亚瑟”这个名字时，斯嘉丽从办公桌后面站了起来，她的脸颊涨得通红，咆哮着，[scarlett.speech(如果我再听到那个该死的名字，我发誓我会杀人的！你和他们是一伙的？！啊？！那些把我耍得团团转的混蛋？马上他妈的告诉我你是谁？！)]
 	</p>
 	<p>
 		#IF(pc.isCowardly())
-			Although she looks as though she's lacking the physical strength required in order to follow through on any of her threats, Scarlett's foul language and aggressive posturing are more than enough to scare you. Wanting to escape from this threatening situation as quickly as possible, you answer the harpy,
+			虽然斯嘉丽看起来没有足够的体力来实施任何威胁，但她的脏话和咄咄逼人的姿态足以吓到你。你想尽快逃离这种危险的境地，于是你回答了哈比的问题，
 		#ELSE
-			Despite her foul language and aggressive posturing, you find Scarlett's outburst to be more embarrassing than intimidating. She clearly lacks the physical strength required in order to follow through on any of her threats, so it's more out of a desire to calm her down rather than due to feeling threatened that you start to answer her,
+			尽管斯嘉丽满口脏话，摆出一副咄咄逼人的姿态，但你觉得她的爆发与其说是恐吓，不如说是令人尴尬。她显然没有足够的体力来实现她的任何威胁，所以你开始回答她，更多的是出于让她冷静下来的愿望，而不是感觉受到了威胁，
 		#ENDIF
-		 [pc.speech(Don't worry, I'm not working with 'them', whoever they might be. I'm just a friend of Arthur's who's been trying to track him down. I found out from the Enforcers that he was meant to have been given to you. If you're still in possession of him, I'd like to see if I can buy his freedom, and if not, then could you [style.italics(please)] just tell me who you sold him to?)]
+		[pc.speech(别担心，我不是和‘他们’一伙的，不管他们是谁。我只是亚瑟的一个一直想找到他的朋友。我从执法者那里得知他本来是要交给你的如果他还在你手里，我想看看能不能买到他的自由，如果不能，我能[style.italics(请求)]你告诉我你把他卖给了谁吗？)]
 	</p>
 	<p>
-		[scarlett.speech(Is that so?)] Scarlett huffs as she sits back down, [scarlett.speech(I guess you really are as stupid as you look. Can't you see that I've got no slaves for sale? Of course I'm not fucking still in possession of him. I'm fucking finished. <i>Finished!</i> And it's all thanks to your 'friend'...)]
+		[scarlett.speech(就这样？)]斯嘉丽哼了一声，重新坐下，[scarlett.speech(我猜你真的和你看起来一样愚蠢。难道你看不出来我没有奴隶出售吗？我当然不是他的主人了。我她妈完了！<i>完了！</i>而这一切都拜你的‘朋友’所赐……)]
 	</p>
 	<p>
-		Hoping that this annoying harpy is about to tell you what you want to know, you listen as she continues, [scarlett.speech(There might be a way for both of us to profit here... Yeah, I know what happened to Arthur, <i>and</i> I know where he is right now, but hopefully even a fucking idiot like yourself can understand that I'm not going to be giving that information away for free. You want to know what I know? Then you're going to be fucking doing something to help me out first.)]
+		你希望这个烦人的哈比会告诉你想知道的事情，你听着她继续说下去，[scarlett.speech(也许我们俩都能从中获利……是的，我知道亚瑟发生了什么事，<i>并且</i>我也知道他现在在哪里，但希望像你这样的白痴也能明白，我是不会免费提供这些信息的。你想知道我知道什么？那你他妈就得先帮我做点什么。)]
 	</p>
 	<p>
-		Wondering how many different people you're going to have to deal with before finally finding Arthur, you sigh, [pc.speech(So what do you need my help with?)]
+		你想知道在找到亚瑟之前，你将不得不与多少不同的人打交道，你叹了口气，[pc.speech(所以你要我帮你些什么？)]
 	</p>
 	<p>
-		[scarlett.speech(Even a dumb cunt like you can see that this business is a complete failure, and my matriarch is [style.italics(not)] going to be happy when she finds out about it,)] the foul-mouthed harpy grumbles as she leans back in her chair, [scarlett.speech(If you want to know what happened to your stupid fucking friend, you're going to go up to the Harpy Nests, find a matriarch called '[helena.name]', tell her that my business is bust, and take whatever punishment she'll decide upon on my behalf. There's no fucking way I'm going to be the one who tells her about this.)]
+		[scarlett.speech(即使像你这样的蠢货也能看出我这生意完全黄了，我的族长知道后肯定[style.italics(不会)]高兴的，)]这位满嘴脏话的哈比一边抱怨着，一边靠在椅子上，[scarlett.speech(如果你想知道你那愚蠢的朋友出了什么事，你就去哈比之巢，找到一个叫‘[helena.name]’的族长，告诉她我的生意破产了，然后接受她为我决定的任何惩罚。我他妈才不会去告诉她这件事。)]
 	</p>
 	<p>
-		You realise that if you ever want to find out what happened to Arthur, you're going to have to agree to Scarlett's demands, even if you don't plan on taking any 'punishment' on her behalf...
+		你意识到，如果你想知道亚瑟发生了什么事，你就必须答应斯嘉丽的要求，即使你不打算代表她接受任何“惩罚”……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- SCARLETT_IS_A_SUPER_BITCH -->
 	
 	<htmlContent tag="SCARLETT_IS_A_SUPER_BITCH"><![CDATA[
 	<p>
-		Deciding to agree with the insufferable harpy for now, you respond, [pc.speech(Fine, I'll do it, but you'd better keep your end of the bargain. When I get back, you're going to tell me exactly what's happened to Arthur, ok?)]
+		你觉得你只能暂时同意这个讨厌的哈比的请求，你回答到：[pc.speech(行吧，我会做的，但你最好信守承诺。等我回来，你要告诉我亚瑟发生了什么事，好吗？)]
 	</p>
 	<p>
-		[scarlett.speech(Just fuck off and do it already! Fuck, you're a real asshole to try and talk to, you know?!)] Scarlett shouts, looking just as infuriated as you feel right now. [scarlett.speech(Don't bother coming back here until you've taken [helena.namePos] punishment! And don't let her go easy on you; I'm gonna enjoy hearing what she did to you when you get back!)]
+		[scarlett.speech(快滚去做就是了！该死的，你真是个难以交谈的混蛋，知道吗？！)]斯嘉丽大喊道，和你感觉到的一样愤怒。[scarlett.speech(在你接受[helena.namePos]惩罚之前不要回来这里！不要让她对你手下留情，当你回来的时候，我会很享受听到她对你做了什么！)]
 	</p>
 	<p>
-		Not wanting to waste any more time talking to her, you turn your back on Scarlett and walk out of her shop. As the door swings shut behind you, you find yourself wondering if you've ever met anyone as rude as she is. You seriously hope that this matriarch, '[helena.name]', is nothing like Scarlett, and as you set off in the direction of the Harpy Nests, you wonder how many more hurdles you'll be presented with before finally finding Arthur...
+		你不想再浪费时间和她说话，背对着斯嘉丽走出了她的店。当门在你身后关上时，你发现自己在想，你以前有没有遇到过像她这样粗鲁的人。你真心希望这位名叫“[helena.name]”的族长跟斯嘉丽完全不一样。你朝哈比之巢的方向出发，不知道在找到亚瑟之前你还会遇到多少障碍……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_EXTERIOR -->
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_HELENA_RETURNS"><![CDATA[
 	<p>
-		Once again you find yourself standing before 'Scarlett's Shop', but unlike the last time you were here, all of the blinds have been pulled down, preventing you from seeing into the store's interior. As you walk towards the front entrance, you pass a couple of gossiping wolf-girls, and you can't help but overhear a snippet of their conversation, [npcFemale.speech(...I'm telling you, I saw <i>the</i> [helena.name] going in there! You know, they say she's the most beautiful harpy in all of Lilith's Realm...)]
+		你再次发现自己站在“斯嘉丽商店”前，但与上次不同的是，所有的百叶窗都被拉下了，使你无法看到商店的内部。当你走向前门时，路过几个正在闲聊的狼女，你忍不住去偷听了她们的谈话片段，[npcFemale.speech(……我告诉你，我看到了<i>那个</i>[helena.name]进去了！你知道的，他们都说她是整个莉莉丝王国最漂亮的哈比……)]
 	</p>
 	<p>
-		Curious to find out what's become of Scarlett, you wonder if you should enter the shop now, or come back at another time...
+		你很想知道斯嘉丽现在怎么样了，不知道是现在就进店，还是改天再来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_ROMANCE_FAILED"><![CDATA[
 	<p>
-		After you refused to sell Scarlett to her, Helena gave up on her plans of making this slave shop into a successful business. Now lying completely abandoned, the only hint of the matriarch's involvement in the refurbishment of these premises is the name 'Helena's Boutique' painted over the front entrance.
+		在你拒绝将斯嘉丽卖给她之后，海伦娜就放弃了将这家奴隶商店成功经营的计划。现在，这间奴隶店已经完全废弃，唯一能表明族长参与了店面翻新的线索就是门前漆着的“海伦娜精品店”的名字。
 	</p>
 	<p>
-		After spending a moment to reflect on the fact that it's extremely unlikely that this place will ever open its doors to customers again, there's nothing left for you to do except turn around and continue on your way elsewhere...
+		在花了片刻时间思考这个地方极不可能再向顾客敞开大门这一事实之后，你除了掉头继续前往其他地方之外，什么也做不了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_PAINTING"><![CDATA[
 	<p>
 		#IF(pc.getQuest(QUEST_LINE_ROMANCE_HELENA)==QUEST_ROMANCE_HELENA_3_C_EXTERIOR_DECORATOR)
-			Thanks to you, the entire frontage of Helena's shop has been repainted in a brilliant white, and is really starting to stand out from those around it. Looking around, you see that most people are at least glancing in its direction as they walk past. Unfortunately for the more curious of these passersby, however, Helena has replaced the sign displaying the shop's opening times with one that simply reads: 'Closed for renovations.'
+			多亏了你，海伦娜商店的整个正面都被重新粉刷成了耀眼的白色，在周围的商店中显得格外醒目。环顾四周，你发现大多数人走过时至少都会朝它的方向瞥一眼。但不幸的是，海伦娜把店里的营业时间牌换成了一个简单的牌子，上面写着：“因装修暂停营业”。
 		#ELSE
-			Thanks to you, all of the paint has been stripped from the front of Helena's store, including the name 'Scarlett's Shop'. With just the bare woodwork left exposed, the frontage is starting to stand out from those around it, and you notice that a few members of the public are starting to look in its direction as they walk past. Unfortunately for the more curious of these passersby, however, Helena has replaced the sign displaying the shop's opening times with one that simply reads: 'Closed for renovations.'
+			多亏了你，海伦娜店门口的油漆都被擦掉了，包括“斯嘉丽商店”的名字。光秃秃的木制品裸露在外，这个门面在周围的商店间格外的引人注目，你注意到有一些人走过时开始朝店门口张望。然而，不幸的是，海伦娜把店里的营业时间牌换成了一个简单的牌子，上面写着：“因装修暂停营业”。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_GONE_HOME"><![CDATA[
 	<p>
-		Although you know that this sign wouldn't normally apply to you, Helena has gone home early for the day. As such, you'll be unable to enter the shop and speak with her again until
+		虽然你知道自己没必要管这个标志，但海伦娜今天提前回家了。因此，你将无法进入商店与她再次交谈，除非等到
 		#IF(game.getDayOfWeek()==DOW_FRIDAY || game.getDayOfWeek()==DOW_SATURDAY)
-			 [style.colourMinorBad(Monday morning at the earliest)].
+			[style.colourMinorBad(至少是星期一上午)]。
 		#ELSE
 			#IF(game.getDayOfWeek()==DOW_SUNDAY || game.getHourOfDay()>=9)
-			 	[style.colourMinorBad(tomorrow morning at the earliest)].
+				[style.colourMinorBad(至少是明早)]。
 			#ELSE
 				#IF(game.getHourOfDay()<9)
-				 	[style.colourMinorBad(later this morning)].
+					[style.colourMinorBad(今天晚些时候)]。
 				#ELSE
-				 	[style.colourMinorBad(sometime later)].
+					[style.colourMinorBad(过些时候)]。
 				#ENDIF
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_PAINTING_OPEN"><![CDATA[
 	<p>
-		Knowing that this sign doesn't apply to you, and seeing through the front windows that Helena is sitting behind the counter, you could enter the shop and talk to her right now...
+		你知道自己没必要管这个标志，而且你透过前面的橱窗可以看到海伦娜正坐在柜台后面，你现在就可以进入店内与她交谈……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_PAINTING_CLOSED"><![CDATA[
 	<p>
-		Although you know that this sign wouldn't normally apply to you, Helena is only present from [style.italicsMinorBad([unit.time(9)]-[unit.time(17)] on weekdays, or up until [unit.time(21)] on Friday)]. As such, the store is currently [style.colourBad(closed)] even to you, and the harpy matriarch won't be present until 
+		虽然你知道这个标志通常对你不适用，但海伦娜只有[style.italicsMinorBad(工作日的[unit.time(9)]-[unit.time(17)]，或者是在星期五持续到[unit.time(21)])]才会在这。就算对你来说，这个商店也是[style.colourBad(打烊)]的，并且哈比族长要出现也得等到
 		#IF(game.getDayOfWeek()==DOW_FRIDAY || game.getDayOfWeek()==DOW_SATURDAY)
-			 [style.colourMinorBad(Monday morning at the earliest)].
+			[style.colourMinorBad(至少是星期一早上)]。
 		#ELSE
 			#IF(game.getDayOfWeek()==DOW_SUNDAY || game.getHourOfDay()>=9)
-			 	[style.colourMinorBad(tomorrow morning at the earliest)].
+				[style.colourMinorBad(至少是明天早上)]。
 			#ELSE
 				#IF(game.getHourOfDay()<9)
-				 	[style.colourMinorBad(later this morning)].
+					[style.colourMinorBad(今天晚些时候)]。
 				#ELSE
-				 	[style.colourMinorBad(sometime later)].
+					[style.colourMinorBad(过些时候)]。
 				#ENDIF
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_FINISHED_OPEN"><![CDATA[
 	<p>
-		As a result of your hard work, the entire frontage of Helena's Boutique has not only been repainted in a brilliant white, but also proudly bears the words 'Helena's Boutique' in bright gold lettering over the entrance. Thanks to all of your efforts, the harpy matriarch's store is by far the most popular in all of Slaver Alley, and while the initial excitement of Helena's unexpected presence has by now worn off, there still several fans loitering around nearby in the hopes of getting an autograph or a kind word from Helena herself.
+		由于你的辛勤工作，海伦娜精品店的整个门面不仅重新漆成了耀眼的白色，而且在入口处还骄傲地印上了亮金色的“海伦娜精品店”字样。多亏了你的所有努力，这位哈比的商店成了奴隶巷最受欢迎的地方，虽然海伦娜突然出现在这里的兴奋劲已经过去，但仍有一些粉丝在附近徘徊，希望能得到海伦娜的亲笔签名或亲切的话语。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_FINISHED_CLOSED"><![CDATA[
 	<p>
-		As a result of your hard work, the entire frontage of Helena's Boutique has not only been repainted in a brilliant white, but also proudly bears the words 'Helena's Boutique' in bright gold lettering over the entrance. Thanks to all of your efforts, the harpy matriarch's store is by far the most popular in all of Slaver Alley, and even though it's currently closed, there are still a few dedicated fans loitering around nearby as they wait for the chance to get an autograph or a kind word from Helena herself.
+		由于你的辛勤工作，海伦娜精品店的整个门面不仅重新漆成了耀眼的白色，而且在入口处还骄傲地印上了亮金色的“海伦娜精品店”字样。多亏了你的所有努力，这位哈比的商店成了奴隶巷最受欢迎的地方，虽然现在已经关门了，但仍有一些粉丝在附近徘徊，等待着能得到海伦娜的亲笔签名或亲切的话语。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_PAINTED"><![CDATA[
 	<p>
-		As a result of your hard work, the entire frontage of Helena's shop has not only been repainted in a brilliant white, but also proudly bears the words 'Helena's Boutique' in bright gold lettering over the entrance. Thanks to this, word of the harpy matriarch's presence in Slaver Alley has finally started to spread, which is clearly evidenced by the small crowd loitering around in front of its large glass windows. Unfortunately for these people hoping to catch a glimpse of Helena, however, the shop's blinds have all been pulled down, concealing the interior from their curious gaze. To further dash their hopes of meeting the harpy matriarch, there's a sign hanging in the window which reads: 'Closed until grand reopening.'
+		由于你的辛勤工作，海伦娜精品店的整个门面不仅重新漆成了耀眼的白色，而且在入口处还骄傲地印上了亮金色的“海伦娜精品店”字样。得益于此，这位哈比族长出现在奴隶巷的消息终于开始传播开来，这一点从在店前的大玻璃橱窗前闲逛的一小撮人身上就能明显看出。不幸的是，这些希望一睹海伦娜芳容的人却发现店里的百叶窗已经全部拉下，遮住了店内的一切，使他们好奇的目光无法进入店内。更让他们失望的是，橱窗里还挂着一个牌子，上面写着：“在盛大开业之前，本店暂停营业”。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_PAINTED_OPEN"><![CDATA[
 	<p>
-		Knowing both that this sign doesn't apply to you, and that Helena will be inside the shop at this time of day, you could step inside and talk to her right now...
+		你知道自己没必要管这个标志，而且海伦娜在白天这个时间会在店里，你现在可以走进去和她谈谈……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_PAINTED_CLOSED"><![CDATA[
 	<p>
-		Although you know that this sign wouldn't normally apply to you, Helena is only present from [style.italicsMinorBad([unit.time(9)]-[unit.time(17)] on weekdays, or up until [unit.time(21)] on Friday)]. As such, the store is currently [style.colourBad(closed)] even to you, and the harpy matriarch won't be present until 
+		虽然你知道这个标志通常对你不适用，但海伦娜只在[style.italicsMinorBad(工作日的[unit.time(9)]-[unit.time(17)]，或者是在星期五持续到[unit.time(21)])]。就算对你来说，这个商店也是[style.colourBad(打烊)]的，并且这个哈比族长要出现也得等到
 		#IF(game.getDayOfWeek()==DOW_FRIDAY || game.getDayOfWeek()==DOW_SATURDAY)
-			 [style.colourMinorBad(Monday morning at the earliest)].
+			[style.colourMinorBad(至少是星期一的早上)]。
 		#ELSE
-			 [style.colourMinorBad(tomorrow morning at the earliest)].
+			[style.colourMinorBad(至少是明天早上)]。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR"><![CDATA[
 	<p>
-		Although the name 'Scarlett's Shop' is still painted in fancy gold lettering above its front entrance, you know that the store in front of you is no longer managed by the rude harpy who bears that name. Instead, it's now run by Helena, but despite the fact that this beautiful harpy matriarch is a well-known figure throughout Dominion, her store doesn't seem to be any more popular than it was when under Scarlett's management. In fact, not a single member of the public seems to be even glancing in its direction, and you can only imagine that it must be because none of them are aware of Helena's takeover.
+		虽然“斯嘉丽商店”的名字还用金色的字体刷在正门上方，但你知道眼前的这家商店已经不再由那个粗鲁的哈比管理了。不过，尽管这位美丽的哈比族长在整个御城区都很有名气，但她的商店似乎并不比斯嘉丽管理时更受欢迎。事实上，似乎没有一个人会朝它的方向看上一眼，你可以想象这一定是因为他们都不知道海伦娜接管了这家店。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_OPEN"><![CDATA[
 	<p>
-		Unlike the days when Scarlett was in charge, Helena's shop has rather limited opening times, which are clearly displayed for all to see on a sign hanging in the front window which reads: [style.italicsMinorGood('Open weekdays, [unit.time(9)]-[unit.time(17)]. Open until [unit.time(21)] on Friday.')]
+		与斯嘉丽当家时不同的是，海伦娜商店的营业时间相当有限，挂在橱窗前的招牌上写得清清楚楚：[style.italicsMinorGood(“在工作日的[unit.time(9)]-[unit.time(17)]开门，在星期五延长到[unit.time(21)]。”)]
 	</p>
 	<p>
-		As her shop is currently [style.colourGood(open)] for business, you could always step inside and see Helena again right now...
+		由于她的商店目前正在[style.colourGood(营业)]，你随时都可以进去看看海伦娜……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_EXTERIOR_CLOSED"><![CDATA[
 	<p>
-		Unlike the days when Scarlett was in charge, Helena's shop has rather limited opening times, which are clearly displayed for all to see on a sign hanging in the front window which reads: [style.italicsMinorBad('Open weekdays, [unit.time(9)]-[unit.time(17)]. Open until [unit.time(21)] on Friday.')]
+		与斯嘉丽当家时不同的是，海伦娜商店的营业时间相当有限，挂在橱窗前的招牌上写得清清楚楚：[style.italicsMinorGood(“在工作日的[unit.time(9)]-[unit.time(17)]开门，在星期五延长到[unit.time(21)]。”)]
 	</p>
 	<p>
-		As her shop is currently [style.colourBad(closed)], there's nothing more for you to do here except turn around and leave. If you wanted to talk to [helena.name], you'll have to come back at a time when her shop is open...
+		由于她的商店目前是[style.colourBad(打烊)]的，所以你在这里除了转身离开外，别无他法。如果你想和[helena.name]交谈，你必须在她的商店营业时再来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP -->
 	
 	<htmlContent tag="HELENAS_SHOP_INTRODUCTION"><![CDATA[
 	<p>
-		Pushing open the front door and entering the shop, you're greeted by the sight of the beautiful figure of [helena.name] sitting down behind the shop's counter. With a delightful smile on her face, she greets you in her calm, regal voice, [helena.speech(What a pleasure it is to see you once again. May I enquire as to the reason for you following me here?)]
+		推开前门进入店内，映入眼帘的是[helena.name]坐在柜台后面的美丽身影。她脸上洋溢着愉悦的笑容，用平静而高贵的声音向你问好，[helena.speech(再次见到你真的很令人愉悦。我可以询问一下你跟着我来这里的原因吗？)]
 	</p>
 	<p>
-		Seeing absolutely no sign of the raven-harpy you need to have a word with, you ask, [pc.speech(Is Scarlett still around here somewhere? I really need to talk to her.)]
+		你完全没有看到你要找的渡鸦哈比的踪影，问到：[pc.speech(斯嘉丽还在这附近吗？我真的需要和她谈谈。)]
 	</p>
 	<p>
-		Covering her mouth with one of her flawless, white-feathered wings, Helena lets out a soft, delicate laugh. Beckoning you forwards with her free hand, she looks down to one side of her and says, [helena.speech(My dear Scarlett, this [pc.race] is asking after you. Be a good girl and greet your friend.)]
+		海伦娜用一只完美无瑕的白羽翅膀捂住嘴，发出轻柔的笑声。她用空闲的手示意你往前走，然后低头对着她的一侧说：[helena.speech(我亲爱的斯嘉丽，这个[pc.race]在找你呢，做个好女孩来和你的朋友问好。)]
 	</p>
 	<p>
-		[scarlett.speechNoEffects(~Mrph!~)] comes a quiet, muffled groan from somewhere behind the counter, and then a moment later, the submissive form of Scarlett obediently crawls out to kneel down in front of you. You can't help but stare as you see that she's wearing nothing except for a pink ball gag in her mouth and a heavy steel slave collar around her neck. With her groin fully on display, you're able to see that Scarlett's genitals consist solely of [scarlett.a_penisSize], light-skinned cock and accompanying pair of vestigial balls.
+		[scarlett.speechNoEffects(~嗯！~)]柜台后面传来一声低沉的呻吟，片刻之后，斯嘉丽顺从地爬了出来，跪在你面前。你不禁瞪大了眼睛，因为你看到她什么也没穿，只是嘴里塞着一个粉红色的球塞，脖子上套着一个沉重的钢制奴隶项圈。她的腹股沟完全暴露在你面前，你可以看到斯嘉丽的生殖器只有浅色皮肤的[scarlett.a_penisSize]阴茎和一对睾丸。
 	</p>
 	<p>
-		[helena.speech(Good girl,)] [helena.name] says, standing up from behind the counter and stepping forwards to stroke Scarlett's plume of dark black head-feathers. With an underlying icy tone to her otherwise melodic voice, the matriarch calmly states, [helena.speech(As you can no doubt see, I've had to enslave my dear Scarlett so that she can use her body to pay me back for all the flames she's wasted while mismanaging this business I'd entrusted to her. I'm afraid that if you were hoping to speak with her about something, then you'll have to buy her from me first.)]
+		[helena.speech(好女孩，)][helena.name]说到，族长站起来，走到柜台后面，伸手抚摸着斯嘉丽那一绺黑色的羽毛。在她婉转的声音中带有一丝冰冷的语气，族长平静地说道，[helena.speech(毫无疑问，你也看到了，我不得不奴役我亲爱的斯嘉丽，这样她就可以用她的身体来偿还她在我委托给她的生意上浪费的火币，如果你想和她谈点什么，恐怕你必须得先从我这里买下她。)]
 	</p>
 	<p>
-		It seems as though yet another obstacle has been put in your way towards finding Arthur. No matter what your views on slavery might be, it looks as though you only have one option. You'll have to buy Scarlett, then demand that she tell you what happened to Arthur.
+		在你寻找亚瑟的道路上，似乎又多了一个障碍。不管你对奴隶制有什么看法，你都只有一个选择了，你必须买下斯嘉丽，然后要求她告诉你亚瑟发生了什么事。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_OFFER_SCARLETT"><![CDATA[
 	<p>
-		Pushing open the front door and entering the shop, you're greeted once again by the sight of the beautiful figure of [helena.name] sitting down behind the shop's counter. With a delightful smile on her face, she calls out in her calm, regal voice, [helena.speech(Good [style.evening]. Perchance have you returned to complete your purchase of my dear Scarlett?)]
+		推开前门，走进店里，映入眼帘的是[helena.name]坐在柜台后面的那美丽身影。她脸上洋溢着愉悦的笑容，用她那平静而高贵的声音呼唤着你，[helena.speech([style.evening]好，你是回来买我亲爱的斯嘉丽的吗？)]
 	</p>
 	<p>
-		[scarlett.speechNoEffects(~Mrph!~)] Scarlett groans from the other side of the counter as she hears [helena.name] talk about selling her.
+		[scarlett.speechNoEffects(~嗯！~)]斯嘉丽听到[helena.name]说要卖掉她时，在柜台的另一边发出了呻吟声。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP"><![CDATA[
 	<p>
-		Pushing open the front door and entering the shop, you're greeted once again by the sight of the beautiful figure of [helena.name] sitting down behind the shop's counter. With a delightful smile on her face, she calls out in her calm, regal voice,
+		推开前门，走进店里，映入眼帘的是[helena.name]坐在柜台后面的那美丽身影。她脸上洋溢着愉悦的笑容，用她那平静而高贵的声音呼唤着你，
 		#IF(helena.hasSlaves())
-			 [helena.speech(Good [style.evening], [pc.name]. You're fast becoming a regular visitor to my humble shop. Perchance are you here to purchase a slave?)]
+			[helena.speech([style.evening]好，[pc.name]。你都快成了鄙店的常客了。你是来买奴隶的吗？)]
 		#ELSE
-			 [helena.speech(Good [style.evening], [pc.name]. Unfortunately, I must inform you that I have no slaves for sale at this time. I am expecting another couple to be delivered here tomorrow morning, so may I suggest that you return then?)]
+			[helena.speech([style.evening]好，[pc.name]。很不幸，我必须告诉你，我现在没有奴隶出售。我预计明天早上将有另一对奴隶送到这里，所以我建议你那时再回来。)]
 		#ENDIF
 	</p>
 	#IF(helena.hasSlaves())
 		<p>
 			#IF(helena.getSlavesOwned().size()==2)
-				Looking across to one side of the barren store, you see a pair of slaves obediently standing to attention. Wearing nothing but the slave collars locked in place around their necks, you're able to see that one is [npc.a_raceFull], while the other is [npc2.a_raceFull].
+				你望向空荡荡的商店的一侧时，你看到一对奴隶正在顺从地站在那。他们身上除了锁在颈部的奴隶项圈外一无所有，你能看到其中一个是[npc.a_raceFull]，另一个是[npc2.a_raceFull]。
 			#ELSE
-				Looking across to one side of the barren store, you see a slave obediently standing to attention. Wearing nothing but the slave collar locked in place around [npc.her] neck, you're able to see that [npc.she] is [npc.a_raceFull].
+				你望向空荡荡的商店的一侧时，看到一个奴隶正顺从地站在那。除了[npc.her]脖子上的脖子上的奴隶项圈，什么也没穿。你可以看到[npc.she]是[npc.a_raceFull]。
 			#ENDIF
 		</p>
 	#ENDIF
 	<p>
 		#IF(pc.hasCompanion(scarlett))
-			After glancing across at [scarlett.name], the beautiful harpy courteously smiles at you and patiently waits to see what it is you'll do next.
+			你瞥了一眼[scarlett.name]，美丽的哈比对你礼貌地笑笑，耐心地等着看你下一步的行动。
 		#ELSE
-			Courteously smiling at you, the beautiful harpy patiently waits to see what it is you'll do next.
+			美丽的哈比礼貌地向你微笑，耐心地等待着你的下一步行动。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_FOR_SALE"><![CDATA[
 	<p>
-		[pc.speech(If that's what it takes, I'll buy Scarlett,)] you say.
+		[pc.speech(如果这是必要的，我会买下斯嘉丽。)]你说。
 	</p>
 	<p>
-		[helena.speech(What an excellent decision,)] [helena.name] calmly replies,
+		[helena.speech(多么完美的决定，)][helena.name]平静地回答道，
 		#IF(game.getDialogueFlags().hasFlag(FLAG_punishedByHelena))
-			 [helena.speech(Now, taking into consideration the fact that you took that little punishment of mine on Scarlett's behalf, I'm willing to give you a discount. Although she is unquestionably loyal to me, I must inform you that Scarlett can be quite unpleasant towards others, and so would need a good deal of training to make her into a good slave. Taking this into account, I'd value Scarlett at fifteen thousand flames, but with the discount I'm willing to give you, you may purchase her for ten thousand.)]
+			[helena.speech(现在，考虑到你替斯嘉丽接受了我的小小惩罚，我愿意给你打个折。虽然她对我忠心耿耿，但我必须告诉你，斯嘉丽对别人很不友好，所以需要好好训练她，让她成为一个好奴隶。考虑到这一点，我给斯嘉丽估价一万五千火币，但我愿意给你打折，你可以用一万火币买下她。)]
 		#ELSE
-			 [helena.speech(Although she is unquestionably loyal to me, I must inform you that Scarlett can be quite unpleasant towards others, and so would need a good deal of training to make her into a good slave. Taking this into account, I'd value Scarlett at fifteen thousand flames. I'm not one for haggling over prices, so you can either pay the full fifteen thousand, or else I'll find someone else to buy her.)]
+			[helena.speech(虽然她对我忠心耿耿，但我必须告诉你，斯嘉丽对别人很不友好，所以需要好好训练她，才能让她成为一个好奴隶。考虑到这一点，我给斯嘉丽估价一万五千火币。我不喜欢讨价还价，所以你要么全额支付一万五，要么我就找别人买下她。)]
 		#ENDIF
 	</p>
 	<p>
-		[pc.speech(I'll pay that much for her,)] you readily agree, not wanting [helena.name] to sell Scarlett to anyone else.
+		[pc.speech(我会为她付这些钱的，)]你欣然同意，不希望[helena.name]把斯嘉丽卖给别人。
 	</p>
 	<p>
-		[helena.speech(As you were so kind as to come up to my nest and inform me of Scarlett's failure, I'll reserve her for you,)] [helena.name] says, [helena.speech(Simply let me know whenever you're ready to complete your purchase. Oh, and please do remember to bring your slaver license; as I'm sure you already know, it's required in order to complete any slave transaction.)]
+		[helena.speech(既然你这么好心到我的巢穴来告诉我斯嘉丽的失败，我就把她留给你了，)][helena.name]说，[helena.speech(你只需在准备完成购买时告诉我一声即可。对了，请记得带上贩奴许可；我相信你知道，要完成任何奴隶交易，都必须要有贩奴许可。)]
 	</p>
 	#IF(pc.isHasSlaverLicense())
 		<p>
-			[pc.speech(Of course,)] you reply, [pc.speech(I'll have that ready for you.)]
+			[pc.speech(当然，)]你回答，[pc.speech(我会给你准备好的。)]
 		</p>
 		<p>
-			[helena.speech(Most excellent. Please do let me know when you're ready to complete your purchase,)] the beautiful white-feathered harpy replies.
+			[helena.speech(非常完美。当你准备完成购买时，请务必告诉我，)]美丽的白羽哈比回答道。
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(My slaver license...)] you muse out loud, wondering where you could obtain one.
+			[pc.speech(我的贩奴许可……)]你喃喃自语，想知道从哪里能弄到一个。
 		</p>
 		<p>
-			[helena.speech(If you've misplaced yours, then I believe you should be able to fill out some forms and get a replacement at the Slavery Administration building,)] [helena.name] helpfully explains, [helena.speech(It's the same building as the one where you would have first obtained your license. In case you cannot remember, that would be the large one next to the square where all those public stocks are kept.)]
+			[helena.speech(如果你的证件丢了，我相信你可以填写一些表格，在奴隶管理局大楼补办证件，)][helena.name]好心的提到，[helena.speech(这和你最初获得执照的地方是同一座建筑物。如果你记不得了，就是靠近所有公共颈手枷的广场旁边的那座大楼)]
 		</p>
 		<p>
-			Thanking Helena for the information, and concealing the fact that you don't have a license lest the matriarch change her mind about reserving Scarlett for you, you prepare to set off and enquire about obtaining one at this 'Slavery Administration' building...
+			你谢过海伦娜提供的信息，并隐瞒了你没有许可证的事实，以免族长改变为你预订斯嘉丽的主意，你准备出发去“奴隶管理局”大楼询问如何获得许可证……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_BUYING_SCARLETT"><![CDATA[
 	<p>
-		Producing both your slaver license and the [#SPECIAL_PARSE_0] flames which Helena is asking for, you place them down on the counter in front of her, saying that you'd like to purchase Scarlett without any further delay. After quickly checking your license and the money to make sure that everything's in order, [helena.name] smiles at you and softly says, [helena.speech(Thank you for your custom. Please wait one moment while I prepare your slave.)]
+		你拿出你的贩奴许可和[#SPECIAL_PARSE_0]火币，你把它们放在柜台上，说你想立刻购买斯嘉丽。在迅速检查了你的执照和金钱以确保一切都合规之后，[helena.name]微笑并且温和的说，[helena.speech(感谢您的光顾。请稍等片刻，我会准备好您的奴隶。)]
 	</p>
 	<p>
-		Turning to one side, [helena.name] leans down to where Scarlett is sitting behind the counter, before unfastening and removing her ballgag. Sitting back upright, she orders, [helena.speech(Go on, Scarlett, say hello to your new owner.)]
+		转向一边，[helena.name]俯身走到斯嘉丽坐在柜台后面的位置，然后解开并取下了她的口塞。她坐直身子，命令道：[helena.speech(去吧，斯嘉丽，和你的新主人打个招呼。)]
 	</p>
 	<p>
-		As she sulkily stands up and walks around from the other side of the counter, you see that Scarlett is still completely naked except for the metal collar around her neck. Upon seeing you waiting to take ownership of her, the gravity of her situation suddenly hits her, and with her cheeks flushing bright red, she turns back to her matriarch and screams, [scarlett.speech(You fucking bitch! You can't seriously be selling me to [pc.herHim]! You ugly whore, I'll make you pay for this!)]
+		她愠怒地站起来，从柜台的另一侧走了过来，你看到斯嘉丽除了脖子上的金属项圈外仍然是一丝不挂。看到你等待接管她，她突然意识到了自己的处境，脸颊变得通红，她转向她的族长尖叫着，[scarlett.speech(你他妈的臭婊子！你不会真的要把我卖给[pc.herHim]吧！你这个丑婊子，我会让你付出代价的！)]
 	</p>
 	<p>
-		The pleasant smile on [helena.namePos] face instantly vanishes as she hears Scarlett calling her ugly, and as the feathers on her head and wings bristle up, you can almost physically feel the icy rage she's about to unleash on your new slave. You'd better do something to silence Scarlett before this escalates any further.
+		当听到斯嘉丽说她丑时，[helena.namePos]脸上愉快的笑容立刻消失了，她头上和翅膀上的羽毛都炸了起来，你几乎可以感受到她即将对你的新奴隶释放的冷酷怒火。在事态进一步升级之前，你最好想办法让斯嘉丽闭嘴。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_SHOP_SCARLETT_PURCHASED -->
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_PURCHASED_GENTLE"><![CDATA[
 	<p>
-		Thinking that it would best to show Scarlett some kindness, you reach up and place [pc.a_hand] on her shoulder, smiling reassuringly at her as she snaps back around to scowl angrily at you. Speaking in the softest tone you can manage, you say, [pc.speech(Calm down, Scarlett. It's going to be ok. Just take a deep breath and try to relax.)]
+		你认为最好对斯嘉丽表示一下善意，于是伸出[pc.a_hand]放在她的肩膀上，在她回过头来生气地瞪你时，你对她露出了安心的微笑。你用最温柔的语气说道，[pc.speech(冷静下来，斯嘉丽。一切都会没事的。深呼吸，试着放松一下。)]
 	</p>
 	<p>
-		The raven-harpy's face flushes bright red, and for a moment you think that she's about to unleash yet another barrage of foul language, but instead she simply glares into your [pc.eyes] without saying a word. Sharply yanking her shoulder back, she wriggles out of your grip and steps away from you. Realising that any more physical contact is likely to send her into another fit of rage, you simply smile at the angry harpy with as much warmth as you can muster. Seeing that Helena is still on the edge of launching into a furious rage of her own, you ask your new slave, [pc.speech(Could you please apologise to Helena?)]
+		渡鸦哈比的脸涨得通红，有那么一瞬间，你以为她又要爆粗口了，但她只是一言不发地瞪着你的[pc.eyes]。她猛地把肩膀往后一拽，挣脱了你的控制，从你身边走开了。你意识到任何更多的肢体接触都可能让她再次暴怒，于是你只是对着这只愤怒的哈比微笑，并尽可能地给她温暖。看到海伦娜还处在暴怒的边缘，你问你的新奴隶：[pc.speech(你能向海伦娜道歉吗？)]
 	</p>
 	<p>
-		Although she's quick to anger, Scarlett isn't stupid, and quickly realises that as she's your slave, she'd better do as you say. Turning to face Helena, she mutters, [scarlett.speech(Sorry, Helena...)]
+		斯嘉丽虽然脾气暴躁，但并不傻，她很快就意识到，既然她是你的奴隶，就得听你的话。她转过身面对海伦娜，喃喃到：[scarlett.speech(对不起，海伦娜……)]
 	</p>
 	<p>
-		Although the smile doesn't return to her face, Helena's head-feathers flatten back down, and she icily states, [helena.speech(Don't you <i>ever</i> speak to me like that again.)]
+		尽管微笑没有重新出现在她的脸上，海伦娜的头上羽毛放松了下来，她冷冷地说道，[helena.speech(再也不要<i>这样</i>对我说话。)]
 	</p>
 	<p>
-		Now that both harpies have calmed down, you ask Scarlett, [pc.speech(Now, do you think you can finally tell me where Arthur is?)]
+		现在两个哈比都冷静下来了，你问斯嘉丽，[pc.speech(现在，你能告诉我亚瑟在哪里吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_PURCHASED_SHOUT"><![CDATA[
 	<p>
-		Wanting to put Scarlett in her place, you angrily berate her, [pc.speech(You insolent bitch! How <i>dare</i> you?! You're only to speak when spoken to, and if I hear <i>one more</i> insult come out of that filthy mouth of yours, you're going to be sorry!)]
+		你想让斯嘉丽摆正她的位置，于是愤怒地训斥她，[pc.speech(你这个无礼的婊子！你怎么<i>敢</i>？！你只有在被问话时才能说话，如果我再听到你那肮脏的嘴巴里出现<i>一句</i>侮辱，你会后悔的！)]
 	</p>
 	<p>
-		The raven-harpy's face flushes bright red, and for a moment you think that she's about to unleash yet another barrage of foul language, but instead she simply glares into your [pc.eyes] without saying a word. You hold her gaze, and after angrily staring at one another for a moment, Scarlett casts her eyes down to the floor. Seeing that Helena is still on the edge of launching into a furious rage of her own, you tell your new slave, [pc.speech(You're to apologise to Helena, right now!)]
+		渡鸦哈比的脸涨得通红，有那么一瞬间，你以为她又要爆粗口了，但她只是一言不发地瞪着你的[pc.eyes]。你紧紧盯着她，愤怒地对视了一会儿后，斯嘉丽把目光投向了地板。看到海伦娜仍处于愤怒的边缘，你对你的新奴隶说，[pc.speech(你需要给海伦娜道歉！现在！)]
 	</p>
 	<p>
-		Although she's quick to anger, Scarlett isn't stupid, and quickly realises that as she's your slave, she'd better do as you say. Turning to face Helena, she mutters, [scarlett.speech(Sorry, Helena...)]
+		斯嘉丽虽然脾气暴躁，但并不傻，她很快就意识到，既然她是你的奴隶，就得听你的话。她转过身面对海伦娜，喃喃到：[scarlett.speech(对不起，海伦娜……)]
 	</p>
 	<p>
-		Although the smile doesn't return to her face, Helena's head-feathers flatten back down, and she icily states, [helena.speech(Don't you <i>ever</i> speak to me like that again.)]
+		尽管微笑没有重新出现在她的脸上，海伦娜的头上羽毛放松了下来，她冷冷地说道，[helena.speech(再也不要<i>这样</i>对我说话。)]
 	</p>
 	<p>
-		Now that both harpies have calmed down, you turn to face your new slave and order her, [pc.speech(Now, tell me where Arthur is!)]
+		现在两个哈比都安静下来了，你转身面对你的新奴隶，命令她，[pc.speech(现在，告诉我亚瑟在哪！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_PURCHASED_SLAP"><![CDATA[
 	<p>
-		Wanting to put your insolent slave in her place, you step forwards, before quickly reaching up and delivering a sharp slap across her face. As she recoils back from your blow, you shout, [pc.speech(You insolent bitch! How <i>dare</i> you?! You're only to speak when spoken to, and if I hear <i>one more</i> insult come out of that filthy mouth of yours, you're going to be sorry!)]
+		你想让你那无礼的奴隶认清自己的位置，于是走上前去，然后迅速伸手在她脸上狠狠地扇了一巴掌。当她被你打得后退时，你大声喊道：[pc.speech(你这个无礼的婊子！你怎么<i>敢</i>？！你只有在被问话时才能说话，如果我再听到你那肮脏的嘴巴里出现<i>一句</i>侮辱，你会后悔的！)]
 	</p>
 	<p>
-		With her mouth open wide in shock, the raven-harpy's face flushes bright red, and for a moment you think that she's about to unleash yet another barrage of foul language, but instead she simply glares into your [pc.eyes] without saying a word. You hold her gaze, and after angrily staring at one another for a moment, Scarlett casts her eyes down to the floor. Seeing that Helena is still on the edge of launching into a furious rage of her own, you tell your new slave, [pc.speech(You're to apologise to Helena, right now!)]
+		渡鸦哈比惊愕地张大嘴巴，脸涨得通红，有那么一瞬间，你以为她又要爆粗口了，但她只是一言不发地瞪着你的[pc.eyes]。你紧紧盯着她，愤怒地对视了一会儿后，斯嘉丽把目光投向了地板。看到海伦娜仍处于愤怒的边缘，你对你的新奴隶说，[pc.speech(你需要给海伦娜道歉！现在！)]
 	</p>
 	<p>
-		Although she's quick to anger, Scarlett isn't stupid, and quickly realises that as she's your slave, she'd better do as you say. Turning to face Helena, she mutters, [scarlett.speech(Sorry, Helena...)]
+		斯嘉丽虽然脾气暴躁，但并不傻，她很快就意识到，既然她是你的奴隶，就得听你的话。她转过身面对海伦娜，喃喃到：[scarlett.speech(对不起，海伦娜……)]
 	</p>
 	<p>
-		Although the smile doesn't return to her face, Helena's head-feathers flatten back down, and she icily states, [helena.speech(Don't you <i>ever</i> speak to me like that again.)]
+		尽管微笑没有重新出现在她的脸上，海伦娜的头上羽毛放松了下来，她冷冷地说道，[helena.speech(再也不要<i>这样</i>对我说话。)]
 	</p>
 	<p>
-		Now that both harpies have calmed down, you turn to face your new slave and order her, [pc.speech(Now, tell me where Arthur is!)]
+		现在两个哈比都安静下来了，你转身面对你的新奴隶，命令她，[pc.speech(现在，告诉我亚瑟在哪！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_SCARLETT_PURCHASED"><![CDATA[
 	<p>
-		You see a flicker of defiance deep down in Scarlett's [scarlett.eyeColour] [scarlett.eyes], but she simply lets out a little huff, before rudely answering, [scarlett.speech(I don't have any fucking choice, do I? I'm guessing you know that Arthur was enslaved by the Enforcers. Well, through a random lottery, I was the 'lucky' person who ended up taking possession of him. Not five minutes after he was delivered here, some <i>bastard incubus</i> came by and demanded that I give Arthur over to him, without any payment!)]
+		你看到斯嘉丽的[scarlett.eyeColour][scarlett.eyes]眼神深处闪过一丝挑衅，但她只是轻轻哼了一声，然后就粗鲁地回答道，[scarlett.speech(我没有任何选择，对吗？我猜你知道亚瑟被执法者奴役了。嗯，通过一个随机抽签，我成了他‘幸运’的拥有者。在他被送到这里不到5分钟后，一些<i>混蛋的淫梦魔</i>来了并要求我把亚瑟交给他，没有任何报酬！)]
 	</p>
 	<p>
-		You notice Scarlett fidgeting around as she starts getting angry at the thought of what happened to her, and she angrily curses, [scarlett.speech(That fucking cunt had all these official documents of minor infractions I'd committed while running this shop, and he made me fucking choose between being shut down or handing over Arthur! Obviously, I chose the latter option.)]
+		你注意到斯嘉丽焦躁不安，她一想到自己的遭遇就开始生气，愤怒地咒骂着，[scarlett.speech(那个混蛋手里有我开店时犯的所有轻微违规的官方文件，他让我在被查封和交出亚瑟之间做选择 ，很显然，我选择了后者。)]
 	</p>
 	<p>
-		[pc.speech(Do you know the name of this incubus? Or where he lives?)] you ask, desperate to finally find out where Arthur is being held.
+		[pc.speech(你知道那个淫梦魔的名字吗？或者他住在哪？)]你问道，迫切希望知道亚瑟被关在哪里。
 	</p>
 	<p>
-		[scarlett.speech(I don't know, it was some stupid fucking name beginning with 'Z'... Hmm... 'Zaranix', I think it was,)] Scarlett growls, the very thought of his name making her cheeks flush red with rage, [scarlett.speech(The cunt's not hard to miss; after all, how many demons do you see choosing to stay in their male form? If you want to know where he lives, then you can find his address on a piece of paper in my drawer over there... I had to verify the fucker's slaver license, and made a note of where he lived so that I could go and get my revenge later...)]
+		[scarlett.speech(我不知道，那是一个以‘扎’开头的愚蠢名字……嗯……我想是‘扎拉尼克斯’。)]斯嘉丽咆哮着，一想到他的名字，她就气得脸颊通红，[scarlett.speech(这个混蛋并不难找，毕竟，你能看到多少恶魔选择保持男性形态？如果你想知道他住在哪里，你可以在我抽屉里的一张纸上找到他的地址……我必须核实这个混蛋的奴隶主执照，并记下了他的住址，以便以后去报仇……)]
 	</p>
 	<p>
-		Having overheard your conversation, [helena.name] pulls open the drawers beneath her counter until she finds the scrap of paper Scarlett's talking about. Helpfully walking over to where you're standing and handing it over to you, she then returns to sit in her chair once more. After taking a moment to decipher Scarlett's barely-legible handwriting, you groan as you realise that you're going to have to travel back over to Demon Home; the address where he's being kept is just a short way down the street from where his apartment building is.
+		[helena.name]无意中听到了你们的谈话，她拉开柜台下面的抽屉，直到找到斯嘉丽所说的那张废纸。她走到你站的地方，把纸递给你，然后再次回到椅子上坐下。你花了一点时间解读斯嘉丽勉强可以辨认的字迹，然后意识到你必须回到恶魔之家，他被关押的地址离他的公寓楼不远。
 	</p>
 	<p>
-		Your thoughts about how you're going to deal with Zaranix are suddenly interrupted by Scarlett's impatient shuffling, and you realise that you're going to have to decide what you're going to do with her before anything else...
+		斯嘉丽不耐烦地摇了摇头，打断了你关于如何对付扎拉尼克斯的思考，你意识到你必须先决定如何处置她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<htmlContent tag="HELENAS_SHOP_BUYING_SCARLETT_KEEP_HER"><![CDATA[
 	<p>
-		Deciding that you're going to keep Scarlett, you turn towards [helena.name] and ask, [pc.speech(Can I get Scarlett transferred somewhere? I don't have the time to escort her around right now.)]
+		你决定留下斯嘉丽，转头，[pc.speech(我能把斯嘉丽送到别的地方去吗？我现在没时间陪她到处跑。)]
 	</p>
 	<p>
-		[helena.speech(Well, of course. All newly-bought slaves have to be processed through the Slavery Administration first; now that you've concluded your business with Scarlett, she can be held there until you're ready to collect her,)] [helena.name] responds, before motioning with her wing to one side of the shop, [helena.speech(Please wait over there, Scarlett, I'll take you down to the Slavery Administration building once [pc.name] has departed.)]
+		[helena.speech(当然可以。所有新买来的奴隶都要先经过奴隶管理局的处理；现在你已经完成了与斯嘉丽的交易，她可以被关押在那里，直到你准备好领取她为止，)][helena.name]回复到，然后用翅膀向商店的一边示意，[helena.speech(请在那边等着，斯嘉丽，等[pc.name]离开后，我就带你去奴隶管理局大楼。)]
 	</p>
 	<p>
-		You thank Helena for her cooperation and prepare to exit her store, but before you can leave, the harpy matriarch calls out, [helena.speech(I've decided to personally take over the management of this shop, so if you ever need to buy or sell any slaves, please keep me in mind!)]
+		你对海伦娜的合作表示感谢，并准备离开她的商店，但在你离开之前，哈比族长叫住了你，[helena.speech(我决定亲自接手管理这家商店，所以如果你需要买卖任何奴隶，请记住我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELENAS_SHOP_BUYING_SCARLETT_FREE_HER"><![CDATA[
 	<p>
-		Not liking the idea of keeping Scarlett as a slave, you turn towards [helena.name] and ask, [pc.speech(Do I need to fill out some kind of form to set Scarlett free?)]
+		你不喜欢让斯嘉丽做奴隶，于是转向[helena.name]问，[pc.speech(我需要填写什么表格才能释放斯嘉丽吗？)]
 	</p>
 	<p>
-		[helena.speech(Oh my, it looks like today's your lucky day,)] [helena.name] calmly says to Scarlett, before turning to you and replying, [helena.speech(As a matter of fact, yes, setting slaves free requires a Freedom Certification, which is extremely difficult to obtain... Luckily for you, I happen to have a friend or two in <i>very</i> high places, so getting that Certification would be easy for me. I must admit that I do slightly regret doing this to Scarlett, so if you really do want to set her free, I'll get the paperwork sorted.)]
+		[helena.speech(哦，天哪，看来今天是你的幸运日，)][helena.name]平静地对斯嘉丽说，然后转向你回答道，[helena.speech(事实上，是的，释放奴隶需要自由证书，而获得自由证书非常困难……幸运的是，我有一两个朋友地位<i>非常</i>高，所以获得自由证书对我来说易如反掌，我得承认，我有点后悔对斯嘉丽这么做了，如果你真的想让她自由，我会去办手续的。)]
 	</p>
 	<p>
-		[scarlett.speech(You're really setting me free?)] Scarlett asks, and as you reply in the affirmative, she mumbles, [scarlett.speech(Thank you... I guess...)]
+		[scarlett.speech(你真的要放我自由？)]斯嘉丽问，你回答是，她喃喃到，[scarlett.speech(我猜……谢谢你……)]
 	</p>
 	<p>
-		[helena.speech(Wait for me over there,)] [helena.name] calls out to Scarlett, using her wing to motion towards one side of the shop, [helena.speech(Once [pc.name] has left, I'll have you set free, and then you can return to my nest. Oh, and don't think that I've forgotten about your silly little outburst earlier; I'll make sure that you're punished for insulting me.)]
+		[helena.speech(在那边等我，)][helena.name]向斯嘉丽喊道，并用翅膀向商店的一侧示意，[helena.speech(等[pc.name]一走，我就把你放了，然后你就可以回我的窝了。哦，别以为我忘了你刚才的愚蠢举动，我会让你因为侮辱我而受到惩罚的。)]
 	</p>
 	<p>
-		[scarlett.speech(Yes, [helena.name]...)] Scarlett mumbles, walking over to one side of the shop and obediently waiting there.
+		[scarlett.speech(是的，[helena.name]……)]斯嘉丽喃喃地说着，走到商店的一边，乖乖地等在那里。
 	</p>
 	<p>
-		[helena.speech(I suppose I must thank you for returning a member of my flock to me,)] [helena.name] says, turning towards you with a smug smile on her face. Thanking Helena for her cooperation, you prepare to exit her store, but before you can leave, the harpy matriarch calls out, [helena.speech(I've decided to personally take over the management of this shop, so if you ever need to buy or sell any slaves, please keep me in mind!)]
+		[helena.speech(我想我必须感谢你把我的族群中的一员还给了我，)][helena.name]说着，她转过身来，脸上带着满意的微笑。感谢海伦娜的合作，你准备离开她的商店，但在你离开之前，哈比族长叫住了你，[helena.speech(我决定亲自接手管理这家商店，所以如果你需要买卖任何奴隶，请记住我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

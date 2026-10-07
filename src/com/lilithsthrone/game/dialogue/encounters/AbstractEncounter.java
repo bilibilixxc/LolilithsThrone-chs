@@ -598,13 +598,13 @@ public abstract class AbstractEncounter {
 	}
 	
 	public static Response exploreArea() {
-		return exploreArea("this area");
+		return exploreArea("该区域");
 	}
 
 	public static Response exploreArea(String areaDescription) {
 		return new ResponseEffectsOnly(
-				"Explore",
-				"Explore " + areaDescription + ". Although you don't think you're any more or less likely to find anything by doing this, at least you won't have to keep travelling back and forth..."){
+				"探索",
+				"探索" + areaDescription + "。尽管你觉得不太可能找到什么东西，但至少不用无所事事地来回晃悠了……"){
 			@Override
 			public int getSecondsPassed() {
 				return 30*60;
@@ -621,16 +621,16 @@ public abstract class AbstractEncounter {
 //		System.out.println("AVAILABLE: "+ItemType.OFFSPRING_MAP.isAbleToBeUsed(Main.game.getPlayer(), Main.game.getPlayer()));
 		
 		if(!Main.game.getPlayer().hasItemType(ItemType.OFFSPRING_MAP)) {
-			return new Response("Offspring Map",
-							UtilText.parse("You do not have an offspring map..."
-									+ "<br/><i>An offspring map can be purchased from [vanessa.name] in City Hall.</i>"),
+			return new Response("后代地图",
+							UtilText.parse("你没有后代地图..."
+									+ "<br/><i>后代地图可以向市政厅的[vanessa.name]购买。</i>"),
 					null);
 		} else if (!ItemType.OFFSPRING_MAP.isAbleToBeUsed(Main.game.getPlayer(), Main.game.getPlayer())) {
-			return new Response("Offspring Map",
+			return new Response("后代地图",
 					ItemType.OFFSPRING_MAP.getUnableToBeUsedDescription(Main.game.getPlayer(), Main.game.getPlayer()),
 					null);
 		} else {
-			return new ResponseEffectsOnly("Offspring Map",
+			return new ResponseEffectsOnly("后代地图",
 					ItemType.OFFSPRING_MAP.getUseTooltipDescription(Main.game.getPlayer(), Main.game.getPlayer())) {
 				@Override
 				public void effects() {

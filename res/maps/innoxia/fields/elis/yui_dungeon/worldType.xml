@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Yui's Dungeon]]></name>
+	<name><![CDATA[唯的地牢]]></name>
 	<colour>BASE_CRIMSON</colour>
 	<sexBlockedReason/> 
 	<furniturePresent>true</furniturePresent>

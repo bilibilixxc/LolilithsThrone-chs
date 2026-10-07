@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_sheep</race>
 	<colour>innoxia_sheep</colour>
@@ -23,24 +23,24 @@
 	<iconName displaySize="80">icon</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>Woolly Friends</bookName>
+	<bookName><![CDATA[软软的朋友]]></bookName>
 	<basicDescriptionId>SHEEP_BASIC</basicDescriptionId>
 	<advancedDescriptionId>SHEEP_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[sheep-morph]]></name>
-	<namePlural><![CDATA[sheep-morphs]]></namePlural>
-	<singularMaleName><![CDATA[sheep-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[sheep-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[sheep-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[sheep-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic sheep, known as a 'sheep-morph' when bipedal, and a 'sheeptaur' when the lower body is that of a feral sheep.]]></description>
+	<name><![CDATA[绵羊化形]]></name>
+	<namePlural><![CDATA[绵羊化形]]></namePlural>
+	<singularMaleName><![CDATA[绵羊男]]></singularMaleName>
+	<singularFemaleName><![CDATA[绵羊女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[绵羊男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[绵羊女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的绵羊，当下肢为双足时称为“绵羊化形”，而下肢呈现出羊兽态时称为“半绵羊人”。]]></description>
 	<feralAttributes>
-		<feralName><![CDATA[sheep]]></feralName>
-		<feralNamePlural><![CDATA[sheep]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[ram]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[ewe]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[rams]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[ewes]]></feralPluralFemaleName>
+		<feralName><![CDATA[绵羊]]></feralName>
+		<feralNamePlural><![CDATA[绵羊]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[公绵羊]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[母绵羊]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[公绵羊]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[母绵羊]]></feralPluralFemaleName>
 		<legConfiguration>QUADRUPEDAL</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>120</size>
@@ -53,7 +53,7 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] woolly body has a high resistance to both natural and arcane cold. [npc.She] also [npc.has] a strong instinct to be part of a flock, which helps [npc.herHim] to seduce others.
+		[npc.NamePos]毛茸茸的身体对自然和奥术寒冷都有很高的抵抗力。[npc.She]也有着强烈的本能，希望成为族群一部分，这有助于[npc.herHim]诱惑其他人。
 	]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="5">MAJOR_PHYSIQUE</attribute>

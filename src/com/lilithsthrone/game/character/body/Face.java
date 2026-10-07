@@ -125,15 +125,15 @@ public class Face implements BodyPartInterface {
 		}
 		
 		if (type == getType()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.face] of [npc.a_faceRace], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_faceRace]的[npc.face]了，所以无事发生……)]</p>");
 		}
 		
 		StringBuilder sb = new StringBuilder();
 
 		sb.append("<p>");
 		sb.append(
-				 "An intense tingling sensation suddenly sweeps across [npc.namePos] [npc.face], and [npc.she] [npc.verb(scrunch)] up [npc.her] [npc.eyes] as [npc.she] [npc.verb(feel)] it start to transform."
-					+ " With an audible crunch, [npc.her] facial bones start to restructure themselves, and although the feeling isn't painful, it's enough of a shock to cause [npc.herHim] to let out an involuntary cry. ");
+				 "一种强烈的刺痛感突然掠过[npc.namePos]的[npc.face]，在意识到转化的发生时，[npc.she]瞪大了双眼。"
+					+ "随着一声清脆的响声，[npc.her]的面部骨骼开始重组，虽然这种感觉并不痛苦，但足以让[npc.herHim]不由自主地惊叫了一声");
 		
 		// Parse existing content before transformation:
 		String s = UtilText.parse(owner, sb.toString());
@@ -159,14 +159,14 @@ public class Face implements BodyPartInterface {
 
 	public String setPiercedNose(GameCharacter owner, boolean piercedNose) {
 		if(owner.isPiercedNose() == piercedNose) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		this.piercedNose = piercedNose;
 		
 		if(piercedNose) {
 			return UtilText.parse(owner,
-					"<p>[npc.NamePos] [npc.nose] is now [style.boldGrow(pierced)]!</p>");
+					"<p>[npc.NamePos]的[npc.nose]现在已[style.boldGrow(穿孔)]！</p>");
 			
 		} else {
 			AbstractClothing c = owner.getClothingInSlot(InventorySlot.PIERCING_NOSE);
@@ -178,7 +178,7 @@ public class Face implements BodyPartInterface {
 			
 			return UtilText.parse(owner,
 					"<p>"
-							+ "[npc.NamePos] [npc.nose] is [style.boldShrink(no longer pierced)]!"
+							+ "[npc.NamePos]的[npc.nose][style.boldShrink(不再有穿孔了)]！"
 					+ "</p>"
 					+piercingUnequip);
 		}
@@ -199,47 +199,47 @@ public class Face implements BodyPartInterface {
 		}
 
 		if(!this.getType().isFacialHairAllowed()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled(As [npc.namePos] face type prevents [npc.herHim] from growing a beard, nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.namePos]的脸型使[npc.herHim]无法长出胡须，所以无事发生……)]</p>");
 		}
 		
 		if(owner.getFemininityValue()>=Femininity.ANDROGYNOUS.getMinimumFemininity() && facialHair!=BodyHair.ZERO_NONE && !Main.getProperties().hasValue(PropertyValue.feminineBeardsContent)) {
 			if(owner.isPlayer()) {
-				return "<p style='text-align:center;'>[style.colourDisabled(You're too feminine to be able to grow a beard...)]</p>";
+				return "<p style='text-align:center;'>[style.colourDisabled(你太过女性化，无法长出胡子……)]</p>";
 			} else {
-				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.sheIs] too feminine to be able to grow a beard...)]</p>");
+				return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.sheIs]太过女性化，无法长出胡子……)]</p>");
 			}
 		}
 		
 		if(getFacialHair() == facialHair) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		StringBuilder sb = new StringBuilder();
 		
 		switch(facialHair) {
 			case ZERO_NONE:
-				sb.append(UtilText.parse(owner, "<p>There is no longer any trace of "+getFacialHairType(owner).getFullDescription(owner, true)+" on [npc.her] face.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.her]的面部上不再有"+getFacialHairType(owner).getFullDescription(owner, true)+"的痕迹。</p>"));
 				break;
 			case ONE_STUBBLE:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a stubbly layer of "+getFacialHairType(owner).getFullDescription(owner, true)+" on [npc.her] face.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的脸上现在有了短而粗的"+getFacialHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case TWO_MANICURED:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a small amount of "+getFacialHairType(owner).getFullDescription(owner, true)+" on [npc.her] face.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的脸上现在有了少量的"+getFacialHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case THREE_TRIMMED:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a well-trimmed beard of "+getFacialHairType(owner).getFullDescription(owner, true)+" on [npc.her] face.</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的脸上现在有了修剪整齐的"+getFacialHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case FOUR_NATURAL:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a beard, made of "+getFacialHairType(owner).getFullDescription(owner, true)+".</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的脸上现在有着胡须，外观似"+getFacialHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case FIVE_UNKEMPT:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] an unkempt, bushy beard, made of "+getFacialHairType(owner).getFullDescription(owner, true)+".</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的脸上现在有着蓬乱浓密的胡须，外观似"+getFacialHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case SIX_BUSHY:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a large, bushy beard, made of "+getFacialHairType(owner).getFullDescription(owner, true)+".</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的脸上现在有着大而浓密的胡须，外观似"+getFacialHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 			case SEVEN_WILD:
-				sb.append(UtilText.parse(owner, "<p>[npc.Name] now [npc.has] a wild, thick beard, made of "+getFacialHairType(owner).getFullDescription(owner, true)+".</p>"));
+				sb.append(UtilText.parse(owner, "<p>[npc.Name]的脸上现在有着浓密且毫无修饰的大胡子，外观似"+getFacialHairType(owner).getFullDescription(owner, true)+"。</p>"));
 				break;
 		}
 		

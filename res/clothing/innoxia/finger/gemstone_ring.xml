@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>2500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[gemstone ring]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[gemstone rings]]></namePlural>
-		<description><![CDATA[A band of metal, housing a cut and polished gemstone, which slides down onto a person's finger. Its slender, delicate shape makes it suitable only for feminine characters to wear.]]></description>
+		<determiner><![CDATA[一枚]]></determiner>
+		<name><![CDATA[宝石戒指]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[宝石戒指]]></namePlural>
+		<description><![CDATA[一枚内镶有切割并抛光的宝石的戒指，能够轻松戴在一个人的手指上。其纤细而精致的设计使其只适合女性角色佩戴。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>FINGER</slot>
@@ -58,27 +57,27 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the gemstone ring onto [npc.her] [npc.finger].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the gemstone ring onto [npc2.namePos] [npc2.finger].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(push)] the gemstone ring onto [npc2.namePos] [npc2.finger].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]把宝石戒指戴到了[npc.her]的[npc.finger]上。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将宝石戒指戴到[npc2.namePos]的[npc2.finger]上。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将宝石戒指戴在[npc2.namePos]的[npc2.finger]上。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the gemstone ring off [npc.her] [npc.finger].]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] the gemstone ring off [npc2.namePos] [npc2.finger].]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] [npc.verb(snatch)] the gemstone ring off [npc2.namePos] [npc2.finger].]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将宝石戒指从[npc.her]的[npc.finger]上摘下。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将宝石戒指从[npc2.namePos]的[npc2.finger]上摘下。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]抢下了[npc2.namePos][npc2.finger]上的宝石戒指。
+]]></otherRough>
   </displacementText>
   
 </clothing>

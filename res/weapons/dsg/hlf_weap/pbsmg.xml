@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
-		<authorTag><![CDATA[Underneath the receiver, a small engraving reads "MFD by DSG Forgeworks."]]></authorTag>
+		<authorTag><![CDATA[机匣上刻着细小的字迹，写着“DSG铸造厂生产。”]]></authorTag>
 		<value>2500</value>
 		<melee>false</melee>
 		<twoHanded>true</twoHanded>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendDamageName="true"><![CDATA[pepperball submachine gun]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[pepperball submachine gun]]></namePlural>
-		<description><![CDATA[Although this weapon looks masterfully crafted, it nonetheless bears all the signs of having been made by hand rather than manufactured. Stamped on the body is an insignia that you don't recognize.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription><![CDATA[Shoot [npc2.name] with your submachine gun.]]></attackTooltipDescription>
+		<determiner><![CDATA[一把]]></determiner>
+		<name appendDamageName="true"><![CDATA[胡椒弹冲锋枪]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[胡椒弹冲锋枪]]></namePlural>
+		<description><![CDATA[这把武器尽管看起来制作精良，但很显然是手工打造而非批量生产的。枪身上印有一个你不认识的标记。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[用你的冲锋枪射向[npc2.name]。]]></attackTooltipDescription>
 		<rarity>RARE</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] out the submachine gun, [npc.verb(load)] a fresh magazine, and [npc.verb(pulls)] the charging handle before disengaging the safety.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(open)] the bolt and [npc.verb(check)] to see that the chamber is empty before removing the magazine and putting the submachine gun away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出冲锋枪，插入一个新的弹匣，拉动了拉机柄，然后关闭了保险。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]取出了弹匣，打开保险，拉了拉拉机柄，确认了膛室内没有剩余的弹药，然后收起了冲锋枪。]]></unequipText>
 		<imageName>pbsmg_uneq.svg</imageName>
 		<imageEquippedName>pbsmg.svg</imageEquippedName>
 		<physicalResistance>0</physicalResistance>
@@ -47,13 +47,13 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(squeeze)] off a burst at [npc2.name]. The gelatin capsules burst on impact with [npc2.namePos] aura, splattering [npc2.herHim] with stinging, burning oil.
+		[npc.Name]朝着[npc2.name]瞄准并进行了一轮扫射。胶囊撞击在[npc2.namePos]灵气上并破裂，刺痛、灼热的油溅到[npc2.herHim]的身上。
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		[npc.Name] [npc.verb(line)] up [npc2.name] in [npc.her] sights and [npc.verb(squeeze)] off a burst at [npc2.name]. The capsules miss [npc2.herHim] completely and splatters uselessly in the distance.
+		[npc.Name]朝着[npc2.name]瞄准并进行了一轮扫射。胶囊没有命中[npc2.namePos]并飞到远处，毫无作用。
 		]]></missText>
 	</missDescriptions>
 	

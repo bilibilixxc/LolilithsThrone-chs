@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <torso>
 	<race>NoStepOnSnek_snake</race>
-	<transformationName><![CDATA[snake]]></transformationName>
+	<transformationName><![CDATA[蛇]]></transformationName>
 	<coveringType>SNAKE_SCALES</coveringType>
 	<descriptorsMasculine/>
 	<descriptorsFeminine/>
 	<transformationDescription><![CDATA[
-		After just a few moments, the transformation comes to an end, and [npc.she] [npc.verb(let)] out a deep sigh as the itching finally stops, leaving [npc.her] torso covered with snake-like scales. [npc.Her] new scales are smooth to the touch.
-		<br/>[npc.Name] now [npc.has] [style.boldSnake(snake-like)], [npc.skinFullDescription].
-	]]></transformationDescription>
+		片刻后，转化来到末尾。[npc.she]身上的瘙痒终于褪去，发出了解脱的叹息。蛇鳞片覆盖在[npc.her]的躯干上。新生的鳞片触感光滑。
+		<br/>[npc.Name]现在拥有[style.boldSnake(蛇般)][npc.skinFullDescription]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		[npc.Her] torso has [npc.a_femininity(true)] appearance, and is [npc.materialCompositionDescriptor] [npc.skinFullDescription(true)].
-	]]></bodyDescription>
+		[npc.Her]的躯干有着[npc.a_femininity(true)]外观，并且是[npc.materialCompositionDescriptor][npc.skinFullDescription(true)]。
+]]></bodyDescription>
 </torso>

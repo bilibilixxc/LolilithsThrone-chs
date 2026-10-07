@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[bar]]></name>
-	<tooltipDescription><![CDATA[Positioned near to the entrance, the bar at 'The Crossed Blades' is home to the 'beer bitches'.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the bar in 'The Crossed Blades' tavern]]></virginityLossDescription>
+	<name><![CDATA[酒吧]]></name>
+	<tooltipDescription><![CDATA[靠近“十字利刃”的入口处，这处吧台容纳这“奶啤妓”。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[于“十字利刃”酒馆的吧台]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_ORANGE</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

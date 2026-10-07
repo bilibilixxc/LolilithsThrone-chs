@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>800</value> 
 		
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 		
-		<name><![CDATA[suit jacket]]></name>
+		<name><![CDATA[西装夹克]]></name>
 		
-		<namePlural pluralByDefault="false"><![CDATA[suit jackets]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[西装夹克]]></namePlural> 
 		
-		<description><![CDATA[A smart suit jacket, which looks best when worn with a shirt and tie.]]></description> 
+		<description><![CDATA[一件时髦的西装外套，搭配衬衫和领带最好看。]]></description> 
 		
 		<physicalResistance>0</physicalResistance> 
 		

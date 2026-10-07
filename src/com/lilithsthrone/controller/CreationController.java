@@ -225,7 +225,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -402,9 +402,9 @@ public class CreationController {
 				}, false);
 				if (BodyChanging.getTarget().getBreastRawSizeValue()<=CupSize.getMinimumCupSizeForEggIncubation().getMeasurement() && BodyChanging.getTarget().getIncubationLitter(SexAreaOrifice.NIPPLE) != null) {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"[style.colourBad(Size Decrease Blocked)]",
+							"[style.colourBad(禁止减小尺寸)]",
 							UtilText.parse(BodyChanging.getTarget(),
-									"[npc.NamePos] breasts cannot be shrunk any further while eggs are being incubated in them!"),
+									"在被授卵后，[npc.NamePos]的乳房不能进一步缩小了！"),
 							32));
 				}
 			}
@@ -416,9 +416,9 @@ public class CreationController {
 				}, false);
 				if (BodyChanging.getTarget().getBreastRawSizeValue()<=CupSize.getMinimumCupSizeForEggIncubation().getMeasurement() && BodyChanging.getTarget().getIncubationLitter(SexAreaOrifice.NIPPLE) != null) {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"[style.colourBad(Size Decrease Blocked)]",
+							"[style.colourBad(禁止减小尺寸)]",
 							UtilText.parse(BodyChanging.getTarget(),
-									"[npc.NamePos] breasts cannot be shrunk any further while eggs are being incubated in them!"),
+									"在被授卵后，[npc.NamePos]的乳房不能进一步缩小了！"),
 							32));
 				}
 			}
@@ -514,7 +514,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(modifier.getName()),
-						(modifier.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+modifier.getDescription()));
+						(modifier.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+modifier.getDescription()));
 			}
 		}
 	}
@@ -641,7 +641,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -852,9 +852,9 @@ public class CreationController {
 			}, false);
 			if (BodyChanging.getTarget().getBreastRawSizeValue()<=CupSize.getMinimumCupSizeForEggIncubation().getMeasurement() && BodyChanging.getTarget().getIncubationLitter(SexAreaOrifice.NIPPLE) != null) {
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-						"[style.colourBad(Size Decrease Blocked)]",
+						"[style.colourBad(禁止减小尺寸)]",
 						UtilText.parse(BodyChanging.getTarget(),
-								"[npc.NamePos] breasts cannot be shrunk any further while eggs are being incubated in them!"),
+								"在被授卵后，[npc.NamePos]的乳房不能进一步缩小了！"),
 						32));
 			}
 		}
@@ -866,9 +866,9 @@ public class CreationController {
 			}, false);
 			if (BodyChanging.getTarget().getBreastRawSizeValue()<=CupSize.getMinimumCupSizeForEggIncubation().getMeasurement() && BodyChanging.getTarget().getIncubationLitter(SexAreaOrifice.NIPPLE) != null) {
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-						"[style.colourBad(Size Decrease Blocked)]",
+						"[style.colourBad(禁止减小尺寸)]",
 						UtilText.parse(BodyChanging.getTarget(),
-								"[npc.NamePos] breasts cannot be shrunk any further while eggs are being incubated in them!"),
+								"在被授卵后，[npc.NamePos]的乳房不能进一步缩小了！"),
 						32));
 			}
 		}
@@ -963,7 +963,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(modifier.getName()),
-						(modifier.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+modifier.getDescription()));
+						(modifier.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+modifier.getDescription()));
 			}
 		}
 	}
@@ -1090,7 +1090,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -1277,7 +1277,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -1500,7 +1500,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(penMod.getName()),
-						(penMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+penMod.getDescription()));
+						(penMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+penMod.getDescription()));
 			}
 		}
 	}
@@ -1728,7 +1728,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(modifier.getName()),
-						(modifier.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+modifier.getDescription()));
+						(modifier.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+modifier.getDescription()));
 			}
 		}
 	}
@@ -1831,7 +1831,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -1899,7 +1899,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -2085,13 +2085,13 @@ public class CreationController {
 						|| BodyChanging.getTarget().hasStatusEffect(StatusEffect.PREGNANT_0)
 						|| BodyChanging.getTarget().getIncubationLitter(SexAreaOrifice.VAGINA) != null)) {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"[style.colourBad(Vagina Removal Blocked)]",
+							"[style.colourBad(禁止移除阴道)]",
 							UtilText.parse(BodyChanging.getTarget(),
 									BodyChanging.getTarget().getIncubationLitter(SexAreaOrifice.VAGINA) != null
-											?"[npc.NamePos] vagina cannot be removed while eggs are being incubated in [npc.namePos] womb!"
+											?"在子宫中被授卵后，[npc.NamePos]的阴道无法被移除！"
 											:(BodyChanging.getTarget().hasStatusEffect(StatusEffect.PREGNANT_0)
-											?"[npc.NamePos] vagina cannot be removed while there is a chance that [npc.name] might be pregnant!"
-											:"[npc.NamePos] vagina cannot be removed while [npc.nameIsFull] pregnant!")),
+											?"在有可能怀孕的情况下，[npc.NamePos]的阴道无法被移除！"
+											:"在[npc.nameIsFull]怀孕时，[npc.NamePos]的阴道无法被移除！")),
 							32));
 				}
 			}
@@ -2136,7 +2136,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(modifier.getName()),
-						(modifier.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+modifier.getDescription()));
+						(modifier.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+modifier.getDescription()));
 			}
 		}
 	}
@@ -2217,7 +2217,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -2289,7 +2289,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(penMod.getName()),
-						(penMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+penMod.getDescription()));
+						(penMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+penMod.getDescription()));
 			}
 		}
 	}
@@ -2400,7 +2400,7 @@ public class CreationController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						Util.capitaliseSentence(orificeMod.getName()),
-						(orificeMod.isSpecialEffects()?"[style.boldGood(Special Effect:)] ":"")+orificeMod.getDescription()));
+						(orificeMod.isSpecialEffects()?"[style.boldGood(特殊效果:)] ":"")+orificeMod.getDescription()));
 			}
 		}
 	}
@@ -2927,18 +2927,18 @@ public class CreationController {
 					boolean confirm = Main.getProperties().hasValue(PropertyValue.tattooRemovalConfirmations);
 					if (Main.game.isInNewWorld()) {
 						if (Main.game.getPlayer().getMoney()>=100) {
-							sb.append("It will cost "+UtilText.formatAsMoney(100, "span")+" to remove this tattoo!");
+							sb.append("移除该纹身需要花费"+UtilText.formatAsMoney(100, "span")+"！");
 						} else {
-							sb.append("You don't have the required "+UtilText.formatAsMoney(100, "span")+" to remove this tattoo!");
+							sb.append("你没有足够的"+UtilText.formatAsMoney(100, "span")+"来移除该纹身！");
 							confirm = false;
 						}
 					} else {
-						sb.append("Remove this tattoo.");
+						sb.append("移除该纹身。");
 					}
 					if(confirm) {
-						sb.append(" (<i>You will need to click twice to remove it.</i>)");
+						sb.append(" (<i>你需要两次点击才能移除。</i>)");
 					}
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Remove tattoo", sb.toString(), 32));
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("移除纹身", sb.toString(), 32));
 					
 				} else {
 					DialogueNode nextDialogue;
@@ -2962,7 +2962,7 @@ public class CreationController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Add tattoo", "Click to proceed to the tattoo customisation screen.", 16));
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("增加纹身", "点击以进入纹身自定义界面。", 16));
 				}
 			}
 			
@@ -2990,7 +2990,7 @@ public class CreationController {
 						}
 					});
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Modify tattoo", "Click to proceed to the tattoo customisation screen.", 16));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("纹身修改", "点击以进入自定义纹身界面。", 16));
 			}
 			
 			id = "TATTOO_ENCHANT_"+invSlot.toString();
@@ -3003,7 +3003,7 @@ public class CreationController {
 						}
 					});
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Enchant tattoo", "Click to proceed to the tattoo enchantment screen.", 16));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("纹身附魔", "点击以进入纹身附魔界面。", 16));
 			}
 		}
 	}
@@ -3038,8 +3038,8 @@ public class CreationController {
 				}
 				String description = type.getDescription();
 				if (!type.getSlotAvailability().contains(CharacterModificationUtils.tattooInventorySlot)) {
-					description += "<br/>[style.italicsBad(This tattoo type can't be applied to '"+CharacterModificationUtils.tattooInventorySlot.getTattooSlotName()+"'!)]<br/>"
-							+"Available slots: "+Util.tattooInventorySlotsToStringList(type.getSlotAvailability());
+					description += "<br/>[style.italicsBad(该纹身类型不能被应用在'"+CharacterModificationUtils.tattooInventorySlot.getTattooSlotName()+"'上！)]<br/>"
+							+"可用栏位:"+Util.tattooInventorySlotsToStringList(type.getSlotAvailability());
 				}
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(Util.capitaliseSentence(type.getName()), description));
 			}
@@ -3187,7 +3187,7 @@ public class CreationController {
 						Util.capitaliseSentence(counterType.getName()),
 						counterType.getDescription()
 						+(!counterType.isRetroactiveApplicationAvailable()
-							?"<br/><i>This counter type cannot be set to 'Start at 0', and instead always displays the current value.</i>"
+							?"<br/><i>Thi该计数类型无法设置成“从0开始”，而是会永远显示当前值。</i>"
 							:""));
 				MainController.addEventListener(MainController.document, id, "mouseenter", el, false);
 			}

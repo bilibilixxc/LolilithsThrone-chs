@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[On the inside of the shell, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[在外壳内测，淡淡的橡胶油墨写着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>1500</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一顶]]></determiner>
 
-		<name><![CDATA[Enforcer's riot helmet]]></name>
+		<name><![CDATA[执法者防暴头盔]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's riot helmets]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者防暴头盔]]></namePlural> 
 
-		<description><![CDATA[A visored, shock absorbing helmet with a ballistic outer shell. The attached neck protector keeps flammable liquids from running down the wearer's back. The attached chinstrap has plenty of adjustment to fit a variety of head shapes.]]></description> 
+		<description><![CDATA[一顶带面罩的防爆头盔，外壳是防弹的。附带的护颈可防止易燃液体流进佩戴者里面。颊带可以调整以适应各种头部形状。]]></description> 
 
 		<physicalResistance>5</physicalResistance> 
 
@@ -93,51 +92,37 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(put)] on the riot helmet and securely [npc.verb(fasten)] the chinstrap.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(put)] the riot helmet on [npc2.namePos] head and securely [npc.verb(fasten)] the chinstrap.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(force)] the riot helmet down on [npc2.namePos] head and practically [npc.verb(gag)] [npc2.her] with the chinstrap.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]戴上了防暴头盔并拉紧颊带。]]></self>
+		<other><![CDATA[
+[npc.Name]为[npc2.namePos]戴上防暴头盔，并拉紧颊带。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]将防暴头盔压在[npc2.namePos]的头上，并草草的将颊带拉紧。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] un[npc.do] the chinstrap on [npc.her] riot helmet and [npc.verb(ease)] it off.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] un[npc.do] the chinstrap on [npc2.namePos] riot helmet and [npc.verb(ease)] it off.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(rip)] open the chinstrap on [npc2.namePos] riot helmet and [npc.verb(yank)] it off [npc2.her] neck.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]的颊带并把防暴头盔摘了下来。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的颊带并把防暴头盔摘了下来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]扯开了防暴头盔的颊带然后把头盔从[npc2.her]的脖子上摘了下来。]]></otherRough>
 	</displacementText>
 
 	<replacementText type="PULLS_DOWN">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the visor on [npc.her] riot helmet down over [npc.her] [npc.faceD].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(lower)] the visor on [npc2.namePos] riot helmet down over [npc2.her] [npc2.faceD].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(slam)] the visor on [npc2.namePos] riot helmet down over [npc2.her] [npc2.faceD].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]防暴头盔上的面罩扣在了[npc.faceD]上。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]防暴头盔上的面罩扣在了[npc2.her]的[npc.faceD]上。]]></other>
+		<otherRough><![CDATA[[npc.Name]将[npc2.namePos]的头盔上的面罩拍在了[npc2.her]的[npc2.faceD]上。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="PULLS_UP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(raise)] the visor on [npc.her] riot helmet, exposing [npc.her] [npc.faceD].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(raise)] the visor on [npc2.namePos] riot helmet, exposing [npc2.her] [npc2.faceD].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(flip)] the visor on [npc2.namePos] riot helmet up, exposing [npc2.her] [npc2.faceD].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]防暴头盔上的面罩从[npc.her]的[npc.faceD]上掀起来。]]></self>
+		<other><![CDATA[[npc.Name]掀起了[npc2.namePos]防暴头盔的面罩，漏出了[npc2.her]的[npc2.faceD]。]]></other>
+		<otherRough><![CDATA[[npc.Name]将[npc2.namePos]防暴头盔上的面罩掀了起来，露出[npc2.her]的[npc2.faceD]。]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <combatMove>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -16,7 +16,7 @@
 	
 	<!-- The name of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work. -->
-	<name><![CDATA[War Dance]]></name>
+	<name><![CDATA[斗争之舞]]></name>
 	
 	<!-- The description of this move.
 	The character using this move is passed in as the 'npc' target for parsing, so commands such as [npc.name] will work.
@@ -24,7 +24,7 @@
 	'damageInflicted' will parse to the attacker's projected damage of this attack (using the defined 'baseDamage' field defined below).
 	'formattedDamageInflicted' will parse to a formatted damage prediction, taking into account whether or not the target is at maximum lust (therefore taking into account conversion of lust damage to health/mana damage). -->
 	<description><![CDATA[
-		Use [npc.her] flexible ferret body in a zig-zag maneuver in front of [npc.her] target, making it much harder to hit [npc.herHim].
+		[npc.her]灵活的雪貂身体在[npc.her]的敌人身前呈Z字跑动，使[npc.herHim]难以被命中。
 	]]></description>
 	
 	<!-- The type of damage that this move inflicts. 
@@ -99,7 +99,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move being available to them. -->
 	<availabilityDescription><![CDATA[
-		Available to characters who have a ferret torso type.
+		仅适用于有雪貂躯干的角色。
 	]]></availabilityDescription>
 	
 	<!-- The weighting for this action's chance of being selected by an AI combatant.
@@ -126,7 +126,7 @@
 	
 	<!-- A short description to let the player know what the conditions are for this move to inflict a critical hit. -->
 	<criticalDescription><![CDATA[
-		Target is already dazed.
+		目标已晕眩。
 	]]></criticalDescription>
 	
 	<!-- The description that is shown to the player to let them know what this move's effects will be.
@@ -138,12 +138,15 @@
 	'isCritical' will parse to the boolean return value for isCritical, and will therefore be either 'true' or 'false'.
 	-->
 	<movePredictionDescriptionWithTarget><![CDATA[
-		Use [npc.her] flexible ferret body to perform a zig-zag maneuver in front of [npc2.name], making [npc.herHim] much harder to hit.
-	]]></movePredictionDescriptionWithTarget>
+		
+		[npc.her]灵活的雪貂身体在[npc2.name]身前呈Z字跑动，使[npc.herHim]难以被命中。
+]]></movePredictionDescriptionWithTarget>
 	
 	<!-- This is almost identical to the defined description above, with the difference being that there is no targeted character. As such, the description cannot use any 'npc2' parsing. -->
 	<movePredictionDescriptionNoTarget><![CDATA[
-		Use [npc.her] flexible ferret body to perform a zig-zag maneuver in front of [npc.her] target, making [npc.herHim] much harder to hit.
+		
+		[npc.her]灵活的雪貂身体在[npc.her]的敌人身前表演Z字跑动，使[npc.herHim]难以被命中。
+
 	]]></movePredictionDescriptionNoTarget>
 	
 	<!-- The code that's executed when this move is performed.
@@ -157,16 +160,16 @@
 		<!-- The 'execute' section should be used for the main description of the attack, as well as any extra effects you want to apply.
 		NOTE: The damage is automatically applied to the target, so you don't need to handle parsing of that. -->
 		<execute><![CDATA[
-			[npc.Name] [npc.verb(jump)] back and forth unpredictably in a zig-zag pattern, forcing [npc2.name] to spend extra time targeting [npc.herHim].
+			[npc.Name]呈不可预测的Z字形往复跳跃，迫使[npc2.name]花费额外的时间来瞄准[npc.herHim]。
 			<p>
 			[#npc2.incrementAttribute(ATTRIBUTE_ACTION_POINTS, -2, true)]
 			</p>
 		]]></execute>
 		<critDescription><![CDATA[
-			Since [npc2.Name] was already dazed, [npc.namePos] war dance was extremely effective!
+			[npc2.Name]已经晕眩。[npc.namePos]的斗争之舞效果惊人！
 		]]></critDescription>
 		<critEffectDescription><![CDATA[
-			[npc2.Name] [npc2.has] wasted [npc2.her] whole turn targeting [npc.name].
+			[npc2.Name]浪费了一整个回合来瞄准[npc.name]。
 			<p>
 			[#npc2.incrementAttribute(ATTRIBUTE_ACTION_POINTS, -1, true)]
 			</p>

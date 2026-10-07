@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>80</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Improbable-Whammer]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Improbable-Whammer]]></namePlural>
-		<description><![CDATA[Although this may look and taste like an ordinary burger, the packaging declares this 'Improbable-Whammer' to be 100% meat free. Printed in very small, hard-to-read text, there's a disclaimer which states that the meat substitute is 'dangerously high in female hormones'...]]></description> 
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA[违背常理王堡]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[违背常理王堡]]></namePlural>
+		<description><![CDATA[尽管这个汉堡看起来和尝起来都像是普通的肉汉堡，但它的包装标明这个 “违背常理王堡” 是100%无肉的。小到几乎无法阅读的文字写着：免责声明，该替代肉食品含有 “高危含量的雌性激素”……]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -30,8 +30,8 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[style.italicsSex(+10)] [style.italicsFeminine(femininity)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]10%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[style.italicsSex(+10)][style.italicsFeminine(女性化程度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
@@ -39,14 +39,14 @@
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/5)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				The taste of the burger reminds [npc.name] of home, and [npc.she] [npc.verb(start)] to feel a lot more energetic!
+				这个汉堡的味道让[npc.name]想起了家乡，[npc.she]开始感到更有活力了！
 			</p>
 			[#npc.incrementFemininity(10)]
 		#ELSE
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				[npc.Name] [npc.verb(feel)] the burger's side effects kicking in almost immediately...
+				[npc.Name]几乎立刻感到了这个汉堡的副作用……
 			</p>
 			[#npc.incrementFemininity(10)]
 		#ENDIF
@@ -63,10 +63,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		Unwrapping the Improbable-Whammer's paper covering, [npc.name] quickly [npc.verb(reveal)] the greasy cheeseburger contained within. Bringing it up to [npc.her] mouth, [npc.she] [npc.verb(take)] a big bite, and [npc.verb(discover)] that it's absolutely delicious. Encouraged by the taste, it only takes [npc.herHim] a few moments to wolf down the meal.
+		[npc.Name]打开了违背常理王堡的包装纸，迅速露出了其中的油乎乎的芝士汉堡。将它送到嘴边，[npc.she]大口吃了一口，发现它非常美味。在美味的刺激下，[npc.herHim]只用了几分钟就吃光了这顿饭。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		Unwrapping the Improbable-Whammer's paper covering, [npc.name] quickly [npc.verb(reveal)] the greasy cheeseburger contained within, before offering it to [npc2.name]. Bringing it up to [npc2.her] mouth, [npc2.name] [npc2.verb(take)] a big bite, and [npc2.verb(discover)] that it's absolutely delicious. Encouraged by the taste, it only takes [npc2.herHim] a few moments to wolf down the meal.
+		[npc.Name]解开了违背常理王堡的包装纸，迅速露出了其中的油乎乎的芝士汉堡，然后把它递给[npc2.name]。将它送到嘴边，[npc2.name]咬了一大口，发现它非常美味。在美味的刺激下，只用了几分钟，[npc2.herHim]就吃光了这顿饭。
 		]]></otherUse>
 	</useDescriptions>
 

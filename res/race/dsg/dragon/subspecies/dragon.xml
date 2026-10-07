@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -108,7 +108,7 @@
 	<bookIconName>dragonicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Mysterious Dragons</bookName>
+	<bookName><![CDATA[隐秘龙族]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -121,38 +121,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[dragon-morph]]></name>
-			<namePlural><![CDATA[dragon-morphs]]></namePlural>
-			<singularMaleName><![CDATA[dragon-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[dragon-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[dragon-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[dragon-girls]]></pluralFemaleName>
+			<name><![CDATA[龙化形]]></name>
+			<namePlural><![CDATA[龙化形]]></namePlural>
+			<singularMaleName><![CDATA[龙男]]></singularMaleName>
+			<singularFemaleName><![CDATA[龙女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[龙男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[龙女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic dragon, known as a 'dragon-morph' when bipedal, and a 'dragontaur' when the lower body is that of a typically-oversized feral dragon.]]></description>
+	<description><![CDATA[一种人形的龙，当下肢拟人时被称为龙化形，而当下肢呈现出龙兽态时则称为半龙人。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[vritra]]></name>
-			<namePlural><![CDATA[vritras]]></namePlural>
-			<singularMaleName><![CDATA[vritra]]></singularMaleName>
-			<singularFemaleName><![CDATA[vritra]]></singularFemaleName>
-			<pluralMaleName><![CDATA[vritras]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[vritras]]></pluralFemaleName>
+			<name><![CDATA[腾蛇]]></name>
+			<namePlural><![CDATA[腾蛇]]></namePlural>
+			<singularMaleName><![CDATA[腾蛇]]></singularMaleName>
+			<singularFemaleName><![CDATA[腾蛇]]></singularFemaleName>
+			<pluralMaleName><![CDATA[腾蛇]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[腾蛇]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[dragon]]></feralName>
-		<feralNamePlural><![CDATA[dragons]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[dragon]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[dragoness]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[dragons]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[dragonesses]]></feralPluralFemaleName>
+		<feralName><![CDATA[龙]]></feralName>
+		<feralNamePlural><![CDATA[龙]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[龙]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[龙]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[龙]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[龙息]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -183,7 +183,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] dragon-like body is very powerful, and as a mythological creature [npc.she] [npc.has] a close arcane affinity with both the strengths and weaknesses that it brings.
+		[npc.NamePos]龙一般的身躯充满力量，作为神话生物，[npc.she]与奥术的特殊亲和力紧密相连，既拥有它的强大之处，也熟悉它的脆弱之处。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

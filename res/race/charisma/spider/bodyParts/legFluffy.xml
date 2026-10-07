@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <leg>
 	<race>charisma_spider</race>
-	<transformationName><![CDATA[furred spider]]></transformationName>
+	<transformationName><![CDATA[蜘蛛(覆毛)]]></transformationName>
 	<coveringType>charisma_spider_chitinFluffy</coveringType>
 	<defaultFootStructure>PLANTIGRADE</defaultFootStructure>
 	<additionalFootStructure legConfiguration="ARACHNID">ARACHNOID</additionalFootStructure>
@@ -13,41 +13,41 @@
 		<configuration>BIPEDAL</configuration>
 		<configuration>ARACHNID</configuration>
 	</allowedLegConfigurations>
-	<name><![CDATA[leg]]></name>
-	<namePlural><![CDATA[legs]]></namePlural> 
+	<name><![CDATA[步足]]></name>
+	<namePlural><![CDATA[步足]]></namePlural> 
 	<descriptorsMasculine>
-		<descriptor>masculine</descriptor>
-		<descriptor>fluffy</descriptor>
-		<descriptor>anthropomorphic, spider-like</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[男性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[蜘蛛般拟人]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</descriptorsMasculine>
 	<descriptorsFeminine>
-		<descriptor>feminine</descriptor>
-		<descriptor>fluffy</descriptor>
-		<descriptor>anthropomorphic, spider-like</descriptor>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[女性化]]></descriptor>
+		<descriptor><![CDATA[毛茸茸]]></descriptor>
+		<descriptor><![CDATA[蜘蛛般拟人]]></descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</descriptorsFeminine>
 	<footDescriptorsMasculine>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</footDescriptorsMasculine>
 	<footDescriptorsFeminine>
-		<descriptor>chitinous</descriptor>
+		<descriptor><![CDATA[几丁质]]></descriptor>
 	</footDescriptorsFeminine>
 	<toeDescriptorsMasculine>
-		<descriptor>segmented</descriptor>
+		<descriptor><![CDATA[节节分明]]></descriptor>
 	</toeDescriptorsMasculine>
 	<toeDescriptorsFeminine>
-		<descriptor>segmented</descriptor>
+		<descriptor><![CDATA[节节分明]]></descriptor>
 	</toeDescriptorsFeminine>
 	<transformationDescription><![CDATA[
-		A layer of spider-like chitin quickly grows over [npc.her] legs as they shift into a new form. As [npc.her] new chitin spreads down to the ends of [npc.her] toes, it splits around the joints and gives them a segmented appearance, leaving [npc.him] with plantigrade, spider-like feet. This hard chitin then sprouts a fur-like layer of chitinous hairs, which quickly envelops [npc.her] entire legs. As the transformation ends, [npc.she] [npc.verb(see)] that [npc.her] new chitin plates sharply transition into the [npc.skin] covering the rest of [npc.her] body at [npc.her] upper-thigh.
-		<br/>[npc.Name] now [npc.has] plantigrade, [style.boldSpider(spider-like legs and feet)], which are [npc.materialDescriptor] [npc.legFullDescription].
-	]]></transformationDescription>
+		[npc.her]的双腿转化成了新的形态，一层类似蜘蛛的几丁质迅速覆盖了上去。新生的几丁质一直蔓延到[npc.her]脚趾的末端，在关节附近分裂开，表现出分节的外观，让[npc.him]拥有蜘蛛般的跖行动物脚。坚硬的几丁质上随后长出一层类兽的几丁质毛，很快包裹住[npc.her]的整个腿部。在转化的尾声，[npc.she]看到新生的几丁质迅速过渡到覆盖身体和大腿其余部分的[npc.skin]上。
+		<br/>[npc.Name]现在拥有跖行的[style.boldSpider(蜘蛛般的腿和脚)]，[npc.materialDescriptor][npc.legFullDescription]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
 		#IF(npc.getLegConfiguration()==LEG_CONFIGURATION_ARACHNID)
-			[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and look identical to those of a feral spider, complete with seven segmented pieces and little claws in place of feet.
+			[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，看起来与野生蜘蛛完全相同，以七个分节和小爪子作为腿部。
 		#ELSE
-			[npc.Her] legs are [npc.materialCompositionDescriptor] [npc.legFullDescription(true)], and [npc.her] feet are covered small chitin plates splitting at the joints.
+			[npc.Her]的腿[npc.materialCompositionDescriptor][npc.legFullDescription(true)]，足部被几丁质板覆盖，几丁质在关节处裂开。
 		#ENDIF
-	]]></bodyDescription>
+]]></bodyDescription>
 </leg>

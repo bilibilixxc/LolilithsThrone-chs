@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>250</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[crotchless thong]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[crotchless thongs]]></namePlural>
-		<description><![CDATA[This thong has a strip of fabric missing in the most vital area, leaving their wearer's genitalia completely exposed. The tiny string at the back does nothing to conceal the wearer's asshole, effectively leaving that exposed as well.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[开裆丁字裤]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[开裆丁字裤]]></namePlural>
+		<description><![CDATA[这条丁字裤在最重要的部位缺少一条织物，使穿着者的生殖器完全暴露在外。背面的细绳并不能掩盖佩戴者的屁眼，将其完全暴露在外面。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>GROIN</slot>
@@ -45,27 +45,27 @@
 	</coreAttributes>
 	
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(step)] into the crotchless thong, before pulling them up to cover [npc.her] private parts.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the crotchless thong up [npc2.namePos] [npc2.legs] to cover [npc2.her] private parts.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the crotchless thong up [npc2.namePos] [npc2.legs] to cover [npc2.her] private parts.]]>
-	  </otherRough>
+		<self><![CDATA[
+      [npc.Name]穿上开裆丁字裤，然后将丁字裤盖住[npc.her]的隐私部位。
+    ]]></self>
+		<other><![CDATA[
+[npc.Name]将开裆丁字裤拉上[npc2.namePos]的[npc2.legs]，遮盖[npc2.her]的私密部位。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将开裆丁字裤拉上[npc2.namePos]的[npc2.legs]，遮盖住[npc2.her]的私密部位。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] crotchless thong down and [npc.verb(kick)] them off [npc.her] [npc.feet].]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(slide)] down [npc2.namePos] crotchless thong and [npc.verb(pull)] them off [npc2.her] [npc2.feet].]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] down [npc2.namePos] crotchless thong and [npc.verb(yank)] them off [npc2.her] [npc2.feet].]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的开裆丁字裤拉下来，然后用[npc.her]的[npc.feet]将它们踢掉。
+]]></self>
+		<other><![CDATA[
+[npc.Name]拉下[npc2.namePos]的开裆丁字裤，然后将它们从[npc2.her]的[npc2.feet]上拿走。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的开裆丁字裤拉下，然后用力将它们从[npc2.her]的[npc2.feet]上脱下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
 		<value>100</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[croptop bra]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[croptop bras]]></namePlural>
-		<description><![CDATA[A loose fitting bra which resembles a short croptop.]]></description>
+		<determiner><![CDATA[一件]]></determiner>
+		<name><![CDATA[露脐装短背心]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[露脐装短背心]]></namePlural>
+		<description><![CDATA[一件宽松的文胸，类似于短上衣。]]></description>
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity>
 		<slot>CHEST</slot> 
@@ -58,27 +58,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the croptop bra down over [npc.her] head, before securing it around [npc.her] chest.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] the croptop bra down over [npc2.namePos] head, before securing it around [npc2.her] chest.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] the croptop bra down over [npc2.namePos] head, before securing it around [npc2.her] chest.]]>
-	  </otherRough>
+		<self><![CDATA[
+[npc.Name]将露脐短背心拉下[npc.her]的头，并使得背心很好的包裹了[npc.her]的胸。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将露脐短背心从[npc2.namePos]的头上套下来，并使得背心能够很好的包裹住[npc2.her]的胸部。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将露脐短背心套在[npc2.namePos]的头上并使得背心包在[npc2.her]的胸部。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] croptop bra up over [npc.her] head and [npc.verb(take)] it off.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] croptop bra up over [npc2.her] head and [npc.verb(take)] it off.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] croptop bra up over [npc2.her] head and [npc.verb(take)] it off.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将露脐短背心拉到[npc.her]的头上并脱了下来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]的露脐短背心拉过[npc2.her]的头顶并把它脱了下来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的露脐短背心拉到头顶并将其拽了下来。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

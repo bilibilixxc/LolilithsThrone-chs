@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>100</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[velvet choker]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[velvet chokers]]></namePlural>
-		<description><![CDATA[A plain velvet choker, which tightly hugs the wearer's neck. It is securely fastened in place by means of a delicate metal chain, which is liable to break if the wearer's throat bulges too much...]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[丝绒项圈]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[丝绒项圈]]></namePlural>
+		<description><![CDATA[一条普通的丝绒项圈，会紧紧勒住佩戴者脖子。它由一条精致的金属链牢牢固定，如果佩戴者的喉咙过于隆起，金属链很容易断裂……]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
     <equipSlots>
@@ -47,26 +46,26 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] securely [npc.verb(fasten)] the velvet choker around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] securely [npc.verb(fasten)] the velvet choker around [npc2.namePos] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before securely fastening the velvet choker around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把丝绒项圈系紧在[npc.her]的脖子。
+]]></self>
+    <other><![CDATA[
+			[npc.Name]把丝绒项圈牢牢地系在[npc2.namePos]的脖子上。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]，然后把丝绒项圈系在[npc2.her]脖子上。
+]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] velvet choker, before taking it off from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] velvet choker, before taking it off from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] velvet choker, before yanking it off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的丝绒项圈，然后从[npc.her]的脖子上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的丝绒项圈，然后从[npc2.her]的脖子上取下。
+]]></other>
+    <otherRough><![CDATA[
+      [npc.Name]粗暴地解开[npc2.namePos]的丝绒项圈，然后从[npc2.her]的脖子上扯下。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

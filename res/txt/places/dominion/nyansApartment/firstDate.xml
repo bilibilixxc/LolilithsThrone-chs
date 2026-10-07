@@ -1,76 +1,75 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- DATE_START -->
 	
 	<htmlContent tag="DATE_START"><![CDATA[
 	<p>
-		Having been eagerly anticipating your date with Nyan all day, you swiftly make your way to the address which she wrote down for you. The street on which she lives turns out to be far more upmarket than you expected, with each of the regency-styled residences which you pass being immaculately clean and well presented. Much to your surprise, there's even a demon Enforcer patrolling up and down the road, who keeps an eye on you as you approach Nyan's apartment building.
+		你过去一整天都沉浸在和妮安约会的期待中。你迅速前往她写给你的地址。她居住的那条街比你想象中高档得多。你路过了许多摄政时期风格的建筑，每一幢都维护良好、整洁有序。更令你惊讶的是，街上居然有一名恶魔执法者巡逻，在你接近妮安家的公寓时，他一直在盯着你。
 	</p>
 	<p>
-		Walking up the steps to the front door, you see yet another sign of this area's affluence, as there's an arcane intercom system securely bolted to the wall. Looking over the half a dozen name plates, you see one which is labelled as 'Nyan [nyan.surname]', and you waste no time in pressing the little button beside it. After a loud buzz and a momentary pause, you hear the voice of your girlfriend call out over the intercom, [nyan.speechNoEffects(H-Hello? This is Ms. [nyan.surname], w-who is it?)]
+		你经过前门踏上台阶，注意到墙上牢牢固定着奥术对讲机系统，看来这地方真的很有钱。你扫视着六张门铃铭牌，看见其中一张刻着“妮安·[nyan.surname]”。你毫不犹豫地按下了铭牌旁边的按钮。一阵巨响和短暂的停顿后，你听见对讲机对面传来女友的声音，[nyan.speechNoEffects(喂……喂？我是[nyan.surname]，你是谁呀？)]
 	</p>
 	<p>
-		After quickly telling her that it's you, Nyan lets out an excited squeak and quickly replies, [nyan.speechNoEffects([pc.Name]! C-Come on in! I'm on the third floor, p-please come on up!)]
+		你迅速表明身份，妮安兴奋地尖叫，语速变快了，[nyan.speechNoEffects([pc.Name]！快、快来！我在四楼，上来吧！)]
 	</p>
 	<p>
-		Hearing a loud clicking noise from behind the front door, you experimentally push on it and discover that it's been unlocked. Doing as your girlfriend says, you cross the smartly-kept foyer and proceed up several flights of stairs to the third floor. As you reach your destination, you see that the cute cat-girl already has her apartment door open, and with a happy smile on her face, she exclaims, [nyan.speechNoEffects(I-It's good to see you, [pc.name]! W-What did you come here for?)]
+		你听见前门里传来一声巨响。你尝试推了推，门已经打开了。你按照女朋友说的做，穿过精心打扫过的门厅，然后爬了几层楼梯，来到四楼。你到达目的地，发现可爱的猫女早已给你留好了门。她脸上挂着大大的微笑，问道，[nyan.speechNoEffects([pc.name]，见、见到你真高兴！你是来干嘛的呀？)]
 	</p>
 	<p>
-		[pc.Stepping] up to where your girlfriend is waiting, you tell her that you're here to collect her for your evening's date. As she hears you say this, Nyan's bright blue eyes light up, and she excitedly claps her hands together and exclaims, [nyan.speechNoEffects(Oh! Oh, how wonderful! C-Come on in, [pc.name], you can wait in my lounge while I g-get ready!)]
+		你[pc.Stepping]到等待已久的女友身旁。你告诉她，你来接她参加今晚的约会。妮安听了你的话，亮蓝色的眼睛闪烁起期待的光。她兴奋地拍着手宣称，[nyan.speechNoEffects(哦！哦，这太棒了！快、快过来，[pc.name]！你在休息室等等，我马上就好！)]
 	</p>
 	<p>
-		Stepping back into her apartment, your girlfriend holds the door open and beckons you inside...
+		你再次走进公寓。你的女朋友敞着门，示意你进屋……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_START_LOUNGE -->
 	
 	<htmlContent tag="DATE_START_LOUNGE"><![CDATA[
 	<p>
-		[pc.Stepping] forwards, you enter the entrance hall to Nyan's apartment and let the cat-girl shut the door behind you. Happily skipping forwards, she calls out behind her, [nyan.speechNoEffects(Come on, the lounge is this way!)]
+		你[pc.Stepping]上前，进入妮安的公寓门厅。猫女跟着你的脚步关上门。她快乐地蹦着走，从你身后喊道，[nyan.speechNoEffects(过来，休息室在这边！)]
 	</p>
 	<p>
-		Following in your happy girlfriend's footsteps, you move forwards and take a right-hand turn, before [pc.walking] straight ahead down the carpeted hallway and entering her modestly-sized lounge. On one side of the room there are a couple of bookcases stacked full of books, while a coffee table and several plush sofas are arranged to be the room's focal point. A couple of windows are positioned on the far side of the room, and as Nyan leads you over to the nearest sofa, you see that they look down onto the courtyard behind the apartment building.
+		你跟随着快乐女友的脚步，向前走然后右转。你沿着铺了地毯的走廊向前[pc.walking]，进了一个舒适又不太大的休息室。房间一侧摆着几排书架，书架上的书塞得满满的。房间的焦点是中心的一张咖啡桌和几把豪华沙发。门对面有几扇窗。妮安把你领到最近的沙发旁。你透过窗户，能俯瞰到公寓楼背面的庭院。
 	</p>
 	<p>
-		Moving the sofa's stack of colourful cushions aside in order to make a comfortable spot for you to sit down, your girlfriend practically skips in excitement as she retreats to the door and calls out, [nyan.speechNoEffects(I'm going to get changed! I-I won't be long, please make yourself comfortable!)]
+		你的女朋友拿来几个色彩斑斓的坐垫，给你堆出了个舒服的空间坐着。她兴奋到几乎跳着回到门边，呼喊道，[nyan.speechNoEffects(我要换衣服！不、不会很久的，你好好歇一会！)]
 	</p>
 	<p>
-		With that, she darts out of the room, leaving you to do as she suggested and sit down on the comfortable sofa. Taking a cursory look around from your seated position, you notice that there are a couple of paintings on the wall which both depict idyllic countryside scenes. While there are several fashion and cookery magazines on the coffee table, you don't particularly feel like reading at the moment, and so soon find yourself standing up and walking around the room. Wandering past the bookcases, you see that almost every single one of the books on the shelves is some kind of romance novel.
+		话毕，她冲出房间。你瘫坐在柔软的沙发上，随便扫视周围。你注意到墙上挂着两幅描绘宁静乡村景色的画作。在咖啡桌上有几本时尚和烹饪杂志，但你不太想看。你很快站起身四处走动。你路过书架，看到上面几乎全是言情小说。
 	</p>
 	<p>
-		[pc.Walking] over to the windows, you spend the next few minutes watching a centauress unloading a cart she'd been pulling. By the time she's finished stacking her crates up against one wall of the courtyard, you suddenly hear Nyan's footsteps approaching from down the hallway...
-	</p>
-	]]>
-	</htmlContent>
+		你[pc.Walking]到窗边，看到一位半人马女郎正卸下她拉的货。你看了几分钟，直到她将货箱全堆放到庭院的墙边。你突然听到走廊尽头传来了妮安的脚步声……</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_START_LOUNGE_NYAN_DRESS -->
 	
 	<htmlContent tag="DATE_START_LOUNGE_NYAN_DRESS"><![CDATA[
 	<p>
-		You turn to face the door just in time to see Nyan stepping back into the room. Instead of her usual skirt and blouse, she's now wearing [nyan.a_slotClothing(TORSO_UNDER, true)], with a colour-coordinated bow on her headband. For the first time, you see your girlfriend wearing a noticeable amount of makeup, and you can't help but instantly think how her red lipstick, black eye-liner, and light blue eye-shadow makes her look more attractive and alluring than ever before.
-	</p>
+		你及时转过身，看到妮安走回了房间。与平常的裙子和衬衫不同，她现在穿着[nyan.a_slotClothing(TORSO_UNDER, true)]，头上还戴了个颜色相配的蝴蝶结。这是你第一次看见女朋友化妆。颜色均匀而诱人的红唇、勾勒出的黑色眼线和恰到好处的淡蓝色眼影让她看起来比以往更加引人注目和令人迷醉。
+</p>
 	<p>
-		[pc.Stepping] over to where she's waiting, you compliment Nyan on how beautiful she looks, which causes her cheeks to turn a bright shade of red. Coyly shuffling her feet, she glances at you with her big, blue eyes and asks, [nyan.speechNoEffects(A-Are you ready to go?)]
-	</p>
+		你[pc.Stepping]到妮安驻足之处，并且夸赞她看起来多么美丽，这让她的脸颊瞬间涌上一抹潮红。她羞涩地挪动着脚，用她那双大大的蓝眼睛瞥了你一眼，然后问道，[nyan.speechNoEffects(你……你准备好出发了吗？)]
+</p>
 	<p>
-		Replying in the affirmative, you accompany the blushing cat-girl back into the hallway, where she pulls on
+		你肯定地回答她，而后陪着面色通红的猫女回到走廊，她穿上
 		#IF(game.getSeason()==SEASON_SUMMER)
-			 a stylish, tan-coloured coat and a pair of dark brown chelsea boots, before grabbing hold of a cute, frog-styled umbrella.
+				时尚的浅褐色外套，套进深棕色切尔西靴，最后拿起一把可爱的蛙形伞。
 		#ELSE
-			 a stylish, tan-coloured coat, a black scarf, and a pair of dark brown thigh-high boots, before finally grabbing a cute, frog-styled umbrella.
+				时尚的浅褐色外套，围上黑色围巾，套进深棕色过膝靴，最后拿起一把可爱的蛙形伞。
 		#ENDIF
-		 Flashing you a happy smile, she holds up the green umbrella and declares, [nyan.speechNoEffects(T-The weather seems to change at a moment's notice, so I a-always take this with me!)]
-	</p>
+				她露出幸福的笑容，举起那把绿色的伞，宣布，[nyan.speechNoEffects(天气变化无常，所以我总是带着这个！)]
+</p>
 	<p>
-		Telling Nyan what a good idea that is, you join her in exiting her apartment, before accompanying her down the stairs and towards the apartment building's front door...
-	</p>
-	]]>
-	</htmlContent>
+		你夸妮安细心又周到。你陪她走出公寓，一起下楼，走向公寓大楼的前门……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_RESTAURANT_1_ARRIVED -->
@@ -78,1003 +77,1002 @@
 	<htmlContent tag="DATE_RESTAURANT_1_ARRIVED"><![CDATA[
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			As you approach the exit, a bright pink light suddenly flashes through the windows, causing Nyan to let out a little eek and whine, [nyan.speechNoEffects(Oh no... There's an a-arcane storm! P-Perhaps if we wait for the thunder to pass, then run for the Arcade, w-we could make it?)]
-		</p>
+    你们靠近出口。突然，一道明亮的粉红色光芒穿过窗户，妮安发出惊恐的尖叫声，[nyan.speechNoEffects(哦不……有一场奇异风暴！如果我们等雷声过去，然后冲向商场，或许能过去？)]
+</p>
 		<p>
-			Asking Nyan if she's sure that she wants to risk it, and receiving a rapid nod of her head in response, you wait for the next clap of thunder to pass before opening the door and hurrying down the steps with your girlfriend at your side. Clutching her little umbrella in her delicate hands, the cat-girl surprisingly proves to be an extremely capable runner. Her unexpected sprint proves to be very fortuitous, for the two of you manage to reach the doors of the Shopping Arcade without being subjected to a clap of arousing thunder.
-		</p>
+    你问妮安想不想一起冒险，她肯定地点了点头。你等待下一声雷声过去，然后打开门，与女友一起匆匆下楼。猫女小巧的手紧紧攥着她的小伞。出乎你的意料，她相当善于奔跑。她幸运地冲过风暴，你们俩成功抵达购物商场的大门，没有被战栗的雷声的打断。
+</p>
 		<p>
-			Rushing through the entrance and shutting the doors after you, Nyan heavily pants, [nyan.speechNoEffects(Phew... We made it... I can't... believe that worked...)]
-		</p>
+    你们冲进购物商场，关上大门。妮安沉重地喘着粗气，[nyan.speechNoEffects(呼……我们成功了……这竟然行得通……)]
+</p>
 		<p>
-			After giving your girlfriend some time in which to catch her breath, you accompany her down the wide, marble walkways of the Arcade, and soon arrive at your destination of the restaurant, 'The Oaken Glade'. Holding open the front door and allowing Nyan to step inside, you follow her through and are immediately met by a smartly-dressed otter-boy, who is quite clearly the establishment's maître d'. Looking over at Nyan, he gives her a big, familiar smile, before slightly bowing his head and offering his enthusiastic greetings, [style.speechMasculine(Good evening, good evening! We have not seen you nor your mother for some time, Ms. [nyan.surname], but as ever, you are most welcome here. If you and your partner for this evening would care to follow me, I will show you to your seats. After all, we always have a table for you!)]
-		</p>
+    女友的喘息逐渐平息下来。你陪她走过商场的宽敞大理石走道，很快到达了目的地，“橡木林荫”餐厅。你打开前门，让妮安先进去，然后跟在她后面。穿着得体的水獭男立刻上前招待你们，他显然是这家餐厅的总管。他看着妮安，露出亲切的微笑，稍微低了一下头，热情地问候道，[style.speechMasculine(你们好，晚上好！我们有段时间没有见到你和你的母亲了，[nyan.surname]小姐。但一如既往，你是这儿最受欢迎的。如果你和今晚的伴侣愿意，我就领你们去找个好座位。毕竟，我们总会为你们留一张桌子！)]
+</p>
 	#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN || game.getCurrentWeather()==WEATHER_SNOW)
 		<p>
-			As you approach the exit, you see through the windows that it's currently
-			#IF(game.getCurrentWeather()==WEATHER_RAIN)
-				 raining outside.
-			#ELSE
-				 snowing outside.
-			#ENDIF
-			 With her cute frog-umbrella coming to the rescue, Nyan steps outside and pops it open, before shyly stuttering, [nyan.speechNoEffects(T-This is big enough for both of us... S-So we can w-walk close together and share it...)]
-		</p>
+    你靠近窗户，看到外面
+    #IF(game.getCurrentWeather()==WEATHER_RAIN)
+        大雨滂沱。
+    #ELSE
+        风雪交加。
+    #ENDIF
+    妮安决定打着可爱的蛙形伞离开，她走到外面撑开伞，害羞地结巴着说，[nyan.speechNoEffects(这个足够大，可以容纳我们两个……所以我们可以走得很近，打同一把伞……)]
+</p>
 		<p>
-			Thanking your girlfriend for her kindness, you do as she suggests and share the umbrella with her. Clearly being very happy at getting to share this moment with you, Nyan blushes and leans into you as you travel down the street. Unfortunately for her, however, this time together under her umbrella doesn't last long, as it only takes you five minutes to arrive at the doors of the Shopping Arcade.
-		</p>
+   你谢过女友的好意，遵循建议与她一齐站在伞下。显然，妮安非常高兴能和你打同一把伞，她脸红着靠近你。然而，不幸的是，伞下的时光并不长。因为你们仅用了五分钟就走到了购物商场的大门。
+</p>
 	#ELSE
 		<p>
-			As you approach the exit, you see through the windows that the weather outside isn't going to prove to be an issue. After holding open the door for your girlfriend, you accompany her down the steps and then proceed on your way down the street. Clearly being very excited about going out on a date with you, Nyan walks right by your side for the whole five minutes that it takes to get to the Shopping Arcade.
-		</p>
+    你靠近窗户，发现外面的天气很适合出门。你为女友拉开门，陪着她下楼，然后一起沿着街道前行。显然，妮安对你们的约会感到很兴奋，她在整整五分钟的路程里一直走在你身旁，始终陪伴着你。你们前往购物商场。
+</p>
 	#ENDIF
 	#IF(game.getCurrentWeather()!=WEATHER_MAGIC_STORM)
 		<p>
-			Heading inside, you accompany your girlfriend down the wide, marble walkways of the Arcade, and soon arrive at your destination of the restaurant, 'The Oaken Glade'. Holding open the front door and allowing Nyan to step inside, you follow her through and are immediately met by a smartly-dressed otter-boy, who is quite clearly the establishment's maître d'. Looking over at Nyan, he gives her a big, familiar smile, before slightly bowing his head and offering his enthusiastic greetings, [style.speechMasculine(Good evening, good evening! We have not seen you nor your mother for some time, Ms. [nyan.surname], but as ever, you are most welcome here. If you and your partner for this evening would care to follow me, I will show you to your seats. After all, we always have a table for you!)]
-		</p>
+    你陪女友走过商场的宽敞大理石走道，很快到达了目的地，“橡木林荫”餐厅。你打开前门，让妮安先进去，然后跟在她后面。穿着得体的水獭男立刻上前招待你们，他显然是这家餐厅的总管。他看着妮安，露出亲切的微笑，稍微低了一下头，热情地问候道，[style.speechMasculine(你们好，晚上好！我们有段时间没有见到你和你的母亲了，[nyan.surname]小姐。但一如既往，你是这儿最受欢迎的。如果你和今晚的伴侣愿意，我就领你们去找个好座位。毕竟，我们总会为你们留一张桌子！)]
+</p>
 	#ENDIF
 	<p>
-		As you follow the waiter to the far side of the restaurant, you see that all of the tables are occupied either by couples or small groups of friends, despite the place always looking empty from the outside. Realising that this aspect of the restaurant's illusion must have been designed to grant diners some privacy, you continue on to the other side of what appears in all respects to be a tranquil forest clearing, where you and Nyan are presented with a quiet corner table for two.
-	</p>
+    你们随着侍者的引导，来到餐厅的另一侧，看到所有的桌子都已被情侣或一小群朋友占据，尽管这个地方从外面看总是空空荡荡。你意识到餐厅设计成这样是为了给用餐的人提供一些私密空间。你们继续前行，到达了宁静如森林空地的贵宾席。你和妮安被安排在一张幽静的两人桌旁。
+</p>
 	<p>
-		Taking your girlfriend's coat and umbrella, the waiter seats you both at the table and gives you each a menu, before handing you the wine list and telling you to please take your time in ordering. Looking across the table and giving you her most alluring look, Nyan bites her lip and asks, [nyan.speechNoEffects(C-Could we order some white wine, please? I don't mind what bottle, s-so could you please choose for me?)]
-	</p>
-	]]>
-	</htmlContent>
+    侍者接过你女友的外套和伞，然后将你们两人安排在桌前，给你们每人一份菜单，接着递给你们葡萄酒清单，并告诉你们慢慢点菜。妮安看着桌子对面的你，露出诱人的表情，咬着嘴唇问道，[nyan.speechNoEffects(我……我可以点一瓶白葡萄酒吗？我不介意喝哪瓶，所以……你可以帮我选一瓶吗？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_2_VULPINE"><![CDATA[
 	<p>
-		Looking down the list, you see that the vintages on offer are of a far higher quality than in an average restaurant, and their steep prices reflect this. As even the cheapest bottle, at [#SPECIAL_PARSE_1] flames, is better than anything which you'd be able to order elsewhere, you decide to go with that one, and tell the waiter that you'd like to order a bottle of [#SPECIAL_PARSE_0].
+		你读起葡萄酒清单，清单上列出的葡萄酒质量远高于一般餐厅，价格也是。最便宜的普通酒也是其他地方基本买不到的，甚至要[#SPECIAL_PARSE_1]火币。你选择了最便宜的葡萄酒，告诉侍者给你来一瓶[#SPECIAL_PARSE_0]。
 	</p>
 	<p>
-		From the smile on her face, you can tell that Nyan is pleased with your choice of wine, and as she hands her wine list back to the waiter, she happily sighs, [nyan.speechNoEffects(Thanks, [pc.name], I-I've had that wine before, and I really like it...)]
+		你对上妮安的笑容，发现她对你的选择很满意。她把自己的葡萄酒清单递给侍者，开心地松了口气，[nyan.speechNoEffects(谢谢你，[pc.name]，我、我喝过这种酒……我真的很喜欢它……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_2_ALICORN"><![CDATA[
 	<p>
-		Looking down the list, you see that the vintages on offer are of a far higher quality than in an average restaurant, and their steep prices reflect this. Although not prepared to splash out on the most expensive of the bottles on offer, you do decide to go for something a couple of notches above the cheapest, and so at [#SPECIAL_PARSE_1] flames, you tell the waiter that you'd like to order the bottle of [#SPECIAL_PARSE_0].
+		你读起葡萄酒清单，清单上列出的葡萄酒质量远高于一般餐厅，价格也是。尽管你不准备花大价钱买最昂贵的酒，但你也不想买最便宜的。你决定花掉[#SPECIAL_PARSE_1]火币，告诉侍者给你来一瓶[#SPECIAL_PARSE_0]。
 	</p>
 	<p>
-		From the big smile on her face, you can tell that Nyan is very pleased with your choice of wine, and as she hands her wine list back to the waiter, she happily exclaims, [nyan.speechNoEffects(Thank you, [pc.name]! I-I've had that wine once before, and I really loved it...)]
+		你对上妮安大大的笑容，发现她对你的选择非常满意。她把自己的葡萄酒清单递给侍者，开心地宣告，[nyan.speechNoEffects(谢谢你，[pc.name]，我、我喝过这种酒……我真的很喜欢它……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_2_YOUKO"><![CDATA[
 	<p>
-		Looking down the list, you see that the vintages on offer are of a far higher quality than in an average restaurant, and their steep prices reflect this. Deciding that Nyan deserves the very best, you decide to order the most expensive item on the list, and so at [#SPECIAL_PARSE_1] flames, you tell the waiter that you'd like to order the bottle of [#SPECIAL_PARSE_0].
+		你读起葡萄酒清单，清单上列出的葡萄酒质量远高于一般餐厅，价格也是。你想给妮安最高礼遇，决定点清单上最贵的葡萄酒，要[#SPECIAL_PARSE_1]火币。你告诉侍者给你来一瓶[#SPECIAL_PARSE_0]。
 	</p>
 	<p>
-		From the ecstatic smile on her face, you can tell that Nyan is delighted with your choice of wine, and as she hands her wine list back to the waiter, she happily squeals, [nyan.speechNoEffects(Thank you so much, [pc.name]! I-I've never had that wine before, but I've heard that it's the very best...)]
+		你对上妮安欣喜若狂的笑容，发现她为你的选择而惊喜。她把自己的葡萄酒清单递给侍者，开心地尖叫，[nyan.speechNoEffects(太感谢你了，[pc.name]！我、我从来没喝过这种酒……但我听说它是最美妙的……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_RESTAURANT_2_WINE_ORDER -->
 	
 	<htmlContent tag="DATE_RESTAURANT_2_WINE_ORDER"><![CDATA[
 	<p>
-		Having taken your order, the waiter asks if you'll be sharing the bottle, or if you'll be having something else to drink tonight...
+		侍者接过菜单，询问你是打算和妮安喝同一瓶酒，还是再给自己要点别的喝……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_3_SHARE"><![CDATA[
 	<p>
-		After you've confirmed that you'll be sharing the bottle with Nyan, the waiter leaves your two wine glasses on the table, before swiftly departing and then returning with your chosen vintage. You motion for Nyan to be the one to taste it, and after she's done so and given her enthusiastic approval, the waiter pours you each out a glass. Placing the bottle in an arcane-powered cooler, he leaves it on the table, before saying that he'll return shortly to take your food orders and  then swiftly departing once again.
+		你回答说打算和妮安分享这瓶酒。侍者拿来了两个高脚杯放在你们面前，又迅速离开，带着你选好的葡萄酒回来。你示意妮安尝一口。她喝了一口，表示很满意。侍者为你们各自倒了一杯。他将酒瓶放在奥术力驱动的冷却器中，将其留在桌上。他表示会很快回来给你们点餐，再次迅速离开。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_3_WATER"><![CDATA[
 	<p>
-		Not wanting to have any alcohol tonight, you tell the waiter that you'd like to order a bottle of water. Nodding his head, he swiftly departs and then returns with your chosen beverages. After giving you a glass and placing your bottled water down on the table, the waiter has Nyan taste the wine you've ordered. Receiving her enthusiastic approval, he then pours her out a glass, before placing the bottle in an arcane-powered cooler and leaving it on the table. Saying that he'll return shortly to take your food orders, he swiftly departs once again, leaving the two of you alone.
+		你今晚不想喝酒，告诉侍者给你拿一瓶水。侍者点点头，迅速离开然后带着你选好的饮料回来。侍者递给你一个玻璃杯，把水放在桌上，让妮安尝尝你点的酒。他得到妮安热情的肯定，给她倒好酒，又将酒瓶放在奥术力驱动的冷却器中，将其留在桌上。他表示会很快回来给你们点餐，再次迅速离开。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_3_BEER"><![CDATA[
 	<p>
-		Wanting to drink something other than wine, you tell the waiter that you'd like to order a bottle of beer. Nodding his head, he swiftly departs and then returns with your chosen beverages. After expertly pouring out your beer and placing the glass down before you, the waiter has Nyan taste the wine you've ordered. Receiving her enthusiastic approval, he then pours her out a glass, before placing the bottle in an arcane-powered cooler and leaving it on the table. Saying that he'll return shortly to take your food orders, he swiftly departs once again, leaving the two of you alone.
+		你想喝点别的，告诉侍者给你拿瓶啤酒。侍者点点头，迅速离开然后带着你选好的饮料回来。侍者递给你一个玻璃杯，把啤酒放在桌上，让妮安尝尝你点的酒。他得到妮安热情的肯定，给她倒好酒，又将酒瓶放在奥术力驱动的冷却器中，将其留在桌上。他表示会很快回来给你们点餐，再次迅速离开。你和妮安现在独处了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_RESTAURANT_3_PLAYER_DRINK -->
 	
 	<htmlContent tag="DATE_RESTAURANT_3_PLAYER_DRINK"><![CDATA[
 	<p>
-		Finally having some time in which to talk with one another, you and Nyan start discussing the food that's on the menu. Visibly relaxing and letting out a happy sigh, Nyan reveals, [nyan.speechNoEffects(You know, I heard that t-the head chef here has actually cooked for Lilith herself. The quality of the f-food here is meant to be unmatched in all of Dominion... A-At least, that's what my mum told me...)]
+		你们终于有了彼此交谈的机会，开始讨论菜单上的食物。妮安肉眼可见地放松下来，舒了一口气，回答道，[nyan.speechNoEffects(你知道吗，我听说这儿的主厨还给莉莉丝烹饪。这里的食物肯定是整个御城区最精致的……至、至少，妈妈这么跟我说的……)]
 	</p>
 	<p>
-		Looking over the menu, you see that there isn't a very big selection on offer, but if what Nyan has just said is true, you can be sure that you'll like anything which you decide to order. Asking Nyan what she's thinking of having, you're a little taken aback by the speed of her response, as she happily exclaims, [nyan.speechNoEffects(I'm ordering the tsipoura! I-It's the name for oven-baked, gilt-head bream, and it's my a-absolute favourite food ever! I'm so happy that they're serving this...)]
+		你扫了一眼菜单，发现上面没几道菜可点。但你听了妮安的说法，觉得肯定样样好吃。你问妮安她想吃什么，被她的反应速度吓了一跳。她立刻用欢快的语气答道，[nyan.speechNoEffects(我要点提斯普拉金鲷鱼，这是一种烤金鲷鱼，是我最、最喜欢的食物！看见他们供应这道菜我很惊喜……)]
 	</p>
 	<p>
-		After you've spend a moment in which to decide, you tell Nyan what you're going to order, to which she coyly bites her lip and asks, [nyan.speechNoEffects(Is it ok if I o-order a starter as well? Y-You'll order one too, won't you, [pc.name]?)]
+		你思来想去，告诉了妮安你的决定。她咬着嘴唇害羞地问道，[nyan.speechNoEffects(我还可以再点个开胃菜吗？[pc.name]，你也点一个，好吗？)]
 	</p>
 	<p>
-		Not wanting your girlfriend to feel awkward at being the only one to order a starter, and being unable to say no to her cute smile, you agree to her demands and ask her what you think you should go for. Happily expressing her opinion on the different starters that are on offer, your girlfriend helps you to decide on what to get. As soon as you've both decided, the waiter swiftly returns and prepares to take your order...
+		你担心女朋友因为单独点开胃菜而尴尬，又被她可爱的微笑打动，同意了她的要求。你询问女朋友的意见，她高兴地讲起她对各种开胃菜的看法，为你的开胃菜决定提供帮助。侍者正在等待你们的召唤……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_4_ORDER"><![CDATA[
 	<p>
-		After first letting Nyan order her starter and tsipoura, you tell the waiter what you'd like for your starter and main course. After you're both done, the waiter takes your menus, before swiftly heading off to the kitchen and leaving the two of you alone again.
+		你等妮安点好开胃菜和提斯普拉金鲷鱼，又点好你的开胃菜和主菜。侍者看你们两个点完餐，带走了菜单，迅速前往厨房。你和妮安现在又独处了。
 	</p>
 	<p>
-		[nyan.speechNoEffects(This place is amazing, i-isn't it?)] Nyan wistfully sighs. Looking around, you can't help but agree with your girlfriend's sentiment. From a visual perspective, the illusion of being in the middle of a forest clearing is absolutely flawless, and what's more, there's some kind of arcane enchantment that's making the very air you breathe feel as fresh as if you were actually out in the middle of the countryside.
+		[nyan.speechNoEffects(这地方真好，是、是吧？)]，妮安略带伤感地叹气。你环顾四周，不禁暗暗赞同你女朋友的感受。你仅凭视觉观察，真切地感受到置身于林地中央的完美错觉。更令人惊奇的是，某些奥术附魔使你呼吸到的空气亦如城郊野外的空气一般清新。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_4_ORDER_CANDLE"><![CDATA[
 	<p>
-		After first letting Nyan order her starter and tsipoura, you tell the waiter what you'd like for your starter and main course. After you're both done, the waiter takes your menus, but before you allow him to leave, you ask if it would be possible to have a candle lit on your table. Giving you a friendly smile, he agrees to fulfil your request, and within moments there's a lit candle on your table, helping to add to the romantic atmosphere.
+		你等妮安点好开胃菜和提斯普拉金鲷鱼，又点好你的开胃菜和主菜。侍者看你们两个点完餐，带走了菜单。你在侍者离开前叫住他，询问能不能在桌上点起蜡烛。侍者友好地微笑，满口答应你的要求。片刻后，桌子上点起了蜡烛，营造出浪漫的氛围。
 	</p>
 	<p>
-		[nyan.speechNoEffects(That's perfect... Tonight is t-turning out just like I'd hoped it would...)] Nyan happily sighs, before glancing at your surroundings and observing, [nyan.speechNoEffects(This place is amazing...)]
+		[nyan.speechNoEffects(太完美了……今晚的一切像梦一样……)]，妮安愉悦地叹息，看了看周围的景致，[nyan.speechNoEffects(这地方真好……)]
 	</p>
 	<p>
-		Looking around, you can't help but agree with your girlfriend's sentiment. From a visual perspective, the illusion of being in the middle of a forest clearing is absolutely flawless, and what's more, there's some kind of arcane enchantment that's making the very air you breathe feel as fresh as if you were actually out in the middle of the countryside.
-	</p>
-	]]>
-	</htmlContent>
+		你环顾四周，不禁暗暗赞同你女朋友的感受。你仅凭视觉观察，真切地感受到置身于林地中央的完美错觉。更令人惊奇的是，某些奥术附魔使你呼吸到的空气亦如城郊野外的空气一般清新。	</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_RESTAURANT_4_STARTERS -->
 	
 	<htmlContent tag="DATE_RESTAURANT_4_STARTERS"><![CDATA[
 	<p>
-		For the next ten minutes, the two of you talk about the restaurant's unique setting, as well as the previous times Nyan has been here. Your conversation doesn't manage to advance very far, however, as the waiter soon arrives at your table to deliver your starters. After checking to make sure that no more drinks are required, the waiter again swiftly departs, leaving Nyan to very quickly turn the topic of conversation to how delicious her food is.
-	</p>
+		你们两个在接下来的十分钟谈论了餐厅独特而幽雅的环境，还有妮安以往的用餐经验。但你们并没有聊得很深入，因为侍者很快来给你们送上了前菜。侍者询问是否需要更多饮料，得到否定答案后再次迅速离开。妮安很快把话题转到她美味的开胃菜上。
+</p>
 	<p>
-		While there's much to say about the exceptional quality of each of your starters, the topic eventually starts to dry up, leaving you to decide what to talk about next...
-	</p>
-	]]>
-	</htmlContent>
+		虽然你们对出乎意料好吃的开胃菜相谈甚欢，但话题逐渐枯竭。你下一步打算聊……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_5_TALK"><![CDATA[
 	<p>
-		Deciding that it would be nice for Nyan to simply relax and talk about herself, you ask her how her day has been. Happily engaging you in conversation, the cute cat-girl tells you all about what she's been doing since waking up this morning. As it plays such a large role in her life, the conversation soon naturally advances to the topic of Nyan's work and how her business is going.
+		你决定让妮安放松下来，聊聊她自己。你问她今天过得怎么样。可爱的猫女很乐意与你交谈，她告诉你从起床开始她都在做什么。因为工作和生意占据了妮安生活的大部分，所以你们的谈话自然地转向了这些。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_5_COMPLIMENT"><![CDATA[
 	<p>
-		Deciding that it would be nice for Nyan to feel good about herself, you offer her a flattering compliment on her good looks, which causes her to blush and shyly smile at you. Clearly being extremely happy with how this evening is going, the cute cat-girl tells you how much fun she's having, which then leads into a conversation about how her day has been. As it plays such a large role in her life, the topic then soon advances to be about Nyan's work and how her business is going.
+		你决定让妮安自信并愉悦，你夸奖她的容貌。妮安唰地脸红，羞涩地向你微笑。可爱的猫女显然对今晚的约会非常满意，她告诉你今晚过得有多开心。然后你们谈起了她今天过得如何。因为工作和生意占据了妮安生活的大部分，所以你们的谈话自然地转向了这些。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_5_DIRTY"><![CDATA[
 	<p>
-		Deciding that you want Nyan to know just how much she turns you on, you make several dirty suggestions about what you'd like to do with her later, making it quite clear that you're wanting to get into her panties tonight. Furiously blushing, the embarrassed cat-girl frowns at you and firmly asks you to not say such outrageous things again. Not wanting to ruin this evening, you decide to switch to engaging your girlfriend in small talk, and you soon manage to get Nyan talking about work and how her business is going.
+		你决定让妮安知道你有多性奋。你列出几条你稍后要怎么对她的下流提议，明示妮安今晚想脱下她的裤子。猫女又羞又恼，满脸通红。她皱起眉头看着你，严肃地要求你不要再说这种出格的话。你不想毁掉这个夜晚，便把话题切换成与女友的日常闲聊。你们很快聊到了妮安的工作和生意。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_RESTAURANT_5_MAIN_MEAL -->
 	
 	<htmlContent tag="DATE_RESTAURANT_5_MAIN_MEAL"><![CDATA[
 	<p>
-		By this time the two of you have finished your starters, and after the waiter has come to take your empty plates away, Nyan continues on the topic of her business, and reveals, [nyan.speechNoEffects(Y-You know, my store was actually one of my mum's businesses, and she gave it to me to t-try and help me build my confidence... I've been trying r-really hard to overcome my anxiety since then, as I really want to make her happy.)]
+		这时，你们两个已经吃完了前菜，服务员来把你们的空盘子拿走后，妮安继续谈起了她的生意，并透露说，[nyan.speechNoEffects(你，你知道，我的店其实是我妈妈的生意之一，她把它给我是，是想帮我建立自信……从那时起，我就非常努力地克服焦虑，因为我真的很想让她开心。)]
 	</p>
 	<p>
-		Happily smiling at you, Nyan gazes lovingly at you with her big, blue eyes and reveals what you've already started to notice, [nyan.speechNoEffects(Since meeting you, I-I've starting to feel a lot more confident about things. I don't get so caught up on m-my words like I used to either...)]
+		妮安幸福地对你微笑，用她那双蓝色的大眼睛深情地凝视着你，并透露了你已经开始注意到的事情，[nyan.speechNoEffects(自从遇见你，我，我开始对各种事情都有了信心，我说话也不像以前那样磕磕绊绊了……)]
 	</p>
 	<p>
-		Telling your girlfriend that you're happy to hear that she's really starting to overcome her anxiety and confidence issues, you say that her mother is sure to be proud of her efforts. Still smiling, Nyan nervously rubs her hands together and responds by saying, [nyan.speechNoEffects(I really hope so... My mum's a super successful b-businesswoman, and so I worry that I'll never live up to h-her expectations... She's been travelling all over the Realm d-doing business for over a year now, and I-I can't wait to see her again. She's so amazing, I really want to be like her, b-but I find it difficult to be around people...)]
+		你对女友说，很高兴听到她真的开始克服焦虑，变得自信了，你还说她妈妈一定会为她的努力感到骄傲。妮安依然面带微笑，紧张地搓着双手，回应道，[nyan.speechNoEffects(我真的希望如此……我妈妈是个超级成功的女商人，所以我担心我永远也达不到她的期望……她已经在王国各地做生意一年多了，我等不及想再见到她。她太了不起了，我真想成为她那样的人，但我，我还是很难和其他人相处……)]
 	</p>
 	<p>
-		As you continue your conversation with Nyan, you find it extremely difficult to get her to talk about anything but her mother, and you very quickly get the clear impression that your girlfriend practically worships her mum. Eventually, however, the cat-girl's praise of her mother is brought to an end not by your efforts, but by the arrival of your main meals.
+		当你继续与妮安交谈时，你发现她一旦讲起她的妈妈，就仿佛打开了话匣子，而且你很快就能感觉到，你的女友相当崇拜她的妈妈。不过，最终猫女对她妈妈的赞美并没有因为你的努力而终止，而是因为正餐来了。
 	</p>
 	<p>
-		After the waiter has delivered your food and swiftly departed, both you and Nyan start to eat, giving you a brief moment in which to think of what to say next in order to steer the topic away from her mother...
+		服务员送餐并迅速离开后，你和妮安开始用餐，你有短暂的时间思考下一句该说什么，以便将话题从她母亲身上引开……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_6_TALK"><![CDATA[
 	<p>
-		It being the most obvious thing to talk about, you ask Nyan if she's enjoying her food, to which you receive an extremely enthusiastic, [nyan.speechNoEffects(Yes, it's s-so amazing! Tsipoura is my favourite food ever!)]
+		你想到了最显而易见的话题，你问妮安吃得开心吗，她非常热情地回答道，[nyan.speechNoEffects(很开心，很，很好吃！提斯普拉金鲷鱼是我最喜欢的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_6_FLIRT"><![CDATA[
 	<p>
-		Wanting to have some fun with Nyan, you start gently flirting with her and complimenting her appearance, which causes her to furiously blush and let out an excited giggle. She really seems to really be having fun with you, and even manages to summon the courage to flirt back with you a little.
+		你想和妮安玩玩，就开始温柔地和她调情，称赞她的外表，这让她脸红心跳，发出兴奋的咯咯笑声。她似乎真的和你玩得很开心，甚至敢于鼓起勇气反过来和你调情。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_6_FOOTSIE"><![CDATA[
 	<p>
-		Eager to have some physical contact with your girlfriend, you slide your [pc.foot] up her leg and tell her that you can't wait to fuck her. Furiously blushing at your bold move, the embarrassed cat-girl swats your [pc.leg] away and stutters, [nyan.speechNoEffects(P-Please, [pc.name], d-don't do such outrageous t-things here!)]
+		你迫不及待想和你的女朋友来点身体接触了，于是将你的[pc.foot]勾在她的腿上，向上滑，俯身向前，轻轻告诉她，你其实现在更想享用她。被你的大胆举动气得面红耳赤，尴尬的猫女一把拍开你的[pc.leg]，结结巴巴地说，[nyan.speechNoEffects(请，请别这样，[pc.name]，别，别在这种地方做这些过……过分的事！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_RESTAURANT_6_DESSERT -->
 	
 	<htmlContent tag="DATE_RESTAURANT_6_DESSERT"><![CDATA[
 	<p>
-		Having successfully steered Nyan away from talking about her mother, you allow the topic of conversation to turn towards you. While you don't want to cause Nyan any distress by telling her all of the details, you do reveal that Lilaya is your [lilaya.relation(pc)], and that you're helping her to conduct arcane research.
+		你成功地让妮安避开了关于她母亲的话题，让话题转向了你自己。虽然你不想把所有细节都告诉妮安，以免给她带来任何困扰，不过你还是告诉了她莉莱雅是你的[lilaya.relation(pc)]，你现在正在协助她做奥术研究。
 	</p>
 	<p>
-		[nyan.speechNoEffects(L-Lilaya? As in, Lyssieth's daughter?)] Nyan asks, and after you've replied in the affirmative, she gasps, [nyan.speechNoEffects(Wow... So you're related to an elder lilin? M-My mother has met with Lyssieth quite a lot to do business, and so I've heard a l-lot about her and Lilaya...)]
+		[nyan.speechNoEffects(莉，莉莱雅？那个，那个莉西丝的女儿吗？)]妮安问，在你做出肯定回答后，她喘着气说，[nyan.speechNoEffects(哇……这么说你和一个莉琳长老是亲戚？我母亲经常和莉西丝见面谈生意，所以我听说了很多她和莉莱雅的事……)]
 	</p>
 	<p>
-		After finishing your meals, the two of you continue to discuss your [lilaya.relation(pc)] for a short while, and you discover that by accompanying her mother on one of her business trips, Nyan has actually met Lilaya once before. As you remark upon the fact that it's a small world, the waiter suddenly returns to take your plates away. After quickly carrying out his task, he asks if you or Nyan would like to see the dessert menu. Upon hearing this, your girlfriend puts on one of the cutest looks you've ever seen, and you find yourself unable to resist giving her what she wants...
+		吃完饭后，你们俩继续讨论了一会儿你的[lilaya.relationship(pc)]，你发现妮安在一次陪同她母亲出差时，其实已经见过莉莱雅一次了。就在你们感叹世界真小的时候，服务员突然回来端走了你们的盘子。在快速完成任务后，他问你和妮安是否想看看甜点菜单。听到这句话后，你的女朋友看向你，露出了你见过的最可爱的表情，你发现自己根本无法拒绝她……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_7_INDIVIDUAL"><![CDATA[
 	<p>
-		Seeing the excited look on Nyan's face, and not wanting to let her down, you tell the waiter that you would like to order some dessert. After retrieving and presenting you with the menu, the waiter steps back, giving the two of you some time in which to decide. Quickly settling on what it is that you'll order, you ask your girlfriend what she'd like, to which she replies, [nyan.speechNoEffects(Oh, erm, I'd like ice cream...)] 
+		看到妮安兴奋的表情，你不想让她失望，便告诉服务员你想点一些甜点。服务员拿过菜单递给你，然后退后一步，给你们俩一些时间做决定。你很快就决定了要点什么，然后问女友她想吃什么，她回答说，[nyan.speechNoEffects(哦，嗯……冰淇淋吧！)] 
 	</p>
 	<p>
-		Relaying your orders to the waiter, you once again engage Nyan in small talk, and from her relaxed, happy demeanour, you can tell that she's completely at ease while in your presence. Despite being in a public place, she's so relaxed that her stutter has almost completely disappeared, and after your desserts have arrived, she barely takes her eyes away from you as she tucks into her ice cream. Humming in delight, she sighs, [nyan.speechNoEffects(I haven't had this much fun in a long time... Thanks, [pc.name]...)]
+		在把点菜单给服务员之后，你再次与妮安攀谈起来，从她轻松愉快的神态中，你可以看出她在你面前已经完全放松下来了。尽管是在公共场合，她依旧能够保持放松，口吃的毛病几乎完全消失了，你们的甜点送来后，她吃着冰淇淋，但几乎没有把目光从你身上移开过。她高兴地哼着歌，轻声说，[nyan.speechNoEffects(我好久没有这么开心过了，[pc.name]……)]
 	</p>
 	<p>
-		Smiling and telling her that it's your pleasure, you see that your girlfriend is beginning to gaze at you in a deeply affectionate manner. Seizing this opportunity, you finish your dessert and start to flirt with her, and from her eager responses and happy little giggles, you can soon tell that she's going to want more than just kiss tonight.
+		你微笑着告诉她这是你的荣幸，你看到女友开始深情地注视着你。抓住这个机会，你吃完甜点，开始和她调情，从她热切的回应和开心的咯咯笑声中，你很快就能判断出她今晚想要的不仅仅是一个吻。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DATE_RESTAURANT_7_SHARE"><![CDATA[
 	<p>
-		Seeing the excited look on Nyan's face, and not wanting to let her down, you tell the waiter that you would like to order some dessert. After retrieving and presenting you with the menu, the waiter steps back, giving the two of you some time in which to decide. Thinking that it would be a nice experience, you ask your girlfriend if she'd like to share a dessert with you, to which she happily replies, [nyan.speechNoEffects(Oh, yes! Could we please share some ice cream?)] 
+		看到妮安兴奋的表情，你不想让她失望，便告诉服务员你想点一些甜点。服务员拿过菜单递给你，然后退后一步，给你们俩一些时间做决定。你看了看菜单，心里有了主意，你认为这会是一次不错的体验，于是问女友是否愿意点一份甜点，然后两个人一起享用。她高兴地回答道，[nyan.speechNoEffects(太好了！我们能一起吃冰淇淋吗？)] 
 	</p>
 	<p>
-		Relaying Nyan's choice to the waiter, you once again engage her in small talk, and from her relaxed, happy demeanour, you can tell that she's completely at ease while in your presence. Despite being in a public place, she's so relaxed that her stutter has almost completely disappeared, and after your ice cream has arrived, she barely takes her eyes away from you as she joins you in tucking into the frozen dessert. Humming in delight, she sighs, [nyan.speechNoEffects(I haven't had this much fun in a long time... This is just like in my books... Thanks, [pc.name]...)]
+		你把妮安的选择转达给服务员，再次与她闲聊起来，从她轻松愉快的神情中，你可以看出她在你面前完全放松了。尽管是在公共场合，她还是非常放松，口吃几乎完全消失了。冰淇淋送来后，她的眼睛几乎没有离开过你，和你一起品尝着冰凉凉的甜点。她高兴地哼着歌，小声说，[nyan.speechNoEffects(我从来没有这么开心过，[pc.name]，一切都好像我从书里看到的那样浪漫……)]
 	</p>
 	<p>
-		Smiling and telling her that it's your pleasure, you see that your girlfriend is beginning to gaze at you in a deeply affectionate manner. Seizing this opportunity, you finish your dessert and start to flirt with her, and from her eager responses and happy little giggles, you can soon tell that she's going to want more than just kiss tonight.
+		你微笑着告诉她这是你的荣幸，你看到女友开始深情地注视着你。抓住这个机会，你吃完甜点，开始和她调情，从她热切的回应和开心的咯咯笑声中，你很快就能判断出她今晚想要的不仅仅是一个吻。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_7_END -->
 	
 	<htmlContent tag="DATE_7_END"><![CDATA[
 	<p>
-		With your desserts finished, and with both of you being ready to leave, you call over the waiter and ask for the bill. Swiftly doing as you ask, he presents you with tonight's cost, and you see that you're being charged an eye-watering [#SPECIAL_PARSE_0] flames...
+		甜点吃完后，你们两个准备离开，你叫来服务员结账。服务员爽快地走了过来，把账单递给你，你发现这顿饭足足花了[#SPECIAL_PARSE_0]火币，多少让你有点感到肉疼……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DATE_END_RETURN -->
 	
 	<htmlContent tag="DATE_END_RETURN"><![CDATA[
 	<p>
-		After you've quickly settled the bill, the waiter retrieves Nyan's coat and umbrella, before seeing the two of you to the door and thanking you for your business. As you [pc.step] out into the Shopping Arcade, Nyan performs an uncharacteristic move, and boldly initiates physical contact by taking hold of your [pc.arm(true)] and leaning into your body. Letting out a happy little giggle, she exclaims, [nyan.speechNoEffects(That was so fun, [pc.name]! Thank you so much!)]
-	</p>
+ 在你爽快地结完账后，服务员拿回了妮安的外套和雨伞，然后送你们到门口，并对你们的光顾表示感谢。当你们走出购物商场时，妮安做出了一个反常的举动，她大胆地拉住你的[pc.arm(true)]，靠在你的身上，主动与你身体接触。她开心地发出咯咯的笑声，[nyan.speechNoEffects(今天真的好开心啊，[pc.name]，太谢谢你了！)]
+ </p>
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			Returning your girlfriend's sentiments, you accompany her to the exit of the Shopping Arcade, where you see through the glass doors that there's an ongoing arcane storm. Letting out a little eek, Nyan huddles up to you and whines, [nyan.speechNoEffects(Oh no... Perhaps if we hurry, it won't affect me too much...)]
+			你回应了女友的感慨，陪她来到商场出口，透过玻璃门，你看到外面正在发生一场奥术风暴。妮安发出一声轻微的尖叫，蜷缩在你身边，抱怨着，[nyan.speechNoEffects(哦，不……如果我们抓紧时间，也许不会对我造成太大影响……)]
 		</p>
 		<p>
-			Doing as the cat-girl suggests, the two of you wait for the next clap of thunder to pass before hurrying outside and down the street towards her apartment. By a stroke of particularly good fortune, you manage to avoid both strikes of thunder and horny citizens during your dash towards Nyan's home. As you reach the steps of her apartment building, however, the storm above makes up for its unusual silence by unleashing one of the most powerful claps of arcane thunder you've ever heard.
+			按照猫女的建议，你们俩等着下一个雷声过去，然后匆匆出门，沿着街道向她的公寓跑去。幸运的是，你们在冲向妮安家的过程中避开了雷声和好色的市民。然而，当你到达她公寓楼的台阶时，上方的暴风雨却打破了它的宁静，发出了你所听到过的最震撼人心的雷声。
 		</p>
 		<p>
-			Despite pulling her through the entrance and slamming the door shut behind you, you're not able to save Nyan from the arousing effects of the storm, and before you know what's happening, the cat-girl is frantically pressing her [nyan.lips+] against your mouth and lustfully grinding herself against your body. Protected from any further claps of thunder, Nyan soon starts to come back to her senses, and with a little eek, she breaks off the kiss and exclaims, [nyan.speechNoEffects(I'm sorry, [pc.name]! I-I couldn't stop myself!)]
+			尽管你拉着她穿过了入口，并在身后关上了门，但你还是没能让妮安免受风暴的欲望效应，在你意识到发生了什么之前，这个猫女已经疯狂地将她[nyan.lips+]紧紧地贴在你的嘴上，并淫荡地在你的身体上磨蹭。此时，又一道惊雷在天空中炸响，巨大的雷声使妮安很快就恢复了理智，她“啊”了一声，放开了你的嘴唇，惊呼道，[nyan.speechNoEffects(对不起，[pc.name]，我，我刚才没法控制我自己了……)]
 		</p>
 		<p>
-			Telling her that there's nothing to be sorry about, you reassuringly stroke Nyan's arm, which has the desired effect of calming her down. Making your way up the flights of stairs to the third floor, the two of you soon arrive at the door to your girlfriend's apartment, where she turns to face you and nervously shuffles her feet, before looking at you with her big, blue eyes and saying, [nyan.speechNoEffects(P-Please, I'd like you to come in for a while...)]
+			你告诉她没什么好抱歉的，然后安慰地抚摸妮安的手臂，这起到了让她平静下来的效果。沿着楼梯上到三楼，你们俩很快就来到了你女朋友的公寓门口，她转过身来面对着你，紧张地跺着脚，然后用她那双迷人的蓝色的大眼睛看着你，[nyan.speechNoEffects(请，请进来坐坐吧……)]
 		</p>
 	#ELSE
 		#IF(game.getCurrentWeather()==WEATHER_RAIN || game.getCurrentWeather()==WEATHER_SNOW)
 			<p>
-				Returning your girlfriend's sentiments, you accompany her to the exit of the Shopping Arcade, where you see through the glass doors that it's currently
+				你回应了女友的感慨，陪她来到购物商场的出口，透过玻璃门，你看到外面目前正
 				#IF(game.getCurrentWeather()==WEATHER_RAIN)
-					 raining outside.
+					下着雨。
 				#ELSE
-					 snowing outside.
+					下着雪。
 				#ENDIF
-				 Letting out an embarrassed little whine, Nyan pops open her cute frog-umbrella and offers, [nyan.speechNoEffects(This is big enough for both of us... So we can walk close together and share it...)]
+				妮安不好意思地哼了一声，打开她可爱的青蛙伞，撑在你们两个人的头顶，[nyan.speechNoEffects(伞够大，如果我们靠得近点，就淋不湿了……)]
 			</p>
 			<p>
-				Thanking your girlfriend for her kindness, you do as she suggests and share the umbrella with her. Talking with your blushing girlfriend about this evening's meal, you head down the street in the direction of her apartment.
+				你感谢女友的好意，听从了她的建议，和她一起撑着雨伞。与脸红的女友谈论着今晚的饭菜，你和她一起沿着街道向她公寓的方向走去。
 			</p>
 		#ELSE
 			<p>
-				Returning your girlfriend's sentiments, you accompany her to the exit of the Shopping Arcade, where you see that the lack of precipitation renders Nyan's umbrella unnecessary. Talking with your girlfriend about this evening's meal, you head down the street in the direction of her apartment.
+				你回应了女友的感慨，陪她来到商场的出口处，看到外面的雨几乎停了，妮安的雨伞也就没有必要再撑了。和女友谈论着今晚的饭菜，你和她一起沿着街道，往她公寓的方向走去。
 			</p>
 		#ENDIF
 		<p>
-			After five minutes, you arrive at the entrance to Nyan's apartment building, and after [pc.walking] up the steps, you push open the front door and accompany your girlfriend into the lobby. Making your way up the flights of stairs to the third floor, the two of you soon arrive at the door to Nyan's apartment, where she turns to face you and nervously shuffles her feet, before looking at you with her big, blue eyes and saying, [nyan.speechNoEffects(P-Please, I'd like you to come in for a while...)]
+			五分钟后，你来到妮安的公寓楼门口，[pc.walking]上台阶后，你推开前门，陪着女友走进大厅。沿着楼梯上到三楼，你们俩很快就来到了妮安的公寓门口，她转过身来面对着你，紧张地跺着脚，然后用她那双迷人的蓝色大眼睛看着你，[nyan.speechNoEffects(请，请进来坐坐吧……)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT"><![CDATA[
 	<p>
-		Happily accepting Nyan's invitation to come inside, you follow her into her apartment's hallway. Pulling off her shoes and hanging up her coat, the cute cat-girl turns towards you and breathlessly pants, [nyan.speechNoEffects([pc.Name]... I really had a great time tonight... Perhaps we could...)]
+		你高兴地接受了妮安的邀请，跟着她走进了门口的走廊。脱下鞋子，挂好外套，可爱的猫女转过身来，气喘吁吁地向你走来，[nyan.speechNoEffects([pc.Name]……我今晚真的很开心……也许我们该……)]
 	</p>
 	<p>
-		Letting her sentence trail off, your girlfriend reveals just how horny she is by leaning forwards and desperately pressing her [nyan.lips+] against your mouth. With Nyan's hot body pressing against yours, and with the delicate scent of her perfume in the air, you find yourself getting just as turned on as she is, and without wasting even a second, you take hold of her and start passionately returning her kiss.
+		话音刚落，你的女友就暴露了她此时有多么饥渴，她身体前倾，拼命将她的[nyan.lips+]顶在你的唇上。妮安火热的身体紧贴着你，空气中弥漫着她身上淡淡的香水味，你发现自己和她一样兴奋，你毫不犹豫地抱住了她，开始热情地回吻她。
 	</p>
 	<p>
-		After several moments spent entwined in one another's embrace, Nyan momentarily pulls back, before letting out an erotic little moan and suggesting, [nyan.speechNoEffects(Let's go to the lounge...)]
+		在彼此的怀抱中缠绵了片刻后，妮安暂时抽回了手，然后轻轻发出一声色色的呻吟，并暗示道，[nyan.speechNoEffects(我们去卧室吧……)]
 	</p>
 	<p>
-		With her arms still wrapped around your back, Nyan continues kissing and grinding up against you as she shuffles along towards her lounge. Knocking the door open with her butt, she giggles and moans, [nyan.speechNoEffects(~Mmm!~ Yes, [pc.name]! ~Mmm!~ Come on...)]
+		妮安双臂仍然环绕在你的身上，一边继续亲吻和磨蹭你，一边摇摇晃晃地走向她的卧室。她用屁股把门顶开，发出咯咯的笑声，[nyan.speechNoEffects(嗯~Yes，[pc.name]！嗯姆~来吧……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_LOUNGE -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_LOUNGE"><![CDATA[
 	<p>
-		Still passionately kissing one another, you and Nyan enter her lounge, but as you do so, you have a sudden moment of clarity in which you realise that all of the lights in her apartment are already turned on. At that same moment, you notice out of the corner of your eye that there's an unfamiliar figure leaning back on the sofa furthest from the door. Before you have a chance to react, this stranger calls out in a mature, feminine voice, [nyanmum.speech(Well, well, well. I didn't know you had a thing for [pc.racePlural]...)]
+		你和妮安热烈地拥吻着，走进了她的卧室，但就在这时，你突然看到她公寓里的所有灯都打开了。就在那一瞬间，你眼角的余光注意到离门最远的沙发上靠着一个陌生的身影。你还没来得及反应，一个成年女人的声音便从那边传来，[nyanmum.speech(好，好，好，我居然都不知道你还对[pc.racePlural]有意思……)]
 	</p>
 	<p>
-		Immediately breaking off from your kiss, both you and Nyan quickly turn to face the source of this voice. Just like your girlfriend, the stranger leaning back on the sofa appears to be some kind of lesser cat-girl, although unlike Nyan's black colouration, the fur covering her cat-like parts is a uniform shade of tan. Although she looks to be in her mid-forties, there's a bright spark of youthful energy in this woman's predatory, yellow eyes, and as she looks across to your girlfriend, her full lips turn up into a big smile. As she spreads her arms and beckons Nyan forwards for a hug, you notice that she's significantly more muscular than your girlfriend, leading you to realise that she's a cougar-morph. Letting out an impatient huff, she calls out, [nyanmum.speech(Come on, Nyan, mummy wants a hug!)]
+		你和妮安立刻中断了亲吻，迅速转过身来面向声音的来源。就像你的女朋友一样，这个靠在沙发上的陌生人似乎是个亚猫女，不过与妮安的黑色不同，她像猫一样的部位上覆盖的毛是均一的棕褐色。虽然她看上去已经四十多岁了，但在她那双野性的黄色眼睛里，却闪烁着青春活力的火花，她看向你的女朋友，丰满的嘴唇上扬，露出了灿烂的笑容。当她张开双臂召唤妮安时，你注意到她的肌肉比你的女朋友明显要发达得多，这让你意识到她是美洲狮化形。她不耐烦地哼了一声，叫道，[nyanmum.speech(过来，妮安，抱抱妈妈！)]
 	</p>
 	<p>
-		Having been immobilised at the shock of finding her mother in her apartment, these words snap Nyan out of her daze, and with a happy cry, she obediently rushes forwards and launches herself into the arms of her mother. As the two cat-girls tightly embrace one another, you're able to really see just how different the two of them are. While Nyan is shy and unassuming, her mother seems absolutely brimming with confidence, which is reflected by her stylish, wavy hair and fashionable clothing. Both her frontal-zip bodycon dress and platform boots are a deep shade of royal purple, which is nicely complimented by her tan cardigan and white-and-gold watch. Clearly having a fondness for this metal, her gemstone ring, peal earrings, gemstone necklace, and even the bobby pins in her hair are all gold.
+		发现妈妈在自己的公寓里，妮安惊讶得呆住了。而女人的话让妮安从呆滞中清醒过来，她高兴地叫了一声，顺从地冲上前去，扑进了妈妈的怀抱里。当两个猫女紧紧拥抱在一起时，你可以真切地感受到她们两个是多么的不同。妮安害羞又不善言辞，而她的母亲却显得自信满满，这一点从她时尚的波浪卷发和时髦的服装上就能看出来。她的正面拉链连身裙和高台靴都是深沉的骨螺紫色，与她的棕褐色开衫和白金色手表相得益彰。显然，她对金子情有独钟，她的宝石戒指、珍珠耳环、宝石项链，甚至头发上的发夹都是金的。
 	</p>
 	<p>
-		Pulling her daughter down into her lap, she reaches up and starts dominantly stroking her head. Staring directly into your eyes, she states in a cold, menacing tone, [nyanmum.speech(You're going to tell me exactly who you are and why you're trying to take advantage of my precious daughter.)]
+		她把女儿拉到腿上，伸手开始霸道地抚摸她的头。她直勾勾地盯着你的眼睛，用一种冷酷无情、咄咄逼人的语气说道，[nyanmum.speech(你最好老实交代，告诉我你是什么人，为什么要占我宝贝女儿的便宜。)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(Mum, no, it's not like that, [pc.sheIs] my-)] Nyan tries to explain, but she's cut off as her mother quickly moves her hand down to press her finger over her lips.
+		[nyan.speechNoEffects(妈妈，不，不是那样的，[pc.sheIs]是——)]妮安还想解释，但她的母亲迅速将手移到她的嘴上，按住了她的双唇。
 	</p>
 	<p>
-		Without taking her predatory gaze off of your face, Nyan's mother growls, [nyanmum.speech(Go on, explain yourself.)]
+		妮安的母亲没有把她那骇人的目光从你脸上移开，而是对着你咆哮道，[nyanmum.speech(继续，交待你的身份。)]
 	</p>
 	<p>
-		With Nyan being firmly held in her over-protective mother's strong embrace, you realise that you've only really got two options available to you. You could tell Nyan's mother to mind her own business, although considering how much her daughter loves her, you know that this would carry a serious risk of putting an end to your relationship. The other option is to simply introduce yourself to Nyan's mother and explain that the two of you are dating. As you don't want this to be the end of your relationship with Nyan, you decide to go with the second option...
+		当妮安被她过度保护的母亲紧紧抱在怀里时，你意识到你只有两个选择。你可以告诉妮安的妈妈别多管闲事，但考虑到她的女儿有多崇拜她，你知道这样做很有可能会破坏你们之间的关系。另一个选择是简单地向妮安的母亲介绍自己，并解释你们正在约会。由于你不希望你和妮安的关系就此结束，所以你决定选择第二个方案……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_1_SUPPORT -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_1_SUPPORT"><![CDATA[
 	<p>
-		Introducing yourself to Nyan's mother, you make up for the fact that Nyan is unable to talk by briefly explaining that the two of you have been in a relationship for some time, and that you'd been out on a date to 'The Oaken Glade' together this evening. As you talk, the severe look on the cougar-girl's face barely changes, and after hearing what it is you've got to say for yourself, she lets out a brief, low growl and replies, [nyanmum.speech(So, you dare to claim that you're dating my precious Nyan? You don't really care about her at all, do you? I think you've overstayed your welcome. Go on, get out of here. I'll be taking care of Nyan from-)]
+		向妮安的母亲介绍自己后，你替不能说话的妮安简单地解释，说你们俩已经交往了一段时间，今天晚上你们一起去“橡木林荫”约会了。在你说话的过程中，美洲狮女脸上严厉的表情几乎没有任何变化，在听完你要说的话后，她发出一声简短的低吼，回答道，[nyanmum.speech(你竟然敢说你在和我的宝贝妮安约会？你根本不在乎她，对吧？我想你在这里待得够久了，滚吧！我会照顾好妮安的，用不着你——)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(Mum, no!)] Nyan desperately cries out as she pulls her face away from her mother's hand. Still sitting on her lap, she puts on the most pleading expression she can muster and begs, [nyan.speechNoEffects(Please let [pc.name] stay! [pc.SheIs] not trying to take advantage of me, I promise!)]
+		[nyan.speechNoEffects(妈妈，别这样！)]妮安拼命地哭喊着，把脸从妈妈的手上拉开。她坐在妈妈的大腿上，可怜地哀求着，[nyan.speechNoEffects(请让[pc.name]留下来！我保证，[pc.SheIs]不是想占我的便宜！)]
 	</p>
 	<p>
-		Letting out a deep, angry growl, Nyan's over-protective mother glares at her daughter for a moment, before violently clenching and then slowly relaxing her fist. With another deep growl, she snaps her fingers and points to the sofa opposite to the one she's sitting on, ordering, [nyanmum.speech(I'll be the judge of your character, so sit down! I've interviewed thousands of applicants in my time, from lowly general managers all the way up to CEOs for Realm-wide business conglomerates. I'll find out who you really are, '[pc.name]'.)]
+		妮安那过度保护的母亲发出一声深沉而愤怒的咆哮，她瞪着女儿看了一会儿，猛地握紧拳头，然后又慢慢放松。伴随着又一声低沉的咆哮，她打了个响指，指着她所坐的对面的沙发，命令道，[nyanmum.speech(我会审查你的人品究竟如何，坐下。我面试过成千上万的应聘者，从最底层的经理一直到全境商业集团的首席执行官。你骗不过我，让我来看看你到底是什么人，‘[pc.name]’。)]
 	</p>
 	<p>
-		Realising that confrontation with Nyan's mother will surely put an end to your relationship, you swallow your pride and do as you're told. Sitting down on the sofa, you look across to see that Nyan is so embarrassed by what's happening that she's burying her head in her mother's shoulder. Still stroking her daughter's head, Nyan's mother sharply states, [nyanmum.speech(First of all, you are to call me Ms. [nyanmum.surname]. Is that understood?)]
+		你意识到与妮安的母亲发生冲突肯定会破坏你们之间的关系，于是你忍气吞声，照做了。在沙发上坐下后，你看到对面的妮安对发生的一切感到非常尴尬，她把头埋在妈妈的肩膀上。妮安的母亲仍然抚摸着女儿的头，尖声说道：[nyanmum.speech(首先，你要叫我[nyanmum.name]女士。明白了吗？)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(C-Call her [nyanmum.name]!)] Nyan blurts out, before hiding her face in her mother's shoulder once again.
+		[nyan.speechNoEffects(叫，叫她[nyanmum.name]就行了！)]妮安抬起头说，然后，再次把脸埋在母亲的肩膀里。
 	</p>
 	<p>
-		Just like her daughter, [nyanmum.name] reacts to embarrassment by blushing, and you see her rosy skin turning a shade darker as she admonishes her daughter, [nyanmum.speech(Nyan! I see that you've become extremely cheeky in my absence! But fine... If that's really what you'd like, I'll allow your so-called [pc.girlfriend] here to call me [nyanmum.name]...)]
+		就像她的女儿一样，[nyanmum.name]在面对尴尬时也会脸红，你看到她红润的皮肤在告诫女儿时变得阴沉下来，[nyanmum.speech(妮安！我就出去了这么几天，你怎么也变得这么油嘴滑舌！不过好吧……如果你想的话，我允许你所谓的[pc.girlfriend]在这里叫我[nyanmum.name]……)]
 	</p>
 	<p>
-		Obviously having a soft-spot for her daughter, [nyanmum.name] once again hardens her stare and growls, [nyanmum.speech(I'll soon find out if you're a good match for my daughter or not! As you'll no doubt agree, my sweet Nyan deserves nothing but the very best. As one of the most successful businesswomen in all of the Realm, I'm worth more than you can even possibly imagine. I regularly meet with the elder lilin, own billions of flames worth of property, and fuck absolutely whoever I want. I can give Nyan anything she desires, so how are you expecting to compete with that? Go on, tell me how you intend to support my daughter!)]
+		显然，[nyanmum.name]还是很宠爱自己的女儿，她再次瞪大了眼睛，咆哮起来，[nyanmum.speech(我很快就会知道你是否配得上我的女儿！你肯定也同意，我可爱的妮安应该得到最好的，包括爱人在内的一切。作为全王国最成功的女商人之一，我的身价远远超出你的想象。我经常和莉琳长老见面，拥有价值数十亿火币的财产，想和谁上床就和谁上床，我可以给妮安任何她想要的东西，你能吗？说吧，我的女儿要是跟了你走，你拿什么保障她的生活！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_WEALTH"><![CDATA[
 	<p>
-		Having a considerable amount of wealth yourself, you tell [nyanmum.name] that you're casually carrying around over a million flames, and that you'll never have any issue with giving Nyan whatever she wants. The cougar-girl's eyebrows raise a little as you say this, and she growls, [nyanmum.speech(Very well... You've got the wealth, but do you have the sorts of friends who can help you out if things go bad? Go on, tell me who you'd turn to if you lost everything.)]
+		你自己也有相当可观的一笔财富，你告诉[nyanmum.name]，你随身携带着超过一百万的火币，可以给妮安任何她想要的东西。听你这么一说，美洲狮女的眉毛微微一挑，然后继续咄咄逼人地呵斥道，[nyanmum.speech(很好，还算有两个小钱……但这可不够，没有强大的人际关系网，没有朋友在你落难时拉你一把，财富也不过是镜花水月。继续，说说谁能在你窘迫到一无所有时帮助你。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_SLAVES"><![CDATA[
 	<p>
-		Deciding to reveal that the two cat-girls aren't the only ones here who can manage large businesses, you tell [nyanmum.name] that not only do you have a slaver license, but you also own a large number of slaves, and so with the income that they generate, you'd have no trouble supporting Nyan. The cougar-girl's eyebrows raise a little as you say this, and she growls, [nyanmum.speech(Very well... You've got the income, but do you have the sorts of friends who can help you out if things go bad? Go on, tell me who you'd turn to if you lost everything.)]
+		你决定透露一下，这里并不是只有这两个猫女会做生意，你告诉[nyanmum.name]，你不仅有贩奴许可，而且手下还拥有大量奴隶。靠他们创造的收入，你养活妮安不成问题。你说这话时，美洲狮女的眉毛微微上扬，继续苛责地呵斥道，[nyanmum.speech(很好，还算有点生意头脑……但这可不够，没有强大的人际关系网，没有朋友在你落难时拉你一把，你敢说自己不会有朝一日沦落街头吗。继续，说说谁能在你窘迫到一无所有时帮助你。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_DEMON"><![CDATA[
 	<p>
-		Seeing that [nyanmum.name] is the sort of shallow person who's impressed by wealth and prestige, you decide to fall back on the names of both your demonic [lilaya.relation(pc)] and mother. As you tell the cougar-girl that Lilaya is your [lilaya.relation(pc)], you see her eyes widen in surprise, and as you then reveal that you're a direct daughter of
+		你看穿了[nyanmum.name]是那种容易被财富和声望打动的肤浅的人，于是决定用你恶魔[lilaya.relation(pc)]和母亲的名望打动她。当你告诉美洲狮女，莉莱雅是你的[lilaya.relation(pc)]时，你看到她惊讶地睁大眼睛，然后你透露自己是
 		#IF(flags.hasFlag(FLAG_innoxia_child_of_lyssieth))
-			 Lyssieth herself, she momentarily loses her composure and asks in awe, [nyanmum.speech(Wait... <i>You're</i> the one who Lyssieth transformed into her new [pc.daughter]?! Hmm... Well, with family like that, I guess you'll be able to provide for Nyan...)]
+			莉西丝的女儿，她瞬间失去了镇定，惊恐地问道，[nyanmum.speech(等等……<i>你居然就是</i>莉西丝最近认下的那个[pc.daughter]？！嗯……好吧，有这样的背景，我觉得你配得上妮安……)]
 		#ELSE
- 			 [#pc.getLilinMother().getName()] herself, she momentarily loses her composure and asks in awe, [nyanmum.speech(Wait... <i>You're</i> one of [#pc.getLilinMother().getName()]'s children?! Hmm... Well, with family like that, I guess you'll be able to provide for Nyan...)]
+ 			[#pc.getLilinMother().getName()]的女儿，她瞬间失去了镇定，惊恐地问道，[nyanmum.speech(等等……<i>你是</i>[#pc.getLilinMother().getName()]的女儿？！嗯……好吧，有这样的背景，我觉得你配得上妮安……)]
  		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_OCCUPATION"><![CDATA[
 	<p>
 		#IF(pc.getOccupation()==OCCUPATION_ARISTOCRAT)
-			Knowing that [nyanmum.name] is sure to respect your aristocratic lineage, you tell her that you're a member of a highly prestigious noble family, and so no matter what happens, your wealth and status will always be more than enough to support Nyan. The cougar-girl's eyes light up a little as you say this, but not yet convinced by your words, she muses, [nyanmum.speech(Is that so... Tell me, which aristocratic family do you belong to? How do you manage to trace your lineage to Lilith?)]
+			你知道[nyanmum.name]肯定会尊重你的贵族血统，于是你告诉她，你是一个非常有名望的贵族家庭的成员，所以无论发生什么事，你的财富和地位都足以养活妮安。听你这么一说，美洲狮女的眼睛亮了一下，但还没有被你的话说服，她喃喃自语道，[nyanmum.speech(是这样吗……告诉我，你属于哪个贵族家庭？你们家族的血统和莉莉丝有多近？)]
 		#ELSE
-			Knowing that [nyanmum.name] is sure to respect professional qualifications, you tell her that you're an accomplished [pc.job], and so no matter what happens, you'll always be able to find work and support Nyan. The cougar-girl's eyes narrow a little as you say this, and she growls, [nyanmum.speech(Very well... You might be able to provide for my daughter, but do you have the sorts of friends who can help you out if things go bad? Go on, tell me who you'd turn to if you lost everything.)]
+			你知道[nyanmum.name]肯定会尊重你的专业能力，所以你告诉她，你是一个有成就的[pc.job]，所以无论发生什么，你都能找到工作，养活妮安。你这么说的时候，美洲狮女的眼睛微微眯了起来，她仍然咄咄逼人地质问你，[nyanmum.speech(很好……你现在也许能养活我女儿。但如果情况不妙，你有朋友能帮你吗？来吧，告诉我如果你失去了一切，你能够向谁求助？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_DO_BEST"><![CDATA[
 	<p>
-		Unable to give [nyanmum.name] any concrete evidence for being able to support Nyan, you reassure her that you'll always do your best and manage to work something out. Scowling at you in disapproval, she bluntly asks, [nyanmum.speech(Do you really expect me to accept that pathetic nonsense? Seeing as you've got nothing going for you, there's no way I'm going to let you continue to date my daughter! Unless you're from an exceptionally wealthy family, you can just leave right now!)]
+		你无法向[nyanmum.name]提供任何能够养活妮安的具体证据，但你向她保证，你会尽最大努力，让事情迎来转机。她不以为然地瞪了你一眼，直截了当地质问你，[nyanmum.speech(你真以为我会怜悯地接受你那可悲的胡言乱语吗？如果你一无是处的话，我不会让你继续和我女儿约会的，除非你有什么相当显赫的身世，否则你现在就可以走了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_LILAYA_REVEAL"><![CDATA[
 	<p>
 		#IF(pc.getOccupation()==OCCUPATION_ARISTOCRAT)
-			Realising that [nyanmum.name] won't be impressed by the name of your noble line from your old reality, you decide to fall back on the name of your demonic [lilaya.relation(pc)]. As you tell Nyan's mother that Lilaya is your [lilaya.relation(pc)], you see her eyes widen in surprise, and with a detectable hint of awe in her voice, she asks, [nyanmum.speech(You're that closely related to Lyssieth, and so Lilith herself?! Wait... <i>You're</i> the [pc.race] who moved in with Lilaya?! Hmm... I guess that'll do...)]
+			你意识到[nyanmum.name]不会对你在旧现实中的贵族家族有什么印象，因此你决定提及你的恶魔[lilaya.relationship(pc)]的名讳。当你告诉妮安的妈妈莉莱雅是你的[lilaya.relation(pc)]时，你看到她惊讶地睁大眼睛，带着一丝可以察觉到的敬畏问道，[nyanmum.speech(你和莉西丝血缘如此接近，那岂不是也带有莉莉丝的血脉？！等等……<i>你就是</i>那个搬过来和莉莱雅住的[pc.race]？！嗯……我想这就够了……)]
 		#ELSE
-			Seeing that [nyanmum.name] is the sort of shallow person who's impressed by wealth and prestige, you decide to fall back on the name of your demonic [lilaya.relation(pc)]. As you tell Nyan's mother that you're very close to Lilaya, and that she'd surely help you out if you were in a rough spot, you see her eyes widen in surprise, and with a detectable hint of awe in her voice, she asks, [nyanmum.speech(You're that closely related to Lyssieth?! Wait... <i>You're</i> the [pc.race] who moved in with Lilaya?! Hmm... I guess that'll do...)]
+			你看清了[nyanmum.name]是那种在乎财富和声望的肤浅的人，于是决定用你的恶魔[lilaya.relationship(pc)]的名字镇住她。当你告诉妮安的妈妈你和莉莱雅关系很好，如果你遇到困难，她一定会帮你的时候，你看到她惊讶地睁大眼睛，声音里明显带着一丝敬畏，她问道，[nyanmum.speech(你和莉莱雅关系很近？！等等……<i>你就是</i>那个搬过来和莉莱雅住的[pc.race]？！嗯……我想这就够了……)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_2_FOOD -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_FOOD"><![CDATA[
 	<p>
-		With her daughter still on her lap, [nyanmum.name] suspiciously looks you up and down, before revealing, [nyanmum.speech(That was just a little warmup question; your real interview starts now. If you get even one of my questions wrong, you're out of here!)]
+		摸了摸坐在腿上的女儿，[nyanmum.name]狐疑地上下打量着你，然后开口说道，[nyanmum.speech(前面这些只是小小的热身问题，真正的面试现在开始。如果你答错任意一道题目，你就得滚蛋！)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(But mum, I don't want-)] Nyan starts to object, but [nyanmum.name] loudly shushes her. From her mother's overprotective attitude, you start to see how your girlfriend came to be so nervous around strangers, and after being silenced, she meekly sits on [nyanmum.namePos] lap and waits to be told what to do next.
+		[nyan.speechNoEffects(但是妈妈，我不想——)]妮安抗议道，但[nyanmum.name]大声地制止了她。从她妈妈过度保护的态度中，你开始明白你的女朋友是如何在陌生人面前变得如此紧张的，在被制止后，她温顺地坐在[nyanmum.namePos]的腿上，不敢再乱说什么。
 	</p>
 	<p>
-		[nyanmum.speech(This is all to keep you safe, my sweet little Nyan,)] she explains, before looking over at you and continuing, [nyanmum.speech(Seeing as Nyan seems to be so fond of you, I'll go easy with this first question. As you've just been out for a meal with her, you should have just discovered the answer to this. What is Nyan's favourite food?)]
+		[nyanmum.speech(这一切都是为了保护你的安全，我可爱的小妮安，)]她解释道，然后看了看你，继续说道，[nyanmum.speech(看在妮安这么喜欢你的份上，第一个问题我就问得简单点。你刚和她出去吃过饭，应该刚刚知道答案。妮安最喜欢吃什么？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_2_FOOD_FAIL"><![CDATA[
 	<p>
-		Having forgotten what your girlfriend ordered earlier this evening, you make a guess and tell [nyanmum.name] that Nyan's favourite food is [#SPECIAL_PARSE_0].
+		你忘了你的女朋友先前吃晚饭的时候点了什么，于是决定猜一个，告诉[nyanmum.name]说，妮安最喜欢的食物是[#SPECIAL_PARSE_0]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_3_HISTORY -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_3_HISTORY"><![CDATA[
 	<p>
-		Having only just seen her eating it earlier this evening, you confidently tell [nyanmum.name] that Nyan's favourite food is the fish dish, 'tsipoura'. Nyan lets out a happy giggle as you say this, to which her mother growls, [nyanmum.speech(That was just the easy question, so don't get too cocky!)]
+		你清楚地记得刚才吃晚饭的时候妮安点了什么，于是你自信地告诉[nyanmum.name]妮安最喜欢吃的是“提斯普拉金鲷鱼”。你这么一说，妮安开心地咯咯笑了起来，而她的妈妈则咆哮起来，[nyanmum.speech(这只是个简单的问题，所以别太得意！)]
 	</p>
 	<p>
-		Almost as if to show off that she's the one in control of her daughter, [nyanmum.name] reaches down and takes hold of Nyan's legs, before pulling her up so that she's fully kneeling on her lap. Gently stroking the soft black fur which covers her daughter's slender legs, she smirks at you and growls, [nyanmum.speech(Seeing as you're supposedly dating my daughter, you should already know that the two of us lived together for several years. Not in this tiny apartment of course; Nyan sometimes gets these silly ideas in her head, and after I gave her that clothing store, she insisted on living somewhere she'd earned for herself... Anyway, when we used to live together, Nyan insisted on taking over some of the maids' duties, and so what did she used to do for me every morning?)]
+		几乎是为了炫耀自己才是控制女儿的那个人，[nyanmum.name]伸手握住妮安的双腿，然后把她拉起来，让她完全跪在自己腿上。她轻轻抚摸着女儿修长的双腿，得意地笑着，[nyanmum.speech(既然你说你在和我女儿约会，那你应该已经知道我们俩住在一起好几年了。当然，不是住在这间小公寓里；妮安有时会有一些愚蠢的想法，在我把那家服装店交给她之后，她坚持要住在她自己挣来的地方……总之，我们以前住在一起的时候，妮安坚持要接手一些女佣的工作，那她每天早上都为我做什么呢？)]
 	</p>
 	<p>
-		From the triumphant smirk on her face, [nyanmum.name] clearly doesn't expect you to know this, and despite having just pulled her daughter fully onto her lap, she seems ready to spring up and throw you out of the apartment...
+		从她脸上得意的笑容来看，[nyanmum.name]显然认为你肯定不知道这个，尽管她刚刚把女儿拉到自己的腿上，但她似乎已经准备好跳起来把你扔出公寓……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_3_HISTORY_FAIL"><![CDATA[
 	<p>
-		Unable to recall what Nyan told you about her earlier life with [nyanmum.name], you make a guess and say that she used to [#SPECIAL_PARSE_0] every morning.
+		你实在回忆不起来妮安说过她在早晨会给[nyanmum.name]做什么，于是你就去猜她以前早晨会[#SPECIAL_PARSE_0]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_4_STORE -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_4_STORE"><![CDATA[
 	<p>
-		Remembering that Nyan told you her hobbies were following fashion and bakery, you once again confidently reply that she used to bake pastries for [nyanmum.name] every morning. Upon hearing your correct reply, Nyan lifts her face out of her mother's shoulder and flashes you a warm smile. Glaring at you with her predatory yellow eyes, a look of mild annoyance settles on [nyanmum.namePos] face, and she reluctantly admits, [nyanmum.speech(Fine, you got that one right too...)]
+		记得妮安告诉过你她的爱好是关注时尚和烘焙，你再次自信地回答说她每天早上都会为[nyanmum.name]烘焙糕点。听到你正确的回答，妮安把脸从妈妈的肩膀上抬起来，对你露出一个温暖的微笑。[nyanmum.namePos]的脸上浮现出轻微的恼怒神情，那双野性的黄色眼睛死死盯着你，不情愿地承认了，[nyanmum.speech(行吧，你又侥幸答对一个……)]
 	</p>
 	<p>
-		Starting to take you seriously, [nyanmum.name] gently moves Nyan off of her lap so that she's sitting right beside her. Still tenderly stroking her daughter's leg, she leans forwards just a little and growls, [nyanmum.speech(If you're really interested in my daughter, you would have talked all about the clothing store which I gave her to manage. Tell me what it was called before my sweet little Nyan took it over!)]
+		[nyanmum.name]决定开始认真对待你了，轻轻地把妮安从她腿上挪开，让她坐在自己身边。她仍然温柔地抚摸着女儿的腿，然后向前倾了一点，怒斥道，[nyanmum.speech(如果你真的对我女儿感兴趣，你一定会知道我交给她打理的服装店。告诉我，在我可爱的小妮安接手之前，它叫什么名字？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_4_STORE_FAIL"><![CDATA[
 	<p>
-		Unable to recall what Nyan told you about her store's history, you make a guess and say that it was called '[#SPECIAL_PARSE_0]' before Nyan took it over.
+		妮安和你说过服装店的历史，不过你实在是想不起来了，于是随便蒙了一个，你说妮安接手前那家店叫[#SPECIAL_PARSE_0]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_5_FLOWER -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_5_FLOWER"><![CDATA[
 	<p>
-		Remembering when you and Nyan discussed the history of her store, you tell [nyanmum.name] that it was called 'Golden Threads' before Nyan took it over. Excitedly clapping her hands together, Nyan turns to her mother and says, [nyan.speechNoEffects(See, mum? [pc.Name] cares about me, and remembers all that w-we've talked about!)]
+		你还记得你和妮安讨论过她商店的历史，于是你说，在妮安接手之前，它叫“金丝银线”。妮安兴奋地拍着手，转过身对妈妈说：[nyan.speechNoEffects(你看，妈妈，[pc.name]多在乎我，我、我们说过的东西都记住了！)]
 	</p>
 	<p>
-		Taking her hand off her daughter's leg, [nyanmum.name] reaches up to give her head a little pat, before ever so slightly softening her glare and saying, [nyanmum.speech(We'll see about that... I still have a couple more questions to ask of [pc.name]...)]
+		将手从女儿的腿上拿开，[nyanmum.name]伸手轻轻拍了拍女儿的头，然后稍稍缓和了一下目光，说道，[nyanmum.speech(我们拭目以待……我还有几个问题要问[pc.name]……)]
 	</p>
 	<p>
-		By now really taking you seriously, [nyanmum.name] runs one of her cat-like hands through her wavy brown hair, before leaning forwards and snapping, [nyanmum.speech(Tell me what Nyan's favourite flowers are.)] 
+		现在，[nyanmum.name]真的把你当回事了，她用猫一样的手捋了捋波浪状的棕色头发，然后向前倾身，厉声喝道，[nyanmum.speech(告诉我妮安最喜欢什么花？)] 
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_5_FLOWER_FAIL"><![CDATA[
 	<p>
-		Unable to recall what Nyan's favourite flower was, you make a guess and say that [#SPECIAL_PARSE_0] are her favourite.
+		你想不起来妮安喜欢什么花，于是随便蒙了一个，说她喜欢[#SPECIAL_PARSE_0]。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_6_BOOK -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_6_BOOK"><![CDATA[
 	<p>
-		You confidently reply that Nyan's favourite flowers are daisies, and that they were her favourite sight when visiting the countryside. For the first time since meeting her, you see [nyanmum.name] flash you a slight smile, and she ponders out loud, [nyanmum.speech(Maybe you really do care for Nyan...)]
+		你自信满满地回答说，妮安最喜欢的花是雏菊，雏菊田是她去乡下时最喜欢看到的景色。自从认识她以来，你第一次看到[nyanmum.name]向你微微一笑，她思考着，[nyanmum.speech(也许你真的关心妮安……)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(I told you, mum!)] Nyan exclaims, before taking hold of her mother's hand and pleading, [nyan.speechNoEffects(C-Can you please stop this now?)]
+		[nyan.speechNoEffects(我早就和你说过了，妈妈！)]妮安感叹道，然后握住母亲的手恳求道，[nyan.speechNoEffects(所……所以可以停下来了吗？)]
 	</p>
 	<p>
-		Hardening her expression, [nyanmum.name] replies, [nyanmum.speech(I have one last question to ask, and anyone who's seriously interested in you would know the answer to it.)]
+		[nyanmum.name]的表情又严肃起来，她答道，[nyanmum.speech(我还有最后一个问题要问她，她如果真的喜欢你，那她肯定不会不知道吧。)]
 	</p>
 	<p>
-		Before revealing her final question, however, [nyanmum.name] has one last trick up her sleeve, or, more accurately, up her skirt. Sitting upright, she spreads her legs a little, and thanks to the fact that her bodycon dress has a relatively short skirt, she ends up brazenly flashing you her underwear. Clearly well aware of what she's doing, she slides her left leg further to one side, making it impossible not to notice the fact that her dark purple thong is completely crotchless. Shamelessly flashing you her naked pussy, she spreads her legs even wider, and with her large, dark labia fully on display, she deviously smirks at you and asks, [nyanmum.speech(What's the matter? I hope you're not getting distracted by anything. Now tell me the name of Nyan's favourite book.)]
+		不过，在说出最后一个问题之前，[nyanmum.name]还有最后的锦囊妙计，或者更准确地说，是裙中妙计。她坐直身子，双腿微微张开，由于她的连身裙的裙摆相对较短，她公然向你展示了她的内衣。她显然很清楚自己在做什么，她把左腿滑向一边，让人无法不注意到她深紫色的丁字裤是完全露裆的。她无耻地向你展示她赤裸的阴部，她把双腿张得更开，肥大的深色阴唇完全展现在你面前，她奸诈地对你笑着，问道，[nyanmum.speech(怎么了？我希望你没有被任何事分心。现在告诉我，妮安最喜欢的书的名字。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_6_BOOK_FAIL"><![CDATA[
 	<p>
-		Distracted by [nyanmum.namePos] lewd display, you fail to recall what Nyan's favourite book was called. Stumbling around for a title, you make a wild guess and say that it's '[#SPECIAL_PARSE_0]'.
+		你被[nyanmum.namePos]的淫秽表演吸引了注意力，一时想不起妮安最喜欢的书叫什么名字。你绞尽脑汁回忆自己记得的书名，胡乱猜测说是“[#SPECIAL_PARSE_0]”。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_FAIL -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_FAIL"><![CDATA[
 	<p>
-		The instant she hears your incorrect answer, [nyanmum.namePos] fists violently clench shut, and through clenched teeth she snaps, [nyanmum.speech(I knew you didn't care about my Nyan! Go on, get out of here!)]
+		当她听到你错误答案的那一刻，[nyanmum.namePos]的拳头猛地握紧，她咬牙切齿地说，[nyanmum.speech(我就知道你压根不关心我的宝贝妮安！滚吧！滚出去！)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(Mum, wait...)] Nyan weakly protests, but you can tell from the tone of her voice that she's also upset at you for not knowing the answer to her mother's question.
+		[nyan.speechNoEffects(妈妈，等一下……)]妮安弱弱地抗议着，但你从她的语气中可以得知，她也因为你不知道她母亲问题的答案而对你感到沮丧。
 	</p>
 	<p>
-		Holding onto her daughter as though she's no more than a toy, [nyanmum.name] stands up and snaps her fingers at the door. Impatiently tapping her foot on the floor, she growls, [nyanmum.speech(Get moving!)]
+		如同抱着玩具一样抱住她的女儿，[nyanmum.name]站起身来指向门口。她不耐烦地跺着地板，吼道，[nyanmum.speech(滚出去！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_FAIL_LEAVE -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_FAIL_LEAVE"><![CDATA[
 	<p>
-		Realising that a refusal to leave would undoubtedly ruin any chance at redeeming yourself at a later date, you do what [nyanmum.name] says and head for the exit. Following you to the front door, [nyanmum.name] growls to her daughter, [nyanmum.speech(Go on, Nyan, say goodbye! Just as I thought, your so-called '[pc.girlfriend]' was only interested in getting between your legs!)]
+		意识到此时拒绝离开无疑会毁掉以后约会时再证明自己的机会，你按照[nyanmum.name]的指示，转头走向了出口。[nyanmum.name]搂着她的女儿跟着你走到门口，[nyanmum.speech(来吧，妮安，说再见吧！果然不出我所料，你所谓的这个‘[pc.girlfriend]’就只是馋你身子而已！)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(Mum!)] Nyan cries out, and in her embarrassment at her mother's behaviour, she covers her face with her hands and stutters, [nyan.speechNoEffects(S-Sorry, [pc.name]... G-Goodbye, I'll s-see you at the store s-soon, right?)]
+		[nyan.speechNoEffects(妈妈！)]妮安大声叫道，由于对她妈妈的行为感到尴尬，她用手捂住了自己的脸，支支吾吾地说，[nyan.speechNoEffects(对，对不起，[pc.name]……再，再见，之后你，你还会来店里看我的，对，对吧？)]
 	</p>
 	<p>
-		Interrupting your answer, Nyan's mother violently yanks open the front door, before once again demanding that you immediately leave. Letting out a sigh, you [pc.step] out into the corridor, flinching a little as the door slams shut behind you.
+		对你的回答非常不满，妮安的妈妈粗暴地打开大门，然后再次命令你立刻离开。发出一声无奈的叹息，你只得[pc.step]出走廊，当门在你背后砰的一声关上时，你退缩了一下。
 	</p>
 	<p>
-		Heading back down the stairs, you soon find yourself back out in the streets of Dominion, wondering what to do next...
+		回头走下楼梯，你很快发现自己来到了御城区的大街上，开始思考接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_INTERVIEW_PASS -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_INTERVIEW_PASS"><![CDATA[
 	<p>
-		Managing to avoid being distracted by [nyanmum.namePos] lewd display, you correctly respond by saying that Nyan's favourite book is called 'One Day in June'. Still keeping her legs spread, she leans back on the sofa and sighs, [nyanmum.speech(Fine... I suppose you really do care about Nyan...)]
+		你极力避免被[nyanmum.namePos]的淫秽表演所干扰，正确地回答说妮安最喜欢的书叫《六月的某天》。她向后瘫倒在沙发上，叹了口气，双腿保持着原来的姿势，[nyanmum.speech(好吧……我想你真的很关心妮安……)]
 	</p>
 	<p>
-		[nyan.speechNoEffects(You're finished, mum?)] Nyan asks, seemingly completely oblivious as to what her mother is currently doing.
+		[nyan.speechNoEffects(问完了吧，妈妈？)]妮安问道，天真的女孩似乎完全不知道母亲刚才在做什么。
 	</p>
 	<p>
-		Flashing you a devious smirk, [nyanmum.name] snaps her legs shut, before reaching over to pat her daughter on the head. Letting out a big yawn and stretching her muscular arms up above her head, she reveals, [nyanmum.speech(Yes, I've finished with my questioning. I've had a busy day, so I'm going to bed now. Oh, by the way, I'm going to be staying here with you for the foreseeable future. I've appointed subordinates to handle all of my businesses, and I need to take a long break. Your quaint little apartment and company is exactly what I need.)]
+		[nyanmum.name]向你露出一个狡猾的笑脸，把双腿合拢，然后伸手拍拍女儿的头。她打了个大大的哈欠，把肌肉发达的手臂伸到头顶，露出了笑容，[nyanmum.speech(是的，我已经问完了。我今天很忙，现在要去睡觉了。哦，对了，如果不出意外的话，我会和你一起住在这里。我已经任命了下属来处理我所有的业务，我需要好好休息一下。你古色古香的小公寓和你的陪伴正是我所需要的。)]
 	</p>
 	<p>
-		Not giving her daughter any question in the matter, [nyanmum.name] stands up and gives you one last warning, [nyanmum.speech(If you do anything to upset my sweet little Nyan, I'll make you pay.)]
+		在这件事上，[nyanmum.name]没有给女儿任何提问的机会，她站起来，最后一次给了你警告，[nyanmum.speech(如果你敢惹我可爱的小妮安生气，我会让你付出代价的。)]
 	</p>
 	<p>
-		After demanding a goodnight hug and kiss from her daughter, [nyanmum.name] strides over to the door, calling behind her as she goes, [nyanmum.speech(I'll be using the spare room. Good night!)]
+		在要求女儿给她一个晚安拥抱和亲吻后，[nyanmum.name]大步走到门口，一边走一边回头说，[nyanmum.speech(我会睡在空余的房间里的，晚安。)]
 	</p>
 	<p>
-		Stopping in the doorway, [nyanmum.name] swishes her tail to one side, before turning and flashing you another devious grin. Narrowing her yellow, cat-like eyes, she asks, [nyanmum.speech(Oh, [pc.name], please try not to make my daughter moan too loudly tonight; I really could do with my beauty sleep.)]
+		停在门口，[nyanmum.name]把尾巴甩向一边，然后转过身来，又向你露出一个狡猾的笑容。她眯起一双黄色的猫眼，说，[nyanmum.speech(哦，[pc.name]，请尽量不要把我的女儿搞出很大的娇喘声，我真的需要睡个美容觉。)]
 	</p>
 	<p>
-		With that, Nyan's mother disappears around the corner, leaving her furiously-blushing daughter to collapse down on the sofa and cover her face with her hands. Peeking between her fingers, she groans, [nyan.speechNoEffects(I'm so, so sorry about that... Mum can get quite intense, and I n-never expected her to be here...)]
+		妮安的妈妈就这样消失在拐角处，留下满脸通红的女儿倒在沙发上，用手捂着脸。她从指缝间看着你，呻吟着，[nyan.speechNoEffects(非常，非常抱歉……妈妈的脾气不太好，我没想到她今天会回来……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_BEDROOM -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM"><![CDATA[
 	<p>
-		Moving over to sit down next to your still-blushing girlfriend, you give her a reassuring hug and tell her that there's no reason for her to apologise. Leaning into you, Nyan takes her hands away from her face and sighs, [nyan.speechNoEffects(T-Thanks, [pc.name]... Apart from what just happened, t-this evening was one of the best times in my entire life...)]
+		你走到仍在脸红的女友身边坐下，给了她一个安心的拥抱，告诉她没有理由道歉。妮安靠在你的怀里，把手从脸上拿开，叹了口气，[nyan.speechNoEffects(谢，谢谢你，[pc.name]……除，除了刚刚发生的事情，今晚是我一生中最美好的时光之一……)]
 	</p>
 	<p>
-		Turning her head to look up at you, Nyan lets out a soft moan, and you realise that despite the sudden encounter with her mother, she's still very aroused. Giving her what she wants, you lean down and press your [pc.lips] against Nyan's mouth, which causes her to throw her arms around your back and very quickly continue from where you left off. Turning to one side, she practically slides into your lap in her eagerness to kiss you, and in between her muffled moans she pants, [nyan.speechNoEffects(~Mmm!~ Yes... ~Aah!~ We could... ~Mmm!~ My bedroom...)]
+		妮安转过头来看着你，发出了一声轻柔的呻吟，你意识到虽然被母亲撞破，但她仍然非常兴奋。你给了她想要的东西，俯下身用你[pc.lips]抵住妮安的嘴，而她双臂环绕在你的背上，并很快从刚才中断的地方继续。她转过身来，急切地吻着你，几乎滑到了你的腿上，在她低声的呻吟间隙，你听到了她喘息着说，[nyan.speechNoEffects(~啊~唔姆~我们可以去……我的卧室……)]
 	</p>
 	<p>
-		Upon uttering those words, your horny girlfriend takes hold of your [pc.hand], before standing up and weakly trying to pull you to your feet. Playing along with her, you get up off the sofa and allow the cute cat-girl to lead you over to the door. After briefly stopping to peek around the corner and make sure that her mother has retired to the spare room, Nyan continues pulling you down the hallway to her room. Despite her caution, as you arrive at the door to Nyan's room, the opposite door suddenly swings inwards, revealing [nyanmum.name] wearing nothing but a loose dressing gown.
+		你好色的女友说完这些话，起身握住你的[pc.hand]，轻轻地用力，试图把你拉起来。你顺着她的意思，从沙发上站起来，让这位可爱的猫女领着你走到门口。妮安稍作停留，在拐角处偷看了一下，确定她妈妈已经回到了备用房间，继续拉着你沿着走廊往她的房间走去。尽管她小心翼翼，但当你来到妮安的房间门口时，对面的门突然向内打开，露出了只穿着一件宽松睡袍的[nyanmum.name]。
 	</p>
 	<p>
-		[nyanmum.speech(Oh, sweetie, I forgot to ask, but could you make me those pastries of yours tomorrow?)] she nonchalantly asks, seemingly not at all bothered by the fact that her loose dressing gown is leaving her naked pussy and most of her [nyanmum.cupSize]-cup breasts completely exposed.
+		[nyanmum.speech(哦，亲爱的，我忘了问了，你明天能给我做些你上次做的糕点吗？)]她不紧不慢地问道，似乎一点也不在意宽松的睡衣让她赤裸的阴部和大部分[nyanmum.cupSize]罩杯的乳房完全暴露在外。
 	</p>
 	<p>
-		[nyan.speechNoEffects(Mum!)] Nyan squeals, [nyan.speechNoEffects(S-Stop trying to embarrass me! F-Find your own [pc.girlfriend]!)]
+		[nyan.speechNoEffects(妈妈！)]妮安尖叫着说，[nyan.speechNoEffects(别，别再让我尴尬了！找你[pc.girlfriend]去！)]
 	</p>
 	<p>
-		[nyanmum.speech(I'll take that as a yes,)] [nyanmum.name] replies, and as Nyan frantically pulls you into her room, she gives you a subtle wink and blows you a kiss.
+		[nyanmum.speech(我就当你答应了。)][nyanmum.name]回答。当妮安把你用力地拽进她的屋里之后，她微妙地看了你一眼，然后亲了你一口。
 	</p>
 	<p>
-		Slamming the door shut behind the two of you, Nyan lets out an uncharacteristic, frustrated cry, [nyan.speechNoEffects(~Argh!~ She's so meddlesome!)]
+		你们俩身后的门“砰”地一声关上了，妮安发出了不寻常的、沮丧的哭声，[nyan.speechNoEffects(啊~她可真是好管闲事……)]
 	</p>
 	<p>
-		[nyanmum.speech(<i>~I heard that,~</i>)] [nyanmum.namePos] voice calls out from the other side of the door.
+		[nyanmum.speech(<i>我可听着呢~</i>)][nyanmum.namePos]的声音从对面的房间里传来。
 	</p>
 	<p>
-		Thanks to her mother's interference, Nyan is quite clearly almost as frustrated as she is horny. Overcome by her emotions, she practically throws herself at you once again, panting, [nyan.speechNoEffects(Come on, [pc.name], just kiss me!)]
+		多亏了她母亲的干预，妮安显然是既沮丧又饥渴。她现在被自己内心的情绪所左右着，再次气喘吁吁地扑向你，[nyan.speechNoEffects(过来，[pc.name]，吻我！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_BEDROOM_KISS -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_KISS"><![CDATA[
 	<p>
-		More than happy to give your horny girlfriend what she wants, you take hold of Nyan's hips and pull her up against your body. As you press your [pc.lips+] against hers, she throws her arms around your back and starts desperately grinding up against you. After a minute of passionately kissing one another, Nyan pulls back and breathlessly pants, [nyan.speechNoEffects(I want to... I mean... L-Let me get out of this dress...)]
+		你非常乐意让你饥渴的女友如愿以偿，你抱住妮安的臀部，把她拉到你的身上。当你把[pc.lips+]顶在她的嘴唇上时，她双臂抱住你的后背，开始拼命地磨蹭你。激情拥吻一分钟后，妮安抽回手，喘着粗气，[nyan.speechNoEffects(我想……我是说……总，总之让我先把衣服脱下来……)]
 	</p>
 	<p>
-		Stepping back, the blushing cat-girl clumsily starts to take off her dress, and while your attention is almost completely occupied by the sight of your cute girlfriend disrobing, you are able to take a moment in which to finally have a look at your surroundings. Glancing around, you take note of the fact that each of the four walls of Nyan's bedroom are painted in different shades of soft, pastel pinks and yellows. To your left, several large, white bookcases hold a staggering amount of romance novels, while over to your right a collection of plush animal toys are arranged on top of a long chest of drawers. Tying the whole room together, the duvet cover on Nyan's double bed is patterned in pink and white, and at the head, there are at least half a dozen cushions, each in a soft shade of pink, yellow, and blue.
+		脸红的猫女退后一步，笨拙地开始脱衣服。你的注意力几乎完全被你脱衣服的可爱女朋友吸引了，顺带看了眼周围。你环顾四周，注意到妮安卧室的四面墙壁都粉刷成了不同色调的柔和粉色和黄色。在你的左边，几个白色的大书柜里摆放着数量惊人的爱情小说，而在你的右边，一个长长的抽屉上面摆放着一系列毛绒动物玩具。妮安双人床上的羽绒被套有着粉色和白色相间的花纹，床头至少有六七个靠垫，每个靠垫都是粉色、黄色和蓝色的柔和色调，将整个房间点缀在一起。
 	</p>
 	<p>
-		Shrugging off her dress and letting it fall to the plush, cream-coloured carpet beneath her feet, Nyan reveals that she's wearing [nyan.a_slotClothing(GROIN, true)] and [nyan.a_slotClothing(CHEST, true)]. Furiously blushing as she stands there in her lingerie, Nyan mumbles, [nyan.speechNoEffects(I-I've never done this before... I don't want to g-go any further than, erm, y-you know... O-Oral stuff...)]
+		妮安抖了抖肩，她的连衣裙掉在了脚下奶油色的长毛地毯上，暴露出她里面穿着的[nyan.a_slotClothing(GROIN, true)]和[nyan.a_slotClothing(CHEST, true)]。当她只穿着内衣站在你面前时，她的脸“唰”一下就红了，她嘟囔着，[nyan.speechNoEffects(我，我之前从来没做过这个……我，我最多只能，呃，就是，你，你知道，我是说口，口交……)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_KISS_CUNNILINGUS"><![CDATA[
 	<p>
-		Not wanting to rush things with your inexperienced girlfriend, you ask her if she's sure that she'd be comfortable with receiving oral from you. Despite the fact that she's still blushing from the anticipation of what's to come, Nyan smiles at you and enthusiastically confirms, [nyan.speechNoEffects(Yes! I-I mean, I've wanted this since reading about it in one of my books...)]
+		你不想对没有经验的女友操之过急，于是问她是否确定可以接受你的口交。尽管妮安还在为即将发生的事情而脸红，但她还是对你微笑并热情地确认了，[nyan.speechNoEffects(是的！我是说，自从在我的一本书中看到过之后，我就一直想试试这个……)]
 	</p>
 	<p>
-		Despite her clear desire to receive oral from you, Nyan doesn't seem to know what to do next, and so you take the initiative by [pc.stepping] up to her and gently starting to pull down her thong. As you slide her underwear down her furry legs, Nyan's cat-like tail starts to excitedly swish around behind her, and she instinctively moves one of her hands down to cover her pussy. Making cute little panting noises, she hops out of her underwear as you tug them off of her feet, before moving back and sitting down on the edge of her bed. With her hand still down between her legs, she pants, [nyan.speechNoEffects(O-Ok... I think I'm ready...)]
+		尽管妮安很想要你的口交，但她似乎不知道下一步该做什么，于是你主动走到她身边，轻轻地开始拉下她的丁字裤。当你把她的内裤从她的腿上滑下时，妮安像猫一样的尾巴开始兴奋地在身后摆动，她本能地把一只手移到下面捂住自己的阴部。当你把内裤从她脚上扯下来时，她发出了可爱的娇喘声，然后向后退，坐在床边。她的手仍然放在两腿之间，她喘息着，[nyan.speechNoEffects(好……我，我觉得我准备好了……)]
 	</p>
 	<p>
-		Dropping down in front of your girlfriend, you gently push her legs apart. With a little moan, Nyan lifts her hand, revealing
+		你俯身趴在女友面前，轻轻分开她的双腿。随着一声轻微的呻吟，妮安抬起了手，露出了
 		#IF(game.isPubicHairEnabled())
-			 the fact that her cute, tight pussy is surrounded by a black, furry bush of pubic hair. 
+			她那浓密的黑色阴毛之下可爱紧致的小穴。
 		#ELSE
-			 her cute, tight pussy to you.
+			她可爱、紧致的小穴。
 		#ENDIF
-		 Panting from excitement, she asks, [nyan.speechNoEffects(So what now?)]
+		她激动地喘息着，向你问道，[nyan.speechNoEffects(所以现在……该做些什么？)]
 	</p>
 	<p>
-		Answering with action instead of words, you lean forwards and plant a big, wet kiss on Nyan's tiny labia, causing her to let out a shocked moan and instinctively grab the back of your head. Liking the cute sounds which you're able to elicit from your shy girlfriend, you start passionately kissing her pussy, before sliding your [pc.tongue+] into her wet cunt and starting to greedily eat her out.
+		你用行动代替言语，向前倾身，在妮安的小阴唇上狠狠地湿吻了一下，引得她发出一声高亢的呻吟，并本能地抓住了你的后脑勺。你喜欢从害羞的女友口中发出的可爱声音，然后开始更加热情地亲吻她的阴部，将[pc.tongue+]滑入她湿润的阴户，开始贪婪地享用她的蜜汁。
 	</p>
 	<p>
-		[nyan.speechNoEffects(~Aah!~ [pc.Name]! ~Ooh!~ More! Yes, like that! ~Aah!~)] she squeals as she discovers that receiving oral is every bit as good as she imagined it to be...
+		[nyan.speechNoEffects(啊~[pc.Name]！哦哦~更多！对，就是那样……啊哈~)]当妮安发现口交和她想象中的一样美妙时，她尖叫起来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_KISS_FINGERING"><![CDATA[
 	<p>
-		Not wanting to rush things with your inexperienced girlfriend, you tell her that oral can wait for another time. [pc.Stepping] up to her, you once again take hold of Nyan's [nyan.hips+] and pull her into a deeply passionate kiss. As the cat-girl's arms wrap around your back, you gently lead her over to her bed, before momentarily breaking off your kiss and pulling her down onto the mattress beside you.
+		你不想推进太快，吓到你毫无经验的女朋友。你便告诉她，下次有机会再口交就好。你[pc.Stepping]近她，再一次抓住妮安[nyan.hips+]。你们激情四射、情意绵绵地接吻。猫女将手臂环过你的脖子，你温柔地把她卸在床上。缠绵的二人稍微分开。你将她拽到你旁边躺着。
 	</p>
 	<p>
-		[nyan.speechNoEffects([pc.Name]...)] Nyan gently moans your name as she stares longingly into your eyes. Leaning forwards, she continues where you just left off, and after pressing her [nyan.lips+] against yours, she starts desperately grinding her body against you.
+		[nyan.speechNoEffects([pc.Name]……)]妮安温柔地念着你的名字，与你长久相视。她向前倾身，继续你停下的动作。她的[nyan.lips+]贴住你的。她身子一软，迷乱地靠在你身上。
 	</p>
 	<p>
-		As she clearly isn't going to be satisfied just from a kiss, you slowly slide your [pc.hand] down between her legs and start stroking her pussy through her thong. Encouraged by the bucking of her hips, you slide her underwear to one side,
+		明显她不可能单靠一个吻就轻易满足，你慢慢地将[pc.hand]探入她的双腿之间，隔着薄薄的面料对蜜穴轻抚起来。见对方也应和地将下半身靠过来，你更加大胆，把内裤拨到了一旁，
 		#IF(game.isPubicHairEnabled())
-			 and as you move your [pc.fingers] down to stroke her cute, tight pussy, you discover that she's got a furry bush of pubic hair growing between her legs. 
+			轻缓地用[pc.fingers]拨弄着她那可爱又紧致的小穴，很快就发现了其上的一丛毛发。
 		#ELSE
-			 before moving your [pc.fingers] down to stroke her cute, tight pussy.
+			轻缓地用[pc.fingers]拨弄着她那可爱又紧致的小穴。
 		#ENDIF
 	</p>
 	<p>
-		Briefly breaking off from your kiss, the horny cat-girl moans, [nyan.speechNoEffects(~Aah!~ Yes, keep on going... ~Ooh!~ Right there...)]
+		你们从亲吻中短暂地分开，饥渴的猫女呻吟道，[nyan.speechNoEffects(~啊！~没错，继续…… ~哦！~ 就是那……)]
 	</p>
 	<p>
-		Doing as she asks, you continue sliding your [pc.fingers+] up and down over Nyan's pussy, and by teasing her sensitive clit, you get your shy girlfriend to let out a series of cute moans. Once again encouraged by her reaction, you gently push your [pc.fingers] into Nyan's pussy, before starting to eagerly finger her.
+		你按照妮安的要求，继续用你[pc.fingers+]在她的小穴上下滑动，通过挑逗她敏感的阴蒂，你让你害羞的女友发出了一连串可爱的呻吟。她的反应再次鼓舞了你，你温柔地将你的[pc.fingers]插入妮安的小穴，然后开始迫不及待地用手指爱抚她。
 	</p>
 	<p>
-		[nyan.speechNoEffects(~Aah!~ [pc.Name]! ~Ooh!~ More! Yes, like that! ~Aah!~)] she squeals, before once again starting to passionately kiss you...
+		[nyan.speechNoEffects(~啊！~[pc.Name]！~噢！~再多一些！对，就像这样！~啊~)]她尖叫着，然后又开始热情地亲吻你……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_BEDROOM_POST_SEX -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX"><![CDATA[
 	<p>
-		Collapsing back on her bed, Nyan breathlessly pants, [nyan.speech(That... was amazing...)]
+		瘫倒在她的床上，妮安大口大口地喘着气，[nyan.speech(真是……太美妙了……)]
 	</p>
 	<p>
 		#IF(sex.getSexTypeCount(pc, nyan, sex.newSexType(PENETRATION_TONGUE, ORIFICE_VAGINA))>0)
-			Planting one last kiss on your girlfriend's sopping-wet pussy, and causing her to let out another cute moan in the process, you join her on the bed and tell her that it was a lot of fun for you, too. Gazing lovingly into your eyes, Nyan pants, [nyan.speech(We <i>have</i> to do this again some time... That was so good...)]
+			你最后又吻了一下你的小女友那湿漉漉的蜜穴，弄得她又发出了一声可爱的呻吟，然后你爬到了床上和她躺在一起，你告诉她，你也获得了很多乐趣。带着浓浓爱意注视着你，妮安娇喘着说，[nyan.speech(我们<i>一定</i>要多做这么几次……这感觉实在是太棒了……)]
 		#ELSE
-			Giving your girlfriend's sopping-wet pussy one final stroke, and causing her to let out another cute moan in the process, you tell her that it was a lot of fun for you, too. Gazing lovingly into your eyes, Nyan pants, [nyan.speech(We <i>have</i> to do this again some time... That was so good...)]
+			你最后又逗弄了一下你的小女友那湿漉漉的蜜穴，弄得她又发出了一声可爱的呻吟，你告诉她，你也获得了很多乐趣。带着浓浓爱意注视着你，妮安娇喘着说，[nyan.speech(我们<i>一定</i>要多做这么几次……这感觉实在是太棒了……)]
 		#ENDIF
 	</p>
 	<p>
-		Watching Nyan's [nyan.breastSize] breasts heave up and down in exertion, you wonder whether to suggest something else for her to try, or instead stop here and rest...
+		看着妮安[nyan.breastSize]的乳房因用力而上下起伏，你开始思考要不要再建议她试试别的花样，或者干脆停下来休息一下……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX_SIXTY_NINE_BLOWJOB"><![CDATA[
 	<p>
-		Thinking that it would be fun for Nyan to experience what it's like to perform oral, you suggest that the two of you could sixty-nine on her bed. Blushing at the suggestion, she lets out an excited giggle and replies, [nyan.speech(That sounds fun!)]
+		你觉得让妮安体验一下口交的滋味肯定不错，于是建议道，你俩应该在床上玩一下六九式。听到这个建议，她顿时羞红了脸，然后娇笑着回答道，[nyan.speech(好像很好玩！)]
 	</p>
 	<p>
-		As she pushes herself up into a sitting position and sees you exposing your cock to her, the realisation of what she's about to do suddenly dawns on your shy girlfriend, and she mutters, [nyan.speech(I-I've never... You know, sucked someone's... I mean...)]
+		当她抬起身子坐在你身上，看到你的肉棒正直挺挺对着她的时候，你那害羞的小女友才突然意识到接下来会发生什么，顿时结巴起来，[nyan.speech(我，我还没……就是，舔过别人的……那个……)]
 	</p>
 	<p>
-		Reassuring her that her lack of experience isn't an issue, and thinking that she'd feel more comfortable being the one on top, you lie back on the bed and tell Nyan to present you with her pussy. Doing as she's told, the cute cat-girl kneels down over your face, before suddenly dropping down and smothering your mouth with her [nyan.pussy+]. Unable to give her any further instructions, you reach up and take hold of Nyan's [nyan.assSize] ass, before starting to enthusiastically eat her out.
+		你向她保证缺乏经验并不是什么大问题，然后暗下决定，一定要优先让她舒服。于是你向后躺倒在床上，然后让妮安把她的小穴露出来。遵从你的指示，这个可爱的猫女在你的头上跪了下来，然后俯下身子，把她[nyan.pussy+]抵在了你的嘴上。由于无法再给她进一步指示，你干脆直接抬手抱住妮安[nyan.assSize]的臀部，然后开始热情地舔舐起她的小穴……
 	</p>
 	<p>
-		[nyan.speech(~Aah!~ Yes, that's good!)] Nyan moans, before remembering what she's meant to be doing. Leaning forwards, she lowers her face towards your groin, and you soon feel her hot breath on your cock as she muses aloud, [nyan.speech(So should I just... I mean, do I do it like this?)]
+		[nyan.speech(~呃啊~好棒，好舒服啊！)]妮安呻吟着，然后突然想起她也应该做些什么。于是她低下头，把脸贴近你的下体，随后你感受到她灼热的呼吸喷在了你的肉棒上，她大声地喃喃自语，[nyan.speech(所以我应该……我是说，我是该这样做吗？)]
 	</p>
 	<p>
-		You suddenly feel Nyan's [nyan.lips+] pressing against the [pc.cockHead+] of your cock, and after she's delivered a quick kiss, you hear her letting out a cute little moan, [nyan.speech(~Mmm!~ That wasn't too bad... Now If I just...)] 
+		你迅速感觉到妮安[nyan.lips+]正压在你肉棒[pc.cockHead+]上，然后快速地轻吻了一下，你听到她正在可爱地喃喃自语，[nyan.speech(~嗯啊~感觉……还不错……现在如果我……)] 
 	</p>
 	<p>
-		With her pussy still grinding down against your mouth, you're unable to offer Nyan any words of advice or encouragement. Trying to find the best way in which to proceed, she plants a slow series of kisses up the length of your [pc.cock+], before starting to clumsily lick and nuzzle into it. Building up her confidence, she finally decides to take your [pc.cock+] into her mouth, and after letting out a determined little moan, she opens wide and wraps her [nyan.lips+] around your throbbing shaft.
+		由于她的蜜穴此时正顶在你的嘴上，你无法对妮安提供任何建议或者鼓励。你的小女友此时正自行摸索着继续下一步的最佳方式，她轻柔地在你[pc.cock+]的边沿上留下几个吻，然后开始对其时而用舌头舔弄，时而用鼻子蹭过，看上去有些笨拙。建立起一些信心后，她最终决定把你[pc.cock+]含进嘴里，随着一声坚定的喘息，她张大了嘴巴，用那[nyan.lips+]裹住了你颤动的肉竿。
 	</p>
 	<p>
-		Gargling and spluttering, Nyan discovers that it's harder to suck cock than she expected, and almost as quickly as she started, she lifts herself up and allows your [pc.cock+] to slide out of her mouth. Thankfully, however, the cat-girl's move turns out to be just so that she can undo her bra, and after taking it off, she once again drops down and takes your [pc.cock+] into her mouth. Now able to grind her naked [nyan.breasts] down against you, as well as tease her [nyan.nipples+], Nyan starts making muffled, gargled moans as she does her best to give you head...
+		伴随着模糊的咕噜声，妮安发现口交比她想象中要难的多了，她迅速收回头部，使你[pc.cock+]从她的嘴里滑出来。不过还好，这个猫女的举动其实只是为了让她能够解开自己的胸罩，只见她羞涩地露出了自己的[nyan.breastSize]胸部，然后又再次俯下身子把你[pc.cock+]塞进了嘴里。此时的妮安，一边用她裸露的[nyan.breasts]磨蹭着你，同时刺激着自己[nyan.nipples+]，一边伴随着闷闷的、含糊不清的呻吟，开始尽力为你口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX_SIXTY_NINE_CUNNILINGUS"><![CDATA[
 	<p>
-		Thinking that it would be fun for Nyan to experience what it's like to perform oral, you suggest that the two of you could sixty-nine on her bed. Blushing at the suggestion, she lets out an excited giggle and replies, [nyan.speech(That sounds fun!)]
+		你觉得让妮安体验一下口交的滋味肯定不错，于是建议道，你俩应该在床上玩一下六九式。听到这个建议，她顿时羞红了脸，然后娇笑着回答道，[nyan.speech(好像很好玩！)]
 	</p>
 	<p>
-		As she pushes herself up into a sitting position and sees you exposing your pussy to her, the realisation of what she's about to do suddenly dawns on your shy girlfriend, and she mutters, [nyan.speech(I-I've never... You know... I mean...)]
+		当她抬起身子采取了坐姿，直直盯着你裸露的小穴的时候，你那害羞的小女友才突然意识到接下来会发生什么，顿时结巴起来，[nyan.speech(我，我从来没……就是，你懂吧……那个……)]
 	</p>
 	<p>
-		Reassuring her that her lack of experience isn't an issue, and thinking that she'd feel more comfortable being the one on top, you lie back on the bed and tell Nyan to present you with her pussy. Doing as she's told, the cute cat-girl kneels down over your face, before suddenly dropping down and smothering your mouth with her [nyan.pussy+]. Unable to give her any further instructions, you reach up and take hold of Nyan's [nyan.assSize] ass, before starting to enthusiastically eat her out.
+		你向她保证缺乏经验并不是什么大问题，然后暗下决定，一定要优先让她舒服。于是你向后躺倒在床上，然后让妮安把她的小穴露出来。遵从你的指示，这个可爱的猫女在你的头上跪了下来，然后俯下身子，把她[nyan.pussy+]抵在了你的嘴上。由于无法再给她进一步指示，你干脆直接抬手抱住妮安[nyan.assSize]的臀部，然后开始热情地舔舐起她的小穴……
 	</p>
 	<p>
-		[nyan.speech(~Aah!~ Yes, that's good!)] Nyan moans, before remembering what she's meant to be doing. Leaning forwards, she lowers her face towards your groin, and you soon feel her hot breath on your pussy as she muses aloud, [nyan.speech(So should I just... I mean, do I do it like this?)]
+		[nyan.speech(~呃啊~好棒，好舒服啊！)]妮安呻吟着，然后突然想起她也应该做些什么。于是她低下头，把脸贴近你的下体，随后你感受到她灼热的呼吸喷在了你的小穴上，她大声地喃喃自语，[nyan.speech(所以我应该……我是说，我是该这样做吗？)]
 	</p>
 	<p>
-		You suddenly feel Nyan's [nyan.lips+] pressing against your [pc.labia+], and after she's delivered a quick kiss, you hear her letting out a cute little moan, [nyan.speech(~Mmm!~ That wasn't too bad... Now If I just...)] 
+		你迅速感觉到妮安[nyan.lips+]正压在你[pc.labia+]上，然后快速地轻吻了一下，你听到她正在可爱地喃喃自语，[nyan.speech(~嗯啊~感觉……还不错……现在如果我……)]
 	</p>
 	<p>
-		With her pussy still grinding down against your mouth, you're unable to offer Nyan any words of advice or encouragement. Trying to find the best way in which to proceed, she plants a slow series of kisses on your [pc.labia+], before starting to clumsily lick and nuzzle into your [pc.clit+]. Building up her confidence, she straightens up and takes off her bra, and after letting out a determined little moan, she leans back down and passionately presses her lips against your [pc.labia]. Taking hold of your [pc.legs+], she slides her tongue into your pussy and begins enthusiastically eating you out...
+		由于她的蜜穴此时正顶在你的嘴上，你无法对妮安提供任何建议或者鼓励。你的小女友此时正自行摸索着继续下一步的最佳方式，她轻柔地在你[pc.labia+]上留下几个吻，然后开始对你[pc.clit+]时而舔弄，时而轻抚，看上去有些笨拙。建立起一些信心后，她直起身子解开了胸罩，然后随着一声坚定的喘息，她再次伏下身子，热情地把她的嘴唇压在了你的[pc.labia]上。然后她环抱着你[pc.legs+]，把舌头滑进你的小穴，开始亢奋地吃了起来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX_BLOWJOB"><![CDATA[
 	<p>
-		Thinking that it would be fun for Nyan to experience what it's like to perform oral, you ask her if she'd like to try sucking your cock. Blushing at the suggestion, your still-horny girlfriend lets out an excited giggle and replies, [nyan.speech(That sounds fun!)]
+		你觉得让妮安体验一下口交的滋味肯定不错，于是就问她愿不愿意舔你的肉棒。你的小女友听了之后顿时红了脸，但心中躁动的欲望还是让她笑着回答道，[nyan.speech(好像很好玩！)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			As you stand up and expose your cock to her,
+			你站起身，将肉棒展露在她面前，
 		#ELSE
-			As you sit down on the edge of the bed and expose your cock to her,
+			你坐在床沿上，将肉棒展露在她面前，
 		#ENDIF
-		 the realisation of what she's about to do suddenly dawns on the shy cat-girl, and she mutters, [nyan.speech(I-I've never... You know, sucked someone's... I mean...)]
+		害羞的猫女这才意识到接下来会发生什么，顿时结巴起来，[nyan.speech(我，我还没……就是，舔过别人的……那个……)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			Reassuring her that her lack of experience isn't an issue, you let Nyan go at her own pace, and patiently wait as she kneels down beneath your feral [pc.legRace]'s body. After reaching up to experimentally touch your [pc.cock+], she leans forwards, and you feel her hot breath on your cock as she muses aloud, [nyan.speech(So should I just... I mean, do I do it like this?)]
+			你安慰她说，没有经验不是问题，按照自己的节奏来就好，随后便耐心地等她跪在了你兽态的[pc.legRace]身躯之下。她先是试探性地摸了一下你[pc.cock+]，就把身子靠了上来，你感受到她温热的气息打在你的肉棒上，她压低了声音道，[nyan.speech(我就只要……那个，是这样的吗？)]
 		#ELSE
-			Reassuring her that her lack of experience isn't an issue, you let Nyan go at her own pace, and patiently wait as she kneels down before you. After experimentally touching your [pc.cock+], she lowers her face towards your groin, and you feel her hot breath on your cock as she muses aloud, [nyan.speech(So should I just... I mean, do I do it like this?)]
+			你安慰她说，没有经验不是问题，按照自己的节奏来就好，随后便耐心地等她跪在了你的面前。她先是试探性地摸了一下你[pc.cock+]，就把脸靠了上去，你感受到她温热的气息打在你的肉棒上，她压低了声音道，[nyan.speech(我就只要……那个，是这样的吗？)]
 		#ENDIF
 	</p>
 	<p>
-		Letting out a high-pitched moan, Nyan presses her [nyan.lips+] against the [pc.cockHead+] of your cock, and after she's delivered a quick kiss, she pulls back and declares, [nyan.speech(That wasn't too bad... Now If I just...)] 
+		妮安发出一声高亢的呻吟，把她[nyan.lips+]贴在你阴茎[pc.cockHead+]，给了一个快速的吻后，她撤了回来，说，[nyan.speech(还不错……现在如果我……)] 
 	</p>
 	<p>
-		Giving her some encouraging words, you watch as Nyan plants a slow series of kisses up the length of your [pc.cock+], before starting to clumsily lick and nuzzle into it. Building up her confidence, she finally decides to take your [pc.cock+] into her mouth, and after letting out a determined little moan, she opens wide and wraps her [nyan.lips+] around your throbbing shaft.
+		你不住地鼓励着妮安，她慢慢地在你[pc.cock+]上留下了几个吻，随后就时而用舌头舔弄，时而用鼻子蹭过，看上去有些笨拙。拾起信心后，她终于决定把你[pc.cock+]含进嘴里了，随着一声坚定的呻吟，她张大了嘴巴，用那[nyan.lips+]裹住了你颤动的肉竿。
 	</p>
 	<p>
-		Gargling and spluttering, Nyan discovers that it's harder to suck cock than she expected, and almost as quickly as she started, she pulls back and allows your [pc.cock+] to slide out of her mouth. Thankfully, however, the cat-girl's move turns out to be just so that she can undo her bra, and after taking it off, she shyly shows off her [nyan.breastSize] breasts, before quickly leaning in and taking your [pc.cock+] into her mouth. Placing her hands on your [pc.legs+], Nyan starts making muffled, gargled moans as she does her best to give you head...
+		伴随着模糊的咕噜声，妮安发现口交比她想象中要难的多了，她迅速收回头部，使你[pc.cock+]从她的嘴里滑出来。不过还好，这个猫女的举动其实只是为了让她能够解开自己的胸罩，只见她羞涩地露出了自己的[nyan.breastSize]胸部，然后又再次接近并把你[pc.cock+]塞进了嘴里。轻柔地把双手放在你[pc.legs+]，妮安开始发出闷闷的、含糊不清的呻吟，她在尽力为你口交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX_CUNNILINGUS"><![CDATA[
 	<p>
-		Thinking that it would be fun for Nyan to experience what it's like to perform oral, you ask her if she'd like to return the favour. Blushing at the suggestion, your still-horny girlfriend lets out an excited giggle and replies, [nyan.speech(That sounds fun!)]
+		你觉得让妮安体验一下口交的滋味肯定不错，于是就问她愿不愿意回报你一下。你的小女友听了之后顿时红了脸，但心中躁动的欲望还是让她笑着回答道，[nyan.speech(好像很好玩！)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			As you stand up and expose your pussy to her,
+			你站起身，将你的小穴展露在她面前，
 		#ELSE
-			As you sit down on the edge of the bed and expose your pussy to her,
+			你坐在床沿上，把你的小穴展露在她面前，
 		#ENDIF
-		 the realisation of what she's about to do suddenly dawns on the shy cat-girl, and she mutters, [nyan.speech(I-I've never... You know... I mean...)]
+		害羞的猫女这才意识到接下来会发生什么，顿时结巴起来，[nyan.speech(我，我从来没……就是，你懂吧……那个……)]
 	</p>
 	<p>
 		#IF(pc.isTaur())
-			Reassuring her that her lack of experience isn't an issue, you let Nyan go at her own pace, and patiently wait as she kneels down behind your feral [pc.legRace]'s body. After reaching up to experimentally touch your [pc.pussy+], she leans forwards, and you feel her hot breath on your rear end as she muses aloud, [nyan.speech(So should I just... I mean, do I do it like this?)]
+			你向她保证缺乏经验并不是什么大问题，让她可以按照自己的节奏来，然后耐心地等待妮安跪在你兽态[pc.legRace]的身体后面。她伸手试探性地摸了摸你[pc.pussy+]，然后身体向前倾，你感觉到她呼出的热气扑在你的屁股上，她大声地喃喃自语，[nyan.speech(所以我应该……我是说，我该这样做吗？)]
 		#ELSE
-			Reassuring her that her lack of experience isn't an issue, you let Nyan go at her own pace, and patiently wait as she kneels down before you. After experimentally touching your [pc.pussy+], she lowers her face towards your groin, and you feel her hot breath between your legs as she muses aloud, [nyan.speech(So should I just... I mean, do I do it like this?)]
+			你向她保证缺乏经验并不是什么大问题，让她可以按照自己的节奏来，然后耐心地等待妮安跪在你面前。她伸手试探性地摸了摸你[pc.pussy+]，然后把脸抵向你的下体，你能感觉到她的热气呼在你的双腿之间，你听到她在大声地喃喃自语，[nyan.speech(所以我应该……我是说，我该这样做吗？)]
 		#ENDIF
 	</p>
 	<p>
-		Letting out a high-pitched moan, Nyan presses her [nyan.lips+] against your [pc.labia+], and after she's delivered a quick kiss, she pulls back and declares, [nyan.speech(That wasn't too bad... Now If I just...)] 
+		妮安发出一声高亢的呻吟，把她[nyan.lips+]贴在你[pc.labia+]，给了一个快速的吻后，她撤了回来，说，[nyan.speech(还不错……现在如果我……)] 
 	</p>
 	<p>
-		Giving her some encouraging words, you watch as Nyan plants a slow series of kisses on your [pc.labia+], before starting to clumsily lick and nuzzle into your [pc.clit+]. Building up her confidence, she suddenly pulls back in order to take off her bra, and after shyly showing off her [nyan.breastSize] breasts, she leans back down and passionately presses her lips against your [pc.labia]. Taking hold of your [pc.legs+], she slides her tongue into your pussy and begins enthusiastically eating you out...
+		你给了她一些鼓励的话语，看着妮安慢慢地在你[pc.labia+]上亲吻，然后开始笨拙地舔舐和轻抚你[pc.clit+]。建立起一些信心后，她迅速退开并解开了自己的胸罩，羞涩地露出了她的[nyan.breastSize]胸部，然后再次低下头，热情地把嘴唇贴在你的[pc.labia]。她伸手抱住你[pc.legs+]，然后把舌头滑进你的小穴，开始亢奋地吃了起来……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP_START"><![CDATA[
 	<p>
-		Feeling as though both you and Nyan could do with some rest, you ask if she's satisfied from receiving her first orgasm from you. Still panting as she catches her breath, Nyan's cheeks flush red as you ask this, and with a cute little smile on her face, she giggles and replies, [nyan.speech(Yes! That was really fun... I think I need to have a quick shower before bed, though. D-Do you want to have a wash too? You are going to sleep here, aren't you?)]
+		你觉得你和妮安都需要休息一下，于是你问她刚才的那次高潮是否让她感到满足。仍然气喘吁吁的妮安在听到你问这个问题时，她的脸颊再次绯红，同时露出可爱的笑容，咯咯笑着回答你，[nyan.speech(是的，这真的很有趣……我觉得在睡觉前我必须得先洗个澡了，你……你要不要也洗一下？你今天晚上会在这里过夜的，对吧？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX_FACE_SITTING"><![CDATA[
 	<p>
-		Sensing that Nyan would like to go again, you suggest that she sit on your face so that you can eat her out for a second time. Blushing at the suggestion, she lets out an excited giggle and replies, [nyan.speech(That sounds fun!)]
+		察觉到妮安或许还想再来一轮，于是你建议她再次坐到你的脸上，好让你能再次品尝美味的小穴。听到这个建议，她顿时羞红了脸，然后娇笑着回答道，[nyan.speech(好像很好玩！)]
 	</p>
 	<p>
-		As you lie back on her bed, the realisation of what she's about to do suddenly dawns on your shy girlfriend, and she mutters, [nyan.speech(I've never... I mean, I've read about this, but...)]
+		当你躺倒在她的床上，你那害羞的小女友才突然意识到接下来会发生什么，顿时结巴起来，[nyan.speech(我，我还从来没……我是说，虽然我确实在书上读到过，但是……)]
 	</p>
 	<p>
-		Reassuring her that her lack of experience isn't an issue, you tell Nyan to kneel down over your face. Following your instructions, the cute cat-girl drops down into position, before suddenly letting her legs give way and smothering your mouth with her [nyan.pussy+]. Finding yourself in the perfect position, you reach up and take hold of Nyan's [nyan.assSize] ass as you start to enthusiastically eat her out. Happily grinding her [nyan.pussy+] down over your face, your girlfriend starts letting out a series of lewd moans as you orally service her...
+		你向她保证缺乏经验并不是什么大问题，让她安心跪下来坐到你的脸上。遵从你的指示，这位可爱的猫女伏下身子，坐在了你的脸上，然后分开她的双腿，把她[nyan.pussy+]抵在你的嘴上。发现你自己处于如此完美的位置，你抬起手抱住妮安[nyan.assSize]的臀部，然后开始狂热地舔舐着她的小穴。当你在为她进行舔阴服务时，你的小女友不禁发出了涩情的呻吟，然后热情地用她[nyan.pussy+]在你脸上来回磨蹭……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_BEDROOM_POST_SECOND_SEX -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SECOND_SEX"><![CDATA[
 	<p>
-		Once again, Nyan collapses back on her bed, panting, [nyan.speech(Wow... That was... Wow...)]
+		妮安又一次躺倒在床上，大口大口地喘着气，[nyan.speech(哇……真是……哇啊……)]
 	</p>
 	<p>
-		Leaning down to plant a quick kiss on your girlfriend's lips, you can't help but smile as she blushes and sighs, [nyan.speech(I never knew it could feel so good...)]
+		你也俯下身去，在你可爱女友的唇上轻轻一吻，看到她脸红的样子，你也不禁泛起了微笑。她叹道，[nyan.speech(没想到竟然这么舒服……)]
 	</p>
 	<p>
-		With the cute cat-girl clearly at the point of complete exhaustion, you realise that there's little hope of taking her for round three. Giving her a moment in which to recover, you wonder if she's going to ask you to spend the night with her...
+		看样子这只可爱的猫女已经精疲力竭，你觉得大概是没办法再战第三回合了。于是便让她用这段时间先休息一会儿，不知道她会不会请你一起过夜……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SECOND_SEX_SLEEP_START"><![CDATA[
 	<p>
-		Feeling as though both you and Nyan could do with some rest, you ask if she's satisfied from the multiple orgasms you've just given her. Still panting as she catches her breath, Nyan's cheeks flush red as you ask this, and with a cute little smile on her face, she giggles and replies, [nyan.speech(Yes! That was really fun... I think I need to have a quick shower before bed, though. D-Do you want to have a wash too? You are going to sleep here, aren't you?)]
+		你觉得你和妮安都需要休息一下，于是你问她刚才的那几次高潮是否让她感到满足。妮安还在喘气，当你问到这个问题时，她的脸颊再次绯红，同时露出可爱的笑容，咯咯笑着回答你，[nyan.speech(是的，这真的很有趣……我想，我睡觉前得先洗个澡，你也洗吗？你今天晚上要睡在这里，对吧？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_POST_SEX_SLEEP"><![CDATA[
 	<p>
-		The pleading look on your girlfriend's face is too much for you to say no to, and so you agree to both have a wash and sleep over here with her. Accompanying Nyan into her ensuite, the two of you share a very hasty shower, before quickly drying off and returning to her bed. Pulling on a pair of panties and an oversized T-shirt, Nyan excitedly jumps under the covers, before asking you to turn off the lights and join her.
+		你看着女朋友那张满怀期待的小脸，在此时回绝她，你于心不忍。你答应洗完澡之后和她睡在一起。你陪着妮安走进她卧室里的淋浴间，两个人匆匆洗了个澡，然后迅速擦干回到她的床上。妮安穿上一条内裤和一件超大号的 T 恤，兴奋地钻进被子里，然后让你关上灯和她一起睡觉。
 	</p>
 	<p>
-		Doing as she asks, you soon find yourself under the covers with your girlfriend, and as she snuggles up to you and falls asleep, she sighs, [nyan.speech(Thanks, [pc.name]... I love you...)] 
+		你按他说的做，然后躺进了女朋友的被窝里。当她依偎在你身边然后准备入眠时，她伏在你耳边，轻轻和你说，[nyan.speech(谢谢你，[pc.name]……我爱你……)] 
 	</p>
 	<p>
-		Hugging the cute cat-girl close to your body, you return her sentiments and join her in falling asleep...
+		你把猫女抱在怀里，让她贴在自己的身上，轻轻地回应了她的告白，和她一起坠入梦乡……
 	</p>
 	<p>
-		...
+		……
 	</p>
 	<p>
-		The next thing you know, you're waking up in Nyan's bed the next morning, and as you roll over, you discover that your girlfriend is nowhere to be seen. Sitting up and yawning, you realise that there's a smell of freshly-baked goods in the air, which tells you exactly where Nyan must be...
+		等到你在妮安的床上醒来时，你翻了个身，发现你的女朋友已经不见踪影。你坐起来打了个哈欠，突然闻到空气中弥漫的烘焙料理的味道，你顿时明白妮安去哪了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_BEDROOM_MORNING -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_MORNING"><![CDATA[
 	<p>
-		After quickly using the ensuite bathroom to freshen up, you head to the apartment's kitchen. Being of an open-plan design, you're able to see that both Nyan and [nyanmum.name] are in the kitchen right from the moment you enter the dining room. 
-		As you [pc.walk] over to say good morning, you see that both of the cat-girls have got their backs to you; Nyan is standing in front of the sink, while [nyanmum.name] is sitting on one of three high stools which are positioned on the dining-room side of the kitchen's worktop. 
+		你用卧室里的套间浴室匆匆梳洗后，打开门前往公寓的厨房。厨房是开放式设计的，你走到餐厅的时候，就看到了妮安和[nyanmum.name]都在厨房里。
+		当你走过去和她们问好时，你会发现两个猫女都背对着你：妮安站在水槽前，而[nyanmum.name]则坐在厨房工作台的餐厅一侧，三个高脚凳中的一把上面。
 	</p>
 	<p>
-		Instead of her usual blouse and miniskirt combo, you see that Nyan is wearing [nyan.a_slotClothing(TORSO_UNDER, true)], and over the top of that, she's wearing [nyan.a_slotClothing(TORSO_OVER, true)]. As you approach, you see that she's just finished drying up, and as she turns and sees you, she throws you a happy smile and exclaims, [nyan.speech([pc.Name]! I was just about to come and wake you! Look, I made pastries!)]
+		妮安没有穿平时的上装和迷你裙组合，你看到她今天穿上了[nyan.a_slotClothing(TORSO_UNDER, true)]和[nyan.a_slotClothing(TORSO_OVER, true)]。当你靠近时，你看到她刚刚拧干衣服。她转过身看到了你，高兴地对你笑着，惊讶地说，[nyan.speech([pc.Name]！我正要去叫你起床呢！看，我做了甜品！)]
 	</p>
 	<p>
-		Alerted to your presence by her daughter's greeting, [nyanmum.name] turns around and flashes you a surprisingly-seductive smile. Instead of the dress which she was wearing last night, she's now clothed in [nyanmum.a_slotClothing(TORSO_UNDER, true)] and [nyanmum.a_slotClothing(LEG, true)], which together show off a good deal of her muscular arms and legs. Patting the stool next to her, she declares, [nyanmum.speech(You'll sit here by me, [pc.name].)]
+		被女儿的问候声提醒，[nyanmum.name]转过身来，向你露出一个令人惊讶的诱人微笑。她不再穿着昨晚的连衣裙，而是换上了[nyanmum.a_slotClothing(TORSO_UNDER, true)]和[nyanmum.a_slotClothing(LEG, true)]，这两件衣服将她肌肉紧致的手臂和双腿展现得淋漓尽致。她拍了拍身边的凳子，宣布道，[nyanmum.speech(你坐这里，[pc.name]，靠着我坐。)]
 	</p>
 	<p>
-		Frowning at her mother in a suspicious manner, Nyan picks up the plate of pastries from the other side of the kitchen and places them on the counter in front of the stools. Although she's clearly not happy about her mother's seating arrangements, Nyan doesn't manage to make an objection before [nyanmum.name] teases, [nyanmum.speech(You two were really going at it last night, weren't you? I could have sworn that I asked you not to moan too loudly, sweetie, but as I got into bed, all I could hear was <i>'~Aah!~ Yes! Keep going, [pc.name]!'</i>)]
+		妮安皱着眉头狐疑地看着妈妈，从厨房的另一边拿起一盘糕点，放在凳子前的台子上。虽然对妈妈的座位安排明显不满意，但妮安并没有提出反对意见。[nyanmum.name]戏谑地说，[nyanmum.speech(你们两个，昨天做了，对吧？我发誓我昨天明明告诉过你别叫的那么大声，宝贝，但是我一躺在床上，满耳朵都是<i>‘啊~继续~[pc.name]~对，就是那里~’</i>)]
 	</p>
 	<p>
-		Furiously blushing as her mother mimics her voice, Nyan storms around to the other side of the counter and sits down on the stool furthest from [nyanmum.name]. With just the one stool now left vacant in between mother and daughter, you sit down and finally take the opportunity to say good morning to the two of them.
+		听到妈妈夹着嗓子模仿她的声音，妮安气得面红耳赤地跑到桌子的另一边，在离[nyanmum.name]最远的凳子上坐下。母女俩中间只剩下一张凳子空着，你坐下来，终于有机会向她们俩道早安了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- POST_DATE_APARTMENT_BEDROOM_MORNING_END -->
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_MORNING_END"><![CDATA[
 	<p>
-		As the three of you start to eat the delicious pastries which Nyan has freshly baked, you quickly find yourself being the target of both Nyan's and [nyanmum.namePos] affections. Sliding her hand up your [pc.leg(true)], Nyan's mother teases, [nyanmum.speech(So, what were you doing to my daughter to make her moan like that?)]
+		当你们三个开始享用妮安刚出炉的可口甜品时，你很快发现自己成了妮安和[nyanmum.namePos]争抢的对象。妮安的妈妈将手滑到了你的[pc.leg(true)]上面，打趣地说，[nyanmum.speech(所以，你是怎么把我的宝贝女儿弄到娇喘成那个样子的？)]
 	</p>
 	<p>
-		[nyan.speech(Mum! Stop it!)] Nyan objects, before swatting her mother's hand away from you and pouting at her.
+		[nyan.speech(妈妈！别那样！)]妮安抗议着，把她妈妈的手从你腿上拍了下去，不满地嘟起了嘴。
 	</p>
 	<p>
-		[nyanmum.speech(I'm just making conversation, dear,)] [nyanmum.name] replies with a laugh, [nyanmum.speech(In any case, you certainly seem to have gained a lot of confidence. It's like you're a brand new person; the old Nyan would never have invited her [pc.girlfriend] into her room, nor cum for them like you did last night!)]
+		[nyanmum.speech(我只是在聊天啦，宝贝，)][nyanmum.name]笑着回答道，[nyanmum.speech(不管怎么说，你似乎自信了不少，就好像换了个人一样；我是说，以前的妮安可不会大胆到把[pc.girlfriend]领进房间，更不会那么放荡地在高潮时淫叫，就像你昨天晚上干的事一样！)]
 	</p>
 	<p>
-		[nyan.speech(Mum! Why do you have to talk about sex all the time?!)] Nyan huffs. As she crosses her arms and pouts once again, you find yourself silently agreeing with the first part of what [nyanmum.name] has just said. Nyan hasn't stuttered once so far, and while you assume that's mainly due to the fact that she's at her most comfortable within her own home, her increased confidence is definitely noticeable.
+		[nyan.speech(妈妈！为什么你句句不离那种事情啊？！)]妮安哼了一声。当她再次交叉双臂，撅起小嘴时，你在心里默默地同意了[nyanmum.name]刚才说的前半句。到目前为止，妮安还没有口吃过一次，虽然你认为这主要是因为她在自己家里最安心，但她自信心的增强绝对是显而易见的。
 	</p>
 	<p>
-		By this time there's only one pastry left on the plate before you, and before you or Nyan can make a move, [nyanmum.name] reaches over and picks it up. With a devious smirk on her face, she makes sure that Nyan sees her placing her hand on your [pc.leg(true)] once again, and teases, [nyanmum.speech(You don't mind if we share this, do you, sweetie? Mummy's got a bit of a sweet tooth, and she hasn't been satisfied for quite some time...)]
+		这时候，你们面前的盘子里只剩下一块甜点了，在你和妮安动手之前，[nyanmum.name]伸手把它拿了起来。她脸上带着狡猾的笑意，故意让妮安看到她再次把手放在你的[pc.leg(true)]上，并调侃道，[nyanmum.speech(你不介意我们分享这个吧，亲爱的？妈妈的小嘴有点爱吃甜食，它已经很久没有满足过了……)]
 	</p>
 	<p>
-		Clearly understanding her mother's double entendre, Nyan blushes and exclaims, [nyan.speech(You always treat your partners like this! Have you tried asking [pc.name] what <i>[pc.she]</i> wants?! What if [pc.she] only wants to be <i>my</i> [pc.girlfriend], not yours?!)]
+		妮安听懂了妈妈的弦外之音，涨红了脸，激动地说着，[nyan.speech(你对别人总是这个样子！你问过[pc.name]<i>[pc.she]</i>想要吗？！如果[pc.she]只想做<i>我的</i>[pc.girlfriend]，而不是你的，那怎么办？！)]
 	</p>
 	<p>
-		[nyanmum.speech(Oh, sweetie!)] [nyanmum.name] laughs, clearly having tricked Nyan into saying exactly what she wanted. Placing the pastry back down on the plate, she teases, [nyanmum.speech(I was only talking about sharing your next date with me. I'd like to get to know [pc.name] a little better, after all. Sharing [pc.herHim] between us, though? That's an interesting idea of yours, Nyan...)]
+		[nyanmum.speech(哦，我的小甜心！)][nyanmum.name]大笑着，显然，她已经骗过了妮安，让她说出了自己想说的话。把糕点放回盘子后，她调侃道，[nyanmum.speech(我只是在说，下次你们两个约会，能不能带上我。毕竟我只是想多了解一下[pc.name]。你是想说什么？和我分享你的[pc.girlfriend]吗？妮安，你的想法还真不错……)]
 	</p>
 	<p>
-		With her cheeks turning bright scarlet, your girlfriend stutters for the first time this morning, [nyan.speech(I-I didn't mean that! Y-You were implying that... I mean, that's w-what you were really thinking, wasn't it?!)]
+		你的女朋友双颊绯红，这是她今天早上第一次说话结巴，[nyan.speech(我，我可没那么说！明明是你在……在含沙射影……我，我，你，我是说你心里其实就是那么想的，对吧？！)]
 	</p>
 	<p>
-		[nyanmum.speech(I'm sorry, sweetie, you know I was only teasing,)] [nyanmum.name] apologises, sensing that she might have gone a little too far. Standing up and stepping over to give her daughter a big hug, she reminds her, [nyanmum.speech(Anyway, you promised that you'd spend the day with me today, remember?)]
+		[nyanmum.speech(对不起啦甜心，你知道我只是想开个玩笑。)][nyanmum.name]意识到她有点做的过火了，于是和妮安道歉。她站起来，走了过去，紧紧拥抱了一下她的女儿，提醒她，[nyanmum.speech(总之，你答应过今天陪我的，记得吗？)]
 	</p>
 	<p>
-		Letting out a deep sigh, Nyan returns her mother's hug for a moment, before stepping back and addressing you, [nyan.speech(Sorry about asking you to leave so soon, [pc.name], but I <i>did</i> promise mum that we'd spend the entire day together...)]
+		妮安深深地叹了一口气，回抱了母亲一下，然后退后一步，对你说，[nyan.speech(让你这么早就走，非常对不起，[pc.name]，但是我<i>确实</i>答应过陪妈妈一整天的……)]
 	</p>
 	<p>
-		Telling your girlfriend that you understand, you say goodbye to [nyanmum.name], before allowing Nyan to accompany you to the door. Thanking her for the pastries, as well as for the wonderful night you had together, you open the front door and prepare to leave. Shyly smiling at you, Nyan replies, [nyan.speech(Sorry for my mum's behaviour, and thanks for last night, I really had so much fun with you... We can do this again, right? Although I guess next time my mum's going to tag along...)]
+		你向女友表示理解，然后向[nyanmum.name]道别，然后让妮安陪你到门口，感谢她的糕点，也感谢你们一起度过的美好夜晚。你打开前门准备离开，回过头，看到妮安羞涩地对你笑了笑，回答道，[nyan.speech(我为我妈妈的行为道歉，昨晚谢谢你，我和你在一起真的很开心……我们可以再来一次，对吧？虽然我猜下次我妈妈也会跟着来……)]
 	</p>
 	<p>
-		Telling Nyan that you'd love to do this again, and that it'll be no problem having her mum come along for the next date, you prepare to say goodbye...
+		你告诉妮安，你很愿意再来一次，下次约会时让她妈妈一起来也没问题。然后，你准备告辞了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="POST_DATE_APARTMENT_BEDROOM_MORNING_END_LEAVE"><![CDATA[
 	<p>
-		Taking a gentle hold of your girlfriend, you lean in and kiss her goodbye. After happily returning your kiss, Nyan tells you once again how much fun she had last night, before saying, [nyan.speech(Oh, by the way, it'd be risky with my mum around for you to visit me here. She can get a bit, well, forceful with people, and I don't think I can stop her...)]
+		你轻轻地抱住女友，俯身与她吻别。妮安开心地回吻你后，再次告诉你她昨晚玩得有多开心，然后说：[nyan.speech(哦，对了，我妈妈在的时候，你来这里看我有点危险，她对别人有点，呃，强势，我想我阻止不了她……)]
 	</p>
 	<p>
-		Reassuring Nyan that you'll only come to see her at her store or to pick her up for your next date, you exit her apartment, and after saying one last goodbye, you head down the stairs and return to the apartment's foyer. Letting out a contented sigh, you head out of the front door and find yourself back in the streets of Dominion, wondering what to do next...
+		你向妮安保证，你只会去她的店里看她，或者来这里接她去约会。然后，你走出了她的公寓，说了最后一句再见后，你走下楼梯，回到公寓楼的门厅。你惬意地叹了一口气，走出公寓楼的大门，发现自己又回到了御城区的街道上。你思考着下一步该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

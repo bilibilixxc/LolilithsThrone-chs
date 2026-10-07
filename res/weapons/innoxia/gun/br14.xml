@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>1000000</value>
@@ -6,15 +6,15 @@
 		<twoHanded>true</twoHanded>
 		<determiner><![CDATA[]]></determiner>
 		<name appendDamageName="false"><![CDATA[BR14]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[BR14s]]></namePlural>
-		<description><![CDATA[A select-fire battle rifle, capable of both semi and fully automatic fire modes, and taking 20-round detachable box magazines of 7.62×51mm NATO ammunition. The gas-operated firing mechanism utilises a rotating bolt, and is capable of producing a fire rate of around 700-750 RPM.]]></description>
-		<attackDescriptor>shoot</attackDescriptor>
-		<attackTooltipDescription>Use your BR14 to fire a single bullet at your target.</attackTooltipDescription>
+		<namePlural pluralByDefault="false"><![CDATA[BR14]]></namePlural>
+		<description><![CDATA[一把步枪，可采用半自动和全自动两种射击模式，使用20发7.62×51mm北约子弹的可拆卸盒式弹匣。击发装置采用旋转枪栓，射速约为700-750RPM。]]></description>
+		<attackDescriptor><![CDATA[射击]]></attackDescriptor>
+		<attackTooltipDescription><![CDATA[使用你的BR14向你的目标发射一颗子弹！]]></attackTooltipDescription>
 		
 		<rarity>LEGENDARY</rarity>
 		<weaponSet/>
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] out [npc.her] BR14, inserts a magazine, and pulls the charging handle, putting it into a state where it's ready to be used in combat.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] BR14 away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]拿出[npc.her]的BR14装上弹匣并拉动拉机柄，使其随时可以射击。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]放下[npc.her]的BR14。]]></unequipText>
 		<imageName>br14.svg</imageName>
 		<imageEquippedName/> 
 		
@@ -72,14 +72,14 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Taking aim with [npc.her] BR14, [npc.name] [npc.verb(pull)] the trigger and [npc.verb(fire)] a bullet at [npc2.name], hitting [npc2.herHim] directly in the chest!<br/>Thankfully, there seems to be some kind of arcane force preventing [npc2.name] from being seriously wounded or killed...
-		]]></hitText>
+		[npc.Name]用[npc.her]的奥术滑膛枪瞄准[npc2.name]并扣动扳机，[npc.she]成功命中[npc2.herHim]的胸部！<br/>幸好，似乎有某种奥术力量阻止[npc2.name]重伤或死亡……
+]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Taking aim with [npc.her] BR14, [npc.name] [npc.verb(pull)] the trigger and fires a bullet at [npc2.name], but [npc.verb(end)] up missing [npc2.herHim]!
-		]]></missText>
+		[npc.Name]用[npc.her]的BR14瞄准[npc2.name]并扣动扳机发射一发子弹射向[npc2.name]，但是最终还是没有击中[npc2.herHim]！
+]]></missText>
 	</missDescriptions>
 	
 </weapon>

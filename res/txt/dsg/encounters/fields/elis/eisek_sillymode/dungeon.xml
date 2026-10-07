@@ -1,74 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 	<!-- COMBAT -->
 		
 	<htmlContent tag="COMBAT"><![CDATA[
 	<p>
-		As you make your way through the dungeon, the wall suddenly slides opens and out steps a figure clad in what appears to be cardboard shaped into a crude breastplate and armed with a cardboard sword.
+		当你穿过地牢时，墙壁突然滑开，走出来一个人影，身上穿着似乎是纸板做成的简陋胸甲，手持一把纸板剑。
 	</p>
 	<p>
-		[npc.speech(Halt, intruder! You may have gotten this far, but you will get no further! I'll see to that,)] [npc.name] says. The passage is too narrow for you to go around and even if you ran you wouldn't get far in the confines of this basement. You're going to have to go through [npc.herHim]!
+		[npc.speech(站住，入侵者！你虽然到了这里，但别想再往前了！我会确保这一点。)][npc.name]说。通道太窄了，你根本无法绕过去，而且就算你跑，在这地下室里也跑不远。你必须穿过[npc.herHim]！
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<!-- COMBAT_WON -->
 
 	<htmlContent tag="COMBAT_WON"><![CDATA[
 	<p>
-		[npc.Name] makes a gratuitous show of collapsing and lays motionless for moment. Just as you're wondering if [npc.she]'s truly unconscious, [npc.she] suddenly springs to her [npc.feet] as if nothing had just happened.
+		[npc.Name]突然躺倒在地，并保持了一会这样的姿势。正当你怀疑[npc.she]是否真的失去知觉时，[npc.she]突然像什么都没发生过一样站了起来.
 	</p>
 	<p>
-		[npc.speech(Well fought! Hope you're keeping track on your character sheet,)] [npc.she] says as the wall slides open once again. [npc.She] walks into the darkness behind the walls again and it closes before you can follow along.
+		[npc.speech(打得好！希望你能保持住这样的性格，)]在[npc.she]说完之后墙壁便再次打开。[npc.She]乘机钻了过去，而墙壁也在你打算跟过去之前合上了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<!-- COMBAT_LOST -->
 
 	<htmlContent tag="COMBAT_LOST"><![CDATA[
 	<p>
-		[npc.Name] twirls [npc.her] sword around for a moment before poking you in the stomach with it. [npc.speech(Ha ha! Victory is mine!)] [npc.she] says as [npc.she] writes something down on a piece of paper before the wall slides open again. [npc.She] walks into the darkness behind the walls again and it closes, leaving you to recover.
+		[npc.Name]转动[npc.her]剑片刻，然后在你肚子上戳了一下。[npc.speech(哈哈！胜利是我的！)]在墙再次打开之前，[npc.she]边说边在一张纸上写下一些东西。[npc.She]退回墙缝的黑暗里，墙缝闭合，留下苟延残喘的你。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	<!-- BOSS -->
 
 	<htmlContent tag="BOSS"><![CDATA[
 	<p>
-		As you enter the next room, you notice that it's better decorated and more ornate than all the others, but is still just as poorly lit. Skulls, cobweb-covered tomes, and other appropriately macabre items are drawn upon the walls behind a sparse scattering of real props. There's a ladder in the corner leading up to somewhere, but it's too dark to see where. In the centre of the room is a marble pedestal atop of which sits a shiny black orb which at first glance appears to be a genuine arcane artefact!
+		当你进入下一个房间时，你发现它比其他房间装饰更豪华，但光线仍然昏暗。墙上画着头骨、满是蜘蛛网的古籍和其他令人毛骨悚然的物品，后面是散乱的真实物品。角落里有个梯子通往某个地方，但太黑了，看不清是哪里。房间中央有一个大理石底座，上面放着一个闪亮的黑色球体，那貌似是一个奥术遗物！
 	</p>
 	<p>
-		A hooded and cloaked figure emerges from the shadows. You recognise him as the same scrawny human from the market! [test.speechMasculine(So, bested all my warriors, have you? But you'll not best me, not when I have the Orb of Mystic Fate,)] he says as he picks up the black orb. He seems to mean business. This might be the first person in this dungeon you'll actually have to fight!
+		一个戴着兜帽、披着斗篷的身影从阴影中浮现。你认出他就是市场上那个骨瘦如柴的人！[test.speechMasculine(你打败了我所有的手下，是吗？但你战胜不了我，因为我有命运之奥术球，)]他边说边拿起黑色球体。他似乎是认真的，这可能是你在地牢中真正要对抗的第一个人！
 	</p>
 	<p>
-		The cloaked human raises the orb and begins some kind of incantation, [test.speechMasculine(O Orb of Mystic Fate, scryer of all, burn a path through-)]
+		斗篷人举起宝珠，开始吟唱，[test.speechMasculine(命、命运之球，占星者，烈火之路——)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- BOSS_TWO -->
 
 	<htmlContent tag="BOSS_TWO"><![CDATA[
 	<p>
-		[test.speechFeminine(Sweetie! I brought your retainer!)]
+		[test.speechFeminine(小甜心！我给你带牙齿矫正器来了！)]
 	</p>
 	<p>
-		The unknown, mature, feminine voice emanates from above you, interrupting the incantation. A hatch in the ceiling opens, allowing a blinding light to flood the room. You can only see the faintest outline of a bipedal form in the light. [test.speechFeminine(Tell your friends goodbye, you can play more tomorrow,)] the voice continues.
+		不知名的成熟女性声从头顶传来，打断了你的咒语。天花板上的舱门打开了，刺眼的光线洒满整个房间。你在光芒笼罩下只能看到个模糊的两足生物轮廓。[test.speechFeminine(跟你的朋友们说再见，明天再继续玩吧。)]那个声音继续说。
 	</p>
 	<p>
-		The cloaked figure attempts to bargain, [test.speechMasculine(Aww, but Mum, we were just starting the boss battle!)]
+		斗篷人开始讨价还价：[test.speechMasculine(啊？不要啊，老妈。我们才刚开始Boss战哎。)]
 	</p>
 	<p>
-		His attempt is immediately shut down as the voice from above shoots back, [test.speechFeminine(Don't you talk to your mother like that, young man! Get back up here this instant!)]
+		上面的声音回应，立即阻止了他的其他尝试：[test.speechFeminine(不要这样和你妈妈说话，年轻人！你快点给我上来！)]
 	</p>
 	<p>
-		[test.speechMasculine(Uuugh, fine! You never let me do anything fun,)] he says, placing the black orb back onto the pedestal and taking the ladder out of the basement. The hatch slams shut and you're left in darkness again.
+		[test.speechMasculine(好吧！反正你一直都不让我做我喜欢的事。)]他说完，把黑色球体放回基座上，踩着梯子离开地下室。舱门“砰”一声关上，你又陷入了黑暗之中。
 	</p>
 	<p>
-		Now that you're alone in the dark again, curiosity about the orb gets the better of you and pick it up off the pedestal to examine it more closely. Upon closer inspection, the pedestal is actually a birdbath and the orb is one of those "fortune telling" novelty toys made from plastic. It's something at least...
+		现在，你又独自一人在黑暗中了，你很好奇这个球体，便把它从基座上拿起来观察一番。你仔细观察过后，发现这个基座其实是个鸟澡盆，而球体则是塑料的“算命”玩具。这至少……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 </dialogue>

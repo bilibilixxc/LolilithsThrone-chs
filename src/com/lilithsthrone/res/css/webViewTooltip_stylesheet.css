@@ -1,7 +1,7 @@
 html {
 	background: #1e1e20;
-	font-family: Calibri, Carlito, sans-serif;
-	font-size:15px;
+	font-family:"Source Han Sans CN", Calibri, Carlito, sans-serif;
+	font-size:13px;
 	color: #eeeeee;
 	padding: 0;
 	border:0;
@@ -93,10 +93,10 @@ h6{
 }
 
 .title{
-	font-size:20px;
+	font-size:16px;
 	font-weight: bold;
 	text-align:center;
-	line-height:22px;
+	line-height:19px;
 	background-color:#19191a;
 	
 	margin:8px 8px 0 8px;
@@ -106,10 +106,10 @@ h6{
 	width: calc(100% - 16px);
 }
 .subTitle{
-	font-size:16px;
+	font-size:14px;
 	font-weight: bold;
 	text-align:center;
-	line-height:18px;
+	line-height:16px;
 	background-color:#19191a;
 	
 	margin:8px 8px 0 8px;
@@ -119,10 +119,10 @@ h6{
 	width: calc(100% - 16px);
 }
 .subTitle-third{
-	font-size:16px;
+	font-size:14px;
 	font-weight: bold;
 	text-align:center;
-	line-height:18px;
+	line-height:16px;
 	background-color:#19191a;
 	
 	margin:8px 8px 0 8px;
@@ -133,10 +133,10 @@ h6{
 }
 
 .subTitle-half{
-	font-size:16px;
+	font-size:14px;
 	font-weight: bold;
 	text-align:center;
-	line-height:18px;
+	line-height:16px;
 	background-color:#19191a;
 	
 	margin:8px 8px 0 8px;
@@ -150,10 +150,10 @@ h6{
 }
 
 .subTitle-picture{
-	font-size:16px;
+	font-size:14px;
 	font-weight: bold;
 	text-align:center;
-	line-height:18px;
+	line-height:16px;
 	background-color:#19191a;
 	
 	margin:8px 4px 0 8px;
@@ -166,7 +166,7 @@ h6{
 	font-size:1.2em;
 	font-weight: bold;
 	text-align:center;
-	line-height:18px;
+	line-height:16px;
 	background-color:#19191a;
 	
 	margin:8px 8px 0 4px;
@@ -278,10 +278,10 @@ h6{
 }
 
 .titular {
-	font-size:16px;
+	font-size:14px;
 	font-weight: bold;
 	text-align:center;
-	line-height:18px;
+	line-height:16px;
 }
 
 .center {

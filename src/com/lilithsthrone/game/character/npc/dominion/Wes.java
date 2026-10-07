@@ -56,7 +56,7 @@ public class Wes extends NPC {
 	}
 	
 	public Wes(boolean isImported) {
-		super(isImported, new NameTriplet("Wesley"), "Wormwood",
+		super(isImported, new NameTriplet("韦斯利"), "沃姆伍德",
 				"",
 				38, Month.MARCH, 28,
 				20,
@@ -67,7 +67,7 @@ public class Wes extends NPC {
 		
 		if(!isImported) {
 			this.setPlayerKnowsName(false);
-			this.setGenericName("mysterious Enforcer");
+			this.setGenericName("神秘的执法者");
 		}
 	}
 	
@@ -273,16 +273,16 @@ public class Wes extends NPC {
 	@Override
 	public String getDescription() {
 		if(Main.game.getPlayer().isQuestProgressLessThan(QuestLine.SIDE_WES, Quest.WES_1)) {
-			return "This mysterious fox-boy approached you regarding some matter which couldn't be discussed in public.";
+			return "神秘的狐男靠近你，期待着一些不能公开宣称的事情。";
 			
 		} else if(this.isSlave()) {
-			return "Wes was once the Junior Quartermaster for all of the Enforcers in Central Dominion. Thanks to you, he is now a plaything of his former commanding officer, Elle.";
+			return "韦斯以前是中心御城区所有执法者的高级军需官。多亏了你，他现在成了前任指挥官埃勒的玩物。";
 			
 		} else if(Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_WES)) {
-			return "With your help, Wes is now the Senior Quartermaster for all of the Enforcers in Central Dominion. Although he seems to enjoy his promotion, owning Elle has nonetheless left him a bit frazzled.";
+			return "韦斯在你的帮助下成了中心御城区所有执法者的高级军需官。尽管他似乎很喜欢自己的晋升，但拥有埃勒仍然让他有些焦头烂额。";
 			
 		} else {
-			return "Wes is the Junior Quartermaster for all of the Enforcers in Central Dominion. He lacks the usual shiftiness foxes are stereotyped for and instead projects a sort of folksy naiveté.";
+			return "韦斯是中心御城区所有执法者的高级军需官。他缺乏刻板印象中狐狸的狡猾，而是流露出一种朴实的天真。";
 		}
 	}
 	

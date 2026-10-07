@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<race>innoxia_raptor</race>
 	<colour>BASE_BROWN_DARK</colour>
@@ -30,34 +30,34 @@
 	<iconName displaySize="80">owl</iconName>
 	<backgroundName>background</backgroundName>
 	<bookIconName>icon</bookIconName>
-	<bookName>The Sharpest Talons</bookName>
+	<bookName><![CDATA[极锐之爪]]></bookName>
 	<basicDescriptionId>RAPTOR_BASIC</basicDescriptionId>
 	<advancedDescriptionId>RAPTOR_ADVANCED</advancedDescriptionId>
 	<defaultPreference>TWO_AVERAGE</defaultPreference>
-	<name><![CDATA[owl-morph]]></name>
-	<namePlural><![CDATA[owl-morphs]]></namePlural>
-	<singularMaleName><![CDATA[owl-boy]]></singularMaleName>
-	<singularFemaleName><![CDATA[owl-girl]]></singularFemaleName>
-	<pluralMaleName><![CDATA[owl-boys]]></pluralMaleName>
-	<pluralFemaleName><![CDATA[owl-girls]]></pluralFemaleName>
-	<description><![CDATA[An anthropomorphic owl, known as a 'owl-morph' when bipedal, and a 'owl-taur' when the lower body is that of a feral owl.]]></description>
+	<name><![CDATA[鸮化形]]></name>
+	<namePlural><![CDATA[鸮化形]]></namePlural>
+	<singularMaleName><![CDATA[鸮男]]></singularMaleName>
+	<singularFemaleName><![CDATA[鸮女]]></singularFemaleName>
+	<pluralMaleName><![CDATA[鸮男]]></pluralMaleName>
+	<pluralFemaleName><![CDATA[鸮女]]></pluralFemaleName>
+	<description><![CDATA[一种人形的鸮，当下肢拟人时被称为鸮化形，而当下肢呈现出鸮兽态时则称为半鸮人。]]></description>
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[tengu]]></name>
-			<namePlural><![CDATA[tengu]]></namePlural>
-			<singularMaleName><![CDATA[tengu]]></singularMaleName>
-			<singularFemaleName><![CDATA[tengu]]></singularFemaleName>
-			<pluralMaleName><![CDATA[tengu]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[tengu]]></pluralFemaleName>
+			<name><![CDATA[天狗]]></name>
+			<namePlural><![CDATA[天狗]]></namePlural>
+			<singularMaleName><![CDATA[天狗]]></singularMaleName>
+			<singularFemaleName><![CDATA[天狗]]></singularFemaleName>
+			<pluralMaleName><![CDATA[天狗]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[天狗]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	<feralAttributes>
-		<feralName><![CDATA[owl]]></feralName>
-		<feralNamePlural><![CDATA[owls]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[owl]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[owl]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[owls]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[owls]]></feralPluralFemaleName>
+		<feralName><![CDATA[鸮]]></feralName>
+		<feralNamePlural><![CDATA[鸮]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[鸮]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[鸮]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[鸮]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[鸮]]></feralPluralFemaleName>
 		<legConfiguration>AVIAN</legConfiguration>
 		<sizeHeight>true</sizeHeight>
 		<size>90</size>
@@ -70,8 +70,8 @@
 		<hairPresent>false</hairPresent>
 	</feralAttributes>
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] speed, stealth, and power helps [npc.herHim] to land particularly hard-hitting strikes in combat.
-	]]></statusEffectDescription>
+		[npc.NamePos]的速度、隐蔽能力和力量有助于[npc.herHim]在战斗中造成超级强力的打击。
+]]></statusEffectDescription>
 	<statusEffectAttributeModifiers>
 		<attribute value="10">MAJOR_PHYSIQUE</attribute>
 		<attribute value="0">MAJOR_ARCANE</attribute> 

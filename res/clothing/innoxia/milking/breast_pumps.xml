@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>500</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name appendColourName="false"><![CDATA[breast pump]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[breast pumps]]></namePlural>
-		<description><![CDATA[Designed to be attached to a person's breasts or udders via their open end, these hollow, plastic cylinders are connected to two tubes. One pressurises the container, while the other sucks up the milk that's drawn out of the wearer's nipples.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name appendColourName="false"><![CDATA[吸奶器]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[吸奶器]]></namePlural>
+		<description><![CDATA[这对空心塑料圆筒通过开口连接到穿戴者的乳房或腹乳上，并与两根管子相连。一根给容器减压，另一根用于吸出穿戴者乳头的奶。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -77,109 +76,109 @@
 	
 	
 	<replacementText slot="NIPPLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(turn)] up the dial on the milking machine, before attaching the now-pressurised pumps to [npc.her] [npc.breasts+].
+		<self><![CDATA[
+			[npc.Name]打开吸奶器的开关，然后把正在减压的圆筒吸在[npc.her][npc.breasts+]。
 			#IF(npc.getTotalFluidInArea(ORIFICE_NIPPLE)>0)
-				<br/>[style.italicsCum(The breast-pumps quickly drain [npc.namePos] nipple-creampie!)]
+				<br/>[style.italicsCum(吸奶器快速的从[npc.namePos]的乳头吸出液体！)]
 			#ENDIF
-			]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(turn)] up the dial on the milking machine, before attaching the now-pressurised pumps to [npc2.namePos] [npc2.breasts+].
+			
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]打开吸奶器的开关，然后把正在减压的圆筒吸在[npc2.namePos][npc2.breasts+]。
 			#IF(npc2.getTotalFluidInArea(ORIFICE_NIPPLE)>0)
-				<br/>[style.italicsCum(The breast-pumps quickly drain [npc2.namePos] nipple-creampie!)]
+				<br/>[style.italicsCum(吸奶器快速的从[npc2.namePos]的乳头吸出液体！)]
 			#ENDIF
-			]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(crank)] up the dial on the milking machine, before roughly attaching the now-pressurised pumps to [npc2.namePos] [npc2.breasts+].
+			
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]打开吸奶器的开关，然后粗暴地把正在减压的圆筒吸在[npc2.namePos][npc2.breasts+]。
 			#IF(npc2.getTotalFluidInArea(ORIFICE_NIPPLE)>0)
-				<br/>[style.italicsCum(The breast-pumps quickly drain [npc2.namePos] nipple-creampie!)]
+				<br/>[style.italicsCum(吸奶器快速的从[npc2.namePos]的乳头吸出液体！)]
 			#ENDIF
-			]]>
-		</otherRough>
+			
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText slot="NIPPLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pumps fall off of [npc.her] [npc.breasts+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pumps fall off of [npc2.namePos] [npc2.breasts+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[With no regard for [npc2.her] comfort, [npc.name] roughly [npc.verb(yank)] the still-pressurised pumps off of [npc2.namePos] [npc2.breasts+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]关闭吸奶器的开关，让快速加压的圆筒从[npc.her][npc.breasts+]脱落。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]关闭吸奶器的开关，让快速加压的圆筒从[npc2.namePos][npc2.breasts+]脱落。
+		]]></other>
+		<otherRough><![CDATA[
+			不顾[npc2.her]感受，[npc.name]粗暴地把正在减压的圆筒从[npc2.namePos][npc2.breasts+]扯下。
+		]]></otherRough>
 	</displacementText>
 	
 	
 	<replacementText slot="STOMACH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[
+		<self><![CDATA[
+			
 			#IF(npc.hasBreastsCrotch())
-				[npc.Name] [npc.verb(turn)] up the dial on the milking machine, before attaching the now-pressurised pumps to [npc.her] [npc.udders+].
+				[npc.Name]打开吸奶器的开关，然后把正在减压的圆筒吸在[npc.her][npc.udders+]。
 				#IF(npc.getTotalFluidInArea(ORIFICE_NIPPLE_CROTCH)>0)
-					<br/>[style.italicsCum(The breast-pumps quickly drain [npc.namePos] nipple-creampie!)]
+					<br/>[style.italicsCum(吸奶器快速的从[npc.namePos]的乳头吸出液体！)]
 				#ENDIF
 			#ELSE
-				[npc.Name] [npc.verb(turn)] up the dial on the milking machine, and even though [npc.she] [npc.do]n't have any udders, [npc.she] [npc.verb(decide)] to attach the now-pressurised pumps to [npc.her] stomach...
+				[npc.Name]打开吸奶器的开关，尽管[npc.she]没有腹乳，但[npc.she]仍然决定把正在减压的圆筒吸在[npc.her]腹部……
 			#ENDIF
-			]]>
-		</self>
-		<other>
-			<![CDATA[
+			
+		]]></self>
+		<other><![CDATA[
+			
 			#IF(npc.hasBreastsCrotch())
-				[npc.Name] [npc.verb(turn)] up the dial on the milking machine, before attaching the now-pressurised pumps to [npc2.namePos] [npc2.breasts+].
+				[npc.Name]打开吸奶器的开关，然后把正在减压的圆筒吸在[npc2.namePos][npc2.breasts+]。
 				#IF(npc2.getTotalFluidInArea(ORIFICE_NIPPLE_CROTCH)>0)
-					<br/>[style.italicsCum(The breast-pumps quickly drain [npc2.namePos] nipple-creampie!)]
+					<br/>[style.italicsCum(吸奶器快速的从[npc2.namePos]的乳头吸出液体！)]
 				#ENDIF
 			#ELSE
-				[npc.Name] [npc.verb(turn)] up the dial on the milking machine, and even though [npc2.name] [npc2.do]n't have any udders, [npc.she] [npc.verb(decide)] to attach the now-pressurised pumps to [npc2.her] stomach...
+				[npc.Name]打开吸奶器的开关，尽管[npc2.name]没有腹乳，但[npc.she]仍然决定把正在减压的圆筒吸在[npc2.her]的腹部……
 			#ENDIF
-			]]>
-		</other>
-		<otherRough>
-			<![CDATA[
+			
+		]]></other>
+		<otherRough><![CDATA[
+			
 			#IF(npc.hasBreastsCrotch())
-				[npc.Name] [npc.verb(crank)] up the dial on the milking machine, before roughly attaching the now-pressurised pumps to [npc2.namePos] [npc2.breasts+].
+				[npc.Name]打开吸奶器的开关，然后粗暴地把正在减压的圆筒吸在[npc2.namePos][npc2.breasts+]。
 				#IF(npc2.getTotalFluidInArea(ORIFICE_NIPPLE_CROTCH)>0)
-					<br/>[style.italicsCum(The breast-pumps quickly drain [npc2.namePos] nipple-creampie!)]
+					<br/>[style.italicsCum(吸奶器快速的从[npc2.namePos]的乳头吸出液体！)]
 				#ENDIF
 			#ELSE
-				[npc.Name] [npc.verb(crank)] up the dial on the milking machine, and even though [npc2.name] [npc2.do]n't have any udders, [npc.she] [npc.verb(decide)] to roughly attach the now-pressurised pumps to [npc2.her] stomach...
+				[npc.Name]打开吸奶器的开关，尽管[npc2.name]没有腹乳，但[npc.she]仍然粗暴地把正在减压的圆筒吸在[npc2.her]的腹部……
 			#ENDIF
-			]]>
-		</otherRough>
+			
+		]]></otherRough>
 	</replacementText>
 
 	<displacementText slot="STOMACH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[
+		<self><![CDATA[
+			
 			#IF(npc.hasBreastsCrotch())
-				[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pumps fall off of [npc.her] [npc.udders+].
+				[npc.Name]关闭吸奶器的开关，让快速加压的圆筒从[npc.her][npc.udders+]脱落。
 			#ELSE
-				[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pumps fall off of [npc.her] stomach.
+				[npc.Name]关闭吸奶器的开关，让快速加压的圆筒从[npc.her]的腹部脱落。
 			#ENDIF
-			]]>
-		</self>
-		<other>
-			<![CDATA[
+			
+		]]></self>
+		<other><![CDATA[
+			
 			#IF(npc.hasBreastsCrotch())
-				[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pumps fall off of [npc2.namePos] [npc2.udders+].
+				[npc.Name]关闭吸奶器的开关，让快速加压的圆筒从[npc2.namePos][npc2.udders+]脱落。
 			#ELSE
-				[npc.Name] [npc.verb(turn)] down the dial on the milking machine, before letting the rapidly-depressurising pumps fall off of [npc2.namePos] stomach.
+				[npc.Name]关闭吸奶器的开关，让快速加压的圆筒从[npc2.namePos]的腹部脱落。
 			#ENDIF
-			]]>
-		</other>
-		<otherRough>
-			<![CDATA[
+			
+		]]></other>
+		<otherRough><![CDATA[
+			
 			#IF(npc.hasBreastsCrotch())
-				With no regard for [npc2.her] comfort, [npc.name] roughly [npc.verb(yank)] the still-pressurised pumps off of [npc2.namePos] [npc2.udders+].
+				不顾[npc2.her]感受，[npc.name]粗暴地把正在减压的圆筒从[npc2.namePos][npc2.udders+]扯下。
 			#ELSE
-				With no regard for [npc2.her] comfort, [npc.name] roughly [npc.verb(yank)] the still-pressurised pumps off of [npc2.namePos] stomach.
+				不顾[npc2.her]感受，[npc.name]粗暴地把正在减压的圆筒从[npc2.namePos]的腹部扯下。
 			#ENDIF
-			]]>
-		</otherRough>
+			
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

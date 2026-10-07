@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <clothing>
 	<coreAttributes>
-		<authorTag><![CDATA[A tag discreetly printed on the inside reads, "Safer Play brought to you by the Friendly Neighbourhood Co.".]]></authorTag>
+		<authorTag><![CDATA[一个标签隐秘地印在内部，上面写着：“友好邻里公司助你安全游戏。”]]></authorTag>
 		<value>350</value> 
-		<determiner><![CDATA[a pair of]]></determiner>
-		<name><![CDATA[roller skating elbow pad]]></name>
-		<namePlural pluralByDefault="true"><![CDATA[roller skating elbow pads]]></namePlural>
-		<description><![CDATA[A pair of plastic plates riveted to padded elbow pads. They are held in place by velcro straps and feature strips of reflective tape for visibility during the night.]]></description>
+		<determiner><![CDATA[一对]]></determiner>
+		<name><![CDATA[轮滑护肘]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[轮滑护肘]]></namePlural>
+		<description><![CDATA[一对塑料板铆接在肘垫上。它们由尼龙扣带固定在位，并配有反光胶带，以增加夜间的可见性。]]></description>
 		<physicalResistance>2.0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>WRIST</slot>

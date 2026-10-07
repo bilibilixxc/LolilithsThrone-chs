@@ -102,19 +102,19 @@ public class DominionExpressCentaurDialogue {
 			UtilText.addSpecialParsingString(Util.intToString(slavePointsReward), true);
 
 			if(sexAreaWanted==SexAreaOrifice.MOUTH) {
-				UtilText.addSpecialParsingString("suck my cock", false);
+				UtilText.addSpecialParsingString("吮吸我的肉棒", false);
 			} else if(sexAreaWanted==SexAreaOrifice.ANUS) {
-				UtilText.addSpecialParsingString("let me rut your ass", false);
+				UtilText.addSpecialParsingString("我来疼爱你的屁股", false);
 			} else {
-				UtilText.addSpecialParsingString("give me a rimjob", false);
+				UtilText.addSpecialParsingString("给我舔肛", false);
 			}
 			return UtilText.parseFromXMLFile("characters/dominion/dominionExpressCentaur", "INITIAL_ENCOUNTER", centaur());
 		}
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Refuse",
-						UtilText.parse(centaur(), "Tell [npc.name] that you don't want to service [npc.herHim] right now and continue on your way..."),
+				return new Response("拒绝",
+						UtilText.parse(centaur(), "告诉[npc.name]你现在并不向给[npc.herHim]服务，然后继续你的旅程……"),
 						Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
@@ -126,8 +126,8 @@ public class DominionExpressCentaurDialogue {
 			} else if(index==2) {
 				if(sexAreaWanted==SexAreaOrifice.MOUTH) {
 					return new ResponseSex(
-							"Suck cock",
-							UtilText.parse(centaur(), "Drop down onto your knees and kiss [npc.namePos] asshole, before shuffling around to suck [npc.her] cock."),
+							"吮吸鸡巴",
+							UtilText.parse(centaur(), "跪下来亲吻[npc.namePos]的后庭，然后挪到另一边开始舔[npc.her]的肉棒。"),
 							true,
 							false,
 							new SMDominionExpressEncounter(SexPosition.STANDING,
@@ -158,8 +158,8 @@ public class DominionExpressCentaurDialogue {
 					
 				} else if(sexAreaWanted==SexAreaPenetration.TONGUE) {
 					return new ResponseSex(
-							"Rimjob",
-							UtilText.parse(centaur(), "Drop down onto your knees behind [npc.name] and give [npc.herHim] a rimjob."),
+							"舔肛",
+							UtilText.parse(centaur(), "在[npc.name]的身后跪下，给[npc.herHim]吻肛。"),
 							true,
 							false,
 							new SMDominionExpressEncounter(SexPosition.STANDING,
@@ -182,8 +182,8 @@ public class DominionExpressCentaurDialogue {
 					
 				} else if(sexAreaWanted==SexAreaOrifice.ANUS) {
 					return new ResponseSex(
-							"Mounted",
-							UtilText.parse(centaur(), "Drop down onto your knees and kiss [npc.namePos] asshole, before presenting your own [pc.asshole+] to [npc.herHim] so that [npc.she] can mount and rut you."),
+							"被骑",
+							UtilText.parse(centaur(), "跪下来亲吻[npc.namePos]的后庭，然后将[pc.asshole+]展露给[npc.herHim]，好让[npc.she]骑上来跟你交配。"),
 							true,
 							false,
 							new SMDominionExpressEncounter(SexPosition.ALL_FOURS,
@@ -218,10 +218,10 @@ public class DominionExpressCentaurDialogue {
 		}
 	};
 	
-	private static final DialogueNode AFTER_SEX = new DialogueNode("Finished", "", true) {
+	private static final DialogueNode AFTER_SEX = new DialogueNode("完成", "", true) {
 		@Override
 		public String getDescription() {
-			return UtilText.parse(centaur(), "[npc.Name] has finished with you...");
+			return UtilText.parse(centaur(), "[npc.Name]和你做够了……");
 		}
 		@Override
 		public void applyPreParsingEffects() {
@@ -238,8 +238,8 @@ public class DominionExpressCentaurDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue",
-						UtilText.parse(centaur(), "Leave [npc.name] to get on with [npc.her] work and continue on your way..."),
+				return new Response("继续",
+						UtilText.parse(centaur(), "让[npc.name]继续工作，然后继续你的旅程……"),
 						Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {

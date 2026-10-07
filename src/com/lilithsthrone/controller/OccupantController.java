@@ -50,9 +50,9 @@ public class OccupantController {
 	public static void initRoomManagerListeners() {
 		for (Cell c : OccupantManagementDialogue.getImportantCells()) {
 			if (MainController.document.getElementById(c.getId()+"_PRESENT_DISABLED") != null) {
-				MainController.addTooltipListeners(c.getId()+"_PRESENT_DISABLED", new TooltipInformationEventListener().setInformation("Manage Room", "You are not able to manage this room!"));
+				MainController.addTooltipListeners(c.getId()+"_PRESENT_DISABLED", new TooltipInformationEventListener().setInformation("管理房间", "你无法管理该房间！"));
 			} else if (MainController.document.getElementById(c.getId()+"_DISABLED") != null) {
-				MainController.addTooltipListeners(c.getId()+"_DISABLED", new TooltipInformationEventListener().setInformation("Manage Room", "You are not able to manage this room!"));
+				MainController.addTooltipListeners(c.getId()+"_DISABLED", new TooltipInformationEventListener().setInformation("管理房间", "你无法管理该房间！"));
 			} else if (MainController.document.getElementById(c.getId()+"_PRESENT") != null) {
 				((EventTarget) MainController.document.getElementById(c.getId()+"_PRESENT")).addEventListener("click", e->{
 					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()) {
@@ -67,7 +67,7 @@ public class OccupantController {
 						}
 					});
 				}, false);
-				MainController.addTooltipListeners(c.getId()+"_PRESENT", new TooltipInformationEventListener().setInformation("Manage Room", "Open this room's management screen."));
+				MainController.addTooltipListeners(c.getId()+"_PRESENT", new TooltipInformationEventListener().setInformation("管理房间", "打开该房间的管理界面。"));
 			} else if (MainController.document.getElementById(c.getId()) != null) {
 				((EventTarget) MainController.document.getElementById(c.getId())).addEventListener("click", e->{
 					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()) {
@@ -82,7 +82,7 @@ public class OccupantController {
 						}
 					});
 				}, false);
-				MainController.addTooltipListeners(c.getId(), new TooltipInformationEventListener().setInformation("Manage Room", "Open this room's management screen."));
+				MainController.addTooltipListeners(c.getId(), new TooltipInformationEventListener().setInformation("管理房间", "打开该房间的管理界面。"));
 			}
 		}
 	}
@@ -114,15 +114,15 @@ public class OccupantController {
 							});
 				}, false);
 				MainController.addTooltipListeners(id,
-						new TooltipInformationEventListener().setInformation("Purchase Modification",
-								"This will cost: "+UtilText.formatAsMoney(placeUpgrade.getInstallCost())
+						new TooltipInformationEventListener().setInformation("购入改造",
+								"将会花费:"+UtilText.formatAsMoney(placeUpgrade.getInstallCost())
 										+"<br/>"+OccupantManagementDialogue.getPurchaseAvailabilityTooltipText(OccupantManagementDialogue.cellToInspect, placeUpgrade)));
 			}
 			id = PlaceUpgrade.getIdFromPlaceUpgrade(placeUpgrade)+"_BUY_DISABLED";
 			if (MainController.document.getElementById(id) != null) {
 				MainController.addTooltipListeners(id,
-						new TooltipInformationEventListener().setInformation("Purchase Modification",
-								"This will cost: "+UtilText.formatAsMoney(placeUpgrade.getInstallCost())
+						new TooltipInformationEventListener().setInformation("购入改造",
+								"将会花费:"+UtilText.formatAsMoney(placeUpgrade.getInstallCost())
 										+"<br/>"+OccupantManagementDialogue.getPurchaseAvailabilityTooltipText(OccupantManagementDialogue.cellToInspect, placeUpgrade)));
 			}
 			id = PlaceUpgrade.getIdFromPlaceUpgrade(placeUpgrade)+"_SELL";
@@ -137,17 +137,17 @@ public class OccupantController {
 					});
 				}, false);
 				MainController.addTooltipListeners(id,
-						new TooltipInformationEventListener().setInformation("Remove Modification",
-								"This will cost: "+UtilText.formatAsMoney(placeUpgrade.getRemovalCost())
+						new TooltipInformationEventListener().setInformation("移除改造",
+								"将会花费:"+UtilText.formatAsMoney(placeUpgrade.getRemovalCost())
 										+"<br/>"+OccupantManagementDialogue.getPurchaseAvailabilityTooltipText(OccupantManagementDialogue.cellToInspect, placeUpgrade)));
 			}
 			id = PlaceUpgrade.getIdFromPlaceUpgrade(placeUpgrade)+"_SELL_DISABLED";
 			if (MainController.document.getElementById(id) != null) {
 				MainController.addTooltipListeners(id,
-						new TooltipInformationEventListener().setInformation("Remove Modification",
+						new TooltipInformationEventListener().setInformation("移除改造",
 								(!placeUpgrade.getRemovalAvailability(OccupantManagementDialogue.cellToInspect).getKey()
 										?placeUpgrade.getRemovalAvailability(OccupantManagementDialogue.cellToInspect).getValue()
-										:"This will cost: "+UtilText.formatAsMoney(placeUpgrade.getRemovalCost())
+										:"将会花费:"+UtilText.formatAsMoney(placeUpgrade.getRemovalCost())
 										+"<br/>"+OccupantManagementDialogue.getPurchaseAvailabilityTooltipText(OccupantManagementDialogue.cellToInspect, placeUpgrade))));
 			}
 		}
@@ -163,7 +163,7 @@ public class OccupantController {
 								|| Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent().length()>32;
 					}
 					if (!unsuitableName) {
-						Main.game.setContent(new Response("Rename Room", "Rename this room to whatever you've entered in the text box.", Main.game.getCurrentDialogueNode()) {
+						Main.game.setContent(new Response("重命名房间", "将该房间重命名为你输入在文本栏的名字。", Main.game.getCurrentDialogueNode()) {
 							@Override
 							public void effects() {
 								OccupantManagementDialogue.cellToInspect.getPlace().setName(Main.mainController.getWebEngine().getDocument().getElementById("hiddenFieldName").getTextContent());
@@ -203,10 +203,10 @@ public class OccupantController {
 				boolean canIngest = room.isAbleToIngestThroughArea(fluid.getFluid().getType().getBaseType(), MilkingRoom.getTargetedCharacter(), area.getKey(), milkAmount);
 				
 				String fluidOwnerName = fluidOwner == null
-						?"the"
+						?""
 						:(fluidOwner.equals(MilkingRoom.getTargetedCharacter())
-						?UtilText.parse(fluidOwner, "[npc.her] own")
-						:UtilText.parse(fluidOwner, "[npc.namePos]"));
+						?UtilText.parse(fluidOwner, "[npc.her]自己的")
+						:UtilText.parse(fluidOwner, "[npc.namePos]的"));
 				
 				if (canIngest) {
 					((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
@@ -215,24 +215,24 @@ public class OccupantController {
 							switch (area.getKey()) {
 								case ANUS:
 									Main.game.getTextEndStringBuilder().append(UtilText.parse(MilkingRoom.getTargetedCharacter(),
-											"Grabbing one of the free tubes connected to the vat of "+fluidOwnerName+" "+fluidName+", you quickly remove the suction device on the end, before screwing on one of the funnel attachments."
-													+" Guiding the end of the tube around to your [pc.ass+], you waste no time in sliding the funnel into your [pc.asshole+]."
-													+" Flicking the switch on the side of the vat from 'suck' to 'pump', you then press the start button, letting out a delighted [pc.moan] as you feel the "+fluidName+" being pumped into your [pc.asshole]."));
+											fluidOwnerName+fluidName+"罐体旁还有无人使用的软管，你抓起一根，取下末端的吸纳装置，拧上了一个漏斗零件。"
+													+"你将软管的末端缓缓引导至[pc.ass+]旁，迫不及待地将漏斗口塞进了[pc.asshole+]。"
+													+"你将罐体边的开关从“吸收”改为“泵出”，便按下了启动键。你感觉到"+fluidName+"一点一点灌进你的[pc.asshole]，不禁发出一声愉悦的[pc.moan]。"));
 									break;
 								case MOUTH:
 									Main.game.getTextEndStringBuilder().append(UtilText.parse(MilkingRoom.getTargetedCharacter(),
-											"Grabbing one of the free tubes connected to the vat of "+fluidOwnerName+" "+fluidName+", you quickly remove the suction device on the end, before screwing on one of the straw-like attachments."
-													+" Lifting the straw up to your mouth, you waste no time in sliding it between your [pc.lips+]."
-													+" Flicking the switch on the side of the vat from 'suck' to 'pump', you then press the start button, letting out a delighted [pc.moan] as you hungrily gulp down the "+fluidName+"."));
+											fluidOwnerName+fluidName+"罐体旁还有无人使用的软管，你抓起一根，取下末端的吸纳装置，拧上了一个吸管样子的零件。"
+													+"你将吸管伸到嘴边，迫不及待地塞进了你[pc.lips+]之间。"
+													+"你将罐体边的拉杆从“吸收”改为“泵出”，便按下了启动键。你大口大口地吞咽着"+fluidName+"，不禁发出愉悦的[pc.moan]。"));
 									break;
 								case VAGINA:
 									Main.game.getTextEndStringBuilder().append(UtilText.parse(MilkingRoom.getTargetedCharacter(),
-											"Grabbing one of the free tubes connected to the vat of "+fluidOwnerName+" "+fluidName+", you quickly remove the suction device on the end, before screwing on one of the funnel attachments."
-													+" Guiding the end of the tube #IF(pc.hasLegs())between your [pc.legs+]#ELSEto your groin#ENDIF, you waste no time in sliding the funnel into your [pc.pussy+]."
-													+" Flicking the switch on the side of the vat from 'suck' to 'pump', you then press the start button, letting out a delighted [pc.moan] as you feel the "+fluidName+" being pumped"
+											fluidOwnerName+fluidName+"罐体旁还有无人使用的软管，你抓起一根，取下末端的吸纳装置，拧上了一个漏斗零件。"
+													+"接着将软管末端引向#IF(pc.hasLegs())你[pc.legs+]之间#ELSE你的下体#ENDIF，毫不犹豫地将漏斗口塞进了[pc.pussy+]中。"
+													+"随后将罐体边的开关从“吸收”改为“泵出”，便按下了启动键。你感觉到"+fluidName+"一点一点灌进"
 													+(MilkingRoom.getTargetedCharacter().isVisiblyPregnant()
-													?" into your [pc.pussy]."
-													:" directly into your waiting womb.")));
+													?"你的[pc.pussy]，不禁发出一声愉悦的[pc.moan]。"
+													:"等待已久的子宫中，不禁发出一声愉悦的[pc.moan]。")));
 									break;
 								default:
 									break;
@@ -241,45 +241,45 @@ public class OccupantController {
 							switch (area.getKey()) {
 								case ANUS:
 									Main.game.getTextEndStringBuilder().append(UtilText.parse(MilkingRoom.getTargetedCharacter(),
-											"Wanting to pump [npc.namePos] [npc.ass+] full of "+fluidOwnerName+" "+fluidName+", you instruct [npc.herHim] to"
+											"你想把[npc.namePos][npc.ass+]里灌满"+fluidOwnerName+fluidName+"，于是就指示[npc.herHim]"
 													+(!MilkingRoom.getTargetedCharacter().isTaur() && MilkingRoom.getTargetedCharacter().getGenitalArrangement() == GenitalArrangement.NORMAL
-													?" bend over before you."
-													:" kneel down and present [npc.herself] to you.")
-													+" As soon as [npc.her] [npc.asshole+] is fully on display, you grab one of the free tubes connected to your selected vat of fluid,"
-													+" before quickly removing the suction device on the end and screwing on one of the funnel attachments."
+													?"在你身前弯下腰。"
+													:"跪下来，将身后展示给你。")
+													+"等到[npc.asshole+]完全展露在眼前，你抓起一根罐体旁还有无人使用的软管，"
+													+"取下末端的吸纳装置，拧上了一个漏斗零件。"
 													+"</p>"
 													+"<p>"
-													+"Guiding the end of the tube up to [npc.namePos] [npc.ass+], you waste no time in sliding the funnel into [npc.her] [npc.asshole+], smiling to yourself as [npc.she] lets out [npc.a_moan+]."
-													+" Flicking the switch on the side of the vat from 'suck' to 'pump', you then press the start button,"
-													+" causing [npc.name] to let out yet more delighted [npc.moans] as [npc.she] feels the "+fluidName+" being pumped into [npc.her] [npc.asshole]."));
+													+"你将软管的末端缓缓引导至[npc.namePos][npc.ass+]旁，迫不及待地将漏斗口塞进了[npc.asshole+]中，听到一声[npc.a_moan+]后，你不禁露出了微笑。"
+													+"随后将罐体边的拉杆从“吸收”改为“泵出”，便按下了启动键。"
+													+"[npc.Name]感觉到"+fluidName+"被泵入[npc.asshole]中，反而发出更加愉悦的[npc.moans]声来。"));
 									break;
 								case MOUTH:
 									Main.game.getTextEndStringBuilder().append(UtilText.parse(MilkingRoom.getTargetedCharacter(),
-											"Wanting to give [npc.namePos] a taste of "+fluidOwnerName+" "+fluidName+", you instruct [npc.herHim] to kneel down before you."
-													+" As soon as [npc.she] complies, you grab one of the free tubes connected to your selected vat of fluid,"
-													+" before quickly removing the suction device on the end and screwing on one of the straw-like attachments."
+											"你想让[npc.namePos]尝一尝"+fluidOwnerName+fluidName+"，于是指示[npc.herHim]跪在你面前。"
+													+"[npc.she]才刚刚服从了命令，你便抓起一根罐体旁还有无人使用的软管，"
+													+"取下末端的吸纳装置，拧上了一个吸管样子的零件。"
 													+"</p>"
-													+"Bringing the straw to [npc.namePos] mouth, you waste no time in sliding it between [npc.her] [npc.lips+] and telling [npc.herHim] to prepare [npc.herself] for a tasty meal."
-													+" Flicking the switch on the side of the vat from 'suck' to 'pump', you then press the start button, letting out a delighted [pc.moan] as you watch [npc.name] hungrily gulp down the "+fluidName+"."));
+													+"你将吸管伸到[npc.namePos]的嘴边，迫不及待地塞进了[npc.lips+]之间，告诉[npc.herHim]要准备好美餐一顿了。"
+													+"随后将罐体边的开关从“吸收”改为“泵出”，便按下了启动键。[npc.Name]贪婪地吞咽着"+fluidName+"，愉悦的[pc.moan]从口中漏出。"));
 									break;
 								case VAGINA:
 									Main.game.getTextEndStringBuilder().append(UtilText.parse(MilkingRoom.getTargetedCharacter(),
-											"Wanting to pump [npc.namePos] [npc.pussy+] full of "+fluidOwnerName+" "+fluidName+", you instruct [npc.herHim] to"
+											"你想把[npc.namePos][npc.pussy+]里灌满"+fluidOwnerName+fluidName+"，于是就指示[npc.herHim]"
 													+(!MilkingRoom.getTargetedCharacter().isTaur()
 													&& MilkingRoom.getTargetedCharacter().hasLegs()
 													&& MilkingRoom.getTargetedCharacter().getGenitalArrangement() == GenitalArrangement.NORMAL
-													?" sit down on a nearby chair and spread [npc.her] [npc.legs]."
-													:" kneel down and present [npc.herself] to you.")
-													+" As soon as [npc.she] complies, and [npc.her] [npc.pussy+] is fully on display, you grab one of the free tubes connected to your selected vat of fluid,"
-													+" before quickly removing the suction device on the end and screwing on one of the funnel attachments."
+													?"坐在附近的椅子上张开[npc.legs]。"
+													:"跪下来，将身后展示给你。")
+													+"[npc.she]才刚刚服从了命令，[npc.pussy+]完全展露在眼前，你便抓起一根罐体旁还有无人使用的软管，"
+													+"取下末端的吸纳装置，拧上了一个漏斗零件。"
 													+"</p>"
 													+"<p>"
-													+"Guiding the end of the tube up to [npc.namePos] [npc.labia+], you waste no time in sliding the funnel into [npc.her] [npc.pussy+], smiling to yourself as [npc.she] lets out [npc.a_moan+]."
-													+" Flicking the switch on the side of the vat from 'suck' to 'pump', you then press the start button,"
-													+" causing [npc.name] to let out yet more delighted [npc.moans] as [npc.she] feels the "+fluidName+" being pumped"
+													+"你将软管的末端缓缓引导至[npc.namePos][npc.labia+]旁，迫不及待地将漏斗口塞进了[npc.pussy+]中，听到一声[npc.a_moan+]后，你不禁露出了微笑。"
+													+"随后将罐体边的拉杆从“吸收”改为“泵出”，便按下了启动键。"
+													+"[npc.Name]感觉到"+fluidName+"被泵入"
 													+(MilkingRoom.getTargetedCharacter().isVisiblyPregnant()
-													?" into [npc.her] [npc.pussy]."
-													:" directly into [npc.her] waiting womb.")));
+													?"[npc.pussy]中，反而发出更加愉悦的[npc.moans]声来。"
+													:"[npc.her]等待已久的子宫中，反而发出更加愉悦的[npc.moans]声来。")));
 									break;
 								default:
 									break;
@@ -301,7 +301,7 @@ public class OccupantController {
 						Main.game.getTextEndStringBuilder().append("</p>");
 						Main.game.getTextEndStringBuilder().append(
 								"<p style='text-align:center;'>"
-										+"<i style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>"+Units.fluid(milkAmount)+" of "+fluidOwnerName+" "+fluidName+" has been consumed!</i>"
+										+"<i style='color:"+PresetColour.GENERIC_MINOR_BAD.toWebHexString()+";'>"+fluidOwnerName+"的"+fluidName+"消耗了"+Units.fluid(milkAmount)+"！</i>"
 										+"</p>");
 						
 						room.incrementFluidStored(fluid, -milkAmount);
@@ -310,30 +310,30 @@ public class OccupantController {
 						
 					}, false);
 				}
-				String verb = "Drink";
+				String verb = "饮用";
 				String description;
 				
 				if (MilkingRoom.getTargetedCharacter().isPlayer()) {
-					description = "Drink "+Units.fluid(milkAmount)+" of the "+fluidName+".";
+					description = "饮用"+Units.fluid(milkAmount)+fluidName+"。";
 					if (area.getKey() != CoverableArea.MOUTH) {
-						verb = "Pump";
-						description = "Pump "+Units.fluid(milkAmount)+" of the "+fluidName+" into your "+area.getKey().getName()+".";
+						verb = "榨取";
+						description = "将"+Units.fluid(milkAmount)+fluidName+"灌入你的"+area.getKey().getName()+"。";
 					}
 					
 				} else {
-					description = UtilText.parse(MilkingRoom.getTargetedCharacter(), "Get [npc.name] to drink ")+Units.fluid(milkAmount)+" of the "+fluidName+".";
+					description = UtilText.parse(MilkingRoom.getTargetedCharacter(), "让[npc.name]饮用")+Units.fluid(milkAmount)+fluidName+"。";
 					if (area.getKey() != CoverableArea.MOUTH) {
-						verb = "Pump";
-						description = "Pump "+Units.fluid(milkAmount)+" of the "+fluidName+" into "+UtilText.parse(MilkingRoom.getTargetedCharacter(), "[npc.namePos] ")+area.getKey().getName()+".";
+						verb = "榨取";
+						description = "将"+Units.fluid(milkAmount)+fluidName+"灌入"+UtilText.parse(MilkingRoom.getTargetedCharacter(), "[npc.namePos]的")+area.getKey().getName()+"。";
 					}
 				}
 				
 				TooltipInformationEventListener el;
 				if (canIngest) {
-					el = new TooltipInformationEventListener().setInformation(verb+" ("+Units.fluid(milkAmount)+")",
+					el = new TooltipInformationEventListener().setInformation(verb+"("+Units.fluid(milkAmount)+")",
 							description);
 				} else {
-					el = new TooltipInformationEventListener().setInformation(verb+" ("+Units.fluid(milkAmount)+")",
+					el = new TooltipInformationEventListener().setInformation(verb+"("+Units.fluid(milkAmount)+")",
 							room.getAreaIngestionBlockedDescription(fluid.getFluid().getType().getBaseType(), MilkingRoom.getTargetedCharacter(), area.getKey(), milkAmount));
 				}
 				MainController.addTooltipListeners(id, el);
@@ -348,11 +348,11 @@ public class OccupantController {
 					income = Math.round((ModProps.moneyMultiplier / 100f) * income);
 				Main.game.getPlayer().incrementMoney(income);
 				room.getFluidsStored().remove(fluid);
-				Main.game.getTextEndStringBuilder().append("<p style='text-align:center;'>You sold the "+fluidName+" for "+(UtilText.formatAsMoney(income, "span"))+"!</p>");
+				Main.game.getTextEndStringBuilder().append("<p style='text-align:center;'>你将"+fluidName+"卖出了"+(UtilText.formatAsMoney(income, "span"))+"！</p>");
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
 			MainController.addTooltipListeners(id,
-					new TooltipInformationEventListener().setInformation("Sell", "Sell all of the "+fluidName+" for "+(Math.max(1, (int) (fluid.getFluid().getValuePerMl()*fluid.getMillilitres())))+" flames."));
+					new TooltipInformationEventListener().setInformation("出售", "出售所有"+fluidName+"以换取"+(Math.max(1, (int) (fluid.getFluid().getValuePerMl()*fluid.getMillilitres())))+"火币。"));
 		}
 		Initializers.initFluidAmountListeners();
 	}
@@ -364,7 +364,7 @@ public class OccupantController {
 				int finalI = i; // Lambda requirement
 				((EventTarget) MainController.document.getElementById(id)).addEventListener("click", e->{
 					OccupantManagementDialogue.setDayNumber(Main.game.getDayNumber()-finalI);
-					Main.game.setContent(new Response("Rename", "", Main.game.getCurrentDialogueNode()));
+					Main.game.setContent(new Response("重命名", "", Main.game.getCurrentDialogueNode()));
 				}, false);
 			}
 		}
@@ -381,9 +381,9 @@ public class OccupantController {
 				CompanionManagement.copyJobSchedule();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Copy Job Schedule",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("复制工作安排",
 					UtilText.parse(CompanionManagement.characterSelected(),
-							"Copy [npc.namePos] job schedule, which will then enable you to paste this exact same schedule onto other slaves within their own job management screen.")));
+							"复制[npc.namePos]的工作安排，使得你能够将完全相同的工作安排粘贴到其他奴隶的工作管理界面上。")));
 		}
 		id = "pasteSlaveJobSchedule";
 		if (MainController.document.getElementById(id) != null) {
@@ -393,15 +393,15 @@ public class OccupantController {
 					if(fullyPasted) {
 						Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 					} else {
-						Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()), PresetColour.GENERIC_BAD, "Some jobs were unable to be pasted!");
+						Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()), PresetColour.GENERIC_BAD, "部分工作无法粘贴！");
 					}
 				}
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Paste Job Schedule",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("粘贴工作安排",
 					UtilText.parse(CompanionManagement.characterSelected(),
 							CompanionManagement.isJobSchedulePasteAvailable()
-								?"Paste the currently copied job schedule, thereby making [npc.name] have the exact same job schedule as the one which you've copied."
-								:"You haven't copied a job schedule yet, so you can't paste it to replace [npc.namePos]...")));
+								?"粘贴当前复制的工作安排，使得[npc.name]的工作安排与复制的完全相同。"
+								:"你尚未复制一份工作安排，所以无法粘贴替换[npc.namePos]的……")));
 		}
 		// Job settings:
 		id = "copySlaveJobSettings";
@@ -410,9 +410,9 @@ public class OccupantController {
 				CompanionManagement.copyJobSettings();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Copy Job Settings",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("复制工作设置",
 					UtilText.parse(CompanionManagement.characterSelected(),
-							"Copy [npc.namePos] job settings, which will then enable you to paste these exact same settings onto other slaves within their own job management screen.")));
+							"复制[npc.namePos]的工作设置，使得你能够将完全相同的工作设置粘贴到其他奴隶的工作管理界面上。")));
 		}
 		id = "pasteSlaveJobSettings";
 		if (MainController.document.getElementById(id) != null) {
@@ -422,11 +422,11 @@ public class OccupantController {
 					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 				}
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Paste Job Settings",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("粘贴工作设置",
 					UtilText.parse(CompanionManagement.characterSelected(),
 							CompanionManagement.isJobSettingsPasteAvailable()
-								?"Paste the currently copied job settings, thereby making [npc.name] have the exact same job settings as those which you've copied."
-								:"You haven't copied a set of job settings yet, so you can't paste them to replace [npc.namePos]...")));
+								?"粘贴当前复制的工作设置，使得[npc.name]的工作设置与复制的完全相同。"
+								:"你尚未复制一组工作设置，所以无法粘贴替换[npc.namePos]的……")));
 		}
 		
 		// Job hours:
@@ -447,7 +447,7 @@ public class OccupantController {
 				id = i+"_WORK_DISABLED";
 				if (MainController.document.getElementById(id) != null) {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"[style.colourBad(Unavailable Time Slot)]",
+							"[style.colourBad(时间栏位不可用)]",
 							Main.game.getDialogueFlags().getSlaveryManagerJobSelected().getAvailabilityText(i, Main.game.getDialogueFlags().getManagementCompanion())));
 				}
 			}
@@ -474,14 +474,14 @@ public class OccupantController {
 					}
 					Main.game.setContent(new Response("", "", CompanionManagement.getSlaveryManagementSlaveJobsDialogue(Main.game.getDialogueFlags().getManagementCompanion())));
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Set Preset Work Hours", preset.getDescription()));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("设置预设工作时间", preset.getDescription()));
 			}
 			
 			id = preset+"_TIME_DISABLED";
 			if (MainController.document.getElementById(id) != null) {
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-						"[style.colourBad(Set Preset Work Hours)]",
-						"You cannot assign these hours. Either the job is not available for these hours, or it is too much work."));
+						"[style.colourBad(设置预设工作时间)]",
+						"你无法安排这些时间。或是该工作无法在这些时间进行，或是工作已经太繁重。"));
 			}
 		}
 		
@@ -509,10 +509,10 @@ public class OccupantController {
 						Main.game.setContent(new Response("", "", CompanionManagement.getSlaveryManagementSlaveJobsDialogue(Main.game.getDialogueFlags().getManagementCompanion())));
 					}, false);
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+":</b> "
+							"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+"：</b>"
 									+"<b style='color:"+setting.getColour().toWebHexString()+";'>"+setting.getName()+"</b>",
 							setting.getDescription()
-									+" [style.italicsMinorGood(Click to apply this permission.)]"));
+									+"[style.italicsMinorGood(点击后应用该许可。)]"));
 				}
 				
 				id = job.toString()+setting+"_REMOVE";
@@ -522,10 +522,10 @@ public class OccupantController {
 						Main.game.setContent(new Response("", "", CompanionManagement.getSlaveryManagementSlaveJobsDialogue(Main.game.getDialogueFlags().getManagementCompanion())));
 					}, false);
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+":</b> "
+							"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+"：</b>"
 									+"<b style='color:"+setting.getColour().toWebHexString()+";'>"+setting.getName()+"</b>",
 							setting.getDescription()
-									+" [style.italicsMinorBad(Click to revoke this permission.)]"));
+									+"[style.italicsMinorBad(点击后移除该许可。)]"));
 				}
 			}
 			
@@ -541,19 +541,19 @@ public class OccupantController {
 							Main.game.setContent(new Response("", "", CompanionManagement.getSlaveryManagementSlaveJobsDialogue(Main.game.getDialogueFlags().getManagementCompanion())));
 						}, false);
 						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-								"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+":</b> "
+								"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+"：</b>"
 										+"<b style='color:"+setting.getColour().toWebHexString()+";'>"+setting.getName()+"</b>",
 								setting.getDescription()
-										+" [style.italicsMinorGood(Click to apply this permission.)]"));
+										+"[style.italicsMinorGood(点击后应用该许可。)]"));
 					}
 					
 					id = setting+"_DISABLED";
 					if (MainController.document.getElementById(id) != null) {
 						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-								"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+":</b> "
+								"<b style='color:"+job.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(job.getName(Main.game.getDialogueFlags().getManagementCompanion()))+"：</b>"
 										+"<b style='color:"+setting.getColour().toWebHexString()+";'>"+setting.getName()+"</b>",
 								setting.getDescription()
-										+" [style.italicsMinorBad(You cannot revoke permissions in this category. Select a different one instead.)]"));
+										+"[style.italicsMinorBad(你无法移除这一类中的许可。只能选择另一种许可。)]"));
 					}
 				}
 			}
@@ -569,9 +569,9 @@ public class OccupantController {
 				CompanionManagement.copyPermissions();
 				Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Copy Permissions",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("复制权限",
 					UtilText.parse(CompanionManagement.characterSelected(),
-							"Copy [npc.namePos] permissions, which will then enable you to paste these exact same permissions onto other slaves within their own permissions management screen.")));
+							"复制[npc.namePos]的权限，使得你能够将完全相同的权限粘贴到其他奴隶的权限管理界面上。")));
 		}
 		id = "pastePermissions";
 		if (MainController.document.getElementById(id) != null) {
@@ -581,11 +581,11 @@ public class OccupantController {
 					Main.game.setContent(new Response("", "", Main.game.getCurrentDialogueNode()));
 				}
 			}, false);
-			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Paste Permissions",
+			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("粘贴权限",
 					UtilText.parse(CompanionManagement.characterSelected(),
 							CompanionManagement.isPermissionsPasteAvailable()
-								?"Paste the currently copied permissions, thereby making [npc.name] have the exact same permissions as those which you've copied."
-								:"You haven't copied a set of permissions yet, so you can't paste them to replace [npc.namePos]...")));
+								?"粘贴当前复制的权限，使得[npc.name]的权限与复制的完全相同。"
+								:"你尚未复制一组权限许可，所以无法粘贴替换[npc.namePos]的……")));
 		}
 		
 		// Permissions:
@@ -598,11 +598,11 @@ public class OccupantController {
 						Main.game.setContent(new Response("", "", CompanionManagement.getSlaveryManagementSlavePermissionsDialogue(Main.game.getDialogueFlags().getManagementCompanion())));
 					}, false);
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"<b style='color:"+permission.getColour().toWebHexString()+";'>"+permission.getName()+":</b> "+setting.getName(),
+							"<b style='color:"+permission.getColour().toWebHexString()+";'>"+permission.getName()+":</b>"+setting.getName(),
 							setting.getDescription()
-									+" [style.italicsMinorGood(Click to apply this permission.)]"
+									+"[style.italicsMinorGood(点击后应用该许可。)]"
 									+(permission.isMutuallyExclusiveSettings()
-									?" [style.italicsMinorBad(Only one permission in this category can be active at once.)]"
+									?"[style.italicsMinorBad(该类只能同时启用一种许可。)]"
 									:""),
 							91 + (setting.getAdditionalDescriptionLines()*16)));
 				}
@@ -614,18 +614,18 @@ public class OccupantController {
 						Main.game.setContent(new Response("", "", CompanionManagement.getSlaveryManagementSlavePermissionsDialogue(Main.game.getDialogueFlags().getManagementCompanion())));
 					}, false);
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"<b style='color:"+permission.getColour().toWebHexString()+";'>"+permission.getName()+":</b> "+setting.getName(),
+							"<b style='color:"+permission.getColour().toWebHexString()+";'>"+permission.getName()+":</b>"+setting.getName(),
 							setting.getDescription()
-									+" [style.italicsMinorBad(Click to revoke this permission.)]",
+									+"[style.italicsMinorBad(点击后移除该许可。)]",
 							91 + (setting.getAdditionalDescriptionLines()*16)));
 				}
 				
 				id = setting+"_REMOVE_ME";
 				if (MainController.document.getElementById(id) != null) {
 					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-							"<b style='color:"+permission.getColour().toWebHexString()+";'>"+permission.getName()+":</b> "+setting.getName(),
+							"<b style='color:"+permission.getColour().toWebHexString()+";'>"+permission.getName()+":</b>"+setting.getName(),
 							setting.getDescription()
-									+" [style.italicsMinorBad(You cannot revoke permissions in this category. Select a different one instead.)]",
+									+" [style.italicsMinorBad(你无法移除这一类中的许可。只能选择另一种许可。)]",
 							91 + (setting.getAdditionalDescriptionLines()*16)));
 				}
 			}
@@ -649,8 +649,8 @@ public class OccupantController {
 				}, false);
 				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
 						osm==OccupantSortingMethod.NONE
-							?"No Sorting"
-							:"Sort By "+friendlyName,
+							?"未排序"
+							:"按"+friendlyName+"排序",
 						osm.getSortingDescription(),
 						18*2));
 			}
@@ -668,7 +668,7 @@ public class OccupantController {
 				});
 			}, false);
 			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-					"Sort in ascending order",
+					"升序",
 					""));
 		}
 		
@@ -684,7 +684,7 @@ public class OccupantController {
 				});
 			}, false);
 			MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation(
-					"Sort in descending order",
+					"降序",
 					""));
 		}
 		
@@ -712,8 +712,8 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Inspect Slave",
-							UtilText.parse(slave, "Inspect [npc.name]."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("检查奴隶",
+							UtilText.parse(slave, "检查[npc.name]。"),
 							18));
 				}
 				
@@ -732,8 +732,8 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Slave's Job",
-							UtilText.parse(slave, "Set [npc.namePos] job and work hours."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理奴隶工作",
+							UtilText.parse(slave, "设置[npc.namePos]的工作和工作时间。"),
 							18));
 				}
 				
@@ -752,8 +752,8 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Slave's Permissions",
-							UtilText.parse(slave, "Manage [npc.namePos] permissions."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理奴隶许可",
+							UtilText.parse(slave, "管理[npc.namePos]的许可。"),
 							18));
 				}
 				
@@ -763,8 +763,8 @@ public class OccupantController {
 						CompanionManagement.initManagement(Main.game.getCurrentDialogueNode(), CompanionManagement.getDefaultResponseTab(), slave);
 						Main.mainController.openInventory(slave, InventoryInteraction.FULL_MANAGEMENT);
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Slave's Inventory",
-							UtilText.parse(slave, "Manage [npc.namePos] inventory."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理奴隶物品栏",
+							UtilText.parse(slave, "管理[npc.namePos]的物品栏。"),
 							18));
 				}
 				
@@ -783,32 +783,32 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Move Slave Here",
-							UtilText.parse(slave, "Move [npc.name] to your current location."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("将奴隶移动至此",
+							UtilText.parse(slave, "将[npc.name]移动至你所在的位置。"),
 							18));
 				}
 				
 				id = slaveId+"_TRANSFER_DISABLED_FULL";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Move Slave Here",
-							UtilText.parse(slave, "You cannot move [npc.name] to this location, as there's no room for [npc.herHim] here."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("将奴隶移动至此",
+							UtilText.parse(slave, "你无法将[npc.name]移动至该处，因为这里没有[npc.herHim]能待的房间。"),
 							18*2));
 				}
 				id = slaveId+"_TRANSFER_DISABLED_INAPPPROPRIATE";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Move Slave Here",
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("将奴隶移动至此",
 							UtilText.parse(slave,
-									"You cannot move [npc.name] to this location, as it's not a suitable room for [npc.herHim]..."
+									"你无法将[npc.name]移动至该处，因为此类房间不适合[npc.herHim]……"
 									+(slave.isDoll()
-										?"<br/><i>Dolls can only use doll closets as their home tile...</i>"
-										:"<br/><i>Slaves can only use slave rooms as their home tile...</i>")
+										?"<br/><i>玩偶只能用玩偶贮藏室作为生活地块……</i>"
+										:"<br/><i>奴隶只能用奴隶房作为生活地块……</i>")
 									),
 							18*3));
 				}
 				id = slaveId+"_TRANSFER_DISABLED_ALREADY_HERE";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Move Slave Here",
-							UtilText.parse(slave, "You cannot move [npc.name] to this location, as [npc.sheIs] already treating this room as [npc.her] home!"),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("将奴隶移动至此",
+							UtilText.parse(slave, "你无法将[npc.name]移动至该处，因为[npc.sheIs]已经把这个房间当做[npc.her]的家了。"),
 							18*2));
 				}
 				
@@ -828,26 +828,26 @@ public class OccupantController {
 					}, false);
 					
 					if(slave.isAbleToBeSold()) {
-						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Sell Slave",
+						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("出售奴隶",
 								UtilText.parse(slave,
-										"[npc.Name] has a value of "+UtilText.formatAsMoney(slave.getValueAsSlave(true), "b", PresetColour.GENERIC_GOOD)
+										"[npc.Name]值"+UtilText.formatAsMoney(slave.getValueAsSlave(true), "b", PresetColour.GENERIC_GOOD)
 											+"<br/>"
-											+"However, "+Main.game.getDialogueFlags().getSlaveTrader().getName(true)+" will buy [npc.herHim] for "
-											+UtilText.formatAsMoney((int) (slave.getValueAsSlave(true)*Main.game.getDialogueFlags().getSlaveTrader().getBuyModifier()), "b", PresetColour.GENERIC_ARCANE)+".")));
+											+"然而"+Main.game.getDialogueFlags().getSlaveTrader().getName(true)+"只会出"
+											+UtilText.formatAsMoney((int) (slave.getValueAsSlave(true)*Main.game.getDialogueFlags().getSlaveTrader().getBuyModifier()), "b", PresetColour.GENERIC_ARCANE)+"。")));
 					} else {
-						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Sell Slave",
-								UtilText.parse(slave,"[npc.Name] cannot be sold!"),
+						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("出售奴隶",
+								UtilText.parse(slave,"[npc.Name]无法出售！"),
 								18));
 					}
 				}
 				
 				id = slaveId+"_SELL_DISABLED";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Sell Slave",
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("出售奴隶",
 							UtilText.parse(slave,
 									slave.isAbleToBeSold()
-											?"You cannot sell [npc.name], as there's nobody here to sell [npc.herHim] to."
-											:"[npc.Name] cannot be sold!"),
+											?"你无法出售[npc.name]，因为没有人买。"
+											:"[npc.Name]无法出售！"),
 							slave.isAbleToBeSold()
 								?18*2
 								:18));
@@ -865,15 +865,15 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Send to Kate",
-							UtilText.parse(slave, "Send [npc.name] to Kate's beauty salon, 'Succubi's Secrets', to get [npc.her] appearance changed."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("去找凯特",
+							UtilText.parse(slave, "将[npc.name]送去凯特的美容沙龙“魅魔的秘密”改变外观。"),
 							18*2));
 				}
 				
 				id = slaveId+"_COSMETICS_DISABLED";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Send Slave to Kate",
-							UtilText.parse(slave, "You haven't met Kate yet!"),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("去找凯特",
+							UtilText.parse(slave, "你还没见过凯特！"),
 							18));
 				}
 			}
@@ -903,16 +903,16 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Inspect Character",
-							UtilText.parse(occupant, "Inspect [npc.name]."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("检查角色",
+							UtilText.parse(occupant, "检查[npc.name]。"),
 							18));
 				}
 				
 				id = occupantId+"_JOB";
 				if (MainController.document.getElementById(id) != null) {
 					if(occupant.hasJob()) {
-						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Job",
-								UtilText.parse(occupant, "[npc.name] already has a permanent job, so cannot be assigned to work within the mansion..."),
+						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理职业",
+								UtilText.parse(occupant, "[npc.name]已经有固定工作了，所以不能分配在宅邸里工作……"),
 								18*2));
 						
 					} else {
@@ -925,16 +925,16 @@ public class OccupantController {
 								}
 							});
 						}, false);
-						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Job",
-								UtilText.parse(occupant, "Assign [npc.name] some temporary work."),
+						MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理职业",
+								UtilText.parse(occupant, "安排[npc.name]一些临时工作。"),
 								18));
 					}
 				}
 				
 				id = occupantId+"_PERMISSIONS";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Permissions",
-							"You cannot manage a free-willed occupant's permissions.",
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理许可",
+							"你无法管理一位自由住户的许可。",
 							18*2));
 				}
 				
@@ -946,8 +946,8 @@ public class OccupantController {
 						Main.mainController.openInventory(occupant, InventoryInteraction.FULL_MANAGEMENT);
 						
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Inventory",
-							UtilText.parse(occupant, "Manage [npc.namePos] inventory."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理物品栏",
+							UtilText.parse(occupant, "管理[npc.namePos]的物品栏。"),
 							18));
 				}
 				
@@ -962,15 +962,15 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Move Here",
-							UtilText.parse(occupant, "Move [npc.name] to your current location."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("移动至此",
+							UtilText.parse(occupant, "将[npc.name]移动至你所在的位置。"),
 							18));
 				}
 				
 				id = occupantId+"_TRANSFER_DISABLED";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Move Here",
-							UtilText.parse(occupant, "You cannot move [npc.name] to this location, as there's no room for [npc.herHim] here."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("移动至此",
+							UtilText.parse(occupant, "你无法将[npc.name]移动至该处，因为这里没有[npc.herHim]能待的房间。"),
 							18*2));
 				}
 				
@@ -986,15 +986,15 @@ public class OccupantController {
 							}
 						});
 					}, false);
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Send to Kate",
-							UtilText.parse(occupant, "Send [npc.name] to Kate's beauty salon, 'Succubi's Secrets', to get [npc.her] appearance changed."),
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("去找凯特",
+							UtilText.parse(occupant, "将[npc.name]送去凯特的美容沙龙“魅魔的秘密”改变外观。"),
 							18*2));
 				}
 				
 				id = occupantId+"_COSMETICS_DISABLED";
 				if (MainController.document.getElementById(id) != null) {
-					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Send to Kate",
-							"You haven't met Kate yet!",
+					MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("去找凯特",
+							"你还没见过凯特！",
 							18));
 				}
 			}
@@ -1025,32 +1025,32 @@ public class OccupantController {
 						}
 					});
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Inspect Slave",
-						UtilText.parse(slave, "Take a detailed look at [npc.name].")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("检查奴隶",
+						UtilText.parse(slave, "对[npc.name]仔细检查一番。")));
 			}
 			
 			id = slaveId+"_TRADER_JOB";
 			if (MainController.document.getElementById(id) != null) {
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Slave's Job",
-						UtilText.parse(slave, "You cannot manage [npc.namePos] job, as you don't own [npc.herHim]!")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理奴隶工作",
+						UtilText.parse(slave, "你无法管理[npc.namePos]的工作，因为你不是[npc.herHim]的主人！")));
 			}
 			
 			id = slaveId+"_TRADER_PERMISSIONS";
 			if (MainController.document.getElementById(id) != null) {
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Slave's Permissions",
-						UtilText.parse(slave, "You cannot manage [npc.namePos] permissions, as you don't own [npc.herHim]!")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理奴隶许可",
+						UtilText.parse(slave, "你无法管理[npc.namePos]的许可，因为你不是[npc.herHim]的主人！")));
 			}
 			
 			id = slaveId+"_TRADER_INVENTORY";
 			if (MainController.document.getElementById(id) != null) {
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Manage Slave's Inventory",
-						UtilText.parse(slave, "You cannot manage [npc.namePos] inventory, as you don't own [npc.herHim]!")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("管理奴隶物品栏",
+						UtilText.parse(slave, "你无法管理[npc.namePos]的物品栏，因为你不是[npc.herHim]的主人！")));
 			}
 			
 			id = slaveId+"_TRADER_TRANSFER";
 			if (MainController.document.getElementById(id) != null) {
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Move Slave Here",
-						UtilText.parse(slave, "You cannot move [npc.name] to this location, as you don't own [npc.herHim], as well as due to the fact that [npc.sheIs] already here!")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("将奴隶移动至此",
+						UtilText.parse(slave, "你无法将[npc.namePos]移动至该处，因为你不是[npc.herHim]的主人，而且[npc.sheIs]已经在这了！")));
 			}
 			
 			id = slaveId+"_BUY";
@@ -1065,22 +1065,22 @@ public class OccupantController {
 						}
 					});
 				}, false);
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Buy Slave",
-						UtilText.parse(slave, "[npc.Name] has a value of "+UtilText.formatAsMoney(slave.getValueAsSlave(true), "b", PresetColour.GENERIC_GOOD)+"<br/>"
-								+"However, "+Main.game.getDialogueFlags().getSlaveTrader().getName(true)+" will sell [npc.herHim] for "
-								+UtilText.formatAsMoney((int) (slave.getValueAsSlave(true)*Main.game.getDialogueFlags().getSlaveTrader().getSellModifier(null)), "b", PresetColour.GENERIC_ARCANE)+".")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("购买奴隶",
+						UtilText.parse(slave, "[npc.Name]值"+UtilText.formatAsMoney(slave.getValueAsSlave(true), "b", PresetColour.GENERIC_GOOD)+"<br/>"
+								+"然而"+Main.game.getDialogueFlags().getSlaveTrader().getName(true)+"却要[npc.herHim]卖"
+								+UtilText.formatAsMoney((int) (slave.getValueAsSlave(true)*Main.game.getDialogueFlags().getSlaveTrader().getSellModifier(null)), "b", PresetColour.GENERIC_ARCANE)+"。")));
 			}
 			
 			id = slaveId+"_BUY_DISABLED";
 			if (MainController.document.getElementById(id) != null) {
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Buy Slave",
-						UtilText.parse(slave, "You cannot buy [npc.name], as you don't have enough money!")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("购买奴隶",
+						UtilText.parse(slave, "你无法购买[npc.name]，因为你没有足够的钱！")));
 			}
 			
 			id = slaveId+"_TRADER_COSMETICS";
 			if (MainController.document.getElementById(id) != null) {
-				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("Send Slave to Kate",
-						UtilText.parse(slave, "You can't send a slave you don't own to Kate!")));
+				MainController.addTooltipListeners(id, new TooltipInformationEventListener().setInformation("去找凯特",
+						UtilText.parse(slave, "你不能把自己未拥有的奴隶送到凯特那里！")));
 			}
 		}
 	}

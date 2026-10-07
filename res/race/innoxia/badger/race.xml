@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <race>
 	<racialBody>innoxia_badger</racialBody>
 	
 	<applyRaceChanges/>
 	
-	<name><![CDATA[badger-morph]]></name>
-	<namePlural><![CDATA[badger-morphs]]></namePlural>
+	<name><![CDATA[獾化形]]></name>
+	<namePlural><![CDATA[獾化形]]></namePlural>
 	
 	<nameFeral>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[badger]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[獾]]></name>
 	</nameFeral>
 	<nameFeralPlural>
-		<name legConfiguration="QUADRUPEDAL"><![CDATA[badger]]></name>
+		<name legConfiguration="QUADRUPEDAL"><![CDATA[獾]]></name>
 	</nameFeralPlural>
 	
-	<defaultTransformName><![CDATA[badger]]></defaultTransformName>
+	<defaultTransformName><![CDATA[獾]]></defaultTransformName>
 	
 	<colour>innoxia_badger</colour>
 	

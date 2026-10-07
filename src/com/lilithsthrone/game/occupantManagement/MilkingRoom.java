@@ -426,9 +426,9 @@ public class MilkingRoom implements XMLSaving {
 	public String getRoomDescription() {
 		StringBuilder milkyMilknessSB = new StringBuilder();
 		
-		milkyMilknessSB.append(getFluidEntries(this.getMilkFluidsStored(), PresetColour.MILK, "Milk Stored"));
-		milkyMilknessSB.append(getFluidEntries(this.getCumFluidsStored(), PresetColour.CUM, "Cum Stored"));
-		milkyMilknessSB.append(getFluidEntries(this.getGirlcumFluidsStored(), PresetColour.GIRLCUM, "Girlcum Stored"));
+		milkyMilknessSB.append(getFluidEntries(this.getMilkFluidsStored(), PresetColour.MILK, "乳汁已储存"));
+		milkyMilknessSB.append(getFluidEntries(this.getCumFluidsStored(), PresetColour.CUM, "精液已储存"));
+		milkyMilknessSB.append(getFluidEntries(this.getGirlcumFluidsStored(), PresetColour.GIRLCUM, "妹汁已储存"));
 		
 		return milkyMilknessSB.toString();
 	}
@@ -466,7 +466,7 @@ public class MilkingRoom implements XMLSaving {
 							"<div class='container-half-width' style='margin:0; padding:2px; width:15%; background:transparent;'>"
 								+ "[style.colourExcellent("+Units.fluid(fluid.getMillilitres())+")]");
 					if(fluid.isCum()) {
-						milkyMilknessSB.append("<br/><span style='color:"+Attribute.VIRILITY.getColour().toWebHexString()+";'>Virility:</span> "+Units.adaptiveRound(fluid.getVirility()));
+						milkyMilknessSB.append("<br/><span style='color:"+Attribute.VIRILITY.getColour().toWebHexString()+";'>生殖力:</span> "+Units.adaptiveRound(fluid.getVirility()));
 					}
 					milkyMilknessSB.append("</div>");
 				
@@ -474,33 +474,33 @@ public class MilkingRoom implements XMLSaving {
 					GameCharacter fluidOwner = null;
 					try {
 						fluidOwner = fluid.getFluidCharacter();
-						milkyMilknessSB.append(UtilText.parse(fluidOwner, "<span style='color:"+fluidOwner.getFemininity().getColour().toWebHexString()+";'>[npc.NamePos]</span>"));
+						milkyMilknessSB.append(UtilText.parse(fluidOwner, "<span style='color:"+fluidOwner.getFemininity().getColour().toWebHexString()+";'>[npc.NamePos]的</span>"));
 						
 					} catch(Exception ex) {
-						milkyMilknessSB.append("[style.colourDisabled(Unknown's)]");
+						milkyMilknessSB.append("[style.colourDisabled(某人的)]");
 					}
 					milkyMilknessSB.append("<br/>"
 								+ "<span style='color:"+type.getRace().getColour().toWebHexString()+";'>"
-									+Util.capitaliseSentence(type.getRace().getName(fluid.isFeral()))+" "+type.getBaseType().getNames().get(0)//type.getName(fluidOwner)
+									+Util.capitaliseSentence(type.getRace().getName(fluid.isFeral()))+type.getBaseType().getNames().get(0)//type.getName(fluidOwner)
 								+"</span>"
 							+ "</div>");
 	
 					milkyMilknessSB.append("<div class='container-half-width' style='margin:0; padding:2px; width:35%; background:transparent;'>");
 					FluidFlavour flavour = fluid.getFluid().getFlavour();
-					milkyMilknessSB.append("<span style='color:"+flavour.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(flavour.getName())+(flavour==FluidFlavour.FLAVOURLESS?"":"-flavoured")+"</span>.<br/>");
+					milkyMilknessSB.append("<span style='color:"+flavour.getColour().toWebHexString()+";'>"+Util.capitaliseSentence(flavour.getName())+(flavour==FluidFlavour.FLAVOURLESS?"":"口味")+"</span>。<br/>");
 						if(!fluid.getFluid().getFluidModifiers().isEmpty()) {
 							int i=0;
 							for(FluidModifier mod : fluid.getFluid().getFluidModifiers()) {
 								if(i>0) {
-									milkyMilknessSB.append(", ");
+									milkyMilknessSB.append("，");
 								}
 								milkyMilknessSB.append(Util.capitaliseSentence(mod.getName()));
 								i++;
 							}
-							milkyMilknessSB.append(".");
+							milkyMilknessSB.append("。");
 							
 						} else {
-							milkyMilknessSB.append("[style.colourDisabled(No Modifiers)]");
+							milkyMilknessSB.append("[style.colourDisabled(无修饰)]");
 						}
 					milkyMilknessSB.append("</div>");
 	
@@ -537,7 +537,7 @@ public class MilkingRoom implements XMLSaving {
 			}
 			
 			if(!fluidsFound) {
-				milkyMilknessSB.append("<div class='container-full-width' style='margin-bottom:2px; text-align:center; background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'>[style.colourDisabled(None...)]</div>");
+				milkyMilknessSB.append("<div class='container-full-width' style='margin-bottom:2px; text-align:center; background:"+PresetColour.BACKGROUND_ALT.toWebHexString()+";'>[style.colourDisabled(无……)]</div>");
 			}
 
 		milkyMilknessSB.append("</div>");
@@ -553,26 +553,26 @@ public class MilkingRoom implements XMLSaving {
 		StringBuilder sb = new StringBuilder();
 		
 		if(millilitres<5) {
-			sb.append("There needs to be at least "+Units.fluid(5)+" of fluid for [npc.name] to ingest it!<br/>");
+			sb.append("至少需要"+Units.fluid(5)+"液体才能让[npc.name]摄入！<br/>");
 		}
 		
 		switch(area) {
 			case ANUS:
 				if(!ingestingCharacter.isAbleToAccessCoverableArea(CoverableArea.ANUS, true)) {
-					sb.append("[npc.NameIsFull] not able to access [npc.her] asshole!");
+					sb.append("[npc.NameIsFull]无法使用[npc.her]的后穴！");
 				}
 				break;
 			case MOUTH:
 				if(!ingestingCharacter.isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
-					sb.append("[npc.NameIsFull] not able to access [npc.her] mouth!");
+					sb.append("[npc.NameIsFull]无法使用[npc.her]的嘴巴！");
 				}
 				break;
 			case VAGINA:
 				if(!ingestingCharacter.hasVagina()) {
-					sb.append("[npc.Name] [npc.does] not have a vagina!");
+					sb.append("[npc.Name]没有阴道！");
 					
 				} else if(!ingestingCharacter.isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
-					sb.append("[npc.NameIsFull] not able to access [npc.her] pussy!");
+					sb.append("[npc.NameIsFull]无法使用[npc.her]的小穴！");
 				}
 				break;
 			default:
@@ -585,8 +585,8 @@ public class MilkingRoom implements XMLSaving {
 		if(!ingestingCharacter.isPlayer() && !ingestingCharacter.isSlave()) {
 			if(ingestingCharacter.getAffection(Main.game.getPlayer())<AffectionLevel.POSITIVE_FOUR_LOVE.getMinimumValue()) {
 				 sb.append(UtilText.parse(ingestingCharacter,
-							"As [npc.sheIs] not your slave, [npc.name] will only let you do this if [npc.she]"
-							+ " <span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span> you.<br/>"));
+							"[npc.name]不是你的奴隶， [npc.sheIs]只有在"
+							+ "<span style='color:"+AffectionLevel.POSITIVE_FOUR_LOVE.getColour().toWebHexString()+";'>"+AffectionLevel.POSITIVE_FOUR_LOVE.getDescriptor()+"</span>你时才会同意。<br/>"));
 				
 			} else if(fluidType==FluidTypeBase.CUM
 					&& (area==CoverableArea.VAGINA
@@ -594,28 +594,28 @@ public class MilkingRoom implements XMLSaving {
 						:!ingestingCharacter.getFetishDesire(Fetish.FETISH_CUM_ADDICT).isPositive())) {
 				 sb.append(UtilText.parse(ingestingCharacter,
 						 area==CoverableArea.VAGINA
-						 	?"[npc.Name] requires a positive desire for the "+Fetish.FETISH_PREGNANCY.getName(ingestingCharacter)+" fetish.<br/>"
-							:"[npc.Name] requires a positive desire for the "+Fetish.FETISH_CUM_ADDICT.getName(ingestingCharacter)+" fetish.<br/>"));
+						 	?"[npc.Name]需要对"+Fetish.FETISH_PREGNANCY.getName(ingestingCharacter)+"性癖有正向渴望值。<br/>"
+							:"[npc.Name]需要对"+Fetish.FETISH_CUM_ADDICT.getName(ingestingCharacter)+"性癖有正向渴望值。<br/>"));
 				
 			} else if(fluidType==FluidTypeBase.MILK && !ingestingCharacter.getFetishDesire(Fetish.FETISH_LACTATION_OTHERS).isPositive()) {
 				 sb.append(UtilText.parse(ingestingCharacter,
-						"[npc.Name] requires a positive desire for the "+Fetish.FETISH_LACTATION_OTHERS.getName(ingestingCharacter)+" fetish.<br/>"));
+						"[npc.Name]需要对"+Fetish.FETISH_LACTATION_OTHERS.getName(ingestingCharacter)+"性癖有正向渴望值。<br/>"));
 				
 			} else if(fluidType==FluidTypeBase.GIRLCUM && !ingestingCharacter.getFetishDesire(Fetish.FETISH_VAGINAL_GIVING).isPositive()) {
 				 sb.append(UtilText.parse(ingestingCharacter,
-						"[npc.Name] requires a positive desire for the "+Fetish.FETISH_VAGINAL_GIVING.getName(ingestingCharacter)+" fetish.<br/>"));
+						"[npc.Name]需要对"+Fetish.FETISH_VAGINAL_GIVING.getName(ingestingCharacter)+"性癖有正向渴望值。<br/>"));
 			}
 			switch(area) {
 				case ANUS:
 					if(!ingestingCharacter.getFetishDesire(Fetish.FETISH_ANAL_RECEIVING).isPositive()) {
 						 sb.append(UtilText.parse(ingestingCharacter,
-									"[npc.Name] requires a positive desire for the "+Fetish.FETISH_ANAL_RECEIVING.getName(ingestingCharacter)+" fetish."));
+									"[npc.Name]需要对"+Fetish.FETISH_ANAL_RECEIVING.getName(ingestingCharacter)+"性癖有正向渴望值。"));
 					}
 					break;
 				case VAGINA:
 					if(!ingestingCharacter.getFetishDesire(Fetish.FETISH_VAGINAL_RECEIVING).isPositive()) {
 						 sb.append(UtilText.parse(ingestingCharacter,
-									"[npc.Name] requires a non-negative desire for the "+Fetish.FETISH_VAGINAL_RECEIVING.getName(ingestingCharacter)+" fetish."));
+									"[npc.Name]需要对"+Fetish.FETISH_VAGINAL_RECEIVING.getName(ingestingCharacter)+"性癖有非负渴望值。"));
 					}
 					break;
 				default:

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- STREET -->
@@ -7,97 +7,97 @@
 	#IF(game.isDayTime())
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 			<p>
-				Although the streets of Dominion look similar to those of Victorian-era London, there's a few major differences that reveal the other-worldly nature of this place. The paved roads which are normally home to horse or centaur-pulled wooden carts are currently deserted. Marble benches line either side of the pedestrianised streets, interspersed by rows of trees and arcane-powered street lamps. The tree's branches sway wildly in the storm's wind as it howls down the empty streets. The glass frontages of the surrounding buildings reflect each and every lightning strike, filling the streets with bright purple and pink flashes.
+				尽管御城区的街道看起来与维多利亚时代的伦敦相似，但还是有很多地方表明这里并非现实。通常停放着马或半人马拉的木车的铺装道路路现在已经空无一人。人行道两侧排列着大理石长椅，其间点缀着一排排树木和奥术驱动的路灯。树枝在风暴的狂风中狂舞，呼啸地吹过空荡荡的街道。周围建筑的玻璃反射着每一次雷击，街道上充斥着明亮的紫色和粉色闪光。
 			</p>
 			 <p>
-				Due to the ongoing storm, the entire city seems to be almost totally deserted. Doors are locked, windows are shuttered, and, for the most part, not a soul can be seen. The only people able to withstand the storm's thunderous power are demons, and every now and then you see one strutting down the street.
+				由于暴风雨持续不断，整座城市几乎完全空无一人。大门紧锁，窗户紧闭，大部分地方看不到一个人影。唯一能抵御暴风雨雷鸣般威力的只有恶魔，你时不时就会看到一个恶魔在街上大摇大摆地走着。
 				#IF(pc.getRace()==RACE_DEMON)
-					 They sometimes cast a nod, a smile, or even a seductive glance your way, but most are on business of their own and content to simply ignore you.
+					他们有时会向你点头、微笑，甚至是诱人的一瞥，但大多数都是在忙自己的事情，无视你。
 				#ELSE
-					 They sometimes cast a curious glance your way, but most are content to simply ignore you.
+					他们有时会向你投来好奇的目光，但大多数都对你视而不见。
 				#ENDIF
 			</p>
 			<p>
-				The size and emptiness of the city streets fills you with a sense of foreboding, and you frantically look around for signs of danger as you hurry on your way. Remembering what happened the first night you arrived in this world, you know full well that any non-demons caught out in the storm will be filled with an uncontrollable lust. If they catch you, they'll be sure to force you into a fight.
+				城市街道的空旷让你有一种不祥的预感，当你匆忙前行时，你四处寻找危险的迹象。回忆起你来到这个世界的第一个晚上发生的事情，你非常清楚，任何被风暴困住的非恶魔都会充满无法控制的性欲。如果他们抓住你，他们一定会与你作战。
 			</p>
 		#ELSE
 			<p>
-				Although the streets of Dominion look similar to those of Victorian-era London, there's a strange feel to them that hints at the other-worldly nature of this place. Instead of cars and trucks, the paved roads are home to wooden carts being pulled by either horses or centaur slaves.
+				尽管御城区的街道看起来与维多利亚时代的伦敦相似，但它们有一种奇怪的感觉，揭示了这个地方的超凡脱俗的特点。行驶在铺装道路上的不是汽车或者卡车，而是由马或半人马奴隶拉着的木车。
 				#IF(game.getCurrentWeather()==WEATHER_CLEAR)
-					 Rows of trees and marble benches line either side of the pedestrianised streets, offering shade and a place to rest for weary shoppers. On either side of you, the building's clean façades gleam in the sunshine, and high above in the sky, you see harpies flying about on business of their own.
+					人行道两侧排列着一排排树木和大理石长椅，为疲惫的购物者提供了阴凉和休息的地方。两旁整洁的建筑外墙在阳光下熠熠生辉，在高高的天空中，你可以看到哈比们飞来飞去忙自己的事情。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_CLOUD)
-					 Rows of trees and marble benches line either side of the pedestrianised streets, offering a place to rest. On either side of you, the building's clean façades gleam in the sunshine, and high above in the sky, you see harpies flying about on business of their own.
+					人行道两侧排列着一排排树木和大理石长椅，为人们提供了休息的场所。两旁整洁的建筑外墙在阳光下熠熠生辉，在高高的天空中，你会看到哈比在飞来飞去做着自己的事情。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_MAGIC_STORM_GATHERING)
-					 Marble benches line either side of the pedestrianised streets, granted shade from the summer sun by rows of trees. The tree's branches sway as the wind starts to pick up, and the rustling of leaves can be head over the steady hum of the busy crowds. On either side of you, the glass frontages of the recently renovated buildings reflect the darkening sky.
+					人行道两旁摆放着大理石长椅，成排的树木为人们遮挡夏日的阳光。风起时，树影摇晃，树叶的沙沙声在嘈杂的人群声中依旧清晰可闻。两侧新翻修的大楼玻璃幕墙倒映着昏暗的天空。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-					 Rows of trees and marble benches line either side of the pedestrianised streets, offering a place to rest and cover from the rain. On either side of you, large canvas awnings have been extended from the buildings, shielding passersby from the sudden downpour.
+					人行道两侧排列着一排排树木和大理石长椅，为人们提供了休息和避雨的地方。两旁的建筑都伸出了大型帆布遮阳篷，为行人遮挡突如其来的大雨。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_SNOW)
-					 Large white snowflakes continue to fall all around you as you walk past the rows of trees and marble benches that line either side of the pedestrianised streets.
+					你从步行街两侧的成排树木和大理石长椅走过，大片大片的白色雪花不断飘落身旁。
 				#ENDIF
 			</p>
 			<p>
-				The streets are very busy at this time of day, and are packed with people hurrying to and fro. Despite their alarming appearances, the citizens of Dominion appear to be completely normal in every other way. You see those people who are always in a rush to be somewhere else, the crowds of shoppers lazily ambling by, the groups of friends laughing and chatting on benches, and all the other sorts that you'd find in any old city. As the streets are so busy at this time, you find yourself having to occasionally push your way through the dense crowds.
+				在一天中的这个时候，街道上总是十分的繁忙，挤满了匆忙来去的人们。尽管他们的外表令人吃惊，但御城区的居民在其他方面看起来却完全正常。你会看到那些总是匆匆忙忙赶往别处的人，悠闲地走过的购物人群，一群群在长椅上谈笑风生的朋友，以及在任何一座古老城市里都能看到的各种人。但是因为街道太过繁忙，你有时候不得不在密集的人群中推挤前行。
 			</p>
 			<p>
-				Most of the people around you are partial or lesser morphs, although there are a quite a few greater morphs to be seen walking the streets as well. Dog, cat and horse-morphs are by far the most common races that you see, but it wouldn't take long to find examples of every race. The rarest races that you see are humans and demons. The latter are very easy to spot, as wherever they walk, people hurriedly move to make way.
+				周围的大多数人都是似化形或者亚化形，不过在街上也能看到一部分的纯化形。犬、猫和马化形是你看到的最常见的种族，但要找到每个种族的化形也不会花很长时间。你看到的最稀有的种族是人类和恶魔。不过恶魔就很容易被认出来，因为无论他们走到哪里，人们都匆忙躲开让路。
 			</p>
 		#ENDIF
 	#ELSE
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 			<p>
-				Although the streets of Dominion look similar to those of Victorian-era London, there's a few major differences that reveal the other-worldly nature of this place. The paved roads which are normally home to horse or centaur-pulled wooden carts are currently deserted. Marble benches line either side of the pedestrianised streets, interspersed by rows of trees, all illuminated by the soft amber glow of arcane-powered street lamps. The tree's branches sway wildly in the storm's wind as it howls down the empty streets. The glass frontages of the surrounding buildings reflect each and every lightning strike, filling the streets with bright purple and pink flashes.
+				尽管御城区的街道看起来与维多利亚时代的伦敦相似，但还是有很多地方表明这里并非现实。通常停放着马或半人马拉的木车的铺装道路路现在已经空无一人。人行道两侧排列着大理石长椅，其间点缀着一排排树木和奥术驱动的路灯。树枝在风暴的狂风中狂舞，呼啸地吹过空荡荡的街道。周围建筑的玻璃反射着每一次雷击，街道上充斥着明亮的紫色和粉色闪光。
 			</p>
 			<p>
-				Due to the ongoing storm, the entire city seems to be almost totally deserted. Doors are locked, windows are shuttered, and, for the most part, not a soul can be seen. The only people able to withstand the storm's thunderous power are demons, and every now and then you see one strutting down the street.
+				由于暴风雨持续不断，整座城市几乎完全空无一人。大门紧锁，窗户紧闭，大部分地方看不到一个人影。唯一能抵御暴风雨雷鸣般威力的只有恶魔，你时不时就会看到一个恶魔在街上大摇大摆地走着。
 				#IF(pc.getRace()==RACE_DEMON)
-					 They sometimes cast a nod, a smile, or even a seductive glance your way, but most are on business of their own and content to simply ignore you.
+					他们有时会向你点头、微笑，甚至是诱人的一瞥，但大多数都是在忙自己的事情，无视你。
 				#ELSE
-					 They sometimes cast a curious glance your way, but most are content to simply ignore you.
+					他们有时会向你投来好奇的目光，但大多数都对你视而不见。
 				#ENDIF
 			</p>
 			<p>
-				The size and emptiness of the city streets fills you with a sense of foreboding, and you frantically look around for signs of danger as you hurry on your way. Remembering what happened the first night you arrived in this world, you know full well that any non-demons caught out in the storm will be filled with an uncontrollable lust. If they catch you, they'll be sure to force you into a fight.
+				城市街道的空旷让你有一种不祥的预感，当你匆忙前行时，你四处寻找危险的迹象。回忆起你来到这个世界的第一个晚上发生的事情，你非常清楚，任何被风暴困住的非恶魔都会充满无法控制的性欲。如果他们抓住你，他们一定会与你作战。
 			</p>
 		#ELSE
 			<p>
-				Although the streets of Dominion look similar to those of Victorian-era London, there's a strange feel to them that hints at the other-worldly nature of this place. Even at this time of night, the paved roads are home to numerous wooden carts being pulled by either horses or centaur slaves. Marble benches line both sides of the pedestrianised streets, and are interspersed by rows of trees, softly illuminated by the amber glow of arcane-powered street lamps.
+				尽管御城区的街道看起来与维多利亚时代的伦敦相似，但还是有很多地方表明这里并非现实。即使现在是夜晚，铺设好的道路上也依旧停放着许多由马或半人马奴隶拉着的木车，人行道两侧排列着大理石长椅，其间点缀着一排排树木，附近的弧形路灯发出琥珀色的光芒，显得格外柔和。
 				#IF(game.getCurrentWeather()==WEATHER_CLEAR)
-					  On either side of you, lights shine out from the windows of the tall buildings.
+					在你两侧，高楼的窗户中透出灯光。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_CLOUD)
-					  On either side of you, lights shine out from the windows of the tall buildings.
+					在你两侧，高楼的窗户中透出灯光。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_MAGIC_STORM_GATHERING)
-					 The tree's branches sway as the wind starts to pick up, and the rustling of leaves fills the still night air.
+					树枝随风摇曳，树叶的沙沙声充斥着寂静的夜空。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_RAIN)
-					 On either side of you, large canvas awnings have been extended from the buildings, shielding passersby from the sudden downpour.
+					在你的两侧，建筑物上都伸出了大帆布遮阳篷，为行人遮挡突如其来的大雨。
 				#ELSEIF(game.getCurrentWeather()==WEATHER_SNOW)
-					 Large fluffy snowflakes continue to fall all around you; their haphazard paths illuminated by the lights shining out from the windows of the tall buildings.
+					大片大片蓬松的雪花不断飘落在你的周围，高楼窗内的灯光照亮了它们不定的轨迹。
 				#ENDIF
 			</p>
 			<p>
-				Although the streets are noticeably quieter than during the day, there are still plenty of people hurrying to and fro. Despite their alarming appearances, the citizens of Dominion appear to be completely normal in every other way. You see those people who are always in a rush to be somewhere else, the crowds of shoppers lazily ambling by, the groups of friends laughing and chatting on benches, and all the other sorts that you'd find in any old city. As the streets are quiet at this time, you have plenty of room to weave your way through the sparse crowds.
+				虽然街道比白天明显安静了许多，但仍有很多人来去匆匆。尽管他们的外表令人吃惊，但御城区的居民在其他方面看起来却完全正常。你会看到那些总是匆匆忙忙赶往别处的人，悠闲地走过的购物人群，一群群在长椅上谈笑风生的朋友，以及在任何一座古老城市里都能看到的各种人。此时的街道很安静，你有足够的空间在稀疏的人群中穿梭。
 			</p>
 			<p>
-				Most of the people around you are partial or lesser morphs, although there are a quite a few greater morphs to be seen walking the streets as well. Dog, cat and horse-morphs are by far the most common races that you see, but it wouldn't take long to find examples of every race. The rarest races that you see are humans and demons. The latter are very easy to spot, as wherever they walk, people hurriedly move to make way.
+				周围的大多数人都是似化形或者亚化形，不过在街上也能看到一部分的纯化形。犬、猫和马化形是你看到的最常见的种族，但要找到每个种族的化形也不会花很长时间。你看到的最稀有的种族是人类和恶魔。不过恶魔就很容易被认出来，因为无论他们走到哪里，人们都匆忙躲开让路。
 			</p>
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STREET_EVENT_OCTOBER"><![CDATA[
 	<p>
-		[style.boldOrange(October;)] [style.boldArcane(Lilith's Month:)]
-		<br/>Orange, black, and purple flags fly from almost every window, and you look up to see that large banners have been hung across the street, each one bearing a different slogan celebrating Lilith's rule. The occasional demon that you see is usually dressed up in a Halloween-esque costume for the occasion, which does nothing to help alleviate the eerie atmosphere.
+		[style.boldOrange(十月；)][style.boldArcane(莉莉丝之月：)]
+		<br/>几乎每扇窗户上都飘扬着橙色、黑色和紫色的旗帜，抬眼望去，你会发现街道两旁挂满了巨大的横幅，每条横幅上都写着不同的标语，庆祝莉莉丝的统治。你偶尔看到的恶魔通常都穿着万圣节的盛装，这丝毫无助于缓解阴森恐怖的气氛。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="STREET_EVENT_SNOW"><![CDATA[
 	<p>
-		The reindeer-morph workers are doing a good job of keeping Dominion's streets clear from the snow, but the rooftops, trees, and tops of lamp posts are all home to a thick layer of white. You see your breath exiting your mouth in a little cloud of condensation, but despite the clear evidence of the air's freezing temperature, your arcane aura protects your body from feeling the cold.
+		驯鹿化形的工作者们把御城区的街道清理得很干净，但屋顶、树木和灯柱的顶端都覆盖着一层厚厚的白色。你看到你从嘴里呼出来的气变成了一团凝结的云，尽管空气的温度明显很低，但是你的奥术灵气能保护你的身体不受寒冷的影响。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BACK_ALLEYS_SAFE -->
@@ -105,96 +105,97 @@
 	<htmlContent tag="BACK_ALLEYS_SAFE"><![CDATA[
 	<p>
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			The back alleys in this particular section of Dominion are not only considerably cleaner and wider than those found throughout the rest of the city, but they are also usually far more frequently travelled. As there's an ongoing arcane storm, however, they are currently just as deserted as any other.
+			御城区内这个特殊区域的小巷不仅比城市其他地方的小巷干净宽敞得多，而且通常也更加人来人往。然而，由于一场持续不断的奥术风暴，这些小巷目前和其他地方一样冷冷清清。
 		#ELSE
-			The back alleys in this particular section of Dominion are not only considerably cleaner and wider than those found throughout the rest of the city, but they are also far more frequently travelled.
+			御城区内这一特殊区域的背街小巷不仅比城市其他地方的小巷要干净宽敞得多，而且往来此地的行人也更多。
 			#IF(pc.getRace()==RACE_DEMON)
-				 While significantly less busy than the main streets of the city, you still often find yourself encountering groups of slow-moving shoppers, who invariably hurry to one side to let you pass as they see that you're [pc.a_race].
+				虽然比起城市的主干道，这里的繁华程度要低得多，但你还是会经常遇到一些慢悠悠的购物者，当他们看到你是[pc.a_race]时，总是会匆忙躲到一边，让你通过。
 			#ELSE
-				 While significantly less busy than the main streets of the city, you still often find yourself having to weave your way past groups of slow-moving shoppers, which greatly slows down your progress through these twisting passageways.
+				虽然与城市的主要街道相比，这里的繁忙程度要低得多，但你还是经常会发现自己不得不穿梭于一群群行动缓慢的购物者之间，这大大减缓了你在这些曲折小路中的前进速度。
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			While there is usually a large Enforcer presence in this area, it doesn't appear to be considered important enough to warrant the presence of demon officers, and so until the arcane storm passes, there will be nobody to come to your aid should you be attacked...
+			虽然通常会有大量的执法者驻扎在这一区域，但这里似乎并没有重要到需要恶魔军官驻扎的地步，所以在奥术风暴过去之前，如果你受到攻击，不会有人来帮助你……
 		#ELSE
-			The reason for this alleyway being treated as a safe passage is due to an unusually large Enforcer presence in the area. A uniformed officer never seems to be more than one or two corners away, ready to rush to the aid of anyone who would call for it.
+			这条小巷之所以被视为安全通道，是因为这里的执法者异常多。穿制服的警官似乎永远不会离开那一两个拐角处，随时准备为任何遇到困难的人提供帮助。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BACK_ALLEYS -->
 	
 	<htmlContent tag="BACK_ALLEYS"><![CDATA[
 	<p>
-		You find yourself walking through labyrinthine alleyways, with not a soul in sight. Back-doors and steaming vents line the dark brick walls, and you often have to navigate around overflowing bins and stacks of empty crates in order to make progress.
+		你发现自己正在穿越迷宫般的小巷，眼前没有一个人影。黑暗的砖墙上排列着后门和冒着蒸汽的通风口，你经常不得不绕过满溢的垃圾桶和一堆堆空箱子才能继续前进。
 	</p>
 	<p>
 		#IF(game.getNonCompanionCharactersPresent().isEmpty())
-			Due to the abundance of hiding places from which an ambush could be sprung, you recognise this as being a [style.colourBad(dangerous)] area, and you realise that you could be attacked at any moment...
+			由于隐藏地点多，很容易遭到伏击，你意识到这是一个[style.colourBad(危险)]的区域，随时都可能受到攻击……
 		#ELSEIF(npc.isRelatedTo(pc))
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is your [npc.relation(pc)], [npc.name]...
+			尽管有大量可以用来发动伏击的隐藏地点，但在这个区域里你感到相当[style.colourGood(安全)]，因为你可能遇到的唯一人就是你的[npc.relation(pc)]，[npc.name]……
 		#ELSEIF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is far more interested in whoring [npc.herself] out rather than fighting anyone...
+			尽管有大量可以用来发动伏击的隐藏地点，但在这个区域里你感到相当[style.colourGood(安全)]，因为你可能遇到的唯一人就是[npc.name]，比起跟谁打斗她对拉客更感兴趣……
 		#ELSE
 			#IF(npc.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				Due to the abundance of hiding places from which an ambush could be sprung, you recognise this as being a [style.colourBad(dangerous)] area, and you realise that you could be attacked at any moment...
+				由于隐藏地点多，很容易遭到伏击，你意识到这是一个[style.colourBad(危险)]的区域，随时都可能受到攻击……
 			#ELSE
-				Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is on friendly terms with you...
+				尽管有大量可以用来发动伏击的隐藏地点，但在这个区域里你感到相当[style.colourGood(安全)]，因为你可能遇到的唯一人就是待你友善的[npc.name]……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BACK_ALLEYS -->
 	
 	<htmlContent tag="DARK_ALLEYS"><![CDATA[
 	<p>
-		You find yourself walking through labyrinthine alleyways, with not a soul in sight. Back-doors and steaming vents line the dark brick walls, and you often have to navigate around overflowing bins and stacks of empty crates in order to make progress.
+		你发现自己正在穿越迷宫般的小巷，眼前没有一个人影。黑暗的砖墙上排列着后门和冒着蒸汽的通风口，你经常不得不绕过满溢的垃圾桶和一堆堆空箱子才能继续前进。
 	</p>
 	<p>
 		#IF(game.getNonCompanionCharactersPresent().isEmpty())
-			Due to the abundance of hiding places from which an ambush could be sprung, as well as your significant distance from any of Dominion's main streets, you recognise this as being a [style.colourTerrible(very dangerous)] area, and you realise that you could be attacked at any moment...
+			由于隐藏地点多，很容易遭到伏击，而且这里距离御城区主干道很远，你意识到这是一个[style.colourBad(非常危险)]的区域，随时都可能受到攻击……
 		#ELSEIF(npc.isRelatedTo(pc))
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is your [npc.relation(pc)], [npc.name]...
+			尽管有大量可以用来发动伏击的隐藏地点，但在这个区域里你感到相当[style.colourGood(安全)]，因为你可能遇到的唯一人就是你的[npc.relation(pc)]，[npc.name]……
 		#ELSEIF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is far more interested in whoring [npc.herself] out rather than fighting anyone...
-		#ELSEIF(npc.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-			Due to the abundance of hiding places from which an ambush could be sprung, as well as your significant distance from any of Dominion's main streets, you recognise this as being a [style.colourTerrible(very dangerous)] area, and you realise that you could be attacked at any moment...
+			尽管有大量可以用来发动伏击的隐藏地点，但在这个区域里你感到相当[style.colourGood(安全)]，因为你可能遇到的唯一人就是[npc.name]，比起跟谁打斗她对拉客更感兴趣……
 		#ELSE
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is on friendly terms with you...
-		#ENDIF
+			#ELSEIF(npc.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
+				由于隐藏地点多，很容易遭到伏击，而且这里距离御城区主干道很远，你意识到这是一个[style.colourBad(非常危险)]的区域，随时都可能受到攻击……
+			#ELSE
+				尽管有大量可以用来发动伏击的隐藏地点，但在这个区域里你感到相当[style.colourGood(安全)]，因为你可能遇到的唯一人就是待你友善的[npc.name]……
+			#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BACK_ALLEYS_CANAL -->
 	
 	<htmlContent tag="BACK_ALLEYS_CANAL"><![CDATA[
 	<p>
-		At the junction between the canal and Dominion's dingy back-alleys, a series of crude wooden walkways criss-cross over the water. Providing a bridge between the numerous passageways set into the flanking buildings on both sides of the waterway, these makeshift constructs are quite clearly the work of the denizens that haunt this area.
+		在运河和御城区喧闹的后巷交界处，一排排地简陋木制人行道在水面上纵横交错。这些临时搭建的通道是水道两侧建筑中众多通道之间的桥梁，很明显是在这里出没的居民们的杰作。
 	</p>
 	<p>
 		#IF(game.getNonCompanionCharactersPresent().isEmpty())
-			Cautiously glancing around your deserted, [style.colourBad(dangerous)] surroundings, you half-expect to see a shadowy figure emerge from one of the gloomy openings, but much to your relief, there doesn't seem to be anyone waiting in ambush. Letting out a sigh, you continue on your way, happy that you didn't run into any of the lowlifes that operate in this area...
+			你小心翼翼地扫视着周围[style.colourBad(危险)]的环境，并半信半疑地期待着能看到一个阴暗的身影从某个阴暗的洞口出现，但让你松了一口气的是似乎并没有人埋伏在那里。在叹了口气之后，你继续前行，并庆幸着自己没有遇到在这一带活动的流氓地痞……
 		#ELSEIF(npc.isRelatedTo(pc))
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is your [npc.relation(pc)], [npc.name]...
+			尽管这里有很多可以伏击的藏身之处，但感觉这里还是相当地[style.colorGood(安全)]，因为你唯一可能遇到的人就是你的[npc.relationship(pc)][npc.name]……
 		#ELSEIF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is far more interested in whoring [npc.herself] out rather than fighting anyone...
+		尽管这里有很多可以伏击的藏身之处，但感觉这里还是相当地[style.colorGood(安全)]，因为在这里的[npc.name]相比于袭击过往的路人更喜欢通过卖淫来赚钱。
 		#ELSEIF(npc.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-			Cautiously glancing around your deserted, [style.colourBad(dangerous)] surroundings, you half-expect to see a shadowy figure emerge from one of the gloomy openings, but much to your relief, there doesn't seem to be anyone waiting in ambush. Letting out a sigh, you continue on your way, happy that you didn't run into any of the lowlifes that operate in this area...
+			你小心翼翼地扫视着周围[style.colourBad(危险)]的环境，并半信半疑地期待着能看到一个阴暗的身影从某个阴暗的洞口出现，但让你松了一口气的是似乎并没有人埋伏在那里。在叹了口气之后，你继续前行，并庆幸着自己没有遇到在这一带活动的流氓地痞……
 		#ELSE
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is on friendly terms with you...
+			尽管这里有很多可以伏击的藏身之处，但感觉这里还是相当地[style.colorGood(安全)]，因为你唯一可能遇到的人就是与你关系友好地[npc.name]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- BOULEVARD -->
@@ -202,87 +203,87 @@
 	<htmlContent tag="BOULEVARD"><![CDATA[
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			You find yourself walking down one of Dominion's main boulevards, which is at least twice the width of all the other streets that you've seen in the city. Large, immaculately-maintained residential and commercial buildings flank the road on each side; their white marble façades decorated with countless flags bearing the black pentagram of Lilith. Thanks to the ongoing arcane storm, these wide, paved roads which are normally home to horse or centaur-pulled wooden carts are almost completely deserted.
-		</p>
+		你发现自己正沿着御城区的一条主要大道走着，这条大道的宽度至少有你在这个城市里看到的其他任何街道的两倍。大型、维护得很好的住宅和商业建筑分列在道路两侧；它们的白色大理石立面上装饰着无数织有莉莉丝黑色五角星的旗帜。由于持续着的奥术风暴，这些通常有着马或半人马拉着木制车行驶的宽阔、铺好的道路几乎完全被遗弃了。
+	</p>
 		<p>
-			The only people who you see out and about all seem to be demons, including the occasional smartly-dressed Enforcer. Unaffected by the arousing power of the storm's thunder, these elite Enforcers keep a close watch on you as you walk down quiet boulevard. There's no way anyone would be able to assault you while under their watchful gaze, allowing you to continue on your way in peace...
-		</p>
+		你看到的在外面活动的人似乎都是恶魔，包括偶尔出现的穿着整齐的执法者。不受风暴雷声催情之力的影响，这些精英执法者在你沿着安静的大道行走时密切注视着你。在他们警惕的注视下，没有人能够攻击你，让你能够安心地继续前行……
+	</p>
 	#ELSE
 		<p>
-			You find yourself walking down one of Dominion's main boulevards, which is at least twice the width of all the other streets that you've seen in the city. Large, immaculately-maintained residential and commercial buildings flank the road on each side; their white marble façades decorated with countless flags bearing the black pentagram of Lilith. A never-ending stream of horse and centaur-pulled carts trundle back and forth down the middle of the wide, paved street as they transport all manner of goods to and from the countless businesses and residences found throughout the city.
-		</p>
+		你发现自己正沿着御城区的一条主要大道走着，这条大道的宽度至少有你在这个城市里看到的其他任何街道的两倍。大型、维护得很好的住宅和商业建筑分列在道路两侧；它们的白色大理石立面上装饰着无数织有莉莉丝黑色五角星的旗帜。无休止的马和半人马拉着车在宽阔、铺好的街道中间来回穿梭，他们将各种各样的货物送往城市里无数的商家和住宅。
+	</p>
 		<p>
-			#IF(game.isDayTime())
-				Being one of Dominion's main thoroughfares, this boulevard is packed with pedestrians, and you walk past individuals of all different races and appearances as you continue onwards through the crowds. Although dog, cat and horse-morphs are the most common races that you see, there are a significant number of demons and other more exotic races mixed in with the crowds here. Demons and half-demons in particular are very easy to spot, as wherever they walk, people hurriedly move to make way for them.
-			#ELSE
-				Despite the fact that it's night-time, this boulevard is packed with pedestrians, and you walk past individuals of all different races and appearances as you continue onwards through the crowds. Although dog, cat and horse-morphs are the most common races that you see, there are a significant number of demons and other more exotic races mixed in with the crowds here. Demons and half-demons in particular are very easy to spot, as wherever they walk, people hurriedly move to make way for them.
-			#ENDIF
-		</p>
+		#IF(game.isDayTime())
+			作为御城区的主要通道之一，这条大道上挤满了行人，你在穿越人群时走过了各种各样的种族和外貌的人。尽管狗、猫和马化形是你看到的最常见的种族，但其中也混杂着大量的恶魔和其他更异域的种族。恶魔和半恶魔非常容易被发现，因为无论他们走到哪里，人们都会匆匆让路。
+		#ELSE
+			尽管现在是夜间，这条大道上仍然挤满了行人，你在穿越人群时走过了各种各样的种族和外貌的人。尽管狗、猫和马化形是你看到的最常见的种族，但其中也混杂着大量的恶魔和其他更异域的种族。恶魔和半恶魔非常容易被发现，因为无论他们走到哪里，人们都会匆匆让路。
+		#ENDIF
+	</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DOMINION_PLAZA -->
 	
 	<htmlContent tag="DOMINION_PLAZA"><![CDATA[
 	<p>
-		You find yourself standing in the very centre of Dominion, where an expansive public square is situated. Large residential and commercial buildings flank the plaza on each of its four sides. Looking around, you see that each and every one of their white marble façades are decorated with dark-purple flags bearing the black pentagram of Lilith. Numerous grandiose statues and extravagantly-detailed water fountains, all carved from polished white marble, are scattered about throughout this large area. Each one of these sculptures appears to represent a demon or Lilin, and although they're each a marvellous work of art, the one in the very middle of the square is quite simply breathtaking.
+		你现在处于御城区的正中心，这里有个宽阔的公共广场，四面环绕着大型住宅区和商业建筑群。你环顾四周，发现每一栋建筑的白色大理石外墙都装饰着深紫色的旗帜，上面印有莉莉丝的黑色五角星。广场上散落着许多华美的雕像和精致的喷泉，都由打磨得光润的洁白大理石雕刻而成，且每件雕像似乎都代表一位恶魔或莉琳。这些雕像皆为杰出的艺术品，但和广场中央的那座比起来，它们全都黯然失色。
 	</p>
 	<p>
-		On top of a plinth of at least [unit.lSizes(3000)] in height, there stands a gigantic marble statue of Lilith herself; with wings fully unfurled, and with her hands resting on her wide hips, she smirks down with a visage of manic delight at the crowds below. Although she no doubt possesses the power to transform into almost any form imaginable, this statue represents her as a cliché, stereotypical succubus, albeit an exceptionally beautiful one. Wearing only the scantiest of sexy, form-fitting lingerie, every [unit.size] of Lilith's curvaceous body is on display for all to see, and you find yourself looking straight up at Lilith's tight pussy as the thin fabric of her thong rides up between her tiny labia.
+		在至少[unit.lSizes(3000)]高的基座之上，矗立着一座巨大的大理石莉莉丝雕像。她展开双翼，两手置于丰满的臀部，面带狂妄的喜悦之色，俯视下方的人群。虽然她无疑拥有变换成任意形态的力量，但这座雕像将她描绘成一个典型、刻板的魅魔，虽说是极美的一个。她仅穿着布料稀少的性感紧身内衣，将凹凸有致身体的每一[unit.size]展现给所有人。你意识到自己正盯着莉莉丝的紧致小穴，那薄薄的丁字裤挤进她细小的阴唇之间。
 	</p>
 	#IF(RND.nextInt(100)<20)
 		<p>
-			As you marvel at the extraordinarily skilled workmanship that must have gone into this astounding piece of art, you suddenly feel a chill run down your spine. Allowing your gaze to travel up to the top of the statue, you see that this marble mimicry of the demon queen is looking right down at you, and she has
+			这件艺术巨作蕴藏的工艺极其精湛，你惊叹之时骤然脊背发凉。你的目光上移至顶端，发现大理石女王雕像正居高临下地盯着你，而且她那美丽的脸上是
 			#IF(pc.getCorruptionLevel()==CORRUPTION_LEVEL_ZERO_PURE || pc.getCorruptionLevel()==CORRUPTION_LEVEL_ONE_VANILLA)
-				 a look of absolute revulsion on her gorgeous face. Before you can react to this alarming event, you hear an icy, feminine voice in your head, [style.thoughtFeminineHeavy(You disgust me, citizen... Your purity... It sickens me...)]
+				深恶痛绝的表情。你还没来得及对这骇人的事情做出反应，就听到一个冰冷的女声在脑中响起：[style.thoughtFeminineHeavy(公民，你恶心到我了……你的纯洁……让我作呕……)]
 			#ELSEIF(pc.getCorruptionLevel()==CORRUPTION_LEVEL_TWO_HORNY || pc.getCorruptionLevel()==CORRUPTION_LEVEL_THREE_DIRTY)
-				 a look of annoyance on her gorgeous face. Before you can react to this alarming event, you hear an icy, feminine voice in your head, [style.thoughtFeminineHeavy(You displease me, citizen... You must lose what remains of your purity...)]
+				厌烦的表情。你还没来得及对这骇人的事情做出反应，就听到一个冰冷的女声在脑中响起：[style.thoughtFeminineHeavy(公民，你令我不快……你必须舍弃你残存的纯洁……)]
 			#ELSE
-				 a look of arrogant approval on her gorgeous face. Before you can react to this alarming event, you hear an icy, feminine voice in your head, [style.thoughtFeminineHeavy(You please me, citizen... Your corruption is admirable...)]
+				傲慢的嘉许。你还没来得及对这骇人的事情做出反应，就听到一个冰冷的女声在脑中响起：[style.thoughtFeminineHeavy(公民，你取悦了我……你的堕落值得赞扬……)]
 			#ENDIF
 		</p>
 		<p>
-			As soon as it began, this alarming judgement of your character is over, and in the blink of an eye the statue's face has returned to its previous position. Wondering whether the marble had actually moved, or if it was some kind of arcane mirage, you turn away from the statue and continue on your way across the plaza.
+			这令人不安的、针对你品格的评价刚开始就结束了，转眼之间，雕像的脸便恢复原位。你不知道那是大理石真的动了，还是某种奥术幻象。你转身离开雕像，继续穿过广场。
 		</p>
 	#ENDIF
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			The arcane storm that's raging overhead has brought out a heavy presence of demon Enforcers in this area. Unaffected by the arousing power of the storm's thunder, these elite Enforcers keep a close watch on you as you pass through the all-but-deserted plaza. There's no way anyone would be able to assault you while under their watchful gaze, allowing you to continue on your way in peace...
+			头顶上肆虐的奥术风暴使这一区域增派了大量恶魔执法者。这些精锐执法者不受风暴雷鸣催情之力的影响，在你穿过几乎无人的广场时紧紧盯着你。在他们戒备的目光下，没人能够袭击你，你得以安然前行……
 		</p>
 	#ELSE
 		<p>
-			Being the central meeting place for Dominion's citizens, this plaza is the busiest location in all of Dominion. Throngs of people, of all different races and appearances, fill the square. Some appear to be simply passing through the area, while others lounge about on the many wooden benches and marble steps at the base of each statue.
+			这个广场是御城区市民的中心集会地，整个御城区最繁忙的地方。各种种族和外貌的人都挤在这里，有些人看起来只是路过，另一些人则懒洋洋地歇在各雕像基座处的木质长椅和大理石台阶上。
 		</p>
 		<p>
-			On raised platforms, well-spoken orators address the crowds, relaying news and important announcements to the many citizens who pass by. Pamphlets and newspapers are handed out beside each one of these stands, and you realise that this is the only place where you've seen any form of news being distributed to the population.
+			口才出众的演说者在高台上向人群宣讲，将新闻和重要公告传达给来来往往的市民。每个讲台旁都在分发宣传册和报纸，你意识到这是你见过的唯一一处向民众发布新闻的地方。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- HELENAS_HOTEL -->
 	
 	<htmlContent tag="HELENAS_HOTEL"><![CDATA[
 	<p>
-		[style.boldGold(The Golden Feather:)]
-		<br/>Helena's hotel, 'The Golden Feather', is located in this area. Now that you're aware of its existence, you could head inside and make use of the elevator to travel directly up to Helena's nest.
+		[style.boldGold(金羽毛：)]
+		<br/>海伦娜的酒店“金羽毛”就位于这个区域。既然你已经知道了它的存在，你就可以利用电梯直接到达海伦娜的巢穴。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- STREET_SHADED -->
 
 	<htmlContent tag="STREET_SHADED"><![CDATA[
 	<p>
-		[style.boldHarpy(Harpy Nests:)]
-		<br/>The wooden platforms and bridges of the rooftop Harpy Nests cast a shadow over these streets. Looking up, you see the occasional flash of brightly-coloured feathers as harpies swoop this way and that.
+		[style.boldHarpy(哈比之巢：)]
+		<br/>哈比巢穴的木制平台和桥梁给这些街道投下了阴影。抬头仰望，你会看到偶尔闪过的鲜艳羽毛，就像哈比在这样或那样地俯冲。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CANAL -->
@@ -291,300 +292,300 @@
 	#IF(game.isDayTime())
 		<p>
 			#IF(pc.hasCompanions())
-				You and [com.name] find yourselves travelling down the narrow dirt path which runs alongside the entire length of Dominion's extensive canal network.
+				你和[com.name]正沿着狭窄的土路前行着，这条路与御城区庞大的运河网络并行不悖。
 			#ELSE
-				You find yourself travelling down the narrow dirt path which runs alongside the entire length of Dominion's extensive canal network.
+				你正沿着狭窄的土路前行着，这条路与御城区庞大的运河网络并行不悖。
 			#ENDIF
-			 While the track occasionally widens out or runs past small clearings and gardens, it is for the most part closely flanked by dark, red-bricked buildings. Despite the fact that these high walls create a gloomy, oppressive atmosphere, you find yourself preferring to be in their presence rather than that of the more spacious, foliage-filled areas, as their leafy bushes, wooden fences, and waist-high walls provide ample hiding places from which muggers could launch an ambush.
+			虽然小路偶尔会拓宽，或经过一些小空地和花园，但大多数情况下，小路两侧都是没有阳光照射地红砖建筑。尽管这些高墙营造出一种阴沉压抑的气氛，但你发现自己貌似更喜欢呆在这些地方，而不是更宽敞且绿树成荫的地方，因为那些地方的灌木丛，木栅栏和齐腰高的围墙会为歹徒提供了充足的藏身之处，好让他们可以在此设伏。
 		</p>
 		<p>
-			Unlike the city's back-alleys, this canal-side path is not completely deserted, as every now and then you come across a harmless citizen, who invariably averts their gaze as they hurry past you. The wide waterway itself is also extremely busy, with a seemingly never-ending procession of barges slowly trawling past on their way to destinations unknown. While several of them seem to be for recreational purposes, the vast majority of these narrow boats are hauling cargo of one sort or another; their long decks are stacked high with crates, packed with industrial machinery, or filled with tarpaulin-covered mounds of raw materials.
+			与城市的后巷不同，这条运河边的小路并不完全荒芜，时不时就会遇到一个普普通通好市民，但当他们匆匆走过你身边时，总是会把目光移开。而宽阔的水道本身也非常繁忙，似乎永无止境的驳船队伍总是不知疲倦地缓缓驶过，以此前往未知的目的地。虽然其中有几艘驳船似乎是娱乐目的，但绝大多数的船只都在运送这样或那样的货物；它们长长的甲板上堆满了板条箱，有的装满了工业机械，有的则装满了覆盖着防水油布的原材料堆。
 		</p>
 	#ELSE
 		<p>
 			#IF(pc.hasCompanions())
-				You and [com.name] find yourselves travelling down the narrow, dimly-lit dirt path which runs alongside the entire length of Dominion's extensive canal network.
+				你和[com.name]正沿着狭窄且光线昏暗的土路前行，这条路贯穿着御城区庞大的运河网络全线。
 			#ELSE
-				You find yourself travelling down the narrow, dimly-lit dirt path which runs alongside the entire length of Dominion's extensive canal network.
+				你正沿着狭窄且光线昏暗的土路前行，这条路贯穿着御城区庞大的运河网络全线。
 			#ENDIF
-			 While the track occasionally widens out or runs past small clearings and gardens, it is for the most part closely flanked by dark, red-bricked buildings. Despite the fact that the flickering arcane lights fixed to these high walls create a gloomy, sinister atmosphere, you find yourself preferring to be in their presence rather than that of the more spacious, foliage-filled areas, as their leafy bushes, wooden fences, and waist-high walls provide ample pitch-black hiding places from which muggers could launch an ambush.
+			虽然小路偶尔会拓宽，或经过一些小空地和花园，但大多数情况下，小路两侧都是没有阳光照射地红砖建筑。尽管这些高墙营造出一种阴沉压抑的气氛，但你发现自己貌似更喜欢呆在这些地方，而不是更宽敞且绿树成荫的地方，因为那些地方的灌木丛，木栅栏和齐腰高的围墙会为歹徒提供了充足的藏身之处，好让他们可以在此设伏。
 		</p>
 		<p>
-			Due to the fact that it's currently night-time, this canal-side path is completely deserted. The wide waterway itself is also far less busy than it is during the day, with just the occasional arcane spotlight sweeping over the gloomy waterway as the barge it's fixed to slowly trawls past. While there may be the infrequent recreational narrow boat to be seen during daylight hours, these night-time barges are invariably hauling cargo of one sort or another; their long decks are stacked high with crates, packed with industrial machinery, or filled with tarpaulin-covered mounds of raw materials.
+			由于现在是晚上，所以这条运河边的小路完全处于寂静地状态。宽阔的水道也没有白天那么繁忙，只是偶尔有弧形聚光灯扫过阴暗的水道，上面的驳船缓缓驶过。虽然白天可能会偶尔看到几艘娱乐目的驳船，但绝大多数的船只都在运送这样或那样的货物；它们长长的甲板上堆满了板条箱，有的装满了工业机械，有的则装满了覆盖着防水油布的原材料堆。
 		</p>
 	#ENDIF
 	<p>
 		#IF(game.getNonCompanionCharactersPresent().isEmpty())
 			#IF(game.isDayTime())
-				Despite the high level of traffic on the canal itself, you get the feeling that nobody would come to your aid if you were to be attacked while travelling on this path. The distinct lack of any Enforcer presence is a clear indication that this [style.colourBad(dangerous)] area is ripe territory for muggers, and so you make sure to stay alert as you continue on your way...
+				尽管运河上车水马龙，但你还是察觉到了，如果你在这条路上遭到袭击的话是没有人会来帮助你的。从执法者的明显缺失就可以清楚地表明，这片[style.colorBad(危险)]地区是歹徒的高发聚集地，因此你在继续前行时一定要保持警惕……
 			#ELSE
-				Despite the fact that there are people keeping a lookout up on the decks of these barges, you get the feeling that none of them would come to your aid if you were to be attacked while travelling on this poorly-lit path. The distinct lack of any Enforcer presence is a clear indication that this [style.colourBad(dangerous)] area is ripe territory for muggers, and so you make sure to stay alert as you continue on your way...
+				尽管有人在这些驳船的甲板上放哨，但你感觉如果你在这条光线不足的小路上旅行时遭到袭击的话，他们是不会来帮助你的。毕竟从执法者的明显缺失就可以清楚地表明，这片[style.colorBad(危险)]地区是歹徒的高发聚集地，因此你在继续前行时一定要保持警惕……
 			#ENDIF
 		#ELSEIF(npc.isRelatedTo(pc))
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is your [npc.relation(pc)], [npc.name]...
+				尽管这里有很多可以伏击的藏身之处，但感觉这里还是相当地[style.colorGood(安全)]，因为你唯一可能遇到的人就是你的[npc.relationship(pc)][npc.name]……
 		#ELSEIF(npc.getHistory()==OCCUPATION_NPC_PROSTITUTE)
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is far more interested in whoring [npc.herself] out rather than fighting anyone...
+			尽管这里有很多可以伏击的藏身之处，但感觉这里还是相当地[style.colorGood(安全)]，因为在这里的[npc.name]相比于袭击过往的路人更喜欢通过卖淫来赚钱。
 		#ELSEIF(npc.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
 			#IF(game.isDayTime())
-				Despite the high level of traffic on the canal itself, you get the feeling that nobody would come to your aid if you were to be attacked while travelling on this path. The distinct lack of any Enforcer presence is a clear indication that this [style.colourBad(dangerous)] area is ripe territory for muggers, and so you make sure to stay alert as you continue on your way...
+			尽管运河上车水马龙，但你还是察觉到了，如果你在这条路上遭到袭击的话是没有人会来帮助你的。从执法者的明显缺失就可以清楚地表明，这片[style.colorBad(危险)]地区是歹徒的高发聚集地，因此你在继续前行时一定要保持警惕……
 			#ELSE
-				Despite the fact that there are people keeping a lookout up on the decks of these barges, you get the feeling that none of them would come to your aid if you were to be attacked while travelling on this poorly-lit path. The distinct lack of any Enforcer presence is a clear indication that this [style.colourBad(dangerous)] area is ripe territory for muggers, and so you make sure to stay alert as you continue on your way...
+				尽管有人在这些驳船的甲板上放哨，但你感觉如果你在这条光线不足的小路上旅行时遭到袭击的话，他们是不会来帮助你的。毕竟从执法者的明显缺失就可以清楚地表明，这片[style.colorBad(危险)]地区是歹徒的高发聚集地，因此你在继续前行时一定要保持警惕……
 			#ENDIF
 		#ELSE
-			Despite the abundance of hiding places from which an ambush could be sprung, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is on friendly terms with you...
+			尽管这里有很多可以伏击的藏身之处，但感觉这里还是相当地[style.colorGood(安全)]，因为你唯一可能遇到的人就是与你关系友好地[npc.name]……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 
 	<!-- CANAL_END -->
 
 	<htmlContent tag="CANAL_END"><![CDATA[
 	<p>
-		<i>The path before you abruptly ends, and although the canal continues on its way to the outskirts of the city, there's no way for you to continue onwards...</i>
+		<i>眼前的道路突然终止，虽然运河一直通向城郊，但你却无法继续前行……</i>
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CITY_EXIT_SEWERS -->
 
 	<htmlContent tag="CITY_EXIT_SEWERS"><![CDATA[
 	<p>
-		A large stone bridge has been built over Dominion's canal, and as you walk over it, you hear the unmistakable sound of rushing water coming from below. Peering over the side, you see the origin of the noise; a huge, brick-lined opening, covered in metal bars, has been dug out on one side of the waterway, and it's into this that the water from the canal is flowing. Looking closer, you see that on the other side of the bars, there's a wide set of stone steps leading down into the gloom below.
+		在御城区的运河上有一座宏伟的石桥，当你走过它的时候，你能听到从下面传来流水潺潺的声音。从侧面看过去，你看到了声音的来源；运河的一侧挖出了一个巨大的、用砖块砌成的、盖着钢筋栅栏的开口，运河里的水就是从此流入。仔细一看，你会发现在栅栏的另一边，有一排宽阔的石阶通向黑暗的下方。
 	</p>
 	<p>
-		Searching for a way to get access to those steps, and the area beyond, you soon find yourself standing before a building marked as 'Submission Enforcer Post'. The doors are wide open, and, peering inside, you see that the origin of the stone staircase is situated in the middle of a large, mostly-empty waiting room.
+		在找通往这些台阶和更远区域的路时，你很快就发现自己站在一个标有“屈城区执法者哨岗”的建筑前。门是敞开的，往里看，你看到石头楼梯的起点位于一个很大的、几乎空无一人的等候室之中。
 	</p>
 	<p>
-		There only appears to be one Enforcer guarding the staircase, who half-heartedly glances up from their newspaper as they catch sight of you. Letting out a sigh, they motion towards the staircase, clearly gesturing that you're able to come and go as you please.
+		似乎只有一个执法者守在楼梯上，当他看到你时，心不在焉地从报纸上移开了目光。他叹了口气，朝楼梯走去，示意你可以随意进出。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CITY_EXIT_SEWERS_ENTERING_SUBMISSION -->
 	
 	<htmlContent tag="ENTER_SUBMISSION"><![CDATA[
 	<p>
-		Stepping into the building marked as the 'Submission Enforcer Post', you start to make your way towards the staircase. A solitary Enforcer is stationed behind a desk on one side of the room, and he barely even bothers to look up to see who's entering before continuing to read the newspaper in his hands. Obviously not being of any sort of hindrance to you, you ignore the Enforcer and continue forwards, before starting to descend the stone staircase. The deafening roar of rushing water quickly envelops you, and beneath the orange glow of arcane-powered lamps, you quickly hurry down the damp stone steps.
+		你踏进标有“屈城区执法者哨岗”的建筑，向楼梯走去。房间一侧的办公桌后坐着一名孤独的执法者，他甚至都懒得抬头看一眼进来的是谁，就继续阅读手中的报纸。显然，这对你没有造成任何阻碍。你没有理会执法者，继续向前走，然后开始走下石阶。震耳欲聋的水流轰鸣声很快将你笼罩，在奥术灯发出的橙色光芒下，你匆匆走下潮湿的石阶。
 	</p>
 	<p>
-		As you reach the bottom, you find yourself confronted by a weathered wooden door, which has a helpful sign tacked to the front, reading; 'Please Enter'. Following the sign's instruction, you push open the door and step forwards into the large, well-lit interior of yet another Enforcer post. This one is far more active than its counterpart on the surface, and all around you, Enforcers are either hurrying to and fro, busily working at one of a dozen or so desks, or standing guard beside the several doors which branch off into internal offices.
+		当你到达底部时，你会发现自己面对着一扇饱经风霜的木门，门前贴着一个有用的标志，上面写着：“请进”。你按照标牌上的指示推开门，走进另一个执法者哨岗宽敞明亮的内部。这个哨岗比地面上的哨岗要活跃得多，在你周围，执法者们有的匆匆忙忙地来回走动，有的在十几张办公桌前忙碌地工作，有的在通往内部办公室的几扇门旁站岗。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTER_SUBMISSION_FIRST_TIME"><![CDATA[
 	<p>
-		As the door swings shut behind you, a short, pink-furred, greater cat-girl Enforcer rushes forwards. Even with the high heels that she's currently wearing, she can't be any more than [units.sizes(152)] in height, but her breasts, hips, and thighs are without doubt the largest of any of the Enforcers in the room. As she comes to a rather unsteady halt in front of you, a big grin breaks out across her face, and she cries out in a very friendly voice, [claire.speech(Hey, I haven't seen you down here before, so this must be your first time in Submission!)]
+		当门在你身后关上时，一个身材矮小、长着粉红色毛发、体型更大的猫女执法者冲了出来。即使穿着高跟鞋，她的身高也不会超过[units.sizes(152)]，但她的胸部、臀部和大腿无疑是房间里所有执行者中最大的。当她在你面前站不稳的时候，她的脸上露出了一个大大的笑容，并用非常友好的声音说道：[claire.speech(嘿，我以前没见过你，这一定是你第一次来屈城区吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTER_SUBMISSION_REPEAT"><![CDATA[
 	<p>
-		As the door behind you swings shut, you see the familiar, pink-furred figure of Claire busily collecting papers on the other side of the room. As she travels between the desks, you can't help but notice how huge her breasts, hips, and ass are on her short figure, and how even her armoured vest isn't enough to stop her massive [claire.cupSize]-cup boobs from swaying to and fro in time with her hurried movements.
+		当你身后的门关上时，你看到了熟悉的粉毛克莱尔在房间的另一边忙着整理文件。当她在桌子间穿梭时，你会不由自主的将目光聚焦于她的胸部与臀部，在她娇小的身材上有着如此的巨大的臀部，以至于连装甲背心也无法以遮住她随着匆忙的动作而前后摇晃的[claire.cupSize]罩杯巨大胸部。
 	</p>
 	<p>
-		If you wanted to, you could walk up to her and ask her more about Submission, or simply ignore her for the time being and continue on through the door on the far side of the room marked as 'Public Access to Submission'...
+		如果你愿意，你可以走到她面前，问她更多关于屈城区的问题，或者干脆忽略她，继续穿过房间另一边的标有“屈城区公用入口”的门……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CITY_EXIT_SEWERS_ENTERING_SUBMISSION_FIRST_TIME -->
 	
 	<htmlContent tag="ENTER_SUBMISSION_FIRST_TIME_CONFIRMATION"><![CDATA[
 	<p>
-		Confirming to the cat-girl that this is indeed your first time visiting Submission, you then ask her how she's so sure that this is your first time coming down here. After all, there are numerous entrances, and you could have previously visited via one of those.
+		向猫女确认这确实是你第一次来屈城区，你问她怎么这么肯定这是你第一次来这里。毕竟，这里有许多入口，你以前可能从其中一个入口进来过。
 	</p>
 	<p>
-		A very smug smile quickly settles on the cat-girl's face, and, placing her hands on her hips, she puffs up her chest, thrusting her disproportionately-large breasts out in your general direction. Having assumed this striking pose, she proudly states, [claire.speech(Although not normally granted to someone of my rank, I, sergeant Claire Kasun, have permission to use teleportation pads! Being assigned the job of relaying messages, I can instantaneously travel between any of Submission's Enforcer posts, so nobody who enters Submission escapes my notice! Anyway, now that I've introduced myself, who are you?)]
+		猫女的脸上很快就露出了得意的笑容，她双手叉腰，挺起胸膛，向你的方向挺起她那不成比例的大胸。摆出这个引人注目的姿势后，她骄傲地说：[claire.speech(我，克莱尔·卡苏中士，拥有使用传送板的权限！我的任务是传递信息，我可以瞬间穿梭于屈城区的任何一个执法者哨所，任何进入屈城区的人都逃不过我的眼睛。好了，我已经自我介绍过了，你是谁？)]
 	</p>
 	<p>
-		Deciding that there'd be no harm in giving your name to Claire, you introduce yourself to her, [pc.speech(I'm [pc.name].)]
+		把你的名字告诉克莱尔不会有什么坏处，你向她介绍了自己：[pc.speech(我是[pc.name]。)]
 	</p>
 	<p>
-		[claire.speech(Pleased to meet you, [pc.name]. So, as you're new, I need to let you know a few things! One, please don't go swimming in the waterways. The alligator-morphs can get a little snappy if they think you're barging in on their territory. Two, stay away from Lyssieth's palace. She doesn't receive visitors, and those guards of hers don't take kindly to strangers loitering about the place,)] the cat-girl Enforcer warns, before wagging a finger under your nose and continuing, [claire.speech(Now this third one's the most important of all, so listen up! Whatever you do, stay out of the tunnels!)]
+		[claire.speech(很高兴认识你，[pc.name]。既然你是新来的，我得告诉你几件事！第一，请不要在水道里游泳。如果鳄化形们认为你闯入了它们的领地，它们会变得很暴躁。第二，离莉西丝的宫殿远点，她不接待访客，她的守卫也不喜欢陌生人在这里闲逛，)]猫女执法者警告说，然后在你的鼻子下面摇了摇手指，继续说道：[claire.speech(第三条是最重要的，所以听好了，无论你做什么，都要远离隧道！)]
 	</p>
 	<p>
-		[pc.speech(I was told the same thing about the alleyways in Dominion. I'll be careful,)] you reply, thinking back to the warning Rose gave you shortly after arriving in Dominion.
+		[pc.speech(看来和御城区的小巷一样，我会小心的。)]你回答道，回想起萝丝在你抵达御城区后不久给你的警告。
 	</p>
 	<p>
-		[claire.speech(Don't take my warning so lightly!)] Claire huffs, putting her hands back on her hips and pouting at you, [claire.speech(Dominion's nothing compared to what we have to deal with! Now, we're not meant to go around telling people this, but I can see that you're going to need some extra convincing! The truth is, we Enforcers are extremely under-staffed down here, and we count ourselves lucky if we can send even one patrol through those tunnels per week. As a result, they're absolutely infested with roving gangs of nasty little imps, who love nothing more than to have their wicked ways with innocent travellers.)]
+		[claire.speech(不要对我的警告掉以轻心！)]克莱尔哼了一声，把手放回臀部，撅着嘴看着你[claire.speech(和我们要面对的相比，御城区根本不算什么！我们不应该到处跟人说这些，但我知道你需要一些额外的说服！事实上，我们这里的执法者人手极度不足，每周能派出一支巡逻队通过这些隧道就算走运了。因此，这些地道里到处都是游荡的小恶魔，他们最喜欢的就是和无辜的旅行者作恶了。)]
 	</p>
 	<p>
-		[pc.speech(If they've formed gangs, then surely they have leaders? Can't you attack and arrest them directly?)] you ask.
+		[pc.speech(如果他们组成了团伙，那么他们肯定有首领？你就不能直接剿了他们吗？)]你问道。
 	</p>
 	<p>
-		[claire.speech(If only! The problem is, their leaders are powerful demons, and they've gone and built fortresses in those tunnels. Although they're not much more than just crude defensive walls, we're not exactly equipped to go and lay siege to them. Just accept that the tunnels are off-limits, ok?)]
+		[claire.speech(但愿如此！问题是，他们的首领是强大的恶魔。他们在隧道里建造了要塞，虽然这些要塞不过是简陋的防御墙，但我们也没有足够的装备去围攻它们。记住隧道就是禁区，好吗？)]
 	</p>
 	<p>
-		Thanking Claire again for the warning, you wonder to yourself if you'll ever end up having to visit these fortresses.
+		再次感谢克莱尔的提醒，你不禁暗自思忖，自己是否会有机会造访这些要塞。
 	</p>
 	<p>
-		[claire.speech(Oh, and one last thing! We've recently been having some trouble with slimes attacking innocent travellers and then forcibly transforming them into even more slimes,)] the cat-girl says, taking on a stern expression and starting to wag her finger again as she continues, [claire.speech(Now, I know I just told you to stay out of the tunnels, but if you do decide to foolishly ignore my warning and end up venturing into some of the ones not claimed by imps, just be extra careful of any slimes you bump into. And if, by some miracle, you're able to get any information on why these slimes are doing this, there's a five-thousand flame reward being offered if you report it to me.)]
+		[claire.speech(哦，还有最后一件事！我们最近遇到了一些麻烦，一些史莱姆袭击了无辜的旅行者，然后强行把他们变成了更多的史莱姆，)]猫女说着，表情变得严厉起来，又开始摆动她的手指：[claire.speech(现在，我知道我刚刚告诉过你要远离隧道，但如果你决定愚蠢地无视我的警告，最终冒险进入一些没有被小恶魔占据的隧道，请格外小心你碰到的任何史莱姆。如果你能奇迹般地找到这些史莱姆这么做的原因，请你向我报告，我悬赏五千火币。)]
 	</p>
 	<p>
-		[pc.speech(I'll keep that in mind,)] you reply, wondering if it would be worth your time to find one of these slimes and ask them about these forced transformations.
+		[pc.speech(我记住了。)]你回答道，思考着是否值得你花时间找到一个史莱姆，问问他们强制转化的情况。
 	</p>
 	<p>
-		[claire.speech(That reward isn't meant to encourage you to go and seek out danger, [pc.name],)] Claire sighs, obviously having picked up on the interested tone of your voice, before smiling and finally stating, [claire.speech(Anyway, if you need anything else, I'm always around, so don't hesitate to come and ask me about anything!)]
+		[claire.speech(这个奖励不是鼓励你去赴险，[pc.name]！)]克莱尔叹了口气，显然是听出了你的语气中充满了兴趣，笑了笑，最后说道：[claire.speech(总之，如果你还需要什么，我随时都会在你身边，不要犹豫，随时来问我吧！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CITY_EXIT_BAT_CAVERNS -->
 
 	<htmlContent tag="CITY_EXIT_BAT_CAVERNS"><![CDATA[
 	<p>
-		Once again you find yourself near the shaft which links Dominion to the Bat Caverns far below. The tunnel entrance itself is completely concealed behind a brick wall that's topped with barbed wire, with only an old, rusted sign to declare its presence.
+		你再次来到了连接御城区和蝙蝠洞窟的竖井。隧道入口本身完全隐藏在砖墙后面，墙上还缠绕着铁丝网，只有一个锈迹斑斑的旧标志表明它的存在。
 	</p>
 	<p>
 		#IF(pc.isAbleToFly())
 			#IF(!pc.isPartyAbleToFly())
-				Although you're able to fly, your companion cannot, and so you can't make use of this shaft to swiftly return to the Bat Caverns...
+				虽然你可以飞行，但你的同伴不能，因此你无法利用这个竖井迅速返回蝙蝠洞窟……
 			#ELSE
-				As you're able to fly, you could travel down this shaft to swiftly return to the Bat Caverns...
+				由于可以飞行，所以你可以沿着这个竖井迅速返回蝙蝠洞窟……
 			#ENDIF
 		#ELSE
-			As you're unable to fly, you can't make use of this shaft to swiftly return to the Bat Caverns...
+			由于你无法飞行，所以你无法利用这个竖井迅速返回蝙蝠洞窟……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CITY_EXIT_BAT_CAVERNS_FLY_DOWN"><![CDATA[
 	<p>
-		Deciding that you'd like to return to the Bat Caverns, you leap into the air and take off. Flying up above the shaft, you dive down into its dark depths, confident from your last journey through it that you know the way.
+		你决定返回蝙蝠洞窟，于是纵身一跃，然后借风而起。直直地落了下去，直到你潜入黑暗的深处，因为有着上次旅程的经验，所以你现在对道路很有信心。
 	</p>
 	<p>
-		As you delve down into the darkness, you once again see the series of dim lights and aggressive proximity warning buzzers which have been fitted to the jagged walls.
+		当你深入黑暗时，你再次看到锯齿状的墙壁上安装的一系列昏暗灯光和一直响个不停地接近警告蜂鸣器。
 		#IF(pc.hasEchoLocation())
-			 What's more, you're able to use echolocation to navigate through dark areas, and so you're able to speedily dive down through the shaft without fear of hitting the uneven walls.
+			更重要的是，你可以利用回声定位在黑暗中穿行，因此你可以在竖井中快速下潜，而不用担心撞到凹凸不平的墙壁。
 		#ELSEIF(pc.isSelfImmuneToDarkness())
-			 What's more, you're able to see in the dark, and so you're able to speedily dive down through the shaft without fear of hitting the uneven walls.
+			更重要的是，你有着强大的夜视功能，因此你能迅速从竖井潜入地下，而不用担心撞到凹凸不平的墙壁。
 		#ELSE
-			 Thanks to these safety devices, you're able to speedily dive down through the shaft without fear of hitting the uneven walls.
+			有了这些安全装置，你就可以通过竖井快速下潜，而不必担心撞上凹凸不平的墙壁。
 		#ENDIF
 	</p>
 	<p>
-		A minute later and you're swooping down to land. Settling to the floor, you look around to make sure that you're not in any danger before continuing on your way...
+		一分钟后，你俯冲着陆。落到地面后你便开始环顾四周，在确保自己没有任何危险后，你继续前行……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- DEMON HOME -->
 
 	<htmlContent tag="DEMON_HOME_SEX_SHOP"><![CDATA[
 	<p>
-		You find yourself [pc.walking] down what looks to be the main high street of Demon Home, with dozens of upmarket shops, eateries, and other such premises located to your left and right.
-		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			 As there's currently an arcane storm raging overhead, the usual crowds of shoppers are mostly gone, with just a few demons here and there taking advantage of the quiet.
-		#ELSE
-			 Being the city's most affluent district, the shoppers you see around you all look to be very wealthy, with most of them sporting designer clothing and accessories.
-		#ENDIF
-	</p>
+   你发现自己正[pc.walking]在恶魔之家的主干道上，街道左右两侧，高档商店、餐馆和其他各种场所鳞次栉比。
+   #IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
+     因为头顶上刮着一场奥术风暴，平日里熙熙攘攘的人群消失得无影无踪，只有零星几只恶魔趁此机会安享宁静。
+   #ELSE
+     作为城市中最繁华富庶的区域，你周围的购物者个个都像是富得流油，大多数人身着顶级设计师设计的服装，佩戴着高档首饰。
+   #ENDIF
+</p>
 	<p>
-		Although the vast majority of the shops here are of no interest or use to you, there is one which catches your eye. A long, black awning has been extended over a line of large glass windows, and upon the front it reads in gold lettering; 'Lovienne's Luxuries'. Looking through the glass, you see an impressive collection of sex toys of all different shapes and sizes on display. A very posh-looking black-and-gold sign positioned beside the entrance declares:
-	</p>
+   尽管这里的绝大多数店铺让你提不起兴趣，但有一家店引起了你的注意。一条长长的黑色遮阳篷从超大玻璃窗顶支出，上面的金色字体写着：“洛维耶纳奢侈品店”。透过玻璃，你看到形状各异、大小不一的性玩具琳琅满目。门口的一个高档黑金牌匾上写着：
+</p>
 	<p style='text-align:center;'><i>
-		<b>Lovienne's Luxuries</b>
+		<b>洛维耶纳奢侈品店</b>
 		<br/>
-		Premium sex toys designed by the elder lilin Lovienne herself
+		由莉琳长老洛维耶纳亲自设计的性爱玩具
 		<br/>
-		Exclusive home to Lovienne's premium sex dolls
+		独家提供洛维耶纳的高端性爱玩偶
 		<br/>
-		Open every day between
+		每天营业时间为
 		#IF(game.isHourBetween(11, 23))
-			 [style.colourMinorGood([units.time(11)]-[units.time(23)])]
+			[style.colourMinorGood([units.time(11)]-[units.time(23)])]
 		#ELSE
-			 [style.colourMinorBad([units.time(11)]-[units.time(23)])]
+			[style.colourMinorBad([units.time(11)]-[units.time(23)])]
 		#ENDIF
 	</i></p>
 	<p>
-		#IF(game.isHourBetween(11, 23))
-			As the current time is within the shop's opening hours, Lovienne's Luxuries is [style.colourGood(open)]. You could push open the door and head inside if you wanted to take a look at what's for sale...
-		#ELSE
-			As the current time is outside of the shop's opening hours, Lovienne's Luxuries is [style.colourBad(closed)]. You'll have to return at another time if you wanted to take a look at what's for sale...
-		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+   #IF(game.isHourBetween(11, 23))
+      由于当前时间处于店铺的营业时间内，洛维耶纳奢侈品店[style.colourGood(开放)]。如果你想看在售的商品，可以推门走进去……
+   #ELSE
+      由于当前时间不在店铺的营业时间内，洛维耶纳奢侈品店[style.colourBad(关闭)]。如果你想看在售的商品，得换个时间再来……
+   #ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DEMON_HOME_SEX_SHOP_RIOT"><![CDATA[
 	#IF(flags.hasFlag(FLAG_innoxia_doll_factory_ending_riot_witnessed))
 		<p>
-			As you approach Lovienne's Luxuries, you see that the angry crowd is still milling about outside of it. Drawing closer, you see that several members of this crowd are holding placards which bear slogans such as 'No More Dolls!', 'Dollification is Illegal!', and 'Shut It Down!'. The inside of the shop is still dark, and the door is securely locked with a 'Closed Until Further Notice' sign hanging in the window.
+			当你接近洛维耶纳奢侈品店时，看到愤怒人群依然在店外徘徊。走近一些，你发现这个人群中有几位正在举着写有口号的标牌，如“没有玩偶！”、“玩偶化非法！”以及“倒闭！”。店内依旧一片黑暗，门紧锁着，窗户上挂着“暂时关闭，另行通知”的标志。
 		</p>
 		<p>
-			Kitted out in riot gear, two dozen Enforcers are standing guard outside of the shop. Holding large, transparent shields and collapsible batons, they look ready to deal with any protester who tries to turn to violence.
+			身着防暴装备，二十多名执法者正守卫在商店外。他们手持大型透明盾牌和可折叠警棍，显得随时准备应对任何试图施暴的抗议者。
 		</p>
 		<p>
-			Thanks to the presence of these Enforcers, the crowd seems to be quite subdued, and you imagine that despite their outrage at the crimes which were being committed within Saellatrix's store, they'll have eventually had enough and naturally disperse. At that point the store is sure to reopen, and around the same time Fia will undoubtedly make her reappearance, but until then there's not much for you to do here...
+			多亏了这些执法者的存在，群众似乎显得颇为平静。你想象着，尽管他们对在赛拉特里克斯的商店内发生的罪行愤怒不已，但最终他们会疲惫不堪，自然而然地散去。到那时，商店肯定会重新开放，几乎同时，菲亚无疑也会再度现身，但在此之前，你在这里似乎没有太多事情可做……
 		</p>
 		<p style='text-align:center'>
 			[#SPECIAL_PARSE_0]
 		</p>
 	#ELSE
 		<p>
-			As you approach Lovienne's Luxuries, you see that a small crowd has gathered outside of it. Drawing closer, you see that several members of this crowd are holding placards which bear slogans such as 'No More Dolls!', 'Dollification is Illegal!', and 'Shut It Down!'. The inside of the shop is dark, and the door is securely locked with a 'Closed Until Further Notice' sign hanging in the window.
+			当你走近洛维耶纳奢侈品店时，看到外面聚集了一小群人。走近一些，你发现这群人中有几位举着标语牌，上面写着“没有玩偶！”，“玩偶化非法！”和“倒闭！”。店内一片昏暗，门紧锁着，窗户上挂着“暂停营业，另行通知”的标志。
 		</p>
 		<p>
-			It seems as though Fia's article has already hit the presses, and as you come to a halt a short distance from Saellatrix's store, more and more people start to appear. As angry voices start to be raised, and a few confident protesters call for the throwing of rocks through the windows, two dozen Enforcers suddenly rush onto the scene. Kitted out in riot gear, these Enforcers are holding large, transparent shields and collapsible batons. Shouting to make himself heard over the crowd, the most senior of these Enforcers declares, [style.speechMasculineHeavy(You will remain calm and peaceful! Any calls for violence against the property of an elder lilin will be treated as treason!)]
+			似乎菲亚的文章已经见诸报端，当你在赛拉特里克斯的商店前停下时，越来越多的人开始聚集。愤怒的声音渐渐升高，一些自信的抗议者开始呼吁向窗户投掷石块，这时，突然有二十多名执法者冲上了现场。身穿防暴装备的执法者们手持大型透明盾牌和可伸缩警棍。他们中的最高级别的执法者大声吼叫，以便在嘈杂的人群中让自己听见，他宣布道：[style.speechMasculineHeavy(你们必须保持冷静与和平！任何针对莉琳长老财产的暴力呼声都将被视为叛国！)]
 		</p>
 		<p>
-			This warning proves to be enough to dissuade the crowd from taking direct action, and the angry voices quiet down to a restless murmur. At that moment, someone taps you on the shoulder, and you turn to see the familiar figure of Fia standing right there behind you. Flashing you a happy smile, she proudly declares, [fia.speech(We did it, [pc.name]! Now all of Dominion knows about the crimes which were committed here! I mean, sure, Lovienne directly intervened with the consent of Lilith to have my story pulled shortly after it was published, but enough people have already read it. Sae's going to have no choice but to put an end to the dollification process.)]
+			这个警告足以让人群放弃采取直接行动，愤怒的声音渐渐平息，变成不安的低语。就在这时，有人轻轻拍了拍你的肩膀，你转过身，看到熟悉的菲亚站在你身后。她露出灿烂的笑容，自豪地宣布，[fia.speech(我们成功了，[pc.name]！现在整个御城区都知道这里发生的罪行了！我是说，当然，洛维耶纳在莉莉丝的同意下直接干预，让我的故事在发布不久后就撤回，但已经有足够多的人看过了。赛拉别无选择，只能结束玩偶化的过程。)]
 		</p>
 		<p>
-			With Lilith herself having been made aware of Fia's story, you find yourself concerned for your friend's well-being, and so ask her if she's going to be ok.
+			在莉莉丝得知菲亚的故事后，你开始为朋友的安危感到担忧，于是你问她是否还好。
 		</p>
 		<p>
-			[fia.speech(Yeah, my editor's taking the flak, and she's dealt with stories like this before,)] Fia casually replies with a dismissive wave of her hand. With a smirk still on her face, she continues, [fia.speech(I wouldn't put it past Sae to try and get some revenge, though. I'm going to go and stay with some family until all of this has blown over. I just had to come and see the fallout for myself before leaving, and I was also hoping to find you here. I've got those flames I promised you!)]
+			[fia.speech(是的，我的编辑正在承受压力，而她之前也处理过类似的故事，)]菲亚随意地挥了挥手，带着一丝不屑的笑容继续说道，[fia.speech(不过，我可不会怀疑赛拉会试图报复。我打算去亲戚那儿住一段时间，等这一切平息下来。我只是想在离开前亲自看看后果，也希望能在这里找到你。我带来了我答应你的那些火焰！)]
 		</p>
 		<p>
-			Handing a small bag to you, the reporter grins and says, [fia.speech(There's fifty thousand flames in there, just like I promised. Oh, one more thing! I'll be in one of the bars near here most evenings once I'm back, so come and find me some time!)]
+			记者微笑着将一个小袋子递给你，说道：[fia.speech(里面有五万火币，就像我承诺的那样。哦，还有一件事！我回来的时候大多数晚上都会在附近的某个酒吧，所以有空来找我！)]
 		</p>
 		<p>
-			Still concerned for her safety, you tell Fia to be careful. Giving you a reassuring nod, she says, [fia.speech(Don't worry, I'll be fine. Oh, and thanks for sticking with me, by the way. I know that Saellatrix went to see you, and I'm sure that she offered you something that was hard to turn down in exchange for betraying me. I really appreciate that you stuck with me. Anyway, I'll catch you around some time. Bye for now!)]
+			你仍然担心她的安全，便对菲亚说要小心一点。她给你一个安心的点头，回答道：[fia.speech(别担心，我会没事的。对了，感谢你一直陪着我。我知道赛拉特里克斯去找过你，我相信她为让你背叛我提供了难以拒绝的条件。我真的很感激你选择了站在我这边。无论如何，我会找个时间再见你的。暂时再见！)]
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DEMON_HOME_SEX_SHOP_FIA_CLOSED"><![CDATA[
 	<p>
-		As you approach Lovienne's Luxuries, you see that the inside of the shop is dark, and the door is securely locked with a 'Closed Until Further Notice' sign hanging in the window. Remembering that Saellatrix said she was going to keep her shop closed for a day or two while dealing with Fiammetta, you decide that it'd be best to leave for now and come back later...
+		当你走近洛维耶纳奢侈品店时，发现店内昏暗，门口紧锁着，窗户上悬挂着一块“暂时关闭，恕不另行通知”的牌子。记起赛拉特里克斯曾提到她会因为处理菲亚梅塔的事务而关店一两天，你决定暂时离开，稍后再回来……
 	</p>
 	<p style='text-align:center'>
 		[#SPECIAL_PARSE_0]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DEMON_HOME_SEX_SHOP_RIOT_ENDED"><![CDATA[
 	<p>
-		As you approach Lovienne's Luxuries, you immediately notice that the crowd of protesters, and the Enforcers which were watching over them, have disappeared. The outrage at Saellatrix's crimes seems to have blown over, and with the presence of the protesters now removed, the store appears to have returned to normal.
+		当你走近洛维耶纳奢侈品店时，立刻注意到抗议者们和监视他们的执法者已经消失不见。对赛拉特里克斯罪行的愤怒似乎已经平息，而随着抗议者的离去，这家商店似乎也恢复了往日的平静。
 	</p>
 	<p style='text-align:center'>
-		[style.italicsMinorGood(Lovienne's Luxuries will now once again be open during its regular opening hours.)]
+		[style.italicsMinorGood(洛维耶纳奢侈品店将再次在正常营业时间内开放。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="DEMON_HOME_SEX_SHOP_RIOT_CONTINUE"><![CDATA[
 	<p>
-		As she looks quite keen to leave, you say a brief farewell to Fia. With that, the reporter gives you one last grin and says, [fia.speech(Remember, I'll be in the bars around this area once I'm back. See you around!)]
+		看到她似乎很想离开，你简短地和菲亚道了别。说完，记者最后对你露出一个灿烂的笑容，说道：[fia.speech(记住，我回来后，你就能在这个区域的酒吧里见到我。到时候再见！)]
 	</p>
 	<p>
-		Before you can say anything else, your friend turns and dashes off into the crowd. With Fia having left for a while, and Lovienne's Luxuries closed for the time being, there's not much for you to do here...
+		在你还没来得及说些什么的时候，你的朋友转身就朝人群中跑去。菲亚暂时离开，洛维耶纳奢侈品店也关门了，所以这里似乎没有什么事情可做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

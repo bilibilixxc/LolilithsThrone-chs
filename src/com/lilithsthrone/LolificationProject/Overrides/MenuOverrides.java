@@ -40,7 +40,7 @@ public class MenuOverrides {
 
         @Override
         public String getContent(){
-            return "<h1 class='special-text' style='font-size:48px; line-height:52px; text-align:center;'>" + (Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :
+            return "<h1 class='special-text' style='font-size:38px; line-height:41px; text-align:center;'>" + (Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :
                     "Lilith's Throne") +
                     "</h1>"
                     + (Main.game.isSillyMode()// More like cheesy mode

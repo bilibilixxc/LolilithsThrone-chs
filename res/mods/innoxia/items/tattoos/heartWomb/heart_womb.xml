@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- For a version without all of the comments, see "rental_daddy.xml". -->
 <tattoo>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help!
@@ -12,15 +12,15 @@
 		<value>2000</value> 
 		
 		<!-- The name of this tattoo. -->
-		<name><![CDATA[heart womb]]></name>
+		<name><![CDATA[胎胞爱心]]></name>
 		
 		<!-- The description that's shown in tooltips and on the item's inspection page. -->
-		<description><![CDATA[A stylised heart tattoo, which roughly resembles the shape of a female's reproductive system.]]></description> 
+		<description><![CDATA[一个造型独特的心形纹身，大致类似女性生殖系统的形状。]]></description> 
 		
 		<!-- The description that's shown in a character's description page.
 			This description should fit in to the sentence at point X:
 				"On [npc.her] "+tattooSlotName+", [npc.sheHasFull] "+X+"." -->
-		<bodyOverviewDescription><![CDATA[a stylised heart tattoo, which roughly resembles the shape of a female's reproductive system]]></bodyOverviewDescription> 
+		<bodyOverviewDescription><![CDATA[与女性生殖系统形状大致相似的心形纹身]]></bodyOverviewDescription> 
 		
 		<!-- Availability requirements for this tattoo. Use 'npc' for the character receiving the tattoo.
 			This field can be left blank if you want the tattoo to always be available.

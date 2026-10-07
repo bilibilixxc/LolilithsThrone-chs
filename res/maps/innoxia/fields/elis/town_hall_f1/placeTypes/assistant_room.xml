@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Arion's room]]></name>
-	<tooltipDescription><![CDATA[Minotallys's faithful assistant never strays far from her side, even while sleeping.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in Arion's office in Elis's town hall]]></virginityLossDescription>
+	<name><![CDATA[阿里昂的房间]]></name>
+	<tooltipDescription><![CDATA[米诺塔莉丝的忠实助手从不远离她，即使在睡觉时也是如此。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯的市镇议会，阿里昂的办公室里。]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<svgName>room</svgName>
 	<colour>BASE_LILAC</colour>

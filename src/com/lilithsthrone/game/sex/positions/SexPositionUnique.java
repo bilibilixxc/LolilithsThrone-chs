@@ -37,14 +37,14 @@ import com.lilithsthrone.utils.Util.Value;
  */
 public class SexPositionUnique {
 
-	public static final AbstractSexPosition PET_MOUNTING = new AbstractSexPosition("Mounted",
+	public static final AbstractSexPosition PET_MOUNTING = new AbstractSexPosition("被骑乘",
 			2,
 			true,
 			null, Util.newArrayListOfValues(PetMounting.class)) {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
 			return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotUnique.PET_MOUNTING_ON_ALL_FOURS), Main.sex.getCharacterInPosition(SexSlotUnique.PET_MOUNTING_HUMPING),
-					"[npc.NameIs] down on all fours, and [npc.has] been mounted by [npc2.name], who's desperate to penetrate and start humping [npc.herHim].");
+					"[npc.NameIs]四肢跪地，被[npc2.name]骑在身上，[npc2.she]正跃跃欲试地想插入进去，开始交尾。");
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -65,14 +65,14 @@ public class SexPositionUnique {
 		}
 	};
 	
-	public static final AbstractSexPosition PET_ORAL = new AbstractSexPosition("Pet Oral",
+	public static final AbstractSexPosition PET_ORAL = new AbstractSexPosition("宠物口交",
 			2,
 			true,
 			null, Util.newArrayListOfValues(PetOral.class)) {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
 			return UtilText.parse(Main.sex.getCharacterInPosition(SexSlotUnique.PET_ORAL_ON_ALL_FOURS), Main.sex.getCharacterInPosition(SexSlotUnique.PET_ORAL_COCKED_LEG),
-					"[npc.NameIs] down on all fours, with [npc2.namePos] [npc2.leg] hooked over [npc.her] neck, leaving [npc.her] face just [unit.sizes] away from [npc2.namePos] [npc2.cock+].");
+					"[npc.NameIs]四肢跪地，被[npc2.namePos]的[npc2.leg]锁住了脖子，脸距离[npc2.namePos][npc2.cock+]仅有[unit.sizes]。");
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -82,14 +82,14 @@ public class SexPositionUnique {
 		}
 	};
 	
-	public static final AbstractSexPosition UNDER_DESK_RALPH = new AbstractSexPosition("Under desk",
+	public static final AbstractSexPosition UNDER_DESK_RALPH = new AbstractSexPosition("桌下",
 			2,
 			false,
 			null,
 			Util.newArrayListOfValues(RalphOral.class)) {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
-			return "You're kneeling under Ralph's counter, with your face just [unit.sizes] away from his crotch.";
+			return "你跪在拉尔夫的柜台下，面部距离他的胯部仅有[unit.sizes]。";
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -109,14 +109,14 @@ public class SexPositionUnique {
 		}
 	};
 
-	public static final AbstractSexPosition OVER_DESK_RALPH = new AbstractSexPosition("Over desk",
+	public static final AbstractSexPosition OVER_DESK_RALPH = new AbstractSexPosition("桌上",
 			2,
 			false,
 			null,
 			Util.newArrayListOfValues(RalphOral.class)) {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
-			return "You're bent over Ralph's counter, with the horse-boy standing right behind you.";
+			return "你弯腰趴在拉尔夫的柜台上，马男正站在你身后。";
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -136,13 +136,13 @@ public class SexPositionUnique {
 		}
 	};
 	
-	public static final AbstractSexPosition SHOWER_TIME_PIX = new AbstractSexPosition("Shower sex",
+	public static final AbstractSexPosition SHOWER_TIME_PIX = new AbstractSexPosition("淋浴间性爱",
 			2,
 			false,
 			null, Util.newArrayListOfValues(PixShower.class)) {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
-			return "You're standing with your face pressed up against one wall of the shower, and behind you, Pix is growling hungrily into your ear.";
+			return "你面朝淋浴间的墙面，被压在此处，而背后则是皮克斯，在你耳边饥渴低吼着。";
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -152,13 +152,13 @@ public class SexPositionUnique {
 		}
 	};
 	
-	public static final AbstractSexPosition HANDS_ROSE = new AbstractSexPosition("Hand-holding",
+	public static final AbstractSexPosition HANDS_ROSE = new AbstractSexPosition("握手",
 			2,
 			false,
 			null, Util.newArrayListOfValues(RoseHandHolding.class, GenericOrgasms.class)) {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
-			return "You and the cat-girl maid, Rose, are standing facing one another, ready to perform lewd acts with one another's hands.";
+			return "你和那猫女仆萝丝面对着面，期待着对对方的手做些淫秽的举动。";
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -169,13 +169,13 @@ public class SexPositionUnique {
 		}
 	};
 	
-	public static final AbstractSexPosition KNEELING_ORAL_CULTIST = new AbstractSexPosition("Kneeling",
+	public static final AbstractSexPosition KNEELING_ORAL_CULTIST = new AbstractSexPosition("跪姿",
 			2,
 			true,
 			null, Util.newArrayListOfValues(CultistSexActions.class)) {
 		@Override
 		public String getDescription(Map<GameCharacter, SexSlot> occupiedSlots) {
-			return "You're kneeling at the feet of [npc.name], with your [pc.face+] hovering just [unit.sizes] away from [npc.her] groin.";
+			return "你跪在[npc.name]的[npc.feet]边，[pc.face+]距离[npc.her]的下体仅有[unit.sizes]。";
 		}
 		@Override
 		public Map<SexSlot, Map<SexSlot, SexActionInteractions>> getSlotTargets() {
@@ -195,7 +195,7 @@ public class SexPositionUnique {
 		}
 	};
 	
-	public static final AbstractSexPosition MISSIONARY_ALTAR_CULTIST = new AbstractSexPosition("Missionary on altar",
+	public static final AbstractSexPosition MISSIONARY_ALTAR_CULTIST = new AbstractSexPosition("祭坛上传教士体位",
 			2,
 			true,
 			null, Util.newArrayListOfValues(CultistSexActions.class)) {
@@ -216,17 +216,17 @@ public class SexPositionUnique {
 				characters.add(Main.sex.getCharacterInPosition(SexSlotUnique.MISSIONARY_ALTAR_KNEELING_BETWEEN_LEGS));
 				isKneeling = true;
 			} else {
-				return "MISSIONARY_ALTAR_CULTIST: Invalid character positions!";
+				return "MISSIONARY_ALTAR_CULTIST: 角色姿势不合法！";
 			}
 
 			// boolean playerIsOnTheAltar = characters.get(0).isPlayer();
 
 			StringBuilder desc = new StringBuilder();
-			desc.append("[npc.NameIs] lying back on top of the chapel's altar, and ");
+			desc.append("[npc.NameIs]平躺在教堂的祭坛上，");
 			if (isKneeling) {
-				desc.append("[npc2.nameIs] kneeling down between [npc.hisHer] [npc.legs], ready to have some oral fun with [npc.himHer] in the missionary position.");
+				desc.append("[npc2.nameIs]则跪在[npc.hisHer]的[npc.legs]间，准备以传教士体位用嘴巴跟[npc.himHer]好好玩乐一番。");
 			} else {
-				desc.append("[npc2.nameIs] standing between [npc.hisHer] [npc.legs], ready to have some fun with [npc.himHer] in the missionary position.");
+				desc.append("[npc2.nameIs]站在[npc.hisHer]的[npc.legs]间，准备以传教士体位跟[npc.himHer]好好玩乐一番。");
 			}
 			return UtilText.parse(characters.get(0), characters.get(1), desc.toString());
 		}
@@ -257,7 +257,7 @@ public class SexPositionUnique {
 		}
 	};
 	
-	public static final AbstractSexPosition MISSIONARY_ALTAR_SEALED_CULTIST = new AbstractSexPosition("Missionary on altar",
+	public static final AbstractSexPosition MISSIONARY_ALTAR_SEALED_CULTIST = new AbstractSexPosition("祭坛上传教士体位",
 			2,
 			true,
 			null, Util.newArrayListOfValues(CultistSexActions.class)) {
@@ -274,17 +274,17 @@ public class SexPositionUnique {
 				characters.add(Main.sex.getCharacterInPosition(SexSlotUnique.MISSIONARY_ALTAR_SEALED_KNEELING_BETWEEN_LEGS));
 				isKneeling = true;
 			} else {
-				return "MISSIONARY_ALTAR_SEALED_CULTIST: Invalid character positions!";
+				return "MISSIONARY_ALTAR_SEALED_CULTIST: 角色姿势不合法！";
 			}
 
 			// boolean playerIsOnTheAltar = characters.get(0).isPlayer();
 
 			StringBuilder desc = new StringBuilder();
-			desc.append("[npc.NameIs] lying back on top of the chapel's altar, and ");
+			desc.append("[npc.NameIs]平躺在教堂的祭坛上，");
 			if (isKneeling) {
-				desc.append("[npc2.nameIs] kneeling down between [npc.hisHer] [npc.legs], ready to have some oral fun with [npc.himHer] in the missionary position.");
+				desc.append("[npc2.nameIs]则跪在[npc.hisHer]的[npc.legs]间，准备以传教士体位用嘴巴跟[npc.himHer]好好玩乐一番。");
 			} else {
-				desc.append("[npc2.nameIs] standing between [npc.hisHer] [npc.legs], ready to have some fun with [npc.himHer] in the missionary position.");
+				desc.append("[npc2.nameIs]站在[npc.hisHer]的[npc.legs]间，准备以传教士体位跟[npc.himHer]好好玩乐一番。");
 			}
 			return UtilText.parse(characters.get(0), characters.get(1), desc.toString());
 		}

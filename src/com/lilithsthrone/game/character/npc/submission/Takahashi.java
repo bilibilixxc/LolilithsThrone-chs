@@ -67,7 +67,7 @@ public class Takahashi extends NPC {
 	}
 	
 	public Takahashi(boolean isImported) {
-		super(isImported, new NameTriplet("Hitomi", "Hitomi", "Hitomi"), "Takahashi",
+		super(isImported, new NameTriplet("曈", "曈", "曈"), "高桥",
 				"",
 				23, Month.NOVEMBER, 27,
 				20, Gender.F_V_B_FEMALE, Subspecies.FOX_ASCENDANT, RaceStage.PARTIAL_FULL,
@@ -319,21 +319,21 @@ public class Takahashi extends NPC {
 	public String getDescription() {
 		if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.MAIN, Quest.MAIN_3_J_FINDING_TAKAHASHI)) {
 			return UtilText.parse(this,
-					"[npc.Name] is a rude, three-tailed youko, who treats others with very little respect."
-							+ " After disappearing from the citadel in Submission, she was captured by Shiranui and held in Meraxis's hideout until you and Meraxis rescued her."
-							+ " Now she spends her time making potions in the hideout.");
+					"[npc.Name]是一个粗鲁的三尾妖狐，对别人一点也不尊重。"
+							+ "她从屈城区的城堡中失踪后，被不知火所擒获，关押在梅拉克西丝的藏身处，直到你和梅拉克西丝将她解救出来。"
+							+ "如今，她整天都待在藏身处里调制魔药。");
 		}
 		
 		if(ImpCitadelDialogue.isDefeated() || ImpCitadelDialogue.isImpsDefeated()) {
 			return UtilText.parse(this,
-					"[npc.Name] is a rude, three-tailed youko, who treats others with very little respect."
-							+ " At the first sign of trouble in the citadel, she vanished, leaving nothing but an empty laboratory behind."
-							+ " You get the feeling that someday your paths will cross again...");
+					"[npc.Name]是一个粗鲁的三尾妖狐，对别人一点也不尊重。"
+							+ "城堡里一有风吹草动，她就消失了，只留下一个空荡荡的实验室。"
+							+ "你有预感总有一天还会再见到她……");
 		}
 		
 		return UtilText.parse(this,
-				"[npc.Name] is a rude, three-tailed youko, who treats others with very little respect."
-						+ " Placed in charge of the Dark Siren's laboratory, she oversees the production of transformative potions.");
+				"[npc.Name]是一个粗鲁的三尾妖狐，对别人一点也不尊重。"
+						+ "她被任命为暗夜塞壬实验室的主管，负责监督转化药水的生产。");
 	}
 
 	@Override

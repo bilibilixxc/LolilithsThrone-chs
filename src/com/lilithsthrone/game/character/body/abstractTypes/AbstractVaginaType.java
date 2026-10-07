@@ -32,21 +32,21 @@ public abstract class AbstractVaginaType implements BodyPartTypeInterface {
 	
 	// Maps the name to weighting for use in random selection:
 	protected static final Map<String, Integer> BASE_NAMES_SINGULAR = Util.newHashMapOfValues(
-			new Value<>("cherry", 2),
-			new Value<>("cunt", 2),
-			new Value<>("kitty", 1),
-			new Value<>("pussy", 4),
-			new Value<>("sex", 1),
-			new Value<>("slit", 1),
-			new Value<>("twat", 2));
+			new Value<>("处女穴", 2),
+			//new Value<>("cunt", 2),
+			new Value<>("蜜穴", 1),
+			new Value<>("小穴", 4),
+			new Value<>("阴道", 1),
+			//new Value<>("逼", 1),
+			new Value<>("秘缝", 2));
 	protected static final Map<String, Integer> BASE_NAMES_PLURAL = Util.newHashMapOfValues(
-			new Value<>("cherries", 2),
-			new Value<>("cunts", 2),
-			new Value<>("kitties", 1),
-			new Value<>("pussies", 4),
-			new Value<>("sexes", 1),
-			new Value<>("slits", 1),
-			new Value<>("twats", 2));
+			new Value<>("处女穴", 2),
+			//new Value<>("cunts", 2),
+			new Value<>("蜜穴", 1),
+			new Value<>("小穴", 4),
+			new Value<>("阴道", 1),
+			//new Value<>("逼", 1),
+			new Value<>("秘缝", 2));
 
 	private boolean mod;
 	private boolean fromExternalFile;
@@ -246,7 +246,7 @@ public abstract class AbstractVaginaType implements BodyPartTypeInterface {
 		String name;
 		Map<String, Integer> returnNames = new HashMap<>(BASE_NAMES_SINGULAR);
 		if(!gc.isVaginaVirgin()) {
-			returnNames.remove("cherry");
+			returnNames.remove("处女穴");
 		}
 		
 		if(names==null || names.isEmpty()) {
@@ -264,7 +264,7 @@ public abstract class AbstractVaginaType implements BodyPartTypeInterface {
 			return name;
 		}
 		
-		if(name.endsWith("-")) {
+		if(!returnNames.containsKey(name)) {
 			if(Math.random()<0.25f) { // 25% chance to return this '-' name.
 				return UtilText.parse(gc, name + Util.getRandomObjectFromWeightedMap(returnNames));
 			} else {
@@ -283,7 +283,7 @@ public abstract class AbstractVaginaType implements BodyPartTypeInterface {
 		String name;
 		Map<String, Integer> returnNames = new HashMap<>(BASE_NAMES_PLURAL);
 		if(!gc.isVaginaVirgin()) {
-			returnNames.remove("cherries");
+			returnNames.remove("处女穴");
 		}
 		
 		if(namesPlural==null || namesPlural.isEmpty()) {
@@ -293,7 +293,7 @@ public abstract class AbstractVaginaType implements BodyPartTypeInterface {
 			name = Util.randomItemFrom(namesPlural);
 		}
 		
-		if(name.endsWith("-")) {
+		if(!returnNames.containsKey(name)) {
 			if(Math.random()<0.25f && (!Main.game.isInSex() || Main.sex.getAllParticipants().size()<=2)) { // 25% chance to return this '-' name, so long as not in threesome+ sex scene, as otherwise parsing is weird (e.g. "wolf-pussies" for wolf & non-wolf)
 				return UtilText.parse(gc, name + Util.getRandomObjectFromWeightedMap(returnNames));
 			} else {

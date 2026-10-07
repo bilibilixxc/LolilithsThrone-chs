@@ -404,38 +404,38 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 		}
 		
 		int essenceCost = this.getWeaponType().getArcaneCost();
-		String damageName = "<span style='color:"+ damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>Damage</span>";
+		String damageName = "<span style='color:"+ damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>伤害</span>";
 		
 		descriptionSB.append("<p>");
 			descriptionSB.append("<span style='color:" + this.getRarity().getColour().toWebHexString() + ";'>"+Util.capitaliseSentence(this.getRarity().getName())+"</span>"
 								+" | "
 								+(this.getWeaponType().isUsingUnarmedCalculation()
-									?"[style.colourUnarmed(Unarmed)]"
+									?"[style.colourUnarmed(徒手)]"
 									:(this.getWeaponType().isMelee()
-										?"[style.colourMelee(Melee)]"
-										:"[style.colourRanged(Ranged)]"))
+										?"[style.colourMelee(近战)]"
+										:"[style.colourRanged(远程)]"))
 								+"<br/>");
-			descriptionSB.append((this.getWeaponType().isTwoHanded()?"Two-handed":"One-handed"));
+			descriptionSB.append((this.getWeaponType().isTwoHanded()?"双手":"单手"));
 			if(this.getWeaponType().isOneShot()) {
-				descriptionSB.append(" - [style.colourYellow(One-shot)]");
+				descriptionSB.append(" - [style.colourYellow(单发)]");
 			}
 			descriptionSB.append("<br/>");
 			if(essenceCost>0) {
-				descriptionSB.append("Costs [style.colourArcane("+essenceCost+" arcane essence"+(essenceCost==1?"":"s")+")] "+(this.getWeaponType().isMelee()?"per attack":"to fire")+"<br/>");
+				descriptionSB.append((this.getWeaponType().isMelee()?"每次攻击":"射击")+"消耗[style.colourArcane("+essenceCost+"奥术精华)]。<br/>");
 			}
 			if(this.getWeaponType().isUsingUnarmedCalculation()) {
-				descriptionSB.append("Includes [style.boldUnarmed("+character.getUnarmedDamage()+" unarmed damage)]<br/>");
+				descriptionSB.append("包括[style.boldUnarmed("+character.getUnarmedDamage()+"徒手伤害)]<br/>");
 			}
-			descriptionSB.append(Attack.getMinimumDamage(character, null, Attack.MAIN, this) + "-" + Attack.getMaximumDamage(character, null, Attack.MAIN, this)+" "+ damageName+"<br/>");
+			descriptionSB.append(Attack.getMinimumDamage(character, null, Attack.MAIN, this) + "-" + Attack.getMaximumDamage(character, null, Attack.MAIN, this)+""+ damageName+"<br/>");
 			int targetNumber=2;
 			for(Value<Integer, Integer> aoe : this.getWeaponType().getAoeDamage()) {
 				int aoeChance = aoe.getKey();
 				String position = Util.intToPosition(targetNumber);
-				descriptionSB.append("[style.boldAqua(AoE)]: "
+				descriptionSB.append("[style.boldAqua(范围伤害)]:"
 						+ "<span style='color:"+(aoeChance<=25?PresetColour.GENERIC_BAD:(aoeChance<=50?PresetColour.GENERIC_MINOR_BAD:(aoeChance<=75?PresetColour.GENERIC_MINOR_GOOD:PresetColour.GENERIC_GOOD))).toWebHexString()+";'>"+aoeChance+"%</span>"
-						+ " chance to deal "
+						+ "概率造成"
 						+  Attack.getMinimumDamage(character, null, Attack.MAIN, this, aoe.getValue())+" - "+Attack.getMaximumDamage(character, null, Attack.MAIN, this, aoe.getValue())+ " "
-						+ damageName+" to "+UtilText.generateSingularDeterminer(position)+" "+position+" enemy!<br/>");
+						+ damageName+"对于"+UtilText.generateSingularDeterminer(position)+position+"个敌人！<br/>");
 				targetNumber++;
 			}
 			if(this.getWeaponType().isOneShot()) {
@@ -444,21 +444,21 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 
 				descriptionSB.append("<span style='color:"
 						+(chanceToRecoverTurn<=25?PresetColour.GENERIC_BAD:(chanceToRecoverTurn<=50?PresetColour.GENERIC_MINOR_BAD:(chanceToRecoverTurn<=75?PresetColour.GENERIC_MINOR_GOOD:PresetColour.GENERIC_GOOD))).toWebHexString()
-						+"'>"+chanceToRecoverTurn+"%</span> chance to recover [style.colourBlueLight(after use)]<br/>");
+						+"'>"+chanceToRecoverTurn+"%</span>有概率[style.colourBlueLight(使用后)]恢复<br/>");
 				
 				descriptionSB.append("<span style='color:"
 						+(chanceToRecoverCombat<=25?PresetColour.GENERIC_BAD:(chanceToRecoverCombat<=50?PresetColour.GENERIC_MINOR_BAD:(chanceToRecoverCombat<=75?PresetColour.GENERIC_MINOR_GOOD:PresetColour.GENERIC_GOOD))).toWebHexString()
-						+";'>"+chanceToRecoverCombat+"%</span> chance to recover [style.colourCombat(after combat)]<br/>");
+						+";'>"+chanceToRecoverCombat+"%</span>有概率[style.colourCombat(战斗后)]恢复<br/>");
 			}
 		descriptionSB.append("</p>");
 
 		descriptionSB.append("<p>");
 			descriptionSB.append(getTypeDescription(character));
 			descriptionSB.append("<br/>");
-			descriptionSB.append((getWeaponType().isPlural()?"They have":"It has")+" a value of: "+UtilText.formatAsMoney(getValue()));
+			descriptionSB.append("该物品价值为："+UtilText.formatAsMoney(getValue()));
 			if(Main.game.isEnchantmentCapacityEnabled()) {
 				descriptionSB.append("<br/>");
-				descriptionSB.append((getWeaponType().isPlural()?"They have":"It has")+" "+UtilText.addDeterminer(Attribute.ENCHANTMENT_LIMIT.getName())+" of: ");
+				descriptionSB.append("该物品"+UtilText.addDeterminer(Attribute.ENCHANTMENT_LIMIT.getName())+"程度为：");
 				if(this.getEnchantmentCapacityCost()==0) {
 					descriptionSB.append("[style.colourDisabled("+UtilText.formatAsEnchantmentCapacityUncoloured(this.getEnchantmentCapacityCost(), "span")+")]");
 				} else {
@@ -472,15 +472,15 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 		if(getWeaponType().getPhysicalResistance()>0) {
 			descriptionSB.append("<p>"
 							+ (getWeaponType().isPlural()
-									? "They are armoured, and provide "
-									: "It is armoured, and provides ")
+									? "带有装甲，能够提供"
+									: "带有装甲，能够提供")
 								+ " " + getWeaponType().getPhysicalResistance() + " [style.colourResPhysical(" + Attribute.RESISTANCE_PHYSICAL.getName() + ")]."
 							+ "</p>");
 		}
 		
 		
 		if(!this.getEffects().isEmpty() || !this.getWeaponType().getExtraEffects().isEmpty()) {
-			descriptionSB.append("<p>Effects:");
+			descriptionSB.append("<p>效果:");
 			for (ItemEffect e : this.getEffects()) {
 				if(e.getPrimaryModifier()!=TFModifier.CLOTHING_ATTRIBUTE
 						&& e.getPrimaryModifier()!=TFModifier.CLOTHING_MAJOR_ATTRIBUTE) {
@@ -499,25 +499,25 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 		}
 
 		if (!spells.isEmpty()) {
-			descriptionSB.append("<p>"+(getWeaponType().isPlural()?"Their":"Its")+" arcane power grants you the ability to cast ");
+			descriptionSB.append("<p>其奥术能量赋予了你释放");
 			int i = 0;
 			for (Spell s : spells) {
 				if (i != 0) {
 					if (i + 1 == spells.size())
-						descriptionSB.append(" and ");
+						descriptionSB.append("、");
 					else
-						descriptionSB.append(", ");
+						descriptionSB.append("、");
 				}
 
 				descriptionSB.append("<span style='color:" + s.getSpellSchool().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(s.getName()) + "</span>");
 				i++;
 			}
-			descriptionSB.append(".</p>");
+			descriptionSB.append("的能力。</p>");
 		}
 
 
 		if(!combatMoves.isEmpty()) {
-			descriptionSB.append("<p>When equipped, "+(getWeaponType().isPlural()?"they unlock":"it unlocks")+" the move"+(combatMoves.size()==1?"":"s")+": ");
+			descriptionSB.append("<p>装备后，能够解锁战斗动作:");
 			List<String> combatMoveNames = new ArrayList<>();
 			descriptionSB.append("[style.italicsCombat(");
 			for(AbstractCombatMove cm : combatMoves) {
@@ -528,8 +528,8 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 		}
 
 		if (getWeaponType().getClothingSet() != null) {
-			descriptionSB.append("<p>" + (getWeaponType().isPlural() ? "They are" : "It is") + " part of the <span style='color:" + PresetColour.RARITY_EPIC.toWebHexString() + ";'>"
-					+ getWeaponType().getClothingSet().getName() + "</span> set." + "</p>");
+			descriptionSB.append("<p>是<span style='color:" + PresetColour.RARITY_EPIC.toWebHexString() + ";'>"
+					+ getWeaponType().getClothingSet().getName() + "</span>套装的一部分。" + "</p>");
 		}
 
 		return UtilText.parse(this, descriptionSB.toString());
@@ -628,7 +628,7 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 					?(!weaponType.getDeterminer().equalsIgnoreCase("a") && !weaponType.getDeterminer().equalsIgnoreCase("an")
 							? weaponType.getDeterminer()
 							: UtilText.generateSingularDeterminer(getWeaponType().isAppendDamageName()?damageType.getWeaponDescriptor():name))
-						+ " "
+						+ ""
 					:"")
 				+ (getWeaponType().isAppendDamageName()
 						?(withRarityColour
@@ -636,7 +636,7 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 							:damageType.getWeaponDescriptor())
 						:"")
 				+ (withRarityColour
-						? (" <span style='color: "+rarity.getColour().toWebHexString()+";'>"+name+"</span>")
+						? ("<span style='color: "+rarity.getColour().toWebHexString()+";'>"+name+"</span>")
 						: " "+name));
 	}
 
@@ -644,7 +644,7 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 	public String getDisplayName(boolean withRarityColour) {
 		return UtilText.parse(this,
 				(getWeaponType().isAppendDamageName()
-					?"<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(damageType.getWeaponDescriptor()) + "</span> "
+					?"<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(damageType.getWeaponDescriptor()) + "</span>"
 					:"")
 				+ (withRarityColour ? (" <span style='color: " + rarity.getColour().toWebHexString() + ";'>" + name + "</span>") : name));
 	}
@@ -653,7 +653,7 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 	public String getDisplayNamePlural(boolean withRarityColour) {
 		return UtilText.parse(this,
 				(getWeaponType().isAppendDamageName()
-					?"<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(damageType.getWeaponDescriptor()) + "</span> "
+					?"<span style='color:" + damageType.getMultiplierAttribute().getColour().toWebHexString() + ";'>" + Util.capitaliseSentence(damageType.getWeaponDescriptor()) + "</span>"
 					:"")
 				+ (withRarityColour ? (" <span style='color: " + rarity.getColour().toWebHexString() + ";'>" + namePlural + "</span>") : namePlural));
 	}
@@ -772,7 +772,7 @@ public abstract class AbstractWeapon extends AbstractCoreItem implements XMLSavi
 		Set<ItemTag> tags = this.getItemTags();
 		
 		if(this.getWeaponType().getItemTags().contains(ItemTag.UNIQUE_NO_NPC_EQUIP) && !clothingOwner.isPlayer()) {
-			return new Value<>(false, UtilText.parse("[style.colourBad(Only you can equip this weapon!)]"));
+			return new Value<>(false, UtilText.parse("[style.colourBad(你只能装备这件武器！)]"));
 		}
 		
 		if(block!=null && Collections.disjoint(block.getRequiredTags(), tags)) {

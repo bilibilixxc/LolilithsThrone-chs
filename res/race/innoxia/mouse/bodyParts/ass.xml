@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <ass>
 	<race>innoxia_mouse</race>
 	
-	<transformationName><![CDATA[mouse]]></transformationName>
+	<transformationName><![CDATA[鼷鼠]]></transformationName>
 	
 	<coveringType>innoxia_mouse_fur</coveringType>
 	
@@ -15,10 +15,10 @@
 	<descriptorsFeminine/>
 	
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] a [style.boldMouse(mouse-like)], [npc.assholeFullDescription].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldMouse(鼷鼠般)][npc.assholeFullDescription]。
+]]></transformationDescription>
 	
 	<bodyDescription><![CDATA[
-		[npc.SheHasFull] a mouse-like, [npc.anusFullDescription(true)]
+		[npc.SheHasFull]有一个鼷鼠般[npc.anusFullDescription(true)]
 	]]></bodyDescription>
 </ass>

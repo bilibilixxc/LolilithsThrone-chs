@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>250</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[cuff choker necklace]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[cuff choker necklaces]]></namePlural>
-		<description><![CDATA[A solid band of metal with a gap at the back, allowing it to be fitted onto someone's neck.]]></description>
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[金属颈饰]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[金属颈饰]]></namePlural>
+		<description><![CDATA[一条有缺口的坚固金属圈，可以戴在某人的脖子上。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
     <equipSlots>
@@ -44,26 +43,20 @@
 	</coreAttributes>
 
   <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] securely [npc.verb(slot)] the cuff choker necklace around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] securely [npc.verb(slot)] the cuff choker necklace around [npc2.namePos] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before forcing the cuff choker necklace around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将项链手镯牢固地扣在[npc.her]的脖子上。]]></self>
+    <other><![CDATA[
+[npc.Name]将项链手镯牢固地扣在[npc2.namePos]的脖子上。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]紧紧抓住[npc2.name]，然后强行把项链手镯套在[npc2.her]的脖子上。]]></otherRough>
   </replacementText>
   <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] cuff choker necklace off from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] cuff choker necklace off from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] cuff choker necklace off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将[npc.her]的项链手镯从[npc.her]的脖子上摘下。]]></self>
+    <other><![CDATA[
+[npc.Name]将[npc2.namePos]的项链手镯从[npc2.her]的脖子上摘下。]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴地将[npc2.namePos]的项链手镯从[npc2.her]的脖子上扯下。]]></otherRough>
   </displacementText>
 	
 </clothing>

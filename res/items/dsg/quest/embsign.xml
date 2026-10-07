@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
-		<authorTag><![CDATA['Woven by the DSG Textile Guild' in very small print is woven in one corner.]]></authorTag>
+		<authorTag><![CDATA[“DSG织厂编制”用很小的字缝在一角。]]></authorTag>
 		
 		<value>2480</value> 
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[embroidered sign]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[embroidered signs]]></namePlural>
-		<description><![CDATA[A folded up piece of rectangular canvas fabric embroidered with a design that Monica had made for you based on your interpretation of the qualities that Eisek values most in his goods.]]></description> 
+		<determiner><![CDATA[一块]]></determiner>
+		<name><![CDATA[刺绣标志]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[刺绣标志]]></namePlural>
+		<description><![CDATA[这是一块折叠起来的长方形帆布布料，上面绣着一个设计，是莫妮卡根据你对艾瑟克最看重的商品品质的理解为你制作的。]]></description> 
 		
-		<useDescriptor>examine</useDescriptor>
+		<useDescriptor><![CDATA[检查]]></useDescriptor>
 		
 		<sexUse>false</sexUse>
 		<combatUseAllies>false</combatUseAllies>
@@ -25,14 +25,14 @@
 		<colourTertiary/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[One of [style.colourGood(three)] items that you need to fix up Eisek's stall.]]></line>
+			<line><![CDATA[[style.colourGood(三)]个你需要来修理艾瑟克的摊位的物品中的其中一个。]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p>
-			This sign is made from canvas, rolled at the edges for durability. Embroidered on its otherwise featureless surface is a stylized depiction of many different types of fruits and vegetables carried by an avalanche descending down the side of a mountain. In the upper right, the words "ALPINE PRODUCE" are similarly sewn in with metallic blue thread.
+			这个标志由帆布制成，边缘卷起，经久耐用。在它原本毫无特色的表面上，绣着一幅风格化的描绘，描绘了雪崩从山边下来时携带的许多不同类型的水果和蔬菜。在右上角，“高山农产品”字样同样用金属蓝线缝制。
 		</p>
-		]]></applyEffects>
+	]]></applyEffects>
 		
 		<itemTags/>
 		
@@ -40,10 +40,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(unfold)] the sign to get a closer look...
+		[npc.Name]展开标志并靠近观察……
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(unfold)] the sign to show it off to [npc2.name], who [npc.verb(lean)] in to get a closer look...
+		[npc.Name]展开标志以向[npc2.name]展示，[npc2.name]凑近看了看……
 		]]></otherUse>
 	</useDescriptions>
 

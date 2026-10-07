@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- ELEMENTAL_START -->
@@ -6,143 +6,143 @@
 	<htmlContent tag="ELEMENTAL_START"><![CDATA[
 	<p>
 		#IF(el.getPassiveForm()==null)
-			Wanting to take a moment in which to speak to your elemental, you turn towards [el.name], only to see that [el.sheIs] already expectantly hovering up near to your face. The pale [el.skinColour] glow of [el.her] ethereal, wisp-like form noticeably brightens as [el.she] projects [el.her] thoughts directly into your mind,
+			你想花点时间和你的元素说话，于是转向[el.name]，只见[el.sheIs]已经已经满怀期待地徘徊在你的面前。淡淡的[el.skinColour]在[el.her]缥缈的身体上发光，[el.she]将思想直接投射到你的脑海中，缥缈身体上的光芒明显更亮了，
 		#ELSE
-			Wanting to take a moment in which to speak to your elemental, you turn towards [el.name], only to see that [el.sheIs] already expectantly
+			你想花点时间和你的元素说话，于是转向[el.name]，只见[el.sheIs]已经在期待地
 			#IF(el.getPassiveForm().getRace().isFlyingRace())
-				 flying around in little circles near to your face.
+				在你面前小圈地飞来飞去。
 			#ELSE
-				 looking up at you.
+				抬头望着你。
 			#ENDIF
-			 The pale [el.skinColour] glow which surrounds [el.her] feral [el.passiveRace]'s body noticeably brightens as [el.she] projects [el.her] thoughts directly into your mind,
+			环绕着[el.her]兽化[el.passiveRace]身体的淡淡[el.skinColour]光芒明显变亮，[el.she]将思想投射到你的脑海里，
 		#ENDIF
 		#IF(el.isSummonerServant())
-			 [el.thought(You dare to ask something of me, servant? Bow down before me, and I shall consider your request.)]
+			[el.thought(你敢向我提要求吗，仆人？跪在我面前，我会考虑你的请求。)]
 		#ELSEIF(el.isServant())
-			 [el.thought(May I serve you, [pc.name]? Your every wish is my command...)]
+			[el.thought(我可以为你做些什么，[pc.name]？悉听尊便。)]
 		#ELSE
-			 [el.thought(You wish to speak with me, [pc.name]?)]
+			[el.thought(你想对我说什么，[pc.name]？)]
 		#ENDIF
 	</p>
 	<p>
 		#IF(el.isSummonerServant())
-			Having sworn to be subservient to the school of [el.school(true)], you feel obliged to do as [el.name] commands, and dutifully bow down before [el.herHim]. Satisfied with your display of submission, your elemental once again projects [el.her] voice into your mind and dominantly orders, [el.thought(Tell me what it is you want then, servant!)]
+			你曾发誓要服从[el.school(true)]的学派，因此你觉得有义务听从[el.name]的命令，在[el.herHim]面前恭恭敬敬地俯首称臣。元素体对你的臣服表示满意，再次将声音投射到你的脑海中，发出命令，[el.thought(告诉我，你想要什么，仆人？)]
 		#ELSE
-			Clearly wanting to show [el.her] affection towards you,
+			[el.name]显然想对你示好，
 			#IF(el.getPassiveForm()==null)
-				 [el.name] hovers up close to your face and rubs up against your cheek
+				[el.her]靠近你的脸，在你的脸颊上蹭来蹭去
 			#ELSEIF(el.getPassiveForm().getRace().isFlyingRace())
-				 [el.name] lands on your shoulder and rubs up against your cheek
+				[el.her]落在你肩上，摩擦你的脸颊
 			#ELSE
-				 [el.name] rubs up against your [pc.leg(true)]
+				[el.her]摩擦你的[pc.leg(true)]
 			#ENDIF
-			 as [el.she] waits to hear what it is you want...
+			聆听着你想做什么……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELEMENTAL_START_SEX_DOMINANT"><![CDATA[
 	<p>
-		Whether due to [el.name] planting the idea in your subconscious, or perhaps just from the sight of [el.her] active form, you suddenly find yourself feeling desperately turned-on. [pc.Stepping] forwards to dominantly take hold of your elemental, you pull [el.herHim] into
+		无论是因为[el.name]在你的潜意识中植入了这个想法，还是仅仅因为看到了[el.her]活跃的身影，你突然发现自己感到极度兴奋，[pc.Stepping]向前，控制住你的元素，你将[el.herHim]拉近
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, false) && el.isAbleToAccessCoverableArea(CA_MOUTH, false))
-			 a passionate kiss, and as you push your [pc.tongue+] into [el.her] mouth, [el.she] projects [el.her] voice into your mind, [el.thought(~Ooh!~ Yes! That's it... ~Mmm!~ Let's give in to our desires...)]
+			一个热情的吻，当你把你[pc.tongue+]伸进[el.her]的嘴里，[el.she]将[el.her]的声音投射到你的脑海，[el.thought(哦~！对~！就是这样……嗯~！让我们屈服于我们的欲望……)]
 		#ELSE	
-			 your embrace, and as you press yourself against [el.herHim], [el.she] excitedly [el.moans], [el.speech(~Ooh!~ Yes! That's it... ~Mmm!~ Let's give in to our desires...)]
+			你搂住并将自己压在[el.herHim]的身上，[el.she]兴奋地[el.moans]，[el.speech(哦~！对~！就是这样……嗯~！让我们屈服于我们的欲望……)]
 		#ENDIF
 	</p>
 	<p>
-		More than happy to do as your elemental suggests, you prepare to give [el.herHim] a good fucking...
+		你非常乐意听从你的元素体的建议，准备好好操[el.herHim]一顿……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELEMENTAL_START_SEX_SUBMISSIVE"><![CDATA[
 	<p>
-		Whether due to [el.name] planting the idea in your subconscious, or perhaps just from the sight of [el.her] active form, you suddenly find yourself feeling desperately turned-on. Knowing exactly what it is that you want, [el.name] [el.steps] forwards and firmly takes hold of your waist, before pulling you into
+		不知是因为[el.name]在你的潜意识中植入了这个想法，还是仅仅因为看到了[el.her]活跃的身影，你突然发现自己感到极度兴奋。知道自己想要什么后，[el.name]向前走来，紧紧搂住你的腰，然后将你拉入
 		#IF(pc.isAbleToAccessCoverableArea(CA_MOUTH, false) && el.isAbleToAccessCoverableArea(CA_MOUTH, false))
-			 a passionate kiss. As [el.she] forcefully pushes [el.her] [el.tongue+] into your mouth, [el.she] projects [el.her] voice into your mind,
+			情意绵绵的一吻。当[el.she]把[el.her][el.tongue+]强行塞进你的嘴里时，[el.she]把[el.her]的声音投射到你的脑海里：
 			#IF(el.isSummonerServant())
-				 [el.thought(~Mmm!~ Good servant... ~Aah!~ I'll show you what it means to pledge your subservience to me!)]
+				[el.thought(~嗯~好仆佣……~啊！~我会让你知道什么叫对我俯首帖耳！)]
 			#ELSE
-				 [el.thought(~Mmm!~ Yes! That's it... ~Aah!~ Let's give in to our desires...)]
+				[el.thought(~嗯！~啊！就是这样……让我们屈服于欲望……)]
 			#ENDIF
 		#ELSE
 			#IF(el.isSummonerServant())
-				 [el.her] embrace. As [el.she] presses [el.herself] against you, [el.she] dominantly [el.moans], [el.speech(~Mmm!~ Good servant... ~Aah!~ I'll show you what it means to pledge your subservience to me!)]
+				[el.her]拥抱着你，把[el.herself]压在你身上，发出支配性地[el.moans]：[el.speech(~嗯~好仆佣……~啊！~我会让你知道什么叫对我俯首帖耳！)]
 			#ELSE
-				 [el.her] embrace. As [el.she] presses [el.herself] against you, [el.she] excitedly [el.moans], [el.speech(~Mmm!~ Yes! That's it... ~Aah!~ Let's give in to our desires...)]
+				[el.her]拥抱着你，把[el.herself]压在你身上，发出兴奋的[el.moans]：[el.speech(~嗯！~啊！就是这样……让我们屈服于欲望……)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		More than happy to do as your elemental suggests, you prepare to submit to [el.herHim] and receive a good fucking...
+		你非常乐意听从你的元素体的建议，准备臣服于[el.herHim]来一场痛快的性交……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELEMENTAL_TAKE_FORM_PASSIVE"><![CDATA[
 	<p>
-		Having had enough of [el.namePos] active form, you
+		玩够了[el.namePos]主动的形态，你
 		#IF(el.isSummonerServant())
-			 kindly ask [el.herHim] if [el.she] could return to [el.her] passive form. For a moment, it looks as though [el.sheIs] going to refuse to do as you say, but after flashing you an amused smirk, [el.she] relents, [el.speech(Fine. Staying in this form for too long gives me a headache anyway...)]
+			温柔地请求[el.herHim]能否回到[el.her]的被动形态。有那么一瞬间，[el.she]好像要拒绝你说的，但在冲你嬉皮笑脸了一阵后，[el.she]又松口了：[el.speech(好吧。不过长时间保持这种形态会让我头疼的……)]
 		#ELSE
-			 tell [el.herHim] to return to [el.her] passive form. Obediently nodding [el.her] head as you give [el.herHim] your command, [el.she] says, [el.speech(Of course, [pc.name]. Give me just a moment...)]
+			让[el.herHim]回到[el.her]的被动形态。当你向[el.herHim]下达命令时，[el.she]顺从地点头，说道：[el.speech(没问题，[pc.name]。等我一小会儿……)]
 		#ENDIF
 	</p>
 	<p>
-		Letting out a deep breath, [el.name] is suddenly enveloped by a flash of [el.skinColour] arcane energy, and as it quickly fades down into a dull glow, you're able to see that your elemental has once again taken the form of [el.a_passiveForm].
+		深吸一口气，[el.name]突然被一阵[el.skinColour]奥术能量所笼罩，它迅速褪去变成暗淡的光芒，你发现你的元素体再次变成了[el.a_passiveForm]的形态。
 		#IF(el.getPassiveForm()==null)
-			 Hovering around you, [el.her] ethereal, wisp-like form brightens as [el.she] projects [el.her] voice into your head and asks,
+			盘旋在你周围，[el.she]空灵飘渺的身形变得明亮，[el.she]将[el.her]的声音投射到你的脑海中，问道：
 		#ELSE
 			#IF(el.getPassiveForm().getRace().isFlyingRace())
-				 Quickly taking off and flying around in little circles,
+				快速起飞，绕着小圈飞来飞去
 			#ELSE
-				 Looking up at you,
+				抬头看着你
 			#ENDIF
-			  the faint glow emitted by [el.her] feral [el.passiveRace]'s body brightens as [el.she] projects [el.her] voice into your head and asks,
+			[el.her]兽态的[el.passiveRace]身体发出的微光变亮了，[el.she]将声音投射到你的脑海中，问道：
 		#ENDIF
 		#IF(el.isSummonerServant())
-			 [el.thought(Are you quite satisfied now, servant?)]
+			[el.thought(满意了么，仆佣？)]
 		#ELSE
-			 [el.thought(Is there anything else you need, [pc.name]?)]
+			[el.thought(这样可以了么，[pc.name]？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELEMENTAL_TAKE_FORM_ACTIVE"><![CDATA[
 	<p>
-		Wanting [el.name] to switch out of [el.her] passive form and take on [el.her] real appearance, you
+		想让[el.name]脱离被动形态，以[el.her]的真实面貌出现，你
 		#IF(el.isSummonerServant())
-			 kindly ask [el.herHim] if [el.she] could change into [el.her] active form. Seemingly eager to show you [el.her] true form, [el.she] projects [el.her] voice into your head and states, [el.thought(Very well, servant, I shall allow you to see my true form!)]
+			温柔地请求[el.herHim]能否变成[el.her]的主动形态。[el.she]似乎急于向你展示[el.her]的真身，把声音投射到你的脑海里说道：[el.thought(非常好，仆佣，我会让你看看我的真面目！)]
 		#ELSE
-			 tell [el.herHim] to change into [el.her] active form. Quickly projecting [el.her] voice into your head, [el.she] obediently states, [el.thought(Of course, [pc.name]. Give me just a moment...)]
+			让[el.herHim]切换为主动形态。[el.she]迅速将[el.her]的声音投射到你的脑海中，[el.she]顺从地说道：[el.thought(当然，[pc.name]。等我一小会儿……)]
 		#ENDIF
 	</p>
 	<p>
-		Suddenly, [el.name] is concealed from your view by a blinding flash of [el.skinColour] arcane energy. Thankfully, this bright light quickly fades away, allowing you to see that your elemental has changed out of [el.her] passive form of [el.a_passiveForm].
+		突然，[el.name]被一阵刺眼的[el.skinColour]奥术能量所掩盖。幸而，这道亮光很快就消失了，你可以看到你的元素体已经从[el.a_passiveForm]的被动形态变了出来。
 		#IF(el.isFeminine())
-			 Flashing you a cheeky grin and seductively teasing [el.her] [el.fingers+] over [el.her] sexy body,
+			[el.she]向你露出腼腆的笑容，[el.her][el.fingers+]在性感的身体上诱人地挑逗，
 		#ELSE
-			 Flashing you a charming smile and confidently [el.stepping] forwards,
+			[el.she]向你露出腼腆的笑容，自信地[el.stepping]上前，
 		#ENDIF
 		#IF([#SPECIAL_PARSE_0])
 			#IF(el.isSummonerServant())
-				 [el.she] ponders out loud, [el.speech(I find myself getting quite aroused when in this form... Perhaps I should fuck you?)]
+				[el.she]大声思考：[el.speech(我发现自己以这种形式出现时非常兴奋……或许我该操操你？)]
 			#ELSE
-				 [el.she] teases, [el.speech(I find myself getting quite aroused when in this form... Perhaps you'd like to fuck me?)]
+				[el.she]挑逗说：[el.speech(我发现自己在这种形式下非常兴奋……或许你得操操我？)]
 			#ENDIF
 		#ELSE
 			#IF(el.isSummonerServant())
-				 [el.she] asks, [el.speech(So what did you want to ask of me now, servant?)]
+				[el.she]问：[el.speech(所以现在你想做点什么，仆佣？)]
 			#ELSE
-				 [el.she] asks, [el.speech(So what would you like to do with me while in this form, [pc.name]?)]
+				[el.she]问：[el.speech(所以你想和这个形态的我做什么，[pc.name]？]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELEMENTAL_AFTER_SEX -->
@@ -150,25 +150,25 @@
 	<htmlContent tag="ELEMENTAL_AFTER_SEX"><![CDATA[
 	<p>
 		#IF(game.isSillyModeEnabled())
-			[pc.speech(So <i>that's</i> how it feels to go fuck myself,)]
+			[pc.speech(所以<i>这就是</i>我说我不在的感觉，)]
 			#IF(sex.isDom(pc))
-				 you pant as you [pc.step] back from [el.name].
+				当你从[el.name]后面走开，你气喘吁吁。
 			#ELSE
-				 you pant as [el.name] [el.steps] back from you and brings an end to the sex.
+				当[el.name]从你后面走开，你气喘吁吁，结束了性爱。
 			#ENDIF
 		#ELSE
 			#IF(sex.isDom(pc))
-				Having had your fun, you tell [el.name] that you've finished with [el.herHim] and [pc.step] back, leaving [el.herHim] to [el.moan], [el.speech(~Ooh!~ That felt good... We should do this again some time...)]
+				你爽够了，告诉[el.name]你已经做完了，留下[el.herHim]继续[el.moan]：[el.speech(~哦！~太爽了……我们得找时间再来一次……)]
 			#ELSE
-				Having had [el.her] fun, [el.name] [el.steps] back and [el.moans], [el.speech(~Mmm!~ That felt good... We should do this again some time!)]
+				[el.name]爽够了，[el.she]后退并[el.moans]：[el.speech(~嗯~太爽了……我们得找时间再来一次！)]
 			#ENDIF
 		#ENDIF
 	</p>
 	<p>
-		Quickly getting your things back in order, you take a moment to catch your breath and turn to face [el.name] once again. Seeing that [el.sheHas] already fully recovered from your shared intimate experience, you wonder what to say to [el.herHim] next...
+		迅速整理好自己，你喘了口气，再次转身面对[el.name]。看到[el.sheHas]已经从你们亲密经历中完全恢复过来，接下来该对[el.herHim]说些什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELEMENTAL_INSPECT -->
@@ -176,88 +176,88 @@
 	<htmlContent tag="ELEMENTAL_INSPECT"><![CDATA[
 	#IF(el.isSummonerServant())
 		<p>
-			Wanting to take a closer look at [el.namePos] body, you kindly ask [el.herHim] if [el.she] could pose for you. 
+			你想近距离观察[el.namePos]的身体，便温柔地询问[el.herHim]可不可以摆个姿势。
 		</p>
 		<p>
-			[el.speech(You, a mere servant, dare to ask me such a thing?!)] [el.she] scowls, before letting out a deep huff and saying, [el.speech(Bow down to me again and I'll consider it.)]
+			[el.speech(你，一个普通的仆佣，胆敢让我做这种事？！)][el.she]皱了皱眉头，然后哼了一声说， [el.speech(再向我鞠一躬，我会考虑的。)]
 		</p>
 		<p>
-			Doing as you're told, you bow down before your elemental, which is thankfully enough to get what you want, as [el.she] strikes a revealing pose before you and huffs, [el.speech(Go on then, servant! Get a good look at the one you've sworn your subservience to!)]
+			你听话地在元素体面前鞠了一躬，这足以让你如愿以偿，[el.she]在你面前摆出了一个暴露的姿势，并哼了一声：[el.speech(来吧，仆佣！好好看看你宣誓效忠的人！)]
 		</p>
 	#ELSE
 		<p>
-			Wanting to take a closer look at [el.namePos] body, you tell [el.herHim] to assume a revealing pose for you. 
+			你想更仔细看看[el.namePos]的身体，于是让[el.herHim]摆出暴露的姿势。
 		</p>
 		<p>
-			[el.speech(Of course, if that's what you want,)] your elemental obediently replies, before presenting [el.herself] to you and holding still so that you can inspect [el.herHim]...
+			[el.speech(当然，如果你想的话。)]你的元素体顺从地回答，保持不动，向你展示[el.herself]以便你可以“检阅”[el.herHim]……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELEMENTAL_TALK -->
 	
 	<htmlContent tag="ELEMENTAL_TALK"><![CDATA[
 	<p>
-		Wanting to know more about what exactly [el.name] is, you ask [el.herHim] what [el.she] knows about [el.her] existence.
+		你想更多地了解[el.name]到底是什么，问[el.herHim]关于[el.her]的存在。
 	</p>
 	<p>
 		#IF(el.isSummonerServant())
 			#IF(el.isActive())
-				[el.speech(How presumptuous of a mere servant to ask such a thing!)]
+				[el.speech(一个普通的仆人竟然提出这样的要求，真是太放肆了！)]
 			#ELSE
-				[el.thought(How presumptuous of a mere servant to ask such a thing!)]
+				[el.thought(一个普通的仆人竟然提出这样的要求，真是太放肆了！)]
 			#ENDIF
-			 [el.she] huffs, before nevertheless beginning to answer your question by stating,
+			[el.she]气鼓鼓地说，但还是回答了你的问题，
 		#ELSE
 			#IF(el.isActive())
-				[el.speech(You want to know what I am?)] 
+				[el.speech(你想知道我是什么？)] 
 			#ELSE
-				[el.thought(You want to know what I am?)] 
+				[el.thought(你想知道我是什么？)] 
 			#ENDIF
-			 [el.she] asks, before beginning to answer your question by stating,
+			[el.she]说道，
 		#ENDIF
 		#IF(el.isActive())
-			 [el.speech(I'm a construct of your subconscious, and have been brought to life by the power of your arcane aura. While it may appear that I am able to think and act in an independent manner, I am merely a physical manifestation of your mind, and so in reality, I am just another part of you.)]
+			[el.speech(我是你潜意识的产物，是你的奥术灵气赋予我生命。虽然看起来我能够独立思考和行动，但我只是你思想的物质体现。所以实际上，我只是你的另一部分。)]
 		#ELSE
-			 [el.thought(I'm a construct of your subconscious, and have been brought to life by the power of your arcane aura. While it may appear that I am able to think and act in an independent manner, I am merely a physical manifestation of your mind, and so in reality, I am just another part of you.)]
+			[el.thought(我是你潜意识的产物，是你的奥术灵气赋予我生命。虽然看起来我能够独立思考和行动，但我只是你思想的物质体现。所以实际上，我只是你的另一部分。)]
 		#ENDIF
 	</p>
 	<p>
-		Prompted by further questioning, [el.name] goes on to reveal that while the potential exists in everyone, only those with exceptionally powerful arcane auras are capable of actually summoning an elemental. [el.She] goes on to say that only an aura of equivalent strength to that of a lilin is able to permanently sustain an elemental in an active state, and as powerful as your aura is, [el.she] is only able to stay in [el.her] active form for short periods of time. Finishing off this topic of conversation, [el.name] sighs,
+		在进一步追问下，[el.name]继续说明，虽然每个人都有这种潜能，但只有那些拥有异常强大的奥术灵气的人才能真正召唤出元素体。[el.she]接着说，只有与莉琳同等强度的灵气才能永久维持元素体的主动形态，而你的灵气只能让[el.she]在短时间内保持主动形态。说完这个话题，[el.name]叹了口气：
 		#IF(el.isActive())
-			 [el.speech(<i>You</i> might not feel the strain of having me stay in my active form, but <i>I</i> certainly do. I'll only ever use it when I need to help you defend yourself, or when you've got a specific purpose for me to be in my active form...)]
+			[el.speech(<i>你</i>可能无法感受我保持主动形态的负担，但<i>我</i>无疑可以。只有需要帮你保护自己，或者你有特殊目的时候，我才会变为主动形态……)]
 		#ELSE
-			 [el.thought(<b>You</b> might not feel the strain of having me stay in my active form, but <b>I</b> certainly do. I'll only ever use it when I need to help you defend yourself, or when you've got a specific purpose for me to be in my active form...)]
+			[el.thought(<b>你</b>可能无法感受我保持主动形态的负担，但<b>我</b>无疑可以。只有需要帮你保护自己，或者你有特殊目的时候，我才会变为主动形态……)]
 		#ENDIF
 	</p>
 	<p>
-		With the topic of [el.namePos] nature being exhausted, you try to talk to [el.herHim] about some of the recent events in your life, but after a short while, [el.she] admits,
+		对[el.namePos]的本质这个话题腻了，你试着和[el.herHim]谈谈最近生活中发生的事情，但才一小会儿，[el.she]承认道：
 		#IF(el.isActive())
-			 [el.speech(I already know everything that you're saying... I'm formed from your subconscious, remember? That means I know absolutely everything about you, and conversely, you know everything about me...)]
+			[el.speech(我早就知道你说的这些……我是由你的潜意识形成的，记得吗？这意味着我了解你的一切，反过来说，你也对我了如指掌……)]
 		#ELSE
-			 [el.thought(I already know everything that you're saying... I'm formed from your subconscious, remember? That means I know absolutely everything about you, and conversely, you know everything about me...)]
+			[el.thought(我早就知道你说的这些……我是由你的潜意识形成的，记得吗？这意味着我了解你的一切，反过来说，你也对我了如指掌……)]
 		#ENDIF
 	</p>
 	<p>
-		With this fact now out in the open, the two of you quickly realise that there's not much point in making small talk. With your conversation now at an end, [el.name] asks,
+		事实摆在眼前，你们俩很快就意识到聊天没什么意义。你们的对话就此结束，[el.name]问道：
 		#IF(el.isSummonerServant())
 			#IF(el.isActive())
-				 [el.speech(So, servant, is there anything else you wished to request of me?)]
+				[el.speech(所以，仆佣，还有什么想问我的？)]
 			#ELSE
-				 [el.thought(So, servant, is there anything else you wished to request of me?)]
+				[el.thought(所以，仆佣，还有什么想问我的？)]
 			#ENDIF
 		#ELSE
 			#IF(el.isActive())
-				 [el.speech(So, [pc.name], is there anything else you wanted me to do?)]
+				[el.speech(所以，[pc.name]，还有什么我要做的么？)]
 			#ELSE
-				 [el.thought(So, [pc.name], is there anything else you wanted me to do?)]
+				[el.thought(所以，[pc.name]，还有什么我要做的么？)]
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELEMENTAL_PETTING -->
@@ -265,76 +265,76 @@
 	<htmlContent tag="ELEMENTAL_PETTING"><![CDATA[
 	#IF(el.getPassiveForm()==null)
 		<p>
-			Deciding that your elemental deserves a good petting, you [pc.step] towards [el.her] wisp-like form and hold your [pc.hand] up towards [el.herHim]. Knowing exactly what it is that you intend to do, [el.name] focuses on solidifying the core of [el.her] ethereal body, allowing you to reach up and touch [el.herHim].
+			觉得你的元素体值得好好摸摸，你向[el.her]飘渺的身形走去，朝[el.herHim]举起你的[pc.hand]。知道你要做什么后，[el.name]集中精力固化[el.her]空灵身体的核心，让你能够伸手触摸到[el.herHim]。
 		</p>
 		<p>
-			[el.thought(That feels... good...)] [el.namePos] voice echoes into your mind as you start stroking [el.herHim]. Thanks to the fact that [el.sheIsFull] directly linked to your subconscious, you find yourself sharing in the pleasurable feeling of being petted, which encourages you to keep on doing it. The [el.skinColour] light of [el.namePos] wisp-like form shimmers as [el.she] projects a deeply-satisfied sigh into your mind, [el.thought(Yes... Keep going...)]
+			[el.thought(这感觉……不错……)]当你开始抚摸[el.herHim]时，[el.namePos]的声音在你的脑海中回荡。[el.sheIsFull]直接与你的潜意识相连，你发现自己也被分享着被抚摸的愉悦感，这促使你继续抚摸。[el.namePos]缕缕身形的[el.skinColour]光芒闪烁，[el.she]在你的脑海中发出深深满足的叹息：[el.thought(啊……继续……)]
 		</p>
 	#ELSE
 		<p>
 			#IF(el.getPassiveForm().getRace().isFlyingRace())
-				Deciding that your cute little elemental deserves a good petting, you hold your [pc.hand] out towards [el.herHim]. Knowing exactly what it is that you intend to do, [el.name], who's in the form of a small [el.passiveForm], happily flies over to land on your outstretched [pc.hand] and let you pet [el.herHim].
+				觉得你可爱的小元素体应该得到好好摸摸，你向[el.herHim]伸出了[pc.hand]。小[el.passiveForm]的[el.name]很清楚你的意图，它高兴地飞了过来，落在你伸出的[pc.hand]上，让你抚摸[el.herHim]。
 			#ELSE
-				Deciding that your cute little elemental deserves a good petting, you bend down and hold your [pc.hand] out towards [el.herHim]. Knowing exactly what it is that you intend to do, [el.name], who's in the form of a small [el.passiveForm], happily moves towards you and lets you pet [el.herHim].
+				觉得你可爱的小元素体应该得到好好摸摸，你弯下腰，朝[el.herHim]伸出了[pc.hand]。小[el.passiveForm]的[el.name]很清楚你的意图，它高兴地飞了过来，落在你伸出的[pc.hand]上，让你抚摸[el.herHim]。
 			#ENDIF
 		</p>
 		<p>
-			[el.thought(That feels... good...)] [el.namePos] voice echoes into your mind as you start stroking [el.herHim]. Thanks to the fact that [el.sheIsFull] directly linked to your subconscious, you find yourself sharing in the pleasurable feeling of being petted, which encourages you to keep on doing it. The faint [el.skinColour] light which surrounds [el.namePos] body shimmers as [el.she] projects a deeply-satisfied sigh into your mind, [el.thought(Yes... Keep going...)]
+			[el.thought(这感觉……不错……)]当你开始抚摸[el.herHim]时，[el.namePos]的声音在你的脑海中回荡。[el.sheIsFull]直接与你的潜意识相连，你发现自己也被分享着被抚摸的愉悦感，这促使你继续抚摸。[el.namePos]围绕身体的[el.skinColour]微弱的光芒闪烁，[el.she]在你的脑海中发出深深满足的叹息：[el.thought(啊……继续……)]
 		</p>
 	#ENDIF
 	<p>
-		Doing as [el.she] suggests, you keep on petting your elemental for some time, and soon find yourself letting out happy sighs of your own as you bond with [el.name]. Eventually, however, you feel as though you've spent enough time doing this, and after forcing yourself to stop stroking and petting your elemental, you wonder what to do next...
+		按照[el.she]的建议，你继续抚摸了你的元素体一会儿，很快发现自己在与[el.name]的结合的过程中发出了快乐的叹息。最后，你觉得已经花了足够多的时间，强迫自己停止抚摸元素体后，接下来该做什么……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ELEMENTAL_PASSIVE_FORM -->
 	
 	<htmlContent tag="ELEMENTAL_PASSIVE_FORM"><![CDATA[
 	<p>
-		Wanting to know more about the passive form which [el.name] is current in, you ask [el.herHim] what [el.she] can tell you about it.
+		你想进一步了解[el.name]当前处在的被动形态，于是询问对方，能否告诉你关于这个形态的更多信息。
 	</p>
 	<p>
 		#IF(el.isSummonerServant())
-			[el.thought(If you must know, <i>servant</i>, I have to assume a smaller, passive form for the vast majority of the time, or else I'll quickly run out of energy and return to your aura,)]
+			[el.thought(如果你一定要知道的话，<i>主人</i>，我大多数时间都必须保持小小的被动形态，否则我会很快耗尽能量并返回你的灵气中，)]
 		#ELSE
-			[el.thought(Well, I have to assume a smaller, passive form for the vast majority of the time, or else I'll quickly run out of energy and return to your aura,)]
+			[el.thought(嗯，我大多数时间都必须保持小小的被动形态，否则我会很快耗尽能量并返回你的灵气中，)]
 		#ENDIF
-		 [el.name] says, before continuing, [el.thought(Only the elementals of lilin can indefinitely maintain their active forms, and while your aura is definitely an exceptionally strong one, I still need to stay in my passive form until I'm required for combat or sex...)]
+		[el.name]回答说，然后继续解释道，[el.thought(只有莉琳的元素才能无限期地保持活跃的形态，虽然你的灵气确实异常强大，但我仍然需要保持被动形态，直到需要我参与战斗或性事……)]
 	</p>
 	<p>
-		Asking your elemental if it would be possible for [el.herHim] to transform [el.her] passive form into a different shape, you're given the answer, [el.thought(Of course. Apart from taking the form of a wisp, I can transform myself into the shape of any animal you'd like. I can't maintain a form larger than a small cat, however, so taking on the form of a large animal may make me look silly... Did you want me to change my form now?)]
+		你询问元素是否可以把[el.her]的被动形式变换成不同的形状，[el.she]回答，[el.thought(当然可以。除了化作一缕轻烟，我还可以把自己变形成任何你喜欢的动物的形状。但是我无法维持大于一只小猫的形态，所以如果我化身为一只大动物，可能会看起来有些可笑……你现在想要我改变形态吗？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELEMENTAL_PASSIVE_FORM_BACK"><![CDATA[
 	<p>
-		After you've told [el.name] that you don't want [el.herHim] to change [el.her] passive form, [el.she] asks, [el.thought(So, is there anything else you needed?)]
+		在你告诉[el.name]你不想要[el.herhim]改变[el.her]的被动形态后，[el.her]问道，[el.thought(那么，还有其他需要么？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ELEMENTAL_PASSIVE_FORM_CHANGE"><![CDATA[
 	<p>
-		Wanting [el.name] to take on a different passive form, you ask [el.herHim] to transform into [#SPECIAL_PARSE_0].
+		你想让[el.name]采取不同的被动形态，于是请求[el.herHim]变形成为[#SPECIAL_PARSE_0]。
 	</p>
 	<p>
 		#IF(el.isSummonerServant())
-			[el.thought(Very well, I suppose that I see no reason to decline your request,)] [el.name] says, and then in a sudden flash of [el.skinColour] arcane energy, [el.she] takes on the form of [#SPECIAL_PARSE_0], just as you asked.
+			[el.name]说，[el.thought(好吧，我想我没有理由拒绝你的请求，)]，然后在一阵[el.skinColour]奥术能量的闪光中，就像你要求的那样变成了[#SPECIAL_PARSE_0]的形态。
 		#ELSE
-			[el.thought(Very well, please give me just a moment,)] [el.name] obediently says, and then in a sudden flash of [el.skinColour] arcane energy, [el.she] takes on the form of [#SPECIAL_PARSE_0], just as you asked.
+			[el.name]顺从地说，[el.thought(好的，请给我一点时间，)]然后在一阵[el.skinColour]奥术能量的闪光中，就像你要求的那样变成了[#SPECIAL_PARSE_0]的形态。
 		#ENDIF
 	</p>
 	<p>
 		#IF(el.getPassiveForm()==null)
-			Now in the form of an ethereal, floating wisp, your elemental hovers in front of you and asks, [el.thought(Is there anything else you needed?)]
+			现在[el.name]化身成了虚无飘渺的光球，你的元素漂浮在你面前，问道，[el.thought(还有其他需要我做的吗？)]
 		#ELSE
-			Now in the form of a small, cute [el.passiveForm], your elemental asks, [el.thought(So, is there anything else you needed?)]
+			现在[el.name]化身成了小巧可爱的[el.passiveForm]，[el.name]问道，[el.thought(那么，还有其他需要我做的吗？)]
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

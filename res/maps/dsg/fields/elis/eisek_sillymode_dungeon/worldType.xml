@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <worldType>
 	
 	<worldRegion>FIELD_CITY</worldRegion>
 	
-	<name><![CDATA[Basement]]></name>
+	<name><![CDATA[地下室]]></name>
 	
 	<colour>BASE_GREY</colour>
 	
-	<sexBlockedReason><![CDATA[Getting off in a dungeon full of weirdos isn't a good idea.]]></sexBlockedReason> 
+	<sexBlockedReason><![CDATA[在一个满是怪人的地牢里待着可不是个好主意。]]></sexBlockedReason> 
 	
 	<furniturePresent>false</furniturePresent>
 	

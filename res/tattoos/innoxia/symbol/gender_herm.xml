@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[hermaphroditic glyph]]></name>
+		<name><![CDATA[雌雄同体符号]]></name>
 		
-		<description><![CDATA[This glyph represents the combination of both male and female sex and gender.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts a hermaphroditic symbol]]></bodyOverviewDescription> 
+		<description><![CDATA[这个符号代表男性和女性生理性别与性别认同的结合。]]></description> 
+		<bodyOverviewDescription><![CDATA[雌雄同体符号的纹身]]></bodyOverviewDescription> 
 		
 		<imageName>gender_herm.svg</imageName> 
 		

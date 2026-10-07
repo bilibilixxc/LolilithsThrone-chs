@@ -9,15 +9,15 @@ package com.lilithsthrone.game.character.body.valueEnums;
  */
 public enum TongueLength {
 	
-	ZERO_NORMAL("normal-sized", 0, 5),
+	ZERO_NORMAL("正常大小", 0, 5),
 
-	ONE_LONG("long", 5, 10),
+	ONE_LONG("较长", 5, 10),
 
-	TWO_VERY_LONG("very long", 10, 20),
+	TWO_VERY_LONG("很长", 10, 20),
 
-	THREE_EXTREMELY_LONG("extremely long", 20, 30),
+	THREE_EXTREMELY_LONG("极长", 20, 30),
 
-	FOUR_ABSURDLY_LONG("absurdly long", 30, 60);
+	FOUR_ABSURDLY_LONG("长到离谱", 30, 60);
 
 	private int minimumValue, maximumValue;
 	private String descriptor;

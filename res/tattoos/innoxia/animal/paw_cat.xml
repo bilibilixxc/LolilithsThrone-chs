@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <tattoo>
 	<coreAttributes>
 		<value>500</value> 
 		
-		<name><![CDATA[cat paw]]></name>
+		<name><![CDATA[猫爪]]></name>
 		
-		<description><![CDATA[A stylised silhouette of a feline's paw-print.]]></description> 
-		<bodyOverviewDescription><![CDATA[a tattoo which depicts a stylised silhouette of a feline's paw-print]]></bodyOverviewDescription> 
+		<description><![CDATA[猫爪印轮廓。]]></description> 
+		<bodyOverviewDescription><![CDATA[猫爪印纹身]]></bodyOverviewDescription> 
 		
 		<imageName>paw_cat.svg</imageName> 
 		

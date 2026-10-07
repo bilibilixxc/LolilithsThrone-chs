@@ -57,9 +57,9 @@ public enum SlaveJob {
 			0.05f,
 			-1,
 			-0,
-			"Idle",
-			"Idle",
-			"Do not assign any job to this character.",
+			"空闲",
+			"空闲",
+			"不给该角色分配工作。",
 			0, 0,
 			0,
 			0, 0,
@@ -134,9 +134,9 @@ public enum SlaveJob {
 			0.05f,
 			20,
 			2f,
-			"maid",
-			"manservant",
-			"Assign this character to help Rose keep the house clean, deal with visitors, and perform all sorts of menial housework.",
+			"女仆",
+			"男仆",
+			"安排该角色协助萝丝维持房屋清洁，招待客人，以及做其他枯燥的家务。",
 			0, 0.5f,
 			80,
 			0f, 0.1f,
@@ -172,9 +172,9 @@ public enum SlaveJob {
 			0.05f,
 			8,
 			2f,
-			"security guard",
-			"security guard",
-			"Assign this character to act as a security guard. A guard will always be posted at the entrance, with other guards patrolling the corridors.",
+			"保安",
+			"保安",
+			"安排该角色担任保安。总有一名保安被安置在入口，而其他的则在走廊巡逻。",
 			0, 0.5f,
 			80,
 			0f, 0.1f,
@@ -229,9 +229,9 @@ public enum SlaveJob {
 			0.05f,
 			5,
 			1.5f,
-			"librarian",
-			"librarian",
-			"Assign this character to work in Lilaya's library.",
+			"图书管理员",
+			"图书管理员",
+			"安排该角色在莉莱雅的图书馆工作。",
 			0, 0.25f, 
 			80,
 			0, 0.1f,
@@ -250,9 +250,9 @@ public enum SlaveJob {
 			0.05f,
 			5,
 			2,
-			"cook",
-			"cook",
-			"Assign this character to work in Lilaya's kitchen as a cook.",
+			"厨师",
+			"厨师",
+			"安排该角色在莉莱雅的厨房担任厨师。",
 			0, 0.25f,
 			80,
 			0, 0.05f,
@@ -271,9 +271,9 @@ public enum SlaveJob {
 			0.05f,
 			4,
 			2,
-			"gardener",
-			"gardener",
-			"Assign this character to work as a gardener in Lilaya's courtyard garden.",
+			"园丁",
+			"园丁",
+			"安排该角色在莉莱雅的庭院花园中担任园丁。",
 			0, 0.25f,
 			80,
 			0, 0.05f,
@@ -292,9 +292,9 @@ public enum SlaveJob {
 			0.05f,
 			1,
 			1.5f,
-			"lab assistant",
-			"lab assistant",
-			"Assign this character to help Lilaya in her lab.",
+			"实验室助手",
+			"实验室助手",
+			"安排该角色在实验室协助莉莱雅。",
 			0, 0.25f,
 			100,
 			0, 0.2f,
@@ -317,7 +317,7 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(hour<6 || hour>=22) {
-				return "No-one can work in Lilaya's lab while she is sleeping!";
+				return "莉莱雅睡觉时，不能有人在实验室工作！";
 			}
 			return super.getAvailabilityText(hour, character);
 		}
@@ -327,9 +327,9 @@ public enum SlaveJob {
 			0.5f,
 			5,
 			3f,
-			"test subject",
-			"test subject",
-			"Allow Lilaya to use this slave as a test subject for her experiments.",
+			"测试用具",
+			"测试用具",
+			"允许莉莱雅将该奴隶当作实验的用具。",
 			-0.5f, 0.5f,
 			150,
 			0, 0,
@@ -368,7 +368,7 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(hour<6 || hour>=22) {
-				return "No-one can work in Lilaya's lab while she is sleeping!";
+				return "莉莱雅睡觉时，不能有人在实验室工作！";
 			}
 			return super.getAvailabilityText(hour, character);
 		}
@@ -378,16 +378,16 @@ public enum SlaveJob {
 			0.5f,
 			-1,
 			0,
-			"statue",
-			"statue",
-			"Command your doll to go to their assigned station and remain motionless there.",
+			"雕像",
+			"雕像",
+			"命令你的玩偶去指定位置保持不动。",
 			0f, 0f,
 			0,
 			0, 0,
 			null,
 			null,
 			Util.newHashMapOfValues(
-					new Value<>("Statue Pose", Util.newArrayListOfValues(
+					new Value<>("雕像姿势", Util.newArrayListOfValues(
 							SlaveJobSetting.DOLL_STATUE_ARTISTIC,
 							SlaveJobSetting.DOLL_STATUE_ATTENTION,
 							SlaveJobSetting.DOLL_STATUE_STANDING_SPLIT,
@@ -411,12 +411,12 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(!character.isDoll()) {
-				return "Only dolls can work as a statue...";
+				return "只有玩偶能胜任扮演雕像的工作……";
 			}
 			if(character.getHomeWorldLocation().equals(WorldType.getWorldTypeFromId("innoxia_dominion_sex_shop"))) {
-				return "Dolls cannot work while being stored at Lovienne's Luxuries. Move them into a doll closet first!";
+				return "在洛维耶纳奢侈品店暂存的玩偶无法工作。请先将其移动到玩偶贮藏室！";
 			}
-			return "This job is available!";
+			return "该工作可用！";
 		}
 		@Override
 		public void sendToWorkLocation(GameCharacter slave) {
@@ -436,9 +436,9 @@ public enum SlaveJob {
 			0.5f,
 			5,
 			2f,
-			"public fucktoy",
-			"public fucktoy",
-			"Assign this slave to be locked in the public-use stocks in slaver ally.",
+			"肉便器",
+			"肉便器",
+			"安排该角色被锁在奴隶巷的公用颈手枷上。",
 			-5f, 1f,
 			0,
 			0, 0,
@@ -474,9 +474,9 @@ public enum SlaveJob {
 			0.5f,
 			10,
 			2.5f,
-			"Prostitute",
-			"Prostitute",
-			"Assign this slave to work as a prostitute at the brothel 'Angel's Kiss'.",
+			"妓女",
+			"妓女",
+			"安排该奴隶在“天使之吻”妓院做妓女。",
 			-0.25f, 0.5f,
 			200,
 			0, 0.5f,
@@ -523,19 +523,19 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(!Main.game.getDialogueFlags().hasFlag(DialogueFlagValue.prostitutionLicenseObtained)) {
-				return "You do not have permission from Angel to send your slaves to work in her brothel!";
+				return "你还没有从安吉尔那里取得许可，无法让奴隶在她的妓院工作！";
 				
 			} else if(Main.game.getOccupancyUtil().getCharactersWorkingJob(hour, this)>=this.getSlaveLimit()) {
-				return "You have already assigned the maximum number of slaves to this job!";
+				return "安排为该工作的奴隶数量已经达到最大！";
 				
 			} else if(character.getHomeLocationPlace().getPlaceType().equals(PlaceType.SLAVER_ALLEY_SLAVERY_ADMINISTRATION)) {
-				return "Slaves cannot work out of the cells at slavery administration. Move them into a room first!";
+				return "在奴隶管理局暂留室的奴隶无法工作。请先将其移动到一个房间！";
 				
 			} else if(character.getHomeWorldLocation().equals(WorldType.getWorldTypeFromId("innoxia_dominion_sex_shop"))) {
-				return "Dolls cannot work while being stored at Lovienne's Luxuries. Move them into a doll closet first!";
+				return "在洛维耶纳奢侈品店暂存的玩偶无法工作。请先将其移动到玩偶贮藏室！";
 				
 			} else {
-				return "This job is available!";
+				return "该工作可用！";
 			}
 		}
 	},
@@ -544,9 +544,9 @@ public enum SlaveJob {
 			1f,
 			-1,
 			2f,
-			"Dairy Cow",
-			"Dairy Bull",
-			"Assign this slave to the milking stalls, ready to have their milk, cum, and/or girlcum milked from them.",
+			"奶牛",
+			"奶牛",
+			"安排该奴隶到挤奶台上，从他们身上榨取乳汁、精液、爱液。",
 			-0.25f, 1f,
 			0,
 			0, 0,
@@ -566,7 +566,7 @@ public enum SlaveJob {
 					SlaveJobSetting.MILKING_CUM,
 					SlaveJobSetting.MILKING_GIRLCUM),
 			Util.newHashMapOfValues(
-					new Value<>("Room Preference", Util.newArrayListOfValues(
+					new Value<>("房间偏好", Util.newArrayListOfValues(
 							SlaveJobSetting.MILKING_INDUSTRIAL,
 							SlaveJobSetting.MILKING_REGULAR,
 							SlaveJobSetting.MILKING_ARTISAN,
@@ -607,13 +607,13 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(!isAvailable(hour, character)) {
-				return "Not enough space in milking rooms!";
+				return "挤奶间空间不足！";
 				
 			} else if(character.getHomeLocationPlace().getPlaceType().equals(PlaceType.SLAVER_ALLEY_SLAVERY_ADMINISTRATION)) {
-				return "Slaves cannot work out of the cells at slavery administration. Move them into a room first!";
+				return "在奴隶管理局暂留室的奴隶无法工作。请先将其移动到一个房间！";
 				
 			} else if(character.getHomeWorldLocation().equals(WorldType.getWorldTypeFromId("innoxia_dominion_sex_shop"))) {
-				return "Dolls cannot work while being stored at Lovienne's Luxuries. Move them into a doll closet first!";
+				return "在洛维耶纳奢侈品店暂存的玩偶无法工作。请先将其移动到玩偶贮藏室！";
 				
 			}
 			return super.getAvailabilityText(hour, character);
@@ -796,9 +796,9 @@ public enum SlaveJob {
 			0.05f,
 			4,
 			2f,
-			"office worker",
-			"office worker",
-			"Assign this character to work in the office which you've had outfitted here in Lilaya's house.",
+			"办公室职员",
+			"办公室职员",
+			"安排该角色到你在莉莱雅家里布置的办公室工作。",
 			0, 0,
 			100,
 			0, 1f,
@@ -835,13 +835,13 @@ public enum SlaveJob {
 		
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(!isAvailable(hour, character)) {
-				return "There isn't enough office space to assign this job!";
+				return "办公室空间不足，无法安排该工作！";
 				
 			} else if(character.getHomeLocationPlace().getPlaceType().equals(PlaceType.SLAVER_ALLEY_SLAVERY_ADMINISTRATION)) {
-				return "Slaves cannot work out of the cells at slavery administration. Move them into a room first!";
+				return "在奴隶管理局暂留室的奴隶无法工作。请先将其移动到一个房间！";
 				
 			} else if(character.getHomeWorldLocation().equals(WorldType.getWorldTypeFromId("innoxia_dominion_sex_shop"))) {
-				return "Dolls cannot work while being stored at Lovienne's Luxuries. Move them into a doll closet first!";
+				return "在洛维耶纳奢侈品店暂存的玩偶无法工作。请先将其移动到玩偶贮藏室！";
 			}
 			
 			return super.getAvailabilityText(hour, character);
@@ -887,9 +887,9 @@ public enum SlaveJob {
 			0.05f,
 			4,
 			0,
-			"bedroom slave",
-			"bedroom slave",
-			"Assign this slave to wait upon you in your bedroom.",
+			"卧室的奴隶",
+			"卧室的奴隶",
+			"安排该奴隶在你的卧室等候。",
 			0, 0.25f,
 			0,
 			0, 0,
@@ -902,7 +902,7 @@ public enum SlaveJob {
 					SlaveJobSetting.BEDROOM_GREETING,
 					SlaveJobSetting.BEDROOM_CLEAN),
 			Util.newHashMapOfValues(
-					new Value<>("Sleeping Arrangements",
+					new Value<>("睡眠安排",
 						Util.newArrayListOfValues(
 							SlaveJobSetting.BEDROOM_SLEEP_FLOOR,
 							SlaveJobSetting.BEDROOM_SLEEP_ON_BED,
@@ -927,9 +927,9 @@ public enum SlaveJob {
 			0.05f,
 			8,
 			1.5f,
-			"Spa servant",
-			"Spa servant",
-			"Assign this slave to your private spa, ready to give you a massage or tend to any of your needs.",
+			"水疗仆役",
+			"水疗仆役",
+			"安排该奴隶到你的私人水疗中心，随时准备好给你按摩或者满足你的要求。",
 			0.5f, -0.1f,
 			0,
 			0, 0,
@@ -969,7 +969,7 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(Main.game.getWorlds().get(WorldType.LILAYAS_HOUSE_GROUND_FLOOR).getCell(PlaceType.LILAYA_HOME_SPA)==null) {
-				return "The spa upgrade must be constructed before this job is available!";
+				return "水疗中心升级后才能安排该工作！";
 			}
 			return super.getAvailabilityText(hour, character);
 		}
@@ -983,9 +983,9 @@ public enum SlaveJob {
 			0.05f,
 			2,
 			2f,
-			"Spa clerk",
-			"Spa clerk",
-			"Assign this slave to work on the reception desk of your private spa.",
+			"水疗文员",
+			"水疗文员",
+			"安排该奴隶在你的私人水疗中心的前台工作。",
 			0, 0.05f,
 			0,
 			0, 0,
@@ -1017,7 +1017,7 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(Main.game.getWorlds().get(WorldType.LILAYAS_HOUSE_GROUND_FLOOR).getCell(PlaceType.LILAYA_HOME_SPA)==null) {
-				return "The spa upgrade must be constructed before this job is available!";
+				return "水疗中心升级后才能安排该工作！";
 			}
 			return super.getAvailabilityText(hour, character);
 		}
@@ -1057,9 +1057,9 @@ public enum SlaveJob {
 			0.05f,
 			6,
 			2f,
-			"waitress",
-			"waiter",
-			"Assign this character to serve food in a dining hall.",
+			"服务员",
+			"服务员",
+			"安排该角色在餐厅送餐。",
 			0, 0.5f,
 			50,
 			0, 0.05f,
@@ -1131,7 +1131,7 @@ public enum SlaveJob {
 		@Override
 		public String getAvailabilityText(int hour, GameCharacter character) {
 			if(getDiningHallCell()==null) {
-				return "The dining hall upgrade must be constructed before this job is available!";
+				return "餐厅升级后才能安排该工作！";
 			}
 			return super.getAvailabilityText(hour, character);
 		}
@@ -1431,19 +1431,19 @@ public enum SlaveJob {
 	
 	public String getAvailabilityText(int hour, GameCharacter character) {
 		if(Main.game.getOccupancyUtil().getCharactersWorkingJob(hour, this)>=this.getSlaveLimit()) {
-			return "You have already assigned the maximum number of people to this job!";
+			return "安排为该工作的角色数量已经达到最大！";
 			
 		} else if(character.getHomeLocationPlace().getPlaceType().equals(PlaceType.SLAVER_ALLEY_SLAVERY_ADMINISTRATION)) {
-			return "Slaves cannot work out of the cells at slavery administration. Move them into a room first!";
+			return "在奴隶管理局暂留室的奴隶无法工作。请先将其移动到一个房间！";
 			
 		} else if(character.getHomeWorldLocation().equals(WorldType.getWorldTypeFromId("innoxia_dominion_sex_shop"))) {
-			return "Dolls cannot work while being stored at Lovienne's Luxuries. Move them into a doll closet first!";
+			return "在洛维耶纳奢侈品店暂存的玩偶无法工作。请先将其移动到玩偶贮藏室！";
 			
 		} else if(!character.isSlave() && character.isSleepingAtHour(hour)) {
-			return UtilText.parse(character, "[npc.Name] is sleeping at this hour, and as [npc.she] is not your slave, you cannot force [npc.herHim] to work at this time!");
+			return UtilText.parse(character, "[npc.Name]现在正在谁家，而且[npc.she]并非你的奴隶，你无法强制要求[npc.herHim]现在工作！");
 			
 		} else {
-			return "This job is unavailable!";
+			return "该工作不可用！";
 		}
 	}
 	

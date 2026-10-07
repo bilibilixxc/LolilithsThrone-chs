@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <weapon>
 	<coreAttributes>
 		<value>25</value>
@@ -9,17 +9,17 @@
 		<oneShotWeaponChanceToRecoverAfterTurn>75</oneShotWeaponChanceToRecoverAfterTurn>
 		<oneShotWeaponChanceToRecoverAfterCombat>100</oneShotWeaponChanceToRecoverAfterCombat>
 		
-		<determiner><![CDATA[a]]></determiner>
-		<name appendDamageName="false"><![CDATA[ball of yarn]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[balls of yarn]]></namePlural>
-		<description><![CDATA[A long, continuous length of interlocked woollen fibres, which has been wrapped up into a tight ball.]]></description>
-		<attackDescriptor>throw</attackDescriptor>
+		<determiner><![CDATA[一件]]></determiner>
+		<name appendDamageName="false"><![CDATA[毛线球]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[毛线球]]></namePlural>
+		<description><![CDATA[一长段连续交错的羊毛纤维，被紧紧包裹成团。]]></description>
+		<attackDescriptor><![CDATA[扔]]></attackDescriptor>
 		<attackDescriptionPrefix>throw ball of yarn at</attackDescriptionPrefix>
-		<attackTooltipDescription>Throw the ball of yarn at [npc2.name].</attackTooltipDescription>
+		<attackTooltipDescription><![CDATA[向着[npc2.name]丢出毛线球。]]></attackTooltipDescription>
 		<rarity>COMMON</rarity>
 		
-		<equipText><![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] ball of yarn and [npc.verb(prepare)] to throw it.]]></equipText>
-		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] [npc.her] ball of yarn away.]]></unequipText>
+		<equipText><![CDATA[[npc.Name]紧紧攥住毛线球，准备好丢出去了。]]></equipText>
+		<unequipText><![CDATA[[npc.Name]收起了毛线球。]]></unequipText>
 		
 		<imageName>yarn.svg</imageName> 
 		<imageEquippedName/>
@@ -39,7 +39,7 @@
 		
 		<effects/>
 		<extraEffects>
-			<effect><![CDATA[[style.colourExcellent(Subdues)] [style.colourTfGreater(greater)] [style.colourCat(cat-morphs)]]]></effect>
+			<effect><![CDATA[[style.colourExcellent(制服)][style.colourTfGreater(纯)][style.colourCat(猫化形)]]]></effect>
 		</extraEffects>
 		
 		<onHitEffect><![CDATA[
@@ -72,25 +72,25 @@
 
 	<hitDescriptions>
 		<hitText><![CDATA[
-		Hurling [npc.her] ball of yarn at [npc2.name], [npc.name] [npc.verb(manage)] to hit [npc2.herHim] square in the chest!
+		[npc.Name]向着[npc2.name]丢出了毛线球，击中了[npc2.herHim]的胸口正中！
 		]]></hitText>
 		<hitText><![CDATA[
-		Throwing [npc.her] ball of yarn at [npc2.name], [npc.name] [npc.verb(manage)] to strike [npc2.herHim] on the [npc.arm(true)]!
+		[npc.Name]把毛线球向着[npc2.name]丢出去，击中了[npc2.herHim]的[npc.arm(true)]！
 		]]></hitText>
 		<hitText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(launch)] [npc.her] ball of yarn at [npc2.name] and [npc.verb(succeed)] in hitting [npc2.herHim]!
+		[npc.Name]快步上前，用毛线球投向[npc2.name]，成功击中了[npc2.herHim]！
 		]]></hitText>
 	</hitDescriptions>
 
 	<missDescriptions>
 		<missText><![CDATA[
-		Hurling [npc.her] ball of yarn at [npc2.name], [npc.name] [npc.verb(end)] up missing [npc2.herHim]!
+		[npc.Name]向着[npc2.name]丢出了毛线球，但没能命中！
 		]]></missText>
 		<missText><![CDATA[
-		Throwing [npc.her] ball of yarn at [npc2.name], [npc.name] [npc.verb(let)] out a frustrated cry as [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]把毛线球向着[npc2.name]丢出去，却没能命中目标，懊恼地叫了一声！
 		]]></missText>
 		<missText><![CDATA[
-		With a quick step forwards, [npc.name] [npc.verb(launch)] [npc.her] ball of yarn at [npc2.name], but [npc.she] [npc.verb(miss)] [npc.her] target!
+		[npc.Name]快步上前，用毛线球投向[npc2.name]，但却丢歪了！
 		]]></missText>
 	</missDescriptions>
 	

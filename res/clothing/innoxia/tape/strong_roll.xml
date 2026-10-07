@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>80</value>
-		<determiner><![CDATA[a roll of]]></determiner>
-		<name><![CDATA[duct tape]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[duct tape]]></namePlural>
+		<determiner><![CDATA[一卷]]></determiner>
+		<name><![CDATA[布基胶带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[布基胶带]]></namePlural>
 		<description><![CDATA[
-			Backed with woven fabric and covered in plastic, this highly adhesive tape is known as 'duct tape', or sometimes 'duck tape'.
+			这种高粘性胶带由纺织物衬底并覆有塑料，被称为“布基胶带”，有时也叫“防水胶带”。
 			#IF(thisItem.getSlotEquippedTo()==null)
-				 It's easily strong enough to keep a person's wrists, ankles, or lips bound together...
+				它的强度足以将一个人的手腕、脚踝或嘴唇束缚在一起……
 			#ELSE
-				 <i>This particular length of duct tape has been
+				<i>这段布基胶带已经
 				#IF(thisItem.getSlotEquippedTo()==IS_WRIST)
-					 wrapped around [npc.namePos] wrists, keeping them tightly bound together!
+					缠绕在了[npc.namePos]的手腕上，将其紧紧地束缚在了一起！
 				#ELSEIF(thisItem.getSlotEquippedTo()==IS_ANKLE)
-					 wrapped around [npc.namePos] ankles, keeping them tightly bound together!
+					缠绕在了[npc.namePos]的脚踝上，将其紧紧地束缚在了一起！
 				#ELSEIF(thisItem.getSlotEquippedTo()==IS_MOUTH)
-					 stuck over [npc.namePos] mouth, preventing [npc.herHim] from speaking!
+					贴在了[npc.namePos]的嘴上，使得[npc.herHim]无法说话！
 				#ENDIF
 				</i>
 			#ENDIF
@@ -114,72 +113,72 @@
 	</coreAttributes>
 
 	<replacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(wrap)] the tape around [npc.her] wrists, effectively binding them together.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(wrap)] the tape around [npc2.namePos] wrists, effectively binding them together.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(wrap)] the tape around [npc2.namePos] wrists, effectively binding them together.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将胶带绕在自己的手腕上，有效地将它们绑在了一起。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将胶带绕在[npc2.namePos]的手腕上，有效地将它们绑在了一起。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将胶带缠在[npc2.namePos]的手腕上，有效地将它们绑在了一起。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="WRIST" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off the tape from around [npc.her] wrists.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off the tape from around [npc2.namePos] wrists.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(tear)] off the tape from around [npc2.namePos] wrists.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]撕下了自己手腕上的胶带。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]撕下了[npc2.namePos]手腕上的胶带。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地扯下了[npc2.namePos]手腕上的胶带。
+		]]></otherRough>
 	</displacementText>
 
 	<replacementText slot="ANKLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(wrap)] the tape around [npc.her] ankles, effectively binding them together.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(wrap)] the tape around [npc2.namePos] ankles, effectively binding them together.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(wrap)] the tape around [npc2.namePos] ankles, effectively binding them together.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]将胶带绕在自己的脚踝上，有效地将它们绑在了一起。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]将胶带绕在[npc2.namePos]的脚踝上，有效地将它们绑在了一起。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将胶带缠在[npc2.namePos]的脚踝上，有效地将它们绑在了一起。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="ANKLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off the tape from around [npc.her] ankles.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off the tape from around [npc2.namePos] ankles.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(tear)] off the tape from around [npc2.namePos] ankles.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]撕下了自己脚踝上的胶带。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]撕下了[npc2.namePos]脚踝上的胶带。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地扯下了[npc2.namePos]脚踝上的胶带。
+		]]></otherRough>
 	</displacementText>
 	
 	<replacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a long piece of tape and [npc.verb(stick)] it over [npc.her] mouth.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a long piece of tape and [npc.verb(stick)] it over [npc2.namePos] mouth.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a long piece of tape and roughly [npc.verb(stick)] it over [npc2.namePos] mouth.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]撕下一长条胶带，将它贴在了自己的嘴上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]撕下一长条胶带，将它贴在了[npc2.namePos]的嘴上。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]撕下一长条胶带，粗暴地将它贴在了[npc2.namePos]的嘴上。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(wince)] as [npc.she] [npc.verb(peel)] the tape off [npc.her] mouth.]]>
-		</self>
-		<other>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] as [npc.name] [npc.verb(peel)] the tape off [npc2.her] mouth.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] and [npc2.verb(let)] out a cry as [npc.name] roughly [npc.verb(rip)] the tape off [npc2.her] mouth.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]揭下了自己嘴上的胶带，痛得龇牙咧嘴。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]揭下了[npc2.name]嘴上的胶带，[npc2.Name]痛得龇牙咧嘴。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.name]粗暴地撕掉了[npc2.name]嘴上的胶带，[npc2.Name]痛得龇牙咧嘴，发出了一声尖叫。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

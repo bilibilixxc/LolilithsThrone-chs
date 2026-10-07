@@ -1,306 +1,306 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- OUTSIDE -->
 	
 	<htmlContent tag="OUTSIDE"><![CDATA[
 	<p>
-		An arrow-shaped sign sits in the middle of the street, and as you approach, you see that it's sporting the words <i>'Harpy Nests'</i>. Looking to the side of the road in the direction that the arrow is pointing, you find yourself looking up at one of the tallest buildings in Dominion.
+		街道中间有一个箭头形状的标志，当你走近时，你会看到它上面写着<i>“哈比之巢”</i>。朝箭头所指的方向看向路边，你会发现自己正仰望着御城区最高的建筑之一。
+        </p>
+	<p>
+		这栋建筑有八层楼高，尽管算不上摩天大楼，但由于御城区的建筑通常最高也不过四五层，因此这座建筑的规模足以让人觉得它是一座非常重要的建筑。尽管它的高度不同寻常，但它与这一地区所有其他建筑的唯一不同之处只在于其正面有一对巨大的玻璃门。
 	</p>
 	<p>
-		At eight stories in height, it's not exactly a sky-scraper, but with most of Dominion's buildings typically only being four or five stories tall at most, this structure is large enough to clearly stand out as a building of some importance. Despite its unusual height, the only other feature setting it apart from all the other buildings in this area is the pair of huge glass doors set into its frontage.
-	</p>
-	<p>
-		Looking through the doors, you see a brightly-lit, extravagantly-decorated lobby. Rows of elevators are set into either side of the room, and you notice that there are an unusual amount of harpies loitering around on the many comfortable-looking sofas that litter the area.
+		透过大门，你看到了一个灯火通明、装饰奢华的大厅，一排排电梯分列在大厅两侧。同时你注意到在许多看起来很舒适的沙发上，有很多哈比在闲逛。
 	</p>
 	<p>
 		#IF(pc.isAbleToFly())
 			#IF(pc.hasCompanions() && !pc.isPartyAbleToFly())
-				It's obvious from even a cursory glance that this building is the entrance to the rooftop Harpy Nests, and you wonder if you and [com.name] should step inside and make use of one of the elevators.
+				即使只是粗略地看一眼，也能看出来这座建筑是哈比之巢的入口，你不知道自己和[com.name]是否应该走进去，使用其中一部电梯。
 			#ELSE
-				It's obvious from even a cursory glance that this building is the entrance to the rooftop Harpy Nests, but seeing as you're able to fly, you don't really have much use for the elevators inside.
+				即使只是粗略地看一眼，也能看出来这座建筑是哈比之巢的入口，但由于你可以飞行，所以里面的电梯并没有什么用处。
 			#ENDIF
 		#ELSE 
-			It's obvious from even a cursory glance that this building is the entrance to the rooftop Harpy Nests, and you wonder if you should step inside and make use of one of the elevators.
+			即使只是粗略地看一眼，也看出来这座建筑是哈比之巢的入口，你不知道自己是否应该走进去，使用其中一部电梯。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="OUTSIDE_ENTRY"><![CDATA[
 	#IF(pc.isPartyAbleToFly())
 		<p>
 			#IF(pc.hasCompanions())
-				Telling [com.name] to follow along, you #IF(!pc.isAbleToFlyFromExtraParts())spread your wings and #ENDIFdash into a forwards sprint, and with a little jump#IF(!pc.isAbleToFlyFromExtraParts()) and a few powerful flaps,#ENDIF you take off into the air. Quickly gaining altitude, you circle back towards the tall building, looking for an easy spot to land. Thankfully, the structure's steepled roof has had a flat platform built over the top of it, and#IF(!pc.isAbleToFlyFromExtraParts()) with another flap of your wings,#ENDIF you and your [com.companion] swoop down to land on top of it.
+				你告诉[com.name]跟上，然后#IF(!pc.isAbleToFlyFromExtraParts())张开你的翅膀，#ENDIF向前冲刺，轻轻一跳，#IF(!pc.isAbleToFlyFromExtraParts())再加上几个有力的振翅，#ENDIF你腾空而起，盘旋回到高楼，寻找一个容易降落的地点。值得庆幸的是，这栋建筑的尖顶上面建有一个平整的平台，#IF(!pc.isAbleToFlyFromExtraParts())再次扇动翅膀，#ENDIF你和你的[com.companion]就可以俯冲而下，降落在平台之上。
 			#ELSE
-				#IF(!pc.isAbleToFlyFromExtraParts())Spreading your wings, you#ELSEYou#ENDIF dash into a forwards sprint, and with a little jump#IF(!pc.isAbleToFlyFromExtraParts()) and a powerful flap#ENDIF, you take off into the air. Quickly gaining altitude, you circle back towards the tall building, looking for an easy spot to land. Thankfully, the structure's steepled roof has had a flat platform built over the top of it, and#IF(!pc.isAbleToFlyFromExtraParts()) with another flap of your wings,#ENDIF you gracefully swoop down to land on top of it.
+				#IF(!pc.isAbleToFlyFromExtraParts())你伸展开你的翅膀，#ELSE你#ENDIF向前冲刺，稍作跳跃，#IF(!pc.isAbleToFlyFromExtraParts())和一个有力的振翅，#ENDIF你腾空而起，盘旋回到高楼，寻找一个容易降落的地方。值得庆幸的是，这栋建筑的尖顶上面建有一个平整的平台，#IF(!pc.isAbleToFlyFromExtraParts())你再次扇动翅膀，优雅地俯冲而下，#ENDIF降落在平台之上。
 			#ENDIF
 		</p>
 		<p>
-			Looking around, you see that the only exit from the platform is a ramp that leads straight down into the building's top floor, and a sign above the opening reads <i>'Harpy entrance'</i>. Walking down the ramp, you push open a little door and step inside.
+			环顾四周，你发现平台的唯一出口是一条直通大楼顶层的斜坡，坡口上方的牌子上写着<i>“哈比入口”</i>。走下斜坡，你推开一扇小门走了进去。
 		</p>
 	#ELSE
 		<p>
-			Pushing open one of the large glass doors, you step forwards into the lobby. Although there's a front desk, it's currently surrounded by a group of bickering harpies, and from what snippets of conversation you can catch, it sounds like they're arguing with the receptionist, and each other, over what colour of feather is the most attractive.
+			推开其中一扇大玻璃门，你走进大厅。尽管那有一个前台，但它目前被一群争吵的哈比包围着，从你能够听到的零星谈话片段中，他们似乎在与接待员和彼此互相争论什么颜色的羽毛最吸引人。
 		</p>
 		<p>
-			Looking around, you don't see any other members of the building's staff, and so assuming that they're available for anyone to use, you head over to one of the elevators and step inside. Pressing the button on the control panel marked 'up', the automatic doors slide shut, and with a hum of arcane energy, the lift lurches into motion.
+			环顾四周，你没有看到大楼里的其他工作人员，因此你假定这些电梯可供任何人使用，便走向其中一部电梯，走了进去。按下控制面板上标有“上行”的按钮，自动门滑动关闭，伴随着奥术能量的嗡嗡声，电梯开始运行。
 		</p>
 		<p>
-			After quickly transporting you up to the top of the building, the elevator's doors ping open, allowing you to [pc.step] out into the building's top floor.
+			快速将你送上大楼顶层后，电梯门“呯”的一声打开，你可以[pc.step]出电梯，进入大楼顶层。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE_ENFORCER_POST -->
 	
 	<htmlContent tag="ENTRANCE_ENFORCER_POST"><![CDATA[
 	<p>
-		You find yourself standing in yet another large, open-plan lobby, but this one has quite a different atmosphere than the one on the ground floor. Everywhere you look, uniformed Enforcers are standing guard, carefully tracking each passer-by with a suspicious gaze. A large desk, manned by yet more Enforcers, sits between you and the door marked <i>'Harpy Nests Entrance'</i>.
+		你发现自己站在另一个宽敞的开放式大厅里，但这个大厅的气氛与一楼的大厅截然不同。你所看到的每一个地方，都有身着制服的执法者站岗，他们用怀疑的目光仔细打量着每一个路人。在你和标有<i>“哈比之巢入口”</i>的大门之间，有一张大桌子，上面坐着更多的执法者。
 	</p>
 	#IF(!game.getDialogueFlags().hasFlag(FLAG_hasHarpyNestAccess))
 		<p>
-			Although none of them are really paying you any attention at the moment, it looks like you're going to have to talk to one of these Enforcers if you want to get past that desk and out into the Harpy Nests.
+			他们现在都没有注意到你，但如果你想穿过那张桌子进入哈比之巢，你必须和其中一个执法者谈谈。
 		</p>
 	#ELSE
 		<p>
-			As you've already spoken to one of the Enforcers and secured a pass, you're free to come and go from the Harpy Nests as you please.
+			你已经与其中一位执法者谈过并获得了通行证，你现在可以随意进出哈比之巢。
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE_ENFORCER_POST_ASK_FOR_ACCESS -->
 	
 	<htmlContent tag="ENTRANCE_ENFORCER_POST_ASK_FOR_ACCESS"><![CDATA[
 	<p>
-		As you approach the desk, a wolf-girl Enforcer catches your eye and calls out, [style.speechFeminine(Hey you, yeah <i>you</i>, come here!)]
+		当你走近办公桌时，一位狼女执法者大叫着吸引了你的注意：[style.speechFeminine(喂！你！没错就是<i>你</i>，过来！)]
 	</p>
 	#IF(pc.getQuest(QUEST_LINE_MAIN)==QUEST_MAIN_1_E_REPORT_TO_HELENA)
 		<p>
-			You do as the wolf-girl asks and walk over to where she's sitting behind the desk. Flashing you a suspicious glance, she says that if you're planning on entering the Harpy Nests, you'll have to tell her what your business here is. Not seeing any reason to lie, you inform the Enforcer that you're here to find a harpy matriarch called 'Helena'.
+			你按照狼女的要求，走到她坐在桌子后面的地方。她狐疑地看了你一眼，说如果你打算进入哈比之巢，就必须告诉她你来这里的目的。你认为没有理由撒谎，就告诉执法者你是来找一个叫“海伦娜”的哈比族长的。
 		</p>
 		<p>
-			A look of surprise crosses the wolf-girl's face as you mention that name, and she warns, [style.speechFeminine(Hey, if you haven't met her before, then listen up. You've no doubt seen Helena in fashion magazines before, right? Well, she's nothing like they make her out to be; you say one wrong word to her, and she goes from beloved celebrity to psycho bitch before you get the chance to apologise. You watch what you say to her, ok?)]
+			当你提到这个名字时，狼女的脸上露出了惊讶的表情，她警告地说：[style.speechFeminine(嘿，如果你还没见过她，那就听好了。你肯定在时尚杂志上见过海伦娜，对吧？她一点也不像杂志上说的那样，你对她说错一句话，她就会在你道歉之前从受人爱戴的名人变成疯婆子。注意你对她说的话，好吗？)]
 		</p>
 		<p>
-			Thanking the wolf-girl for the warning, you step away from her desk and prepare to be on your way, but before you leave, she has a few last things to say, [style.speechFeminine(Wait, hold on a moment. I don't know if you know what happened here recently, but I'd better inform you of the facts before you go out there. Basically, some idiot dog-girl decided to say to Helena that she wasn't as pretty as another matriarch she'd seen. Well, after Helena got her flock to fuck that dog-girl into a broken mess, she decided to go and see how pretty this other matriarch was. One thing led to another, and within about twenty minutes we almost had a full-blown riot on our hands.)]
+			你谢过狼女的警告，离开她的办公桌，准备上路，但在你离开之前，她还有几句话要说，[style.speechFeminine(等一下，我不知道你是否知道最近这里发生的事，但在你出去之前，我最好告诉你实情。基本来说，有个白痴犬女，对海伦娜说她没有她见过的另一个族长漂亮，海伦娜让她的鸟群把她操得一塌糊涂后，决定去看看另一个族长有多漂亮。事情一发不可收拾，大约在二十分钟内，我们差点发生一场严重的暴乱。)]
 		</p>
 		<p>
-			The wolf-girl leans back in her chair, before gesturing to the room for emphasis as she continues, [style.speechFeminine(It took near enough every single one of us here to get things back under control. Tensions are still running high in the Nests, so make sure you don't do anything to offend any of the matriarchs, ok? These harpies may look weak, but they're no joke if you piss them off, so remember to mind your manners out there!)]
+			狼女向后靠在椅子上，然后指了指房间以示强调：[style.speechFeminine(我们几乎每个人都花了很大力气才把事情控制住。巢穴里的气氛仍然很紧张，所以一定不要做任何冒犯族长的事，好吗？这些哈比看似柔弱，但惹怒了她们可不是闹着玩的，所以在外面一定要注意自己的言行举止！)]
 		</p>
 		<p>
-			She bends down to retrieve something from under her desk, and after straightening back up, she holds out a little booklet towards you. Reaching out to take it, you look down to see the words 'All about Harpies' on the front cover. Leaning back in her chair once again, the helpful Enforcer sighs, [style.speechFeminine(For your own sake, you should read up on harpy behaviour if you're planning on travelling through the nests. Oh, and please do try to be careful out there!)]
+			她弯下腰从桌子下面拿东西，直起身子后，她向你拿出一本小册子。你伸手接过，低头一看，封面上写着“关于哈比的一切”。再次靠在椅子上，乐于助人的执法者叹了口气：[style.speechFeminine(为了你自己的安全，如果你计划穿越这些鸟巢，你应该了解一下哈比的行为。哦，还有出门在外请务必小心！)]
 		</p>
 		<p>
-			After you've thanked the wolf-girl once again for her warning, she gives you a pass to show to any other Enforcers who try to stop you from going out into the nests. Finally being given the go-ahead to continue on your way, you step away from the desk and prepare to track down this 'Helena' character...
+			在你再次感谢狼女的警告后，她给了你一张通行证，让你向其他试图阻止你进入巢穴的执法者出示。你终于得到了继续前进的许可，于是你离开了办公桌，准备去追踪这个叫“海伦娜”的人物……
 		</p>
 	#ELSE
 		<p>
-			You do as the wolf-girl asks and walk over to where she's sitting behind the desk. Flashing you a suspicious glance, she says that if you're planning on entering the Harpy Nests, you'll have to tell her what your business here is. Not having any particular reason to be up here, you inform the Enforcer that you simply wanted to take a look around.
+			你按照狼女的要求，走到她坐在桌子后面的地方。她狐疑地看了你一眼，说如果你打算进入哈比之巢，就必须告诉她你来这里的目的。你并没有什么特别的理由来这里，你告诉执法者你只是想四处看看。
 		</p>
 		<p>
-			Letting out an exasperated groan, the wolf-girl narrows her eyes and asks, [style.speechFeminine(So you fancy yourself some kind of tourist, huh? Do you know <i>anything</i> about what it's like out there?)]
+			狼女发出一声气恼的咕哝，眯起眼睛问道：[style.speechFeminine(所以你自认为自己是某种旅行者，是吗？你知道外面的<i>任何情况</i>吗？)]
 		</p>
 		<p>
-			Not having been in the Harpy Nests before, you find yourself replying in the negative. Rolling her eyes and letting out yet another annoyed groan, the wolf-girl explains, [style.speechFeminine(Well, it's my job to make sure nobody goes out there unprepared, so listen up! I don't know if you know what happened here recently, but some idiot dog-girl decided to say to one flock's matriarch that she wasn't as pretty as another matriarch she'd seen. Well, after Helena got her flock to fuck that dog-girl into a broken mess, she decided to go and see how pretty this other matriarch was. One thing led to another, and within about twenty minutes we almost had a full-blown riot on our hands.)]
+			你以前没有来过哈比的巢穴，所以你的回答是否定的。狼女翻了翻白眼，又发出一声恼怒的抱怨，解释道，[style.speechFeminine(好吧，我的工作是确保没有人毫无准备地走出去，所以请认真听我说！我不知道你是否了解最近在这里发生的事情，反正，有个白痴犬女决定对一个哈比族长说她没有这个犬女之前见过的另一个族长漂亮，嗯……然后海伦娜让她的鸟群把她操得一塌糊涂，最后决定去看看另一个族长有多漂亮。结果事情一发不可收拾，大约在二十分钟前，差点发生一场严重的暴乱。)]
 		</p>
 		<p>
-			The wolf-girl leans back in her chair, before gesturing to the room for emphasis as she continues, [style.speechFeminine(It took near enough every single one of us here to get things back under control. Tensions are still running high in the Nests, so make sure you don't do anything to offend any of the matriarchs, ok? These harpies may look weak, but they're no joke if you piss them off, so remember to mind your manners out there!)]
+			狼女向后靠在椅子上，然后指了指房间以示强调：[style.speechFeminine(我们几乎每个人都花了很大力气才把事情控制住。巢穴里的气氛仍然很紧张，所以一定不要做任何冒犯族长的事，好吗？这些哈比看似柔弱，但惹怒了她们可不是闹着玩的，所以在外面一定要注意自己的言行举止！)]
 		</p>
 		<p>
-			She bends down to retrieve something from under her desk, and after straightening back up, she holds out a little booklet towards you. Reaching out to take it, you look down to see the words 'All about Harpies' on the front cover. Leaning back in her chair once again, the Enforcer sighs, [style.speechFeminine(For your own sake, you should read up on harpy behaviour if you're planning on travelling through the nests. Oh, and please do try to be careful out there!)]
+			她弯下腰从桌子下面拿东西，直起身子后，她向你拿出一本小册子。你伸手接过，低头一看，封面上写着 “关于哈比的一切”。再次靠在椅子上，执法者叹了口气，[style.speechFeminine(为了你自己的安全，如果你计划穿越这些鸟巢，你应该了解一下哈比的行为。哦，还有出门在外请务必小心！)]
 		</p>
 		<p>
-			After you've thanked the wolf-girl for her warning, she gives you a pass to show to any other Enforcers who try to stop you from going out into the nests. Finally being given the go-ahead to continue on your way, you step away from the desk and prepare to explore the Harpy Nests...
+			在你再次感谢狼女的警告后，她给了你一张通行证，让你向其他试图阻止你进入巢穴的执法者出示。你终于得到了继续前进的许可，于是你离开了办公桌，准备探索哈比巢穴……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS -->
 	
 	<htmlContent tag="ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS"><![CDATA[
 	<p>
-		Curious to find out more about the recent unrest in the harpy nests, you quickly scan the room for the most senior-looking Enforcer. A tall, muscular horse-boy, with chevrons on his uniform marking him as a sergeant, fits the bill, and you start to walk over towards him. He's currently giving orders to a pair of cat-girls, and you hang around for a moment, waiting for him to finish his business.
+		你很想知道更多关于最近哈比之巢骚乱的情况，于是你快速扫视了房间，寻找看起来资历最老的执法者。一个身材高大、肌肉发达的马男，制服上的徽章标志着他是一名警长，很符合你的要求，于是你朝他走过去。他正在对一对猫女发号施令，你在旁边等了一会儿，等他把事情办完。
 	</p>
 	<p>
-		[style.speechMasculineStrong(Alright, report back here as soon as you get that warrant,)] you hear him say, [style.speechMasculineStrong(These harpies are getting out of control... Oh, and Alice, before you go, if I hear just <i>one more</i> rumour about you shirking your duties to go visit your boyfriend, I'll fuck you myself! Now get out of my sight!)]
+		[style.speechMasculineStrong(好吧，一拿到搜查令就马上回来报告，)]你听到他说，[style.speechMasculineStrong(这些哈比越来越失控了……哦，爱丽丝，在你走之前，如果我<i>再一次</i>听到任何关于你推卸责任去看望你男朋友的谣言，我会亲自上你的！现在滚出我的视线！)]
 	</p>
 	<p>
-		[style.speechFeminine(Yes, sir!)] the cat-girls call out in unison, before running off.
+		[style.speechFeminine(好的，长官！)]猫女们异口同声地喊道，然后就跑开了。
 	</p>
 	<p>
-		Seeing your opportunity to find out more about what's going on in the Harpy Nests, you walk up to the muscular horse-boy. Noticing your approach, he grunts, [style.speechMasculineStrong(What is it now? If one of those harpy bitches out there did something, I don't have the time to help you. You should have known the risks before going out there!)]
+		你看到自己有机会去了解更多有关哈比之巢的情况，于是走到肌肉发达的马男面前。注意到你的靠近，他咕哝道：[style.speechMasculineStrong(又怎么了？如果是外面那些泼妇干的好事，我可没时间帮你，你出去之前就该知道风险有多大！)]
 	</p>
 	<p>
-		Telling the horse-boy that you couldn't help but overhear how much trouble he and the rest of the Enforcers are having with these harpies, you ask if there's anything you can do to help.
+		你告诉马男，你无意中听到他和其他执法者在对付这些哈比们时遇到了很多麻烦，你问他你是否能帮上忙。
 	</p>
 	<p>
-		[style.speechMasculineStrong(Hah!)] the horse-boy laughs, [style.speechMasculineStrong(Do you really think that you can do what I can't?!)]
+		[style.speechMasculineStrong(哈！)]马男笑了，[style.speechMasculineStrong(你真的认为你能做到我都做不到的事情？！)]
 	</p>
 	<p>
-		Choosing not to answer his question, you wait for the horse-boy to continue talking, and after a moment of trying to stare you down, he throws his arms up in the air and exclaims, [style.speechMasculineStrong(Fine! I can't believe it's come to this, but I've run out of ideas. Follow me.)]
+		你选择不回答他的问题，而是等着马男继续说话，在试图盯着你看了一会儿之后，他举起双臂，惊呼道：[style.speechMasculineStrong(好吧！我简直不敢相信会变成这样，但我已经没有更多主意了。跟着我。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS_NEXT"><![CDATA[
 	<p>
-		Stepping over to push open a nearby door, the horse-boy beckons for you to follow him inside. Doing so, you find yourself entering a small office, and as you close the door behind you, the horse-boy steps around to the other side of a solid wooden desk, before sinking down into his chair. Leafing through the pile of papers in front of him, he pulls out three separate sheets, before handing them over to you. Leafing through them, you see that there's a portrait of an exceptionally beautiful harpy on each one, and as you take a closer look, the Enforcer explains, [style.speechMasculineStrong(So, as everyone's aware, the Harpy Nests are exceptionally dangerous right now. The more prominent of the matriarchs have been at each other's throats ever since that business with the dog-girl.)]
+		马男走过去推开旁边的一扇门，向你招手，示意你跟他进去。当你关上身后的门时，马男走到一张实木办公桌的另一边，然后坐到椅子上。他翻开面前的一堆文件，拿出三张单独的纸，然后递给你。翻开一看，你会发现每张纸上都有一个异常美丽的哈比肖像，当你仔细看时，执法者解释道：[style.speechMasculineStrong(大家都知道，哈比之巢现在非常危险，自从那只犬女的事发生后，族长们就开始互相掐架了。)]
 	</p>
 	<p>
-		Clenching his fists and gritting his teeth for a moment, he angrily admits, [style.speechMasculineStrong(We managed to come to an agreement with Helena, who, if you didn't know, is the most important and powerful of all the Nests' matriarchs. Those other three you're looking at, however, are refusing to cooperate.)]
+		他握紧拳头，咬紧牙关，愤怒地承认：[style.speechMasculineStrong(我们设法与海伦娜达成了协议，如果你不知道的话，她是所有巢穴族长中最重要、最强大的一位。但你看到的其他三位却拒绝合作。)]
 	</p>
 	<p>
-		You flick between the papers as he continues, [style.speechMasculineStrong(That one with the blonde feathers is [bimboHarpy.name], the mean-looking one is [dominantHarpy.name], and the other one is called [nymphoHarpy.name]. They outright refuse to get along with one another, and their ongoing feud is causing the Nests to descend into absolute anarchy. Every day we get a half-dozen new reports of harpies attacking travellers in broad daylight! No matter how many patrols we send out, nothing changes. As much as I hate to admit it, it's the matriarchs who are the ones responsible for keeping law and order up here.)]
+		他继续说，你就在纸张间翻阅，[style.speechMasculineStrong(那个有金色羽毛的是[bimboHarpy.name]，看起来比较凶的是[dominantHarpy.name]，另一个叫做[nymphoHarpy.name]。它们完全拒绝和睦相处，持续不断的争斗使哈比之巢陷入了绝对的无政府状态。每天我们都会收到半打新的报告，说哈比们在光天化日之下袭击旅行者！无论我们派出多少巡逻队，情况都没有任何改变。虽然我很不想承认，但族长们才是维持这里法律和秩序的人。)]
 	</p>
 	<p>
-		Having got an idea of what the situation is, you ask the Enforcer why he hasn't sent his subordinates to get these matriarchs under control.
+		在了解情况后，你问执法者为什么不派下属去控制这些族长。
 	</p>
 	<p>
-		[style.speechMasculineStrong(If I tried sending patrols in to do that, it'd be seen as an insult to all the harpy flocks. Helena would certainly get involved again, which is the last thing we need right now. I hate asking for help like this, but if by some miracle you're able to subdue those three,)] he points to the papers in your hand again, [style.speechMasculineStrong(I could offer a five thousand flame reward.)]
+		[style.speechMasculineStrong(如果我试着派巡逻队去做这件事，会被视为对所有哈比们的侮辱，海伦娜肯定又会参与其中，我们现在最不需要的就是她了。我真的讨厌这样求人帮忙，但如果你能奇迹般地制服那三个人，)]他又指了指你手中的文件，[style.speechMasculineStrong(我可以提供五千火币作为奖励。)]
 	</p>
 	<p>
-		Telling the horse-boy that you'll get it done, you turn to take your leave. Ignoring his dismissive grunt as he sinks down into his chair, you exit the sergeant's office and [pc.step] back out into the Enforcer Post...
+		你告诉马男你会搞定的，然后转身离开。当他坐到椅子上时，你无视他轻蔑的哼声，走出警长办公室，[pc.step]回到执法者岗哨……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="ENTRANCE_ENFORCER_POST_ASK_ABOUT_RIOTS_NEXT_LEAVE"><![CDATA[
 	<p>
-		[pc.Stepping] out of the sergeant's office, you once again find yourself standing in the Enforcer Post...
+		[pc.Stepping]出警长办公室，你再次发现自己站在执法者岗哨……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- ENTRANCE_ENFORCER_POST_COMPLETED_PACIFICATION -->
 	
 	<htmlContent tag="ENTRANCE_ENFORCER_POST_COMPLETED_PACIFICATION"><![CDATA[
 	<p>
-		You walk over towards the office where you first accepted the horse-boy Enforcer's request to pacify the Harpy Nests. As you approach, the door opens, and a vaguely familiar, exhausted-looking cat-girl steps out. She shuffles off in the direction of the elevators, and before the door swings shut, you step forwards into the office.
+		你向办公室走去，那里是你第一次接受马男执行者的请求去平息哈比巢穴的地方。当你走近时，门开了，一个依稀熟悉、看起来疲惫不堪的猫女走了出来。她摇摇晃晃地朝电梯方向走去，在门关上之前，你向前迈进了办公室。
 	</p>
 	<p>
-		[style.speechMasculineStrong(Hah! Hungry for more, Alice? Oh! It's you!)] the horse-boy calls out, tucking in his shirt as he sits down in his chair. Smirking at you, he grunts, [style.speechMasculineStrong(I heard what you've been up to out there!)]
+		[style.speechMasculineStrong(哈！还想吃吗，爱丽丝？噢！是你啊！)]马男一边叫着，一边坐下来掖了掖衬衫。他对着你坏笑，咕哝着说：[style.speechMasculineStrong(我听说你在外面做的事了！)]
 	</p>
 	<p>
-		Ignoring the smell of sex that's saturating the room, you tell him that you've successfully convinced all three of the troublesome matriarchs to calm down. As you finish saying this, the horse-boy slaps his leg and laughs, [style.speechMasculineStrong(Hah! I don't know how you managed to pull it off, but we've received messages from each one of those matriarchs, not only saying that they'll stop causing a problem, but also apologising for the trouble they've caused us!)]
+		你无视房间里弥漫的性爱气味，告诉他你已经成功说服了三位麻烦的族长，让她们冷静下来了。你刚说完，马男就拍着腿大笑起来：[style.speechMasculineStrong(哈！我不知道你是怎么做到的，但我们已经收到了每一位族长的信息，不仅说她们会停止制造麻烦，还为给我们带来的麻烦道歉！)]
 	</p>
 	<p>
-		The muscular horse-boy produces a little brass key from out of one of his pockets, and after bending down to unlock a heavy iron safe that's sitting beneath his desk, he retrieves a bag of flames. Setting it down in front of him, he grins and exclaims, [style.speechMasculineStrong(I still can't believe that you actually managed to do it! As promised, here's your five thousand flame reward!)]
+		这个肌肉发达的马男从口袋里掏出一把黄铜钥匙，弯腰打开桌子下面一个沉重的铁保险柜，取出一袋火币。把它放在面前，他咧嘴笑着喊道：[style.speechMasculineStrong(我还是不敢相信你真的做到了！按照约定，这是你的五千火币奖励！)]
 	</p>
 	<p>
-		Stepping forwards, you take the offered bag of money, before thanking the Enforcer sergeant. He seems to be in very high spirits, and lets out another happy exclamation as he leans back in his chair, [style.speechMasculineStrong(Hah! We're going to start regular patrols of the walkways to make sure another incident like this doesn't happen again. Thanks to your efforts, the Harpy Nests will once again be safe for anyone to travel through!)]
+		你走上前，接过他递过来的钱袋，然后向执法官表示感谢。他似乎兴致很高，靠在椅子上又发出了一声高兴的赞叹，[style.speechMasculineStrong(哈！我们将开始定期巡逻人行道，以确保类似事件不再发生。多亏了你们的努力，哈比之巢将再次安全通行！)]
 	</p>
 	<p>
-		Having received your reward, you say farewell to the happy horse-boy, and after walking out of his office, you once again find yourself standing in the Enforcer Post...
+		你领到奖励后，向开心的马男道别，走出他的办公室后，你再次发现自己站在执法者岗哨里……
 	</p>
 	<p style='text-align:center;'>
-		[style.italicsExcellent(The Harpy Nests are now safe to travel through!)]
+		[style.italicsExcellent(哈比之巢现在可以安全通行了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE_ENFORCER_POST_CANDIS_LOLLIPOPS -->
 	
 	<htmlContent tag="ENTRANCE_ENFORCER_POST_CANDIS_LOLLIPOPS"><![CDATA[
 	<p>
-		Wanting to retrieve these 'contraband lollipops' and return to Candi as quickly as possible, you walk up to the nearest Enforcer, who takes the form of a particularly bored-looking dog-boy. As he looks up to see who it is who's approaching him, you tell him that you're here to collect the lollipops and return them to the Enforcer headquarters.
+		你想尽快取回这些“违禁棒棒糖”并交还给坎迪，于是你走到离你最近的一个执法者面前。当他抬起头看是谁走过来时，你告诉他你是来拿一些棒棒糖并准备把它们送回执法者总部。
 	</p>
 	<p>
-		[genericMale.speech(You mean that contraband box sitting out back?)] he asks, [genericMale.speech(On whose authority are you taking it?)]
+		[genericMale.speech(你是说放在后面的那个违禁品箱？)]他问到：[genericMale.speech(谁给了你拿它的权利？)]
 	</p>
 	<p>
-		Remembering the secret password that Candi gave you, you tell the dog-boy that it's a 'priority thunder' order, and that any unnecessary delay will see both of you getting into serious trouble.
+		你记着坎迪给你的秘密口令，告诉狗男这是一个“优先雷霆”命令，任何不必要的拖延都会给你们俩带来大麻烦。
 	</p>
 	<p>
-		[genericMale.speech(Hey, shit, you should have said so sooner,)] the dog-boy says, clearly shaken by your casual use of this password, [genericMale.speech(Wait here just one minute, I'll go fetch that box right away.)]
+		[genericMale.speech(嘿，妈的，你应该早点说，)]狗男说，显然他对你随意使用这个口令感到震惊，[genericMale.speech(在这里等一下，我马上去拿那个盒子。)]
 	</p>
 	<p>
-		With that, he quickly rushes off into a back room, and, sure enough, after less than a minute he returns, box-in-hand. Passing it over to you, he warns, [genericMale.speech(Just don't go opening this box and letting anyone eat any of these. Some crazy harpy bitch had them made to take out a rival flock. Apparently, they contain some sort of high-powered permanent aphrodisiac, and you can't get any relief from it just by masturbating, either. Nasty stuff.)]
+		说完，他迅速冲进里屋，果然，不到一分钟，他就回来了，手里还拿着盒子。他把盒子递给你，警告说：[genericMale.speech(只是千万不要打开这个盒子，也不要让任何人吃掉其中的任何东西。一些疯狂哈比做了这些东西来消灭敌对的鸟群。很显然，它们含有某种强效的永久性春药，而且光靠手淫也不能缓解症状，真恶心。)]
 	</p>
 	<p>
-		Thanking him for the warning, you take the box and turn to continue on your way. As you wonder whether you should head straight back to deliver this to Candi or not, the dog-boy steps up behind you and says one final thing, [genericMale.speech(Oh, and I guess you already know, but the priority codes are being changed again at midnight. Stay safe out there.)]
+		你谢谢他的提醒，拿着盒子转身继续前行。就在你考虑是否应该直接回去把这个交给坎迪时，狗男走到你身后，说了最后一句话：[genericMale.speech(哦，我猜你已经知道了，但优先代码将在午夜再次更改。在外面要小心保重。)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WALKWAY -->
 	
 	<htmlContent tag="WALKWAY"><![CDATA[
 	<p>
-		You find yourself walking down a winding, narrow walkway; part of an interconnected system of pathways, stairs, and ladders that have been built into the rooftops of Dominion. Being able to fly, the harpies that live up here have no use for them, and there aren't many people willing to risk a harpy's wrath just for the sake of taking a stroll through the nests. As a result, these links between the sprawling network of harpy nests are completely deserted.
+		你发现自己正走在一条蜿蜒狭窄的小道上，这些通道、楼梯和梯子是建造在御城区屋顶一个相互连接的系统的一部分。由于可以飞行，它们对住在这里的哈比毫无用处，也没有多少人愿意冒着哈比发怒的风险，只为在她们的巢穴中漫步。因此，这些连接着哈比之巢的庞大网络通道就完全荒废了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="WALKWAY_CORE"><![CDATA[
 	<p>
-		Although these walkways don't lead directly through any nests, you're still able to observe them as you pass. Each nest takes the form of a series of platforms, built on top of, and into, the roofs and upper floors of Dominion's residences. While most are confined to a single building, you see that a few span multiple houses, and have several tiers of platforms built on top of one another; evidence that the matriarch of that particular nest is extremely important.
+		虽然这些走道不会直接穿过任何巢穴，但你仍然可以在经过时观察它们。每个巢穴都有一系列平台，建在御城区住宅的屋顶和上层。虽然大多数巢穴仅限于一栋建筑，但你会发现有几个巢穴横跨多栋房屋，并有几层平台建在彼此之上；这证明该巢穴的主人非常重要。
 	</p>
 	#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
 		<p>
-			Due to the ongoing arcane storm, each flock has taken shelter in the building below their nest. The only movement to be seen in the deserted nests takes the form of canvas coverings, erected to protect the harpies from the elements, billowing in the wind. Peering over the side of the railing, you see that the streets below are similarly abandoned, with only the occasional demon to be seen wandering through the area.
+			由于持续不断的奥术风暴，每个鸟群都躲进了自己巢穴下面的建筑物里。在这些荒废的巢穴中，唯一能看到的动静就是为保护哈比们免受风雨侵袭而搭建的帆布罩在风中飘扬。从栏杆一侧眺望，你会发现下面的街道也同样被遗弃了，只有偶尔能看到恶魔在这里游荡。
 		</p>
 		<p>
 			#IF(!game.getNonCompanionCharactersPresent().isEmpty() && npc.isRelatedTo(pc))
-				Despite the potential for a lust-crazed to swoop down and attack you, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is your [npc.relation(pc)], [npc.name]...
+				尽管有可能会有一只被欲望冲昏头脑的家伙俯冲下来袭击你，但你还是觉得很[style.colourGood(安全)]在这一区域，你唯一可能遇到的人就是你的[npc.relation(pc)]，[npc.name]……
 			#ELSEIF(!game.getNonCompanionCharactersPresent().isEmpty() && !npc.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-				Despite the potential for a lust-crazed harpy to swoop down and attack you, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is on friendly terms with you...
+				尽管可能会有一只欲火焚身的哈比俯冲下来攻击你，但你在这片区域的感觉相当[style.colourGood(安全)]，因为你唯一可能遇到的人就是[npc.name]，它与你关系友好……
 			#ELSE
-				While the arcane storm raging overhead has sent most harpies into hiding, there's a chance that you'll run into one which is being affected by its lust-inducing effects, making the Nests a [style.colourBad(dangerous)] place to be travelling through for as long as it lasts...
+				虽然头顶上肆虐的奥术风暴让大多数哈比都躲了起来，但你还是有可能遇到一只受到风暴影响的哈比，只要风暴还在持续，巢穴就会成为一个[style.colourBad(危险)]的旅行之地……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
 			#IF(game.getCurrentWeather()==WEATHER_RAIN)
-				Due to the ongoing rain, each flock has taken shelter in the building below their nest, or beneath the canvas coverings that have been erected to protect the harpies from the elements. The matriarch of each nest is clearly visible, even from a great distance, as they're always surrounded by other harpies eager to gain the favour of their leader. Peering over the side of the railing, you see that the people walking down the streets below are similarly huddling beneath any shelter they can find, desperate to get out of the rain.
+				由于连日阴雨，每个鸟群都躲进了自己巢穴下面的建筑物里，或者躲在为保护哈比们免受风雨侵袭而搭建的帆布遮盖物下面。每个巢穴的主人都清晰可见，即使从很远的地方看也是如此，因为她们总是被其他渴望获得首领青睐的哈比们包围着。从栏杆的一侧望过去，你会发现下面街道上的行人也同样蜷缩在他们能找到的任何遮蔽物下面，急切地想要躲雨。
 			#ELSEIF(game.isDayTime())
-				The members of each flock are sprawled out over their nest's platforms. Most are simply lounging about beneath canvas coverings, but there are plenty to be seen sunbathing or talking in little groups. The matriarch of each nest is clearly visible, even from a great distance, as they're always surrounded by other harpies eager to gain the favour of their leader. Peering over the side of the railing, you see the people walking down the streets below, oblivious to what's going on high above them.
+				每个鸟群的成员都散布在巢穴的平台上。大多数人只是在帆布遮盖下闲逛，但也有很多人在晒太阳或三五成群地聊天。即使从很远的地方也能清楚地看到每个巢穴的主人，因为她们总是被其他渴望得到首领宠爱的哈比们包围着。从栏杆一侧眺望，你会看到下面的街道上人来人往，对高处发生的一切熟视无睹。
 			#ELSE
-				The members of each flock are sprawled out over their nest's platforms. Even at night, there are still plenty of harpies to be seen lounging about or talking in little groups, their brightly-coloured feathers illuminated by a series of bright lights that cover the rooftops. The matriarch of each nest is clearly visible, even from a great distance, as they're always surrounded by other harpies eager to gain the favour of their leader. Peering over the side of the railing, you see the people walking down the streets below, oblivious to what's going on high above them.
+				每个鸟群的成员都散布在巢穴的平台上。即使在夜晚，也能看到许多哈比在闲逛或三五成群地交谈，屋顶上的一束束强光照亮了它们色彩鲜艳的羽毛。即使从很远的地方也能清楚地看到每个巢穴的主人，因为她们总是被其他渴望得到首领青睐的哈比们包围着。从栏杆的一侧眺望，你会看到下面的街道上人来人往，对高处发生的一切熟视无睹。
 			#ENDIF
 		</p>
 		<p>
 			#IF(!game.getNonCompanionCharactersPresent().isEmpty())
 				#IF(npc.isRelatedTo(pc))
-					Despite the potential for a harpy to swoop down and attack you, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is your [npc.relation(pc)], [npc.name]...
+					尽管随时可能有哈比俯冲下来袭击你，但在这片区域，你还是感觉相当[style.colourGood(安全)]，因为这里你唯一可能遇到的人，就是你的[npc.relation(pc)]，[npc.name]……
 				#ELSEIF(!npc.getAffectionLevel(pc).isLessThan(AFFECTION_POSITIVE_ONE_FRIENDLY))
-					Despite the potential for a harpy to swoop down and attack you, you feel quite [style.colourGood(safe)] in this area, as the only person you're likely to encounter is [npc.name], who is on friendly terms with you...
+					尽管随时可能有哈比俯冲下来袭击你，但在这片区域，你还是感觉相当[style.colourGood(安全)]，因为这里你唯一可能遇到的人，就是和你关系不错的[npc.name]……
 				#ELSE
 					#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_HARPY_PACIFICATION))
-						You sometimes see an Enforcer patrolling a walkway off in the distance, reminding you that it's now [style.colourGood(safe)] for people to be travelling throughout the Harpy Nests. You know that [npc.name(a)] hangs out in this area, and so if you wanted to you could search for [npc.herHim] and confront you again...
+						你有时会看见执法者在远处的通道上巡逻，你意识到如今人们已经可以在哈比之巢各处[style.colourGood(安全)]往来了。你知道[npc.name(a)]就在这一带出没，所以如果你想的话，可以去找[npc.herHim]，再和她当面对峙……
 					#ELSE
-						As you continue travelling down the [style.colourBad(dangerous)] walkways, you can't help but shake the feeling that you're being watched. You know that [npc.name(a)] hangs out in this area, and so if you were to look for trouble, [npc.she] would undoubtedly decide to confront you again...
+						你继续沿着[style.colourBad(危险)]的通道前行，总觉得有人在盯着你，这个念头挥之不去。你知道[npc.name(a)]就在这一带出没，所以你要是想找麻烦，[npc.she]肯定会再来和你对峙……
 					#ENDIF
 				#ENDIF
 			#ELSE
 				#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_HARPY_PACIFICATION))
-					You sometimes see an Enforcer patrolling a walkway off in the distance, reminding you that it's now [style.colourGood(safe)] for people to be travelling throughout the Harpy Nests. Although there's no risk of being attacked, harpies are still quite touchy by nature, and you imagine that it wouldn't be too hard to cause a confrontation if you were to go looking for trouble...
+					你有时会看见执法者在远处的通道上巡逻，你意识到如今人们已经可以在哈比之巢各处[style.colourGood(安全)]往来了。虽然不会有被攻击的危险，但哈比毕竟生性敏感。你猜测自己要是主动去找麻烦，想挑起一场冲突也不是什么难事……
 				#ELSE
-					As you continue travelling down the [style.colourBad(dangerous)] walkways, you can't help but shake the feeling that you're being watched. An occasional flash of colour out of the corner of your [pc.eye(true)] confirms your suspicions, but each time you turn to face your elusive stalker, they quickly fly off back to their nest. It's probably only a matter of time before one of them decides to openly confront you...
+					你继续沿着[style.colourBad(危险)]的通道前行，总觉得有人在盯着你，这个念头挥之不去。偶尔你[pc.eye(true)]的余光瞥见的一抹色彩能够证实你的猜测，但每次当你转身想看清那个难以捉摸的跟踪者时，对方都迅速飞回自己的巢穴。恐怕用不了多久，其中一个就会决定来找你公开对峙……
 				#ENDIF
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- WALKWAY_BRIDGE -->
 	
 	<htmlContent tag="WALKWAY_BRIDGE"><![CDATA[
 	<p>
-		You find yourself walking over a narrow wooden bridge; part of an interconnected system of pathways, stairs, and ladders that have been built into the rooftops of Dominion. Being able to fly, the harpies that live up here have no use for them, and there aren't many people willing to risk a harpy's wrath just for the sake of taking a stroll through the nests. As a result, these links between the sprawling network of harpy nests are completely deserted.
+		你发现自己正走在一座狭窄的木桥上，这些通道、楼梯和梯子是建造在御城区屋顶一个相互连接的系统的一部分。由于可以飞行，它们对住在这里的哈比毫无用处，也没有多少人愿意冒着哈比发怒的风险，只为在她们的巢穴中漫步。因此，这些连接着哈比之巢的庞大网络通道就完全荒废了。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 </dialogue>

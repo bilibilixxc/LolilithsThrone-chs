@@ -226,9 +226,9 @@ public abstract class AbstractTentacleType implements BodyPartTypeInterface {
 			return "";
 		}
 		if(gc.getTentacleCount()==1) {
-			return Util.intToString(gc.getTentacleCount())+" "+determiner;
+			return Util.intToString(gc.getTentacleCount())+"根";
 		}
-		return Util.intToString(gc.getTentacleCount())+" "+determinerPlural;
+		return Util.intToString(gc.getTentacleCount())+"根";
 	}
 	
 	@Override
@@ -314,67 +314,67 @@ public abstract class AbstractTentacleType implements BodyPartTypeInterface {
 		
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_FUR)) {
 			if(owner.getTentacleCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tentacles] are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的[npc.tentacles]"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tentacle] is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的[npc.tentacle]"));
 			}
 			switch(owner.getTentacleGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " very thin and severely lacking in fluffiness in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "非常纤细，相比于身体其他部分显得没什么绒毛。"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " slender and lacking in fluffiness in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "比较修长，相比于身体其他部分绒毛不多。"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " quite narrow and a little lacking in fluffiness in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "比较细，相比于身体其他部分绒毛稍少。"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an average thickness and fluffiness in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "宽度合适，和身体其他部分差不多蓬松。"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " quite big and fluffy in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "比较粗大，相比于身体其他部分更加松软。"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " very big and fluffy in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "十分粗壮，相比于身体其他部分更加松软。"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " incredibly thick and fluffy in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "格外粗壮，相比于身体其他部分更加松软。"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " extremely thick and fluffy in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "极其粗壮，相比于身体其他部分更加松软。"));
 					break;
 			}
 			
 		} else {
 			if(owner.getTentacleCount()>1) {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tentacles] are"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的[npc.tentacles]"));
 			} else {
-				sb.append(UtilText.parse(owner, " [npc.Her] [npc.tentacle] is"));
+				sb.append(UtilText.parse(owner, "[npc.Her]的[npc.tentacle]"));
 			}
 			switch(owner.getTentacleGirth()) {
 				case ZERO_THIN:
-					sb.append(UtilText.parse(owner, " very thin in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "非常纤细，考虑到身体的其他部分的话。"));
 					break;
 				case ONE_SLENDER:
-					sb.append(UtilText.parse(owner, " slender in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "比较修长，考虑到身体的其他部分的话。"));
 					break;
 				case TWO_NARROW:
-					sb.append(UtilText.parse(owner, " quite narrow in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "比较细，考虑到身体的其他部分的话。"));
 					break;
 				case THREE_AVERAGE:
-					sb.append(UtilText.parse(owner, " of an average thickness in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "粗细适中，考虑到身体的其他部分的话。"));
 					break;
 				case FOUR_GIRTHY:
-					sb.append(UtilText.parse(owner, " quite thick in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "比较粗大，考虑到身体的其他部分的话。"));
 					break;
 				case FIVE_THICK:
-					sb.append(UtilText.parse(owner, " very thick in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "十分粗壮，考虑到身体的其他部分的话。"));
 					break;
 				case SIX_CHUBBY:
-					sb.append(UtilText.parse(owner, " incredibly thick and girthy in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "格外粗壮，考虑到身体的其他部分的话。"));
 					break;
 				case SEVEN_FAT:
-					sb.append(UtilText.parse(owner, " extremely thick and girthy in proportion to the rest of [npc.her] body."));
+					sb.append(UtilText.parse(owner, "极其粗壮，考虑到身体的其他部分的话。"));
 					break;
 			}	
 		}
@@ -389,41 +389,41 @@ public abstract class AbstractTentacleType implements BodyPartTypeInterface {
 		if(this.getTags().contains(BodyPartTag.TAIL_TYPE_FUR)) {
 			switch(girth) {
 				case ZERO_THIN:
-					return "thin";
+					return "纤细";
 				case ONE_SLENDER:
-					return "slender";
+					return "修长";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "fluffy";
+					return "毛茸茸";
 				case FOUR_GIRTHY:
-					return "very-fluffy";
+					return "松软";
 				case FIVE_THICK:
-					return "extra-fluffy";
+					return "很松软";
 				case SIX_CHUBBY:
-					return "extremely-fluffy";
+					return "极其松软";
 				case SEVEN_FAT:
-					return "unbelievably-fluffy";
+					return "松软到离谱";
 			}
 			
 		} else {
 			switch(girth) {
 				case ZERO_THIN:
-					return "thin";
+					return "纤细";
 				case ONE_SLENDER:
-					return "slender";
+					return "修长";
 				case TWO_NARROW:
-					return "narrow";
+					return "细窄";
 				case THREE_AVERAGE:
-					return "average";
+					return "适中";
 				case FOUR_GIRTHY:
-					return "thick";
+					return "较粗";
 				case FIVE_THICK:
-					return "extra-thick";
+					return "粗壮";
 				case SIX_CHUBBY:
-					return "extremely-thick";
+					return "极粗";
 				case SEVEN_FAT:
-					return "unbelievably-thick";
+					return "粗到离谱";
 			}
 		}
 		
@@ -431,55 +431,55 @@ public abstract class AbstractTentacleType implements BodyPartTypeInterface {
 	}
 	
 	public String getGirthTransformationDescription(GameCharacter owner, boolean positive) {
-		String tentacleText = "[npc.a_tentacleGirth] [npc.tentacle]";
+		String tentacleText = "[npc.a_tentacleGirth]的[npc.tentacle]";
 		if(owner.getTentacleCount()>1) {
-			tentacleText = "[npc.tentacleGirth] [npc.tentacles]";
+			tentacleText = "[npc.tentacleGirth]的[npc.tentacles]";
 		}
 		
 		if(positive) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] [npc.tentacles]."
-						+ " Without any further warning of what's to come, [npc.her]"
+						+ "[npc.Name]感觉到[npc.her]的[npc.tentacles]根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+						+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 						+(owner.getTentacleCount()>1
-								?" [npc.tentacles] suddenly [style.boldGrow(grow thicker)]."
-								:" [npc.tentacle] suddenly [style.boldGrow(grows thicker)].")
+								?"[npc.tentacles]突然[style.boldGrow(变粗了)]。"
+								:"[npc.tentacle]突然[style.boldGrow(变粗了)]。")
 						+ "<br/>"
-						+ "[npc.She] now [npc.has] [style.boldSex("+tentacleText+")]!"
+						+ "[npc.She]现在拥有了[style.boldSex("+tentacleText+")]！"
 					+ "</p>");
 				
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-							+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the base of [npc.her] [npc.tentacles]."
-							+ " Without any further warning of what's to come, [npc.her]"
+							+ "[npc.Name]感觉到[npc.her]的[npc.tentacles]根部突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+							+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的"
 							+(owner.getTentacleCount()>1
-									?" [npc.tentacles] suddenly [style.boldShrink(shrink down)]."
-									:" [npc.tentacle] suddenly [style.boldShrink(shrinks down)].")
+									?"[npc.tentacles]突然[style.boldGrow(变细了)]。"
+									:"[npc.tentacle]突然[style.boldGrow(变细了)]。")
 							+ "<br/>"
-						+ "[npc.She] now [npc.has] [style.boldSex("+tentacleText+")]!"
+						+ "[npc.She]现在拥有了[style.boldSex("+tentacleText+")]！"
 					+ "</p>");
 		}
 	}
 	
 	public String getLengthTransformationDescription(GameCharacter owner, boolean positive) {
-		String heightPercentageDescription = " (length is "+((int)(owner.getTentacleLengthAsPercentageOfHeight()*100))+"% of [npc.namePos] height)";
+		String heightPercentageDescription = "(长度为[npc.namePos]身高的"+((int)(owner.getTentacleLengthAsPercentageOfHeight()*100))+"%)";
 		if(positive) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the [npc.tentacleTip] of each of [npc.her] [npc.tentacles]."
-						+ " Without any further warning of what's to come, [npc.her] [npc.tentacles] suddenly [style.boldGrow(grow longer)]."
+						+ "[npc.Name]感觉到[npc.her]的[npc.tentacles][npc.tentacleTip]突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+						+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的[npc.tentacles]突然[style.boldGrow(伸长了)]。"
 						+ "<br/>"
-						+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.tentacleLength] [npc.tentacles])]"+heightPercentageDescription+"!"
+						+ "[npc.She]现在拥有了[style.boldTfGeneric([npc.tentacleLength]的[npc.tentacles])]"+heightPercentageDescription+"！"
 					+ "</p>");
 				
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "[npc.Name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(feel)] a deep throbbing sensation building up at the [npc.tentacleTip] of each of [npc.her] [npc.tentacles]."
-						+ " Without any further warning of what's to come, [npc.her] [npc.tentacles] suddenly [style.boldShrink(shorten)]."
+						+ "[npc.Name]感觉到[npc.her]的[npc.tentacles][npc.tentacleTip]突然出现一股震颤感，变得越来越强烈，不禁发出一声[npc.a_moan+]。"
+						+ "在对即将发生的事情没有任何预兆的情况下，[npc.her]的[npc.tentacles]突然[style.boldShrink(缩短了)]。"
 						+ "<br/>"
-						+ "[npc.She] now [npc.has] [style.boldTfGeneric([npc.tentacleLength] [npc.tentacles])]"+heightPercentageDescription+"!"
+						+ "[npc.She]现在拥有了[style.boldTfGeneric([npc.tentacleLength]的[npc.tentacles])]"+heightPercentageDescription+"！"
 					+ "</p>");
 		}
 	}

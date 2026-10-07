@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[raiding party]]></name>
-	<tooltipDescription><![CDATA[A group of demonic centaurs are looting buildings in this area.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[in the streets of Themiscyra]]></virginityLossDescription>
+	<name><![CDATA[突袭者派对]]></name>
+	<tooltipDescription><![CDATA[一群半人马恶魔正在这个地方劫掠建筑。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在特弥斯库拉的街道上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>GENERIC_BAD</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

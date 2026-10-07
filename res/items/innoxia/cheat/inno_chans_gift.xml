@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>100000000</value> 
-		<determiner><![CDATA[an]]></determiner>
-		<name><![CDATA[Inno-chan's gift]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Inno-chan's gifts]]></namePlural>
-		<description><![CDATA[This is no ordinary bottle of wine, as it turns anyone who drinks it into a youko! Additional consumption will increase the number of Youko tails the drinker has.<br/>[style.italicsMinorGood(While this is a debug-only item, it should be safe to use anywhere.)]]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[Inno酱的礼物]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[Inno酱的礼物]]></namePlural>
+		<description><![CDATA[这可不是普通的一瓶葡萄酒，因为它会让任何喝它的人变成妖狐！过量饮用会增加饮用者的妖狐尾巴数量。<br/>[style.italicsMinorGood(虽然这只是实验品，但在任何地方喝下它都是安全的。)]]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,21 +28,21 @@
 		<enchantmentEffectId/>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldBad(Does not affect unique characters or dolls)]]]></line>
-			<line><![CDATA[[style.boldTfGeneric(Transforms)] non-youko into [style.boldFox(youko)]]]></line>
-			<line><![CDATA[[style.boldTfGeneric(Grants)] youko an extra tail]]></line>
+			<line><![CDATA[[style.boldBad(无法影响特殊角色或玩偶)]]]></line>
+			<line><![CDATA[将非妖狐[style.boldTfGeneric(转化)]为[style.boldFox(妖狐)]]]></line>
+			<line><![CDATA[[style.boldTfGeneric(送给)]妖狐一条额外的尾巴]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 		<p style='text-align:center'>
 			#IF(npc.isDoll())
-				[style.italicsDisabled(This item does not work on dolls...)]
+				[style.italicsDisabled(此物品对玩偶不起作用……)]
 			#ELSEIF(!npc.isPlayer() && npc.isUnique() && (!npc.isSlave() || npc.getOwner().isPlayer()))
-				[style.italicsDisabled(This item does not work on non-slave unique characters...)]
+				[style.italicsDisabled(此物品不适用于非奴隶的特定角色……)]
 			#ELSEIF(npc.getSubspecies()!=SUBSPECIES_FOX_ASCENDANT && npc.getSubspecies()!=SUBSPECIES_FOX_ASCENDANT_ARCTIC && npc.getSubspecies()!=SUBSPECIES_FOX_ASCENDANT_FENNEC)
 				[##game.getCharacterUtils().reassignBody(npc, npc.getBody(), npc.getGender(), SUBSPECIES_FOX_ASCENDANT, RACE_STAGE_PARTIAL_FULL, true)]
 				[#npc.setTailCount(1, true)]
-				[style.italicsFox([npc.NameIsFull] now [npc.a_race]!)]
+				[style.italicsFox([npc.NameIsFull]现在是[npc.a_race]！)]
 			#ELSE
 				[#npc.incrementTailCount(1, true)]
 			#ENDIF
@@ -56,12 +56,9 @@
 	</coreAttributes>
 
 	<useDescriptions>
-		<selfUse><![CDATA[
-		Opening the bottle of Inno-chan's gift, [npc.name] [npc.verb(tilt)] [npc.her] head back and [npc.verb(bring)] it up to [npc.her] waiting [npc.lips]. The heady fragrance of rich red wine wafts from the neck of the newly opened bottle, which is soon joined by a rich, sweet taste that lingers on [npc.namePos] [npc.tongue] well after [npc.sheHas] had [npc.her] fill.
-		]]></selfUse>
-		<otherUse><![CDATA[
-		Opening the bottle of Inno-chan's gift, [npc.name] [npc.verb(bring)] it up to [npc2.namePos] waiting [npc2.lips]. The heady fragrance of rich red wine wafts from the neck of the newly opened bottle, which is soon joined by a rich, sweet taste that lingers on [npc2.namePos] [npc2.tongue] well after [npc2.sheHas] had [npc2.her] fill.
-		]]></otherUse>
+		<selfUse><![CDATA[打开Inno酱的礼物，那瓶红酒，[npc.name]仰起头，将瓶口抬到等待已久[npc.lips]。新开瓶的酒瓶口散发出浓郁的红酒香气，很快被一种浓郁而甘美的味道所覆盖，这种味道在[npc.namePos]结束品尝后仍然残存在[npc.tongue]上。]]></selfUse>
+		<otherUse><![CDATA[打开Inno酱的礼物，[npc.name]将瓶子拿起，递给[npc2.name]等待已久[npc2.lips]。新开瓶的酒瓶口散发出浓郁的红酒香气，很快被一种浓郁而甘美的味道所覆盖，这种味道在[npc2.namePos]品尝完之后仍然残留在[npc2.tongue]上。
+]]></otherUse>
 	</useDescriptions>
 
 	

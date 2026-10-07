@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>100</value>
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[fishnet top]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[fishnet tops]]></namePlural> 
-		<description><![CDATA[A small fishnet top that leaves its wearer's stomach completely exposed, while not doing much to conceal anything else, either.]]></description> 
+		<determiner><![CDATA[一张]]></determiner>
+		<name><![CDATA[渔网上衣]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[渔网上衣]]></namePlural> 
+		<description><![CDATA[一件渔网纹的小上衣，穿着者的腹部完全暴露在外，也无法遮住任何其他部位。]]></description> 
 		<physicalResistance>0</physicalResistance> 
 		<femininity>FEMININE</femininity> 
 		<slot>TORSO_UNDER</slot> 

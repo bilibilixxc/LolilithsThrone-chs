@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>150000</value>
 		<determiner><![CDATA[]]></determiner>
-		<name><![CDATA[diamond necklace]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[diamond necklaces]]></namePlural>
-		<description><![CDATA[A necklace consisting of a metal chain that's studded with dozens of diamonds.]]></description>
+		<name><![CDATA[钻石项链]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[钻石项链]]></namePlural>
+		<description><![CDATA[一条镶嵌着数十颗钻石的金属链项链。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity>
 		<slot>NECK</slot> 
@@ -42,26 +42,26 @@
 	</coreAttributes>
 
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the diamond necklace around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(fasten)] the diamond necklace around [npc2.namePos] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before fastening the diamond necklace around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]把钻石项链系在[npc.her]脖子。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]把钻石项链系在[npc2.namePos]脖子。
+]]></other>
+    <otherRough><![CDATA[
+			[npc.Name]牢牢抓住[npc2.name]，然后把钻石项链紧紧系在[npc2.her]的脖子上。
+]]></otherRough>
   </replacementText>
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] diamond necklace, before taking it off from around [npc.her] neck.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] diamond necklace, before taking it off from around [npc2.her] neck.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] diamond necklace, before yanking it off from around [npc2.her] neck.]]>
-    </otherRough>
+    <self><![CDATA[
+      [npc.Name]解开[npc.her]的钻石项链，然后从[npc.her]的脖子上取下。
+]]></self>
+    <other><![CDATA[
+      [npc.Name]解开[npc2.namePos]的钻石项链，然后从[npc2.her]的脖子上取下。
+]]></other>
+    <otherRough><![CDATA[
+		[npc.Name]粗暴地把钻石项链从[npc2.namePos]脖子上解开并扯下。
+]]></otherRough>
   </displacementText>
 
 </clothing>

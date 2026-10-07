@@ -1,115 +1,115 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogue>
 
 	<!-- EXTERIOR -->
 
 	<htmlContent tag="EXTERIOR"><![CDATA[
 	<p>
-		Being built in an extremely imposing example of brutalist architecture, the vast structure before you is strikingly different from the usual residential buildings which Dominion is mostly comprised of. A wide courtyard, paved in drab, grey flagstones and cordoned off with chain bollards, separates the street on which you're standing from this unusual property. Looking up at the façade, which is made almost entirely out of sheets of reflective glass and thick pillars of grey concrete, you see that there's a sign bearing the words 'Enforcer Headquarters, Greyhaven Park'.
+		面前这栋极度雄伟的野蛮主义建筑与御城区格格不入：由暗灰色的石板铺成的巨大广场将你脚下这诡异的地产与周边隔离开来，而当你望向几乎由防弹玻璃和灰混凝土柱构成的外墙时，你看到了一个标识：“灰港公园，执法者总部”。
 	</p>
 	#IF(pc.getOccupation()==OCCUPATION_TOURIST)
 		<p>
-			Shaking your head at what you assume to be a prime example of English architecture, you sigh, [pc.speech(I just feel really sad looking at it...)]
+			看不到以为的英式建筑典范而大失所望的你摇了摇头，叹道：[pc.speech(看着令人伤心啊……)]
 		</p>
 	#ENDIF
 	<p>
-		As if the sign wasn't enough to reveal this establishment's purpose to any passersby, there are also numerous groups of smartly-dressed
+		在广场中闲逛的
 		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
-			 demon
+			恶魔
 		#ENDIF
-		 Enforcers loitering about the courtyard, with several more standing guard at each of the three main entrances. While the signs beside two of these doorways inform you that they're for Enforcer use only, the third bears the words
+		执法者们像是在提醒路人这里是谁的地盘，而建筑的三个大门则被更多守卫看守着。其中两扇门有仅供执法者使用的标识，第三个门的标识写着：
 		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<=17)
-			 'Public Inquiries; Reception open [style.colourMinorGood([units.time(9)]-[units.time(17)])]'. If you had any sort of business to conduct here, then this would be the door for you.
+			“公众质询：接待处开放时间：[style.colourMinorGood([units.time(9)]-[units.time(17)])]”。有相关需求人员由此入。
 		#ELSE
-			 'Public Inquiries; Reception open [style.colourMinorBad([units.time(9)]-[units.time(17)])]'. While the reception within may currently be [style.colourBad(closed)], you're still able to enter the building through this door.
+			“公众质询：接待处开放时间：[style.colourMinorBad([units.time(9)]-[units.time(17)])]”。接待处[style.colourBad(已关闭)]，但本门持续开放。
 		#ENDIF
 	</p>
 	#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_WES))
 		<p>
-			As you're in possession of a Contractor Pass, you could also choose to enter the Enforcer HQ via the door that's close to the requisitions area...
+			鉴于你有承包许可证，你也可以从军需处那边的通道进入执法者总部……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CORRIDOR -->
 	
 	<htmlContent tag="CORRIDOR"><![CDATA[
 	<p>
-		Finding yourself in the nerve-centre of police operations in Dominion, a constant stream of Enforcers walk, jog, and sometimes even run past you as you [pc.walk] down the corridor. Although some of them throw suspicious glances your way, you're not challenged by any of these Enforcers, and so you're able to continue on your way without issue.
+		你沿着御城区的警务中心走廊向前[pc.walk]，不断有成队的执法者从你身边走过、跑过，有时甚至是冲刺过去。尽管他们中的一些人朝你投来怀疑的目光，但你并没有受到这些执法者的盘问，因此你可以不受打扰地继续前行。
 	</p>
 	<p>
-		Numerous doors line the sides of the corridor you're travelling down, and you notice that identically-shaped brass plaques have been mounted to the wall beside each one of them. Engraved into these plaques are different names and titles,
+		走廊的两侧排列有许多扇门，你注意到每扇门旁边的墙上都装着形状相同的铜制门牌。这些门牌上刻着不同的姓名和头衔，
 		#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_C_WOLFS_DEN))
-			 and you make sure to keep a lookout for one which reads '[brax.name]'.
+			你仔细地寻找着写有‘[brax.name]’的那一块。
 		#ELSE
-			 although as you've already found [brax.namePos] office you don't pay much attention to them.
+			但你之前已经找到了[brax.namePos]的办公室，因此你没怎么关注它们。
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_BRAX_WARNING"><![CDATA[
 	#IF(!pc.isQuestProgressGreaterThan(QUEST_LINE_MAIN, QUEST_MAIN_1_C_WOLFS_DEN))
 		<p>
-			Suddenly you spot the name that you've been searching for. Beside the door nearest to you, the writing 'Inspector [brax.nameFull]' is engraved into a brass plaque, letting you know that this is the office you've been looking for.
+			突然间，你看到了一直在寻找的名字。离你最近的门旁挂着一块铜牌，上面刻有“[brax.nameFull]督察”的字样，你意识到这就是你一直在寻找的那间办公室。
 		</p>
 		<p style='text-align:center;'>
 			#IF(pc.getLevel()<5)
-				[style.italicsBad(Be prepared for a difficult fight before entering [brax.namePos] office!)]
+				[style.italicsBad(在进入[brax.namePos]的办公室前请做好面临一场硬仗的准备！)]
 			#ELSE
-				[style.italicsMinorBad(Be prepared for a potentially difficult fight before entering [brax.namePos] office!)]
+				[style.italicsMinorBad(在进入[brax.namePos]的办公室前请做好可能会面临一场硬仗的准备！)]
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CORRIDOR_PLAIN -->
 	
 	<htmlContent tag="CORRIDOR_PLAIN"><![CDATA[
 	<p>
-		This corridor, much like all the others which run throughout the Enforcer HQ, is just as bland and uninteresting as you'd expect to see inside a government building. The floor, walls, and ceiling are all differing shades of grey, and are illuminated in a bright, artificial light which is being emitted from the arcane lightbulbs overhead.
+		和执法者总部里的其他走廊一样，这里就是机关里常见的又单调又无趣的走廊。地板、墙壁和天花板刷满了各种各样的灰色，头顶的奥术灯泡则向周围射出强烈的人造光。
 	</p>
 	<p>
-		There really isn't anything to do in this area other than continue on your way forwards...
+		这里真没什么事可做……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="CORRIDOR_PLAIN_ENFORCER_ENTRANCE"><![CDATA[
 	<p>
-		Having been granted special access to one the many restricted areas of the Enforcer HQ, you find yourself standing in the corridor between the Quartermaster's office and the requisitions area. At one end of the corridor, there's the locked door which leads deeper into the Enforcer HQ, while at the other end, there are a pair of heavy doors which lead out into Dominion.
+		你获得了进入执法者总部军需处的特别通行许可，正站在军需官办公室和军需处之间。在走廊的一段，有一个通向执法者总部更深处的门，已经上了锁，而在另一端，则是一扇沉重的大门，通向御城区的街道。
 	</p>
 	<p>
 		#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
 			#IF(!game.isWorkTime())
-				While there's an Enforcer stationed behind the nearby requisitions desk at all times, Elle only works from [style.colourMinorBad([units.time(9)]-[units.time(17)])]. As you're only able to make use of the requisitions area while she's present, there's not much for you to do here except head out of the Enforcer HQ...
+				虽然一直有一位执法者被安排在请购台后，但埃勒只在[style.colourMinorBad([units.time(9)]-[units.time(17)])]才工作。由于只有当她在场时你才能使用军需处，所以你在这里没什么好做的，只能转头离开执法者总部……
 			#ELSE
-				As you're here during Elle's work hours ([style.colourMinorGood([units.time(9)]-[units.time(17)])]), you could head over to where she's working at the requisitions area, or instead simply continue on your way deeper into or out of the Enforcer HQ...
+				由于当前正是埃勒的工作时间：([style.colourMinorGood([units.time(9)]-[units.time(17)])])，你可以直接走进她工作的军需处，或者继续向深处走去，又或者直接离开执法者总部……
 			#ENDIF
 		#ELSE
 			#IF(!game.isWorkTime())
-				While there's an Enforcer stationed behind the nearby requisitions desk at all times, Wes only works from [style.colourMinorBad([units.time(9)]-[units.time(17)])]. As you're only able to make use of the requisitions area while he's present, there's not much for you to do here except head out of the Enforcer HQ...
+				虽然一直有一位执法者被安排在请购台后，但韦斯只在[style.colourMinorBad([units.time(9)]-[units.time(17)])]才工作。由于只有当他在场时你才能使用军需处，所以你在这里没什么好做的，只能转头离开执法者总部……
 			#ELSE
-				As you're here during Wes's work hours ([style.colourMinorGood([units.time(9)]-[units.time(17)])]), you could head over to where he's working at the requisitions area, or instead simply continue on your way deeper into or out of the Enforcer HQ...
+				由于当前正是韦斯的工作时间：([style.colourMinorGood([units.time(9)]-[units.time(17)])])，你可以直接走进他工作的军需处，或者继续向深处走去，又或者直接离开执法者总部……
 			#ENDIF
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE -->
 
 	<htmlContent tag="ENTRANCE"><![CDATA[
 	<p>
-		A pair of glass doors link the outside world to the small entrance hall that you find yourself standing in. There's a noticeboard hanging from a nearby wall, covered in posters and information leaflets of all kinds. Other than that, however, this room is completely empty, and you'll have to proceed through another set of internal doors if you wanted to enter the building proper.
+		你正站在一处狭小的门厅内，一对玻璃门通向室外。旁边的墙壁上挂着一个布告栏，上边贴满了各色海报和通知传单。而除此之外，这个房间空无一人，你需要再经过一扇内门才能正式进入建筑内。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- WAITING_AREA -->
@@ -117,77 +117,77 @@
 	<htmlContent tag="WAITING_AREA"><![CDATA[
 	#IF(!game.isWorkTime())
 		<p>
-			As the reception desk is closed at this time, the many low sofas littered around this waiting area are all completely deserted. The only person you can see from where you're currently standing takes the form of a muscular horse-boy Enforcer, who's standing guard beside the door which leads to the rest of the building's interior.
+			前台目前还关闭着，许多矮沙发散落在等候区各处，空无一人。从你这个位置能看见的唯一一个人就是那个肌肉分明的马男执法者，他正在通向建筑其余部分的门边站岗。
 			#IF(game.getDialogueFlags().hasFlag(FLAG_accessToEnforcerHQ))
-				 From the moment you entered the waiting area, he hasn't taken his eyes off of you, making sure that you aren't able to sneak past him.
+				从你进入等候区的那一刻起，他的眼神就没有从你身上离开一秒，他要保证你不会从他眼皮子底下溜过去。
 			#ELSE
-				 From the moment you entered the waiting area, he hasn't taken his eyes off of you, and you realise that there's absolutely no possibility of being able to sneak through the door he's guarding. If you wanted to get access to the HQ's interior, you'll have to come back during the reception desk's opening hours, which are from [style.colourMinorBad([units.time(9)]-[units.time(17)])], and then speak to the receptionist.
+				从你进入等候区的那一刻起，他的眼神就没有从你身上离开一秒，你意识在他站岗的时候绝对没有偷偷溜进那扇门的可能。如果你想进入总部内部，必须要在前台工作时再回来，也就是[style.colourMinorBad([units.time(9)]-[units.time(17)])]，到时候再跟接待交流。
 			#ENDIF
 		</p>
 	#ELSE
 		#IF(pc.getCharactersEncountered().contains(candi.getId()))
 			<p>
-				Several rough-looking members of the local community are lounging about on the many low sofas littered around this waiting area. A reception desk is built into the left-hand wall, and you see Candi, the cat-girl bimbo, sitting behind it. She has long, bleach-blonde hair, a beautiful face that's been completely plastered in makeup, and a massive pair of G-cup breasts that threaten to spill out of her half-buttoned-up shirt at any moment. Her cute cat-like ears twitch this way and that as she stares into a little mirror on her desk, and you notice that she's busy applying a layer of bright pink lipstick to her plump lips.
+				几个相貌粗犷的当地社区成员正在到处散落的矮沙发上休息。左手的墙边就是前台，你看到了坎迪——那个胸大无脑的猫女——正坐在后面。她有着一头亮金色的长发，漂亮的脸蛋上化满了妆，一对G罩杯的巨乳看样子随时都会从没系满扣子的衬衫里跳出来。她正对着桌子上的小镜子盯着看个不停，但可爱的猫耳却向这边一抖，你注意到她还在忙着给她又肥又软的嘴唇上涂着亮粉色的口红。
 			</p>
 		#ELSE
 			<p>
-				Several rough-looking members of the local community are lounging about on the many low sofas littered around this waiting area. A reception desk sits off to one side of the room, and you see a lesser cat-girl, wearing an Enforcer's uniform, sitting behind it. She has long, bleach-blonde hair, a beautiful face that's been completely plastered in makeup, and a massive pair of G-cup breasts that threaten to spill out of her half-buttoned-up shirt at any moment. Her cute cat-like ears twitch this way and that as she stares into a little mirror on her desk, and you notice that she's busy applying a layer of bright pink lipstick to her plump, bimbo-like lips.
+				几个相貌粗犷的当地社区成员正在到处散落的矮沙发上休息。前台坐落在房间一边，一个身着执法者制服的亚猫女正坐在后面。她有着一头亮金色的长发，漂亮的脸蛋上化满了妆，一对G罩杯的巨乳看样子随时都会从没系满扣子的衬衫里跳出来。她正对着桌子上的小镜子盯着看个不停，但可爱的猫耳却向这边一抖，你注意到她还在忙着给她又肥又软、骚里骚气的嘴唇上涂着亮粉色的口红。
 			</p>
 		#ENDIF
 		<p>
-			The only other person you can see takes the form of a muscular horse-boy Enforcer, who's standing guard beside the door which leads to the rest of the building's interior.
+			除此之外你只能看见那个肌肉分明的马男执法者，他正在通向建筑其余部分的门边站岗。
 			#IF(game.getDialogueFlags().hasFlag(FLAG_accessToEnforcerHQ))
-				 His watchful gaze sweeps the room, making sure that nobody is able to sneak past him.
+				他警惕的目光扫视着整个屋子，他要保证没人能从他眼皮子底下溜过去。
 			#ELSE
-				 From the moment you entered the waiting area, he hasn't taken his eyes off of you, and you realise that there's absolutely no possibility of being able to sneak through the door he's guarding. If you wanted to get access to the HQ's interior, you'll have to negotiate with the bimbo cat-girl receptionist.
+				从你进入等候区的那一刻起，他的眼神就没有从你身上离开一秒，你意识在他站岗的时候绝对没有偷偷溜进那扇门的可能。如果你想进入总部内部，最好先跟那个胸大无脑的猫女接待沟通一下。
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- OFFICE -->
 
 	<htmlContent tag="OFFICE"><![CDATA[
 	<p>
-		The door to the office before you displays a name which you haven't heard of before, and judging from the fact that the lights inside seem to be turned off, it doesn't look like there's going to be anyone inside who can help you to find Brax's office. Trying the handle just to be sure, you find that the door is currently locked. It looks like you'll have to keep on searching for Brax elsewhere...
+		你面前的办公室门上显示着一个你从未听说过的名字，而且从里面的灯似乎已经熄灭的情况来看，里面也似乎不会有人能帮你找到布拉克斯的办公室了。为了保险起见，你试了试门把手，发现门是锁着的。看来你只能继续在别处寻找布拉克斯了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- STAIRCASE -->
 
 	<htmlContent tag="STAIRCASE"><![CDATA[
 	<p>
-		In front of you, there's a large staircase which leads up to the next floor of the building. An Enforcer Constable is standing guard to one side of the foot of the stairs, and as he sees you stop and take a look around, he simply shakes his head and motions for you to turn around and go back the way you came.
+		在你面前，有一个通往大楼二层的大楼梯。一名执法者警员正在楼梯的一侧站岗，当他看到你停下来四处张望时，只是摇了摇头，示意你原路返回。
 	</p>
 	<p>
-		As it's clear that members of the public aren't allowed to access the upper floors of the Enforcer HQ, you decide that it would be best to simply turn around and head elsewhere...
+		由于公众显然不能进入执法者总部的上层，你决定最好掉头前往其他地方……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- CELLS_OFFICE -->
 
 	<htmlContent tag="CELLS_OFFICE"><![CDATA[
 	<p>
-		This small office is where all prisoners are checked in and out of the cells. Although typically manned by at least two Enforcers, it's currently deserted...
+		这个小办公室是所有囚犯进出牢房的地方。虽然通常会有至少两名执法者在此值班，但目前这里已无人值守……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- CELL -->
 
 	<htmlContent tag="CELL"><![CDATA[
 	<p>
-		With a metal, barred door and only a raised concrete platform to serve as a bed, this cell is very basic indeed.
+		这间牢房只有一扇带铁栅栏的金属门，以及一个作为床铺的加高水泥平台，确实非常简陋。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- GUARDED_DOOR -->
@@ -195,91 +195,91 @@
 	<htmlContent tag="GUARDED_DOOR"><![CDATA[
 	#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_WES))
 		<p>
-			You flash your Contractor Pass to the horse-boy guard, and, with a deep grunt, he steps aside to let you pass.
+			你朝着那个马男安保亮了一下承包许可证，他低声咕哝了什么，便侧步让你进去了。
 		</p>
 		<p>
 			#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
 				#IF(!game.isWorkTime())
-					Although you have access the inner part of the Enforcer HQ, Elle isn't going to be in her office at this time, so all that's left for you to do is head over to the requisitions area...
+					虽然你已经获准及进入执法者总部内部，但埃勒这个时候还不在办公室，所以你也只能返回军需处……
 				#ELSE
-					Now able to access the inner part of the Enforcer HQ, you wonder whether you should go and pay Elle a visit, or instead head over to the requisitions area...
+					能够进入执法者总部内部后，你在想是去见一见埃勒还是直接返回军需处……
 				#ENDIF
 			#ELSE
 				#IF(!game.isWorkTime())
-					Although you have access the inner part of the Enforcer HQ, Wes isn't going to be in his office at this time, so all that's left for you to do is head over to the requisitions area...
+					虽然你已经获准及进入执法者总部内部，但韦斯这个时候还不在办公室，所以你也只能返回军需处……
 				#ELSE
-					Now able to access the inner part of the Enforcer HQ, you wonder whether you should go and pay Wes a visit, or instead head over to the requisitions area...
+					能够进入执法者总部内部后，你在想是去见一见韦斯还是直接返回军需处……
 				#ENDIF
 			#ENDIF
 		</p>
 	#ELSEIF(game.isBraxMainQuestComplete())
 		<p>
-			You flash the pass that Candi gave to you at the horse-boy guard, but he refuses to step aside and grunts, [style.speechMasculine(Those passes aren't valid anymore. Don't waste my time.)]
+			你朝着那个马男安保亮了一下坎迪给你的通行证，但他却并没有让开，只是咕哝道，[style.speechMasculine(这玩意已经没用了，别再浪费我的时间。)]
 		</p>
 		<p>
-			It looks like he's not going to let you pass, and you don't really have any business back there anyway...
+			看样子他并不想放你过去，不过反正你来这里也没什么事情……
 		</p>
 	#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_accessToEnforcerHQ))
 		<p>
-			You flash the pass that Candi gave to you at the horse-boy guard, and, with a grunt, he steps aside to let you pass.
+			你朝着那个马男安保亮了一下坎迪给你的通行证，他低声咕哝了什么，便侧步让你进去了。
 		</p>
 		<p>
-			As you walk through the doors, you hear him muttering, [style.speechMasculine(That slut's gonna get in trouble with [brax.name] again... Giving out passes like she does blowjobs...)]
+			在你经过大门时，能听见他低声道，[style.speechMasculine(那个骚货尽会给[brax.name]惹麻烦……通行证发的跟她舔鸡巴一样随便……)]
 		</p>
 	#ELSE
 		<p>
-			As you walk up to the horse-boy guard, he crosses his arms and frowns at you. [style.speechMasculine(I don't know what you're thinking, but there's no way you're getting through here, understood? Unless you want to be thrown out, you'd better back off. Now.)]
+			在你接近那个马男安保时，他抱起了双臂，皱眉盯着你。[style.speechMasculine(我不知道你想干什么，但你可别在这儿惹事，懂了吗？如果不想被丢出去，最好往后退，立刻。)]
 		</p>
 		<p>
-			It looks like he means business, and it probably wouldn't be the smartest idea to start a fight in the middle of the Enforcer HQ. If you had any business with one of the Enforcers here, you might be able to get a pass from the cat-girl receptionist, which would allow you to get past these guarded doors...
+			看上去他是来真的，直接在执法者总部光天化日地开打也并不是什么好主意。如果找其中一位执法者有事，或许能从那个猫女招待那里拿到通行证，然后就能通过这扇有安保的门了……
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="GUARDED_DOOR_STEP_BACK"><![CDATA[
 	<p>
-		Realising that you'd stand no chance in a fight against all of the Enforcers that would soon arrive as backup, you decide not to try and force your way through into the interior of the building. Agreeing to do as the horse-boy says, you step back into the waiting room...
+		你意识到自己不可能跟所有迅速支援赶来的执法者作对，于是决定不要强闯入这座建筑。你照着那个马男说的，退回了等待室……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- LOCKED_DOOR -->
 
 	<htmlContent tag="LOCKED_DOOR"><![CDATA[
 	<p>
-		The door in front of you is firmly shut and locked, and you see that instead of a regular lock, access is granted via what appears to be some kind of arcane barcode scanner attached to the wall to one side of it.
+		你面前的门关得严严实实，已经上锁，而且看得出来不是一般的锁，只有通过旁边墙上的奥术条形码扫描器才能进入。
 		#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_WES))
-			 Although you try swiping your Contractor Pass over it, nothing happens, and you realise that the area beyond is not going to be accessible to you. Deciding that there's nothing more to be gained here, you decide to turn around and head back the way you came...
+			你尝试用承包许可证扫了一下，但无事发生，这片区域已经不是你允许来的地方了。既然无事可做，你决定还是回头退回来的地方……
 		#ELSE
-			 Although you try swiping Candi's pass over it, nothing happens, and you realise that the area beyond is not going to be accessible to you. Deciding that there's nothing more to be gained here, you decide to turn around and head back the way you came...
+			你尝试用坎迪的通行证扫了一下，但无事发生，这片区域已经不是你允许来的地方了。既然无事可做，你决定还是回头退回来的地方……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="LOCKED_DOOR_STEP_BACK"><![CDATA[
 	<p>
-		With no apparent way to get past this locked door, you take a step back and turn around, before heading off back down the main corridor...
+		你没有发现其他显眼的方式能够穿过这道上锁的门，于是转身回到了主走廊……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS_DOOR -->
 
 	<htmlContent tag="REQUISITIONS_DOOR"><![CDATA[
 	<p>
-		The door in front of you is firmly shut and locked, and you see that instead of a regular lock, access is granted via what appears to be some kind of arcane barcode scanner attached to the wall to one side of it.
+		你面前的门关得严严实实，已经上锁而且看得出来不是一般的锁，只有通过旁边墙上的奥术条形码扫描器才能进入。
 		#IF(pc.isQuestCompleted(QUEST_LINE_SIDE_WES))
-			 After [pc.stepping] forwards and swiping your Contractor Pass over this scanner, you hear a high-pitched beep being emitted by the arcane device. Pushing on the door, you discover that it's now unlocked, allowing you to proceed forwards into the area beyond...
+			你上前一步，用承包许可证扫了一下，只听见一声尖锐的蜂鸣声从奥术装置中传出。你推了推门，发现已经解锁了，允许你向更里面的区域进发……
 		#ELSE
-			 Although you try swiping Candi's pass over it, nothing happens, and you realise that the area beyond is not going to be accessible to you at this time. Deciding that there's nothing more to be gained here, you decide to turn around and head back the way you came...
+			你尝试用坎迪的通行证扫了一下，但无事发生，这片区域已经不是你允许来的地方了。既然无事可做，你决定还是回头退回来的地方……
 		#ENDIF
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- RECEPTION_DESK -->
@@ -287,47 +287,47 @@
 	<htmlContent tag="RECEPTION_DESK"><![CDATA[
 	#IF(!game.isWorkTime())
 		<p>
-			The reception desk before you, at which all public inquiries are to be made, is currently deserted. The lights behind the desk are all switched off, and there's a little placard sitting on the counter top which informs you that it is currently [style.colourBad(closed)], and will only be open between the hours of [style.colourMinorBad([units.time(9)]-[units.time(17)])].
+			面前的前台是大众问询的地方，但目前空无一人。后面的灯光也都已经关闭，台面上放着一个小牌子，上面写着当前[style.colourBad(关闭中)]，只有在[style.colourMinorBad([units.time(9)]-[units.time(17)])]才会开放。
 		</p>
 		<p>
-			It looks as though you'll have to return later...
+			看样子你得过会儿再来了……
 		</p>
 	#ELSE
 		#IF(game.isBraxMainQuestComplete())
 			#IF(!game.getDialogueFlags().hasFlag(FLAG_seenBraxAfterQuest))
 				<p>
-					You walk over to Candi, smiling as you see her totally engrossed in the little mirror sitting on her desk. Curiously, there's another placard next to hers, and as you come to a halt in front of Candi, your eyes go wide as you read the words '[brax.name], Candi's assistant'.
+					你向坎迪走去，看到她正全神贯注地盯着桌上的小镜子，不禁微笑起来。有趣的是她身边还有一块小牌子，你在坎迪面前停下脚步，震惊地发现上面写着“坎迪的助手[brax.name]”
 				</p>
 				<p>
-					[pc.speech(Hi, Candi,)] you greet her, continuing to smile as she looks up from her mirror, [pc.speech(how are you and [brax.name] doing? I see his name here, but where is he?)]
+					[pc.speech(嗨，坎迪，)]你笑着向她打了招呼，她将紧盯着小镜子的目光抬了起来，[pc.speech(你和[brax.name]如何了？我看他的名牌在这儿，那他人呢？)]
 				</p>
 				<p>
-					[candi.speechNoEffects(Like, omigosh! Heya, I recognise you!)] she cries out, her voice bubbling with excitement. [candi.speechNoEffects(You, like, know my little pet? Come say hello [brax.name]!)]
+					[candi.speechNoEffects(哦，我的天！哎呀，我认得你！)]她大叫起来，言语中满是激动。[candi.speechNoEffects(这个，你也认识我的小宠物吧？来打个招呼，[brax.name]！)]
 				</p>
 				<p>
-					Candi reaches down to tug on something, and you hear a familiar voice respond, [brax.speech(Candi, please, I don't wa-)]
+					坎迪伸手往下面拽了一下，你听见一个熟悉的声音回应道，[brax.speech(坎迪，求你了，我不——)]
 				</p>
 				<p>
-					[brax.namePos] protest is cut off as Candi stands up, sharply yanking on what you now see to be a pink leash. [candi.speechNoEffects(Bad pet! Bad! You, like, have to do as I say! The chief said so, remember?!)]
+					坎迪站起身来，用力一扯那个像是粉色牵绳一样的东西，[brax.namePos]的抗议立马没了声。[candi.speechNoEffects(真坏坏！你不是应该照我说的做吗！总长这么说的哦，记得吗？！)]
 				</p>
 				<p>
-					Letting out another groan, [brax.name] crawls out from under Candi's desk and stands up to face you. A look of shock crosses his face, and he desperately pulls on his leash as he shouts out, [brax.speech(That's [pc.herHim]! Candi! That's the one who took the documents! Call the chie- ~Aargh!~)]
+					[brax.name]又是一声呜咽，从坎迪的桌子下爬了出来，不情愿地站起来面对着你。他顿时表情震惊，紧紧地抓住牵绳，大吼起来，[brax.speech(就是[pc.herHim]！坎迪！就是[pc.herHim]偷走了文件！快叫总~呃啊！~)]
 				</p>
 				<p>
-					[brax.namePos] leash is suddenly and violently yanked backwards, immediately interrupting his accusation and causing him to choke and splutter. Candi's face has gone bright red, and she looks absolutely furious as she starts to shout, [candi.speechNoEffects(Bad pet! Bad, bad, <b>bad</b>! How <i>dare</i> you treat a visitor like that! Like, [pc.sheIs] even a friend of yours, remember?! If you say <i>one more word</i>, I'm going to, like, get the ballgag out, and no more talking for a week!)]
+					[brax.namePos]的牵绳突然暴力地向后一扯，让他的指控戛然而止，顿时几近窒息，咳嗽个不停。坎迪气得脸红筋涨，大声斥责道，[candi.speechNoEffects(坏宠物！不听话，不听话，<b>不听话</b>！你怎么<i>敢</i>这么对待访客！哎呀，[pc.sheIs]可是我们的朋友，不记得了吗？！你要是<i>再多说一个字</i>，我就，我就拿口球出来，你一周也不许再说话！)]
 				</p>
 				<p>
-					With [brax.name] suitably subdued, Candi turns back to face you. [candi.speechNoEffects(Like, I am soooo sorry! [brax.name] is kinda stupid, don't mind him! He gave away some kind of really important paper or something, and the chief said I could, like, have him as a pet. I even have, like, permission to punish him and stuff. Hey! You know what would be fun! How about you get to punish him for being so super mean to you?!)]
+					坎迪把[brax.name]修理好之后，才转身看向你。[candi.speechNoEffects(哎呀，真是对不起！[brax.name]笨笨的，别管他！他是丢了什么重要的文件还是什么的，总长就说我，嗯，可以养他当宠物了。我甚至那个，还能惩罚他呢。对了！你应该很会玩吧！要不你来惩罚他一下吧，他刚才对你那么凶？！)]
 				</p>
 				<p>
-					Candi finally stops talking, giving you a moment to process what's going on. It looks like [brax.name] got demoted for giving you that information about Arthur, and is now Candi's pet. She's far too stupid to understand what [brax.name] is trying to tell her, and you see a look of intense frustration cross over the unfortunate wolf-boy's face as his owner silences him.
+					坎迪终于止住了嘴巴，留时间让你反应了一下。看样子[brax.name]因为泄露亚瑟的信息被降职了，现在成了坎迪的宠物。她满脑子没多少正常东西，根本不知道[brax.name]要告诉她什么，被主人要求闭嘴后，你看得出那只不幸的狼男脸上满是委屈。
 				</p>
 				<p>
-					You could take up Candi's offer and have some fun with [brax.name] in her office. As you're deciding what to do, you notice a little cardboard box, marked '[brax.namePos] junk', sitting on a shelf behind Candi's desk.
+					你可以接受坎迪的建议，跟[brax.name]在办公室好好爽一下。正在思考时，你发现坎迪桌子后面的架子上有个纸板箱，上面写着“[brax.namePos]的垃圾”。
 					#IF(game.getDialogueFlags().hasFlag(FLAG_braxTransformedPlayer))
-						 The neck of a very familiar-looking bottle is poking out of the top, and an interesting idea runs through your mind...
+						那个眼熟的瓶颈从里面探出头来，一个有趣的想法涌上心头……
 					#ELSE
-						 The neck of a delicate-looking bottle is poking out of the top, and, remembering Candi's warning about [brax.name] having a wolf-girl transformation potion, an interesting idea runs through your mind...
+						一个精致的瓶颈从里面探出头来，回忆起坎迪警告过[brax.name]有一瓶狼女转化药剂，一个有趣的想法涌上心头……
 					#ENDIF
 				</p>
 			#ELSE
@@ -335,358 +335,358 @@
 					#IF(game.getSecondsPassed()-game.getDialogueFlags().getSavedLong("candi_sex_timer")>60*60*12)
 						<p>
 							#IF(candi.isVisiblyPregnant() && !candi.isCharacterReactedToPregnancy(pc))
-									You walk over to the reception desk, and, coming to a halt just before it, you look down to see that the cat-girl secretary hasn't even noticed your approach. While at first it looked as though she was completely engrossed in doing her makeup, you now see that she has in fact angled the mirror in front of her in such a way that she's looking down into her own lap. Following her gaze, you find yourself looking down not only at the cat-girl's fingers rubbing away at her pussy, but also a large, rounded bump in her belly. The sound of your approach was masked by the lewd little 'oohs' and 'aahs' she's making, but as Candi leans back in her chair a little, she suddenly notices you standing before her.
+									你走向前台，在正前方停了下来，低头一看，那个猫女秘书甚至没有注意到你。虽然第一眼看上去好像她正全神贯注地化着妆，但这时你才确信她正通过镜子的反射盯着自己的大腿看。你随着她的视线，注意到那猫女不仅用手指揉弄着小穴，肚子还已经圆圆地鼓起。你走上前来的声音早就被她“呜呜啊啊”的娇喘盖住了，这时坎迪微微背靠在椅子上，这才发现你正站在她的面前。
 								</p>
 								<p>
-									[candi.speechNoEffects(Oh, like, it's you again!)] she exclaims, quite clearly unperturbed by your presence as she continues brazenly masturbating while talking, [candi.speechNoEffects(Look! You, like, got me all pregnant and stuff! Lucky I have, like, this cushy desk job and stuff, so I can just sit here an be all relaxin' all the time, y'know? Having to walk around carrying your kids gets, like, suuuuper exhausting! Anyway, like, you gonna just stand there, or you gonna get round here and help me out? Those lollipops really got me super horny and stuff, so, like, I'm gonna need you to fuck me. You're up for that, right?)]
+									[candi.speechNoEffects(哦，那个，又是你啊！)]她感叹道，但却丝毫没有受到你的影响，一面明目张胆地自慰着，一面说道，[candi.speechNoEffects(看啊！你啊，都让我怀孕了！多亏了我，嗯，坐的是办公室，所以才能一直坐在这里摸鱼，你懂吗？带着你的孩子走来走去真的是，累到爆炸！总之，嗯，你是要一直站在这，还是来帮我一把？那些棒棒糖让我饥渴得不得了，所以嘛，我需要你干我。你就是来干这个的，不是吗？)]
 							#ELSE
-									You walk over to the reception desk, and, coming to a halt just before it, you look down to see that the cat-girl secretary hasn't even noticed your approach. While at first it looked as though she was completely engrossed in doing her makeup, you now see that she has in fact angled the mirror in front of her in such a way that she's looking down into her own lap. Following her gaze
+							你走向前台，在正前方停了下来，低头一看，那个猫女秘书甚至没有注意到你。虽然第一眼看上去好像她正全神贯注地化着妆，但这时你才确信她正通过镜子的反射盯着自己的大腿看。你随着她的视线
 									#IF(candi.isVisiblyPregnant())
-										 down over her pregnant belly
+										看到了她怀孕的小肚子
 									#ENDIF
-									, you see that her skirt has been pulled up, and her right hand is frantically rubbing away at her exposed pussy. The sound of your approach was masked by the lewd little 'oohs' and 'aahs' she's making, but as Candi leans back in her chair a little, she suddenly notices you standing before her.
+									，只见她掀起了裙子，右手对着露在外面的小穴揉来揉去。你走上前来的声音早就被她“呜呜啊啊”的娇喘盖住了，这时坎迪微微背靠在椅子上，这才发现你正站在她的面前。
 								</p>
 								<p>
-									[candi.speechNoEffects(Oh, like, it's you again!)] she exclaims, quite clearly unperturbed by your presence as she continues brazenly masturbating while talking, [candi.speechNoEffects(Like, fuck, those lollipops really got me super horny and stuff, y'know? Like, I keep on masturbating, but it's not going away! Y'know, this is kinda partly your fault for giving these to me. You need to, like, get round here and help me out! Come on, you wanna fuck, don't you?)]
+									[candi.speechNoEffects(哦，那个，又是你啊！)]她感叹道，但却丝毫没有受到你的影响，一面明目张胆地自慰着，一面说道，[candi.speechNoEffects(哎呀，妈的，那些棒棒糖让我饥渴得不得了，你知道吗？我就一直扣一直扣都减轻不了一点！你看，你多少也有错，毕竟是你给我的。你总得，来帮我一把嘛，是吧！来嘛，你肯定很想来一发吧？)]
 							#ENDIF
 						</p>
 						<p>
-							After asking this, the horny bimbo cat-girl bites her lip, and, putting on the most pleading and desperate look she can muster, lets out a long, imploring whine. Gazing into your eyes, she begs, [candi.speechNoEffects(Like, please?!)]
+							那饥渴的傻猫女问完之后就咬紧了下唇，摆出一副十分绝望的恳求表情，一声长长的悲鸣也随之而来，她哀求道，[candi.speechNoEffects(就是那个，拜托？！)]
 						</p>
 					#ELSE
 						<p>
 							#IF(candi.isVisiblyPregnant() && !candi.isCharacterReactedToPregnancy(pc))
-									You walk over to the reception desk, and, coming to a halt just before it, you look down to see that the cat-girl secretary hasn't even noticed your approach. She's completely engrossed in doing her makeup, and faint little 'oohs' and 'aahs' drift out her open mouth as she vacantly gazes into a little mirror that's sitting on her desk. Before you can say anything to get her attention, she reaches up to tuck a loose strand of bleach-blonde hair back behind her cat-like ears, and as she does so, she suddenly notices you standing before her.
+									你走向前台，在正前方停了下来，低头一看，那个猫女秘书甚至没有注意到你。她全神贯注地化着妆，但空虚地盯着桌子上的小镜子时，却也从口中不断发出微弱的“嗯嗯啊啊”声。正当你准备开口说话，她伸手把一缕散乱的金发拢到猫耳后，同时也突然注意到你正站在她的面前。
 								</p>
 								<p>
-									[candi.speechNoEffects(Hey, look!)] she happily exclaims, pushing herself back from the counter to reveal her swollen belly, [candi.speechNoEffects(You, like, got me all pregnant and stuff! Lucky I have, like, this cushy desk job and stuff, so I can just sit here an be all relaxin' all the time, y'know? Having to walk around carrying your kids gets, like, suuuuper exhausting! Anyway, like, I know it's only gonna be, like, a half-day at most before my pussy starts gettin' wet and all I can think of is sex again! You gotta come back and help me out again when that happens, ok?)]
+									[candi.speechNoEffects(嘿，是谁呢！)]她开心地叫了一声，随意地倚在了靠背上，露出她已经隆起的小腹，[candi.speechNoEffects(你啊，都让我怀孕了！多亏了我，嗯，坐的是办公室，所以才能一直坐在这里摸鱼，你懂吗？带着你的孩子走来走去真的是，累到爆炸！总之，我也知道估计，大概，用不了半天，我的下面就又会湿哒哒的，满脑子全是做爱了！到时候你肯定要回来帮我一把，行吗？)]
 								</p>
 							#ELSE
-									You walk over to the reception desk, and, coming to a halt just before it, you look down to see that the
+									你走到接待台前，在接待台前停住脚步，低头一看，
 									#IF(candi.isVisiblyPregnant())
-										 still-pregnant
+										依然怀孕的
 									#ENDIF
-									 cat-girl secretary hasn't even noticed your approach. She's completely engrossed in doing her makeup, and faint little 'oohs' and 'aahs' drift out her open mouth as she vacantly gazes into a little mirror that's sitting on her desk. Before you can say anything to get her attention, she reaches up to tuck a loose strand of bleach-blonde hair back behind her cat-like ears, and as she does so, she suddenly notices you standing before her.
+									猫女秘书根本没有注意到你的靠近。她正全神贯注地化妆，张开的嘴里发出微弱的哦、啊声，眼睛空洞地望着放在办公桌上的一面小镜子。你还没来得及说什么吸引她的注意力，她就伸手把一缕散乱的金发拢到猫耳后，就在她这样做的时候，她突然注意到了站在她面前的你。
 								</p>
 								<p>
-									[candi.speechNoEffects(Oh, hey, like, you're back!)] she happily exclaims, [candi.speechNoEffects(Thanks for, like, helping me to cum! Y'know, I'm feeling all super duper and normal again now, but I know it's only gonna be, like, a half-day at most before my pussy starts gettin' wet and all I can think of is sex! You gotta come back and help me out again when that happens, ok?)]
+									[candi.speechNoEffects(哦，那个，你又来了！)]她开心地叫了一声，[candi.speechNoEffects(多谢啦，就是，帮我去！告诉你，我现在觉得超级无敌正常了，不过我也知道估计，大概，用不了半天，我的下面就又会湿哒哒的，满脑子全是做爱了！到时候你肯定要回来帮我一把，行吗？)]
 								</p>
 							#ENDIF
 						<p>
-							Flashing you a big smile, Candi then turns back to her mirror and continues with her never-ending quest to get her makeup just right...
+							坎迪向你摆了个巨大的微笑，随后就又看向镜子，继续她永无止境的化妆了……
 						</p>
 					#ENDIF
 				#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_bimbofiedBrax))
 					<p>
-						You walk over to Candi, smiling as you see her totally engrossed in the little mirror sitting on her desk. As you come to a halt in front of her, you look down over the top of the desk to see [brax.name] furiously masturbating on the floor.
+						你向着坎迪走去，看到她正全神贯注地盯着桌上的小镜子，不禁微笑起来。你在坎迪面前停下脚步，低头看向桌子下面，之间[brax.name]正坐在地上激烈地自慰着。
 					</p>
 					<p>
-						[pc.speech(Hi again, Candi,)] you say, continuing to smile as she looks up from her mirror, [pc.speech(it looks like [brax.namePos] having fun down there!)]
+						[pc.speech(你好啊，坎迪，)]你继续笑着说道，她将紧盯着小镜子的目光抬了起来，[pc.speech(看起来[brax.namePos]在这很开心呢！)]
 					</p>
 					<p>
-						[candi.speechNoEffects(Like, omigosh! Heya!)] she cries out, her voice bubbling with excitement, [candi.speechNoEffects(and, like, eugh! I know right?! [brax.Name], like, won't stop masturbating, even after I've told [brax.him] to like a million times! I'm, like, far too busy to punish [brax.him] properly as well!)]
+						[candi.speechNoEffects(哦，我的天！你好啊！)]她大叫起来，言语中满是激动。[candi.speechNoEffects(哎呀，呃！你懂吗？！[brax.Name]，就是，根本停不下来，我都跟[brax.him]说过无数次了！我也，嗯，忙的没时间好好惩罚[brax.him]了！)]
 					</p>
 					<p>
-						As she speaks, Candi reaches down to tug [brax.namePos] [brax.arms] away from [brax.her] [brax.pussy], causing the horny bimbo to cry out,
-						 [brax.speechNoEffects(Awww! Candi! Please! I, like, <i>need</i> this! You gotta let m- ~Aah!~)]
+						说着，坎迪伸手把[brax.namePos]的[brax.arms]从[brax.her]的[brax.pussy]旁提了起来，惹得这个兴奋的骚货大叫起来，
+						[brax.speechNoEffects(嗷呜！坎迪！求你了！我，真的，<i>必须</i>这样！你就让我~啊啊！~)]
 					</p>
 					<p>
-						[brax.NamePos] pathetic whining is cut off as Candi stands up, sharply yanking on [brax.his] pink leash. [candi.speechNoEffects(Like, try to control yourself pet! Lucky for you, your super best friend is, like, here to play!)]
+						坎迪站起身来，用力一扯[brax.NamePos]的粉色牵绳，[brax.his]可怜的呜咽声戛然而止。[candi.speechNoEffects(哎呀，小宠物，你要控制住自己！不过你很幸运，你最好的朋友呢，来找你玩了！)]
 					</p>
 					<p>
-						[brax.name] immediately jumps to [brax.his] feet, and as [brax.he] catches sight of you, [brax.he] lets out a delighted squeal, [brax.speechNoEffects(Yes! Heya! Please, like, can we play together?! I'm, like, thinking of you all the time and stuff!)]
+						[brax.name]吓得一下子跳了起来，[brax.he]紧紧盯着你，高兴地尖叫起来，[brax.speechNoEffects(好耶！你好呀！拜托了，那个，跟我玩好不好？！我就是，想你想得不得了啊！)]
 					</p>
 					<p>
-						As [brax.name] drops [brax.his] hands back down to [brax.her] groin and starts masturbating, Candi turns back to face you. [candi.speechNoEffects(You'd be, like, doin' me a huuuge favour if you'd, like, help out with [brax.namePos] horniness! How about, like, you take [brax.him] into my office, and, like, give [brax.him] a good fucking?!)]
+						[brax.name]又一次把手放回胯下，开始自慰起来，坎迪转身看向你。[candi.speechNoEffects(那个，你要是愿意帮忙处理[brax.namePos]的性欲，那就真是帮了我一个，超级巨大的忙了！要不，嗯，你带[brax.him]去我的办公室吧，好好操[brax.him]一顿？！)]
 					</p>
 					<p>
-						You could take up Candi's offer and have some fun with [brax.name] in her office, or walk away and leave [brax.name] alone...
+						你可以接受坎迪的建议，跟[brax.name]在她的办公室爽一下，或者直接走开，让[brax.name]独自待着……
 					</p>
 				#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_feminisedBrax))
 					<p>
-						You walk over to Candi, smiling as you see her totally engrossed in the little mirror sitting on her desk. As you come to a halt in front of her, you read the words on the placard next to hers; '[brax.name], Candi's assistant'.
+						你向着坎迪走去，看到她正全神贯注地盯着桌上的小镜子，不禁微笑起来。有趣的是她身边还有一块小牌子，你在坎迪面前停下脚步，看到上面写着这么几个字'[brax.name]，坎迪的助手'。
 					</p>
 					<p>
-						[pc.speech(Hi again, Candi,)] you greet her, continuing to smile as she looks up from her mirror, [pc.speech(how are you and [brax.name] doing?)]
+						[pc.speech(你好啊，坎迪，)]你继续笑着说道，她将紧盯着小镜子的目光抬了起来，[pc.speech(你和[brax.name]如何了？)]
 					</p>
 					<p>
-						[candi.speechNoEffects(Like, omigosh! Heya!)] she cries out, her voice bubbling with excitement. [candi.speechNoEffects([brax.namePos] been, like, super disobedient! [brax.He], like, refused to suck my friend's cock earlier! Can you believe that?!)]
+						[candi.speechNoEffects(哦，我的天！你好啊！)]她大叫起来，言语中满是激动。[candi.speechNoEffects([brax.namePos]真是，超不听话！[brax.He]之前，就是说，不愿意舔我朋友的鸡巴呢！你敢信吗？！)]
 					</p>
 					<p>
-						As she speaks, Candi reaches down to tug on something, and you hear a familiar whimper in response, [brax.speech(Sorry, Cand-)]
+						坎迪一边说着，一边伸手往下面拽了一下，你听见一个熟悉的呜咽声回应道，[brax.speech(对不起，坎——)]
 					</p>
 					<p>
-						[brax.namePos] apology is cut off as Candi stands up, sharply yanking on [brax.his] pink leash. [candi.speechNoEffects(Like, come on pet! Stand up and say hello to your friend again!)]
+						坎迪立马站起身来，用力一扯[brax.NamePos]的粉色牵绳，[brax.namePos]的道歉声戛然而止。[candi.speechNoEffects(嗯，怎么了小宠物！快起来跟你的朋友打个招呼！)]
 					</p>
 					<p>
-						[brax.name] obediently crawls out from under Candi's desk and stands up to face you. [brax.speech(Hello...)]
+						[brax.name]不情愿地从坎迪的桌子下爬起来，站着面向了你。[brax.speech(你好……)]
 					</p>
 					<p>
-						With [brax.name] displaying an acceptable level of submission, Candi turns back to face you. [candi.speechNoEffects(Hey, like, [brax.name] still hasn't been punished for disobeying me earlier! How about, like, you punish [brax.him] for me?!)]
+						坎迪看到[brax.name]还算是展现出一点听话的样子，于是转身看着你。[candi.speechNoEffects(嘿，就是，[brax.name]之前违抗我那次还没受过惩罚呢！要不，就是说，你来帮我惩罚[brax.him]怎样？！)]
 					</p>
 					<p>
-						You could take up Candi's offer and have some fun with [brax.name] in her office, or walk away and leave [brax.name] alone. As you're making up your mind, you take another look at Candi, wondering if you could ask her to make [brax.name] a little more like her...
+						你可以接受坎迪的建议，跟[brax.name]在她的办公室爽一下，或者直接走开，让[brax.name]独自待着。正当你思考时，你又看了一眼坎迪，心想能否让她把[brax.name]变得更像她一点……
 					</p>
 				#ELSE
 					<p>
-						You walk over to Candi, smiling as you see her totally engrossed in the little mirror sitting on her desk. As you come to a halt in front of her, you read the words on the placard next to hers; '[brax.name], Candi's assistant'.
+						你向着坎迪走去，看到她正全神贯注地盯着桌上的小镜子，不禁微笑起来。有趣的是她身边还有一块小牌子，你在坎迪面前停下脚步，看到上面写着这么几个字'[brax.name]，坎迪的助手'。
 					</p>
 					<p>
-						[pc.speech(Hi again, Candi,)] you greet her, continuing to smile as she looks up from her mirror, [pc.speech(how are you and [brax.name] doing?)]
+						[pc.speech(你好啊，坎迪，)]你继续笑着说道，她将紧盯着小镜子的目光抬了起来，[pc.speech(你和[brax.name]如何了？)]
 					</p>
 					<p>
-						[candi.speechNoEffects(Like, omigosh! Heya!)] she cries out, her voice bubbling with excitement. [candi.speechNoEffects([brax.namePos] been, like, super disobedient! [brax.He], like, refused to lick my shoes clean earlier! Can you believe that?!)]
+						[candi.speechNoEffects(哦，我的天！你好啊！)]她大叫起来，言语中满是激动。[candi.speechNoEffects([brax.namePos]真是，超不听话！[brax.He]之前，就是说，不愿意帮我舔干净鞋子呢！你敢信吗？！)]
 					</p>
 					<p>
-						As she speaks, Candi reaches down to tug on something, and you hear a familiar whimper in response, [brax.speech(Sorry, Cand-)]
+						坎迪一边说着，一边伸手往下面拽了一下，你听见一个熟悉的呜咽声回应道，[brax.speech(对不起，坎——)]
 					</p>
 					<p>
-						[brax.namePos] apology is cut off as Candi stands up, sharply yanking on [brax.his] pink leash. [candi.speechNoEffects(Like, come on pet! Stand up and say hello to your friend again!)]
+						坎迪立马站起身来，用力一扯[brax.NamePos]的粉色牵绳，[brax.namePos]的道歉声戛然而止。[candi.speechNoEffects(嗯，怎么了小宠物！快起来跟你的朋友打个招呼！)]
 					</p>
 					<p>
-						[brax.name] reluctantly crawls out from under Candi's desk and stands up to face you. [brax.speech(Eugh, not you aga- Aah!)]
+						[brax.name]不情愿地从坎迪的桌子下爬起来，站着面向了你。[brax.speech(呃，怎么又是——啊啊！)]
 					</p>
 					<p>
-						Candi yanks on [brax.namePos] leash once again, before starting to furiously scold [brax.him]. After a few minutes, she's forced [brax.name] to apologise to you, and turns back to face you. [candi.speechNoEffects(Hey, like, I'm pretty sure you'll agree that [brax.name] <i>really</i> needs to be punished again! How about, like, you take [brax.him] into my office and show [brax.him] how to behave?!)]
+						坎迪又扯了一下[brax.namePos]牵绳，便开始生气地斥责起来。过了几分钟，她强迫[brax.name]给你道了歉，转身看向你。[candi.speechNoEffects(嘿，就是，我敢说你肯定也觉得[brax.name]<i>必须</i>要受点惩罚！要不，就是说，你带[brax.him]去我的办公室，告诉[brax.him]该怎么做？！)]
 					</p>
 					<p>
-						You could take up Candi's offer and have some fun with [brax.name] in her office, or walk away and leave [brax.name] alone.
+						你可以接受坎迪的建议，跟[brax.name]在她的办公室爽一下，或者直接走开，让[brax.name]独自待着。
 						#IF(game.getDialogueFlags().hasFlag(FLAG_braxTransformedPlayer))
-							 As you're deciding what to do, you notice a little cardboard box, marked '[brax.namePos] junk', sitting on a shelf behind Candi's desk. The neck of a very familiar-looking bottle is poking out of the top, and an interesting idea runs through your head...
+							正在思考时，你发现坎迪桌子后面的架子上有个纸板箱，上面写着“[brax.namePos]的垃圾”。那个眼熟的瓶颈从里面探出头来，一个有趣的想法涌上心头……
 						#ELSE
-							 As you're deciding what to do, you notice a little cardboard box, marked '[brax.namePos] junk', sitting on a shelf behind Candi's desk. The neck of a delicate-looking bottle is poking out of the top, and, remembering Candi's warning about [brax.name] having a wolf-girl transformation potion, an interesting idea runs through your head...
+							正在思考时，你发现坎迪桌子后面的架子上有个纸板箱，上面写着“[brax.namePos]的垃圾”。一个精致的瓶颈从里面探出头来，回忆起坎迪警告过[brax.name]有一瓶狼女转化药剂，一个有趣的想法涌上心头……
 						#ENDIF
 					</p>
 				#ENDIF
 			#ENDIF
 		#ELSE
 			<p>
-				You walk over to the reception desk, and, coming to a halt just before it, you look down to see that the cat-girl secretary hasn't even noticed your approach. She's completely engrossed in doing her makeup, and faint little 'oohs' and 'aahs' drift out her open mouth as she vacantly gazes into a little mirror that's sitting on her desk. Every now and then, she has to tuck loose strands of bleach-blonde hair back behind her cat-like ears, interrupting her sighs with an annoyed tutting sound each time she does so.
+				你走向前台，在正前方停了下来，低头一看，那个猫女秘书甚至没有注意到你。她全神贯注地化着妆，但空虚地盯着桌子上的小镜子时，却也从口中不符按发出微弱的“嗯嗯啊啊”声。她偶尔会伸手把一缕散乱的金发拢到猫耳后，而每次她都会恼火地啧几声，呻吟声也停了下来。
 			</p>
 			<p>
-				In amongst her messy collection of beauty products scattered all over the desk, you see a little placard with the name 'Candi' on it. It seems as though Candi is completely oblivious to the world outside of her mirror,
+				在她散落在办公桌上的乱七八糟美容产品中，你看到一个写有“坎迪”名字的小牌子。看来坎迪已经完全沉浸于镜子中的世界了，
 				#IF(pc.isQuestProgressLessThan(QUEST_LINE_MAIN, QUEST_MAIN_1_C_WOLFS_DEN))
-					 and as you don't have anything to ask of her, you think it's best to leave her to it and [pc.step] away from the desk...
+					由于你没什么事情问她，便决定还是不要管她，从前台退了回来……
 				#ELSE
-					 so you'll need to raise your voice in order to get her attention if you wanted to ask anything of her.
+					如果你有什么事情想问她，就得提高声音引起她的注意才行。
 				#ENDIF
 			</p>
 			#IF(game.getDialogueFlags().hasFlag(FLAG_accessToEnforcerHQ))
 				<p>
-					<i>You've already got a pass from Candi, so there's no point interrupting her again...</i>
+					<i>你已经从坎迪那里拿到了通行证，没必要再打扰她了……</i>
 				</p>
 			#ENDIF
 		#ENDIF
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_DESK_PUNISH_BRAX"><![CDATA[
 	<p>
-		[pc.speech(Sure thing, Candi, I can punish [brax.name] for you!)] you respond, stepping around to the other side of the desk.
+		[pc.speech(当然可以，坎迪，我会帮你惩罚[brax.name]的！)]你说着便走向前台里面。
 	</p>
 	<p>
-		[candi.speechNoEffects(Thanks, I've got, like, loads of work and stuff to do, so you're really helping me out here!)] Candi replies, handing you [brax.namePos] pink leash as she returns to applying makeup in her little mirror.
+		[candi.speechNoEffects(太谢谢了，我还有，嗯，成吨的工作要做呢，真是帮了我大忙了！)]坎迪回应道，接着把[brax.namePos]的粉色牵绳递给了你，便又对着小镜子化起妆来。
 	</p>
 	<p>
-		With a tug, you get [brax.name] to follow you into Candi's little office. Closing the door behind you, you turn to face the [brax.race], smiling as you unclip the leash from [brax.his] collar.
+		你扯动一下，便让[brax.name]乖乖跟你进到了坎迪的小办公室里。你关上身后的门，看向那个[brax.race]，微笑着将牵绳从[brax.his]的项圈上解了下来。
 	</p>
 	<p>
-		[pc.speech(I bet you're pretty angry right now, huh [brax.name]?)] you tease, laughing as [brax.he] lets out a low growl. [pc.speech(You'd better quiet down, unless you want Candi to know how bad you've been!)]
+		[pc.speech(你肯定气坏了吧，嗯，[brax.name]？)]你调戏道，听见[brax.he]低吼了一声，你更是笑得开心。[pc.speech(你最好安静一点，除非你想让坎迪知道你有多不听话！)]
 	</p>
 	<p>
-		[brax.Name] shuffles [brax.his] feet, looking down at the ground as [brax.he] lets out an annoyed grunt. Stepping forwards, you take hold of [brax.his] shoulders, and with a forceful shove, you push [brax.him] down onto [brax.his] knees before you.
+		[brax.Name]顿时手足无措，埋头盯着地面，只是烦躁地咕哝了几声。你上前去，按住[brax.his]的肩膀，用力一压，便让[brax.him]在你面前跪了下来。
 	</p>
 	<p>
-		[pc.speech(Good [brax.boy]! Now, time for your punishment!)]
+		[pc.speech(真是乖[brax.boy]！现在要开始惩罚咯！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_DESK_PUNISH_BREE"><![CDATA[
 	<p>
-		[pc.speech(Sure thing, Candi, I can punish [brax.name] for you!)] you respond, stepping around to the other side of the desk.
+		[pc.speech(当然可以，坎迪，我会帮你惩罚[brax.name]的！)]你说着便走向前台里面。
 	</p>
 	<p>
-		[candi.speechNoEffects(Thanks, I've got, like, loads of work and stuff to do, so you're really helping me out here!)] Candi replies, handing you [brax.namePos] pink leash as she returns to applying makeup in her little mirror.
+		[candi.speechNoEffects(太谢谢了，我还有，嗯，成吨的工作要做呢，真是帮了我大忙了！)]坎迪回应道，接着把[brax.namePos]的粉色牵绳递给了你，便又对着小镜子化起妆来。
 	</p>
 	<p>
-		With a tug, you get [brax.name] to follow you into Candi's little office. Closing the door behind you, you turn to face the [brax.race], smiling as you unclip the leash from [brax.his] collar.
+		你牵起绳子，让[brax.name]乖乖跟你进到坎迪的小办公室里。你关上身后的门，看向[brax.race]，微笑着将牵绳从[brax.his]的项圈上解了下来。
 	</p>
 	<p>
-		[pc.speech(You're going to do as you're told, aren't you [brax.name]?)] you tease, laughing as [brax.he] lets out a meek little whimper. [pc.speech(Don't worry, I'll be sure to let Candi know how good you've been!)]
+		[pc.speech(你会听话的，对吧，[brax.name]？)]你调戏道，[brax.he]在你的大笑中轻声呜咽，[pc.speech(放心好了，我会告诉坎迪你的良好表现哦！)]
 	</p>
 	<p>
-		Knowing what's expected of [brax.herHim], [brax.name] drops to [brax.her] knees before you. Stepping forwards, you reach down to stroke the top of [brax.her] head.
+		[brax.name]听懂了暗示，跪在你面前。你上前去，伸手揉了揉[brax.her]的头顶。
 	</p>
 	<p>
-		[pc.speech(Good [brax.girl]! Now, time for your punishment!)]
+		[pc.speech(好[brax.girl]！你要开始领罚咯！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_DESK_PUNISH_BRANDI"><![CDATA[
 	<p>
-		[pc.speech(Sure thing, Candi, I can punish [brax.name] for you!)] you respond, stepping around to the other side of the desk.
+		[pc.speech(当然可以，坎迪，我会帮你惩罚[brax.name]的！)]你说着便走向前台里面。
 	</p>
 	<p>
-		[candi.speechNoEffects(Thanks, I've got, like, loads of work and stuff to do, so you're really helping me out here!)] Candi replies, handing you [brax.namePos] pink leash as she returns to applying makeup in her little mirror.
+		[candi.speechNoEffects(太谢谢了，我还有，嗯，成吨的工作要做呢，真是帮了我大忙了！)]坎迪回应道，接着把[brax.namePos]的粉色牵绳递给了你，便又对着小镜子化起妆来。
 	</p>
 	<p>
-		With a tug, you get [brax.name] to follow you into Candi's little office. Closing the door behind you, you turn to face the [brax.race], smiling as you unclip the leash from [brax.his] collar.
+		你牵起绳子，让[brax.name]乖乖跟你进到坎迪的小办公室里。你关上身后的门，看向[brax.race]，微笑着将牵绳从[brax.his]的项圈上解了下来。
 	</p>
 	<p>
-		[brax.Name] immediately drops to [brax.her] knees, shuffling forwards as [brax.she] begs, [brax.speechNoEffects(Please! I, like, <i>need</i> to be punished! Please use me!)]
+		[brax.Name]咚一声跪在地上，向前俯下身，乞求道：[brax.speechNoEffects(求求你了！我，喜欢，<i>需要</i>被惩罚！请尽情使用我！)]
 	</p>
 	<p>
-		[pc.speech(What a good [brax.girl]!)] you say, grinning as [brax.he] lets out a desperate, hungry whimper. [pc.speech(Seeing as you asked so nicely, I'll give you what you want!)]
+		[pc.speech(你可真是个乖[brax.girl]！)]你说，你咯咯笑，笑声中夹杂着[brax.he]绝望而饥渴的抽泣。[pc.speech(看在你这样求我的份上，我会赐予你想要的！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="RECEPTION_DESK_PUNISHED_BY_BRAX"><![CDATA[
 	<p>
-		[pc.speech(Sure thing, Candi, I can punish [brax.name] for you!)] you respond, stepping around to the other side of the desk.
+		[pc.speech(当然可以，坎迪，我会帮你惩罚[brax.name]的！)]你说着便走向前台里面。
 	</p>
 	<p>
-		[candi.speechNoEffects(Thanks, I've got, like, loads of work and stuff to do, so you're really helping me out here!)] Candi replies, handing you [brax.namePos] pink leash as she returns to applying makeup in her little mirror.
+		[candi.speechNoEffects(太谢谢了，我还有，嗯，成吨的工作要做呢，真是帮了我大忙了！)]坎迪回应道，接着把[brax.namePos]的粉色牵绳递给了你，便又对着小镜子化起妆来。
 	</p>
 	<p>
-		With a tug, you get [brax.name] to follow you into Candi's little office. Closing the door behind you, you turn to face the [brax.race], smiling as you unclip the leash from [brax.his] collar.
+		你牵起绳子，让[brax.name]乖乖跟你进到坎迪的小办公室里。你关上身后的门，看向[brax.race]，微笑着将牵绳从[brax.his]的项圈上解了下来。
 	</p>
 	<p>
-		[pc.speech(I bet you're pretty angry right now, huh [brax.name]?)] you tease, laughing as [brax.he] lets out a low growl. [pc.speech(You want to be the one punishing me, don't you?)]
+		[pc.speech(你肯定气坏了吧，嗯，[brax.name]？)]你调戏道，听见[brax.he]低吼了一声，你更是笑得开心。[pc.speech(嗯……你很想惩罚我，对吧？)]
 	</p>
 	<p>
-		[brax.speech(I'd love to give you a hard fuck to teach you a lesson right now!)] [brax.name] growls as [brax.he] steps up to you.
+		[brax.speech(我真想狠狠操你一顿，让你尝尝苦头！)][brax.name]声音低沉，缓步向你走来。
 	</p>
 	<p>
-		Letting out a playful giggle, you trace [pc.a_finger] over [brax.his] chest. [pc.speech(Well, I won't tell if you won't... Or is Candi's pet too submissive to try anyth- eek!)]
+		你发出一阵银铃般的笑声，用[pc.a_finger]缓缓划过[brax.his]的胸膛。[pc.speech(唉，你不告诉别人，我也不会说……还是说坎迪的小宠物已经这么听话了，连——噫！)]
 	</p>
 	<p>
-		Obviously having had enough of your teasing, and with a clear invitation to fuck you, [brax.name] grabs you by the shoulders and throws you to the floor. You let out a delighted [pc.moan] as [brax.he] manhandles you into a doggystyle position. Leaning down over your back, [brax.name] growls into your [pc.ear], [brax.speech(Remember, bitch, <i>I'm</i> the real alpha here!)]
+		[brax.name]显然已经受够了你的调戏，既然已经邀请得这么明显，[brax.he]便一把揪住你的肩膀，把你压倒在地，随后便摆出了后入式，你欣然发出了一阵[pc.moan]。[brax.name]把身子压在你的脊背上，低吼声从[pc.ear]边传来，[brax.speech(记好了，母狗，<i>我才是</i>这的头儿！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="START_SEX_CANDI"><![CDATA[
 	<p>
-		Not wanting to leave Candi after she's asked you for help, you tell her that you'll sort her problem out for her, before stepping around behind the reception counter. Letting out an excited whine, the horny cat-girl immediately leaps to her feet, and after placing a little 'Be back soon' sign on the desk, she grabs you by the [pc.hand] and pulls you through the nearby door into her small office.
-	</p>
+	你在听了坎迪的请求后并不想置她于不顾，便说你会帮她解决问题的，接着走到了前台的后面。那淫荡的猫女兴奋地呜咽着，一下子便从椅子上跳了起来，往桌子上摆了个“马上回来”的小牌子，捏住你的[pc.hand]，带着你穿过旁边的门，进到了她狭小的办公室里。
+</p>
 	<p>
-		[candi.speechNoEffects(Oh yeah, like, fuck me, right now!)] she demands, slamming the door closed before leaping forwards into your [pc.arms]... 
-	</p>
-	]]>
-	</htmlContent>
+	[candi.speechNoEffects(哦，那就，操我吧，赶紧！)]她一把把门甩上，抱住了你的[pc.arms]，要求道……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="HELP_CANDI_DENIED"><![CDATA[
 	<p>
-		Not being particularly interested in helping Candi to get some relief from her overwhelming horniness, you remind her that you did warn her not to eat the lollipops, before telling her to seek help from someone else. Ignoring the desperate, disappointed whines that the bimbo cat-girl starts making, you step back into the waiting room and prepare to continue on your way...
-	</p>
-	]]>
-	</htmlContent>
+	你对于帮助坎迪缓解她难以抑制的性欲并不是特别感兴趣，你提醒她，你确确实实警告过她不要吃那些棒棒糖，随后便甩下一句话让她去找别人帮忙。你没再理会这个傻乎乎的猫女发出的急切又失望的咕哝声，而是回到等候室，准备继续赶路……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY"><![CDATA[
 	<p>
-		Deciding that you want to talk with the ditzy-looking cat-girl, you call out to Candi in order to get her attention.
-	</p>
+	你准备和那个傻乎乎的猫女聊几句，于是叫了一声坎迪的名字，将她的注意力吸引过来。
+</p>
 	<p>
-		[candi.speechNoEffects(Oh! Like, heya! Soz about, like, not seein' ya and stuff!)] she exclaims, breaking off from applying her makeup to happily smile up at you. Leaning forwards over her desk, she bites her lip and pushes out her chest. Due to the fact that the top few buttons of her shirt are undone, you end up looking straight down at her impressive cleavage, noting to yourself that she isn't wearing a bra.
-	</p>
+	[candi.speechNoEffects(哦！那个，你好呀！抱歉啦，没看到你呢！)]她惊呼着，暂时停下了化妆，对着你露出了开心的微笑。她将身子前倾，轻咬下唇，抱起了那对大胸。由于她衬衫上面几个扣子没有口上，那雄伟的乳沟直接一览无余，也让你注意到她根本没穿胸罩。
+</p>
 	<p>
-		[candi.speechNoEffects(Haha! What'cha lookin' at?!)] she giggles, pressing her breasts forwards in an enticing manner. [candi.speechNoEffects(Y'need any help with, like, Enforcer things and stuff?)]
-	</p>
-	]]>
-	</htmlContent>
+	[candi.speechNoEffects(哈哈！看什么呢你？！)]她笑了起来，反而摆出了更撩人的姿势，推挤着乳房。[candi.speechNoEffects(有什么事儿吗？就，执法者的还是啥的？)]
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTERIOR_SECRETARY_LEAVE"><![CDATA[
 	<p>
-		[pc.speech(Actually, I don't need anything right now, I'll be back later,)] you say, stepping back into the waiting area and allowing Candi to continue applying her makeup.
-	</p>
-	]]>
-	</htmlContent>
+	[pc.speech(其实，我没什么事情，我过会儿再来，)]你说完就退回了等待区，让坎迪继续化妆了。
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX"><![CDATA[
 	<p>
-		Using the name that was provided on the warrant, you tell Candi that you're here on business regarding Arthur's arrest, and that you'd like to speak to a certain 'Brax'.
-	</p>
+	你说出了逮捕令上提供的名字，告诉坎迪你是为了亚瑟被捕这件事来的，而且想跟这位“布拉克斯”谈谈。
+</p>
 	<p>
-		[candi.speechNoEffects(Ooh! You're, like, super lucky and stuff! [brax.name] is, like, totally the hottest guy here!)] Candi squeals, excitedly reaching down to get something from under her desk. [candi.speechNoEffects(When you see him, tell him that his little slut's, like, super horny and stuff, will ya? And tell him he'd, like, better have given up on tryin' to use that stupid little potion of his on me again!)]
-	</p>
+	[candi.speechNoEffects(哦哦！那你可，太走运了！[brax.name]，哎呀，可是这儿最有料的一个！)]坎迪提高了声音，激动地伸手就从桌子下面拿着什么东西。[candi.speechNoEffects(等你见到了他，就告诉他，他的小骚货，可是，想要得不得了，行吧？哦，还有就是，告诉他还是早点放弃吧，别再老想着把那个破药水给我用了！)]
+</p>
 	<p>
-		With a huge smile plastered on her face, Candi hands you a slip of paper. Taking a look, you see that it's some kind of pass that will grant you access to the interior parts of the building.
-	</p>
+	坎迪的脸上随后就挂上了灿烂的微笑，她递出来一张纸。你看了一眼，发现似乎是什么通行证，能让你进到建筑的内部。
+</p>
 	<p>
-		[candi.speechNoEffects(Y'know, I'm sure he, like, told me something about these passes... Huh... Well, if I can't remember, it's, like, not important, right? Anyway, his office is, umm, like, down there, then over to the left... no... right! Then, like, just look for his name on one of the doors! That's how I find him!)]
-	</p>
+	[candi.speechNoEffects(我跟你说，他啊，早就跟我说过这些通行证……呃……行吧，既然我不记得，那就说明不重要，对吧？总之，他的办公室，嗯……应该，往那走，然后左边的……不对……右边！反正，找有他名字的那扇门就好了！我就是这么找的！)]
+</p>
 	<p>
-		Thanking the cat-girl for the information, you ask her one last question about the 'stupid little potion' she mentioned, curious about what she meant by that.
-	</p>
+	你谢过那猫女的消息，又问了她最后一个问题，有关她提到的那个“破药水”，你想知道那是个什么东西。
+</p>
 	<p>
-		[candi.speechNoEffects(Eugh... Like, [brax.name] is, like, super hot and stuff, but he has a sorta thing for wolf-girls. He got, like, some demon to make him this super expensive potion that'd, like, turn me completely into a wolf-girl! I dunno what he was thinkin', I put, like, so much effort into how I look, I'm not, like, gonna let him transform me like that, even <i>if</i> he's super good at fuckin' and stuff,)] Candi explains, [candi.speechNoEffects(Ah yeah, that reminds me, like, he said he'd just use it on the next person that pisses him off, so, like, don't do anything to anger him, or else you're gonna', like, get turned into his little wolf-bitch!)]
-	</p>
+	[candi.speechNoEffects(呃……就是，[brax.name]他，也色得要死，但他对狼女更来劲。好像，就找了几个恶魔帮他做了个超贵的药水，说是，能把我完全变成个狼女！我真不知道他脑子里都是什么东西，我可是，花了那么多功夫才把自己整成这样，就是说，可不想让他把我再变了样，<i>哪怕</i>他功夫真的很棒，)]坎迪解释道，[candi.speechNoEffects(啊，对了，我想起来了。就是，他说他会把药水用在下一个惹他发火的家伙身上，所以，别惹他生气，要不然你可能，就是说，会被变成个狼婊子啦！)]
+</p>
 	<p>
-		Thanking Candi for the warning, you say goodbye and head back into the waiting area. No sooner than you take one step away from her desk, she starts busily applying her makeup once again.
-	</p>
-	]]>
-	</htmlContent>
+	你再次谢过坎迪的警告，道别后就回到了等候区。还没等你离开前台一步，她便又开始化起妆来。
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BIMBO -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BIMBO"><![CDATA[
 	<p>
-		You can't believe how beautiful this girl is, and can't resist calling out to her, [pc.speechNoEffects(Like, oh my gosh! You're, like, so super pretty and stuff!)]
+		你没想到这姑娘会这么漂亮，忍不住就喊了一声，[pc.speechNoEffects(哎呀，天哪！你可，呃，太漂亮了！)]
 	</p>
 	<p>
-		[candi.speechNoEffects(Like, thank you so much! Soz about, like, not seein' ya and stuff! I was, y'know, like puttin' my makeup on!)] she exclaims, breaking off from applying her makeup to happily smile up at you. Leaning forwards over her desk, she bites her lip and pushes out her chest. Due to the fact that the top few buttons of her shirt are undone, you end up looking straight down at her impressive cleavage, noting to yourself that she isn't wearing a bra.
+		[candi.speechNoEffects(哦，谢谢你！抱歉啦，没注意到你！我在，你知道吧，在化妆呢！)]她惊呼着，暂时停下了化妆，对着你露出了开心的微笑。她将身子前倾，轻咬下唇，抱起了那对大胸。由于她衬衫上面几个扣子没有口上，那雄伟的乳沟直接一览无余，也让你注意到她根本没穿胸罩。
 	</p>
 	<p>
-		[candi.speechNoEffects(Haha! What'cha lookin' at?!)] she giggles, pressing her breasts forwards in an enticing manner. [candi.speechNoEffects(Y'need any help with, like, Enforcer things and stuff?)]
+		[candi.speechNoEffects(哈哈！看什么呢你？！)]她笑了起来，反而摆出了更撩人的姿势，推挤着乳房。[candi.speechNoEffects(有什么事儿吗？就，执法者的还是啥的？)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BIMBO_LEAVE"><![CDATA[
 	<p>
-		[pc.speechNoEffects(Ummm, like, actually, I just wanted to let you know how, like, super hot you are and stuff, I'll be back later,)] you say, stepping back into the waiting area and allowing Candi to continue applying her makeup.
-	</p>
-	]]>
-	</htmlContent>
+	[pc.speechNoEffects(额嗯，就是，其实，我只是想告诉你，你真的，就是，太有料了，我过会儿再来，)]你说完就退回了等待区，让坎迪继续化妆了。
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX_BIMBO -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_BIMBO"><![CDATA[
 	<p>
-		Using the name that was provided on the warrant, you ask Candi about Arthur's arrest, [pc.speechNoEffects(Eugh, like, so you wouldn't believe what's happened. This friend of mine, y'know, well, not really <i>my</i> friend, but kinda like my aunt's friend, right, yeah, he was kinda arrested, and there was like, some kind of note on his door about some guy called [brax.name]? And I was like <i>'oh-em-gee, now I gotta like, go down to the Enforcer HQ, and, like, find this [brax.name] guy'</i>, and it's like, <i>so</i> much work, y'know?)]
-	</p>
+	你说出了逮捕令上提供的名字，告诉坎迪你是为了亚瑟被捕这件事来的，[pc.speechNoEffects(呃，那个，我跟你说你可别吓到。我的一个朋友，就是，好吧，不算是<i>我的</i>朋友，但算是我姨妈的朋友，对，他就是被抓了，而且好像，门上有个纸条写着一个家伙的名字，叫[brax.name]？我就想<i>'我的天，我得，就是说，来执法者总部，找这个什么[brax.name]才行'</i>，所以真是<i>太</i>麻烦了，你懂吗？)]
+</p>
 	<p>
-		[candi.speechNoEffects(Like, no way! Well, you're actually, like, super lucky and stuff! [brax.name] is, like, totally the hottest guy here!)] Candi squeals, excitedly reaching down to get something from under her desk. [candi.speechNoEffects(When you see him, tell him that his little slut's, like, super horny and stuff, will ya? And tell him he'd, like, better have given up on tryin' to use that stupid little potion of his on me again!)]
-	</p>
+	[candi.speechNoEffects(哦哦！那你可，太走运了！[brax.name]，哎呀，可是这儿最有料的一个！)]坎迪提高了声音，激动地伸手就从桌子下面拿着什么东西。[candi.speechNoEffects(等你见到了他，就告诉他，他的小骚货，可是，想要得不得了，行吧？哦，还有就是，告诉他还是早点放弃吧，别再老想着把那个破药水给我用了！)]
+</p>
 	<p>
-		With a huge smile plastered on her face, Candi hands you a slip of paper. Taking a look, you see that it's some kind of pass that will grant you access to the interior parts of the building.
-	</p>
+	坎迪的脸上随后就挂上了灿烂的微笑，她递出来一张纸。你看了一眼，发现似乎是什么通行证，能让你进到建筑的内部。
+</p>
 	<p>
-		[candi.speechNoEffects(Y'know, I'm sure he, like, told me something about these passes... Huh... Well, if I can't remember, it's, like, not important, right? Anyway, his office is, umm, like, down there, then over to the left... no... right! Then, like, just look for his name on one of the doors! That's how I find him!)]
-	</p>
+	[candi.speechNoEffects(我跟你说，他啊，早就跟我说过这些通行证……呃……行吧，既然我不记得，那就说明不重要，对吧？总之，他的办公室，嗯……应该，往那走，然后左边的……不对……右边！反正，找有他名字的那扇门就好了！我就是这么找的！)]
+</p>
 	<p>
-		[pc.speechNoEffects(Thanks, Candi, you're, like, the best and stuff! Oh, and, like, whaddya mean by that 'stupid little potion'?)] you ask, curious about the sort of person [brax.name] might turn out to be.
-	</p>
+	[pc.speechNoEffects(谢了，坎迪，你真是太棒了！哦，还有，就是你说的那个‘破药水’是什么？)]你想知道那是个什么东西，于是问道。
+</p>
 	<p>
-		[candi.speechNoEffects(Eugh... Like, [brax.name] is, like, super hot and stuff, but he has a sorta thing for wolf-girls. He got, like, some demon to make him this super expensive potion that'd, like, turn me completely into a wolf-girl! I dunno what he was thinkin', I put, like, so much effort into how I look, I'm not, like, gonna let him transform me like that, even <i>if</i> he's super good at fuckin' and stuff,)] Candi explains. [candi.speechNoEffects(Ah yeah, that reminds me, like, he said he'd just use it on the next person that pisses him off, so, like, don't do anything to anger him, or else you're gonna', like, get turned into his little wolf-bitch!)]
-	</p>
+	[candi.speechNoEffects(呃……就是，[brax.name]他，也色得要死，但他对狼女更来劲。好像，就找了几个恶魔帮他做了个超贵的药水，说是，能把我完全变成个狼女！我真不知道他脑子里都是什么东西，我可是，花了那么多功夫才把自己整成这样，就是说，可不想让他把我再变了样，<i>哪怕</i>他功夫真的很棒，)]坎迪解释道，[candi.speechNoEffects(啊，对了，我想起来了。就是，他说他会把药水用在下一个惹他发火的家伙身上，所以，别惹他生气，要不然你可能，就是说，会被变成个狼婊子啦！)]
+</p>
 	<p>
-		Thanking Candi for the warning, you say goodbye and head back into the waiting area. No sooner than you take one step away from her desk, she starts busily applying her makeup once again.
-	</p>
-	]]>
-	</htmlContent>
+	你再次谢过坎迪的警告，道别后就回到了等候区。还没等你离开前台一步，她便又开始化起妆来。
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX_FEMINISE -->
@@ -694,171 +694,171 @@
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_FEMINISE"><![CDATA[
 	#IF(game.getDialogueFlags().hasFlag(FLAG_braxTransformedPlayer))
 		<p>
-			[pc.speech(Hey, Candi, I've actually got something to tell you about Brax,)] you say, grinning at Brax as you reveal what he did to you. [pc.speech(He forced me to drink a potion that turned me into a wolf-girl!)]
+			[pc.speech(嘿，坎迪，我想跟你说件布拉克斯的事。)]你对着布拉克斯咧嘴一笑，将他的所作所为揭露出来，[pc.speech(他逼着我喝下了狼女转化药水！)]
 		</p>
 		<p>
-			[candi.speechNoEffects(Like, no way! Brax! Is this true?!)] Candi shouts, turning towards Brax as she tugs sharply on his leash.
+			[candi.speechNoEffects(那个，真的假的！布拉克斯！这是真事吗？！)]坎迪惊叫着望向布拉克斯，猛地拽住手里的牵绳。
 		</p>
 		<p>
-			[brax.speech(E-Erm... Y-Yes...)] Brax responds, trying to make himself as small as possible as Candi's cheeks flush red with rage.
+			[brax.speech(呃，呃嗯，……确，确实是……)]布拉克斯低声回应，在坎迪怒红的双颊前尽可能地缩起身子，压低存在感。
 		</p>
 		<p>
-			[candi.speechNoEffects(Bad Brax!)] Candi shouts. [candi.speechNoEffects(You're going to need an extra special punishment this time!)]
+			[candi.speechNoEffects(坏狗狗！)]坎迪呵斥道，[candi.speechNoEffects(这可得用特殊惩罚来给你长记性了！)]
 		</p>
 		<p>
-			[pc.speech(I think he's still got one of those potions,)] you say, pointing to the shelf behind Candi. [pc.speech(Why don't we give him a taste of his own medicine?)]
+			[pc.speech(我觉得他应该还有药水，)]你适时插话道，指了指坎迪身后的搁板，[pc.speech(要不让他自尝苦果的滋味？)]
 		</p>
 	#ELSE
 		<p>
-			[pc.speech(Hey, Candi,)] you say, grinning at Brax before pointing to the shelf behind the reception desk. [pc.speech(Just so you know, that looks like one of those potions you warned me about, and I'm sure Brax was planning on using it on someone without their permission!)]
+			[pc.speech(嘿，坎迪。)]你对着布拉克斯咧嘴一笑，指了指接待桌后的搁架，[pc.speech(顺带跟你说一声，那看起来正是你之前警告我的药水。我觉得布拉克斯肯定是打算强迫别人用的！)]
 		</p>
 		<p>
-			[candi.speechNoEffects(Like, no way! Brax! Is this true?!)] Candi shouts, turning towards Brax as she tugs sharply on his leash.
+			[candi.speechNoEffects(那个，真的假的！布拉克斯！这是真事吗？！)]坎迪惊叫着望向布拉克斯，猛地拽住手里的牵绳。
 		</p>
 		<p>
-			[brax.speech(W-Well... K-Kinda...)] Brax responds, trying to make himself as small as possible as Candi's cheeks flush red with rage.
+			[brax.speech(呃，呃…… 多，多少算吧……)]布拉克斯低声回应，在坎迪怒红的双颊前尽可能地缩起身子，压低存在感。
 		</p>
 		<p>
-			[candi.speechNoEffects(Bad Brax!)] Candi shouts. [candi.speechNoEffects(You're going to need an extra special punishment this time!)]
+			[candi.speechNoEffects(坏狗狗！)]坎迪呵斥道，[candi.speechNoEffects(这可得用特殊惩罚来给你长记性了！)]
 		</p>
 		<p>
-			Candi reacted just as you thought she would, and, still grinning at Brax, you reveal your idea, [pc.speech(Hey Candi, why don't we give him a taste of his own medicine?)]
+			坎迪的反应跟你的设想分毫不差，你继续对布拉克斯咧嘴笑着，抛出了自己的主意，[pc.speech(坎迪啊，我们为什么不让他自己试试药水的威力呢？)]
 		</p>
 	#ENDIF
 	<p>
-		Candi's eyes light up as she hears your suggestion. Happily clapping her hands together, she turns around and grabs Brax's potion off the shelf. Seeing what's about to happen, Brax tries to run, but with a violent yank of his leash, Candi pulls him back towards her.
+		听到你的提议，坎迪双眼放光，高兴地拍了下手，转身从架子上抓起布拉克斯的药水。看到事情发展的布拉克斯正欲逃跑，但坎迪猛地一拉牵绳，就将他拉了回来。
 	</p>
 	<p>
-		[candi.speechNoEffects(Bad Brax! Stay still! You, like, have to do what I say, remember?!)] Candi shouts. [candi.speechNoEffects(Hey! Can you, like, help me with this?!)]
+		[candi.speechNoEffects(坏布拉克斯！坐好！你，就是说啊，我说什么你就得做什么，不记得嘛？！)]坎迪呵斥道，[candi.speechNoEffects(嗳！那个，你！能不能帮我一把？！)]
 	</p>
 	<p>
-		Not needing to be asked twice, you rush around to the other side of the counter, and, grabbing Brax's arms, you push him down onto his back. You and Candi quickly pin the struggling wolf-boy to the floor, ignoring his shouts and protests as you hold him still. Grinning, Candi pulls the bottle's stopper out, before leaning down towards Brax's face.
+		你用不着她问第二遍，就已经冲到了接待桌的另一边，掰着布拉克斯的胳膊，把他按倒在地。你和坎迪无视他的叫喊和抗议，迅速把挣扎的狼男按在地上，令他无法动弹。坎迪露齿而笑，拔出瓶塞，然后俯身将药水向布拉斯的嘴中倒入。
 	</p>
 	<p>
-		[brax.speech(No! Wait! I don't want to be a girl!)] Brax yells, and you see a desperate look in his eyes as he pleads for you to spare him.
+		[brax.speech(不要！等等！我不想变成女孩！)]布拉克斯大喊，他向你投来了绝望的目光，恳求着你的宽恕。
 	</p>
 	<p>
-		You wonder if you should go through with this. There's no telling how he'll turn out after being transformed into a girl, and there may be no going back...
+		你不知道是不是该这么做，也不知道他变成女孩后会是什么样，而且这可能再也变不回去了……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!--- INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED"><![CDATA[
 	<p>
-		Deciding to go ahead with this plan, you sit down on Brax's chest, pinning him to the floor and using your [pc.hands] to hold his arms down. Giggling in delight, Candi grabs Brax's muzzle, and, forcing his mouth open, she roughly shoves the neck of the bottle past his lips.
-	</p>
+	你决定按计划行事，于是在布拉克斯的胸口上坐下，把他紧紧压在了地上，又用[pc.hands]控制住了他的手臂。坎迪也高兴地笑起来，一把抓住布拉克斯的长吻，强行掰了开来，将瓶口硬塞进了他嘴里。
+</p>
 	<p>
-		Brax thrashes about beneath you, growling and groaning as Candi starts emptying the bottle's contents down his throat. Once the liquid has been emptied into the wolf-boy's mouth, Candi clamps his mouth shut, making soothing shushing noises as she strokes his throat to encourage him to swallow the last few drops.
-	</p>
+	布拉克斯在你身下翻腾着，低吼和呜咽声不绝于耳，眼看着坎迪就要把一整瓶都灌进他的喉咙了。当最后一滴液体都进了那狼男的嘴里后，坎迪啪的一下捏住他的嘴巴，一面发出舒缓的嘘声，一面轻抚着他的喉咙，好让他咽下每一滴药水。
+</p>
 	<p>
-		[candi.speechNoEffects(Good boy Brax! Drink it all down!)] Candi moans, clearly excited to see what's about to happen.
-	</p>
+	[candi.speechNoEffects(乖小伙，布拉克斯！全都喝下去吧！)]坎迪呻吟道，兴奋之情溢于言表。
+</p>
 	<p>
-		As she releases her grip on his muzzle, Brax lets out a surprisingly high-pitched moan. He continues to struggle, but it seems to be because of the potion's effects rather than an attempt to resist. Letting go of his arms, you stand up and look on as Brax's body starts to change.
-	</p>
+	等到她松开手，布拉克斯竟尖声呻吟起来。他依然在挣扎，但可能只是由于药水的效果而不是想要反抗。你送开了他的手臂，站起身来，低头观摩着布拉克斯身体的变化。
+</p>
 	<p>
-		His body and face are the first to transform; rapidly shifting and changing into a distinctly feminine shape. His broad shoulders and muscular frame narrow down, and you see his hips and ass grow, leaving him with a very womanly body. As his body shifts into that of a girl, his face similarly transforms, and while you can still tell that it's Brax, his face is soon that of an attractive wolf-girl.
-	</p>
+	他的身躯和面部是最先开始转化的；没有多一会儿就成了格外阴柔的造型。他宽阔的肩膀和肌肉分明的躯体迅速收窄，臀部屁股也变大起来，整个身子女人味十足。面部的变化也与身体相类似，虽然你还是能够认出面前的人是布拉克斯，但看上去完全已经是个撩人的狼女了。
+</p>
 	<p>
-		[candi.speechNoEffects(Aww Brax! You're, like, so cute!)] Candi squeals, bouncing up and down in excitement. [candi.speechNoEffects(Ooh! You need a new name! You can be Bree! You like that, pet?!)]
-	</p>
+	[candi.speechNoEffects(哇哦，布拉克斯！你真的，好可爱呀！)]坎迪尖叫起来，激动得上蹿下跳。[candi.speechNoEffects(哦哦！你得起个新名字！叫布瑞吧！小宠物，喜欢吗？！)]
+</p>
 	<p>
-		#IF(brax.hasPenis())
-			Bree lets out a soft whimper, and her hands suddenly dart down between her legs. While her large bulge doesn't diminish in size, her desperate squeals and pants let you know that her genitalia are transforming, and you grin as you realise that Bree now has the reproductive systems of both a wolf-boy and wolf-girl.
-		#ELSE
-			Bree lets out a soft whimper, and her hands suddenly dart down between her legs. Her large bulge quickly shrinks, and she squeals and pants as her genitalia are the next to take on a new form. Although you can't see what's happening down there, you have a good idea of what's going on, and you grin as you realise that Bree is now a wolf-girl in every way.
-		#ENDIF
-	</p>
+	#IF(brax.hasPenis())
+		布瑞轻声呜咽着，她立刻伸手去摸两腿之间。原先显眼的帐篷并没有消失，但那绝望的叫声和急促的喘息告诉着你，她的下体也发生了转化，得知布瑞现在同时拥有狼男狼女两套生殖系统后，你不禁喜上眉梢。
+	#ELSE
+		布瑞轻声呜咽着，她立刻伸手去摸两腿之间。原先显眼的帐篷早已无影无踪，生殖器已经发生了转化，她顿时发出绝望的叫声，喘个不停。尽管你没看到里面发生了什么，但却心知肚明，你得知布瑞已经完完全全变成了个狼女，不禁喜上眉梢。
+	#ENDIF
+</p>
 	<p>
-		The final transformation to take place is located in Bree's chest, and you see her new breasts swelling up as she continues to writhe around on the floor. Panting, and totally exhausted from her transformation, the potion's effects come to an end, leaving Bree with C-cup breasts, girly hips, a large ass, and a pretty wolf-girl's face.
-	</p>
+	最后转化的是布瑞的胸部，乳房慢慢地从身体里鼓出来，她却依然倒在地上扭动着。药水的效果终于告一段落，她喘息着，被转化榨干了精力，现在有着一对C罩杯的胸部、女性样子的臀部、充满肉感的屁股，还有一张清秀的狼女面容。
+</p>
 	<p>
-		[candi.speechNoEffects(You're so cute, Bree!)] Candi cries out. [candi.speechNoEffects(I bet you, like, can't wait to try out your new body! Hey! How about your friend helps you out?!)]
-	</p>
+	[candi.speechNoEffects(布瑞，你真的太可爱了！)]坎迪大叫起来。[candi.speechNoEffects(我敢说，怎么说呢，你肯定迫不及待地想试一试自己的新身体了！嘿！要不找你朋友来帮帮忙吧？！)]
+</p>
 	<p>
-		[brax.speech(Y-Yes Candi...)] Bree sighs, meekly looking up at you.
-	</p>
+	[brax.speech(好，好的，坎迪……)]布瑞长叹一声，顺从地抬头望向你。
+</p>
 	<p>
-		All of the dominance and fiery spirit has gone from Bree's eyes, and she submissively kneels on the floor beneath you, awaiting your response. You could pull her into Candi's office and help her get used to her new body, or you could leave and come back to have some fun later.
-	</p>
-	]]>
-	</htmlContent>
+	布瑞眼中的霸气和火热现已荡然无存，她顺从地跪在你的面前，静候你的回应。你可以把她带到坎迪的办公室，帮她“适应”新身体，也可以就此离开，待会儿再回来找乐子。
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED_SEX"><![CDATA[
 	<p>
-		[pc.speech(Good idea, Candi, I can show Bree her true place!)] you say, grinning down at Bree's meek form.
+		[pc.speech(好主意，坎迪，我会让布瑞认清自己的地位的！)]你说着便低头对样子温顺的布瑞露出了一抹笑容。
 	</p>
 	<p>
-		[candi.speechNoEffects(Like, don't go easy on her! She's been, like, super bad lately.)] Candi replies, handing you [brax.namePos] pink leash as she returns to applying makeup in her little mirror.
+		[candi.speechNoEffects(那个，不用下手太轻！她最近，那个，淘气得很。)]坎迪回应道，接着把[brax.namePos]的粉色牵绳递给了你，便又对着小镜子化起妆来。
 	</p>
 	<p>
-		With a tug, you get [brax.name] to follow you into Candi's little office. Closing the door behind you, you turn to face the [brax.race], smiling as you unclip the leash from [brax.his] collar.
+		你牵起绳子，让[brax.name]乖乖跟你进到坎迪的小办公室里。你关上身后的门，看向[brax.race]，微笑着将牵绳从[brax.his]的项圈上解了下来。
 	</p>
 	<p>
-		[pc.speech(You're going to do as you're told, aren't you, [brax.name]?)] you tease, laughing as [brax.he] lets out a meek little whimper. [pc.speech(Don't worry, I'll be sure to let Candi know how good you've been!)]
+		[pc.speech(我说什么你就要做什么，可以吗，[brax.name]？)]你调笑道，听到[brax.he]顺从的小声呜咽后，你更是笑得开心。[pc.speech(别担心，我会告诉坎迪你很乖的！)]
 	</p>
 	<p>
-		Knowing what's expected of [brax.herHim], [brax.name] remains on [brax.her] knees in front of you. Stepping forwards, you reach down to stroke the top of [brax.her] head.
+		[brax.name]明白自己应该做什么，于是继续静静地跪在你的面前。你上前去，摸了摸[brax.her]的头顶。
 	</p>
 	<p>
-		[pc.speech(Good [brax.girl]! Now, time to show you your true place!)]
+		[pc.speech(真是个乖[brax.girl]！好了，是时候让你认清自己的地位了！)]
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED_NO_SEX -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_FEMINISE_COMPLETED_NO_SEX"><![CDATA[
 	<p>
-		Although you're happy with how Bree has turned out, you don't feel like having sex with her. Telling Candi that you're not particularly interested in 'testing out' her new body, you step back from the counter and prepare to take your leave.
-	</p>
-	]]>
-	</htmlContent>
+	虽然你看到布瑞落得这个下场十分欣喜，但并不想跟她做爱。你告诉坎迪你并不是很想“测试”她的新身体，便从前台退回来，准备离开。
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX_FEMINISE_CHANGE_MIND -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_FEMINISE_CHANGE_MIND"><![CDATA[
 	<p>
-		Although it seemed like a good idea at first, you aren't so sure that you want to go through with this. Releasing Brax's arms, you stand up, allowing him to scramble to his feet.
+		虽然在一开始看这似乎是个好主意，但你并不确认自己是不是真想这么做。你松开布拉克斯的胳膊站起，也放任他狼狈地爬起身来。
 	</p>
 	<p>
-		[pc.speech(Sorry, Candi, this is a bit too much, maybe we can punish Brax another time,)] you say.
+		[pc.speech(抱歉，坎迪，感觉这有点过火了，或许我们可以换个时间再惩罚布拉克斯。)]你示意道。
 	</p>
 	<p>
-		[candi.speechNoEffects(Awww! Well, like, I'll keep hold of this potion and stuff, so if you, like, want to do it another time, just let me know!)] Candi calls out, before turning to Brax. [candi.speechNoEffects(Bad Brax! That was your fault!)]
+		[candi.speechNoEffects(啊~！嘛，那个，那我就继续留着这堆东西吧，要是你，比如说，想之后再惩罚的话，就告诉我一声哦！)]坎迪喊了一声，随后转向布拉克斯，[candi.speechNoEffects(坏狗狗！是你的错啦！)]
 	</p>
 	<p>
-		You walk back to the other side of the reception desk, leaving Candi to continue scolding Brax.
+		你走回接待台的另一边，让坎迪继续责骂布拉克斯。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX_BIMBOFY -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_BIMBOFY"><![CDATA[
 	<p>
-		Candi's bimbo body, with her huge breasts, ass, and hips, gives you an idea. Leaning over the reception desk, you look into Candi's vacant eyes, [pc.speech(Hey, Candi, perhaps Bree would behave a little better if she were more like you...)]
-	</p>
+	坎迪丰满的身体，加上一对巨乳，肉乎乎的屁股，令你突发奇想。你搭着前台身体前倾，盯着坎迪茫然的眼睛，[pc.speech(嘿，坎迪，她要是更像你一点，或许会乖一些……)]
+</p>
 	<p>
-		[candi.speechNoEffects(Huh? Whattya mean?)] Candi replies, looking confused.
-	</p>
+	[candi.speechNoEffects(哈？啥意思？)]坎迪似乎有些困惑。
+</p>
 	<p>
-		[pc.speech(I mean that Bree would behave a lot better if she were a bubbly bimbo as well.)]
-	</p>
+	[pc.speech(我是指，如果她也变成一个精力旺盛的傻妞，表现肯定会乖很多。)]
+</p>
 	<p>
-		[candi.speechNoEffects(Ooh! Like, you're so right!)] Candi replies, clapping her hands together excitedly. [candi.speechNoEffects(I've got, like, these amazing potions to try out! Perhaps I should use one on Bree?!)]
-	</p>
+	[candi.speechNoEffects(哦哦！那个，你说得对啊！)]坎迪两手一拍，激动地回答道。[candi.speechNoEffects(我应该，嗯，有这种神奇的药水！说不定应该给布瑞用？！)]
+</p>
 	<p>
-		Bree shuffles about nervously as she hears what you're planning, and, while she doesn't openly complain, you can tell that she really doesn't want this to happen. You wonder if this is going too far, or if it's what Bree really deserves...
-	</p>
-	]]>
-	</htmlContent>
+	布瑞听到你们的计划，顿时手足无措，但却还是没有一句怨言，不过你看得出她并不希望事情这样发展。你在想自己是不是做的太过了，又或者这是布瑞应得的……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	
@@ -866,109 +866,109 @@
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED"><![CDATA[
 	<p>
-		[pc.speech(Yeah, you should definitely use one! Right Bree?!)] you ask the submissive wolf-girl.
-	</p>
+	[pc.speech(对啊，你当然要用了！布瑞你说是不是？！)]你反过来去问已经顺从的狼女。
+</p>
 	<p>
-		[brax.speechNoEffects(I-If you want...)] she meekly replies.
-	</p>
+	[brax.speechNoEffects(如，如您所愿……)]她温顺地回应道。
+</p>
 	<p>
-		[candi.speechNoEffects(Good girl, Bree!)] Candi squeals, excitedly pulling out a potion from beneath her desk. [candi.speechNoEffects(I got this made to be, like, pink flavour, so it's gonna taste good!)]
-	</p>
+	[candi.speechNoEffects(布瑞，好姑娘！)]坎迪尖叫起来，激动地将一瓶药剂从桌子底下取了出来[candi.speechNoEffects(我把这个弄成了，怎么说，桃子味的，味道肯定不错！)]
+</p>
 	<p>
-		Bree allows Candi to push her down onto her chair, before obediently opening her mouth. Candi pulls out the bottle's stopper, and, tilting it into Bree's mouth, she empties the pink liquid down her throat. Gulping it down, Bree licks her lips as Candi pulls away from her, before letting out a little sigh.
-	</p>
+	布瑞任凭坎迪把她带去椅子上，顺从地张开了嘴巴。坎迪打开瓶塞，将粉色的液体一口气倒进了她的嘴里。布瑞喝下去后还舔了舔嘴唇，发出了一小声叹息，坎迪随后也松开了她。
+</p>
 	<p>
-		Bree starts shifting around uncomfortably in her seat, and, looking down, you see the cause of her discomfort. Her ass and hips are rapidly expanding, and with an audible tear, her Enforcer shorts split at the seams. Letting out a little cry, Bree clutches the fabric against her groin, trying to conceal herself as the next transformation starts to take place.
-	</p>
+	布瑞似乎不太舒服，开始在座位上扭动起来，你低头一看，便找到了她不舒服的源头。她的屁股忽然变得超大，随着一声清脆的撕裂声，她的执法者短裤便碎成了好几片。布瑞惊叫出来，急忙将剩下的布料压在股间，希望能遮挡住，但下一步转化已经开始。
+</p>
 	<p>
-		Just like her lower body, Bree's upper body starts to expand, and you watch, wide-eyed, as her breasts swell up. Her Enforcer uniform can't take the stress, and you watch as the buttons of her shirt ping off to reveal her massive breasts.
-		#IF(brax.hasPenis())
-			 This time, however, Bree doesn't bother to try and cover herself up. Leaning back in her chair, she lets out an extremely lewd moan, and, seeming to forget where she is, she reaches down between her legs, dropping her torn shorts and panties to the floor as she starts stroking her huge knotted cock in one hand, while fingering her dripping wolf-pussy with the other.
-		#ELSE
-			 This time, however, Bree doesn't bother to try and cover herself up. Leaning back in her chair, she lets out an extremely lewd moan, and, seeming to forget where she is, she reaches down between her legs, dropping her torn shorts and panties to the floor as she starts fingering her dripping pussy.
-		#ENDIF
-	</p>
+	布瑞的上半身跟下半身一样，开始膨胀起来，你瞪大了双眼，紧盯着她越变越大的乳房。她的执法者制服同样无法顶住压力，在你的面前崩开数个纽扣，让巨乳像白兔一般跳了出来。
+	#IF(brax.hasPenis())
+		然而这一次，布瑞并没有着急去遮挡。她背靠在椅子上，发出一声格外淫荡的呻吟，而且像是忘了自己现在身处何处，松开了攥住的布料碎片，将手伸到两腿之间，一只手撸动着那带结的大屌，另一只手则用手指对着已经滴水的狼小穴扣来扣去。
+	#ELSE
+		然而这一次，布瑞并没有着急去遮挡。她背靠在椅子上，发出一声格外淫荡的呻吟，而且像是忘了自己现在身处何处，松开了攥住的布料碎片，将手伸到两腿之间，开始用手指对着已经滴水的小穴扣来扣去。
+	#ENDIF
+</p>
 	<p>
-		[brax.speechNoEffects(Candi... I... Need... Cock...)] Bree moans, her tongue lolling out of her mouth as she loses herself to her pleasure.
-	</p>
+	[brax.speechNoEffects(坎迪……我……想要……肉棒……)]布瑞呻吟着，舌头搭在嘴外，已经完全屈服于快感。
+</p>
 	<p>
-		[candi.speechNoEffects(Ooh! Bree! You naughty slut! Y'know, you, like, need a new name to go with your new attitude! Erm... How about Candi?!)] Candi exclaims, before realising what's wrong. [candi.speechNoEffects(Wait, no, that's, like, my name... You can be Brandi!)]
-	</p>
+	[candi.speechNoEffects(哦！布瑞！你个淘气的小骚货！现在这个样子，我觉得，得在起个名字了吧！呃……要不就叫坎迪吧？！)]坎迪高声喊道，但很快就发现不对劲。[candi.speechNoEffects(等等，不对，这好像是，我的名字……那你就叫布兰迪吧！)]
+</p>
 	<p>
-		As Candi gives her a new name, you see Brandi's now-massive breasts finally stop growing, leaving them as KK-cups. Letting out a little sigh, the bimbo wolf-girl looks down over her shoulder at her massive ass and wide hips. Looking over at you, her moan turns into a hungry moan, and she pants, [brax.speechNoEffects(Heya babe... Wanna fuck?)]
-	</p>
+	坎迪正在想新名字的时候，你才发现布兰迪那对硕大的乳房终于不再继续长大，变成了KK罩杯。那傻乎乎的狼女微微叹了口气，回头看了看自己巨大的屁股，又朝你投来了目光，原本的呻吟变得饥渴起来，呼吸渐渐加速，[brax.speechNoEffects(嘿，宝贝……来一发？)]
+</p>
 	<p>
-		Before you have any time to respond, or to comment on Brandi's new body and personality, Candi grabs her arm and pulls her into her office, shouting behind her, [candi.speechNoEffects(I'm gonna give Brandi some of my old clothes, give us five mins, then come have some fun with her!)]
-	</p>
+	你还没来得及回应，或是对着布兰迪全新的身体、性格评头论足一番，坎迪便抓住她的手臂，把她拉进了自己的办公室，在她身后喊道，[candi.speechNoEffects(我去拿几件旧衣服给布兰迪，等我五分钟，再来找她爽吧！)]
+</p>
 	<p>
-		You could either do as Candi says, and go into the office after five minutes, or leave and come back another time to have some fun with Brandi...
-	</p>
-	]]>
-	</htmlContent>
+	你可以照着坎迪说的做，五分钟后进她的办公室，也可以暂时离开，另找时间再跟布兰迪好好玩玩……
+</p>
+	
+	]]></htmlContent>
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED_SEX"><![CDATA[
 	<p>
-		After waiting for five minutes, you follow Candi into her office. There, waiting for you, is the person who you first met as 'Inspector Brax'. Having being transformed into a brain-dead bimbo, and being dressed up to look like a cheap whore, she's completely unrecognisable from the first time you met her.
-	</p>
+	你等了五分钟，随后便跟着坎迪进了办公室。在里面等着你的，就是第一次见到时的那位“布拉克斯督察”。她如今已经被变成了个失去思考能力的无脑大胸，穿上了廉价妓女样子的衣服，已然完全认不出是曾经那个人。
+</p>
 	<p>
-		A fishnet top does nothing to conceal her massive KK-cup breasts, and you see that a tiny miniskirt isn't doing much better of a job downstairs. Candi must have a thing for fishnets, as she's given Brandi a pair of fishnet stocking, as well as gloves, finishing off her slutty appearance.
-	</p>
+	渔网胸罩丝毫难掩她KK罩杯的巨乳，而身下的迷你超短裙也没有起到什么作用。坎迪一定对渔网情有独钟，她还给布兰迪穿了一双渔网丝袜，戴上了手套，为她淫荡的外表画上了完美的句号。
+</p>
 	<p>
-		The most noticeable thing, however, is how Brandi's facial expression has changed. Her once-dominant-and-intimidating stare has shifted into a vacant, hungry gaze, and her eyes travel up the length of your body as she licks her lips.
-	</p>
+	不过最扎眼的还得是布兰迪现在的表情。她曾经高高在上的怒目依然变为空虚饥渴的凝视，对着你的身子上下打量，贪婪地舔着嘴唇。
+</p>
 	<p>
-		[brax.speechNoEffects(Like, you wanna fuck or something?)] she asks. [brax.speechNoEffects(I'm, like, totally horny right now!)]
-	</p>
+	[brax.speechNoEffects(那个，想不想来一发？)]她问道。[brax.speechNoEffects(我现在，真的，好想要啊！)]
+</p>
 	<p>
-		[candi.speechNoEffects(Hehe! Good girl, Brandi! You gotta, like, remember to ask nicely like that, ok?)] Candi says, handing you [brax.namePos] pink leash before moving to make her exit. [candi.speechNoEffects(I gotta, like, watch the front desk, or else the chief's gonna take Brandi away from me!)]
-	</p>
+	[candi.speechNoEffects(呵呵！布兰迪，真是个乖女孩！那个，你可要跟刚才一样，好好问别人哦？)]坎迪说完便把[brax.namePos]的粉色牵绳递给了你，接着就准备离开了。[candi.speechNoEffects(我还得，那个，看着前台呢，不然领导就要把布兰迪从我这带走了！)]
+</p>
 	<p>
-		As Candi leaves the office, you turn to face the [brax.race] bimbo, smiling as you unclip the leash from her collar. Brandi immediately drops to her knees, shuffling forwards as she begs, [brax.speechNoEffects(Please! I, like, <i>need</i> a good fuck right now! Please use me!)]
-	</p>
+	坎迪离开办公室后，你转身看着这只[brax.race]的傻妞，微笑着将牵绳从项圈上解了下来。布兰迪立马跪倒在地，一面请求一面扭动着身子，[brax.speechNoEffects(求你了！我真的，<i>必须</i>赶紧被好好操一顿！求你使用我吧！)]
+</p>
 	<p>
-		[pc.speech(What a good [brax.girl]!)] you say, grinning as she lets out a desperate, hungry whine.
-	</p>
-	]]>
-	</htmlContent>
+	[pc.speech(真是个好[brax.girl]！)]你听到她发出一声急切的呜咽，喜悦顿时溢于言表。
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED_NO_SEX -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_BIMBOFY_COMPLETED_NO_SEX"><![CDATA[
 	<p>
-		Although you're happy with how Brandi has turned out, you don't feel like having sex with her. Not wanting to wait around for five minutes just to decline Candi's inevitable offer of sex with Brandi, you step back from the counter and prepare to take your leave.
-	</p>
-	]]>
-	</htmlContent>
+	虽然你看到布兰迪落得这个下场十分欣喜，但并不想跟她做爱。你并不想等这五分钟就为了拒绝坎迪让你跟布兰迪做爱的邀请，便从前台退回来，准备离开。
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- INTERIOR_SECRETARY_BRAX_BIMBOFY_CHANGE_MIND -->
 	
 	<htmlContent tag="INTERIOR_SECRETARY_BRAX_BIMBOFY_CHANGE_MIND"><![CDATA[
 	<p>
-		Although it seemed like a good idea at first, you aren't so sure that you want to go through with this. Shaking your head, you decide to leave Bree the way she is.
+		虽然乍一看上去是个好主意，但你总觉得自己并不想做这种事情。你摇了摇头，还是让布瑞保持现状了
 	</p>
 	<p>
-		[pc.speech(Sorry, Candi, maybe that would be going too far, maybe we can punish Bree another time.)]
+		[pc.speech(抱歉，坎迪，或许有点太过分了，另找时间再惩罚布瑞吧。)]
 	</p>
 	<p>
-		[candi.speechNoEffects(Awww! Well, like, I'll keep hold of these potions and stuff, so if you, like, want to do it another time, just let me know!)] Candi replies.
+		[candi.speechNoEffects(哦哦！好吧，嗯，那我就好好留着这瓶药水，如果你，就是说，想另找时间做的话，告诉我就行！)]坎迪回应道。
 	</p>
 	<p>
-		You turn away from the reception desk, confident that you did the right thing.
+		你转身离开了前台，认定自己做了正确的选择。
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX -->
 	
 	<htmlContent tag="AFTER_SEX"><![CDATA[
 	<p>
-		Leaving [brax.name] to recover in Candi's office, you make your exit. As you leave, you let the bimbo cat-girl know that her pet behaved, smiling to yourself as you wonder when you'll decide to drop in to pay the [brax.race] a visit again...
-	</p>
-	]]>
-	</htmlContent>
+	你让[brax.name]留在坎迪的办公室慢慢恢复，便走了出来。准备离开时，你顺便告诉了那胸大无脑的猫女她的宠物表现如何，你心想着下次要什么时候再来见那[brax.race]一面，不禁扬起了嘴角……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- AFTER_SEX_CANDI -->
@@ -976,222 +976,222 @@
 	<htmlContent tag="AFTER_SEX_CANDI"><![CDATA[
 	#IF(candi.isSatisfiedFromLastSex())
 		<p>
-			With a deeply satisfied sigh, Candi moans, [candi.speechNoEffects(~Mmm!~ Fuck! That was, like, sooo good... I, like, super needed that.)]
-		</p>
+	坎迪满意地深呼一口气，呻吟道，[candi.speechNoEffects(~唔嗯！~草！真是，真是太——舒服了……我，就需要这个。)]
+</p>
 		<p>
-			Leaving the cat-girl to pant and moan on the floor of her office, you gather your things and head out of her office. Moving back around to the correct side of the desk, you prepare to continue on your way...
-		</p>
+	你让那猫女继续躺在办公室的地上喘息呻吟，收拾好东西便转头离开了。你回到前台位置，准备继续上路……
+</p>
 	#ELSE
 		<p>
-			With an immensely frustrated sigh, Candi moans, [candi.speechNoEffects(~Aah!~ Fuck! That was, like, super not satisfying! You're, like, super bad at sex and stuff!)]
-		</p>
+	坎迪烦躁地深呼一口气，呻吟道，[candi.speechNoEffects(~啊啊！~妈的！完全，怎么说，没满足啊！你那个，床上功夫真差劲！)]
+</p>
 		<p>
-			With that, the desperately horny cat-girl hastily pulls on her clothes and dashes out of her office, before sinking down into her chair and shamelessly continuing to masturbate. Collecting your things, you follow her out of the office and move back around to the correct side of the desk, before preparing to continue on your way...
-		</p>
+	那依旧欲火焚身的猫女说着，就连忙套上衣服冲出了办公室，窝进自己的椅子里，不知羞耻地继续自慰着。你收拾好东西，也跟着她出了办公室，回到前台位置，准备继续上路……
+</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 	<!-- BUYING_BRAX_INITIAL -->
 	
 	<htmlContent tag="BUYING_BRAX_INITIAL"><![CDATA[
 	<p>
-		As [brax.name] is now registered as a slave, you realise that this means you'd potentially be able to own [brax.herHim], if only you can convince Candi to sell [brax.herHim] to you. With this on your mind, you inform the bimbo cat-girl that you're in possession of a slaver's license, and ask how much she'd be willing to consider selling [brax.name] for.
-	</p>
+	[brax.name]已经是登记在册的奴隶，你意识到这就意味着你同样能够拥有[brax.herHim]，只需说服坎迪将[brax.herHim]卖给你即可。你有了想法，告诉那胸大无脑的猫女，你刚好也有贩奴许可，想知道她多少钱才愿意卖掉[brax.name]。
+</p>
 	<p>
-		#IF(game.getDialogueFlags().hasFlag(FLAG_bimbofiedBrax))
-			Upon hearing you ask this, the bimbo wolf-girl exclaims in a bubbly voice, [brax.speechNoEffects(Hey, like, you wanna be my owner? That'd be kinda fun! I'm, like, desperate to get fucked in some place other than behind this desk, y'know?)]
-			</p>
+	#IF(game.getDialogueFlags().hasFlag(FLAG_bimbofiedBrax))
+		那只傻乎乎的狼女听到你问这个，忽然就高声叫喊起来，[brax.speechNoEffects(嘿，那个，你想当我主人吗？那可太有意思了！我其实早就不想待在这张桌子后面，去别的地方挨操了？)]
+		</p>
 			<p>
-			[candi.speechNoEffects(Like, you don't get to decide who owns you, bitch!)] Candi exclaims, giving [brax.namePos] leash a sharp yank before continuing, [candi.speechNoEffects(So, you wanna buy my little slave, huh? She's, like, apparently super into you already...)]
-		#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_feminisedBrax))
-			Upon hearing you ask this, the wolf-girl mutters, [brax.speech(C-Candi, please, you can't sell me... Who knows what [pc.she]'ll do to me?)]
-			</p>
+		[candi.speechNoEffects(什么，谁是你的主人可不是你说了算，婊子！)]坎迪连忙反驳，用力扯了一下[brax.namePos]的牵绳，才继续道，[candi.speechNoEffects(所以说，你想买我的小奴隶吗？他可是，嗯，对你超中意呢……)]
+	#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_feminisedBrax))
+		那狼女听到你问这个，开始嘟哝起来，[brax.speech(坎，坎迪，求你了，你别卖我……谁知道[pc.she]会怎么对我啊？)]
+		</p>
 			<p>
-			[candi.speechNoEffects(Like, you don't get to decide what I can and can't do, bitch!)] Candi exclaims, giving [brax.namePos] leash a sharp yank before continuing, [candi.speechNoEffects(So, you wanna buy my little slave, huh? Even though she's, like, pretty disobedient and stuff?)]
-		#ELSE
-			Upon hearing you ask this, the wolf-boy angrily shouts, [brax.speech(You seriously think you can just buy me?! Candi, tell [pc.herHim] to fuck off alread- ~Aargh!~)]
-			</p>
+		[candi.speechNoEffects(什么，谁是你的主人可不是你说了算，婊子！)]坎迪连忙反驳，用力扯了一下[brax.namePos]的牵绳，才继续道，[candi.speechNoEffects(所以说，你想买我的小奴隶吗？他可是不听话得很呢……)]
+	#ELSE
+		那狼男听到你问这个，立马怒吼道，[brax.speech(你真觉得你买得了我吗？！坎迪，告诉[pc.herHim]赶紧滚蛋——~呃啊啊！~)]
+		</p>
 			<p>
-			[candi.speechNoEffects(Like, shut up, bitch!)] Candi exclaims, yanking on [brax.namePos] leash to quieten him down. [candi.speechNoEffects(So, you wanna buy my little slave, huh? Even though he's, like, super disobedient and stuff?)]
-		#ENDIF
-	</p>
+		[candi.speechNoEffects(真是的，闭嘴，混蛋！)]坎迪连忙反驳，用力扯了一下[brax.namePos]的牵绳，才让他安静下来。[candi.speechNoEffects(所以说，你想买我的小奴隶吗？他可是不听话得很呢……)]
+	#ENDIF
+</p>
 	<p>
-		Reaffirming that you would indeed like to buy [brax.name] from her, you again ask how much she'd be willing to sell [brax.herHim] for. Leaning back in her chair, Candi lets out a long sigh, before saying, [candi.speechNoEffects(Like, I dunno... I mean, it's kinda annoying having to care for a slave, but, like, it's also kinda fun to get [brax.herHim] to do what I say... I'll tell ya what; I'll, like, really think about if I wanna sell [brax.herHim] to you, but you gotta do something for me first.)]
-	</p>
+	你再次表示确实想要从她那里买来[brax.name]，又问她愿意多少钱出售[brax.herHim]。坎迪背靠在椅子上，长叹一声，说道，[candi.speechNoEffects(这个，我也不知道……我是说，要照顾个奴隶确实麻烦得很，但是，怎么说，我说什么[brax.herHim]就做什么也挺有意思的……这么说吧；要让我考虑能不能把[brax.herHim]卖给你，你得先帮我做件事。)]
+</p>
 	<p>
-		After asking Candi what that 'something' would be, she smiles and places a small bag of coins on the desk in front of her, before saying, [candi.speechNoEffects(I, like, ordered some perfume and stuff from this nice succubus lady a week or something ago, and, like, I just haven't had the time to go and pick it up yet, y'know? You just, like, take this money, go pay for my perfume, and bring it back to me, and I'll, like, let you know if [brax.name] is for sale or not. Deal?)]
-	</p>
+	你问“那件事”是什么，她微微一笑，往面前的桌子上放了一小袋硬币，说道，[candi.speechNoEffects(我，那个，一周前还是什么时候从那个漂亮的魅魔那里订了一些香水，然后，一直都没时间去拿，你懂吧？你只要，那个，拿上钱，付上香水的款，再把香水带回来给我，我就，嗯，考虑一下能不能卖[brax.name]给你。行吗？)]
+</p>
 	<p>
-		#IF(game.getDialogueFlags().hasFlag(FLAG_kateIntroduced))
-			As it sounds like an easy enough task, you agree to do as Candi asks, and after taking the bag of flames, you're informed that the perfume is waiting at none other than Kate's shop, 'Succubi's Secrets', over in the Shopping Arcade.
-		#ELSE
-			As it sounds like an easy enough task, you agree to do as Candi asks, and after taking the bag of flames, you're informed that the shop at which the perfume is waiting is named 'Succubi's Secrets', and is located in one corner of the Shopping Arcade.
-		#ENDIF
-		 Telling Candi that you'll have no trouble retrieving her perfume for her, you wonder if you should head off to the Shopping Arcade right away, or hang around here for a little while longer...
-	</p>
-	]]>
-	</htmlContent>
+	#IF(game.getDialogueFlags().hasFlag(FLAG_kateIntroduced))
+		你听着觉得只是小菜一碟，便同意了。拿上那一袋火币后，她告诉你香水肯定就在凯特的商店“魅魔的秘密”里，购物中心那边。
+	#ELSE
+	你听着觉得只是小菜一碟，便同意了。拿上那一袋火币后，她告诉你香水所在的店铺叫做“魅魔的秘密”，位于购物中心的一角。
+	#ENDIF
+	你告诉坎迪肯定会帮她取回香水，便开始思考是应该直接前往购物中心，还是再在附近闲逛一会儿……
+</p>
+	
+	]]></htmlContent>
 
 	
 	<!-- BUYING_BRAX_PERFUME_DELIVERY -->
 	
 	<htmlContent tag="BUYING_BRAX_PERFUME_DELIVERY"><![CDATA[
 	<p>
-		Telling Candi that you've done as she asked, you place the bottles of perfume on the desk before her. The cat-girl's eyes light up as she sees what it is you're delivering to her, and in a happy voice, she exclaims, [candi.speechNoEffects(Wohoo! Like, that succubus lady who works there really knows her stuff! She knew, like, exactly what brands I was talking about! This is, like, the real good stuff, y'know?!)]
+		你告诉坎迪说已经完成了她的要求，将几瓶香水摆在了她面前的台面上。那猫女看到你递给她的东西，顿时两眼放光，兴奋地叫着[candi.speechNoEffects(呜呼！呃，那个店里的魅魔真是太懂了！她甚至知道，那个，我说的什么牌子！简直，怎么说，好极了，对吧？)]
 	</p>
 	<p>
-		Reminding Candi about her end of the deal, you ask her if she's decided whether she'll sell [brax.name] to you or not. Putting the bottles of perfume away beneath her desk, the cat-girl straightens back up and smiles at you as she answers, [candi.speechNoEffects(Like, I was thinking no, but after you've gone and got me these super duper perfumes, there's, like, no way I could refuse! I'll sell [brax.herHim] to you, but I gotta think about how much [brax.sheIs] worth...)]
+		你提醒坎迪你已经帮过她的忙，便问她到底决定好要不要卖[brax.name]给你了没有。那猫女把香水放到一边，挺直了腰板，笑着回答了你的问题，[candi.speechNoEffects(怎么说呢，我不太想，但是看到你给我带来这么厉害的香水，感觉，我好像也没理由拒绝了！我会把[brax.herHim]卖给你，但我还得想想[brax.sheIs]值多少钱……)]
 	</p>
 	<p>
 		#IF(game.getDialogueFlags().hasFlag(FLAG_bimbofiedBrax))
-			[brax.speechNoEffects(So, like, I'm gonna belong to [pc.herHim] soon?)] [brax.name] asks, playfully eyeing you up and down before suggestively winking at you.
+			[brax.speechNoEffects(所以说，那个，我就要归[pc.herHim]了？)][brax.name]问道，意味深长地抬头看向你，抛了个暗示的媚眼。
 			</p>
 			<p>
-			[candi.speechNoEffects(Yeah, like, probably,)] Candi answers, [candi.speechNoEffects(I gotta, like, think about how much to sell you for first, y'know?)]
+			[candi.speechNoEffects(嗯，这个嘛，大概吧，)]坎迪回答，[candi.speechNoEffects(我得，怎么说，先想想你值个多少钱，好吗？)]
 		#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_feminisedBrax))
-			[brax.speechNoEffects(Y-You're really going to sell me?)] [brax.name] asks, glancing worriedly in your direction.
+			[brax.speechNoEffects(你，你真的要卖掉我吗？)][brax.name]问道，有些担心地朝你瞄了一眼。
 			</p>
 			<p>
-			[candi.speechNoEffects(Yeah, like, probably,)] Candi answers, [candi.speechNoEffects(I gotta, like, think about how much to sell you for first, y'know?)]
+			[candi.speechNoEffects(嗯，这个嘛，大概吧，)]坎迪回答，[candi.speechNoEffects(我得，怎么说，先想想你值个多少钱，好吗？)]
 		#ELSE
-			[brax.speechNoEffects(You can't be serious!)] [brax.name] shouts, [brax.speech(You can't sell me! And to <i>[pc.herHim]</i>, of all people?! The chief will never allow- ~Eugh!~)]
+			[brax.speechNoEffects(你怎么能这样！)][brax.name]大吼着，[brax.speech(你不能卖我！何况是给<i>[pc.herHim]</i>，明明有那么多别的人？！头儿绝对不会~呃！~)]
 			</p>
 			<p>
-			[candi.speechNoEffects(Shut up already! Fuck! You're, like, the worst fuckin' slave ever! I'm gonna be glad to be rid of you!)] Candi screeches, yanking harshly on [brax.namePos] leash to shut [brax.herHim] up. Glaring angrily at [brax.herHim], she then continues, [candi.speechNoEffects(And the chief, like, had all your papers signed to me personally, so, like, if I wanna sell you, that's up to me! Now, like, try to be a good bitch for once and stay quiet while I, like, think about how much to sell you for!)]
+			[candi.speechNoEffects(我说过了闭嘴！妈的！你真是，那个，全世界最他妈烂的奴隶了！能把你处理掉我高兴还来不及呢！)]坎迪的声音高得不得了，她又狠扯了一下[brax.namePos]的牵绳让[brax.herHim]闭上了嘴。坎迪狠狠地瞪着[brax.herHim]，继续说道，[candi.speechNoEffects(还有长官，呃，早就把你的文件签好字亲自交给我了，所以，那个，我如果想卖你，那都是我说了算！现在，嗯，给我当条好狗，一句话也别说，我得，怎么说，先想想你值个多少钱！)]
 		#ENDIF
 	</p>
 	<p>
-		Turning back towards you, Candi then says, [candi.speechNoEffects(So, um, I'm gonna need some time to think. If you're really serious about buying my bitch here, then I'm gonna need you to prove it. While I'm thinkin' about what to charge ya, I want you to do something for me, ok?)]
+		坎迪转身看向你，接着说道，[candi.speechNoEffects(所以，呃，我还需要一些时间想一下。你要是认真地想买我那条狗，就得再向我证明一下。在我想好该收你多少钱的时候，还想让你帮我做件事，行吗？)]
 	</p>
 	<p>
-		Realising that you have little choice but to do as she asks, you agree to help Candi once again, and ask her what it is she needs you to do. Glancing around to make sure that nobody else is nearby, the bimbo cat-girl leans forwards over her desk, and in an overly-dramatic manner, places a finger over her lips and makes a shushing noise, before whispering, [candi.speechNoEffects(You, like, can't tell anyone about this, ok, but, like, I overheard some talk about these extra special lollipops being confiscated up in the Harpy Nests. I, um, really love sucking on things like that, so you're gonna, like, go and fetch them for me, ok?)]
+		你明白除了继续帮她做事别无他法，便再次同意了，问她想让你做什么。那傻乎乎的猫女瞄了一眼周围确认没有别人，便把身子靠了过来，姿势极其夸张地竖了一根手指在嘴巴前面，做了个嘘声，然后轻声耳语道：[candi.speechNoEffects(那个，你可不能告诉别人，行吧。就是，我偷听到哈比之巢那里没收了一批不一般的棒棒糖。我，呃，可喜欢舔那玩意了，所以能不能，就是，帮我带过来，行吗？)]
 	</p>
 	<p>
-		You almost put a quick end to Candi's entire plan as you point out that the Enforcers are unlikely to simply hand over contraband lollipops to a member of the public, but after letting out a particularly long 'umming' noise, she exclaims, [candi.speechNoEffects(Oh, you can just use the super secret password that, like, only Enforcers are allowed to know! Just tell them it's a 'priority thunder', and then they'll know you must be a friend! Lucky I'm so smart I could think of that for you, huh? So anyway, go up to those Harpy Nests, and, like, tell them that the 'contraband lollipops' are needed here at the Enforcer headquarters for, um, testing or something, I dunno, you'll think of something.)]
+		你说执法者不可能这么轻易地就把违禁品棒棒糖交给大街上随便一个人，让她死了这个心，随后她发出格外悠长的一声“嗯——”，便大叫起来，[candi.speechNoEffects(哦，你用这个超级秘密的密码就行，那个，只有执法者才知道的！就告诉他们这个是‘优先雷霆’，他们肯定知道你是一伙儿的了！还好我聪明，能给你记得这个，对不对？总之，就去哈比之巢，然后，呃，告诉他们‘违禁品棒棒糖’在总部这里有急用，那个，测试什么的，我也不懂，你自己想个理由吧。)]
 	</p>
 	<p>
-		After getting Candi's assurance that she'll have put a price on [brax.name] by the time you return with these lollipops, you wonder if you should head on up to the Harpy Nests right away, or do something else here first...
+		你再三向坎迪确认等你回来肯定就能给[brax.name]定下价后，你便思索起来，是应该直接去往哈比之巢，还是先做些别的事情……
 	</p>
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 
 	
 	<!-- BUYING_BRAX_LOLLIPOP_DELIVERY -->
 	
 	<htmlContent tag="BUYING_BRAX_LOLLIPOP_DELIVERY"><![CDATA[
 	<p>
-		Placing the box down on the desk before Candi, you tell her that it contains the contraband lollipops she was after. Although you relay the warning that the dog-boy Enforcer gave you about the lollipops containing a dangerous, permanent aphrodisiac, the bimbo cat-girl doesn't seem to take much notice, and dismisses the message with a wave of her hand, [candi.speechNoEffects(Yeah, yeah, dangerous lollipops, sure, like, whatever.)]
-	</p>
+	你把箱子丢在坎迪面前的桌子上，告诉她那里面就是她想要的棒棒糖。虽然你重申了一遍那犬男执法者告诉你的忠告——这些棒棒糖含有十分危险的永久性春药成分，但那胸大无脑的猫女却毫不在乎，摆摆手就当你没说过，[candi.speechNoEffects(知道了，知道了，危险的棒棒糖，当然了，随便吧。)]
+</p>
 	<p>
-		Reminding her that she'd promised to put a price on [brax.name] by the time you returned with these lollipops, you ask Candi how much she's willing to sell the [brax.race] for. Stopping half-way through impatiently opening the box, Candi sighs and says, [candi.speechNoEffects(Yeah, like, I really tried to think hard, y'know, but I just don't think I can put a price on [brax.herHim]... Maybe I can't sell [brax.herHim] after all?)]
-	</p>
+	你提醒坎迪她保证过等你带着棒棒糖回来后，就会给[brax.name]定好价，便问她准备把那[brax.race]卖多少钱。原本迫不及待地打开箱子的坎迪，突然把手停在了半空中，她叹了口气，[candi.speechNoEffects(对啊，那个，我很努力地想过了，你懂吧，但我真的不觉得自己能给[brax.herHim]定价……或许我就不该卖[brax.herHim]？)]
+</p>
 	<p>
-		After expressing your displeasure at having the cat-girl go back on her word, and throwing out the casual observation that she would get into a lot of trouble if it was known that she'd obtained these lollipops for her own personal use, you once again ask Candi what price she's going to put on [brax.name]. This time, with the thought of getting into trouble over these lollipops clearly in her head, she says, [candi.speechNoEffects(Well, like, I don't think I could, um, ask for flames for [brax.herHim]... There is one thing I'd be, like, willing to trade [brax.herHim] for, though. There was this super rare, super exclusive, limited-edition set of lipsticks put out by, like, the best brand out there a few months ago, right? Like, obviously, they were all bought by super rich demons and stuff, but I heard from a friend's cousin's girlfriend that there's still one set for sale over in the Shopping Arcade. You, like, get that for me, and I'll trade you [brax.name] for it.)]
-	</p>
+	你对这猫女反复无常的举动感到十分不满，稍微思索一下便说，如果坎迪拿到这些棒棒糖只为私用这件事被爆出来，一定会惹上不少麻烦，于是再次问她准备给[brax.name]出什么价格。这一次，她也确实意识到拿了这些棒棒糖麻烦很大，说道，[candi.speechNoEffects(好吧，那个，我觉得我还是，不能用火币衡量[brax.herHim]……但是，我愿意用另一个东西跟[brax.herHim]交换。几个月前有一套超级无敌稀有独家限量套的口红发售，嗯，还是最棒的牌子，知道吧？显然，这些口红早就都被那群有钱的恶魔买走了，不过我从一个朋友的表亲的女朋友那里听说，购物中心还有一套在卖。你，那个，帮我拿来，我就用[brax.name]跟你换。)]
+</p>
 	<p>
-		Finally having got a price set on [brax.namePos] head, you ask Candi where exactly this lipstick set is for sale, and how you're supposed to tell it apart from any others.
-	</p>
+	[brax.namePos]的价格终于敲定，你问那套口红具体是在哪里售卖，你又该怎么区分这套口红。
+</p>
 	<p>
-		[candi.speechNoEffects(Well, like, I heard it's being sold in that 'Ralph's Snacks' place, but you, like, have to ask for it all special-like and stuff, y'know? It's not displayed to the public. Oh, and the set's called 'A Hundred Kisses', so you just need to ask for that, ok?)]
-	</p>
+	[candi.speechNoEffects(这个嘛，嗯，我听说是在‘拉尔夫小吃店’有卖，不过你，那个，必须要像买其他不一般的玩意一样，先问，懂吗？不是在明面上的。哦，还有这套口红叫‘百万之吻’，问一下就可以，行吗？)]
+</p>
 	<p>
-		Agreeing to retrieve this special lipstick set in order to trade it for [brax.name], you wonder if you should head over to 'Ralph's Snacks' right away, or do something else first...
-	</p>
-	]]>
-	</htmlContent>
+	你同意帮她取回这套特制的口红，用来换取[brax.name]的拥有权，接着便思考起来，是直接去往“拉尔夫小吃店”，还是先去做别的事情……
+</p>
+	
+	]]></htmlContent>
 
 	
 	<!-- BUYING_BRAX_LIPSTICK_DELIVERY -->
 	
 	<htmlContent tag="BUYING_BRAX_LIPSTICK_DELIVERY"><![CDATA[
 	<p>
-		Wanting to finally become the owner of [brax.name], you place the lipstick set 'A Hundred Kisses', down on the desk in front of Candi. Seeing what it is you've brought her, the bimbo cat-girl lets out an excited squeal, [candi.speechNoEffects(~Aah!~ Like, no way! You actually got it! I, like, totally can't even!)]
-	</p>
+	你迫切地想要成为[brax.name]的主人，将那套口红“百万之吻”放在了坎迪面前的桌上。那傻乎乎的猫女看到你给她带来的东西，激动地尖叫起来，[candi.speechNoEffects(~啊啊！~简直，不可能！你真的拿到了！我，呃，想都不敢想！)]
+</p>
 	<p>
-		Bouncing up and down in excitement, Candi reaches forwards to take the box, but, not wanting to hand it over until you know that she's going to keep her end of the bargain, you pull it away from her. Responding to her protestations with the simple demand that she produce the paperwork for signing over [brax.name], you soon manage to get her to do as you ask. Once the correct forms for a slave transfer are laid out before you, you allow Candi to take the lipsticks.
-	</p>
+	坎迪激动地上蹿下跳，伸手就要拿那盒子，但你在她确认交易之前，并不想轻易把东西交给她，于是便将口红从她身边抽了回来。面对她的抗议，你只是提出了一个简单的要求，让她拿出来[brax.name]的文件，她也立马照做。等到奴隶移交表格终于摆在你的面前，你才让坎迪拿走了口红。
+</p>
 	<p>
-		#IF(game.getDialogueFlags().hasFlag(FLAG_bimbofiedBrax))
-			[brax.speechNoEffects(So, like, I'm getting you as my new owner?)] [brax.name] asks, biting her lip and batting her eyelids at you.
-		#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_feminisedBrax))
-			[brax.speechNoEffects(So... Y-You're going to be the one owning me now?)] [brax.name] asks, nervously shuffling her feet as she wonders how you're going to be treating her.
-		#ELSE
-			[brax.speechNoEffects(I can't believe this!)] [brax.name] exclaims, [brax.speech(<i>[pc.SheIs]</i> going to be my... my <i>owner</i>?! ~Eugh!~)]
-		#ENDIF
-	</p>
+	#IF(game.getDialogueFlags().hasFlag(FLAG_bimbofiedBrax))
+		[brax.speechNoEffects(所以说，那个，我有新主人了？)][brax.name]轻咬下唇，不断对你暗送秋波。
+	#ELSEIF(game.getDialogueFlags().hasFlag(FLAG_feminisedBrax))
+		[brax.speechNoEffects(所以……你，你要成为我新的主人了吗？)][brax.name]问道，脚下不安地挪动着，似乎在想象你会如何对待她。
+	#ELSE
+		[brax.speechNoEffects(怎么可能！)][brax.name]大叫起来，[brax.speech(<i>[pc.SheIs]</i>竟然要……要做我的<i>主人</i>？！~呃啊！~)]
+	#ENDIF
+</p>
 	<p>
-		Responding in the affirmative, and telling [brax.name] to collect whatever personal possessions [brax.she] has, you then sign the papers laid out in front of you, before asking Candi to do the same. Despite all that you've done for her, she seems very reluctant to go through with it, and it takes some pointed reminders of her promises to finally get her to sign off on the transfer. Being infused with a special arcane enchantment, the documents immediately react to both party's signatures, and with a bright purple flash, the enslavement collar around [brax.namePos] neck activates, teleporting [brax.herHim] to the slaver administration building's holding cells.
-	</p>
+	你再次重申，并且告诉[brax.name]拿上自己的东西，便在面前的文书上签了字，然后让坎迪也在上面签字。虽然你替她付出了那么多，她却还是不情不愿，直到你再次提醒她早就答应过了，她才终于落笔。文件上早已注入了特殊的奥术附魔，立刻对双方的签名做出反应，伴随着一道亮紫色的闪光，[brax.namePos]脖子上的奴隶项圈开始生效，将[brax.herHim]传送至奴隶管理局的暂留室中。
+</p>
 	<p>
-		[candi.speechNoEffects(Well, like, there ya go,)] Candi pouts, clearly upset at having lost her slave, [candi.speechNoEffects(I guess these lipsticks are, like, pretty good, but I feel like you cheated me outta something!)]
-	</p>
+	[candi.speechNoEffects(好吧，那就这样吧，)]坎迪撅起嘴巴，显然是没了奴隶很是不爽，[candi.speechNoEffects(我觉得这些口红，呃，还是挺好的，但我总觉得你在坑我！)]
+</p>
 	<p>
-		Not wanting an Enforcer with a grudge on your back, you remind Candi that you also retrieved her perfume, as well as the box of contraband lollipops, and that by all accounts it was a fair deal. As you mention this, her eyes suddenly light up, and she happily exclaims, [candi.speechNoEffects(Oh, that's right! I, like, forgot about those! I was saving them for when this happened to make me feel better!)]
-	</p>
+	你并不想被哪个执法者记恨，于是又帮坎迪回忆了一下，你帮她取回了香水，拿了一箱违禁品棒棒糖，全都算上绝对算是公平的交易。听到你这么说，她忽然两眼放光，高兴地叫喊起来，[candi.speechNoEffects(哦，对啊！我，那个，好像都忘了！我留着就是为了这种时候让我打起精神来呢！)]
+</p>
 	<p>
-		Before you can even think about stopping her, the bimbo cat-girl reaches down beneath her desk, and, producing a glowing-pink lollipop, she wraps her plump lips around it and starts sucking. Immediately, you see her cheeks flush red, and with complete indifference to your presence before her, she drops her hands down between her legs, before pulling her skirt up and reaching down into her thong to start masturbating. 
-	</p>
+	没等你阻止她，那傻乎乎的猫女便往桌子下面一伸手，掏出了一根发着粉光的棒棒糖，丰腴的嘴唇立马贴了上去，开始舔起来。几乎一瞬间，你就看到她脸颊泛红，仿佛对面前的你熟视无睹，伸手就往两腿之间，掀起了裙子，对着股间开始自慰起来。
+</p>
 	<p>
-		[candi.speechNoEffects(Fuck, like, the<i>sh</i>e thing<i>sh</i> are pretty good,)] she slurps around the lollipop in her mouth, before looking up into your eyes and pleading, [candi.speechNoEffects(I'm <i>sh</i>o horny! Like, plea<i>sh</i>e! Come round here and fuck me!)]
-	</p>
+	[candi.speechNoEffects(妈的，这<i>嘶</i>东<i>嘶</i>太棒了，)]棒棒糖在她的嘴里发出滋滋的声音，她抬头看向你的眼睛，乞求道，[candi.speechNoEffects(我<i>嘶</i>好想要！求<i>嘶</i>你了！过来操我啊！)]
+</p>
 	<p>
-		With any animosity towards you seemingly forgotten, Candi continues desperately pleading for you to fuck her, and you wonder if you should take her up on her offer, or simply take your leave and see to the arrangements for your new slave...
-	</p>
-	]]>
-	</htmlContent>
+	坎迪似乎忘记了对你的不满，继续拼命地恳求你上她，你不知是应该接受她的提议，还是干脆告辞，去为你的新奴隶安排一下……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- ENTRANCE_ENFORCER -->
 	
 	<htmlContent tag="ENTRANCE_ENFORCER"><![CDATA[
 	<p>
-		This entrance to the Enforcer HQ is typically not able to be used by members of the public, but as you've got a Contractor Pass, you're able to activate the arcane scanner attached to the nearby wall and unlock the doors whenever you want. Thanks to this, you could choose to leave the Enforcer HQ via this entrance, or instead head further inside
-		#IF(!game.isWorkTime())
-			 and make use of the requisitions area...
+	这条执法者总部的入口显然并不是供公众使用的，但你有承包许可证在手，可以随时通过附近墙上的奥术扫描仪解锁这道门。因而你可以选择通过此处离开执法者总部，也可以继续向内部行进
+	#IF(!game.isWorkTime())
+		使用一下军需处……
+	#ELSE
+		#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
+			见一见埃勒或者使用一下军需处……
 		#ELSE
-			#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
-				and either visit Elle or make use of the requisitions area...
-			#ELSE
-				and either visit Wes or make use of the requisitions area...
-			#ENDIF
+			见一见韦斯或者使用一下军需处……
 		#ENDIF
-	</p>
-	]]>
-	</htmlContent>
+	#ENDIF
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- REQUISITIONS -->
 	
 	<htmlContent tag="REQUISITIONS"><![CDATA[
 	<p>
-		Connected to the adjoining corridor by a pair of wide, propped-open doors, the requisitions area is the place where specialist or replacement equipment can be checked out by the HQ's Enforcers. [pc.Stepping] through the open doors into this area, you find yourself standing in a relatively small room, which, other than a couple of basic metal tables pushed into each corner, is devoid of any furniture. The only other points of interest are the locked door and waist-high counter set into the wall before you.
-	</p>
+	军需处经过两扇一直保持撑开的大门通向邻接的走廊，这里就是总部的执法者领取专用装备或替换装备的地方。你[pc.Stepping]过洞开的门，只见自己站在一个并不算大的房间里，每个角落摆着一两张朴素的金属桌，除此之外便没有其他家具。唯一值得注意的就是面前那扇锁住的门，还有嵌在墙里及腰高的墙柜。
+</p>
 	<p>
-		#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
-			As it's currently outside of Elle's regular working hours ([style.colourMinorBad([units.time(9)] and [units.time(17)])]), a particularly bored-looking German-shepherd-boy is currently on duty behind the counter. Catching sight of you, this SWORD Enforcer stifles a yawn and asks, [style.speechMasculineStrong(Hey, you're that [pc.guy] who Elle gave the special pass to, right?)]
-		#ELSE
-			As it's currently outside of Wes's regular working hours ([style.colourMinorBad([units.time(9)] and [units.time(17)])]), a particularly bored-looking German-shepherd-boy is currently on duty behind the counter. Catching sight of you, this SWORD Enforcer stifles a yawn and asks, [style.speechMasculineStrong(Hey, you're that [pc.guy] who Wes gave the special pass to, right?)]
-		#ENDIF
-	</p>
+	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
+		由于现在还不是埃勒常规的工作时间([style.colourMinorBad([units.time(9)]至[units.time(17)])])，你只能见到柜台后有一个德牧男在执勤，一脸无趣的样子。那SWORD执法者注意到你后，伸了个懒腰，问道，[style.speechMasculineStrong(嘿，你就是埃勒特别准入的那个[pc.guy]，对吧？)]
+	#ELSE
+		由于现在还不是韦斯常规的工作时间([style.colourMinorBad([units.time(9)]至[units.time(17)])])，你只能见到柜台后有一个德牧男在执勤，一脸无趣的样子。那SWORD执法者注意到你后，伸了个懒腰，问道，[style.speechMasculineStrong(嘿，你就是韦斯特别准入的那个[pc.guy]，对吧？)]
+	#ENDIF
+</p>
 	<p>
-		Flashing the Enforcer your pass to confirm that you are indeed the person he's thinking of, you approach the counter and look past him to see a huge storage area filled with all sorts of weapons and protective equipment. Seeing what it is that's caught your attention, the Enforcer shakes his head and reveals,
-		#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
-			 [style.speechMasculineStrong(Elle is the only one who's going to sell you any surplus. Sorry, but orders are orders. She's sticking her neck out a little for you and wants to keep a personal check on what you're buying from her.)]
-		#ELSE
-			 [style.speechMasculineStrong(Wes is the only one who's going to sell you any surplus. Sorry, but orders are orders. He's sticking his neck out a little for you and wants to keep a personal check on what you're buying from him.)]
-		#ENDIF
-	</p>
+	你朝执法者亮了一下许可证，证明自己确实就是他口中的那个人，便走近柜台，看向他的后方——一处巨大的储存区，摆满了各色武器和防护装备。那执法者也注意到你的视线，于是摇了摇头，解释道，
+	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
+		[style.speechMasculineStrong(只有埃勒能卖给你补给。抱歉，命令就是命令。她帮你稍稍走了后门，得亲自管理你能买到的东西。)]
+	#ELSE
+		[style.speechMasculineStrong(只有韦斯能卖给你补给。抱歉，命令就是命令。他帮你稍稍走了后门，得亲自管理你能买到的东西。)]
+	#ENDIF
+</p>
 	<p>
-		#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
-			Disappointed to discover that you're only able to buy Enforcer gear directly from Elle,
-		#ELSE
-			Disappointed to discover that you're only able to buy Enforcer gear directly from Wes,
-		#ENDIF
-		 there's little else for you to do except turn around and leave. If you wanted to purchase something, then you'll have to return between the hours of [style.colourMinorBad([units.time(9)]-[units.time(17)])]...
-	</p>
-	]]>
-	</htmlContent>
+	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
+		你得知自己只能从埃勒那里买到执法者装备，有些失望，
+	#ELSE
+		你得知自己只能从韦斯那里买到执法者装备，有些失望，
+	#ENDIF
+	再留在这里也没有什么事情可做。如果你想买东西，那最好在[style.colourMinorBad([units.time(9)]-[units.time(17)])]这段时间再回来……
+</p>
+	
+	]]></htmlContent>
 	
 	
 	<!-- OFFICE_QUARTERMASTER -->
@@ -1199,30 +1199,30 @@
 	<htmlContent tag="OFFICE_QUARTERMASTER"><![CDATA[
 	#IF(pc.hasQuestInLine(QUEST_LINE_SIDE_WES, QUEST_WES_3_ELLE))
 		<p>
-			[pc.Walking] up to the door to Elle's office, you see that it bears the words 'Superintendent [elle.surname]'.
+			你[pc.Walking]向埃勒的办公室入口，看见门上写着“警司[elle.surname]”。
 			#IF(!game.isWorkTime())
-					 Just like most of the other offices in the HQ at this time, the lights are off inside and the door is securely locked. Even if you were to return during Elle's regular work hours, you know that she wouldn't be found inside, as she spends her days working at the requisitions desk.
+					就像总部内大多数其他办公室一样，此时里面的灯都关了，门也牢牢锁着。因为你知道埃勒整天都在请购台工作，即使你在正常工作时间过来，她也不会在里面。
 				</p>
 				<p>
-					There's really nothing more for you to do here except turn around and leave...
+					你除了转身离开之外别无选择……
 			#ELSE
-				 Despite the fact that you're here during Elle's regular work hours, the lights are off inside and the door is securely locked. Knowing that this is because she spends her days working at the requisitions desk, there's really nothing more for you to do here except turn around and leave...
+				尽管你是在埃勒的正常工作时间过来，但里面的灯都关了，门也牢牢锁着。因为你知道她整天都在请购台工作，所以你除了转身离开之外别无选择……
 			#ENDIF
 		</p>
 	#ELSE
 		<p>
-			[pc.Walking] up to the door to Wes's office, you see that it bears the words 'Superintendent [wes.surname]'.
+			你[pc.Walking]向韦斯的办公室入口，看见门上写着“警司[wes.surname]”。
 			#IF(!game.isWorkTime())
-					 Just like most of the other offices in the HQ at this time, the lights are off inside and the door is securely locked. Even if you were to return during Wes's regular work hours, you know that he wouldn't be found inside, as he spends his days working at the requisitions desk.
+					就像总部内大多数其他办公室一样，此时里面的灯都关了，门也牢牢锁着。因为你知道韦斯整天都在物资领用台工作，即使你在正常工作时间过来，他也不会在里面。你除了转身离开之外别无选择……
 				</p>
 				<p>
-					There's really nothing more for you to do here except turn around and leave...
+					你除了转身离开之外别无选择……
 			#ELSE
-				 Despite the fact that you're here during Wes's regular work hours, the lights are off inside and the door is securely locked. Knowing that this is because he spends his days working at the requisitions desk, there's really nothing more for you to do here except turn around and leave...
+				尽管你是在韦斯的正常工作时间到达这里，但里面的灯都关了，门也牢牢锁着。因为你知道他整天都在请购台工作，所以你除了转身离开之外别无选择……
 			#ENDIF
 		</p>
 	#ENDIF
-	]]>
-	</htmlContent>
+	
+	]]></htmlContent>
 	
 </dialogue>

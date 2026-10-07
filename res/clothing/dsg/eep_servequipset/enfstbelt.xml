@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small tag sewn into the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[腰部有一个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>200</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一条]]></determiner>
 
-		<name><![CDATA[Enforcer's stable belt]]></name>
+		<name><![CDATA[执法者大腰带]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's stable belts]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者大腰带]]></namePlural> 
 
-		<description><![CDATA[A wide, single layer nylon webbing belt.]]></description> 
+		<description><![CDATA[一条宽大的单层尼龙腰带。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -65,27 +64,25 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the stable belt around [npc.her] waist and [npc.verb(snap)] the buckle together.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the stable belt around [npc2.namePos] waist and [npc.verb(snap)] the buckle together.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tighten)] the stable belt around [npc2.namePos] waist as much as possible and forcibly [npc.verb(snap)] the buckle together.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]系紧[npc.her]腰上的腰带并扣上搭扣。]]></self>
+		<other><![CDATA[
+			[npc.Name]在[npc2.namePos]腰间系上稳定腰带并扣上搭扣。
+]]></other>
+		<otherRough><![CDATA[
+[npc2.Name]紧紧地拉紧[npc2.namePos]的腰带，并用力将皮带扣扣在一起。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] stable belt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] stable belt.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(rip)] the stable belt off [npc2.namePos] waist.]]>
-		</otherRough>
+		<self><![CDATA[
+		[npc.Name]解开[npc.her]大腰带。
+	]]></self>
+		<other><![CDATA[
+		[npc.Name]解开[npc2.namePos]大腰带。
+]]></other>
+		<otherRough><![CDATA[
+		[npc.Name]从[npc2.namePos]腰间扯下大腰带。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

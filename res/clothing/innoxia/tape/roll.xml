@@ -1,27 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>40</value>
-		<determiner><![CDATA[a roll of]]></determiner>
-		<name><![CDATA[electrical tape]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[electrical tapes]]></namePlural>
+		<determiner><![CDATA[一卷]]></determiner>
+		<name><![CDATA[电工胶带]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[电工胶带]]></namePlural>
 		<description><![CDATA[
-			This shiny tape is of the sort that's typically used by electricians. Although it holds enough adhesive to stick to most surfaces, it isn't particularly strong, and could comfortably be stuck to skin, fur, or hair without fear of a painful removal.
+			这种有光泽的胶带是电工常用的那种。虽然它的粘性足以粘附在大多数表面上，但并不特别牢固，可以舒适地贴在皮肤、毛发或头发上，不用担心撕下时会很痛。
 			#IF(thisItem.getSlotEquippedTo()!=null)
-				<i>This particular length of tape has been
+				<i>这段特定长度的胶带已经被
 				#IF(thisItem.getSlotEquippedTo()==IS_NIPPLE)
-					 stuck over [npc.namePos] [npc.nipples]!
+					贴在[npc.name]的[npc.nipples]上！
 				#ELSEIF(thisItem.getSlotEquippedTo()==IS_VAGINA)
-					 stuck over [npc.namePos] [npc.pussy]!
+					贴在[npc.name]的[npc.pussy]上！
 				#ELSEIF(thisItem.getSlotEquippedTo()==IS_ANUS)
-					 stuck over [npc.namePos] [npc.asshole]!
+					贴在[npc.name]的[npc.asshole]上！
 				#ELSEIF(thisItem.getSlotEquippedTo()==IS_MOUTH)
-					 stuck over [npc.namePos] mouth, preventing [npc.herHim] from speaking!
+					贴在[npc.name]的嘴上，让[npc.herHim]无法说话！
 				#ENDIF
 				</i>
-			#ENDIF
-		]]></description>
+			#ENDIF]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<equipSlots>
@@ -141,95 +139,95 @@
 	</coreAttributes>
 
 	<replacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off two long pieces of tape and [npc.verb(stick)] them over [npc.her] mouth.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off two long pieces of tape and [npc.verb(stick)] them over [npc2.namePos] mouth.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off two long pieces of tape and roughly [npc.verb(stick)] them over [npc2.namePos] mouth.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]撕下两长条胶带，将它们贴在了自己的嘴巴上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]撕下两长条胶带，将它们贴在了[npc2.namePos]的嘴巴上。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]撕下两长条胶带，粗暴地将它们贴在了[npc2.namePos]的嘴巴上。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="MOUTH" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(wince)] as [npc.she] [npc.verb(peel)] the tape off [npc.her] mouth.]]>
-		</self>
-		<other>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] as [npc.name] [npc.verb(peel)] the tape off [npc2.her] mouth.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] and [npc2.verb(let)] out a cry as [npc.name] roughly [npc.verb(rip)] the tape off [npc2.her] mouth.]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]揭下了自己嘴上的胶带，痛得龇牙咧嘴。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]揭下了[npc2.name]嘴上的胶带，[npc2.Name]痛得龇牙咧嘴。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.name]粗暴地撕掉了[npc2.name]嘴上的胶带，[npc2.Name]痛得龇牙咧嘴，发出了一声尖叫。
+		]]></otherRough>
 	</displacementText>
 
 	<replacementText slot="NIPPLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off pieces of tape and [npc.verb(join)] them together into tape crosses, before sticking them over [npc.her] [npc.nipples].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off pieces of tape and [npc.verb(join)] them together into tape crosses, before sticking them over [npc2.namePos] [npc2.nipples].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off pieces of tape and [npc.verb(join)] them together into tape crosses, before roughly sticking them over [npc2.namePos] [npc2.nipples].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]撕下几条胶带，将它们交叉着拼成十字形，然后把它们贴在了自己的[npc.nipples]上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]撕下几条胶带，将它们交叉着拼成十字形，然后把它们贴在了[npc2.namePos]的[npc2.nipples]上。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]撕下几条胶带，将它们交叉着拼成十字形，然后粗暴地把它们贴在了[npc2.namePos]的[npc2.nipples]上。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="NIPPLE" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(wince)] as [npc.she] [npc.verb(peel)] the tape crosses off [npc.her] [npc.nipples].]]>
-		</self>
-		<other>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] as [npc.name] [npc.verb(peel)] the tape crosses off [npc2.her] [npc2.nipples].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] and [npc2.verb(let)] out a cry as [npc.name] roughly [npc.verb(tear)] the tape crosses off [npc2.her] [npc2.nipples].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]揭下了自己[npc.nipples]上的十字胶带，痛得龇牙咧嘴。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]揭下了[npc2.name][npc2.nipples]上的十字胶带，[npc2.Name]痛得龇牙咧嘴。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.her][npc2.nipples]上的十字胶带撕下，[npc2.name]痛得痛得龇牙咧嘴，发出了一声尖叫。
+		]]></otherRough>
 	</displacementText>
 	
 	<replacementText slot="VAGINA" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a piece of tape and [npc.verb(stick)] it over [npc.her] [npc.pussy+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a piece of tape and [npc.verb(stick)] it over [npc2.namePos] [npc2.pussy+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a piece of tape and roughly [npc.verb(stick)] it over [npc2.namePos] [npc2.pussy+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]撕下一条胶带，将它贴在了自己[npc.pussy+]上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]撕下一条胶带，将它贴在了[npc2.namePos][npc2.pussy+]上。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]撕下一条胶带，粗暴地将它贴在了[npc2.namePos][npc2.pussy+]上。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="VAGINA" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(wince)] as [npc.she] [npc.verb(peel)] off the tape that was covering [npc.her] [npc.pussy+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] as [npc.name] [npc.verb(peel)] off the tape that was covering [npc2.namePos] [npc2.pussy+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] and [npc2.verb(let)] out a cry as [npc.name] roughly [npc.verb(tear)] off the tape that was covering [npc2.her] [npc2.pussy+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]揭下了自己[npc.pussy+]上的胶带，痛得龇牙咧嘴。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]揭下了[npc2.namePos][npc2.pussy+]上的胶带，[npc2.Name]痛得龇牙咧嘴。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos][npc2.pussy+]上的胶带撕下，[npc2.name]痛得龇牙咧嘴，发出了一声尖叫。
+		]]></otherRough>
 	</displacementText>
 	
 	<replacementText slot="ANUS" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a piece of tape and [npc.verb(stick)] it over [npc.her] [npc.asshole+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a piece of tape and [npc.verb(stick)] it over [npc2.namePos] [npc2.asshole+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] [npc.verb(tear)] off a piece of tape and roughly [npc.verb(stick)] it over [npc2.namePos] [npc2.asshole+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]撕下一条胶带，将它贴在了自己[npc.asshole+]上。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]撕下一条胶带，将它贴在了[npc2.namePos][npc2.asshole+]上。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]撕下一条胶带，粗暴地将它贴在了[npc2.namePos][npc2.asshole+]上。
+		]]></otherRough>
 	</replacementText>
 	<displacementText slot="ANUS" type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(wince)] as [npc.she] [npc.verb(peel)] off the tape that was covering [npc.her] [npc.asshole+].]]>
-		</self>
-		<other>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] as [npc.name] [npc.verb(peel)] off the tape that was covering [npc2.namePos] [npc2.asshole+].]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc2.Name] [npc2.verb(wince)] and [npc2.verb(let)] out a cry as [npc.name] roughly [npc.verb(tear)] off the tape that was covering [npc2.her] [npc2.asshole+].]]>
-		</otherRough>
+		<self><![CDATA[
+			[npc.Name]揭下了自己[npc.asshole+]上的胶带，痛得龇牙咧嘴。
+		]]></self>
+		<other><![CDATA[
+			[npc.Name]揭下了[npc2.namePos][npc2.asshole+]上的胶带，[npc2.Name]痛得龇牙咧嘴。
+		]]></other>
+		<otherRough><![CDATA[
+			[npc.Name]粗暴地将[npc2.namePos][npc2.asshole+]上的胶带撕下，[npc2.name]痛得龇牙咧嘴，发出了一声尖叫。
+		]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -9,37 +9,37 @@ import com.lilithsthrone.rendering.SVGImages;
  */
 public enum DiceFace {
 	
-	ONE(1, "one", "&#9856;") {
+	ONE(1, "一", "⚀") {
 		@Override
 		public String getSVGString() {
 			return SVGImages.SVG_IMAGE_PROVIDER.getDice1();
 		}
 	},
-	TWO(2, "two", "&#9857;") {
+	TWO(2, "二", "⚁") {
 		@Override
 		public String getSVGString() {
 			return SVGImages.SVG_IMAGE_PROVIDER.getDice2();
 		}
 	},
-	THREE(3, "three", "&#9858;") {
+	THREE(3, "三", "⚂") {
 		@Override
 		public String getSVGString() {
 			return SVGImages.SVG_IMAGE_PROVIDER.getDice3();
 		}
 	},
-	FOUR(4, "four", "&#9859;") {
+	FOUR(4, "四", "⚃") {
 		@Override
 		public String getSVGString() {
 			return SVGImages.SVG_IMAGE_PROVIDER.getDice4();
 		}
 	},
-	FIVE(5, "five", "&#9860;") {
+	FIVE(5, "五", "⚄") {
 		@Override
 		public String getSVGString() {
 			return SVGImages.SVG_IMAGE_PROVIDER.getDice5();
 		}
 	},
-	SIX(6, "six", "&#9861;") {
+	SIX(6, "六", "⚅") {
 		@Override
 		public String getSVGString() {
 			return SVGImages.SVG_IMAGE_PROVIDER.getDice6();

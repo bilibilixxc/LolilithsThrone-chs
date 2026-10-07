@@ -9,10 +9,10 @@ import com.lilithsthrone.utils.colours.PresetColour;
  * @author Innoxia
  */
 public enum AndrogynousIdentification {
-	FEMININE("feminine", PresetColour.FEMININE),
-	CLOTHING_FEMININE("clothing feminine", PresetColour.ANDROGYNOUS),
-	CLOTHING_MASCULINE("clothing masculine", PresetColour.ANDROGYNOUS),
-	MASCULINE("masculine", PresetColour.MASCULINE);
+	FEMININE("女性", PresetColour.FEMININE),
+	CLOTHING_FEMININE("衣着女性", PresetColour.ANDROGYNOUS),
+	CLOTHING_MASCULINE("衣着男性", PresetColour.ANDROGYNOUS),
+	MASCULINE("男性", PresetColour.MASCULINE);
 	
 	private String name;
 	private Colour colour;

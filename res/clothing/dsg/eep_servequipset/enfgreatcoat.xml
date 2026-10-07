@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small tag sewn into the side seam reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[侧缝上有个小标签印着“执法者官方分配，DSG织厂生产。”]]></authorTag>
 
 		<value>850</value> 
 
-		<determiner><![CDATA[an]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[Enforcer's greatcoat]]></name>
+		<name><![CDATA[执法者大衣]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[Enforcer's greatcoats]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[执法者大衣]]></namePlural> 
 
-		<description><![CDATA[A large overcoat commonly issued to Enforcers as a uniform item for inclement weather. Made from heavy wool, it protects the wearer from rain and cold.]]></description> 
+		<description><![CDATA[一种加长大衣，通常作为恶劣天气下的制服发给执法者。它由厚重的羊毛制成，可保护穿着者免受雨水和寒冷的侵袭。]]></description> 
 
 		<physicalResistance>1</physicalResistance> 
 
@@ -97,51 +96,40 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] [npc.her] arms through the greatcoat's sleeves and [npc.verb(button)] up the front.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] [npc2.verb(put)] [npc2.her] arms through the greatcoat's sleeves and [npc.verb(button)] up the front.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] arms through the greatcoat's sleeves and hastily [npc.verb(button)] up the front.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的手臂伸进大衣的袖子并扣上前面的扣子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]帮[npc2.name]将[npc2.her]的胳膊伸进大衣的袖子并扣好扣子。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]迫使[npc2.namePos]的手臂穿过大衣的袖子并匆忙的扣好扣子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc.her] greatcoat and [npc.verb(pull)] [npc.her] arms out of the sleeves.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] the front of [npc2.namePos] greatcoat and [npc.verb(help)] [npc2.her] [npc2.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on the front of [npc2.namePos] greatcoat and roughly [npc.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了[npc.her]大衣的扣子并将[npc.her]的胳膊从袖子里拽了出来。]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]大衣前部的扣子，帮[npc2.her]将[npc2.her]的手臂从袖子中抽出。]]></other>
+		<otherRough><![CDATA[
+[npc2.Name]拽开[npc2.namePos]大衣正面的纽扣，粗暴地将[npc2.her]的手臂从袖子中拽出。]]></otherRough>
 	</displacementText>
 
 	<replacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc.namePos] greatcoat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc2.namePos] greatcoat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(button)] up the front of [npc2.namePos] greatcoat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]扣上[npc.namePos]大衣正面的扣子。]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]前面的扣子扣了起来。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙扣上[npc2.namePos]大衣的正面的扣子。]]></otherRough>
 	</replacementText>
 
 	<displacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] greatcoat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.namePos] greatcoat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on [npc2.namePos] greatcoat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的大衣。]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的大衣。]]></other>
+		<otherRough><![CDATA[
+[npc.Name]崩开了[npc2.namePos]大衣上的扣子。]]></otherRough>
 	</displacementText>
 	
 </clothing>

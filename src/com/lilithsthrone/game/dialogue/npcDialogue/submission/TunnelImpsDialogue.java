@@ -105,7 +105,7 @@ public class TunnelImpsDialogue {
 		return idSB.toString();
 	}
 	
-	public static final DialogueNode IMP_ATTACK = new DialogueNode("Imp Gang", "A group of imps attack!", true) {
+	public static final DialogueNode IMP_ATTACK = new DialogueNode("小恶魔团伙", "一群小恶魔发动攻击！", true) {
 		
 		@Override
 		public String getContent() {
@@ -116,14 +116,14 @@ public class TunnelImpsDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(!isCompanionDialogue()) {
 				if (index == 1) {
-					return new ResponseCombat("Fight", "Stand up for yourself and fight this group of imps!", getImpLeader(), getImpGroup(), null);
+					return new ResponseCombat("战斗", "挺身而出，与这群小恶魔一决胜负！", getImpLeader(), getImpGroup(), null);
 					
 				} else if (index == 2) {
-					return new Response("Offer money", "These imps are not interested in your money! You'll have to either fight or surrender yourself to them...", null);
+					return new Response("献上财物", "这些小恶魔对你的钱没兴趣，你只能选择战或是降……", null);
 					
 				} else if (index == 3) {
-					return new Response("Offer body",
-							"Offer your body to the imps so that you can avoid a violent confrontation.",
+					return new Response("献出身体",
+							"向小恶魔献出你的身体，避免不必要的伤害。",
 							IMP_ATTACK_OFFER_BODY,
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 							Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -142,14 +142,14 @@ public class TunnelImpsDialogue {
 				
 			} else {
 				if (index == 1) {
-					return new ResponseCombat("Fight", UtilText.parse(getMainCompanion(), "Stand up for yourself and, with the help of [npc.name], fight the imps!"), getImpLeader(), getImpGroup(), null);
+					return new ResponseCombat("战斗", UtilText.parse(getMainCompanion(), "挺身而出，在[npc.name]的帮助下与小恶魔战斗！"), getImpLeader(), getImpGroup(), null);
 					
 				} else if (index == 2) {
-					return new Response("Offer money", "These imps are not interested in your money! You'll have to either fight or surrender yourself to them...", null);
+					return new Response("献上财物", "这些小恶魔对你的钱没兴趣，你只能选择战或是降……", null);
 					
 				} else if (index == 3) {
-					return new Response("Offer body (solo)",
-							UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand aside as you offer your body to the imps in order to avoid a violent confrontation."),
+					return new Response("献出自己的身体",
+							UtilText.parse(getMainCompanion(), "你决定把身体献给小恶魔，让[npc.name]靠边站，不要被波及到。"),
 							IMP_ATTACK_OFFER_BODY,
 							Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 							Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -166,13 +166,13 @@ public class TunnelImpsDialogue {
 					GameCharacter companion = getMainCompanion();
 					
 					if(!companion.isAttractedTo(getImpLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(companion, "Offer threesome"),
-								UtilText.parse(companion, "You can tell that [npc.name] isn't at all interested in having sex with the imps, and you can't force [npc.herHim] to do it..."),
+						return new Response(UtilText.parse(companion, "三人行"),
+								UtilText.parse(companion, "很明显，[npc.name]一点儿也不想把自己交给小恶魔，你也不能强迫[npc.herHim]这样做……"),
 								null);
 						
 					} else {
-						return new Response("Offer threesome",
-								UtilText.parse(companion, "Offer the imps the opportunity to have sex with both you and [npc.name] in order to avoid a violent confrontation."),
+						return new Response("三人行",
+								UtilText.parse(companion, "主动建议小恶魔跟你和[npc.name]做爱，来避免暴力冲突。"),
 								IMP_ATTACK_OFFER_THREESOME,
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 								Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -190,13 +190,13 @@ public class TunnelImpsDialogue {
 					GameCharacter companion = getMainCompanion();
 
 					if(!companion.isAttractedTo(getImpLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-						return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(companion, "You can tell that [npc.name] isn't at all interested in having sex with the imps, and you can't force [npc.herHim] to do it..."),
+						return new Response(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(companion, "很明显，[npc.name]一点儿也不想把自己交给小恶魔，你也不能强迫[npc.herHim]这样做……"),
 								null);
 						
 					} else {
-						return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-								UtilText.parse(companion, "Tell the imps that they can use [npc.namePos] body in order to avoid a violent confrontation."),
+						return new Response(UtilText.parse(companion, "献上[npc.name]"),
+								UtilText.parse(companion, "告诉这些小恶魔他们可以随时使用[npc.namePos]的身体，来避免暴力冲突。"),
 								IMP_ATTACK_OFFER_COMPANION) {
 							@Override
 							public void effects() {
@@ -219,7 +219,7 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode IMP_ATTACK_OFFER_BODY = new DialogueNode("Imp Gang", "", true) {
+	public static final DialogueNode IMP_ATTACK_OFFER_BODY = new DialogueNode("小恶魔团伙", "", true) {
 
 		public void applyPreParsingEffects() {
 			if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
@@ -242,12 +242,12 @@ public class TunnelImpsDialogue {
 						return Response.getDisallowedSpittingResponse();
 					}
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-						return new Response("Spit",
-								"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-									+"</b> fetish, you love being transformed so much that you can't bring yourself to spit out the transformative liquid!",
+						return new Response("吐出",
+								"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+									+"</b>的性癖，你乐于被转化，所以无法把转化液体吐出来！",
 								null);
 					} else {
-						return new Response("Spit", "Spit out the potion.", AFTER_COMBAT_TRANSFORMATION_SOLO) {
+						return new Response("吐出", "吐掉药水。", AFTER_COMBAT_TRANSFORMATION_SOLO) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("encounters/submission/impAttack"+getImpEncounterId(), "COMBAT_DEFEAT_TF_REFUSED", getAllCharacters())); // Re-use TF refuse dialogue
@@ -259,10 +259,10 @@ public class TunnelImpsDialogue {
 					ArrayList<AbstractFetish> applicableFetishes = Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING);
 					CorruptionLevel applicableCorruptionLevel = Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel();
 
-					return new Response("Swallow",
+					return new Response("吞咽",
 							(Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE || Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE_HEAVY)
-								?"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina, as well as becoming feminine and growing breasts..."
-								:"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina...",
+								?"咽下这种药水，如果小恶魔们的话可信，那么它会让喝下这种药水的人长出阴茎和阴道，并变得女性化并长出乳房……"
+								:"咽下药水，如果小恶魔们的话可信，它会让喝下药水的人同时长出阴茎和阴道……",
 							AFTER_COMBAT_TRANSFORMATION_SOLO,
 							applicableFetishes,
 							applicableCorruptionLevel,
@@ -295,7 +295,7 @@ public class TunnelImpsDialogue {
 		}
 	};
 
-	public static final DialogueNode IMP_ATTACK_OFFER_COMPANION = new DialogueNode("Imp Gang", "", true) {
+	public static final DialogueNode IMP_ATTACK_OFFER_COMPANION = new DialogueNode("小恶魔团伙", "", true) {
 
 		public void applyPreParsingEffects() {
 			if(getMainCompanion().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
@@ -317,10 +317,10 @@ public class TunnelImpsDialogue {
 					if(Main.game.isSpittingDisabled()) {
 						return Response.getDisallowedSpittingResponse();
 					}
-					return new Response("Order spit",
-							UtilText.parse(getMainCompanion(), "Tell [npc.name] to spit out the potion the imps are trying to force [npc.herHim] to drink."
+					return new Response("要求吐出",
+							UtilText.parse(getMainCompanion(), "告诉[npc.name]吐出小恶魔试图强迫[npc.herHim]喝下的药水。"
 									+ (getMainCompanion().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)
-											?" (However, as [npc.name] has the "+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+" fetish, [npc.sheIsFull] unlikely to listen to you!)"
+											?" (然而，因为[npc.name]拥有"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+"的性癖，[npc.sheIsFull]并不愿意听你的。)"
 											:"")),
 							AFTER_OFFER_COMPANION_TRANSFORMATION) {
 						@Override
@@ -348,13 +348,13 @@ public class TunnelImpsDialogue {
 					ArrayList<AbstractFetish> applicableFetishes = Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING);
 					CorruptionLevel applicableCorruptionLevel = Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel();
 	
-						return new Response("Order swallow",
+						return new Response("要求吞咽",
 								UtilText.parse(getMainCompanion(),
 									((Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE || Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE_HEAVY)
-										?"Tell [npc.name] to swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina, as well as becoming feminine and growing breasts."
-										:"Tell [npc.name] to swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina.")
+										?"让[npc.Name]咽下药水，如果小恶魔们的话可信，那么药水会让喝下药水的人长出阴茎和阴道，并变得女性化并长出乳房。"
+										:"让[npc.Name]咽下药水，如果小恶魔们的话可信，那么药水会让喝下药水的人同时长出阴茎和阴道。")
 									+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isNegative()
-											?" (However, as [npc.she] dislikes being transformed, [npc.sheIsFull] unlikely to listen to you!)"
+											?" (然而，由于讨厌被转化，[npc.sheIsFull]并不愿意听从你！)"
 											:"")),
 								AFTER_OFFER_COMPANION_TRANSFORMATION,
 								applicableFetishes,
@@ -393,7 +393,7 @@ public class TunnelImpsDialogue {
 	};
 	
 	
-	public static final DialogueNode IMP_ATTACK_OFFER_THREESOME = new DialogueNode("Imp Gang", "", true) {
+	public static final DialogueNode IMP_ATTACK_OFFER_THREESOME = new DialogueNode("小恶魔团伙", "", true) {
 
 		public void applyPreParsingEffects() {
 			if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
@@ -421,14 +421,14 @@ public class TunnelImpsDialogue {
 						return Response.getDisallowedSpittingResponse();
 					}
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-						return new Response("Spit",
-									"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-										+"</b> fetish, you love being transformed so much that you can't bring yourself to spit out the transformative liquid!",
+						return new Response("吐出",
+									"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+										+"</b>的性癖，你乐于被转化，所以无法把转化液体吐出来！",
 								null);
 					} else {
-						return new Response("Spit", 
+						return new Response("吐出", 
 								UtilText.parse(getMainCompanion(),
-										"Spit out the potion. ([npc.Name] will decide whether to spit or swallow [npc.her] own potion [npc.herself].)"), AFTER_COMBAT_TRANSFORMATION) {
+										"吐出药水。([npc.Name]将决定自己是吐出还是吞下药剂。)"), AFTER_COMBAT_TRANSFORMATION) {
 							@Override
 							public void effects(){
 								if(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isPositive()) {
@@ -455,12 +455,12 @@ public class TunnelImpsDialogue {
 					ArrayList<AbstractFetish> applicableFetishes = Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING);
 					CorruptionLevel applicableCorruptionLevel = Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel();
 					
-					return new Response("Swallow",
+					return new Response("吞咽",
 							UtilText.parse(getMainCompanion(),
 								((Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE || Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE_HEAVY)
-									?"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina, as well as becoming feminine and growing breasts..."
-									:"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina...")
-								+ " ([npc.Name] will decide whether to spit or swallow [npc.her] own potion [npc.herself].)"),
+									?"咽下这种药水，如果小恶魔们的话可信，那么它会让喝下这种药水的人长出阴茎和阴道，并变得女性化并长出乳房……"
+									:"咽下药水，如果小恶魔们的话可信，那么它会让喝下药水的人长出阴茎和阴道……")
+								+ "([npc.Name]将决定[npc.herself]是吐出还是吞下药剂。)"),
 							AFTER_COMBAT_TRANSFORMATION,
 							applicableFetishes,
 							applicableCorruptionLevel,
@@ -505,20 +505,20 @@ public class TunnelImpsDialogue {
 					
 				} else if (index == 6) {
 					if(Main.game.isSpittingDisabled()) {
-						return Response.getDisallowedSpittingResponse("Spit (both)");
+						return Response.getDisallowedSpittingResponse("吐出(双人)");
 					}
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-						return new Response("Spit (both)",
+						return new Response("吐出(双人)",
 								UtilText.parse(getMainCompanion(),
-									"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-										+"</b> fetish, you love being transformed so much that you can't bring yourself to spit out the transformative liquid, or to tell [npc.name] to do the same!"),
+									"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+										+"</b>性癖，你太喜欢被转化了，以至于无法吐出改造液，也无法让[npc.name]也这么做！"),
 								null);
 						
 					} else {
-						return new Response("Spit (both)",
-								UtilText.parse(getMainCompanion(), "Spit out the potion, and tell [npc.name] to do the same."
+						return new Response("吐出(双人)",
+								UtilText.parse(getMainCompanion(), "吐出药水，并让[npc.Name]也这样做。"
 										+ (getMainCompanion().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)
-												?" (However, as [npc.name] has the "+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+" fetish, [npc.sheIsFull] unlikely to listen to you!)"
+												?" (然而，因为[npc.name]拥有"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+"的性癖，[npc.sheIsFull]并不愿意听你的。)"
 												:"")),
 								AFTER_COMBAT_TRANSFORMATION) {
 							@Override
@@ -549,14 +549,14 @@ public class TunnelImpsDialogue {
 					ArrayList<AbstractFetish> applicableFetishes = Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING);
 					CorruptionLevel applicableCorruptionLevel = Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel();
 
-						return new Response("Swallow (both)",
+						return new Response("吞咽(双人)",
 								UtilText.parse(getMainCompanion(),
 									((Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE || Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE_HEAVY)
-										?"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina, as well as becoming feminine and growing breasts."
-										:"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina.")
+										?"咽下这种药水，如果小恶魔们的话可信，那么它能让喝下这种药水的人长出阴茎和阴道，还能变得女性化并长出乳房。"
+										:"咽下药水，如果小恶魔们的话可信，它会让喝下药水的人同时长出阴茎和阴道……")
 									+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isNegative()
-											?"Once swallowed, tell [npc.name] to do the same. (However, as [npc.she] dislikes being transformed, [npc.sheIsFull] unlikely to listen to you!)"
-											:" Once swallowed, tell [npc.name] to do the same...")),
+											?"咽下后，告诉[npc.Name]也这样做。(不过，由于[npc.she]不喜欢被转化，所以[npc.sheIsFull]不太可能听你的！)"
+											:"咽下后，告诉[npc.Name]也这样做……")),
 								AFTER_COMBAT_TRANSFORMATION,
 								applicableFetishes,
 								applicableCorruptionLevel,
@@ -610,12 +610,12 @@ public class TunnelImpsDialogue {
 						return Response.getDisallowedSpittingResponse();
 					};
 					if(Main.game.getPlayer().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)) {
-						return new Response("Spit",
-								"Due to your <b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
-									+"</b> fetish, you love being transformed so much that you can't bring yourself to spit out the transformative liquid!",
+						return new Response("吐出",
+								"由于你<b style='color:"+PresetColour.FETISH.toWebHexString()+";'>"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(Main.game.getPlayer())
+									+"</b>的性癖，你乐于被转化，所以无法把转化液体吐出来！",
 								null);
 					} else {
-						return new Response("Spit", "Spit out the potion.", AFTER_COMBAT_TRANSFORMATION) {
+						return new Response("吐出", "吐出药水。", AFTER_COMBAT_TRANSFORMATION) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("encounters/submission/impAttack"+getImpEncounterId(), "COMBAT_DEFEAT_TF_REFUSED", getAllCharacters()));
@@ -627,10 +627,10 @@ public class TunnelImpsDialogue {
 					ArrayList<AbstractFetish> applicableFetishes = Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING);
 					CorruptionLevel applicableCorruptionLevel = Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel();
 					
-					return new Response("Swallow",
+					return new Response("吞咽",
 							(Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE || Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE_HEAVY)
-								?"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina, as well as becoming feminine and growing breasts..."
-								:"Swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina...",
+								?"咽下这种药水，如果小恶魔们的话可信，那么它会让喝下这种药水的人长出阴茎和阴道，并变得女性化并长出乳房……"
+								:"咽下药水，如果小恶魔们的话可信，它会让喝下药水的人同时长出阴茎和阴道……",
 							AFTER_COMBAT_TRANSFORMATION,
 							applicableFetishes,
 							applicableCorruptionLevel,
@@ -654,34 +654,34 @@ public class TunnelImpsDialogue {
 					};
 					
 				} else if (index == 6) {
-					return new Response("Swallow (both)",
-							UtilText.parse(getMainCompanion(), "As the imps are unable to access [npc.namePos] mouth, they are not attempting to force [npc.herHim] to drink their transformative potion."),
+					return new Response("吞咽(双人)",
+							UtilText.parse(getMainCompanion(), "由于小恶魔无法把药水灌进[npc.namePos]的嘴，所以他们并没有试图强迫[npc.herHim]喝下他们的转化药水。"),
 							null);
 					
 				}  else if (index == 7) {
 					if(Main.game.isSpittingDisabled()) {
-						return Response.getDisallowedSpittingResponse("Spit (both)");
+						return Response.getDisallowedSpittingResponse("吐出(双人)");
 					}
-					return new Response("Spit (both)",
-							UtilText.parse(getMainCompanion(), "As the imps are unable to access [npc.namePos] mouth, they are not attempting to force [npc.herHim] to drink their transformative potion."),
+					return new Response("吐出(双人)",
+							UtilText.parse(getMainCompanion(), "由于小恶魔无法把药水灌进[npc.namePos]的嘴，所以他们并没有试图强迫[npc.herHim]喝下他们的转化药水。"),
 							null);
 				}
 				
 			} else {
 				if (index == 1) {
-					return new Response("Spit", UtilText.parse(getMainCompanion(),"As the imps cannot gain access to your mouth, they are ignoring you and focusing on transforming [npc.name]!"), null);
+					return new Response("吐掉", UtilText.parse(getMainCompanion(),"由于小恶魔们无法把药水倒进你的嘴巴，所以它们没有继续理会你，而是专注于转化[npc.Name]！"), null);
 					
 				} else if (index == 2) {
-					return new Response("Swallow", UtilText.parse(getMainCompanion(),"As the imps cannot gain access to your mouth, they are ignoring you and focusing on transforming [npc.name]!"), null);
+					return new Response("咽下", UtilText.parse(getMainCompanion(),"由于小恶魔们无法把药水倒进你的嘴巴，所以它们没有继续理会你，而是专注于转化[npc.Name]！"), null);
 					
 				} else if (index == 6) {
 					if(Main.game.isSpittingDisabled()) {
-						return Response.getDisallowedSpittingResponse("Order spit");
+						return Response.getDisallowedSpittingResponse("命令吐出");
 					}
-					return new Response("Order spit",
-							UtilText.parse(getMainCompanion(), "Tell [npc.name] to spit out the potion the imps are trying to force [npc.herHim] to drink."
+					return new Response("要求吐出",
+							UtilText.parse(getMainCompanion(), "告诉[npc.name]吐出小恶魔试图强迫[npc.herHim]喝下的药水。"
 									+ (getMainCompanion().hasFetish(Fetish.FETISH_TRANSFORMATION_RECEIVING)
-											?" (However, as [npc.name] has the "+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+" fetish, [npc.sheIsFull] unlikely to listen to you!)"
+											?" (然而，因为[npc.name]拥有"+Fetish.FETISH_TRANSFORMATION_RECEIVING.getName(getMainCompanion())+"的性癖，[npc.sheIsFull]并不愿意听你的。)"
 											:"")),
 							AFTER_COMBAT_TRANSFORMATION) {
 						@Override
@@ -708,13 +708,13 @@ public class TunnelImpsDialogue {
 					ArrayList<AbstractFetish> applicableFetishes = Util.newArrayListOfValues(Fetish.FETISH_TRANSFORMATION_RECEIVING);
 					CorruptionLevel applicableCorruptionLevel = Fetish.FETISH_TRANSFORMATION_RECEIVING.getAssociatedCorruptionLevel();
 	
-						return new Response("Order swallow",
+						return new Response("要求吞咽",
 								UtilText.parse(getMainCompanion(),
 									((Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE || Main.getProperties().getForcedTFTendency()==ForcedTFTendency.FEMININE_HEAVY)
-										?"Tell [npc.name] to swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina, as well as becoming feminine and growing breasts."
-										:"Tell [npc.name] to swallow the potion, which, if the imps are to be believed, causes the drinker to grow both a penis and vagina.")
+										?"让[npc.Name]咽下药水，如果小恶魔们的话可信，那么药水会让喝下药水的人长出阴茎和阴道，并变得女性化并长出乳房。"
+										:"让[npc.Name]咽下药水，如果小恶魔们的话可信，那么药水会让喝下药水的人同时长出阴茎和阴道。")
 									+(getMainCompanion().getFetishDesire(Fetish.FETISH_TRANSFORMATION_RECEIVING).isNegative()
-											?" (However, as [npc.she] dislikes being transformed, [npc.sheIsFull] unlikely to listen to you!)"
+											?" (然而，由于讨厌被转化，[npc.sheIsFull]并不愿意听从你！)"
 											:"")),
 								AFTER_COMBAT_TRANSFORMATION,
 								applicableFetishes,
@@ -749,11 +749,11 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 
 		@Override
 		public String getDescription() {
-			return "You have defeated the imps!";
+			return "你已击败这些小恶魔！";
 		}
 
 		@Override
@@ -774,13 +774,13 @@ public class TunnelImpsDialogue {
 		public String getResponseTabTitle(int index) {
 			if(!getImpGroup().isEmpty()) {
 				if(index==0) {
-					return "Interactions";
+					return "互动";
 					
 				} else if(index==1) {
-					return "Inventories";
+					return "物品栏";
 					
 				} else if(index==2) {
-					return "Transformations";
+					return "转化";
 					
 				}
 			}
@@ -791,14 +791,14 @@ public class TunnelImpsDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(getImpGroup().isEmpty()) {
 				if(index==1) {
-					return new Response("Continue", "As you've enslaved all of the imps, there's nothing left to do but continue on your way...", Main.game.getDefaultDialogue(false));
+					return new Response("继续", "既然你已经奴役了所有的小恶魔，那就没什么可做的了，继续上路吧……", Main.game.getDefaultDialogue(false));
 				}
 				return null;
 			}
 			if(!isCompanionDialogue()) {
 				if(responseTab == 0) {
 					if (index == 1) {
-						return new Response("Continue", "Leave the imps and continue on your way...", Main.game.getDefaultDialogue(false)) {
+						return new Response("继续", "离开小恶魔，继续你的旅程……", Main.game.getDefaultDialogue(false)) {
 							@Override
 							public void effects() {
 								Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("encounters/submission/impAttackCombatVictory"+(isCompanionDialogue()?"Companions":""), "IMP_ATTACK_COMBAT_VICTORY_CONTINUE", getImpGroup()));
@@ -807,8 +807,8 @@ public class TunnelImpsDialogue {
 						};
 						
 					} else if (index == 2) {
-						return new ResponseSex("Sex",
-								"Well, they <i>are</i> asking for it!",
+						return new ResponseSex("做爱",
+								"当然，这些家伙<i>就是</i>想要这个！",
 								true,
 								false,
 								Main.game.getPlayer().getParty(),
@@ -818,8 +818,8 @@ public class TunnelImpsDialogue {
 								AFTER_SEX_VICTORY, UtilText.parseFromXMLFile("encounters/submission/impAttackCombatVictory"+(isCompanionDialogue()?"Companions":""), "IMP_ATTACK_COMBAT_VICTORY_SEX", getImpGroup()));
 						
 					} else if (index == 3) {
-						return new ResponseSex("Gentle Sex",
-								"Well, they <i>are</i> asking for it!",
+						return new ResponseSex("做爱(温柔)",
+								"当然，这些家伙<i>就是</i>想要这个！",
 								true,
 								false,
 								Main.game.getPlayer().getParty(),
@@ -830,8 +830,8 @@ public class TunnelImpsDialogue {
 								UtilText.parseFromXMLFile("encounters/submission/impAttackCombatVictory"+(isCompanionDialogue()?"Companions":""), "IMP_ATTACK_COMBAT_VICTORY_SEX_GENTLE", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_GENTLE);
 						
 					} else if (index == 4) {
-						return new ResponseSex("Rough Sex",
-								"Well, they <i>are</i> asking for it!",
+						return new ResponseSex("做爱(粗暴)",
+								"当然，这些家伙<i>就是</i>想要这个！",
 								true,
 								false,
 								Main.game.getPlayer().getParty(),
@@ -842,8 +842,8 @@ public class TunnelImpsDialogue {
 								UtilText.parseFromXMLFile("encounters/submission/impAttackCombatVictory"+(isCompanionDialogue()?"Companions":""), "IMP_ATTACK_COMBAT_VICTORY_SEX_ROUGH", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_ROUGH);
 						
 					} else if (index == 5) {
-						return new ResponseSex("Submit",
-								"You're not really sure what to do now... Perhaps it would be best to let the imps choose what to do next...",
+						return new ResponseSex("顺从",
+								"你不太确定现在该做什么……也许最好让小恶魔来决定接下来做什么……",
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 								null,
 								Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -865,7 +865,7 @@ public class TunnelImpsDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new ResponseEffectsOnly(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...")) {
+									UtilText.parse(imp, "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……")) {
 								@Override
 								public void effects() {
 									Main.mainController.openInventory(imp, InventoryInteraction.FULL_MANAGEMENT);
@@ -880,7 +880,7 @@ public class TunnelImpsDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new Response(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Take a very detailed look at what [npc.name] can transform [npc.herself] into..."),
+									UtilText.parse(imp, "仔细观察[npc.name]会将自己转化成什么样……"),
 									BodyChanging.BODY_CHANGING_CORE){
 								@Override
 								public void effects() {
@@ -897,7 +897,7 @@ public class TunnelImpsDialogue {
 			} else {
 				if(responseTab == 0) {
 					if (index == 1) {
-						return new Response("Continue", "Leave the imps and continue on your way...", Main.game.getDefaultDialogue(false)) {
+						return new Response("继续", "离开小恶魔，继续你的旅程……", Main.game.getDefaultDialogue(false)) {
 							@Override
 							public void effects() {
 								banishImpGroup();
@@ -905,8 +905,8 @@ public class TunnelImpsDialogue {
 						};
 						
 					} else if (index == 2) {
-						return new ResponseSex("Solo sex",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the imps."),
+						return new ResponseSex("单人做爱",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你和小恶魔做爱。"),
 								true,
 								false,
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -916,8 +916,8 @@ public class TunnelImpsDialogue {
 								AFTER_SEX_VICTORY, UtilText.parseFromXMLFile("encounters/submission/impAttackCombatVictory"+(isCompanionDialogue()?"Companions":""), "IMP_ATTACK_COMBAT_VICTORY_SEX", getImpGroup()));
 						
 					} else if (index == 3) {
-						return new ResponseSex("Solo sex (Gentle)",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the imps."),
+						return new ResponseSex("单人做爱(温柔)",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你和小恶魔做爱。"),
 								true,
 								false,
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -928,8 +928,8 @@ public class TunnelImpsDialogue {
 								UtilText.parseFromXMLFile("encounters/submission/impAttackCombatVictory"+(isCompanionDialogue()?"Companions":""), "IMP_ATTACK_COMBAT_VICTORY_SEX_GENTLE", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_GENTLE);
 						
 					} else if (index == 4) {
-						return new ResponseSex("Solo sex (Rough)",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you have sex with the imps."),
+						return new ResponseSex("单人做爱(粗暴)",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你和小恶魔做爱。"),
 								true,
 								false,
 								Util.newArrayListOfValues(Main.game.getPlayer()),
@@ -940,8 +940,8 @@ public class TunnelImpsDialogue {
 								UtilText.parseFromXMLFile("encounters/submission/impAttackCombatVictory"+(isCompanionDialogue()?"Companions":""), "IMP_ATTACK_COMBAT_VICTORY_SEX_ROUGH", getImpGroup()), ResponseTag.START_PACE_PLAYER_DOM_ROUGH);
 						
 					} else if (index == 5) {
-						return new ResponseSex("Solo submission",
-								UtilText.parse(getMainCompanion(), "Tell [npc.name] to stand to one side and watch as you submit to the imps, allowing them to have dominant sex with you."),
+						return new ResponseSex("单人屈从",
+								UtilText.parse(getMainCompanion(), "让[npc.Name]站在一边，看着你臣服于小恶魔，让他们与你发生支配型性爱。"),
 								Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE),
 								null,
 								Fetish.FETISH_SUBMISSIVE.getAssociatedCorruptionLevel(),
@@ -960,12 +960,12 @@ public class TunnelImpsDialogue {
 						GameCharacter companion = getMainCompanion();
 
 						if(!companion.isAttractedTo(getImpLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response("Group sex",
-									UtilText.parse(companion, "[npc.Name] is not interested in having sex with the imps, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+							return new Response("群交",
+									UtilText.parse(companion, "[npc.Name]半点也不想同小恶魔做爱，而且[npc.sheIs]不是你的奴隶，所以你也无法强迫[npc.herHim]……"), null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Group sex"),
-									UtilText.parse(companion, "Have dominant sex with the imps, and get [npc.name] to join in with the fun."),
+							return new ResponseSex(UtilText.parse(companion, "群交"),
+									UtilText.parse(companion, "与小恶魔进行支配型性爱，并让[npc.Name]也加入其中找找乐子。"),
 									true,
 									false,
 									Main.game.getPlayer().getParty(),
@@ -979,12 +979,12 @@ public class TunnelImpsDialogue {
 						GameCharacter companion = getMainCompanion();
 
 						if(!companion.isAttractedTo(getImpLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response("Group submission",
-									UtilText.parse(companion, "[npc.Name] is not interested in having sex with the imps, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+							return new Response("群体屈从",
+									UtilText.parse(companion, "[npc.Name]半点也不想同小恶魔做爱，而且[npc.sheIs]不是你的奴隶，所以你也无法强迫[npc.herHim]……"), null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Group submission"),
-									UtilText.parse(companion, "Get [npc.name] to join you in submitting to the imps, allowing them to have dominant sex with the two of you."),
+							return new ResponseSex(UtilText.parse(companion, "群体屈从"),
+									UtilText.parse(companion, "让[npc.name]和你一起臣服于小恶魔，让他们和你俩发生支配型性爱。"),
 									true,
 									false,
 									getImpGroup(),
@@ -998,12 +998,12 @@ public class TunnelImpsDialogue {
 						GameCharacter companion = getMainCompanion();
 
 						if(!companion.isAttractedTo(getImpLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response(UtilText.parse(companion, "Give to [npc.name]"),
-									UtilText.parse(companion, "[npc.Name] is not interested in having sex with the imps, and as [npc.sheIs] not a slave, you can't force [npc.herHim] to do so..."), null);
+							return new Response(UtilText.parse(companion, "给[npc.name]"),
+									UtilText.parse(companion, "[npc.Name]半点也不想同小恶魔做爱，而且[npc.sheIs]不是你的奴隶，所以你也无法强迫[npc.herHim]……"), null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Give to [npc.name]"),
-									UtilText.parse(companion, "Tell [npc.name] that [npc.she] can have some fun with the imps while you watch."),
+							return new ResponseSex(UtilText.parse(companion, "交给[npc.name]"),
+									UtilText.parse(companion, "告诉[npc.Name]让[npc.she]和小恶魔玩玩，你在旁边看着。"),
 									false,
 									false,
 									Util.newArrayListOfValues(getMainCompanion()),
@@ -1017,13 +1017,13 @@ public class TunnelImpsDialogue {
 						GameCharacter companion = getMainCompanion();
 						
 						if(!companion.isAttractedTo(getImpLeader()) && companion.isAbleToRefuseSexAsCompanion()) {
-							return new Response(UtilText.parse(companion, "Offer [npc.name]"),
-									UtilText.parse(companion, "You can tell that [npc.name] isn't at all interested in having sex with the imps, and you can't force [npc.herHim] to do so..."),
+							return new Response(UtilText.parse(companion, "献上[npc.name]"),
+									UtilText.parse(companion, "你看出[npc.name]一点也不想跟小恶魔做爱，你也没法逼[npc.herHim]去做……"),
 									null);
 							
 						} else {
-							return new ResponseSex(UtilText.parse(companion, "Offer [npc.name]"),
-									UtilText.parse(companion, "Hand [npc.name] over to the imps, and watch as they have sex with [npc.herHim]."),
+							return new ResponseSex(UtilText.parse(companion, "献上[npc.name]"),
+									UtilText.parse(companion, "将[npc.Name]交给小恶魔，然后看着他们与[npc.herHim]发生性关系。"),
 									true,
 									false,
 									getImpGroup(),
@@ -1049,7 +1049,7 @@ public class TunnelImpsDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new ResponseEffectsOnly(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Now that you've defeated [npc.name], there's nothing stopping you from helping yourself to [npc.her] clothing and items...")) {
+									UtilText.parse(imp, "现在你已经打败了[npc.name]，没什么能够阻止你向[npc.her]的衣服和道具伸出手……")) {
 								@Override
 								public void effects() {
 									Main.mainController.openInventory(imp, InventoryInteraction.FULL_MANAGEMENT);
@@ -1064,7 +1064,7 @@ public class TunnelImpsDialogue {
 						if(index==i) {
 							NPC imp = (NPC) getImpGroup().get(i-1);
 							return new Response(UtilText.parse(imp, "[npc.Name]"),
-									UtilText.parse(imp, "Take a very detailed look at what [npc.name] can transform [npc.herself] into..."),
+									UtilText.parse(imp, "仔细观察[npc.name]会将自己转化成什么样……"),
 									BodyChanging.BODY_CHANGING_CORE){
 								@Override
 								public void effects() {
@@ -1082,7 +1082,7 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("Defeat", "", true) {
+	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("落败", "", true) {
 		
 		public void applyPreParsingEffects() {
 			if(Main.game.getPlayer().isAbleToAccessCoverableArea(CoverableArea.MOUTH, true)) {
@@ -1099,7 +1099,7 @@ public class TunnelImpsDialogue {
 		
 		@Override
 		public String getDescription() {
-			return "You have been defeated by the imps!";
+			return "你已被小恶魔们击败！";
 		}
 
 		@Override
@@ -1118,7 +1118,7 @@ public class TunnelImpsDialogue {
 	};
 	
 
-	public static final DialogueNode AFTER_OFFER_COMPANION_TRANSFORMATION = new DialogueNode("Imp Gang", "", true) {
+	public static final DialogueNode AFTER_OFFER_COMPANION_TRANSFORMATION = new DialogueNode("小恶魔团伙", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1128,8 +1128,8 @@ public class TunnelImpsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Watch",
-						UtilText.parse(getMainCompanion(), "Watch the imps have sex with [npc.name]..."),
+				return new ResponseSex("旁观",
+						UtilText.parse(getMainCompanion(), "旁观小恶魔和[npc.name]做爱……"),
 						true,
 						false,
 						getImpGroup(),
@@ -1144,7 +1144,7 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_TRANSFORMATION_SOLO = new DialogueNode("Imp Gang", "", true) {
+	public static final DialogueNode AFTER_COMBAT_TRANSFORMATION_SOLO = new DialogueNode("小恶魔团伙", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1154,8 +1154,8 @@ public class TunnelImpsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Sex",
-						"Allow the gang of imps to move you into position...",
+				return new ResponseSex("做爱",
+						"让这群小恶魔跟你摆好姿势……",
 						false,
 						false,
 						getImpGroup(),
@@ -1166,8 +1166,8 @@ public class TunnelImpsDialogue {
 						UtilText.parseFromXMLFile("encounters/submission/impAttack"+getImpEncounterId(), "AFTER_COMBAT_DEFEAT_SEX", getAllCharacters()));
 				
 			} else if (index == 2) {
-				return new ResponseSex("Eager Sex",
-						"Eagerly allow yourself to be moved into position by the gang of imps...",
+				return new ResponseSex("做爱(渴求)",
+						"在这群小恶魔跟你摆好姿势的时候，表现得十分饥渴……",
 						false,
 						false,
 						getImpGroup(),
@@ -1179,8 +1179,8 @@ public class TunnelImpsDialogue {
 						ResponseTag.START_PACE_PLAYER_SUB_EAGER);
 				
 			} else if (index == 3 && Main.game.isNonConEnabled()) {
-				return new ResponseSex("Resist Sex",
-						"Try to resist as the gang of imps move you into position...",
+				return new ResponseSex("抵抗做爱",
+						"在这群小恶魔跟你摆好姿势的时候，奋力抵抗……",
 						false,
 						false,
 						getImpGroup(),
@@ -1196,7 +1196,7 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_TRANSFORMATION = new DialogueNode("Imp Gang", "", true) {
+	public static final DialogueNode AFTER_COMBAT_TRANSFORMATION = new DialogueNode("小恶魔团伙", "", true) {
 
 		@Override
 		public String getContent() {
@@ -1206,8 +1206,8 @@ public class TunnelImpsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseSex("Sex",
-						"Allow the gang of imps to move you into position...",
+				return new ResponseSex("做爱",
+						"让这群小恶魔跟你摆好姿势……",
 						false,
 						false,
 						getImpGroup(),
@@ -1217,8 +1217,8 @@ public class TunnelImpsDialogue {
 						AFTER_SEX_DEFEAT, UtilText.parseFromXMLFile("encounters/submission/impAttack"+getImpEncounterId(), "AFTER_COMBAT_DEFEAT_SEX", getAllCharacters()));
 				
 			} else if (index == 2) {
-				return new ResponseSex("Eager Sex",
-						"Eagerly allow yourself to be moved into position by the gang of imps...",
+				return new ResponseSex("做爱(渴求)",
+						"在这群小恶魔跟你摆好姿势的时候，表现得十分饥渴……",
 						false,
 						false,
 						getImpGroup(),
@@ -1229,8 +1229,8 @@ public class TunnelImpsDialogue {
 						UtilText.parseFromXMLFile("encounters/submission/impAttack"+getImpEncounterId(), "AFTER_COMBAT_DEFEAT_SEX_EAGER", getAllCharacters()), ResponseTag.START_PACE_PLAYER_SUB_EAGER);
 				
 			} else if (index == 3 && Main.game.isNonConEnabled()) {
-				return new ResponseSex("Resist Sex",
-						"Try to resist as the gang of imps move you into position...",
+				return new ResponseSex("抵抗做爱",
+						"在这群小恶魔跟你摆好姿势的时候，奋力抵抗……",
 						false,
 						false,
 						getImpGroup(),
@@ -1245,11 +1245,11 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("Step back", "", true) {
+	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("返回", "", true) {
 		
 		@Override
 		public String getDescription(){
-			return "Now that you've had your fun, you can step back and leave the imps to recover and disperse.";
+			return "你已经爽过了，于是退到一旁，让这群小恶魔恢复过来后，自行散去了。";
 		}
 
 		@Override
@@ -1269,7 +1269,7 @@ public class TunnelImpsDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if(responseTab==0) {
 				if (index == 1) {
-					return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false)) {
+					return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false)) {
 						@Override
 						public void effects() {
 							banishImpGroup();
@@ -1285,7 +1285,7 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("Collapse", "", true) {
+	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("瘫软", "", true) {
 		
 		@Override
 		public int getSecondsPassed() {
@@ -1294,7 +1294,7 @@ public class TunnelImpsDialogue {
 		
 		@Override
 		public String getDescription(){
-			return "You're completely worn out from [npc.namePos] dominant treatment, and need a while to recover.";
+			return "你在[npc.namePos]支配之下精疲力竭，你需要休息一会儿……";
 		}
 
 		@Override
@@ -1309,7 +1309,7 @@ public class TunnelImpsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false)) {
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						for(GameCharacter imp :getImpGroup()) {
@@ -1327,11 +1327,11 @@ public class TunnelImpsDialogue {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_WATCHING_COMPANION = new DialogueNode("Finished", "", true) {
+	public static final DialogueNode AFTER_SEX_WATCHING_COMPANION = new DialogueNode("完成", "", true) {
 		
 		@Override
 		public String getDescription(){
-			return UtilText.parse(getMainCompanion(), "The imps have finished with [npc.name]...");
+			return UtilText.parse(getMainCompanion(), "小恶魔和[npc.name]做够了……");
 		}
 
 		@Override
@@ -1342,7 +1342,7 @@ public class TunnelImpsDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Carry on your way.", Main.game.getDefaultDialogue(false)) {
+				return new Response("继续", "继续你的旅程。", Main.game.getDefaultDialogue(false)) {
 					@Override
 					public void effects() {
 						for(GameCharacter imp :getImpGroup()) {

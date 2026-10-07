@@ -32,7 +32,7 @@ public class RoomArthur {
 		return (int) (14 - (Main.game.getDayNumber() - Main.game.getDialogueFlags().getSavedLong("arthur_globe_day_start")));
 	}
 	
-	public static final DialogueNode ROOM_ARTHUR_INSTALLATION = new DialogueNode("Arthur's Room", "", true) {
+	public static final DialogueNode ROOM_ARTHUR_INSTALLATION = new DialogueNode("亚瑟的房间", "", true) {
 		@Override
 		public int getSecondsPassed() {
 			return 30*60;
@@ -44,7 +44,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Find Lyssieth", "If you ever want to find out what's going on, it looks like you'll have to agree to help.", ROOM_ARTHUR_INSTALLATION_AGREE_TO_CONVINCE_LYSSIETH){
+				return new Response("寻找莉西丝", "如果你想弄明白来龙去脉，最好还是同意帮忙。", ROOM_ARTHUR_INSTALLATION_AGREE_TO_CONVINCE_LYSSIETH){
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().setQuestProgress(QuestLine.MAIN, Quest.MAIN_2_A_INTO_THE_DEPTHS));
@@ -55,7 +55,7 @@ public class RoomArthur {
 		}
 	};
 	
-	public static final DialogueNode ROOM_ARTHUR_INSTALLATION_AGREE_TO_CONVINCE_LYSSIETH = new DialogueNode("Arthur's Room", "", true) {
+	public static final DialogueNode ROOM_ARTHUR_INSTALLATION_AGREE_TO_CONVINCE_LYSSIETH = new DialogueNode("亚瑟的房间", "", true) {
 		@Override
 		public String getContent() {
 			return UtilText.parseFromXMLFile("places/dominion/lilayasHome/arthursRoom", "ROOM_ARTHUR_INSTALLATION_AGREE_TO_CONVINCE_LYSSIETH");
@@ -63,7 +63,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Allow Arthur to get on with his experiments.", ROOM_ARTHUR);
+				return new Response("继续", "让亚瑟继续实验。", ROOM_ARTHUR);
 			}
 			return null;
 		}
@@ -88,10 +88,10 @@ public class RoomArthur {
 				return LilayaHomeGeneric.getLilayasHouseFastTravelResponses(index);
 			}
 			if(index == 1) {
-				return new Response("Lyssieth", "Ask Arthur about Lilaya's mother, Lyssieth.", ROOM_ARTHUR_LYSSIETH);
+				return new Response("莉西丝", "询问亚瑟莉莱雅的母亲——莉西丝的事情。", ROOM_ARTHUR_LYSSIETH);
 				
 			} else if(index == 2) {
-				return new Response("Lilaya", "Ask Arthur about his past relationship with Lilaya.", ROOM_ARTHUR_LILAYA);
+				return new Response("莉莱雅", "询问亚瑟他之前跟莉莱雅是什么关系。", ROOM_ARTHUR_LILAYA);
 				
 			}
 			List<Response> additionalResponses = new ArrayList<>();
@@ -100,7 +100,7 @@ public class RoomArthur {
 			if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_HYPNO_WATCH)) {
 				if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_HYPNO_WATCH)) {
 					additionalResponses.add(
-							new Response("Experiments", "Ask Arthur about the sort of experiments he's currently running.", ROOM_ARTHUR_HYPNO_WATCH_START) {
+							new Response("实验", "询问亚瑟他正在进行什么实验。", ROOM_ARTHUR_HYPNO_WATCH_START) {
 								@Override
 								public void effects() {
 									Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().startQuest(QuestLine.SIDE_HYPNO_WATCH));
@@ -113,11 +113,11 @@ public class RoomArthur {
 					
 				} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_HYPNO_WATCH) == Quest.SIDE_HYPNO_WATCH_VICKY) {
 					if(!Main.game.getPlayer().hasItem(Main.game.getItemGen().generateItem(ItemType.ARTHURS_PACKAGE))) {
-						additionalResponses.add(new Response("Deliver package", "You need to fetch the package from Arcane Arts first!", null));
+						additionalResponses.add(new Response("递交包裹", "你需要先从“奥术艺术”拿到包裹！", null));
 						
 					} else {
 						additionalResponses.add(
-								new Response("Deliver package", "Hand over the package that you fetched from Arcane Arts.", ROOM_ARTHUR_HYPNO_WATCH_DELIVERY) {
+								new Response("递交包裹", "将你从“奥术艺术”拿到的包裹交出去。", ROOM_ARTHUR_HYPNO_WATCH_DELIVERY) {
 									@Override
 									public void effects() {
 										Main.game.getPlayer().removeItem(Main.game.getItemGen().generateItem(ItemType.ARTHURS_PACKAGE));
@@ -133,8 +133,8 @@ public class RoomArthur {
 			if(!Main.game.getPlayer().isQuestCompleted(QuestLine.SIDE_ARCANE_LIGHTNING)) {
 				if(!Main.game.getPlayer().hasQuest(QuestLine.SIDE_ARCANE_LIGHTNING) && Main.game.getPlayer().hasWeaponType(WeaponType.getWeaponTypeFromId("innoxia_lightningGlobe_lightning_globe"), true)) {
 					additionalResponses.add(
-							new Response("Lightning globe",
-									"Show Arthur the lightning globe which you found in the Enforcer warehouse and ask him if there's any way to unlock the secrets of its power.",
+							new Response("发出闪电的球体",
+									"将那个从执法者仓库找到的发出闪电的球体给亚瑟瞧瞧，问问他能不能解开其中力量的秘密。",
 									ROOM_ARTHUR_ARCANE_LIGHTNING_START) {
 								@Override
 								public void effects() {
@@ -148,28 +148,28 @@ public class RoomArthur {
 					
 				} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_ARCANE_LIGHTNING) == Quest.LIGHTNING_SPELL_1_PAYMENT) {
 					if(Main.game.getPlayer().getEssenceCount()<500) {
-						additionalResponses.add(new Response("Give globe", "You need to have at least 500 essences absorbed into your aura before being able to do this!", null));
+						additionalResponses.add(new Response("给出球体", "你至少需要在灵气中吸收500精华才能继续！", null));
 						
 					} else {
-						additionalResponses.add(new Response("Give globe",
-								"Give Arthur the arcane lightning globe and allow him to extract the essences from your aura in order to unlock its secrets."
-									+ "<br/>[style.italicsMinorBad(You will lose 500 essences from this!)]",
+						additionalResponses.add(new Response("给出球体",
+								"将奥术闪电球交给亚瑟，并且允许他从你的灵气中提取精华用以解锁其秘密。"
+									+ "<br/>[style.italicsMinorBad(你将会失去500精华！)]",
 								ROOM_ARTHUR_ARCANE_LIGHTNING_PAYMENT));
 					}
 					
 				} else if(Main.game.getPlayer().getQuest(QuestLine.SIDE_ARCANE_LIGHTNING) == Quest.LIGHTNING_SPELL_2_WAITING) {
 					if(Main.game.getDayNumber() - Main.game.getDialogueFlags().getSavedLong("arthur_globe_day_start") < 14) {
-						additionalResponses.add(new Response("Arcane lightning",
-								"Arthur hasn't had enough time in which to unlock the secrets of the arcane lightning globe. Return"
+						additionalResponses.add(new Response("奥术闪电",
+								"这段时间亚瑟还不足以从这个奥术闪电球中解锁其秘密。"
 									+ (getDaysRemainingUntilArcaneLightningUnlocked()==1
-										?" tomorrow "
-										:" in "+Util.intToString(getDaysRemainingUntilArcaneLightningUnlocked())+" days' time")
-									+" to discover what he's managed to find out.",
+										?"明天"
+										:Util.intToString(getDaysRemainingUntilArcaneLightningUnlocked())+"天之后")
+									+"再回来看看他能发现什么。",
 								null));
 						
 					} else {
-						additionalResponses.add(new Response("Arcane lightning",
-								"Now that it's been two weeks since you gave Arthur your arcane lightning globe, you should ask him what secrets he's managed to unlock from it.",
+						additionalResponses.add(new Response("奥术闪电",
+								"自从你将奥术闪电球交给亚瑟已经过去了两周，你应该问问他是否从其中解锁了什么秘密。",
 								ROOM_ARTHUR_ARCANE_LIGHTNING_END));
 					}
 				}
@@ -202,7 +202,7 @@ public class RoomArthur {
 		public Response getResponse(int responseTab, int index) {
 			if(responseTab==0) {
 				if(index == 1) {
-					return new Response("Lyssieth", "You're already asking Arthur about Lyssieth.", null);
+					return new Response("莉西丝", "你已经问过亚瑟莉西丝的事情了。", null);
 					
 				}
 			}
@@ -227,7 +227,7 @@ public class RoomArthur {
 		public Response getResponse(int responseTab, int index) {
 			if(responseTab==0) {
 				if(index == 2) {
-					return new Response("Lilaya", "You're already asking Arthur about Lilaya.", null);
+					return new Response("莉莱雅", "你已经问过亚瑟莉莱雅的事情了。", null);
 				}
 			}
 			return ROOM_ARTHUR.getResponse(responseTab, index);
@@ -269,10 +269,10 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Agree", "You trust Lilaya enough to agree with her request.", ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF);
+				return new Response("同意", "你相信莉莱雅，同意了她的请求。", ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF);
 				
 			} else if(index == 2) {
-				return new Response("Refuse", "There's no way that you're going to agree to be Lilaya's and Arthur's test subject! Perhaps Rose could be volunteered in your place...", ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED);
+				return new Response("拒绝", "你是不可能同意做莉莱雅和亚瑟的实验对象的！或许萝丝能替你“自愿”参加……", ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED);
 				
 			}
 			return null;
@@ -296,7 +296,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wake up", "You suddenly snap out of your trance.", ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF_WAKE_UP) {
+				return new Response("醒来", "你突然从幻境中跳出。", ROOM_ARTHUR_HYPNO_WATCH_OFFER_SELF_WAKE_UP) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addItem(Main.game.getItemGen().generateItem(ItemType.ORIENTATION_HYPNO_WATCH), false, true));
@@ -323,7 +323,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Let Arthur continue with his other experiments.", LilayaHomeGeneric.CORRIDOR) {
+				return new Response("继续", "让亚瑟继续其他实验。", LilayaHomeGeneric.CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(Main.game.getPlayer().getWorldLocation(), PlaceType.LILAYA_HOME_CORRIDOR, false);
@@ -350,7 +350,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Wake Rose", "Help Lilaya to wake Rose up.", ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED_WAKE_ROSE) {
+				return new Response("叫醒萝丝", "帮莉莱雅一起叫醒萝丝。", ROOM_ARTHUR_HYPNO_WATCH_OFFER_REFUSED_WAKE_ROSE) {
 					@Override
 					public void effects() {
 						Main.game.getTextEndStringBuilder().append(Main.game.getPlayer().addItem(Main.game.getItemGen().generateItem(ItemType.ORIENTATION_HYPNO_WATCH), false, true));
@@ -377,7 +377,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Let Arthur continue with his other experiments.", LilayaHomeGeneric.CORRIDOR) {
+				return new Response("继续", "让亚瑟继续其他实验。", LilayaHomeGeneric.CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setNearestLocation(Main.game.getPlayer().getWorldLocation(), PlaceType.LILAYA_HOME_CORRIDOR, false);
@@ -404,17 +404,17 @@ public class RoomArthur {
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
 				if(Main.game.getPlayer().getEssenceCount()<500) {
-					return new Response("Give globe", "You need to have at least 500 essences absorbed into your aura before being able to do this!", null);
+					return new Response("给出球体", "你至少需要在灵气中吸收500精华才能继续！", null);
 					
 				} else {
-					return new Response("Give globe",
-							"Give Arthur the arcane lightning globe and allow him to extract the essences from your aura in order to unlock its secrets."
-									+ "<br/>[style.italicsMinorBad(You will lose 500 essences from this!)]",
+					return new Response("给出球体",
+							"将奥术闪电球交给亚瑟，并且允许他从你的灵气中提取精华用以解锁其秘密。"
+									+ "<br/>[style.italicsMinorBad(你将会失去500精华！)]",
 							ROOM_ARTHUR_ARCANE_LIGHTNING_PAYMENT);
 				}
 				
 			} else if(index==2) {
-				return new Response("Later", "Tell Arthur that you'll think about it and perhaps return at another time to let him experiment on the globe.", LilayaHomeGeneric.CORRIDOR) {
+				return new Response("稍后", "告诉亚瑟你要考虑一下，之后再回来让他对球体做实验。", LilayaHomeGeneric.CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/lilayasHome/arthursRoom", "ROOM_ARTHUR_ARCANE_LIGHTNING_START_LEAVE"));
@@ -445,7 +445,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Leave", "[pc.Step] out of Arthur's room and let him get on with his experiments.", LilayaHomeGeneric.CORRIDOR) {
+				return new Response("离开", "从亚瑟的房间走出，让他继续他的实验。", LilayaHomeGeneric.CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/lilayasHome/arthursRoom", "ROOM_ARTHUR_ARCANE_LIGHTNING_PAYMENT_LEAVE"));
@@ -469,7 +469,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Learn spells", "Read over the papers and learn the two spells which Arthur was able to create.", ROOM_ARTHUR_ARCANE_LIGHTNING_END_FINAL);
+				return new Response("学习法术", "通读笔记，学会亚瑟创造的两种法术。", ROOM_ARTHUR_ARCANE_LIGHTNING_END_FINAL);
 			}
 			return null;
 		}
@@ -483,7 +483,7 @@ public class RoomArthur {
 			Main.game.getPlayer().addSpell(Spell.ARCANE_LIGHTNING_SUPERBOLT);
 			Main.game.getTextEndStringBuilder().append(
 					"<p style='text-align:center;'>"
-						+ "You have learned the following spells:"
+						+ "你学会了以下法术:"
 						+ "<br/><b style='color:"+PresetColour.SPELL_SCHOOL_ARCANE.toWebHexString()+";'>"+Spell.ARCANE_CHAIN_LIGHTNING.getName()+"</b>"
 						+ "<br/><b style='color:"+PresetColour.SPELL_SCHOOL_ARCANE.toWebHexString()+";'>"+Spell.ARCANE_LIGHTNING_SUPERBOLT.getName()+"</b>"
 					+ "</p>");
@@ -500,7 +500,7 @@ public class RoomArthur {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Let Arthur continue with his other experiments.", LilayaHomeGeneric.CORRIDOR) {
+				return new Response("继续", "让亚瑟继续其他实验。", LilayaHomeGeneric.CORRIDOR) {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("places/dominion/lilayasHome/arthursRoom", "ROOM_ARTHUR_ARCANE_LIGHTNING_END_FINAL_LEAVE"));

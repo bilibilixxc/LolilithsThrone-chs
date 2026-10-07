@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[town hall]]></name>
-	<tooltipDescription><![CDATA[The town hall is by far the largest building in all of Elis, and thanks to its distinctive tower, it's also the tallest.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[outside of the town hall at Elis]]></virginityLossDescription>
+	<name><![CDATA[市镇议会]]></name>
+	<tooltipDescription><![CDATA[市镇议会是伊利斯目前最大的建筑，得益于它有特色的塔楼，它还是最高的。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在伊利斯市镇议会外]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_PURPLE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

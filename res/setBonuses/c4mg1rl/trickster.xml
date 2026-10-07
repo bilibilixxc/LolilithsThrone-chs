@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Trickster's Bounty]]></name>
+	<name><![CDATA[欺诈师之奖赏]]></name>
 	
 	<statusEffect>c4mg1rl_trickster_set</statusEffect>
 	

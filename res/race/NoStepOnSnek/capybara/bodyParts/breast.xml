@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <breast>
 	<race>NoStepOnSnek_capybara</race>
-	<transformationName><![CDATA[capybara]]></transformationName>
+	<transformationName><![CDATA[水豚]]></transformationName>
 	<coveringType>NoStepOnSnek_capybara_fur</coveringType>
 	<nippleType>NoStepOnSnek_capybara_nipple</nippleType>
 	<fluidType>NoStepOnSnek_capybara_milk</fluidType>
@@ -12,15 +12,15 @@
 	<namesPluralFlat/>
 	<descriptorsFlat/>
 	<transformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldCapybara(capybara-like)], [npc.nipplesFullDescription], and when lactating, [npc.she] will produce [style.boldCapybara(capybara milk)].
-	]]></transformationDescription>
+		[npc.She]现在拥有[style.boldCapybara(水豚般)][npc.nipplesFullDescription]，[npc.she]在哺乳期会分泌[style.boldCapybara(水豚乳汁)]。
+]]></transformationDescription>
 	<bodyDescription><![CDATA[
-		On each of [npc.her] [npc.breastSize] [npc.breasts], [npc.she] [npc.has] [npc.nipplesPerBreast] capybara-like, [npc.nipplesFullDescription].
-	]]></bodyDescription>
+		[npc.her]的每个[npc.breastSize][npc.breasts]上都长着[npc.nipplesPerBreast]水豚般[npc.nipplesFullDescription]。
+]]></bodyDescription>
 	<crotchBoobsTransformationDescription><![CDATA[
-		[npc.She] now [npc.has] [style.boldCapybara(capybara-like)], [npc.crotchNipplesFullDescription], and when lactating, [npc.she] will produce [style.boldCapybara(capybara milk)].
+		[npc.She]现在拥有[style.boldCapybara(水豚般)][npc.crotchNipplesFullDescription]，[npc.she]在哺乳期内会分泌[style.boldCapybara(水豚乳汁)]。
 	]]></crotchBoobsTransformationDescription>
 	<crotchBoobsBodyDescription><![CDATA[
-		On each of [npc.her] [npc.crotchBoobSize] [npc.crotchBoobs], [npc.she] [npc.has] [npc.crotchNipplesPerBreast] capybara-like, [npc.crotchNipplesFullDescription].
-	]]></crotchBoobsBodyDescription>
+		[npc.her]的每个[npc.crotchBoobSize][npc.crotchBoobs]上都长着[npc.crotchNipplesPerBreast]颗水豚般[npc.crotchNipplesFullDescription]。
+]]></crotchBoobsBodyDescription>
 </breast>

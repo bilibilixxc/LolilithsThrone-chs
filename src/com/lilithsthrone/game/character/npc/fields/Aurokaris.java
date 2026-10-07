@@ -87,8 +87,8 @@ public class Aurokaris extends NPC {
 	}
 	
 	public Aurokaris(boolean isImported) {
-		super(isImported, new NameTriplet("Aurokaris"), "Agelada",
-				"Aurokaris is an Amazon, a member of the all-female warrior community who live in the town of Themiscyra.",
+		super(isImported, new NameTriplet("奥罗卡利斯"), "阿盖拉达",
+				"奥罗卡利斯是亚马逊人，也是一位居住在特弥斯库拉的全女战士社群成员。",
 				19, Month.JANUARY, 1,
 				25,
 				Gender.F_V_B_FEMALE, Subspecies.COW_MORPH, RaceStage.GREATER,
@@ -97,7 +97,7 @@ public class Aurokaris extends NPC {
 				true);
 		
 		if(!isImported) {
-			this.setGenericName("Amazonian cow-girl");
+			this.setGenericName("亚马逊牛女");
 			this.setPlayerKnowsName(false);
 		}
 	}

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Counter]]></name>
-	<tooltipDescription><![CDATA[Situated right in front of the entrance, this counter is where callie serves her customers.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[behind the counter in 'The Creamy Bakey']]></virginityLossDescription>
+	<name><![CDATA[柜台]]></name>
+	<tooltipDescription><![CDATA[柜台位于入口的正前方，卡丽在这为她的顾客提供服务。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[柜台后面是“奶油烘焙店”]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BROWN</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

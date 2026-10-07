@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 
 	<coreAtributes>
 	
-		<authorTag><![CDATA[A small tag sewn into the side seam reads "MFD by DSG Threadworks."]]></authorTag>
+		<authorTag><![CDATA[侧缝上有个小标签印着“DSG织厂生产。”]]></authorTag>
 
 		<value>500</value> 
 
-		<determiner><![CDATA[a]]></determiner>
+		<determiner><![CDATA[一件]]></determiner>
 
-		<name><![CDATA[trenchcoat]]></name>
+		<name><![CDATA[腰带式风衣]]></name>
 
-		<namePlural pluralByDefault="false"><![CDATA[trenchcoats]]></namePlural> 
+		<namePlural pluralByDefault="false"><![CDATA[腰带式风衣]]></namePlural> 
 
-		<description><![CDATA[A knee-length coat secured around the waist and wrists. Designed to keep wind and rain off of the wearer, it is generously sized to fit practically any body type, making it useful in hiding the wearer's identity especially when combined with headwear.]]></description> 
+		<description><![CDATA[及膝外套，腰部和手腕有绑带。旨在为穿着者遮风挡雨。尺寸很大，几乎适合任何体型，有助于掩藏身份，穿着时佩戴头饰能够加强掩藏的效果。]]></description> 
 
 		<physicalResistance>0</physicalResistance> 
 
@@ -92,51 +91,51 @@
 	</coreAtributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(put)] [npc.her] arms through the trenchcoat's sleeves and [npc.verb(button)] up the front before cinching up the belt.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] [npc2.verb(put)] [npc2.her] arms through the trenchcoat's sleeves and [npc.verb(button)] up the front before cinching up the belt.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(force)] [npc2.namePos] arms through the trenchcoat's sleeves and hastily [npc.verb(button)] up the front before hastily tightening up the belt.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]将[npc.her]的手臂伸进风衣的袖子，扣上前面的扣子并系上腰带。
+]]></self>
+		<other><![CDATA[
+[npc.Name]帮[npc2.name]将[npc2.her]的胳膊伸进风衣的袖子，扣好扣子并系好腰带。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]迫使[npc2.namePos]的手臂穿过风衣的袖子，匆忙的扣好扣子并匆忙的系上腰带。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(uncinch)] the belt and [npc.verb(unbutton)] the front of [npc.her] trenchcoat and [npc.verb(pull)] [npc.her] arms out of the sleeves.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(uncinch)] the belt and [npc.verb(unbutton)] the front of [npc2.namePos] trenchcoat and [npc.verb(help)] [npc2.her] [npc2.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(tear)] at the belt before popping open the buttons on the front of [npc2.namePos] trenchcoat and roughly [npc.verb(pull)] [npc2.her] arms out of the sleeves.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开了皮带和扣子，将[npc.her]的手从袖子里拽了出来。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开[npc2.namePos]风衣前部的扣子和皮带，帮[npc2.her]将[npc2.her]的手臂从袖子中伸出。
+]]></other>
+		<otherRough><![CDATA[
+[npc2.Name]扯开腰带，然后拉开[npc2.namePos]风衣正面的纽扣，粗暴地将[npc2.her]的手臂从袖子中拽出。
+]]></otherRough>
 	</displacementText>
 
 	<replacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc.namePos] trenchcoat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(button)] up the front of [npc2.namePos] trenchcoat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] hastily [npc.verb(button)] up the front of [npc2.namePos] trenchcoat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]扣上[npc.namePos]风衣的正面的扣子。
+]]></self>
+		<other><![CDATA[
+[npc.Name]将[npc2.namePos]前面的扣子扣了起来。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]匆忙扣上[npc2.namePos]风衣的正面的扣子。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="UNBUTTONS">
-		<self>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] trenchcoat.]]>
-		</self>
-		<other>
-		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.namePos] trenchcoat.]]>
-		</other>
-		<otherRough>
-		  <![CDATA[[npc.Name] [npc.verb(pop)] open the buttons on [npc2.namePos] trenchcoat.]]>
-		</otherRough>
+		<self><![CDATA[
+[npc.Name]解开[npc.her]的风衣。
+]]></self>
+		<other><![CDATA[
+[npc.Name]解开了[npc2.namePos]的风衣。
+]]></other>
+		<otherRough><![CDATA[
+[npc.Name]崩开了[npc2.namePos]风衣上的扣子。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

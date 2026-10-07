@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
 	
@@ -120,7 +120,7 @@
 	<bookIconName>ryuicon</bookIconName>
 	
 	<!-- The name for the book. -->
-	<bookName>Mysterious Dragons</bookName>
+	<bookName><![CDATA[隐秘龙族]]></bookName>
 	
 	<!-- The element names which contain the book's basic and advanced descriptions.
 	These should be entered into the 'bookEntries.xml' file in the same folder location as this file. -->
@@ -133,38 +133,38 @@
 	
 	<nameAnthro>
 		<namesDefault>
-			<name><![CDATA[ryu-morph]]></name>
-			<namePlural><![CDATA[ryu-morphs]]></namePlural>
-			<singularMaleName><![CDATA[ryu-boy]]></singularMaleName>
-			<singularFemaleName><![CDATA[ryu-girl]]></singularFemaleName>
-			<pluralMaleName><![CDATA[ryu-boys]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[ryu-girls]]></pluralFemaleName>
+			<name><![CDATA[龍化形]]></name>
+			<namePlural><![CDATA[龍化形]]></namePlural>
+			<singularMaleName><![CDATA[龍男]]></singularMaleName>
+			<singularFemaleName><![CDATA[龍女]]></singularFemaleName>
+			<pluralMaleName><![CDATA[龍男]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[龍女]]></pluralFemaleName>
 		</namesDefault>
 	</nameAnthro>
 	
 	<!-- A brief description and identification requirements of this subspecies. -->
-	<description><![CDATA[An anthropomorphic ryu, known as a 'ryu-morph' when bipedal, and a 'ryutaur' when the lower body is that of a typically-oversized feral ryu. To be identified as a ryu-morph, a character must be a dragon-morph with a ryu face, a mane, external ears, a tufted tail, and no wings.]]></description>
+	<description><![CDATA[一种人形的龍，当下肢拟人时被称为“龍化形”，而当下肢呈现出龍兽态时则称为“半龍人”。要判定为“龍化形”，角色必须先为“龙化形”，拥有龍头、龙鬃、外耳和覆盖着细密绒毛的尾巴，且没有翅膀。]]></description>
 	
 	<nameHalfDemon>
 		<namesDefault>
-			<name><![CDATA[ikuchi]]></name>
-			<namePlural><![CDATA[ikuchi]]></namePlural>
-			<singularMaleName><![CDATA[ikuchi]]></singularMaleName>
-			<singularFemaleName><![CDATA[ikuchi]]></singularFemaleName>
-			<pluralMaleName><![CDATA[ikuchi]]></pluralMaleName>
-			<pluralFemaleName><![CDATA[ikuchi]]></pluralFemaleName>
+			<name><![CDATA[嘲风]]></name>
+			<namePlural><![CDATA[嘲风]]></namePlural>
+			<singularMaleName><![CDATA[嘲风]]></singularMaleName>
+			<singularFemaleName><![CDATA[嘲风]]></singularFemaleName>
+			<pluralMaleName><![CDATA[嘲风]]></pluralMaleName>
+			<pluralFemaleName><![CDATA[嘲风]]></pluralFemaleName>
 		</namesDefault>
 	</nameHalfDemon>
 	
 	<!-- Attributes related to this subspecies when in a feral form. -->
 	<feralAttributes>
 		<!-- Naming: -->
-		<feralName><![CDATA[ryu]]></feralName>
-		<feralNamePlural><![CDATA[ryu]]></feralNamePlural>
-		<feralSingularMaleName><![CDATA[ryu]]></feralSingularMaleName>
-		<feralSingularFemaleName><![CDATA[ryu]]></feralSingularFemaleName>
-		<feralPluralMaleName><![CDATA[ryu]]></feralPluralMaleName>
-		<feralPluralFemaleName><![CDATA[ryu]]></feralPluralFemaleName>
+		<feralName><![CDATA[龍]]></feralName>
+		<feralNamePlural><![CDATA[龍]]></feralNamePlural>
+		<feralSingularMaleName><![CDATA[龍]]></feralSingularMaleName>
+		<feralSingularFemaleName><![CDATA[龍]]></feralSingularFemaleName>
+		<feralPluralMaleName><![CDATA[龍]]></feralPluralMaleName>
+		<feralPluralFemaleName><![CDATA[龍]]></feralPluralFemaleName>
 		
 		<!-- The leg configuration that a feral form of this subspecies has.
 		This determines their overall body shape. -->
@@ -195,7 +195,7 @@
 	
 	<!-- The description which is shown to the player in this subspecies' status effect tooltip. -->
 	<statusEffectDescription><![CDATA[
-		[npc.NamePos] ryu-like body is very powerful, and as a mythological creature [npc.she] [npc.has] a close arcane affinity that brings both strength and weakness.
+		[npc.NamePos]龍一般的身躯充满力量，[npc.she]作为神话生物，拥有紧密的奥术亲和力，既能发挥它的强大之处，也熟悉它的脆弱之处。
 	]]></statusEffectDescription>
 	
 	<!-- The core attributes which a character of this subspecies benefits from.

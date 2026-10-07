@@ -51,8 +51,8 @@ public class Lumi extends NPC {
 	}
 	
 	public Lumi(boolean isImported) {
-		super(isImported, new NameTriplet("Lumi"), "Neve",
-				"Lumi is a semi-feral wolf-girl, who you first met prowling one of Dominion's alleyways.",
+		super(isImported, new NameTriplet("卢米"), "妮薇",
+				"卢米是个半兽态狼女，你们的初见是在御城区的一条小巷里。",
 				19, Month.JULY, 15,
 				5,
 				Gender.F_V_B_FEMALE,
@@ -280,9 +280,9 @@ public class Lumi extends NPC {
 	@Override
 	public Response endCombat(boolean applyEffects, boolean playerVictory) {
 		if(playerVictory) {
-			return new Response("Victory", "The wolf-girl is utterly beaten!", LumiDialogue.COMBAT_PLAYER_WIN);
+			return new Response("胜利", "狼女完全失败！", LumiDialogue.COMBAT_PLAYER_WIN);
 		} else {
-			return new Response("Defeated", "The wolf-girl has bested you!", LumiDialogue.COMBAT_PLAYER_LOSS);
+			return new Response("失败", "狼女击败了你！", LumiDialogue.COMBAT_PLAYER_LOSS);
 		}
 	};
 }

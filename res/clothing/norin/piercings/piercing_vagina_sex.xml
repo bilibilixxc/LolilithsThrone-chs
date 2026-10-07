@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
-		<clothingAuthorTag><![CDATA[Small engraved lettering informs you that this piercing was made by 'Norin'.]]></clothingAuthorTag>
+		<clothingAuthorTag><![CDATA[小小的刻字告诉你这些穿孔是由'Norin'制作的。]]></clothingAuthorTag>
 		<value>200</value> <!--10 flames = £1 ~ $1.5-->
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA["SEX" barbell]]></name>
-		<namePlural pluralByDefault="false"><![CDATA["SEX" barbells]]></namePlural>
-		<description><![CDATA[Make sure anyone who sees the wearer's pussy knows exactly what it is for.]]></description>
+		<determiner><![CDATA[一个]]></determiner>
+		<name><![CDATA["SEX"阴蒂钉]]></name>
+		<namePlural pluralByDefault="false"><![CDATA["SEX"阴蒂钉]]></namePlural>
+		<description><![CDATA[确保任何人看到穿戴者的小穴都知道它的用途。]]></description>
 		
 		<physicalResistance>0</physicalResistance>
 		<femininity>FEMININE</femininity> <!-- FEMININE, MASCULINE ANDROGYNOUS -->
@@ -52,27 +51,27 @@
 	</coreAttributes>
 
 	<replacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the "SEX" barbell into [npc.her] vaginal piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] the "SEX" barbell into [npc2.namePos] vaginal piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(slide)] the "SEX" barbell into [npc2.namePos] vaginal piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把"SEX"阴蒂钉戴在[npc.her]的阴蒂穿孔。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把"SEX"阴蒂钉戴在[npc2.namePos]的阴蒂穿孔。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把"SEX"阴蒂钉戴在[npc2.namePos]的阴蒂穿孔。
+]]></otherRough>
 	</replacementText>
 
 	<displacementText type="REMOVE_OR_EQUIP">
-		<self>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] "SEX" barbell out of [npc.her] vaginal piercing.]]>
-		</self>
-		<other>
-			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] "SEX" barbell out of [npc2.her] vaginal piercing.]]>
-		</other>
-		<otherRough>
-			<![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] "SEX" barbell out of [npc2.her] vaginal piercing.]]>
-		</otherRough>
+		<self><![CDATA[
+      [npc.Name]把[npc.her]的"SEX"阴蒂钉从[npc.her]的阴蒂穿孔中取下。
+]]></self>
+		<other><![CDATA[
+      [npc.Name]把[npc2.namePos]的"SEX"阴蒂钉从[npc2.her]的阴蒂穿孔中取下。
+]]></other>
+		<otherRough><![CDATA[
+      [npc.Name]粗暴地把[npc2.namePos]的"SEX"阴蒂钉从[npc2.her]的阴蒂穿孔中取下。
+]]></otherRough>
 	</displacementText>
 	
 </clothing>

@@ -22,10 +22,10 @@ public enum InventorySlot {
 	
 	/** Clothing slot "head". Used for headgear.<br/>
 	 *  Tattoo slot "head".*/
-	HEAD(40, "head", false, false, false, "head") {
+	HEAD(40, "头部", false, false, false, "头部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "head";
+			return "头部";
 		}
 		@Override
 		protected Covering getAssociatedCoveringForTattoo(GameCharacter character) {
@@ -35,7 +35,7 @@ public enum InventorySlot {
 
 	/** Clothing slot "eyes". Used for glasses.<br/>
 	 *  Tattoo slot "upper face".*/
-	EYES(50, "eyes", true, false, false, "upper face") {
+	EYES(50, "眼部", true, false, false, "上面部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.eyes]";
@@ -49,11 +49,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "hair". Used for ribbons and hairbands.<br/>
 	 *  Tattoo slot "ears".*/
-	HAIR(20, "hair", false, false, false, "ears") {
+	HAIR(20, "头发", false, false, false, "耳朵") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasHair()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have any hair!");
+				return UtilText.parse(character, "[npc.Name]没有头发！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -69,7 +69,7 @@ public enum InventorySlot {
 
 	/** Clothing slot "mouth". Used for ballgags.<br/>
 	 *  Tattoo slot "lower face".*/
-	MOUTH(10, "mouth", false, false, false, "lower face") {
+	MOUTH(10, "嘴部", false, false, false, "下面部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.mouth]";
@@ -83,10 +83,10 @@ public enum InventorySlot {
 
 	/** Clothing slot "neck". Used for necklaces and scarfs.<br/>
 	 *  Tattoo slot "neck".*/
-	NECK(30, "neck", false, false, false, "neck") {
+	NECK(30, "颈部", false, false, false, "颈部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "neck";
+			return "颈部";
 		}
 
 		@Override
@@ -100,10 +100,10 @@ public enum InventorySlot {
 
 	/** Clothing slot "over-torso". Used for coats.<br/>
 	 *  Tattoo slot "upper back".*/
-	TORSO_OVER(50, "over-torso", false, false, false, "upper back") {
+	TORSO_OVER(50, "外衣", false, false, false, "上背部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "over-torso";
+			return "外衣";
 		}
 
 		@Override
@@ -114,10 +114,10 @@ public enum InventorySlot {
 
 	/** Clothing slot "torso". Used for shirts.<br/>
 	 *  Tattoo slot "lower back".*/
-	TORSO_UNDER(40, "torso", false, true, false, "lower back") {
+	TORSO_UNDER(40, "躯干", false, true, false, "下背部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "torso";
+			return "躯干";
 		}
 
 		@Override
@@ -128,7 +128,7 @@ public enum InventorySlot {
 
 	/** Clothing slot "chest". Used for bras.<br/>
 	 *  Tattoo slot "chest".*/
-	CHEST(10, "chest", false, true, false, "chest") {
+	CHEST(10, "胸部", false, true, false, "胸部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.breasts]";
@@ -146,11 +146,11 @@ public enum InventorySlot {
 	/** Clothing slot "nipples". Used for nipple shields, plugs.<br/>
 	 * <br/>If character is a feral with no breasts, crotch-nipples are referenced.
 	 *  Tattoo slot "nipples".*/
-	NIPPLE(5, "nipples", false, false, false, "nipples") {
+	NIPPLE(5, "乳头", false, false, false, "乳头") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(character.isFeral() && !character.getFeralAttributes().isBreastsPresent() && !character.hasBreastsCrotch()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have any breasts or crotch-boobs!");
+				return UtilText.parse(character, "[npc.Name]没有胸部或副乳！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -169,10 +169,10 @@ public enum InventorySlot {
 
 	/** Clothing slot "stomach". Used for corsets.<br/>
 	 *  Tattoo slot "stomach".*/
-	STOMACH(10, "stomach", false, false, false, "stomach") {
+	STOMACH(10, "腹部", false, false, false, "腹部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "stomach";
+			return "腹部";
 		}
 
 		@Override
@@ -186,11 +186,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "hands". Used for gloves.<br/>
 	 *  Tattoo slot "forearms".*/
-	HAND(20, "hands", true, false, false, "forearms") {
+	HAND(20, "手部", true, false, false, "前臂") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(character.isFeral() && !character.getFeralAttributes().isArmsOrWingsPresent()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have hands!");
+				return UtilText.parse(character, "[npc.Name]没有手！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -206,17 +206,17 @@ public enum InventorySlot {
 
 	/** Clothing slot "wrists". Used for bracelets.<br/>
 	 *  Tattoo slot "upper arms".*/
-	WRIST(30, "wrists", true, false, false, "upper arms") {
+	WRIST(30, "手腕", true, false, false, "上臂") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(character.isFeral() && !character.getFeralAttributes().isArmsOrWingsPresent()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have arms!");
+				return UtilText.parse(character, "[npc.Name]没有手臂！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "wrists";
+			return "手腕";
 		}
 		@Override
 		protected Covering getAssociatedCoveringForTattoo(GameCharacter character) {
@@ -226,11 +226,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "fingers". Used for rings.<br/>
 	 *  Tattoo slot "hands".*/
-	FINGER(30, "fingers", true, false, false, "hands") {
+	FINGER(30, "手指", true, false, false, "手部") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(character.isFeral() && !character.getFeralAttributes().isFingerActionsAvailable()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have fingers!");
+				return UtilText.parse(character, "[npc.Name]没有手指！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -246,7 +246,7 @@ public enum InventorySlot {
 
 	/** Clothing slot "hips". Used for belts.<br/>
 	 *  Tattoo slot "hips".*/
-	HIPS(40, "hips", true, false, false, "hips") {
+	HIPS(40, "臀部", true, false, false, "臀部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.hips]";
@@ -264,7 +264,7 @@ public enum InventorySlot {
 
 	/** Clothing slot "anus". Used for plugs.<br/>
 	 *  Tattoo slot "ass".*/
-	ANUS(0, "anus", false, false, false, "ass") {
+	ANUS(0, "肛门", false, false, false, "屁股") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.asshole]";
@@ -281,7 +281,7 @@ public enum InventorySlot {
 
 	/** Clothing slot "legs". Used for trousers.<br/>
 	 *  Tattoo slot "upper leg".*/
-	LEG(30, "legs", true, true, false, "upper leg") {
+	LEG(30, "腿部", true, true, false, "大腿") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.legs]";
@@ -295,10 +295,10 @@ public enum InventorySlot {
 
 	/** Clothing slot "groin". Used for underwear.<br/>
 	 *  Tattoo slot "lower abdomen".*/
-	GROIN(10, "groin", false, true, false, "lower abdomen") {
+	GROIN(10, "腹股沟", false, true, false, "下腹部") {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "groin";
+			return "腹股沟";
 		}
 
 		@Override
@@ -309,11 +309,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "feet". Used for shoes.<br/>
 	 *  Tattoo slot "feet".*/
-	FOOT(40, "feet", true, true, false, "feet") {
+	FOOT(40, "足部", true, true, false, "足部") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasLegs()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have any legs!");
+				return UtilText.parse(character, "[npc.Name]没有腿！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -329,17 +329,17 @@ public enum InventorySlot {
 
 	/** Clothing slot "calves". Used for socks.<br/>
 	 *  Tattoo slot "lower leg".*/
-	SOCK(10, "calves", true, true, false, "lower leg") {
+	SOCK(10, "小腿", true, true, false, "小腿") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasLegs()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have any legs!");
+				return UtilText.parse(character, "[npc.Name]没有腿！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "calves";
+			return "小腿";
 		}
 		@Override
 		protected Covering getAssociatedCoveringForTattoo(GameCharacter character) {
@@ -349,17 +349,17 @@ public enum InventorySlot {
 
 	/** Clothing slot "ankles". Used for bracelets.<br/>
 	 *  Tattoo slot "ankles".*/
-	ANKLE(50, "ankles", true, false, false, "ankles") {
+	ANKLE(50, "脚踝", true, false, false, "脚踝") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasLegs()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have any legs!");
+				return UtilText.parse(character, "[npc.Name]没有腿！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "ankles";
+			return "脚踝";
 		}
 		@Override
 		protected Covering getAssociatedCoveringForTattoo(GameCharacter character) {
@@ -372,11 +372,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "horns". Used for horn decorations.<br/>
 	 *  Tattoo slot "horns".*/
-	HORNS(50, "horns", true, false, false, "horns") {
+	HORNS(50, "角", true, false, false, "角") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasHorns()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have any horns!");
+				return UtilText.parse(character, "[npc.Name]没长角！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -392,11 +392,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "wings". Used for wing decorations.<br/>
 	 *  Tattoo slot "wings".*/
-	WINGS(50, "wings", true, false, false, "wings") {
+	WINGS(50, "翅膀", true, false, false, "翅膀") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasWings()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have any wings!");
+				return UtilText.parse(character, "[npc.Name]没有翅膀！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -412,11 +412,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "tail". Used for tail decorations.<br/>
 	 *  Tattoo slot "tail".*/
-	TAIL(50, "tail", false, false, false, "tail") {
+	TAIL(50, "尾巴", false, false, false, "尾巴") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasTail()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have a tail!");
+				return UtilText.parse(character, "[npc.Name]没有尾巴！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -432,11 +432,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "penis". Used for cock socks, cages, and plugs.<br/>
 	 *  Tattoo slot "penis".*/
-	PENIS(0, "penis", false, false, false, "penis") {
+	PENIS(0, "阴茎", false, false, false, "阴茎") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasPenisIgnoreDildo()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have a penis!");
+				return UtilText.parse(character, "[npc.Name]没有阴茎！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -484,11 +484,11 @@ public enum InventorySlot {
 
 	/** Clothing slot "vagina". Used for plugs.<br/>
 	 *  Tattoo slot "vagina".*/
-	VAGINA(0, "vagina", false, false, false, "vagina") {
+	VAGINA(0, "阴道", false, false, false, "阴部") {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasVagina()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have a vagina!");
+				return UtilText.parse(character, "[npc.Name]没有阴道！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -535,7 +535,7 @@ public enum InventorySlot {
 	},
 
 	// PIERCING:
-	PIERCING_EAR(0, "ear piercing", false, false, true, null) {
+	PIERCING_EAR(0, "耳部穿孔", false, false, true, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.ears]";
@@ -546,7 +546,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	PIERCING_NOSE(0, "nose piercing", false, false, true, null) {
+	PIERCING_NOSE(0, "鼻部穿孔", false, false, true, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.nose]";
@@ -557,7 +557,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	PIERCING_TONGUE(0, "tongue piercing", false, false, true, null) {
+	PIERCING_TONGUE(0, "舌部穿孔", false, false, true, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.tongue]";
@@ -568,7 +568,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	PIERCING_LIP(0, "lip piercing", false, false, true, null) {
+	PIERCING_LIP(0, "唇部穿孔", false, false, true, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.lips]";
@@ -579,10 +579,10 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	PIERCING_STOMACH(0, "navel piercing", false, false, true, null) {
+	PIERCING_STOMACH(0, "肚脐穿孔", false, false, true, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
-			return "navel";
+			return "肚脐";
 		}
 
 		@Override
@@ -590,7 +590,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	PIERCING_NIPPLE(0, "nipple piercing", false, false, true, null) {
+	PIERCING_NIPPLE(0, "乳头穿孔", false, false, true, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return "[npc.nipples]";
@@ -601,11 +601,11 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	PIERCING_VAGINA(0, "vaginal piercing", false, false, true, null) {
+	PIERCING_VAGINA(0, "阴部穿孔", false, false, true, null) {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasVagina()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have a vagina!");
+				return UtilText.parse(character, "[npc.Name]没有阴道！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -618,11 +618,11 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	PIERCING_PENIS(0, "cock piercing", false, false, true, null) {
+	PIERCING_PENIS(0, "阴茎穿孔", false, false, true, null) {
 		@Override
 		public String getPhysicallyUnavailableReason(GameCharacter character) {
 			if(!character.hasPenisIgnoreDildo()) {
-				return UtilText.parse(character, "[npc.Name] [npc.do] not have a penis!");
+				return UtilText.parse(character, "[npc.Name]没有阴茎！");
 			}
 			return super.getPhysicallyUnavailableReason(character);
 		}
@@ -637,7 +637,7 @@ public enum InventorySlot {
 	},
 
 	// EQUIPPABLE:
-	WEAPON_MAIN_1(0, "primary weapon", false, false, false, null) {
+	WEAPON_MAIN_1(0, "主手武器", false, false, false, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return null;
@@ -651,7 +651,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	WEAPON_MAIN_2(0, "primary weapon (2nd)", false, false, false, null) {
+	WEAPON_MAIN_2(0, "主手武器(二)", false, false, false, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return null;
@@ -665,7 +665,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	WEAPON_MAIN_3(0, "primary weapon (3rd)", false, false, false, null) {
+	WEAPON_MAIN_3(0, "主手武器(三)", false, false, false, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return null;
@@ -680,7 +680,7 @@ public enum InventorySlot {
 		}
 	},
 	
-	WEAPON_OFFHAND_1(0, "secondary weapon", false, false, false, null) {
+	WEAPON_OFFHAND_1(0, "副手武器", false, false, false, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return null;
@@ -694,7 +694,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	WEAPON_OFFHAND_2(0, "secondary weapon (2nd)", false, false, false, null) {
+	WEAPON_OFFHAND_2(0, "副手武器(二)", false, false, false, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return null;
@@ -708,7 +708,7 @@ public enum InventorySlot {
 			return null;
 		}
 	},
-	WEAPON_OFFHAND_3(0, "secondary weapon (3rd)", false, false, false, null) {
+	WEAPON_OFFHAND_3(0, "副手武器(三)", false, false, false, null) {
 		@Override
 		protected String getNameForParsing(GameCharacter character) {
 			return null;

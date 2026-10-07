@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>40</value> 
-		<determiner><![CDATA[a bottle of]]></determiner>
-		<name><![CDATA[Black Stripes Perry]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Black Stripes Perries]]></namePlural>
-		<description><![CDATA[A glass bottle containing pear cider, known more commonly as 'perry'. A stylised image of a badger's face is displayed upon the bottle's neck, while the label declares it to be of the brand 'Black Stripes'.]]></description> 
+		<determiner><![CDATA[一瓶]]></determiner>
+		<name><![CDATA[黑纹梨酒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[黑纹梨酒]]></namePlural>
+		<description><![CDATA[这是一个装有梨子苹果酒的玻璃瓶。瓶颈上展示了一只獾的脸的图像，标签上显示它是“黑纹”品牌的产品。]]></description> 
 		
-		<useDescriptor>drink</useDescriptor>
+		<useDescriptor><![CDATA[喝]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -28,16 +28,16 @@
 		<enchantmentEffectId>ATTRIBUTE_PHYSIQUE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 5% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)] to 'potion effects']]></line>
-			<line><![CDATA[[style.boldMinorBad(Adds)] 5% to [style.boldAlcohol(intoxication level)]]]></line>
+			<line><![CDATA[[style.boldGood(回复)]5%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(1)]到“药剂效果”]]></line>
+			<line><![CDATA[[style.boldMinorBad(增加)]5%[style.boldAlcohol(醉酒度)]]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/20)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A soothing wave of arcane energy washes over [npc.name]...
+				一股丝滑的奥术能量浪潮席卷了[npc.name]……
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 1)]
 			[#npc.incrementAlcoholLevel(0.05)]
@@ -54,10 +54,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the cap off the bottle of perry, before tilting [npc.her] head back and gulping down the golden liquid. Quickly finishing off the entire bottle, [npc.name] [npc.verb(notice)] a faint, musky dryness permeating through the sweet liquid, which lingers for some time as a slightly unpleasant aftertaste.
+		[npc.Name]打开了梨子苹果酒瓶的瓶盖，然后仰起头大口喝下了这金色的液体。迅速喝完整瓶，[npc.name]察觉到淡淡的味道浓重的干燥感贯穿在甜液体中，留下了一段时间的稍微不太愉快的余味。
 		]]></selfUse>
 		<otherUse><![CDATA[
-		[npc.Name] [npc.verb(pop)] the cap off the bottle of perry, before bringing it up to [npc2.namePos] [npc2.lips] and making [npc2.herHim] gulp down the golden liquid. Quickly finishing off the entire bottle, [npc2.name] [npc2.verb(notice)] a faint, musky dryness permeating through the sweet liquid, which lingers for some time as a slightly unpleasant aftertaste.
+		[npc.Name]打开了梨子苹果酒瓶的瓶盖，然后将瓶子递给[npc2.name]，让[npc2.herHim]喝下这金色的液体。[npc2.herHim]迅速喝完整瓶，[npc2.name]察觉到淡淡的味道浓重的干燥感贯穿在甜液体中，留下了一段时间的稍微不太愉快的余味。
 		]]></otherUse>
 	</useDescriptions>
 

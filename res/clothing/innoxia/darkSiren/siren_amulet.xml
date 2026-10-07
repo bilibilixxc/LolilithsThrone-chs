@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <clothing>
 	<coreAttributes>
 		<value>10000</value>
-		<determiner><![CDATA[the]]></determiner>
-		<name><![CDATA[Dark Siren's Amulet]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Dark Siren's Amulets]]></namePlural>
-		<description><![CDATA[An enchanted amulet, created by the demon calling herself 'The Dark Siren'. Its vast power is enough to make a formidable sorceress out of even the most arcane-impaired human.]]></description>
+		<determiner><![CDATA[​]]></determiner>
+		<name><![CDATA[暗夜塞壬的护符]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[暗夜塞壬的护符]]></namePlural>
+		<description><![CDATA[一个被施过法的护符，被自称为“暗夜塞壬”的恶魔创造。它蕴含的庞大的力量足以使奥术能力受损得支离破碎的人变成一个令人敬畏的术士。]]></description>
 		<physicalResistance>0</physicalResistance>
 		<femininity>ANDROGYNOUS</femininity>
 		<slot>NECK</slot>
@@ -67,27 +66,27 @@
 
 	
   <replacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(drape)] the amulet's chain around [npc.her] neck, before letting out an evil laugh as [npc.she] [npc.verb(feel)] the immense, corruptive power seeping into [npc.her] mind.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(drape)] the amulet's chain around [npc2.namePos] neck, which causes [npc2.herHim] to let out an evil laugh as [npc2.she] [npc2.verb(feel)] the immense, corruptive power seeping into [npc2.her] mind.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before draping the amulet's chain around [npc2.her] neck. Almost immediately, [npc2.name] [npc2.verb(let)] out an evil laugh as [npc2.she] [npc2.verb(feel)] the immense, corruptive power seeping into [npc2.her] mind.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]将护符的链子环绕在[npc.her]的脖子上，[npc.she]感到一股巨大的力量在侵蚀[npc.her]的思维并发出了邪恶的笑声。
+]]></self>
+    <other><![CDATA[
+[npc.Name]将护符的链子挂在[npc2.namePos]的脖子上，[npc2.she]感到一股巨大的力量在侵蚀[npc2.her]的思维并发出了邪恶的笑声。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]牢牢抓住[npc2.name]，将护符的链子挂在[npc2.her]的脖子上。几乎是在一瞬间，[npc2.she]感到一股巨大的力量在侵蚀[npc2.her]的思维并发出了邪恶的笑声。
+]]></otherRough>
   </replacementText>
 
   <displacementText type="REMOVE_OR_EQUIP">
-    <self>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of [npc.her] amulet's chain, before lifting it up and over [npc.her] head.]]>
-    </self>
-    <other>
-      <![CDATA[[npc.Name] [npc.verb(take)] hold of the amulet's chain, before lifting it up and over [npc2.namePos] head.]]>
-    </other>
-    <otherRough>
-      <![CDATA[[npc.Name] roughly [npc.verb(grab)] the amulet's chain, before yanking it up and over [npc2.namePos] head.]]>
-    </otherRough>
+    <self><![CDATA[
+[npc.Name]抓住[npc.her]的护符的链子，然后把它举过[npc.her]的头顶。
+]]></self>
+    <other><![CDATA[
+[npc.Name]抓住[npc.her]的护符的链子，然后把它举过[npc2.namePos]的头顶。
+]]></other>
+    <otherRough><![CDATA[
+[npc.Name]粗暴的抓住了护符的链子，猛地把它从[npc2.namePos]的头上拉下来。
+]]></otherRough>
   </displacementText>
 	
 </clothing>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <coveringType>
 	<category>MAIN_SKIN</category>
-	<determiner><![CDATA[a mass of]]></determiner>
-	<name><![CDATA[tentacle]]></name>
-	<namePlural pluralByDefault="true"><![CDATA[tentacles]]></namePlural>
+	<determiner><![CDATA[浓密]]></determiner>
+	<name><![CDATA[触手]]></name>
+	<namePlural pluralByDefault="true"><![CDATA[触手]]></namePlural>
 	<naturalCoveringModifiers>
 		<modifier>SMOOTH</modifier>
 	</naturalCoveringModifiers>

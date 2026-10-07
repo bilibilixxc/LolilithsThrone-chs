@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <dialogueNodes>
 
-    <scene id ="horny_angel">
+    <scene id="horny_angel">
         <author><![CDATA[AceXp]]></author>
         <preParsingEffects><![CDATA[
 			[#flags.setFlag(FLAG_acexp_horny_angel_found, true)]
@@ -20,9 +20,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Go for it ([style.moneyFormatUncoloured(10000, span)])]]></responseTitle>
+                <responseTitle><![CDATA[试一试 ([style.moneyFormatUncoloured(10000, span)])]]></responseTitle>
                 <responseTooltip><![CDATA[
-					You can't afford to pay Angel that kind of money right now...
+					你现在付不起安吉尔要的那么多钱……
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[null]]></nextDialogue>
                 <effects/>
@@ -33,9 +33,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Go for it ([style.moneyFormat(10000, span)])]]></responseTitle>
+                <responseTitle><![CDATA[试一试 ([style.moneyFormat(10000, span)])]]></responseTitle>
                 <responseTooltip><![CDATA[
-					You just can't say no and happily pay the ten thousand flames which Angel is asking of you in order to have sex with her.
+					你无法拒绝，并开心地付给安吉尔与她做爱所需的一万火币。
                 ]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
@@ -76,12 +76,12 @@
             <response>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[2]]></index>
-                <responseTitle><![CDATA[Refuse]]></responseTitle>
+                <responseTitle><![CDATA[拒绝]]></responseTitle>
                 <responseTooltip><![CDATA[
 					#IF(pc.getMoney()<10000)
-						You simply can't afford to pay that kind of money to have sex with Angel, so have no option but to refuse her offer...
+						你只是付不起与安吉尔做爱要的那么多钱，所以没得选只能拒绝她的提议……
 					#ELSE
-						You're not willing to pay that kind of money to have sex with Angel, so decide to refuse her offer...
+						你不想花那么多钱去和安吉尔做爱，所以决定拒绝她的提议……
 					#ENDIF
 				]]></responseTooltip>
                 <nextDialogue><![CDATA[acexp_dominion_angel_office_leave]]></nextDialogue>
@@ -93,19 +93,19 @@
         </responses>
     </scene>
 
-    <scene id ="leave">
+    <scene id="leave">
         <author><![CDATA[AceXp]]></author>
         <content/>
         <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
         <continuesDialogue>false</continuesDialogue>
         <travelDisabled>false</travelDisabled>
-		<responses />
+		<responses/>
     </scene>
 
-    <scene id ="after_sex">
+    <scene id="after_sex">
         <author><![CDATA[AceXp]]></author>
-        <title><![CDATA[Finished]]></title>
-        <tooltip><![CDATA[Having satisfied you, Angel smiles and tells you that her work here is done...]]></tooltip>
+        <title><![CDATA[结束]]></title>
+        <tooltip><![CDATA[满足了你之后，安吉尔微微一笑告诉你她还有工作要做……]]></tooltip>
         <content folderPath="txt/acexp/dominion/angel_office">AFTER_SEX</content>
         <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
         <continuesDialogue>false</continuesDialogue>
@@ -115,8 +115,8 @@
                 <availabilityConditional><![CDATA[true]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Continue]]></responseTitle>
-                <responseTooltip><![CDATA[Continue on your way.]]></responseTooltip>
+                <responseTitle><![CDATA[继续]]></responseTitle>
+                <responseTooltip><![CDATA[继续走路。]]></responseTooltip>
                 <nextDialogue><![CDATA[acexp_dominion_angel_office_leave]]></nextDialogue>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>
                 <effects><![CDATA[
@@ -130,7 +130,7 @@
 	
 	<!-- This dialogue node is only used in the hard-coded RedLightDistrict.java file, so that access can be gained to the appropriate sex manager without having to rewrite it in a hard-coded format. -->
 	
-    <scene id ="misc_sex_access_node">
+    <scene id="misc_sex_access_node">
         <author><![CDATA[AceXp]]></author>
         <content/>
         <secondsPassed minutes="true"><![CDATA[5]]></secondsPassed>
@@ -146,12 +146,12 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Sex ([style.moneyFormatUncoloured(10000, span)])]]></responseTitle>
+                <responseTitle><![CDATA[做爱 ([style.moneyFormatUncoloured(10000, span)])]]></responseTitle>
                 <responseTooltip><![CDATA[
 					#IF(flags.hasFlag(FLAG_acexp_angel_daily_sex))
-						You've already had sex with Angel, and she doesn't have time for another session today...
+						你已经和安吉尔做过爱了，她没有时间在今天再干一场……
 					#ELSE
-						You can't afford to pay Angel that kind of money right now...
+						你现在付不起安吉尔那么多钱……
 					#ENDIF
                 ]]></responseTooltip>
                 <nextDialogue><![CDATA[null]]></nextDialogue>
@@ -163,9 +163,9 @@
                 ]]></availabilityConditional>
                 <responseTabIndex><![CDATA[0]]></responseTabIndex>
                 <index><![CDATA[1]]></index>
-                <responseTitle><![CDATA[Sex ([style.moneyFormat(10000, span)])]]></responseTitle>
+                <responseTitle><![CDATA[做爱 ([style.moneyFormat(10000, span)])]]></responseTitle>
                 <responseTooltip><![CDATA[
-					You just can't say no and happily pay the ten thousand flames which Angel is asking of you in order to have sex with her.
+					你无法拒绝，并开心地付给安吉尔与她做爱所需的一万火币。
                 ]]></responseTooltip>
                 <nextDialogue/>
                 <secondsPassed minutes="true"><![CDATA[2]]></secondsPassed>

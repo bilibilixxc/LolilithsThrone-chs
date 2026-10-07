@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>FIELD_CITY</worldRegion>
-	<name><![CDATA[Pathway]]></name>
-	<tooltipDescription><![CDATA[The wide pathway which snakes through the Amazons' camp links the hundreds of tents with one another.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[on the pathway in the Amazons' camp]]></virginityLossDescription>
+	<name><![CDATA[小路]]></name>
+	<tooltipDescription><![CDATA[一条宽敞的小径将亚马逊营地中数百个帐篷连接起来。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在亚马逊人营地里的小路上]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_GREY</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>

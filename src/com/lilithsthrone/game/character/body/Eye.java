@@ -80,16 +80,16 @@ public class Eye implements BodyPartInterface {
 		}
 		
 		if (type == getType()) {
-			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name] already [npc.has] the [npc.eyes] of [npc.a_eyeRace], so nothing happens...)]</p>");
+			return UtilText.parse(owner, "<p style='text-align:center;'>[style.colourDisabled([npc.Name]已经有[npc.a_eyeRace]的[npc.eyes]了，所以无事发生……)]</p>");
 		}
 		
 		StringBuilder sb = new StringBuilder();
 
 		sb.append("<p>");
 		if(owner.isArmMovementHindered()) {
-			sb.append("[npc.NamePos] [npc.eyes] suddenly grow hot and itchy, causing [npc.herHim] to instinctively scrunch them up tight. ");
+			sb.append("[npc.NamePos]的[npc.eyes]突然变得又热又痒，使[npc.herHim]本能地闭紧双眼。");
 		} else {
-			sb.append("[npc.NamePos] [npc.eyes] suddenly grow hot and itchy, and [npc.she] instinctively [npc.verb(scrunch)] them up tight as [npc.she] [npc.verb(reach)] up to rub at them. ");
+			sb.append("[npc.NamePos]的[npc.eyes]突然变得又热又痒，使[npc.she]本能地闭紧双眼，伸手去揉。");
 		}
 
 		// Parse existing content before transformation:
@@ -120,7 +120,7 @@ public class Eye implements BodyPartInterface {
 		eyePairs = Math.max(1, Math.min(eyePairs, MAXIMUM_PAIRS));
 		
 		if(owner.getEyePairs() == eyePairs) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		boolean removingExtraEyes = owner.getEyePairs() > eyePairs;
@@ -129,18 +129,18 @@ public class Eye implements BodyPartInterface {
 		if(removingExtraEyes) {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads over [npc.namePos] [npc.face], before moving up and concentrating in [npc.her] [npc.eyes]."
-						+ " [npc.She] [npc.verb(scrunch)] them shut and [npc.verb(let)] out an involuntary cry as [npc.she] [npc.verb(feel)] some of them [style.boldShrink(disappearing)] into the [npc.faceSkin] above [npc.her] main pair.<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric([npc.a_eyes])]."
+						+ "刺痛感遍布[npc.namePos]的[npc.face]，随后转移集中在[npc.her]的[npc.eyes]上。"
+						+ "[npc.She]猛地合眼，下意识喊叫出声，同时感觉到有些[style.boldShrink(消失)]进了[npc.her]主眼下的[npc.faceSkin]皮肤里。<br/>"
+						+ "片刻过后，[npc.sheIs]的脸上得到了[style.boldTfGeneric([npc.a_eyes])]。"
 					+ "</p>");
 			
 		} else {
 			return UtilText.parse(owner,
 					"<p>"
-						+ "A tingling feeling spreads over [npc.namePos] [npc.face], before moving up and concentrating in [npc.her] [npc.eyes]."
-						+ " [npc.She] [npc.verb(scrunch)] them shut and [npc.verb(let)] out an involuntary cry as [npc.she] [npc.verb(feel)] the alarming sensation"
-							+ " of new [npc.eyes] [style.boldGrow(growing)] out of the [npc.faceSkin] above [npc.her] main pair.<br/>"
-						+ "After a few moments, [npc.sheIs] left with [style.boldTfGeneric([npc.a_eyes])]."
+						+ "刺痛感遍布[npc.namePos]的[npc.face]，随后转移集中在[npc.her]的[npc.eyes]上。"
+						+ "[npc.She]猛地合眼，下意识喊叫出声，一股令人不安的感觉蔓延在"
+							+ "[npc.her]主眼下的[npc.faceSkin]处，也就是新[npc.eyes][style.boldGrow(长出)]的地方。<br/>"
+						+ "片刻过后，[npc.sheIs]的脸上得到了[style.boldTfGeneric([npc.a_eyes])]。"
 					+ "</p>");
 		}
 	}
@@ -155,15 +155,15 @@ public class Eye implements BodyPartInterface {
 			return "";
 		}
 		if(owner.getIrisShape() == irisShape) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 
 		this.irisShape = irisShape;
 		
 		return UtilText.parse(owner,
 				"<p>"
-					+ "An irritable itchiness suddenly breaks out around [npc.namePos] [npc.eyes], but it passes so quickly that [npc.she] [npc.do]n't even have time to reach up and rub at them.<br/>"
-					+ "[npc.Name] now [npc.has] [style.boldTfGeneric([npc.irisShape] irises)]!"
+					+ "[npc.namePos]的[npc.eyes]周围突然瘙痒难耐，但感觉很快就过去了，[npc.she]甚至来不及伸手揉揉。<br/>"
+					+ "[npc.Name]现在已有[style.boldTfGeneric([npc.irisShape]的瞳孔)]！"
 				+ "</p>");
 	}
 
@@ -177,15 +177,15 @@ public class Eye implements BodyPartInterface {
 			return "";
 		}
 		if(owner.getPupilShape() == pupilShape) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 
 		this.pupilShape = pupilShape;
 		
 		return UtilText.parse(owner,
 				"<p>"
-					+ "An irritable itchiness suddenly breaks out around [npc.namePos] [npc.eyes], but it passes so quickly that [npc.she] [npc.do]n't even have time to reach up and rub at them.<br/>"
-					+ "[npc.Name] now [npc.has] [style.boldTfGeneric([npc.pupilShape] pupils)]!"
+					+ "[npc.namePos]的[npc.eyes]周围突然瘙痒难耐，但感觉很快就过去了，[npc.she]甚至来不及伸手揉揉。<br/>"
+					+ "[npc.Name]现在已有[style.boldTfGeneric([npc.pupilShape]的瞳孔)]！"
 				+ "</p>");
 	}
 	
@@ -193,7 +193,7 @@ public class Eye implements BodyPartInterface {
 		if(owner.getCovering(owner.getEyeCovering()).equals(covering)
 				|| owner.getCovering(BodyCoveringType.EYE_PUPILS).equals(covering)
 				|| owner.getCovering(BodyCoveringType.EYE_SCLERA).equals(covering)) {
-			return "<p style='text-align:center;'>[style.colourDisabled(Nothing happens...)]</p>";
+			return "<p style='text-align:center;'>[style.colourDisabled(无事发生……)]</p>";
 		}
 		
 		StringBuilder sb = new StringBuilder();
@@ -202,23 +202,23 @@ public class Eye implements BodyPartInterface {
 		
 		sb.append(
 				"<p>"
-					+ "[npc.NamePos] vision goes blurry for just a moment, and after blinking a few times, [npc.her] [npc.eyes] suddenly shift and change colour.<br/>"
-					+ "[npc.She] now [npc.has] ");
+					+ "[npc.NamePos]的视线瞬间模糊，眨了好几下眼后，[npc.her]的[npc.eyes]突然发现转变，连颜色都改变了。<br/>"
+					+ "[npc.She]现已拥有");
 		
 		if(covering.getPattern() == CoveringPattern.EYE_IRISES_HETEROCHROMATIC) {
-			sb.append("heterochromatic [npc.irisPrimaryColour(true)]-and-[npc.irisSecondaryColour(true)] [npc.irisShape] irises, ");
+			sb.append("异色的[npc.irisPrimaryColour(true)]和[npc.irisSecondaryColour(true)][npc.irisShape]的虹膜，");
 		} else {
-			sb.append("[npc.irisPrimaryColour(true)] [npc.irisShape] irises ");
+			sb.append("[npc.irisPrimaryColour(true)][npc.irisShape]的虹膜");
 		}
 		if(covering.getPattern() == CoveringPattern.EYE_PUPILS_HETEROCHROMATIC) {
-			sb.append("with heterochromatic [npc.pupilPrimaryColour(true)]-and-[npc.pupilSecondaryColour(true)] [npc.pupilShape] pupils ");
+			sb.append("有着[npc.pupilPrimaryColour(true)]和[npc.pupilSecondaryColour(true)][npc.pupilShape]异色瞳孔");
 		} else {
-			sb.append("with [npc.pupilPrimaryColour(true)] [npc.pupilShape] pupils ");
+			sb.append("有着[npc.pupilPrimaryColour(true)][npc.pupilShape]的瞳孔");
 		}
 		if(covering.getPattern() == CoveringPattern.EYE_SCLERA_HETEROCHROMATIC) {
-			sb.append("and heterochromatic [npc.scleraPrimaryColour(true)]-and-[npc.scleraSecondaryColour(true)] sclerae.</p>");
+			sb.append("和异色[npc.scleraPrimaryColour(true)]和[npc.scleraSecondaryColour(true)]巩膜。</p>");
 		} else {
-			sb.append("and [npc.scleraPrimaryColour(true)] sclerae.</p>");
+			sb.append("以及[npc.scleraPrimaryColour(true)]巩膜。</p>");
 		}
 		
 		return UtilText.parse(owner, sb.toString());

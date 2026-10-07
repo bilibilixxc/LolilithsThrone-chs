@@ -40,7 +40,7 @@ public class SlaveAuctionBidder {
 
 	public String getName(boolean withDeterminer) {
 		if(withDeterminer) {
-			return UtilText.generateSingularDeterminer(name)+" "+name;
+			return UtilText.generateSingularDeterminer(name)+name;
 		}
 		return name;
 	}
@@ -96,22 +96,22 @@ public class SlaveAuctionBidder {
 		Gender gender = Util.randomItemFrom(genders);
 		
 		List<String> biddingComments = Util.newArrayListOfValues(
-				"I deserve a new fucktoy...",
-				"My slaves need a new toy...",
-				UtilText.parse(slave, "I could put [npc.herHim] to work in the brothel..."),
-				UtilText.parse(slave, "I could put [npc.herHim] to work in the milking sheds..."),
-				UtilText.parse(slave, "[npc.She] looks like [npc.she]'d make a good maid..."));
+				"这肉便器是我的……",
+				"我的奴隶想要新玩具了……",
+				UtilText.parse(slave, "我可以让[npc.herHim]在妓院里工作……"),
+				UtilText.parse(slave, "我打算让[npc.herHim]去挤奶棚工作……"),
+				UtilText.parse(slave, "[npc.She]看起来像是个不错的女仆……"));
 		
 		List<String> failedBidComments = Util.newArrayListOfValues(
-				"I can't afford that...",
-				"That's too much for me...",
-				"Maybe I'll bid on the next one...");
+				"我付不起了……",
+				"太高了……",
+				"要不还是抢下一个吧……");
 		
 		List<String> successfulBidComments = Util.newArrayListOfValues(
-				UtilText.parse(slave, "I'm going to break [npc.herHim] in as soon as I get home..."),
-				UtilText.parse(slave, "I'll get my other slaves to break [npc.herHim] in..."),
-				UtilText.parse(slave, "I'm sure [npc.she]'ll love [npc.her] new life in my brothel..."),
-				UtilText.parse(slave, "I'm sure [npc.she]'ll love [npc.her] new life in the milking sheds..."));
+				UtilText.parse(slave, "我一回家就开始驯服[npc.herHim]……"),
+				UtilText.parse(slave, "我会让我其他的奴隶驯服[npc.herHim]……"),
+				UtilText.parse(slave, "我相信[npc.she]会喜欢在我的妓院里的新生活……"),
+				UtilText.parse(slave, "我相信[npc.she]会喜欢在挤奶棚里的新生活……"));
 		
 		return new SlaveAuctionBidder(race, gender, biddingComments, failedBidComments, successfulBidComments);
 	}

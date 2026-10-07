@@ -74,8 +74,8 @@ public class Hannah extends NPC {
 	}
 	
 	public Hannah(boolean isImported) {
-		super(isImported, new NameTriplet("Hannah"), "Wilkinson",
-				"Hannah works at the gym, 'Pix's Playground' as a boxing instructor.",
+		super(isImported, new NameTriplet("汉娜"), "威尔金森",
+				"汉娜在健身房“皮克斯的操练场”工作，担任拳击教练。",
 				31, Month.AUGUST, 22,
 				40,
 				Gender.F_V_B_FEMALE, Subspecies.getSubspeciesFromId("innoxia_hyena_subspecies_spotted"), RaceStage.GREATER,

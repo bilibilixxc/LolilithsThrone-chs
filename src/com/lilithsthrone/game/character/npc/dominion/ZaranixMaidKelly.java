@@ -83,8 +83,8 @@ public class ZaranixMaidKelly extends NPC {
 	}
 	
 	public ZaranixMaidKelly(boolean isImported) {
-		super(isImported, new NameTriplet("Kelly"), "Lasiellemartu",
-				"One of Zaranix's succubi maid twins, Kelly is assigned by her master to keep the first floor clean.",
+		super(isImported, new NameTriplet("凯丽"), "拉谢尔马尔图",
+				"凯丽是扎拉尼克斯的双胞胎魅魔女仆之一，负责打扫一楼的卫生。",
 				26, Month.SEPTEMBER, 20,
 				10,
 				null, null, null,
@@ -108,7 +108,7 @@ public class ZaranixMaidKelly extends NPC {
 			this.resetPerksMap(true);
 		}
 		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.5.1")) {
-			this.setDescription("One of Zaranix's succubi maid twins, Kelly is assigned by her master to keep the first floor clean.");
+			this.setDescription("凯丽是扎拉尼克斯的双胞胎魅魔女仆之一，负责打扫一楼的卫生。");
 			this.setPersonalityTraits(
 					PersonalityTrait.KIND,
 					PersonalityTrait.LEWD);
@@ -291,10 +291,10 @@ public class ZaranixMaidKelly extends NPC {
 	@Override
 	public String getName(boolean applyNameAlteringEffects) {
 		if(!playerKnowsName) {
-			return "Zaranix's Maid";
+			return "扎拉尼克斯的女仆";
 			
 		} else {
-			return "Kelly";
+			return "凯丽";
 		}
 	}
 	
@@ -351,9 +351,9 @@ public class ZaranixMaidKelly extends NPC {
 		return "<p>"
 				+ UtilText.parse(target,
 						UtilText.returnStringAtRandom(
-						"Letting out a desperate cry, Kelly swings her little feather duster at [npc.name], brushing the feathers over [npc.her] face!",
-						"With a little shout, Kelly tickles her feather duster over [npc.namePos] torso!",
-						"Kelly lets out a little cry as she brushes her feather duster over [npc.namePos] torso!"))
+						"凯丽发出一声急切的呻吟，朝[npc.Name]挥舞着她的小羽毛掸，羽毛拂过[npc.her]的脸！",
+						"凯丽轻声呻吟，用羽毛掸轻轻地挠着[npc.namePos]的躯体！",
+						"凯丽轻声叫嚷，用羽毛掸拂过[npc.namePos]的躯体！"))
 			+ "</p>";
 	}
 
@@ -361,8 +361,8 @@ public class ZaranixMaidKelly extends NPC {
 	public String getSpellDescription() {
 		return "<p>"
 				+ UtilText.returnStringAtRandom(
-						"Kelly grips her feather duster to her chest and cries out as she casts a spell!",
-						"Kelly thrusts her feather duster up into the air as she casts a spell!") 
+						"凯丽将羽毛掸在胸前一横，叫喊着施起咒来！",
+						"凯丽一边施咒一边将她的羽毛掸子抛向空中！") 
 			+ "</p>";
 	}
 
@@ -370,12 +370,12 @@ public class ZaranixMaidKelly extends NPC {
 	public String getSeductionDescription(GameCharacter target) {
 		return "<p>"
 				+ UtilText.returnStringAtRandom(
-						"Kelly pulls the bottom of her maid's dress up a little, moaning, [kelly.speech(If you beat me, there'd be nothing stopping you from ravishing me!)]",
-						"With a lewd moan, Kelly snakes a hand under her dress, moaning [kelly.speech(~Ah!~ You're so powerful! I'm getting wet already!)]",
-						"Biting her lip, Kelly looks up into your eyes, and you hear a lewd moan echoing around inside of your head, [kelly.speech(I hope you beat me! Show me no mercy!)]",
-						"With an incredibly lewd moan, Kelly runs her hands up the length of her body to cup her [kelly.cupSize]-cup breasts, [kelly.speech(~Mmm!~ If I fail, there'd be nothing stopping you from fucking me!)]",
-						"Kelly makes a show of staggering back, before desperately pressing her hands down between her legs, [kelly.speech(~Aah!~ I can just imagine all the lewd things you'd do to me if I fall here!)]",
-						"Kelly's [npc.breasts+] starts to heave up and down as she pants, [kelly.speech(Oh no! I'm feeling weak already! Y-You're sure to take advantage of me if I lose!)]") 
+						"凯丽把女仆裙的下摆拉起来一截，而后呻吟起来，[kelly.speech(如果你能击败我，羞辱也好、强奸也罢，我就听你任意摆布！)]",
+						"凯丽发出淫荡的呻吟，把手探到裙子下面，呻吟道，[kelly.speech(~呃啊！~ 你真厉害！我已经湿透了！)]",
+						"凯丽咬着嘴唇，抬眼对上你的眼睛。你听到淫荡的呻吟回荡在你的脑海里，[kelly.speech(求你毫不留情地蹂躏我！求求你！)]",
+						"凯丽发出难以置信的浪叫声，双手靠近上身，握住她的[kelly.cupSize]杯乳房，[kelly.speech(~嗯姆！~ 如果我输了，你就可以无所顾忌地操我哦！)]",
+						"凯丽做出一副蹒跚后退的样子，然后饥渴地将双手放在两腿之间， [kelly.speech(~啊~！我都可以想象得到，如果我在这里摔倒了，那你会对我做多少涩情的事情！)]",
+						"凯丽喘着气，[npc.breasts+]随着呼吸上下起伏，[kelly.speech(哦，不！我已经感到累了！如果我输了，你，你绝对会占我便宜的！)]") 
 			+ "</p>";
 	}
 	
@@ -393,50 +393,50 @@ public class ZaranixMaidKelly extends NPC {
 		}
 	}
 	
-	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("Victory", "", true) {
+	public static final DialogueNode AFTER_COMBAT_VICTORY = new DialogueNode("胜利", "", true) {
 
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Kelly staggers back, gripping the edge of a nearby cabinet as she collapses against the wall."
-						+ " She doesn't seem all that upset at having failed to defend her master's home, as she looks up at you and moans,"
-						+ " [kelly.speech(~Ah!~ Oh no! I'm totally defenceless! ~Mmm!~ Nothing can stop you from having your way with me now!)]"
+						+ "凯利摇摇晃晃地向后退去，她紧紧抓住身边柜子的边缘处，然后摊倒在墙上。"
+						+ "她尽管没能保卫主人的家，但似乎并不失落。她抬头看向你，口中呻吟着，"
+						+ "[kelly.speech(~啊哦！~ 哦不！我完全没防备呢！~唔姆！~ 现在没什么能阻止你控制我啦！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "It's quite obvious that she wants to have sex with you, and she continues to moan and pant with desire as she leans back against the wall."
-						+ " Unable to wait even two seconds to hear your reply, her hands slip under her dress, and she starts shamelessly masturbating right there in front of you."
+						+ "她瘫软着倚靠在墙边，嘴里不断地发出充满欲望的呻吟和喘息——很明显，她想和你做爱。"
+						+ "甚至无法多忍耐几秒钟等到你的回复，她的手指就滑到了衣服下面，开始无耻地在你面前手淫起来。"
 					+ "</p>"
 					+ "<p>"
-						+ "In her current lust-filled state, Kelly isn't going to pose much of a threat from now on, so you could either do what she obviously wants you to do, and have sex with her,"
-							+ " or simply ignore her and continue on your way."
+						+ "凯丽满腔欲火，不会构成太大的威胁，所以你可以遂了她的愿——和她做爱，"
+							+ "也可以干脆无视她，继续做自己的事。"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue exploring Zaranix's house.", PlaceType.ZARANIX_FF_MAID.getDialogue(false));
+				return new Response("继续", "继续探索扎拉尼克斯家。", PlaceType.ZARANIX_FF_MAID.getDialogue(false));
 				
 			} if(index==2) {
-				return new ResponseSex("Use Kelly", "Have some fun with the horny maid.",
+				return new ResponseSex("使用凯丽", "和诱人女仆做点有意思的事。",
 						true, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getPlayer()),
 								Util.newArrayListOfValues(Main.game.getNpc(ZaranixMaidKelly.class)),
 						null,
 						null), AFTER_SEX_VICTORY, "<p>"
-							+ "It doesn't look like any of the other maids of the household will interrupt you, so you decide to take this opportunity to have a little fun with Kelly."
-							+ " Stepping over to where she's leaning back against the wall, you reach forwards and take hold of her arm, before pulling her hand away from her groin."
-							+ " Denied the freedom to get herself off, the horny maid looks up into your eyes, and you see them filled with a desperate, burning lust."
+							+ "看起来在这里其他女仆不会打扰你，所以你决定趁这个机会和凯丽找点乐子。"
+							+ "走向她瘫倒的地方，你伸手捉住她的手臂，把她的手从私处上拉开。"
+							+ "饥渴的女仆双手被缚，她抬头与你对视，眼中充满了渴望，欲望的火焰在其中熊熊燃烧。"
 						+ "</p>"
 						+ "<p>"
-							+ "She pushes herself off from the wall, wrapping her arms around your back and desperately pressing her [kelly.lips+] against yours."
-							+ " You reciprocate the gesture, and after spending a few moments of sliding your tongues into one another's mouths, you pull back, grinning..."
+							+ "她把自己从墙边推离，双臂环绕在你的背上，迫切地把她[kelly.lips+]贴在你的嘴上。"
+							+ "你也做出了回应，舌头在彼此的嘴里纠缠了片刻后，你们抽回舌头，淫笑起来……"
 						+ "</p>");
 				
 			} else if(index==3) {
-				return new ResponseSex("Submit",
-						"You can't bring yourself to take the dominant role, but you <i>do</i> want to have sex with Kelly. Perhaps if you submitted, she'd be willing to fuck you?",
+				return new ResponseSex("顺从",
+						"你无法让自己成为支配方，但你<i>确实</i>想和凯丽做爱。或许你可以顺从，她会愿意操你吗？",
 						Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE), null, CorruptionLevel.THREE_DIRTY, null, null, null,
 						true, false,
 						new SMGeneric(
@@ -444,21 +444,21 @@ public class ZaranixMaidKelly extends NPC {
 								Util.newArrayListOfValues(Main.game.getPlayer()),
 						null,
 						null), AFTER_SEX_VICTORY, "<p>"
-							+ "Not willing to take the dominant role, but with a deep desire to have sex with the horny succubus, you walk up to where Kelly's collapsed against the wall, and sigh,"
-							+ " [pc.speech(Kelly... Erm... If you're feeling a little horny, perhaps you could use me? I mean, I-)]"
+							+ "你不愿意当支配方的角色，但又很想和这个淫荡的魅魔做爱，你走到凯丽靠墙坐下的地方，小声说道，"
+							+ "[pc.speech(凯丽……呃唔……如果你想要，你要不要用用我？我是说，我——)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Despite the fact that you're a stranger in her master's house, Kelly looks up at you with an intense, burning passion in her eyes."
-							+ " Sliding her hand out from under her dress, she immediately interrupts your sentence as she grabs your head and pulls you into a desperate kiss."
+							+ "尽管你是她主人屋子里的一个陌生人，但凯丽还是抬起头看着你，眼神中充满了强烈而炽热的欲望。"
+							+ "凯丽打断了你的话，她将手从裙下抽出，抱住你的后脑，将你拉入一个漫长的吻。"
 						+ "</p>"
 						+ "<p>"
-							+ "You reciprocate the gesture, but only spend a few moments sliding your tongues into one another's mouths before Kelly pulls back, moaning,"
-							+ " [kelly.speech(Oh yes! Fuck... I'm so fucking horny! I <i>need</i> you!)]"
+							+ "你做出了回应，但凯丽只亲吻了片刻，就退出去呻吟道，"
+							+ "[kelly.speech(哦，好棒！操……我太他妈想要了！我<i>想要</i>你！)]"
 						+ "</p>");
 				
 			} else if (index == 4) {
-				return new Response("Transformations",
-						"Get Kelly to use [kelly.her] demonic powers to transform [kelly.herself]...",
+				return new Response("转化",
+						"让凯丽使用[kelly.her]的恶魔能力来转化自己……",
 						BodyChanging.BODY_CHANGING_CORE){
 					@Override
 					public void effects() {
@@ -473,7 +473,7 @@ public class ZaranixMaidKelly extends NPC {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("Continue", "", true) {
+	public static final DialogueNode AFTER_SEX_VICTORY = new DialogueNode("继续", "", true) {
 
 		@Override
 		public String getContent() {
@@ -481,29 +481,29 @@ public class ZaranixMaidKelly extends NPC {
 			if(Main.sex.getNumberOfOrgasms(Main.game.getNpc(ZaranixMaidKelly.class)) >= Main.game.getNpc(ZaranixMaidKelly.class).getOrgasmsBeforeSatisfied()) {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "With a satisfied sigh, Kelly slumps back against the wall,"
-							+ " [kelly.speech(~Ah!~ That was good...)]"
+							+ "凯丽满足地叹息着，向后靠在墙上，"
+							+ "[kelly.speech(~哈啊！~ 好舒服……)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Despite the fact that you only just brought her to an orgasm, her hands slip down between her legs, and, with an exceptionally lewd moan, she starts fingering herself."
-							+ " It's quite clear from her actions that she's still overwhelmed by the arousing power of your aura, so it would be safe to leave her behind and continue in your exploration of Zaranix's home."
+							+ "尽管你刚刚让她高潮了一次，她把手滑到两腿之间，口中不断逸出渴求的淫荡呻吟，开始指交自己。"
+							+ "她的动作暴露了她仍被你的灵气唤起的力量所压倒。她留在这里不会造成威胁。你可以继续探索扎拉尼克斯的家。"
 						+ "</p>");
 				
 			} else {
 				UtilText.nodeContentSB.append(
 						"<p>"
-							+ "With a desperate moan, Kelly slumps back against the wall,"
-							+ " [kelly.speech(~Ah!~ I need more!)]"
+							+ "凯丽急切地呻吟着，向后靠在墙上，"
+							+ "[kelly.speech(~哈啊！~ 我还想要！)]"
 						+ "</p>"
 						+ "<p>"
-							+ "Her hands instantly slip down between her legs, and, with an exceptionally lewd moan, she starts fingering herself."
-							+ " It's quite clear from her actions that she's still overwhelmed by the arousing power of your aura, so it would be safe to leave her behind and continue in your exploration of Zaranix's home."
+							+ "她立刻把手滑到两腿之间，口中不断逸出渴求的淫荡呻吟，开始指交自己。"
+							+ "她的动作暴露了她仍被你的灵气唤起的力量所压倒。她留在这里不会造成威胁。你可以继续探索扎拉尼克斯的家。"
 						+ "</p>");
 			}
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-						+ "Conscious of the fact that there are other maids to look out for, you prepare to set off further into the house..."
+						+ "你考虑到还有其他女仆需要担心，便准备向房子的更深处前进……"
 					+ "</p>");
 			
 			return UtilText.nodeContentSB.toString();
@@ -512,7 +512,7 @@ public class ZaranixMaidKelly extends NPC {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Continue", "Continue exploring Zaranix's house.", PlaceType.ZARANIX_FF_MAID.getDialogue(false));
+				return new Response("继续", "继续探索扎拉尼克斯家。", PlaceType.ZARANIX_FF_MAID.getDialogue(false));
 				
 			} else {
 				return null;
@@ -520,28 +520,28 @@ public class ZaranixMaidKelly extends NPC {
 		}
 	};
 	
-	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("Defeated", "", true) {
+	public static final DialogueNode AFTER_COMBAT_DEFEAT = new DialogueNode("被击败", "", true) {
 
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Kelly proves to be too powerful for you to handle, and, letting out a defeated cry, you stagger across the corridor and lean against the wall for support."
-						+ " Looking up, you see the ivory-skinned maid pouting at you as she steps forwards,"
-						+ " [kelly.speech(Aww... I was sort of hoping you'd put up a bit more of a fight... That was no fun at all!)]"
+						+ "凯丽的力量太大了，你完全无法反抗，只能发出一声泄气的哀嚎，你摇摇晃晃地穿过走廊，靠在墙上。"
+						+ "你抬起头，看到象牙般白皙肌肤的女仆撅着嘴向你走来，"
+						+ "[kelly.speech(哦吼吼……我还想你能更能打一点呢……根本没尽兴呢~！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "You're powerless to resist as she moves right up beside you, wrapping her arms around your back and pulling you into her [kelly.breasts+] as she giggles,"
-						+ " [kelly.speech(Looks like I'll have to get my fun in a different way...)]"
+						+ "她移动到你身边，你无力反抗，只能任由她坏笑着环抱住你并把你摁向[kelly.breasts+]。"
+						+ "[kelly.speech(看起来我得换个方式找点乐子……)]"
 					+ "</p>"
 					+ "<p>"
-						+ "With that, she suddenly presses her [kelly.lips+] against yours, pulling you into a passionate kiss as her demonic tail snakes up to rub at your groin..."
+						+ "她突然把她[kelly.lips+]贴近你的嘴唇，与你热吻。她的恶魔蛇尾巴摩擦着你的腹股沟……"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new ResponseSex("Used", "Kelly uses you.",
+				return new ResponseSex("被使用", "凯丽使用你。",
 						false, false,
 						new SMGeneric(
 								Util.newArrayListOfValues(Main.game.getNpc(ZaranixMaidKelly.class)),
@@ -556,29 +556,29 @@ public class ZaranixMaidKelly extends NPC {
 		}
 	};
 	
-	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("Used", "", true) {
+	public static final DialogueNode AFTER_SEX_DEFEAT = new DialogueNode("被使用", "", true) {
 
 		@Override
 		public String getContent() {
 			return "<p>"
-						+ "Completely exhausted, you collapse to the floor, panting."
-						+ " Towering over you, Kelly speaks down in a very patronising tone,"
-						+ " [kelly.speech(Awww! Was that too much fun for you? In that case, I think it's about time I showed you the exit!)]"
+						+ "你完全脱力，垮在地上喘着粗气。"
+						+ "高高在上的凯丽用一种居高临下的语气对你说，"
+						+ "[kelly.speech(哦吼吼！对你来说是不是太刺激啦？既然这样，你是时候该离开了！)]"
 					+ "</p>"
 					+ "<p>"
-						+ "Too tired to resist, you're left totally helpless as Kelly drags you along the corridor to the front entrance."
-						+ " Opening the door, she unceremoniously shoves you out into the street, sighing,"
-						+ " [kelly.speech(I guess you picked the wrong house to try and rob, huh?)]"
+						+ "你太累了，无法抗拒，任凭凯丽拖着你沿着走廊走到入口。"
+						+ "她打开门，叹了口气，毫不客气地把你推到街上，"
+						+ "[kelly.speech(我猜你选错了闯空门的对象，对吧？)]"
 					+ "</p>"
 					+ "<p>"
-						+ "With that, she slams the door shut, leaving you to pick yourself up and carry on your way..."
+						+ "说完，她砰地关上了门，你自己站起来，继续你的路……"
 					+ "</p>";
 		}
 
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index==1) {
-				return new Response("Thrown out", "Kelly throws you out into the street.", PlaceType.DOMINION_DEMON_HOME.getDialogue(false)) {
+				return new Response("被扔出去", "凯丽把你扔到了街上。", PlaceType.DOMINION_DEMON_HOME.getDialogue(false)) {
 					@Override
 					public void effects() {
 						Main.game.getPlayer().setLocation(WorldType.DOMINION, PlaceType.DOMINION_DEMON_HOME, false);

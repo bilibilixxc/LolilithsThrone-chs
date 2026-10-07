@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Outfits are a way to make randomly-generated NPCs' outfit generation less chaotic. -->
 <outfit>
 
 	<coreAttributes>
 		<!-- Names are only used for debugging purposes. Still, in case the name is used elsewhere later on, it's best to give your outfit a suitable (lowercase) name.-->
-		<name><![CDATA[casual dress with toys]]></name>
+		<name><![CDATA[玩具装]]></name>
 		
 		<!-- Again, descriptions are only used for debugging purposes. Still, in case the name is used elsewhere later on, it's best to give your outfit a suitable description.-->
-		<description><![CDATA[A dress hides the fact that the wearer has a toy or two inserted into their orifices...]]></description>
+		<description><![CDATA[裙子可以掩盖穿着者的腔穴里被塞进一两件玩具的事实……]]></description>
 		
 		<!-- The femininity needed for someone to generate this outfit. MASCULINE, ANDROGYNOUS, and FEMININE are the three acceptable values. ANDROGYNOUS means anyone can use this outfit, while the other two are self-explanatory.-->
 		<femininity>FEMININE</femininity>
@@ -95,7 +95,7 @@
 			
 			<uniqueClothing>
 				<conditional><![CDATA[npc.hasVagina()]]></conditional>
-				<clothing colour="presetColourGroup2" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_vagina_insertable_dildo" isDirty="false" name="[npc.NamePos(true)] insertable dildo"></clothing>
+				<clothing colour="presetColourGroup2" colourSecondary="CLOTHING_BLACK" colourTertiary="CLOTHING_BLACK" enchantmentKnown="true" id="innoxia_vagina_insertable_dildo" isDirty="false" name="[npc.NamePos(true)] insertable dildo"/>
 			</uniqueClothing>
 		</guaranteedClothingEquips>
 		

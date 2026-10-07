@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <item>
 	<coreAttributes>
 		<value>50</value> 
-		<determiner><![CDATA[a]]></determiner>
-		<name><![CDATA[Raptor energy bar]]></name>
-		<namePlural pluralByDefault="false"><![CDATA[Raptor energy bars]]></namePlural>
-		<description><![CDATA[A small, Raptor-branded energy bar, which proudly states on the back to be of 'Over 80% meat content'. On the reverse of the wrapper, there's an image of a fit falcon-boy dominantly face-fucking a naked mouse-girl.]]></description> 
+		<determiner><![CDATA[一条]]></determiner>
+		<name><![CDATA[猛禽能量棒]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[猛禽能量棒]]></namePlural>
+		<description><![CDATA[这是一款猛禽品牌的小型能量棒，背面骄傲地写着“肉含量超过80%”。在包装纸的反面，有一个健壮的隼男正霸道地深喉一个赤裸的鼠女的画面。]]></description> 
 		
-		<useDescriptor>eat</useDescriptor>
+		<useDescriptor><![CDATA[吃]]></useDescriptor>
 		
 		<sexUse>true</sexUse>
 		<combatUseAllies>true</combatUseAllies>
@@ -17,7 +17,7 @@
 		<rarity>RARE</rarity> 
 		
 		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
-		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/innoxia/raptor/subspecies/icon.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1="stroke=&quot;#000&quot;" replacement1="stroke=&quot;#ff5555&quot;" target2="#ff8080" replacement2="#ff5555">res/race/innoxia/raptor/subspecies/icon.svg</imageName>
 		<imageName zLayer="2" imageRotation="0" imageSize="70">raptor_energy_bar.svg</imageName>
 		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
 		
@@ -25,22 +25,22 @@
 		<colourSecondary/>
 		<colourTertiary/>
 		
-		<potionDescriptor><![CDATA[raptor]]></potionDescriptor>
+		<potionDescriptor><![CDATA[猛禽]]></potionDescriptor>
 		<associatedRace>innoxia_raptor</associatedRace>
 		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
 		<enchantmentEffectId>RACE</enchantmentEffectId>
 		
 		<effectTooltipLines>
-			<line><![CDATA[[style.boldGood(Restores)] 15% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
-			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(10)] to 'potion effects']]></line>
-			<line><![CDATA[[#ATTRIBUTE_CRITICAL_DAMAGE.getFormattedValue(10)] to 'potion effects']]></line>
+			<line><![CDATA[[style.boldGood(回复)]15%[style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_HEALTH_MAXIMUM.getFormattedValue(10)]到“药剂效果”]]></line>
+			<line><![CDATA[[#ATTRIBUTE_CRITICAL_DAMAGE.getFormattedValue(10)]到“药剂效果” ]]></line>
 		</effectTooltipLines>
 		
 		<applyEffects><![CDATA[
 			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM) * 0.15)]
 			
 			<p style='margin-bottom:0; padding-bottom:0;'>
-				A powerful jolt of energy surges through [npc.namePos] body!
+				一股强大的能量冲击涌过[npc.namePos]的身体！
 			</p>
 			[#npc.addPotionEffect(ATTRIBUTE_HEALTH_MAXIMUM, 10)]
 			[#npc.addPotionEffect(ATTRIBUTE_CRITICAL_DAMAGE, 10)]
@@ -58,10 +58,10 @@
 
 	<useDescriptions>
 		<selfUse><![CDATA[
-			Tearing off the plastic wrapper, [npc.name] [npc.verb(take)] a big bite out of the Raptor energy bar. Although its savoury, meaty taste has an artificial hint to it, it's not at all unpleasant, and so [npc.she] happily [npc.verb(finish)] it off, after which [npc.she] quickly [npc.verb(find)] [npc.herself] feeling full of energy.
+			撕掉塑料包装，[npc.name]大口咬下猛禽能量棒。尽管它带有一点人工的香精肉味，但一点也不令人讨厌，所以[npc.she]高兴地吃完了，之后[npc.she]迅速感到[npc.herself]充满了能量。
 		]]></selfUse>
 		<otherUse><![CDATA[
-			Tearing off the plastic wrapper, [npc.name] [npc.verb(make)] [npc2.name] take a big bite out of the Raptor energy bar. Although its savoury, meaty taste has an artificial hint to it, it's not at all unpleasant, and so [npc2.she] happily [npc2.verb(finish)] it off, after which [npc2.she] quickly [npc2.verb(find)] [npc2.herself] feeling full of energy.
+			撕掉塑料包装，[npc.name]让[npc2.name]大口咬下猛禽能量棒。尽管它带有一点人工的香精肉味，但一点也不令人讨厌，所以[npc2.she]高兴地吃完了，之后[npc2.she]迅速感到[npc2.herself]充满了能量。
 		]]></otherUse>
 	</useDescriptions>
 

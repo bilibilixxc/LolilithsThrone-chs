@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <setBonus>
-	<name><![CDATA[Sturdy Steed]]></name>
+	<name><![CDATA[矫健的骏马]]></name>
 	
 	<statusEffect>SET_STURDY_STEED</statusEffect>
 	

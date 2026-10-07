@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <placeType>
 	<worldRegion>DOMINION</worldRegion>
-	<name><![CDATA[Counter]]></name>
-	<tooltipDescription><![CDATA[The counter at Lovienne's Luxuries is staffed by a smartly-dressed succubus called Saellatrix.]]></tooltipDescription>
-	<virginityLossDescription><![CDATA[at the counter in Lovienne's Luxuries]]></virginityLossDescription>
+	<name><![CDATA[柜台]]></name>
+	<tooltipDescription><![CDATA[在洛维安奢侈品店的柜台后，有一位衣着光鲜的叫赛拉特里克斯的魅魔。]]></tooltipDescription>
+	<virginityLossDescription><![CDATA[在洛维耶纳奢侈品店的柜台前]]></virginityLossDescription>
 	<sexBlockedFromCharacterPresent>true</sexBlockedFromCharacterPresent>
 	<colour>BASE_BLUE_LIGHT</colour>
 	<backgroundColour>MAP_BACKGROUND</backgroundColour>
